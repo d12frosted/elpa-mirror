@@ -21,6 +21,8 @@ This is the result; I hope you find it fun.
 3. http://lists.gnu.org/archive/html/bug-gnu-emacs/2010-05/msg00491.html
 4. http://oneslime.net/
 
+Ending music: https://archive.org/details/M00GNU
+
 Features
 ========
 
