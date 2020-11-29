@@ -20,7 +20,7 @@
 ;; Author: Gabriele Rastello
 ;; Version: 0.1.0
 ;; Package-Version: 20200725.1056
-;; Package-Commit: d80c7964ec66589d5580fc13773e94f1834ab76f
+;; Package-Commit: d40bc7ead8d4d7e4d16b03b66a93d63bef51cc5f
 ;; Keywords: youtube matching multimedia
 ;; URL: https://github.com/grastello/ytel
 ;; License: GNU General Public License >= 3
