@@ -1886,9 +1886,9 @@
 		   ("Bastien Guerry" . "bzg@gnu.org"))
 		  (:maintainer "Bastien Guerry" . "bzg@gnu.org"))])
  (relint .
-	 [(1 18)
+	 [(1 19)
 	  ((xr
-	    (1 19))
+	    (1 20))
 	   (emacs
 	    (26 1)))
 	  "Elisp regexp mistake finder" tar
@@ -2172,11 +2172,9 @@
 	       ("Ulf Jasper" . "ulf.jasper@web.de"))
 	      (:maintainer "Ulf Jasper" . "ulf.jasper@web.de"))])
  (swiper .
-	 [(0 13 1)
+	 [(0 7 0)
 	  ((emacs
-	    (24 5))
-	   (ivy
-	    (0 13 1)))
+	    (24 1)))
 	  "Isearch with an overview. Oh, man!" single
 	  ((:keywords "matching")
 	   (:authors
@@ -2538,7 +2536,7 @@
 	 ("Thien-Thi Nguyen" . "ttn@gnu.org"))
 	(:keywords "multimedia" "xpm"))])
  (xr .
-     [(1 19)
+     [(1 20)
       ((emacs
 	(26 1)))
       "Convert string regexp to rx notation" tar

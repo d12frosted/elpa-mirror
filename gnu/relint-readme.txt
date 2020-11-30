@@ -6,6 +6,16 @@ syntax and bad practice. It also checks the regexp-like arguments to
 skip-chars-forward, skip-chars-backward, skip-syntax-forward and
 skip-syntax-backward.
 
+* Contents
+
+   - Usage
+   - Installation
+   - What the diagnostics mean
+   - Suppressing diagnostics
+   - How it works
+   - Bugs
+
+
 * Usage
 
   - Check a single file:
@@ -48,6 +58,9 @@ skip-syntax-backward.
 
 
 * What the diagnostics mean
+
+  Tip: if a regexp string is difficult to understand, consider
+  decoding it using 'xr', as in (xr-lint "gibberish").
 
   - Unescaped literal 'X'
 
@@ -187,7 +200,7 @@ skip-syntax-backward.
 
   - Literal '-' not first or last
 
-    It is good style to put literal hyphens last in character
+    It is good style to put a literal hyphen last in character
     alternatives and skip sets, to clearly indicate that it was not
     intended as part of a range.
 
