@@ -8,7 +8,7 @@
 ;; Created: Wed Jan 23 20:45:01 2019 (-0800)
 ;; Version: 0.0.1
 ;; Package-Version: 20200713.227
-;; Package-Commit: 6c10b13c285cc4180dc64c1f89ead264e6786f53
+;; Package-Commit: 9b068d979bad78aba8e8bef9f9e7c3bfecb34d2d
 ;; Package-Requires: ((cl-lib "0.3") (emacs "26.1"))
 ;; URL: https://github.com/erjoalgo/autobuild
 ;; Keywords: compile, build, pipeline, autobuild, extensions, processes, tools

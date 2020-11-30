@@ -5,7 +5,7 @@
 ;; Author: George Thomas <iamgeorgethomas@gmail.com>
 ;; URL: https://github.com/thegeorgeous/railscasts-reloaded-theme
 ;; Package-Version: 20190308.759
-;; Package-Commit: c6a1cf13a164f22b026b0959527c3b98c2b1aa49
+;; Package-Commit: 1c3850568e60a555d59cbb57bf2b6aa06e99d454
 ;; Version: 1.5.0
 ;;
 ;; This program is free software: you can redistribute it and/or modify
