@@ -2172,9 +2172,11 @@
 	       ("Ulf Jasper" . "ulf.jasper@web.de"))
 	      (:maintainer "Ulf Jasper" . "ulf.jasper@web.de"))])
  (swiper .
-	 [(0 7 0)
+	 [(0 13 1)
 	  ((emacs
-	    (24 1)))
+	    (24 5))
+	   (ivy
+	    (0 13 1)))
 	  "Isearch with an overview. Oh, man!" single
 	  ((:keywords "matching")
 	   (:authors
