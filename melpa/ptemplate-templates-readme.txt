@@ -6,7 +6,7 @@ minor-mode.
 
 The following configuration snippet will correctly configure
 `ptemplate-templates:'
-(eval-after-load 'ptemplate (ptemplate-templates-mode 1))
+(eval-after-load 'ptemplate '(ptemplate-templates-mode 1))
 
 Currently, only a few project templates are provided; other templates are
 coming soon. New ones can be requested by opening an issue on github.
