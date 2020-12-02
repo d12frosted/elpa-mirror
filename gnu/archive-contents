@@ -1193,7 +1193,7 @@
 	(:keywords "lisp" "convenience")
 	(:authors
 	 ("Tino Calancha" . "tino.calancha@gmail.com"))
-	(:maintainer "Tino Calancha"))])
+	(:maintainer "Tino Calancha" . "tino.calancha@gmail.com"))])
  (landmark .
 	   [(1 0)
 	    nil "Neural-network robot that learns landmarks" single
@@ -1304,8 +1304,8 @@
 		((:url . "http://elpa.gnu.org/packages/memory-usage.html")
 		 (:keywords "maint")
 		 (:authors
-		  ("Stefan Monnier" . "monnier@cs.yale.edu"))
-		 (:maintainer "Stefan Monnier" . "monnier@cs.yale.edu"))])
+		  ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
+		 (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (metar .
 	[(0 3)
 	 ((cl-lib
@@ -1721,8 +1721,8 @@
 		 ((:url . "http://elpa.gnu.org/packages/quarter-plane.html")
 		  (:keywords "convenience" "wp")
 		  (:authors
-		   ("Peter J. Weisberg"))
-		  (:maintainer "Peter J. Weisberg"))])
+		   ("Peter J. Weisberg" . "pj@irregularexpressions.net"))
+		  (:maintainer "Peter J. Weisberg" . "pj@irregularexpressions.net"))])
  (queue .
 	[(0 2)
 	 nil "Queue data structure" single
@@ -2330,6 +2330,16 @@
 	     (:authors
 	      ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	     (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com"))])
+ (valign .
+	 [(3 0 0)
+	  ((emacs
+	    (26 0)))
+	  "Visually align tables" single
+	  ((:keywords "convenience" "text" "table")
+	   (:authors
+	    ("Yuan Fu" . "casouri@gmail.com"))
+	   (:maintainer "Yuan Fu" . "casouri@gmail.com")
+	   (:url . "https://github.com/casouri/valign"))])
  (vcard .
 	[(0 1)
 	 ((emacs
