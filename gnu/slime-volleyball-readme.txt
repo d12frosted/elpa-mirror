@@ -47,8 +47,8 @@ Features
 * Frame-by-frame debugging
   (F9 to enter/exit frame-by-frame mode, F8 to advance a frame)
 
-* Music: disabled by default due to EMMS requirement
-  (customize slime-volleyball-enable-sound)
+* Music (supported if ogg123, of vorbis-tools, is on the system
+* executable path, otherwise fails silently)
 
 Controls
 ========
