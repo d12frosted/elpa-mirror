@@ -6,7 +6,7 @@
 ;; Maintainer: Neil Okamoto <neil.okamoto+melpa@gmail.com>
 ;; URL: https://github.com/emacsorphanage/smeargle
 ;; Package-Version: 20200323.533
-;; Package-Commit: a0e9bc2ea694aa2940102e1f4cfd8db8be437931
+;; Package-Commit: 0cfe0ff083d55bb90c6dfaf1dc930500099c4d5c
 ;; Version: 0.03
 ;; Package-Requires: ((emacs "24.3"))
 

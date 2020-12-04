@@ -1,1 +1,1 @@
-Gkroam is a lightweight roam repica, built on top of Org-mode.
+Gkroam is a lightweight Roam Research repica, built on top of Org-mode.

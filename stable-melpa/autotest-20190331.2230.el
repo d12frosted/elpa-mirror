@@ -6,7 +6,7 @@
 ;; Version 1.1.0
 ;; Keywords: testing, ruby, convenience
 ;; Package-Version: 20190331.2230
-;; Package-Commit: c2ba6a78e2817394b6d6ae700cdcf75229e92ed8
+;; Package-Commit: 42bfc61c6f93f347def759f6b1d50df2a18db2db
 ;; Created: 2006-11-17
 ;; Compatibility: Emacs 24, 23, 22, 21?
 ;; URL: https://github.com/zenspider/elisp/blob/master/autotest.el

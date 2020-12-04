@@ -57,8 +57,6 @@ The first key we call it leader key. In the above examples, the SPACE is the lea
 
 When in command mode, the 【SPACE】 is a leader key.
 
-globally, the leader key is the 【f9】 key. 【f9】 is leader key regardless it's in command mode or insert mode.
-
 the following standard keys with Control are supported:
 
  ;; 【Ctrl+tab】 'xah-next-user-buffer

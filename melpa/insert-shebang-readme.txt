@@ -1,5 +1,5 @@
 Inserts shebang line automatically
-URL: http://github.com/psachin/insert-shebang
+URL: https://gitlab.com/psachin/insert-shebang
 
 Install
 

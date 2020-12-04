@@ -6,7 +6,7 @@
 
 ;; Version: 0.1
 ;; Package-Version: 20190805.2101
-;; Package-Commit: 5186c83e5691932d208fafedf9a1a5ade369eb24
+;; Package-Commit: fdf46fe0e110a8e0dddb5aac4ab20a93ee9c5d88
 ;; Package-Requires: ((go-mode "1.3.1"))
 ;; Keywords: tools
 

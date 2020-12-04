@@ -1,13 +1,9 @@
-Emacs Monkeytype is a typing game/tutor inspired by
-monkeytype.com but for Emacs.
+Emacs Monkeytype is a typing game/tutor inspired by monkeytype.com but for
+Emacs.
 
 Features:
 
 - Type any text you want.
-
-- Practice mistyped words.
-
-- UI customisation.
 
 - Mode-line live WPM (`monkeytype-mode-line-interval-update' adjust the
 update frequency).
@@ -43,5 +39,9 @@ transitions}` (see: `monkeytype-directory' `monkeytype-save-mistyped-words'
 - Saved mistyped/transitions files (or any file but defaults to
 `~/.monkeytype/` dir) can be loaded with `monkeytyped-load-words-from-file'.
 
-- `monkeytype-word-regexp' customises the regexp used for removing characters
-from words (defaults to: ;:.\`",()-?!).
+- `monkeytype-excluded-chars-regexp' customises the regexp used for removing
+characters from words (defaults to: "[^[:alnum:]']").
+
+- Ability to type most (saved) mistyped words (the amount of words is
+configurable with `monkeytype-most-mistyped-amount' [defaults to 100]) see:
+`monkeytype-most-mistyped-words'
