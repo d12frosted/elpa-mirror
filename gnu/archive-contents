@@ -392,11 +392,11 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (counsel .
-	  [(0 12 0)
+	  [(0 13 1)
 	   ((emacs
-	     (24 3))
+	     (24 5))
 	    (swiper
-	     (0 12 0)))
+	     (0 13 1)))
 	   "Various completion functions using Ivy" tar
 	   ((:url . "https://github.com/abo-abo/swiper")
 	    (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
