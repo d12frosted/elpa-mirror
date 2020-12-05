@@ -1,0 +1,1 @@
+LICENSE templates for yasnippet
