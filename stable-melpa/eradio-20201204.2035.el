@@ -4,8 +4,8 @@
 
 ;; Author: Olav Fosse <mail@olavfosse.no>
 ;; Version: 0.1
-;; Package-Version: 20201204.1523
-;; Package-Commit: 357f473ba8d280b4ab4763521220079401ad3093
+;; Package-Version: 20201204.2035
+;; Package-Commit: 893d499ef67065f56ef464fa8ede2e49d4597fe4
 ;; URL: https://github.com/olav35/eradio
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -48,35 +48,51 @@ This is a list of the program and its arguments.  The url will be appended to th
 
 (defvar eradio--process nil "The process running the radio player.")
 
-(defun eradio-alist-keys (alist)
+(defvar eradio-current-channel nil "The currently playing (or paused) channel.")
+
+(defun eradio--alist-keys (alist)
   "Get the keys from an ALIST."
   (mapcar #'car alist))
 
+;;;###autoload
 (defun eradio-stop ()
   "Stop the radio player."
-  (interactive) (when eradio--process (delete-process eradio--process)))
+  (interactive)
+  (when eradio--process
+    (delete-process eradio--process)
+    (setq eradio--process nil)))
 
-(defun eradio-play-low-level (url)
+;;;###autoload
+(defun eradio-toggle ()
+  "Toggle the radio player."
+  (interactive)
+  (if eradio--process
+      (eradio-stop)
+    ;; If eradio-current-channel is nil, eradio-play will prompt the url
+    (eradio-play eradio-current-channel)))
+
+(defun eradio--play-low-level (url)
   "Play radio channel URL in a new process."
   (setq eradio--process
 	(apply #'start-process
 	       `("eradio--process" nil ,@eradio-player ,url))))
 
-(defun eradio-get-url ()
+(defun eradio--get-url ()
   "Get a radio channel URL from the user."
   (let ((eradio-channel (completing-read
-                       "Channel: "
-                       (eradio-alist-keys eradio-channels)
-                       nil nil)))
-  (or (cdr (assoc eradio-channel eradio-channels)) eradio-channel)))
+			 "Channel: "
+			 (eradio--alist-keys eradio-channels)
+			 nil nil)))
+    (or (cdr (assoc eradio-channel eradio-channels)) eradio-channel)))
 
 ;;;###autoload
-(defun eradio-play ()
+(defun eradio-play (&optional url)
   "Play a radio channel, do what I mean."
   (interactive)
   (eradio-stop)
-  (let ((url (eradio-get-url)))
-    (eradio-play-low-level url)))
+  (let ((url (or url (eradio--get-url))))
+    (setq eradio-current-channel url)
+    (eradio--play-low-level url)))
 
 (provide 'eradio)
 ;;; eradio.el ends here
