@@ -5,7 +5,7 @@
 ;; Author: Oleh Krehel <ohwoeowho@gmail.com>
 ;; URL: https://github.com/abo-abo/swiper
 ;; Package-Version: 20200608.1010
-;; Package-Commit: 778d8bffa33ae0bf432aa23370bb2a535d2132ce
+;; Package-Commit: ae9b121b834a68d11f79ca27b1e5c8790149ba2f
 ;; Version: 0.13.0
 ;; Package-Requires: ((emacs "24.5") (ivy "0.13.0") (hydra "0.15.0"))
 ;; Keywords: convenience

@@ -7,7 +7,7 @@
 ;; Maintainer: Neil Okamoto <neil.okamoto+melpa@gmail.com>
 ;; Keywords: convenience
 ;; Package-Version: 20200212.1724
-;; Package-Commit: 7e717532c78a97eb77b79e2985cea0b201117ff8
+;; Package-Commit: 46d52aa186ea50a35c1780977bf0aa261bd53922
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/gonewest818/osx-plist
 ;; Version: 2.0.0

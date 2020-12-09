@@ -52,6 +52,13 @@ Usage:
     (use-proxy-toggle-proxies-global)
     ;; if using proxies globally, a "g" will be appended to lighter.
 
+    `use-proxy-toggle-all-proxies'
+
+    Toggle all proxies on/off.
+
+    (use-proxy-toggle-all-proxies)
+    ;; toggle all proxies on/off.
+
     `use-proxy-with-custom-proxies'
 
     Temporarily enable proxies for a batch of s-expressions.

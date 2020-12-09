@@ -7,7 +7,7 @@
 ;; Maintainer: Neil Okamoto <neil.okamoto+melpa@gmail.com>
 ;; Version: 0.5.0-SNAPSHOT
 ;; Package-Version: 20200324.2217
-;; Package-Commit: 35a3fcc3131c243206fa914b8562cda771eab8c5
+;; Package-Commit: a4de033c260389c0d483f93e715fd3395c6e4145
 ;; Keywords: lisp, maint, tools
 ;; Package-Requires: ((emacs "24.4") (dash "2.15.0") (package-lint "0.11"))
 ;; URL: http://github.com/gonewest818/elisp-lint/

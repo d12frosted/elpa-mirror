@@ -5,7 +5,7 @@
 ;; Author: Jostein Kjønigsen <jostein@gmail.com>
 ;; URL: http://github.com/josteink/bmx-mode
 ;; Package-Version: 20180929.1132
-;; Package-Commit: 536b332edc3b98cc97588c937c7368803ba5961c
+;; Package-Commit: 30122e2a6bfb00834e18363e7909182b2701ce82
 ;; Version: 0.1
 ;; Keywords: c convenience tools
 ;; Package-Requires: ((emacs "25.1") (cl-lib "0.5") (company "0.9.4") (dash "2.13.0") (s "1.12.0"))

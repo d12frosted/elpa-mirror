@@ -128,6 +128,7 @@ missing package or change you would like to see.
     evil-goggles
     evil-visual-mark-mode
     eww
+    exwm
     eyebrowse
     fancy-dabbrev
     flycheck

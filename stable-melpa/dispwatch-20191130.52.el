@@ -5,7 +5,7 @@
 ;; Author: Mitchell Perilstein <mitchell.perilstein@gmail.com>
 ;; Keywords: frames
 ;; Package-Version: 20191130.52
-;; Package-Commit: 93aac853215d0902e7a30a6dd2b99d796da77df4
+;; Package-Commit: 6abf276b8d66df4996c7e98e7a40cbad8747beb7
 ;; URL: https://github.com/mnp/dispwatch
 ;; Version: 1
 ;; Package-Requires: ((emacs "24.1"))
