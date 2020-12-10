@@ -8,7 +8,7 @@
 ;; Keyword: folder finder reveal file explorer
 ;; Version: 0.1.0
 ;; Package-Version: 20201022.533
-;; Package-Commit: 30d9db25ca84e1bf3f4f8eda1a5fa23bb8e69182
+;; Package-Commit: b70f3309de2598d71dae12cc8dcbbd37ef8cfd92
 ;; Package-Requires: ((emacs "24.3") (f "0.20.0") (s "1.12.0"))
 ;; URL: https://github.com/jcs-elpa/reveal-in-folder
 
