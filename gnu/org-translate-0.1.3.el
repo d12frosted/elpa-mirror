@@ -2,7 +2,7 @@
 
 ;; Copyright (C) 2020  Free Software Foundation, Inc.
 
-;; Version: 0.1.2
+;; Version: 0.1.3
 ;; Package-Requires: ((emacs "25.1") (org "9.1"))
 
 ;; Author: Eric Abrahamsen <eric@ericabrahamsen.net>
@@ -529,14 +529,13 @@ and applies a highlight to the appropriate segment of text."
 	 (point))
        (progn
 	 (or (and (re-search-forward
-		   (string ogt-segmentation-character)
+		   (regexp-opt
+		    (list (string ogt-segmentation-character)
+			  "\n\n"
+			  org-heading-regexp))
 		   nil t)
 		  (progn
 		    (backward-char)
-		    (skip-syntax-backward "-")
-		    (point)))
-	     (and (re-search-forward "\n\n" nil t)
-		  (progn
 		    (skip-syntax-backward "-")
 		    (point)))
 	     (point-max)))))))
@@ -809,6 +808,18 @@ Prompts for a bookmark, and sets up the windows."
 
 ;;;; ChangeLog:
 
+;; 2020-12-01  Stefan Monnier  <monnier@iro.umontreal.ca>
+;; 
+;; 	* .gitignore: New file
+;; 
+;; 2020-10-20  Eric Abrahamsen  <eric@ericabrahamsen.net>
+;; 
+;; 	[org-translate] Fix bum logic in finding the end of a segment
+;; 
+;; 	* packages/org-translate/org-translate.el
+;; 	(ogt-highlight-source-segment): Searching consecutive regexps makes no
+;; 	sense; need to make one big regexp.
+;; 
 ;; 2020-10-15  Eric Abrahamsen  <eric@ericabrahamsen.net>
 ;; 
 ;; 	[org-translate] Improve segmentation of subtree headings, bump 0.1.2
