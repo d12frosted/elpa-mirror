@@ -268,7 +268,7 @@
 	     ("Ian Dunn" . "dunni@gnu.org"))
 	    (:maintainer "Ian Dunn" . "dunni@gnu.org"))])
  (chess .
-	[(2 0 4)
+	[(2 0 5)
 	 ((cl-lib
 	   (0 5)))
 	 "Play chess in GNU Emacs" tar
@@ -422,7 +422,7 @@
 	   ("Gary D. Foster" . "Gary.Foster@Corp.Sun.COM"))
 	  (:maintainer "Luke Lee" . "luke.yx.lee@gmail.com"))])
  (csv-mode .
-	   [(1 13)
+	   [(1 14)
 	    ((emacs
 	      (24 1))
 	     (cl-lib
@@ -2558,7 +2558,7 @@
 	("Mattias Engdegård" . "mattiase@acm.org"))
        (:keywords "lisp" "regexps"))])
  (xref .
-       [(1 0 3)
+       [(1 0 4)
 	((emacs
 	  (26 3)))
 	"Cross-referencing commands" single
