@@ -7,7 +7,7 @@
 ;; Modified: October 04, 2020
 ;; Version: 0.1.0
 ;; Package-Version: 20201123.845
-;; Package-Commit: e9d30ec4b1cbf4532051d0790948a95e1bd681c1
+;; Package-Commit: d8be05fd6857c72a1766e3fa9dafa1602ccf88e3
 ;; Keywords: tex,tools
 ;; Homepage: https://github.com/yangsheng6810/org-latex-instant-preview
 ;; Package-Requires: ((emacs "26") (s "1.8.0") (posframe "0.8.0") (org "9.3") (dash "2.17.0"))
