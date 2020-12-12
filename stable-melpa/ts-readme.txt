@@ -3,11 +3,12 @@ timestamps in Emacs.
 
 A struct `ts' is defined, which represents a timestamp.  All
 manipulation is done internally using Unix timestamps.  Accessors
-are used to retrieve values such as month, day, year, etc. from a
-timestamp, and these values are cached in the struct once accessed,
-to avoid repeatedly calling `format-time-string', which is
-expensive.  Function arguments are designed to work well with the
-`thread-last' macro, to make sequential operations easy to follow.
+are used to retrieve calendar values such as month, day, year from
+a timestamp, and these values are cached in the struct once
+accessed, to avoid repeatedly calling `format-time-string', which
+is expensive.  Function arguments are designed to work well with
+the `thread-last' macro, to make sequential operations easy to
+follow.
 
 The current timestamp is retrieved with `ts-now'.
 

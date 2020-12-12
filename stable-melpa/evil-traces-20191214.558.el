@@ -5,7 +5,7 @@
 ;; Author: Daniel Phan <daniel.phan36@gmail.com>
 ;; Version: 0.2.0
 ;; Package-Version: 20191214.558
-;; Package-Commit: bc25cae9fa5ab0ba1507827f0944f52ce0ca7462
+;; Package-Commit: 290b5323542c46af364ec485c8ec9000040acf90
 ;; Package-Requires: ((emacs "25.1") (evil "1.2.13"))
 ;; Homepage: https://github.com/mamapanda/evil-traces
 ;; Keywords: emulations, evil, visual

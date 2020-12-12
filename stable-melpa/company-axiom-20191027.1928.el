@@ -5,7 +5,7 @@
 ;; Author: Paul Onions <paul.onions@acm.org>
 ;; Keywords: Axiom, OpenAxiom, FriCAS, axiom-environment
 ;; Package-Version: 20191027.1928
-;; Package-Commit: 9ef86ca16098050da4362f5aadaea64b0a093fc1
+;; Package-Commit: 47d6dffc29286badb2b1d7143b219e5c1be15bdb
 
 ;; This file is free software, see the LICENCE file in this directory
 ;; for copying terms.
