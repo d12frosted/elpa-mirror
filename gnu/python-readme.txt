@@ -1,6 +1,6 @@
 Major mode for editing Python files with some fontification and
 indentation bits extracted from original Dave Love's python.el
-found in GNU/Emacs.
+found in GNU Emacs.
 
 Implements Syntax highlighting, Indentation, Movement, Shell
 interaction, Shell completion, Shell virtualenv support, Shell
@@ -106,7 +106,7 @@ completion can be found in `python-shell-completion-setup-code' and
 values enable completion for both CPython and IPython, and probably
 any readline based shell (it's known to work with PyPy).  If your
 Python installation lacks readline (like CPython for Windows),
-installing pyreadline (URL `http://ipython.org/pyreadline.html')
+installing pyreadline (URL `https://ipython.org/pyreadline.html')
 should suffice.  To troubleshoot why you are not getting any
 completions, you can try the following in your Python shell:
 
@@ -217,10 +217,3 @@ options:
 
 I'd recommend the first one since you'll get the same behavior for
 all modes out-of-the-box.
-
-Installation:
-
-Add this to your .emacs:
-
-(add-to-list 'load-path "/folder/containing/file")
-(require 'python)

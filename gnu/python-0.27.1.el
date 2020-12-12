@@ -4,7 +4,7 @@
 
 ;; Author: Fabián E. Gallina <fgallina@gnu.org>
 ;; URL: https://github.com/fgallina/python.el
-;; Version: 0.27
+;; Version: 0.27.1
 ;; Package-Requires: ((emacs "24.1") (cl-lib "1.0"))
 ;; Maintainer: emacs-devel@gnu.org
 ;; Created: Jul 2010
@@ -29,7 +29,7 @@
 
 ;; Major mode for editing Python files with some fontification and
 ;; indentation bits extracted from original Dave Love's python.el
-;; found in GNU/Emacs.
+;; found in GNU Emacs.
 
 ;; Implements Syntax highlighting, Indentation, Movement, Shell
 ;; interaction, Shell completion, Shell virtualenv support, Shell
@@ -135,7 +135,7 @@
 ;; values enable completion for both CPython and IPython, and probably
 ;; any readline based shell (it's known to work with PyPy).  If your
 ;; Python installation lacks readline (like CPython for Windows),
-;; installing pyreadline (URL `http://ipython.org/pyreadline.html')
+;; installing pyreadline (URL `https://ipython.org/pyreadline.html')
 ;; should suffice.  To troubleshoot why you are not getting any
 ;; completions, you can try the following in your Python shell:
 
@@ -246,13 +246,6 @@
 
 ;; I'd recommend the first one since you'll get the same behavior for
 ;; all modes out-of-the-box.
-
-;;; Installation:
-
-;; Add this to your .emacs:
-
-;; (add-to-list 'load-path "/folder/containing/file")
-;; (require 'python)
 
 ;;; TODO:
 
@@ -662,10 +655,11 @@ builtins.")
     ;; assignments
     ;; support for a = b = c = 5
     (,(lambda (limit)
-        (let ((re (python-rx (group (+ (any word ?. ?_)))
-                             (? ?\[ (+ (not (any  ?\]))) ?\]) (* space)
-                             ;; A type, like " : int ".
-                             (? ?: (* space) (+ (any word ?. ?_)) (* space))
+        (let ((re (python-rx (group symbol-name)
+                             ;; subscript, like "[5]"
+                             (? ?\[ (+ (not ?\])) ?\]) (* space)
+                             ;; type hint, like ": int" or ": Mapping[int, str]"
+                             (? ?: (* space) (+ not-simple-operator) (* space))
                              assignment-operator))
               (res nil))
           (while (and (setq res (re-search-forward re limit t))
@@ -675,9 +669,9 @@ builtins.")
      (1 font-lock-variable-name-face nil nil))
     ;; support for a, b, c = (1, 2, 3)
     (,(lambda (limit)
-        (let ((re (python-rx (group (+ (any word ?. ?_))) (* space)
-                             (* ?, (* space) (+ (any word ?. ?_)) (* space))
-                             ?, (* space) (+ (any word ?. ?_)) (* space)
+        (let ((re (python-rx (group symbol-name) (* space)
+                             (* ?, (* space) symbol-name (* space))
+                             ?, (* space) symbol-name (* space)
                              assignment-operator))
               (res nil))
           (while (and (setq res (re-search-forward re limit t))
@@ -2921,7 +2915,7 @@ process buffer for a list of commands.)"
          (python-shell-make-comint
           (or cmd (python-shell-calculate-command))
           (python-shell-get-process-name dedicated) show)))
-    (pop-to-buffer buffer)
+    (set-buffer buffer)
     (get-buffer-process buffer)))
 
 (defun run-python-internal ()
@@ -3139,9 +3133,16 @@ the python shell:
   4. Wraps indented regions under an \"if True:\" block so the
      interpreter evaluates them correctly."
   (let* ((start (save-excursion
-                  ;; Normalize start to the line beginning position.
+                  ;; If we're at the start of the expression, and
+                  ;; there's just blank space ahead of it, then expand
+                  ;; the region to include the start of the line.
+                  ;; This makes things work better with the rest of
+                  ;; the data we're sending over.
                   (goto-char start)
-                  (line-beginning-position)))
+                  (if (string-blank-p
+                       (buffer-substring (line-beginning-position) start))
+                      (line-beginning-position)
+                    start)))
          (substring (buffer-substring-no-properties start end))
          (starts-at-point-min-p (save-restriction
                                   (widen)
@@ -3196,6 +3197,8 @@ the python shell:
            (line-beginning-position) (line-end-position))))
       (buffer-substring-no-properties (point-min) (point-max)))))
 
+(declare-function compilation-forget-errors "compile")
+
 (defun python-shell-send-region (start end &optional send-main msg
                                        no-cookie)
   "Send the region delimited by START and END to inferior Python process.
@@ -3213,6 +3216,10 @@ process running; defaults to t when called interactively."
          (original-string (buffer-substring-no-properties start end))
          (_ (string-match "\\`\n*\\(.*\\)" original-string)))
     (message "Sent: %s..." (match-string 1 original-string))
+    ;; Recalculate positions to avoid landing on the wrong line if
+    ;; lines have been removed/added.
+    (with-current-buffer (process-buffer process)
+      (compilation-forget-errors))
     (python-shell-send-string string process)))
 
 (defun python-shell-send-statement (&optional send-main msg)
@@ -4004,8 +4011,8 @@ Argument OUTPUT is a string with the output from the comint process."
   "Setup pdb tracking in current buffer."
   (make-local-variable 'python-pdbtrack-buffers-to-kill)
   (make-local-variable 'python-pdbtrack-tracked-buffer)
-  (add-to-list (make-local-variable 'comint-input-filter-functions)
-               #'python-pdbtrack-comint-input-filter-function)
+  (add-hook 'comint-input-filter-functions
+            #'python-pdbtrack-comint-input-filter-function nil t)
   (add-to-list (make-local-variable 'comint-output-filter-functions)
                #'python-pdbtrack-comint-output-filter-function)
   (add-function :before (process-sentinel (get-buffer-process (current-buffer)))
