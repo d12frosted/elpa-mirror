@@ -1,12 +1,12 @@
 ;;; ah.el --- Additional hooks -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019 Takaaki ISHIKAWA
+;; Copyright (C) 2019-2020 Takaaki ISHIKAWA
 
 ;; Author: Takaaki ISHIKAWA <takaxp at ieee dot org>
 ;; Keywords: convenience
-;; Package-Version: 20191212.652
-;; Package-Commit: 3ca848bcf1fc4c18b4a5329d1439c5effb7dcb97
-;; Version: 0.9.1
+;; Package-Version: 20201213.218
+;; Package-Commit: 869219e7853510aeb00af3580aede0e5d49b324a
+;; Version: 0.9.2
 ;; Maintainer: Takaaki ISHIKAWA <takaxp at ieee dot org>
 ;; URL: https://github.com/takaxp/ah
 ;; Package-Requires: ((emacs "25.1"))
@@ -34,6 +34,8 @@
 ;; - ah-after-move-cursor-hook
 ;; - ah-before-c-g-hook
 ;; - ah-after-c-g-hook
+;; - ah-before-enable-theme-hook
+;; - ah-after-enable-theme-hook
 
 ;;; Change Log:
 
@@ -67,6 +69,16 @@
 
 (defcustom ah-after-c-g-hook nil
   "Hook runs after \\[keyboard-quit] and related commands."
+  :type 'hook
+  :group 'ah)
+
+(defcustom ah-before-enable-theme-hook nil
+  "Hook runs before \\[enable-theme]."
+  :type 'hook
+  :group 'ah)
+
+(defcustom ah-after-enable-theme-hook nil
+  "Hook runs after \\[enable-theme]."
   :type 'hook
   :group 'ah)
 
@@ -172,6 +184,16 @@ F is the original function."
   (run-hooks 'ah-before-c-g-hook)
   (funcall f))
 
+(defun ah--enable-theme (f theme)
+  "Extend `enable-theme'.
+F is the original function.
+THEME is identical to the original arguments."
+  (when (eq theme 'user)
+    (run-hooks 'ah-before-enable-theme-hook))
+  (funcall f theme)
+  (when (eq theme 'user)
+    (run-hooks 'ah-after-enable-theme-hook)))
+
 (defun ah--setup ()
   "Setup."
   ;; For `ah-before-move-cursor-hook' and `ah-after-move-cursor-hook'
@@ -180,13 +202,15 @@ F is the original function."
   (advice-add 'forward-char :around #'ah--cur-forward-char)
   (advice-add 'backward-char :around #'ah--cur-backward-char)
   (advice-add 'syntax-subword-forward :around #'ah--cur-syntax-subword-forward)
-  (advice-add 'syntax-subword-backward :around #'ah--cur-syntax-subword-backward)
+  (advice-add 'syntax-subword-backward :around
+              #'ah--cur-syntax-subword-backward)
   (advice-add 'move-beginning-of-line :around #'ah--cur-move-beginning-of-line)
   (advice-add 'move-end-of-line :around #'ah--cur-move-end-of-line)
   (advice-add 'beginning-of-buffer :around #'ah--cur-beginning-of-buffer)
   (advice-add 'end-of-buffer :around #'ah--cur-end-of-buffer)
   (advice-add 'keyboard-quit :around #'ah--cg-keyboard-quit)
-  (advice-add 'isearch-abort :around #'ah--cg-isearch-abort))
+  (advice-add 'isearch-abort :around #'ah--cg-isearch-abort)
+  (advice-add 'enable-theme :around #'ah--enable-theme))
 
 (defun ah--abort ()
   "Abort."
@@ -202,7 +226,8 @@ F is the original function."
   (advice-remove 'beginning-of-buffer #'ah--cur-beginning-of-buffer)
   (advice-remove 'end-of-buffer #'ah--cur-end-of-buffer)
   (advice-remove 'keyboard-quit #'ah--cg-keyboard-quit)
-  (advice-remove 'isearch-abort #'ah--cg-isearch-abort))
+  (advice-remove 'isearch-abort #'ah--cg-isearch-abort)
+  (advice-remove 'enable-theme #'ah--enable-theme))
 
 ;;;###autoload
 (define-minor-mode ah-mode

@@ -2,8 +2,8 @@
 ;;
 ;; Author: Ag Ibragimov
 ;; URL: https://github.com/agzam/mw-thesaurus.el
-;; Package-Version: 20190620.2330
-;; Package-Commit: 8327bae11588bcad5d73dcfbeb5e8d10f623d6b6
+;; Package-Version: 20201212.2250
+;; Package-Commit: 4117f49b9f40d119f9ed0888458ce5495510226e
 ;; Created: Nov-2017
 ;; Keywords: wp, matching
 ;; License: GPL v3
@@ -114,7 +114,7 @@ Usage: `(mw-thesaurus--get-xml-node html-root '(html head title))`"
                 ((eq tag-type 'ant) "Antonyms")
                 (t "Unknown type"))))
     (when (and content (< 0 (length content)))
-      (string-join (list "\n*** " title ":\n    " (s-replace ";" "\n   " content)) ""))))
+      (string-join (list "\n*** " title ":\n    " (replace-regexp-in-string ";" "\n   " content t t)) ""))))
 
 (defun mw-thesaurus--third-lvl (article)
   "Third level of ARTICLE."

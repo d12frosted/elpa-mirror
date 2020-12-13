@@ -5,8 +5,8 @@
 ;; Author: Pablo Barrantes <xjpablobrx@gmail.com>
 ;; Maintainer: Pablo Barrantes <xjpablobrx@gmail.com>
 ;; Version: 0.1.3
-;; Package-Version: 20201210.2257
-;; Package-Commit: cfa5cc469942a262ab36eb08b0d00466be3612c6
+;; Package-Version: 20201213.117
+;; Package-Commit: 5fe19be48a82844dfc25a2ba6829b6c1398694ed
 ;; Keywords: games
 ;; URL: https://github.com/jpablobr/emacs-monkeytype
 ;; Package-Requires: ((emacs "25.1") (async "1.9.3"))
@@ -159,7 +159,7 @@ It defaults `fill-column' setting. See: `monkeytype-auto-fill'"
 
 (defcustom monkeytype-most-mistyped-amount 100
   "Amount of words in most mistyped words test."
-  :type 'boolean)
+  :type 'integer)
 
 (defcustom monkeytype-file-name-format "%a-%d-%b-%Y-%H-%M-%S"
   "Format for time-stamped files for saving."
@@ -289,8 +289,6 @@ It defaults `fill-column' setting. See: `monkeytype-auto-fill'"
 (defvar-local monkeytype--previous-last-entry-index nil)
 (defvar-local monkeytype--previous-run-last-entry nil)
 (defvar-local monkeytype--previous-run '())
-
-;;;; Init:
 
 (defun monkeytype--init (text &optional text-file-p)
   "Set up a new buffer for the typing exercise on TEXT.
@@ -878,7 +876,7 @@ run."
          (gross-wpm (monkeytype--results-gross-wpm words minutes)))
     (concat (format str-format net-wpm acc gross-wpm))))
 
-;;;; Typed Text
+;;;; Typed Text:
 
 (defun monkeytype--typed-text-entry-face (correctp &optional correctionp)
   "Return the face for the CORRECTP and/or CORRECTIONP entry."
@@ -1057,7 +1055,7 @@ This is unless the char doesn't belong to any word as defined by the
             correction-count
             (+ error-count correction-count))))
 
-;;; Mode-line
+;;;; Mode-line:
 
 (defun monkeytype--mode-line-get-face (successp)
   "Get success or error face based on SUCCESSP."
