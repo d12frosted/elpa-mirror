@@ -16,6 +16,10 @@ over the place and keep the *Messages* window visible, since tracing doesn't say
 names of the arguments or return values.  If someone else knows a better way please
 comment.
 
+With so many cascading defvars and the fact that eval-buffer doesn't reset
+their values, frequently the easiest way to test changes is to start a new
+emacs.
+
 Bugs / to-do list
 
 * See bugs on GitHub: https://github.com/dylan-lang/dylan-mode/issues

@@ -3,9 +3,9 @@ their results using gnuplot.  It supports features of recent
 Gnuplot versions (4.4 and up), but should also work fine with older
 versions.
 
-This version of gnuplot-mode has been tested mostly on GNU Emacs 23
-and 24, but should also work with older GNU Emacs versions back to
-Emacs 21, and XEmacs 21.
+This version of gnuplot-mode has been tested mostly on GNU Emacs
+25.
+
 
 This mode offers several tools to help you compose your scripts,
 including font-lock syntax colorization, a syntax table appropriate
@@ -118,5 +118,7 @@ This means you must either:
                    (expand-file-name "/path/to/file")))
       where "/path/to/file" is the location of gnuplot.info
 
-This mode has been tested extensively with GNU Emacs 23 and 24, and
-in a limited manner with GNU Emacs 22 and XEmacs 21.
+
+
+
+TODO Move history and installation instructions in their designated files.

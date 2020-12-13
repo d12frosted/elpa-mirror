@@ -5,8 +5,8 @@
 ;; Created: 2020
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
-;; Package-Version: 20201212.1938
-;; Package-Commit: f16d26a17bb93684dd0f099db6dc0400a743dcc3
+;; Package-Version: 20201212.2049
+;; Package-Commit: c0460b68920143f3e3dac43bace7c901d3f76b0a
 ;; Package-Requires: ((emacs "26.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -152,6 +152,7 @@ only with the annotations that come with Emacs) without disabling
     (minor-mode . marginalia-annotate-minor-mode)
     (symbol . marginalia-annotate-symbol)
     (variable . marginalia-annotate-variable)
+    (environment-variable . marginalia-annotate-environment-variable)
     (input-method . marginalia-annotate-input-method)
     (coding-system . marginalia-annotate-coding-system)
     (charset . marginalia-annotate-charset)
@@ -199,6 +200,7 @@ determine it."
     ("\\<M-x\\>" . command)
     ("\\<package\\>" . package)
     ("\\<face\\>" . face)
+    ("\\<environment variable\\>" . environment-variable)
     ("\\<variable\\>" . variable)
     ("\\<input method\\>" . input-method)
     ("\\<charset\\>" . charset)
@@ -366,6 +368,12 @@ This hash table is needed to speed up `marginalia-annotate-command'.")
       :truncate (/ marginalia-truncate-width 3) :format "%S" :face 'marginalia-variable)
      ((documentation-property sym 'variable-documentation)
       :truncate marginalia-truncate-width :face 'marginalia-documentation))))
+
+(defun marginalia-annotate-environment-variable (cand)
+  "Annotate environment variable CAND with its current value."
+  (when-let (val (getenv cand))
+    (marginalia--fields
+     (val :truncate marginalia-truncate-width :face 'marginalia-variable))))
 
 (defun marginalia-annotate-face (cand)
   "Annotate face CAND with documentation string and face example."
