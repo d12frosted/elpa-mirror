@@ -6,7 +6,7 @@
 ;;         Naoya Yamashita <conao3@gmail.com>
 ;; Maintainer: Feng Shu <tumashu@163.com>
 ;; URL: https://github.com/tumashu/ivy-posframe
-;; Version: 0.5.3
+;; Version: 0.5.4
 ;; Keywords: abbrev, convenience, matching, ivy
 ;; Package-Requires: ((emacs "26.0") (posframe "0.8.0") (ivy "0.13.0"))
 
@@ -361,15 +361,16 @@ This variable is useful for `ivy-posframe-read-action' .")
                                     (string-prefix-p key (car x)))
                                   (cdr actions)))
                 (not (string= key (car (nth action-idx (cdr actions))))))
-      (setq key (concat key (string
-                             (read-key
-                              (if (functionp display-function)
-                                  (let ((ivy-posframe--ignore-prompt t))
-                                    (funcall display-function hint)
-                                    "Please type a key: ")
-                                hint))))))
+      (setq key (concat key (key-description
+                             (vector
+                              (read-key
+                               (if (functionp display-function)
+                                   (let ((ivy-posframe--ignore-prompt t))
+                                     (funcall display-function hint)
+                                     "Please type a key: ")
+                                 hint)))))))
     (ivy-shrink-after-dispatching)
-    (cond ((member key '("ESC" "C-g"))
+    (cond ((member key '("ESC" "C-g" "M-o"))
            nil)
           ((null action-idx)
            (message "%s is not bound" key)
