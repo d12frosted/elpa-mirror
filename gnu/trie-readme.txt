@@ -1,7 +1,7 @@
 Quick Overview
 --------------
 A trie is a data structure used to store keys that are ordered sequences of
-elements (vectors, lists or strings in Elisp; strings are by far the most
+elements (vectors, lists, or strings in Elisp; strings are by far the most
 common), in such a way that both storage and retrieval are space- and
 time-efficient. But, more importantly, a variety of more advanced queries
 can also be performed efficiently: for example, returning all strings with

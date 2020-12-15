@@ -494,19 +494,19 @@
 	    (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
 	    (:url . "https://savannah.nongnu.org/projects/delight"))])
  (dict-tree .
-	    [(0 14)
+	    [(0 16)
 	     ((trie
 	       (0 3))
 	      (tNFA
 	       (0 1 1))
 	      (heap
 	       (0 3)))
-	     "Dictionary data structure" single
-	     ((:keywords "extensions" "matching" "data structures trie" "tree" "dictionary" "completion" "regexp")
+	     "Dictionary data structure" tar
+	     ((:url . "http://www.dr-qubit.org/emacs.php")
+	      (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 	      (:authors
 	       ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
-	      (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
-	      (:url . "http://www.dr-qubit.org/emacs.php"))])
+	      (:keywords "extensions" "matching" "data structures trie" "tree" "dictionary" "completion" "regexp"))])
  (diff-hl .
 	  [(1 8 7)
 	   ((cl-lib
@@ -2270,17 +2270,17 @@
 		("David Gonzalez Gandara" . "dggandara@member.fsf.org"))
 	       (:maintainer "David Gonzalez Gandara" . "dggandara@member.fsf.org"))])
  (trie .
-       [(0 4)
+       [(0 5)
 	((tNFA
 	  (0 1 1))
 	 (heap
 	  (0 3)))
-	"Trie data structure" single
-	((:keywords "extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp")
+	"Trie data structure" tar
+	((:url . "http://www.dr-qubit.org/emacs.php")
+	 (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 	 (:authors
 	  ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
-	 (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
-	 (:url . "http://www.dr-qubit.org/emacs.php"))])
+	 (:keywords "extensions" "matching" "data structures trie" "ternary search tree" "tree" "completion" "regexp"))])
  (undo-tree .
 	    [(0 7 5)
 	     nil "Treat undo history as a tree" single
