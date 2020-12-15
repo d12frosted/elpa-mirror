@@ -1111,20 +1111,20 @@
 		 (:maintainer "Clemens Radermacher" . "clemera@posteo.net")
 		 (:url . "https://github.com/clemera/ivy-explorer"))])
  (ivy-posframe .
-	       [(0 5 4)
+	       [(0 5 5)
 		((emacs
 		  (26 0))
 		 (posframe
 		  (0 8 0))
 		 (ivy
 		  (0 13 0)))
-		"Using posframe to show Ivy" single
-		((:keywords "abbrev" "convenience" "matching" "ivy")
+		"Using posframe to show Ivy" tar
+		((:url . "https://github.com/tumashu/ivy-posframe")
+		 (:maintainer "Feng Shu" . "tumashu@163.com")
 		 (:authors
 		  ("Feng Shu" . "tumashu@163.com")
 		  ("Naoya Yamashita" . "conao3@gmail.com"))
-		 (:maintainer "Feng Shu" . "tumashu@163.com")
-		 (:url . "https://github.com/tumashu/ivy-posframe"))])
+		 (:keywords "abbrev" "convenience" "matching" "ivy"))])
  (javaimp .
 	  [(0 7 1)
 	   nil "Add and reorder Java import statements in Maven/Gradle projects" tar
@@ -1940,7 +1940,7 @@
 	   ("Jan Moringen" . "scymtym@users.sourceforge.net"))
 	  (:keywords "rudel" "collaboration"))])
  (scanner .
-	  [(0 1)
+	  [(0 2)
 	   ((emacs
 	     (25 1))
 	    (dash
