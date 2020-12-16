@@ -157,9 +157,11 @@
 		  ("Ian Dunn" . "dunni@gnu.org"))
 		 (:maintainer "Ian Dunn" . "dunni@gnu.org"))])
  (auto-overlays .
-		[(0 10 9)
-		 nil "Automatic regexp-delimited overlays" tar
-		 ((:url . "http://www.dr-qubit.org/emacs.php")
+		[(0 10 10)
+		 ((cl-lib
+		   (0 5)))
+		 "Automatic regexp-delimited overlays" tar
+		 ((:url . "http://www.dr-qubit.org/tags/computing-code-emacs.html")
 		  (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 		  (:authors
 		   ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
