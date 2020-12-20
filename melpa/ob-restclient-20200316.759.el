@@ -5,7 +5,7 @@
 ;; Author: Alf Lervåg
 ;; Keywords: literate programming, reproducible research
 ;; Package-Version: 20200316.759
-;; Package-Commit: f7449b2068498fe9d8ab9589e0a638148861533f
+;; Package-Commit: 0ebfc7c5ebf96d2fe1a476439831363a5a43b9b6
 ;; Homepage: https://github.com/alf/ob-restclient.el
 ;; Version: 0.02
 ;; Package-Requires: ((restclient "0"))

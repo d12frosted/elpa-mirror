@@ -11,6 +11,7 @@ Supported languages:
 
 - Angular/Vue (prettier)
 - Assembly (asmfmt)
+- ATS (atsfmt)
 - Bazel Starlark (buildifier)
 - BibTeX (emacs)
 - C/C++/Objective-C (clang-format)

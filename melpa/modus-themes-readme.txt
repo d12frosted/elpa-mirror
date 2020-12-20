@@ -16,6 +16,7 @@ are disabled by default (nil):
     modus-themes-scale-headings                 (boolean)
     modus-themes-fringes                        (choice)
     modus-themes-org-blocks                     (choice)
+    modus-themes-org-habit                      (choice)
     modus-themes-prompts                        (choice)
     modus-themes-mode-line                      (choice)
     modus-themes-diffs                          (choice)
@@ -203,6 +204,7 @@ missing package or change you would like to see.
     magit-imerge
     make-mode
     man
+    marginalia
     markdown-mode
     markup-faces (`adoc-mode')
     mentor
@@ -230,6 +232,7 @@ missing package or change you would like to see.
     org-roam
     org-superstar
     org-table-sticky-header
+    org-tree-slide
     org-treescope
     origami
     outline-mode
@@ -257,6 +260,7 @@ missing package or change you would like to see.
     rainbow-identifiers
     rainbow-delimiters
     rcirc
+    recursion-indicator
     regexp-builder (also known as `re-builder')
     rg
     ripgrep

@@ -1,9 +1,6 @@
 This package contains
 
-* defuns for downloading and uploading a change (`gerrit-upload` and `gerrit-download`)
-
-  The git-review command line tool as well as the REST API is used for
-  these defuns under the hood.
+* defuns for downloading and uploading a change (`gerrit-upload-transient` and `gerrit-download-new`)
 
 * gerrit-dashboard, defun for displaying a dashboard, similar to the
   one of the gerrit webinterface

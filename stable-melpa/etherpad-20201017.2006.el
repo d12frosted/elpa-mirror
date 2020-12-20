@@ -6,7 +6,7 @@
 ;; Created: 2020-08-08
 ;; Version: 0.1
 ;; Package-Version: 20201017.2006
-;; Package-Commit: bfb8b4bfacbf16bb23e09a2b64b5383dd9cb9a47
+;; Package-Commit: 36956db9fa65ff88f3213a80b11f1fad0765d972
 ;; Package-Requires: ((emacs "26.1") (request "0.3") (let-alist "0.0"))
 ;; Keywords: comm, etherpad, collaborative editing
 ;; URL: https://github.com/zzkt/ethermacs

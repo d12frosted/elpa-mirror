@@ -4,7 +4,7 @@
 ;; Created: 25 Mar 2013
 ;; Keywords: unicode character ucs
 ;; Package-Version: 20200616.1418
-;; Package-Commit: feac50b87d2a596c5e5b7b82b79ddd65b6dedd8c
+;; Package-Commit: a810347b43b024a86167ab9be935dcf56c122743
 ;; Version: 0.0.2
 ;; URL: https://github.com/lateau/charmap
 

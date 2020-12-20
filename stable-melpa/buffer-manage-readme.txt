@@ -3,8 +3,9 @@ multiple inferior shells, multiple SQL session buffers or any other piped
 process that requires multiple buffers.
 
 The library includes support for:
-* A major mode and buffer for listing, switching, and organizing multiple Emacs
-  buffers.
+
+* A major mode and buffer for listing, switching, and organizing multiple
+  Emacs buffers.
 * Fast switching with customized key bindings through the customize framework.
 * Switch between managers providing the same key bindings for buffer entries
   with the same key bindings for creation, switching and managing.
