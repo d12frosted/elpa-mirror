@@ -510,7 +510,7 @@
 	       ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	      (:keywords "extensions" "matching" "data structures trie" "tree" "dictionary" "completion" "regexp"))])
  (diff-hl .
-	  [(1 8 7)
+	  [(1 8 8)
 	   ((cl-lib
 	     (0 2))
 	    (emacs
@@ -1152,7 +1152,7 @@
 		 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		(:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (js2-mode .
-	   [(20190219)
+	   [(20201220)
 	    ((emacs
 	      (24 1))
 	     (cl-lib
