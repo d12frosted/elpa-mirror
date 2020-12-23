@@ -5,7 +5,7 @@
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: matching
 ;; Package-Version: 20201214.307
-;; Package-Commit: 26077d0e9527546014035b481b7ddb343f5989b7
+;; Package-Commit: 0f34245dae2f890c685be767e3dc2c24c65dfe28
 
 ;; Version: 1.1.2
 ;; Package-Requires: ((emacs "24.3") (ivy "0.13.0") (migemo "1.9.2"))

@@ -18,7 +18,7 @@
 ;; Author: Nikita Bloshchanevich <nikblos@outlook.com>
 ;; URL: https://github.com/nbfalcon/ptemplate
 ;; Package-Version: 20201213.1355
-;; Package-Commit: 845c8fe56e527be94f253c4fe3c375fa3e26bcd8
+;; Package-Commit: 7caca3ed9f2c1bce77943d8ef3db6721e2b027e5
 ;; Package-Requires: ((emacs "25.1") (yasnippet "0.13.0"))
 ;; Version: 2.5.1
 

@@ -3,7 +3,7 @@
 ;; Author: Lincoln Clarete <lincoln@clarete.li>
 ;; URL: https://clarete.li/templatel
 ;; Package-Version: 20201206.302
-;; Package-Commit: d612d08b7f2d7981dbb14e0ac90b84da40649e4a
+;; Package-Commit: 3243c632bf3062eb1c576dd424378a9f419f6013
 ;; Version: 0.1.3
 ;; Package-Requires: ((emacs "25.1"))
 ;;

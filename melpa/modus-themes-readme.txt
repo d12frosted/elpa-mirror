@@ -99,6 +99,7 @@ missing package or change you would like to see.
     dired-git-info
     dired-narrow
     dired-subtree
+    diredc
     diredfl
     disk-usage
     doom-modeline

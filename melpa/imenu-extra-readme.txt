@@ -11,6 +11,9 @@
 
 (add-hook 'js2-mode-hook
           (lambda ()
+            ;; original js2-mode setup ...
+
+            ;; at the end of mode hook
             (require 'imenu-extra)
             (imenu-extra-auto-setup '(("tdd.it" "^[ \t]*it('\\([^']+\\)" 1)
                                       ("tdd.desc" "^[ \t]*describe('\\([^']+\\)" 1))))

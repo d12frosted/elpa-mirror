@@ -17,3 +17,5 @@ frame size settings based on screen dimentions
 (global-set-key "\C-x9" 'cframe-restore)
 doesn't clobber anything in shell, Emacs Lisp buffers (maybe others?)
 (global-set-key "\C-\\" 'cframe-add-or-advance-setting)
+toggle full or maximized screen
+(global-set-key "\C-x\C-\\" 'cframe-toggle-frame-full-or-maximized)
