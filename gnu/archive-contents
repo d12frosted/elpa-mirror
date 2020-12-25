@@ -131,13 +131,13 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:keywords "async"))])
  (auctex .
-	 [(12 3 1)
+	 [(13 0 0)
 	  ((emacs
-	    (24 1))
+	    (24 3))
 	   (cl-lib
-	    (0 5)))
+	    (1 0)))
 	  "Integrated environment for *TeX*" tar
-	  ((:url . "http://www.gnu.org/software/auctex/")
+	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:maintainer nil . "auctex-devel@gnu.org")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex"))])
  (aumix-mode .
