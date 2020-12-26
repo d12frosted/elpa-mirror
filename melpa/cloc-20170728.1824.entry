@@ -1,2 +1,11 @@
-
-(cloc . [(20170728 1824) ((cl-lib (0 5))) "count lines of code over emacs buffers" single ((:commit . "f30f0472e465cc8d433d2473e9d3b8dfe2c94491") (:keywords "cloc" "count" "source" "code" "lines") (:authors ("Danny McClanahan" . "danieldmcclanahan@gmail.com")) (:maintainer "Danny McClanahan" . "danieldmcclanahan@gmail.com") (:url . "https://github.com/cosmicexplorer/cloc-emacs"))])
+(cloc .
+      [(20170728 1824)
+       ((cl-lib
+	 (0 5)))
+       "count lines of code over emacs buffers" single
+       ((:commit . "f30f0472e465cc8d433d2473e9d3b8dfe2c94491")
+	(:authors
+	 ("Danny McClanahan" . "danieldmcclanahan@gmail.com"))
+	(:maintainer "Danny McClanahan" . "danieldmcclanahan@gmail.com")
+	(:keywords "cloc" "count" "source" "code" "lines")
+	(:url . "https://github.com/cosmicexplorer/cloc-emacs"))])

@@ -1,1 +1,4 @@
-This file bootstraps JDEE.
+;;; Commentary:
+;;
+;; This file bootstraps JDEE.
+

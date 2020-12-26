@@ -1,2 +1,9 @@
-
-(plim-mode . [(20140813 13) nil "Major mode for editing Plim files" single ((:commit . "92e39190286f172567ceb02c80e1df3b81abfa2d") (:keywords "markup" "language") (:authors ("Dong Weiming")) (:maintainer "Dong Weiming") (:url . "http://github.com/dongweiming/plim-mode"))])
+(plim-mode .
+	   [(20140813 13)
+	    nil "Major mode for editing Plim files" single
+	    ((:commit . "92e39190286f172567ceb02c80e1df3b81abfa2d")
+	     (:authors
+	      ("Dong Weiming"))
+	     (:maintainer "Dong Weiming")
+	     (:keywords "markup" "language")
+	     (:url . "http://github.com/dongweiming/plim-mode"))])

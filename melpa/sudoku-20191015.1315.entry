@@ -1,2 +1,10 @@
-
-(sudoku . [(20191015 1315) ((emacs (24 4))) "Simple sudoku game, can download puzzles" single ((:commit . "b1924fd244a5fa284de9d67b66fbd69164b37318") (:keywords "games") (:authors ("Zajcev Evgeny" . "zevlg@yandex.ru")) (:maintainer "Zajcev Evgeny" . "zevlg@yandex.ru"))])
+(sudoku .
+	[(20191015 1315)
+	 ((emacs
+	   (24 4)))
+	 "Simple sudoku game, can download puzzles" single
+	 ((:commit . "b1924fd244a5fa284de9d67b66fbd69164b37318")
+	  (:authors
+	   ("Zajcev Evgeny" . "zevlg@yandex.ru"))
+	  (:maintainer "Zajcev Evgeny" . "zevlg@yandex.ru")
+	  (:keywords "games"))])

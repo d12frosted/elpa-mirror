@@ -1,2 +1,8 @@
-
-(lit-mode . [(20141123 1736) nil "Major mode for lit" single ((:commit . "c61c403afc8333a5649c5421ab1a6341dc1c7d92") (:keywords "languages" "tools") (:authors ("Hector A Escobedo" . "ninjahector.escobedo@gmail.com")) (:maintainer "Hector A Escobedo" . "ninjahector.escobedo@gmail.com"))])
+(lit-mode .
+	  [(20141123 1736)
+	   nil "Major mode for lit" single
+	   ((:commit . "c61c403afc8333a5649c5421ab1a6341dc1c7d92")
+	    (:authors
+	     ("Hector A Escobedo" . "ninjahector.escobedo@gmail.com"))
+	    (:maintainer "Hector A Escobedo" . "ninjahector.escobedo@gmail.com")
+	    (:keywords "languages" "tools"))])

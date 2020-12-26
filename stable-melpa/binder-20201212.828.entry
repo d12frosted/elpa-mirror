@@ -1,2 +1,13 @@
-
-(binder . [(20201212 828) ((emacs (24 4)) (seq (2 20))) "Global minor mode to facilitate multi-file writing projects" tar ((:commit . "24d55db236fea2b405d4bdc69b4c33d0f066059c") (:keywords "files" "outlines" "wp" "text") (:authors ("Paul W. Rankin" . "pwr@skeletons.cc")) (:maintainer "Paul W. Rankin" . "pwr@skeletons.cc") (:url . "https://git.skeletons.cc/binder"))])
+(binder .
+	[(20201212 828)
+	 ((emacs
+	   (24 4))
+	  (seq
+	   (2 20)))
+	 "Global minor mode to facilitate multi-file writing projects" tar
+	 ((:commit . "24d55db236fea2b405d4bdc69b4c33d0f066059c")
+	  (:authors
+	   ("Paul W. Rankin" . "pwr@skeletons.cc"))
+	  (:maintainer "Paul W. Rankin" . "pwr@skeletons.cc")
+	  (:keywords "files" "outlines" "wp" "text")
+	  (:url . "https://git.skeletons.cc/binder"))])

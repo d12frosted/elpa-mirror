@@ -1,2 +1,10 @@
-
-(sourcetrail . [(20170410 2137) ((emacs (24 4))) "Communication with Sourcetrail" single ((:commit . "b8d5557aa565ae979622312576db20515f65f977") (:keywords "external" "tool") (:authors ("Andreas Stallinger" . "astallinger@sourcetrail.com")) (:maintainer "Andreas Stallinger" . "astallinger@sourcetrail.com"))])
+(sourcetrail .
+	     [(20170410 2137)
+	      ((emacs
+		(24 4)))
+	      "Communication with Sourcetrail" single
+	      ((:commit . "b8d5557aa565ae979622312576db20515f65f977")
+	       (:authors
+		("Andreas Stallinger" . "astallinger@sourcetrail.com"))
+	       (:maintainer "Andreas Stallinger" . "astallinger@sourcetrail.com")
+	       (:keywords "external" "tool"))])

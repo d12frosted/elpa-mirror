@@ -36,8 +36,8 @@ Examples:
 2. Objects involving lists:
 
 (marshal-defclass foo/tree ()
-  ((root :initarg :id :marshal ((plist . :root)))
-   (leaves :initarg :leaves :marshal ((plist . :leaves)) :marshal-type (list foo/tree))))
+  ((root :initarg :id :marshal ((plist . :root) json))
+   (leaves :initarg :leaves :marshal ((plist . :leaves) json) :marshal-type (list foo/tree))))
 
 (marshal (make-instance 'foo/tree :id 0
            :leaves (list (make-instance 'foo/tree :id 1)

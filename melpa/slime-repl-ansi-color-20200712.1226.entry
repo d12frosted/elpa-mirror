@@ -1,2 +1,13 @@
-
-(slime-repl-ansi-color . [(20200712 1226) ((emacs (24)) (slime (2 3 1))) "Turn on ANSI colors in REPL output;" single ((:commit . "e38c7958d9657e41c426b4e96938b3f604238795") (:keywords "lisp") (:authors ("Max Mikhanosha" . "max@openchat.com")) (:maintainer "Augustin Fabre" . "augustin@augfab.fr") (:url . "https://gitlab.com/augfab/slime-repl-ansi-color"))])
+(slime-repl-ansi-color .
+		       [(20200712 1226)
+			((emacs
+			  (24))
+			 (slime
+			  (2 3 1)))
+			"Turn on ANSI colors in REPL output;" single
+			((:commit . "e38c7958d9657e41c426b4e96938b3f604238795")
+			 (:authors
+			  ("Max Mikhanosha" . "max@openchat.com"))
+			 (:maintainer "Augustin Fabre" . "augustin@augfab.fr")
+			 (:keywords "lisp")
+			 (:url . "https://gitlab.com/augfab/slime-repl-ansi-color"))])

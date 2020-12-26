@@ -1,26 +1,29 @@
-Overview
---------
+;;; Commentary:
 
-`lice.el` provides following features:
+;; Overview
+;; --------
 
-- License template management.
-- File header insertion.
+;; `lice.el` provides following features:
 
-Usage
------
+;; - License template management.
+;; - File header insertion.
 
-Usage is very easy, put `lice.el` in your Emacs system, and open a new
-file, and run:
+;; Usage
+;; -----
 
-    M-x lice
+;; Usage is very easy, put `lice.el` in your Emacs system, and open a new
+;; file, and run:
 
-Then, `lice.el` tell to use which license (default is gpl-3.0).  You
-can select license on minibuffer completion.
+;;     M-x lice
 
-When you select license, and enter the `RET`, license and copyright is
-putted into a text.
+;; Then, `lice.el` tell to use which license (default is gpl-3.0).  You
+;; can select license on minibuffer completion.
 
-More Information
-----------------
+;; When you select license, and enter the `RET`, license and copyright is
+;; putted into a text.
 
-See the `README.md` file for more information.
+;; More Information
+;; ----------------
+
+;; See the `README.md` file for more information.
+

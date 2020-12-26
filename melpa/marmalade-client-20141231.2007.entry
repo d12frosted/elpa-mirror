@@ -1,2 +1,15 @@
-
-(marmalade-client . [(20141231 2007) ((web (0 5 2)) (kv (0 0 19)) (gh (0 8 0))) "client for marmalade API from emacs" tar ((:commit . "f315dea57e4fbebd9ee0668c0bafd4c45c7b754a") (:keywords "lisp") (:authors ("Nic Ferrier" . "nferrier@ferrier.me.uk")) (:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk") (:url . "https://github.com/nicferrier/emacs-marmalade-upload"))])
+(marmalade-client .
+		  [(20141231 2007)
+		   ((web
+		     (0 5 2))
+		    (kv
+		     (0 0 19))
+		    (gh
+		     (0 8 0)))
+		   "client for marmalade API from emacs" tar
+		   ((:commit . "f315dea57e4fbebd9ee0668c0bafd4c45c7b754a")
+		    (:authors
+		     ("Nic Ferrier" . "nferrier@ferrier.me.uk"))
+		    (:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk")
+		    (:keywords "lisp")
+		    (:url . "https://github.com/nicferrier/emacs-marmalade-upload"))])

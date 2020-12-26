@@ -1,2 +1,8 @@
-
-(windata . [(20090830 1040) nil "convert window configuration to list" single ((:commit . "a723fc446ceaec23d5f29ecc8245d94c99d91625") (:keywords "convenience" "frames") (:authors (nil . "wenbinye@gmail.com")) (:maintainer nil . "wenbinye@gmail.com"))])
+(windata .
+	 [(20090830 1040)
+	  nil "convert window configuration to list" single
+	  ((:commit . "a723fc446ceaec23d5f29ecc8245d94c99d91625")
+	   (:authors
+	    (nil . "wenbinye@gmail.com"))
+	   (:maintainer nil . "wenbinye@gmail.com")
+	   (:keywords "convenience" "frames"))])

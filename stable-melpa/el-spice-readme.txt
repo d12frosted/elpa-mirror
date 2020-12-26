@@ -1,1 +1,4 @@
-Refer to installation instructions in the README document.
+;;; Commentary:
+;;
+;; Refer to installation instructions in the README document.
+;;

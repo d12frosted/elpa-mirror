@@ -1,1 +1,2 @@
-Makes it easier to browse Spotify API from Emacs.
+;;; Commentary:
+;; Makes it easier to browse Spotify API from Emacs.

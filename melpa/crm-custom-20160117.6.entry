@@ -1,2 +1,11 @@
-
-(crm-custom . [(20160117 6) ((cl-lib (0 5))) "Alternate `completing-read-multiple' that uses `completing-read'" single ((:commit . "f1aaccf64306a5f99d9bf7ba815d7ea41c15518d") (:keywords "completion" "minibuffer" "multiple elements") (:authors ("Ryan C. Thompson" . "rct@thompsonclan.org")) (:maintainer "Ryan C. Thompson" . "rct@thompsonclan.org") (:url . "https://github.com/DarwinAwardWinner/crm-custom"))])
+(crm-custom .
+	    [(20160117 6)
+	     ((cl-lib
+	       (0 5)))
+	     "Alternate `completing-read-multiple' that uses `completing-read'" single
+	     ((:commit . "f1aaccf64306a5f99d9bf7ba815d7ea41c15518d")
+	      (:authors
+	       ("Ryan C. Thompson" . "rct@thompsonclan.org"))
+	      (:maintainer "Ryan C. Thompson" . "rct@thompsonclan.org")
+	      (:keywords "completion" "minibuffer" "multiple elements")
+	      (:url . "https://github.com/DarwinAwardWinner/crm-custom"))])

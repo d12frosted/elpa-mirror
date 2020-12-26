@@ -1,2 +1,13 @@
-
-(projectile-sift . [(20160107 1015) ((sift (0 2 0)) (projectile (0 13 0))) "Run a sift with Projectile" single ((:commit . "cdddba2d183146c340915003f1b5d09d13712c22") (:keywords "sift" "projectile") (:authors ("Nicolas Lamirault" . "nicolas.lamirault@gmail.com")) (:maintainer "Nicolas Lamirault" . "nicolas.lamirault@gmail.com") (:url . "https://github.com/nlamirault/sift.el"))])
+(projectile-sift .
+		 [(20160107 1015)
+		  ((sift
+		    (0 2 0))
+		   (projectile
+		    (0 13 0)))
+		  "Run a sift with Projectile" single
+		  ((:commit . "cdddba2d183146c340915003f1b5d09d13712c22")
+		   (:authors
+		    ("Nicolas Lamirault" . "nicolas.lamirault@gmail.com"))
+		   (:maintainer "Nicolas Lamirault" . "nicolas.lamirault@gmail.com")
+		   (:keywords "sift" "projectile")
+		   (:url . "https://github.com/nlamirault/sift.el"))])

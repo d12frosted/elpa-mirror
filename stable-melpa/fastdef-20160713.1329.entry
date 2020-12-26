@@ -1,2 +1,13 @@
-
-(fastdef . [(20160713 1329) ((ivy (0 7 0)) (w3m (0 0))) "Insert terminology from Google top search results" single ((:commit . "0696f41dc150d35ce31fe8d2ea74f4173818bb55") (:keywords "terminology" "org-mode" "markdown") (:authors ("Chen Bin <chenin DOT sh AT gmail DOT com>")) (:maintainer "Chen Bin <chenin DOT sh AT gmail DOT com>") (:url . "http://github.com/redguardtoo/fastdef"))])
+(fastdef .
+	 [(20160713 1329)
+	  ((ivy
+	    (0 7 0))
+	   (w3m
+	    (0 0)))
+	  "Insert terminology from Google top search results" single
+	  ((:commit . "0696f41dc150d35ce31fe8d2ea74f4173818bb55")
+	   (:authors
+	    ("Chen Bin <chenin DOT sh AT gmail DOT com>"))
+	   (:maintainer "Chen Bin <chenin DOT sh AT gmail DOT com>")
+	   (:keywords "terminology" "org-mode" "markdown")
+	   (:url . "http://github.com/redguardtoo/fastdef"))])

@@ -1,2 +1,11 @@
-
-(almost-mono-themes . [(20200211 2126) ((emacs (24))) "Almost monochromatic color themes" tar ((:commit . "2f5935a1a9d042751c7135cac79875886edb2556") (:keywords "faces") (:authors ("John Olsson" . "john@cryon.se")) (:maintainer "John Olsson" . "john@cryon.se") (:url . "https://github.com/cryon/almost-mono-themes"))])
+(almost-mono-themes .
+		    [(20200211 2126)
+		     ((emacs
+		       (24)))
+		     "Almost monochromatic color themes" tar
+		     ((:commit . "2f5935a1a9d042751c7135cac79875886edb2556")
+		      (:authors
+		       ("John Olsson" . "john@cryon.se"))
+		      (:maintainer "John Olsson" . "john@cryon.se")
+		      (:keywords "faces")
+		      (:url . "https://github.com/cryon/almost-mono-themes"))])

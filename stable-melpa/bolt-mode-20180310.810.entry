@@ -1,2 +1,11 @@
-
-(bolt-mode . [(20180310 810) ((emacs (24 3))) "Editing support for Bolt language" single ((:commit . "85a5a752bfbebb4aed884326c25db64c000e9934") (:keywords "languages") (:authors ("Mikhail Pontus" . "mpontus@gmail.com")) (:maintainer "Mikhail Pontus" . "mpontus@gmail.com") (:url . "https://github.com/mpontus/bolt-mode"))])
+(bolt-mode .
+	   [(20180310 810)
+	    ((emacs
+	      (24 3)))
+	    "Editing support for Bolt language" single
+	    ((:commit . "85a5a752bfbebb4aed884326c25db64c000e9934")
+	     (:authors
+	      ("Mikhail Pontus" . "mpontus@gmail.com"))
+	     (:maintainer "Mikhail Pontus" . "mpontus@gmail.com")
+	     (:keywords "languages")
+	     (:url . "https://github.com/mpontus/bolt-mode"))])

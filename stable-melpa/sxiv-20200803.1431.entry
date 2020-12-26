@@ -1,2 +1,13 @@
-
-(sxiv . [(20200803 1431) ((dash (2 16 0)) (emacs (25 1))) "Run the sxiv image viewer" single ((:commit . "9eb6a121bfdf64433cd8ac7985d2c82b590b5abb") (:keywords "multimedia") (:authors ("contrapunctus" . "xmpp:contrapunctus@jabber.fr")) (:maintainer "contrapunctus" . "xmpp:contrapunctus@jabber.fr") (:url . "https://gitlab.com/contrapunctus/sxiv.el"))])
+(sxiv .
+      [(20200803 1431)
+       ((dash
+	 (2 16 0))
+	(emacs
+	 (25 1)))
+       "Run the sxiv image viewer" single
+       ((:commit . "9eb6a121bfdf64433cd8ac7985d2c82b590b5abb")
+	(:authors
+	 ("contrapunctus" . "xmpp:contrapunctus@jabber.fr"))
+	(:maintainer "contrapunctus" . "xmpp:contrapunctus@jabber.fr")
+	(:keywords "multimedia")
+	(:url . "https://gitlab.com/contrapunctus/sxiv.el"))])

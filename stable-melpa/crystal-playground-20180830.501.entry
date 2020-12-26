@@ -1,2 +1,13 @@
-
-(crystal-playground . [(20180830 501) ((emacs (25)) (crystal-mode (0 1 2))) "Local crystal playground for short code snippets." single ((:commit . "fb3691b1281207b459c5be50015a626f356dc40d") (:keywords "tools" "crystal") (:authors ("Jason Howell")) (:maintainer "Jason Howell") (:url . "https://github.com/jasonrobot/crystal-playground"))])
+(crystal-playground .
+		    [(20180830 501)
+		     ((emacs
+		       (25))
+		      (crystal-mode
+		       (0 1 2)))
+		     "Local crystal playground for short code snippets." single
+		     ((:commit . "fb3691b1281207b459c5be50015a626f356dc40d")
+		      (:authors
+		       ("Jason Howell"))
+		      (:maintainer "Jason Howell")
+		      (:keywords "tools" "crystal")
+		      (:url . "https://github.com/jasonrobot/crystal-playground"))])

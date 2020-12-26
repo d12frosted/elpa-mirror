@@ -1,2 +1,11 @@
-
-(helm-orgcard . [(20151001 1524) ((helm-core (1 7 7))) "browse the orgcard by helm" single ((:commit . "9655ac340d1ccc5f3d1c0f7c49be8dd3556d4d0d") (:keywords "convenience" "helm" "org") (:authors ("Yuhei Maeda <yuhei.maeda_at_gmail.com>")) (:maintainer "Yuhei Maeda") (:url . "https://github.com/emacs-jp/helm-orgcard"))])
+(helm-orgcard .
+	      [(20151001 1524)
+	       ((helm-core
+		 (1 7 7)))
+	       "browse the orgcard by helm" single
+	       ((:commit . "9655ac340d1ccc5f3d1c0f7c49be8dd3556d4d0d")
+		(:authors
+		 ("Yuhei Maeda <yuhei.maeda_at_gmail.com>"))
+		(:maintainer "Yuhei Maeda")
+		(:keywords "convenience" "helm" "org")
+		(:url . "https://github.com/emacs-jp/helm-orgcard"))])

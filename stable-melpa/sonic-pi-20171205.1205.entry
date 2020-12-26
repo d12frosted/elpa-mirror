@@ -1,2 +1,19 @@
-
-(sonic-pi . [(20171205 1205) ((cl-lib (0 5)) (osc (0 1)) (dash (2 2 0)) (emacs (24)) (highlight (0))) "A Emacs client for SonicPi" tar ((:commit . "3cf101b3b299735ed91658c7791ea4f04164e076") (:keywords "sonicpi" "ruby") (:authors ("Joseph Wilk" . "joe@josephwilk.net")) (:maintainer "Joseph Wilk" . "joe@josephwilk.net") (:url . "http://www.github.com/repl-electric/sonic-pi.el"))])
+(sonic-pi .
+	  [(20171205 1205)
+	   ((cl-lib
+	     (0 5))
+	    (osc
+	     (0 1))
+	    (dash
+	     (2 2 0))
+	    (emacs
+	     (24))
+	    (highlight
+	     (0)))
+	   "A Emacs client for SonicPi" tar
+	   ((:commit . "3cf101b3b299735ed91658c7791ea4f04164e076")
+	    (:authors
+	     ("Joseph Wilk" . "joe@josephwilk.net"))
+	    (:maintainer "Joseph Wilk" . "joe@josephwilk.net")
+	    (:keywords "sonicpi" "ruby")
+	    (:url . "http://www.github.com/repl-electric/sonic-pi.el"))])

@@ -1,2 +1,9 @@
-
-(rdxmk . [(20170630 134) nil "A small set of tools for redox developments" tar ((:commit . "e78749fb29738365ffa4d863ffabeb969ebb0bcf") (:keywords "redox" "convenience" "tools") (:authors ("Jacob Salzberg" . "jsalzbergedu@yahoo.com")) (:maintainer "Jacob Salzberg" . "jsalzbergedu@yahoo.com") (:url . "https://github.com/jsalzbergedu/rdxmk"))])
+(rdxmk .
+       [(20170630 134)
+	nil "A small set of tools for redox developments" tar
+	((:commit . "e78749fb29738365ffa4d863ffabeb969ebb0bcf")
+	 (:authors
+	  ("Jacob Salzberg" . "jsalzbergedu@yahoo.com"))
+	 (:maintainer "Jacob Salzberg" . "jsalzbergedu@yahoo.com")
+	 (:keywords "redox" "convenience" "tools")
+	 (:url . "https://github.com/jsalzbergedu/rdxmk"))])

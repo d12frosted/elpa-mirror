@@ -1,2 +1,16 @@
-
-(realgud-old-debuggers . [(20190520 1150) ((realgud (1 4 5)) (load-relative (1 2)) (cl-lib (0 5)) (emacs (24))) "Realgud front-end to older lesser-used debuggers" tar ((:commit . "0fad38283e885c452160232e01adf3f6ae51983b") (:authors ("Rocky Bernstein")) (:maintainer "Rocky Bernstein") (:url . "http://github.com/rocky/realgud-old-debuggers"))])
+(realgud-old-debuggers .
+		       [(20190520 1150)
+			((realgud
+			  (1 4 5))
+			 (load-relative
+			  (1 2))
+			 (cl-lib
+			  (0 5))
+			 (emacs
+			  (24)))
+			"Realgud front-end to older lesser-used debuggers" tar
+			((:commit . "0fad38283e885c452160232e01adf3f6ae51983b")
+			 (:authors
+			  ("Rocky Bernstein"))
+			 (:maintainer "Rocky Bernstein")
+			 (:url . "http://github.com/rocky/realgud-old-debuggers"))])

@@ -1,2 +1,8 @@
-
-(php-boris . [(20130527 821) nil "Run boris php REPL" single ((:commit . "f2faebf610c917f7091f7ec0cd97645629c4f819") (:keywords "php" "commint" "repl" "boris") (:authors ("Tom Regner")) (:maintainer "Tom Regner" . "tom@goochesa.de"))])
+(php-boris .
+	   [(20130527 821)
+	    nil "Run boris php REPL" single
+	    ((:commit . "f2faebf610c917f7091f7ec0cd97645629c4f819")
+	     (:authors
+	      ("Tom Regner"))
+	     (:maintainer "Tom Regner" . "tom@goochesa.de")
+	     (:keywords "php" "commint" "repl" "boris"))])

@@ -1,2 +1,11 @@
-
-(git-attr . [(20180925 2003) ((emacs (24 3))) "Git attributes of buffer file" tar ((:commit . "50df0630eba2a931146f676d349b29bde6b6b37b") (:keywords "vc") (:authors ("Arne Jørgensen" . "arne@arnested.dk")) (:maintainer "Arne Jørgensen" . "arne@arnested.dk") (:url . "https://github.com/arnested/emacs-git-attr"))])
+(git-attr .
+	  [(20180925 2003)
+	   ((emacs
+	     (24 3)))
+	   "Git attributes of buffer file" tar
+	   ((:commit . "50df0630eba2a931146f676d349b29bde6b6b37b")
+	    (:authors
+	     ("Arne Jørgensen" . "arne@arnested.dk"))
+	    (:maintainer "Arne Jørgensen" . "arne@arnested.dk")
+	    (:keywords "vc")
+	    (:url . "https://github.com/arnested/emacs-git-attr"))])

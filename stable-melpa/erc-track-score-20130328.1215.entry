@@ -1,2 +1,8 @@
-
-(erc-track-score . [(20130328 1215) nil "Add score support to tracked channel buffers" single ((:commit . "5b27531ea6b1a4c4b703b270dfa9128cb5bfdaa3") (:authors ("Julien Danjou" . "julien@danjou.info")) (:maintainer "Julien Danjou" . "julien@danjou.info") (:url . "http://julien.danjou.info/erc-track-score.html"))])
+(erc-track-score .
+		 [(20130328 1215)
+		  nil "Add score support to tracked channel buffers" single
+		  ((:commit . "5b27531ea6b1a4c4b703b270dfa9128cb5bfdaa3")
+		   (:authors
+		    ("Julien Danjou" . "julien@danjou.info"))
+		   (:maintainer "Julien Danjou" . "julien@danjou.info")
+		   (:url . "http://julien.danjou.info/erc-track-score.html"))])

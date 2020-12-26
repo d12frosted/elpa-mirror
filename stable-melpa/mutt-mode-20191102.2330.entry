@@ -1,2 +1,11 @@
-
-(mutt-mode . [(20191102 2330) ((emacs (24))) "major mode for editing mutt configuration" single ((:commit . "1d495de49e6f536459b00d5396a2f5ce5ad4757b") (:keywords "languages") (:authors ("Felix Weilbach" . "felix.weilbach@t-online.de")) (:maintainer "Felix Weilbach" . "felix.weilbach@t-online.de") (:url . "https://gitlab.com/flexw/mutt-mode"))])
+(mutt-mode .
+	   [(20191102 2330)
+	    ((emacs
+	      (24)))
+	    "major mode for editing mutt configuration" single
+	    ((:commit . "1d495de49e6f536459b00d5396a2f5ce5ad4757b")
+	     (:authors
+	      ("Felix Weilbach" . "felix.weilbach@t-online.de"))
+	     (:maintainer "Felix Weilbach" . "felix.weilbach@t-online.de")
+	     (:keywords "languages")
+	     (:url . "https://gitlab.com/flexw/mutt-mode"))])

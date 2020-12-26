@@ -1,2 +1,15 @@
-
-(helm-selected . [(20171223 210) ((emacs (24 4)) (helm (2 8 6)) (selected (1 1))) "helm extension for selected.el" single ((:commit . "a9c769998bc56373d19f0ec9cbbbb4bd89a43c2d") (:keywords "extensions" "convenience") (:authors ("Takaaki ISHIKAWA <takaxp at ieee dot org>")) (:maintainer "Takaaki ISHIKAWA <takaxp at ieee dot org>") (:url . "https://github.com/takaxp/helm-selected"))])
+(helm-selected .
+	       [(20171223 210)
+		((emacs
+		  (24 4))
+		 (helm
+		  (2 8 6))
+		 (selected
+		  (1 1)))
+		"helm extension for selected.el" single
+		((:commit . "a9c769998bc56373d19f0ec9cbbbb4bd89a43c2d")
+		 (:authors
+		  ("Takaaki ISHIKAWA <takaxp at ieee dot org>"))
+		 (:maintainer "Takaaki ISHIKAWA <takaxp at ieee dot org>")
+		 (:keywords "extensions" "convenience")
+		 (:url . "https://github.com/takaxp/helm-selected"))])

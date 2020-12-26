@@ -1,2 +1,10 @@
-
-(vertica . [(20131217 1511) ((sql (3 0))) "Vertica SQL mode extension" single ((:commit . "3c9647b425c5c13c30bf0cba483646af18196588") (:keywords "sql" "vertica") (:authors ("Roman Scherer" . "roman@burningswell.com")) (:maintainer "Roman Scherer" . "roman@burningswell.com"))])
+(vertica .
+	 [(20131217 1511)
+	  ((sql
+	    (3 0)))
+	  "Vertica SQL mode extension" single
+	  ((:commit . "3c9647b425c5c13c30bf0cba483646af18196588")
+	   (:authors
+	    ("Roman Scherer" . "roman@burningswell.com"))
+	   (:maintainer "Roman Scherer" . "roman@burningswell.com")
+	   (:keywords "sql" "vertica"))])

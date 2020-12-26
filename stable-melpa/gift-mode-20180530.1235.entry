@@ -1,2 +1,8 @@
-
-(gift-mode . [(20180530 1235) nil "major mode for editing GIFT format quizzes" single ((:commit . "b0441ae6e02f343be3b611a2d4b40495ecd932f0") (:authors ("Christophe Rhodes" . "christophe@rhodes.io")) (:maintainer "Christophe Rhodes" . "christophe@rhodes.io") (:url . "https://github.com/csrhodes/gift-mode"))])
+(gift-mode .
+	   [(20180530 1235)
+	    nil "major mode for editing GIFT format quizzes" single
+	    ((:commit . "b0441ae6e02f343be3b611a2d4b40495ecd932f0")
+	     (:authors
+	      ("Christophe Rhodes" . "christophe@rhodes.io"))
+	     (:maintainer "Christophe Rhodes" . "christophe@rhodes.io")
+	     (:url . "https://github.com/csrhodes/gift-mode"))])

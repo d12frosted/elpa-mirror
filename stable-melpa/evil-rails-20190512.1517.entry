@@ -1,2 +1,13 @@
-
-(evil-rails . [(20190512 1517) ((evil (1 0)) (projectile-rails (1 0))) "Rails support for Evil Mode" single ((:commit . "b0f1c5de6720714febeb76c4b569b71bb891938c") (:keywords "ruby" "rails" "vim" "project" "convenience" "web" "evil" "projectile") (:authors ("Antono Vasiljev" . "antono.vasiljev@gmail.com")) (:maintainer "Antono Vasiljev" . "antono.vasiljev@gmail.com") (:url . "https://github.com/antono/evil-rails"))])
+(evil-rails .
+	    [(20190512 1517)
+	     ((evil
+	       (1 0))
+	      (projectile-rails
+	       (1 0)))
+	     "Rails support for Evil Mode" single
+	     ((:commit . "b0f1c5de6720714febeb76c4b569b71bb891938c")
+	      (:authors
+	       ("Antono Vasiljev" . "antono.vasiljev@gmail.com"))
+	      (:maintainer "Antono Vasiljev" . "antono.vasiljev@gmail.com")
+	      (:keywords "ruby" "rails" "vim" "project" "convenience" "web" "evil" "projectile")
+	      (:url . "https://github.com/antono/evil-rails"))])

@@ -1,2 +1,8 @@
-
-(isgd . [(20150414 936) nil "Shorten URLs using the isgd.com shortener service" single ((:commit . "764306dadd5a9213799081a48aba22f7c75cca9a") (:authors ("Chmouel Boudjnah" . "chmouel@chmouel.com")) (:maintainer "Chmouel Boudjnah" . "chmouel@chmouel.com") (:url . "https://github.com/chmouel/isgd.el"))])
+(isgd .
+      [(20150414 936)
+       nil "Shorten URLs using the isgd.com shortener service" single
+       ((:commit . "764306dadd5a9213799081a48aba22f7c75cca9a")
+	(:authors
+	 ("Chmouel Boudjnah" . "chmouel@chmouel.com"))
+	(:maintainer "Chmouel Boudjnah" . "chmouel@chmouel.com")
+	(:url . "https://github.com/chmouel/isgd.el"))])

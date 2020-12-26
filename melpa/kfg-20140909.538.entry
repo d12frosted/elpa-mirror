@@ -1,2 +1,10 @@
-
-(kfg . [(20140909 538) ((f (0 17 1))) "an emacs configuration system" single ((:commit . "d2c9dd26618fb2f7bf1e7b6eae193b1cceba3c97") (:authors ("Austin Bingham" . "austin.bingham@gmail.com")) (:maintainer "Austin Bingham" . "austin.bingham@gmail.com") (:url . "https://github.com/abingham/kfg"))])
+(kfg .
+     [(20140909 538)
+      ((f
+	(0 17 1)))
+      "an emacs configuration system" single
+      ((:commit . "d2c9dd26618fb2f7bf1e7b6eae193b1cceba3c97")
+       (:authors
+	("Austin Bingham" . "austin.bingham@gmail.com"))
+       (:maintainer "Austin Bingham" . "austin.bingham@gmail.com")
+       (:url . "https://github.com/abingham/kfg"))])

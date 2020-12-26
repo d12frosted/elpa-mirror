@@ -1,2 +1,13 @@
-
-(helm-spotify . [(20160905 2147) ((helm (0 0 0)) (multi (2 0 0))) "Control Spotify with Helm." single ((:commit . "f7a62d1ff88e3127de9be7cd3e818b0a92268ab3") (:keywords "helm" "spotify") (:authors ("Kris Jenkins" . "krisajenkins@gmail.com")) (:maintainer "Kris Jenkins" . "krisajenkins@gmail.com") (:url . "https://github.com/krisajenkins/helm-spotify"))])
+(helm-spotify .
+	      [(20160905 2147)
+	       ((helm
+		 (0 0 0))
+		(multi
+		 (2 0 0)))
+	       "Control Spotify with Helm." single
+	       ((:commit . "f7a62d1ff88e3127de9be7cd3e818b0a92268ab3")
+		(:authors
+		 ("Kris Jenkins" . "krisajenkins@gmail.com"))
+		(:maintainer "Kris Jenkins" . "krisajenkins@gmail.com")
+		(:keywords "helm" "spotify")
+		(:url . "https://github.com/krisajenkins/helm-spotify"))])

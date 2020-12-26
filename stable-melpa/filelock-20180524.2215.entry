@@ -1,2 +1,15 @@
-
-(filelock . [(20180524 2215) ((emacs (24)) (cl-lib (0)) (f (0))) "Functions for manipulating file locks" single ((:commit . "17a5ca6e0dee14d2e7d92c84be91143bca9d9663") (:keywords "extensions" "files" "tools") (:authors ("Ryan C. Thompson")) (:maintainer "Ryan C. Thompson") (:url . "https://github.com/DarwinAwardWinner/emacs-filelock"))])
+(filelock .
+	  [(20180524 2215)
+	   ((emacs
+	     (24))
+	    (cl-lib
+	     (0))
+	    (f
+	     (0)))
+	   "Functions for manipulating file locks" single
+	   ((:commit . "17a5ca6e0dee14d2e7d92c84be91143bca9d9663")
+	    (:authors
+	     ("Ryan C. Thompson"))
+	    (:maintainer "Ryan C. Thompson")
+	    (:keywords "extensions" "files" "tools")
+	    (:url . "https://github.com/DarwinAwardWinner/emacs-filelock"))])

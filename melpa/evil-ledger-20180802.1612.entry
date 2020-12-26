@@ -1,2 +1,15 @@
-
-(evil-ledger . [(20180802 1612) ((emacs (24 4)) (evil (1 2 12)) (ledger-mode (0))) "Make `ledger-mode' more `evil'." single ((:commit . "7a9f9f5d39c42fffdba8004f8982642351f2b233") (:keywords "convenience" "evil" "languages" "ledger" "vim-emulation") (:authors ("Aaron Jacobs" . "atheriel@gmail.com")) (:maintainer "Aaron Jacobs" . "atheriel@gmail.com") (:url . "https://github.com/atheriel/evil-ledger"))])
+(evil-ledger .
+	     [(20180802 1612)
+	      ((emacs
+		(24 4))
+	       (evil
+		(1 2 12))
+	       (ledger-mode
+		(0)))
+	      "Make `ledger-mode' more `evil'." single
+	      ((:commit . "7a9f9f5d39c42fffdba8004f8982642351f2b233")
+	       (:authors
+		("Aaron Jacobs" . "atheriel@gmail.com"))
+	       (:maintainer "Aaron Jacobs" . "atheriel@gmail.com")
+	       (:keywords "convenience" "evil" "languages" "ledger" "vim-emulation")
+	       (:url . "https://github.com/atheriel/evil-ledger"))])

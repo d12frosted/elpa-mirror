@@ -1,1 +1,4 @@
-Official snippet collection for the yasnippet package.
+;;; Commentary:
+
+;; Official snippet collection for the yasnippet package.
+

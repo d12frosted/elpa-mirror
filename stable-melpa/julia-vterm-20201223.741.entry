@@ -1,0 +1,13 @@
+(julia-vterm .
+	     [(20201223 741)
+	      ((emacs
+		(25 1))
+	       (vterm
+		(0 0 1)))
+	      "A mode for Julia REPL using vterm" single
+	      ((:commit . "06ee45bffb6e711278a7af5207899d2b4316706c")
+	       (:authors
+		("Shigeaki Nishina"))
+	       (:maintainer "Shigeaki Nishina")
+	       (:keywords "languages" "julia")
+	       (:url . "https://github.com/shg/julia-vterm.el"))])

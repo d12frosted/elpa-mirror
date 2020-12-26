@@ -1,2 +1,12 @@
-
-(esonify . [(20190110 1621) ((deferred (0 3 1)) (cl-lib (0 5))) "Sonify your code" tar ((:commit . "bdc79d4ab2e3c449b5bef46e5cabc552beeed5c6") (:authors ("Oliver Flatt" . "oflatt@gmail.com")) (:maintainer "Oliver Flatt" . "oflatt@gmail.com") (:url . "https://github.com/oflatt/esonify"))])
+(esonify .
+	 [(20190110 1621)
+	  ((deferred
+	     (0 3 1))
+	   (cl-lib
+	    (0 5)))
+	  "Sonify your code" tar
+	  ((:commit . "bdc79d4ab2e3c449b5bef46e5cabc552beeed5c6")
+	   (:authors
+	    ("Oliver Flatt" . "oflatt@gmail.com"))
+	   (:maintainer "Oliver Flatt" . "oflatt@gmail.com")
+	   (:url . "https://github.com/oflatt/esonify"))])

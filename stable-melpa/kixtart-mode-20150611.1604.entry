@@ -1,2 +1,11 @@
-
-(kixtart-mode . [(20150611 1604) ((emacs (24))) "major mode for Kixtart scripting files" single ((:commit . "1c2356797e7b766bbaaa2b341176a8b10499cd79") (:keywords "languages") (:authors ("Ryrun <https://github.com/ryrun>")) (:maintainer "Ryrun <https://github.com/ryrun>") (:url . "https://github.com/ryrun/kixtart-mode"))])
+(kixtart-mode .
+	      [(20150611 1604)
+	       ((emacs
+		 (24)))
+	       "major mode for Kixtart scripting files" single
+	       ((:commit . "1c2356797e7b766bbaaa2b341176a8b10499cd79")
+		(:authors
+		 ("Ryrun <https://github.com/ryrun>"))
+		(:maintainer "Ryrun <https://github.com/ryrun>")
+		(:keywords "languages")
+		(:url . "https://github.com/ryrun/kixtart-mode"))])

@@ -1,2 +1,11 @@
-
-(describe-number . [(20151101 55) ((yabin (1 1))) "Describe arbitrarily large number at point." single ((:commit . "40618345a37831804b29589849a785ef5aa5ac24") (:keywords "describe" "value" "help") (:authors ("Morten Slot Kristensen <msk AT nullpointer DOT dk>")) (:maintainer "Morten Slot Kristensen <msk AT nullpointer DOT dk>") (:url . "https://github.com/netromdk/describe-number"))])
+(describe-number .
+		 [(20151101 55)
+		  ((yabin
+		    (1 1)))
+		  "Describe arbitrarily large number at point." single
+		  ((:commit . "40618345a37831804b29589849a785ef5aa5ac24")
+		   (:authors
+		    ("Morten Slot Kristensen <msk AT nullpointer DOT dk>"))
+		   (:maintainer "Morten Slot Kristensen <msk AT nullpointer DOT dk>")
+		   (:keywords "describe" "value" "help")
+		   (:url . "https://github.com/netromdk/describe-number"))])

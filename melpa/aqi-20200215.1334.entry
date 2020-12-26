@@ -1,2 +1,15 @@
-
-(aqi . [(20200215 1334) ((emacs (25 1)) (request (0 3)) (let-alist (0 0))) "Air quality data from the World Air Quality Index" single ((:commit . "5fe8b035b2b6bc165728444bb8e9792d14b7409d") (:keywords "air quality" "aqi" "pollution" "weather" "data") (:authors ("nik gaffney" . "nik@fo.am")) (:maintainer "nik gaffney" . "nik@fo.am") (:url . "https://github.com/zzkt/aqi"))])
+(aqi .
+     [(20200215 1334)
+      ((emacs
+	(25 1))
+       (request
+	(0 3))
+       (let-alist
+	   (0 0)))
+      "Air quality data from the World Air Quality Index" single
+      ((:commit . "5fe8b035b2b6bc165728444bb8e9792d14b7409d")
+       (:authors
+	("nik gaffney" . "nik@fo.am"))
+       (:maintainer "nik gaffney" . "nik@fo.am")
+       (:keywords "air quality" "aqi" "pollution" "weather" "data")
+       (:url . "https://github.com/zzkt/aqi"))])

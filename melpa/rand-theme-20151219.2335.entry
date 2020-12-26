@@ -1,2 +1,10 @@
-
-(rand-theme . [(20151219 2335) ((cl-lib (0 5))) "Random Emacs theme at start-up!" single ((:commit . "65a00e5c5150f857aa96803b68f50bc8da0215b7") (:authors ("Daniel Gopar")) (:maintainer "Daniel Gopar") (:url . "https://github.com/gopar/rand-theme"))])
+(rand-theme .
+	    [(20151219 2335)
+	     ((cl-lib
+	       (0 5)))
+	     "Random Emacs theme at start-up!" single
+	     ((:commit . "65a00e5c5150f857aa96803b68f50bc8da0215b7")
+	      (:authors
+	       ("Daniel Gopar"))
+	      (:maintainer "Daniel Gopar")
+	      (:url . "https://github.com/gopar/rand-theme"))])

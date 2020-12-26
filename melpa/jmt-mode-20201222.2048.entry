@@ -1,2 +1,11 @@
-
-(jmt-mode . [(20201222 2048) ((emacs (24 4))) "Java Mode Tamed" single ((:commit . "b028d48d22d72129b2b49d93298f65241de206fd") (:keywords "c" "languages") (:authors ("Michael Allan" . "mike@reluk.ca")) (:maintainer "Michael Allan" . "mike@reluk.ca") (:url . "http://reluk.ca/project/Java/Emacs/"))])
+(jmt-mode .
+	  [(20201222 2048)
+	   ((emacs
+	     (24 4)))
+	   "Java Mode Tamed" single
+	   ((:commit . "b028d48d22d72129b2b49d93298f65241de206fd")
+	    (:authors
+	     ("Michael Allan" . "mike@reluk.ca"))
+	    (:maintainer "Michael Allan" . "mike@reluk.ca")
+	    (:keywords "c" "languages")
+	    (:url . "http://reluk.ca/project/Java/Emacs/"))])

@@ -1,2 +1,11 @@
-
-(emacsshot . [(20191206 944) ((emacs (24 4))) "Snapshot a frame or window from within" tar ((:commit . "fe958b11056f3c671ebdd604d5aa574323284ca5") (:keywords "convenience") (:authors ("Marco Wahl" . "marcowahlsoft@gmail.com")) (:maintainer "Marco Wahl") (:url . "https://gitlab.com/marcowahl/emacsshot"))])
+(emacsshot .
+	   [(20191206 944)
+	    ((emacs
+	      (24 4)))
+	    "Snapshot a frame or window from within" tar
+	    ((:commit . "fe958b11056f3c671ebdd604d5aa574323284ca5")
+	     (:authors
+	      ("Marco Wahl" . "marcowahlsoft@gmail.com"))
+	     (:maintainer "Marco Wahl")
+	     (:keywords "convenience")
+	     (:url . "https://gitlab.com/marcowahl/emacsshot"))])

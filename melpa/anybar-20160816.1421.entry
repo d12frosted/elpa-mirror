@@ -1,2 +1,8 @@
-
-(anybar . [(20160816 1421) nil "Control AnyBar from Emacs" single ((:commit . "7a0743e0d31bcb36ab1bb2e351f3e7139c422ac5") (:keywords "anybar") (:authors ("Christopher Shea" . "cmshea@gmail.com")) (:maintainer "Christopher Shea" . "cmshea@gmail.com"))])
+(anybar .
+	[(20160816 1421)
+	 nil "Control AnyBar from Emacs" single
+	 ((:commit . "7a0743e0d31bcb36ab1bb2e351f3e7139c422ac5")
+	  (:authors
+	   ("Christopher Shea" . "cmshea@gmail.com"))
+	  (:maintainer "Christopher Shea" . "cmshea@gmail.com")
+	  (:keywords "anybar"))])

@@ -1,2 +1,15 @@
-
-(ctxmenu . [(20140303 2142) ((popup (20140205 103)) (log4e (0 2 0)) (yaxception (0 1))) "Provide a context menu like right-click." tar ((:commit . "5c2376859562b98c07c985d2b483658e4c0e888e") (:keywords "popup") (:authors ("Hiroaki Otsu" . "ootsuhiroaki@gmail.com")) (:maintainer "Hiroaki Otsu" . "ootsuhiroaki@gmail.com") (:url . "https://github.com/aki2o/emacs-ctxmenu"))])
+(ctxmenu .
+	 [(20140303 2142)
+	  ((popup
+	    (20140205 103))
+	   (log4e
+	    (0 2 0))
+	   (yaxception
+	    (0 1)))
+	  "Provide a context menu like right-click." tar
+	  ((:commit . "5c2376859562b98c07c985d2b483658e4c0e888e")
+	   (:authors
+	    ("Hiroaki Otsu" . "ootsuhiroaki@gmail.com"))
+	   (:maintainer "Hiroaki Otsu" . "ootsuhiroaki@gmail.com")
+	   (:keywords "popup")
+	   (:url . "https://github.com/aki2o/emacs-ctxmenu"))])

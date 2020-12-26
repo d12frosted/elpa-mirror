@@ -1,2 +1,10 @@
-
-(inherit-local . [(20170409 1649) ((emacs (24 3))) "Inherited buffer-local variables" single ((:commit . "b1f4ff9c41f9d64e4adaf5adcc280b82f084cdc7") (:authors ("Shea Levy")) (:maintainer "Shea Levy") (:url . "https://github.com/shlevy/inherit-local/tree-master/"))])
+(inherit-local .
+	       [(20170409 1649)
+		((emacs
+		  (24 3)))
+		"Inherited buffer-local variables" single
+		((:commit . "b1f4ff9c41f9d64e4adaf5adcc280b82f084cdc7")
+		 (:authors
+		  ("Shea Levy"))
+		 (:maintainer "Shea Levy")
+		 (:url . "https://github.com/shlevy/inherit-local/tree-master/"))])

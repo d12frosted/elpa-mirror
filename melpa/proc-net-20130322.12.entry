@@ -1,2 +1,9 @@
-
-(proc-net . [(20130322 12) nil "network process tools" single ((:commit . "10861112a1f3994c8e6374d6c5bb5d734cfeaf73") (:keywords "processes") (:authors ("Nic Ferrier" . "nferrier@ferrier.me.uk")) (:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk") (:url . "http://github.com/nicferrier/emacs-procnet"))])
+(proc-net .
+	  [(20130322 12)
+	   nil "network process tools" single
+	   ((:commit . "10861112a1f3994c8e6374d6c5bb5d734cfeaf73")
+	    (:authors
+	     ("Nic Ferrier" . "nferrier@ferrier.me.uk"))
+	    (:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk")
+	    (:keywords "processes")
+	    (:url . "http://github.com/nicferrier/emacs-procnet"))])

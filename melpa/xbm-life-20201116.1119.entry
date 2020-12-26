@@ -1,2 +1,9 @@
-
-(xbm-life . [(20201116 1119) nil "A XBM version of Conway's Game of Life" single ((:commit . "c5f442b152c46e5f31632e87be5c3a3c157a5ab1") (:keywords "games") (:authors ("Vasilij Schneidermann" . "mail@vasilij.de")) (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de") (:url . "https://depp.brause.cc/xbm-life"))])
+(xbm-life .
+	  [(20201116 1119)
+	   nil "A XBM version of Conway's Game of Life" single
+	   ((:commit . "c5f442b152c46e5f31632e87be5c3a3c157a5ab1")
+	    (:authors
+	     ("Vasilij Schneidermann" . "mail@vasilij.de"))
+	    (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de")
+	    (:keywords "games")
+	    (:url . "https://depp.brause.cc/xbm-life"))])

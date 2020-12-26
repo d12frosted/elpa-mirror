@@ -1,6 +1,9 @@
-To use the constant theme, add the following to your Emacs
-configuration file:
+;;; Commentary:
 
-  (load-theme 'constant)
+;; To use the constant theme, add the following to your Emacs
+;; configuration file:
+;;
+;;   (load-theme 'constant)
+;;
+;; Requirements: Emacs 24.
 
-Requirements: Emacs 24.

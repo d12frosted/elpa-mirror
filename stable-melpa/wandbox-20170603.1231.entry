@@ -1,2 +1,15 @@
-
-(wandbox . [(20170603 1231) ((emacs (24)) (request (0 3 0)) (s (1 10 0))) "Wandbox client" tar ((:commit . "e002fe41f2cd9b4ce2b1dc80b83301176e9117f1") (:keywords "tools") (:authors ("KOBAYASHI Shigeru (kosh)" . "shigeru.kb@gmail.com")) (:maintainer "KOBAYASHI Shigeru (kosh)" . "shigeru.kb@gmail.com") (:url . "https://github.com/kosh04/emacs-wandbox"))])
+(wandbox .
+	 [(20170603 1231)
+	  ((emacs
+	    (24))
+	   (request
+	    (0 3 0))
+	   (s
+	    (1 10 0)))
+	  "Wandbox client" tar
+	  ((:commit . "e002fe41f2cd9b4ce2b1dc80b83301176e9117f1")
+	   (:authors
+	    ("KOBAYASHI Shigeru (kosh)" . "shigeru.kb@gmail.com"))
+	   (:maintainer "KOBAYASHI Shigeru (kosh)" . "shigeru.kb@gmail.com")
+	   (:keywords "tools")
+	   (:url . "https://github.com/kosh04/emacs-wandbox"))])

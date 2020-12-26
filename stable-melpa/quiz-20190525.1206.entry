@@ -1,2 +1,13 @@
-
-(quiz . [(20190525 1206) ((cl-lib (0 5)) (emacs (25))) "Multiple choice quiz game" single ((:commit . "570bf53926d89282cdb9653bd5aa8fe968f92bbd") (:keywords "games" "trivia" "quiz") (:authors ("Dave Pearson" . "davep@davep.org")) (:maintainer "Dave Pearson" . "davep@davep.org") (:url . "https://github.com/davep/quiz.el"))])
+(quiz .
+      [(20190525 1206)
+       ((cl-lib
+	 (0 5))
+	(emacs
+	 (25)))
+       "Multiple choice quiz game" single
+       ((:commit . "570bf53926d89282cdb9653bd5aa8fe968f92bbd")
+	(:authors
+	 ("Dave Pearson" . "davep@davep.org"))
+	(:maintainer "Dave Pearson" . "davep@davep.org")
+	(:keywords "games" "trivia" "quiz")
+	(:url . "https://github.com/davep/quiz.el"))])

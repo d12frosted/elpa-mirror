@@ -1,2 +1,11 @@
-
-(side-notes . [(20200926 1404) ((emacs (24 5))) "Easy access to a directory notes file" single ((:commit . "f5135f652d2b21f55b4809151143845c6807de01") (:keywords "convenience") (:authors ("William Rankin" . "william@bydasein.com")) (:maintainer "William Rankin" . "william@bydasein.com") (:url . "https://github.com/rnkn/side-notes"))])
+(side-notes .
+	    [(20200926 1404)
+	     ((emacs
+	       (24 5)))
+	     "Easy access to a directory notes file" single
+	     ((:commit . "f5135f652d2b21f55b4809151143845c6807de01")
+	      (:authors
+	       ("William Rankin" . "william@bydasein.com"))
+	      (:maintainer "William Rankin" . "william@bydasein.com")
+	      (:keywords "convenience")
+	      (:url . "https://github.com/rnkn/side-notes"))])

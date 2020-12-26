@@ -1,2 +1,9 @@
-
-(calfw-gcal . [(20120111 1000) nil "edit Google calendar for calfw.el." tar ((:commit . "14aab20687d6cc9e6c5ddb9e11984c4e14c3d870") (:keywords "convenience" "calendar" "calfw.el") (:authors ("myuhe <yuhei.maeda_at_gmail.com>")) (:maintainer "myuhe") (:url . "https://github.com/myuhe/calfw-gcal.el"))])
+(calfw-gcal .
+	    [(20120111 1000)
+	     nil "edit Google calendar for calfw.el." tar
+	     ((:commit . "14aab20687d6cc9e6c5ddb9e11984c4e14c3d870")
+	      (:authors
+	       ("myuhe <yuhei.maeda_at_gmail.com>"))
+	      (:maintainer "myuhe")
+	      (:keywords "convenience" "calendar" "calfw.el")
+	      (:url . "https://github.com/myuhe/calfw-gcal.el"))])

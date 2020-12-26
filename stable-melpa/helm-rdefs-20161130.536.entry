@@ -1,2 +1,13 @@
-
-(helm-rdefs . [(20161130 536) ((emacs (24)) (helm (1 6 4))) "rdefs with helm interface" single ((:commit . "cd3a6b3af3015ee58ef30cb7c81c79ebe5fc867b") (:keywords "matching" "tools") (:authors ("Hiroshi Saito" . "monodie@gmail.com")) (:maintainer "Hiroshi Saito" . "monodie@gmail.com") (:url . "https://github.com/saidie/helm-rdefs"))])
+(helm-rdefs .
+	    [(20161130 536)
+	     ((emacs
+	       (24))
+	      (helm
+	       (1 6 4)))
+	     "rdefs with helm interface" single
+	     ((:commit . "cd3a6b3af3015ee58ef30cb7c81c79ebe5fc867b")
+	      (:authors
+	       ("Hiroshi Saito" . "monodie@gmail.com"))
+	      (:maintainer "Hiroshi Saito" . "monodie@gmail.com")
+	      (:keywords "matching" "tools")
+	      (:url . "https://github.com/saidie/helm-rdefs"))])

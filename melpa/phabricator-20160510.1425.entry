@@ -1,2 +1,19 @@
-
-(phabricator . [(20160510 1425) ((emacs (24 4)) (dash (1 0)) (projectile (0 13 0)) (s (1 10 0)) (f (0 17 2))) "Phabricator/Arcanist helpers for Emacs." single ((:commit . "d09d6f059aea92d3b11c68664a5e80c901182ab8") (:keywords "phabricator" "arcanist" "diffusion") (:authors ("Andrew Tulloch")) (:maintainer "Andrew Tulloch") (:url . "https://github.com/ajtulloch/phabricator.el"))])
+(phabricator .
+	     [(20160510 1425)
+	      ((emacs
+		(24 4))
+	       (dash
+		(1 0))
+	       (projectile
+		(0 13 0))
+	       (s
+		(1 10 0))
+	       (f
+		(0 17 2)))
+	      "Phabricator/Arcanist helpers for Emacs." single
+	      ((:commit . "d09d6f059aea92d3b11c68664a5e80c901182ab8")
+	       (:authors
+		("Andrew Tulloch"))
+	       (:maintainer "Andrew Tulloch")
+	       (:keywords "phabricator" "arcanist" "diffusion")
+	       (:url . "https://github.com/ajtulloch/phabricator.el"))])

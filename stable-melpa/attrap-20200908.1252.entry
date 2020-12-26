@@ -1,2 +1,19 @@
-
-(attrap . [(20200908 1252) ((dash (2 12 0)) (emacs (25 1)) (f (0 19 0)) (flycheck (0 30)) (s (1 11 0))) "ATtempt To Repair At Point" single ((:commit . "9c881548debcf59b8aadda0ef4abca3c9a68dd80") (:keywords "programming" "tools") (:authors ("Jean-Philippe Bernardy" . "jeanphilippe.bernardy@gmail.com")) (:maintainer "Jean-Philippe Bernardy" . "jeanphilippe.bernardy@gmail.com") (:url . "https://github.com/jyp/attrap"))])
+(attrap .
+	[(20200908 1252)
+	 ((dash
+	   (2 12 0))
+	  (emacs
+	   (25 1))
+	  (f
+	   (0 19 0))
+	  (flycheck
+	   (0 30))
+	  (s
+	   (1 11 0)))
+	 "ATtempt To Repair At Point" single
+	 ((:commit . "9c881548debcf59b8aadda0ef4abca3c9a68dd80")
+	  (:authors
+	   ("Jean-Philippe Bernardy" . "jeanphilippe.bernardy@gmail.com"))
+	  (:maintainer "Jean-Philippe Bernardy" . "jeanphilippe.bernardy@gmail.com")
+	  (:keywords "programming" "tools")
+	  (:url . "https://github.com/jyp/attrap"))])

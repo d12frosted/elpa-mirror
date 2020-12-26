@@ -1,2 +1,8 @@
-
-(mark-multiple . [(20121118 1554) nil "Sorta lets you mark several regions at once." tar ((:commit . "f6a53c7c5283d640ae718f4548b0fda78877a375"))])
+(mark-multiple .
+	       [(20121118 1554)
+		nil "Sorta lets you mark several regions at once." tar
+		((:commit . "f6a53c7c5283d640ae718f4548b0fda78877a375")
+		 (:authors
+		  ("Magnar Sveen" . "magnars@gmail.com"))
+		 (:maintainer "Magnar Sveen" . "magnars@gmail.com")
+		 (:keywords "marking" "library"))])

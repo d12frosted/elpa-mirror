@@ -1,2 +1,11 @@
-
-(historian . [(20200203 1927) ((emacs (24 4))) "Persistently store selected minibuffer candidates" single ((:commit . "ac1bea7d99dd6965c72fabeb72d5fdc38c5380a4") (:keywords "convenience") (:authors ("PythonNut" . "pythonnut@pythonnut.com")) (:maintainer "PythonNut" . "pythonnut@pythonnut.com") (:url . "https://github.com/PythonNut/historian.el"))])
+(historian .
+	   [(20200203 1927)
+	    ((emacs
+	      (24 4)))
+	    "Persistently store selected minibuffer candidates" single
+	    ((:commit . "ac1bea7d99dd6965c72fabeb72d5fdc38c5380a4")
+	     (:authors
+	      ("PythonNut" . "pythonnut@pythonnut.com"))
+	     (:maintainer "PythonNut" . "pythonnut@pythonnut.com")
+	     (:keywords "convenience")
+	     (:url . "https://github.com/PythonNut/historian.el"))])

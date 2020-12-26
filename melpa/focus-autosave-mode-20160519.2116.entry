@@ -1,2 +1,10 @@
-
-(focus-autosave-mode . [(20160519 2116) ((emacs (24 4))) "Automatically save files in focus-out-hook." single ((:commit . "2e0844fabb6f0dc9e0f31928e4785febf38b9e35") (:keywords "convenience" "files" "frames" "mouse") (:authors ("Wojciech Siewierski" . "wojciech.siewierski@onet.pl")) (:maintainer "Wojciech Siewierski" . "wojciech.siewierski@onet.pl"))])
+(focus-autosave-mode .
+		     [(20160519 2116)
+		      ((emacs
+			(24 4)))
+		      "Automatically save files in focus-out-hook." single
+		      ((:commit . "2e0844fabb6f0dc9e0f31928e4785febf38b9e35")
+		       (:authors
+			("Wojciech Siewierski" . "wojciech.siewierski@onet.pl"))
+		       (:maintainer "Wojciech Siewierski" . "wojciech.siewierski@onet.pl")
+		       (:keywords "convenience" "files" "frames" "mouse"))])

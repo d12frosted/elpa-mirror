@@ -1,2 +1,8 @@
-
-(sproto-mode . [(20151115 1805) nil "Major mode for editing sproto." single ((:commit . "0583a88273204dccd884b7edaa3590cefd31e7f7") (:keywords "sproto") (:authors ("m2q1n9")) (:maintainer "m2q1n9"))])
+(sproto-mode .
+	     [(20151115 1805)
+	      nil "Major mode for editing sproto." single
+	      ((:commit . "0583a88273204dccd884b7edaa3590cefd31e7f7")
+	       (:authors
+		("m2q1n9"))
+	       (:maintainer "m2q1n9")
+	       (:keywords "sproto"))])

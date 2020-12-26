@@ -1,2 +1,14 @@
-
-(xterm-keybinder . [(20160523 56) ((emacs (24 3)) (cl-lib (0 5)) (let-alist (1 0 1))) "Let you extra keybinds in xterm/urxvt" tar ((:commit . "b29c4f700b0fa0c9f627f6725b36462b8fab06d6") (:keywords "convenient") (:authors ("Yuta Yamada <cokesboy\"at\"gmail.com>")) (:maintainer "Yuta Yamada <cokesboy\"at\"gmail.com>"))])
+(xterm-keybinder .
+		 [(20160523 56)
+		  ((emacs
+		    (24 3))
+		   (cl-lib
+		    (0 5))
+		   (let-alist
+		       (1 0 1)))
+		  "Let you extra keybinds in xterm/urxvt" tar
+		  ((:commit . "b29c4f700b0fa0c9f627f6725b36462b8fab06d6")
+		   (:authors
+		    ("Yuta Yamada <cokesboy\"at\"gmail.com>"))
+		   (:maintainer "Yuta Yamada <cokesboy\"at\"gmail.com>")
+		   (:keywords "convenient"))])

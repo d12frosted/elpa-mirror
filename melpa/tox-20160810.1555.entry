@@ -1,2 +1,9 @@
-
-(tox . [(20160810 1555) nil "Launch current python test with tox" single ((:commit . "7655eb254038d5e34433e8a9d66b3ffc9c72e40c") (:keywords "convenience" "tox" "python" "tests") (:authors ("Chmouel Boudjnah" . "chmouel@chmouel.com")) (:maintainer "Chmouel Boudjnah" . "chmouel@chmouel.com") (:url . "https://github.com/chmouel/tox.el"))])
+(tox .
+     [(20160810 1555)
+      nil "Launch current python test with tox" single
+      ((:commit . "7655eb254038d5e34433e8a9d66b3ffc9c72e40c")
+       (:authors
+	("Chmouel Boudjnah" . "chmouel@chmouel.com"))
+       (:maintainer "Chmouel Boudjnah" . "chmouel@chmouel.com")
+       (:keywords "convenience" "tox" "python" "tests")
+       (:url . "https://github.com/chmouel/tox.el"))])

@@ -1,1 +1,4 @@
-lsp-metals client
+;;; Commentary:
+
+;; lsp-metals client
+

@@ -1,2 +1,13 @@
-
-(spice-mode . [(20190608 1033) ((emacs (24 3))) "Major mode for SPICE" single ((:commit . "e5e0644f03f9696f56dd69e2b6979da7f30ed600") (:keywords "spice" "spice2g6" "spice3" "eldo" "hspice" "layla" "mondriaan" "fasthenry" "cdl" "spectre compatibility" "netlist editing") (:authors ("Geert A. M. Van der Plas" . "geert_vanderplas@email.com") ("Emmanuel Rouat" . "emmanuel.rouat@wanadoo.fr") ("Carlin J. Vieri, MIT AI Lab" . "cvieri@ai.mit.edu")) (:maintainer "Geert A. M. Van der Plas" . "geert_vanderplas@email.com") (:url . "http://spice-mode.4t.com/"))])
+(spice-mode .
+	    [(20190608 1033)
+	     ((emacs
+	       (24 3)))
+	     "Major mode for SPICE" single
+	     ((:commit . "e5e0644f03f9696f56dd69e2b6979da7f30ed600")
+	      (:authors
+	       ("Geert A. M. Van der Plas" . "geert_vanderplas@email.com")
+	       ("Emmanuel Rouat" . "emmanuel.rouat@wanadoo.fr")
+	       ("Carlin J. Vieri, MIT AI Lab" . "cvieri@ai.mit.edu"))
+	      (:maintainer "Geert A. M. Van der Plas" . "geert_vanderplas@email.com")
+	      (:keywords "spice" "spice2g6" "spice3" "eldo" "hspice" "layla" "mondriaan" "fasthenry" "cdl" "spectre compatibility" "netlist editing")
+	      (:url . "http://spice-mode.4t.com/"))])

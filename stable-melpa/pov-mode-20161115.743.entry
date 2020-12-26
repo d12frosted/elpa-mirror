@@ -1,2 +1,8 @@
-
-(pov-mode . [(20161115 743) nil "Major mode for editing POV-Ray scene files." tar ((:commit . "9fc1db3aab7c27155674dd1a87ec62606035d074"))])
+(pov-mode .
+	  [(20161115 743)
+	   nil "Major mode for editing POV-Ray scene files." tar
+	   ((:commit . "9fc1db3aab7c27155674dd1a87ec62606035d074")
+	    (:authors
+	     ("Peter Boettcher" . "pwb@andrew.cmu.edu"))
+	    (:maintainer "Marco Pessotto" . "melmothx@gmail.com")
+	    (:keywords "pov" "povray"))])

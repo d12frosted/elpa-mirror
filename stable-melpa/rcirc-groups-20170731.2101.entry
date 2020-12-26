@@ -1,2 +1,9 @@
-
-(rcirc-groups . [(20170731 2101) nil "an emacs buffer in rcirc-groups major mode" single ((:commit . "b68ece9d219b909244d4e3c0d8bf6a746d6fead7") (:keywords "comm" "convenience") (:authors ("Dimitri Fontaine" . "dim@tapoueh.org")) (:maintainer "Dimitri Fontaine" . "dim@tapoueh.org") (:url . "http://tapoueh.org/emacs/rcirc-groups.html"))])
+(rcirc-groups .
+	      [(20170731 2101)
+	       nil "an emacs buffer in rcirc-groups major mode" single
+	       ((:commit . "b68ece9d219b909244d4e3c0d8bf6a746d6fead7")
+		(:authors
+		 ("Dimitri Fontaine" . "dim@tapoueh.org"))
+		(:maintainer "Dimitri Fontaine" . "dim@tapoueh.org")
+		(:keywords "comm" "convenience")
+		(:url . "http://tapoueh.org/emacs/rcirc-groups.html"))])

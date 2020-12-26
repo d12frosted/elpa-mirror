@@ -1,2 +1,10 @@
-
-(replace-pairs . [(20160207 1251) ((emacs (24 4))) "Query-replace pairs of things" single ((:commit . "acfb254dddffcee4250092fab9394ef2b42ffbc0") (:authors ("David Shepherd" . "davidshepherd7@gmail.com")) (:maintainer "David Shepherd" . "davidshepherd7@gmail.com") (:url . "https://github.com/davidshepherd7/replace-pairs"))])
+(replace-pairs .
+	       [(20160207 1251)
+		((emacs
+		  (24 4)))
+		"Query-replace pairs of things" single
+		((:commit . "acfb254dddffcee4250092fab9394ef2b42ffbc0")
+		 (:authors
+		  ("David Shepherd" . "davidshepherd7@gmail.com"))
+		 (:maintainer "David Shepherd" . "davidshepherd7@gmail.com")
+		 (:url . "https://github.com/davidshepherd7/replace-pairs"))])

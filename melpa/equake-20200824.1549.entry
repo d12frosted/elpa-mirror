@@ -1,2 +1,13 @@
-
-(equake . [(20200824 1549) ((emacs (26 1)) (dash (2 14 1))) "Drop-down console for (e)shell & terminal emulation" single ((:commit . "b0a5e334a7ccf69b837656c8a91c2e9e254e4c76") (:keywords "convenience" "frames" "terminals" "tools" "window-system") (:authors ("Benjamin Slade" . "slade@jnanam.net")) (:maintainer "Benjamin Slade" . "slade@jnanam.net") (:url . "https://gitlab.com/emacsomancer/equake"))])
+(equake .
+	[(20200824 1549)
+	 ((emacs
+	   (26 1))
+	  (dash
+	   (2 14 1)))
+	 "Drop-down console for (e)shell & terminal emulation" single
+	 ((:commit . "b0a5e334a7ccf69b837656c8a91c2e9e254e4c76")
+	  (:authors
+	   ("Benjamin Slade" . "slade@jnanam.net"))
+	  (:maintainer "Benjamin Slade" . "slade@jnanam.net")
+	  (:keywords "convenience" "frames" "terminals" "tools" "window-system")
+	  (:url . "https://gitlab.com/emacsomancer/equake"))])

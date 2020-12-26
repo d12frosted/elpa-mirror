@@ -1,2 +1,11 @@
-
-(drill-instructor-AZIK-force . [(20151123 514) ((popup (0 5))) "Support AZIK input" tar ((:commit . "008cea202dc31d7d6fb1e7d8e6334d516403b7a5"))])
+(drill-instructor-AZIK-force .
+			     [(20151123 514)
+			      ((popup
+				(0 5)))
+			      "Support AZIK input" tar
+			      ((:commit . "008cea202dc31d7d6fb1e7d8e6334d516403b7a5")
+			       (:authors
+				("Yuhei Maeda <yuhei.maeda_at_gmail.com>"))
+			       (:maintainer "Yuhei Maeda")
+			       (:keywords "convenience")
+			       (:url . "https://github.com/myuhe/drill-instructor-AZIK-force.el"))])

@@ -1,2 +1,12 @@
-
-(manage-minor-mode-table . [(20200717 809) ((emacs (25 1)) (manage-minor-mode (1 1))) "Manage minor-modes in table" single ((:commit . "d377094c4ff5e93321e12f53892113083148bdaf") (:authors ("Shen, Jen-Chieh" . "jcs090218@gmail.com")) (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com") (:url . "https://github.com/jcs-elpa/manage-minor-mode-table"))])
+(manage-minor-mode-table .
+			 [(20200717 809)
+			  ((emacs
+			    (25 1))
+			   (manage-minor-mode
+			    (1 1)))
+			  "Manage minor-modes in table" single
+			  ((:commit . "d377094c4ff5e93321e12f53892113083148bdaf")
+			   (:authors
+			    ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+			   (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+			   (:url . "https://github.com/jcs-elpa/manage-minor-mode-table"))])

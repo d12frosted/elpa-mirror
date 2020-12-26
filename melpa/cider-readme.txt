@@ -1,19 +1,22 @@
-Provides a Clojure interactive development environment for Emacs, built on
-top of nREPL.  See https://docs.cider.mx for more details.
+;;; Commentary:
 
-Installation:
+;; Provides a Clojure interactive development environment for Emacs, built on
+;; top of nREPL.  See https://docs.cider.mx for more details.
 
-CIDER is available as a package in melpa.org and stable.melpa.org.  First, make sure you've
-enabled one of the repositories in your Emacs config:
+;;; Installation:
 
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/"))
+;; CIDER is available as a package in melpa.org and stable.melpa.org.  First, make sure you've
+;; enabled one of the repositories in your Emacs config:
 
-or
+;; (add-to-list 'package-archives
+;;              '("melpa" . "https://melpa.org/packages/"))
+;;
+;; or
+;;
+;; (add-to-list 'package-archives
+;;              '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
-(add-to-list 'package-archives
-             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
+;; Afterwards, installing CIDER is as easy as:
 
-Afterwards, installing CIDER is as easy as:
+;; M-x package-install cider
 
-M-x package-install cider

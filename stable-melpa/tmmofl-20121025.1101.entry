@@ -1,2 +1,8 @@
-
-(tmmofl . [(20121025 1101) nil "Calls functions dependant on font lock highlighting at point" single ((:commit . "532aa6978e994e2b069ffe37aaf9a0011a07dadc") (:keywords "minor mode" "font lock" "toggling.") (:authors ("Phillip Lord" . "p.lord@hgmp.mrc.ac.uk")) (:maintainer "Phillip Lord" . "p.lord@hgmp.mrc.ac.uk"))])
+(tmmofl .
+	[(20121025 1101)
+	 nil "Calls functions dependant on font lock highlighting at point" single
+	 ((:commit . "532aa6978e994e2b069ffe37aaf9a0011a07dadc")
+	  (:authors
+	   ("Phillip Lord" . "p.lord@hgmp.mrc.ac.uk"))
+	  (:maintainer "Phillip Lord" . "p.lord@hgmp.mrc.ac.uk")
+	  (:keywords "minor mode" "font lock" "toggling."))])

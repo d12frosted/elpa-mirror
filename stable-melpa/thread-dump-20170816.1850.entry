@@ -1,2 +1,8 @@
-
-(thread-dump . [(20170816 1850) nil "Java thread dump viewer" single ((:commit . "204c9600242756d4b514bb5ff6293e052bf4b49d") (:authors ("Dmitry Neverov")) (:maintainer "Dmitry Neverov") (:url . "http://github.com/nd/thread-dump.el"))])
+(thread-dump .
+	     [(20170816 1850)
+	      nil "Java thread dump viewer" single
+	      ((:commit . "204c9600242756d4b514bb5ff6293e052bf4b49d")
+	       (:authors
+		("Dmitry Neverov"))
+	       (:maintainer "Dmitry Neverov")
+	       (:url . "http://github.com/nd/thread-dump.el"))])

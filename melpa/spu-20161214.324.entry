@@ -1,2 +1,15 @@
-
-(spu . [(20161214 324) ((emacs (24 4)) (signal (1 0)) (timp (1 2 0))) "Silently upgrade package in the background" tar ((:commit . "41eec86b595816e3852e8ad1a8e07e51a27fd065") (:keywords "convenience" "package") (:authors ("Mola-T" . "Mola@molamola.xyz")) (:maintainer "Mola-T" . "Mola@molamola.xyz") (:url . "https://github.com/mola-T/spu"))])
+(spu .
+     [(20161214 324)
+      ((emacs
+	(24 4))
+       (signal
+	(1 0))
+       (timp
+	(1 2 0)))
+      "Silently upgrade package in the background" tar
+      ((:commit . "41eec86b595816e3852e8ad1a8e07e51a27fd065")
+       (:authors
+	("Mola-T" . "Mola@molamola.xyz"))
+       (:maintainer "Mola-T" . "Mola@molamola.xyz")
+       (:keywords "convenience" "package")
+       (:url . "https://github.com/mola-T/spu"))])

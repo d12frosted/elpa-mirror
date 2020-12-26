@@ -1,2 +1,8 @@
-
-(window-layout . [(20170215 33) nil "window layout manager" single ((:commit . "cd2e4f967b610c2bbef53182829e47250d027056") (:keywords "window" "layout") (:authors ("SAKURAI Masashi <m.sakurai atmark kiwanami.net>")) (:maintainer "SAKURAI Masashi <m.sakurai atmark kiwanami.net>"))])
+(window-layout .
+	       [(20170215 33)
+		nil "window layout manager" single
+		((:commit . "cd2e4f967b610c2bbef53182829e47250d027056")
+		 (:authors
+		  ("SAKURAI Masashi <m.sakurai atmark kiwanami.net>"))
+		 (:maintainer "SAKURAI Masashi <m.sakurai atmark kiwanami.net>")
+		 (:keywords "window" "layout"))])

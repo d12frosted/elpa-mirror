@@ -1,2 +1,15 @@
-
-(unicode-escape . [(20160614 1234) ((emacs (24)) (names (20151201 0)) (dash (2 12 1))) "Escape/Unescape unicode notations" single ((:commit . "fc69ec780d9e54c364a9252bd0cf1d2507f3fab7") (:keywords "i18n" "unicode") (:authors ("KOBAYASHI Shigeru (kosh)" . "shigeru.kb@gmail.com")) (:maintainer "KOBAYASHI Shigeru (kosh)" . "shigeru.kb@gmail.com") (:url . "https://github.com/kosh04/unicode-escape.el"))])
+(unicode-escape .
+		[(20160614 1234)
+		 ((emacs
+		   (24))
+		  (names
+		   (20151201 0))
+		  (dash
+		   (2 12 1)))
+		 "Escape/Unescape unicode notations" single
+		 ((:commit . "fc69ec780d9e54c364a9252bd0cf1d2507f3fab7")
+		  (:authors
+		   ("KOBAYASHI Shigeru (kosh)" . "shigeru.kb@gmail.com"))
+		  (:maintainer "KOBAYASHI Shigeru (kosh)" . "shigeru.kb@gmail.com")
+		  (:keywords "i18n" "unicode")
+		  (:url . "https://github.com/kosh04/unicode-escape.el"))])

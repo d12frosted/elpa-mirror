@@ -1,2 +1,10 @@
-
-(sclang-snippets . [(20130513 751) ((yasnippet (0 8 0))) "Snippets for the SuperCollider Emacs mode" tar ((:commit . "c840a416b96f83bdd70491e3d1fbe2f1ae8b3f58") (:keywords "snippets") (:authors ("ptrv" . "mail@petervasil.net")) (:maintainer "ptrv" . "mail@petervasil.net"))])
+(sclang-snippets .
+		 [(20130513 751)
+		  ((yasnippet
+		    (0 8 0)))
+		  "Snippets for the SuperCollider Emacs mode" tar
+		  ((:commit . "c840a416b96f83bdd70491e3d1fbe2f1ae8b3f58")
+		   (:authors
+		    ("ptrv" . "mail@petervasil.net"))
+		   (:maintainer "ptrv" . "mail@petervasil.net")
+		   (:keywords "snippets"))])

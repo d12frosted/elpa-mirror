@@ -1,1 +1,4 @@
-gitignore.io templates for Yasnippet
+;;; Commentary:
+
+;; gitignore.io templates for Yasnippet
+

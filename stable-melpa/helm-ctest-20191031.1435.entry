@@ -1,2 +1,14 @@
-
-(helm-ctest . [(20191031 1435) ((s (1 9 0)) (dash (2 11 0)) (helm-core (1 7 4))) "Run ctest from within emacs" single ((:commit . "2a29cfb4ec583da247fa2ae7bac88790b1223e40") (:keywords "helm" "ctest") (:authors ("Dan LaManna" . "me@danlamanna.com")) (:maintainer "Dan LaManna" . "me@danlamanna.com"))])
+(helm-ctest .
+	    [(20191031 1435)
+	     ((s
+	       (1 9 0))
+	      (dash
+	       (2 11 0))
+	      (helm-core
+	       (1 7 4)))
+	     "Run ctest from within emacs" single
+	     ((:commit . "2a29cfb4ec583da247fa2ae7bac88790b1223e40")
+	      (:authors
+	       ("Dan LaManna" . "me@danlamanna.com"))
+	      (:maintainer "Dan LaManna" . "me@danlamanna.com")
+	      (:keywords "helm" "ctest"))])

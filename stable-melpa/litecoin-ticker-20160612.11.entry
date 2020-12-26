@@ -1,2 +1,9 @@
-
-(litecoin-ticker . [(20160612 11) ((json (1 2))) "litecoin price in modeline" single ((:commit . "3d8047c736e4ee0b8638953f8cc63eaefad34106") (:authors ("Zhe Lei")) (:maintainer "Zhe Lei"))])
+(litecoin-ticker .
+		 [(20160612 11)
+		  ((json
+		    (1 2)))
+		  "litecoin price in modeline" single
+		  ((:commit . "3d8047c736e4ee0b8638953f8cc63eaefad34106")
+		   (:authors
+		    ("Zhe Lei"))
+		   (:maintainer "Zhe Lei"))])

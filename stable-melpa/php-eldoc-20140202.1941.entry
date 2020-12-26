@@ -1,2 +1,8 @@
-
-(php-eldoc . [(20140202 1941) nil "eldoc backend for php" tar ((:commit . "df05064146b884d9081e10657e32dc480f070cfe") (:authors ("sabof")) (:maintainer "sabof") (:url . "https://github.com/sabof/php-eldoc"))])
+(php-eldoc .
+	   [(20140202 1941)
+	    nil "eldoc backend for php" tar
+	    ((:commit . "df05064146b884d9081e10657e32dc480f070cfe")
+	     (:authors
+	      ("sabof"))
+	     (:maintainer "sabof")
+	     (:url . "https://github.com/sabof/php-eldoc"))])

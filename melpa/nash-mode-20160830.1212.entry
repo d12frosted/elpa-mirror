@@ -1,2 +1,9 @@
-
-(nash-mode . [(20160830 1212) nil "Nash major mode" single ((:commit . "2cd96535eb7d669a94306183e95ee37333872c1a") (:keywords "nash" "languages") (:authors ("Tiago Natel de Moura")) (:maintainer "Tiago Natel de Moura") (:url . "https://github.com/tiago4orion/nash-mode.el"))])
+(nash-mode .
+	   [(20160830 1212)
+	    nil "Nash major mode" single
+	    ((:commit . "2cd96535eb7d669a94306183e95ee37333872c1a")
+	     (:authors
+	      ("Tiago Natel de Moura"))
+	     (:maintainer "Tiago Natel de Moura")
+	     (:keywords "nash" "languages")
+	     (:url . "https://github.com/tiago4orion/nash-mode.el"))])

@@ -1,2 +1,9 @@
-
-(winpoint . [(20131023 1713) nil "Remember buffer positions per-window, not per buffer" single ((:commit . "e6050093c076308184566fa1d1012423d6934773") (:keywords "convenience") (:authors ("Jorgen Schaefer" . "forcer@forcix.cx")) (:maintainer "Jorgen Schaefer" . "forcer@forcix.cx") (:url . "https://github.com/jorgenschaefer/winpoint"))])
+(winpoint .
+	  [(20131023 1713)
+	   nil "Remember buffer positions per-window, not per buffer" single
+	   ((:commit . "e6050093c076308184566fa1d1012423d6934773")
+	    (:authors
+	     ("Jorgen Schaefer" . "forcer@forcix.cx"))
+	    (:maintainer "Jorgen Schaefer" . "forcer@forcix.cx")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/jorgenschaefer/winpoint"))])

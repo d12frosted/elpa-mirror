@@ -1,2 +1,9 @@
-
-(diredful . [(20160529 2017) nil "colorful file names in dired buffers" single ((:commit . "c08e163d9d6c62f7b07e94d54c96c2e364e67e0e") (:keywords "dired" "colors" "extension" "widget") (:authors ("Thamer Mahmoud" . "thamer.mahmoud@gmail.com")) (:maintainer "Thamer Mahmoud" . "thamer.mahmoud@gmail.com") (:url . "https://github.com/thamer/diredful"))])
+(diredful .
+	  [(20160529 2017)
+	   nil "colorful file names in dired buffers" single
+	   ((:commit . "c08e163d9d6c62f7b07e94d54c96c2e364e67e0e")
+	    (:authors
+	     ("Thamer Mahmoud" . "thamer.mahmoud@gmail.com"))
+	    (:maintainer "Thamer Mahmoud" . "thamer.mahmoud@gmail.com")
+	    (:keywords "dired" "colors" "extension" "widget")
+	    (:url . "https://github.com/thamer/diredful"))])

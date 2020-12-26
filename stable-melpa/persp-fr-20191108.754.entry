@@ -1,2 +1,15 @@
-
-(persp-fr . [(20191108 754) ((emacs (25 1)) (persp-mode (2 9 6)) (dash (2 13 0))) "In persp-mode, show perspective list in the GUI window title" single ((:commit . "1adbb6a9f9a4db580a9b7ed8b4091738e01345e6") (:keywords "perspectives" "workspace" "windows" "convenience") (:authors ("Francesc Rocher" . "francesc.rocher@gmail.com")) (:maintainer "Francesc Rocher" . "francesc.rocher@gmail.com") (:url . "http://github.com/rocher/persp-fr"))])
+(persp-fr .
+	  [(20191108 754)
+	   ((emacs
+	     (25 1))
+	    (persp-mode
+	     (2 9 6))
+	    (dash
+	     (2 13 0)))
+	   "In persp-mode, show perspective list in the GUI window title" single
+	   ((:commit . "1adbb6a9f9a4db580a9b7ed8b4091738e01345e6")
+	    (:authors
+	     ("Francesc Rocher" . "francesc.rocher@gmail.com"))
+	    (:maintainer "Francesc Rocher" . "francesc.rocher@gmail.com")
+	    (:keywords "perspectives" "workspace" "windows" "convenience")
+	    (:url . "http://github.com/rocher/persp-fr"))])

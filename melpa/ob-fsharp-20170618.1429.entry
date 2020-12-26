@@ -1,2 +1,13 @@
-
-(ob-fsharp . [(20170618 1429) ((emacs (25)) (fsharp-mode (1 9 8))) "Org-Babel F#" single ((:commit . "0b2fdd9bb4f38af8b5cf4914627af52f5b43d9f7") (:keywords "literate programming" "reproducible research") (:authors ("Jürgen Hötzel" . "juergen@archlinux.org")) (:maintainer "Jürgen Hötzel" . "juergen@archlinux.org") (:url . "https://github.com/juergenhoetzel/ob-fsharp"))])
+(ob-fsharp .
+	   [(20170618 1429)
+	    ((emacs
+	      (25))
+	     (fsharp-mode
+	      (1 9 8)))
+	    "Org-Babel F#" single
+	    ((:commit . "0b2fdd9bb4f38af8b5cf4914627af52f5b43d9f7")
+	     (:authors
+	      ("Jürgen Hötzel" . "juergen@archlinux.org"))
+	     (:maintainer "Jürgen Hötzel" . "juergen@archlinux.org")
+	     (:keywords "literate programming" "reproducible research")
+	     (:url . "https://github.com/juergenhoetzel/ob-fsharp"))])

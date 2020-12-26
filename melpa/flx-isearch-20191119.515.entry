@@ -1,2 +1,15 @@
-
-(flx-isearch . [(20191119 515) ((emacs (24)) (flx (20140821)) (cl-lib (0 5))) "Fuzzy incremental searching for emacs" single ((:commit . "a44097fb8f539a193c2f09a37ea52a68f2c51839") (:keywords "convenience" "search" "flx") (:authors ("PythonNut" . "pythonnut@pythonnut.com")) (:maintainer "PythonNut" . "pythonnut@pythonnut.com") (:url . "https://github.com/pythonnut/flx-isearch"))])
+(flx-isearch .
+	     [(20191119 515)
+	      ((emacs
+		(24))
+	       (flx
+		(20140821))
+	       (cl-lib
+		(0 5)))
+	      "Fuzzy incremental searching for emacs" single
+	      ((:commit . "a44097fb8f539a193c2f09a37ea52a68f2c51839")
+	       (:authors
+		("PythonNut" . "pythonnut@pythonnut.com"))
+	       (:maintainer "PythonNut" . "pythonnut@pythonnut.com")
+	       (:keywords "convenience" "search" "flx")
+	       (:url . "https://github.com/pythonnut/flx-isearch"))])

@@ -1,2 +1,11 @@
-
-(ox-minutes . [(20180202 1734) ((emacs (24 4))) "Plain text backend for Org for Meeting Minutes" single ((:commit . "27c29f3fdb9181322ae56f8bace8d95e621230e5") (:keywords "org" "exporter" "notes") (:authors ("Kaushal Modi" . "kaushal.modi@gmail.com")) (:maintainer "Kaushal Modi" . "kaushal.modi@gmail.com") (:url . "https://github.com/kaushalmodi/ox-minutes"))])
+(ox-minutes .
+	    [(20180202 1734)
+	     ((emacs
+	       (24 4)))
+	     "Plain text backend for Org for Meeting Minutes" single
+	     ((:commit . "27c29f3fdb9181322ae56f8bace8d95e621230e5")
+	      (:authors
+	       ("Kaushal Modi" . "kaushal.modi@gmail.com"))
+	      (:maintainer "Kaushal Modi" . "kaushal.modi@gmail.com")
+	      (:keywords "org" "exporter" "notes")
+	      (:url . "https://github.com/kaushalmodi/ox-minutes"))])

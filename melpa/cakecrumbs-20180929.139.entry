@@ -1,2 +1,11 @@
-
-(cakecrumbs . [(20180929 139) ((emacs (24 4))) "Show parents on header for HTML/Jade/Sass/Stylus" single ((:commit . "cf8c1df885eee004602f73c4f841301e200e5850") (:keywords "languages" "html" "jade" "pug" "sass" "scss" "stylus") (:authors ("ono hiroko <kuanyui.github.io>")) (:maintainer "ono hiroko <kuanyui.github.io>") (:url . "https://github.com/kuanyui/cakecrumbs.el"))])
+(cakecrumbs .
+	    [(20180929 139)
+	     ((emacs
+	       (24 4)))
+	     "Show parents on header for HTML/Jade/Sass/Stylus" single
+	     ((:commit . "cf8c1df885eee004602f73c4f841301e200e5850")
+	      (:authors
+	       ("ono hiroko <kuanyui.github.io>"))
+	      (:maintainer "ono hiroko <kuanyui.github.io>")
+	      (:keywords "languages" "html" "jade" "pug" "sass" "scss" "stylus")
+	      (:url . "https://github.com/kuanyui/cakecrumbs.el"))])

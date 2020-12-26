@@ -1,2 +1,9 @@
-
-(point-pos . [(20170421 1632) nil "Save and restore point positions" single ((:commit . "442bccb40791832cbc2d6f5c8f53be745aea2b73") (:keywords "tools" "convenience") (:authors ("Alex Kost" . "alezost@gmail.com")) (:maintainer "Alex Kost" . "alezost@gmail.com") (:url . "https://github.com/alezost/point-pos.el"))])
+(point-pos .
+	   [(20170421 1632)
+	    nil "Save and restore point positions" single
+	    ((:commit . "442bccb40791832cbc2d6f5c8f53be745aea2b73")
+	     (:authors
+	      ("Alex Kost" . "alezost@gmail.com"))
+	     (:maintainer "Alex Kost" . "alezost@gmail.com")
+	     (:keywords "tools" "convenience")
+	     (:url . "https://github.com/alezost/point-pos.el"))])

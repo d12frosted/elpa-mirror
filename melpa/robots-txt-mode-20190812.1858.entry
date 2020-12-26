@@ -1,2 +1,9 @@
-
-(robots-txt-mode . [(20190812 1858) nil "Major mode for editing robots.txt" single ((:commit . "8bf67285a25a6756607354d184e36583f2847e7d") (:keywords "languages" "comm" "web") (:authors ("USAMI Kenta" . "tadsan@zonu.me")) (:maintainer "USAMI Kenta" . "tadsan@zonu.me") (:url . "https://github.com/emacs-php/robots-txt-mode"))])
+(robots-txt-mode .
+		 [(20190812 1858)
+		  nil "Major mode for editing robots.txt" single
+		  ((:commit . "8bf67285a25a6756607354d184e36583f2847e7d")
+		   (:authors
+		    ("USAMI Kenta" . "tadsan@zonu.me"))
+		   (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+		   (:keywords "languages" "comm" "web")
+		   (:url . "https://github.com/emacs-php/robots-txt-mode"))])

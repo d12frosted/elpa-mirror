@@ -1,2 +1,8 @@
-
-(omni-kill . [(20171016 2140) nil "Kill all the things" single ((:commit . "904549c8fd6ac3cf22b5d7111ca8944e179cffea") (:keywords "convenience" "editing" "tools") (:authors ("Adrien Becchis" . "adriean.khisbe@live.fr")) (:maintainer "Adrien Becchis" . "adriean.khisbe@live.fr"))])
+(omni-kill .
+	   [(20171016 2140)
+	    nil "Kill all the things" single
+	    ((:commit . "904549c8fd6ac3cf22b5d7111ca8944e179cffea")
+	     (:authors
+	      ("Adrien Becchis" . "adriean.khisbe@live.fr"))
+	     (:maintainer "Adrien Becchis" . "adriean.khisbe@live.fr")
+	     (:keywords "convenience" "editing" "tools"))])

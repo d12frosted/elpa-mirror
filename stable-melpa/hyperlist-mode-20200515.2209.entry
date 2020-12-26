@@ -1,2 +1,11 @@
-
-(hyperlist-mode . [(20200515 2209) ((emacs (24))) "A major-mode for viewing Hyperlists" single ((:commit . "374cdc04761df23e7a50ca276319ba9745cda9d7") (:keywords "outlines") (:authors ("Wojciech Siewierski")) (:maintainer "Wojciech Siewierski") (:url . "https://github.com/vifon/hyperlist-mode"))])
+(hyperlist-mode .
+		[(20200515 2209)
+		 ((emacs
+		   (24)))
+		 "A major-mode for viewing Hyperlists" single
+		 ((:commit . "374cdc04761df23e7a50ca276319ba9745cda9d7")
+		  (:authors
+		   ("Wojciech Siewierski"))
+		  (:maintainer "Wojciech Siewierski")
+		  (:keywords "outlines")
+		  (:url . "https://github.com/vifon/hyperlist-mode"))])

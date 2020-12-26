@@ -1,2 +1,11 @@
-
-(turing-machine . [(20180222 438) ((emacs (24 4))) "Single-tape Turing machine simulator" single ((:commit . "fa60b76a5bac1f54b7a1b3dc55aae7602c7e385b") (:keywords "turing" "machine" "simulation") (:authors ("Diego A. Mundo" . "diegoamundo@gmail.com")) (:maintainer "Diego A. Mundo" . "diegoamundo@gmail.com") (:url . "http://github.com/therockmandolinist/turing-machine"))])
+(turing-machine .
+		[(20180222 438)
+		 ((emacs
+		   (24 4)))
+		 "Single-tape Turing machine simulator" single
+		 ((:commit . "fa60b76a5bac1f54b7a1b3dc55aae7602c7e385b")
+		  (:authors
+		   ("Diego A. Mundo" . "diegoamundo@gmail.com"))
+		  (:maintainer "Diego A. Mundo" . "diegoamundo@gmail.com")
+		  (:keywords "turing" "machine" "simulation")
+		  (:url . "http://github.com/therockmandolinist/turing-machine"))])

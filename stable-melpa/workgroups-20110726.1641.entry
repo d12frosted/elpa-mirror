@@ -1,2 +1,8 @@
-
-(workgroups . [(20110726 1641) nil "workgroups for windows (for Emacs)" single ((:commit . "9572b3492ee09054dc329f64ed846c962b395e39") (:keywords "session" "management" "window-configuration" "persistence") (:authors ("tlh" . "thunkout@gmail.com")) (:maintainer "tlh" . "thunkout@gmail.com"))])
+(workgroups .
+	    [(20110726 1641)
+	     nil "workgroups for windows (for Emacs)" single
+	     ((:commit . "9572b3492ee09054dc329f64ed846c962b395e39")
+	      (:authors
+	       ("tlh" . "thunkout@gmail.com"))
+	      (:maintainer "tlh" . "thunkout@gmail.com")
+	      (:keywords "session" "management" "window-configuration" "persistence"))])

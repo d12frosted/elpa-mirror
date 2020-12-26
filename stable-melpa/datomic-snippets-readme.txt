@@ -1,3 +1,6 @@
-Yasnippets for [Datomic](http://www.datomic.com/).
+;;; Commentary:
 
-Please visit README.md for more commentary.
+;; Yasnippets for [Datomic](http://www.datomic.com/).
+;;
+;; Please visit README.md for more commentary.
+

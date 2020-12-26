@@ -1,2 +1,13 @@
-
-(ob-typescript . [(20190910 946) ((emacs (24)) (org (8 0))) "org-babel functions for typescript evaluation" single ((:commit . "0b2766b9d136cd6d81f4c15f1ad4b28542f484b9") (:keywords "literate programming" "reproducible research" "typescript") (:authors ("KURASHIKI Satoru")) (:maintainer "KURASHIKI Satoru") (:url . "https://github.com/lurdan/ob-typescript"))])
+(ob-typescript .
+	       [(20190910 946)
+		((emacs
+		  (24))
+		 (org
+		  (8 0)))
+		"org-babel functions for typescript evaluation" single
+		((:commit . "0b2766b9d136cd6d81f4c15f1ad4b28542f484b9")
+		 (:authors
+		  ("KURASHIKI Satoru"))
+		 (:maintainer "KURASHIKI Satoru")
+		 (:keywords "literate programming" "reproducible research" "typescript")
+		 (:url . "https://github.com/lurdan/ob-typescript"))])

@@ -1,2 +1,15 @@
-
-(tbx2org . [(20140224 1559) ((dash (2 5 0)) (s (1 8 0)) (cl-lib (0 4))) "Tinderbox to org-mode conversion" single ((:commit . "08e9816ba6066f56936050b58d07ceb2187ae6f7") (:keywords "org-mode") (:authors ("istib")) (:maintainer "istib") (:url . "https://github.com/istib/tbx2org"))])
+(tbx2org .
+	 [(20140224 1559)
+	  ((dash
+	    (2 5 0))
+	   (s
+	    (1 8 0))
+	   (cl-lib
+	    (0 4)))
+	  "Tinderbox to org-mode conversion" single
+	  ((:commit . "08e9816ba6066f56936050b58d07ceb2187ae6f7")
+	   (:authors
+	    ("istib"))
+	   (:maintainer "istib")
+	   (:keywords "org-mode")
+	   (:url . "https://github.com/istib/tbx2org"))])

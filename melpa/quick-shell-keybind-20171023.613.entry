@@ -1,2 +1,11 @@
-
-(quick-shell-keybind . [(20171023 613) ((emacs (24))) "Interactively bind a key to shell commands" single ((:commit . "5f4541a5a5554d108bf16b5fd1713e962161ca1b") (:keywords "maint" "convenience" "processes") (:authors ("eyeinsky" . "eyeinsky9@gmail.com")) (:maintainer "eyeinsky" . "eyeinsky9@gmail.com") (:url . "https://github.com/eyeinsky/quick-shell-keybind"))])
+(quick-shell-keybind .
+		     [(20171023 613)
+		      ((emacs
+			(24)))
+		      "Interactively bind a key to shell commands" single
+		      ((:commit . "5f4541a5a5554d108bf16b5fd1713e962161ca1b")
+		       (:authors
+			("eyeinsky" . "eyeinsky9@gmail.com"))
+		       (:maintainer "eyeinsky" . "eyeinsky9@gmail.com")
+		       (:keywords "maint" "convenience" "processes")
+		       (:url . "https://github.com/eyeinsky/quick-shell-keybind"))])

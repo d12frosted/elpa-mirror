@@ -1,2 +1,12 @@
-
-(btc-ticker . [(20151113 1459) ((json (1 2)) (request (0 2 0))) "Shows latest bitcoin price" single ((:commit . "845235b545f070d0812cd1654cbaa4997565824f") (:keywords "news") (:authors ("Jorge Niedbalski R." . "jnr@metaklass.org")) (:maintainer "Jorge Niedbalski R." . "jnr@metaklass.org"))])
+(btc-ticker .
+	    [(20151113 1459)
+	     ((json
+	       (1 2))
+	      (request
+	       (0 2 0)))
+	     "Shows latest bitcoin price" single
+	     ((:commit . "845235b545f070d0812cd1654cbaa4997565824f")
+	      (:authors
+	       ("Jorge Niedbalski R." . "jnr@metaklass.org"))
+	      (:maintainer "Jorge Niedbalski R." . "jnr@metaklass.org")
+	      (:keywords "news"))])

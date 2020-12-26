@@ -1,2 +1,9 @@
-
-(objc-font-lock . [(20141021 1822) nil "Highlight Objective-C method calls." single ((:commit . "34b457d577f97ca94b8792d025f9a909c7610612") (:keywords "languages" "faces") (:authors ("Anders Lindgren")) (:maintainer "Anders Lindgren") (:url . "https://github.com/Lindydancer/objc-font-lock"))])
+(objc-font-lock .
+		[(20141021 1822)
+		 nil "Highlight Objective-C method calls." single
+		 ((:commit . "34b457d577f97ca94b8792d025f9a909c7610612")
+		  (:authors
+		   ("Anders Lindgren"))
+		  (:maintainer "Anders Lindgren")
+		  (:keywords "languages" "faces")
+		  (:url . "https://github.com/Lindydancer/objc-font-lock"))])

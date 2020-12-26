@@ -1,2 +1,11 @@
-
-(ob-coffee . [(20170725 1424) ((org (8))) "org-babel functions for coffee-script evaluation" tar ((:commit . "7f0b330273e8af7777de87a75fe52a89798e4548") (:keywords "org" "babel" "coffee-script") (:authors ("ZHOU Feng" . "zf.pascal@gmail.com")) (:maintainer "ZHOU Feng" . "zf.pascal@gmail.com") (:url . "http://github.com/zweifisch/ob-coffee"))])
+(ob-coffee .
+	   [(20170725 1424)
+	    ((org
+	      (8)))
+	    "org-babel functions for coffee-script evaluation" tar
+	    ((:commit . "7f0b330273e8af7777de87a75fe52a89798e4548")
+	     (:authors
+	      ("ZHOU Feng" . "zf.pascal@gmail.com"))
+	     (:maintainer "ZHOU Feng" . "zf.pascal@gmail.com")
+	     (:keywords "org" "babel" "coffee-script")
+	     (:url . "http://github.com/zweifisch/ob-coffee"))])

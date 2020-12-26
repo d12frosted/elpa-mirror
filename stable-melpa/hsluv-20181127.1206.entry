@@ -1,2 +1,11 @@
-
-(hsluv . [(20181127 1206) ((seq (2 20))) "hsluv color space conversions" single ((:commit . "c3bc5228e30d66e7dee9ff1a0694c2b976862fc0") (:keywords "color" "hsluv") (:authors ("Geert Vermeiren")) (:maintainer "Geert Vermeiren") (:url . "https://github.com/hsluv/hsluv-emacs"))])
+(hsluv .
+       [(20181127 1206)
+	((seq
+	  (2 20)))
+	"hsluv color space conversions" single
+	((:commit . "c3bc5228e30d66e7dee9ff1a0694c2b976862fc0")
+	 (:authors
+	  ("Geert Vermeiren"))
+	 (:maintainer "Geert Vermeiren")
+	 (:keywords "color" "hsluv")
+	 (:url . "https://github.com/hsluv/hsluv-emacs"))])

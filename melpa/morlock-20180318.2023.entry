@@ -1,2 +1,9 @@
-
-(morlock . [(20180318 2023) nil "more font-lock keywords for elisp" single ((:commit . "b883d48024ddfffebe2d0dd69f5ed54c617f8834") (:keywords "convenience") (:authors ("Jonas Bernoulli" . "jonas@bernoul.li")) (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li") (:url . "https://github.com/tarsius/morlock"))])
+(morlock .
+	 [(20180318 2023)
+	  nil "more font-lock keywords for elisp" single
+	  ((:commit . "b883d48024ddfffebe2d0dd69f5ed54c617f8834")
+	   (:authors
+	    ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	   (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	   (:keywords "convenience")
+	   (:url . "https://github.com/tarsius/morlock"))])

@@ -1,2 +1,13 @@
-
-(lsp-origami . [(20200914 1846) ((origami (1 0)) (lsp-mode (6 1))) "origami.el support for lsp-mode" single ((:commit . "aa309589668d32a8b4bb23c8f41163f6ae208f7b") (:keywords "languages" "lsp-mode") (:authors ("Vibhav Pant")) (:maintainer "Vibhav Pant") (:url . "https://github.com/emacs-lsp/lsp-origami"))])
+(lsp-origami .
+	     [(20200914 1846)
+	      ((origami
+		(1 0))
+	       (lsp-mode
+		(6 1)))
+	      "origami.el support for lsp-mode" single
+	      ((:commit . "aa309589668d32a8b4bb23c8f41163f6ae208f7b")
+	       (:authors
+		("Vibhav Pant"))
+	       (:maintainer "Vibhav Pant")
+	       (:keywords "languages" "lsp-mode")
+	       (:url . "https://github.com/emacs-lsp/lsp-origami"))])

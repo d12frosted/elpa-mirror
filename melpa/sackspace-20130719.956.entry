@@ -1,2 +1,9 @@
-
-(sackspace . [(20130719 956) nil "A better backspace" single ((:commit . "fd0480eaaf6d3d11fd30ac5feb2da2f4f7572708") (:keywords "delete" "convenience") (:authors ("Michael Markert" . "markert.michael@googlemail.com")) (:maintainer "Michael Markert" . "markert.michael@googlemail.com") (:url . "http://github.com/cofi/sackspace.el"))])
+(sackspace .
+	   [(20130719 956)
+	    nil "A better backspace" single
+	    ((:commit . "fd0480eaaf6d3d11fd30ac5feb2da2f4f7572708")
+	     (:authors
+	      ("Michael Markert" . "markert.michael@googlemail.com"))
+	     (:maintainer "Michael Markert" . "markert.michael@googlemail.com")
+	     (:keywords "delete" "convenience")
+	     (:url . "http://github.com/cofi/sackspace.el"))])

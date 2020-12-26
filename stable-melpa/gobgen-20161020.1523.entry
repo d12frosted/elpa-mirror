@@ -1,2 +1,10 @@
-
-(gobgen . [(20161020 1523) ((emacs (24 4))) "Generate GObject descendants using a detailed form" single ((:commit . "ed2c2b0d217deae293096f3cf14aa492791ddd4f") (:keywords "gobject" "glib" "gtk" "helper" "utilities") (:authors ("Gergely Polonkai" . "gergely@polonkai.eu")) (:maintainer "Gergely Polonkai" . "gergely@polonkai.eu"))])
+(gobgen .
+	[(20161020 1523)
+	 ((emacs
+	   (24 4)))
+	 "Generate GObject descendants using a detailed form" single
+	 ((:commit . "ed2c2b0d217deae293096f3cf14aa492791ddd4f")
+	  (:authors
+	   ("Gergely Polonkai" . "gergely@polonkai.eu"))
+	  (:maintainer "Gergely Polonkai" . "gergely@polonkai.eu")
+	  (:keywords "gobject" "glib" "gtk" "helper" "utilities"))])

@@ -1,2 +1,11 @@
-
-(jumplist . [(20151120 345) ((cl-lib (0 5))) "Jump like vim jumplist or ex jumplist" single ((:commit . "c482d137d95bc5e1bcd790cdbde25b7f729b2502") (:keywords "jumplist" "vim") (:authors ("ganmacs <ganmacs_at_gmail.com>")) (:maintainer "ganmacs <ganmacs_at_gmail.com>") (:url . "https://github.com/ganmacs/jumplist"))])
+(jumplist .
+	  [(20151120 345)
+	   ((cl-lib
+	     (0 5)))
+	   "Jump like vim jumplist or ex jumplist" single
+	   ((:commit . "c482d137d95bc5e1bcd790cdbde25b7f729b2502")
+	    (:authors
+	     ("ganmacs <ganmacs_at_gmail.com>"))
+	    (:maintainer "ganmacs <ganmacs_at_gmail.com>")
+	    (:keywords "jumplist" "vim")
+	    (:url . "https://github.com/ganmacs/jumplist"))])

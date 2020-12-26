@@ -1,2 +1,10 @@
-
-(yaml-tomato . [(20151123 753) ((s (1 9))) "copy or show the yaml path currently under cursor." single ((:commit . "f9df1c9bdfcec629b03031b2d2032f9dc533cb14") (:keywords "yaml") (:authors ("qrczeno")) (:maintainer "qrczeno"))])
+(yaml-tomato .
+	     [(20151123 753)
+	      ((s
+		(1 9)))
+	      "copy or show the yaml path currently under cursor." single
+	      ((:commit . "f9df1c9bdfcec629b03031b2d2032f9dc533cb14")
+	       (:authors
+		("qrczeno"))
+	       (:maintainer "qrczeno")
+	       (:keywords "yaml"))])

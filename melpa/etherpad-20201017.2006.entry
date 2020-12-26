@@ -1,2 +1,15 @@
-
-(etherpad . [(20201017 2006) ((emacs (26 1)) (request (0 3)) (let-alist (0 0))) "Interface to the Etherpad API" single ((:commit . "36956db9fa65ff88f3213a80b11f1fad0765d972") (:keywords "comm" "etherpad" "collaborative editing") (:authors ("nik gaffney" . "nik@fo.am")) (:maintainer "nik gaffney" . "nik@fo.am") (:url . "https://github.com/zzkt/ethermacs"))])
+(etherpad .
+	  [(20201017 2006)
+	   ((emacs
+	     (26 1))
+	    (request
+	     (0 3))
+	    (let-alist
+		(0 0)))
+	   "Interface to the Etherpad API" single
+	   ((:commit . "36956db9fa65ff88f3213a80b11f1fad0765d972")
+	    (:authors
+	     ("nik gaffney" . "nik@fo.am"))
+	    (:maintainer "nik gaffney" . "nik@fo.am")
+	    (:keywords "comm" "etherpad" "collaborative editing")
+	    (:url . "https://github.com/zzkt/ethermacs"))])

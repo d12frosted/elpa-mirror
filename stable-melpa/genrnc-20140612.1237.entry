@@ -1,2 +1,17 @@
-
-(genrnc . [(20140612 1237) ((deferred (0 3 1)) (concurrent (0 3)) (log4e (0 2 0)) (yaxception (0 1))) "generate RELAX NG Compact Schema from RELAX NG Schema, XML Schema and DTD." tar ((:commit . "da75b1966a73ad215ec2ced4522c25f4d0bf1f9a") (:keywords "xml") (:authors ("Hiroaki Otsu" . "ootsuhiroaki@gmail.com")) (:maintainer "Hiroaki Otsu" . "ootsuhiroaki@gmail.com") (:url . "https://github.com/aki2o/emacs-genrnc"))])
+(genrnc .
+	[(20140612 1237)
+	 ((deferred
+	    (0 3 1))
+	  (concurrent
+	   (0 3))
+	  (log4e
+	   (0 2 0))
+	  (yaxception
+	   (0 1)))
+	 "generate RELAX NG Compact Schema from RELAX NG Schema, XML Schema and DTD." tar
+	 ((:commit . "da75b1966a73ad215ec2ced4522c25f4d0bf1f9a")
+	  (:authors
+	   ("Hiroaki Otsu" . "ootsuhiroaki@gmail.com"))
+	  (:maintainer "Hiroaki Otsu" . "ootsuhiroaki@gmail.com")
+	  (:keywords "xml")
+	  (:url . "https://github.com/aki2o/emacs-genrnc"))])

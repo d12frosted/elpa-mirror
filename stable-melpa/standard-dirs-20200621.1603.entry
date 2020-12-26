@@ -1,2 +1,15 @@
-
-(standard-dirs . [(20200621 1603) ((emacs (26 1)) (f (0 20 0)) (s (1 7 0))) "Platform-specific paths for config, cache, and other data" single ((:commit . "92460e21f964cb7495d974c42acd0b726af3fbcb") (:keywords "files") (:authors ("Joseph M LaFreniere" . "joseph@lafreniere.xyz")) (:maintainer "Joseph M LaFreniere" . "joseph@lafreniere.xyz") (:url . "https://github.com/lafrenierejm/standard-dirs.el"))])
+(standard-dirs .
+	       [(20200621 1603)
+		((emacs
+		  (26 1))
+		 (f
+		  (0 20 0))
+		 (s
+		  (1 7 0)))
+		"Platform-specific paths for config, cache, and other data" single
+		((:commit . "92460e21f964cb7495d974c42acd0b726af3fbcb")
+		 (:authors
+		  ("Joseph M LaFreniere" . "joseph@lafreniere.xyz"))
+		 (:maintainer "Joseph M LaFreniere" . "joseph@lafreniere.xyz")
+		 (:keywords "files")
+		 (:url . "https://github.com/lafrenierejm/standard-dirs.el"))])

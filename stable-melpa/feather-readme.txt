@@ -1,1 +1,4 @@
-Parallel thread modern Emacs package manager.
+;;; Commentary:
+
+;; Parallel thread modern Emacs package manager.
+

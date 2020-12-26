@@ -1,2 +1,10 @@
-
-(flx . [(20191115 659) ((cl-lib (0 3))) "fuzzy matching with good sorting" single ((:commit . "647cb2f92f9936c62e277d7a74ad54a80502d255") (:authors ("Le Wang")) (:maintainer "Le Wang") (:url . "https://github.com/lewang/flx"))])
+(flx .
+     [(20191115 659)
+      ((cl-lib
+	(0 3)))
+      "fuzzy matching with good sorting" single
+      ((:commit . "647cb2f92f9936c62e277d7a74ad54a80502d255")
+       (:authors
+	("Le Wang"))
+       (:maintainer "Le Wang")
+       (:url . "https://github.com/lewang/flx"))])

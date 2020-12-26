@@ -1,2 +1,13 @@
-
-(rjsx-mode . [(20200120 1446) ((emacs (24 4)) (js2-mode (20170504))) "Real support for JSX" single ((:commit . "b697fe4d92cc84fa99a7bcb476f815935ea0d919") (:keywords "languages") (:authors ("Felipe Ochoa" . "felipe@fov.space")) (:maintainer "Felipe Ochoa" . "felipe@fov.space") (:url . "https://github.com/felipeochoa/rjsx-mode/"))])
+(rjsx-mode .
+	   [(20200120 1446)
+	    ((emacs
+	      (24 4))
+	     (js2-mode
+	      (20170504)))
+	    "Real support for JSX" single
+	    ((:commit . "b697fe4d92cc84fa99a7bcb476f815935ea0d919")
+	     (:authors
+	      ("Felipe Ochoa" . "felipe@fov.space"))
+	     (:maintainer "Felipe Ochoa" . "felipe@fov.space")
+	     (:keywords "languages")
+	     (:url . "https://github.com/felipeochoa/rjsx-mode/"))])

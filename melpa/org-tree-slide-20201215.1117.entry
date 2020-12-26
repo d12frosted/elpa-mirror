@@ -1,2 +1,11 @@
-
-(org-tree-slide . [(20201215 1117) ((emacs (24 3))) "A presentation tool for org-mode" single ((:commit . "d6e8e91433dfe4968f1343b483f2680f45a77d52") (:keywords "convenience" "org-mode" "presentation" "narrowing") (:authors ("Takaaki ISHIKAWA <takaxp at ieee dot org>")) (:maintainer "Takaaki ISHIKAWA <takaxp at ieee dot org>") (:url . "https://github.com/takaxp/org-tree-slide"))])
+(org-tree-slide .
+		[(20201215 1117)
+		 ((emacs
+		   (24 3)))
+		 "A presentation tool for org-mode" single
+		 ((:commit . "d6e8e91433dfe4968f1343b483f2680f45a77d52")
+		  (:authors
+		   ("Takaaki ISHIKAWA <takaxp at ieee dot org>"))
+		  (:maintainer "Takaaki ISHIKAWA <takaxp at ieee dot org>")
+		  (:keywords "convenience" "org-mode" "presentation" "narrowing")
+		  (:url . "https://github.com/takaxp/org-tree-slide"))])

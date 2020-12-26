@@ -1,2 +1,11 @@
-
-(debpaste . [(20160113 2347) ((xml-rpc (1 6 7))) "Interface for getting/posting/deleting pastes from paste.debian.net" single ((:commit . "6f2a400665062468ebd03a2ce1de2a73d9084958") (:keywords "paste") (:authors ("Alex Kost" . "alezost@gmail.com")) (:maintainer "Alex Kost" . "alezost@gmail.com") (:url . "http://github.com/alezost/debpaste.el"))])
+(debpaste .
+	  [(20160113 2347)
+	   ((xml-rpc
+	     (1 6 7)))
+	   "Interface for getting/posting/deleting pastes from paste.debian.net" single
+	   ((:commit . "6f2a400665062468ebd03a2ce1de2a73d9084958")
+	    (:authors
+	     ("Alex Kost" . "alezost@gmail.com"))
+	    (:maintainer "Alex Kost" . "alezost@gmail.com")
+	    (:keywords "paste")
+	    (:url . "http://github.com/alezost/debpaste.el"))])

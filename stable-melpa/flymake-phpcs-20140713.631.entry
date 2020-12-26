@@ -1,2 +1,11 @@
-
-(flymake-phpcs . [(20140713 631) ((flymake-easy (0 9))) "making flymake work with PHP CodeSniffer" single ((:commit . "bba25dbda15955b609ceae0893cf3be74ec67230") (:keywords "flymake" "phpcs" "php") (:authors ("Akiha Senda")) (:maintainer "Akiha Senda") (:url . "https://github.com/senda-akiha/flymake-phpcs/"))])
+(flymake-phpcs .
+	       [(20140713 631)
+		((flymake-easy
+		  (0 9)))
+		"making flymake work with PHP CodeSniffer" single
+		((:commit . "bba25dbda15955b609ceae0893cf3be74ec67230")
+		 (:authors
+		  ("Akiha Senda"))
+		 (:maintainer "Akiha Senda")
+		 (:keywords "flymake" "phpcs" "php")
+		 (:url . "https://github.com/senda-akiha/flymake-phpcs/"))])

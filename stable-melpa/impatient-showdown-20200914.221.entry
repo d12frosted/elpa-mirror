@@ -1,2 +1,12 @@
-
-(impatient-showdown . [(20200914 221) ((emacs (24 3)) (impatient-mode (1 1))) "Preview markdown buffer live over HTTP using showdown" tar ((:commit . "9ad16da9f78ae242b0a6fb1de388d5f4f1264207") (:authors ("Shen, Jen-Chieh" . "jcs090218@gmail.com")) (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com") (:url . "https://github.com/jcs-elpa/impatient-showdown"))])
+(impatient-showdown .
+		    [(20200914 221)
+		     ((emacs
+		       (24 3))
+		      (impatient-mode
+		       (1 1)))
+		     "Preview markdown buffer live over HTTP using showdown" tar
+		     ((:commit . "9ad16da9f78ae242b0a6fb1de388d5f4f1264207")
+		      (:authors
+		       ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		      (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		      (:url . "https://github.com/jcs-elpa/impatient-showdown"))])

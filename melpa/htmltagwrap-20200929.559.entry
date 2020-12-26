@@ -1,2 +1,10 @@
-
-(htmltagwrap . [(20200929 559) ((emacs (24 4))) "Wraps a chunk of HTML code in tags" single ((:commit . "8cb33f9513d79e44a602927f35d5a3bb0dccbb92") (:authors ("Shen, Jen-Chieh" . "jcs090218@gmail.com")) (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com") (:url . "https://github.com/jcs-elpa/htmltagwrap"))])
+(htmltagwrap .
+	     [(20200929 559)
+	      ((emacs
+		(24 4)))
+	      "Wraps a chunk of HTML code in tags" single
+	      ((:commit . "8cb33f9513d79e44a602927f35d5a3bb0dccbb92")
+	       (:authors
+		("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+	       (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+	       (:url . "https://github.com/jcs-elpa/htmltagwrap"))])

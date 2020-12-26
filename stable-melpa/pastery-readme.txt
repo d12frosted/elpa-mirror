@@ -1,7 +1,10 @@
-This is the main file of the project.
-It contains all autoloads and information
-about the package.
+;;; Commentary:
 
-See license.md.
+;; This is the main file of the project.
+;; It contains all autoloads and information
+;; about the package.
 
-This file is NOT part of GNU Emacs.
+;; See license.md.
+
+;; This file is NOT part of GNU Emacs.
+

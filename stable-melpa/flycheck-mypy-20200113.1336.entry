@@ -1,2 +1,9 @@
-
-(flycheck-mypy . [(20200113 1336) ((flycheck (0 18))) "Support mypy in flycheck" single ((:commit . "5b4e14ab0cbce2ff35fee7e69b5b95eafd609c80") (:authors ("Lorenzo Bolla" . "lbolla@gmail.com")) (:maintainer "Lorenzo Bolla" . "lbolla@gmail.com"))])
+(flycheck-mypy .
+	       [(20200113 1336)
+		((flycheck
+		  (0 18)))
+		"Support mypy in flycheck" single
+		((:commit . "5b4e14ab0cbce2ff35fee7e69b5b95eafd609c80")
+		 (:authors
+		  ("Lorenzo Bolla" . "lbolla@gmail.com"))
+		 (:maintainer "Lorenzo Bolla" . "lbolla@gmail.com"))])

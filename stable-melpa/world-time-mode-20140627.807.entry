@@ -1,2 +1,8 @@
-
-(world-time-mode . [(20140627 807) nil "show whole days of world-time diffs" single ((:commit . "ce7a3b45c87eb24cfe61eee453175d64f741d7cc") (:keywords "tools" "calendar") (:authors ("Nic Ferrier" . "nferrier@ferrier.me.uk")) (:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk"))])
+(world-time-mode .
+		 [(20140627 807)
+		  nil "show whole days of world-time diffs" single
+		  ((:commit . "ce7a3b45c87eb24cfe61eee453175d64f741d7cc")
+		   (:authors
+		    ("Nic Ferrier" . "nferrier@ferrier.me.uk"))
+		   (:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk")
+		   (:keywords "tools" "calendar"))])

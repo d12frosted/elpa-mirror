@@ -1,2 +1,13 @@
-
-(hookify . [(20141216 2209) ((s (1 9 0)) (dash (1 5 0))) "Interactive commands to create temporary hooks" single ((:commit . "21baae7393b07257de5796402fde0ca72fb00d77") (:keywords "hook" "convenience") (:authors ("Philippe Vaucher" . "philippe.vaucher@gmail.com")) (:maintainer "Philippe Vaucher" . "philippe.vaucher@gmail.com") (:url . "https://github.com/Silex/hookify"))])
+(hookify .
+	 [(20141216 2209)
+	  ((s
+	    (1 9 0))
+	   (dash
+	    (1 5 0)))
+	  "Interactive commands to create temporary hooks" single
+	  ((:commit . "21baae7393b07257de5796402fde0ca72fb00d77")
+	   (:authors
+	    ("Philippe Vaucher" . "philippe.vaucher@gmail.com"))
+	   (:maintainer "Philippe Vaucher" . "philippe.vaucher@gmail.com")
+	   (:keywords "hook" "convenience")
+	   (:url . "https://github.com/Silex/hookify"))])

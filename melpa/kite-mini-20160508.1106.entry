@@ -1,2 +1,13 @@
-
-(kite-mini . [(20160508 1106) ((dash (2 11 0)) (websocket (1 5))) "Remotely evaluate JavaScript in the WebKit debugger" tar ((:commit . "a68619dbc109c7989f3448426d8c1ee9e797c11f") (:keywords "webkit") (:authors ("Tung Dao" . "me@tungdao.com")) (:maintainer "Tung Dao" . "me@tungdao.com") (:url . "https://github.com/tungd/kite-mini.el"))])
+(kite-mini .
+	   [(20160508 1106)
+	    ((dash
+	      (2 11 0))
+	     (websocket
+	      (1 5)))
+	    "Remotely evaluate JavaScript in the WebKit debugger" tar
+	    ((:commit . "a68619dbc109c7989f3448426d8c1ee9e797c11f")
+	     (:authors
+	      ("Tung Dao" . "me@tungdao.com"))
+	     (:maintainer "Tung Dao" . "me@tungdao.com")
+	     (:keywords "webkit")
+	     (:url . "https://github.com/tungd/kite-mini.el"))])

@@ -1,2 +1,13 @@
-
-(cwl-mode . [(20171205 945) ((yaml-mode (0 0 13)) (emacs (24 4))) "A major mode for editing CWL" single ((:commit . "bdeb9c0734126f940db80bfb8b1dc735dab671c7") (:keywords "languages" "cwl" "common workflow language") (:authors ("Tomoya Tanjo" . "ttanjo@gmail.com")) (:maintainer "Tomoya Tanjo" . "ttanjo@gmail.com") (:url . "https://github.com/tom-tan/cwl-mode"))])
+(cwl-mode .
+	  [(20171205 945)
+	   ((yaml-mode
+	     (0 0 13))
+	    (emacs
+	     (24 4)))
+	   "A major mode for editing CWL" single
+	   ((:commit . "bdeb9c0734126f940db80bfb8b1dc735dab671c7")
+	    (:authors
+	     ("Tomoya Tanjo" . "ttanjo@gmail.com"))
+	    (:maintainer "Tomoya Tanjo" . "ttanjo@gmail.com")
+	    (:keywords "languages" "cwl" "common workflow language")
+	    (:url . "https://github.com/tom-tan/cwl-mode"))])

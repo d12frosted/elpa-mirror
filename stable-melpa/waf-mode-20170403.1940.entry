@@ -1,2 +1,8 @@
-
-(waf-mode . [(20170403 1940) nil "Waf integration for Emacs" single ((:commit . "20c75eabd1d54fbce8e0dbef785c9fb68577ee4f") (:authors ("Denys Valchuk" . "dvalchuk@gmail.com")) (:maintainer "Denys Valchuk" . "dvalchuk@gmail.com") (:url . "https://bitbucket.org/dvalchuk/waf-mode"))])
+(waf-mode .
+	  [(20170403 1940)
+	   nil "Waf integration for Emacs" single
+	   ((:commit . "20c75eabd1d54fbce8e0dbef785c9fb68577ee4f")
+	    (:authors
+	     ("Denys Valchuk" . "dvalchuk@gmail.com"))
+	    (:maintainer "Denys Valchuk" . "dvalchuk@gmail.com")
+	    (:url . "https://bitbucket.org/dvalchuk/waf-mode"))])

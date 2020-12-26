@@ -1,2 +1,15 @@
-
-(playonline . [(20200317 642) ((emacs (24 4)) (dash (2 1)) (request (0 2))) "Play code with online playgrounds" single ((:commit . "c75da1fdc1dfbd5d9aa274dc4e90ff631ea08e70") (:keywords "tools") (:authors ("Gong Qijian" . "gongqijian@gmail.com")) (:maintainer "Gong Qijian" . "gongqijian@gmail.com") (:url . "https://github.com/twlz0ne/playonline.el"))])
+(playonline .
+	    [(20200317 642)
+	     ((emacs
+	       (24 4))
+	      (dash
+	       (2 1))
+	      (request
+	       (0 2)))
+	     "Play code with online playgrounds" single
+	     ((:commit . "c75da1fdc1dfbd5d9aa274dc4e90ff631ea08e70")
+	      (:authors
+	       ("Gong Qijian" . "gongqijian@gmail.com"))
+	      (:maintainer "Gong Qijian" . "gongqijian@gmail.com")
+	      (:keywords "tools")
+	      (:url . "https://github.com/twlz0ne/playonline.el"))])

@@ -1,2 +1,8 @@
-
-(chef-mode . [(20180628 1453) nil "minor mode for editing an opscode chef repository" single ((:commit . "048d691cb63981ae235763d4a6ced4af5c729924") (:keywords "chef" "knife") (:authors ("Maciej Pasternacki" . "maciej@pasternacki.net")) (:maintainer "Maciej Pasternacki" . "maciej@pasternacki.net"))])
+(chef-mode .
+	   [(20180628 1453)
+	    nil "minor mode for editing an opscode chef repository" single
+	    ((:commit . "048d691cb63981ae235763d4a6ced4af5c729924")
+	     (:authors
+	      ("Maciej Pasternacki" . "maciej@pasternacki.net"))
+	     (:maintainer "Maciej Pasternacki" . "maciej@pasternacki.net")
+	     (:keywords "chef" "knife"))])

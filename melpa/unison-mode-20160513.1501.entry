@@ -1,2 +1,9 @@
-
-(unison-mode . [(20160513 1501) nil "Syntax highlighting for unison file synchronization program" single ((:commit . "0bd6a65c0d12f87fcf7bdff15fe54444959b93bf") (:keywords "symchronization" "unison") (:authors ("Karl Fogelmark" . "karlfogel@gmail.com")) (:maintainer "Karl Fogelmark" . "karlfogel@gmail.com") (:url . "https://github.com/impaktor/unison-mode"))])
+(unison-mode .
+	     [(20160513 1501)
+	      nil "Syntax highlighting for unison file synchronization program" single
+	      ((:commit . "0bd6a65c0d12f87fcf7bdff15fe54444959b93bf")
+	       (:authors
+		("Karl Fogelmark" . "karlfogel@gmail.com"))
+	       (:maintainer "Karl Fogelmark" . "karlfogel@gmail.com")
+	       (:keywords "symchronization" "unison")
+	       (:url . "https://github.com/impaktor/unison-mode"))])

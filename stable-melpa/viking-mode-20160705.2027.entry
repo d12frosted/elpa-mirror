@@ -1,2 +1,9 @@
-
-(viking-mode . [(20160705 2027) nil "kill first, ask later" single ((:commit . "c76aa265d13ad91d6890d242e142d05e31f0340b") (:keywords "kill" "delete") (:authors ("T.v.Dein" . "tlinden@cpan.org")) (:maintainer "T.v.Dein" . "tlinden@cpan.org") (:url . "https://github.com/tlinden/viking-mode"))])
+(viking-mode .
+	     [(20160705 2027)
+	      nil "kill first, ask later" single
+	      ((:commit . "c76aa265d13ad91d6890d242e142d05e31f0340b")
+	       (:authors
+		("T.v.Dein" . "tlinden@cpan.org"))
+	       (:maintainer "T.v.Dein" . "tlinden@cpan.org")
+	       (:keywords "kill" "delete")
+	       (:url . "https://github.com/tlinden/viking-mode"))])

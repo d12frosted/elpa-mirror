@@ -1,2 +1,14 @@
-
-(zombie-trellys-mode . [(20150304 1448) ((emacs (24)) (cl-lib (0 5)) (haskell-mode (1 5))) "A minor mode for interaction with Zombie Trellys" single ((:commit . "7f0c45fdda3a44c3b6d1762d116abb1421b8fba2") (:keywords "languages") (:authors ("David Raymond Christiansen" . "david@davidchristiansen.dk")) (:maintainer "David Raymond Christiansen" . "david@davidchristiansen.dk"))])
+(zombie-trellys-mode .
+		     [(20150304 1448)
+		      ((emacs
+			(24))
+		       (cl-lib
+			(0 5))
+		       (haskell-mode
+			(1 5)))
+		      "A minor mode for interaction with Zombie Trellys" single
+		      ((:commit . "7f0c45fdda3a44c3b6d1762d116abb1421b8fba2")
+		       (:authors
+			("David Raymond Christiansen" . "david@davidchristiansen.dk"))
+		       (:maintainer "David Raymond Christiansen" . "david@davidchristiansen.dk")
+		       (:keywords "languages"))])

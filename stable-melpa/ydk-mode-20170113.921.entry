@@ -1,2 +1,9 @@
-
-(ydk-mode . [(20170113 921) nil "Language support for Yu-Gi-Oh! deck files" single ((:commit . "f3f125b29408e0b0a34fec27dcb7c02c5dbfd04e") (:keywords "faces" "games" "languages" "ydk" "yugioh" "yu-gi-oh") (:authors ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com")) (:maintainer "Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com") (:url . "https://github.com/jacksonrayhamilton/ydk-mode"))])
+(ydk-mode .
+	  [(20170113 921)
+	   nil "Language support for Yu-Gi-Oh! deck files" single
+	   ((:commit . "f3f125b29408e0b0a34fec27dcb7c02c5dbfd04e")
+	    (:authors
+	     ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
+	    (:maintainer "Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com")
+	    (:keywords "faces" "games" "languages" "ydk" "yugioh" "yu-gi-oh")
+	    (:url . "https://github.com/jacksonrayhamilton/ydk-mode"))])

@@ -1,2 +1,11 @@
-
-(eacl . [(20201112 820) ((emacs (24 4))) "Auto-complete lines by grepping project" single ((:commit . "5f3cfac22a7e2508be47079860ab573f397c3cfa") (:keywords "abbrev" "convenience" "matching") (:authors ("Chen Bin <chenbin DOT sh AT gmail DOT com>")) (:maintainer "Chen Bin <chenbin DOT sh AT gmail DOT com>") (:url . "http://github.com/redguardtoo/eacl"))])
+(eacl .
+      [(20201112 820)
+       ((emacs
+	 (24 4)))
+       "Auto-complete lines by grepping project" single
+       ((:commit . "5f3cfac22a7e2508be47079860ab573f397c3cfa")
+	(:authors
+	 ("Chen Bin <chenbin DOT sh AT gmail DOT com>"))
+	(:maintainer "Chen Bin <chenbin DOT sh AT gmail DOT com>")
+	(:keywords "abbrev" "convenience" "matching")
+	(:url . "http://github.com/redguardtoo/eacl"))])

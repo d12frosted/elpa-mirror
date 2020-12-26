@@ -1,2 +1,9 @@
-
-(dizzee . [(20171201 916) nil "A more pleasant way to manage your project's subprocesses in Emacs." tar ((:commit . "e3cf1c2ea5d0fc00747524b6f3c5b905d0a8c8e1"))])
+(dizzee .
+	[(20171201 916)
+	 nil "A more pleasant way to manage your project's subprocesses in Emacs." tar
+	 ((:commit . "e3cf1c2ea5d0fc00747524b6f3c5b905d0a8c8e1")
+	  (:authors
+	   ("David Miller" . "david@deadpansincerity.com"))
+	  (:maintainer "David Miller" . "david@deadpansincerity.com")
+	  (:keywords "emacs" "processes")
+	  (:url . "https://github.com/davidmiller/dizzee"))])

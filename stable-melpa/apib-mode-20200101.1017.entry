@@ -1,2 +1,11 @@
-
-(apib-mode . [(20200101 1017) ((markdown-mode (2 1))) "Major mode for API Blueprint files" single ((:commit . "c6dd05201f6eb9295736d8668a79a7510d11159e") (:keywords "tools" "api-blueprint") (:authors ("Vilibald Wanča" . "vilibald@wvi.cz")) (:maintainer "Vilibald Wanča" . "vilibald@wvi.cz") (:url . "http://github.com/w-vi/apib-mode"))])
+(apib-mode .
+	   [(20200101 1017)
+	    ((markdown-mode
+	      (2 1)))
+	    "Major mode for API Blueprint files" single
+	    ((:commit . "c6dd05201f6eb9295736d8668a79a7510d11159e")
+	     (:authors
+	      ("Vilibald Wanča" . "vilibald@wvi.cz"))
+	     (:maintainer "Vilibald Wanča" . "vilibald@wvi.cz")
+	     (:keywords "tools" "api-blueprint")
+	     (:url . "http://github.com/w-vi/apib-mode"))])

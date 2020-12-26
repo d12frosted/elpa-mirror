@@ -1,2 +1,11 @@
-
-(slow-keys . [(20180831 459) ((emacs (24 1))) "Slow keys mode to avoid RSI" single ((:commit . "b93ad77f9fc1d14e080d7d64864fc9cb222248b6") (:keywords "convenience") (:authors ("Manuel Uberti" . "manuel.uberti@inventati.org")) (:maintainer "Manuel Uberti" . "manuel.uberti@inventati.org") (:url . "https://github.com/manuel-uberti/slow-keys"))])
+(slow-keys .
+	   [(20180831 459)
+	    ((emacs
+	      (24 1)))
+	    "Slow keys mode to avoid RSI" single
+	    ((:commit . "b93ad77f9fc1d14e080d7d64864fc9cb222248b6")
+	     (:authors
+	      ("Manuel Uberti" . "manuel.uberti@inventati.org"))
+	     (:maintainer "Manuel Uberti" . "manuel.uberti@inventati.org")
+	     (:keywords "convenience")
+	     (:url . "https://github.com/manuel-uberti/slow-keys"))])

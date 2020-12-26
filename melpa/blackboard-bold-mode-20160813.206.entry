@@ -1,2 +1,11 @@
-
-(blackboard-bold-mode . [(20160813 206) ((cl-lib (0 5))) "Easily insert Unicode mathematical double-struck characters" single ((:commit . "5299cb064ba71baa3e331b8560bf8dd38cbbc4ed") (:keywords "unicode" "double struck" "blackboard bold" "math" "mathematical") (:authors ("Grant Rettke" . "gcr@wisdomandwonder.com")) (:maintainer nil . "<gcr@wisdomandwonder.com>") (:url . "https://github.com/grettke/blackboard-bold-mode"))])
+(blackboard-bold-mode .
+		      [(20160813 206)
+		       ((cl-lib
+			 (0 5)))
+		       "Easily insert Unicode mathematical double-struck characters" single
+		       ((:commit . "5299cb064ba71baa3e331b8560bf8dd38cbbc4ed")
+			(:authors
+			 ("Grant Rettke" . "gcr@wisdomandwonder.com"))
+			(:maintainer nil . "<gcr@wisdomandwonder.com>")
+			(:keywords "unicode" "double struck" "blackboard bold" "math" "mathematical")
+			(:url . "https://github.com/grettke/blackboard-bold-mode"))])

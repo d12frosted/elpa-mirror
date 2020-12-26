@@ -1,2 +1,8 @@
-
-(select-themes . [(20160221 106) nil "Color theme selection with completing-read" single ((:commit . "236f54287519a3ea6dd7b3992d053e4f4ff5d0fe") (:authors ("Jason Milkins" . "jasonm23@gmail.com")) (:maintainer "Jason Milkins" . "jasonm23@gmail.com") (:url . "https://github.com/jasonm23/emacs-select-themes"))])
+(select-themes .
+	       [(20160221 106)
+		nil "Color theme selection with completing-read" single
+		((:commit . "236f54287519a3ea6dd7b3992d053e4f4ff5d0fe")
+		 (:authors
+		  ("Jason Milkins" . "jasonm23@gmail.com"))
+		 (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
+		 (:url . "https://github.com/jasonm23/emacs-select-themes"))])

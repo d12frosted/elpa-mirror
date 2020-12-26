@@ -1,2 +1,10 @@
-
-(el-x . [(20140111 2201) nil "main entry point for el-x package" tar ((:commit . "e7c333d4fc31a90f4dca951efe21129164b42605") (:keywords "lisp") (:authors ("Yann Hodique" . "yann.hodique@gmail.com")) (:maintainer "Yann Hodique" . "yann.hodique@gmail.com"))])
+(el-x .
+      [(20140111 2201)
+       ((cl-lib
+	 (0 2)))
+       "Emacs-lisp extensions." tar
+       ((:commit . "e7c333d4fc31a90f4dca951efe21129164b42605")
+	(:authors
+	 ("Yann Hodique" . "yann.hodique@gmail.com"))
+	(:maintainer "Yann Hodique" . "yann.hodique@gmail.com")
+	(:keywords "lisp"))])

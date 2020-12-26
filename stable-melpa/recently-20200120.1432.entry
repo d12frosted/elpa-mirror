@@ -1,2 +1,13 @@
-
-(recently . [(20200120 1432) ((cl-lib (0 5)) (emacs (24))) "Track recently opened files to visit them again" single ((:commit . "fa8b52fe891a0adaabe0456f6f5a56a2600a831f") (:keywords "utility" "files") (:authors ("10sr <8.slashes [at] gmail [dot] com>")) (:maintainer "10sr <8.slashes [at] gmail [dot] com>") (:url . "https://github.com/10sr/recently-el"))])
+(recently .
+	  [(20200120 1432)
+	   ((cl-lib
+	     (0 5))
+	    (emacs
+	     (24)))
+	   "Track recently opened files to visit them again" single
+	   ((:commit . "fa8b52fe891a0adaabe0456f6f5a56a2600a831f")
+	    (:authors
+	     ("10sr <8.slashes [at] gmail [dot] com>"))
+	    (:maintainer "10sr <8.slashes [at] gmail [dot] com>")
+	    (:keywords "utility" "files")
+	    (:url . "https://github.com/10sr/recently-el"))])

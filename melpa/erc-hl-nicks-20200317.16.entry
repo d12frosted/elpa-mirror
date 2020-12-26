@@ -1,2 +1,8 @@
-
-(erc-hl-nicks . [(20200317 16) nil "ERC nick highlighter that ignores uniquifying chars when colorizing" single ((:commit . "a67fe361c8f2aa20fc235447fbb898f424b51439") (:authors ("David Leatherman" . "leathekd@gmail.com")) (:maintainer "David Leatherman" . "leathekd@gmail.com") (:url . "http://www.github.com/leathekd/erc-hl-nicks"))])
+(erc-hl-nicks .
+	      [(20200317 16)
+	       nil "ERC nick highlighter that ignores uniquifying chars when colorizing" single
+	       ((:commit . "a67fe361c8f2aa20fc235447fbb898f424b51439")
+		(:authors
+		 ("David Leatherman" . "leathekd@gmail.com"))
+		(:maintainer "David Leatherman" . "leathekd@gmail.com")
+		(:url . "http://www.github.com/leathekd/erc-hl-nicks"))])

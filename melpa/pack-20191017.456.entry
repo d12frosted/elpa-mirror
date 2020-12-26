@@ -1,2 +1,13 @@
-
-(pack . [(20191017 456) ((emacs (24)) (cl-lib (0 5))) "Pack and unpack archive files" single ((:commit . "85cd856fdc00a2365e88b50373b99f1b3d2227be") (:keywords "files" "dired") (:authors ("10sr" . "8.slashes@gmail.com")) (:maintainer "10sr" . "8.slashes@gmail.com") (:url . "https://github.com/10sr/pack-el"))])
+(pack .
+      [(20191017 456)
+       ((emacs
+	 (24))
+	(cl-lib
+	 (0 5)))
+       "Pack and unpack archive files" single
+       ((:commit . "85cd856fdc00a2365e88b50373b99f1b3d2227be")
+	(:authors
+	 ("10sr" . "8.slashes@gmail.com"))
+	(:maintainer "10sr" . "8.slashes@gmail.com")
+	(:keywords "files" "dired")
+	(:url . "https://github.com/10sr/pack-el"))])

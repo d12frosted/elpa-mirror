@@ -1,2 +1,6 @@
-
-(literate-starter-kit . [(20150730 1854) ((emacs (24 3))) "A literate starter kit to configure Emacs using Org-mode files." tar ((:commit . "6dce1d01781966c14558aa553cfc85008c06e115"))])
+(literate-starter-kit .
+		      [(20150730 1854)
+		       ((emacs
+			 (24 3)))
+		       "A literate starter kit to configure Emacs using Org-mode files." tar
+		       ((:commit . "6dce1d01781966c14558aa553cfc85008c06e115"))])

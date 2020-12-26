@@ -1,2 +1,11 @@
-
-(vi-tilde-fringe . [(20141028 242) ((emacs (24))) "Displays tildes in the fringe on empty lines a la Vi." single ((:commit . "f1597a8d54535bb1d84b442577b2024e6f910308") (:keywords "emulation") (:authors ("Sylvain Benner" . "sylvain.benner@gmail.com")) (:maintainer "Sylvain Benner" . "sylvain.benner@gmail.com") (:url . "https://github.com/syl20bnr/vi-tilde-fringe"))])
+(vi-tilde-fringe .
+		 [(20141028 242)
+		  ((emacs
+		    (24)))
+		  "Displays tildes in the fringe on empty lines a la Vi." single
+		  ((:commit . "f1597a8d54535bb1d84b442577b2024e6f910308")
+		   (:authors
+		    ("Sylvain Benner" . "sylvain.benner@gmail.com"))
+		   (:maintainer "Sylvain Benner" . "sylvain.benner@gmail.com")
+		   (:keywords "emulation")
+		   (:url . "https://github.com/syl20bnr/vi-tilde-fringe"))])

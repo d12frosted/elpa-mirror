@@ -1,1 +1,6 @@
-To enable, call (lsp-cquery-enable) in your c++-mode hook.
+;;; Commentary:
+
+;;
+;; To enable, call (lsp-cquery-enable) in your c++-mode hook.
+;;
+

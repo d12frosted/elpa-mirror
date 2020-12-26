@@ -1,2 +1,12 @@
-
-(company-ngram . [(20170129 1913) ((cl-lib (0 5)) (company (0 8 0))) "N-gram based completion" tar ((:commit . "09a68b802e64799e95f205b438d469bbd78cd2e6") (:authors ("kshramt")) (:maintainer "kshramt") (:url . "https://github.com/kshramt/company-ngram"))])
+(company-ngram .
+	       [(20170129 1913)
+		((cl-lib
+		  (0 5))
+		 (company
+		  (0 8 0)))
+		"N-gram based completion" tar
+		((:commit . "09a68b802e64799e95f205b438d469bbd78cd2e6")
+		 (:authors
+		  ("kshramt"))
+		 (:maintainer "kshramt")
+		 (:url . "https://github.com/kshramt/company-ngram"))])

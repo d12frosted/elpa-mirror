@@ -1,2 +1,13 @@
-
-(helm-css-scss . [(20191230 1549) ((emacs (24 3)) (helm (1 0))) "CSS/SCSS/LESS Selectors with helm interface" single ((:commit . "48b996f73af1fef8d6e88a1c545d98f8c50b0cf3") (:keywords "convenience" "scss" "css" "less" "selector" "helm") (:authors ("Shingo Fukuyama - http://fukuyama.co")) (:maintainer "Shingo Fukuyama - http://fukuyama.co") (:url . "https://github.com/ShingoFukuyama/helm-css-scss"))])
+(helm-css-scss .
+	       [(20191230 1549)
+		((emacs
+		  (24 3))
+		 (helm
+		  (1 0)))
+		"CSS/SCSS/LESS Selectors with helm interface" single
+		((:commit . "48b996f73af1fef8d6e88a1c545d98f8c50b0cf3")
+		 (:authors
+		  ("Shingo Fukuyama - http://fukuyama.co"))
+		 (:maintainer "Shingo Fukuyama - http://fukuyama.co")
+		 (:keywords "convenience" "scss" "css" "less" "selector" "helm")
+		 (:url . "https://github.com/ShingoFukuyama/helm-css-scss"))])

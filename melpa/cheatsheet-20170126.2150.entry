@@ -1,2 +1,13 @@
-
-(cheatsheet . [(20170126 2150) ((emacs (24)) (cl-lib (0 5))) "create your own cheatsheet" single ((:commit . "e4f8e0110167ea16a17a74517d1f10cb7ff805b8") (:keywords "convenience" "usability") (:authors ("Shirin Nikita" . "shirin.nikita@gmail.com")) (:maintainer "Shirin Nikita" . "shirin.nikita@gmail.com") (:url . "http://github.com/darksmile/cheatsheet/"))])
+(cheatsheet .
+	    [(20170126 2150)
+	     ((emacs
+	       (24))
+	      (cl-lib
+	       (0 5)))
+	     "create your own cheatsheet" single
+	     ((:commit . "e4f8e0110167ea16a17a74517d1f10cb7ff805b8")
+	      (:authors
+	       ("Shirin Nikita" . "shirin.nikita@gmail.com"))
+	      (:maintainer "Shirin Nikita" . "shirin.nikita@gmail.com")
+	      (:keywords "convenience" "usability")
+	      (:url . "http://github.com/darksmile/cheatsheet/"))])

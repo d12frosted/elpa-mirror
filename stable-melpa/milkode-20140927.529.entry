@@ -1,2 +1,8 @@
-
-(milkode . [(20140927 529) nil "Command line search and direct jump with Milkode" single ((:commit . "ba97e2aeefa1d9d0b3835bf08edd0de248b0c513") (:keywords "milkode" "search" "grep" "jump" "keyword") (:authors ("ongaeshi")) (:maintainer "ongaeshi"))])
+(milkode .
+	 [(20140927 529)
+	  nil "Command line search and direct jump with Milkode" single
+	  ((:commit . "ba97e2aeefa1d9d0b3835bf08edd0de248b0c513")
+	   (:authors
+	    ("ongaeshi"))
+	   (:maintainer "ongaeshi")
+	   (:keywords "milkode" "search" "grep" "jump" "keyword"))])

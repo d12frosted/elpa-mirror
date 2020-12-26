@@ -1,2 +1,11 @@
-
-(clojure-mode-extra-font-locking . [(20200922 656) ((clojure-mode (3 0))) "Extra font-locking for Clojure mode" single ((:commit . "53ef8ac076ae7811627fbdd408e519ab7fca9a0b") (:keywords "languages" "lisp") (:authors ("Bozhidar Batsov" . "bozhidar@batsov.com")) (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com") (:url . "http://github.com/clojure-emacs/clojure-mode"))])
+(clojure-mode-extra-font-locking .
+				 [(20200922 656)
+				  ((clojure-mode
+				    (3 0)))
+				  "Extra font-locking for Clojure mode" single
+				  ((:commit . "53ef8ac076ae7811627fbdd408e519ab7fca9a0b")
+				   (:authors
+				    ("Bozhidar Batsov" . "bozhidar@batsov.com"))
+				   (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
+				   (:keywords "languages" "lisp")
+				   (:url . "http://github.com/clojure-emacs/clojure-mode"))])

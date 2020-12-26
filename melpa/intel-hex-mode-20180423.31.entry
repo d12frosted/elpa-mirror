@@ -1,2 +1,7 @@
-
-(intel-hex-mode . [(20180423 31) nil "Mode for Intel Hex files." single ((:commit . "e83c94e1c31a8435a88b3ae395f2bc842ef83217") (:keywords "tools" "hex") (:maintainer "Michael Schuldt" . "mbschuldt@gmail.com") (:url . "https://github.com/mschuldt/intel-hex-mode"))])
+(intel-hex-mode .
+		[(20180423 31)
+		 nil "Mode for Intel Hex files." single
+		 ((:commit . "e83c94e1c31a8435a88b3ae395f2bc842ef83217")
+		  (:maintainer "Michael Schuldt" . "mbschuldt@gmail.com")
+		  (:keywords "tools" "hex")
+		  (:url . "https://github.com/mschuldt/intel-hex-mode"))])

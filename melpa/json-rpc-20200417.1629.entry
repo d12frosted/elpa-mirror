@@ -1,2 +1,12 @@
-
-(json-rpc . [(20200417 1629) ((emacs (24 1)) (cl-lib (0 5))) "JSON-RPC library" single ((:commit . "81a5a520072e20d18aeab2aac4d66c046b031e56") (:authors ("Christopher Wellons" . "wellons@nullprogram.com")) (:maintainer "Christopher Wellons" . "wellons@nullprogram.com") (:url . "https://github.com/skeeto/elisp-json-rpc"))])
+(json-rpc .
+	  [(20200417 1629)
+	   ((emacs
+	     (24 1))
+	    (cl-lib
+	     (0 5)))
+	   "JSON-RPC library" single
+	   ((:commit . "81a5a520072e20d18aeab2aac4d66c046b031e56")
+	    (:authors
+	     ("Christopher Wellons" . "wellons@nullprogram.com"))
+	    (:maintainer "Christopher Wellons" . "wellons@nullprogram.com")
+	    (:url . "https://github.com/skeeto/elisp-json-rpc"))])

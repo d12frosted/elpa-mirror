@@ -1,2 +1,9 @@
-
-(nnir-est . [(20180710 2103) nil "Gnus nnir interface for HyperEstraier" single ((:commit . "6d0d5c8e33f4e4ccbc22350324c0990d2676fb5a") (:keywords "mail") (:authors ("KAWABATA, Taichi <kawabata.taichi_at_gmail.com>")) (:maintainer "KAWABATA, Taichi <kawabata.taichi_at_gmail.com>") (:url . "https://github.com/kawabata/nnir-est"))])
+(nnir-est .
+	  [(20180710 2103)
+	   nil "Gnus nnir interface for HyperEstraier" single
+	   ((:commit . "6d0d5c8e33f4e4ccbc22350324c0990d2676fb5a")
+	    (:authors
+	     ("KAWABATA, Taichi <kawabata.taichi_at_gmail.com>"))
+	    (:maintainer "KAWABATA, Taichi <kawabata.taichi_at_gmail.com>")
+	    (:keywords "mail")
+	    (:url . "https://github.com/kawabata/nnir-est"))])

@@ -1,2 +1,9 @@
-
-(annotate-depth . [(20160520 2040) nil "Annotate buffer if indentation depth is beyond threshold." single ((:commit . "fcb24fa36287250e40d195590c4ca4a8a696277b") (:keywords "convenience") (:authors ("Morten Slot Kristensen <msk AT nullpointer DOT dk>")) (:maintainer "Morten Slot Kristensen <msk AT nullpointer DOT dk>") (:url . "https://github.com/netromdk/annotate-depth"))])
+(annotate-depth .
+		[(20160520 2040)
+		 nil "Annotate buffer if indentation depth is beyond threshold." single
+		 ((:commit . "fcb24fa36287250e40d195590c4ca4a8a696277b")
+		  (:authors
+		   ("Morten Slot Kristensen <msk AT nullpointer DOT dk>"))
+		  (:maintainer "Morten Slot Kristensen <msk AT nullpointer DOT dk>")
+		  (:keywords "convenience")
+		  (:url . "https://github.com/netromdk/annotate-depth"))])

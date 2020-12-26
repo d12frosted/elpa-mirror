@@ -1,2 +1,8 @@
-
-(busybee-theme . [(20170719 928) nil "port of vim's mustang theme" single ((:commit . "66b2315b030582d0ebee605cf455d386d8c30fcd") (:authors ("martin haesler")) (:maintainer "martin haesler") (:url . "http://github.com/mswift42/busybee-theme"))])
+(busybee-theme .
+	       [(20170719 928)
+		nil "port of vim's mustang theme" single
+		((:commit . "66b2315b030582d0ebee605cf455d386d8c30fcd")
+		 (:authors
+		  ("martin haesler"))
+		 (:maintainer "martin haesler")
+		 (:url . "http://github.com/mswift42/busybee-theme"))])

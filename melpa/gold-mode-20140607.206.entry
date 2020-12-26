@@ -1,2 +1,11 @@
-
-(gold-mode . [(20140607 206) ((sws-mode (0))) "Major mode for editing .gold files" single ((:commit . "6d3aa59602b1b835495271c8c9741ac344c2eab1") (:keywords "golang" "template" "gold") (:authors ("Yuta Yamada <cokesboy\"at\"gmail.com>")) (:maintainer "Yuta Yamada <cokesboy\"at\"gmail.com>") (:url . "https://github.com/yuutayamada/gold-mode-el"))])
+(gold-mode .
+	   [(20140607 206)
+	    ((sws-mode
+	      (0)))
+	    "Major mode for editing .gold files" single
+	    ((:commit . "6d3aa59602b1b835495271c8c9741ac344c2eab1")
+	     (:authors
+	      ("Yuta Yamada <cokesboy\"at\"gmail.com>"))
+	     (:maintainer "Yuta Yamada <cokesboy\"at\"gmail.com>")
+	     (:keywords "golang" "template" "gold")
+	     (:url . "https://github.com/yuutayamada/gold-mode-el"))])

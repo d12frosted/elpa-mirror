@@ -1,2 +1,9 @@
-
-(system-specific-settings . [(20140818 1457) nil "Apply settings only on certain systems" single ((:commit . "0050d85b2175095aa5ecf580a2fe43c069b0eef3") (:keywords "configuration") (:authors ("Ryan C. Thompson")) (:maintainer "Ryan C. Thompson") (:url . "https://github.com/DarwinAwardWinner/emacs-system-specific-settings"))])
+(system-specific-settings .
+			  [(20140818 1457)
+			   nil "Apply settings only on certain systems" single
+			   ((:commit . "0050d85b2175095aa5ecf580a2fe43c069b0eef3")
+			    (:authors
+			     ("Ryan C. Thompson"))
+			    (:maintainer "Ryan C. Thompson")
+			    (:keywords "configuration")
+			    (:url . "https://github.com/DarwinAwardWinner/emacs-system-specific-settings"))])

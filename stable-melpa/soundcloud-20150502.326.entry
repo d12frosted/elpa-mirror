@@ -1,2 +1,20 @@
-
-(soundcloud . [(20150502 326) ((emms (20131016)) (json (1 2)) (deferred (0 3 1)) (string-utils (0 3 2)) (request (20140316 417)) (request-deferred (20130526 1015))) "a SoundCloud client for Emacs" single ((:commit . "f998d4276ea90258909c698f6a5a51fccb667c08") (:keywords "soundcloud" "music" "audio") (:authors ("Travis Thieman" . "travis.thieman@gmail.com")) (:maintainer "Travis Thieman" . "travis.thieman@gmail.com"))])
+(soundcloud .
+	    [(20150502 326)
+	     ((emms
+	       (20131016))
+	      (json
+	       (1 2))
+	      (deferred
+		(0 3 1))
+	      (string-utils
+	       (0 3 2))
+	      (request
+	       (20140316 417))
+	      (request-deferred
+	       (20130526 1015)))
+	     "a SoundCloud client for Emacs" single
+	     ((:commit . "f998d4276ea90258909c698f6a5a51fccb667c08")
+	      (:authors
+	       ("Travis Thieman" . "travis.thieman@gmail.com"))
+	      (:maintainer "Travis Thieman" . "travis.thieman@gmail.com")
+	      (:keywords "soundcloud" "music" "audio"))])

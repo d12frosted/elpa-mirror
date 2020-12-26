@@ -1,2 +1,8 @@
-
-(cycle-resize . [(20160521 1557) nil "Cycle resize the current window horizontally or vertically" single ((:commit . "7d255d6fe85f12c967a0f7fcfcf18633be194c88") (:authors ("Pierre Lecocq")) (:maintainer "Pierre Lecocq") (:url . "https://github.com/pierre-lecocq/cycle-resize"))])
+(cycle-resize .
+	      [(20160521 1557)
+	       nil "Cycle resize the current window horizontally or vertically" single
+	       ((:commit . "7d255d6fe85f12c967a0f7fcfcf18633be194c88")
+		(:authors
+		 ("Pierre Lecocq"))
+		(:maintainer "Pierre Lecocq")
+		(:url . "https://github.com/pierre-lecocq/cycle-resize"))])

@@ -1,2 +1,10 @@
-
-(monotropic-theme . [(20181015 1230) ((emacs (24))) "Monotropic Theme" single ((:commit . "36df566aa8225e303f6c9d90c00740dd678a415e") (:authors ("caffo")) (:maintainer "caffo") (:url . "https://github.com/caffo/monotropic-theme"))])
+(monotropic-theme .
+		  [(20181015 1230)
+		   ((emacs
+		     (24)))
+		   "Monotropic Theme" single
+		   ((:commit . "36df566aa8225e303f6c9d90c00740dd678a415e")
+		    (:authors
+		     ("caffo"))
+		    (:maintainer "caffo")
+		    (:url . "https://github.com/caffo/monotropic-theme"))])

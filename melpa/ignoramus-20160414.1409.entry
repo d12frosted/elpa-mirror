@@ -1,2 +1,9 @@
-
-(ignoramus . [(20160414 1409) nil "Ignore backups, build files, et al." single ((:commit . "b37dc7c07edd9d152436f9019c14df158b599be3") (:keywords "convenience" "tools") (:authors ("Roland Walker" . "walker@pobox.com")) (:maintainer "Roland Walker" . "walker@pobox.com") (:url . "http://github.com/rolandwalker/ignoramus"))])
+(ignoramus .
+	   [(20160414 1409)
+	    nil "Ignore backups, build files, et al." single
+	    ((:commit . "b37dc7c07edd9d152436f9019c14df158b599be3")
+	     (:authors
+	      ("Roland Walker" . "walker@pobox.com"))
+	     (:maintainer "Roland Walker" . "walker@pobox.com")
+	     (:keywords "convenience" "tools")
+	     (:url . "http://github.com/rolandwalker/ignoramus"))])

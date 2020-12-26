@@ -1,2 +1,13 @@
-
-(jabber-otr . [(20150918 1144) ((emacs (24)) (jabber (0 8 92))) "Off-The-Record messaging for jabber.el" tar ((:commit . "2692b1530234e0ba9a0d6c1eaa1cbe8679f193c0") (:keywords "comm") (:authors ("Magnus Henoch" . "magnus.henoch@gmail.com")) (:maintainer "Magnus Henoch" . "magnus.henoch@gmail.com") (:url . "https://github.com/legoscia/emacs-jabber-otr/"))])
+(jabber-otr .
+	    [(20150918 1144)
+	     ((emacs
+	       (24))
+	      (jabber
+	       (0 8 92)))
+	     "Off-The-Record messaging for jabber.el" tar
+	     ((:commit . "2692b1530234e0ba9a0d6c1eaa1cbe8679f193c0")
+	      (:authors
+	       ("Magnus Henoch" . "magnus.henoch@gmail.com"))
+	      (:maintainer "Magnus Henoch" . "magnus.henoch@gmail.com")
+	      (:keywords "comm")
+	      (:url . "https://github.com/legoscia/emacs-jabber-otr/"))])

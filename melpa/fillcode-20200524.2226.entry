@@ -1,2 +1,8 @@
-
-(fillcode . [(20200524 2226) nil "Fill (wrap) function calls and expressions in source code" single ((:commit . "501468082e46bd0975ef4d8765363fd564338099") (:authors ("Ryan Barrett" . "fillcode@ryanb.org")) (:maintainer "Ryan Barrett" . "fillcode@ryanb.org") (:url . "https://snarfed.org/fillcode"))])
+(fillcode .
+	  [(20200524 2226)
+	   nil "Fill (wrap) function calls and expressions in source code" single
+	   ((:commit . "501468082e46bd0975ef4d8765363fd564338099")
+	    (:authors
+	     ("Ryan Barrett" . "fillcode@ryanb.org"))
+	    (:maintainer "Ryan Barrett" . "fillcode@ryanb.org")
+	    (:url . "https://snarfed.org/fillcode"))])

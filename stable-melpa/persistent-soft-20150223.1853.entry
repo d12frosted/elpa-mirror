@@ -1,2 +1,13 @@
-
-(persistent-soft . [(20150223 1853) ((pcache (0 3 1)) (list-utils (0 4 2))) "Persistent storage, returning nil on failure" single ((:commit . "a1e0ddf2a12a6f18cab565dee250f070384cbe02") (:keywords "data" "extensions") (:authors ("Roland Walker" . "walker@pobox.com")) (:maintainer "Roland Walker" . "walker@pobox.com") (:url . "http://github.com/rolandwalker/persistent-soft"))])
+(persistent-soft .
+		 [(20150223 1853)
+		  ((pcache
+		    (0 3 1))
+		   (list-utils
+		    (0 4 2)))
+		  "Persistent storage, returning nil on failure" single
+		  ((:commit . "a1e0ddf2a12a6f18cab565dee250f070384cbe02")
+		   (:authors
+		    ("Roland Walker" . "walker@pobox.com"))
+		   (:maintainer "Roland Walker" . "walker@pobox.com")
+		   (:keywords "data" "extensions")
+		   (:url . "http://github.com/rolandwalker/persistent-soft"))])

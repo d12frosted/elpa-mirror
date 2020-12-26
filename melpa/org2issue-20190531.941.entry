@@ -1,2 +1,19 @@
-
-(org2issue . [(20190531 941) ((org (8 0)) (emacs (24 4)) (ox-gfm (0 1)) (gh (0 1)) (s (20160405 920))) "export org to github issue" single ((:commit . "910b98c858762fd14b11d261626c5e979dde0833") (:keywords "convenience" "github" "org") (:authors ("DarkSun" . "lujun9972@gmail.com")) (:maintainer "DarkSun" . "lujun9972@gmail.com") (:url . "https://github.com/lujun9972/org2issue"))])
+(org2issue .
+	   [(20190531 941)
+	    ((org
+	      (8 0))
+	     (emacs
+	      (24 4))
+	     (ox-gfm
+	      (0 1))
+	     (gh
+	      (0 1))
+	     (s
+	      (20160405 920)))
+	    "export org to github issue" single
+	    ((:commit . "910b98c858762fd14b11d261626c5e979dde0833")
+	     (:authors
+	      ("DarkSun" . "lujun9972@gmail.com"))
+	     (:maintainer "DarkSun" . "lujun9972@gmail.com")
+	     (:keywords "convenience" "github" "org")
+	     (:url . "https://github.com/lujun9972/org2issue"))])

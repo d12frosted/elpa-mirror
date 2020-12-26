@@ -1,1 +1,4 @@
-A major mode for editing Mallard files.
+;;; Commentary:
+
+;; A major mode for editing Mallard files.
+

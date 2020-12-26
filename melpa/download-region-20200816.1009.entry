@@ -1,2 +1,10 @@
-
-(download-region . [(20200816 1009) ((cl-lib (0 3))) "Simple in-buffer download manager" single ((:commit . "0dca3b224649bba80a7e9ecbf1d1b6f6be962455") (:authors ("zk_phi")) (:maintainer "zk_phi") (:url . "http://zk-phi.github.io/"))])
+(download-region .
+		 [(20200816 1009)
+		  ((cl-lib
+		    (0 3)))
+		  "Simple in-buffer download manager" single
+		  ((:commit . "0dca3b224649bba80a7e9ecbf1d1b6f6be962455")
+		   (:authors
+		    ("zk_phi"))
+		   (:maintainer "zk_phi")
+		   (:url . "http://zk-phi.github.io/"))])

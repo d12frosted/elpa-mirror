@@ -1,2 +1,17 @@
-
-(cljr-ivy . [(20200602 1607) ((clj-refactor (2 5 0)) (ivy (0 13 0)) (emacs (24 3)) (cl-lib (0 6 1))) "Access clojure refactor with ivy completion" single ((:commit . "921ba65d0db7cda4edcd690c708946125b874a70") (:keywords "convenience" "matching") (:authors ("Wanderson Ferreira" . "iagwanderson@gmail.com")) (:maintainer "Wanderson Ferreira" . "iagwanderson@gmail.com") (:url . "https://github.com/wandersoncferreira/cljr-ivy"))])
+(cljr-ivy .
+	  [(20200602 1607)
+	   ((clj-refactor
+	     (2 5 0))
+	    (ivy
+	     (0 13 0))
+	    (emacs
+	     (24 3))
+	    (cl-lib
+	     (0 6 1)))
+	   "Access clojure refactor with ivy completion" single
+	   ((:commit . "921ba65d0db7cda4edcd690c708946125b874a70")
+	    (:authors
+	     ("Wanderson Ferreira" . "iagwanderson@gmail.com"))
+	    (:maintainer "Wanderson Ferreira" . "iagwanderson@gmail.com")
+	    (:keywords "convenience" "matching")
+	    (:url . "https://github.com/wandersoncferreira/cljr-ivy"))])

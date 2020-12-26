@@ -1,2 +1,8 @@
-
-(preseed-generic-mode . [(20180210 500) nil "Debian preseed file major mode" single ((:commit . "3aa8806c4a659064baa01751400c53fbaf847f66") (:authors ("Tong Sun" . "suntong@users.sourceforge.net")) (:maintainer "Tong Sun" . "suntong@users.sourceforge.net") (:url . "https://github.com/suntong/preseed-generic-mode"))])
+(preseed-generic-mode .
+		      [(20180210 500)
+		       nil "Debian preseed file major mode" single
+		       ((:commit . "3aa8806c4a659064baa01751400c53fbaf847f66")
+			(:authors
+			 ("Tong Sun" . "suntong@users.sourceforge.net"))
+			(:maintainer "Tong Sun" . "suntong@users.sourceforge.net")
+			(:url . "https://github.com/suntong/preseed-generic-mode"))])

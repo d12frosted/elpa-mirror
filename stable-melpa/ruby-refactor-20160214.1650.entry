@@ -1,2 +1,8 @@
-
-(ruby-refactor . [(20160214 1650) ((ruby-mode (1 2))) "A minor mode which presents various Ruby refactoring helpers." single ((:commit . "e6b7125878a08518bffec6942df0c606f748e9ee") (:keywords "refactor" "ruby") (:url . "https://github.com/ajvargo/ruby-refactor"))])
+(ruby-refactor .
+	       [(20160214 1650)
+		((ruby-mode
+		  (1 2)))
+		"A minor mode which presents various Ruby refactoring helpers." single
+		((:commit . "e6b7125878a08518bffec6942df0c606f748e9ee")
+		 (:keywords "refactor" "ruby")
+		 (:url . "https://github.com/ajvargo/ruby-refactor"))])

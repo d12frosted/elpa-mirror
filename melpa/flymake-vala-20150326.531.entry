@@ -1,2 +1,11 @@
-
-(flymake-vala . [(20150326 531) ((flymake-easy (0 1))) "A flymake handler for vala-mode files" single ((:commit . "c3674f461fc84fb0300cd3a562fb903a59782745") (:keywords "convenience" "vala") (:authors ("Daniel Lawrence" . "dannyla@linux.com")) (:maintainer "Daniel Lawrence" . "dannyla@linux.com") (:url . "https://github.com/daniellawrence/flymake-vala"))])
+(flymake-vala .
+	      [(20150326 531)
+	       ((flymake-easy
+		 (0 1)))
+	       "A flymake handler for vala-mode files" single
+	       ((:commit . "c3674f461fc84fb0300cd3a562fb903a59782745")
+		(:authors
+		 ("Daniel Lawrence" . "dannyla@linux.com"))
+		(:maintainer "Daniel Lawrence" . "dannyla@linux.com")
+		(:keywords "convenience" "vala")
+		(:url . "https://github.com/daniellawrence/flymake-vala"))])

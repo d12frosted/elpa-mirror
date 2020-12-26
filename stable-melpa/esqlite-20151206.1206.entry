@@ -1,2 +1,11 @@
-
-(esqlite . [(20151206 1206) ((pcsv (1 3 3))) "Manipulate sqlite file from Emacs" single ((:commit . "08a779a821f8d32c1a1985d8d9eb6cf21646ce2e") (:keywords "data") (:authors ("Masahiro Hayashi" . "mhayashi1120@gmail.com")) (:maintainer "Masahiro Hayashi" . "mhayashi1120@gmail.com") (:url . "https://github.com/mhayashi1120/Emacs-esqlite"))])
+(esqlite .
+	 [(20151206 1206)
+	  ((pcsv
+	    (1 3 3)))
+	  "Manipulate sqlite file from Emacs" single
+	  ((:commit . "08a779a821f8d32c1a1985d8d9eb6cf21646ce2e")
+	   (:authors
+	    ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
+	   (:maintainer "Masahiro Hayashi" . "mhayashi1120@gmail.com")
+	   (:keywords "data")
+	   (:url . "https://github.com/mhayashi1120/Emacs-esqlite"))])

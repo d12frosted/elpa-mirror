@@ -1,2 +1,27 @@
-
-(moonshot . [(20200210 2356) ((emacs (25 1)) (cl-lib (0 5)) (f (0 18)) (s (1 11 0)) (projectile (2 0 0)) (counsel (0 11 0)) (realgud (1 5 1)) (seq (2 20)) (levenshtein (1 0))) "Run executable file, debug and build commands on project" single ((:commit . "c9f363b1b5f2b92006e03116580540dadb7364ea") (:keywords "convenience" "files" "processes" "tools" "unix") (:authors ("Jong-Hyouk Yun" . "ageldama@gmail.com")) (:maintainer "Jong-Hyouk Yun" . "ageldama@gmail.com") (:url . "https://github.com/ageldama/moonshot"))])
+(moonshot .
+	  [(20200210 2356)
+	   ((emacs
+	     (25 1))
+	    (cl-lib
+	     (0 5))
+	    (f
+	     (0 18))
+	    (s
+	     (1 11 0))
+	    (projectile
+	     (2 0 0))
+	    (counsel
+	     (0 11 0))
+	    (realgud
+	     (1 5 1))
+	    (seq
+	     (2 20))
+	    (levenshtein
+	     (1 0)))
+	   "Run executable file, debug and build commands on project" single
+	   ((:commit . "c9f363b1b5f2b92006e03116580540dadb7364ea")
+	    (:authors
+	     ("Jong-Hyouk Yun" . "ageldama@gmail.com"))
+	    (:maintainer "Jong-Hyouk Yun" . "ageldama@gmail.com")
+	    (:keywords "convenience" "files" "processes" "tools" "unix")
+	    (:url . "https://github.com/ageldama/moonshot"))])

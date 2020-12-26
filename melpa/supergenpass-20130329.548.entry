@@ -1,2 +1,8 @@
-
-(supergenpass . [(20130329 548) nil "SuperGenPass for Emacs" single ((:commit . "549072ef7b5b82913cadd4758e8a0a9926f0a04a") (:keywords "supergenpass") (:authors ("Jaime Fournier" . "jaimef@linbsd.org")) (:maintainer "Jaime Fournier" . "jaimef@linbsd.org"))])
+(supergenpass .
+	      [(20130329 548)
+	       nil "SuperGenPass for Emacs" single
+	       ((:commit . "549072ef7b5b82913cadd4758e8a0a9926f0a04a")
+		(:authors
+		 ("Jaime Fournier" . "jaimef@linbsd.org"))
+		(:maintainer "Jaime Fournier" . "jaimef@linbsd.org")
+		(:keywords "supergenpass"))])

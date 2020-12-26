@@ -1,2 +1,6 @@
-
-(helm-ls-hg . [(20150909 543) ((helm (1 7 8))) "List hg files in hg project." single ((:commit . "61b91a22fcfb62d0fc56e361ec01ce96973c7165"))])
+(helm-ls-hg .
+	    [(20150909 543)
+	     ((helm
+	       (1 7 8)))
+	     "List hg files in hg project." single
+	     ((:commit . "61b91a22fcfb62d0fc56e361ec01ce96973c7165"))])

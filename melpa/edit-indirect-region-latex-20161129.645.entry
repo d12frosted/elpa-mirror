@@ -1,2 +1,14 @@
-
-(edit-indirect-region-latex . [(20161129 645) ((emacs (24 3)) (ht (2 2)) (edit-indirect (0 1 4))) "Edit LaTeX regions in separate buffers, e.g. for English grammar checks" single ((:commit . "05043f2c0c9838947d3ca4b51b695deb7c47612e") (:authors ("Hirotaka Niitsuma" . "hirotaka.niitsuma@gmail.com")) (:maintainer "Hirotaka Niitsuma" . "hirotaka.niitsuma@gmail.com") (:url . "https://github.com/niitsuma/edit-indirect-region-latex"))])
+(edit-indirect-region-latex .
+			    [(20161129 645)
+			     ((emacs
+			       (24 3))
+			      (ht
+			       (2 2))
+			      (edit-indirect
+			       (0 1 4)))
+			     "Edit LaTeX regions in separate buffers, e.g. for English grammar checks" single
+			     ((:commit . "05043f2c0c9838947d3ca4b51b695deb7c47612e")
+			      (:authors
+			       ("Hirotaka Niitsuma" . "hirotaka.niitsuma@gmail.com"))
+			      (:maintainer "Hirotaka Niitsuma" . "hirotaka.niitsuma@gmail.com")
+			      (:url . "https://github.com/niitsuma/edit-indirect-region-latex"))])

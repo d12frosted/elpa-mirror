@@ -1,2 +1,7 @@
-
-(vc-osc . [(20190402 2349) nil "non-resident support for osc version-control" single ((:commit . "bf5a515ed85f7d7cdfe66ed5bf4ef7554f8561e5") (:authors ("Adam Spiers (see vc.el for full credits)")) (:maintainer "Adam Spiers" . "aspiers@suse.com"))])
+(vc-osc .
+	[(20190402 2349)
+	 nil "non-resident support for osc version-control" single
+	 ((:commit . "bf5a515ed85f7d7cdfe66ed5bf4ef7554f8561e5")
+	  (:authors
+	   ("Adam Spiers (see vc.el for full credits)"))
+	  (:maintainer "Adam Spiers" . "aspiers@suse.com"))])

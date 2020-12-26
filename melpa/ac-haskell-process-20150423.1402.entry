@@ -1,2 +1,12 @@
-
-(ac-haskell-process . [(20150423 1402) ((auto-complete (1 4)) (haskell-mode (13))) "Haskell auto-complete source which uses the current haskell process" single ((:commit . "0362d4323511107ec70e7165cb612f3ab01b712f") (:keywords "languages") (:authors ("Steve Purcell" . "steve@sanityinc.com")) (:maintainer "Steve Purcell" . "steve@sanityinc.com"))])
+(ac-haskell-process .
+		    [(20150423 1402)
+		     ((auto-complete
+		       (1 4))
+		      (haskell-mode
+		       (13)))
+		     "Haskell auto-complete source which uses the current haskell process" single
+		     ((:commit . "0362d4323511107ec70e7165cb612f3ab01b712f")
+		      (:authors
+		       ("Steve Purcell" . "steve@sanityinc.com"))
+		      (:maintainer "Steve Purcell" . "steve@sanityinc.com")
+		      (:keywords "languages"))])

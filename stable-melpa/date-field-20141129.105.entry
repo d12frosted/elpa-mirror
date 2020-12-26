@@ -1,2 +1,15 @@
-
-(date-field . [(20141129 105) ((dash (2 9 0)) (log4e (0 2 0)) (yaxception (0 3 2))) "Date widget" single ((:commit . "11c9170d1f7b343233f7716d4c0a62be024c1654") (:keywords "widgets") (:authors ("Hiroaki Otsu" . "ootsuhiroaki@gmail.com")) (:maintainer "Hiroaki Otsu" . "ootsuhiroaki@gmail.com") (:url . "https://github.com/aki2o/emacs-date-field"))])
+(date-field .
+	    [(20141129 105)
+	     ((dash
+	       (2 9 0))
+	      (log4e
+	       (0 2 0))
+	      (yaxception
+	       (0 3 2)))
+	     "Date widget" single
+	     ((:commit . "11c9170d1f7b343233f7716d4c0a62be024c1654")
+	      (:authors
+	       ("Hiroaki Otsu" . "ootsuhiroaki@gmail.com"))
+	      (:maintainer "Hiroaki Otsu" . "ootsuhiroaki@gmail.com")
+	      (:keywords "widgets")
+	      (:url . "https://github.com/aki2o/emacs-date-field"))])

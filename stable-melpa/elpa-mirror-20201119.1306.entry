@@ -1,2 +1,11 @@
-
-(elpa-mirror . [(20201119 1306) ((emacs (24 4))) "Create local package repository from installed packages" single ((:commit . "c9d4f69dd0fd7a1be143ef512262d219d7c10eb6") (:keywords "tools") (:authors ("Chen Bin" . "chenbin.sh@gmail.com")) (:maintainer "Chen Bin" . "chenbin.sh@gmail.com") (:url . "http://github.com/redguardtoo/elpa-mirror"))])
+(elpa-mirror .
+	     [(20201119 1306)
+	      ((emacs
+		(24 4)))
+	      "Create local package repository from installed packages" single
+	      ((:commit . "c9d4f69dd0fd7a1be143ef512262d219d7c10eb6")
+	       (:authors
+		("Chen Bin" . "chenbin.sh@gmail.com"))
+	       (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
+	       (:keywords "tools")
+	       (:url . "http://github.com/redguardtoo/elpa-mirror"))])

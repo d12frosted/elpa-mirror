@@ -1,2 +1,10 @@
-
-(svg-mode-line-themes . [(20150425 2006) ((xmlgen (0 4))) "SVG-based themes for mode-line" tar ((:commit . "80a0e01839cafbd66899202e7764c33231974259") (:authors ("sabof")) (:maintainer "sabof") (:url . "https://github.com/sabof/svg-mode-line-themes"))])
+(svg-mode-line-themes .
+		      [(20150425 2006)
+		       ((xmlgen
+			 (0 4)))
+		       "SVG-based themes for mode-line" tar
+		       ((:commit . "80a0e01839cafbd66899202e7764c33231974259")
+			(:authors
+			 ("sabof"))
+			(:maintainer "sabof")
+			(:url . "https://github.com/sabof/svg-mode-line-themes"))])

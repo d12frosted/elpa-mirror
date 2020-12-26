@@ -1,2 +1,13 @@
-
-(flycheck-dedukti . [(20171103 1212) ((flycheck (0 19)) (dedukti-mode (0 1))) "Flycheck integration of Dedukti" single ((:commit . "3dbff5646355f39d57a3ec514f560a6b0082a1cd") (:keywords "convenience" "languages" "tools" "flycheck" "dedukti") (:authors ("Raphaël Cauderlier")) (:maintainer "Raphaël Cauderlier") (:url . "https://github.com/rafoo/flycheck-dedukti"))])
+(flycheck-dedukti .
+		  [(20171103 1212)
+		   ((flycheck
+		     (0 19))
+		    (dedukti-mode
+		     (0 1)))
+		   "Flycheck integration of Dedukti" single
+		   ((:commit . "3dbff5646355f39d57a3ec514f560a6b0082a1cd")
+		    (:authors
+		     ("Raphaël Cauderlier"))
+		    (:maintainer "Raphaël Cauderlier")
+		    (:keywords "convenience" "languages" "tools" "flycheck" "dedukti")
+		    (:url . "https://github.com/rafoo/flycheck-dedukti"))])

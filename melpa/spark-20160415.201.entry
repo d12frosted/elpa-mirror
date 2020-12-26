@@ -1,2 +1,11 @@
-
-(spark . [(20160415 201) ((emacs (24 3))) "sparkline generation" single ((:commit . "0bf148c3ede3b31d56fd75f347cdd0b0eae60025") (:keywords "lisp" "data") (:authors ("Alvin Francis Dumalus")) (:maintainer "Alvin Francis Dumalus") (:url . "https://github.com/alvinfrancis/spark"))])
+(spark .
+       [(20160415 201)
+	((emacs
+	  (24 3)))
+	"sparkline generation" single
+	((:commit . "0bf148c3ede3b31d56fd75f347cdd0b0eae60025")
+	 (:authors
+	  ("Alvin Francis Dumalus"))
+	 (:maintainer "Alvin Francis Dumalus")
+	 (:keywords "lisp" "data")
+	 (:url . "https://github.com/alvinfrancis/spark"))])

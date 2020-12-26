@@ -1,2 +1,9 @@
-
-(rc-mode . [(20160913 1918) nil "Major mode for the Plan9 rc shell" single ((:commit . "fe2e0570bf9c19a292e16b18fd4b0a256df5d93f") (:keywords "rc" "plan9" "shell") (:authors ("Jordan Brown")) (:maintainer "Jordan Brown") (:url . "https://github.com/mrhmouse/rc-mode.el"))])
+(rc-mode .
+	 [(20160913 1918)
+	  nil "Major mode for the Plan9 rc shell" single
+	  ((:commit . "fe2e0570bf9c19a292e16b18fd4b0a256df5d93f")
+	   (:authors
+	    ("Jordan Brown"))
+	   (:maintainer "Jordan Brown")
+	   (:keywords "rc" "plan9" "shell")
+	   (:url . "https://github.com/mrhmouse/rc-mode.el"))])

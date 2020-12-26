@@ -1,2 +1,13 @@
-
-(flycheck-mmark . [(20190713 1323) ((emacs (24 4)) (flycheck (0 29))) "Flycheck checker for the MMark markdown processor" single ((:commit . "a285d849e6e227b79bef98f575ecfa43a70661da") (:keywords "convenience" "text") (:authors ("Mark Karpov" . "markkarpov92@gmail.com")) (:maintainer "Mark Karpov" . "markkarpov92@gmail.com") (:url . "https://github.com/mmark-md/flycheck-mmark"))])
+(flycheck-mmark .
+		[(20190713 1323)
+		 ((emacs
+		   (24 4))
+		  (flycheck
+		   (0 29)))
+		 "Flycheck checker for the MMark markdown processor" single
+		 ((:commit . "a285d849e6e227b79bef98f575ecfa43a70661da")
+		  (:authors
+		   ("Mark Karpov" . "markkarpov92@gmail.com"))
+		  (:maintainer "Mark Karpov" . "markkarpov92@gmail.com")
+		  (:keywords "convenience" "text")
+		  (:url . "https://github.com/mmark-md/flycheck-mmark"))])

@@ -1,2 +1,15 @@
-
-(airplay . [(20130212 1226) ((request (20130110 2144)) (simple-httpd (1 4 1)) (deferred (0 3 1))) "Airplay bindings to Emacs" tar ((:commit . "bd690aafcae3a887946e1bba8327597932d964ad") (:keywords "appletv" "airplay") (:authors ("Wataru MIYAGUNI" . "gonngo@gmail.com")) (:maintainer "Wataru MIYAGUNI" . "gonngo@gmail.com") (:url . "https://github.com/gongo/airplay-el"))])
+(airplay .
+	 [(20130212 1226)
+	  ((request
+	    (20130110 2144))
+	   (simple-httpd
+	    (1 4 1))
+	   (deferred
+	     (0 3 1)))
+	  "Airplay bindings to Emacs" tar
+	  ((:commit . "bd690aafcae3a887946e1bba8327597932d964ad")
+	   (:authors
+	    ("Wataru MIYAGUNI" . "gonngo@gmail.com"))
+	   (:maintainer "Wataru MIYAGUNI" . "gonngo@gmail.com")
+	   (:keywords "appletv" "airplay")
+	   (:url . "https://github.com/gongo/airplay-el"))])

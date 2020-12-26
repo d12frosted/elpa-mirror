@@ -1,18 +1,22 @@
-About ox-ioslide.el
+;;; Commentary:
 
-ox-ioslide.el is an org-mode exporter to export org file to Google I/O 2013
-style slides.
+;;; About ox-ioslide.el
 
-DEMO site: http://coldnew.github.io/org-ioslide
+;; ox-ioslide.el is an org-mode exporter to export org file to Google I/O 2013
+;; style slides.
 
-Installation:
+;; DEMO site: http://coldnew.github.io/org-ioslide
 
-If you have `melpa` and `emacs24` installed, simply type:
+;;; Installation:
 
-     M-x package-install ox-ioslide
+;; If you have `melpa` and `emacs24` installed, simply type:
+;;
+;;      M-x package-install ox-ioslide
+;;
+;; In your .emacs
+;;
+;;      (require 'ox-ioslide)
+;;
+;; For more information, please see `README.org'
+;;
 
-In your .emacs
-
-     (require 'ox-ioslide)
-
-For more information, please see `README.org'

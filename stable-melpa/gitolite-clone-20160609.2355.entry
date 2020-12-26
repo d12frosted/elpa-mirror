@@ -1,2 +1,17 @@
-
-(gitolite-clone . [(20160609 2355) ((dash (2 10 0)) (s (1 9 0)) (pcache (0 3 1)) (emacs (24))) "Clone gitolite repositories from a completing list" single ((:commit . "d8a4c2875c984e51137c980b5773f42703602721") (:keywords "gitolite" "clone" "git") (:authors ("Ivan Malison" . "IvanMalison@gmail.com")) (:maintainer "Ivan Malison" . "IvanMalison@gmail.com") (:url . "https://github.com/IvanMalison/gitolite-clone"))])
+(gitolite-clone .
+		[(20160609 2355)
+		 ((dash
+		   (2 10 0))
+		  (s
+		   (1 9 0))
+		  (pcache
+		   (0 3 1))
+		  (emacs
+		   (24)))
+		 "Clone gitolite repositories from a completing list" single
+		 ((:commit . "d8a4c2875c984e51137c980b5773f42703602721")
+		  (:authors
+		   ("Ivan Malison" . "IvanMalison@gmail.com"))
+		  (:maintainer "Ivan Malison" . "IvanMalison@gmail.com")
+		  (:keywords "gitolite" "clone" "git")
+		  (:url . "https://github.com/IvanMalison/gitolite-clone"))])

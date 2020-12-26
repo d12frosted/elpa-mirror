@@ -1,2 +1,15 @@
-
-(jiralib2 . [(20200520 2031) ((emacs (25)) (request (0 3)) (dash (2 14 1))) "JIRA REST API bindings to Elisp" single ((:commit . "c21c4e759eff549dbda11099f2f680b78d7f5a01") (:keywords "comm" "jira" "rest" "api") (:authors ("Henrik Nyman" . "h@nyymanni.com")) (:maintainer "Henrik Nyman" . "h@nyymanni.com") (:url . "https://github.com/nyyManni/jiralib2"))])
+(jiralib2 .
+	  [(20200520 2031)
+	   ((emacs
+	     (25))
+	    (request
+	     (0 3))
+	    (dash
+	     (2 14 1)))
+	   "JIRA REST API bindings to Elisp" single
+	   ((:commit . "c21c4e759eff549dbda11099f2f680b78d7f5a01")
+	    (:authors
+	     ("Henrik Nyman" . "h@nyymanni.com"))
+	    (:maintainer "Henrik Nyman" . "h@nyymanni.com")
+	    (:keywords "comm" "jira" "rest" "api")
+	    (:url . "https://github.com/nyyManni/jiralib2"))])

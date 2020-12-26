@@ -1,2 +1,10 @@
-
-(colemak-evil . [(20200326 2359) ((evil (20170323 1140))) "Colemak-friendly keybindings for Evil." single ((:commit . "981bdcb1a48c6d9139493abe7e25fabe126e43c3") (:authors ("Patrick Brinich-Langlois" . "pbrinichlanglois@gmail.com")) (:maintainer "Patrick Brinich-Langlois" . "pbrinichlanglois@gmail.com") (:url . "https://github.com/patbl/colemak-evil"))])
+(colemak-evil .
+	      [(20200326 2359)
+	       ((evil
+		 (20170323 1140)))
+	       "Colemak-friendly keybindings for Evil." single
+	       ((:commit . "981bdcb1a48c6d9139493abe7e25fabe126e43c3")
+		(:authors
+		 ("Patrick Brinich-Langlois" . "pbrinichlanglois@gmail.com"))
+		(:maintainer "Patrick Brinich-Langlois" . "pbrinichlanglois@gmail.com")
+		(:url . "https://github.com/patbl/colemak-evil"))])

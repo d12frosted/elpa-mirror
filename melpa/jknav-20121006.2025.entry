@@ -1,2 +1,8 @@
-
-(jknav . [(20121006 2025) nil "Automatically enable j/k keys for line-based navigation" single ((:commit . "861245715c728503dad6573278fdd75c271dbf8b") (:keywords "keyboard" "navigation") (:authors ("Aaron Culich" . "aculich@gmail.com")) (:maintainer "Aaron Culich" . "aculich@gmail.com"))])
+(jknav .
+       [(20121006 2025)
+	nil "Automatically enable j/k keys for line-based navigation" single
+	((:commit . "861245715c728503dad6573278fdd75c271dbf8b")
+	 (:authors
+	  ("Aaron Culich" . "aculich@gmail.com"))
+	 (:maintainer "Aaron Culich" . "aculich@gmail.com")
+	 (:keywords "keyboard" "navigation"))])

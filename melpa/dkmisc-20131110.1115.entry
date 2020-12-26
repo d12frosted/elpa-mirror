@@ -1,2 +1,11 @@
-
-(dkmisc . [(20131110 1115) ((emacs (24 1))) "Miscellaneous functions required by dk* packages." tar ((:commit . "fe3d49c6f8322b6f89466361acd97585bdfe0608"))])
+(dkmisc .
+	[(20131110 1115)
+	 ((emacs
+	   (24 1)))
+	 "Miscellaneous functions required by dk* packages." tar
+	 ((:commit . "fe3d49c6f8322b6f89466361acd97585bdfe0608")
+	  (:authors
+	   ("David Keegan" . "dksw@eircom.net"))
+	  (:maintainer "David Keegan" . "dksw@eircom.net")
+	  (:keywords "utility" "time" "date" "file")
+	  (:url . "https://github.com/davidkeegan/dkmisc"))])

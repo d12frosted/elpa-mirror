@@ -1,2 +1,13 @@
-
-(caskxy . [(20140513 1539) ((log4e (0 2 0)) (yaxception (0 1))) "Control Cask in Emacs" single ((:commit . "dc18dcab7ed526070ab76de071c9c5272e6ac40e") (:keywords "convenience") (:authors ("Hiroaki Otsu" . "ootsuhiroaki@gmail.com")) (:maintainer "Hiroaki Otsu" . "ootsuhiroaki@gmail.com") (:url . "https://github.com/aki2o/caskxy"))])
+(caskxy .
+	[(20140513 1539)
+	 ((log4e
+	   (0 2 0))
+	  (yaxception
+	   (0 1)))
+	 "Control Cask in Emacs" single
+	 ((:commit . "dc18dcab7ed526070ab76de071c9c5272e6ac40e")
+	  (:authors
+	   ("Hiroaki Otsu" . "ootsuhiroaki@gmail.com"))
+	  (:maintainer "Hiroaki Otsu" . "ootsuhiroaki@gmail.com")
+	  (:keywords "convenience")
+	  (:url . "https://github.com/aki2o/caskxy"))])

@@ -1,2 +1,9 @@
-
-(load-theme-buffer-local . [(20120702 2036) nil "Install emacs24 color themes by buffer." single ((:commit . "e606dec66f16a06140b9aad625a4fd52bca4f936") (:keywords "faces") (:authors ("Victor Borja" . "vic.borja@gmail.com")) (:maintainer "Victor Borja" . "vic.borja@gmail.com") (:url . "http://github.com/vic/color-theme-buffer-local"))])
+(load-theme-buffer-local .
+			 [(20120702 2036)
+			  nil "Install emacs24 color themes by buffer." single
+			  ((:commit . "e606dec66f16a06140b9aad625a4fd52bca4f936")
+			   (:authors
+			    ("Victor Borja" . "vic.borja@gmail.com"))
+			   (:maintainer "Victor Borja" . "vic.borja@gmail.com")
+			   (:keywords "faces")
+			   (:url . "http://github.com/vic/color-theme-buffer-local"))])

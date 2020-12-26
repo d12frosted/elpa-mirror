@@ -1,2 +1,10 @@
-
-(org-present . [(20200204 1647) ((org (7))) "Minimalist presentation minor-mode for Emacs org-mode." single ((:commit . "9709ca2d04a59959354222ac4d3f8b750785739a") (:authors ("Ric Lister")) (:maintainer "Ric Lister") (:url . "https://github.com/rlister/org-present"))])
+(org-present .
+	     [(20200204 1647)
+	      ((org
+		(7)))
+	      "Minimalist presentation minor-mode for Emacs org-mode." single
+	      ((:commit . "9709ca2d04a59959354222ac4d3f8b750785739a")
+	       (:authors
+		("Ric Lister"))
+	       (:maintainer "Ric Lister")
+	       (:url . "https://github.com/rlister/org-present"))])

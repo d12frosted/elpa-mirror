@@ -1,2 +1,11 @@
-
-(stem-english . [(20180109 358) ((emacs (24 3))) "- routines for stemming English word" single ((:commit . "c9fc4c6ed6bf82382e479dae80912f4ae17d31f4") (:keywords "text") (:authors ("Tsuchiya Masatoshi" . "tsuchiya@pine.kuee.kyoto-u.ac.jp")) (:maintainer "KAWABATA, Taichi <kawabata.taichi_at_gmail.com>") (:url . "http://github.com/kawabata/stem-english"))])
+(stem-english .
+	      [(20180109 358)
+	       ((emacs
+		 (24 3)))
+	       "- routines for stemming English word" single
+	       ((:commit . "c9fc4c6ed6bf82382e479dae80912f4ae17d31f4")
+		(:authors
+		 ("Tsuchiya Masatoshi" . "tsuchiya@pine.kuee.kyoto-u.ac.jp"))
+		(:maintainer "KAWABATA, Taichi <kawabata.taichi_at_gmail.com>")
+		(:keywords "text")
+		(:url . "http://github.com/kawabata/stem-english"))])

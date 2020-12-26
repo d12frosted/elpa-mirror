@@ -1,2 +1,11 @@
-
-(backward-forward . [(20161229 550) ((emacs (24 5))) "navigation backwards and forwards across marks" single ((:commit . "58489957a62a0da25dfb5df902624d2548d800b4") (:keywords "navigation" "convenience" "backward" "forward") (:authors ("Currell Berry" . "currellberry@gmail.com")) (:maintainer "Currell Berry" . "currellberry@gmail.com") (:url . "https://gitlab.com/vancan1ty/emacs-backward-forward/tree/master"))])
+(backward-forward .
+		  [(20161229 550)
+		   ((emacs
+		     (24 5)))
+		   "navigation backwards and forwards across marks" single
+		   ((:commit . "58489957a62a0da25dfb5df902624d2548d800b4")
+		    (:authors
+		     ("Currell Berry" . "currellberry@gmail.com"))
+		    (:maintainer "Currell Berry" . "currellberry@gmail.com")
+		    (:keywords "navigation" "convenience" "backward" "forward")
+		    (:url . "https://gitlab.com/vancan1ty/emacs-backward-forward/tree/master"))])

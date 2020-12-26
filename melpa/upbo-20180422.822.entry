@@ -1,2 +1,13 @@
-
-(upbo . [(20180422 822) ((dash (2 12 0)) (emacs (24 4))) "Karma Test Runner Integration" single ((:commit . "1e4b1e7f44f242a6cdcce0c157d07efe667b7bef") (:keywords "javascript" "js" "test" "karma") (:authors ("Sungho Kim(shiren)")) (:maintainer "Sungho Kim(shiren)") (:url . "http://github.com/shiren"))])
+(upbo .
+      [(20180422 822)
+       ((dash
+	 (2 12 0))
+	(emacs
+	 (24 4)))
+       "Karma Test Runner Integration" single
+       ((:commit . "1e4b1e7f44f242a6cdcce0c157d07efe667b7bef")
+	(:authors
+	 ("Sungho Kim(shiren)"))
+	(:maintainer "Sungho Kim(shiren)")
+	(:keywords "javascript" "js" "test" "karma")
+	(:url . "http://github.com/shiren"))])

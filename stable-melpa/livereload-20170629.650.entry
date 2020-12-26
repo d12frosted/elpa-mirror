@@ -1,2 +1,12 @@
-
-(livereload . [(20170629 650) ((emacs (25)) (websocket (1 8))) "Livereload server" tar ((:commit . "1e501d7e46dbd476c2c7cc9d20b5ac9d41fb1955") (:keywords "convenience") (:authors ("João Távora" . "joaotavora@gmail.com")) (:maintainer "João Távora" . "joaotavora@gmail.com"))])
+(livereload .
+	    [(20170629 650)
+	     ((emacs
+	       (25))
+	      (websocket
+	       (1 8)))
+	     "Livereload server" tar
+	     ((:commit . "1e501d7e46dbd476c2c7cc9d20b5ac9d41fb1955")
+	      (:authors
+	       ("João Távora" . "joaotavora@gmail.com"))
+	      (:maintainer "João Távora" . "joaotavora@gmail.com")
+	      (:keywords "convenience"))])

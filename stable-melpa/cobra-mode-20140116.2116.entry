@@ -1,2 +1,9 @@
-
-(cobra-mode . [(20140116 2116) nil "Major mode for .NET-based Cobra language" single ((:commit . "acd6e53f6286af5176471d01f25257e5ddb6dd01") (:keywords "languages") (:authors ("Taylor \"Nekroze\" Lawson")) (:maintainer "Taylor \"Nekroze\" Lawson") (:url . "http://github.com/Nekroze/cobra-mode"))])
+(cobra-mode .
+	    [(20140116 2116)
+	     nil "Major mode for .NET-based Cobra language" single
+	     ((:commit . "acd6e53f6286af5176471d01f25257e5ddb6dd01")
+	      (:authors
+	       ("Taylor \"Nekroze\" Lawson"))
+	      (:maintainer "Taylor \"Nekroze\" Lawson")
+	      (:keywords "languages")
+	      (:url . "http://github.com/Nekroze/cobra-mode"))])

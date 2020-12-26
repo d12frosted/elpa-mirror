@@ -1,2 +1,11 @@
-
-(insert-char-preview . [(20201023 2108) ((emacs (24 1))) "Insert Unicode char" single ((:commit . "0e4a62b5407fb1bed8920a4c13cf9a91065e15ad") (:keywords "convenience") (:authors ("Matsievskiy S.V.")) (:maintainer "Matsievskiy S.V.") (:url . "https://gitlab.com/matsievskiysv/insert-char-preview"))])
+(insert-char-preview .
+		     [(20201023 2108)
+		      ((emacs
+			(24 1)))
+		      "Insert Unicode char" single
+		      ((:commit . "0e4a62b5407fb1bed8920a4c13cf9a91065e15ad")
+		       (:authors
+			("Matsievskiy S.V."))
+		       (:maintainer "Matsievskiy S.V.")
+		       (:keywords "convenience")
+		       (:url . "https://gitlab.com/matsievskiysv/insert-char-preview"))])

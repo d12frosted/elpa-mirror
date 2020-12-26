@@ -1,2 +1,15 @@
-
-(counsel-web . [(20200313 5) ((emacs (25 1)) (counsel (0 13 0)) (request (0 3 0))) "Search the Web using Ivy" single ((:commit . "35c648b4cdd9f266ab54512a0fec2a3ca55d5bc6") (:keywords "convenience" "hypermedia") (:authors ("Matthew Sojourner Newton" . "matt@mnewton.com")) (:maintainer "Matthew Sojourner Newton" . "matt@mnewton.com") (:url . "https://github.com/mnewt/counsel-web"))])
+(counsel-web .
+	     [(20200313 5)
+	      ((emacs
+		(25 1))
+	       (counsel
+		(0 13 0))
+	       (request
+		(0 3 0)))
+	      "Search the Web using Ivy" single
+	      ((:commit . "35c648b4cdd9f266ab54512a0fec2a3ca55d5bc6")
+	       (:authors
+		("Matthew Sojourner Newton" . "matt@mnewton.com"))
+	       (:maintainer "Matthew Sojourner Newton" . "matt@mnewton.com")
+	       (:keywords "convenience" "hypermedia")
+	       (:url . "https://github.com/mnewt/counsel-web"))])

@@ -1,2 +1,11 @@
-
-(helm-bibtexkey . [(20140214 1504) ((helm (1 5 8))) "Bibtexkey source for helm" tar ((:commit . "aa1637ea5c8c5f1817e480fc2a3750cafab3d99f") (:keywords "bib" "tex") (:authors ("TAKAGI Kentaro <kentaro0910_at_gmail.com>")) (:maintainer "TAKAGI Kentaro <kentaro0910_at_gmail.com>") (:url . "https://github.com/kenbeese/helm-bibtexkey"))])
+(helm-bibtexkey .
+		[(20140214 1504)
+		 ((helm
+		   (1 5 8)))
+		 "Bibtexkey source for helm" tar
+		 ((:commit . "aa1637ea5c8c5f1817e480fc2a3750cafab3d99f")
+		  (:authors
+		   ("TAKAGI Kentaro <kentaro0910_at_gmail.com>"))
+		  (:maintainer "TAKAGI Kentaro <kentaro0910_at_gmail.com>")
+		  (:keywords "bib" "tex")
+		  (:url . "https://github.com/kenbeese/helm-bibtexkey"))])

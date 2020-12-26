@@ -1,2 +1,11 @@
-
-(pushover . [(20170818 2103) ((cl-lib (0 5))) "Pushover API Access" single ((:commit . "bbe3ac8df3c532a72da4552615af960b8a577588") (:keywords "notifications") (:authors ("Samuel W. Flint" . "swflint@flintfam.org")) (:maintainer "Samuel W. Flint" . "swflint@flintfam.org") (:url . "http://github.com/swflint/pushover.el"))])
+(pushover .
+	  [(20170818 2103)
+	   ((cl-lib
+	     (0 5)))
+	   "Pushover API Access" single
+	   ((:commit . "bbe3ac8df3c532a72da4552615af960b8a577588")
+	    (:authors
+	     ("Samuel W. Flint" . "swflint@flintfam.org"))
+	    (:maintainer "Samuel W. Flint" . "swflint@flintfam.org")
+	    (:keywords "notifications")
+	    (:url . "http://github.com/swflint/pushover.el"))])

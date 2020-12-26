@@ -1,2 +1,11 @@
-
-(erblint . [(20200622 5) ((emacs (24))) "An interface for checking HTML ERB files using Erblint" single ((:commit . "89af42f776d8dc656104322edaace2ede7499932") (:keywords "project" "convenience") (:authors ("Leonardo Santos")) (:maintainer "Leonardo Santos") (:url . "https://github.com/leodcs/erblint-emacs"))])
+(erblint .
+	 [(20200622 5)
+	  ((emacs
+	    (24)))
+	  "An interface for checking HTML ERB files using Erblint" single
+	  ((:commit . "89af42f776d8dc656104322edaace2ede7499932")
+	   (:authors
+	    ("Leonardo Santos"))
+	   (:maintainer "Leonardo Santos")
+	   (:keywords "project" "convenience")
+	   (:url . "https://github.com/leodcs/erblint-emacs"))])

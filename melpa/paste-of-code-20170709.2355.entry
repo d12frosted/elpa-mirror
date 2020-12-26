@@ -1,2 +1,12 @@
-
-(paste-of-code . [(20170709 2355) ((emacs (24 3)) (request (0 2 0))) "paste code on https://paste.ofcode.org" single ((:commit . "92d258e8ec98598d847ecab82903f9224c7c2050") (:keywords "lisp") (:authors ("Bernhard Specht" . "bernhard@specht.net")) (:maintainer "Bernhard Specht" . "bernhard@specht.net"))])
+(paste-of-code .
+	       [(20170709 2355)
+		((emacs
+		  (24 3))
+		 (request
+		  (0 2 0)))
+		"paste code on https://paste.ofcode.org" single
+		((:commit . "92d258e8ec98598d847ecab82903f9224c7c2050")
+		 (:authors
+		  ("Bernhard Specht" . "bernhard@specht.net"))
+		 (:maintainer "Bernhard Specht" . "bernhard@specht.net")
+		 (:keywords "lisp"))])

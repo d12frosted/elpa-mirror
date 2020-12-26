@@ -1,2 +1,11 @@
-
-(el-fly-indent-mode . [(20180422 243) ((emacs (25))) "Indent Emacs Lisp on the fly" single ((:commit . "39738c88c01a3a035edffe63400d434edb1e3003") (:keywords "lisp" "languages") (:authors ("Jiahao Li" . "jiahaowork@gmail.com")) (:maintainer "Jiahao Li" . "jiahaowork@gmail.com") (:url . "https://github.com/jiahaowork/el-fly-indent-mode.el"))])
+(el-fly-indent-mode .
+		    [(20180422 243)
+		     ((emacs
+		       (25)))
+		     "Indent Emacs Lisp on the fly" single
+		     ((:commit . "39738c88c01a3a035edffe63400d434edb1e3003")
+		      (:authors
+		       ("Jiahao Li" . "jiahaowork@gmail.com"))
+		      (:maintainer "Jiahao Li" . "jiahaowork@gmail.com")
+		      (:keywords "lisp" "languages")
+		      (:url . "https://github.com/jiahaowork/el-fly-indent-mode.el"))])

@@ -1,2 +1,8 @@
-
-(nexus . [(20140114 1305) nil "REST Client for Nexus Maven Repository servers" tar ((:commit . "c46f499951b90839aa8683779fe43d8f01672a60") (:keywords "comm") (:authors ("Juergen Hoetzel" . "juergen@archlinux.org")) (:maintainer "Juergen Hoetzel" . "juergen@archlinux.org"))])
+(nexus .
+       [(20140114 1305)
+	nil "REST Client for Nexus Maven Repository servers" tar
+	((:commit . "c46f499951b90839aa8683779fe43d8f01672a60")
+	 (:authors
+	  ("Juergen Hoetzel" . "juergen@archlinux.org"))
+	 (:maintainer "Juergen Hoetzel" . "juergen@archlinux.org")
+	 (:keywords "comm"))])

@@ -1,2 +1,11 @@
-
-(yesterbox . [(20200327 52) ((emacs (24 3))) "Count number of inbox messages by day" single ((:commit . "10591342f1759e25756f5865371a53c132d8b0a0") (:keywords "mail") (:authors ("Stephen J. Eglen" . "sje30@cam.ac.uk")) (:maintainer "Stephen J. Eglen" . "sje30@cam.ac.uk") (:url . "http://github.com/sje30/yesterbox"))])
+(yesterbox .
+	   [(20200327 52)
+	    ((emacs
+	      (24 3)))
+	    "Count number of inbox messages by day" single
+	    ((:commit . "10591342f1759e25756f5865371a53c132d8b0a0")
+	     (:authors
+	      ("Stephen J. Eglen" . "sje30@cam.ac.uk"))
+	     (:maintainer "Stephen J. Eglen" . "sje30@cam.ac.uk")
+	     (:keywords "mail")
+	     (:url . "http://github.com/sje30/yesterbox"))])

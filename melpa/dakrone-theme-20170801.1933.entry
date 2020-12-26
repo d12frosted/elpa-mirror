@@ -1,2 +1,9 @@
-
-(dakrone-theme . [(20170801 1933) nil "dakrone's custom dark theme" single ((:commit . "232ad1be5f3572dcbdf528f1655109aa355a6937") (:keywords "color" "themes") (:authors ("Lee Hinman <lee _AT_ writequit.org>")) (:maintainer "Lee Hinman <lee _AT_ writequit.org>") (:url . "https://github.com/dakrone/dakrone-theme"))])
+(dakrone-theme .
+	       [(20170801 1933)
+		nil "dakrone's custom dark theme" single
+		((:commit . "232ad1be5f3572dcbdf528f1655109aa355a6937")
+		 (:authors
+		  ("Lee Hinman <lee _AT_ writequit.org>"))
+		 (:maintainer "Lee Hinman <lee _AT_ writequit.org>")
+		 (:keywords "color" "themes")
+		 (:url . "https://github.com/dakrone/dakrone-theme"))])

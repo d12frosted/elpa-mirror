@@ -1,2 +1,9 @@
-
-(gregorio-mode . [(20170705 1451) nil "Gregorio Mode for .gabc files" single ((:commit . "736fd3d05fb67f707cca1a7ce24e3ee7ca5e9567") (:keywords "gregorio" "chant") (:authors ("Fr. John Jenkins" . "jenkins@sspx.ng")) (:maintainer "Fr. John Jenkins" . "jenkins@sspx.ng") (:url . "https://jsrjenkins.github.io/gregorio-mode/"))])
+(gregorio-mode .
+	       [(20170705 1451)
+		nil "Gregorio Mode for .gabc files" single
+		((:commit . "736fd3d05fb67f707cca1a7ce24e3ee7ca5e9567")
+		 (:authors
+		  ("Fr. John Jenkins" . "jenkins@sspx.ng"))
+		 (:maintainer "Fr. John Jenkins" . "jenkins@sspx.ng")
+		 (:keywords "gregorio" "chant")
+		 (:url . "https://jsrjenkins.github.io/gregorio-mode/"))])

@@ -1,2 +1,13 @@
-
-(github-stars . [(20190517 1319) ((emacs (25 1)) (ghub (2 0 0))) "Browse your Github Stars" single ((:commit . "a9f25ab2487c886f5d50d26693d49856bd51383b") (:keywords "tools") (:authors ("Xu Chunyang" . "mail@xuchunyang.me")) (:maintainer "Xu Chunyang" . "mail@xuchunyang.me") (:url . "https://github.com/xuchunyang/github-stars.el"))])
+(github-stars .
+	      [(20190517 1319)
+	       ((emacs
+		 (25 1))
+		(ghub
+		 (2 0 0)))
+	       "Browse your Github Stars" single
+	       ((:commit . "a9f25ab2487c886f5d50d26693d49856bd51383b")
+		(:authors
+		 ("Xu Chunyang" . "mail@xuchunyang.me"))
+		(:maintainer "Xu Chunyang" . "mail@xuchunyang.me")
+		(:keywords "tools")
+		(:url . "https://github.com/xuchunyang/github-stars.el"))])

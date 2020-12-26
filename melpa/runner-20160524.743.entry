@@ -1,2 +1,9 @@
-
-(runner . [(20160524 743) nil "Improved \"open with\" suggestions for dired" single ((:commit . "a211d57ddc600410d07a8b534920ba905b093d87") (:keywords "shell command" "dired" "file extension" "open with") (:authors ("Thamer Mahmoud" . "thamer.mahmoud@gmail.com")) (:maintainer "Thamer Mahmoud" . "thamer.mahmoud@gmail.com") (:url . "https://github.com/thamer/runner"))])
+(runner .
+	[(20160524 743)
+	 nil "Improved \"open with\" suggestions for dired" single
+	 ((:commit . "a211d57ddc600410d07a8b534920ba905b093d87")
+	  (:authors
+	   ("Thamer Mahmoud" . "thamer.mahmoud@gmail.com"))
+	  (:maintainer "Thamer Mahmoud" . "thamer.mahmoud@gmail.com")
+	  (:keywords "shell command" "dired" "file extension" "open with")
+	  (:url . "https://github.com/thamer/runner"))])

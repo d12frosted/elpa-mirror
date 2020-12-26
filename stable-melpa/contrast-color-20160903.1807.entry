@@ -1,2 +1,13 @@
-
-(contrast-color . [(20160903 1807) ((emacs (24 3)) (cl-lib (0 5))) "Pick best contrast color for you" single ((:commit . "c5fb77a211ebbef3185ada37bea7420534c33f94") (:keywords "color" "convenience") (:authors ("Yuta Yamada <cokesboy[at]gmail.com>")) (:maintainer "Yuta Yamada <cokesboy[at]gmail.com>") (:url . "https://github.com/yuutayamada/contrast-color-el"))])
+(contrast-color .
+		[(20160903 1807)
+		 ((emacs
+		   (24 3))
+		  (cl-lib
+		   (0 5)))
+		 "Pick best contrast color for you" single
+		 ((:commit . "c5fb77a211ebbef3185ada37bea7420534c33f94")
+		  (:authors
+		   ("Yuta Yamada <cokesboy[at]gmail.com>"))
+		  (:maintainer "Yuta Yamada <cokesboy[at]gmail.com>")
+		  (:keywords "color" "convenience")
+		  (:url . "https://github.com/yuutayamada/contrast-color-el"))])

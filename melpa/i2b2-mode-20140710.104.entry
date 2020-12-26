@@ -1,2 +1,8 @@
-
-(i2b2-mode . [(20140710 104) nil "Highlights corresponding PHI data in the text portion of an i2b2 XML Document." single ((:commit . "db10efcfc8bed369a516bbf7526ede41f98cb95a") (:keywords "xml" "phi" "i2b2" "deidi2b2") (:authors ("Dan LaManna" . "dan.lamanna@gmail.com")) (:maintainer "Dan LaManna" . "dan.lamanna@gmail.com"))])
+(i2b2-mode .
+	   [(20140710 104)
+	    nil "Highlights corresponding PHI data in the text portion of an i2b2 XML Document." single
+	    ((:commit . "db10efcfc8bed369a516bbf7526ede41f98cb95a")
+	     (:authors
+	      ("Dan LaManna" . "dan.lamanna@gmail.com"))
+	     (:maintainer "Dan LaManna" . "dan.lamanna@gmail.com")
+	     (:keywords "xml" "phi" "i2b2" "deidi2b2"))])

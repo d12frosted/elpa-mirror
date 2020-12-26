@@ -1,2 +1,8 @@
-
-(mip-mode . [(20151127 617) nil "virtual projects for emacs." single ((:commit . "7c88c383b4c7ed0a4c1dc397735f365c1fcb461c") (:keywords "workspaces" "workspace" "project" "projects" "mip-mode") (:authors ("Eeli Reilin" . "gaudecker@fea.st")) (:maintainer "Eeli Reilin" . "gaudecker@fea.st"))])
+(mip-mode .
+	  [(20151127 617)
+	   nil "virtual projects for emacs." single
+	   ((:commit . "7c88c383b4c7ed0a4c1dc397735f365c1fcb461c")
+	    (:authors
+	     ("Eeli Reilin" . "gaudecker@fea.st"))
+	    (:maintainer "Eeli Reilin" . "gaudecker@fea.st")
+	    (:keywords "workspaces" "workspace" "project" "projects" "mip-mode"))])

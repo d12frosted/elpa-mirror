@@ -1,2 +1,9 @@
-
-(open-in-msvs . [(20170123 2228) nil "Open current file:line:column in Microsoft Visual Studio" tar ((:commit . "e0d071c83188ad5db8f3297d6ce784b4ed554a04") (:keywords "convenience" "usability" "integration" "visual studio" "msvs" "ide") (:authors ("Evgeny Panasyuk")) (:maintainer "Evgeny Panasyuk") (:url . "https://github.com/evgeny-panasyuk/open-in-msvs"))])
+(open-in-msvs .
+	      [(20170123 2228)
+	       nil "Open current file:line:column in Microsoft Visual Studio" tar
+	       ((:commit . "e0d071c83188ad5db8f3297d6ce784b4ed554a04")
+		(:authors
+		 ("Evgeny Panasyuk"))
+		(:maintainer "Evgeny Panasyuk")
+		(:keywords "convenience" "usability" "integration" "visual studio" "msvs" "ide")
+		(:url . "https://github.com/evgeny-panasyuk/open-in-msvs"))])

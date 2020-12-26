@@ -1,2 +1,10 @@
-
-(flymake-perlcritic . [(20120328 814) ((flymake (0 3))) "Flymake handler for Perl to invoke Perl::Critic" tar ((:commit . "edfaa86500ddfa8a6a6f51f5581a81a821277df6") (:authors ("Sam Graham <libflymake-perlcritic-emacs BLAHBLAH illusori.co.uk>")) (:maintainer "Sam Graham <libflymake-perlcritic-emacs BLAHBLAH illusori.co.uk>") (:url . "https://github.com/illusori/emacs-flymake-perlcritic"))])
+(flymake-perlcritic .
+		    [(20120328 814)
+		     ((flymake
+		       (0 3)))
+		     "Flymake handler for Perl to invoke Perl::Critic" tar
+		     ((:commit . "edfaa86500ddfa8a6a6f51f5581a81a821277df6")
+		      (:authors
+		       ("Sam Graham <libflymake-perlcritic-emacs BLAHBLAH illusori.co.uk>"))
+		      (:maintainer "Sam Graham <libflymake-perlcritic-emacs BLAHBLAH illusori.co.uk>")
+		      (:url . "https://github.com/illusori/emacs-flymake-perlcritic"))])

@@ -1,2 +1,9 @@
-
-(ob-dart . [(20170106 1624) nil "org-babel functions for Dart evaluation" single ((:commit . "04d63b922a5469506560ca0c00678e57131e0269") (:keywords "literate programming" "reproducible research" "emacs" "org" "babel" "dart") (:authors ("Milan Zimmermann")) (:maintainer "Milan Zimmermann") (:url . "http://github.org/mzimmerm/ob-dart"))])
+(ob-dart .
+	 [(20170106 1624)
+	  nil "org-babel functions for Dart evaluation" single
+	  ((:commit . "04d63b922a5469506560ca0c00678e57131e0269")
+	   (:authors
+	    ("Milan Zimmermann"))
+	   (:maintainer "Milan Zimmermann")
+	   (:keywords "literate programming" "reproducible research" "emacs" "org" "babel" "dart")
+	   (:url . "http://github.org/mzimmerm/ob-dart"))])

@@ -1,2 +1,12 @@
-
-(mouse-slider-mode . [(20161021 1914) ((emacs (24 3)) (cl-lib (0 3))) "scale numbers dragged under the mouse" single ((:commit . "b3c19cd231edecce76787c5a9bbe5e4046d91f88") (:authors ("Christopher Wellons" . "mosquitopsu@gmail.com")) (:maintainer "Christopher Wellons" . "mosquitopsu@gmail.com") (:url . "https://github.com/skeeto/mouse-slider-mode"))])
+(mouse-slider-mode .
+		   [(20161021 1914)
+		    ((emacs
+		      (24 3))
+		     (cl-lib
+		      (0 3)))
+		    "scale numbers dragged under the mouse" single
+		    ((:commit . "b3c19cd231edecce76787c5a9bbe5e4046d91f88")
+		     (:authors
+		      ("Christopher Wellons" . "mosquitopsu@gmail.com"))
+		     (:maintainer "Christopher Wellons" . "mosquitopsu@gmail.com")
+		     (:url . "https://github.com/skeeto/mouse-slider-mode"))])

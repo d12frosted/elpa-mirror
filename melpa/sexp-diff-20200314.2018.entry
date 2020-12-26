@@ -1,2 +1,11 @@
-
-(sexp-diff . [(20200314 2018) ((emacs (25))) "Diff sexps based on Levenshtein-like edit distance" single ((:commit . "7e8c988bea2af209e17b70fa51316ade55529acb") (:keywords "lisp") (:authors ("Xu Chunyang")) (:maintainer "Xu Chunyang") (:url . "https://github.com/xuchunyang/sexp-diff.el"))])
+(sexp-diff .
+	   [(20200314 2018)
+	    ((emacs
+	      (25)))
+	    "Diff sexps based on Levenshtein-like edit distance" single
+	    ((:commit . "7e8c988bea2af209e17b70fa51316ade55529acb")
+	     (:authors
+	      ("Xu Chunyang"))
+	     (:maintainer "Xu Chunyang")
+	     (:keywords "lisp")
+	     (:url . "https://github.com/xuchunyang/sexp-diff.el"))])

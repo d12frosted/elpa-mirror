@@ -1,2 +1,11 @@
-
-(shimbun . [(20201021 552) nil "interfacing with web newspapers" tar ((:commit . "71e15af1a54085b5a259c998e64c8f32ffd96d03") (:keywords "news") (:authors ("TSUCHIYA Masatoshi" . "tsuchiya@namazu.org") ("Akihiro Arisawa   " . "ari@mbf.sphere.ne.jp") ("Yuuichi Teranishi " . "teranisi@gohome.org") ("Katsumi Yamaoka   " . "yamaoka@jpl.org")) (:maintainer "TSUCHIYA Masatoshi" . "tsuchiya@namazu.org"))])
+(shimbun .
+	 [(20201021 552)
+	  nil "interfacing with web newspapers" tar
+	  ((:commit . "085de54acae027e7f0d0b9bf34d3142993234fd3")
+	   (:authors
+	    ("TSUCHIYA Masatoshi" . "tsuchiya@namazu.org")
+	    ("Akihiro Arisawa   " . "ari@mbf.sphere.ne.jp")
+	    ("Yuuichi Teranishi " . "teranisi@gohome.org")
+	    ("Katsumi Yamaoka   " . "yamaoka@jpl.org"))
+	   (:maintainer "TSUCHIYA Masatoshi" . "tsuchiya@namazu.org")
+	   (:keywords "news"))])

@@ -1,2 +1,12 @@
-
-(sensitive . [(20170818 1251) ((emacs (24)) (sequences (0 1 0))) "A dead simple way to load sensitive information" single ((:commit . "69dd6125a41d8b55f4b6ba61daa4d1aa1f716fa8") (:keywords "convenience") (:authors ("Tim Visher" . "tim.visher@gmail.com")) (:maintainer "Tim Visher" . "tim.visher@gmail.com"))])
+(sensitive .
+	   [(20170818 1251)
+	    ((emacs
+	      (24))
+	     (sequences
+	      (0 1 0)))
+	    "A dead simple way to load sensitive information" single
+	    ((:commit . "69dd6125a41d8b55f4b6ba61daa4d1aa1f716fa8")
+	     (:authors
+	      ("Tim Visher" . "tim.visher@gmail.com"))
+	     (:maintainer "Tim Visher" . "tim.visher@gmail.com")
+	     (:keywords "convenience"))])

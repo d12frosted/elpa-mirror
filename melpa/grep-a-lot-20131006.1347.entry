@@ -1,2 +1,9 @@
-
-(grep-a-lot . [(20131006 1347) nil "manages multiple search results buffers for grep.el" single ((:commit . "9f9f645b9e308a0d887b66864ff97d0fca1ba4ad") (:keywords "tools" "convenience" "search") (:authors ("Avi Rozen" . "avi.rozen@gmail.com")) (:maintainer "Avi Rozen" . "avi.rozen@gmail.com") (:url . "https://github.com/ZungBang/emacs-grep-a-lot"))])
+(grep-a-lot .
+	    [(20131006 1347)
+	     nil "manages multiple search results buffers for grep.el" single
+	     ((:commit . "9f9f645b9e308a0d887b66864ff97d0fca1ba4ad")
+	      (:authors
+	       ("Avi Rozen" . "avi.rozen@gmail.com"))
+	      (:maintainer "Avi Rozen" . "avi.rozen@gmail.com")
+	      (:keywords "tools" "convenience" "search")
+	      (:url . "https://github.com/ZungBang/emacs-grep-a-lot"))])

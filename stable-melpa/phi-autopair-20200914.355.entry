@@ -1,2 +1,10 @@
-
-(phi-autopair . [(20200914 355) ((paredit (20))) "another simple-minded autopair implementation" single ((:commit . "8bebd5d3018746812847b6c47ab7c79a36382e7c") (:authors ("zk_phi")) (:maintainer "zk_phi") (:url . "http://zk-phi.gitub.io/"))])
+(phi-autopair .
+	      [(20200914 355)
+	       ((paredit
+		 (20)))
+	       "another simple-minded autopair implementation" single
+	       ((:commit . "8bebd5d3018746812847b6c47ab7c79a36382e7c")
+		(:authors
+		 ("zk_phi"))
+		(:maintainer "zk_phi")
+		(:url . "http://zk-phi.gitub.io/"))])

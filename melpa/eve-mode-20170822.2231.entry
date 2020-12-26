@@ -1,2 +1,15 @@
-
-(eve-mode . [(20170822 2231) ((emacs (25)) (polymode (1 0)) (markdown-mode (2 0))) "Major mode for editing Eve documents." single ((:commit . "a4661114d9c18725691b76321d72167ca5a9070a") (:keywords "languages" "wp" "tools") (:authors ("Joshua Cole" . "joshuafcole@gmail.com")) (:maintainer "Joshua Cole" . "joshuafcole@gmail.com") (:url . "https://github.com/witheve/emacs-eve-mode"))])
+(eve-mode .
+	  [(20170822 2231)
+	   ((emacs
+	     (25))
+	    (polymode
+	     (1 0))
+	    (markdown-mode
+	     (2 0)))
+	   "Major mode for editing Eve documents." single
+	   ((:commit . "a4661114d9c18725691b76321d72167ca5a9070a")
+	    (:authors
+	     ("Joshua Cole" . "joshuafcole@gmail.com"))
+	    (:maintainer "Joshua Cole" . "joshuafcole@gmail.com")
+	    (:keywords "languages" "wp" "tools")
+	    (:url . "https://github.com/witheve/emacs-eve-mode"))])

@@ -1,2 +1,9 @@
-
-(gtk-pomodoro-indicator . [(20191007 1500) nil "A pomodoro indicator for the GTK tray" tar ((:commit . "338e6dca6d749cfc85195907bba593f9f6855715") (:keywords "convenience" "pomodoro") (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com")) (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com") (:url . "https://github.com/abo-abo/gtk-pomodoro-indicator"))])
+(gtk-pomodoro-indicator .
+			[(20191007 1500)
+			 nil "A pomodoro indicator for the GTK tray" tar
+			 ((:commit . "338e6dca6d749cfc85195907bba593f9f6855715")
+			  (:authors
+			   ("Oleh Krehel" . "ohwoeowho@gmail.com"))
+			  (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
+			  (:keywords "convenience" "pomodoro")
+			  (:url . "https://github.com/abo-abo/gtk-pomodoro-indicator"))])

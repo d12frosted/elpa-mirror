@@ -1,2 +1,9 @@
-
-(osx-org-clock-menubar . [(20150205 2111) nil "simple menubar integration for org-clock" tar ((:commit . "9964d2a97cc2fb6570dc4116da44f73bd8eb7cb3") (:keywords "org" "osx") (:authors ("Jordon Biondo" . "jordonbiondo@gmail.com")) (:maintainer "Jordon Biondo" . "jordonbiondo@gmail.com") (:url . "https://github.com/jordonbiondo/osx-org-clock-menubar"))])
+(osx-org-clock-menubar .
+		       [(20150205 2111)
+			nil "simple menubar integration for org-clock" tar
+			((:commit . "9964d2a97cc2fb6570dc4116da44f73bd8eb7cb3")
+			 (:authors
+			  ("Jordon Biondo" . "jordonbiondo@gmail.com"))
+			 (:maintainer "Jordon Biondo" . "jordonbiondo@gmail.com")
+			 (:keywords "org" "osx")
+			 (:url . "https://github.com/jordonbiondo/osx-org-clock-menubar"))])

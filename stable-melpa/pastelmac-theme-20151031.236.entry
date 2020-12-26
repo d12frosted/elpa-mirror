@@ -1,2 +1,11 @@
-
-(pastelmac-theme . [(20151031 236) ((emacs (24 1))) "a soothing theme with a pastel color palette" single ((:commit . "bead21741e3f46f6506e8aef4469d4240a819389") (:keywords "themes") (:authors ("Brian Mastenbrook" . "brian@mastenbrook.net")) (:maintainer "Brian Mastenbrook" . "brian@mastenbrook.net") (:url . "https://github.com/bmastenbrook/pastelmac-theme-el"))])
+(pastelmac-theme .
+		 [(20151031 236)
+		  ((emacs
+		    (24 1)))
+		  "a soothing theme with a pastel color palette" single
+		  ((:commit . "bead21741e3f46f6506e8aef4469d4240a819389")
+		   (:authors
+		    ("Brian Mastenbrook" . "brian@mastenbrook.net"))
+		   (:maintainer "Brian Mastenbrook" . "brian@mastenbrook.net")
+		   (:keywords "themes")
+		   (:url . "https://github.com/bmastenbrook/pastelmac-theme-el"))])

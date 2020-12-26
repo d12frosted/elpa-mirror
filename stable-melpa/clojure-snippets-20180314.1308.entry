@@ -1,2 +1,10 @@
-
-(clojure-snippets . [(20180314 1308) ((yasnippet (0 10 0))) "Yasnippets for clojure" tar ((:commit . "6068dca90467a0f4ebc2cd39338a173d6f5ddc04"))])
+(clojure-snippets .
+		  [(20180314 1308)
+		   ((yasnippet
+		     (0 10 0)))
+		   "Yasnippets for clojure" tar
+		   ((:commit . "6068dca90467a0f4ebc2cd39338a173d6f5ddc04")
+		    (:authors
+		     ("Max Penet" . "m@qbits.cc"))
+		    (:maintainer "Max Penet" . "m@qbits.cc")
+		    (:keywords "snippets"))])

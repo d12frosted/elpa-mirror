@@ -1,2 +1,17 @@
-
-(helm-mt . [(20160918 452) ((emacs (24)) (helm (0 0)) (multi-term (0 0)) (cl-lib (0 5))) "helm multi-term management" single ((:commit . "d2bff4100118483bc398c56d0ff095294209265b") (:keywords "helm" "multi-term") (:authors ("Didier Deshommes" . "dfdeshom@gmail.com")) (:maintainer "Didier Deshommes" . "dfdeshom@gmail.com") (:url . "https://github.com/dfdeshom/helm-mt"))])
+(helm-mt .
+	 [(20160918 452)
+	  ((emacs
+	    (24))
+	   (helm
+	    (0 0))
+	   (multi-term
+	    (0 0))
+	   (cl-lib
+	    (0 5)))
+	  "helm multi-term management" single
+	  ((:commit . "d2bff4100118483bc398c56d0ff095294209265b")
+	   (:authors
+	    ("Didier Deshommes" . "dfdeshom@gmail.com"))
+	   (:maintainer "Didier Deshommes" . "dfdeshom@gmail.com")
+	   (:keywords "helm" "multi-term")
+	   (:url . "https://github.com/dfdeshom/helm-mt"))])

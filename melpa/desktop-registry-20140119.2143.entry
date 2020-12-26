@@ -1,2 +1,9 @@
-
-(desktop-registry . [(20140119 2143) nil "Keep a central registry of desktop files" single ((:commit . "244c2e7f9f0a1050aa8a47ad0b38f4e4584682dd") (:keywords "convenience") (:authors ("Tom Willemse" . "tom@ryuslash.org")) (:maintainer "Tom Willemse" . "tom@ryuslash.org") (:url . "http://projects.ryuslash.org/desktop-registry/"))])
+(desktop-registry .
+		  [(20140119 2143)
+		   nil "Keep a central registry of desktop files" single
+		   ((:commit . "244c2e7f9f0a1050aa8a47ad0b38f4e4584682dd")
+		    (:authors
+		     ("Tom Willemse" . "tom@ryuslash.org"))
+		    (:maintainer "Tom Willemse" . "tom@ryuslash.org")
+		    (:keywords "convenience")
+		    (:url . "http://projects.ryuslash.org/desktop-registry/"))])

@@ -1,1 +1,4 @@
-An interface for communicating with Jupyter kernels.
+;;; Commentary:
+
+;; An interface for communicating with Jupyter kernels.
+

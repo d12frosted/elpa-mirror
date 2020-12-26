@@ -1,2 +1,13 @@
-
-(helm-chronos . [(20150528 2036) ((chronos (1 2)) (helm (1 7 1))) "helm interface for chronos timers" tar ((:commit . "a14fc3d65dd96ce6616234b3f7b8b08b4c1817ef") (:keywords "calendar") (:authors ("David Knight" . "dxknight@opmbx.org")) (:maintainer "David Knight" . "dxknight@opmbx.org") (:url . "http://github.com/dxknight/helm-chronos"))])
+(helm-chronos .
+	      [(20150528 2036)
+	       ((chronos
+		 (1 2))
+		(helm
+		 (1 7 1)))
+	       "helm interface for chronos timers" tar
+	       ((:commit . "a14fc3d65dd96ce6616234b3f7b8b08b4c1817ef")
+		(:authors
+		 ("David Knight" . "dxknight@opmbx.org"))
+		(:maintainer "David Knight" . "dxknight@opmbx.org")
+		(:keywords "calendar")
+		(:url . "http://github.com/dxknight/helm-chronos"))])

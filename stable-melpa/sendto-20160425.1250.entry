@@ -1,2 +1,11 @@
-
-(sendto . [(20160425 1250) ((emacs (24 4))) "send the region content to a function" single ((:commit . "076b81d7a53f75b0a59b0ef3448f35570567054c") (:keywords "convenience" "region") (:authors ("DarkSun" . "lujun9972@gmail.com")) (:maintainer "DarkSun" . "lujun9972@gmail.com") (:url . "https://github.com/lujun9972/sendto.el"))])
+(sendto .
+	[(20160425 1250)
+	 ((emacs
+	   (24 4)))
+	 "send the region content to a function" single
+	 ((:commit . "076b81d7a53f75b0a59b0ef3448f35570567054c")
+	  (:authors
+	   ("DarkSun" . "lujun9972@gmail.com"))
+	  (:maintainer "DarkSun" . "lujun9972@gmail.com")
+	  (:keywords "convenience" "region")
+	  (:url . "https://github.com/lujun9972/sendto.el"))])

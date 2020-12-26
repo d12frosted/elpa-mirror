@@ -1,2 +1,9 @@
-
-(region-convert . [(20181221 528) nil "Convert string in region by Lisp function" single ((:commit . "a50a0828a989fc1788a32946249a3758793156b3") (:keywords "region" "convenience") (:authors ("USAMI Kenta" . "tadsan@zonu.me")) (:maintainer "USAMI Kenta" . "tadsan@zonu.me") (:url . "https://github.com/zonuexe/right-click-context"))])
+(region-convert .
+		[(20181221 528)
+		 nil "Convert string in region by Lisp function" single
+		 ((:commit . "a50a0828a989fc1788a32946249a3758793156b3")
+		  (:authors
+		   ("USAMI Kenta" . "tadsan@zonu.me"))
+		  (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+		  (:keywords "region" "convenience")
+		  (:url . "https://github.com/zonuexe/right-click-context"))])

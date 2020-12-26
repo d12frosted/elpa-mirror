@@ -1,2 +1,10 @@
-
-(smart-forward . [(20140430 713) ((expand-region (0 8 0))) "Semantic navigation" single ((:commit . "7b6dbfdbd4b646376a567c70e1a161545431b72b") (:keywords "navigation") (:authors ("Magnar Sveen" . "magnars@gmail.com")) (:maintainer "Magnar Sveen" . "magnars@gmail.com"))])
+(smart-forward .
+	       [(20140430 713)
+		((expand-region
+		  (0 8 0)))
+		"Semantic navigation" single
+		((:commit . "7b6dbfdbd4b646376a567c70e1a161545431b72b")
+		 (:authors
+		  ("Magnar Sveen" . "magnars@gmail.com"))
+		 (:maintainer "Magnar Sveen" . "magnars@gmail.com")
+		 (:keywords "navigation"))])

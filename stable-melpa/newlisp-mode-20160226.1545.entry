@@ -1,2 +1,9 @@
-
-(newlisp-mode . [(20160226 1545) nil "newLISP editing mode for Emacs" single ((:commit . "ac23be40c81a360988ab803d365f1510733f6db4") (:keywords "language" "lisp" "newlisp") (:authors ("KOBAYASHI Shigeru <shigeru.kb[at]gmail.com>")) (:maintainer "KOBAYASHI Shigeru <shigeru.kb[at]gmail.com>") (:url . "https://github.com/kosh04/newlisp-mode"))])
+(newlisp-mode .
+	      [(20160226 1545)
+	       nil "newLISP editing mode for Emacs" single
+	       ((:commit . "ac23be40c81a360988ab803d365f1510733f6db4")
+		(:authors
+		 ("KOBAYASHI Shigeru <shigeru.kb[at]gmail.com>"))
+		(:maintainer "KOBAYASHI Shigeru <shigeru.kb[at]gmail.com>")
+		(:keywords "language" "lisp" "newlisp")
+		(:url . "https://github.com/kosh04/newlisp-mode"))])

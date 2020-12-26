@@ -1,2 +1,11 @@
-
-(fontify-face . [(20180420 1624) ((emacs (24))) "Fontify symbols representing faces with that face." single ((:commit . "30ec0134f04d2b156bbc772e94edfa1a31ef0a58") (:keywords "faces") (:authors ("Matúš Goljer" . "matus.goljer@gmail.com")) (:maintainer "Matúš Goljer" . "matus.goljer@gmail.com") (:url . "https://github.com/Fuco1/fontify-face"))])
+(fontify-face .
+	      [(20180420 1624)
+	       ((emacs
+		 (24)))
+	       "Fontify symbols representing faces with that face." single
+	       ((:commit . "30ec0134f04d2b156bbc772e94edfa1a31ef0a58")
+		(:authors
+		 ("Matúš Goljer" . "matus.goljer@gmail.com"))
+		(:maintainer "Matúš Goljer" . "matus.goljer@gmail.com")
+		(:keywords "faces")
+		(:url . "https://github.com/Fuco1/fontify-face"))])

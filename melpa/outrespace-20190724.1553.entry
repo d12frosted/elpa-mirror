@@ -1,2 +1,11 @@
-
-(outrespace . [(20190724 1553) ((emacs (24 4))) "Some c++ namespace utility functions" single ((:commit . "d8c1619ec81fd3f4e728212a3526cd13bc2b0147") (:keywords "tools" "c++" "namespace") (:authors ("Dan Harms" . "danielrharms@gmail.com")) (:maintainer "Dan Harms" . "danielrharms@gmail.com") (:url . "https://github.com/articuluxe/outrespace.git"))])
+(outrespace .
+	    [(20190724 1553)
+	     ((emacs
+	       (24 4)))
+	     "Some c++ namespace utility functions" single
+	     ((:commit . "d8c1619ec81fd3f4e728212a3526cd13bc2b0147")
+	      (:authors
+	       ("Dan Harms" . "danielrharms@gmail.com"))
+	      (:maintainer "Dan Harms" . "danielrharms@gmail.com")
+	      (:keywords "tools" "c++" "namespace")
+	      (:url . "https://github.com/articuluxe/outrespace.git"))])

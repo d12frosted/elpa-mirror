@@ -1,2 +1,11 @@
-
-(mini-header-line . [(20170621 1221) ((emacs (24 4))) "a minimal header-line" single ((:commit . "73b6724e0a26c4528d93768191c8aa59e6bce2e5") (:keywords "header-line" "mode-line") (:authors ("Johannes Goslar")) (:maintainer "Johannes Goslar") (:url . "https://github.com/ksjogo/mini-header-line"))])
+(mini-header-line .
+		  [(20170621 1221)
+		   ((emacs
+		     (24 4)))
+		   "a minimal header-line" single
+		   ((:commit . "73b6724e0a26c4528d93768191c8aa59e6bce2e5")
+		    (:authors
+		     ("Johannes Goslar"))
+		    (:maintainer "Johannes Goslar")
+		    (:keywords "header-line" "mode-line")
+		    (:url . "https://github.com/ksjogo/mini-header-line"))])

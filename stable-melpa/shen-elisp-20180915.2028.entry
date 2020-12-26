@@ -1,2 +1,10 @@
-
-(shen-elisp . [(20180915 2028) ((emacs (24 4))) "Shen implementation in Elisp" tar ((:commit . "73b74c8d6e3a2ea34b667d177d9f130765bfe501") (:keywords "shen" "elisp") (:url . "http://github.com/deech/shen-elisp"))])
+(shen-elisp .
+	    [(20180915 2028)
+	     ((emacs
+	       (24 4)))
+	     "Shen implementation in Elisp" tar
+	     ((:commit . "73b74c8d6e3a2ea34b667d177d9f130765bfe501")
+	      (:authors
+	       ("Aditya Siram" . "aditya.siram@gmail.com"))
+	      (:maintainer "Aditya Siram" . "aditya.siram@gmail.com")
+	      (:url . "https://github.com/deech/shen-elisp"))])

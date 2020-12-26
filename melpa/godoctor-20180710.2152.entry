@@ -1,2 +1,9 @@
-
-(godoctor . [(20180710 2152) nil "Frontend for godoctor" single ((:commit . "4b45ff3d0572f0e84056e4c3ba91fcc178199859") (:keywords "go" "golang" "refactoring") (:authors ("Sangho Na" . "microamp@protonmail.com")) (:maintainer "Sangho Na" . "microamp@protonmail.com") (:url . "https://github.com/microamp/godoctor.el"))])
+(godoctor .
+	  [(20180710 2152)
+	   nil "Frontend for godoctor" single
+	   ((:commit . "4b45ff3d0572f0e84056e4c3ba91fcc178199859")
+	    (:authors
+	     ("Sangho Na" . "microamp@protonmail.com"))
+	    (:maintainer "Sangho Na" . "microamp@protonmail.com")
+	    (:keywords "go" "golang" "refactoring")
+	    (:url . "https://github.com/microamp/godoctor.el"))])

@@ -1,2 +1,7 @@
-
-(purty-mode . [(20131004 2259) nil "Safely pretty-print greek letters, mathematical symbols, or anything else." single ((:commit . "8eef77317a3bab07ade212353a50fbd3f20f365a") (:authors ("James Atwood" . "jatwood@cs.umass.edu")) (:maintainer "James Atwood" . "jatwood@cs.umass.edu"))])
+(purty-mode .
+	    [(20131004 2259)
+	     nil "Safely pretty-print greek letters, mathematical symbols, or anything else." single
+	     ((:commit . "8eef77317a3bab07ade212353a50fbd3f20f365a")
+	      (:authors
+	       ("James Atwood" . "jatwood@cs.umass.edu"))
+	      (:maintainer "James Atwood" . "jatwood@cs.umass.edu"))])

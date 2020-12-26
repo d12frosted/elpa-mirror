@@ -1,2 +1,9 @@
-
-(elisp-sandbox . [(20131116 1842) nil "Evaluate EmacsLisp expressions in a sandbox" single ((:commit . "d894d68934ef09c42f72ac4e1173a0bedc23f139") (:keywords "lisp") (:authors ("Joel McCracken <mccracken.joel@gmail.com>, D. Goel" . "deego@gnufans.org")) (:maintainer "Joel McCracken <mccracken.joel@gmail.com>, D. Goel" . "deego@gnufans.org") (:url . "https://github.com/joelmccracken/elisp-sandbox"))])
+(elisp-sandbox .
+	       [(20131116 1842)
+		nil "Evaluate EmacsLisp expressions in a sandbox" single
+		((:commit . "d894d68934ef09c42f72ac4e1173a0bedc23f139")
+		 (:authors
+		  ("Joel McCracken <mccracken.joel@gmail.com>, D. Goel" . "deego@gnufans.org"))
+		 (:maintainer "Joel McCracken <mccracken.joel@gmail.com>, D. Goel" . "deego@gnufans.org")
+		 (:keywords "lisp")
+		 (:url . "https://github.com/joelmccracken/elisp-sandbox"))])

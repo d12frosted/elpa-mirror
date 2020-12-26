@@ -1,2 +1,11 @@
-
-(brightscript-mode . [(20200321 2126) ((emacs (26 3))) "Major mode for editing Brightscript files" single ((:commit . "3b34032bdde6a37b4566c45ce93cb38da21d4965") (:keywords "languages") (:authors ("Daniel Mircea" . "daniel@viseztrance.com")) (:maintainer nil . "daniel@viseztrance.com") (:url . "https://github.com/viseztrance/brightscript-mode"))])
+(brightscript-mode .
+		   [(20200321 2126)
+		    ((emacs
+		      (26 3)))
+		    "Major mode for editing Brightscript files" single
+		    ((:commit . "3b34032bdde6a37b4566c45ce93cb38da21d4965")
+		     (:authors
+		      ("Daniel Mircea" . "daniel@viseztrance.com"))
+		     (:maintainer nil . "daniel@viseztrance.com")
+		     (:keywords "languages")
+		     (:url . "https://github.com/viseztrance/brightscript-mode"))])

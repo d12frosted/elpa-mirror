@@ -1,2 +1,12 @@
-
-(take-off . [(20140531 917) ((emacs (24 3)) (web-server (0 1 0))) "Emacs remote web access" tar ((:commit . "aa9ea45566fc74febbb6ee9c409ecc4b59246215") (:authors ("Thomas Burette" . "burettethomas@gmail.com")) (:maintainer "Thomas Burette" . "burettethomas@gmail.com") (:url . "https://github.com/tburette/take-off"))])
+(take-off .
+	  [(20140531 917)
+	   ((emacs
+	     (24 3))
+	    (web-server
+	     (0 1 0)))
+	   "Emacs remote web access" tar
+	   ((:commit . "aa9ea45566fc74febbb6ee9c409ecc4b59246215")
+	    (:authors
+	     ("Thomas Burette" . "burettethomas@gmail.com"))
+	    (:maintainer "Thomas Burette" . "burettethomas@gmail.com")
+	    (:url . "https://github.com/tburette/take-off"))])

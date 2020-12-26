@@ -1,2 +1,12 @@
-
-(turnip . [(20150309 629) ((dash (2 6 0)) (s (1 9 0))) "Interacting with tmux from Emacs" single ((:commit . "2fd32562fc6fc1cda6d91aa939cfb29f9b16e9de") (:keywords "terminals" "tools") (:authors ("Johann Klähn" . "kljohann@gmail.com")) (:maintainer "Johann Klähn" . "kljohann@gmail.com"))])
+(turnip .
+	[(20150309 629)
+	 ((dash
+	   (2 6 0))
+	  (s
+	   (1 9 0)))
+	 "Interacting with tmux from Emacs" single
+	 ((:commit . "2fd32562fc6fc1cda6d91aa939cfb29f9b16e9de")
+	  (:authors
+	   ("Johann Klähn" . "kljohann@gmail.com"))
+	  (:maintainer "Johann Klähn" . "kljohann@gmail.com")
+	  (:keywords "terminals" "tools"))])

@@ -1,2 +1,13 @@
-
-(ox-mediawiki . [(20180105 2154) ((cl-lib (0 5)) (s (1 9 0))) "Mediawiki Back-End for Org Export Engine" single ((:commit . "a9327150293e370e500ba55bddfe5fc435c6bf9b") (:keywords "org" "wp" "mediawiki") (:authors ("Tom Alexander" . "tomalexander@paphus.com")) (:maintainer "Tom Alexander" . "tomalexander@paphus.com") (:url . "https://github.com/tomalexander/orgmode-mediawiki"))])
+(ox-mediawiki .
+	      [(20180105 2154)
+	       ((cl-lib
+		 (0 5))
+		(s
+		 (1 9 0)))
+	       "Mediawiki Back-End for Org Export Engine" single
+	       ((:commit . "a9327150293e370e500ba55bddfe5fc435c6bf9b")
+		(:authors
+		 ("Tom Alexander" . "tomalexander@paphus.com"))
+		(:maintainer "Tom Alexander" . "tomalexander@paphus.com")
+		(:keywords "org" "wp" "mediawiki")
+		(:url . "https://github.com/tomalexander/orgmode-mediawiki"))])

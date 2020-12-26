@@ -1,2 +1,9 @@
-
-(launch . [(20130619 2204) nil "launch files with OS-standard associated applications." single ((:commit . "e7c3b573fc05fe4d3d322389079909311542e799") (:keywords "convenience" "processes") (:authors ("Simon Law" . "sfllaw@sfllaw.ca")) (:maintainer "Simon Law" . "sfllaw@sfllaw.ca") (:url . "https://github.com/sfllaw/emacs-launch"))])
+(launch .
+	[(20130619 2204)
+	 nil "launch files with OS-standard associated applications." single
+	 ((:commit . "e7c3b573fc05fe4d3d322389079909311542e799")
+	  (:authors
+	   ("Simon Law" . "sfllaw@sfllaw.ca"))
+	  (:maintainer "Simon Law" . "sfllaw@sfllaw.ca")
+	  (:keywords "convenience" "processes")
+	  (:url . "https://github.com/sfllaw/emacs-launch"))])

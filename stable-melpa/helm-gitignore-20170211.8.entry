@@ -1,2 +1,17 @@
-
-(helm-gitignore . [(20170211 8) ((gitignore-mode (1 1 0)) (helm (1 7 0)) (request (0 1 0)) (cl-lib (0 5))) "Generate .gitignore files with gitignore.io." single ((:commit . "2a2e7da7855a6db0ab3bb6a6a087863d7abd4391") (:keywords "helm" "gitignore" "gitignore.io") (:authors ("Juan Placencia")) (:maintainer "Juan Placencia") (:url . "https://github.com/jupl/helm-gitignore"))])
+(helm-gitignore .
+		[(20170211 8)
+		 ((gitignore-mode
+		   (1 1 0))
+		  (helm
+		   (1 7 0))
+		  (request
+		   (0 1 0))
+		  (cl-lib
+		   (0 5)))
+		 "Generate .gitignore files with gitignore.io." single
+		 ((:commit . "2a2e7da7855a6db0ab3bb6a6a087863d7abd4391")
+		  (:authors
+		   ("Juan Placencia"))
+		  (:maintainer "Juan Placencia")
+		  (:keywords "helm" "gitignore" "gitignore.io")
+		  (:url . "https://github.com/jupl/helm-gitignore"))])

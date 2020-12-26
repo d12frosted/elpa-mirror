@@ -1,2 +1,13 @@
-
-(flycheck-elsa . [(20200203 1758) ((emacs (25)) (seq (2 0))) "Flycheck for Elsa." tar ((:commit . "6274e6d5391bcdca46164b3238b045ca21c353a2") (:keywords "convenience") (:authors ("Matúš Goljer" . "matus.goljer@gmail.com")) (:maintainer "Matúš Goljer" . "matus.goljer@gmail.com") (:url . "https://github.com/emacs-elsa/flycheck-elsa"))])
+(flycheck-elsa .
+	       [(20200203 1758)
+		((emacs
+		  (25))
+		 (seq
+		  (2 0)))
+		"Flycheck for Elsa." tar
+		((:commit . "6274e6d5391bcdca46164b3238b045ca21c353a2")
+		 (:authors
+		  ("Matúš Goljer" . "matus.goljer@gmail.com"))
+		 (:maintainer "Matúš Goljer" . "matus.goljer@gmail.com")
+		 (:keywords "convenience")
+		 (:url . "https://github.com/emacs-elsa/flycheck-elsa"))])

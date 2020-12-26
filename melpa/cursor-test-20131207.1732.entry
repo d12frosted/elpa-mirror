@@ -1,2 +1,10 @@
-
-(cursor-test . [(20131207 1732) ((emacs (24))) "testing library for cursor position in emacs." single ((:commit . "e09956e048b88fd2ee8dd90b5678baed8b04d31b") (:authors ("ainame")) (:maintainer "ainame") (:url . "https://github.com/ainame/cursor-test.el"))])
+(cursor-test .
+	     [(20131207 1732)
+	      ((emacs
+		(24)))
+	      "testing library for cursor position in emacs." single
+	      ((:commit . "e09956e048b88fd2ee8dd90b5678baed8b04d31b")
+	       (:authors
+		("ainame"))
+	       (:maintainer "ainame")
+	       (:url . "https://github.com/ainame/cursor-test.el"))])

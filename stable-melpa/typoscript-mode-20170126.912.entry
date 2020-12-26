@@ -1,2 +1,13 @@
-
-(typoscript-mode . [(20170126 912) ((emacs (24 4)) (use-package (0))) "mode for TypoScript files" single ((:commit . "44e7567e921573c4f33c537b827f71fb1f565c32") (:keywords "typo3" "typoscript") (:authors ("Johannes Goslar")) (:maintainer "Johannes Goslar") (:url . "https://github.com/ksjogo/typoscript-mode"))])
+(typoscript-mode .
+		 [(20170126 912)
+		  ((emacs
+		    (24 4))
+		   (use-package
+		    (0)))
+		  "mode for TypoScript files" single
+		  ((:commit . "44e7567e921573c4f33c537b827f71fb1f565c32")
+		   (:authors
+		    ("Johannes Goslar"))
+		   (:maintainer "Johannes Goslar")
+		   (:keywords "typo3" "typoscript")
+		   (:url . "https://github.com/ksjogo/typoscript-mode"))])

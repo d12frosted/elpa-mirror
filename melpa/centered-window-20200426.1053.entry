@@ -1,2 +1,11 @@
-
-(centered-window . [(20200426 1053) ((emacs (24 4))) "Center the text when there's only one window" single ((:commit . "f50859941ab5c7cbeaee410f2d38716252b552ac") (:keywords "faces" "windows") (:authors ("Anler Hernández Peral" . "inbox+emacs@anler.me")) (:maintainer "Anler Hernández Peral" . "inbox+emacs@anler.me") (:url . "https://github.com/anler/centered-window-mode"))])
+(centered-window .
+		 [(20200426 1053)
+		  ((emacs
+		    (24 4)))
+		  "Center the text when there's only one window" single
+		  ((:commit . "f50859941ab5c7cbeaee410f2d38716252b552ac")
+		   (:authors
+		    ("Anler Hernández Peral" . "inbox+emacs@anler.me"))
+		   (:maintainer "Anler Hernández Peral" . "inbox+emacs@anler.me")
+		   (:keywords "faces" "windows")
+		   (:url . "https://github.com/anler/centered-window-mode"))])

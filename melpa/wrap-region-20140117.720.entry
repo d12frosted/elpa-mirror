@@ -1,2 +1,11 @@
-
-(wrap-region . [(20140117 720) ((dash (1 0 3))) "Wrap text with punctation or tag" single ((:commit . "fbae9b0f106187af19823f1a6260b5c68b7252e6") (:keywords "speed" "convenience") (:authors ("Johan Andersson" . "johan.rejeep@gmail.com")) (:maintainer "Johan Andersson" . "johan.rejeep@gmail.com") (:url . "http://github.com/rejeep/wrap-region"))])
+(wrap-region .
+	     [(20140117 720)
+	      ((dash
+		(1 0 3)))
+	      "Wrap text with punctation or tag" single
+	      ((:commit . "fbae9b0f106187af19823f1a6260b5c68b7252e6")
+	       (:authors
+		("Johan Andersson" . "johan.rejeep@gmail.com"))
+	       (:maintainer "Johan Andersson" . "johan.rejeep@gmail.com")
+	       (:keywords "speed" "convenience")
+	       (:url . "http://github.com/rejeep/wrap-region"))])

@@ -1,2 +1,11 @@
-
-(bnfc . [(20160605 1927) ((emacs (24 3))) "Define context-free grammars for the BNFC tool" single ((:commit . "1b58df1dd0cb9b81900632fb2843a03b94f56fdb") (:keywords "languages" "tools") (:authors ("Jacob Mitchell" . "jmitchell@member.fsf.org")) (:maintainer "Jacob Mitchell" . "jmitchell@member.fsf.org") (:url . "https://github.com/jmitchell/bnfc-mode"))])
+(bnfc .
+      [(20160605 1927)
+       ((emacs
+	 (24 3)))
+       "Define context-free grammars for the BNFC tool" single
+       ((:commit . "1b58df1dd0cb9b81900632fb2843a03b94f56fdb")
+	(:authors
+	 ("Jacob Mitchell" . "jmitchell@member.fsf.org"))
+	(:maintainer "Jacob Mitchell" . "jmitchell@member.fsf.org")
+	(:keywords "languages" "tools")
+	(:url . "https://github.com/jmitchell/bnfc-mode"))])

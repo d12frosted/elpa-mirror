@@ -1,2 +1,9 @@
-
-(netherlands-holidays . [(20150202 1617) nil "Netherlands holidays for Emacs calendar." single ((:commit . "26236178cdd650df9958bf5a086e184096559f00") (:keywords "calendar") (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com")) (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com") (:url . "https://github.com/abo-abo/netherlands-holidays"))])
+(netherlands-holidays .
+		      [(20150202 1617)
+		       nil "Netherlands holidays for Emacs calendar." single
+		       ((:commit . "26236178cdd650df9958bf5a086e184096559f00")
+			(:authors
+			 ("Oleh Krehel" . "ohwoeowho@gmail.com"))
+			(:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
+			(:keywords "calendar")
+			(:url . "https://github.com/abo-abo/netherlands-holidays"))])

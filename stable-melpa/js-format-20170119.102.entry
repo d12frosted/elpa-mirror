@@ -1,2 +1,13 @@
-
-(js-format . [(20170119 102) ((emacs (24 1)) (js2-mode (20101228))) "Format or transform code style using NodeJS server with different javascript formatter" tar ((:commit . "544bda9be72b74ec2d442543ba60cff727d96669") (:keywords "js" "javascript" "format" "standard" "jsbeautify" "esformatter" "airbnb") (:authors ("James Yang" . "jamesyang999@gmail.com")) (:maintainer "James Yang" . "jamesyang999@gmail.com") (:url . "http://github.com/futurist/js-format.el"))])
+(js-format .
+	   [(20170119 102)
+	    ((emacs
+	      (24 1))
+	     (js2-mode
+	      (20101228)))
+	    "Format or transform code style using NodeJS server with different javascript formatter" tar
+	    ((:commit . "544bda9be72b74ec2d442543ba60cff727d96669")
+	     (:authors
+	      ("James Yang" . "jamesyang999@gmail.com"))
+	     (:maintainer "James Yang" . "jamesyang999@gmail.com")
+	     (:keywords "js" "javascript" "format" "standard" "jsbeautify" "esformatter" "airbnb")
+	     (:url . "http://github.com/futurist/js-format.el"))])

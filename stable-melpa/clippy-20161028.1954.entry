@@ -1,2 +1,11 @@
-
-(clippy . [(20161028 1954) ((pos-tip (1 0))) "Show tooltip with function documentation at point" single ((:commit . "e77f6b63e54d74e243be98accad474e38f7e2a86") (:keywords "docs") (:authors ("Matus Goljer" . "matus.goljer@gmail.com")) (:maintainer "Matus Goljer" . "matus.goljer@gmail.com") (:url . "https://github.com/Fuco1/clippy.el"))])
+(clippy .
+	[(20161028 1954)
+	 ((pos-tip
+	   (1 0)))
+	 "Show tooltip with function documentation at point" single
+	 ((:commit . "e77f6b63e54d74e243be98accad474e38f7e2a86")
+	  (:authors
+	   ("Matus Goljer" . "matus.goljer@gmail.com"))
+	  (:maintainer "Matus Goljer" . "matus.goljer@gmail.com")
+	  (:keywords "docs")
+	  (:url . "https://github.com/Fuco1/clippy.el"))])

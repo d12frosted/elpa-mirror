@@ -1,2 +1,12 @@
-
-(codic . [(20150926 1127) ((emacs (24)) (cl-lib (0 5))) "Search Codic (codic.jp) naming dictionaries" tar ((:commit . "52bbb6997ef4ab9fb7fea43bbfff7f04671aa557") (:authors ("Syohei YOSHIDA" . "syohex@gmail.com")) (:maintainer "Syohei YOSHIDA" . "syohex@gmail.com") (:url . "https://github.com/syohex/emacs-codic"))])
+(codic .
+       [(20150926 1127)
+	((emacs
+	  (24))
+	 (cl-lib
+	  (0 5)))
+	"Search Codic (codic.jp) naming dictionaries" tar
+	((:commit . "52bbb6997ef4ab9fb7fea43bbfff7f04671aa557")
+	 (:authors
+	  ("Syohei YOSHIDA" . "syohex@gmail.com"))
+	 (:maintainer "Syohei YOSHIDA" . "syohex@gmail.com")
+	 (:url . "https://github.com/syohex/emacs-codic"))])

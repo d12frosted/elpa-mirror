@@ -1,2 +1,9 @@
-
-(keychain-environment . [(20180318 2223) nil "load keychain environment variables" single ((:commit . "d3643196de6dc79ea77f9f4805028350fd76100b") (:keywords "gnupg" "pgp" "ssh") (:authors ("Paul Tipper <bluefoo at googlemail dot com>")) (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li") (:url . "https://github.com/tarsius/keychain-environment"))])
+(keychain-environment .
+		      [(20180318 2223)
+		       nil "load keychain environment variables" single
+		       ((:commit . "d3643196de6dc79ea77f9f4805028350fd76100b")
+			(:authors
+			 ("Paul Tipper <bluefoo at googlemail dot com>"))
+			(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+			(:keywords "gnupg" "pgp" "ssh")
+			(:url . "https://github.com/tarsius/keychain-environment"))])

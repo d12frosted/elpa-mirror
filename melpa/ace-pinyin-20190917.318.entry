@@ -1,2 +1,13 @@
-
-(ace-pinyin . [(20190917 318) ((avy (0 2 0)) (pinyinlib (0 1 0))) "Jump to Chinese characters using avy or ace-jump-mode" single ((:commit . "8b2e9335b02486730ea4ceee790130cc5328f9ea") (:keywords "extensions") (:authors ("Junpeng Qiu" . "qjpchmail@gmail.com")) (:maintainer "Junpeng Qiu" . "qjpchmail@gmail.com") (:url . "https://github.com/cute-jumper/ace-pinyin"))])
+(ace-pinyin .
+	    [(20190917 318)
+	     ((avy
+	       (0 2 0))
+	      (pinyinlib
+	       (0 1 0)))
+	     "Jump to Chinese characters using avy or ace-jump-mode" single
+	     ((:commit . "8b2e9335b02486730ea4ceee790130cc5328f9ea")
+	      (:authors
+	       ("Junpeng Qiu" . "qjpchmail@gmail.com"))
+	      (:maintainer "Junpeng Qiu" . "qjpchmail@gmail.com")
+	      (:keywords "extensions")
+	      (:url . "https://github.com/cute-jumper/ace-pinyin"))])

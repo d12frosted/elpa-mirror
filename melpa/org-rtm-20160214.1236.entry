@@ -1,2 +1,11 @@
-
-(org-rtm . [(20160214 1236) ((rtm (0 1))) "Simple import/export from rememberthemilk to org-mode" single ((:commit . "adc42ad1fbe92ab447ccc9553780f4456f2508d2") (:keywords "outlines" "data") (:authors ("Philipp Middendorf" . "pmidden@secure.mailbox.org")) (:maintainer "Philipp Middendorf" . "pmidden@secure.mailbox.org") (:url . "https://github.com/pmiddend/org-rtm"))])
+(org-rtm .
+	 [(20160214 1236)
+	  ((rtm
+	    (0 1)))
+	  "Simple import/export from rememberthemilk to org-mode" single
+	  ((:commit . "adc42ad1fbe92ab447ccc9553780f4456f2508d2")
+	   (:authors
+	    ("Philipp Middendorf" . "pmidden@secure.mailbox.org"))
+	   (:maintainer "Philipp Middendorf" . "pmidden@secure.mailbox.org")
+	   (:keywords "outlines" "data")
+	   (:url . "https://github.com/pmiddend/org-rtm"))])

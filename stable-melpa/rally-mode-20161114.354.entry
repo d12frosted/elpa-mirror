@@ -1,2 +1,11 @@
-
-(rally-mode . [(20161114 354) ((popwin (1 0 0))) "a mode to interact with the Rally Software web site." single ((:commit . "0f5e09a6abe2de7613f174b4f54863df93343134") (:keywords "rally" "ca" "agile") (:authors ("Sean LeBlanc" . "seanleblanc@gmail.com")) (:maintainer "Sean LeBlanc" . "seanleblanc@gmail.com") (:url . "https://pragcraft.wordpress.com/"))])
+(rally-mode .
+	    [(20161114 354)
+	     ((popwin
+	       (1 0 0)))
+	     "a mode to interact with the Rally Software web site." single
+	     ((:commit . "0f5e09a6abe2de7613f174b4f54863df93343134")
+	      (:authors
+	       ("Sean LeBlanc" . "seanleblanc@gmail.com"))
+	      (:maintainer "Sean LeBlanc" . "seanleblanc@gmail.com")
+	      (:keywords "rally" "ca" "agile")
+	      (:url . "https://pragcraft.wordpress.com/"))])

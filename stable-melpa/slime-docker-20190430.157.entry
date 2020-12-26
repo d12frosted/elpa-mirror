@@ -1,2 +1,14 @@
-
-(slime-docker . [(20190430 157) ((emacs (24)) (slime (2 16)) (docker-tramp (0 1)) (cl-lib (0 5))) "Integration of SLIME with Docker containers." tar ((:commit . "151cec4a11965cdc00d231900a50f2c9f455fce2") (:keywords "docker" "lisp" "slime") (:url . "https://github.com/daewok/slime-docker"))])
+(slime-docker .
+	      [(20190430 157)
+	       ((emacs
+		 (24))
+		(slime
+		 (2 16))
+		(docker-tramp
+		 (0 1))
+		(cl-lib
+		 (0 5)))
+	       "Integration of SLIME with Docker containers." tar
+	       ((:commit . "151cec4a11965cdc00d231900a50f2c9f455fce2")
+		(:keywords "docker" "lisp" "slime")
+		(:url . "https://github.com/daewok/slime-docker"))])

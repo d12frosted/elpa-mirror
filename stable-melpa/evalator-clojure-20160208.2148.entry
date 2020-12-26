@@ -1,2 +1,13 @@
-
-(evalator-clojure . [(20160208 2148) ((cider (0 10 0)) (evalator (1 0 0))) "Clojure evaluation context for evalator via CIDER." tar ((:commit . "caa4e0a137bdfada86593128a654e16aa617ad50") (:keywords "languages" "clojure" "cider" "helm") (:authors ("Sean Irby")) (:maintainer "Sean Irby" . "sean.t.irby@gmail.com") (:url . "http://www.github.com/seanirby/evalator-clojure"))])
+(evalator-clojure .
+		  [(20160208 2148)
+		   ((cider
+		     (0 10 0))
+		    (evalator
+		     (1 0 0)))
+		   "Clojure evaluation context for evalator via CIDER." tar
+		   ((:commit . "caa4e0a137bdfada86593128a654e16aa617ad50")
+		    (:authors
+		     ("Sean Irby"))
+		    (:maintainer "Sean Irby" . "sean.t.irby@gmail.com")
+		    (:keywords "languages" "clojure" "cider" "helm")
+		    (:url . "http://www.github.com/seanirby/evalator-clojure"))])

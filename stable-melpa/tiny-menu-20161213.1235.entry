@@ -1,2 +1,11 @@
-
-(tiny-menu . [(20161213 1235) ((emacs (24 4))) "Display tiny menus." single ((:commit . "05563b94537b6eb22aeddedef2a6e59e3f88d073") (:keywords "menu" "tools") (:authors ("Aaron Bieber" . "aaron@aaronbieber.com")) (:maintainer "Aaron Bieber" . "aaron@aaronbieber.com") (:url . "https://github.com/aaronbieber/tiny-menu.el"))])
+(tiny-menu .
+	   [(20161213 1235)
+	    ((emacs
+	      (24 4)))
+	    "Display tiny menus." single
+	    ((:commit . "05563b94537b6eb22aeddedef2a6e59e3f88d073")
+	     (:authors
+	      ("Aaron Bieber" . "aaron@aaronbieber.com"))
+	     (:maintainer "Aaron Bieber" . "aaron@aaronbieber.com")
+	     (:keywords "menu" "tools")
+	     (:url . "https://github.com/aaronbieber/tiny-menu.el"))])

@@ -1,2 +1,11 @@
-
-(org-shoplist . [(20201003 1235) ((emacs (25))) "Eat the world" single ((:commit . "de2d0ba7a2177921b15468417f1de1b00e076895") (:keywords "extensions" "matching") (:authors ("lordnik22")) (:maintainer "lordnik22") (:url . "https://github.com/lordnik22"))])
+(org-shoplist .
+	      [(20201003 1235)
+	       ((emacs
+		 (25)))
+	       "Eat the world" single
+	       ((:commit . "de2d0ba7a2177921b15468417f1de1b00e076895")
+		(:authors
+		 ("lordnik22"))
+		(:maintainer "lordnik22")
+		(:keywords "extensions" "matching")
+		(:url . "https://github.com/lordnik22"))])

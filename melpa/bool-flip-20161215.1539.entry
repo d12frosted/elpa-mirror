@@ -1,2 +1,11 @@
-
-(bool-flip . [(20161215 1539) ((emacs (24 3))) "flip the boolean under the point" single ((:commit . "f58a9a7b9ab875bcfbd57c8262697ae404eb4485") (:keywords "boolean" "convenience" "usability") (:authors ("Michael Brandt" . "michaelbrandt5@gmail.com")) (:maintainer "Michael Brandt" . "michaelbrandt5@gmail.com") (:url . "http://github.com/michaeljb/bool-flip/"))])
+(bool-flip .
+	   [(20161215 1539)
+	    ((emacs
+	      (24 3)))
+	    "flip the boolean under the point" single
+	    ((:commit . "f58a9a7b9ab875bcfbd57c8262697ae404eb4485")
+	     (:authors
+	      ("Michael Brandt" . "michaelbrandt5@gmail.com"))
+	     (:maintainer "Michael Brandt" . "michaelbrandt5@gmail.com")
+	     (:keywords "boolean" "convenience" "usability")
+	     (:url . "http://github.com/michaeljb/bool-flip/"))])

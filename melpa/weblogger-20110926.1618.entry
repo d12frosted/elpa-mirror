@@ -1,2 +1,8 @@
-
-(weblogger . [(20110926 1618) ((xml-rpc (1 6 8))) "Weblog maintenance via XML-RPC APIs" single ((:commit . "b3dd4aead9d3a87e6d85e7fef4f4f3bd40d87b53") (:keywords "weblog" "blogger" "cms" "movable" "type" "openweblog" "blog") (:url . "http://launchpad.net/weblogger-el"))])
+(weblogger .
+	   [(20110926 1618)
+	    ((xml-rpc
+	      (1 6 8)))
+	    "Weblog maintenance via XML-RPC APIs" single
+	    ((:commit . "b3dd4aead9d3a87e6d85e7fef4f4f3bd40d87b53")
+	     (:keywords "weblog" "blogger" "cms" "movable" "type" "openweblog" "blog")
+	     (:url . "http://launchpad.net/weblogger-el"))])

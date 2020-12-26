@@ -1,2 +1,10 @@
-
-(js-codemod . [(20190921 941) ((emacs (24 4))) "Run js-codemod on current sentence or selected region" tar ((:commit . "056bdf3e5e0c807b8cf17edb5834179a90fb722b") (:keywords "js" "codemod" "region") (:authors (nil . "Torgeir Thoresen <@torgeir>")) (:maintainer nil . "Torgeir Thoresen <@torgeir>"))])
+(js-codemod .
+	    [(20190921 941)
+	     ((emacs
+	       (24 4)))
+	     "Run js-codemod on current sentence or selected region" tar
+	     ((:commit . "056bdf3e5e0c807b8cf17edb5834179a90fb722b")
+	      (:authors
+	       (nil . "Torgeir Thoresen <@torgeir>"))
+	      (:maintainer nil . "Torgeir Thoresen <@torgeir>")
+	      (:keywords "js" "codemod" "region"))])

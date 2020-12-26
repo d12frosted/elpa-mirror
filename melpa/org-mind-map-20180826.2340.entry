@@ -1,2 +1,15 @@
-
-(org-mind-map . [(20180826 2340) ((emacs (24)) (dash (1 8 0)) (org (8 2 10))) "Creates a directed graph from org-mode files" single ((:commit . "95347b2f9291f5c5eb6ebac8e726c03634c61de3") (:keywords "orgmode" "extensions" "graphviz" "dot") (:authors ("Ted Wiles" . "theodore.wiles@gmail.com")) (:maintainer "Ted Wiles" . "theodore.wiles@gmail.com") (:url . "https://github.com/theodorewiles/org-mind-map"))])
+(org-mind-map .
+	      [(20180826 2340)
+	       ((emacs
+		 (24))
+		(dash
+		 (1 8 0))
+		(org
+		 (8 2 10)))
+	       "Creates a directed graph from org-mode files" single
+	       ((:commit . "95347b2f9291f5c5eb6ebac8e726c03634c61de3")
+		(:authors
+		 ("Ted Wiles" . "theodore.wiles@gmail.com"))
+		(:maintainer "Ted Wiles" . "theodore.wiles@gmail.com")
+		(:keywords "orgmode" "extensions" "graphviz" "dot")
+		(:url . "https://github.com/theodorewiles/org-mind-map"))])

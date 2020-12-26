@@ -1,2 +1,11 @@
-
-(lines-at-once . [(20180422 247) ((emacs (25))) "Insert and edit multiple lines at once" single ((:commit . "31bce4b79fe16251b7cf118f0d343b0b46f72360") (:keywords "abbrev" "tools") (:authors ("Jiahao Li" . "jiahaowork@gmail.com")) (:maintainer "Jiahao Li" . "jiahaowork@gmail.com") (:url . "https://github.com/jiahaowork/lines-at-once.el"))])
+(lines-at-once .
+	       [(20180422 247)
+		((emacs
+		  (25)))
+		"Insert and edit multiple lines at once" single
+		((:commit . "31bce4b79fe16251b7cf118f0d343b0b46f72360")
+		 (:authors
+		  ("Jiahao Li" . "jiahaowork@gmail.com"))
+		 (:maintainer "Jiahao Li" . "jiahaowork@gmail.com")
+		 (:keywords "abbrev" "tools")
+		 (:url . "https://github.com/jiahaowork/lines-at-once.el"))])

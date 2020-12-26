@@ -1,2 +1,8 @@
-
-(flymake-lua . [(20170129 154) nil "Flymake for Lua" single ((:commit . "84589f20066921a5b79cf3a1f914a223a2552d2a") (:keywords "lua") (:authors (nil . "Sébastien Roccaserra (format \"<%s%s@%s.%s>\" \"s\" \"roccaserra\" \"yahoo\" \"com\")")) (:maintainer nil . "Sébastien Roccaserra (format \"<%s%s@%s.%s>\" \"s\" \"roccaserra\" \"yahoo\" \"com\")"))])
+(flymake-lua .
+	     [(20170129 154)
+	      nil "Flymake for Lua" single
+	      ((:commit . "84589f20066921a5b79cf3a1f914a223a2552d2a")
+	       (:authors
+		(nil . "Sébastien Roccaserra (format \"<%s%s@%s.%s>\" \"s\" \"roccaserra\" \"yahoo\" \"com\")"))
+	       (:maintainer nil . "Sébastien Roccaserra (format \"<%s%s@%s.%s>\" \"s\" \"roccaserra\" \"yahoo\" \"com\")")
+	       (:keywords "lua"))])

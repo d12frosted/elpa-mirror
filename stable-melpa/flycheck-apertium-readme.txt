@@ -1,16 +1,19 @@
-This package adds support for some Apertium source formats to
-flycheck.
+;;; Commentary:
 
-For best results, get the core Apertium development tools
-(apertium-all-dev) from the nightly repos:
-http://wiki.apertium.org/wiki/Installation
+;; This package adds support for some Apertium source formats to
+;; flycheck.
 
-To use it, add this to your init.el:
+;; For best results, get the core Apertium development tools
+;; (apertium-all-dev) from the nightly repos:
+;; http://wiki.apertium.org/wiki/Installation
 
-(when (locate-library "flycheck-apertium")
-  (require 'flycheck-apertium)
-  (add-hook 'nxml-mode-hook 'flycheck-mode))
+;; To use it, add this to your init.el:
 
-If not installing through ELPA, you'll also have to do
+;; (when (locate-library "flycheck-apertium")
+;;   (require 'flycheck-apertium)
+;;   (add-hook 'nxml-mode-hook 'flycheck-mode))
 
-(add-to-list 'load-path "/path/to/flycheck-apertium-directory/")
+;; If not installing through ELPA, you'll also have to do
+
+;; (add-to-list 'load-path "/path/to/flycheck-apertium-directory/")
+

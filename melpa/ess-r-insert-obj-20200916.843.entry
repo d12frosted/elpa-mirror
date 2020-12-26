@@ -1,2 +1,13 @@
-
-(ess-r-insert-obj . [(20200916 843) ((emacs (26 1)) (ess (18 10 1))) "Insert objects in ESS-R" single ((:commit . "554bdc7d6c7fafc5b8a886690970b5145276a3f5") (:keywords "tools") (:authors ("Shuguang Sun" . "shuguang79@qq.com")) (:maintainer "Shuguang Sun" . "shuguang79@qq.com") (:url . "https://github.com/ShuguangSun/ess-r-insert-obj"))])
+(ess-r-insert-obj .
+		  [(20200916 843)
+		   ((emacs
+		     (26 1))
+		    (ess
+		     (18 10 1)))
+		   "Insert objects in ESS-R" single
+		   ((:commit . "554bdc7d6c7fafc5b8a886690970b5145276a3f5")
+		    (:authors
+		     ("Shuguang Sun" . "shuguang79@qq.com"))
+		    (:maintainer "Shuguang Sun" . "shuguang79@qq.com")
+		    (:keywords "tools")
+		    (:url . "https://github.com/ShuguangSun/ess-r-insert-obj"))])

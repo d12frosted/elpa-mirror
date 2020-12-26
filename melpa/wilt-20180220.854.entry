@@ -1,2 +1,14 @@
-
-(wilt . [(20180220 854) ((emacs (24 3)) (dash (2 12 0)) (s (1 10 0))) "An extensions for calculating WILT in a buffer." single ((:commit . "04dbe37fa35d0b24c791421785d2c97a8cbfe2cc") (:authors ("Austin Bingham" . "austin@sixty-north.com")) (:maintainer "Austin Bingham" . "austin@sixty-north.com") (:url . "https://github.com/sixty-north/emacs-wilt"))])
+(wilt .
+      [(20180220 854)
+       ((emacs
+	 (24 3))
+	(dash
+	 (2 12 0))
+	(s
+	 (1 10 0)))
+       "An extensions for calculating WILT in a buffer." single
+       ((:commit . "04dbe37fa35d0b24c791421785d2c97a8cbfe2cc")
+	(:authors
+	 ("Austin Bingham" . "austin@sixty-north.com"))
+	(:maintainer "Austin Bingham" . "austin@sixty-north.com")
+	(:url . "https://github.com/sixty-north/emacs-wilt"))])

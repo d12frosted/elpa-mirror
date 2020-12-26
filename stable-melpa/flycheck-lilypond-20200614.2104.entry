@@ -1,2 +1,13 @@
-
-(flycheck-lilypond . [(20200614 2104) ((emacs (24 3)) (flycheck (0 22))) "LilyPond support in Flycheck" single ((:commit . "17133911b519be76365103dec8c10cb2f3729f1a") (:keywords "tools" "convenience") (:authors ("Hinrik Örn Sigurðsson" . "hinrik.sig@gmail.com")) (:maintainer "Hinrik Örn Sigurðsson" . "hinrik.sig@gmail.com") (:url . "https://github.com/hinrik/flycheck-lilypond"))])
+(flycheck-lilypond .
+		   [(20200614 2104)
+		    ((emacs
+		      (24 3))
+		     (flycheck
+		      (0 22)))
+		    "LilyPond support in Flycheck" single
+		    ((:commit . "17133911b519be76365103dec8c10cb2f3729f1a")
+		     (:authors
+		      ("Hinrik Örn Sigurðsson" . "hinrik.sig@gmail.com"))
+		     (:maintainer "Hinrik Örn Sigurðsson" . "hinrik.sig@gmail.com")
+		     (:keywords "tools" "convenience")
+		     (:url . "https://github.com/hinrik/flycheck-lilypond"))])

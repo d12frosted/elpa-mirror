@@ -1,2 +1,9 @@
-
-(sync-recentf . [(20160326 2001) nil "Synchronize the recent files list between Emacs instances" single ((:commit . "0052561d5c5b5c2684faedc3eead776aec06c3ed") (:keywords "recentf") (:authors ("François Févotte" . "fevotte@gmail.com")) (:maintainer "François Févotte" . "fevotte@gmail.com") (:url . "https://github.com/ffevotte/sync-recentf"))])
+(sync-recentf .
+	      [(20160326 2001)
+	       nil "Synchronize the recent files list between Emacs instances" single
+	       ((:commit . "0052561d5c5b5c2684faedc3eead776aec06c3ed")
+		(:authors
+		 ("François Févotte" . "fevotte@gmail.com"))
+		(:maintainer "François Févotte" . "fevotte@gmail.com")
+		(:keywords "recentf")
+		(:url . "https://github.com/ffevotte/sync-recentf"))])

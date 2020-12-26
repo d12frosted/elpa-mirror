@@ -1,2 +1,13 @@
-
-(gopher . [(20190512 1351) ((emacs (24 4)) (w3m (0))) "easily access and navigate Gopher servers" single ((:commit . "6f4accac226698b22e8388e41ad5723b12553dde") (:authors ("Matthew Snyder" . "matthew.c.snyder@gmail.com") ("and the gopher.el authors (see AUTHORS.org)")) (:maintainer "Matthew Snyder" . "matthew.c.snyder@gmail.com") (:url . "http://github.com/ardekantur/gopher.el"))])
+(gopher .
+	[(20190512 1351)
+	 ((emacs
+	   (24 4))
+	  (w3m
+	   (0)))
+	 "easily access and navigate Gopher servers" single
+	 ((:commit . "6f4accac226698b22e8388e41ad5723b12553dde")
+	  (:authors
+	   ("Matthew Snyder" . "matthew.c.snyder@gmail.com")
+	   ("and the gopher.el authors (see AUTHORS.org)"))
+	  (:maintainer "Matthew Snyder" . "matthew.c.snyder@gmail.com")
+	  (:url . "http://github.com/ardekantur/gopher.el"))])

@@ -1,2 +1,11 @@
-
-(libmpdel . [(20201026 1122) ((emacs (25 1))) "Communication with an MPD server" tar ((:commit . "e26060d2139841ef206704e7e0d2f9fa06a1884b") (:keywords "multimedia") (:authors ("Damien Cassou" . "damien@cassou.me")) (:maintainer "Damien Cassou" . "damien@cassou.me") (:url . "https://gitea.petton.fr/mpdel/libmpdel"))])
+(libmpdel .
+	  [(20201026 1122)
+	   ((emacs
+	     (25 1)))
+	   "Communication with an MPD server" tar
+	   ((:commit . "e26060d2139841ef206704e7e0d2f9fa06a1884b")
+	    (:authors
+	     ("Damien Cassou" . "damien@cassou.me"))
+	    (:maintainer "Damien Cassou" . "damien@cassou.me")
+	    (:keywords "multimedia")
+	    (:url . "https://gitea.petton.fr/mpdel/libmpdel"))])

@@ -1,2 +1,17 @@
-
-(org-treescope . [(20200503 1609) ((emacs (24 3)) (org (9 2 3)) (org-ql (0 5 -1)) (dash (2 17 0))) "Time scoping sparse trees within org" tar ((:commit . "905029a9e2ce6ed325bb8e10f59dc589c181d148") (:keywords "outlines") (:authors ("Mehmet Tekman")) (:maintainer "Mehmet Tekman") (:url . "https://github.com/mtekman/org-treescope.el"))])
+(org-treescope .
+	       [(20200503 1609)
+		((emacs
+		  (24 3))
+		 (org
+		  (9 2 3))
+		 (org-ql
+		  (0 5 -1))
+		 (dash
+		  (2 17 0)))
+		"Time scoping sparse trees within org" tar
+		((:commit . "905029a9e2ce6ed325bb8e10f59dc589c181d148")
+		 (:authors
+		  ("Mehmet Tekman"))
+		 (:maintainer "Mehmet Tekman")
+		 (:keywords "outlines")
+		 (:url . "https://github.com/mtekman/org-treescope.el"))])

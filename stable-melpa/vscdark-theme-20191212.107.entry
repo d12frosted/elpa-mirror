@@ -1,2 +1,10 @@
-
-(vscdark-theme . [(20191212 107) ((emacs (24 1))) "VS Code Dark+ like theme" single ((:commit . "8eba74059e8a9db974e4056ee024e52fe54da485") (:authors ("Alexander L. Belikoff")) (:maintainer "Alexander L. Belikoff") (:url . "https://github.com/abelikoff/vscdark-theme"))])
+(vscdark-theme .
+	       [(20191212 107)
+		((emacs
+		  (24 1)))
+		"VS Code Dark+ like theme" single
+		((:commit . "8eba74059e8a9db974e4056ee024e52fe54da485")
+		 (:authors
+		  ("Alexander L. Belikoff"))
+		 (:maintainer "Alexander L. Belikoff")
+		 (:url . "https://github.com/abelikoff/vscdark-theme"))])

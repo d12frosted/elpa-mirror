@@ -1,2 +1,15 @@
-
-(haxe-imports . [(20170330 2304) ((emacs (24 4)) (s (1 10 0)) (pcache (0 3 1))) "Code for dealing with Haxe imports" single ((:commit . "f104a641f3dfe698359d9aca1f28d9383cf43e04") (:keywords "haxe") (:authors ("Juan Karlo Licudine" . "karlo@accidentalrebel.com")) (:maintainer "Juan Karlo Licudine" . "karlo@accidentalrebel.com") (:url . "http://www.github.com/accidentalrebel/emacs-haxe-imports"))])
+(haxe-imports .
+	      [(20170330 2304)
+	       ((emacs
+		 (24 4))
+		(s
+		 (1 10 0))
+		(pcache
+		 (0 3 1)))
+	       "Code for dealing with Haxe imports" single
+	       ((:commit . "f104a641f3dfe698359d9aca1f28d9383cf43e04")
+		(:authors
+		 ("Juan Karlo Licudine" . "karlo@accidentalrebel.com"))
+		(:maintainer "Juan Karlo Licudine" . "karlo@accidentalrebel.com")
+		(:keywords "haxe")
+		(:url . "http://www.github.com/accidentalrebel/emacs-haxe-imports"))])

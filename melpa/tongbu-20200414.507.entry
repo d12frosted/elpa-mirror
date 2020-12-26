@@ -1,2 +1,13 @@
-
-(tongbu . [(20200414 507) ((emacs (25 1)) (web-server (0 1 2))) "A web server to share text or files between two devices" single ((:commit . "6f6e5c5446f0c5735357ab520b249ab97295653e") (:keywords "tools") (:authors ("Xu Chunyang")) (:maintainer "Xu Chunyang") (:url . "https://github.com/xuchunyang/tongbu.el"))])
+(tongbu .
+	[(20200414 507)
+	 ((emacs
+	   (25 1))
+	  (web-server
+	   (0 1 2)))
+	 "A web server to share text or files between two devices" single
+	 ((:commit . "6f6e5c5446f0c5735357ab520b249ab97295653e")
+	  (:authors
+	   ("Xu Chunyang"))
+	  (:maintainer "Xu Chunyang")
+	  (:keywords "tools")
+	  (:url . "https://github.com/xuchunyang/tongbu.el"))])

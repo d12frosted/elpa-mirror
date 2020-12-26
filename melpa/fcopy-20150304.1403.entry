@@ -1,2 +1,9 @@
-
-(fcopy . [(20150304 1403) nil "Funny Copy, set past point HERE then search copy text" single ((:commit . "e355f6ec889d8ecbdb096019c2dc660b1cec4941") (:keywords "convenience") (:authors ("Masayuki Ataka" . "masayuki.ataka@gmail.com")) (:maintainer "Masayuki Ataka" . "masayuki.ataka@gmail.com") (:url . "https://github.com/ataka/fcopy"))])
+(fcopy .
+       [(20150304 1403)
+	nil "Funny Copy, set past point HERE then search copy text" single
+	((:commit . "e355f6ec889d8ecbdb096019c2dc660b1cec4941")
+	 (:authors
+	  ("Masayuki Ataka" . "masayuki.ataka@gmail.com"))
+	 (:maintainer "Masayuki Ataka" . "masayuki.ataka@gmail.com")
+	 (:keywords "convenience")
+	 (:url . "https://github.com/ataka/fcopy"))])

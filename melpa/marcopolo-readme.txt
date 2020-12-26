@@ -1,10 +1,13 @@
-Provides a Docker HUB API client for Emacs.
+;;; Commentary:
 
-Installation:
+;; Provides a Docker HUB API client for Emacs.
 
-Available as a package in melpa.milkbox.net.
+;;; Installation:
 
-(add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;; Available as a package in melpa.milkbox.net.
 
-M-x package-install marcopolo
+;; (add-to-list 'package-archives
+;;              '("melpa" . "http://melpa.milkbox.net/packages/") t)
+;;
+;; M-x package-install marcopolo
+

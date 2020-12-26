@@ -1,2 +1,12 @@
-
-(helm-osx-app . [(20190717 958) ((emacs (25 1)) (helm-core (3 0))) "Launch macOS apps with helm" single ((:commit . "634ed5d721a20af265825a018e9df3ee6640daee") (:authors ("Xu Chunyang")) (:maintainer "Xu Chunyang") (:url . "https://github.com/xuchunyang/helm-osx-app"))])
+(helm-osx-app .
+	      [(20190717 958)
+	       ((emacs
+		 (25 1))
+		(helm-core
+		 (3 0)))
+	       "Launch macOS apps with helm" single
+	       ((:commit . "634ed5d721a20af265825a018e9df3ee6640daee")
+		(:authors
+		 ("Xu Chunyang"))
+		(:maintainer "Xu Chunyang")
+		(:url . "https://github.com/xuchunyang/helm-osx-app"))])

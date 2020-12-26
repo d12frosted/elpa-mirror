@@ -1,2 +1,9 @@
-
-(centered-cursor-mode . [(20200507 1529) nil "cursor stays vertically centered" single ((:commit . "4093821cc9759ca5a3c6e527d4cc915fc3a5ad74") (:keywords "convenience") (:authors ("André Riemann" . "andre.riemann@web.de")) (:maintainer "André Riemann" . "andre.riemann@web.de") (:url . "https://github.com/andre-r/centered-cursor-mode.el"))])
+(centered-cursor-mode .
+		      [(20200507 1529)
+		       nil "cursor stays vertically centered" single
+		       ((:commit . "4093821cc9759ca5a3c6e527d4cc915fc3a5ad74")
+			(:authors
+			 ("André Riemann" . "andre.riemann@web.de"))
+			(:maintainer "André Riemann" . "andre.riemann@web.de")
+			(:keywords "convenience")
+			(:url . "https://github.com/andre-r/centered-cursor-mode.el"))])

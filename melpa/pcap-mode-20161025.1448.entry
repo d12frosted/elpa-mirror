@@ -1,2 +1,10 @@
-
-(pcap-mode . [(20161025 1448) ((emacs (24 3))) "Major mode for working with PCAP files" single ((:commit . "52780669af0ade136f84d73f21b4dbb7ab655416") (:keywords "pcap" "packets" "tcpdump" "wireshark" "tshark") (:authors ("Aaron Conole" . "aconole@bytheb.org")) (:maintainer "Aaron Conole" . "aconole@bytheb.org"))])
+(pcap-mode .
+	   [(20161025 1448)
+	    ((emacs
+	      (24 3)))
+	    "Major mode for working with PCAP files" single
+	    ((:commit . "52780669af0ade136f84d73f21b4dbb7ab655416")
+	     (:authors
+	      ("Aaron Conole" . "aconole@bytheb.org"))
+	     (:maintainer "Aaron Conole" . "aconole@bytheb.org")
+	     (:keywords "pcap" "packets" "tcpdump" "wireshark" "tshark"))])

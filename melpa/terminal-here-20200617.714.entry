@@ -1,2 +1,13 @@
-
-(terminal-here . [(20200617 714) ((emacs (24 3)) (cl-lib (0 5))) "Run an external terminal in current directory" single ((:commit . "d8b95302abe6e4a8a91a4526441a1c5d51b886a6") (:keywords "tools" "frames") (:authors ("David Shepherd" . "davidshepherd7@gmail.com")) (:maintainer "David Shepherd" . "davidshepherd7@gmail.com") (:url . "https://github.com/davidshepherd7/terminal-here"))])
+(terminal-here .
+	       [(20200617 714)
+		((emacs
+		  (24 3))
+		 (cl-lib
+		  (0 5)))
+		"Run an external terminal in current directory" single
+		((:commit . "2d74a1c2523ed76c7d8edcbcb38367b2dbc6f5ea")
+		 (:authors
+		  ("David Shepherd" . "davidshepherd7@gmail.com"))
+		 (:maintainer "David Shepherd" . "davidshepherd7@gmail.com")
+		 (:keywords "tools" "frames")
+		 (:url . "https://github.com/davidshepherd7/terminal-here"))])

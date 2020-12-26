@@ -1,2 +1,17 @@
-
-(maxima . [(20201207 2204) ((emacs (25 1)) (s (1 11 0)) (test-simple (1 3 0))) "Major mode for Maxima" tar ((:commit . "878132db3c9e0b5675888eedece1c7aa4246df43") (:keywords "maxima" "tools" "math") (:authors ("William F. Schelter") ("Jay Belanger") ("Fermin Munoz")) (:maintainer "Fermin Munoz" . "fmfs@posteo.net") (:url . "https://gitlab.com/sasanidas/maxima"))])
+(maxima .
+	[(20201207 2204)
+	 ((emacs
+	   (25 1))
+	  (s
+	   (1 11 0))
+	  (test-simple
+	   (1 3 0)))
+	 "Major mode for Maxima" tar
+	 ((:commit . "009e6c873dce0a72c08eb96ce1becd3228f1c34a")
+	  (:authors
+	   ("William F. Schelter")
+	   ("Jay Belanger")
+	   ("Fermin Munoz"))
+	  (:maintainer "Fermin Munoz" . "fmfs@posteo.net")
+	  (:keywords "maxima" "tools" "math")
+	  (:url . "https://gitlab.com/sasanidas/maxima"))])

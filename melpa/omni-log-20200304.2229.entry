@@ -1,2 +1,17 @@
-
-(omni-log . [(20200304 2229) ((emacs (24)) (ht (2 0)) (s (1 6 1)) (dash (2 13 0))) "Logging utilities" tar ((:commit . "0a240660ccdd0b6588b4e3c322743b5ab1161338") (:keywords "convenience" "languages" "tools") (:authors ("Adrien Becchis" . "adriean.khisbe@live.fr")) (:maintainer "Adrien Becchis" . "adriean.khisbe@live.fr") (:url . "https://github.com/AdrieanKhisbe/omni-log.el"))])
+(omni-log .
+	  [(20200304 2229)
+	   ((emacs
+	     (24))
+	    (ht
+	     (2 0))
+	    (s
+	     (1 6 1))
+	    (dash
+	     (2 13 0)))
+	   "Logging utilities" tar
+	   ((:commit . "0a240660ccdd0b6588b4e3c322743b5ab1161338")
+	    (:authors
+	     ("Adrien Becchis" . "adriean.khisbe@live.fr"))
+	    (:maintainer "Adrien Becchis" . "adriean.khisbe@live.fr")
+	    (:keywords "convenience" "languages" "tools")
+	    (:url . "https://github.com/AdrieanKhisbe/omni-log.el"))])

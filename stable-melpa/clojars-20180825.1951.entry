@@ -1,2 +1,11 @@
-
-(clojars . [(20180825 1951) ((request-deferred (0 2 0))) "clojars.org search interface" single ((:commit . "696c5b056e45067512a7d6dcce2515f3c639f61b") (:keywords "docs" "help" "tools") (:authors ("Joshua Miller" . "josh@joshmiller.io")) (:maintainer "Joshua Miller" . "josh@joshmiller.io") (:url . "https://github.com/joshuamiller/clojars.el"))])
+(clojars .
+	 [(20180825 1951)
+	  ((request-deferred
+	    (0 2 0)))
+	  "clojars.org search interface" single
+	  ((:commit . "696c5b056e45067512a7d6dcce2515f3c639f61b")
+	   (:authors
+	    ("Joshua Miller" . "josh@joshmiller.io"))
+	   (:maintainer "Joshua Miller" . "josh@joshmiller.io")
+	   (:keywords "docs" "help" "tools")
+	   (:url . "https://github.com/joshuamiller/clojars.el"))])

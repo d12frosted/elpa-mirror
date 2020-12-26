@@ -1,2 +1,9 @@
-
-(el-spy . [(20131226 2008) nil "Mocking framework for Emacs lisp. It also support spy, proxy." single ((:commit . "b1dead9d1877660856ada22d906ac4e54695aec7") (:keywords "test") (:authors ("Yuuki Arisawa" . "yuuki.ari@gmail.com")) (:maintainer "Yuuki Arisawa" . "yuuki.ari@gmail.com") (:url . "https://github.com/uk-ar/el-spy"))])
+(el-spy .
+	[(20131226 2008)
+	 nil "Mocking framework for Emacs lisp. It also support spy, proxy." single
+	 ((:commit . "b1dead9d1877660856ada22d906ac4e54695aec7")
+	  (:authors
+	   ("Yuuki Arisawa" . "yuuki.ari@gmail.com"))
+	  (:maintainer "Yuuki Arisawa" . "yuuki.ari@gmail.com")
+	  (:keywords "test")
+	  (:url . "https://github.com/uk-ar/el-spy"))])

@@ -1,2 +1,15 @@
-
-(helm-youtube . [(20190101 1733) ((request (0 2 0)) (helm (2 3 1)) (cl-lib (0 5))) "Query YouTube and play videos in your browser" single ((:commit . "e7272f1648c7fa836ea5ac1a61770b4931ab4709") (:keywords "youtube" "multimedia") (:authors ("Maximilian Roquemore" . "maximus12793@gmail.com")) (:maintainer "Maximilian Roquemore" . "maximus12793@gmail.com") (:url . "https://github.com/maximus12793/helm-youtube"))])
+(helm-youtube .
+	      [(20190101 1733)
+	       ((request
+		 (0 2 0))
+		(helm
+		 (2 3 1))
+		(cl-lib
+		 (0 5)))
+	       "Query YouTube and play videos in your browser" single
+	       ((:commit . "e7272f1648c7fa836ea5ac1a61770b4931ab4709")
+		(:authors
+		 ("Maximilian Roquemore" . "maximus12793@gmail.com"))
+		(:maintainer "Maximilian Roquemore" . "maximus12793@gmail.com")
+		(:keywords "youtube" "multimedia")
+		(:url . "https://github.com/maximus12793/helm-youtube"))])

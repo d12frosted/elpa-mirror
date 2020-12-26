@@ -1,2 +1,11 @@
-
-(eloud . [(20190706 1707) ((emacs (24 4))) "A lightweight, interactive screen reader" single ((:commit . "b8f4af1f652268d73281de91fb333b5984970847") (:keywords "extensions") (:authors ("Patrick Smyth" . "patricksmyth01@gmail.com")) (:maintainer "Patrick Smyth" . "patricksmyth01@gmail.com") (:url . "https://github.com/smythp/eloud"))])
+(eloud .
+       [(20190706 1707)
+	((emacs
+	  (24 4)))
+	"A lightweight, interactive screen reader" single
+	((:commit . "b8f4af1f652268d73281de91fb333b5984970847")
+	 (:authors
+	  ("Patrick Smyth" . "patricksmyth01@gmail.com"))
+	 (:maintainer "Patrick Smyth" . "patricksmyth01@gmail.com")
+	 (:keywords "extensions")
+	 (:url . "https://github.com/smythp/eloud"))])

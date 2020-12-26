@@ -1,2 +1,12 @@
-
-(with-namespace . [(20130407 1822) ((dash (1 1 0)) (loop (1 1))) "interoperable elisp namespaces" single ((:commit . "8ac52da3a09cf46087720e30cf730d00f140cde6") (:keywords "namespaces") (:authors ("Wilfred Hughes" . "me@wilfred.me.uk")) (:maintainer "Wilfred Hughes" . "me@wilfred.me.uk"))])
+(with-namespace .
+		[(20130407 1822)
+		 ((dash
+		   (1 1 0))
+		  (loop
+		   (1 1)))
+		 "interoperable elisp namespaces" single
+		 ((:commit . "8ac52da3a09cf46087720e30cf730d00f140cde6")
+		  (:authors
+		   ("Wilfred Hughes" . "me@wilfred.me.uk"))
+		  (:maintainer "Wilfred Hughes" . "me@wilfred.me.uk")
+		  (:keywords "namespaces"))])

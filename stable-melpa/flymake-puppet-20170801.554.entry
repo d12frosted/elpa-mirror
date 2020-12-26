@@ -1,2 +1,10 @@
-
-(flymake-puppet . [(20170801 554) ((flymake-easy (0 9))) "Flymake handler using puppet-lint" single ((:commit . "8a772395f4ccc59d883712ab53a92a17c1d9a429") (:authors ("Ben Prew")) (:maintainer "Ben Prew") (:url . "https://github.com/benprew/flymake-puppet"))])
+(flymake-puppet .
+		[(20170801 554)
+		 ((flymake-easy
+		   (0 9)))
+		 "Flymake handler using puppet-lint" single
+		 ((:commit . "8a772395f4ccc59d883712ab53a92a17c1d9a429")
+		  (:authors
+		   ("Ben Prew"))
+		  (:maintainer "Ben Prew")
+		  (:url . "https://github.com/benprew/flymake-puppet"))])

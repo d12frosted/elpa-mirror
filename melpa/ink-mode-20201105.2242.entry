@@ -1,2 +1,12 @@
-
-(ink-mode . [(20201105 2242) ((emacs (26 1))) "Major mode for writing interactive fiction in Ink" tar ((:commit . "63c7ef39acf434a1682951bcf352e8fe1e1ac6d9") (:keywords "languages" "wp" "hypermedia") (:authors ("Erik Sjöstrand") ("Damien Picard")) (:maintainer "Damien Picard") (:url . "https://github.com/Kungsgeten/ink-mode"))])
+(ink-mode .
+	  [(20201105 2242)
+	   ((emacs
+	     (26 1)))
+	   "Major mode for writing interactive fiction in Ink" tar
+	   ((:commit . "63c7ef39acf434a1682951bcf352e8fe1e1ac6d9")
+	    (:authors
+	     ("Erik Sjöstrand")
+	     ("Damien Picard"))
+	    (:maintainer "Damien Picard")
+	    (:keywords "languages" "wp" "hypermedia")
+	    (:url . "https://github.com/Kungsgeten/ink-mode"))])

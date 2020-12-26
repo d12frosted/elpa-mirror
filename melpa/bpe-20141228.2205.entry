@@ -1,2 +1,11 @@
-
-(bpe . [(20141228 2205) ((emacs (24 1))) "Blog from Org mode to Blogger" single ((:commit . "7b5b25f83506e6c9f4075d3803fa32404943a189") (:keywords "blogger" "blog") (:authors ("Yuta Yamada <cokesboy\"at\"gmail.com>")) (:maintainer "Yuta Yamada <cokesboy\"at\"gmail.com>") (:url . "https://github.com/yuutayamada/bpe"))])
+(bpe .
+     [(20141228 2205)
+      ((emacs
+	(24 1)))
+      "Blog from Org mode to Blogger" single
+      ((:commit . "7b5b25f83506e6c9f4075d3803fa32404943a189")
+       (:authors
+	("Yuta Yamada <cokesboy\"at\"gmail.com>"))
+       (:maintainer "Yuta Yamada <cokesboy\"at\"gmail.com>")
+       (:keywords "blogger" "blog")
+       (:url . "https://github.com/yuutayamada/bpe"))])

@@ -1,1 +1,4 @@
-A tool for sorting and filing PDF documents.
+;;; Commentary:
+
+;; A tool for sorting and filing PDF documents.
+

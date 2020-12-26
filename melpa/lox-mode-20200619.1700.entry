@@ -1,2 +1,11 @@
-
-(lox-mode . [(20200619 1700) ((emacs (24 3))) "Major mode for the Lox programming language" single ((:commit . "b6935b3f5b131d2c1c7685cf6464274f7cd64943") (:keywords "languages" "lox") (:authors ("Timmy Jose" . "zoltan.jose@gmail.com")) (:maintainer "Timmy Jose" . "zoltan.jose@gmail.com") (:url . "https://github.com/timmyjose-projects/lox-mode"))])
+(lox-mode .
+	  [(20200619 1700)
+	   ((emacs
+	     (24 3)))
+	   "Major mode for the Lox programming language" single
+	   ((:commit . "b6935b3f5b131d2c1c7685cf6464274f7cd64943")
+	    (:authors
+	     ("Timmy Jose" . "zoltan.jose@gmail.com"))
+	    (:maintainer "Timmy Jose" . "zoltan.jose@gmail.com")
+	    (:keywords "languages" "lox")
+	    (:url . "https://github.com/timmyjose-projects/lox-mode"))])

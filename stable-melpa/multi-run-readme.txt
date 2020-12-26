@@ -1,1 +1,4 @@
-See the full documentation at https://www.github.com/sagarjha/multi-run.
+;;; Commentary:
+
+;; See the full documentation at https://www.github.com/sagarjha/multi-run.
+

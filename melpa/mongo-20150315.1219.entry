@@ -1,2 +1,8 @@
-
-(mongo . [(20150315 1219) nil "MongoDB driver for Emacs Lisp" tar ((:commit . "595529ddd70ecb9fab8b11daad2c3929941099d6") (:keywords "convenience") (:authors ("Tomohiro Matsuyama" . "m2ym.pub@gmail.com")) (:maintainer "Tomohiro Matsuyama" . "m2ym.pub@gmail.com"))])
+(mongo .
+       [(20150315 1219)
+	nil "MongoDB driver for Emacs Lisp" tar
+	((:commit . "595529ddd70ecb9fab8b11daad2c3929941099d6")
+	 (:authors
+	  ("Tomohiro Matsuyama" . "m2ym.pub@gmail.com"))
+	 (:maintainer "Tomohiro Matsuyama" . "m2ym.pub@gmail.com")
+	 (:keywords "convenience"))])

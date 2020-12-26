@@ -1,1 +1,4 @@
-Search and play tracks and playlists from SoundCloud in Emacs via EMMS.
+;;; Commentary:
+
+;; Search and play tracks and playlists from SoundCloud in Emacs via EMMS.
+

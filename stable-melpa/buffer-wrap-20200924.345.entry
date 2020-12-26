@@ -1,2 +1,10 @@
-
-(buffer-wrap . [(20200924 345) ((emacs (24 4))) "Wrap the beginning and the end of buffer" single ((:commit . "2b12ed29cbcd733ad21d91475d1fcbd4092c604e") (:authors ("Shen, Jen-Chieh" . "jcs090218@gmail.com")) (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com") (:url . "https://github.com/jcs-elpa/buffer-wrap"))])
+(buffer-wrap .
+	     [(20200924 345)
+	      ((emacs
+		(24 4)))
+	      "Wrap the beginning and the end of buffer" single
+	      ((:commit . "2b12ed29cbcd733ad21d91475d1fcbd4092c604e")
+	       (:authors
+		("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+	       (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+	       (:url . "https://github.com/jcs-elpa/buffer-wrap"))])

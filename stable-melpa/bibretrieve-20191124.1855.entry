@@ -1,2 +1,13 @@
-
-(bibretrieve . [(20191124 1855) ((auctex (11 87)) (emacs (24 3))) "Retrieve BibTeX entries from the internet" tar ((:commit . "81dc8e0db3629cc180eafb2bc34b60dcd8980316") (:keywords "bibtex" "bibliography" "mathscinet" "arxiv" "zbmath") (:authors ("Antonio Sartori")) (:maintainer "Pavel Zorin-Kranich" . "pzorin@uni-bonn.de") (:url . "https://github.com/pzorin/bibretrieve"))])
+(bibretrieve .
+	     [(20191124 1855)
+	      ((auctex
+		(11 87))
+	       (emacs
+		(24 3)))
+	      "Retrieve BibTeX entries from the internet" tar
+	      ((:commit . "81dc8e0db3629cc180eafb2bc34b60dcd8980316")
+	       (:authors
+		("Antonio Sartori"))
+	       (:maintainer "Pavel Zorin-Kranich" . "pzorin@uni-bonn.de")
+	       (:keywords "bibtex" "bibliography" "mathscinet" "arxiv" "zbmath")
+	       (:url . "https://github.com/pzorin/bibretrieve"))])

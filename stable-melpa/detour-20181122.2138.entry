@@ -1,2 +1,11 @@
-
-(detour . [(20181122 2138) ((emacs (24 4))) "Take a quick detour and return" single ((:commit . "1ff23c236e18971ed1077840daf047cde79a45ee") (:keywords "convenience" "abbrev") (:authors ("Stefan Kamphausen <www.skamphausen.de>")) (:maintainer "Stefan Kamphausen <www.skamphausen.de>") (:url . "https://github.com/ska2342/detour/"))])
+(detour .
+	[(20181122 2138)
+	 ((emacs
+	   (24 4)))
+	 "Take a quick detour and return" single
+	 ((:commit . "1ff23c236e18971ed1077840daf047cde79a45ee")
+	  (:authors
+	   ("Stefan Kamphausen <www.skamphausen.de>"))
+	  (:maintainer "Stefan Kamphausen <www.skamphausen.de>")
+	  (:keywords "convenience" "abbrev")
+	  (:url . "https://github.com/ska2342/detour/"))])

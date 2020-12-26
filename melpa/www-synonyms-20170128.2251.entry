@@ -1,2 +1,12 @@
-
-(www-synonyms . [(20170128 2251) ((request (0 2 0)) (cl-lib (0 5))) "insert synonym for a word" single ((:commit . "7e37ea35064ff31c9945f0198a653647d408c936") (:keywords "lisp") (:authors ("Bernhard Specht" . "bernhard@specht.net")) (:maintainer "Bernhard Specht" . "bernhard@specht.net"))])
+(www-synonyms .
+	      [(20170128 2251)
+	       ((request
+		 (0 2 0))
+		(cl-lib
+		 (0 5)))
+	       "insert synonym for a word" single
+	       ((:commit . "7e37ea35064ff31c9945f0198a653647d408c936")
+		(:authors
+		 ("Bernhard Specht" . "bernhard@specht.net"))
+		(:maintainer "Bernhard Specht" . "bernhard@specht.net")
+		(:keywords "lisp"))])

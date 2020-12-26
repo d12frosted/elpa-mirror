@@ -1,2 +1,9 @@
-
-(sibilant-mode . [(20151119 2145) nil "Support for the Sibilant programming language" single ((:commit . "bc1b5d8cd597918bafc9b2880ee49024740e54ab") (:keywords "languages") (:authors ("Jacob Rothstein" . "hi@jbr.me")) (:maintainer "Jacob Rothstein" . "hi@jbr.me") (:url . "http://sibilantjs.info"))])
+(sibilant-mode .
+	       [(20151119 2145)
+		nil "Support for the Sibilant programming language" single
+		((:commit . "bc1b5d8cd597918bafc9b2880ee49024740e54ab")
+		 (:authors
+		  ("Jacob Rothstein" . "hi@jbr.me"))
+		 (:maintainer "Jacob Rothstein" . "hi@jbr.me")
+		 (:keywords "languages")
+		 (:url . "http://sibilantjs.info"))])

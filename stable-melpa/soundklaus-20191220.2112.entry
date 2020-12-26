@@ -1,2 +1,23 @@
-
-(soundklaus . [(20191220 2112) ((dash (2 12 1)) (emacs (24)) (emms (4 0)) (s (1 11 0)) (pkg-info (0 4)) (cl-lib (0 5)) (request (0 2 0))) "Play music on SoundCloud with Emacs via EMMS" tar ((:commit . "15ce6e7f24a45e4f202d83cca9fa3bfdd94ca592") (:keywords "soundcloud" "music" "emms") (:authors ("r0man" . "roman@burningswell.com")) (:maintainer "r0man" . "roman@burningswell.com") (:url . "https://github.com/r0man/soundklaus.el"))])
+(soundklaus .
+	    [(20191220 2112)
+	     ((dash
+	       (2 12 1))
+	      (emacs
+	       (24))
+	      (emms
+	       (4 0))
+	      (s
+	       (1 11 0))
+	      (pkg-info
+	       (0 4))
+	      (cl-lib
+	       (0 5))
+	      (request
+	       (0 2 0)))
+	     "Play music on SoundCloud with Emacs via EMMS" tar
+	     ((:commit . "15ce6e7f24a45e4f202d83cca9fa3bfdd94ca592")
+	      (:authors
+	       ("r0man" . "roman@burningswell.com"))
+	      (:maintainer "r0man" . "roman@burningswell.com")
+	      (:keywords "soundcloud" "music" "emms")
+	      (:url . "https://github.com/r0man/soundklaus.el"))])

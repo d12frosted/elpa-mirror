@@ -1,2 +1,10 @@
-
-(sql-clickhouse . [(20191209 1443) ((emacs (24))) "support ClickHouse as SQL interpreter" single ((:commit . "8403a4a5d332dbb6459b7fbce6ea95c36d390a5b") (:authors ("Robert Schwarz" . "mail@rschwarz.net")) (:maintainer "Robert Schwarz" . "mail@rschwarz.net") (:url . "https://github.com/leethargo/sql-clickhouse"))])
+(sql-clickhouse .
+		[(20191209 1443)
+		 ((emacs
+		   (24)))
+		 "support ClickHouse as SQL interpreter" single
+		 ((:commit . "8403a4a5d332dbb6459b7fbce6ea95c36d390a5b")
+		  (:authors
+		   ("Robert Schwarz" . "mail@rschwarz.net"))
+		  (:maintainer "Robert Schwarz" . "mail@rschwarz.net")
+		  (:url . "https://github.com/leethargo/sql-clickhouse"))])

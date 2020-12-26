@@ -1,2 +1,11 @@
-
-(carbon-now-sh . [(20201028 950) ((emacs (24 4))) "https://carbon.now.sh integration." single ((:commit . "6444a77a6065803cf97c3321f811bd34a8063d76") (:keywords "convenience") (:authors ("Vitalii Elenhaupt")) (:maintainer "Vitalii Elenhaupt") (:url . "https://github.com/veelenga/carbon-now-sh.el"))])
+(carbon-now-sh .
+	       [(20201028 950)
+		((emacs
+		  (24 4)))
+		"https://carbon.now.sh integration." single
+		((:commit . "6444a77a6065803cf97c3321f811bd34a8063d76")
+		 (:authors
+		  ("Vitalii Elenhaupt"))
+		 (:maintainer "Vitalii Elenhaupt")
+		 (:keywords "convenience")
+		 (:url . "https://github.com/veelenga/carbon-now-sh.el"))])

@@ -1,2 +1,13 @@
-
-(gerrit-download . [(20150714 1408) ((emacs (24 0)) (magit (2 1 0))) "Show gerrit reviews in a diff buffer." single ((:commit . "d568acc7c5935188c9bc19ba72719a6092d9f6fd") (:keywords "tools" "gerrit" "git") (:authors ("Chmouel Boudjnah" . "chmouel@chmouel.com")) (:maintainer "Chmouel Boudjnah" . "chmouel@chmouel.com") (:url . "https://github.com/chmouel/gerrit-download.el"))])
+(gerrit-download .
+		 [(20150714 1408)
+		  ((emacs
+		    (24 0))
+		   (magit
+		    (2 1 0)))
+		  "Show gerrit reviews in a diff buffer." single
+		  ((:commit . "d568acc7c5935188c9bc19ba72719a6092d9f6fd")
+		   (:authors
+		    ("Chmouel Boudjnah" . "chmouel@chmouel.com"))
+		   (:maintainer "Chmouel Boudjnah" . "chmouel@chmouel.com")
+		   (:keywords "tools" "gerrit" "git")
+		   (:url . "https://github.com/chmouel/gerrit-download.el"))])

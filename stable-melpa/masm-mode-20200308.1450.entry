@@ -1,2 +1,11 @@
-
-(masm-mode . [(20200308 1450) ((emacs (25 1))) "MASM x86 and x64 assembly major mode" single ((:commit . "626b9255c2bb967a53d1d50be0b98a1bcae3250c") (:keywords "languages") (:authors ("YiGeeker" . "zyfchinese@yeah.net")) (:maintainer "YiGeeker" . "zyfchinese@yeah.net") (:url . "https://github.com/YiGeeker/masm-mode"))])
+(masm-mode .
+	   [(20200308 1450)
+	    ((emacs
+	      (25 1)))
+	    "MASM x86 and x64 assembly major mode" single
+	    ((:commit . "626b9255c2bb967a53d1d50be0b98a1bcae3250c")
+	     (:authors
+	      ("YiGeeker" . "zyfchinese@yeah.net"))
+	     (:maintainer "YiGeeker" . "zyfchinese@yeah.net")
+	     (:keywords "languages")
+	     (:url . "https://github.com/YiGeeker/masm-mode"))])

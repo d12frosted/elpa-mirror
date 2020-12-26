@@ -1,2 +1,15 @@
-
-(eshell-git-prompt . [(20200109 2250) ((emacs (24 1)) (cl-lib (0 5)) (dash (2 11 0))) "Some Eshell prompt for Git users" single ((:commit . "48ee35774c9b8d0e2d96110e3ae84bac60f43dfd") (:keywords "eshell" "git") (:authors ("Chunyang Xu" . "mail@xuchunyang.me")) (:maintainer "Chunyang Xu" . "mail@xuchunyang.me") (:url . "https://github.com/xuchunyang/eshell-git-prompt"))])
+(eshell-git-prompt .
+		   [(20200109 2250)
+		    ((emacs
+		      (24 1))
+		     (cl-lib
+		      (0 5))
+		     (dash
+		      (2 11 0)))
+		    "Some Eshell prompt for Git users" single
+		    ((:commit . "48ee35774c9b8d0e2d96110e3ae84bac60f43dfd")
+		     (:authors
+		      ("Chunyang Xu" . "mail@xuchunyang.me"))
+		     (:maintainer "Chunyang Xu" . "mail@xuchunyang.me")
+		     (:keywords "eshell" "git")
+		     (:url . "https://github.com/xuchunyang/eshell-git-prompt"))])

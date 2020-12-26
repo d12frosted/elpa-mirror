@@ -1,1 +1,4 @@
-Control Chrome tabs with Helm.
+;;; Commentary:
+
+;; Control Chrome tabs with Helm.
+

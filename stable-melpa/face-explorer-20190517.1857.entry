@@ -1,2 +1,9 @@
-
-(face-explorer . [(20190517 1857) nil "Library and tools for faces and text properties" single ((:commit . "ad1300e13e5643e4c246cabfd91f833d39113052") (:keywords "faces") (:authors ("Anders Lindgren")) (:maintainer "Anders Lindgren") (:url . "https://github.com/Lindydancer/face-explorer"))])
+(face-explorer .
+	       [(20190517 1857)
+		nil "Library and tools for faces and text properties" single
+		((:commit . "ad1300e13e5643e4c246cabfd91f833d39113052")
+		 (:authors
+		  ("Anders Lindgren"))
+		 (:maintainer "Anders Lindgren")
+		 (:keywords "faces")
+		 (:url . "https://github.com/Lindydancer/face-explorer"))])

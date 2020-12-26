@@ -1,2 +1,11 @@
-
-(js2-closure . [(20170816 1918) ((js2-mode (20150909))) "Google Closure dependency manager" single ((:commit . "f59db386d7d0693935d0bf52babcd2c203c06d04") (:keywords "javascript" "closure") (:authors ("Justine Tunney" . "jart@google.com")) (:maintainer "Justine Tunney" . "jart@google.com") (:url . "http://github.com/jart/js2-closure"))])
+(js2-closure .
+	     [(20170816 1918)
+	      ((js2-mode
+		(20150909)))
+	      "Google Closure dependency manager" single
+	      ((:commit . "f59db386d7d0693935d0bf52babcd2c203c06d04")
+	       (:authors
+		("Justine Tunney" . "jart@google.com"))
+	       (:maintainer "Justine Tunney" . "jart@google.com")
+	       (:keywords "javascript" "closure")
+	       (:url . "http://github.com/jart/js2-closure"))])

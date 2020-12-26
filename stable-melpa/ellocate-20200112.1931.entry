@@ -1,2 +1,15 @@
-
-(ellocate . [(20200112 1931) ((emacs (25 1)) (s (1 12 0)) (f (0 20 0))) "The locate command reimplemented in Emacs Lisp" single ((:commit . "81405082f68f0577c9f176d3d4f034a7142aba59") (:keywords "matching") (:authors ("Sebastian Wålinder" . "s.walinder@gmail.com")) (:maintainer "Sebastian Wålinder" . "s.walinder@gmail.com") (:url . "https://github.com/walseb/ellocate"))])
+(ellocate .
+	  [(20200112 1931)
+	   ((emacs
+	     (25 1))
+	    (s
+	     (1 12 0))
+	    (f
+	     (0 20 0)))
+	   "The locate command reimplemented in Emacs Lisp" single
+	   ((:commit . "81405082f68f0577c9f176d3d4f034a7142aba59")
+	    (:authors
+	     ("Sebastian Wålinder" . "s.walinder@gmail.com"))
+	    (:maintainer "Sebastian Wålinder" . "s.walinder@gmail.com")
+	    (:keywords "matching")
+	    (:url . "https://github.com/walseb/ellocate"))])

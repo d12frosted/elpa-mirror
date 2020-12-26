@@ -1,2 +1,14 @@
-
-(django-mode . [(20170522 714) ((projectile (0)) (s (0)) (helm-make (0))) "Major mode for Django web framework." tar ((:commit . "a71b8dd984e7f724b8321246e5c353a4ae5c986e") (:keywords "languages") (:authors ("Greg V" . "floatboth@me.com")) (:maintainer "Greg V" . "floatboth@me.com"))])
+(django-mode .
+	     [(20170522 714)
+	      ((projectile
+		(0))
+	       (s
+		(0))
+	       (helm-make
+		(0)))
+	      "Major mode for Django web framework." tar
+	      ((:commit . "a71b8dd984e7f724b8321246e5c353a4ae5c986e")
+	       (:authors
+		("Greg V" . "floatboth@me.com"))
+	       (:maintainer "Greg V" . "floatboth@me.com")
+	       (:keywords "languages"))])

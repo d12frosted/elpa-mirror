@@ -1,2 +1,16 @@
-
-(dashboard-ls . [(20201207 1616) ((emacs (24 3)) (dashboard (1 2 5)) (f (0 20 0)) (s (1 12 0))) "Display files/directories in current directory on Dashboard" single ((:commit . "c97ea0b454ea78e55155fd4c52abc60753496cd8") (:authors ("Shen, Jen-Chieh" . "jcs090218@gmail.com")) (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com") (:url . "https://github.com/jcs-elpa/dashboard-ls"))])
+(dashboard-ls .
+	      [(20201207 1616)
+	       ((emacs
+		 (24 3))
+		(dashboard
+		 (1 2 5))
+		(f
+		 (0 20 0))
+		(s
+		 (1 12 0)))
+	       "Display files/directories in current directory on Dashboard" single
+	       ((:commit . "c97ea0b454ea78e55155fd4c52abc60753496cd8")
+		(:authors
+		 ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		(:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		(:url . "https://github.com/jcs-elpa/dashboard-ls"))])

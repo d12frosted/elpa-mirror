@@ -1,2 +1,9 @@
-
-(ctags-update . [(20190609 613) nil "(auto) update TAGS in parent directory using exuberant-ctags" single ((:commit . "67faf248b92388442958a069263c62a345425a1b") (:keywords "exuberant-ctags" "etags") (:authors (nil . "Joseph(纪秀峰)  jixiuf@gmail.com")) (:maintainer nil . "Joseph(纪秀峰)  jixiuf@gmail.com") (:url . "https://github.com/jixiuf/ctags-update"))])
+(ctags-update .
+	      [(20190609 613)
+	       nil "(auto) update TAGS in parent directory using exuberant-ctags" single
+	       ((:commit . "67faf248b92388442958a069263c62a345425a1b")
+		(:authors
+		 (nil . "Joseph(纪秀峰)  jixiuf@gmail.com"))
+		(:maintainer nil . "Joseph(纪秀峰)  jixiuf@gmail.com")
+		(:keywords "exuberant-ctags" "etags")
+		(:url . "https://github.com/jixiuf/ctags-update"))])

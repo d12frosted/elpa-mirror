@@ -1,2 +1,15 @@
-
-(counsel-ffdata . [(20191017 1237) ((emacs (25 1)) (counsel (0 11 0)) (emacsql (3 0 0))) "Use ivy to access firefox data" single ((:commit . "88c2348c4039d9e562bd3d9a364708b01037c283") (:keywords "convenience" "tools" "matching") (:authors ("Zhu Zihao" . "all_but_last@163.com")) (:maintainer "Zhu Zihao" . "all_but_last@163.com") (:url . "https://github.com/cireu/counsel-ffdata"))])
+(counsel-ffdata .
+		[(20191017 1237)
+		 ((emacs
+		   (25 1))
+		  (counsel
+		   (0 11 0))
+		  (emacsql
+		   (3 0 0)))
+		 "Use ivy to access firefox data" single
+		 ((:commit . "88c2348c4039d9e562bd3d9a364708b01037c283")
+		  (:authors
+		   ("Zhu Zihao" . "all_but_last@163.com"))
+		  (:maintainer "Zhu Zihao" . "all_but_last@163.com")
+		  (:keywords "convenience" "tools" "matching")
+		  (:url . "https://github.com/cireu/counsel-ffdata"))])

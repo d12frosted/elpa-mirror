@@ -1,2 +1,10 @@
-
-(deno-fmt . [(20200520 1838) ((emacs (24))) "Minor mode for using deno fmt on save" single ((:commit . "3b193eef576e2c14fdcf350495955e6e8546dddd") (:authors ("Russell Clarey <http://github/rclarey>")) (:maintainer "Russell Clarey <http://github/rclarey>") (:url . "https://github.com/russell/deno-emacs"))])
+(deno-fmt .
+	  [(20200520 1838)
+	   ((emacs
+	     (24)))
+	   "Minor mode for using deno fmt on save" single
+	   ((:commit . "3b193eef576e2c14fdcf350495955e6e8546dddd")
+	    (:authors
+	     ("Russell Clarey <http://github/rclarey>"))
+	    (:maintainer "Russell Clarey <http://github/rclarey>")
+	    (:url . "https://github.com/russell/deno-emacs"))])

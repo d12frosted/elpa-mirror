@@ -1,2 +1,13 @@
-
-(flycheck-d-unittest . [(20160522 417) ((flycheck (0 21 -4 1)) (dash (1 4 0))) "Add D unittest support to flycheck" single ((:commit . "3e614f23cb4a5566fd7988dbcaaf254af81c7718") (:keywords "flycheck" "d") (:authors ("Tomoya Tanjo" . "ttanjo@gmail.com")) (:maintainer "Tomoya Tanjo" . "ttanjo@gmail.com") (:url . "https://github.com/tom-tan/flycheck-d-unittest/"))])
+(flycheck-d-unittest .
+		     [(20160522 417)
+		      ((flycheck
+			(0 21 -4 1))
+		       (dash
+			(1 4 0)))
+		      "Add D unittest support to flycheck" single
+		      ((:commit . "3e614f23cb4a5566fd7988dbcaaf254af81c7718")
+		       (:authors
+			("Tomoya Tanjo" . "ttanjo@gmail.com"))
+		       (:maintainer "Tomoya Tanjo" . "ttanjo@gmail.com")
+		       (:keywords "flycheck" "d")
+		       (:url . "https://github.com/tom-tan/flycheck-d-unittest/"))])

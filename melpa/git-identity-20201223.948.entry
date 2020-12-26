@@ -1,0 +1,17 @@
+(git-identity .
+	      [(20201223 948)
+	       ((emacs
+		 (25 1))
+		(dash
+		 (2 10))
+		(hydra
+		 (0 14))
+		(f
+		 (0 20)))
+	       "Identity management for (ma)git" single
+	       ((:commit . "1c35e1693bbb7de41a8aac820a080a7299c13c17")
+		(:authors
+		 ("Akira Komamura" . "akira.komamura@gmail.com"))
+		(:maintainer "Akira Komamura" . "akira.komamura@gmail.com")
+		(:keywords "git" "vc" "convenience")
+		(:url . "https://github.com/akirak/git-identity.el"))])

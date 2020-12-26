@@ -1,2 +1,8 @@
-
-(calfw-cal . [(20170320 1206) nil "calendar view for emacs diary" single ((:commit . "03abce97620a4a7f7ec5f911e669da9031ab9088") (:keywords "calendar") (:authors ("SAKURAI Masashi <m.sakurai at kiwanami.net>")) (:maintainer "SAKURAI Masashi <m.sakurai at kiwanami.net>"))])
+(calfw-cal .
+	   [(20170320 1206)
+	    nil "calendar view for emacs diary" single
+	    ((:commit . "03abce97620a4a7f7ec5f911e669da9031ab9088")
+	     (:authors
+	      ("SAKURAI Masashi <m.sakurai at kiwanami.net>"))
+	     (:maintainer "SAKURAI Masashi <m.sakurai at kiwanami.net>")
+	     (:keywords "calendar"))])

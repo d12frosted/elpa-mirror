@@ -1,2 +1,13 @@
-
-(jg-quicknav . [(20170809 130) ((s (1 9 0)) (cl-lib (0 5))) "Quickly navigate the file system to find a file." single ((:commit . "c8d53e774d63e68a944092c08a026b57da741038") (:keywords "navigation") (:authors ("Jeff Gran" . "jeff@jeffgran.com")) (:maintainer "Jeff Gran" . "jeff@jeffgran.com") (:url . "https://github.com/jeffgran/jg-quicknav"))])
+(jg-quicknav .
+	     [(20170809 130)
+	      ((s
+		(1 9 0))
+	       (cl-lib
+		(0 5)))
+	      "Quickly navigate the file system to find a file." single
+	      ((:commit . "c8d53e774d63e68a944092c08a026b57da741038")
+	       (:authors
+		("Jeff Gran" . "jeff@jeffgran.com"))
+	       (:maintainer "Jeff Gran" . "jeff@jeffgran.com")
+	       (:keywords "navigation")
+	       (:url . "https://github.com/jeffgran/jg-quicknav"))])

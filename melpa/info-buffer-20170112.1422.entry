@@ -1,2 +1,9 @@
-
-(info-buffer . [(20170112 1422) nil "Display info topics in separate buffers" single ((:commit . "d35dad6e766c6e2ddb8dc6acb4ce5b6e10fbcaa7") (:keywords "docs" "info") (:authors ("Lluís Vilanova" . "vilanova@ac.upc.edu")) (:maintainer "Lluís Vilanova" . "vilanova@ac.upc.edu") (:url . "http://www.github.com/llvilanova/info-buffer"))])
+(info-buffer .
+	     [(20170112 1422)
+	      nil "Display info topics in separate buffers" single
+	      ((:commit . "d35dad6e766c6e2ddb8dc6acb4ce5b6e10fbcaa7")
+	       (:authors
+		("Lluís Vilanova" . "vilanova@ac.upc.edu"))
+	       (:maintainer "Lluís Vilanova" . "vilanova@ac.upc.edu")
+	       (:keywords "docs" "info")
+	       (:url . "http://www.github.com/llvilanova/info-buffer"))])

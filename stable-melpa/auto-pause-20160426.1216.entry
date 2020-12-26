@@ -1,2 +1,11 @@
-
-(auto-pause . [(20160426 1216) ((emacs (24 4))) "Run processes which will be paused when Emacs is idle" single ((:commit . "a4d778de774ca3895542cb559a953e0d98657338") (:keywords "convenience" "menu") (:authors ("DarkSun" . "lujun9972@gmail.com")) (:maintainer "DarkSun" . "lujun9972@gmail.com") (:url . "https://github.com/lujun9972/auto-pause"))])
+(auto-pause .
+	    [(20160426 1216)
+	     ((emacs
+	       (24 4)))
+	     "Run processes which will be paused when Emacs is idle" single
+	     ((:commit . "a4d778de774ca3895542cb559a953e0d98657338")
+	      (:authors
+	       ("DarkSun" . "lujun9972@gmail.com"))
+	      (:maintainer "DarkSun" . "lujun9972@gmail.com")
+	      (:keywords "convenience" "menu")
+	      (:url . "https://github.com/lujun9972/auto-pause"))])

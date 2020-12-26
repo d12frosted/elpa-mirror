@@ -1,2 +1,8 @@
-
-(smotitah . [(20150218 1030) nil "Modular emacs configuration framework" tar ((:commit . "f9ab562128a5460549d016913533778e8c94bcf3"))])
+(smotitah .
+	  [(20150218 1030)
+	   nil "Modular emacs configuration framework" tar
+	   ((:commit . "f9ab562128a5460549d016913533778e8c94bcf3")
+	    (:authors
+	     ("Alessandro Piras" . "laynor@gmail.com"))
+	    (:maintainer "Alessandro Piras" . "laynor@gmail.com")
+	    (:keywords "configuration"))])

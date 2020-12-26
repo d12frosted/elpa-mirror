@@ -1,2 +1,9 @@
-
-(fwb-cmds . [(20180318 2219) nil "misc frame, window and buffer commands" single ((:commit . "90258a5c7dbbaa2ac227e0fb4ff6c7d5aec3628f") (:keywords "convenience") (:authors ("Jonas Bernoulli" . "jonas@bernoul.li")) (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li") (:url . "https://github.com/tarsius/fwb-cmds"))])
+(fwb-cmds .
+	  [(20180318 2219)
+	   nil "misc frame, window and buffer commands" single
+	   ((:commit . "90258a5c7dbbaa2ac227e0fb4ff6c7d5aec3628f")
+	    (:authors
+	     ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	    (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/tarsius/fwb-cmds"))])

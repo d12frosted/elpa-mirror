@@ -1,2 +1,9 @@
-
-(greymatters-theme . [(20150621 1123) ((emacs (24))) "Emacs 24 theme with a light background." single ((:commit . "a7220a8c6cf18ccae2b76946b6f01188a7c9d5d1") (:authors ("Martin Haesler")) (:maintainer "Martin Haesler"))])
+(greymatters-theme .
+		   [(20150621 1123)
+		    ((emacs
+		      (24)))
+		    "Emacs 24 theme with a light background." single
+		    ((:commit . "a7220a8c6cf18ccae2b76946b6f01188a7c9d5d1")
+		     (:authors
+		      ("Martin Haesler"))
+		     (:maintainer "Martin Haesler"))])

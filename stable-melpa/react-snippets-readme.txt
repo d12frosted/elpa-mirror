@@ -1,1 +1,4 @@
-Yasnippets for [React](http://facebook.github.io/react/).
+;;; Commentary:
+
+;; Yasnippets for [React](http://facebook.github.io/react/).
+

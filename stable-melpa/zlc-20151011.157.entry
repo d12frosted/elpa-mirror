@@ -1,2 +1,8 @@
-
-(zlc . [(20151011 157) nil "Provides zsh like completion system to Emacs" single ((:commit . "4dd2ba267ecdeac845a7cbb3147294ee7daa25f4") (:keywords "matching" "convenience") (:authors ("mooz" . "stillpedant@gmail.com")) (:maintainer "mooz" . "stillpedant@gmail.com"))])
+(zlc .
+     [(20151011 157)
+      nil "Provides zsh like completion system to Emacs" single
+      ((:commit . "4dd2ba267ecdeac845a7cbb3147294ee7daa25f4")
+       (:authors
+	("mooz" . "stillpedant@gmail.com"))
+       (:maintainer "mooz" . "stillpedant@gmail.com")
+       (:keywords "matching" "convenience"))])

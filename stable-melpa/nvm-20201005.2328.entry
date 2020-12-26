@@ -1,2 +1,17 @@
-
-(nvm . [(20201005 2328) ((s (1 8 0)) (dash (2 4 0)) (f (0 14 0)) (dash-functional (2 4 0))) "Manage Node versions within Emacs" single ((:commit . "f15334f78de7786617a15c9de54f4c79a92865fb") (:keywords "node" "nvm") (:authors ("Johan Andersson" . "johan.rejeep@gmail.com")) (:maintainer "Johan Andersson" . "johan.rejeep@gmail.com") (:url . "http://github.com/rejeep/nvm.el"))])
+(nvm .
+     [(20201005 2328)
+      ((s
+	(1 8 0))
+       (dash
+	(2 4 0))
+       (f
+	(0 14 0))
+       (dash-functional
+	(2 4 0)))
+      "Manage Node versions within Emacs" single
+      ((:commit . "f15334f78de7786617a15c9de54f4c79a92865fb")
+       (:authors
+	("Johan Andersson" . "johan.rejeep@gmail.com"))
+       (:maintainer "Johan Andersson" . "johan.rejeep@gmail.com")
+       (:keywords "node" "nvm")
+       (:url . "http://github.com/rejeep/nvm.el"))])

@@ -1,2 +1,8 @@
-
-(org-cua-dwim . [(20120203 534) nil "Org-mode and Cua mode compatibility layer" single ((:commit . "a55d6c7009fc0b22f1110c07de629acc955c85e4") (:keywords "org-mode" "cua-mode") (:authors ("Matthew L. Fidler")) (:maintainer "Matthew L. Fidler"))])
+(org-cua-dwim .
+	      [(20120203 534)
+	       nil "Org-mode and Cua mode compatibility layer" single
+	       ((:commit . "a55d6c7009fc0b22f1110c07de629acc955c85e4")
+		(:authors
+		 ("Matthew L. Fidler"))
+		(:maintainer "Matthew L. Fidler")
+		(:keywords "org-mode" "cua-mode"))])

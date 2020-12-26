@@ -1,2 +1,8 @@
-
-(lorem-ipsum . [(20190819 2042) nil "Insert dummy pseudo Latin text." single ((:commit . "da75c155da327c7a7aedb80f5cfe409984787049") (:keywords "tools" "language" "convenience") (:authors ("Jean-Philippe Theberge" . "jphil21@sourceforge.net")) (:maintainer "Joe Schafer" . "joe@jschaf.com"))])
+(lorem-ipsum .
+	     [(20190819 2042)
+	      nil "Insert dummy pseudo Latin text." single
+	      ((:commit . "da75c155da327c7a7aedb80f5cfe409984787049")
+	       (:authors
+		("Jean-Philippe Theberge" . "jphil21@sourceforge.net"))
+	       (:maintainer "Joe Schafer" . "joe@jschaf.com")
+	       (:keywords "tools" "language" "convenience"))])

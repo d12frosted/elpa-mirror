@@ -1,2 +1,10 @@
-
-(ariadne . [(20131117 1711) ((bert (0 1))) "Ariadne plugin for Emacs" single ((:commit . "6fe401c7f996bcbc2f685e7971324c6f5e5eaf15") (:keywords "comm" "convenience" "processes") (:authors ("Oleksandr Manzyuk" . "manzyuk@gmail.com")) (:maintainer "Oleksandr Manzyuk" . "manzyuk@gmail.com"))])
+(ariadne .
+	 [(20131117 1711)
+	  ((bert
+	    (0 1)))
+	  "Ariadne plugin for Emacs" single
+	  ((:commit . "6fe401c7f996bcbc2f685e7971324c6f5e5eaf15")
+	   (:authors
+	    ("Oleksandr Manzyuk" . "manzyuk@gmail.com"))
+	   (:maintainer "Oleksandr Manzyuk" . "manzyuk@gmail.com")
+	   (:keywords "comm" "convenience" "processes"))])

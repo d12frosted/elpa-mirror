@@ -1,2 +1,13 @@
-
-(ivariants . [(20170823 224) ((emacs (24 3)) (ivs-edit (1 0))) "Ideographic variants editor and browser" tar ((:commit . "ca0b74d32b5d2d77a45cc6ad6edc00be0ee85284") (:keywords "i18n" "languages") (:authors ("KAWABATA, Taichi <kawabata.taichi_at_gmail.com>")) (:maintainer "KAWABATA, Taichi <kawabata.taichi_at_gmail.com>") (:url . "http://github.com/kawabata/ivariants"))])
+(ivariants .
+	   [(20170823 224)
+	    ((emacs
+	      (24 3))
+	     (ivs-edit
+	      (1 0)))
+	    "Ideographic variants editor and browser" tar
+	    ((:commit . "ca0b74d32b5d2d77a45cc6ad6edc00be0ee85284")
+	     (:authors
+	      ("KAWABATA, Taichi <kawabata.taichi_at_gmail.com>"))
+	     (:maintainer "KAWABATA, Taichi <kawabata.taichi_at_gmail.com>")
+	     (:keywords "i18n" "languages")
+	     (:url . "http://github.com/kawabata/ivariants"))])

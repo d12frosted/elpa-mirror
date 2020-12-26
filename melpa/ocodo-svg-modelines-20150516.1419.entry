@@ -1,2 +1,10 @@
-
-(ocodo-svg-modelines . [(20150516 1419) ((svg-mode-line-themes (0))) "A collection of beautiful SVG modelines" tar ((:commit . "c7b0789a177219f117c4de5659ecfa8622958c40"))])
+(ocodo-svg-modelines .
+		     [(20150516 1419)
+		      ((svg-mode-line-themes
+			(0)))
+		      "A collection of beautiful SVG modelines" tar
+		      ((:commit . "c7b0789a177219f117c4de5659ecfa8622958c40")
+		       (:authors
+			("ocodo" . "what.is.ocodo@gmail.com"))
+		       (:maintainer "ocodo" . "what.is.ocodo@gmail.com")
+		       (:url . "https://github.com/ocodo/ocodo-svg-modelines"))])

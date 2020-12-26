@@ -1,2 +1,7 @@
-
-(snippet . [(20130210 2315) nil "Insert snippets of text into a buffer" single ((:commit . "11d00dd803874b93836f2010b08bd2c97b0f3c63") (:authors ("Pete Kazmier")) (:maintainer "Pete Kazmier"))])
+(snippet .
+	 [(20130210 2315)
+	  nil "Insert snippets of text into a buffer" single
+	  ((:commit . "11d00dd803874b93836f2010b08bd2c97b0f3c63")
+	   (:authors
+	    ("Pete Kazmier"))
+	   (:maintainer "Pete Kazmier"))])

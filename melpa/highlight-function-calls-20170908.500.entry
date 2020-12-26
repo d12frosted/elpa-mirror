@@ -1,2 +1,11 @@
-
-(highlight-function-calls . [(20170908 500) ((emacs (24 4))) "Highlight function/macro calls" single ((:commit . "f7a1eaf95fc64cc0db4d0567f9ff79ec4ae04787") (:keywords "faces" "highlighting") (:authors ("Adam Porter" . "adam@alphapapa.net")) (:maintainer "Adam Porter" . "adam@alphapapa.net") (:url . "http://github.com/alphapapa/highlight-function-calls"))])
+(highlight-function-calls .
+			  [(20170908 500)
+			   ((emacs
+			     (24 4)))
+			   "Highlight function/macro calls" single
+			   ((:commit . "f7a1eaf95fc64cc0db4d0567f9ff79ec4ae04787")
+			    (:authors
+			     ("Adam Porter" . "adam@alphapapa.net"))
+			    (:maintainer "Adam Porter" . "adam@alphapapa.net")
+			    (:keywords "faces" "highlighting")
+			    (:url . "http://github.com/alphapapa/highlight-function-calls"))])

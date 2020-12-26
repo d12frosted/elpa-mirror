@@ -1,2 +1,9 @@
-
-(stylefmt . [(20161025 824) nil "Stylefmt interface" single ((:commit . "7a38f26bf8ff947215f34f0a064c7ca80575ccbc") (:keywords "style" "code" "formatter") (:authors ("κeen")) (:maintainer "κeen") (:url . "https://github.com/KeenS/stylefmt.el"))])
+(stylefmt .
+	  [(20161025 824)
+	   nil "Stylefmt interface" single
+	   ((:commit . "7a38f26bf8ff947215f34f0a064c7ca80575ccbc")
+	    (:authors
+	     ("κeen"))
+	    (:maintainer "κeen")
+	    (:keywords "style" "code" "formatter")
+	    (:url . "https://github.com/KeenS/stylefmt.el"))])

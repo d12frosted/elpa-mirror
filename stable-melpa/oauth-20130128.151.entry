@@ -1,2 +1,8 @@
-
-(oauth . [(20130128 151) nil "Oauth library." tar ((:commit . "ee4744ad76a1560281b0c4944575a3bd598c6458") (:keywords "comm") (:authors ("Peter Sanford <peter AT petersdanceparty.com>")) (:maintainer "Peter Sanford <peter AT petersdanceparty.com>"))])
+(oauth .
+       [(20130128 151)
+	nil "Oauth library." tar
+	((:commit . "ee4744ad76a1560281b0c4944575a3bd598c6458")
+	 (:authors
+	  ("Peter Sanford <peter AT petersdanceparty.com>"))
+	 (:maintainer "Peter Sanford <peter AT petersdanceparty.com>")
+	 (:keywords "comm"))])

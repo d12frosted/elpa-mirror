@@ -1,2 +1,10 @@
-
-(epresent . [(20160411 201) ((org (8)) (cl-lib (0 5))) "Simple presentation mode for Emacs Org-mode" single ((:commit . "6c8abedcf46ff08091fa2bba52eb905c6290057d") (:keywords "gui") (:url . "https://github.com/dakrone/epresent"))])
+(epresent .
+	  [(20160411 201)
+	   ((org
+	     (8))
+	    (cl-lib
+	     (0 5)))
+	   "Simple presentation mode for Emacs Org-mode" single
+	   ((:commit . "6c8abedcf46ff08091fa2bba52eb905c6290057d")
+	    (:keywords "gui")
+	    (:url . "https://github.com/dakrone/epresent"))])

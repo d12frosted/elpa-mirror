@@ -1,2 +1,13 @@
-
-(mandoku . [(20180403 1106) ((org (8 0)) (magit (20151028)) (github-clone (20150705)) (git (20140128))) "A tool to access repositories of premodern Chinese texts" tar ((:commit . "d65dbaa329ecf931f4142be72862972ea6a24e63"))])
+(mandoku .
+	 [(20180403 1106)
+	  ((org
+	    (8))
+	   (github-clone
+	    (20150705 1705)))
+	  "A tool to access repositories of premodern Chinese texts" tar
+	  ((:commit . "d65dbaa329ecf931f4142be72862972ea6a24e63")
+	   (:authors
+	    ("Christian Wittern" . "cwittern@gmail.com"))
+	   (:maintainer "Christian Wittern" . "cwittern@gmail.com")
+	   (:keywords "convenience")
+	   (:url . "http://www.mandoku.org"))])

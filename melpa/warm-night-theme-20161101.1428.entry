@@ -1,2 +1,9 @@
-
-(warm-night-theme . [(20161101 1428) ((emacs (24))) "Emacs 24 theme with a dark background." single ((:commit . "020f084d23409b5035150508ba6e57c2509edd64") (:authors ("martin haesler")) (:maintainer "martin haesler"))])
+(warm-night-theme .
+		  [(20161101 1428)
+		   ((emacs
+		     (24)))
+		   "Emacs 24 theme with a dark background." single
+		   ((:commit . "020f084d23409b5035150508ba6e57c2509edd64")
+		    (:authors
+		     ("martin haesler"))
+		    (:maintainer "martin haesler"))])

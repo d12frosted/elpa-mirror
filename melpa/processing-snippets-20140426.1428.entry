@@ -1,2 +1,11 @@
-
-(processing-snippets . [(20140426 1428) ((yasnippet (0 8 0))) "Snippets for processing-mode" tar ((:commit . "448aba82970c98322629eaf2746e73be6c30c98e"))])
+(processing-snippets .
+		     [(20140426 1428)
+		      ((yasnippet
+			(0 8 0)))
+		      "Snippets for processing-mode" tar
+		      ((:commit . "448aba82970c98322629eaf2746e73be6c30c98e")
+		       (:authors
+			("Peter Vasil" . "mail@petervasil.net"))
+		       (:maintainer "Peter Vasil" . "mail@petervasil.net")
+		       (:keywords "snippets")
+		       (:url . "https://github.com/ptrv/processing2-emacs"))])

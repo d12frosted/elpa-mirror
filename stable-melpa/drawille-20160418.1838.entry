@@ -1,2 +1,11 @@
-
-(drawille . [(20160418 1838) ((cl-lib (0 5))) "Drawille implementation in elisp" tar ((:commit . "d914845725719d8293e2f0dea3c9c7e0a1e0e62a") (:keywords "graphics") (:authors ("Josuah Demangeon" . "josuah.demangeon@gmail.com")) (:maintainer "Josuah Demangeon" . "josuah.demangeon@gmail.com") (:url . "https://github.com/sshbio/elisp-drawille"))])
+(drawille .
+	  [(20160418 1838)
+	   ((cl-lib
+	     (0 5)))
+	   "Drawille implementation in elisp" tar
+	   ((:commit . "d914845725719d8293e2f0dea3c9c7e0a1e0e62a")
+	    (:authors
+	     ("Josuah Demangeon" . "josuah.demangeon@gmail.com"))
+	    (:maintainer "Josuah Demangeon" . "josuah.demangeon@gmail.com")
+	    (:keywords "graphics")
+	    (:url . "https://github.com/sshbio/elisp-drawille"))])

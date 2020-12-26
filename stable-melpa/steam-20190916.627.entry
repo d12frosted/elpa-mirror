@@ -1,2 +1,11 @@
-
-(steam . [(20190916 627) ((cl-lib (0 5))) "Organize and launch Steam games" single ((:commit . "f32951f4e0a4bc92813d0121d9df0257101b8992") (:keywords "games") (:authors ("Erik Sjöstrand")) (:maintainer "Erik Sjöstrand") (:url . "http://github.com/Kungsgeten/steam.el"))])
+(steam .
+       [(20190916 627)
+	((cl-lib
+	  (0 5)))
+	"Organize and launch Steam games" single
+	((:commit . "f32951f4e0a4bc92813d0121d9df0257101b8992")
+	 (:authors
+	  ("Erik Sjöstrand"))
+	 (:maintainer "Erik Sjöstrand")
+	 (:keywords "games")
+	 (:url . "http://github.com/Kungsgeten/steam.el"))])

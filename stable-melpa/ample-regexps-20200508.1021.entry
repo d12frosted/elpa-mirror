@@ -1,2 +1,8 @@
-
-(ample-regexps . [(20200508 1021) nil "ample regular expressions for Emacs" tar ((:commit . "153969ce547afe410b8986f01c9ed4087c9cd20b") (:keywords "regexps" "extensions" "tools") (:authors ("immerrr" . "immerrr@gmail.com")) (:maintainer "immerrr" . "immerrr@gmail.com"))])
+(ample-regexps .
+	       [(20200508 1021)
+		nil "ample regular expressions for Emacs" tar
+		((:commit . "153969ce547afe410b8986f01c9ed4087c9cd20b")
+		 (:authors
+		  ("immerrr" . "immerrr@gmail.com"))
+		 (:maintainer "immerrr" . "immerrr@gmail.com")
+		 (:keywords "regexps" "extensions" "tools"))])

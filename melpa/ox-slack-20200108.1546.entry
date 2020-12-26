@@ -1,2 +1,15 @@
-
-(ox-slack . [(20200108 1546) ((emacs (24)) (org (9 1 4)) (ox-gfm (1 0))) "Slack Exporter for org-mode" single ((:commit . "89cedb9da6ea08b78bc1fe77d6a39aa078172c1e") (:keywords "org" "slack" "outlines") (:authors ("Matt Price")) (:maintainer "Matt Price") (:url . "https://github.com/titaniumbones/ox-slack"))])
+(ox-slack .
+	  [(20200108 1546)
+	   ((emacs
+	     (24))
+	    (org
+	     (9 1 4))
+	    (ox-gfm
+	     (1 0)))
+	   "Slack Exporter for org-mode" single
+	   ((:commit . "89cedb9da6ea08b78bc1fe77d6a39aa078172c1e")
+	    (:authors
+	     ("Matt Price"))
+	    (:maintainer "Matt Price")
+	    (:keywords "org" "slack" "outlines")
+	    (:url . "https://github.com/titaniumbones/ox-slack"))])

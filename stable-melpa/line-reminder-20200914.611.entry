@@ -1,2 +1,12 @@
-
-(line-reminder . [(20200914 611) ((emacs (24 4)) (indicators (0 0 4))) "Line annotation for changed and saved lines" single ((:commit . "65332e11735e2b3321bcab8e1456c13b6b6c1aa5") (:authors ("Shen, Jen-Chieh" . "jcs090218@gmail.com")) (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com") (:url . "https://github.com/jcs-elpa/line-reminder"))])
+(line-reminder .
+	       [(20200914 611)
+		((emacs
+		  (24 4))
+		 (indicators
+		  (0 0 4)))
+		"Line annotation for changed and saved lines" single
+		((:commit . "65332e11735e2b3321bcab8e1456c13b6b6c1aa5")
+		 (:authors
+		  ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		 (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		 (:url . "https://github.com/jcs-elpa/line-reminder"))])

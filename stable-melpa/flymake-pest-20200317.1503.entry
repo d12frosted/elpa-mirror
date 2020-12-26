@@ -1,2 +1,14 @@
-
-(flymake-pest . [(20200317 1503) ((emacs (26 3)) (pest-mode (0 1))) "A flymake handler for Pest files" single ((:commit . "43447a2c70f98edd1139005e32f437d3f142442b") (:keywords "languages" "flymake") (:authors ("ksqsf" . "i@ksqsf.moe") ("Naoya Yamashita" . "conao3@gmail.com")) (:maintainer "ksqsf" . "i@ksqsf.moe") (:url . "https://github.com/ksqsf/pest-mode"))])
+(flymake-pest .
+	      [(20200317 1503)
+	       ((emacs
+		 (26 3))
+		(pest-mode
+		 (0 1)))
+	       "A flymake handler for Pest files" single
+	       ((:commit . "43447a2c70f98edd1139005e32f437d3f142442b")
+		(:authors
+		 ("ksqsf" . "i@ksqsf.moe")
+		 ("Naoya Yamashita" . "conao3@gmail.com"))
+		(:maintainer "ksqsf" . "i@ksqsf.moe")
+		(:keywords "languages" "flymake")
+		(:url . "https://github.com/ksqsf/pest-mode"))])

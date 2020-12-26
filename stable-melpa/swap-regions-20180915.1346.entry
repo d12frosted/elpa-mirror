@@ -1,2 +1,11 @@
-
-(swap-regions . [(20180915 1346) ((emacs (24 3))) "Swap text in two regions" single ((:commit . "f4fd9880cf690e003fcde88dcf2b46adbbbb03cd") (:keywords "convenience") (:authors ("Xu Chunyang" . "mail@xuchunyang.me")) (:maintainer "Xu Chunyang" . "mail@xuchunyang.me") (:url . "https://github.com/xuchunyang/swap-regions.el"))])
+(swap-regions .
+	      [(20180915 1346)
+	       ((emacs
+		 (24 3)))
+	       "Swap text in two regions" single
+	       ((:commit . "f4fd9880cf690e003fcde88dcf2b46adbbbb03cd")
+		(:authors
+		 ("Xu Chunyang" . "mail@xuchunyang.me"))
+		(:maintainer "Xu Chunyang" . "mail@xuchunyang.me")
+		(:keywords "convenience")
+		(:url . "https://github.com/xuchunyang/swap-regions.el"))])

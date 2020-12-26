@@ -1,2 +1,11 @@
-
-(eterm-fn . [(20191010 2331) ((term (0))) "Function keys (F1--F12) for term." tar ((:commit . "66f3b2f6308fa2ac4d8a32be5a7e35a96e08a9ee") (:url . "https://github.com/oitofelix/eterm-fn") (:maintainer "Bruno Félix Rezende Ribeiro" . "oitofelix@gnu.org") (:authors ("Bruno Félix Rezende Ribeiro" . "oitofelix@gnu.org")))])
+(eterm-fn .
+	  [(20191010 2331)
+	   ((term
+	     (0)))
+	   "Function keys (F1--F12) for term." tar
+	   ((:commit . "66f3b2f6308fa2ac4d8a32be5a7e35a96e08a9ee")
+	    (:authors
+	     ("Bruno Félix Rezende Ribeiro" . "oitofelix@gnu.org"))
+	    (:maintainer "Bruno Félix Rezende Ribeiro" . "oitofelix@gnu.org")
+	    (:keywords "terminals")
+	    (:url . "https://github.com/oitofelix/eterm-fn"))])

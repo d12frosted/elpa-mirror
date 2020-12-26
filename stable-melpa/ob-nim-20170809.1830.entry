@@ -1,2 +1,10 @@
-
-(ob-nim . [(20170809 1830) ((cl-lib (0 5))) "Babel Functions for nim" single ((:commit . "bf1642cb93f0a898804dc13fd9408d2964403bd2") (:keywords "literate programming" "reproducible research") (:authors ("Lompik")) (:maintainer "Lompik"))])
+(ob-nim .
+	[(20170809 1830)
+	 ((cl-lib
+	   (0 5)))
+	 "Babel Functions for nim" single
+	 ((:commit . "bf1642cb93f0a898804dc13fd9408d2964403bd2")
+	  (:authors
+	   ("Lompik"))
+	  (:maintainer "Lompik")
+	  (:keywords "literate programming" "reproducible research"))])

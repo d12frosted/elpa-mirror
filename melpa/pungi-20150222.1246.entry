@@ -1,2 +1,12 @@
-
-(pungi . [(20150222 1246) ((jedi (0 2 0 -3 2)) (pyvenv (1 5))) "Integrates jedi with virtualenv and buildout python environments" single ((:commit . "a2d4d439ea371be0b064a12248288903b8a521a0") (:keywords "convenience") (:authors ("Matthew Russell" . "matthew.russell@horizon5.org")) (:maintainer "Matthew Russell" . "matthew.russell@horizon5.org"))])
+(pungi .
+       [(20150222 1246)
+	((jedi
+	  (0 2 0 -3 2))
+	 (pyvenv
+	  (1 5)))
+	"Integrates jedi with virtualenv and buildout python environments" single
+	((:commit . "a2d4d439ea371be0b064a12248288903b8a521a0")
+	 (:authors
+	  ("Matthew Russell" . "matthew.russell@horizon5.org"))
+	 (:maintainer "Matthew Russell" . "matthew.russell@horizon5.org")
+	 (:keywords "convenience"))])

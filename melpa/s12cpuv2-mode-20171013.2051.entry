@@ -1,2 +1,11 @@
-
-(s12cpuv2-mode . [(20171013 2051) ((emacs (24 3))) "Major-mode for S12CPUV2 assembly" single ((:commit . "b17d4cf848dec1e20e66458e5c7ff77a2c051a8c") (:keywords "s12cpuv2" "assembly" "languages") (:authors ("Adam Niederer" . "adam.niederer@gmail.com")) (:maintainer "Adam Niederer" . "adam.niederer@gmail.com") (:url . "https://github.com/AdamNiederer/s12cpuv2-mode"))])
+(s12cpuv2-mode .
+	       [(20171013 2051)
+		((emacs
+		  (24 3)))
+		"Major-mode for S12CPUV2 assembly" single
+		((:commit . "b17d4cf848dec1e20e66458e5c7ff77a2c051a8c")
+		 (:authors
+		  ("Adam Niederer" . "adam.niederer@gmail.com"))
+		 (:maintainer "Adam Niederer" . "adam.niederer@gmail.com")
+		 (:keywords "s12cpuv2" "assembly" "languages")
+		 (:url . "https://github.com/AdamNiederer/s12cpuv2-mode"))])

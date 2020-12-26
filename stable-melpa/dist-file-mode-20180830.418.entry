@@ -1,2 +1,15 @@
-
-(dist-file-mode . [(20180830 418) ((emacs (24)) (cl-lib (0 5)) (s (1 9 0))) "Dispatch major mode for *.dist files" single ((:commit . "e1ce8f592bc5d4d86d2f09e334728ac0d524c761") (:keywords "files" "convenience") (:authors ("USAMI Kenta" . "tadsan@zonu.me")) (:maintainer "USAMI Kenta" . "tadsan@zonu.me") (:url . "https://github.com/emacs-php/dist-file-mode.el"))])
+(dist-file-mode .
+		[(20180830 418)
+		 ((emacs
+		   (24))
+		  (cl-lib
+		   (0 5))
+		  (s
+		   (1 9 0)))
+		 "Dispatch major mode for *.dist files" single
+		 ((:commit . "e1ce8f592bc5d4d86d2f09e334728ac0d524c761")
+		  (:authors
+		   ("USAMI Kenta" . "tadsan@zonu.me"))
+		  (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+		  (:keywords "files" "convenience")
+		  (:url . "https://github.com/emacs-php/dist-file-mode.el"))])

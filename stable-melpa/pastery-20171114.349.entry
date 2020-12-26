@@ -1,2 +1,13 @@
-
-(pastery . [(20171114 349) ((emacs (24 4)) (request (0 2 0))) "paste snippets to pastery.net." tar ((:commit . "4493be98b743b4d062cb4e00760125e394a55022") (:keywords "tools") (:authors ("Bruno Dias" . "dias.h.bruno@gmail.com")) (:maintainer "Bruno Dias" . "dias.h.bruno@gmail.com") (:url . "https://github.com/diasbruno/pastery.el"))])
+(pastery .
+	 [(20171114 349)
+	  ((emacs
+	    (24 4))
+	   (request
+	    (0 2 0)))
+	  "paste snippets to pastery.net." tar
+	  ((:commit . "4493be98b743b4d062cb4e00760125e394a55022")
+	   (:authors
+	    ("Bruno Dias" . "dias.h.bruno@gmail.com"))
+	   (:maintainer "Bruno Dias" . "dias.h.bruno@gmail.com")
+	   (:keywords "tools")
+	   (:url . "https://github.com/diasbruno/pastery.el"))])

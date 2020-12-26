@@ -1,2 +1,11 @@
-
-(verify-url . [(20160426 1228) ((cl-lib (0 5))) "find out invalid urls in the buffer or region" single ((:commit . "d6f3623cda8cd526a2d198619b137059cb1ba1ab") (:keywords "convenience" "usability" "url") (:authors ("DarkSun" . "lujun9972@gmail.com")) (:maintainer "DarkSun" . "lujun9972@gmail.com") (:url . "https://github.com/lujun9972/verify-url"))])
+(verify-url .
+	    [(20160426 1228)
+	     ((cl-lib
+	       (0 5)))
+	     "find out invalid urls in the buffer or region" single
+	     ((:commit . "d6f3623cda8cd526a2d198619b137059cb1ba1ab")
+	      (:authors
+	       ("DarkSun" . "lujun9972@gmail.com"))
+	      (:maintainer "DarkSun" . "lujun9972@gmail.com")
+	      (:keywords "convenience" "usability" "url")
+	      (:url . "https://github.com/lujun9972/verify-url"))])

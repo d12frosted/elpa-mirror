@@ -1,2 +1,17 @@
-
-(helm-circe . [(20160207 652) ((emacs (24)) (helm (0 0)) (circe (0 0)) (cl-lib (0 5))) "helm circe buffer management." single ((:commit . "9091651d9fdd8d49d8ff6f9dcf3a2ae416c9f15a") (:keywords "helm" "circe") (:authors ("Les Harris" . "les@lesharris.com")) (:maintainer "Les Harris" . "les@lesharris.com") (:url . "https://github.com/lesharris/helm-circe"))])
+(helm-circe .
+	    [(20160207 652)
+	     ((emacs
+	       (24))
+	      (helm
+	       (0 0))
+	      (circe
+	       (0 0))
+	      (cl-lib
+	       (0 5)))
+	     "helm circe buffer management." single
+	     ((:commit . "9091651d9fdd8d49d8ff6f9dcf3a2ae416c9f15a")
+	      (:authors
+	       ("Les Harris" . "les@lesharris.com"))
+	      (:maintainer "Les Harris" . "les@lesharris.com")
+	      (:keywords "helm" "circe")
+	      (:url . "https://github.com/lesharris/helm-circe"))])

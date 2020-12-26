@@ -1,2 +1,8 @@
-
-(tomatinho . [(20180621 1748) nil "Simple and beautiful pomodoro timer" tar ((:commit . "b53354b9b9f496c0388d6a573b06b7d6fc53d0bd") (:keywords "time" "productivity" "pomodoro technique") (:authors ("Konrad Scorciapino" . "scorciapino@gmail.com")) (:maintainer "Konrad Scorciapino" . "scorciapino@gmail.com"))])
+(tomatinho .
+	   [(20180621 1748)
+	    nil "Simple and beautiful pomodoro timer" tar
+	    ((:commit . "b53354b9b9f496c0388d6a573b06b7d6fc53d0bd")
+	     (:authors
+	      ("Konrad Scorciapino" . "scorciapino@gmail.com"))
+	     (:maintainer "Konrad Scorciapino" . "scorciapino@gmail.com")
+	     (:keywords "time" "productivity" "pomodoro technique"))])

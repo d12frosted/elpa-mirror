@@ -1,2 +1,11 @@
-
-(git-io . [(20180317 1752) ((emacs (24 4))) "git.io integration" single ((:commit . "48753acba73b48b997bb678fb5e2a938ae63b5d6") (:keywords "convenience" "files") (:authors ("Tejas Bubane" . "tejasbubane@gmail.com")) (:maintainer "Tejas Bubane" . "tejasbubane@gmail.com") (:url . "https://github.com/tejasbubane/emacs-git-io"))])
+(git-io .
+	[(20180317 1752)
+	 ((emacs
+	   (24 4)))
+	 "git.io integration" single
+	 ((:commit . "48753acba73b48b997bb678fb5e2a938ae63b5d6")
+	  (:authors
+	   ("Tejas Bubane" . "tejasbubane@gmail.com"))
+	  (:maintainer "Tejas Bubane" . "tejasbubane@gmail.com")
+	  (:keywords "convenience" "files")
+	  (:url . "https://github.com/tejasbubane/emacs-git-io"))])

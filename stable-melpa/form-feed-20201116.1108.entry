@@ -1,2 +1,9 @@
-
-(form-feed . [(20201116 1108) nil "Display ^L glyphs as horizontal lines" single ((:commit . "26a52410db56fab9888b24b7622d74a2779c719d") (:keywords "faces") (:authors ("Vasilij Schneidermann" . "mail@vasilij.de")) (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de") (:url . "https://depp.brause.cc/form-feed"))])
+(form-feed .
+	   [(20201116 1108)
+	    nil "Display ^L glyphs as horizontal lines" single
+	    ((:commit . "26a52410db56fab9888b24b7622d74a2779c719d")
+	     (:authors
+	      ("Vasilij Schneidermann" . "mail@vasilij.de"))
+	     (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de")
+	     (:keywords "faces")
+	     (:url . "https://depp.brause.cc/form-feed"))])

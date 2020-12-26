@@ -1,2 +1,8 @@
-
-(ycm . [(20150822 1836) nil "Emacs client for the YouCompleteMe auto-completion server." single ((:commit . "4da8a14abcd0f4fa3235042ade2e12b5068c0601") (:keywords "c" "abbrev") (:authors ("Ajay Gopinathan" . "ajay@gopinathan.net")) (:maintainer "Ajay Gopinathan" . "ajay@gopinathan.net"))])
+(ycm .
+     [(20150822 1836)
+      nil "Emacs client for the YouCompleteMe auto-completion server." single
+      ((:commit . "4da8a14abcd0f4fa3235042ade2e12b5068c0601")
+       (:authors
+	("Ajay Gopinathan" . "ajay@gopinathan.net"))
+       (:maintainer "Ajay Gopinathan" . "ajay@gopinathan.net")
+       (:keywords "c" "abbrev"))])

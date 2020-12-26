@@ -1,2 +1,11 @@
-
-(init-open-recentf . [(20200321 737) ((emacs (24 4))) "Invoke a command immediately after startup" single ((:commit . "369304d6adb6875948c4534419c4f303ac23c4f6") (:keywords "files" "recentf" "after-init-hook") (:authors ("USAMI Kenta" . "tadsan@zonu.me")) (:maintainer "USAMI Kenta" . "tadsan@zonu.me") (:url . "https://github.com/zonuexe/init-open-recentf.el"))])
+(init-open-recentf .
+		   [(20200321 737)
+		    ((emacs
+		      (24 4)))
+		    "Invoke a command immediately after startup" single
+		    ((:commit . "369304d6adb6875948c4534419c4f303ac23c4f6")
+		     (:authors
+		      ("USAMI Kenta" . "tadsan@zonu.me"))
+		     (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+		     (:keywords "files" "recentf" "after-init-hook")
+		     (:url . "https://github.com/zonuexe/init-open-recentf.el"))])

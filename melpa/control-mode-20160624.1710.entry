@@ -1,2 +1,9 @@
-
-(control-mode . [(20160624 1710) nil "A \"control\" mode, similar to vim's \"normal\" mode" single ((:commit . "72d6179b60adc438aada74083b2bf4264b575de3") (:keywords "convenience" "emulations") (:authors ("Stephen Marsh" . "stephen.david.marsh@gmail.com")) (:maintainer "Stephen Marsh" . "stephen.david.marsh@gmail.com") (:url . "https://github.com/stephendavidmarsh/control-mode"))])
+(control-mode .
+	      [(20160624 1710)
+	       nil "A \"control\" mode, similar to vim's \"normal\" mode" single
+	       ((:commit . "72d6179b60adc438aada74083b2bf4264b575de3")
+		(:authors
+		 ("Stephen Marsh" . "stephen.david.marsh@gmail.com"))
+		(:maintainer "Stephen Marsh" . "stephen.david.marsh@gmail.com")
+		(:keywords "convenience" "emulations")
+		(:url . "https://github.com/stephendavidmarsh/control-mode"))])

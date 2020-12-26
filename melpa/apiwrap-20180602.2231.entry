@@ -1,2 +1,11 @@
-
-(apiwrap . [(20180602 2231) ((emacs (25))) "api-wrapping macros" single ((:commit . "a4fb21d96027369307b22439a4a6c765ee272f44") (:keywords "tools" "maint" "convenience") (:authors ("Sean Allred" . "code@seanallred.com")) (:maintainer "Sean Allred" . "code@seanallred.com") (:url . "https://github.com/vermiculus/apiwrap.el"))])
+(apiwrap .
+	 [(20180602 2231)
+	  ((emacs
+	    (25)))
+	  "api-wrapping macros" single
+	  ((:commit . "a4fb21d96027369307b22439a4a6c765ee272f44")
+	   (:authors
+	    ("Sean Allred" . "code@seanallred.com"))
+	   (:maintainer "Sean Allred" . "code@seanallred.com")
+	   (:keywords "tools" "maint" "convenience")
+	   (:url . "https://github.com/vermiculus/apiwrap.el"))])

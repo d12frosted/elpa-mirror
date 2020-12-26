@@ -1,2 +1,11 @@
-
-(notmuch-labeler . [(20131230 1719) ((notmuch (0))) "Improve notmuch way of displaying labels" tar ((:commit . "d65d1129555d368243df4770ecc1e7ccb88efc58") (:keywords "emacs" "package" "elisp" "notmuch" "emails") (:authors ("Damien Cassou" . "damien.cassou@gmail.com")) (:maintainer "Damien Cassou" . "damien.cassou@gmail.com") (:url . "https://github.com/DamienCassou/notmuch-labeler"))])
+(notmuch-labeler .
+		 [(20131230 1719)
+		  ((notmuch
+		    (0)))
+		  "Improve notmuch way of displaying labels" tar
+		  ((:commit . "d65d1129555d368243df4770ecc1e7ccb88efc58")
+		   (:authors
+		    ("Damien Cassou" . "damien.cassou@gmail.com"))
+		   (:maintainer "Damien Cassou" . "damien.cassou@gmail.com")
+		   (:keywords "emacs" "package" "elisp" "notmuch" "emails")
+		   (:url . "https://github.com/DamienCassou/notmuch-labeler"))])

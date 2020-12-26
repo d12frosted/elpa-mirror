@@ -1,2 +1,10 @@
-
-(gore-mode . [(20151123 1927) ((go-mode (1 0 0))) "Simple mode for gore, a command-line evaluator for golang." single ((:commit . "94d7f3e99104e06167967c98fdc201049c433c2d") (:keywords "go" "repl") (:authors ("Sergey Pashaev" . "sergey.pashaev@gmail.com")) (:maintainer "Sergey Pashaev" . "sergey.pashaev@gmail.com"))])
+(gore-mode .
+	   [(20151123 1927)
+	    ((go-mode
+	      (1 0 0)))
+	    "Simple mode for gore, a command-line evaluator for golang." single
+	    ((:commit . "94d7f3e99104e06167967c98fdc201049c433c2d")
+	     (:authors
+	      ("Sergey Pashaev" . "sergey.pashaev@gmail.com"))
+	     (:maintainer "Sergey Pashaev" . "sergey.pashaev@gmail.com")
+	     (:keywords "go" "repl"))])

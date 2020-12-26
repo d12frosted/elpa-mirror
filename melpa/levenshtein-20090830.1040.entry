@@ -1,2 +1,9 @@
-
-(levenshtein . [(20090830 1040) nil "Edit distance between two strings." single ((:commit . "070925197ebf6b704e6e00c4f2d2ec783f3df38c") (:keywords "lisp") (:authors ("Aaron S. Hawley <ashawley at uvm dot edu>,") ("Art Taylor")) (:maintainer "Aaron S. Hawley <ashawley at uvm dot edu>,"))])
+(levenshtein .
+	     [(20090830 1040)
+	      nil "Edit distance between two strings." single
+	      ((:commit . "070925197ebf6b704e6e00c4f2d2ec783f3df38c")
+	       (:authors
+		("Aaron S. Hawley <ashawley at uvm dot edu>,")
+		("Art Taylor"))
+	       (:maintainer "Aaron S. Hawley <ashawley at uvm dot edu>,")
+	       (:keywords "lisp"))])

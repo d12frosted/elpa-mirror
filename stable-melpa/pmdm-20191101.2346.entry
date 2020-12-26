@@ -1,2 +1,8 @@
-
-(pmdm . [(20191101 2346) nil "poor man's desktop-mode alternative." single ((:commit . "1f30adce8a23da94b3c2460b7248d5910592d8af") (:authors ("Iñigo Serna" . "inigoserna@gmx.com")) (:maintainer "Iñigo Serna" . "inigoserna@gmx.com") (:url . "https://hg.serna.eu/emacs/pmdm"))])
+(pmdm .
+      [(20191101 2346)
+       nil "poor man's desktop-mode alternative." single
+       ((:commit . "1f30adce8a23da94b3c2460b7248d5910592d8af")
+	(:authors
+	 ("Iñigo Serna" . "inigoserna@gmx.com"))
+	(:maintainer "Iñigo Serna" . "inigoserna@gmx.com")
+	(:url . "https://hg.serna.eu/emacs/pmdm"))])

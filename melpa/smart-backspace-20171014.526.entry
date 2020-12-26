@@ -1,2 +1,8 @@
-
-(smart-backspace . [(20171014 526) nil "intellj like backspace" single ((:commit . "a10ec44ff325ec8c4c98b1a6e44e89e60a9aa4ac") (:authors ("Takeshi Tsukamoto" . "t.t.itm.0403@gmail.com")) (:maintainer "Takeshi Tsukamoto" . "t.t.itm.0403@gmail.com") (:url . "https://github.com/itome/smart-backspace"))])
+(smart-backspace .
+		 [(20171014 526)
+		  nil "intellj like backspace" single
+		  ((:commit . "a10ec44ff325ec8c4c98b1a6e44e89e60a9aa4ac")
+		   (:authors
+		    ("Takeshi Tsukamoto" . "t.t.itm.0403@gmail.com"))
+		   (:maintainer "Takeshi Tsukamoto" . "t.t.itm.0403@gmail.com")
+		   (:url . "https://github.com/itome/smart-backspace"))])

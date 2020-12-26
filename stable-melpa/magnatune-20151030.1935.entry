@@ -1,2 +1,8 @@
-
-(magnatune . [(20151030 1935) ((dash (2 9 0)) (s (1 9 0))) "browse magnatune's music catalog" tar ((:commit . "605b01505ba30589c77ebb4c96834b5072ccbdd4"))])
+(magnatune .
+	   [(20151030 1935)
+	    ((dash
+	      (2 9 0))
+	     (s
+	      (1 9 0)))
+	    "browse magnatune's music catalog" tar
+	    ((:commit . "605b01505ba30589c77ebb4c96834b5072ccbdd4"))])

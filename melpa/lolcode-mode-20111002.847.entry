@@ -1,2 +1,9 @@
-
-(lolcode-mode . [(20111002 847) nil "Major mode for editing LOLCODE" single ((:commit . "1914f1ba87587ecf5f175eeb2144c28e9f039317") (:keywords "lolcode" "major" "mode") (:authors ("Bodil Stokke" . "lolcode@bodil.tv")) (:maintainer "Bodil Stokke" . "lolcode@bodil.tv") (:url . "http://github.com/bodil/lolcode-mode"))])
+(lolcode-mode .
+	      [(20111002 847)
+	       nil "Major mode for editing LOLCODE" single
+	       ((:commit . "1914f1ba87587ecf5f175eeb2144c28e9f039317")
+		(:authors
+		 ("Bodil Stokke" . "lolcode@bodil.tv"))
+		(:maintainer "Bodil Stokke" . "lolcode@bodil.tv")
+		(:keywords "lolcode" "major" "mode")
+		(:url . "http://github.com/bodil/lolcode-mode"))])

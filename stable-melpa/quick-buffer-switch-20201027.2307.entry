@@ -1,2 +1,8 @@
-
-(quick-buffer-switch . [(20201027 2307) nil "Quick switch to file or dir buffers." single ((:commit . "da82555f286588f171eed1de151325bbdd8cbd91") (:keywords "emacs" "configuration") (:authors ("Sebastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>")) (:maintainer "Sebastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>"))])
+(quick-buffer-switch .
+		     [(20201027 2307)
+		      nil "Quick switch to file or dir buffers." single
+		      ((:commit . "da82555f286588f171eed1de151325bbdd8cbd91")
+		       (:authors
+			("Sebastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>"))
+		       (:maintainer "Sebastien Gross <seb•ɑƬ•chezwam•ɖɵʈ•org>")
+		       (:keywords "emacs" "configuration"))])

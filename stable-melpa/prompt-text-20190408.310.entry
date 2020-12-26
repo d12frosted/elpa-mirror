@@ -1,2 +1,9 @@
-
-(prompt-text . [(20190408 310) nil "Configure your minibuffer prompt" single ((:commit . "0a75ecd5058c9a006e02d1ecd3f1c84194881abd") (:keywords "utility" "minibuffer") (:authors ("10sr <8slashes+el [at] gmail [dot] com>")) (:maintainer "10sr <8slashes+el [at] gmail [dot] com>") (:url . "https://github.com/10sr/prompt-text-el"))])
+(prompt-text .
+	     [(20190408 310)
+	      nil "Configure your minibuffer prompt" single
+	      ((:commit . "0a75ecd5058c9a006e02d1ecd3f1c84194881abd")
+	       (:authors
+		("10sr <8slashes+el [at] gmail [dot] com>"))
+	       (:maintainer "10sr <8slashes+el [at] gmail [dot] com>")
+	       (:keywords "utility" "minibuffer")
+	       (:url . "https://github.com/10sr/prompt-text-el"))])

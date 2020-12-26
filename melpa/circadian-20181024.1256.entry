@@ -1,2 +1,11 @@
-
-(circadian . [(20181024 1256) ((emacs (24 4))) "Theme-switching based on daytime" single ((:commit . "414127acad8e2e0092ca60918e6a7cb89da6e28a") (:keywords "themes") (:authors ("Guido Schmidt")) (:maintainer "Guido Schmidt" . "git@guidoschmidt.cc") (:url . "https://github.com/GuidoSchmidt/circadian"))])
+(circadian .
+	   [(20181024 1256)
+	    ((emacs
+	      (24 4)))
+	    "Theme-switching based on daytime" single
+	    ((:commit . "414127acad8e2e0092ca60918e6a7cb89da6e28a")
+	     (:authors
+	      ("Guido Schmidt"))
+	     (:maintainer "Guido Schmidt" . "git@guidoschmidt.cc")
+	     (:keywords "themes")
+	     (:url . "https://github.com/GuidoSchmidt/circadian"))])

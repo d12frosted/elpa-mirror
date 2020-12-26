@@ -1,2 +1,6 @@
-
-(dactyl-mode . [(20140906 1725) nil "Major mode for editing Pentadactyl config files" single ((:commit . "cc55fe6b987271d9647492b8df4c812d884f661f") (:keywords "languages" "vim") (:url . "https://github.com/luxbock/dactyl-mode"))])
+(dactyl-mode .
+	     [(20140906 1725)
+	      nil "Major mode for editing Pentadactyl config files" single
+	      ((:commit . "cc55fe6b987271d9647492b8df4c812d884f661f")
+	       (:keywords "languages" "vim")
+	       (:url . "https://github.com/luxbock/dactyl-mode"))])

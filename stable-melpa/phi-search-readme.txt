@@ -1,53 +1,56 @@
-Add following expression in your init file :
+;;; Commentary:
 
-  (require 'phi-search)
+;; Add following expression in your init file :
+;;
+;;   (require 'phi-search)
+;;
+;; and bind command "phi-search"
+;;
+;;   (global-set-key (kbd "C-s") 'phi-search)
+;;   (global-set-key (kbd "C-r") 'phi-search-backward)
 
-and bind command "phi-search"
+;; In *phi-search* buffer, following commands are available.
 
-  (global-set-key (kbd "C-s") 'phi-search)
-  (global-set-key (kbd "C-r") 'phi-search-backward)
+;; - phi-search-again-or-next (replaces "phi-search")
+;;
+;;   Move to the next matching item. If query is blank, use the last
+;;   query.
 
-In *phi-search* buffer, following commands are available.
+;; - phi-search-again-or-previous (replaces "phi-search-backward")
+;;
+;;   Similar to phi-search-again-or-next, but move to the previous item.
 
-- phi-search-again-or-next (replaces "phi-search")
+;; - [M-v] phi-search-scroll-up
+;;
+;;   Scroll the target window up, to check candidates.
 
-  Move to the next matching item. If query is blank, use the last
-  query.
+;; - [C-v] phi-search-scroll-down
+;;
+;;   Scroll the target window down.
 
-- phi-search-again-or-previous (replaces "phi-search-backward")
+;; - [C-l] phi-search-recenter
+;;
+;;   Recenter the target window.
 
-  Similar to phi-search-again-or-next, but move to the previous item.
+;; - [C-w] phi-search-yank-word
+;;
+;;   Expand query by yanking one word from the target buffer.
 
-- [M-v] phi-search-scroll-up
+;; - [RET] phi-search-complete
+;;
+;;   Finish searching.
 
-  Scroll the target window up, to check candidates.
+;; - [C-RET] phi-search-complete-at-beginning
+;;
+;;   Finish searching at the beginning of the match.
 
-- [C-v] phi-search-scroll-down
+;; - [C-c C-c] phi-search-unlimit
+;;
+;;   Force update results regardless of "phi-search-limit"
 
-  Scroll the target window down.
+;; - [C-g] phi-search-abort
+;;
+;;   Finish searching, and move back to the original position.
 
-- [C-l] phi-search-recenter
+;; For more details, see "Readme".
 
-  Recenter the target window.
-
-- [C-w] phi-search-yank-word
-
-  Expand query by yanking one word from the target buffer.
-
-- [RET] phi-search-complete
-
-  Finish searching.
-
-- [C-RET] phi-search-complete-at-beginning
-
-  Finish searching at the beginning of the match.
-
-- [C-c C-c] phi-search-unlimit
-
-  Force update results regardless of "phi-search-limit"
-
-- [C-g] phi-search-abort
-
-  Finish searching, and move back to the original position.
-
-For more details, see "Readme".

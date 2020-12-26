@@ -1,2 +1,13 @@
-
-(mqtt-mode . [(20180605 1731) ((emacs (25)) (dash (2 12 0))) "client for interaction with MQTT servers" single ((:commit . "36d1d4296d79e17b8f35e8e14f2708980eb502db") (:keywords "tools") (:authors ("Andreas Müller" . "code@0x7.ch")) (:maintainer "Andreas Müller" . "code@0x7.ch") (:url . "https://github.com/andrmuel/mqtt-mode"))])
+(mqtt-mode .
+	   [(20180605 1731)
+	    ((emacs
+	      (25))
+	     (dash
+	      (2 12 0)))
+	    "client for interaction with MQTT servers" single
+	    ((:commit . "36d1d4296d79e17b8f35e8e14f2708980eb502db")
+	     (:authors
+	      ("Andreas Müller" . "code@0x7.ch"))
+	     (:maintainer "Andreas Müller" . "code@0x7.ch")
+	     (:keywords "tools")
+	     (:url . "https://github.com/andrmuel/mqtt-mode"))])

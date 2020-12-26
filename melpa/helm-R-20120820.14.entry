@@ -1,2 +1,13 @@
-
-(helm-R . [(20120820 14) ((helm (20120517)) (ess (20120509))) "helm-sources and some utilities for GNU R." single ((:commit . "b0eb9d5f6a483a9dbe6eb6cf1f2024d4f5938bc2") (:keywords "convenience") (:authors ("myuhe <yuhei.maeda_at_gmail.com>")) (:maintainer "myuhe") (:url . "https://github.com/myuhe/helm-R.el"))])
+(helm-R .
+	[(20120820 14)
+	 ((helm
+	   (20120517))
+	  (ess
+	   (20120509)))
+	 "helm-sources and some utilities for GNU R." single
+	 ((:commit . "b0eb9d5f6a483a9dbe6eb6cf1f2024d4f5938bc2")
+	  (:authors
+	   ("myuhe <yuhei.maeda_at_gmail.com>"))
+	  (:maintainer "myuhe")
+	  (:keywords "convenience")
+	  (:url . "https://github.com/myuhe/helm-R.el"))])

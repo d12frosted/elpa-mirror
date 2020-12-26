@@ -1,2 +1,9 @@
-
-(arview . [(20160419 2109) nil "extract and view archives in the temporary directory" single ((:commit . "5437b4221b64b238c273a651d4792c577dba6d45") (:keywords "files") (:authors ("Andrey Fainer" . "fandrey@gmx.com")) (:maintainer "Andrey Fainer" . "fandrey@gmx.com") (:url . "https://github.com/afainer/arview"))])
+(arview .
+	[(20160419 2109)
+	 nil "extract and view archives in the temporary directory" single
+	 ((:commit . "5437b4221b64b238c273a651d4792c577dba6d45")
+	  (:authors
+	   ("Andrey Fainer" . "fandrey@gmx.com"))
+	  (:maintainer "Andrey Fainer" . "fandrey@gmx.com")
+	  (:keywords "files")
+	  (:url . "https://github.com/afainer/arview"))])

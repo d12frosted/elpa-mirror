@@ -1,2 +1,17 @@
-
-(temporary-persistent . [(20200201 1719) ((emacs (24 3)) (names (20151201 0)) (dash (2 12 1)) (s (1 10 0))) "Keep temp notes buffers persistent" single ((:commit . "0080879b0257d350aeba1c4d6901613d7dc534de") (:keywords "temp" "buffers" "notes") (:authors ("Kostafey" . "kostafey@gmail.com")) (:maintainer "Kostafey" . "kostafey@gmail.com") (:url . "https://github.com/kostafey/temporary-persistent"))])
+(temporary-persistent .
+		      [(20200201 1719)
+		       ((emacs
+			 (24 3))
+			(names
+			 (20151201 0))
+			(dash
+			 (2 12 1))
+			(s
+			 (1 10 0)))
+		       "Keep temp notes buffers persistent" single
+		       ((:commit . "0080879b0257d350aeba1c4d6901613d7dc534de")
+			(:authors
+			 ("Kostafey" . "kostafey@gmail.com"))
+			(:maintainer "Kostafey" . "kostafey@gmail.com")
+			(:keywords "temp" "buffers" "notes")
+			(:url . "https://github.com/kostafey/temporary-persistent"))])

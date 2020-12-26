@@ -1,2 +1,11 @@
-
-(double-saber . [(20190325 1917) ((emacs (24 4))) "Narrow and delete in search buffers." single ((:commit . "b61df3561ea9bed1848cf69b6bb53f7fdf6916dc") (:keywords "double-saber" "narrow" "delete" "sort" "tools" "convenience" "matching") (:authors ("Daniel Ting" . "deep.paren.12@gmail.com")) (:maintainer "Daniel Ting" . "deep.paren.12@gmail.com") (:url . "https://github.com/dp12/double-saber.git"))])
+(double-saber .
+	      [(20190325 1917)
+	       ((emacs
+		 (24 4)))
+	       "Narrow and delete in search buffers." single
+	       ((:commit . "b61df3561ea9bed1848cf69b6bb53f7fdf6916dc")
+		(:authors
+		 ("Daniel Ting" . "deep.paren.12@gmail.com"))
+		(:maintainer "Daniel Ting" . "deep.paren.12@gmail.com")
+		(:keywords "double-saber" "narrow" "delete" "sort" "tools" "convenience" "matching")
+		(:url . "https://github.com/dp12/double-saber.git"))])

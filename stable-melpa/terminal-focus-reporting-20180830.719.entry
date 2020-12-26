@@ -1,2 +1,11 @@
-
-(terminal-focus-reporting . [(20180830 719) ((emacs (24 4))) "Minor mode for terminal focus reporting." single ((:commit . "6b1dbb2e96b3ff680dbe88153c4c569adbbd64ce") (:keywords "convenience") (:authors ("Vitalii Elenhaupt")) (:maintainer "Vitalii Elenhaupt") (:url . "https://github.com/veelenga/terminal-focus-reporting.el"))])
+(terminal-focus-reporting .
+			  [(20180830 719)
+			   ((emacs
+			     (24 4)))
+			   "Minor mode for terminal focus reporting." single
+			   ((:commit . "6b1dbb2e96b3ff680dbe88153c4c569adbbd64ce")
+			    (:authors
+			     ("Vitalii Elenhaupt"))
+			    (:maintainer "Vitalii Elenhaupt")
+			    (:keywords "convenience")
+			    (:url . "https://github.com/veelenga/terminal-focus-reporting.el"))])

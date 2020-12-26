@@ -1,2 +1,8 @@
-
-(midje-mode . [(20170809 403) ((cider (0 1 4)) (clojure-mode (1 0))) "Minor mode for running Midje tests in emacs" tar ((:commit . "10ad5b6084cd03d5cd268b486a7c3c246d85535f"))])
+(midje-mode .
+	    [(20170809 403)
+	     ((cider
+	       (0 1 4))
+	      (clojure-mode
+	       (1 0)))
+	     "Minor mode for running Midje tests in emacs" tar
+	     ((:commit . "10ad5b6084cd03d5cd268b486a7c3c246d85535f"))])

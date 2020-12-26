@@ -1,2 +1,11 @@
-
-(framesize . [(20131017 2132) ((key-chord (0 5 20080915))) "change the size of frames in Emacs" single ((:commit . "f2dbf5d2513b2bc45f2085370a55c1754b6025da") (:keywords "frames") (:authors ("Nic Ferrier" . "nferrier@ferrier.me.uk")) (:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk") (:url . "http://github.com/nicferrier/emacs-framesize"))])
+(framesize .
+	   [(20131017 2132)
+	    ((key-chord
+	      (0 5 20080915)))
+	    "change the size of frames in Emacs" single
+	    ((:commit . "f2dbf5d2513b2bc45f2085370a55c1754b6025da")
+	     (:authors
+	      ("Nic Ferrier" . "nferrier@ferrier.me.uk"))
+	     (:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk")
+	     (:keywords "frames")
+	     (:url . "http://github.com/nicferrier/emacs-framesize"))])

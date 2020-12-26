@@ -1,2 +1,15 @@
-
-(fortpy . [(20150715 2032) ((epc (0 1 0)) (auto-complete (1 4)) (python-environment (0 0 2)) (pos-tip (0 4 5))) "a Fortran auto-completion for Emacs" tar ((:commit . "c614517e9396ef7a78be3b8786fbf303879cf43b") (:authors ("Conrad Rosenbrock <rosenbrockc at gmail.com>")) (:maintainer "Conrad Rosenbrock <rosenbrockc at gmail.com>"))])
+(fortpy .
+	[(20150715 2032)
+	 ((epc
+	   (0 1 0))
+	  (auto-complete
+	   (1 4))
+	  (python-environment
+	   (0 0 2))
+	  (pos-tip
+	   (0 4 5)))
+	 "a Fortran auto-completion for Emacs" tar
+	 ((:commit . "c614517e9396ef7a78be3b8786fbf303879cf43b")
+	  (:authors
+	   ("Conrad Rosenbrock <rosenbrockc at gmail.com>"))
+	  (:maintainer "Conrad Rosenbrock <rosenbrockc at gmail.com>"))])

@@ -1,2 +1,16 @@
-
-(serverspec . [(20150623 1155) ((dash (2 6 0)) (s (1 9 0)) (f (0 16 2)) (helm (1 6 1))) "Serverspec minor mode" tar ((:commit . "b6dfe82af9869438de5e5d860ced196641f372c0") (:authors ("k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>")) (:maintainer "k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>") (:url . "http://101000lab.org"))])
+(serverspec .
+	    [(20150623 1155)
+	     ((dash
+	       (2 6 0))
+	      (s
+	       (1 9 0))
+	      (f
+	       (0 16 2))
+	      (helm
+	       (1 6 1)))
+	     "Serverspec minor mode" tar
+	     ((:commit . "b6dfe82af9869438de5e5d860ced196641f372c0")
+	      (:authors
+	       ("k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>"))
+	      (:maintainer "k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>")
+	      (:url . "http://101000lab.org"))])

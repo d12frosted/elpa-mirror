@@ -1,2 +1,6 @@
-
-(ten-hundred-mode . [(20161028 2236) ((cl-lib (0 5))) "use only the ten hundred most usual words" tar ((:commit . "bdcfda49b1819e82d61fe90947e50bb948cf7933"))])
+(ten-hundred-mode .
+		  [(20161028 2236)
+		   ((cl-lib
+		     (0 5)))
+		   "use only the ten hundred most usual words" tar
+		   ((:commit . "bdcfda49b1819e82d61fe90947e50bb948cf7933"))])

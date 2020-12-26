@@ -1,2 +1,11 @@
-
-(scribble-mode . [(20190912 200) ((emacs (24))) "Major mode for editing Scribble documents" single ((:commit . "5c3ea3cc9bbad585476eee41ea76dc056c2012bb") (:keywords "convenience") (:authors ("Mario Rodas" . "marsam@users.noreply.github.com")) (:maintainer "Mario Rodas" . "marsam@users.noreply.github.com") (:url . "https://github.com/emacs-pe/scribble-mode"))])
+(scribble-mode .
+	       [(20190912 200)
+		((emacs
+		  (24)))
+		"Major mode for editing Scribble documents" single
+		((:commit . "5c3ea3cc9bbad585476eee41ea76dc056c2012bb")
+		 (:authors
+		  ("Mario Rodas" . "marsam@users.noreply.github.com"))
+		 (:maintainer "Mario Rodas" . "marsam@users.noreply.github.com")
+		 (:keywords "convenience")
+		 (:url . "https://github.com/emacs-pe/scribble-mode"))])

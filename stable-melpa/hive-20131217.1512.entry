@@ -1,2 +1,10 @@
-
-(hive . [(20131217 1512) ((sql (3 0))) "Hive SQL mode extension" single ((:commit . "11b5172e081ad8079fc78758bef6f306f82ae32b") (:keywords "sql" "hive") (:authors ("Roman Scherer" . "roman@burningswell.com")) (:maintainer "Roman Scherer" . "roman@burningswell.com"))])
+(hive .
+      [(20131217 1512)
+       ((sql
+	 (3 0)))
+       "Hive SQL mode extension" single
+       ((:commit . "11b5172e081ad8079fc78758bef6f306f82ae32b")
+	(:authors
+	 ("Roman Scherer" . "roman@burningswell.com"))
+	(:maintainer "Roman Scherer" . "roman@burningswell.com")
+	(:keywords "sql" "hive"))])

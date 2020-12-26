@@ -1,2 +1,11 @@
-
-(docbook-snippets . [(20150714 1625) ((yasnippet (0 8 0))) "Yasnippets for DocBook" tar ((:commit . "b06297fdec039a541aaa6312cb328a11062cfab4") (:keywords "snippets" "docbook") (:authors ("Jaromir Hradilek" . "jhradilek@gmail.com")) (:maintainer "Jaromir Hradilek" . "jhradilek@gmail.com") (:url . "https://github.com/jhradilek/emacs-docbook-snippets"))])
+(docbook-snippets .
+		  [(20150714 1625)
+		   ((yasnippet
+		     (0 8 0)))
+		   "Yasnippets for DocBook" tar
+		   ((:commit . "b06297fdec039a541aaa6312cb328a11062cfab4")
+		    (:authors
+		     ("Jaromir Hradilek" . "jhradilek@gmail.com"))
+		    (:maintainer "Jaromir Hradilek" . "jhradilek@gmail.com")
+		    (:keywords "snippets" "docbook")
+		    (:url . "https://github.com/jhradilek/emacs-docbook-snippets"))])

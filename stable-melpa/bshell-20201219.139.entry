@@ -1,2 +1,13 @@
-
-(bshell . [(20201219 139) ((emacs (26)) (buffer-manage (0 11))) "Manage and track multiple inferior shells" single ((:commit . "469c841f19f28c271b4f172b40f3f9ca830254df") (:keywords "unix" "interactive" "shell" "management") (:authors ("Paul Landes")) (:maintainer "Paul Landes") (:url . "https://github.com/plandes/bshell"))])
+(bshell .
+	[(20201219 139)
+	 ((emacs
+	   (26))
+	  (buffer-manage
+	   (0 11)))
+	 "Manage and track multiple inferior shells" single
+	 ((:commit . "469c841f19f28c271b4f172b40f3f9ca830254df")
+	  (:authors
+	   ("Paul Landes"))
+	  (:maintainer "Paul Landes")
+	  (:keywords "unix" "interactive" "shell" "management")
+	  (:url . "https://github.com/plandes/bshell"))])

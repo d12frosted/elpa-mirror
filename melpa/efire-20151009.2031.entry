@@ -1,2 +1,11 @@
-
-(efire . [(20151009 2031) ((circe (1 2))) "Use campfire from Emacs" single ((:commit . "91a644662afb352475efad0b377713656f131e5c") (:keywords "convenience" "tools") (:authors ("João Távora" . "joaotavora@gmail.com")) (:maintainer "João Távora" . "joaotavora@gmail.com") (:url . "https://github.com/capitaomorte/efire"))])
+(efire .
+       [(20151009 2031)
+	((circe
+	  (1 2)))
+	"Use campfire from Emacs" single
+	((:commit . "91a644662afb352475efad0b377713656f131e5c")
+	 (:authors
+	  ("João Távora" . "joaotavora@gmail.com"))
+	 (:maintainer "João Távora" . "joaotavora@gmail.com")
+	 (:keywords "convenience" "tools")
+	 (:url . "https://github.com/capitaomorte/efire"))])

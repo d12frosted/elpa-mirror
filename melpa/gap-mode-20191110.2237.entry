@@ -1,2 +1,12 @@
-
-(gap-mode . [(20191110 2237) nil "Major mode for editing files in the GAP programing language." tar ((:commit . "62adb8935033eead7fbf2c107c2dfb79afa53c67") (:keywords "gap") (:authors ("Michael Smith" . "smith@pell.anu.edu.au") ("Gary Zablackis") ("Goetz Pfeiffer") ("Ivan Andrus" . "darthandrus@gmail.com")) (:maintainer "Ivan Andrus" . "darthandrus@gmail.com") (:url . "https://gitlab.com/gvol/gap-mode"))])
+(gap-mode .
+	  [(20191110 2237)
+	   nil "Major mode for editing files in the GAP programing language." tar
+	   ((:commit . "62adb8935033eead7fbf2c107c2dfb79afa53c67")
+	    (:authors
+	     ("Michael Smith" . "smith@pell.anu.edu.au")
+	     ("Gary Zablackis")
+	     ("Goetz Pfeiffer")
+	     ("Ivan Andrus" . "darthandrus@gmail.com"))
+	    (:maintainer "Ivan Andrus" . "darthandrus@gmail.com")
+	    (:keywords "gap")
+	    (:url . "https://gitlab.com/gvol/gap-mode"))])

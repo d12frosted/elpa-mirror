@@ -1,2 +1,9 @@
-
-(goto-chg . [(20201101 1029) nil "goto last change" single ((:commit . "2af612153bc9f5bed135d25abe62f46ddaa9027f") (:keywords "convenience" "matching") (:authors ("David Andersson <l.david.andersson(at)sverige.nu>")) (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de") (:url . "https://github.com/emacs-evil/goto-chg"))])
+(goto-chg .
+	  [(20201101 1029)
+	   nil "goto last change" single
+	   ((:commit . "2af612153bc9f5bed135d25abe62f46ddaa9027f")
+	    (:authors
+	     ("David Andersson <l.david.andersson(at)sverige.nu>"))
+	    (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de")
+	    (:keywords "convenience" "matching")
+	    (:url . "https://github.com/emacs-evil/goto-chg"))])

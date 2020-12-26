@@ -1,2 +1,13 @@
-
-(project-shells . [(20201026 748) ((emacs (24 3)) (seq (2 19))) "Manage the shell buffers of each project" single ((:commit . "382b3d48a797ea56383732ebf9cd219aeec676df") (:keywords "processes" "terminals") (:authors ("\"Huang, Ying\"" . "huang.ying.caritas@gmail.com")) (:maintainer "\"Huang, Ying\"" . "huang.ying.caritas@gmail.com") (:url . "https://github.com/hying-caritas/project-shells"))])
+(project-shells .
+		[(20201026 748)
+		 ((emacs
+		   (24 3))
+		  (seq
+		   (2 19)))
+		 "Manage the shell buffers of each project" single
+		 ((:commit . "382b3d48a797ea56383732ebf9cd219aeec676df")
+		  (:authors
+		   ("\"Huang, Ying\"" . "huang.ying.caritas@gmail.com"))
+		  (:maintainer "\"Huang, Ying\"" . "huang.ying.caritas@gmail.com")
+		  (:keywords "processes" "terminals")
+		  (:url . "https://github.com/hying-caritas/project-shells"))])

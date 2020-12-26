@@ -1,2 +1,14 @@
-
-(helm-rage . [(20180118 1532) ((helm (1 9 8)) (emacs (24 4)) (dash (2 13 0)) (s (1 11 0))) "Helm command for rage characters." tar ((:commit . "5d0aefb53d859186181d4bdcfeff7d315339c7b8") (:keywords "helm" "rage" "meme") (:url . "https://github.com/bomgar/helm-rage"))])
+(helm-rage .
+	   [(20180118 1532)
+	    ((helm
+	      (1 9 8))
+	     (emacs
+	      (24 4))
+	     (dash
+	      (2 13 0))
+	     (s
+	      (1 11 0)))
+	    "Helm command for rage characters." tar
+	    ((:commit . "5d0aefb53d859186181d4bdcfeff7d315339c7b8")
+	     (:keywords "helm" "rage" "meme")
+	     (:url . "https://github.com/bomgar/helm-rage"))])

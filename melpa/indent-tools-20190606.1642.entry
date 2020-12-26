@@ -1,2 +1,15 @@
-
-(indent-tools . [(20190606 1642) ((s (0)) (hydra (0)) (yafolding (0))) "Indent, navigate (and more) by blocks of indentation: yaml, python etc." tar ((:commit . "c419874e6fb296ecdba94b2f4b73c9eecdd5329d") (:keywords "indentation" "movements" "navigation" "kill" "fold" "yaml" "python") (:authors ("vindarel" . "vindarel@mailz.org")) (:maintainer "vindarel" . "vindarel@mailz.org") (:url . "https://gitlab.com/emacs-stuff/indent-tools/"))])
+(indent-tools .
+	      [(20190606 1642)
+	       ((s
+		 (0))
+		(hydra
+		 (0))
+		(yafolding
+		 (0)))
+	       "Indent, navigate (and more) by blocks of indentation: yaml, python etc." tar
+	       ((:commit . "c419874e6fb296ecdba94b2f4b73c9eecdd5329d")
+		(:authors
+		 ("vindarel" . "vindarel@mailz.org"))
+		(:maintainer "vindarel" . "vindarel@mailz.org")
+		(:keywords "indentation" "movements" "navigation" "kill" "fold" "yaml" "python")
+		(:url . "https://gitlab.com/emacs-stuff/indent-tools/"))])

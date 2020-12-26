@@ -1,2 +1,11 @@
-
-(mqr . [(20180527 1204) ((emacs (24 4))) "Multi-dimensional query and replace" single ((:commit . "4ade19d4620b8b61340290bf63fa56d5e493859f") (:keywords "convenience" "extensions" "lisp") (:authors ("Tino Calancha" . "tino.calancha@gmail.com")) (:maintainer "Tino Calancha" . "tino.calancha@gmail.com") (:url . "https://github.com/calancha/multi-replace"))])
+(mqr .
+     [(20180527 1204)
+      ((emacs
+	(24 4)))
+      "Multi-dimensional query and replace" single
+      ((:commit . "4ade19d4620b8b61340290bf63fa56d5e493859f")
+       (:authors
+	("Tino Calancha" . "tino.calancha@gmail.com"))
+       (:maintainer "Tino Calancha" . "tino.calancha@gmail.com")
+       (:keywords "convenience" "extensions" "lisp")
+       (:url . "https://github.com/calancha/multi-replace"))])

@@ -1,2 +1,9 @@
-
-(sphinx-frontend . [(20161025 758) nil "Launch build process for rst documents via sphinx." single ((:commit . "0cbb03361c245382d3e679dded30c4fc1713c252") (:keywords "compile" "sphinx" "restructuredtext") (:authors ("Kostafey" . "kostafey@gmail.com")) (:maintainer "Kostafey" . "kostafey@gmail.com") (:url . "https://github.com/kostafey/sphinx-frontend"))])
+(sphinx-frontend .
+		 [(20161025 758)
+		  nil "Launch build process for rst documents via sphinx." single
+		  ((:commit . "0cbb03361c245382d3e679dded30c4fc1713c252")
+		   (:authors
+		    ("Kostafey" . "kostafey@gmail.com"))
+		   (:maintainer "Kostafey" . "kostafey@gmail.com")
+		   (:keywords "compile" "sphinx" "restructuredtext")
+		   (:url . "https://github.com/kostafey/sphinx-frontend"))])

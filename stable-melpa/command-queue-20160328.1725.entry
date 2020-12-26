@@ -1,2 +1,10 @@
-
-(command-queue . [(20160328 1725) ((emacs (24 3))) "shell command queue" single ((:commit . "f327c6f852592229a755ec6de0c62c6aeafd6659") (:authors ("Yuki INOUE <inouetakahiroki at gmail.com>")) (:maintainer "Yuki INOUE <inouetakahiroki at gmail.com>") (:url . "https://github.com/Yuki-Inoue/command-queue"))])
+(command-queue .
+	       [(20160328 1725)
+		((emacs
+		  (24 3)))
+		"shell command queue" single
+		((:commit . "f327c6f852592229a755ec6de0c62c6aeafd6659")
+		 (:authors
+		  ("Yuki INOUE <inouetakahiroki at gmail.com>"))
+		 (:maintainer "Yuki INOUE <inouetakahiroki at gmail.com>")
+		 (:url . "https://github.com/Yuki-Inoue/command-queue"))])

@@ -1,2 +1,11 @@
-
-(reazon . [(20180921 1437) ((emacs (26))) "miniKanren for Emacs" tar ((:commit . "020be6467a83957adcbdcb192b61f2c76a94079b") (:keywords "languages" "extensions" "lisp") (:authors ("Nick Drozd" . "nicholasdrozd@gmail.com")) (:maintainer "Nick Drozd" . "nicholasdrozd@gmail.com") (:url . "https://github.com/nickdrozd/reazon"))])
+(reazon .
+	[(20180921 1437)
+	 ((emacs
+	   (26)))
+	 "miniKanren for Emacs" tar
+	 ((:commit . "020be6467a83957adcbdcb192b61f2c76a94079b")
+	  (:authors
+	   ("Nick Drozd" . "nicholasdrozd@gmail.com"))
+	  (:maintainer "Nick Drozd" . "nicholasdrozd@gmail.com")
+	  (:keywords "languages" "extensions" "lisp")
+	  (:url . "https://github.com/nickdrozd/reazon"))])

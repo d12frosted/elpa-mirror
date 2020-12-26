@@ -1,2 +1,8 @@
-
-(csv . [(20161113 1510) nil "Functions for reading and parsing CSV files." single ((:commit . "aa1dfa1263565d5fac3879c21d8ddf5f8915e411") (:keywords "extensions" "data" "csv") (:authors ("Ulf Jasper" . "ulf.jasper@web.de")) (:maintainer "Ulf Jasper" . "ulf.jasper@web.de"))])
+(csv .
+     [(20161113 1510)
+      nil "Functions for reading and parsing CSV files." single
+      ((:commit . "aa1dfa1263565d5fac3879c21d8ddf5f8915e411")
+       (:authors
+	("Ulf Jasper" . "ulf.jasper@web.de"))
+       (:maintainer "Ulf Jasper" . "ulf.jasper@web.de")
+       (:keywords "extensions" "data" "csv"))])

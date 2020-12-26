@@ -1,2 +1,14 @@
-
-(hugsql-ghosts . [(20180425 1129) ((s (1 9 0)) (dash (2 10 0)) (cider (0 14 0))) "Display hugsql defqueries in clojure code as an overlay." single ((:commit . "f3ebc60c66204ad39058cb84eb4bd5facce091df") (:authors ("Roland Kaercher" . "roland.kaercher@gmail.com")) (:maintainer "Roland Kaercher" . "roland.kaercher@gmail.com") (:url . "https://github.com/rkaercher/hugsql-ghosts"))])
+(hugsql-ghosts .
+	       [(20180425 1129)
+		((s
+		  (1 9 0))
+		 (dash
+		  (2 10 0))
+		 (cider
+		  (0 14 0)))
+		"Display hugsql defqueries in clojure code as an overlay." single
+		((:commit . "f3ebc60c66204ad39058cb84eb4bd5facce091df")
+		 (:authors
+		  ("Roland Kaercher" . "roland.kaercher@gmail.com"))
+		 (:maintainer "Roland Kaercher" . "roland.kaercher@gmail.com")
+		 (:url . "https://github.com/rkaercher/hugsql-ghosts"))])

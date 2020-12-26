@@ -1,2 +1,9 @@
-
-(scf-mode . [(20151122 248) nil "shorten file-names in compilation type buffers" single ((:commit . "dbfcdcd89034f208d65e181af58e0d73ad09f8b2") (:keywords "compilation") (:authors ("Le Wang")) (:maintainer "Le Wang") (:url . "https://github.com/lewang/scf-mode"))])
+(scf-mode .
+	  [(20151122 248)
+	   nil "shorten file-names in compilation type buffers" single
+	   ((:commit . "dbfcdcd89034f208d65e181af58e0d73ad09f8b2")
+	    (:authors
+	     ("Le Wang"))
+	    (:maintainer "Le Wang")
+	    (:keywords "compilation")
+	    (:url . "https://github.com/lewang/scf-mode"))])

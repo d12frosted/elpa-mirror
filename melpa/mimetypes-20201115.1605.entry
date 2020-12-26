@@ -1,2 +1,10 @@
-
-(mimetypes . [(20201115 1605) ((emacs (25 1))) "Guess a file's mimetype by extension" single ((:commit . "1663054ce266ed25e47ec707c19f619d33225903") (:authors ("Craig Niles <niles.c at gmail.com>")) (:maintainer "Craig Niles <niles.c at gmail.com>") (:url . "https://github.com/cniles/emacs-mimetypes"))])
+(mimetypes .
+	   [(20201115 1605)
+	    ((emacs
+	      (25 1)))
+	    "Guess a file's mimetype by extension" single
+	    ((:commit . "1663054ce266ed25e47ec707c19f619d33225903")
+	     (:authors
+	      ("Craig Niles <niles.c at gmail.com>"))
+	     (:maintainer "Craig Niles <niles.c at gmail.com>")
+	     (:url . "https://github.com/cniles/emacs-mimetypes"))])

@@ -1,2 +1,13 @@
-
-(jscs . [(20151015 1749) ((emacs (24 1)) (cl-lib (0 5))) "Consistent JavaScript editing using JSCS" single ((:commit . "9d39d0f2355e69a020bf76242504f3a33e013ccf") (:keywords "languages" "convenience") (:authors ("papaeye" . "papaeye@gmail.com")) (:maintainer "papaeye" . "papaeye@gmail.com") (:url . "https://github.com/papaeye/emacs-jscs"))])
+(jscs .
+      [(20151015 1749)
+       ((emacs
+	 (24 1))
+	(cl-lib
+	 (0 5)))
+       "Consistent JavaScript editing using JSCS" single
+       ((:commit . "9d39d0f2355e69a020bf76242504f3a33e013ccf")
+	(:authors
+	 ("papaeye" . "papaeye@gmail.com"))
+	(:maintainer "papaeye" . "papaeye@gmail.com")
+	(:keywords "languages" "convenience")
+	(:url . "https://github.com/papaeye/emacs-jscs"))])

@@ -1,2 +1,9 @@
-
-(dynamic-spaces . [(20171027 1851) nil "When editing, don't move text separated by spaces" single ((:commit . "97ae8480c257ba573ca3d06dbf602f9b23c41d38") (:keywords "convenience") (:authors ("Anders Lindgren")) (:maintainer "Anders Lindgren") (:url . "https://github.com/Lindydancer/dynamic-spaces"))])
+(dynamic-spaces .
+		[(20171027 1851)
+		 nil "When editing, don't move text separated by spaces" single
+		 ((:commit . "97ae8480c257ba573ca3d06dbf602f9b23c41d38")
+		  (:authors
+		   ("Anders Lindgren"))
+		  (:maintainer "Anders Lindgren")
+		  (:keywords "convenience")
+		  (:url . "https://github.com/Lindydancer/dynamic-spaces"))])

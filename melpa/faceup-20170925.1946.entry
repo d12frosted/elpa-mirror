@@ -1,2 +1,9 @@
-
-(faceup . [(20170925 1946) nil "Markup language for faces and font-lock regression testing" single ((:commit . "6c92dad56a133e14e7b27831e1bcf9b3a71ff154") (:keywords "faces" "languages") (:authors ("Anders Lindgren")) (:maintainer "Anders Lindgren") (:url . "https://github.com/Lindydancer/faceup"))])
+(faceup .
+	[(20170925 1946)
+	 nil "Markup language for faces and font-lock regression testing" single
+	 ((:commit . "6c92dad56a133e14e7b27831e1bcf9b3a71ff154")
+	  (:authors
+	   ("Anders Lindgren"))
+	  (:maintainer "Anders Lindgren")
+	  (:keywords "faces" "languages")
+	  (:url . "https://github.com/Lindydancer/faceup"))])

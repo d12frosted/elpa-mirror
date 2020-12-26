@@ -1,2 +1,9 @@
-
-(org-doing . [(20161017 1620) nil "Keep track of what you're doing" tar ((:commit . "07ddbfc238cba31e4990c9b52e9a2757b39111da") (:keywords "tools" "org") (:authors ("Rudolf Olah")) (:maintainer "Rudolf Olah") (:url . "https://github.com/omouse/org-doing"))])
+(org-doing .
+	   [(20161017 1620)
+	    nil "Keep track of what you're doing" tar
+	    ((:commit . "07ddbfc238cba31e4990c9b52e9a2757b39111da")
+	     (:authors
+	      ("Rudolf Olah"))
+	     (:maintainer "Rudolf Olah")
+	     (:keywords "tools" "org")
+	     (:url . "https://github.com/omouse/org-doing"))])

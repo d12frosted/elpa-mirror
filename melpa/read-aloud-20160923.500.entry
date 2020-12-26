@@ -1,2 +1,11 @@
-
-(read-aloud . [(20160923 500) ((emacs (24 4))) "A simple interface to TTS engines" single ((:commit . "c662366226abfb07204ab442b4f853ed85438d8a") (:keywords "multimedia") (:authors ("Alexander Gromnitsky" . "alexander.gromnitsky@gmail.com")) (:maintainer "Alexander Gromnitsky" . "alexander.gromnitsky@gmail.com") (:url . "https://github.com/gromnitsky/read-aloud.el"))])
+(read-aloud .
+	    [(20160923 500)
+	     ((emacs
+	       (24 4)))
+	     "A simple interface to TTS engines" single
+	     ((:commit . "c662366226abfb07204ab442b4f853ed85438d8a")
+	      (:authors
+	       ("Alexander Gromnitsky" . "alexander.gromnitsky@gmail.com"))
+	      (:maintainer "Alexander Gromnitsky" . "alexander.gromnitsky@gmail.com")
+	      (:keywords "multimedia")
+	      (:url . "https://github.com/gromnitsky/read-aloud.el"))])

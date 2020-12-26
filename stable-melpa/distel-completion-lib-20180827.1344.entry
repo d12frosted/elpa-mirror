@@ -1,2 +1,9 @@
-
-(distel-completion-lib . [(20180827 1344) nil "Completion library for Erlang/Distel" single ((:commit . "acc4c0a5521904203d797fe96b08e5fae4233c7e") (:keywords "erlang" "distel" "completion") (:authors ("Sebastian Weddmark Olsson")) (:maintainer "Sebastian Weddmark Olsson") (:url . "github.com/sebastiw/distel-completion"))])
+(distel-completion-lib .
+		       [(20180827 1344)
+			nil "Completion library for Erlang/Distel" single
+			((:commit . "acc4c0a5521904203d797fe96b08e5fae4233c7e")
+			 (:authors
+			  ("Sebastian Weddmark Olsson"))
+			 (:maintainer "Sebastian Weddmark Olsson")
+			 (:keywords "erlang" "distel" "completion")
+			 (:url . "github.com/sebastiw/distel-completion"))])

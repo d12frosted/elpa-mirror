@@ -1,2 +1,11 @@
-
-(private . [(20150122 157) ((aes (0 6))) "take care of your private configuration files." single ((:commit . "9266d01c095895cc3ee9de95bc20511e88353755") (:keywords "private" "configuration" "backup" "recover") (:authors ("Cheung Mou Wai" . "yeannylam@gmail.com")) (:maintainer "Cheung Mou Wai" . "yeannylam@gmail.com") (:url . "https://github.com/cheunghy/private"))])
+(private .
+	 [(20150122 157)
+	  ((aes
+	    (0 6)))
+	  "take care of your private configuration files." single
+	  ((:commit . "9266d01c095895cc3ee9de95bc20511e88353755")
+	   (:authors
+	    ("Cheung Mou Wai" . "yeannylam@gmail.com"))
+	   (:maintainer "Cheung Mou Wai" . "yeannylam@gmail.com")
+	   (:keywords "private" "configuration" "backup" "recover")
+	   (:url . "https://github.com/cheunghy/private"))])

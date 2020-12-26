@@ -1,2 +1,7 @@
-
-(xml-rpc . [(20200907 42) nil "An elisp implementation of clientside XML-RPC" single ((:commit . "8020ccd176986d8e49e0bb5dd9f4e756cf12eafc") (:keywords "xml" "rpc" "network") (:maintainer "Mark A. Hershberger" . "mah@everybody.org") (:url . "http://github.com/xml-rpc-el/xml-rpc-el"))])
+(xml-rpc .
+	 [(20200907 42)
+	  nil "An elisp implementation of clientside XML-RPC" single
+	  ((:commit . "8020ccd176986d8e49e0bb5dd9f4e756cf12eafc")
+	   (:maintainer "Mark A. Hershberger" . "mah@everybody.org")
+	   (:keywords "xml" "rpc" "network")
+	   (:url . "http://github.com/xml-rpc-el/xml-rpc-el"))])

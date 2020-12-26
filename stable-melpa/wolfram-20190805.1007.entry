@@ -1,2 +1,8 @@
-
-(wolfram . [(20190805 1007) nil "Wolfram Alpha Integration" single ((:commit . "a172712d5045834f5434cca2843a7c3506805db8") (:keywords "math") (:authors ("Hans Sjunnesson" . "hans.sjunnesson@gmail.com")) (:maintainer "Hans Sjunnesson" . "hans.sjunnesson@gmail.com"))])
+(wolfram .
+	 [(20190805 1007)
+	  nil "Wolfram Alpha Integration" single
+	  ((:commit . "a172712d5045834f5434cca2843a7c3506805db8")
+	   (:authors
+	    ("Hans Sjunnesson" . "hans.sjunnesson@gmail.com"))
+	   (:maintainer "Hans Sjunnesson" . "hans.sjunnesson@gmail.com")
+	   (:keywords "math"))])

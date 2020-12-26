@@ -1,2 +1,21 @@
-
-(dionysos . [(20160810 1056) ((libmpdee (2 1 0)) (alert (1 2)) (s (1 11 0)) (dash (2 12 1)) (pkg-info (0 5 0)) (cl-lib (0 5))) "Dionysos, a music player for Emacs" tar ((:commit . "0aac21caadabc5a7f09e18a9dcb02f3dec26588b") (:keywords "music") (:authors ("Nicolas Lamirault" . "nicolas.lamirault@gmail.com")) (:maintainer "Nicolas Lamirault" . "nicolas.lamirault@gmail.com") (:url . "https://github.com/nlamirault/dionysos"))])
+(dionysos .
+	  [(20160810 1056)
+	   ((libmpdee
+	     (2 1 0))
+	    (alert
+	     (1 2))
+	    (s
+	     (1 11 0))
+	    (dash
+	     (2 12 1))
+	    (pkg-info
+	     (0 5 0))
+	    (cl-lib
+	     (0 5)))
+	   "Dionysos, a music player for Emacs" tar
+	   ((:commit . "0aac21caadabc5a7f09e18a9dcb02f3dec26588b")
+	    (:authors
+	     ("Nicolas Lamirault" . "nicolas.lamirault@gmail.com"))
+	    (:maintainer "Nicolas Lamirault" . "nicolas.lamirault@gmail.com")
+	    (:keywords "music")
+	    (:url . "https://github.com/nlamirault/dionysos"))])

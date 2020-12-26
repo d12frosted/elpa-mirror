@@ -1,2 +1,9 @@
-
-(winring . [(20180530 18) nil "Window configuration rings" single ((:commit . "f2d072bd446b73e93b127523f19ea82b99b9267f") (:keywords "frames" "tools") (:authors ("1997-2018 Barry A. Warsaw")) (:maintainer "1997-2018 Barry A. Warsaw") (:url . "https://gitlab.com/warsaw/winring"))])
+(winring .
+	 [(20180530 18)
+	  nil "Window configuration rings" single
+	  ((:commit . "f2d072bd446b73e93b127523f19ea82b99b9267f")
+	   (:authors
+	    ("1997-2018 Barry A. Warsaw"))
+	   (:maintainer "1997-2018 Barry A. Warsaw")
+	   (:keywords "frames" "tools")
+	   (:url . "https://gitlab.com/warsaw/winring"))])

@@ -1,2 +1,11 @@
-
-(ob-sql-mode . [(20190421 1539) ((emacs (24 4))) "SQL code blocks evaluated by sql-mode" single ((:commit . "b31a016585324ad91f1742ff6205bcb76f3ece6e") (:keywords "languages" "org" "org-babel" "sql") (:authors (nil . "Nik Clayton nik@google.com")) (:maintainer nil . "Nik Clayton nik@google.com") (:url . "http://github.com/nikclayton/ob-sql-mode"))])
+(ob-sql-mode .
+	     [(20190421 1539)
+	      ((emacs
+		(24 4)))
+	      "SQL code blocks evaluated by sql-mode" single
+	      ((:commit . "b31a016585324ad91f1742ff6205bcb76f3ece6e")
+	       (:authors
+		(nil . "Nik Clayton nik@google.com"))
+	       (:maintainer nil . "Nik Clayton nik@google.com")
+	       (:keywords "languages" "org" "org-babel" "sql")
+	       (:url . "http://github.com/nikclayton/ob-sql-mode"))])

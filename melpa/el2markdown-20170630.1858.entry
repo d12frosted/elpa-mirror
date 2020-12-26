@@ -1,2 +1,8 @@
-
-(el2markdown . [(20170630 1858) nil "Convert commentary section of elisp files to markdown." single ((:commit . "368d99313683cd943c99feaffca356be60bdb636") (:authors ("Anders Lindgren")) (:maintainer "Anders Lindgren") (:url . "https://github.com/Lindydancer/el2markdown"))])
+(el2markdown .
+	     [(20170630 1858)
+	      nil "Convert commentary section of elisp files to markdown." single
+	      ((:commit . "368d99313683cd943c99feaffca356be60bdb636")
+	       (:authors
+		("Anders Lindgren"))
+	       (:maintainer "Anders Lindgren")
+	       (:url . "https://github.com/Lindydancer/el2markdown"))])

@@ -1,2 +1,8 @@
-
-(rum-mode . [(20180127 22) ((emacs (24))) "Major mode for Rum programming language" single ((:commit . "b69a3866e0299cae8c9c805d644e69b2c17b64de") (:keywords "rum" "languages" "lisp") (:url . "https://github.com/rumlang/rum-mode"))])
+(rum-mode .
+	  [(20180127 22)
+	   ((emacs
+	     (24)))
+	   "Major mode for Rum programming language" single
+	   ((:commit . "b69a3866e0299cae8c9c805d644e69b2c17b64de")
+	    (:keywords "rum" "languages" "lisp")
+	    (:url . "https://github.com/rumlang/rum-mode"))])

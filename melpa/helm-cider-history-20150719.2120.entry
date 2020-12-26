@@ -1,2 +1,13 @@
-
-(helm-cider-history . [(20150719 2120) ((helm (1 4 0)) (cider (0 9 0))) "Helm interface for cider history" single ((:commit . "c391fcb2e162a02001605a0b9449783575a831fd") (:keywords "convenience") (:authors ("Andreas Klein" . "git@kungi.org")) (:maintainer "Andreas Klein" . "git@kungi.org") (:url . "https://github.com/Kungi/helm-cider-history"))])
+(helm-cider-history .
+		    [(20150719 2120)
+		     ((helm
+		       (1 4 0))
+		      (cider
+		       (0 9 0)))
+		     "Helm interface for cider history" single
+		     ((:commit . "c391fcb2e162a02001605a0b9449783575a831fd")
+		      (:authors
+		       ("Andreas Klein" . "git@kungi.org"))
+		      (:maintainer "Andreas Klein" . "git@kungi.org")
+		      (:keywords "convenience")
+		      (:url . "https://github.com/Kungi/helm-cider-history"))])

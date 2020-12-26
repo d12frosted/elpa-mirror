@@ -1,2 +1,9 @@
-
-(roy-mode . [(20121208 1158) nil "Roy major mode" single ((:commit . "0416f561edbc6b4a29fced8be84d2527a9613d65") (:keywords "extensions") (:authors ("Georgii Leontiev")) (:maintainer "Georgii Leontiev") (:url . "https://github.com/folone/roy-mode"))])
+(roy-mode .
+	  [(20121208 1158)
+	   nil "Roy major mode" single
+	   ((:commit . "0416f561edbc6b4a29fced8be84d2527a9613d65")
+	    (:authors
+	     ("Georgii Leontiev"))
+	    (:maintainer "Georgii Leontiev")
+	    (:keywords "extensions")
+	    (:url . "https://github.com/folone/roy-mode"))])

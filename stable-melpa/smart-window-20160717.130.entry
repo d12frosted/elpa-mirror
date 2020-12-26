@@ -1,2 +1,11 @@
-
-(smart-window . [(20160717 130) ((cl-lib (0 5))) "vim-like window controlling plugin" single ((:commit . "5996461b7cbc5ab4509ac48537916eb29a8e4c16") (:keywords "window") (:authors ("Felix Chern" . "idryman@gmail.com")) (:maintainer "Felix Chern" . "idryman@gmail.com") (:url . "https://github.com/dryman/smart-window.el"))])
+(smart-window .
+	      [(20160717 130)
+	       ((cl-lib
+		 (0 5)))
+	       "vim-like window controlling plugin" single
+	       ((:commit . "5996461b7cbc5ab4509ac48537916eb29a8e4c16")
+		(:authors
+		 ("Felix Chern" . "idryman@gmail.com"))
+		(:maintainer "Felix Chern" . "idryman@gmail.com")
+		(:keywords "window")
+		(:url . "https://github.com/dryman/smart-window.el"))])

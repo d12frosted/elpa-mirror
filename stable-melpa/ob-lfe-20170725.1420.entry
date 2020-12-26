@@ -1,2 +1,11 @@
-
-(ob-lfe . [(20170725 1420) ((org (8))) "org-babel functions for lfe evaluation" single ((:commit . "f7780f58e650b4d29dfd834c662b1d354b620a8e") (:keywords "org" "babel" "lfe" "lisp" "erlang") (:authors ("ZHOU Feng" . "zf.pascal@gmail.com")) (:maintainer "ZHOU Feng" . "zf.pascal@gmail.com") (:url . "http://github.com/zweifisch/ob-lfe"))])
+(ob-lfe .
+	[(20170725 1420)
+	 ((org
+	   (8)))
+	 "org-babel functions for lfe evaluation" single
+	 ((:commit . "f7780f58e650b4d29dfd834c662b1d354b620a8e")
+	  (:authors
+	   ("ZHOU Feng" . "zf.pascal@gmail.com"))
+	  (:maintainer "ZHOU Feng" . "zf.pascal@gmail.com")
+	  (:keywords "org" "babel" "lfe" "lisp" "erlang")
+	  (:url . "http://github.com/zweifisch/ob-lfe"))])

@@ -1,2 +1,8 @@
-
-(yabin . [(20140206 351) nil "Yet Another Bignum package (A thin wrapper of calc.el)." single ((:commit . "db8c404507560ef9147fcce2b94cd706fbfa03b5") (:keywords "data") (:authors ("Daisuke Kobayashi" . "d5884jp@gmail.com")) (:maintainer "Daisuke Kobayashi" . "d5884jp@gmail.com"))])
+(yabin .
+       [(20140206 351)
+	nil "Yet Another Bignum package (A thin wrapper of calc.el)." single
+	((:commit . "db8c404507560ef9147fcce2b94cd706fbfa03b5")
+	 (:authors
+	  ("Daisuke Kobayashi" . "d5884jp@gmail.com"))
+	 (:maintainer "Daisuke Kobayashi" . "d5884jp@gmail.com")
+	 (:keywords "data"))])

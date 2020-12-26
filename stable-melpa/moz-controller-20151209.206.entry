@@ -1,2 +1,10 @@
-
-(moz-controller . [(20151209 206) ((moz (0))) "Control Firefox from Emacs" single ((:commit . "46f665c03574fa922de767fc29795e0db4a7c5c6") (:authors ("任文山 (Ren Wenshan) <renws1990 at gmail.com>")) (:maintainer "任文山 (Ren Wenshan) <renws1990 at gmail.com>") (:url . "https://github.com/RenWenshan/emacs-moz-controller"))])
+(moz-controller .
+		[(20151209 206)
+		 ((moz
+		   (0)))
+		 "Control Firefox from Emacs" single
+		 ((:commit . "46f665c03574fa922de767fc29795e0db4a7c5c6")
+		  (:authors
+		   ("任文山 (Ren Wenshan) <renws1990 at gmail.com>"))
+		  (:maintainer "任文山 (Ren Wenshan) <renws1990 at gmail.com>")
+		  (:url . "https://github.com/RenWenshan/emacs-moz-controller"))])

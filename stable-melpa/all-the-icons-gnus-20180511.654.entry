@@ -1,2 +1,14 @@
-
-(all-the-icons-gnus . [(20180511 654) ((emacs (24 4)) (dash (2 12 0)) (all-the-icons (3 1 0))) "Shows icons for in Gnus" single ((:commit . "27f78996da0725943bcfb2d18038e6f7bddfa9c7") (:keywords "mail" "tools") (:authors ("Nicolas Lamirault" . "nicolas.lamirault@gmail.com")) (:maintainer "Nicolas Lamirault" . "nicolas.lamirault@gmail.com"))])
+(all-the-icons-gnus .
+		    [(20180511 654)
+		     ((emacs
+		       (24 4))
+		      (dash
+		       (2 12 0))
+		      (all-the-icons
+		       (3 1 0)))
+		     "Shows icons for in Gnus" single
+		     ((:commit . "27f78996da0725943bcfb2d18038e6f7bddfa9c7")
+		      (:authors
+		       ("Nicolas Lamirault" . "nicolas.lamirault@gmail.com"))
+		      (:maintainer "Nicolas Lamirault" . "nicolas.lamirault@gmail.com")
+		      (:keywords "mail" "tools"))])

@@ -1,2 +1,11 @@
-
-(muban . [(20180415 1219) ((emacs (25))) "Lightweight template expansion tool" single ((:commit . "fd052645bcaa3cca8cede1c587a0b05ab5bd66b2") (:keywords "abbrev" "tools") (:authors ("Jiahao Li" . "jiahaowork@gmail.com")) (:maintainer "Jiahao Li" . "jiahaowork@gmail.com") (:url . "https://github.com/jiahaowork/muban.el"))])
+(muban .
+       [(20180415 1219)
+	((emacs
+	  (25)))
+	"Lightweight template expansion tool" single
+	((:commit . "fd052645bcaa3cca8cede1c587a0b05ab5bd66b2")
+	 (:authors
+	  ("Jiahao Li" . "jiahaowork@gmail.com"))
+	 (:maintainer "Jiahao Li" . "jiahaowork@gmail.com")
+	 (:keywords "abbrev" "tools")
+	 (:url . "https://github.com/jiahaowork/muban.el"))])

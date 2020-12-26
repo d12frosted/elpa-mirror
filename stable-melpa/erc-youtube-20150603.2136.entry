@@ -1,2 +1,8 @@
-
-(erc-youtube . [(20150603 2136) nil "Show info about a YouTube URL in an ERC buffer." single ((:commit . "97054ba8475b442e2aa81e5a291f668b7f28697f") (:keywords "multimedia") (:authors ("Raimon Grau Cuscó" . "raimonster@gmail.com")) (:maintainer "Raimon Grau Cuscó" . "raimonster@gmail.com"))])
+(erc-youtube .
+	     [(20150603 2136)
+	      nil "Show info about a YouTube URL in an ERC buffer." single
+	      ((:commit . "97054ba8475b442e2aa81e5a291f668b7f28697f")
+	       (:authors
+		("Raimon Grau Cuscó" . "raimonster@gmail.com"))
+	       (:maintainer "Raimon Grau Cuscó" . "raimonster@gmail.com")
+	       (:keywords "multimedia"))])

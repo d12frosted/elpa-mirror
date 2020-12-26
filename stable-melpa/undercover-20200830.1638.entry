@@ -1,2 +1,15 @@
-
-(undercover . [(20200830 1638) ((emacs (24)) (dash (2 0 0)) (shut-up (0 3 2))) "Test coverage library for Emacs Lisp" single ((:commit . "a73c50aedbca0416d0e4d4fbeee27131bdd117aa") (:keywords "lisp" "tests" "coverage" "tools") (:authors ("Sviridov Alexander" . "sviridov.vmi@gmail.com")) (:maintainer "Sviridov Alexander" . "sviridov.vmi@gmail.com") (:url . "https://github.com/sviridov/undercover.el"))])
+(undercover .
+	    [(20200830 1638)
+	     ((emacs
+	       (24))
+	      (dash
+	       (2 0 0))
+	      (shut-up
+	       (0 3 2)))
+	     "Test coverage library for Emacs Lisp" single
+	     ((:commit . "a73c50aedbca0416d0e4d4fbeee27131bdd117aa")
+	      (:authors
+	       ("Sviridov Alexander" . "sviridov.vmi@gmail.com"))
+	      (:maintainer "Sviridov Alexander" . "sviridov.vmi@gmail.com")
+	      (:keywords "lisp" "tests" "coverage" "tools")
+	      (:url . "https://github.com/sviridov/undercover.el"))])

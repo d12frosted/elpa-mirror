@@ -1,2 +1,10 @@
-
-(e2wm-bookmark . [(20151123 521) ((e2wm (1 2))) "Bookmark plugin for e2wm.el" single ((:commit . "bad816b6d8049984d69bcd277b7d325fb84d55eb") (:keywords "convenience") (:authors ("Yuhei Maeda <yuhei.maeda_at_gmail.com>")) (:maintainer "Yuhei Maeda <yuhei.maeda_at_gmail.com>"))])
+(e2wm-bookmark .
+	       [(20151123 521)
+		((e2wm
+		  (1 2)))
+		"Bookmark plugin for e2wm.el" single
+		((:commit . "bad816b6d8049984d69bcd277b7d325fb84d55eb")
+		 (:authors
+		  ("Yuhei Maeda <yuhei.maeda_at_gmail.com>"))
+		 (:maintainer "Yuhei Maeda <yuhei.maeda_at_gmail.com>")
+		 (:keywords "convenience"))])

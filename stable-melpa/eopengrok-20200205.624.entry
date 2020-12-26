@@ -1,2 +1,16 @@
-
-(eopengrok . [(20200205 624) ((s (1 9 0)) (dash (2 10 0)) (magit (2 1 0)) (cl-lib (0 5))) "opengrok interface for emacs" single ((:commit . "6fa16c4ccaaebaef64dca0d3d29904c45fd6597d") (:keywords "tools") (:authors ("Youngjoo Lee" . "youngker@gmail.com")) (:maintainer "Youngjoo Lee" . "youngker@gmail.com"))])
+(eopengrok .
+	   [(20200205 624)
+	    ((s
+	      (1 9 0))
+	     (dash
+	      (2 10 0))
+	     (magit
+	      (2 1 0))
+	     (cl-lib
+	      (0 5)))
+	    "opengrok interface for emacs" single
+	    ((:commit . "6fa16c4ccaaebaef64dca0d3d29904c45fd6597d")
+	     (:authors
+	      ("Youngjoo Lee" . "youngker@gmail.com"))
+	     (:maintainer "Youngjoo Lee" . "youngker@gmail.com")
+	     (:keywords "tools"))])

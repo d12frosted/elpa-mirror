@@ -1,2 +1,8 @@
-
-(fix-muscle-memory . [(20160823 439) nil "Simple hacks to fix muscle memory problems" single ((:commit . "a123e04f8a1d2982cbf930efb909cad9522ac884") (:keywords "spelling" "typing") (:authors ("Jonathan Arkell" . "jonnay@jonnay.net")) (:maintainer "Jonathan Arkell" . "jonnay@jonnay.net"))])
+(fix-muscle-memory .
+		   [(20160823 439)
+		    nil "Simple hacks to fix muscle memory problems" single
+		    ((:commit . "a123e04f8a1d2982cbf930efb909cad9522ac884")
+		     (:authors
+		      ("Jonathan Arkell" . "jonnay@jonnay.net"))
+		     (:maintainer "Jonathan Arkell" . "jonnay@jonnay.net")
+		     (:keywords "spelling" "typing"))])

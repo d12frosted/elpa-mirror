@@ -1,2 +1,13 @@
-
-(pinyin . [(20180620 1241) ((cl-lib (0 5)) (emacs (24))) "Convert Hanzi to Pinyin (汉字转拼音)" tar ((:commit . "e5508e5aa1ad4cfa05a7f4d299e5a155b288ec4c") (:keywords "extensions") (:authors ("Xu Chunyang" . "mail@xuchunyang.me")) (:maintainer "Xu Chunyang" . "mail@xuchunyang.me") (:url . "https://github.com/xuchunyang/pinyin.el"))])
+(pinyin .
+	[(20180620 1241)
+	 ((cl-lib
+	   (0 5))
+	  (emacs
+	   (24)))
+	 "Convert Hanzi to Pinyin (汉字转拼音)" tar
+	 ((:commit . "e5508e5aa1ad4cfa05a7f4d299e5a155b288ec4c")
+	  (:authors
+	   ("Xu Chunyang" . "mail@xuchunyang.me"))
+	  (:maintainer "Xu Chunyang" . "mail@xuchunyang.me")
+	  (:keywords "extensions")
+	  (:url . "https://github.com/xuchunyang/pinyin.el"))])

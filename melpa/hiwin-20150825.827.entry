@@ -1,2 +1,8 @@
-
-(hiwin . [(20150825 827) nil "Visible active window mode." single ((:commit . "6ee8ed051405653bd9b7332d7e9fbb591d954051") (:keywords "faces" "editing" "emulating") (:authors ("k.sugita")) (:maintainer "k.sugita"))])
+(hiwin .
+       [(20150825 827)
+	nil "Visible active window mode." single
+	((:commit . "6ee8ed051405653bd9b7332d7e9fbb591d954051")
+	 (:authors
+	  ("k.sugita"))
+	 (:maintainer "k.sugita")
+	 (:keywords "faces" "editing" "emulating"))])

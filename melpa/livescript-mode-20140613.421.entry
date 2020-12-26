@@ -1,2 +1,9 @@
-
-(livescript-mode . [(20140613 421) nil "Major mode for editing LiveScript files" single ((:commit . "90a918d9686e256e6d4d439cc20f24dad8d3b804") (:keywords "languages" "livescript") (:authors ("Hisamatsu Yasuyuki" . "yas@null.net")) (:maintainer "Hisamatsu Yasuyuki" . "yas@null.net") (:url . "https://github.com/yhisamatsu/livescript-mode"))])
+(livescript-mode .
+		 [(20140613 421)
+		  nil "Major mode for editing LiveScript files" single
+		  ((:commit . "90a918d9686e256e6d4d439cc20f24dad8d3b804")
+		   (:authors
+		    ("Hisamatsu Yasuyuki" . "yas@null.net"))
+		   (:maintainer "Hisamatsu Yasuyuki" . "yas@null.net")
+		   (:keywords "languages" "livescript")
+		   (:url . "https://github.com/yhisamatsu/livescript-mode"))])

@@ -1,2 +1,10 @@
-
-(eval-sexp-fu . [(20191128 825) ((cl-lib (0))) "Tiny functionality enhancements for evaluating sexps." single ((:commit . "36d2fe3bcf602e15ca10a7f487da103515ef391a") (:keywords "lisp" "highlight" "convenience") (:authors ("Takeshi Banse" . "takebi@laafc.net")) (:maintainer "Takeshi Banse" . "takebi@laafc.net"))])
+(eval-sexp-fu .
+	      [(20191128 825)
+	       ((cl-lib
+		 (0)))
+	       "Tiny functionality enhancements for evaluating sexps." single
+	       ((:commit . "36d2fe3bcf602e15ca10a7f487da103515ef391a")
+		(:authors
+		 ("Takeshi Banse" . "takebi@laafc.net"))
+		(:maintainer "Takeshi Banse" . "takebi@laafc.net")
+		(:keywords "lisp" "highlight" "convenience"))])

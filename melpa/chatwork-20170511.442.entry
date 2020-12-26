@@ -1,2 +1,9 @@
-
-(chatwork . [(20170511 442) nil "ChatWork client for Emacs" single ((:commit . "fea231d479f06bf40dbfcf45de143eecc9ed744c") (:keywords "web") (:authors ("Masayuki Ataka" . "masayuki.ataka@gmail.com")) (:maintainer "Masayuki Ataka" . "masayuki.ataka@gmail.com") (:url . "https://github.com/ataka/chatwork"))])
+(chatwork .
+	  [(20170511 442)
+	   nil "ChatWork client for Emacs" single
+	   ((:commit . "fea231d479f06bf40dbfcf45de143eecc9ed744c")
+	    (:authors
+	     ("Masayuki Ataka" . "masayuki.ataka@gmail.com"))
+	    (:maintainer "Masayuki Ataka" . "masayuki.ataka@gmail.com")
+	    (:keywords "web")
+	    (:url . "https://github.com/ataka/chatwork"))])

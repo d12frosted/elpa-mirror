@@ -1,2 +1,8 @@
-
-(rcirc-notify . [(20150219 2204) nil "libnotify popups" single ((:commit . "841a7b5a6cdb0c11a812df924d2c6a7d364fd455") (:keywords "lisp" "rcirc" "irc" "notify" "growl") (:authors ("Will Farrington, Alex Schroeder <alex@gnu.org>, Nic Ferrier" . "nferrier@ferrier.me.uk")) (:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk"))])
+(rcirc-notify .
+	      [(20150219 2204)
+	       nil "libnotify popups" single
+	       ((:commit . "841a7b5a6cdb0c11a812df924d2c6a7d364fd455")
+		(:authors
+		 ("Will Farrington, Alex Schroeder <alex@gnu.org>, Nic Ferrier" . "nferrier@ferrier.me.uk"))
+		(:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk")
+		(:keywords "lisp" "rcirc" "irc" "notify" "growl"))])

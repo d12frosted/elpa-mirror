@@ -1,2 +1,11 @@
-
-(letterbox-mode . [(20170702 125) ((emacs (24 3))) "hide sensitive text on a buffer" single ((:commit . "88c67a51d67216d569a28e8423200883fde096dd") (:keywords "password" "convenience") (:authors ("Fernando Leboran" . "f.leboran@gmail.com")) (:maintainer "Fernando Leboran" . "f.leboran@gmail.com") (:url . "http://github.com/pacha64/letterbox-mode"))])
+(letterbox-mode .
+		[(20170702 125)
+		 ((emacs
+		   (24 3)))
+		 "hide sensitive text on a buffer" single
+		 ((:commit . "88c67a51d67216d569a28e8423200883fde096dd")
+		  (:authors
+		   ("Fernando Leboran" . "f.leboran@gmail.com"))
+		  (:maintainer "Fernando Leboran" . "f.leboran@gmail.com")
+		  (:keywords "password" "convenience")
+		  (:url . "http://github.com/pacha64/letterbox-mode"))])

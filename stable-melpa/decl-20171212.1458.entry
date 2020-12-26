@@ -1,2 +1,14 @@
-
-(decl . [(20171212 1458) ((dash (2 5 0)) (emacs (24 3)) (cl-lib (0 3))) "Library for organizing code declaratively" single ((:commit . "ff7f8a4f1225cbdf141c86172104e67a4cf58c86") (:authors ("Preetpal S. Sohal")) (:maintainer "Preetpal S. Sohal") (:url . "https://github.com/preetpalS/decl.el"))])
+(decl .
+      [(20171212 1458)
+       ((dash
+	 (2 5 0))
+	(emacs
+	 (24 3))
+	(cl-lib
+	 (0 3)))
+       "Library for organizing code declaratively" single
+       ((:commit . "ff7f8a4f1225cbdf141c86172104e67a4cf58c86")
+	(:authors
+	 ("Preetpal S. Sohal"))
+	(:maintainer "Preetpal S. Sohal")
+	(:url . "https://github.com/preetpalS/decl.el"))])

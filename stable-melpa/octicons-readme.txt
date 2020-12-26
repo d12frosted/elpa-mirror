@@ -1,1 +1,4 @@
-octicons. provides utility function for octicons font
+;;; Commentary:
+
+;; octicons. provides utility function for octicons font
+

@@ -1,2 +1,9 @@
-
-(ghc . [(20180121 1218) ((haskell-mode (13 0))) "Sub mode for Haskell mode" tar ((:commit . "391e187a5dfef4421aab2508fa6ff7875cc8259d"))])
+(ghc .
+     [(20180121 1218)
+      ((haskell-mode
+	(13 0)))
+      "Sub mode for Haskell mode" tar
+      ((:commit . "391e187a5dfef4421aab2508fa6ff7875cc8259d")
+       (:authors
+	("Kazu Yamamoto" . "Kazu@Mew.org"))
+       (:maintainer "Kazu Yamamoto" . "Kazu@Mew.org"))])

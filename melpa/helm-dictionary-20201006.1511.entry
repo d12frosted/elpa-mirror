@@ -1,2 +1,11 @@
-
-(helm-dictionary . [(20201006 1511) ((helm (1 5 5))) "Helm source for looking up dictionaries" single ((:commit . "b316a1d55e58645d59a84d33851d46fab3cd54b5") (:authors ("Titus von der Malsburg" . "malsburg@posteo.de") ("Michael Heerdegen" . "michael_heerdegen@web.de")) (:maintainer "Titus von der Malsburg" . "malsburg@posteo.de") (:url . "https://github.com/emacs-helm/helm-dictionary"))])
+(helm-dictionary .
+		 [(20201006 1511)
+		  ((helm
+		    (1 5 5)))
+		  "Helm source for looking up dictionaries" single
+		  ((:commit . "b316a1d55e58645d59a84d33851d46fab3cd54b5")
+		   (:authors
+		    ("Titus von der Malsburg" . "malsburg@posteo.de")
+		    ("Michael Heerdegen" . "michael_heerdegen@web.de"))
+		   (:maintainer "Titus von der Malsburg" . "malsburg@posteo.de")
+		   (:url . "https://github.com/emacs-helm/helm-dictionary"))])

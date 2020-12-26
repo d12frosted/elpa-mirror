@@ -1,2 +1,11 @@
-
-(sos . [(20141215 403) ((org (7))) "StackOverflow Search" single ((:commit . "1573adca912b88b5010d99a25c83a5b2313bd39c") (:keywords "tools" "search" "questions") (:authors ("Rudolf Olah")) (:maintainer "Rudolf Olah") (:url . "https://github.com/omouse/emacs-sos"))])
+(sos .
+     [(20141215 403)
+      ((org
+	(7)))
+      "StackOverflow Search" single
+      ((:commit . "1573adca912b88b5010d99a25c83a5b2313bd39c")
+       (:authors
+	("Rudolf Olah"))
+       (:maintainer "Rudolf Olah")
+       (:keywords "tools" "search" "questions")
+       (:url . "https://github.com/omouse/emacs-sos"))])

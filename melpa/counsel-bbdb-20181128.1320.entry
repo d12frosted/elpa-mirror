@@ -1,2 +1,13 @@
-
-(counsel-bbdb . [(20181128 1320) ((ivy (0 8 0)) (emacs (24 3))) "Quick search&input email from BBDB based on ivy" single ((:commit . "df2890deb73b09f8055243bd91942ea887d9b7a1") (:keywords "mail" "abbrev" "convenience" "matching") (:authors ("Chen Bin <chenbin.sh AT gmail>")) (:maintainer "Chen Bin <chenbin.sh AT gmail>") (:url . "https://github.com/redguard/counsel-bbdb"))])
+(counsel-bbdb .
+	      [(20181128 1320)
+	       ((ivy
+		 (0 8 0))
+		(emacs
+		 (24 3)))
+	       "Quick search&input email from BBDB based on ivy" single
+	       ((:commit . "df2890deb73b09f8055243bd91942ea887d9b7a1")
+		(:authors
+		 ("Chen Bin <chenbin.sh AT gmail>"))
+		(:maintainer "Chen Bin <chenbin.sh AT gmail>")
+		(:keywords "mail" "abbrev" "convenience" "matching")
+		(:url . "https://github.com/redguard/counsel-bbdb"))])

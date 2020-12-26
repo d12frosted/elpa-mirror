@@ -1,2 +1,14 @@
-
-(pippel . [(20180710 856) ((emacs (25 1)) (s (1 11 0)) (dash (2 12 0))) "Frontend to python package manager pip" tar ((:commit . "21a5200e8e5ccaa1911abb4ebf090b76ca839756") (:authors ("Fritz Stelzer" . "brotzeitmacher@gmail.com")) (:maintainer "Fritz Stelzer" . "brotzeitmacher@gmail.com") (:url . "https://github.com/brotzeitmacher/pippel"))])
+(pippel .
+	[(20180710 856)
+	 ((emacs
+	   (25 1))
+	  (s
+	   (1 11 0))
+	  (dash
+	   (2 12 0)))
+	 "Frontend to python package manager pip" tar
+	 ((:commit . "21a5200e8e5ccaa1911abb4ebf090b76ca839756")
+	  (:authors
+	   ("Fritz Stelzer" . "brotzeitmacher@gmail.com"))
+	  (:maintainer "Fritz Stelzer" . "brotzeitmacher@gmail.com")
+	  (:url . "https://github.com/brotzeitmacher/pippel"))])

@@ -1,2 +1,15 @@
-
-(sentence-navigation . [(20180408 1619) ((ample-regexps (0 1)) (cl-lib (0 5)) (emacs (24 4))) "Commands to navigate one-spaced sentences." single ((:commit . "7c5d2edeaed01196aec25031782e89adeaa089f0") (:keywords "sentence" "evil") (:authors ("Fox Kiester" . "noct@openmailbox.org")) (:maintainer "Fox Kiester" . "noct@openmailbox.org") (:url . "https://github.com/noctuid/emacs-sentence-navigation"))])
+(sentence-navigation .
+		     [(20180408 1619)
+		      ((ample-regexps
+			(0 1))
+		       (cl-lib
+			(0 5))
+		       (emacs
+			(24 4)))
+		      "Commands to navigate one-spaced sentences." single
+		      ((:commit . "7c5d2edeaed01196aec25031782e89adeaa089f0")
+		       (:authors
+			("Fox Kiester" . "noct@openmailbox.org"))
+		       (:maintainer "Fox Kiester" . "noct@openmailbox.org")
+		       (:keywords "sentence" "evil")
+		       (:url . "https://github.com/noctuid/emacs-sentence-navigation"))])

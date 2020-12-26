@@ -1,2 +1,11 @@
-
-(nodemcu-mode . [(20180501 2225) ((emacs (25))) "Minor mode for NodeMCU" single ((:commit . "8effd9f3df40b6b92a2f05e4d54750b624afc4a7") (:keywords "tools") (:authors ("Andreas Müller" . "code@0x7.ch")) (:maintainer "Andreas Müller" . "code@0x7.ch") (:url . "https://github.com/andrmuel/nodemcu-mode"))])
+(nodemcu-mode .
+	      [(20180501 2225)
+	       ((emacs
+		 (25)))
+	       "Minor mode for NodeMCU" single
+	       ((:commit . "8effd9f3df40b6b92a2f05e4d54750b624afc4a7")
+		(:authors
+		 ("Andreas Müller" . "code@0x7.ch"))
+		(:maintainer "Andreas Müller" . "code@0x7.ch")
+		(:keywords "tools")
+		(:url . "https://github.com/andrmuel/nodemcu-mode"))])

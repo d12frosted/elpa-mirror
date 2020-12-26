@@ -1,2 +1,11 @@
-
-(brainfuck-mode . [(20150113 842) ((langdoc (20130601 1450))) "Brainfuck mode for Emacs" single ((:commit . "36e69552bb3b97a4f888d362c59845651bd0d492") (:keywords "brainfuck" "langdoc") (:authors ("Tomoya Tanjo" . "ttanjo@gmail.com")) (:maintainer "Tomoya Tanjo" . "ttanjo@gmail.com") (:url . "https://github.com/tom-tan/brainfuck-mode/"))])
+(brainfuck-mode .
+		[(20150113 842)
+		 ((langdoc
+		   (20130601 1450)))
+		 "Brainfuck mode for Emacs" single
+		 ((:commit . "36e69552bb3b97a4f888d362c59845651bd0d492")
+		  (:authors
+		   ("Tomoya Tanjo" . "ttanjo@gmail.com"))
+		  (:maintainer "Tomoya Tanjo" . "ttanjo@gmail.com")
+		  (:keywords "brainfuck" "langdoc")
+		  (:url . "https://github.com/tom-tan/brainfuck-mode/"))])

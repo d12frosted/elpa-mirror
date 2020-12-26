@@ -1,2 +1,13 @@
-
-(redis . [(20150531 1948) ((emacs (24)) (cl-lib (0 5))) "Redis integration" single ((:commit . "2c33f3397bc14e7a8192867b55920492d4eead8c") (:keywords "convenience") (:authors ("Mario Rodas" . "marsam@users.noreply.github.com")) (:maintainer "Mario Rodas" . "marsam@users.noreply.github.com") (:url . "https://github.com/emacs-pe/redis.el"))])
+(redis .
+       [(20150531 1948)
+	((emacs
+	  (24))
+	 (cl-lib
+	  (0 5)))
+	"Redis integration" single
+	((:commit . "2c33f3397bc14e7a8192867b55920492d4eead8c")
+	 (:authors
+	  ("Mario Rodas" . "marsam@users.noreply.github.com"))
+	 (:maintainer "Mario Rodas" . "marsam@users.noreply.github.com")
+	 (:keywords "convenience")
+	 (:url . "https://github.com/emacs-pe/redis.el"))])

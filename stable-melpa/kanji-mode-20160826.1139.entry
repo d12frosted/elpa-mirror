@@ -1,2 +1,8 @@
-
-(kanji-mode . [(20160826 1139) nil "View stroke order for kanji characters at cursor" tar ((:commit . "eda4f8666486689d36317db7dbda54fb73d3e3d2") (:authors ("Wojciech Gac" . "wojciech.s.gac@gmail.com")) (:maintainer "Wojciech Gac" . "wojciech.s.gac@gmail.com") (:url . "http://github.com/wsgac/kanji-mode "))])
+(kanji-mode .
+	    [(20160826 1139)
+	     nil "View stroke order for kanji characters at cursor" tar
+	     ((:commit . "eda4f8666486689d36317db7dbda54fb73d3e3d2")
+	      (:authors
+	       ("Wojciech Gac" . "wojciech.s.gac@gmail.com"))
+	      (:maintainer "Wojciech Gac" . "wojciech.s.gac@gmail.com")
+	      (:url . "http://github.com/wsgac/kanji-mode "))])

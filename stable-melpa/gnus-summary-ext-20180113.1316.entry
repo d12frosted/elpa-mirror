@@ -1,2 +1,9 @@
-
-(gnus-summary-ext . [(20180113 1316) nil "Extra limit and process mark commands for the gnus summary buffer" single ((:commit . "025fd853fe9280ae696a89ec2c2cac9befd010aa") (:keywords "comm") (:authors ("Joe Bloggs" . "vapniks@yahoo.com")) (:maintainer "Joe Bloggs" . "vapniks@yahoo.com") (:url . "https://github.com/vapniks/gnus-summary-ext"))])
+(gnus-summary-ext .
+		  [(20180113 1316)
+		   nil "Extra limit and process mark commands for the gnus summary buffer" single
+		   ((:commit . "025fd853fe9280ae696a89ec2c2cac9befd010aa")
+		    (:authors
+		     ("Joe Bloggs" . "vapniks@yahoo.com"))
+		    (:maintainer "Joe Bloggs" . "vapniks@yahoo.com")
+		    (:keywords "comm")
+		    (:url . "https://github.com/vapniks/gnus-summary-ext"))])

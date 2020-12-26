@@ -1,2 +1,14 @@
-
-(org-octopress . [(20170821 415) ((org (9 0)) (orglue (0 1)) (ctable (0 1 1))) "Compose octopress articles using org-mode." tar ((:commit . "38598ef98d04076a8eb78d549907ddfde8d3a652") (:keywords "org" "jekyll" "octopress" "blog") (:authors ("Yoshinari Nomura" . "nom@quickhack.net")) (:maintainer "Yoshinari Nomura" . "nom@quickhack.net"))])
+(org-octopress .
+	       [(20170821 415)
+		((org
+		  (9 0))
+		 (orglue
+		  (0 1))
+		 (ctable
+		  (0 1 1)))
+		"Compose octopress articles using org-mode." tar
+		((:commit . "38598ef98d04076a8eb78d549907ddfde8d3a652")
+		 (:authors
+		  ("Yoshinari Nomura" . "nom@quickhack.net"))
+		 (:maintainer "Yoshinari Nomura" . "nom@quickhack.net")
+		 (:keywords "org" "jekyll" "octopress" "blog"))])

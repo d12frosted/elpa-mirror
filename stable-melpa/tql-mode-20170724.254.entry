@@ -1,2 +1,10 @@
-
-(tql-mode . [(20170724 254) ((emacs (24))) "TQL mode" single ((:commit . "488add79eb3fc8ec02aedaa997fe1ed9e5c3e638") (:keywords "languages" "tql") (:authors ("Sean McLaughlin" . "seanmcl@gmail.com")) (:maintainer "Sean McLaughlin" . "seanmcl@gmail.com"))])
+(tql-mode .
+	  [(20170724 254)
+	   ((emacs
+	     (24)))
+	   "TQL mode" single
+	   ((:commit . "488add79eb3fc8ec02aedaa997fe1ed9e5c3e638")
+	    (:authors
+	     ("Sean McLaughlin" . "seanmcl@gmail.com"))
+	    (:maintainer "Sean McLaughlin" . "seanmcl@gmail.com")
+	    (:keywords "languages" "tql"))])

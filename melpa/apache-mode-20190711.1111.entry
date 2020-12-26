@@ -1,2 +1,9 @@
-
-(apache-mode . [(20190711 1111) nil "Major mode for editing Apache httpd configuration files" single ((:commit . "a66dc1f246cd4ce0960773989bc43188f0394948") (:keywords "languages" "faces") (:authors ("Karl Chen" . "quarl@nospam.quarl.org")) (:maintainer "USAMI Kenta" . "tadsan@zonu.me") (:url . "https://github.com/emacs-php/apache-mode"))])
+(apache-mode .
+	     [(20190711 1111)
+	      nil "Major mode for editing Apache httpd configuration files" single
+	      ((:commit . "a66dc1f246cd4ce0960773989bc43188f0394948")
+	       (:authors
+		("Karl Chen" . "quarl@nospam.quarl.org"))
+	       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+	       (:keywords "languages" "faces")
+	       (:url . "https://github.com/emacs-php/apache-mode"))])

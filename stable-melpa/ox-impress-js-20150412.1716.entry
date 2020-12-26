@@ -1,2 +1,11 @@
-
-(ox-impress-js . [(20150412 1716) ((org (8))) "impress.js Back-End for Org Export Engine" tar ((:commit . "91c6d2af6af308ade352a03355c4fb551b238c6b") (:keywords "outlines" "hypermedia" "calendar" "wp") (:authors ("Takumi Kinjo <takumi dot kinjo at gmail dot org>")) (:maintainer "Takumi Kinjo <takumi dot kinjo at gmail dot org>") (:url . "https://github.com/kinjo/org-impress-js.el"))])
+(ox-impress-js .
+	       [(20150412 1716)
+		((org
+		  (8)))
+		"impress.js Back-End for Org Export Engine" tar
+		((:commit . "91c6d2af6af308ade352a03355c4fb551b238c6b")
+		 (:authors
+		  ("Takumi Kinjo <takumi dot kinjo at gmail dot org>"))
+		 (:maintainer "Takumi Kinjo <takumi dot kinjo at gmail dot org>")
+		 (:keywords "outlines" "hypermedia" "calendar" "wp")
+		 (:url . "https://github.com/kinjo/org-impress-js.el"))])

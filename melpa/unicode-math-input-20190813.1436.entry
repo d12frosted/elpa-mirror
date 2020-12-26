@@ -1,2 +1,10 @@
-
-(unicode-math-input . [(20190813 1436) ((emacs (25))) "Insert Unicode math symbols using TeX notation" single ((:commit . "ba45edbfb8fa453e29c4c6c73af60f06637951d6") (:authors ("Augusto Stoffel")) (:maintainer "Augusto Stoffel") (:url . "https://github.com/astoff/unicode-math-input.el"))])
+(unicode-math-input .
+		    [(20190813 1436)
+		     ((emacs
+		       (25)))
+		     "Insert Unicode math symbols using TeX notation" single
+		     ((:commit . "ba45edbfb8fa453e29c4c6c73af60f06637951d6")
+		      (:authors
+		       ("Augusto Stoffel"))
+		      (:maintainer "Augusto Stoffel")
+		      (:url . "https://github.com/astoff/unicode-math-input.el"))])

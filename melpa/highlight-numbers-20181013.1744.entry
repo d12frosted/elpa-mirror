@@ -1,2 +1,12 @@
-
-(highlight-numbers . [(20181013 1744) ((emacs (24)) (parent-mode (2 0))) "Highlight numbers in source code" single ((:commit . "8b4744c7f46c72b1d3d599d4fb75ef8183dee307") (:authors ("Fanael Linithien" . "fanael4@gmail.com")) (:maintainer "Fanael Linithien" . "fanael4@gmail.com") (:url . "https://github.com/Fanael/highlight-numbers"))])
+(highlight-numbers .
+		   [(20181013 1744)
+		    ((emacs
+		      (24))
+		     (parent-mode
+		      (2 0)))
+		    "Highlight numbers in source code" single
+		    ((:commit . "8b4744c7f46c72b1d3d599d4fb75ef8183dee307")
+		     (:authors
+		      ("Fanael Linithien" . "fanael4@gmail.com"))
+		     (:maintainer "Fanael Linithien" . "fanael4@gmail.com")
+		     (:url . "https://github.com/Fanael/highlight-numbers"))])

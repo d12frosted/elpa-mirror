@@ -1,2 +1,13 @@
-
-(n4js . [(20150714 231) ((emacs (24)) (cypher-mode (0))) "Neo4j Shell" single ((:commit . "3991ed8975151d5e8d568e952362df810f7ffab7") (:keywords "neo4j" "shell" "comint") (:authors ("TruongTx" . "me@truongtx.me")) (:maintainer "TruongTx" . "me@truongtx.me") (:url . "https://github.com/tmtxt/n4js.el"))])
+(n4js .
+      [(20150714 231)
+       ((emacs
+	 (24))
+	(cypher-mode
+	 (0)))
+       "Neo4j Shell" single
+       ((:commit . "3991ed8975151d5e8d568e952362df810f7ffab7")
+	(:authors
+	 ("TruongTx" . "me@truongtx.me"))
+	(:maintainer "TruongTx" . "me@truongtx.me")
+	(:keywords "neo4j" "shell" "comint")
+	(:url . "https://github.com/tmtxt/n4js.el"))])

@@ -1,2 +1,11 @@
-
-(ob-dao . [(20170816 1558) ((org (8))) "Org Babel Functions for Dao" single ((:commit . "fa92f62a63c684d689f57e790e5dd614c5bba270") (:keywords "literate programming" "reproducible research" "org" "babel" "dao") (:authors ("Chunyang Xu" . "mail@xuchunyang.me")) (:maintainer "Chunyang Xu" . "mail@xuchunyang.me") (:url . "https://github.com/xuchunyang/ob-dao"))])
+(ob-dao .
+	[(20170816 1558)
+	 ((org
+	   (8)))
+	 "Org Babel Functions for Dao" single
+	 ((:commit . "fa92f62a63c684d689f57e790e5dd614c5bba270")
+	  (:authors
+	   ("Chunyang Xu" . "mail@xuchunyang.me"))
+	  (:maintainer "Chunyang Xu" . "mail@xuchunyang.me")
+	  (:keywords "literate programming" "reproducible research" "org" "babel" "dao")
+	  (:url . "https://github.com/xuchunyang/ob-dao"))])

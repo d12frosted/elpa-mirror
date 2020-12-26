@@ -1,2 +1,10 @@
-
-(metronome . [(20200502 1748) ((emacs (25 1))) "A simple metronome" tar ((:commit . "18257ecdd7b3d816104e83a5f0f96e676cc9fbfc") (:authors ("Jonathan Gregory <jgrg at autistici dot org>")) (:maintainer "Jonathan Gregory <jgrg at autistici dot org>") (:url . "https://gitlab.com/jagrg/metronome"))])
+(metronome .
+	   [(20200502 1748)
+	    ((emacs
+	      (25 1)))
+	    "A simple metronome" tar
+	    ((:commit . "18257ecdd7b3d816104e83a5f0f96e676cc9fbfc")
+	     (:authors
+	      ("Jonathan Gregory <jgrg at autistici dot org>"))
+	     (:maintainer "Jonathan Gregory <jgrg at autistici dot org>")
+	     (:url . "https://gitlab.com/jagrg/metronome"))])

@@ -1,2 +1,9 @@
-
-(audio-notes-mode . [(20170611 2159) nil "Play audio notes synced from somewhere else." single ((:commit . "fa38350829c7e97257efc746a010471d33748a68") (:keywords "hypermedia" "convenience") (:authors ("Artur Malabarba" . "bruce.connor.am@gmail.com")) (:maintainer "Artur Malabarba" . "bruce.connor.am@gmail.com") (:url . "http://github.com/Bruce-Connor/audio-notes-mode"))])
+(audio-notes-mode .
+		  [(20170611 2159)
+		   nil "Play audio notes synced from somewhere else." single
+		   ((:commit . "fa38350829c7e97257efc746a010471d33748a68")
+		    (:authors
+		     ("Artur Malabarba" . "bruce.connor.am@gmail.com"))
+		    (:maintainer "Artur Malabarba" . "bruce.connor.am@gmail.com")
+		    (:keywords "hypermedia" "convenience")
+		    (:url . "http://github.com/Bruce-Connor/audio-notes-mode"))])

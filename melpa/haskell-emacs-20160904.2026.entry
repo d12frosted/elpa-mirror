@@ -1,2 +1,9 @@
-
-(haskell-emacs . [(20160904 2026) nil "Write emacs extensions in haskell" tar ((:commit . "a2c6a079175904689eed7c6c200754bfa85d1ed9") (:keywords "haskell" "emacs" "ffi") (:authors ("Florian Knupfer")) (:maintainer "Florian Knupfer") (:url . "https://github.com/knupfer/haskell-emacs"))])
+(haskell-emacs .
+	       [(20160904 2026)
+		nil "Write emacs extensions in haskell" tar
+		((:commit . "a2c6a079175904689eed7c6c200754bfa85d1ed9")
+		 (:authors
+		  ("Florian Knupfer"))
+		 (:maintainer "Florian Knupfer")
+		 (:keywords "haskell" "emacs" "ffi")
+		 (:url . "https://github.com/knupfer/haskell-emacs"))])

@@ -1,2 +1,19 @@
-
-(omni-quotes . [(20200304 2341) ((dash (2 8)) (omni-log (0 4 0)) (f (0 19 0)) (s (1 11 0)) (ht (2 1))) "Random quotes displayer" tar ((:commit . "cfc7b7f01628a5d57384820d1096de4541e67cdf") (:keywords "convenience") (:authors ("Adrien Becchis" . "adriean.khisbe@live.fr")) (:maintainer "Adrien Becchis" . "adriean.khisbe@live.fr") (:url . "https://github.com/AdrieanKhisbe/omni-quotes.el"))])
+(omni-quotes .
+	     [(20200304 2341)
+	      ((dash
+		(2 8))
+	       (omni-log
+		(0 4 0))
+	       (f
+		(0 19 0))
+	       (s
+		(1 11 0))
+	       (ht
+		(2 1)))
+	      "Random quotes displayer" tar
+	      ((:commit . "cfc7b7f01628a5d57384820d1096de4541e67cdf")
+	       (:authors
+		("Adrien Becchis" . "adriean.khisbe@live.fr"))
+	       (:maintainer "Adrien Becchis" . "adriean.khisbe@live.fr")
+	       (:keywords "convenience")
+	       (:url . "https://github.com/AdrieanKhisbe/omni-quotes.el"))])

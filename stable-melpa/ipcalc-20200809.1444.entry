@@ -1,2 +1,11 @@
-
-(ipcalc . [(20200809 1444) ((cl-lib (0 5))) "IP subnet calculator" single ((:commit . "58b2b6c90af93ae46c5445b33ee4d1ef4bac1efb") (:keywords "networking" "tools") (:authors ("\"Aleksandar Simic\"" . "asimic@gmail.com")) (:maintainer "\"Aleksandar Simic\"" . "asimic@gmail.com") (:url . "http://github.com/dotemacs/ipcalc.el"))])
+(ipcalc .
+	[(20200809 1444)
+	 ((cl-lib
+	   (0 5)))
+	 "IP subnet calculator" single
+	 ((:commit . "58b2b6c90af93ae46c5445b33ee4d1ef4bac1efb")
+	  (:authors
+	   ("\"Aleksandar Simic\"" . "asimic@gmail.com"))
+	  (:maintainer "\"Aleksandar Simic\"" . "asimic@gmail.com")
+	  (:keywords "networking" "tools")
+	  (:url . "http://github.com/dotemacs/ipcalc.el"))])

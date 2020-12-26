@@ -1,2 +1,10 @@
-
-(auto-complete-chunk . [(20140225 946) ((auto-complete (1 4))) "Auto-completion for dot.separated.words." single ((:commit . "a9aa77ffb84a1037984a7ce4dda25074272f13fe") (:authors ("ARAKAKI, Takafumi")) (:maintainer "ARAKAKI, Takafumi") (:url . "https://github.com/tkf/auto-complete-chunk"))])
+(auto-complete-chunk .
+		     [(20140225 946)
+		      ((auto-complete
+			(1 4)))
+		      "Auto-completion for dot.separated.words." single
+		      ((:commit . "a9aa77ffb84a1037984a7ce4dda25074272f13fe")
+		       (:authors
+			("ARAKAKI, Takafumi"))
+		       (:maintainer "ARAKAKI, Takafumi")
+		       (:url . "https://github.com/tkf/auto-complete-chunk"))])

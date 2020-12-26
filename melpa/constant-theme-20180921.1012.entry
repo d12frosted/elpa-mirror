@@ -1,2 +1,11 @@
-
-(constant-theme . [(20180921 1012) ((emacs (24 1))) "A calm, dark, almost monochrome color theme." tar ((:commit . "23543a09729569b566175abe1efbe774048d3fa8") (:keywords "themes") (:authors ("Jannis Pohlmann" . "contact@jannispohlmann.de")) (:maintainer "Jannis Pohlmann" . "contact@jannispohlmann.de") (:url . "https://github.com/jannis/emacs-constant-theme"))])
+(constant-theme .
+		[(20180921 1012)
+		 ((emacs
+		   (24 1)))
+		 "A calm, dark, almost monochrome color theme." tar
+		 ((:commit . "23543a09729569b566175abe1efbe774048d3fa8")
+		  (:authors
+		   ("Jannis Pohlmann" . "contact@jannispohlmann.de"))
+		  (:maintainer "Jannis Pohlmann" . "contact@jannispohlmann.de")
+		  (:keywords "themes")
+		  (:url . "https://github.com/jannis/emacs-constant-theme"))])

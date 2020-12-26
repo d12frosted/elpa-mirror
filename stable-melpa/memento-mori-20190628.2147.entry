@@ -1,2 +1,13 @@
-
-(memento-mori . [(20190628 2147) ((emacs (24)) (cl-lib (0 5))) "Reminder of mortality" single ((:commit . "b99c5ff526079fc5a1e1be097534855da176bc2b") (:keywords "help") (:authors ("Lassi Kortela" . "lassi@lassi.io")) (:maintainer "Lassi Kortela" . "lassi@lassi.io") (:url . "https://github.com/lassik/emacs-memento-mori"))])
+(memento-mori .
+	      [(20190628 2147)
+	       ((emacs
+		 (24))
+		(cl-lib
+		 (0 5)))
+	       "Reminder of mortality" single
+	       ((:commit . "b99c5ff526079fc5a1e1be097534855da176bc2b")
+		(:authors
+		 ("Lassi Kortela" . "lassi@lassi.io"))
+		(:maintainer "Lassi Kortela" . "lassi@lassi.io")
+		(:keywords "help")
+		(:url . "https://github.com/lassik/emacs-memento-mori"))])

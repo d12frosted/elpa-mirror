@@ -1,2 +1,15 @@
-
-(nlinum-hl . [(20190301 2117) ((emacs (24 4)) (nlinum (1 7)) (cl-lib (0 5))) "heal nlinum's line numbers" single ((:commit . "dc6b365a58e06c7d637a76a31c71a40b20da8b56") (:keywords "nlinum" "highlight" "current" "line" "faces") (:authors ("Henrik Lissner <http://github/hlissner>")) (:maintainer "Henrik Lissner" . "henrik@lissner.net") (:url . "https://github.com/hlissner/emacs-nlinum-hl"))])
+(nlinum-hl .
+	   [(20190301 2117)
+	    ((emacs
+	      (24 4))
+	     (nlinum
+	      (1 7))
+	     (cl-lib
+	      (0 5)))
+	    "heal nlinum's line numbers" single
+	    ((:commit . "dc6b365a58e06c7d637a76a31c71a40b20da8b56")
+	     (:authors
+	      ("Henrik Lissner <http://github/hlissner>"))
+	     (:maintainer "Henrik Lissner" . "henrik@lissner.net")
+	     (:keywords "nlinum" "highlight" "current" "line" "faces")
+	     (:url . "https://github.com/hlissner/emacs-nlinum-hl"))])

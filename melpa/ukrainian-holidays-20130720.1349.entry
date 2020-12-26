@@ -1,2 +1,8 @@
-
-(ukrainian-holidays . [(20130720 1349) nil "Ukrainian holidays for Emacs calendar." single ((:commit . "e52b0c92843e9f4d0415a7ba3b8559785497d23d") (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com")) (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com") (:url . "https://github.com/abo-abo/ukrainian-holidays"))])
+(ukrainian-holidays .
+		    [(20130720 1349)
+		     nil "Ukrainian holidays for Emacs calendar." single
+		     ((:commit . "e52b0c92843e9f4d0415a7ba3b8559785497d23d")
+		      (:authors
+		       ("Oleh Krehel" . "ohwoeowho@gmail.com"))
+		      (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
+		      (:url . "https://github.com/abo-abo/ukrainian-holidays"))])

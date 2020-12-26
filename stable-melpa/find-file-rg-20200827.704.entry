@@ -1,2 +1,11 @@
-
-(find-file-rg . [(20200827 704) ((emacs (25 1))) "Find file in project using ripgrep" single ((:commit . "ed556e092a92e325f335554ab193cef2d8fec009") (:keywords "tools") (:authors ("Andrii Kolomoiets" . "andreyk.mad@gmail.com")) (:maintainer "Andrii Kolomoiets" . "andreyk.mad@gmail.com") (:url . "https://github.com/muffinmad/emacs-find-file-rg"))])
+(find-file-rg .
+	      [(20200827 704)
+	       ((emacs
+		 (25 1)))
+	       "Find file in project using ripgrep" single
+	       ((:commit . "ed556e092a92e325f335554ab193cef2d8fec009")
+		(:authors
+		 ("Andrii Kolomoiets" . "andreyk.mad@gmail.com"))
+		(:maintainer "Andrii Kolomoiets" . "andreyk.mad@gmail.com")
+		(:keywords "tools")
+		(:url . "https://github.com/muffinmad/emacs-find-file-rg"))])

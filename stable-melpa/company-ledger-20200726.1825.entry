@@ -1,2 +1,13 @@
-
-(company-ledger . [(20200726 1825) ((emacs (24 3)) (company (0 8 0))) "Fuzzy auto-completion for Ledger & friends" single ((:commit . "9fe9e3b809d6d2bc13c601953f696f43b09ea296") (:keywords "abbrev" "matching" "auto-complete" "beancount" "ledger" "company") (:authors ("Debanjum Singh Solanky <debanjum AT gmail DOT com>")) (:maintainer "Debanjum Singh Solanky <debanjum AT gmail DOT com>") (:url . "https://github.com/debanjum/company-ledger"))])
+(company-ledger .
+		[(20200726 1825)
+		 ((emacs
+		   (24 3))
+		  (company
+		   (0 8 0)))
+		 "Fuzzy auto-completion for Ledger & friends" single
+		 ((:commit . "9fe9e3b809d6d2bc13c601953f696f43b09ea296")
+		  (:authors
+		   ("Debanjum Singh Solanky <debanjum AT gmail DOT com>"))
+		  (:maintainer "Debanjum Singh Solanky <debanjum AT gmail DOT com>")
+		  (:keywords "abbrev" "matching" "auto-complete" "beancount" "ledger" "company")
+		  (:url . "https://github.com/debanjum/company-ledger"))])

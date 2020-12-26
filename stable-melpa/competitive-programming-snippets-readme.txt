@@ -1,1 +1,4 @@
-Competitive Programming snippets for yasnippet
+;;; Commentary:
+
+;; Competitive Programming snippets for yasnippet
+

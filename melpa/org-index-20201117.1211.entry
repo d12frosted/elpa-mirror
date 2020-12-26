@@ -1,2 +1,16 @@
-
-(org-index . [(20201117 1211) ((org (9 3)) (dash (2 12)) (s (1 12)) (emacs (26 3))) "A personal adaptive index for org" single ((:commit . "0863397ba2782e229fa6216beb074dd44eb0c031") (:authors ("Marc Ihm" . "1@2484.de")) (:maintainer "Marc Ihm" . "1@2484.de") (:url . "https://github.com/marcIhm/org-index"))])
+(org-index .
+	   [(20201117 1211)
+	    ((org
+	      (9 3))
+	     (dash
+	      (2 12))
+	     (s
+	      (1 12))
+	     (emacs
+	      (26 3)))
+	    "A personal adaptive index for org" single
+	    ((:commit . "0863397ba2782e229fa6216beb074dd44eb0c031")
+	     (:authors
+	      ("Marc Ihm" . "1@2484.de"))
+	     (:maintainer "Marc Ihm" . "1@2484.de")
+	     (:url . "https://github.com/marcIhm/org-index"))])

@@ -1,2 +1,9 @@
-
-(alsamixer . [(20191002 1133) nil "Functions to call out to amixer." single ((:commit . "1bdb99e433acd38685f05408562746cfbf2bc820") (:keywords "convenience") (:authors ("R.W. van 't Veer")) (:maintainer "R.W. van 't Veer") (:url . "https://github.com/remvee/alsamixer-el"))])
+(alsamixer .
+	   [(20191002 1133)
+	    nil "Functions to call out to amixer." single
+	    ((:commit . "1bdb99e433acd38685f05408562746cfbf2bc820")
+	     (:authors
+	      ("R.W. van 't Veer"))
+	     (:maintainer "R.W. van 't Veer")
+	     (:keywords "convenience")
+	     (:url . "https://github.com/remvee/alsamixer-el"))])

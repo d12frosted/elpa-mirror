@@ -1,2 +1,13 @@
-
-(ox-zenn . [(20200924 1607) ((emacs (27 1)) (org (9 0))) "Zenn flavored markdown backend for org export engine" single ((:commit . "b53bd82116c9f7dbb5b476d2cfcc8ed0f3bc9c78") (:keywords "convenience") (:authors ("Naoya Yamashita" . "conao3@gmail.com")) (:maintainer "Naoya Yamashita" . "conao3@gmail.com") (:url . "https://github.com/conao3/ox-zenn.el"))])
+(ox-zenn .
+	 [(20200924 1607)
+	  ((emacs
+	    (27 1))
+	   (org
+	    (9 0)))
+	  "Zenn flavored markdown backend for org export engine" single
+	  ((:commit . "b53bd82116c9f7dbb5b476d2cfcc8ed0f3bc9c78")
+	   (:authors
+	    ("Naoya Yamashita" . "conao3@gmail.com"))
+	   (:maintainer "Naoya Yamashita" . "conao3@gmail.com")
+	   (:keywords "convenience")
+	   (:url . "https://github.com/conao3/ox-zenn.el"))])

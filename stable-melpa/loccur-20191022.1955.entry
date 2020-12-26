@@ -1,2 +1,11 @@
-
-(loccur . [(20191022 1955) ((emacs (24 3))) "Perform an occur-like folding in current buffer" single ((:commit . "4934c0560d2f63e6314b4584211a0cc0a7e671c4") (:keywords "matching") (:authors ("Alexey Veretennikov" . "alexey.veretennikov@gmail.com")) (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com") (:url . "https://github.com/fourier/loccur"))])
+(loccur .
+	[(20191022 1955)
+	 ((emacs
+	   (24 3)))
+	 "Perform an occur-like folding in current buffer" single
+	 ((:commit . "4934c0560d2f63e6314b4584211a0cc0a7e671c4")
+	  (:authors
+	   ("Alexey Veretennikov" . "alexey.veretennikov@gmail.com"))
+	  (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
+	  (:keywords "matching")
+	  (:url . "https://github.com/fourier/loccur"))])

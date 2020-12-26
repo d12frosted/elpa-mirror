@@ -1,2 +1,11 @@
-
-(easy-repeat . [(20150516 848) ((emacs (24 4))) "Repeat easily" single ((:commit . "060f0e6801c82c40c06961dc0528a00e18947a8c") (:keywords "repeat" "convenience") (:authors ("Chunyang Xu" . "xuchunyang56@gmail.com")) (:maintainer "Chunyang Xu" . "xuchunyang56@gmail.com") (:url . "https://github.com/xuchunyang/easy-repeat.el"))])
+(easy-repeat .
+	     [(20150516 848)
+	      ((emacs
+		(24 4)))
+	      "Repeat easily" single
+	      ((:commit . "060f0e6801c82c40c06961dc0528a00e18947a8c")
+	       (:authors
+		("Chunyang Xu" . "xuchunyang56@gmail.com"))
+	       (:maintainer "Chunyang Xu" . "xuchunyang56@gmail.com")
+	       (:keywords "repeat" "convenience")
+	       (:url . "https://github.com/xuchunyang/easy-repeat.el"))])

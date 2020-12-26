@@ -1,2 +1,11 @@
-
-(svg-tag-mode . [(20201129 608) ((emacs (26 1))) "Replace keywords with SVG tags" single ((:commit . "87489d28450559078aa15b4a435143a297508e48") (:keywords "convenience") (:authors ("Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")) (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr") (:url . "https://github.com/rougier/svg-tag-mode"))])
+(svg-tag-mode .
+	      [(20201129 608)
+	       ((emacs
+		 (26 1)))
+	       "Replace keywords with SVG tags" single
+	       ((:commit . "87489d28450559078aa15b4a435143a297508e48")
+		(:authors
+		 ("Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))
+		(:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
+		(:keywords "convenience")
+		(:url . "https://github.com/rougier/svg-tag-mode"))])

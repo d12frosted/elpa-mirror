@@ -1,1 +1,3 @@
-Smart go to definition.
+;;; Commentary:
+;;; Smart go to definition.
+

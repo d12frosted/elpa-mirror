@@ -1,2 +1,9 @@
-
-(sailfish-scratchbox . [(20171202 1332) nil "Sailfish OS scratchbox inside the emacs." single ((:commit . "65c6b04abadd2cdeb4cc2dc2a8b96b06e0f27ed8") (:keywords "sb2" "mb2" "building" "scratchbox" "sailfish") (:authors ("V. V. Polevoy" . "fx@thefx.co")) (:maintainer "V. V. Polevoy" . "fx@thefx.co") (:url . "https://github.com/vityafx/sailfish-scratchbox.el"))])
+(sailfish-scratchbox .
+		     [(20171202 1332)
+		      nil "Sailfish OS scratchbox inside the emacs." single
+		      ((:commit . "65c6b04abadd2cdeb4cc2dc2a8b96b06e0f27ed8")
+		       (:authors
+			("V. V. Polevoy" . "fx@thefx.co"))
+		       (:maintainer "V. V. Polevoy" . "fx@thefx.co")
+		       (:keywords "sb2" "mb2" "building" "scratchbox" "sailfish")
+		       (:url . "https://github.com/vityafx/sailfish-scratchbox.el"))])

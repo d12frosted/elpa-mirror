@@ -1,2 +1,9 @@
-
-(suomalainen-kalenteri . [(20200830 1107) nil "Finnish national and Christian holidays for calendar" tar ((:commit . "5b209ff7b7d3dcd09b623915aba1e137c875fa0e"))])
+(suomalainen-kalenteri .
+		       [(20200830 1107)
+			nil "Finnish national and Christian holidays for calendar" tar
+			((:commit . "5b209ff7b7d3dcd09b623915aba1e137c875fa0e")
+			 (:authors
+			  ("Teemu Likonen" . "tlikonen@iki.fi"))
+			 (:maintainer "Teemu Likonen" . "tlikonen@iki.fi")
+			 (:keywords "calendar" "holidays" "finnish")
+			 (:url . "https://github.com/tlikonen/suomalainen-kalenteri"))])

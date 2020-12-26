@@ -1,2 +1,9 @@
-
-(draft-mode . [(20140609 1456) nil "Rough drafting for Emacs." single ((:commit . "4779fb32daf53746459da2def7e08004492d4f18") (:keywords "draft" "drafting") (:authors ("Eeli Reilin" . "gaudecker@fea.st")) (:maintainer "Eeli Reilin" . "gaudecker@fea.st") (:url . "https://github.com/gaudecker/draft-mode"))])
+(draft-mode .
+	    [(20140609 1456)
+	     nil "Rough drafting for Emacs." single
+	     ((:commit . "4779fb32daf53746459da2def7e08004492d4f18")
+	      (:authors
+	       ("Eeli Reilin" . "gaudecker@fea.st"))
+	      (:maintainer "Eeli Reilin" . "gaudecker@fea.st")
+	      (:keywords "draft" "drafting")
+	      (:url . "https://github.com/gaudecker/draft-mode"))])

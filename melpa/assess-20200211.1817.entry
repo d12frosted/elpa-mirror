@@ -1,2 +1,11 @@
-
-(assess . [(20200211 1817) ((emacs (24 4)) (m-buffer (0 15))) "Test support functions" tar ((:commit . "5bac045b273623772b6a2d820997d50f7ab4e466") (:authors ("Phillip Lord" . "phillip.lord@russet.org.uk")) (:maintainer "Phillip Lord" . "phillip.lord@russet.org.uk"))])
+(assess .
+	[(20200211 1817)
+	 ((emacs
+	   (24 4))
+	  (m-buffer
+	   (0 15)))
+	 "Test support functions" tar
+	 ((:commit . "5bac045b273623772b6a2d820997d50f7ab4e466")
+	  (:authors
+	   ("Phillip Lord" . "phillip.lord@russet.org.uk"))
+	  (:maintainer "Phillip Lord" . "phillip.lord@russet.org.uk"))])

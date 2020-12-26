@@ -1,2 +1,5 @@
-
-(po-mode . [(20200606 1404) nil "major mode for GNU gettext PO files" tar ((:commit . "25eb1bdca30ed25d2e5d51b9feeb28a3faff51ec") (:keywords "i18n" "gettext"))])
+(po-mode .
+	 [(20200606 1404)
+	  nil "major mode for GNU gettext PO files" tar
+	  ((:commit . "25eb1bdca30ed25d2e5d51b9feeb28a3faff51ec")
+	   (:keywords "i18n" "gettext"))])

@@ -1,2 +1,11 @@
-
-(molecule . [(20180527 743) ((emacs (25 1))) "Simple wrapper for molecule" single ((:commit . "2ef72b81d9aa24ea782b71a061a3abdad6cae162") (:keywords ":" "languages" "terminals") (:authors (": drymer <drymer [ AT ] autistici.org>")) (:maintainer ": drymer <drymer [ AT ] autistici.org>") (:url . "https://git.daemons.it/drymer/molecule.el"))])
+(molecule .
+	  [(20180527 743)
+	   ((emacs
+	     (25 1)))
+	   "Simple wrapper for molecule" single
+	   ((:commit . "2ef72b81d9aa24ea782b71a061a3abdad6cae162")
+	    (:authors
+	     (": drymer <drymer [ AT ] autistici.org>"))
+	    (:maintainer ": drymer <drymer [ AT ] autistici.org>")
+	    (:keywords ":" "languages" "terminals")
+	    (:url . "https://git.daemons.it/drymer/molecule.el"))])

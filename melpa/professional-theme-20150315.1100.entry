@@ -1,2 +1,9 @@
-
-(professional-theme . [(20150315 1100) nil "Emacs port of Vim's professional theme" single ((:commit . "0927d1474049a193f9f366bde5eb1887b9ba20ed") (:keywords "theme" "light" "professional") (:authors ("Juanjo Alvarez" . "juanjo@juanjoalvarez.net")) (:maintainer "Juanjo Alvarez" . "juanjo@juanjoalvarez.net") (:url . "https://github.com/juanjux/emacs-professional-theme"))])
+(professional-theme .
+		    [(20150315 1100)
+		     nil "Emacs port of Vim's professional theme" single
+		     ((:commit . "0927d1474049a193f9f366bde5eb1887b9ba20ed")
+		      (:authors
+		       ("Juanjo Alvarez" . "juanjo@juanjoalvarez.net"))
+		      (:maintainer "Juanjo Alvarez" . "juanjo@juanjoalvarez.net")
+		      (:keywords "theme" "light" "professional")
+		      (:url . "https://github.com/juanjux/emacs-professional-theme"))])

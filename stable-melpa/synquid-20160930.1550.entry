@@ -1,2 +1,13 @@
-
-(synquid . [(20160930 1550) ((flycheck (27)) (emacs (24 3))) "Major mode for editing Synquid files" single ((:commit . "28701ce1a15437202f53ab93a14bcba1de83fd2c") (:keywords "languages") (:authors ("Clément Pit-Claudel" . "clement.pitclaudel@live.com")) (:maintainer "Clément Pit-Claudel" . "clement.pitclaudel@live.com") (:url . "https://github.com/cpitclaudel/synquid-mode"))])
+(synquid .
+	 [(20160930 1550)
+	  ((flycheck
+	    (27))
+	   (emacs
+	    (24 3)))
+	  "Major mode for editing Synquid files" single
+	  ((:commit . "28701ce1a15437202f53ab93a14bcba1de83fd2c")
+	   (:authors
+	    ("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
+	   (:maintainer "Clément Pit-Claudel" . "clement.pitclaudel@live.com")
+	   (:keywords "languages")
+	   (:url . "https://github.com/cpitclaudel/synquid-mode"))])

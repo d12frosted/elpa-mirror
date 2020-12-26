@@ -1,2 +1,11 @@
-
-(ob-hy . [(20180702 540) ((emacs (24 4))) "org-babel functions for Hy-lang evaluation" tar ((:commit . "a42ecaf440adc03e279afe43ee5ef6093ddd542a") (:keywords "hy" "literate programming" "reproducible research") (:authors ("Brantou" . "brantou89@gmail.com")) (:maintainer "Brantou" . "brantou89@gmail.com") (:url . "https://github.com/brantou/ob-hy"))])
+(ob-hy .
+       [(20180702 540)
+	((emacs
+	  (24 4)))
+	"org-babel functions for Hy-lang evaluation" tar
+	((:commit . "a42ecaf440adc03e279afe43ee5ef6093ddd542a")
+	 (:authors
+	  ("Brantou" . "brantou89@gmail.com"))
+	 (:maintainer "Brantou" . "brantou89@gmail.com")
+	 (:keywords "hy" "literate programming" "reproducible research")
+	 (:url . "https://github.com/brantou/ob-hy"))])

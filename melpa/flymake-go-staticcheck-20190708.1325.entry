@@ -1,2 +1,11 @@
-
-(flymake-go-staticcheck . [(20190708 1325) ((emacs (25))) "Go staticcheck linter for flymake" single ((:commit . "130079fcd29c3e2a72f8325f3041042bcc6286f1") (:keywords "languages" "tools") (:authors ("Sergey Kostyaev" . "feo.me@ya.ru")) (:maintainer "Sergey Kostyaev" . "feo.me@ya.ru") (:url . "https://github.com/s-kostyaev/flymake-go-staticcheck"))])
+(flymake-go-staticcheck .
+			[(20190708 1325)
+			 ((emacs
+			   (25)))
+			 "Go staticcheck linter for flymake" single
+			 ((:commit . "130079fcd29c3e2a72f8325f3041042bcc6286f1")
+			  (:authors
+			   ("Sergey Kostyaev" . "feo.me@ya.ru"))
+			  (:maintainer "Sergey Kostyaev" . "feo.me@ya.ru")
+			  (:keywords "languages" "tools")
+			  (:url . "https://github.com/s-kostyaev/flymake-go-staticcheck"))])

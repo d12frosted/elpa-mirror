@@ -1,2 +1,11 @@
-
-(helm-flyspell . [(20170210 1901) ((helm (1 6 5))) "Helm extension for correcting words with flyspell" single ((:commit . "8d4d947c687cb650cb149aa2271ad5201ea92594") (:keywords "convenience") (:authors ("Andrzej Pronobis")) (:maintainer "Andrzej Pronobis") (:url . "https://github.com/pronobis/helm-flyspell"))])
+(helm-flyspell .
+	       [(20170210 1901)
+		((helm
+		  (1 6 5)))
+		"Helm extension for correcting words with flyspell" single
+		((:commit . "8d4d947c687cb650cb149aa2271ad5201ea92594")
+		 (:authors
+		  ("Andrzej Pronobis"))
+		 (:maintainer "Andrzej Pronobis")
+		 (:keywords "convenience")
+		 (:url . "https://github.com/pronobis/helm-flyspell"))])

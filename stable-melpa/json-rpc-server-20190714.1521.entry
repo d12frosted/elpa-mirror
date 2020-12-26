@@ -1,2 +1,11 @@
-
-(json-rpc-server . [(20190714 1521) ((emacs (26))) "Server-side JSON-RPC library." single ((:commit . "1623346b308dc8f593346dc947fdc4092d674834") (:keywords "tools" "comm" "json" "rpc") (:authors ("GitHub user \"Jcaw\"")) (:maintainer "GitHub user \"Jcaw\"") (:url . "https://github.com/jcaw/json-rpc-server.el"))])
+(json-rpc-server .
+		 [(20190714 1521)
+		  ((emacs
+		    (26)))
+		  "Server-side JSON-RPC library." single
+		  ((:commit . "1623346b308dc8f593346dc947fdc4092d674834")
+		   (:authors
+		    ("GitHub user \"Jcaw\""))
+		   (:maintainer "GitHub user \"Jcaw\"")
+		   (:keywords "tools" "comm" "json" "rpc")
+		   (:url . "https://github.com/jcaw/json-rpc-server.el"))])

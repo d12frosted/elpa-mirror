@@ -1,2 +1,11 @@
-
-(async . [(20200809 501) ((emacs (24 3))) "Asynchronous processing in Emacs" tar ((:commit . "14f48de586b0977e3470f053b810d77b07ea427a") (:keywords "async") (:url . "https://github.com/jwiegley/emacs-async"))])
+(async .
+       [(20200809 501)
+	((emacs
+	  (24 3)))
+	"Asynchronous processing in Emacs" tar
+	((:commit . "14f48de586b0977e3470f053b810d77b07ea427a")
+	 (:authors
+	  ("John Wiegley" . "jwiegley@gmail.com"))
+	 (:maintainer "John Wiegley" . "jwiegley@gmail.com")
+	 (:keywords "convenience" "async")
+	 (:url . "https://github.com/jwiegley/emacs-async"))])

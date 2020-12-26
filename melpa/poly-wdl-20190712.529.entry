@@ -1,2 +1,15 @@
-
-(poly-wdl . [(20190712 529) ((emacs (25)) (polymode (0 2)) (wdl-mode (20170709))) "Polymode for WDL" single ((:commit . "963faa828d15d49cee5a63f619c3c30e162c2d0f") (:keywords "languages") (:authors ("Jean Monlong" . "jean.monlong@gmail.com")) (:maintainer "Jean Monlong" . "jean.monlong@gmail.com") (:url . "https://github.com/jmonlong/poly-wdl"))])
+(poly-wdl .
+	  [(20190712 529)
+	   ((emacs
+	     (25))
+	    (polymode
+	     (0 2))
+	    (wdl-mode
+	     (20170709)))
+	   "Polymode for WDL" single
+	   ((:commit . "963faa828d15d49cee5a63f619c3c30e162c2d0f")
+	    (:authors
+	     ("Jean Monlong" . "jean.monlong@gmail.com"))
+	    (:maintainer "Jean Monlong" . "jean.monlong@gmail.com")
+	    (:keywords "languages")
+	    (:url . "https://github.com/jmonlong/poly-wdl"))])

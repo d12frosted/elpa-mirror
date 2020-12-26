@@ -1,2 +1,16 @@
-
-(arch-packer . [(20170730 1321) ((emacs (25 1)) (s (1 11 0)) (async (1 9 2)) (dash (2 12 0))) "Arch Linux package management frontend" single ((:commit . "940e96f7d357c6570b675a0f942181c787f1bfd7") (:authors ("Fritz Stelzer" . "brotzeitmacher@gmail.com")) (:maintainer "Fritz Stelzer" . "brotzeitmacher@gmail.com") (:url . "https://github.com/brotzeitmacher/arch-packer"))])
+(arch-packer .
+	     [(20170730 1321)
+	      ((emacs
+		(25 1))
+	       (s
+		(1 11 0))
+	       (async
+		(1 9 2))
+	       (dash
+		(2 12 0)))
+	      "Arch Linux package management frontend" single
+	      ((:commit . "940e96f7d357c6570b675a0f942181c787f1bfd7")
+	       (:authors
+		("Fritz Stelzer" . "brotzeitmacher@gmail.com"))
+	       (:maintainer "Fritz Stelzer" . "brotzeitmacher@gmail.com")
+	       (:url . "https://github.com/brotzeitmacher/arch-packer"))])

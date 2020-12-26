@@ -1,1 +1,4 @@
-Snippet collection for the Lean theorem prover.
+;;; Commentary:
+
+;; Snippet collection for the Lean theorem prover.
+

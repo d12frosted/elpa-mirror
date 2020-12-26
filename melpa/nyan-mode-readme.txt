@@ -1,13 +1,16 @@
-NEW! You can now click on the rainbow (or the empty space)
-to scroll your buffer!
+;;; Commentary:
 
-NEW! You can now customize the minimum window width
-below which the nyan-mode will be disabled, so that more important
-information can be shown in the modeline.
+;; NEW! You can now click on the rainbow (or the empty space)
+;; to scroll your buffer!
 
-To activate, just load and put `(nyan-mode 1)' in your init file.
+;; NEW! You can now customize the minimum window width
+;; below which the nyan-mode will be disabled, so that more important
+;; information can be shown in the modeline.
 
-Contributions and feature requests welcome!
+;; To activate, just load and put `(nyan-mode 1)' in your init file.
 
-Inspired by (and in few places copied from) sml-modeline.el written by Lennart Borgman.
-See: http://bazaar.launchpad.net/~nxhtml/nxhtml/main/annotate/head%3A/util/sml-modeline.el
+;; Contributions and feature requests welcome!
+
+;; Inspired by (and in few places copied from) sml-modeline.el written by Lennart Borgman.
+;; See: http://bazaar.launchpad.net/~nxhtml/nxhtml/main/annotate/head%3A/util/sml-modeline.el
+

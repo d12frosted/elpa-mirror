@@ -1,2 +1,15 @@
-
-(flycheck-drstring . [(20200210 1903) ((emacs (25 1)) (flycheck (0 25)) (swift-mode (8 0))) "Doc linting for Swift using DrString" single ((:commit . "d8d5a560e792a6657ef5ac69934c74f1ed51372d") (:keywords "tools" "flycheck") (:authors ("Daniel Martín" . "mardani29@yahoo.es")) (:maintainer "Daniel Martín" . "mardani29@yahoo.es") (:url . "https://github.com/danielmartin/flycheck-drstring"))])
+(flycheck-drstring .
+		   [(20200210 1903)
+		    ((emacs
+		      (25 1))
+		     (flycheck
+		      (0 25))
+		     (swift-mode
+		      (8 0)))
+		    "Doc linting for Swift using DrString" single
+		    ((:commit . "d8d5a560e792a6657ef5ac69934c74f1ed51372d")
+		     (:authors
+		      ("Daniel Martín" . "mardani29@yahoo.es"))
+		     (:maintainer "Daniel Martín" . "mardani29@yahoo.es")
+		     (:keywords "tools" "flycheck")
+		     (:url . "https://github.com/danielmartin/flycheck-drstring"))])

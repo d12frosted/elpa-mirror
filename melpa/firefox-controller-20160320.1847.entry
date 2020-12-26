@@ -1,2 +1,15 @@
-
-(firefox-controller . [(20160320 1847) ((moz (0)) (popwin (1 0 0)) (cl-lib (0 5))) "An improved Firefox controller" single ((:commit . "a8af8cbf70afaf6b89a26d6ac69af8e92afc181f") (:keywords "extensions") (:authors ("Junpeng Qiu" . "qjpchmail@gmail.com")) (:maintainer "Junpeng Qiu" . "qjpchmail@gmail.com") (:url . "https://github.com/cute-jumper/emacs-firefox-controller"))])
+(firefox-controller .
+		    [(20160320 1847)
+		     ((moz
+		       (0))
+		      (popwin
+		       (1 0 0))
+		      (cl-lib
+		       (0 5)))
+		     "An improved Firefox controller" single
+		     ((:commit . "a8af8cbf70afaf6b89a26d6ac69af8e92afc181f")
+		      (:authors
+		       ("Junpeng Qiu" . "qjpchmail@gmail.com"))
+		      (:maintainer "Junpeng Qiu" . "qjpchmail@gmail.com")
+		      (:keywords "extensions")
+		      (:url . "https://github.com/cute-jumper/emacs-firefox-controller"))])

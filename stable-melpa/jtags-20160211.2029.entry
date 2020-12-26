@@ -1,2 +1,10 @@
-
-(jtags . [(20160211 2029) nil "enhanced tags functionality for Java development" tar ((:commit . "b50daa48510f71e74ce0ec2eb85030896a79cf96") (:keywords "languages" "tools") (:authors ("Alexander Baltatzis" . "alexander@baltatzis.com") ("Johan Dykstrom" . "jody4711-sf@yahoo.se")) (:maintainer "Johan Dykstrom" . "jody4711-sf@yahoo.se") (:url . "http://jtags.sourceforge.net"))])
+(jtags .
+       [(20160211 2029)
+	nil "enhanced tags functionality for Java development" tar
+	((:commit . "b50daa48510f71e74ce0ec2eb85030896a79cf96")
+	 (:authors
+	  ("Alexander Baltatzis" . "alexander@baltatzis.com")
+	  ("Johan Dykstrom" . "jody4711-sf@yahoo.se"))
+	 (:maintainer "Johan Dykstrom" . "jody4711-sf@yahoo.se")
+	 (:keywords "languages" "tools")
+	 (:url . "http://jtags.sourceforge.net"))])

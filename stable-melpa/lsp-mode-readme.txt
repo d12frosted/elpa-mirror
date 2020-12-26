@@ -1,1 +1,4 @@
-Emacs client/library for the Language Server Protocol
+;;; Commentary:
+
+;; Emacs client/library for the Language Server Protocol
+

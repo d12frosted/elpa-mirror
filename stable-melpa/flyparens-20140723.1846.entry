@@ -1,2 +1,8 @@
-
-(flyparens . [(20140723 1846) nil "Check for unbalanced parens on the fly" tar ((:commit . "af9b8cfd647d0e5f97684d613dc2eea7cfc19398") (:keywords "faces" "convenience" "lisp" "matching" "parentheses" "parens") (:authors ("Jisang Yoo")) (:maintainer "Jisang Yoo"))])
+(flyparens .
+	   [(20140723 1846)
+	    nil "Check for unbalanced parens on the fly" tar
+	    ((:commit . "af9b8cfd647d0e5f97684d613dc2eea7cfc19398")
+	     (:authors
+	      ("Jisang Yoo"))
+	     (:maintainer "Jisang Yoo")
+	     (:keywords "faces" "convenience" "lisp" "matching" "parentheses" "parens"))])

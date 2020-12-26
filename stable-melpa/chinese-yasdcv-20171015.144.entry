@@ -1,2 +1,13 @@
-
-(chinese-yasdcv . [(20171015 144) ((cl-lib (0 5)) (pyim (1 6 0))) "Yet another StarDict frontend" tar ((:commit . "5ab830daf1273d5a5cddcb94b56a9737f12d996f") (:keywords "convenience" "chinese" "dictionary") (:authors ("Feng Shu" . "tumashu@gmail.com")) (:maintainer "Feng Shu" . "tumashu@gmail.com") (:url . "https://github.com/tumashu/chinese-yasdcv"))])
+(chinese-yasdcv .
+		[(20171015 144)
+		 ((cl-lib
+		   (0 5))
+		  (pyim
+		   (1 6 0)))
+		 "Yet another StarDict frontend" tar
+		 ((:commit . "5ab830daf1273d5a5cddcb94b56a9737f12d996f")
+		  (:authors
+		   ("Feng Shu" . "tumashu@gmail.com"))
+		  (:maintainer "Feng Shu" . "tumashu@gmail.com")
+		  (:keywords "convenience" "chinese" "dictionary")
+		  (:url . "https://github.com/tumashu/chinese-yasdcv"))])

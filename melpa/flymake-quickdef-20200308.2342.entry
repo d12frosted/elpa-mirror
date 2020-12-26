@@ -1,2 +1,11 @@
-
-(flymake-quickdef . [(20200308 2342) ((emacs (26 1))) "Quickly define a new Flymake backend" single ((:commit . "150c5839768a3d32f988f9dc08052978a68f2ad7") (:keywords "languages" "tools" "convenience" "lisp") (:authors ("Karl Otness")) (:maintainer "Karl Otness") (:url . "https://github.com/karlotness/flymake-quickdef"))])
+(flymake-quickdef .
+		  [(20200308 2342)
+		   ((emacs
+		     (26 1)))
+		   "Quickly define a new Flymake backend" single
+		   ((:commit . "150c5839768a3d32f988f9dc08052978a68f2ad7")
+		    (:authors
+		     ("Karl Otness"))
+		    (:maintainer "Karl Otness")
+		    (:keywords "languages" "tools" "convenience" "lisp")
+		    (:url . "https://github.com/karlotness/flymake-quickdef"))])

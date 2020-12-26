@@ -1,2 +1,9 @@
-
-(hal-mode . [(20160704 1746) nil "Major mode for editing HAL files" single ((:commit . "cd2f66f219ee520198d4586fb6b169cef7ad3f21") (:keywords "language") (:authors ("Alexander Rössler")) (:maintainer "Alexander Rössler") (:url . "https://github.com/strahlex/hal-mode/"))])
+(hal-mode .
+	  [(20160704 1746)
+	   nil "Major mode for editing HAL files" single
+	   ((:commit . "cd2f66f219ee520198d4586fb6b169cef7ad3f21")
+	    (:authors
+	     ("Alexander Rössler"))
+	    (:maintainer "Alexander Rössler")
+	    (:keywords "language")
+	    (:url . "https://github.com/strahlex/hal-mode/"))])

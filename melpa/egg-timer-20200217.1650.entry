@@ -1,2 +1,10 @@
-
-(egg-timer . [(20200217 1650) ((emacs (25 1))) "Commonly used intervals for setting timers while working" single ((:commit . "e3542aeb80905956b94373a222a9cbac04e6497e") (:authors ("William Carroll" . "wpcarro@gmail.com")) (:maintainer "William Carroll" . "wpcarro@gmail.com") (:url . "https://github.com/wpcarro/egg-timer.el"))])
+(egg-timer .
+	   [(20200217 1650)
+	    ((emacs
+	      (25 1)))
+	    "Commonly used intervals for setting timers while working" single
+	    ((:commit . "e3542aeb80905956b94373a222a9cbac04e6497e")
+	     (:authors
+	      ("William Carroll" . "wpcarro@gmail.com"))
+	     (:maintainer "William Carroll" . "wpcarro@gmail.com")
+	     (:url . "https://github.com/wpcarro/egg-timer.el"))])

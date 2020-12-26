@@ -1,2 +1,9 @@
-
-(csgo-conf-mode . [(20161209 1619) nil "CS:GO Configuration files syntax highlighting" single ((:commit . "57e7224f87a3ccc76b5564cc95fa0ff43bb6807c") (:keywords "languages") (:authors ("Guillermo Robles" . "guillerobles1995@gmail.com")) (:maintainer "Guillermo Robles" . "guillerobles1995@gmail.com") (:url . "https://github.com/wynro/emacs-csgo-conf-mode"))])
+(csgo-conf-mode .
+		[(20161209 1619)
+		 nil "CS:GO Configuration files syntax highlighting" single
+		 ((:commit . "57e7224f87a3ccc76b5564cc95fa0ff43bb6807c")
+		  (:authors
+		   ("Guillermo Robles" . "guillerobles1995@gmail.com"))
+		  (:maintainer "Guillermo Robles" . "guillerobles1995@gmail.com")
+		  (:keywords "languages")
+		  (:url . "https://github.com/wynro/emacs-csgo-conf-mode"))])

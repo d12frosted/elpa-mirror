@@ -1,2 +1,9 @@
-
-(turkish . [(20170910 1511) nil "Convert to Turkish characters on-the-fly" single ((:commit . "9831a316c176bb21a1b91226323ea4133163e00c") (:keywords "turkish" "languages" "automatic" "conversion") (:authors ("Deniz Yüret")) (:maintainer "Emre Sevinç" . "emre.sevinc@gmail.com") (:url . "http://www.denizyuret.com/2006/11/emacs-turkish-mode.html"))])
+(turkish .
+	 [(20170910 1511)
+	  nil "Convert to Turkish characters on-the-fly" single
+	  ((:commit . "9831a316c176bb21a1b91226323ea4133163e00c")
+	   (:authors
+	    ("Deniz Yüret"))
+	   (:maintainer "Emre Sevinç" . "emre.sevinc@gmail.com")
+	   (:keywords "turkish" "languages" "automatic" "conversion")
+	   (:url . "http://www.denizyuret.com/2006/11/emacs-turkish-mode.html"))])

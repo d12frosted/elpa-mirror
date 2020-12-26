@@ -1,2 +1,12 @@
-
-(wordgen . [(20170803 1820) ((emacs (24)) (cl-lib (0 5))) "Random word generator" single ((:commit . "aacad928ae99a953e034a831dfd0ebdf7d52ac1d") (:authors ("Fanael Linithien" . "fanael4@gmail.com")) (:maintainer "Fanael Linithien" . "fanael4@gmail.com") (:url . "https://github.com/Fanael/wordgen.el"))])
+(wordgen .
+	 [(20170803 1820)
+	  ((emacs
+	    (24))
+	   (cl-lib
+	    (0 5)))
+	  "Random word generator" single
+	  ((:commit . "aacad928ae99a953e034a831dfd0ebdf7d52ac1d")
+	   (:authors
+	    ("Fanael Linithien" . "fanael4@gmail.com"))
+	   (:maintainer "Fanael Linithien" . "fanael4@gmail.com")
+	   (:url . "https://github.com/Fanael/wordgen.el"))])

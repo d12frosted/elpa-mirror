@@ -1,2 +1,13 @@
-
-(ob-elm . [(20200528 1857) ((emacs (26 1)) (org (9 3))) "Org-babel functions for elm evaluation" single ((:commit . "d3a9fbc2f56416894c9aed65ea9a20cc1d98f15d") (:keywords "languages" "tools") (:authors ("Bonface M. K.")) (:maintainer "Bonface M. K.") (:url . "https://www.bonfacemunyoki.com"))])
+(ob-elm .
+	[(20200528 1857)
+	 ((emacs
+	   (26 1))
+	  (org
+	   (9 3)))
+	 "Org-babel functions for elm evaluation" single
+	 ((:commit . "d3a9fbc2f56416894c9aed65ea9a20cc1d98f15d")
+	  (:authors
+	   ("Bonface M. K."))
+	  (:maintainer "Bonface M. K.")
+	  (:keywords "languages" "tools")
+	  (:url . "https://www.bonfacemunyoki.com"))])

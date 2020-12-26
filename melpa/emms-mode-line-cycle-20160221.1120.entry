@@ -1,2 +1,13 @@
-
-(emms-mode-line-cycle . [(20160221 1120) ((emacs (24)) (emms (4 0))) "Display the emms mode line as a ticker" single ((:commit . "2c2f395e484a1d345050ddd61ff5fab71a92a6bc") (:keywords "emms" "mode-line") (:authors ("momomo5717")) (:maintainer "momomo5717") (:url . "https://github.com/momomo5717/emms-mode-line-cycle"))])
+(emms-mode-line-cycle .
+		      [(20160221 1120)
+		       ((emacs
+			 (24))
+			(emms
+			 (4 0)))
+		       "Display the emms mode line as a ticker" single
+		       ((:commit . "2c2f395e484a1d345050ddd61ff5fab71a92a6bc")
+			(:authors
+			 ("momomo5717"))
+			(:maintainer "momomo5717")
+			(:keywords "emms" "mode-line")
+			(:url . "https://github.com/momomo5717/emms-mode-line-cycle"))])

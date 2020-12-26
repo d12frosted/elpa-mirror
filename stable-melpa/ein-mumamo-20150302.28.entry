@@ -1,2 +1,10 @@
-
-(ein-mumamo . [(20150302 28) ((ein (0 4))) "Multiple major mode support for Emacs IPython Notebook" single ((:commit . "028fefec499598add1a87b92ed991891f38f0c7b") (:authors ("Takafumi Arakaki <aka.tkf at gmail.com>") (": John Miller <millejoh at mac.com>")) (:maintainer "Takafumi Arakaki <aka.tkf at gmail.com>"))])
+(ein-mumamo .
+	    [(20150302 28)
+	     ((ein
+	       (0 4)))
+	     "Multiple major mode support for Emacs IPython Notebook" single
+	     ((:commit . "028fefec499598add1a87b92ed991891f38f0c7b")
+	      (:authors
+	       ("Takafumi Arakaki <aka.tkf at gmail.com>")
+	       (": John Miller <millejoh at mac.com>"))
+	      (:maintainer "Takafumi Arakaki <aka.tkf at gmail.com>"))])

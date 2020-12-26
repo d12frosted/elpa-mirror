@@ -1,2 +1,8 @@
-
-(kanban . [(20170418 810) nil "Parse org-todo headlines to use org-tables as Kanban tables" single ((:commit . "dd11d722b20ae720f29b8aa93a3b1cad87650b33") (:keywords "outlines" "convenience") (:authors ("Arne Babenhauserheide" . "arne_bab@web.de")) (:maintainer "Arne Babenhauserheide" . "arne_bab@web.de"))])
+(kanban .
+	[(20170418 810)
+	 nil "Parse org-todo headlines to use org-tables as Kanban tables" single
+	 ((:commit . "dd11d722b20ae720f29b8aa93a3b1cad87650b33")
+	  (:authors
+	   ("Arne Babenhauserheide" . "arne_bab@web.de"))
+	  (:maintainer "Arne Babenhauserheide" . "arne_bab@web.de")
+	  (:keywords "outlines" "convenience"))])

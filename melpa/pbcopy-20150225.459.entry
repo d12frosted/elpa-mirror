@@ -1,2 +1,9 @@
-
-(pbcopy . [(20150225 459) nil "Emacs Interface to pbcopy" single ((:commit . "338f7245746b5de1bb96c5cc2b32bfd9b5d83272") (:keywords "mac" "osx" "pbcopy") (:authors ("Daniel Nelson")) (:maintainer "Daniel Nelson") (:url . "https://github.com/jkp/pbcopy.el"))])
+(pbcopy .
+	[(20150225 459)
+	 nil "Emacs Interface to pbcopy" single
+	 ((:commit . "338f7245746b5de1bb96c5cc2b32bfd9b5d83272")
+	  (:authors
+	   ("Daniel Nelson"))
+	  (:maintainer "Daniel Nelson")
+	  (:keywords "mac" "osx" "pbcopy")
+	  (:url . "https://github.com/jkp/pbcopy.el"))])

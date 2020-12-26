@@ -1,2 +1,17 @@
-
-(ivy-mpdel . [(20190428 920) ((emacs (25 1)) (ivy (0 10 0)) (libmpdel (1 0 0)) (mpdel (1 0 0))) "Ivy interface to navigate MPD" single ((:commit . "a42dcc943914c71975c115195d38c739f25e475c") (:keywords "multimedia") (:authors ("Damien Cassou" . "damien@cassou.me")) (:maintainer "Damien Cassou" . "damien@cassou.me") (:url . "https://gitlab.petton.fr/mpdel/ivy-mpdel"))])
+(ivy-mpdel .
+	   [(20190428 920)
+	    ((emacs
+	      (25 1))
+	     (ivy
+	      (0 10 0))
+	     (libmpdel
+	      (1 0 0))
+	     (mpdel
+	      (1 0 0)))
+	    "Ivy interface to navigate MPD" single
+	    ((:commit . "a42dcc943914c71975c115195d38c739f25e475c")
+	     (:authors
+	      ("Damien Cassou" . "damien@cassou.me"))
+	     (:maintainer "Damien Cassou" . "damien@cassou.me")
+	     (:keywords "multimedia")
+	     (:url . "https://gitlab.petton.fr/mpdel/ivy-mpdel"))])

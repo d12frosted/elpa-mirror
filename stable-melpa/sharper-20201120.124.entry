@@ -1,2 +1,13 @@
-
-(sharper . [(20201120 124) ((emacs (27 1)) (transient (0 2 0))) "A dotnet CLI wrapper, using Transient" single ((:commit . "d610b839dbb907cc0a49b7edfe7fe39aa3f9dd6d") (:keywords "maint" "tool") (:authors ("Sebastian Monia" . "smonia@outlook.com")) (:maintainer "Sebastian Monia" . "smonia@outlook.com") (:url . "https://github.com/sebasmonia/sharper"))])
+(sharper .
+	 [(20201120 124)
+	  ((emacs
+	    (27 1))
+	   (transient
+	    (0 2 0)))
+	  "A dotnet CLI wrapper, using Transient" single
+	  ((:commit . "d610b839dbb907cc0a49b7edfe7fe39aa3f9dd6d")
+	   (:authors
+	    ("Sebastian Monia" . "smonia@outlook.com"))
+	   (:maintainer "Sebastian Monia" . "smonia@outlook.com")
+	   (:keywords "maint" "tool")
+	   (:url . "https://github.com/sebasmonia/sharper"))])

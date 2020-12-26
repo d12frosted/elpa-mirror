@@ -1,2 +1,21 @@
-
-(helpful . [(20201012 614) ((emacs (25)) (dash (2 12 0)) (dash-functional (1 2 0)) (s (1 11 0)) (f (0 20 0)) (elisp-refs (1 2))) "a better *help* buffer" single ((:commit . "584ecc887bb92133119f93a6716cdf7af0b51dca") (:keywords "help" "lisp") (:authors ("Wilfred Hughes" . "me@wilfred.me.uk")) (:maintainer "Wilfred Hughes" . "me@wilfred.me.uk") (:url . "https://github.com/Wilfred/helpful"))])
+(helpful .
+	 [(20201012 614)
+	  ((emacs
+	    (25))
+	   (dash
+	    (2 12 0))
+	   (dash-functional
+	    (1 2 0))
+	   (s
+	    (1 11 0))
+	   (f
+	    (0 20 0))
+	   (elisp-refs
+	    (1 2)))
+	  "a better *help* buffer" single
+	  ((:commit . "584ecc887bb92133119f93a6716cdf7af0b51dca")
+	   (:authors
+	    ("Wilfred Hughes" . "me@wilfred.me.uk"))
+	   (:maintainer "Wilfred Hughes" . "me@wilfred.me.uk")
+	   (:keywords "help" "lisp")
+	   (:url . "https://github.com/Wilfred/helpful"))])

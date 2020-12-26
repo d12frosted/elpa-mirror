@@ -1,2 +1,8 @@
-
-(jabber . [(20180927 2325) ((fsm (0 2)) (srv (0 2))) "A Jabber client for Emacs." tar ((:commit . "fff33826f42e040dad7ef64ea312d85215d3b0a1"))])
+(jabber .
+	[(20180927 2325)
+	 ((fsm
+	   (0 2))
+	  (srv
+	   (0 2)))
+	 "A Jabber client for Emacs." tar
+	 ((:commit . "fff33826f42e040dad7ef64ea312d85215d3b0a1"))])

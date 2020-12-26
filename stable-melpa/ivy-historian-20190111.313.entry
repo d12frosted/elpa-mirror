@@ -1,2 +1,17 @@
-
-(ivy-historian . [(20190111 313) ((emacs (24 4)) (historian (20170111)) (ivy (0 8 0)) (flx (0 6 1))) "Persistently store selected minibuffer candidates" single ((:commit . "ac1bea7d99dd6965c72fabeb72d5fdc38c5380a4") (:keywords "convenience" "ivy") (:authors ("PythonNut" . "pythonnut@pythonnut.com")) (:maintainer "PythonNut" . "pythonnut@pythonnut.com") (:url . "https://github.com/PythonNut/historian.el"))])
+(ivy-historian .
+	       [(20190111 313)
+		((emacs
+		  (24 4))
+		 (historian
+		  (20170111))
+		 (ivy
+		  (0 8 0))
+		 (flx
+		  (0 6 1)))
+		"Persistently store selected minibuffer candidates" single
+		((:commit . "ac1bea7d99dd6965c72fabeb72d5fdc38c5380a4")
+		 (:authors
+		  ("PythonNut" . "pythonnut@pythonnut.com"))
+		 (:maintainer "PythonNut" . "pythonnut@pythonnut.com")
+		 (:keywords "convenience" "ivy")
+		 (:url . "https://github.com/PythonNut/historian.el"))])

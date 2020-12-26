@@ -1,2 +1,8 @@
-
-(strace-mode . [(20171116 2039) nil "strace output syntax highlighting" single ((:commit . "2901baa968d5180ab985ac40ca22cc20914d01f5") (:keywords "languages") (:authors ("Preston Moore" . "prestonkmoore@gmail.com")) (:maintainer "Preston Moore" . "prestonkmoore@gmail.com"))])
+(strace-mode .
+	     [(20171116 2039)
+	      nil "strace output syntax highlighting" single
+	      ((:commit . "2901baa968d5180ab985ac40ca22cc20914d01f5")
+	       (:authors
+		("Preston Moore" . "prestonkmoore@gmail.com"))
+	       (:maintainer "Preston Moore" . "prestonkmoore@gmail.com")
+	       (:keywords "languages"))])

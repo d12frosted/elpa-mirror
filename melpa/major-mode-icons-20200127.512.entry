@@ -1,2 +1,14 @@
-
-(major-mode-icons . [(20200127 512) ((emacs (24 3)) (powerline (2 4)) (xpm (1 0 4)) (all-the-icons (2 3 0))) "Display icon for major-mode on mode-line" tar ((:commit . "b36eae2e976bad3c431b082c64b1a724a2ba1fe6") (:keywords "frames" "multimedia") (:url . "http://github.com/stardiviner/major-mode-icons"))])
+(major-mode-icons .
+		  [(20200127 512)
+		   ((emacs
+		     (24 3))
+		    (powerline
+		     (2 4))
+		    (xpm
+		     (1 0 4))
+		    (all-the-icons
+		     (2 3 0)))
+		   "Display icon for major-mode on mode-line" tar
+		   ((:commit . "b36eae2e976bad3c431b082c64b1a724a2ba1fe6")
+		    (:keywords "frames" "multimedia")
+		    (:url . "http://github.com/stardiviner/major-mode-icons"))])

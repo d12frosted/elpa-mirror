@@ -1,2 +1,11 @@
-
-(speeddating . [(20180319 723) ((emacs (25))) "Increase date and time at point" single ((:commit . "df69db0560f19636a66a74f3d88c793bbb18b21e") (:keywords "date" "time") (:authors ("Xu Chunyang" . "mail@xuchunyang.me")) (:maintainer "Xu Chunyang" . "mail@xuchunyang.me") (:url . "https://github.com/xuchunyang/emacs-speeddating"))])
+(speeddating .
+	     [(20180319 723)
+	      ((emacs
+		(25)))
+	      "Increase date and time at point" single
+	      ((:commit . "df69db0560f19636a66a74f3d88c793bbb18b21e")
+	       (:authors
+		("Xu Chunyang" . "mail@xuchunyang.me"))
+	       (:maintainer "Xu Chunyang" . "mail@xuchunyang.me")
+	       (:keywords "date" "time")
+	       (:url . "https://github.com/xuchunyang/emacs-speeddating"))])

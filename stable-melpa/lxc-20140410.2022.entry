@@ -1,2 +1,9 @@
-
-(lxc . [(20140410 2022) nil "lxc integration with Emacs" single ((:commit . "88bed56c954d1edd9ff5ce0ced2c02dcf9f71835") (:keywords "processes") (:authors ("Nic Ferrier" . "nferrier@ferrier.me.uk")) (:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk") (:url . "https://github.com/nicferrier/emacs-lxc"))])
+(lxc .
+     [(20140410 2022)
+      nil "lxc integration with Emacs" single
+      ((:commit . "88bed56c954d1edd9ff5ce0ced2c02dcf9f71835")
+       (:authors
+	("Nic Ferrier" . "nferrier@ferrier.me.uk"))
+       (:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk")
+       (:keywords "processes")
+       (:url . "https://github.com/nicferrier/emacs-lxc"))])

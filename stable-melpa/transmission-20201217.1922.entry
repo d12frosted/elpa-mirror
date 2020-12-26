@@ -1,2 +1,12 @@
-
-(transmission . [(20201217 1922) ((emacs (24 4)) (let-alist (1 0 5))) "Interface to a Transmission session" single ((:commit . "8e7e020cda8513c1dfeba911d0942640c7650348") (:keywords "comm" "tools") (:authors ("Mark Oteiza" . "mvoteiza@udel.edu")) (:maintainer "Mark Oteiza" . "mvoteiza@udel.edu"))])
+(transmission .
+	      [(20201217 1922)
+	       ((emacs
+		 (24 4))
+		(let-alist
+		    (1 0 5)))
+	       "Interface to a Transmission session" single
+	       ((:commit . "8e7e020cda8513c1dfeba911d0942640c7650348")
+		(:authors
+		 ("Mark Oteiza" . "mvoteiza@udel.edu"))
+		(:maintainer "Mark Oteiza" . "mvoteiza@udel.edu")
+		(:keywords "comm" "tools"))])

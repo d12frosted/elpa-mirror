@@ -1,2 +1,16 @@
-
-(finalize . [(20170418 1945) ((emacs (24 1)) (cl-generic (0 3)) (cl-lib (0 3)) (eieio (1 4))) "finalizers for Emacs Lisp" tar ((:commit . "846731531e7d1d80451787992e07bfe7dedbe9ff"))])
+(finalize .
+	  [(20170418 1945)
+	   ((emacs
+	     (24 1))
+	    (cl-generic
+	     (0 3))
+	    (cl-lib
+	     (0 3))
+	    (eieio
+	     (1 4)))
+	   "finalizers for Emacs Lisp" tar
+	   ((:commit . "846731531e7d1d80451787992e07bfe7dedbe9ff")
+	    (:authors
+	     ("Christopher Wellons" . "wellons@nullprogram.com"))
+	    (:maintainer "Christopher Wellons" . "wellons@nullprogram.com")
+	    (:url . "https://github.com/skeeto/elisp-finalize"))])

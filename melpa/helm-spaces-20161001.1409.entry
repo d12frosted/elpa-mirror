@@ -1,2 +1,13 @@
-
-(helm-spaces . [(20161001 1409) ((helm-core (2 2)) (spaces (0 1 0))) "helm sources for spaces" single ((:commit . "877e2b5178926308d6a7c2a37477bb12c33a96d4") (:keywords "helm" "frames" "convenience") (:authors ("Yasuyuki Oka" . "yasuyk@gmail.com")) (:maintainer "Yasuyuki Oka" . "yasuyk@gmail.com") (:url . "https://github.com/yasuyk/helm-spaces"))])
+(helm-spaces .
+	     [(20161001 1409)
+	      ((helm-core
+		(2 2))
+	       (spaces
+		(0 1 0)))
+	      "helm sources for spaces" single
+	      ((:commit . "877e2b5178926308d6a7c2a37477bb12c33a96d4")
+	       (:authors
+		("Yasuyuki Oka" . "yasuyk@gmail.com"))
+	       (:maintainer "Yasuyuki Oka" . "yasuyk@gmail.com")
+	       (:keywords "helm" "frames" "convenience")
+	       (:url . "https://github.com/yasuyk/helm-spaces"))])

@@ -1,2 +1,12 @@
-
-(snoopy . [(20171008 2004) ((emacs (24)) (cl-lib (0 6))) "minor mode for number row unshifted character insertion" single ((:commit . "ec4123bdebfe0bb7bf4feaac2dc02b59caffe386") (:keywords "lisp") (:authors ("António Nuno Monteiro" . "anmonteiro@gmail.com")) (:maintainer "António Nuno Monteiro" . "anmonteiro@gmail.com"))])
+(snoopy .
+	[(20171008 2004)
+	 ((emacs
+	   (24))
+	  (cl-lib
+	   (0 6)))
+	 "minor mode for number row unshifted character insertion" single
+	 ((:commit . "ec4123bdebfe0bb7bf4feaac2dc02b59caffe386")
+	  (:authors
+	   ("António Nuno Monteiro" . "anmonteiro@gmail.com"))
+	  (:maintainer "António Nuno Monteiro" . "anmonteiro@gmail.com")
+	  (:keywords "lisp"))])

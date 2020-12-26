@@ -1,2 +1,13 @@
-
-(biblio-bibsonomy . [(20190105 1200) ((emacs (24 4)) (biblio-core (0 2))) "Lookup bibliographic entries from Bibsonomy" single ((:commit . "778cc944db3c6dababe2e7fec5877fba42e8c00d") (:keywords "bib" "tex" "bibsonomy") (:authors ("Andreas Jansson and contributors")) (:maintainer "Andreas Jansson and contributors") (:url . "http://github.com/andreasjansson/biblio-bibsonomy/"))])
+(biblio-bibsonomy .
+		  [(20190105 1200)
+		   ((emacs
+		     (24 4))
+		    (biblio-core
+		     (0 2)))
+		   "Lookup bibliographic entries from Bibsonomy" single
+		   ((:commit . "778cc944db3c6dababe2e7fec5877fba42e8c00d")
+		    (:authors
+		     ("Andreas Jansson and contributors"))
+		    (:maintainer "Andreas Jansson and contributors")
+		    (:keywords "bib" "tex" "bibsonomy")
+		    (:url . "http://github.com/andreasjansson/biblio-bibsonomy/"))])

@@ -1,2 +1,11 @@
-
-(geoip . [(20200310 911) ((emacs (25 1))) "Find out where an IP address is located via GeoIP2" single ((:commit . "25eb1278788b942c38405c233d3614a1de92ddea") (:keywords "tools") (:authors ("Xu Chunyang")) (:maintainer "Xu Chunyang") (:url . "https://github.com/xuchunyang/geoip.el"))])
+(geoip .
+       [(20200310 911)
+	((emacs
+	  (25 1)))
+	"Find out where an IP address is located via GeoIP2" single
+	((:commit . "25eb1278788b942c38405c233d3614a1de92ddea")
+	 (:authors
+	  ("Xu Chunyang"))
+	 (:maintainer "Xu Chunyang")
+	 (:keywords "tools")
+	 (:url . "https://github.com/xuchunyang/geoip.el"))])

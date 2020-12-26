@@ -1,2 +1,11 @@
-
-(ob-browser . [(20170720 1918) ((org (8))) "Render HTML in org-mode blocks." tar ((:commit . "a347d9df1c87b7eb660be8723982c7ad2563631a") (:keywords "org" "babel" "browser" "phantomjs") (:authors ("Kris Jenkins" . "krisajenkins@gmail.com")) (:maintainer "Kris Jenkins" . "krisajenkins@gmail.com") (:url . "https://github.com/krisajenkins/ob-browser"))])
+(ob-browser .
+	    [(20170720 1918)
+	     ((org
+	       (8)))
+	     "Render HTML in org-mode blocks." tar
+	     ((:commit . "a347d9df1c87b7eb660be8723982c7ad2563631a")
+	      (:authors
+	       ("Kris Jenkins" . "krisajenkins@gmail.com"))
+	      (:maintainer "Kris Jenkins" . "krisajenkins@gmail.com")
+	      (:keywords "org" "babel" "browser" "phantomjs")
+	      (:url . "https://github.com/krisajenkins/ob-browser"))])

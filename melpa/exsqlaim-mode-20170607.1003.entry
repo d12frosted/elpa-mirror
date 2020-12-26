@@ -1,2 +1,10 @@
-
-(exsqlaim-mode . [(20170607 1003) ((s (1 10 0))) "Use variables inside sql queries" single ((:commit . "a2e0a62ec8b87193d8eaa695774bfd689324b06c") (:authors ("Ahmad Nazir Raja" . "ahmadnazir@gmail.com")) (:maintainer "Ahmad Nazir Raja" . "ahmadnazir@gmail.com") (:url . "https://github.com/ahmadnazir/exsqlaim-mode"))])
+(exsqlaim-mode .
+	       [(20170607 1003)
+		((s
+		  (1 10 0)))
+		"Use variables inside sql queries" single
+		((:commit . "a2e0a62ec8b87193d8eaa695774bfd689324b06c")
+		 (:authors
+		  ("Ahmad Nazir Raja" . "ahmadnazir@gmail.com"))
+		 (:maintainer "Ahmad Nazir Raja" . "ahmadnazir@gmail.com")
+		 (:url . "https://github.com/ahmadnazir/exsqlaim-mode"))])

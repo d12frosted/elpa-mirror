@@ -1,2 +1,11 @@
-
-(flymake-yaml . [(20130423 1548) ((flymake-easy (0 1))) "A flymake handler for YAML" single ((:commit . "24cb5b744a1796e554e6dbfc6eeb237d06a00b10") (:keywords "yaml") (:authors ("Yasuyuki Oka" . "yasuyk@gmail.com")) (:maintainer "Yasuyuki Oka" . "yasuyk@gmail.com") (:url . "https://github.com/yasuyk/flymake-yaml"))])
+(flymake-yaml .
+	      [(20130423 1548)
+	       ((flymake-easy
+		 (0 1)))
+	       "A flymake handler for YAML" single
+	       ((:commit . "24cb5b744a1796e554e6dbfc6eeb237d06a00b10")
+		(:authors
+		 ("Yasuyuki Oka" . "yasuyk@gmail.com"))
+		(:maintainer "Yasuyuki Oka" . "yasuyk@gmail.com")
+		(:keywords "yaml")
+		(:url . "https://github.com/yasuyk/flymake-yaml"))])

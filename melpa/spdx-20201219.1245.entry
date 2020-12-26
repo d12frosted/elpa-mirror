@@ -1,2 +1,11 @@
-
-(spdx . [(20201219 1245) ((emacs (24 1))) "Insert SPDX license and copyright headers" single ((:commit . "883b3e32573fad834ee4697924c8e57ac3007344") (:keywords "license" "tools") (:authors ("Zhiwei Chen" . "condy0919@gmail.com")) (:maintainer "Zhiwei Chen" . "condy0919@gmail.com") (:url . "https://github.com/condy0919/spdx.el"))])
+(spdx .
+      [(20201219 1245)
+       ((emacs
+	 (24 1)))
+       "Insert SPDX license and copyright headers" single
+       ((:commit . "883b3e32573fad834ee4697924c8e57ac3007344")
+	(:authors
+	 ("Zhiwei Chen" . "condy0919@gmail.com"))
+	(:maintainer "Zhiwei Chen" . "condy0919@gmail.com")
+	(:keywords "license" "tools")
+	(:url . "https://github.com/condy0919/spdx.el"))])

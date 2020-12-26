@@ -1,2 +1,12 @@
-
-(asilea . [(20150105 1525) ((emacs (24)) (cl-lib (0 5))) "Find best compiler options using simulated annealing" single ((:commit . "2aab1cc63b64ef08d12e84fd7ba5c94065f6039f") (:authors ("Fanael Linithien" . "fanael4@gmail.com")) (:maintainer "Fanael Linithien" . "fanael4@gmail.com") (:url . "https://github.com/Fanael/asilea"))])
+(asilea .
+	[(20150105 1525)
+	 ((emacs
+	   (24))
+	  (cl-lib
+	   (0 5)))
+	 "Find best compiler options using simulated annealing" single
+	 ((:commit . "2aab1cc63b64ef08d12e84fd7ba5c94065f6039f")
+	  (:authors
+	   ("Fanael Linithien" . "fanael4@gmail.com"))
+	  (:maintainer "Fanael Linithien" . "fanael4@gmail.com")
+	  (:url . "https://github.com/Fanael/asilea"))])

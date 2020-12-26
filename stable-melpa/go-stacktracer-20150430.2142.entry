@@ -1,2 +1,9 @@
-
-(go-stacktracer . [(20150430 2142) nil "parse Go stack traces" single ((:commit . "a2ac6d801b389f80ca4e2fcc1ab44513a9e55976") (:keywords "tools") (:authors ("Samer Masterson" . "samer@samertm.com")) (:maintainer "Samer Masterson" . "samer@samertm.com") (:url . "https://github.com/samertm/go-stacktracer.el"))])
+(go-stacktracer .
+		[(20150430 2142)
+		 nil "parse Go stack traces" single
+		 ((:commit . "a2ac6d801b389f80ca4e2fcc1ab44513a9e55976")
+		  (:authors
+		   ("Samer Masterson" . "samer@samertm.com"))
+		  (:maintainer "Samer Masterson" . "samer@samertm.com")
+		  (:keywords "tools")
+		  (:url . "https://github.com/samertm/go-stacktracer.el"))])

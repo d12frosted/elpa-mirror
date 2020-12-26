@@ -1,2 +1,8 @@
-
-(anx-api . [(20140208 1514) nil "Interact with the AppNexus API from Emacs." single ((:commit . "b2411ebc966ac32c3ffc61bc22bf183834df0fa0") (:keywords "convenience" "json" "rest" "api" "appnexus") (:authors ("Rich Loveland")) (:maintainer "Rich Loveland"))])
+(anx-api .
+	 [(20140208 1514)
+	  nil "Interact with the AppNexus API from Emacs." single
+	  ((:commit . "b2411ebc966ac32c3ffc61bc22bf183834df0fa0")
+	   (:authors
+	    ("Rich Loveland"))
+	   (:maintainer "Rich Loveland")
+	   (:keywords "convenience" "json" "rest" "api" "appnexus"))])

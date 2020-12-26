@@ -1,11 +1,14 @@
-Provides a music player for Emacs.
+;;; Commentary:
 
-Installation:
+;; Provides a music player for Emacs.
 
-dionysos is available on the two major community maintained repositories
-Melpa stable (https://stable.melpa.org), and Melpa (https://melpa.org)
+;;; Installation:
 
-(add-to-list 'package-archives
-             '("melpa" . "https://melpa.org/packages/") t)
+;; dionysos is available on the two major community maintained repositories
+;; Melpa stable (https://stable.melpa.org), and Melpa (https://melpa.org)
+;;
+;; (add-to-list 'package-archives
+;;              '("melpa" . "https://melpa.org/packages/") t)
+;;
+;; M-x package-install dionysos
 
-M-x package-install dionysos

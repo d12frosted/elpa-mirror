@@ -1,1 +1,4 @@
-This package provides a major mode for editing Smallworld Magik files.
+;;; Commentary:
+
+;; This package provides a major mode for editing Smallworld Magik files.
+

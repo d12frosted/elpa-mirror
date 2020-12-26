@@ -1,2 +1,11 @@
-
-(pdb-capf . [(20200419 1237) ((emacs (25 1))) "Completion-at-point function for python debugger" single ((:commit . "2f4099aa1330f87df4e9cd526de057ee9b71de6c") (:keywords "languages" "abbrev" "convenience") (:authors ("Andrii Kolomoiets" . "andreyk.mad@gmail.com")) (:maintainer "Andrii Kolomoiets" . "andreyk.mad@gmail.com") (:url . "https://github.com/muffinmad/emacs-pdb-capf"))])
+(pdb-capf .
+	  [(20200419 1237)
+	   ((emacs
+	     (25 1)))
+	   "Completion-at-point function for python debugger" single
+	   ((:commit . "2f4099aa1330f87df4e9cd526de057ee9b71de6c")
+	    (:authors
+	     ("Andrii Kolomoiets" . "andreyk.mad@gmail.com"))
+	    (:maintainer "Andrii Kolomoiets" . "andreyk.mad@gmail.com")
+	    (:keywords "languages" "abbrev" "convenience")
+	    (:url . "https://github.com/muffinmad/emacs-pdb-capf"))])

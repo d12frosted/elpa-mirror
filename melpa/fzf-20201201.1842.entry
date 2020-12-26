@@ -1,2 +1,11 @@
-
-(fzf . [(20201201 1842) ((emacs (24 4))) "A front-end for fzf." single ((:commit . "5d776acca230d781ba7647185b730c686622f876") (:keywords "fzf" "fuzzy" "search") (:authors ("Bailey Ling")) (:maintainer "Bailey Ling") (:url . "https://github.com/bling/fzf.el"))])
+(fzf .
+     [(20201201 1842)
+      ((emacs
+	(24 4)))
+      "A front-end for fzf." single
+      ((:commit . "5d776acca230d781ba7647185b730c686622f876")
+       (:authors
+	("Bailey Ling"))
+       (:maintainer "Bailey Ling")
+       (:keywords "fzf" "fuzzy" "search")
+       (:url . "https://github.com/bling/fzf.el"))])

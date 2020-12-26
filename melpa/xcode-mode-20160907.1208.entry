@@ -1,2 +1,16 @@
-
-(xcode-mode . [(20160907 1208) ((emacs (24 4)) (s (1 10 0)) (dash (2 11 0)) (multiple-cursors (1 0 0))) "A minor mode for emacs to perform Xcode like actions." single ((:commit . "2ae4f512d6c601ea39d5ab785c2b5288eac24b59") (:keywords "conveniences") (:authors ("Nickolas Lanasa" . "nick@nytekproductions.com")) (:maintainer "Nickolas Lanasa" . "nick@nytekproductions.com"))])
+(xcode-mode .
+	    [(20160907 1208)
+	     ((emacs
+	       (24 4))
+	      (s
+	       (1 10 0))
+	      (dash
+	       (2 11 0))
+	      (multiple-cursors
+	       (1 0 0)))
+	     "A minor mode for emacs to perform Xcode like actions." single
+	     ((:commit . "2ae4f512d6c601ea39d5ab785c2b5288eac24b59")
+	      (:authors
+	       ("Nickolas Lanasa" . "nick@nytekproductions.com"))
+	      (:maintainer "Nickolas Lanasa" . "nick@nytekproductions.com")
+	      (:keywords "conveniences"))])

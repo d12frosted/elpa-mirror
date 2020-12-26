@@ -1,2 +1,14 @@
-
-(dropbox . [(20190918 1629) ((request (0 3 0)) (json (1 2)) (oauth (1 0 3))) "Emacs backend for dropbox" single ((:commit . "5e0c954a6b819fd3a22b463cce3825984f9ef691") (:keywords "dropbox") (:authors ("Pavel Panchekha" . "me@pavpanchekha.com")) (:maintainer "Pavel Panchekha" . "me@pavpanchekha.com"))])
+(dropbox .
+	 [(20190918 1629)
+	  ((request
+	    (0 3 0))
+	   (json
+	    (1 2))
+	   (oauth
+	    (1 0 3)))
+	  "Emacs backend for dropbox" single
+	  ((:commit . "5e0c954a6b819fd3a22b463cce3825984f9ef691")
+	   (:authors
+	    ("Pavel Panchekha" . "me@pavpanchekha.com"))
+	   (:maintainer "Pavel Panchekha" . "me@pavpanchekha.com")
+	   (:keywords "dropbox"))])

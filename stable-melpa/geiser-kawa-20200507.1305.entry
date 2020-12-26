@@ -1,2 +1,13 @@
-
-(geiser-kawa . [(20200507 1305) ((emacs (26 1)) (geiser (0 11 2))) "Kawa scheme support for Geiser" tar ((:commit . "b96c008e9c3b8dc210d8b536ee7b76b8690c8af6") (:keywords "languages" "kawa" "scheme" "geiser") (:authors ("spellcard199" . "spellcard199@protonmail.com")) (:maintainer "spellcard199" . "spellcard199@protonmail.com") (:url . "https://gitlab.com/spellcard199/geiser-kawa"))])
+(geiser-kawa .
+	     [(20200507 1305)
+	      ((emacs
+		(26 1))
+	       (geiser
+		(0 11 2)))
+	      "Kawa scheme support for Geiser" tar
+	      ((:commit . "b96c008e9c3b8dc210d8b536ee7b76b8690c8af6")
+	       (:authors
+		("spellcard199" . "spellcard199@protonmail.com"))
+	       (:maintainer "spellcard199" . "spellcard199@protonmail.com")
+	       (:keywords "languages" "kawa" "scheme" "geiser")
+	       (:url . "https://gitlab.com/spellcard199/geiser-kawa"))])

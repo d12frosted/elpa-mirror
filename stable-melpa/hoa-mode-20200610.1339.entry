@@ -1,2 +1,9 @@
-
-(hoa-mode . [(20200610 1339) nil "Major mode for the HOA format" single ((:commit . "18f5c981e256f867f29a93376ccdc04717b159cd") (:keywords "major-mode" "automata" "convenience") (:authors ("Alexandre Duret-Lutz" . "adl@lrde.epita.fr")) (:maintainer "Alexandre Duret-Lutz" . "adl@lrde.epita.fr") (:url . "https://gitlab.lrde.epita.fr/spot/emacs-modes"))])
+(hoa-mode .
+	  [(20200610 1339)
+	   nil "Major mode for the HOA format" single
+	   ((:commit . "18f5c981e256f867f29a93376ccdc04717b159cd")
+	    (:authors
+	     ("Alexandre Duret-Lutz" . "adl@lrde.epita.fr"))
+	    (:maintainer "Alexandre Duret-Lutz" . "adl@lrde.epita.fr")
+	    (:keywords "major-mode" "automata" "convenience")
+	    (:url . "https://gitlab.lrde.epita.fr/spot/emacs-modes"))])

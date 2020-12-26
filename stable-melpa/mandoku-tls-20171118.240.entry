@@ -1,2 +1,23 @@
-
-(mandoku-tls . [(20171118 240) ((emacs (24 4)) (mandoku (20170301)) (github-clone (0 2)) (hydra (0 13 6)) (helm (1 7 0)) (org (9 0)) (helm-charinfo (20170601))) "A tool to access the TLS database" single ((:commit . "ffeebf5bd451ac1806ddfe1744fbbd036a56f902") (:keywords "convenience") (:authors ("Christian Wittern" . "cwittern@gmail.com")) (:maintainer "Christian Wittern" . "cwittern@gmail.com") (:url . "https://github.com/mandoku/mandoku-tls"))])
+(mandoku-tls .
+	     [(20171118 240)
+	      ((emacs
+		(24 4))
+	       (mandoku
+		(20170301))
+	       (github-clone
+		(0 2))
+	       (hydra
+		(0 13 6))
+	       (helm
+		(1 7 0))
+	       (org
+		(9 0))
+	       (helm-charinfo
+		(20170601)))
+	      "A tool to access the TLS database" single
+	      ((:commit . "ffeebf5bd451ac1806ddfe1744fbbd036a56f902")
+	       (:authors
+		("Christian Wittern" . "cwittern@gmail.com"))
+	       (:maintainer "Christian Wittern" . "cwittern@gmail.com")
+	       (:keywords "convenience")
+	       (:url . "https://github.com/mandoku/mandoku-tls"))])

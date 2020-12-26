@@ -1,2 +1,8 @@
-
-(kwin . [(20150308 1812) nil "communicatewith the KWin window manager" single ((:commit . "d4f8f3593598b71ee596e0a87b2c1d6a912a9566") (:authors ("Simon Hafner")) (:maintainer "Simon Hafner") (:url . "http://github.com/reactormonk/kwin-minor-mode"))])
+(kwin .
+      [(20150308 1812)
+       nil "communicatewith the KWin window manager" single
+       ((:commit . "d4f8f3593598b71ee596e0a87b2c1d6a912a9566")
+	(:authors
+	 ("Simon Hafner"))
+	(:maintainer "Simon Hafner")
+	(:url . "http://github.com/reactormonk/kwin-minor-mode"))])

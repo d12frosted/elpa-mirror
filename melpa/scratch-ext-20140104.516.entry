@@ -1,2 +1,8 @@
-
-(scratch-ext . [(20140104 516) nil "Extensions for *scratch*" single ((:commit . "388c53cddd0466b451264894667ed64a6947ad67") (:authors ("Kouhei Yanagita" . "yanagi@shakenbu.org")) (:maintainer "Kouhei Yanagita" . "yanagi@shakenbu.org") (:url . "https://github.com/kyanagi/scratch-ext-el"))])
+(scratch-ext .
+	     [(20140104 516)
+	      nil "Extensions for *scratch*" single
+	      ((:commit . "388c53cddd0466b451264894667ed64a6947ad67")
+	       (:authors
+		("Kouhei Yanagita" . "yanagi@shakenbu.org"))
+	       (:maintainer "Kouhei Yanagita" . "yanagi@shakenbu.org")
+	       (:url . "https://github.com/kyanagi/scratch-ext-el"))])

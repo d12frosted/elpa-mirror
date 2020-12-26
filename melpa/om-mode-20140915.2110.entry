@@ -1,2 +1,8 @@
-
-(om-mode . [(20140915 2110) nil "Insert Om component template with life cycle." single ((:commit . "cdc0c2912321f8438b0f3449ba8aca50ec150bba") (:keywords "clojurescript") (:authors ("Daniel Szmulewicz" . "daniel.szmulewicz@gmail.com")) (:maintainer "Daniel Szmulewicz" . "daniel.szmulewicz@gmail.com"))])
+(om-mode .
+	 [(20140915 2110)
+	  nil "Insert Om component template with life cycle." single
+	  ((:commit . "cdc0c2912321f8438b0f3449ba8aca50ec150bba")
+	   (:authors
+	    ("Daniel Szmulewicz" . "daniel.szmulewicz@gmail.com"))
+	   (:maintainer "Daniel Szmulewicz" . "daniel.szmulewicz@gmail.com")
+	   (:keywords "clojurescript"))])

@@ -1,2 +1,13 @@
-
-(highlight-parentheses . [(20200920 832) ((emacs (24 3)) (cl-lib (0 6 1))) "Highlight surrounding parentheses" single ((:commit . "e18f2c2b240d7586ff7ffdc2881079e2dd8944ca") (:keywords "faces" "matching") (:authors ("Nikolaj Schumacher <bugs * nschum de>")) (:maintainer "Tassilo Horn" . "tsdh@gnu.org") (:url . "https://github.com/tsdh/highlight-parentheses.el"))])
+(highlight-parentheses .
+		       [(20200920 832)
+			((emacs
+			  (24 3))
+			 (cl-lib
+			  (0 6 1)))
+			"Highlight surrounding parentheses" single
+			((:commit . "e18f2c2b240d7586ff7ffdc2881079e2dd8944ca")
+			 (:authors
+			  ("Nikolaj Schumacher <bugs * nschum de>"))
+			 (:maintainer "Tassilo Horn" . "tsdh@gnu.org")
+			 (:keywords "faces" "matching")
+			 (:url . "https://github.com/tsdh/highlight-parentheses.el"))])

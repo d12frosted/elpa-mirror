@@ -1,2 +1,13 @@
-
-(creds . [(20140510 1706) ((s (1 9 0)) (dash (2 5 0))) "A parser credentials file library (not limited to credentials entries)" tar ((:commit . "b059397a7d59481f05fbb1bb9c8d3c2c69226482"))])
+(creds .
+       [(20140510 1706)
+	((s
+	  (1 9 0))
+	 (dash
+	  (2 5 0)))
+	"A parser credentials file library (not limited to credentials entries)" tar
+	((:commit . "b059397a7d59481f05fbb1bb9c8d3c2c69226482")
+	 (:authors
+	  ("Antoine R. Dumont <eniotna.t AT gmail.com>"))
+	 (:maintainer "Antoine R. Dumont <eniotna.t AT gmail.com>")
+	 (:keywords "credentials")
+	 (:url . "https://github.com/ardumont/emacs-creds"))])

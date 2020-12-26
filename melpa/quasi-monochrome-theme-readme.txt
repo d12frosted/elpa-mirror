@@ -1,1 +1,4 @@
-A high contrast quasi-monochrome color theme.
+;;; Commentary:
+
+;; A high contrast quasi-monochrome color theme.
+

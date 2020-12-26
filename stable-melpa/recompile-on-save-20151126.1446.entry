@@ -1,2 +1,13 @@
-
-(recompile-on-save . [(20151126 1446) ((dash (1 1 0)) (cl-lib (0 5))) "Trigger recompilation on file save." single ((:commit . "92e11446869d878803d4f3dec5d2101380c12bb2") (:keywords "convenience" "files" "processes" "tools") (:authors ("Marian Schubert" . "marian.schubert@gmail.com")) (:maintainer "Marian Schubert" . "marian.schubert@gmail.com") (:url . "https://github.com/maio/recompile-on-save.el"))])
+(recompile-on-save .
+		   [(20151126 1446)
+		    ((dash
+		      (1 1 0))
+		     (cl-lib
+		      (0 5)))
+		    "Trigger recompilation on file save." single
+		    ((:commit . "92e11446869d878803d4f3dec5d2101380c12bb2")
+		     (:authors
+		      ("Marian Schubert" . "marian.schubert@gmail.com"))
+		     (:maintainer "Marian Schubert" . "marian.schubert@gmail.com")
+		     (:keywords "convenience" "files" "processes" "tools")
+		     (:url . "https://github.com/maio/recompile-on-save.el"))])

@@ -1,15 +1,18 @@
-Require this script and some of "sublimity-scroll" "sublimity-map".
+;;; Commentary:
 
-  (require 'sublimity)
-  (require 'sublimity-scroll)
+;; Require this script and some of "sublimity-scroll" "sublimity-map".
+;;
+;;   (require 'sublimity)
+;;   (require 'sublimity-scroll)
 
-  (require 'sublimity-map)
+;;   (require 'sublimity-map)
+;;
+;; then call command "M-x sublimity-mode".
 
-then call command "M-x sublimity-mode".
+;; If you want to enable sublimity everywhere, call function
+;; sublimity-global-mode.
+;;
+;;   (sublimity-global-mode)
 
-If you want to enable sublimity everywhere, call function
-sublimity-global-mode.
+;; For more informations, see "Readme".
 
-  (sublimity-global-mode)
-
-For more informations, see "Readme".

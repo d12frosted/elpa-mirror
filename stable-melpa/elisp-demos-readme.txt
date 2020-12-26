@@ -1,1 +1,4 @@
-Elisp API Demos
+;;; Commentary:
+
+;; Elisp API Demos
+

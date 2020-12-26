@@ -1,2 +1,10 @@
-
-(stylus-mode . [(20150313 1512) ((sws-mode (0))) "Major mode for editing .jade files" single ((:commit . "4dbde92542fc7ad61df38776980905a4721d642e") (:authors ("Brian M. Carlson and other contributors")) (:maintainer "Brian M. Carlson and other contributors") (:url . "https://github.com/brianc/jade-mode"))])
+(stylus-mode .
+	     [(20150313 1512)
+	      ((sws-mode
+		(0)))
+	      "Major mode for editing .jade files" single
+	      ((:commit . "4dbde92542fc7ad61df38776980905a4721d642e")
+	       (:authors
+		("Brian M. Carlson and other contributors"))
+	       (:maintainer "Brian M. Carlson and other contributors")
+	       (:url . "https://github.com/brianc/jade-mode"))])

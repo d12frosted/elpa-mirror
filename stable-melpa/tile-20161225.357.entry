@@ -1,2 +1,17 @@
-
-(tile . [(20161225 357) ((emacs (25 1)) (s (1 9 0)) (dash (2 12 0)) (stream (2 2 3))) "Tile windows with layouts" single ((:commit . "22660f21f6e95de5aba55cd5d293d4841e9a4661") (:keywords "tile" "tiling" "window" "manager" "dynamic" "frames") (:authors ("Ivan Malison" . "IvanMalison@gmail.com")) (:maintainer "Ivan Malison" . "IvanMalison@gmail.com") (:url . "https://github.com/IvanMalison/tile"))])
+(tile .
+      [(20161225 357)
+       ((emacs
+	 (25 1))
+	(s
+	 (1 9 0))
+	(dash
+	 (2 12 0))
+	(stream
+	 (2 2 3)))
+       "Tile windows with layouts" single
+       ((:commit . "22660f21f6e95de5aba55cd5d293d4841e9a4661")
+	(:authors
+	 ("Ivan Malison" . "IvanMalison@gmail.com"))
+	(:maintainer "Ivan Malison" . "IvanMalison@gmail.com")
+	(:keywords "tile" "tiling" "window" "manager" "dynamic" "frames")
+	(:url . "https://github.com/IvanMalison/tile"))])

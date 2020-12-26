@@ -1,2 +1,8 @@
-
-(avandu . [(20170101 1903) nil "Gateway to Tiny Tiny RSS" tar ((:commit . "f44588d8e747fa880411cb4542cc39962252b90a") (:keywords "net") (:authors ("Tom Willemse" . "tom@ryuslash.org")) (:maintainer "Tom Willemse" . "tom@ryuslash.org"))])
+(avandu .
+	[(20170101 1903)
+	 nil "Gateway to Tiny Tiny RSS" tar
+	 ((:commit . "f44588d8e747fa880411cb4542cc39962252b90a")
+	  (:authors
+	   ("Tom Willemse" . "tom@ryuslash.org"))
+	  (:maintainer "Tom Willemse" . "tom@ryuslash.org")
+	  (:keywords "net"))])

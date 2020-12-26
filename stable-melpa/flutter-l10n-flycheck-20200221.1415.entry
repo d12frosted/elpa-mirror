@@ -1,2 +1,15 @@
-
-(flutter-l10n-flycheck . [(20200221 1415) ((emacs (24 4)) (flycheck (30)) (flutter (0 1 0))) "Flycheck checker for intl_translation" single ((:commit . "696228a619f6078b16f9f77071112f6ad2a25c4e") (:keywords "languages") (:authors ("Aaron Madlon-Kay")) (:maintainer "Aaron Madlon-Kay") (:url . "https://github.com/amake/flutter.el"))])
+(flutter-l10n-flycheck .
+		       [(20200221 1415)
+			((emacs
+			  (24 4))
+			 (flycheck
+			  (30))
+			 (flutter
+			  (0 1 0)))
+			"Flycheck checker for intl_translation" single
+			((:commit . "696228a619f6078b16f9f77071112f6ad2a25c4e")
+			 (:authors
+			  ("Aaron Madlon-Kay"))
+			 (:maintainer "Aaron Madlon-Kay")
+			 (:keywords "languages")
+			 (:url . "https://github.com/amake/flutter.el"))])

@@ -1,2 +1,11 @@
-
-(treepy . [(20191108 2217) ((emacs (25 1))) "Generic tree traversal tools" single ((:commit . "3ac940e97f3d03e48ca9d7fcd74916a9b01c72f3") (:keywords "lisp" "maint" "tools") (:authors ("Daniel Barreto" . "daniel.barreto.n@gmail.com")) (:maintainer "Daniel Barreto" . "daniel.barreto.n@gmail.com") (:url . "https://github.com/volrath/treepy.el"))])
+(treepy .
+	[(20191108 2217)
+	 ((emacs
+	   (25 1)))
+	 "Generic tree traversal tools" single
+	 ((:commit . "3ac940e97f3d03e48ca9d7fcd74916a9b01c72f3")
+	  (:authors
+	   ("Daniel Barreto" . "daniel.barreto.n@gmail.com"))
+	  (:maintainer "Daniel Barreto" . "daniel.barreto.n@gmail.com")
+	  (:keywords "lisp" "maint" "tools")
+	  (:url . "https://github.com/volrath/treepy.el"))])

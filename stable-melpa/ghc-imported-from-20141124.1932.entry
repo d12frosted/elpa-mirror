@@ -1,2 +1,10 @@
-
-(ghc-imported-from . [(20141124 1932) ((emacs (24 1))) "Haskell documentation lookup with ghc-imported-from" single ((:commit . "fcff08628a19f5d26151564659218cc677779b79") (:keywords "languages") (:authors ("David Raymond Christiansen" . "david@davidchristiansen.dk")) (:maintainer "David Raymond Christiansen" . "david@davidchristiansen.dk"))])
+(ghc-imported-from .
+		   [(20141124 1932)
+		    ((emacs
+		      (24 1)))
+		    "Haskell documentation lookup with ghc-imported-from" single
+		    ((:commit . "fcff08628a19f5d26151564659218cc677779b79")
+		     (:authors
+		      ("David Raymond Christiansen" . "david@davidchristiansen.dk"))
+		     (:maintainer "David Raymond Christiansen" . "david@davidchristiansen.dk")
+		     (:keywords "languages"))])

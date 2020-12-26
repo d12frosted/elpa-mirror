@@ -1,1 +1,4 @@
-provides completion source for autocomplete, documentation lookup
+;;; Commentary:
+
+;; provides completion source for autocomplete, documentation lookup
+

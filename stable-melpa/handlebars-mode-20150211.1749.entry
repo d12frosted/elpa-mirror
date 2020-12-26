@@ -1,2 +1,10 @@
-
-(handlebars-mode . [(20150211 1749) nil "A major mode for editing Handlebars files." single ((:commit . "81f6b73fea8f397807781a1b51568397af21a6ef") (:authors ("Tony Gentilcore") ("Chris Wanstrath") ("Daniel Hackney") ("Daniel Evans")) (:maintainer "Tony Gentilcore"))])
+(handlebars-mode .
+		 [(20150211 1749)
+		  nil "A major mode for editing Handlebars files." single
+		  ((:commit . "81f6b73fea8f397807781a1b51568397af21a6ef")
+		   (:authors
+		    ("Tony Gentilcore")
+		    ("Chris Wanstrath")
+		    ("Daniel Hackney")
+		    ("Daniel Evans"))
+		   (:maintainer "Tony Gentilcore"))])

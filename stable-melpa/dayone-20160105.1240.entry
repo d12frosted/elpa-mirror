@@ -1,2 +1,15 @@
-
-(dayone . [(20160105 1240) ((uuid (0 0 3)) (mustache (0 22)) (ht (1 5))) "Utility script for Day One" tar ((:commit . "ab628274f0806451f23bce16f62a6a11cbf91a2b") (:keywords "day one" "tools" "convenience") (:authors ("mori-dev" . "mori.dev.asdf@gmail.com")) (:maintainer "mori-dev" . "mori.dev.asdf@gmail.com") (:url . "https://github.com/mori-dev/emacs-dayone"))])
+(dayone .
+	[(20160105 1240)
+	 ((uuid
+	   (0 0 3))
+	  (mustache
+	   (0 22))
+	  (ht
+	   (1 5)))
+	 "Utility script for Day One" tar
+	 ((:commit . "ab628274f0806451f23bce16f62a6a11cbf91a2b")
+	  (:authors
+	   ("mori-dev" . "mori.dev.asdf@gmail.com"))
+	  (:maintainer "mori-dev" . "mori.dev.asdf@gmail.com")
+	  (:keywords "day one" "tools" "convenience")
+	  (:url . "https://github.com/mori-dev/emacs-dayone"))])

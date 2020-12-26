@@ -1,2 +1,10 @@
-
-(native-complete . [(20200814 2301) ((emacs (25 1))) "Shell completion using native complete mechanisms" single ((:commit . "be7ced29c5a86e29c364f19d248634b8b54d0e52") (:authors ("Troy Hinckley" . "troy.hinckley@gmail.com")) (:maintainer "Troy Hinckley" . "troy.hinckley@gmail.com") (:url . "https://github.com/CeleritasCelery/emacs-native-shell-complete"))])
+(native-complete .
+		 [(20200814 2301)
+		  ((emacs
+		    (25 1)))
+		  "Shell completion using native complete mechanisms" single
+		  ((:commit . "be7ced29c5a86e29c364f19d248634b8b54d0e52")
+		   (:authors
+		    ("Troy Hinckley" . "troy.hinckley@gmail.com"))
+		   (:maintainer "Troy Hinckley" . "troy.hinckley@gmail.com")
+		   (:url . "https://github.com/CeleritasCelery/emacs-native-shell-complete"))])

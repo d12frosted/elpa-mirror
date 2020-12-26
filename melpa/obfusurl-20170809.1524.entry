@@ -1,2 +1,11 @@
-
-(obfusurl . [(20170809 1524) ((cl-lib (0 5))) "Obfuscate URLs so they aren't spoilers" single ((:commit . "7a5a41905000ce2ec1fd72509a5567e5fd9f47e5") (:keywords "convenience" "web" "text") (:authors ("Dave Pearson" . "davep@davep.org")) (:maintainer "Dave Pearson" . "davep@davep.org") (:url . "https://github.com/davep/obfusurl.el"))])
+(obfusurl .
+	  [(20170809 1524)
+	   ((cl-lib
+	     (0 5)))
+	   "Obfuscate URLs so they aren't spoilers" single
+	   ((:commit . "7a5a41905000ce2ec1fd72509a5567e5fd9f47e5")
+	    (:authors
+	     ("Dave Pearson" . "davep@davep.org"))
+	    (:maintainer "Dave Pearson" . "davep@davep.org")
+	    (:keywords "convenience" "web" "text")
+	    (:url . "https://github.com/davep/obfusurl.el"))])

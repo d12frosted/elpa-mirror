@@ -1,2 +1,17 @@
-
-(makefile-executor . [(20201119 1500) ((emacs (24 3)) (dash (2 11 0)) (f (0 11 0)) (s (1 10 0))) "Commands for conveniently running makefile targets" single ((:commit . "d0a34c355fb80a8616ae7ed5eebbda8507aa14ac") (:keywords "processes") (:authors ("Lowe Thiderman" . "lowe.thiderman@gmail.com")) (:maintainer "Lowe Thiderman" . "lowe.thiderman@gmail.com") (:url . "https://github.com/thiderman/makefile-executor.el"))])
+(makefile-executor .
+		   [(20201119 1500)
+		    ((emacs
+		      (24 3))
+		     (dash
+		      (2 11 0))
+		     (f
+		      (0 11 0))
+		     (s
+		      (1 10 0)))
+		    "Commands for conveniently running makefile targets" single
+		    ((:commit . "d0a34c355fb80a8616ae7ed5eebbda8507aa14ac")
+		     (:authors
+		      ("Lowe Thiderman" . "lowe.thiderman@gmail.com"))
+		     (:maintainer "Lowe Thiderman" . "lowe.thiderman@gmail.com")
+		     (:keywords "processes")
+		     (:url . "https://github.com/thiderman/makefile-executor.el"))])

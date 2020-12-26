@@ -1,2 +1,11 @@
-
-(heaven-and-hell . [(20190713 1830) ((emacs (24 4))) "easy toggle light/dark themes" single ((:commit . "e1febfd60d060c110a1e43c5f093cd8537251308") (:keywords "faces") (:authors ("Valentin Ignatev" . "valentignatev@gmail.com")) (:maintainer "Valentin Ignatev" . "valentignatev@gmail.com") (:url . "https://github.com/valignatev/heaven-and-hell"))])
+(heaven-and-hell .
+		 [(20190713 1830)
+		  ((emacs
+		    (24 4)))
+		  "easy toggle light/dark themes" single
+		  ((:commit . "e1febfd60d060c110a1e43c5f093cd8537251308")
+		   (:authors
+		    ("Valentin Ignatev" . "valentignatev@gmail.com"))
+		   (:maintainer "Valentin Ignatev" . "valentignatev@gmail.com")
+		   (:keywords "faces")
+		   (:url . "https://github.com/valignatev/heaven-and-hell"))])

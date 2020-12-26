@@ -1,2 +1,13 @@
-
-(slstats . [(20170823 849) ((cl-lib (0 5)) (emacs (24))) "Acquire and display stats about Second Life" single ((:commit . "e9696066abf3f2b7b818a57c062530dfd9377033") (:keywords "games") (:authors ("Dave Pearson" . "davep@davep.org")) (:maintainer "Dave Pearson" . "davep@davep.org") (:url . "https://github.com/davep/slstats.el"))])
+(slstats .
+	 [(20170823 849)
+	  ((cl-lib
+	    (0 5))
+	   (emacs
+	    (24)))
+	  "Acquire and display stats about Second Life" single
+	  ((:commit . "e9696066abf3f2b7b818a57c062530dfd9377033")
+	   (:authors
+	    ("Dave Pearson" . "davep@davep.org"))
+	   (:maintainer "Dave Pearson" . "davep@davep.org")
+	   (:keywords "games")
+	   (:url . "https://github.com/davep/slstats.el"))])

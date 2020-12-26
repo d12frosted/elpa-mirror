@@ -1,2 +1,9 @@
-
-(sv-kalender-namnsdagar . [(20190421 1521) nil "Swedish celebrated name of the day" single ((:commit . "fff970f49c77abfc69e37817f25a939818420971") (:keywords "calendar" "swedish" "localization") (:authors ("Mats Lidell" . "mats.lidell@lidells.se")) (:maintainer "Mats Lidell" . "mats.lidell@lidells.se") (:url . "https://github.com/matsl/sv-kalender-namnsdagar"))])
+(sv-kalender-namnsdagar .
+			[(20190421 1521)
+			 nil "Swedish celebrated name of the day" single
+			 ((:commit . "fff970f49c77abfc69e37817f25a939818420971")
+			  (:authors
+			   ("Mats Lidell" . "mats.lidell@lidells.se"))
+			  (:maintainer "Mats Lidell" . "mats.lidell@lidells.se")
+			  (:keywords "calendar" "swedish" "localization")
+			  (:url . "https://github.com/matsl/sv-kalender-namnsdagar"))])

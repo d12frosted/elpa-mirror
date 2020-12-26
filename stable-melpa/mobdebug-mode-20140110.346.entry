@@ -1,2 +1,12 @@
-
-(mobdebug-mode . [(20140110 346) ((lua-mode (20130419)) (emacs (24))) "Major mode for MobDebug" single ((:commit . "e1d483bc4e341c762bc5c0a8c52306a8d01ea0da") (:authors ("Shihpin Tseng" . "deftsp@gmail.com")) (:maintainer "Shihpin Tseng" . "deftsp@gmail.com") (:url . "https://github.com/deftsp/mobdebug-mode"))])
+(mobdebug-mode .
+	       [(20140110 346)
+		((lua-mode
+		  (20130419))
+		 (emacs
+		  (24)))
+		"Major mode for MobDebug" single
+		((:commit . "e1d483bc4e341c762bc5c0a8c52306a8d01ea0da")
+		 (:authors
+		  ("Shihpin Tseng" . "deftsp@gmail.com"))
+		 (:maintainer "Shihpin Tseng" . "deftsp@gmail.com")
+		 (:url . "https://github.com/deftsp/mobdebug-mode"))])

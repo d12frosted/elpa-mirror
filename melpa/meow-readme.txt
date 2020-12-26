@@ -1,1 +1,4 @@
-Enable `meow-global-mode' to activate modal editing.
+;;; Commentary:
+
+;; Enable `meow-global-mode' to activate modal editing.
+

@@ -1,2 +1,9 @@
-
-(python-django . [(20150822 404) nil "A Jazzy package for managing Django projects" single ((:commit . "fc54ad74f0309670359b939f64d0f1fff68aeac4") (:keywords "languages") (:authors ("Fabián E. Gallina" . "fabian@anue.biz")) (:maintainer "FSF") (:url . "https://github.com/fgallina/python-django.el"))])
+(python-django .
+	       [(20150822 404)
+		nil "A Jazzy package for managing Django projects" single
+		((:commit . "fc54ad74f0309670359b939f64d0f1fff68aeac4")
+		 (:authors
+		  ("Fabián E. Gallina" . "fabian@anue.biz"))
+		 (:maintainer "FSF")
+		 (:keywords "languages")
+		 (:url . "https://github.com/fgallina/python-django.el"))])

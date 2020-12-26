@@ -1,2 +1,13 @@
-
-(emaps . [(20200508 1759) ((dash (2 17 0)) (emacs (24))) "Utilities for working with keymaps" single ((:commit . "7c561f3ded2015ed3774e5784059d6601082743e") (:keywords "convenience" "keyboard" "keymap" "utility") (:authors ("Ben Moon" . "software@guiltydolphin.com")) (:maintainer "Ben Moon" . "software@guiltydolphin.com") (:url . "https://github.com/GuiltyDolphin/emaps"))])
+(emaps .
+       [(20200508 1759)
+	((dash
+	  (2 17 0))
+	 (emacs
+	  (24)))
+	"Utilities for working with keymaps" single
+	((:commit . "7c561f3ded2015ed3774e5784059d6601082743e")
+	 (:authors
+	  ("Ben Moon" . "software@guiltydolphin.com"))
+	 (:maintainer "Ben Moon" . "software@guiltydolphin.com")
+	 (:keywords "convenience" "keyboard" "keymap" "utility")
+	 (:url . "https://github.com/GuiltyDolphin/emaps"))])

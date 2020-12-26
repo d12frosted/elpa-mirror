@@ -1,2 +1,10 @@
-
-(rpn-calc . [(20200816 545) ((popup (0 4))) "quick RPN calculator for hackers" single ((:commit . "1554be19acc2644898a2175fa277d1159327c8dc") (:authors ("zk_phi")) (:maintainer "zk_phi") (:url . "https://github.com/zk-phi/rpn-calc"))])
+(rpn-calc .
+	  [(20200816 545)
+	   ((popup
+	     (0 4)))
+	   "quick RPN calculator for hackers" single
+	   ((:commit . "1554be19acc2644898a2175fa277d1159327c8dc")
+	    (:authors
+	     ("zk_phi"))
+	    (:maintainer "zk_phi")
+	    (:url . "https://github.com/zk-phi/rpn-calc"))])

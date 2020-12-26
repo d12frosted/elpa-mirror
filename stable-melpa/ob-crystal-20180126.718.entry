@@ -1,2 +1,11 @@
-
-(ob-crystal . [(20180126 718) ((emacs (24 3))) "org-babel functions for Crystal evaluation" tar ((:commit . "d84c1adee4b269cdba06a97caedb8071561a09af") (:keywords "crystal" "literate programming" "reproducible research") (:authors ("Brantou" . "brantou89@gmail.com")) (:maintainer "Brantou" . "brantou89@gmail.com") (:url . "https://github.com/brantou/ob-crystal"))])
+(ob-crystal .
+	    [(20180126 718)
+	     ((emacs
+	       (24 3)))
+	     "org-babel functions for Crystal evaluation" tar
+	     ((:commit . "d84c1adee4b269cdba06a97caedb8071561a09af")
+	      (:authors
+	       ("Brantou" . "brantou89@gmail.com"))
+	      (:maintainer "Brantou" . "brantou89@gmail.com")
+	      (:keywords "crystal" "literate programming" "reproducible research")
+	      (:url . "https://github.com/brantou/ob-crystal"))])

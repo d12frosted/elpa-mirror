@@ -1,1 +1,4 @@
-Elisp wrapper around the java `keytool` command
+;;; Commentary:
+
+;; Elisp wrapper around the java `keytool` command
+

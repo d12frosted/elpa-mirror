@@ -1,2 +1,11 @@
-
-(nyx-theme . [(20170910 1307) ((emacs (24))) "Dark theme" single ((:commit . "afe2b8c3b5421b4c292d182dcf77079b278e93d8") (:keywords "themes" "dark-theme") (:authors ("Guido Schmidt")) (:maintainer "Guido Schmidt" . "guido.schmidt.2912@gmail.com") (:url . "https://github.com/GuidoSchmidt/emacs-nyx-theme"))])
+(nyx-theme .
+	   [(20170910 1307)
+	    ((emacs
+	      (24)))
+	    "Dark theme" single
+	    ((:commit . "afe2b8c3b5421b4c292d182dcf77079b278e93d8")
+	     (:authors
+	      ("Guido Schmidt"))
+	     (:maintainer "Guido Schmidt" . "guido.schmidt.2912@gmail.com")
+	     (:keywords "themes" "dark-theme")
+	     (:url . "https://github.com/GuidoSchmidt/emacs-nyx-theme"))])

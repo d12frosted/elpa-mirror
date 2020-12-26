@@ -1,2 +1,10 @@
-
-(launch-mode . [(20170106 512) ((emacs (24 4))) "Major mode for launch-formatted text" tar ((:commit . "25ebd4ba77afcbe729901eb74923dbe9ae81c313") (:authors ("iory" . "ab.ioryz@gmail.com")) (:maintainer "iory" . "ab.ioryz@gmail.com") (:url . "https://github.com/iory/launch-mode"))])
+(launch-mode .
+	     [(20170106 512)
+	      ((emacs
+		(24 4)))
+	      "Major mode for launch-formatted text" tar
+	      ((:commit . "25ebd4ba77afcbe729901eb74923dbe9ae81c313")
+	       (:authors
+		("iory" . "ab.ioryz@gmail.com"))
+	       (:maintainer "iory" . "ab.ioryz@gmail.com")
+	       (:url . "https://github.com/iory/launch-mode"))])

@@ -1,2 +1,11 @@
-
-(tinkerer . [(20200914 1756) ((s (1 2 0))) "Elisp wrapper for Tinkerer Blogging Engine." single ((:commit . "7cedeb264a44cd62bcd9c778dca52316d09e07e5") (:keywords "tinkerer" "blog" "wrapper") (:authors ("Yagnesh Raghava Yakkala" . "hi@yagnesh.org")) (:maintainer "Yagnesh Raghava Yakkala" . "hi@yagnesh.org") (:url . "https://github.com/yyr/tinkerer.el"))])
+(tinkerer .
+	  [(20200914 1756)
+	   ((s
+	     (1 2 0)))
+	   "Elisp wrapper for Tinkerer Blogging Engine." single
+	   ((:commit . "7cedeb264a44cd62bcd9c778dca52316d09e07e5")
+	    (:authors
+	     ("Yagnesh Raghava Yakkala" . "hi@yagnesh.org"))
+	    (:maintainer "Yagnesh Raghava Yakkala" . "hi@yagnesh.org")
+	    (:keywords "tinkerer" "blog" "wrapper")
+	    (:url . "https://github.com/yyr/tinkerer.el"))])

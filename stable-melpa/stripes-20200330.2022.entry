@@ -1,2 +1,12 @@
-
-(stripes . [(20200330 2022) ((emacs (24))) "highlight alternating lines differently" single ((:commit . "7b1d501f44b697a0514ef6759fd126d65867f18d") (:keywords "convenience" "faces") (:authors ("Michael Schierl" . "schierlm-public@gmx.de") ("Štěpán Němec" . "stepnem@gmail.com")) (:maintainer "Štěpán Němec" . "stepnem@gmail.com") (:url . "https://gitlab.com/stepnem/stripes-el"))])
+(stripes .
+	 [(20200330 2022)
+	  ((emacs
+	    (24)))
+	  "highlight alternating lines differently" single
+	  ((:commit . "7b1d501f44b697a0514ef6759fd126d65867f18d")
+	   (:authors
+	    ("Michael Schierl" . "schierlm-public@gmx.de")
+	    ("Štěpán Němec" . "stepnem@gmail.com"))
+	   (:maintainer "Štěpán Němec" . "stepnem@gmail.com")
+	   (:keywords "convenience" "faces")
+	   (:url . "https://gitlab.com/stepnem/stripes-el"))])

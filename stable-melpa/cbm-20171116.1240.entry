@@ -1,2 +1,11 @@
-
-(cbm . [(20171116 1240) ((cl-lib (0 5))) "Switch to similar buffers." single ((:commit . "5b41c936ba9f6d170309a85ffebc9939c1050b31") (:keywords "buffers") (:authors ("Lukas Fürmetz" . "fuermetz@mailbox.org")) (:maintainer "Lukas Fürmetz" . "fuermetz@mailbox.org") (:url . "http://github.com/akermu/cbm.el"))])
+(cbm .
+     [(20171116 1240)
+      ((cl-lib
+	(0 5)))
+      "Switch to similar buffers." single
+      ((:commit . "5b41c936ba9f6d170309a85ffebc9939c1050b31")
+       (:authors
+	("Lukas Fürmetz" . "fuermetz@mailbox.org"))
+       (:maintainer "Lukas Fürmetz" . "fuermetz@mailbox.org")
+       (:keywords "buffers")
+       (:url . "http://github.com/akermu/cbm.el"))])

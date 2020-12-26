@@ -1,2 +1,11 @@
-
-(itasca . [(20170601 1622) ((emacs (24 3))) "Major modes for Itasca software data files." tar ((:commit . "3d15dd1b70d6db69b0f4758a3e28b8b506cc84ca") (:keywords "itasca" "flac" "3dec" "udec" "flac3d" "pfc" "pfc2d" "pfc3d" "fish") (:authors ("Jason Furtney" . "jkfurtney@gmail.com")) (:maintainer "Jason Furtney" . "jkfurtney@gmail.com") (:url . "http://github.com/jkfurtney/itasca-emacs/"))])
+(itasca .
+	[(20170601 1622)
+	 ((emacs
+	   (24 3)))
+	 "Major modes for Itasca software data files." tar
+	 ((:commit . "3d15dd1b70d6db69b0f4758a3e28b8b506cc84ca")
+	  (:authors
+	   ("Jason Furtney" . "jkfurtney@gmail.com"))
+	  (:maintainer "Jason Furtney" . "jkfurtney@gmail.com")
+	  (:keywords "itasca" "flac" "3dec" "udec" "flac3d" "pfc" "pfc2d" "pfc3d" "fish")
+	  (:url . "http://github.com/jkfurtney/itasca-emacs/"))])

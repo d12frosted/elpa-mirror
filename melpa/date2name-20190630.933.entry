@@ -1,2 +1,11 @@
-
-(date2name . [(20190630 933) ((emacs (24 4))) "Package to prepend ISO Timestamps to files" single ((:commit . "386dbe73678705d6107cd5c9bdeb4f7c97632360") (:keywords "files" "convenience") (:authors ("Max Beutelspacher")) (:maintainer "Max Beutelspacher") (:url . "https://github.com/DerBeutlin/date2name.el"))])
+(date2name .
+	   [(20190630 933)
+	    ((emacs
+	      (24 4)))
+	    "Package to prepend ISO Timestamps to files" single
+	    ((:commit . "386dbe73678705d6107cd5c9bdeb4f7c97632360")
+	     (:authors
+	      ("Max Beutelspacher"))
+	     (:maintainer "Max Beutelspacher")
+	     (:keywords "files" "convenience")
+	     (:url . "https://github.com/DerBeutlin/date2name.el"))])

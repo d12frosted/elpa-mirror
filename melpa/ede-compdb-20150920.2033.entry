@@ -1,2 +1,14 @@
-
-(ede-compdb . [(20150920 2033) ((ede (1 2)) (semantic (2 2)) (cl-lib (0 4))) "Support for compilation database projects in EDE" single ((:commit . "d6d8466cd62876fc90adeff5875a1a584fd846cd") (:keywords "development" "ninja" "build" "cedet" "ede") (:authors ("Alastair Rankine" . "alastair@girtby.net")) (:maintainer "Alastair Rankine" . "alastair@girtby.net"))])
+(ede-compdb .
+	    [(20150920 2033)
+	     ((ede
+	       (1 2))
+	      (semantic
+	       (2 2))
+	      (cl-lib
+	       (0 4)))
+	     "Support for compilation database projects in EDE" single
+	     ((:commit . "d6d8466cd62876fc90adeff5875a1a584fd846cd")
+	      (:authors
+	       ("Alastair Rankine" . "alastair@girtby.net"))
+	      (:maintainer "Alastair Rankine" . "alastair@girtby.net")
+	      (:keywords "development" "ninja" "build" "cedet" "ede"))])

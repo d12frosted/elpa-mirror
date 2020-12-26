@@ -1,2 +1,17 @@
-
-(orgnav . [(20170608 1713) ((helm (2 7 0)) (s (1 11 0)) (dash (1 11 0)) (emacs (24))) "Org tree navigation using helm" tar ((:commit . "9e2cac9c1a67af5f0080e60022e821bf7b70312d") (:keywords "convenience" "outlines") (:authors ("Facet Framer" . "facet@facetframer.com")) (:maintainer "Facet Framer" . "facet@facetframer.com") (:url . "http://github.com/facetframer/orgnav"))])
+(orgnav .
+	[(20170608 1713)
+	 ((helm
+	   (2 7 0))
+	  (s
+	   (1 11 0))
+	  (dash
+	   (1 11 0))
+	  (emacs
+	   (24)))
+	 "Org tree navigation using helm" tar
+	 ((:commit . "9e2cac9c1a67af5f0080e60022e821bf7b70312d")
+	  (:authors
+	   ("Facet Framer" . "facet@facetframer.com"))
+	  (:maintainer "Facet Framer" . "facet@facetframer.com")
+	  (:keywords "convenience" "outlines")
+	  (:url . "http://github.com/facetframer/orgnav"))])

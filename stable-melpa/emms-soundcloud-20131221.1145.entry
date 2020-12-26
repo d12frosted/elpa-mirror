@@ -1,2 +1,13 @@
-
-(emms-soundcloud . [(20131221 1145) ((emms (20131016)) (json (1 2))) "EMMS source for Soundcloud audio sharing platform" single ((:commit . "87e5cbf9609d1f26c24dc834fdeb78b33d453c2b") (:keywords "emms" "soundcloud") (:authors ("Ozan Sener" . "ozan@ozansener.com")) (:maintainer "Ozan Sener" . "ozan@ozansener.com") (:url . "http://github.com/osener/emms-soundcloud"))])
+(emms-soundcloud .
+		 [(20131221 1145)
+		  ((emms
+		    (20131016))
+		   (json
+		    (1 2)))
+		  "EMMS source for Soundcloud audio sharing platform" single
+		  ((:commit . "87e5cbf9609d1f26c24dc834fdeb78b33d453c2b")
+		   (:authors
+		    ("Ozan Sener" . "ozan@ozansener.com"))
+		   (:maintainer "Ozan Sener" . "ozan@ozansener.com")
+		   (:keywords "emms" "soundcloud")
+		   (:url . "http://github.com/osener/emms-soundcloud"))])

@@ -1,2 +1,10 @@
-
-(nv-delete-back . [(20170224 1249) ((emacs (24))) "backward delete like modern text editors" single ((:commit . "b17cb826f14c18c2875d112574edb5e4f46f5296") (:keywords "lisp") (:authors ("Nicolas Vaughan <n.vaughan [at] oxon.org>")) (:maintainer "Nicolas Vaughan <n.vaughan [at] oxon.org>"))])
+(nv-delete-back .
+		[(20170224 1249)
+		 ((emacs
+		   (24)))
+		 "backward delete like modern text editors" single
+		 ((:commit . "b17cb826f14c18c2875d112574edb5e4f46f5296")
+		  (:authors
+		   ("Nicolas Vaughan <n.vaughan [at] oxon.org>"))
+		  (:maintainer "Nicolas Vaughan <n.vaughan [at] oxon.org>")
+		  (:keywords "lisp"))])

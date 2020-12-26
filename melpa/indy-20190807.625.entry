@@ -1,2 +1,8 @@
-
-(indy . [(20190807 625) nil "A minor mode and EDSL to manage your mode's indentation rules." single ((:commit . "abc5bee424780ad2de5520f8fefbf8e120c0d9ed") (:keywords "convenience" "matching" "tools") (:authors ("Kevin W. van Rooijen" . "kevin.van.rooijen@attichacker.com")) (:maintainer "Kevin W. van Rooijen" . "kevin.van.rooijen@attichacker.com"))])
+(indy .
+      [(20190807 625)
+       nil "A minor mode and EDSL to manage your mode's indentation rules." single
+       ((:commit . "abc5bee424780ad2de5520f8fefbf8e120c0d9ed")
+	(:authors
+	 ("Kevin W. van Rooijen" . "kevin.van.rooijen@attichacker.com"))
+	(:maintainer "Kevin W. van Rooijen" . "kevin.van.rooijen@attichacker.com")
+	(:keywords "convenience" "matching" "tools"))])

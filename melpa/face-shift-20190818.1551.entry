@@ -1,2 +1,13 @@
-
-(face-shift . [(20190818 1551) ((emacs (24 4)) (cl-lib (0 5))) "Shift the colour of certain faces" single ((:commit . "8dd6fb5f6277d3a594654aeb3e6a7b7b5581656a") (:keywords "faces") (:authors ("Philip K." . "philip@warpmail.net")) (:maintainer "Philip K." . "philip@warpmail.net") (:url . "https://git.sr.ht/~zge/face-shift"))])
+(face-shift .
+	    [(20190818 1551)
+	     ((emacs
+	       (24 4))
+	      (cl-lib
+	       (0 5)))
+	     "Shift the colour of certain faces" single
+	     ((:commit . "8dd6fb5f6277d3a594654aeb3e6a7b7b5581656a")
+	      (:authors
+	       ("Philip K." . "philip@warpmail.net"))
+	      (:maintainer "Philip K." . "philip@warpmail.net")
+	      (:keywords "faces")
+	      (:url . "https://git.sr.ht/~zge/face-shift"))])

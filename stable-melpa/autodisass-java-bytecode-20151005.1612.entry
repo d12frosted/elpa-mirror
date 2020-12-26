@@ -1,2 +1,8 @@
-
-(autodisass-java-bytecode . [(20151005 1612) nil "Automatically disassemble Java bytecode" tar ((:commit . "3d61dbe266133c950b39e880f78d142751c7dc4c"))])
+(autodisass-java-bytecode .
+			  [(20151005 1612)
+			   nil "Automatically disassemble Java bytecode" tar
+			   ((:commit . "3d61dbe266133c950b39e880f78d142751c7dc4c")
+			    (:authors
+			     ("George Balatsouras <gbalats(at)gmail(dot)com>"))
+			    (:maintainer "George Balatsouras <gbalats(at)gmail(dot)com>")
+			    (:keywords "convenience" "data" "files"))])

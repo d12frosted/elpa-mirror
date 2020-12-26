@@ -1,2 +1,10 @@
-
-(disk . [(20171116 731) nil "simplified find-file, revert-file, save-buffer interface" single ((:commit . "283e54e3be7d08f959076240b2ab324e25632137") (:keywords "convenience") (:authors ("Alex Schroeder" . "alex@gnu.org") ("Peter Barabas" . "peter.barabas+disk@gmail.com")) (:maintainer "Alex Schroeder" . "alex@gnu.org") (:url . "http://www.emacswiki.org/emacs/DiskKey"))])
+(disk .
+      [(20171116 731)
+       nil "simplified find-file, revert-file, save-buffer interface" single
+       ((:commit . "283e54e3be7d08f959076240b2ab324e25632137")
+	(:authors
+	 ("Alex Schroeder" . "alex@gnu.org")
+	 ("Peter Barabas" . "peter.barabas+disk@gmail.com"))
+	(:maintainer "Alex Schroeder" . "alex@gnu.org")
+	(:keywords "convenience")
+	(:url . "http://www.emacswiki.org/emacs/DiskKey"))])

@@ -1,2 +1,10 @@
-
-(minibuffer-complete-cycle . [(20130813 1645) nil "Cycle through the *Completions* buffer" single ((:commit . "3df80135887d0169e02294a948711f6dfeca4a6f") (:keywords "completion") (:authors ("Akinori MUSHA" . "knu@iDaemons.org") ("Kevin Rodgers" . "ihs_4664@yahoo.com")) (:maintainer "Akinori MUSHA" . "knu@iDaemons.org") (:url . "https://github.com/knu/minibuffer-complete-cycle"))])
+(minibuffer-complete-cycle .
+			   [(20130813 1645)
+			    nil "Cycle through the *Completions* buffer" single
+			    ((:commit . "3df80135887d0169e02294a948711f6dfeca4a6f")
+			     (:authors
+			      ("Akinori MUSHA" . "knu@iDaemons.org")
+			      ("Kevin Rodgers" . "ihs_4664@yahoo.com"))
+			     (:maintainer "Akinori MUSHA" . "knu@iDaemons.org")
+			     (:keywords "completion")
+			     (:url . "https://github.com/knu/minibuffer-complete-cycle"))])

@@ -1,2 +1,8 @@
-
-(rpm-spec-mode . [(20160710 1136) nil "RPM spec file editing commands for Emacs/XEmacs" single ((:commit . "c1c38050c48ea330c7cea632b8785d66daeefb2b") (:keywords "unix" "languages") (:authors ("Stig Bjørlykke," . "stig@bjorlykke.org")) (:maintainer "Stig Bjørlykke," . "stig@bjorlykke.org"))])
+(rpm-spec-mode .
+	       [(20160710 1136)
+		nil "RPM spec file editing commands for Emacs/XEmacs" single
+		((:commit . "c1c38050c48ea330c7cea632b8785d66daeefb2b")
+		 (:authors
+		  ("Stig Bjørlykke," . "stig@bjorlykke.org"))
+		 (:maintainer "Stig Bjørlykke," . "stig@bjorlykke.org")
+		 (:keywords "unix" "languages"))])

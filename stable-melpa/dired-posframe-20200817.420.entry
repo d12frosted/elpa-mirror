@@ -1,2 +1,13 @@
-
-(dired-posframe . [(20200817 420) ((emacs (26 1)) (posframe (0 7))) "Peep dired items using posframe" single ((:commit . "1a21eb9ad956a0371dd3c9e1bec53407d685f705") (:keywords "convenience") (:authors ("Naoya Yamashita" . "conao3@gmail.com")) (:maintainer "Naoya Yamashita" . "conao3@gmail.com") (:url . "https://github.com/conao3/dired-posframe.el"))])
+(dired-posframe .
+		[(20200817 420)
+		 ((emacs
+		   (26 1))
+		  (posframe
+		   (0 7)))
+		 "Peep dired items using posframe" single
+		 ((:commit . "1a21eb9ad956a0371dd3c9e1bec53407d685f705")
+		  (:authors
+		   ("Naoya Yamashita" . "conao3@gmail.com"))
+		  (:maintainer "Naoya Yamashita" . "conao3@gmail.com")
+		  (:keywords "convenience")
+		  (:url . "https://github.com/conao3/dired-posframe.el"))])

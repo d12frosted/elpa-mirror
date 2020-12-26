@@ -1,1 +1,3 @@
-Copied from `lisp-mode' and modified for LFE.
+;;; Commentary:
+;; Copied from `lisp-mode' and modified for LFE.
+

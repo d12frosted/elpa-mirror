@@ -1,2 +1,11 @@
-
-(iodine-theme . [(20151031 1639) ((emacs (24))) "A light emacs color theme" single ((:commit . "02fb780e1d8d8a6b9c709bfac399abe1665c6999") (:keywords "themes") (:authors ("Srđan Panić" . "srdja.panic@gmail.com")) (:maintainer "Srđan Panić" . "srdja.panic@gmail.com") (:url . "https://github.com/srdja/iodine-theme"))])
+(iodine-theme .
+	      [(20151031 1639)
+	       ((emacs
+		 (24)))
+	       "A light emacs color theme" single
+	       ((:commit . "02fb780e1d8d8a6b9c709bfac399abe1665c6999")
+		(:authors
+		 ("Srđan Panić" . "srdja.panic@gmail.com"))
+		(:maintainer "Srđan Panić" . "srdja.panic@gmail.com")
+		(:keywords "themes")
+		(:url . "https://github.com/srdja/iodine-theme"))])

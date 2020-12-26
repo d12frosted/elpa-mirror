@@ -1,2 +1,11 @@
-
-(filetags . [(20190706 804) ((emacs (24 4))) "Package to manage filetags in filename" single ((:commit . "01e6a919507a832ee001a2a0fc257657f8b04b72") (:keywords "convenience" "files") (:authors ("Max Beutelspacher")) (:maintainer "Max Beutelspacher") (:url . "https://github.com/DerBeutlin/filetags.el"))])
+(filetags .
+	  [(20190706 804)
+	   ((emacs
+	     (24 4)))
+	   "Package to manage filetags in filename" single
+	   ((:commit . "01e6a919507a832ee001a2a0fc257657f8b04b72")
+	    (:authors
+	     ("Max Beutelspacher"))
+	    (:maintainer "Max Beutelspacher")
+	    (:keywords "convenience" "files")
+	    (:url . "https://github.com/DerBeutlin/filetags.el"))])

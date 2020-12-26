@@ -1,1 +1,4 @@
-Autoloads and basic setup for geiser.
+;;; Commentary:
+
+;; Autoloads and basic setup for geiser.
+

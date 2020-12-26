@@ -1,2 +1,15 @@
-
-(netrunner . [(20160910 2332) ((popup (0 5 3)) (company (0 9 0)) (helm (1 9 5))) "Create Android: Netrunner decklists using Company, Helm and org-mode" single ((:commit . "c64672992175c8c1073c0f56c2e471839db71a0f") (:keywords "games") (:authors ("Erik Sjöstrand")) (:maintainer "Erik Sjöstrand") (:url . "http://github.com/Kungsgeten/netrunner"))])
+(netrunner .
+	   [(20160910 2332)
+	    ((popup
+	      (0 5 3))
+	     (company
+	      (0 9 0))
+	     (helm
+	      (1 9 5)))
+	    "Create Android: Netrunner decklists using Company, Helm and org-mode" single
+	    ((:commit . "c64672992175c8c1073c0f56c2e471839db71a0f")
+	     (:authors
+	      ("Erik Sjöstrand"))
+	     (:maintainer "Erik Sjöstrand")
+	     (:keywords "games")
+	     (:url . "http://github.com/Kungsgeten/netrunner"))])

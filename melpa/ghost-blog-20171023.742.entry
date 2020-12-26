@@ -1,2 +1,11 @@
-
-(ghost-blog . [(20171023 742) ((markdown-mode (1 0))) "A package to manage Ghost blog" single ((:commit . "71b358643cc9a2db1bf752281ff94aba9b59e4cc") (:keywords "ghost" "blog") (:authors ("Javier Aguirre" . "hello@javaguirre.net")) (:maintainer "Javier Aguirre" . "hello@javaguirre.net") (:url . "https://github.com/javaguirre/ghost-blog"))])
+(ghost-blog .
+	    [(20171023 742)
+	     ((markdown-mode
+	       (1 0)))
+	     "A package to manage Ghost blog" single
+	     ((:commit . "71b358643cc9a2db1bf752281ff94aba9b59e4cc")
+	      (:authors
+	       ("Javier Aguirre" . "hello@javaguirre.net"))
+	      (:maintainer "Javier Aguirre" . "hello@javaguirre.net")
+	      (:keywords "ghost" "blog")
+	      (:url . "https://github.com/javaguirre/ghost-blog"))])

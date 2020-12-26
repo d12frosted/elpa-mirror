@@ -1,2 +1,8 @@
-
-(mo-git-blame . [(20160129 1759) nil "An interactive, iterative 'git blame' mode for Emacs" single ((:commit . "254a675eb794cdbbdef9fa2b4b7bb510b70089c0") (:keywords "tools") (:authors ("Moritz Bunkus" . "moritz@bunkus.org")) (:maintainer "Moritz Bunkus" . "moritz@bunkus.org"))])
+(mo-git-blame .
+	      [(20160129 1759)
+	       nil "An interactive, iterative 'git blame' mode for Emacs" single
+	       ((:commit . "254a675eb794cdbbdef9fa2b4b7bb510b70089c0")
+		(:authors
+		 ("Moritz Bunkus" . "moritz@bunkus.org"))
+		(:maintainer "Moritz Bunkus" . "moritz@bunkus.org")
+		(:keywords "tools"))])

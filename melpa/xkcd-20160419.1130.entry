@@ -1,2 +1,11 @@
-
-(xkcd . [(20160419 1130) ((json (1 3))) "View xkcd from Emacs" single ((:commit . "66e928706fd660cfdab204c98a347b49c4267bdf") (:keywords "xkcd" "webcomic") (:authors ("Vibhav Pant" . "vibhavp@gmail.com")) (:maintainer "Vibhav Pant" . "vibhavp@gmail.com") (:url . "https://github.com/vibhavp/emacs-xkcd"))])
+(xkcd .
+      [(20160419 1130)
+       ((json
+	 (1 3)))
+       "View xkcd from Emacs" single
+       ((:commit . "66e928706fd660cfdab204c98a347b49c4267bdf")
+	(:authors
+	 ("Vibhav Pant" . "vibhavp@gmail.com"))
+	(:maintainer "Vibhav Pant" . "vibhavp@gmail.com")
+	(:keywords "xkcd" "webcomic")
+	(:url . "https://github.com/vibhavp/emacs-xkcd"))])

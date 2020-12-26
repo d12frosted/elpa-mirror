@@ -1,2 +1,10 @@
-
-(popup-complete . [(20141109 308) ((popup (0 5 0))) "completion with popup" single ((:commit . "caa655a6d8472e9a4bfa1311126d90d7d1b07fca") (:authors ("Syohei YOSHIDA" . "syohex@gmail.com")) (:maintainer "Syohei YOSHIDA" . "syohex@gmail.com") (:url . "https://github.com/syohex/emacs-popup-complete"))])
+(popup-complete .
+		[(20141109 308)
+		 ((popup
+		   (0 5 0)))
+		 "completion with popup" single
+		 ((:commit . "caa655a6d8472e9a4bfa1311126d90d7d1b07fca")
+		  (:authors
+		   ("Syohei YOSHIDA" . "syohex@gmail.com"))
+		  (:maintainer "Syohei YOSHIDA" . "syohex@gmail.com")
+		  (:url . "https://github.com/syohex/emacs-popup-complete"))])

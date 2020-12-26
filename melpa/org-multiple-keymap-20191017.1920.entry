@@ -1,2 +1,15 @@
-
-(org-multiple-keymap . [(20191017 1920) ((org (8 2 4)) (emacs (24)) (cl-lib (0 5))) "Set keymap to elements, such as timestamp and priority." single ((:commit . "4eb8aa0aada012b2346cc7f0c55e07783141a2c3") (:keywords "convenience" "org-mode") (:authors ("myuhe <yuhei.maeda_at_gmail.com>")) (:maintainer "myuhe") (:url . "https://github.com/myuhe/org-multiple-keymap.el"))])
+(org-multiple-keymap .
+		     [(20191017 1920)
+		      ((org
+			(8 2 4))
+		       (emacs
+			(24))
+		       (cl-lib
+			(0 5)))
+		      "Set keymap to elements, such as timestamp and priority." single
+		      ((:commit . "4eb8aa0aada012b2346cc7f0c55e07783141a2c3")
+		       (:authors
+			("myuhe <yuhei.maeda_at_gmail.com>"))
+		       (:maintainer "myuhe")
+		       (:keywords "convenience" "org-mode")
+		       (:url . "https://github.com/myuhe/org-multiple-keymap.el"))])

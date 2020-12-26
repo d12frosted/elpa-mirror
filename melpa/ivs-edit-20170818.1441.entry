@@ -1,2 +1,15 @@
-
-(ivs-edit . [(20170818 1441) ((emacs (24 3)) (dash (2 6 0)) (cl-lib (1 0))) "IVS (Ideographic Variation Sequence) editing tool" tar ((:commit . "5db39c234aa7393b591168a4fd0a9a4cbbca347d") (:keywords "text") (:authors ("KAWABATA, Taichi <kawabata.taichi_at_gmail.com>")) (:maintainer "KAWABATA, Taichi <kawabata.taichi_at_gmail.com>") (:url . "http://github.com/kawabata/ivs-edit"))])
+(ivs-edit .
+	  [(20170818 1441)
+	   ((emacs
+	     (24 3))
+	    (dash
+	     (2 6 0))
+	    (cl-lib
+	     (1 0)))
+	   "IVS (Ideographic Variation Sequence) editing tool" tar
+	   ((:commit . "5db39c234aa7393b591168a4fd0a9a4cbbca347d")
+	    (:authors
+	     ("KAWABATA, Taichi <kawabata.taichi_at_gmail.com>"))
+	    (:maintainer "KAWABATA, Taichi <kawabata.taichi_at_gmail.com>")
+	    (:keywords "text")
+	    (:url . "http://github.com/kawabata/ivs-edit"))])

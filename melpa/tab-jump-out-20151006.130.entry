@@ -1,2 +1,12 @@
-
-(tab-jump-out . [(20151006 130) ((dash (2 10)) (emacs (24 4))) "Use tab to jump out of delimiter pairs." single ((:commit . "1c3fec1826d2891177ea78e4e7cce1dc67e83e51") (:keywords "tab" "editing") (:authors ("Zhang Kai Yu" . "yeannylam@gmail.com")) (:maintainer "Zhang Kai Yu" . "yeannylam@gmail.com"))])
+(tab-jump-out .
+	      [(20151006 130)
+	       ((dash
+		 (2 10))
+		(emacs
+		 (24 4)))
+	       "Use tab to jump out of delimiter pairs." single
+	       ((:commit . "1c3fec1826d2891177ea78e4e7cce1dc67e83e51")
+		(:authors
+		 ("Zhang Kai Yu" . "yeannylam@gmail.com"))
+		(:maintainer "Zhang Kai Yu" . "yeannylam@gmail.com")
+		(:keywords "tab" "editing"))])

@@ -1,2 +1,14 @@
-
-(bento . [(20191024 2123) ((flycheck (0 22)) (emacs (25 1)) (f (0 20))) "Flycheck integration for the Bento code checker" single ((:commit . "31546a03475fc2b3ffd3159fe1beda55f7762224") (:authors ("Ash Zahlen" . "ash@returntocorp.com")) (:maintainer "Ash Zahlen" . "ash@returntocorp.com") (:url . "https://github.com/returntocorp/bento-emacs"))])
+(bento .
+       [(20191024 2123)
+	((flycheck
+	  (0 22))
+	 (emacs
+	  (25 1))
+	 (f
+	  (0 20)))
+	"Flycheck integration for the Bento code checker" single
+	((:commit . "31546a03475fc2b3ffd3159fe1beda55f7762224")
+	 (:authors
+	  ("Ash Zahlen" . "ash@returntocorp.com"))
+	 (:maintainer "Ash Zahlen" . "ash@returntocorp.com")
+	 (:url . "https://github.com/returntocorp/bento-emacs"))])

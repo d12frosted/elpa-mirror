@@ -1,2 +1,9 @@
-
-(bibtex-utils . [(20190703 2117) nil "Provides utilities for extending BibTeX mode" single ((:commit . "26a8f0909b6adbf545a2b5e57ce7f779bf7a65af") (:keywords "bibtex") (:authors ("Tyler Smith" . "tyler@plantarum.ca")) (:maintainer "Tyler Smith" . "tyler@plantarum.ca") (:url . "https://github.com/plantarum/bibtex-utils"))])
+(bibtex-utils .
+	      [(20190703 2117)
+	       nil "Provides utilities for extending BibTeX mode" single
+	       ((:commit . "26a8f0909b6adbf545a2b5e57ce7f779bf7a65af")
+		(:authors
+		 ("Tyler Smith" . "tyler@plantarum.ca"))
+		(:maintainer "Tyler Smith" . "tyler@plantarum.ca")
+		(:keywords "bibtex")
+		(:url . "https://github.com/plantarum/bibtex-utils"))])

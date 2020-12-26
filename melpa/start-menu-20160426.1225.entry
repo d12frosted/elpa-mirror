@@ -1,2 +1,13 @@
-
-(start-menu . [(20160426 1225) ((cl-lib (0 5)) (config-parser (0 1))) "start-menu for executing external program like in windows" single ((:commit . "f7d33fed7ad2dc61156f1c1cff9e1805366fbd69") (:keywords "convenience" "menu") (:authors ("DarkSun" . "lujun9972@gmail.com")) (:maintainer "DarkSun" . "lujun9972@gmail.com") (:url . "https://github.com/lujun9972/el-start-menu"))])
+(start-menu .
+	    [(20160426 1225)
+	     ((cl-lib
+	       (0 5))
+	      (config-parser
+	       (0 1)))
+	     "start-menu for executing external program like in windows" single
+	     ((:commit . "f7d33fed7ad2dc61156f1c1cff9e1805366fbd69")
+	      (:authors
+	       ("DarkSun" . "lujun9972@gmail.com"))
+	      (:maintainer "DarkSun" . "lujun9972@gmail.com")
+	      (:keywords "convenience" "menu")
+	      (:url . "https://github.com/lujun9972/el-start-menu"))])

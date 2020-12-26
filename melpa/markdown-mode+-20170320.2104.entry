@@ -1,2 +1,11 @@
-
-(markdown-mode+ . [(20170320 2104) ((markdown-mode (20111229))) "extra functions for markdown-mode" tar ((:commit . "411d079f4430a33c34ec0bbcb1535fe1145a2509") (:keywords "markdown" "latex" "osx" "rtf") (:authors ("Donald Ephraim Curtis")) (:maintainer "Donald Ephraim Curtis") (:url . "http://github.com/milkypostman/markdown-mode-plus"))])
+(markdown-mode+ .
+		[(20170320 2104)
+		 ((markdown-mode
+		   (20111229)))
+		 "extra functions for markdown-mode" tar
+		 ((:commit . "411d079f4430a33c34ec0bbcb1535fe1145a2509")
+		  (:authors
+		   ("Donald Ephraim Curtis"))
+		  (:maintainer "Donald Ephraim Curtis")
+		  (:keywords "markdown" "latex" "osx" "rtf")
+		  (:url . "http://github.com/milkypostman/markdown-mode-plus"))])

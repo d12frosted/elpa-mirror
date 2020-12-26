@@ -1,2 +1,8 @@
-
-(widget-mvc . [(20150102 406) nil "MVC framework for the emacs widgets" single ((:commit . "ff5a85880df7b87f9f480fe3c28438a0712b7b87") (:keywords "lisp" "widget") (:authors ("SAKURAI Masashi <m.sakurai at kiwanami.net>")) (:maintainer "SAKURAI Masashi <m.sakurai at kiwanami.net>"))])
+(widget-mvc .
+	    [(20150102 406)
+	     nil "MVC framework for the emacs widgets" single
+	     ((:commit . "ff5a85880df7b87f9f480fe3c28438a0712b7b87")
+	      (:authors
+	       ("SAKURAI Masashi <m.sakurai at kiwanami.net>"))
+	      (:maintainer "SAKURAI Masashi <m.sakurai at kiwanami.net>")
+	      (:keywords "lisp" "widget"))])

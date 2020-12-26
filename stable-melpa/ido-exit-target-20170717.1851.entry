@@ -1,2 +1,11 @@
-
-(ido-exit-target . [(20170717 1851) ((emacs (24 4))) "Commands and keys for selecting other window and frame targets within ido" single ((:commit . "e56fc6928649c87ccf39d56d84ab53ebaced1f73") (:keywords "convenience" "tools" "extensions") (:authors ("justin talbott" . "justin@waymondo.com")) (:maintainer "justin talbott" . "justin@waymondo.com") (:url . "https://github.com/waymondo/ido-exit-target"))])
+(ido-exit-target .
+		 [(20170717 1851)
+		  ((emacs
+		    (24 4)))
+		  "Commands and keys for selecting other window and frame targets within ido" single
+		  ((:commit . "e56fc6928649c87ccf39d56d84ab53ebaced1f73")
+		   (:authors
+		    ("justin talbott" . "justin@waymondo.com"))
+		   (:maintainer "justin talbott" . "justin@waymondo.com")
+		   (:keywords "convenience" "tools" "extensions")
+		   (:url . "https://github.com/waymondo/ido-exit-target"))])

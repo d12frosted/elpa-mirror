@@ -1,1 +1,4 @@
-A Docopt implementation in Elisp
+;;; Commentary:
+
+;; A Docopt implementation in Elisp
+

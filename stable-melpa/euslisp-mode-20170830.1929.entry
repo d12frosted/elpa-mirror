@@ -1,2 +1,17 @@
-
-(euslisp-mode . [(20170830 1929) ((emacs (24 3)) (s (1 9)) (exec-path-from-shell (0)) (helm-ag (0 58))) "Major mode for Euslisp-formatted text" single ((:commit . "db62a2d148482317794727982576494596365a55") (:keywords "euslisp" "euslisp" "github") (:authors ("iory" . "ab.ioryz@gmail.com")) (:maintainer "iory" . "ab.ioryz@gmail.com") (:url . "https://github.com/iory/euslisp-mode"))])
+(euslisp-mode .
+	      [(20170830 1929)
+	       ((emacs
+		 (24 3))
+		(s
+		 (1 9))
+		(exec-path-from-shell
+		 (0))
+		(helm-ag
+		 (0 58)))
+	       "Major mode for Euslisp-formatted text" single
+	       ((:commit . "db62a2d148482317794727982576494596365a55")
+		(:authors
+		 ("iory" . "ab.ioryz@gmail.com"))
+		(:maintainer "iory" . "ab.ioryz@gmail.com")
+		(:keywords "euslisp" "euslisp" "github")
+		(:url . "https://github.com/iory/euslisp-mode"))])

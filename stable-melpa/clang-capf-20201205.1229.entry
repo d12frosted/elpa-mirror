@@ -1,2 +1,11 @@
-
-(clang-capf . [(20201205 1229) ((emacs (24 4))) "Completion-at-point backend for c/c++ using clang" single ((:commit . "6d0fcae75044d930e989903673b6ab22d0401418") (:keywords "c" "abbrev" "convenience") (:authors ("Philip K. <philipk [at] posteo [dot] net>")) (:maintainer "Philip K. <philipk [at] posteo [dot] net>") (:url . "https://git.sr.ht/~zge/clang-capf"))])
+(clang-capf .
+	    [(20201205 1229)
+	     ((emacs
+	       (24 4)))
+	     "Completion-at-point backend for c/c++ using clang" single
+	     ((:commit . "6d0fcae75044d930e989903673b6ab22d0401418")
+	      (:authors
+	       ("Philip K. <philipk [at] posteo [dot] net>"))
+	      (:maintainer "Philip K. <philipk [at] posteo [dot] net>")
+	      (:keywords "c" "abbrev" "convenience")
+	      (:url . "https://git.sr.ht/~zge/clang-capf"))])

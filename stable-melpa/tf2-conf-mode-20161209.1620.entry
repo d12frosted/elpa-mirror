@@ -1,2 +1,9 @@
-
-(tf2-conf-mode . [(20161209 1620) nil "TF2 Configuration files syntax highlighting" single ((:commit . "536950f64c071ffd8495fb2c7ac7c63a11e25f93") (:keywords "languages") (:authors ("Guillermo Robles" . "guillerobles1995@gmail.com")) (:maintainer "Guillermo Robles" . "guillerobles1995@gmail.com") (:url . "https://github.com/wynro/emacs-tf2-conf-mode"))])
+(tf2-conf-mode .
+	       [(20161209 1620)
+		nil "TF2 Configuration files syntax highlighting" single
+		((:commit . "536950f64c071ffd8495fb2c7ac7c63a11e25f93")
+		 (:authors
+		  ("Guillermo Robles" . "guillerobles1995@gmail.com"))
+		 (:maintainer "Guillermo Robles" . "guillerobles1995@gmail.com")
+		 (:keywords "languages")
+		 (:url . "https://github.com/wynro/emacs-tf2-conf-mode"))])

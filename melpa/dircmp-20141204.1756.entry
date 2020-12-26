@@ -1,2 +1,9 @@
-
-(dircmp . [(20141204 1756) nil "Compare and sync directories." tar ((:commit . "558ee0b601c2de9d247612085aafe2926f56a09f") (:keywords "unix" "tools") (:authors ("Matt McClure -- http://matthewlmcclure.com")) (:maintainer "Matt McClure -- http://matthewlmcclure.com") (:url . "https://github.com/matthewlmcclure/dircmp-mode"))])
+(dircmp .
+	[(20141204 1756)
+	 nil "Compare and sync directories." tar
+	 ((:commit . "558ee0b601c2de9d247612085aafe2926f56a09f")
+	  (:authors
+	   ("Matt McClure -- http://matthewlmcclure.com"))
+	  (:maintainer "Matt McClure -- http://matthewlmcclure.com")
+	  (:keywords "unix" "tools")
+	  (:url . "https://github.com/matthewlmcclure/dircmp-mode"))])

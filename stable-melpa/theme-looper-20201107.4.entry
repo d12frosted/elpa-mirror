@@ -1,2 +1,13 @@
-
-(theme-looper . [(20201107 4) ((emacs (24)) (cl-lib (0 5))) "Loop thru the available color-themes" single ((:commit . "6bc170097f1dfb7ea4db91544c5ab653279e15cd") (:keywords "convenience" "color-themes") (:authors ("Mohammed Ismail Ansari" . "team.terminal@gmail.com")) (:maintainer "Mohammed Ismail Ansari" . "team.terminal@gmail.com") (:url . "http://ismail.teamfluxion.com"))])
+(theme-looper .
+	      [(20201107 4)
+	       ((emacs
+		 (24))
+		(cl-lib
+		 (0 5)))
+	       "Loop thru the available color-themes" single
+	       ((:commit . "6bc170097f1dfb7ea4db91544c5ab653279e15cd")
+		(:authors
+		 ("Mohammed Ismail Ansari" . "team.terminal@gmail.com"))
+		(:maintainer "Mohammed Ismail Ansari" . "team.terminal@gmail.com")
+		(:keywords "convenience" "color-themes")
+		(:url . "http://ismail.teamfluxion.com"))])

@@ -1,2 +1,9 @@
-
-(simp . [(20180607 254) nil "Simple project definition, chiefly for file finding, and grepping" tar ((:commit . "d4d4b8547055347828bedccbeffdb4fd2d5a5d34") (:keywords "project" "grep" "find") (:authors ("atom smith")) (:maintainer "atom smith") (:url . "https://github.com/re5et/simp"))])
+(simp .
+      [(20180607 254)
+       nil "Simple project definition, chiefly for file finding, and grepping" tar
+       ((:commit . "d4d4b8547055347828bedccbeffdb4fd2d5a5d34")
+	(:authors
+	 ("atom smith"))
+	(:maintainer "atom smith")
+	(:keywords "project" "grep" "find")
+	(:url . "https://github.com/re5et/simp"))])

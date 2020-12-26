@@ -1,2 +1,9 @@
-
-(dim-autoload . [(20200103 1239) nil "dim or hide autoload cookie lines" single ((:commit . "c8dc02259d6c1aa25fb58742ae8b181f83b39a13") (:keywords "convenience") (:authors ("Jonas Bernoulli" . "jonas@bernoul.li")) (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li") (:url . "https://github.com/tarsius/dim-autoload"))])
+(dim-autoload .
+	      [(20200103 1239)
+	       nil "dim or hide autoload cookie lines" single
+	       ((:commit . "c8dc02259d6c1aa25fb58742ae8b181f83b39a13")
+		(:authors
+		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		(:keywords "convenience")
+		(:url . "https://github.com/tarsius/dim-autoload"))])

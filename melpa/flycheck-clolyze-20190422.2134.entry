@@ -1,2 +1,12 @@
-
-(flycheck-clolyze . [(20190422 2134) ((flycheck (0 25)) (emacs (24))) "Add Clolyze to to flycheck" single ((:commit . "c8b27602dd505aeae6486feb6f584754079baf51") (:authors ("Daniel Laps" . "daniel.laps@hhu.de")) (:maintainer "Daniel Laps" . "daniel.laps@hhu.de") (:url . "https://github.com/DLaps/flycheck-clolyze"))])
+(flycheck-clolyze .
+		  [(20190422 2134)
+		   ((flycheck
+		     (0 25))
+		    (emacs
+		     (24)))
+		   "Add Clolyze to to flycheck" single
+		   ((:commit . "c8b27602dd505aeae6486feb6f584754079baf51")
+		    (:authors
+		     ("Daniel Laps" . "daniel.laps@hhu.de"))
+		    (:maintainer "Daniel Laps" . "daniel.laps@hhu.de")
+		    (:url . "https://github.com/DLaps/flycheck-clolyze"))])

@@ -1,2 +1,13 @@
-
-(indicators . [(20161211 1126) ((dash (2 13 0)) (cl-lib (0 5 0))) "Display the buffer relative location of line in the fringe." single ((:commit . "f62a1201f21453e3aca93f48483e65ae8251432e") (:keywords "fringe" "frames") (:authors ("Matus Goljer" . "matus.goljer@gmail.com")) (:maintainer "Matus Goljer" . "matus.goljer@gmail.com") (:url . "https://github.com/Fuco1/indicators.el"))])
+(indicators .
+	    [(20161211 1126)
+	     ((dash
+	       (2 13 0))
+	      (cl-lib
+	       (0 5 0)))
+	     "Display the buffer relative location of line in the fringe." single
+	     ((:commit . "f62a1201f21453e3aca93f48483e65ae8251432e")
+	      (:authors
+	       ("Matus Goljer" . "matus.goljer@gmail.com"))
+	      (:maintainer "Matus Goljer" . "matus.goljer@gmail.com")
+	      (:keywords "fringe" "frames")
+	      (:url . "https://github.com/Fuco1/indicators.el"))])

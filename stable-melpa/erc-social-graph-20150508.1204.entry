@@ -1,2 +1,9 @@
-
-(erc-social-graph . [(20150508 1204) nil "A social network graph module for ERC." single ((:commit . "e6ef3416a1c5064054bf054d9f0c1c7bf54a9cd0") (:keywords "erc" "graph") (:authors ("Vibhav Pant" . "vibhavp@gmail.com")) (:maintainer "Vibhav Pant" . "vibhavp@gmail.com") (:url . "https://github.com/vibhavp/erc-social-graph"))])
+(erc-social-graph .
+		  [(20150508 1204)
+		   nil "A social network graph module for ERC." single
+		   ((:commit . "e6ef3416a1c5064054bf054d9f0c1c7bf54a9cd0")
+		    (:authors
+		     ("Vibhav Pant" . "vibhavp@gmail.com"))
+		    (:maintainer "Vibhav Pant" . "vibhavp@gmail.com")
+		    (:keywords "erc" "graph")
+		    (:url . "https://github.com/vibhavp/erc-social-graph"))])

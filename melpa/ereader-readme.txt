@@ -1,1 +1,3 @@
-Only .epub files are supported so far
+;;; Commentary:
+;; Only .epub files are supported so far
+

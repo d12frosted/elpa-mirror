@@ -1,2 +1,11 @@
-
-(tinypng . [(20200306 911) ((emacs (25 1))) "Compress PNG and JPEG with TinyPNG.com API" single ((:commit . "f7632e073ce13ef5ce30ae5584cb482a8bb9ffff") (:keywords "multimedia") (:authors ("Xu Chunyang" . "mail@xuchunyang.me")) (:maintainer "Xu Chunyang" . "mail@xuchunyang.me") (:url . "https://github.com/xuchunyang/tinypng.el"))])
+(tinypng .
+	 [(20200306 911)
+	  ((emacs
+	    (25 1)))
+	  "Compress PNG and JPEG with TinyPNG.com API" single
+	  ((:commit . "f7632e073ce13ef5ce30ae5584cb482a8bb9ffff")
+	   (:authors
+	    ("Xu Chunyang" . "mail@xuchunyang.me"))
+	   (:maintainer "Xu Chunyang" . "mail@xuchunyang.me")
+	   (:keywords "multimedia")
+	   (:url . "https://github.com/xuchunyang/tinypng.el"))])

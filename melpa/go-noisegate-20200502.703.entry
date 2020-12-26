@@ -1,2 +1,11 @@
-
-(go-noisegate . [(20200502 703) ((emacs (24 4))) "Run Golang tests with Noise Gate" single ((:commit . "e3fc198c234131c94f7d307b7f7c6ef623fb93b7") (:keywords "languages" "go" "test") (:authors ("The Noise Gate Authors")) (:maintainer "The Noise Gate Authors") (:url . "https://github.com/go-noisegate/go-noisegate.el"))])
+(go-noisegate .
+	      [(20200502 703)
+	       ((emacs
+		 (24 4)))
+	       "Run Golang tests with Noise Gate" single
+	       ((:commit . "e3fc198c234131c94f7d307b7f7c6ef623fb93b7")
+		(:authors
+		 ("The Noise Gate Authors"))
+		(:maintainer "The Noise Gate Authors")
+		(:keywords "languages" "go" "test")
+		(:url . "https://github.com/go-noisegate/go-noisegate.el"))])

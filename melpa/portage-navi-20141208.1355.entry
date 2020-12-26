@@ -1,2 +1,13 @@
-
-(portage-navi . [(20141208 1355) ((concurrent (0 3 1)) (ctable (0 1 2))) "portage viewer" single ((:commit . "8016c3e99fe6cef101d479a3d69185796b22ca2f") (:keywords "tools" "gentoo") (:authors ("<m.sakurai at kiwanami.net>")) (:maintainer "<m.sakurai at kiwanami.net>") (:url . "https://github.com/kiwanami/emacs-portage-navi"))])
+(portage-navi .
+	      [(20141208 1355)
+	       ((concurrent
+		 (0 3 1))
+		(ctable
+		 (0 1 2)))
+	       "portage viewer" single
+	       ((:commit . "8016c3e99fe6cef101d479a3d69185796b22ca2f")
+		(:authors
+		 ("<m.sakurai at kiwanami.net>"))
+		(:maintainer "<m.sakurai at kiwanami.net>")
+		(:keywords "tools" "gentoo")
+		(:url . "https://github.com/kiwanami/emacs-portage-navi"))])

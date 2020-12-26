@@ -1,2 +1,8 @@
-
-(gom-mode . [(20131008 253) nil "Major mode for Gomfile" single ((:commit . "972e33df1d38ff323bc97de87477305826013701") (:authors ("Syohei YOSHIDA" . "syohex@gmail.com")) (:maintainer "Syohei YOSHIDA" . "syohex@gmail.com") (:url . "https://github.com/syohex/emacs-gom-mode"))])
+(gom-mode .
+	  [(20131008 253)
+	   nil "Major mode for Gomfile" single
+	   ((:commit . "972e33df1d38ff323bc97de87477305826013701")
+	    (:authors
+	     ("Syohei YOSHIDA" . "syohex@gmail.com"))
+	    (:maintainer "Syohei YOSHIDA" . "syohex@gmail.com")
+	    (:url . "https://github.com/syohex/emacs-gom-mode"))])

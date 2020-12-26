@@ -1,2 +1,11 @@
-
-(lammps-mode . [(20180801 1319) ((emacs (24 4))) "basic syntax highlighting for LAMMPS files" single ((:commit . "a5b68d7a59975770b56ee8f6e66fa4f703a72ffe") (:keywords "languages" "faces") (:authors ("Aidan Thompson <athomps at sandia.gov>")) (:maintainer "Rohit Goswami <r95g10 at gmail.com>") (:url . "https://github.com/lammps/lammps/tree/master/tools/emacs"))])
+(lammps-mode .
+	     [(20180801 1319)
+	      ((emacs
+		(24 4)))
+	      "basic syntax highlighting for LAMMPS files" single
+	      ((:commit . "a5b68d7a59975770b56ee8f6e66fa4f703a72ffe")
+	       (:authors
+		("Aidan Thompson <athomps at sandia.gov>"))
+	       (:maintainer "Rohit Goswami <r95g10 at gmail.com>")
+	       (:keywords "languages" "faces")
+	       (:url . "https://github.com/lammps/lammps/tree/master/tools/emacs"))])

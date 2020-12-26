@@ -1,2 +1,11 @@
-
-(myterminal-controls . [(20190426 421) ((emacs (24))) "Quick toggle controls at a key-stroke" single ((:commit . "733cdd7ab4f172b6dca09720fc5ae7dbc248c822") (:keywords "convenience" "shortcuts") (:authors ("Mohammed Ismail Ansari" . "team.terminal@gmail.com")) (:maintainer "Mohammed Ismail Ansari" . "team.terminal@gmail.com") (:url . "http://ismail.teamfluxion.com"))])
+(myterminal-controls .
+		     [(20190426 421)
+		      ((emacs
+			(24)))
+		      "Quick toggle controls at a key-stroke" single
+		      ((:commit . "733cdd7ab4f172b6dca09720fc5ae7dbc248c822")
+		       (:authors
+			("Mohammed Ismail Ansari" . "team.terminal@gmail.com"))
+		       (:maintainer "Mohammed Ismail Ansari" . "team.terminal@gmail.com")
+		       (:keywords "convenience" "shortcuts")
+		       (:url . "http://ismail.teamfluxion.com"))])

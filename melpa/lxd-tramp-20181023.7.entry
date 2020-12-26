@@ -1,2 +1,13 @@
-
-(lxd-tramp . [(20181023 7) ((emacs (24 4)) (cl-lib (0 6))) "TRAMP integration for LXD containers" single ((:commit . "f335c76245f62b02cf67a9376eca6f3863c8a75a") (:keywords "lxd" "lxc" "convenience") (:authors ("Yc.S" . "onixie@gmail.com")) (:maintainer "Yc.S" . "onixie@gmail.com") (:url . "https://github.com/onixie/lxd-tramp.git"))])
+(lxd-tramp .
+	   [(20181023 7)
+	    ((emacs
+	      (24 4))
+	     (cl-lib
+	      (0 6)))
+	    "TRAMP integration for LXD containers" single
+	    ((:commit . "f335c76245f62b02cf67a9376eca6f3863c8a75a")
+	     (:authors
+	      ("Yc.S" . "onixie@gmail.com"))
+	     (:maintainer "Yc.S" . "onixie@gmail.com")
+	     (:keywords "lxd" "lxc" "convenience")
+	     (:url . "https://github.com/onixie/lxd-tramp.git"))])

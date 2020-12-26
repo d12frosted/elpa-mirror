@@ -1,2 +1,8 @@
-
-(fakespace . [(20120818 6) nil "fake namespaces with defpackage" single ((:commit . "d1bd1f4b14b2690d7a67f9a52622ec51ed84813a") (:authors ("Christopher Wellons" . "mosquitopsu@gmail.com")) (:maintainer "Christopher Wellons" . "mosquitopsu@gmail.com") (:url . "https://github.com/skeeto/elisp-fakespace"))])
+(fakespace .
+	   [(20120818 6)
+	    nil "fake namespaces with defpackage" single
+	    ((:commit . "d1bd1f4b14b2690d7a67f9a52622ec51ed84813a")
+	     (:authors
+	      ("Christopher Wellons" . "mosquitopsu@gmail.com"))
+	     (:maintainer "Christopher Wellons" . "mosquitopsu@gmail.com")
+	     (:url . "https://github.com/skeeto/elisp-fakespace"))])

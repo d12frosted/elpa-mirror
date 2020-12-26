@@ -1,2 +1,13 @@
-
-(bbyac . [(20180206 1441) ((browse-kill-ring (1 3)) (cl-lib (0 5))) "Type a little Bit, and Bang! You Are Completed." tar ((:commit . "9f0de9cad13801891ffb590dc09f51ff9a7cb225") (:keywords "abbrev") (:authors ("Bao Haojun" . "baohaojun@gmail.com")) (:maintainer "Bao Haojun" . "baohaojun@gmail.com") (:url . "https://github.com/baohaojun/bbyac"))])
+(bbyac .
+       [(20180206 1441)
+	((browse-kill-ring
+	  (1 3))
+	 (cl-lib
+	  (0 5)))
+	"Type a little Bit, and Bang! You Are Completed." tar
+	((:commit . "9f0de9cad13801891ffb590dc09f51ff9a7cb225")
+	 (:authors
+	  ("Bao Haojun" . "baohaojun@gmail.com"))
+	 (:maintainer "Bao Haojun" . "baohaojun@gmail.com")
+	 (:keywords "abbrev")
+	 (:url . "https://github.com/baohaojun/bbyac"))])

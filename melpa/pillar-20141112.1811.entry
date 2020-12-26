@@ -1,2 +1,11 @@
-
-(pillar . [(20141112 1811) ((makey (0 3))) "Major mode for editing Pillar files" tar ((:commit . "13a7f676544cc66005ccd8e6fc1c25e4ccd6f909") (:keywords "markup" "major-mode") (:authors ("Damien Cassou" . "damien.cassou@gmail.com")) (:maintainer "Damien Cassou" . "damien.cassou@gmail.com") (:url . "http://github.com/DamienCassou/pillar-mode"))])
+(pillar .
+	[(20141112 1811)
+	 ((makey
+	   (0 3)))
+	 "Major mode for editing Pillar files" tar
+	 ((:commit . "13a7f676544cc66005ccd8e6fc1c25e4ccd6f909")
+	  (:authors
+	   ("Damien Cassou" . "damien.cassou@gmail.com"))
+	  (:maintainer "Damien Cassou" . "damien.cassou@gmail.com")
+	  (:keywords "markup" "major-mode")
+	  (:url . "http://github.com/DamienCassou/pillar-mode"))])

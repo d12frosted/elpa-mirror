@@ -1,2 +1,13 @@
-
-(see-mode . [(20180511 41) ((emacs (24 4)) (language-detection (0 1 0))) "Edit string  in a separate buffer" single ((:commit . "b6e72ea90105b03816c334be9e43bb41dcc79abf") (:keywords "convenience") (:authors ("Marcelo Muñoz" . "ma.munoz.araya@gmail.com")) (:maintainer "Marcelo Muñoz" . "ma.munoz.araya@gmail.com") (:url . "https://github.com/marcelino-m/see-mode"))])
+(see-mode .
+	  [(20180511 41)
+	   ((emacs
+	     (24 4))
+	    (language-detection
+	     (0 1 0)))
+	   "Edit string  in a separate buffer" single
+	   ((:commit . "b6e72ea90105b03816c334be9e43bb41dcc79abf")
+	    (:authors
+	     ("Marcelo Muñoz" . "ma.munoz.araya@gmail.com"))
+	    (:maintainer "Marcelo Muñoz" . "ma.munoz.araya@gmail.com")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/marcelino-m/see-mode"))])

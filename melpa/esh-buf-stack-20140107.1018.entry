@@ -1,2 +1,8 @@
-
-(esh-buf-stack . [(20140107 1018) nil "Add a buffer stack feature to Eshell" single ((:commit . "ce0ea5aadca3150eaa9d2e6ec20296add4e99176") (:keywords "eshell" "extensions") (:authors ("Tomoya Tanjo" . "ttanjo@gmail.com")) (:maintainer "Tomoya Tanjo" . "ttanjo@gmail.com"))])
+(esh-buf-stack .
+	       [(20140107 1018)
+		nil "Add a buffer stack feature to Eshell" single
+		((:commit . "ce0ea5aadca3150eaa9d2e6ec20296add4e99176")
+		 (:authors
+		  ("Tomoya Tanjo" . "ttanjo@gmail.com"))
+		 (:maintainer "Tomoya Tanjo" . "ttanjo@gmail.com")
+		 (:keywords "eshell" "extensions"))])

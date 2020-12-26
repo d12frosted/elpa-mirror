@@ -1,2 +1,8 @@
-
-(foreign-regexp . [(20200325 50) nil "search and replace by foreign regexp." tar ((:commit . "e2dd47f2160cadc194eb156e7c76c3c869e6706e") (:keywords "convenience" "emulations" "matching" "tools" "unix" "wp") (:authors ("K-talo Miyazaki <Keitaro dot Miyazaki at gmail dot com>")) (:maintainer "K-talo Miyazaki <Keitaro dot Miyazaki at gmail dot com>"))])
+(foreign-regexp .
+		[(20200325 50)
+		 nil "search and replace by foreign regexp." tar
+		 ((:commit . "e2dd47f2160cadc194eb156e7c76c3c869e6706e")
+		  (:authors
+		   ("K-talo Miyazaki <Keitaro dot Miyazaki at gmail dot com>"))
+		  (:maintainer "K-talo Miyazaki <Keitaro dot Miyazaki at gmail dot com>")
+		  (:keywords "convenience" "emulations" "matching" "tools" "unix" "wp"))])

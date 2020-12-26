@@ -1,2 +1,15 @@
-
-(ynab . [(20200607 2008) ((emacs (26 3)) (cl-lib (0 5)) (ts (0 2))) "Major mode for YNAB (you need a budget)" single ((:commit . "2c6beb4d2c4996017f6b3c62c26db52a61e5c479") (:keywords "ynab" "budget" "convenience") (:authors ("Jim Anders <https://github.com/janders223>")) (:maintainer "Jim Anders" . "jimanders223@gmail.com") (:url . "https://github.com/janders223/ynab.el"))])
+(ynab .
+      [(20200607 2008)
+       ((emacs
+	 (26 3))
+	(cl-lib
+	 (0 5))
+	(ts
+	 (0 2)))
+       "Major mode for YNAB (you need a budget)" single
+       ((:commit . "2c6beb4d2c4996017f6b3c62c26db52a61e5c479")
+	(:authors
+	 ("Jim Anders <https://github.com/janders223>"))
+	(:maintainer "Jim Anders" . "jimanders223@gmail.com")
+	(:keywords "ynab" "budget" "convenience")
+	(:url . "https://github.com/janders223/ynab.el"))])

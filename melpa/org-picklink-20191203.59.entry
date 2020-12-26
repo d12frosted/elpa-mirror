@@ -1,2 +1,11 @@
-
-(org-picklink . [(20191203 59) ((emacs (24 4))) "Pick a headline link from org-agenda" single ((:commit . "f79040ed988bdeec63b098b187e00f2b80d3d570") (:keywords "convenience") (:authors ("Feng Shu" . "tumashu@163.com")) (:maintainer "Feng Shu" . "tumashu@163.com") (:url . "https://github.com/tumashu/org-picklink"))])
+(org-picklink .
+	      [(20191203 59)
+	       ((emacs
+		 (24 4)))
+	       "Pick a headline link from org-agenda" single
+	       ((:commit . "f79040ed988bdeec63b098b187e00f2b80d3d570")
+		(:authors
+		 ("Feng Shu" . "tumashu@163.com"))
+		(:maintainer "Feng Shu" . "tumashu@163.com")
+		(:keywords "convenience")
+		(:url . "https://github.com/tumashu/org-picklink"))])

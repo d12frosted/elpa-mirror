@@ -1,2 +1,10 @@
-
-(scroll-on-drag . [(20201013 123) ((emacs (26 2))) "Interactive scrolling" single ((:commit . "3cd1e1801aaddd011992d284280b5b43ccbee17b") (:authors ("Campbell Barton" . "ideasman42@gmail.com")) (:maintainer "Campbell Barton" . "ideasman42@gmail.com") (:url . "https://gitlab.com/ideasman42/emacs-scroll-on-drag"))])
+(scroll-on-drag .
+		[(20201013 123)
+		 ((emacs
+		   (26 2)))
+		 "Interactive scrolling" single
+		 ((:commit . "3cd1e1801aaddd011992d284280b5b43ccbee17b")
+		  (:authors
+		   ("Campbell Barton" . "ideasman42@gmail.com"))
+		  (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+		  (:url . "https://gitlab.com/ideasman42/emacs-scroll-on-drag"))])

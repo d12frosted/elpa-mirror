@@ -1,2 +1,10 @@
-
-(sequences . [(20170818 1252) ((emacs (24))) "Ports of some Clojure sequence functions." single ((:commit . "564ebbd93b0beea4e75acfbf824350e90b5d5738") (:keywords "convenience") (:authors ("Tim Visher" . "tim.visher@gmail.com")) (:maintainer "Tim Visher" . "tim.visher@gmail.com"))])
+(sequences .
+	   [(20170818 1252)
+	    ((emacs
+	      (24)))
+	    "Ports of some Clojure sequence functions." single
+	    ((:commit . "564ebbd93b0beea4e75acfbf824350e90b5d5738")
+	     (:authors
+	      ("Tim Visher" . "tim.visher@gmail.com"))
+	     (:maintainer "Tim Visher" . "tim.visher@gmail.com")
+	     (:keywords "convenience"))])

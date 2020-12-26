@@ -1,2 +1,11 @@
-
-(zen-mode . [(20200609 822) ((emacs (24 3))) "A major mode for the Zen programming language" single ((:commit . "c1b1806358f3cce6c04b30699987d82dc7d42559") (:keywords "zen" "languages") (:authors ("Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley <superjoe30@gmail.com>, kristopher tate <kt@connectfree.co.jp>, Yoshitaka Takemoto" . "yt.3b8@connectfree.co.jp")) (:maintainer "Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley <superjoe30@gmail.com>, kristopher tate <kt@connectfree.co.jp>, Yoshitaka Takemoto" . "yt.3b8@connectfree.co.jp") (:url . "https://github.com/zenlang/zen-mode"))])
+(zen-mode .
+	  [(20200609 822)
+	   ((emacs
+	     (24 3)))
+	   "A major mode for the Zen programming language" single
+	   ((:commit . "c1b1806358f3cce6c04b30699987d82dc7d42559")
+	    (:authors
+	     ("Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley <superjoe30@gmail.com>, kristopher tate <kt@connectfree.co.jp>, Yoshitaka Takemoto" . "yt.3b8@connectfree.co.jp"))
+	    (:maintainer "Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley <superjoe30@gmail.com>, kristopher tate <kt@connectfree.co.jp>, Yoshitaka Takemoto" . "yt.3b8@connectfree.co.jp")
+	    (:keywords "zen" "languages")
+	    (:url . "https://github.com/zenlang/zen-mode"))])

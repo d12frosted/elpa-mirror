@@ -1,2 +1,10 @@
-
-(templatel . [(20201206 302) ((emacs (25 1))) "Templating language;" single ((:commit . "3243c632bf3062eb1c576dd424378a9f419f6013") (:authors ("Lincoln Clarete" . "lincoln@clarete.li")) (:maintainer "Lincoln Clarete" . "lincoln@clarete.li") (:url . "https://clarete.li/templatel"))])
+(templatel .
+	   [(20201206 302)
+	    ((emacs
+	      (25 1)))
+	    "Templating language;" single
+	    ((:commit . "3243c632bf3062eb1c576dd424378a9f419f6013")
+	     (:authors
+	      ("Lincoln Clarete" . "lincoln@clarete.li"))
+	     (:maintainer "Lincoln Clarete" . "lincoln@clarete.li")
+	     (:url . "https://clarete.li/templatel"))])

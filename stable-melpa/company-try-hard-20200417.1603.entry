@@ -1,2 +1,15 @@
-
-(company-try-hard . [(20200417 1603) ((emacs (24 3)) (company (0 8 0)) (dash (2 0))) "get all completions from company backends" single ((:commit . "2b41136b5ed6e02032d99bcdb0599ecf00394fa5") (:keywords "matching") (:authors ("Wilfred Hughes" . "me@wilfred.me.uk")) (:maintainer "Wilfred Hughes" . "me@wilfred.me.uk") (:url . "https://github.com/Wilfred/company-try-hard"))])
+(company-try-hard .
+		  [(20200417 1603)
+		   ((emacs
+		     (24 3))
+		    (company
+		     (0 8 0))
+		    (dash
+		     (2 0)))
+		   "get all completions from company backends" single
+		   ((:commit . "2b41136b5ed6e02032d99bcdb0599ecf00394fa5")
+		    (:authors
+		     ("Wilfred Hughes" . "me@wilfred.me.uk"))
+		    (:maintainer "Wilfred Hughes" . "me@wilfred.me.uk")
+		    (:keywords "matching")
+		    (:url . "https://github.com/Wilfred/company-try-hard"))])

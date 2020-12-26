@@ -1,2 +1,10 @@
-
-(code-library . [(20160426 1218) ((gist (1 3 1))) "use org-mode to collect code snippets" single ((:commit . "32d59c5c845d6dbdda18f9bd1c03a58d55417fc5") (:keywords "lisp" "code") (:authors ("DarkSun" . "lujun9972@gmail.com")) (:maintainer "DarkSun" . "lujun9972@gmail.com"))])
+(code-library .
+	      [(20160426 1218)
+	       ((gist
+		 (1 3 1)))
+	       "use org-mode to collect code snippets" single
+	       ((:commit . "32d59c5c845d6dbdda18f9bd1c03a58d55417fc5")
+		(:authors
+		 ("DarkSun" . "lujun9972@gmail.com"))
+		(:maintainer "DarkSun" . "lujun9972@gmail.com")
+		(:keywords "lisp" "code"))])

@@ -1,2 +1,9 @@
-
-(md-readme . [(20191112 1943) nil "Markdown-formatted READMEs for your ELisp" tar ((:commit . "ca99f44de11fab18d1f50d4b1722f2ceee3c814d") (:keywords "lisp" "help" "readme" "markdown" "header" "documentation" "github") (:authors ("Thomas Kappler" . "tkappler@gmail.com")) (:maintainer "Thomas Kappler" . "tkappler@gmail.com") (:url . "http://github.com/thomas11/md-readme/tree/master"))])
+(md-readme .
+	   [(20191112 1943)
+	    nil "Markdown-formatted READMEs for your ELisp" tar
+	    ((:commit . "ca99f44de11fab18d1f50d4b1722f2ceee3c814d")
+	     (:authors
+	      ("Thomas Kappler" . "tkappler@gmail.com"))
+	     (:maintainer "Thomas Kappler" . "tkappler@gmail.com")
+	     (:keywords "lisp" "help" "readme" "markdown" "header" "documentation" "github")
+	     (:url . "http://github.com/thomas11/md-readme/tree/master"))])

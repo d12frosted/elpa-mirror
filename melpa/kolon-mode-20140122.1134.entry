@@ -1,2 +1,9 @@
-
-(kolon-mode . [(20140122 1134) nil "Syntax highlighting for Text::Xslate's Kolon syntax" single ((:commit . "5af0955e280ae991862189ebecd3937c5fc8fb9f") (:keywords "xslate" "perl") (:authors ("Sam Tran")) (:maintainer "Sam Tran") (:url . "https://github.com/samvtran/kolon-mode"))])
+(kolon-mode .
+	    [(20140122 1134)
+	     nil "Syntax highlighting for Text::Xslate's Kolon syntax" single
+	     ((:commit . "5af0955e280ae991862189ebecd3937c5fc8fb9f")
+	      (:authors
+	       ("Sam Tran"))
+	      (:maintainer "Sam Tran")
+	      (:keywords "xslate" "perl")
+	      (:url . "https://github.com/samvtran/kolon-mode"))])

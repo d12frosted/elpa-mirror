@@ -1,2 +1,16 @@
-
-(overseer . [(20180226 619) ((emacs (24)) (dash (2 10 0)) (pkg-info (0 4)) (f (0 18 1))) "Ert-runner Integration Into Emacs" single ((:commit . "02d49f582e80e36b4334c9187801c5ecfb027789") (:authors ("Samuel Tonini" . "tonini.samuel@gmail.com")) (:maintainer "Samuel Tonini" . "tonini.samuel@gmail.com") (:url . "http://www.github.com/tonini/overseer.el"))])
+(overseer .
+	  [(20180226 619)
+	   ((emacs
+	     (24))
+	    (dash
+	     (2 10 0))
+	    (pkg-info
+	     (0 4))
+	    (f
+	     (0 18 1)))
+	   "Ert-runner Integration Into Emacs" single
+	   ((:commit . "02d49f582e80e36b4334c9187801c5ecfb027789")
+	    (:authors
+	     ("Samuel Tonini" . "tonini.samuel@gmail.com"))
+	    (:maintainer "Samuel Tonini" . "tonini.samuel@gmail.com")
+	    (:url . "http://www.github.com/tonini/overseer.el"))])

@@ -1,2 +1,11 @@
-
-(mosey . [(20180614 1649) ((emacs (24 4))) "Mosey around your buffers" single ((:commit . "2e3ac9d334fa2937ed5267193dfd25d8e1f14dc2") (:keywords "convenience") (:authors ("Adam Porter" . "adam@alphapapa.net")) (:maintainer "Adam Porter" . "adam@alphapapa.net") (:url . "http://github.com/alphapapa/mosey.el"))])
+(mosey .
+       [(20180614 1649)
+	((emacs
+	  (24 4)))
+	"Mosey around your buffers" single
+	((:commit . "2e3ac9d334fa2937ed5267193dfd25d8e1f14dc2")
+	 (:authors
+	  ("Adam Porter" . "adam@alphapapa.net"))
+	 (:maintainer "Adam Porter" . "adam@alphapapa.net")
+	 (:keywords "convenience")
+	 (:url . "http://github.com/alphapapa/mosey.el"))])

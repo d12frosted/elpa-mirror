@@ -1,2 +1,10 @@
-
-(mellow-theme . [(20170808 1317) ((emacs (24 0))) "an Emacs 24 theme based on Mellow (tmTheme)" single ((:commit . "2bdf18f05f5212b6f269d9a94afe2cf201766891") (:authors ("Jason Milkins")) (:maintainer "Jason Milkins") (:url . "https://github.com/emacsfodder/tmtheme-to-deftheme"))])
+(mellow-theme .
+	      [(20170808 1317)
+	       ((emacs
+		 (24 0)))
+	       "an Emacs 24 theme based on Mellow (tmTheme)" single
+	       ((:commit . "2bdf18f05f5212b6f269d9a94afe2cf201766891")
+		(:authors
+		 ("Jason Milkins"))
+		(:maintainer "Jason Milkins")
+		(:url . "https://github.com/emacsfodder/tmtheme-to-deftheme"))])

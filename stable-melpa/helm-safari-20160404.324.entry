@@ -1,2 +1,13 @@
-
-(helm-safari . [(20160404 324) ((helm (1 9 1)) (emacs (24))) "Browse your Safari bookmarks and history" single ((:commit . "664c7f4488829228eed7e90cd53002e14bec555b") (:keywords "tools") (:authors ("Chunyang Xu" . "xuchunyang56@gmail.com")) (:maintainer "Chunyang Xu" . "xuchunyang56@gmail.com") (:url . "https://github.com/xuchunyang/helm-safari"))])
+(helm-safari .
+	     [(20160404 324)
+	      ((helm
+		(1 9 1))
+	       (emacs
+		(24)))
+	      "Browse your Safari bookmarks and history" single
+	      ((:commit . "664c7f4488829228eed7e90cd53002e14bec555b")
+	       (:authors
+		("Chunyang Xu" . "xuchunyang56@gmail.com"))
+	       (:maintainer "Chunyang Xu" . "xuchunyang56@gmail.com")
+	       (:keywords "tools")
+	       (:url . "https://github.com/xuchunyang/helm-safari"))])

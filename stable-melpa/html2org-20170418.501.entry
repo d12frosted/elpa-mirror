@@ -1,2 +1,11 @@
-
-(html2org . [(20170418 501) ((emacs (24 4))) "Convert html to org format text" single ((:commit . "6904aed40259ad8afccff079ebd8a07bff319ebc") (:keywords "convenience" "html" "org") (:authors ("DarkSun" . "lujun9972@gmail.com")) (:maintainer "DarkSun" . "lujun9972@gmail.com") (:url . "http://github.com/lujun9972/html2org.el"))])
+(html2org .
+	  [(20170418 501)
+	   ((emacs
+	     (24 4)))
+	   "Convert html to org format text" single
+	   ((:commit . "6904aed40259ad8afccff079ebd8a07bff319ebc")
+	    (:authors
+	     ("DarkSun" . "lujun9972@gmail.com"))
+	    (:maintainer "DarkSun" . "lujun9972@gmail.com")
+	    (:keywords "convenience" "html" "org")
+	    (:url . "http://github.com/lujun9972/html2org.el"))])

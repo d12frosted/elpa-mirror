@@ -1,2 +1,18 @@
-
-(nndiscourse . [(20200829 1751) ((emacs (25 1)) (dash (2 16)) (dash-functional (1 2 0)) (anaphora (1 0 4)) (rbenv (0 0 3)) (json-rpc (20200417))) "Gnus backend for Discourse" tar ((:commit . "152f3176fff026572d2cfa22adaeb32f42410083") (:keywords "news") (:url . "https://github.com/dickmao/nndiscourse"))])
+(nndiscourse .
+	     [(20200829 1751)
+	      ((emacs
+		(25 1))
+	       (dash
+		(2 16))
+	       (dash-functional
+		(1 2 0))
+	       (anaphora
+		(1 0 4))
+	       (rbenv
+		(0 0 3))
+	       (json-rpc
+		(20200417)))
+	      "Gnus backend for Discourse" tar
+	      ((:commit . "152f3176fff026572d2cfa22adaeb32f42410083")
+	       (:keywords "news")
+	       (:url . "https://github.com/dickmao/nndiscourse"))])

@@ -1,2 +1,9 @@
-
-(flymake-vnu . [(20181128 216) ((emacs (26 1))) "Flymake extension for the v.Nu HTML validator." single ((:commit . "7c4ab9d12611756ad5a80d866890b2f9b73fb611") (:keywords "languages") (:maintainer "Stefan Kuznetsov" . "skuznetsov@posteo.net") (:url . "https://github.com/theneosloth/flymake-vnu"))])
+(flymake-vnu .
+	     [(20181128 216)
+	      ((emacs
+		(26 1)))
+	      "Flymake extension for the v.Nu HTML validator." single
+	      ((:commit . "7c4ab9d12611756ad5a80d866890b2f9b73fb611")
+	       (:maintainer "Stefan Kuznetsov" . "skuznetsov@posteo.net")
+	       (:keywords "languages")
+	       (:url . "https://github.com/theneosloth/flymake-vnu"))])

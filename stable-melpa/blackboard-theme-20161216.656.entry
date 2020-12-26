@@ -1,2 +1,10 @@
-
-(blackboard-theme . [(20161216 656) ((emacs (24))) "TextMate Blackboard Theme" single ((:commit . "7a0d79410feb728ff5cce75c140fadc19a3f9a6d") (:authors ("Dong Zheng")) (:maintainer "Dong Zheng") (:url . "https://github.com/don9z/blackboard-theme"))])
+(blackboard-theme .
+		  [(20161216 656)
+		   ((emacs
+		     (24)))
+		   "TextMate Blackboard Theme" single
+		   ((:commit . "7a0d79410feb728ff5cce75c140fadc19a3f9a6d")
+		    (:authors
+		     ("Dong Zheng"))
+		    (:maintainer "Dong Zheng")
+		    (:url . "https://github.com/don9z/blackboard-theme"))])

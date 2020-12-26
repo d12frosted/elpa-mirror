@@ -1,2 +1,14 @@
-
-(docker-api . [(20160525 720) ((dash (2 12 1)) (request (0 2 0)) (s (1 11 0))) "Emacs interface to the Docker API" tar ((:commit . "206144346b7fa4165223349cfeb64a75d47ddd1b") (:authors ("Philippe Vaucher" . "philippe.vaucher@gmail.com")) (:maintainer "Philippe Vaucher" . "philippe.vaucher@gmail.com") (:url . "https://github.com/Silex/docker-api.el"))])
+(docker-api .
+	    [(20160525 720)
+	     ((dash
+	       (2 12 1))
+	      (request
+	       (0 2 0))
+	      (s
+	       (1 11 0)))
+	     "Emacs interface to the Docker API" tar
+	     ((:commit . "206144346b7fa4165223349cfeb64a75d47ddd1b")
+	      (:authors
+	       ("Philippe Vaucher" . "philippe.vaucher@gmail.com"))
+	      (:maintainer "Philippe Vaucher" . "philippe.vaucher@gmail.com")
+	      (:url . "https://github.com/Silex/docker-api.el"))])

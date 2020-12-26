@@ -1,2 +1,9 @@
-
-(color-theme . [(20190220 1115) nil "An OBSOLETE color-theme implementation" tar ((:commit . "3a2f6b615f5e2401e30d93a3e0adc210bbb4b7aa") (:keywords "faces") (:authors ("Jonadab the Unsightly One" . "jonadab@bright.net")) (:maintainer "Xavier Maillard" . "zedek@gnu.org") (:url . "http://www.emacswiki.org/cgi-bin/wiki.pl?ColorTheme"))])
+(color-theme .
+	     [(20190220 1115)
+	      nil "An OBSOLETE color-theme implementation" tar
+	      ((:commit . "3a2f6b615f5e2401e30d93a3e0adc210bbb4b7aa")
+	       (:authors
+		("Jonadab the Unsightly One" . "jonadab@bright.net"))
+	       (:maintainer "Xavier Maillard" . "zedek@gnu.org")
+	       (:keywords "faces")
+	       (:url . "http://www.emacswiki.org/cgi-bin/wiki.pl?ColorTheme"))])

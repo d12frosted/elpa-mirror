@@ -1,2 +1,14 @@
-
-(datomic-snippets . [(20180817 1045) ((s (1 4 0)) (dash (1 2 0)) (yasnippet (0 6 1))) "Yasnippets for Datomic" tar ((:commit . "4a14228840d5252e13d2bf6209670f26345bbb84"))])
+(datomic-snippets .
+		  [(20180817 1045)
+		   ((s
+		     (1 4 0))
+		    (dash
+		     (1 2 0))
+		    (yasnippet
+		     (0 6 1)))
+		   "Yasnippets for Datomic" tar
+		   ((:commit . "4a14228840d5252e13d2bf6209670f26345bbb84")
+		    (:authors
+		     ("Magnar Sveen" . "magnars@gmail.com"))
+		    (:maintainer "Magnar Sveen" . "magnars@gmail.com")
+		    (:keywords "snippets"))])

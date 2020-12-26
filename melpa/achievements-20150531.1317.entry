@@ -1,2 +1,10 @@
-
-(achievements . [(20150531 1317) ((keyfreq (0 0 3))) "Achievements for emacs usage." tar ((:commit . "c8275ee492d56255999d58f2988129ab29145182"))])
+(achievements .
+	      [(20150531 1317)
+	       ((keyfreq
+		 (0 0 3)))
+	       "Achievements for emacs usage." tar
+	       ((:commit . "c8275ee492d56255999d58f2988129ab29145182")
+		(:authors
+		 ("Ivan Andrus" . "darthandrus@gmail.com"))
+		(:maintainer "Ivan Andrus" . "darthandrus@gmail.com")
+		(:keywords "games"))])

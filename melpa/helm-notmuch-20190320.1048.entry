@@ -1,2 +1,13 @@
-
-(helm-notmuch . [(20190320 1048) ((helm (1 9 3)) (notmuch (0 21))) "Search emails with Notmuch and Helm" single ((:commit . "97a01497e079a7b6505987e9feba6b603bbec288") (:keywords "mail") (:authors ("Chunyang Xu" . "mail@xuchunyang.me")) (:maintainer "Chunyang Xu" . "mail@xuchunyang.me") (:url . "https://github.com/emacs-helm/helm-notmuch"))])
+(helm-notmuch .
+	      [(20190320 1048)
+	       ((helm
+		 (1 9 3))
+		(notmuch
+		 (0 21)))
+	       "Search emails with Notmuch and Helm" single
+	       ((:commit . "97a01497e079a7b6505987e9feba6b603bbec288")
+		(:authors
+		 ("Chunyang Xu" . "mail@xuchunyang.me"))
+		(:maintainer "Chunyang Xu" . "mail@xuchunyang.me")
+		(:keywords "mail")
+		(:url . "https://github.com/emacs-helm/helm-notmuch"))])

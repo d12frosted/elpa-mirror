@@ -1,2 +1,13 @@
-
-(evil-tutor-ja . [(20160917 132) ((evil (1 0 9)) (evil-tutor (0 1))) "Japanese Vimtutor adapted to Evil and wrapped in a major-mode" tar ((:commit . "99af7d82e02ce3bcdfaff47c5c80b57327a7ea8d") (:keywords "convenience" "editing" "evil" "japanese") (:authors ("Kenji Miyazaki" . "kenjizmyzk@gmail.com")) (:maintainer "Kenji Miyazaki" . "kenjizmyzk@gmail.com") (:url . "https://github.com/kenjimyzk/evil-tutor-ja"))])
+(evil-tutor-ja .
+	       [(20160917 132)
+		((evil
+		  (1 0 9))
+		 (evil-tutor
+		  (0 1)))
+		"Japanese Vimtutor adapted to Evil and wrapped in a major-mode" tar
+		((:commit . "99af7d82e02ce3bcdfaff47c5c80b57327a7ea8d")
+		 (:authors
+		  ("Kenji Miyazaki" . "kenjizmyzk@gmail.com"))
+		 (:maintainer "Kenji Miyazaki" . "kenjizmyzk@gmail.com")
+		 (:keywords "convenience" "editing" "evil" "japanese")
+		 (:url . "https://github.com/kenjimyzk/evil-tutor-ja"))])

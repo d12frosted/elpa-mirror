@@ -1,21 +1,24 @@
-Automatically configure Flycheck for Haskell.
+;;; Commentary:
 
-Cabal support
+;; Automatically configure Flycheck for Haskell.
 
-Try to find a Cabal file for the current Haskell buffer, and configure syntax
-checking according to the Cabal project settings.
+;;;; Cabal support
 
-Cabal sandboxes
+;; Try to find a Cabal file for the current Haskell buffer, and configure syntax
+;; checking according to the Cabal project settings.
 
-Try to find a Cabal sandbox configuration for this project, and configure the
-Haskell syntax checkers in Flycheck to use the package database from the
-Sandbox.
+;;;; Cabal sandboxes
 
-Stack support
+;; Try to find a Cabal sandbox configuration for this project, and configure the
+;; Haskell syntax checkers in Flycheck to use the package database from the
+;; Sandbox.
 
-Try to find a stack.yaml file for current project and configure stack projct
-according to the Stack project settings.
+;;;; Stack support
 
-Setup
+;; Try to find a stack.yaml file for current project and configure stack projct
+;; according to the Stack project settings.
 
-(add-hook 'flycheck-mode-hook #'flycheck-haskell-setup)
+;;;; Setup
+
+;; (add-hook 'flycheck-mode-hook #'flycheck-haskell-setup)
+

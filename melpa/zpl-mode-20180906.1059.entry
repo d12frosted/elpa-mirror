@@ -1,2 +1,7 @@
-
-(zpl-mode . [(20180906 1059) ((emacs (24 3))) "ZIMPL major mode" single ((:commit . "35e7e23c6baf31b5e65dd7405c8ab9b13c70637e") (:url . "https://github.com/ax487/zpl-mode.git"))])
+(zpl-mode .
+	  [(20180906 1059)
+	   ((emacs
+	     (24 3)))
+	   "ZIMPL major mode" single
+	   ((:commit . "35e7e23c6baf31b5e65dd7405c8ab9b13c70637e")
+	    (:url . "https://github.com/ax487/zpl-mode.git"))])

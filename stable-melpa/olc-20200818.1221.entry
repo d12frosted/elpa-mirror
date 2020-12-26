@@ -1,2 +1,11 @@
-
-(olc . [(20200818 1221) ((emacs (25 1))) "Open location code library" tar ((:commit . "d2dc62dbc3cf6460cc12bd96857a988bc80ac37e") (:keywords "extensions" "lisp") (:authors ("David Byers" . "david.byers@liu.se")) (:maintainer "David Byers" . "david.byers@liu.se") (:url . "https://gitlab.liu.se/davby02/olc"))])
+(olc .
+     [(20200818 1221)
+      ((emacs
+	(25 1)))
+      "Open location code library" tar
+      ((:commit . "d2dc62dbc3cf6460cc12bd96857a988bc80ac37e")
+       (:authors
+	("David Byers" . "david.byers@liu.se"))
+       (:maintainer "David Byers" . "david.byers@liu.se")
+       (:keywords "extensions" "lisp")
+       (:url . "https://gitlab.liu.se/davby02/olc"))])

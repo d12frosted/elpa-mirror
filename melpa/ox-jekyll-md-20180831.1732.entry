@@ -1,2 +1,8 @@
-
-(ox-jekyll-md . [(20180831 1732) nil "Export Jekyll on Markdown articles using org-mode." single ((:commit . "ff7b81733354c2b427293e531bb51647fa84fc88") (:keywords "org" "jekyll") (:authors ("Elsa Gonsiorowski" . "gonsie@me.com")) (:maintainer "Elsa Gonsiorowski" . "gonsie@me.com"))])
+(ox-jekyll-md .
+	      [(20180831 1732)
+	       nil "Export Jekyll on Markdown articles using org-mode." single
+	       ((:commit . "ff7b81733354c2b427293e531bb51647fa84fc88")
+		(:authors
+		 ("Elsa Gonsiorowski" . "gonsie@me.com"))
+		(:maintainer "Elsa Gonsiorowski" . "gonsie@me.com")
+		(:keywords "org" "jekyll"))])

@@ -1,2 +1,15 @@
-
-(omnibox . [(20180423 49) ((emacs (26 1)) (dash (2 13)) (frame-local (0 0 1))) "Selection package" single ((:commit . "8ee75c71c20c438ebc43ba24ef6f543633d118f3") (:keywords "completion" "selection" "convenience" "frames") (:authors ("Sebastien Chapuis" . "sebastien@chapu.is")) (:maintainer "Sebastien Chapuis" . "sebastien@chapu.is") (:url . "https://github.com/sebastiencs/omnibox"))])
+(omnibox .
+	 [(20180423 49)
+	  ((emacs
+	    (26 1))
+	   (dash
+	    (2 13))
+	   (frame-local
+	    (0 0 1)))
+	  "Selection package" single
+	  ((:commit . "8ee75c71c20c438ebc43ba24ef6f543633d118f3")
+	   (:authors
+	    ("Sebastien Chapuis" . "sebastien@chapu.is"))
+	   (:maintainer "Sebastien Chapuis" . "sebastien@chapu.is")
+	   (:keywords "completion" "selection" "convenience" "frames")
+	   (:url . "https://github.com/sebastiencs/omnibox"))])

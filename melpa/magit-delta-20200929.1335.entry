@@ -1,2 +1,14 @@
-
-(magit-delta . [(20200929 1335) ((emacs (25 1)) (magit (20200426)) (xterm-color (2 0))) "Use Delta when displaying diffs in Magit" single ((:commit . "b8526f890415374822514e488341d2b706d6bc2f") (:authors ("Dan Davison" . "dandavison7@gmail.com")) (:maintainer "Dan Davison" . "dandavison7@gmail.com") (:url . "https://github.com/dandavison/magit-delta"))])
+(magit-delta .
+	     [(20200929 1335)
+	      ((emacs
+		(25 1))
+	       (magit
+		(20200426))
+	       (xterm-color
+		(2 0)))
+	      "Use Delta when displaying diffs in Magit" single
+	      ((:commit . "b8526f890415374822514e488341d2b706d6bc2f")
+	       (:authors
+		("Dan Davison" . "dandavison7@gmail.com"))
+	       (:maintainer "Dan Davison" . "dandavison7@gmail.com")
+	       (:url . "https://github.com/dandavison/magit-delta"))])

@@ -1,2 +1,11 @@
-
-(chronometer . [(20190304 1528) ((emacs (24))) "a [not so] simple chronometer" single ((:commit . "8457b296ef87be339cbe47730b922757d60bdcd5") (:keywords "tools" "convenience") (:authors ("Marcelo Toledo" . "marcelo@marcelotoledo.com")) (:maintainer "Marcelo Toledo" . "marcelo@marcelotoledo.com") (:url . "https://github.com/marcelotoledo/chronometer"))])
+(chronometer .
+	     [(20190304 1528)
+	      ((emacs
+		(24)))
+	      "a [not so] simple chronometer" single
+	      ((:commit . "8457b296ef87be339cbe47730b922757d60bdcd5")
+	       (:authors
+		("Marcelo Toledo" . "marcelo@marcelotoledo.com"))
+	       (:maintainer "Marcelo Toledo" . "marcelo@marcelotoledo.com")
+	       (:keywords "tools" "convenience")
+	       (:url . "https://github.com/marcelotoledo/chronometer"))])

@@ -1,2 +1,13 @@
-
-(execline . [(20190711 2010) ((emacs (26 1)) (s (1 6 0))) "Major mode for editing execline scripts" single ((:commit . "c75dd9b2c54d8e59fc35fd4bd98d8e213948a3f5") (:keywords "tools" "unix" "languages") (:authors ("Dmitry Bogatov" . "KAction@debian.org")) (:maintainer "Dmitry Bogatov" . "KAction@debian.org") (:url . "https://gitlab.com/KAction/emacs-execline"))])
+(execline .
+	  [(20190711 2010)
+	   ((emacs
+	     (26 1))
+	    (s
+	     (1 6 0)))
+	   "Major mode for editing execline scripts" single
+	   ((:commit . "c75dd9b2c54d8e59fc35fd4bd98d8e213948a3f5")
+	    (:authors
+	     ("Dmitry Bogatov" . "KAction@debian.org"))
+	    (:maintainer "Dmitry Bogatov" . "KAction@debian.org")
+	    (:keywords "tools" "unix" "languages")
+	    (:url . "https://gitlab.com/KAction/emacs-execline"))])

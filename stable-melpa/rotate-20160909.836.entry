@@ -1,2 +1,9 @@
-
-(rotate . [(20160909 836) nil "Rotate the layout of emacs" single ((:commit . "091b5ac4fc310773253efb317e3dbe8e46959ba6") (:keywords "window" "layout") (:authors ("daichi.hirata <hirata.daichi at gmail.com>")) (:maintainer "daichi.hirata <hirata.daichi at gmail.com>") (:url . "https://github.com/daichirata/emacs-rotate"))])
+(rotate .
+	[(20160909 836)
+	 nil "Rotate the layout of emacs" single
+	 ((:commit . "091b5ac4fc310773253efb317e3dbe8e46959ba6")
+	  (:authors
+	   ("daichi.hirata <hirata.daichi at gmail.com>"))
+	  (:maintainer "daichi.hirata <hirata.daichi at gmail.com>")
+	  (:keywords "window" "layout")
+	  (:url . "https://github.com/daichirata/emacs-rotate"))])

@@ -1,2 +1,13 @@
-
-(dir-treeview . [(20201003 2206) ((emacs (24 4)) (treeview (1 0 0))) "A directory tree browser and simple file manager" tar ((:commit . "1f88a9ddda0b431c79564f91d470e8e308ed3c32") (:keywords "tools" "convenience" "files") (:authors ("Tilman Rassy" . "tilman.rassy@googlemail.com")) (:maintainer "Tilman Rassy" . "tilman.rassy@googlemail.com") (:url . "https://github.com/tilmanrassy/emacs-dir-treeview"))])
+(dir-treeview .
+	      [(20201003 2206)
+	       ((emacs
+		 (24 4))
+		(treeview
+		 (1 0 0)))
+	       "A directory tree browser and simple file manager" tar
+	       ((:commit . "1f88a9ddda0b431c79564f91d470e8e308ed3c32")
+		(:authors
+		 ("Tilman Rassy" . "tilman.rassy@googlemail.com"))
+		(:maintainer "Tilman Rassy" . "tilman.rassy@googlemail.com")
+		(:keywords "tools" "convenience" "files")
+		(:url . "https://github.com/tilmanrassy/emacs-dir-treeview"))])

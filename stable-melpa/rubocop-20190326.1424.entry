@@ -1,2 +1,11 @@
-
-(rubocop . [(20190326 1424) ((emacs (24))) "An Emacs interface for RuboCop" single ((:commit . "03bf15558a6eb65e4f74000cab29412efd46660e") (:keywords "project" "convenience") (:authors ("Bozhidar Batsov")) (:maintainer "Bozhidar Batsov") (:url . "https://github.com/bbatsov/rubocop-emacs"))])
+(rubocop .
+	 [(20190326 1424)
+	  ((emacs
+	    (24)))
+	  "An Emacs interface for RuboCop" single
+	  ((:commit . "03bf15558a6eb65e4f74000cab29412efd46660e")
+	   (:authors
+	    ("Bozhidar Batsov"))
+	   (:maintainer "Bozhidar Batsov")
+	   (:keywords "project" "convenience")
+	   (:url . "https://github.com/bbatsov/rubocop-emacs"))])

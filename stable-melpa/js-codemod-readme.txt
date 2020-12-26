@@ -1,1 +1,4 @@
-Runs js-codemod on current sentence or selected region.
+;;; Commentary:
+
+;; Runs js-codemod on current sentence or selected region.
+

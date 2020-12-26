@@ -1,2 +1,11 @@
-
-(elscreen . [(20181009 451) ((emacs (24))) "Emacs window session manager" tar ((:commit . "cc58337faf5ba1eae7e87f75f6ff3758675688f2") (:keywords "window" "convenience") (:authors ("Naoto Morishima" . "naoto@morishima.net")) (:maintainer "Akinori MUSHA" . "knu@iDaemons.org") (:url . "https://github.com/knu/elscreen"))])
+(elscreen .
+	  [(20181009 451)
+	   ((emacs
+	     (24)))
+	   "Emacs window session manager" tar
+	   ((:commit . "cc58337faf5ba1eae7e87f75f6ff3758675688f2")
+	    (:authors
+	     ("Naoto Morishima" . "naoto@morishima.net"))
+	    (:maintainer "Akinori MUSHA" . "knu@iDaemons.org")
+	    (:keywords "window" "convenience")
+	    (:url . "https://github.com/knu/elscreen"))])

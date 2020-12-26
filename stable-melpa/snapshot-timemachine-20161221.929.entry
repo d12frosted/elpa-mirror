@@ -1,2 +1,10 @@
-
-(snapshot-timemachine . [(20161221 929) ((emacs (24 4))) "Step through (Btrfs, ZFS, ...) snapshots of files" single ((:commit . "99efcebab309b11ed512a8dc62555d3834df5efb") (:authors ("Thomas Winant" . "dewinant@gmail.com")) (:maintainer "Thomas Winant" . "dewinant@gmail.com") (:url . "https://github.com/mrBliss/snapshot-timemachine"))])
+(snapshot-timemachine .
+		      [(20161221 929)
+		       ((emacs
+			 (24 4)))
+		       "Step through (Btrfs, ZFS, ...) snapshots of files" single
+		       ((:commit . "99efcebab309b11ed512a8dc62555d3834df5efb")
+			(:authors
+			 ("Thomas Winant" . "dewinant@gmail.com"))
+			(:maintainer "Thomas Winant" . "dewinant@gmail.com")
+			(:url . "https://github.com/mrBliss/snapshot-timemachine"))])

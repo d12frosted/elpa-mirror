@@ -1,1 +1,4 @@
-Display Google Maps directly inside Emacs.
+;;; Commentary:
+
+;; Display Google Maps directly inside Emacs.
+

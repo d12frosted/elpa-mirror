@@ -1,2 +1,13 @@
-
-(micgoline . [(20160415 326) ((emacs (24 3)) (powerline (2 3))) "powerline mode, color schemes from microsoft and google's logo." single ((:commit . "837504263bb1711203b0f7efecd6b7b5f272fae0") (:keywords "mode-line" "powerline" "theme") (:authors ("yzprofile" . "yzprofiles@gmail.com")) (:maintainer "yzprofile" . "yzprofiles@gmail.com") (:url . "https://github.com/yzprofile/micgoline"))])
+(micgoline .
+	   [(20160415 326)
+	    ((emacs
+	      (24 3))
+	     (powerline
+	      (2 3)))
+	    "powerline mode, color schemes from microsoft and google's logo." single
+	    ((:commit . "837504263bb1711203b0f7efecd6b7b5f272fae0")
+	     (:authors
+	      ("yzprofile" . "yzprofiles@gmail.com"))
+	     (:maintainer "yzprofile" . "yzprofiles@gmail.com")
+	     (:keywords "mode-line" "powerline" "theme")
+	     (:url . "https://github.com/yzprofile/micgoline"))])

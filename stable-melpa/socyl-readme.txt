@@ -1,10 +1,13 @@
-Provides a frontend for several search tools
+;;; Commentary:
 
-Installation:
+;; Provides a frontend for several search tools
 
-Available as a package in melpa
+;;; Installation:
 
-(add-to-list 'package-archives
-             '("melpa" . "https://stable.melpa.org/packages/") t)
+;; Available as a package in melpa
 
-M-x package-install socyl
+;; (add-to-list 'package-archives
+;;              '("melpa" . "https://stable.melpa.org/packages/") t)
+;;
+;; M-x package-install socyl
+

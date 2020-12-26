@@ -1,2 +1,15 @@
-
-(dklrt . [(20131110 1341) ((dkmisc (0 50)) (ledger-mode (20130908 1357)) (emacs (24 1))) "Ledger Recurring Transactions." tar ((:commit . "5d6c99f8018335256ab934b4c1049708ae2d48ba"))])
+(dklrt .
+       [(20131110 1341)
+	((dkmisc
+	  (0 50))
+	 (ledger-mode
+	  (20130908 1357))
+	 (emacs
+	  (24 1)))
+	"Ledger Recurring Transactions." tar
+	((:commit . "5d6c99f8018335256ab934b4c1049708ae2d48ba")
+	 (:authors
+	  ("David Keegan" . "dksw@eircom.net"))
+	 (:maintainer "David Keegan" . "dksw@eircom.net")
+	 (:keywords "ledger" "ledger-cli" "recurring" "periodic" "automatic")
+	 (:url . "https://github.com/davidkeegan/dklrt"))])

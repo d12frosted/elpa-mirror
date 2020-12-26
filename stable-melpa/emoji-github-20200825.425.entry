@@ -1,2 +1,14 @@
-
-(emoji-github . [(20200825 425) ((emacs (24 4)) (emojify (1 0)) (request (0 3 0))) "Display list of GitHub's emoji.  (cheat sheet)" single ((:commit . "d512c2babb412820945444c6daf309b470e2eb12") (:authors ("Shen, Jen-Chieh" . "jcs090218@gmail.com")) (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com") (:url . "https://github.com/jcs-elpa/emoji-github"))])
+(emoji-github .
+	      [(20200825 425)
+	       ((emacs
+		 (24 4))
+		(emojify
+		 (1 0))
+		(request
+		 (0 3 0)))
+	       "Display list of GitHub's emoji.  (cheat sheet)" single
+	       ((:commit . "d512c2babb412820945444c6daf309b470e2eb12")
+		(:authors
+		 ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		(:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		(:url . "https://github.com/jcs-elpa/emoji-github"))])

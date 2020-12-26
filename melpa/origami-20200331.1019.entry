@@ -1,2 +1,17 @@
-
-(origami . [(20200331 1019) ((s (1 9 0)) (dash (2 5 0)) (emacs (24)) (cl-lib (0 5))) "Flexible text folding" tar ((:commit . "e558710a975e8511b9386edc81cd6bdd0a5bda74") (:keywords "folding") (:authors ("Greg Sexton" . "gregsexton@gmail.com")) (:maintainer "Greg Sexton" . "gregsexton@gmail.com") (:url . "https://github.com/gregsexton/origami.el"))])
+(origami .
+	 [(20200331 1019)
+	  ((s
+	    (1 9 0))
+	   (dash
+	    (2 5 0))
+	   (emacs
+	    (24))
+	   (cl-lib
+	    (0 5)))
+	  "Flexible text folding" tar
+	  ((:commit . "e558710a975e8511b9386edc81cd6bdd0a5bda74")
+	   (:authors
+	    ("Greg Sexton" . "gregsexton@gmail.com"))
+	   (:maintainer "Greg Sexton" . "gregsexton@gmail.com")
+	   (:keywords "folding")
+	   (:url . "https://github.com/gregsexton/origami.el"))])

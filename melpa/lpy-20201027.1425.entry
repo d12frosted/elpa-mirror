@@ -1,2 +1,13 @@
-
-(lpy . [(20201027 1425) ((emacs (25 1)) (lispy (0 27 0))) "A lispy interface to Python" tar ((:commit . "c3da907fdc1c7da8b0c19721605bf63d9d1be404") (:keywords "python" "lisp") (:authors ("Oleh Krehel" . "ohwoeowho@gmail.com")) (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com") (:url . "https://github.com/abo-abo/lpy"))])
+(lpy .
+     [(20201027 1425)
+      ((emacs
+	(25 1))
+       (lispy
+	(0 27 0)))
+      "A lispy interface to Python" tar
+      ((:commit . "c3da907fdc1c7da8b0c19721605bf63d9d1be404")
+       (:authors
+	("Oleh Krehel" . "ohwoeowho@gmail.com"))
+       (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
+       (:keywords "python" "lisp")
+       (:url . "https://github.com/abo-abo/lpy"))])

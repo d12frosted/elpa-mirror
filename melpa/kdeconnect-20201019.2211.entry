@@ -1,2 +1,8 @@
-
-(kdeconnect . [(20201019 2211) nil "An interface for KDE Connect" single ((:commit . "0f84d916bece8cc4dbfc67a95851f560c5e8e47b") (:keywords "kdeconnect" "android") (:authors ("Carl Lieberman" . "dev@carl.ac")) (:maintainer "Carl Lieberman" . "dev@carl.ac"))])
+(kdeconnect .
+	    [(20201019 2211)
+	     nil "An interface for KDE Connect" single
+	     ((:commit . "0f84d916bece8cc4dbfc67a95851f560c5e8e47b")
+	      (:authors
+	       ("Carl Lieberman" . "dev@carl.ac"))
+	      (:maintainer "Carl Lieberman" . "dev@carl.ac")
+	      (:keywords "kdeconnect" "android"))])

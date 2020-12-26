@@ -1,2 +1,13 @@
-
-(honcho . [(20190623 2120) ((emacs (25 1)) (sudo-edit (0 1))) "Run and manage long-running services" single ((:commit . "d5e6206dd23ff9305d976c52845c750a064aca4b") (:keywords "convenience") (:authors ("Mario Rodas" . "marsam@users.noreply.github.com")) (:maintainer "Mario Rodas" . "marsam@users.noreply.github.com") (:url . "https://github.com/emacs-pe/honcho.el"))])
+(honcho .
+	[(20190623 2120)
+	 ((emacs
+	   (25 1))
+	  (sudo-edit
+	   (0 1)))
+	 "Run and manage long-running services" single
+	 ((:commit . "d5e6206dd23ff9305d976c52845c750a064aca4b")
+	  (:authors
+	   ("Mario Rodas" . "marsam@users.noreply.github.com"))
+	  (:maintainer "Mario Rodas" . "marsam@users.noreply.github.com")
+	  (:keywords "convenience")
+	  (:url . "https://github.com/emacs-pe/honcho.el"))])

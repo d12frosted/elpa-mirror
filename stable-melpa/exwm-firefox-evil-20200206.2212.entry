@@ -1,2 +1,17 @@
-
-(exwm-firefox-evil . [(20200206 2212) ((emacs (24 4)) (exwm (0 16)) (evil (1 0 0)) (exwm-firefox-core (1 0))) "evil-mode implementation of exwm-firefox-core" single ((:commit . "14643ee53a506ddcb5d2e06cb9f1be7310cd00b1") (:keywords "extensions") (:authors ("Sebastian Wålinder" . "s.walinder@gmail.com")) (:maintainer "Sebastian Wålinder" . "s.walinder@gmail.com") (:url . "https://github.com/walseb/exwm-firefox-evil"))])
+(exwm-firefox-evil .
+		   [(20200206 2212)
+		    ((emacs
+		      (24 4))
+		     (exwm
+		      (0 16))
+		     (evil
+		      (1 0 0))
+		     (exwm-firefox-core
+		      (1 0)))
+		    "evil-mode implementation of exwm-firefox-core" single
+		    ((:commit . "14643ee53a506ddcb5d2e06cb9f1be7310cd00b1")
+		     (:authors
+		      ("Sebastian Wålinder" . "s.walinder@gmail.com"))
+		     (:maintainer "Sebastian Wålinder" . "s.walinder@gmail.com")
+		     (:keywords "extensions")
+		     (:url . "https://github.com/walseb/exwm-firefox-evil"))])

@@ -1,2 +1,10 @@
-
-(cc-cedict . [(20200705 443) ((emacs (26 1))) "Interface to CC-CEDICT (a Chinese-English dictionary)" single ((:commit . "6bb9481e48b889503626b4e3cb7cfec8d14cbf4b") (:authors ("Xu Chunyang")) (:maintainer "Xu Chunyang") (:url . "https://github.com/xuchunyang/cc-cedict.el"))])
+(cc-cedict .
+	   [(20200705 443)
+	    ((emacs
+	      (26 1)))
+	    "Interface to CC-CEDICT (a Chinese-English dictionary)" single
+	    ((:commit . "6bb9481e48b889503626b4e3cb7cfec8d14cbf4b")
+	     (:authors
+	      ("Xu Chunyang"))
+	     (:maintainer "Xu Chunyang")
+	     (:url . "https://github.com/xuchunyang/cc-cedict.el"))])

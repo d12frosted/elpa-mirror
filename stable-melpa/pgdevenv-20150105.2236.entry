@@ -1,2 +1,8 @@
-
-(pgdevenv . [(20150105 2236) nil "Manage your PostgreSQL development envs" tar ((:commit . "7f1d5bc734750aca98cf67a9491cdbd5615fd132") (:keywords "emacs" "postgresql" "development" "environment" "shell" "debug" "gdb") (:authors ("Dimitri Fontaine" . "dim@tapoueh.org")) (:maintainer "Dimitri Fontaine" . "dim@tapoueh.org"))])
+(pgdevenv .
+	  [(20150105 2236)
+	   nil "Manage your PostgreSQL development envs" tar
+	   ((:commit . "7f1d5bc734750aca98cf67a9491cdbd5615fd132")
+	    (:authors
+	     ("Dimitri Fontaine" . "dim@tapoueh.org"))
+	    (:maintainer "Dimitri Fontaine" . "dim@tapoueh.org")
+	    (:keywords "emacs" "postgresql" "development" "environment" "shell" "debug" "gdb"))])

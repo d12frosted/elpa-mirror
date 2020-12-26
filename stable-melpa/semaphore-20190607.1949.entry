@@ -1,2 +1,11 @@
-
-(semaphore . [(20190607 1949) ((emacs (26))) "Semaphore based on condition variables" single ((:commit . "a069b69018b96d284ce7553cd63350a88ea3679c") (:keywords "processes" "unix") (:authors ("Herwig Hochleitner" . "herwig@bendlas.net")) (:maintainer "Herwig Hochleitner" . "herwig@bendlas.net") (:url . "http://github.com/webnf/semaphore.el"))])
+(semaphore .
+	   [(20190607 1949)
+	    ((emacs
+	      (26)))
+	    "Semaphore based on condition variables" single
+	    ((:commit . "a069b69018b96d284ce7553cd63350a88ea3679c")
+	     (:authors
+	      ("Herwig Hochleitner" . "herwig@bendlas.net"))
+	     (:maintainer "Herwig Hochleitner" . "herwig@bendlas.net")
+	     (:keywords "processes" "unix")
+	     (:url . "http://github.com/webnf/semaphore.el"))])

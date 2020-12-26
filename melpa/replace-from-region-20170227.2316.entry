@@ -1,2 +1,9 @@
-
-(replace-from-region . [(20170227 2316) nil "Replace commands whose query is from region" single ((:commit . "dc9318b9b2822da7b00ecc34d1dc965c8f96c9bb") (:keywords "replace" "search" "region") (:authors ("rubikitch" . "rubikitch@ruby-lang.org")) (:maintainer "rubikitch" . "rubikitch@ruby-lang.org") (:url . "http://www.emacswiki.org/emacs/download/replace-from-region.el"))])
+(replace-from-region .
+		     [(20170227 2316)
+		      nil "Replace commands whose query is from region" single
+		      ((:commit . "dc9318b9b2822da7b00ecc34d1dc965c8f96c9bb")
+		       (:authors
+			("rubikitch" . "rubikitch@ruby-lang.org"))
+		       (:maintainer "rubikitch" . "rubikitch@ruby-lang.org")
+		       (:keywords "replace" "search" "region")
+		       (:url . "http://www.emacswiki.org/emacs/download/replace-from-region.el"))])

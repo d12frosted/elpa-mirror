@@ -1,2 +1,11 @@
-
-(ctune . [(20190914 1305) ((emacs (26 1))) "Tune out CC Mode Noise Macros" tar ((:commit . "d7643461f5aa33cc04e4d808123e4ed1d85500ee") (:keywords "c" "convenience") (:authors ("Mauro Aranda" . "maurooaranda@gmail.com")) (:maintainer "Mauro Aranda" . "maurooaranda@gmail.com") (:url . "https://github.com/maurooaranda/ctune"))])
+(ctune .
+       [(20190914 1305)
+	((emacs
+	  (26 1)))
+	"Tune out CC Mode Noise Macros" tar
+	((:commit . "d7643461f5aa33cc04e4d808123e4ed1d85500ee")
+	 (:authors
+	  ("Mauro Aranda" . "maurooaranda@gmail.com"))
+	 (:maintainer "Mauro Aranda" . "maurooaranda@gmail.com")
+	 (:keywords "c" "convenience")
+	 (:url . "https://github.com/maurooaranda/ctune"))])

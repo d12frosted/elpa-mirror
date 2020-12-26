@@ -1,2 +1,9 @@
-
-(pathify . [(20160423 846) nil "Symlink your scripts into a PATH directory" single ((:commit . "401b184c743694a60b3bc4273fc43de05cd5ac4b") (:keywords "convenience") (:authors ("Alex Kost" . "alezost@gmail.com")) (:maintainer "Alex Kost" . "alezost@gmail.com") (:url . "https://gitlab.com/alezost-emacs/pathify"))])
+(pathify .
+	 [(20160423 846)
+	  nil "Symlink your scripts into a PATH directory" single
+	  ((:commit . "401b184c743694a60b3bc4273fc43de05cd5ac4b")
+	   (:authors
+	    ("Alex Kost" . "alezost@gmail.com"))
+	   (:maintainer "Alex Kost" . "alezost@gmail.com")
+	   (:keywords "convenience")
+	   (:url . "https://gitlab.com/alezost-emacs/pathify"))])

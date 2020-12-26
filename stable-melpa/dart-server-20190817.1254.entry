@@ -1,2 +1,20 @@
-
-(dart-server . [(20190817 1254) ((emacs (24 5)) (cl-lib (0 5)) (dash (2 10 0)) (flycheck (0 23)) (s (1 10))) "Minor mode for editing Dart files" single ((:commit . "aba838e8ee2f30309f366e8a91c17616549003ce") (:keywords "languages") (:authors ("Natalie Weizenbaum") ("Brady Trainor" . "mail@bradyt.com")) (:maintainer "Brady Trainor" . "mail@bradyt.com") (:url . "https://github.com/bradyt/dart-server"))])
+(dart-server .
+	     [(20190817 1254)
+	      ((emacs
+		(24 5))
+	       (cl-lib
+		(0 5))
+	       (dash
+		(2 10 0))
+	       (flycheck
+		(0 23))
+	       (s
+		(1 10)))
+	      "Minor mode for editing Dart files" single
+	      ((:commit . "aba838e8ee2f30309f366e8a91c17616549003ce")
+	       (:authors
+		("Natalie Weizenbaum")
+		("Brady Trainor" . "mail@bradyt.com"))
+	       (:maintainer "Brady Trainor" . "mail@bradyt.com")
+	       (:keywords "languages")
+	       (:url . "https://github.com/bradyt/dart-server"))])

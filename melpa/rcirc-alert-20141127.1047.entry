@@ -1,2 +1,6 @@
-
-(rcirc-alert . [(20141127 1047) nil "Configurable alert messages on top of RCIRC" tar ((:commit . "0adf8ff9c47023fec578f678424be62b0f49057f") (:keywords "lisp" "rcirc" "irc" "alert" "awesome") (:maintainer "Cayetano Santos"))])
+(rcirc-alert .
+	     [(20141127 1047)
+	      nil "Configurable alert messages on top of RCIRC" tar
+	      ((:commit . "0adf8ff9c47023fec578f678424be62b0f49057f")
+	       (:maintainer "Cayetano Santos")
+	       (:keywords "lisp" "rcirc" "irc" "alert" "awesome"))])

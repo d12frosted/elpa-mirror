@@ -1,2 +1,11 @@
-
-(evil-quickscope . [(20160202 1924) ((evil (0))) "Highlight unique characters in words for f,F,t,T navigation" single ((:commit . "37a20e4c56c6058abf186ad4013c155e695e876f") (:keywords "faces" "emulation" "vim" "evil") (:authors ("Michael Chen" . "blorbx@gmail.com")) (:maintainer "Michael Chen" . "blorbx@gmail.com") (:url . "http://github.com/blorbx/evil-quickscope"))])
+(evil-quickscope .
+		 [(20160202 1924)
+		  ((evil
+		    (0)))
+		  "Highlight unique characters in words for f,F,t,T navigation" single
+		  ((:commit . "37a20e4c56c6058abf186ad4013c155e695e876f")
+		   (:authors
+		    ("Michael Chen" . "blorbx@gmail.com"))
+		   (:maintainer "Michael Chen" . "blorbx@gmail.com")
+		   (:keywords "faces" "emulation" "vim" "evil")
+		   (:url . "http://github.com/blorbx/evil-quickscope"))])

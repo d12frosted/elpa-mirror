@@ -1,2 +1,13 @@
-
-(coverlay . [(20190414 940) ((emacs (24 1)) (cl-lib (0 5))) "Test coverage overlays" single ((:commit . "0beae208d0e7d746a94385428bd61aa5cd7ea828") (:keywords "coverage" "overlay") (:authors ("Takuto Wada <takuto.wada at gmail com>")) (:maintainer "Takuto Wada <takuto.wada at gmail com>") (:url . "https://github.com/twada/coverlay.el"))])
+(coverlay .
+	  [(20190414 940)
+	   ((emacs
+	     (24 1))
+	    (cl-lib
+	     (0 5)))
+	   "Test coverage overlays" single
+	   ((:commit . "0beae208d0e7d746a94385428bd61aa5cd7ea828")
+	    (:authors
+	     ("Takuto Wada <takuto.wada at gmail com>"))
+	    (:maintainer "Takuto Wada <takuto.wada at gmail com>")
+	    (:keywords "coverage" "overlay")
+	    (:url . "https://github.com/twada/coverlay.el"))])

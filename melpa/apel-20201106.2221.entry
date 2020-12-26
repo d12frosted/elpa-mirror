@@ -1,2 +1,6 @@
-
-(apel . [(20201106 2221) ((emacs (24 5))) "A Portable Emacs Library provides support for portable Emacs Lisp programs" tar ((:commit . "4e3269b6e702db2dba48cf560563ac883e81e3bf"))])
+(apel .
+      [(20201106 2221)
+       ((emacs
+	 (24 5)))
+       "A Portable Emacs Library provides support for portable Emacs Lisp programs" tar
+       ((:commit . "4e3269b6e702db2dba48cf560563ac883e81e3bf"))])

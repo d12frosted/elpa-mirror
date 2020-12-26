@@ -1,1 +1,4 @@
-`lsp-mode' and `treemacs' integration.
+;;; Commentary:
+
+;; `lsp-mode' and `treemacs' integration.
+

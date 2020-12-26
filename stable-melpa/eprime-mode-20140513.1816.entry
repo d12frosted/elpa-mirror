@@ -1,2 +1,9 @@
-
-(eprime-mode . [(20140513 1816) nil "An E-prime checking mode for Emacs" single ((:commit . "17a481af26496be91c07139a9bfc05cfe722506f") (:keywords "e-prime" "english" "grammar") (:authors ("Andrew Hynes" . "andrewhynes@openmailbox.org")) (:maintainer "Andrew Hynes" . "andrewhynes@openmailbox.org") (:url . "https://github.com/AndrewHynes/eprime-mode"))])
+(eprime-mode .
+	     [(20140513 1816)
+	      nil "An E-prime checking mode for Emacs" single
+	      ((:commit . "17a481af26496be91c07139a9bfc05cfe722506f")
+	       (:authors
+		("Andrew Hynes" . "andrewhynes@openmailbox.org"))
+	       (:maintainer "Andrew Hynes" . "andrewhynes@openmailbox.org")
+	       (:keywords "e-prime" "english" "grammar")
+	       (:url . "https://github.com/AndrewHynes/eprime-mode"))])

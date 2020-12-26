@@ -1,2 +1,9 @@
-
-(kerl . [(20150424 2005) nil "Emacs integration for kerl" single ((:commit . "1732ee26213f021bf040919c45ad276aafcaae14") (:keywords "tools") (:authors ("Correl Roush" . "correl@gmail.com")) (:maintainer "Correl Roush" . "correl@gmail.com") (:url . "http://github.com/correl/kerl.el/"))])
+(kerl .
+      [(20150424 2005)
+       nil "Emacs integration for kerl" single
+       ((:commit . "1732ee26213f021bf040919c45ad276aafcaae14")
+	(:authors
+	 ("Correl Roush" . "correl@gmail.com"))
+	(:maintainer "Correl Roush" . "correl@gmail.com")
+	(:keywords "tools")
+	(:url . "http://github.com/correl/kerl.el/"))])

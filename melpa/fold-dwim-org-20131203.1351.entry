@@ -1,2 +1,11 @@
-
-(fold-dwim-org . [(20131203 1351) ((fold-dwim (1 2))) "Fold DWIM bound to org key-strokes." single ((:commit . "c09bb2b46d65afbd1d0febc6fded7495be7a3037") (:keywords "folding" "emacs" "org-mode") (:authors ("Matthew L. Fidler & Shane Celis")) (:maintainer "Matthew L. Fidler") (:url . "https://github.com/mlf176f2/fold-dwim-org"))])
+(fold-dwim-org .
+	       [(20131203 1351)
+		((fold-dwim
+		  (1 2)))
+		"Fold DWIM bound to org key-strokes." single
+		((:commit . "c09bb2b46d65afbd1d0febc6fded7495be7a3037")
+		 (:authors
+		  ("Matthew L. Fidler & Shane Celis"))
+		 (:maintainer "Matthew L. Fidler")
+		 (:keywords "folding" "emacs" "org-mode")
+		 (:url . "https://github.com/mlf176f2/fold-dwim-org"))])

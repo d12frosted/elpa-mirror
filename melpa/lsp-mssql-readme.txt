@@ -1,1 +1,3 @@
-lsp-mode client for MSSQL language server.
+;;; Commentary:
+;; lsp-mode client for MSSQL language server.
+

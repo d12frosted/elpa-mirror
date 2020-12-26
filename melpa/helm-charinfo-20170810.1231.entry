@@ -1,2 +1,15 @@
-
-(helm-charinfo . [(20170810 1231) ((emacs (24)) (helm (1 7 0)) (cl-lib (0 5))) "A helm source for character information" single ((:commit . "91798a49dc115342a7e01e48b264e9a0bf5ea414") (:keywords "convenience") (:authors ("Christian Wittern" . "cwittern@gmail.com")) (:maintainer "Christian Wittern" . "cwittern@gmail.com") (:url . "https://github.com/cwittern/helm-charinfo"))])
+(helm-charinfo .
+	       [(20170810 1231)
+		((emacs
+		  (24))
+		 (helm
+		  (1 7 0))
+		 (cl-lib
+		  (0 5)))
+		"A helm source for character information" single
+		((:commit . "91798a49dc115342a7e01e48b264e9a0bf5ea414")
+		 (:authors
+		  ("Christian Wittern" . "cwittern@gmail.com"))
+		 (:maintainer "Christian Wittern" . "cwittern@gmail.com")
+		 (:keywords "convenience")
+		 (:url . "https://github.com/cwittern/helm-charinfo"))])

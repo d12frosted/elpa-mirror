@@ -1,2 +1,15 @@
-
-(org-onenote . [(20171008 500) ((oauth2 (0 11)) (request (0 2 0)) (org (8 2 10))) "export org-mode document to onenote." single ((:commit . "5ce5cf4edb143180e0b185ac26826d39ae5bc929") (:keywords "tools" "docs" "org-mode" "onenote") (:authors ("Frei Zhang" . "ifree0@gmail.com")) (:maintainer "Frei Zhang" . "ifree0@gmail.com") (:url . "https://github.com/ifree/org-onenote"))])
+(org-onenote .
+	     [(20171008 500)
+	      ((oauth2
+		(0 11))
+	       (request
+		(0 2 0))
+	       (org
+		(8 2 10)))
+	      "export org-mode document to onenote." single
+	      ((:commit . "5ce5cf4edb143180e0b185ac26826d39ae5bc929")
+	       (:authors
+		("Frei Zhang" . "ifree0@gmail.com"))
+	       (:maintainer "Frei Zhang" . "ifree0@gmail.com")
+	       (:keywords "tools" "docs" "org-mode" "onenote")
+	       (:url . "https://github.com/ifree/org-onenote"))])

@@ -1,2 +1,14 @@
-
-(kaleidoscope-evil-state-flash . [(20170728 1020) ((evil (1 2 12)) (kaleidoscope (0 1 0)) (s (1 11 0))) "Flash keyboard LEDs when changing Evil state" single ((:commit . "52b5be3277f65cb5ca657973e9bd7f914b996356") (:authors ("Gergely Nagy")) (:maintainer "Gergely Nagy") (:url . "https://github.com/algernon/kaleidoscope.el"))])
+(kaleidoscope-evil-state-flash .
+			       [(20170728 1020)
+				((evil
+				  (1 2 12))
+				 (kaleidoscope
+				  (0 1 0))
+				 (s
+				  (1 11 0)))
+				"Flash keyboard LEDs when changing Evil state" single
+				((:commit . "52b5be3277f65cb5ca657973e9bd7f914b996356")
+				 (:authors
+				  ("Gergely Nagy"))
+				 (:maintainer "Gergely Nagy")
+				 (:url . "https://github.com/algernon/kaleidoscope.el"))])

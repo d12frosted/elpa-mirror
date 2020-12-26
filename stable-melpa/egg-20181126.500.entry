@@ -1,2 +1,8 @@
-
-(egg . [(20181126 500) nil "Emacs Got Git - Emacs interface to Git" tar ((:commit . "00e768a78ac3d25f457eed667d02cac568480bf9") (:keywords "git" "version control" "release management") (:authors ("Bogolisk" . "bogolisk@gmail.com")) (:maintainer "Bogolisk" . "bogolisk@gmail.com"))])
+(egg .
+     [(20181126 500)
+      nil "Emacs Got Git - Emacs interface to Git" tar
+      ((:commit . "00e768a78ac3d25f457eed667d02cac568480bf9")
+       (:authors
+	("Bogolisk" . "bogolisk@gmail.com"))
+       (:maintainer "Bogolisk" . "bogolisk@gmail.com")
+       (:keywords "git" "version control" "release management"))])

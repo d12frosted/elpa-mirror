@@ -1,2 +1,21 @@
-
-(liquid-types . [(20151202 735) ((flycheck (0 13)) (dash (1 2)) (emacs (24 1)) (popup (0 5 2)) (pos-tip (0 5 0)) (flycheck-liquidhs (0 0 1)) (button-lock (1 0 2))) "show inferred liquid-types" single ((:commit . "cc4bacbbf204ef9cf0756f78dfebee2c6ae14d7b") (:authors ("Ranjit Jhala" . "jhala@cs.ucsd.edu")) (:maintainer "Ranjit Jhala" . "jhala@cs.ucsd.edu"))])
+(liquid-types .
+	      [(20151202 735)
+	       ((flycheck
+		 (0 13))
+		(dash
+		 (1 2))
+		(emacs
+		 (24 1))
+		(popup
+		 (0 5 2))
+		(pos-tip
+		 (0 5 0))
+		(flycheck-liquidhs
+		 (0 0 1))
+		(button-lock
+		 (1 0 2)))
+	       "show inferred liquid-types" single
+	       ((:commit . "cc4bacbbf204ef9cf0756f78dfebee2c6ae14d7b")
+		(:authors
+		 ("Ranjit Jhala" . "jhala@cs.ucsd.edu"))
+		(:maintainer "Ranjit Jhala" . "jhala@cs.ucsd.edu"))])

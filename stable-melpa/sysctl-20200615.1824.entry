@@ -1,2 +1,11 @@
-
-(sysctl . [(20200615 1824) ((emacs (26))) "Manage sysctl though org-mode" single ((:commit . "d8c2e18de1d7a3b2999a4d5054c0bbf30cb10fed") (:keywords "sysctl" "tools" "unix") (:authors ("Dante Catalfamo")) (:maintainer "Dante Catalfamo") (:url . "https://github.com/dantecatalfamo/sysctl.el"))])
+(sysctl .
+	[(20200615 1824)
+	 ((emacs
+	   (26)))
+	 "Manage sysctl though org-mode" single
+	 ((:commit . "d8c2e18de1d7a3b2999a4d5054c0bbf30cb10fed")
+	  (:authors
+	   ("Dante Catalfamo"))
+	  (:maintainer "Dante Catalfamo")
+	  (:keywords "sysctl" "tools" "unix")
+	  (:url . "https://github.com/dantecatalfamo/sysctl.el"))])

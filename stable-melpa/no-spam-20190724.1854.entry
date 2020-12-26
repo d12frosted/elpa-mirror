@@ -1,2 +1,11 @@
-
-(no-spam . [(20190724 1854) ((emacs (25 1))) "Add repeat delays to commands" single ((:commit . "860860e4a0d59bd15c8e092dc42f5f7f769a428e") (:keywords "keyboard" "tools") (:authors ("Daniel Phan" . "daniel.phan36@gmail.com")) (:maintainer "Daniel Phan" . "daniel.phan36@gmail.com") (:url . "https://github.com/mamapanda/no-spam"))])
+(no-spam .
+	 [(20190724 1854)
+	  ((emacs
+	    (25 1)))
+	  "Add repeat delays to commands" single
+	  ((:commit . "860860e4a0d59bd15c8e092dc42f5f7f769a428e")
+	   (:authors
+	    ("Daniel Phan" . "daniel.phan36@gmail.com"))
+	   (:maintainer "Daniel Phan" . "daniel.phan36@gmail.com")
+	   (:keywords "keyboard" "tools")
+	   (:url . "https://github.com/mamapanda/no-spam"))])

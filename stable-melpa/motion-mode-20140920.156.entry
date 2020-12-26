@@ -1,2 +1,12 @@
-
-(motion-mode . [(20140920 156) ((flymake-easy (0 7)) (flymake-cursor (1 0 2))) "major mode for RubyMotion enviroment" tar ((:commit . "4c94180e3ecea611a61240a0c0cd48f1032c4a55") (:authors ("Satoshi Namai")) (:maintainer "Satoshi Namai") (:url . "https://github.com/ainame/motion-mode"))])
+(motion-mode .
+	     [(20140920 156)
+	      ((flymake-easy
+		(0 7))
+	       (flymake-cursor
+		(1 0 2)))
+	      "major mode for RubyMotion enviroment" tar
+	      ((:commit . "4c94180e3ecea611a61240a0c0cd48f1032c4a55")
+	       (:authors
+		("Satoshi Namai"))
+	       (:maintainer "Satoshi Namai")
+	       (:url . "https://github.com/ainame/motion-mode"))])

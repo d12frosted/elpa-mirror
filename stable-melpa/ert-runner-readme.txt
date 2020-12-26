@@ -1,1 +1,4 @@
-Opinionated Ert testing workflow.
+;;; Commentary:
+
+;; Opinionated Ert testing workflow.
+

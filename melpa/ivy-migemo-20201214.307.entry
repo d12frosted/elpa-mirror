@@ -1,2 +1,15 @@
-
-(ivy-migemo . [(20201214 307) ((emacs (24 3)) (ivy (0 13 0)) (migemo (1 9 2))) "Use migemo on ivy" single ((:commit . "0f34245dae2f890c685be767e3dc2c24c65dfe28") (:keywords "matching") (:authors ("ROCKTAKEY" . "rocktakey@gmail.com")) (:maintainer "ROCKTAKEY" . "rocktakey@gmail.com") (:url . "https://github.com/ROCKTAKEY/ivy-migemo"))])
+(ivy-migemo .
+	    [(20201214 307)
+	     ((emacs
+	       (24 3))
+	      (ivy
+	       (0 13 0))
+	      (migemo
+	       (1 9 2)))
+	     "Use migemo on ivy" single
+	     ((:commit . "0f34245dae2f890c685be767e3dc2c24c65dfe28")
+	      (:authors
+	       ("ROCKTAKEY" . "rocktakey@gmail.com"))
+	      (:maintainer "ROCKTAKEY" . "rocktakey@gmail.com")
+	      (:keywords "matching")
+	      (:url . "https://github.com/ROCKTAKEY/ivy-migemo"))])

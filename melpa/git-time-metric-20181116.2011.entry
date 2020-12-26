@@ -1,2 +1,9 @@
-
-(git-time-metric . [(20181116 2011) nil "Provide function to record time with gtm ( git time metric )" single ((:commit . "287108ed1d6885dc795eb3bad4476aa08c626186") (:keywords "tools" "gtm" "productivity" "time") (:authors ("Anton Sivolapov" . "anton.sivolapov@gmail.com")) (:maintainer "Anton Sivolapov" . "anton.sivolapov@gmail.com") (:url . "https://github.com/c301/gtm-emacs-plugin"))])
+(git-time-metric .
+		 [(20181116 2011)
+		  nil "Provide function to record time with gtm ( git time metric )" single
+		  ((:commit . "287108ed1d6885dc795eb3bad4476aa08c626186")
+		   (:authors
+		    ("Anton Sivolapov" . "anton.sivolapov@gmail.com"))
+		   (:maintainer "Anton Sivolapov" . "anton.sivolapov@gmail.com")
+		   (:keywords "tools" "gtm" "productivity" "time")
+		   (:url . "https://github.com/c301/gtm-emacs-plugin"))])

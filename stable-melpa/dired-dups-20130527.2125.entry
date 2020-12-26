@@ -1,2 +1,9 @@
-
-(dired-dups . [(20130527 2125) nil "Find duplicate files and display them in a dired buffer" single ((:commit . "694ad128c822c59348ced16c4a0c1356d43da47a") (:keywords "unix") (:authors ("Joe Bloggs" . "vapniks@yahoo.com")) (:maintainer "Joe Bloggs" . "vapniks@yahoo.com") (:url . "https://github.com/vapniks/dired-dups"))])
+(dired-dups .
+	    [(20130527 2125)
+	     nil "Find duplicate files and display them in a dired buffer" single
+	     ((:commit . "694ad128c822c59348ced16c4a0c1356d43da47a")
+	      (:authors
+	       ("Joe Bloggs" . "vapniks@yahoo.com"))
+	      (:maintainer "Joe Bloggs" . "vapniks@yahoo.com")
+	      (:keywords "unix")
+	      (:url . "https://github.com/vapniks/dired-dups"))])

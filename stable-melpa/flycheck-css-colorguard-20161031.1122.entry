@@ -1,2 +1,13 @@
-
-(flycheck-css-colorguard . [(20161031 1122) ((flycheck (0 22)) (emacs (24))) "Detect similar colors in CSS" single ((:commit . "ae94fa0396acd99f9ec36d9572459df793f37fe8") (:keywords "flycheck" "css" "colorguard") (:authors ("Saša Jovanić" . "info@simplify.ba")) (:maintainer "Saša Jovanić" . "info@simplify.ba") (:url . "https://github.com/Simplify/flycheck-css-colorguard/"))])
+(flycheck-css-colorguard .
+			 [(20161031 1122)
+			  ((flycheck
+			    (0 22))
+			   (emacs
+			    (24)))
+			  "Detect similar colors in CSS" single
+			  ((:commit . "ae94fa0396acd99f9ec36d9572459df793f37fe8")
+			   (:authors
+			    ("Saša Jovanić" . "info@simplify.ba"))
+			   (:maintainer "Saša Jovanić" . "info@simplify.ba")
+			   (:keywords "flycheck" "css" "colorguard")
+			   (:url . "https://github.com/Simplify/flycheck-css-colorguard/"))])

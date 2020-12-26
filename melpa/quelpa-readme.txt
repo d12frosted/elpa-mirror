@@ -1,9 +1,12 @@
-Your personal local Emacs Lisp Package Archive (ELPA) with packages
-built on-the-fly directly from source.
+;;; Commentary:
 
-See the README for more info:
-https://github.com/quelpa/quelpa/blob/master/README.org
+;; Your personal local Emacs Lisp Package Archive (ELPA) with packages
+;; built on-the-fly directly from source.
 
-Requirements:
+;; See the README for more info:
+;; https://github.com/quelpa/quelpa/blob/master/README.org
 
-Emacs 25.1
+;;; Requirements:
+
+;; Emacs 25.1
+

@@ -1,10 +1,13 @@
-Vimtutor adapted for Evil.
+;;; Commentary:
 
-    M-x evil-tutor-ja-start
+;; Vimtutor adapted for Evil.
 
-This will create a working file in `evil-tutor-ja-working-directory' (defaults
-to `~/.emacs.d/.tutor-ja')
+;;     M-x evil-tutor-ja-start
 
-Features:
-- restore last working fil
-- fast navigation between lessons with `C-j' and `C-k'
+;; This will create a working file in `evil-tutor-ja-working-directory' (defaults
+;; to `~/.emacs.d/.tutor-ja')
+
+;; Features:
+;; - restore last working fil
+;; - fast navigation between lessons with `C-j' and `C-k'
+

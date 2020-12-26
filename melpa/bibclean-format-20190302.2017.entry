@@ -1,2 +1,13 @@
-
-(bibclean-format . [(20190302 2017) ((emacs (24 3)) (reformatter (0 3))) "Reformat BibTeX and Scribe using bibclean" single ((:commit . "b4003950a925d1c659bc359ab5e88e4441775d77") (:keywords "languages") (:authors ("Peter W. V. Tran-Jørgensen" . "peter.w.v.jorgensen@gmail.com")) (:maintainer "Peter W. V. Tran-Jørgensen" . "peter.w.v.jorgensen@gmail.com") (:url . "https://github.com/peterwvj/bibclean-format"))])
+(bibclean-format .
+		 [(20190302 2017)
+		  ((emacs
+		    (24 3))
+		   (reformatter
+		    (0 3)))
+		  "Reformat BibTeX and Scribe using bibclean" single
+		  ((:commit . "b4003950a925d1c659bc359ab5e88e4441775d77")
+		   (:authors
+		    ("Peter W. V. Tran-Jørgensen" . "peter.w.v.jorgensen@gmail.com"))
+		   (:maintainer "Peter W. V. Tran-Jørgensen" . "peter.w.v.jorgensen@gmail.com")
+		   (:keywords "languages")
+		   (:url . "https://github.com/peterwvj/bibclean-format"))])

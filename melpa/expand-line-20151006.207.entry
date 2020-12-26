@@ -1,2 +1,7 @@
-
-(expand-line . [(20151006 207) nil "Expand selection by line" single ((:commit . "75a5d0241f35dd0748ab8ecb4ff16891535be372") (:authors ("Kai Yu" . "yeannylam@gmail.com")) (:maintainer "Kai Yu" . "yeannylam@gmail.com"))])
+(expand-line .
+	     [(20151006 207)
+	      nil "Expand selection by line" single
+	      ((:commit . "75a5d0241f35dd0748ab8ecb4ff16891535be372")
+	       (:authors
+		("Kai Yu" . "yeannylam@gmail.com"))
+	       (:maintainer "Kai Yu" . "yeannylam@gmail.com"))])

@@ -1,2 +1,11 @@
-
-(mkdown . [(20140517 1418) ((markdown-mode (2 0))) "Pretty Markdown previews based on mkdown.com" tar ((:commit . "8e23de82719af6c5b53b52b3308a02b3a1fb872e") (:keywords "markdown") (:authors ("Andrew Tulloch")) (:maintainer "Andrew Tulloch") (:url . "https://github.com/ajtulloch/mkdown.el"))])
+(mkdown .
+	[(20140517 1418)
+	 ((markdown-mode
+	   (2 0)))
+	 "Pretty Markdown previews based on mkdown.com" tar
+	 ((:commit . "8e23de82719af6c5b53b52b3308a02b3a1fb872e")
+	  (:authors
+	   ("Andrew Tulloch"))
+	  (:maintainer "Andrew Tulloch")
+	  (:keywords "markdown")
+	  (:url . "https://github.com/ajtulloch/mkdown.el"))])

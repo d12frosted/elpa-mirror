@@ -1,2 +1,15 @@
-
-(opener . [(20161207 1810) ((request (0 2 0)) (emacs (24)) (cl-lib (0 5))) "opening urls as buffers" tar ((:commit . "c384f67278046fdcd220275fdd212ab85672cbeb") (:keywords "url" "http" "files") (:authors ("Tim Reddehase" . "tr@rightsrestricted.com")) (:maintainer "Tim Reddehase" . "tr@rightsrestricted.com") (:url . "https://github.com/0robustus1/opener.el"))])
+(opener .
+	[(20161207 1810)
+	 ((request
+	   (0 2 0))
+	  (emacs
+	   (24))
+	  (cl-lib
+	   (0 5)))
+	 "opening urls as buffers" tar
+	 ((:commit . "c384f67278046fdcd220275fdd212ab85672cbeb")
+	  (:authors
+	   ("Tim Reddehase" . "tr@rightsrestricted.com"))
+	  (:maintainer "Tim Reddehase" . "tr@rightsrestricted.com")
+	  (:keywords "url" "http" "files")
+	  (:url . "https://github.com/0robustus1/opener.el"))])

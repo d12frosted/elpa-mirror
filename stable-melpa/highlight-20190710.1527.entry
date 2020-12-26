@@ -1,2 +1,9 @@
-
-(highlight . [(20190710 1527) nil "Highlighting commands." single ((:commit . "9258a2b8362d737115cbd87618f947eadb140411") (:keywords "faces" "help" "local") (:authors ("Drew Adams")) (:maintainer nil . "Drew Adams (concat \"drew.adams\" \"@\" \"oracle\" \".com\")") (:url . "https://www.emacswiki.org/emacs/download/highlight.el"))])
+(highlight .
+	   [(20190710 1527)
+	    nil "Highlighting commands." single
+	    ((:commit . "9258a2b8362d737115cbd87618f947eadb140411")
+	     (:authors
+	      ("Drew Adams"))
+	     (:maintainer nil . "Drew Adams (concat \"drew.adams\" \"@\" \"oracle\" \".com\")")
+	     (:keywords "faces" "help" "local")
+	     (:url . "https://www.emacswiki.org/emacs/download/highlight.el"))])

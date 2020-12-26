@@ -1,2 +1,13 @@
-
-(powerline-evil . [(20190603 340) ((evil (1 0 8)) (powerline (2 3))) "Utilities for better Evil support for Powerline" tar ((:commit . "b77e2cf571e9990734f2b30d826f3a362b559fd1") (:keywords "evil" "mode-line" "powerline") (:authors ("Chris Johnson" . "chris@christophermjohnson.net")) (:maintainer "Chris Johnson" . "chris@christophermjohnson.net") (:url . "http://github.com/johnson-christopher/powerline-evil/"))])
+(powerline-evil .
+		[(20190603 340)
+		 ((evil
+		   (1 0 8))
+		  (powerline
+		   (2 3)))
+		 "Utilities for better Evil support for Powerline" tar
+		 ((:commit . "b77e2cf571e9990734f2b30d826f3a362b559fd1")
+		  (:authors
+		   ("Chris Johnson" . "chris@christophermjohnson.net"))
+		  (:maintainer "Chris Johnson" . "chris@christophermjohnson.net")
+		  (:keywords "evil" "mode-line" "powerline")
+		  (:url . "http://github.com/johnson-christopher/powerline-evil/"))])

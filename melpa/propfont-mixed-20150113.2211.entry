@@ -1,2 +1,13 @@
-
-(propfont-mixed . [(20150113 2211) ((emacs (24)) (cl-lib (0 5))) "Use proportional fonts with space-based indentation." single ((:commit . "0b461ef4754a469610dba71874a34b6da42176bf") (:keywords "faces") (:authors ("Kirill Ignatiev <github.com/ikirill>")) (:maintainer "Kirill Ignatiev <github.com/ikirill>") (:url . "https://github.com/ikirill/propfont-mixed"))])
+(propfont-mixed .
+		[(20150113 2211)
+		 ((emacs
+		   (24))
+		  (cl-lib
+		   (0 5)))
+		 "Use proportional fonts with space-based indentation." single
+		 ((:commit . "0b461ef4754a469610dba71874a34b6da42176bf")
+		  (:authors
+		   ("Kirill Ignatiev <github.com/ikirill>"))
+		  (:maintainer "Kirill Ignatiev <github.com/ikirill>")
+		  (:keywords "faces")
+		  (:url . "https://github.com/ikirill/propfont-mixed"))])

@@ -1,2 +1,16 @@
-
-(org-working-set . [(20201118 810) ((org (9 3)) (dash (2 12)) (s (1 12)) (emacs (26 3))) "Manage and visit a small set of org-nodes." single ((:commit . "cf4bd2bfb11d0e0ed8c9228c07df8eb8150504f4") (:authors ("Marc Ihm" . "1@2484.de")) (:maintainer "Marc Ihm" . "1@2484.de") (:url . "https://github.com/marcIhm/org-working-set"))])
+(org-working-set .
+		 [(20201118 810)
+		  ((org
+		    (9 3))
+		   (dash
+		    (2 12))
+		   (s
+		    (1 12))
+		   (emacs
+		    (26 3)))
+		  "Manage and visit a small set of org-nodes." single
+		  ((:commit . "cf4bd2bfb11d0e0ed8c9228c07df8eb8150504f4")
+		   (:authors
+		    ("Marc Ihm" . "1@2484.de"))
+		   (:maintainer "Marc Ihm" . "1@2484.de")
+		   (:url . "https://github.com/marcIhm/org-working-set"))])

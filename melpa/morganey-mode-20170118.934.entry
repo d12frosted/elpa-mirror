@@ -1,2 +1,10 @@
-
-(morganey-mode . [(20170118 934) ((emacs (24 4))) "Major mode for editing Morganey files" single ((:commit . "5cf3870432a2aeb69d373abe63b3be1f325f6d21") (:authors ("Alexey Kutepov" . "reximkut@gmail.com")) (:maintainer "Alexey Kutepov" . "reximkut@gmail.com") (:url . "https://github.com/morganey-lang/morganey-mode"))])
+(morganey-mode .
+	       [(20170118 934)
+		((emacs
+		  (24 4)))
+		"Major mode for editing Morganey files" single
+		((:commit . "5cf3870432a2aeb69d373abe63b3be1f325f6d21")
+		 (:authors
+		  ("Alexey Kutepov" . "reximkut@gmail.com"))
+		 (:maintainer "Alexey Kutepov" . "reximkut@gmail.com")
+		 (:url . "https://github.com/morganey-lang/morganey-mode"))])

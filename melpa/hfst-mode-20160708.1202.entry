@@ -1,2 +1,9 @@
-
-(hfst-mode . [(20160708 1202) nil "major mode for editing HFST files" single ((:commit . "ac1bb9dd92545d3e7fdc05c83996c227cc15c6b8") (:keywords "languages") (:authors ("Kevin Brubeck Unhammer" . "unhammer@fsfe.org")) (:maintainer "Kevin Brubeck Unhammer" . "unhammer@fsfe.org") (:url . "http://wiki.apertium.org/wiki/Emacs"))])
+(hfst-mode .
+	   [(20160708 1202)
+	    nil "major mode for editing HFST files" single
+	    ((:commit . "ac1bb9dd92545d3e7fdc05c83996c227cc15c6b8")
+	     (:authors
+	      ("Kevin Brubeck Unhammer" . "unhammer@fsfe.org"))
+	     (:maintainer "Kevin Brubeck Unhammer" . "unhammer@fsfe.org")
+	     (:keywords "languages")
+	     (:url . "http://wiki.apertium.org/wiki/Emacs"))])

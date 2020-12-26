@@ -1,2 +1,12 @@
-
-(kite . [(20130201 1938) ((json (1 2)) (websocket (0 93 1))) "WebKit inspector front-end" tar ((:commit . "7ed74d1147a6ddd152d3da65dc30df3517d53144") (:keywords "tools") (:authors ("Julian Scheid" . "julians37@gmail.com")) (:maintainer "Julian Scheid" . "julians37@gmail.com"))])
+(kite .
+      [(20130201 1938)
+       ((json
+	 (1 2))
+	(websocket
+	 (0 93 1)))
+       "WebKit inspector front-end" tar
+       ((:commit . "7ed74d1147a6ddd152d3da65dc30df3517d53144")
+	(:authors
+	 ("Julian Scheid" . "julians37@gmail.com"))
+	(:maintainer "Julian Scheid" . "julians37@gmail.com")
+	(:keywords "tools"))])

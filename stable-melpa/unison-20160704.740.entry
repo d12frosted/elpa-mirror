@@ -1,2 +1,11 @@
-
-(unison . [(20160704 740) ((emacs (24 1))) "sync with Unison" single ((:commit . "a78a04c0d1398d00f75a1bd4799622a65bcb0f28") (:keywords "sync") (:authors ("Kevin Brubeck Unhammer" . "unhammer@fsfe.org")) (:maintainer "Kevin Brubeck Unhammer" . "unhammer@fsfe.org") (:url . "http://github.com/unhammer/unison.el"))])
+(unison .
+	[(20160704 740)
+	 ((emacs
+	   (24 1)))
+	 "sync with Unison" single
+	 ((:commit . "a78a04c0d1398d00f75a1bd4799622a65bcb0f28")
+	  (:authors
+	   ("Kevin Brubeck Unhammer" . "unhammer@fsfe.org"))
+	  (:maintainer "Kevin Brubeck Unhammer" . "unhammer@fsfe.org")
+	  (:keywords "sync")
+	  (:url . "http://github.com/unhammer/unison.el"))])

@@ -1,2 +1,12 @@
-
-(com-css-sort . [(20201002 1430) ((emacs (25 1)) (s (1 12 0))) "Common way of sorting the CSS attributes" single ((:commit . "61244e12594f117ffac047454311212604399d52") (:authors ("Shen, Jen-Chieh" . "jcs090218@gmail.com")) (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com") (:url . "https://github.com/jcs090218/com-css-sort"))])
+(com-css-sort .
+	      [(20201002 1430)
+	       ((emacs
+		 (25 1))
+		(s
+		 (1 12 0)))
+	       "Common way of sorting the CSS attributes" single
+	       ((:commit . "61244e12594f117ffac047454311212604399d52")
+		(:authors
+		 ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		(:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		(:url . "https://github.com/jcs090218/com-css-sort"))])

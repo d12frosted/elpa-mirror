@@ -1,2 +1,9 @@
-
-(clean-aindent-mode . [(20171017 2043) nil "Simple indent and unindent, trims indent white-space" single ((:commit . "a97bcae8f43a9ff64e95473e4ef0d8bafe829211") (:keywords "indentation" "whitespace" "backspace") (:authors ("peter marinov" . "efravia@gmail.com")) (:maintainer "peter marinov" . "efravia@gmail.com") (:url . "https://github.com/pmarinov/clean-aindent-mode"))])
+(clean-aindent-mode .
+		    [(20171017 2043)
+		     nil "Simple indent and unindent, trims indent white-space" single
+		     ((:commit . "a97bcae8f43a9ff64e95473e4ef0d8bafe829211")
+		      (:authors
+		       ("peter marinov" . "efravia@gmail.com"))
+		      (:maintainer "peter marinov" . "efravia@gmail.com")
+		      (:keywords "indentation" "whitespace" "backspace")
+		      (:url . "https://github.com/pmarinov/clean-aindent-mode"))])

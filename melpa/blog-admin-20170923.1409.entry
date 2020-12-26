@@ -1,2 +1,18 @@
-
-(blog-admin . [(20170923 1409) ((ctable (0 1 1)) (s (1 10 0)) (f (0 17 3)) (names (20151201 0)) (cl-lib (0 5))) "Blog admin for emacs with hexo/org-page supported" tar ((:commit . "b5f2e1dad7d68ec903619f7280bb0bcb7e398a1e") (:keywords "tools" "blog" "org" "hexo" "org-page") (:authors (nil . "code.falling@gmail.com")) (:maintainer nil . "code.falling@gmail.com"))])
+(blog-admin .
+	    [(20170923 1409)
+	     ((ctable
+	       (0 1 1))
+	      (s
+	       (1 10 0))
+	      (f
+	       (0 17 3))
+	      (names
+	       (20151201 0))
+	      (cl-lib
+	       (0 5)))
+	     "Blog admin for emacs with hexo/org-page supported" tar
+	     ((:commit . "b5f2e1dad7d68ec903619f7280bb0bcb7e398a1e")
+	      (:authors
+	       (nil . "code.falling@gmail.com"))
+	      (:maintainer nil . "code.falling@gmail.com")
+	      (:keywords "tools" "blog" "org" "hexo" "org-page"))])

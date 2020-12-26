@@ -1,2 +1,13 @@
-
-(untitled-new-buffer . [(20161212 1508) ((emacs (24 4)) (magic-filetype (0 2 0))) "Open untitled new buffer like other text editors." single ((:commit . "4eabc6937b0e83062ffce9de0d42110224063a6c") (:keywords "files" "convenience") (:authors ("USAMI Kenta" . "tadsan@zonu.me")) (:maintainer "USAMI Kenta" . "tadsan@zonu.me") (:url . "https://github.com/zonuexe/untitled-new-buffer.el"))])
+(untitled-new-buffer .
+		     [(20161212 1508)
+		      ((emacs
+			(24 4))
+		       (magic-filetype
+			(0 2 0)))
+		      "Open untitled new buffer like other text editors." single
+		      ((:commit . "4eabc6937b0e83062ffce9de0d42110224063a6c")
+		       (:authors
+			("USAMI Kenta" . "tadsan@zonu.me"))
+		       (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+		       (:keywords "files" "convenience")
+		       (:url . "https://github.com/zonuexe/untitled-new-buffer.el"))])

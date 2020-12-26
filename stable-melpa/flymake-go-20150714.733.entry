@@ -1,2 +1,10 @@
-
-(flymake-go . [(20150714 733) nil "A flymake handler for go-mode files" single ((:commit . "ae83761aa908c1a50ff34af04f00dcc46bca2ce9") (:keywords "go" "flymake") (:authors ("Michael Fellinger" . "michael@iron.io") ("Robert Zaremba" . "robert.marek.zaremba@wp.eu")) (:maintainer "Michael Fellinger" . "michael@iron.io") (:url . "https://github.com/robert-zaremba/flymake-go"))])
+(flymake-go .
+	    [(20150714 733)
+	     nil "A flymake handler for go-mode files" single
+	     ((:commit . "ae83761aa908c1a50ff34af04f00dcc46bca2ce9")
+	      (:authors
+	       ("Michael Fellinger" . "michael@iron.io")
+	       ("Robert Zaremba" . "robert.marek.zaremba@wp.eu"))
+	      (:maintainer "Michael Fellinger" . "michael@iron.io")
+	      (:keywords "go" "flymake")
+	      (:url . "https://github.com/robert-zaremba/flymake-go"))])

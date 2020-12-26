@@ -1,2 +1,11 @@
-
-(zenity-color-picker . [(20160302 1154) ((emacs (24 4))) "Insert and adjust colors using Zenity" single ((:commit . "4f4f46676a461ebc881487fb70c8c181e323db5e") (:keywords "colors") (:authors ("Samuel Laurén" . "samuel.lauren@iki.fi")) (:maintainer "Samuel Laurén" . "samuel.lauren@iki.fi") (:url . "https://bitbucket.org/Soft/zenity-color-picker.el"))])
+(zenity-color-picker .
+		     [(20160302 1154)
+		      ((emacs
+			(24 4)))
+		      "Insert and adjust colors using Zenity" single
+		      ((:commit . "4f4f46676a461ebc881487fb70c8c181e323db5e")
+		       (:authors
+			("Samuel Laurén" . "samuel.lauren@iki.fi"))
+		       (:maintainer "Samuel Laurén" . "samuel.lauren@iki.fi")
+		       (:keywords "colors")
+		       (:url . "https://bitbucket.org/Soft/zenity-color-picker.el"))])

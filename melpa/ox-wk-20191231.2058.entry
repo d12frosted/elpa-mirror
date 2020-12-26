@@ -1,2 +1,13 @@
-
-(ox-wk . [(20191231 2058) ((emacs (24 4)) (org (8 3))) "Wiki Back-End for Org Export Engine" single ((:commit . "d34d1b72e4e940745a377bfa745dfb618900a09e") (:keywords "org" "wp" "wiki") (:authors ("Vilibald Wanča" . "vilibald@wvi.cz")) (:maintainer "Vilibald Wanča" . "vilibald@wvi.cz") (:url . "https://github.com/w-vi/ox-wk.el"))])
+(ox-wk .
+       [(20191231 2058)
+	((emacs
+	  (24 4))
+	 (org
+	  (8 3)))
+	"Wiki Back-End for Org Export Engine" single
+	((:commit . "d34d1b72e4e940745a377bfa745dfb618900a09e")
+	 (:authors
+	  ("Vilibald Wanča" . "vilibald@wvi.cz"))
+	 (:maintainer "Vilibald Wanča" . "vilibald@wvi.cz")
+	 (:keywords "org" "wp" "wiki")
+	 (:url . "https://github.com/w-vi/ox-wk.el"))])

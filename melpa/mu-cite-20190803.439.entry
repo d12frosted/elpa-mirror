@@ -1,2 +1,11 @@
-
-(mu-cite . [(20190803 439) ((flim (1 14 9))) "A library to provide MIME features." tar ((:commit . "b2c83bbce4646d100b942f0f0de0877a8d47298c"))])
+(mu-cite .
+	 [(20190803 439)
+	  ((flim
+	    (1 14 9)))
+	  "A library to provide MIME features." tar
+	  ((:commit . "b2c83bbce4646d100b942f0f0de0877a8d47298c")
+	   (:authors
+	    ("MORIOKA Tomohiko" . "tomo@m17n.org")
+	    ("Shuhei KOBAYASHI" . "shuhei@aqua.ocn.ne.jp"))
+	   (:maintainer "Katsumi Yamaoka" . "yamaoka@jpl.org")
+	   (:keywords "mail" "news" "citation"))])

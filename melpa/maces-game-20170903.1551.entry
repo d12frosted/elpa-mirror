@@ -1,2 +1,15 @@
-
-(maces-game . [(20170903 1551) ((dash (2 12 0)) (cl-lib (0 5)) (emacs (24))) "another anagram game." tar ((:commit . "c0fb795f5642467ea528d2f04d904547e8a77ecd") (:keywords "games" "word games" "anagram") (:authors ("Pawel Bokota" . "pawelb.lnx@gmail.com")) (:maintainer "Pawel Bokota" . "pawelb.lnx@gmail.com") (:url . "https://github.com/pawelbx/anagram-game"))])
+(maces-game .
+	    [(20170903 1551)
+	     ((dash
+	       (2 12 0))
+	      (cl-lib
+	       (0 5))
+	      (emacs
+	       (24)))
+	     "another anagram game." tar
+	     ((:commit . "c0fb795f5642467ea528d2f04d904547e8a77ecd")
+	      (:authors
+	       ("Pawel Bokota" . "pawelb.lnx@gmail.com"))
+	      (:maintainer "Pawel Bokota" . "pawelb.lnx@gmail.com")
+	      (:keywords "games" "word games" "anagram")
+	      (:url . "https://github.com/pawelbx/anagram-game"))])

@@ -1,2 +1,13 @@
-
-(eyuml . [(20141028 2227) ((request (0 2 0)) (s (1 8 0))) "Write textual uml diagram from emacs using yuml.me" single ((:commit . "eb29c37316e44a14741f16e894fbcfcb7537dc80") (:keywords "uml") (:authors ("Anthony HAMON" . "hamon.anth@gmail.com")) (:maintainer "Anthony HAMON" . "hamon.anth@gmail.com") (:url . "http://github.com/antham/eyuml"))])
+(eyuml .
+       [(20141028 2227)
+	((request
+	  (0 2 0))
+	 (s
+	  (1 8 0)))
+	"Write textual uml diagram from emacs using yuml.me" single
+	((:commit . "eb29c37316e44a14741f16e894fbcfcb7537dc80")
+	 (:authors
+	  ("Anthony HAMON" . "hamon.anth@gmail.com"))
+	 (:maintainer "Anthony HAMON" . "hamon.anth@gmail.com")
+	 (:keywords "uml")
+	 (:url . "http://github.com/antham/eyuml"))])

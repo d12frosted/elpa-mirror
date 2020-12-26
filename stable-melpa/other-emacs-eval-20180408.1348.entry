@@ -1,2 +1,13 @@
-
-(other-emacs-eval . [(20180408 1348) ((emacs (25 1)) (async (1 9 2))) "Evaluate the Emacs Lisp expression in other Emacs" single ((:commit . "8ace5acafef65daabf0c6619eff60733d7f5d792") (:keywords "tools") (:authors ("Xu Chunyang" . "mail@xuchunyang.me")) (:maintainer "Xu Chunyang" . "mail@xuchunyang.me") (:url . "https://github.com/xuchunyang/other-emacs-eval"))])
+(other-emacs-eval .
+		  [(20180408 1348)
+		   ((emacs
+		     (25 1))
+		    (async
+		     (1 9 2)))
+		   "Evaluate the Emacs Lisp expression in other Emacs" single
+		   ((:commit . "8ace5acafef65daabf0c6619eff60733d7f5d792")
+		    (:authors
+		     ("Xu Chunyang" . "mail@xuchunyang.me"))
+		    (:maintainer "Xu Chunyang" . "mail@xuchunyang.me")
+		    (:keywords "tools")
+		    (:url . "https://github.com/xuchunyang/other-emacs-eval"))])

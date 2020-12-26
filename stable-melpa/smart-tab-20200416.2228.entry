@@ -1,2 +1,13 @@
-
-(smart-tab . [(20200416 2228) ((emacs (24 3))) "Intelligent tab completion and indentation" single ((:commit . "67bf4f93f8afca61a3dc4f6c7a34b0b8ca9ede21") (:keywords "extensions") (:authors ("John SJ Anderson" . "john@genehack.org") ("Sebastien Rocca Serra" . "sroccaserra@gmail.com") ("Daniel Hackney" . "dan@haxney.org")) (:maintainer "John SJ Anderson" . "john@genehack.org") (:url . "http://github.com/genehack/smart-tab/tree/master"))])
+(smart-tab .
+	   [(20200416 2228)
+	    ((emacs
+	      (24 3)))
+	    "Intelligent tab completion and indentation" single
+	    ((:commit . "67bf4f93f8afca61a3dc4f6c7a34b0b8ca9ede21")
+	     (:authors
+	      ("John SJ Anderson" . "john@genehack.org")
+	      ("Sebastien Rocca Serra" . "sroccaserra@gmail.com")
+	      ("Daniel Hackney" . "dan@haxney.org"))
+	     (:maintainer "John SJ Anderson" . "john@genehack.org")
+	     (:keywords "extensions")
+	     (:url . "http://github.com/genehack/smart-tab/tree/master"))])

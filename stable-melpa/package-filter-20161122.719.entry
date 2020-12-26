@@ -1,2 +1,8 @@
-
-(package-filter . [(20161122 719) nil "package archive whitelist and blacklist" single ((:commit . "bc73b41aea1d65ca44ef1593ca13126df9bbb39e") (:authors ("Donald Ephraim Curtis" . "dcurtis@milkbox.net")) (:maintainer "Donald Ephraim Curtis" . "dcurtis@milkbox.net") (:url . "https://github.com/milkypostman/package-filter"))])
+(package-filter .
+		[(20161122 719)
+		 nil "package archive whitelist and blacklist" single
+		 ((:commit . "bc73b41aea1d65ca44ef1593ca13126df9bbb39e")
+		  (:authors
+		   ("Donald Ephraim Curtis" . "dcurtis@milkbox.net"))
+		  (:maintainer "Donald Ephraim Curtis" . "dcurtis@milkbox.net")
+		  (:url . "https://github.com/milkypostman/package-filter"))])

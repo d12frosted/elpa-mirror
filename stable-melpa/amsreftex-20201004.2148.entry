@@ -1,2 +1,11 @@
-
-(amsreftex . [(20201004 2148) ((emacs (25 1))) "Add amsrefs bibliography support for reftex" single ((:commit . "46bc6683e904e898de8bae831df9106cf8881163") (:keywords "tex") (:authors ("Fran Burstall" . "fran.burstall@gmail.com")) (:maintainer "Fran Burstall" . "fran.burstall@gmail.com") (:url . "https://github.com/franburstall/amsreftex"))])
+(amsreftex .
+	   [(20201004 2148)
+	    ((emacs
+	      (25 1)))
+	    "Add amsrefs bibliography support for reftex" single
+	    ((:commit . "46bc6683e904e898de8bae831df9106cf8881163")
+	     (:authors
+	      ("Fran Burstall" . "fran.burstall@gmail.com"))
+	     (:maintainer "Fran Burstall" . "fran.burstall@gmail.com")
+	     (:keywords "tex")
+	     (:url . "https://github.com/franburstall/amsreftex"))])

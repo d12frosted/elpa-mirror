@@ -1,2 +1,10 @@
-
-(pfuture . [(20200425 1357) ((emacs (25 2))) "a simple wrapper around asynchronous processes" single ((:commit . "d7926de3ba0105a36cfd00811fd6278aea903eef") (:authors ("Alexander Miller" . "alexanderm@web.de")) (:maintainer "Alexander Miller" . "alexanderm@web.de") (:url . "https://github.com/Alexander-Miller/pfuture"))])
+(pfuture .
+	 [(20200425 1357)
+	  ((emacs
+	    (25 2)))
+	  "a simple wrapper around asynchronous processes" single
+	  ((:commit . "d7926de3ba0105a36cfd00811fd6278aea903eef")
+	   (:authors
+	    ("Alexander Miller" . "alexanderm@web.de"))
+	   (:maintainer "Alexander Miller" . "alexanderm@web.de")
+	   (:url . "https://github.com/Alexander-Miller/pfuture"))])

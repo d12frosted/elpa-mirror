@@ -1,2 +1,10 @@
-
-(emms-bilibili . [(20180103 418) ((emacs (25)) (cl-lib (0 5))) "Play Bilibili in EMMS." single ((:commit . "294bca3dfc42fe3a55fb326ab39bc0fcfc8c5090") (:keywords "emms" "bilibili") (:url . "https://github.com/stardiviner/emms-bilibili"))])
+(emms-bilibili .
+	       [(20180103 418)
+		((emacs
+		  (25))
+		 (cl-lib
+		  (0 5)))
+		"Play Bilibili in EMMS." single
+		((:commit . "294bca3dfc42fe3a55fb326ab39bc0fcfc8c5090")
+		 (:keywords "emms" "bilibili")
+		 (:url . "https://github.com/stardiviner/emms-bilibili"))])

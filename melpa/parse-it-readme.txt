@@ -1,1 +1,5 @@
-Basic Parser in Emacs Lisp.
+;;; Commentary:
+;;
+;; Basic Parser in Emacs Lisp.
+;;
+

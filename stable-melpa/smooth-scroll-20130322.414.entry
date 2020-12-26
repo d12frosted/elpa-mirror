@@ -1,2 +1,9 @@
-
-(smooth-scroll . [(20130322 414) nil "Minor mode for smooth scrolling and in-place scrolling." single ((:commit . "02320f28abb5cae28b3a18f6b9ce93129bdbfc45") (:keywords "convenience" "emulations" "frames") (:authors ("K-talo Miyazaki <Keitaro dot Miyazaki at gmail dot com>")) (:maintainer "K-talo Miyazaki <Keitaro dot Miyazaki at gmail dot com>") (:url . "http://www.emacswiki.org/emacs/download/smooth-scroll.el"))])
+(smooth-scroll .
+	       [(20130322 414)
+		nil "Minor mode for smooth scrolling and in-place scrolling." single
+		((:commit . "02320f28abb5cae28b3a18f6b9ce93129bdbfc45")
+		 (:authors
+		  ("K-talo Miyazaki <Keitaro dot Miyazaki at gmail dot com>"))
+		 (:maintainer "K-talo Miyazaki <Keitaro dot Miyazaki at gmail dot com>")
+		 (:keywords "convenience" "emulations" "frames")
+		 (:url . "http://www.emacswiki.org/emacs/download/smooth-scroll.el"))])

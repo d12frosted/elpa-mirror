@@ -1,2 +1,11 @@
-
-(dut-mode . [(20170729 2111) ((emacs (24))) "Major mode for the Dut programming language" single ((:commit . "9235c7acaa6690942e9de8b7acd1e4be0c859dc1") (:keywords "languages" "gut") (:authors ("The dut-mode Authors")) (:maintainer "The dut-mode Authors") (:url . "https://github.com/dut-lang/dut-mode"))])
+(dut-mode .
+	  [(20170729 2111)
+	   ((emacs
+	     (24)))
+	   "Major mode for the Dut programming language" single
+	   ((:commit . "9235c7acaa6690942e9de8b7acd1e4be0c859dc1")
+	    (:authors
+	     ("The dut-mode Authors"))
+	    (:maintainer "The dut-mode Authors")
+	    (:keywords "languages" "gut")
+	    (:url . "https://github.com/dut-lang/dut-mode"))])

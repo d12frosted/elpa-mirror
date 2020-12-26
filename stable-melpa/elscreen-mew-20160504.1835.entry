@@ -1,2 +1,10 @@
-
-(elscreen-mew . [(20160504 1835) ((elscreen (20120413 807))) "ElScreen Add-On for Mew" single ((:commit . "c90a23441d836da14a1cb12788432308ba58e2b6") (:authors ("Takashi Masuda" . "masutaka.net@gmail.com")) (:maintainer "Takashi Masuda" . "masutaka.net@gmail.com") (:url . "https://github.com/masutaka/elscreen-mew"))])
+(elscreen-mew .
+	      [(20160504 1835)
+	       ((elscreen
+		 (20120413 807)))
+	       "ElScreen Add-On for Mew" single
+	       ((:commit . "c90a23441d836da14a1cb12788432308ba58e2b6")
+		(:authors
+		 ("Takashi Masuda" . "masutaka.net@gmail.com"))
+		(:maintainer "Takashi Masuda" . "masutaka.net@gmail.com")
+		(:url . "https://github.com/masutaka/elscreen-mew"))])

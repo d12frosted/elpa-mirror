@@ -1,2 +1,10 @@
-
-(prosjekt . [(20151127 1416) ((dash (2 8 0))) "a software project tool for emacs" tar ((:commit . "a864a8be5842223043702395f311e3350c28e9db") (:authors ("Austin Bingham" . "austin.bingham@gmail.com")) (:maintainer "Austin Bingham" . "austin.bingham@gmail.com") (:url . "https://github.com/abingham/prosjekt"))])
+(prosjekt .
+	  [(20151127 1416)
+	   ((dash
+	     (2 8 0)))
+	   "a software project tool for emacs" tar
+	   ((:commit . "a864a8be5842223043702395f311e3350c28e9db")
+	    (:authors
+	     ("Austin Bingham" . "austin.bingham@gmail.com"))
+	    (:maintainer "Austin Bingham" . "austin.bingham@gmail.com")
+	    (:url . "https://github.com/abingham/prosjekt"))])

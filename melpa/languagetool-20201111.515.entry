@@ -1,2 +1,13 @@
-
-(languagetool . [(20201111 515) ((emacs (25 1)) (request (0 3 2))) "LanguageTool integration for grammar check" tar ((:commit . "531ab81bf66c778616a326b93d4eedd509dd795e") (:keywords "grammar" "text" "docs" "tools") (:authors ("Joar Buitrago" . "jebuitragoc@unal.edu.co")) (:maintainer "Joar Buitrago" . "jebuitragoc@unal.edu.co") (:url . "https://github.com/PillFall/Emacs-LanguageTool.el"))])
+(languagetool .
+	      [(20201111 515)
+	       ((emacs
+		 (25 1))
+		(request
+		 (0 3 2)))
+	       "LanguageTool integration for grammar check" tar
+	       ((:commit . "531ab81bf66c778616a326b93d4eedd509dd795e")
+		(:authors
+		 ("Joar Buitrago" . "jebuitragoc@unal.edu.co"))
+		(:maintainer "Joar Buitrago" . "jebuitragoc@unal.edu.co")
+		(:keywords "grammar" "text" "docs" "tools")
+		(:url . "https://github.com/PillFall/Emacs-LanguageTool.el"))])

@@ -1,1 +1,4 @@
-A minor mode for adding structured editing to Haskell.
+;;; Commentary:
+
+;; A minor mode for adding structured editing to Haskell.
+

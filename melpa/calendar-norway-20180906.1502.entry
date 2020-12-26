@@ -1,2 +1,8 @@
-
-(calendar-norway . [(20180906 1502) nil "Norwegian calendar" single ((:commit . "8d1fda8268caa74ba5e712c7675ed3c34e46e2d4") (:keywords "calendar" "norwegian" "localization") (:authors ("Kevin Brubeck Unhammer" . "unhammer@fsfe.org")) (:maintainer "Kevin Brubeck Unhammer" . "unhammer@fsfe.org"))])
+(calendar-norway .
+		 [(20180906 1502)
+		  nil "Norwegian calendar" single
+		  ((:commit . "8d1fda8268caa74ba5e712c7675ed3c34e46e2d4")
+		   (:authors
+		    ("Kevin Brubeck Unhammer" . "unhammer@fsfe.org"))
+		   (:maintainer "Kevin Brubeck Unhammer" . "unhammer@fsfe.org")
+		   (:keywords "calendar" "norwegian" "localization"))])

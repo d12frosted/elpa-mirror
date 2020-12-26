@@ -1,2 +1,26 @@
-
-(servant . [(20140216 1219) ((s (1 8 0)) (dash (2 2 0)) (f (0 11 0)) (ansi (0 3 0)) (commander (0 5 0)) (epl (0 2)) (shut-up (0 2 1)) (web-server (0 0 1))) "ELPA server written in Emacs Lisp" tar ((:commit . "4d2aa8250b54b28e6e7ee4cd5ebd98a33db2c134") (:keywords "elpa" "server") (:authors ("Johan Andersson" . "johan.rejeep@gmail.com") ("Sebastian Wiesner" . "lunaryorn@gmail.com")) (:maintainer "Johan Andersson" . "johan.rejeep@gmail.com") (:url . "http://github.com/rejeep/servant.el"))])
+(servant .
+	 [(20140216 1219)
+	  ((s
+	    (1 8 0))
+	   (dash
+	    (2 2 0))
+	   (f
+	    (0 11 0))
+	   (ansi
+	    (0 3 0))
+	   (commander
+	    (0 5 0))
+	   (epl
+	    (0 2))
+	   (shut-up
+	    (0 2 1))
+	   (web-server
+	    (0 0 1)))
+	  "ELPA server written in Emacs Lisp" tar
+	  ((:commit . "4d2aa8250b54b28e6e7ee4cd5ebd98a33db2c134")
+	   (:authors
+	    ("Johan Andersson" . "johan.rejeep@gmail.com")
+	    ("Sebastian Wiesner" . "lunaryorn@gmail.com"))
+	   (:maintainer "Johan Andersson" . "johan.rejeep@gmail.com")
+	   (:keywords "elpa" "server")
+	   (:url . "http://github.com/rejeep/servant.el"))])

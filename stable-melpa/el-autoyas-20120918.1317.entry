@@ -1,2 +1,9 @@
-
-(el-autoyas . [(20120918 1317) nil "Automatically create Emacs-Lisp Yasnippets" tar ((:commit . "bde0251ecb504f585dfa27c205c8e312655310cc") (:keywords "emacs" "lisp" "mode" "yasnippet") (:authors ("Matthew L. Fidler")) (:maintainer "Matthew L. Fidler") (:url . "https://github.com/mlf176f2/el-autoyas.el"))])
+(el-autoyas .
+	    [(20120918 1317)
+	     nil "Automatically create Emacs-Lisp Yasnippets" tar
+	     ((:commit . "bde0251ecb504f585dfa27c205c8e312655310cc")
+	      (:authors
+	       ("Matthew L. Fidler"))
+	      (:maintainer "Matthew L. Fidler")
+	      (:keywords "emacs" "lisp" "mode" "yasnippet")
+	      (:url . "https://github.com/mlf176f2/el-autoyas.el"))])

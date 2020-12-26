@@ -1,2 +1,11 @@
-
-(confluence . [(20151021 128) ((xml-rpc (1 6 4))) "Emacs mode for interacting with confluence wikis" tar ((:commit . "4518d270a07760644c4204985c83d234ece4738b") (:keywords "confluence" "wiki" "xmlrpc") (:authors ("James Ahlborn")) (:maintainer "James Ahlborn") (:url . "http://code.google.com/p/confluence-el/"))])
+(confluence .
+	    [(20151021 128)
+	     ((xml-rpc
+	       (1 6 4)))
+	     "Emacs mode for interacting with confluence wikis" tar
+	     ((:commit . "4518d270a07760644c4204985c83d234ece4738b")
+	      (:authors
+	       ("James Ahlborn"))
+	      (:maintainer "James Ahlborn")
+	      (:keywords "confluence" "wiki" "xmlrpc")
+	      (:url . "http://code.google.com/p/confluence-el/"))])

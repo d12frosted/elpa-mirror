@@ -1,2 +1,9 @@
-
-(occur-context-resize . [(20170904 2309) nil "dynamically resize context around matches in occur-mode" single ((:commit . "cdee5a631ceed9337579d4090e0acf8140747f80") (:keywords "matching") (:authors ("Charles L.G. Comstock" . "dgtized@gmail.com")) (:maintainer "Charles L.G. Comstock" . "dgtized@gmail.com") (:url . "https://github.com/dgtized/occur-context-resize.el"))])
+(occur-context-resize .
+		      [(20170904 2309)
+		       nil "dynamically resize context around matches in occur-mode" single
+		       ((:commit . "cdee5a631ceed9337579d4090e0acf8140747f80")
+			(:authors
+			 ("Charles L.G. Comstock" . "dgtized@gmail.com"))
+			(:maintainer "Charles L.G. Comstock" . "dgtized@gmail.com")
+			(:keywords "matching")
+			(:url . "https://github.com/dgtized/occur-context-resize.el"))])

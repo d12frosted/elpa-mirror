@@ -1,2 +1,8 @@
-
-(nummm-mode . [(20131117 1014) nil "Display the number of minor modes instead of their names" single ((:commit . "81951e12032274543c5f7a585b29bd93961e94e4") (:authors ("Andreu Gil" . "agpchil@gmail.com")) (:maintainer "Andreu Gil" . "agpchil@gmail.com") (:url . "http://github.com/agpchil/nummm-mode"))])
+(nummm-mode .
+	    [(20131117 1014)
+	     nil "Display the number of minor modes instead of their names" single
+	     ((:commit . "81951e12032274543c5f7a585b29bd93961e94e4")
+	      (:authors
+	       ("Andreu Gil" . "agpchil@gmail.com"))
+	      (:maintainer "Andreu Gil" . "agpchil@gmail.com")
+	      (:url . "http://github.com/agpchil/nummm-mode"))])

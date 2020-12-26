@@ -1,2 +1,17 @@
-
-(activity-watch-mode . [(20200416 637) ((emacs (25)) (request (0)) (json (0)) (cl-lib (0))) "Automatic time tracking extension." single ((:commit . "9d591c5ec9a2b2c7b55a754dd37c7434b2ef9fdc") (:keywords "calendar" "comm") (:authors ("Gabor Torok <gabor@20y.hu>, Alan Hamlett" . "alan@wakatime.com")) (:maintainer "Paul d'Hubert" . "paul.dhubert@ya.ru") (:url . "https://github.com/pauldub/activity-watch-mode"))])
+(activity-watch-mode .
+		     [(20200416 637)
+		      ((emacs
+			(25))
+		       (request
+			(0))
+		       (json
+			(0))
+		       (cl-lib
+			(0)))
+		      "Automatic time tracking extension." single
+		      ((:commit . "9d591c5ec9a2b2c7b55a754dd37c7434b2ef9fdc")
+		       (:authors
+			("Gabor Torok <gabor@20y.hu>, Alan Hamlett" . "alan@wakatime.com"))
+		       (:maintainer "Paul d'Hubert" . "paul.dhubert@ya.ru")
+		       (:keywords "calendar" "comm")
+		       (:url . "https://github.com/pauldub/activity-watch-mode"))])

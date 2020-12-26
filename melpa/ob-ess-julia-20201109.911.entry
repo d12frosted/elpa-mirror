@@ -1,2 +1,13 @@
-
-(ob-ess-julia . [(20201109 911) ((ess (20201004 1522)) (julia-mode (0 4))) "Org babel support for Julia language" tar ((:commit . "862f34da39faae87fc0900bb7006fb20fbd2b61a") (:keywords "languages") (:authors ("Frédéric Santos")) (:maintainer "Frédéric Santos") (:url . "https://github.com/frederic-santos/ob-ess-julia"))])
+(ob-ess-julia .
+	      [(20201109 911)
+	       ((ess
+		 (20201004 1522))
+		(julia-mode
+		 (0 4)))
+	       "Org babel support for Julia language" tar
+	       ((:commit . "862f34da39faae87fc0900bb7006fb20fbd2b61a")
+		(:authors
+		 ("Frédéric Santos"))
+		(:maintainer "Frédéric Santos")
+		(:keywords "languages")
+		(:url . "https://github.com/frederic-santos/ob-ess-julia"))])

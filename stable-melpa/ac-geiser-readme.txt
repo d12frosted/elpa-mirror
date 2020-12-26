@@ -1,1 +1,4 @@
-Provides one auto-complete source for Scheme projects using geiser.
+;;; Commentary:
+
+;; Provides one auto-complete source for Scheme projects using geiser.
+

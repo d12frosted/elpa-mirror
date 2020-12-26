@@ -1,2 +1,8 @@
-
-(pointback . [(20100210 1552) nil "Restore window points when returning to buffers" single ((:commit . "e3a02c1784d81b5a1d2477338d049af581ed19f8") (:keywords "convenience") (:authors ("Markus Triska" . "markus.triska@gmx.at")) (:maintainer "Markus Triska" . "markus.triska@gmx.at"))])
+(pointback .
+	   [(20100210 1552)
+	    nil "Restore window points when returning to buffers" single
+	    ((:commit . "e3a02c1784d81b5a1d2477338d049af581ed19f8")
+	     (:authors
+	      ("Markus Triska" . "markus.triska@gmx.at"))
+	     (:maintainer "Markus Triska" . "markus.triska@gmx.at")
+	     (:keywords "convenience"))])

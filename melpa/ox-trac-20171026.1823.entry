@@ -1,2 +1,11 @@
-
-(ox-trac . [(20171026 1823) ((org (9 0))) "Org Export Backend to Trac WikiFormat" single ((:commit . "03cc31efb1aa06991918f1071e250a9d58f96cfb") (:keywords "org-mode" "trac") (:authors ("Brian J. Carlson <hacker (at) abutilize (dot) com>")) (:maintainer "Brian J. Carlson <hacker (at) abutilize (dot) com>") (:url . "https://github.com/JalapenoGremlin/ox-trac"))])
+(ox-trac .
+	 [(20171026 1823)
+	  ((org
+	    (9 0)))
+	  "Org Export Backend to Trac WikiFormat" single
+	  ((:commit . "03cc31efb1aa06991918f1071e250a9d58f96cfb")
+	   (:authors
+	    ("Brian J. Carlson <hacker (at) abutilize (dot) com>"))
+	   (:maintainer "Brian J. Carlson <hacker (at) abutilize (dot) com>")
+	   (:keywords "org-mode" "trac")
+	   (:url . "https://github.com/JalapenoGremlin/ox-trac"))])

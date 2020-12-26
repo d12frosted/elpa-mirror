@@ -1,2 +1,11 @@
-
-(jastadd-ast-mode . [(20200926 1820) ((emacs (25))) "Major mode for editing JastAdd AST files" single ((:commit . "b7a0e32b669e726c8ccc348dd6b18ad4a7c70e1b") (:keywords "languages") (:authors ("Rudi Schlatte" . "rudi@constantly.at")) (:maintainer "Rudi Schlatte" . "rudi@constantly.at") (:url . "https://github.com/rudi/jastadd-ast-mode"))])
+(jastadd-ast-mode .
+		  [(20200926 1820)
+		   ((emacs
+		     (25)))
+		   "Major mode for editing JastAdd AST files" single
+		   ((:commit . "b7a0e32b669e726c8ccc348dd6b18ad4a7c70e1b")
+		    (:authors
+		     ("Rudi Schlatte" . "rudi@constantly.at"))
+		    (:maintainer "Rudi Schlatte" . "rudi@constantly.at")
+		    (:keywords "languages")
+		    (:url . "https://github.com/rudi/jastadd-ast-mode"))])

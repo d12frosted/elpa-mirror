@@ -1,2 +1,9 @@
-
-(purp-theme . [(20190629 1829) nil "No description available." tar ((:commit . "f821a7c30452d970ccb0ee08b68d56603860e31d"))])
+(purp-theme .
+	    [(20190629 1829)
+	     nil "A dark color theme with few colors" tar
+	     ((:commit . "f821a7c30452d970ccb0ee08b68d56603860e31d")
+	      (:authors
+	       ("Vincent Foley" . "vfoley@gmail.com"))
+	      (:maintainer "Vincent Foley" . "vfoley@gmail.com")
+	      (:keywords "faces")
+	      (:url . "https://github.com/gnuvince/purp"))])

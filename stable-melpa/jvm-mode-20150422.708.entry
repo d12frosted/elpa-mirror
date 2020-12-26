@@ -1,2 +1,13 @@
-
-(jvm-mode . [(20150422 708) ((dash (2 6 0)) (emacs (24))) "Monitor and manage your JVMs" single ((:commit . "3355dbaf5b0185aadfbad24160399abb32c5bea0") (:keywords "convenience") (:authors ("Martin Trojer" . "martin.trojer@gmail.com")) (:maintainer "Martin Trojer" . "martin.trojer@gmail.com") (:url . "https://github.com/martintrojer/jvm-mode.el"))])
+(jvm-mode .
+	  [(20150422 708)
+	   ((dash
+	     (2 6 0))
+	    (emacs
+	     (24)))
+	   "Monitor and manage your JVMs" single
+	   ((:commit . "3355dbaf5b0185aadfbad24160399abb32c5bea0")
+	    (:authors
+	     ("Martin Trojer" . "martin.trojer@gmail.com"))
+	    (:maintainer "Martin Trojer" . "martin.trojer@gmail.com")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/martintrojer/jvm-mode.el"))])

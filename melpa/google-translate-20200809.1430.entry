@@ -1,2 +1,9 @@
-
-(google-translate . [(20200809 1430) nil "Emacs interface to Google Translate." tar ((:commit . "0270073331de9358f29d049a27aa9145697d6dc7"))])
+(google-translate .
+		  [(20200809 1430)
+		   nil "Emacs interface to Google Translate." tar
+		   ((:commit . "0270073331de9358f29d049a27aa9145697d6dc7")
+		    (:authors
+		     ("Oleksandr Manzyuk" . "manzyuk@gmail.com"))
+		    (:maintainer "Andrey Tykhonov" . "atykhonov@gmail.com")
+		    (:keywords "convenience")
+		    (:url . "https://github.com/atykhonov/google-translate"))])

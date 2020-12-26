@@ -1,2 +1,8 @@
-
-(czech-holidays . [(20160113 1752) nil "Adds a list of Czech public holidays to Emacs calendar" single ((:commit . "d136fa09a152b3cd80db6d55c7b4ddfe07b90fbf") (:keywords "calendar") (:authors ("David Chkhikvadze" . "david.chk@outlook.com")) (:maintainer "David Chkhikvadze" . "david.chk@outlook.com"))])
+(czech-holidays .
+		[(20160113 1752)
+		 nil "Adds a list of Czech public holidays to Emacs calendar" single
+		 ((:commit . "d136fa09a152b3cd80db6d55c7b4ddfe07b90fbf")
+		  (:authors
+		   ("David Chkhikvadze" . "david.chk@outlook.com"))
+		  (:maintainer "David Chkhikvadze" . "david.chk@outlook.com")
+		  (:keywords "calendar"))])

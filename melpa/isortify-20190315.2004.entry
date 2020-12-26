@@ -1,2 +1,12 @@
-
-(isortify . [(20190315 2004) ((emacs (25)) (pythonic (0 1 0))) "(automatically) format python buffers using isort." single ((:commit . "ae7fb7163ce075209543f72953c9f431d103f6a3") (:authors ("Artem Malyshev" . "proofit404@gmail.com")) (:maintainer "Artem Malyshev" . "proofit404@gmail.com") (:url . "https://github.com/proofit404/isortify"))])
+(isortify .
+	  [(20190315 2004)
+	   ((emacs
+	     (25))
+	    (pythonic
+	     (0 1 0)))
+	   "(automatically) format python buffers using isort." single
+	   ((:commit . "ae7fb7163ce075209543f72953c9f431d103f6a3")
+	    (:authors
+	     ("Artem Malyshev" . "proofit404@gmail.com"))
+	    (:maintainer "Artem Malyshev" . "proofit404@gmail.com")
+	    (:url . "https://github.com/proofit404/isortify"))])

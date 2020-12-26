@@ -1,2 +1,11 @@
-
-(repo . [(20191201 38) ((emacs (24 3))) "Running repo from Emacs" single ((:commit . "7b3ce731f1209d74113cb65a2d6aa6f54ce8ed27") (:keywords "convenience") (:authors ("Damien Merenne")) (:maintainer "Damien Merenne") (:url . "https://github.com/canatella/repo-el"))])
+(repo .
+      [(20191201 38)
+       ((emacs
+	 (24 3)))
+       "Running repo from Emacs" single
+       ((:commit . "7b3ce731f1209d74113cb65a2d6aa6f54ce8ed27")
+	(:authors
+	 ("Damien Merenne"))
+	(:maintainer "Damien Merenne")
+	(:keywords "convenience")
+	(:url . "https://github.com/canatella/repo-el"))])

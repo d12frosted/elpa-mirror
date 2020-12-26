@@ -1,2 +1,8 @@
-
-(bison-mode . [(20200226 47) nil "Major mode for editing bison, yacc and lex files." single ((:commit . "675df47193accaf30ca44e142523b2b3bb122979") (:keywords "bison-mode" "yacc-mode") (:authors ("Eric Beuscher" . "beuscher@eecs.tulane.edu")) (:maintainer "Eric Beuscher" . "beuscher@eecs.tulane.edu"))])
+(bison-mode .
+	    [(20200226 47)
+	     nil "Major mode for editing bison, yacc and lex files." single
+	     ((:commit . "675df47193accaf30ca44e142523b2b3bb122979")
+	      (:authors
+	       ("Eric Beuscher" . "beuscher@eecs.tulane.edu"))
+	      (:maintainer "Eric Beuscher" . "beuscher@eecs.tulane.edu")
+	      (:keywords "bison-mode" "yacc-mode"))])

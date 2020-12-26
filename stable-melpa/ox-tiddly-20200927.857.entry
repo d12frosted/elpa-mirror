@@ -1,2 +1,13 @@
-
-(ox-tiddly . [(20200927 857) ((org (8)) (emacs (24 4))) "Org TiddlyWiki exporter" single ((:commit . "3377d8732aa916e736ce5822c7a9a4fbdc894e37") (:keywords "org") (:authors ("Derek Feichtinger" . "derek.feichtinger@psi.ch")) (:maintainer "Derek Feichtinger" . "derek.feichtinger@psi.ch") (:url . "https://github.com/dfeich/org8-wikiexporters"))])
+(ox-tiddly .
+	   [(20200927 857)
+	    ((org
+	      (8))
+	     (emacs
+	      (24 4)))
+	    "Org TiddlyWiki exporter" single
+	    ((:commit . "3377d8732aa916e736ce5822c7a9a4fbdc894e37")
+	     (:authors
+	      ("Derek Feichtinger" . "derek.feichtinger@psi.ch"))
+	     (:maintainer "Derek Feichtinger" . "derek.feichtinger@psi.ch")
+	     (:keywords "org")
+	     (:url . "https://github.com/dfeich/org8-wikiexporters"))])

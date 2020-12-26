@@ -1,2 +1,13 @@
-
-(uml-mode . [(20200129 1147) ((emacs (24 4)) (seq (0))) "Minor mode for ascii uml sequence diagrams" single ((:commit . "4c37ac1c4424b2313cd8f16ba48a98a4cc214200") (:keywords "docs") (:authors ("Ian Martins" . "ianxm@jhu.edu")) (:maintainer "Ian Martins" . "ianxm@jhu.edu") (:url . "http://github.com/ianxm/emacs-uml"))])
+(uml-mode .
+	  [(20200129 1147)
+	   ((emacs
+	     (24 4))
+	    (seq
+	     (0)))
+	   "Minor mode for ascii uml sequence diagrams" single
+	   ((:commit . "4c37ac1c4424b2313cd8f16ba48a98a4cc214200")
+	    (:authors
+	     ("Ian Martins" . "ianxm@jhu.edu"))
+	    (:maintainer "Ian Martins" . "ianxm@jhu.edu")
+	    (:keywords "docs")
+	    (:url . "http://github.com/ianxm/emacs-uml"))])

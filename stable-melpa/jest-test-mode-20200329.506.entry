@@ -1,2 +1,10 @@
-
-(jest-test-mode . [(20200329 506) ((emacs (25 1))) "Minor mode for running Node.js tests using jest" single ((:commit . "f04d08db36715d7509fd68448f74f917c6c1a382") (:authors ("Raymond Huang" . "rymndhng@gmail.com")) (:maintainer "Raymond Huang" . "rymndhng@gmail.com") (:url . "https://github.com/rymndhng/jest-test-mode.el"))])
+(jest-test-mode .
+		[(20200329 506)
+		 ((emacs
+		   (25 1)))
+		 "Minor mode for running Node.js tests using jest" single
+		 ((:commit . "f04d08db36715d7509fd68448f74f917c6c1a382")
+		  (:authors
+		   ("Raymond Huang" . "rymndhng@gmail.com"))
+		  (:maintainer "Raymond Huang" . "rymndhng@gmail.com")
+		  (:url . "https://github.com/rymndhng/jest-test-mode.el"))])

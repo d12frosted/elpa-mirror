@@ -1,2 +1,13 @@
-
-(emlib . [(20161126 1523) ((dash (2 13 0)) (cl-lib (0 5))) "A Machine Learning library for Emacs" tar ((:commit . "dea2af00f551ea580c641d86dd69219f7d4f3685") (:keywords "data" "ai" "neural networks" "ml") (:authors ("Narendra Joshi" . "narendraj9@gmail.com")) (:maintainer "Narendra Joshi" . "narendraj9@gmail.com") (:url . "https://github.com/narendraj9/emlib.git"))])
+(emlib .
+       [(20161126 1523)
+	((dash
+	  (2 13 0))
+	 (cl-lib
+	  (0 5)))
+	"A Machine Learning library for Emacs" tar
+	((:commit . "dea2af00f551ea580c641d86dd69219f7d4f3685")
+	 (:authors
+	  ("Narendra Joshi" . "narendraj9@gmail.com"))
+	 (:maintainer "Narendra Joshi" . "narendraj9@gmail.com")
+	 (:keywords "data" "ai" "neural networks" "ml")
+	 (:url . "https://github.com/narendraj9/emlib.git"))])

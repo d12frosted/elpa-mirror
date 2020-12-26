@@ -1,2 +1,8 @@
-
-(status . [(20151230 1408) nil "This package adds support for status icons to Emacs." tar ((:commit . "b62c74bf272566f82a68622f29fb9edafea0f241"))])
+(status .
+	[(20151230 1408)
+	 nil "This package adds support for status icons to Emacs." tar
+	 ((:commit . "b62c74bf272566f82a68622f29fb9edafea0f241")
+	  (:authors
+	   ("Tom Tromey" . "tom@tromey.com"))
+	  (:maintainer "Tom Tromey" . "tom@tromey.com")
+	  (:keywords "frames" "multimedia"))])

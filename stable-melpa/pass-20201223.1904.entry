@@ -1,0 +1,17 @@
+(pass .
+      [(20201223 1904)
+       ((emacs
+	 (25))
+	(password-store
+	 (2 1 0))
+	(password-store-otp
+	 (0 1 5))
+	(f
+	 (0 17)))
+       "Major mode for password-store.el" single
+       ((:commit . "cbfcb8a2e9fc1c864d92059f237732066937c1bb")
+	(:authors
+	 ("Nicolas Petton" . "petton.nicolas@gmail.com")
+	 ("Damien Cassou" . "damien@cassou.me"))
+	(:maintainer "Nicolas Petton" . "petton.nicolas@gmail.com")
+	(:keywords "password-store" "password" "keychain"))])

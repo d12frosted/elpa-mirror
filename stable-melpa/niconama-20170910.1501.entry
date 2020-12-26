@@ -1,2 +1,12 @@
-
-(niconama . [(20170910 1501) ((emacs (24)) (request (20170131 1747)) (cl-lib (0 5))) "Tools for Niconico Live Broadcast" single ((:commit . "96e7553e50e6bf7b58aac50f52c9b0b8edb41c56") (:keywords "comm") (:url . "https://github.com/NOBUTOKA/niconama.el"))])
+(niconama .
+	  [(20170910 1501)
+	   ((emacs
+	     (24))
+	    (request
+	     (20170131 1747))
+	    (cl-lib
+	     (0 5)))
+	   "Tools for Niconico Live Broadcast" single
+	   ((:commit . "96e7553e50e6bf7b58aac50f52c9b0b8edb41c56")
+	    (:keywords "comm")
+	    (:url . "https://github.com/NOBUTOKA/niconama.el"))])

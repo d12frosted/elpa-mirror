@@ -1,2 +1,9 @@
-
-(random-splash-image . [(20151003 130) nil "Randomly sets splash image to *GNU Emacs* buffer on startup." single ((:commit . "53a39ebfd8ac6be066a652a508a717870f94218a") (:keywords "games") (:authors ("kakakaya <kakakaya AT gmail.com>")) (:maintainer "kakakaya <kakakaya AT gmail.com>") (:url . "https://github.com/kakakaya/random-splash-image"))])
+(random-splash-image .
+		     [(20151003 130)
+		      nil "Randomly sets splash image to *GNU Emacs* buffer on startup." single
+		      ((:commit . "53a39ebfd8ac6be066a652a508a717870f94218a")
+		       (:authors
+			("kakakaya <kakakaya AT gmail.com>"))
+		       (:maintainer "kakakaya <kakakaya AT gmail.com>")
+		       (:keywords "games")
+		       (:url . "https://github.com/kakakaya/random-splash-image"))])

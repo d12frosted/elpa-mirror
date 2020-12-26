@@ -1,2 +1,11 @@
-
-(gams-mode . [(20200131 1335) ((emacs (24 3))) "Major mode for General Algebraic Modeling System (GAMS)" single ((:commit . "bb4e8a223c8aac5ec9268d1cfcf1a9ea9b3d8a49") (:keywords "languages" "tools" "gams") (:authors ("Shiro Takeda")) (:maintainer "Shiro Takeda") (:url . "http://shirotakeda.org/en/gams/gams-mode/"))])
+(gams-mode .
+	   [(20200131 1335)
+	    ((emacs
+	      (24 3)))
+	    "Major mode for General Algebraic Modeling System (GAMS)" single
+	    ((:commit . "bb4e8a223c8aac5ec9268d1cfcf1a9ea9b3d8a49")
+	     (:authors
+	      ("Shiro Takeda"))
+	     (:maintainer "Shiro Takeda")
+	     (:keywords "languages" "tools" "gams")
+	     (:url . "http://shirotakeda.org/en/gams/gams-mode/"))])

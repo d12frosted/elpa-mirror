@@ -1,2 +1,9 @@
-
-(drag-stuff . [(20161108 749) nil "Drag stuff (lines, words, region, etc...) around" tar ((:commit . "6d06d846cd37c052d79acd0f372c13006aa7e7c8"))])
+(drag-stuff .
+	    [(20161108 749)
+	     nil "Drag stuff (lines, words, region, etc...) around" tar
+	     ((:commit . "6d06d846cd37c052d79acd0f372c13006aa7e7c8")
+	      (:authors
+	       ("Johan Andersson" . "johan.rejeep@gmail.com"))
+	      (:maintainer "Johan Andersson" . "johan.rejeep@gmail.com")
+	      (:keywords "speed" "convenience")
+	      (:url . "http://github.com/rejeep/drag-stuff"))])

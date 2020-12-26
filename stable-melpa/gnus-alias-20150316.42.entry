@@ -1,2 +1,8 @@
-
-(gnus-alias . [(20150316 42) nil "an alternative to gnus-posting-styles" single ((:commit . "9447d3ccb4c0e75d0468899cccff7aa249657bac") (:keywords "personality" "identity" "news" "mail" "gnus") (:authors ("Joe Casadonte" . "emacs@northbound-train.com")) (:maintainer "Mark A. Hershberger" . "mah@everybody.org"))])
+(gnus-alias .
+	    [(20150316 42)
+	     nil "an alternative to gnus-posting-styles" single
+	     ((:commit . "9447d3ccb4c0e75d0468899cccff7aa249657bac")
+	      (:authors
+	       ("Joe Casadonte" . "emacs@northbound-train.com"))
+	      (:maintainer "Mark A. Hershberger" . "mah@everybody.org")
+	      (:keywords "personality" "identity" "news" "mail" "gnus"))])

@@ -1,2 +1,13 @@
-
-(evil-owl . [(20201115 130) ((emacs (25 1)) (evil (1 2 13))) "Preview evil registers and marks before using them" single ((:commit . "7d21ba71685b4b829c733288865054cc12783b8f") (:keywords "emulations" "evil" "visual") (:authors ("Daniel Phan" . "daniel.phan36@gmail.com")) (:maintainer "Daniel Phan" . "daniel.phan36@gmail.com") (:url . "https://github.com/mamapanda/evil-owl"))])
+(evil-owl .
+	  [(20201115 130)
+	   ((emacs
+	     (25 1))
+	    (evil
+	     (1 2 13)))
+	   "Preview evil registers and marks before using them" single
+	   ((:commit . "7d21ba71685b4b829c733288865054cc12783b8f")
+	    (:authors
+	     ("Daniel Phan" . "daniel.phan36@gmail.com"))
+	    (:maintainer "Daniel Phan" . "daniel.phan36@gmail.com")
+	    (:keywords "emulations" "evil" "visual")
+	    (:url . "https://github.com/mamapanda/evil-owl"))])

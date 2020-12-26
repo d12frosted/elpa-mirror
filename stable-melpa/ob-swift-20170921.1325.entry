@@ -1,2 +1,11 @@
-
-(ob-swift . [(20170921 1325) ((org (8))) "org-babel functions for swift evaluation" single ((:commit . "ed478ddbbe41ce5373efde06b4dd0c3663c9055f") (:keywords "org" "babel" "swift") (:authors ("Feng Zhou" . "zf.pascal@gmail.com")) (:maintainer "Feng Zhou" . "zf.pascal@gmail.com") (:url . "http://github.com/zweifisch/ob-swift"))])
+(ob-swift .
+	  [(20170921 1325)
+	   ((org
+	     (8)))
+	   "org-babel functions for swift evaluation" single
+	   ((:commit . "ed478ddbbe41ce5373efde06b4dd0c3663c9055f")
+	    (:authors
+	     ("Feng Zhou" . "zf.pascal@gmail.com"))
+	    (:maintainer "Feng Zhou" . "zf.pascal@gmail.com")
+	    (:keywords "org" "babel" "swift")
+	    (:url . "http://github.com/zweifisch/ob-swift"))])

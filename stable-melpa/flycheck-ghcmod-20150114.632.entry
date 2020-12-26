@@ -1,2 +1,13 @@
-
-(flycheck-ghcmod . [(20150114 632) ((flycheck (0 21 -4 1)) (dash (2 0))) "A flycheck checker for Haskell using ghcmod" single ((:commit . "6bb7b7d879f05bbae54e99eb04806c877adf3ccc") (:keywords "convenience" "languages" "tools") (:authors ("Shen Chao" . "scturtle@gmail.com")) (:maintainer "Shen Chao" . "scturtle@gmail.com") (:url . "https://github.com/scturtle/flycheck-ghcmod"))])
+(flycheck-ghcmod .
+		 [(20150114 632)
+		  ((flycheck
+		    (0 21 -4 1))
+		   (dash
+		    (2 0)))
+		  "A flycheck checker for Haskell using ghcmod" single
+		  ((:commit . "6bb7b7d879f05bbae54e99eb04806c877adf3ccc")
+		   (:authors
+		    ("Shen Chao" . "scturtle@gmail.com"))
+		   (:maintainer "Shen Chao" . "scturtle@gmail.com")
+		   (:keywords "convenience" "languages" "tools")
+		   (:url . "https://github.com/scturtle/flycheck-ghcmod"))])

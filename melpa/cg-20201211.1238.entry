@@ -1,2 +1,11 @@
-
-(cg . [(20201211 1238) ((emacs (24 3))) "major mode for editing Constraint Grammar files" single ((:commit . "6e0ad3007ab39e8438baaf87bde11aa72c6606f2") (:keywords "languages") (:authors ("Kevin Brubeck Unhammer" . "unhammer@fsfe.org")) (:maintainer "Kevin Brubeck Unhammer" . "unhammer@fsfe.org") (:url . "https://visl.sdu.dk/constraint_grammar.html"))])
+(cg .
+    [(20201211 1238)
+     ((emacs
+       (24 3)))
+     "major mode for editing Constraint Grammar files" single
+     ((:commit . "6e0ad3007ab39e8438baaf87bde11aa72c6606f2")
+      (:authors
+       ("Kevin Brubeck Unhammer" . "unhammer@fsfe.org"))
+      (:maintainer "Kevin Brubeck Unhammer" . "unhammer@fsfe.org")
+      (:keywords "languages")
+      (:url . "https://visl.sdu.dk/constraint_grammar.html"))])

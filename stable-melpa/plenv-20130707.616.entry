@@ -1,2 +1,8 @@
-
-(plenv . [(20130707 616) nil "A plenv wrapper for Emacs" single ((:commit . "ee937d0f3a1a7ba2d035f45be896d3ed8fefaee2") (:keywords "emacs" "perl") (:authors ("Kenta Sato" . "karupa@cpan.org")) (:maintainer "Kenta Sato" . "karupa@cpan.org"))])
+(plenv .
+       [(20130707 616)
+	nil "A plenv wrapper for Emacs" single
+	((:commit . "ee937d0f3a1a7ba2d035f45be896d3ed8fefaee2")
+	 (:authors
+	  ("Kenta Sato" . "karupa@cpan.org"))
+	 (:maintainer "Kenta Sato" . "karupa@cpan.org")
+	 (:keywords "emacs" "perl"))])

@@ -1,2 +1,9 @@
-
-(flycheck-cython . [(20170724 958) ((flycheck (0 25))) "Support Cython in flycheck" single ((:commit . "ecc4454d35ab5317ab66a04406f36f0c1dbc0b76") (:authors ("Lorenzo Bolla" . "lbolla@gmail.com")) (:maintainer "Lorenzo Bolla" . "lbolla@gmail.com"))])
+(flycheck-cython .
+		 [(20170724 958)
+		  ((flycheck
+		    (0 25)))
+		  "Support Cython in flycheck" single
+		  ((:commit . "ecc4454d35ab5317ab66a04406f36f0c1dbc0b76")
+		   (:authors
+		    ("Lorenzo Bolla" . "lbolla@gmail.com"))
+		   (:maintainer "Lorenzo Bolla" . "lbolla@gmail.com"))])

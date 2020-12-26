@@ -1,2 +1,10 @@
-
-(sprintly-mode . [(20121006 534) ((furl (0 0 2))) "Major mode for dealing with sprint.ly" single ((:commit . "6695892bae5860b5268bf3ae62be990ee9b63c11") (:authors ("Justin Lilly" . "justin@justinlilly.com")) (:maintainer "Justin Lilly" . "justin@justinlilly.com") (:url . "https://github.com/sprintly/sprintly-mode"))])
+(sprintly-mode .
+	       [(20121006 534)
+		((furl
+		  (0 0 2)))
+		"Major mode for dealing with sprint.ly" single
+		((:commit . "6695892bae5860b5268bf3ae62be990ee9b63c11")
+		 (:authors
+		  ("Justin Lilly" . "justin@justinlilly.com"))
+		 (:maintainer "Justin Lilly" . "justin@justinlilly.com")
+		 (:url . "https://github.com/sprintly/sprintly-mode"))])

@@ -1,2 +1,11 @@
-
-(zeno-theme . [(20181027 118) ((emacs (24))) "A dark theme using different shades of blue" single ((:commit . "0914c4a5b1b9499e7f1ca5699b1c3ea2f4be3f1a") (:keywords "faces" "theme" "dark" "blue") (:authors ("Bharat Joshi" . "jbharat@outlook.com")) (:maintainer "Bharat Joshi" . "jbharat@outlook.com") (:url . "https://github.com/jbharat/zeno-theme"))])
+(zeno-theme .
+	    [(20181027 118)
+	     ((emacs
+	       (24)))
+	     "A dark theme using different shades of blue" single
+	     ((:commit . "0914c4a5b1b9499e7f1ca5699b1c3ea2f4be3f1a")
+	      (:authors
+	       ("Bharat Joshi" . "jbharat@outlook.com"))
+	      (:maintainer "Bharat Joshi" . "jbharat@outlook.com")
+	      (:keywords "faces" "theme" "dark" "blue")
+	      (:url . "https://github.com/jbharat/zeno-theme"))])

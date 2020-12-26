@@ -1,2 +1,15 @@
-
-(swagger-to-org . [(20160611 56) ((emacs (24)) (cl-lib (0 5)) (json (1 4))) "Convert a swagger.json file into an org-mode file" single ((:commit . "181357c71ea24bede263f5706d8781ad65e16877") (:keywords "ahungry" "emacs" "swagger" "openapi" "orgmode" "org" "export") (:authors ("Matthew Carter" . "m@ahungry.com")) (:maintainer "Matthew Carter" . "m@ahungry.com") (:url . "https://github.com/ahungry/swagger-to-org"))])
+(swagger-to-org .
+		[(20160611 56)
+		 ((emacs
+		   (24))
+		  (cl-lib
+		   (0 5))
+		  (json
+		   (1 4)))
+		 "Convert a swagger.json file into an org-mode file" single
+		 ((:commit . "181357c71ea24bede263f5706d8781ad65e16877")
+		  (:authors
+		   ("Matthew Carter" . "m@ahungry.com"))
+		  (:maintainer "Matthew Carter" . "m@ahungry.com")
+		  (:keywords "ahungry" "emacs" "swagger" "openapi" "orgmode" "org" "export")
+		  (:url . "https://github.com/ahungry/swagger-to-org"))])

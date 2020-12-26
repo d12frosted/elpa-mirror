@@ -1,2 +1,9 @@
-
-(minibuf-isearch . [(20151226 1943) nil "incremental search on minibuffer history" single ((:commit . "2846c6ac369ee623dad4cd3c8a7a6d9078965516") (:keywords "minibuffer" "history" "incremental search") (:authors ("Keiichiro Nagano" . "knagano@sodan.org") ("Hideyuki SHIRAI " . "shirai@meadowy.org")) (:maintainer "Keiichiro Nagano" . "knagano@sodan.org"))])
+(minibuf-isearch .
+		 [(20151226 1943)
+		  nil "incremental search on minibuffer history" single
+		  ((:commit . "2846c6ac369ee623dad4cd3c8a7a6d9078965516")
+		   (:authors
+		    ("Keiichiro Nagano" . "knagano@sodan.org")
+		    ("Hideyuki SHIRAI " . "shirai@meadowy.org"))
+		   (:maintainer "Keiichiro Nagano" . "knagano@sodan.org")
+		   (:keywords "minibuffer" "history" "incremental search"))])

@@ -1,2 +1,13 @@
-
-(term+mux . [(20140211 749) ((term+ (0 1)) (tab-group (0 1))) "term+ terminal multiplexer and session management" single ((:commit . "81b60e80cf008472bfd7fad9233af2ef722c208a") (:keywords "terminal" "emulation") (:authors ("INA Lintaro <tarao.gnn at gmail.com>")) (:maintainer "INA Lintaro <tarao.gnn at gmail.com>") (:url . "http://github.com/tarao/term+-el"))])
+(term+mux .
+	  [(20140211 749)
+	   ((term+
+	     (0 1))
+	    (tab-group
+	     (0 1)))
+	   "term+ terminal multiplexer and session management" single
+	   ((:commit . "81b60e80cf008472bfd7fad9233af2ef722c208a")
+	    (:authors
+	     ("INA Lintaro <tarao.gnn at gmail.com>"))
+	    (:maintainer "INA Lintaro <tarao.gnn at gmail.com>")
+	    (:keywords "terminal" "emulation")
+	    (:url . "http://github.com/tarao/term+-el"))])

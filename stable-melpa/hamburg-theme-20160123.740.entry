@@ -1,2 +1,9 @@
-
-(hamburg-theme . [(20160123 740) ((emacs (24))) "Color Theme with a dark blue background." single ((:commit . "aacefdf1501d97a5afc0e63c8ead4b2463323028") (:authors ("Martin Haesler")) (:maintainer "Martin Haesler"))])
+(hamburg-theme .
+	       [(20160123 740)
+		((emacs
+		  (24)))
+		"Color Theme with a dark blue background." single
+		((:commit . "aacefdf1501d97a5afc0e63c8ead4b2463323028")
+		 (:authors
+		  ("Martin Haesler"))
+		 (:maintainer "Martin Haesler"))])

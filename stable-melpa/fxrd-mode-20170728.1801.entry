@@ -1,2 +1,11 @@
-
-(fxrd-mode . [(20170728 1801) ((s (1 2))) "Major mode for editing fixed field width files" tar ((:commit . "18a603474abb5a786a8d9f20c283d5f7beed3540") (:keywords "convenience") (:authors ("Marc Sherry" . "msherry@gmail.com")) (:maintainer "Marc Sherry" . "msherry@gmail.com") (:url . "https://github.com/msherry/fxrd-mode"))])
+(fxrd-mode .
+	   [(20170728 1801)
+	    ((s
+	      (1 2)))
+	    "Major mode for editing fixed field width files" tar
+	    ((:commit . "18a603474abb5a786a8d9f20c283d5f7beed3540")
+	     (:authors
+	      ("Marc Sherry" . "msherry@gmail.com"))
+	     (:maintainer "Marc Sherry" . "msherry@gmail.com")
+	     (:keywords "convenience")
+	     (:url . "https://github.com/msherry/fxrd-mode"))])

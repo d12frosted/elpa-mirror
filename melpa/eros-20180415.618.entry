@@ -1,2 +1,11 @@
-
-(eros . [(20180415 618) ((emacs (24 4))) "Evaluation Result OverlayS for Emacs Lisp" single ((:commit . "dd8910279226259e100dab798b073a52f9b4233a") (:keywords "convenience" "lisp") (:authors ("Tianxiang Xiong" . "tianxiang.xiong@gmail.com")) (:maintainer "Tianxiang Xiong" . "tianxiang.xiong@gmail.com") (:url . "https://github.com/xiongtx/eros"))])
+(eros .
+      [(20180415 618)
+       ((emacs
+	 (24 4)))
+       "Evaluation Result OverlayS for Emacs Lisp" single
+       ((:commit . "dd8910279226259e100dab798b073a52f9b4233a")
+	(:authors
+	 ("Tianxiang Xiong" . "tianxiang.xiong@gmail.com"))
+	(:maintainer "Tianxiang Xiong" . "tianxiang.xiong@gmail.com")
+	(:keywords "convenience" "lisp")
+	(:url . "https://github.com/xiongtx/eros"))])

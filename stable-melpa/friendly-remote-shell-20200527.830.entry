@@ -1,2 +1,16 @@
-
-(friendly-remote-shell . [(20200527 830) ((emacs (24 1)) (cl-lib (0 6 1)) (with-shell-interpreter (0 2 3)) (friendly-tramp-path (0 1 0)) (friendly-shell (0 2 0))) "Human-friendly remote interactive shells" single ((:commit . "ad4ac00662829fa18858be02b322753ad091ffe3") (:keywords "processes" "terminals") (:url . "https://github.com/p3r7/friendly-shell"))])
+(friendly-remote-shell .
+		       [(20200527 830)
+			((emacs
+			  (24 1))
+			 (cl-lib
+			  (0 6 1))
+			 (with-shell-interpreter
+			  (0 2 3))
+			 (friendly-tramp-path
+			  (0 1 0))
+			 (friendly-shell
+			  (0 2 0)))
+			"Human-friendly remote interactive shells" single
+			((:commit . "ad4ac00662829fa18858be02b322753ad091ffe3")
+			 (:keywords "processes" "terminals")
+			 (:url . "https://github.com/p3r7/friendly-shell"))])

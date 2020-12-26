@@ -1,2 +1,19 @@
-
-(treefactor . [(20200516 1631) ((emacs (26 1)) (dash (2 16 0)) (f (0 20 0)) (org (9 2 6)) (avy (0 5 0))) "Restructure your messy Org documents" single ((:commit . "75357757022a4399ab772ff0d92065bd114dabe9") (:keywords "outlines" "files" "convenience") (:authors ("Leo Littlebook" . "Leo.Littlebook@gmail.com")) (:maintainer "Leo Littlebook" . "Leo.Littlebook@gmail.com") (:url . "https://github.com/cyberthal/treefactor"))])
+(treefactor .
+	    [(20200516 1631)
+	     ((emacs
+	       (26 1))
+	      (dash
+	       (2 16 0))
+	      (f
+	       (0 20 0))
+	      (org
+	       (9 2 6))
+	      (avy
+	       (0 5 0)))
+	     "Restructure your messy Org documents" single
+	     ((:commit . "75357757022a4399ab772ff0d92065bd114dabe9")
+	      (:authors
+	       ("Leo Littlebook" . "Leo.Littlebook@gmail.com"))
+	      (:maintainer "Leo Littlebook" . "Leo.Littlebook@gmail.com")
+	      (:keywords "outlines" "files" "convenience")
+	      (:url . "https://github.com/cyberthal/treefactor"))])

@@ -1,2 +1,8 @@
-
-(replace-symbol . [(20160518 12) nil "Rename symbols in expressions or buffers" single ((:commit . "baf949e528aee1881f455f9c84e67718bedcb3f6") (:authors ("Brian Mastenbrook" . "brian@mastenbrook.net")) (:maintainer "Brian Mastenbrook" . "brian@mastenbrook.net") (:url . "https://github.com/bmastenbrook/replace-symbol-el"))])
+(replace-symbol .
+		[(20160518 12)
+		 nil "Rename symbols in expressions or buffers" single
+		 ((:commit . "baf949e528aee1881f455f9c84e67718bedcb3f6")
+		  (:authors
+		   ("Brian Mastenbrook" . "brian@mastenbrook.net"))
+		  (:maintainer "Brian Mastenbrook" . "brian@mastenbrook.net")
+		  (:url . "https://github.com/bmastenbrook/replace-symbol-el"))])

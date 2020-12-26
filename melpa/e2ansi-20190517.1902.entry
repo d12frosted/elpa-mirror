@@ -1,2 +1,11 @@
-
-(e2ansi . [(20190517 1902) ((face-explorer (0 0 4))) "Syntax highlighting support for `less', powered by Emacs." tar ((:commit . "6e1bb4e4e27885d1786db08b091cfa13b184fb54") (:keywords "faces" "languages") (:authors ("Anders Lindgren")) (:maintainer "Anders Lindgren") (:url . "https://github.com/Lindydancer/e2ansi"))])
+(e2ansi .
+	[(20190517 1902)
+	 ((face-explorer
+	   (0 0 4)))
+	 "Syntax highlighting support for `less', powered by Emacs." tar
+	 ((:commit . "6e1bb4e4e27885d1786db08b091cfa13b184fb54")
+	  (:authors
+	   ("Anders Lindgren"))
+	  (:maintainer "Anders Lindgren")
+	  (:keywords "faces" "languages")
+	  (:url . "https://github.com/Lindydancer/e2ansi"))])

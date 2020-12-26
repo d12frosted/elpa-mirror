@@ -1,2 +1,11 @@
-
-(gtk-variant . [(20200416 2136) ((emacs (25 1))) "Set the GTK theme variant (titlebar color)" single ((:commit . "4462a5ab071ec001734e92d1ac2e5fa9721b94bd") (:keywords "frames" "gtk" "titlebar") (:authors ("Paul Oppenheimer")) (:maintainer "Paul Oppenheimer") (:url . "https://github.com/bepvte/gtk-variant.el"))])
+(gtk-variant .
+	     [(20200416 2136)
+	      ((emacs
+		(25 1)))
+	      "Set the GTK theme variant (titlebar color)" single
+	      ((:commit . "4462a5ab071ec001734e92d1ac2e5fa9721b94bd")
+	       (:authors
+		("Paul Oppenheimer"))
+	       (:maintainer "Paul Oppenheimer")
+	       (:keywords "frames" "gtk" "titlebar")
+	       (:url . "https://github.com/bepvte/gtk-variant.el"))])

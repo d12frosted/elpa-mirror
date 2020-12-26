@@ -1,2 +1,9 @@
-
-(identica-mode . [(20130204 2253) nil "Major mode API client for status.net open microblogging" tar ((:commit . "cf9183ee11ac922e85c7c908f04e2d00b03111b3") (:keywords "identica" "web") (:authors ("Gabriel Saldana" . "gsaldana@gmail.com")) (:maintainer "Gabriel Saldana" . "gsaldana@gmail.com") (:url . "http://blog.gabrielsaldana.org/identica-mode-for-emacs/"))])
+(identica-mode .
+	       [(20130204 2253)
+		nil "Major mode API client for status.net open microblogging" tar
+		((:commit . "cf9183ee11ac922e85c7c908f04e2d00b03111b3")
+		 (:authors
+		  ("Gabriel Saldana" . "gsaldana@gmail.com"))
+		 (:maintainer "Gabriel Saldana" . "gsaldana@gmail.com")
+		 (:keywords "identica" "web")
+		 (:url . "http://blog.gabrielsaldana.org/identica-mode-for-emacs/"))])

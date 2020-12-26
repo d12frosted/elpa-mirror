@@ -1,2 +1,11 @@
-
-(prompts . [(20160916 1041) ((dash (2 13 0))) "utilities for working with text prompts." single ((:commit . "1cd5e732ff2a86b47836eb7252e5b59cd4b6ab26") (:keywords "input" "minibuffer") (:authors ("Ben Moon" . "guiltydolphin@gmail.com")) (:maintainer "Ben Moon" . "guiltydolphin@gmail.com") (:url . "https://github.com/guiltydolphin/prompts.el"))])
+(prompts .
+	 [(20160916 1041)
+	  ((dash
+	    (2 13 0)))
+	  "utilities for working with text prompts." single
+	  ((:commit . "1cd5e732ff2a86b47836eb7252e5b59cd4b6ab26")
+	   (:authors
+	    ("Ben Moon" . "guiltydolphin@gmail.com"))
+	   (:maintainer "Ben Moon" . "guiltydolphin@gmail.com")
+	   (:keywords "input" "minibuffer")
+	   (:url . "https://github.com/guiltydolphin/prompts.el"))])

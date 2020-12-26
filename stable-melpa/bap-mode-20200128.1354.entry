@@ -1,2 +1,9 @@
-
-(bap-mode . [(20200128 1354) nil "Major-mode for BAP's IR" single ((:commit . "8969679f60db0aa918d35f40d959c0a9c723b111") (:keywords "languages") (:authors ("Thomas Barabosch <http://github/tbarabosch>")) (:maintainer "Thomas Barabosch" . "thomas.barabosch@fkie.fraunhofer.de") (:url . "https://github.com/fkie-cad/bap-mode"))])
+(bap-mode .
+	  [(20200128 1354)
+	   nil "Major-mode for BAP's IR" single
+	   ((:commit . "8969679f60db0aa918d35f40d959c0a9c723b111")
+	    (:authors
+	     ("Thomas Barabosch <http://github/tbarabosch>"))
+	    (:maintainer "Thomas Barabosch" . "thomas.barabosch@fkie.fraunhofer.de")
+	    (:keywords "languages")
+	    (:url . "https://github.com/fkie-cad/bap-mode"))])

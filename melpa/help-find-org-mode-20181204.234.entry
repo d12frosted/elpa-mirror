@@ -1,2 +1,11 @@
-
-(help-find-org-mode . [(20181204 234) ((emacs (24 4))) "Advise help to find org source over tangled code" single ((:commit . "aeda7f92c086dab9d8dfcd580fe80b332887a548") (:keywords "convenience") (:authors ("Eric Crosson" . "eric.s.crosson@utexas.com")) (:maintainer "Eric Crosson" . "eric.s.crosson@utexas.com") (:url . "https://github.com/EricCrosson/help-find-org-mode"))])
+(help-find-org-mode .
+		    [(20181204 234)
+		     ((emacs
+		       (24 4)))
+		     "Advise help to find org source over tangled code" single
+		     ((:commit . "aeda7f92c086dab9d8dfcd580fe80b332887a548")
+		      (:authors
+		       ("Eric Crosson" . "eric.s.crosson@utexas.com"))
+		      (:maintainer "Eric Crosson" . "eric.s.crosson@utexas.com")
+		      (:keywords "convenience")
+		      (:url . "https://github.com/EricCrosson/help-find-org-mode"))])

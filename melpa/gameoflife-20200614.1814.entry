@@ -1,2 +1,9 @@
-
-(gameoflife . [(20200614 1814) nil "Screensaver running Conway's Game of Life" single ((:commit . "2483f3d98dbcf7f1633f551cc3691f5659b4b942") (:keywords "games") (:authors ("Anders Lindgren")) (:maintainer "Anders Lindgren") (:url . "https://github.com/Lindydancer/gameoflife"))])
+(gameoflife .
+	    [(20200614 1814)
+	     nil "Screensaver running Conway's Game of Life" single
+	     ((:commit . "2483f3d98dbcf7f1633f551cc3691f5659b4b942")
+	      (:authors
+	       ("Anders Lindgren"))
+	      (:maintainer "Anders Lindgren")
+	      (:keywords "games")
+	      (:url . "https://github.com/Lindydancer/gameoflife"))])

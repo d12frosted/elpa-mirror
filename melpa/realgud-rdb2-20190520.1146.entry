@@ -1,2 +1,16 @@
-
-(realgud-rdb2 . [(20190520 1146) ((realgud (1 4 5)) (load-relative (1 2)) (cl-lib (0 5)) (emacs (24))) "Realgud front-end for interacting with Ruby debugger2" tar ((:commit . "3594aa74f7afda3c3251bb2af7fe0e8ec6d621ae") (:authors ("Rocky Bernstein")) (:maintainer "Rocky Bernstein") (:url . "http://github.com/rocky/realgud-ruby-debugger2"))])
+(realgud-rdb2 .
+	      [(20190520 1146)
+	       ((realgud
+		 (1 4 5))
+		(load-relative
+		 (1 2))
+		(cl-lib
+		 (0 5))
+		(emacs
+		 (24)))
+	       "Realgud front-end for interacting with Ruby debugger2" tar
+	       ((:commit . "3594aa74f7afda3c3251bb2af7fe0e8ec6d621ae")
+		(:authors
+		 ("Rocky Bernstein"))
+		(:maintainer "Rocky Bernstein")
+		(:url . "http://github.com/rocky/realgud-ruby-debugger2"))])

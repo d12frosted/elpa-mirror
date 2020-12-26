@@ -1,2 +1,8 @@
-
-(shell-command . [(20090830 1040) nil "enables tab-completion for `shell-command'" single ((:commit . "7e22125f746ce9ffbe9b0282d62f4b4bbbe672bd") (:keywords "shell") (:authors ("TSUCHIYA Masatoshi" . "tsuchiya@namazu.org")) (:maintainer "TSUCHIYA Masatoshi" . "tsuchiya@namazu.org"))])
+(shell-command .
+	       [(20090830 1040)
+		nil "enables tab-completion for `shell-command'" single
+		((:commit . "7e22125f746ce9ffbe9b0282d62f4b4bbbe672bd")
+		 (:authors
+		  ("TSUCHIYA Masatoshi" . "tsuchiya@namazu.org"))
+		 (:maintainer "TSUCHIYA Masatoshi" . "tsuchiya@namazu.org")
+		 (:keywords "shell"))])

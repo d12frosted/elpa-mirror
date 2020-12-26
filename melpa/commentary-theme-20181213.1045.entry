@@ -1,2 +1,7 @@
-
-(commentary-theme . [(20181213 1045) ((emacs (24))) "A minimal theme with contrasting comments" single ((:commit . "dede0f8ecb72156fa6ae81198ea570ead02997ff") (:url . "https://github.com/pzel/commentary-theme"))])
+(commentary-theme .
+		  [(20181213 1045)
+		   ((emacs
+		     (24)))
+		   "A minimal theme with contrasting comments" single
+		   ((:commit . "dede0f8ecb72156fa6ae81198ea570ead02997ff")
+		    (:url . "https://github.com/pzel/commentary-theme"))])

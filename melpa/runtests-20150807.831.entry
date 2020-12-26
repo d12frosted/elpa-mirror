@@ -1,2 +1,9 @@
-
-(runtests . [(20150807 831) nil "Run unit tests from Emacs" single ((:commit . "ed90249f24cc48290018df48b9b9b7172440be3e") (:keywords "test") (:authors ("Sune Simonsen" . "sune@we-knowhow.dk")) (:maintainer "Sune Simonsen" . "sune@we-knowhow.dk") (:url . "https://github.com/sunesimonsen/emacs-runtests"))])
+(runtests .
+	  [(20150807 831)
+	   nil "Run unit tests from Emacs" single
+	   ((:commit . "ed90249f24cc48290018df48b9b9b7172440be3e")
+	    (:authors
+	     ("Sune Simonsen" . "sune@we-knowhow.dk"))
+	    (:maintainer "Sune Simonsen" . "sune@we-knowhow.dk")
+	    (:keywords "test")
+	    (:url . "https://github.com/sunesimonsen/emacs-runtests"))])

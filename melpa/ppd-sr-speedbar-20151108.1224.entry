@@ -1,2 +1,13 @@
-
-(ppd-sr-speedbar . [(20151108 1224) ((sr-speedbar (20140914 2339)) (project-persist-drawer (0 0 4))) "Sr Speedbar adaptor for project-persist-drawer." tar ((:commit . "d88d7f63f695824c435dd996405454d1e46d2aa3"))])
+(ppd-sr-speedbar .
+		 [(20151108 1224)
+		  ((sr-speedbar
+		    (20140914 2339))
+		   (project-persist-drawer
+		    (0 0 4)))
+		  "Sr Speedbar adaptor for project-persist-drawer." tar
+		  ((:commit . "d88d7f63f695824c435dd996405454d1e46d2aa3")
+		   (:authors
+		    ("Robert Dallas Gray"))
+		   (:maintainer "Robert Dallas Gray")
+		   (:keywords "projects" "drawer")
+		   (:url . "https://github.com/rdallasgrayppd-sr-speedbar"))])

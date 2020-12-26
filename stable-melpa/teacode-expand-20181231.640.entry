@@ -1,2 +1,11 @@
-
-(teacode-expand . [(20181231 640) ((emacs (24 4))) "Expansion of text by TeaCode program." single ((:commit . "2122e4b32ed4edd2d7ebc0ff8ebf407e29d6e910") (:keywords "lisp") (:authors ("Richard Guay" . "raguay@customct.com")) (:maintainer "Richard Guay" . "raguay@customct.com") (:url . "https://github.com/raguay/TeaCode-Expand"))])
+(teacode-expand .
+		[(20181231 640)
+		 ((emacs
+		   (24 4)))
+		 "Expansion of text by TeaCode program." single
+		 ((:commit . "2122e4b32ed4edd2d7ebc0ff8ebf407e29d6e910")
+		  (:authors
+		   ("Richard Guay" . "raguay@customct.com"))
+		  (:maintainer "Richard Guay" . "raguay@customct.com")
+		  (:keywords "lisp")
+		  (:url . "https://github.com/raguay/TeaCode-Expand"))])

@@ -1,2 +1,14 @@
-
-(realgud-trepan-ni . [(20200722 1118) ((load-relative (1 2)) (realgud (1 5 0)) (emacs (25))) "Realgud front-end to trepan-ni" tar ((:commit . "6e38cf838c7b47b5f1353d00901b939ffa36d707") (:authors ("Rocky Bernstein" . "rocky@gnu.org")) (:maintainer "Rocky Bernstein" . "rocky@gnu.org") (:url . "https://github.com/realgud/realgud-trepan-ni"))])
+(realgud-trepan-ni .
+		   [(20200722 1118)
+		    ((load-relative
+		      (1 2))
+		     (realgud
+		      (1 5 0))
+		     (emacs
+		      (25)))
+		    "Realgud front-end to trepan-ni" tar
+		    ((:commit . "6e38cf838c7b47b5f1353d00901b939ffa36d707")
+		     (:authors
+		      ("Rocky Bernstein" . "rocky@gnu.org"))
+		     (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
+		     (:url . "https://github.com/realgud/realgud-trepan-ni"))])

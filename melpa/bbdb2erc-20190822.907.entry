@@ -1,2 +1,10 @@
-
-(bbdb2erc . [(20190822 907) ((bbdb (3 0))) "make bbdb show if pal is online with ERC, click i to chat" single ((:commit . "40b89e961762af3e7ade3a1844a9fbcd4084ac65") (:keywords "irc" "contacts" "chat" "client" "internet") (:authors ("Kevin Brubeck Unhammer" . "unhammer@fsfe.org")) (:maintainer "Kevin Brubeck Unhammer" . "unhammer@fsfe.org"))])
+(bbdb2erc .
+	  [(20190822 907)
+	   ((bbdb
+	     (3 0)))
+	   "make bbdb show if pal is online with ERC, click i to chat" single
+	   ((:commit . "40b89e961762af3e7ade3a1844a9fbcd4084ac65")
+	    (:authors
+	     ("Kevin Brubeck Unhammer" . "unhammer@fsfe.org"))
+	    (:maintainer "Kevin Brubeck Unhammer" . "unhammer@fsfe.org")
+	    (:keywords "irc" "contacts" "chat" "client" "internet"))])

@@ -1,2 +1,10 @@
-
-(monokai-alt-theme . [(20170630 2048) ((emacs (24))) "Theme with a dark background. Based on sublime monokai theme." single ((:commit . "f342b6afc31f929be0626eca2d696ee9fab78011") (:authors ("Dmytro Koval")) (:maintainer "Dmytro Koval") (:url . "https://github.com/dawidof/emacs-monokai-theme"))])
+(monokai-alt-theme .
+		   [(20170630 2048)
+		    ((emacs
+		      (24)))
+		    "Theme with a dark background. Based on sublime monokai theme." single
+		    ((:commit . "f342b6afc31f929be0626eca2d696ee9fab78011")
+		     (:authors
+		      ("Dmytro Koval"))
+		     (:maintainer "Dmytro Koval")
+		     (:url . "https://github.com/dawidof/emacs-monokai-theme"))])

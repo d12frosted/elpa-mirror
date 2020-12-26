@@ -1,2 +1,11 @@
-
-(ids-edit . [(20170818 1502) ((emacs (24 3))) "IDS (Ideographic Description Sequence) editing tool" tar ((:commit . "8562a6cbfb3f2d44bc6f62ab15081a80f8fee502") (:keywords "i18n" "wp") (:authors ("KAWABATA, Taichi <kawabata.taichi_at_gmail.com>")) (:maintainer "KAWABATA, Taichi <kawabata.taichi_at_gmail.com>") (:url . "http://github.com/kawabata/ids-edit"))])
+(ids-edit .
+	  [(20170818 1502)
+	   ((emacs
+	     (24 3)))
+	   "IDS (Ideographic Description Sequence) editing tool" tar
+	   ((:commit . "8562a6cbfb3f2d44bc6f62ab15081a80f8fee502")
+	    (:authors
+	     ("KAWABATA, Taichi <kawabata.taichi_at_gmail.com>"))
+	    (:maintainer "KAWABATA, Taichi <kawabata.taichi_at_gmail.com>")
+	    (:keywords "i18n" "wp")
+	    (:url . "http://github.com/kawabata/ids-edit"))])

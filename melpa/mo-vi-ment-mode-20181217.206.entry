@@ -1,2 +1,8 @@
-
-(mo-vi-ment-mode . [(20181217 206) nil "Provide vi-like cursor movement that's easy on the fingers" single ((:commit . "e8b525ffc5faa31d36ecc5496b40f0f5c3603c08") (:keywords "convenience") (:authors ("Ajay MT" . "ajay.tatachar@gmail.com")) (:maintainer "Ajay MT" . "ajay.tatachar@gmail.com"))])
+(mo-vi-ment-mode .
+		 [(20181217 206)
+		  nil "Provide vi-like cursor movement that's easy on the fingers" single
+		  ((:commit . "e8b525ffc5faa31d36ecc5496b40f0f5c3603c08")
+		   (:authors
+		    ("Ajay MT" . "ajay.tatachar@gmail.com"))
+		   (:maintainer "Ajay MT" . "ajay.tatachar@gmail.com")
+		   (:keywords "convenience"))])

@@ -1,2 +1,9 @@
-
-(pretty-sha-path . [(20141105 1826) nil "Prettify Guix/Nix store paths" single ((:commit . "a2b43dd9de423a38d67cda2e3bd9412f7d363257") (:keywords "faces" "convenience") (:authors ("Alex Kost" . "alezost@gmail.com")) (:maintainer "Alex Kost" . "alezost@gmail.com") (:url . "https://gitorious.org/alezost-emacs/pretty-sha-path"))])
+(pretty-sha-path .
+		 [(20141105 1826)
+		  nil "Prettify Guix/Nix store paths" single
+		  ((:commit . "a2b43dd9de423a38d67cda2e3bd9412f7d363257")
+		   (:authors
+		    ("Alex Kost" . "alezost@gmail.com"))
+		   (:maintainer "Alex Kost" . "alezost@gmail.com")
+		   (:keywords "faces" "convenience")
+		   (:url . "https://gitorious.org/alezost-emacs/pretty-sha-path"))])

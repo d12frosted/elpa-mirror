@@ -1,1 +1,4 @@
-Yasnippets for [AngularJS](http://angularjs.org/).
+;;; Commentary:
+
+;; Yasnippets for [AngularJS](http://angularjs.org/).
+

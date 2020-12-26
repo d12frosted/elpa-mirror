@@ -1,2 +1,11 @@
-
-(flycheck-flow . [(20190304 1459) ((flycheck (0 18)) (json (1 4))) "Support Flow in flycheck" single ((:commit . "9e8e52cfc98af6a23fd906f9cb5d5d470d8cf82d") (:authors ("Lorenzo Bolla" . "lbolla@gmail.com")) (:maintainer "Lorenzo Bolla" . "lbolla@gmail.com"))])
+(flycheck-flow .
+	       [(20190304 1459)
+		((flycheck
+		  (0 18))
+		 (json
+		  (1 4)))
+		"Support Flow in flycheck" single
+		((:commit . "9e8e52cfc98af6a23fd906f9cb5d5d470d8cf82d")
+		 (:authors
+		  ("Lorenzo Bolla" . "lbolla@gmail.com"))
+		 (:maintainer "Lorenzo Bolla" . "lbolla@gmail.com"))])

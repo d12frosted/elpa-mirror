@@ -1,2 +1,9 @@
-
-(nz-holidays . [(20190415 703) nil "New Zealand public holidays for calendar." single ((:commit . "afc875cf40789fa45a4a811685b0a7c4f239392f") (:keywords "calendar") (:authors ("Sod Oscarfono" . "sod@oscarfono.com")) (:maintainer "Sod Oscarfono" . "sod@oscarfono.com") (:url . "https://github.com/techquila/nz-holidays"))])
+(nz-holidays .
+	     [(20190415 703)
+	      nil "New Zealand public holidays for calendar." single
+	      ((:commit . "afc875cf40789fa45a4a811685b0a7c4f239392f")
+	       (:authors
+		("Sod Oscarfono" . "sod@oscarfono.com"))
+	       (:maintainer "Sod Oscarfono" . "sod@oscarfono.com")
+	       (:keywords "calendar")
+	       (:url . "https://github.com/techquila/nz-holidays"))])

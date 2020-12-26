@@ -1,2 +1,11 @@
-
-(haxor-mode . [(20160618 1129) ((emacs (24 0))) "Major mode for editing Haxor Assembly Files" single ((:commit . "6fa25a8e6b6a59481bc0354c2fe1e0ed53cbdc91") (:keywords "haxor") (:authors ("Krzysztof Magosa" . "krzysztof@magosa.pl")) (:maintainer "Krzysztof Magosa" . "krzysztof@magosa.pl") (:url . "https://github.com/krzysztof-magosa/haxor-mode"))])
+(haxor-mode .
+	    [(20160618 1129)
+	     ((emacs
+	       (24 0)))
+	     "Major mode for editing Haxor Assembly Files" single
+	     ((:commit . "6fa25a8e6b6a59481bc0354c2fe1e0ed53cbdc91")
+	      (:authors
+	       ("Krzysztof Magosa" . "krzysztof@magosa.pl"))
+	      (:maintainer "Krzysztof Magosa" . "krzysztof@magosa.pl")
+	      (:keywords "haxor")
+	      (:url . "https://github.com/krzysztof-magosa/haxor-mode"))])

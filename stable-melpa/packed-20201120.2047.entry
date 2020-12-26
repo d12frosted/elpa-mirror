@@ -1,2 +1,11 @@
-
-(packed . [(20201120 2047) ((emacs (24 3))) "package manager agnostic Emacs Lisp package utilities" single ((:commit . "3b96dedb404f614479c1b321fac3e4bf11ba0782") (:keywords "compile" "convenience" "lisp" "package" "library") (:authors ("Jonas Bernoulli" . "jonas@bernoul.li")) (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li") (:url . "https://github.com/emacscollective/packed"))])
+(packed .
+	[(20201120 2047)
+	 ((emacs
+	   (24 3)))
+	 "package manager agnostic Emacs Lisp package utilities" single
+	 ((:commit . "3b96dedb404f614479c1b321fac3e4bf11ba0782")
+	  (:authors
+	   ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	  (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	  (:keywords "compile" "convenience" "lisp" "package" "library")
+	  (:url . "https://github.com/emacscollective/packed"))])

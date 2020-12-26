@@ -1,2 +1,7 @@
-
-(regex-dsl . [(20100124 1028) nil "lisp syntax for regexps" single ((:commit . "ac89ab8b7691a165ef3007cb84417125cfc0632e") (:authors ("Aliaksey Kandratsenka" . "alk@tut.by")) (:maintainer "Aliaksey Kandratsenka" . "alk@tut.by"))])
+(regex-dsl .
+	   [(20100124 1028)
+	    nil "lisp syntax for regexps" single
+	    ((:commit . "ac89ab8b7691a165ef3007cb84417125cfc0632e")
+	     (:authors
+	      ("Aliaksey Kandratsenka" . "alk@tut.by"))
+	     (:maintainer "Aliaksey Kandratsenka" . "alk@tut.by"))])

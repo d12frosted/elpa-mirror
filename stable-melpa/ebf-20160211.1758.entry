@@ -1,2 +1,14 @@
-
-(ebf . [(20160211 1758) ((dash (2 11 0)) (dash-functional (1 2 0)) (cl-lib (0 5))) "brainfuck language transpiler to Emacs Lisp" tar ((:commit . "4cd9c26354d8be6571354b2954d21fba882e78a2") (:authors ("Alexey Kutepov" . "reximkut@gmail.com")) (:maintainer "Alexey Kutepov" . "reximkut@gmail.com") (:url . "http://github.com/rexim/ebf"))])
+(ebf .
+     [(20160211 1758)
+      ((dash
+	(2 11 0))
+       (dash-functional
+	(1 2 0))
+       (cl-lib
+	(0 5)))
+      "brainfuck language transpiler to Emacs Lisp" tar
+      ((:commit . "4cd9c26354d8be6571354b2954d21fba882e78a2")
+       (:authors
+	("Alexey Kutepov" . "reximkut@gmail.com"))
+       (:maintainer "Alexey Kutepov" . "reximkut@gmail.com")
+       (:url . "http://github.com/rexim/ebf"))])

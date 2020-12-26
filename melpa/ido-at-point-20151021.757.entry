@@ -1,2 +1,11 @@
-
-(ido-at-point . [(20151021 757) ((emacs (24))) "ido-style completion-at-point" single ((:commit . "e5907bbe8a3d148d07698b76bd994dc3076e16ee") (:keywords "convenience" "abbrev") (:authors ("katspaugh")) (:maintainer "katspaugh") (:url . "https://github.com/katspaugh/ido-at-point"))])
+(ido-at-point .
+	      [(20151021 757)
+	       ((emacs
+		 (24)))
+	       "ido-style completion-at-point" single
+	       ((:commit . "e5907bbe8a3d148d07698b76bd994dc3076e16ee")
+		(:authors
+		 ("katspaugh"))
+		(:maintainer "katspaugh")
+		(:keywords "convenience" "abbrev")
+		(:url . "https://github.com/katspaugh/ido-at-point"))])

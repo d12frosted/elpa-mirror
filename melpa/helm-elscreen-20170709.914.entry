@@ -1,2 +1,17 @@
-
-(helm-elscreen . [(20170709 914) ((helm (2 8 0)) (elscreen (0)) (cl-lib (0 5)) (emacs (24 1))) "Elscreen with helm interface" single ((:commit . "b8212866939dc4a1e1dc23ad572407b688e130e3") (:keywords "files" "convenience") (:authors ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com")) (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com") (:url . "https://github.com/emacs-helm/helm-elscreen"))])
+(helm-elscreen .
+	       [(20170709 914)
+		((helm
+		  (2 8 0))
+		 (elscreen
+		  (0))
+		 (cl-lib
+		  (0 5))
+		 (emacs
+		  (24 1)))
+		"Elscreen with helm interface" single
+		((:commit . "b8212866939dc4a1e1dc23ad572407b688e130e3")
+		 (:authors
+		  ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
+		 (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
+		 (:keywords "files" "convenience")
+		 (:url . "https://github.com/emacs-helm/helm-elscreen"))])

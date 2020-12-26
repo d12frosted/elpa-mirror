@@ -1,2 +1,11 @@
-
-(network-watch . [(20171123 1146) ((emacs (24 3))) "Support for intermittent network connectivity" single ((:commit . "958dd0d419e4f9402648a86b754091ba346e01b8") (:keywords "unix" "tools" "hardware" "lisp") (:authors ("Juan Amiguet Vercher" . "jamiguet@gmail.com")) (:maintainer "Juan Amiguet Vercher" . "jamiguet@gmail.com") (:url . "https://github.com/jamiguet/network-watch"))])
+(network-watch .
+	       [(20171123 1146)
+		((emacs
+		  (24 3)))
+		"Support for intermittent network connectivity" single
+		((:commit . "958dd0d419e4f9402648a86b754091ba346e01b8")
+		 (:authors
+		  ("Juan Amiguet Vercher" . "jamiguet@gmail.com"))
+		 (:maintainer "Juan Amiguet Vercher" . "jamiguet@gmail.com")
+		 (:keywords "unix" "tools" "hardware" "lisp")
+		 (:url . "https://github.com/jamiguet/network-watch"))])

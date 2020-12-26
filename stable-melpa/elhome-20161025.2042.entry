@@ -1,2 +1,11 @@
-
-(elhome . [(20161025 2042) ((initsplit (20120630))) "A framework for a \"home\" Emacs configuration" tar ((:commit . "e789e806469af3e9705f72298683c21f6c3a516d") (:keywords "lisp") (:authors ("Dave Abrahams" . "dave@boostpro.com")) (:maintainer "Demyan Rogozhin" . "demyan.rogozhin@gmail.com") (:url . "http://github.com/demyanrogozhin/elhome"))])
+(elhome .
+	[(20161025 2042)
+	 ((initsplit
+	   (20120630)))
+	 "A framework for a \"home\" Emacs configuration" tar
+	 ((:commit . "e789e806469af3e9705f72298683c21f6c3a516d")
+	  (:authors
+	   ("Dave Abrahams" . "dave@boostpro.com"))
+	  (:maintainer "Demyan Rogozhin" . "demyan.rogozhin@gmail.com")
+	  (:keywords "lisp")
+	  (:url . "http://github.com/demyanrogozhin/elhome"))])

@@ -1,2 +1,11 @@
-
-(xonsh-mode . [(20201020 52) ((emacs (24 3))) "Major mode for editing xonshrc files" single ((:commit . "7fa581524533a9b6b770426e4445e571a69e469d") (:keywords "languages") (:authors ("Sean Farley" . "sean@farley.io")) (:maintainer "Sean Farley" . "sean@farley.io") (:url . "https://github.com/seanfarley/xonsh-mode"))])
+(xonsh-mode .
+	    [(20201020 52)
+	     ((emacs
+	       (24 3)))
+	     "Major mode for editing xonshrc files" single
+	     ((:commit . "7fa581524533a9b6b770426e4445e571a69e469d")
+	      (:authors
+	       ("Sean Farley" . "sean@farley.io"))
+	      (:maintainer "Sean Farley" . "sean@farley.io")
+	      (:keywords "languages")
+	      (:url . "https://github.com/seanfarley/xonsh-mode"))])

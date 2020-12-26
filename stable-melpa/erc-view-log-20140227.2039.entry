@@ -1,2 +1,10 @@
-
-(erc-view-log . [(20140227 2039) nil "Major mode for viewing ERC logs" single ((:commit . "c5a25f0cbca84ed2e4f72068c02b66bd0ea3b266") (:keywords "erc" "viewer" "logs" "colors") (:authors ("Antoine Levitt") ("Thomas Riccardi" . "riccardi.thomas@gmail.com")) (:maintainer "Antoine Levitt") (:url . "http://github.com/Niluge-KiWi/erc-view-log/raw/master/erc-view-log.el"))])
+(erc-view-log .
+	      [(20140227 2039)
+	       nil "Major mode for viewing ERC logs" single
+	       ((:commit . "c5a25f0cbca84ed2e4f72068c02b66bd0ea3b266")
+		(:authors
+		 ("Antoine Levitt")
+		 ("Thomas Riccardi" . "riccardi.thomas@gmail.com"))
+		(:maintainer "Antoine Levitt")
+		(:keywords "erc" "viewer" "logs" "colors")
+		(:url . "http://github.com/Niluge-KiWi/erc-view-log/raw/master/erc-view-log.el"))])

@@ -1,2 +1,9 @@
-
-(flex-isearch . [(20170308 2010) nil "Flex matching (like ido) in isearch." single ((:commit . "b1f7e04de762282c276343cc2709af9ff4abc9d2") (:keywords "convenience" "search") (:authors ("Jonathan Kotta" . "jpkotta@gmail.com")) (:maintainer "Jonathan Kotta" . "jpkotta@gmail.com") (:url . "https://bitbucket.org/jpkotta/flex-isearch"))])
+(flex-isearch .
+	      [(20170308 2010)
+	       nil "Flex matching (like ido) in isearch." single
+	       ((:commit . "b1f7e04de762282c276343cc2709af9ff4abc9d2")
+		(:authors
+		 ("Jonathan Kotta" . "jpkotta@gmail.com"))
+		(:maintainer "Jonathan Kotta" . "jpkotta@gmail.com")
+		(:keywords "convenience" "search")
+		(:url . "https://bitbucket.org/jpkotta/flex-isearch"))])

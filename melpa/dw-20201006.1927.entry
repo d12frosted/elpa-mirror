@@ -1,2 +1,11 @@
-
-(dw . [(20201006 1927) ((emacs (25 1))) "Diceware passphrase generation commands" single ((:commit . "9c989595536775b380d46f28452c136070b8e4ab") (:keywords "convenience" "games") (:authors ("D. Williams" . "d.williams@posteo.net")) (:maintainer "D. Williams" . "d.williams@posteo.net") (:url . "https://github.com/integral-dw/dw-passphrase-generator"))])
+(dw .
+    [(20201006 1927)
+     ((emacs
+       (25 1)))
+     "Diceware passphrase generation commands" single
+     ((:commit . "9c989595536775b380d46f28452c136070b8e4ab")
+      (:authors
+       ("D. Williams" . "d.williams@posteo.net"))
+      (:maintainer "D. Williams" . "d.williams@posteo.net")
+      (:keywords "convenience" "games")
+      (:url . "https://github.com/integral-dw/dw-passphrase-generator"))])

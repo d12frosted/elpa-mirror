@@ -1,2 +1,11 @@
-
-(browse-url-dwim . [(20140731 1922) ((string-utils (0 3 2))) "Context-sensitive external browse URL or Internet search" single ((:commit . "3d611dbb167c286109ac53995ad68286d87aafb9") (:keywords "hypermedia") (:authors ("Roland Walker" . "walker@pobox.com")) (:maintainer "Roland Walker" . "walker@pobox.com") (:url . "http://github.com/rolandwalker/browse-url-dwim"))])
+(browse-url-dwim .
+		 [(20140731 1922)
+		  ((string-utils
+		    (0 3 2)))
+		  "Context-sensitive external browse URL or Internet search" single
+		  ((:commit . "3d611dbb167c286109ac53995ad68286d87aafb9")
+		   (:authors
+		    ("Roland Walker" . "walker@pobox.com"))
+		   (:maintainer "Roland Walker" . "walker@pobox.com")
+		   (:keywords "hypermedia")
+		   (:url . "http://github.com/rolandwalker/browse-url-dwim"))])

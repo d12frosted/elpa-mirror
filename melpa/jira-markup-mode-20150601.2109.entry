@@ -1,2 +1,9 @@
-
-(jira-markup-mode . [(20150601 2109) nil "Emacs Major mode for JIRA-markup-formatted text files" single ((:commit . "4fc534c47df26a2f402bf835ebe2ed89474a4062") (:keywords "jira" "markup") (:authors ("Matthias Nuessler" . "m.nuessler@web.de>")) (:maintainer "Matthias Nuessler" . "m.nuessler@web.de>") (:url . "https://github.com/mnuessler/jira-markup-mode"))])
+(jira-markup-mode .
+		  [(20150601 2109)
+		   nil "Emacs Major mode for JIRA-markup-formatted text files" single
+		   ((:commit . "4fc534c47df26a2f402bf835ebe2ed89474a4062")
+		    (:authors
+		     ("Matthias Nuessler" . "m.nuessler@web.de>"))
+		    (:maintainer "Matthias Nuessler" . "m.nuessler@web.de>")
+		    (:keywords "jira" "markup")
+		    (:url . "https://github.com/mnuessler/jira-markup-mode"))])

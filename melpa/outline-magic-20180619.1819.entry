@@ -1,2 +1,8 @@
-
-(outline-magic . [(20180619 1819) nil "outline mode extensions for Emacs" single ((:commit . "2a5f07417b696cf7541d435c43bafcc64817636b") (:keywords "outlines") (:authors ("Carsten Dominik" . "dominik@science.uva.nl")) (:maintainer "Thorsten Jolitz <tjolitz AT gmail DOT com>"))])
+(outline-magic .
+	       [(20180619 1819)
+		nil "outline mode extensions for Emacs" single
+		((:commit . "2a5f07417b696cf7541d435c43bafcc64817636b")
+		 (:authors
+		  ("Carsten Dominik" . "dominik@science.uva.nl"))
+		 (:maintainer "Thorsten Jolitz <tjolitz AT gmail DOT com>")
+		 (:keywords "outlines"))])

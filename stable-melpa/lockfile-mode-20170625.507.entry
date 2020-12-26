@@ -1,2 +1,8 @@
-
-(lockfile-mode . [(20170625 507) nil "Major mode for .lock files" single ((:commit . "fcfef88460cb3cd67c4d83a1801d0326d282feac") (:authors ("Preetpal S. Sohal")) (:maintainer "Preetpal S. Sohal") (:url . "https://github.com/preetpalS/emacs-lockfile-mode"))])
+(lockfile-mode .
+	       [(20170625 507)
+		nil "Major mode for .lock files" single
+		((:commit . "fcfef88460cb3cd67c4d83a1801d0326d282feac")
+		 (:authors
+		  ("Preetpal S. Sohal"))
+		 (:maintainer "Preetpal S. Sohal")
+		 (:url . "https://github.com/preetpalS/emacs-lockfile-mode"))])

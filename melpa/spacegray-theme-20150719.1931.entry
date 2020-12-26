@@ -1,2 +1,11 @@
-
-(spacegray-theme . [(20150719 1931) ((emacs (24 1))) "A Hyperminimal UI Theme" single ((:commit . "9826265c2bceb2ebc1c5e16a45021da0253ace97") (:keywords "themes") (:authors ("Bruce Williams" . "brwcodes@gmail.com")) (:maintainer "Bruce Williams" . "brwcodes@gmail.com") (:url . "http://github.com/bruce/emacs-spacegray-theme"))])
+(spacegray-theme .
+		 [(20150719 1931)
+		  ((emacs
+		    (24 1)))
+		  "A Hyperminimal UI Theme" single
+		  ((:commit . "9826265c2bceb2ebc1c5e16a45021da0253ace97")
+		   (:authors
+		    ("Bruce Williams" . "brwcodes@gmail.com"))
+		   (:maintainer "Bruce Williams" . "brwcodes@gmail.com")
+		   (:keywords "themes")
+		   (:url . "http://github.com/bruce/emacs-spacegray-theme"))])

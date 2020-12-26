@@ -1,2 +1,9 @@
-
-(swap-buffers . [(20150506 2139) nil "The quickest way to swap buffers between windows. Based on switch-window package." single ((:commit . "46ab31359b70d935add6c6e9533443116dc51103") (:keywords "window" "swap" "buffer" "exchange") (:authors ("Evgeniy Kazakov" . "evgeniy.kazakov@gmail.com")) (:maintainer "Evgeniy Kazakov" . "evgeniy.kazakov@gmail.com") (:url . "https://github.com/ekazakov/swap-buffers"))])
+(swap-buffers .
+	      [(20150506 2139)
+	       nil "The quickest way to swap buffers between windows. Based on switch-window package." single
+	       ((:commit . "46ab31359b70d935add6c6e9533443116dc51103")
+		(:authors
+		 ("Evgeniy Kazakov" . "evgeniy.kazakov@gmail.com"))
+		(:maintainer "Evgeniy Kazakov" . "evgeniy.kazakov@gmail.com")
+		(:keywords "window" "swap" "buffer" "exchange")
+		(:url . "https://github.com/ekazakov/swap-buffers"))])

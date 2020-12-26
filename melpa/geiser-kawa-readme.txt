@@ -1,4 +1,5 @@
-geiser-kawa extends the `geiser' package to support the Kawa
-scheme implementation.
+;;; Commentary:
+;; geiser-kawa extends the `geiser' package to support the Kawa
+;; scheme implementation.
 
 

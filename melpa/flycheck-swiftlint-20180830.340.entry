@@ -1,2 +1,11 @@
-
-(flycheck-swiftlint . [(20180830 340) ((emacs (25 1)) (flycheck (0 25))) "Flycheck extension for Swiftlint." single ((:commit . "8861ddbd9c1c2a951630d9ea29162ad0916580cb") (:keywords "languages" "swiftlint" "swift" "emacs") (:maintainer "James Nguyen" . "james@jojojames.com") (:url . "https://github.com/jojojames/flycheck-swiftlint"))])
+(flycheck-swiftlint .
+		    [(20180830 340)
+		     ((emacs
+		       (25 1))
+		      (flycheck
+		       (0 25)))
+		     "Flycheck extension for Swiftlint." single
+		     ((:commit . "8861ddbd9c1c2a951630d9ea29162ad0916580cb")
+		      (:maintainer "James Nguyen" . "james@jojojames.com")
+		      (:keywords "languages" "swiftlint" "swift" "emacs")
+		      (:url . "https://github.com/jojojames/flycheck-swiftlint"))])

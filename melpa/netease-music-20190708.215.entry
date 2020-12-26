@@ -1,2 +1,13 @@
-
-(netease-music . [(20190708 215) ((names (0 5)) (emacs (25))) "listen netease music" single ((:commit . "39a7d7a15f63435d9efaf469ea7c971069c07acb") (:keywords "multimedia" "chinese" "music") (:authors ("hiro方圆" . "wfy11235813@gmail.com")) (:maintainer "hiro方圆" . "wfy11235813@gmail.com") (:url . "https://github.com/nicehiro/netease-music"))])
+(netease-music .
+	       [(20190708 215)
+		((names
+		  (0 5))
+		 (emacs
+		  (25)))
+		"listen netease music" single
+		((:commit . "39a7d7a15f63435d9efaf469ea7c971069c07acb")
+		 (:authors
+		  ("hiro方圆" . "wfy11235813@gmail.com"))
+		 (:maintainer "hiro方圆" . "wfy11235813@gmail.com")
+		 (:keywords "multimedia" "chinese" "music")
+		 (:url . "https://github.com/nicehiro/netease-music"))])

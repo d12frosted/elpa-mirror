@@ -1,2 +1,9 @@
-
-(logpad . [(20201113 917) nil "Simulate Windows Notepad for logging." single ((:commit . "166543873e665936b468d9f120155cce515da3f8") (:keywords "files" "outlines" "notepad") (:authors ("Sven Knurr" . "git@tuxproject.de")) (:maintainer "Sven Knurr" . "git@tuxproject.de") (:url . "https://github.com/dertuxmalwieder/logpad.el"))])
+(logpad .
+	[(20201113 917)
+	 nil "Simulate Windows Notepad for logging." single
+	 ((:commit . "166543873e665936b468d9f120155cce515da3f8")
+	  (:authors
+	   ("Sven Knurr" . "git@tuxproject.de"))
+	  (:maintainer "Sven Knurr" . "git@tuxproject.de")
+	  (:keywords "files" "outlines" "notepad")
+	  (:url . "https://github.com/dertuxmalwieder/logpad.el"))])

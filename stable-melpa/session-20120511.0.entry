@@ -1,2 +1,9 @@
-
-(session . [(20120511 0) nil "use variables, registers and buffer places across sessions" single ((:commit . "19ea0806873daac3539a4b956e15655e99e3dd6c") (:keywords "session" "session management" "desktop" "data" "tools") (:authors ("Christoph Wedler" . "wedler@users.sourceforge.net")) (:maintainer "Christoph Wedler" . "wedler@users.sourceforge.net") (:url . "http://emacs-session.sourceforge.net/"))])
+(session .
+	 [(20120511 0)
+	  nil "use variables, registers and buffer places across sessions" single
+	  ((:commit . "19ea0806873daac3539a4b956e15655e99e3dd6c")
+	   (:authors
+	    ("Christoph Wedler" . "wedler@users.sourceforge.net"))
+	   (:maintainer "Christoph Wedler" . "wedler@users.sourceforge.net")
+	   (:keywords "session" "session management" "desktop" "data" "tools")
+	   (:url . "http://emacs-session.sourceforge.net/"))])

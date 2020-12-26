@@ -1,2 +1,8 @@
-
-(wide-column . [(20170925 1613) nil "Calls functions dependant on column position." single ((:commit . "ce9ef4675485a7bea381077866368ef875226b10") (:keywords "minor mode" "cursor colour" "column width") (:authors ("Phillip Lord" . "p.lord@russet.org.uk")) (:maintainer "Phillip Lord" . "p.lord@russet.org.uk"))])
+(wide-column .
+	     [(20170925 1613)
+	      nil "Calls functions dependant on column position." single
+	      ((:commit . "ce9ef4675485a7bea381077866368ef875226b10")
+	       (:authors
+		("Phillip Lord" . "p.lord@russet.org.uk"))
+	       (:maintainer "Phillip Lord" . "p.lord@russet.org.uk")
+	       (:keywords "minor mode" "cursor colour" "column width"))])

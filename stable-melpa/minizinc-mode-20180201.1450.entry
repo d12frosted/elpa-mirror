@@ -1,2 +1,8 @@
-
-(minizinc-mode . [(20180201 1450) ((emacs (24 1))) "Major mode for MiniZinc code" single ((:commit . "2512521ba7f8e263a06db88df663fc6b3cca7e16") (:keywords "languages" "minizinc") (:url . "http://github.com/m00nlight/minizinc-mode"))])
+(minizinc-mode .
+	       [(20180201 1450)
+		((emacs
+		  (24 1)))
+		"Major mode for MiniZinc code" single
+		((:commit . "2512521ba7f8e263a06db88df663fc6b3cca7e16")
+		 (:keywords "languages" "minizinc")
+		 (:url . "http://github.com/m00nlight/minizinc-mode"))])

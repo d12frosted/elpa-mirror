@@ -1,2 +1,8 @@
-
-(xmlunicode . [(20200823 755) nil "Unicode support for XML" tar ((:commit . "0c2ee59888042d516f79a7b96526cbeae611c9bc") (:keywords "utf-8" "unicode" "xml" "characters") (:authors ("Norman Walsh" . "ndw@nwalsh.com")) (:maintainer "Norman Walsh" . "ndw@nwalsh.com"))])
+(xmlunicode .
+	    [(20200823 755)
+	     nil "Unicode support for XML" tar
+	     ((:commit . "0c2ee59888042d516f79a7b96526cbeae611c9bc")
+	      (:authors
+	       ("Norman Walsh" . "ndw@nwalsh.com"))
+	      (:maintainer "Norman Walsh" . "ndw@nwalsh.com")
+	      (:keywords "utf-8" "unicode" "xml" "characters"))])

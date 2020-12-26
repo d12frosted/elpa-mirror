@@ -1,2 +1,14 @@
-
-(elscreen-multi-term . [(20200417 821) ((emacs (24 4)) (elscreen (1 4 6)) (multi-term (1 3))) "Multi term for elscreen" single ((:commit . "4ea89bae0444d9d4377515929f76cb3e98140f1f") (:keywords "elscreen" "multi term") (:authors ("wamei" . "wamei.cho@gmail.com")) (:maintainer "wamei" . "wamei.cho@gmail.com"))])
+(elscreen-multi-term .
+		     [(20200417 821)
+		      ((emacs
+			(24 4))
+		       (elscreen
+			(1 4 6))
+		       (multi-term
+			(1 3)))
+		      "Multi term for elscreen" single
+		      ((:commit . "4ea89bae0444d9d4377515929f76cb3e98140f1f")
+		       (:authors
+			("wamei" . "wamei.cho@gmail.com"))
+		       (:maintainer "wamei" . "wamei.cho@gmail.com")
+		       (:keywords "elscreen" "multi term"))])

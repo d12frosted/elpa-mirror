@@ -1,2 +1,9 @@
-
-(hidepw . [(20200326 112) nil "Minor mode to hide passwords" single ((:commit . "73f099da79d73fe4087472df3469d8b9b20a59f2") (:keywords "hide" "hidden" "password" "faces") (:authors ("Chris Forno" . "jekor@jekor.com")) (:maintainer "Chris Forno" . "jekor@jekor.com") (:url . "https://github.com/jekor/hidepw"))])
+(hidepw .
+	[(20200326 112)
+	 nil "Minor mode to hide passwords" single
+	 ((:commit . "73f099da79d73fe4087472df3469d8b9b20a59f2")
+	  (:authors
+	   ("Chris Forno" . "jekor@jekor.com"))
+	  (:maintainer "Chris Forno" . "jekor@jekor.com")
+	  (:keywords "hide" "hidden" "password" "faces")
+	  (:url . "https://github.com/jekor/hidepw"))])

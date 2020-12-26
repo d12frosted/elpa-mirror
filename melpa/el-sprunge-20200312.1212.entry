@@ -1,2 +1,14 @@
-
-(el-sprunge . [(20200312 1212) ((web-server (20140105 2246)) (htmlize (20130207 1202)) (emacs (24 3))) "Command line paste server with Emacs highlighting" tar ((:commit . "e4365ea0bdf60969817619376bdcc98003fec33d"))])
+(el-sprunge .
+	    [(20200312 1212)
+	     ((web-server
+	       (20140105 2246))
+	      (htmlize
+	       (20130207 1202))
+	      (emacs
+	       (24 3)))
+	     "Command line paste server with Emacs highlighting" tar
+	     ((:commit . "e4365ea0bdf60969817619376bdcc98003fec33d")
+	      (:authors
+	       ("Eric Schulte" . "schulte.eric@gmail.com"))
+	      (:maintainer "Eric Schulte" . "schulte.eric@gmail.com")
+	      (:keywords "http" "html" "server" "sprunge" "paste"))])

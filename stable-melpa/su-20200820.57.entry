@@ -1,2 +1,11 @@
-
-(su . [(20200820 57) ((emacs (26 1))) "Automatically read and write files as users" single ((:commit . "eadfacdbcb8d54d83f6f6cfe7990b492f7217453") (:keywords "convenience" "helm" "fuzzy" "flx") (:authors ("PythonNut" . "pythonnut@pythonnut.com")) (:maintainer "PythonNut" . "pythonnut@pythonnut.com") (:url . "https://github.com/PythonNut/su.el"))])
+(su .
+    [(20200820 57)
+     ((emacs
+       (26 1)))
+     "Automatically read and write files as users" single
+     ((:commit . "eadfacdbcb8d54d83f6f6cfe7990b492f7217453")
+      (:authors
+       ("PythonNut" . "pythonnut@pythonnut.com"))
+      (:maintainer "PythonNut" . "pythonnut@pythonnut.com")
+      (:keywords "convenience" "helm" "fuzzy" "flx")
+      (:url . "https://github.com/PythonNut/su.el"))])

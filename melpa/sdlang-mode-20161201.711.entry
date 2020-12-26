@@ -1,2 +1,11 @@
-
-(sdlang-mode . [(20161201 711) ((emacs (24 3))) "Major mode for Simple Declarative Language files." single ((:commit . "d42a6eedefeb44919fbacf58d302b6df18f05bbc") (:keywords "languages") (:authors ("Vladimir Panteleev")) (:maintainer "Vladimir Panteleev") (:url . "https://github.com/CyberShadow/sdlang-mode"))])
+(sdlang-mode .
+	     [(20161201 711)
+	      ((emacs
+		(24 3)))
+	      "Major mode for Simple Declarative Language files." single
+	      ((:commit . "d42a6eedefeb44919fbacf58d302b6df18f05bbc")
+	       (:authors
+		("Vladimir Panteleev"))
+	       (:maintainer "Vladimir Panteleev")
+	       (:keywords "languages")
+	       (:url . "https://github.com/CyberShadow/sdlang-mode"))])

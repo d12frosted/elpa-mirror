@@ -1,2 +1,8 @@
-
-(ido-hacks . [(20190206 2153) nil "Put more IDO in your IDO" single ((:commit . "d2153a3e8d23436ee07ecae2a106f434361a10c5") (:keywords "convenience") (:authors ("Andreas Politz")) (:maintainer "Scott Jaderholm" . "jaderholm@gmail.com"))])
+(ido-hacks .
+	   [(20190206 2153)
+	    nil "Put more IDO in your IDO" single
+	    ((:commit . "d2153a3e8d23436ee07ecae2a106f434361a10c5")
+	     (:authors
+	      ("Andreas Politz"))
+	     (:maintainer "Scott Jaderholm" . "jaderholm@gmail.com")
+	     (:keywords "convenience"))])

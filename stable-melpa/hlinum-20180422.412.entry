@@ -1,2 +1,11 @@
-
-(hlinum . [(20180422 412) ((cl-lib (0 2))) "Extension for linum.el to highlight current line number" single ((:commit . "5646d9c0b9e7598b20b2004eab5439fdc6dbeda5") (:keywords "convenience" "extensions") (:authors ("Tomoya Tanjo" . "ttanjo@gmail.com")) (:maintainer "Tomoya Tanjo" . "ttanjo@gmail.com") (:url . "https://github.com/tom-tan/hlinum-mode/"))])
+(hlinum .
+	[(20180422 412)
+	 ((cl-lib
+	   (0 2)))
+	 "Extension for linum.el to highlight current line number" single
+	 ((:commit . "5646d9c0b9e7598b20b2004eab5439fdc6dbeda5")
+	  (:authors
+	   ("Tomoya Tanjo" . "ttanjo@gmail.com"))
+	  (:maintainer "Tomoya Tanjo" . "ttanjo@gmail.com")
+	  (:keywords "convenience" "extensions")
+	  (:url . "https://github.com/tom-tan/hlinum-mode/"))])

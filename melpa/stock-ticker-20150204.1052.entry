@@ -1,2 +1,13 @@
-
-(stock-ticker . [(20150204 1052) ((s (1 9 0)) (request (0 2 0))) "Show stock prices in mode line" single ((:commit . "f2e564142c9de84232839a5b01979cf95b04d6a9") (:keywords "comms") (:authors ("Gunther Hagleitner")) (:maintainer "Gunther Hagleitner") (:url . "https://github.com/hagleitn/stock-ticker"))])
+(stock-ticker .
+	      [(20150204 1052)
+	       ((s
+		 (1 9 0))
+		(request
+		 (0 2 0)))
+	       "Show stock prices in mode line" single
+	       ((:commit . "f2e564142c9de84232839a5b01979cf95b04d6a9")
+		(:authors
+		 ("Gunther Hagleitner"))
+		(:maintainer "Gunther Hagleitner")
+		(:keywords "comms")
+		(:url . "https://github.com/hagleitn/stock-ticker"))])

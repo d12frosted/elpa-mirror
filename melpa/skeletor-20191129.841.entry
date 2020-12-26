@@ -1,2 +1,19 @@
-
-(skeletor . [(20191129 841) ((s (1 7 0)) (f (0 14 0)) (dash (2 2 0)) (cl-lib (0 3)) (let-alist (1 0 3)) (emacs (24 1))) "Provides project skeletons for Emacs" tar ((:commit . "eb21383a9c9e7cf7ae2bbb85cb6d4f42aa3cb37f") (:authors ("Chris Barrett" . "chris.d.barrett@me.com")) (:maintainer "Chris Barrett" . "chris.d.barrett@me.com"))])
+(skeletor .
+	  [(20191129 841)
+	   ((s
+	     (1 7 0))
+	    (f
+	     (0 14 0))
+	    (dash
+	     (2 2 0))
+	    (cl-lib
+	     (0 3))
+	    (let-alist
+		(1 0 3))
+	    (emacs
+	     (24 1)))
+	   "Provides project skeletons for Emacs" tar
+	   ((:commit . "eb21383a9c9e7cf7ae2bbb85cb6d4f42aa3cb37f")
+	    (:authors
+	     ("Chris Barrett" . "chris.d.barrett@me.com"))
+	    (:maintainer "Chris Barrett" . "chris.d.barrett@me.com"))])

@@ -1,2 +1,8 @@
-
-(transpose-frame . [(20200307 2119) nil "Transpose windows arrangement in a frame" single ((:commit . "12e523d70ff78cc8868097b56120848befab5dbc") (:keywords "window") (:authors ("S. Irie")) (:maintainer "S. Irie"))])
+(transpose-frame .
+		 [(20200307 2119)
+		  nil "Transpose windows arrangement in a frame" single
+		  ((:commit . "12e523d70ff78cc8868097b56120848befab5dbc")
+		   (:authors
+		    ("S. Irie"))
+		   (:maintainer "S. Irie")
+		   (:keywords "window"))])

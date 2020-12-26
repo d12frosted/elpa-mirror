@@ -1,2 +1,13 @@
-
-(auto-complete . [(20201213 1255) ((popup (0 5 0)) (cl-lib (0 5))) "Auto Completion for GNU Emacs" tar ((:commit . "6bbb6c7ab8e5aa2d389807fce65bbc5ce7065900"))])
+(auto-complete .
+	       [(20201213 1255)
+		((popup
+		  (0 5 0))
+		 (cl-lib
+		  (0 5)))
+		"Auto Completion for GNU Emacs" tar
+		((:commit . "6bbb6c7ab8e5aa2d389807fce65bbc5ce7065900")
+		 (:authors
+		  ("Tomohiro Matsuyama" . "m2ym.pub@gmail.com"))
+		 (:maintainer "Tomohiro Matsuyama" . "m2ym.pub@gmail.com")
+		 (:keywords "completion" "convenience")
+		 (:url . "https://github.com/auto-complete/auto-complete"))])

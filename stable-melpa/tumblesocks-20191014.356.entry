@@ -1,2 +1,14 @@
-
-(tumblesocks . [(20191014 356) ((htmlize (1 39)) (oauth (1 0 3)) (markdown-mode (1 8 1))) "An Emacs tumblr client." tar ((:commit . "0e4c3847e31a59d405b9927107a23dde9531d744"))])
+(tumblesocks .
+	     [(20191014 356)
+	      ((htmlize
+		(1 39))
+	       (oauth
+		(1 0 3))
+	       (markdown-mode
+		(1 8 1)))
+	      "An Emacs tumblr client." tar
+	      ((:commit . "0e4c3847e31a59d405b9927107a23dde9531d744")
+	       (:authors
+		("gcr" . "gcr@sneakygcr.net"))
+	       (:maintainer "gcr" . "gcr@sneakygcr.net")
+	       (:url . "http://github.com/gcr/tumblesocks"))])

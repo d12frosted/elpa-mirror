@@ -1,2 +1,10 @@
-
-(py-smart-operator . [(20170531 1209) ((s (1 9 0))) "smart-operator for python-mode" single ((:commit . "0c8a66faca4b35158d0b5885472cb75286039167") (:keywords "python" "convenience" "smart-operator") (:authors ("Rustem Muslimov" . "r.muslimov@gmail.com")) (:maintainer "Rustem Muslimov" . "r.muslimov@gmail.com"))])
+(py-smart-operator .
+		   [(20170531 1209)
+		    ((s
+		      (1 9 0)))
+		    "smart-operator for python-mode" single
+		    ((:commit . "0c8a66faca4b35158d0b5885472cb75286039167")
+		     (:authors
+		      ("Rustem Muslimov" . "r.muslimov@gmail.com"))
+		     (:maintainer "Rustem Muslimov" . "r.muslimov@gmail.com")
+		     (:keywords "python" "convenience" "smart-operator"))])

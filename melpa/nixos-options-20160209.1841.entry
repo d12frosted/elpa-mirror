@@ -1,2 +1,12 @@
-
-(nixos-options . [(20160209 1841) ((emacs (24))) "Interface for browsing and completing NixOS options." single ((:commit . "977b9a505ffc8b33b70ec7742f90e469b3168297") (:keywords "unix") (:authors ("Diego Berrocal" . "cestdiego@gmail.com") ("Travis B. Hartwell" . "nafai@travishartwell.net")) (:maintainer "Diego Berrocal" . "cestdiego@gmail.com") (:url . "http://www.github.com/travisbhartwell/nix-emacs/"))])
+(nixos-options .
+	       [(20160209 1841)
+		((emacs
+		  (24)))
+		"Interface for browsing and completing NixOS options." single
+		((:commit . "977b9a505ffc8b33b70ec7742f90e469b3168297")
+		 (:authors
+		  ("Diego Berrocal" . "cestdiego@gmail.com")
+		  ("Travis B. Hartwell" . "nafai@travishartwell.net"))
+		 (:maintainer "Diego Berrocal" . "cestdiego@gmail.com")
+		 (:keywords "unix")
+		 (:url . "http://www.github.com/travisbhartwell/nix-emacs/"))])

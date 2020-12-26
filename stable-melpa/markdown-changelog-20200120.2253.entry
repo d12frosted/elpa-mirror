@@ -1,2 +1,13 @@
-
-(markdown-changelog . [(20200120 2253) ((emacs (26)) (dash (2 13 0))) "Maintain changelog entries" single ((:commit . "1a2c3a4c3e4196f2b5dbb145b01b4bc435a93a96") (:keywords "markdown" "changelog" "files") (:authors ("Paul Landes")) (:maintainer "Paul Landes") (:url . "https://github.com/plandes/markdown-changelog"))])
+(markdown-changelog .
+		    [(20200120 2253)
+		     ((emacs
+		       (26))
+		      (dash
+		       (2 13 0)))
+		     "Maintain changelog entries" single
+		     ((:commit . "1a2c3a4c3e4196f2b5dbb145b01b4bc435a93a96")
+		      (:authors
+		       ("Paul Landes"))
+		      (:maintainer "Paul Landes")
+		      (:keywords "markdown" "changelog" "files")
+		      (:url . "https://github.com/plandes/markdown-changelog"))])

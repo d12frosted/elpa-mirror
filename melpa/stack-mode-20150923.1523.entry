@@ -1,2 +1,12 @@
-
-(stack-mode . [(20150923 1523) ((haskell-mode (13 14)) (cl-lib (0 5)) (flycheck (0 23))) "A minor mode enabling various features based on stack-ide." tar ((:commit . "f3481e239dde9817152ec00e32bfc3ebf5aaf2cb") (:keywords "haskell" "stack") (:url . "https://github.com/commercialhaskell/stack-ide"))])
+(stack-mode .
+	    [(20150923 1523)
+	     ((haskell-mode
+	       (13 14))
+	      (cl-lib
+	       (0 5))
+	      (flycheck
+	       (0 23)))
+	     "A minor mode enabling various features based on stack-ide." tar
+	     ((:commit . "f3481e239dde9817152ec00e32bfc3ebf5aaf2cb")
+	      (:keywords "haskell" "stack")
+	      (:url . "https://github.com/commercialhaskell/stack-ide"))])

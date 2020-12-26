@@ -1,2 +1,13 @@
-
-(hoa-pp-mode . [(20151027 736) ((emacs (24 1)) (names (20150723 0))) "Major mode for Hoa PP grammars" single ((:commit . "925b79930a3f4377b0fb2a36b3c6d5566d4b9a8e") (:keywords "php" "hoa") (:authors ("Steven Rémot")) (:maintainer "Steven Rémot") (:url . "https://github.com/hoaproject/Contributions-Emacs-Pp"))])
+(hoa-pp-mode .
+	     [(20151027 736)
+	      ((emacs
+		(24 1))
+	       (names
+		(20150723 0)))
+	      "Major mode for Hoa PP grammars" single
+	      ((:commit . "925b79930a3f4377b0fb2a36b3c6d5566d4b9a8e")
+	       (:authors
+		("Steven Rémot"))
+	       (:maintainer "Steven Rémot")
+	       (:keywords "php" "hoa")
+	       (:url . "https://github.com/hoaproject/Contributions-Emacs-Pp"))])

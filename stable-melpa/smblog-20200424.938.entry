@@ -1,2 +1,10 @@
-
-(smblog . [(20200424 938) ((emacs (24 3))) "samba log viewer" single ((:commit . "fc949cff7051b31f0dbc7169774144533a27b92f") (:authors ("Aurélien Aptel" . "aaptel@suse.com")) (:maintainer "Aurélien Aptel" . "aaptel@suse.com") (:url . "http://github.com/aaptel/smblog-mode"))])
+(smblog .
+	[(20200424 938)
+	 ((emacs
+	   (24 3)))
+	 "samba log viewer" single
+	 ((:commit . "fc949cff7051b31f0dbc7169774144533a27b92f")
+	  (:authors
+	   ("Aurélien Aptel" . "aaptel@suse.com"))
+	  (:maintainer "Aurélien Aptel" . "aaptel@suse.com")
+	  (:url . "http://github.com/aaptel/smblog-mode"))])

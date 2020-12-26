@@ -1,2 +1,15 @@
-
-(evil-escape . [(20180910 1234) nil "No description available." single ((:commit . "f4e9116bfbaac8c9d210c17ad488e0982291245f"))])
+(evil-escape .
+	     [(20180910 1234)
+	      ((emacs
+		(24))
+	       (evil
+		(1 0 9))
+	       (cl-lib
+		(0 5)))
+	      "No description available." single
+	      ((:commit . "f4e9116bfbaac8c9d210c17ad488e0982291245f")
+	       (:authors
+		("Sylvain Benner" . "sylvain.benner@gmail.com"))
+	       (:maintainer "Sylvain Benner" . "sylvain.benner@gmail.com")
+	       (:keywords "convenience" "editing" "evil")
+	       (:url . "https://github.com/syl20bnr/evil-escape"))])

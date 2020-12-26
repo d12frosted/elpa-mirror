@@ -1,2 +1,10 @@
-
-(zop-to-char . [(20160212 1554) ((cl-lib (0 5))) "A replacement of zap-to-char." single ((:commit . "00152aa666354b27e56e20565f186b363afa0dce") (:authors ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com")) (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com") (:url . "https://github.com/thierryvolpiatto/zop-to-char"))])
+(zop-to-char .
+	     [(20160212 1554)
+	      ((cl-lib
+		(0 5)))
+	      "A replacement of zap-to-char." single
+	      ((:commit . "00152aa666354b27e56e20565f186b363afa0dce")
+	       (:authors
+		("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
+	       (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
+	       (:url . "https://github.com/thierryvolpiatto/zop-to-char"))])

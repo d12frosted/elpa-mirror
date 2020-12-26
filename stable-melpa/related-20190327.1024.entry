@@ -1,2 +1,11 @@
-
-(related . [(20190327 1024) ((cl-lib (0 5))) "Switch back and forth between similarly named buffers." single ((:commit . "546c7e811b290470288b617f2c27106bd83ccd33") (:keywords "file" "buffer" "switch" "selection" "matching" "convenience") (:authors ("Julien Montmartin")) (:maintainer "Julien Montmartin") (:url . "https://github.com/julien-montmartin/related"))])
+(related .
+	 [(20190327 1024)
+	  ((cl-lib
+	    (0 5)))
+	  "Switch back and forth between similarly named buffers." single
+	  ((:commit . "546c7e811b290470288b617f2c27106bd83ccd33")
+	   (:authors
+	    ("Julien Montmartin"))
+	   (:maintainer "Julien Montmartin")
+	   (:keywords "file" "buffer" "switch" "selection" "matching" "convenience")
+	   (:url . "https://github.com/julien-montmartin/related"))])

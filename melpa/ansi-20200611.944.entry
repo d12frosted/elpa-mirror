@@ -1,2 +1,17 @@
-
-(ansi . [(20200611 944) ((emacs (24 1)) (cl-lib (0 6)) (s (1 6 1)) (dash (1 5 0))) "Turn string into ansi strings" single ((:commit . "a41d5cc719297515d85bb5256980cd1204a71b88") (:keywords "terminals" "color" "ansi") (:authors ("Johan Andersson" . "johan.rejeep@gmail.com")) (:maintainer "Johan Andersson" . "johan.rejeep@gmail.com") (:url . "http://github.com/rejeep/ansi"))])
+(ansi .
+      [(20200611 944)
+       ((emacs
+	 (24 1))
+	(cl-lib
+	 (0 6))
+	(s
+	 (1 6 1))
+	(dash
+	 (1 5 0)))
+       "Turn string into ansi strings" single
+       ((:commit . "a41d5cc719297515d85bb5256980cd1204a71b88")
+	(:authors
+	 ("Johan Andersson" . "johan.rejeep@gmail.com"))
+	(:maintainer "Johan Andersson" . "johan.rejeep@gmail.com")
+	(:keywords "terminals" "color" "ansi")
+	(:url . "http://github.com/rejeep/ansi"))])

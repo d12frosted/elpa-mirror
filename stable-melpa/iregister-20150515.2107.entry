@@ -1,2 +1,9 @@
-
-(iregister . [(20150515 2107) nil "Interactive register commands for Emacs." tar ((:commit . "6a48c66187289de5f300492be11c83e98410c018") (:keywords "convenience") (:authors ("Andrey Tykhonov" . "atykhonov@gmail.com")) (:maintainer "Andrey Tykhonov" . "atykhonov@gmail.com") (:url . "https://github.com/atykhonov/iregister.el"))])
+(iregister .
+	   [(20150515 2107)
+	    nil "Interactive register commands for Emacs." tar
+	    ((:commit . "6a48c66187289de5f300492be11c83e98410c018")
+	     (:authors
+	      ("Andrey Tykhonov" . "atykhonov@gmail.com"))
+	     (:maintainer "Andrey Tykhonov" . "atykhonov@gmail.com")
+	     (:keywords "convenience")
+	     (:url . "https://github.com/atykhonov/iregister.el"))])

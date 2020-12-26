@@ -1,2 +1,9 @@
-
-(c0-mode . [(20151110 1852) nil "Major mode for editing C0 files" tar ((:commit . "c214093c36864d6208fcb9e6a72413ed17ed5d60") (:keywords "c0" "languages") (:authors ("Jakob Max Uecker")) (:maintainer "Jakob Max Uecker") (:url . "http://c0.typesafety.net/"))])
+(c0-mode .
+	 [(20151110 1852)
+	  nil "Major mode for editing C0 files" tar
+	  ((:commit . "c214093c36864d6208fcb9e6a72413ed17ed5d60")
+	   (:authors
+	    ("Jakob Max Uecker"))
+	   (:maintainer "Jakob Max Uecker")
+	   (:keywords "c0" "languages")
+	   (:url . "http://c0.typesafety.net/"))])

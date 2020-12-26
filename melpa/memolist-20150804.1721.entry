@@ -1,2 +1,13 @@
-
-(memolist . [(20150804 1721) ((markdown-mode (22 0)) (ag (0 45))) "memolist.el is Emacs port of memolist.vim." single ((:commit . "c437a32d3955f859d9bbcbadf0911bbe27d877ff") (:keywords "markdown" "memo") (:authors ("mikanfactory <k952i4j14x17_at_gmail.com>")) (:maintainer "mikanfactory") (:url . "http://github.com/mikanfactory/emacs-memolist"))])
+(memolist .
+	  [(20150804 1721)
+	   ((markdown-mode
+	     (22 0))
+	    (ag
+	     (0 45)))
+	   "memolist.el is Emacs port of memolist.vim." single
+	   ((:commit . "c437a32d3955f859d9bbcbadf0911bbe27d877ff")
+	    (:authors
+	     ("mikanfactory <k952i4j14x17_at_gmail.com>"))
+	    (:maintainer "mikanfactory")
+	    (:keywords "markdown" "memo")
+	    (:url . "http://github.com/mikanfactory/emacs-memolist"))])

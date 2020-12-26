@@ -1,11 +1,15 @@
-It is necessary to calfw.el Configurations
+;;; Commentary:
+;;
+;; It is necessary to calfw.el Configurations
+;;
+;; Installation:
 
-Installation:
+;; ============================================= 
 
-=============================================
+;; Put the calfw-gcal.el to your
+;; load-path.
 
-Put the calfw-gcal.el to your
-load-path.
+;; Add to .emacs:
+;; (require 'calfw-gcal)
+;;
 
-Add to .emacs:
-(require 'calfw-gcal)

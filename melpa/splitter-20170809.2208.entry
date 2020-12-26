@@ -1,2 +1,9 @@
-
-(splitter . [(20170809 2208) nil "Manage window splits" single ((:commit . "6bdb51e9a346907d60a9625f6180bddd06be6674") (:keywords "frames" "convenience") (:authors ("Steven Thomas")) (:maintainer "Steven Thomas") (:url . "https://github.com/chumpage/chumpy-windows"))])
+(splitter .
+	  [(20170809 2208)
+	   nil "Manage window splits" single
+	   ((:commit . "6bdb51e9a346907d60a9625f6180bddd06be6674")
+	    (:authors
+	     ("Steven Thomas"))
+	    (:maintainer "Steven Thomas")
+	    (:keywords "frames" "convenience")
+	    (:url . "https://github.com/chumpage/chumpy-windows"))])

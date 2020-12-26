@@ -1,2 +1,13 @@
-
-(pophint . [(20200420 1429) ((log4e (0 3 3)) (yaxception (0 3))) "Provide navigation using pop-up tips, like Firefox's Vimperator Hint Mode" tar ((:commit . "5e13da4578ae7ba00e6f7bae31eb546d713cc19d") (:keywords "popup") (:authors ("Hiroaki Otsu" . "ootsuhiroaki@gmail.com")) (:maintainer "Hiroaki Otsu" . "ootsuhiroaki@gmail.com") (:url . "https://github.com/aki2o/emacs-pophint"))])
+(pophint .
+	 [(20200420 1429)
+	  ((log4e
+	    (0 3 3))
+	   (yaxception
+	    (0 3)))
+	  "Provide navigation using pop-up tips, like Firefox's Vimperator Hint Mode" tar
+	  ((:commit . "5e13da4578ae7ba00e6f7bae31eb546d713cc19d")
+	   (:authors
+	    ("Hiroaki Otsu" . "ootsuhiroaki@gmail.com"))
+	   (:maintainer "Hiroaki Otsu" . "ootsuhiroaki@gmail.com")
+	   (:keywords "popup")
+	   (:url . "https://github.com/aki2o/emacs-pophint"))])

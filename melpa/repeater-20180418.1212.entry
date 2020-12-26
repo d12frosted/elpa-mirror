@@ -1,2 +1,11 @@
-
-(repeater . [(20180418 1212) ((emacs (24 4))) "Repeat recent repeated commands" single ((:commit . "854b874542b186b2408cbc58ad0591fe8eb70b6c") (:keywords "convenience") (:authors ("Xu Chunyang" . "mail@xuchunyang.me")) (:maintainer "Xu Chunyang" . "mail@xuchunyang.me") (:url . "https://github.com/xuchunyang/repeater"))])
+(repeater .
+	  [(20180418 1212)
+	   ((emacs
+	     (24 4)))
+	   "Repeat recent repeated commands" single
+	   ((:commit . "854b874542b186b2408cbc58ad0591fe8eb70b6c")
+	    (:authors
+	     ("Xu Chunyang" . "mail@xuchunyang.me"))
+	    (:maintainer "Xu Chunyang" . "mail@xuchunyang.me")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/xuchunyang/repeater"))])

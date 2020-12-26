@@ -1,2 +1,10 @@
-
-(rcirc-alertify . [(20140407 119) ((alert (20140406 1353))) "Cross platform notifications for rcirc" single ((:commit . "ea5cafc55893f375eccbe013d12dbaa94bf6e259") (:keywords "comm" "convenience") (:authors ("Fabián Ezequiel Gallina" . "fgallina@gnu.org")) (:maintainer "Fabián Ezequiel Gallina" . "fgallina@gnu.org"))])
+(rcirc-alertify .
+		[(20140407 119)
+		 ((alert
+		   (20140406 1353)))
+		 "Cross platform notifications for rcirc" single
+		 ((:commit . "ea5cafc55893f375eccbe013d12dbaa94bf6e259")
+		  (:authors
+		   ("Fabián Ezequiel Gallina" . "fgallina@gnu.org"))
+		  (:maintainer "Fabián Ezequiel Gallina" . "fgallina@gnu.org")
+		  (:keywords "comm" "convenience"))])

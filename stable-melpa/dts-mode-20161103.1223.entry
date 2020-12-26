@@ -1,2 +1,8 @@
-
-(dts-mode . [(20161103 1223) nil "Major mode for Devicetree source code" single ((:commit . "9ee0854446dcc6c53d2b8d2941051768dba50344") (:keywords "languages") (:authors ("Ben Gamari" . "ben@smart-cactus.org")) (:maintainer "Ben Gamari" . "ben@smart-cactus.org"))])
+(dts-mode .
+	  [(20161103 1223)
+	   nil "Major mode for Devicetree source code" single
+	   ((:commit . "9ee0854446dcc6c53d2b8d2941051768dba50344")
+	    (:authors
+	     ("Ben Gamari" . "ben@smart-cactus.org"))
+	    (:maintainer "Ben Gamari" . "ben@smart-cactus.org")
+	    (:keywords "languages"))])

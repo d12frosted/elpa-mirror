@@ -1,2 +1,11 @@
-
-(paren-completer . [(20160501 1052) ((emacs (24 3))) "Automatically, language agnostically, fill in delimiters." single ((:commit . "74183a8e13fa1266271bdcbcb4bfb29a4f915f0a") (:keywords "convenience") (:authors ("Matthew Bregg")) (:maintainer "Matthew Bregg") (:url . "https://github.com/MatthewBregg/paren-completer"))])
+(paren-completer .
+		 [(20160501 1052)
+		  ((emacs
+		    (24 3)))
+		  "Automatically, language agnostically, fill in delimiters." single
+		  ((:commit . "74183a8e13fa1266271bdcbcb4bfb29a4f915f0a")
+		   (:authors
+		    ("Matthew Bregg"))
+		   (:maintainer "Matthew Bregg")
+		   (:keywords "convenience")
+		   (:url . "https://github.com/MatthewBregg/paren-completer"))])

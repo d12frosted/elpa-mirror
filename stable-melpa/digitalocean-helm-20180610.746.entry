@@ -1,2 +1,15 @@
-
-(digitalocean-helm . [(20180610 746) ((emacs (24 3)) (helm (2 5)) (digitalocean (0 1))) "Create and manipulate digitalocean droplets" single ((:commit . "b125c9882eded7d73ec109d152b26625f333440b") (:keywords "processes" "tools") (:authors ("Oliver Marks" . "oly@digitaloctave.com")) (:maintainer "Oliver Marks" . "oly@digitaloctave.com") (:url . "https://gitlab.com/olymk2/digitalocean-api"))])
+(digitalocean-helm .
+		   [(20180610 746)
+		    ((emacs
+		      (24 3))
+		     (helm
+		      (2 5))
+		     (digitalocean
+		      (0 1)))
+		    "Create and manipulate digitalocean droplets" single
+		    ((:commit . "b125c9882eded7d73ec109d152b26625f333440b")
+		     (:authors
+		      ("Oliver Marks" . "oly@digitaloctave.com"))
+		     (:maintainer "Oliver Marks" . "oly@digitaloctave.com")
+		     (:keywords "processes" "tools")
+		     (:url . "https://gitlab.com/olymk2/digitalocean-api"))])

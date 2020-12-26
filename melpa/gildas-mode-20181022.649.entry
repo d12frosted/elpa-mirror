@@ -1,2 +1,13 @@
-
-(gildas-mode . [(20181022 649) ((polymode (0 1 5)) (emacs (25))) "Major mode for Gildas" single ((:commit . "d0c9e997e2aa0bcd9b8b7db082d69100448cb1b2") (:keywords "languages" "gildas") (:authors ("Sébastien Maret" . "sebastien.maret@icloud.com")) (:maintainer "Sébastien Maret" . "sebastien.maret@icloud.com") (:url . "https://github.com/smaret/gildas-mode"))])
+(gildas-mode .
+	     [(20181022 649)
+	      ((polymode
+		(0 1 5))
+	       (emacs
+		(25)))
+	      "Major mode for Gildas" single
+	      ((:commit . "d0c9e997e2aa0bcd9b8b7db082d69100448cb1b2")
+	       (:authors
+		("Sébastien Maret" . "sebastien.maret@icloud.com"))
+	       (:maintainer "Sébastien Maret" . "sebastien.maret@icloud.com")
+	       (:keywords "languages" "gildas")
+	       (:url . "https://github.com/smaret/gildas-mode"))])

@@ -1,2 +1,15 @@
-
-(pyenv-mode-auto . [(20180620 1252) ((pyenv-mode (0 1 0)) (s (1 11 0)) (f (0 17 0))) "Automatically activates pyenv version if .python-version file exists." single ((:commit . "347b94cd5ad22e33cc41be661c102d4548767858") (:keywords "python" "pyenv") (:authors ("Sviatoslav Bulbakha" . "mail@ssbb.me")) (:maintainer "Sviatoslav Bulbakha" . "mail@ssbb.me") (:url . "https://github.com/ssbb/pyenv-mode-auto"))])
+(pyenv-mode-auto .
+		 [(20180620 1252)
+		  ((pyenv-mode
+		    (0 1 0))
+		   (s
+		    (1 11 0))
+		   (f
+		    (0 17 0)))
+		  "Automatically activates pyenv version if .python-version file exists." single
+		  ((:commit . "347b94cd5ad22e33cc41be661c102d4548767858")
+		   (:authors
+		    ("Sviatoslav Bulbakha" . "mail@ssbb.me"))
+		   (:maintainer "Sviatoslav Bulbakha" . "mail@ssbb.me")
+		   (:keywords "python" "pyenv")
+		   (:url . "https://github.com/ssbb/pyenv-mode-auto"))])

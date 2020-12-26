@@ -1,2 +1,10 @@
-
-(cm-mode . [(20170203 2107) ((cl-lib (0 5))) "Minor mode for CriticMarkup" single ((:commit . "276d49c859822265070ae5dfbb403fd7d8d06436") (:keywords "text" "markdown") (:authors ("Joost Kremers" . "joostkremers@fastmail.fm")) (:maintainer "Joost Kremers" . "joostkremers@fastmail.fm"))])
+(cm-mode .
+	 [(20170203 2107)
+	  ((cl-lib
+	    (0 5)))
+	  "Minor mode for CriticMarkup" single
+	  ((:commit . "276d49c859822265070ae5dfbb403fd7d8d06436")
+	   (:authors
+	    ("Joost Kremers" . "joostkremers@fastmail.fm"))
+	   (:maintainer "Joost Kremers" . "joostkremers@fastmail.fm")
+	   (:keywords "text" "markdown"))])

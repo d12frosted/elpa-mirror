@@ -1,2 +1,13 @@
-
-(e2wm-pkgex4pl . [(20140525 1047) ((e2wm (1 2)) (plsense-direx (0 2 0))) "Plugin of e2wm.el for package explorer of Perl" single ((:commit . "7ea994450727190c4f3cb46cb429ba41b692ecc0") (:keywords "tools" "window manager" "perl") (:authors ("Hiroaki Otsu" . "ootsuhiroaki@gmail.com")) (:maintainer "Hiroaki Otsu" . "ootsuhiroaki@gmail.com") (:url . "https://github.com/aki2o/e2wm-pkgex4pl"))])
+(e2wm-pkgex4pl .
+	       [(20140525 1047)
+		((e2wm
+		  (1 2))
+		 (plsense-direx
+		  (0 2 0)))
+		"Plugin of e2wm.el for package explorer of Perl" single
+		((:commit . "7ea994450727190c4f3cb46cb429ba41b692ecc0")
+		 (:authors
+		  ("Hiroaki Otsu" . "ootsuhiroaki@gmail.com"))
+		 (:maintainer "Hiroaki Otsu" . "ootsuhiroaki@gmail.com")
+		 (:keywords "tools" "window manager" "perl")
+		 (:url . "https://github.com/aki2o/e2wm-pkgex4pl"))])

@@ -1,2 +1,17 @@
-
-(org-d20 . [(20201113 453) ((s (1 11 0)) (seq (2 19)) (dash (2 12 0)) (emacs (24))) "minor mode for d20 tabletop roleplaying games" single ((:commit . "a3734368cd5a36541dab2fa8f7404cb850991b5b") (:keywords "outlines" "games") (:authors ("Sean Whitton" . "spwhitton@spwhitton.name")) (:maintainer "Sean Whitton" . "spwhitton@spwhitton.name") (:url . "https://spwhitton.name/tech/code/org-d20/"))])
+(org-d20 .
+	 [(20201113 453)
+	  ((s
+	    (1 11 0))
+	   (seq
+	    (2 19))
+	   (dash
+	    (2 12 0))
+	   (emacs
+	    (24)))
+	  "minor mode for d20 tabletop roleplaying games" single
+	  ((:commit . "a3734368cd5a36541dab2fa8f7404cb850991b5b")
+	   (:authors
+	    ("Sean Whitton" . "spwhitton@spwhitton.name"))
+	   (:maintainer "Sean Whitton" . "spwhitton@spwhitton.name")
+	   (:keywords "outlines" "games")
+	   (:url . "https://spwhitton.name/tech/code/org-d20/"))])

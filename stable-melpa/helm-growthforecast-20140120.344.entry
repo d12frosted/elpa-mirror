@@ -1,2 +1,10 @@
-
-(helm-growthforecast . [(20140120 344) ((helm (1 5 9))) "helm extensions for growthforecast." single ((:commit . "0f94ac090d6c354058ad89a86e5c18385c136d9b") (:authors ("Daichi Hirata" . "daichi.hirat@gmail.com")) (:maintainer "Daichi Hirata" . "daichi.hirat@gmail.com") (:url . "https://github.com/daic-h/helm-growthforecast"))])
+(helm-growthforecast .
+		     [(20140120 344)
+		      ((helm
+			(1 5 9)))
+		      "helm extensions for growthforecast." single
+		      ((:commit . "0f94ac090d6c354058ad89a86e5c18385c136d9b")
+		       (:authors
+			("Daichi Hirata" . "daichi.hirat@gmail.com"))
+		       (:maintainer "Daichi Hirata" . "daichi.hirat@gmail.com")
+		       (:url . "https://github.com/daic-h/helm-growthforecast"))])

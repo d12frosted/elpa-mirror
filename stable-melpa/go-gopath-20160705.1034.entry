@@ -1,2 +1,10 @@
-
-(go-gopath . [(20160705 1034) ((cl-lib (0 5))) "Will guess GOPATH using gb and projectile." single ((:commit . "5172fc53f21edbf9347d5ee7d1d745da1ec88a15") (:authors ("Andrew Kirilenko" . "andrew.kirilenko.main@gmail.com")) (:maintainer "Andrew Kirilenko" . "andrew.kirilenko.main@gmail.com") (:url . "http://github.com/iced/go-gopath/"))])
+(go-gopath .
+	   [(20160705 1034)
+	    ((cl-lib
+	      (0 5)))
+	    "Will guess GOPATH using gb and projectile." single
+	    ((:commit . "5172fc53f21edbf9347d5ee7d1d745da1ec88a15")
+	     (:authors
+	      ("Andrew Kirilenko" . "andrew.kirilenko.main@gmail.com"))
+	     (:maintainer "Andrew Kirilenko" . "andrew.kirilenko.main@gmail.com")
+	     (:url . "http://github.com/iced/go-gopath/"))])

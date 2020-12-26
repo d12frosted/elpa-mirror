@@ -1,2 +1,9 @@
-
-(dfmt . [(20170728 1023) nil "Emacs Interface to D indenting/formatting tool dfmt." single ((:commit . "21b9094e907b7ac53f5ecb4ff4539613a9d12434") (:keywords "tools" "convenience" "languages" "dlang") (:authors ("Per Nordlöw")) (:maintainer "Kirill Babikhin <qsimpleq>") (:url . "https://github.com/qsimpleq/elisp-dfmt"))])
+(dfmt .
+      [(20170728 1023)
+       nil "Emacs Interface to D indenting/formatting tool dfmt." single
+       ((:commit . "21b9094e907b7ac53f5ecb4ff4539613a9d12434")
+	(:authors
+	 ("Per Nordlöw"))
+	(:maintainer "Kirill Babikhin <qsimpleq>")
+	(:keywords "tools" "convenience" "languages" "dlang")
+	(:url . "https://github.com/qsimpleq/elisp-dfmt"))])

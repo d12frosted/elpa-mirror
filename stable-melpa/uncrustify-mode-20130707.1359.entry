@@ -1,2 +1,8 @@
-
-(uncrustify-mode . [(20130707 1359) nil "Minor mode to automatically uncrustify." single ((:commit . "73893d000361e95784911e5ec268ad0ab2a1473c") (:keywords "uncrustify") (:authors ("Tabito Ohtani" . "koko1000ban@gmail.com")) (:maintainer "Tabito Ohtani" . "koko1000ban@gmail.com"))])
+(uncrustify-mode .
+		 [(20130707 1359)
+		  nil "Minor mode to automatically uncrustify." single
+		  ((:commit . "73893d000361e95784911e5ec268ad0ab2a1473c")
+		   (:authors
+		    ("Tabito Ohtani" . "koko1000ban@gmail.com"))
+		   (:maintainer "Tabito Ohtani" . "koko1000ban@gmail.com")
+		   (:keywords "uncrustify"))])

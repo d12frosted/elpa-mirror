@@ -1,2 +1,9 @@
-
-(isearch-symbol-at-point . [(20130728 2221) nil "Use isearch to search for the symbol at point" single ((:commit . "51a1029bec1ec414885f9edb7e5947603dffdab2") (:keywords "isearch") (:authors ("atom smith")) (:maintainer "atom smith") (:url . "https://github.com/re5et/isearch-symbol-at-point"))])
+(isearch-symbol-at-point .
+			 [(20130728 2221)
+			  nil "Use isearch to search for the symbol at point" single
+			  ((:commit . "51a1029bec1ec414885f9edb7e5947603dffdab2")
+			   (:authors
+			    ("atom smith"))
+			   (:maintainer "atom smith")
+			   (:keywords "isearch")
+			   (:url . "https://github.com/re5et/isearch-symbol-at-point"))])

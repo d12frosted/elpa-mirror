@@ -1,2 +1,11 @@
-
-(mac-pseudo-daemon . [(20200215 513) ((cl-lib (0 1))) "Daemon mode that plays nice with Mac OS." single ((:commit . "703ee41303dc251b7672b7cba5aeb6aa54a76c90") (:keywords "convenience" "osx" "mac") (:authors ("Ryan C. Thompson")) (:maintainer "Ryan C. Thompson") (:url . "https://github.com/DarwinAwardWinner/osx-pseudo-daemon"))])
+(mac-pseudo-daemon .
+		   [(20200215 513)
+		    ((cl-lib
+		      (0 1)))
+		    "Daemon mode that plays nice with Mac OS." single
+		    ((:commit . "703ee41303dc251b7672b7cba5aeb6aa54a76c90")
+		     (:authors
+		      ("Ryan C. Thompson"))
+		     (:maintainer "Ryan C. Thompson")
+		     (:keywords "convenience" "osx" "mac")
+		     (:url . "https://github.com/DarwinAwardWinner/osx-pseudo-daemon"))])

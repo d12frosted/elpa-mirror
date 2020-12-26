@@ -1,2 +1,9 @@
-
-(linphone . [(20130524 1109) nil "Emacs interface to Linphone" tar ((:commit . "99af3db941b7f4e5272bb48bff96c1ce4ceac302") (:keywords "comm") (:authors ("Yoni Rabkin" . "yonirabkin@member.fsf.org")) (:maintainer "Yoni Rabkin" . "yonirabkin@member.fsf.org") (:url . "https://github.com/zabbal/emacs-linphone"))])
+(linphone .
+	  [(20130524 1109)
+	   nil "Emacs interface to Linphone" tar
+	   ((:commit . "99af3db941b7f4e5272bb48bff96c1ce4ceac302")
+	    (:authors
+	     ("Yoni Rabkin" . "yonirabkin@member.fsf.org"))
+	    (:maintainer "Yoni Rabkin" . "yonirabkin@member.fsf.org")
+	    (:keywords "comm")
+	    (:url . "https://github.com/zabbal/emacs-linphone"))])

@@ -1,1 +1,5 @@
-This allows you to access your Google Contacts from Emacs.
+;;; Commentary:
+;;
+;; This allows you to access your Google Contacts from Emacs.
+;;
+

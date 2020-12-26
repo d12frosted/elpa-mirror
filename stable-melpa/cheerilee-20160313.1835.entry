@@ -1,2 +1,11 @@
-
-(cheerilee . [(20160313 1835) ((xelb (0 1))) "Toolkit library" tar ((:commit . "41bd81b5b0bb657241ceda5be6af5e07254d7376") (:keywords "tools"))])
+(cheerilee .
+	   [(20160313 1835)
+	    ((xelb
+	      (0 1)))
+	    "Toolkit library" tar
+	    ((:commit . "41bd81b5b0bb657241ceda5be6af5e07254d7376")
+	     (:authors
+	      ("Alessio Vanni" . "vannilla@firemail.cc"))
+	     (:maintainer "Alessio Vanni" . "vannilla@firemail.cc")
+	     (:keywords "multimedia" "tools")
+	     (:url . "https://github.com/Vannil/cheerilee.el"))])

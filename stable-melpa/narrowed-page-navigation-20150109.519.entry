@@ -1,2 +1,12 @@
-
-(narrowed-page-navigation . [(20150109 519) ((emacs (24)) (cl-lib (0 5))) "A minor mode for showing one page at a time" single ((:commit . "b215adbac4873f56fbab65772062f0f5be8058a1") (:keywords "outlines") (:authors ("David Raymond Christiansen" . "david@davidchristiansen.dk")) (:maintainer "David Raymond Christiansen" . "david@davidchristiansen.dk"))])
+(narrowed-page-navigation .
+			  [(20150109 519)
+			   ((emacs
+			     (24))
+			    (cl-lib
+			     (0 5)))
+			   "A minor mode for showing one page at a time" single
+			   ((:commit . "b215adbac4873f56fbab65772062f0f5be8058a1")
+			    (:authors
+			     ("David Raymond Christiansen" . "david@davidchristiansen.dk"))
+			    (:maintainer "David Raymond Christiansen" . "david@davidchristiansen.dk")
+			    (:keywords "outlines"))])

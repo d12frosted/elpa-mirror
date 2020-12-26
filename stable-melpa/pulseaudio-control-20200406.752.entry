@@ -1,2 +1,11 @@
-
-(pulseaudio-control . [(20200406 752) nil "Use `pactl' to manage PulseAudio volumes." single ((:commit . "a931533140547510decdc368f39b2d2b97ca725f") (:keywords "multimedia" "hardware" "sound" "pulseaudio") (:authors ("Alexis" . "flexibeast@gmail.com") ("Ellington Santos" . "ellingtonsantos@gmail.com") ("Sergey Trofimov" . "sarg@sarg.org.ru")) (:maintainer "Alexis" . "flexibeast@gmail.com") (:url . "https://github.com/flexibeast/pulseaudio-control"))])
+(pulseaudio-control .
+		    [(20200406 752)
+		     nil "Use `pactl' to manage PulseAudio volumes." single
+		     ((:commit . "a931533140547510decdc368f39b2d2b97ca725f")
+		      (:authors
+		       ("Alexis" . "flexibeast@gmail.com")
+		       ("Ellington Santos" . "ellingtonsantos@gmail.com")
+		       ("Sergey Trofimov" . "sarg@sarg.org.ru"))
+		      (:maintainer "Alexis" . "flexibeast@gmail.com")
+		      (:keywords "multimedia" "hardware" "sound" "pulseaudio")
+		      (:url . "https://github.com/flexibeast/pulseaudio-control"))])

@@ -1,2 +1,13 @@
-
-(nixpkgs-fmt . [(20200327 2302) ((emacs (24)) (reformatter (0 3))) "Reformat Nix using nixpkgs-fmt" single ((:commit . "213251f82a69edc033766ec96948e83aeb428cd2") (:keywords "languages") (:authors ("Steve Purcell" . "steve@sanityinc.com")) (:maintainer "Steve Purcell" . "steve@sanityinc.com") (:url . "https://github.com/purcell/emacs-nixpkgs-fmt"))])
+(nixpkgs-fmt .
+	     [(20200327 2302)
+	      ((emacs
+		(24))
+	       (reformatter
+		(0 3)))
+	      "Reformat Nix using nixpkgs-fmt" single
+	      ((:commit . "213251f82a69edc033766ec96948e83aeb428cd2")
+	       (:authors
+		("Steve Purcell" . "steve@sanityinc.com"))
+	       (:maintainer "Steve Purcell" . "steve@sanityinc.com")
+	       (:keywords "languages")
+	       (:url . "https://github.com/purcell/emacs-nixpkgs-fmt"))])

@@ -1,2 +1,16 @@
-
-(scrooge . [(20180630 1022) ((emacs (24)) (cl-lib (0 5)) (dash (2 13 0)) (thrift (0 9 3))) "Major mode for Twitter Scrooge files" single ((:commit . "0a8c58e9e6708abe4ef7e415bc1e0472318bb1b0") (:keywords "scrooge" "thrift") (:authors ("Daniel McClanahan" . "danieldmcclanahan@gmail.com")) (:maintainer "Daniel McClanahan" . "danieldmcclanahan@gmail.com"))])
+(scrooge .
+	 [(20180630 1022)
+	  ((emacs
+	    (24))
+	   (cl-lib
+	    (0 5))
+	   (dash
+	    (2 13 0))
+	   (thrift
+	    (0 9 3)))
+	  "Major mode for Twitter Scrooge files" single
+	  ((:commit . "0a8c58e9e6708abe4ef7e415bc1e0472318bb1b0")
+	   (:authors
+	    ("Daniel McClanahan" . "danieldmcclanahan@gmail.com"))
+	   (:maintainer "Daniel McClanahan" . "danieldmcclanahan@gmail.com")
+	   (:keywords "scrooge" "thrift"))])

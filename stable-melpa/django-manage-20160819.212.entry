@@ -1,2 +1,10 @@
-
-(django-manage . [(20160819 212) ((hydra (0 13 2))) "Django minor mode for commanding manage.py" single ((:commit . "876fb2cb627d465adfdc905841279784bcdd7ee8") (:keywords "languages") (:authors ("Daniel Gopar" . "gopardaniel@yahoo.com")) (:maintainer "Daniel Gopar" . "gopardaniel@yahoo.com"))])
+(django-manage .
+	       [(20160819 212)
+		((hydra
+		  (0 13 2)))
+		"Django minor mode for commanding manage.py" single
+		((:commit . "876fb2cb627d465adfdc905841279784bcdd7ee8")
+		 (:authors
+		  ("Daniel Gopar" . "gopardaniel@yahoo.com"))
+		 (:maintainer "Daniel Gopar" . "gopardaniel@yahoo.com")
+		 (:keywords "languages"))])

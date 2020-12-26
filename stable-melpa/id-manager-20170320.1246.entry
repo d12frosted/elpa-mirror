@@ -1,2 +1,8 @@
-
-(id-manager . [(20170320 1246) nil "id-password management" single ((:commit . "14ebc35db298aac4dedc8aa188bc46bacab81f3b") (:keywords "password" "convenience") (:authors ("SAKURAI Masashi <m.sakurai atmark kiwanami.net>")) (:maintainer "SAKURAI Masashi <m.sakurai atmark kiwanami.net>"))])
+(id-manager .
+	    [(20170320 1246)
+	     nil "id-password management" single
+	     ((:commit . "14ebc35db298aac4dedc8aa188bc46bacab81f3b")
+	      (:authors
+	       ("SAKURAI Masashi <m.sakurai atmark kiwanami.net>"))
+	      (:maintainer "SAKURAI Masashi <m.sakurai atmark kiwanami.net>")
+	      (:keywords "password" "convenience"))])

@@ -1,2 +1,11 @@
-
-(git-grep . [(20200920 1751) ((projectile (0 10 0))) "Search tools using git grep" single ((:commit . "12ff6045e9b6aa42f98abd4ddc44d670268a0849") (:keywords "matching" "files" "grep" "search" "using" "git-grep") (:authors ("Sam Kleinman")) (:maintainer "tychoish" . "garen@tychoish.com") (:url . "https://github.com/tychoish/git-grep.el"))])
+(git-grep .
+	  [(20200920 1751)
+	   ((projectile
+	     (0 10 0)))
+	   "Search tools using git grep" single
+	   ((:commit . "12ff6045e9b6aa42f98abd4ddc44d670268a0849")
+	    (:authors
+	     ("Sam Kleinman"))
+	    (:maintainer "tychoish" . "garen@tychoish.com")
+	    (:keywords "matching" "files" "grep" "search" "using" "git-grep")
+	    (:url . "https://github.com/tychoish/git-grep.el"))])

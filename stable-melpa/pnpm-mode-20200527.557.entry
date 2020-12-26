@@ -1,2 +1,11 @@
-
-(pnpm-mode . [(20200527 557) ((emacs (24 1))) "Minor mode for working with pnpm projects" single ((:commit . "391207e6505948b0d0cb57b802ee4885e3292c21") (:keywords "convenience" "project" "javascript" "node" "npm" "pnpm") (:authors ("Rajasegar Chandran" . "rajasegar.c@gmail.com")) (:maintainer "Rajasegar Chandran" . "rajasegar.c@gmail.com") (:url . "https://github.com/rajasegar/pnpm-mode"))])
+(pnpm-mode .
+	   [(20200527 557)
+	    ((emacs
+	      (24 1)))
+	    "Minor mode for working with pnpm projects" single
+	    ((:commit . "391207e6505948b0d0cb57b802ee4885e3292c21")
+	     (:authors
+	      ("Rajasegar Chandran" . "rajasegar.c@gmail.com"))
+	     (:maintainer "Rajasegar Chandran" . "rajasegar.c@gmail.com")
+	     (:keywords "convenience" "project" "javascript" "node" "npm" "pnpm")
+	     (:url . "https://github.com/rajasegar/pnpm-mode"))])

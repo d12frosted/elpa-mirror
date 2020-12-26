@@ -1,2 +1,9 @@
-
-(openstack-cgit-browse-file . [(20130819 927) nil "Browse the current file in OpenStack cgit" single ((:commit . "244219288b9aef41155044697bb114b7af83ab8f") (:keywords "convenience" "vc" "git" "cgit" "gerrit" "openstack") (:authors ("Chmouel Boudjnah" . "chmouel@chmouel.com")) (:maintainer "Chmouel Boudjnah" . "chmouel@chmouel.com") (:url . "https://github.com/chmouel/openstack-cgit-browse-file"))])
+(openstack-cgit-browse-file .
+			    [(20130819 927)
+			     nil "Browse the current file in OpenStack cgit" single
+			     ((:commit . "244219288b9aef41155044697bb114b7af83ab8f")
+			      (:authors
+			       ("Chmouel Boudjnah" . "chmouel@chmouel.com"))
+			      (:maintainer "Chmouel Boudjnah" . "chmouel@chmouel.com")
+			      (:keywords "convenience" "vc" "git" "cgit" "gerrit" "openstack")
+			      (:url . "https://github.com/chmouel/openstack-cgit-browse-file"))])

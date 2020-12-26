@@ -1,2 +1,13 @@
-
-(nikola . [(20170703 2021) ((async (1 5)) (emacs (24 3))) "Simple wrapper for nikola" single ((:commit . "964715ac30943c9d6976999cad208dc60d09def0") (:keywords ":" "nikola") (:authors (": drymer <drymer [ AT ] autistici.org>")) (:maintainer ": drymer <drymer [ AT ] autistici.org>") (:url . ": https://git.daemons.it/drymer/nikola.el"))])
+(nikola .
+	[(20170703 2021)
+	 ((async
+	   (1 5))
+	  (emacs
+	   (24 3)))
+	 "Simple wrapper for nikola" single
+	 ((:commit . "964715ac30943c9d6976999cad208dc60d09def0")
+	  (:authors
+	   (": drymer <drymer [ AT ] autistici.org>"))
+	  (:maintainer ": drymer <drymer [ AT ] autistici.org>")
+	  (:keywords ":" "nikola")
+	  (:url . ": https://git.daemons.it/drymer/nikola.el"))])

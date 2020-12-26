@@ -1,2 +1,13 @@
-
-(fluxus-mode . [(20191001 1716) ((osc (0 1)) (emacs (24 4))) "Major mode for interfacing with Fluxus" single ((:commit . "3d05fa15f141ac3e936f908097bb7eb6295cc367") (:keywords "languages") (:authors ("modula t." . "defaultxr@gmail.com")) (:maintainer "modula t." . "defaultxr@gmail.com") (:url . "https://github.com/defaultxr/fluxus-mode"))])
+(fluxus-mode .
+	     [(20191001 1716)
+	      ((osc
+		(0 1))
+	       (emacs
+		(24 4)))
+	      "Major mode for interfacing with Fluxus" single
+	      ((:commit . "3d05fa15f141ac3e936f908097bb7eb6295cc367")
+	       (:authors
+		("modula t." . "defaultxr@gmail.com"))
+	       (:maintainer "modula t." . "defaultxr@gmail.com")
+	       (:keywords "languages")
+	       (:url . "https://github.com/defaultxr/fluxus-mode"))])

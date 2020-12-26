@@ -1,2 +1,8 @@
-
-(applescript-mode . [(20090321 632) nil "major mode for editing AppleScript source" single ((:commit . "8f888cd80af1e0902b5609143facd3051bc94892") (:keywords "languages" "tools") (:authors ("sakito" . "sakito@users.sourceforge.jp")) (:maintainer "sakito" . "sakito@users.sourceforge.jp"))])
+(applescript-mode .
+		  [(20090321 632)
+		   nil "major mode for editing AppleScript source" single
+		   ((:commit . "8f888cd80af1e0902b5609143facd3051bc94892")
+		    (:authors
+		     ("sakito" . "sakito@users.sourceforge.jp"))
+		    (:maintainer "sakito" . "sakito@users.sourceforge.jp")
+		    (:keywords "languages" "tools"))])

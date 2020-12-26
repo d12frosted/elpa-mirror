@@ -1,2 +1,9 @@
-
-(codcut . [(20190915 1009) nil "Share pieces of code to Codcut" single ((:commit . "7ca7db69e8c38ec45eb572ad16ab2b56086f2131") (:keywords "comm" "tools" "codcut" "share") (:authors ("Diego Pasquali" . "hello@dgopsq.space")) (:maintainer "Diego Pasquali" . "hello@dgopsq.space") (:url . "https://github.com/codcut/codcut-emacs"))])
+(codcut .
+	[(20190915 1009)
+	 nil "Share pieces of code to Codcut" single
+	 ((:commit . "7ca7db69e8c38ec45eb572ad16ab2b56086f2131")
+	  (:authors
+	   ("Diego Pasquali" . "hello@dgopsq.space"))
+	  (:maintainer "Diego Pasquali" . "hello@dgopsq.space")
+	  (:keywords "comm" "tools" "codcut" "share")
+	  (:url . "https://github.com/codcut/codcut-emacs"))])

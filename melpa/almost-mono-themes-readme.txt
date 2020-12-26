@@ -1,1 +1,4 @@
-A suite of almost monochrome Emacs themes
+;;; Commentary:
+
+;; A suite of almost monochrome Emacs themes
+

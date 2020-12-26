@@ -1,2 +1,13 @@
-
-(magic-filetype . [(20180219 1552) ((emacs (24)) (s (1 9 0))) "Enhance filetype major mode" single ((:commit . "019494add5ff02dd36cb3f500142fc51125522cc") (:keywords "emulations" "vim" "ft" "file" "magic-mode") (:authors ("USAMI Kenta" . "tadsan@zonu.me")) (:maintainer "USAMI Kenta" . "tadsan@zonu.me") (:url . "https://github.com/zonuexe/magic-filetype.el"))])
+(magic-filetype .
+		[(20180219 1552)
+		 ((emacs
+		   (24))
+		  (s
+		   (1 9 0)))
+		 "Enhance filetype major mode" single
+		 ((:commit . "019494add5ff02dd36cb3f500142fc51125522cc")
+		  (:authors
+		   ("USAMI Kenta" . "tadsan@zonu.me"))
+		  (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+		  (:keywords "emulations" "vim" "ft" "file" "magic-mode")
+		  (:url . "https://github.com/zonuexe/magic-filetype.el"))])

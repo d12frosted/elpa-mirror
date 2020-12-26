@@ -1,2 +1,15 @@
-
-(git-msg-prefix . [(20191031 1304) ((emacs (24)) (s (1 10 0)) (dash (2 9 0))) "Insert commit message prefix (issue number)" single ((:commit . "43f6b31c1090371260a2f15b2117a7666920bee7") (:keywords "vc" "tools") (:authors ("Raimon Grau" . "raimonster@gmail.com")) (:maintainer "Raimon Grau" . "raimonster@gmail.com") (:url . "http://github.com/kidd/git-msg-prefix.el"))])
+(git-msg-prefix .
+		[(20191031 1304)
+		 ((emacs
+		   (24))
+		  (s
+		   (1 10 0))
+		  (dash
+		   (2 9 0)))
+		 "Insert commit message prefix (issue number)" single
+		 ((:commit . "43f6b31c1090371260a2f15b2117a7666920bee7")
+		  (:authors
+		   ("Raimon Grau" . "raimonster@gmail.com"))
+		  (:maintainer "Raimon Grau" . "raimonster@gmail.com")
+		  (:keywords "vc" "tools")
+		  (:url . "http://github.com/kidd/git-msg-prefix.el"))])

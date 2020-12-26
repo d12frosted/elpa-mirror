@@ -1,2 +1,11 @@
-
-(map-regexp . [(20190128 18) ((cl-lib (0 6 1))) "map over matches of a regular expression" single ((:commit . "ae2d1c22f786ad987aef3e319925e80160a887a0") (:keywords "convenience") (:authors ("Jonas Bernoulli" . "jonas@bernoul.li")) (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li") (:url . "https://github.com/tarsius/map-regexp"))])
+(map-regexp .
+	    [(20190128 18)
+	     ((cl-lib
+	       (0 6 1)))
+	     "map over matches of a regular expression" single
+	     ((:commit . "ae2d1c22f786ad987aef3e319925e80160a887a0")
+	      (:authors
+	       ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	      (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	      (:keywords "convenience")
+	      (:url . "https://github.com/tarsius/map-regexp"))])

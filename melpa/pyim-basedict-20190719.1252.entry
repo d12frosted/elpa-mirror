@@ -1,2 +1,9 @@
-
-(pyim-basedict . [(20190719 1252) nil "The default pinyin dict of pyim" tar ((:commit . "d499104189a9462cb80f8efd9713e4064dc7093d") (:keywords "convenience" "chinese" "pinyin" "input-method" "complete") (:authors ("Feng Shu" . "tumashu@163.com")) (:maintainer "Feng Shu" . "tumashu@163.com") (:url . "https://github.com/tumashu/pyim-basedict"))])
+(pyim-basedict .
+	       [(20190719 1252)
+		nil "The default pinyin dict of pyim" tar
+		((:commit . "d499104189a9462cb80f8efd9713e4064dc7093d")
+		 (:authors
+		  ("Feng Shu" . "tumashu@163.com"))
+		 (:maintainer "Feng Shu" . "tumashu@163.com")
+		 (:keywords "convenience" "chinese" "pinyin" "input-method" "complete")
+		 (:url . "https://github.com/tumashu/pyim-basedict"))])

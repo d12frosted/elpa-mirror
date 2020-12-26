@@ -1,2 +1,9 @@
-
-(dkl . [(20161005 7) nil "Display keyboard layout." tar ((:commit . "6b4584f86037bda3383960c678d51f340229fb91") (:keywords "input" "keyboard" "layout") (:authors ("Alexis" . "flexibeast@gmail.com")) (:maintainer "Alexis" . "flexibeast@gmail.com") (:url . "https://github.com/flexibeast/dkl"))])
+(dkl .
+     [(20161005 7)
+      nil "Display keyboard layout." tar
+      ((:commit . "6b4584f86037bda3383960c678d51f340229fb91")
+       (:authors
+	("Alexis" . "flexibeast@gmail.com"))
+       (:maintainer "Alexis" . "flexibeast@gmail.com")
+       (:keywords "input" "keyboard" "layout")
+       (:url . "https://github.com/flexibeast/dkl"))])

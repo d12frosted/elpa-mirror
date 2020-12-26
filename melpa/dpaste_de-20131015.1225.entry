@@ -1,2 +1,10 @@
-
-(dpaste_de . [(20131015 1225) ((web (0 3 7))) "Emacs mode to paste to dpaste.de" single ((:commit . "f0c39e8864299f735642f7d9fa490689398ce39d") (:keywords "pastebin") (:authors ("Thejaswi Puthraya" . "thejaswi.puthraya@gmail.com")) (:maintainer "Thejaswi Puthraya" . "thejaswi.puthraya@gmail.com"))])
+(dpaste_de .
+	   [(20131015 1225)
+	    ((web
+	      (0 3 7)))
+	    "Emacs mode to paste to dpaste.de" single
+	    ((:commit . "f0c39e8864299f735642f7d9fa490689398ce39d")
+	     (:authors
+	      ("Thejaswi Puthraya" . "thejaswi.puthraya@gmail.com"))
+	     (:maintainer "Thejaswi Puthraya" . "thejaswi.puthraya@gmail.com")
+	     (:keywords "pastebin"))])

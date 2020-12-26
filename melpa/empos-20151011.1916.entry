@@ -1,2 +1,9 @@
-
-(empos . [(20151011 1916) nil "Locate bibtex citations from within emacs" single ((:commit . "7b99ad30e56937adb7e6349777e5a2045597d564") (:keywords "citations" "reference" "bibtex" "reftex") (:authors ("Dimitris Alikaniotis <da352 [at] cam.ac.uk>")) (:maintainer "Dimitris Alikaniotis <da352 [at] cam.ac.uk>") (:url . "http://github.com/dimalik/empos/"))])
+(empos .
+       [(20151011 1916)
+	nil "Locate bibtex citations from within emacs" single
+	((:commit . "7b99ad30e56937adb7e6349777e5a2045597d564")
+	 (:authors
+	  ("Dimitris Alikaniotis <da352 [at] cam.ac.uk>"))
+	 (:maintainer "Dimitris Alikaniotis <da352 [at] cam.ac.uk>")
+	 (:keywords "citations" "reference" "bibtex" "reftex")
+	 (:url . "http://github.com/dimalik/empos/"))])

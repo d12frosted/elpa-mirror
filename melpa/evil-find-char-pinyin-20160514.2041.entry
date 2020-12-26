@@ -1,2 +1,12 @@
-
-(evil-find-char-pinyin . [(20160514 2041) ((evil (1 2 12)) (pinyinlib (0 1 0))) "Evil's f/F/t/T/evil-snipe commands with Pinyin support" single ((:commit . "04e277946d658f1a73c68dcbbadea9c21097a31c") (:keywords "extensions") (:authors ("Junpeng Qiu" . "qjpchmail@gmail.com")) (:maintainer "Junpeng Qiu" . "qjpchmail@gmail.com"))])
+(evil-find-char-pinyin .
+		       [(20160514 2041)
+			((evil
+			  (1 2 12))
+			 (pinyinlib
+			  (0 1 0)))
+			"Evil's f/F/t/T/evil-snipe commands with Pinyin support" single
+			((:commit . "04e277946d658f1a73c68dcbbadea9c21097a31c")
+			 (:authors
+			  ("Junpeng Qiu" . "qjpchmail@gmail.com"))
+			 (:maintainer "Junpeng Qiu" . "qjpchmail@gmail.com")
+			 (:keywords "extensions"))])

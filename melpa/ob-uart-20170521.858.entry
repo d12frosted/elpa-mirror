@@ -1,2 +1,9 @@
-
-(ob-uart . [(20170521 858) nil "org-babel support for UART communication" single ((:commit . "90daeac90a9e75c20cdcf71234c67b812110c50e") (:keywords "tools" "comm" "org-mode" "uart" "literate programming" "reproducible development") (:authors ("Andreas Müller")) (:maintainer "Andreas Müller") (:url . "https://www.0x7.ch"))])
+(ob-uart .
+	 [(20170521 858)
+	  nil "org-babel support for UART communication" single
+	  ((:commit . "90daeac90a9e75c20cdcf71234c67b812110c50e")
+	   (:authors
+	    ("Andreas Müller"))
+	   (:maintainer "Andreas Müller")
+	   (:keywords "tools" "comm" "org-mode" "uart" "literate programming" "reproducible development")
+	   (:url . "https://www.0x7.ch"))])

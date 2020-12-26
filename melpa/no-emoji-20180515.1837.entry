@@ -1,2 +1,11 @@
-
-(no-emoji . [(20180515 1837) ((emacs (24))) "Show :emoji-name: instead of emoji characters" single ((:commit . "ebceeab50dbfe4d60235180a57633745dbc18c77") (:keywords "extensions") (:authors ("Peter" . "craven@gmx.net")) (:maintainer "Peter" . "craven@gmx.net") (:url . "https://github.com/ecraven/no-emoji"))])
+(no-emoji .
+	  [(20180515 1837)
+	   ((emacs
+	     (24)))
+	   "Show :emoji-name: instead of emoji characters" single
+	   ((:commit . "ebceeab50dbfe4d60235180a57633745dbc18c77")
+	    (:authors
+	     ("Peter" . "craven@gmx.net"))
+	    (:maintainer "Peter" . "craven@gmx.net")
+	    (:keywords "extensions")
+	    (:url . "https://github.com/ecraven/no-emoji"))])

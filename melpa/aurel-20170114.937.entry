@@ -1,2 +1,15 @@
-
-(aurel . [(20170114 937) ((emacs (24 3)) (bui (1 1 0)) (dash (2 11 0))) "Search, get info, vote for and download AUR packages" single ((:commit . "fc7ad208f43f8525f84a18941c9b55f956df8961") (:keywords "tools") (:authors ("Alex Kost" . "alezost@gmail.com")) (:maintainer "Alex Kost" . "alezost@gmail.com") (:url . "https://github.com/alezost/aurel"))])
+(aurel .
+       [(20170114 937)
+	((emacs
+	  (24 3))
+	 (bui
+	  (1 1 0))
+	 (dash
+	  (2 11 0)))
+	"Search, get info, vote for and download AUR packages" single
+	((:commit . "fc7ad208f43f8525f84a18941c9b55f956df8961")
+	 (:authors
+	  ("Alex Kost" . "alezost@gmail.com"))
+	 (:maintainer "Alex Kost" . "alezost@gmail.com")
+	 (:keywords "tools")
+	 (:url . "https://github.com/alezost/aurel"))])

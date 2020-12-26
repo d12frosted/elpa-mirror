@@ -1,8 +1,11 @@
-Installation:
+;;; Commentary:
 
-Available as a package in melpa
+;;; Installation:
 
-(add-to-list 'package-archives
-             '("melpa" . "https://stable.melpa.org/packages/") t)
+;; Available as a package in melpa
 
-M-x package-install timonier
+;; (add-to-list 'package-archives
+;;              '("melpa" . "https://stable.melpa.org/packages/") t)
+;;
+;; M-x package-install timonier
+

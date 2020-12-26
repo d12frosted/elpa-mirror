@@ -1,2 +1,9 @@
-
-(dpaste . [(20160303 2112) nil "Emacs integration for dpaste.com" single ((:commit . "5ebabb466a6ae70882549855b6b2194fc32189f8") (:keywords "paste" "pastie" "pastebin" "dpaste" "python") (:authors ("Greg Newman" . "greg@gregnewman.org") ("Guilherme Gondim" . "semente@taurinus.org")) (:maintainer "Greg Newman" . "greg@gregnewman.org"))])
+(dpaste .
+	[(20160303 2112)
+	 nil "Emacs integration for dpaste.com" single
+	 ((:commit . "5ebabb466a6ae70882549855b6b2194fc32189f8")
+	  (:authors
+	   ("Greg Newman" . "greg@gregnewman.org")
+	   ("Guilherme Gondim" . "semente@taurinus.org"))
+	  (:maintainer "Greg Newman" . "greg@gregnewman.org")
+	  (:keywords "paste" "pastie" "pastebin" "dpaste" "python"))])

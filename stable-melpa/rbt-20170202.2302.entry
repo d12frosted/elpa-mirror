@@ -1,2 +1,12 @@
-
-(rbt . [(20170202 2302) ((popup (0 5 3)) (magit (20160128 1201))) "Integrate reviewboard with emacs." single ((:commit . "32bfba9062a014e375451cf4203c29535b5efc1e") (:keywords "reviewboard" "rbt") (:authors ("Joe Heyming" . "joeheyming@gmail.com")) (:maintainer "Joe Heyming" . "joeheyming@gmail.com"))])
+(rbt .
+     [(20170202 2302)
+      ((popup
+	(0 5 3))
+       (magit
+	(20160128 1201)))
+      "Integrate reviewboard with emacs." single
+      ((:commit . "32bfba9062a014e375451cf4203c29535b5efc1e")
+       (:authors
+	("Joe Heyming" . "joeheyming@gmail.com"))
+       (:maintainer "Joe Heyming" . "joeheyming@gmail.com")
+       (:keywords "reviewboard" "rbt"))])

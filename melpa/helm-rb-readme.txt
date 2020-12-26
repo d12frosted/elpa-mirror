@@ -1,1 +1,2 @@
-See readme.md
+;;; Commentary:
+;; See readme.md

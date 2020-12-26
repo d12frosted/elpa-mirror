@@ -1,2 +1,10 @@
-
-(message-attachment-reminder . [(20200428 124) ((emacs (24 1))) "Remind if missing attachment" single ((:commit . "ce506b27b15cc39a47c58ff795026eaea8632e2f") (:authors ("Alex Murray" . "murray.alex@gmail.com")) (:maintainer "Alex Murray" . "murray.alex@gmail.com") (:url . "https://github.com/alexmurray/message-attachment-reminder"))])
+(message-attachment-reminder .
+			     [(20200428 124)
+			      ((emacs
+				(24 1)))
+			      "Remind if missing attachment" single
+			      ((:commit . "ce506b27b15cc39a47c58ff795026eaea8632e2f")
+			       (:authors
+				("Alex Murray" . "murray.alex@gmail.com"))
+			       (:maintainer "Alex Murray" . "murray.alex@gmail.com")
+			       (:url . "https://github.com/alexmurray/message-attachment-reminder"))])

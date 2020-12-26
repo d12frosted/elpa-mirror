@@ -1,2 +1,11 @@
-
-(windswap . [(20200722 411) ((emacs (24 3))) "Like windmove, but swaps buffers while moving point" single ((:commit . "1a334f6543e0a30c55ea1e6071e9732d948f9e4b") (:keywords "frames" "convenience") (:authors ("Steve Purcell" . "steve@sanityinc.com")) (:maintainer "Steve Purcell" . "steve@sanityinc.com") (:url . "https://github.com/purcell/windswap"))])
+(windswap .
+	  [(20200722 411)
+	   ((emacs
+	     (24 3)))
+	   "Like windmove, but swaps buffers while moving point" single
+	   ((:commit . "1a334f6543e0a30c55ea1e6071e9732d948f9e4b")
+	    (:authors
+	     ("Steve Purcell" . "steve@sanityinc.com"))
+	    (:maintainer "Steve Purcell" . "steve@sanityinc.com")
+	    (:keywords "frames" "convenience")
+	    (:url . "https://github.com/purcell/windswap"))])

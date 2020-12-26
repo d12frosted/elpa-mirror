@@ -1,2 +1,11 @@
-
-(web-search . [(20190620 602) ((emacs (24 3))) "Open a web search" tar ((:commit . "a22cbdc663a1895d5a5b69de91e1e3b9eb64b92f") (:keywords "web" "search") (:authors ("Xu Chunyang" . "mail@xuchunyang.me")) (:maintainer "Xu Chunyang" . "mail@xuchunyang.me") (:url . "https://github.com/xuchunyang/web-search.el"))])
+(web-search .
+	    [(20190620 602)
+	     ((emacs
+	       (24 3)))
+	     "Open a web search" tar
+	     ((:commit . "a22cbdc663a1895d5a5b69de91e1e3b9eb64b92f")
+	      (:authors
+	       ("Xu Chunyang" . "mail@xuchunyang.me"))
+	      (:maintainer "Xu Chunyang" . "mail@xuchunyang.me")
+	      (:keywords "web" "search")
+	      (:url . "https://github.com/xuchunyang/web-search.el"))])

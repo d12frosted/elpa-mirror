@@ -1,2 +1,15 @@
-
-(company-lsp . [(20190612 1553) ((emacs (25 1)) (lsp-mode (6 0)) (company (0 9 0)) (s (1 2 0)) (dash (2 11 0))) "Company completion backend for lsp-mode." single ((:commit . "f921ffa0cdc542c21dc3dd85f2c93df4288e83bd") (:url . "https://github.com/tigersoldier/company-lsp"))])
+(company-lsp .
+	     [(20190612 1553)
+	      ((emacs
+		(25 1))
+	       (lsp-mode
+		(6 0))
+	       (company
+		(0 9 0))
+	       (s
+		(1 2 0))
+	       (dash
+		(2 11 0)))
+	      "Company completion backend for lsp-mode." single
+	      ((:commit . "f921ffa0cdc542c21dc3dd85f2c93df4288e83bd")
+	       (:url . "https://github.com/tigersoldier/company-lsp"))])

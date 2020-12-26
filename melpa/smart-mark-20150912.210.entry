@@ -1,2 +1,8 @@
-
-(smart-mark . [(20150912 210) nil "Restore point after C-g when mark" single ((:commit . "04b522a23e3aae8381c6a976fc978532fcb2e7d0") (:keywords "mark" "restore") (:authors ("Kai Yu" . "yeannylam@gmail.com")) (:maintainer "Kai Yu" . "yeannylam@gmail.com"))])
+(smart-mark .
+	    [(20150912 210)
+	     nil "Restore point after C-g when mark" single
+	     ((:commit . "04b522a23e3aae8381c6a976fc978532fcb2e7d0")
+	      (:authors
+	       ("Kai Yu" . "yeannylam@gmail.com"))
+	      (:maintainer "Kai Yu" . "yeannylam@gmail.com")
+	      (:keywords "mark" "restore"))])

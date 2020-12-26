@@ -1,2 +1,13 @@
-
-(evil-lion . [(20170811 614) ((emacs (24 3)) (evil (1 0 0))) "Evil align operator, port of vim-lion" single ((:commit . "6b03593f5dd6e7c9ca02207f9a73615cf94c93ab") (:keywords "emulations" "evil" "vim") (:authors ("edkolev" . "evgenysw@gmail.com")) (:maintainer "edkolev" . "evgenysw@gmail.com") (:url . "http://github.com/edkolev/evil-lion"))])
+(evil-lion .
+	   [(20170811 614)
+	    ((emacs
+	      (24 3))
+	     (evil
+	      (1 0 0)))
+	    "Evil align operator, port of vim-lion" single
+	    ((:commit . "6b03593f5dd6e7c9ca02207f9a73615cf94c93ab")
+	     (:authors
+	      ("edkolev" . "evgenysw@gmail.com"))
+	     (:maintainer "edkolev" . "evgenysw@gmail.com")
+	     (:keywords "emulations" "evil" "vim")
+	     (:url . "http://github.com/edkolev/evil-lion"))])

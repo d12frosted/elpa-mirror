@@ -1,2 +1,15 @@
-
-(replace-with-inflections . [(20180831 635) ((cl-lib (0 5)) (string-inflection (1 0 10)) (inflections (1 1))) "Inflection aware `query-replace'" single ((:commit . "d9201e047856492f282da65459b28aba25998dbb") (:keywords "matching") (:authors ("Akinori MUSHA" . "knu@iDaemons.org")) (:maintainer "Akinori MUSHA" . "knu@iDaemons.org") (:url . "https://github.com/knu/replace-with-inflections.el"))])
+(replace-with-inflections .
+			  [(20180831 635)
+			   ((cl-lib
+			     (0 5))
+			    (string-inflection
+			     (1 0 10))
+			    (inflections
+			     (1 1)))
+			   "Inflection aware `query-replace'" single
+			   ((:commit . "d9201e047856492f282da65459b28aba25998dbb")
+			    (:authors
+			     ("Akinori MUSHA" . "knu@iDaemons.org"))
+			    (:maintainer "Akinori MUSHA" . "knu@iDaemons.org")
+			    (:keywords "matching")
+			    (:url . "https://github.com/knu/replace-with-inflections.el"))])

@@ -1,2 +1,9 @@
-
-(programmer-dvorak . [(20150427 137) nil "Input method for Programmer Dvorak." single ((:commit . "3288a8f058eca4cab390a564babbbcb17cfa0350") (:keywords "dvorak" "programmer-dvorak" "input-method") (:authors ("Chenyun Yang" . "yangchenyun@gmail.com")) (:maintainer "Chenyun Yang" . "yangchenyun@gmail.com") (:url . "https://github.com/yangchenyun/programmer-dvorak"))])
+(programmer-dvorak .
+		   [(20150427 137)
+		    nil "Input method for Programmer Dvorak." single
+		    ((:commit . "3288a8f058eca4cab390a564babbbcb17cfa0350")
+		     (:authors
+		      ("Chenyun Yang" . "yangchenyun@gmail.com"))
+		     (:maintainer "Chenyun Yang" . "yangchenyun@gmail.com")
+		     (:keywords "dvorak" "programmer-dvorak" "input-method")
+		     (:url . "https://github.com/yangchenyun/programmer-dvorak"))])

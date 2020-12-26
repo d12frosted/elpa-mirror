@@ -1,2 +1,10 @@
-
-(helm-frame . [(20180604 1005) ((emacs (24 4))) "open helm buffers in a dedicated frame" single ((:commit . "485e2a534b0de5e8dbeb144a9a60ceca00215a4a") (:keywords "lisp" "helm" "popup" "frame") (:authors ("chee" . "chee@snake.dog")) (:maintainer "chee" . "chee@snake.dog"))])
+(helm-frame .
+	    [(20180604 1005)
+	     ((emacs
+	       (24 4)))
+	     "open helm buffers in a dedicated frame" single
+	     ((:commit . "485e2a534b0de5e8dbeb144a9a60ceca00215a4a")
+	      (:authors
+	       ("chee" . "chee@snake.dog"))
+	      (:maintainer "chee" . "chee@snake.dog")
+	      (:keywords "lisp" "helm" "popup" "frame"))])

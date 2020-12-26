@@ -1,2 +1,15 @@
-
-(abgaben . [(20171119 646) ((pdf-tools (0 80)) (f (0 19 0)) (s (1 11 0))) "review and correct assignments received by mail" single ((:commit . "20d14830f07d66e2a04bcad1498a4a6fbf4b4451") (:keywords "mail" "outlines" "convenience") (:authors ("Arne Köhn" . "arne@chark.eu")) (:maintainer "Arne Köhn" . "arne@chark.eu") (:url . "http://arne.chark.eu/"))])
+(abgaben .
+	 [(20171119 646)
+	  ((pdf-tools
+	    (0 80))
+	   (f
+	    (0 19 0))
+	   (s
+	    (1 11 0)))
+	  "review and correct assignments received by mail" single
+	  ((:commit . "20d14830f07d66e2a04bcad1498a4a6fbf4b4451")
+	   (:authors
+	    ("Arne Köhn" . "arne@chark.eu"))
+	   (:maintainer "Arne Köhn" . "arne@chark.eu")
+	   (:keywords "mail" "outlines" "convenience")
+	   (:url . "http://arne.chark.eu/"))])

@@ -1,2 +1,10 @@
-
-(change-inner . [(20150707 1544) ((expand-region (0 7))) "Change contents based on semantic units" single ((:commit . "52c543a4b9808c0d15b565fcdf646c9779de33e8") (:keywords "convenience" "extensions") (:authors ("Magnar Sveen" . "magnars@gmail.com")) (:maintainer "Magnar Sveen" . "magnars@gmail.com"))])
+(change-inner .
+	      [(20150707 1544)
+	       ((expand-region
+		 (0 7)))
+	       "Change contents based on semantic units" single
+	       ((:commit . "52c543a4b9808c0d15b565fcdf646c9779de33e8")
+		(:authors
+		 ("Magnar Sveen" . "magnars@gmail.com"))
+		(:maintainer "Magnar Sveen" . "magnars@gmail.com")
+		(:keywords "convenience" "extensions"))])

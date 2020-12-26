@@ -1,23 +1,26 @@
-Elpher aims to provide a practical and friendly gopher and gemini
-client for GNU Emacs.  It supports:
+;;; Commentary:
 
-- intuitive keyboard and mouse-driven browsing,
-- out-of-the-box compatibility with evil-mode,
-- clickable web and gopher links *in plain text*,
-- caching of visited sites,
-- pleasant and configurable colouring of Gopher directories,
-- direct visualisation of image files,
-- a simple bookmark management system,
-- gopher connections using TLS encryption,
-- the fledgling Gemini protocol,
-- the greybeard Finger protocol.
+;; Elpher aims to provide a practical and friendly gopher and gemini
+;; client for GNU Emacs.  It supports:
 
-To launch Elpher, simply use 'M-x elpher'.  This will open a start
-page containing information on key bindings and suggested starting
-points for your gopher exploration.
+;; - intuitive keyboard and mouse-driven browsing,
+;; - out-of-the-box compatibility with evil-mode,
+;; - clickable web and gopher links *in plain text*,
+;; - caching of visited sites,
+;; - pleasant and configurable colouring of Gopher directories,
+;; - direct visualisation of image files,
+;; - a simple bookmark management system,
+;; - gopher connections using TLS encryption,
+;; - the fledgling Gemini protocol,
+;; - the greybeard Finger protocol.
 
-Full instructions can be found in the Elpher info manual.
+;; To launch Elpher, simply use 'M-x elpher'.  This will open a start
+;; page containing information on key bindings and suggested starting
+;; points for your gopher exploration.
 
-Elpher is under active development.  Any suggestions for
-improvements are welcome, and can be made on the official
-project page, gopher://thelambdalab.xyz/1/projects/elpher/.
+;; Full instructions can be found in the Elpher info manual.
+
+;; Elpher is under active development.  Any suggestions for
+;; improvements are welcome, and can be made on the official
+;; project page, gopher://thelambdalab.xyz/1/projects/elpher/.
+

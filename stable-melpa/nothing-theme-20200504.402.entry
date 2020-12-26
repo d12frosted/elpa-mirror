@@ -1,2 +1,10 @@
-
-(nothing-theme . [(20200504 402) ((emacs (24 1))) "Monochrome theme" single ((:commit . "d2514bb9707f66dda0d60f40f465e79914c50946") (:authors ("Jared Gorski," . "jaredgorski6@gmail.com")) (:maintainer "Jared Gorski," . "jaredgorski6@gmail.com") (:url . "https://github.com/jaredgorski/nothing.el"))])
+(nothing-theme .
+	       [(20200504 402)
+		((emacs
+		  (24 1)))
+		"Monochrome theme" single
+		((:commit . "d2514bb9707f66dda0d60f40f465e79914c50946")
+		 (:authors
+		  ("Jared Gorski," . "jaredgorski6@gmail.com"))
+		 (:maintainer "Jared Gorski," . "jaredgorski6@gmail.com")
+		 (:url . "https://github.com/jaredgorski/nothing.el"))])

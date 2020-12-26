@@ -1,2 +1,9 @@
-
-(find-temp-file . [(20200117 2254) nil "Open quickly a temporary file" single ((:commit . "2bfcdba0d6a8a0e6faa080cb04ff0f7ed06491ba") (:keywords "convenience") (:authors ("Sylvain Rousseau <thisirs at gmail dot com>")) (:maintainer "Sylvain Rousseau <thisirs at gmail dot com>") (:url . "https://github.com/thisirs/find-temp-file.git"))])
+(find-temp-file .
+		[(20200117 2254)
+		 nil "Open quickly a temporary file" single
+		 ((:commit . "2bfcdba0d6a8a0e6faa080cb04ff0f7ed06491ba")
+		  (:authors
+		   ("Sylvain Rousseau <thisirs at gmail dot com>"))
+		  (:maintainer "Sylvain Rousseau <thisirs at gmail dot com>")
+		  (:keywords "convenience")
+		  (:url . "https://github.com/thisirs/find-temp-file.git"))])

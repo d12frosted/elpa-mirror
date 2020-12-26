@@ -1,2 +1,17 @@
-
-(org-make-toc . [(20200409 1436) ((emacs (26 1)) (dash (2 12)) (s (1 10 0)) (org (9 0))) "Automatic tables of contents for Org files" single ((:commit . "26fbd6a7e1e7f8e473fe3a5f74faec715c3a05aa") (:keywords "org" "convenience") (:authors ("Adam Porter" . "adam@alphapapa.net")) (:maintainer "Adam Porter" . "adam@alphapapa.net") (:url . "http://github.com/alphapapa/org-make-toc"))])
+(org-make-toc .
+	      [(20200409 1436)
+	       ((emacs
+		 (26 1))
+		(dash
+		 (2 12))
+		(s
+		 (1 10 0))
+		(org
+		 (9 0)))
+	       "Automatic tables of contents for Org files" single
+	       ((:commit . "26fbd6a7e1e7f8e473fe3a5f74faec715c3a05aa")
+		(:authors
+		 ("Adam Porter" . "adam@alphapapa.net"))
+		(:maintainer "Adam Porter" . "adam@alphapapa.net")
+		(:keywords "org" "convenience")
+		(:url . "http://github.com/alphapapa/org-make-toc"))])

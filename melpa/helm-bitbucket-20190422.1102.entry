@@ -1,2 +1,13 @@
-
-(helm-bitbucket . [(20190422 1102) ((emacs (24)) (helm-core (3 0))) "Search Bitbucket with Helm" single ((:commit . "c722016622ad019202419cca60c3be3c53e56130") (:keywords "matching") (:authors ("Peter Urbak" . "tolowercase@gmail.com")) (:maintainer "Peter Urbak" . "tolowercase@gmail.com") (:url . "https://github.com/dragonwasrobot/helm-bitbucket"))])
+(helm-bitbucket .
+		[(20190422 1102)
+		 ((emacs
+		   (24))
+		  (helm-core
+		   (3 0)))
+		 "Search Bitbucket with Helm" single
+		 ((:commit . "c722016622ad019202419cca60c3be3c53e56130")
+		  (:authors
+		   ("Peter Urbak" . "tolowercase@gmail.com"))
+		  (:maintainer "Peter Urbak" . "tolowercase@gmail.com")
+		  (:keywords "matching")
+		  (:url . "https://github.com/dragonwasrobot/helm-bitbucket"))])

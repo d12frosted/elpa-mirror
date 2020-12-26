@@ -1,2 +1,10 @@
-
-(bliss-theme . [(20170808 1307) ((emacs (24 0))) "an Emacs 24 theme based on Bliss (tmTheme)" single ((:commit . "c3cf6d8a666ab26909b7da158f9e94df71a5fbbf") (:authors ("Jason Milkins")) (:maintainer "Jason Milkins") (:url . "https://github.com/emacsfodder/tmtheme-to-deftheme"))])
+(bliss-theme .
+	     [(20170808 1307)
+	      ((emacs
+		(24 0)))
+	      "an Emacs 24 theme based on Bliss (tmTheme)" single
+	      ((:commit . "c3cf6d8a666ab26909b7da158f9e94df71a5fbbf")
+	       (:authors
+		("Jason Milkins"))
+	       (:maintainer "Jason Milkins")
+	       (:url . "https://github.com/emacsfodder/tmtheme-to-deftheme"))])

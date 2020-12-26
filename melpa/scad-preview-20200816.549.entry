@@ -1,2 +1,12 @@
-
-(scad-preview . [(20200816 549) ((scad-mode (91 0)) (emacs (24 4))) "Preview SCAD models in real-time within Emacs" single ((:commit . "75fe00a9aaf875ac97930bdb334aef9e479e41d5") (:authors ("zk_phi")) (:maintainer "zk_phi") (:url . "http://zk-phi.gitub.io/"))])
+(scad-preview .
+	      [(20200816 549)
+	       ((scad-mode
+		 (91 0))
+		(emacs
+		 (24 4)))
+	       "Preview SCAD models in real-time within Emacs" single
+	       ((:commit . "75fe00a9aaf875ac97930bdb334aef9e479e41d5")
+		(:authors
+		 ("zk_phi"))
+		(:maintainer "zk_phi")
+		(:url . "http://zk-phi.gitub.io/"))])

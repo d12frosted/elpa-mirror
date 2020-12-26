@@ -1,2 +1,9 @@
-
-(fasd . [(20200925 1549) nil "Emacs integration for the command-line productivity booster `fasd'" single ((:commit . "38555b501430bb684feb58901ede5347dca287c7") (:keywords "cli" "bash" "zsh" "autojump") (:authors ("steckerhalter")) (:maintainer "steckerhalter") (:url . "https://framagit.org/steckerhalter/emacs-fasd"))])
+(fasd .
+      [(20200925 1549)
+       nil "Emacs integration for the command-line productivity booster `fasd'" single
+       ((:commit . "38555b501430bb684feb58901ede5347dca287c7")
+	(:authors
+	 ("steckerhalter"))
+	(:maintainer "steckerhalter")
+	(:keywords "cli" "bash" "zsh" "autojump")
+	(:url . "https://framagit.org/steckerhalter/emacs-fasd"))])

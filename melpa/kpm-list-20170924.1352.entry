@@ -1,2 +1,8 @@
-
-(kpm-list . [(20170924 1352) nil "An emacs buffer list that tries to intelligently group together buffers." single ((:commit . "e0f5112e5ce8ec1b603f4428fa51681c68bb28f5") (:authors ("Kevin Mahoney")) (:maintainer "Kevin Mahoney") (:url . "https://github.com/KMahoney/kpm-list/"))])
+(kpm-list .
+	  [(20170924 1352)
+	   nil "An emacs buffer list that tries to intelligently group together buffers." single
+	   ((:commit . "e0f5112e5ce8ec1b603f4428fa51681c68bb28f5")
+	    (:authors
+	     ("Kevin Mahoney"))
+	    (:maintainer "Kevin Mahoney")
+	    (:url . "https://github.com/KMahoney/kpm-list/"))])

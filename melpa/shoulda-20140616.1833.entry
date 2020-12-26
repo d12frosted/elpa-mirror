@@ -1,2 +1,10 @@
-
-(shoulda . [(20140616 1833) ((cl-lib (0 5))) "Shoulda test support for ruby" single ((:commit . "fbe8eb8efc6cfcca1713283a290882cfcdc8725e") (:keywords "ruby" "tests" "shoulda") (:authors ("Marcwebbie" . "marcwebbie@gmail.com")) (:maintainer "Marcwebbie" . "marcwebbie@gmail.com"))])
+(shoulda .
+	 [(20140616 1833)
+	  ((cl-lib
+	    (0 5)))
+	  "Shoulda test support for ruby" single
+	  ((:commit . "fbe8eb8efc6cfcca1713283a290882cfcdc8725e")
+	   (:authors
+	    ("Marcwebbie" . "marcwebbie@gmail.com"))
+	   (:maintainer "Marcwebbie" . "marcwebbie@gmail.com")
+	   (:keywords "ruby" "tests" "shoulda"))])

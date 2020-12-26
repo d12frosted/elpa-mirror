@@ -1,2 +1,9 @@
-
-(shpec-mode . [(20150530 922) nil "Minor mode for shpec specification" single ((:commit . "146adc8281d0f115df39a3a3f982ac59ab61b754") (:keywords "languages" "tools") (:authors ("AdrieanKhisbe" . "adriean.khisbe@live.fr")) (:maintainer "AdrieanKhisbe" . "adriean.khisbe@live.fr") (:url . "http://github.com/shpec/shpec-mode"))])
+(shpec-mode .
+	    [(20150530 922)
+	     nil "Minor mode for shpec specification" single
+	     ((:commit . "146adc8281d0f115df39a3a3f982ac59ab61b754")
+	      (:authors
+	       ("AdrieanKhisbe" . "adriean.khisbe@live.fr"))
+	      (:maintainer "AdrieanKhisbe" . "adriean.khisbe@live.fr")
+	      (:keywords "languages" "tools")
+	      (:url . "http://github.com/shpec/shpec-mode"))])

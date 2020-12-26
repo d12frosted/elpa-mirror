@@ -1,2 +1,11 @@
-
-(vyper-mode . [(20180707 1935) ((emacs (24 3))) "Major mode for the Vyper programming language" single ((:commit . "323dfddfc38f0b11697e9ebaf04d1b53297e54e5") (:keywords "languages") (:authors ("Alex Stokes" . "r.alex.stokes@gmail.com")) (:maintainer "Alex Stokes" . "r.alex.stokes@gmail.com") (:url . "https://github.com/ralexstokes/vyper-mode"))])
+(vyper-mode .
+	    [(20180707 1935)
+	     ((emacs
+	       (24 3)))
+	     "Major mode for the Vyper programming language" single
+	     ((:commit . "323dfddfc38f0b11697e9ebaf04d1b53297e54e5")
+	      (:authors
+	       ("Alex Stokes" . "r.alex.stokes@gmail.com"))
+	      (:maintainer "Alex Stokes" . "r.alex.stokes@gmail.com")
+	      (:keywords "languages")
+	      (:url . "https://github.com/ralexstokes/vyper-mode"))])

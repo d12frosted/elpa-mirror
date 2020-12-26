@@ -1,2 +1,9 @@
-
-(jar-manifest-mode . [(20160501 26) nil "Major mode to edit JAR manifest files" single ((:commit . "270dae14c481300f75ed96dad3a5ae42ca928a1d") (:keywords "convenience" "languages") (:authors ("Omair Majid" . "omair.majid@gmail.com")) (:maintainer "Omair Majid" . "omair.majid@gmail.com") (:url . "http://github.com/omajid/jar-manifest-mode"))])
+(jar-manifest-mode .
+		   [(20160501 26)
+		    nil "Major mode to edit JAR manifest files" single
+		    ((:commit . "270dae14c481300f75ed96dad3a5ae42ca928a1d")
+		     (:authors
+		      ("Omair Majid" . "omair.majid@gmail.com"))
+		     (:maintainer "Omair Majid" . "omair.majid@gmail.com")
+		     (:keywords "convenience" "languages")
+		     (:url . "http://github.com/omajid/jar-manifest-mode"))])

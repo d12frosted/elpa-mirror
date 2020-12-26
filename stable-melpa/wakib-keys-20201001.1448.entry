@@ -1,2 +1,11 @@
-
-(wakib-keys . [(20201001 1448) ((emacs (24 4))) "Minor Mode for Modern Keybindings" single ((:commit . "b803fcaef31539e070a08202b9039bbeb29e8f66") (:keywords "convenience" "keybindings" "keys") (:authors ("Abdulla Bubshait")) (:maintainer "Abdulla Bubshait") (:url . "https://github.com/darkstego/wakib-keys/"))])
+(wakib-keys .
+	    [(20201001 1448)
+	     ((emacs
+	       (24 4)))
+	     "Minor Mode for Modern Keybindings" single
+	     ((:commit . "b803fcaef31539e070a08202b9039bbeb29e8f66")
+	      (:authors
+	       ("Abdulla Bubshait"))
+	      (:maintainer "Abdulla Bubshait")
+	      (:keywords "convenience" "keybindings" "keys")
+	      (:url . "https://github.com/darkstego/wakib-keys/"))])

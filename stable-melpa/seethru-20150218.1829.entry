@@ -1,2 +1,11 @@
-
-(seethru . [(20150218 1829) ((shadchen (1 4))) "Easily change Emacs' transparency" single ((:commit . "d87e231f99313bea75b1e69e48c0f32968c82060") (:keywords "lisp" "tools" "alpha" "transparency") (:authors ("Benaiah Mischenko" . "benaiah@mischenko.com")) (:maintainer "Benaiah Mischenko" . "benaiah@mischenko.com") (:url . "http://github.com/benaiah/seethru"))])
+(seethru .
+	 [(20150218 1829)
+	  ((shadchen
+	    (1 4)))
+	  "Easily change Emacs' transparency" single
+	  ((:commit . "d87e231f99313bea75b1e69e48c0f32968c82060")
+	   (:authors
+	    ("Benaiah Mischenko" . "benaiah@mischenko.com"))
+	   (:maintainer "Benaiah Mischenko" . "benaiah@mischenko.com")
+	   (:keywords "lisp" "tools" "alpha" "transparency")
+	   (:url . "http://github.com/benaiah/seethru"))])

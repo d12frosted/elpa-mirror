@@ -1,2 +1,11 @@
-
-(keyswap . [(20160813 957) ((emacs (24 3))) "swap bindings between key pairs" single ((:commit . "cd682a7c4a8d64d6bae6a005db5045232e5e7b95") (:keywords "convenience") (:authors ("Matthew Malcomson" . "hardenedapple@gmail.com")) (:maintainer "Matthew Malcomson" . "hardenedapple@gmail.com") (:url . "http://github.com/hardenedapple/keyswap.el"))])
+(keyswap .
+	 [(20160813 957)
+	  ((emacs
+	    (24 3)))
+	  "swap bindings between key pairs" single
+	  ((:commit . "cd682a7c4a8d64d6bae6a005db5045232e5e7b95")
+	   (:authors
+	    ("Matthew Malcomson" . "hardenedapple@gmail.com"))
+	   (:maintainer "Matthew Malcomson" . "hardenedapple@gmail.com")
+	   (:keywords "convenience")
+	   (:url . "http://github.com/hardenedapple/keyswap.el"))])

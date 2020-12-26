@@ -1,2 +1,10 @@
-
-(brutal-theme . [(20200415 602) ((emacs (24 1))) "Brutalist theme" single ((:commit . "ee63563b7cb07aeec342722ae684426cb0465a98") (:authors ("Topi Kettunen" . "topi@kettunen.io")) (:maintainer "Topi Kettunen" . "topi@kettunen.io") (:url . "https://github.com/topikettunen/brutal"))])
+(brutal-theme .
+	      [(20200415 602)
+	       ((emacs
+		 (24 1)))
+	       "Brutalist theme" single
+	       ((:commit . "ee63563b7cb07aeec342722ae684426cb0465a98")
+		(:authors
+		 ("Topi Kettunen" . "topi@kettunen.io"))
+		(:maintainer "Topi Kettunen" . "topi@kettunen.io")
+		(:url . "https://github.com/topikettunen/brutal"))])

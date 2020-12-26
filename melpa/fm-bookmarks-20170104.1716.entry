@@ -1,2 +1,13 @@
-
-(fm-bookmarks . [(20170104 1716) ((emacs (24 3)) (cl-lib (0 5))) "Use file manager bookmarks (eg Dolphin, Nautilus, PCManFM) in Dired" single ((:commit . "11dacfd16a926bfecba96a94c6b13e162c7717f7") (:keywords "files" "convenience") (:authors ("Ono Hiroko" . "azazabc123@gmail.com")) (:maintainer "Ono Hiroko" . "azazabc123@gmail.com") (:url . "http://github.com/kuanyui/fm-bookmarks.el"))])
+(fm-bookmarks .
+	      [(20170104 1716)
+	       ((emacs
+		 (24 3))
+		(cl-lib
+		 (0 5)))
+	       "Use file manager bookmarks (eg Dolphin, Nautilus, PCManFM) in Dired" single
+	       ((:commit . "11dacfd16a926bfecba96a94c6b13e162c7717f7")
+		(:authors
+		 ("Ono Hiroko" . "azazabc123@gmail.com"))
+		(:maintainer "Ono Hiroko" . "azazabc123@gmail.com")
+		(:keywords "files" "convenience")
+		(:url . "http://github.com/kuanyui/fm-bookmarks.el"))])

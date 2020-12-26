@@ -1,2 +1,7 @@
-
-(sqlite . [(20180708 1711) nil "use sqlite via elisp" single ((:commit . "dad42b8bbca4994be1871343dd18fd6528ee5797") (:authors ("Christian Giménez")) (:maintainer "Christian Giménez"))])
+(sqlite .
+	[(20180708 1711)
+	 nil "use sqlite via elisp" single
+	 ((:commit . "dad42b8bbca4994be1871343dd18fd6528ee5797")
+	  (:authors
+	   ("Christian Giménez"))
+	  (:maintainer "Christian Giménez"))])

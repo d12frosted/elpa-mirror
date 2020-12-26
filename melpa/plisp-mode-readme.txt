@@ -1,230 +1,233 @@
-`plisp-mode' provides a major mode for PicoLisp programming.
+;;; Commentary:
 
-The `plisp-mode' in this package has been built from scratch, and
-is not based on, nor connected with, the PicoLisp support for Emacs
-provided in [the PicoLisp
-distribution](http://software-lab.de/down.html), or the more
-recently [updated version of that
-support](https://github.com/tj64/picolisp-mode). At this stage, the
-main advantages provided by this package are:
+;; `plisp-mode' provides a major mode for PicoLisp programming.
 
-* an actively maintained and supported system;
+;; The `plisp-mode' in this package has been built from scratch, and
+;; is not based on, nor connected with, the PicoLisp support for Emacs
+;; provided in [the PicoLisp
+;; distribution](http://software-lab.de/down.html), or the more
+;; recently [updated version of that
+;; support](https://github.com/tj64/picolisp-mode). At this stage, the
+;; main advantages provided by this package are:
 
-* access to the PicoLisp reference documentation, including via
-  Eldoc;
+;; * an actively maintained and supported system;
 
-* basic Imenu support;
+;; * access to the PicoLisp reference documentation, including via
+;;   Eldoc;
 
-* ease of customisability; and
+;; * basic Imenu support;
 
-* a cleaner codebase.
+;; * ease of customisability; and
 
-## Table of Contents
+;; * a cleaner codebase.
 
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
- - [Syntax highlighting](#highlighting)
- - [REPL](#repl)
- - [Inferior PicoLisp](#inferior-picolisp)
-  - [Org Babel](#org-babel)
- - [Documentation](#documentation)
- - [Commenting](#commenting)
- - [Indentation](#indentation)
- - [Miscellaneous](#miscellanous)
-- [TODO](#todo)
-- [Issues](#issues)
-- [License](#license)
+;; ## Table of Contents
 
-## Features
+;; - [Features](#features)
+;; - [Installation](#installation)
+;; - [Usage](#usage)
+;;  - [Syntax highlighting](#highlighting)
+;;  - [REPL](#repl)
+;;  - [Inferior PicoLisp](#inferior-picolisp)
+;;   - [Org Babel](#org-babel)
+;;  - [Documentation](#documentation)
+;;  - [Commenting](#commenting)
+;;  - [Indentation](#indentation)
+;;  - [Miscellaneous](#miscellanous)
+;; - [TODO](#todo)
+;; - [Issues](#issues)
+;; - [License](#license)
 
-* Syntax highlighting of PicoLisp code. (But please read the below
-  [note on syntax highlighting](#note-highlighting).)
+;; ## Features
 
-* Comint-based `pil' REPL buffers.
+;; * Syntax highlighting of PicoLisp code. (But please read the below
+;;   [note on syntax highlighting](#note-highlighting).)
 
-* Quick access to documentation for symbol at point.
+;; * Comint-based `pil' REPL buffers.
 
-## Installation
+;; * Quick access to documentation for symbol at point.
 
-Install [plisp-mode from
-MELPA](http://melpa.org/#/plisp-mode), or put the
-`plisp-mode' folder in your load-path and do a `(require
-'plisp-mode)'.
+;; ## Installation
 
-## Usage
+;; Install [plisp-mode from
+;; MELPA](http://melpa.org/#/plisp-mode), or put the
+;; `plisp-mode' folder in your load-path and do a `(require
+;; 'plisp-mode)'.
 
-<a name='highlighting'></a>
+;; ## Usage
 
-### Syntax highlighting
+;; <a name='highlighting'></a>
 
-Enable syntax highlighting for a PicoLisp source buffer with `M-x
-plisp-mode'.
+;; ### Syntax highlighting
 
-### REPL
+;; Enable syntax highlighting for a PicoLisp source buffer with `M-x
+;; plisp-mode'.
 
-Start a `pil' REPL session with `M-x plisp-repl' or, from a
-`plisp-mode' buffer, with `C-c C-i' (`plisp-repl').
+;; ### REPL
 
-<a name='inferior-picolisp'></a>
+;; Start a `pil' REPL session with `M-x plisp-repl' or, from a
+;; `plisp-mode' buffer, with `C-c C-i' (`plisp-repl').
 
-### Inferior PicoLisp
+;; <a name='inferior-picolisp'></a>
 
-This package provides the `inferior-plisp' feature, a fork of the
-[`inferior-picolisp' library written by Guillermo Palavecino and
-Thorsten Jolitz](https://github.com/tj64/picolisp-mode/), modified
-to be compatible with `plisp-mode'.
+;; ### Inferior PicoLisp
 
-By default, `inferior-plisp' is loaded by `plisp-mode'; to disable
-this, set the variable `plisp-use-inferior-plisp' to `nil'. It can
-still be manually loaded with `(require 'inferior-plisp)'.
+;; This package provides the `inferior-plisp' feature, a fork of the
+;; [`inferior-picolisp' library written by Guillermo Palavecino and
+;; Thorsten Jolitz](https://github.com/tj64/picolisp-mode/), modified
+;; to be compatible with `plisp-mode'.
 
-With `inferior-plisp' loaded, the following bindings are available
-in `plisp-mode' and `plisp-repl-mode':
+;; By default, `inferior-plisp' is loaded by `plisp-mode'; to disable
+;; this, set the variable `plisp-use-inferior-plisp' to `nil'. It can
+;; still be manually loaded with `(require 'inferior-plisp)'.
 
-* `M-C-x' / `C-c C-e' : Send the current definition to the inferior PicoLisp
-  process (`inferior-plisp-send-definition').
+;; With `inferior-plisp' loaded, the following bindings are available
+;; in `plisp-mode' and `plisp-repl-mode':
 
-* `C-x C-e' : Send the last sexp before point to the inferior
-  PicoLisp process (`inferior-plisp-send-last-sexp').
+;; * `M-C-x' / `C-c C-e' : Send the current definition to the inferior PicoLisp
+;;   process (`inferior-plisp-send-definition').
 
-* `C-c M-e' : Send the current definition to the inferior PicoLisp
-  process and switch to its buffer
-  (`inferior-plisp-send-definition-and-go').
+;; * `C-x C-e' : Send the last sexp before point to the inferior
+;;   PicoLisp process (`inferior-plisp-send-last-sexp').
 
-* `C-c C-r' : Send the region to the inferior PicoLisp process
-  (`inferior-plisp-send-region').
+;; * `C-c M-e' : Send the current definition to the inferior PicoLisp
+;;   process and switch to its buffer
+;;   (`inferior-plisp-send-definition-and-go').
 
-* `C-c M-r' : Send the region to the inferior PicoLisp process and
-  switch to its buffer (`inferior-plisp-send-region-and-go').
+;; * `C-c C-r' : Send the region to the inferior PicoLisp process
+;;   (`inferior-plisp-send-region').
 
-* `C-c C-l' : Load a PicoLisp file into the inferior PicoLisp
-  process (`inferior-plisp-load-file')."
-
-* `C-c C-x' : Switch to the inferior PicoLisp buffer
-  (`inferior-plisp-switch-to-picolisp').
+;; * `C-c M-r' : Send the region to the inferior PicoLisp process and
+;;   switch to its buffer (`inferior-plisp-send-region-and-go').
+
+;; * `C-c C-l' : Load a PicoLisp file into the inferior PicoLisp
+;;   process (`inferior-plisp-load-file')."
 
-Multiple inferior PicoLisp processes can be created and used; the
-documentation for the variable `inferior-plisp-picolisp-buffer'
-provides more details.
+;; * `C-c C-x' : Switch to the inferior PicoLisp buffer
+;;   (`inferior-plisp-switch-to-picolisp').
 
-By default, `inferior-plisp' provides the feature
-`inferior-picolisp' required by `ob-picolisp'. To use another
-package to provide `inferior-picolisp', set the
-`inferior-plisp-provide-inferior-picolisp' variable to `nil'.
+;; Multiple inferior PicoLisp processes can be created and used; the
+;; documentation for the variable `inferior-plisp-picolisp-buffer'
+;; provides more details.
 
-<a name='org-babel'></a>
+;; By default, `inferior-plisp' provides the feature
+;; `inferior-picolisp' required by `ob-picolisp'. To use another
+;; package to provide `inferior-picolisp', set the
+;; `inferior-plisp-provide-inferior-picolisp' variable to `nil'.
 
-#### Org Babel
+;; <a name='org-babel'></a>
 
-By default, `plisp-mode' registers itself as providing the
-`picolisp-mode' needed to edit Org Babel PicoLisp source blocks
-with `org-edit-special'. If you wish to disable this, set the
-variable `plisp-provide-picolisp-mode' to `nil'.
+;; #### Org Babel
 
-`inferior-plisp' can support Org Babel sessions: add
-`(inferior-plisp-support-ob-picolisp)' to your init file, and make
-sure the `org-babel-picolisp-cmd' variable defined by `ob-picolisp'
-is correctly specified for your system.
+;; By default, `plisp-mode' registers itself as providing the
+;; `picolisp-mode' needed to edit Org Babel PicoLisp source blocks
+;; with `org-edit-special'. If you wish to disable this, set the
+;; variable `plisp-provide-picolisp-mode' to `nil'.
 
-### Documentation
+;; `inferior-plisp' can support Org Babel sessions: add
+;; `(inferior-plisp-support-ob-picolisp)' to your init file, and make
+;; sure the `org-babel-picolisp-cmd' variable defined by `ob-picolisp'
+;; is correctly specified for your system.
 
-Access documentation for the function at point with `C-c C-d'
-(`plisp-describe-symbol'). By default, documentation will be
-displayed via the `lynx' HTML browser. However, one can set the
-value of `plisp-documentation-method' to either a string
-containing the absolute path to an alternative browser, or - for
-users of Emacs 24.4 and above - to the symbol
-`plisp--shr-documentation'; this function uses the `shr' library
-to display the documentation in an Emacs buffer. The absolute path
-to the documentation is specified via
-`plisp-documentation-directory', and defaults to
-`/usr/share/doc/picolisp/'.
+;; ### Documentation
 
-Eldoc support is available.
+;; Access documentation for the function at point with `C-c C-d'
+;; (`plisp-describe-symbol'). By default, documentation will be
+;; displayed via the `lynx' HTML browser. However, one can set the
+;; value of `plisp-documentation-method' to either a string
+;; containing the absolute path to an alternative browser, or - for
+;; users of Emacs 24.4 and above - to the symbol
+;; `plisp--shr-documentation'; this function uses the `shr' library
+;; to display the documentation in an Emacs buffer. The absolute path
+;; to the documentation is specified via
+;; `plisp-documentation-directory', and defaults to
+;; `/usr/share/doc/picolisp/'.
 
-If for some reason the PicoLisp documentation is not installed on
-the system, and cannot be installed, setting
-`plisp-documentation-unavailable' to `t' will prevent
-`plisp-mode' from trying to provide documentation.
+;; Eldoc support is available.
 
-### Commenting
+;; If for some reason the PicoLisp documentation is not installed on
+;; the system, and cannot be installed, setting
+;; `plisp-documentation-unavailable' to `t' will prevent
+;; `plisp-mode' from trying to provide documentation.
 
-Comment a region in a `plisp-mode' buffer with `C-c C-;'
-(`plisp-comment-region'); uncomment a region in a
-`plisp-mode' buffer with `C-c C-:'
-(`plisp-uncomment-region'). By default one '#' character is
-added/removed; to specify more, supply a numeric prefix argument to
-either command.
+;; ### Commenting
 
-### Indentation
+;; Comment a region in a `plisp-mode' buffer with `C-c C-;'
+;; (`plisp-comment-region'); uncomment a region in a
+;; `plisp-mode' buffer with `C-c C-:'
+;; (`plisp-uncomment-region'). By default one '#' character is
+;; added/removed; to specify more, supply a numeric prefix argument to
+;; either command.
 
-Indent a region in a `plisp-mode' buffer with `C-c M-q'
-(`plisp-indent-region'). Indentation is done via the `pilIndent'
-script provided with the current PicoLisp distribution; the path to
-the script is specified via the `plisp-pilindent-executable'
-variable.
+;; ### Indentation
 
-### Miscellaneous
+;; Indent a region in a `plisp-mode' buffer with `C-c M-q'
+;; (`plisp-indent-region'). Indentation is done via the `pilIndent'
+;; script provided with the current PicoLisp distribution; the path to
+;; the script is specified via the `plisp-pilindent-executable'
+;; variable.
 
-SLIME users should read the below [note on SLIME](#note-slime).
+;; ### Miscellaneous
 
-The various customisation options, including the faces used for
-syntax highlighting, are available via the `plisp'
-customize-group.
+;; SLIME users should read the below [note on SLIME](#note-slime).
 
-<a name="note-highlighting"></a>
+;; The various customisation options, including the faces used for
+;; syntax highlighting, are available via the `plisp'
+;; customize-group.
 
-### A note on syntax highlighting
+;; <a name="note-highlighting"></a>
 
-PicoLisp's creator is opposed to syntax highlighting of symbols in
-PicoLisp, for [good
-reasons](http://www.mail-archive.com/picolisp@software-lab.de/msg05019.html).
-However, some - such as the author of this package! - feel that,
-even taking such issues into consideration, the benefits can
-outweigh the costs. (For example, when learning PicoLisp, it can be
-useful to get immediate visual feedback about unintentionally
-redefining a PicoLisp 'builtin'.) To accommodate both views, syntax
-highlighting can be enabled or disabled via the
-`plisp-syntax-highlighting-p' variable; by default, it is set to
-`t' (enabled).
+;; ### A note on syntax highlighting
 
-<a name="note-slime"></a>
+;; PicoLisp's creator is opposed to syntax highlighting of symbols in
+;; PicoLisp, for [good
+;; reasons](http://www.mail-archive.com/picolisp@software-lab.de/msg05019.html).
+;; However, some - such as the author of this package! - feel that,
+;; even taking such issues into consideration, the benefits can
+;; outweigh the costs. (For example, when learning PicoLisp, it can be
+;; useful to get immediate visual feedback about unintentionally
+;; redefining a PicoLisp 'builtin'.) To accommodate both views, syntax
+;; highlighting can be enabled or disabled via the
+;; `plisp-syntax-highlighting-p' variable; by default, it is set to
+;; `t' (enabled).
 
-### A note on [SLIME](https://github.com/slime/slime)
+;; <a name="note-slime"></a>
 
-The design of SLIME is such that it can override `plisp-mode'
-functionality. (The documentation for
-`plisp--disable-slime-modes' provides details.) The
-user-customisable variable `plisp-disable-slime-p' specifies
-whether to override these overrides, and defaults to `t'.
+;; ### A note on [SLIME](https://github.com/slime/slime)
 
-## TODO
+;; The design of SLIME is such that it can override `plisp-mode'
+;; functionality. (The documentation for
+;; `plisp--disable-slime-modes' provides details.) The
+;; user-customisable variable `plisp-disable-slime-p' specifies
+;; whether to override these overrides, and defaults to `t'.
 
-* Fix misalignment of single-'#' comments upon newline.
+;; ## TODO
 
-<a name="issues"></a>
+;; * Fix misalignment of single-'#' comments upon newline.
 
-## Issues / bugs
+;; <a name="issues"></a>
 
-If you discover an issue or bug in `plisp-mode' not already
-noted:
+;; ## Issues / bugs
 
-* as a TODO item, or
+;; If you discover an issue or bug in `plisp-mode' not already
+;; noted:
 
-* in [the project's "Issues" section on
-  GitHub](https://github.com/flexibeast/plisp-mode/issues),
+;; * as a TODO item, or
 
-please create a new issue with as much detail as possible,
-including:
+;; * in [the project's "Issues" section on
+;;   GitHub](https://github.com/flexibeast/plisp-mode/issues),
 
-* which version of Emacs you're running on which operating system,
-  and
+;; please create a new issue with as much detail as possible,
+;; including:
 
-* how you installed `plisp-mode'.
+;; * which version of Emacs you're running on which operating system,
+;;   and
 
-## License
+;; * how you installed `plisp-mode'.
 
-[GNU General Public License version
-3](http://www.gnu.org/licenses/gpl.html), or (at your option) any
-later version.
+;; ## License
+
+;; [GNU General Public License version
+;; 3](http://www.gnu.org/licenses/gpl.html), or (at your option) any
+;; later version.
+

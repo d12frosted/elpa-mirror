@@ -1,2 +1,8 @@
-
-(handlebars-sgml-mode . [(20130623 2333) nil "Add Handlebars contextual indenting support to sgml-mode" single ((:commit . "c76df93a9a8c1b1b3efdcc4add32bf93304192a4") (:authors ("Geoff Jacobsen" . "geoffjacobsen@gmail.com")) (:maintainer "Geoff Jacobsen" . "geoffjacobsen@gmail.com") (:url . "http://github.com/jacott/handlebars-sgml-mode"))])
+(handlebars-sgml-mode .
+		      [(20130623 2333)
+		       nil "Add Handlebars contextual indenting support to sgml-mode" single
+		       ((:commit . "c76df93a9a8c1b1b3efdcc4add32bf93304192a4")
+			(:authors
+			 ("Geoff Jacobsen" . "geoffjacobsen@gmail.com"))
+			(:maintainer "Geoff Jacobsen" . "geoffjacobsen@gmail.com")
+			(:url . "http://github.com/jacott/handlebars-sgml-mode"))])

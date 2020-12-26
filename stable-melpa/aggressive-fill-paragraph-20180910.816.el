@@ -3,7 +3,7 @@
 ;; Author: David Shepherd <davidshepherd7@gmail.com>
 ;; Version: 0.0.1
 ;; Package-Version: 20180910.816
-;; Package-Commit: 2d65d925318006e2f6fa261ad192fbc2d212877b
+;; Package-Commit: 4a620e62b5e645a48b0a818bf4eb19daea4977df
 ;; Package-Requires: ((dash "2.10.0"))
 ;; URL: https://github.com/davidshepherd7/aggressive-fill-paragraph-mode
 ;; Keywords: fill-paragraph, automatic, comments

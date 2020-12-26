@@ -1,2 +1,9 @@
-
-(org-table-comment . [(20120209 1851) nil "Org table comment modes." single ((:commit . "33b9966c33ecbc3e27cca67c2f2cdea04364d74e") (:keywords "org-mode" "orgtbl") (:authors ("Matthew L. Fidler <matthew dot fidler at gmail . com>")) (:maintainer "Matthew L. Fidler") (:url . "http://github.com/mlf176f2/org-table-comment.el"))])
+(org-table-comment .
+		   [(20120209 1851)
+		    nil "Org table comment modes." single
+		    ((:commit . "33b9966c33ecbc3e27cca67c2f2cdea04364d74e")
+		     (:authors
+		      ("Matthew L. Fidler <matthew dot fidler at gmail . com>"))
+		     (:maintainer "Matthew L. Fidler")
+		     (:keywords "org-mode" "orgtbl")
+		     (:url . "http://github.com/mlf176f2/org-table-comment.el"))])

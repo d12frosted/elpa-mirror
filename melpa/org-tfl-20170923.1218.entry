@@ -1,2 +1,15 @@
-
-(org-tfl . [(20170923 1218) ((org (0 16 2)) (cl-lib (0 5)) (emacs (24 1))) "Transport for London meets Orgmode" tar ((:commit . "f0d7d39106a1de5457f5160cddd98ab892b61066") (:keywords "org" "tfl") (:authors ("storax (David Zuber), <zuber [dot] david [at] gmx [dot] de>")) (:maintainer "storax (David Zuber), <zuber [dot] david [at] gmx [dot] de>") (:url . "https://github.com/storax/org-tfl"))])
+(org-tfl .
+	 [(20170923 1218)
+	  ((org
+	    (0 16 2))
+	   (cl-lib
+	    (0 5))
+	   (emacs
+	    (24 1)))
+	  "Transport for London meets Orgmode" tar
+	  ((:commit . "f0d7d39106a1de5457f5160cddd98ab892b61066")
+	   (:authors
+	    ("storax (David Zuber), <zuber [dot] david [at] gmx [dot] de>"))
+	   (:maintainer "storax (David Zuber), <zuber [dot] david [at] gmx [dot] de>")
+	   (:keywords "org" "tfl")
+	   (:url . "https://github.com/storax/org-tfl"))])

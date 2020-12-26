@@ -1,2 +1,13 @@
-
-(bui . [(20200426 2219) ((emacs (24 3)) (dash (2 11 0))) "Buffer interface library" tar ((:commit . "28a9b0a36cb69b931cf32db7546ad5c6589752cf") (:keywords "tools") (:authors ("Alex Kost" . "alezost@gmail.com")) (:maintainer "Alex Kost" . "alezost@gmail.com") (:url . "https://github.com/alezost/bui.el"))])
+(bui .
+     [(20200426 2219)
+      ((emacs
+	(24 3))
+       (dash
+	(2 11 0)))
+      "Buffer interface library" tar
+      ((:commit . "28a9b0a36cb69b931cf32db7546ad5c6589752cf")
+       (:authors
+	("Alex Kost" . "alezost@gmail.com"))
+       (:maintainer "Alex Kost" . "alezost@gmail.com")
+       (:keywords "tools")
+       (:url . "https://github.com/alezost/bui.el"))])

@@ -1,2 +1,9 @@
-
-(oldlace-theme . [(20150705 1300) ((emacs (24))) "Emacs 24 theme with an 'oldlace' background." single ((:commit . "5c6f437203b0783b36a7aff4a578de4a0c8c4ee6") (:authors ("martin haesler")) (:maintainer "martin haesler"))])
+(oldlace-theme .
+	       [(20150705 1300)
+		((emacs
+		  (24)))
+		"Emacs 24 theme with an 'oldlace' background." single
+		((:commit . "5c6f437203b0783b36a7aff4a578de4a0c8c4ee6")
+		 (:authors
+		  ("martin haesler"))
+		 (:maintainer "martin haesler"))])

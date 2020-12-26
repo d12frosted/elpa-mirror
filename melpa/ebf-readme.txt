@@ -1,1 +1,4 @@
-Brainfuck language tanspiler to Emacs Lisp in a form of a macro
+;;; Commentary:
+;; 
+;; Brainfuck language tanspiler to Emacs Lisp in a form of a macro
+

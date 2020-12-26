@@ -1,2 +1,7 @@
-
-(pinot . [(20140211 2026) nil "Emacs interface to pinot-search" tar ((:commit . "67fda555a155b22bb2ce44ba618b4bd6fc5f144a") (:authors ("Takafumi Arakaki <aka.tkf at gmail.com>")) (:maintainer "Takafumi Arakaki <aka.tkf at gmail.com>"))])
+(pinot .
+       [(20140211 2026)
+	nil "Emacs interface to pinot-search" tar
+	((:commit . "67fda555a155b22bb2ce44ba618b4bd6fc5f144a")
+	 (:authors
+	  ("Takafumi Arakaki <aka.tkf at gmail.com>"))
+	 (:maintainer "Takafumi Arakaki <aka.tkf at gmail.com>"))])

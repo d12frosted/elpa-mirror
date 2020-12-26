@@ -1,2 +1,9 @@
-
-(lodgeit . [(20190802 1308) nil "Paste to a lodgeit powered pastebin" single ((:commit . "442637194d48a7105b7747b8d98772f5899f9e21") (:keywords "pastebin" "lodgeit") (:authors ("Eric Larson" . "eric@ionrock.org")) (:maintainer "Eric Larson" . "eric@ionrock.org") (:url . "https://github.com/ionrock/lodgeit-el"))])
+(lodgeit .
+	 [(20190802 1308)
+	  nil "Paste to a lodgeit powered pastebin" single
+	  ((:commit . "442637194d48a7105b7747b8d98772f5899f9e21")
+	   (:authors
+	    ("Eric Larson" . "eric@ionrock.org"))
+	   (:maintainer "Eric Larson" . "eric@ionrock.org")
+	   (:keywords "pastebin" "lodgeit")
+	   (:url . "https://github.com/ionrock/lodgeit-el"))])

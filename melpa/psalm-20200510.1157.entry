@@ -1,2 +1,13 @@
-
-(psalm . [(20200510 1157) ((emacs (24 3)) (php-mode (1 22 3))) "Interface to Psalm" single ((:commit . "b2a1e8a9524b0004e62996c70da5536f86e56182") (:keywords "tools" "php") (:authors ("USAMI Kenta" . "tadsan@zonu.me")) (:maintainer "USAMI Kenta" . "tadsan@zonu.me") (:url . "https://github.com/emacs-php/psalm.el"))])
+(psalm .
+       [(20200510 1157)
+	((emacs
+	  (24 3))
+	 (php-mode
+	  (1 22 3)))
+	"Interface to Psalm" single
+	((:commit . "b2a1e8a9524b0004e62996c70da5536f86e56182")
+	 (:authors
+	  ("USAMI Kenta" . "tadsan@zonu.me"))
+	 (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+	 (:keywords "tools" "php")
+	 (:url . "https://github.com/emacs-php/psalm.el"))])

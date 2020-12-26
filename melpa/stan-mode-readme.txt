@@ -1,9 +1,13 @@
-This is a major mode for the Stan modeling language for Bayesian
-statistics.  (See URL `https://mc-stan.org/').
+;;; Commentary:
 
-This major mode supports syntax-highlighting, indentation,
-`imenu-mode', and `compilation-mode'.
+;; This is a major mode for the Stan modeling language for Bayesian
+;; statistics.  (See URL `https://mc-stan.org/').
 
-Usage:
+;; This major mode supports syntax-highlighting, indentation,
+;; `imenu-mode', and `compilation-mode'.
 
-  (require 'stan-mode)
+;; Usage:
+
+;;   (require 'stan-mode)
+;;
+

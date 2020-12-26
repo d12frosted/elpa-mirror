@@ -1,2 +1,11 @@
-
-(ob-mongo . [(20170720 1919) ((org (8))) "Execute mongodb queries within org-mode blocks." single ((:commit . "371bf19c7c10eab2f86424f8db8ab685997eb5aa") (:keywords "org" "babel" "mongo" "mongodb") (:authors ("Kris Jenkins" . "krisajenkins@gmail.com")) (:maintainer "Kris Jenkins" . "krisajenkins@gmail.com") (:url . "https://github.com/krisajenkins/ob-mongo"))])
+(ob-mongo .
+	  [(20170720 1919)
+	   ((org
+	     (8)))
+	   "Execute mongodb queries within org-mode blocks." single
+	   ((:commit . "371bf19c7c10eab2f86424f8db8ab685997eb5aa")
+	    (:authors
+	     ("Kris Jenkins" . "krisajenkins@gmail.com"))
+	    (:maintainer "Kris Jenkins" . "krisajenkins@gmail.com")
+	    (:keywords "org" "babel" "mongo" "mongodb")
+	    (:url . "https://github.com/krisajenkins/ob-mongo"))])

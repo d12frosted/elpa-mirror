@@ -1,2 +1,12 @@
-
-(elogcat . [(20151121 41) ((s (1 9 0)) (dash (2 10 0))) "logcat interface" single ((:commit . "4f311b7a07565b0d060334bc68edb36f2bff703f") (:keywords "tools") (:authors ("Youngjoo Lee" . "youngker@gmail.com")) (:maintainer "Youngjoo Lee" . "youngker@gmail.com"))])
+(elogcat .
+	 [(20151121 41)
+	  ((s
+	    (1 9 0))
+	   (dash
+	    (2 10 0)))
+	  "logcat interface" single
+	  ((:commit . "4f311b7a07565b0d060334bc68edb36f2bff703f")
+	   (:authors
+	    ("Youngjoo Lee" . "youngker@gmail.com"))
+	   (:maintainer "Youngjoo Lee" . "youngker@gmail.com")
+	   (:keywords "tools"))])

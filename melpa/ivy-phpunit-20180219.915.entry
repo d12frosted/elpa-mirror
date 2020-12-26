@@ -1,2 +1,15 @@
-
-(ivy-phpunit . [(20180219 915) ((ivy (0 10 0)) (phpunit (0 7 0)) (emacs (25))) "Ivy integration for phpunit.el" single ((:commit . "ffedb0138d36564e8e36a28fd9bc71ea8944681f") (:keywords "convenience" "tools" "ivy" "phpunit" "php") (:authors ("12pt")) (:maintainer "12pt") (:url . "https://github.com/12pt/ivy-phpunit"))])
+(ivy-phpunit .
+	     [(20180219 915)
+	      ((ivy
+		(0 10 0))
+	       (phpunit
+		(0 7 0))
+	       (emacs
+		(25)))
+	      "Ivy integration for phpunit.el" single
+	      ((:commit . "ffedb0138d36564e8e36a28fd9bc71ea8944681f")
+	       (:authors
+		("12pt"))
+	       (:maintainer "12pt")
+	       (:keywords "convenience" "tools" "ivy" "phpunit" "php")
+	       (:url . "https://github.com/12pt/ivy-phpunit"))])

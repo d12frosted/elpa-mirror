@@ -1,2 +1,13 @@
-
-(term+key-intercept . [(20140211 750) ((term+ (0 1)) (key-intercept (0 1))) "term+ intercept key mapping" single ((:commit . "fd0771fd66b8c7a909aaac972194485c79ba48c4") (:keywords "terminal" "emulation") (:authors ("INA Lintaro <tarao.gnn at gmail.com>")) (:maintainer "INA Lintaro <tarao.gnn at gmail.com>") (:url . "http://github.com/tarao/term+-el"))])
+(term+key-intercept .
+		    [(20140211 750)
+		     ((term+
+		       (0 1))
+		      (key-intercept
+		       (0 1)))
+		     "term+ intercept key mapping" single
+		     ((:commit . "fd0771fd66b8c7a909aaac972194485c79ba48c4")
+		      (:authors
+		       ("INA Lintaro <tarao.gnn at gmail.com>"))
+		      (:maintainer "INA Lintaro <tarao.gnn at gmail.com>")
+		      (:keywords "terminal" "emulation")
+		      (:url . "http://github.com/tarao/term+-el"))])

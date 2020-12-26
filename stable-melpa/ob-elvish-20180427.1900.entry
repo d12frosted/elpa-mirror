@@ -1,2 +1,9 @@
-
-(ob-elvish . [(20180427 1900) nil "org-babel functions for Elvish shell" single ((:commit . "369181ceae1190bf971c71aebf9fc6133bd98c39") (:keywords "literate programming" "elvish" "shell" "languages" "processes" "tools") (:authors ("Diego Zamboni" . "diego@zzamboni.org")) (:maintainer "Diego Zamboni" . "diego@zzamboni.org") (:url . "https://github.com/zzamboni/ob-elvish"))])
+(ob-elvish .
+	   [(20180427 1900)
+	    nil "org-babel functions for Elvish shell" single
+	    ((:commit . "369181ceae1190bf971c71aebf9fc6133bd98c39")
+	     (:authors
+	      ("Diego Zamboni" . "diego@zzamboni.org"))
+	     (:maintainer "Diego Zamboni" . "diego@zzamboni.org")
+	     (:keywords "literate programming" "elvish" "shell" "languages" "processes" "tools")
+	     (:url . "https://github.com/zzamboni/ob-elvish"))])

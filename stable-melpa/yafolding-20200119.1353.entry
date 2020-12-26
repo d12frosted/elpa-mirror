@@ -1,2 +1,8 @@
-
-(yafolding . [(20200119 1353) nil "Folding code blocks based on indentation" single ((:commit . "4c1888ae45f9241516519ae0ae3a899f2efa05ba") (:keywords "folding") (:authors ("Zeno Zeng" . "zenoofzeng@gmail.com")) (:maintainer "Zeno Zeng" . "zenoofzeng@gmail.com"))])
+(yafolding .
+	   [(20200119 1353)
+	    nil "Folding code blocks based on indentation" single
+	    ((:commit . "4c1888ae45f9241516519ae0ae3a899f2efa05ba")
+	     (:authors
+	      ("Zeno Zeng" . "zenoofzeng@gmail.com"))
+	     (:maintainer "Zeno Zeng" . "zenoofzeng@gmail.com")
+	     (:keywords "folding"))])

@@ -1,2 +1,11 @@
-
-(ciel . [(20180914 815) ((emacs (24))) "A command that is clone of \"ci\" in vim." single ((:commit . "429773a3c551691a463ecfddd634b8bae2f48503") (:keywords "convinience") (:authors ("Takuma Matsushita" . "cs14095@gmail.com")) (:maintainer "Takuma Matsushita" . "cs14095@gmail.com") (:url . "https://github.com/cs14095/ciel.el"))])
+(ciel .
+      [(20180914 815)
+       ((emacs
+	 (24)))
+       "A command that is clone of \"ci\" in vim." single
+       ((:commit . "429773a3c551691a463ecfddd634b8bae2f48503")
+	(:authors
+	 ("Takuma Matsushita" . "cs14095@gmail.com"))
+	(:maintainer "Takuma Matsushita" . "cs14095@gmail.com")
+	(:keywords "convinience")
+	(:url . "https://github.com/cs14095/ciel.el"))])

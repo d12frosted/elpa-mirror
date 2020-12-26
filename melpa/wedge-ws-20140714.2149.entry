@@ -1,2 +1,8 @@
-
-(wedge-ws . [(20140714 2149) nil "Wedge whitespace between columns in text" single ((:commit . "4669115f02d9c6fee067cc5369bb38c0f9db88b2") (:keywords "formatting" "indentation") (:authors ("Anders Eurenius" . "aes@spotify.com")) (:maintainer "Anders Eurenius" . "aes@spotify.com"))])
+(wedge-ws .
+	  [(20140714 2149)
+	   nil "Wedge whitespace between columns in text" single
+	   ((:commit . "4669115f02d9c6fee067cc5369bb38c0f9db88b2")
+	    (:authors
+	     ("Anders Eurenius" . "aes@spotify.com"))
+	    (:maintainer "Anders Eurenius" . "aes@spotify.com")
+	    (:keywords "formatting" "indentation"))])

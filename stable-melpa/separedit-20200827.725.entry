@@ -1,2 +1,17 @@
-
-(separedit . [(20200827 725) ((emacs (24 4)) (dash (2 0)) (dash-functional (1 2)) (edit-indirect (0 1 5))) "Edit comment/string/docstring/code block in separate buffer" single ((:commit . "dc0b3448f3d9738f5233c34c5c8fc172eda26323") (:keywords "tools" "languages" "docs") (:authors ("Gong Qijian" . "gongqijian@gmail.com")) (:maintainer "Gong Qijian" . "gongqijian@gmail.com") (:url . "https://github.com/twlz0ne/separedit.el"))])
+(separedit .
+	   [(20200827 725)
+	    ((emacs
+	      (24 4))
+	     (dash
+	      (2 0))
+	     (dash-functional
+	      (1 2))
+	     (edit-indirect
+	      (0 1 5)))
+	    "Edit comment/string/docstring/code block in separate buffer" single
+	    ((:commit . "dc0b3448f3d9738f5233c34c5c8fc172eda26323")
+	     (:authors
+	      ("Gong Qijian" . "gongqijian@gmail.com"))
+	     (:maintainer "Gong Qijian" . "gongqijian@gmail.com")
+	     (:keywords "tools" "languages" "docs")
+	     (:url . "https://github.com/twlz0ne/separedit.el"))])

@@ -1,1 +1,4 @@
-An extra dictionary for aspell with Drupal specific terminology.
+;;; Commentary:
+
+;; An extra dictionary for aspell with Drupal specific terminology.
+

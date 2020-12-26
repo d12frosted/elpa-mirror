@@ -1,2 +1,13 @@
-
-(evil-indent-plus . [(20151109 1906) ((evil (0)) (cl-lib (0 5))) "Evil textobjects based on indentation" single ((:commit . "0c7501e6efed661242c3a20e0a6c79a6455c2c40") (:keywords "convenience" "evil") (:authors ("Eivind Fonn" . "evfonn@gmail.com")) (:maintainer "Eivind Fonn" . "evfonn@gmail.com") (:url . "http://github.com/TheBB/evil-indent-plus"))])
+(evil-indent-plus .
+		  [(20151109 1906)
+		   ((evil
+		     (0))
+		    (cl-lib
+		     (0 5)))
+		   "Evil textobjects based on indentation" single
+		   ((:commit . "0c7501e6efed661242c3a20e0a6c79a6455c2c40")
+		    (:authors
+		     ("Eivind Fonn" . "evfonn@gmail.com"))
+		    (:maintainer "Eivind Fonn" . "evfonn@gmail.com")
+		    (:keywords "convenience" "evil")
+		    (:url . "http://github.com/TheBB/evil-indent-plus"))])

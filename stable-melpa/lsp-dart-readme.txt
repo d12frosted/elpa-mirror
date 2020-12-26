@@ -1,1 +1,4 @@
-Dart analysis server client for LSP mode
+;;; Commentary:
+
+;; Dart analysis server client for LSP mode
+

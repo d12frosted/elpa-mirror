@@ -1,2 +1,11 @@
-
-(jemdoc-mode . [(20170704 2027) ((emacs (24 3))) "Major mode for editing jemdoc files" single ((:commit . "529b4d4681e1198b9892f340fdd6c3f1592a047a") (:keywords "convenience" "usability") (:authors ("Dimitar Dimitrov" . "mail.mitko@gmail.com")) (:maintainer "Dimitar Dimitrov" . "mail.mitko@gmail.com") (:url . "https://github.com/drdv/jemdoc-mode"))])
+(jemdoc-mode .
+	     [(20170704 2027)
+	      ((emacs
+		(24 3)))
+	      "Major mode for editing jemdoc files" single
+	      ((:commit . "529b4d4681e1198b9892f340fdd6c3f1592a047a")
+	       (:authors
+		("Dimitar Dimitrov" . "mail.mitko@gmail.com"))
+	       (:maintainer "Dimitar Dimitrov" . "mail.mitko@gmail.com")
+	       (:keywords "convenience" "usability")
+	       (:url . "https://github.com/drdv/jemdoc-mode"))])

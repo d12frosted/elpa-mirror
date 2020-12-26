@@ -1,2 +1,14 @@
-
-(dictcc . [(20200421 1422) ((emacs (24 4)) (cl-lib (0 5)) (ivy (0 10 0))) "Look up translations on dict.cc" single ((:commit . "3950011197ba81f27cc82b4e6075c9100945f936") (:keywords "convenience") (:authors ("Marten Lienen" . "marten.lienen@gmail.com")) (:maintainer "Marten Lienen" . "marten.lienen@gmail.com"))])
+(dictcc .
+	[(20200421 1422)
+	 ((emacs
+	   (24 4))
+	  (cl-lib
+	   (0 5))
+	  (ivy
+	   (0 10 0)))
+	 "Look up translations on dict.cc" single
+	 ((:commit . "3950011197ba81f27cc82b4e6075c9100945f936")
+	  (:authors
+	   ("Marten Lienen" . "marten.lienen@gmail.com"))
+	  (:maintainer "Marten Lienen" . "marten.lienen@gmail.com")
+	  (:keywords "convenience"))])

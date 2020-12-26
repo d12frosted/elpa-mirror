@@ -1,2 +1,11 @@
-
-(asx . [(20191024 1100) ((emacs (26 1))) "Ask StackExchange/StackOverflow" single ((:commit . "ec4bf74de602b97df1f306d51acf4cda45184aac") (:keywords "convenience") (:authors ("Alex Ragone" . "ragonedk@gmail.com")) (:maintainer "Alex Ragone" . "ragonedk@gmail.com") (:url . "https://github.com/ragone/asx"))])
+(asx .
+     [(20191024 1100)
+      ((emacs
+	(26 1)))
+      "Ask StackExchange/StackOverflow" single
+      ((:commit . "ec4bf74de602b97df1f306d51acf4cda45184aac")
+       (:authors
+	("Alex Ragone" . "ragonedk@gmail.com"))
+       (:maintainer "Alex Ragone" . "ragonedk@gmail.com")
+       (:keywords "convenience")
+       (:url . "https://github.com/ragone/asx"))])

@@ -1,2 +1,13 @@
-
-(kubernetes-helm . [(20190201 320) ((yaml-mode (0 0 13)) (emacs (25 3))) "extension for helm, the package manager for kubernetes" single ((:commit . "bdf9280899b5efab6d55ffd96bad716c5f8e75bc") (:keywords "kubernetes" "helm" "k8s" "tools" "processes") (:authors ("Adrien Brochard")) (:maintainer "Adrien Brochard") (:url . "https://github.com/abrochard/kubernetes-helm"))])
+(kubernetes-helm .
+		 [(20190201 320)
+		  ((yaml-mode
+		    (0 0 13))
+		   (emacs
+		    (25 3)))
+		  "extension for helm, the package manager for kubernetes" single
+		  ((:commit . "bdf9280899b5efab6d55ffd96bad716c5f8e75bc")
+		   (:authors
+		    ("Adrien Brochard"))
+		   (:maintainer "Adrien Brochard")
+		   (:keywords "kubernetes" "helm" "k8s" "tools" "processes")
+		   (:url . "https://github.com/abrochard/kubernetes-helm"))])

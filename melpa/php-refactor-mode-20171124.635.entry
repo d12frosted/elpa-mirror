@@ -1,2 +1,9 @@
-
-(php-refactor-mode . [(20171124 635) nil "Minor mode to quickly and safely perform common refactorings" single ((:commit . "7a794b0618df2882b1bd586fdd698dba0bc5130d") (:keywords "php" "refactor") (:authors ("Matthew M. Keeler" . "keelerm84@gmail.com")) (:maintainer "Matthew M. Keeler" . "keelerm84@gmail.com") (:url . "https://github.com/keelerm84/php-refactor-mode.el"))])
+(php-refactor-mode .
+		   [(20171124 635)
+		    nil "Minor mode to quickly and safely perform common refactorings" single
+		    ((:commit . "7a794b0618df2882b1bd586fdd698dba0bc5130d")
+		     (:authors
+		      ("Matthew M. Keeler" . "keelerm84@gmail.com"))
+		     (:maintainer "Matthew M. Keeler" . "keelerm84@gmail.com")
+		     (:keywords "php" "refactor")
+		     (:url . "https://github.com/keelerm84/php-refactor-mode.el"))])

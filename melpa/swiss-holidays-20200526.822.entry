@@ -1,2 +1,9 @@
-
-(swiss-holidays . [(20200526 822) nil "Swiss holidays for the calendar" single ((:commit . "0995c9685033a09466f5b2dceb7316362bde997a") (:keywords "calendar") (:authors ("Christian Egli" . "christian.egli@alumni.ethz.ch")) (:maintainer "Christian Egli" . "christian.egli@alumni.ethz.ch") (:url . "https://github.com/egli/swiss-holidays"))])
+(swiss-holidays .
+		[(20200526 822)
+		 nil "Swiss holidays for the calendar" single
+		 ((:commit . "0995c9685033a09466f5b2dceb7316362bde997a")
+		  (:authors
+		   ("Christian Egli" . "christian.egli@alumni.ethz.ch"))
+		  (:maintainer "Christian Egli" . "christian.egli@alumni.ethz.ch")
+		  (:keywords "calendar")
+		  (:url . "https://github.com/egli/swiss-holidays"))])

@@ -1,4 +1,7 @@
-A major mode for remark, the simple, in-browser, markdown-driven
-slideshow tool
+;;; Commentary:
 
-https://github.com/gnab/remark
+;; A major mode for remark, the simple, in-browser, markdown-driven
+;; slideshow tool
+;;
+;; https://github.com/gnab/remark
+

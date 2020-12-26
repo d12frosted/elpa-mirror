@@ -1,2 +1,19 @@
-
-(cmake-ide . [(20201027 1947) ((emacs (24 4)) (cl-lib (0 5)) (seq (1 11)) (levenshtein (0)) (s (1 11 0))) "Calls CMake to find out include paths and other compiler flags" single ((:commit . "3bc3b359a88db47fc20978bd1e9a6cbe0326ec31") (:keywords "languages") (:authors ("Atila Neves" . "atila.neves@gmail.com")) (:maintainer "Atila Neves" . "atila.neves@gmail.com") (:url . "http://github.com/atilaneves/cmake-ide"))])
+(cmake-ide .
+	   [(20201027 1947)
+	    ((emacs
+	      (24 4))
+	     (cl-lib
+	      (0 5))
+	     (seq
+	      (1 11))
+	     (levenshtein
+	      (0))
+	     (s
+	      (1 11 0)))
+	    "Calls CMake to find out include paths and other compiler flags" single
+	    ((:commit . "3bc3b359a88db47fc20978bd1e9a6cbe0326ec31")
+	     (:authors
+	      ("Atila Neves" . "atila.neves@gmail.com"))
+	     (:maintainer "Atila Neves" . "atila.neves@gmail.com")
+	     (:keywords "languages")
+	     (:url . "http://github.com/atilaneves/cmake-ide"))])

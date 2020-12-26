@@ -1,2 +1,9 @@
-
-(drone . [(20161106 918) nil "Launch your drone test suite if drone.yml is present" single ((:commit . "1d4ee037ad3208847a4235426edf0c4a3e7b1899") (:keywords "drone" "tests" "ci") (:authors ("Oliver Marks" . "oly@digitaloctave.com")) (:maintainer "Oliver Marks" . "oly@digitaloctave.com") (:url . "https://github.com/olymk2/emacs-drone"))])
+(drone .
+       [(20161106 918)
+	nil "Launch your drone test suite if drone.yml is present" single
+	((:commit . "1d4ee037ad3208847a4235426edf0c4a3e7b1899")
+	 (:authors
+	  ("Oliver Marks" . "oly@digitaloctave.com"))
+	 (:maintainer "Oliver Marks" . "oly@digitaloctave.com")
+	 (:keywords "drone" "tests" "ci")
+	 (:url . "https://github.com/olymk2/emacs-drone"))])

@@ -1,2 +1,10 @@
-
-(clean-buffers . [(20160529 2259) ((cl-lib (0 5))) "clean useless buffers" single ((:commit . "1be6c54e3095761b6b64bf749faae3dfce94e72a") (:keywords "convenience" "usability" "buffers") (:authors ("DarkSun" . "lujun9972@gmail.com")) (:maintainer "DarkSun" . "lujun9972@gmail.com"))])
+(clean-buffers .
+	       [(20160529 2259)
+		((cl-lib
+		  (0 5)))
+		"clean useless buffers" single
+		((:commit . "1be6c54e3095761b6b64bf749faae3dfce94e72a")
+		 (:authors
+		  ("DarkSun" . "lujun9972@gmail.com"))
+		 (:maintainer "DarkSun" . "lujun9972@gmail.com")
+		 (:keywords "convenience" "usability" "buffers"))])

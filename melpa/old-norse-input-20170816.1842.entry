@@ -1,2 +1,11 @@
-
-(old-norse-input . [(20170816 1842) ((emacs (24))) "An input method for Old Norse" single ((:commit . "c2e21ee72c3768e9152aff6baf12a19cde1d0c53") (:keywords "languages") (:authors ("David Christiansen" . "david@davidchristiansen.dk")) (:maintainer "David Christiansen" . "david@davidchristiansen.dk") (:url . "https://github.com/david-christiansen/emacs-old-norse-input"))])
+(old-norse-input .
+		 [(20170816 1842)
+		  ((emacs
+		    (24)))
+		  "An input method for Old Norse" single
+		  ((:commit . "c2e21ee72c3768e9152aff6baf12a19cde1d0c53")
+		   (:authors
+		    ("David Christiansen" . "david@davidchristiansen.dk"))
+		   (:maintainer "David Christiansen" . "david@davidchristiansen.dk")
+		   (:keywords "languages")
+		   (:url . "https://github.com/david-christiansen/emacs-old-norse-input"))])

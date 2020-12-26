@@ -1,2 +1,8 @@
-
-(kroman . [(20150827 2340) nil "Korean hangul romanization" single ((:commit . "90402b6ae40383e75d8ba97d66eee93eebf40f70") (:keywords "korean" "roman") (:authors ("Zhang Kai Yu" . "yeannylam@gmail.com")) (:maintainer "Zhang Kai Yu" . "yeannylam@gmail.com"))])
+(kroman .
+	[(20150827 2340)
+	 nil "Korean hangul romanization" single
+	 ((:commit . "90402b6ae40383e75d8ba97d66eee93eebf40f70")
+	  (:authors
+	   ("Zhang Kai Yu" . "yeannylam@gmail.com"))
+	  (:maintainer "Zhang Kai Yu" . "yeannylam@gmail.com")
+	  (:keywords "korean" "roman"))])

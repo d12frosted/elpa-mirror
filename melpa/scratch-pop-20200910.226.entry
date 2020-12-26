@@ -1,2 +1,8 @@
-
-(scratch-pop . [(20200910 226) nil "Generate, popup (& optionally backup) scratch buffer(s)." single ((:commit . "cbe842fd78e4b742ece9fc493ebf43e69d872866") (:authors ("zk_phi")) (:maintainer "zk_phi") (:url . "http://hins11.yu-yake.com/"))])
+(scratch-pop .
+	     [(20200910 226)
+	      nil "Generate, popup (& optionally backup) scratch buffer(s)." single
+	      ((:commit . "cbe842fd78e4b742ece9fc493ebf43e69d872866")
+	       (:authors
+		("zk_phi"))
+	       (:maintainer "zk_phi")
+	       (:url . "http://hins11.yu-yake.com/"))])

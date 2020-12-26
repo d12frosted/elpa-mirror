@@ -1,2 +1,13 @@
-
-(exwm-surf . [(20171204 1140) ((emacs (24 4)) (exwm (0 16))) "Interface for Surf (surf.suckless.org) under exwm" single ((:commit . "6c17e2c1597fe4b7b454a1dac23b9127ac951e94") (:keywords "extensions") (:authors ("Peter" . "craven@gmx.net")) (:maintainer "Peter" . "craven@gmx.net") (:url . "https://github.com/ecraven/exwm-surf"))])
+(exwm-surf .
+	   [(20171204 1140)
+	    ((emacs
+	      (24 4))
+	     (exwm
+	      (0 16)))
+	    "Interface for Surf (surf.suckless.org) under exwm" single
+	    ((:commit . "6c17e2c1597fe4b7b454a1dac23b9127ac951e94")
+	     (:authors
+	      ("Peter" . "craven@gmx.net"))
+	     (:maintainer "Peter" . "craven@gmx.net")
+	     (:keywords "extensions")
+	     (:url . "https://github.com/ecraven/exwm-surf"))])

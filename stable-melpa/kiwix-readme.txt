@@ -1,5 +1,8 @@
-This currently only works for Linux, not tested for Mac OS X and Windows.
+;;; Commentary:
 
-Kiwix installation
+;;; This currently only works for Linux, not tested for Mac OS X and Windows.
 
-http://www.kiwix.org
+;;;; Kiwix installation
+;;
+;; http://www.kiwix.org
+

@@ -1,2 +1,13 @@
-
-(evil-tabs . [(20160217 1520) ((evil (0 0 0)) (elscreen (0 0 0))) "Integrating Vim-style tabs for Evil mode users." single ((:commit . "53d3314a810017b6056ab6796aef671f5ea1c063") (:keywords "evil" "tab" "tabs" "vim") (:authors ("Kris Jenkins" . "krisajenkins@gmail.com")) (:maintainer "Kris Jenkins" . "krisajenkins@gmail.com") (:url . "https://github.com/krisajenkins/evil-tabs"))])
+(evil-tabs .
+	   [(20160217 1520)
+	    ((evil
+	      (0 0 0))
+	     (elscreen
+	      (0 0 0)))
+	    "Integrating Vim-style tabs for Evil mode users." single
+	    ((:commit . "53d3314a810017b6056ab6796aef671f5ea1c063")
+	     (:authors
+	      ("Kris Jenkins" . "krisajenkins@gmail.com"))
+	     (:maintainer "Kris Jenkins" . "krisajenkins@gmail.com")
+	     (:keywords "evil" "tab" "tabs" "vim")
+	     (:url . "https://github.com/krisajenkins/evil-tabs"))])

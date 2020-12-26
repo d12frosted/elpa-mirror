@@ -1,2 +1,8 @@
-
-(projmake-mode . [(20161031 1715) ((dash (20150611 922)) (indicators (20130217 1405))) "Project oriented automatic builder and error highlighter, flymake for projects" tar ((:commit . "a897701f7e8f8cc11459ed44eb0e454db2a460c1"))])
+(projmake-mode .
+	       [(20161031 1715)
+		((dash
+		  (20150611 922))
+		 (indicators
+		  (20130217 1405)))
+		"Project oriented automatic builder and error highlighter, flymake for projects" tar
+		((:commit . "a897701f7e8f8cc11459ed44eb0e454db2a460c1"))])

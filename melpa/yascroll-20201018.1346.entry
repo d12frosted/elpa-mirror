@@ -1,2 +1,11 @@
-
-(yascroll . [(20201018 1346) ((emacs (26 1))) "Yet Another Scroll Bar Mode" single ((:commit . "cd66d81c5d4ba39da3c385d12d22f7103ecd67c5") (:keywords "convenience") (:authors ("Tomohiro Matsuyama" . "m2ym.pub@gmail.com")) (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com") (:url . "https://github.com/emacsorphanage/yascroll"))])
+(yascroll .
+	  [(20201018 1346)
+	   ((emacs
+	     (26 1)))
+	   "Yet Another Scroll Bar Mode" single
+	   ((:commit . "cd66d81c5d4ba39da3c385d12d22f7103ecd67c5")
+	    (:authors
+	     ("Tomohiro Matsuyama" . "m2ym.pub@gmail.com"))
+	    (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/emacsorphanage/yascroll"))])

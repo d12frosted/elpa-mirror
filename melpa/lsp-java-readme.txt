@@ -1,1 +1,4 @@
-Java specific adapter for LSP mode
+;;; Commentary:
+
+;; Java specific adapter for LSP mode
+

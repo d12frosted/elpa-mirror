@@ -1,1 +1,3 @@
-Programming language mode for Forth
+;;; Commentary:
+;; Programming language mode for Forth
+

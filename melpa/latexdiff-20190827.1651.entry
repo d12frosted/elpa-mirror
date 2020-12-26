@@ -1,2 +1,11 @@
-
-(latexdiff . [(20190827 1651) ((emacs (24 4))) "Latexdiff integration in Emacs" single ((:commit . "56d0b240867527d1b43d3ddec14059361929b971") (:keywords "tex" "vc" "tools" "git" "helm") (:authors ("Launay Gaby" . "gaby.launay@tutanota.com")) (:maintainer "Launay Gaby" . "gaby.launay@tutanota.com") (:url . "http://github.com/galaunay/latexdiff.el"))])
+(latexdiff .
+	   [(20190827 1651)
+	    ((emacs
+	      (24 4)))
+	    "Latexdiff integration in Emacs" single
+	    ((:commit . "56d0b240867527d1b43d3ddec14059361929b971")
+	     (:authors
+	      ("Launay Gaby" . "gaby.launay@tutanota.com"))
+	     (:maintainer "Launay Gaby" . "gaby.launay@tutanota.com")
+	     (:keywords "tex" "vc" "tools" "git" "helm")
+	     (:url . "http://github.com/galaunay/latexdiff.el"))])

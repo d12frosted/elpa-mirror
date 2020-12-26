@@ -1,1 +1,4 @@
-Major mode for editing Pillar files
+;;; Commentary:
+
+;; Major mode for editing Pillar files
+

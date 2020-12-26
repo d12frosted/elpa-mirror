@@ -1,2 +1,13 @@
-
-(mutant . [(20160124 1353) ((emacs (24 4)) (dash (2 1 0))) "An interface for the Mutant testing tool" single ((:commit . "de9cdefe48c880128a8f62c6699d7416e9c8ced1") (:keywords "mutant" "testing") (:authors ("Pedro Lambert")) (:maintainer "Pedro Lambert") (:url . "http://github.com/p-lambert/mutant.el"))])
+(mutant .
+	[(20160124 1353)
+	 ((emacs
+	   (24 4))
+	  (dash
+	   (2 1 0)))
+	 "An interface for the Mutant testing tool" single
+	 ((:commit . "de9cdefe48c880128a8f62c6699d7416e9c8ced1")
+	  (:authors
+	   ("Pedro Lambert"))
+	  (:maintainer "Pedro Lambert")
+	  (:keywords "mutant" "testing")
+	  (:url . "http://github.com/p-lambert/mutant.el"))])

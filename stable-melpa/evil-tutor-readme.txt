@@ -1,10 +1,13 @@
-Vimtutor adapted for Evil.
+;;; Commentary:
 
-    M-x evil-tutor-start
+;; Vimtutor adapted for Evil.
 
-This will create a working file in `evil-tutor-working-directory' (defaults
-to `~/.emacs.d/.tutor')
+;;     M-x evil-tutor-start
 
-Features:
-- restore last working file
-- fast navigation between lessons with `C-j' and `C-k'
+;; This will create a working file in `evil-tutor-working-directory' (defaults
+;; to `~/.emacs.d/.tutor')
+
+;; Features:
+;; - restore last working file
+;; - fast navigation between lessons with `C-j' and `C-k'
+

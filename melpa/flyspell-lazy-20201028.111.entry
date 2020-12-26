@@ -1,2 +1,9 @@
-
-(flyspell-lazy . [(20201028 111) nil "Improve flyspell responsiveness using idle timers" single ((:commit . "d57382cf06462931cb354f5630469425fce56396") (:keywords "spelling") (:authors ("Roland Walker" . "walker@pobox.com")) (:maintainer "Roland Walker" . "walker@pobox.com") (:url . "http://github.com/rolandwalker/flyspell-lazy"))])
+(flyspell-lazy .
+	       [(20201028 111)
+		nil "Improve flyspell responsiveness using idle timers" single
+		((:commit . "d57382cf06462931cb354f5630469425fce56396")
+		 (:authors
+		  ("Roland Walker" . "walker@pobox.com"))
+		 (:maintainer "Roland Walker" . "walker@pobox.com")
+		 (:keywords "spelling")
+		 (:url . "http://github.com/rolandwalker/flyspell-lazy"))])

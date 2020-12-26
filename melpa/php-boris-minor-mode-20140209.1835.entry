@@ -1,2 +1,13 @@
-
-(php-boris-minor-mode . [(20140209 1835) ((php-boris (0 0 1)) (highlight (0))) "a minor mode to evaluate PHP code in the Boris repl" single ((:commit . "c70e176dd6545f2d42ca3427e87b469635616d8a") (:keywords "php" "repl" "eval") (:authors ("steckerhalter")) (:maintainer "steckerhalter") (:url . "https://github.com/steckerhalter/php-boris-minor-mode"))])
+(php-boris-minor-mode .
+		      [(20140209 1835)
+		       ((php-boris
+			 (0 0 1))
+			(highlight
+			 (0)))
+		       "a minor mode to evaluate PHP code in the Boris repl" single
+		       ((:commit . "c70e176dd6545f2d42ca3427e87b469635616d8a")
+			(:authors
+			 ("steckerhalter"))
+			(:maintainer "steckerhalter")
+			(:keywords "php" "repl" "eval")
+			(:url . "https://github.com/steckerhalter/php-boris-minor-mode"))])

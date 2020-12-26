@@ -1,2 +1,11 @@
-
-(bbdb-ext . [(20151220 2013) ((bbdb (2 36))) "Extra commands for BBDB" single ((:commit . "fee97b1b3faa83edaea00fbc5ad3cbca5e791a55") (:keywords "extensions") (:authors ("Joe Bloggs" . "vapniks@yahoo.com")) (:maintainer "Joe Bloggs" . "vapniks@yahoo.com") (:url . "https://github.com/vapniks/bbdb-ext"))])
+(bbdb-ext .
+	  [(20151220 2013)
+	   ((bbdb
+	     (2 36)))
+	   "Extra commands for BBDB" single
+	   ((:commit . "fee97b1b3faa83edaea00fbc5ad3cbca5e791a55")
+	    (:authors
+	     ("Joe Bloggs" . "vapniks@yahoo.com"))
+	    (:maintainer "Joe Bloggs" . "vapniks@yahoo.com")
+	    (:keywords "extensions")
+	    (:url . "https://github.com/vapniks/bbdb-ext"))])

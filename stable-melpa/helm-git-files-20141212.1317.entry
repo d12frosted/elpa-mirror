@@ -1,2 +1,11 @@
-
-(helm-git-files . [(20141212 1317) ((helm (1 5 9))) "helm for git files" single ((:commit . "43193960774069369ac6964bbf7c026900206fa8") (:keywords "helm" "git") (:authors ("INA Lintaro <tarao.gnn at gmail.com>") ("TAKAGI Kentaro <kentaro0910_at_gmail.com>")) (:maintainer "INA Lintaro <tarao.gnn at gmail.com>"))])
+(helm-git-files .
+		[(20141212 1317)
+		 ((helm
+		   (1 5 9)))
+		 "helm for git files" single
+		 ((:commit . "43193960774069369ac6964bbf7c026900206fa8")
+		  (:authors
+		   ("INA Lintaro <tarao.gnn at gmail.com>")
+		   ("TAKAGI Kentaro <kentaro0910_at_gmail.com>"))
+		  (:maintainer "INA Lintaro <tarao.gnn at gmail.com>")
+		  (:keywords "helm" "git"))])

@@ -1,2 +1,10 @@
-
-(ox-spectacle . [(20181211 953) ((org (8 3))) "spectacle.js Presentation Back-End for Org Export Engine" single ((:commit . "9d3ec9a6326289074d8620e97d65e3105307ff51") (:keywords "presentation") (:authors ("imfine" . "lorniu@gmail.com")) (:maintainer "imfine" . "lorniu@gmail.com"))])
+(ox-spectacle .
+	      [(20181211 953)
+	       ((org
+		 (8 3)))
+	       "spectacle.js Presentation Back-End for Org Export Engine" single
+	       ((:commit . "9d3ec9a6326289074d8620e97d65e3105307ff51")
+		(:authors
+		 ("imfine" . "lorniu@gmail.com"))
+		(:maintainer "imfine" . "lorniu@gmail.com")
+		(:keywords "presentation"))])

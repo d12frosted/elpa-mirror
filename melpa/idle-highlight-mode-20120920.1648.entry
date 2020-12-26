@@ -1,2 +1,9 @@
-
-(idle-highlight-mode . [(20120920 1648) nil "highlight the word the point is on" single ((:commit . "c466f2a9e291f9da1167dc879577b2e1a7880482") (:keywords "convenience") (:authors ("Phil Hagelberg, Cornelius Mika")) (:maintainer "Phil Hagelberg, Cornelius Mika") (:url . "http://www.emacswiki.org/cgi-bin/wiki/IdleHighlight"))])
+(idle-highlight-mode .
+		     [(20120920 1648)
+		      nil "highlight the word the point is on" single
+		      ((:commit . "c466f2a9e291f9da1167dc879577b2e1a7880482")
+		       (:authors
+			("Phil Hagelberg, Cornelius Mika"))
+		       (:maintainer "Phil Hagelberg, Cornelius Mika")
+		       (:keywords "convenience")
+		       (:url . "http://www.emacswiki.org/cgi-bin/wiki/IdleHighlight"))])

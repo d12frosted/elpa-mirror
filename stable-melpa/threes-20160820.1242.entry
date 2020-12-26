@@ -1,2 +1,13 @@
-
-(threes . [(20160820 1242) ((emacs (24)) (seq (1 11))) "A clone of Threes (a tiny puzzle game)" single ((:commit . "6981acb30b856c77cba6aba63fefbf102cbdfbb2") (:keywords "games") (:authors ("Chunyang Xu" . "xuchunyang.me@gmail.com")) (:maintainer "Chunyang Xu" . "xuchunyang.me@gmail.com") (:url . "https://github.com/xuchunyang/threes.el"))])
+(threes .
+	[(20160820 1242)
+	 ((emacs
+	   (24))
+	  (seq
+	   (1 11)))
+	 "A clone of Threes (a tiny puzzle game)" single
+	 ((:commit . "6981acb30b856c77cba6aba63fefbf102cbdfbb2")
+	  (:authors
+	   ("Chunyang Xu" . "xuchunyang.me@gmail.com"))
+	  (:maintainer "Chunyang Xu" . "xuchunyang.me@gmail.com")
+	  (:keywords "games")
+	  (:url . "https://github.com/xuchunyang/threes.el"))])

@@ -1,2 +1,5 @@
-Usage:
-   (eval-after-load "rst" '(auto-complete-rst-init))
+;;; Commentary:
+
+;; Usage:
+;;    (eval-after-load "rst" '(auto-complete-rst-init))
+

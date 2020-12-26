@@ -1,2 +1,8 @@
-
-(smart-comment . [(20160322 1839) nil "smarter commenting" single ((:commit . "17ddbd83205818763e6d68aa7a1aa9aaf414cbd4") (:keywords "lisp") (:authors ("Simon Friis Vindum" . "simon@vindum.io")) (:maintainer "Simon Friis Vindum" . "simon@vindum.io"))])
+(smart-comment .
+	       [(20160322 1839)
+		nil "smarter commenting" single
+		((:commit . "17ddbd83205818763e6d68aa7a1aa9aaf414cbd4")
+		 (:authors
+		  ("Simon Friis Vindum" . "simon@vindum.io"))
+		 (:maintainer "Simon Friis Vindum" . "simon@vindum.io")
+		 (:keywords "lisp"))])

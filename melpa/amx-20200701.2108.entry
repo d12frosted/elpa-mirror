@@ -1,2 +1,14 @@
-
-(amx . [(20200701 2108) ((emacs (24 4)) (s (0))) "Alternative M-x with extra features." single ((:commit . "ccfc92c600df681df5e8b5fecec328c462ceb71e") (:keywords "convenience" "usability") (:authors ("Ryan C. Thompson" . "rct@thompsonclan.org") ("Cornelius Mika" . "cornelius.mika@gmail.com")) (:maintainer "Ryan C. Thompson" . "rct@thompsonclan.org") (:url . "http://github.com/DarwinAwardWinner/amx/"))])
+(amx .
+     [(20200701 2108)
+      ((emacs
+	(24 4))
+       (s
+	(0)))
+      "Alternative M-x with extra features." single
+      ((:commit . "ccfc92c600df681df5e8b5fecec328c462ceb71e")
+       (:authors
+	("Ryan C. Thompson" . "rct@thompsonclan.org")
+	("Cornelius Mika" . "cornelius.mika@gmail.com"))
+       (:maintainer "Ryan C. Thompson" . "rct@thompsonclan.org")
+       (:keywords "convenience" "usability")
+       (:url . "http://github.com/DarwinAwardWinner/amx/"))])

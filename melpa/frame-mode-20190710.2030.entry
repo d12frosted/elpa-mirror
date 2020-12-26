@@ -1,2 +1,13 @@
-
-(frame-mode . [(20190710 2030) ((s (1 9 0)) (emacs (24 4))) "Use frames instead of windows" single ((:commit . "ae2366969927c9f89ea07c999bef382b0b47cac1") (:keywords "frames") (:authors ("Ivan Malison" . "IvanMalison@gmail.com")) (:maintainer "Ivan Malison" . "IvanMalison@gmail.com") (:url . "https://github.com/IvanMalison/frame-mode"))])
+(frame-mode .
+	    [(20190710 2030)
+	     ((s
+	       (1 9 0))
+	      (emacs
+	       (24 4)))
+	     "Use frames instead of windows" single
+	     ((:commit . "ae2366969927c9f89ea07c999bef382b0b47cac1")
+	      (:authors
+	       ("Ivan Malison" . "IvanMalison@gmail.com"))
+	      (:maintainer "Ivan Malison" . "IvanMalison@gmail.com")
+	      (:keywords "frames")
+	      (:url . "https://github.com/IvanMalison/frame-mode"))])

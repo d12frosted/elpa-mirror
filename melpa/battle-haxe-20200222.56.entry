@@ -1,2 +1,27 @@
-
-(battle-haxe . [(20200222 56) ((emacs (25)) (company (0 9 9)) (helm (3 0)) (async (1 9 3)) (cl-lib (0 5)) (dash (2 12 0)) (dash-functional (1 2 0)) (s (1 10 0)) (f (0 19 0))) "A Haxe development system, with code completion and more" single ((:commit . "64d20c9ea3fd503fdefafda122e7095c192e72a3") (:keywords "programming" "languages" "completion") (:authors ("Alon Tzarafi " . "alontzarafi@gmail.com")) (:maintainer "Alon Tzarafi " . "alontzarafi@gmail.com") (:url . "https://github.com/AlonTzarafi/battle-haxe"))])
+(battle-haxe .
+	     [(20200222 56)
+	      ((emacs
+		(25))
+	       (company
+		(0 9 9))
+	       (helm
+		(3 0))
+	       (async
+		(1 9 3))
+	       (cl-lib
+		(0 5))
+	       (dash
+		(2 12 0))
+	       (dash-functional
+		(1 2 0))
+	       (s
+		(1 10 0))
+	       (f
+		(0 19 0)))
+	      "A Haxe development system, with code completion and more" single
+	      ((:commit . "64d20c9ea3fd503fdefafda122e7095c192e72a3")
+	       (:authors
+		("Alon Tzarafi " . "alontzarafi@gmail.com"))
+	       (:maintainer "Alon Tzarafi " . "alontzarafi@gmail.com")
+	       (:keywords "programming" "languages" "completion")
+	       (:url . "https://github.com/AlonTzarafi/battle-haxe"))])

@@ -1,2 +1,11 @@
-
-(rebecca-theme . [(20180324 821) ((emacs (24))) "Rebecca Purple Theme" single ((:commit . "9ac0c71c2858b76dc5499f62c7c7fb7f9e8f16bc") (:keywords "theme" "dark") (:authors ("vic" . "vborja@apache.org")) (:maintainer "vic" . "vborja@apache.org") (:url . "https://github.com/vic/rebecca-theme"))])
+(rebecca-theme .
+	       [(20180324 821)
+		((emacs
+		  (24)))
+		"Rebecca Purple Theme" single
+		((:commit . "9ac0c71c2858b76dc5499f62c7c7fb7f9e8f16bc")
+		 (:authors
+		  ("vic" . "vborja@apache.org"))
+		 (:maintainer "vic" . "vborja@apache.org")
+		 (:keywords "theme" "dark")
+		 (:url . "https://github.com/vic/rebecca-theme"))])

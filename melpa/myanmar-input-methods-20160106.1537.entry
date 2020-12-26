@@ -1,2 +1,9 @@
-
-(myanmar-input-methods . [(20160106 1537) nil "Emacs Input Method for Myanmar" single ((:commit . "9d4e0d6358c61bde7a2274e430ef71683faea32e") (:keywords "myanmar" "unicode" "keyboard") (:authors ("Ye Lin Kyaw" . "yelinkyaw@gmail.com")) (:maintainer "Ye Lin Kyaw" . "yelinkyaw@gmail.com") (:url . "http://github.com/yelinkyaw/emacs-myanmar-input-methods"))])
+(myanmar-input-methods .
+		       [(20160106 1537)
+			nil "Emacs Input Method for Myanmar" single
+			((:commit . "9d4e0d6358c61bde7a2274e430ef71683faea32e")
+			 (:authors
+			  ("Ye Lin Kyaw" . "yelinkyaw@gmail.com"))
+			 (:maintainer "Ye Lin Kyaw" . "yelinkyaw@gmail.com")
+			 (:keywords "myanmar" "unicode" "keyboard")
+			 (:url . "http://github.com/yelinkyaw/emacs-myanmar-input-methods"))])

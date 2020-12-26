@@ -1,2 +1,9 @@
-
-(inf-mongo . [(20180408 1338) nil "Run a MongoDB shell process in a buffer" single ((:commit . "2e498d1c88bd1904eeec18ed06b1a0cf8bdc2a92") (:keywords "databases" "mongodb") (:authors ("Tobias Svensson")) (:maintainer "Tobias Svensson") (:url . "http://github.com/endofunky/inf-mongo"))])
+(inf-mongo .
+	   [(20180408 1338)
+	    nil "Run a MongoDB shell process in a buffer" single
+	    ((:commit . "2e498d1c88bd1904eeec18ed06b1a0cf8bdc2a92")
+	     (:authors
+	      ("Tobias Svensson"))
+	     (:maintainer "Tobias Svensson")
+	     (:keywords "databases" "mongodb")
+	     (:url . "http://github.com/endofunky/inf-mongo"))])

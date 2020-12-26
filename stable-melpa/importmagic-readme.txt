@@ -1,21 +1,24 @@
-importmagic.el is a package intended to help in the Python
-development process by providing a way to fix unresolved imports in
-Python buffers, so if you had the following buffer:
+;;; Commentary:
 
-os.path.join('path1', 'path2')
+;; importmagic.el is a package intended to help in the Python
+;; development process by providing a way to fix unresolved imports in
+;; Python buffers, so if you had the following buffer:
 
-importmagic.el will provide you a set of functions that will let
-you fix the unresolved 'os' symbol.
+;; os.path.join('path1', 'path2')
 
-The functions can be read on the project's website:
+;; importmagic.el will provide you a set of functions that will let
+;; you fix the unresolved 'os' symbol.
 
-https://github.com/anachronic/importmagic.el
+;; The functions can be read on the project's website:
 
-It's worth noting that you will have to install two Python packages
-for this to work:
+;; https://github.com/anachronic/importmagic.el
 
-- importmagic
-- epc
+;; It's worth noting that you will have to install two Python packages
+;; for this to work:
+;;
+;; - importmagic
+;; - epc
+;;
+;; If you don't have those, importmagic shall gracefully fail and let
+;; you know.
 
-If you don't have those, importmagic shall gracefully fail and let
-you know.

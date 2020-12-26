@@ -1,2 +1,12 @@
-
-(dic-lookup-w3m . [(20180526 1621) ((w3m (20120723 324)) (stem (20120826))) "look up dictionaries on the Internet" tar ((:commit . "3254ab10cbf0078c7162557dd1f68dac28459cf9") (:keywords "emacs-w3m" "w3m" "dictionary") (:authors ("mcprvmec")) (:maintainer "mcprvmec"))])
+(dic-lookup-w3m .
+		[(20180526 1621)
+		 ((w3m
+		   (20120723 324))
+		  (stem
+		   (20120826)))
+		 "look up dictionaries on the Internet" tar
+		 ((:commit . "3254ab10cbf0078c7162557dd1f68dac28459cf9")
+		  (:authors
+		   ("mcprvmec"))
+		  (:maintainer "mcprvmec")
+		  (:keywords "emacs-w3m" "w3m" "dictionary"))])

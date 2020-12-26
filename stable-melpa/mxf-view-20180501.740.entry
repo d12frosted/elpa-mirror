@@ -1,2 +1,11 @@
-
-(mxf-view . [(20180501 740) ((emacs (25))) "Simple MXF viewer" single ((:commit . "6ca3cc93d995fac5fc4d72275e1e984e9857ffcb") (:keywords "data" "multimedia") (:authors ("Tomotaka SUWA" . "tomotaka.suwa@gmail.com")) (:maintainer "Tomotaka SUWA" . "tomotaka.suwa@gmail.com") (:url . "https://github.com/t-suwa/mxf-view"))])
+(mxf-view .
+	  [(20180501 740)
+	   ((emacs
+	     (25)))
+	   "Simple MXF viewer" single
+	   ((:commit . "6ca3cc93d995fac5fc4d72275e1e984e9857ffcb")
+	    (:authors
+	     ("Tomotaka SUWA" . "tomotaka.suwa@gmail.com"))
+	    (:maintainer "Tomotaka SUWA" . "tomotaka.suwa@gmail.com")
+	    (:keywords "data" "multimedia")
+	    (:url . "https://github.com/t-suwa/mxf-view"))])

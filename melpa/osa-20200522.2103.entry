@@ -1,2 +1,11 @@
-
-(osa . [(20200522 2103) ((emacs (25 1))) "OSA (JavaScript / AppleScript) bridge" tar ((:commit . "615ca9eef4131a23d9971691fa0d0f20fe59d01b") (:keywords "extensions") (:authors ("xristos" . "xristos@sdf.org")) (:maintainer "xristos" . "xristos@sdf.org") (:url . "https://github.com/atomontage/osa"))])
+(osa .
+     [(20200522 2103)
+      ((emacs
+	(25 1)))
+      "OSA (JavaScript / AppleScript) bridge" tar
+      ((:commit . "615ca9eef4131a23d9971691fa0d0f20fe59d01b")
+       (:authors
+	("xristos" . "xristos@sdf.org"))
+       (:maintainer "xristos" . "xristos@sdf.org")
+       (:keywords "extensions")
+       (:url . "https://github.com/atomontage/osa"))])

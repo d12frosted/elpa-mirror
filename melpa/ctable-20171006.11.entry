@@ -1,2 +1,9 @@
-
-(ctable . [(20171006 11) nil "Table component for Emacs Lisp" single ((:commit . "b8830d1ca95abb100a81bc32011bd17d5ecba000") (:keywords "table") (:authors ("SAKURAI Masashi <m.sakurai at kiwanami.net>")) (:maintainer "SAKURAI Masashi <m.sakurai at kiwanami.net>") (:url . "https://github.com/kiwanami/emacs-ctable"))])
+(ctable .
+	[(20171006 11)
+	 nil "Table component for Emacs Lisp" single
+	 ((:commit . "b8830d1ca95abb100a81bc32011bd17d5ecba000")
+	  (:authors
+	   ("SAKURAI Masashi <m.sakurai at kiwanami.net>"))
+	  (:maintainer "SAKURAI Masashi <m.sakurai at kiwanami.net>")
+	  (:keywords "table")
+	  (:url . "https://github.com/kiwanami/emacs-ctable"))])

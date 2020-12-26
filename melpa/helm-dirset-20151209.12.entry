@@ -1,2 +1,17 @@
-
-(helm-dirset . [(20151209 12) ((f (0 16 2)) (helm (1 6 1)) (s (1 9 0)) (cl-lib (0 5))) "helm sources for multi directories" single ((:commit . "eb30810cd26e1ee73d84a863e6b2667700e9aead") (:keywords "files" "directories") (:authors ("k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>")) (:maintainer "k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>") (:url . "http://101000lab.org"))])
+(helm-dirset .
+	     [(20151209 12)
+	      ((f
+		(0 16 2))
+	       (helm
+		(1 6 1))
+	       (s
+		(1 9 0))
+	       (cl-lib
+		(0 5)))
+	      "helm sources for multi directories" single
+	      ((:commit . "eb30810cd26e1ee73d84a863e6b2667700e9aead")
+	       (:authors
+		("k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>"))
+	       (:maintainer "k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>")
+	       (:keywords "files" "directories")
+	       (:url . "http://101000lab.org"))])

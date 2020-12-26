@@ -1,1 +1,4 @@
-Flycheck integration for Elsa.  See README.md
+;;; Commentary:
+
+;; Flycheck integration for Elsa.  See README.md
+

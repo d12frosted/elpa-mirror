@@ -1,2 +1,11 @@
-
-(lognav-mode . [(20191124 1011) ((emacs (24 3))) "Navigate Log Error Messages" single ((:commit . "7eb9cd2af5b47116fe475870b41dded55052c14c") (:keywords "log" "error" "lognav-mode" "convenience") (:authors ("Shawn Ellis" . "shawn.ellis17@gmail.com")) (:maintainer "Shawn Ellis" . "shawn.ellis17@gmail.com") (:url . "https://hg.osdn.net/view/lognav-mode/lognav-mode"))])
+(lognav-mode .
+	     [(20191124 1011)
+	      ((emacs
+		(24 3)))
+	      "Navigate Log Error Messages" single
+	      ((:commit . "7eb9cd2af5b47116fe475870b41dded55052c14c")
+	       (:authors
+		("Shawn Ellis" . "shawn.ellis17@gmail.com"))
+	       (:maintainer "Shawn Ellis" . "shawn.ellis17@gmail.com")
+	       (:keywords "log" "error" "lognav-mode" "convenience")
+	       (:url . "https://hg.osdn.net/view/lognav-mode/lognav-mode"))])

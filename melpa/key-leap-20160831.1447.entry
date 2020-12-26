@@ -1,2 +1,11 @@
-
-(key-leap . [(20160831 1447) ((emacs (24 3))) "Leap between lines by typing keywords" single ((:commit . "b3f6ef15c8a13870475d5af159fa24b30f97dea0") (:keywords "point" "convenience") (:authors ("Martin Rykfors" . "martinrykfors@gmail.com")) (:maintainer "Martin Rykfors" . "martinrykfors@gmail.com") (:url . "https://github.com/MartinRykfors/key-leap"))])
+(key-leap .
+	  [(20160831 1447)
+	   ((emacs
+	     (24 3)))
+	   "Leap between lines by typing keywords" single
+	   ((:commit . "b3f6ef15c8a13870475d5af159fa24b30f97dea0")
+	    (:authors
+	     ("Martin Rykfors" . "martinrykfors@gmail.com"))
+	    (:maintainer "Martin Rykfors" . "martinrykfors@gmail.com")
+	    (:keywords "point" "convenience")
+	    (:url . "https://github.com/MartinRykfors/key-leap"))])

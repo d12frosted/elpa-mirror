@@ -1,2 +1,15 @@
-
-(helm-ls-svn . [(20190316 2203) ((emacs (24 1)) (helm (1 7 0)) (cl-lib (0 5))) "helm extension to list svn files" single ((:commit . "a6043e1187282f649e2cb9f0e722a42daf41294b") (:keywords "helm" "svn") (:authors ("Chunyang Xu" . "chunyang@macports.org")) (:maintainer "Chunyang Xu" . "chunyang@macports.org") (:url . "https://svn.macports.org/repository/macports/users/chunyang/helm-ls-svn.el/helm-ls-svn.el"))])
+(helm-ls-svn .
+	     [(20190316 2203)
+	      ((emacs
+		(24 1))
+	       (helm
+		(1 7 0))
+	       (cl-lib
+		(0 5)))
+	      "helm extension to list svn files" single
+	      ((:commit . "a6043e1187282f649e2cb9f0e722a42daf41294b")
+	       (:authors
+		("Chunyang Xu" . "chunyang@macports.org"))
+	       (:maintainer "Chunyang Xu" . "chunyang@macports.org")
+	       (:keywords "helm" "svn")
+	       (:url . "https://svn.macports.org/repository/macports/users/chunyang/helm-ls-svn.el/helm-ls-svn.el"))])

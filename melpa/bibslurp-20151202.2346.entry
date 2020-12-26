@@ -1,2 +1,10 @@
-
-(bibslurp . [(20151202 2346) ((s (1 6 0)) (dash (1 5 0))) "retrieve BibTeX entries from NASA ADS" single ((:commit . "0116bbb04840d20a6b087e6d9c921bb1c2489a8f") (:keywords "bibliography" "nasa ads") (:url . "https://github.com/mkmcc/bibslurp"))])
+(bibslurp .
+	  [(20151202 2346)
+	   ((s
+	     (1 6 0))
+	    (dash
+	     (1 5 0)))
+	   "retrieve BibTeX entries from NASA ADS" single
+	   ((:commit . "0116bbb04840d20a6b087e6d9c921bb1c2489a8f")
+	    (:keywords "bibliography" "nasa ads")
+	    (:url . "https://github.com/mkmcc/bibslurp"))])

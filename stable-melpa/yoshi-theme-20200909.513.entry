@@ -1,2 +1,9 @@
-
-(yoshi-theme . [(20200909 513) nil "Theme named after my cat" single ((:commit . "1ca48766209d941f0300d725ce9bec5a8bc2d642") (:keywords "faces") (:authors ("Tom Willemse" . "tom@ryuslash.org")) (:maintainer "Tom Willemse" . "tom@ryuslash.org") (:url . "http://projects.ryuslash.org/yoshi-theme/"))])
+(yoshi-theme .
+	     [(20200909 513)
+	      nil "Theme named after my cat" single
+	      ((:commit . "1ca48766209d941f0300d725ce9bec5a8bc2d642")
+	       (:authors
+		("Tom Willemse" . "tom@ryuslash.org"))
+	       (:maintainer "Tom Willemse" . "tom@ryuslash.org")
+	       (:keywords "faces")
+	       (:url . "http://projects.ryuslash.org/yoshi-theme/"))])

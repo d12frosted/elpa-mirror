@@ -1,2 +1,11 @@
-
-(frame-local . [(20180330 940) ((emacs (25 1))) "Variables local to a frame" single ((:commit . "7ee1106c3bcd4022f48421f8cb1ef4f995da816e") (:keywords "frames" "tools" "local" "lisp") (:authors ("Sebastien Chapuis" . "sebastien@chapu.is")) (:maintainer "Sebastien Chapuis" . "sebastien@chapu.is") (:url . "https://github.com/sebastiencs/frame-local"))])
+(frame-local .
+	     [(20180330 940)
+	      ((emacs
+		(25 1)))
+	      "Variables local to a frame" single
+	      ((:commit . "7ee1106c3bcd4022f48421f8cb1ef4f995da816e")
+	       (:authors
+		("Sebastien Chapuis" . "sebastien@chapu.is"))
+	       (:maintainer "Sebastien Chapuis" . "sebastien@chapu.is")
+	       (:keywords "frames" "tools" "local" "lisp")
+	       (:url . "https://github.com/sebastiencs/frame-local"))])

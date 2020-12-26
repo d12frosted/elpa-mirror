@@ -1,2 +1,13 @@
-
-(comware-router-mode . [(20201112 1629) ((dash (2 16 0)) (emacs (24 3))) "Major mode for editing Comware configuration files" single ((:commit . "471cde874999cc50b03d7c906802369ea5a5ffa4") (:keywords "convenience" "faces") (:authors ("Davide Restivo" . "davide.restivo@yahoo.it")) (:maintainer "Davide Restivo" . "davide.restivo@yahoo.it") (:url . "https://github.com/daviderestivo/comware-router-mode"))])
+(comware-router-mode .
+		     [(20201112 1629)
+		      ((dash
+			(2 16 0))
+		       (emacs
+			(24 3)))
+		      "Major mode for editing Comware configuration files" single
+		      ((:commit . "471cde874999cc50b03d7c906802369ea5a5ffa4")
+		       (:authors
+			("Davide Restivo" . "davide.restivo@yahoo.it"))
+		       (:maintainer "Davide Restivo" . "davide.restivo@yahoo.it")
+		       (:keywords "convenience" "faces")
+		       (:url . "https://github.com/daviderestivo/comware-router-mode"))])

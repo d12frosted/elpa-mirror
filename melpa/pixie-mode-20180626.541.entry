@@ -1,2 +1,12 @@
-
-(pixie-mode . [(20180626 541) ((clojure-mode (3 0 1)) (inf-clojure (1 0 0))) "Major mode for Pixie-lang" single ((:commit . "a40c2632cfbe948852a5cdcfd44e6a65db11834d") (:authors ("John Walker" . "john.lou.walker@gmail.com")) (:maintainer "John Walker" . "john.lou.walker@gmail.com") (:url . "https://github.com/johnwalker/pixie-mode"))])
+(pixie-mode .
+	    [(20180626 541)
+	     ((clojure-mode
+	       (3 0 1))
+	      (inf-clojure
+	       (1 0 0)))
+	     "Major mode for Pixie-lang" single
+	     ((:commit . "a40c2632cfbe948852a5cdcfd44e6a65db11834d")
+	      (:authors
+	       ("John Walker" . "john.lou.walker@gmail.com"))
+	      (:maintainer "John Walker" . "john.lou.walker@gmail.com")
+	      (:url . "https://github.com/johnwalker/pixie-mode"))])

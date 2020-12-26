@@ -1,2 +1,8 @@
-
-(lemon-mode . [(20130216 1304) nil "A major mode for editing lemon grammar files" single ((:commit . "155bfced6c9afc8072a0133d3d1baa54c6d67430") (:keywords "lemon") (:authors ("mooz" . "stillpedant@gmail.com")) (:maintainer "mooz" . "stillpedant@gmail.com"))])
+(lemon-mode .
+	    [(20130216 1304)
+	     nil "A major mode for editing lemon grammar files" single
+	     ((:commit . "155bfced6c9afc8072a0133d3d1baa54c6d67430")
+	      (:authors
+	       ("mooz" . "stillpedant@gmail.com"))
+	      (:maintainer "mooz" . "stillpedant@gmail.com")
+	      (:keywords "lemon"))])

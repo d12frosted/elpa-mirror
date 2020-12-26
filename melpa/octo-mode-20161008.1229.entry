@@ -1,2 +1,11 @@
-
-(octo-mode . [(20161008 1229) ((emacs (24))) "Major mode for Octo assembly language" single ((:commit . "bd4db7e5e3275b24c74e6a23c11d04f54e9feca5") (:keywords "languages") (:authors ("John Olsson" . "john@cryon.se")) (:maintainer "John Olsson" . "john@cryon.se") (:url . "https://github.com/cryon/octo-mode"))])
+(octo-mode .
+	   [(20161008 1229)
+	    ((emacs
+	      (24)))
+	    "Major mode for Octo assembly language" single
+	    ((:commit . "bd4db7e5e3275b24c74e6a23c11d04f54e9feca5")
+	     (:authors
+	      ("John Olsson" . "john@cryon.se"))
+	     (:maintainer "John Olsson" . "john@cryon.se")
+	     (:keywords "languages")
+	     (:url . "https://github.com/cryon/octo-mode"))])

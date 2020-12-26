@@ -1,2 +1,17 @@
-
-(porthole . [(20200404 1454) ((emacs (26)) (web-server (0 1 2)) (f (0 19 0)) (json-rpc-server (0 1 2))) "RPC Servers in Emacs" single ((:commit . "9e68b419acf9245208f8094e10041b7f04511473") (:keywords "comm" "rpc" "http" "json") (:authors ("GitHub user \"Jcaw\"")) (:maintainer "GitHub user \"Jcaw\"") (:url . "https://github.com/jcaw/porthole"))])
+(porthole .
+	  [(20200404 1454)
+	   ((emacs
+	     (26))
+	    (web-server
+	     (0 1 2))
+	    (f
+	     (0 19 0))
+	    (json-rpc-server
+	     (0 1 2)))
+	   "RPC Servers in Emacs" single
+	   ((:commit . "9e68b419acf9245208f8094e10041b7f04511473")
+	    (:authors
+	     ("GitHub user \"Jcaw\""))
+	    (:maintainer "GitHub user \"Jcaw\"")
+	    (:keywords "comm" "rpc" "http" "json")
+	    (:url . "https://github.com/jcaw/porthole"))])

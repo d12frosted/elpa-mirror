@@ -1,2 +1,10 @@
-
-(transfer-sh . [(20200601 1708) ((emacs (24 3)) (async (1 0))) "Simple interface for sending buffer contents to transfer.sh" single ((:commit . "0621a66d00ec91a209a542c10b158095088bd44d") (:keywords "comm" "convenience" "files") (:url . "https://gitlab.com/tuedachu/transfer-sh.el"))])
+(transfer-sh .
+	     [(20200601 1708)
+	      ((emacs
+		(24 3))
+	       (async
+		(1 0)))
+	      "Simple interface for sending buffer contents to transfer.sh" single
+	      ((:commit . "0621a66d00ec91a209a542c10b158095088bd44d")
+	       (:keywords "comm" "convenience" "files")
+	       (:url . "https://gitlab.com/tuedachu/transfer-sh.el"))])

@@ -1,2 +1,12 @@
-
-(company-flow . [(20180225 2159) ((company (0 8 0)) (dash (2 13 0))) "Flow backend for company-mode" single ((:commit . "76ef585c70d2a3206c2eadf24ba61e59124c3a16") (:authors ("Aaron Jensen" . "aaronjensen@gmail.com")) (:maintainer "Aaron Jensen" . "aaronjensen@gmail.com") (:url . "https://github.com/aaronjensen/company-flow"))])
+(company-flow .
+	      [(20180225 2159)
+	       ((company
+		 (0 8 0))
+		(dash
+		 (2 13 0)))
+	       "Flow backend for company-mode" single
+	       ((:commit . "76ef585c70d2a3206c2eadf24ba61e59124c3a16")
+		(:authors
+		 ("Aaron Jensen" . "aaronjensen@gmail.com"))
+		(:maintainer "Aaron Jensen" . "aaronjensen@gmail.com")
+		(:url . "https://github.com/aaronjensen/company-flow"))])

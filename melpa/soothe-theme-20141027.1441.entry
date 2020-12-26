@@ -1,2 +1,10 @@
-
-(soothe-theme . [(20141027 1441) ((emacs (24 1))) "a dark colorful theme for Emacs24." single ((:commit . "0786fe70c6c1b4ddcfb932fdc6862b9611cfc09b") (:authors ("Jason Milkins" . "jasonm23@gmail.com")) (:maintainer "Jason Milkins" . "jasonm23@gmail.com") (:url . "https://github.com/jasonm23/emacs-soothe-theme"))])
+(soothe-theme .
+	      [(20141027 1441)
+	       ((emacs
+		 (24 1)))
+	       "a dark colorful theme for Emacs24." single
+	       ((:commit . "0786fe70c6c1b4ddcfb932fdc6862b9611cfc09b")
+		(:authors
+		 ("Jason Milkins" . "jasonm23@gmail.com"))
+		(:maintainer "Jason Milkins" . "jasonm23@gmail.com")
+		(:url . "https://github.com/jasonm23/emacs-soothe-theme"))])

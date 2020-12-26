@@ -1,2 +1,8 @@
-
-(jump-to-line . [(20130122 1653) nil "Jump to line number at point." single ((:commit . "01ef8c3529d85e6c59cc20840acbc4a8e8325bc8") (:keywords "jump" "line" "back" "file" "ruby" "csharp" "python" "perl") (:authors ("ongaeshi")) (:maintainer "ongaeshi"))])
+(jump-to-line .
+	      [(20130122 1653)
+	       nil "Jump to line number at point." single
+	       ((:commit . "01ef8c3529d85e6c59cc20840acbc4a8e8325bc8")
+		(:authors
+		 ("ongaeshi"))
+		(:maintainer "ongaeshi")
+		(:keywords "jump" "line" "back" "file" "ruby" "csharp" "python" "perl"))])

@@ -1,2 +1,13 @@
-
-(coin-ticker . [(20170611 727) ((request (0 3 0)) (emacs (25))) "Show a cryptocurrency price ticker" single ((:commit . "9efab90fe4e6f29464af14e0d8fd1e20c0147b80") (:keywords "news") (:authors ("Evan Klitzke" . "evan@eklitzke.org")) (:maintainer "Evan Klitzke" . "evan@eklitzke.org") (:url . "https://github.com/eklitzke/coin-ticker-mode"))])
+(coin-ticker .
+	     [(20170611 727)
+	      ((request
+		(0 3 0))
+	       (emacs
+		(25)))
+	      "Show a cryptocurrency price ticker" single
+	      ((:commit . "9efab90fe4e6f29464af14e0d8fd1e20c0147b80")
+	       (:authors
+		("Evan Klitzke" . "evan@eklitzke.org"))
+	       (:maintainer "Evan Klitzke" . "evan@eklitzke.org")
+	       (:keywords "news")
+	       (:url . "https://github.com/eklitzke/coin-ticker-mode"))])

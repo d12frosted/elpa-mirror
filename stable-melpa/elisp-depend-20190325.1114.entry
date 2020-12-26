@@ -1,2 +1,4 @@
-
-(elisp-depend . [(20190325 1114) nil "Parse depend libraries of elisp file." single ((:commit . "6679da9a6be5a845bb4804224c8394a9bc62168f"))])
+(elisp-depend .
+	      [(20190325 1114)
+	       nil "Parse depend libraries of elisp file." single
+	       ((:commit . "6679da9a6be5a845bb4804224c8394a9bc62168f"))])

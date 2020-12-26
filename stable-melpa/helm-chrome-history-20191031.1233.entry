@@ -1,2 +1,13 @@
-
-(helm-chrome-history . [(20191031 1233) ((emacs (25 1)) (helm-core (3 0))) "Browse Chrome History with Helm" single ((:commit . "f9002d4c12df65a99830376b126dbbeae3ef2148") (:keywords "tools") (:authors ("Xu Chunyang" . "mail@xuchunyang.me")) (:maintainer "Xu Chunyang" . "mail@xuchunyang.me") (:url . "https://github.com/xuchunyang/helm-chrome-history"))])
+(helm-chrome-history .
+		     [(20191031 1233)
+		      ((emacs
+			(25 1))
+		       (helm-core
+			(3 0)))
+		      "Browse Chrome History with Helm" single
+		      ((:commit . "f9002d4c12df65a99830376b126dbbeae3ef2148")
+		       (:authors
+			("Xu Chunyang" . "mail@xuchunyang.me"))
+		       (:maintainer "Xu Chunyang" . "mail@xuchunyang.me")
+		       (:keywords "tools")
+		       (:url . "https://github.com/xuchunyang/helm-chrome-history"))])

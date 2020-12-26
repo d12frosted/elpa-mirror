@@ -1,2 +1,8 @@
-
-(perlbrew . [(20161109 709) nil "A perlbrew wrapper for Emacs" single ((:commit . "3a3406c3307c92aa30f9400d430925c434a3b6f0") (:keywords "emacs" "perl") (:authors ("Kentaro Kuribayashi" . "kentarok@gmail.com")) (:maintainer "Kentaro Kuribayashi" . "kentarok@gmail.com"))])
+(perlbrew .
+	  [(20161109 709)
+	   nil "A perlbrew wrapper for Emacs" single
+	   ((:commit . "3a3406c3307c92aa30f9400d430925c434a3b6f0")
+	    (:authors
+	     ("Kentaro Kuribayashi" . "kentarok@gmail.com"))
+	    (:maintainer "Kentaro Kuribayashi" . "kentarok@gmail.com")
+	    (:keywords "emacs" "perl"))])

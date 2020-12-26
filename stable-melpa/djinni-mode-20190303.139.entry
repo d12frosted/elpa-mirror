@@ -1,2 +1,11 @@
-
-(djinni-mode . [(20190303 139) ((emacs (24 4))) "Major-mode for editing Djinni files." single ((:commit . "6f84bc60d078725cc8b922a259ec5f4c7de83681") (:keywords "languages") (:authors ("Daniel Martín" . "mardani29@yahoo.es")) (:maintainer "Daniel Martín" . "mardani29@yahoo.es") (:url . "https://github.com/danielmartin/djinni-mode"))])
+(djinni-mode .
+	     [(20190303 139)
+	      ((emacs
+		(24 4)))
+	      "Major-mode for editing Djinni files." single
+	      ((:commit . "6f84bc60d078725cc8b922a259ec5f4c7de83681")
+	       (:authors
+		("Daniel Martín" . "mardani29@yahoo.es"))
+	       (:maintainer "Daniel Martín" . "mardani29@yahoo.es")
+	       (:keywords "languages")
+	       (:url . "https://github.com/danielmartin/djinni-mode"))])

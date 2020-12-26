@@ -1,2 +1,14 @@
-
-(jonprl-mode . [(20160819 59) ((emacs (24 3)) (cl-lib (0 5)) (yasnippet (0 8 0))) "A major mode for editing JonPRL files" tar ((:commit . "6059bb64891fae45827174e044d6a87ac07172d8") (:keywords "languages") (:authors ("David Raymond Christiansen" . "david@davidchristiansen.dk")) (:maintainer "David Raymond Christiansen" . "david@davidchristiansen.dk"))])
+(jonprl-mode .
+	     [(20160819 59)
+	      ((emacs
+		(24 3))
+	       (cl-lib
+		(0 5))
+	       (yasnippet
+		(0 8 0)))
+	      "A major mode for editing JonPRL files" tar
+	      ((:commit . "6059bb64891fae45827174e044d6a87ac07172d8")
+	       (:authors
+		("David Raymond Christiansen" . "david@davidchristiansen.dk"))
+	       (:maintainer "David Raymond Christiansen" . "david@davidchristiansen.dk")
+	       (:keywords "languages"))])

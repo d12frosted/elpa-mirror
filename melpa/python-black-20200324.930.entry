@@ -1,2 +1,15 @@
-
-(python-black . [(20200324 930) ((emacs (25)) (dash (2 16 0)) (reformatter (0 3))) "Reformat Python using python-black" single ((:commit . "a11ca73f6dfcdc125d27ff184496d66bdbd71326") (:keywords "languages") (:authors ("wouter bolsterlee" . "wouter@bolsterl.ee")) (:maintainer "wouter bolsterlee" . "wouter@bolsterl.ee") (:url . "https://github.com/wbolster/emacs-python-black"))])
+(python-black .
+	      [(20200324 930)
+	       ((emacs
+		 (25))
+		(dash
+		 (2 16 0))
+		(reformatter
+		 (0 3)))
+	       "Reformat Python using python-black" single
+	       ((:commit . "a11ca73f6dfcdc125d27ff184496d66bdbd71326")
+		(:authors
+		 ("wouter bolsterlee" . "wouter@bolsterl.ee"))
+		(:maintainer "wouter bolsterlee" . "wouter@bolsterl.ee")
+		(:keywords "languages")
+		(:url . "https://github.com/wbolster/emacs-python-black"))])

@@ -1,2 +1,8 @@
-
-(elisp-docstring-mode . [(20170304 1615) nil "Major mode for editing elisp docstrings." single ((:commit . "f512e509dd690f65133e55563ebbfd2dede5034f") (:keywords "languages") (:authors ("Matúš Goljer" . "matus.goljer@gmail.com")) (:maintainer "Matúš Goljer" . "matus.goljer@gmail.com"))])
+(elisp-docstring-mode .
+		      [(20170304 1615)
+		       nil "Major mode for editing elisp docstrings." single
+		       ((:commit . "f512e509dd690f65133e55563ebbfd2dede5034f")
+			(:authors
+			 ("Matúš Goljer" . "matus.goljer@gmail.com"))
+			(:maintainer "Matúš Goljer" . "matus.goljer@gmail.com")
+			(:keywords "languages"))])

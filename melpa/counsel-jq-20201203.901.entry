@@ -1,2 +1,15 @@
-
-(counsel-jq . [(20201203 901) ((swiper (0 12 0)) (ivy (0 12 0)) (emacs (24 1))) "Live preview of \"jq\" queries using counsel" single ((:commit . "aaf33fc2447096cd0d03b77395fe2a95c9fe1481") (:keywords "convenience" "data" "matching") (:authors ("Alain M. Lafon" . "alain@200ok.ch")) (:maintainer "Alain M. Lafon" . "alain@200ok.ch") (:url . "https://github.com/200ok-ch/counsel-jq"))])
+(counsel-jq .
+	    [(20201203 901)
+	     ((swiper
+	       (0 12 0))
+	      (ivy
+	       (0 12 0))
+	      (emacs
+	       (24 1)))
+	     "Live preview of \"jq\" queries using counsel" single
+	     ((:commit . "aaf33fc2447096cd0d03b77395fe2a95c9fe1481")
+	      (:authors
+	       ("Alain M. Lafon" . "alain@200ok.ch"))
+	      (:maintainer "Alain M. Lafon" . "alain@200ok.ch")
+	      (:keywords "convenience" "data" "matching")
+	      (:url . "https://github.com/200ok-ch/counsel-jq"))])

@@ -1,2 +1,11 @@
-
-(crux . [(20201129 1921) ((seq (1 11))) "A Collection of Ridiculously Useful eXtensions" single ((:commit . "ba4a1f38eee0ae7597f67a1424bbf5c0c09473bf") (:keywords "convenience") (:authors ("Bozhidar Batsov" . "bozhidar@batsov.com")) (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com") (:url . "https://github.com/bbatsov/crux"))])
+(crux .
+      [(20201129 1921)
+       ((seq
+	 (1 11)))
+       "A Collection of Ridiculously Useful eXtensions" single
+       ((:commit . "ba4a1f38eee0ae7597f67a1424bbf5c0c09473bf")
+	(:authors
+	 ("Bozhidar Batsov" . "bozhidar@batsov.com"))
+	(:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
+	(:keywords "convenience")
+	(:url . "https://github.com/bbatsov/crux"))])

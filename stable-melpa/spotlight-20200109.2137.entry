@@ -1,2 +1,15 @@
-
-(spotlight . [(20200109 2137) ((emacs (24 1)) (swiper (0 6 0)) (counsel (0 6 0))) "search files with Mac OS X spotlight" single ((:commit . "ea71f4fd380c51e50c47bb25855af4f40e4d8da0") (:keywords "search" "external") (:authors ("Ben Maughan" . "benmaughan@gmail.com")) (:maintainer "Ben Maughan" . "benmaughan@gmail.com") (:url . "http://www.pragmaticemacs.com"))])
+(spotlight .
+	   [(20200109 2137)
+	    ((emacs
+	      (24 1))
+	     (swiper
+	      (0 6 0))
+	     (counsel
+	      (0 6 0)))
+	    "search files with Mac OS X spotlight" single
+	    ((:commit . "ea71f4fd380c51e50c47bb25855af4f40e4d8da0")
+	     (:authors
+	      ("Ben Maughan" . "benmaughan@gmail.com"))
+	     (:maintainer "Ben Maughan" . "benmaughan@gmail.com")
+	     (:keywords "search" "external")
+	     (:url . "http://www.pragmaticemacs.com"))])

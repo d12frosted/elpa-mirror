@@ -1,2 +1,11 @@
-
-(cpanfile-mode . [(20161001 710) ((emacs (24 4))) "Major mode for cpanfiles" single ((:commit . "eda675703525198df1f76ddf250bffa40217ec5d") (:keywords "perl") (:authors ("Zak B. Elep" . "zakame@zakame.net")) (:maintainer "Zak B. Elep" . "zakame@zakame.net") (:url . "https://github.com/zakame/cpanfile-mode"))])
+(cpanfile-mode .
+	       [(20161001 710)
+		((emacs
+		  (24 4)))
+		"Major mode for cpanfiles" single
+		((:commit . "eda675703525198df1f76ddf250bffa40217ec5d")
+		 (:authors
+		  ("Zak B. Elep" . "zakame@zakame.net"))
+		 (:maintainer "Zak B. Elep" . "zakame@zakame.net")
+		 (:keywords "perl")
+		 (:url . "https://github.com/zakame/cpanfile-mode"))])

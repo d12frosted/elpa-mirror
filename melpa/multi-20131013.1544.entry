@@ -1,2 +1,11 @@
-
-(multi . [(20131013 1544) ((emacs (24))) "Clojure-style multi-methods for emacs lisp" single ((:commit . "0987ab71692717ed457cb3984de184db9185806d") (:keywords "multimethod" "generic" "predicate" "dispatch") (:authors ("Christina Whyte" . "kurisu.whyte@gmail.com")) (:maintainer "Christina Whyte" . "kurisu.whyte@gmail.com") (:url . "http://github.com/kurisuwhyte/emacs-multi"))])
+(multi .
+       [(20131013 1544)
+	((emacs
+	  (24)))
+	"Clojure-style multi-methods for emacs lisp" single
+	((:commit . "0987ab71692717ed457cb3984de184db9185806d")
+	 (:authors
+	  ("Christina Whyte" . "kurisu.whyte@gmail.com"))
+	 (:maintainer "Christina Whyte" . "kurisu.whyte@gmail.com")
+	 (:keywords "multimethod" "generic" "predicate" "dispatch")
+	 (:url . "http://github.com/kurisuwhyte/emacs-multi"))])

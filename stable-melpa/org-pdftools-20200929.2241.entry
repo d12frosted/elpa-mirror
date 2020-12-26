@@ -1,2 +1,17 @@
-
-(org-pdftools . [(20200929 2241) ((emacs (26 1)) (org (9 3 6)) (pdf-tools (0 8)) (org-noter (1 4 1))) "Support for links to documents in pdfview mode" single ((:commit . "3c2b9a413eb841c781cfb49d8c343bf07aa0ad1f") (:keywords "convenience") (:authors ("Alexander Fu Xi" . "fuxialexander@gmail.com")) (:maintainer "Alexander Fu Xi" . "fuxialexnader@gmail.com") (:url . "https://github.com/fuxialexander/org-pdftools"))])
+(org-pdftools .
+	      [(20200929 2241)
+	       ((emacs
+		 (26 1))
+		(org
+		 (9 3 6))
+		(pdf-tools
+		 (0 8))
+		(org-noter
+		 (1 4 1)))
+	       "Support for links to documents in pdfview mode" single
+	       ((:commit . "3c2b9a413eb841c781cfb49d8c343bf07aa0ad1f")
+		(:authors
+		 ("Alexander Fu Xi" . "fuxialexander@gmail.com"))
+		(:maintainer "Alexander Fu Xi" . "fuxialexnader@gmail.com")
+		(:keywords "convenience")
+		(:url . "https://github.com/fuxialexander/org-pdftools"))])

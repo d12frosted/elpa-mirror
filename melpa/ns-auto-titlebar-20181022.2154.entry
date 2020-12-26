@@ -1,2 +1,11 @@
-
-(ns-auto-titlebar . [(20181022 2154) ((emacs (24 4))) "Set the MacOS transparent titlebar to match theme" single ((:commit . "60273e764bf8d95abc40dd2fdc23af87ea9ee33b") (:keywords "frames") (:authors ("Steve Purcell" . "steve@sanityinc.com")) (:maintainer "Steve Purcell" . "steve@sanityinc.com") (:url . "https://github.com/purcell/ns-auto-titlebar"))])
+(ns-auto-titlebar .
+		  [(20181022 2154)
+		   ((emacs
+		     (24 4)))
+		   "Set the MacOS transparent titlebar to match theme" single
+		   ((:commit . "60273e764bf8d95abc40dd2fdc23af87ea9ee33b")
+		    (:authors
+		     ("Steve Purcell" . "steve@sanityinc.com"))
+		    (:maintainer "Steve Purcell" . "steve@sanityinc.com")
+		    (:keywords "frames")
+		    (:url . "https://github.com/purcell/ns-auto-titlebar"))])

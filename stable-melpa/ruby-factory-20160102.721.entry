@@ -1,2 +1,11 @@
-
-(ruby-factory . [(20160102 721) ((inflections (1 1))) "Minor mode for Ruby test object generation libraries" tar ((:commit . "2bb7ccc2fccb5257376a989aa395bc7b9eb1d55d") (:keywords "ruby" "rails" "convenience") (:authors ("Skye Shaw" . "skye.shaw@gmail.com")) (:maintainer "Skye Shaw" . "skye.shaw@gmail.com") (:url . "http://github.com/sshaw/ruby-factory-mode"))])
+(ruby-factory .
+	      [(20160102 721)
+	       ((inflections
+		 (1 1)))
+	       "Minor mode for Ruby test object generation libraries" tar
+	       ((:commit . "2bb7ccc2fccb5257376a989aa395bc7b9eb1d55d")
+		(:authors
+		 ("Skye Shaw" . "skye.shaw@gmail.com"))
+		(:maintainer "Skye Shaw" . "skye.shaw@gmail.com")
+		(:keywords "ruby" "rails" "convenience")
+		(:url . "http://github.com/sshaw/ruby-factory-mode"))])

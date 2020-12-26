@@ -1,2 +1,9 @@
-
-(roguel-ike . [(20160120 302) ((popup (0 5 0))) "A coffee-break roguelike" tar ((:commit . "706dcb0687e8016d7d776f9d9e5ace9fdbbca43c"))])
+(roguel-ike .
+	    [(20160120 302)
+	     ((popup
+	       (0 5 0)))
+	     "A coffee-break roguelike" tar
+	     ((:commit . "706dcb0687e8016d7d776f9d9e5ace9fdbbca43c")
+	      (:authors
+	       ("Steven Rémot"))
+	      (:maintainer "Steven Rémot"))])

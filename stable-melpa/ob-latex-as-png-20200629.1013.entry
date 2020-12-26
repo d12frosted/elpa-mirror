@@ -1,2 +1,13 @@
-
-(ob-latex-as-png . [(20200629 1013) ((emacs (26 1)) (org (9 1))) "Org-babel functions for latex-as-png evaluation" single ((:commit . "a20e3fedbac4034de4ab01436673a0f8845de1df") (:keywords "literate programming" "reproducible research" "org" "convenience") (:authors ("Musa Al-hassy" . "alhassy@gmail.com")) (:maintainer "Musa Al-hassy" . "alhassy@gmail.com") (:url . "https://github.com/alhassy/ob-latex-as-png"))])
+(ob-latex-as-png .
+		 [(20200629 1013)
+		  ((emacs
+		    (26 1))
+		   (org
+		    (9 1)))
+		  "Org-babel functions for latex-as-png evaluation" single
+		  ((:commit . "a20e3fedbac4034de4ab01436673a0f8845de1df")
+		   (:authors
+		    ("Musa Al-hassy" . "alhassy@gmail.com"))
+		   (:maintainer "Musa Al-hassy" . "alhassy@gmail.com")
+		   (:keywords "literate programming" "reproducible research" "org" "convenience")
+		   (:url . "https://github.com/alhassy/ob-latex-as-png"))])

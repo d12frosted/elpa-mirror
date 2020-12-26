@@ -1,1 +1,3 @@
-This package offers a transient interface to the npm cli.
+;;; Commentary:
+;; This package offers a transient interface to the npm cli.
+

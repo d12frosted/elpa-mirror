@@ -1,2 +1,10 @@
-
-(mote-mode . [(20160123 29) ((ruby-mode (1 1))) "Mote minor mode" single ((:commit . "666c6641addbd3b337a7aa01fd2742ded2f41b83") (:authors ("Leandro López (inkel)" . "inkel.ar@gmail.com")) (:maintainer "Leandro López (inkel)" . "inkel.ar@gmail.com") (:url . "http://inkel.github.com/mote-mode/"))])
+(mote-mode .
+	   [(20160123 29)
+	    ((ruby-mode
+	      (1 1)))
+	    "Mote minor mode" single
+	    ((:commit . "666c6641addbd3b337a7aa01fd2742ded2f41b83")
+	     (:authors
+	      ("Leandro López (inkel)" . "inkel.ar@gmail.com"))
+	     (:maintainer "Leandro López (inkel)" . "inkel.ar@gmail.com")
+	     (:url . "http://inkel.github.com/mote-mode/"))])

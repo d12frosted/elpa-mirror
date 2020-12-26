@@ -1,2 +1,13 @@
-
-(pushbullet . [(20140809 1232) ((grapnel (0 5 2)) (json (1 2))) "Emacs client for the PushBullet Android app" single ((:commit . "73c59a0f1dc04875b3e5a2c8afbc26c32128e445") (:keywords "convenience") (:authors ("Abhishek L" . "abhishek.lekshmanan@gmail.com")) (:maintainer "Abhishek L" . "abhishek.lekshmanan@gmail.com") (:url . "http://www.github.com/theanalyst/revolver"))])
+(pushbullet .
+	    [(20140809 1232)
+	     ((grapnel
+	       (0 5 2))
+	      (json
+	       (1 2)))
+	     "Emacs client for the PushBullet Android app" single
+	     ((:commit . "73c59a0f1dc04875b3e5a2c8afbc26c32128e445")
+	      (:authors
+	       ("Abhishek L" . "abhishek.lekshmanan@gmail.com"))
+	      (:maintainer "Abhishek L" . "abhishek.lekshmanan@gmail.com")
+	      (:keywords "convenience")
+	      (:url . "http://www.github.com/theanalyst/revolver"))])

@@ -1,2 +1,10 @@
-
-(blockdiag-mode . [(20160427 524) ((emacs (24 3))) "Major mode for editing blockdiag files" single ((:commit . "f3b21ba433d60327cebd103ae4492200750e24a9") (:authors ("xcezx" . "main.xcezx@gmail.com")) (:maintainer "xcezx" . "main.xcezx@gmail.com") (:url . "https://github.com/xcezx/xdiag-mode"))])
+(blockdiag-mode .
+		[(20160427 524)
+		 ((emacs
+		   (24 3)))
+		 "Major mode for editing blockdiag files" single
+		 ((:commit . "f3b21ba433d60327cebd103ae4492200750e24a9")
+		  (:authors
+		   ("xcezx" . "main.xcezx@gmail.com"))
+		  (:maintainer "xcezx" . "main.xcezx@gmail.com")
+		  (:url . "https://github.com/xcezx/xdiag-mode"))])

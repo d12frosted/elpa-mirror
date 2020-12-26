@@ -1,2 +1,11 @@
-
-(lentic-server . [(20160717 2052) ((lentic (0 8)) (web-server (0 1 1))) "Web Server for Emacs Literate Source" single ((:commit . "8e809fafbb27a98f815b544d9d9ee15843eb6a36") (:authors ("Phillip Lord" . "phillip.lord@newcastle.ac.uk")) (:maintainer "Phillip Lord" . "phillip.lord@newcastle.ac.uk"))])
+(lentic-server .
+	       [(20160717 2052)
+		((lentic
+		  (0 8))
+		 (web-server
+		  (0 1 1)))
+		"Web Server for Emacs Literate Source" single
+		((:commit . "8e809fafbb27a98f815b544d9d9ee15843eb6a36")
+		 (:authors
+		  ("Phillip Lord" . "phillip.lord@newcastle.ac.uk"))
+		 (:maintainer "Phillip Lord" . "phillip.lord@newcastle.ac.uk"))])

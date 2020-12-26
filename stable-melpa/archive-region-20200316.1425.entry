@@ -1,2 +1,11 @@
-
-(archive-region . [(20200316 1425) ((emacs (24 4))) "Move region to archive file instead of killing" single ((:commit . "53cd2d96ea7c33f320353982b36854f25c900c2e") (:keywords "languages") (:authors ("rubikitch" . "rubikitch@ruby-lang.org")) (:maintainer "rubikitch" . "rubikitch@ruby-lang.org") (:url . "http://www.emacswiki.org/cgi-bin/wiki/download/archive-region.el"))])
+(archive-region .
+		[(20200316 1425)
+		 ((emacs
+		   (24 4)))
+		 "Move region to archive file instead of killing" single
+		 ((:commit . "53cd2d96ea7c33f320353982b36854f25c900c2e")
+		  (:authors
+		   ("rubikitch" . "rubikitch@ruby-lang.org"))
+		  (:maintainer "rubikitch" . "rubikitch@ruby-lang.org")
+		  (:keywords "languages")
+		  (:url . "http://www.emacswiki.org/cgi-bin/wiki/download/archive-region.el"))])

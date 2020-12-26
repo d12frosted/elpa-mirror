@@ -1,2 +1,13 @@
-
-(mc-calc . [(20200420 1836) ((emacs (24 4)) (multiple-cursors (1 2 1))) "Combine multiple-cursors and calc" single ((:commit . "74a046a5728919a4d1135ca62738326b0dde278c") (:keywords "convenience") (:authors (nil . "Frank Roland hatheroldev@fgmail.com>")) (:maintainer nil . "Frank Roland hatheroldev@fgmail.com>") (:url . "https://github.com/hatheroldev/mc-calc"))])
+(mc-calc .
+	 [(20200420 1836)
+	  ((emacs
+	    (24 4))
+	   (multiple-cursors
+	    (1 2 1)))
+	  "Combine multiple-cursors and calc" single
+	  ((:commit . "74a046a5728919a4d1135ca62738326b0dde278c")
+	   (:authors
+	    (nil . "Frank Roland hatheroldev@fgmail.com>"))
+	   (:maintainer nil . "Frank Roland hatheroldev@fgmail.com>")
+	   (:keywords "convenience")
+	   (:url . "https://github.com/hatheroldev/mc-calc"))])

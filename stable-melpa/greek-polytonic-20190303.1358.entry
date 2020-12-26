@@ -1,2 +1,11 @@
-
-(greek-polytonic . [(20190303 1358) ((emacs (24))) "Quail package for inputting polytonic Greek" single ((:commit . "114cba0f57cc077871693c799b807df2292341ec") (:keywords "i18n" "multilingual" "input method" "greek") (:authors ("Johannes Choo" . "jhanschoo@gmail.com")) (:maintainer "Johannes Choo" . "jhanschoo@gmail.com") (:url . "https://github.com/jhanschoo/greek-polytonic"))])
+(greek-polytonic .
+		 [(20190303 1358)
+		  ((emacs
+		    (24)))
+		  "Quail package for inputting polytonic Greek" single
+		  ((:commit . "114cba0f57cc077871693c799b807df2292341ec")
+		   (:authors
+		    ("Johannes Choo" . "jhanschoo@gmail.com"))
+		   (:maintainer "Johannes Choo" . "jhanschoo@gmail.com")
+		   (:keywords "i18n" "multilingual" "input method" "greek")
+		   (:url . "https://github.com/jhanschoo/greek-polytonic"))])

@@ -1,2 +1,9 @@
-
-(dired-rifle . [(20200308 2358) nil "Call rifle(1) from dired" single ((:commit . "99e4110c80d65ca43e2b0ec078e3202995e392d7") (:keywords "files" "convenience") (:authors ("Wojciech Siewierski <wojciech dot siewierski at onet dot pl>")) (:maintainer "Wojciech Siewierski <wojciech dot siewierski at onet dot pl>") (:url . "https://github.com/vifon/dired-rifle.el"))])
+(dired-rifle .
+	     [(20200308 2358)
+	      nil "Call rifle(1) from dired" single
+	      ((:commit . "99e4110c80d65ca43e2b0ec078e3202995e392d7")
+	       (:authors
+		("Wojciech Siewierski <wojciech dot siewierski at onet dot pl>"))
+	       (:maintainer "Wojciech Siewierski <wojciech dot siewierski at onet dot pl>")
+	       (:keywords "files" "convenience")
+	       (:url . "https://github.com/vifon/dired-rifle.el"))])

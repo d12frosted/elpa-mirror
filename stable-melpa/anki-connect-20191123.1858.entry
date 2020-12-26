@@ -1,2 +1,11 @@
-
-(anki-connect . [(20191123 1858) ((emacs (24 3))) "AnkiConnect API" single ((:commit . "1324f0c248aa2c6e73d6cf93fad6119d699f7dae") (:keywords "lisp" "anki") (:authors ("DarkSun" . "lujun9972@gmail.com")) (:maintainer "DarkSun" . "lujun9972@gmail.com") (:url . "https://github.com/lujun9972/anki-connect.el"))])
+(anki-connect .
+	      [(20191123 1858)
+	       ((emacs
+		 (24 3)))
+	       "AnkiConnect API" single
+	       ((:commit . "1324f0c248aa2c6e73d6cf93fad6119d699f7dae")
+		(:authors
+		 ("DarkSun" . "lujun9972@gmail.com"))
+		(:maintainer "DarkSun" . "lujun9972@gmail.com")
+		(:keywords "lisp" "anki")
+		(:url . "https://github.com/lujun9972/anki-connect.el"))])

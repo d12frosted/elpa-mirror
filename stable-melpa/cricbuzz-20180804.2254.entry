@@ -1,2 +1,17 @@
-
-(cricbuzz . [(20180804 2254) ((enlive (0 0 1)) (f (0 19 0)) (dash (2 13 0)) (s (1 11 0))) "Cricket scores from cricbuzz in emacs" single ((:commit . "0b95d45991bbcd2fa58d96ce921f6a57ba42c153") (:keywords "cricket" "score") (:authors ("Abhinav Tushar" . "abhinav.tushar.vs@gmail.com")) (:maintainer "Abhinav Tushar" . "abhinav.tushar.vs@gmail.com") (:url . "https://github.com/lepisma/cricbuzz.el"))])
+(cricbuzz .
+	  [(20180804 2254)
+	   ((enlive
+	     (0 0 1))
+	    (f
+	     (0 19 0))
+	    (dash
+	     (2 13 0))
+	    (s
+	     (1 11 0)))
+	   "Cricket scores from cricbuzz in emacs" single
+	   ((:commit . "0b95d45991bbcd2fa58d96ce921f6a57ba42c153")
+	    (:authors
+	     ("Abhinav Tushar" . "abhinav.tushar.vs@gmail.com"))
+	    (:maintainer "Abhinav Tushar" . "abhinav.tushar.vs@gmail.com")
+	    (:keywords "cricket" "score")
+	    (:url . "https://github.com/lepisma/cricbuzz.el"))])

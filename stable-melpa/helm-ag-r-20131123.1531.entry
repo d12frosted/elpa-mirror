@@ -1,2 +1,11 @@
-
-(helm-ag-r . [(20131123 1531) ((helm (1 0))) "Search something by ag and display by helm" single ((:commit . "67de4ebafe9b088db950eefa5ef590a6d78b4ac8") (:keywords "searching") (:authors ("Yuta Yamada <cokesboy\"at\"gmail.com>")) (:maintainer "Yuta Yamada <cokesboy\"at\"gmail.com>") (:url . "https://github.com/yuutayamada/helm-ag-r"))])
+(helm-ag-r .
+	   [(20131123 1531)
+	    ((helm
+	      (1 0)))
+	    "Search something by ag and display by helm" single
+	    ((:commit . "67de4ebafe9b088db950eefa5ef590a6d78b4ac8")
+	     (:authors
+	      ("Yuta Yamada <cokesboy\"at\"gmail.com>"))
+	     (:maintainer "Yuta Yamada <cokesboy\"at\"gmail.com>")
+	     (:keywords "searching")
+	     (:url . "https://github.com/yuutayamada/helm-ag-r"))])

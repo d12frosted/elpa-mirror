@@ -1,2 +1,15 @@
-
-(weechat-alert . [(20160416 1248) ((weechat (0 3 1)) (cl-lib (0 5)) (alert (1 2))) "Weechat notifier using alerts" single ((:commit . "a8fd557c8f335322f132c1c6c08b6741d6394e2e") (:keywords "irc" "chat" "network" "weechat") (:authors ("Andreas Klein" . "git@kungi.org")) (:maintainer "Andreas Klein" . "git@kungi.org") (:url . "https://github.com/kungi/weechat-alert"))])
+(weechat-alert .
+	       [(20160416 1248)
+		((weechat
+		  (0 3 1))
+		 (cl-lib
+		  (0 5))
+		 (alert
+		  (1 2)))
+		"Weechat notifier using alerts" single
+		((:commit . "a8fd557c8f335322f132c1c6c08b6741d6394e2e")
+		 (:authors
+		  ("Andreas Klein" . "git@kungi.org"))
+		 (:maintainer "Andreas Klein" . "git@kungi.org")
+		 (:keywords "irc" "chat" "network" "weechat")
+		 (:url . "https://github.com/kungi/weechat-alert"))])

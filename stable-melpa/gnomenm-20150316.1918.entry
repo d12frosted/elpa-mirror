@@ -1,2 +1,15 @@
-
-(gnomenm . [(20150316 1918) ((s (1 9 0)) (dash (2 3 0)) (kv (0 0 19))) "Emacs interface to Gnome nmcli command" single ((:commit . "9065cda44ffc9e06239b8189a0154d31314c3b4d") (:keywords "processes" "hardware") (:authors ("Nic Ferrier" . "nferrier@ferrier.me.uk")) (:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk") (:url . "http://github.com/nicferrier/emacs-nm"))])
+(gnomenm .
+	 [(20150316 1918)
+	  ((s
+	    (1 9 0))
+	   (dash
+	    (2 3 0))
+	   (kv
+	    (0 0 19)))
+	  "Emacs interface to Gnome nmcli command" single
+	  ((:commit . "9065cda44ffc9e06239b8189a0154d31314c3b4d")
+	   (:authors
+	    ("Nic Ferrier" . "nferrier@ferrier.me.uk"))
+	   (:maintainer "Nic Ferrier" . "nferrier@ferrier.me.uk")
+	   (:keywords "processes" "hardware")
+	   (:url . "http://github.com/nicferrier/emacs-nm"))])

@@ -1,2 +1,12 @@
-
-(cabledolphin . [(20160204 938) ((emacs (24 4)) (seq (1 0))) "capture Emacs network traffic" single ((:commit . "fffc192cafa61558e924323d6da8166fe5f2a6f9") (:keywords "comm") (:authors ("Magnus Henoch" . "magnus.henoch@gmail.com")) (:maintainer "Magnus Henoch" . "magnus.henoch@gmail.com"))])
+(cabledolphin .
+	      [(20160204 938)
+	       ((emacs
+		 (24 4))
+		(seq
+		 (1 0)))
+	       "capture Emacs network traffic" single
+	       ((:commit . "fffc192cafa61558e924323d6da8166fe5f2a6f9")
+		(:authors
+		 ("Magnus Henoch" . "magnus.henoch@gmail.com"))
+		(:maintainer "Magnus Henoch" . "magnus.henoch@gmail.com")
+		(:keywords "comm"))])

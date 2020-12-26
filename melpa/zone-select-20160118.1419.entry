@@ -1,2 +1,13 @@
-
-(zone-select . [(20160118 1419) ((emacs (24 3)) (dash (2 8))) "Select zone programs." single ((:commit . "bf30da12f1625fe6563448fccf3c506acad10af7") (:keywords "games") (:authors ("KAWABATA, Taichi <kawabata.taichi_at_gmail.com>")) (:maintainer "KAWABATA, Taichi <kawabata.taichi_at_gmail.com>") (:url . "https://github.com/kawabata/zone-select"))])
+(zone-select .
+	     [(20160118 1419)
+	      ((emacs
+		(24 3))
+	       (dash
+		(2 8)))
+	      "Select zone programs." single
+	      ((:commit . "bf30da12f1625fe6563448fccf3c506acad10af7")
+	       (:authors
+		("KAWABATA, Taichi <kawabata.taichi_at_gmail.com>"))
+	       (:maintainer "KAWABATA, Taichi <kawabata.taichi_at_gmail.com>")
+	       (:keywords "games")
+	       (:url . "https://github.com/kawabata/zone-select"))])

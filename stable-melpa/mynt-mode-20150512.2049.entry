@@ -1,2 +1,11 @@
-
-(mynt-mode . [(20150512 2049) ((virtualenvwrapper (20131514))) "Minor mode to work with the mynt static site generator" single ((:commit . "23d4489167bfa899634548cb41ed32fdeb3600c9") (:keywords "convenience") (:authors ("Christian Brassat")) (:maintainer "Christian Brassat") (:url . "https://github.com/crshd/mynt-mode"))])
+(mynt-mode .
+	   [(20150512 2049)
+	    ((virtualenvwrapper
+	      (20131514)))
+	    "Minor mode to work with the mynt static site generator" single
+	    ((:commit . "23d4489167bfa899634548cb41ed32fdeb3600c9")
+	     (:authors
+	      ("Christian Brassat"))
+	     (:maintainer "Christian Brassat")
+	     (:keywords "convenience")
+	     (:url . "https://github.com/crshd/mynt-mode"))])

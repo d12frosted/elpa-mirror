@@ -1,2 +1,7 @@
-
-(xquery-mode . [(20170214 1119) ((cl-lib (0 5))) "A simple mode for editing xquery programs" single ((:commit . "1b655ccf83d02a7bd473d2cf02359ed60bdf7369") (:url . "https://github.com/xquery-mode/xquery-mode"))])
+(xquery-mode .
+	     [(20170214 1119)
+	      ((cl-lib
+		(0 5)))
+	      "A simple mode for editing xquery programs" single
+	      ((:commit . "1b655ccf83d02a7bd473d2cf02359ed60bdf7369")
+	       (:url . "https://github.com/xquery-mode/xquery-mode"))])

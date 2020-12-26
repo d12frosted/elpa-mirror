@@ -1,2 +1,11 @@
-
-(cosmo . [(20170922 744) ((emacs (24 4))) "Cosmological Calculator" single ((:commit . "dd83b09a49a2843606b28279b674b2207040b36b") (:keywords "tools") (:authors ("Francesco Montanari" . "fmnt@fmnt.info")) (:maintainer "Francesco Montanari" . "fmnt@fmnt.info") (:url . "https://gitlab.com/montanari/cosmo-el"))])
+(cosmo .
+       [(20170922 744)
+	((emacs
+	  (24 4)))
+	"Cosmological Calculator" single
+	((:commit . "dd83b09a49a2843606b28279b674b2207040b36b")
+	 (:authors
+	  ("Francesco Montanari" . "fmnt@fmnt.info"))
+	 (:maintainer "Francesco Montanari" . "fmnt@fmnt.info")
+	 (:keywords "tools")
+	 (:url . "https://gitlab.com/montanari/cosmo-el"))])

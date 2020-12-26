@@ -1,2 +1,11 @@
-
-(poe-lootfilter-mode . [(20190330 1117) ((emacs (24 3))) "Major mode for editing Path of Exile lootfilters" single ((:commit . "5ef06684cb2b17b090ee1f303c2b789fa71bc106") (:keywords "languages" "games") (:authors ("Jeremiah Dodds" . "jeremiah.dodds@gmail.com")) (:maintainer "Jeremiah Dodds" . "jeremiah.dodds@gmail.com") (:url . "https://github.com/jdodds/poe-lootfilter-mode"))])
+(poe-lootfilter-mode .
+		     [(20190330 1117)
+		      ((emacs
+			(24 3)))
+		      "Major mode for editing Path of Exile lootfilters" single
+		      ((:commit . "5ef06684cb2b17b090ee1f303c2b789fa71bc106")
+		       (:authors
+			("Jeremiah Dodds" . "jeremiah.dodds@gmail.com"))
+		       (:maintainer "Jeremiah Dodds" . "jeremiah.dodds@gmail.com")
+		       (:keywords "languages" "games")
+		       (:url . "https://github.com/jdodds/poe-lootfilter-mode"))])

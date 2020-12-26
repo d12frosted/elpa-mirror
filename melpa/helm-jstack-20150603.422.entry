@@ -1,2 +1,14 @@
-
-(helm-jstack . [(20150603 422) ((emacs (24)) (helm (1 7 0)) (cl-lib (0 5))) "Helm interface to Jps & Jstack for Java/JVM processes" single ((:commit . "2064f7215dcf4ccbd6a7b8784223251507746da4") (:keywords "java" "jps" "jstack" "jvm" "emacs" "elisp" "helm") (:authors ("Raghav Kumar Gautam" . "rgautam@apache.com")) (:maintainer "Raghav Kumar Gautam" . "rgautam@apache.com"))])
+(helm-jstack .
+	     [(20150603 422)
+	      ((emacs
+		(24))
+	       (helm
+		(1 7 0))
+	       (cl-lib
+		(0 5)))
+	      "Helm interface to Jps & Jstack for Java/JVM processes" single
+	      ((:commit . "2064f7215dcf4ccbd6a7b8784223251507746da4")
+	       (:authors
+		("Raghav Kumar Gautam" . "rgautam@apache.com"))
+	       (:maintainer "Raghav Kumar Gautam" . "rgautam@apache.com")
+	       (:keywords "java" "jps" "jstack" "jvm" "emacs" "elisp" "helm"))])

@@ -1,2 +1,9 @@
-
-(ob-ml-marklogic . [(20190312 1314) nil "org-babel functions for MarkLogic evaluation" tar ((:commit . "d5660ad14f29e17cd26ae92eeb585b24030e9570") (:keywords "marklogic" "xquery" "javascript" "sparql") (:authors ("Norman Walsh" . "ndw@nwalsh.com")) (:maintainer "Norman Walsh" . "ndw@nwalsh.com") (:url . "http://github.com/ndw/ob-ml-marklogic"))])
+(ob-ml-marklogic .
+		 [(20190312 1314)
+		  nil "org-babel functions for MarkLogic evaluation" tar
+		  ((:commit . "d5660ad14f29e17cd26ae92eeb585b24030e9570")
+		   (:authors
+		    ("Norman Walsh" . "ndw@nwalsh.com"))
+		   (:maintainer "Norman Walsh" . "ndw@nwalsh.com")
+		   (:keywords "marklogic" "xquery" "javascript" "sparql")
+		   (:url . "http://github.com/ndw/ob-ml-marklogic"))])

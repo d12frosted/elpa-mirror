@@ -1,2 +1,9 @@
-
-(rase . [(20120928 2045) nil "Run At Sun Event daemon" single ((:commit . "59b5f7e8102570b65040e8d55781c7ea28de7338") (:keywords "solar" "sunrise" "sunset" "midday" "midnight") (:authors ("Andrey Kotlarski" . "m00naticus@gmail.com")) (:maintainer "Andrey Kotlarski" . "m00naticus@gmail.com") (:url . "https://github.com/m00natic/rase/"))])
+(rase .
+      [(20120928 2045)
+       nil "Run At Sun Event daemon" single
+       ((:commit . "59b5f7e8102570b65040e8d55781c7ea28de7338")
+	(:authors
+	 ("Andrey Kotlarski" . "m00naticus@gmail.com"))
+	(:maintainer "Andrey Kotlarski" . "m00naticus@gmail.com")
+	(:keywords "solar" "sunrise" "sunset" "midday" "midnight")
+	(:url . "https://github.com/m00natic/rase/"))])

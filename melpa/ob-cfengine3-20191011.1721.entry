@@ -1,2 +1,9 @@
-
-(ob-cfengine3 . [(20191011 1721) nil "Org Babel functions for CFEngine 3" single ((:commit . "195ba4694a0ec18d3fb89342e8e0988b382a5b1a") (:keywords "tools" "convenience") (:authors ("Nick Anderson" . "nick@cmdln.org")) (:maintainer "Nick Anderson" . "nick@cmdln.org") (:url . "https://github.com/nickanderson/ob-cfengine3"))])
+(ob-cfengine3 .
+	      [(20191011 1721)
+	       nil "Org Babel functions for CFEngine 3" single
+	       ((:commit . "195ba4694a0ec18d3fb89342e8e0988b382a5b1a")
+		(:authors
+		 ("Nick Anderson" . "nick@cmdln.org"))
+		(:maintainer "Nick Anderson" . "nick@cmdln.org")
+		(:keywords "tools" "convenience")
+		(:url . "https://github.com/nickanderson/ob-cfengine3"))])

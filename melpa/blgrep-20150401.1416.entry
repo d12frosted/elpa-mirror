@@ -1,2 +1,10 @@
-
-(blgrep . [(20150401 1416) ((clmemo (20140321 715))) "Block grep" tar ((:commit . "605beda210610a5829750a987f5fcebea97af546") (:keywords "tools" "convenience") (:authors ("Masayuki Ataka" . "masayuki.ataka@gmail.com")) (:maintainer "Masayuki Ataka" . "masayuki.ataka@gmail.com"))])
+(blgrep .
+	[(20150401 1416)
+	 ((clmemo
+	   (20140321 715)))
+	 "Block grep" tar
+	 ((:commit . "605beda210610a5829750a987f5fcebea97af546")
+	  (:authors
+	   ("Masayuki Ataka" . "masayuki.ataka@gmail.com"))
+	  (:maintainer "Masayuki Ataka" . "masayuki.ataka@gmail.com")
+	  (:keywords "tools" "convenience"))])

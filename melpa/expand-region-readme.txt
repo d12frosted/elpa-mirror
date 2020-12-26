@@ -1,112 +1,115 @@
-Expand region increases the selected region by semantic units. Just keep
-pressing the key until it selects what you want.
+;;; Commentary:
 
-An example:
+;; Expand region increases the selected region by semantic units. Just keep
+;; pressing the key until it selects what you want.
 
-    (setq alphabet-start "abc def")
+;; An example:
 
-With the cursor at the `c`, it starts by marking the entire word `abc`, then
-expand to the contents of the quotes `abc def`, then to the entire quote
-`"abc def"`, then to the contents of the sexp `setq alphabet-start "abc def"`
-and finally to the entire sexp.
+;;     (setq alphabet-start "abc def")
 
-You can set it up like this:
+;; With the cursor at the `c`, it starts by marking the entire word `abc`, then
+;; expand to the contents of the quotes `abc def`, then to the entire quote
+;; `"abc def"`, then to the contents of the sexp `setq alphabet-start "abc def"`
+;; and finally to the entire sexp.
 
-    (require 'expand-region)
-    (global-set-key (kbd "C-=") 'er/expand-region)
+;; You can set it up like this:
 
-There's also `er/contract-region` if you expand too far.
+;;     (require 'expand-region)
+;;     (global-set-key (kbd "C-=") 'er/expand-region)
 
-## Video
+;; There's also `er/contract-region` if you expand too far.
 
-You can [watch an intro to expand-region at Emacs Rocks](http://emacsrocks.com/e09.html).
+;; ## Video
 
-## Language support
+;; You can [watch an intro to expand-region at Emacs Rocks](http://emacsrocks.com/e09.html).
 
-Expand region works fairly well with most languages, due to the general
-nature of the basic expansions:
+;; ## Language support
 
-    er/mark-word
-    er/mark-symbol
-    er/mark-method-call
-    er/mark-inside-quotes
-    er/mark-outside-quotes
-    er/mark-inside-pairs
-    er/mark-outside-pairs
+;; Expand region works fairly well with most languages, due to the general
+;; nature of the basic expansions:
 
-However, most languages also will benefit from some specially crafted
-expansions. For instance, expand-region comes with these extra expansions for
-html-mode:
+;;     er/mark-word
+;;     er/mark-symbol
+;;     er/mark-method-call
+;;     er/mark-inside-quotes
+;;     er/mark-outside-quotes
+;;     er/mark-inside-pairs
+;;     er/mark-outside-pairs
 
-    er/mark-html-attribute
-    er/mark-inner-tag
-    er/mark-outer-tag
+;; However, most languages also will benefit from some specially crafted
+;; expansions. For instance, expand-region comes with these extra expansions for
+;; html-mode:
 
-You can add your own expansions to the languages of your choice simply by
-creating a function that looks around point to see if it's inside or looking
-at the construct you want to mark, and if so - mark it.
+;;     er/mark-html-attribute
+;;     er/mark-inner-tag
+;;     er/mark-outer-tag
 
-There's plenty of examples to look at in these files.
+;; You can add your own expansions to the languages of your choice simply by
+;; creating a function that looks around point to see if it's inside or looking
+;; at the construct you want to mark, and if so - mark it.
 
-After you make your function, add it to a buffer-local version of
-the `er/try-expand-list`.
+;; There's plenty of examples to look at in these files.
 
-**Example:**
+;; After you make your function, add it to a buffer-local version of
+;; the `er/try-expand-list`.
 
-Let's say you want expand-region to also mark paragraphs and pages in
-text-mode. Incidentally Emacs already comes with `mark-paragraph` and
-`mark-page`. To add it to the try-list, do this:
+;; **Example:**
 
-    (defun er/add-text-mode-expansions ()
-      (make-variable-buffer-local 'er/try-expand-list)
-      (setq er/try-expand-list (append
-                                er/try-expand-list
-                                '(mark-paragraph
-                                  mark-page))))
+;; Let's say you want expand-region to also mark paragraphs and pages in
+;; text-mode. Incidentally Emacs already comes with `mark-paragraph` and
+;; `mark-page`. To add it to the try-list, do this:
 
-    (er/enable-mode-expansions 'text-mode 'er/add-text-mode-expansions)
+;;     (defun er/add-text-mode-expansions ()
+;;       (make-variable-buffer-local 'er/try-expand-list)
+;;       (setq er/try-expand-list (append
+;;                                 er/try-expand-list
+;;                                 '(mark-paragraph
+;;                                   mark-page))))
 
-Add that to its own file, and require it at the bottom of this one,
-where it says "Mode-specific expansions"
+;;     (er/enable-mode-expansions 'text-mode 'er/add-text-mode-expansions)
 
-**Warning:** Badly written expansions might slow down expand-region
-dramatically. Remember to exit quickly before you start traversing
-the entire document looking for constructs to mark.
+;; Add that to its own file, and require it at the bottom of this one,
+;; where it says "Mode-specific expansions"
 
-## Contribute
+;; **Warning:** Badly written expansions might slow down expand-region
+;; dramatically. Remember to exit quickly before you start traversing
+;; the entire document looking for constructs to mark.
 
-If you make some nice expansions for your favorite mode, it would be
-great if you opened a pull-request. The repo is at:
+;; ## Contribute
 
-    https://github.com/magnars/expand-region.el
+;; If you make some nice expansions for your favorite mode, it would be
+;; great if you opened a pull-request. The repo is at:
 
-Changes to `expand-region-core` itself must be accompanied by feature tests.
-They are written in [Ecukes](http://ecukes.info), a Cucumber for Emacs.
+;;     https://github.com/magnars/expand-region.el
 
-To fetch the test dependencies:
+;; Changes to `expand-region-core` itself must be accompanied by feature tests.
+;; They are written in [Ecukes](http://ecukes.info), a Cucumber for Emacs.
 
-    $ cd /path/to/expand-region
-    $ git submodule init
-    $ git submodule update
+;; To fetch the test dependencies:
 
-Run the tests with:
+;;     $ cd /path/to/expand-region
+;;     $ git submodule init
+;;     $ git submodule update
 
-    $ ./util/ecukes/ecukes features
+;; Run the tests with:
 
-If you want to add feature-tests for your mode-specific expansions as well,
-that is utterly excellent.
+;;     $ ./util/ecukes/ecukes features
 
-## Contributors
+;; If you want to add feature-tests for your mode-specific expansions as well,
+;; that is utterly excellent.
 
-* [Josh Johnston](https://github.com/joshwnj) contributed `er/contract-region`
-* [Le Wang](https://github.com/lewang) contributed consistent handling of the mark ring, expanding into pairs/quotes just left of the cursor, and general code clean-up.
-* [Matt Briggs](https://github.com/mbriggs) contributed expansions for ruby-mode.
-* [Ivan Andrus](https://github.com/gvol) contributed expansions for python-mode, text-mode, LaTeX-mode and nxml-mode.
-* [Raimon Grau](https://github.com/kidd) added support for when transient-mark-mode is off.
-* [Gleb Peregud](https://github.com/gleber) contributed expansions for erlang-mode.
-* [fgeller](https://github.com/fgeller) and [edmccard](https://github.com/edmccard) contributed better support for python and its multiple modes.
-* [François Févotte](https://github.com/ffevotte) contributed expansions for C and C++.
-* [Roland Walker](https://github.com/rolandwalker) added option to copy the contents of the most recent action to a register, and some fixes.
-* [Damien Cassou](https://github.com/DamienCassou) added option to continue expanding/contracting with fast keys after initial expand.
+;; ## Contributors
 
-Thanks!
+;; * [Josh Johnston](https://github.com/joshwnj) contributed `er/contract-region`
+;; * [Le Wang](https://github.com/lewang) contributed consistent handling of the mark ring, expanding into pairs/quotes just left of the cursor, and general code clean-up.
+;; * [Matt Briggs](https://github.com/mbriggs) contributed expansions for ruby-mode.
+;; * [Ivan Andrus](https://github.com/gvol) contributed expansions for python-mode, text-mode, LaTeX-mode and nxml-mode.
+;; * [Raimon Grau](https://github.com/kidd) added support for when transient-mark-mode is off.
+;; * [Gleb Peregud](https://github.com/gleber) contributed expansions for erlang-mode.
+;; * [fgeller](https://github.com/fgeller) and [edmccard](https://github.com/edmccard) contributed better support for python and its multiple modes.
+;; * [François Févotte](https://github.com/ffevotte) contributed expansions for C and C++.
+;; * [Roland Walker](https://github.com/rolandwalker) added option to copy the contents of the most recent action to a register, and some fixes.
+;; * [Damien Cassou](https://github.com/DamienCassou) added option to continue expanding/contracting with fast keys after initial expand.
+
+;; Thanks!
+

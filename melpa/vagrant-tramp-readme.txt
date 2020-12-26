@@ -1,1 +1,4 @@
-This package adds a TRAMP method for Vagrant boxes.
+;;; Commentary:
+
+;; This package adds a TRAMP method for Vagrant boxes.
+

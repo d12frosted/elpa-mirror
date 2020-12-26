@@ -1,1 +1,4 @@
-realgud support for the Ruby debugger2 debugger
+;;; Commentary:
+
+;; realgud support for the Ruby debugger2 debugger
+

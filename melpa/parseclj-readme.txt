@@ -1,1 +1,4 @@
-Top level API for the Clojure parser.
+;;; Commentary:
+
+;; Top level API for the Clojure parser.
+

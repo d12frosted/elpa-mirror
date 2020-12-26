@@ -1,2 +1,11 @@
-
-(wiki-summary . [(20181010 1824) ((emacs (24))) "View Wikipedia summaries in Emacs easily." single ((:commit . "fa41ab6e50b3b80e54148af9d4bac18fd0405000") (:keywords "wikipedia" "utility") (:authors ("Danny Gratzer")) (:maintainer "Danny Gratzer") (:url . "https://github.com/jozefg/wiki-summary.el"))])
+(wiki-summary .
+	      [(20181010 1824)
+	       ((emacs
+		 (24)))
+	       "View Wikipedia summaries in Emacs easily." single
+	       ((:commit . "fa41ab6e50b3b80e54148af9d4bac18fd0405000")
+		(:authors
+		 ("Danny Gratzer"))
+		(:maintainer "Danny Gratzer")
+		(:keywords "wikipedia" "utility")
+		(:url . "https://github.com/jozefg/wiki-summary.el"))])

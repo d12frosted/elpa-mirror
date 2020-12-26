@@ -1,2 +1,14 @@
-
-(company-erlang . [(20170123 538) ((emacs (24 4)) (ivy-erlang-complete (0 1)) (company (0 9 2))) "company backend based on ivy-erlang-complete" single ((:commit . "bc0524a16f17b66c7397690e4ca0e004f09ea6c5") (:keywords "tools") (:authors ("Sergey Kostyaev" . "feo.me@ya.ru")) (:maintainer "Sergey Kostyaev" . "feo.me@ya.ru"))])
+(company-erlang .
+		[(20170123 538)
+		 ((emacs
+		   (24 4))
+		  (ivy-erlang-complete
+		   (0 1))
+		  (company
+		   (0 9 2)))
+		 "company backend based on ivy-erlang-complete" single
+		 ((:commit . "bc0524a16f17b66c7397690e4ca0e004f09ea6c5")
+		  (:authors
+		   ("Sergey Kostyaev" . "feo.me@ya.ru"))
+		  (:maintainer "Sergey Kostyaev" . "feo.me@ya.ru")
+		  (:keywords "tools"))])

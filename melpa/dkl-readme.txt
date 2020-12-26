@@ -1,90 +1,93 @@
-`dkl' provides an ASCII-art representation of a keyboard layout, within an Emacs buffer.
+;;; Commentary:
 
-<img src="screencap.png">
+;; `dkl' provides an ASCII-art representation of a keyboard layout, within an Emacs buffer.
 
-## Table of Contents
+;; <img src="screencap.png">
 
-- [Installation](#installation)
-- [Usage](#usage)
-- [Layout file format](#layout)
-- [TODO](#todo)
-- [Issues](#issues)
-- [License](#license)
+;; ## Table of Contents
 
-## Installation
+;; - [Installation](#installation)
+;; - [Usage](#usage)
+;; - [Layout file format](#layout)
+;; - [TODO](#todo)
+;; - [Issues](#issues)
+;; - [License](#license)
 
-Install [dkl from MELPA](https://melpa.org/#/dkl), or put the `dkl' directory in your load-path and do a `(require 'dkl)'.
+;; ## Installation
 
-## Usage
+;; Install [dkl from MELPA](https://melpa.org/#/dkl), or put the `dkl' directory in your load-path and do a `(require 'dkl)'.
 
-Create an `dkl-layout' buffer with `M-x dkl-display'.
+;; ## Usage
 
-Within the `dkl-layout' buffer, the default keybindings are:
+;; Create an `dkl-layout' buffer with `M-x dkl-display'.
 
-* l - Set the layout to use (`dkl-set-current-layout`).
+;; Within the `dkl-layout' buffer, the default keybindings are:
 
-* q - Close the `dkl-layout' buffer and window (`dkl-close`).
+;; * l - Set the layout to use (`dkl-set-current-layout`).
 
-* s - Toggle display of shifted and unshifted layouts (`dkl-shift-toggle`).
+;; * q - Close the `dkl-layout' buffer and window (`dkl-close`).
 
-Customisation options, including how `dkl' highlights typed keys, are available via the `dkl' customize-group.
+;; * s - Toggle display of shifted and unshifted layouts (`dkl-shift-toggle`).
 
-<a name="layout"></a>
+;; Customisation options, including how `dkl' highlights typed keys, are available via the `dkl' customize-group.
 
-## Layout file format
+;; <a name="layout"></a>
 
-A layout file contains Emacs Lisp which:
+;; ## Layout file format
 
-* ensures the layout is used with the correct keyboard;
+;; A layout file contains Emacs Lisp which:
 
-* specifies the directionality of the script used in the layout; and
+;; * ensures the layout is used with the correct keyboard;
 
-* sets the `dkl--current-layout` variable.
+;; * specifies the directionality of the script used in the layout; and
 
-For example:
+;; * sets the `dkl--current-layout` variable.
 
-```elisp
-(if (not (string= dkl-keyboard-name "standard"))
-    (user-error "Layout `qwerty-us' must be used with `dkl-keyboard-name' set to \"standard\"")
-  (progn
-    (setq dkl--current-layout-script-direction 'left-to-right)
-    (setq dkl--current-layout
-          '(;; Top row
-            (60 . ((0 . ("`" "~"))
-                   (4 . ("1" "!"))
-            ...
-```
+;; For example:
 
-The layout data structure is an alist. Each entry in the alist represents a keyboard row:
+;; ```elisp
+;; (if (not (string= dkl-keyboard-name "standard"))
+;;     (user-error "Layout `qwerty-us' must be used with `dkl-keyboard-name' set to \"standard\"")
+;;   (progn
+;;     (setq dkl--current-layout-script-direction 'left-to-right)
+;;     (setq dkl--current-layout
+;;           '(;; Top row
+;;             (60 . ((0 . ("`" "~"))
+;;                    (4 . ("1" "!"))
+;;             ...
+;; ```
 
-* The `car` of the entry indicates the character position for the first glyph in that row.
+;; The layout data structure is an alist. Each entry in the alist represents a keyboard row:
 
-* The `cdr` of the entry is itself an alist, where:
+;; * The `car` of the entry indicates the character position for the first glyph in that row.
 
-  * the `car` of each entry is an offset, in characters, from the first glyph in that row;
+;; * The `cdr` of the entry is itself an alist, where:
 
-  * the `cdr` of each entry is a list of the unshifted and shifted glyphs to display.
+;;   * the `car` of each entry is an offset, in characters, from the first glyph in that row;
 
-## TODO
+;;   * the `cdr` of each entry is a list of the unshifted and shifted glyphs to display.
 
-* `devanagari-inscript` layout:
+;; ## TODO
 
-  * Fix failure to highlight certain keys during composition.
+;; * `devanagari-inscript` layout:
 
-## Issues / bugs
+;;   * Fix failure to highlight certain keys during composition.
 
-If you discover an issue or bug in `dkl' not already noted:
+;; ## Issues / bugs
 
-* as a TODO item, or
+;; If you discover an issue or bug in `dkl' not already noted:
 
-* in [the project's "Issues" section on GitHub](https://github.com/flexibeast/dkl/issues),
+;; * as a TODO item, or
 
-please create a new issue with as much detail as possible, including:
+;; * in [the project's "Issues" section on GitHub](https://github.com/flexibeast/dkl/issues),
 
-* which version of Emacs you're running on which operating system, and
+;; please create a new issue with as much detail as possible, including:
 
-* how you installed `dkl'.
+;; * which version of Emacs you're running on which operating system, and
 
-## License
+;; * how you installed `dkl'.
 
-[GNU General Public License version 3](http://www.gnu.org/licenses/gpl.html), or (at your option) any later version.
+;; ## License
+
+;; [GNU General Public License version 3](http://www.gnu.org/licenses/gpl.html), or (at your option) any later version.
+

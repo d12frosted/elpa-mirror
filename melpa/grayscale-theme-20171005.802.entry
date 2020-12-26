@@ -1,2 +1,9 @@
-
-(grayscale-theme . [(20171005 802) nil "A simple grayscale theme" single ((:commit . "53ad50e10e68f2f076ebfc96e10ecef7a932d38d") (:keywords "lisp") (:authors ("Kaleb Elwert" . "belak@coded.io")) (:maintainer "Kaleb Elwert" . "belak@coded.io") (:url . "https://github.com/belak/emacs-grayscale-theme"))])
+(grayscale-theme .
+		 [(20171005 802)
+		  nil "A simple grayscale theme" single
+		  ((:commit . "53ad50e10e68f2f076ebfc96e10ecef7a932d38d")
+		   (:authors
+		    ("Kaleb Elwert" . "belak@coded.io"))
+		   (:maintainer "Kaleb Elwert" . "belak@coded.io")
+		   (:keywords "lisp")
+		   (:url . "https://github.com/belak/emacs-grayscale-theme"))])

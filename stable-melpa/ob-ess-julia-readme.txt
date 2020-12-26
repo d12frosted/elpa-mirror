@@ -1,2 +1,4 @@
-This package provides an elementary support for Julia language
-in Org mode.
+;;; Commentary:
+;; This package provides an elementary support for Julia language
+;; in Org mode.
+

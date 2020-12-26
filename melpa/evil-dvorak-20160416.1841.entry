@@ -1,2 +1,10 @@
-
-(evil-dvorak . [(20160416 1841) ((evil (1 0 8))) "evil keybindings for that work with dvorak mode" tar ((:commit . "824f7c56980d72a0ff04c662223540cd66f13754") (:keywords "evil" "vim-emulation" "dvorak" "keyboard") (:url . "https://github.com/jbranso/evil-dvorak.git"))])
+(evil-dvorak .
+	     [(20160416 1841)
+	      ((evil
+		(1 0 8)))
+	      "evil keybindings for that work with dvorak mode" tar
+	      ((:commit . "824f7c56980d72a0ff04c662223540cd66f13754")
+	       (:authors
+		("Joshua Branson"))
+	       (:maintainer "Joshua Branson")
+	       (:keywords "dvorak" "evil" "vim"))])

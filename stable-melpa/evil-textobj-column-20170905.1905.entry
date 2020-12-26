@@ -1,2 +1,15 @@
-
-(evil-textobj-column . [(20170905 1905) ((names (0 5)) (emacs (24)) (evil (0))) "Provides column text objects." single ((:commit . "835d7036d0bc9a6e44fc9b7c54ccf2a7c01428cd") (:keywords "evil" "column" "text-object") (:authors ("Fox Kiester" . "noct@openmailbox.org")) (:maintainer "Fox Kiester" . "noct@openmailbox.org") (:url . "https://github.com/noctuid/evil-textobj-column"))])
+(evil-textobj-column .
+		     [(20170905 1905)
+		      ((names
+			(0 5))
+		       (emacs
+			(24))
+		       (evil
+			(0)))
+		      "Provides column text objects." single
+		      ((:commit . "835d7036d0bc9a6e44fc9b7c54ccf2a7c01428cd")
+		       (:authors
+			("Fox Kiester" . "noct@openmailbox.org"))
+		       (:maintainer "Fox Kiester" . "noct@openmailbox.org")
+		       (:keywords "evil" "column" "text-object")
+		       (:url . "https://github.com/noctuid/evil-textobj-column"))])

@@ -1,2 +1,9 @@
-
-(mexican-holidays . [(20200622 132) nil "Mexico holidays for Emacs calendar." single ((:commit . "5b5dd6e71505e8938bac9e9733b30bd394631923") (:keywords "calendar") (:authors ("Saúl Gutiérrez" . "me@sggc.me")) (:maintainer "Saúl Gutiérrez" . "me@sggc.me") (:url . "https://github.com/shopClerk/mexican-holidays"))])
+(mexican-holidays .
+		  [(20200622 132)
+		   nil "Mexico holidays for Emacs calendar." single
+		   ((:commit . "5b5dd6e71505e8938bac9e9733b30bd394631923")
+		    (:authors
+		     ("Saúl Gutiérrez" . "me@sggc.me"))
+		    (:maintainer "Saúl Gutiérrez" . "me@sggc.me")
+		    (:keywords "calendar")
+		    (:url . "https://github.com/shopClerk/mexican-holidays"))])

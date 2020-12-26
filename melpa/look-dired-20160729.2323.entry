@@ -1,2 +1,11 @@
-
-(look-dired . [(20160729 2323) ((look-mode (1 0))) "Extensions to look-mode for dired buffers" single ((:commit . "9bfa4e5e6f3810705b6426c88493ea0bf6b15640") (:keywords "convenience") (:authors ("Joe Bloggs" . "vapniks@yahoo.com")) (:maintainer "Joe Bloggs" . "vapniks@yahoo.com") (:url . "https://github.com/vapniks/look-dired"))])
+(look-dired .
+	    [(20160729 2323)
+	     ((look-mode
+	       (1 0)))
+	     "Extensions to look-mode for dired buffers" single
+	     ((:commit . "9bfa4e5e6f3810705b6426c88493ea0bf6b15640")
+	      (:authors
+	       ("Joe Bloggs" . "vapniks@yahoo.com"))
+	      (:maintainer "Joe Bloggs" . "vapniks@yahoo.com")
+	      (:keywords "convenience")
+	      (:url . "https://github.com/vapniks/look-dired"))])

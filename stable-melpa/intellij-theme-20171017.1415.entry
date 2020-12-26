@@ -1,2 +1,8 @@
-
-(intellij-theme . [(20171017 1415) nil "Inspired by IntelliJ's default theme" single ((:commit . "1bbfff8e6742d18e9b77ed796f44da3b7bd10606") (:keywords "faces") (:authors ("Vladimir Polushin" . "vovapolu@gmail.com")) (:maintainer "Vladimir Polushin" . "vovapolu@gmail.com"))])
+(intellij-theme .
+		[(20171017 1415)
+		 nil "Inspired by IntelliJ's default theme" single
+		 ((:commit . "1bbfff8e6742d18e9b77ed796f44da3b7bd10606")
+		  (:authors
+		   ("Vladimir Polushin" . "vovapolu@gmail.com"))
+		  (:maintainer "Vladimir Polushin" . "vovapolu@gmail.com")
+		  (:keywords "faces"))])

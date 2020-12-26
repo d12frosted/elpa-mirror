@@ -1,2 +1,14 @@
-
-(helm-esa . [(20190721 1429) ((emacs (26 2)) (helm (3 2)) (request (0 3 0))) "Esa with helm interface" single ((:commit . "d93b4af404346870cb2cf9c257d055332ef3f577") (:authors ("Takashi Masuda" . "masutaka.net@gmail.com")) (:maintainer "Takashi Masuda" . "masutaka.net@gmail.com") (:url . "https://github.com/masutaka/emacs-helm-esa"))])
+(helm-esa .
+	  [(20190721 1429)
+	   ((emacs
+	     (26 2))
+	    (helm
+	     (3 2))
+	    (request
+	     (0 3 0)))
+	   "Esa with helm interface" single
+	   ((:commit . "d93b4af404346870cb2cf9c257d055332ef3f577")
+	    (:authors
+	     ("Takashi Masuda" . "masutaka.net@gmail.com"))
+	    (:maintainer "Takashi Masuda" . "masutaka.net@gmail.com")
+	    (:url . "https://github.com/masutaka/emacs-helm-esa"))])

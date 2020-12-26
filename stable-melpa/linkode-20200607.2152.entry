@@ -1,2 +1,8 @@
-
-(linkode . [(20200607 2152) nil "Generate a linkode snippet with region/buffer content" single ((:commit . "675e612e30b74764c57de4117d950ea803b15f74") (:authors ("Erick Navarro" . "erick@navarro.io")) (:maintainer "Erick Navarro" . "erick@navarro.io") (:url . "https://github.com/erickgnavar/linkode.el"))])
+(linkode .
+	 [(20200607 2152)
+	  nil "Generate a linkode snippet with region/buffer content" single
+	  ((:commit . "675e612e30b74764c57de4117d950ea803b15f74")
+	   (:authors
+	    ("Erick Navarro" . "erick@navarro.io"))
+	   (:maintainer "Erick Navarro" . "erick@navarro.io")
+	   (:url . "https://github.com/erickgnavar/linkode.el"))])

@@ -1,2 +1,13 @@
-
-(pow . [(20140420 806) ((emacs (24)) (cl-lib (0 5))) "pow (http://pow.cx/) manager for emacs" tar ((:commit . "ea83986b8ca8e27cb996290d6463b111ec0966ce") (:keywords "develop" "web" "pow") (:authors ("yukihiro hara" . "yukihr@gmail.com")) (:maintainer "yukihiro hara" . "yukihr@gmail.com") (:url . "http://github.com/yukihr/emacs-pow"))])
+(pow .
+     [(20140420 806)
+      ((emacs
+	(24))
+       (cl-lib
+	(0 5)))
+      "pow (http://pow.cx/) manager for emacs" tar
+      ((:commit . "ea83986b8ca8e27cb996290d6463b111ec0966ce")
+       (:authors
+	("yukihiro hara" . "yukihr@gmail.com"))
+       (:maintainer "yukihiro hara" . "yukihr@gmail.com")
+       (:keywords "develop" "web" "pow")
+       (:url . "http://github.com/yukihr/emacs-pow"))])

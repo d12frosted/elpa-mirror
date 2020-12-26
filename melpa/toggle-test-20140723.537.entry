@@ -1,2 +1,9 @@
-
-(toggle-test . [(20140723 537) nil "Toggle between source and test files in various programming languages" single ((:commit . "e969321f274903d705995a7d0345a257576ec5ff") (:keywords "tdd" "test" "toggle" "productivity") (:authors ("Raghunandan Rao" . "r.raghunandan@gmail.com")) (:maintainer "Raghunandan Rao" . "r.raghunandan@gmail.com") (:url . "https://github.com/rags/toggle-test"))])
+(toggle-test .
+	     [(20140723 537)
+	      nil "Toggle between source and test files in various programming languages" single
+	      ((:commit . "e969321f274903d705995a7d0345a257576ec5ff")
+	       (:authors
+		("Raghunandan Rao" . "r.raghunandan@gmail.com"))
+	       (:maintainer "Raghunandan Rao" . "r.raghunandan@gmail.com")
+	       (:keywords "tdd" "test" "toggle" "productivity")
+	       (:url . "https://github.com/rags/toggle-test"))])

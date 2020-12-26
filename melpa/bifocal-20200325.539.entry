@@ -1,2 +1,8 @@
-
-(bifocal . [(20200325 539) ((emacs (24 4))) "Split-screen scrolling for comint-mode buffers" single ((:commit . "de8d09b08b0b30714c4f9b98c97e9577d47b9be6") (:keywords "frames" "processes") (:url . "https://github.com/riscy/bifocal-mode"))])
+(bifocal .
+	 [(20200325 539)
+	  ((emacs
+	    (24 4)))
+	  "Split-screen scrolling for comint-mode buffers" single
+	  ((:commit . "de8d09b08b0b30714c4f9b98c97e9577d47b9be6")
+	   (:keywords "frames" "processes")
+	   (:url . "https://github.com/riscy/bifocal-mode"))])

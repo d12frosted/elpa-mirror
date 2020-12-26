@@ -1,2 +1,15 @@
-
-(build-farm . [(20181218 2002) ((emacs (24 4)) (bui (1 2 1)) (magit-popup (2 1 0))) "Interface for Nix and Guix build farms (Hydra and Cuirass)" tar ((:commit . "5c268a3c235ace0d79ef1ec82c440120317e06f5") (:keywords "tools") (:authors ("Alex Kost" . "alezost@gmail.com")) (:maintainer "Alex Kost" . "alezost@gmail.com") (:url . "https://gitlab.com/alezost-emacs/build-farm"))])
+(build-farm .
+	    [(20181218 2002)
+	     ((emacs
+	       (24 4))
+	      (bui
+	       (1 2 1))
+	      (magit-popup
+	       (2 1 0)))
+	     "Interface for Nix and Guix build farms (Hydra and Cuirass)" tar
+	     ((:commit . "5c268a3c235ace0d79ef1ec82c440120317e06f5")
+	      (:authors
+	       ("Alex Kost" . "alezost@gmail.com"))
+	      (:maintainer "Alex Kost" . "alezost@gmail.com")
+	      (:keywords "tools")
+	      (:url . "https://gitlab.com/alezost-emacs/build-farm"))])

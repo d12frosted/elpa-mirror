@@ -1,2 +1,8 @@
-
-(bert . [(20131117 1014) nil "BERT serialization library for Emacs" single ((:commit . "a3eec6980a725aa4abd2019e4c00246450260490") (:keywords "comm" "data") (:authors ("Oleksandr Manzyuk" . "manzyuk@gmail.com")) (:maintainer "Oleksandr Manzyuk" . "manzyuk@gmail.com"))])
+(bert .
+      [(20131117 1014)
+       nil "BERT serialization library for Emacs" single
+       ((:commit . "a3eec6980a725aa4abd2019e4c00246450260490")
+	(:authors
+	 ("Oleksandr Manzyuk" . "manzyuk@gmail.com"))
+	(:maintainer "Oleksandr Manzyuk" . "manzyuk@gmail.com")
+	(:keywords "comm" "data"))])

@@ -1,2 +1,11 @@
-
-(gnu-apl-mode . [(20200108 1633) ((emacs (24))) "Integrate GNU APL with Emacs" tar ((:commit . "7f84eb307e9765fadcd1e0a9201ae562724ef1c9") (:keywords "languages" "apl") (:url . "https://github.com/lokedhs/gnu-apl-mode"))])
+(gnu-apl-mode .
+	      [(20200108 1633)
+	       ((emacs
+		 (24)))
+	       "Integrate GNU APL with Emacs" tar
+	       ((:commit . "7f84eb307e9765fadcd1e0a9201ae562724ef1c9")
+		(:authors
+		 ("Elias Mårtenson" . "lokedhs@gmail.com"))
+		(:maintainer "Elias Mårtenson" . "lokedhs@gmail.com")
+		(:keywords "languages")
+		(:url . "http://www.gnu.org/software/apl/"))])

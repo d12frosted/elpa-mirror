@@ -1,2 +1,11 @@
-
-(ox-textile . [(20180502 947) ((org (8 1))) "Textile Back-End for Org Export Engine" single ((:commit . "b179abaa6616604c6efe32cb509e62ad46e7374e") (:keywords "org" "textile") (:authors ("Yasushi SHOJI" . "yasushi.shoji@gmail.com")) (:maintainer "Yasushi SHOJI" . "yasushi.shoji@gmail.com") (:url . "https://github.com/yashi/org-textile"))])
+(ox-textile .
+	    [(20180502 947)
+	     ((org
+	       (8 1)))
+	     "Textile Back-End for Org Export Engine" single
+	     ((:commit . "b179abaa6616604c6efe32cb509e62ad46e7374e")
+	      (:authors
+	       ("Yasushi SHOJI" . "yasushi.shoji@gmail.com"))
+	      (:maintainer "Yasushi SHOJI" . "yasushi.shoji@gmail.com")
+	      (:keywords "org" "textile")
+	      (:url . "https://github.com/yashi/org-textile"))])

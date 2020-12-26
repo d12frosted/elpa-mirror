@@ -1,2 +1,12 @@
-
-(sprunge . [(20160301 243) ((request (0 2 0)) (cl-lib (0 5))) "Upload pastes to sprunge.us" single ((:commit . "0fd386b8b29c4175022a04ad70ea5643185b6726") (:keywords "tools") (:authors ("Tom Jakubowski")) (:maintainer "Tom Jakubowski"))])
+(sprunge .
+	 [(20160301 243)
+	  ((request
+	    (0 2 0))
+	   (cl-lib
+	    (0 5)))
+	  "Upload pastes to sprunge.us" single
+	  ((:commit . "0fd386b8b29c4175022a04ad70ea5643185b6726")
+	   (:authors
+	    ("Tom Jakubowski"))
+	   (:maintainer "Tom Jakubowski")
+	   (:keywords "tools"))])

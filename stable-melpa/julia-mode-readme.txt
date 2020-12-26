@@ -1,1 +1,3 @@
-This is the official Emacs mode for editing Julia programs.
+;;; Commentary:
+;; This is the official Emacs mode for editing Julia programs.
+

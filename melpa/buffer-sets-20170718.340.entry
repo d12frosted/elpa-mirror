@@ -1,2 +1,11 @@
-
-(buffer-sets . [(20170718 340) ((cl-lib (0 5))) "Sets of Buffers for Buffer Management" single ((:commit . "4a4ccb0d6916c3e9fba737bb7b48e8aac921954e") (:keywords "buffer-management") (:authors ("Samuel W. Flint" . "swflint@flintfam.org")) (:maintainer "Samuel W. Flint" . "swflint@flintfam.org") (:url . "http://github.com/swflint/buffer-sets"))])
+(buffer-sets .
+	     [(20170718 340)
+	      ((cl-lib
+		(0 5)))
+	      "Sets of Buffers for Buffer Management" single
+	      ((:commit . "4a4ccb0d6916c3e9fba737bb7b48e8aac921954e")
+	       (:authors
+		("Samuel W. Flint" . "swflint@flintfam.org"))
+	       (:maintainer "Samuel W. Flint" . "swflint@flintfam.org")
+	       (:keywords "buffer-management")
+	       (:url . "http://github.com/swflint/buffer-sets"))])

@@ -1,2 +1,11 @@
-
-(gmail-message-mode . [(20160627 1847) ((ham-mode (1 0))) "A major-mode for editing gmail messages using markdown syntax." single ((:commit . "ec36672a9dc93c09ebe2f77597b498d11883d008") (:keywords "mail" "convenience" "emulation") (:authors ("Artur Malabarba" . "bruce.connor.am@gmail.com")) (:maintainer "Artur Malabarba" . "bruce.connor.am@gmail.com") (:url . "http://github.com/Bruce-Connor/gmail-message-mode"))])
+(gmail-message-mode .
+		    [(20160627 1847)
+		     ((ham-mode
+		       (1 0)))
+		     "A major-mode for editing gmail messages using markdown syntax." single
+		     ((:commit . "ec36672a9dc93c09ebe2f77597b498d11883d008")
+		      (:authors
+		       ("Artur Malabarba" . "bruce.connor.am@gmail.com"))
+		      (:maintainer "Artur Malabarba" . "bruce.connor.am@gmail.com")
+		      (:keywords "mail" "convenience" "emulation")
+		      (:url . "http://github.com/Bruce-Connor/gmail-message-mode"))])

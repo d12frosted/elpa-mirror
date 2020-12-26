@@ -1,2 +1,11 @@
-
-(maude-mode . [(20200725 2035) ((emacs (25))) "Emacs mode for the programming language Maude" single ((:commit . "008f372631a1efe15be033792cfb1686b1736aeb") (:keywords "languages" "maude") (:authors ("Ellef Gjelstad <ellefg+maude*ifi.uio.no>")) (:maintainer "Rudi Schlatte" . "rudi@constantly.at") (:url . "https://github.com/rudi/abs-mode"))])
+(maude-mode .
+	    [(20200725 2035)
+	     ((emacs
+	       (25)))
+	     "Emacs mode for the programming language Maude" single
+	     ((:commit . "008f372631a1efe15be033792cfb1686b1736aeb")
+	      (:authors
+	       ("Ellef Gjelstad <ellefg+maude*ifi.uio.no>"))
+	      (:maintainer "Rudi Schlatte" . "rudi@constantly.at")
+	      (:keywords "languages" "maude")
+	      (:url . "https://github.com/rudi/abs-mode"))])

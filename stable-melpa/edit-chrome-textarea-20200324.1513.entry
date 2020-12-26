@@ -1,2 +1,13 @@
-
-(edit-chrome-textarea . [(20200324 1513) ((emacs (25 1)) (websocket (1 4))) "Edit Chrome Textarea" single ((:commit . "e9ef6a72bdc6b58f932c51aa161869cee11b4bc9") (:keywords "tools") (:authors ("Xu Chunyang")) (:maintainer "Xu Chunyang") (:url . "https://github.com/xuchunyang/edit-chrome-textarea.el"))])
+(edit-chrome-textarea .
+		      [(20200324 1513)
+		       ((emacs
+			 (25 1))
+			(websocket
+			 (1 4)))
+		       "Edit Chrome Textarea" single
+		       ((:commit . "e9ef6a72bdc6b58f932c51aa161869cee11b4bc9")
+			(:authors
+			 ("Xu Chunyang"))
+			(:maintainer "Xu Chunyang")
+			(:keywords "tools")
+			(:url . "https://github.com/xuchunyang/edit-chrome-textarea.el"))])

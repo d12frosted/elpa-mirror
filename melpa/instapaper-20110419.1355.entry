@@ -1,2 +1,8 @@
-
-(instapaper . [(20110419 1355) nil "No description available." single ((:commit . "f21531bcb935e7e9b9e8df83dd0e0838adbf9b1b"))])
+(instapaper .
+	    [(20110419 1355)
+	     nil "No description available." single
+	     ((:commit . "f21531bcb935e7e9b9e8df83dd0e0838adbf9b1b")
+	      (:authors
+	       ("Jason F. McBrayer" . "jmcbray@carcosa.net"))
+	      (:maintainer "Jason F. McBrayer" . "jmcbray@carcosa.net")
+	      (:url . "htts://bitbucket.org/jfm/emacs-instapaper"))])

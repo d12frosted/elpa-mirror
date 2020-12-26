@@ -1,2 +1,12 @@
-
-(helm-bundle-show . [(20190526 1401) ((emacs (24)) (helm (1 8 0))) "Bundle show with helm interface" single ((:commit . "70f1ca7d1847c7d5cd5a3e488562cd4a295b809f") (:authors ("Takashi Masuda" . "masutaka.net@gmail.com")) (:maintainer "Takashi Masuda" . "masutaka.net@gmail.com") (:url . "https://github.com/masutaka/emacs-helm-bundle-show"))])
+(helm-bundle-show .
+		  [(20190526 1401)
+		   ((emacs
+		     (24))
+		    (helm
+		     (1 8 0)))
+		   "Bundle show with helm interface" single
+		   ((:commit . "70f1ca7d1847c7d5cd5a3e488562cd4a295b809f")
+		    (:authors
+		     ("Takashi Masuda" . "masutaka.net@gmail.com"))
+		    (:maintainer "Takashi Masuda" . "masutaka.net@gmail.com")
+		    (:url . "https://github.com/masutaka/emacs-helm-bundle-show"))])

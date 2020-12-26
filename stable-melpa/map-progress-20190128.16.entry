@@ -1,2 +1,11 @@
-
-(map-progress . [(20190128 16) ((cl-lib (0 6 1))) "mapping macros that report progress" single ((:commit . "1fb916159cd054c233ce3c80d9d01adfae640297") (:keywords "convenience") (:authors ("Jonas Bernoulli" . "jonas@bernoul.li")) (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li") (:url . "https://github.com/tarsius/map-progress"))])
+(map-progress .
+	      [(20190128 16)
+	       ((cl-lib
+		 (0 6 1)))
+	       "mapping macros that report progress" single
+	       ((:commit . "1fb916159cd054c233ce3c80d9d01adfae640297")
+		(:authors
+		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		(:keywords "convenience")
+		(:url . "https://github.com/tarsius/map-progress"))])

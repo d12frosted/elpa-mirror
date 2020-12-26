@@ -1,2 +1,16 @@
-
-(helm-ghc . [(20141105 1459) ((emacs (24)) (cl-lib (0 5)) (helm (1 6 4)) (ghc (5 2 1 0))) "A Helm datasource for ghc-mod errors" single ((:commit . "e5ee7b8d3b745d162553aecfbd41381c4de85f35") (:keywords "languages" "helm") (:authors ("David Raymond Christiansen" . "david@davidchristiansen.dk")) (:maintainer "David Raymond Christiansen" . "david@davidchristiansen.dk"))])
+(helm-ghc .
+	  [(20141105 1459)
+	   ((emacs
+	     (24))
+	    (cl-lib
+	     (0 5))
+	    (helm
+	     (1 6 4))
+	    (ghc
+	     (5 2 1 0)))
+	   "A Helm datasource for ghc-mod errors" single
+	   ((:commit . "e5ee7b8d3b745d162553aecfbd41381c4de85f35")
+	    (:authors
+	     ("David Raymond Christiansen" . "david@davidchristiansen.dk"))
+	    (:maintainer "David Raymond Christiansen" . "david@davidchristiansen.dk")
+	    (:keywords "languages" "helm"))])

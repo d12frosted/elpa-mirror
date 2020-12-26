@@ -1,2 +1,10 @@
-
-(org2elcomment . [(20170324 945) ((org (8 3 4))) "Convert Org file to Elisp comments" single ((:commit . "c88a75d9587c484ead18f7adf08592b09c1cceb0") (:keywords "extensions") (:authors ("Junpeng Qiu" . "qjpchmail@gmail.com")) (:maintainer "Junpeng Qiu" . "qjpchmail@gmail.com"))])
+(org2elcomment .
+	       [(20170324 945)
+		((org
+		  (8 3 4)))
+		"Convert Org file to Elisp comments" single
+		((:commit . "c88a75d9587c484ead18f7adf08592b09c1cceb0")
+		 (:authors
+		  ("Junpeng Qiu" . "qjpchmail@gmail.com"))
+		 (:maintainer "Junpeng Qiu" . "qjpchmail@gmail.com")
+		 (:keywords "extensions"))])

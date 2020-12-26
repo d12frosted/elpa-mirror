@@ -1,2 +1,5 @@
-Known Bugs:
-See, https://github.com/Somelauw/evil-org-mode/issues
+;;; Commentary:
+;;
+;; Known Bugs:
+;; See, https://github.com/Somelauw/evil-org-mode/issues
+;;

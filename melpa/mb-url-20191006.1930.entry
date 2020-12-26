@@ -1,2 +1,9 @@
-
-(mb-url . [(20191006 1930) ((cl-lib (0))) "Multiple Backends for Emacs URL package." tar ((:commit . "7230902e1f844e0a1388f741e9ae6260cda3de69") (:url . "https://github.com/dochang/mb-url") (:keywords "url"))])
+(mb-url .
+	[(20191006 1930)
+	 ((cl-lib
+	   (0)))
+	 "Multiple Backends for Emacs URL package." tar
+	 ((:commit . "7230902e1f844e0a1388f741e9ae6260cda3de69")
+	  (:authors
+	   ("ZHANG Weiyi" . "dochang@gmail.com"))
+	  (:maintainer "ZHANG Weiyi" . "dochang@gmail.com"))])

@@ -1,2 +1,11 @@
-
-(srv . [(20180715 1959) ((emacs (24 3))) "perform SRV DNS requests" single ((:commit . "714387d5a5cf34d8d8cd96bdb1f9cb8ded823ff7") (:keywords "comm") (:authors ("Magnus Henoch" . "magnus.henoch@gmail.com")) (:maintainer "Magnus Henoch" . "magnus.henoch@gmail.com") (:url . "https://github.com/legoscia/srv.el"))])
+(srv .
+     [(20180715 1959)
+      ((emacs
+	(24 3)))
+      "perform SRV DNS requests" single
+      ((:commit . "714387d5a5cf34d8d8cd96bdb1f9cb8ded823ff7")
+       (:authors
+	("Magnus Henoch" . "magnus.henoch@gmail.com"))
+       (:maintainer "Magnus Henoch" . "magnus.henoch@gmail.com")
+       (:keywords "comm")
+       (:url . "https://github.com/legoscia/srv.el"))])

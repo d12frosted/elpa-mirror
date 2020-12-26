@@ -1,2 +1,8 @@
-
-(emoji-fontset . [(20160726 1924) nil "Set font face for Emoji." single ((:commit . "8f159e8073b9b57a07a54b549df687424eeb98ee") (:keywords "emoji" "font" "config") (:authors ("USAMI Kenta" . "tadsan@zonu.me")) (:maintainer "USAMI Kenta" . "tadsan@zonu.me"))])
+(emoji-fontset .
+	       [(20160726 1924)
+		nil "Set font face for Emoji." single
+		((:commit . "8f159e8073b9b57a07a54b549df687424eeb98ee")
+		 (:authors
+		  ("USAMI Kenta" . "tadsan@zonu.me"))
+		 (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+		 (:keywords "emoji" "font" "config"))])

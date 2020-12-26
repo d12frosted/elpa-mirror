@@ -1,2 +1,5 @@
-Logging Utilities for packages.
-Offer function to log messages to dedicated buffers
+;;; Commentary:
+
+;; Logging Utilities for packages.
+;; Offer function to log messages to dedicated buffers
+

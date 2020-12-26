@@ -1,2 +1,9 @@
-
-(closure-lint-mode . [(20101118 2124) nil "minor mode for the Closure Linter" single ((:commit . "bc3d2fd5c35580bf1b8af43b12484c95a343b4b5") (:keywords "tools" "closure" "javascript" "lint" "flymake") (:authors ("Roman Scherer" . "roman@burningswell.com")) (:maintainer "Roman Scherer" . "roman@burningswell.com") (:url . "https://github.com/r0man/closure-lint-mode"))])
+(closure-lint-mode .
+		   [(20101118 2124)
+		    nil "minor mode for the Closure Linter" single
+		    ((:commit . "bc3d2fd5c35580bf1b8af43b12484c95a343b4b5")
+		     (:authors
+		      ("Roman Scherer" . "roman@burningswell.com"))
+		     (:maintainer "Roman Scherer" . "roman@burningswell.com")
+		     (:keywords "tools" "closure" "javascript" "lint" "flymake")
+		     (:url . "https://github.com/r0man/closure-lint-mode"))])

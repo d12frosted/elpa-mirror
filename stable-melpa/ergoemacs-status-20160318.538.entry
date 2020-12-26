@@ -1,2 +1,11 @@
-
-(ergoemacs-status . [(20160318 538) ((powerline (2 3)) (mode-icons (0 1 0))) "Adaptive Status Bar / Mode Line" single ((:commit . "d952cc2361adf6eb4d6af60950ad4ab699c81320") (:authors ("Matthew Fidler")) (:maintainer "Matthew Fidler"))])
+(ergoemacs-status .
+		  [(20160318 538)
+		   ((powerline
+		     (2 3))
+		    (mode-icons
+		     (0 1 0)))
+		   "Adaptive Status Bar / Mode Line" single
+		   ((:commit . "d952cc2361adf6eb4d6af60950ad4ab699c81320")
+		    (:authors
+		     ("Matthew Fidler"))
+		    (:maintainer "Matthew Fidler"))])

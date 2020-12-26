@@ -1,2 +1,19 @@
-
-(ob-ipython . [(20180224 953) ((s (1 9 0)) (dash (2 10 0)) (dash-functional (1 2 0)) (f (0 17 2)) (emacs (24))) "org-babel functions for IPython evaluation" tar ((:commit . "7147455230841744fb5b95dcbe03320313a77124") (:keywords "literate programming" "reproducible research") (:authors ("Greg Sexton" . "gregsexton@gmail.com")) (:maintainer "Greg Sexton" . "gregsexton@gmail.com") (:url . "http://www.gregsexton.org"))])
+(ob-ipython .
+	    [(20180224 953)
+	     ((s
+	       (1 9 0))
+	      (dash
+	       (2 10 0))
+	      (dash-functional
+	       (1 2 0))
+	      (f
+	       (0 17 2))
+	      (emacs
+	       (24)))
+	     "org-babel functions for IPython evaluation" tar
+	     ((:commit . "7147455230841744fb5b95dcbe03320313a77124")
+	      (:authors
+	       ("Greg Sexton" . "gregsexton@gmail.com"))
+	      (:maintainer "Greg Sexton" . "gregsexton@gmail.com")
+	      (:keywords "literate programming" "reproducible research")
+	      (:url . "http://www.gregsexton.org"))])

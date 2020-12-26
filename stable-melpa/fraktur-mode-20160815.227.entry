@@ -1,2 +1,11 @@
-
-(fraktur-mode . [(20160815 227) ((cl-lib (0 5))) "Easily insert Unicode mathematical Fraktur characters" single ((:commit . "514baf5546aed12a0d9fa0fe66e87cdcc7843b08") (:keywords "unicode" "fraktur" "math" "mathematical") (:authors ("Grant Rettke" . "gcr@wisdomandwonder.com")) (:maintainer nil . "<gcr@wisdomandwonder.com>") (:url . "https://github.com/grettke/fraktur-mode"))])
+(fraktur-mode .
+	      [(20160815 227)
+	       ((cl-lib
+		 (0 5)))
+	       "Easily insert Unicode mathematical Fraktur characters" single
+	       ((:commit . "514baf5546aed12a0d9fa0fe66e87cdcc7843b08")
+		(:authors
+		 ("Grant Rettke" . "gcr@wisdomandwonder.com"))
+		(:maintainer nil . "<gcr@wisdomandwonder.com>")
+		(:keywords "unicode" "fraktur" "math" "mathematical")
+		(:url . "https://github.com/grettke/fraktur-mode"))])
