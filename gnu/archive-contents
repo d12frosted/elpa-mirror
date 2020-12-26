@@ -2349,14 +2349,14 @@
 	   (:maintainer "Yuan Fu" . "casouri@gmail.com")
 	   (:url . "https://github.com/casouri/valign"))])
  (vcard .
-	[(0 1)
+	[(0 2 1)
 	 ((emacs
 	   (27 1)))
 	 "Package for handling vCard files" tar
 	 ((:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
 	  (:authors
 	   ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
-	  (:url . "http://elpa.gnu.org/packages/vcard.html"))])
+	  (:url . "https://elpa.gnu.org/packages/vcard.html"))])
  (vcl-mode .
 	   [(1 1)
 	    nil "Major mode for Varnish Configuration Language" single
