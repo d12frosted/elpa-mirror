@@ -1,0 +1,14 @@
+(consult-flycheck .
+		  [(20201226 12)
+		   ((consult
+		     (0 1))
+		    (flycheck
+		     (31))
+		    (emacs
+		     (26 1)))
+		   "Provides the command `consult-flycheck'" single
+		   ((:commit . "1a975bc78f743922446021a2ac5ce83a6981d9ac")
+		    (:authors
+		     ("Daniel Mendler, Consult and Selectrum contributors"))
+		    (:maintainer "Daniel Mendler")
+		    (:url . "https://github.com/minad/consult"))])
