@@ -1,0 +1,15 @@
+(lastpass .
+	  [(20201229 2109)
+	   ((emacs
+	     (24 4))
+	    (seq
+	     (1 9))
+	    (cl-lib
+	     (0 5)))
+	   "LastPass command wrapper" single
+	   ((:commit . "2366de7824b6c5f8e9ec6811d219dc06794e8630")
+	    (:authors
+	     ("Petter Storvik"))
+	    (:maintainer "Petter Storvik")
+	    (:keywords "extensions" "processes" "lpass" "lastpass")
+	    (:url . "https://github.com/storvik/emacs-lastpass"))])

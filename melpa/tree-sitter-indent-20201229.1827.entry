@@ -1,0 +1,15 @@
+(tree-sitter-indent .
+		    [(20201229 1827)
+		     ((emacs
+		       (26 1))
+		      (tree-sitter
+		       (0 12 1))
+		      (seq
+		       (2 21)))
+		     "Provide indentation with a Tree-sitter backend" single
+		     ((:commit . "a1eddfabb41375eda84178531b944472599c25e7")
+		      (:authors
+		       ("Felipe Lema" . "felipelema@mortemale.org"))
+		      (:maintainer "Felipe Lema" . "felipelema@mortemale.org")
+		      (:keywords "convenience" "internal")
+		      (:url . "https://codeberg.org/FelipeLema/tree-sitter-indent.el"))])

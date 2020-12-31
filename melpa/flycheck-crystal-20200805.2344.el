@@ -5,7 +5,7 @@
 ;; Authors: crystal-lang-tools
 ;; URL: https://github.com/crystal-lang-tools/emacs-crystal-mode
 ;; Package-Version: 20200805.2344
-;; Package-Commit: f9e4db16ff9fdc6a296363aa35d19cfb4926e472
+;; Package-Commit: 15998140b0a4172cd4b4d14d0377fba96a8917fc
 ;; Keywords: tools crystal
 ;; Version: 0.1
 ;; Package-Requires: ((flycheck "30"))

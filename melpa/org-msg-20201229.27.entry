@@ -1,0 +1,13 @@
+(org-msg .
+	 [(20201229 27)
+	  ((emacs
+	    (24 4))
+	   (htmlize
+	    (1 54)))
+	  "Org mode to send and reply to email in HTML." single
+	  ((:commit . "20aac1b7254627c393f3a9e52395ee4d3546d586")
+	   (:authors
+	    ("Jérémy Compostella" . "jeremy.compostella@gmail.com"))
+	   (:maintainer "Jérémy Compostella" . "jeremy.compostella@gmail.com")
+	   (:keywords "extensions" "mail")
+	   (:url . "https://github.com/jeremy-compostella/org-msg"))])

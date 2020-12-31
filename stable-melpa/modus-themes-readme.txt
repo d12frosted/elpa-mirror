@@ -257,6 +257,7 @@
 ;;     popup
 ;;     powerline
 ;;     powerline-evil
+;;     prism (see "Note for prism.el" in the manual)
 ;;     proced
 ;;     prodigy
 ;;     racket-mode

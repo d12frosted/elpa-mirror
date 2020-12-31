@@ -4,6 +4,8 @@
 
 ;; Author: Yasuyuki Oka <yasuyk@gmail.com>
 ;; Version: DEV
+;; Package-Version: 20160713.1231
+;; Package-Commit: f0364e736b10cf44232053a78de04133a88185ae
 ;; URL: https://github.com/yasuyk/helm-emmet
 ;; Package-Requires: ((helm "1.0") (emmet-mode "1.0.2"))
 ;; Keywords: convenience, helm, emmet

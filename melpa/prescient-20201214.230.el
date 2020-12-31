@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/raxod502/prescient.el
 ;; Keywords: extensions
 ;; Package-Version: 20201214.230
-;; Package-Commit: df84ed7233c18225b1010dc029b3a56ef7c05f4e
+;; Package-Commit: 2af94ce194f9b8d7087f7b49ecd986083f7eb753
 ;; Created: 7 Aug 2017
 ;; Package-Requires: ((emacs "25.1"))
 ;; SPDX-License-Identifier: MIT

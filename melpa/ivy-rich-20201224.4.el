@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/Yevgnen/ivy-rich
 ;; Package-Requires: ((emacs "25.1") (ivy "0.13.0"))
 ;; Package-Version: 20201224.4
-;; Package-Commit: 37188d3769c03e881d628b049a14df6384b03143
+;; Package-Commit: f8a1f5c90d2a113b597ef5903634c089fce3365b
 ;; Version: 0.1.6
 ;; Keywords: convenience, ivy
 

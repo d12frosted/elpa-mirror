@@ -1,0 +1,11 @@
+(imenu-extra .
+	     [(20201229 1035)
+	      ((emacs
+		(25 1)))
+	      "Add extra items into existing imenu items" single
+	      ((:commit . "68b0aaaefc18b267e4e383df36a8dfb7448bc83c")
+	       (:authors
+		("Chen Bin <chenbin DOT sh AT gmail DOT com>"))
+	       (:maintainer "Chen Bin <chenbin DOT sh AT gmail DOT com>")
+	       (:keywords "convenience")
+	       (:url . "https://github.com/redguardtoo/imenu-extra"))])

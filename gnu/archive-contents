@@ -728,7 +728,7 @@
 		     (:keywords "languages" "lisp")
 		     (:url . "http://elpa.gnu.org/packages/elisp-benchmarks.html"))])
  (emms .
-       [(6 2)
+       [(6 3)
 	((cl-lib
 	  (0 5))
 	 (seq
@@ -1192,6 +1192,18 @@
 	  (:authors
 	   ("Ivan Kanis" . "ivan@kanis.fr"))
 	  (:maintainer "Ivan Kanis" . "ivan@kanis.fr"))])
+ (kiwix .
+	[(1 0 1)
+	 ((emacs
+	   (24 4))
+	  (request
+	   (0 3 0)))
+	 "Searching offline Wikipedia through Kiwix." tar
+	 ((:url . "https://github.com/stardiviner/kiwix.el")
+	  (:maintainer "stardiviner" . "numbchild@gmail.com")
+	  (:authors
+	   ("stardiviner" . "numbchild@gmail.com"))
+	  (:keywords "kiwix" "wikipedia"))])
  (kmb .
       [(0 1)
        ((emacs
