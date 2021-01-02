@@ -4,7 +4,7 @@ from https://www.emacswiki.org/emacs/wikipedia-mode.el for its
 font-lock code, menu, draft mode, replying and convenience
 functions to produce mediawiki.el 2.0.
 
-Installation
+; Installation
 
 If you use ELPA, you can install via the M-x package-list-packages
 interface. This is preferrable as you will have access to updates

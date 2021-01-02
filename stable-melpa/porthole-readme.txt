@@ -12,20 +12,20 @@ and clients will be able to find it automatically. Here's a typical workflow:
 
 In Emacs:
 
-  1. Pick a name and start your server.
-  2. Tell it which functions you want to be available to RPC calls.
+1. Pick a name and start your server.
+2. Tell it which functions you want to be available to RPC calls.
 
-  Now, continue using Emacs.
+Now, continue using Emacs.
 
 In the Client:
 
-  1. Load the connection information from your server's session file (this
-     file has a known path).
-  2. POST a JSON-RPC request to the server.
+1. Load the connection information from your server's session file (this
+file has a known path).
+2. POST a JSON-RPC request to the server.
 
-  *Emacs executes your RPC call and returns the result.*
+*Emacs executes your RPC call and returns the result.*
 
-  3. Parse the JSON-RPC 2.0 object you received.
+3. Parse the JSON-RPC 2.0 object you received.
 
 There's even a Python Client to handle the client-side automatically.
 

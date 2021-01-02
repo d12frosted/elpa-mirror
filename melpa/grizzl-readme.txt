@@ -25,8 +25,8 @@ searches on larger sets of data.
 Call `grizzl-completing-read' with an index returned by
 `grizzl-make-index':
 
-   (defvar *index* (grizzl-make-index '("one" "two" "three")))
-   (grizzl-completing-read "Number: " *index*)
+(defvar *index* (grizzl-make-index '("one" "two" "three")))
+(grizzl-completing-read "Number: " *index*)
 
 When the user hits ENTER, either one of the strings is returned on
 success, or nil of nothing matched.

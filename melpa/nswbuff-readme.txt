@@ -1,3 +1,4 @@
+
 `nswbuff' is an Emacs library for quick buffer switching based on swbuff.el,
 incorporating the changes from swbuff-x.el and a few new features not present
 in either.

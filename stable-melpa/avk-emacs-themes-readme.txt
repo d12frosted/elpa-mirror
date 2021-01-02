@@ -1,6 +1,4 @@
-;;; Commentary:
-;;
-;; Various themes by Alex V. Koval.
 
-;; Code:
+Various themes by Alex V. Koval.
 
+Code:

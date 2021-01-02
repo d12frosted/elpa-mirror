@@ -2,7 +2,7 @@ A major mode for editing AutoHotkey (AHK) script.  Supports commenting,
 indentation, syntax highlighting, and help lookup both localling and on
 the web.
 
-INSTALL
+; INSTALL
 
 Open the file, then type “M-x eval-buffer”.  You are done.  Open
 any ahk script, then type “M-x ahk-mode”, you'll see the
@@ -15,7 +15,7 @@ This package is located within Melpa.  To install, add
 ("melpa" . "http://melpa.org/packages/") to package-archives and
 execute "M-x package-install RET ahk-mode RET".
 
-FEATURES
+; FEATURES
 
 When opening a script file you will get:
 - syntax highlighting
@@ -59,11 +59,11 @@ existing issues :
 
 paren broken across multiple lines
 DllCall("SetWindowPos", "uint", Window%PrevRowText%, "uint", Window%PPrevRowText%
-        , "int", 0, "int", 0, "int", 0, "int", 0
-          , "uint", 0x13)  ; NOSIZE|NOMOVE|NOACTIVATE (0x1|0x2|0x10)
+, "int", 0, "int", 0, "int", 0, "int", 0
+, "uint", 0x13)  ; NOSIZE|NOMOVE|NOACTIVATE (0x1|0x2|0x10)
 
 
-HISTORY
+; HISTORY
 
 version 1.5.2, 2015-03-07 improved auto complete to work with ac and company-mode
 version 1.5.3, 2015-04-05 improved commenting and added imenu options

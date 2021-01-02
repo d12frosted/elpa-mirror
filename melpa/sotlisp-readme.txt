@@ -1,10 +1,11 @@
+
 This defines a new global minor-mode `speed-of-thought-mode', which
 activates locally on any supported buffer.  Currently, only
 `emacs-lisp-mode' buffers are supported.
 
 The mode is quite simple, and is composed of two parts:
 
-Abbrevs
+; Abbrevs
 
 A large number of abbrevs which expand function
 initials to their name.  A few examples:
@@ -21,7 +22,7 @@ will NOT expand the `r', because that's obviously not a function.
 Furthermore, "#'r" will expand to "#'require" (note how it omits
 that extra quote, since it would be useless here).
 
-Commands
+; Commands
 
 It also defines 4 commands, which really fit into this "follow the
 thought-flow" way of writing.  The bindings are as follows, I
@@ -44,13 +45,13 @@ you hit a "stop-point" of sorts in your thought flow, you hit `C-c f/v`
 on any undefined functions/variables, write their definitions, and hit
 `C-u C-SPC` to go back to the main function.
 
-Small Example
+; Small Example
 
 With the above (assuming you use something like paredit or
 electric-pair-mode), if you write:
 
-  ( w t b M-RET i SPC text
+( w t b M-RET i SPC text
 
 You get
 
-  (with-temp-buffer (insert text))
+(with-temp-buffer (insert text))

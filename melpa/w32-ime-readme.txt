@@ -16,5 +16,5 @@ IME state.
 
 To use w32-ime.el, add the following code to your init.el or .emacs
 
-  (setq default-input-method "W32-IME")
-  (w32-ime-initialize)
+(setq default-input-method "W32-IME")
+(w32-ime-initialize)

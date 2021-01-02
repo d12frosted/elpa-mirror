@@ -1,3 +1,4 @@
+
 Description
 -----------
 
@@ -12,16 +13,16 @@ however you want -- see `py-gnitset-test-runner' and
 `py-gnitset-runner-format' for details.
 
 - Compile buffer, via py-gnitset-compile-*: the shortest to type, because
-  it's generally the most useful.  These buffers have the fancy "click an
-  error message to go to that line in the file" functionality you expect.
+it's generally the most useful.  These buffers have the fancy "click an
+error message to go to that line in the file" functionality you expect.
 - PDB buffer, via py-gnitset-pdb-*: Runs the tests in a `pdb'-buffer, with
-  the "--pdb" flag appended.  This is particularly useful if you "import pdb;
-  pdb.set_trace()" within your tests, as the pdb buffer tracks stepping
-  through code within the associated Emacs code buffer.
+the "--pdb" flag appended.  This is particularly useful if you "import pdb;
+pdb.set_trace()" within your tests, as the pdb buffer tracks stepping
+through code within the associated Emacs code buffer.
 - Ansi-term buffer, via py-gnitset-term-*: this is a generic escape hatch
-  for when things aren't working in another buffer type.  I mostly use it for
-  debugging py-gnitset-mode at this point, although it is also useful if you
-  prefer ipdb to pdb+emacs pdb mode.
+for when things aren't working in another buffer type.  I mostly use it for
+debugging py-gnitset-mode at this point, although it is also useful if you
+prefer ipdb to pdb+emacs pdb mode.
 
 In addition to the various buffer types, you can select which funcions to
 test via the py-gnitset-*-all, py-gnitset-*-module, py-gnitset-*-class
@@ -53,9 +54,9 @@ py-gnitset-mode" in any Python buffer.  `py-gnitset-mode' just adds
 some keybindings to the C-c t map, so if you want to do something fancy you
 could for example do:
 
-   (add-hook 'python-mode-hook
-              (lambda ()
-                 (local-set-key (kbd "C-c n") py-gnitset-map)))
+(add-hook 'python-mode-hook
+(lambda ()
+(local-set-key (kbd "C-c n") py-gnitset-map)))
 
 To bind the keys to the C-c n map instead, with no loss of functionality.
 
@@ -84,16 +85,16 @@ To Do
 -----
 
 - macro-ize the py-gnitset-*-all/class/module/function duplication, so that
-  it's just a matter of (def-py-gnitset-generic ...) instead of the current
-  quadruple replication
+it's just a matter of (def-py-gnitset-generic ...) instead of the current
+quadruple replication
 - Add the ability to save custom command formulations (basically hack
-  py-gnitset-run to look for the function to run based on an alist,
-  rather than the static cond list)
+py-gnitset-run to look for the function to run based on an alist,
+rather than the static cond list)
 - Add a history of test runs, instead of just clearing out test buffers.
 - Add a way to run tests associated with the current *non-test* function
 - Remove dependency on virtualenv.el-defined variables
 - Create a new more versatile `py-gnitset-runners' alist into an alist of
-  ("runner" . 'format) pairs that combines `py-gnitset-test-runner' and
-  `py-gnitset-runner-format' in a way that doesn't require multiple
-  dir-locals in the common case of a bunch of projects that use similar
-  conventions.
+("runner" . 'format) pairs that combines `py-gnitset-test-runner' and
+`py-gnitset-runner-format' in a way that doesn't require multiple
+dir-locals in the common case of a bunch of projects that use similar
+conventions.

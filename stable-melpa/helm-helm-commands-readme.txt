@@ -1,4 +1,3 @@
-Commentary:
 
 Bitcoin donations gratefully accepted: 16iXhMdmTBcmrJAcDyv1H371mjXZNfDg7z
 
@@ -9,10 +8,10 @@ to see a longer description of the command, and RET to execute the command.
 Note: you can achieve the same thing with the `helm-M-x' command which comes with helm,
 but that requires a few more keystrokes and doesn't show descriptions by default.
 
+;;
 
 
-
-Installation:
+; Installation:
 
 Put helm-helm-commands.el in a directory in your load-path, e.g. ~/.emacs.d/
 You can add a directory to your load-path with the following line in ~/.emacs

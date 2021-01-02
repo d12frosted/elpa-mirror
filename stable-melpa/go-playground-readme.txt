@@ -9,3 +9,4 @@ import clauses. It very comfortable especially for experimenting with code
 in playground.
 
 You may push code to play.golang.org with go-mode' function `go-play-buffer`.
+

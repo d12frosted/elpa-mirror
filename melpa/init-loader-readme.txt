@@ -1,8 +1,8 @@
 Place init-loader.el somewhere in your `load-path'.  Then, add the
 following lines to ~/.emacs or ~/.emacs.d/init.el:
 
-    (require 'init-loader)
-    (init-loader-load "/path/to/init-directory")
+(require 'init-loader)
+(init-loader-load "/path/to/init-directory")
 
 The last line loads configuration files in /path/to/init-directory.
 If you omit arguments for `init-loader-load', the value of
@@ -15,10 +15,10 @@ specific configuration file.
 
 By default, valid names of configuration files start with two
 digits.  For example, the following file names are all valid:
-    00_util.el
-    01_ik-cmd.el
-    21_javascript.el
-    99_global-keys.el
+00_util.el
+01_ik-cmd.el
+21_javascript.el
+99_global-keys.el
 
 Files are loaded in the lexicographical order.  This helps you to
 resolve dependency of the configurations.
@@ -31,10 +31,10 @@ non-platform specific configuration files.
 Platform   Subplatform        Prefix         Example
 ------------------------------------------------------------------------
 Windows                       windows-       windows-fonts.el
-           Meadow             meadow-        meadow-commands.el
+Meadow             meadow-        meadow-commands.el
 ------------------------------------------------------------------------
 Mac OS X   Carbon Emacs       carbon-emacs-  carbon-emacs-applescript.el
-           Cocoa Emacs        cocoa-emacs-   cocoa-emacs-plist.el
+Cocoa Emacs        cocoa-emacs-   cocoa-emacs-plist.el
 ------------------------------------------------------------------------
 GNU/Linux                     linux-         linux-commands.el
 ------------------------------------------------------------------------

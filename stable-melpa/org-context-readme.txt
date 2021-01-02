@@ -3,7 +3,7 @@ contextual capture templates and agenda commands.
 
 See documentation on https://github.com/thisirs/org-context#org-context
 
-Installation:
+; Installation:
 
 Put the following in your .emacs:
 

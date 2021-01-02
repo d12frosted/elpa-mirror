@@ -1,13 +1,14 @@
+
 This is a minor mode on top of js2-mode which highlights all
 occurrences of the variable under the cursor within its defining
 scope.
 
-Installation:
+; Installation:
 
 Install this package from MELPA using `M-x install-package` and put
 the following in your ~/.emacs.d/init.el:
 (eval-after-load "js2-highlight-vars-autoloads"
-  '(add-hook 'js2-mode-hook (lambda () (js2-highlight-vars-mode))))
+'(add-hook 'js2-mode-hook (lambda () (js2-highlight-vars-mode))))
 
 If you aren't already using MELPA, see:
 http://melpa.milkbox.net/#/getting-started

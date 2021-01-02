@@ -1,3 +1,4 @@
+
 This package currently provides the following function:
 
 * `query-replace-with-inflections'
@@ -17,4 +18,4 @@ library depends on:
 
 Here's my suggested settings:
 
-  (define-key search-map "n" 'query-replace-with-inflections)
+(define-key search-map "n" 'query-replace-with-inflections)

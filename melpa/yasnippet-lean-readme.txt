@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; Snippet collection for the Lean theorem prover.
-
+Snippet collection for the Lean theorem prover.

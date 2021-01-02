@@ -1,3 +1,1 @@
-;;; Commentary:
-;; Helm UI wrapper for system package managers.
-
+Helm UI wrapper for system package managers.

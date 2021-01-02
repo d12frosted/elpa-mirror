@@ -5,7 +5,7 @@ https://www.chatwork.com/service/packages/chatwork/subpackages/api/apply_beta.ph
 
 Example:
 
- (setq chatwork-token "YOUR CHATWORK API TOKEN")
+(setq chatwork-token "YOUR CHATWORK API TOKEN")
 
 `chatwork' command open a draft buffer for selected room.
 Write a message, then type `C-cC-c'.

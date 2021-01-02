@@ -1,3 +1,4 @@
+
 Use to make random decisions. Roll various types of dice, generate
 random numbers from ranges, or generate random text from
 tables.

@@ -1,4 +1,3 @@
-Commentary:
 
 Bitcoin donations gratefully accepted: 12k9zUo9Dgqk8Rary2cuzyvAQWD5EAuZ4q
 
@@ -6,7 +5,7 @@ This library provides the command `dired-find-duplicates' which searches a direc
 duplicates of the marked files in the current dired buffer.
 It requires that the unix find and md5sum commands are on your system.
 
-Installation:
+; Installation:
 
 Put dired-dups.el in a directory in your load-path, e.g. ~/.emacs.d/
 You can add a directory to your load-path with the following line in ~/.emacs

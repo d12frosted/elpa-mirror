@@ -40,7 +40,7 @@ obsolete. If you have previously customized ido-ubiquitous, be sure
 to check out `M-x customize-group ido-completing-read-plus' after
 updating to 4.0 and make sure the new settings are to your liking.
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -54,3 +54,5 @@ General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with GNU Emacs.  If not, see <http://www.gnu.org/licenses/>.
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

@@ -4,7 +4,7 @@ use.  Srcery should play well with a 256 color terminal, provided the terminal
 colors are set to srcery colors.  See here for sample terminal configs:
 https://github.com/srcery-colors/srcery-terminal
 
-Credits
+; Credits
 
 Nasser Alshammari
 https://github.com/nashamri/spacemacs-theme

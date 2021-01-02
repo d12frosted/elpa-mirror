@@ -1,4 +1,3 @@
-Commentary:
 
 Bitcoin donations gratefully accepted: 1DPsbd286Xq8kch5t62DfppUbcL3e6PqnT
 

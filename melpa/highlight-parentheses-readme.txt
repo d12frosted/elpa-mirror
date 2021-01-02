@@ -1,3 +1,4 @@
+
 Add the following to your .emacs file:
 (require 'highlight-parentheses)
 

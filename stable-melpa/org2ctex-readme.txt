@@ -32,7 +32,7 @@ Tex Live 主站访问速度很慢，建议同学们使用国内镜像，许多 L
 
 *** 挂载已经下载的 ISO 镜像
 1. 下载安装 [[http://wincdemu.sysprogs.org/][wincdemu]], winmount 或者 DAEMON Tools，
-   这类工具可以将 ISO 文件挂载到一个盘符，比直接解压缩快速方便。
+这类工具可以将 ISO 文件挂载到一个盘符，比直接解压缩快速方便。
 2. 将 ISO 镜像挂载到 “Z:\”
 
 *** 运行安装程序
@@ -63,17 +63,17 @@ Tex Live 主站访问速度很慢，建议同学们使用国内镜像，许多 L
 
 1. 运行 window CMD
 2. 设置 Latex 宏包仓库
-   #+BEGIN_EXAMPLE
-   tlmgr option repository Z:
-   #+END_EXAMPLE
+#+BEGIN_EXAMPLE
+tlmgr option repository Z:
+#+END_EXAMPLE
 3. 更新设置
-   #+BEGIN_EXAMPLE
-   tlmgr update -all
-   #+END_EXAMPLE
+#+BEGIN_EXAMPLE
+tlmgr update -all
+#+END_EXAMPLE
 4. 安装所需宏包
-   #+BEGIN_EXAMPLE
-   tlmgr install collection-langcjk collection-langchinese ctex ctex-faq bibtex8 environ trimspaces zhnumber wrapfig capt-of latexmk dvipng dvisvgm
-   #+END_EXAMPLE
+#+BEGIN_EXAMPLE
+tlmgr install collection-langcjk collection-langchinese ctex ctex-faq bibtex8 environ trimspaces zhnumber wrapfig capt-of latexmk dvipng dvisvgm
+#+END_EXAMPLE
 
 ** 安装 org2ctex
 1. 配置 melpa: http://melpa.org/#/getting-started
@@ -114,14 +114,14 @@ Org2ctex 默认会搜索当前系统 *可用* 的字体，来自动设置 LaTeX 
 1. 确保 Emacs 可以显示 png 文件，具体参考：ftp://ftp.gnu.org/gnu/emacs/windows/README
 2. 安装 [[http://www.imagemagick.org/][imagemagick]] 和 [[http://ghostscript.com/][ghostscript]]
 3. 设置 Emacs
-   #+BEGIN_EXAMPLE
-   ;; (setq org-latex-create-formula-image-program 'dvipng)    ;速度很快，但 *默认* 不支持中文
-   (setq org-latex-create-formula-image-program 'imagemagick)  ;速度较慢，但支持中文
-   (setq org-format-latex-options
-         (plist-put org-format-latex-options :scale 2.0))      ;调整 LaTeX 预览图片的大小
-   (setq org-format-latex-options
-         (plist-put org-format-latex-options :html-scale 2.5)) ;调整 HTML 文件中 LaTeX 图像的大小
-   #+END_EXAMPLE
+#+BEGIN_EXAMPLE
+;; (setq org-latex-create-formula-image-program 'dvipng)    ;速度很快，但 *默认* 不支持中文
+(setq org-latex-create-formula-image-program 'imagemagick)  ;速度较慢，但支持中文
+(setq org-format-latex-options
+(plist-put org-format-latex-options :scale 2.0))      ;调整 LaTeX 预览图片的大小
+(setq org-format-latex-options
+(plist-put org-format-latex-options :html-scale 2.5)) ;调整 HTML 文件中 LaTeX 图像的大小
+#+END_EXAMPLE
 
 ** 常见错误排查和解决
 
@@ -150,49 +150,49 @@ MSYS2 的快捷方式，为快捷方式添加 "-full-path" 参数
 
 *** 缺少必要的 Latex 宏包
 **** 表现形式
- 1. message buffer中有类似输出
-    #+BEGIN_EXAMPLE
-    Processing LaTeX file ./export-org-file-to-pdf-with-ctex.tex...
-    PDF file ./export-org-file-to-pdf-with-ctex.pdf wasn't produced
-    #+END_EXAMPLE
- 2. *Org PDF LaTeX Output* buffer 中有类似输出
-    #+BEGIN_EXAMPLE
-    ...
+1. message buffer中有类似输出
+#+BEGIN_EXAMPLE
+Processing LaTeX file ./export-org-file-to-pdf-with-ctex.tex...
+PDF file ./export-org-file-to-pdf-with-ctex.pdf wasn't produced
+#+END_EXAMPLE
+2. *Org PDF LaTeX Output* buffer 中有类似输出
+#+BEGIN_EXAMPLE
+...
 
-    (c:/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)
-    (c:/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-    (c:/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
-    (c:/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-    (c:/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty))))
-    (c:/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty))
-    (c:/texlive/2015/texmf-dist/tex/latex/tools/longtable.sty)
+(c:/texlive/2015/texmf-dist/tex/generic/oberdiek/ltxcmds.sty)
+(c:/texlive/2015/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+(c:/texlive/2015/texmf-dist/tex/generic/oberdiek/infwarerr.sty)
+(c:/texlive/2015/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+(c:/texlive/2015/texmf-dist/tex/generic/oberdiek/ifluatex.sty))))
+(c:/texlive/2015/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty))
+(c:/texlive/2015/texmf-dist/tex/latex/tools/longtable.sty)
 
-    ! LaTeX Error: File `wrapfig.sty' not found.
+! LaTeX Error: File `wrapfig.sty' not found.
 
-    Type X to quit or <RETURN> to proceed,
-    or enter new name.  (Default extension: sty)
+Type X to quit or <RETURN> to proceed,
+or enter new name.  (Default extension: sty)
 
-    Enter file name:
-    ! Emergency stop.
-    <read *>
+Enter file name:
+! Emergency stop.
+<read *>
 
-    l.8 \usepackage
-                   {rotating}^^M
-    No pages of output.
+l.8 \usepackage
+{rotating}^^M
+No pages of output.
 
-    ...
-    #+END_EXAMPLE
+...
+#+END_EXAMPLE
 
 **** 解决方式
- #+BEGIN_EXAMPLE
-    ! LaTeX Error: File `wrapfig.sty' not found.
- #+END_EXAMPLE
- 这个错误提示说明，你安装的 Tex Live 中没有包含 wrapfig.sty 这个文件，需要你安装，解决方式：
+#+BEGIN_EXAMPLE
+! LaTeX Error: File `wrapfig.sty' not found.
+#+END_EXAMPLE
+这个错误提示说明，你安装的 Tex Live 中没有包含 wrapfig.sty 这个文件，需要你安装，解决方式：
 
- 1. 直接试着安装 “wrapfig” 宏包
-    #+BEGIN_EXAMPLE
-    tlmgr option repository Z:
-    tlmgr update -all
-    tlmgr install wrapfig
-    #+END_EXAMPLE
- 2. 如果没有找到 “wrapfig” 宏包，你需要找到哪个宏包包含 wrapfig.sty，一个简单的方式就是用 google 搜索 wrapfig.sty，一般会有相关的信息。
+1. 直接试着安装 “wrapfig” 宏包
+#+BEGIN_EXAMPLE
+tlmgr option repository Z:
+tlmgr update -all
+tlmgr install wrapfig
+#+END_EXAMPLE
+2. 如果没有找到 “wrapfig” 宏包，你需要找到哪个宏包包含 wrapfig.sty，一个简单的方式就是用 google 搜索 wrapfig.sty，一般会有相关的信息。

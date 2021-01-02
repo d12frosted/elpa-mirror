@@ -1,8 +1,9 @@
-   A little minor mode providing electric keys for #{} interpolation
- in ruby
 
-Installation:
+A little minor mode providing electric keys for #{} interpolation
+in ruby
 
-   Drop into your `vendor` directory and `(require 'ruby-interpolation)`
+; Installation:
 
-Code
+Drop into your `vendor` directory and `(require 'ruby-interpolation)`
+
+; Code

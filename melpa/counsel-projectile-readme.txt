@@ -1,3 +1,4 @@
+
 Projectile has native support for using ivy as its completion
 system. Counsel-projectile provides further ivy integration into
 projectile by taking advantage of ivy's support for selecting from

@@ -9,16 +9,16 @@ obvious, e.g. for `dired' you have to use `dired-after-readin-hook'
 instead of `dired-mode-hook' unless you're using Emacs >= 28:
 https://gitlab.com/stepnem/stripes-el/-/issues/1#note_309176403
 
-Related / history:
+; Related / history:
 
 Before deciding to go the minimal way I also stumbled upon (and
 discarded just by looking at) the following:
 
-  https://github.com/sabof/stripe-buffer
+https://github.com/sabof/stripe-buffer
 
 ...and an apparently unfinished attempt at rewriting it:
 
-  https://github.com/michael-heerdegen/stripe-buffer
+https://github.com/michael-heerdegen/stripe-buffer
 
 Michael Schierl's last version (0.2) this is based off can still be
 found in the git repository (first commit) or at the EmacsWiki:

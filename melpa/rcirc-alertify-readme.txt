@@ -23,7 +23,7 @@ your preferred notifier, here is an example config for libnotify:
 
 (setq alert-default-style 'libnotify)
 
-Installation:
+; Installation:
 
 The recommended installation method is using `package-install'.
 After that's done, just add this to your .emacs:

@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; Major-mode for Apple's Swift programming language.
-
+Major-mode for Apple's Swift programming language.

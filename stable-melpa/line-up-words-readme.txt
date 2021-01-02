@@ -16,6 +16,6 @@ Installation:
 You need to install the OCaml program ``line-up-words''.  The
 easiest way to do so is to install the opam package manager:
 
-  https://opam.ocaml.org/doc/Install.html
+https://opam.ocaml.org/doc/Install.html
 
 and then run "opam install line-up-words".

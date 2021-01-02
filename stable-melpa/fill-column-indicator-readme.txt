@@ -15,7 +15,7 @@ Installation and Usage
 
 Put this file in your load path and put:
 
-  (require 'fill-column-indicator)
+(require 'fill-column-indicator)
 
 in your init file.
 
@@ -94,40 +94,40 @@ Troubleshooting
 ===============
 
 o Fci-mode is intended to be used with monospaced fonts.  If you're using
-  a monospaced font and the fill-column rule is missing or misaligned on a
-  few lines but otherwise appears normal, then most likely (a) there are
-  non-ascii characters on those lines that are being displayed using a
-  non-monospaced font, or (b) your font-lock settings use bold or italics
-  and those font variants aren't monospaced.
+a monospaced font and the fill-column rule is missing or misaligned on a
+few lines but otherwise appears normal, then most likely (a) there are
+non-ascii characters on those lines that are being displayed using a
+non-monospaced font, or (b) your font-lock settings use bold or italics
+and those font variants aren't monospaced.
 
 o Fci-mode in not currently compatible with Emacs's
-  `show-trailing-whitespace' feature (given the way the latter is
-  implemented, such compatibility is going to be hard to achieve).  A
-  workaround is to configure `whitespace-mode' to replicate the
-  functionality of show-trailing-whitespace.  This can be done with the
-  following setting:
+`show-trailing-whitespace' feature (given the way the latter is
+implemented, such compatibility is going to be hard to achieve).  A
+workaround is to configure `whitespace-mode' to replicate the
+functionality of show-trailing-whitespace.  This can be done with the
+following setting:
 
-    (setq whitespace-style '(face trailing))
+(setq whitespace-style '(face trailing))
 
- With this, whitespace-mode produces the same basic effect as a non-nil
- value of show-trailing-whitespace, and compatibility with fci-mode is not
- a problem.
+With this, whitespace-mode produces the same basic effect as a non-nil
+value of show-trailing-whitespace, and compatibility with fci-mode is not
+a problem.
 
 Known Issues
 ============
 
 o The indicator extends only to end of the buffer contents (as opposed to
-  running the full length of the editing window).
+running the full length of the editing window).
 
 o When portions of a buffer are invisible, such as when outline-mode is
-  used to hide certain lines, the fill-column rule is hidden as well.
+used to hide certain lines, the fill-column rule is hidden as well.
 
 o Fci-mode should work smoothly when simultaneously displaying the same
-  buffer on both a graphical display and on a character terminal.  It does
-  not currently support simultaneous display of the same buffer on window
-  frames with different default font sizes. (It would be feasible to
-  support this use case, but thus far there seems to be no demand for
-  it.)
+buffer on both a graphical display and on a character terminal.  It does
+not currently support simultaneous display of the same buffer on window
+frames with different default font sizes. (It would be feasible to
+support this use case, but thus far there seems to be no demand for
+it.)
 
 Todo
 ====

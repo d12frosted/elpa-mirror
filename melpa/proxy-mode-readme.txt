@@ -1,2 +1,2 @@
-toggle proxy-mode to use proxy.
-[M-x proxy-mode RET]
+; toggle proxy-mode to use proxy.
+; [M-x proxy-mode RET]

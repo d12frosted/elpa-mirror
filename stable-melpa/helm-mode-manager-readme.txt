@@ -1,3 +1,4 @@
+
 A call to `helm-switch-major-mode' will give you a `helm' selection
 of all available major modes.  Selecting a target will activate the
 major mode.  The persistent action is to show help about the

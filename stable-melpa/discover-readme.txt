@@ -1,3 +1,4 @@
+
 discover.el adds context menus to commonly-used features in
 Emacs. The context menu functionality is provided by makey.el, a
 library based on the popup menus used in Magit.

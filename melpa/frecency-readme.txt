@@ -1,13 +1,13 @@
 This library provides a way to sort items by "frecency" (frequency
 and recency).
 
-Installation
+;; Installation
 
-MELPA
+;;; MELPA
 
 If you installed from MELPA, you're done.
 
-Manual
+;;; Manual
 
 Install these required packages:
 
@@ -16,7 +16,7 @@ Install these required packages:
 
 Then put this file in your load-path.
 
-Usage
+;; Usage
 
 Load the library with:
 
@@ -53,11 +53,11 @@ hash-tables, or other collections by setting `:get-fn' and
 to `plist-get' and `plist-put' respectively).  `:get-fn' should
 have the signature (ITEM KEY), and `:set-fn' (ITEM KEY VALUE).
 
-Tips
+;; Tips
 
 + You can customize settings in the `frecency' group.
 
-Credits
+;; Credits
 
 This package is based on the "frecency" algorithm which was
 (perhaps originally) implemented in Mozilla Firefox, and has since

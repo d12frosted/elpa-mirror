@@ -19,7 +19,7 @@ History
 0.5 - Initial release.
 0.6 - Added delete posts functionality
 0.6.1 - Minor fix for `ix-delete' interactive form & adding
-        `ix-version' as a const
+`ix-version' as a const
 0.6.2 - `ix-delete' accepts a full url or the post id
 0.7.0 - Adding `ix-browse'
-          `ix-browse' lets you browse a post at http://ix.io
+`ix-browse' lets you browse a post at http://ix.io

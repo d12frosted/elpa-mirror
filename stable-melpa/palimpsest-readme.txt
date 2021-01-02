@@ -1,4 +1,3 @@
-Documentation:
 
 This minor mode provides several strategies to remove text without
 permanently deleting it, useful to prose / fiction writers.

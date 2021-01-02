@@ -1,3 +1,1 @@
-;;; Commentary:
-;; The project is hosted at https://github.com/sabof/es-lib
-
+The project is hosted at https://github.com/sabof/es-lib

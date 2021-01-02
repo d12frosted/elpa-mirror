@@ -1,5 +1,2 @@
-;;; Commentary:
-;;
-;; Preview markdown buffer live over HTTP using showdown.
-;;
 
+Preview markdown buffer live over HTTP using showdown.

@@ -1,4 +1,4 @@
-Description:
+; Description:
 
 This program exists because I was tired of manually aligning let
 statements in clojure.  This program is designed to quickly and

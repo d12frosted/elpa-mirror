@@ -4,14 +4,14 @@ Sample configuration
 
 If you change `requires' auto-complete source attribute
 
-  (custom-set-variables
-    '(ac-etags-requires 1))
+(custom-set-variables
+'(ac-etags-requires 1))
 
-  (eval-after-load "etags"
-    '(progn
-        (ac-etags-setup)))
+(eval-after-load "etags"
+'(progn
+(ac-etags-setup)))
 
-  (defun my/c-mode-common-hook ()
-    (add-to-list 'ac-sources 'ac-source-etags))
+(defun my/c-mode-common-hook ()
+(add-to-list 'ac-sources 'ac-source-etags))
 
-  (add-hook 'c-mode-common-hook 'my/c-mode-common-hook)
+(add-hook 'c-mode-common-hook 'my/c-mode-common-hook)

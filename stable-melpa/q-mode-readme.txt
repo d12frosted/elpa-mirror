@@ -3,11 +3,11 @@ see URL `http://www.kx.com') in Emacs.
 
 Some of its major features include:
 
- - syntax highlighting (font lock),
+- syntax highlighting (font lock),
 
- - interaction with inferior q[con] instance,
+- interaction with inferior q[con] instance,
 
- - scans declarations and places them in a menu.
+- scans declarations and places them in a menu.
 
 To load `q-mode' on-demand, instead of at startup, add this to your
 initialization file
@@ -24,9 +24,9 @@ with S-mode.  To stop this, add the following lines to your
 initialization file.
 
 (defun remove-ess-q-extn ()
-  (when (assoc "\\.[qsS]\\'" auto-mode-alist)
-   (setq auto-mode-alist
-         (remassoc "\\.[qsS]\\'" auto-mode-alist))))
+(when (assoc "\\.[qsS]\\'" auto-mode-alist)
+(setq auto-mode-alist
+(remassoc "\\.[qsS]\\'" auto-mode-alist))))
 (add-hook 'ess-mode-hook 'remove-ess-q-extn)
 (add-hook 'inferior-ess-mode-hook 'remove-ess-q-extn)
 
@@ -48,9 +48,13 @@ then scroll left and right in the buffer to see all the columns.
 The following commands are available to interact with an inferior
 q[con] process/buffer.  `C-c C-l' sends a single line, `C-c C-f'
 sends the surrounding function, `C-c C-r' sends the selected region
-and `C-c C-b' sends the whole buffer.  If the source file exists on
-the same machine as the q process, `C-c M-l' can be used to load
-the file associated with the active buffer.
+and `C-c C-b' sends the whole buffer. If prefixed with `C-u C-u',
+or pressing `C-c M-j' `C-c M-f' `C-c M-r' respectively, will also
+switch point to the active q process buffer for direct interaction.
+
+If the source file exists on the same machine as the q process,
+`C-c M-l' can be used to load the file associated with the active
+buffer.
 
 `M-x customize-group' can be used to customize the `q' group.
 Specifically, the `q-program' and `q-qcon-program' variables can be

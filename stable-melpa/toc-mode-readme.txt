@@ -159,8 +159,8 @@ Finally, if you just want to extract some text
 
 Keybindings
 all-modes (i.e. all steps)
- Key Binding       Description
- C-c C-c           dispatch (next step)
+Key Binding       Description
+C-c C-c           dispatch (next step)
 
 toc-cleanup-mode
 C-c C-j            toc--join-next-unnumbered-lines

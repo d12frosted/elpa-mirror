@@ -11,7 +11,7 @@ quite compact anyways.
 Much inspiration was taken from yaml-mode so there might be
 similarities in the source structure and naming choices.
 
-Installation:
+; Installation:
 
 The easiest way to install octo-mode is from melpa.
 Assuming MELPA is added to your archive list you can list the

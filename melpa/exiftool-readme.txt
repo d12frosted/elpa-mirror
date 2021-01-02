@@ -1,3 +1,4 @@
+
 exiftool.el is an elisp wrapper around ExifTool.  ExifTool supports
 reading and writing metadata in various formats including EXIF, XMP
 and IPTC.

@@ -1,3 +1,1 @@
-;;; Commentary:
-;; JavaScript,React,Redux yasnippets
-
+JavaScript,React,Redux yasnippets

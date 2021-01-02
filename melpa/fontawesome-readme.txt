@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; fontawesome.el provides fontawesome(https://fortawesome.github.io/Font-Awesome/) utilities.
-
+fontawesome.el provides fontawesome(https://fortawesome.github.io/Font-Awesome/) utilities.

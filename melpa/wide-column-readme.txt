@@ -1,3 +1,4 @@
+
 This package is designed to run functions depending on the column
 that the cursor is in.  My initial idea with it, is just to have it
 change the cursor colour, lightening it as you go over the fill
@@ -28,11 +29,11 @@ variable `wide-column-default-cursor-colour' which will solve this
 problem.
 
 
-Similar Packages:
+; Similar Packages:
 
 Sandip Chitale (sandip.chitale@blazesoft.com) highlight-beyond-fill
 
-Installation
+; Installation
 
 Place this file in your Emacs load path. Put (require 'wide-column)
 into your .emacs or equivalent file. This operates as a normal
@@ -44,7 +45,7 @@ been removed because it required code duplication horribleness.
 It may work on XEmacs, but I don't have one around to try. You will
 certainly need the fsf compatibility packages if you do.
 
-Issues;
+; Issues;
 
 1) I'm not sure about the error handling. I think things are
 working quite well. However if the affector function crashes out,

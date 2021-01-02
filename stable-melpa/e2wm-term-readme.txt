@@ -1,3 +1,4 @@
+
 This extension provides the frontend for work in terminal, which has the following features.
 
 - invoke command by not a newline key but a dedicated key for avoiding an unintended invocation.

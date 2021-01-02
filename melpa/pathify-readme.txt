@@ -6,9 +6,9 @@ environment variable :-).
 
 To install the package manually, add the following to your init file:
 
-  (add-to-list 'load-path "/path/to/pathify-dir")
-  (autoload 'pathify "pathify" nil t)
-  (autoload 'pathify-dired "pathify" nil t)
+(add-to-list 'load-path "/path/to/pathify-dir")
+(autoload 'pathify "pathify" nil t)
+(autoload 'pathify-dired "pathify" nil t)
 
 Optionally, set `pathify-directory' variable (if you do not use
 "~/bin"):
@@ -18,5 +18,5 @@ pathify the marked files (or the current file if nothing is marked).
 For more convenience, you may bind this command to some key, for
 example:
 
-  (eval-after-load 'dired
-    '(define-key dired-mode-map "P" 'pathify-dired))
+(eval-after-load 'dired
+'(define-key dired-mode-map "P" 'pathify-dired))

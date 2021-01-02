@@ -15,14 +15,14 @@ possibilities that Emacs face attributes have.
 
 Example usage:
 
-    M-x color-theme-x RET classic RET ~/elisp/color-theme.el RET
+M-x color-theme-x RET classic RET ~/elisp/color-theme.el RET
 
 Then if necessary, adjust the output in the
 *color-theme-xresources* to taste, copy it to your ~/.Xresources
 (don't use .Xdefaults -- it is obsolete) and run:
 
-    xrdb -load ~/.Xresources
+xrdb -load ~/.Xresources
 or
-    xrdb -merge ~/.Xresources
+xrdb -merge ~/.Xresources
 
 (Depending on what is desired).  Then restart Emacs.

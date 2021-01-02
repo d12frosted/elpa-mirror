@@ -1,3 +1,4 @@
+
 Extension of `recentf' package.
 
 * `dired' buffers can be handled.

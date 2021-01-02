@@ -22,10 +22,10 @@ from [MELPA Stable](https://stable.melpa.org/#/deft) using
 repository by adding the following to your `.emacs', `init.el', or
 equivalent startup file:
 
-    (require 'package)
-    (add-to-list 'package-archives
-                 '("melpa-stable" . "https://stable.melpa.org/packages/"))
-    (package-initialize)
+(require 'package)
+(add-to-list 'package-archives
+'("melpa-stable" . "https://stable.melpa.org/packages/"))
+(package-initialize)
 
 Then, after restarting Emacs or evaluating the above statements, issue
 the following command: `M-x package-install RET deft RET`.
@@ -38,18 +38,18 @@ Alternatively you can manually download and install Deft.
 First, download the latest stable version of and save the file
 where Emacs can find it---a directory in your `load-path':
 
-  * [deft.el](https://jblevins.org/projects/deft/deft.el)
+* [deft.el](https://jblevins.org/projects/deft/deft.el)
 
 Then, add the following line to your startup file:
 
-    (require 'deft)
+(require 'deft)
 
 **Development Version**
 
 To follow or contribute to Deft development, you can browse or
 clone the Git repository [on GitHub](https://github.com/jrblevin/deft):
 
-    git clone https://github.com/jrblevin/deft.git
+git clone https://github.com/jrblevin/deft.git
 
 If you prefer to install and use the development version, which may
 become unstable at some times, you can either clone the Git
@@ -59,7 +59,7 @@ repository as above or install Deft from
 If you clone the repository directly, then make sure that Emacs can
 find it by adding the following line to your startup file:
 
-    (add-to-list 'load-path "/path/to/deft/repository")
+(add-to-list 'load-path "/path/to/deft/repository")
 
 Overview
 --------
@@ -75,15 +75,15 @@ All Deft files or notes are simple plain text files where the first
 line contains a title.  As an example, the following directory
 structure generated the screenshot above.
 
-    % ls ~/.deft
-    about.txt    browser.txt     directory.txt   operations.txt
-    ack.txt      completion.txt  extensions.org
-    binding.txt  creation.txt    filtering.txt
+% ls ~/.deft
+about.txt    browser.txt     directory.txt   operations.txt
+ack.txt      completion.txt  extensions.org
+binding.txt  creation.txt    filtering.txt
 
-    % cat ~/.deft/about.txt
-    # About
+% cat ~/.deft/about.txt
+# About
 
-    An Emacs mode for slicing and dicing plain text files.
+An Emacs mode for slicing and dicing plain text files.
 
 Deft's primary operation is searching and filtering.  The list of
 files can be limited or filtered using a search string, which will
@@ -185,8 +185,8 @@ the Deft directory by running `M-x customize-group` and typing
 `deft`.  Alternatively, you can configure them in your `.emacs`
 file:
 
-    (setq deft-extensions '("txt" "tex" "org"))
-    (setq deft-directory "~/Dropbox/notes")
+(setq deft-extensions '("txt" "tex" "org"))
+(setq deft-directory "~/Dropbox/notes")
 
 The first element of `deft-extensions' (or in Lisp parlance, the
 car) is the default extension used to create new files.
@@ -198,23 +198,23 @@ matching `deft-ignore-file-regexp'.  Set `deft-recursive' to a
 non-nil value to enable searching for files in subdirectories
 (those not matching `deft-recursive-ignore-dir-regexp'):
 
-    (setq deft-recursive t)
+(setq deft-recursive t)
 
 You can easily set up a global keyboard binding for Deft.  For
 example, to bind it to F8, add the following code to your `.emacs`
 file:
 
-    (global-set-key [f8] 'deft)
+(global-set-key [f8] 'deft)
 
 If you manage loading packages with [use-package][], then you can
 configure by adding a declaration such as this one to your init
 file:
 
-    (use-package deft
-      :bind ("<f8>" . deft)
-      :commands (deft)
-      :config (setq deft-directory "~/Dropbox/notes"
-                    deft-extensions '("md" "org")))
+(use-package deft
+:bind ("<f8>" . deft)
+:commands (deft)
+:config (setq deft-directory "~/Dropbox/notes"
+deft-extensions '("md" "org")))
 
 [use-package]: https://github.com/jwiegley/use-package
 
@@ -243,7 +243,7 @@ the title of a note (rather than the first line of the file), set the
 use note filenames to generate the displayed titles in the Deft
 file browser.  To enable this, add the following to your `.emacs` file:
 
-    (setq deft-use-filename-as-title t)
+(setq deft-use-filename-as-title t)
 
 Finally, the short summary that is displayed following the file
 title can be customized by changing `deft-strip-summary-regexp'.  By
@@ -260,77 +260,77 @@ as well as the rules in the `deft-file-naming-rules' alist.
 The possible cases are as follows:
 
 1.  **Default** (`deft-use-filename-as-title' and
-    `deft-use-filter-string-for-filename' are both `nil'):
+`deft-use-filter-string-for-filename' are both `nil'):
 
-    The filename will be automatically generated using an short,
-    ISO-like timestamp as in `2016-05-12T09:00.txt'.  The format
-    can be customized by setting the variable
-    `deft-new-file-format'.  The filter string will be inserted as
-    the first line of the file (which is also used as the display
-    title).  In case of file name conflicts, an underscore and a
-    numerical suffix (e.g., `_2') will be appended before the
-    extension.
+The filename will be automatically generated using an short,
+ISO-like timestamp as in `2016-05-12T09:00.txt'.  The format
+can be customized by setting the variable
+`deft-new-file-format'.  The filter string will be inserted as
+the first line of the file (which is also used as the display
+title).  In case of file name conflicts, an underscore and a
+numerical suffix (e.g., `_2') will be appended before the
+extension.
 
 2.  **Filenames as titles** (`deft-use-filename-as-title' is non-`nil'):
 
-    When `deft-use-filename-as-title' is non-`nil', the filter string
-    will be used as the filename for new files (with the appropriate
-    file extension appended to the end).  An example of new file creation
-    in this case:
+When `deft-use-filename-as-title' is non-`nil', the filter string
+will be used as the filename for new files (with the appropriate
+file extension appended to the end).  An example of new file creation
+in this case:
 
-      * Filter string: "My New Project"
-      * File name: "My New Project.txt"
-      * File contents: [empty]
+* Filter string: "My New Project"
+* File name: "My New Project.txt"
+* File contents: [empty]
 
 3.  **Readable filenames** (`deft-use-filename-as-title' is
-    `nil' but `deft-use-filter-string-for-filename' is non-`nil'):
+`nil' but `deft-use-filter-string-for-filename' is non-`nil'):
 
-    In this case you can choose to display the title as parsed from
-    the first line of the file while also generating readable
-    filenames for new files based on the filter string.  The
-    variable `deft-use-filter-string-for-filename' controls this
-    behavior and decouples the title display
-    (`deft-use-filename-as-title') from the actual filename.  New
-    filenames will be generated from the filter string and
-    processed according to the rules defined in the
-    `deft-file-naming-rules' alist.  By default, slashes are removed
-    and replaced by hyphens, but many other options are possible
-    (camel case, replacing spaces by hyphens, and so on).  See the
-    documentation for `deft-file-naming-rules' for additional
-    details.
+In this case you can choose to display the title as parsed from
+the first line of the file while also generating readable
+filenames for new files based on the filter string.  The
+variable `deft-use-filter-string-for-filename' controls this
+behavior and decouples the title display
+(`deft-use-filename-as-title') from the actual filename.  New
+filenames will be generated from the filter string and
+processed according to the rules defined in the
+`deft-file-naming-rules' alist.  By default, slashes are removed
+and replaced by hyphens, but many other options are possible
+(camel case, replacing spaces by hyphens, and so on).  See the
+documentation for `deft-file-naming-rules' for additional
+details.
 
-    As an example, with the following value for
-    `deft-file-naming-rules', Deft will replace all slashes and
-    spaces with hyphens and will convert the file name to
-    lowercase:
+As an example, with the following value for
+`deft-file-naming-rules', Deft will replace all slashes and
+spaces with hyphens and will convert the file name to
+lowercase:
 
-        (setq deft-file-naming-rules
-              '((noslash . "-")
-                (nospace . "-")
-                (case-fn . downcase)))
+(setq deft-file-naming-rules
+'((noslash . "-")
+(nospace . "-")
+(case-fn . downcase)))
 
-    Below is an example in this case, with the above file naming
-    rules.  Notice that the filter string is inserted as the first
-    line of the file but it is also used to generate a "readable"
-    file name.
+Below is an example in this case, with the above file naming
+rules.  Notice that the filter string is inserted as the first
+line of the file but it is also used to generate a "readable"
+file name.
 
-      * Filter string: "My New Project"
-      * File name: "my-new-project.txt"
-      * File contents: "My New Project"
+* Filter string: "My New Project"
+* File name: "my-new-project.txt"
+* File contents: "My New Project"
 
 Titles inserted into files from the filter string can also be
 customized for two common modes, `markdown-mode' and `org-mode', by
 setting the following variables:
 
 * `deft-markdown-mode-title-level' - When set to a positive
-  integer, determines how many hash marks will be added to titles
-  in new Markdown files.  In other words, setting
-  `deft-markdown-mode-title-level' to `2` will result in new files
-  being created with level-2 headings of the form `## Title`.
+integer, determines how many hash marks will be added to titles
+in new Markdown files.  In other words, setting
+`deft-markdown-mode-title-level' to `2` will result in new files
+being created with level-2 headings of the form `## Title`.
 
 * `deft-org-mode-title-prefix' - When non-nil, automatically
-  generated titles in new `org-mode' files will be prefixed with
-  `#+TITLE:`.
+generated titles in new `org-mode' files will be prefixed with
+`#+TITLE:`.
 
 Other Customizations
 --------------------
@@ -360,7 +360,7 @@ keybinding for this function to open Deft files anywhere.  For
 example, to use `C-x C-g`, a neighbor of `C-x C-f`, use the
 following:
 
-    (global-set-key (kbd "C-x C-g") 'deft-find-file)
+(global-set-key (kbd "C-x C-g") 'deft-find-file)
 
 The faces used for highlighting various parts of the screen can
 also be customized.  By default, these faces inherit their
@@ -391,16 +391,16 @@ History
 Version 0.8 (2018-01-12):
 
 * Limit `deft-find-file' to files known to Deft and support
-  completing-read.
+completing-read.
 * Keep subdirectory portion when displaying filenames.
 * New variable `deft-width-offset' for custom summary line width
-  offset.
+offset.
 * Attempt to restore point after refreshing browser and preserve
-  position while filtering.
+position while filtering.
 * Add hooks: `deft-filter-hook' for filter string changes and
-  `deft-open-file-hook' which runs after opening a file.
+`deft-open-file-hook' which runs after opening a file.
 * Prevent spurious Deft browser refreshes, which fixes an issue
-  with `sublimity-mode'.
+with `sublimity-mode'.
 * More reliable browser updates when window size changes.
 * Only update width when buffer is visible.
 * Lazily update the Deft buffer after saving files.
@@ -415,48 +415,48 @@ Version 0.8 (2018-01-12):
 Version 0.7 (2015-12-21):
 
 * Add custom regular expression `deft-strip-summary-regexp' for
-  stripping extraneous text for generating the summary line.  Strip
-  all `org-mode' metadata by default.
+stripping extraneous text for generating the summary line.  Strip
+all `org-mode' metadata by default.
 * New customizable regular expressions for ignoring files and
-  directories.  See `deft-recursive-ignore-dir-regexp' and
-  `deft-ignore-file-regexp'.
+directories.  See `deft-recursive-ignore-dir-regexp' and
+`deft-ignore-file-regexp'.
 * Bug fix: Prevent lines from wrapping in console mode.
 * Bug fix: Setup `deft-extensions` and `deft-default-extension` at
-  load time.
+load time.
 * Bug fix: Try to prevent false title matches in org-mode notes
-  where the string `#+TITLE:` might also appear in the body.
+where the string `#+TITLE:` might also appear in the body.
 * Bug fix: Use `with-current-buffer` instead of `save-excursion`
-  while auto-saving files since we do not want to save the point.
+while auto-saving files since we do not want to save the point.
 * Bug fix: Don't escape quotes in `deft-file-naming-rules'.
 
 Version 0.6 (2015-06-26):
 
 * Recursive search in subdirectories (optional).  Set
-  `deft-recursive' to a non-nil value to enable.
+`deft-recursive' to a non-nil value to enable.
 * Support for multiple extensions via the `deft-extensions' list.
-  As such, `deft-extension' is now deprecated.
+As such, `deft-extension' is now deprecated.
 * New variable `deft-create-file-from-filter-string' can enable
-  generation of new filenames based on the filter string.  This decouples
-  the title display (`deft-use-filename-as-title') from the actual filename
-  generation.
+generation of new filenames based on the filter string.  This decouples
+the title display (`deft-use-filename-as-title') from the actual filename
+generation.
 * New variable `deft-file-naming-rules' allows customizing generation
-  of filenames with regard to letter case and handling of spaces.
+of filenames with regard to letter case and handling of spaces.
 * New variables `deft-markdown-mode-title-level' and
-  `deft-org-mode-title-prefix' for automatic insertion of title markup.
+`deft-org-mode-title-prefix' for automatic insertion of title markup.
 * Archiving of files in `deft-archive-directory'.
 * Ability to sort by either title or modification time via
-  `deft-current-sort-method'.
+`deft-current-sort-method'.
 * Update default `deft-strip-title-regexp' to remove the following:
-    - org-mode `#+TITLE:` tags
-    - MultiMarkdown `Title:` tags
-    - LaTeX comment markers
-    - Emacs mode-line declarations (e.g., `-*-mode-*-`)
+- org-mode `#+TITLE:` tags
+- MultiMarkdown `Title:` tags
+- LaTeX comment markers
+- Emacs mode-line declarations (e.g., `-*-mode-*-`)
 * Remove leading and trailing whitespace from titles.
 * Disable visual line mode to prevent lines from wrapping.
 * Enable line truncation to avoid displaying truncation characters.
 * Show the old filename as the default prompt when renaming a file.
 * Call `hack-local-variables' to read file-local variables when
-  opening files.
+opening files.
 * Fixed several byte-compilation warnings.
 * Bug fix: more robust handling of relative and absolute filenames.
 * Bug fix: use width instead of length of strings for calculations.
@@ -465,31 +465,31 @@ Version 0.6 (2015-06-26):
 Version 0.5.1 (2013-01-28):
 
 * Bug fix: creating files with `C-c C-n` when both the filter string and
-  `deft-use-filename-as-title' are non-nil resulted in an invalid path.
+`deft-use-filename-as-title' are non-nil resulted in an invalid path.
 * Bug fix: killed buffers would persist in `deft-auto-save-buffers'.
 
 Version 0.5 (2013-01-25):
 
 * Implement incremental string search (default) and regexp search.
-  These search modes can be toggled by pressing `C-c C-t`.
+These search modes can be toggled by pressing `C-c C-t`.
 * Default search method can be changed by setting `deft-incremental-search'.
 * Support custom `deft-parse-title-function' for post-processing titles.
 * The default `deft-parse-title-function' simply strips occurrences of
-  `deft-strip-title-regexp', which removes Markdown and Org headings.
+`deft-strip-title-regexp', which removes Markdown and Org headings.
 * Open files in another window with `C-o`.  Prefix it with `C-u` to
-  switch to the other window.
+switch to the other window.
 * For symbolic links, use modification time of taget for sorting.
 * When opening files, move point to the end of the first match of
-  the filter string.
+the filter string.
 * Improved filter editing: delete (`DEL`), delete word (`M-DEL`),
-  and yank (`C-y`).
+and yank (`C-y`).
 * Advanced filter editing in minibuffer (`C-c C-l`).
 
 Version 0.4 (2011-12-11):
 
 * Improved filtering performance.
 * Optionally take title from filename instead of first line of the
-  contents (see `deft-use-filename-as-title').
+contents (see `deft-use-filename-as-title').
 * Dynamically resize width to fit the entire window.
 * Customizable time format (see `deft-time-format').
 * Handle `deft-directory' properly with or without a trailing slash.

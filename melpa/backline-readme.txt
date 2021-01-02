@@ -10,6 +10,6 @@ that and is required by this package.
 
 Usage:
 
-  (use-package backline
-    :after outline
-    :config (advice-add 'outline-flag-region :after 'backline-update))
+(use-package backline
+:after outline
+:config (advice-add 'outline-flag-region :after 'backline-update))

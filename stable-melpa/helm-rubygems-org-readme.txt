@@ -7,7 +7,7 @@ Requirements:
 Setup:
 API Key management.  Choose one of the three.
 * Store the rubygems.org API key in its recommended YAML file
-  at ~.gem/credentials
+at ~.gem/credentials
 * Add the key to the helm-rubygems-org customization group
 * setq helm-rubygems-org-api-key to the key or file path
 

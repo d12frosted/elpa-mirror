@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; A dark color theme available for a number of editors.
-
+A dark color theme available for a number of editors.

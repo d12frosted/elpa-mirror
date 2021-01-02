@@ -11,14 +11,14 @@ https://github.com/timvisher/vimgolf.el
 
 [1]: https://vimgolf.com/
 
-Installation:
+; Installation:
 
 Use MELPA Stable, preferably.
 
 I make no guarantees that vimgolf.el works with anything but the latest
 version of Emacs.
 
-Contributors
+; Contributors
 
 Tim Visher (@timvisher)
 Steve Purcell (@sanityinc)

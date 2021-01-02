@@ -3,8 +3,8 @@ impression, see URL for some pictures):
 
 Find file:~/
 -> *this*      and-some       the
-   that        more-things    end
-   the-other   here
+that        more-things    end
+the-other   here
 
 The grid works a bit like the zsh completion grid; you can move
 around it with the arrow keys or tab/backtab, and it scrolls when

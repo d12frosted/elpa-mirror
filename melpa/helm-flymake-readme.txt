@@ -1,3 +1,4 @@
+
 `helm' interface for flymake.
 When `flymake-mode' is t, M-x `helm-flymake' lists warning and error
 messages in *helm flymake* buffer.
@@ -13,9 +14,9 @@ When Enter/<return> is pressed the "default" action is executed
 moving point to the line of the selected warning/error and closing
 the `helm-flymake' mini-buffer.
 
-Installation:
+; Installation:
 
 Add followings on your .emacs.
 
-  (require 'helm-config)
-  (require 'helm-flymake)
+(require 'helm-config)
+(require 'helm-flymake)

@@ -15,18 +15,18 @@ initial password, and if so requested, sending the "idle" command.
 There are two idioms I've seen in MPD client libraries for sending
 commands while receiving notifications of server-side changes:
 
-    1. just maintain two connections (e.g. mpdfav
-       <https://github.com/vincent-petithory/mpdfav>); issue the
-       "idle" command on one, send commands on the other
+1. just maintain two connections (e.g. mpdfav
+<https://github.com/vincent-petithory/mpdfav>); issue the
+"idle" command on one, send commands on the other
 
-    2. use one connection, issue the "idle" command, and when asked
-       to issue another command, send "noidle", issue the
-       requested command, collect the response, and then send
-       "idle" again (e.g. `libmpdel').  Note that this is not a
-       race condition per
-       https://www.musicpd.org/doc/html/protocol.html#idle -- any
-       server-side changes that took place while processing the
-       command will be saved & returned on "idle"
+2. use one connection, issue the "idle" command, and when asked
+to issue another command, send "noidle", issue the
+requested command, collect the response, and then send
+"idle" again (e.g. `libmpdel').  Note that this is not a
+race condition per
+https://www.musicpd.org/doc/html/protocol.html#idle -- any
+server-side changes that took place while processing the
+command will be saved & returned on "idle"
 
 Since `elmpd' is a library, I do not make that choice here, but
 rather support both styles.

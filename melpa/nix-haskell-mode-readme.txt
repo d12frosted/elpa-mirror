@@ -5,8 +5,8 @@ haskell-mode and flycheck.
 If you have use-package setup, this is enough to get nix-haskell
 working,
 
-  (use-package nix-haskell
-    :hook (haskell-mode . nix-haskell-mode))
+(use-package nix-haskell
+:hook (haskell-mode . nix-haskell-mode))
 
 Opening a buffer will start a nix process to get your dependencies.
 Flycheck and interactive-haskell-mode will start running once they

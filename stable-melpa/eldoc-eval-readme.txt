@@ -1,3 +1,4 @@
+
 This package enables eldoc support when minibuffer is in use.
 
 Eldoc info is shown by default in mode-line,

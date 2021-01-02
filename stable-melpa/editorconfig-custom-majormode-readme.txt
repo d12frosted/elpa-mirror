@@ -21,4 +21,4 @@ To enable this plugin, add `editorconfig-custom-majormode' to
 `editorconfig-custom-hooks':
 
 (add-hook 'editorconfig-custom-hooks
-          'editorconfig-custom-majormode)
+'editorconfig-custom-majormode)

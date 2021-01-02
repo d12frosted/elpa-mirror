@@ -1,3 +1,4 @@
+
 Provides two functions. These are:
 
 `spotlight' prompts for a query string and searches the

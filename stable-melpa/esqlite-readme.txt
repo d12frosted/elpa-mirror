@@ -1,5 +1,5 @@
 esqlite.el is a implementation to handle sqlite database.
- (version 3 or later)
+(version 3 or later)
 
 Following functions are provided:
 * Read sqlite row as list of string.

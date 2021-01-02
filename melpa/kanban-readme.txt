@@ -53,13 +53,13 @@ TODO: bold text in headlines breaks the parser (*bold*).
 
 ChangeLog:
 
- - tip:   cleanup of titles from remote files
- - 0.2.1: document usage of "" to get all tags and 'file
- - 0.2.0: Finally merge the much faster kanban-fill from stackeffect.
-          I’m sorry that it took me 3 years to get there.
- - 0.1.7: strip keyword from link for org-version >= 9 and
-          avoid stripping trailing "* .*" in lines
- - 0.1.6: defcustom instead of defvar
- - 0.1.5: Allow customizing the maximum column width with
-          kanban-max-column-width
- - 0.1.4: Test version to see whether the marmalade upload works.
+- tip:   cleanup of titles from remote files
+- 0.2.1: document usage of "" to get all tags and 'file
+- 0.2.0: Finally merge the much faster kanban-fill from stackeffect.
+I’m sorry that it took me 3 years to get there.
+- 0.1.7: strip keyword from link for org-version >= 9 and
+avoid stripping trailing "* .*" in lines
+- 0.1.6: defcustom instead of defvar
+- 0.1.5: Allow customizing the maximum column width with
+kanban-max-column-width
+- 0.1.4: Test version to see whether the marmalade upload works.

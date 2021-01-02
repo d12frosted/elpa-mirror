@@ -7,3 +7,4 @@ Put the tinysegmenter.el to your
 load-path.
 Add to init file :
 (require 'tinysegmenter)
+

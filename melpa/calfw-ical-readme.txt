@@ -1,7 +1,7 @@
 A bridge from ical to calfw.
 The API and interfaces have not been confirmed yet.
 
-Installation:
+; Installation:
 
 Here is a minimum sample code:
 (require 'calfw-ical)

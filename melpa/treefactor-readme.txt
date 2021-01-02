@@ -4,4 +4,4 @@ combining both the directory hierarchy and outlines within files.
 
 Read the manual at
 
-  https://treefactor-docs.nfshost.com
+https://treefactor-docs.nfshost.com

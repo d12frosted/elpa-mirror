@@ -1,3 +1,1 @@
-;;; Commentary:
-;; Major mode to edit ncl scripts.
-
+Major mode to edit ncl scripts.

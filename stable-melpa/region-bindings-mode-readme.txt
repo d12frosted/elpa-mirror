@@ -5,7 +5,7 @@ when the region is active.
 
 This is a pretty good way to keep the global bindings clean.
 
-Installation:
+; Installation:
 
 Add this to your .emacs:
 
@@ -17,4 +17,4 @@ Alternatively, you can install this easily via MELPA through the
 Emacs package manager. To add MELPA to the package archives:
 
 (add-to-list 'package-archives
-             '("melpa" . "http://melpa.milkbox.net/packages/") t)
+'("melpa" . "http://melpa.milkbox.net/packages/") t)

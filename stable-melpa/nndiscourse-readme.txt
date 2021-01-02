@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; A Gnus backend for Discourse.
-
+A Gnus backend for Discourse.

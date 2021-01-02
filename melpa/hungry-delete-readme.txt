@@ -2,7 +2,7 @@ cc-mode implements hungry deletion for its programming modes.  This
 package borrows its implementation in a minor mode, so that hungry
 deletion can be used in all modes.
 
-Installation
+; Installation
 
 To use this mode, put the following in your init.el:
 (require 'hungry-delete)

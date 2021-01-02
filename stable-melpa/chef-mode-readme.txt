@@ -3,9 +3,9 @@ This library defines a minor mode to work with Opscode Chef
 keybindings:
 
 - C-c C-c (M-x chef-knife-dwim) - when editing part of chef
-  repository (cookbook, data bag item, node/role/environment
-  definition), uploads that part to the Chef Server by calling
-  appropriate knife command
+repository (cookbook, data bag item, node/role/environment
+definition), uploads that part to the Chef Server by calling
+appropriate knife command
 - C-c C-k (M-x knife) - runs a user-specified knife command
 
 The library detects bundler and, if Gemfile is present on top-level

@@ -27,14 +27,14 @@ if you use `popwin and text-browser `emacs-w3m or `eww
 to popup *w3m* and *eww*.
 
 (defadvice w3m-browse-url (around w3m-browse-url-popwin activate)
-   (save-window-excursion ad-do-it)
-   (unless (get-buffer-window "*w3m*")
-      (pop-to-buffer "*w3m*")))
+(save-window-excursion ad-do-it)
+(unless (get-buffer-window "*w3m*")
+(pop-to-buffer "*w3m*")))
 
 (defadvice eww-render (around eww-render-popwin activate)
-  (save-window-excursion ad-do-it)
-  (unless (get-buffer-window "*eww*")
-    (pop-to-buffer "*eww*")))
+(save-window-excursion ad-do-it)
+(unless (get-buffer-window "*eww*")
+(pop-to-buffer "*eww*")))
 
 (push "*eww*" popwin:special-display-config)
 (push "*w3m*" popwin:special-display-config)

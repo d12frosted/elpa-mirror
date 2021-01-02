@@ -12,11 +12,11 @@ Two functions are provided, `$:fill-template' and
 and on files. The template variable values are passed as alists.
 
 To use these functions, just
- (require 'dollaro)
+(require 'dollaro)
 
 Example Usage:
 ($:fill-template "First Name: $[first-name], Last Name: $[last-name]"
-                 '((first-name . "Giovanni") (last-name . "Cane")))
+'((first-name . "Giovanni") (last-name . "Cane")))
 
 ($:fill-template-from-file "/path/to/template/file" "/path/to/destination/file"
-                           '((some-var . "some value") (another-var . "another value")))
+'((some-var . "some value") (another-var . "another value")))

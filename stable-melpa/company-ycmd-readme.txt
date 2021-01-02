@@ -1,3 +1,4 @@
+
 Description:
 
 ycmd is a modular code-completion framework. It includes, for
@@ -15,4 +16,4 @@ init.el, or something).
 
 Example config:
 
-  (require 'company-ycmd)
+(require 'company-ycmd)

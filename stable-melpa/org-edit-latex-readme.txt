@@ -37,13 +37,13 @@ And don't forget to add latex to `org-babel-load-languages' (below is for
 demonstration, your languages list may differ from it.)
 
 (org-babel-do-load-languages
- 'org-babel-load-languages
- '((emacs-lisp . t)
-   (latex . t)   ;; <== add latex to the list
-   (python . t)
-   (shell . t)
-   (ruby . t)
-   (perl . t)))
+'org-babel-load-languages
+'((emacs-lisp . t)
+(latex . t)   ;; <== add latex to the list
+(python . t)
+(shell . t)
+(ruby . t)
+(perl . t)))
 
 Usage
 =====

@@ -1,3 +1,4 @@
+
 `kubernetes-tramp.el' offers a TRAMP method for Docker containers deployed in a Kubernetes cluster.
 
 > **NOTE**: `kubernetes-tramp.el' relies on the `kubectl exec` command. Tested
@@ -13,10 +14,10 @@ All the merits should go to [*Mario Rodas*](marsam@users.noreply.github.com) whi
 
 Offers the TRAMP method `kubectl` to access running containers
 
-    C-x C-f /kubectl:container:/path/to/file
+C-x C-f /kubectl:container:/path/to/file
 
-    where
-      container      is the name of the container
+where
+container      is the name of the container
 
 ## Caveats
 

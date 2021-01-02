@@ -5,6 +5,6 @@ If you are using a build system such as make or cargo, you can associate its bui
 compile function as well, by editing `smart-compile-build-system-alist'.
 
 To use this package, add these lines to your .emacs file:
-    (require 'smart-compile)
+(require 'smart-compile)
 
 Note that it requires emacs 21 or later.

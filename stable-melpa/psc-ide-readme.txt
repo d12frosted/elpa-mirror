@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; Emacs integration for PureScript's IDE server
-
+Emacs integration for PureScript's IDE server

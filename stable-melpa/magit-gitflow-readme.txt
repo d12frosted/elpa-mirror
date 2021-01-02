@@ -1,3 +1,4 @@
+
 Gitflow plugin for Magit.
 
 (require 'magit-gitflow)

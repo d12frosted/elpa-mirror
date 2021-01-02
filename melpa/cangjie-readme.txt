@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; Lookup the Cangjie encoding for a given Han character.
-
+Lookup the Cangjie encoding for a given Han character.

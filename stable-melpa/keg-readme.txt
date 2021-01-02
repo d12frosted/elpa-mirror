@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; Modern Elisp package development system
-
+Modern Elisp package development system

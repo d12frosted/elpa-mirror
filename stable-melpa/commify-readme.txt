@@ -1,3 +1,4 @@
+
 This package provides a simple command to toggle a number under the cursor
 between having grouped digits and not.  For example, if the buffer is as
 shown with the cursor at the '*':
@@ -21,10 +22,10 @@ respectively, but these can also be set.  See the README at the github page
 for details.
 
 You can configure these variables:
-  - commify-group-char (default ",") to the char used for grouping
-  - commify-group-size (default 3) to number of digits per group
-  - commify-decimal-char (default ".") to the char used as a decimal point.
+- commify-group-char (default ",") to the char used for grouping
+- commify-group-size (default 3) to number of digits per group
+- commify-decimal-char (default ".") to the char used as a decimal point.
 
 Bind the main function to a convenient key in you init.el file:
 
-   (key-chord-define-global ",," 'commify-toggle)
+(key-chord-define-global ",," 'commify-toggle)

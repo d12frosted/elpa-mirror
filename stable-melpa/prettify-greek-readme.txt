@@ -1,14 +1,15 @@
- Provides a table of Greek letters and their UTF-8 symbols for
- use by `prettify-symbols-mode'.
 
- Replaces https://www.emacswiki.org/emacs/PrettyGreek
+Provides a table of Greek letters and their UTF-8 symbols for
+use by `prettify-symbols-mode'.
 
- `prettify-symbols-alist' is a local variable so either
- setq-default or add in a major mode hook.
+Replaces https://www.emacswiki.org/emacs/PrettyGreek
 
- (add-hook 'emacs-lisp-mode-hook
-           (lambda ()
-             (setq prettify-symbols-alist prettify-greek-lower)
-             (prettify-symbols-mode t)))
+`prettify-symbols-alist' is a local variable so either
+setq-default or add in a major mode hook.
 
- recall that alists can be combined with `append'.
+(add-hook 'emacs-lisp-mode-hook
+(lambda ()
+(setq prettify-symbols-alist prettify-greek-lower)
+(prettify-symbols-mode t)))
+
+recall that alists can be combined with `append'.

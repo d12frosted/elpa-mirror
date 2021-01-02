@@ -20,15 +20,15 @@ it doesn't require user to have a C compiler, but please read following
 precautions.
 
 - You need to install =sqlite3= official CLI tool, 3.8.2 version or above were
-  tested, =emacsql-sqlite3= may won't work if you using lower version.
+tested, =emacsql-sqlite3= may won't work if you using lower version.
 
 - =sqlite3= CLI tool will load =~/.sqliterc= if presented, =emacsql-sqlite3=
-  will get undefined behaviour if any error occurred during the load progress.
-  It's better to keep this file empty.
+will get undefined behaviour if any error occurred during the load progress.
+It's better to keep this file empty.
 
 - This package should be compatible with =emacsql-sqlite3= for most cases. But
-  foreign key support was disabled by default. To enable this feature, use
-  ~(emacsql <db> [:pragma (= foreign_keys ON)])~
+foreign key support was disabled by default. To enable this feature, use
+~(emacsql <db> [:pragma (= foreign_keys ON)])~
 
 The only entry point to a EmacSQL interface is =emacsql-sqlite3=, for more
 information, please check [[https://github.com/skeeto/emacsql/blob/master/README.md][EmacSQL's README]].
@@ -40,8 +40,8 @@ closql use =emacsql-sqlite3=.
 
 #+BEGIN_SRC emacs-lisp :results none
 (with-eval-after-load 'closql
-  (defclass closql-database (emacsql-sqlite3-connection)
-    ((object-class :allocation :class))))
+(defclass closql-database (emacsql-sqlite3-connection)
+((object-class :allocation :class))))
 #+END_SRC
 
 * Known issue

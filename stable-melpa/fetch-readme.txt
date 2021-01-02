@@ -7,7 +7,7 @@ libraries to include in your project.
 To add entries to the lookup tables, append the fetch-package-alist like so:
 
 (add-to-list 'fetch-package-alist
-             '("name" . "url") t)
+'("name" . "url") t)
 
 After the list is populated, you can fetch the resources using
 M-x fetch-resource

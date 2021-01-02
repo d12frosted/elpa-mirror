@@ -9,14 +9,14 @@ non-done to-do items below.  If the buffer is narrowed, the sidebar
 only shows items in the narrowed portion; this allows seeing an
 overview of tasks in a subtree.
 
-Usage
+;; Usage
 
 Call these commands to display sidebars:
 
 - `org-sidebar:' Display the default item sidebars for the current
-                 Org buffer.
+Org buffer.
 - `org-sidebar-tree:' Display tree-view sidebar for current Org
-                      buffer.
+buffer.
 
 Toggling versions of those commands are also available:
 

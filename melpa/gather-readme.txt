@@ -10,20 +10,20 @@ as long as you can handle Emacs-Lisp list object.
 Put this file into load-path'ed directory, and byte compile it if
 desired. And put the following expression into your ~/.emacs.
 
-    (require 'gather)
-    (define-key ctl-x-r-map "\M-w" 'gather-matching-kill-save)
-    (define-key ctl-x-r-map "\C-w" 'gather-matching-kill)
-    (define-key ctl-x-r-map "\M-y" 'gather-matched-insert)
-    (define-key ctl-x-r-map "\M-Y" 'gather-matched-insert-with-format)
-    (define-key ctl-x-r-map "v" 'gather-matched-show)
+(require 'gather)
+(define-key ctl-x-r-map "\M-w" 'gather-matching-kill-save)
+(define-key ctl-x-r-map "\C-w" 'gather-matching-kill)
+(define-key ctl-x-r-map "\M-y" 'gather-matched-insert)
+(define-key ctl-x-r-map "\M-Y" 'gather-matched-insert-with-format)
+(define-key ctl-x-r-map "v" 'gather-matched-show)
 
 ********** Emacs 22 or earlier **********
-    (require 'gather)
-    (global-set-key "\C-xr\M-w" 'gather-matching-kill-save)
-    (global-set-key "\C-xr\C-w" 'gather-matching-kill)
-    (global-set-key "\C-xr\M-y" 'gather-matched-insert)
-    (global-set-key "\C-xr\M-Y" 'gather-matched-insert-with-format)
-    (global-set-key "\C-xrv" 'gather-matched-show)
+(require 'gather)
+(global-set-key "\C-xr\M-w" 'gather-matching-kill-save)
+(global-set-key "\C-xr\C-w" 'gather-matching-kill)
+(global-set-key "\C-xr\M-y" 'gather-matched-insert)
+(global-set-key "\C-xr\M-Y" 'gather-matched-insert-with-format)
+(global-set-key "\C-xrv" 'gather-matched-show)
 
 ## Usage:
 

@@ -1,7 +1,7 @@
 Identify the most frequently used words in a buffer.
 
 The command
-  M-x most-used-words-buffer
+M-x most-used-words-buffer
 goes through the current buffer keeping a count of words, as defined
 by the default syntax table.  Once done, it displays a buffer of the
 most frequently used words.

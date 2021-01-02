@@ -1,3 +1,4 @@
+
 eg.el provides code for reading the content of help databases built with
 Norton Guide and Expert Help. It also provides commands for viewing and
 navigating the content of Norton Guide files.

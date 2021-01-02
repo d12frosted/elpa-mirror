@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; Use `gpi-setup' to integrate with `org-pomodoro'.
-
+Use `gpi-setup' to integrate with `org-pomodoro'.

@@ -13,17 +13,17 @@ BUGS
 To add issue labels. You have to redefine the method `gh-issues-issue-req-to-update` as below:
 #+BEGIN_SRC emacs-lisp
 (defmethod gh-issues-issue-req-to-update ((req gh-issues-issue))
-  (let ((assignee (oref req assignee))
-        (labels (oref req labels))
-        (milestone (oref req milestone))
-        (to-update `(("title" . ,(oref req title))
-                     ("state" . ,(oref req state))
-                     ("body" . ,(oref req body)))))
+(let ((assignee (oref req assignee))
+(labels (oref req labels))
+(milestone (oref req milestone))
+(to-update `(("title" . ,(oref req title))
+("state" . ,(oref req state))
+("body" . ,(oref req body)))))
 
-    (when labels (nconc to-update `(("labels" . ,(oref req labels) ))))
-    (when milestone
-      (nconc to-update `(("milestone" . ,(oref milestone number)))))
-    (when assignee
-      (nconc to-update `(("assignee" . ,(oref assignee login) ))))
-    to-update))
+(when labels (nconc to-update `(("labels" . ,(oref req labels) ))))
+(when milestone
+(nconc to-update `(("milestone" . ,(oref milestone number)))))
+(when assignee
+(nconc to-update `(("assignee" . ,(oref assignee login) ))))
+to-update))
 #+END_SRC

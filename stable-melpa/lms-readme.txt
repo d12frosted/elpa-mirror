@@ -9,7 +9,7 @@ Then, you could read complete documentation after pressing 'h' key.
 You can also run 'emacsclient -e "(lms-float)"' to display an independent
 small frame.
 
-Major updates:
+; Major updates:
 
 2017/07/29 Initial version.
 2018/12/09 Added library browsing features from current track.

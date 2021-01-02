@@ -18,10 +18,10 @@ requests, the transport layer should also handle authentication.
 Here's en example request:
 
 {
-  "jsonrpc": "2.0",
-  "method": "insert",
-  "params": ["some text to insert"],
-  "id": "3140983184"
+"jsonrpc": "2.0",
+"method": "insert",
+"params": ["some text to insert"],
+"id": "3140983184"
 }
 
 Pass this as a string to `json-rpc-server-handle' - the specified text will
@@ -31,8 +31,8 @@ a response.
 Symbols and keywords can be passed by abusing the JSON-RPC syntax as follows:
 
 {
-  "a symbol": "'a-symbol",
-  "a keyword": ":a-keyword"
+"a symbol": "'a-symbol",
+"a keyword": ":a-keyword"
 }
 
 This is a simplified explanation of the package that glosses over a lot of

@@ -5,13 +5,13 @@ in front of the screen.
 
 ## How to use
 
- 1. Execute `M-x presentation-mode' to start the presentation.
- 2. Adjust scale size by `C-x C-+' or `C-x C--'
-    See https://www.gnu.org/software/emacs/manual/html_node/emacs/Text-Scale.html
- 3. After the presentation, execute `M-x presentation-mode` again.
- 4. And then execute `M-x presentation-mode` again, the last scale will be reproduced.
- 5. If you want to persistize its size as the default size of presentation-mode
-    after restarting Emacs, set `presentation-default-text-scale`.
+1. Execute `M-x presentation-mode' to start the presentation.
+2. Adjust scale size by `C-x C-+' or `C-x C--'
+See https://www.gnu.org/software/emacs/manual/html_node/emacs/Text-Scale.html
+3. After the presentation, execute `M-x presentation-mode` again.
+4. And then execute `M-x presentation-mode` again, the last scale will be reproduced.
+5. If you want to persistize its size as the default size of presentation-mode
+after restarting Emacs, set `presentation-default-text-scale`.
 
 ## Notice
 

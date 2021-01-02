@@ -5,13 +5,13 @@ from outside Emacs, using emacsclient, by binding a shell command to a global ke
 in the desktop environment.  Then, with a single keypress, the desired Emacs frame can be toggled
 on and off, showing the desired buffers.
 
-Installation
+;; Installation
 
-MELPA
+;;; MELPA
 
 If you installed from MELPA, you're done.
 
-Manual
+;;; Manual
 
 Install these required packages:
 
@@ -21,7 +21,7 @@ Then put this file in your load-path, and put this in your init file:
 
 (require 'yequake)
 
-Usage
+;; Usage
 
 Run one of these commands:
 
@@ -35,10 +35,10 @@ This is mainly intended to be called from outside Emacs.  So:
 If you bind that shell command to a global keyboard shortcut, you can easily toggle the frame on
 and off.
 
-Tips
+;; Tips
 
 + You can customize settings in the `yequake' group.
 
-Credits
+;; Credits
 
 Inspired by Benjamin Slade's `equake' package: <https://gitlab.com/emacsomancer/equake>

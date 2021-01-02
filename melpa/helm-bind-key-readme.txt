@@ -1,7 +1,8 @@
+
 It is necessary to Some Helm and bind-key.el Configurations.
 
 
-Installation:
+; Installation:
 
 Put the helm-bin-key.el to your
 load-path.

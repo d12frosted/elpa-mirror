@@ -7,5 +7,5 @@ To install, either clone this package directly, or execute M-x package-install R
 
 After the package is installed, you can enable `company-flx` by adding the following to your init file:
 
-    (with-eval-after-load 'company
-      (company-flx-mode +1))
+(with-eval-after-load 'company
+(company-flx-mode +1))

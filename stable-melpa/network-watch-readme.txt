@@ -16,11 +16,11 @@ In this example `gmail-notifier' is configured with the help of
 network-watch - it is automatically started and stopped when the network
 is up or down respectively:
 
-	(require 'network-watch)
-	(require 'gmail-notifier)
+(require 'network-watch)
+(require 'gmail-notifier)
 
-	(setq gmail-notifier-username "jamiguet")
-	(setq gmail-notifier-password ja-password)
+(setq gmail-notifier-username "jamiguet")
+(setq gmail-notifier-password ja-password)
 
-     (add-hook 'network-watch-up-hook 'gmail-notifier-start)
-	(add-hook 'network-watch-down-hook 'gmail-notifier-stop)
+(add-hook 'network-watch-up-hook 'gmail-notifier-start)
+(add-hook 'network-watch-down-hook 'gmail-notifier-stop)

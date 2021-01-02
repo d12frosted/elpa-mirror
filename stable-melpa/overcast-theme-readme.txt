@@ -1,5 +1,5 @@
-    A dark but vibrant color theme.
+A dark but vibrant color theme.
 
- Overview of features:
+Overview of features:
 
-    o   Dark, vibrant
+o   Dark, vibrant

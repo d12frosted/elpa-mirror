@@ -1,9 +1,10 @@
+
 Importer of csv (comma separated value) text into Emacs’s bbdb database,
 version 3+. Works out of the box with csv exported from Thunderbird, Gmail,
 Linkedin, Outlook.com/hotmail, and probably others.
 Easily extensible to handle new formats.
 
-Installation:
+; Installation:
 
 If you installed this file with a package manager, just
 
@@ -12,7 +13,7 @@ If you installed this file with a package manager, just
 Else, note the min versions of dependencies above in "Package-Requires:",
 and load this file. The exact minimum bbdb version is unknown, something 3+.
 
-Basic Usage:
+; Basic Usage:
 
 Back up bbdb by copying `bbdb-file' in case things go wrong.
 
@@ -22,7 +23,7 @@ When called interactively, they prompt for file or buffer arguments.
 Then view your bbdb records: M-x bbdb .* RET
 If the import looks good save the bbdb database: C-x s (bbdb-save)
 
-Advanced usage / notes:
+; Advanced usage / notes:
 
 Tested to work with thunderbird, gmail, linkedin,
 outlook.com/hotmail.com. For those programs, if it's exporter has an option
@@ -38,7 +39,7 @@ Duplicate contacts (according to email address) are skipped if
 bbdb-allow-duplicates is nil (default). Any duplicates found are echoed at
 the end of the import.
 
-Custom mapping of csv fields
+; Custom mapping of csv fields
 
 If a field is handled wrong or you want to extend the program to handle a new
 kind of csv format, you need to setup a custom field mapping variable. Use
@@ -66,31 +67,31 @@ mapping table given sample data.
 
 Mapping table tips:
 * The repeat keyword expands numbered field names, based on the first
-  field, as many times as they exist in the csv data.
+field, as many times as they exist in the csv data.
 * All mapping fields are optional. A simple mapping table could be
-  (setq bbdb-csv-import-mapping-table '((:mail "Primary Email")))
+(setq bbdb-csv-import-mapping-table '((:mail "Primary Email")))
 * :xfields uses the csv field name to create custom fields in bbdb. It downcases
-  the field name, and replaces spaces with "-", and repeating dashes with a
-  single one . For example, if you had a csv named "Mail Alias" or "Mail - alias",
-  you could add it to :xfields in a mapping table and it would become "mail-alias"
-  in bbdb.
+the field name, and replaces spaces with "-", and repeating dashes with a
+single one . For example, if you had a csv named "Mail Alias" or "Mail - alias",
+you could add it to :xfields in a mapping table and it would become "mail-alias"
+in bbdb.
 
-Misc tips/troubleshooting:
+; Misc tips/troubleshooting:
 
 - ASynK looks promising for syncing bbdb/google/outlook.
 - The git repo contains a test folder with exactly tested version info and working
-  test data.  Software, and especially online services are prone to changing how they
-  export. Please send feedback if you run into problems.
+test data.  Software, and especially online services are prone to changing how they
+export. Please send feedback if you run into problems.
 - bbdb doesn't work if you delete the bbdb database file in
-  the middle of an emacs session. If you want to empty the current bbdb database,
-  do M-x bbdb then .* then C-u * d on the beginning of a record.
+the middle of an emacs session. If you want to empty the current bbdb database,
+do M-x bbdb then .* then C-u * d on the beginning of a record.
 - After changing a mapping table variable, don't forget to re-execute
-  (setq bbdb-csv-import-mapping-table ...) so that it propagates.
+(setq bbdb-csv-import-mapping-table ...) so that it propagates.
 - :namelist is used instead of :name if 2 or more non-empty fields from :namelist are
-  found in a record. If :name is empty, we try a single non-empty field from :namelist
-  This sounds a bit strange, but it's to try and deal with Thunderbird idiosyncrasies.
+found in a record. If :name is empty, we try a single non-empty field from :namelist
+This sounds a bit strange, but it's to try and deal with Thunderbird idiosyncrasies.
 
-Bugs, patches, discussion, feedback
+; Bugs, patches, discussion, feedback
 
 Patches and bugs are very welcome via https://gitlab.com/iankelling/bbdb-csv-import
 

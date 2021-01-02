@@ -1,29 +1,30 @@
+
 Quickstart
 
-    (require 'truthy)
+(require 'truthy)
 
-    (truthy "")                   ; nil
-    (truthy '[])                  ; nil
-    (truthy 0)                    ; nil
-    (truthy (lambda ()))          ; nil
-    (truthy (make-sparse-keymap)) ; nil
-    (truthy 1)                    ; 1
-    (truthy '(a b c))             ; '(a b c)
-    (truthy '(nil nil nil))       ; nil
-    (truthy '([] "" 0))           ; nil
+(truthy "")                   ; nil
+(truthy '[])                  ; nil
+(truthy 0)                    ; nil
+(truthy (lambda ()))          ; nil
+(truthy (make-sparse-keymap)) ; nil
+(truthy 1)                    ; 1
+(truthy '(a b c))             ; '(a b c)
+(truthy '(nil nil nil))       ; nil
+(truthy '([] "" 0))           ; nil
 
-    (truthy-s '([] "" 0))         ; '([] "" 0)         ; shallow test
+(truthy-s '([] "" 0))         ; '([] "" 0)         ; shallow test
 
-    (truthy-l '(nil nil nil))     ; '(nil nil nil)     ; lengthwise test
+(truthy-l '(nil nil nil))     ; '(nil nil nil)     ; lengthwise test
 
 Explanation
 
 This library has no user-level interface; it is only useful
 for programming in Emacs Lisp.  Three functions are provided:
 
-    `truthy'
-    `truthy-s'
-    `truthy-l'
+`truthy'
+`truthy-s'
+`truthy-l'
 
 Truthy provides an alternative measure of the "truthiness" of a
 value.  Whereas Lisp considers any non-nil value to be "true" when
@@ -46,26 +47,26 @@ length, considering only the variable portion of a data type.
 To use truthy, place the truthy.el library somewhere Emacs can find
 it, and add the following to your ~/.emacs file:
 
-    (require 'truthy)
+(require 'truthy)
 
 Notes
 
 Compatibility and Requirements
 
-    GNU Emacs version 24.4-devel     : yes, at the time of writing
-    GNU Emacs version 24.3           : yes
-    GNU Emacs version 23.3           : yes
-    GNU Emacs version 22.3 and lower : no
+GNU Emacs version 24.4-devel     : yes, at the time of writing
+GNU Emacs version 24.3           : yes
+GNU Emacs version 23.3           : yes
+GNU Emacs version 22.3 and lower : no
 
-    Uses if present: list-utils.el
+Uses if present: list-utils.el
 
 Bugs
 
-    truthy-l is fairly meaningless on structs
+truthy-l is fairly meaningless on structs
 
 TODO
 
-License
+; License
 
 Simplified BSD License:
 
@@ -73,14 +74,14 @@ Redistribution and use in source and binary forms, with or
 without modification, are permitted provided that the following
 conditions are met:
 
-   1. Redistributions of source code must retain the above
-      copyright notice, this list of conditions and the following
-      disclaimer.
+1. Redistributions of source code must retain the above
+copyright notice, this list of conditions and the following
+disclaimer.
 
-   2. Redistributions in binary form must reproduce the above
-      copyright notice, this list of conditions and the following
-      disclaimer in the documentation and/or other materials
-      provided with the distribution.
+2. Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following
+disclaimer in the documentation and/or other materials
+provided with the distribution.
 
 This software is provided by Roland Walker "AS IS" and any express
 or implied warranties, including, but not limited to, the implied

@@ -5,7 +5,7 @@ By default the text includes your login name, hostname and current working
 directory.
 For example, when you type `M-x`, Emacs will give you a prompt like:
 
-    10sr@mbp0:~/prompt-text-el M-x
+10sr@mbp0:~/prompt-text-el M-x
 
 Enable global minor-mode `prompt-text-mode` to start using.
 

@@ -24,16 +24,16 @@ as MacTeX, which contribute to the PATH by adding a file in
 To set all environment variables listed in `path-helper-variables',
 add the following to your init file:
 
-    (when (memq window-system '(ns mac))
-      (path-helper-setenv-all))
+(when (memq window-system '(ns mac))
+(path-helper-setenv-all))
 
 Or, if using use-package:
 
-    (use-package path-helper
-      :if (memq window-system '(mac ns))
-      :ensure t
-      :config
-      (path-helper-setenv-all))
+(use-package path-helper
+:if (memq window-system '(mac ns))
+:ensure t
+:config
+(path-helper-setenv-all))
 
 If `path-helper-skip-undefined-variables' is non-nil (default),
 environment variables are only set to a new value when they were
@@ -44,4 +44,4 @@ more sophisticated method of finding manual page files.
 You can also call `path-helper-setenv' directly to set a single
 environment variable, e.g.:
 
-    (path-helper-setenv "PATH")
+(path-helper-setenv "PATH")

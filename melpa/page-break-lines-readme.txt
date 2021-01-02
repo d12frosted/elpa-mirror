@@ -17,8 +17,8 @@ Emacs may erroneously choose a different font for the page break
 symbol, which choice can be overridden using code such as:
 
 (set-fontset-font "fontset-default"
-                  (cons page-break-lines-char page-break-lines-char)
-                  (face-attribute 'default :family))
+(cons page-break-lines-char page-break-lines-char)
+(face-attribute 'default :family))
 
 Use `describe-char' on a page break char to determine whether this
 is the case.

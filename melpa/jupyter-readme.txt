@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; An interface for communicating with Jupyter kernels.
-
+An interface for communicating with Jupyter kernels.

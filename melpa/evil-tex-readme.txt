@@ -1,1 +1,2 @@
- Useful features for editing LaTeX in evil-mode
+
+Useful features for editing LaTeX in evil-mode

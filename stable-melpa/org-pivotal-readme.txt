@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; org-pivotal is a utility to sync Pivotal Tracker to org buffer
-
+org-pivotal is a utility to sync Pivotal Tracker to org buffer

@@ -1,3 +1,4 @@
+
 This package makes it easy to work with quilt patches on a
 repository When installed, the files under directory with quilt
 patches will open as read only.  Users have to invoke `quilt-add`

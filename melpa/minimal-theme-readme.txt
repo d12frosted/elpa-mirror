@@ -1,5 +1,3 @@
-;;; Commentary:
-;;
-;; A minimalistic color theme to avoid distraction with
-;; colors. Based on monochrome theme.
 
+A minimalistic color theme to avoid distraction with
+colors. Based on monochrome theme.

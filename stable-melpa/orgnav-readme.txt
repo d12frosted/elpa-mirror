@@ -1,3 +1,1 @@
-;;; Commentary:
-;; A library to navigate inside org files.
-
+A library to navigate inside org files.

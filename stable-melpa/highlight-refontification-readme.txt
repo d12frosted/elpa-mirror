@@ -27,15 +27,15 @@ Examples:
 You can use this tool, for example, to:
 
 - Investigate when font-lock makes Emacs slow.  If a large region is
-  refontified for every character typed, could cause this.
+refontified for every character typed, could cause this.
 
 - Investigate why a font-lock rule sometimes work, sometimes
-  doesn't.  One cause of this could be that the region starts in
-  the middle of the language construct that should be highlighted.
+doesn't.  One cause of this could be that the region starts in
+the middle of the language construct that should be highlighted.
 
 - Investigate "blinking" syntax highlighting, i.e. the effect where
-  one color is first applied, and after, say, half a second,
-  another is applied.
+one color is first applied, and after, say, half a second,
+another is applied.
 
 The refontification process:
 
@@ -49,11 +49,11 @@ previously was matched in a multiline rule.
 Usage:
 
 - `M-x highlight-refontification-mode RET' -- When this mode is
-  enabled, any change in the buffer is visualized by a change in
-  the background color.
+enabled, any change in the buffer is visualized by a change in
+the background color.
 
 - `M-x highlight-refontification-list-extend-region-steps RET' --
-  Print the steps font-lock would take to extend a region.
+Print the steps font-lock would take to extend a region.
 
 Other Font Lock Tools:
 
@@ -104,7 +104,7 @@ The underlying idea is to convert text with highlights ("faces")
 into a plain text representation using the Faceup markup
 language.  This language is semi-human readable, for example:
 
-    «k:this» is a keyword
+«k:this» is a keyword
 
 By comparing the current highlight with a highlight performed with
 stable versions of a package, it's possible to automatically find

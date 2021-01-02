@@ -4,19 +4,19 @@ Emacs. See: https://github.com/tonsky/AnyBar
 
 Basic usage:
 
-  (require 'anybar)
+(require 'anybar)
 
 Start AnyBar:
 
-  (anybar-start)
+(anybar-start)
 
 Set indicator to a color:
 
-  (anybar-set "red")
+(anybar-set "red")
 
 Quit AnyBar:
 
-  (anybar-quit)
+(anybar-quit)
 
 Those functions also take an optional argument to specify a port
 number, if you want to run multiple instances or use a different

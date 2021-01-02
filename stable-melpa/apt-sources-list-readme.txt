@@ -1,3 +1,4 @@
+
 This package contains a major mode for editing APT’s “.list” files.
 
 The “/etc/apt/sources.list” file and other files in
@@ -6,7 +7,7 @@ others, where to find packages for installation.
 
 This format specifies a package source with a single line, e.g.:
 
-    deb http://deb.debian.org/debian stable main contrib
+deb http://deb.debian.org/debian stable main contrib
 
 For more information about the format you can read the manual
 pages “apt(8)” and “sources.list(5)”, also on the web at URL

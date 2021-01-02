@@ -15,13 +15,13 @@ are *not* extended.
 
 A reasonable configuration could be:
 
-  (use-package bicycle
-    :after outline
-    :bind (:map outline-minor-mode-map
-                ([C-tab] . bicycle-cycle)
-                ([S-tab] . bicycle-cycle-global)))
+(use-package bicycle
+:after outline
+:bind (:map outline-minor-mode-map
+([C-tab] . bicycle-cycle)
+([S-tab] . bicycle-cycle-global)))
 
-  (use-package prog-mode
-    :config
-    (add-hook 'prog-mode-hook 'outline-minor-mode)
-    (add-hook 'prog-mode-hook 'hs-minor-mode))
+(use-package prog-mode
+:config
+(add-hook 'prog-mode-hook 'outline-minor-mode)
+(add-hook 'prog-mode-hook 'hs-minor-mode))

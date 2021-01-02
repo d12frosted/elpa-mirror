@@ -1,6 +1,6 @@
 Install `scad-mode' and load this script:
 
-  (require 'scad-preview)
+(require 'scad-preview)
 
 then call `scad-preview-mode' in a `scad-mode' buffer.
 

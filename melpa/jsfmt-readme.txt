@@ -3,4 +3,4 @@ go-mode version 20131222, so all credit goes to
 The Go Authors
 
 See also
-  `jsfmt': https://rdio.github.io/jsfmt
+`jsfmt': https://rdio.github.io/jsfmt

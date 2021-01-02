@@ -1,3 +1,1 @@
-;;; Commentary:
-;; Debug Adapter Protocol client for Emacs.
-
+Debug Adapter Protocol client for Emacs.

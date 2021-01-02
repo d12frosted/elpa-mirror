@@ -12,7 +12,7 @@ tested with Org 9.
 This package makes use of handy functions and settings in
 `recentf'.
 
-Installation:
+; Installation:
 
 Install from MELPA, or manually by putting this file in your
 `load-path'.  Then put this in your init file:

@@ -1,6 +1,3 @@
-;;; Commentary:
+Pacmacs game for Emacs
 
-;; Pacmacs game for Emacs
-;;
-;; PLiOAioBxutV6QXPjBczSu7Xb_5kj-3KYA
-
+PLiOAioBxutV6QXPjBczSu7Xb_5kj-3KYA

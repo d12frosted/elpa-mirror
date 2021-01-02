@@ -11,8 +11,8 @@ package-install RET evil-magit RET`).
 Evil and Magit are both required. After requiring those packages, the following
 will setup the new key bindings for you.
 
-optional: this is the evil state that evil-magit will use
-(setq evil-magit-state 'motion)
+;; optional: this is the evil state that evil-magit will use
+;; (setq evil-magit-state 'motion)
 (require 'evil-magit)
 
 Use `evil-magit-revert` to revert changes made by evil-magit to the default

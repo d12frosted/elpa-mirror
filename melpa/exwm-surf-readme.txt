@@ -1,3 +1,4 @@
+
 Remember that you need to patch surf for history and incremental search to work!
 See https://github.com/ecraven/exwm-surf/blob/master/exwm-surf.diff
 

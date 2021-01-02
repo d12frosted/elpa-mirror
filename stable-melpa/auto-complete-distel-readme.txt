@@ -1,8 +1,8 @@
 Add `auto-complete-distel' to the `ac-sources' list in your .emacs.
 E.g.
-  (require 'auto-complete)
-  (require 'auto-complete-distel)
-  (add-to-list 'ac-sources 'auto-complete-distel)
+(require 'auto-complete)
+(require 'auto-complete-distel)
+(add-to-list 'ac-sources 'auto-complete-distel)
 
 Customize
 ------------------

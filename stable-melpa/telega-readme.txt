@@ -1,6 +1,3 @@
-;;; Commentary:
+See https://github.com/zevlg/telega.el/blob/master/README.md
 
-;; See https://github.com/zevlg/telega.el/blob/master/README.md
-;;
-;; Start with M-x telega RET
-
+Start with M-x telega RET

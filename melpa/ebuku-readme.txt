@@ -40,12 +40,12 @@ In the `*Ebuku*' buffer, the following bindings are available:
 * `a' - Add a new bookmark (`ebuku-add-bookmark').
 
 * `d' - Delete a bookmark (`ebuku-delete-bookmark').  If point is on
-  a bookmark, offer to delete that bookmark; otherwise, ask for the
-  index of the bookmark to delete.
+a bookmark, offer to delete that bookmark; otherwise, ask for the
+index of the bookmark to delete.
 
 * `e' - Edit a bookmark (`ebuku-edit-bookmark').  If point is on a
-  bookmark, edit that bookmark; otherwise, ask for the index of the
-  bookmark to edit.
+bookmark, edit that bookmark; otherwise, ask for the index of the
+bookmark to edit.
 
 * `q' - Quit Ebuku.
 
@@ -75,16 +75,16 @@ The `ebuku' customize-group can be used to customise:
 * the maximum number of bookmarks to show;
 
 * whether to automatically retrieve URL metadata when adding a
-  bookmark; and
+bookmark; and
 
 * the faces used by Ebuku.
 
 ## TODO
 
 * One should be able to edit bookmarks directly in the `*Ebuku*'
-  buffer, à la `wdired'.  Much of the infrastructure to support this
-  is already in place, but there are still important details yet to
-  be implemented.
+buffer, à la `wdired'.  Much of the infrastructure to support this
+is already in place, but there are still important details yet to
+be implemented.
 
 <a name="issues"></a>
 
@@ -96,13 +96,13 @@ noted:
 * as a TODO item, or
 
 * in [the project's "Issues" section on
-  GitHub](https://github.com/flexibeast/ebuku/issues),
+GitHub](https://github.com/flexibeast/ebuku/issues),
 
 please create a new issue with as much detail as possible,
 including:
 
 * which version of Emacs you're running on which operating system,
-  and
+and
 
 * how you installed Ebuku.
 

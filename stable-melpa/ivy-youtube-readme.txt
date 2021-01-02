@@ -7,7 +7,7 @@ https://github.com/maximus12793/helm-youtube
 
 Thank you Maximilian to create this awesome package.
 
-MIT License
+; MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

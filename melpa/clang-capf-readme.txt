@@ -1,3 +1,4 @@
+
 Emacs built-in `completion-at-point' completion mechanism doesn't
 support C in any meaningful by default, which this package tries to
 remedy, by using clang's completion mechanism. Hence this package

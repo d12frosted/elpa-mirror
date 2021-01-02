@@ -8,17 +8,17 @@ setting the variable to that value. For example:
 (require 'timer)
 (defvar my-timer nil)
 (defun activate-my-timer ()
-  (when my-timer
-    (cancel-timer my-timer)
-    (setq my-timer nil))
-  (setq my-timer
-        (run-with-timer 5 nil #'message "My timer ran!")))
+(when my-timer
+(cancel-timer my-timer)
+(setq my-timer nil))
+(setq my-timer
+(run-with-timer 5 nil #'message "My timer ran!")))
 
 With named timers, this simplifies to a single line:
 
 (require 'named-timer)
 (defun activate-my-timer ()
-  (named-timer-run :my-timer 5 nil #'message "My timer ran!"))
+(named-timer-run :my-timer 5 nil #'message "My timer ran!"))
 
 In addition to being shorter, this code is less error prone: since
 running a named timer automatically cancels any existing timer with
@@ -32,7 +32,7 @@ The basic functions for managing named timers `named-timer-run',
 respectively, analogues of `run-with-timer', `run-with-idle-timer',
 and `cancel-timer'.
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 This program is free software: you can redistribute it and/or
 modify it under the terms of the GNU General Public License as
@@ -46,3 +46,5 @@ General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with GNU Emacs. If not, see <http://www.gnu.org/licenses/>.
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

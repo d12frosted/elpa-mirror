@@ -27,12 +27,12 @@ convenient use of the features. Add this to your init.el:
 
 In case you installed the extension via MELPA, use this suggested configiration:
 
- (defun my-pkg-init()
-   (electric-indent-mode -1)  ; no electric indent, auto-indent is sufficient
-   (clean-aindent-mode t)
-   (setq clean-aindent-is-simple-indent t)
-   (define-key global-map (kbd "RET") 'newline-and-indent))
- (add-hook 'after-init-hook 'my-pkg-init)
+(defun my-pkg-init()
+(electric-indent-mode -1)  ; no electric indent, auto-indent is sufficient
+(clean-aindent-mode t)
+(setq clean-aindent-is-simple-indent t)
+(define-key global-map (kbd "RET") 'newline-and-indent))
+(add-hook 'after-init-hook 'my-pkg-init)
 
 === Options
 M-x customize, search for 'auto indent', toggle to on,

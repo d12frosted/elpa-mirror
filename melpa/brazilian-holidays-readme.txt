@@ -9,6 +9,6 @@ E.g.:
 Or with `use-package`:
 
 (use-package brazilian-holidays
- :custom
- (brazilian-holidays-rj-holidays t)
- (brazilian-holidays-sp-holidays t))
+:custom
+(brazilian-holidays-rj-holidays t)
+(brazilian-holidays-sp-holidays t))

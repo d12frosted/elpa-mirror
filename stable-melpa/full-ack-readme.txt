@@ -1,3 +1,4 @@
+
 ack is a tool like grep, aimed at programmers with large trees of
 heterogeneous source code.
 It is available at <http://betterthangrep.com/>.

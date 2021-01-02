@@ -1,3 +1,4 @@
+
 Variables can be defined as:
 
 @db   = `test`

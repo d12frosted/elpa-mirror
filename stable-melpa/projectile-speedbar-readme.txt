@@ -1,3 +1,4 @@
+
 This package sits on top of speedbar and projectile and provides an
 easy to use and useful integration between the two.
 
@@ -8,15 +9,15 @@ project.
 
 Features that are required by this library:
 
- `speedbar' `sr-speedbar' `projectile'
+`speedbar' `sr-speedbar' `projectile'
 
 To invoke this function manually:
 
 `projectile-speedbar-open-current-buffer-in-tree
 
 
-Installation
+; Installation
 
 Copy speedbar-projectile.el to your load-path and add this to ~/.emacs
 
- (require 'projectile-speedbar)
+(require 'projectile-speedbar)

@@ -1,7 +1,7 @@
 (eval-after-load "howm-menu" '(progn
-  (require 'calfw-howm)
-  (cfw:install-howm-schedules)
-  (define-key howm-mode-map (kbd "M-C") 'cfw:open-howm-calendar)
+(require 'calfw-howm)
+(cfw:install-howm-schedules)
+(define-key howm-mode-map (kbd "M-C") 'cfw:open-howm-calendar)
 ))
 
 If you are using Elscreen, here is useful.

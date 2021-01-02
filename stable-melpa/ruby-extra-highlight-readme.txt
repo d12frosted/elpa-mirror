@@ -8,4 +8,4 @@ to the current buffer for highlighting method and block parameters.
 The easiest way automatically enable it for Ruby buffers is to add
 the following to a suitable init file:
 
-    (add-hook 'ruby-mode-hook #'ruby-extra-highlight-mode)
+(add-hook 'ruby-mode-hook #'ruby-extra-highlight-mode)

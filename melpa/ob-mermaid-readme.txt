@@ -1,5 +1,5 @@
 Org-Babel support for evaluating mermaid diagrams.
 
-Requirements:
+; Requirements:
 
 mermaid.cli | https://github.com/mermaidjs/mermaid.cli

@@ -1,4 +1,4 @@
-Overview ==========================================================
+; Overview ==========================================================
 
 This module provides an Emacs interface to different translation
 services available on the Internet. You give it a word or paragraph
@@ -7,9 +7,9 @@ it connects to the translation server, retrieves the data, and
 presents it in a special *babel* buffer. Currently the following
 backends are available:
 
- * the FOSS MT platform Apertium
- * the Google service at translate.google.com
- * the Transparent Language motor at FreeTranslation.com
+* the FOSS MT platform Apertium
+* the Google service at translate.google.com
+* the Transparent Language motor at FreeTranslation.com
 
 
 Entry points: either 'M-x babel', which prompts for a phrase, a
@@ -45,14 +45,14 @@ byte-compile the file (for example using the 'B' key when the
 cursor is on the filename in a dired buffer). Then add the
 following lines to your ~/.emacs.el initialization file:
 
-  (autoload 'babel "babel"
-    "Use a web translation service to translate the message MSG." t)
-  (autoload 'babel-region "babel"
-    "Use a web translation service to translate the current region." t)
-  (autoload 'babel-as-string "babel"
-    "Use a web translation service to translate MSG, returning a string." t)
-  (autoload 'babel-buffer "babel"
-    "Use a web translation service to translate the current buffer." t)
+(autoload 'babel "babel"
+"Use a web translation service to translate the message MSG." t)
+(autoload 'babel-region "babel"
+"Use a web translation service to translate the current region." t)
+(autoload 'babel-as-string "babel"
+"Use a web translation service to translate MSG, returning a string." t)
+(autoload 'babel-buffer "babel"
+"Use a web translation service to translate the current buffer." t)
 
 babel.el requires emacs >= 23
 
@@ -61,22 +61,22 @@ Backend information =================================================
 
 A babel backend named <zob> must provide three functions:
 
-   (babel-<zob>-translation from to)
+(babel-<zob>-translation from to)
 
-   where FROM and TO are three-letter language abbreviations from
-   the alist `babel-languages'. This should return non-nil if the
-   backend is capable of translating between these two languages.
+where FROM and TO are three-letter language abbreviations from
+the alist `babel-languages'. This should return non-nil if the
+backend is capable of translating between these two languages.
 
-   (babel-<zob>-fetch msg from to)
+(babel-<zob>-fetch msg from to)
 
-   where FROM and TO are as above, and MSG is the text to
-   translate. Connect to the appropriate server and fetch the raw
-   HTML corresponding to the request.
+where FROM and TO are as above, and MSG is the text to
+translate. Connect to the appropriate server and fetch the raw
+HTML corresponding to the request.
 
-   (babel-<zob>-wash)
+(babel-<zob>-wash)
 
-   When called on a buffer containing the raw HTML provided by the
-   server, remove all the uninteresting text and HTML markup.
+When called on a buffer containing the raw HTML provided by the
+server, remove all the uninteresting text and HTML markup.
 
 I would be glad to incorporate backends for new translation servers
 which are accessible to the general public.
@@ -93,64 +93,64 @@ menu item. Andy Stewart provided
 adjustments and more improvements.
 
 User quotes: Dieses ist die größte Sache seit geschnittenem Brot.
-                -- Stainless Steel Rat <ratinox@peorth.gweep.net>
+-- Stainless Steel Rat <ratinox@peorth.gweep.net>
 
-History
+; History
 
-   Discontinued Log (Use GIT: git://github.com/juergenhoetzel/babel.git)
+Discontinued Log (Use GIT: git://github.com/juergenhoetzel/babel.git)
 
-   1.4 * `babel-region' now yank the translation instead insert him at
-         point.
+1.4 * `babel-region' now yank the translation instead insert him at
+point.
 
-   1.3 n* Added new Google languages
+1.3 n* Added new Google languages
 
-   1.2 * Added FOSS MT platform Apertium
-        (by Kevin Brubeck Unhammer)
-	  * Assume UTF-8, if HTTP header missing
+1.2 * Added FOSS MT platform Apertium
+(by Kevin Brubeck Unhammer)
+* Assume UTF-8, if HTTP header missing
 
-   1.1 * Fixed invalid language code mapping for serveral
-         languages
+1.1 * Fixed invalid language code mapping for serveral
+languages
 
-   1.0 * Fixed Google backend (new regex)
-       * New custom variables `babel-buffer-name',
-        `babel-echo-area', `babel-select-output-window'
-       * Disable use of echo area usage on xemacs if lines > 1
-         (resize of minibuffer does not work reliable)
-       * `babel-url-retrieve' fix for xemacs from Uwe Brauer
+1.0 * Fixed Google backend (new regex)
+* New custom variables `babel-buffer-name',
+`babel-echo-area', `babel-select-output-window'
+* Disable use of echo area usage on xemacs if lines > 1
+(resize of minibuffer does not work reliable)
+* `babel-url-retrieve' fix for xemacs from Uwe Brauer
 
-   0.9  * Use `babel-buffer-name' for output buffer
+0.9  * Use `babel-buffer-name' for output buffer
 
-   0.8  * Remember window config if `babel-remember-window-configuration'
-          is non-nil.
-        * made *babel* buffer read-only
-        * use echo area (like `shell-command')
-        * New functions `babel-as-string-default',`babel-region-default',
-          `babel-buffer-default', `babel-smart' (provided by Andy)
+0.8  * Remember window config if `babel-remember-window-configuration'
+is non-nil.
+* made *babel* buffer read-only
+* use echo area (like `shell-command')
+* New functions `babel-as-string-default',`babel-region-default',
+`babel-buffer-default', `babel-smart' (provided by Andy)
 
 
-   0.7  * error handling if no backend is available for translating
-          the supplied languages
-	   * rely on url-* functions (for charset decoding) on GNU emacs
-        * increased chunk size for better performance
-        * added support for all Google languages
-        * `babel-region' with prefix argument inserts the translation
-           output at point.
+0.7  * error handling if no backend is available for translating
+the supplied languages
+* rely on url-* functions (for charset decoding) on GNU emacs
+* increased chunk size for better performance
+* added support for all Google languages
+* `babel-region' with prefix argument inserts the translation
+output at point.
 
-   0.6  * get rid of w3-region (implementend basic html entity parsing)
-        * get rid of w3-form-encode-xwfu (using mm-url-form-encode-xwfu)
-        * no character classes in regex (for xemacs compatibility)
-        * default backend: Google
+0.6  * get rid of w3-region (implementend basic html entity parsing)
+* get rid of w3-form-encode-xwfu (using mm-url-form-encode-xwfu)
+* no character classes in regex (for xemacs compatibility)
+* default backend: Google
 
-   0.5: * Fixed Google and Babelfish backends
+0.5: * Fixed Google and Babelfish backends
 
-   0.4: * revised FreeTranslation backend
+0.4: * revised FreeTranslation backend
 
-  0.3: * removed non-working backends: systran, intertrans, leo, e-PROMPT
-       * added Google backend
-       * revised UTF-8 handling
-       * Added customizable variables: babel-preferred-to-language, babel-preferred-from-language
-       * revised history handling
-       * added helper function: babel-wash-regex
+;   0.3: * removed non-working backends: systran, intertrans, leo, e-PROMPT
+;        * added Google backend
+;        * revised UTF-8 handling
+;        * Added customizable variables: babel-preferred-to-language, babel-preferred-from-language
+;        * revised history handling
+;        * added helper function: babel-wash-regex
 
 
 TODO:
@@ -158,15 +158,15 @@ TODO:
 * select multiple engines at once
 
 * Adjust output window height. Current versions use
- `with-current-buffer' instead `with-output-to-temp-buffer'. So
- `temp-buffer-show-hook' will fail to adjust output window height
- -> Use (fit-window-to-buffer nil babel-max-window-height) to
- adjust output window height in new version.
+`with-current-buffer' instead `with-output-to-temp-buffer'. So
+`temp-buffer-show-hook' will fail to adjust output window height
+-> Use (fit-window-to-buffer nil babel-max-window-height) to
+adjust output window height in new version.
 
 * use non-blocking `url-retrieve'
 
 * improve function `babel-simple-html-parse'.
 
 * In `babel-quite' function, should be add (boundp
-  'babel-previous-window-configuration) to make value of
-  `babel-previous-window-configuration' is valid
+'babel-previous-window-configuration) to make value of
+`babel-previous-window-configuration' is valid

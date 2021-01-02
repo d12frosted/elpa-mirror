@@ -1,5 +1,3 @@
-;;; Commentary:
-;;
-;; Miscellaneous elisp functions and definitions, including
-;; time/date and string manipulation.
-;;
+
+Miscellaneous elisp functions and definitions, including
+time/date and string manipulation.

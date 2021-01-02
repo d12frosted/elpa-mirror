@@ -1,3 +1,1 @@
-;;; Commentary:
-;; Loads a collection of VDM YASnippets.
-
+Loads a collection of VDM YASnippets.

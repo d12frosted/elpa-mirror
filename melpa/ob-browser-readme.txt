@@ -1,4 +1,2 @@
-;;; Commentary:
-;;
-;; Render HTML in org-mode blocks.
 
+Render HTML in org-mode blocks.

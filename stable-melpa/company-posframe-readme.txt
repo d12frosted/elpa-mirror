@@ -22,7 +22,7 @@ The below code let desktop.el not record the company-posframe-mode
 #+BEGIN_EXAMPLE
 (require 'desktop) ;this line is needed.
 (push '(company-posframe-mode . nil)
-      desktop-minor-mode-table)
+desktop-minor-mode-table)
 #+END_EXAMPLE
 
 ** Note

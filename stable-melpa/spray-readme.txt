@@ -4,12 +4,12 @@ one word at a time. Adjust speed / pause as needed.
 Download from Melpa or put this script into a "load-path"ed directory, and
 load it in your init file:
 
-  (require 'spray)
+(require 'spray)
 
 Then you may run spray with "M-x spray-mode". Binding some keys may
 also be useful.
 
-  (global-set-key (kbd "<f6>") 'spray-mode)
+(global-set-key (kbd "<f6>") 'spray-mode)
 
 In spray-mode buffers, following commands are available.
 

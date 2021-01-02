@@ -4,8 +4,8 @@ git-format patch without exit Emacs.
 
 1. Send patch with `gitpatch-mail'
 
-   `gitpatch-mail' can quick send a git-format patch file from magit,
-   dired or ibuffer buffer.
+`gitpatch-mail' can quick send a git-format patch file from magit,
+dired or ibuffer buffer.
 
 ** Installation
 

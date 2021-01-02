@@ -9,7 +9,7 @@ script, just learn Emacs.
 Put this file into load-path'ed directory, and byte compile it if
 desired. And put the following expression into your ~/.emacs.
 
-    (require 'wgrep)
+(require 'wgrep)
 
 ## Usage:
 
@@ -21,27 +21,27 @@ The following keybindings are defined:
 * `C-c C-u`: All changes are unmarked and ignored.
 * `C-c C-d`: Mark as delete to current line (including newline).
 * `C-c C-r`: Remove the changes in the region (these changes are not
-  applied to the files. Of course, the remaining
-  changes can still be applied to the files.)
+applied to the files. Of course, the remaining
+changes can still be applied to the files.)
 * `C-c C-p`: Toggle read-only area.
 * `C-c C-k`: Discard all changes and exit.
 * `C-x C-q`: Exit wgrep mode.
 
 * To save all buffers that wgrep has changed, run
 
-    M-x wgrep-save-all-buffers
+M-x wgrep-save-all-buffers
 
 * To save buffer automatically when `wgrep-finish-edit'.
 
-    (setq wgrep-auto-save-buffer t)
+(setq wgrep-auto-save-buffer t)
 
 * You can change the default key binding to switch to wgrep.
 
-    (setq wgrep-enable-key "r")
+(setq wgrep-enable-key "r")
 
 * To apply all changes regardless of whether or not buffer is read-only.
 
-    (setq wgrep-change-readonly-file t)
+(setq wgrep-change-readonly-file t)
 
 ### Trivial features:
 

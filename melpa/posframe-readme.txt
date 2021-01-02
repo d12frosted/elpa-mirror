@@ -10,12 +10,12 @@ The main advantages are:
 NOTE:
 1. For MacOS users, posframe needs Emacs version >= 26.0.91
 2. GNOME users with GTK3 builds need Emacs 27 or later.
-   See variable `posframe-gtk-resize-child-frames'
-   which auto-detects this configuration.
+See variable `posframe-gtk-resize-child-frames'
+which auto-detects this configuration.
 
-   More details:
-   1. [[https://git.savannah.gnu.org/cgit/emacs.git/commit/?h=emacs-27&id=c49d379f17bcb0ce82604def2eaa04bda00bd5ec][Fix some problems with moving and resizing child frames]]
-   2. [[https://lists.gnu.org/archive/html/emacs-devel/2020-01/msg00343.html][Emacs's set-frame-size can not work well with gnome-shell?]]
+More details:
+1. [[https://git.savannah.gnu.org/cgit/emacs.git/commit/?h=emacs-27&id=c49d379f17bcb0ce82604def2eaa04bda00bd5ec][Fix some problems with moving and resizing child frames]]
+2. [[https://lists.gnu.org/archive/html/emacs-devel/2020-01/msg00343.html][Emacs's set-frame-size can not work well with gnome-shell?]]
 
 [[./snapshots/posframe-1.png]]
 
@@ -32,9 +32,9 @@ NOTE:
 **** Simple way
 #+BEGIN_EXAMPLE
 (when (posframe-workable-p)
-  (posframe-show " *my-posframe-buffer*"
-                 :string "This is a test"
-                 :position (point)))
+(posframe-show " *my-posframe-buffer*"
+:string "This is a test"
+:position (point)))
 #+END_EXAMPLE
 
 **** Advanced way
@@ -42,12 +42,12 @@ NOTE:
 (defvar my-posframe-buffer " *my-posframe-buffer*")
 
 (with-current-buffer (get-buffer-create my-posframe-buffer)
-  (erase-buffer)
-  (insert "Hello world"))
+(erase-buffer)
+(insert "Hello world"))
 
 (when (posframe-workable-p)
-  (posframe-show my-posframe-buffer
-                 :position (point)))
+(posframe-show my-posframe-buffer
+:position (point)))
 #+END_EXAMPLE
 
 **** Arguments
@@ -68,13 +68,13 @@ M-x posframe-hide-all
 
 *** Delete a posframe
 1. Delete posframe and its buffer
-   #+BEGIN_EXAMPLE
-   (posframe-delete " *my-posframe-buffer*")
-   #+END_EXAMPLE
+#+BEGIN_EXAMPLE
+(posframe-delete " *my-posframe-buffer*")
+#+END_EXAMPLE
 2. Only delete the frame
-   #+BEGIN_EXAMPLE
-   (posframe-delete-frame " *my-posframe-buffer*")
-   #+END_EXAMPLE
+#+BEGIN_EXAMPLE
+(posframe-delete-frame " *my-posframe-buffer*")
+#+END_EXAMPLE
 *** Delete all posframes
 #+BEGIN_EXAMPLE
 M-x posframe-delete-all
@@ -102,8 +102,8 @@ border-width to 10 and fallback background color to green.
 #+BEGIN_EXAMPLE
 (setq posframe-arghandler #'my-posframe-arghandler)
 (defun my-posframe-arghandler (buffer-or-name arg-name value)
-  (let ((info '(:internal-border-width 10 :background-color "green")))
-    (or (plist-get info arg-name) value)))
+(let ((info '(:internal-border-width 10 :background-color "green")))
+(or (plist-get info arg-name) value)))
 #+END_EXAMPLE
 
 *** Some packages which use posframe
@@ -112,4 +112,5 @@ border-width to 10 and fallback background color to green.
 3. [[https://github.com/tumashu/pyim][pyim]]
 4. [[https://github.com/tumashu/ivy-posframe][ivy-posframe]]
 5. [[https://github.com/tumashu/company-posframe][company-posframe]]
-6. ...
+6. [[https://github.com/randomwangran/org-marginalia-posframe][org-marginalia-posframe]]
+7. ...

@@ -1,6 +1,7 @@
+
 Show inlined tweets in erc buffers.
 
-Installation:
+; Installation:
 
 usage:
 

@@ -1,7 +1,7 @@
 This package provides basic support for Git-Svn.
 
-  Git-Svn is a Git command that aims to provide bidirectional
-  operation between a Subversion repository and Git.
+Git-Svn is a Git command that aims to provide bidirectional
+operation between a Subversion repository and Git.
 
 For information about Git-Svn see its manual page `git-svn(1)'.
 
@@ -16,15 +16,15 @@ dcommit, branch and tag, as well as a few extras.
 
 To enable the mode in a particular repository use:
 
-  cd /path/to/repository
-  git config --add magit.extension svn
+cd /path/to/repository
+git config --add magit.extension svn
 
 To enable the mode for all repositories use:
 
-  git config --global --add magit.extension svn
+git config --global --add magit.extension svn
 
 To enable the mode globally without dropping to a shell:
 
-  (add-hook 'magit-mode-hook 'magit-svn-mode)
+(add-hook 'magit-mode-hook 'magit-svn-mode)
 
 This package is unmaintained see the README for more information.

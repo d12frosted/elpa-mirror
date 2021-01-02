@@ -8,7 +8,7 @@ There are 7 different mapping styles in this version: zentest,
 rspec, rails, ruby, objc, c, and cpp. Feel free to submit more and
 I'll incorporate them.
 
-Example Mapping (ruby style):
+; Example Mapping (ruby style):
 
 blah.rb <-> test_blah.rb
 lib/blah.rb <-> test/test_blah.rb

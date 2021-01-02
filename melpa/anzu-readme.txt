@@ -7,4 +7,4 @@ for your search query.
 
 To use this package, add following code to your init.el or .emacs
 
-  (global-anzu-mode +1)
+(global-anzu-mode +1)

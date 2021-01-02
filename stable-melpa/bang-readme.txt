@@ -1,3 +1,4 @@
+
 Bang is a interactive `shell-command' substitute, that extends the
 regular Emacs function by considering the first character as special.
 Read `bang's docstring for more details.

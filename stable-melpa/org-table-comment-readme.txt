@@ -1,4 +1,3 @@
-Commentary:
 
 This allows you to create org-tables in languages that do not have
 block comments.  For example in elisp:
@@ -65,3 +64,5 @@ TODO: Make killing and cutting cut the appropriate lines when
 inside org-comment-table.
 
 Eventually this could allow for R radio tables..?
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

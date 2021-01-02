@@ -1,3 +1,4 @@
+
 This package provides access to SWORD content via diatheke, facilitating
 reading Biblical text or other diatheke-accessible material in Emacs.
 

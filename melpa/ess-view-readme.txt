@@ -30,3 +30,4 @@ will be exported with their row.names, eg. use:
 C-u 0 C-x w  (to see the object)
 
 C-u 0 C-x q  (to see it and then have it saved back in the R dataframe)
+

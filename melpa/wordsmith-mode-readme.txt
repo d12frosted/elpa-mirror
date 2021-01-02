@@ -1,4 +1,3 @@
-Documentation:
 
 Syntax highlighting (nouns, verb, adverbs...) in buffer.
 This package wraps functionality of MacOSX's natural language processing tools,

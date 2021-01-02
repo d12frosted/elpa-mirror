@@ -1,3 +1,4 @@
+
 This minor-mode is inspired by https://github.com/Haacked/Encourage
 
 To use it, simply call M-x `encourage-mode'.

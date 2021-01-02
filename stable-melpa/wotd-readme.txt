@@ -1,9 +1,9 @@
-                           _________________
+_________________
 
-                            WORD OF THE DAY
+WORD OF THE DAY
 
-                              Junpeng Qiu
-                           _________________
+Junpeng Qiu
+_________________
 
 
 Table of Contents
@@ -29,22 +29,22 @@ https://melpa.org/#/wotd
 1 Available Sources
 ===================
 
-  - Merriam Webster
-  - Wiktionary
-  - Macmillan Dictionary
-  - Wordsmith
-  - Free Dictionary
-  - Oxford English Dictionary
-  - Urban Dictionary
-  - WordThink
-  - Oxford Dictionaries
-  - Cambridge Dictionary
-  - Collins Dictionary
-  - Learners Dictionary
-  - Wordnik
-  - Dictionary.com
-  - Bing dict (English word, Chinese definitions.  See also
-    [bing-dict.el])
+- Merriam Webster
+- Wiktionary
+- Macmillan Dictionary
+- Wordsmith
+- Free Dictionary
+- Oxford English Dictionary
+- Urban Dictionary
+- WordThink
+- Oxford Dictionaries
+- Cambridge Dictionary
+- Collins Dictionary
+- Learners Dictionary
+- Wordnik
+- Dictionary.com
+- Bing dict (English word, Chinese definitions.  See also
+[bing-dict.el])
 
 
 [bing-dict.el] https://github.com/cute-jumper/bing-dict.el
@@ -56,33 +56,33 @@ https://melpa.org/#/wotd
 2.1 `M-x wotd-select'
 ~~~~~~~~~~~~~~~~~~~~~
 
-  Show a word-of-the-day by selecting a source from
-  `wotd-enabled-sources'.
+Show a word-of-the-day by selecting a source from
+`wotd-enabled-sources'.
 
-  This works asynchronously.
+This works asynchronously.
 
 
 2.2 `M-x wotd-all'
 ~~~~~~~~~~~~~~~~~~
 
-  Show all the "word-of-the-day"s from `wotd-enabled-sources' in a
-  summary buffer, which enables `orgstruct-mode' for easier navigation.
+Show all the "word-of-the-day"s from `wotd-enabled-sources' in a
+summary buffer, which enables `orgstruct-mode' for easier navigation.
 
-  This works synchronously.  (may be changed later)
+This works synchronously.  (may be changed later)
 
-  Screenshot: [./screenshots/summary.png]
+Screenshot: [./screenshots/summary.png]
 
 
 3 Config
 ========
 
-  See `wotd-supported-sources' for the complete list of all the
-  supported online sources.  You can set `wotd-enabled-sources' to
-  controls which sources are enabled.  By default, all the sources
-  except `bing dict' are enabled.
+See `wotd-supported-sources' for the complete list of all the
+supported online sources.  You can set `wotd-enabled-sources' to
+controls which sources are enabled.  By default, all the sources
+except `bing dict' are enabled.
 
 
 4 Contribution
 ==============
 
-  Welcome to submit PRs to add more online sources!
+Welcome to submit PRs to add more online sources!

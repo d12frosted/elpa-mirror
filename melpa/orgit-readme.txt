@@ -18,9 +18,9 @@ Format
 
 The three link types defined here take these forms:
 
-   orgit:/path/to/repo/            links to a `magit-status' buffer
-   orgit-rev:/path/to/repo/::REV   links to a `magit-revision' buffer
-   orgit-log:/path/to/repo/::ARGS  links to a `magit-log' buffer
+orgit:/path/to/repo/            links to a `magit-status' buffer
+orgit-rev:/path/to/repo/::REV   links to a `magit-revision' buffer
+orgit-log:/path/to/repo/::ARGS  links to a `magit-log' buffer
 
 Before v1.3.0 only the first revision was stored in `orgit-log'
 links, and all other revisions were discarded.  All other arguments
@@ -49,10 +49,10 @@ variables.
 To use a remote different from `orgit-remote' but still use
 `orgit-export-alist' to generate the web urls, use:
 
-   git config orgit.remote REMOTE-NAME
+git config orgit.remote REMOTE-NAME
 
 To explicitly define the web urls, use something like:
 
-   git config orgit.status http://example.com/repo/overview
-   git config orgit.rev http://example.com/repo/revision/%r
-   git config orgit.log http://example.com/repo/history/%r
+git config orgit.status http://example.com/repo/overview
+git config orgit.rev http://example.com/repo/revision/%r
+git config orgit.log http://example.com/repo/history/%r

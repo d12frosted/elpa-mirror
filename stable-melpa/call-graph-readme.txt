@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; Library to generate call graph for c/c++ functions.
-
+Library to generate call graph for c/c++ functions.

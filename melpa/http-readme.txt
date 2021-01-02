@@ -1,18 +1,19 @@
+
 `http.el' provides an easy way to interact with the HTTP protocol.
 
 Usage:
 
 Create a file with the following contents, and set `http-mode' as major mode.
 
-    # -*- http -*-
+# -*- http -*-
 
-    POST https://httpbin.org/post?val=key
-    User-Agent: Emacs24
-    Content-Type: application/json
+POST https://httpbin.org/post?val=key
+User-Agent: Emacs24
+Content-Type: application/json
 
-    {
-      "foo": "bar"
-    }
+{
+"foo": "bar"
+}
 
 Move the cursor somewhere within the description of the http request and
 execute `M-x http-process` or press <kbd>C-c C-c</kbd>, if everything is went
@@ -30,8 +31,8 @@ If you want to use a custom mode for the fontification of the response buffer
 with content-type equal to `http-content-type-mode-alist'.  For example, to
 use [json-mode][] for responses with content-type "application/json":
 
-    (add-to-list 'http-content-type-mode-alist
-                 '("application/json" . json-mode))
+(add-to-list 'http-content-type-mode-alist
+'("application/json" . json-mode))
 
 Prettify response:
 
@@ -41,35 +42,35 @@ arguments.  Examples:
 
 + To use [json-reformat][] in responses with content-type "application/json":
 
-    (require 'json-reformat)
+(require 'json-reformat)
 
-    (defun my/pretty-json-buffer ()
-      (json-reformat-region (point-min) (point-max)))
+(defun my/pretty-json-buffer ()
+(json-reformat-region (point-min) (point-max)))
 
-    (add-to-list 'http-pretty-callback-alist
-                 '("application/json" . my/pretty-json-buffer))
+(add-to-list 'http-pretty-callback-alist
+'("application/json" . my/pretty-json-buffer))
 
 + To display the rendered html in responses with content-type "text/html":
 
-    (require 'shr)
+(require 'shr)
 
-    (defun my/http-display-html ()
-      (shr-render-region (point-min) (point-max)))
+(defun my/http-display-html ()
+(shr-render-region (point-min) (point-max)))
 
-    (add-to-list 'http-pretty-callback-alist
-                 '("text/html" . my/http-display-html))
+(add-to-list 'http-pretty-callback-alist
+'("text/html" . my/http-display-html))
 
 Related projects:
 
 + [httprepl.el][]: An HTTP REPL for Emacs.
 
 + [restclient.el][]: HTTP REST client tool for Emacs.  You can use both
-  projects indistinctly, the main differences between both are:
+projects indistinctly, the main differences between both are:
 
-  |            | `restclient.el'   | `http.el'     |
-  | ---------- | ----------------- | ------------- |
-  | backend    | `url.el'          | `request.el'  |
-  | variables  | yes               | no            |
+|            | `restclient.el'   | `http.el'     |
+| ---------- | ----------------- | ------------- |
+| backend    | `url.el'          | `request.el'  |
+| variables  | yes               | no            |
 
 [httprepl.el]: https://github.com/gregsexton/httprepl.el "An HTTP REPL for Emacs"
 [restclient.el]: https://github.com/pashky/restclient.el "HTTP REST client tool for Emacs"

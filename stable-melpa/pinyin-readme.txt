@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; A library for converting Hanzi to Pinyin
-
+A library for converting Hanzi to Pinyin

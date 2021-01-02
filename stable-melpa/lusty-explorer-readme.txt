@@ -1,14 +1,14 @@
- -----------
+-----------
 
 To install, copy this file somewhere in your load-path and add this line to
 your .emacs:
 
-   (require 'lusty-explorer)
+(require 'lusty-explorer)
 
 To launch the explorer, run or bind the following commands:
 
-   M-x lusty-file-explorer
-   M-x lusty-buffer-explorer
+M-x lusty-file-explorer
+M-x lusty-buffer-explorer
 
 And then use as you would `find-file' or `switch-to-buffer'. A split window
 shows the *Lusty-Matches* buffer, which updates dynamically as you type
@@ -20,24 +20,24 @@ previous column).  Pressing TAB or RET will select the highlighted match
 To create a new buffer with the given name, press C-x e.  To open dired at
 the current viewed directory, press C-x d.
 
-Customization:
- --------------
+; Customization:
+--------------
 
 To modify the keybindings, use something like:
 
-  (add-hook 'lusty-setup-hook 'my-lusty-hook)
-  (defun my-lusty-hook ()
-    (define-key lusty-mode-map "\C-j" 'lusty-highlight-next))
+(add-hook 'lusty-setup-hook 'my-lusty-hook)
+(defun my-lusty-hook ()
+(define-key lusty-mode-map "\C-j" 'lusty-highlight-next))
 
 Respects these variables:
-  completion-ignored-extensions
+completion-ignored-extensions
 
 Development:    <https://github.com/sjbach/lusty-emacs>
 Further info:   <https://www.emacswiki.org/cgi-bin/wiki/LustyExplorer>
-                (Probably out-of-date)
+(Probably out-of-date)
 
 
-Contributors:
+; Contributors:
 
 Tassilo Horn
 Jan Rehders

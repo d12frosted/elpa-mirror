@@ -1,1 +1,1 @@
-GNOME Shell calendar integration with Emacs.
+; GNOME Shell calendar integration with Emacs.

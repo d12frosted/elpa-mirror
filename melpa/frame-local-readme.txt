@@ -1,3 +1,4 @@
+
 Access variables local to a frame
 
 You can use the functions frame-local-[set,get,setq,getq]

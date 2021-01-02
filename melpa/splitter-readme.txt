@@ -1,3 +1,4 @@
+
 Splitter lets you easily declare and apply sophisticated window
 layouts, create grids of windows, and intelligently shrink a window
 layout to create room for a new window.

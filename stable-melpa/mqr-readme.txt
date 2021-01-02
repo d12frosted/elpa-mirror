@@ -19,7 +19,7 @@ following combos are analogs to those for the Vanila Emacs commands:
 (define-key global-map (kbd "H-%") 'mqr-query-replace)
 (define-key global-map (kbd "C-H-%") 'mqr-query-replace-regexp)
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 This file is NOT part of GNU Emacs.
 

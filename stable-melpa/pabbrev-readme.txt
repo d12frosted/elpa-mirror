@@ -1,3 +1,4 @@
+
 The code provides a abbreviation expansion for Emacs.  Its fairly
 similar to "dabbrev" expansion, which works based on the contents
 of the current buffer (or other buffers).
@@ -81,7 +82,7 @@ seems to be a good choice for this.  By preserving access to the
 original tab binding when there is no expansion, pabbrev mostly
 "does what I mean", at least in my hands.
 
-Installation:
+; Installation:
 
 To install this file place in your `load-path', and add
 

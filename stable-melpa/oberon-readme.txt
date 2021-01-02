@@ -11,9 +11,9 @@ Put this file in a directory where Emacs can find it (`C-h v
 load-path' for more info). Then add the following lines to your
 Emacs initialization file:
 
-   (add-to-list 'auto-mode-alist '("\\.Mod\\'" . oberon-mode))
-   (autoload 'oberon-mode "oberon" nil t)
-   (add-hook 'oberon-mode-hook (lambda () (abbrev-mode t)))
+(add-to-list 'auto-mode-alist '("\\.Mod\\'" . oberon-mode))
+(autoload 'oberon-mode "oberon" nil t)
+(add-hook 'oberon-mode-hook (lambda () (abbrev-mode t)))
 
 You may want to change the regular expression on the first line if
 your Oberon files do not end with `.Mod'. You can also skip the
@@ -36,4 +36,4 @@ assumptions are:
 
 * No one-line procedure definitions, e.g.
 
-     PROCEDURE P; BEGIN END P;
+PROCEDURE P; BEGIN END P;

@@ -1,11 +1,11 @@
 This package provides two commands:
 
- * `autotetris' starts `tetris' with autotetris-mode enabled. This
-   is the command you probably want to run.
+* `autotetris' starts `tetris' with autotetris-mode enabled. This
+is the command you probably want to run.
 
- * `autotetris-mode' a minor mode for tetris-mode that
-   automatically plays the game. Can be turned on or off at any
-   time to allow a human to step in or out of control.
+* `autotetris-mode' a minor mode for tetris-mode that
+automatically plays the game. Can be turned on or off at any
+time to allow a human to step in or out of control.
 
 The AI is straightforward. It has a game state evaluator that
 computes a single metric for a game state based on the following:

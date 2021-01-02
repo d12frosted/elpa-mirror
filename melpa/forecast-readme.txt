@@ -1,3 +1,4 @@
+
 forecast.el generates a _weather forecast report_ and displays it
 in a buffer.  It uses data from Dark Sky (http://darksky.net), and
 thus one needs to acquire an api key from them in order to use this
@@ -11,7 +12,7 @@ Report bugs to the Issues page in the Github repo:
 https://github.com/cadadr/elisp/issues
 
 
-Installation:
+; Installation:
 
 See also «Example configuration».
 
@@ -48,21 +49,21 @@ Then on, you may run the command `forecast' to get the forecast
 buffer.  The forecast buffer uses `org-level-*' faces,  so it will
 look like your org files.  It is called «*Weather Forecast*».
 
-Example configuration:
+; Example configuration:
 
 (require 'forecast)
 (setq calendar-latitude 41.168602
-      calendar-longitude 29.047024
-      calendar-location-name "İstanbul, Türkiye"
-      forecast-api-key "<deduced>")
+calendar-longitude 29.047024
+calendar-location-name "İstanbul, Türkiye"
+forecast-api-key "<deduced>")
 
 Or, for the privacy of the API key:
 
 (require 'forecast)
 (setq calendar-latitude 41.168602
-      calendar-longitude 29.047024
-      calendar-location-name "İstanbul, Türkiye"
-      forecast-city "İstanbul")
+calendar-longitude 29.047024
+calendar-location-name "İstanbul, Türkiye"
+forecast-city "İstanbul")
 
 (load (locate-user-emacs-file "forecast-api-key.el"))
 

@@ -1,18 +1,19 @@
+
 This package provides functions to search Xcode documents within Emacs,
 Currently support API search only, result topics will show in web browser.
 Other features may be added later.
 
 Example usage:
 
-  (require 'ivy-xcdoc)
+(require 'ivy-xcdoc)
 
 Then:
 
-  M-x `ivy-xcdoc-search-api' RET
+M-x `ivy-xcdoc-search-api' RET
 
 or
 
-  M-x `ivy-xcdoc-search-api-at-point' RET
+M-x `ivy-xcdoc-search-api-at-point' RET
 
 Tips:
 

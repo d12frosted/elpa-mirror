@@ -4,8 +4,8 @@ and 'M-x next-buffer RET' 'RET' 'RET' 'RET'... will switch buffers.
 
 ## Setup
 
-    (add-to-list 'load-path "/path/to/easy-repeat.el")
-    (require 'easy-repeat)
+(add-to-list 'load-path "/path/to/easy-repeat.el")
+(require 'easy-repeat)
 
 ## Usage
 Modify `easy-repeat-command-list' to choose which commands you want to repeat

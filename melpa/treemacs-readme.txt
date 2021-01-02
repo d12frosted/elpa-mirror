@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;;; A powerful and flexible file tree project explorer.
-
+; A powerful and flexible file tree project explorer.

@@ -8,4 +8,4 @@ conditions:
 - You use Emacs.
 
 - You almost always use magit for Git operations on your
-  machine(s).
+machine(s).

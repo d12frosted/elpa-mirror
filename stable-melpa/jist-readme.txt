@@ -1,3 +1,4 @@
+
 Yet another [Gist][] client for Emacs.
 
 ### Features:
@@ -26,21 +27,21 @@ through any of the following methods:
 
 + Create a gist from an active region:
 
-                            | public | anonymous
-  ------------------------- | ------ | ---------
-  `jist-auth-region'        |        |
-  `jist-auth-region-public' | x      |
-  `jist-region'             |        | x
-  `jist-region-public'      | x      | x
+| public | anonymous
+------------------------- | ------ | ---------
+`jist-auth-region'        |        |
+`jist-auth-region-public' | x      |
+`jist-region'             |        | x
+`jist-region-public'      | x      | x
 
 + Create a gist of the contents of the current buffer:
 
-                            | public | anonymous
-  ------------------------- | ------ | ---------
-  `jist-auth-buffer'        |        |
-  `jist-auth-buffer-public' | x      |
-  `jist-buffer'             |        | x
-  `jist-buffer-public'      | x      | x
+| public | anonymous
+------------------------- | ------ | ---------
+`jist-auth-buffer'        |        |
+`jist-auth-buffer-public' | x      |
+`jist-buffer'             |        | x
+`jist-buffer-public'      | x      | x
 
 You can set the variable `jist-enable-default-authorized' to non nil to
 always use your configured account when creating gists.
@@ -48,12 +49,12 @@ always use your configured account when creating gists.
 #### Tips:
 
 + In the current gist API the values of `gist_pull_url' and `git_push_url'
-  use the HTTP protocol, but it's inconvenient to use the HTTP for pushes.
-  To use the SSH protocol for pushes in cloned gists you need to add the
-  following to your git-config(1):
+use the HTTP protocol, but it's inconvenient to use the HTTP for pushes.
+To use the SSH protocol for pushes in cloned gists you need to add the
+following to your git-config(1):
 
-        [url "git@gist.github.com:/"]
-            pushInsteadOf = "https://gist.github.com/"
+[url "git@gist.github.com:/"]
+pushInsteadOf = "https://gist.github.com/"
 
 #### Related Projects:
 
@@ -66,8 +67,8 @@ always use your configured account when creating gists.
 + [ ] Allow gist edition with `org-mode'.
 + [ ] Handle nicely 422 errors.  See: https://developer.github.com/v3/#client-errors
 + [ ] Add pagination support with rfc5988 link headers.  See:
-  - [Github api pagination](https://developer.github.com/v3/#pagination)
-  - [Traversing with Pagination](https://developer.github.com/guides/traversing-with-pagination/).
-  - [rfc5988](https://www.rfc-editor.org/rfc/rfc5988.txt)
+- [Github api pagination](https://developer.github.com/v3/#pagination)
+- [Traversing with Pagination](https://developer.github.com/guides/traversing-with-pagination/).
+- [rfc5988](https://www.rfc-editor.org/rfc/rfc5988.txt)
 
 [Gist]: https://gist.github.com/

@@ -11,7 +11,7 @@ completions, which means that repository features such as
 .gitignore/.hgignore/etc are fully supported out of the box.
 
 This library currently has support for:
-    git, mercurial, darcs, bazaar, monotone, svn
+git, mercurial, darcs, bazaar, monotone, svn
 
 Contributions for support of other repository types are welcome.
 Please send a pull request to
@@ -19,4 +19,4 @@ https://github.com/hoffstaetter/find-file-in-repository and I will
 be happy to include your modifications.
 
 Recommended keybinding:
-   (global-set-key (kbd "C-x f") 'find-file-in-repository)
+(global-set-key (kbd "C-x f") 'find-file-in-repository)

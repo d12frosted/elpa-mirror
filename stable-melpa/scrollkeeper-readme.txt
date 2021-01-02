@@ -11,12 +11,12 @@ keys:
 + `scrollkeeper-up'
 + `scrollkeeper-down'
 
-Credits
+;; Credits
 
 + Inspired by Clemens Radermacher's blog post, <https://with-emacs.com/posts/keep-scrollin-scrollin-scrollin/>.
 + Aided by studying Michael Heerdegen's package, <https://github.com/michael-heerdegen/on-screen.el>.
 
-See also
+;; See also
 
 These packages provide some similar functionality but in very different ways.
 

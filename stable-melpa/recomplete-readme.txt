@@ -1,6 +1,6 @@
 This package provides mechanism for immediate completion, running again cycles over options.
 
-Usage
+; Usage
 
 
 A key can be bound to a completion action,
@@ -10,5 +10,5 @@ or bind a key to cycle backward.
 
 Example:
 
-  ;; Map Alt-P to correct the current word.
-  (global-set-key (kbd "M-p") 'recomplete-ispell-word)
+;; Map Alt-P to correct the current word.
+(global-set-key (kbd "M-p") 'recomplete-ispell-word)

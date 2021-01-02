@@ -7,7 +7,7 @@ eldoc, and using pop-ups for completion.
 To install, simply add to your configuration:
 
 (with-eval-after-load 'flycheck
-  (flycheck-title-mode))
+(flycheck-title-mode))
 
 See https://github.com/Wilfred/flycheck-frame-title for full docs
 and gratuitous screenshots.

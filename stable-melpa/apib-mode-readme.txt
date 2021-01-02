@@ -5,8 +5,8 @@ getting parsing the API Blueprint and validating it.  For this to
 work though you need to install the drafter exectubale first,
 please see https://github.com/apiaryio/drafter for more information
 
-Installation:
+; Installation:
 
 (autoload 'apib-mode "apib-mode"
-       "Major mode for editing API Blueprint files" t)
+"Major mode for editing API Blueprint files" t)
 (add-to-list 'auto-mode-alist '("\\.apib\\'" . apib-mode))

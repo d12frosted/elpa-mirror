@@ -12,8 +12,8 @@ To use `mu4e-query-fragments', use the following:
 
 (require 'mu4e-query-fragments)
 (setq mu4e-query-fragments-list
-  '(("%junk" . "maildir:/Junk OR subject:SPAM")
-    ("%hidden" . "flag:trashed OR %junk")))
+'(("%junk" . "maildir:/Junk OR subject:SPAM")
+("%hidden" . "flag:trashed OR %junk")))
 (setq mu4e-query-fragments-append "NOT %hidden")
 
 The terms %junk and %hidden can subsequently be used anywhere in

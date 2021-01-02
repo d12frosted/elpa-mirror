@@ -22,8 +22,8 @@ regardless of where point is.
 delim-kill was inspired by Damian Conway's course "The productive
 programmer". Thanks!
 
-Dependencies: none.
+; Dependencies: none.
 
-Installation:
+; Installation:
 Put the file anywhere in your load path, (require 'delim-kill), and
 bind the function to a key.

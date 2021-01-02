@@ -1,6 +1,2 @@
-;;; Commentary:
-
-;; Slack client in Emacs.
-
-;;
+Slack client in Emacs.
 

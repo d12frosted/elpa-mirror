@@ -1,23 +1,24 @@
-Literal String Mode is a minor mode for editing multi-line literal
-strings in a dedicated buffer.
-
-When enabled, edit the literal string at point using C-c "
-(literal-string-edit-string), this will copy the (unescaped and
-deindented) content of the string to a dedicated literal string
-editing buffer using `edit-indirect`.
-
-To exit the current literal string buffer and copy the edited
-string back into the original source buffer with correct quoting
-and escape sequences, press C-c c (edit-indirect-commit)
-
-To discard your changes to the editing buffer, press C-c C-k
-(edit-indirect-abort)
-
-To enable literal-string-mode in your preferred programming modes,
-turn it on using the relevant mode hooks.
-
-You can customize `literal-string-editing-mode` to set the major
-mode of the editing buffer.  (For instance, to markdown-mode).
+;
+; Literal String Mode is a minor mode for editing multi-line literal
+; strings in a dedicated buffer.
+;
+; When enabled, edit the literal string at point using C-c "
+; (literal-string-edit-string), this will copy the (unescaped and
+; deindented) content of the string to a dedicated literal string
+; editing buffer using `edit-indirect`.
+;
+; To exit the current literal string buffer and copy the edited
+; string back into the original source buffer with correct quoting
+; and escape sequences, press C-c c (edit-indirect-commit)
+;
+; To discard your changes to the editing buffer, press C-c C-k
+; (edit-indirect-abort)
+;
+; To enable literal-string-mode in your preferred programming modes,
+; turn it on using the relevant mode hooks.
+;
+; You can customize `literal-string-editing-mode` to set the major
+; mode of the editing buffer.  (For instance, to markdown-mode).
 
 This program is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

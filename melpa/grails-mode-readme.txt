@@ -1,3 +1,4 @@
+
 A minor mode that adds some useful commands for navigating around
 a grails project
 

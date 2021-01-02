@@ -1,2 +1,2 @@
 Setup:
-  (eshell-did-you-mean-setup)
+(eshell-did-you-mean-setup)

@@ -1,3 +1,4 @@
+
 Remove default holidays, then append mexican calendar
 
 (customize-set-variable 'holiday-bahai-holidays nil)

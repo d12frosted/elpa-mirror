@@ -1,3 +1,4 @@
+
 Insert content either from kill-ring or from shell command result at marked
 point or vertically like rectangular do.
 

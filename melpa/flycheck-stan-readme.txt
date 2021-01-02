@@ -1,5 +1,2 @@
-;;; Commentary:
-;;
-;; Add a Stan syntax checker to Flycheck which uses stanc.
-;;
 
+Add a Stan syntax checker to Flycheck which uses stanc.

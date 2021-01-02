@@ -19,7 +19,7 @@ Source          https://git.leafac.com/org-password-manager
 Bug Reports     Write emails to org-password-manager@leafac.com.
 --------------------------------------------------------------------
 Contributions   Send patches and pull requests via email to
-                org-password-manager@leafac.com.
+org-password-manager@leafac.com.
 --------------------------------------------------------------------
 
 1. Overview
@@ -42,16 +42,16 @@ This section assumes the default configuration.
 Add credentials as properties named USERNAME and PASSWORD to headings in
 Org Mode files. For example:
 
-  * [[http://example.com][My favorite website]]
-    :PROPERTIES:
-    :USERNAME: leandro
-    :PASSWORD: chunky-tempeh
-    :END:
-   
-  * SSH key
-    :PROPERTIES:
-    :PASSWORD: tofu
-    :END:
+* [[http://example.com][My favorite website]]
+:PROPERTIES:
+:USERNAME: leandro
+:PASSWORD: chunky-tempeh
+:END:
+
+* SSH key
+:PROPERTIES:
+:PASSWORD: tofu
+:END:
 
 Passwords are cleared from the clipboard after 30 seconds.
 
@@ -71,21 +71,21 @@ pwgen, use the C-u argument (C-u C-c C-p g).
 For the default configuration with the keybindings covered in the Usage
 section, add the following to the Emacs configuration:
 
-  (add-hook 'org-mode-hook 'org-password-manager-key-bindings)
+(add-hook 'org-mode-hook 'org-password-manager-key-bindings)
 
 To customize the key bindings, start with the following code:
 
-  (defun org-password-manager-key-bindings ()
-    "Binds keys for org-password-manager."
-    (local-set-key (kbd "C-c C-p u") 'org-password-manager-get-username)
-    (local-set-key (kbd "C-c C-p p") 'org-password-manager-get-password)
-    (local-set-key (kbd "C-c C-p
-  g") 'org-password-manager-generate-password))
+(defun org-password-manager-key-bindings ()
+"Binds keys for org-password-manager."
+(local-set-key (kbd "C-c C-p u") 'org-password-manager-get-username)
+(local-set-key (kbd "C-c C-p p") 'org-password-manager-get-password)
+(local-set-key (kbd "C-c C-p
+g") 'org-password-manager-generate-password))
 
 For Interactive Do (ido) support, add the following to the Emacs
 configuration:
 
-  (setq org-completion-use-ido t)
+(setq org-completion-use-ido t)
 
 For advanced configuration, refer to
 M-x customize-group org-password-manager.

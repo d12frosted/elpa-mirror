@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; A Gnus backend for Twitter.
-
+A Gnus backend for Twitter.

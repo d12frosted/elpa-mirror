@@ -1,3 +1,4 @@
+
 M-x `open-junk-file' opens a new file whose filename is derived from
 current time.  You can write short program in it.  It helps to
 try-and-error programs.

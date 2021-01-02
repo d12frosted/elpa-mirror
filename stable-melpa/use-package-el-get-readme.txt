@@ -2,9 +2,9 @@
 (use-package-el-get-setup)
 
 (use-package req-package
-  :el-get t)
+:el-get t)
 
-or
+;; or
 
 (use-package req-package
-  :el-get req-package)
+:el-get req-package)

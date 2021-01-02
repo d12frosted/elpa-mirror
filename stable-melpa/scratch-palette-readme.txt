@@ -1,7 +1,7 @@
 Require this script and set a directory to save scratches in.
 
-  (require 'scratch-palette)
-  (setq scratch-palette-directory "~/.emacs.d/palette/")
+(require 'scratch-palette)
+(setq scratch-palette-directory "~/.emacs.d/palette/")
 
 Then the command =M-x scratch-palette-popup= is available. This
 command displays the scratch buffer for the file. When called with

@@ -14,30 +14,30 @@ package-install: eshell-prompt-extras.
 Usage
 before emacs24.4
 (eval-after-load 'esh-opt
-  (progn
-    (autoload 'epe-theme-lambda "eshell-prompt-extras")
-    (setq eshell-highlight-prompt nil
-          eshell-prompt-function 'epe-theme-lambda)))
+(progn
+(autoload 'epe-theme-lambda "eshell-prompt-extras")
+(setq eshell-highlight-prompt nil
+eshell-prompt-function 'epe-theme-lambda)))
 
 If you want to display python virtual environment information:
 (eval-after-load 'esh-opt
-  (progn
-    (require 'virtualenvwrapper)
-    (venv-initialize-eshell)
-    (autoload 'epe-theme-lambda "eshell-prompt-extras")
-    (setq eshell-highlight-prompt nil
-          eshell-prompt-function 'epe-theme-lambda)))
+(progn
+(require 'virtualenvwrapper)
+(venv-initialize-eshell)
+(autoload 'epe-theme-lambda "eshell-prompt-extras")
+(setq eshell-highlight-prompt nil
+eshell-prompt-function 'epe-theme-lambda)))
 
 after emacs24.4
 (with-eval-after-load "esh-opt"
-  (autoload 'epe-theme-lambda "eshell-prompt-extras")
-  (setq eshell-highlight-prompt nil
-        eshell-prompt-function 'epe-theme-lambda))
+(autoload 'epe-theme-lambda "eshell-prompt-extras")
+(setq eshell-highlight-prompt nil
+eshell-prompt-function 'epe-theme-lambda))
 
 If you want to display python virtual environment information:
 (with-eval-after-load "esh-opt"
-  (require 'virtualenvwrapper)
-  (venv-initialize-eshell)
-  (autoload 'epe-theme-lambda "eshell-prompt-extras")
-  (setq eshell-highlight-prompt nil
-        eshell-prompt-function 'epe-theme-lambda))
+(require 'virtualenvwrapper)
+(venv-initialize-eshell)
+(autoload 'epe-theme-lambda "eshell-prompt-extras")
+(setq eshell-highlight-prompt nil
+eshell-prompt-function 'epe-theme-lambda))

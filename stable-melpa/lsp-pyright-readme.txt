@@ -1,1 +1,2 @@
- Pyright language server.
+
+Pyright language server.

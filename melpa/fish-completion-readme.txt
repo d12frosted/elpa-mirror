@@ -1,8 +1,8 @@
 You can setup this package globally with:
 
 (when (and (executable-find "fish")
-           (require 'fish-completion nil t))
-  (global-fish-completion-mode))
+(require 'fish-completion nil t))
+(global-fish-completion-mode))
 
 Alternatively, you can call the `fish-completion-mode' manually or in shell /
 Eshell mode hook.

@@ -14,14 +14,14 @@ variable `occur-linenumbers-in-margin' and face `occur-margin-face' to
 your liking.  When displayed in the margin, line numbers won't interfere
 with the regexps of the additional filters.
 
-Usage
+; Usage
 
 Put this file in your load-path and add this lines to your init file:
 
 (require 'occur-x)
 (add-hook 'occur-mode-hook 'turn-on-occur-x-mode)
 
-Feedback
+; Feedback
 
 Bugs reports, comments, ideas, etc. welcomed.
 

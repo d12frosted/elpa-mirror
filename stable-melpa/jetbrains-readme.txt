@@ -22,7 +22,7 @@ Please run `Tools > Create Command-line Launcher...' by menu in your IDE.
 
 I encourage you to create a `.dir-locals.el` file in your project.
 
-    ((nil . (jetbrains-ide "PhpStorm")))
+((nil . (jetbrains-ide "PhpStorm")))
 
 ### Interoperability
 

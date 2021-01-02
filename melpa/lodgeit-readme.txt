@@ -3,12 +3,12 @@ pastebin.
 
 Installation:
 
-   (require 'lodgeit)
+(require 'lodgeit)
 
 You can then configure the pastebin you want to use via the
 `lodgeit-pastebin-base` variable.
 
-   (setq lodgeit-pastebin-base "http://paste.openstack.org/")
+(setq lodgeit-pastebin-base "http://paste.openstack.org/")
 
 Usage:
 

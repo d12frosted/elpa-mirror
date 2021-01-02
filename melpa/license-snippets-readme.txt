@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; LICENSE templates for yasnippet
-
+LICENSE templates for yasnippet

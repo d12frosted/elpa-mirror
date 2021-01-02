@@ -1,3 +1,2 @@
-The main source of inspiration of this theme is Lavender.
-
-https://github.com/emacsfodder/emacs-lavender-theme/
+This file has been automatically generated from a template of the
+colorless themes project.

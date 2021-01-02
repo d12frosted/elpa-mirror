@@ -1,3 +1,4 @@
+
 Signal is a library offering enriched hook-like features.
 With signal, you are able to handle condition-based function
 calls with arguments.

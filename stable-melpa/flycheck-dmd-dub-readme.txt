@@ -8,4 +8,4 @@ in the tests directory.
 
 Usage:
 
-     (add-hook 'd-mode-hook 'flycheck-dmd-dub-set-include-path)
+(add-hook 'd-mode-hook 'flycheck-dmd-dub-set-include-path)

@@ -1,3 +1,4 @@
+
 hideshow-org.el provides an org-mode like interface to the
 hideshow.el file.
 

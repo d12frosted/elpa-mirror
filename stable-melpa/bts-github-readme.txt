@@ -1,23 +1,24 @@
+
 Nothing.
 
-Dependencies:
+; Dependencies:
 
 - bts.el ( see <https://github.com/aki2o/emacs-bts> )
 - gh.el ( see <https://github.com/sigma/gh.el> )
 
-Installation:
+; Installation:
 
 Put this to your load-path.
 And put the following lines in your .emacs or site-start.el file.
 
 (require 'bts-github)
 
-Configuration:
+; Configuration:
 
-About config item, see Customization or eval the following sexp.
-(customize-group "bts-github")
+;; About config item, see Customization or eval the following sexp.
+;; (customize-group "bts-github")
 
-Customization:
+; Customization:
 
 [EVAL] (autodoc-document-lisp-buffer :type 'user-variable :prefix "bts-github:[^:]" :docstring t)
 `bts-github:ignore-labels'
@@ -33,4 +34,4 @@ Width of issue labels column in summary buffer.
 `bts-github:summary-label-decorating'
 Whether to decorate issue labels column.
 
- *** END auto-documentation
+*** END auto-documentation

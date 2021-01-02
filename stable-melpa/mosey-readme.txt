@@ -15,7 +15,7 @@ functions to `defmosey', and it'll cook up six functions:
 `mosey-backward-cycle'.  Then you can pick your fav-o-rite ones and
 forget about the rest!
 
-Installation
+; Installation
 
 Best thing to do is just mosey on over to http://melpa.org/ and
 install the package called `mosey'.
@@ -27,7 +27,7 @@ mosey.el in your `load-path' and then put this in your init file:
 
 ...and then you can start moseying around.
 
-Usage
+; Usage
 
 You can use these commands right off the bat to move within the
 current line:
@@ -48,24 +48,24 @@ You might even want to rebind your keys to 'em, maybe like this:
 `:bind*' form:
 
 (use-package mosey
-  :bind* (
-          ;; My personal favorites
-          ("C-a" . mosey-backward-bounce)
-          ("C-e" . mosey-forward-bounce)
-          ))
+:bind* (
+;; My personal favorites
+("C-a" . mosey-backward-bounce)
+("C-e" . mosey-forward-bounce)
+))
 
-Make your own moseys
+;; Make your own moseys
 
 It's easy to make your own moseys with defmosey, somethin' like
 this (this example uses functions from smartparens):
 
 (defmosey '(beginning-of-line
-            back-to-indentation
-            sp-backward-sexp  ; Moves across lines
-            sp-forward-sexp   ; Moves across lines
-            mosey-goto-end-of-code
-            mosey-goto-beginning-of-comment-text)
-  :prefix "lisp")
+back-to-indentation
+sp-backward-sexp  ; Moves across lines
+sp-forward-sexp   ; Moves across lines
+mosey-goto-end-of-code
+mosey-goto-beginning-of-comment-text)
+:prefix "lisp")
 
 That'll cook up six functions for ya:
 
@@ -80,10 +80,10 @@ Then maybe you'd want to use 'em in your `emacs-lisp-mode',
 somethin' like this:
 
 (bind-keys :map emacs-lisp-mode-map
-           ("C-a" . mosey-lisp-backward-cycle)
-           ("C-e" . mosey-lisp-forward-cycle))
+("C-a" . mosey-lisp-backward-cycle)
+("C-e" . mosey-lisp-forward-cycle))
 
-Credits
+; Credits
 
 This package was inspired by Alex Kost's fantastic `mwim' package.
 It has even more features, so check it out!

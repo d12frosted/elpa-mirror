@@ -5,22 +5,22 @@ In short, this plugin let you organize your buffers by creating as
 many buffer groups as you need, add the files you want to it and
 quickly navigate between :
 
-  - Buffers of the same group
-  - Buffer groups
-  - Workspaces, ie sets of buffer groups
+- Buffers of the same group
+- Buffer groups
+- Workspaces, ie sets of buffer groups
 
 Note that :
 
-  - A location is a pair (buffer (or filename) . position)
-  - A buffer group, in fact a location group, is called a circle
-  - A set of buffer groups is called a torus (a circle of circles)
+- A location is a pair (buffer (or filename) . position)
+- A buffer group, in fact a location group, is called a circle
+- A set of buffer groups is called a torus (a circle of circles)
 
 Original idea by Stefan Kamphausen, see https://www.skamphausen.de/cgi-bin/ska/mtorus
 
 See https://github.com/chimay/torus/blob/master/README.org for more details
 
-License
-------------------------------
+; License
+; ------------------------------
 
 This file is not part of Emacs.
 

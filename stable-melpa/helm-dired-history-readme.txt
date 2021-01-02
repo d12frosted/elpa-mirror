@@ -1,3 +1,4 @@
+
 Someone like to reuse the current dired buffer to visit
 another directory, so that you just need open one dired
 buffer. but the bad point is ,you can't  easily go
@@ -18,18 +19,18 @@ just press `RET' or `C-j' to select it.
 
 
 
-Installation:
+; Installation:
 
 (require 'savehist)
 (add-to-list 'savehist-additional-variables 'helm-dired-history-variable)
 (savehist-mode 1)
 
 (with-eval-after-load 'dired
-  (require 'helm-dired-history)
-if you are using ido,you'd better disable ido for dired
-(define-key (cdr ido-minor-mode-map-entry) [remap dired] nil) ;in ido-setup-hook
-  (define-key dired-mode-map "," 'dired))
+(require 'helm-dired-history)
+;; if you are using ido,you'd better disable ido for dired
+;; (define-key (cdr ido-minor-mode-map-entry) [remap dired] nil) ;in ido-setup-hook
+(define-key dired-mode-map "," 'dired))
 or
 (with-eval-after-load 'dired
-  (require 'helm-dired-history)
-  (define-key dired-mode-map "," 'dired))
+(require 'helm-dired-history)
+(define-key dired-mode-map "," 'dired))

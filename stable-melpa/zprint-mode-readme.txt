@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; Reformat Clojure(Script) code using zprint
-
+Reformat Clojure(Script) code using zprint

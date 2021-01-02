@@ -26,21 +26,21 @@ GNU Emacs and python-mode.el.
 There are two ways to use virtualenv.
 
 1) The quickest way to get started is to simply type:
-     M-x virtualenv-workon
-   Which will prompt you to enter the name of a directory in
-   ~/.virtualenvs that contains your chosen environment. You can
-   hit tab to show the available completions.
+M-x virtualenv-workon
+Which will prompt you to enter the name of a directory in
+~/.virtualenvs that contains your chosen environment. You can
+hit tab to show the available completions.
 
-   You'll know that you're in virtualenv mode now when you see the
-   name of the virtualenv you selected in brackets. So if I were to
-   select my turbogears environment that I call tg2.1 then I would
-   see [tg2.1] appear in the mode line. To make sure you're new
-   python shell is set up correctly you can try running this little
-   snippet of python code:
+You'll know that you're in virtualenv mode now when you see the
+name of the virtualenv you selected in brackets. So if I were to
+select my turbogears environment that I call tg2.1 then I would
+see [tg2.1] appear in the mode line. To make sure you're new
+python shell is set up correctly you can try running this little
+snippet of python code:
 
-     import os, sys
-     print os.environ
-     print sys.path
+import os, sys
+print os.environ
+print sys.path
 
 2) The recommended way to use virtualenv minor mode is to use a
 .dir-locals.el file in the root of your project directory, however that
@@ -49,7 +49,7 @@ can set for virtualenv as shown in this example:
 
 in file /path/to/project/.dir-locals.el:
 ((nil . ((virtualenv-workon . "tg2.1")
-	    (virtualenv-default-directory . "/path/to/project/subdir"))))
+(virtualenv-default-directory . "/path/to/project/subdir"))))
 
 The .dir-locals.el is new in Emacs23 and is useful for other
 things, too. You should read the dir-locals docs to understand the

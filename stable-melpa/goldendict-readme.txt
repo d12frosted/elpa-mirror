@@ -1,3 +1,4 @@
+
 query word smartly with goldendict.el
 
 Usage:

@@ -22,5 +22,5 @@ Users that prefer `pt' over `ag' can set this variable to
 custom search function. It will be called with the shell quoted query and the
 shell quoted folder to search in.
 
-  [1]: https://github.com/ggreer/the_silver_searcher
-  [2]: https://github.com/monochromegane/the_platinum_searcher
+[1]: https://github.com/ggreer/the_silver_searcher
+[2]: https://github.com/monochromegane/the_platinum_searcher

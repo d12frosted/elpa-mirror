@@ -3,14 +3,14 @@ facilities related to Clojure, ClojureScript and cljc source.
 
 See accompanying README file for more info: https://github.com/didibus/anakondo/blob/master/README.org
 
-Installation
+;; Installation
 
 See accompanying README file for install instructions: https://github.com/didibus/anakondo/blob/master/README.org#Installation
 
-Usage
+;; Usage
 
 See accompanying README file for usage instructions: https://github.com/didibus/anakondo/blob/master/README.org#Usage
 
-Credits
+;; Credits
 
 See accompanying README file for credits: https://github.com/didibus/anakondo/blob/master/README.org#Credits

@@ -11,15 +11,15 @@ trident-mode RET= will install both it and its dependencies.
 To enable MELPA, if you haven't already, add something like the following to
 your Emacs configuration:
 
-  (require 'package)
-  (add-to-list 'package-archives
-               '("melpa" . "http://melpa.milkbox.net/packages/") t)
-  (package-initialize)
+(require 'package)
+(add-to-list 'package-archives
+'("melpa" . "http://melpa.milkbox.net/packages/") t)
+(package-initialize)
 
 The dependencies that will be installed are:
-  - SLIME
-  - Skewer
-  - dash.el
+- SLIME
+- Skewer
+- dash.el
 
 Trident also requires a Common Lisp implementation and Parenscript.
 Quicklisp is the best way to install Parenscript.
@@ -31,20 +31,20 @@ To enable trident-mode in a SLIME buffer: M-x trident-mode.
 To have lisp-mode, slime-mode, and trident-mode all enable automatically for
 any file with an extension of ".paren":
 
-  (add-to-list 'auto-mode-alist (cons "\\.paren\\'" 'lisp-mode))
-  (add-hook 'lisp-mode-hook
-            #'(lambda ()
-                (when (and buffer-file-name
-                           (string-match-p "\\.paren\\>" buffer-file-name))
-                  (unless (slime-connected-p)
-                    (save-excursion (slime)))
-                  (trident-mode +1))))
+(add-to-list 'auto-mode-alist (cons "\\.paren\\'" 'lisp-mode))
+(add-hook 'lisp-mode-hook
+#'(lambda ()
+(when (and buffer-file-name
+(string-match-p "\\.paren\\>" buffer-file-name))
+(unless (slime-connected-p)
+(save-excursion (slime)))
+(trident-mode +1))))
 
 Parenscript must be loaded in your Common Lisp image, and you'll probably
 also want to import its symbols:
 
-  (ql:quickload :parenscript)
-  (use-package :parenscript)
+(ql:quickload :parenscript)
+(use-package :parenscript)
 
 With the above taken care of it's time to skewer the browser. See Skewer's
 README for detailed information on the multiple ways you can connect to a
@@ -62,12 +62,12 @@ additionally open a JavaScript REPL you can run M-x skewer-repl.
 These commands generate JavaScript from the Parenscript code and display it
 but don't send it to the browser for evaluation:
 
-   - trident-expand-sexp
-   - trident-expand-last-expression
-   - trident-expand-defun
-   - trident-expand-region
-   - trident-expand-buffer
-   - trident-expand-dwim
+- trident-expand-sexp
+- trident-expand-last-expression
+- trident-expand-defun
+- trident-expand-region
+- trident-expand-buffer
+- trident-expand-dwim
 
 From within an expansion buffer you can press e to send the JavaScript to
 the browser, w to copy it to the kill ring, s to save it to a file (you'll
@@ -83,12 +83,12 @@ current buffer and save the generated code directly to a file.
 These commands first compile the Parenscript code to JavaScript and then
 immediately send to it the browser to be evaluated:
 
-   - trident-eval-sexp
-   - trident-eval-last-expression
-   - trident-eval-defun
-   - trident-eval-region
-   - trident-eval-buffer
-   - trident-eval-dwim
+- trident-eval-sexp
+- trident-eval-last-expression
+- trident-eval-defun
+- trident-eval-region
+- trident-eval-buffer
+- trident-eval-dwim
 
 ** Key bindings
 
@@ -105,18 +105,18 @@ trident-eval-region is "e r", so it's now bound to "C-c" "C-e er"
 The full list of key bindings trident-add-keys-with-prefix will establish
 is:
 
-   - "e RET" -- trident-eval-sexp
-   - "e e" -- trident-eval-last-expression
-   - "e d" -- trident-eval-defun
-   - "e r" -- trident-eval-region
-   - "e b" -- trident-eval-buffer
-   - "e SPC" -- trident-eval-dwim
-   - "x RET" -- trident-expand-sexp
-   - "x e" -- trident-expand-last-expression
-   - "x d" -- trident-expand-defun
-   - "x r" -- trident-expand-region
-   - "x b" -- trident-expand-buffer
-   - "x SPC" -- trident-expand-dwim
+- "e RET" -- trident-eval-sexp
+- "e e" -- trident-eval-last-expression
+- "e d" -- trident-eval-defun
+- "e r" -- trident-eval-region
+- "e b" -- trident-eval-buffer
+- "e SPC" -- trident-eval-dwim
+- "x RET" -- trident-expand-sexp
+- "x e" -- trident-expand-last-expression
+- "x d" -- trident-expand-defun
+- "x r" -- trident-expand-region
+- "x b" -- trident-expand-buffer
+- "x SPC" -- trident-expand-dwim
 
 Evaluation commands begin with an "e", expansion commands with "x". The
 second letter is generally mnemonic but not always. The -sexp commands use
@@ -129,23 +129,23 @@ ideas for improving the arrangement.
 If you really want to shadow SLIME's key bindings in buffers where
 trident-mode is active you could do something like this:
 
-  (defun steal-slime-keys-for-trident! ()
-    ;; Don't affect all SLIME buffers, just where invoked
-    (make-local-variable 'slime-mode-map)
-    (let ((map slime-mode-map))
-      (define-key map (kbd "C-x C-e") nil)
-      (define-key map (kbd "C-c C-r") nil)
-      (define-key map (kbd "C-M-x")   nil)
-      (define-key map (kbd "C-c C-k") nil)
-      (define-key map (kbd "C-c C-m") nil))
-    (let ((map trident-mode-map))
-      (define-key map (kbd "C-x C-e") 'trident-eval-last-expression)
-      (define-key map (kbd "C-c C-r") 'trident-eval-region)
-      (define-key map (kbd "C-M-x")   'trident-eval-defun)
-      (define-key map (kbd "C-c C-k") 'trident-eval-buffer)
-      (define-key map (kbd "C-c C-m") 'trident-expand-sexp)))
+(defun steal-slime-keys-for-trident! ()
+;; Don't affect all SLIME buffers, just where invoked
+(make-local-variable 'slime-mode-map)
+(let ((map slime-mode-map))
+(define-key map (kbd "C-x C-e") nil)
+(define-key map (kbd "C-c C-r") nil)
+(define-key map (kbd "C-M-x")   nil)
+(define-key map (kbd "C-c C-k") nil)
+(define-key map (kbd "C-c C-m") nil))
+(let ((map trident-mode-map))
+(define-key map (kbd "C-x C-e") 'trident-eval-last-expression)
+(define-key map (kbd "C-c C-r") 'trident-eval-region)
+(define-key map (kbd "C-M-x")   'trident-eval-defun)
+(define-key map (kbd "C-c C-k") 'trident-eval-buffer)
+(define-key map (kbd "C-c C-m") 'trident-expand-sexp)))
 
-  (add-hook 'trident-mode-hook 'steal-slime-keys-for-trident!)
+(add-hook 'trident-mode-hook 'steal-slime-keys-for-trident!)
 
 ** Other amenities
 
@@ -161,13 +161,13 @@ straight there.
 
 ** Still do be done
 
-   - Add some tests.
-   - Better documentation.
-   - Look into adding a REPL.
-   - See if more integration with SLIME is possible.
-   - Command(s) for compiling to a file.
-   - Similar support for CL-WHO and/or CSS-LITE?
-   - Add support for Customize.
+- Add some tests.
+- Better documentation.
+- Look into adding a REPL.
+- See if more integration with SLIME is possible.
+- Command(s) for compiling to a file.
+- Similar support for CL-WHO and/or CSS-LITE?
+- Add support for Customize.
 
 ** Contributing
 

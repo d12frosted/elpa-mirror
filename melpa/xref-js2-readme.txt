@@ -1,3 +1,4 @@
+
 xref-js2 adds an xref backend for JavaScript files.
 
 Instead of using a tag system, it relies on `ag' to query the codebase of a

@@ -8,5 +8,5 @@ like in `skewer-css-mode'.  To reload the buffer when you save it,
 use code like the following:
 
 (add-hook 'skewer-less-mode
-          (lambda ()
-            (add-hook 'after-save-hook 'skewer-less-eval-buffer nil t)))
+(lambda ()
+(add-hook 'after-save-hook 'skewer-less-eval-buffer nil t)))

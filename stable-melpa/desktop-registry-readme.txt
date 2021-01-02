@@ -3,13 +3,13 @@ you track a central registry of desktop files.  This is useful when
 you use desktop files as project files and want to be able to
 easily switch between them.
 
-Installation
+; Installation
 
 This module is available both on Marmalade and MELPA, so if you
 have either of those set-up it should be as easy as `M-x
 install-package RET desktop-registry RET'.
 
-Usage
+; Usage
 
 To start using it you need to have a desktop loaded in Emacs, you
 can then use `desktop-registry-add-current-desktop' to register
@@ -29,7 +29,7 @@ management tasks, `desktop-registry-list-desktops' will show a list
 of the registered desktops, along with an indicator if they still
 exist on the filesystem.
 
-Configuration
+; Configuration
 
 Apart from the functions to add, remove and rename desktops, and
 the desktop list, it is also possible to use Emacs' customize

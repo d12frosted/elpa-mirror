@@ -4,7 +4,7 @@ The package provides interactive commands for handy computation of
 cosmological distance measures.  For instance, to display a summary
 table, type:
 
-  M-x cosmo-calculator
+M-x cosmo-calculator
 
 All cosmological quantities are computed at a given value of the
 gravitational `redshift' of photons frequency due to the expansion
@@ -12,7 +12,7 @@ of the Universe.
 
 To set the cosmological parameters, type:
 
-  M-x cosmo-set-params
+M-x cosmo-set-params
 
 The Lambda-CDM model is characterized by the following parameters:
 

@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; realgud support for various older debuggers
-
+realgud support for various older debuggers

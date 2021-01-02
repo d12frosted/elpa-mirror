@@ -1,8 +1,9 @@
+
 Helm interface for the recoll [1] desktop search tool.
 
 [1] http://www.lesbonscomptes.com/recoll/
 
-Create recoll indexes:
+; Create recoll indexes:
 
 First you have to create an index for each directory you want
 to index, for this create some directories like "~/.recoll-<your-directory-name>"

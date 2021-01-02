@@ -23,10 +23,10 @@ This version tested with Emacs 25.2.1
 
 See README.org for more details.
 
-Installation:
+; Installation:
 
 1. Move this file to a directory in your load-path or add
-   this to your .emacs:
-   (add-to-list 'load-path "~/path/to/this-file/")
+this to your .emacs:
+(add-to-list 'load-path "~/path/to/this-file/")
 2. Next add this line to your .emacs:
-   (require 'bifocal)
+(require 'bifocal)

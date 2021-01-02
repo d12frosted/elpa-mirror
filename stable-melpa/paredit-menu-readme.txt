@@ -1,3 +1,4 @@
+
 Paredit mode provides structured editing for Lisp. It achieves this by
 ensuring that code is always well-formed while editing. While it is very
 helpful, sometimes it leaves the less experienced user (such as the myself)
@@ -13,12 +14,12 @@ provided showing the examples of use.
 Documentation and examples come directly from paredit, so the menu should
 automatically stay in sync, regardless of changes to paredit.
 
-Installation:
+; Installation:
 
 Add (require 'paredit-menu) to your .emacs. This will also force loading of
 paredit. If you autoload paredit, then
 
 (eval-after-load "paredit.el"
-   '(require 'paredit-menu))
+'(require 'paredit-menu))
 
 will achieve the same effect.

@@ -10,7 +10,7 @@ definitions. It is based on tools such as grep, the silver searcher
 
 To enable Dumb Jump, add the following to your initialisation file:
 
-   (add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
+(add-hook 'xref-backend-functions #'dumb-jump-xref-activate)
 
 Now pressing M-. on an identifier should open a buffer at the place
 where it is defined, or a list of candidates if uncertain. This

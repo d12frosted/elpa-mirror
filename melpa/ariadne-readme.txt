@@ -16,7 +16,7 @@ about the location of the definition of a name at point and jumps
 to that location.  Bind `ariadne-goto-definition' to a key, for
 example as follows:
 
-    (require 'ariadne)
-    (add-hook 'haskell-mode-hook
-              (lambda ()
-                (define-key haskell-mode-map "\C-cd" 'ariadne-goto-definition)))
+(require 'ariadne)
+(add-hook 'haskell-mode-hook
+(lambda ()
+(define-key haskell-mode-map "\C-cd" 'ariadne-goto-definition)))

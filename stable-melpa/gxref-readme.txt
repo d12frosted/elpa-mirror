@@ -81,15 +81,15 @@ Additionally, the following variables can be used to affect the execution
 of GNU Global. You can set them either globally, or as file-local or
 dir-local variables:
 
- - gxref-gtags-conf
-   The GTAGS/GLOBAL configuration file to use.
+- gxref-gtags-conf
+The GTAGS/GLOBAL configuration file to use.
 
- - gxref-gtags-label
-   GTAGS/GLOBAL Configuration label
+- gxref-gtags-label
+GTAGS/GLOBAL Configuration label
 
- - gxref-gtags-lib-path
-   the library path.  Passed to GNU Global using the GTAGSLIBPATH
-   environment variable.
+- gxref-gtags-lib-path
+the library path.  Passed to GNU Global using the GTAGSLIBPATH
+environment variable.
 
 ## Bug reports
 

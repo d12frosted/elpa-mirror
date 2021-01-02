@@ -1,3 +1,4 @@
+
 Provides a major-mode for editing Trading View Pine script files.
 
 Add the following to your .emacs to install:
@@ -8,5 +9,5 @@ Add the following to your .emacs to install:
 or:
 
 (use-package pine-script-mode
-  :ensure t
-  :mode ("\\.pine\\'"))
+:ensure t
+:mode ("\\.pine\\'"))

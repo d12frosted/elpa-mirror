@@ -7,11 +7,11 @@ frobinate_foos(bar, baz, a_long_argument_just_for_fun, get_value(x, y))
 to
 
 frobinate_foos(
-               bar,
-               baz,
-               a_long_argument_just_for_fun,
-               get_value(x, y)
-               )
+bar,
+baz,
+a_long_argument_just_for_fun,
+get_value(x, y)
+)
 
 and back.
 

@@ -1,3 +1,4 @@
+
 Put the inlineR.el to your
 load-path.
 Add to .emacs:
@@ -7,7 +8,7 @@ You should install cacoo.el.
 In detail,
 https://github.com/kiwanami/emacs-cacoo
 
-Installation:
+; Installation:
 
 Put the inlineR.el to your
 load-path.

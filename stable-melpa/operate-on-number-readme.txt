@@ -1,3 +1,4 @@
+
 Suppose the point is on some number.  If you want to double it,
 invoke `operate-on-number-at-point' followed by some keys: * 2 RET.
 
@@ -13,15 +14,15 @@ operation, see `operate-on-number-at-point-alist'.
 
 It is recommended using smartrep to bind the functions like this:
 
-  (smartrep-define-key global-map "C-."
-    '(("+" . apply-operation-to-number-at-point)
-      ("-" . apply-operation-to-number-at-point)
-      ("*" . apply-operation-to-number-at-point)
-      ("/" . apply-operation-to-number-at-point)
-      ("\\" . apply-operation-to-number-at-point)
-      ("^" . apply-operation-to-number-at-point)
-      ("<" . apply-operation-to-number-at-point)
-      (">" . apply-operation-to-number-at-point)
-      ("#" . apply-operation-to-number-at-point)
-      ("%" . apply-operation-to-number-at-point)
-      ("'" . operate-on-number-at-point)))
+(smartrep-define-key global-map "C-."
+'(("+" . apply-operation-to-number-at-point)
+("-" . apply-operation-to-number-at-point)
+("*" . apply-operation-to-number-at-point)
+("/" . apply-operation-to-number-at-point)
+("\\" . apply-operation-to-number-at-point)
+("^" . apply-operation-to-number-at-point)
+("<" . apply-operation-to-number-at-point)
+(">" . apply-operation-to-number-at-point)
+("#" . apply-operation-to-number-at-point)
+("%" . apply-operation-to-number-at-point)
+("'" . operate-on-number-at-point)))

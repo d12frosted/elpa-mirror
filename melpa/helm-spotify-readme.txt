@@ -1,3 +1,4 @@
+
 A search & play interface for Spotify.
 
 Currently supports OSX, Linux & Windows.

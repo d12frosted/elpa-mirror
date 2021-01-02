@@ -22,15 +22,15 @@ This package is available from MELPA. If you use
 file, use something like the following:
 
 (use-package shr-tag-pre-highlight
-  :ensure t
-  :after shr
-  :config
-  (add-to-list 'shr-external-rendering-functions
-               '(pre . shr-tag-pre-highlight))
-  (when (version< emacs-version "26")
-    (with-eval-after-load 'eww
-      (advice-add 'eww-display-html :around
-                  'eww-display-html--override-shr-external-rendering-functions))))
+:ensure t
+:after shr
+:config
+(add-to-list 'shr-external-rendering-functions
+'(pre . shr-tag-pre-highlight))
+(when (version< emacs-version "26")
+(with-eval-after-load 'eww
+(advice-add 'eww-display-html :around
+'eww-display-html--override-shr-external-rendering-functions))))
 
 Why is `eww-display-html' advised for Emacs version older than 26:
 

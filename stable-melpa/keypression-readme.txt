@@ -18,9 +18,9 @@ Run it again to turn it off.
 The default is a simple display, so you can customize it as follows.
 
 (setq keypression-use-child-frame nil
-      keypression-fade-out-delay 1.0
-      keypression-frame-justify 'keypression-left-justified
-      keypression-cast-command-name t
-      keypression-cast-command-name-format "%s  %s"
-      keypression-combine-same-keystrokes t
-      keypression-font-face-attribute '(:width normal :height 200 :weight bold))
+keypression-fade-out-delay 1.0
+keypression-frame-justify 'keypression-left-justified
+keypression-cast-command-name t
+keypression-cast-command-name-format "%s  %s"
+keypression-combine-same-keystrokes t
+keypression-font-face-attribute '(:width normal :height 200 :weight bold))

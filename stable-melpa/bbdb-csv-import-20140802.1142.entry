@@ -1,0 +1,15 @@
+(bbdb-csv-import .
+		 [(20140802 1142)
+		  ((pcsv
+		    (1 3 3))
+		   (dash
+		    (2 5 0))
+		   (bbdb
+		    (20140412 1949)))
+		  "import csv to bbdb version 3+" single
+		  ((:commit . "dc9e722d1c1fcd55b71625ee3f05a4921851d186")
+		   (:authors
+		    ("Ian Kelling" . "ian@iankelling.org"))
+		   (:maintainer "Ian Kelling" . "ian@iankelling.org")
+		   (:keywords "csv" "util" "bbdb")
+		   (:url . "https://gitlab.com/iankelling/bbdb-csv-import"))])

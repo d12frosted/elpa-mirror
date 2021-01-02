@@ -1,3 +1,4 @@
+;
 This is package makes an Emacs bridge between Kindle (other ereaders
 supports could work in theoretically) and Org Mode.
 In theatrically, this package should work for non-kindle ereaders too. User can

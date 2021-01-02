@@ -1,3 +1,4 @@
+
 Description:
 
 traad is a JSON+HTTP server built around the rope refactoring library. This
@@ -15,4 +16,4 @@ init.el, or something).
 
 Example config:
 
-  (require 'traad)
+(require 'traad)

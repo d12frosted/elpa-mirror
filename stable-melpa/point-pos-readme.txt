@@ -3,8 +3,8 @@ positions.
 
 To install the package, add the following to your emacs init file:
 
-  (add-to-list 'load-path "/path/to/point-pos")
-  (autoload 'point-pos-save "point-pos" nil t)
+(add-to-list 'load-path "/path/to/point-pos")
+(autoload 'point-pos-save "point-pos" nil t)
 
 Commands:
 

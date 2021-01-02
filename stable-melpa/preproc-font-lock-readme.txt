@@ -15,19 +15,19 @@ Place this package in a directory in the load-path. To activate it,
 use *customize* or place the following lines in a suitable init
 file:
 
-   (require 'preproc-font-lock)
-   (preproc-font-lock-global-mode 1)
+(require 'preproc-font-lock)
+(preproc-font-lock-global-mode 1)
 
 Customization:
 
 You can customize this package using the following:
 
 * `preproc-font-lock-preprocessor-background' -- The *face* used to
-  highlight the preprocessor directive
+highlight the preprocessor directive
 
 * `preproc-font-lock-modes' -- A list of major modes. A buffer is
-  highlighted if it's major mode is, or is derived from, a member
-  of this list.
+highlighted if it's major mode is, or is derived from, a member
+of this list.
 
 Example:
 

@@ -1,6 +1,3 @@
-;;; Commentary:
+GNU Emacs 24 major mode for editing Raku code.
 
-;; GNU Emacs 24 major mode for editing Raku code.
-
-;; Currently only provides very basic syntax highlighting.
-
+Currently only provides very basic syntax highlighting.

@@ -6,7 +6,7 @@ The underlying idea is to convert text with highlights ("faces")
 into a plain text representation using the Faceup markup
 language.  This language is semi-human readable, for example:
 
-    «k:this» is a keyword
+«k:this» is a keyword
 
 By comparing the current highlight with a highlight performed with
 stable versions of a package, it's possible to automatically find
@@ -35,20 +35,20 @@ highlights and is used as a reference in future tests.
 
 An Ert test case can be defined as follows:
 
-   (require 'faceup)
+(require 'faceup)
 
-   (defvar mylang-font-lock-test-dir (faceup-this-file-directory))
+(defvar mylang-font-lock-test-dir (faceup-this-file-directory))
 
-   (defun mylang-font-lock-test-apps (file)
-     "Test that the mylang FILE is fontifies as the .faceup file describes."
-     (faceup-test-font-lock-file 'mylang-mode
-                                 (concat mylang-font-lock-test-dir file)))
-   (faceup-defexplainer mylang-font-lock-test-apps)
+(defun mylang-font-lock-test-apps (file)
+"Test that the mylang FILE is fontifies as the .faceup file describes."
+(faceup-test-font-lock-file 'mylang-mode
+(concat mylang-font-lock-test-dir file)))
+(faceup-defexplainer mylang-font-lock-test-apps)
 
-   (ert-deftest mylang-font-lock-file-test ()
-     (should (mylang-font-lock-test-apps "apps/FirstApp/alpha.mylang"))
-     ;; ... Add more test files here ...
-     )
+(ert-deftest mylang-font-lock-file-test ()
+(should (mylang-font-lock-test-apps "apps/FirstApp/alpha.mylang"))
+;; ... Add more test files here ...
+)
 
 To execute the tests, run something like `M-x ert RET t RET'.
 
@@ -65,14 +65,14 @@ string.
 
 For example:
 
-   (defun mylang-font-lock-test (faceup)
-     (faceup-test-font-lock-string 'mylang-mode faceup))
-   (faceup-defexplainer mylang-font-lock-test)
+(defun mylang-font-lock-test (faceup)
+(faceup-test-font-lock-string 'mylang-mode faceup))
+(faceup-defexplainer mylang-font-lock-test)
 
-   (ert-deftest mylang-font-lock-test-simple ()
-     "Simple MyLang font-lock tests."
-     (should (mylang-font-lock-test "«k:this» is a keyword"))
-     (should (mylang-font-lock-test "«k:function» «f:myfunc» («v:var»)")))
+(ert-deftest mylang-font-lock-test-simple ()
+"Simple MyLang font-lock tests."
+(should (mylang-font-lock-test "«k:this» is a keyword"))
+(should (mylang-font-lock-test "«k:function» «f:myfunc» («v:var»)")))
 
 
 Executing the tests:
@@ -82,16 +82,16 @@ to execute them.  Hopefully, you will be given the "all clear".
 However, if there is a problem, you will be presented with
 something like:
 
-    F mylang-font-lock-file-test
-        (ert-test-failed
-         ((should
-           (mylang-font-lock-test-apps "apps/FirstApp/alpha.mylang"))
-          :form
-          (mylang-font-lock-test-apps "apps/FirstApp/alpha.mylang")
-          :value nil :explanation
-          ((on-line 2
-    		("but_«k:this»_is_not_a_keyword")
-    		("but_this_is_not_a_keyword")))))
+F mylang-font-lock-file-test
+(ert-test-failed
+((should
+(mylang-font-lock-test-apps "apps/FirstApp/alpha.mylang"))
+:form
+(mylang-font-lock-test-apps "apps/FirstApp/alpha.mylang")
+:value nil :explanation
+((on-line 2
+("but_«k:this»_is_not_a_keyword")
+("but_this_is_not_a_keyword")))))
 
 You should read this that on line 2, the old font-lock rules
 highlighted `this' inside `but_this_is_not_a_keyword' (which is
@@ -146,16 +146,16 @@ represented using nested sections.
 For example:
 
 * `«B:abc«U:def»»' represent the text `abcdef' that is both *bold*
-  and *underlined*.
+and *underlined*.
 
 * `«W:abc«U:def»ghi»' represent the text `abcdefghi' where the
-  entire text is in *warning* face and `def' is *underlined*.
+entire text is in *warning* face and `def' is *underlined*.
 
 In case two faces partially overlap, the ranges will be split when
 represented in Faceup.  For example:
 
 * `«B:abc«U:def»»«U:ghi»' represent the text `abcdefghi' where
-  `abcdef' is bold and `defghi' is underlined.
+`abcdef' is bold and `defghi' is underlined.
 
 
 Escaping start and end markers:
@@ -186,13 +186,13 @@ using the full format and the don't nest.  For example:
 Examples of properties that could be tracked are:
 
 * `font-lock-face' -- an alias to `face' when `font-lock-mode' is
-  enabled.
+enabled.
 
 * `syntax-table' -- used by a custom `syntax-propertize' to
-  override the default syntax table.
+override the default syntax table.
 
 * `help-echo' -- provides tooltip text displayed when the mouse is
-  held over a text.
+held over a text.
 
 Reference section:
 
@@ -253,10 +253,10 @@ The following are examples of real-world package that use faceup to
 test their font-lock keywords.
 
 * [cmake-font-lock](https://github.com/Lindydancer/cmake-font-lock)
-  an advanced set of font-lock keywords for the CMake language
+an advanced set of font-lock keywords for the CMake language
 
 * [objc-font-lock](https://github.com/Lindydancer/objc-font-lock)
-  highlight Objective-C function calls.
+highlight Objective-C function calls.
 
 
 Other Font Lock Tools:
@@ -324,47 +324,47 @@ fictitious displays, like 8 color tty.
 In addition, the following tools are provided:
 
 - `face-explorer-list-faces' -- list all available faces.  Like
-  `list-faces-display' but with information on how a face is
-  defined.  In addition, a sample for the selected frame and for a
-  fictitious display is shown.
+`list-faces-display' but with information on how a face is
+defined.  In addition, a sample for the selected frame and for a
+fictitious display is shown.
 
 - `face-explorer-describe-face' -- Print detailed information on
-  how a face is defined, and list all underlying definitions.
+how a face is defined, and list all underlying definitions.
 
 - `face-explorer-describe-face-prop' -- Describe the `face' text
-  property at the point in terms of primitive face attributes.
-  Also show how it would look on a fictitious display.
+property at the point in terms of primitive face attributes.
+Also show how it would look on a fictitious display.
 
 - `face-explorer-list-display-features' -- Show which features a
-  display supports.  Most graphical displays support all, or most,
-  features.  However, many tty:s don't support, for example,
-  strike-through.  Using specially constructed faces, the resulting
-  buffer will render differently in different displays, e.g. a
-  graphical frame and a tty connected using `emacsclient -nw'.
+display supports.  Most graphical displays support all, or most,
+features.  However, many tty:s don't support, for example,
+strike-through.  Using specially constructed faces, the resulting
+buffer will render differently in different displays, e.g. a
+graphical frame and a tty connected using `emacsclient -nw'.
 
 - `face-explorer-list-face-prop-examples' -- Show a buffer with an
-  assortment of `face' text properties.  A sample text is shown in
-  four variants: Native, a manually maintained reference vector,
-  the result of `face-explorer-face-prop-attributes' and
-  `face-explorer-face-prop-attributes-for-fictitious-display'.  Any
-  package that convert a buffer to another format (like HTML, ANSI,
-  or LaTeX) could use this buffer to ensure that everything work as
-  intended.
+assortment of `face' text properties.  A sample text is shown in
+four variants: Native, a manually maintained reference vector,
+the result of `face-explorer-face-prop-attributes' and
+`face-explorer-face-prop-attributes-for-fictitious-display'.  Any
+package that convert a buffer to another format (like HTML, ANSI,
+or LaTeX) could use this buffer to ensure that everything work as
+intended.
 
 - `face-explorer-list-overlay-examples' -- Show a buffer with a
-  number of examples of overlays, some are mixed with `face' text
-  properties.  Any package that convert a buffer to another format
-  (like HTML, ANSI, or LaTeX) could use this buffer to ensure that
-  everything work as intended.
+number of examples of overlays, some are mixed with `face' text
+properties.  Any package that convert a buffer to another format
+(like HTML, ANSI, or LaTeX) could use this buffer to ensure that
+everything work as intended.
 
 - `face-explorer-tooltip-mode' -- Minor mode that shows tooltips
-  containing text properties and overlays at the mouse pointer.
+containing text properties and overlays at the mouse pointer.
 
 - `face-explorer-simulate-display-mode' -- Minor mode for make a
-  buffer look like it would on a fictitious display.  Using this
-  you can, for example, see how a theme would look in using dark or
-  light background, a 8 color tty, or on a grayscale graphical
-  monitor.
+buffer look like it would on a fictitious display.  Using this
+you can, for example, see how a theme would look in using dark or
+light background, a 8 color tty, or on a grayscale graphical
+monitor.
 
 
 Font Lock Regression Suite:

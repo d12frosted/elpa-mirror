@@ -1,5 +1,3 @@
-;;; Commentary:
-;; 
-;; Usage:
-;; (add-hook 'prog-mode-hook #'rainbow-fart-mode)
 
+Usage:
+(add-hook 'prog-mode-hook #'rainbow-fart-mode)

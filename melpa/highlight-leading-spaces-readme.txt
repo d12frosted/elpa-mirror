@@ -16,7 +16,7 @@ space.
 
 Suggested usage:
 
-    (add-hook 'prog-mode-hook 'highlight-leading-spaces-mode)
+(add-hook 'prog-mode-hook 'highlight-leading-spaces-mode)
 
 This minor-mode is quite efficient because it doesn't use overlays but text
 properties for the leading spaces.  Furthermore, the highlights are

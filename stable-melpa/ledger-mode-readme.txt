@@ -1,3 +1,1 @@
-;;; Commentary:
-;; Most of the general ledger-mode code is here.
-
+Most of the general ledger-mode code is here.

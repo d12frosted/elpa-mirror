@@ -9,3 +9,4 @@ with this [fix](http://millejoh.github.io/emacs-ipython-notebook/#id17)
 
 More documentation on this feature can be found in the
 [documentation](http://millejoh.github.io/emacs-ipython-notebook/) for ein.
+

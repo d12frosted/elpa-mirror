@@ -1,3 +1,4 @@
+
 A search & play interface for iTunes and Spotify.
 
 You can search for either a song, artist, or album.

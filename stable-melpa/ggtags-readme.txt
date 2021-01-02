@@ -10,7 +10,7 @@ details.
 
 All commands are available from the `Ggtags' menu in `ggtags-mode'.
 
-NEWS 0.8.13 (2018-07-25):
+; NEWS 0.8.13 (2018-07-25):
 
 - Don't choke on tag names start with `-'.
 - `ggtags-show-definition' supports `ggtags-sort-by-nearness'.

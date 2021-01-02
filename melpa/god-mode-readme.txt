@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; Global minor mode for entering Emacs commands without modifier keys.
-
+Global minor mode for entering Emacs commands without modifier keys.

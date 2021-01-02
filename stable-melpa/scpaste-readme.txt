@@ -8,7 +8,7 @@ as its transport and uses Emacs' font-lock as its syntax
 highlighter instead of relying on a third-party syntax highlighter
 for which individual language support must be added one-by-one.
 
-Install
+; Install
 
 Requires htmlize; available at
 https://github.com/hniksic/emacs-htmlize.  If htmlize is not
@@ -24,7 +24,7 @@ Set `scpaste-http-destination' and `scpaste-scp-destination' to
 appropriate values, and add this to your Emacs config:
 
 (setq scpaste-http-destination "https://p.hagelb.org"
-      scpaste-scp-destination "p.hagelb.org:p.hagelb.org")
+scpaste-scp-destination "p.hagelb.org:p.hagelb.org")
 
 If you have a different keyfile, you can set that, too:
 (setq scpaste-scp-pubkey "~/.ssh/my_keyfile.pub")
@@ -40,9 +40,9 @@ Optionally you can set the displayed name for the footer and where
 it should link to:
 
 (setq scpaste-user-name "Technomancy"
-      scpaste-user-address "https://technomancy.us/")
+scpaste-user-address "https://technomancy.us/")
 
-Usage
+; Usage
 
 M-x scpaste, enter a name, and press return. The name will be
 incorporated into the URL by escaping it and adding it to the end

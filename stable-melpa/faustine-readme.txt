@@ -8,8 +8,8 @@ Faustine allows the edition of Faust (http://faust.grame.fr) code.
 - Graphic diagrams generation and vizualisation in the (default) browser
 - Browse generated C++ code inside Emacs
 - Inter-linked files/buffers :
-    - From "component" to Faust file
-    - From "include" to Faust library file
+- From "component" to Faust file
+- From "include" to Faust library file
 - From error to file:line number
 - From function name to online documentation
 - Fully configurable (build type/target/architecture/toolkit, keyboard shortcuts, etc.)
@@ -52,7 +52,7 @@ Those package are not required, but Faustine makes good use of them, and they wi
 Use `faustine-mode` ; Optionally, add something like this to your init file:
 ```elisp
 (add-to-list 'auto-mode-alist
-             '("\\.dsp\\'" . faustine-mode))
+'("\\.dsp\\'" . faustine-mode))
 ```
 to put any new Faust file in the mode.
 

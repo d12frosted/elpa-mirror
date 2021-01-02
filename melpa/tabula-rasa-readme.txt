@@ -2,7 +2,7 @@ Tabula Rasa was inspired by darkroom-mode.el, WriteRoom, and all of the other
 distraction free tools. It was developed out of the need for a more customizable
 distraction free mode for Emacs.
 
-Installation
+; Installation
 
 Install through Melpa
 or

@@ -1,28 +1,29 @@
+
 Quickstart:
 
-    Configure an extended Latin font for your default face, such
-    as Monaco, Consolas, or DejaVu Sans Mono.
+Configure an extended Latin font for your default face, such
+as Monaco, Consolas, or DejaVu Sans Mono.
 
-    Install these fonts
+Install these fonts
 
-        https://dn-works.com/wp-content/uploads/2020/UFAS-Fonts/Symbola.zip
-        http://www.quivira-font.com/files/Quivira.ttf   ; or Quivira.otf
-        http://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-fonts-ttf-2.37.tar.bz2
-        https://github.com/googlei18n/noto-fonts/raw/master/hinted/NotoSans-Regular.ttf
-        https://github.com/googlei18n/noto-fonts/raw/master/unhinted/NotoSansSymbols-Regular.ttf
+https://dn-works.com/wp-content/uploads/2020/UFAS-Fonts/Symbola.zip
+http://www.quivira-font.com/files/Quivira.ttf   ; or Quivira.otf
+http://sourceforge.net/projects/dejavu/files/dejavu/2.37/dejavu-fonts-ttf-2.37.tar.bz2
+https://github.com/googlei18n/noto-fonts/raw/master/hinted/NotoSans-Regular.ttf
+https://github.com/googlei18n/noto-fonts/raw/master/unhinted/NotoSansSymbols-Regular.ttf
 
-    Remove Unifont from your system.
+Remove Unifont from your system.
 
-    (require 'unicode-fonts)
+(require 'unicode-fonts)
 
-    (unicode-fonts-setup)
+(unicode-fonts-setup)
 
 Testing:
 
-    C-h h                                         ; M-x view-hello-file
-    M-x list-charset-chars RET unicode-bmp RET    ; search for 210x
-    M-x list-charset-chars RET unicode-smp RET    ; if your backend supports astral chars
-    M-x unicode-fonts-debug-insert-block RET Mathematical_Operators RET
+C-h h                                         ; M-x view-hello-file
+M-x list-charset-chars RET unicode-bmp RET    ; search for 210x
+M-x list-charset-chars RET unicode-smp RET    ; if your backend supports astral chars
+M-x unicode-fonts-debug-insert-block RET Mathematical_Operators RET
 
 Explanation:
 
@@ -41,7 +42,7 @@ divides character ranges into logical groups called "blocks".  This
 library configures Emacs in a Unicode-friendly way by providing
 mappings from
 
-    each Unicode block  ---to--->   a font with good coverage
+each Unicode block  ---to--->   a font with good coverage
 
 and makes the settings available via the customization interface.
 
@@ -53,8 +54,8 @@ default font.  16/255 blocks are not mapped to any known font.
 To use unicode-fonts, place the unicode-fonts.el file somewhere
 Emacs can find it, and add the following to your ~/.emacs file:
 
-    (require 'unicode-fonts)
-    (unicode-fonts-setup)
+(require 'unicode-fonts)
+(unicode-fonts-setup)
 
 See important notes about startup speed below.
 
@@ -66,15 +67,15 @@ and install the four items below:
 
 From https://dejavu-fonts.github.io/
 
-    DejaVu Sans, DejaVu Sans Mono
+DejaVu Sans, DejaVu Sans Mono
 
 From http://www.quivira-font.com/downloads.php
 
-    Quivira
+Quivira
 
 From https://dn-works.com/wp-content/uploads/2020/UFAS-Fonts/Symbola.zip
 
-    Symbola
+Symbola
 
 Many non-free fonts are referenced by the default settings.
 However, free alternatives are also given wherever possible, and
@@ -85,12 +86,12 @@ Consolas, or DejaVu Sans Mono is already being used for the default
 face, no separate mappings are provided for the following Unicode
 blocks:
 
-    Basic Latin
-    Latin Extended Additional
-    Latin Extended-A
-    Latin Extended-B
-    Latin-1 Supplement
-    Spacing Modifier Letters
+Basic Latin
+Latin Extended Additional
+Latin Extended-A
+Latin Extended-B
+Latin-1 Supplement
+Spacing Modifier Letters
 
 though some of these remain configurable via `customize'.
 
@@ -118,12 +119,12 @@ Color Emoji are enabled by default when using the Native Mac port
 on OS X.  This can be disabled by customizing each relevant mapping,
 or by turning off all multicolor glyphs here:
 
-    M-x customize-variable RET unicode-fonts-skip-font-groups RET
+M-x customize-variable RET unicode-fonts-skip-font-groups RET
 
 See Also
 
-    M-x customize-group RET unicode-fonts RET
-    M-x customize-variable RET unicode-fonts-block-font-mapping RET
+M-x customize-group RET unicode-fonts RET
+M-x customize-variable RET unicode-fonts-block-font-mapping RET
 
 Notes
 
@@ -131,387 +132,387 @@ Free fonts recognized by this package may be downloaded from the
 following locations.  For any language, it is increasingly likely
 that Noto Sans provides coverage:
 
-    From http://www.google.com/get/noto/
+From http://www.google.com/get/noto/
 
-        Noto Sans and friends         ; 181 Unicode blocks and counting; sole
-                                      ; source for these blocks:
-                                      ;
-                                      ;   Bamum / Bamum Supplement / Kaithi
-                                      ;   Mandaic / Meetei Mayek Extensions
-                                      ;   Sundanese Supplement
-                                      ;
-                                      ; Also a good source for recently-added
-                                      ; glyphs such as "Turkish Lira Sign".
+Noto Sans and friends         ; 181 Unicode blocks and counting; sole
+; source for these blocks:
+;
+;   Bamum / Bamum Supplement / Kaithi
+;   Mandaic / Meetei Mayek Extensions
+;   Sundanese Supplement
+;
+; Also a good source for recently-added
+; glyphs such as "Turkish Lira Sign".
 
-    From http://scripts.sil.org/cms/scripts/page.php?item_id=CharisSIL_download
-      or http://scripts.sil.org/cms/scripts/page.php?item_id=DoulosSIL_download
+From http://scripts.sil.org/cms/scripts/page.php?item_id=CharisSIL_download
+or http://scripts.sil.org/cms/scripts/page.php?item_id=DoulosSIL_download
 
-        Charis SIL or Doulos SIL      ; Extended European and diacritics
+Charis SIL or Doulos SIL      ; Extended European and diacritics
 
-    From http://scripts.sil.org/cms/scripts/page.php?item_id=Gentium_download
+From http://scripts.sil.org/cms/scripts/page.php?item_id=Gentium_download
 
-        Gentium Plus                  ; Greek
+Gentium Plus                  ; Greek
 
-    From http://users.teilar.gr/~g1951d/
+From http://users.teilar.gr/~g1951d/
 
-        Aegean, Aegyptus, Akkadian    ; Ancient languages
-        Analecta                      ; Ancient languages, Deseret
-        Anatolian                     ; Ancient languages
-        Musica                        ; Musical Symbols
-        Nilus                         ; Ancient languages
+Aegean, Aegyptus, Akkadian    ; Ancient languages
+Analecta                      ; Ancient languages, Deseret
+Anatolian                     ; Ancient languages
+Musica                        ; Musical Symbols
+Nilus                         ; Ancient languages
 
-    From http://www.wazu.jp/gallery/views/View_MPH2BDamase.html
+From http://www.wazu.jp/gallery/views/View_MPH2BDamase.html
 
-        MPH 2B Damase                 ; Arabic, Armenian, Buginese, Cherokee, Georgian,
-                                      ; Glagolitic, Hanunoo, Kharoshthi, Limbu, Osmanya,
-                                      ; Shavian, Syloti Nagri, Tai Le, Thaana
+MPH 2B Damase                 ; Arabic, Armenian, Buginese, Cherokee, Georgian,
+; Glagolitic, Hanunoo, Kharoshthi, Limbu, Osmanya,
+; Shavian, Syloti Nagri, Tai Le, Thaana
 
-    From http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=NamdhinggoSIL
+From http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=NamdhinggoSIL
 
-        Namdhinggo SIL                ; Limbu
+Namdhinggo SIL                ; Limbu
 
-    From http://wenq.org/wqy2/index.cgi?FontGuide
+From http://wenq.org/wqy2/index.cgi?FontGuide
 
-        WenQuanYi Zen Hei             ; CJK (Simplified Chinese)
+WenQuanYi Zen Hei             ; CJK (Simplified Chinese)
 
-    From http://babelstone.co.uk/Fonts/
+From http://babelstone.co.uk/Fonts/
 
-        BabelStone Han                ; CJK (Simplified Chinese)
-        BabelStone Phags-pa Book      ; Phags-pa
-        BabelStone Modern             ; Tags / Specials / Selectors
+BabelStone Han                ; CJK (Simplified Chinese)
+BabelStone Phags-pa Book      ; Phags-pa
+BabelStone Modern             ; Tags / Specials / Selectors
 
-    From http://vietunicode.sourceforge.net/fonts/fonts_hannom.html
+From http://vietunicode.sourceforge.net/fonts/fonts_hannom.html
 
-        HAN NOM A, HAN NOM B          ; CJK (Nôm Chinese)
+HAN NOM A, HAN NOM B          ; CJK (Nôm Chinese)
 
-    From http://kldp.net/projects/unfonts/
+From http://kldp.net/projects/unfonts/
 
-        Un Batang                     ; CJK (Hangul)
+Un Batang                     ; CJK (Hangul)
 
-    From http://sourceforge.jp/projects/hanazono-font/releases/
+From http://sourceforge.jp/projects/hanazono-font/releases/
 
-        Hana Min A, Hana Min B        ; CJK (Japanese)
+Hana Min A, Hana Min B        ; CJK (Japanese)
 
-    From http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=SILYi_home
+From http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=SILYi_home
 
-        Nuosu SIL                     ; CJK (Yi)
+Nuosu SIL                     ; CJK (Yi)
 
-    From http://www.daicing.com/manchu/index.php?page=fonts-downloads
+From http://www.daicing.com/manchu/index.php?page=fonts-downloads
 
-        Daicing Xiaokai               ; Mongolian
+Daicing Xiaokai               ; Mongolian
 
-    From http://www.library.gov.bt/IT/fonts.html
+From http://www.library.gov.bt/IT/fonts.html
 
-        Jomolhari                     ; Tibetan
+Jomolhari                     ; Tibetan
 
-    From http://www.thlib.org/tools/scripts/wiki/tibetan%20machine%20uni.html
+From http://www.thlib.org/tools/scripts/wiki/tibetan%20machine%20uni.html
 
-        Tibetan Machine Uni           ; Tibetan
+Tibetan Machine Uni           ; Tibetan
 
-    From http://scripts.sil.org/cms/scripts/page.php?item_id=Padauk
+From http://scripts.sil.org/cms/scripts/page.php?item_id=Padauk
 
-        Padauk                        ; Myanmar
+Padauk                        ; Myanmar
 
-    From https://code.google.com/p/myanmar3source/downloads/list
+From https://code.google.com/p/myanmar3source/downloads/list
 
-        Myanmar3                      ; Myanmar
+Myanmar3                      ; Myanmar
 
-    From http://www.yunghkio.com/unicode/
+From http://www.yunghkio.com/unicode/
 
-        Yunghkio                      ; Myanmar
+Yunghkio                      ; Myanmar
 
-    From https://code.google.com/p/tharlon-font/downloads/list
+From https://code.google.com/p/tharlon-font/downloads/list
 
-        TharLon                       ; Myanmar
+TharLon                       ; Myanmar
 
-    From http://sourceforge.net/projects/prahita/files/Myanmar%20Unicode%20Fonts/MasterpieceUniSans/
+From http://sourceforge.net/projects/prahita/files/Myanmar%20Unicode%20Fonts/MasterpieceUniSans/
 
-        Masterpiece Uni Sans          ; Myanmar
+Masterpiece Uni Sans          ; Myanmar
 
-    From http://sarovar.org/projects/samyak/
+From http://sarovar.org/projects/samyak/
 
-        Samyak                        ; Gujarati, Malayalam, Oriya, Tamil
+Samyak                        ; Gujarati, Malayalam, Oriya, Tamil
 
-    From http://software.sil.org/annapurna/download/
+From http://software.sil.org/annapurna/download/
 
-        Annapurna SIL                 ; Devanagari
+Annapurna SIL                 ; Devanagari
 
-    From http://guca.sourceforge.net/typography/fonts/anmoluni/
+From http://guca.sourceforge.net/typography/fonts/anmoluni/
 
-        AnmolUni                      ; Gurmukhi
+AnmolUni                      ; Gurmukhi
 
-    From http://brahmi.sourceforge.net/downloads2.html
+From http://brahmi.sourceforge.net/downloads2.html
 
-        Kedage                        ; Kannada
+Kedage                        ; Kannada
 
-    From http://www.omicronlab.com/bangla-fonts.html
+From http://www.omicronlab.com/bangla-fonts.html
 
-        Mukti Narrow                  ; Bengali
+Mukti Narrow                  ; Bengali
 
-    From http://www.kamban.com.au/downloads.html
+From http://www.kamban.com.au/downloads.html
 
-        Akshar Unicode                ; Sinhala
+Akshar Unicode                ; Sinhala
 
-    From http://tabish.freeshell.org/eeyek/download.html
+From http://tabish.freeshell.org/eeyek/download.html
 
-        Eeyek Unicode                 ; Meetei Mayek
+Eeyek Unicode                 ; Meetei Mayek
 
-    From http://scripts.sil.org/CMS/scripts/page.php?&item_id=Mondulkiri
+From http://scripts.sil.org/CMS/scripts/page.php?&item_id=Mondulkiri
 
-        Khmer Mondulkiri              ; Khmer
+Khmer Mondulkiri              ; Khmer
 
-    From http://www.laoscript.net/downloads/
+From http://www.laoscript.net/downloads/
 
-        Saysettha MX                  ; Lao
+Saysettha MX                  ; Lao
 
-    From http://www.geocities.jp/simsheart_alif/taithamunicode.html
+From http://www.geocities.jp/simsheart_alif/taithamunicode.html
 
-        Lanna Alif                    ; Tai Tham
+Lanna Alif                    ; Tai Tham
 
-    From http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=DaiBannaSIL
+From http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=DaiBannaSIL
 
-        Dai Banna SIL                 ; New Tai Lue
+Dai Banna SIL                 ; New Tai Lue
 
-    From http://scripts.sil.org/cms/scripts/page.php?item_id=TaiHeritage
+From http://scripts.sil.org/cms/scripts/page.php?item_id=TaiHeritage
 
-        Tai Heritage Pro              ; Tai Viet
+Tai Heritage Pro              ; Tai Viet
 
-    From http://sabilulungan.org/aksara/
+From http://sabilulungan.org/aksara/
 
-        Sundanese Unicode             ; Sundanese
+Sundanese Unicode             ; Sundanese
 
-    From http://www.amirifont.org/
+From http://www.amirifont.org/
 
-        Amiri                         ; Arabic (Naskh)
+Amiri                         ; Arabic (Naskh)
 
-    From http://scripts.sil.org/cms/scripts/page.php?item_id=Scheherazade
+From http://scripts.sil.org/cms/scripts/page.php?item_id=Scheherazade
 
-        Scheherazade                  ; Arabic (Naskh)
+Scheherazade                  ; Arabic (Naskh)
 
-    From http://www.farsiweb.ir/wiki/Persian_fonts
+From http://www.farsiweb.ir/wiki/Persian_fonts
 
-        Koodak                        ; Arabic (Farsi)
+Koodak                        ; Arabic (Farsi)
 
-    From http://openfontlibrary.org/font/ahuramazda/
+From http://openfontlibrary.org/font/ahuramazda/
 
-        Ahuramzda                     ; Avestan
+Ahuramzda                     ; Avestan
 
-    From http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=AbyssinicaSIL
+From http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=AbyssinicaSIL
 
-        Abyssinica SIL                ; Ethiopic
+Abyssinica SIL                ; Ethiopic
 
-    From http://www.bethmardutho.org/index.php/resources/fonts.html
+From http://www.bethmardutho.org/index.php/resources/fonts.html
 
-        Estrangelo Nisibin            ; Syriac
+Estrangelo Nisibin            ; Syriac
 
-    From http://www.evertype.com/fonts/nko/
+From http://www.evertype.com/fonts/nko/
 
-        Conakry                       ; N'ko
+Conakry                       ; N'ko
 
-    From http://uni.hilledu.com/download-ribenguni
+From http://uni.hilledu.com/download-ribenguni
 
-        Ribeng                        ; Chakma
+Ribeng                        ; Chakma
 
-    From http://www.virtualvinodh.com/downloads
+From http://www.virtualvinodh.com/downloads
 
-        Adinatha Tamil Brahmi         ; Brahmi
+Adinatha Tamil Brahmi         ; Brahmi
 
-    From http://ftp.gnu.org/gnu/freefont/
+From http://ftp.gnu.org/gnu/freefont/
 
-        FreeMono, etc (FreeFont)      ; Kayah Li (and others)
+FreeMono, etc (FreeFont)      ; Kayah Li (and others)
 
-    From http://ulikozok.com/aksara-batak/batak-font/
+From http://ulikozok.com/aksara-batak/batak-font/
 
-        Batak-Unicode                 ; Batak
+Batak-Unicode                 ; Batak
 
-    From http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=Mingzat
+From http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=Mingzat
 
-        Mingzat                       ; Lepcha
+Mingzat                       ; Lepcha
 
-    From http://phjamr.github.io/lisu.html#install
-         http://phjamr.github.io/miao.html#install
-         http://phjamr.github.io/mro.html#install
+From http://phjamr.github.io/lisu.html#install
+http://phjamr.github.io/miao.html#install
+http://phjamr.github.io/mro.html#install
 
-        Miao Unicode                  ; Miao
-        Lisu Unicode                  ; Lisu
-        Mro Unicode                   ; Mro
+Miao Unicode                  ; Miao
+Lisu Unicode                  ; Lisu
+Mro Unicode                   ; Mro
 
-    From http://scholarsfonts.net/cardofnt.html
+From http://scholarsfonts.net/cardofnt.html
 
-        Cardo                         ; Historical Languages
+Cardo                         ; Historical Languages
 
-    From http://sourceforge.net/projects/junicode/files/junicode/
+From http://sourceforge.net/projects/junicode/files/junicode/
 
-        Junicode                      ; Historical Languages
+Junicode                      ; Historical Languages
 
-    From http://www.evertype.com/fonts/vai/
+From http://www.evertype.com/fonts/vai/
 
-        Dukor                         ; Vai
+Dukor                         ; Vai
 
-    From http://sourceforge.net/projects/zhmono/
+From http://sourceforge.net/projects/zhmono/
 
-        ZH Mono                       ; Inscriptional Pahlavi / Parthian
+ZH Mono                       ; Inscriptional Pahlavi / Parthian
 
-    From http://culmus.sourceforge.net/ancient/index.html
+From http://culmus.sourceforge.net/ancient/index.html
 
-        Aramaic Imperial Yeb          ; Imperial Aramaic
+Aramaic Imperial Yeb          ; Imperial Aramaic
 
-    From http://www.languagegeek.com/font/fontdownload.html
+From http://www.languagegeek.com/font/fontdownload.html
 
-        Aboriginal Sans               ; Aboriginal Languages
-        Aboriginal Serif
+Aboriginal Sans               ; Aboriginal Languages
+Aboriginal Serif
 
-    From http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=EzraSIL_Home
+From http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=EzraSIL_Home
 
-        Ezra SIL                      ; Hebrew
+Ezra SIL                      ; Hebrew
 
-    From http://www.evertype.com/fonts/coptic/
+From http://www.evertype.com/fonts/coptic/
 
-        Antinoou                      ; Coptic / General Punctuation
+Antinoou                      ; Coptic / General Punctuation
 
-    From http://apagreekkeys.org/NAUdownload.html
+From http://apagreekkeys.org/NAUdownload.html
 
-        New Athena Unicode            ; Ancient Languages / Symbols
+New Athena Unicode            ; Ancient Languages / Symbols
 
-    From http://markmail.org/thread/g57mk4sbdycblxds
+From http://markmail.org/thread/g57mk4sbdycblxds
 
-        KhojkiUnicodeOT               ; Khojki
+KhojkiUnicodeOT               ; Khojki
 
-    From https://github.com/andjc/ahom-unicode/tree/master/font
+From https://github.com/andjc/ahom-unicode/tree/master/font
 
-        AhomUnicode                   ; Ahom
+AhomUnicode                   ; Ahom
 
-    From https://github.com/MihailJP/oldsindhi/releases
+From https://github.com/MihailJP/oldsindhi/releases
 
-        OldSindhi                     ; Khudawadi
+OldSindhi                     ; Khudawadi
 
-    From https://github.com/MihailJP/Muktamsiddham/releases
+From https://github.com/MihailJP/Muktamsiddham/releases
 
-        MuktamsiddhamG                ; Siddham  (note trailing "G" on font name)
+MuktamsiddhamG                ; Siddham  (note trailing "G" on font name)
 
-    From https://github.com/MihailJP/MarathiCursive/releases
+From https://github.com/MihailJP/MarathiCursive/releases
 
-        MarathiCursiveG               ; Modi  (note trailing "G" on font name)
+MarathiCursiveG               ; Modi  (note trailing "G" on font name)
 
-    From https://github.com/OldHungarian/old-hungarian-font/releases
+From https://github.com/OldHungarian/old-hungarian-font/releases
 
-        OldHungarian                  ; Old Hungarian
+OldHungarian                  ; Old Hungarian
 
-    From http://tutohtml.perso.sfr.fr/unicode.html
+From http://tutohtml.perso.sfr.fr/unicode.html
 
-        Albanian                      ; Elbasan / Takri / Sharada
+Albanian                      ; Elbasan / Takri / Sharada
 
-    From https://github.com/enabling-languages/cham-unicode/tree/master/fonts/ttf
+From https://github.com/enabling-languages/cham-unicode/tree/master/fonts/ttf
 
-        Cham OI_Tangin                ; Cham
+Cham OI_Tangin                ; Cham
 
-    From https://ctan.org/tex-archive/fonts/Asana-Math?lang=en
+From https://ctan.org/tex-archive/fonts/Asana-Math?lang=en
 
-        Asana Math                    ; Mathematical Symbols
+Asana Math                    ; Mathematical Symbols
 
 Compatibility and Requirements
 
-    GNU Emacs version 23.3 and higher : yes
-    GNU Emacs version 22.3 and lower  : no
+GNU Emacs version 23.3 and higher : yes
+GNU Emacs version 22.3 and lower  : no
 
-    Requires font-utils.el, ucs-utils.el
+Requires font-utils.el, ucs-utils.el
 
 Bugs
 
-    The default choice of font for each code block balances coverage
-    versus appearance.  This is necessarily subjective.
+The default choice of font for each code block balances coverage
+versus appearance.  This is necessarily subjective.
 
-    Unicode also defines the notion of a "script" as a higher-level
-    abstraction which is independent of "blocks".  Modern fonts can
-    report their script coverage, and Emacs may also access that
-    information.  However, this library ignores scripts in favor
-    of blocks and glyphs.
+Unicode also defines the notion of a "script" as a higher-level
+abstraction which is independent of "blocks".  Modern fonts can
+report their script coverage, and Emacs may also access that
+information.  However, this library ignores scripts in favor
+of blocks and glyphs.
 
-    Checking for font availability is slow.  This library can
-    add anywhere between 0.1 - 10 secs to startup time.  It is
-    slowest under X11.  Some per-architecture limitations are
-    documented in font-utils.el
+Checking for font availability is slow.  This library can
+add anywhere between 0.1 - 10 secs to startup time.  It is
+slowest under X11.  Some per-architecture limitations are
+documented in font-utils.el
 
-    Calling `set-fontset-font' can easily crash Emacs.  There is a
-    workaround, but it may not be sufficient on all platforms.
-    Tested on Cocoa Emacs, Native Mac Emacs, X11/XQuartz,
-    MS Windows XP.
+Calling `set-fontset-font' can easily crash Emacs.  There is a
+workaround, but it may not be sufficient on all platforms.
+Tested on Cocoa Emacs, Native Mac Emacs, X11/XQuartz,
+MS Windows XP.
 
-    Glyph-by-glyph fallthrough happens differently depending on the
-    font backend.  On Cocoa Emacs, glyph-by-glyph fallthrough does not
-    occur, and manual per-glyph overrides are required to maximize
-    coverage.  Fallthrough works on MS Windows, but not perfectly.
-    X11/FreeType behaves most predictably.
+Glyph-by-glyph fallthrough happens differently depending on the
+font backend.  On Cocoa Emacs, glyph-by-glyph fallthrough does not
+occur, and manual per-glyph overrides are required to maximize
+coverage.  Fallthrough works on MS Windows, but not perfectly.
+X11/FreeType behaves most predictably.
 
-    The following ranges cannot be overridden within the
-    "fontset-default" fontset:
+The following ranges cannot be overridden within the
+"fontset-default" fontset:
 
-        Latin Extended Additional
-        Latin Extended-B
-        Spacing Modifier Letters
+Latin Extended Additional
+Latin Extended-B
+Spacing Modifier Letters
 
-    `unicode-fonts-overrides-mapping' shows some order-dependence,
-    which must indicate a bug in this code.
+`unicode-fonts-overrides-mapping' shows some order-dependence,
+which must indicate a bug in this code.
 
-    A number of the entries in `unicode-fonts-overrides-mapping'
-    are workarounds for the font Monaco, and therefore specific
-    to OS X.
+A number of the entries in `unicode-fonts-overrides-mapping'
+are workarounds for the font Monaco, and therefore specific
+to OS X.
 
-    Widths of alternate fonts do not act as expected on MS Windows.
-    For example, DejaVu Sans Mono box-drawing characters may use
-    a different width than the default font.
+Widths of alternate fonts do not act as expected on MS Windows.
+For example, DejaVu Sans Mono box-drawing characters may use
+a different width than the default font.
 
 TODO
 
-    provide additional interfaces
-    - dump set-fontset-font instructions
-    - immediately set font for character/current-character/range
-    - recommend font for current character
-    - alternatives to customize, which can be called before unicode-fonts-setup
-      - eg "prefer this font for this block"
-      - also character/range ie overrides
+provide additional interfaces
+- dump set-fontset-font instructions
+- immediately set font for character/current-character/range
+- recommend font for current character
+- alternatives to customize, which can be called before unicode-fonts-setup
+- eg "prefer this font for this block"
+- also character/range ie overrides
 
-    scripts vs blocks
-    - further doc note
-    - provide alternative interface via scripts
+scripts vs blocks
+- further doc note
+- provide alternative interface via scripts
 
-    reorganize font list by language?
-    - break down into living/dead/invented
+reorganize font list by language?
+- break down into living/dead/invented
 
-    support MUFI for PUA
+support MUFI for PUA
 
-    support ConScript for PUA
+support ConScript for PUA
 
-    Aramaic as a style of Hebrew
+Aramaic as a style of Hebrew
 
-    (set-language-environment "UTF-8") ?
+(set-language-environment "UTF-8") ?
 
-    Include all Windows 8 fonts
+Include all Windows 8 fonts
 
-    Include all Windows 10 fonts
+Include all Windows 10 fonts
 
-    Remove very old Microsoft entries (eg Monotype.com which was
-    renamed Andale)
+Remove very old Microsoft entries (eg Monotype.com which was
+renamed Andale)
 
-    Recognize the default font and make smarter choices when it is
-    one of the provided mappings.  (On Cocoa, the default font is
-    returned when font-info fails, which is not a good thing
-    overall.)
+Recognize the default font and make smarter choices when it is
+one of the provided mappings.  (On Cocoa, the default font is
+returned when font-info fails, which is not a good thing
+overall.)
 
-    For every font, list font version and unicode blocks which are
-    complete.
+For every font, list font version and unicode blocks which are
+complete.
 
-    Note all decorative fonts
+Note all decorative fonts
 
-    Adobe international fonts which are supplied with Reader
+Adobe international fonts which are supplied with Reader
 
-    Apple fonts which could not be mapped
-        Wawati TC
-        Weibei TC
-        Weibei SC
-        Wawati SC
+Apple fonts which could not be mapped
+Wawati TC
+Weibei TC
+Weibei SC
+Wawati SC
 
-License
+; License
 
 Simplified BSD License:
 
@@ -519,14 +520,14 @@ Redistribution and use in source and binary forms, with or
 without modification, are permitted provided that the following
 conditions are met:
 
-  1. Redistributions of source code must retain the above
-     copyright notice, this list of conditions and the following
-     disclaimer.
+1. Redistributions of source code must retain the above
+copyright notice, this list of conditions and the following
+disclaimer.
 
-  2. Redistributions in binary form must reproduce the above
-     copyright notice, this list of conditions and the following
-     disclaimer in the documentation and/or other materials
-     provided with the distribution.
+2. Redistributions in binary form must reproduce the above
+copyright notice, this list of conditions and the following
+disclaimer in the documentation and/or other materials
+provided with the distribution.
 
 This software is provided by Roland Walker "AS IS" and any express
 or implied warranties, including, but not limited to, the implied

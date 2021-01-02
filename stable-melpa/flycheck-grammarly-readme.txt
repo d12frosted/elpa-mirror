@@ -1,1 +1,2 @@
+
 Grammarly support for Flycheck.

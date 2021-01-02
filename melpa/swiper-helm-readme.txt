@@ -1,3 +1,4 @@
+
 This package gives an overview of the current regex search
 candidates.  The search regex can be split into groups with a
 space.  Each group is highlighted with a different face.

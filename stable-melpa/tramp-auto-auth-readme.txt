@@ -28,9 +28,9 @@ then ‘tramp-auto-auth-mode’ must be enabled.  For example:
 (require 'tramp-auto-auth)
 
 (add-to-list
- 'tramp-auto-auth-alist
- '("root@10\\.0\\." .
-   (:host "Funny-Machines" :user "root" :port "ssh")))
+'tramp-auto-auth-alist
+'("root@10\\.0\\." .
+(:host "Funny-Machines" :user "root" :port "ssh")))
 
 (tramp-auto-auth-mode)
 ------------------------------------------------------------------
@@ -48,6 +48,6 @@ sacred) -- or for any reason you need to do it all from Lisp --
 it’s enough to:
 
 (auth-source-remember '(:host "Funny-Machines" :user "root" :port "ssh")
-		         '((:secret "$r00tP#sWD!")))
+'((:secret "$r00tP#sWD!")))
 
 And happy TRAMPing!

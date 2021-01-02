@@ -14,7 +14,7 @@ This library is called doom instead of dom because Emacs now comes
 with its own library called dom which does something slightly
 different.
 
-On Interfaces and Classes
+; On Interfaces and Classes
 
 The elisp DOM implementation uses the doom-node structure to store all
 attributes.  The various interfaces consist of sets of functions to

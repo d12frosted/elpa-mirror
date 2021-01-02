@@ -1,14 +1,15 @@
+
 This package provides two methods for inserting mathematical
 symbols:
 
 - The command `unicode-math-input' to browse through all Unicode
-  math symbols, with TeX names as specified by the unicode-math
-  LaTeX package.
+math symbols, with TeX names as specified by the unicode-math
+LaTeX package.
 
 - A proper input method for efficient typing.  Activate with `C-u
-  C-\ unicode-math RET'.  Then TeX commands (e.g., `\alpha') are
-  replaced automatically as you type with the corresponding Unicode
-  character.
+C-\ unicode-math RET'.  Then TeX commands (e.g., `\alpha') are
+replaced automatically as you type with the corresponding Unicode
+character.
 
 The `unicode-math' input method is similar to Emacs's built-in
 `TeX', but it differs in a couple of ways.  First, it has a much

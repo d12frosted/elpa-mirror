@@ -1,4 +1,3 @@
-Commentary:
 
 * Commentary
 Bitcoin donations gratefully accepted: 1ArFina3Mi8UDghjarGqATeBgXRDWrsmzo
@@ -13,3 +12,5 @@ all of the marked files will be visited in the *look* buffer.
 - look-dired-mark-current-looked-file   : Mark `look-current-file' in the corresponding dired-mode buffer.
 - look-dired-unmark-current-looked-file : Unmark `look-current-file' in the corresponding dired-mode buffer.
 - look-dired-run-associated-program     : Run program associated with currently looked at file.
+
+;;

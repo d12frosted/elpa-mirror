@@ -6,10 +6,10 @@ To use enable `global-orglink-mode' and customize
 `orglink-activate-in-modes'.  Or use the buffer local
 `orglink-mode'.  Do the latter now to linkify these examples:
 
-  [[Code]]
-  [[Code][start of code]]
-  [[define-derived-mode orglink-mode][orglink-mode]]
-  <mailto:jonas@bernoul.li>
-  man:info
-  <info:man>
-  https://github.com/tarsius/orglink
+[[Code]]
+[[Code][start of code]]
+[[define-derived-mode orglink-mode][orglink-mode]]
+<mailto:jonas@bernoul.li>
+man:info
+<info:man>
+https://github.com/tarsius/orglink

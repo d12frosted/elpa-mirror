@@ -1,9 +1,9 @@
-                     ______________________________
+______________________________
 
-                      ORG-TABLE-STIKCY-HEADER-MODE
+ORG-TABLE-STIKCY-HEADER-MODE
 
-                              Junpeng Qiu
-                     ______________________________
+Junpeng Qiu
+______________________________
 
 
 Table of Contents
@@ -26,28 +26,28 @@ https://melpa.org/#/org-table-sticky-header
 1 Overview
 ==========
 
-  Similar to `semantic-stickyfunc-mode', this package uses the header
-  line to show the table header when it is out of sight.
+Similar to `semantic-stickyfunc-mode', this package uses the header
+line to show the table header when it is out of sight.
 
 
 2 Usage
 =======
 
-  To install manually:
-  ,----
-  | (add-to-list 'load-path "/path/to/org-table-sticky-header.el")
-  `----
+To install manually:
+,----
+| (add-to-list 'load-path "/path/to/org-table-sticky-header.el")
+`----
 
-  `M-x org-table-sticky-header-mode' to enable the minor mode in an
-  org-mode buffer.
+`M-x org-table-sticky-header-mode' to enable the minor mode in an
+org-mode buffer.
 
-  To automatically enable the minor mode in all org-mode buffers, use
-  ,----
-  | (add-hook 'org-mode-hook 'org-table-sticky-header-mode)
-  `----
+To automatically enable the minor mode in all org-mode buffers, use
+,----
+| (add-hook 'org-mode-hook 'org-table-sticky-header-mode)
+`----
 
 
 3 Demo
 ======
 
-  [./screenshots/demo.gif]
+[./screenshots/demo.gif]

@@ -1,3 +1,4 @@
+
 `helm-ls-svn.el' is a helm extension for listing files in svn project.
 
 This package is on MELPA (http://melpa.org/#/helm-ls-svn), you can always get
@@ -10,7 +11,7 @@ Installation
 To install, make sure this file is saved in a directory in your `load-path',
 and add the line:
 
-  (require 'helm-ls-svn)
+(require 'helm-ls-svn)
 
 to your Emacs initialization file.
 

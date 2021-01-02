@@ -30,8 +30,8 @@ Whatever your preference.
 
 Add it to your load path and
 
-    (require 'universal-emotions-emoticons)
+(require 'universal-emotions-emoticons)
 
 or
 
-    (use-package universal-emotions-emoticons :ensure t)
+(use-package universal-emotions-emoticons :ensure t)

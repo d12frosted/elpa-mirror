@@ -6,14 +6,14 @@ check OCaml buffers for errors.
 
 Add the following to your init file:
 
-   (with-eval-after-load 'merlin
-     ;; Disable Merlin's own error checking
-     (setq merlin-error-after-save nil)
+(with-eval-after-load 'merlin
+;; Disable Merlin's own error checking
+(setq merlin-error-after-save nil)
 
-     ;; Enable Flycheck checker
-     (flycheck-ocaml-setup))
+;; Enable Flycheck checker
+(flycheck-ocaml-setup))
 
-   (add-hook 'tuareg-mode-hook #'merlin-mode)
+(add-hook 'tuareg-mode-hook #'merlin-mode)
 
 # Usage
 

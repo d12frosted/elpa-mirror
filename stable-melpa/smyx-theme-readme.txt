@@ -1,7 +1,7 @@
-This theme is based on smyck created by hukl.
-(https://github.com/hukl/Smyck-Color-Scheme)
-The cyberpunk theme was used as a starting point for smyx which was
-created by Nicholas M. Van Horn.
+; This theme is based on smyck created by hukl.
+; (https://github.com/hukl/Smyck-Color-Scheme)
+; The cyberpunk theme was used as a starting point for smyx which was
+; created by Nicholas M. Van Horn.
 
 This theme is a port of the overtone/emacs-live theme of the same name
 (https://github.com/overtone/emacs-live). The original theme was

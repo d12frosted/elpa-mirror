@@ -1,5 +1,1 @@
-;;; Commentary:
-
-;; Provides an interface to connect to the Jenkins CI server
-
-
+Provides an interface to connect to the Jenkins CI server

@@ -1,1 +1,1 @@
-  Needs the "jq" binary installed.
+;   Needs the "jq" binary installed.

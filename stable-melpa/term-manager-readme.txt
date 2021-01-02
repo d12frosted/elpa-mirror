@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; term-manager manages terminals in groups based on contextual values.
-
+term-manager manages terminals in groups based on contextual values.

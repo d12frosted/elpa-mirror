@@ -1,5 +1,2 @@
-;;; Commentary:
-
-;; realgud support for the Python ipdb
-;; See https://pypi.org/project/ipdb/
-
+realgud support for the Python ipdb
+See https://pypi.org/project/ipdb/

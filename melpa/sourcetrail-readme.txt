@@ -24,8 +24,8 @@ From Emacs to Sourcetrail
 * Navigate your cursor to the location in the text.
 * Sent location to sourcetrail
 
-+ Press **M-x** and enter **sourcetrail-send-loation**
-+ bind **sourcetrail-send-location** to a key sequence and use it.
+;+ Press **M-x** and enter **sourcetrail-send-loation**
+;+ bind **sourcetrail-send-location** to a key sequence and use it.
 
 Preferences
 -----------

@@ -1,3 +1,4 @@
+
 Run M-x no-emoji-minor-mode to replace all emoji with :emoji-name: in the current buffer.
 
 Run M-x global-no-emoji-minor-mode to replace all emoji with :emoji-name: in all buffers.

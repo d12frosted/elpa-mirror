@@ -1,3 +1,4 @@
+
 If this program doesn't run, I might change the program for the
 worse.  So please send mail to akihisa@mail.ne.jp .
 This elisp is the extention of moccur.el.
@@ -22,7 +23,7 @@ along with GNU Emacs; see the file COPYING.  If not, write to the
 Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
 Boston, MA 02110-1301, USA.
 
-for hi-lock
+;; for hi-lock
 Hi-lock: (("^;;; .*" (0 (quote hi-black-hb) t)))
 Hi-lock: (("^;;;; .*" (0 (quote hi-black-b) t)))
 Hi-lock: (("make-variable-buffer-\\(local\\)" (0 font-lock-keyword-face)(1 'italic append)))

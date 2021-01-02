@@ -24,18 +24,18 @@ the syntax error.
 For example, this grammar parses simple arithmetic with operator
 precedence and grouping.
 
-    (defvar arith-tokens
-      '((sum       prod  [([+ -] sum)  no-sum])
-        (prod      value [([* /] prod) no-prod])
-        (num     . "-?[0-9]+\\(\\.[0-9]*\\)?")
-        (+       . "\\+")
-        (-       . "-")
-        (*       . "\\*")
-        (/       . "/")
-        (pexpr     "(" [sum prod num pexpr] ")")
-        (value   . [pexpr num])
-        (no-prod . "")
-        (no-sum  . "")))
+(defvar arith-tokens
+'((sum       prod  [([+ -] sum)  no-sum])
+(prod      value [([* /] prod) no-prod])
+(num     . "-?[0-9]+\\(\\.[0-9]*\\)?")
+(+       . "\\+")
+(-       . "-")
+(*       . "\\*")
+(/       . "/")
+(pexpr     "(" [sum prod num pexpr] ")")
+(value   . [pexpr num])
+(no-prod . "")
+(no-sum  . "")))
 
 Given just this grammar to `rdp-parse' it will return an
 s-expression of the input where each token match is `cons'ed with
@@ -48,27 +48,27 @@ compiler.
 For example, this function alist evaluates the arithmetic as it is
 parsed:
 
-    (defun arith-op (expr)
-      (destructuring-bind (a (op b)) expr
-        (funcall op a b)))
+(defun arith-op (expr)
+(destructuring-bind (a (op b)) expr
+(funcall op a b)))
 
-    (defvar arith-funcs
-      `((sum     . ,#'arith-op)
-        (prod    . ,#'arith-op)
-        (num     . ,#'string-to-number)
-        (+       . ,#'intern)
-        (-       . ,#'intern)
-        (*       . ,#'intern)
-        (/       . ,#'intern)
-        (pexpr   . ,#'cadr)
-        (value   . ,#'identity)
-        (no-prod . ,(lambda (e) '(* 1)))
-        (no-sum  . ,(lambda (e) '(+ 0)))))
+(defvar arith-funcs
+`((sum     . ,#'arith-op)
+(prod    . ,#'arith-op)
+(num     . ,#'string-to-number)
+(+       . ,#'intern)
+(-       . ,#'intern)
+(*       . ,#'intern)
+(/       . ,#'intern)
+(pexpr   . ,#'cadr)
+(value   . ,#'identity)
+(no-prod . ,(lambda (e) '(* 1)))
+(no-sum  . ,(lambda (e) '(+ 0)))))
 
 Putting this all together:
 
 (defun arith (string)
-  (rdp-parse-string string arith-tokens arith-funcs))
+(rdp-parse-string string arith-tokens arith-funcs))
 
 (arith "(1 + 2 + 3 + 4 + 5) * -3/4.0")
 

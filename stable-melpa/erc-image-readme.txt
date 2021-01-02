@@ -1,3 +1,4 @@
+
 Show inlined images (png/jpg/gif/svg) in erc buffers.  Requires
 Emacs 24.2
 

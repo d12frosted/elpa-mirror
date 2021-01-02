@@ -1,3 +1,4 @@
+
 A collection of color tools aimed at those working with (normal 6
 digit) hex color codes, useful for CSS, Emacs themes, etc.
 
@@ -38,9 +39,9 @@ following steps:
 2. Narrow the buffer `M-x narrow-to-region`
 3. Go to the top `M-<` of the narrowed section
 4. Start recording a macro `f3`
-  1. Regexp i-search `C-M-s` for `#[0-9A-Fa-f]\{6\}` and `ENTER` on the first match
-  2. Your cursor point will be at the end of the first color (unless the Regexp was in-adequate :( )
-  3. `M-5` (to do 5 steps) `M-x kurecolor-decrease-saturation-by-step` (shortcut `M-x kure-d-sat` **TAB**)
+1. Regexp i-search `C-M-s` for `#[0-9A-Fa-f]\{6\}` and `ENTER` on the first match
+2. Your cursor point will be at the end of the first color (unless the Regexp was in-adequate :( )
+3. `M-5` (to do 5 steps) `M-x kurecolor-decrease-saturation-by-step` (shortcut `M-x kure-d-sat` **TAB**)
 5. Stop recording the macro `f4`
 6. Run the macro again with `f4`, repeat until you are finished, or use `M-0 f4` to run the macro until it hits the end of the narrowed region (or hits an error).
 8. When you're done, `M-x widen` to exit narrowing.
@@ -49,7 +50,7 @@ following steps:
 
 Installing kurecolor is recommended to be done via MELPA.
 
-    M-x package-install kurecolor
+M-x package-install kurecolor
 
 If you wish to install it manually, you already have your big boy
 pants on and need no further help from me.
@@ -82,6 +83,6 @@ https://gist.github.com/jasonm23/8554119
 The theme is Gruvbox, although you can't see much of it. Anyway,
 it's a great theme, you should go install it now. (from MELPA)
 
-Package-Requires: ((emacs "24.1") (s "1.0"))
+; Package-Requires: ((emacs "24.1") (s "1.0"))
 
-Licence: MIT
+; Licence: MIT

@@ -17,7 +17,7 @@ Dpaste a buffer by specifying a name
 
 Special thanks to Martin Mahner (https://github.com/bartTC) for running dpaste.de
 
-Change Log:
+; Change Log:
 
 0.2 - Fixes for the latest web.el
 0.1 - Initial commit and push into melpa

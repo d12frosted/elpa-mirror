@@ -5,7 +5,7 @@ you don't forget which heading the text belongs to.
 
 The code is very simple and is based on `semantic-stickyfunc-mode'.
 
-Installation:
+; Installation:
 
 Install from MELPA and run `org-sticky-header-mode'.
 

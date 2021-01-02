@@ -5,7 +5,7 @@ emacs configuration (~/.emacs):
 (autoload 'unison-mode "unison-mode" "my unison mode" t)
 (setq auto-mode-alist (append '(("\\.prf$" . unison-mode)) auto-mode-alist))
 
- Resources used when making this mode:
- http://www.emacswiki.org/emacs/ModeTutorial
- http://www.ergoemacs.org/emacs/elisp_syntax_coloring.html
- http://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html#tutorial
+Resources used when making this mode:
+http://www.emacswiki.org/emacs/ModeTutorial
+http://www.ergoemacs.org/emacs/elisp_syntax_coloring.html
+http://www.cis.upenn.edu/~bcpierce/unison/download/releases/stable/unison-manual.html#tutorial

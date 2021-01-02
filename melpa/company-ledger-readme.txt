@@ -1,3 +1,4 @@
+
 `company-mode' backend for `ledger-mode', `beancount-mode' and
 similar plain-text accounting modes. Provides fuzzy completion
 for transactions, prices and other date prefixed entries.
@@ -13,12 +14,12 @@ Detailed Description
 Minimal Setup
 -------------
 (with-eval-after-load 'company
-  (add-to-list 'company-backends 'company-ledger))
+(add-to-list 'company-backends 'company-ledger))
 
 Use-Package Setup
 -----------------
 (use-package company-ledger
-  :ensure company
-  :init
-  (with-eval-after-load 'company
-    (add-to-list 'company-backends 'company-ledger)))
+:ensure company
+:init
+(with-eval-after-load 'company
+(add-to-list 'company-backends 'company-ledger)))

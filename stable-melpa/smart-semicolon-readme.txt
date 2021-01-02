@@ -11,4 +11,4 @@ as if ";" is inserted normally.
 
 To enable it, add `smart-semicolon-mode' to some major mode hook.
 
-    (add-hook 'c-mode-common-hook #'smart-semicolon-mode)
+(add-hook 'c-mode-common-hook #'smart-semicolon-mode)

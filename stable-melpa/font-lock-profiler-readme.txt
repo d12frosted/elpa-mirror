@@ -18,14 +18,14 @@ Usage:
 Use the following functions:
 
 - `font-lock-profiler-buffer' -- Fontify the entire buffer and
-  present the profiling result.
+present the profiling result.
 
 - `font-lock-profiler-region' -- Fontify the region and present the
-  profiling result.
+profiling result.
 
 - `font-lock-profiler-start' -- Enable "live" profiling.  Do
-  whatever you want to do measure (like editing or scrolling).  When
-  done, run `font-lock-profiler-stop-and-report'.
+whatever you want to do measure (like editing or scrolling).  When
+done, run `font-lock-profiler-stop-and-report'.
 
 The result buffer:
 
@@ -41,10 +41,10 @@ anchored highlights.
 Additional features:
 
 - The variable `font-lock-profiler-remaining-matches', when set to
-  an integer, the instrumented keywords will fake a match failure
-  after this many matches.  This is useful, for example, when
-  working with keywords where a search would never terminate
-  (without this, Emacs would hang).
+an integer, the instrumented keywords will fake a match failure
+after this many matches.  This is useful, for example, when
+working with keywords where a search would never terminate
+(without this, Emacs would hang).
 
 Other Font Lock Tools:
 
@@ -89,7 +89,7 @@ The underlying idea is to convert text with highlights ("faces")
 into a plain text representation using the Faceup markup
 language.  This language is semi-human readable, for example:
 
-    «k:this» is a keyword
+«k:this» is a keyword
 
 By comparing the current highlight with a highlight performed with
 stable versions of a package, it's possible to automatically find

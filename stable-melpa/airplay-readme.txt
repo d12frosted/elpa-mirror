@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; A client for AirPlay Server.
-
+A client for AirPlay Server.

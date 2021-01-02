@@ -7,19 +7,19 @@ to show its candidate menu.
 NOTE: helm-posframe requires Emacs 26
 
 ** How to enable and disable helm-posframe
-   #+BEGIN_EXAMPLE
-   (helm-posframe-enable)
-   (helm-posframe-disable)
-   #+END_EXAMPLE
+#+BEGIN_EXAMPLE
+(helm-posframe-enable)
+(helm-posframe-disable)
+#+END_EXAMPLE
 
 ** Tips
 
 *** How to show fringe to helm-posframe
-#+BEGIN_EXAMPLE
+;; #+BEGIN_EXAMPLE
 (setq helm-posframe-parameters
-      '((left-fringe . 10)
-        (right-fringe . 10)))
-#+END_EXAMPLE
+'((left-fringe . 10)
+(right-fringe . 10)))
+;; #+END_EXAMPLE
 
 By the way, User can set *any* parameters of helm-posframe with
 the help of `helm-posframe-parameters'.

@@ -16,6 +16,6 @@ or:
 (global-set-key [remap scroll-up-command] 'golden-ratio-scroll-screen-up)
 
 
-Codes
+; Codes
 
 (require 'dired)

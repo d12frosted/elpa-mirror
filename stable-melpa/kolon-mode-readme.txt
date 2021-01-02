@@ -1,4 +1,3 @@
-Commentary:
 
 Highlights Text::Xslate files using the Kolon syntax
 
@@ -22,7 +21,7 @@ works so we can get it to work properly. Right now it'll insert
 HTML comments, so kolon-(un)comment-region will need to be bound
 individually or used from their menu entries.
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 This code is free software; you can redistribute it and/or modify
 it under the terms of the Artistic License 2.0. For details, see
@@ -32,3 +31,5 @@ This program is distributed in the hope that it will be useful,
 but it is provided "as is" and without any express or implied
 warranties. For details, see
 http://www.perlfoundation.org/artistic_license_2_0
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

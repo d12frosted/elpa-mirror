@@ -8,20 +8,20 @@ Setup:
 
 Install and configure [racer][].  And add to your `init.el':
 
-    (require 'company-racer)
+(require 'company-racer)
 
-    (with-eval-after-load 'company
-      (add-to-list 'company-backends 'company-racer))
+(with-eval-after-load 'company
+(add-to-list 'company-backends 'company-racer))
 
 Check https://github.com/company-mode/company-mode for details.
 
 Troubleshooting:
 
 + [racer][] requires to set the environment variable with
-  `RUST_SRC_PATH' and needs to be an absolute path:
+`RUST_SRC_PATH' and needs to be an absolute path:
 
-      (unless (getenv "RUST_SRC_PATH")
-        (setenv "RUST_SRC_PATH" (expand-file-name "~/path/to/rust/src")))
+(unless (getenv "RUST_SRC_PATH")
+(setenv "RUST_SRC_PATH" (expand-file-name "~/path/to/rust/src")))
 
 TODO:
 

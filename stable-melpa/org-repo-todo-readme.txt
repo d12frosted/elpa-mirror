@@ -8,6 +8,6 @@ root of the repository.
 Install is as easy as dropping this file into your load path and setting
 the relevent functions to keybindings of your choice, i.e.:
 
-  (global-set-key (kbd "C-;") 'ort/capture-todo)
-  (global-set-key (kbd "C-'") 'ort/capture-checkitem)
-  (global-set-key (kbd "C-`") 'ort/goto-todos)
+(global-set-key (kbd "C-;") 'ort/capture-todo)
+(global-set-key (kbd "C-'") 'ort/capture-checkitem)
+(global-set-key (kbd "C-`") 'ort/goto-todos)

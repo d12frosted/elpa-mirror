@@ -1,3 +1,4 @@
+
 This package lets you enable minor modes based on file name and
 contents.  To find the right modes, it checks filenames against
 patterns in ‘auto-minor-mode-alist’ and file contents against
@@ -8,7 +9,7 @@ Unlike major modes, all matching minor modes are enabled, not only
 the first match.
 
 A reason you might want to use it:
-  (add-to-list 'auto-minor-mode-alist '("-theme\\.el\\'" . rainbow-mode))
+(add-to-list 'auto-minor-mode-alist '("-theme\\.el\\'" . rainbow-mode))
 
 There’s intentionally no equivalent of ‘interpreter-mode-alist’.
 Interpreters should determine the major mode.  Relevant minor

@@ -4,8 +4,8 @@ deleting pastes from <http://paste.debian.net/>.
 You can install the package from MELPA.  If you prefer the manual
 installation, the easiest way is to put these lines into your
 init-file:
-  (add-to-list 'load-path "/path/to/debpaste-dir")
-  (require 'debpaste)
+(add-to-list 'load-path "/path/to/debpaste-dir")
+(require 'debpaste)
 
 Basic interactive commands:
 - `debpaste-display-paste',
@@ -13,10 +13,10 @@ Basic interactive commands:
 - `debpaste-delete-paste'.
 
 The package provides a keymap, that can be bound like this:
-  (global-set-key (kbd "M-D") 'debpaste-command-map)
+(global-set-key (kbd "M-D") 'debpaste-command-map)
 
 You will probably want to modify a default poster name:
-  (setq debpaste-user-name user-login-name)
+(setq debpaste-user-name user-login-name)
 
 For full description, see <http://github.com/alezost/debpaste.el>.
 

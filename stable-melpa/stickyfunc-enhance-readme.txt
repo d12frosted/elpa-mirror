@@ -1,3 +1,4 @@
+
 When enable, `semantic-stickyfunc-mode' shows the function point is
 currently in at the first line of the current buffer. This is
 useful when you have a very long function that spreads more than a
@@ -9,7 +10,7 @@ is that it does not display all parameters that are scattered on
 multiple lines. To solve this problem, we need to redefine
 `semantic-stickyfunc-fetch-stickyline' function.
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -23,3 +24,5 @@ General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with GNU Emacs.  If not, see <http://www.gnu.org/licenses/>.
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

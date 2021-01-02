@@ -1,3 +1,4 @@
+
 Lets you auto-format source code in many languages using the same
 command for all languages, instead of learning a different Emacs
 package and formatting command for each language.
@@ -30,7 +31,7 @@ Supported languages:
 - Fish Shell (fish_indent)
 - Fortran 90 (fprettify)
 - Gleam (gleam format)
-- Go (gofmt)
+- Go (gofmt, goimports)
 - GraphQL (prettier)
 - Haskell (brittany, hindent, stylish-haskell)
 - HTML/XHTML/XML (tidy)

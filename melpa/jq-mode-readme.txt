@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; Mode for editing jq queries.
-
+Mode for editing jq queries.

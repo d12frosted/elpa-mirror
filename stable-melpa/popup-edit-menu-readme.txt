@@ -7,8 +7,8 @@ which is a part of Emacs release.
 
 Add the following codes into your init file to enable it.
 
-  (require 'popup-edit-menu)
-  (global-set-key [mouse-3] (popup-edit-menu-stub))
+(require 'popup-edit-menu)
+(global-set-key [mouse-3] (popup-edit-menu-stub))
 
 You can change the key binding as you want if you don't want
 to active it by mouse right click
@@ -18,6 +18,6 @@ to active it by mouse right click
 If you prefer to show the mode menus below, you can add
 the following codes into your init file:
 
-  (setq popup-edit-menu-mode-menus-down-flag t)
+(setq popup-edit-menu-mode-menus-down-flag t)
 
 or set it in Emacs Customization Group.

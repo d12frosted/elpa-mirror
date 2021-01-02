@@ -1,3 +1,4 @@
+
 Purpose
 -------
 maxframe provides the ability to maximize the emacs frame and stay within
@@ -7,21 +8,21 @@ Usage
 -----
 Example of lines to be added to your .emacs:
 
-    (require 'maxframe)
-    (add-hook 'window-setup-hook 'maximize-frame t)
+(require 'maxframe)
+(add-hook 'window-setup-hook 'maximize-frame t)
 
 If using two framebuffers (monitors), it might be necesssary to specify a
 mf-max-width value set to the pixel width of main framebuffer.  This is
 necessary because emacs does not yet support sniffing different
 framebuffers.  Example:
 
-    (require 'maxframe)
-    (setq mf-max-width 1600)  ;; Pixel width of main monitor.
-    (add-hook 'window-setup-hook 'maximize-frame t)
+(require 'maxframe)
+(setq mf-max-width 1600)  ;; Pixel width of main monitor.
+(add-hook 'window-setup-hook 'maximize-frame t)
 
 To restore the frame to it's original dimensions, call restore-frame:
 
-    M-x restore-frame
+M-x restore-frame
 
 How it works
 ------------

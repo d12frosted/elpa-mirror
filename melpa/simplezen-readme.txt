@@ -2,12 +2,12 @@ A simple subset of zencoding-mode for Emacs.
 
 It completes these types:
 
-    div        --> <div></div>
-    input      --> <input>
-    .article   --> <div class="article"></div>
-    #logo      --> <div id="logo"></div>
-    ul.items   --> <ul class="items"></ul>
-    h2#tagline --> <h2 id="tagline"></h2>
+div        --> <div></div>
+input      --> <input>
+.article   --> <div class="article"></div>
+#logo      --> <div id="logo"></div>
+ul.items   --> <ul class="items"></ul>
+h2#tagline --> <h2 id="tagline"></h2>
 
 So why not just use zencoding-mode for a much richer set of features?
 
@@ -27,23 +27,23 @@ Yes, I have it on TAB.
 
 You can bind `simplezen-expand` to any button of your choosing.
 
-    (require 'simplezen)
-    (define-key html-mode-map (kbd "C-c C-z") 'simplezen-expand)
+(require 'simplezen)
+(define-key html-mode-map (kbd "C-c C-z") 'simplezen-expand)
 
 If you want it bound to `tab` you can do this:
 
-    (define-key html-mode-map (kbd "TAB") 'simplezen-expand-or-indent-for-tab)
+(define-key html-mode-map (kbd "TAB") 'simplezen-expand-or-indent-for-tab)
 
 Then it will still indent the line, except in cases where you're
 looking back at a valid simplezen-expression (see above).
 
 To get it working with yasnippet aswell, I did this:
 
-    (defun --setup-simplezen ()
-      (set (make-local-variable 'yas/fallback-behavior)
-           '(apply simplezen-expand-or-indent-for-tab)))
+(defun --setup-simplezen ()
+(set (make-local-variable 'yas/fallback-behavior)
+'(apply simplezen-expand-or-indent-for-tab)))
 
-    (add-hook 'sgml-mode-hook '--setup-simplezen)
+(add-hook 'sgml-mode-hook '--setup-simplezen)
 
 Which will give yasnippet first priority, then simplezen gets it
 chance, and if neither of those did anything it will indent the line.

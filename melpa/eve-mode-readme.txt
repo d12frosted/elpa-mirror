@@ -12,8 +12,6 @@ build error reporting once the new language service is written.
 
 [1]: http://witheve.com/
 
-Documentation:
-
 `eve-mode` adds itself to the `auto-mode-alist` for `.eve` files
 automatically.  If you'd like to use eve-mode in a document with
 another extension, use `M-x eve-mode`.

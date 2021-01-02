@@ -7,10 +7,10 @@ This is generally useful in programming languages where symbols are more
 often used than numbers.
 
 To use keyswap-mode, make sure this file is in the Emacs load-path:
-  (add-to-list 'load-path "/path/to/directory/or/file")
+(add-to-list 'load-path "/path/to/directory/or/file")
 
 Then require keyswap:
-  (require 'keyswap)
+(require 'keyswap)
 
 To toggle between swapped and not-swapped sets of keys, use the command
 (keyswap-mode) or M-x keyswap-mode
@@ -49,11 +49,11 @@ with
 and then add modifications for each major-mode you desire accordingly, e.g.
 
 (with-eval-after-load 'cc-vars
-  (add-hook 'c-mode-common-hook 'keyswap-include-quotes))
+(add-hook 'c-mode-common-hook 'keyswap-include-quotes))
 
 (with-eval-after-load 'lisp-mode
-  (add-hook 'emacs-lisp-mode-hook 'keyswap-tac-underscore-exception)
-  (add-hook 'lisp-mode-hook 'keyswap-tac-underscore-exception))
+(add-hook 'emacs-lisp-mode-hook 'keyswap-tac-underscore-exception)
+(add-hook 'lisp-mode-hook 'keyswap-tac-underscore-exception))
 
 To toggle between having keys swapped and not, just turn on and off
 `keyswap-mode'.
@@ -71,13 +71,13 @@ Because this changes the bindings on certain keys, it requires
 Due to the way that it falls back to inserting a single character when the
 region is not active, you need an advice around `wrap-region-fallback' that
 ensures `keyswap-mode' is not on at the time it is called.
-  (defadvice wrap-region-fallback (around keyswap-negate protect activate)
-    "Ensure that `keyswap-mode' is not active when
-    `wrap-region-fallback' is getting called."
-    (let ((currently-on keyswap-mode))
-      (when currently-on (keyswap-mode 0))
-      ad-do-it
-      (when currently-on (keyswap-mode 1))))
+(defadvice wrap-region-fallback (around keyswap-negate protect activate)
+"Ensure that `keyswap-mode' is not active when
+`wrap-region-fallback' is getting called."
+(let ((currently-on keyswap-mode))
+(when currently-on (keyswap-mode 0))
+ad-do-it
+(when currently-on (keyswap-mode 1))))
 
 
 Though the conveniance functions don't account for key chords (e.g. C-x j r),

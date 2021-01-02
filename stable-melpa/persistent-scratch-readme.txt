@@ -18,7 +18,7 @@ Backups of old saved states are off by default, set
 `persistent-scratch-backup-directory' to a directory to enable them.
 
 To both enable autosave and restore the last saved state on Emacs start, add
-  (persistent-scratch-setup-default)
+(persistent-scratch-setup-default)
 to the init file. This will NOT error when the save file doesn't exist.
 
 To just restore on Emacs start, it's a good idea to call

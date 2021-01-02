@@ -16,9 +16,9 @@ Basic usage
 
 File to file diff:
 - `latexdiff` will ask for two tex files and generates a tex diff between
-  them (that you will need to compile).
+them (that you will need to compile).
 Version diff (git repo only):
 - `latexdiff-vc` (and `helm-latexdiff-vc`) will ask for a previous commit
-  number and make a pdf diff between this version and the current one.
+number and make a pdf diff between this version and the current one.
 - `latexdiff-vc-range` (and `helm-latexdiff-vc-range`) will ask for two
-  commits number and make a pdf diff between those two versions.
+commits number and make a pdf diff between those two versions.

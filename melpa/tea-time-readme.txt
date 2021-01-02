@@ -7,11 +7,11 @@ If available, notification would be done with great tool
 mumbles ( http://www.mumbles-project.org )
 If not, then simply use standard emacs message.
 
-Requirements:
+; Requirements:
 
 tested on Emacs 23
 
-Installation:
+; Installation:
 
 Add below code in your .emacs
 

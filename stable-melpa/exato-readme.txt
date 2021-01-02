@@ -10,6 +10,6 @@ Here's an oneliner using https://github.com/jwiegley/use-package:
 *customization*: to change the bind from `x` to your liking, you can customize exato-key:
 
 (use-package exato
-  :ensure t
-  :init
-  (setq exato-key "h"))
+:ensure t
+:init
+(setq exato-key "h"))

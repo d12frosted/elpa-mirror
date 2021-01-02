@@ -34,23 +34,23 @@ Watch example or vim usage.
 
 ## Example
 
-	Ctrl-c, i, w => kill a word
-	Ctrl-c, i, ' => kill inside ''
-	Ctrl-c, i, " => kill inside ""
-	Ctrl-c, i, ` => kill inside ``
-	Ctrl-c, i, [()] => kill inside ()
-	Ctrl-c, i, [{}] => kill inside {}
-	Ctrl-c, i, [<>] => kill inside <>
-	Ctrl-c, i, [[]] => kill inside []
+Ctrl-c, i, w => kill a word
+Ctrl-c, i, ' => kill inside ''
+Ctrl-c, i, " => kill inside ""
+Ctrl-c, i, ` => kill inside ``
+Ctrl-c, i, [()] => kill inside ()
+Ctrl-c, i, [{}] => kill inside {}
+Ctrl-c, i, [<>] => kill inside <>
+Ctrl-c, i, [[]] => kill inside []
 
-	Ctrl-c, o, w => copy a word
-	Ctrl-c, o, ' => copy inside ''
-	Ctrl-c, o, " => copy inside ""
-	Ctrl-c, o, ` => copy inside ``
-	Ctrl-c, o, [()] => copy inside ()
-	Ctrl-c, o, [{}] => copy inside {}
-	Ctrl-c, o, [<>] => copy inside <>
-	Ctrl-c, o, [[]] => copy inside []
+Ctrl-c, o, w => copy a word
+Ctrl-c, o, ' => copy inside ''
+Ctrl-c, o, " => copy inside ""
+Ctrl-c, o, ` => copy inside ``
+Ctrl-c, o, [()] => copy inside ()
+Ctrl-c, o, [{}] => copy inside {}
+Ctrl-c, o, [<>] => copy inside <>
+Ctrl-c, o, [[]] => copy inside []
 
 You can also kill the nested parentheses as you can see.
 https://raw.githubusercontent.com/cs14095/cs14095.github.io/master/ci-el.gif

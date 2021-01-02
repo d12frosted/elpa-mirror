@@ -46,47 +46,47 @@ A corresponding arrow in the source buffer is placed at the current
 search location.
 
 
-            ========================
-            === Font Lock Studio ===
-            ========================
-        --------------------------------------------------
-    =>  "<\\([!?][_:[:alpha:]][-_.:[:alnum:]]*\\)"
-          (1 font-lock-keyword-face)
-        --------------------------------------------------
-        "</?\\([_[:alpha:]][-_.[:alnum:]]*\\)\\(?::\\([_:[:alpha:]]
-        [-_.:[:alnum:]]*\\)\\)?"
-          (1
-           (if
-               (match-end 2)
-               sgml-namespace-face font-lock-function-name-face))
-          (2 font-lock-function-name-face nil t)
-        --------------------------------------------------
-        "\\(?:^\\|[ \t]\\)\\([_[:alpha:]][-_.[:alnum:]]*\\)\\(?::
-        \\([_:[:alpha:]][-_.:[:alnum:]]*\\)\\)?=[\"']"
-          (1
-           (if
-               (match-end 2)
-               sgml-namespace-face font-lock-variable-name-face))
-          (2 font-lock-variable-name-face nil t)
-        --------------------------------------------------
-        "[&%][_:[:alpha:]][-_.:[:alnum:]]*;?"
-          (0 font-lock-variable-name-face)
-        --------------------------------------------------
-        "<\\(b\\(?:ig\\|link\\)\\|cite\\|em\\|h[1-6]\\|rev\\|s\\(?:
-        mall\\|trong\\)\\|t\\(?:itle\\|t\\)\\|var\\|[bisu]\\)
-        \\([ \t][^>]*\\)?>\\([^<]+\\)</\\1>"
-          (3
-           (cdr
-            (assoc-string
-             (match-string 1)
-             sgml-tag-face-alist t))
-           prepend)
-        ==================================================
-        Public state:
-          Debug on error     : YES
-          Debug on quit      : YES
-          Explain rules      : YES
-          Show compiled code : NO
+========================
+=== Font Lock Studio ===
+========================
+--------------------------------------------------
+=>  "<\\([!?][_:[:alpha:]][-_.:[:alnum:]]*\\)"
+(1 font-lock-keyword-face)
+--------------------------------------------------
+"</?\\([_[:alpha:]][-_.[:alnum:]]*\\)\\(?::\\([_:[:alpha:]]
+[-_.:[:alnum:]]*\\)\\)?"
+(1
+(if
+(match-end 2)
+sgml-namespace-face font-lock-function-name-face))
+(2 font-lock-function-name-face nil t)
+--------------------------------------------------
+"\\(?:^\\|[ \t]\\)\\([_[:alpha:]][-_.[:alnum:]]*\\)\\(?::
+\\([_:[:alpha:]][-_.:[:alnum:]]*\\)\\)?=[\"']"
+(1
+(if
+(match-end 2)
+sgml-namespace-face font-lock-variable-name-face))
+(2 font-lock-variable-name-face nil t)
+--------------------------------------------------
+"[&%][_:[:alpha:]][-_.:[:alnum:]]*;?"
+(0 font-lock-variable-name-face)
+--------------------------------------------------
+"<\\(b\\(?:ig\\|link\\)\\|cite\\|em\\|h[1-6]\\|rev\\|s\\(?:
+mall\\|trong\\)\\|t\\(?:itle\\|t\\)\\|var\\|[bisu]\\)
+\\([ \t][^>]*\\)?>\\([^<]+\\)</\\1>"
+(3
+(cdr
+(assoc-string
+(match-string 1)
+sgml-tag-face-alist t))
+prepend)
+==================================================
+Public state:
+Debug on error     : YES
+Debug on quit      : YES
+Explain rules      : YES
+Show compiled code : NO
 
 Press space to single step through all the keywords. "n" will go
 the the next keyword, "b" will set a breakpoint, "g" will run to
@@ -144,11 +144,11 @@ Normalized keywords:
 The keywords presented in the interface have been normalized. For
 example, instead of
 
-     ("xyz" . font-lock-type-face)
+("xyz" . font-lock-type-face)
 
 the keyword
 
-      ("xyz" (0 font-lock-type-face))
+("xyz" (0 font-lock-type-face))
 
 is shown. See `font-lock-studio-normalize-keywords' for details.
 
@@ -263,7 +263,7 @@ The underlying idea is to convert text with highlights ("faces")
 into a plain text representation using the Faceup markup
 language. This language is semi-human readable, for example:
 
-    «k:this» is a keyword
+«k:this» is a keyword
 
 By comparing the current highlight with a highlight performed with
 stable versions of a package, it's possible to automatically find

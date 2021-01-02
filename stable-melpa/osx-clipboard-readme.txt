@@ -1,4 +1,4 @@
-Commentary:
+;; Commentary:
 
 Sometimes it is useful to run Emacs in a plain terminal window, even
 when a graphical display is available, but it's a nuisance if you need

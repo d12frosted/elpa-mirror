@@ -24,9 +24,9 @@ file rather than visit a non-existing file in the current directory, but
 you can override this by prefixing side-notes-toggle-notes with...
 
 -  C-u C-u to force visiting side-notes-file within the current
-   directory.
+directory.
 -  C-u C-u C-u to force visiting side-notes-secondary-file within
-   the current directory.
+the current directory.
 
 Of course, you can use Markdown or Org Mode formatting by changing the
 file extensions of side-notes-file and/or side-notes-secondary-file.
@@ -41,7 +41,7 @@ Installation
 Install from [MELPA stable][1] then add something like the following to
 your init file:
 
-    (define-key (current-global-map) (kbd "M-s n") #'side-notes-toggle-notes)
+(define-key (current-global-map) (kbd "M-s n") #'side-notes-toggle-notes)
 
 [1]: https://stable.melpa.org/#/side-notes
 [2]: https://melpa.org/#/side-notes

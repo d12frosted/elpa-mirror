@@ -1,5 +1,5 @@
 Emacs is your astrologer, read its interpretation with:
-  M-x horoscope
+M-x horoscope
 No need to tell it your birth date, Emacs already knows you well enough.
 
 Bob Manson originally wrote this program in ksh,

@@ -1,3 +1,4 @@
+
 This package offers an alternate view to `mu4e' e-mail display.  It shows all
 e-mails of a thread in a single view, where each correspondant has their own
 face.  Threads can be displayed linearly (in which case e-mails are displayed
@@ -11,7 +12,7 @@ mu4e 1.0 or above is required.
 To fully replace `mu4e-view' with `mu4e-conversation' from any other command
 (e.g. `mu4e-headers-next', `helm-mu'), call
 
-  (global-mu4e-conversation-mode)
+(global-mu4e-conversation-mode)
 
 * Features
 

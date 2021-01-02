@@ -11,7 +11,7 @@ Put this file into load-path'ed directory, and
 ___!!!!!!!!!!!!!!! BYTE COMPILE IT !!!!!!!!!!!!!!!___
 And put the following expression into your .emacs.
 
-    (require 'kaesar)
+(require 'kaesar)
 
 ## Usage:
 
@@ -27,17 +27,17 @@ And put the following expression into your .emacs.
 ## Sample:
 
 * To encrypt my secret
-  Please ensure that do not forget `clear-string' you want to hide.
+Please ensure that do not forget `clear-string' you want to hide.
 
-    (defvar my-secret nil)
+(defvar my-secret nil)
 
-    (let ((raw-string "My Secret"))
-      (setq my-secret (kaesar-encrypt-string raw-string))
-      (clear-string raw-string))
+(let ((raw-string "My Secret"))
+(setq my-secret (kaesar-encrypt-string raw-string))
+(clear-string raw-string))
 
 * To decrypt `my-secret'
 
-    (kaesar-decrypt-string my-secret)
+(kaesar-decrypt-string my-secret)
 
 ## NOTE:
 
@@ -48,7 +48,7 @@ already exists. (That is faster than this package!)  I continue to
 consider the new name which contains "aes" string. There is the
 ancient cipher algorithm caesar
 http://en.wikipedia.org/wiki/Caesar_cipher
- K`aes`ar is change the first character of Caesar. There is no
+K`aes`ar is change the first character of Caesar. There is no
 meaning more than containing `aes` word.
 
 How to suppress password prompt?

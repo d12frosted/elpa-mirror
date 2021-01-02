@@ -9,35 +9,35 @@ buffer.  If you decide you like the effect so much that you want it
 applied to all Info pages you visit, add the `niceify-info'
 function to `Info-selection-hook' in your init file.  For example:
 
-    (add-hook 'Info-selection-hook #'niceify-info)
+(add-hook 'Info-selection-hook #'niceify-info)
 
 This function applies a set of changes I call "niceification",
 because I have a longstanding fondness for terrible names.  This
 process does the following things:
 
 - Applies customizable faces to text surrounded by emphasis
-  characters * and _.  The default faces for these are bold and
-  italic, respectively, because that's what the GNU-hosted HTML
-  versions of the Emacs manuals use, but they can be customized to
-  suit your taste.
+characters * and _.  The default faces for these are bold and
+italic, respectively, because that's what the GNU-hosted HTML
+versions of the Emacs manuals use, but they can be customized to
+suit your taste.
 
 - Identifies Emacs Lisp code samples and fontifies them
-  accordingly.
+accordingly.
 
 - Identifies references in `ticks', and where they refer to
-  function or variable bindings, applies the necessary text
-  properties to link them to the relevant documentation.  References
-  without a corresponding function or variable binding will be
-  fontified as Emacs Lisp, by the same method used for code
-  samples.
+function or variable bindings, applies the necessary text
+properties to link them to the relevant documentation.  References
+without a corresponding function or variable binding will be
+fontified as Emacs Lisp, by the same method used for code
+samples.
 
 - Identifies headers for longer-form documentation of several types
-  of objects, such as: "-- Function: find-file filename &optional
-  wildcards" and applies text properties making them easier to
-  identify and parse.  Names for documented things are linked to
-  their documentation in the same way as for references in
-  `ticks'.  Functions' argument lists are additionally fontified
-  with a customizable face, which defaults to italic.
+of objects, such as: "-- Function: find-file filename &optional
+wildcards" and applies text properties making them easier to
+identify and parse.  Names for documented things are linked to
+their documentation in the same way as for references in
+`ticks'.  Functions' argument lists are additionally fontified
+with a customizable face, which defaults to italic.
 
 Each kind of niceification has a corresponding customization option
 to enable or disable it.  You can easily access these via M-x

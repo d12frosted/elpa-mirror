@@ -1,3 +1,4 @@
+
 Provides command `clojure-essential-ref' to browse the documentation for
 symbol in book "Clojure, The Essential Reference".
 

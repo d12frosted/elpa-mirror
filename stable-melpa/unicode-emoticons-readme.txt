@@ -1,3 +1,4 @@
+
 Simple minor mode that let's you quickly type common unicode
 emoticons. Emoticons are stored as abbrev definitions. To enable:
 M-x unicode-emoticons-mode <RET>

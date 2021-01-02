@@ -21,15 +21,15 @@ instructions there.
 If you are on Emacs 24, add Marmalade as a package archive source in
 ~/.emacs.d/init.el:
 
-  (require 'package)
-  (add-to-list 'package-archives
-      '("marmalade" . "http://marmalade-repo.org/packages/") t)
-  (package-initialize)
+(require 'package)
+(add-to-list 'package-archives
+'("marmalade" . "http://marmalade-repo.org/packages/") t)
+(package-initialize)
 
 Then you can install it:
 
-  M-x package-refresh-contents
-  M-x package-install RET ercn RET
+M-x package-refresh-contents
+M-x package-install RET ercn RET
 
 Manually (via git)
 ------------------
@@ -37,8 +37,8 @@ Manually (via git)
 Download the source or clone the repo and add the following to
 ~/.emacs.d/init.el:
 
-  (add-to-list 'load-path "path/to/ercn")
-  (require 'ercn)
+(add-to-list 'load-path "path/to/ercn")
+(require 'ercn)
 
 Configuration
 =============
@@ -46,12 +46,12 @@ Configuration
 Two variables control whether or not ercn calls `ercn-notify-hook':
 
 * `ercn-notify-rules': Rules to determine if the hook should be called. It
-  defaults to calling the hook whenever a pal speaks, a keyword is mentioned,
-  your current-nick is mentioned, or a message is sent inside a query buffer.
+defaults to calling the hook whenever a pal speaks, a keyword is mentioned,
+your current-nick is mentioned, or a message is sent inside a query buffer.
 
 * `ercn-suppress-rules': Rules to determine if the notification should be
-  suppressed. Takes precedent over `ercn-notify-rules'. The default will
-  suppress messages from fools, dangerous-hosts, and system messages.
+suppressed. Takes precedent over `ercn-notify-rules'. The default will
+suppress messages from fools, dangerous-hosts, and system messages.
 
 Both vars are alists that contain the category of message as the keys and as
 the value either the symbol ‘all, a list of buffer names in which to
@@ -71,17 +71,17 @@ The supported categories are:
 An example configuration
 ------------------------
 
-  (setq ercn-notify-rules
-      '((current-nick . all)
-           (keyword . all)
-           (pal . ("#emacs"))
-           (query-buffer . all)))
+(setq ercn-notify-rules
+'((current-nick . all)
+(keyword . all)
+(pal . ("#emacs"))
+(query-buffer . all)))
 
-  (defun do-notify (nickname message)
-      ;; notification code goes here
-  )
+(defun do-notify (nickname message)
+;; notification code goes here
+)
 
-  (add-hook 'ercn-notify-hook 'do-notify)
+(add-hook 'ercn-notify-hook 'do-notify)
 
 In this example, `ercn-notify-hook' will be called whenever anyone
 mentions my nick or a keyword or when sent from a query buffer, or if a pal
@@ -90,14 +90,14 @@ speaks in #emacs.
 To call the hook on all messages
 --------------------------------
 
-  (setq ercn-notify-rules '((message . all))
-      ercn-suppress-rules nil)
+(setq ercn-notify-rules '((message . all))
+ercn-suppress-rules nil)
 
-  (defun do-notify (nickname message)
-      ;; notification code goes here
-  )
+(defun do-notify (nickname message)
+;; notification code goes here
+)
 
-  (add-hook 'ercn-notify-hook 'do-notify)
+(add-hook 'ercn-notify-hook 'do-notify)
 
 I wouldn’t recommend it, but it’s your setup.
 

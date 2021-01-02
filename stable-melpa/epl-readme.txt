@@ -5,7 +5,7 @@ package.el into a sane API.
 
 The following functions comprise the public interface of this library:
 
-Package directory selection
+; Package directory selection
 
 `epl-package-dir' gets the directory of packages.
 
@@ -13,7 +13,7 @@ Package directory selection
 
 `epl-change-package-dir' changes the directory of packages.
 
-Package system management
+; Package system management
 
 `epl-initialize' initializes the package system and activates all
 packages.
@@ -24,7 +24,7 @@ packages.
 
 `epl-add-archive' adds a new package archive.
 
-Package objects
+; Package objects
 
 Struct `epl-requirement' describes a requirement of a package with `name' and
 `version' slots.
@@ -53,7 +53,7 @@ plain lisp or tarball.
 `epl-package-from-descriptor-file' creates a package object for a package
 description (i.e. *-pkg.el) file.
 
-Package database access
+; Package database access
 
 `epl-package-installed-p' determines whether a package is installed, either
 built-in or explicitly installed.
@@ -73,7 +73,7 @@ by name.
 
 `epl-built-in-p' return true if package is built-in to Emacs.
 
-Package operations
+; Package operations
 
 `epl-install-file' installs a package file.
 

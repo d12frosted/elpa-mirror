@@ -1,3 +1,4 @@
+
 Add the following to your .emacs file:
 (require 'highlight-symbol)
 (global-set-key [(control f3)] 'highlight-symbol)

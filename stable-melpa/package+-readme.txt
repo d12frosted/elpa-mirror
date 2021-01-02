@@ -10,18 +10,18 @@ all the packages themselves under version control.
 
 Example:
 
-   (package-initialize)
-   (add-to-list 'package-archives
-     '("melpa" . "http://melpa.milkbox.net/packages/") t)
-   (unless (package-installed-p 'package+)
-     (package-install 'package+))
+(package-initialize)
+(add-to-list 'package-archives
+'("melpa" . "http://melpa.milkbox.net/packages/") t)
+(unless (package-installed-p 'package+)
+(package-install 'package+))
 
-   (package-manifest 'ag
-                     'expand-region
-                     'magit
-                     'melpa
-                     'package+
-                     'paredit
-                     'ruby-mode
-                     'ssh
-                     'window-number)
+(package-manifest 'ag
+'expand-region
+'magit
+'melpa
+'package+
+'paredit
+'ruby-mode
+'ssh
+'window-number)

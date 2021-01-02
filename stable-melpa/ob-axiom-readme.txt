@@ -8,7 +8,7 @@ details on using org-babel functionality in org files.
 
 To enable this extension put
 
- (require 'ob-axiom)
+(require 'ob-axiom)
 
 in your ~/.emacs initialisation file.
 
@@ -32,9 +32,9 @@ explained below.
 There are three extra header options (non-standard org-babel options)
 for ``#+BEGIN_SRC axiom'' source code blocks:-
 
-  :block-read <yes/no/auto>  (defaults to auto)
-  :show-prompt <yes/no>      (defaults to yes)
-  :show-input <yes/no>       (defaults to yes)
+:block-read <yes/no/auto>  (defaults to auto)
+:show-prompt <yes/no>      (defaults to yes)
+:show-input <yes/no>       (defaults to yes)
 
 The block-read option forces ob-axiom to send the entire code block
 to the running axiom process via a temporary file.  This allows

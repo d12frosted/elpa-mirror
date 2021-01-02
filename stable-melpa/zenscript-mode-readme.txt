@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; Major mode for ZenScript.
-
+Major mode for ZenScript.

@@ -1,3 +1,4 @@
+
 This package provides ways to quickly sort dired buffers in various ways.
 With `savehist-mode' enabled (strongly recommended), the last used sorting
 criteria are automatically used when sorting, even after restarting Emacs.  A
@@ -6,8 +7,8 @@ hydra is defined to conveniently change sorting criteria.
 For a quick setup, Add the following configuration to your "~/.emacs" or
 "~/.emacs.d/init.el":
 
-    (require 'dired-quick-sort)
-    (dired-quick-sort-setup)
+(require 'dired-quick-sort)
+(dired-quick-sort-setup)
 
 This will bind "S" in dired-mode to invoke the quick sort hydra and new Dired
 buffers are automatically sorted according to the setup in this package.  See

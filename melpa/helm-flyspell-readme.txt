@@ -1,3 +1,4 @@
+
 To use, just put your cursor on or after the misspelled word and
 run helm-flyspell-correct. You can of course bind it to a key as
 well by adding this to your `~/.emacs` file:

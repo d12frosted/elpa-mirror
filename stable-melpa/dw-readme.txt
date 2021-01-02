@@ -33,32 +33,32 @@ Basic usage:
 
 1) Choose a buffer to write your passphrase in (temporarily).
 2) Roll your dice, reading them in some consistent way (e.g. left to
-   right) every time, and typing them neatly separated in groups of
-   five.  You can separate them using any character matched by
-   ‘dw-separator-regexp’ (whitespace by default).  For example, if you
-   rolled ⚄⚂⚀⚅⚅, type "53166".  You will need five times as many die
-   rolls as you want words in your passphrase (six being a decent
-   amount for normal passphrases).
+right) every time, and typing them neatly separated in groups of
+five.  You can separate them using any character matched by
+‘dw-separator-regexp’ (whitespace by default).  For example, if you
+rolled ⚄⚂⚀⚅⚅, type "53166".  You will need five times as many die
+rolls as you want words in your passphrase (six being a decent
+amount for normal passphrases).
 3) Mark the region where you wrote down your sequence of rolls and
-   use the command ‘dw-passgen-region’.  You may need to choose a
-   wordlist depending on your setup.  See the documentation for
-   ‘dw-named-wordlists’ below for how to skip this step and set up
-   a default wordlist.
+use the command ‘dw-passgen-region’.  You may need to choose a
+wordlist depending on your setup.  See the documentation for
+‘dw-named-wordlists’ below for how to skip this step and set up
+a default wordlist.
 
 This package provides the following interactive commands:
 
 * dw-passgen-region
 
-   The all-in-one interactive passphrase generation command, and
-   most likely everything you'll ever need from this package.  Just
-   mark the region containing your written down die rolls and run
-   the command.
+The all-in-one interactive passphrase generation command, and
+most likely everything you'll ever need from this package.  Just
+mark the region containing your written down die rolls and run
+the command.
 
 * dw-set-wordlist
 
-    Manually set a wordlist without invoking ‘dw-passgen-region’,
-    and regardless of whether a wordlist has been set for the
-    current buffer before.
+Manually set a wordlist without invoking ‘dw-passgen-region’,
+and regardless of whether a wordlist has been set for the
+current buffer before.
 
 Final notes:
 The package itself is not at all required to create diceware

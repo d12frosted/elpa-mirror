@@ -7,5 +7,5 @@ annexed files green (and preserve the "l" in the file modes).  You have the
 following commands available in dired-mode on all marked files (or the
 current file):
 
-    @ a    Add file to Git annex
-    @ e    Edit an annexed file
+@ a    Add file to Git annex
+@ e    Edit an annexed file

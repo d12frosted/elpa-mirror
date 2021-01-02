@@ -4,17 +4,17 @@ el-init loads split configuration files with `require' instead of `load'.
 
 For example, there are configuration files like below,
 
-    ~/.emacs.d/inits
-    ├── ext/
-    │   └── init-helm.el
-    ├── lang/
-    │   ├── init-emacs-lisp.el
-    │   └── init-javascript.el
-    └── init-package.el
+~/.emacs.d/inits
+├── ext/
+│   └── init-helm.el
+├── lang/
+│   ├── init-emacs-lisp.el
+│   └── init-javascript.el
+└── init-package.el
 
 you load them with following code.
 
-    (require 'el-init)
+(require 'el-init)
 
-    (el-init-load "~/.emacs.d/inits"
-                  :subdirectories '("." "ext" "lang"))
+(el-init-load "~/.emacs.d/inits"
+:subdirectories '("." "ext" "lang"))

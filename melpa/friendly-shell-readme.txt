@@ -1,3 +1,4 @@
+
 Smarter and more user-friendly interactive shell.
 
 Provides `friendly-shell', a wrapper around `shell' with saner defaults

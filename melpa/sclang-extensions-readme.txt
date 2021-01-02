@@ -1,13 +1,9 @@
-;;; Commentary:
+Extensions for the SuperCollider Emacs mode. Each extension is implemented as
+a minor-mode; you can enable them individually, or enable all of them by
+activating `sclang-extensions-mode'.
 
-;; Extensions for the SuperCollider Emacs mode. Each extension is implemented as
-;; a minor-mode; you can enable them individually, or enable all of them by
-;; activating `sclang-extensions-mode'.
+; Installation:
 
-;;; Installation:
+Add this mode to your sclang hooks:
 
-;; Add this mode to your sclang hooks:
-;;
-;;   (add-hook 'sclang-mode-hook 'sclang-extensions-mode)
-;;
-
+(add-hook 'sclang-mode-hook 'sclang-extensions-mode)

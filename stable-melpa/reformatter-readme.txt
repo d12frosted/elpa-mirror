@@ -14,9 +14,9 @@ As an example, let's define a reformat command that applies the
 variable `dhall-command' which holds the string name or path of the
 dhall executable:
 
-    (reformatter-define dhall-format
-      :program dhall-command
-      :args '("format"))
+(reformatter-define dhall-format
+:program dhall-command
+:args '("format"))
 
 The `reformatter-define' macro expands to code which generates
 `dhall-format-buffer' and `dhall-format-region' interactive
@@ -33,8 +33,8 @@ and directory-local variables mechanisms.  For example, users of
 the above example might add the following to a project-specific
 .dir-locals.el file:
 
-    ((dhall-mode
-      (mode . dhall-format-on-save)))
+((dhall-mode
+(mode . dhall-format-on-save)))
 
 See the documentation for `reformatter-define', which provides a
 number of options for customising the generated code.
@@ -42,6 +42,6 @@ number of options for customising the generated code.
 Library authors might like to provide autoloads for the generated
 code, e.g.:
 
-    ;;;###autoload (autoload 'dhall-format-buffer "current-file" nil t)
-    ;;;###autoload (autoload 'dhall-format-region "current-file" nil t)
-    ;;;###autoload (autoload 'dhall-format-on-save-mode "current-file" nil t)
+;;;###autoload (autoload 'dhall-format-buffer "current-file" nil t)
+;;;###autoload (autoload 'dhall-format-region "current-file" nil t)
+;;;###autoload (autoload 'dhall-format-on-save-mode "current-file" nil t)

@@ -1,3 +1,4 @@
+
 Add support for composer/installers to ede-php-autoload.
 
 Allows ede-php-autoload to find classes even if composer/installers

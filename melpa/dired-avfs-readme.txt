@@ -2,7 +2,7 @@ Adds AVFS (http://avf.sourceforge.net/) support for seamless archive
 browsing.  This extension therefore depends on the presence of `avfsd'
 on your system.  In debian-derived distributions you can usually do
 
-    apt-get install avfs
+apt-get install avfs
 
 `avfs' is probably also available for Mac OS.  You're out of luck on
 Windows, sorry.

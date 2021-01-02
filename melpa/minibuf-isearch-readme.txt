@@ -1,3 +1,4 @@
+
 This package enables incremental-searching on minibuffer history.
 
 Put this code into your .emacs:

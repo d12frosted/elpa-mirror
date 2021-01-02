@@ -6,6 +6,6 @@ and auto-recognition of "in.*" and "*.lmp" files:
 
 (autoload 'lammps-mode "lammps-mode.el" "LAMMPS mode." t)
 (setq auto-mode-alist (append auto-mode-alist
-                              '(("in\\." . lammps-mode))
-                              '(("\\.lmp\\'" . lammps-mode))
-                              ))
+'(("in\\." . lammps-mode))
+'(("\\.lmp\\'" . lammps-mode))
+))

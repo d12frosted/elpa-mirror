@@ -29,27 +29,27 @@ Place this package in a directory in the load-path. To activate it,
 use *customize* or place the following lines in a suitable init
 file:
 
-   (require 'objc-font-lock-mode)
-   (objc-font-lock-global-mode 1)
+(require 'objc-font-lock-mode)
+(objc-font-lock-global-mode 1)
 
 Customization:
 
 Method calls are highlighted as follows:
 
-                            Controlling variable:           Default:
-    [expr func: expr]
-    ^               ^-- objc-font-lock-bracket-face       Warning face
-          ^^^^--------- objc-font-lock-function-name-face Function name face
-    ^^^^^^^^^^^^^^^^^-- objc-font-lock-background-face    Highlight
+Controlling variable:           Default:
+[expr func: expr]
+^               ^-- objc-font-lock-bracket-face       Warning face
+^^^^--------- objc-font-lock-function-name-face Function name face
+^^^^^^^^^^^^^^^^^-- objc-font-lock-background-face    Highlight
 
 To change the face used, change the face variable. By setting it to
 "nil", the corresponding part of the method call will not be
 highlighted. For example:
 
-    ;; Don't highlight brackets.
-    (setq objc-font-lock-bracket-face nil)
-    ;; Use `secondary-selection' (a builtin face) as background.
-    (setq objc-font-lock-background-face 'secondary-selection)
+;; Don't highlight brackets.
+(setq objc-font-lock-bracket-face nil)
+;; Use `secondary-selection' (a builtin face) as background.
+(setq objc-font-lock-background-face 'secondary-selection)
 
 Under the hood:
 
@@ -64,8 +64,8 @@ Implementation:
 
 An Objective-C method call is on one the following forms:
 
-    [expression func]
-    [expression func: expression func: expression....]
+[expression func]
+[expression func: expression func: expression....]
 
 This package use font-lock rules with a function performing the
 matcher (rather than an regexp). The matcher will find a bracket

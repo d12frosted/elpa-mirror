@@ -1,3 +1,3 @@
- Straight from the soda fountain.
+Straight from the soda fountain.
 
-Supports terminal and uses Autothemer from 0.3.0
+; Supports terminal and uses Autothemer from 0.3.0

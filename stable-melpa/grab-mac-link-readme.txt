@@ -15,7 +15,7 @@ The following link types are supported:
 
 To use, type M-x grab-mac-link or call `grab-mac-link' from Lisp
 
-  (grab-mac-link APP &optional LINK-TYPE)
+(grab-mac-link APP &optional LINK-TYPE)
 
 There is a DWIM version, M-x grab-mac-link-dwim, it chooses an application
 according to `grab-mac-link-dwim-favourite-app' and link type according to

@@ -1,10 +1,7 @@
-;;; Commentary:
+Yasnippets for Stan.  This includes snippets for blocks, control structures,
+and all functions.
 
-;; Yasnippets for Stan.  This includes snippets for blocks, control structures,
-;; and all functions.
-;;
 
-;; Usage:
-;;
-;;   (require 'stan-snippets)
+Usage:
 
+(require 'stan-snippets)

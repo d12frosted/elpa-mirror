@@ -6,4 +6,4 @@ Enable in all dired buffers by calling or customising `diredfl-global-mode'.
 
 Alternatively:
 
-    (add-hook 'dired-mode-hook 'diredfl-mode)
+(add-hook 'dired-mode-hook 'diredfl-mode)

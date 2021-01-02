@@ -11,23 +11,23 @@ through these links. The author believes that when searching for solutions it
 is important for users to read both questions and answers, so no "quick look"
 features such as code only view or code completion are provided.
 
-Dependencies
+; Dependencies
 `promise' and `request' are required.
 user must have `org-mode' 9.2 or later installed also.
 
-Commands
+; Commands
 howdoyou-query:                   prompt for query and do search
 howdoyou-next-link:               go to next link
 howdoyou-previous-link:           go to previous link
 howdoyou-go-back-to-first-link:   go back to first link
 howdoyou-reload-link:             reload link
 
-Customization
+; Customization
 howdoyou-use-curl:                default is true if curl is available
 howdoyou-number-of-answers:       maximal number of answers to show, default is 3
 howdoyou-switch-to-answer-buffer: switch to answer buffer if non nil, default is nil
 
-Changelog
+; Changelog
 2020-10-02:
 - update with change from google
 - impove test

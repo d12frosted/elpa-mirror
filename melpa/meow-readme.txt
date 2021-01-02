@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; Enable `meow-global-mode' to activate modal editing.
-
+Enable `meow-global-mode' to activate modal editing.

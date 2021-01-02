@@ -1,71 +1,72 @@
-  Manual Installation:
 
-   (add-to-list 'load-path "~/path/to/gitconfig.el/")
-   (require 'gitconfig)
+Manual Installation:
 
-  Interesting variables are:
+(add-to-list 'load-path "~/path/to/gitconfig.el/")
+(require 'gitconfig)
 
-      `gitconfig-git-command'
+Interesting variables are:
 
-           The shell command for <git>
+`gitconfig-git-command'
 
-      `gitconfig-buffer-name'
+The shell command for <git>
 
-           Name of the <git> output buffer.
+`gitconfig-buffer-name'
 
-  Interactive functions are:
+Name of the <git> output buffer.
 
-       M-x gitconfig-execute-command
+Interactive functions are:
 
-           Run <git config> with custom ARGUMENTS and display it in `gitconfig-buffer-name'
+M-x gitconfig-execute-command
 
-  Non-Interactive functions are:
+Run <git config> with custom ARGUMENTS and display it in `gitconfig-buffer-name'
 
-       `gitconfig-current-inside-git-repository-p'
+Non-Interactive functions are:
 
-           Return t if `default-directory' is a git repository
+`gitconfig-current-inside-git-repository-p'
 
-       `gitconfig-path-to-git-repository'
+Return t if `default-directory' is a git repository
 
-           Return the absolute path of the current git repository
+`gitconfig-path-to-git-repository'
 
-       `gitconfig-get-variables'
+Return the absolute path of the current git repository
 
-           Get all variables for the given LOCATION
-           and return it as a hash table
+`gitconfig-get-variables'
 
-       `gitconfig-set-variable'
+Get all variables for the given LOCATION
+and return it as a hash table
 
-           Set a specific LOCATION variable with a given NAME and VALUE
+`gitconfig-set-variable'
 
-       `gitconfig-get-variable'
+Set a specific LOCATION variable with a given NAME and VALUE
 
-           Return a specific LOCATION variable for the given NAME
+`gitconfig-get-variable'
 
-       `gitconfig-delete-variable'
+Return a specific LOCATION variable for the given NAME
 
-           Delete a specific LOCATION variable for the given NAME
+`gitconfig-delete-variable'
 
-       `gitconfig-get-local-variables'
+Delete a specific LOCATION variable for the given NAME
 
-           Return all <git config --local --list> variables as hash table
+`gitconfig-get-local-variables'
 
-       `gitconfig-get-global-variables'
+Return all <git config --local --list> variables as hash table
 
-           Return all <git config --global --list> variables as hash table
+`gitconfig-get-global-variables'
 
-       `gitconfig-get-system-variables'
+Return all <git config --global --list> variables as hash table
 
-           Return all <git config --system --list> variables as hash table
+`gitconfig-get-system-variables'
 
-       `gitconfig-get-local-variable'
+Return all <git config --system --list> variables as hash table
 
-           Return a specific <git config --local --list> variable by the given NAME
+`gitconfig-get-local-variable'
 
-       `gitconfig-get-global-variable'
+Return a specific <git config --local --list> variable by the given NAME
 
-           Return a specific <git config --global --list> variable by the given NAME
+`gitconfig-get-global-variable'
 
-       `gitconfig-get-system-variable'
+Return a specific <git config --global --list> variable by the given NAME
 
-           Return a specific <git config --system --list> variable by the given NAME
+`gitconfig-get-system-variable'
+
+Return a specific <git config --system --list> variable by the given NAME

@@ -1,16 +1,17 @@
- This package provides ability to split an org CLOCK entry into two records.
 
- Usage example:
+This package provides ability to split an org CLOCK entry into two records.
 
- If cursor is on
+Usage example:
 
- CLOCK: [2018-08-30 Thu 12:19]--[2018-08-30 Thu 16:05] =>  3:46
+If cursor is on
 
- Running
+CLOCK: [2018-08-30 Thu 12:19]--[2018-08-30 Thu 16:05] =>  3:46
 
- (org-clock-split \"1h2m\")
+Running
 
- Will produce
+(org-clock-split \"1h2m\")
 
- CLOCK: [2018-08-30 Thu 12:19]--[2018-08-30 Thu 13:21] =>  1:02
- CLOCK: [2018-08-30 Thu 13:21]--[2018-08-30 Thu 16:05] =>  2:44"
+Will produce
+
+CLOCK: [2018-08-30 Thu 12:19]--[2018-08-30 Thu 13:21] =>  1:02
+CLOCK: [2018-08-30 Thu 13:21]--[2018-08-30 Thu 16:05] =>  2:44"

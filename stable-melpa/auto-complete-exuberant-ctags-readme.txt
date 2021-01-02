@@ -1,6 +1,7 @@
+
 This package provide Exuberant ctags auto-complete.el source
 
-Installation:
+; Installation:
 
 Put anything-exuberant-ctags.el to your load-path.
 The load-path is usually ~/elisp/.

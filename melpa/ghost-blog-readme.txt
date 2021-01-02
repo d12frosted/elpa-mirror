@@ -4,7 +4,7 @@ reading for now.This package has the option of reading
 posts and opening them.Edit and create post is implemented
 but won't work until the Ghost team opens that part of the API
 
-LICENSE
+; LICENSE
 
 This file is free software; you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by

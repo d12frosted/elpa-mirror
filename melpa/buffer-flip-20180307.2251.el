@@ -3,7 +3,7 @@
 ;; Author: Russell Black (killdash9@github)
 ;; Keywords: convenience
 ;; Package-Version: 20180307.2251
-;; Package-Commit: e093360e05164c78255866c1ac8f966aa38ba514
+;; Package-Commit: b8ecbf0251a59c351a3e44607ee502af343da64b
 ;; URL: https://github.com/killdash9/buffer-flip.el
 ;; Created: 10th November 2015
 ;; Version: 2.0

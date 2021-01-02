@@ -14,5 +14,5 @@ In particular, you can enable keybindings for the above commands by
 binding your preferred prefix to `envrc-command-map' in
 `envrc-mode-map', e.g.
 
-   (with-eval-after-load 'envrc
-     (define-key envrc-mode-map (kbd "C-c e") 'envrc-command-map))
+(with-eval-after-load 'envrc
+(define-key envrc-mode-map (kbd "C-c e") 'envrc-command-map))

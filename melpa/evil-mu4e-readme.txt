@@ -32,6 +32,6 @@ Commands for header-mode and view-mode:
 | Go to url                       | gx        |             |
 | Fetch url                       | gX        |             |
 
- - * denotes only in header-mode
- - ** denotes Alternative only in header-mode
- - *** denotes Alternative only in view-mode
+- * denotes only in header-mode
+- ** denotes Alternative only in header-mode
+- *** denotes Alternative only in view-mode

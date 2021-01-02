@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; A Gnus backend for Reddit.
-
+A Gnus backend for Reddit.

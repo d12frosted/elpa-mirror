@@ -13,12 +13,12 @@ Type “inf”, then press 【Shift+Space】 `xah-math-input-change-to-symbol', 
 Other examples:
 
 Other examples:
- a → α
- p → π
- /= → ≠ or ne
- >= → ≥ or ge
- -> → → or rarr
- and → ∧
+a → α
+p → π
+/= → ≠ or ne
+>= → ≥ or ge
+-> → → or rarr
+and → ∧
 etc.
 
 M-x `xah-math-input-list-math-symbols' to see all abbrevs.

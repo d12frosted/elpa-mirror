@@ -1,3 +1,4 @@
+
 Integrate `vimish-fold' with `evil'.
 
 Provides bindings to create and delete folds via "zf" and "zd" respectively,

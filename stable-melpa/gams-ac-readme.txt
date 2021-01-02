@@ -6,12 +6,12 @@ can install GAMS mode and auto-complete mode from MELPA.
 Put this file into your load-path and add the following into your init.el
 file.
 
-  (require 'gams-ac)
-  (gams-ac-after-init-setup)
+(require 'gams-ac)
+(gams-ac-after-init-setup)
 
 
 If you want to add more keywords, for example, "computable", "general",
 "equilibrium", Add the following into your init.el.
 
- (setq gams-ac-source-user-keywords-list
-        '("computable" "general" "equilibrium"))
+(setq gams-ac-source-user-keywords-list
+'("computable" "general" "equilibrium"))

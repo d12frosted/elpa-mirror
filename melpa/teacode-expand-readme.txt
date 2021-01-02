@@ -5,4 +5,4 @@ in terms of functionality.
 To add a hotkey for this function, add this line to your config
 file:
 
-    (global-set-key (kbd "A-C-e") 'teacode-expand)
+(global-set-key (kbd "A-C-e") 'teacode-expand)

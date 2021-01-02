@@ -1,3 +1,4 @@
+
 `elpygen.el' uses the symbol name and it's arguments under point to
 insert a method or a function stub into a suitable place. It also
 makes sure the symbol is not already defined, and the requested

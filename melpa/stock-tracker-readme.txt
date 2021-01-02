@@ -1,3 +1,4 @@
+
 Tool for tracking stock price in Emacs
 
 Below are commands you can use:

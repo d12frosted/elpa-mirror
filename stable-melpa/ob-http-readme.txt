@@ -1,5 +1,2 @@
-;;; Commentary:
-;;
-;; http request in org-mode babel
-;;
 
+http request in org-mode babel

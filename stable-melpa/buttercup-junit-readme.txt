@@ -6,11 +6,11 @@ producing normal buttercup output on stdout.
 buttercup-junit-run-discover can be configured with the following
 command line options:
 
- --xmlfile FILE    Write JUnit report to FILE
- --junit-stdout    Write JUnit report to stdout.
-                   The report file will also be written to stdout,
-                   after the normal buttercup report.
- --outer-suite     Add a wrapping testsuite around the outer suites.
+--xmlfile FILE    Write JUnit report to FILE
+--junit-stdout    Write JUnit report to stdout.
+The report file will also be written to stdout,
+after the normal buttercup report.
+--outer-suite     Add a wrapping testsuite around the outer suites.
 
 buttercup tests are grouped into descriptions, and descriptions can
 be contained in other descriptions creating a tree structure where

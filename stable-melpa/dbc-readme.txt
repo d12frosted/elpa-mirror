@@ -21,14 +21,14 @@ Open Lua, Python, R, Julia and shell inferior buffers in new frames, enable
 `dbc-verbose` flag:
 
 (use-package dbc
-  :custom
-  (dbc-verbose t)
-  :config
-  (dbc-add-ruleset "pop-up-frame" dbc-right-side-action)
-  (dbc-add-rule "pop-up-frame" "shell" :oldmajor "sh-mode" :newname "\\*shell\\*")
-  (dbc-add-rule "pop-up-frame" "python" :newmajor "inferior-python-mode")
-  (dbc-add-rule "pop-up-frame" "ess" :newmajor "inferior-ess-.+-mode")
-  (dbc-add-rule "pop-up-frame" "lua repl" :newmajor "comint-mode" :oldmajor "lua-mode" :newname "\\*lua\\*"))
+:custom
+(dbc-verbose t)
+:config
+(dbc-add-ruleset "pop-up-frame" dbc-right-side-action)
+(dbc-add-rule "pop-up-frame" "shell" :oldmajor "sh-mode" :newname "\\*shell\\*")
+(dbc-add-rule "pop-up-frame" "python" :newmajor "inferior-python-mode")
+(dbc-add-rule "pop-up-frame" "ess" :newmajor "inferior-ess-.+-mode")
+(dbc-add-rule "pop-up-frame" "lua repl" :newmajor "comint-mode" :oldmajor "lua-mode" :newname "\\*lua\\*"))
 
 Display help in right side window:
 

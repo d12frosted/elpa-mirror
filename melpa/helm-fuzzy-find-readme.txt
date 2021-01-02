@@ -1,3 +1,4 @@
+
 `helm-fuzzy-find.el' is a Helm extension for the `fuzzy-find' command
 line program (https://github.com/silentbicycle/ff), you can use it to
 search files under a directory using Fuzzy Search.
@@ -15,7 +16,7 @@ Installation
 To install, make sure this file is saved in a directory in your `load-path',
 and add the line:
 
-  (require 'helm-fuzzy-find)
+(require 'helm-fuzzy-find)
 
 to your Emacs initialization file.
 
@@ -39,4 +40,4 @@ character, refer to its manual page for more info.
 
 To install `fuzzy-find' on Mac OS X via MacPorts:
 
-  $ sudo port install fuzzy-find
+$ sudo port install fuzzy-find

@@ -6,11 +6,11 @@ for smaller libraries.
 
 Typical usage of the library consists of two separate stages:
 
-    1) Package maintainer/developer creates a map file, which is
-       then distributed along with its `*.el' etc. files.
+1) Package maintainer/developer creates a map file, which is
+then distributed along with its `*.el' etc. files.
 
-    2) For end-user, Elisp code retrieves values from the
-       pre-created map file.
+2) For end-user, Elisp code retrieves values from the
+pre-created map file.
 
 Creating a map file doesn't require any external tools.  See
 function `extmap-from-alist' for details.  If you use Emacs 25 or
@@ -22,9 +22,9 @@ to open it and `extmap-get' to retrieve value associated with given
 key.  See function documentation for details.  Other functions that
 work with a prepared file:
 
-    - extmap-contains-key
-    - extmap-value-loaded
-    - extmap-keys
-    - extmap-mapc
-    - extmap-mapcar
-    - extmap-statistics
+- extmap-contains-key
+- extmap-value-loaded
+- extmap-keys
+- extmap-mapc
+- extmap-mapcar
+- extmap-statistics

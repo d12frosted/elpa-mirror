@@ -5,11 +5,11 @@ Any block that has :tangle <fname> will compare the block with
 that external <fname>.  When a diff is detected, 1 of 5 actions
 can occur:
 
-  1. External - <fname> contents will override the block contents
-  2. Internal - block will keep the block contents
-  3. Prompt - The user will be prompted to pull external changes
-  4. Diff - A diff of the <fname> and block contents will be produced
-  5. Custom - A user-defined function will be called instead.
+1. External - <fname> contents will override the block contents
+2. Internal - block will keep the block contents
+3. Prompt - The user will be prompted to pull external changes
+4. Diff - A diff of the <fname> and block contents will be produced
+5. Custom - A user-defined function will be called instead.
 
 These 5 options can be set as the default action by changing the
 `org-tanglesync-default-diff-action` custom parameter.  Otherwise

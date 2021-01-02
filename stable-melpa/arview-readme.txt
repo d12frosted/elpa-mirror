@@ -27,4 +27,4 @@ for the archive program.
 To use arview, make sure that this file is in load-path and insert
 in your .emacs:
 
-  (require 'arview)
+(require 'arview)

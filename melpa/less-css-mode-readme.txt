@@ -1,3 +1,4 @@
+
 This mode provides syntax highlighting for LESS CSS files, plus
 optional support for compilation of .less files to .css files at
 the time they are saved: use `less-css-compile-at-save' to enable
@@ -37,7 +38,7 @@ If you don't need CSS output but would like to be warned of any
 syntax errors in your .less source, consider using `flymake-less':
 https://github.com/purcell/flymake-less
 
-Credits
+; Credits
 
 The original code for this mode was, in large part, written using
 Anton Johansson's scss-mode as a template -- thanks Anton!

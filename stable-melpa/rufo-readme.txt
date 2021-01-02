@@ -5,4 +5,4 @@ when it is saved.
 To use it, require it, make sure `rufo' is in your path and add it to
 your favorite ruby mode:
 
-   (add-hook 'ruby-mode-hook #'rufo-minor-mode)
+(add-hook 'ruby-mode-hook #'rufo-minor-mode)

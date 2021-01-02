@@ -1,5 +1,1 @@
-;;; Commentary:
-
-;; realgud support for the Ruby pry debugger
-
-
+realgud support for the Ruby pry debugger

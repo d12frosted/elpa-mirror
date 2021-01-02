@@ -1,3 +1,4 @@
+
 inf-crystal provides a REPL buffer connected
 to a [icr](https://github.com/crystal-community/icr) subprocess.
 It's based on ideas from the popular `inferior-lisp` package.
@@ -33,8 +34,8 @@ If you're installing manually, you'll need to:
 * Add the following lines to your .emacs file:
 
 ```elisp
-   (autoload 'inf-crystal "inf-crystal" "Run an inferior Crystal process" t)
-   (add-hook 'crystal-mode-hook 'inf-crystal-minor-mode)
+(autoload 'inf-crystal "inf-crystal" "Run an inferior Crystal process" t)
+(add-hook 'crystal-mode-hook 'inf-crystal-minor-mode)
 ```
 
 ### Usage

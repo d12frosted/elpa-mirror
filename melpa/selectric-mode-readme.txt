@@ -1,5 +1,2 @@
-;;; Commentary:
-
-;; This minor mode plays the sound of an IBM Selectric typewriter as
-;; you type.
-
+This minor mode plays the sound of an IBM Selectric typewriter as
+you type.

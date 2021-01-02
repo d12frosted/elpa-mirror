@@ -1,5 +1,2 @@
-;;; Commentary:
-
-;; `sqlite3-api' is a dynamic module for GNU Emacs 25+ that provides
-;; direct access to the core SQLite3 C API from Emacs Lisp.
-
+`sqlite3-api' is a dynamic module for GNU Emacs 25+ that provides
+direct access to the core SQLite3 C API from Emacs Lisp.

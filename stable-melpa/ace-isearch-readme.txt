@@ -1,3 +1,4 @@
+
 `ace-isearch.el' provides a minor mode that combines `isearch',
 `ace-jump-mode', `avy', `helm-swoop' and `swiper'.
 
@@ -18,9 +19,9 @@ the effect of doing regular `isearch' for L=1 and L=3 to 6, with the ability
 to switch to 2-character `avy' or `ace-jump-mode' (not yet supported) once
 `ace-isearch-jump-delay' has passed. Much easier to do than to write about :-)
 
-Installation:
+; Installation:
 
 To use this package, add following code to your init file.
 
-  (require 'ace-isearch)
-  (global-ace-isearch-mode +1)
+(require 'ace-isearch)
+(global-ace-isearch-mode +1)

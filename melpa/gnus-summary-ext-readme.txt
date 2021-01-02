@@ -1,4 +1,3 @@
-Commentary:
 
 Bitcoin donations gratefully accepted: 16mhw12vvtzCwQyvvLAqCSBvf8i41CfKhK
 
@@ -15,3 +14,4 @@ To add new keybindings for these new filter commands add `gnus-summary-ext-hook'
 
 See the documentation of the individual commands & functions for more
 details.
+;;

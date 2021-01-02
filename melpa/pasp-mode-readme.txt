@@ -6,7 +6,7 @@ problems by impressive search methods.
 The modeling language follows a declarative approach with a minimal
 amount of fixed syntax constructs.
 
-Install
+; Install
 
 Open the file with Emacs and run "M-x eval-buffer"
 Open an ASP file and run "M-x pasp-mode"
@@ -19,14 +19,14 @@ in your init file.
 See "M-x customize-mode pasp-mode" for information
 about mode configuration.
 
-Features
+; Features
 
 - Syntax highlighting (predicates can be toggled)
 - Commenting of blocks and standard
 - Run ASP program from within Emacs and get the compilation output
 - Auto-load mode when a *.lp file is opened
 
-Todo
+; Todo
 
 - Smart indentation based on nesting depth
 - Refactoring of predicates/variables (complete buffer and #program parts)
@@ -34,7 +34,7 @@ Todo
 - Smart rearrange of compilation output (predicates separated, table...)
 - yas-snippet for rules; constraints; soft constraints; generation?
 
-Keybindings
+; Keybindings
 
 "C-c C-e" - Call clingo with current buffer and an instance file
 "C-c C-b" - Call clingo with current buffer

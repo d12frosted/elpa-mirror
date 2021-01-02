@@ -1,5 +1,2 @@
-;;; Commentary:
-;;
-;; org-babel functions for coffee-script evaluation
-;;
 
+org-babel functions for coffee-script evaluation

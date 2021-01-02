@@ -8,8 +8,8 @@ improves Helm's "scoring" so that the results are shown ordered from
 
 Usage:
 
-  (require 'helm-fuzzier)
-  (helm-fuzzier-mode 1)
+(require 'helm-fuzzier)
+(helm-fuzzier-mode 1)
 
 
 The queries you currently use should continue to work reliably.

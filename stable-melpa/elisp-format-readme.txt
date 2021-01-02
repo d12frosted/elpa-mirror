@@ -1,24 +1,25 @@
+
 This package is format elisp code.
 This package is format by itself, so you can view format effect.
 
 Below are commands you can use:
 
 `elisp-format-region'
-     Format region or defun.
+Format region or defun.
 `elisp-format-buffer'
-     Format buffer.
+Format buffer.
 `elisp-format-file'
-     Format file.
+Format file.
 `elisp-format-file-batch'
-     Format file with `batch'.
+Format file with `batch'.
 `elisp-format-directory'
-     Format recursive elisp files in directory.
+Format recursive elisp files in directory.
 `elisp-format-directory-batch'
-     Format recursive elisp files in directory with `batch'.
+Format recursive elisp files in directory with `batch'.
 `elisp-format-dired-mark-files'
-     Format dired marked files.
+Format dired marked files.
 `elisp-format-library'
-     Format library.
+Format library.
 
 Tips:
 
@@ -55,7 +56,7 @@ I can't ensure this package can perfect work with all situations.
 So please let me know if you have suggestion or bug.
 
 
-Installation:
+; Installation:
 
 Put elisp-format.el to your load-path.
 The load-path is usually ~/elisp/.

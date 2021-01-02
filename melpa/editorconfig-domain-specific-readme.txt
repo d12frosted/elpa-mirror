@@ -1,3 +1,4 @@
+
 An EditorConfig hook that applies the unofficial indent_brace_style
 setting for C-like programming languages.
 

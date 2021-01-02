@@ -1,3 +1,4 @@
+
 Virtual Auto Fill mode displays unfilled text in a readable way.  It wraps
 the text as if you had inserted line breaks (e.g. using `fill-paragraph' or
 `auto-fill-mode') without actually modifying the underlying buffer.  It also

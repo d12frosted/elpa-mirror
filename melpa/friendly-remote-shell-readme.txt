@@ -1,3 +1,4 @@
+
 Smarter and more user-friendly interactive remote shell.
 
 Provides `friendly-remote-shell', a command that eases the creation of

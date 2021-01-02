@@ -1,3 +1,4 @@
+
 This program supports underlining with a certain character.
 
 When point is in an empty line then fill the line with a character

@@ -1,3 +1,4 @@
+
 Transform LaTeX encoded non-ASCII characters to and from their
 visible (utf-8) representations when visiting a file and preserve
 their original encoding when saving the buffer.

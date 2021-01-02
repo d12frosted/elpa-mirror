@@ -1,14 +1,11 @@
-;;; Commentary:
+Provides an Opensource API client.
 
-;; Provides an Opensource API client.
+; Installation:
 
-;;; Installation:
+opensource is available on the two major community maintained repositories -
+Melpa stable (https://stable.melpa.org), and Melpa (https://melpa.org)
 
-;; opensource is available on the two major community maintained repositories -                                                                                                     
-;; Melpa stable (https://stable.melpa.org), and Melpa (https://melpa.org)
+(add-to-list 'package-archives
+'("melpa" . "https://melpa.org/packages/") t)
 
-;; (add-to-list 'package-archives
-;;              '("melpa" . "https://melpa.org/packages/") t)
-;;
-;; M-x package-install opensource
-
+M-x package-install opensource

@@ -15,14 +15,14 @@ For more information about this Flycheck extension:
 https://github.com/Simplify/flycheck-css-colorguard
 
 
-Setup
+;; Setup
 
 Install CSS Colorguard:
 npm install -g colorguard
 
 Add following to your Emacs init.el file:
 (eval-after-load 'flycheck
-  '(progn
-     (require 'flycheck-css-colorguard)
-     (flycheck-add-next-checker 'css-csslint
-                                'css-colorguard 'append)))
+'(progn
+(require 'flycheck-css-colorguard)
+(flycheck-add-next-checker 'css-csslint
+'css-colorguard 'append)))

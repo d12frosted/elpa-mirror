@@ -8,3 +8,4 @@ http://trac-hacks.org/wiki/EmacsWikiEditScript Future versions will
 include better English, yet more controls, and better
 customization. Seriously though, without Shun-ichi Goto's work,
 none of this magic would exist.
+

@@ -1,5 +1,2 @@
-;;; Commentary:
-;;
-;; Utilities for better Evil support for Powerline and a few extra themes.
-;;
 
+Utilities for better Evil support for Powerline and a few extra themes.

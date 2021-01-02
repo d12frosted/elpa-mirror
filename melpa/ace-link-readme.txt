@@ -1,3 +1,4 @@
+
 This package offers an alternative to tabbing through links in
 buffers, for instance, in an Info buffer.  `avy' is used to turn
 opening a link from an O(N) operation into an O(1).

@@ -1,3 +1,4 @@
+
 Provides navigation utilities, syntax highlighting and indentation for
 gitolite configuration files (gitolite.conf)
 
@@ -27,13 +28,13 @@ The interesting things you can do are:
 For the context sensitive help it can detect different positions, and will
 offer help on that topic:
 
-   - repo line
-   - include line
-   - permissions (R/RW/RWC/...)
-   - refexes (branches, ...)
-   - user or group permissions
-   - groups
-   - anything else (offer generic gitolite.conf help)
+- repo line
+- include line
+- permissions (R/RW/RWC/...)
+- refexes (branches, ...)
+- user or group permissions
+- groups
+- anything else (offer generic gitolite.conf help)
 
 The help uses the main gitolite web documentation, linking directly into it
 with a browser.

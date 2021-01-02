@@ -1,3 +1,4 @@
+
 **Mode for editing conkeror javascript files.**
 -----------------------------------------------
 
@@ -21,8 +22,8 @@ If you install from Melpa just skip to the activation instructions below.
 
 If you install manually, make sure it's loaded
 
-    (add-to-list 'load-path "/PATH/TO/CONKEROR-MINOR-MODE.EL/")
-    (autoload 'conkeror-minor-mode "conkeror-minor-mode")
+(add-to-list 'load-path "/PATH/TO/CONKEROR-MINOR-MODE.EL/")
+(autoload 'conkeror-minor-mode "conkeror-minor-mode")
 
 then follow activation instructions below.
 
@@ -32,17 +33,17 @@ Activation
 It is up to you to define when `conkeror-minor-mode' should be
 activated. If you want it on every javascript file, just do
 
-    (add-hook 'js-mode-hook 'conkeror-minor-mode)
+(add-hook 'js-mode-hook 'conkeror-minor-mode)
 
 If you want it only on some files, you can have it activate only on
 your `.conkerorrc' file:
 
-    (add-hook 'js-mode-hook (lambda ()
-                              (when (string= ".conkerorrc" (buffer-name))
-                                (conkeror-minor-mode 1))))
+(add-hook 'js-mode-hook (lambda ()
+(when (string= ".conkerorrc" (buffer-name))
+(conkeror-minor-mode 1))))
 
 or, alternatively, only on files with "conkeror" somewhere in the path:
 
-    (add-hook 'js-mode-hook (lambda ()
-                              (when (string-match "conkeror" (buffer-file-name))
-                                (conkeror-minor-mode 1))))
+(add-hook 'js-mode-hook (lambda ()
+(when (string-match "conkeror" (buffer-file-name))
+(conkeror-minor-mode 1))))

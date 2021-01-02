@@ -1,3 +1,4 @@
+
 ‘gitlab-ci-mode’ is a major mode for editing GitLab CI files.  It
 provides syntax highlighting and completion for keywords and special
 variables.  An interface to GitLab’s CI file linter is also provided

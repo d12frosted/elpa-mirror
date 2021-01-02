@@ -1,3 +1,4 @@
+
 Org mode is great.  It is powerful, versatile and customizable.  Unfortunately,  I
 always found the task priorities functionality a bit underwhelming, not in
 terms of usability, but more in the visual department.
@@ -15,11 +16,11 @@ priority importance, or an alist that maps each priority character to a custom s
 or
 
 (setq org-fancy-priorities-list '((?A . "❗")
-                                 (?B . "⬆")
-                                 (?C . "⬇")
-                                 (?D . "☕")
-                                 (?1 . "⚡")
-                                 (?2 . "⮬")
-                                 (?3 . "⮮")
-                                 (?4 . "☕")
-                                 (?I . "Important")))
+(?B . "⬆")
+(?C . "⬇")
+(?D . "☕")
+(?1 . "⚡")
+(?2 . "⮬")
+(?3 . "⮮")
+(?4 . "☕")
+(?I . "Important")))

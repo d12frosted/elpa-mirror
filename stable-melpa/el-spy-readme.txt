@@ -8,4 +8,4 @@ Add to your ~/.emacs
 
 (require 'el-spy)
 
-Code: section
+; Code: section

@@ -12,7 +12,7 @@ completions. readline-complete.el gives you a process filter that
 tries to parse readline completion menus and give Emacs a list of
 strings that are valid for completion in the current context.
 
-Installation:
+; Installation:
 
 There is no one "right" way to install this package, because it
 does not provide any user level commands. I find that it works

@@ -1,3 +1,4 @@
+
 This is a generalization of an idea by Mickey Petersen of
 masteringemacs fame:
 
@@ -14,9 +15,9 @@ major modes and configured and the started repl-buffers.
 There are no repl/mode combinations preconfigured, put something like
 the following in your emacs setup for php and elisp repl:
 
-    (setq rtog/fullscreen t)
-    (require 'repl-toggle)
-    (setq rtog/mode-repl-alist '((php-mode . php-boris) (emacs-lisp-mode . ielm)))
+(setq rtog/fullscreen t)
+(require 'repl-toggle)
+(setq rtog/mode-repl-alist '((php-mode . php-boris) (emacs-lisp-mode . ielm)))
 
 This defines a global minor mode, indicated with 'rt' in the modeline, that
 grabs "C-c C-z" as repl toggling key-binding.
@@ -32,7 +33,7 @@ needs. The default is ~switch-to-buffer~; to move focus to another
 frame that already shows the other buffer, instead of switching the
 current frame to it, use ~pop-to-buffer~.
 
-    (setq rtog/goto-buffer-fun 'pop-to-buffer)
+(setq rtog/goto-buffer-fun 'pop-to-buffer)
 
 ** Configurations known to work
 
@@ -48,7 +49,7 @@ If the mode you want to use doesn't jump to an existing repl-buffer,
 but always starts a new one, you can use `rtog/switch-to-shell-buffer'
 in your configuration to get that behaviour, e.g. for `octave-mode':
 
-    (rtog/add-repl 'octave-mode (rtog/switch-to-shell-buffer 'inferior-octave-buffer 'inferior-octave))
+(rtog/add-repl 'octave-mode (rtog/switch-to-shell-buffer 'inferior-octave-buffer 'inferior-octave))
 
 ** Pass code at point to the REPL
 
@@ -65,7 +66,7 @@ If you set =rtog/fullscreen= to true, the repl-commands will be
 executed fullscreen, i.e. as single frame, restoring the window-layout
 on switching back to the originating buffer.
 
-    (setq rtog/fullscreen t)~
+(setq rtog/fullscreen t)~
 
 ** Fallback REPL function
 

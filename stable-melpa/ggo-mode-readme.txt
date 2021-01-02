@@ -1,3 +1,4 @@
+
 A major mode for editing gengetopt files.
 
 Modify `ggo-skeleton' to suit your format.

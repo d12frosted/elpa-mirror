@@ -3,7 +3,7 @@ selecting an appropriate character that looks upside down.
 E.g. hello world -> p1ɹoʍ o11ǝɥ.
 
 Copy the file in your load path and load it with
-  (require 'fliptext).
+(require 'fliptext).
 Activate it with C-u C-\ fliptext RET.
 Deactivate with C-\.
 

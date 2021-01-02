@@ -1,3 +1,4 @@
+
 Mag-menu provides a menu system intended to be used as an emacs
 front-end to command line programs with lots of options (e.g. git or
 ack). It presents the options in a visually simple layout in a window

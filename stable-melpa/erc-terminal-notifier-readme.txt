@@ -1,7 +1,7 @@
 OSX notifications via the terminal-notifier gem for Emacs ERC.
 
 
-Install
+; Install
 
 Install terminal notifier:
 

@@ -1,3 +1,4 @@
+
 Pony syntax checking support for Flycheck.  Runs "ponyc -rfinal" in the
 current working directory.
 

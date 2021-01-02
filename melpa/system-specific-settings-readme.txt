@@ -1,3 +1,4 @@
+
 This package defines some macros that you can use in your Emacs
 configuration to evaluate certain settings only on specific
 operating systems or specific hosts.
@@ -6,7 +7,7 @@ All the relevant macros are autoloaded, so if you install this
 through package.el, you can just use them in your initialization
 file.
 
-
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 This program is free software: you can redistribute it and/or modify
 it under the terms of the GNU General Public License as published by
@@ -20,3 +21,5 @@ General Public License for more details.
 
 You should have received a copy of the GNU General Public License
 along with GNU Emacs.  If not, see <http://www.gnu.org/licenses/>.
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

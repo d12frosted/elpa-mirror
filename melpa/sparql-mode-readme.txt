@@ -1,4 +1,1 @@
-;;; Commentary:
-
-;; Mode for editing and interactively evaluating SPARQL queries.
-
+Mode for editing and interactively evaluating SPARQL queries.

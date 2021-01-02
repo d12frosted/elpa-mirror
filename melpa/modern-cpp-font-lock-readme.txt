@@ -8,13 +8,13 @@ and indentation.
 
 Melpa: [M-x] package-install [RET] modern-cpp-font-lock [RET]
 In your init Emacs file add:
-    (add-hook 'c++-mode-hook #'modern-c++-font-lock-mode)
+(add-hook 'c++-mode-hook #'modern-c++-font-lock-mode)
 or:
-    (modern-c++-font-lock-global-mode t)
+(modern-c++-font-lock-global-mode t)
 
 For the current buffer, the minor-mode can be turned on/off via the
 command:
-    [M-x] modern-c++-font-lock-mode [RET]
+[M-x] modern-c++-font-lock-mode [RET]
 
 More documentation:
 https://github.com/ludwigpacifici/modern-cpp-font-lock/blob/master/README.md

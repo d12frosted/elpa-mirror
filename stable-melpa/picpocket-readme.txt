@@ -66,17 +66,17 @@ Finally creates also one command to copy pictures to a backup
 directory in the user's home directory.
 
 (defvar my-picpocket-alist
-  '((?1 tag "bad")
-    (?2 tag "sigh")
-    (?3 tag "good")
-    (?4 tag "great")
-    (?5 tag "awesome")
-    (?F move "fantasy")
-    (?S move "scifi")
-    (?P move "steampunk")
-    (?H move "horror")
-    (?U move "urban-fantasy")
-    (?B copy "~/backup")))
+'((?1 tag "bad")
+(?2 tag "sigh")
+(?3 tag "good")
+(?4 tag "great")
+(?5 tag "awesome")
+(?F move "fantasy")
+(?S move "scifi")
+(?P move "steampunk")
+(?H move "horror")
+(?U move "urban-fantasy")
+(?B copy "~/backup")))
 
 (setq picpocket-keystroke-alist 'my-picpocket-alist)
 

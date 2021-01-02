@@ -4,7 +4,7 @@ buffer, all of the tests that you have defined in the current buffer,
 or all of the tests that you have defined in the current buffers's
 parent directory.
 
-Installation
+; Installation
 
 From MELPA:
 
@@ -21,16 +21,16 @@ Add it to your `.emacs`:
 (add-to-list 'load-path (expand-file-name "~/sandbox/py-test.el"))
 (require 'py-test)
 
-Usage
+; Usage
 
 Define a project.
 
 (py-test-define-project
- :name "My Project"
- :python-command "python"
- :base-directory (expand-file-name "~/sandbox/my-project-home/")
- :test-runner (expand-file-name "~/sandbox/my-project-home/tests/runner.py")
- :working-directory (expand-file-name "~/sandbox/my-project-home/tests/"))
+:name "My Project"
+:python-command "python"
+:base-directory (expand-file-name "~/sandbox/my-project-home/")
+:test-runner (expand-file-name "~/sandbox/my-project-home/tests/runner.py")
+:working-directory (expand-file-name "~/sandbox/my-project-home/tests/"))
 
 Open a file belonging to that project:
 
@@ -48,20 +48,20 @@ Jump to a single test function, method or class and run just that:
 
 M-x py-test-run-test-at-point RET
 
-Extras
+; Extras
 
 `py-test' is also configurable through the following variables (use
 `describe-variable' for more info):
 
-  * py-test-*mode-line-face-shenanigans-on*
-  * py-test-*mode-line-face-shenanigans-timer*
-  * py-test-*default-buffer-name*
-  * py-test-*default-test-runner*
-  * py-test-*test-path-separator*
+* py-test-*mode-line-face-shenanigans-on*
+* py-test-*mode-line-face-shenanigans-timer*
+* py-test-*default-buffer-name*
+* py-test-*default-test-runner*
+* py-test-*test-path-separator*
 
 In addition, `py-test' defines the following faces:
 
-  * py-test-*mode-line-green-face*
-  * py-test-*mode-line-inactive-green-face*
-  * py-test-*mode-line-red-face*
-  * py-test-*mode-line-inactive-red-face*
+* py-test-*mode-line-green-face*
+* py-test-*mode-line-inactive-green-face*
+* py-test-*mode-line-red-face*
+* py-test-*mode-line-inactive-red-face*

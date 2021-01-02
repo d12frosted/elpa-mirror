@@ -11,6 +11,6 @@ Finally, by default quoted lines are not checked however this can be
 changed by setting `message-attachment-reminder-exclude-quoted' to
 `nil'.
 
-Setup
+;; Setup
 
 (require 'message-attachment-reminder)

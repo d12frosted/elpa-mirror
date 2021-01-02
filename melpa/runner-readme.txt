@@ -1,3 +1,4 @@
+
 This library links a set of shell commands to file or directory
 names. These commands can then be used in dired mode using
 `dired-do-shell-command' (or pressing "!"). Since this library

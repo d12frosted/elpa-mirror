@@ -1,4 +1,3 @@
-Commentary:
 
 Bitcoin donations gratefully accepted: 1Ph9srQBspJCDS9CnGUyWJPTrU4ydX9Aa3
 
@@ -13,7 +12,7 @@ and specify dependencies between code blocks.
 Using tag matches you can also reuse the same org file for different emacs setups by specifying different
 tag matches for each setup, or load parts of the file on demand.
 
-Commands/Usage
+; Commands/Usage
 
 The main command is `org-dotemacs-load-default' which loads your default org-dotemacs file (~/.dotemacs.org)
 and prompts for a tag match to specify which code blocks to load.
@@ -34,7 +33,7 @@ After loading you can inspect the *Messages* buffer to see which blocks were suc
 If you call the `org-dotemacs-jump-to-block' command on one of the org-dotemacs lines in this buffer it will take you to
 the block mentioned on that line, or you can prompt for one by using a prefix with this command.
 
-Structure of the org file
+; Structure of the org file
 
 The elisp code should be contained in emacs-lisp code blocks, e.g:
 
@@ -59,7 +58,7 @@ I prefer to keep all my code block subtrees under a single header, and use other
 defining buffer-wide properties, etc. This way I can get a nice column view of the code blocks
 (see the columns view section below).
 
- Block dependencies
+;  Block dependencies
 
 You can enforce dependencies between code blocks by defining NAME & DEPENDS properties for the subtrees containing the
 blocks (preferred). The NAME property should contain the name of the block, and the DEPENDS property should contain a space
@@ -69,7 +68,7 @@ If `org-dotemacs-dependency-inheritance' is non-nil then block dependencies will
 
 A block will not be loaded until all of its dependencies have been loaded.
 
- Tags and TODO states
+;  Tags and TODO states
 
 You can tag your subtrees and use tag matches to specify which blocks to evaluate in calls to `org-dotemacs-load-file'
 and `org-dotemacs-load-default'. See "Matching tags and properties" in the org manual for more information on tag matches.
@@ -83,7 +82,7 @@ like this somewhere in your org file (see "Per file keywords" in the org manual)
 
 #+TODO: BROKEN CHECK TODO
 
- Columns View
+;  Columns View
 
 If you use properties for defining names and dependencies then you can get a nice column view of your code subtrees
 with the following columns view specification:
@@ -94,7 +93,7 @@ This can be placed anywhere in your dotemacs org file.
 Then if you press C-c C-x C-c on the toplevel header for your code blocks you'll get a column view that allows you
 to easily change the names, dependencies, tags and todo states.
 
- Error handling
+;  Error handling
 
 Error handling can be controlled by customizing `org-dotemacs-error-handling' or by setting the error-handling
 command line option when starting emacs.
@@ -102,19 +101,19 @@ By default code blocks with unmet dependencies or errors are skipped over as soo
 but you can also specify that org-dotemacs should halt or try to reload the blocks.
 In the latter case each time a new block is successfully loaded, any unsuccessful blocks will be retried.
 
- Command line options
+;  Command line options
 
 org-dotemacs.el will look for two command line options when loaded: error-handling (for setting the value of
 `org-dotemacs-error-handling') and tag-match (for specifying which headers to load).
 For example if you enter the following at the command line:
 
-       emacs --error-handling retry --tag-match "settings-mouse"
+emacs --error-handling retry --tag-match "settings-mouse"
 
 Then only code blocks tagged "settings" but not "mouse" will be loaded, and org-dotemacs will try to reload any
 blocks that have errors. If no tag-match is specified on the command line then `org-dotemacs-conditional-tags'
 will be used to determine which blocks can be loaded by default.
 
- Installation
+;  Installation
 
 Put org-dotemacs.el in a directory in your load-path, e.g. ~/.emacs.d/
 You can add a directory to your load-path with the following line in ~/.emacs

@@ -1,4 +1,5 @@
-  Drop the theme in a folder that is on `custom-theme-load-path'
+
+Drop the theme in a folder that is on `custom-theme-load-path'
 and enjoy
 
 or
@@ -10,7 +11,7 @@ Don't forget that the theme requires Emacs 24+.
 
 The more information on the project page at https://github.com/donderom/jazz-theme
 
-Credits
+; Credits
 
 Jani Nurminen (zenburn theme for vim)
 Bozhidar Batsov (zenburn theme port for Emacs),

@@ -5,13 +5,13 @@ Commands
 - `org-ssh-export-as-config' Exports to a temporary buffer
 - `org-ssh-export-to-config' Exports to file with the extension .ssh_config
 - `org-ssh-export-overwrite-user-config' Exports file, overwrites user's =~/.ssh/config=.
-  Prompts user with yes/no option before doing so.
+Prompts user with yes/no option before doing so.
 These commands are also exposed through the `org-export-dispatch' menu.
 
 Variables
 - `org-ssh-header' An optional header that will be added to the
-  beginning of the export. This can be used for comments or rules
-  that apply to all hosts.
+beginning of the export. This can be used for comments or rules
+that apply to all hosts.
 
 Usage
 Export headings with specific properties as entries in an SSH

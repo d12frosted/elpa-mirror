@@ -1,3 +1,4 @@
+
 This minor mode syncs DropBox notes from mobile devices into org
 datetree file that can be part of org agenda. The minor mode starts
 a daemon that periodically scans the note directory.
@@ -35,8 +36,8 @@ The locations in the filesystem are determined by two customizable
 variables -- by default both pointing inside Dropbox:
 
 #+BEGIN_EXAMPLE
-  org-dropbox-note-dir      "~/Dropbox/notes/"
-  org-dropbox-datetree-file "~/Dropbox/org/reference.org"
+org-dropbox-note-dir      "~/Dropbox/notes/"
+org-dropbox-datetree-file "~/Dropbox/org/reference.org"
 #+END_EXAMPLE
 
 Since different programmes format the shared link differently, the

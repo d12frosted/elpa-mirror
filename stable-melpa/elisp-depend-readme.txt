@@ -1,3 +1,4 @@
+
 Parse depend libraries of elisp file.
 
 This packages is parse current elisp file and get
@@ -21,7 +22,7 @@ Below are commands you can use:
 `elisp-depend-insert-comment'        insert depends comment.
 
 
-Installation:
+;; Installation:
 
 Put elisp-depend.el to your load-path.
 The load-path is usually ~/elisp/.

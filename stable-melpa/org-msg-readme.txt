@@ -31,21 +31,21 @@ OrgMsg Mail User Agent specific function.
 The OrgMsg mode keys are the usual key combination used in either
 Org mode or Message mode.
 - C-c C-e - calls `org-msg-preview', it generates the final HTML
-  email, save it into a temporary file and call the `browse-url'
-  function on that file.
+email, save it into a temporary file and call the `browse-url'
+function on that file.
 - C-c C-k - calls `message-kill-buffer'
 - C-c C-s - calls `message-goto-subject' (same as in Message
-  mode)
+mode)
 - C-c C-b - calls `org-msg-goto-body' (similar to
-  `message-goto-body' in Message mode)
+`message-goto-body' in Message mode)
 - C-c C-a - calls `org-msg-attach', very similar to the
-  `org-attach' function.  It lets you add or delete attachment for
-  this email.  Attachment list is stored in the `:attachment:'
-  property.
+`org-attach' function.  It lets you add or delete attachment for
+this email.  Attachment list is stored in the `:attachment:'
+property.
 - C-c C-c - calls `org-ctrl-c-ctrl-c'.  OrgMsg configures
-  `org-msg-ctrl-c-ctrl-c' as a final hook of Org mode.  When
-  `org-msg-ctrl-c-ctrl-c' is called in a OrgMsg buffer it
-  generates the MIME message and send it.
+`org-msg-ctrl-c-ctrl-c' as a final hook of Org mode.  When
+`org-msg-ctrl-c-ctrl-c' is called in a OrgMsg buffer it
+generates the MIME message and send it.
 
 The `org-msg-mode' interactive function can be called to
 enable/disable OrgMsg.  By default, once the module is loaded, it

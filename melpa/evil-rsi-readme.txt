@@ -1,3 +1,4 @@
+
 This program emulates `vim-rsi` initially developed by Tim Pope
 (tpope). It brings some essential `emacs` motion bindings back.
 

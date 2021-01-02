@@ -1,3 +1,4 @@
+
 This code is used to run to functions depending on whether the
 current font-lock font is at point.  As font-lock is usually
 syntactically meaningful this means that you can for instance
@@ -17,7 +18,7 @@ is.  The default behaviour is to switch `auto-fill' mode on when
 point is within comments, and off when its in anything else.
 
 
-Notes for developers:
+; Notes for developers:
 ~/src/ht/home_website/
 There are actually two ways to use this mode, firstly as a minor
 mode. Default behaviour is to toggle auto-fill on and off, but you
@@ -27,34 +28,34 @@ returned by the `major-mode' variable. This variable is as
 follows...
 
 (defvar tmmofl-jde-mode-actions
- '(
-   (font-lock-comment-face
-    (lambda()
-      (progn
-        (abbrev-mode 0)
-        (auto-fill-mode 1)))
-    (lambda()
-      (progn
-        (abbrev-mode 1)
-        (auto-fill-mode 0))))
+'(
+(font-lock-comment-face
+(lambda()
+(progn
+(abbrev-mode 0)
+(auto-fill-mode 1)))
+(lambda()
+(progn
+(abbrev-mode 1)
+(auto-fill-mode 0))))
 
-   (font-lock-string-face
-    (lambda()
-      (abbrev-mode 0))
-    (lambda()
-      (abbrev-mode 1)))))
+(font-lock-string-face
+(lambda()
+(abbrev-mode 0))
+(lambda()
+(abbrev-mode 1)))))
 
 This is a list each element of which is a list defining the
 font-lock-symbol to be acted on, the on function, and the off
 function. If tmmofl can not find this variable the default of...
 
 (defvar tmmofl-default-actions
-     '(
-       (font-lock-comment-face
-        (lambda()
-          (auto-fill-mode 1))
-        (lambda()
-          (auto-fill-mode 0)))))
+'(
+(font-lock-comment-face
+(lambda()
+(auto-fill-mode 1))
+(lambda()
+(auto-fill-mode 0)))))
 
 can be used instead, which toggles auto fill on and off when on of
 off comments. There are some sample action variables defined in
@@ -72,9 +73,9 @@ the `tmmofl-install-for-mode' function like so...
 java-mode-hook
 font-lock-type-face
 (lambda()
-  (java-show-full-class-name))
+(java-show-full-class-name))
 (lambda()
-  ()))
+()))
 
 where the first argument is the install hook. This would work
 without showing the tmmofl mode information in the mode line. I am
@@ -86,7 +87,7 @@ let me know if it works elsewhere. The current version should be
 available at http://www.bioinf.man.ac.uk/~lord
 
 
-Acknowledgements:
+; Acknowledgements:
 
 This code has grown up over about a year. It originally started off
 as jde-auto-abbrev. I would like to thank Joakim Verona

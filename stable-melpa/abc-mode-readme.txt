@@ -1,3 +1,4 @@
+
 A major mode for editing abc music files.  Includes some abc2midi
 features.
 

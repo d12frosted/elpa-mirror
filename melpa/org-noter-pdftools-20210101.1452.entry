@@ -1,0 +1,19 @@
+(org-noter-pdftools .
+		    [(20210101 1452)
+		     ((emacs
+		       (26 1))
+		      (org
+		       (9 4))
+		      (pdf-tools
+		       (0 8))
+		      (org-pdftools
+		       (1 0))
+		      (org-noter
+		       (1 4 1)))
+		     "Integration between org-pdftools and org-noter" single
+		     ((:commit . "bcf0084883ede36e91c72be73c0fbd7098439c99")
+		      (:authors
+		       ("Alexander Fu Xi" . "fuxialexander@gmail.com"))
+		      (:maintainer "Alexander Fu Xi" . "fuxialexnader@gmail.com")
+		      (:keywords "convenience")
+		      (:url . "https://github.com/fuxialexander/org-pdftools"))])

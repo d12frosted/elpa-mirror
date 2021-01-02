@@ -1,6 +1,7 @@
+
 Bitcoin donations gratefully accepted: 1AmWPmshr6i9gajMi1yqHgx7BYzpPKuzMz
 
-Introduction:
+;; Introduction:
 This library is based on simple-call-tree.el by Alex Schroeder, but you
 do not need that library to use it (this is a replacement).
 It displays a buffer containing a call tree for functions in source
@@ -16,7 +17,7 @@ which has a dedicated menu in the menu-bar showing various commands
 and their keybindings. Most of these commands are self explanatory
 so try them out.
 
-Navigation:
+;; Navigation:
 You can navigate the call tree either by moving through consecutive
 headers (n/p or N/P keys) or by jumping to main branches (j for branch
 corresponding to function at point, and J to prompt for a function).
@@ -28,7 +29,7 @@ jumped to will not be added to the jump-ring.
 If you have fm.el (available here: http://www.damtp.cam.ac.uk/user/sje30/emacs/fm.el)
 you can press f to toggle follow mode on/off.
 
-Display
+;; Display
 Normally child branches correspond to functions/variables called by the parent
 branch. However, if you invert the tree by pressing i then the child branches
 will correspond to functions that call the parent branch.

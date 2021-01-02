@@ -51,6 +51,6 @@ I recommend you also add the following:
 
 This packages plays very well with the chicken-slime package.
 
-Contributors:
+; Contributors:
 Dan Leslie
 Mao Junhua - Disk Caching

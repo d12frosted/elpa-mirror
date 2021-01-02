@@ -1,3 +1,4 @@
+
 A simple Emacs package for abridging refined diff hunks (for
 example in magit).  Why abridge a diff hunk?  Most diffs are line
 based.  If you are working on files with very long lines, for
@@ -20,17 +21,17 @@ diff and status buffers.  Hunks are shown as abridged by default.
 Settings:
 
 You can customize settings with these variables; just M-x
- customize-group abridge-diff (with [default value]):
+customize-group abridge-diff (with [default value]):
 
- abridge-diff-word-buffer [3]: Minimum number of words to preserve
-   around refined regions.
+abridge-diff-word-buffer [3]: Minimum number of words to preserve
+around refined regions.
 
- abridge-diff-first-words-preserve [4]: Keep at least this many
-   words visible at the beginning of an abridged line with refined
-   diffs.
+abridge-diff-first-words-preserve [4]: Keep at least this many
+words visible at the beginning of an abridged line with refined
+diffs.
 
- abridge-diff-invisible-min [5]: Minimum region length (in
-   characters) between refined areas that can be made invisible.
+abridge-diff-invisible-min [5]: Minimum region length (in
+characters) between refined areas that can be made invisible.
 
- abridge-diff-no-change-line-words [12]: Number of words to keep at
-   the beginning of a line without any refined diffs.
+abridge-diff-no-change-line-words [12]: Number of words to keep at
+the beginning of a line without any refined diffs.

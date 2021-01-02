@@ -14,4 +14,4 @@ given (so to allow taking images of the emacs session itself).
 Requires the "import" command from the ImageMagick suite
 
 Put this file into your load-path and the following into your ~/.emacs:
-  (require 'org-attach-screenshot)
+(require 'org-attach-screenshot)

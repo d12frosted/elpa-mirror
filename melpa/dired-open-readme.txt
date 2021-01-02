@@ -16,9 +16,9 @@ This package also provides other convenient hooks:
 
 * `dired-open-xdg' - try to open the file using `xdg-open'
 * `dired-open-guess-shell-alist' - try to open the file by
-  launching applications from `dired-guess-shell-alist-user'
+launching applications from `dired-guess-shell-alist-user'
 * `dired-open-call-function-by-extension' - call an elisp function
-  based on extension.
+based on extension.
 
 These are not used by default.
 

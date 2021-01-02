@@ -1,3 +1,4 @@
+
 A library that exposes functionality to work with and search dash
 docsets.
 

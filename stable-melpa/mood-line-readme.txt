@@ -1,3 +1,4 @@
+
 mood-line is a minimal mode-line configuration that aims to replicate
 some of the features of the doom-modeline package.
 

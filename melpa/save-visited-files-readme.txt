@@ -3,7 +3,7 @@ only save the files you have open(currently).  This was created because I
 couldn't ever get Desktop to work and wanted to persist open files across
 sessions.  This file is the result.
 
-Installation:
+; Installation:
 
 To install, put this file somewhere in your load-path and add the following
 to your .emacs file:
@@ -20,30 +20,30 @@ off the saving of files, you need to run (turn-off-save-visited-files-mode)
 
 Changelog:
 1.6
- * Fix bug to add hooks after loading files, otherwise it's
-   possible for your save file to be overwritten first.
+* Fix bug to add hooks after loading files, otherwise it's
+possible for your save file to be overwritten first.
 1.5
- * Fix bug where save-visited-files-restore would error if save-visited-files-location
-   is nonexistent.
+* Fix bug where save-visited-files-restore would error if save-visited-files-location
+is nonexistent.
 1.4
- * Add to after-init-hook if run during initialization instead of restoring
- * immediately.
+* Add to after-init-hook if run during initialization instead of restoring
+* immediately.
 1.3
- * Allow saving of dired directories.
- * Add save-visited-files-ignore-directories configuration variable.
+* Allow saving of dired directories.
+* Add save-visited-files-ignore-directories configuration variable.
 1.2
- * Changed default value of save-visited-files-location to ~/.emacs.d/emacs-visisted-files
- * Improvements/rewriting by Jonathan Kotta
- ** Checks save-visited-files-location is writable, and gives a message if not
- ** Changed to use define-minor-mode
- ** Moved (setq save-visited-files-already-restored t) to the end of
- ** save-visited-files-restore from save-visited-files-mode.
- ** Doesn't print a message in the echo area every time it saves the file list.
+* Changed default value of save-visited-files-location to ~/.emacs.d/emacs-visisted-files
+* Improvements/rewriting by Jonathan Kotta
+** Checks save-visited-files-location is writable, and gives a message if not
+** Changed to use define-minor-mode
+** Moved (setq save-visited-files-already-restored t) to the end of
+** save-visited-files-restore from save-visited-files-mode.
+** Doesn't print a message in the echo area every time it saves the file list.
 1.1
- * Improvements/rewriting by Ryan Thomson
- ** Use auto-save-hook instead of a periodic timer
- ** More consistent naming conventions
- ** Customization ability via M-x customize-group save-visited-files
- ** Better handling of the temp buffer
+* Improvements/rewriting by Ryan Thomson
+** Use auto-save-hook instead of a periodic timer
+** More consistent naming conventions
+** Customization ability via M-x customize-group save-visited-files
+** Better handling of the temp buffer
 1.0
- * Initial Release
+* Initial Release

@@ -12,14 +12,14 @@ pair.
 An example configuration:
 
 (setq project-roots
-      `(("Generic Perl Project"
-         :root-contains-files ("t" "lib")
-         :filename-regex ,(regexify-ext-list '(pl pm))
-         :on-hit (lambda (p) (message (car p))))
-        ("Django project"
-         :root-contains-files ("manage.py")
-         :filename-regex ,(regexify-ext-list '(py html css js))
-         :exclude-paths ("media" "contrib"))))
+`(("Generic Perl Project"
+:root-contains-files ("t" "lib")
+:filename-regex ,(regexify-ext-list '(pl pm))
+:on-hit (lambda (p) (message (car p))))
+("Django project"
+:root-contains-files ("manage.py")
+:filename-regex ,(regexify-ext-list '(py html css js))
+:exclude-paths ("media" "contrib"))))
 
 I bind the following:
 
@@ -31,21 +31,21 @@ I bind the following:
 (global-set-key (kbd "C-c p l") 'project-root-browse-seen-projects)
 
 (global-set-key (kbd "C-c p M-x")
-                'project-root-execute-extended-command)
+'project-root-execute-extended-command)
 
 (global-set-key
- (kbd "C-c p v")
- (lambda ()
-   (interactive)
-   (with-project-root
-       (let ((root (cdr project-details)))
-         (cond
-           ((file-exists-p ".svn")
-            (svn-status root))
-           ((file-exists-p ".git")
-            (git-status root))
-           (t
-            (vc-directory root nil)))))))
+(kbd "C-c p v")
+(lambda ()
+(interactive)
+(with-project-root
+(let ((root (cdr project-details)))
+(cond
+((file-exists-p ".svn")
+(svn-status root))
+((file-exists-p ".git")
+(git-status root))
+(t
+(vc-directory root nil)))))))
 
 This defines one project called "Generic Perl Projects" by running
 the tests path-matches and root-contains-files. Once these tests

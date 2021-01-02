@@ -18,33 +18,33 @@ Set $ARDUINO_HOME environment variable as Arduino IDE's installed directory.
 
 Then put following configurations to your .emacs or somewhere.
 
-  ;; Emacs configuration
-  ;; If you installed this package from without MELPA, you may need
-  ;; `(require 'company-arduino)'.
+;; Emacs configuration
+;; If you installed this package from without MELPA, you may need
+;; `(require 'company-arduino)'.
 
-  ;; Configuration for irony.el
-  ;; Add arduino's include options to irony-mode's variable.
-  (add-hook 'irony-mode-hook 'company-arduino-turn-on)
+;; Configuration for irony.el
+;; Add arduino's include options to irony-mode's variable.
+(add-hook 'irony-mode-hook 'company-arduino-turn-on)
 
-  ;; Configuration for company-c-headers.el
-  ;; The `company-arduino-append-include-dirs' function appends
-  ;; Arduino's include directories to the default directories
-  ;; if `default-directory' is inside `company-arduino-home'. Otherwise just
-  ;; returns the default directories.
-  ;; Please change the default include directories accordingly.
-  (defun my-company-c-headers-get-system-path ()
-    "Return the system include path for the current buffer."
-    (let ((default '("/usr/include/" "/usr/local/include/")))
-      (company-arduino-append-include-dirs default t)))
-  (setq company-c-headers-path-system 'my-company-c-headers-get-system-path)
+;; Configuration for company-c-headers.el
+;; The `company-arduino-append-include-dirs' function appends
+;; Arduino's include directories to the default directories
+;; if `default-directory' is inside `company-arduino-home'. Otherwise just
+;; returns the default directories.
+;; Please change the default include directories accordingly.
+(defun my-company-c-headers-get-system-path ()
+"Return the system include path for the current buffer."
+(let ((default '("/usr/include/" "/usr/local/include/")))
+(company-arduino-append-include-dirs default t)))
+(setq company-c-headers-path-system 'my-company-c-headers-get-system-path)
 
-  ;; Activate irony-mode on arudino-mode
-  (add-hook 'arduino-mode-hook 'irony-mode)
+;; Activate irony-mode on arudino-mode
+(add-hook 'arduino-mode-hook 'irony-mode)
 
-  ;; If you are already using ‘company-irony’ and ‘company-c-headers’,
-  ;; you might have same setting. That case, you can omit below setting.
-  (add-to-list 'company-backends 'company-irony)
-  (add-to-list 'company-backends 'company-c-headers)
+;; If you are already using ‘company-irony’ and ‘company-c-headers’,
+;; you might have same setting. That case, you can omit below setting.
+(add-to-list 'company-backends 'company-irony)
+(add-to-list 'company-backends 'company-c-headers)
 
 Note:
 This package's default configuration is set for Linux environment,

@@ -5,13 +5,13 @@ resize images.
 
 Switch the blimp minor mode on programmatically with:
 
-    (blimp-mode 1)
+(blimp-mode 1)
 
 or toggle interactively with M-x blimp-mode RET.
 
 Switch the minor mode on for all image-mode buffers with:
 
-    (add-hook 'image-mode-hook 'blimp-mode)
+(add-hook 'image-mode-hook 'blimp-mode)
 
 Then once blimp-mode is enabled, do `M-x blimp-interface'
 to to add commands to be executed on the image.

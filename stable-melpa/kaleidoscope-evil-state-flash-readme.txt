@@ -1,3 +1,4 @@
+
 Flash the keyboard LEDs when changing Evil states.
 
-License: GPLv3+
+; License: GPLv3+

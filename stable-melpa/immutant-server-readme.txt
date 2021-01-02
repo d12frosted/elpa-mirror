@@ -14,22 +14,22 @@ History
 - Marked the immutant-server-start arg as optional
 
 - Added immutant-server-default-directory to control where Immutant
-  starts
+starts
 
 1.2.0
 
 - Added additional notice regexes to
-  `immutant-server-notice-regexp-alist'. Thanks, tcrawley.
+`immutant-server-notice-regexp-alist'. Thanks, tcrawley.
 
 - Added thingatpt require.  Thanks, syohex.
 
 - Added ability to modify server command in `immutant-server-start'
-  with C-u prefix.  Thanks, tcrawley.
+with C-u prefix.  Thanks, tcrawley.
 
 - Added docs for the 'C-c C-s' binding for `immutant-server-start'
 
 - Tweaked one of the notice regexes so it wouldn't override the
-  ERROR face when there is an error while starting Immutant.
+ERROR face when there is an error while starting Immutant.
 
 1.1.2
 
@@ -38,14 +38,14 @@ History
 1.1.1
 
 - Added highlighting for various specific log messages. Initially,
-  these are all about when the server is up or services deployed.
-  See `immutant-server-notice-regexp-alist' for details.
+these are all about when the server is up or services deployed.
+See `immutant-server-notice-regexp-alist' for details.
 
 - Fixed a bug with the Immutant Stopped message appearing
-  off-screen.
+off-screen.
 
 - Tweaked faces (removed bold on inherited faces), change info
-  color
+color
 
 - Fix bug in error navigation
 

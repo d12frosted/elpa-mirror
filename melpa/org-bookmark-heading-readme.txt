@@ -9,7 +9,7 @@ this package.
 
 It also seems like this should be built-in to org-mode...  ;)
 
-Installation
+; Installation
 
 Require the package in your init file:
 
@@ -17,7 +17,7 @@ Require the package in your init file:
 
 Then you can customize `org-bookmark-jump-indirect' if you like.
 
-Usage
+; Usage
 
 Use the standard Emacs bookmark commands, "C-x r m", etc.
 

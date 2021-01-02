@@ -8,12 +8,12 @@ that are passed in.
 
 An example:
 (grapnel-retrieve-url
- "www.google.com"
- '((success . (lambda (res hdrs) (message "%s" res)))
-   (failure . (lambda (res hdrs) (message "Fail: %s" res)))
-   (error   . (lambda (res err)  (message "Err: %s" err))))
- "GET"
- '((q . "ASIN B001EN71CW")))
+"www.google.com"
+'((success . (lambda (res hdrs) (message "%s" res)))
+(failure . (lambda (res hdrs) (message "Fail: %s" res)))
+(error   . (lambda (res err)  (message "Err: %s" err))))
+"GET"
+'((q . "ASIN B001EN71CW")))
 
 History
 

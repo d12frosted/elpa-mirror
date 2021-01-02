@@ -1,3 +1,4 @@
+
 Additional functionality that makes flymake error messages appear
 in the minibuffer when point is on a line containing a flymake
 error. This saves having to mouse over the error, which is a

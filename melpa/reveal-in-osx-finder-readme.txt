@@ -1,3 +1,4 @@
+
 Usage:
 
 If M-x reveal-in-osx-finder is invoked in a file-associated buffer,

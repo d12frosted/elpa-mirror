@@ -1,10 +1,11 @@
+
 This file defines dynamic completion hooks for shell-mode and
 shell-command prompts that are based on bash completion.
 
 Bash completion for emacs:
 - is aware of bash builtins, aliases and functions
 - does file expansion inside of colon-separated variables
-  and after redirections (> or <)
+and after redirections (> or <)
 - escapes special characters when expanding file names
 - is configurable through programmable bash completion
 
@@ -27,15 +28,15 @@ INSTALLATION
 
 1. copy bash-completion.el into a directory that's on Emacs load-path
 2. add this into your .emacs file:
-  (autoload 'bash-completion-dynamic-complete \"bash-completion\"
-    \"BASH completion hook\")
-  (add-hook 'shell-dynamic-complete-functions
-     'bash-completion-dynamic-complete)
+(autoload 'bash-completion-dynamic-complete \"bash-completion\"
+\"BASH completion hook\")
+(add-hook 'shell-dynamic-complete-functions
+'bash-completion-dynamic-complete)
 
-  or simpler, but forces you to load this file at startup:
+or simpler, but forces you to load this file at startup:
 
-  (require 'bash-completion)
-  (bash-completion-setup)
+(require 'bash-completion)
+(bash-completion-setup)
 
 3. reload your .emacs (M-x `eval-buffer') or restart
 
@@ -47,7 +48,7 @@ launches a new bash process.
 Naturally, you'll get better results if you turn on programmable
 bash completion in your shell. Depending on how your system is set
 up, this might requires calling:
-  . /etc/bash_completion
+. /etc/bash_completion
 from your ~/.bashrc.
 
 When called from a bash shell buffer,

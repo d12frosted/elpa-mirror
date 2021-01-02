@@ -125,13 +125,13 @@ Additionally predefined commit message passed to custom function
 `vc-hgcmd-log-edit-message-function' so one can change it.
 For example, to include current task in commit message:
 
-    (defun my/hg-commit-message (original-message)
-      (if org-clock-current-task
-          (concat org-clock-current-task " " original-message)
-        original-message))
+(defun my/hg-commit-message (original-message)
+(if org-clock-current-task
+(concat org-clock-current-task " " original-message)
+original-message))
 
-    (custom-set-variables
-     '(vc-hgcmd-log-edit-message-function 'my/hg-commit-message))
+(custom-set-variables
+'(vc-hgcmd-log-edit-message-function 'my/hg-commit-message))
 
 - Interactive command `vc-hgcmd-runcommand' that allow to run custom hg commands
 
@@ -141,9 +141,9 @@ For example, to include current task in commit message:
 
 - View changes made by revision; diff to parents
 Additional bindings in `log-view-mode':
- - `c c' view change made by revision at point (-c option to hg diff command)
- - `c 1' view diff between revision at point and its first parent
- - `c 2' view diff between revision at point and its second parent
+- `c c' view change made by revision at point (-c option to hg diff command)
+- `c 1' view diff between revision at point and its first parent
+- `c 2' view diff between revision at point and its second parent
 `C c', `C 1' and `C 2' shows corresponding diffs for whole changeset.
 
 - View log for revset

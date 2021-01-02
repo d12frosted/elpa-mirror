@@ -35,37 +35,37 @@ The following conventions are used when converting elisp comments
 to MarkDown:
 
 * Code blocks using either the Markdown convention by indenting the
-  block with four extra spaces, or by starting a paragraph with a
-  `('.
+block with four extra spaces, or by starting a paragraph with a
+`('.
 
 * In elisp comments, a reference to `code' (backquote - quote),
-  they will be converted to MarkDown style (backquote - backquote).
+they will be converted to MarkDown style (backquote - backquote).
 
 * In elisp comments, bullets in lists are typically separated by
-  empty lines. In the converted text, the empty lines are removed,
-  as required by MarkDown.
+empty lines. In the converted text, the empty lines are removed,
+as required by MarkDown.
 
 
 Example:
 
 
-    ;; This is a heading:
-    ;;
-    ;; Bla bla bla ...
+;; This is a heading:
+;;
+;; Bla bla bla ...
 
-    ;; This is another heading:
-    ;;
-    ;; This is a paragraph!
-    ;;
-    ;; A subheading:
-    ;;
-    ;; Another paragraph.
-    ;;
-    ;; This line is *not* as a subheading:
-    ;;
-    ;; * A bullet in a list
-    ;;
-    ;; * Another bullet.
+;; This is another heading:
+;;
+;; This is a paragraph!
+;;
+;; A subheading:
+;;
+;; Another paragraph.
+;;
+;; This line is *not* as a subheading:
+;;
+;; * A bullet in a list
+;;
+;; * Another bullet.
 
 Installation:
 
@@ -81,19 +81,19 @@ Usage:
 To generate the markdown representation of the current buffer to a
 temporary buffer, use:
 
-    M-x el2markdown-view-buffer RET
+M-x el2markdown-view-buffer RET
 
 To write the markdown representation of the current buffer to a
 file, use:
 
-    M-x el2markdown-write-file RET name-of-file RET
+M-x el2markdown-write-file RET name-of-file RET
 
 In sites like GitHub, if a file named README.md exists in the root
 directory of an archive, it is displayed when viewing the archive.
 To generate a README.md file, in the same directory as the current
 buffer, use:
 
-    M-x el2markdown-write-readme RET
+M-x el2markdown-write-readme RET
 
 Post processing:
 
@@ -110,4 +110,4 @@ option. The others can be accessed with the `--eval' form.
 
 For example,
 
-    emacs -batch -l el2markdown.el my-file.el -f el2markdown-write-readme
+emacs -batch -l el2markdown.el my-file.el -f el2markdown-write-readme

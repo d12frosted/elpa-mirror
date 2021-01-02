@@ -10,30 +10,30 @@ This package started off to implement libmpdclient.c, which came with mpd, in
 elisp. But as it stands of now, this package is not an exact translation.
 Notable amongst the deviations are -
 
-     - This package contains quite a bit of higher level functionality as
-     compared with the original. An action or a query needs only a single
-     call and the library user can choose to get either the raw response, the
-     formatted response, or hook on a callback for each logical token of the
-     response. However, dig deeper, and you will find the lower level
-     functionality available as well.
-     - The error throwing scheme consistent with what is expected of elisp
-     programs.
-     - Command list mode is transparent in most cases, as wherever
-     appropriate, functions taking arguments can accept either a single item
-     or a list of it for each argument.
-     - Apart from this, command list functionality is limited to actions
-     rather than queries, as it is anyway not that easy to parse out the
-     individual responses from command-list queries (it is firstly possible
-     only from 0.11, which allows for a list_OK to be added at the end of
-     response for each command in the list).
-     - command_list_ok_begin isn't implemented. It is still possible to
-     explicitly use "command_list_(ok)begin\n..\ncommand_list_end" for
-     `mpd-execute-command' and get the response tokens for queries. A better
-     interface may be available in the future.
-     - There is a small interactive interface as well, but this is
-     intentionally incomplete. The point is that this exists only to the
-     extent of adding an interactive part to the functions, without modifying
-     the functions per se.
+- This package contains quite a bit of higher level functionality as
+compared with the original. An action or a query needs only a single
+call and the library user can choose to get either the raw response, the
+formatted response, or hook on a callback for each logical token of the
+response. However, dig deeper, and you will find the lower level
+functionality available as well.
+- The error throwing scheme consistent with what is expected of elisp
+programs.
+- Command list mode is transparent in most cases, as wherever
+appropriate, functions taking arguments can accept either a single item
+or a list of it for each argument.
+- Apart from this, command list functionality is limited to actions
+rather than queries, as it is anyway not that easy to parse out the
+individual responses from command-list queries (it is firstly possible
+only from 0.11, which allows for a list_OK to be added at the end of
+response for each command in the list).
+- command_list_ok_begin isn't implemented. It is still possible to
+explicitly use "command_list_(ok)begin\n..\ncommand_list_end" for
+`mpd-execute-command' and get the response tokens for queries. A better
+interface may be available in the future.
+- There is a small interactive interface as well, but this is
+intentionally incomplete. The point is that this exists only to the
+extent of adding an interactive part to the functions, without modifying
+the functions per se.
 
 Most of the functions below require a connection object as an argument, which
 you can create by a call to `mpd-conn-new'. The recommended way to use
@@ -45,18 +45,18 @@ in order for atleast the functions and the documentation. The file is well
 structured and documented, so go for it. The impatient could do a selective
 display to 3 (C-u 3 C-x $) before proceeding.
 
-Installation:
+; Installation:
 
 Put this file somewhere on your load-path. Then, you could use
 (require 'libmpdee) whenever the services of this package are needed.
 
 Parameters used for the interactive calls can be customized in the group mpd
 Use:
-        M-x customize-group mpd
+M-x customize-group mpd
 to change the values to your liking.
 
 
-History: (See the SVN logs/ChangeLog for the list of all changes)
+; History: (See the SVN logs/ChangeLog for the list of all changes)
 
 v2.1
 Introducing automatic mode with hooking, for connections.

@@ -1,3 +1,4 @@
+
 This package aims to replace `completing-read' with
 `ido-completing-read', similarly to `ido-ubiquitous'.
 

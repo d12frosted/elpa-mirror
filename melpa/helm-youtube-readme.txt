@@ -1,7 +1,7 @@
 This package provides an interactive prompt to search
 youtube as you code :)
 
-MIT License
+; MIT License
 
 Permission is hereby granted, free of charge, to any person obtaining
 a copy of this software and associated documentation files (the

@@ -9,8 +9,8 @@ checkbox, and moves the cursor to the end of the previous line.
 
 To enable org-autolist mode in the current buffer:
 
-  (org-autolist-mode)
+(org-autolist-mode)
 
 To enable it whenever you open an org file, add this to your init.el:
 
-  (add-hook 'org-mode-hook (lambda () (org-autolist-mode)))
+(add-hook 'org-mode-hook (lambda () (org-autolist-mode)))

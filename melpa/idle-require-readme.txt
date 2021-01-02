@@ -1,3 +1,4 @@
+
 Add the following to your .emacs file:
 (require 'idle-require)
 (setq idle-require-symbols '(cedet nxml-mode)) ;; <- Specify packages here.

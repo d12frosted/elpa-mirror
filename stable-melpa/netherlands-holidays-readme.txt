@@ -1,3 +1,4 @@
+
 Replace holidays:
 
 (setq calendar-holidays holiday-netherlands-holidays)

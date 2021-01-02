@@ -7,7 +7,7 @@ Rather than me trying to explain that in detail, it's best to just
 split your emacs frame in to several windows and try it - trust me,
 it's intuitive once you give it a go.
 
-Usage
+; Usage
 
 (require 'windsize)
 (windsize-default-keybindings) ; C-S-<left/right/up/down>

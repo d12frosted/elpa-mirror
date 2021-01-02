@@ -27,7 +27,7 @@ To filter out which files it backs up, use a custom function for
 the saving of gnus .newsrc.eld files, do:
 
 (defun backup-each-save-no-newsrc-eld (filename)
-  (cond
-   ((string= (file-name-nondirectory filename) ".newsrc.eld") nil)
-   (t t)))
+(cond
+((string= (file-name-nondirectory filename) ".newsrc.eld") nil)
+(t t)))
 (setq backup-each-save-filter-function 'backup-each-save-no-newsrc-eld)

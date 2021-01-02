@@ -5,13 +5,13 @@ automatic ejson encryption on save.  Location of ejson keystore and
 binary can be set manually.  See https://github.com/Shopify/ejson
 for more details.
 
-Default keybindings
+; Default keybindings
 
 C-x C-s Save and encrypt a file, generate a key if necessary
 C-c C-e Encrypt the saved file (run on save by default)
 C-c C-d Decrypt the file into the current buffer
 
-Variables
+; Variables
 
 All can be set through customization group ejson
 

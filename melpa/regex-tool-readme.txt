@@ -17,7 +17,7 @@ The results are updated as you type in either the *Regex* or *Text* buffer.
 Use C-c C-c to force an update.  Use C-c C-k to quit all the regex-tool
 buffers and remove the frame.
 
-Version History:
+; Version History:
 
 1.1 - Don't die horribly if the user simply types '^' or '$'
 1.2 - Include cl.el at compile time

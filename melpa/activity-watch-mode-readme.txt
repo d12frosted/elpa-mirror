@@ -7,4 +7,4 @@ Enable Activity-Watch for the current buffer by invoking
 Requires request.el (https://tkf.github.io/emacs-request/)
 
 
-Dependencies: request, json, cl-lib
+; Dependencies: request, json, cl-lib

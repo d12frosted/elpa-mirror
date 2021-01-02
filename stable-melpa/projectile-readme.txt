@@ -1,3 +1,4 @@
+
 This library provides easy project management and navigation.  The
 concept of a project is pretty basic - just a folder containing
 special file.  Currently git, mercurial and bazaar repos are

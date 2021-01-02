@@ -27,8 +27,8 @@ require it.
 
 Usage:
 
-    (require 'exec-path-from-shell) ;; if not using the ELPA package
-    (exec-path-from-shell-initialize)
+(require 'exec-path-from-shell) ;; if not using the ELPA package
+(exec-path-from-shell-initialize)
 
 Customize `exec-path-from-shell-variables' to modify the list of
 variables imported.
@@ -36,10 +36,10 @@ variables imported.
 If you use your Emacs config on other platforms, you can instead
 make initialization conditional as follows:
 
-    (when (memq window-system '(mac ns))
-      (exec-path-from-shell-initialize))
+(when (memq window-system '(mac ns))
+(exec-path-from-shell-initialize))
 
 Alternatively, you can use `exec-path-from-shell-copy-envs' or
 `exec-path-from-shell-copy-env' directly, e.g.
 
-    (exec-path-from-shell-copy-env "PYTHONPATH")
+(exec-path-from-shell-copy-env "PYTHONPATH")

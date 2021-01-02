@@ -1,3 +1,4 @@
+
 This extension features are
 - Easily and quickly edit ticket of various bug tracking systems using a unified widget interface
 - List up ticket summaries with the combination of multiple conditions at one time
@@ -20,7 +21,7 @@ You are able to create/update the tickets of a bug tracking system by the follow
 
 For more infomation, see <https://github.com/aki2o/emacs-bts/blob/master/README.md>
 
-Dependencies:
+; Dependencies:
 
 - widget-mvc.el ( see <https://github.com/kiwanami/emacs-widget-mvc> )
 - log4e.el ( see <https://github.com/aki2o/log4e> )
@@ -29,16 +30,16 @@ Dependencies:
 - s.el ( see <https://github.com/magnars/s.el> )
 - pos-tip.el
 
-Installation:
+; Installation:
 
 Put this to your load-path.
 And put the following lines in your .emacs or site-start.el file.
 
 (require 'bts)
 
-Configuration:
+; Configuration:
 
-Key Binding
+;; Key Binding
 (global-unset-key (kbd "M-b"))
 (global-set-key (kbd "M-b n")   'bts:ticket-new)
 (global-set-key (kbd "M-b s")   'bts:summary-open)
@@ -51,10 +52,10 @@ Key Binding
 (global-set-key (kbd "M-b q d") 'bts:query-remove)
 (global-set-key (kbd "M-b q D") 'bts:query-remove-all)
 
-About other config item, see Customization or eval the following sexp.
-(customize-group "bts")
+;; About other config item, see Customization or eval the following sexp.
+;; (customize-group "bts")
 
-Customization:
+; Customization:
 
 [EVAL] (autodoc-document-lisp-buffer :type 'user-variable :prefix "bts:[^:]" :docstring t)
 `bts:project-cache-file'
@@ -78,4 +79,4 @@ Seconds as interval to check the finish of fetching ticket.
 `bts:ticket-multi-view-preferred'
 Whether to open a multi view if marked entry is multiple in summary buffer.
 
- *** END auto-documentation
+*** END auto-documentation

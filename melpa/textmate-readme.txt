@@ -1,19 +1,19 @@
 This minor mode exists to mimick TextMate's awesome
 features.
 
-   ⌘T - Go to File
- ⇧⌘T - Go to Symbol
-   ⌘L - Go to Line
- ⇧⌘L - Select Line (or expand Selection to select lines)
-   ⌘/ - Comment Line (or Selection/Region)
-   ⌘] - Shift Right
-   ⌘[ - Shift Left
- ⌥⌘] - Align Assignments
- ⌥⌘[ - Indent Line
-   ⌥↑ - Column Up
-   ⌥↓ - Column Down
- ⌘RET - Insert Newline at Line's End
- ⌥⌘T - Reset File Cache (for Go to File)
+⌘T - Go to File
+⇧⌘T - Go to Symbol
+⌘L - Go to Line
+⇧⌘L - Select Line (or expand Selection to select lines)
+⌘/ - Comment Line (or Selection/Region)
+⌘] - Shift Right
+⌘[ - Shift Left
+⌥⌘] - Align Assignments
+⌥⌘[ - Indent Line
+⌥↑ - Column Up
+⌥↓ - Column Down
+⌘RET - Insert Newline at Line's End
+⌥⌘T - Reset File Cache (for Go to File)
 
 A "project" in textmate-mode is determined by the presence of
 a .git directory, an .hg directory, a Rakefile, or a Makefile.
@@ -31,7 +31,7 @@ In other words, calling Go to File from
 ~/Projects/fieldrunners/ as the root if ~/Projects/fieldrunners/.git
 exists.
 
-Installation
+; Installation
 
 $ cd ~/.emacs.d/vendor
 $ git clone git://github.com/defunkt/textmate.el.git
@@ -42,4 +42,4 @@ In your emacs config:
 (require 'textmate)
 (textmate-mode)
 
-Depends on imenu
+; Depends on imenu
