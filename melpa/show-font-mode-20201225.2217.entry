@@ -1,0 +1,11 @@
+(show-font-mode .
+		[(20201225 2217)
+		 ((emacs
+		   (25 1)))
+		 "Show font at point on mode line" single
+		 ((:commit . "8503be7966d3bd8316039b5f49d3c37c7b97d10c")
+		  (:authors
+		   ("Melissa Boiko" . "melissa@namakajiri.net"))
+		  (:maintainer "Melissa Boiko" . "melissa@namakajiri.net")
+		  (:keywords "faces" "i18n" "unicode" "fonts" "fontsets")
+		  (:url . "https://github.com/melissaboiko/show-font-mode"))])

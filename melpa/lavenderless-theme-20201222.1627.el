@@ -18,7 +18,7 @@
 ;; Author: Thomas Letan <lthms@soap.coffee>
 ;; URL: https://git.sr.ht/~lthms/colorless-themes.el
 ;; Package-Version: 20201222.1627
-;; Package-Commit: 92ae2775ac9ae2fd3d1172ffdf706e18db55963c
+;; Package-Commit: c1ed1e12541cf05cc6c558d23c089c07e10b54d7
 ;; Version: 0.2
 ;; Package-Requires: ((colorless-themes "0.2"))
 ;; License: GPL-3

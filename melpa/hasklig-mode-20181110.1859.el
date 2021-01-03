@@ -5,7 +5,7 @@
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
 ;; Package-Version: 20181110.1859
-;; Package-Commit: c12337a13ec3a1f04400d0ea51e6120ebe79efb9
+;; Package-Commit: f33ba22a6e5060fb14c9fd3dda728d6724f2f9dd
 ;; Package-Requires: ((emacs "25"))
 ;; Homepage: https://github.com/minad/hasklig-mode
 ;;

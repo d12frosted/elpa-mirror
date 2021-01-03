@@ -16,6 +16,7 @@ modus-themes-no-mixed-fonts                 (boolean)
 modus-themes-headings                       (alist)
 modus-themes-scale-headings                 (boolean)
 modus-themes-fringes                        (choice)
+modus-themes-lang-checkers                  (choice)
 modus-themes-org-blocks                     (choice)
 modus-themes-org-habit                      (choice)
 modus-themes-prompts                        (choice)
@@ -71,6 +72,7 @@ buffer-expose
 calendar and diary
 calfw
 centaur-tabs
+cfrs
 change-log and log-view (`vc-print-log' and `vc-print-root-log')
 cider
 circe

@@ -1,0 +1,13 @@
+(peertube .
+	  [(20210101 1007)
+	   ((emacs
+	     (25 1))
+	    (transmission
+	     (0 12 1)))
+	   "Query and download PeerTube videos" single
+	   ((:commit . "bb529db154596e86327829edbd7144b67cf72255")
+	    (:authors
+	     ("yoctocell" . "public@yoctocell.xyz"))
+	    (:maintainer "yoctocell" . "public@yoctocell.xyz")
+	    (:keywords "peertube" "multimedia")
+	    (:url . "https://git.sr.ht/~yoctocell/peertube"))])
