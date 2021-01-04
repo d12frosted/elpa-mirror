@@ -1,0 +1,15 @@
+(chronometrist-goal .
+		    [(20210104 336)
+		     ((emacs
+		       (25 1))
+		      (alert
+		       (1 2))
+		      (chronometrist
+		       (0 6 0)))
+		     "Adds support for time goals to Chronometrist" single
+		     ((:commit . "7a878bd3709b9638caff17b5f49b27c03b06862a")
+		      (:authors
+		       ("contrapunctus" . "xmpp:contrapunctus@jabber.fr"))
+		      (:maintainer "contrapunctus" . "xmpp:contrapunctus@jabber.fr")
+		      (:keywords "calendar")
+		      (:url . "https://github.com/contrapunctus-1/chronometrist"))])

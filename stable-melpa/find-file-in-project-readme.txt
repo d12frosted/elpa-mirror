@@ -3,6 +3,7 @@ This program provides methods to find file in project.
 - Works on Windows with minimum setup
 - Works on Tramp Mode (https://www.emacswiki.org/emacs/TrampMode)
 - fd (faster alternative of find, see https://github.com/sharkdp/fd) is supported
+- Uses only native API `completing-read' and supports ido/ivy/helm out of box
 
 Usage,
 - You can insert "(setq ffip-use-rust-fd t)" into ".emacs" to use fd (alternative of find)
@@ -66,9 +67,6 @@ and `find-file-in-current-directory-by-selected'.
 
 `ffip-fix-file-path-at-point' replaces path at point with correct relative/absolute path.
 
-`ffip-split-window-horizontally' and `ffip-split-window-vertically' find&open file
-in split window.
-
 `ffip-show-diff' execute the backend from `ffip-diff-backends'.
 The output is in Unified Diff Format and inserted into *ffip-diff* buffer.
 Press "o" or "C-c C-c" or "ENTER" or `M-x ffip-diff-find-file' in the
@@ -97,18 +95,6 @@ into `kill-ring'. You can customize `ffip-find-relative-path-callback'
 to format the relative path,
 (setq ffip-find-relative-path-callback 'ffip-copy-reactjs-import)
 (setq ffip-find-relative-path-callback 'ffip-copy-org-file-link)
-
-`ivy-mode' is used for filter/search UI
-In `ivy-mode', SPACE is translated to regex ".*".
-For example, the search string "dec fun pro" is transformed into
-regular expression "\\(dec\\).*\\(fun\\).*\\(pro\\)"
-`C-h i g (ivy)' for more key-binding tips.
-
-`ffip-save-ivy-last' saves the most recent search result.
-`ffip-ivy-resume' re-use the save result. Both requires `ivy-mode'
-installed.
-
-You can switch to `ido-mode' by `(setq ffip-prefer-ido-mode t)'
 
 BSD/GNU Find can be installed through Cygwin or MYSYS2 on Windows.
 Executable is automatically detected. But you can manually specify

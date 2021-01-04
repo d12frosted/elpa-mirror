@@ -1,20 +1,22 @@
-Picpocket is an image viewer which requires GNU Emacs 24.4+
-compiled with ImageMagick.  It have commands for:
+Picpocket is an image viewer which requires GNU Emacs 27.1 or later
+or 25.1-26.3 compiled with ImageMagick.  It have commands for:
 
 * File operations on the picture files (delete, move, copy, hardlink).
 * Scale and rotate the picture.
 * Associate pictures with tags which are saved to disk.
 * Filter pictures according to tags.
 * Customizing keystrokes for quick tagging and file operations.
-* Undo and browse history of undoable commands.
+* Undo and visual history of undoable commands.
 
 
-Main entry point
-----------------
+Main entry points
+-----------------
 
 Command: picpocket
-
 View the pictures in the current directory.
+
+Command: picpocket-directory
+View the pictures in specified directory.
 
 
 Main keybindings
@@ -36,6 +38,9 @@ M-u       - View history of undoable actions
 e         - Customize keystrokes (see below)
 TAB f     - Toggle full-screen
 TAB r     - Toggle recursive inclusion of pictures in sub-directories
+l l       - List current pictures
+l n       - List current pictures with thumbnails
+l T       - Browse tag database
 
 With prefix argument many of the commands will operatate on all the
 pictures in the current list instead of just the current picture.
@@ -49,10 +54,6 @@ timers.  This includes to load upcoming pictures into the image
 cache.  The intention is that they should block Emacs for so short
 periods that it is not noticable.  But if you want to get rid of
 them set `picpocket-inhibit-timers' or kill the picpocket buffer.
-
-Picpocket is to be considered beta software.  Keybindings,
-variables and such may change in future versions.  Tag database
-file format will remain backwards compatible though.
 
 
 Keystroke customization

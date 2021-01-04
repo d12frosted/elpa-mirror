@@ -1,0 +1,11 @@
+(circe .
+       [(20210104 1709)
+	((cl-lib
+	  (0 5)))
+	"Client for IRC in Emacs" tar
+	((:commit . "9c91a59ee7bce123181358e254232a7a92b56418")
+	 (:authors
+	  ("Jorgen Schaefer" . "forcer@forcix.cx"))
+	 (:maintainer "Jorgen Schaefer" . "forcer@forcix.cx")
+	 (:keywords "irc" "chat")
+	 (:url . "https://github.com/jorgenschaefer/circe"))])

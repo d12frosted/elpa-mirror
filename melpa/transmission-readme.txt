@@ -1,9 +1,5 @@
 Interface to a Transmission session.
 
-Originally based on the JSON RPC library written by Christopher
-Wellons, available online at
-<https://github.com/skeeto/elisp-json-rpc>
-
 Entry points are the `transmission' and `transmission-add'
 commands.  A variety of commands are available for manipulating
 torrents and their contents, many of which can be applied over
@@ -29,3 +25,6 @@ be found respectively at the following:
 <https://github.com/transmission/transmission/blob/master/utils/remote.c>
 <https://github.com/fagga/transmission-remote-cli>
 <https://rakshasa.github.io/rtorrent/>
+
+Originally based on the JSON RPC library written by Christopher
+Wellons, available online at <https://github.com/skeeto/elisp-json-rpc>.
