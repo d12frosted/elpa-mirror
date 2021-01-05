@@ -4,7 +4,7 @@
 ;;
 ;; URL: https://github.com/eyeinsky/org-anki
 ;; Package-Version: 20201220.2144
-;; Package-Commit: 43c3d6418cc91d3e6fe880d02fc498345bd11ae3
+;; Package-Commit: 57b99ebb7e3e5e733a4f1531c24fea7372085078
 ;; Version: 0.0.2
 ;; Author: Markus Läll <markus.l2ll@gmail.com>
 ;; Keywords: outlines, flashcards, memory

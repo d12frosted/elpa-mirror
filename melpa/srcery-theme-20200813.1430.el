@@ -4,7 +4,7 @@
 ;; Author: Daniel Berg
 ;; URL: https://github.com/srcery-colors/srcery-emacs
 ;; Package-Version: 20200813.1430
-;; Package-Commit: a3a4df9875ea6ae21cfb483dfd7b5c92278fb1c3
+;; Package-Commit: db5002db7f290a3b2ff02d641232ea3daf76a3aa
 
 ;; Version: 0.2.0
 ;; Keywords: faces

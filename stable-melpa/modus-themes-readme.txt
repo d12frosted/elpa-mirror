@@ -111,6 +111,7 @@ dired-narrow
 dired-subtree
 diredc
 diredfl
+diredp (dired+)
 disk-usage
 doom-modeline
 dynamic-ruler

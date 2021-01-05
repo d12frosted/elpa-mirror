@@ -1,0 +1,11 @@
+(multi-project .
+	       [(20210105 1229)
+		((emacs
+		  (25)))
+		"Find files, compile, and search for multiple projects." single
+		((:commit . "f71a56978a57ee5b08e75d01a5d6ec75f20cedba")
+		 (:authors
+		  ("Shawn Ellis" . "shawn.ellis17@gmail.com"))
+		 (:maintainer "Shawn Ellis" . "shawn.ellis17@gmail.com")
+		 (:keywords "convenience" "project" "management")
+		 (:url . "https://hg.osdn.net/view/multi-project/multi-project"))])

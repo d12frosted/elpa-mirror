@@ -6,7 +6,7 @@
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
 ;; Package-Version: 20210104.1607
-;; Package-Commit: 999c8236cc11b9f53548f1bb997060d1a2e7a76a
+;; Package-Commit: 7a2f751421f4a1601811fa59571bd64baf7ec900
 ;; Package-Requires: ((consult "0.1") (selectrum "3.0") (emacs "26.1"))
 ;; Homepage: https://github.com/minad/consult
 
