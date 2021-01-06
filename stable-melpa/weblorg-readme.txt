@@ -47,7 +47,7 @@ If you liked this, make sure you also check out
 c. post.html could looks something like this
 
 <h1>{{ post.title }}</h1>
-{{ post.html }}
+{{ post.html|safe }}
 <hr>
 <a href="{{ url_for("index") }}">Home</a>
 

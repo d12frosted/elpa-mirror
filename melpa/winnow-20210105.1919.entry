@@ -1,0 +1,11 @@
+(winnow .
+	[(20210105 1919)
+	 ((emacs
+	   (24)))
+	 "winnow ag/grep results by matching/excluding lines" single
+	 ((:commit . "761b15bc31696a4f80c5fd508c84b1f5b4190ec2")
+	  (:authors
+	   ("Charles L.G. Comstock" . "dgtized@gmail.com"))
+	  (:maintainer "Charles L.G. Comstock" . "dgtized@gmail.com")
+	  (:keywords "matching")
+	  (:url . "https://github.com/dgtized/winnow.el"))])
