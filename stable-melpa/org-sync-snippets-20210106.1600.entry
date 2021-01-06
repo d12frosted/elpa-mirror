@@ -1,0 +1,15 @@
+(org-sync-snippets .
+		   [(20210106 1600)
+		    ((org
+		      (8 3 5))
+		     (emacs
+		      (24 3))
+		     (f
+		      (0 17 3)))
+		    "Export snippets to org-mode and vice versa" single
+		    ((:commit . "9a9910fb86da45c009c2488750bacee4dd8f2d9b")
+		     (:authors
+		      ("Adrien Brochard"))
+		     (:maintainer "Adrien Brochard")
+		     (:keywords "snippet" "org-mode" "yasnippet" "tools")
+		     (:url . "https://github.com/abrochard/org-sync-snippets"))])

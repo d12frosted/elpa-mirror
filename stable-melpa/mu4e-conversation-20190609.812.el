@@ -6,7 +6,7 @@
 ;; Maintainer: Pierre Neidhardt <mail@ambrevar.xyz>
 ;; URL: https://gitlab.com/Ambrevar/mu4e-conversation
 ;; Package-Version: 20190609.812
-;; Package-Commit: 98110bb9c300fc9866dee8e0023355f9f79c9b96
+;; Package-Commit: ccf85002b18fee54051dbfaf8d3931ca2a07db24
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: mail, convenience, mu4e

@@ -1,0 +1,13 @@
+(helm-switch-shell .
+		   [(20210106 1810)
+		    ((emacs
+		      (25 1))
+		     (helm
+		      (2 8 8)))
+		    "A Helm source for switching between shell buffers" single
+		    ((:commit . "9de26ca41e94c095c978ed920009de0280f5c4ec")
+		     (:authors
+		      ("James N. V. Cash" . "james.cash@occasionallycogent.com"))
+		     (:maintainer "James N. V. Cash" . "james.cash@occasionallycogent.com")
+		     (:keywords "matching" "processes" "terminals" "tools")
+		     (:url . "https://github.com/jamesnvc/helm-switch-shell"))])
