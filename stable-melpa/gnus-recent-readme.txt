@@ -4,14 +4,8 @@
 ; To use, require and bind whatever keys you prefer to the
 ; interactive functions:
 ;
-; (require 'gnus-recent)
-; (define-key gnus-summary-mode-map (kbd "l") #'gnus-recent-goto-previous)
-; (define-key gnus-group-mode-map (kbd "C-c L") #'gnus-recent-goto-previous)
-
-; If you prefer `use-package', the above settings would be:
-;
 ; (use-package gnus-recent
 ;   :after gnus
-;   :config
-;   (define-key gnus-summary-mode-map (kbd "l") #'gnus-recent-goto-previous)
-;   (define-key gnus-group-mode-map (kbd "C-c L") #'gnus-recent-goto-previous))
+;   :bind (("<f3>" . gnus-recent)
+;          :map gnus-summary-mode-map ("l" . gnus-recent-goto-previous)
+;          :map gnus-group-mode-map ("C-c L" . gnus-recent-goto-previous)))

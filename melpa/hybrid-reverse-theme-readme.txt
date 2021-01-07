@@ -13,6 +13,7 @@ Supported packages:
 - elfeed
 - evil
 - flycheck
+- hydra
 - ido-vertical-mode
 - linum-relative
 - lsp-ui
