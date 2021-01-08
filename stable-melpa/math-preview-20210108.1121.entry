@@ -1,0 +1,17 @@
+(math-preview .
+	      [(20210108 1121)
+	       ((emacs
+		 (26 1))
+		(dash
+		 (2 17 0))
+		(dash-functional
+		 (2 17 0))
+		(s
+		 (1 12 0)))
+	       "Preview TeX math equations inline" single
+	       ((:commit . "6c83ab7c6e3df95e60e942a9017d0c218228d429")
+		(:authors
+		 ("Matsievskiy S.V."))
+		(:maintainer "Matsievskiy S.V.")
+		(:keywords "convenience")
+		(:url . "https://gitlab.com/matsievskiysv/math-preview"))])

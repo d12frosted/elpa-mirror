@@ -58,22 +58,22 @@ collectively on a set of target /candidates/.  For example, while you are
 in the minibuffer the candidates are simply the possible completions
 of your input.  Embark provides two commands to work on candidate sets:
 
-- The `embark-occur' command produces a buffer listing all candidates,
-for you to peruse and run actions on at your leisure.  The
-candidates can be viewed in a grid or as a list showing additional
-annotations.  The `embark-live-occur' variant produces "live" Embark
-Occur buffer, meaning they autoupdate as the set of candidates
-changes.
+- The `embark-collect' command produces a buffer listing all
+candidates, for you to peruse and run actions on at your leisure.
+The candidates can be viewed in a grid or as a list showing
+additional annotations.  The `embark-collect-live' variant
+produces "live" Embark Collect buffers, meaning they autoupdate
+as the set of candidates changes.
 
-- The `embark-export' command tries to open a buffer in an appropriate
-major mode for the set of candidates.  If the candidates are files
-export produces a Dired buffer; if they are buffers, you get an
-Ibuffer buffer; and if they are packages you get a buffer in
-package menu mode.
+- The `embark-export' command tries to open a buffer in an
+appropriate major mode for the set of candidates.  If the
+candidates are files export produces a Dired buffer; if they are
+buffers, you get an Ibuffer buffer; and if they are packages you
+get a buffer in package menu mode.
 
 These are always available as "actions" (although they do not act
 on just the current target but on all candidates) for embark-act and
-are bound to O, L and E, respectively, in embark-general-map.  This
+are bound to C, L and E, respectively, in embark-general-map.  This
 means that you do not have to bind your own key bindings for these
 (although you can, of course), just a key binding for `embark-act'
 or `embark-act-noexit'.
