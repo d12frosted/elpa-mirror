@@ -1,0 +1,45 @@
+Package: meow
+Fetcher: github
+Source:  https://github.com/DogLooksGood/meow.git
+
+Updating /mnt/store/melpa/working/meow/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/meow/
+  to /tmp/meowYQWRoH/meow-20210109.1810
+    meow-bounds.el -> meow-bounds.el
+    meow-cheatsheet.el -> meow-cheatsheet.el
+    meow-command.el -> meow-command.el
+    meow-core.el -> meow-core.el
+    meow-esc.el -> meow-esc.el
+    meow-face.el -> meow-face.el
+    meow-helpers.el -> meow-helpers.el
+    meow-keymap.el -> meow-keymap.el
+    meow-keypad.el -> meow-keypad.el
+    meow-shims.el -> meow-shims.el
+    meow-util.el -> meow-util.el
+    meow-var.el -> meow-var.el
+    meow-visual.el -> meow-visual.el
+    meow.el -> meow.el
+Created meow-20210109.1810.tar containing:
+  meow-20210109.1810/
+  meow-20210109.1810/meow-bounds.el
+  meow-20210109.1810/meow-cheatsheet.el
+  meow-20210109.1810/meow-command.el
+  meow-20210109.1810/meow-core.el
+  meow-20210109.1810/meow-esc.el
+  meow-20210109.1810/meow-face.el
+  meow-20210109.1810/meow-helpers.el
+  meow-20210109.1810/meow-keymap.el
+  meow-20210109.1810/meow-keypad.el
+  meow-20210109.1810/meow-pkg.el
+  meow-20210109.1810/meow-shims.el
+  meow-20210109.1810/meow-util.el
+  meow-20210109.1810/meow-var.el
+  meow-20210109.1810/meow-visual.el
+  meow-20210109.1810/meow.el
+Built meow in 3.060s, finished at Sun Jan 10 00:28:52 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  369 Jan 10 00:28 packages/meow-20210109.1810.entry
+160K -rw-r--r-- 1 root root 160K Jan 10 00:28 packages/meow-20210109.1810.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:28 packages/meow-badge.svg
+4.0K -rw-r--r-- 1 root root   53 Jan 10 00:28 packages/meow-readme.txt

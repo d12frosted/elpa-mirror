@@ -1,0 +1,28 @@
+Package: achievements
+Fetcher: gitlab
+Source:  https://gitlab.com/gvol/emacs-achievements.git
+
+Updating /mnt/store/melpa/working/achievements/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/achievements/
+  to /tmp/achievementsdqITAg/achievements-20150531.1317
+    achievements-functions.el -> achievements-functions.el
+    achievements-pkg.el -> achievements-pkg.el
+    achievements.el -> achievements.el
+    advanced-achievements.el -> advanced-achievements.el
+    basic-achievements.el -> basic-achievements.el
+    ideas-achievements.el -> ideas-achievements.el
+Created achievements-20150531.1317.tar containing:
+  achievements-20150531.1317/
+  achievements-20150531.1317/achievements-functions.el
+  achievements-20150531.1317/achievements-pkg.el
+  achievements-20150531.1317/achievements.el
+  achievements-20150531.1317/advanced-achievements.el
+  achievements-20150531.1317/basic-achievements.el
+  achievements-20150531.1317/ideas-achievements.el
+Built achievements in 3.738s, finished at Sat Jan  9 23:52:59 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  318 Jan  9 23:52 packages/achievements-20150531.1317.entry
+ 60K -rw-r--r-- 1 root root  60K Jan  9 23:52 packages/achievements-20150531.1317.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 23:52 packages/achievements-badge.svg
+4.0K -rw-r--r-- 1 root root  205 Jan  9 23:52 packages/achievements-readme.txt

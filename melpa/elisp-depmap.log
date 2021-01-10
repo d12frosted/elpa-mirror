@@ -1,0 +1,27 @@
+Package: elisp-depmap
+Fetcher: gitlab
+Source:  https://gitlab.com/mtekman/elisp-depmap.el.git
+
+Updating /mnt/store/melpa/working/elisp-depmap/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elisp-depmap/
+  to /tmp/elisp-depmapeZBhY7/elisp-depmap-20200714.1630
+    elisp-depmap-exec.el -> elisp-depmap-exec.el
+    elisp-depmap-graph.el -> elisp-depmap-graph.el
+    elisp-depmap-parse.el -> elisp-depmap-parse.el
+    elisp-depmap-secondhelp.el -> elisp-depmap-secondhelp.el
+    elisp-depmap.el -> elisp-depmap.el
+Created elisp-depmap-20200714.1630.tar containing:
+  elisp-depmap-20200714.1630/
+  elisp-depmap-20200714.1630/elisp-depmap-exec.el
+  elisp-depmap-20200714.1630/elisp-depmap-graph.el
+  elisp-depmap-20200714.1630/elisp-depmap-parse.el
+  elisp-depmap-20200714.1630/elisp-depmap-pkg.el
+  elisp-depmap-20200714.1630/elisp-depmap-secondhelp.el
+  elisp-depmap-20200714.1630/elisp-depmap.el
+Built elisp-depmap in 3.260s, finished at Sun Jan 10 00:06:28 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  362 Jan 10 00:06 packages/elisp-depmap-20200714.1630.entry
+ 40K -rw-r--r-- 1 root root  40K Jan 10 00:06 packages/elisp-depmap-20200714.1630.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:06 packages/elisp-depmap-badge.svg
+4.0K -rw-r--r-- 1 root root  194 Jan 10 00:06 packages/elisp-depmap-readme.txt

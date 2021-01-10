@@ -1,0 +1,33 @@
+Package: nndiscourse
+Fetcher: github
+Source:  https://github.com/dickmao/nndiscourse.git
+
+Updating /mnt/store/melpa/working/nndiscourse/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nndiscourse/
+  to /tmp/nndiscoursevKgzko/nndiscourse-20200829.1751
+    nndiscourse.el -> nndiscourse.el
+    nndiscourse/Gemfile -> nndiscourse/Gemfile
+    nndiscourse/Gemfile.lock -> nndiscourse/Gemfile.lock
+    nndiscourse/nndiscourse.gemspec -> nndiscourse/nndiscourse.gemspec
+    nndiscourse/nndiscourse.thor -> nndiscourse/nndiscourse.thor
+    nndiscourse/lib => nndiscourse/lib
+Created nndiscourse-20200829.1751.tar containing:
+  nndiscourse-20200829.1751/
+  nndiscourse-20200829.1751/nndiscourse-pkg.el
+  nndiscourse-20200829.1751/nndiscourse.el
+  nndiscourse-20200829.1751/nndiscourse/
+  nndiscourse-20200829.1751/nndiscourse/Gemfile
+  nndiscourse-20200829.1751/nndiscourse/Gemfile.lock
+  nndiscourse-20200829.1751/nndiscourse/lib/
+  nndiscourse-20200829.1751/nndiscourse/lib/nndiscourse.rb
+  nndiscourse-20200829.1751/nndiscourse/lib/nndiscourse/
+  nndiscourse-20200829.1751/nndiscourse/lib/nndiscourse/version.rb
+  nndiscourse-20200829.1751/nndiscourse/nndiscourse.gemspec
+  nndiscourse-20200829.1751/nndiscourse/nndiscourse.thor
+Built nndiscourse in 2.886s, finished at Sun Jan 10 00:31:55 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  402 Jan 10 00:31 packages/nndiscourse-20200829.1751.entry
+ 72K -rw-r--r-- 1 root root  70K Jan 10 00:31 packages/nndiscourse-20200829.1751.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:31 packages/nndiscourse-badge.svg
+4.0K -rw-r--r-- 1 root root   30 Jan 10 00:31 packages/nndiscourse-readme.txt

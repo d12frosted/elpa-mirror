@@ -1,0 +1,29 @@
+Package: swift3-mode
+Fetcher: github
+Source:  https://github.com/taku0/swift3-mode.git
+
+Updating /mnt/store/melpa/working/swift3-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/swift3-mode/
+  to /tmp/swift3-modekCX0eD/swift3-mode-20160918.1250
+    swift3-mode-beginning-of-defun.el -> swift3-mode-beginning-of-defun.el
+    swift3-mode-font-lock.el -> swift3-mode-font-lock.el
+    swift3-mode-indent.el -> swift3-mode-indent.el
+    swift3-mode-lexer.el -> swift3-mode-lexer.el
+    swift3-mode-repl.el -> swift3-mode-repl.el
+    swift3-mode.el -> swift3-mode.el
+Created swift3-mode-20160918.1250.tar containing:
+  swift3-mode-20160918.1250/
+  swift3-mode-20160918.1250/swift3-mode-beginning-of-defun.el
+  swift3-mode-20160918.1250/swift3-mode-font-lock.el
+  swift3-mode-20160918.1250/swift3-mode-indent.el
+  swift3-mode-20160918.1250/swift3-mode-lexer.el
+  swift3-mode-20160918.1250/swift3-mode-pkg.el
+  swift3-mode-20160918.1250/swift3-mode-repl.el
+  swift3-mode-20160918.1250/swift3-mode.el
+Built swift3-mode in 3.125s, finished at Sun Jan 10 00:47:50 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  290 Jan 10 00:47 packages/swift3-mode-20160918.1250.entry
+112K -rw-r--r-- 1 root root 110K Jan 10 00:47 packages/swift3-mode-20160918.1250.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:47 packages/swift3-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   51 Jan 10 00:47 packages/swift3-mode-readme.txt

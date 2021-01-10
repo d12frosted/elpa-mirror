@@ -1,0 +1,65 @@
+Package: ecukes
+Fetcher: github
+Source:  https://github.com/ecukes/ecukes.git
+
+Updating /mnt/store/melpa/working/ecukes/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ecukes/
+  to /tmp/ecukesrrp1og/ecukes-20201010.1529
+    ecukes-byte-compile.el -> ecukes-byte-compile.el
+    ecukes-cli.el -> ecukes-cli.el
+    ecukes-core.el -> ecukes-core.el
+    ecukes-def.el -> ecukes-def.el
+    ecukes-helpers.el -> ecukes-helpers.el
+    ecukes-hooks.el -> ecukes-hooks.el
+    ecukes-load.el -> ecukes-load.el
+    ecukes-new.el -> ecukes-new.el
+    ecukes-parse.el -> ecukes-parse.el
+    ecukes-pkg.el -> ecukes-pkg.el
+    ecukes-project.el -> ecukes-project.el
+    ecukes-reporter.el -> ecukes-reporter.el
+    ecukes-run.el -> ecukes-run.el
+    ecukes-stats.el -> ecukes-stats.el
+    ecukes-steps.el -> ecukes-steps.el
+    ecukes-template.el -> ecukes-template.el
+    ecukes.el -> ecukes.el
+    templates => templates
+    bin => bin
+    reporters => reporters
+Created ecukes-20201010.1529.tar containing:
+  ecukes-20201010.1529/
+  ecukes-20201010.1529/bin/
+  ecukes-20201010.1529/bin/ecukes
+  ecukes-20201010.1529/ecukes-byte-compile.el
+  ecukes-20201010.1529/ecukes-cli.el
+  ecukes-20201010.1529/ecukes-core.el
+  ecukes-20201010.1529/ecukes-def.el
+  ecukes-20201010.1529/ecukes-helpers.el
+  ecukes-20201010.1529/ecukes-hooks.el
+  ecukes-20201010.1529/ecukes-load.el
+  ecukes-20201010.1529/ecukes-new.el
+  ecukes-20201010.1529/ecukes-parse.el
+  ecukes-20201010.1529/ecukes-pkg.el
+  ecukes-20201010.1529/ecukes-project.el
+  ecukes-20201010.1529/ecukes-reporter.el
+  ecukes-20201010.1529/ecukes-run.el
+  ecukes-20201010.1529/ecukes-stats.el
+  ecukes-20201010.1529/ecukes-steps.el
+  ecukes-20201010.1529/ecukes-template.el
+  ecukes-20201010.1529/ecukes.el
+  ecukes-20201010.1529/reporters/
+  ecukes-20201010.1529/reporters/ecukes-reporter-dot.el
+  ecukes-20201010.1529/reporters/ecukes-reporter-landing.el
+  ecukes-20201010.1529/reporters/ecukes-reporter-magnars.el
+  ecukes-20201010.1529/reporters/ecukes-reporter-progress.el
+  ecukes-20201010.1529/reporters/ecukes-reporter-spec.el
+  ecukes-20201010.1529/templates/
+  ecukes-20201010.1529/templates/env.tpl
+  ecukes-20201010.1529/templates/feature.tpl
+  ecukes-20201010.1529/templates/missing-step.tpl
+  ecukes-20201010.1529/templates/step-definition.tpl
+Built ecukes in 3.135s, finished at Sun Jan 10 00:05:26 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  252 Jan 10 00:05 packages/ecukes-20201010.1529.entry
+112K -rw-r--r-- 1 root root 110K Jan 10 00:05 packages/ecukes-20201010.1529.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:05 packages/ecukes-badge.svg

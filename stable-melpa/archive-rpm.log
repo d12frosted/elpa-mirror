@@ -1,0 +1,22 @@
+Package: archive-rpm
+Fetcher: github
+Source:  https://github.com/legoscia/archive-rpm.git
+
+Updating /mnt/store/melpa/working/archive-rpm/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/archive-rpm/
+  to /tmp/archive-rpmVPZu5M/archive-rpm-20180706.1232
+    archive-cpio.el -> archive-cpio.el
+    archive-rpm-pkg.el -> archive-rpm-pkg.el
+    archive-rpm.el -> archive-rpm.el
+Created archive-rpm-20180706.1232.tar containing:
+  archive-rpm-20180706.1232/
+  archive-rpm-20180706.1232/archive-cpio.el
+  archive-rpm-20180706.1232/archive-rpm-pkg.el
+  archive-rpm-20180706.1232/archive-rpm.el
+Built archive-rpm in 3.374s, finished at Sat Jan  9 23:54:04 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  342 Jan  9 23:54 packages/archive-rpm-20180706.1232.entry
+ 32K -rw-r--r-- 1 root root  30K Jan  9 23:54 packages/archive-rpm-20180706.1232.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 23:54 packages/archive-rpm-badge.svg
+4.0K -rw-r--r-- 1 root root  269 Jan  9 23:54 packages/archive-rpm-readme.txt

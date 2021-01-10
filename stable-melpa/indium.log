@@ -1,0 +1,55 @@
+Package: indium
+Fetcher: github
+Source:  https://github.com/NicolasPetton/Indium.git
+
+Updating /mnt/store/melpa/working/indium/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/indium/
+  to /tmp/indium354Vip/indium-20201103.2040
+    indium-breakpoint.el -> indium-breakpoint.el
+    indium-chrome.el -> indium-chrome.el
+    indium-client.el -> indium-client.el
+    indium-debugger-litable.el -> indium-debugger-litable.el
+    indium-debugger-locals.el -> indium-debugger-locals.el
+    indium-debugger.el -> indium-debugger.el
+    indium-faces.el -> indium-faces.el
+    indium-inspector.el -> indium-inspector.el
+    indium-interaction.el -> indium-interaction.el
+    indium-list-sources.el -> indium-list-sources.el
+    indium-nodejs.el -> indium-nodejs.el
+    indium-render.el -> indium-render.el
+    indium-repl.el -> indium-repl.el
+    indium-scratch.el -> indium-scratch.el
+    indium-seq-fix.el -> indium-seq-fix.el
+    indium-structs.el -> indium-structs.el
+    indium.el -> indium.el
+  ! doc/Indium.texi -> Indium.texi
+Created /tmp/indium354Vip/indium-20201103.2040/Indium.info
+Created indium-20201103.2040.tar containing:
+  indium-20201103.2040/
+  indium-20201103.2040/Indium.info
+  indium-20201103.2040/dir
+  indium-20201103.2040/indium-breakpoint.el
+  indium-20201103.2040/indium-chrome.el
+  indium-20201103.2040/indium-client.el
+  indium-20201103.2040/indium-debugger-litable.el
+  indium-20201103.2040/indium-debugger-locals.el
+  indium-20201103.2040/indium-debugger.el
+  indium-20201103.2040/indium-faces.el
+  indium-20201103.2040/indium-inspector.el
+  indium-20201103.2040/indium-interaction.el
+  indium-20201103.2040/indium-list-sources.el
+  indium-20201103.2040/indium-nodejs.el
+  indium-20201103.2040/indium-pkg.el
+  indium-20201103.2040/indium-render.el
+  indium-20201103.2040/indium-repl.el
+  indium-20201103.2040/indium-scratch.el
+  indium-20201103.2040/indium-seq-fix.el
+  indium-20201103.2040/indium-structs.el
+  indium-20201103.2040/indium.el
+Built indium in 12.246s, finished at Sun Jan 10 00:22:06 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  507 Jan 10 00:22 packages/indium-20201103.2040.entry
+172K -rw-r--r-- 1 root root 170K Jan 10 00:22 packages/indium-20201103.2040.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:22 packages/indium-badge.svg
+4.0K -rw-r--r-- 1 root root  273 Jan 10 00:22 packages/indium-readme.txt

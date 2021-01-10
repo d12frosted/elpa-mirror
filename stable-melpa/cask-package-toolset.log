@@ -1,0 +1,35 @@
+Package: cask-package-toolset
+Fetcher: github
+Source:  https://github.com/AdrieanKhisbe/cask-package-toolset.el.git
+
+Updating /mnt/store/melpa/working/cask-package-toolset/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cask-package-toolset/
+  to /tmp/cask-package-toolsetnuxuOF/cask-package-toolset-20170921.2256
+    cask-package-toolset.el -> cask-package-toolset.el
+    bin => bin
+    templates => templates
+Created cask-package-toolset-20170921.2256.tar containing:
+  cask-package-toolset-20170921.2256/
+  cask-package-toolset-20170921.2256/bin/
+  cask-package-toolset-20170921.2256/bin/package-toolset
+  cask-package-toolset-20170921.2256/cask-package-toolset-pkg.el
+  cask-package-toolset-20170921.2256/cask-package-toolset.el
+  cask-package-toolset-20170921.2256/templates/
+  cask-package-toolset-20170921.2256/templates/.ert-runner
+  cask-package-toolset-20170921.2256/templates/.gitignore
+  cask-package-toolset-20170921.2256/templates/.nosearch
+  cask-package-toolset-20170921.2256/templates/.travis.yml
+  cask-package-toolset-20170921.2256/templates/Makefile
+  cask-package-toolset-20170921.2256/templates/test/
+  cask-package-toolset-20170921.2256/templates/test/package-test.el
+  cask-package-toolset-20170921.2256/templates/test/test-helper.el
+  cask-package-toolset-20170921.2256/templates/undercover.el
+  cask-package-toolset-20170921.2256/templates/void
+  cask-package-toolset-20170921.2256/templates/void-template
+Built cask-package-toolset in 3.141s, finished at Sat Jan  9 23:57:37 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  574 Jan  9 23:57 packages/cask-package-toolset-20170921.2256.entry
+ 40K -rw-r--r-- 1 root root  40K Jan  9 23:57 packages/cask-package-toolset-20170921.2256.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 23:57 packages/cask-package-toolset-badge.svg
+4.0K -rw-r--r-- 1 root root  276 Jan  9 23:57 packages/cask-package-toolset-readme.txt

@@ -1,0 +1,35 @@
+Package: lsp-metals
+Fetcher: github
+Source:  https://github.com/emacs-lsp/lsp-metals.git
+
+Updating /mnt/store/melpa/working/lsp-metals/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-metals/
+  to /tmp/lsp-metalsjQC0kw/lsp-metals-20201230.706
+    lsp-metals-protocol.el -> lsp-metals-protocol.el
+    lsp-metals-treeview.el -> lsp-metals-treeview.el
+    lsp-metals.el -> lsp-metals.el
+    icons => icons
+Created lsp-metals-20201230.706.tar containing:
+  lsp-metals-20201230.706/
+  lsp-metals-20201230.706/icons/
+  lsp-metals-20201230.706/icons/class.png
+  lsp-metals-20201230.706/icons/enum.png
+  lsp-metals-20201230.706/icons/field.png
+  lsp-metals-20201230.706/icons/interface.png
+  lsp-metals-20201230.706/icons/logo.png
+  lsp-metals-20201230.706/icons/method.png
+  lsp-metals-20201230.706/icons/object.png
+  lsp-metals-20201230.706/icons/trait.png
+  lsp-metals-20201230.706/icons/val.png
+  lsp-metals-20201230.706/icons/var.png
+  lsp-metals-20201230.706/lsp-metals-pkg.el
+  lsp-metals-20201230.706/lsp-metals-protocol.el
+  lsp-metals-20201230.706/lsp-metals-treeview.el
+  lsp-metals-20201230.706/lsp-metals.el
+Built lsp-metals in 2.931s, finished at Sun Jan 10 00:27:12 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  708 Jan 10 00:27 packages/lsp-metals-20201230.706.entry
+ 92K -rw-r--r-- 1 root root  90K Jan 10 00:27 packages/lsp-metals-20201230.706.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:27 packages/lsp-metals-badge.svg
+4.0K -rw-r--r-- 1 root root   18 Jan 10 00:27 packages/lsp-metals-readme.txt

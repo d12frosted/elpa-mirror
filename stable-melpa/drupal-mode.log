@@ -1,0 +1,37 @@
+Package: drupal-mode
+Fetcher: github
+Source:  https://github.com/arnested/drupal-mode.git
+
+Updating /mnt/store/melpa/working/drupal-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/drupal-mode/
+  to /tmp/drupal-modejKoe3Q/drupal-mode-20200210.2222
+    drupal-mode.el -> drupal-mode.el
+    drush-make-mode.el -> drush-make-mode.el
+    drupal => drupal
+Created drupal-mode-20200210.2222.tar containing:
+  drupal-mode-20200210.2222/
+  drupal-mode-20200210.2222/drupal-mode-pkg.el
+  drupal-mode-20200210.2222/drupal-mode.el
+  drupal-mode-20200210.2222/drupal/
+  drupal-mode-20200210.2222/drupal/autoinsert.el
+  drupal-mode-20200210.2222/drupal/eldoc.el
+  drupal-mode-20200210.2222/drupal/emacs-drush.el
+  drupal-mode-20200210.2222/drupal/etags.el
+  drupal-mode-20200210.2222/drupal/flycheck.el
+  drupal-mode-20200210.2222/drupal/flymake-phpcs.el
+  drupal-mode-20200210.2222/drupal/ggtags.el
+  drupal-mode-20200210.2222/drupal/gtags.el
+  drupal-mode-20200210.2222/drupal/gxref.el
+  drupal-mode-20200210.2222/drupal/helm-gtags.el
+  drupal-mode-20200210.2222/drupal/ispell.el
+  drupal-mode-20200210.2222/drupal/pcomplete.el
+  drupal-mode-20200210.2222/drupal/phpcs.el
+  drupal-mode-20200210.2222/drupal/webjump.el
+  drupal-mode-20200210.2222/drush-make-mode.el
+Built drupal-mode in 4.023s, finished at Sun Jan 10 00:04:56 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  421 Jan 10 00:04 packages/drupal-mode-20200210.2222.entry
+100K -rw-r--r-- 1 root root 100K Jan 10 00:04 packages/drupal-mode-20200210.2222.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:04 packages/drupal-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  187 Jan 10 00:04 packages/drupal-mode-readme.txt

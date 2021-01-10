@@ -1,0 +1,51 @@
+Package: lsp-dart
+Fetcher: github
+Source:  https://github.com/emacs-lsp/lsp-dart.git
+
+Updating /mnt/store/melpa/working/lsp-dart/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-dart/
+  to /tmp/lsp-dart7S3bnp/lsp-dart-20210110.15
+    lsp-dart-closing-labels.el -> lsp-dart-closing-labels.el
+    lsp-dart-code-lens.el -> lsp-dart-code-lens.el
+    lsp-dart-commands.el -> lsp-dart-commands.el
+    lsp-dart-dap.el -> lsp-dart-dap.el
+    lsp-dart-devtools.el -> lsp-dart-devtools.el
+    lsp-dart-flutter-colors.el -> lsp-dart-flutter-colors.el
+    lsp-dart-flutter-daemon.el -> lsp-dart-flutter-daemon.el
+    lsp-dart-flutter-fringe-colors.el -> lsp-dart-flutter-fringe-colors.el
+    lsp-dart-flutter-widget-guide.el -> lsp-dart-flutter-widget-guide.el
+    lsp-dart-outline.el -> lsp-dart-outline.el
+    lsp-dart-protocol.el -> lsp-dart-protocol.el
+    lsp-dart-test-output.el -> lsp-dart-test-output.el
+    lsp-dart-test-support.el -> lsp-dart-test-support.el
+    lsp-dart-test-tree.el -> lsp-dart-test-tree.el
+    lsp-dart-utils.el -> lsp-dart-utils.el
+    lsp-dart.el -> lsp-dart.el
+Created lsp-dart-20210110.15.tar containing:
+  lsp-dart-20210110.15/
+  lsp-dart-20210110.15/lsp-dart-closing-labels.el
+  lsp-dart-20210110.15/lsp-dart-code-lens.el
+  lsp-dart-20210110.15/lsp-dart-commands.el
+  lsp-dart-20210110.15/lsp-dart-dap.el
+  lsp-dart-20210110.15/lsp-dart-devtools.el
+  lsp-dart-20210110.15/lsp-dart-flutter-colors.el
+  lsp-dart-20210110.15/lsp-dart-flutter-daemon.el
+  lsp-dart-20210110.15/lsp-dart-flutter-fringe-colors.el
+  lsp-dart-20210110.15/lsp-dart-flutter-widget-guide.el
+  lsp-dart-20210110.15/lsp-dart-outline.el
+  lsp-dart-20210110.15/lsp-dart-pkg.el
+  lsp-dart-20210110.15/lsp-dart-protocol.el
+  lsp-dart-20210110.15/lsp-dart-test-output.el
+  lsp-dart-20210110.15/lsp-dart-test-support.el
+  lsp-dart-20210110.15/lsp-dart-test-tree.el
+  lsp-dart-20210110.15/lsp-dart-utils.el
+  lsp-dart-20210110.15/lsp-dart.el
+Built lsp-dart in 3.891s, finished at Sun Jan 10 00:27:05 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  449 Jan  9 21:40 packages/lsp-dart-20201206.1725.entry
+160K -rw-r--r-- 1 root root 160K Jan  9 21:40 packages/lsp-dart-20201206.1725.tar
+4.0K -rw-r--r-- 1 root root  447 Jan 10 00:27 packages/lsp-dart-20210110.15.entry
+160K -rw-r--r-- 1 root root 160K Jan 10 00:27 packages/lsp-dart-20210110.15.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:27 packages/lsp-dart-badge.svg
+4.0K -rw-r--r-- 1 root root   41 Jan 10 00:27 packages/lsp-dart-readme.txt

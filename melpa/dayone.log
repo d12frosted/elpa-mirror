@@ -1,0 +1,23 @@
+Package: dayone
+Fetcher: github
+Source:  https://github.com/mori-dev/emacs-dayone.git
+
+Updating /mnt/store/melpa/working/dayone/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dayone/
+  to /tmp/dayoneuyxsRD/dayone-20160105.1240
+    dayone.el -> dayone.el
+    layout.xml.mustache -> layout.xml.mustache
+    tag.xml.mustache -> tag.xml.mustache
+Created dayone-20160105.1240.tar containing:
+  dayone-20160105.1240/
+  dayone-20160105.1240/dayone-pkg.el
+  dayone-20160105.1240/dayone.el
+  dayone-20160105.1240/layout.xml.mustache
+  dayone-20160105.1240/tag.xml.mustache
+Built dayone in 3.288s, finished at Sun Jan 10 00:02:40 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  407 Jan 10 00:02 packages/dayone-20160105.1240.entry
+ 20K -rw-r--r-- 1 root root  20K Jan 10 00:02 packages/dayone-20160105.1240.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:02 packages/dayone-badge.svg
+4.0K -rw-r--r-- 1 root root  726 Jan 10 00:02 packages/dayone-readme.txt

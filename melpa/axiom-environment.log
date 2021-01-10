@@ -1,0 +1,69 @@
+Package: axiom-environment
+Fetcher: git
+Source:  https://bitbucket.org/pdo/axiom-environment
+
+Updating /mnt/store/melpa/working/axiom-environment/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/axiom-environment/
+  to /tmp/axiom-environmentmD5NSf/axiom-environment-20201212.1109
+    axiom-base.el -> axiom-base.el
+    axiom-boot-mode.el -> axiom-boot-mode.el
+    axiom-buffer-menu.el -> axiom-buffer-menu.el
+    axiom-environment.el -> axiom-environment.el
+    axiom-help-mode.el -> axiom-help-mode.el
+    axiom-input-mode.el -> axiom-input-mode.el
+    axiom-process-mode.el -> axiom-process-mode.el
+    axiom-selector.el -> axiom-selector.el
+    axiom-spad-mode.el -> axiom-spad-mode.el
+    data/axiom-standard-category-info.el -> data/axiom-standard-category-info.el
+    data/axiom-standard-domain-info.el -> data/axiom-standard-domain-info.el
+    data/axiom-standard-operation-info.el -> data/axiom-standard-operation-info.el
+    data/axiom-standard-package-info.el -> data/axiom-standard-package-info.el
+    data/fricas-standard-category-info.el -> data/fricas-standard-category-info.el
+    data/fricas-standard-domain-info.el -> data/fricas-standard-domain-info.el
+    data/fricas-standard-operation-info.el -> data/fricas-standard-operation-info.el
+    data/fricas-standard-package-info.el -> data/fricas-standard-package-info.el
+    data/openaxiom-standard-category-info.el -> data/openaxiom-standard-category-info.el
+    data/openaxiom-standard-domain-info.el -> data/openaxiom-standard-domain-info.el
+    data/openaxiom-standard-operation-info.el -> data/openaxiom-standard-operation-info.el
+    data/openaxiom-standard-package-info.el -> data/openaxiom-standard-package-info.el
+    themes/axiom-on-gcl-theme.el -> themes/axiom-on-gcl-theme.el
+    themes/fricas-on-ccl-theme.el -> themes/fricas-on-ccl-theme.el
+    themes/fricas-on-sbcl-theme.el -> themes/fricas-on-sbcl-theme.el
+    themes/openaxiom-on-sbcl-theme.el -> themes/openaxiom-on-sbcl-theme.el
+Created axiom-environment-20201212.1109.tar containing:
+  axiom-environment-20201212.1109/
+  axiom-environment-20201212.1109/axiom-base.el
+  axiom-environment-20201212.1109/axiom-boot-mode.el
+  axiom-environment-20201212.1109/axiom-buffer-menu.el
+  axiom-environment-20201212.1109/axiom-environment-pkg.el
+  axiom-environment-20201212.1109/axiom-environment.el
+  axiom-environment-20201212.1109/axiom-help-mode.el
+  axiom-environment-20201212.1109/axiom-input-mode.el
+  axiom-environment-20201212.1109/axiom-process-mode.el
+  axiom-environment-20201212.1109/axiom-selector.el
+  axiom-environment-20201212.1109/axiom-spad-mode.el
+  axiom-environment-20201212.1109/data/
+  axiom-environment-20201212.1109/data/axiom-standard-category-info.el
+  axiom-environment-20201212.1109/data/axiom-standard-domain-info.el
+  axiom-environment-20201212.1109/data/axiom-standard-operation-info.el
+  axiom-environment-20201212.1109/data/axiom-standard-package-info.el
+  axiom-environment-20201212.1109/data/fricas-standard-category-info.el
+  axiom-environment-20201212.1109/data/fricas-standard-domain-info.el
+  axiom-environment-20201212.1109/data/fricas-standard-operation-info.el
+  axiom-environment-20201212.1109/data/fricas-standard-package-info.el
+  axiom-environment-20201212.1109/data/openaxiom-standard-category-info.el
+  axiom-environment-20201212.1109/data/openaxiom-standard-domain-info.el
+  axiom-environment-20201212.1109/data/openaxiom-standard-operation-info.el
+  axiom-environment-20201212.1109/data/openaxiom-standard-package-info.el
+  axiom-environment-20201212.1109/themes/
+  axiom-environment-20201212.1109/themes/axiom-on-gcl-theme.el
+  axiom-environment-20201212.1109/themes/fricas-on-ccl-theme.el
+  axiom-environment-20201212.1109/themes/fricas-on-sbcl-theme.el
+  axiom-environment-20201212.1109/themes/openaxiom-on-sbcl-theme.el
+Built axiom-environment in 2.890s, finished at Sat Jan  9 23:55:00 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  372 Jan  9 23:55 packages/axiom-environment-20201212.1109.entry
+300K -rw-r--r-- 1 root root 300K Jan  9 23:55 packages/axiom-environment-20201212.1109.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 23:55 packages/axiom-environment-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Jan  9 23:55 packages/axiom-environment-readme.txt

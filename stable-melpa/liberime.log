@@ -1,0 +1,40 @@
+Package: liberime
+Fetcher: github
+Source:  https://github.com/merrickluo/liberime.git
+
+Updating /mnt/store/melpa/working/liberime/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/liberime/
+  to /tmp/liberime47yuqe/liberime-20201106.858
+    liberime.el -> liberime.el
+    src => src
+    emacs-module => emacs-module
+    LICENSE -> LICENSE
+    Makefile -> Makefile
+    README.org -> README.org
+Created liberime-20201106.858.tar containing:
+  liberime-20201106.858/
+  liberime-20201106.858/LICENSE
+  liberime-20201106.858/Makefile
+  liberime-20201106.858/README.org
+  liberime-20201106.858/emacs-module/
+  liberime-20201106.858/emacs-module/26/
+  liberime-20201106.858/emacs-module/26/emacs-module.h
+  liberime-20201106.858/emacs-module/27/
+  liberime-20201106.858/emacs-module/27/emacs-module.h
+  liberime-20201106.858/emacs-module/28/
+  liberime-20201106.858/emacs-module/28/emacs-module.h
+  liberime-20201106.858/liberime-pkg.el
+  liberime-20201106.858/liberime.el
+  liberime-20201106.858/src/
+  liberime-20201106.858/src/init.c
+  liberime-20201106.858/src/interface.c
+  liberime-20201106.858/src/interface.h
+  liberime-20201106.858/src/liberime-core.c
+  liberime-20201106.858/src/liberime-core.h
+Built liberime in 3.211s, finished at Sun Jan 10 00:26:11 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  325 Jan 10 00:26 packages/liberime-20201106.858.entry
+160K -rw-r--r-- 1 root root 160K Jan 10 00:26 packages/liberime-20201106.858.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:26 packages/liberime-badge.svg
+4.0K -rw-r--r-- 1 root root   59 Jan 10 00:26 packages/liberime-readme.txt

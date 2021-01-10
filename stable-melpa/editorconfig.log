@@ -1,0 +1,51 @@
+Package: editorconfig
+Fetcher: github
+Source:  https://github.com/editorconfig/editorconfig-emacs.git
+
+Updating /mnt/store/melpa/working/editorconfig/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/editorconfig/
+  to /tmp/editorconfigZTF3Wi/editorconfig-20210108.428
+    editorconfig-conf-mode.el -> editorconfig-conf-mode.el
+    editorconfig-core-handle.el -> editorconfig-core-handle.el
+    editorconfig-core.el -> editorconfig-core.el
+    editorconfig-fnmatch.el -> editorconfig-fnmatch.el
+    editorconfig.el -> editorconfig.el
+  ! doc/editorconfig.texi -> editorconfig.texi
+Created /tmp/editorconfigZTF3Wi/editorconfig-20210108.428/editorconfig.info
+Created editorconfig-20210108.428.tar containing:
+  editorconfig-20210108.428/
+  editorconfig-20210108.428/dir
+  editorconfig-20210108.428/editorconfig-conf-mode.el
+  editorconfig-20210108.428/editorconfig-core-handle.el
+  editorconfig-20210108.428/editorconfig-core.el
+  editorconfig-20210108.428/editorconfig-fnmatch.el
+  editorconfig-20210108.428/editorconfig-pkg.el
+  editorconfig-20210108.428/editorconfig.el
+  editorconfig-20210108.428/editorconfig.info
+Built editorconfig in 7.470s, finished at Sun Jan 10 00:05:41 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  405 Jan 10 00:05 packages/editorconfig-20210108.428.entry
+ 92K -rw-r--r-- 1 root root  90K Jan 10 00:05 packages/editorconfig-20210108.428.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:05 packages/editorconfig-badge.svg
+4.0K -rw-r--r-- 1 root root 4.0K Jan 10 00:05 packages/editorconfig-charset-extras-20180223.457.el
+4.0K -rw-r--r-- 1 root root  433 Jan 10 00:05 packages/editorconfig-charset-extras-20180223.457.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:05 packages/editorconfig-charset-extras-badge.svg
+4.0K -rw-r--r-- 1 root root  459 Jan 10 00:05 packages/editorconfig-charset-extras-readme.txt
+4.0K -rw-r--r-- 1 root root  669 Jan 10 00:05 packages/editorconfig-charset-extras.log
+8.0K -rw-r--r-- 1 root root 6.1K Jan 10 00:05 packages/editorconfig-custom-majormode-20180816.244.el
+4.0K -rw-r--r-- 1 root root  458 Jan 10 00:05 packages/editorconfig-custom-majormode-20180816.244.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:05 packages/editorconfig-custom-majormode-badge.svg
+4.0K -rw-r--r-- 1 root root  647 Jan 10 00:05 packages/editorconfig-custom-majormode-readme.txt
+4.0K -rw-r--r-- 1 root root  685 Jan 10 00:05 packages/editorconfig-custom-majormode.log
+4.0K -rw-r--r-- 1 root root 2.6K Jan 10 00:05 packages/editorconfig-domain-specific-20180505.924.el
+4.0K -rw-r--r-- 1 root root  505 Jan 10 00:05 packages/editorconfig-domain-specific-20180505.924.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:05 packages/editorconfig-domain-specific-badge.svg
+4.0K -rw-r--r-- 1 root root  189 Jan 10 00:05 packages/editorconfig-domain-specific-readme.txt
+4.0K -rw-r--r-- 1 root root  682 Jan 10 00:05 packages/editorconfig-domain-specific.log
+ 12K -rw-r--r-- 1 root root 9.4K Jan 10 00:05 packages/editorconfig-generate-20190513.433.el
+4.0K -rw-r--r-- 1 root root  360 Jan 10 00:05 packages/editorconfig-generate-20190513.433.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:05 packages/editorconfig-generate-badge.svg
+4.0K -rw-r--r-- 1 root root  236 Jan 10 00:05 packages/editorconfig-generate-readme.txt
+4.0K -rw-r--r-- 1 root root  621 Jan 10 00:05 packages/editorconfig-generate.log
+4.0K -rw-r--r-- 1 root root  394 Jan 10 00:05 packages/editorconfig-readme.txt

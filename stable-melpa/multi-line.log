@@ -1,0 +1,35 @@
+Package: multi-line
+Fetcher: github
+Source:  https://github.com/IvanMalison/multi-line.git
+
+Updating /mnt/store/melpa/working/multi-line/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/multi-line/
+  to /tmp/multi-lineRHmWfX/multi-line-20170822.226
+    multi-line-candidate.el -> multi-line-candidate.el
+    multi-line-cycle.el -> multi-line-cycle.el
+    multi-line-decorator.el -> multi-line-decorator.el
+    multi-line-enter.el -> multi-line-enter.el
+    multi-line-find.el -> multi-line-find.el
+    multi-line-highlight.el -> multi-line-highlight.el
+    multi-line-respace.el -> multi-line-respace.el
+    multi-line-shared.el -> multi-line-shared.el
+    multi-line.el -> multi-line.el
+Created multi-line-20170822.226.tar containing:
+  multi-line-20170822.226/
+  multi-line-20170822.226/multi-line-candidate.el
+  multi-line-20170822.226/multi-line-cycle.el
+  multi-line-20170822.226/multi-line-decorator.el
+  multi-line-20170822.226/multi-line-enter.el
+  multi-line-20170822.226/multi-line-find.el
+  multi-line-20170822.226/multi-line-highlight.el
+  multi-line-20170822.226/multi-line-pkg.el
+  multi-line-20170822.226/multi-line-respace.el
+  multi-line-20170822.226/multi-line-shared.el
+  multi-line-20170822.226/multi-line.el
+Built multi-line in 3.532s, finished at Sun Jan 10 00:30:51 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  577 Jan 10 00:30 packages/multi-line-20170822.226.entry
+ 52K -rw-r--r-- 1 root root  50K Jan 10 00:30 packages/multi-line-20170822.226.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:30 packages/multi-line-badge.svg
+4.0K -rw-r--r-- 1 root root  325 Jan 10 00:30 packages/multi-line-readme.txt

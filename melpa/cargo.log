@@ -1,0 +1,21 @@
+Package: cargo
+Fetcher: github
+Source:  https://github.com/kwrooijen/cargo.el.git
+
+Updating /mnt/store/melpa/working/cargo/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cargo/
+  to /tmp/cargoKY7Lgs/cargo-20210103.2111
+    cargo-process.el -> cargo-process.el
+    cargo.el -> cargo.el
+Created cargo-20210103.2111.tar containing:
+  cargo-20210103.2111/
+  cargo-20210103.2111/cargo-pkg.el
+  cargo-20210103.2111/cargo-process.el
+  cargo-20210103.2111/cargo.el
+Built cargo in 3.153s, finished at Sat Jan  9 23:57:34 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  403 Jan  9 23:57 packages/cargo-20210103.2111.entry
+ 40K -rw-r--r-- 1 root root  40K Jan  9 23:57 packages/cargo-20210103.2111.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 23:57 packages/cargo-badge.svg
+4.0K -rw-r--r-- 1 root root  985 Jan  9 23:57 packages/cargo-readme.txt

@@ -1,0 +1,35 @@
+Package: feature-mode
+Fetcher: github
+Source:  https://github.com/michaelklishin/cucumber.el.git
+
+Updating /mnt/store/melpa/working/feature-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/feature-mode/
+  to /tmp/feature-modeRLjhZo/feature-mode-20200815.1617
+    feature-mode-pkg.el -> feature-mode-pkg.el
+    feature-mode.el -> feature-mode.el
+    i18n.yml -> i18n.yml
+    snippets => snippets
+    support => support
+Created feature-mode-20200815.1617.tar containing:
+  feature-mode-20200815.1617/
+  feature-mode-20200815.1617/feature-mode-pkg.el
+  feature-mode-20200815.1617/feature-mode.el
+  feature-mode-20200815.1617/i18n.yml
+  feature-mode-20200815.1617/snippets/
+  feature-mode-20200815.1617/snippets/feature-mode/
+  feature-mode-20200815.1617/snippets/feature-mode/and
+  feature-mode-20200815.1617/snippets/feature-mode/bac
+  feature-mode-20200815.1617/snippets/feature-mode/exa
+  feature-mode-20200815.1617/snippets/feature-mode/fea
+  feature-mode-20200815.1617/snippets/feature-mode/giv
+  feature-mode-20200815.1617/snippets/feature-mode/sce
+  feature-mode-20200815.1617/snippets/feature-mode/the
+  feature-mode-20200815.1617/snippets/feature-mode/whe
+  feature-mode-20200815.1617/support/
+  feature-mode-20200815.1617/support/find_step.rb
+Built feature-mode in 3.952s, finished at Sun Jan 10 00:10:44 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  314 Jan 10 00:10 packages/feature-mode-20200815.1617.entry
+ 72K -rw-r--r-- 1 root root  70K Jan 10 00:10 packages/feature-mode-20200815.1617.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:10 packages/feature-mode-badge.svg

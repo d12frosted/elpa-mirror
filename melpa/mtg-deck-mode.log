@@ -1,0 +1,27 @@
+Package: mtg-deck-mode
+Fetcher: github
+Source:  https://github.com/mattiasb/mtg-deck-mode.git
+
+Updating /mnt/store/melpa/working/mtg-deck-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mtg-deck-mode/
+  to /tmp/mtg-deck-modeE38tyH/mtg-deck-mode-20180613.2010
+    mtg-deck-mode.el -> mtg-deck-mode.el
+    formats => formats
+Created mtg-deck-mode-20180613.2010.tar containing:
+  mtg-deck-mode-20180613.2010/
+  mtg-deck-mode-20180613.2010/formats/
+  mtg-deck-mode-20180613.2010/formats/all.cards
+  mtg-deck-mode-20180613.2010/formats/all.names
+  mtg-deck-mode-20180613.2010/formats/legacy.names
+  mtg-deck-mode-20180613.2010/formats/modern.names
+  mtg-deck-mode-20180613.2010/formats/standard.names
+  mtg-deck-mode-20180613.2010/formats/vintage.names
+  mtg-deck-mode-20180613.2010/mtg-deck-mode-pkg.el
+  mtg-deck-mode-20180613.2010/mtg-deck-mode.el
+Built mtg-deck-mode in 3.935s, finished at Sun Jan 10 00:30:40 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  402 Jan 10 00:30 packages/mtg-deck-mode-20180613.2010.entry
+4.5M -rw-r--r-- 1 root root 4.5M Jan 10 00:30 packages/mtg-deck-mode-20180613.2010.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:30 packages/mtg-deck-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  177 Jan 10 00:30 packages/mtg-deck-mode-readme.txt

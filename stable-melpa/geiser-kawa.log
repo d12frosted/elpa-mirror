@@ -1,0 +1,68 @@
+Package: geiser-kawa
+Fetcher: gitlab
+Source:  https://gitlab.com/spellcard199/geiser-kawa.git
+
+Updating /mnt/store/melpa/working/geiser-kawa/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser-kawa/
+  to /tmp/geiser-kawa81SWJK/geiser-kawa-20200507.1305
+  ! elisp/geiser-kawa-arglist.el -> geiser-kawa-arglist.el
+  ! elisp/geiser-kawa-deps.el -> geiser-kawa-deps.el
+  ! elisp/geiser-kawa-devutil-complete.el -> geiser-kawa-devutil-complete.el
+  ! elisp/geiser-kawa-devutil-exprtree.el -> geiser-kawa-devutil-exprtree.el
+  ! elisp/geiser-kawa-ext-help.el -> geiser-kawa-ext-help.el
+  ! elisp/geiser-kawa-globals.el -> geiser-kawa-globals.el
+  ! elisp/geiser-kawa-util.el -> geiser-kawa-util.el
+  ! elisp/geiser-kawa.el -> geiser-kawa.el
+    pom.xml -> pom.xml
+    .mvn => .mvn
+    mvnw -> mvnw
+    mvnw.cmd -> mvnw.cmd
+    src => src
+Created geiser-kawa-20200507.1305.tar containing:
+  geiser-kawa-20200507.1305/
+  geiser-kawa-20200507.1305/.mvn/
+  geiser-kawa-20200507.1305/.mvn/wrapper/
+  geiser-kawa-20200507.1305/.mvn/wrapper/MavenWrapperDownloader.java
+  geiser-kawa-20200507.1305/.mvn/wrapper/maven-wrapper.properties
+  geiser-kawa-20200507.1305/geiser-kawa-arglist.el
+  geiser-kawa-20200507.1305/geiser-kawa-deps.el
+  geiser-kawa-20200507.1305/geiser-kawa-devutil-complete.el
+  geiser-kawa-20200507.1305/geiser-kawa-devutil-exprtree.el
+  geiser-kawa-20200507.1305/geiser-kawa-ext-help.el
+  geiser-kawa-20200507.1305/geiser-kawa-globals.el
+  geiser-kawa-20200507.1305/geiser-kawa-pkg.el
+  geiser-kawa-20200507.1305/geiser-kawa-util.el
+  geiser-kawa-20200507.1305/geiser-kawa.el
+  geiser-kawa-20200507.1305/mvnw
+  geiser-kawa-20200507.1305/mvnw.cmd
+  geiser-kawa-20200507.1305/pom.xml
+  geiser-kawa-20200507.1305/src/
+  geiser-kawa-20200507.1305/src/main/
+  geiser-kawa-20200507.1305/src/main/java/
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/Geiser.java
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/GeiserAutodoc.java
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/GeiserCompleteModule.java
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/GeiserCompleteSymbol.java
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/GeiserEval.java
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/GeiserLoadFile.java
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/GeiserMacroexpand.java
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/GeiserNoValues.java
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/StartKawaWithGeiserSupport.java
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/docutil/
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/docutil/ManualEpubUnzipToTmpDir.java
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/kawadevutil/
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/kawadevutil/Complete.java
+  geiser-kawa-20200507.1305/src/main/java/kawageiser/kawadevutil/ExprTree.java
+  geiser-kawa-20200507.1305/src/test/
+  geiser-kawa-20200507.1305/src/test/java/
+  geiser-kawa-20200507.1305/src/test/java/kawageiser/
+  geiser-kawa-20200507.1305/src/test/java/kawageiser/GeiserAutodocTest.java
+  geiser-kawa-20200507.1305/src/test/java/kawageiser/GeiserTest.java
+Built geiser-kawa in 3.311s, finished at Sun Jan 10 00:14:34 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  461 Jan 10 00:14 packages/geiser-kawa-20200507.1305.entry
+140K -rw-r--r-- 1 root root 140K Jan 10 00:14 packages/geiser-kawa-20200507.1305.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:14 packages/geiser-kawa-badge.svg
+4.0K -rw-r--r-- 1 root root   87 Jan 10 00:14 packages/geiser-kawa-readme.txt

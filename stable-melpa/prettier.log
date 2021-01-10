@@ -1,0 +1,28 @@
+Package: prettier
+Fetcher: github
+Source:  https://github.com/jscheid/prettier.el.git
+
+Updating /mnt/store/melpa/working/prettier/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/prettier/
+  to /tmp/prettierUZySVa/prettier-20201222.953
+    prettier.el -> prettier.el
+    bootstrap-min.js -> bootstrap-min.js
+    prettier-el.js.gz.base64 -> prettier-el.js.gz.base64
+Created prettier-20201222.953.tar containing:
+  prettier-20201222.953/
+  prettier-20201222.953/bootstrap-min.js
+  prettier-20201222.953/prettier-el.js.gz.base64
+  prettier-20201222.953/prettier-pkg.el
+  prettier-20201222.953/prettier.el
+Built prettier in 2.088s, finished at Sun Jan 10 00:39:23 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  438 Jan 10 00:39 packages/prettier-20201222.953.entry
+ 72K -rw-r--r-- 1 root root  70K Jan 10 00:39 packages/prettier-20201222.953.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:39 packages/prettier-badge.svg
+ 12K -rw-r--r-- 1 root root 8.7K Jan  9 21:52 packages/prettier-js-20180109.726.el
+4.0K -rw-r--r-- 1 root root  383 Jan  9 21:52 packages/prettier-js-20180109.726.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 21:52 packages/prettier-js-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Jan  9 21:52 packages/prettier-js-readme.txt
+4.0K -rw-r--r-- 1 root root  141 Jan 10 00:39 packages/prettier-js.log
+4.0K -rw-r--r-- 1 root root  255 Jan 10 00:39 packages/prettier-readme.txt

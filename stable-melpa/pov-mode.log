@@ -1,0 +1,24 @@
+Package: pov-mode
+Fetcher: github
+Source:  https://github.com/melmothx/pov-mode.git
+
+Updating /mnt/store/melpa/working/pov-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pov-mode/
+  to /tmp/pov-modeBaIxOz/pov-mode-20161115.743
+    pov-mode-pkg.el -> pov-mode-pkg.el
+    pov-mode.el -> pov-mode.el
+    dir -> dir
+    pov-mode.info -> pov-mode.info
+Created pov-mode-20161115.743.tar containing:
+  pov-mode-20161115.743/
+  pov-mode-20161115.743/dir
+  pov-mode-20161115.743/pov-mode-pkg.el
+  pov-mode-20161115.743/pov-mode.el
+  pov-mode-20161115.743/pov-mode.info
+Built pov-mode in 2.937s, finished at Sun Jan 10 00:39:17 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  308 Jan 10 00:39 packages/pov-mode-20161115.743.entry
+132K -rw-r--r-- 1 root root 130K Jan 10 00:39 packages/pov-mode-20161115.743.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:39 packages/pov-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jan 10 00:39 packages/pov-mode-readme.txt

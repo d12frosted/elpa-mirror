@@ -1,0 +1,21 @@
+Package: alarm-clock
+Fetcher: github
+Source:  https://github.com/wlemuel/alarm-clock.git
+
+Updating /mnt/store/melpa/working/alarm-clock/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/alarm-clock/
+  to /tmp/alarm-clockKjIwxu/alarm-clock-20191204.716
+    alarm-clock.el -> alarm-clock.el
+    alarm.mp3 -> alarm.mp3
+Created alarm-clock-20191204.716.tar containing:
+  alarm-clock-20191204.716/
+  alarm-clock-20191204.716/alarm-clock-pkg.el
+  alarm-clock-20191204.716/alarm-clock.el
+  alarm-clock-20191204.716/alarm.mp3
+Built alarm-clock in 3.100s, finished at Sat Jan  9 23:53:17 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  411 Jan  9 23:53 packages/alarm-clock-20191204.716.entry
+ 32K -rw-r--r-- 1 root root  30K Jan  9 23:53 packages/alarm-clock-20191204.716.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 23:53 packages/alarm-clock-badge.svg
+4.0K -rw-r--r-- 1 root root  295 Jan  9 23:53 packages/alarm-clock-readme.txt

@@ -1,0 +1,24 @@
+Package: searchq
+Fetcher: github
+Source:  https://github.com/boyw165/searchq.git
+
+Updating /mnt/store/melpa/working/searchq/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/searchq/
+  to /tmp/searchqCwPw26/searchq-20150829.1211
+    searchq.el -> searchq.el
+    images/searchq-search.xpm -> images/searchq-search.xpm
+    images/searchq-search.png -> images/searchq-search.png
+Created searchq-20150829.1211.tar containing:
+  searchq-20150829.1211/
+  searchq-20150829.1211/images/
+  searchq-20150829.1211/images/searchq-search.png
+  searchq-20150829.1211/images/searchq-search.xpm
+  searchq-20150829.1211/searchq-pkg.el
+  searchq-20150829.1211/searchq.el
+Built searchq in 2.909s, finished at Sun Jan 10 00:43:52 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  249 Jan 10 00:43 packages/searchq-20150829.1211.entry
+ 52K -rw-r--r-- 1 root root  50K Jan 10 00:43 packages/searchq-20150829.1211.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:43 packages/searchq-badge.svg
+4.0K -rw-r--r-- 1 root root  591 Jan 10 00:43 packages/searchq-readme.txt

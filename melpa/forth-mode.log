@@ -1,0 +1,44 @@
+Package: forth-mode
+Fetcher: github
+Source:  https://github.com/larsbrinkhoff/forth-mode.git
+
+Updating /mnt/store/melpa/working/forth-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/forth-mode/
+  to /tmp/forth-mode3c808U/forth-mode-20170527.1930
+    forth-block-mode.el -> forth-block-mode.el
+    forth-interaction-mode.el -> forth-interaction-mode.el
+    forth-mode.el -> forth-mode.el
+    forth-parse.el -> forth-parse.el
+    forth-smie.el -> forth-smie.el
+    forth-spec.el -> forth-spec.el
+    forth-syntax.el -> forth-syntax.el
+    forth-mode.texi -> forth-mode.texi
+    backend => backend
+Created /tmp/forth-mode3c808U/forth-mode-20170527.1930/forth-mode.info
+Created forth-mode-20170527.1930.tar containing:
+  forth-mode-20170527.1930/
+  forth-mode-20170527.1930/backend/
+  forth-mode-20170527.1930/backend/gforth.el
+  forth-mode-20170527.1930/backend/lbforth.el
+  forth-mode-20170527.1930/backend/pforth.el
+  forth-mode-20170527.1930/backend/spforth.el
+  forth-mode-20170527.1930/backend/swiftforth.el
+  forth-mode-20170527.1930/backend/swiftforth.fth
+  forth-mode-20170527.1930/backend/vfxforth.el
+  forth-mode-20170527.1930/dir
+  forth-mode-20170527.1930/forth-block-mode.el
+  forth-mode-20170527.1930/forth-interaction-mode.el
+  forth-mode-20170527.1930/forth-mode-pkg.el
+  forth-mode-20170527.1930/forth-mode.el
+  forth-mode-20170527.1930/forth-mode.info
+  forth-mode-20170527.1930/forth-parse.el
+  forth-mode-20170527.1930/forth-smie.el
+  forth-mode-20170527.1930/forth-spec.el
+  forth-mode-20170527.1930/forth-syntax.el
+Built forth-mode in 6.107s, finished at Sun Jan 10 00:13:56 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  376 Jan 10 00:13 packages/forth-mode-20170527.1930.entry
+ 60K -rw-r--r-- 1 root root  60K Jan 10 00:13 packages/forth-mode-20170527.1930.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:13 packages/forth-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   36 Jan 10 00:13 packages/forth-mode-readme.txt

@@ -1,0 +1,65 @@
+Package: fuel
+Fetcher: github
+Source:  https://github.com/factor/factor.git
+
+Updating /mnt/store/melpa/working/fuel/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fuel/
+  to /tmp/fueln0GVeV/fuel-20200514.1516
+  ! misc/fuel/factor-mode.el -> factor-mode.el
+  ! misc/fuel/factor-smie.el -> factor-smie.el
+  ! misc/fuel/fuel-autodoc.el -> fuel-autodoc.el
+  ! misc/fuel/fuel-autohelp.el -> fuel-autohelp.el
+  ! misc/fuel/fuel-base.el -> fuel-base.el
+  ! misc/fuel/fuel-completion.el -> fuel-completion.el
+  ! misc/fuel/fuel-connection.el -> fuel-connection.el
+  ! misc/fuel/fuel-debug-uses.el -> fuel-debug-uses.el
+  ! misc/fuel/fuel-debug.el -> fuel-debug.el
+  ! misc/fuel/fuel-edit.el -> fuel-edit.el
+  ! misc/fuel/fuel-eval.el -> fuel-eval.el
+  ! misc/fuel/fuel-help.el -> fuel-help.el
+  ! misc/fuel/fuel-listener.el -> fuel-listener.el
+  ! misc/fuel/fuel-log.el -> fuel-log.el
+  ! misc/fuel/fuel-markup.el -> fuel-markup.el
+  ! misc/fuel/fuel-menu.el -> fuel-menu.el
+  ! misc/fuel/fuel-mode.el -> fuel-mode.el
+  ! misc/fuel/fuel-pkg.el -> fuel-pkg.el
+  ! misc/fuel/fuel-popup.el -> fuel-popup.el
+  ! misc/fuel/fuel-refactor.el -> fuel-refactor.el
+  ! misc/fuel/fuel-scaffold.el -> fuel-scaffold.el
+  ! misc/fuel/fuel-stack.el -> fuel-stack.el
+  ! misc/fuel/fuel-table.el -> fuel-table.el
+  ! misc/fuel/fuel-tests.el -> fuel-tests.el
+  ! misc/fuel/fuel-xref.el -> fuel-xref.el
+Created fuel-20200514.1516.tar containing:
+  fuel-20200514.1516/
+  fuel-20200514.1516/factor-mode.el
+  fuel-20200514.1516/factor-smie.el
+  fuel-20200514.1516/fuel-autodoc.el
+  fuel-20200514.1516/fuel-autohelp.el
+  fuel-20200514.1516/fuel-base.el
+  fuel-20200514.1516/fuel-completion.el
+  fuel-20200514.1516/fuel-connection.el
+  fuel-20200514.1516/fuel-debug-uses.el
+  fuel-20200514.1516/fuel-debug.el
+  fuel-20200514.1516/fuel-edit.el
+  fuel-20200514.1516/fuel-eval.el
+  fuel-20200514.1516/fuel-help.el
+  fuel-20200514.1516/fuel-listener.el
+  fuel-20200514.1516/fuel-log.el
+  fuel-20200514.1516/fuel-markup.el
+  fuel-20200514.1516/fuel-menu.el
+  fuel-20200514.1516/fuel-mode.el
+  fuel-20200514.1516/fuel-pkg.el
+  fuel-20200514.1516/fuel-popup.el
+  fuel-20200514.1516/fuel-refactor.el
+  fuel-20200514.1516/fuel-scaffold.el
+  fuel-20200514.1516/fuel-stack.el
+  fuel-20200514.1516/fuel-table.el
+  fuel-20200514.1516/fuel-tests.el
+  fuel-20200514.1516/fuel-xref.el
+Built fuel in 12.987s, finished at Sun Jan 10 00:14:24 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  202 Jan 10 00:14 packages/fuel-20200514.1516.entry
+212K -rw-r--r-- 1 root root 210K Jan 10 00:14 packages/fuel-20200514.1516.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:14 packages/fuel-badge.svg

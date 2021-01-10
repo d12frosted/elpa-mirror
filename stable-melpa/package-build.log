@@ -1,0 +1,25 @@
+Package: package-build
+Fetcher: github
+Source:  https://github.com/melpa/package-build.git
+
+Updating /mnt/store/melpa/working/package-build/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/package-build/
+  to /tmp/package-buildimoLjT/package-build-20210105.937
+    package-build-badges.el -> package-build-badges.el
+    package-build.el -> package-build.el
+    package-recipe-mode.el -> package-recipe-mode.el
+    package-recipe.el -> package-recipe.el
+Created package-build-20210105.937.tar containing:
+  package-build-20210105.937/
+  package-build-20210105.937/package-build-badges.el
+  package-build-20210105.937/package-build-pkg.el
+  package-build-20210105.937/package-build.el
+  package-build-20210105.937/package-recipe-mode.el
+  package-build-20210105.937/package-recipe.el
+Built package-build in 2.963s, finished at Sun Jan 10 00:36:55 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  403 Jan 10 00:36 packages/package-build-20210105.937.entry
+ 60K -rw-r--r-- 1 root root  60K Jan 10 00:36 packages/package-build-20210105.937.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:36 packages/package-build-badge.svg
+4.0K -rw-r--r-- 1 root root  308 Jan 10 00:36 packages/package-build-readme.txt

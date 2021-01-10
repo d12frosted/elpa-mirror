@@ -1,0 +1,25 @@
+Package: julia-snail
+Fetcher: github
+Source:  https://github.com/gcv/julia-snail.git
+
+Updating /mnt/store/melpa/working/julia-snail/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/julia-snail/
+  to /tmp/julia-snailoDPRXu/julia-snail-20201128.135
+    julia-snail.el -> julia-snail.el
+    JuliaSnail.jl -> JuliaSnail.jl
+    Manifest.toml -> Manifest.toml
+    Project.toml -> Project.toml
+Created julia-snail-20201128.135.tar containing:
+  julia-snail-20201128.135/
+  julia-snail-20201128.135/JuliaSnail.jl
+  julia-snail-20201128.135/Manifest.toml
+  julia-snail-20201128.135/Project.toml
+  julia-snail-20201128.135/julia-snail-pkg.el
+  julia-snail-20201128.135/julia-snail.el
+Built julia-snail in 6.730s, finished at Sun Jan 10 00:24:13 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  340 Jan 10 00:24 packages/julia-snail-20201128.135.entry
+ 72K -rw-r--r-- 1 root root  70K Jan 10 00:24 packages/julia-snail-20201128.135.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:24 packages/julia-snail-badge.svg
+4.0K -rw-r--r-- 1 root root  200 Jan 10 00:24 packages/julia-snail-readme.txt

@@ -1,0 +1,27 @@
+Package: package-lint
+Fetcher: github
+Source:  https://github.com/purcell/package-lint.git
+
+Updating /mnt/store/melpa/working/package-lint/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/package-lint/
+  to /tmp/package-lintoqUPCc/package-lint-20200906.512
+    package-lint.el -> package-lint.el
+    data => data
+Created package-lint-20200906.512.tar containing:
+  package-lint-20200906.512/
+  package-lint-20200906.512/data/
+  package-lint-20200906.512/data/stdlib-changes
+  package-lint-20200906.512/package-lint-pkg.el
+  package-lint-20200906.512/package-lint.el
+Built package-lint in 3.117s, finished at Sun Jan 10 00:36:56 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  474 Jan 10 00:36 packages/package-lint-20200906.512.entry
+752K -rw-r--r-- 1 root root 750K Jan 10 00:36 packages/package-lint-20200906.512.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:36 packages/package-lint-badge.svg
+4.0K -rw-r--r-- 1 root root 2.7K Jan 10 00:36 packages/package-lint-flymake-20210104.2226.el
+4.0K -rw-r--r-- 1 root root  278 Jan  9 21:50 packages/package-lint-flymake-20210104.2226.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 21:50 packages/package-lint-flymake-badge.svg
+4.0K -rw-r--r-- 1 root root  345 Jan  9 21:50 packages/package-lint-flymake-readme.txt
+4.0K -rw-r--r-- 1 root root  156 Jan 10 00:36 packages/package-lint-flymake.log
+4.0K -rw-r--r-- 1 root root  260 Jan 10 00:36 packages/package-lint-readme.txt

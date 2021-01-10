@@ -1,0 +1,29 @@
+Package: emacsc
+Fetcher: github
+Source:  https://github.com/knu/emacsc.git
+
+Updating /mnt/store/melpa/working/emacsc/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/emacsc/
+  to /tmp/emacscmmVeiO/emacsc-20190917.1102
+  ! lisp/ediff-batch.el -> ediff-batch.el
+  ! lisp/emacsc.el -> emacsc.el
+    bin => bin
+Created emacsc-20190917.1102.tar containing:
+  emacsc-20190917.1102/
+  emacsc-20190917.1102/bin/
+  emacsc-20190917.1102/bin/dired
+  emacsc-20190917.1102/bin/ediff
+  emacsc-20190917.1102/bin/ediff-merge
+  emacsc-20190917.1102/bin/emacsc
+  emacsc-20190917.1102/bin/evil
+  emacsc-20190917.1102/bin/magit
+  emacsc-20190917.1102/ediff-batch.el
+  emacsc-20190917.1102/emacsc-pkg.el
+  emacsc-20190917.1102/emacsc.el
+Built emacsc in 2.957s, finished at Sun Jan 10 00:06:55 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  300 Jan 10 00:06 packages/emacsc-20190917.1102.entry
+ 40K -rw-r--r-- 1 root root  40K Jan 10 00:06 packages/emacsc-20190917.1102.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:06 packages/emacsc-badge.svg
+4.0K -rw-r--r-- 1 root root  458 Jan 10 00:06 packages/emacsc-readme.txt

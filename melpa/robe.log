@@ -1,0 +1,38 @@
+Package: robe
+Fetcher: github
+Source:  https://github.com/dgutov/robe.git
+
+Updating /mnt/store/melpa/working/robe/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/robe/
+  to /tmp/robep6UTfT/robe-20201214.2255
+    ac-robe.el -> ac-robe.el
+    company-robe.el -> company-robe.el
+    robe.el -> robe.el
+    lib => lib
+Created robe-20201214.2255.tar containing:
+  robe-20201214.2255/
+  robe-20201214.2255/ac-robe.el
+  robe-20201214.2255/company-robe.el
+  robe-20201214.2255/lib/
+  robe-20201214.2255/lib/robe.rb
+  robe-20201214.2255/lib/robe/
+  robe-20201214.2255/lib/robe/core_ext.rb
+  robe-20201214.2255/lib/robe/jvisor.rb
+  robe-20201214.2255/lib/robe/sash.rb
+  robe-20201214.2255/lib/robe/sash/
+  robe-20201214.2255/lib/robe/sash/const_locations.rb
+  robe-20201214.2255/lib/robe/sash/doc_for.rb
+  robe-20201214.2255/lib/robe/sash/includes_tracker.rb
+  robe-20201214.2255/lib/robe/scanners.rb
+  robe-20201214.2255/lib/robe/server.rb
+  robe-20201214.2255/lib/robe/type_space.rb
+  robe-20201214.2255/lib/robe/visor.rb
+  robe-20201214.2255/robe-pkg.el
+  robe-20201214.2255/robe.el
+Built robe in 3.174s, finished at Sun Jan 10 00:42:48 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  366 Jan 10 00:42 packages/robe-20201214.2255.entry
+ 80K -rw-r--r-- 1 root root  80K Jan 10 00:42 packages/robe-20201214.2255.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:42 packages/robe-badge.svg
+4.0K -rw-r--r-- 1 root root  429 Jan 10 00:42 packages/robe-readme.txt

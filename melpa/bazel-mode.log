@@ -1,0 +1,25 @@
+Package: bazel-mode
+Fetcher: github
+Source:  https://github.com/bazelbuild/emacs-bazel-mode.git
+
+Updating /mnt/store/melpa/working/bazel-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bazel-mode/
+  to /tmp/bazel-modeXWLOEr/bazel-mode-20200627.1625
+  ! lisp/bazel-build.el -> bazel-build.el
+  ! lisp/bazel-mode.el -> bazel-mode.el
+  ! lisp/bazel-util.el -> bazel-util.el
+  ! lisp/bazelrc-mode.el -> bazelrc-mode.el
+Created bazel-mode-20200627.1625.tar containing:
+  bazel-mode-20200627.1625/
+  bazel-mode-20200627.1625/bazel-build.el
+  bazel-mode-20200627.1625/bazel-mode-pkg.el
+  bazel-mode-20200627.1625/bazel-mode.el
+  bazel-mode-20200627.1625/bazel-util.el
+  bazel-mode-20200627.1625/bazelrc-mode.el
+Built bazel-mode in 5.226s, finished at Sat Jan  9 23:55:20 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  315 Jan  9 23:55 packages/bazel-mode-20200627.1625.entry
+ 52K -rw-r--r-- 1 root root  50K Jan  9 23:55 packages/bazel-mode-20200627.1625.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 23:55 packages/bazel-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   98 Jan  9 23:55 packages/bazel-mode-readme.txt

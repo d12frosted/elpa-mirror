@@ -1,0 +1,21 @@
+Package: julia-shell
+Fetcher: github
+Source:  https://github.com/dennisog/julia-shell-mode.git
+
+Updating /mnt/store/melpa/working/julia-shell/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/julia-shell/
+  to /tmp/julia-shellJV72ub/julia-shell-20161125.1910
+    julia-shell.el -> julia-shell.el
+    julia-shell-emacstools.jl -> julia-shell-emacstools.jl
+Created julia-shell-20161125.1910.tar containing:
+  julia-shell-20161125.1910/
+  julia-shell-20161125.1910/julia-shell-emacstools.jl
+  julia-shell-20161125.1910/julia-shell-pkg.el
+  julia-shell-20161125.1910/julia-shell.el
+Built julia-shell in 5.922s, finished at Sun Jan 10 00:24:11 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  301 Jan 10 00:24 packages/julia-shell-20161125.1910.entry
+ 32K -rw-r--r-- 1 root root  30K Jan 10 00:24 packages/julia-shell-20161125.1910.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:24 packages/julia-shell-badge.svg
+4.0K -rw-r--r-- 1 root root  233 Jan 10 00:24 packages/julia-shell-readme.txt

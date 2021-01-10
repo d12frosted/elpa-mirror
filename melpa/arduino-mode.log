@@ -1,0 +1,25 @@
+Package: arduino-mode
+Fetcher: github
+Source:  https://github.com/stardiviner/arduino-mode.git
+
+Updating /mnt/store/melpa/working/arduino-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/arduino-mode/
+  to /tmp/arduino-modeACOZMx/arduino-mode-20201231.214
+    arduino-mode-init.el -> arduino-mode-init.el
+    arduino-mode.el -> arduino-mode.el
+    ede-arduino.el -> ede-arduino.el
+    flycheck-arduino.el -> flycheck-arduino.el
+Created arduino-mode-20201231.214.tar containing:
+  arduino-mode-20201231.214/
+  arduino-mode-20201231.214/arduino-mode-init.el
+  arduino-mode-20201231.214/arduino-mode-pkg.el
+  arduino-mode-20201231.214/arduino-mode.el
+  arduino-mode-20201231.214/ede-arduino.el
+  arduino-mode-20201231.214/flycheck-arduino.el
+Built arduino-mode in 3.233s, finished at Sat Jan  9 23:54:06 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  354 Jan  9 23:54 packages/arduino-mode-20201231.214.entry
+ 52K -rw-r--r-- 1 root root  50K Jan  9 23:54 packages/arduino-mode-20201231.214.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 23:54 packages/arduino-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   95 Jan  9 23:54 packages/arduino-mode-readme.txt

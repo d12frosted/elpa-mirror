@@ -7,7 +7,7 @@
 ;; Website: https://wakatime.com
 ;; Keywords: calendar, comm
 ;; Package-Version: 20200730.240
-;; Package-Commit: 7626678315918bdbb81ede68149f20a7d97a928f
+;; Package-Commit: 5e6deddda7a70f4b79832e9e8b6636418812e162
 ;; Version: 1.0.2
 
 ;; This program is free software; you can redistribute it and/or modify

@@ -1,0 +1,82 @@
+Package: skeletor
+Fetcher: github
+Source:  https://github.com/chrisbarrett/skeletor.el.git
+
+Updating /mnt/store/melpa/working/skeletor/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/skeletor/
+  to /tmp/skeletorAIALwc/skeletor-20191129.841
+    skeletor.el -> skeletor.el
+  ! doc/fdl-1.3.texi -> fdl-1.3.texi
+    licenses => licenses
+    project-skeletons => project-skeletons
+Created /tmp/skeletorAIALwc/skeletor-20191129.841/fdl-1.3.info
+Created skeletor-20191129.841.tar containing:
+  skeletor-20191129.841/
+  skeletor-20191129.841/dir
+  skeletor-20191129.841/fdl-1.3.info
+  skeletor-20191129.841/licenses/
+  skeletor-20191129.841/licenses/Apache-2.0
+  skeletor-20191129.841/licenses/BSD-2
+  skeletor-20191129.841/licenses/DWTFYW
+  skeletor-20191129.841/licenses/MIT
+  skeletor-20191129.841/licenses/gpl-3.0
+  skeletor-20191129.841/licenses/lgpl-3.0
+  skeletor-20191129.841/project-skeletons/
+  skeletor-20191129.841/project-skeletons/.dir-locals.el
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/CONTRIBUTING.md
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/Cask
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/Makefile
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/README.md
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/__DOT__dir-locals.el
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/__DOT__ert-runner
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/__DOT__gitignore
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/__DOT__travis.yml
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/__PROJECT-NAME__.el
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/doc/
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/doc/__PROJECT-NAME__.org
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/doc/fdl-1.3.texi
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/test/
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/test/__PROJECT-NAME__-test.el
+  skeletor-20191129.841/project-skeletons/elisp-package-with-docs/test/test-helper.el
+  skeletor-20191129.841/project-skeletons/elisp-package/
+  skeletor-20191129.841/project-skeletons/elisp-package/CONTRIBUTING.md
+  skeletor-20191129.841/project-skeletons/elisp-package/Cask
+  skeletor-20191129.841/project-skeletons/elisp-package/Makefile
+  skeletor-20191129.841/project-skeletons/elisp-package/README.md
+  skeletor-20191129.841/project-skeletons/elisp-package/__DOT__dir-locals.el
+  skeletor-20191129.841/project-skeletons/elisp-package/__DOT__ert-runner
+  skeletor-20191129.841/project-skeletons/elisp-package/__DOT__gitignore
+  skeletor-20191129.841/project-skeletons/elisp-package/__DOT__travis.yml
+  skeletor-20191129.841/project-skeletons/elisp-package/__PROJECT-NAME__.el
+  skeletor-20191129.841/project-skeletons/elisp-package/test/
+  skeletor-20191129.841/project-skeletons/elisp-package/test/__PROJECT-NAME__-test.el
+  skeletor-20191129.841/project-skeletons/elisp-package/test/test-helper.el
+  skeletor-20191129.841/project-skeletons/generic/
+  skeletor-20191129.841/project-skeletons/generic/CONTRIBUTING.md
+  skeletor-20191129.841/project-skeletons/generic/README.md
+  skeletor-20191129.841/project-skeletons/haskell-project/
+  skeletor-20191129.841/project-skeletons/haskell-project/CONTRIBUTING.md
+  skeletor-20191129.841/project-skeletons/haskell-project/README.md
+  skeletor-20191129.841/project-skeletons/haskell-project/__DOT__gitignore
+  skeletor-20191129.841/project-skeletons/python-library/
+  skeletor-20191129.841/project-skeletons/python-library/CONTRIBUTING.md
+  skeletor-20191129.841/project-skeletons/python-library/INSTALL
+  skeletor-20191129.841/project-skeletons/python-library/Makefile
+  skeletor-20191129.841/project-skeletons/python-library/README.md
+  skeletor-20191129.841/project-skeletons/python-library/__DOT__gitignore
+  skeletor-20191129.841/project-skeletons/python-library/__init__.py
+  skeletor-20191129.841/project-skeletons/scala-project/
+  skeletor-20191129.841/project-skeletons/scala-project/CONTRIBUTING.md
+  skeletor-20191129.841/project-skeletons/scala-project/README.md
+  skeletor-20191129.841/project-skeletons/scala-project/__DOT__gitignore
+  skeletor-20191129.841/project-skeletons/scala-project/build.sbt
+  skeletor-20191129.841/skeletor-pkg.el
+  skeletor-20191129.841/skeletor.el
+Built skeletor in 7.206s, finished at Sun Jan 10 00:44:58 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  423 Jan 10 00:44 packages/skeletor-20191129.841.entry
+220K -rw-r--r-- 1 root root 220K Jan 10 00:44 packages/skeletor-20191129.841.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:44 packages/skeletor-badge.svg
+4.0K -rw-r--r-- 1 root root  525 Jan 10 00:44 packages/skeletor-readme.txt

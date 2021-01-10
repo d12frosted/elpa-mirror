@@ -1,0 +1,923 @@
+Package: geiser
+Fetcher: gitlab
+Source:  https://gitlab.com/jaor/geiser.git
+
+Updating /mnt/store/melpa/working/geiser/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser/
+  to /tmp/geiserM2tTTt/geiser-20210103.953
+  ! elisp/geiser-autodoc.el -> geiser-autodoc.el
+  ! elisp/geiser-base.el -> geiser-base.el
+  ! elisp/geiser-chez.el -> geiser-chez.el
+  ! elisp/geiser-chibi.el -> geiser-chibi.el
+  ! elisp/geiser-chicken.el -> geiser-chicken.el
+  ! elisp/geiser-company.el -> geiser-company.el
+  ! elisp/geiser-compile.el -> geiser-compile.el
+  ! elisp/geiser-completion.el -> geiser-completion.el
+  ! elisp/geiser-connection.el -> geiser-connection.el
+  ! elisp/geiser-custom.el -> geiser-custom.el
+  ! elisp/geiser-debug.el -> geiser-debug.el
+  ! elisp/geiser-doc.el -> geiser-doc.el
+  ! elisp/geiser-edit.el -> geiser-edit.el
+  ! elisp/geiser-eval.el -> geiser-eval.el
+  ! elisp/geiser-gambit.el -> geiser-gambit.el
+  ! elisp/geiser-guile.el -> geiser-guile.el
+  ! elisp/geiser-image.el -> geiser-image.el
+  ! elisp/geiser-impl.el -> geiser-impl.el
+  ! elisp/geiser-log.el -> geiser-log.el
+  ! elisp/geiser-menu.el -> geiser-menu.el
+  ! elisp/geiser-mit.el -> geiser-mit.el
+  ! elisp/geiser-mode.el -> geiser-mode.el
+  ! elisp/geiser-popup.el -> geiser-popup.el
+  ! elisp/geiser-racket.el -> geiser-racket.el
+  ! elisp/geiser-reload.el -> geiser-reload.el
+  ! elisp/geiser-repl.el -> geiser-repl.el
+  ! elisp/geiser-syntax.el -> geiser-syntax.el
+  ! elisp/geiser-table.el -> geiser-table.el
+  ! elisp/geiser-xref.el -> geiser-xref.el
+  ! elisp/geiser.el -> geiser.el
+  ! elisp/geiser-version.el.in -> geiser-version.el
+  ! doc/cheat.texi -> cheat.texi
+  ! doc/geiser.texi -> geiser.texi
+  ! doc/index.texi -> index.texi
+  ! doc/install.texi -> install.texi
+  ! doc/intro.texi -> intro.texi
+  ! doc/macros.texi -> macros.texi
+  ! doc/parens.texi -> parens.texi
+  ! doc/repl.texi -> repl.texi
+  ! doc/thanks.texi -> thanks.texi
+  ! doc/top.texi -> top.texi
+  ! doc/web.texi -> web.texi
+    bin/geiser-racket.sh -> bin/geiser-racket.sh
+    scheme/chez => scheme/chez
+    scheme/chibi => scheme/chibi
+    scheme/chicken => scheme/chicken
+    scheme/gambit => scheme/gambit
+    scheme/guile => scheme/guile
+    scheme/mit => scheme/mit
+    scheme/racket => scheme/racket
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/cheat.texi -o /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+")
+Created /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+")
+Created /tmp/geiserM2tTTt/geiser-20210103.953/geiser.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/index.texi -o /tmp/geiserM2tTTt/geiser-20210103.953/index.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
+")
+Created /tmp/geiserM2tTTt/geiser-20210103.953/index.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserM2tTTt/geiser-20210103.953/index.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/index.info
+")
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/install.texi -o /tmp/geiserM2tTTt/geiser-20210103.953/install.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/index.info
+/mnt/store/melpa/working/geiser/doc/install.texi:19: warning: undefined flag: EMACS_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:25: warning: undefined flag: GUILE_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:28: warning: undefined flag: CHICKEN_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:31: warning: undefined flag: MIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:34: warning: undefined flag: CHIBI_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:36: warning: undefined flag: CHEZ_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:39: warning: undefined flag: GAMBIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:41: warning: undefined flag: RACKET_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:192: unknown command `releasesref'
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced {
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced }
+/mnt/store/melpa/working/geiser/doc/install.texi:90: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/install.texi:237: @pxref reference to nonexistent node `The REPL'
+")
+Created /tmp/geiserM2tTTt/geiser-20210103.953/install.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserM2tTTt/geiser-20210103.953/install.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/index.info
+/mnt/store/melpa/working/geiser/doc/install.texi:19: warning: undefined flag: EMACS_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:25: warning: undefined flag: GUILE_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:28: warning: undefined flag: CHICKEN_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:31: warning: undefined flag: MIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:34: warning: undefined flag: CHIBI_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:36: warning: undefined flag: CHEZ_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:39: warning: undefined flag: GAMBIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:41: warning: undefined flag: RACKET_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:192: unknown command `releasesref'
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced {
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced }
+/mnt/store/melpa/working/geiser/doc/install.texi:90: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/install.texi:237: @pxref reference to nonexistent node `The REPL'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/install.info
+")
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/intro.texi -o /tmp/geiserM2tTTt/geiser-20210103.953/intro.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/index.info
+/mnt/store/melpa/working/geiser/doc/install.texi:19: warning: undefined flag: EMACS_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:25: warning: undefined flag: GUILE_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:28: warning: undefined flag: CHICKEN_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:31: warning: undefined flag: MIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:34: warning: undefined flag: CHIBI_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:36: warning: undefined flag: CHEZ_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:39: warning: undefined flag: GAMBIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:41: warning: undefined flag: RACKET_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:192: unknown command `releasesref'
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced {
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced }
+/mnt/store/melpa/working/geiser/doc/install.texi:90: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/install.texi:237: @pxref reference to nonexistent node `The REPL'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/install.info
+/mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
+")
+Created /tmp/geiserM2tTTt/geiser-20210103.953/intro.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserM2tTTt/geiser-20210103.953/intro.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/index.info
+/mnt/store/melpa/working/geiser/doc/install.texi:19: warning: undefined flag: EMACS_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:25: warning: undefined flag: GUILE_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:28: warning: undefined flag: CHICKEN_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:31: warning: undefined flag: MIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:34: warning: undefined flag: CHIBI_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:36: warning: undefined flag: CHEZ_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:39: warning: undefined flag: GAMBIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:41: warning: undefined flag: RACKET_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:192: unknown command `releasesref'
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced {
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced }
+/mnt/store/melpa/working/geiser/doc/install.texi:90: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/install.texi:237: @pxref reference to nonexistent node `The REPL'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/install.info
+/mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/intro.info
+")
+Created /tmp/geiserM2tTTt/geiser-20210103.953/macros.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/parens.texi -o /tmp/geiserM2tTTt/geiser-20210103.953/parens.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/index.info
+/mnt/store/melpa/working/geiser/doc/install.texi:19: warning: undefined flag: EMACS_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:25: warning: undefined flag: GUILE_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:28: warning: undefined flag: CHICKEN_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:31: warning: undefined flag: MIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:34: warning: undefined flag: CHIBI_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:36: warning: undefined flag: CHEZ_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:39: warning: undefined flag: GAMBIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:41: warning: undefined flag: RACKET_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:192: unknown command `releasesref'
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced {
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced }
+/mnt/store/melpa/working/geiser/doc/install.texi:90: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/install.texi:237: @pxref reference to nonexistent node `The REPL'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/install.info
+/mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/intro.info
+/mnt/store/melpa/working/geiser/doc/macros.texi: warning: document without nodes
+install-info: warning: no info dir entry in `/tmp/geiserM2tTTt/geiser-20210103.953/macros.info'
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:38: @ref reference to nonexistent node `The easy and quick way'
+/mnt/store/melpa/working/geiser/doc/parens.texi:38: @ref reference to nonexistent node `From the
+source's mouth'
+/mnt/store/melpa/working/geiser/doc/parens.texi:67: @pxref reference to nonexistent node `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/parens.texi:266: @pxref reference to nonexistent node `Modus operandi'
+/mnt/store/melpa/working/geiser/doc/parens.texi:499: @ref reference to nonexistent node `Seeing is believing'
+/mnt/store/melpa/working/geiser/doc/parens.texi:648: @ref reference to nonexistent node `completion-caveat'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Next reference to nonexistent `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Prev reference to nonexistent `The REPL'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Up reference to nonexistent `Top'
+")
+Created /tmp/geiserM2tTTt/geiser-20210103.953/parens.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserM2tTTt/geiser-20210103.953/parens.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/index.info
+/mnt/store/melpa/working/geiser/doc/install.texi:19: warning: undefined flag: EMACS_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:25: warning: undefined flag: GUILE_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:28: warning: undefined flag: CHICKEN_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:31: warning: undefined flag: MIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:34: warning: undefined flag: CHIBI_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:36: warning: undefined flag: CHEZ_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:39: warning: undefined flag: GAMBIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:41: warning: undefined flag: RACKET_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:192: unknown command `releasesref'
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced {
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced }
+/mnt/store/melpa/working/geiser/doc/install.texi:90: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/install.texi:237: @pxref reference to nonexistent node `The REPL'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/install.info
+/mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/intro.info
+/mnt/store/melpa/working/geiser/doc/macros.texi: warning: document without nodes
+install-info: warning: no info dir entry in `/tmp/geiserM2tTTt/geiser-20210103.953/macros.info'
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:38: @ref reference to nonexistent node `The easy and quick way'
+/mnt/store/melpa/working/geiser/doc/parens.texi:38: @ref reference to nonexistent node `From the
+source's mouth'
+/mnt/store/melpa/working/geiser/doc/parens.texi:67: @pxref reference to nonexistent node `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/parens.texi:266: @pxref reference to nonexistent node `Modus operandi'
+/mnt/store/melpa/working/geiser/doc/parens.texi:499: @ref reference to nonexistent node `Seeing is believing'
+/mnt/store/melpa/working/geiser/doc/parens.texi:648: @ref reference to nonexistent node `completion-caveat'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Next reference to nonexistent `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Prev reference to nonexistent `The REPL'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/parens.info
+")
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/repl.texi -o /tmp/geiserM2tTTt/geiser-20210103.953/repl.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/index.info
+/mnt/store/melpa/working/geiser/doc/install.texi:19: warning: undefined flag: EMACS_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:25: warning: undefined flag: GUILE_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:28: warning: undefined flag: CHICKEN_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:31: warning: undefined flag: MIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:34: warning: undefined flag: CHIBI_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:36: warning: undefined flag: CHEZ_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:39: warning: undefined flag: GAMBIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:41: warning: undefined flag: RACKET_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:192: unknown command `releasesref'
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced {
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced }
+/mnt/store/melpa/working/geiser/doc/install.texi:90: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/install.texi:237: @pxref reference to nonexistent node `The REPL'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/install.info
+/mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/intro.info
+/mnt/store/melpa/working/geiser/doc/macros.texi: warning: document without nodes
+install-info: warning: no info dir entry in `/tmp/geiserM2tTTt/geiser-20210103.953/macros.info'
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:38: @ref reference to nonexistent node `The easy and quick way'
+/mnt/store/melpa/working/geiser/doc/parens.texi:38: @ref reference to nonexistent node `From the
+source's mouth'
+/mnt/store/melpa/working/geiser/doc/parens.texi:67: @pxref reference to nonexistent node `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/parens.texi:266: @pxref reference to nonexistent node `Modus operandi'
+/mnt/store/melpa/working/geiser/doc/parens.texi:499: @ref reference to nonexistent node `Seeing is believing'
+/mnt/store/melpa/working/geiser/doc/parens.texi:648: @ref reference to nonexistent node `completion-caveat'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Next reference to nonexistent `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Prev reference to nonexistent `The REPL'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/parens.info
+/mnt/store/melpa/working/geiser/doc/repl.texi:28: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:36: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:36: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:36: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:43: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:43: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:43: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:49: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:49: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:49: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:113: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/repl.texi:113: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:113: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:143: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:143: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:143: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:189: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:189: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:189: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:291: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:291: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:291: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:319: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:319: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:319: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:324: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:324: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:324: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:327: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:327: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:327: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:346: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:346: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:346: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:4: @ref reference to nonexistent node `Installation'
+")
+Created /tmp/geiserM2tTTt/geiser-20210103.953/repl.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserM2tTTt/geiser-20210103.953/repl.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/index.info
+/mnt/store/melpa/working/geiser/doc/install.texi:19: warning: undefined flag: EMACS_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:25: warning: undefined flag: GUILE_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:28: warning: undefined flag: CHICKEN_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:31: warning: undefined flag: MIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:34: warning: undefined flag: CHIBI_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:36: warning: undefined flag: CHEZ_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:39: warning: undefined flag: GAMBIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:41: warning: undefined flag: RACKET_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:192: unknown command `releasesref'
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced {
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced }
+/mnt/store/melpa/working/geiser/doc/install.texi:90: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/install.texi:237: @pxref reference to nonexistent node `The REPL'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/install.info
+/mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/intro.info
+/mnt/store/melpa/working/geiser/doc/macros.texi: warning: document without nodes
+install-info: warning: no info dir entry in `/tmp/geiserM2tTTt/geiser-20210103.953/macros.info'
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:38: @ref reference to nonexistent node `The easy and quick way'
+/mnt/store/melpa/working/geiser/doc/parens.texi:38: @ref reference to nonexistent node `From the
+source's mouth'
+/mnt/store/melpa/working/geiser/doc/parens.texi:67: @pxref reference to nonexistent node `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/parens.texi:266: @pxref reference to nonexistent node `Modus operandi'
+/mnt/store/melpa/working/geiser/doc/parens.texi:499: @ref reference to nonexistent node `Seeing is believing'
+/mnt/store/melpa/working/geiser/doc/parens.texi:648: @ref reference to nonexistent node `completion-caveat'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Next reference to nonexistent `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Prev reference to nonexistent `The REPL'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/parens.info
+/mnt/store/melpa/working/geiser/doc/repl.texi:28: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:36: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:36: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:36: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:43: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:43: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:43: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:49: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:49: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:49: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:113: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/repl.texi:113: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:113: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:143: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:143: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:143: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:189: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:189: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:189: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:291: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:291: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:291: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:319: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:319: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:319: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:324: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:324: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:324: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:327: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:327: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:327: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:346: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:346: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:346: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:4: @ref reference to nonexistent node `Installation'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/repl.info
+")
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/thanks.texi -o /tmp/geiserM2tTTt/geiser-20210103.953/thanks.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/index.info
+/mnt/store/melpa/working/geiser/doc/install.texi:19: warning: undefined flag: EMACS_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:25: warning: undefined flag: GUILE_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:28: warning: undefined flag: CHICKEN_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:31: warning: undefined flag: MIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:34: warning: undefined flag: CHIBI_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:36: warning: undefined flag: CHEZ_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:39: warning: undefined flag: GAMBIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:41: warning: undefined flag: RACKET_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:192: unknown command `releasesref'
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced {
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced }
+/mnt/store/melpa/working/geiser/doc/install.texi:90: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/install.texi:237: @pxref reference to nonexistent node `The REPL'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/install.info
+/mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/intro.info
+/mnt/store/melpa/working/geiser/doc/macros.texi: warning: document without nodes
+install-info: warning: no info dir entry in `/tmp/geiserM2tTTt/geiser-20210103.953/macros.info'
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:38: @ref reference to nonexistent node `The easy and quick way'
+/mnt/store/melpa/working/geiser/doc/parens.texi:38: @ref reference to nonexistent node `From the
+source's mouth'
+/mnt/store/melpa/working/geiser/doc/parens.texi:67: @pxref reference to nonexistent node `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/parens.texi:266: @pxref reference to nonexistent node `Modus operandi'
+/mnt/store/melpa/working/geiser/doc/parens.texi:499: @ref reference to nonexistent node `Seeing is believing'
+/mnt/store/melpa/working/geiser/doc/parens.texi:648: @ref reference to nonexistent node `completion-caveat'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Next reference to nonexistent `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Prev reference to nonexistent `The REPL'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/parens.info
+/mnt/store/melpa/working/geiser/doc/repl.texi:28: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:36: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:36: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:36: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:43: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:43: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:43: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:49: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:49: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:49: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:113: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/repl.texi:113: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:113: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:143: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:143: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:143: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:189: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:189: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:189: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:291: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:291: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:291: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:319: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:319: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:319: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:324: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:324: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:324: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:327: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:327: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:327: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:346: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:346: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:346: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:4: @ref reference to nonexistent node `Installation'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/repl.info
+/mnt/store/melpa/working/geiser/doc/thanks.texi:1: Next reference to nonexistent `Index'
+/mnt/store/melpa/working/geiser/doc/thanks.texi:1: Prev reference to nonexistent `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/thanks.texi:1: Up reference to nonexistent `Top'
+")
+Created /tmp/geiserM2tTTt/geiser-20210103.953/thanks.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserM2tTTt/geiser-20210103.953/thanks.info)' exited with non-zero status 1: Fetching origin
+HEAD is now at c7a427e fix problems in module detection code (chicken); remove micro-optimisation
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
+/mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/cheat.info
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
+/mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/index.info
+/mnt/store/melpa/working/geiser/doc/install.texi:19: warning: undefined flag: EMACS_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:25: warning: undefined flag: GUILE_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:28: warning: undefined flag: CHICKEN_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:31: warning: undefined flag: MIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:34: warning: undefined flag: CHIBI_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:36: warning: undefined flag: CHEZ_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:39: warning: undefined flag: GAMBIT_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:41: warning: undefined flag: RACKET_VERSION
+/mnt/store/melpa/working/geiser/doc/install.texi:192: unknown command `releasesref'
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced {
+/mnt/store/melpa/working/geiser/doc/install.texi:192: misplaced }
+/mnt/store/melpa/working/geiser/doc/install.texi:90: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/install.texi:237: @pxref reference to nonexistent node `The REPL'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/install.info
+/mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
+/mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/intro.info
+/mnt/store/melpa/working/geiser/doc/macros.texi: warning: document without nodes
+install-info: warning: no info dir entry in `/tmp/geiserM2tTTt/geiser-20210103.953/macros.info'
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:243: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:311: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:329: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:341: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:383: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:397: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:402: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:424: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:530: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: misplaced {
+/mnt/store/melpa/working/geiser/doc/parens.texi:552: misplaced }
+/mnt/store/melpa/working/geiser/doc/parens.texi:38: @ref reference to nonexistent node `The easy and quick way'
+/mnt/store/melpa/working/geiser/doc/parens.texi:38: @ref reference to nonexistent node `From the
+source's mouth'
+/mnt/store/melpa/working/geiser/doc/parens.texi:67: @pxref reference to nonexistent node `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/parens.texi:266: @pxref reference to nonexistent node `Modus operandi'
+/mnt/store/melpa/working/geiser/doc/parens.texi:499: @ref reference to nonexistent node `Seeing is believing'
+/mnt/store/melpa/working/geiser/doc/parens.texi:648: @ref reference to nonexistent node `completion-caveat'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Next reference to nonexistent `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Prev reference to nonexistent `The REPL'
+/mnt/store/melpa/working/geiser/doc/parens.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/parens.info
+/mnt/store/melpa/working/geiser/doc/repl.texi:28: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:36: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:36: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:36: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:43: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:43: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:43: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:49: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:49: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:49: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:113: unknown command `img'
+/mnt/store/melpa/working/geiser/doc/repl.texi:113: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:113: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:143: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:143: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:143: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:189: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:189: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:189: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:291: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:291: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:291: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:319: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:319: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:319: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:324: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:324: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:324: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:327: unknown command `altr'
+/mnt/store/melpa/working/geiser/doc/repl.texi:327: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:327: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:346: unknown command `imgc'
+/mnt/store/melpa/working/geiser/doc/repl.texi:346: misplaced {
+/mnt/store/melpa/working/geiser/doc/repl.texi:346: misplaced }
+/mnt/store/melpa/working/geiser/doc/repl.texi:4: @ref reference to nonexistent node `Installation'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/repl.info
+/mnt/store/melpa/working/geiser/doc/thanks.texi:1: Next reference to nonexistent `Index'
+/mnt/store/melpa/working/geiser/doc/thanks.texi:1: Prev reference to nonexistent `Cheat sheet'
+/mnt/store/melpa/working/geiser/doc/thanks.texi:1: Up reference to nonexistent `Top'
+install-info: No such file or directory for /tmp/geiserM2tTTt/geiser-20210103.953/thanks.info
+")
+Created /tmp/geiserM2tTTt/geiser-20210103.953/top.info
+Created /tmp/geiserM2tTTt/geiser-20210103.953/web.info
+Created geiser-20210103.953.tar containing:
+  geiser-20210103.953/
+  geiser-20210103.953/bin/
+  geiser-20210103.953/bin/geiser-racket.sh
+  geiser-20210103.953/dir
+  geiser-20210103.953/geiser-autodoc.el
+  geiser-20210103.953/geiser-base.el
+  geiser-20210103.953/geiser-chez.el
+  geiser-20210103.953/geiser-chibi.el
+  geiser-20210103.953/geiser-chicken.el
+  geiser-20210103.953/geiser-company.el
+  geiser-20210103.953/geiser-compile.el
+  geiser-20210103.953/geiser-completion.el
+  geiser-20210103.953/geiser-connection.el
+  geiser-20210103.953/geiser-custom.el
+  geiser-20210103.953/geiser-debug.el
+  geiser-20210103.953/geiser-doc.el
+  geiser-20210103.953/geiser-edit.el
+  geiser-20210103.953/geiser-eval.el
+  geiser-20210103.953/geiser-gambit.el
+  geiser-20210103.953/geiser-guile.el
+  geiser-20210103.953/geiser-image.el
+  geiser-20210103.953/geiser-impl.el
+  geiser-20210103.953/geiser-log.el
+  geiser-20210103.953/geiser-menu.el
+  geiser-20210103.953/geiser-mit.el
+  geiser-20210103.953/geiser-mode.el
+  geiser-20210103.953/geiser-pkg.el
+  geiser-20210103.953/geiser-popup.el
+  geiser-20210103.953/geiser-racket.el
+  geiser-20210103.953/geiser-reload.el
+  geiser-20210103.953/geiser-repl.el
+  geiser-20210103.953/geiser-syntax.el
+  geiser-20210103.953/geiser-table.el
+  geiser-20210103.953/geiser-version.el
+  geiser-20210103.953/geiser-xref.el
+  geiser-20210103.953/geiser.el
+  geiser-20210103.953/geiser.info
+  geiser-20210103.953/macros.info
+  geiser-20210103.953/scheme/
+  geiser-20210103.953/scheme/chez/
+  geiser-20210103.953/scheme/chez/geiser/
+  geiser-20210103.953/scheme/chez/geiser/geiser.ss
+  geiser-20210103.953/scheme/chez/geiser/test.ss
+  geiser-20210103.953/scheme/chibi/
+  geiser-20210103.953/scheme/chibi/geiser/
+  geiser-20210103.953/scheme/chibi/geiser/geiser.scm
+  geiser-20210103.953/scheme/chibi/geiser/geiser.sld
+  geiser-20210103.953/scheme/chicken/
+  geiser-20210103.953/scheme/chicken/geiser/
+  geiser-20210103.953/scheme/chicken/geiser/chicken4.scm
+  geiser-20210103.953/scheme/chicken/geiser/chicken5.scm
+  geiser-20210103.953/scheme/gambit/
+  geiser-20210103.953/scheme/gambit/geiser/
+  geiser-20210103.953/scheme/gambit/geiser/gambit.scm
+  geiser-20210103.953/scheme/gambit/geiser/gambit_procedures.scm
+  geiser-20210103.953/scheme/guile/
+  geiser-20210103.953/scheme/guile/geiser/
+  geiser-20210103.953/scheme/guile/geiser/completion.scm
+  geiser-20210103.953/scheme/guile/geiser/doc.scm
+  geiser-20210103.953/scheme/guile/geiser/emacs.scm
+  geiser-20210103.953/scheme/guile/geiser/evaluation.scm
+  geiser-20210103.953/scheme/guile/geiser/modules.scm
+  geiser-20210103.953/scheme/guile/geiser/utils.scm
+  geiser-20210103.953/scheme/guile/geiser/xref.scm
+  geiser-20210103.953/scheme/mit/
+  geiser-20210103.953/scheme/mit/geiser/
+  geiser-20210103.953/scheme/mit/geiser/compile.scm
+  geiser-20210103.953/scheme/mit/geiser/emacs.scm
+  geiser-20210103.953/scheme/mit/geiser/geiser.pkg
+  geiser-20210103.953/scheme/mit/geiser/load.scm
+  geiser-20210103.953/scheme/racket/
+  geiser-20210103.953/scheme/racket/geiser/
+  geiser-20210103.953/scheme/racket/geiser/autodoc.rkt
+  geiser-20210103.953/scheme/racket/geiser/completions.rkt
+  geiser-20210103.953/scheme/racket/geiser/enter.rkt
+  geiser-20210103.953/scheme/racket/geiser/eval.rkt
+  geiser-20210103.953/scheme/racket/geiser/images.rkt
+  geiser-20210103.953/scheme/racket/geiser/locations.rkt
+  geiser-20210103.953/scheme/racket/geiser/main.rkt
+  geiser-20210103.953/scheme/racket/geiser/modules.rkt
+  geiser-20210103.953/scheme/racket/geiser/server.rkt
+  geiser-20210103.953/scheme/racket/geiser/startup.rkt
+  geiser-20210103.953/scheme/racket/geiser/user.rkt
+  geiser-20210103.953/scheme/racket/geiser/utils.rkt
+  geiser-20210103.953/top.info
+  geiser-20210103.953/web.info
+Built geiser in 47.739s, finished at Sun Jan 10 00:15:18 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  184 Jan 10 00:15 packages/geiser-20210103.953.entry
+760K -rw-r--r-- 1 root root 760K Jan 10 00:15 packages/geiser-20210103.953.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:15 packages/geiser-badge.svg
+4.0K -rw-r--r-- 1 root root  430 Jan 10 00:14 packages/geiser-gauche-20200802.1300.entry
+ 32K -rw-r--r-- 1 root root  30K Jan 10 00:14 packages/geiser-gauche-20200802.1300.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:14 packages/geiser-gauche-badge.svg
+4.0K -rw-r--r-- 1 root root   65 Jan 10 00:14 packages/geiser-gauche-readme.txt
+4.0K -rw-r--r-- 1 root root 1016 Jan 10 00:14 packages/geiser-gauche.log
+4.0K -rw-r--r-- 1 root root  461 Jan 10 00:14 packages/geiser-kawa-20200507.1305.entry
+140K -rw-r--r-- 1 root root 140K Jan 10 00:14 packages/geiser-kawa-20200507.1305.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:14 packages/geiser-kawa-badge.svg
+4.0K -rw-r--r-- 1 root root   87 Jan 10 00:14 packages/geiser-kawa-readme.txt
+4.0K -rw-r--r-- 1 root root 3.6K Jan 10 00:14 packages/geiser-kawa.log
+4.0K -rw-r--r-- 1 root root   38 Jan 10 00:15 packages/geiser-readme.txt

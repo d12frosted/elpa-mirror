@@ -1,0 +1,29 @@
+Package: e2ansi
+Fetcher: github
+Source:  https://github.com/Lindydancer/e2ansi.git
+
+Updating /mnt/store/melpa/working/e2ansi/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/e2ansi/
+  to /tmp/e2ansiCfqLWt/e2ansi-20190517.1902
+    e2ansi-list.el -> e2ansi-list.el
+    e2ansi-magic.el -> e2ansi-magic.el
+    e2ansi-silent.el -> e2ansi-silent.el
+    e2ansi.el -> e2ansi.el
+    bin => bin
+Created e2ansi-20190517.1902.tar containing:
+  e2ansi-20190517.1902/
+  e2ansi-20190517.1902/bin/
+  e2ansi-20190517.1902/bin/e2ansi-cat
+  e2ansi-20190517.1902/bin/e2ansi-info
+  e2ansi-20190517.1902/e2ansi-list.el
+  e2ansi-20190517.1902/e2ansi-magic.el
+  e2ansi-20190517.1902/e2ansi-pkg.el
+  e2ansi-20190517.1902/e2ansi-silent.el
+  e2ansi-20190517.1902/e2ansi.el
+Built e2ansi in 3.242s, finished at Sun Jan 10 00:05:11 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  347 Jan 10 00:05 packages/e2ansi-20190517.1902.entry
+ 80K -rw-r--r-- 1 root root  80K Jan 10 00:05 packages/e2ansi-20190517.1902.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:05 packages/e2ansi-badge.svg
+ 16K -rw-r--r-- 1 root root  15K Jan 10 00:05 packages/e2ansi-readme.txt

@@ -1,0 +1,21 @@
+Package: yaml-imenu
+Fetcher: github
+Source:  https://github.com/knu/yaml-imenu.el.git
+
+Updating /mnt/store/melpa/working/yaml-imenu/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yaml-imenu/
+  to /tmp/yaml-imenuNZB16K/yaml-imenu-20201023.1524
+    yaml-imenu.el -> yaml-imenu.el
+    parse_yaml.rb -> parse_yaml.rb
+Created yaml-imenu-20201023.1524.tar containing:
+  yaml-imenu-20201023.1524/
+  yaml-imenu-20201023.1524/parse_yaml.rb
+  yaml-imenu-20201023.1524/yaml-imenu-pkg.el
+  yaml-imenu-20201023.1524/yaml-imenu.el
+Built yaml-imenu in 3.305s, finished at Sun Jan 10 00:54:11 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  453 Jan 10 00:54 packages/yaml-imenu-20201023.1524.entry
+ 20K -rw-r--r-- 1 root root  20K Jan 10 00:54 packages/yaml-imenu-20201023.1524.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:54 packages/yaml-imenu-badge.svg
+4.0K -rw-r--r-- 1 root root  791 Jan 10 00:54 packages/yaml-imenu-readme.txt

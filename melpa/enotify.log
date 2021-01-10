@@ -1,0 +1,36 @@
+Package: enotify
+Fetcher: github
+Source:  https://github.com/laynor/enotify.git
+
+Updating /mnt/store/melpa/working/enotify/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/enotify/
+  to /tmp/enotifyxa92lb/enotify-20130407.1348
+    enotify-group.el -> enotify-group.el
+    enotify-messages.el -> enotify-messages.el
+    enotify-mode-line.el -> enotify-mode-line.el
+    enotify-network.el -> enotify-network.el
+    enotify-pkg.el -> enotify-pkg.el
+    enotify-plugin-support.el -> enotify-plugin-support.el
+    enotify-tdd.el -> enotify-tdd.el
+    enotify.el -> enotify.el
+    footer.el -> footer.el
+    header.el -> header.el
+Created enotify-20130407.1348.tar containing:
+  enotify-20130407.1348/
+  enotify-20130407.1348/enotify-group.el
+  enotify-20130407.1348/enotify-messages.el
+  enotify-20130407.1348/enotify-mode-line.el
+  enotify-20130407.1348/enotify-network.el
+  enotify-20130407.1348/enotify-pkg.el
+  enotify-20130407.1348/enotify-plugin-support.el
+  enotify-20130407.1348/enotify-tdd.el
+  enotify-20130407.1348/enotify.el
+  enotify-20130407.1348/footer.el
+  enotify-20130407.1348/header.el
+Built enotify in 3.001s, finished at Sun Jan 10 00:07:48 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  291 Jan 10 00:07 packages/enotify-20130407.1348.entry
+ 40K -rw-r--r-- 1 root root  40K Jan 10 00:07 packages/enotify-20130407.1348.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:07 packages/enotify-badge.svg
+4.0K -rw-r--r-- 1 root root 3.4K Jan 10 00:07 packages/enotify-readme.txt

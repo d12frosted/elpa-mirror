@@ -1,0 +1,53 @@
+Package: magma-mode
+Fetcher: github
+Source:  https://github.com/ThibautVerron/magma-mode.git
+
+Updating /mnt/store/melpa/working/magma-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/magma-mode/
+  to /tmp/magma-modeQCFWbr/magma-mode-20200312.1306
+    magma-completion.el -> magma-completion.el
+    magma-extra.el -> magma-extra.el
+    magma-font-lock.el -> magma-font-lock.el
+    magma-interactive.el -> magma-interactive.el
+    magma-mode.el -> magma-mode.el
+    magma-q.el -> magma-q.el
+    magma-scan.el -> magma-scan.el
+    magma-smie.el -> magma-smie.el
+    magma-snippets.el -> magma-snippets.el
+    magma-vars.el -> magma-vars.el
+    snippets => snippets
+    data/magma_symbols.txt -> data/magma_symbols.txt
+    bin/build_completion_table.sh -> bin/build_completion_table.sh
+Created magma-mode-20200312.1306.tar containing:
+  magma-mode-20200312.1306/
+  magma-mode-20200312.1306/bin/
+  magma-mode-20200312.1306/bin/build_completion_table.sh
+  magma-mode-20200312.1306/data/
+  magma-mode-20200312.1306/data/magma_symbols.txt
+  magma-mode-20200312.1306/magma-completion.el
+  magma-mode-20200312.1306/magma-extra.el
+  magma-mode-20200312.1306/magma-font-lock.el
+  magma-mode-20200312.1306/magma-interactive.el
+  magma-mode-20200312.1306/magma-mode-pkg.el
+  magma-mode-20200312.1306/magma-mode.el
+  magma-mode-20200312.1306/magma-q.el
+  magma-mode-20200312.1306/magma-scan.el
+  magma-mode-20200312.1306/magma-smie.el
+  magma-mode-20200312.1306/magma-snippets.el
+  magma-mode-20200312.1306/magma-vars.el
+  magma-mode-20200312.1306/snippets/
+  magma-mode-20200312.1306/snippets/magma-mode/
+  magma-mode-20200312.1306/snippets/magma-mode/for.yasnippet
+  magma-mode-20200312.1306/snippets/magma-mode/function.yasnippet
+  magma-mode-20200312.1306/snippets/magma-mode/if.yasnippet
+  magma-mode-20200312.1306/snippets/magma-mode/load.yasnippet
+  magma-mode-20200312.1306/snippets/magma-mode/proc.yasnippet
+  magma-mode-20200312.1306/snippets/magma-mode/try.yasnippet
+  magma-mode-20200312.1306/snippets/magma-mode/while.yasnippet
+Built magma-mode in 4.101s, finished at Sun Jan 10 00:27:58 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  329 Jan 10 00:27 packages/magma-mode-20200312.1306.entry
+232K -rw-r--r-- 1 root root 230K Jan 10 00:27 packages/magma-mode-20200312.1306.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:27 packages/magma-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:27 packages/magma-mode-readme.txt

@@ -1,0 +1,59 @@
+Package: xenops
+Fetcher: github
+Source:  https://github.com/dandavison/xenops.git
+
+Updating /mnt/store/melpa/working/xenops/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/xenops/
+  to /tmp/xenopsaUG0K5/xenops-20210103.1339
+  ! lisp/xenops-aio.el -> xenops-aio.el
+  ! lisp/xenops-apply.el -> xenops-apply.el
+  ! lisp/xenops-auctex.el -> xenops-auctex.el
+  ! lisp/xenops-avy.el -> xenops-avy.el
+  ! lisp/xenops-doctor.el -> xenops-doctor.el
+  ! lisp/xenops-element.el -> xenops-element.el
+  ! lisp/xenops-elements.el -> xenops-elements.el
+  ! lisp/xenops-font.el -> xenops-font.el
+  ! lisp/xenops-footnote.el -> xenops-footnote.el
+  ! lisp/xenops-image.el -> xenops-image.el
+  ! lisp/xenops-math-latex.el -> xenops-math-latex.el
+  ! lisp/xenops-math.el -> xenops-math.el
+  ! lisp/xenops-minted.el -> xenops-minted.el
+  ! lisp/xenops-overlay.el -> xenops-overlay.el
+  ! lisp/xenops-parse.el -> xenops-parse.el
+  ! lisp/xenops-png.el -> xenops-png.el
+  ! lisp/xenops-src.el -> xenops-src.el
+  ! lisp/xenops-style.el -> xenops-style.el
+  ! lisp/xenops-util.el -> xenops-util.el
+  ! lisp/xenops-xen.el -> xenops-xen.el
+  ! lisp/xenops.el -> xenops.el
+Created xenops-20210103.1339.tar containing:
+  xenops-20210103.1339/
+  xenops-20210103.1339/xenops-aio.el
+  xenops-20210103.1339/xenops-apply.el
+  xenops-20210103.1339/xenops-auctex.el
+  xenops-20210103.1339/xenops-avy.el
+  xenops-20210103.1339/xenops-doctor.el
+  xenops-20210103.1339/xenops-element.el
+  xenops-20210103.1339/xenops-elements.el
+  xenops-20210103.1339/xenops-font.el
+  xenops-20210103.1339/xenops-footnote.el
+  xenops-20210103.1339/xenops-image.el
+  xenops-20210103.1339/xenops-math-latex.el
+  xenops-20210103.1339/xenops-math.el
+  xenops-20210103.1339/xenops-minted.el
+  xenops-20210103.1339/xenops-overlay.el
+  xenops-20210103.1339/xenops-parse.el
+  xenops-20210103.1339/xenops-pkg.el
+  xenops-20210103.1339/xenops-png.el
+  xenops-20210103.1339/xenops-src.el
+  xenops-20210103.1339/xenops-style.el
+  xenops-20210103.1339/xenops-util.el
+  xenops-20210103.1339/xenops-xen.el
+  xenops-20210103.1339/xenops.el
+Built xenops in 3.239s, finished at Sun Jan 10 00:53:51 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  504 Jan 10 00:53 packages/xenops-20210103.1339.entry
+152K -rw-r--r-- 1 root root 150K Jan 10 00:53 packages/xenops-20210103.1339.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:53 packages/xenops-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Jan 10 00:53 packages/xenops-readme.txt

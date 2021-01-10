@@ -1,0 +1,56 @@
+Package: kite
+Fetcher: github
+Source:  https://github.com/jscheid/kite.git
+
+Updating /mnt/store/melpa/working/kite/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kite/
+  to /tmp/kite29sxD1/kite-20130201.1938
+    kite-breakpoint.el -> kite-breakpoint.el
+    kite-color.el -> kite-color.el
+    kite-console.el -> kite-console.el
+    kite-debug.el -> kite-debug.el
+    kite-dom-css.el -> kite-dom-css.el
+    kite-dom.el -> kite-dom.el
+    kite-files.el -> kite-files.el
+    kite-global.el -> kite-global.el
+    kite-load-path.el -> kite-load-path.el
+    kite-memory.el -> kite-memory.el
+    kite-modeline.el -> kite-modeline.el
+    kite-net.el -> kite-net.el
+    kite-object.el -> kite-object.el
+    kite-scratch.el -> kite-scratch.el
+    kite-sourcemap.el -> kite-sourcemap.el
+    kite-util.el -> kite-util.el
+    kite.el -> kite.el
+Created kite-20130201.1938.tar containing:
+  kite-20130201.1938/
+  kite-20130201.1938/kite-breakpoint.el
+  kite-20130201.1938/kite-color.el
+  kite-20130201.1938/kite-console.el
+  kite-20130201.1938/kite-debug.el
+  kite-20130201.1938/kite-dom-css.el
+  kite-20130201.1938/kite-dom.el
+  kite-20130201.1938/kite-files.el
+  kite-20130201.1938/kite-global.el
+  kite-20130201.1938/kite-load-path.el
+  kite-20130201.1938/kite-memory.el
+  kite-20130201.1938/kite-modeline.el
+  kite-20130201.1938/kite-net.el
+  kite-20130201.1938/kite-object.el
+  kite-20130201.1938/kite-pkg.el
+  kite-20130201.1938/kite-scratch.el
+  kite-20130201.1938/kite-sourcemap.el
+  kite-20130201.1938/kite-util.el
+  kite-20130201.1938/kite.el
+Built kite in 3.271s, finished at Sun Jan 10 00:25:16 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  317 Jan 10 00:25 packages/kite-20130201.1938.entry
+340K -rw-r--r-- 1 root root 340K Jan 10 00:25 packages/kite-20130201.1938.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:25 packages/kite-badge.svg
+4.0K -rw-r--r-- 1 root root  410 Jan  9 21:38 packages/kite-mini-20160508.1106.entry
+ 32K -rw-r--r-- 1 root root  30K Jan  9 21:38 packages/kite-mini-20160508.1106.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 21:38 packages/kite-mini-badge.svg
+4.0K -rw-r--r-- 1 root root  313 Jan  9 21:38 packages/kite-mini-readme.txt
+4.0K -rw-r--r-- 1 root root  132 Jan 10 00:25 packages/kite-mini.log
+4.0K -rw-r--r-- 1 root root  236 Jan 10 00:25 packages/kite-readme.txt

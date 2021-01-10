@@ -1,0 +1,38 @@
+Package: rg
+Fetcher: github
+Source:  https://github.com/dajva/rg.el.git
+
+Updating /mnt/store/melpa/working/rg/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rg/
+  to /tmp/rgMorYum/rg-20201226.1050
+    rg-header.el -> rg-header.el
+    rg-history.el -> rg-history.el
+    rg-ibuffer.el -> rg-ibuffer.el
+    rg-info-hack.el -> rg-info-hack.el
+    rg-isearch.el -> rg-isearch.el
+    rg-menu.el -> rg-menu.el
+    rg-result.el -> rg-result.el
+    rg.el -> rg.el
+    wgrep-rg.el -> wgrep-rg.el
+    rgel.info -> rgel.info
+Created rg-20201226.1050.tar containing:
+  rg-20201226.1050/
+  rg-20201226.1050/dir
+  rg-20201226.1050/rg-header.el
+  rg-20201226.1050/rg-history.el
+  rg-20201226.1050/rg-ibuffer.el
+  rg-20201226.1050/rg-info-hack.el
+  rg-20201226.1050/rg-isearch.el
+  rg-20201226.1050/rg-menu.el
+  rg-20201226.1050/rg-pkg.el
+  rg-20201226.1050/rg-result.el
+  rg-20201226.1050/rg.el
+  rg-20201226.1050/rgel.info
+  rg-20201226.1050/wgrep-rg.el
+Built rg in 3.159s, finished at Sun Jan 10 00:42:38 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  501 Jan 10 00:42 packages/rg-20201226.1050.entry
+200K -rw-r--r-- 1 root root 200K Jan 10 00:42 packages/rg-20201226.1050.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:42 packages/rg-badge.svg
+4.0K -rw-r--r-- 1 root root  687 Jan 10 00:42 packages/rg-readme.txt

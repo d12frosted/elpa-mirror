@@ -1,0 +1,23 @@
+Package: emlib
+Fetcher: github
+Source:  https://github.com/narendraj9/emlib.git
+
+Updating /mnt/store/melpa/working/emlib/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/emlib/
+  to /tmp/emlibvjjuWf/emlib-20161126.1523
+    emlib-math.el -> emlib-math.el
+    emlib-nn.el -> emlib-nn.el
+    emlib.el -> emlib.el
+Created emlib-20161126.1523.tar containing:
+  emlib-20161126.1523/
+  emlib-20161126.1523/emlib-math.el
+  emlib-20161126.1523/emlib-nn.el
+  emlib-20161126.1523/emlib-pkg.el
+  emlib-20161126.1523/emlib.el
+Built emlib in 5.326s, finished at Sun Jan 10 00:07:14 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  399 Jan 10 00:07 packages/emlib-20161126.1523.entry
+ 32K -rw-r--r-- 1 root root  30K Jan 10 00:07 packages/emlib-20161126.1523.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:07 packages/emlib-badge.svg
+4.0K -rw-r--r-- 1 root root  220 Jan 10 00:07 packages/emlib-readme.txt

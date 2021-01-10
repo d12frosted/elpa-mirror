@@ -1,0 +1,30 @@
+Package: agda2-mode
+Fetcher: github
+Source:  https://github.com/agda/agda.git
+
+Updating /mnt/store/melpa/working/agda2-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/agda2-mode/
+  to /tmp/agda2-mode5r9u53/agda2-mode-20200922.1231
+  ! src/data/emacs-mode/agda-input.el -> agda-input.el
+  ! src/data/emacs-mode/agda2-abbrevs.el -> agda2-abbrevs.el
+  ! src/data/emacs-mode/agda2-highlight.el -> agda2-highlight.el
+  ! src/data/emacs-mode/agda2-mode-pkg.el -> agda2-mode-pkg.el
+  ! src/data/emacs-mode/agda2-mode.el -> agda2-mode.el
+  ! src/data/emacs-mode/agda2-queue.el -> agda2-queue.el
+  ! src/data/emacs-mode/agda2.el -> agda2.el
+Created agda2-mode-20200922.1231.tar containing:
+  agda2-mode-20200922.1231/
+  agda2-mode-20200922.1231/agda-input.el
+  agda2-mode-20200922.1231/agda2-abbrevs.el
+  agda2-mode-20200922.1231/agda2-highlight.el
+  agda2-mode-20200922.1231/agda2-mode-pkg.el
+  agda2-mode-20200922.1231/agda2-mode.el
+  agda2-mode-20200922.1231/agda2-queue.el
+  agda2-mode-20200922.1231/agda2.el
+Built agda2-mode in 11.236s, finished at Sat Jan  9 23:53:18 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  291 Jan  9 23:53 packages/agda2-mode-20200922.1231.entry
+160K -rw-r--r-- 1 root root 160K Jan  9 23:53 packages/agda2-mode-20200922.1231.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 23:53 packages/agda2-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  442 Jan  9 23:53 packages/agda2-mode-readme.txt

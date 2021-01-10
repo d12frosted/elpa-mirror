@@ -1,0 +1,21 @@
+Package: oauth
+Fetcher: github
+Source:  https://github.com/psanford/emacs-oauth.git
+
+Updating /mnt/store/melpa/working/oauth/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/oauth/
+  to /tmp/oauthLjDcZ3/oauth-20130128.151
+    hmac-sha1.el -> hmac-sha1.el
+    oauth.el -> oauth.el
+Created oauth-20130128.151.tar containing:
+  oauth-20130128.151/
+  oauth-20130128.151/hmac-sha1.el
+  oauth-20130128.151/oauth-pkg.el
+  oauth-20130128.151/oauth.el
+Built oauth in 3.055s, finished at Sun Jan 10 00:32:26 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  269 Jan 10 00:32 packages/oauth-20130128.151.entry
+ 32K -rw-r--r-- 1 root root  30K Jan 10 00:32 packages/oauth-20130128.151.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:32 packages/oauth-badge.svg
+4.0K -rw-r--r-- 1 root root 2.1K Jan 10 00:32 packages/oauth-readme.txt

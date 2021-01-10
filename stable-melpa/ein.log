@@ -1,0 +1,95 @@
+Package: ein
+Fetcher: github
+Source:  https://github.com/millejoh/emacs-ipython-notebook.git
+
+Updating /mnt/store/melpa/working/ein/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ein/
+  to /tmp/einpfR8Dw/ein-20210102.1351
+  ! lisp/ein-cell.el -> ein-cell.el
+  ! lisp/ein-classes.el -> ein-classes.el
+  ! lisp/ein-completer.el -> ein-completer.el
+  ! lisp/ein-contents-api.el -> ein-contents-api.el
+  ! lisp/ein-core.el -> ein-core.el
+  ! lisp/ein-dev.el -> ein-dev.el
+  ! lisp/ein-events.el -> ein-events.el
+  ! lisp/ein-file.el -> ein-file.el
+  ! lisp/ein-gat.el -> ein-gat.el
+  ! lisp/ein-ipdb.el -> ein-ipdb.el
+  ! lisp/ein-ipynb-mode.el -> ein-ipynb-mode.el
+  ! lisp/ein-jupyter.el -> ein-jupyter.el
+  ! lisp/ein-kernel.el -> ein-kernel.el
+  ! lisp/ein-kernelinfo.el -> ein-kernelinfo.el
+  ! lisp/ein-kill-ring.el -> ein-kill-ring.el
+  ! lisp/ein-log.el -> ein-log.el
+  ! lisp/ein-markdown-mode.el -> ein-markdown-mode.el
+  ! lisp/ein-node.el -> ein-node.el
+  ! lisp/ein-notebook.el -> ein-notebook.el
+  ! lisp/ein-notebooklist.el -> ein-notebooklist.el
+  ! lisp/ein-notification.el -> ein-notification.el
+  ! lisp/ein-output-area.el -> ein-output-area.el
+  ! lisp/ein-pager.el -> ein-pager.el
+  ! lisp/ein-pkg.el -> ein-pkg.el
+  ! lisp/ein-process.el -> ein-process.el
+  ! lisp/ein-python-send.el -> ein-python-send.el
+  ! lisp/ein-pytools.el -> ein-pytools.el
+  ! lisp/ein-query.el -> ein-query.el
+  ! lisp/ein-scratchsheet.el -> ein-scratchsheet.el
+  ! lisp/ein-shared-output.el -> ein-shared-output.el
+  ! lisp/ein-traceback.el -> ein-traceback.el
+  ! lisp/ein-utils.el -> ein-utils.el
+  ! lisp/ein-websocket.el -> ein-websocket.el
+  ! lisp/ein-worksheet.el -> ein-worksheet.el
+  ! lisp/ein.el -> ein.el
+  ! lisp/ob-ein.el -> ob-ein.el
+  ! lisp/poly-ein.el -> poly-ein.el
+Created ein-20210102.1351.tar containing:
+  ein-20210102.1351/
+  ein-20210102.1351/ein-cell.el
+  ein-20210102.1351/ein-classes.el
+  ein-20210102.1351/ein-completer.el
+  ein-20210102.1351/ein-contents-api.el
+  ein-20210102.1351/ein-core.el
+  ein-20210102.1351/ein-dev.el
+  ein-20210102.1351/ein-events.el
+  ein-20210102.1351/ein-file.el
+  ein-20210102.1351/ein-gat.el
+  ein-20210102.1351/ein-ipdb.el
+  ein-20210102.1351/ein-ipynb-mode.el
+  ein-20210102.1351/ein-jupyter.el
+  ein-20210102.1351/ein-kernel.el
+  ein-20210102.1351/ein-kernelinfo.el
+  ein-20210102.1351/ein-kill-ring.el
+  ein-20210102.1351/ein-log.el
+  ein-20210102.1351/ein-markdown-mode.el
+  ein-20210102.1351/ein-node.el
+  ein-20210102.1351/ein-notebook.el
+  ein-20210102.1351/ein-notebooklist.el
+  ein-20210102.1351/ein-notification.el
+  ein-20210102.1351/ein-output-area.el
+  ein-20210102.1351/ein-pager.el
+  ein-20210102.1351/ein-pkg.el
+  ein-20210102.1351/ein-process.el
+  ein-20210102.1351/ein-python-send.el
+  ein-20210102.1351/ein-pytools.el
+  ein-20210102.1351/ein-query.el
+  ein-20210102.1351/ein-scratchsheet.el
+  ein-20210102.1351/ein-shared-output.el
+  ein-20210102.1351/ein-traceback.el
+  ein-20210102.1351/ein-utils.el
+  ein-20210102.1351/ein-websocket.el
+  ein-20210102.1351/ein-worksheet.el
+  ein-20210102.1351/ein.el
+  ein-20210102.1351/ob-ein.el
+  ein-20210102.1351/poly-ein.el
+Built ein in 3.736s, finished at Sun Jan 10 00:05:55 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  498 Jan 10 00:05 packages/ein-20210102.1351.entry
+820K -rw-r--r-- 1 root root 820K Jan 10 00:05 packages/ein-20210102.1351.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:05 packages/ein-badge.svg
+ 12K -rw-r--r-- 1 root root 9.2K Jan 10 00:05 packages/ein-mumamo-20150302.28.el
+4.0K -rw-r--r-- 1 root root  378 Jan  9 21:18 packages/ein-mumamo-20150302.28.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 21:19 packages/ein-mumamo-badge.svg
+4.0K -rw-r--r-- 1 root root  595 Jan  9 21:18 packages/ein-mumamo-readme.txt
+4.0K -rw-r--r-- 1 root root  135 Jan 10 00:05 packages/ein-mumamo.log
+4.0K -rw-r--r-- 1 root root  607 Jan 10 00:05 packages/ein-readme.txt

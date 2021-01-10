@@ -1,0 +1,87 @@
+Package: org-ref
+Fetcher: github
+Source:  https://github.com/jkitchin/org-ref.git
+
+Updating /mnt/store/melpa/working/org-ref/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-ref/
+  to /tmp/org-refGNYSYZ/org-ref-20210109.143
+    doi-utils.el -> doi-utils.el
+    nist-webbook.el -> nist-webbook.el
+    org-ref-arxiv.el -> org-ref-arxiv.el
+    org-ref-bibtex.el -> org-ref-bibtex.el
+    org-ref-citeproc.el -> org-ref-citeproc.el
+    org-ref-core.el -> org-ref-core.el
+    org-ref-glossary.el -> org-ref-glossary.el
+    org-ref-helm-bibtex.el -> org-ref-helm-bibtex.el
+    org-ref-helm-cite.el -> org-ref-helm-cite.el
+    org-ref-helm.el -> org-ref-helm.el
+    org-ref-isbn.el -> org-ref-isbn.el
+    org-ref-ivy-cite.el -> org-ref-ivy-cite.el
+    org-ref-ivy.el -> org-ref-ivy.el
+    org-ref-latex.el -> org-ref-latex.el
+    org-ref-pdf.el -> org-ref-pdf.el
+    org-ref-pgk.el -> org-ref-pgk.el
+    org-ref-pubmed.el -> org-ref-pubmed.el
+    org-ref-reftex.el -> org-ref-reftex.el
+    org-ref-sci-id.el -> org-ref-sci-id.el
+    org-ref-scifinder.el -> org-ref-scifinder.el
+    org-ref-scopus.el -> org-ref-scopus.el
+    org-ref-url-utils.el -> org-ref-url-utils.el
+    org-ref-utils.el -> org-ref-utils.el
+    org-ref-worldcat.el -> org-ref-worldcat.el
+    org-ref-wos.el -> org-ref-wos.el
+    org-ref.el -> org-ref.el
+    x2bib.el -> x2bib.el
+    org-ref.org -> org-ref.org
+    org-ref.bib -> org-ref.bib
+    citeproc => citeproc
+Created org-ref-20210109.143.tar containing:
+  org-ref-20210109.143/
+  org-ref-20210109.143/citeproc/
+  org-ref-20210109.143/citeproc/csl/
+  org-ref-20210109.143/citeproc/csl/acs-nano.csl
+  org-ref-20210109.143/citeproc/csl/author-year.el
+  org-ref-20210109.143/citeproc/csl/unsrt-footnote.el
+  org-ref-20210109.143/citeproc/csl/unsrt-paren.el
+  org-ref-20210109.143/citeproc/csl/unsrt.el
+  org-ref-20210109.143/citeproc/readme-author-year.org
+  org-ref-20210109.143/citeproc/readme-unsrt.org
+  org-ref-20210109.143/citeproc/readme.bib
+  org-ref-20210109.143/citeproc/readme.org
+  org-ref-20210109.143/doi-utils.el
+  org-ref-20210109.143/nist-webbook.el
+  org-ref-20210109.143/org-ref-arxiv.el
+  org-ref-20210109.143/org-ref-bibtex.el
+  org-ref-20210109.143/org-ref-citeproc.el
+  org-ref-20210109.143/org-ref-core.el
+  org-ref-20210109.143/org-ref-glossary.el
+  org-ref-20210109.143/org-ref-helm-bibtex.el
+  org-ref-20210109.143/org-ref-helm-cite.el
+  org-ref-20210109.143/org-ref-helm.el
+  org-ref-20210109.143/org-ref-isbn.el
+  org-ref-20210109.143/org-ref-ivy-cite.el
+  org-ref-20210109.143/org-ref-ivy.el
+  org-ref-20210109.143/org-ref-latex.el
+  org-ref-20210109.143/org-ref-pdf.el
+  org-ref-20210109.143/org-ref-pgk.el
+  org-ref-20210109.143/org-ref-pkg.el
+  org-ref-20210109.143/org-ref-pubmed.el
+  org-ref-20210109.143/org-ref-reftex.el
+  org-ref-20210109.143/org-ref-sci-id.el
+  org-ref-20210109.143/org-ref-scifinder.el
+  org-ref-20210109.143/org-ref-scopus.el
+  org-ref-20210109.143/org-ref-url-utils.el
+  org-ref-20210109.143/org-ref-utils.el
+  org-ref-20210109.143/org-ref-worldcat.el
+  org-ref-20210109.143/org-ref-wos.el
+  org-ref-20210109.143/org-ref.bib
+  org-ref-20210109.143/org-ref.el
+  org-ref-20210109.143/org-ref.org
+  org-ref-20210109.143/x2bib.el
+Built org-ref in 3.807s, finished at Sun Jan 10 00:34:51 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  669 Jan 10 00:34 packages/org-ref-20210109.143.entry
+732K -rw-r--r-- 1 root root 730K Jan 10 00:34 packages/org-ref-20210109.143.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:34 packages/org-ref-badge.svg
+4.0K -rw-r--r-- 1 root root  281 Jan 10 00:34 packages/org-ref-readme.txt

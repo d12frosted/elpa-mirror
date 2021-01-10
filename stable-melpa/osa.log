@@ -1,0 +1,33 @@
+Package: osa
+Fetcher: github
+Source:  https://github.com/atomontage/osa.git
+
+Updating /mnt/store/melpa/working/osa/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/osa/
+  to /tmp/osav9xHnM/osa-20200522.2103
+    osa-examples.el -> osa-examples.el
+    osa.el -> osa.el
+    scripts/notify.js -> scripts/notify.js
+    scripts/show-finder.applescript -> scripts/show-finder.applescript
+    scripts/terminal.applescript -> scripts/terminal.applescript
+Created osa-20200522.2103.tar containing:
+  osa-20200522.2103/
+  osa-20200522.2103/osa-examples.el
+  osa-20200522.2103/osa-pkg.el
+  osa-20200522.2103/osa.el
+  osa-20200522.2103/scripts/
+  osa-20200522.2103/scripts/notify.js
+  osa-20200522.2103/scripts/show-finder.applescript
+  osa-20200522.2103/scripts/terminal.applescript
+Built osa in 6.284s, finished at Sun Jan 10 00:35:58 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  354 Jan 10 00:35 packages/osa-20200522.2103.entry
+ 32K -rw-r--r-- 1 root root  30K Jan 10 00:35 packages/osa-20200522.2103.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:35 packages/osa-badge.svg
+4.0K -rw-r--r-- 1 root root  398 Jan  9 21:49 packages/osa-chrome-20201122.1639.entry
+ 72K -rw-r--r-- 1 root root  70K Jan  9 21:49 packages/osa-chrome-20201122.1639.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 21:49 packages/osa-chrome-badge.svg
+4.0K -rw-r--r-- 1 root root  306 Jan  9 21:49 packages/osa-chrome-readme.txt
+4.0K -rw-r--r-- 1 root root  137 Jan 10 00:35 packages/osa-chrome.log
+4.0K -rw-r--r-- 1 root root  210 Jan 10 00:35 packages/osa-readme.txt

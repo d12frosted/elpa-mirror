@@ -1,0 +1,26 @@
+Package: elfeed-web
+Fetcher: github
+Source:  https://github.com/skeeto/elfeed.git
+
+Updating /mnt/store/melpa/working/elfeed-web/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elfeed-web/
+  to /tmp/elfeed-webWrDIme/elfeed-web-20191123.1738
+  ! web/elfeed-web-pkg.el -> elfeed-web-pkg.el
+  ! web/elfeed-web.el -> elfeed-web.el
+  ! web/elfeed.css -> elfeed.css
+  ! web/elfeed.js -> elfeed.js
+  ! web/index.html -> index.html
+Created elfeed-web-20191123.1738.tar containing:
+  elfeed-web-20191123.1738/
+  elfeed-web-20191123.1738/elfeed-web-pkg.el
+  elfeed-web-20191123.1738/elfeed-web.el
+  elfeed-web-20191123.1738/elfeed.css
+  elfeed-web-20191123.1738/elfeed.js
+  elfeed-web-20191123.1738/index.html
+Built elfeed-web in 3.117s, finished at Sun Jan 10 00:06:24 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  438 Jan 10 00:06 packages/elfeed-web-20191123.1738.entry
+ 20K -rw-r--r-- 1 root root  20K Jan 10 00:06 packages/elfeed-web-20191123.1738.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:06 packages/elfeed-web-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:06 packages/elfeed-web-readme.txt

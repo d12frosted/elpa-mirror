@@ -1,0 +1,45 @@
+Package: nix-mode
+Fetcher: github
+Source:  https://github.com/NixOS/nix-mode.git
+
+Updating /mnt/store/melpa/working/nix-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nix-mode/
+  to /tmp/nix-mode5dL27b/nix-mode-20201229.138
+    nix-build.el -> nix-build.el
+    nix-drv-mode.el -> nix-drv-mode.el
+    nix-edit.el -> nix-edit.el
+    nix-format.el -> nix-format.el
+    nix-instantiate.el -> nix-instantiate.el
+    nix-log.el -> nix-log.el
+    nix-mode.el -> nix-mode.el
+    nix-prettify-mode.el -> nix-prettify-mode.el
+    nix-repl.el -> nix-repl.el
+    nix-search.el -> nix-search.el
+    nix-shebang.el -> nix-shebang.el
+    nix-shell.el -> nix-shell.el
+    nix-store.el -> nix-store.el
+    nix.el -> nix.el
+Created nix-mode-20201229.138.tar containing:
+  nix-mode-20201229.138/
+  nix-mode-20201229.138/nix-build.el
+  nix-mode-20201229.138/nix-drv-mode.el
+  nix-mode-20201229.138/nix-edit.el
+  nix-mode-20201229.138/nix-format.el
+  nix-mode-20201229.138/nix-instantiate.el
+  nix-mode-20201229.138/nix-log.el
+  nix-mode-20201229.138/nix-mode-pkg.el
+  nix-mode-20201229.138/nix-mode.el
+  nix-mode-20201229.138/nix-prettify-mode.el
+  nix-mode-20201229.138/nix-repl.el
+  nix-mode-20201229.138/nix-search.el
+  nix-mode-20201229.138/nix-shebang.el
+  nix-mode-20201229.138/nix-shell.el
+  nix-mode-20201229.138/nix-store.el
+  nix-mode-20201229.138/nix.el
+Built nix-mode in 3.059s, finished at Sun Jan 10 00:31:50 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  324 Jan 10 00:31 packages/nix-mode-20201229.138.entry
+100K -rw-r--r-- 1 root root 100K Jan 10 00:31 packages/nix-mode-20201229.138.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:31 packages/nix-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  140 Jan 10 00:31 packages/nix-mode-readme.txt

@@ -1,0 +1,34 @@
+Package: org-sync
+Fetcher: github
+Source:  https://github.com/arbox/org-sync.git
+
+Updating /mnt/store/melpa/working/org-sync/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-sync/
+  to /tmp/org-sync24KUxc/org-sync-20181204.23
+    org-sync-bb.el -> org-sync-bb.el
+    org-sync-github.el -> org-sync-github.el
+    org-sync-gitlab.el -> org-sync-gitlab.el
+    org-sync-redmine.el -> org-sync-redmine.el
+    org-sync-rtm.el -> org-sync-rtm.el
+    org-sync.el -> org-sync.el
+Created org-sync-20181204.23.tar containing:
+  org-sync-20181204.23/
+  org-sync-20181204.23/org-sync-bb.el
+  org-sync-20181204.23/org-sync-github.el
+  org-sync-20181204.23/org-sync-gitlab.el
+  org-sync-20181204.23/org-sync-pkg.el
+  org-sync-20181204.23/org-sync-redmine.el
+  org-sync-20181204.23/org-sync-rtm.el
+  org-sync-20181204.23/org-sync.el
+Built org-sync in 3.337s, finished at Sun Jan 10 00:35:09 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  496 Jan 10 00:35 packages/org-sync-20181204.23.entry
+ 80K -rw-r--r-- 1 root root  80K Jan 10 00:35 packages/org-sync-20181204.23.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:35 packages/org-sync-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jan 10 00:35 packages/org-sync-readme.txt
+8.0K -rw-r--r-- 1 root root 7.1K Jan 10 00:35 packages/org-sync-snippets-20210106.1600.el
+4.0K -rw-r--r-- 1 root root  464 Jan  9 21:49 packages/org-sync-snippets-20210106.1600.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 21:49 packages/org-sync-snippets-badge.svg
+4.0K -rw-r--r-- 1 root root  104 Jan 10 00:35 packages/org-sync-snippets-readme.txt
+4.0K -rw-r--r-- 1 root root  157 Jan 10 00:35 packages/org-sync-snippets.log

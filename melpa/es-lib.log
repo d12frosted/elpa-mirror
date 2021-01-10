@@ -1,0 +1,33 @@
+Package: es-lib
+Fetcher: github
+Source:  https://github.com/sabof/es-lib.git
+
+Updating /mnt/store/melpa/working/es-lib/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/es-lib/
+  to /tmp/es-libpTflz2/es-lib-20141111.1830
+    es-lib-buffer-local-set-key.el -> es-lib-buffer-local-set-key.el
+    es-lib-core-functions.el -> es-lib-core-functions.el
+    es-lib-core-macros.el -> es-lib-core-macros.el
+    es-lib-lexical.el -> es-lib-lexical.el
+    es-lib-readme-generator.el -> es-lib-readme-generator.el
+    es-lib-text-navigate.el -> es-lib-text-navigate.el
+    es-lib-total-line.el -> es-lib-total-line.el
+    es-lib.el -> es-lib.el
+Created es-lib-20141111.1830.tar containing:
+  es-lib-20141111.1830/
+  es-lib-20141111.1830/es-lib-buffer-local-set-key.el
+  es-lib-20141111.1830/es-lib-core-functions.el
+  es-lib-20141111.1830/es-lib-core-macros.el
+  es-lib-20141111.1830/es-lib-lexical.el
+  es-lib-20141111.1830/es-lib-pkg.el
+  es-lib-20141111.1830/es-lib-readme-generator.el
+  es-lib-20141111.1830/es-lib-text-navigate.el
+  es-lib-20141111.1830/es-lib-total-line.el
+  es-lib-20141111.1830/es-lib.el
+Built es-lib in 3.151s, finished at Sun Jan 10 00:08:20 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  251 Jan 10 00:08 packages/es-lib-20141111.1830.entry
+ 72K -rw-r--r-- 1 root root  70K Jan 10 00:08 packages/es-lib-20141111.1830.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:08 packages/es-lib-badge.svg
+4.0K -rw-r--r-- 1 root root   57 Jan 10 00:08 packages/es-lib-readme.txt

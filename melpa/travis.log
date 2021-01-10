@@ -1,0 +1,37 @@
+Package: travis
+Fetcher: github
+Source:  https://github.com/nlamirault/emacs-travis.git
+
+Updating /mnt/store/melpa/working/travis/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/travis/
+  to /tmp/traviswuSLQU/travis-20150825.1138
+    travis-api.el -> travis-api.el
+    travis-auth.el -> travis-auth.el
+    travis-builds.el -> travis-builds.el
+    travis-mode.el -> travis-mode.el
+    travis-repos.el -> travis-repos.el
+    travis-ui.el -> travis-ui.el
+    travis-users.el -> travis-users.el
+    travis-utils.el -> travis-utils.el
+    travis-version.el -> travis-version.el
+    travis.el -> travis.el
+Created travis-20150825.1138.tar containing:
+  travis-20150825.1138/
+  travis-20150825.1138/travis-api.el
+  travis-20150825.1138/travis-auth.el
+  travis-20150825.1138/travis-builds.el
+  travis-20150825.1138/travis-mode.el
+  travis-20150825.1138/travis-pkg.el
+  travis-20150825.1138/travis-repos.el
+  travis-20150825.1138/travis-ui.el
+  travis-20150825.1138/travis-users.el
+  travis-20150825.1138/travis-utils.el
+  travis-20150825.1138/travis-version.el
+  travis-20150825.1138/travis.el
+Built travis in 2.982s, finished at Sun Jan 10 00:49:37 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  436 Jan 10 00:49 packages/travis-20150825.1138.entry
+ 40K -rw-r--r-- 1 root root  40K Jan 10 00:49 packages/travis-20150825.1138.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:49 packages/travis-badge.svg
+4.0K -rw-r--r-- 1 root root  212 Jan 10 00:49 packages/travis-readme.txt

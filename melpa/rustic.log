@@ -1,0 +1,39 @@
+Package: rustic
+Fetcher: github
+Source:  https://github.com/brotzeit/rustic.git
+
+Updating /mnt/store/melpa/working/rustic/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rustic/
+  to /tmp/rusticKZfb6n/rustic-20210103.1235
+    rustic-babel.el -> rustic-babel.el
+    rustic-cargo.el -> rustic-cargo.el
+    rustic-common.el -> rustic-common.el
+    rustic-compile.el -> rustic-compile.el
+    rustic-doc.el -> rustic-doc.el
+    rustic-flycheck.el -> rustic-flycheck.el
+    rustic-interaction.el -> rustic-interaction.el
+    rustic-popup.el -> rustic-popup.el
+    rustic-racer.el -> rustic-racer.el
+    rustic-util.el -> rustic-util.el
+    rustic.el -> rustic.el
+Created rustic-20210103.1235.tar containing:
+  rustic-20210103.1235/
+  rustic-20210103.1235/rustic-babel.el
+  rustic-20210103.1235/rustic-cargo.el
+  rustic-20210103.1235/rustic-common.el
+  rustic-20210103.1235/rustic-compile.el
+  rustic-20210103.1235/rustic-doc.el
+  rustic-20210103.1235/rustic-flycheck.el
+  rustic-20210103.1235/rustic-interaction.el
+  rustic-20210103.1235/rustic-pkg.el
+  rustic-20210103.1235/rustic-popup.el
+  rustic-20210103.1235/rustic-racer.el
+  rustic-20210103.1235/rustic-util.el
+  rustic-20210103.1235/rustic.el
+Built rustic in 3.555s, finished at Sun Jan 10 00:43:17 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  444 Jan 10 00:43 packages/rustic-20210103.1235.entry
+200K -rw-r--r-- 1 root root 200K Jan 10 00:43 packages/rustic-20210103.1235.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:43 packages/rustic-badge.svg
+4.0K -rw-r--r-- 1 root root  410 Jan 10 00:43 packages/rustic-readme.txt

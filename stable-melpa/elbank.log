@@ -1,0 +1,35 @@
+Package: elbank
+Fetcher: github
+Source:  https://github.com/NicolasPetton/elbank.git
+
+Updating /mnt/store/melpa/working/elbank/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elbank/
+  to /tmp/elbankKrTyU7/elbank-20180316.1343
+    elbank-boobank.el -> elbank-boobank.el
+    elbank-budget.el -> elbank-budget.el
+    elbank-common.el -> elbank-common.el
+    elbank-compat.el -> elbank-compat.el
+    elbank-overview.el -> elbank-overview.el
+    elbank-progressbar.el -> elbank-progressbar.el
+    elbank-report.el -> elbank-report.el
+    elbank-transaction.el -> elbank-transaction.el
+    elbank.el -> elbank.el
+Created elbank-20180316.1343.tar containing:
+  elbank-20180316.1343/
+  elbank-20180316.1343/elbank-boobank.el
+  elbank-20180316.1343/elbank-budget.el
+  elbank-20180316.1343/elbank-common.el
+  elbank-20180316.1343/elbank-compat.el
+  elbank-20180316.1343/elbank-overview.el
+  elbank-20180316.1343/elbank-pkg.el
+  elbank-20180316.1343/elbank-progressbar.el
+  elbank-20180316.1343/elbank-report.el
+  elbank-20180316.1343/elbank-transaction.el
+  elbank-20180316.1343/elbank.el
+Built elbank in 3.047s, finished at Sun Jan 10 00:06:09 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  336 Jan 10 00:06 packages/elbank-20180316.1343.entry
+ 80K -rw-r--r-- 1 root root  80K Jan 10 00:06 packages/elbank-20180316.1343.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:06 packages/elbank-badge.svg
+4.0K -rw-r--r-- 1 root root  401 Jan 10 00:06 packages/elbank-readme.txt

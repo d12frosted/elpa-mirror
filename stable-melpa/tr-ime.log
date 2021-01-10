@@ -1,0 +1,51 @@
+Package: tr-ime
+Fetcher: github
+Source:  https://github.com/trueroad/tr-emacs-ime-module.git
+
+Updating /mnt/store/melpa/working/tr-ime/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tr-ime/
+  to /tmp/tr-imeA0gkL2/tr-ime-20201128.928
+  ! lisp/tr-ime-debug.el -> tr-ime-debug.el
+  ! lisp/tr-ime-documentfeed.el -> tr-ime-documentfeed.el
+  ! lisp/tr-ime-download.el -> tr-ime-download.el
+  ! lisp/tr-ime-font.el -> tr-ime-font.el
+  ! lisp/tr-ime-hook.el -> tr-ime-hook.el
+  ! lisp/tr-ime-isearch.el -> tr-ime-isearch.el
+  ! lisp/tr-ime-openstatus.el -> tr-ime-openstatus.el
+  ! lisp/tr-ime-prefix-key.el -> tr-ime-prefix-key.el
+  ! lisp/tr-ime-reconversion.el -> tr-ime-reconversion.el
+  ! lisp/tr-ime-recv-notify.el -> tr-ime-recv-notify.el
+  ! lisp/tr-ime-subclassify.el -> tr-ime-subclassify.el
+  ! lisp/tr-ime-sync.el -> tr-ime-sync.el
+  ! lisp/tr-ime-thread-message.el -> tr-ime-thread-message.el
+  ! lisp/tr-ime-workaround-inconsistent.el -> tr-ime-workaround-inconsistent.el
+  ! lisp/tr-ime-workaround-isearch.el -> tr-ime-workaround-isearch.el
+  ! lisp/tr-ime-workaround-prefix-key.el -> tr-ime-workaround-prefix-key.el
+  ! lisp/tr-ime.el -> tr-ime.el
+Created tr-ime-20201128.928.tar containing:
+  tr-ime-20201128.928/
+  tr-ime-20201128.928/tr-ime-debug.el
+  tr-ime-20201128.928/tr-ime-documentfeed.el
+  tr-ime-20201128.928/tr-ime-download.el
+  tr-ime-20201128.928/tr-ime-font.el
+  tr-ime-20201128.928/tr-ime-hook.el
+  tr-ime-20201128.928/tr-ime-isearch.el
+  tr-ime-20201128.928/tr-ime-openstatus.el
+  tr-ime-20201128.928/tr-ime-pkg.el
+  tr-ime-20201128.928/tr-ime-prefix-key.el
+  tr-ime-20201128.928/tr-ime-reconversion.el
+  tr-ime-20201128.928/tr-ime-recv-notify.el
+  tr-ime-20201128.928/tr-ime-subclassify.el
+  tr-ime-20201128.928/tr-ime-sync.el
+  tr-ime-20201128.928/tr-ime-thread-message.el
+  tr-ime-20201128.928/tr-ime-workaround-inconsistent.el
+  tr-ime-20201128.928/tr-ime-workaround-isearch.el
+  tr-ime-20201128.928/tr-ime-workaround-prefix-key.el
+  tr-ime-20201128.928/tr-ime.el
+Built tr-ime in 2.987s, finished at Sun Jan 10 00:49:28 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  365 Jan 10 00:49 packages/tr-ime-20201128.928.entry
+112K -rw-r--r-- 1 root root 110K Jan 10 00:49 packages/tr-ime-20201128.928.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:49 packages/tr-ime-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Jan 10 00:49 packages/tr-ime-readme.txt

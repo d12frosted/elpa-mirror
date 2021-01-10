@@ -1,0 +1,31 @@
+Package: msvc
+Fetcher: github
+Source:  https://github.com/yaruopooner/msvc.git
+
+Updating /mnt/store/melpa/working/msvc/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/msvc/
+  to /tmp/msvcwGiGMK/msvc-20191211.540
+    msvc-env.el -> msvc-env.el
+    msvc-flags.el -> msvc-flags.el
+    msvc.el -> msvc.el
+    empty.cpp -> empty.cpp
+    invoke-msbuild.bat -> invoke-msbuild.bat
+    msvc-extractor.cflags.vcxproj -> msvc-extractor.cflags.vcxproj
+    msvc-extractor.flymake.vcxproj -> msvc-extractor.flymake.vcxproj
+Created msvc-20191211.540.tar containing:
+  msvc-20191211.540/
+  msvc-20191211.540/empty.cpp
+  msvc-20191211.540/invoke-msbuild.bat
+  msvc-20191211.540/msvc-env.el
+  msvc-20191211.540/msvc-extractor.cflags.vcxproj
+  msvc-20191211.540/msvc-extractor.flymake.vcxproj
+  msvc-20191211.540/msvc-flags.el
+  msvc-20191211.540/msvc-pkg.el
+  msvc-20191211.540/msvc.el
+Built msvc in 3.256s, finished at Sun Jan 10 00:30:40 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  466 Jan 10 00:30 packages/msvc-20191211.540.entry
+152K -rw-r--r-- 1 root root 150K Jan 10 00:30 packages/msvc-20191211.540.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:30 packages/msvc-badge.svg
+8.0K -rw-r--r-- 1 root root 7.2K Jan 10 00:30 packages/msvc-readme.txt

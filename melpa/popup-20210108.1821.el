@@ -7,7 +7,7 @@
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Keywords: lisp
 ;; Package-Version: 20210108.1821
-;; Package-Commit: f0b9c01ac9d86bc149e5961fe0848655cc9b7cc4
+;; Package-Commit: bd5a0df7e5bc68af46eef37afe9e80764a1d4fd8
 ;; Version: 0.5.8
 ;; Package-Requires: ((cl-lib "0.5"))
 

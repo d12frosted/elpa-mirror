@@ -1,0 +1,39 @@
+Package: nim-mode
+Fetcher: github
+Source:  https://github.com/nim-lang/nim-mode.git
+
+Updating /mnt/store/melpa/working/nim-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nim-mode/
+  to /tmp/nim-mode8y8uEk/nim-mode-20191219.847
+    nim-capf.el -> nim-capf.el
+    nim-compile.el -> nim-compile.el
+    nim-fill.el -> nim-fill.el
+    nim-helper.el -> nim-helper.el
+    nim-mode.el -> nim-mode.el
+    nim-rx.el -> nim-rx.el
+    nim-smie.el -> nim-smie.el
+    nim-suggest.el -> nim-suggest.el
+    nim-syntax.el -> nim-syntax.el
+    nim-util.el -> nim-util.el
+    nim-vars.el -> nim-vars.el
+Created nim-mode-20191219.847.tar containing:
+  nim-mode-20191219.847/
+  nim-mode-20191219.847/nim-capf.el
+  nim-mode-20191219.847/nim-compile.el
+  nim-mode-20191219.847/nim-fill.el
+  nim-mode-20191219.847/nim-helper.el
+  nim-mode-20191219.847/nim-mode-pkg.el
+  nim-mode-20191219.847/nim-mode.el
+  nim-mode-20191219.847/nim-rx.el
+  nim-mode-20191219.847/nim-smie.el
+  nim-mode-20191219.847/nim-suggest.el
+  nim-mode-20191219.847/nim-syntax.el
+  nim-mode-20191219.847/nim-util.el
+  nim-mode-20191219.847/nim-vars.el
+Built nim-mode in 3.228s, finished at Sun Jan 10 00:31:45 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  435 Jan 10 00:31 packages/nim-mode-20191219.847.entry
+240K -rw-r--r-- 1 root root 240K Jan 10 00:31 packages/nim-mode-20191219.847.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:31 packages/nim-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jan 10 00:31 packages/nim-mode-readme.txt

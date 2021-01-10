@@ -1,0 +1,44 @@
+Package: lispy
+Fetcher: github
+Source:  https://github.com/abo-abo/lispy.git
+
+Updating /mnt/store/melpa/working/lispy/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lispy/
+  to /tmp/lispyJ4ghAd/lispy-20201226.1746
+    elpa.el -> elpa.el
+    le-clojure.el -> le-clojure.el
+    le-hy.el -> le-hy.el
+    le-julia.el -> le-julia.el
+    le-lisp.el -> le-lisp.el
+    le-python.el -> le-python.el
+    le-racket.el -> le-racket.el
+    le-scheme.el -> le-scheme.el
+    lispy-inline.el -> lispy-inline.el
+    lispy-pkg.el -> lispy-pkg.el
+    lispy-tags.el -> lispy-tags.el
+    lispy.el -> lispy.el
+    lispy-clojure.clj -> lispy-clojure.clj
+    lispy-python.py -> lispy-python.py
+Created lispy-20201226.1746.tar containing:
+  lispy-20201226.1746/
+  lispy-20201226.1746/elpa.el
+  lispy-20201226.1746/le-clojure.el
+  lispy-20201226.1746/le-hy.el
+  lispy-20201226.1746/le-julia.el
+  lispy-20201226.1746/le-lisp.el
+  lispy-20201226.1746/le-python.el
+  lispy-20201226.1746/le-racket.el
+  lispy-20201226.1746/le-scheme.el
+  lispy-20201226.1746/lispy-clojure.clj
+  lispy-20201226.1746/lispy-inline.el
+  lispy-20201226.1746/lispy-pkg.el
+  lispy-20201226.1746/lispy-python.py
+  lispy-20201226.1746/lispy-tags.el
+  lispy-20201226.1746/lispy.el
+Built lispy in 3.045s, finished at Sun Jan 10 00:26:28 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  431 Jan 10 00:26 packages/lispy-20201226.1746.entry
+480K -rw-r--r-- 1 root root 480K Jan 10 00:26 packages/lispy-20201226.1746.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:26 packages/lispy-badge.svg
+8.0K -rw-r--r-- 1 root root 4.9K Jan 10 00:26 packages/lispy-readme.txt

@@ -1,0 +1,72 @@
+Package: kubernetes
+Fetcher: github
+Source:  https://github.com/chrisbarrett/kubernetes-el.git
+
+Updating /mnt/store/melpa/working/kubernetes/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kubernetes/
+  to /tmp/kubernetes7ZoeGA/kubernetes-20200911.756
+    kubernetes-ast.el -> kubernetes-ast.el
+    kubernetes-commands.el -> kubernetes-commands.el
+    kubernetes-configmaps.el -> kubernetes-configmaps.el
+    kubernetes-contexts.el -> kubernetes-contexts.el
+    kubernetes-deployments.el -> kubernetes-deployments.el
+    kubernetes-errors.el -> kubernetes-errors.el
+    kubernetes-ingress.el -> kubernetes-ingress.el
+    kubernetes-jobs.el -> kubernetes-jobs.el
+    kubernetes-kubectl.el -> kubernetes-kubectl.el
+    kubernetes-labels.el -> kubernetes-labels.el
+    kubernetes-loading-container.el -> kubernetes-loading-container.el
+    kubernetes-logs.el -> kubernetes-logs.el
+    kubernetes-modes.el -> kubernetes-modes.el
+    kubernetes-namespaces.el -> kubernetes-namespaces.el
+    kubernetes-nodes.el -> kubernetes-nodes.el
+    kubernetes-overview.el -> kubernetes-overview.el
+    kubernetes-pod-line.el -> kubernetes-pod-line.el
+    kubernetes-pods.el -> kubernetes-pods.el
+    kubernetes-popups.el -> kubernetes-popups.el
+    kubernetes-process.el -> kubernetes-process.el
+    kubernetes-props.el -> kubernetes-props.el
+    kubernetes-secrets.el -> kubernetes-secrets.el
+    kubernetes-services.el -> kubernetes-services.el
+    kubernetes-state.el -> kubernetes-state.el
+    kubernetes-statefulsets.el -> kubernetes-statefulsets.el
+    kubernetes-timers.el -> kubernetes-timers.el
+    kubernetes-utils.el -> kubernetes-utils.el
+    kubernetes-vars.el -> kubernetes-vars.el
+    kubernetes-yaml.el -> kubernetes-yaml.el
+    kubernetes.el -> kubernetes.el
+Created kubernetes-20200911.756.tar containing:
+  kubernetes-20200911.756/
+  kubernetes-20200911.756/kubernetes-ast.el
+  kubernetes-20200911.756/kubernetes-commands.el
+  kubernetes-20200911.756/kubernetes-configmaps.el
+  kubernetes-20200911.756/kubernetes-contexts.el
+  kubernetes-20200911.756/kubernetes-deployments.el
+  kubernetes-20200911.756/kubernetes-errors.el
+  kubernetes-20200911.756/kubernetes-ingress.el
+  kubernetes-20200911.756/kubernetes-jobs.el
+  kubernetes-20200911.756/kubernetes-kubectl.el
+  kubernetes-20200911.756/kubernetes-labels.el
+  kubernetes-20200911.756/kubernetes-loading-container.el
+  kubernetes-20200911.756/kubernetes-logs.el
+  kubernetes-20200911.756/kubernetes-modes.el
+  kubernetes-20200911.756/kubernetes-namespaces.el
+  kubernetes-20200911.756/kubernetes-nodes.el
+  kubernetes-20200911.756/kubernetes-overview.el
+  kubernetes-20200911.756/kubernetes-pkg.el
+  kubernetes-20200911.756/kubernetes-pod-line.el
+  kubernetes-20200911.756/kubernetes-pods.el
+  kubernetes-20200911.756/kubernetes-popups.el
+  kubernetes-20200911.756/kubernetes-process.el
+  kubernetes-20200911.756/kubernetes-props.el
+  kubernetes-20200911.756/kubernetes-secrets.el
+  kubernetes-20200911.756/kubernetes-services.el
+  kubernetes-20200911.756/kubernetes-state.el
+  kubernetes-20200911.756/kubernetes-statefulsets.el
+  kubernetes-20200911.756/kubernetes-timers.el
+  kubernetes-20200911.756/kubernetes-utils.el
+  kubernetes-20200911.756/kubernetes-vars.el
+  kubernetes-20200911.756/kubernetes-yaml.el
+  kubernetes-20200911.756/kubernetes.el
+Wrong type argument: number-or-marker-p, nil

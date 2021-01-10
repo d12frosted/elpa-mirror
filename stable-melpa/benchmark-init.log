@@ -1,0 +1,21 @@
+Package: benchmark-init
+Fetcher: github
+Source:  https://github.com/dholm/benchmark-init-el.git
+
+Updating /mnt/store/melpa/working/benchmark-init/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/benchmark-init/
+  to /tmp/benchmark-initpwhe3E/benchmark-init-20150905.938
+    benchmark-init-modes.el -> benchmark-init-modes.el
+    benchmark-init.el -> benchmark-init.el
+Created benchmark-init-20150905.938.tar containing:
+  benchmark-init-20150905.938/
+  benchmark-init-20150905.938/benchmark-init-modes.el
+  benchmark-init-20150905.938/benchmark-init-pkg.el
+  benchmark-init-20150905.938/benchmark-init.el
+Built benchmark-init in 5.926s, finished at Sat Jan  9 23:55:42 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  272 Jan  9 23:55 packages/benchmark-init-20150905.938.entry
+ 20K -rw-r--r-- 1 root root  20K Jan  9 23:55 packages/benchmark-init-20150905.938.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 23:55 packages/benchmark-init-badge.svg
+4.0K -rw-r--r-- 1 root root  479 Jan  9 23:55 packages/benchmark-init-readme.txt

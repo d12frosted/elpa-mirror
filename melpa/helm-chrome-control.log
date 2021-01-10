@@ -1,0 +1,21 @@
+Package: helm-chrome-control
+Fetcher: github
+Source:  https://github.com/xuchunyang/helm-chrome-control.git
+
+Updating /mnt/store/melpa/working/helm-chrome-control/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-chrome-control/
+  to /tmp/helm-chrome-controlIImOcO/helm-chrome-control-20190707.1807
+    helm-chrome-control.el -> helm-chrome-control.el
+    chrome.js -> chrome.js
+Created helm-chrome-control-20190707.1807.tar containing:
+  helm-chrome-control-20190707.1807/
+  helm-chrome-control-20190707.1807/chrome.js
+  helm-chrome-control-20190707.1807/helm-chrome-control-pkg.el
+  helm-chrome-control-20190707.1807/helm-chrome-control.el
+Built helm-chrome-control in 3.040s, finished at Sun Jan 10 00:17:51 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  375 Jan 10 00:17 packages/helm-chrome-control-20190707.1807.entry
+ 20K -rw-r--r-- 1 root root  20K Jan 10 00:17 packages/helm-chrome-control-20190707.1807.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:17 packages/helm-chrome-control-badge.svg
+4.0K -rw-r--r-- 1 root root   31 Jan 10 00:17 packages/helm-chrome-control-readme.txt

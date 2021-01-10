@@ -1,0 +1,34 @@
+Package: npm
+Fetcher: github
+Source:  https://github.com/shaneikennedy/npm.el.git
+
+Updating /mnt/store/melpa/working/npm/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/npm/
+  to /tmp/npm2R9lUc/npm-20200812.1850
+    npm-common.el -> npm-common.el
+    npm-init.el -> npm-init.el
+    npm-install.el -> npm-install.el
+    npm-run.el -> npm-run.el
+    npm-update.el -> npm-update.el
+    npm.el -> npm.el
+Created npm-20200812.1850.tar containing:
+  npm-20200812.1850/
+  npm-20200812.1850/npm-common.el
+  npm-20200812.1850/npm-init.el
+  npm-20200812.1850/npm-install.el
+  npm-20200812.1850/npm-pkg.el
+  npm-20200812.1850/npm-run.el
+  npm-20200812.1850/npm-update.el
+  npm-20200812.1850/npm.el
+Built npm in 2.944s, finished at Sun Jan 10 00:32:13 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  366 Jan 10 00:32 packages/npm-20200812.1850.entry
+ 20K -rw-r--r-- 1 root root  20K Jan 10 00:32 packages/npm-20200812.1850.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:32 packages/npm-badge.svg
+8.0K -rw-r--r-- 1 root root 7.6K Jan  9 21:45 packages/npm-mode-20190616.2025.el
+4.0K -rw-r--r-- 1 root root  419 Jan  9 21:45 packages/npm-mode-20190616.2025.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 21:45 packages/npm-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jan  9 21:45 packages/npm-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  129 Jan 10 00:32 packages/npm-mode.log
+4.0K -rw-r--r-- 1 root root   58 Jan 10 00:32 packages/npm-readme.txt

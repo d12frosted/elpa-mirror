@@ -1,0 +1,29 @@
+Package: electric-spacing
+Fetcher: github
+Source:  https://github.com/xwl/electric-spacing.git
+
+Updating /mnt/store/melpa/working/electric-spacing/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/electric-spacing/
+  to /tmp/electric-spacingEhDvMC/electric-spacing-20200607.1405
+    electric-spacing-cc-mode.el -> electric-spacing-cc-mode.el
+    electric-spacing-init.el -> electric-spacing-init.el
+    electric-spacing-python-mode.el -> electric-spacing-python-mode.el
+    electric-spacing-rust-mode.el -> electric-spacing-rust-mode.el
+    electric-spacing-text-mode.el -> electric-spacing-text-mode.el
+    electric-spacing.el -> electric-spacing.el
+Created electric-spacing-20200607.1405.tar containing:
+  electric-spacing-20200607.1405/
+  electric-spacing-20200607.1405/electric-spacing-cc-mode.el
+  electric-spacing-20200607.1405/electric-spacing-init.el
+  electric-spacing-20200607.1405/electric-spacing-pkg.el
+  electric-spacing-20200607.1405/electric-spacing-python-mode.el
+  electric-spacing-20200607.1405/electric-spacing-rust-mode.el
+  electric-spacing-20200607.1405/electric-spacing-text-mode.el
+  electric-spacing-20200607.1405/electric-spacing.el
+Built electric-spacing in 2.854s, finished at Sun Jan 10 00:06:17 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  293 Jan 10 00:06 packages/electric-spacing-20200607.1405.entry
+ 32K -rw-r--r-- 1 root root  30K Jan 10 00:06 packages/electric-spacing-20200607.1405.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:06 packages/electric-spacing-badge.svg
+4.0K -rw-r--r-- 1 root root  428 Jan 10 00:06 packages/electric-spacing-readme.txt

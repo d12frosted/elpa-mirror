@@ -1,0 +1,36 @@
+Package: osa-chrome
+Fetcher: github
+Source:  https://github.com/atomontage/osa-chrome.git
+
+Updating /mnt/store/melpa/working/osa-chrome/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/osa-chrome/
+  to /tmp/osa-chromeEKwrhN/osa-chrome-20201122.1639
+    osa-chrome.el -> osa-chrome.el
+    scripts/delete-tabs-multi.js -> scripts/delete-tabs-multi.js
+    scripts/delete-tabs-single.js -> scripts/delete-tabs-single.js
+    scripts/get-tabs-multi.js -> scripts/get-tabs-multi.js
+    scripts/get-tabs-single.js -> scripts/get-tabs-single.js
+    scripts/set-tab-multi.js -> scripts/set-tab-multi.js
+    scripts/set-tab-single.js -> scripts/set-tab-single.js
+    scripts/view-source-multi.js -> scripts/view-source-multi.js
+    scripts/view-source-single.js -> scripts/view-source-single.js
+Created osa-chrome-20201122.1639.tar containing:
+  osa-chrome-20201122.1639/
+  osa-chrome-20201122.1639/osa-chrome-pkg.el
+  osa-chrome-20201122.1639/osa-chrome.el
+  osa-chrome-20201122.1639/scripts/
+  osa-chrome-20201122.1639/scripts/delete-tabs-multi.js
+  osa-chrome-20201122.1639/scripts/delete-tabs-single.js
+  osa-chrome-20201122.1639/scripts/get-tabs-multi.js
+  osa-chrome-20201122.1639/scripts/get-tabs-single.js
+  osa-chrome-20201122.1639/scripts/set-tab-multi.js
+  osa-chrome-20201122.1639/scripts/set-tab-single.js
+  osa-chrome-20201122.1639/scripts/view-source-multi.js
+  osa-chrome-20201122.1639/scripts/view-source-single.js
+Built osa-chrome in 6.781s, finished at Sun Jan 10 00:36:01 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  398 Jan 10 00:36 packages/osa-chrome-20201122.1639.entry
+ 72K -rw-r--r-- 1 root root  70K Jan 10 00:36 packages/osa-chrome-20201122.1639.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:36 packages/osa-chrome-badge.svg
+4.0K -rw-r--r-- 1 root root  306 Jan 10 00:36 packages/osa-chrome-readme.txt

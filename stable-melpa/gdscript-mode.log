@@ -1,0 +1,55 @@
+Package: gdscript-mode
+Fetcher: github
+Source:  https://github.com/godotengine/emacs-gdscript-mode.git
+
+Updating /mnt/store/melpa/working/gdscript-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gdscript-mode/
+  to /tmp/gdscript-modeCdSVqs/gdscript-mode-20210104.1919
+    gdscript-comint-gdformat.el -> gdscript-comint-gdformat.el
+    gdscript-comint.el -> gdscript-comint.el
+    gdscript-completion.el -> gdscript-completion.el
+    gdscript-customization.el -> gdscript-customization.el
+    gdscript-debug.el -> gdscript-debug.el
+    gdscript-docs.el -> gdscript-docs.el
+    gdscript-fill-paragraph.el -> gdscript-fill-paragraph.el
+    gdscript-format.el -> gdscript-format.el
+    gdscript-godot.el -> gdscript-godot.el
+    gdscript-history.el -> gdscript-history.el
+    gdscript-hydra.el -> gdscript-hydra.el
+    gdscript-imenu.el -> gdscript-imenu.el
+    gdscript-indent-and-nav.el -> gdscript-indent-and-nav.el
+    gdscript-keywords.el -> gdscript-keywords.el
+    gdscript-mode.el -> gdscript-mode.el
+    gdscript-project.el -> gdscript-project.el
+    gdscript-rx.el -> gdscript-rx.el
+    gdscript-syntax.el -> gdscript-syntax.el
+    gdscript-utils.el -> gdscript-utils.el
+Created gdscript-mode-20210104.1919.tar containing:
+  gdscript-mode-20210104.1919/
+  gdscript-mode-20210104.1919/gdscript-comint-gdformat.el
+  gdscript-mode-20210104.1919/gdscript-comint.el
+  gdscript-mode-20210104.1919/gdscript-completion.el
+  gdscript-mode-20210104.1919/gdscript-customization.el
+  gdscript-mode-20210104.1919/gdscript-debug.el
+  gdscript-mode-20210104.1919/gdscript-docs.el
+  gdscript-mode-20210104.1919/gdscript-fill-paragraph.el
+  gdscript-mode-20210104.1919/gdscript-format.el
+  gdscript-mode-20210104.1919/gdscript-godot.el
+  gdscript-mode-20210104.1919/gdscript-history.el
+  gdscript-mode-20210104.1919/gdscript-hydra.el
+  gdscript-mode-20210104.1919/gdscript-imenu.el
+  gdscript-mode-20210104.1919/gdscript-indent-and-nav.el
+  gdscript-mode-20210104.1919/gdscript-keywords.el
+  gdscript-mode-20210104.1919/gdscript-mode-pkg.el
+  gdscript-mode-20210104.1919/gdscript-mode.el
+  gdscript-mode-20210104.1919/gdscript-project.el
+  gdscript-mode-20210104.1919/gdscript-rx.el
+  gdscript-mode-20210104.1919/gdscript-syntax.el
+  gdscript-mode-20210104.1919/gdscript-utils.el
+Built gdscript-mode in 3.785s, finished at Sun Jan 10 00:14:31 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  406 Jan 10 00:14 packages/gdscript-mode-20210104.1919.entry
+360K -rw-r--r-- 1 root root 360K Jan 10 00:14 packages/gdscript-mode-20210104.1919.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:14 packages/gdscript-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  145 Jan 10 00:14 packages/gdscript-mode-readme.txt

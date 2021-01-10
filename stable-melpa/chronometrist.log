@@ -1,0 +1,51 @@
+Package: chronometrist
+Fetcher: github
+Source:  https://github.com/contrapunctus-1/chronometrist.git
+
+Updating /mnt/store/melpa/working/chronometrist/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/chronometrist/
+  to /tmp/chronometrist1Ousva/chronometrist-20210106.2147
+  ! doc/manual.info -> manual.info
+  ! elisp/chronometrist-common.el -> chronometrist-common.el
+  ! elisp/chronometrist-diary-view.el -> chronometrist-diary-view.el
+  ! elisp/chronometrist-events.el -> chronometrist-events.el
+  ! elisp/chronometrist-key-values.el -> chronometrist-key-values.el
+  ! elisp/chronometrist-migrate.el -> chronometrist-migrate.el
+  ! elisp/chronometrist-plist-pp.el -> chronometrist-plist-pp.el
+  ! elisp/chronometrist-queries.el -> chronometrist-queries.el
+  ! elisp/chronometrist-report.el -> chronometrist-report.el
+  ! elisp/chronometrist-sexp.el -> chronometrist-sexp.el
+  ! elisp/chronometrist-statistics.el -> chronometrist-statistics.el
+  ! elisp/chronometrist-time.el -> chronometrist-time.el
+  ! elisp/chronometrist-timer.el -> chronometrist-timer.el
+  ! elisp/chronometrist.el -> chronometrist.el
+Created chronometrist-20210106.2147.tar containing:
+  chronometrist-20210106.2147/
+  chronometrist-20210106.2147/chronometrist-common.el
+  chronometrist-20210106.2147/chronometrist-diary-view.el
+  chronometrist-20210106.2147/chronometrist-events.el
+  chronometrist-20210106.2147/chronometrist-key-values.el
+  chronometrist-20210106.2147/chronometrist-migrate.el
+  chronometrist-20210106.2147/chronometrist-pkg.el
+  chronometrist-20210106.2147/chronometrist-plist-pp.el
+  chronometrist-20210106.2147/chronometrist-queries.el
+  chronometrist-20210106.2147/chronometrist-report.el
+  chronometrist-20210106.2147/chronometrist-sexp.el
+  chronometrist-20210106.2147/chronometrist-statistics.el
+  chronometrist-20210106.2147/chronometrist-time.el
+  chronometrist-20210106.2147/chronometrist-timer.el
+  chronometrist-20210106.2147/chronometrist.el
+  chronometrist-20210106.2147/dir
+  chronometrist-20210106.2147/manual.info
+Built chronometrist in 3.303s, finished at Sat Jan  9 23:58:11 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  502 Jan  9 23:58 packages/chronometrist-20210106.2147.entry
+172K -rw-r--r-- 1 root root 170K Jan  9 23:58 packages/chronometrist-20210106.2147.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 23:58 packages/chronometrist-badge.svg
+ 12K -rw-r--r-- 1 root root  12K Jan  9 21:11 packages/chronometrist-goal-20210104.336.el
+4.0K -rw-r--r-- 1 root root  525 Jan  9 21:11 packages/chronometrist-goal-20210104.336.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  9 21:11 packages/chronometrist-goal-badge.svg
+4.0K -rw-r--r-- 1 root root  169 Jan  9 21:11 packages/chronometrist-goal-readme.txt
+4.0K -rw-r--r-- 1 root root  166 Jan  9 23:58 packages/chronometrist-goal.log
+4.0K -rw-r--r-- 1 root root 2.0K Jan  9 23:58 packages/chronometrist-readme.txt

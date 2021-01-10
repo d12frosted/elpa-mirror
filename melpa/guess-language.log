@@ -1,0 +1,151 @@
+Package: guess-language
+Fetcher: github
+Source:  https://github.com/tmalsburg/guess-language.el.git
+
+Updating /mnt/store/melpa/working/guess-language/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/guess-language/
+  to /tmp/guess-languagewAXCyp/guess-language-20201229.1021
+    guess-language.el -> guess-language.el
+  ! trigrams/README.org -> README.org
+  ! trigrams/af -> af
+  ! trigrams/ar -> ar
+  ! trigrams/az -> az
+  ! trigrams/bg -> bg
+  ! trigrams/ca -> ca
+  ! trigrams/ceb -> ceb
+  ! trigrams/cs -> cs
+  ! trigrams/cy -> cy
+  ! trigrams/da -> da
+  ! trigrams/de -> de
+  ! trigrams/en -> en
+  ! trigrams/es -> es
+  ! trigrams/et -> et
+  ! trigrams/eu -> eu
+  ! trigrams/fa -> fa
+  ! trigrams/fi -> fi
+  ! trigrams/fr -> fr
+  ! trigrams/ha -> ha
+  ! trigrams/haw -> haw
+  ! trigrams/hi -> hi
+  ! trigrams/hr -> hr
+  ! trigrams/hu -> hu
+  ! trigrams/id -> id
+  ! trigrams/is -> is
+  ! trigrams/it -> it
+  ! trigrams/kk -> kk
+  ! trigrams/ky -> ky
+  ! trigrams/la -> la
+  ! trigrams/lt -> lt
+  ! trigrams/lv -> lv
+  ! trigrams/mk -> mk
+  ! trigrams/mn -> mn
+  ! trigrams/nb -> nb
+  ! trigrams/ne -> ne
+  ! trigrams/nl -> nl
+  ! trigrams/nr -> nr
+  ! trigrams/nso -> nso
+  ! trigrams/pl -> pl
+  ! trigrams/ps -> ps
+  ! trigrams/pt -> pt
+  ! trigrams/pt_BR -> pt_BR
+  ! trigrams/pt_PT -> pt_PT
+  ! trigrams/ro -> ro
+  ! trigrams/ru -> ru
+  ! trigrams/sk -> sk
+  ! trigrams/sl -> sl
+  ! trigrams/so -> so
+  ! trigrams/sq -> sq
+  ! trigrams/sr -> sr
+  ! trigrams/sr_LAT -> sr_LAT
+  ! trigrams/ss -> ss
+  ! trigrams/st -> st
+  ! trigrams/sv -> sv
+  ! trigrams/sw -> sw
+  ! trigrams/tl -> tl
+  ! trigrams/tlh -> tlh
+  ! trigrams/tn -> tn
+  ! trigrams/tr -> tr
+  ! trigrams/ts -> ts
+  ! trigrams/uk -> uk
+  ! trigrams/ur -> ur
+  ! trigrams/uz -> uz
+  ! trigrams/ve -> ve
+  ! trigrams/xh -> xh
+  ! trigrams/zu -> zu
+Created guess-language-20201229.1021.tar containing:
+  guess-language-20201229.1021/
+  guess-language-20201229.1021/README.org
+  guess-language-20201229.1021/af
+  guess-language-20201229.1021/ar
+  guess-language-20201229.1021/az
+  guess-language-20201229.1021/bg
+  guess-language-20201229.1021/ca
+  guess-language-20201229.1021/ceb
+  guess-language-20201229.1021/cs
+  guess-language-20201229.1021/cy
+  guess-language-20201229.1021/da
+  guess-language-20201229.1021/de
+  guess-language-20201229.1021/en
+  guess-language-20201229.1021/es
+  guess-language-20201229.1021/et
+  guess-language-20201229.1021/eu
+  guess-language-20201229.1021/fa
+  guess-language-20201229.1021/fi
+  guess-language-20201229.1021/fr
+  guess-language-20201229.1021/guess-language-pkg.el
+  guess-language-20201229.1021/guess-language.el
+  guess-language-20201229.1021/ha
+  guess-language-20201229.1021/haw
+  guess-language-20201229.1021/hi
+  guess-language-20201229.1021/hr
+  guess-language-20201229.1021/hu
+  guess-language-20201229.1021/id
+  guess-language-20201229.1021/is
+  guess-language-20201229.1021/it
+  guess-language-20201229.1021/kk
+  guess-language-20201229.1021/ky
+  guess-language-20201229.1021/la
+  guess-language-20201229.1021/lt
+  guess-language-20201229.1021/lv
+  guess-language-20201229.1021/mk
+  guess-language-20201229.1021/mn
+  guess-language-20201229.1021/nb
+  guess-language-20201229.1021/ne
+  guess-language-20201229.1021/nl
+  guess-language-20201229.1021/nr
+  guess-language-20201229.1021/nso
+  guess-language-20201229.1021/pl
+  guess-language-20201229.1021/ps
+  guess-language-20201229.1021/pt
+  guess-language-20201229.1021/pt_BR
+  guess-language-20201229.1021/pt_PT
+  guess-language-20201229.1021/ro
+  guess-language-20201229.1021/ru
+  guess-language-20201229.1021/sk
+  guess-language-20201229.1021/sl
+  guess-language-20201229.1021/so
+  guess-language-20201229.1021/sq
+  guess-language-20201229.1021/sr
+  guess-language-20201229.1021/sr_LAT
+  guess-language-20201229.1021/ss
+  guess-language-20201229.1021/st
+  guess-language-20201229.1021/sv
+  guess-language-20201229.1021/sw
+  guess-language-20201229.1021/tl
+  guess-language-20201229.1021/tlh
+  guess-language-20201229.1021/tn
+  guess-language-20201229.1021/tr
+  guess-language-20201229.1021/ts
+  guess-language-20201229.1021/uk
+  guess-language-20201229.1021/ur
+  guess-language-20201229.1021/uz
+  guess-language-20201229.1021/ve
+  guess-language-20201229.1021/xh
+  guess-language-20201229.1021/zu
+Built guess-language in 4.277s, finished at Sun Jan 10 00:17:04 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  410 Jan 10 00:17 packages/guess-language-20201229.1021.entry
+160K -rw-r--r-- 1 root root 160K Jan 10 00:17 packages/guess-language-20201229.1021.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:17 packages/guess-language-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jan 10 00:17 packages/guess-language-readme.txt

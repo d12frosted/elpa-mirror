@@ -1,0 +1,43 @@
+Package: ptemplate-templates
+Fetcher: github
+Source:  https://github.com/nbfalcon/ptemplate-templates.git
+
+Updating /mnt/store/melpa/working/ptemplate-templates/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ptemplate-templates/
+  to /tmp/ptemplate-templatesOJ6tTl/ptemplate-templates-20210109.2155
+    ptemplate-templates.el -> ptemplate-templates.el
+    rsc => rsc
+Created ptemplate-templates-20210109.2155.tar containing:
+  ptemplate-templates-20210109.2155/
+  ptemplate-templates-20210109.2155/ptemplate-templates-pkg.el
+  ptemplate-templates-20210109.2155/ptemplate-templates.el
+  ptemplate-templates-20210109.2155/rsc/
+  ptemplate-templates-20210109.2155/rsc/project-templates/
+  ptemplate-templates-20210109.2155/rsc/project-templates/C-C++/
+  ptemplate-templates-20210109.2155/rsc/project-templates/C-C++/meson-project/
+  ptemplate-templates-20210109.2155/rsc/project-templates/C-C++/meson-project/.ptemplate.el
+  ptemplate-templates-20210109.2155/rsc/project-templates/C-C++/meson-project/README.md
+  ptemplate-templates-20210109.2155/rsc/project-templates/C-C++/meson-project/include/
+  ptemplate-templates-20210109.2155/rsc/project-templates/C-C++/meson-project/include/.gitkeep
+  ptemplate-templates-20210109.2155/rsc/project-templates/C-C++/meson-project/meson.build.autoyas
+  ptemplate-templates-20210109.2155/rsc/project-templates/C-C++/meson-project/src/
+  ptemplate-templates-20210109.2155/rsc/project-templates/C-C++/meson-project/src/main.c.yas
+  ptemplate-templates-20210109.2155/rsc/project-templates/Emacs/
+  ptemplate-templates-20210109.2155/rsc/project-templates/Emacs/cask-plugin/
+  ptemplate-templates-20210109.2155/rsc/project-templates/Emacs/cask-plugin/.ptemplate.el
+  ptemplate-templates-20210109.2155/rsc/project-templates/Emacs/cask-plugin/Cask.autoyas
+  ptemplate-templates-20210109.2155/rsc/project-templates/Emacs/cask-plugin/README.md
+  ptemplate-templates-20210109.2155/rsc/project-templates/Emacs/plugin/
+  ptemplate-templates-20210109.2155/rsc/project-templates/Emacs/plugin/.ptemplate.el
+  ptemplate-templates-20210109.2155/rsc/project-templates/Emacs/plugin/COPYING.txt
+  ptemplate-templates-20210109.2155/rsc/project-templates/Emacs/plugin/README.md
+  ptemplate-templates-20210109.2155/rsc/project-templates/Emacs/plugin/src.el.yas
+Built ptemplate-templates in 3.392s, finished at Sun Jan 10 00:40:13 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  419 Jan  9 21:53 packages/ptemplate-templates-20210109.1308.entry
+ 60K -rw-r--r-- 1 root root  60K Jan  9 21:53 packages/ptemplate-templates-20210109.1308.tar
+4.0K -rw-r--r-- 1 root root  419 Jan 10 00:40 packages/ptemplate-templates-20210109.2155.entry
+ 60K -rw-r--r-- 1 root root  60K Jan 10 00:40 packages/ptemplate-templates-20210109.2155.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:40 packages/ptemplate-templates-badge.svg
+4.0K -rw-r--r-- 1 root root  600 Jan 10 00:40 packages/ptemplate-templates-readme.txt
