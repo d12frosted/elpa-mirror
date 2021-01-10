@@ -11,15 +11,11 @@ An example of how to use the library is in the
 This library is compatible with emacs 23 and 24, although only emacs
 24 support secure websockets.
 
-NOTE: Due to FSF attribution restrictions, ERT tests are only not
-present in the emacs ELPA repository.  They can only be found in the
-github repository at https://github.com/ahyatt/emacs-websocket/.
-
 * Version release checklist
 
 Each version that is released should be checked with this checklist:
 
-- [ ] All ert test passing (see note above on ERT tests)
+- [ ] All ert test passing
 - [ ] Functional test passing on emacs 23 and 24
 - [ ] websocket.el byte compiling cleanly.
 

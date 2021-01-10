@@ -2469,15 +2469,15 @@
 	       ("Pierre Neidhardt" . "mail@ambrevar.xyz"))
 	      (:keywords "news" "hypermedia" "blog" "feed" "rss" "atom"))])
  (websocket .
-	    [(1 12)
+	    [(1 13)
 	     ((cl-lib
 	       (0 5)))
 	     "Emacs WebSocket client and server" tar
-	     ((:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
+	     ((:url . "https://github.com/ahyatt/emacs-websocket")
+	      (:maintainer "Andrew Hyatt" . "ahyatt@gmail.com")
 	      (:authors
 	       ("Andrew Hyatt" . "ahyatt@gmail.com"))
-	      (:keywords "communication" "websocket" "server")
-	      (:url . "http://elpa.gnu.org/packages/websocket.html"))])
+	      (:keywords "communication" "websocket" "server"))])
  (which-key .
 	    [(3 3 2)
 	     ((emacs
