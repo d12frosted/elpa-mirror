@@ -2469,7 +2469,7 @@
 	       ("Pierre Neidhardt" . "mail@ambrevar.xyz"))
 	      (:keywords "news" "hypermedia" "blog" "feed" "rss" "atom"))])
  (websocket .
-	    [(1 13)
+	    [(1 13 1)
 	     ((cl-lib
 	       (0 5)))
 	     "Emacs WebSocket client and server" tar
