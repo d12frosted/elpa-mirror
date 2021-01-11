@@ -40,13 +40,13 @@
 		 ("Stephen Leake" . "stephen_leake@member.fsf.org"))
 		(:keywords "languages" "ada"))])
  (adaptive-wrap .
-		[(0 7)
-		 nil "Smart line-wrapping with wrap-prefix" single
-		 ((:url . "http://elpa.gnu.org/packages/adaptive-wrap.html")
+		[(0 8)
+		 nil "Smart line-wrapping with wrap-prefix" tar
+		 ((:maintainer "Stephen Berman" . "stephen.berman@gmx.net")
 		  (:authors
 		   ("Stephen Berman" . "stephen.berman@gmx.net")
 		   ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-		  (:maintainer "Stephen Berman" . "stephen.berman@gmx.net"))])
+		  (:url . "https://elpa.gnu.org/packages/adaptive-wrap.html"))])
  (adjust-parens .
 		[(3 1)
 		 nil "Indent and dedent Lisp code, automatically adjust close parens" tar
