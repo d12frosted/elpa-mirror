@@ -1,3 +1,4 @@
+
 Workgroups2 is an Emacs session manager. It is based on the
 experimental branch of the original "workgroups" extension.
 

@@ -1,2 +1,11 @@
-
-(minsk-theme . [(20200306 1220) ((emacs (24))) "Minsk, a theme in deep muted greens" single ((:commit . "e4dcdec3a4472a507d6b249ae2194dacaa885ecb") (:keywords "theme" "faces") (:authors ("Jean Lo" . "jlpaca@users.noreply.github.com")) (:maintainer "Jean Lo" . "jlpaca@users.noreply.github.com") (:url . "https://github.com/jlpaca/minsk-theme"))])
+(minsk-theme .
+	     [(20200306 1220)
+	      ((emacs
+		(24)))
+	      "Minsk, a theme in deep muted greens" single
+	      ((:commit . "e4dcdec3a4472a507d6b249ae2194dacaa885ecb")
+	       (:authors
+		("Jean Lo" . "jlpaca@users.noreply.github.com"))
+	       (:maintainer "Jean Lo" . "jlpaca@users.noreply.github.com")
+	       (:keywords "theme" "faces")
+	       (:url . "https://github.com/jlpaca/minsk-theme"))])

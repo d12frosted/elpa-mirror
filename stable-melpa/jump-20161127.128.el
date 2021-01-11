@@ -5,7 +5,7 @@
 ;; Author: Eric Schulte
 ;; URL: http://github.com/eschulte/jump.el
 ;; Package-Version: 20161127.128
-;; Package-Commit: e4f1372cf22e811faca52fc86bdd5d817498a4d8
+;; Package-Commit: 55caa66a7cc6e0b1a76143fd40eff38416928941
 ;; Created: 2008-08-21
 ;; Keywords: project, convenience, navigation
 ;; Package-Requires: ((findr "0.7") (inflections "2.4") (cl-lib "0.5"))

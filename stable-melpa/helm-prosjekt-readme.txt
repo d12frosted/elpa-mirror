@@ -1,9 +1,10 @@
+
 Allows opening and closing prosjekt projects through prosjekt, as
 well as selection of files within a project.
 
 To activate, add helm-prosjekt.el to your load path and
 
-  (require 'helm-prosjekt)
+(require 'helm-prosjekt)
 
 to your .emacs. You can then use the interactive function
 `helm-prosjekt`
@@ -32,4 +33,4 @@ ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Code: (copied from anything-prosjekt.el)
+; Code: (copied from anything-prosjekt.el)

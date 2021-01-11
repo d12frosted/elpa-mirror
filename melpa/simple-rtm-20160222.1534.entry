@@ -1,2 +1,12 @@
-
-(simple-rtm . [(20160222 1534) ((rtm (0 1)) (dash (2 0 0))) "Interactive Emacs mode for Remember The Milk" single ((:commit . "8c7cd96cf66ef112be5c363e3378e304f8f83999") (:keywords "remember" "the" "milk" "productivity" "todo") (:authors ("Moritz Bunkus" . "morit@bunkus.org")) (:maintainer "Moritz Bunkus" . "morit@bunkus.org"))])
+(simple-rtm .
+	    [(20160222 1534)
+	     ((rtm
+	       (0 1))
+	      (dash
+	       (2 0 0)))
+	     "Interactive Emacs mode for Remember The Milk" single
+	     ((:commit . "8c7cd96cf66ef112be5c363e3378e304f8f83999")
+	      (:authors
+	       ("Moritz Bunkus" . "morit@bunkus.org"))
+	      (:maintainer "Moritz Bunkus" . "morit@bunkus.org")
+	      (:keywords "remember" "the" "milk" "productivity" "todo"))])

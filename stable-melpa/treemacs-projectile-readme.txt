@@ -1,1 +1,1 @@
-Projectile integration for treemacs
+; Projectile integration for treemacs

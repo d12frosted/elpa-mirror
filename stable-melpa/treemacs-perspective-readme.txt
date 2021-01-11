@@ -1,1 +1,1 @@
-Integration of perspective.el into treemacs' buffer scoping framework.
+; Integration of perspective.el into treemacs' buffer scoping framework.

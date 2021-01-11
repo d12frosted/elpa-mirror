@@ -1,2 +1,9 @@
-
-(gvpr-mode . [(20201007 2054) nil "A major mode offering basic syntax coloring for gvpr scripts." single ((:commit . "ef6ec2d4a4c9de68078c94a0e43b05bf77ec4674") (:keywords "graphviz" "gv" "dot" "gvpr" "graph") (:authors ("Rod Waldhoff" . "r.waldhoff@gmail.com")) (:maintainer "Rod Waldhoff" . "r.waldhoff@gmail.com") (:url . "https://raw.github.com/rodw/gvpr-lib/master/extra/gvpr-mode.el"))])
+(gvpr-mode .
+	   [(20201007 2054)
+	    nil "A major mode offering basic syntax coloring for gvpr scripts." single
+	    ((:commit . "ef6ec2d4a4c9de68078c94a0e43b05bf77ec4674")
+	     (:authors
+	      ("Rod Waldhoff" . "r.waldhoff@gmail.com"))
+	     (:maintainer "Rod Waldhoff" . "r.waldhoff@gmail.com")
+	     (:keywords "graphviz" "gv" "dot" "gvpr" "graph")
+	     (:url . "https://raw.github.com/rodw/gvpr-lib/master/extra/gvpr-mode.el"))])

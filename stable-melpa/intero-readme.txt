@@ -1,3 +1,4 @@
+
 Mode that enables:
 
 * Flycheck type checking ✓

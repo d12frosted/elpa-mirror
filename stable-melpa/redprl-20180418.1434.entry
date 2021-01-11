@@ -1,2 +1,10 @@
-
-(redprl . [(20180418 1434) ((emacs (24 3))) "Major mode for editing RedPRL proofs and interacting with RedPRL" single ((:commit . "c72190de76f7ed1cfbe1d2046c96e99ac5022b0c") (:keywords "languages") (:authors ("Jonathan Sterling" . "jon@jonmsterling.com")) (:maintainer "Jonathan Sterling" . "jon@jonmsterling.com"))])
+(redprl .
+	[(20180418 1434)
+	 ((emacs
+	   (24 3)))
+	 "Major mode for editing RedPRL proofs and interacting with RedPRL" single
+	 ((:commit . "c72190de76f7ed1cfbe1d2046c96e99ac5022b0c")
+	  (:authors
+	   ("Jonathan Sterling" . "jon@jonmsterling.com"))
+	  (:maintainer "Jonathan Sterling" . "jon@jonmsterling.com")
+	  (:keywords "languages"))])

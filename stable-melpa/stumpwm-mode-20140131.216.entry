@@ -1,2 +1,6 @@
-
-(stumpwm-mode . [(20140131 216) nil "special lisp mode for evaluating code into running stumpwm" single ((:commit . "61a7cf27e49e0779a53c018b2342f5f1c5cc70b4") (:keywords "comm" "lisp" "tools") (:maintainer "Shawn Betts"))])
+(stumpwm-mode .
+	      [(20140131 216)
+	       nil "special lisp mode for evaluating code into running stumpwm" single
+	       ((:commit . "61a7cf27e49e0779a53c018b2342f5f1c5cc70b4")
+		(:maintainer "Shawn Betts")
+		(:keywords "comm" "lisp" "tools"))])

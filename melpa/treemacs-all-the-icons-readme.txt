@@ -1,1 +1,1 @@
-all-the-icons integration.
+; all-the-icons integration.

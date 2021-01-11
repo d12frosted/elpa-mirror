@@ -1,2 +1,10 @@
-
-(hindent . [(20200904 2236) ((cl-lib (0 5))) "Indent haskell code using the \"hindent\" program" single ((:commit . "1917b7b9ac2cb3dcb152f4435de61d1858a4064b") (:authors ("Chris Done" . "chrisdone@gmail.com")) (:maintainer "Chris Done" . "chrisdone@gmail.com") (:url . "https://github.com/chrisdone/hindent"))])
+(hindent .
+	 [(20200904 2236)
+	  ((cl-lib
+	    (0 5)))
+	  "Indent haskell code using the \"hindent\" program" single
+	  ((:commit . "1917b7b9ac2cb3dcb152f4435de61d1858a4064b")
+	   (:authors
+	    ("Chris Done" . "chrisdone@gmail.com"))
+	   (:maintainer "Chris Done" . "chrisdone@gmail.com")
+	   (:url . "https://github.com/chrisdone/hindent"))])

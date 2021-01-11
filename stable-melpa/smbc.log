@@ -3,9 +3,7 @@ Fetcher: github
 Source:  https://github.com/sakshamsharma/emacs-smbc.git
 
 Updating /mnt/store/melpa/working/smbc/
-Built smbc in 4.300s, finished at Sun Jan 10 00:45:37 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.1K Jan 10 00:45 packages/smbc-20171229.1808.el
-4.0K -rw-r--r-- 1 root root  342 Jan 10 00:45 packages/smbc-20171229.1808.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:45 packages/smbc-badge.svg
-4.0K -rw-r--r-- 1 root root  110 Jan 10 00:45 packages/smbc-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/sakshamsharma/emacs-smbc.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+

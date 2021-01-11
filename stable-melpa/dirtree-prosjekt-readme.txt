@@ -1,3 +1,4 @@
+
 Adds simple support for dirtree to prosjekt. Specifically, it adds
 a function, prosjekt-dirtree, for opening a dirtree buffer at the
 project root.
@@ -5,7 +6,7 @@ project root.
 To activate this function, add dirtree-prosjekt.el to your load
 path and add
 
-  (require 'dirtree-prosjekt)
+(require 'dirtree-prosjekt)
 
 to your emacs config.
 

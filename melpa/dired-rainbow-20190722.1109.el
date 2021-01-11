@@ -5,7 +5,7 @@
 ;; Author: Matus Goljer <matus.goljer@gmail.com>
 ;; Maintainer: Matus Goljer <matus.goljer@gmail.com>
 ;; Keywords: files
-;; Package-Commit: 1f19e249bdc66163b10028271943fc7b87e936ae
+;; Package-Commit: d1a2bda6aa8f890cb367297ed93aee6d3b5ba388
 ;; Package-Version: 20190722.1109
 ;; Package-X-Original-Version: 20170922.817
 ;; Version: 0.0.3

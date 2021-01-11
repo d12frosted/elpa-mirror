@@ -1,2 +1,15 @@
-
-(sekka . [(20170803 1247) ((cl-lib (0 3)) (concurrent (0 3 1)) (popup (0 5 2))) "A client for Sekka IME server" single ((:commit . "61840b57d9ae32bf8e297b175942590a1319c7e7") (:keywords "ime" "skk" "japanese") (:authors ("Kiyoka Nishiyama" . "kiyoka@sumibi.org")) (:maintainer "Kiyoka Nishiyama" . "kiyoka@sumibi.org") (:url . "https://github.com/kiyoka/sekka"))])
+(sekka .
+       [(20170803 1247)
+	((cl-lib
+	  (0 3))
+	 (concurrent
+	  (0 3 1))
+	 (popup
+	  (0 5 2)))
+	"A client for Sekka IME server" single
+	((:commit . "61840b57d9ae32bf8e297b175942590a1319c7e7")
+	 (:authors
+	  ("Kiyoka Nishiyama" . "kiyoka@sumibi.org"))
+	 (:maintainer "Kiyoka Nishiyama" . "kiyoka@sumibi.org")
+	 (:keywords "ime" "skk" "japanese")
+	 (:url . "https://github.com/kiyoka/sekka"))])

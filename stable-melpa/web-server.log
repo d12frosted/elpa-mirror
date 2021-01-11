@@ -5,20 +5,20 @@ Source:  https://github.com/eschulte/emacs-web-server.git
 Updating /mnt/store/melpa/working/web-server/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/web-server/
-  to /tmp/web-serverrTqnd6/web-server-20201217.1252
+  to /tmp/web-servermtqGLQ/web-server-20201217.1252
     web-server-status-codes.el -> web-server-status-codes.el
     web-server.el -> web-server.el
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/gpl.texi -> gpl.texi
   ! doc/web-server.texi -> web-server.texi
-Created /tmp/web-serverrTqnd6/web-server-20201217.1252/doclicense.info
-Created /tmp/web-serverrTqnd6/web-server-20201217.1252/gpl.info
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/web-server/doc/web-server.texi -o /tmp/web-serverrTqnd6/web-server-20201217.1252/web-server.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/web-servermtqGLQ/web-server-20201217.1252/doclicense.info
+Created /tmp/web-servermtqGLQ/web-server-20201217.1252/gpl.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/web-server/doc/web-server.texi -o /tmp/web-servermtqGLQ/web-server-20201217.1252/web-server.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 4d865cc Silence warnings
 /mnt/store/melpa/working/web-server/doc/doclicense.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/web-serverrTqnd6/web-server-20201217.1252/doclicense.info'
+install-info: warning: no info dir entry in `/tmp/web-servermtqGLQ/web-server-20201217.1252/doclicense.info'
 /mnt/store/melpa/working/web-server/doc/gpl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/web-serverrTqnd6/web-server-20201217.1252/gpl.info'
+install-info: warning: no info dir entry in `/tmp/web-servermtqGLQ/web-server-20201217.1252/gpl.info'
 /mnt/store/melpa/working/web-server/doc/web-server.texi:208: @verbatiminclude: could not find ../examples/000-hello-world.el
 /mnt/store/melpa/working/web-server/doc/web-server.texi:217: @verbatiminclude: could not find ../examples/001-hello-world-utf8.el
 /mnt/store/melpa/working/web-server/doc/web-server.texi:221: @verbatiminclude: could not find ../examples/002-hello-world-html.el
@@ -32,13 +32,13 @@ install-info: warning: no info dir entry in `/tmp/web-serverrTqnd6/web-server-20
 /mnt/store/melpa/working/web-server/doc/web-server.texi:354: @verbatiminclude: could not find ../examples/016-content-encoding-gzip.el
 /mnt/store/melpa/working/web-server/doc/web-server.texi:365: @verbatiminclude: could not find ../examples/017-transfer-encoding-chunked.el
 ")
-Created /tmp/web-serverrTqnd6/web-server-20201217.1252/web-server.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/web-serverrTqnd6/web-server-20201217.1252/web-server.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/web-servermtqGLQ/web-server-20201217.1252/web-server.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/web-servermtqGLQ/web-server-20201217.1252/web-server.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 4d865cc Silence warnings
 /mnt/store/melpa/working/web-server/doc/doclicense.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/web-serverrTqnd6/web-server-20201217.1252/doclicense.info'
+install-info: warning: no info dir entry in `/tmp/web-servermtqGLQ/web-server-20201217.1252/doclicense.info'
 /mnt/store/melpa/working/web-server/doc/gpl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/web-serverrTqnd6/web-server-20201217.1252/gpl.info'
+install-info: warning: no info dir entry in `/tmp/web-servermtqGLQ/web-server-20201217.1252/gpl.info'
 /mnt/store/melpa/working/web-server/doc/web-server.texi:208: @verbatiminclude: could not find ../examples/000-hello-world.el
 /mnt/store/melpa/working/web-server/doc/web-server.texi:217: @verbatiminclude: could not find ../examples/001-hello-world-utf8.el
 /mnt/store/melpa/working/web-server/doc/web-server.texi:221: @verbatiminclude: could not find ../examples/002-hello-world-html.el
@@ -51,7 +51,7 @@ install-info: warning: no info dir entry in `/tmp/web-serverrTqnd6/web-server-20
 /mnt/store/melpa/working/web-server/doc/web-server.texi:343: @verbatiminclude: could not find ../examples/009-web-socket.el
 /mnt/store/melpa/working/web-server/doc/web-server.texi:354: @verbatiminclude: could not find ../examples/016-content-encoding-gzip.el
 /mnt/store/melpa/working/web-server/doc/web-server.texi:365: @verbatiminclude: could not find ../examples/017-transfer-encoding-chunked.el
-install-info: No such file or directory for /tmp/web-serverrTqnd6/web-server-20201217.1252/web-server.info
+install-info: No such file or directory for /tmp/web-servermtqGLQ/web-server-20201217.1252/web-server.info
 ")
 Created web-server-20201217.1252.tar containing:
   web-server-20201217.1252/
@@ -61,9 +61,9 @@ Created web-server-20201217.1252.tar containing:
   web-server-20201217.1252/web-server-pkg.el
   web-server-20201217.1252/web-server-status-codes.el
   web-server-20201217.1252/web-server.el
-Built web-server in 17.651s, finished at Sun Jan 10 00:52:22 2021
+Built web-server in 17.007s, finished at Mon Jan 11 18:21:57 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  402 Jan 10 00:52 packages/web-server-20201217.1252.entry
-112K -rw-r--r-- 1 root root 110K Jan 10 00:52 packages/web-server-20201217.1252.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 10 00:52 packages/web-server-badge.svg
-4.0K -rw-r--r-- 1 root root  624 Jan 10 00:52 packages/web-server-readme.txt
+4.0K -rw-r--r-- 1 root root  402 Jan 11 18:21 packages/web-server-20201217.1252.entry
+112K -rw-r--r-- 1 root root 110K Jan 11 18:21 packages/web-server-20201217.1252.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 11 18:21 packages/web-server-badge.svg
+4.0K -rw-r--r-- 1 root root  624 Jan 11 18:21 packages/web-server-readme.txt

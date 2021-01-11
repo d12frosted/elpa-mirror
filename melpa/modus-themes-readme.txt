@@ -200,6 +200,7 @@ info-colors
 interaction-log
 ioccur
 isearch, occur, etc.
+isl (isearch-light)
 ivy
 ivy-posframe
 jira (org-jira)

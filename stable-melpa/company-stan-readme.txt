@@ -11,18 +11,18 @@ mode-specific hook `stan-mode-hook'.
 
 With the `use-package', the following can be used:
 (use-package company-stan
-  :hook (stan-mode . company-stan-setup))
+:hook (stan-mode . company-stan-setup))
 
 If you already have a custom stan-mode setup function, you can add
 the following to its body.
 (add-to-list (make-local-variable 'company-backends)
-             'company-stan-backend)
+'company-stan-backend)
 
 References
 Writing backends for the company-mode.
- https://github.com/company-mode/company-mode/wiki/Writing-backends
- http://sixty-north.com/blog/series/how-to-write-company-mode-backends.html
+https://github.com/company-mode/company-mode/wiki/Writing-backends
+http://sixty-north.com/blog/series/how-to-write-company-mode-backends.html
 Definitions
- https://github.com/company-mode/company-mode/blob/master/company.el
+https://github.com/company-mode/company-mode/blob/master/company.el
 Example in company-math.el
- https://github.com/vspinu/company-math/blob/master/company-math.el#L210
+https://github.com/vspinu/company-math/blob/master/company-math.el#L210

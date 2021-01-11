@@ -1,1 +1,1 @@
-Integration of persp-mode into treemacs' buffer scoping framework.
+; Integration of persp-mode into treemacs' buffer scoping framework.

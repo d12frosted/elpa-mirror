@@ -1,2 +1,8 @@
-
-(pylint . [(20200503 1624) nil "minor mode for running `pylint'" single ((:commit . "3a065a16f0826f3d46025209b11d30a1fd5b3b49") (:keywords "languages" "python") (:authors ("Ian Eure" . "ian.eure@gmail.com")) (:maintainer "Jonathan Kotta" . "jpkotta@gmail.com"))])
+(pylint .
+	[(20200503 1624)
+	 nil "minor mode for running `pylint'" single
+	 ((:commit . "168bee7f23d9956c12b419b18aa9f5974151e3d7")
+	  (:authors
+	   ("Ian Eure" . "ian.eure@gmail.com"))
+	  (:maintainer "Jonathan Kotta" . "jpkotta@gmail.com")
+	  (:keywords "languages" "python"))])

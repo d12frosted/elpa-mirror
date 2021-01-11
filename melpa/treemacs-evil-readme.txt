@@ -1,1 +1,1 @@
-Evil mode compatibility.
+; Evil mode compatibility.
