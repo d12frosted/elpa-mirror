@@ -5,7 +5,7 @@
 ;; Author: Nicholas Vollmer <progfolio@protonmail.com>
 ;; URL: https://github.com/progfolio/wikinforg
 ;; Package-Version: 20201227.1454
-;; Package-Commit: 8a418b9482c12b089ebca9a17d84b3c093f721c0
+;; Package-Commit: 8496c243f8d98ba2787b63f7d19fbae3831832d2
 ;; Created: September 14, 2020
 ;; Keywords: org, convenience
 ;; Package-Requires: ((emacs "27.1") (wikinfo "0.0.0") (org "9.3"))

@@ -5,7 +5,7 @@ Source:  https://github.com/emacs-ess/ESS.git
 Updating /mnt/store/melpa/working/ess/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ess/
-  to /tmp/essOXxy5E/ess-20210109.1455
+  to /tmp/esseg9Js7/ess-20210109.1455
     .dir-locals.el -> .dir-locals.el
   ! lisp/ess-bugs-d.el -> ess-bugs-d.el
   ! lisp/ess-bugs-l.el -> ess-bugs-l.el
@@ -71,136 +71,136 @@ Copying files (->) and directories (=>)
   ! lisp/obsolete/ess-r-a.el -> obsolete/ess-r-a.el
   ! lisp/obsolete/mouseme.el -> obsolete/mouseme.el
   ! lisp/obsolete/msdos.el -> obsolete/msdos.el
-Created /tmp/essOXxy5E/ess-20210109.1455/allnews.info
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/announc.texi -o /tmp/essOXxy5E/ess-20210109.1455/announc.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/allnews.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/announc.texi -o /tmp/esseg9Js7/ess-20210109.1455/announc.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/announc.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/essOXxy5E/ess-20210109.1455/announc.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/announc.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/esseg9Js7/ess-20210109.1455/announc.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/authors.info
-Created /tmp/essOXxy5E/ess-20210109.1455/bugrept.info
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/bugs.texi -o /tmp/essOXxy5E/ess-20210109.1455/bugs.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/authors.info
+Created /tmp/esseg9Js7/ess-20210109.1455/bugrept.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/bugs.texi -o /tmp/esseg9Js7/ess-20210109.1455/bugs.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/bugs.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/essOXxy5E/ess-20210109.1455/bugs.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/bugs.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/esseg9Js7/ess-20210109.1455/bugs.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/credits.info
-Created /tmp/essOXxy5E/ess-20210109.1455/currfeat.info
-Created /tmp/essOXxy5E/ess-20210109.1455/ess-defs.info
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/ess.texi -o /tmp/essOXxy5E/ess-20210109.1455/ess.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/credits.info
+Created /tmp/esseg9Js7/ess-20210109.1455/currfeat.info
+Created /tmp/esseg9Js7/ess-20210109.1455/ess-defs.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/ess.texi -o /tmp/esseg9Js7/ess-20210109.1455/ess.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/ess.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/essOXxy5E/ess-20210109.1455/ess.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/ess.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/esseg9Js7/ess-20210109.1455/ess.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 ")
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/help-bugs.texi -o /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/help-bugs.texi -o /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -227,33 +227,33 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -279,34 +279,34 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 ")
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/help-jags.texi -o /tmp/essOXxy5E/ess-20210109.1455/help-jags.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/help-jags.texi -o /tmp/esseg9Js7/ess-20210109.1455/help-jags.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -332,7 +332,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -356,33 +356,33 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/essOXxy5E/ess-20210109.1455/help-jags.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/esseg9Js7/ess-20210109.1455/help-jags.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -408,7 +408,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -431,34 +431,34 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
 ")
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/help-s.texi -o /tmp/essOXxy5E/ess-20210109.1455/help-s.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/help-s.texi -o /tmp/esseg9Js7/ess-20210109.1455/help-s.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -484,7 +484,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -507,38 +507,38 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced {
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced }
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/help-s.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/essOXxy5E/ess-20210109.1455/help-s.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/help-s.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/esseg9Js7/ess-20210109.1455/help-s.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -564,7 +564,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -587,38 +587,38 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced {
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-s.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-s.info
 ")
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/help-sas.texi -o /tmp/essOXxy5E/ess-20210109.1455/help-sas.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/help-sas.texi -o /tmp/esseg9Js7/ess-20210109.1455/help-sas.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -644,7 +644,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -667,11 +667,11 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced {
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-s.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-s.info
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced }
@@ -1115,33 +1115,33 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced }
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/help-sas.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/essOXxy5E/ess-20210109.1455/help-sas.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/help-sas.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/esseg9Js7/ess-20210109.1455/help-sas.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -1167,7 +1167,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -1190,11 +1190,11 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced {
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-s.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-s.info
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced }
@@ -1637,34 +1637,34 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: unknown command `SAS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-sas.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-sas.info
 ")
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/installation.texi -o /tmp/essOXxy5E/ess-20210109.1455/installation.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/installation.texi -o /tmp/esseg9Js7/ess-20210109.1455/installation.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -1690,7 +1690,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -1713,11 +1713,11 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced {
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-s.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-s.info
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced }
@@ -2160,37 +2160,37 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: unknown command `SAS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-sas.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-sas.info
 /mnt/store/melpa/working/ess/doc/installation.texi:9: @menu seen before first @node
 /mnt/store/melpa/working/ess/doc/installation.texi:9: perhaps your @top node should be wrapped in @ifnottex rather than @ifinfo?
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/installation.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/essOXxy5E/ess-20210109.1455/installation.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/installation.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/esseg9Js7/ess-20210109.1455/installation.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -2216,7 +2216,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -2239,11 +2239,11 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced {
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-s.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-s.info
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced }
@@ -2686,39 +2686,39 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: unknown command `SAS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-sas.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-sas.info
 /mnt/store/melpa/working/ess/doc/installation.texi:9: @menu seen before first @node
 /mnt/store/melpa/working/ess/doc/installation.texi:9: perhaps your @top node should be wrapped in @ifnottex rather than @ifinfo?
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/installation.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/installation.info
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/license.info
-Created /tmp/essOXxy5E/ess-20210109.1455/mailing.info
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/newfeat.texi -o /tmp/essOXxy5E/ess-20210109.1455/newfeat.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/license.info
+Created /tmp/esseg9Js7/ess-20210109.1455/mailing.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/newfeat.texi -o /tmp/esseg9Js7/ess-20210109.1455/newfeat.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -2744,7 +2744,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -2767,11 +2767,11 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced {
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-s.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-s.info
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced }
@@ -3214,14 +3214,14 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: unknown command `SAS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-sas.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-sas.info
 /mnt/store/melpa/working/ess/doc/installation.texi:9: @menu seen before first @node
 /mnt/store/melpa/working/ess/doc/installation.texi:9: perhaps your @top node should be wrapped in @ifnottex rather than @ifinfo?
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/installation.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/installation.info
 /mnt/store/melpa/working/ess/doc/license.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/license.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/license.info'
 /mnt/store/melpa/working/ess/doc/mailing.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/mailing.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/mailing.info'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: misplaced {
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: misplaced }
@@ -3365,33 +3365,33 @@ install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ma
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: misplaced {
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: misplaced }
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/newfeat.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/essOXxy5E/ess-20210109.1455/newfeat.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/newfeat.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/esseg9Js7/ess-20210109.1455/newfeat.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -3417,7 +3417,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -3440,11 +3440,11 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced {
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-s.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-s.info
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced }
@@ -3887,14 +3887,14 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: unknown command `SAS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-sas.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-sas.info
 /mnt/store/melpa/working/ess/doc/installation.texi:9: @menu seen before first @node
 /mnt/store/melpa/working/ess/doc/installation.texi:9: perhaps your @top node should be wrapped in @ifnottex rather than @ifinfo?
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/installation.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/installation.info
 /mnt/store/melpa/working/ess/doc/license.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/license.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/license.info'
 /mnt/store/melpa/working/ess/doc/mailing.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/mailing.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/mailing.info'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: misplaced {
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: misplaced }
@@ -4037,35 +4037,35 @@ install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ma
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: misplaced {
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/newfeat.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/newfeat.info
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/news.info
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/onewfeat.texi -o /tmp/essOXxy5E/ess-20210109.1455/onewfeat.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/news.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/onewfeat.texi -o /tmp/esseg9Js7/ess-20210109.1455/onewfeat.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -4091,7 +4091,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -4114,11 +4114,11 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced {
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-s.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-s.info
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced }
@@ -4561,14 +4561,14 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: unknown command `SAS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-sas.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-sas.info
 /mnt/store/melpa/working/ess/doc/installation.texi:9: @menu seen before first @node
 /mnt/store/melpa/working/ess/doc/installation.texi:9: perhaps your @top node should be wrapped in @ifnottex rather than @ifinfo?
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/installation.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/installation.info
 /mnt/store/melpa/working/ess/doc/license.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/license.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/license.info'
 /mnt/store/melpa/working/ess/doc/mailing.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/mailing.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/mailing.info'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: misplaced {
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: misplaced }
@@ -4711,9 +4711,9 @@ install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ma
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: misplaced {
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/newfeat.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/newfeat.info
 /mnt/store/melpa/working/ess/doc/news.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/news.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/news.info'
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:7: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:7: misplaced {
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:7: misplaced }
@@ -5693,33 +5693,33 @@ install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ne
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:1657: misplaced {
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:1657: misplaced }
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/onewfeat.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/essOXxy5E/ess-20210109.1455/onewfeat.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/onewfeat.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/esseg9Js7/ess-20210109.1455/onewfeat.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -5745,7 +5745,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -5768,11 +5768,11 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced {
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-s.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-s.info
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced }
@@ -6215,14 +6215,14 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: unknown command `SAS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-sas.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-sas.info
 /mnt/store/melpa/working/ess/doc/installation.texi:9: @menu seen before first @node
 /mnt/store/melpa/working/ess/doc/installation.texi:9: perhaps your @top node should be wrapped in @ifnottex rather than @ifinfo?
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/installation.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/installation.info
 /mnt/store/melpa/working/ess/doc/license.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/license.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/license.info'
 /mnt/store/melpa/working/ess/doc/mailing.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/mailing.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/mailing.info'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: misplaced {
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: misplaced }
@@ -6365,9 +6365,9 @@ install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ma
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: misplaced {
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/newfeat.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/newfeat.info
 /mnt/store/melpa/working/ess/doc/news.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/news.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/news.info'
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:7: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:7: misplaced {
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:7: misplaced }
@@ -7346,35 +7346,35 @@ install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ne
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:1657: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:1657: misplaced {
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:1657: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/onewfeat.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/onewfeat.info
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/onews.info
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/readme.texi -o /tmp/essOXxy5E/ess-20210109.1455/readme.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/onews.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/ess/doc/readme.texi -o /tmp/esseg9Js7/ess-20210109.1455/readme.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -7400,7 +7400,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -7423,11 +7423,11 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced {
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-s.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-s.info
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced }
@@ -7870,14 +7870,14 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: unknown command `SAS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-sas.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-sas.info
 /mnt/store/melpa/working/ess/doc/installation.texi:9: @menu seen before first @node
 /mnt/store/melpa/working/ess/doc/installation.texi:9: perhaps your @top node should be wrapped in @ifnottex rather than @ifinfo?
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/installation.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/installation.info
 /mnt/store/melpa/working/ess/doc/license.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/license.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/license.info'
 /mnt/store/melpa/working/ess/doc/mailing.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/mailing.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/mailing.info'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: misplaced {
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: misplaced }
@@ -8020,9 +8020,9 @@ install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ma
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: misplaced {
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/newfeat.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/newfeat.info
 /mnt/store/melpa/working/ess/doc/news.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/news.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/news.info'
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:7: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:7: misplaced {
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:7: misplaced }
@@ -9001,38 +9001,38 @@ install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ne
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:1657: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:1657: misplaced {
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:1657: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/onewfeat.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/onewfeat.info
 /mnt/store/melpa/working/ess/doc/onews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/onews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/onews.info'
 /mnt/store/melpa/working/ess/doc/readme.texi:13: @include: could not find ../VERSION
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/readme.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/essOXxy5E/ess-20210109.1455/readme.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/esseg9Js7/ess-20210109.1455/readme.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/esseg9Js7/ess-20210109.1455/readme.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at a9e93679 Merge pull request #1090 from lionel-/rdired-timeout
 /mnt/store/melpa/working/ess/doc/allnews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/allnews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/allnews.info'
 /mnt/store/melpa/working/ess/doc/announc.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/announc.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/announc.info
 /mnt/store/melpa/working/ess/doc/authors.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/authors.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/authors.info'
 /mnt/store/melpa/working/ess/doc/bugrept.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/bugrept.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/bugrept.info'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: unknown command `Sl'
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced {
 /mnt/store/melpa/working/ess/doc/bugs.texi:22: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/bugs.info
 /mnt/store/melpa/working/ess/doc/credits.texi:1: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:2: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi:3: warning: entry for index `cp' outside of any node
 /mnt/store/melpa/working/ess/doc/credits.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/credits.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/credits.info'
 /mnt/store/melpa/working/ess/doc/currfeat.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/currfeat.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/currfeat.info'
 /mnt/store/melpa/working/ess/doc/ess-defs.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ess-defs.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/ess-defs.info'
 /mnt/store/melpa/working/ess/doc/ess.texi:13: @include: could not find ../VERSION (possibly involving @ESSVER)
 /mnt/store/melpa/working/ess/doc/ess.texi:60: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/ess.info
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:1: misplaced }
@@ -9058,7 +9058,7 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/ess
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced {
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:33: misplaced }
 /mnt/store/melpa/working/ess/doc/help-bugs.texi:16: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-bugs.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-bugs.info
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:1: misplaced }
@@ -9081,11 +9081,11 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced {
 /mnt/store/melpa/working/ess/doc/help-jags.texi:14: misplaced }
 /mnt/store/melpa/working/ess/doc/help-jags.texi:15: @xref reference to nonexistent node `ESS(SAS)--Function keys for batch processing'
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-jags.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-jags.info
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced {
 /mnt/store/melpa/working/ess/doc/help-s.texi:4: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-s.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-s.info
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:1: misplaced }
@@ -9528,14 +9528,14 @@ install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/hel
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: unknown command `SAS'
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced {
 /mnt/store/melpa/working/ess/doc/help-sas.texi:668: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/help-sas.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/help-sas.info
 /mnt/store/melpa/working/ess/doc/installation.texi:9: @menu seen before first @node
 /mnt/store/melpa/working/ess/doc/installation.texi:9: perhaps your @top node should be wrapped in @ifnottex rather than @ifinfo?
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/installation.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/installation.info
 /mnt/store/melpa/working/ess/doc/license.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/license.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/license.info'
 /mnt/store/melpa/working/ess/doc/mailing.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/mailing.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/mailing.info'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: misplaced {
 /mnt/store/melpa/working/ess/doc/newfeat.texi:222: misplaced }
@@ -9678,9 +9678,9 @@ install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ma
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: misplaced {
 /mnt/store/melpa/working/ess/doc/newfeat.texi:521: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/newfeat.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/newfeat.info
 /mnt/store/melpa/working/ess/doc/news.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/news.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/news.info'
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:7: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:7: misplaced {
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:7: misplaced }
@@ -10659,13 +10659,13 @@ install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/ne
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:1657: unknown command `ESS'
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:1657: misplaced {
 /mnt/store/melpa/working/ess/doc/onewfeat.texi:1657: misplaced }
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/onewfeat.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/onewfeat.info
 /mnt/store/melpa/working/ess/doc/onews.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/essOXxy5E/ess-20210109.1455/onews.info'
+install-info: warning: no info dir entry in `/tmp/esseg9Js7/ess-20210109.1455/onews.info'
 /mnt/store/melpa/working/ess/doc/readme.texi:13: @include: could not find ../VERSION
-install-info: No such file or directory for /tmp/essOXxy5E/ess-20210109.1455/readme.info
+install-info: No such file or directory for /tmp/esseg9Js7/ess-20210109.1455/readme.info
 ")
-Created /tmp/essOXxy5E/ess-20210109.1455/requires.info
+Created /tmp/esseg9Js7/ess-20210109.1455/requires.info
 Created ess-20210109.1455.tar containing:
   ess-20210109.1455/
   ess-20210109.1455/.dir-locals.el
@@ -10750,39 +10750,39 @@ Created ess-20210109.1455.tar containing:
   ess-20210109.1455/obsolete/msdos.el
   ess-20210109.1455/onews.info
   ess-20210109.1455/requires.info
-Built ess in 135.260s, finished at Mon Jan 11 20:26:12 2021
+Built ess in 92.608s, finished at Tue Jan 12 18:40:42 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  840 Jan 11 20:26 packages/ess-20210109.1455.entry
-1.5M -rw-r--r-- 1 root root 1.5M Jan 11 20:26 packages/ess-20210109.1455.tar
-8.0K -rw-r--r-- 1 root root 5.0K Jan 11 20:24 packages/ess-R-data-view-20130509.1158.el
-4.0K -rw-r--r-- 1 root root  419 Jan 11 20:24 packages/ess-R-data-view-20130509.1158.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 11 20:24 packages/ess-R-data-view-badge.svg
-4.0K -rw-r--r-- 1 root root  328 Jan 11 20:24 packages/ess-R-data-view-readme.txt
-4.0K -rw-r--r-- 1 root root  576 Jan 11 20:24 packages/ess-R-data-view.log
-4.0K -rw-r--r-- 1 root root 1.2K Jan 11 20:26 packages/ess-badge.svg
- 20K -rw-r--r-- 1 root root  19K Jan 11 20:24 packages/ess-r-insert-obj-20200916.843.el
-4.0K -rw-r--r-- 1 root root  411 Jan 11 20:24 packages/ess-r-insert-obj-20200916.843.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 11 20:24 packages/ess-r-insert-obj-badge.svg
-4.0K -rw-r--r-- 1 root root  771 Jan 11 20:24 packages/ess-r-insert-obj-readme.txt
-4.0K -rw-r--r-- 1 root root  585 Jan 11 20:24 packages/ess-r-insert-obj.log
-4.0K -rw-r--r-- 1 root root  265 Jan 11 20:26 packages/ess-readme.txt
- 72K -rw-r--r-- 1 root root  72K Jan 11 20:24 packages/ess-smart-equals-20190204.449.el
-4.0K -rw-r--r-- 1 root root  473 Jan 11 20:24 packages/ess-smart-equals-20190204.449.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 11 20:24 packages/ess-smart-equals-badge.svg
-8.0K -rw-r--r-- 1 root root 6.8K Jan 11 20:24 packages/ess-smart-equals-readme.txt
-4.0K -rw-r--r-- 1 root root  582 Jan 11 20:24 packages/ess-smart-equals.log
-4.0K -rw-r--r-- 1 root root  350 Jan 11 20:24 packages/ess-smart-underscore-20190309.101.entry
- 32K -rw-r--r-- 1 root root  30K Jan 11 20:24 packages/ess-smart-underscore-20190309.101.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 11 20:24 packages/ess-smart-underscore-badge.svg
-4.0K -rw-r--r-- 1 root root 1.8K Jan 11 20:24 packages/ess-smart-underscore-readme.txt
-4.0K -rw-r--r-- 1 root root 1.3K Jan 11 20:24 packages/ess-smart-underscore.log
- 12K -rw-r--r-- 1 root root  12K Jan 11 20:24 packages/ess-view-20181001.1730.el
-4.0K -rw-r--r-- 1 root root  437 Jan 11 20:24 packages/ess-view-20181001.1730.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 11 20:24 packages/ess-view-badge.svg
- 88K -rw-r--r-- 1 root root  88K Jan 11 20:24 packages/ess-view-data-20201202.1124.el
-4.0K -rw-r--r-- 1 root root  388 Jan 11 20:24 packages/ess-view-data-20201202.1124.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 11 20:24 packages/ess-view-data-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Jan 11 20:24 packages/ess-view-data-readme.txt
-4.0K -rw-r--r-- 1 root root  563 Jan 11 20:24 packages/ess-view-data.log
-4.0K -rw-r--r-- 1 root root 1.2K Jan 11 20:24 packages/ess-view-readme.txt
-4.0K -rw-r--r-- 1 root root  924 Jan 11 20:24 packages/ess-view.log
+4.0K -rw-r--r-- 1 root root  840 Jan 12 18:40 packages/ess-20210109.1455.entry
+1.5M -rw-r--r-- 1 root root 1.5M Jan 12 18:40 packages/ess-20210109.1455.tar
+8.0K -rw-r--r-- 1 root root 5.0K Jan 12 18:39 packages/ess-R-data-view-20130509.1158.el
+4.0K -rw-r--r-- 1 root root  419 Jan 12 18:39 packages/ess-R-data-view-20130509.1158.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 18:39 packages/ess-R-data-view-badge.svg
+4.0K -rw-r--r-- 1 root root  328 Jan 12 18:39 packages/ess-R-data-view-readme.txt
+4.0K -rw-r--r-- 1 root root  576 Jan 12 18:39 packages/ess-R-data-view.log
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 18:40 packages/ess-badge.svg
+ 20K -rw-r--r-- 1 root root  19K Jan 12 18:39 packages/ess-r-insert-obj-20200916.843.el
+4.0K -rw-r--r-- 1 root root  411 Jan 12 18:39 packages/ess-r-insert-obj-20200916.843.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 18:39 packages/ess-r-insert-obj-badge.svg
+4.0K -rw-r--r-- 1 root root  771 Jan 12 18:39 packages/ess-r-insert-obj-readme.txt
+4.0K -rw-r--r-- 1 root root  585 Jan 12 18:39 packages/ess-r-insert-obj.log
+4.0K -rw-r--r-- 1 root root  265 Jan 12 18:40 packages/ess-readme.txt
+ 72K -rw-r--r-- 1 root root  72K Jan 12 18:39 packages/ess-smart-equals-20190204.449.el
+4.0K -rw-r--r-- 1 root root  473 Jan 12 18:39 packages/ess-smart-equals-20190204.449.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 18:39 packages/ess-smart-equals-badge.svg
+8.0K -rw-r--r-- 1 root root 6.8K Jan 12 18:39 packages/ess-smart-equals-readme.txt
+4.0K -rw-r--r-- 1 root root  582 Jan 12 18:39 packages/ess-smart-equals.log
+4.0K -rw-r--r-- 1 root root  350 Jan 12 18:39 packages/ess-smart-underscore-20190309.101.entry
+ 32K -rw-r--r-- 1 root root  30K Jan 12 18:39 packages/ess-smart-underscore-20190309.101.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 18:39 packages/ess-smart-underscore-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Jan 12 18:39 packages/ess-smart-underscore-readme.txt
+4.0K -rw-r--r-- 1 root root 1.3K Jan 12 18:39 packages/ess-smart-underscore.log
+ 12K -rw-r--r-- 1 root root  12K Jan 12 18:39 packages/ess-view-20181001.1730.el
+4.0K -rw-r--r-- 1 root root  437 Jan 12 18:39 packages/ess-view-20181001.1730.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 18:39 packages/ess-view-badge.svg
+ 88K -rw-r--r-- 1 root root  88K Jan 12 18:39 packages/ess-view-data-20201202.1124.el
+4.0K -rw-r--r-- 1 root root  388 Jan 12 18:39 packages/ess-view-data-20201202.1124.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 18:39 packages/ess-view-data-badge.svg
+4.0K -rw-r--r-- 1 root root 2.0K Jan 12 18:39 packages/ess-view-data-readme.txt
+4.0K -rw-r--r-- 1 root root  563 Jan 12 18:39 packages/ess-view-data.log
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 18:39 packages/ess-view-readme.txt
+4.0K -rw-r--r-- 1 root root  924 Jan 12 18:39 packages/ess-view.log
