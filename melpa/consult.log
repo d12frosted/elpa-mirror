@@ -5,34 +5,38 @@ Source:  https://github.com/minad/consult.git
 Updating /mnt/store/melpa/working/consult/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/consult/
-  to /tmp/consult6Za0QL/consult-20210112.1820
+  to /tmp/consultoYs9Tn/consult-20210113.128
     consult-flymake.el -> consult-flymake.el
+    consult-icomplete.el -> consult-icomplete.el
     consult.el -> consult.el
     consult.texi -> consult.texi
-Created /tmp/consult6Za0QL/consult-20210112.1820/consult.info
-Created consult-20210112.1820.tar containing:
-  consult-20210112.1820/
-  consult-20210112.1820/consult-flymake.el
-  consult-20210112.1820/consult-pkg.el
-  consult-20210112.1820/consult.el
-  consult-20210112.1820/consult.info
-  consult-20210112.1820/dir
-Built consult in 25.345s, finished at Tue Jan 12 18:31:49 2021
+Created /tmp/consultoYs9Tn/consult-20210113.128/consult.info
+Created consult-20210113.128.tar containing:
+  consult-20210113.128/
+  consult-20210113.128/consult-flymake.el
+  consult-20210113.128/consult-icomplete.el
+  consult-20210113.128/consult-pkg.el
+  consult-20210113.128/consult.el
+  consult-20210113.128/consult.info
+  consult-20210113.128/dir
+Built consult in 8.619s, finished at Wed Jan 13 02:47:57 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  311 Jan 12 15:43 packages/consult-20210112.1345.entry
-160K -rw-r--r-- 1 root root 160K Jan 12 15:43 packages/consult-20210112.1345.tar
-4.0K -rw-r--r-- 1 root root  311 Jan 12 18:31 packages/consult-20210112.1820.entry
-160K -rw-r--r-- 1 root root 160K Jan 12 18:31 packages/consult-20210112.1820.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 18:31 packages/consult-badge.svg
-8.0K -rw-r--r-- 1 root root 4.1K Jan 12 18:31 packages/consult-flycheck-20210111.1935.el
-4.0K -rw-r--r-- 1 root root  412 Jan 12 18:31 packages/consult-flycheck-20210111.1935.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 18:31 packages/consult-flycheck-badge.svg
-4.0K -rw-r--r-- 1 root root  135 Jan 12 18:31 packages/consult-flycheck-readme.txt
-4.0K -rw-r--r-- 1 root root  572 Jan 12 18:31 packages/consult-flycheck.log
-4.0K -rw-r--r-- 1 root root  834 Jan 12 18:31 packages/consult-readme.txt
+4.0K -rw-r--r-- 1 root root  308 Jan 13 00:03 packages/consult-20210113.1.entry
+160K -rw-r--r-- 1 root root 160K Jan 13 00:03 packages/consult-20210113.1.tar
+4.0K -rw-r--r-- 1 root root  310 Jan 13 02:47 packages/consult-20210113.128.entry
+160K -rw-r--r-- 1 root root 160K Jan 13 02:47 packages/consult-20210113.128.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 13 02:47 packages/consult-badge.svg
+8.0K -rw-r--r-- 1 root root 4.1K Jan 13 02:47 packages/consult-flycheck-20210112.1845.el
+4.0K -rw-r--r-- 1 root root  412 Jan 13 02:47 packages/consult-flycheck-20210112.1845.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 13 02:47 packages/consult-flycheck-badge.svg
+4.0K -rw-r--r-- 1 root root  135 Jan 13 02:47 packages/consult-flycheck-readme.txt
+4.0K -rw-r--r-- 1 root root  572 Jan 13 02:47 packages/consult-flycheck.log
+4.0K -rw-r--r-- 1 root root  834 Jan 13 02:47 packages/consult-readme.txt
 4.0K -rw-r--r-- 1 root root 3.5K Dec 24 21:28 packages/consult-selectrum-20201224.1239.el
-4.0K -rw-r--r-- 1 root root 3.5K Jan 12 15:43 packages/consult-selectrum-20210110.1840.el
-4.0K -rw-r--r-- 1 root root  422 Jan 12 15:43 packages/consult-selectrum-20210110.1840.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 15:43 packages/consult-selectrum-badge.svg
-4.0K -rw-r--r-- 1 root root  129 Jan 12 15:43 packages/consult-selectrum-readme.txt
-4.0K -rw-r--r-- 1 root root  240 Jan 12 18:31 packages/consult-selectrum.log
+4.0K -rw-r--r-- 1 root root 3.4K Jan 13 00:03 packages/consult-selectrum-20210112.1916.el
+4.0K -rw-r--r-- 1 root root  422 Jan 13 00:03 packages/consult-selectrum-20210112.1916.entry
+4.0K -rw-r--r-- 1 root root 3.6K Jan 13 02:47 packages/consult-selectrum-20210113.12.el
+4.0K -rw-r--r-- 1 root root  420 Jan 13 02:47 packages/consult-selectrum-20210113.12.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 13 02:47 packages/consult-selectrum-badge.svg
+4.0K -rw-r--r-- 1 root root   32 Jan 13 02:47 packages/consult-selectrum-readme.txt
+4.0K -rw-r--r-- 1 root root  848 Jan 13 02:47 packages/consult-selectrum.log

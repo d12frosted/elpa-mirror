@@ -5,7 +5,7 @@ Source:  https://github.com/nlamirault/emacs-gitlab.git
 Updating /mnt/store/melpa/working/gitlab/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gitlab/
-  to /tmp/gitlabEuwIlw/gitlab-20180312.1647
+  to /tmp/gitlab2C0cuI/gitlab-20180312.1647
     gitlab-api.el -> gitlab-api.el
     gitlab-browse.el -> gitlab-browse.el
     gitlab-groups.el -> gitlab-groups.el
@@ -39,29 +39,29 @@ Created gitlab-20180312.1647.tar containing:
   gitlab-20180312.1647/gitlab-utils.el
   gitlab-20180312.1647/gitlab-version.el
   gitlab-20180312.1647/gitlab.el
-Built gitlab in 3.101s, finished at Tue Jan 12 18:46:07 2021
+Built gitlab in 3.363s, finished at Wed Jan 13 03:01:59 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  436 Jan 12 18:46 packages/gitlab-20180312.1647.entry
- 72K -rw-r--r-- 1 root root  70K Jan 12 18:46 packages/gitlab-20180312.1647.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 18:46 packages/gitlab-badge.svg
- 16K -rw-r--r-- 1 root root  15K Jan 12 15:58 packages/gitlab-ci-mode-20191022.2017.el
-4.0K -rw-r--r-- 1 root root  363 Jan 12 15:58 packages/gitlab-ci-mode-20191022.2017.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 15:58 packages/gitlab-ci-mode-badge.svg
-8.0K -rw-r--r-- 1 root root 5.0K Jan 12 15:58 packages/gitlab-ci-mode-flycheck-20190323.1829.el
-4.0K -rw-r--r-- 1 root root  455 Jan 12 15:58 packages/gitlab-ci-mode-flycheck-20190323.1829.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 15:58 packages/gitlab-ci-mode-flycheck-badge.svg
-4.0K -rw-r--r-- 1 root root  272 Jan 12 15:58 packages/gitlab-ci-mode-flycheck-readme.txt
-4.0K -rw-r--r-- 1 root root  178 Jan 12 18:46 packages/gitlab-ci-mode-flycheck.log
-4.0K -rw-r--r-- 1 root root  431 Jan 12 15:58 packages/gitlab-ci-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  151 Jan 12 18:46 packages/gitlab-ci-mode.log
-8.0K -rw-r--r-- 1 root root 5.3K Jan 12 15:58 packages/gitlab-pipeline-20200903.201.el
-4.0K -rw-r--r-- 1 root root  410 Jan 12 15:58 packages/gitlab-pipeline-20200903.201.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 15:58 packages/gitlab-pipeline-badge.svg
-4.0K -rw-r--r-- 1 root root  222 Jan 12 15:58 packages/gitlab-pipeline-readme.txt
-4.0K -rw-r--r-- 1 root root  148 Jan 12 18:46 packages/gitlab-pipeline.log
-4.0K -rw-r--r-- 1 root root  212 Jan 12 18:46 packages/gitlab-readme.txt
-8.0K -rw-r--r-- 1 root root 4.7K Jan 12 15:58 packages/gitlab-snip-helm-20200427.2014.el
-4.0K -rw-r--r-- 1 root root  455 Jan 12 15:58 packages/gitlab-snip-helm-20200427.2014.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 15:58 packages/gitlab-snip-helm-badge.svg
-4.0K -rw-r--r-- 1 root root   73 Jan 12 15:58 packages/gitlab-snip-helm-readme.txt
-4.0K -rw-r--r-- 1 root root  154 Jan 12 18:46 packages/gitlab-snip-helm.log
+4.0K -rw-r--r-- 1 root root  436 Jan 13 03:01 packages/gitlab-20180312.1647.entry
+ 72K -rw-r--r-- 1 root root  70K Jan 13 03:01 packages/gitlab-20180312.1647.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 13 03:01 packages/gitlab-badge.svg
+ 16K -rw-r--r-- 1 root root  15K Jan 13 00:17 packages/gitlab-ci-mode-20191022.2017.el
+4.0K -rw-r--r-- 1 root root  363 Jan 13 00:17 packages/gitlab-ci-mode-20191022.2017.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 13 00:17 packages/gitlab-ci-mode-badge.svg
+8.0K -rw-r--r-- 1 root root 5.0K Jan 13 00:17 packages/gitlab-ci-mode-flycheck-20190323.1829.el
+4.0K -rw-r--r-- 1 root root  455 Jan 13 00:17 packages/gitlab-ci-mode-flycheck-20190323.1829.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 13 00:17 packages/gitlab-ci-mode-flycheck-badge.svg
+4.0K -rw-r--r-- 1 root root  272 Jan 13 00:17 packages/gitlab-ci-mode-flycheck-readme.txt
+4.0K -rw-r--r-- 1 root root  178 Jan 13 03:01 packages/gitlab-ci-mode-flycheck.log
+4.0K -rw-r--r-- 1 root root  431 Jan 13 00:17 packages/gitlab-ci-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  151 Jan 13 03:01 packages/gitlab-ci-mode.log
+8.0K -rw-r--r-- 1 root root 5.3K Jan 13 00:17 packages/gitlab-pipeline-20200903.201.el
+4.0K -rw-r--r-- 1 root root  410 Jan 13 00:17 packages/gitlab-pipeline-20200903.201.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 13 00:17 packages/gitlab-pipeline-badge.svg
+4.0K -rw-r--r-- 1 root root  222 Jan 13 00:17 packages/gitlab-pipeline-readme.txt
+4.0K -rw-r--r-- 1 root root  148 Jan 13 03:01 packages/gitlab-pipeline.log
+4.0K -rw-r--r-- 1 root root  212 Jan 13 03:01 packages/gitlab-readme.txt
+8.0K -rw-r--r-- 1 root root 4.7K Jan 13 00:17 packages/gitlab-snip-helm-20200427.2014.el
+4.0K -rw-r--r-- 1 root root  455 Jan 13 00:17 packages/gitlab-snip-helm-20200427.2014.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 13 00:17 packages/gitlab-snip-helm-badge.svg
+4.0K -rw-r--r-- 1 root root   73 Jan 13 00:17 packages/gitlab-snip-helm-readme.txt
+4.0K -rw-r--r-- 1 root root  154 Jan 13 03:01 packages/gitlab-snip-helm.log

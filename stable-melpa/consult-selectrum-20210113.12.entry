@@ -1,0 +1,14 @@
+(consult-selectrum .
+		   [(20210113 12)
+		    ((consult
+		      (0 1))
+		     (selectrum
+		      (3 0))
+		     (emacs
+		      (26 1)))
+		    "Selectrum integration for Consult" single
+		    ((:commit . "b96156086386d6f392f84e7a6232987e7af9aefc")
+		     (:authors
+		      ("Daniel Mendler, Consult and Selectrum contributors"))
+		     (:maintainer "Daniel Mendler")
+		     (:url . "https://github.com/minad/consult"))])

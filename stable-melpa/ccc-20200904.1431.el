@@ -9,7 +9,7 @@
 ;; Maintainer: SKK Development Team
 ;; URL: https://github.com/skk-dev/ddskk
 ;; Package-Version: 20200904.1431
-;; Package-Commit: a66a7b16f13533afdd03e21eebcdd6309e469a13
+;; Package-Commit: 1cd0f65e4e116aaa1dddce98e95ce79911ff85ac
 ;; URL: https://github.com/skk-dev/ddskk/blob/master/READMEs/README.ccc.org
 ;; Keywords: cursor
 
