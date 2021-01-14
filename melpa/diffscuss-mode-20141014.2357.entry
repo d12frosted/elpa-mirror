@@ -1,2 +1,8 @@
-
-(diffscuss-mode . [(20141014 2357) nil "Major mode for diffscuss files." single ((:commit . "e0aacd8b3d9f886f27222c1397f0655e849e0af7") (:keywords "tools") (:authors ("Edmund Jorgensen" . "edmund@hut8labs.com")) (:maintainer "Edmund Jorgensen" . "edmund@hut8labs.com"))])
+(diffscuss-mode .
+		[(20141014 2357)
+		 nil "Major mode for diffscuss files." single
+		 ((:commit . "e0aacd8b3d9f886f27222c1397f0655e849e0af7")
+		  (:authors
+		   ("Edmund Jorgensen" . "edmund@hut8labs.com"))
+		  (:maintainer "Edmund Jorgensen" . "edmund@hut8labs.com")
+		  (:keywords "tools"))])

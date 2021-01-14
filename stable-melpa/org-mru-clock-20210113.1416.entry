@@ -1,0 +1,11 @@
+(org-mru-clock .
+	       [(20210113 1416)
+		((emacs
+		  (25 1)))
+		"Clock in/out of tasks with completion and persistent history" single
+		((:commit . "e08e2ab2b71763f53f2029471057d58f96085a69")
+		 (:authors
+		  ("Kevin Brubeck Unhammer" . "unhammer@fsfe.org"))
+		 (:maintainer "Kevin Brubeck Unhammer" . "unhammer@fsfe.org")
+		 (:keywords "convenience" "calendar")
+		 (:url . "https://github.com/unhammer/org-mru-clock"))])

@@ -12,6 +12,7 @@ are disabled by default (nil):
 modus-themes-slanted-constructs             (boolean)
 modus-themes-bold-constructs                (boolean)
 modus-themes-variable-pitch-headings        (boolean)
+modus-themes-variable-pitch-ui              (boolean)
 modus-themes-no-mixed-fonts                 (boolean)
 modus-themes-headings                       (alist)
 modus-themes-scale-headings                 (boolean)

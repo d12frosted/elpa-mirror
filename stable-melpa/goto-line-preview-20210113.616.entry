@@ -1,0 +1,10 @@
+(goto-line-preview .
+		   [(20210113 616)
+		    ((emacs
+		      (25)))
+		    "Preview line when executing `goto-line` command" single
+		    ((:commit . "605a182c389b60b11dad0738babc66d227a4ed23")
+		     (:authors
+		      ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		     (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		     (:url . "https://github.com/jcs-elpa/goto-line-preview"))])

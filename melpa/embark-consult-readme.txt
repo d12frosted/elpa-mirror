@@ -1,9 +1,15 @@
-This package provides integration between Embark and Consult.
+This package provides integration between Embark and Consult. To
+use it, arrange for it to be loaded once both of those are loaded:
 
-It contains some functionality previously contain in Embark itself:
+(with-eval-after-load 'consult
+(with-eval-after-load 'embark
+(require 'embark-consult)))
+
+Some of the functionality here was previously contained in Embark
+itself:
 
 - Support for consult-buffer, so that you get the correct actions
-for each type of entry in cosult-buffer's list.
+for each type of entry in consult-buffer's list.
 
 - Support for consult-line, consult-outline, consult-mark and
 consult-global-mark, so that the insert and save actions don't
@@ -24,14 +30,14 @@ Consult's info manual or its readme on GitHub.
 preview for the entry at point.
 
 - `embark-consult-preview-minor-mode', a minor mode for Embark
-Collect buffers that automatically previous the entry at point as
+Collect buffers that automatically previews the entry at point as
 you move around.
 
 If you always want the minor mode enabled whenever it possible use:
 
 (add-hook 'embark-collect-mode-hook #'embark-consult-preview-minor-mode)
 
-If you don't want the minor mode automatically one and prefer to
+If you don't want the minor mode automatically on and prefer to
 trigger the consult previews manually use this instead:
 
 (define-key embark-collect-mode-map (kbd "C-j")

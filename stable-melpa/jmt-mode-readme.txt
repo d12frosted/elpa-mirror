@@ -39,6 +39,7 @@ c-before-change
 c-fontify-recorded-types-and-refs
 c-font-lock-<>-arglists
 c-font-lock-declarations
+c-font-lock-doc-comments
 font-lock-fontify-region-function
 
 Moreover, one variable is patched:

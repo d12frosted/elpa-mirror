@@ -1,0 +1,17 @@
+(helm-sly .
+	  [(20210114 1928)
+	   ((emacs
+	     (25 1))
+	    (helm
+	     (3 2))
+	    (cl-lib
+	     (0 5))
+	    (sly
+	     (0 0)))
+	   "Helm sources and some utilities for SLY." single
+	   ((:commit . "7fbd6544511d8669c8122b6a9128fd09e835c3fe")
+	    (:authors
+	     ("Pierre Neidhardt" . "mail@ambrevar.xyz"))
+	    (:maintainer "Pierre Neidhardt" . "mail@ambrevar.xyz")
+	    (:keywords "convenience" "helm" "sly" "lisp")
+	    (:url . "https://github.com/emacs-helm/helm-sly"))])

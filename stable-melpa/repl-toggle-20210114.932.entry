@@ -1,0 +1,10 @@
+(repl-toggle .
+	     [(20210114 932)
+	      ((fullframe
+		(0 0 5)))
+	      "Switch to/from repl buffer for current major-mode" single
+	      ((:commit . "091aea753f59f2af5c581e73d15b4dd7ee394d94")
+	       (:authors
+		("Tom Regner" . "tom@goochesa.de"))
+	       (:maintainer "Tom Regner" . "tom@goochesa.de")
+	       (:keywords "repl" "buffers" "toggle"))])
