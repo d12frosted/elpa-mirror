@@ -9,8 +9,3 @@ Provides the usual functionality:
 - Interacting with an Smalltalk REPL from within the source code.
 - Support for prettify-symbols-mode.
 - defun navigation.
-
-Old History:
-
-Incorporates Frank Caggiano's changes for Emacs 19.
-Updates and changes for Emacs 20 and 21 by David Forster
