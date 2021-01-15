@@ -633,16 +633,16 @@
 		("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
 	       (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net"))])
  (ebdb-i18n-chn .
-		[(1 3 1)
+		[(1 3 2)
 		 ((pyim
 		   (1 6 0))
 		  (ebdb
 		   (0 6 17)))
-		 "China-specific internationalization support for EBDB" single
-		 ((:url . "http://elpa.gnu.org/packages/ebdb-i18n-chn.html")
+		 "China-specific internationalization support for EBDB" tar
+		 ((:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
 		  (:authors
 		   ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
-		  (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net"))])
+		  (:url . "https://elpa.gnu.org/packages/ebdb-i18n-chn.html"))])
  (ediprolog .
 	    [(2 1)
 	     nil "Emacs Does Interactive Prolog" single
