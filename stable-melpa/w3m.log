@@ -5,7 +5,7 @@ Source:  https://github.com/emacs-w3m/emacs-w3m.git
 Updating /mnt/store/melpa/working/w3m/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/w3m/
-  to /tmp/w3mfew76c/w3m-20210105.2310
+  to /tmp/w3mWU50wh/w3m-20210105.2310
     bookmark-w3m.el -> bookmark-w3m.el
     mime-w3m.el -> mime-w3m.el
     w3m-antenna.el -> w3m-antenna.el
@@ -38,7 +38,7 @@ Copying files (->) and directories (=>)
   ! doc/emacs-w3m-ja.texi -> emacs-w3m-ja.texi
   ! doc/emacs-w3m.texi -> emacs-w3m.texi
     icons => icons
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3mfew76c/w3m-20210105.2310/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3mWU50wh/w3m-20210105.2310/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at f29aadae Fix typo in ChangeLog
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
@@ -48,8 +48,8 @@ HEAD is now at f29aadae Fix typo in ChangeLog
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
 ")
-Created /tmp/w3mfew76c/w3m-20210105.2310/emacs-w3m-ja.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mfew76c/w3m-20210105.2310/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/w3mWU50wh/w3m-20210105.2310/emacs-w3m-ja.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mWU50wh/w3m-20210105.2310/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at f29aadae Fix typo in ChangeLog
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
@@ -58,9 +58,9 @@ HEAD is now at f29aadae Fix typo in ChangeLog
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mfew76c/w3m-20210105.2310/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3mWU50wh/w3m-20210105.2310/emacs-w3m-ja.info
 ")
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3mfew76c/w3m-20210105.2310/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3mWU50wh/w3m-20210105.2310/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at f29aadae Fix typo in ChangeLog
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
@@ -69,7 +69,7 @@ HEAD is now at f29aadae Fix typo in ChangeLog
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mfew76c/w3m-20210105.2310/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3mWU50wh/w3m-20210105.2310/emacs-w3m-ja.info
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
@@ -77,8 +77,8 @@ install-info: No such file or directory for /tmp/w3mfew76c/w3m-20210105.2310/ema
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
 ")
-Created /tmp/w3mfew76c/w3m-20210105.2310/emacs-w3m.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mfew76c/w3m-20210105.2310/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/w3mWU50wh/w3m-20210105.2310/emacs-w3m.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mWU50wh/w3m-20210105.2310/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at f29aadae Fix typo in ChangeLog
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
@@ -87,14 +87,14 @@ HEAD is now at f29aadae Fix typo in ChangeLog
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mfew76c/w3m-20210105.2310/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3mWU50wh/w3m-20210105.2310/emacs-w3m-ja.info
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:60: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mfew76c/w3m-20210105.2310/emacs-w3m.info
+install-info: No such file or directory for /tmp/w3mWU50wh/w3m-20210105.2310/emacs-w3m.info
 ")
 Created w3m-20210105.2310.tar containing:
   w3m-20210105.2310/
@@ -173,9 +173,9 @@ Created w3m-20210105.2310.tar containing:
   w3m-20210105.2310/w3m-weather.el
   w3m-20210105.2310/w3m.el
   w3m-20210105.2310/w3mhack.el
-Built w3m in 24.695s, finished at Sat Jan 16 02:53:51 2021
+Built w3m in 29.773s, finished at Sat Jan 16 19:14:17 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  180 Jan 16 02:53 packages/w3m-20210105.2310.entry
-1.1M -rw-r--r-- 1 root root 1.1M Jan 16 02:53 packages/w3m-20210105.2310.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 16 02:53 packages/w3m-badge.svg
-4.0K -rw-r--r-- 1 root root  377 Jan 16 02:53 packages/w3m-readme.txt
+4.0K -rw-r--r-- 1 root root  180 Jan 16 19:14 packages/w3m-20210105.2310.entry
+1.1M -rw-r--r-- 1 root root 1.1M Jan 16 19:14 packages/w3m-20210105.2310.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 16 19:14 packages/w3m-badge.svg
+4.0K -rw-r--r-- 1 root root  377 Jan 16 19:14 packages/w3m-readme.txt

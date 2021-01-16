@@ -2,7 +2,7 @@
 
 ;; Version: 1.0
 ;; Package-Version: 20200914.644
-;; Package-Commit: 709480dfea1c25c4f6b4495161a59d83cd6c0aa4
+;; Package-Commit: b0cf67f0b1308b60f02c5a2eae6ad647eadc60c3
 
 ;; SPDX-License-Identifier: MIT License
 ;; URL: https://github.com/agda/agda
