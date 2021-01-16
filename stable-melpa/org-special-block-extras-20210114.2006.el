@@ -5,7 +5,7 @@
 ;; Author: Musa Al-hassy <alhassy@gmail.com>
 ;; Version: 2.1
 ;; Package-Version: 20210114.2006
-;; Package-Commit: 0c5a7b97be4e5e11093276af310442ab5776ab90
+;; Package-Commit: 2d1fe850c3949ff3dcec9aec03b1800a6cd2e718
 ;; Package-Requires: ((s "1.12.0") (dash "2.16.0") (emacs "26.1") (dash-functional "1.2.0") (org "9.1"))
 ;; Keywords: org, blocks, colors, convenience
 ;; URL: https://alhassy.github.io/org-special-block-extras

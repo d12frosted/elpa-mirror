@@ -1,8 +1,9 @@
 This package contains
 
-* defuns for downloading and uploading a change (`gerrit-upload-transient` and `gerrit-download-new`)
+* functions for downloading and uploading a change
+* (`gerrit-upload-transient` and `gerrit-download`)
 
-* gerrit-dashboard, defun for displaying a dashboard, similar to the
+* `gerrit-dashboard`, function for displaying a dashboard, similar to the
 one of the gerrit webinterface
 
 * open-reviews section for the magit-status buffer (`magit-gerrit-insert-status`)

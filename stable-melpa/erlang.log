@@ -3,34 +3,3 @@ Fetcher: github
 Source:  https://github.com/erlang/otp.git
 
 Updating /mnt/store/melpa/working/erlang/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/erlang/
-  to /tmp/erlangovcy6i/erlang-20201215.830
-  ! lib/tools/emacs/erlang-edoc.el -> erlang-edoc.el
-  ! lib/tools/emacs/erlang-eunit.el -> erlang-eunit.el
-  ! lib/tools/emacs/erlang-flymake.el -> erlang-flymake.el
-  ! lib/tools/emacs/erlang-pkg.el -> erlang-pkg.el
-  ! lib/tools/emacs/erlang-skels-old.el -> erlang-skels-old.el
-  ! lib/tools/emacs/erlang-skels.el -> erlang-skels.el
-  ! lib/tools/emacs/erlang-start.el -> erlang-start.el
-  ! lib/tools/emacs/erlang-test.el -> erlang-test.el
-  ! lib/tools/emacs/erlang.el -> erlang.el
-  ! lib/tools/emacs/erldoc.el -> erldoc.el
-Created erlang-20201215.830.tar containing:
-  erlang-20201215.830/
-  erlang-20201215.830/erlang-edoc.el
-  erlang-20201215.830/erlang-eunit.el
-  erlang-20201215.830/erlang-flymake.el
-  erlang-20201215.830/erlang-pkg.el
-  erlang-20201215.830/erlang-skels-old.el
-  erlang-20201215.830/erlang-skels.el
-  erlang-20201215.830/erlang-start.el
-  erlang-20201215.830/erlang-test.el
-  erlang-20201215.830/erlang.el
-  erlang-20201215.830/erldoc.el
-Built erlang in 17.065s, finished at Fri Jan 15 06:41:31 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  258 Jan 15 06:41 packages/erlang-20201215.830.entry
-432K -rw-r--r-- 1 root root 430K Jan 15 06:41 packages/erlang-20201215.830.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 15 06:41 packages/erlang-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Jan 15 06:41 packages/erlang-readme.txt

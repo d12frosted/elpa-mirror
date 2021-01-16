@@ -5,29 +5,31 @@ Source:  https://github.com/emacs-lsp/lsp-ui.git
 Updating /mnt/store/melpa/working/lsp-ui/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-ui/
-  to /tmp/lsp-ui5kDqv7/lsp-ui-20210110.1507
+  to /tmp/lsp-uiBx1JRu/lsp-ui-20210115.1200
     lsp-ui-doc.el -> lsp-ui-doc.el
     lsp-ui-flycheck.el -> lsp-ui-flycheck.el
     lsp-ui-imenu.el -> lsp-ui-imenu.el
     lsp-ui-peek.el -> lsp-ui-peek.el
     lsp-ui-sideline.el -> lsp-ui-sideline.el
+    lsp-ui-util.el -> lsp-ui-util.el
     lsp-ui.el -> lsp-ui.el
     lsp-ui-doc.html -> lsp-ui-doc.html
   ! resources/lightbulb.png -> lightbulb.png
-Created lsp-ui-20210110.1507.tar containing:
-  lsp-ui-20210110.1507/
-  lsp-ui-20210110.1507/lightbulb.png
-  lsp-ui-20210110.1507/lsp-ui-doc.el
-  lsp-ui-20210110.1507/lsp-ui-doc.html
-  lsp-ui-20210110.1507/lsp-ui-flycheck.el
-  lsp-ui-20210110.1507/lsp-ui-imenu.el
-  lsp-ui-20210110.1507/lsp-ui-peek.el
-  lsp-ui-20210110.1507/lsp-ui-pkg.el
-  lsp-ui-20210110.1507/lsp-ui-sideline.el
-  lsp-ui-20210110.1507/lsp-ui.el
-Built lsp-ui in 8.152s, finished at Fri Jan 15 07:00:23 2021
+Created lsp-ui-20210115.1200.tar containing:
+  lsp-ui-20210115.1200/
+  lsp-ui-20210115.1200/lightbulb.png
+  lsp-ui-20210115.1200/lsp-ui-doc.el
+  lsp-ui-20210115.1200/lsp-ui-doc.html
+  lsp-ui-20210115.1200/lsp-ui-flycheck.el
+  lsp-ui-20210115.1200/lsp-ui-imenu.el
+  lsp-ui-20210115.1200/lsp-ui-peek.el
+  lsp-ui-20210115.1200/lsp-ui-pkg.el
+  lsp-ui-20210115.1200/lsp-ui-sideline.el
+  lsp-ui-20210115.1200/lsp-ui-util.el
+  lsp-ui-20210115.1200/lsp-ui.el
+Built lsp-ui in 3.092s, finished at Sat Jan 16 02:29:36 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  517 Jan 15 07:00 packages/lsp-ui-20210110.1507.entry
-152K -rw-r--r-- 1 root root 150K Jan 15 07:00 packages/lsp-ui-20210110.1507.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 15 07:00 packages/lsp-ui-badge.svg
-4.0K -rw-r--r-- 1 root root  104 Jan 15 07:00 packages/lsp-ui-readme.txt
+4.0K -rw-r--r-- 1 root root  517 Jan 16 02:29 packages/lsp-ui-20210115.1200.entry
+160K -rw-r--r-- 1 root root 160K Jan 16 02:29 packages/lsp-ui-20210115.1200.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 16 02:29 packages/lsp-ui-badge.svg
+4.0K -rw-r--r-- 1 root root  104 Jan 16 02:29 packages/lsp-ui-readme.txt
