@@ -5,17 +5,19 @@ Source:  https://github.com/ocaml/dune.git
 Updating /mnt/store/melpa/working/dune/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dune/
-  to /tmp/duneOULGuM/dune-20191016.1241
+  to /tmp/duneqgJgeu/dune-20210118.404
   ! editor-integration/emacs/dune-flymake.el -> dune-flymake.el
+  ! editor-integration/emacs/dune-watch.el -> dune-watch.el
   ! editor-integration/emacs/dune.el -> dune.el
-Created dune-20191016.1241.tar containing:
-  dune-20191016.1241/
-  dune-20191016.1241/dune-flymake.el
-  dune-20191016.1241/dune-pkg.el
-  dune-20191016.1241/dune.el
-Built dune in 4.994s, finished at Mon Jan 18 00:58:30 2021
+Created dune-20210118.404.tar containing:
+  dune-20210118.404/
+  dune-20210118.404/dune-flymake.el
+  dune-20210118.404/dune-pkg.el
+  dune-20210118.404/dune-watch.el
+  dune-20210118.404/dune.el
+Built dune in 9.026s, finished at Mon Jan 18 12:07:17 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  195 Jan 18 00:58 packages/dune-20191016.1241.entry
- 32K -rw-r--r-- 1 root root  30K Jan 18 00:58 packages/dune-20191016.1241.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 18 00:58 packages/dune-badge.svg
-4.0K -rw-r--r-- 1 root root  869 Jan 18 00:58 packages/dune-readme.txt
+4.0K -rw-r--r-- 1 root root  194 Jan 18 12:07 packages/dune-20210118.404.entry
+ 40K -rw-r--r-- 1 root root  40K Jan 18 12:07 packages/dune-20210118.404.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 18 12:07 packages/dune-badge.svg
+4.0K -rw-r--r-- 1 root root  869 Jan 18 12:07 packages/dune-readme.txt

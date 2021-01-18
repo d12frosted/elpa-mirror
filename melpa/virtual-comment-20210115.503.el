@@ -3,7 +3,7 @@
 ;; Author: Thanh Vuong <thanhvg@gmail.com>
 ;; URL: https://github.com/thanhvg/emacs-virtual-comment
 ;; Package-Version: 20210115.503
-;; Package-Commit: eb2672dd3cac22d33269e9c0ec0a3522777cbdd2
+;; Package-Commit: f0feba2d5f9f3a03f053d12a55fc06f2ba9226c0
 ;; Package-Requires: ((emacs "26.1"))
 ;; Version: 0.0.1
 
