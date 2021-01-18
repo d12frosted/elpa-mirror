@@ -5,7 +5,7 @@
 ;; Author: Oleh Krehel <ohwoeowho@gmail.com>
 ;; URL: https://github.com/abo-abo/swiper
 ;; Package-Version: 20201208.1419
-;; Package-Commit: cbce9ce71429c98c67bd76ef15d049ecced042f7
+;; Package-Commit: 25439e26a67b54d1f8aab1cbc727228427692ec8
 ;; Version: 0.13.0
 ;; Package-Requires: ((emacs "24.5") (ivy "0.13.0"))
 ;; Keywords: matching

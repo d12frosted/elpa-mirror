@@ -3,9 +3,6 @@ Fetcher: hg
 Source:  https://hg.osdn.net/view/lognav-mode/lognav-mode
 
 Updating /mnt/store/melpa/working/lognav-mode/
-Built lognav-mode in 10.581s, finished at Sun Jan 17 16:54:39 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.1K Jan 17 16:54 packages/lognav-mode-20191124.1011.el
-4.0K -rw-r--r-- 1 root root  433 Jan 17 16:54 packages/lognav-mode-20191124.1011.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 17 16:54 packages/lognav-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  709 Jan 17 16:54 packages/lognav-mode-readme.txt
+Command '(env LC_ALL=C hg pull)' exited with non-zero status 255: pulling from https://hg.osdn.net/view/lognav-mode/lognav-mode
+abort: error: Connection refused
+

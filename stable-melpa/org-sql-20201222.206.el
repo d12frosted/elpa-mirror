@@ -5,7 +5,7 @@
 ;; Author: Nathan Dwarshuis <natedwarshuis@gmail.com>
 ;; Keywords: org-mode, data
 ;; Package-Version: 20201222.206
-;; Package-Commit: ddbab360a49d4c0cab964cd1fdb80d2135a10272
+;; Package-Commit: e3d6df9194a67d3b760e1b07333a10fe5ee3af58
 ;; Homepage: https://github.com/ndwarshuis/org-sql
 ;; Package-Requires: ((emacs "27.1") (s "1.12") (dash "2.17") (org-ml "5.4.3"))
 ;; Version: 1.1.0
