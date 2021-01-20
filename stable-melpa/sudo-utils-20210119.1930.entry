@@ -1,0 +1,11 @@
+(sudo-utils .
+	    [(20210119 1930)
+	     ((emacs
+	       (25 1)))
+	     "Sudo utilities" single
+	     ((:commit . "089f7833fa256f293284a6286bf9cb2b78eff40d")
+	      (:authors
+	       ("Alpha Catharsis" . "alpha.catharsis@gmail.com"))
+	      (:maintainer "Alpha Catharsis" . "alpha.catharsis@gmail.com")
+	      (:keywords "processes" "unix")
+	      (:url . "https://github.com/alpha-catharsis/sudo-utils"))])

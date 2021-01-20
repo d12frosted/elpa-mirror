@@ -114,6 +114,7 @@ diredc
 diredfl
 diredp (dired+)
 disk-usage
+display-fill-column-indicator-mode
 doom-modeline
 dynamic-ruler
 easy-jekyll

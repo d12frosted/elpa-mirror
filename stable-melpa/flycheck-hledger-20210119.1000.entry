@@ -1,0 +1,12 @@
+(flycheck-hledger .
+		  [(20210119 1000)
+		   ((emacs
+		     (27 1))
+		    (flycheck
+		     (31)))
+		   "Flycheck module to check hledger journals" single
+		   ((:commit . "9e45dd3f6b6cf51acf7312939aa437ae156be2e7")
+		    (:authors
+		     ("Damien Cassou" . "damien@cassou.me"))
+		    (:maintainer "Damien Cassou" . "damien@cassou.me")
+		    (:url . "https://github.com/DamienCassou/flycheck-hledger/"))])

@@ -5,7 +5,7 @@
 ;; Author: Paul Onions
 ;; Keywords: Axiom, OpenAxiom, FriCAS
 ;; Package-Version: 20190623.2052
-;; Package-Commit: 47d6dffc29286badb2b1d7143b219e5c1be15bdb
+;; Package-Commit: 7afc30fc293effbfde0e4d75a42832a69dbcfd49
 
 ;; This file is free software, see the LICENCE file in this directory
 ;; for copying terms.

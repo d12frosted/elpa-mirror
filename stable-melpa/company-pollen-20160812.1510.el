@@ -6,7 +6,7 @@
 ;; Created: 22 June 2016
 ;; Keywords: languages, pollen, pollenpub, company
 ;; Package-Version: 20160812.1510
-;; Package-Commit: d0a33591498013886c2c4676e204cd684954e82a
+;; Package-Commit: 09a9dc48c468dcd385982b9629f325e70d569faf
 ;; License: LGPL
 ;; Version: 0.2
 ;; Package-Requires: ((company "0.9.0") (pollen-mode "1.0"))
