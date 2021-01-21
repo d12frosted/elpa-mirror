@@ -5,13 +5,13 @@ Source:  https://github.com/ataka/clmemo.git
 Updating /mnt/store/melpa/working/clmemo/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/clmemo/
-  to /tmp/clmemoT3YcKP/clmemo-20160326.1623
+  to /tmp/clmemobdw5Nz/clmemo-20160326.1623
     clmemo.el -> clmemo.el
   ! doc/clmemo.texi -> clmemo.texi
   ! doc/install.texi -> install.texi
   ! doc/news.texi -> news.texi
-Created /tmp/clmemoT3YcKP/clmemo-20160326.1623/clmemo.info
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/clmemo/doc/install.texi -o /tmp/clmemoT3YcKP/clmemo-20160326.1623/install.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/clmemobdw5Nz/clmemo-20160326.1623/clmemo.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/clmemo/doc/install.texi -o /tmp/clmemobdw5Nz/clmemo-20160326.1623/install.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 846a81b Update year of copyright
 /mnt/store/melpa/working/clmemo/doc/clmemo.texi:8: warning: @setcontentsaftertitlepage is obsolete; move your @contents command if you want the contents after the title page
 /mnt/store/melpa/working/clmemo/doc/install.texi:45: warning: undefined flag: clmemo
@@ -20,8 +20,8 @@ HEAD is now at 846a81b Update year of copyright
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Prev reference to nonexistent `clmemo'
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Up reference to nonexistent `clmemo'
 ")
-Created /tmp/clmemoT3YcKP/clmemo-20160326.1623/install.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/clmemoT3YcKP/clmemo-20160326.1623/install.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/clmemobdw5Nz/clmemo-20160326.1623/install.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/clmemobdw5Nz/clmemo-20160326.1623/install.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 846a81b Update year of copyright
 /mnt/store/melpa/working/clmemo/doc/clmemo.texi:8: warning: @setcontentsaftertitlepage is obsolete; move your @contents command if you want the contents after the title page
 /mnt/store/melpa/working/clmemo/doc/install.texi:45: warning: undefined flag: clmemo
@@ -29,9 +29,9 @@ HEAD is now at 846a81b Update year of copyright
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Next reference to nonexistent `input memo'
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Prev reference to nonexistent `clmemo'
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Up reference to nonexistent `clmemo'
-install-info: No such file or directory for /tmp/clmemoT3YcKP/clmemo-20160326.1623/install.info
+install-info: No such file or directory for /tmp/clmemobdw5Nz/clmemo-20160326.1623/install.info
 ")
-Created /tmp/clmemoT3YcKP/clmemo-20160326.1623/news.info
+Created /tmp/clmemobdw5Nz/clmemo-20160326.1623/news.info
 Created clmemo-20160326.1623.tar containing:
   clmemo-20160326.1623/
   clmemo-20160326.1623/clmemo-pkg.el
@@ -39,9 +39,9 @@ Created clmemo-20160326.1623.tar containing:
   clmemo-20160326.1623/clmemo.info
   clmemo-20160326.1623/dir
   clmemo-20160326.1623/news.info
-Built clmemo in 19.321s, finished at Wed Jan 20 18:05:17 2021
+Built clmemo in 34.882s, finished at Thu Jan 21 02:54:54 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  321 Jan 20 18:05 packages/clmemo-20160326.1623.entry
-132K -rw-r--r-- 1 root root 130K Jan 20 18:05 packages/clmemo-20160326.1623.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 20 18:05 packages/clmemo-badge.svg
-4.0K -rw-r--r-- 1 root root 2.8K Jan 20 18:05 packages/clmemo-readme.txt
+4.0K -rw-r--r-- 1 root root  321 Jan 21 02:54 packages/clmemo-20160326.1623.entry
+132K -rw-r--r-- 1 root root 130K Jan 21 02:54 packages/clmemo-20160326.1623.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 21 02:54 packages/clmemo-badge.svg
+4.0K -rw-r--r-- 1 root root 2.8K Jan 21 02:54 packages/clmemo-readme.txt

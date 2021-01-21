@@ -5,6 +5,7 @@ Source:  https://github.com/purpleidea/mgmt.git
 Updating /mnt/store/melpa/working/mgmtconfig-mode/
 Command '(env LC_ALL=C git submodule update --init --recursive)' exited with non-zero status 1: Fetching origin
 warning: unable to rmdir 'vendor/github.com/coreos/etcd': Directory not empty
+Checking out files:  90% (425/471)   Checking out files:  91% (429/471)   Checking out files:  92% (434/471)   Checking out files:  93% (439/471)   Checking out files:  94% (443/471)   Checking out files:  95% (448/471)   Checking out files:  96% (453/471)   Checking out files:  97% (457/471)   Checking out files:  98% (462/471)   Checking out files:  99% (467/471)   Checking out files: 100% (471/471)   Checking out files: 100% (471/471), done.
 HEAD is now at 01c2131 misc: Make-deps should assume go vet present
 Synchronizing submodule url for 'vendor/github.com/docker/distribution'
 Synchronizing submodule url for 'vendor/github.com/docker/docker'

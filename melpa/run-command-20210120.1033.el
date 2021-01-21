@@ -5,7 +5,7 @@
 ;; Author: Massimiliano Mirra <hyperstruct@gmail.com>
 ;; URL: https://github.com/bard/emacs-run-command
 ;; Package-Version: 20210120.1033
-;; Package-Commit: 07e93ee81c4987f1e0a234d32175f0235eaa826f
+;; Package-Commit: 0401330ed1707a07bd63da4723ac4616173f97b8
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: processes
