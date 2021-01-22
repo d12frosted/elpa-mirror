@@ -1,1 +1,1 @@
-This package plugs icons into `helm' standart functions.
+This package plugs icons into `helm' standard functions.

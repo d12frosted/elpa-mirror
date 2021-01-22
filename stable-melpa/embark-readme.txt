@@ -74,7 +74,6 @@ get a buffer in package menu mode.
 
 These are always available as "actions" (although they do not act
 on just the current target but on all candidates) for embark-act and
-are bound to C, L and E, respectively, in embark-general-map.  This
+are bound to S, L and E, respectively, in embark-general-map.  This
 means that you do not have to bind your own key bindings for these
-(although you can, of course), just a key binding for `embark-act'
-or `embark-act-noexit'.
+(although you can, of course), just a key binding for `embark-act'.

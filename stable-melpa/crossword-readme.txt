@@ -57,8 +57,8 @@ fill-in a square or navigate: `crossword-arrow-changes-direction'
 `crossword-wrap-on-entry-or-nav', `crossword-tab-to-next-unfilled'
 `crossword-auto-nav-only-within-clue'.
 
-If don't usually play more than one crossword in a sitting, you
-may want to set `crossword-quit-to-browser' to NIL to save
+If you don't usually play more than one crossword in a sitting,
+you may want to set `crossword-quit-to-browser' to NIL to save
 yourself a keystroke on exit.
 
 You can also customize the download sources to be used for network

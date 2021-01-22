@@ -5,7 +5,7 @@
 ;; Author: Damien Cassou <damien@cassou.me>
 ;; Url: https://github.com/DamienCassou/flycheck-hledger/
 ;; Package-Version: 20210119.1000
-;; Package-Commit: 9e45dd3f6b6cf51acf7312939aa437ae156be2e7
+;; Package-Commit: 0eeaa707b74f96761404daa2f807fbd7af904b75
 ;; Package-requires: ((emacs "27.1") (flycheck "31"))
 ;; Version: 0.3.0
 

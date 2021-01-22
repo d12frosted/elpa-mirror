@@ -22,5 +22,9 @@ Use the repository created by elpa-mirror,
 - Insert `(setq package-archives '(("myelpa" . "~/myelpa/")))` into ~/.emacs
 - Restart Emacs
 
-You can also setup repositories on Dropbox and Github.
+Tips,
+- `elpamr-exclude-packages' exclude packages
+- `elpamr-tar-command-exclude-patterns' excludes file and directories in
+package directory.
+- You can also setup repositories on Dropbox and Github.
 See https://github.com/redguardtoo/elpa-mirror for details.

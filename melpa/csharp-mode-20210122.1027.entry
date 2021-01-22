@@ -1,0 +1,17 @@
+(csharp-mode .
+	     [(20210122 1027)
+	      ((emacs
+		(26 1))
+	       (tree-sitter
+		(0 12 1))
+	       (tree-sitter-indent
+		(0 1))
+	       (tree-sitter-langs
+		(0 9 1)))
+	      "C# mode derived mode" tar
+	      ((:commit . "c928423f8724d3cd38a375bbd42c94a284fc6226")
+	       (:authors
+		("Theodor Thornhill" . "theo@thornhill.no"))
+	       (:maintainer "Jostein Kjønigsen" . "jostein@gmail.com")
+	       (:keywords "c#" "languages" "oop" "mode")
+	       (:url . "https://github.com/emacs-csharp/csharp-mode"))])
