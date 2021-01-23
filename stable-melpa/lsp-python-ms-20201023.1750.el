@@ -4,7 +4,7 @@
 ;; Maintainer: Andrew Christianson, Vincent Zhang
 ;; Version: 0.7.1
 ;; Package-Version: 20201023.1750
-;; Package-Commit: c4ebc7a11398733055a1dc07f9cffacd04d1c2dc
+;; Package-Commit: 0df567190e2686f56d47fcbaa442b520fbe1189f
 ;; Package-Requires: ((emacs "25.1") (lsp-mode "6.1"))
 ;; Homepage: https://github.com/emacs-lsp/lsp-python-ms
 ;; Keywords: languages tools

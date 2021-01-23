@@ -1,1 +1,1 @@
-Provides a test coverage tools for Emacs packages.
+Provides test coverage tools for Emacs packages.
