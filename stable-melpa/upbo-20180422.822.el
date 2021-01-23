@@ -5,6 +5,8 @@
 ;; Author: Sungho Kim(shiren)
 ;; Maintainer: Sungho Kim(shiren)
 ;; URL: http://github.com/shiren
+;; Package-Version: 20180422.822
+;; Package-Commit: 1e4b1e7f44f242a6cdcce0c157d07efe667b7bef
 ;; Version: 1.0.0
 ;; Package-Requires: ((dash "2.12.0") (emacs "24.4"))
 ;; Keywords: javascript, js, test, karma

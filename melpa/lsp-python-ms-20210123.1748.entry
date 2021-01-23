@@ -1,11 +1,11 @@
 (lsp-python-ms .
-	       [(20201023 1750)
+	       [(20210123 1748)
 		((emacs
 		  (25 1))
 		 (lsp-mode
 		  (6 1)))
 		"The lsp-mode client for Microsoft python-language-server" single
-		((:commit . "0df567190e2686f56d47fcbaa442b520fbe1189f")
+		((:commit . "5470ada6cde6e68fe6ce13ff1146c89c3bae0cc8")
 		 (:authors
 		  ("Charl Botha"))
 		 (:maintainer "Andrew Christianson, Vincent Zhang")

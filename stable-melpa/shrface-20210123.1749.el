@@ -4,8 +4,8 @@
 
 ;; Author: Damon Chan <elecming@gmail.com>
 ;; URL: https://github.com/chenyanming/shrface
-;; Package-Version: 20210123.1635
-;; Package-Commit: a8ab1600be3f4d29bf2c4102033b4433fc9c5921
+;; Package-Version: 20210123.1749
+;; Package-Commit: 87afd7dd6124e76cf39d82161faae8fec4b342ed
 ;; Keywords: faces
 ;; Created: 10 April 2020
 ;; Version: 2.6.3
@@ -187,6 +187,7 @@ The following features are also disabled:
   '((em  . shrface-tag-em)
     (u  . shrface-tag-u)
     (strong  . shrface-tag-strong)
+    (svg . shrface-tag-svg)
     (h1  . shrface-tag-h1)
     (h2  . shrface-tag-h2)
     (h3  . shrface-tag-h3)
@@ -673,25 +674,31 @@ Argument DOM dom."
   (if (not (url-type (url-generic-parse-url url)))
       t))
 
+(defun shrface-tag-svg (dom)
+  "Fontize tag svg.
+Argument DOM dom."
+  (if shrface-org
+      nil
+      (shr-tag-svg dom)))
 
 (defun shrface-tag-a (dom)
   "Fontize tag a.
 Argument DOM dom."
   (let ((url (dom-attr dom 'href))
+        (img-src (dom-attr (dom-by-tag dom 'img) 'src))
         (title (dom-attr dom 'title))
         (start (point))
         shr-start)
     (if shrface-org
         (cond ((equal url "") (shr-generic dom))
               ((equal url nil) (shr-generic dom))
-              ((shrface-relative-p url) (shr-generic dom))
+              (img-src (insert (format "[[%s][%s]]" url img-src)))
+              ;; ((shrface-relative-p url) (shr-generic dom))
               ((equal (dom-text dom) "")
                (insert (format "[[%s]]" url)))
               ((string-match-p "\\`\\s-*$" (dom-text dom))
                (insert (format "[[%s]]" url)))
-              (t (insert (format "[[%s][%s]]" url (let ((src (dom-attr (dom-by-tag dom 'img) 'src)))
-                                                    (if src src
-                                                      (dom-text dom)))))))
+              (t (insert (format "[[%s][%s]]" url (dom-text dom)))))
       (shr-generic dom)
       (when (and shr-target-id
                  (equal (dom-attr dom 'name) shr-target-id))
@@ -1484,21 +1491,38 @@ Return either 'hide-all, 'headings-only, or 'show-all."
                   (setq shrface-outline--cycle-buffer-state 'show-all)
                   (message "Show all"))))
 
-(defun shrface-html-export-as-org ()
-  "Export current html buffer to an org buffer."
-  (interactive)
+(defun shrface-html-convert-as-org-string (&optional html)
+  "Convert current html buffer to return org string.
+Optional argument HTML: If HTML string is provided, will convert
+the HTML string to org string."
   (or (fboundp 'libxml-parse-html-region)
       (error "This function requires Emacs to be compiled with libxml2"))
-  (let ((buf (current-buffer))
-        (new (get-buffer-create "*Shrface Org Export*")))
-    (with-current-buffer new
+  (let ((buf (current-buffer)))
+    (with-temp-buffer
       (let ((shrface-org t)
             (shr-bullet "- ")
             (shr-table-vertical-line "|"))
-        (shr-insert-document
-         (with-current-buffer buf
-           (libxml-parse-html-region (point-min) (point-max)))))
-      (pop-to-buffer new)
+        (if html
+            (shr-insert-document
+             (with-temp-buffer
+               (insert html)
+               (libxml-parse-html-region (point-min) (point-max))))
+          (shr-insert-document
+           (with-current-buffer buf
+             (libxml-parse-html-region (point-min) (point-max))))))
+      (buffer-substring-no-properties (point-min) (point-max)))))
+
+(defun shrface-html-export-as-org (&optional html)
+  "Export current html buffer to an org buffer.
+Optional argument HTML: If HTML string is provided, will convert
+the HTML string to an org buffer."
+  (interactive)
+  (let ((buf (get-buffer-create "*Shrface Org Export*"))
+        (str (shrface-html-convert-as-org-string html)))
+    (with-current-buffer buf
+      (erase-buffer)
+      (insert str)
+      (pop-to-buffer buf)
       (goto-char (point-min))
       (org-mode))))
 

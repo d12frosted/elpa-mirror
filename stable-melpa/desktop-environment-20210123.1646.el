@@ -4,8 +4,8 @@
 
 ;; Author: Damien Cassou <damien@cassou.me>, Nicolas Petton <nicolas@petton.fr>
 ;; Url: https://gitlab.petton.fr/DamienCassou/desktop-environment
-;; Package-Version: 20210120.734
-;; Package-Commit: 9da8f4bddb78668085a7fc367f9021549f9e5f70
+;; Package-Version: 20210123.1646
+;; Package-Commit: 7455baa83f7885e639faad33b5fda0b31a5cbed3
 ;; Package-requires: ((emacs "25.1"))
 ;; Version: 0.5.0
 
@@ -144,14 +144,34 @@ replaced by the desired new volume level."
 ;;; Customization - screenshots
 
 (defcustom desktop-environment-screenshot-command "scrot"
-  "Shell command taking a screenshot in the current working directory."
+  "Shell command taking a screenshot in the current working directory.
+
+In order to support taking delayed screenshots, ensure that the
+argument specified in `desktop-environment-screenshot-delay-argument' is
+compatible with this command."
   :type 'string)
 
 (defcustom desktop-environment-screenshot-partial-command "scrot -s"
   "Shell command taking a partial screenshot in the current working directory.
 
 The shell command should let the user interactively select the
-portion of the screen."
+portion of the screen.
+
+In order to support taking delayed screenshots, ensure that the
+argument specified in `desktop-environment-screenshot-delay-argument'
+is compatible with this command."
+  :type 'string)
+
+(defcustom desktop-environment-screenshot-delay-argument "--delay %d"
+  "Argument to append to the screenshot shell command to delay the screenshot.
+
+When one of the screenshot
+functions (`desktop-environment-screenshot' or
+`desktop-environment-screenshot-part') is called with a positive
+integer as its first (prefix) argument, this string will be
+appended to either `desktop-environment-screenshot-command' or
+`desktop-environment-screenshot-partial-command' respectively,
+replacing the placeholder %d with the prefix argument."
   :type 'string)
 
 (defcustom desktop-environment-screenshot-directory "~/Pictures"
@@ -366,22 +386,58 @@ portion of the screen."
 ;;; Commands - screenshots
 
 ;;;###autoload
-(defun desktop-environment-screenshot ()
-  "Take a screenshot of the screen in the current working directory."
-  (interactive)
-  (let ((default-directory (expand-file-name desktop-environment-screenshot-directory)))
-    (start-process-shell-command "desktop-environment-screenshot" nil desktop-environment-screenshot-command)))
+(defun desktop-environment-screenshot (&optional delay)
+  "Take a screenshot of the screen.
+
+Screenshots are stored in the directory
+`desktop-environment-screenshot-directory'.
+
+When DELAY is a positive integer, delay taking the screenshot by
+DELAY seconds.  When the function is called interactively, DELAY
+is the provided prefix argument.
+
+In order to delay the screenshot,
+`desktop-environment-screenshot-delay-argument' is appended to
+the command `desktop-environment-screenshot-command'."
+  (interactive "P")
+  (let ((default-directory (expand-file-name desktop-environment-screenshot-directory))
+        (command (if (and delay
+                          (numberp delay)
+                          (> delay 0))
+                     (concat desktop-environment-screenshot-command
+                             " "
+                             (format desktop-environment-screenshot-delay-argument delay))
+                   desktop-environment-screenshot-command)))
+    (start-process-shell-command "desktop-environment-screenshot" nil command)))
 
 ;;;###autoload
-(defun desktop-environment-screenshot-part ()
-  "Take a partial screenshot in the current working directory.
+(defun desktop-environment-screenshot-part (&optional delay)
+  "Take a screenshot of part of the screen.
+
+Screenshots are stored in the directory
+`desktop-environment-screenshot-directory'.
 
 The command asks the user to interactively select a portion of
-the screen."
-  (interactive)
-  (let ((default-directory (expand-file-name desktop-environment-screenshot-directory)))
+the screen.
+
+When DELAY is a positive integer, delay taking the screenshot by
+DELAY seconds.  When the function is called interactively, DELAY
+is the provided prefix argument.
+
+In order to delay the screenshot,
+`desktop-environment-screenshot-delay-argument' is appended to
+the command `desktop-environment-screenshot-partial-command'."
+  (interactive "P")
+  (let ((default-directory (expand-file-name desktop-environment-screenshot-directory))
+        (command (if (and delay
+                          (numberp delay)
+                          (> delay 0))
+                     (concat desktop-environment-screenshot-partial-command
+                             " "
+                             (format desktop-environment-screenshot-delay-argument delay))
+                   desktop-environment-screenshot-partial-command)))
     (message "Please select the part of your screen to shoot.")
-    (start-process-shell-command "desktop-environment-screenshot" nil desktop-environment-screenshot-partial-command)))
+    (start-process-shell-command "desktop-environment-screenshot" nil command)))
 
 
 ;;; Commands - screen locking

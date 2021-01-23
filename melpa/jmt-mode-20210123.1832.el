@@ -4,8 +4,8 @@
 ;;
 ;; Author: Michael Allan <mike@reluk.ca>
 ;; Version: 0-snapshot
-;; Package-Version: 20210119.550
-;; Package-Commit: 3897c67babfcacead6c5c253daa93ba4a2ba47f1
+;; Package-Version: 20210123.1832
+;; Package-Commit: 20aad8a672a73a6fcf2ae361d607548075bc8746
 ;; SPDX-License-Identifier: MIT
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: c, languages
@@ -46,7 +46,7 @@
 ;;          The `interpreter-mode-alist` entry is for source-launch files encoded with a shebang. [SLS]
 ;;
 ;;   For a working example of manual installation, see the relevant lines
-;;   of `http://reluk.ca/.emacs.d/lisp/initialization.el`, and follow the reference there.
+;;   of `http://reluk.ca/.config/emacs/lisp/initialization.el`, and follow the reference there.
 ;;
 ;; Changes to Emacs
 ;;
@@ -362,7 +362,7 @@ see ‘jmt-block-tag-parameter’."
         (eq 'jmt-annotation-string f)
         (eq 'jmt-annotation-string-delimiter f)
         (eq 'jmt-annotation-package-name f); A package name in an annotation type reference.
-        (and (eq 'jmt-separator f) (char-equal ?. (char-before p)))))); A dot ‘.’ in the package name.
+        (and (eq 'jmt-separator f) (= ?. (char-before p)))))); A dot ‘.’ in the package name.
 
 
 
@@ -880,7 +880,7 @@ in case of an \\=`env\\=` interpreter."
               eol face m1-end m2-beg m2-end m3-beg m3-end m4-beg m4-end m5-beg m5-end)
           (while (< m1-beg m1-beg-limit)
             (setq m1-end (1+ m1-beg))
-            (if (not (char-equal ?@ (char-after m1-beg)))
+            (if (/= ?@ (char-after m1-beg))
                 (setq m1-beg m1-end)
               (goto-char m1-end)
               (catch 'is-annotation
@@ -1325,7 +1325,7 @@ in case of an \\=`env\\=` interpreter."
               (goto-char match-end)
               (forward-comment most-positive-fixnum); [CW→, PPN]
               (when (eobp) (throw 'to-reface nil))
-              (when (char-equal ?. (char-after))
+              (when (= ?. (char-after))
                 (set 'jmt-f
                      (if (string= "Lu" (get-char-code-property (char-after match-beg) 'general-category))
                          'jmt-type-reference; Workaround for a probable misfacing by Java mode.
@@ -1363,39 +1363,39 @@ in case of an \\=`env\\=` interpreter."
 
                ;; Angle bracket
                ;; ─────────────
-               (when (or (char-equal j ?<)
-                         (char-equal j ?>))
+               (when (or (= j ?<)
+                         (= j ?>))
                  (set-match-data (list match-beg (goto-char match-end) (current-buffer)))
                  (throw 'to-face 'jmt-angle-bracket))
 
                ;; Curly bracket
                ;; ─────────────
-               (when (or (char-equal j ?{)
-                         (char-equal j ?}))
+               (when (or (= j ?{)
+                         (= j ?}))
                  (set-match-data (list match-beg (goto-char match-end) (current-buffer)))
                  (throw 'to-face 'jmt-curly-bracket))
 
                ;; Round bracket
                ;; ─────────────
-               (when (or (char-equal j ?\()
-                         (char-equal j ?\)))
+               (when (or (= j ?\()
+                         (= j ?\)))
                  (set-match-data (list match-beg (goto-char match-end) (current-buffer)))
                  (throw 'to-face 'jmt-round-bracket))
 
                ;; Square bracket
                ;; ──────────────
-               (when (or (char-equal j ?\[)
-                         (char-equal j ?\]))
+               (when (or (= j ?\[)
+                         (= j ?\]))
                  (set-match-data (list match-beg (goto-char match-end) (current-buffer)))
                  (throw 'to-face 'jmt-square-bracket)))
 
              ;; Separator
              ;; ─────────
              (setq j (char-after match-beg))
-             (when (or (char-equal j ?,)
-                       (char-equal j ?\;)
-                       (char-equal j ?:)
-                       (char-equal j ?.))
+             (when (or (= j ?,)
+                       (= j ?\;)
+                       (= j ?:)
+                       (= j ?.))
                (set-match-data (list match-beg (goto-char match-end) (current-buffer)))
                (throw 'to-face 'jmt-separator))
 
@@ -1507,7 +1507,7 @@ in case of an \\=`env\\=` interpreter."
         (catch 'to-reface
           (while (< match-beg limit)
             (setq match-end (next-single-property-change match-beg 'face (current-buffer) limit))
-            (when (and (char-equal ?< (char-after match-beg))
+            (when (and (= ?< (char-after match-beg))
                        (jmt-is-Java-mode-tag-faced (get-text-property match-beg 'face)))
               (goto-char match-beg)
               (save-restriction
@@ -1550,7 +1550,7 @@ in case of an \\=`env\\=` interpreter."
         (catch 'to-reface
           (while (< match-beg limit)
             (setq match-end (next-single-property-change match-beg 'face (current-buffer) limit))
-            (when (and (char-equal ?@ (char-after match-beg))
+            (when (and (= ?@ (char-after match-beg))
                        (jmt-is-Java-mode-tag-faced (get-text-property match-beg 'face)))
               (goto-char match-beg)
               (save-restriction
@@ -1672,15 +1672,15 @@ in case of an \\=`env\\=` interpreter."
                          ;; Now point lies (invariant) directly after a name (in form).
                          (forward-comment most-positive-fixnum); [CW→, PPN]
                          (when (eobp) (throw 'is-past-package t))
-                         (unless (char-equal ?. (char-after)); Namely the delimiting dot of a
-                           (throw 'is-past-package t))       ; preceding package name segment.
+                         (unless (= ?. (char-after))  ; Namely the delimiting dot of a
+                           (throw 'is-past-package t)); preceding package name segment.
                          (forward-char); Past the ‘.’.
                          (forward-comment most-positive-fixnum); [CW→] To the next token.
                          (setq i (point)); What follows the package name follows its last dot.
                          (when (= (skip-chars-forward jmt-name-character-set) 0)
                            (throw 'is-past-package t)))))
                    (when (and (/= i (point-max))
-                              (or (char-equal ?@ (char-after i))
+                              (or (= ?@ (char-after i))
                                   (eq (get-text-property i 'face) 'jmt-type-reference))); [↑T]
                      (goto-char match-end)
                      (throw 'to-fontify 'font-lock-function-name-face))
@@ -1690,7 +1690,7 @@ in case of an \\=`env\\=` interpreter."
                    (goto-char match-beg)
                    (forward-comment most-negative-fixnum); [←CW]
                    (when (bobp) (throw 'is-constructor-declaration nil))
-                   (when (char-equal (char-before) ?>)
+                   (when (= (char-before) ?>)
                      (if (jmt-preceding->-marks-generic-return-type)
                          (goto-char match-end)
                          (throw 'to-fontify 'font-lock-function-name-face)
@@ -1714,10 +1714,10 @@ in case of an \\=`env\\=` interpreter."
                    (forward-comment most-negative-fixnum); [←CW]
                    (when (bobp) (throw 'is-method-declaration nil))
                    (setq i (char-before))
-                   (when (char-equal i ?\]); Return type declared as an array.
+                   (when (= i ?\]); Return type declared as an array.
                      (goto-char match-end)
                      (throw 'to-fontify 'font-lock-function-name-face))
-                   (when (char-equal i ?>)
+                   (when (= i ?>)
                      (if (jmt-preceding->-marks-generic-return-type)
                          (goto-char match-end)
                          (throw 'to-fontify 'font-lock-function-name-face)
@@ -1737,7 +1737,7 @@ in case of an \\=`env\\=` interpreter."
                    (when (bobp) (throw 'is-method-call nil))
                    (when; When the possibility of the method identifier being proper to a declaration
                        ;; as opposed to a call is excluded because it directly follows either: [AM]
-                       (or (char-equal (char-before) ?.)
+                       (or (= (char-before) ?.)
                              ;;; (a) The character ‘.’, as in the sequence `assert stators.getClass()` at
                              ;;; `https://github.com/Michael-Allan/waymaker/blob/3eaa6fc9f8c4137bdb463616dd3e45f340e1d34e/waymaker/gen/KittedPolyStatorSR.java#L58`.
                            (eq (get-text-property (1- (point)) 'face) 'jmt-principal-keyword)); [↑K]
@@ -1877,7 +1877,7 @@ in case of an \\=`env\\=` interpreter."
                      (setq depth 1); Nested depth of name in brackets, presumed to be 1 as required.
                      (while; Ensure `p` has emerged from all brackets,
                          (progn; moving it leftward as necessary.
-                           (cond ((char-equal i ?<); Ascending from the present bracket pair.
+                           (cond ((= i ?<); Ascending from the present bracket pair.
                                   (setq depth (1- depth))
                                   (when (= 0 depth); Then presumeably `p` has emerged left of list.
                                     (goto-char p)
@@ -1887,8 +1887,8 @@ in case of an \\=`env\\=` interpreter."
                                       ;;; though outside of any class body and so misplaced.
                                     (setq p (1- (point)); Into direct predecessor of variable list.
                                           i (char-after p))
-                                    (when (or (char-equal i ?.); `.` delimiter of a method call.
-                                              (char-equal i ?<)); `p` had *not* emerged, and so the
+                                    (when (or (= i ?.); `.` delimiter of a method call.
+                                              (= i ?<)); Scan position `p` had *not* emerged, so the
                                                 ;;; type variable is *not* at top level, after all.
                                       (throw 'is-proven nil))
                                     (setq j (get-text-property p 'face))
@@ -1898,7 +1898,7 @@ in case of an \\=`env\\=` interpreter."
                                                (not (eq 'font-lock-type-face
                                                      (jmt-untamed-face j)))))))
                                                  ;;; (b) a generic method or constructor declaration.
-                                 ((char-equal i ?>); Descending into another bracket pair.
+                                 ((= i ?>); Descending into another bracket pair.
                                   (setq depth (1+ depth))))
                            (if (= p p-min)
                                nil; Quitting the `while` loop.
@@ -1930,7 +1930,7 @@ in case of an \\=`env\\=` interpreter."
               (goto-char match-end)
               (forward-comment most-positive-fixnum); [CW→]
               (when (eobp) (throw 'to-reface nil))
-              (when (char-equal ?: (char-after)); Indicating for context an enhanced `for` loop.
+              (when (= ?: (char-after)); Indicating for context an enhanced `for` loop.
                   ;;; Only here has a misfacing been seen.  (And only where the expression on the
                   ;;; right side is a function call, as with `foo` in `for( Foo foo: getFooList() )`.)
                 (set-match-data (list match-beg (goto-char match-end) (current-buffer)))
@@ -2058,8 +2058,9 @@ Faces for a shebang line atop a source-launch file."
 
 ;;;###autoload
 (unless (boundp 'jmt--autoload-guard); To execute only on `package-initialize`, not on file load. [GDA]
-  (add-to-list 'auto-mode-alist (cons "\\.java\\'" 'jmt-mode))
-  (add-to-list 'interpreter-mode-alist (cons "\\(?:--split-string=\\|-S\\)?java" 'jmt-mode)))
+   (set 'auto-mode-alist (cons (cons "\\.java\\'" 'jmt-mode) auto-mode-alist))
+   (set 'interpreter-mode-alist
+        (cons (cons "\\(?:--split-string=\\|-S\\)?java" 'jmt-mode) interpreter-mode-alist)))
     ;;; In these one might wish to append versus cons not to override any pattern previously added
     ;;; by the user.  But a package should not demur in installing itself (and indeed the autoloads
     ;;; of CC Mode would clobber us here if we did).  Rather let the package *manager* mend its own bugs,
@@ -2086,7 +2087,7 @@ For more information, see URL ‘http://reluk.ca/project/Java/Emacs/’."
 
   ;; Verify assumptions
   ;; ──────────────────
-    (cl-assert (char-equal ?> (char-syntax ?\n))); Newlines have endcomment syntax.
+    (cl-assert (= ?> (char-syntax ?\n))); Newlines have endcomment syntax.
       ;;; (Consequently they have no whitespace syntax.)
     (cl-assert parse-sexp-ignore-comments)
 
@@ -2378,8 +2379,8 @@ For more information, see URL ‘http://reluk.ca/project/Java/Emacs/’."
 ;;   NBE  Not ‘\'’ to match only the buffer end.  Rather ‘$’ to include the line end in the event
 ;;        the (narrowed) buffer happens to cross lines. [SL]
 ;;
-;;   NCE  Not `char-equal`; it fails if the position is out of bounds.  Rather `eq`, which instead
-;;        gives nil in that case.
+;;   NCE  Not `char-equal` or `=`, which fail if the position is out of bounds.
+;;        Rather `eq` which instead gives nil in that case.
 ;;
 ;;   NDF  Not a declaration face, therefore it need not be appended to `c-maybe-decl-faces`. [MDF]
 ;;        The face only appears in Javadoc comments.  Meanwhile `c-maybe-decl-faces` is only used,

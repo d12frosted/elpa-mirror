@@ -3,8 +3,8 @@
 ;; Author: Charl Botha
 ;; Maintainer: Andrew Christianson, Vincent Zhang
 ;; Version: 0.7.1
-;; Package-Version: 20201023.1750
-;; Package-Commit: 0df567190e2686f56d47fcbaa442b520fbe1189f
+;; Package-Version: 20210123.1748
+;; Package-Commit: 5470ada6cde6e68fe6ce13ff1146c89c3bae0cc8
 ;; Package-Requires: ((emacs "25.1") (lsp-mode "6.1"))
 ;; Homepage: https://github.com/emacs-lsp/lsp-python-ms
 ;; Keywords: languages tools
@@ -37,6 +37,7 @@
 (require 'json)
 (require 'lsp-mode)
 (require 'projectile nil 'noerror)
+(require 'project nil 'noerror)
 
 
 ;; Forward declare functions
@@ -360,6 +361,7 @@ After stopping or killing the process, retry to update."
          (conda-python (lsp-python-ms--dominating-conda-python dir))
          (sys-python (if (>= emacs-major-version 27)
                          (executable-find lsp-python-ms-python-executable-cmd lsp-python-ms-prefer-remote-env)
+                       ;; This complains in Windows' Emacs 26.1, see #141
                        (executable-find lsp-python-ms-python-executable-cmd))))
     ;; pythons by preference: local pyenv version, local conda version
 
@@ -413,7 +415,7 @@ or projectile, or just return `default-directory'."
    ((fboundp #'ffip-get-project-root-directory) (ffip-get-project-root-directory))
    ((fboundp #'projectile-project-root) (projectile-project-root))
    ((fboundp #'project-current) (when-let ((project (project-current)))
-                                  (car (project-roots project))))
+                                  (car (project-root project))))
    (t default-directory)))
 
 ;; I based most of this on the vs.code implementation:

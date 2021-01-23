@@ -1,15 +1,15 @@
 ;;; company-fuzzy.el --- Fuzzy matching for `company-mode'  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019  Shen, Jen-Chieh
+;; Copyright (C) 2019-2021  Shen, Jen-Chieh
 ;; Created date 2019-08-01 16:54:34
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Fuzzy matching for `company-mode'.
 ;; Keyword: auto auto-complete complete fuzzy matching
-;; Version: 1.0.1
-;; Package-Version: 20201119.315
-;; Package-Commit: ae004dc234b2cd2e4a0fd8a35aa8c966a15074c7
-;; Package-Requires: ((emacs "24.4") (company "0.8.12") (s "1.12.0"))
+;; Version: 1.2.1
+;; Package-Version: 20210123.1814
+;; Package-Commit: 4d6d56a8b92af72aa3b1e0af1a7e7add965bf468
+;; Package-Requires: ((emacs "24.4") (company "0.8.12") (s "1.12.0") (ht "2.0"))
 ;; URL: https://github.com/jcs-elpa/company-fuzzy
 
 ;; This file is NOT part of GNU Emacs.
@@ -39,6 +39,7 @@
 (require 'ffap)
 (require 's)
 (require 'subr-x)
+(require 'ht)
 
 (defgroup company-fuzzy nil
   "Fuzzy matching for `company-mode'."
@@ -109,17 +110,14 @@
 (defvar-local company-fuzzy--recorded-backends nil
   "Record down company local backends in current buffer.")
 
-(defvar-local company-fuzzy--no-valid-prefix-p nil
+(defvar-local company-fuzzy--is-trigger-prefix-p nil
   "Flag to see if currently completion having a valid prefix.")
 
-(defvar-local company-fuzzy--alist-backends-candidates nil
-  "Store list data of '(backend . candidates)'.")
+(defvar-local company-fuzzy--ht-backends-candidates (ht-create)
+  "Store candidates by backend as id.")
 
-(defvar-local company-fuzzy--plist-history '()
+(defvar-local company-fuzzy--ht-history (ht-create)
   "Store list data of history data '(backend . candidates)'.")
-
-(defvar-local company-fuzzy--alist-map-data nil
-  "Store data property list data from function `company-fuzzy--alist-map'.")
 
 ;;
 ;; (@* "External" )
@@ -238,7 +236,10 @@ See function `string-prefix-p' for arguments PREFIX, STRING and IGNORE-CASE."
 
 (defun company-fuzzy--get-backend-by-candidate (candidate)
   "Return the backend symbol by using CANDIDATE as search index."
-  (plist-get (company-fuzzy--alist-map) candidate))
+  (let ((match (ht-find (lambda (_backend cands)
+                          (company-fuzzy--is-contain-list-string cands candidate))
+                        company-fuzzy--ht-backends-candidates)))
+    (car match)))
 
 ;;
 ;; (@* "Documentation" )
@@ -290,7 +291,8 @@ See function `string-prefix-p' for arguments PREFIX, STRING and IGNORE-CASE."
   "Prerender color with STR and flag ANNOTATION-P."
   (unless annotation-p
     (let* ((str-len (length str))
-           (prefix (company-fuzzy--backend-prefix-candidate str 'match))
+           (prefix (or (company-fuzzy--backend-prefix-candidate str 'match)
+                       ""))
            (cur-selection (nth company-selection company-candidates))
            (splitted-section (remove "" (split-string str " ")))
            (process-selection (nth 0 splitted-section))
@@ -329,31 +331,27 @@ See function `string-prefix-p' for arguments PREFIX, STRING and IGNORE-CASE."
 
 (defun company-fuzzy--sort-candidates (candidates)
   "Sort all CANDIDATES base on type of sorting backend."
-  (setq candidates (company-fuzzy--alist-all-candidates)  ; Get all candidates here.
-        company-fuzzy--alist-map-data nil)
-  (unless company-fuzzy--no-valid-prefix-p
+  (setq candidates (company-fuzzy--ht-all-candidates))  ; Get all candidates here.
+  (unless company-fuzzy--is-trigger-prefix-p
     (cl-case company-fuzzy-sorting-backend
       (none candidates)
       (alphabetic (setq candidates (sort candidates #'string-lessp)))
       (flx
        (require 'flx)
-       (let ((scoring-table (make-hash-table)) (scoring-keys '())
+       (let ((scoring-table (ht-create)) (scoring-keys '())
              prefix scoring score)
          (dolist (cand candidates)
            (setq prefix (company-fuzzy--backend-prefix-candidate cand 'match)
                  scoring (flx-score cand prefix)
                  score (if scoring (nth 0 scoring) 0))
            (when scoring
-             ;; For first time access score with hash-table.
-             (unless (gethash score scoring-table) (setf (gethash score scoring-table) '()))
-             ;; Push the candidate with the target score to hash-table.
-             (push cand (gethash score scoring-table))))
+             (ht-set scoring-table score (push cand (ht-get scoring-table score)))))
          ;; Get all keys, and turn into a list.
-         (maphash (lambda (score-key _cand-lst) (push score-key scoring-keys)) scoring-table)
+         (maphash (lambda (score-key _cands) (push score-key scoring-keys)) scoring-table)
          (setq scoring-keys (sort scoring-keys #'>)  ; Sort keys in order.
                candidates '())  ; Clean up, and ready for final output.
          (dolist (key scoring-keys)
-           (let ((cands (gethash key scoring-table)))
+           (let ((cands (ht-get scoring-table key)))
              (setq cands (reverse cands))  ; Respect to backend order.
              (when (functionp company-fuzzy-sorting-score-function)
                (setq cands (funcall company-fuzzy-sorting-score-function cands)))
@@ -496,28 +494,18 @@ Insert .* between each char."
 ;; (@* "Core" )
 ;;
 
-(defun company-fuzzy--alist-all-candidates ()
-  "Return all candidates from a list."
-  (let ((all-candidates '()) cands)
-    (dolist (backend-data company-fuzzy--alist-backends-candidates)
-      (setq cands (cdr backend-data) all-candidates (append all-candidates cands)))
+(defun company-fuzzy--ht-all-candidates ()
+  "Return all candidates from the data."
+  (let ((all-candidates '()))
+    (maphash (lambda (_backend cands)
+               (setq all-candidates (append all-candidates cands)))
+             company-fuzzy--ht-backends-candidates)
     (delete-dups all-candidates)))
-
-(defun company-fuzzy--alist-map ()
-  "Map `company-fuzzy--alist-backends-candidates'; and return property list \
-of (candidate . backend) data with no duplication."
-  (unless company-fuzzy--alist-map-data
-    (let ((plst '()) backend cands)
-      (dolist (backend-data company-fuzzy--alist-backends-candidates)
-        (setq backend (car backend-data) cands (cdr backend-data))
-        (dolist (cand cands) (setq plst (plist-put plst cand backend))))
-      (setq company-fuzzy--alist-map-data plst)))
-  company-fuzzy--alist-map-data)
 
 (defun company-fuzzy-all-candidates ()
   "Return the list of all candidates."
-  (setq company-fuzzy--alist-backends-candidates '()  ; Clean up.
-        company-fuzzy--no-valid-prefix-p (company-fuzzy--trigger-prefix-p))
+  (setq company-fuzzy--ht-backends-candidates (ht-create)  ; Clean up.
+        company-fuzzy--is-trigger-prefix-p (company-fuzzy--trigger-prefix-p))
   (dolist (backend company-fuzzy--backends)
     (let ((prefix-get (company-fuzzy--backend-prefix backend 'get))
           (prefix-com (company-fuzzy--backend-prefix backend 'complete))
@@ -529,7 +517,7 @@ of (candidate . backend) data with no duplication."
       ;; The function `company-fuzzy--match-string' does the very first
       ;; basic filtering in order to lower the performance before sending
       ;; to function `flx-score'.
-      (when (and (not company-fuzzy--no-valid-prefix-p)
+      (when (and (not company-fuzzy--is-trigger-prefix-p)
                  (company-fuzzy--valid-candidates-p temp-candidates)
                  prefix-com)
         (setq temp-candidates (company-fuzzy--match-string prefix-com temp-candidates)))
@@ -538,28 +526,25 @@ of (candidate . backend) data with no duplication."
       ;; Here we check if BACKEND a history type of backend. And if it does; then
       ;; it will ensure considering the history candidates to the new candidates.
       (when (company-fuzzy--is-contain-list-symbol company-fuzzy-history-backends backend)
-        (let ((cands-history (plist-get company-fuzzy--plist-history backend)))
+        (let ((cands-history (ht-get company-fuzzy--ht-history backend)))
           (setq temp-candidates (append cands-history temp-candidates))
           (delete-dups temp-candidates)
-          (setq company-fuzzy--plist-history
-                (plist-put company-fuzzy--plist-history backend temp-candidates))))
+          (ht-set company-fuzzy--ht-history backend temp-candidates)))
       ;; NOTE: Made the final completion.
       ;;
       ;; This is the final ensure step before processing it to scoring phase.
-      ;; We confirm candidates by adding it to `company-fuzzy--alist-backends-candidates'.
+      ;; We confirm candidates by adding it to `company-fuzzy--ht-backends-candidates'.
       ;; The function `company-fuzzy--valid-candidates-p' is use to ensure the
       ;; candidates returns a list of strings, which this is the current only valid
       ;; type to this package.
       (when (company-fuzzy--valid-candidates-p temp-candidates)
         (delete-dups temp-candidates)
-        (push (cons backend (copy-sequence temp-candidates))
-              company-fuzzy--alist-backends-candidates)))
-    (setq company-fuzzy--alist-backends-candidates (reverse company-fuzzy--alist-backends-candidates))
+        (ht-set company-fuzzy--ht-backends-candidates backend (copy-sequence temp-candidates))))
     nil))
 
 (defun company-fuzzy--get-prefix ()
   "Set the prefix just right before completion."
-  (setq company-fuzzy--no-valid-prefix-p nil
+  (setq company-fuzzy--is-trigger-prefix-p nil
         company-fuzzy--prefix (or (ignore-errors (company-fuzzy--generic-prefix))
                                   (ffap-file-at-point))))
 

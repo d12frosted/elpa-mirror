@@ -26,7 +26,7 @@ interpreter-mode-alist))
 The `interpreter-mode-alist` entry is for source-launch files encoded with a shebang. [SLS]
 
 For a working example of manual installation, see the relevant lines
-of `http://reluk.ca/.emacs.d/lisp/initialization.el`, and follow the reference there.
+of `http://reluk.ca/.config/emacs/lisp/initialization.el`, and follow the reference there.
 
 Changes to Emacs
 
