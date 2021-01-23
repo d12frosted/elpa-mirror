@@ -5,7 +5,7 @@ Source:  https://github.com/alezost/guix.el.git
 Updating /mnt/store/melpa/working/guix/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/guix/
-  to /tmp/guix1vKQWc/guix-20201222.907
+  to /tmp/guixJ7lipc/guix-20201222.907
   ! elisp/guix-about.el -> guix-about.el
   ! elisp/guix-auto-mode.el -> guix-auto-mode.el
   ! elisp/guix-build-log.el -> guix-build-log.el
@@ -54,81 +54,3 @@ Copying files (->) and directories (=>)
     images/guixsd-logo.svg -> images/guixsd-logo.svg
     scheme/emacs-guix => scheme/emacs-guix
     scheme/emacs-guix.scm -> scheme/emacs-guix.scm
-Created /tmp/guix1vKQWc/guix-20201222.907/emacs-guix.info
-Created guix-20201222.907.tar containing:
-  guix-20201222.907/
-  guix-20201222.907/dir
-  guix-20201222.907/emacs-guix.info
-  guix-20201222.907/guix-about.el
-  guix-20201222.907/guix-auto-mode.el
-  guix-20201222.907/guix-build-log.el
-  guix-20201222.907/guix-command.el
-  guix-20201222.907/guix-config.el
-  guix-20201222.907/guix-default-config.el
-  guix-20201222.907/guix-derivation.el
-  guix-20201222.907/guix-devel.el
-  guix-20201222.907/guix-env-var.el
-  guix-20201222.907/guix-external.el
-  guix-20201222.907/guix-geiser.el
-  guix-20201222.907/guix-graph.el
-  guix-20201222.907/guix-guile.el
-  guix-20201222.907/guix-hash.el
-  guix-20201222.907/guix-help-vars.el
-  guix-20201222.907/guix-help.el
-  guix-20201222.907/guix-license.el
-  guix-20201222.907/guix-location.el
-  guix-20201222.907/guix-misc.el
-  guix-20201222.907/guix-package.el
-  guix-20201222.907/guix-pcomplete.el
-  guix-20201222.907/guix-pkg.el
-  guix-20201222.907/guix-popup.el
-  guix-20201222.907/guix-prettify.el
-  guix-20201222.907/guix-profiles.el
-  guix-20201222.907/guix-read.el
-  guix-20201222.907/guix-repl.el
-  guix-20201222.907/guix-scheme.el
-  guix-20201222.907/guix-service.el
-  guix-20201222.907/guix-ui-generation.el
-  guix-20201222.907/guix-ui-license.el
-  guix-20201222.907/guix-ui-lint-checker.el
-  guix-20201222.907/guix-ui-messages.el
-  guix-20201222.907/guix-ui-package-location.el
-  guix-20201222.907/guix-ui-package.el
-  guix-20201222.907/guix-ui-profile.el
-  guix-20201222.907/guix-ui-service-location.el
-  guix-20201222.907/guix-ui-service.el
-  guix-20201222.907/guix-ui-store-item.el
-  guix-20201222.907/guix-ui-system-generation.el
-  guix-20201222.907/guix-ui-system.el
-  guix-20201222.907/guix-ui.el
-  guix-20201222.907/guix-utils.el
-  guix-20201222.907/guix.el
-  guix-20201222.907/images/
-  guix-20201222.907/images/guix-logo.svg
-  guix-20201222.907/images/guixsd-logo.svg
-  guix-20201222.907/scheme/
-  guix-20201222.907/scheme/emacs-guix.scm
-  guix-20201222.907/scheme/emacs-guix/
-  guix-20201222.907/scheme/emacs-guix/actions.scm
-  guix-20201222.907/scheme/emacs-guix/commands.scm
-  guix-20201222.907/scheme/emacs-guix/emacs.scm
-  guix-20201222.907/scheme/emacs-guix/generations.scm
-  guix-20201222.907/scheme/emacs-guix/graph.scm
-  guix-20201222.907/scheme/emacs-guix/hash.scm
-  guix-20201222.907/scheme/emacs-guix/licenses.scm
-  guix-20201222.907/scheme/emacs-guix/lint.scm
-  guix-20201222.907/scheme/emacs-guix/pack.scm
-  guix-20201222.907/scheme/emacs-guix/packages.scm
-  guix-20201222.907/scheme/emacs-guix/profiles.scm
-  guix-20201222.907/scheme/emacs-guix/refresh.scm
-  guix-20201222.907/scheme/emacs-guix/services.scm
-  guix-20201222.907/scheme/emacs-guix/store-items.scm
-  guix-20201222.907/scheme/emacs-guix/system-generations.scm
-  guix-20201222.907/scheme/emacs-guix/system.scm
-  guix-20201222.907/scheme/emacs-guix/utils.scm
-Built guix in 12.956s, finished at Fri Jan 22 20:12:07 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  434 Jan 22 20:12 packages/guix-20201222.907.entry
-872K -rw-r--r-- 1 root root 870K Jan 22 20:12 packages/guix-20201222.907.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 22 20:12 packages/guix-badge.svg
-4.0K -rw-r--r-- 1 root root  469 Jan 22 20:12 packages/guix-readme.txt

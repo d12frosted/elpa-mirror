@@ -5,12 +5,13 @@ Source:  https://github.com/emacs-helm/helm-selector.git
 Updating /mnt/store/melpa/working/helm-selector/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm-selector/
-  to /tmp/helm-selectorbdB9My/helm-selector-20210120.1731
+  to /tmp/helm-selectorCHBfea/helm-selector-20210122.2102
     helm-selector-cider.el -> helm-selector-cider.el
     helm-selector-elfeed.el -> helm-selector-elfeed.el
     helm-selector-eww.el -> helm-selector-eww.el
     helm-selector-geiser.el -> helm-selector-geiser.el
     helm-selector-info.el -> helm-selector-info.el
+    helm-selector-magit.el -> helm-selector-magit.el
     helm-selector-mu4e.el -> helm-selector-mu4e.el
     helm-selector-notmuch.el -> helm-selector-notmuch.el
     helm-selector-org.el -> helm-selector-org.el
@@ -18,24 +19,25 @@ Copying files (->) and directories (=>)
     helm-selector-slime.el -> helm-selector-slime.el
     helm-selector-sly.el -> helm-selector-sly.el
     helm-selector.el -> helm-selector.el
-Created helm-selector-20210120.1731.tar containing:
-  helm-selector-20210120.1731/
-  helm-selector-20210120.1731/helm-selector-cider.el
-  helm-selector-20210120.1731/helm-selector-elfeed.el
-  helm-selector-20210120.1731/helm-selector-eww.el
-  helm-selector-20210120.1731/helm-selector-geiser.el
-  helm-selector-20210120.1731/helm-selector-info.el
-  helm-selector-20210120.1731/helm-selector-mu4e.el
-  helm-selector-20210120.1731/helm-selector-notmuch.el
-  helm-selector-20210120.1731/helm-selector-org.el
-  helm-selector-20210120.1731/helm-selector-pkg.el
-  helm-selector-20210120.1731/helm-selector-shell.el
-  helm-selector-20210120.1731/helm-selector-slime.el
-  helm-selector-20210120.1731/helm-selector-sly.el
-  helm-selector-20210120.1731/helm-selector.el
-Built helm-selector in 3.767s, finished at Fri Jan 22 20:14:44 2021
+Created helm-selector-20210122.2102.tar containing:
+  helm-selector-20210122.2102/
+  helm-selector-20210122.2102/helm-selector-cider.el
+  helm-selector-20210122.2102/helm-selector-elfeed.el
+  helm-selector-20210122.2102/helm-selector-eww.el
+  helm-selector-20210122.2102/helm-selector-geiser.el
+  helm-selector-20210122.2102/helm-selector-info.el
+  helm-selector-20210122.2102/helm-selector-magit.el
+  helm-selector-20210122.2102/helm-selector-mu4e.el
+  helm-selector-20210122.2102/helm-selector-notmuch.el
+  helm-selector-20210122.2102/helm-selector-org.el
+  helm-selector-20210122.2102/helm-selector-pkg.el
+  helm-selector-20210122.2102/helm-selector-shell.el
+  helm-selector-20210122.2102/helm-selector-slime.el
+  helm-selector-20210122.2102/helm-selector-sly.el
+  helm-selector-20210122.2102/helm-selector.el
+Built helm-selector in 3.867s, finished at Sat Jan 23 02:04:27 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  350 Jan 22 20:14 packages/helm-selector-20210120.1731.entry
- 52K -rw-r--r-- 1 root root  50K Jan 22 20:14 packages/helm-selector-20210120.1731.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 22 20:14 packages/helm-selector-badge.svg
-4.0K -rw-r--r-- 1 root root 1017 Jan 22 20:14 packages/helm-selector-readme.txt
+4.0K -rw-r--r-- 1 root root  350 Jan 23 02:04 packages/helm-selector-20210122.2102.entry
+ 52K -rw-r--r-- 1 root root  50K Jan 23 02:04 packages/helm-selector-20210122.2102.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 23 02:04 packages/helm-selector-badge.svg
+4.0K -rw-r--r-- 1 root root 1017 Jan 23 02:04 packages/helm-selector-readme.txt
