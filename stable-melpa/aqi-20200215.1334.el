@@ -6,7 +6,7 @@
 ;; Created: 2020-02-02
 ;; Version: 0.1
 ;; Package-Version: 20200215.1334
-;; Package-Commit: 5fe8b035b2b6bc165728444bb8e9792d14b7409d
+;; Package-Commit: c107a2e21cd1ac6008d8baaeeedb3fab26583d45
 ;; Package-Requires: ((emacs "25.1") (request "0.3") (let-alist "0.0"))
 ;; Keywords: air quality, AQI, pollution, weather, data
 ;; URL: https://github.com/zzkt/aqi

@@ -3,9 +3,19 @@ Fetcher: github
 Source:  https://github.com/zzkt/ethermacs.git
 
 Updating /mnt/store/melpa/working/etherpad/
-Built etherpad in 3.393s, finished at Sun Jan 24 03:55:22 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/etherpad/
+  to /tmp/etherpadncs1Oc/etherpad-20210124.1110
+    etherpad.el -> etherpad.el
+    ethersync.el -> ethersync.el
+Created etherpad-20210124.1110.tar containing:
+  etherpad-20210124.1110/
+  etherpad-20210124.1110/etherpad-pkg.el
+  etherpad-20210124.1110/etherpad.el
+  etherpad-20210124.1110/ethersync.el
+Built etherpad in 3.313s, finished at Sun Jan 24 15:22:17 2021
  ✓ Success:
- 12K -rw-r--r-- 1 root root  10K Jan 24 03:55 packages/etherpad-20201017.2006.el
-4.0K -rw-r--r-- 1 root root  425 Jan 24 03:55 packages/etherpad-20201017.2006.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 24 03:55 packages/etherpad-badge.svg
-4.0K -rw-r--r-- 1 root root  622 Jan 24 03:55 packages/etherpad-readme.txt
+4.0K -rw-r--r-- 1 root root  422 Jan 24 15:22 packages/etherpad-20210124.1110.entry
+ 40K -rw-r--r-- 1 root root  40K Jan 24 15:22 packages/etherpad-20210124.1110.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 24 15:22 packages/etherpad-badge.svg
+4.0K -rw-r--r-- 1 root root  622 Jan 24 15:22 packages/etherpad-readme.txt

@@ -3,21 +3,9 @@ Fetcher: github
 Source:  https://github.com/tpapp/julia-repl.git
 
 Updating /mnt/store/melpa/working/julia-repl/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/julia-repl/
-  to /tmp/julia-replHJj7OZ/julia-repl-20210114.1549
-    ci-cfg.el -> ci-cfg.el
-    ci-deps.el -> ci-deps.el
-    julia-repl.el -> julia-repl.el
-Created julia-repl-20210114.1549.tar containing:
-  julia-repl-20210114.1549/
-  julia-repl-20210114.1549/ci-cfg.el
-  julia-repl-20210114.1549/ci-deps.el
-  julia-repl-20210114.1549/julia-repl-pkg.el
-  julia-repl-20210114.1549/julia-repl.el
-Built julia-repl in 3.132s, finished at Sun Jan 24 04:12:10 2021
+Built julia-repl in 3.944s, finished at Sun Jan 24 15:39:00 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  402 Jan 24 04:12 packages/julia-repl-20210114.1549.entry
- 40K -rw-r--r-- 1 root root  40K Jan 24 04:12 packages/julia-repl-20210114.1549.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 24 04:12 packages/julia-repl-badge.svg
-4.0K -rw-r--r-- 1 root root  154 Jan 24 04:12 packages/julia-repl-readme.txt
+ 36K -rw-r--r-- 1 root root  33K Jan 24 15:39 packages/julia-repl-20210124.923.el
+4.0K -rw-r--r-- 1 root root  404 Jan 24 15:39 packages/julia-repl-20210124.923.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 24 15:39 packages/julia-repl-badge.svg
+4.0K -rw-r--r-- 1 root root  154 Jan 24 15:39 packages/julia-repl-readme.txt

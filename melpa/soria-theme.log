@@ -3,9 +3,21 @@ Fetcher: github
 Source:  https://github.com/mssola/soria.git
 
 Updating /mnt/store/melpa/working/soria-theme/
-Built soria-theme in 4.060s, finished at Sun Jan 24 04:35:08 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/soria-theme/
+  to /tmp/soria-themensqlyi/soria-theme-20210124.1421
+    soria-theme-tree.el -> soria-theme-tree.el
+    soria-theme.el -> soria-theme.el
+Created soria-theme-20210124.1421.tar containing:
+  soria-theme-20210124.1421/
+  soria-theme-20210124.1421/soria-theme-pkg.el
+  soria-theme-20210124.1421/soria-theme-tree.el
+  soria-theme-20210124.1421/soria-theme.el
+Built soria-theme in 4.262s, finished at Sun Jan 24 16:04:07 2021
  ✓ Success:
- 44K -rw-r--r-- 1 root root  41K Jan 24 04:35 packages/soria-theme-20210122.1027.el
-4.0K -rw-r--r-- 1 root root  414 Jan 24 04:35 packages/soria-theme-20210122.1027.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 24 04:35 packages/soria-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  189 Jan 24 04:35 packages/soria-theme-readme.txt
+4.0K -rw-r--r-- 1 root root  411 Jan 24 13:10 packages/soria-theme-20210124.1131.entry
+ 60K -rw-r--r-- 1 root root  60K Jan 24 13:10 packages/soria-theme-20210124.1131.tar
+4.0K -rw-r--r-- 1 root root  411 Jan 24 16:04 packages/soria-theme-20210124.1421.entry
+ 60K -rw-r--r-- 1 root root  60K Jan 24 16:04 packages/soria-theme-20210124.1421.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 24 16:04 packages/soria-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  189 Jan 24 16:04 packages/soria-theme-readme.txt

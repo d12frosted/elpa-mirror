@@ -10,7 +10,7 @@
 
 ;; Package-Requires: ((emacs "26.1") (magit "0") (libgit "0"))
 ;; Package-Version: 20210103.1554
-;; Package-Commit: 255bf1677a10f1be31b6a70be7905404ffe67b7f
+;; Package-Commit: 49a51d8d99ed0ad8760ce0256696b0b29e38a44d
 ;; Keywords: git tools vc
 ;; Homepage: https://github.com/magit/magit
 
