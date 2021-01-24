@@ -774,7 +774,7 @@
 		    ("Matthew L. Fidler" . "matthew.fidler@gmail.com"))
 		   (:keywords "convenience"))])
  (excorporate .
-	      [(0 9 1)
+	      [(0 9 2)
 	       ((emacs
 		 (24 1))
 		(fsm
@@ -1917,6 +1917,16 @@
 	   (:authors
 	    ("Mattias Engdegård" . "mattiase@acm.org"))
 	   (:keywords "lisp" "regexps"))])
+ (repology .
+	   [(1 0 0)
+	    ((emacs
+	      (26 1)))
+	    "Repology API access via Elisp" tar
+	    ((:maintainer "Nicolas Goaziou" . "mail@nicolasgoaziou.fr")
+	     (:authors
+	      ("Nicolas Goaziou" . "mail@nicolasgoaziou.fr"))
+	     (:keywords "web")
+	     (:url . "https://elpa.gnu.org/packages/repology.html"))])
  (rich-minority .
 		[(1 0 1)
 		 ((cl-lib
