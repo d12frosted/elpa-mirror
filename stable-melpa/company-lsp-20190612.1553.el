@@ -1,8 +1,6 @@
 ;;; company-lsp.el --- Company completion backend for lsp-mode.  -*- lexical-binding: t -*-
 
 ;; Version: 2.1.0
-;; Package-Version: 20190612.1553
-;; Package-Commit: f921ffa0cdc542c21dc3dd85f2c93df4288e83bd
 ;; Package-Requires: ((emacs "25.1") (lsp-mode "6.0") (company "0.9.0") (s "1.2.0") (dash "2.11.0"))
 ;; URL: https://github.com/tigersoldier/company-lsp
 
