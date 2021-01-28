@@ -3,7 +3,7 @@
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
 ;; Package-Version: 20210107.1425
-;; Package-Commit: 05bd6d0b4aa3d8b22291de5827da64b7be155590
+;; Package-Commit: 498cf73ddcf9f3c8b9400b16a5ee1272fb95e326
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "24.3") (language-id "0.10"))
 ;; Keywords: languages util

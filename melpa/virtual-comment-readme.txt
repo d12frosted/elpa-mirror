@@ -25,7 +25,7 @@ Vanilla
 - virtual-comment-delete: remove the current comment
 - virtual-comment-paste: paste the last removed comment to current line
 - virtual-comment-realign: realign the comments if they are misplaced
-
+- virtual-comment-persist: manually persist project comments
 - virtual-comment-show: show all comments of current project in a derived mode
 from outline-mode, press enter on a comment will call virtual-comment-go to go
 to the location of comment.

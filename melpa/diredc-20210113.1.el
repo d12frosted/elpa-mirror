@@ -7,7 +7,7 @@
 ;; License: GPL3+
 ;; Keywords: files
 ;; Package-Version: 20210113.1
-;; Package-Commit: 887434054c2cfc521ceb990266cc7bbc12c4a72a
+;; Package-Commit: b1f8ab76c7bb7777169587045df6baa2c8c30405
 ;; Package: diredc
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "26.1"))

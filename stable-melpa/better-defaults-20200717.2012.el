@@ -5,7 +5,7 @@
 ;; Author: Phil Hagelberg
 ;; URL: https://github.com/technomancy/better-defaults
 ;; Package-Version: 20200717.2012
-;; Package-Commit: 293237a22a4f24171dd9910d6517a0eccf526fdf
+;; Package-Commit: fd4346735d61be88e6eafabf1f62c4c16548f1b3
 ;; Version: 0.1.4
 ;; Package-Requires: ((emacs "25.1"))
 ;; Created: 2013-04-16

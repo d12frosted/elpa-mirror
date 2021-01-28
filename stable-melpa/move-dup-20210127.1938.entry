@@ -1,0 +1,11 @@
+(move-dup .
+	  [(20210127 1938)
+	   ((emacs
+	     (25 1)))
+	   "Eclipse-like moving and duplicating lines or rectangles" single
+	   ((:commit . "f69e88f0f688d0e44bc56d60e4051cf7a23b4d78")
+	    (:authors
+	     ("Jimmy Yuen Ho Wong" . "wyuenho@gmail.com"))
+	    (:maintainer "Jimmy Yuen Ho Wong" . "wyuenho@gmail.com")
+	    (:keywords "convenience" "text" "edit")
+	    (:url . "https://github.com/wyuenho/move-dup"))])

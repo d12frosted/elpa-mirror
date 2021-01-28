@@ -272,6 +272,7 @@ powerline-evil
 prism (see "Note for prism.el" in the manual)
 proced
 prodigy
+quick-peek
 racket-mode
 rainbow-blocks
 rainbow-identifiers

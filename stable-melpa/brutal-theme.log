@@ -3,9 +3,21 @@ Fetcher: github
 Source:  https://github.com/topikettunen/brutal-emacs.git
 
 Updating /mnt/store/melpa/working/brutal-theme/
-Built brutal-theme in 3.083s, finished at Sun Jan 24 18:06:10 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/brutal-theme/
+  to /tmp/brutal-themeGVSh3V/brutal-theme-20210127.1848
+    brutal-dark-theme.el -> brutal-dark-theme.el
+    brutal-light-theme.el -> brutal-light-theme.el
+    brutal-theme.el -> brutal-theme.el
+Created brutal-theme-20210127.1848.tar containing:
+  brutal-theme-20210127.1848/
+  brutal-theme-20210127.1848/brutal-dark-theme.el
+  brutal-theme-20210127.1848/brutal-light-theme.el
+  brutal-theme-20210127.1848/brutal-theme-pkg.el
+  brutal-theme-20210127.1848/brutal-theme.el
+Built brutal-theme in 3.223s, finished at Wed Jan 27 23:30:47 2021
  ✓ Success:
- 16K -rwxr-xr-x 1 root root  15K Jan 24 18:06 packages/brutal-theme-20200415.602.el
-4.0K -rw-r--r-- 1 root root  327 Jan 24 18:06 packages/brutal-theme-20200415.602.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 24 18:06 packages/brutal-theme-badge.svg
-4.0K -rw-r--r-- 1 root root   59 Jan 24 18:06 packages/brutal-theme-readme.txt
+4.0K -rw-r--r-- 1 root root  331 Jan 27 23:30 packages/brutal-theme-20210127.1848.entry
+ 32K -rw-r--r-- 1 root root  30K Jan 27 23:30 packages/brutal-theme-20210127.1848.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 27 23:30 packages/brutal-theme-badge.svg
+4.0K -rw-r--r-- 1 root root   73 Jan 27 23:30 packages/brutal-theme-readme.txt

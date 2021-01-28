@@ -5,7 +5,7 @@
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: languages, tex
 ;; Package-Version: 20210110.1914
-;; Package-Commit: 2140e65fc5d759cdf163128ef6ab15c246d6039b
+;; Package-Commit: 5fc536f24dc659f998bc673129d9e7c4b20d297c
 
 ;; Version: 1.3.2
 
