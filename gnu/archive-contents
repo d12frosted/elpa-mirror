@@ -2360,15 +2360,15 @@
 	      ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	     (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com"))])
  (valign .
-	 [(3 0 0)
+	 [(3 1 0)
 	  ((emacs
 	    (26 0)))
-	  "Visually align tables" single
-	  ((:keywords "convenience" "text" "table")
+	  "Visually align tables" tar
+	  ((:url . "https://github.com/casouri/valign")
+	   (:maintainer "Yuan Fu" . "casouri@gmail.com")
 	   (:authors
 	    ("Yuan Fu" . "casouri@gmail.com"))
-	   (:maintainer "Yuan Fu" . "casouri@gmail.com")
-	   (:url . "https://github.com/casouri/valign"))])
+	   (:keywords "convenience" "text" "table"))])
  (vcard .
 	[(0 2 1)
 	 ((emacs

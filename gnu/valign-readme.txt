@@ -11,23 +11,20 @@ To use this package, load it and add ~valign-mode~ to ~org-mode-hook~ or ~markdo
 
 [[./table.el.png]]
 
-*Know problems:*
+*Known problems:*
 - Hidden links in markdown still occupy the full length of the link, because it uses character composition which we don’t support now.
 - Rendering large tables (≥100 lines) is laggy.
+- ~org-indent-mode~ plus ~display-line-numbers-mode~ causes alignment problems.
 
 *Note:*
 
 For table.el tables to work with valign, each cell has to have at least one space on the right and no space on the left.  You can use [[https://github.com/casouri/ftable][ftable.el]] to auto-layout the table for you.
 
-* Install with quelpa
+* Install
 
-Firmin Martin kindly provided this snippet:
-#+begin_src emacs-lisp
-(use-package valign
-  :quelpa (valign :fetcher github :repo "casouri/valign")
-  :ensure t
-  :config
-  (add-hook 'org-mode-hook #'valign-mode))
+You can obtain valign.el from GNU ELPA by typing:
+#+begin_src 
+M-x package-install RET valign RET
 #+end_src
 
 * Customization
@@ -36,6 +33,10 @@ Set ~valign-fancy-bar~ to ~non-nil~:
 [[./fancy-bar.png]]
 
 This only affects Org Mode and Markdown tables.
+
+By default, valign doesn’t re-align the table after normal edit commands like ~self-insert-command~ and ~backward-kill-word~. If you want valign to not re-align the table after a certain command, add that command to ~valign-not-align-after-list~.
+
+Because valign isn’t particularly efficient, it doesn’t align tables larger than 4000 characters in size. If you want to change that behavior, customize ~valign-max-table-size~. Valign puts ~valign-table-fallback~ face on those large tables.
 
 * If function advice makes you itch
 ~valign-mode~ adds advice and doesn’t remove them even if you close ~valign-mode~ because function advice is global and ~valign-mode~ is local. If you want to remove the advice, use ~valign-remove-advice~. If you run this while some buffer still has ~valign-mode~ on, they break.
