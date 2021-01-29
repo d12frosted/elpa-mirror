@@ -3,11 +3,11 @@ Excorporate provides Exchange integration for Emacs.
 Most Recent Improvements
 ------------------------
 
-New in Excorporate 0.9.2, released 2021-01-23:
+New in Excorporate 0.9.3, released 2021-01-28:
 
-** Do not hardcode directory for diary files
+** Enable diary integration by default
 
-Use locate-user-emacs-file instead.
+** Introduce defcustom, excorporate-update-diary, to control this behaviour
 
 Quick Start
 -----------
