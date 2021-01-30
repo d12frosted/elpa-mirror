@@ -1,9 +1,0 @@
-(find-file-in-repository .
-			 [(20190404 828)
-			  nil "Quickly find files in a git, mercurial or other repository" single
-			  ((:commit . "b44d78682082270dc6b59cdc911333d0d3e7edaa")
-			   (:authors
-			    ("Samuel Hoffstaetter" . "samuel@hoffstaetter.com"))
-			   (:maintainer "Samuel Hoffstaetter" . "samuel@hoffstaetter.com")
-			   (:keywords "files" "convenience" "repository" "project" "source control")
-			   (:url . "https://github.com/hoffstaetter/find-file-in-repository"))])

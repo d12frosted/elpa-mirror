@@ -6,7 +6,7 @@
 ;; Author: felko <http://github/felko>
 ;; Homepage: https://github.com/felko/neuron-mode
 ;; Keywords: outlines
-;; Package-Commit: 81ed1f3288eab9aed2cb0b1eb11af69f988b7d0b
+;; Package-Commit: ae89eaaec0da938e748adda3a8412b79cd333d67
 ;; Package-Version: 20201229.1005
 ;; Package-X-Original-Version: 0.1
 ;; Package-Requires: ((emacs "26.3") (f "0.20.0") (s "1.12.0") (markdown-mode "2.3") (company "0.9.13"))

@@ -21,7 +21,7 @@
 
 ;; Version: 1.0
 ;; Package-Version: 20191209.2113
-;; Package-Commit: 3425ad5b16cb48d6802b7e9ed044b4cd7a99c785
+;; Package-Commit: 2d4bdacf498ed3ff7d2c3574d346b2d24cbb12da
 ;; Author: Adrien Brochard
 ;; Keywords: circleci continuous integration magit vc tools
 ;; URL: https://github.com/abrochard/magit-circleci

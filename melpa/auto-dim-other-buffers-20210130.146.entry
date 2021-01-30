@@ -1,0 +1,8 @@
+(auto-dim-other-buffers .
+			[(20210130 146)
+			 nil "Makes windows without focus less prominent" single
+			 ((:commit . "f0d48d94c3e851af9d797f911b7c06b12c4b7823")
+			  (:authors
+			   ("Michal Nazarewicz" . "mina86@mina86.com"))
+			  (:maintainer "Michal Nazarewicz" . "mina86@mina86.com")
+			  (:url . "https://github.com/mina86/auto-dim-other-buffers.el"))])

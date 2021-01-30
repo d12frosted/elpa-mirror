@@ -6,7 +6,7 @@
 ;; Maintainer: Christopher Reichert <creichert07@gmail.com>
 ;; Version: 1.0.0
 ;; Package-Version: 20201012.1514
-;; Package-Commit: 5a6e17048528c328c129db6dccfe605f301ddef2
+;; Package-Commit: 3a61d5183eebcdfcdeb783fe4664363270c81d8d
 ;; Keywords: convenience
 ;; URL: https://github.com/creichert/ido-vertical-mode.el
 

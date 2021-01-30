@@ -5,7 +5,7 @@
 ;; Author: Daniel Martín
 ;; Version: 0.1
 ;; Package-Version: 20181216.1450
-;; Package-Commit: 948c3a35fd05496a77af2d8935e754db112cb4c3
+;; Package-Commit: ff204ed820df8c3035ebdc4b5a583640d52caeeb
 ;; Homepage: https://github.com/emacs-lsp/lsp-sourcekit
 ;; Package-Requires: ((emacs "25.1") (lsp-mode "5"))
 ;; Keywords: languages, lsp, swift, objective-c, c++
