@@ -5,7 +5,7 @@
 ;; Author: Jürgen Hötzel <juergen@archlinux.org>
 ;; Package-Requires: ((emacs "26.3") (eglot "1.4") (fsharp-mode "1.10") (jsonrpc "1.0.14"))
 ;; Package-Version: 20210126.454
-;; Package-Commit: 17630dc6f524a8ed753b118996ad2c2f5f930e6d
+;; Package-Commit: 78898a1535878394d83643c383f4320e7b5fcefd
 ;; Version: 1.10
 ;; Keywords: languages
 ;; URL: https://github.com/fsharp/emacs-fsharp-mode

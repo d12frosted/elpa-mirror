@@ -3,9 +3,37 @@ Fetcher: github
 Source:  https://github.com/emacs-love/weblorg.git
 
 Updating /mnt/store/melpa/working/weblorg/
-Built weblorg in 4.450s, finished at Sat Jan 30 18:19:27 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/weblorg/
+  to /tmp/weblorg9pXyJa/weblorg-20210130.2347
+    weblorg.el -> weblorg.el
+    themes => themes
+Created weblorg-20210130.2347.tar containing:
+  weblorg-20210130.2347/
+  weblorg-20210130.2347/themes/
+  weblorg-20210130.2347/themes/autodoc/
+  weblorg-20210130.2347/themes/autodoc/static/
+  weblorg-20210130.2347/themes/autodoc/static/emacs-bw.svg
+  weblorg-20210130.2347/themes/autodoc/static/style.css
+  weblorg-20210130.2347/themes/autodoc/templates/
+  weblorg-20210130.2347/themes/autodoc/templates/autodoc.html
+  weblorg-20210130.2347/themes/autodoc/templates/doc.html
+  weblorg-20210130.2347/themes/autodoc/templates/index.html
+  weblorg-20210130.2347/themes/autodoc/templates/layout.html
+  weblorg-20210130.2347/themes/default/
+  weblorg-20210130.2347/themes/default/static/
+  weblorg-20210130.2347/themes/default/static/style.css
+  weblorg-20210130.2347/themes/default/templates/
+  weblorg-20210130.2347/themes/default/templates/base_layout.html
+  weblorg-20210130.2347/themes/default/templates/blog.html
+  weblorg-20210130.2347/themes/default/templates/index.html
+  weblorg-20210130.2347/themes/default/templates/page.html
+  weblorg-20210130.2347/themes/default/templates/post.html
+  weblorg-20210130.2347/weblorg-pkg.el
+  weblorg-20210130.2347/weblorg.el
+Built weblorg in 3.988s, finished at Sun Jan 31 19:53:45 2021
  ✓ Success:
- 40K -rw-r--r-- 1 root root  40K Jan 30 18:19 packages/weblorg-20210130.231.el
-4.0K -rw-r--r-- 1 root root  356 Jan 30 18:19 packages/weblorg-20210130.231.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 30 18:19 packages/weblorg-badge.svg
-4.0K -rw-r--r-- 1 root root 1.6K Jan 30 18:19 packages/weblorg-readme.txt
+4.0K -rw-r--r-- 1 root root  354 Jan 31 19:53 packages/weblorg-20210130.2347.entry
+ 92K -rw-r--r-- 1 root root  90K Jan 31 19:53 packages/weblorg-20210130.2347.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 31 19:53 packages/weblorg-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jan 31 19:53 packages/weblorg-readme.txt

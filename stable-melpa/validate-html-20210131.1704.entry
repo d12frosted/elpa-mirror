@@ -1,0 +1,11 @@
+(validate-html .
+	       [(20210131 1704)
+		((emacs
+		  (25 1)))
+		"Compilation mode for W3C HTML Validator" single
+		((:commit . "39890f7d00579954a660fc3b1c0195231325efd6")
+		 (:authors
+		  ("Arthur A. Gleckler" . "melpa4aag@speechcode.com"))
+		 (:maintainer "Arthur A. Gleckler" . "melpa4aag@speechcode.com")
+		 (:keywords "languages" "tools")
+		 (:url . "https://github.com/arthurgleckler/validate-html"))])

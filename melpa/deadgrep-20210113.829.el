@@ -5,7 +5,7 @@
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; URL: https://github.com/Wilfred/deadgrep
 ;; Package-Version: 20210113.829
-;; Package-Commit: a7bfae891a1ae82a11c852fbafa8b202c32beec0
+;; Package-Commit: 3ea915f0c4f3b37a482cbf6faa070845d7ab1876
 ;; Keywords: tools
 ;; Version: 0.10
 ;; Package-Requires: ((emacs "25.1") (dash "2.12.0") (s "1.11.0") (spinner "1.7.3"))

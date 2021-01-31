@@ -1,0 +1,14 @@
+(elfeed-web .
+	    [(20210131 143)
+	     ((simple-httpd
+	       (1 5 1))
+	      (elfeed
+	       (3 2 0))
+	      (emacs
+	       (24 3)))
+	     "web interface to Elfeed" tar
+	     ((:commit . "362bbe5b38353d033c5299f621fea39e2c75a5e0")
+	      (:authors
+	       ("Christopher Wellons" . "wellons@nullprogram.com"))
+	      (:maintainer "Christopher Wellons" . "wellons@nullprogram.com")
+	      (:url . "https://github.com/skeeto/elfeed"))])
