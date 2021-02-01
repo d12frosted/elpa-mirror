@@ -22,5 +22,36 @@ cheat. This is by design, because the minor mode targets the
 psychological *temptation* to revise your writing, rather than just the
 ability.
 
+Installation
+------------
+
+The latest stable release is available via [MELPA-stable][1]. First, add
+MELPA-stable to your package archives:
+
+M-x customize-option RET package-archives RET
+
+Insert an entry named melpa-stable with URL:
+https://stable.melpa.org/packages/
+
+You can then find the latest stable version of freeze-it in the list
+returned by:
+
+M-x list-packages RET
+
+If you prefer the latest but perhaps unstable version, do the above
+using [MELPA][2].
+
+
+Bugs and Feature Requests
+-------------------------
+
+Send me an email (address in the package header). For bugs, please
+ensure you can reproduce with:
+
+$ emacs -Q -l freeze-it.el
+
+Known issues are tracked with FIXME comments in the source.
+
+
 [1]: https://stable.melpa.org/#/freeze-it
 [2]: https://melpa.org/#/freeze-it

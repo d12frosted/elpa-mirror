@@ -5,7 +5,7 @@ Source:  https://bitbucket.org/pdo/axiom-environment
 Updating /mnt/store/melpa/working/axiom-environment/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/axiom-environment/
-  to /tmp/axiom-environmentfD6uBb/axiom-environment-20210124.2047
+  to /tmp/axiom-environment89U7ze/axiom-environment-20210131.2053
     axiom-base.el -> axiom-base.el
     axiom-boot-mode.el -> axiom-boot-mode.el
     axiom-buffer-menu.el -> axiom-buffer-menu.el
@@ -31,39 +31,39 @@ Copying files (->) and directories (=>)
     themes/fricas-on-ccl-theme.el -> themes/fricas-on-ccl-theme.el
     themes/fricas-on-sbcl-theme.el -> themes/fricas-on-sbcl-theme.el
     themes/openaxiom-on-sbcl-theme.el -> themes/openaxiom-on-sbcl-theme.el
-Created axiom-environment-20210124.2047.tar containing:
-  axiom-environment-20210124.2047/
-  axiom-environment-20210124.2047/axiom-base.el
-  axiom-environment-20210124.2047/axiom-boot-mode.el
-  axiom-environment-20210124.2047/axiom-buffer-menu.el
-  axiom-environment-20210124.2047/axiom-environment-pkg.el
-  axiom-environment-20210124.2047/axiom-environment.el
-  axiom-environment-20210124.2047/axiom-help-mode.el
-  axiom-environment-20210124.2047/axiom-input-mode.el
-  axiom-environment-20210124.2047/axiom-process-mode.el
-  axiom-environment-20210124.2047/axiom-selector.el
-  axiom-environment-20210124.2047/axiom-spad-mode.el
-  axiom-environment-20210124.2047/data/
-  axiom-environment-20210124.2047/data/axiom-standard-category-info.el
-  axiom-environment-20210124.2047/data/axiom-standard-domain-info.el
-  axiom-environment-20210124.2047/data/axiom-standard-operation-info.el
-  axiom-environment-20210124.2047/data/axiom-standard-package-info.el
-  axiom-environment-20210124.2047/data/fricas-standard-category-info.el
-  axiom-environment-20210124.2047/data/fricas-standard-domain-info.el
-  axiom-environment-20210124.2047/data/fricas-standard-operation-info.el
-  axiom-environment-20210124.2047/data/fricas-standard-package-info.el
-  axiom-environment-20210124.2047/data/openaxiom-standard-category-info.el
-  axiom-environment-20210124.2047/data/openaxiom-standard-domain-info.el
-  axiom-environment-20210124.2047/data/openaxiom-standard-operation-info.el
-  axiom-environment-20210124.2047/data/openaxiom-standard-package-info.el
-  axiom-environment-20210124.2047/themes/
-  axiom-environment-20210124.2047/themes/axiom-on-gcl-theme.el
-  axiom-environment-20210124.2047/themes/fricas-on-ccl-theme.el
-  axiom-environment-20210124.2047/themes/fricas-on-sbcl-theme.el
-  axiom-environment-20210124.2047/themes/openaxiom-on-sbcl-theme.el
-Built axiom-environment in 3.975s, finished at Sun Jan 31 18:54:02 2021
+Created axiom-environment-20210131.2053.tar containing:
+  axiom-environment-20210131.2053/
+  axiom-environment-20210131.2053/axiom-base.el
+  axiom-environment-20210131.2053/axiom-boot-mode.el
+  axiom-environment-20210131.2053/axiom-buffer-menu.el
+  axiom-environment-20210131.2053/axiom-environment-pkg.el
+  axiom-environment-20210131.2053/axiom-environment.el
+  axiom-environment-20210131.2053/axiom-help-mode.el
+  axiom-environment-20210131.2053/axiom-input-mode.el
+  axiom-environment-20210131.2053/axiom-process-mode.el
+  axiom-environment-20210131.2053/axiom-selector.el
+  axiom-environment-20210131.2053/axiom-spad-mode.el
+  axiom-environment-20210131.2053/data/
+  axiom-environment-20210131.2053/data/axiom-standard-category-info.el
+  axiom-environment-20210131.2053/data/axiom-standard-domain-info.el
+  axiom-environment-20210131.2053/data/axiom-standard-operation-info.el
+  axiom-environment-20210131.2053/data/axiom-standard-package-info.el
+  axiom-environment-20210131.2053/data/fricas-standard-category-info.el
+  axiom-environment-20210131.2053/data/fricas-standard-domain-info.el
+  axiom-environment-20210131.2053/data/fricas-standard-operation-info.el
+  axiom-environment-20210131.2053/data/fricas-standard-package-info.el
+  axiom-environment-20210131.2053/data/openaxiom-standard-category-info.el
+  axiom-environment-20210131.2053/data/openaxiom-standard-domain-info.el
+  axiom-environment-20210131.2053/data/openaxiom-standard-operation-info.el
+  axiom-environment-20210131.2053/data/openaxiom-standard-package-info.el
+  axiom-environment-20210131.2053/themes/
+  axiom-environment-20210131.2053/themes/axiom-on-gcl-theme.el
+  axiom-environment-20210131.2053/themes/fricas-on-ccl-theme.el
+  axiom-environment-20210131.2053/themes/fricas-on-sbcl-theme.el
+  axiom-environment-20210131.2053/themes/openaxiom-on-sbcl-theme.el
+Built axiom-environment in 3.716s, finished at Mon Feb  1 20:16:35 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  372 Jan 31 18:54 packages/axiom-environment-20210124.2047.entry
-300K -rw-r--r-- 1 root root 300K Jan 31 18:54 packages/axiom-environment-20210124.2047.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 31 18:54 packages/axiom-environment-badge.svg
-4.0K -rw-r--r-- 1 root root 1.5K Jan 31 18:54 packages/axiom-environment-readme.txt
+4.0K -rw-r--r-- 1 root root  372 Feb  1 20:16 packages/axiom-environment-20210131.2053.entry
+300K -rw-r--r-- 1 root root 300K Feb  1 20:16 packages/axiom-environment-20210131.2053.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  1 20:16 packages/axiom-environment-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Feb  1 20:16 packages/axiom-environment-readme.txt

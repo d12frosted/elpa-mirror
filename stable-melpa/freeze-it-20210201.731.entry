@@ -1,0 +1,11 @@
+(freeze-it .
+	   [(20210201 731)
+	    ((emacs
+	      (24 4)))
+	    "Minor mode to make your previous writing read-only" single
+	    ((:commit . "752fe042ba3153473cd149875388c8dd9b4a8a26")
+	     (:authors
+	      ("Paul W. Rankin" . "pwr@bydasein.com"))
+	     (:maintainer "Paul W. Rankin" . "pwr@bydasein.com")
+	     (:keywords "wp" "text")
+	     (:url . "https://github.com/rnkn/freeze-it"))])
