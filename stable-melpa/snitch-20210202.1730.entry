@@ -1,0 +1,11 @@
+(snitch .
+	[(20210202 1730)
+	 ((emacs
+	   (27 1)))
+	 "An Emacs firewall" tar
+	 ((:commit . "3b3e7f1bf612c4624764d1ec4b1a96e4d2850b05")
+	  (:authors
+	   ("Trevor Bentley" . "snitch.el@x.mrmekon.com"))
+	  (:maintainer "Trevor Bentley" . "snitch.el@x.mrmekon.com")
+	  (:keywords "processes" "comm")
+	  (:url . "https://github.com/mrmekon/snitch-el"))])

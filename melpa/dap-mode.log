@@ -1,0 +1,99 @@
+Package: dap-mode
+Fetcher: github
+Source:  https://github.com/emacs-lsp/dap-mode.git
+
+Updating /mnt/store/melpa/working/dap-mode/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dap-mode/
+  to /tmp/dap-mode3HObir/dap-mode-20210127.338
+    dap-chrome.el -> dap-chrome.el
+    dap-cpptools.el -> dap-cpptools.el
+    dap-edge.el -> dap-edge.el
+    dap-elixir.el -> dap-elixir.el
+    dap-firefox.el -> dap-firefox.el
+    dap-gdb-lldb.el -> dap-gdb-lldb.el
+    dap-go.el -> dap-go.el
+    dap-hydra.el -> dap-hydra.el
+    dap-launch.el -> dap-launch.el
+    dap-lldb.el -> dap-lldb.el
+    dap-mode.el -> dap-mode.el
+    dap-mouse.el -> dap-mouse.el
+    dap-netcore.el -> dap-netcore.el
+    dap-node.el -> dap-node.el
+    dap-overlays.el -> dap-overlays.el
+    dap-php.el -> dap-php.el
+    dap-pwsh.el -> dap-pwsh.el
+    dap-python.el -> dap-python.el
+    dap-ruby.el -> dap-ruby.el
+    dap-ui.el -> dap-ui.el
+    dap-utils.el -> dap-utils.el
+    dap-variables.el -> dap-variables.el
+    dapui.el -> dapui.el
+    icons => icons
+Created dap-mode-20210127.338.tar containing:
+  dap-mode-20210127.338/
+  dap-mode-20210127.338/dap-chrome.el
+  dap-mode-20210127.338/dap-cpptools.el
+  dap-mode-20210127.338/dap-edge.el
+  dap-mode-20210127.338/dap-elixir.el
+  dap-mode-20210127.338/dap-firefox.el
+  dap-mode-20210127.338/dap-gdb-lldb.el
+  dap-mode-20210127.338/dap-go.el
+  dap-mode-20210127.338/dap-hydra.el
+  dap-mode-20210127.338/dap-launch.el
+  dap-mode-20210127.338/dap-lldb.el
+  dap-mode-20210127.338/dap-mode-pkg.el
+  dap-mode-20210127.338/dap-mode.el
+  dap-mode-20210127.338/dap-mouse.el
+  dap-mode-20210127.338/dap-netcore.el
+  dap-mode-20210127.338/dap-node.el
+  dap-mode-20210127.338/dap-overlays.el
+  dap-mode-20210127.338/dap-php.el
+  dap-mode-20210127.338/dap-pwsh.el
+  dap-mode-20210127.338/dap-python.el
+  dap-mode-20210127.338/dap-ruby.el
+  dap-mode-20210127.338/dap-ui.el
+  dap-mode-20210127.338/dap-utils.el
+  dap-mode-20210127.338/dap-variables.el
+  dap-mode-20210127.338/dapui.el
+  dap-mode-20210127.338/icons/
+  dap-mode-20210127.338/icons/eclipse/
+  dap-mode-20210127.338/icons/eclipse/collapsed.png
+  dap-mode-20210127.338/icons/eclipse/expanded.png
+  dap-mode-20210127.338/icons/eclipse/inspect.png
+  dap-mode-20210127.338/icons/eclipse/project-running.png
+  dap-mode-20210127.338/icons/eclipse/project-stopped.png
+  dap-mode-20210127.338/icons/eclipse/scope.png
+  dap-mode-20210127.338/icons/eclipse/stack-frame-running.png
+  dap-mode-20210127.338/icons/eclipse/stack-frame-stopped.png
+  dap-mode-20210127.338/icons/eclipse/thread-running.png
+  dap-mode-20210127.338/icons/eclipse/thread-stopped.png
+  dap-mode-20210127.338/icons/eclipse/variable.png
+  dap-mode-20210127.338/icons/vscode/
+  dap-mode-20210127.338/icons/vscode/close-all.png
+  dap-mode-20210127.338/icons/vscode/continue-disabled.png
+  dap-mode-20210127.338/icons/vscode/continue.png
+  dap-mode-20210127.338/icons/vscode/disconnect-disabled.png
+  dap-mode-20210127.338/icons/vscode/disconnect.png
+  dap-mode-20210127.338/icons/vscode/pause-disabled.png
+  dap-mode-20210127.338/icons/vscode/pause.png
+  dap-mode-20210127.338/icons/vscode/restart-disabled.png
+  dap-mode-20210127.338/icons/vscode/restart.png
+  dap-mode-20210127.338/icons/vscode/reverse-continue.png
+  dap-mode-20210127.338/icons/vscode/start.png
+  dap-mode-20210127.338/icons/vscode/step-back.png
+  dap-mode-20210127.338/icons/vscode/step-into-disabled.png
+  dap-mode-20210127.338/icons/vscode/step-into.png
+  dap-mode-20210127.338/icons/vscode/step-out-disabled.png
+  dap-mode-20210127.338/icons/vscode/step-out.png
+  dap-mode-20210127.338/icons/vscode/step-over-disabled.png
+  dap-mode-20210127.338/icons/vscode/step-over.png
+  dap-mode-20210127.338/icons/vscode/stop-disabled.png
+  dap-mode-20210127.338/icons/vscode/stop.png
+  dap-mode-20210127.338/icons/vscode/toggle-breakpoints.png
+Built dap-mode in 4.525s, finished at Thu Feb  4 02:49:11 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  598 Feb  4 02:49 packages/dap-mode-20210127.338.entry
+320K -rw-r--r-- 1 root root 320K Feb  4 02:49 packages/dap-mode-20210127.338.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 02:49 packages/dap-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   41 Feb  4 02:49 packages/dap-mode-readme.txt

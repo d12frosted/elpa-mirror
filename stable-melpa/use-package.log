@@ -5,7 +5,7 @@ Source:  https://github.com/jwiegley/use-package.git
 Updating /mnt/store/melpa/working/use-package/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/use-package/
-  to /tmp/use-packagegJfvJz/use-package-20210201.1739
+  to /tmp/use-packageUwZOn7/use-package-20210201.1739
     use-package-bind-key.el -> use-package-bind-key.el
     use-package-core.el -> use-package-core.el
     use-package-delight.el -> use-package-delight.el
@@ -15,7 +15,7 @@ Copying files (->) and directories (=>)
     use-package-lint.el -> use-package-lint.el
     use-package.el -> use-package.el
     use-package.texi -> use-package.texi
-Created /tmp/use-packagegJfvJz/use-package-20210201.1739/use-package.info
+Created /tmp/use-packageUwZOn7/use-package-20210201.1739/use-package.info
 Created use-package-20210201.1739.tar containing:
   use-package-20210201.1739/
   use-package-20210201.1739/dir
@@ -29,31 +29,29 @@ Created use-package-20210201.1739.tar containing:
   use-package-20210201.1739/use-package-pkg.el
   use-package-20210201.1739/use-package.el
   use-package-20210201.1739/use-package.info
-Built use-package in 19.120s, finished at Mon Feb  1 18:23:30 2021
+Built use-package in 7.947s, finished at Thu Feb  4 03:37:13 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  474 Feb  1 15:30 packages/use-package-20210106.2145.entry
-140K -rw-r--r-- 1 root root 140K Feb  1 15:30 packages/use-package-20210106.2145.tar
-4.0K -rw-r--r-- 1 root root  474 Feb  1 18:23 packages/use-package-20210201.1739.entry
-140K -rw-r--r-- 1 root root 140K Feb  1 18:23 packages/use-package-20210201.1739.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb  1 18:23 packages/use-package-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Feb  1 18:23 packages/use-package-chords-20181024.2322.el
-4.0K -rw-r--r-- 1 root root  559 Feb  1 18:23 packages/use-package-chords-20181024.2322.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  1 18:23 packages/use-package-chords-badge.svg
-4.0K -rw-r--r-- 1 root root  139 Feb  1 18:23 packages/use-package-chords-readme.txt
-4.0K -rw-r--r-- 1 root root  593 Feb  1 18:23 packages/use-package-chords.log
-4.0K -rw-r--r-- 1 root root 2.5K Feb  1 18:23 packages/use-package-el-get-20180131.505.el
-4.0K -rw-r--r-- 1 root root  463 Feb  1 18:23 packages/use-package-el-get-20180131.505.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  1 18:23 packages/use-package-el-get-badge.svg
-4.0K -rw-r--r-- 1 root root  148 Feb  1 18:23 packages/use-package-el-get-readme.txt
-4.0K -rw-r--r-- 1 root root  596 Feb  1 18:23 packages/use-package-el-get.log
-4.0K -rw-r--r-- 1 root root 2.8K Feb  1 18:23 packages/use-package-ensure-system-package-20180913.1501.el
-4.0K -rw-r--r-- 1 root root  534 Feb  1 18:23 packages/use-package-ensure-system-package-20180913.1501.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  1 18:23 packages/use-package-ensure-system-package-badge.svg
-4.0K -rw-r--r-- 1 root root  124 Feb  1 18:23 packages/use-package-ensure-system-package-readme.txt
-4.0K -rw-r--r-- 1 root root  698 Feb  1 18:23 packages/use-package-ensure-system-package.log
-4.0K -rw-r--r-- 1 root root 3.2K Feb  1 18:23 packages/use-package-hydra-20181228.745.el
-4.0K -rw-r--r-- 1 root root  457 Feb  1 18:23 packages/use-package-hydra-20181228.745.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  1 18:23 packages/use-package-hydra-badge.svg
-4.0K -rw-r--r-- 1 root root  104 Feb  1 18:23 packages/use-package-hydra-readme.txt
-4.0K -rw-r--r-- 1 root root  587 Feb  1 18:23 packages/use-package-hydra.log
-4.0K -rw-r--r-- 1 root root  432 Feb  1 18:23 packages/use-package-readme.txt
+4.0K -rw-r--r-- 1 root root  474 Feb  4 03:37 packages/use-package-20210201.1739.entry
+140K -rw-r--r-- 1 root root 140K Feb  4 03:37 packages/use-package-20210201.1739.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 03:37 packages/use-package-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Feb  4 03:37 packages/use-package-chords-20181024.2322.el
+4.0K -rw-r--r-- 1 root root  559 Feb  4 03:37 packages/use-package-chords-20181024.2322.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 03:37 packages/use-package-chords-badge.svg
+4.0K -rw-r--r-- 1 root root  139 Feb  4 03:37 packages/use-package-chords-readme.txt
+4.0K -rw-r--r-- 1 root root  593 Feb  4 03:37 packages/use-package-chords.log
+4.0K -rw-r--r-- 1 root root 2.5K Feb  4 03:37 packages/use-package-el-get-20180131.505.el
+4.0K -rw-r--r-- 1 root root  463 Feb  4 03:37 packages/use-package-el-get-20180131.505.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 03:37 packages/use-package-el-get-badge.svg
+4.0K -rw-r--r-- 1 root root  148 Feb  4 03:37 packages/use-package-el-get-readme.txt
+4.0K -rw-r--r-- 1 root root  596 Feb  4 03:37 packages/use-package-el-get.log
+4.0K -rw-r--r-- 1 root root 2.8K Feb  4 03:37 packages/use-package-ensure-system-package-20180913.1501.el
+4.0K -rw-r--r-- 1 root root  534 Feb  4 03:37 packages/use-package-ensure-system-package-20180913.1501.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 03:37 packages/use-package-ensure-system-package-badge.svg
+4.0K -rw-r--r-- 1 root root  124 Feb  4 03:37 packages/use-package-ensure-system-package-readme.txt
+4.0K -rw-r--r-- 1 root root  698 Feb  4 03:37 packages/use-package-ensure-system-package.log
+4.0K -rw-r--r-- 1 root root 3.2K Feb  4 03:37 packages/use-package-hydra-20181228.745.el
+4.0K -rw-r--r-- 1 root root  457 Feb  4 03:37 packages/use-package-hydra-20181228.745.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 03:37 packages/use-package-hydra-badge.svg
+4.0K -rw-r--r-- 1 root root  104 Feb  4 03:37 packages/use-package-hydra-readme.txt
+4.0K -rw-r--r-- 1 root root  587 Feb  4 03:37 packages/use-package-hydra.log
+4.0K -rw-r--r-- 1 root root  432 Feb  4 03:37 packages/use-package-readme.txt
