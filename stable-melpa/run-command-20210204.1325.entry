@@ -1,0 +1,11 @@
+(run-command .
+	     [(20210204 1325)
+	      ((emacs
+		(27 1)))
+	      "Run an external command from a context-dependent list" single
+	      ((:commit . "f893e3936380d88fc0297ba21a86bfbef55e1d73")
+	       (:authors
+		("Massimiliano Mirra" . "hyperstruct@gmail.com"))
+	       (:maintainer "Massimiliano Mirra" . "hyperstruct@gmail.com")
+	       (:keywords "processes")
+	       (:url . "https://github.com/bard/emacs-run-command"))])

@@ -2,7 +2,7 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "24") cl-lib company)
-;; Package-Commit: 3ef9aa76c43347694d355db4c75cfd3d049cdbe1
+;; Package-Commit: 82bdb730ad5971c594d9c99c069f3c7bb067897d
 ;; Package-Version: 20201020.2038
 ;; Package-X-Original-Version: 0.2
 ;; Keywords: company nginx
