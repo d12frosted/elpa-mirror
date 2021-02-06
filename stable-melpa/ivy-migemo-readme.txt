@@ -21,7 +21,7 @@
 
 ; Functions
 ;; ~ivy-migemo-toggle-fuzzy~
-Toggle fuzzy match or not on ivy. Almost same as ~ivy-toggle-fuzzy~, except
+Toggle fuzzy match or not on ivy.  Almost same as ~ivy-toggle-fuzzy~, except
 this function can also be used to toggle between ~ivy-migemo--regex-fuzzy~ and
 ~ivy-migemo--regex-plus~.
 ;; ~ivy-migemo-toggle-migemo~

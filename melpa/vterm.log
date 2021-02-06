@@ -5,7 +5,7 @@ Source:  https://github.com/akermu/emacs-libvterm.git
 Updating /mnt/store/melpa/working/vterm/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vterm/
-  to /tmp/vtermwmcK78/vterm-20210131.101
+  to /tmp/vtermpQxjKj/vterm-20210206.1603
     .git => .git
     .gitmodules -> .gitmodules
     CMakeLists.txt -> CMakeLists.txt
@@ -20,33 +20,35 @@ Copying files (->) and directories (=>)
     vterm-module.c -> vterm-module.c
     vterm-module.h -> vterm-module.h
     vterm.el -> vterm.el
-Created vterm-20210131.101.tar containing:
-  vterm-20210131.101/
-  vterm-20210131.101/.gitmodules
-  vterm-20210131.101/CMakeLists.txt
-  vterm-20210131.101/LICENSE
-  vterm-20210131.101/README.md
-  vterm-20210131.101/elisp.c
-  vterm-20210131.101/elisp.h
-  vterm-20210131.101/emacs-module.h
-  vterm-20210131.101/etc/
-  vterm-20210131.101/etc/emacs-vterm-bash.sh
-  vterm-20210131.101/etc/emacs-vterm-zsh.sh
-  vterm-20210131.101/etc/emacs-vterm.fish
-  vterm-20210131.101/utf8.c
-  vterm-20210131.101/utf8.h
-  vterm-20210131.101/vterm-module.c
-  vterm-20210131.101/vterm-module.h
-  vterm-20210131.101/vterm-pkg.el
-  vterm-20210131.101/vterm.el
-Built vterm in 5.785s, finished at Sat Feb  6 02:42:15 2021
+Created vterm-20210206.1603.tar containing:
+  vterm-20210206.1603/
+  vterm-20210206.1603/.gitmodules
+  vterm-20210206.1603/CMakeLists.txt
+  vterm-20210206.1603/LICENSE
+  vterm-20210206.1603/README.md
+  vterm-20210206.1603/elisp.c
+  vterm-20210206.1603/elisp.h
+  vterm-20210206.1603/emacs-module.h
+  vterm-20210206.1603/etc/
+  vterm-20210206.1603/etc/emacs-vterm-bash.sh
+  vterm-20210206.1603/etc/emacs-vterm-zsh.sh
+  vterm-20210206.1603/etc/emacs-vterm.fish
+  vterm-20210206.1603/utf8.c
+  vterm-20210206.1603/utf8.h
+  vterm-20210206.1603/vterm-module.c
+  vterm-20210206.1603/vterm-module.h
+  vterm-20210206.1603/vterm-pkg.el
+  vterm-20210206.1603/vterm.el
+Built vterm in 7.429s, finished at Sat Feb  6 17:29:57 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  351 Feb  6 02:42 packages/vterm-20210131.101.entry
-220K -rw-r--r-- 1 root root 220K Feb  6 02:42 packages/vterm-20210131.101.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb  6 02:42 packages/vterm-badge.svg
-4.0K -rw-r--r-- 1 root root  977 Feb  6 02:42 packages/vterm-readme.txt
- 20K -rw-r--r-- 1 root root  19K Feb  6 02:42 packages/vterm-toggle-20210130.1149.el
-4.0K -rw-r--r-- 1 root root  405 Feb  6 02:42 packages/vterm-toggle-20210130.1149.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  6 02:42 packages/vterm-toggle-badge.svg
-4.0K -rw-r--r-- 1 root root  576 Feb  6 02:42 packages/vterm-toggle-readme.txt
-4.0K -rw-r--r-- 1 root root  550 Feb  6 02:42 packages/vterm-toggle.log
+4.0K -rw-r--r-- 1 root root  351 Feb  6 14:30 packages/vterm-20210131.101.entry
+220K -rw-r--r-- 1 root root 220K Feb  6 14:30 packages/vterm-20210131.101.tar
+4.0K -rw-r--r-- 1 root root  352 Feb  6 17:29 packages/vterm-20210206.1603.entry
+220K -rw-r--r-- 1 root root 220K Feb  6 17:29 packages/vterm-20210206.1603.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  6 17:29 packages/vterm-badge.svg
+4.0K -rw-r--r-- 1 root root  977 Feb  6 17:29 packages/vterm-readme.txt
+ 20K -rw-r--r-- 1 root root  19K Feb  6 17:29 packages/vterm-toggle-20210130.1149.el
+4.0K -rw-r--r-- 1 root root  405 Feb  6 17:29 packages/vterm-toggle-20210130.1149.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  6 17:29 packages/vterm-toggle-badge.svg
+4.0K -rw-r--r-- 1 root root  576 Feb  6 17:29 packages/vterm-toggle-readme.txt
+4.0K -rw-r--r-- 1 root root  550 Feb  6 17:29 packages/vterm-toggle.log

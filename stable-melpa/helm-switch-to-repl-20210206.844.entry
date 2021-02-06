@@ -1,0 +1,12 @@
+(helm-switch-to-repl .
+		     [(20210206 844)
+		      ((emacs
+			(26 1))
+		       (helm
+			(3)))
+		      "Helm action to switch directory in REPLs" single
+		      ((:commit . "f0e732e7217fc0373b0805245fa15920cf676619")
+		       (:authors
+			("Pierre Neidhardt" . "mail@ambrevar.xyz"))
+		       (:maintainer "Pierre Neidhardt" . "mail@ambrevar.xyz")
+		       (:url . "https://github.com/emacs-helm/helm-switch-to-repl"))])

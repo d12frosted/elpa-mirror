@@ -1,0 +1,14 @@
+(dash-functional .
+		 [(20210206 1519)
+		  ((emacs
+		    (24))
+		   (dash
+		    (2 0 0)))
+		  "Collection of useful combinators for Emacs Lisp" single
+		  ((:commit . "51d81a5c4a523e56f9af83b733d5266442ba37f4")
+		   (:authors
+		    ("Matus Goljer" . "matus.goljer@gmail.com")
+		    ("Magnar Sveen" . "magnars@gmail.com"))
+		   (:maintainer "Matus Goljer" . "matus.goljer@gmail.com")
+		   (:keywords "extensions" "lisp")
+		   (:url . "https://github.com/magnars/dash.el"))])

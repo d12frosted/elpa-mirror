@@ -7,7 +7,7 @@
 ;; Created: Sat Nov 10 16:52:30 2018 (-0800)
 ;; Version: 0.1
 ;; Package-Version: 20181120.2224
-;; Package-Commit: 670b81e3eddef2e7353a4eedc9553a85306445db
+;; Package-Commit: d8baeada19b56176c66aed5fa220751e3de11cb8
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/DarwinAwardWinner/emacs-named-timer
 ;; Keywords: tools

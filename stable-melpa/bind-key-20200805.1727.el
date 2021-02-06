@@ -8,7 +8,7 @@
 ;; Modified: 29 Nov 2017
 ;; Version: 2.4
 ;; Package-Version: 20200805.1727
-;; Package-Commit: 317137b07687f16ea97a2493b0a6768c9df381a0
+;; Package-Commit: b79c25d09babc67315577b555701324ab2f15eb6
 ;; Keywords: keys keybinding config dotemacs
 ;; URL: https://github.com/jwiegley/use-package
 

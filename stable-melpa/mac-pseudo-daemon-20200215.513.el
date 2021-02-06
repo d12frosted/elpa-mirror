@@ -3,7 +3,7 @@
 ;; Author: Ryan C. Thompson
 ;; URL: https://github.com/DarwinAwardWinner/osx-pseudo-daemon
 ;; Package-Version: 20200215.513
-;; Package-Commit: 703ee41303dc251b7672b7cba5aeb6aa54a76c90
+;; Package-Commit: 94240ebb716f11af8427b6295c3f44c0c43419d3
 ;; Version: 2.2
 ;; Package-Requires: ((cl-lib "0.1"))
 ;; Created: 2013-09-20

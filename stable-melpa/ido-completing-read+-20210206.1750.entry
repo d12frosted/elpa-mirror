@@ -1,0 +1,17 @@
+(ido-completing-read+ .
+		      [(20210206 1750)
+		       ((emacs
+			 (24 4))
+			(seq
+			 (0 5))
+			(cl-lib
+			 (0 5))
+			(memoize
+			 (1 1)))
+		       "A completing-read-function using ido" single
+		       ((:commit . "36a8bb93a59a16c8d5a5163c8cfde3770a1052df")
+			(:authors
+			 ("Ryan C. Thompson" . "rct@thompsonclan.org"))
+			(:maintainer "Ryan C. Thompson" . "rct@thompsonclan.org")
+			(:keywords "ido" "completion" "convenience")
+			(:url . "https://github.com/DarwinAwardWinner/ido-completing-read-plus"))])
