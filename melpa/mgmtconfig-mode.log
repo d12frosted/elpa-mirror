@@ -5,7 +5,7 @@ Source:  https://github.com/purpleidea/mgmt.git
 Updating /mnt/store/melpa/working/mgmtconfig-mode/
 Command '(env LC_ALL=C git submodule update --init --recursive)' exited with non-zero status 1: Fetching origin
 warning: unable to rmdir 'vendor/github.com/coreos/etcd': Directory not empty
-HEAD is now at 845d7ff lang: Fix panic in lang/types/ValueOf() for Struct
+HEAD is now at 60dd34d make: Drop support for Go 1.9 in `make build`
 Synchronizing submodule url for 'vendor/github.com/docker/distribution'
 Synchronizing submodule url for 'vendor/github.com/docker/docker'
 Synchronizing submodule url for 'vendor/github.com/docker/go-connections'

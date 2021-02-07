@@ -9,7 +9,7 @@
 ;; Package-Version: 20190109.530
 ;; Package-X-Original-Version:  1.0
 ;; Package-requires: ((emacs "24.3"))
-;; Package-Commit: 9de65a27e10d8ae47aa6d28c02c3eb82ee8c0b2e
+;; Package-Commit: f7041deccd9d03066c2fe41c3443c42a4713ac02
 ;; Keywords:         abbrev, convenience, wp, keyboard
 ;; URL:              https://www.github.com/Boruch_Baum/emacs-keypress-multi-event
 

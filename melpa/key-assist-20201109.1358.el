@@ -8,7 +8,7 @@
 ;; Homepage: https://github.com/Boruch-Baum/emacs-key-assist
 ;; Keywords: abbrev convenience docs help
 ;; Package-Version: 20201109.1358
-;; Package-Commit: dda02615b45a86c806d61e0484e08aa51343f8d8
+;; Package-Commit: 7fd89c306c975a1fa3ab16ba7a4d3b102130a868
 ;; Package: key-assist
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.3"))
