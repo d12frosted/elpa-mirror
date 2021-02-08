@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/emacscollective/packed
 ;; Keywords: compile, convenience, lisp, package, library
 ;; Package-Version: 20201120.2047
-;; Package-Commit: 3b96dedb404f614479c1b321fac3e4bf11ba0782
+;; Package-Commit: 47437da7839394b079699eb4cfcc00627ab2df8e
 ;; Package-Requires: ((emacs "24.3"))
 
 ;; This file is not part of GNU Emacs.

@@ -3,99 +3,99 @@ Fetcher: github
 Source:  https://github.com/emacsmirror/highlight.git
 
 Updating /mnt/store/melpa/working/highlight/
-Built highlight in 3.107s, finished at Sun Feb  7 10:33:49 2021
+Built highlight in 2.701s, finished at Mon Feb  8 04:21:44 2021
  ✓ Success:
-172K -rw-r--r-- 1 root root 170K Feb  7 10:33 packages/highlight-20190710.1527.el
-4.0K -rw-r--r-- 1 root root  379 Feb  7 10:33 packages/highlight-20190710.1527.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 10:33 packages/highlight-badge.svg
- 12K -rw-r--r-- 1 root root  12K Feb  7 10:33 packages/highlight-blocks-20190318.1557.el
-4.0K -rw-r--r-- 1 root root  367 Feb  7 07:38 packages/highlight-blocks-20190318.1557.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-blocks-badge.svg
-4.0K -rw-r--r-- 1 root root  244 Feb  7 07:38 packages/highlight-blocks-readme.txt
-4.0K -rw-r--r-- 1 root root  151 Feb  7 10:33 packages/highlight-blocks.log
-8.0K -rw-r--r-- 1 root root 5.3K Feb  7 07:38 packages/highlight-context-line-20181122.2203.el
-4.0K -rw-r--r-- 1 root root  396 Feb  7 07:38 packages/highlight-context-line-20181122.2203.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-context-line-badge.svg
-4.0K -rw-r--r-- 1 root root  720 Feb  7 07:38 packages/highlight-context-line-readme.txt
-4.0K -rw-r--r-- 1 root root  170 Feb  7 10:33 packages/highlight-context-line.log
-8.0K -rw-r--r-- 1 root root 6.8K Feb  7 07:38 packages/highlight-defined-20181106.1718.el
-4.0K -rw-r--r-- 1 root root  388 Feb  7 07:38 packages/highlight-defined-20181106.1718.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-defined-badge.svg
-4.0K -rw-r--r-- 1 root root  211 Feb  7 07:38 packages/highlight-defined-readme.txt
-4.0K -rw-r--r-- 1 root root  154 Feb  7 10:33 packages/highlight-defined.log
- 56K -rw-r--r-- 1 root root  56K Feb  7 07:38 packages/highlight-doxygen-20200520.1713.el
-4.0K -rw-r--r-- 1 root root  333 Feb  7 07:38 packages/highlight-doxygen-20200520.1713.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-doxygen-badge.svg
-4.0K -rw-r--r-- 1 root root 2.1K Feb  7 07:38 packages/highlight-doxygen-readme.txt
-   0 -rw-r--r-- 1 root root    0 Feb  7 10:33 packages/highlight-doxygen.log
- 12K -rw-r--r-- 1 root root 8.9K Feb  7 07:38 packages/highlight-escape-sequences-20201214.1730.el
-4.0K -rw-r--r-- 1 root root  457 Feb  7 07:38 packages/highlight-escape-sequences-20201214.1730.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-escape-sequences-badge.svg
-4.0K -rw-r--r-- 1 root root  595 Feb  7 07:38 packages/highlight-escape-sequences-readme.txt
-   0 -rw-r--r-- 1 root root    0 Feb  7 10:33 packages/highlight-escape-sequences.log
-8.0K -rw-r--r-- 1 root root 6.4K Feb  7 07:38 packages/highlight-function-calls-20170908.500.el
-4.0K -rw-r--r-- 1 root root  427 Feb  7 07:38 packages/highlight-function-calls-20170908.500.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-function-calls-badge.svg
-4.0K -rw-r--r-- 1 root root  552 Feb  7 07:38 packages/highlight-function-calls-readme.txt
-4.0K -rw-r--r-- 1 root root  647 Feb  7 07:38 packages/highlight-function-calls.log
- 52K -rw-r--r-- 1 root root  50K Feb  7 07:38 packages/highlight-indent-guides-20200820.2328.el
-4.0K -rw-r--r-- 1 root root  397 Feb  7 07:38 packages/highlight-indent-guides-20200820.2328.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-indent-guides-badge.svg
-4.0K -rw-r--r-- 1 root root 1.5K Feb  7 07:38 packages/highlight-indent-guides-readme.txt
-4.0K -rw-r--r-- 1 root root  643 Feb  7 07:38 packages/highlight-indent-guides.log
- 16K -rw-r--r-- 1 root root  14K Feb  7 07:38 packages/highlight-indentation-20201110.1327.el
-4.0K -rw-r--r-- 1 root root  379 Feb  7 07:38 packages/highlight-indentation-20201110.1327.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-indentation-badge.svg
-4.0K -rw-r--r-- 1 root root  108 Feb  7 07:38 packages/highlight-indentation-readme.txt
-4.0K -rw-r--r-- 1 root root  632 Feb  7 07:38 packages/highlight-indentation.log
-8.0K -rw-r--r-- 1 root root 6.3K Feb  7 07:38 packages/highlight-leading-spaces-20151216.1222.el
-4.0K -rw-r--r-- 1 root root  383 Feb  7 07:38 packages/highlight-leading-spaces-20151216.1222.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-leading-spaces-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Feb  7 07:38 packages/highlight-leading-spaces-readme.txt
-4.0K -rw-r--r-- 1 root root  647 Feb  7 07:38 packages/highlight-leading-spaces.log
- 12K -rw-r--r-- 1 root root  12K Feb  7 07:38 packages/highlight-numbers-20181013.1744.el
-4.0K -rw-r--r-- 1 root root  413 Feb  7 07:38 packages/highlight-numbers-20181013.1744.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-numbers-badge.svg
-4.0K -rw-r--r-- 1 root root  306 Feb  7 07:38 packages/highlight-numbers-readme.txt
-4.0K -rw-r--r-- 1 root root  590 Feb  7 07:38 packages/highlight-numbers.log
-4.0K -rw-r--r-- 1 root root 2.8K Feb  7 07:38 packages/highlight-operators-20170213.2220.el
-4.0K -rw-r--r-- 1 root root  303 Feb  7 07:38 packages/highlight-operators-20170213.2220.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-operators-badge.svg
-4.0K -rw-r--r-- 1 root root  419 Feb  7 07:38 packages/highlight-operators-readme.txt
-4.0K -rw-r--r-- 1 root root  607 Feb  7 07:38 packages/highlight-operators.log
- 12K -rw-r--r-- 1 root root  11K Feb  7 07:38 packages/highlight-parentheses-20210104.1625.el
-4.0K -rw-r--r-- 1 root root  421 Feb  7 07:38 packages/highlight-parentheses-20210104.1625.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-parentheses-badge.svg
-4.0K -rw-r--r-- 1 root root  154 Feb  7 07:38 packages/highlight-parentheses-readme.txt
-4.0K -rw-r--r-- 1 root root  623 Feb  7 07:38 packages/highlight-parentheses.log
-8.0K -rw-r--r-- 1 root root 4.2K Feb  7 07:38 packages/highlight-quoted-20140916.1822.el
-4.0K -rw-r--r-- 1 root root  375 Feb  7 07:38 packages/highlight-quoted-20140916.1822.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-quoted-badge.svg
-4.0K -rw-r--r-- 1 root root   64 Feb  7 07:38 packages/highlight-quoted-readme.txt
-4.0K -rw-r--r-- 1 root root  582 Feb  7 07:38 packages/highlight-quoted.log
- 32K -rw-r--r-- 1 root root  31K Feb  7 10:33 packages/highlight-readme.txt
- 12K -rw-r--r-- 1 root root  12K Feb  7 07:38 packages/highlight-refontification-20170211.2024.el
-4.0K -rw-r--r-- 1 root root  375 Feb  7 07:38 packages/highlight-refontification-20170211.2024.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-refontification-badge.svg
-8.0K -rw-r--r-- 1 root root 4.7K Feb  7 07:38 packages/highlight-refontification-readme.txt
-4.0K -rw-r--r-- 1 root root  659 Feb  7 07:38 packages/highlight-refontification.log
- 12K -rw-r--r-- 1 root root  12K Feb  7 07:38 packages/highlight-stages-20161212.1457.el
-4.0K -rw-r--r-- 1 root root  275 Feb  7 07:38 packages/highlight-stages-20161212.1457.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-stages-badge.svg
-4.0K -rw-r--r-- 1 root root  167 Feb  7 07:38 packages/highlight-stages-readme.txt
-4.0K -rw-r--r-- 1 root root  582 Feb  7 07:38 packages/highlight-stages.log
- 20K -rw-r--r-- 1 root root  18K Feb  7 07:38 packages/highlight-symbol-20160102.2009.el
-4.0K -rw-r--r-- 1 root root  389 Feb  7 07:38 packages/highlight-symbol-20160102.2009.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-symbol-badge.svg
-4.0K -rw-r--r-- 1 root root  921 Feb  7 07:38 packages/highlight-symbol-readme.txt
-4.0K -rw-r--r-- 1 root root  585 Feb  7 07:38 packages/highlight-symbol.log
- 12K -rw-r--r-- 1 root root  11K Feb  7 07:38 packages/highlight-thing-20181229.1301.el
-4.0K -rw-r--r-- 1 root root  408 Feb  7 07:38 packages/highlight-thing-20181229.1301.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-thing-badge.svg
-4.0K -rw-r--r-- 1 root root  305 Feb  7 07:38 packages/highlight-thing-readme.txt
-4.0K -rw-r--r-- 1 root root  578 Feb  7 07:38 packages/highlight-thing.log
-8.0K -rw-r--r-- 1 root root 5.9K Feb  7 07:38 packages/highlight-unique-symbol-20130612.542.el
-4.0K -rw-r--r-- 1 root root  406 Feb  7 07:38 packages/highlight-unique-symbol-20130612.542.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 07:38 packages/highlight-unique-symbol-badge.svg
-4.0K -rw-r--r-- 1 root root  369 Feb  7 07:38 packages/highlight-unique-symbol-readme.txt
-4.0K -rw-r--r-- 1 root root  645 Feb  7 07:38 packages/highlight-unique-symbol.log
+172K -rw-r--r-- 1 root root 170K Feb  8 04:21 packages/highlight-20190710.1527.el
+4.0K -rw-r--r-- 1 root root  379 Feb  8 04:21 packages/highlight-20190710.1527.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 04:21 packages/highlight-badge.svg
+ 12K -rw-r--r-- 1 root root  12K Feb  8 01:22 packages/highlight-blocks-20190318.1557.el
+4.0K -rw-r--r-- 1 root root  367 Feb  8 01:22 packages/highlight-blocks-20190318.1557.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:22 packages/highlight-blocks-badge.svg
+4.0K -rw-r--r-- 1 root root  244 Feb  8 01:22 packages/highlight-blocks-readme.txt
+4.0K -rw-r--r-- 1 root root  151 Feb  8 04:21 packages/highlight-blocks.log
+8.0K -rw-r--r-- 1 root root 5.3K Feb  8 01:22 packages/highlight-context-line-20181122.2203.el
+4.0K -rw-r--r-- 1 root root  396 Feb  8 01:22 packages/highlight-context-line-20181122.2203.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-context-line-badge.svg
+4.0K -rw-r--r-- 1 root root  720 Feb  8 01:22 packages/highlight-context-line-readme.txt
+4.0K -rw-r--r-- 1 root root  170 Feb  8 04:21 packages/highlight-context-line.log
+8.0K -rw-r--r-- 1 root root 6.8K Feb  8 01:22 packages/highlight-defined-20181106.1718.el
+4.0K -rw-r--r-- 1 root root  388 Feb  8 01:23 packages/highlight-defined-20181106.1718.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-defined-badge.svg
+4.0K -rw-r--r-- 1 root root  211 Feb  8 01:22 packages/highlight-defined-readme.txt
+4.0K -rw-r--r-- 1 root root  154 Feb  8 04:21 packages/highlight-defined.log
+ 56K -rw-r--r-- 1 root root  56K Feb  8 01:23 packages/highlight-doxygen-20200520.1713.el
+4.0K -rw-r--r-- 1 root root  333 Feb  8 01:23 packages/highlight-doxygen-20200520.1713.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-doxygen-badge.svg
+4.0K -rw-r--r-- 1 root root 2.1K Feb  8 01:23 packages/highlight-doxygen-readme.txt
+   0 -rw-r--r-- 1 root root    0 Feb  8 04:21 packages/highlight-doxygen.log
+ 12K -rw-r--r-- 1 root root 8.9K Feb  8 01:23 packages/highlight-escape-sequences-20201214.1730.el
+4.0K -rw-r--r-- 1 root root  457 Feb  8 01:23 packages/highlight-escape-sequences-20201214.1730.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-escape-sequences-badge.svg
+4.0K -rw-r--r-- 1 root root  595 Feb  8 01:23 packages/highlight-escape-sequences-readme.txt
+   0 -rw-r--r-- 1 root root    0 Feb  8 04:21 packages/highlight-escape-sequences.log
+8.0K -rw-r--r-- 1 root root 6.4K Feb  8 01:23 packages/highlight-function-calls-20170908.500.el
+4.0K -rw-r--r-- 1 root root  427 Feb  8 01:23 packages/highlight-function-calls-20170908.500.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-function-calls-badge.svg
+4.0K -rw-r--r-- 1 root root  552 Feb  8 01:23 packages/highlight-function-calls-readme.txt
+   0 -rw-r--r-- 1 root root    0 Feb  8 04:21 packages/highlight-function-calls.log
+ 52K -rw-r--r-- 1 root root  50K Feb  8 01:23 packages/highlight-indent-guides-20200820.2328.el
+4.0K -rw-r--r-- 1 root root  397 Feb  8 01:23 packages/highlight-indent-guides-20200820.2328.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-indent-guides-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Feb  8 01:23 packages/highlight-indent-guides-readme.txt
+   0 -rw-r--r-- 1 root root    0 Feb  8 04:21 packages/highlight-indent-guides.log
+ 16K -rw-r--r-- 1 root root  14K Feb  8 01:23 packages/highlight-indentation-20201110.1327.el
+4.0K -rw-r--r-- 1 root root  379 Feb  8 01:23 packages/highlight-indentation-20201110.1327.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-indentation-badge.svg
+4.0K -rw-r--r-- 1 root root  108 Feb  8 01:23 packages/highlight-indentation-readme.txt
+4.0K -rw-r--r-- 1 root root  632 Feb  8 01:23 packages/highlight-indentation.log
+8.0K -rw-r--r-- 1 root root 6.3K Feb  8 01:23 packages/highlight-leading-spaces-20151216.1222.el
+4.0K -rw-r--r-- 1 root root  383 Feb  8 01:23 packages/highlight-leading-spaces-20151216.1222.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-leading-spaces-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Feb  8 01:23 packages/highlight-leading-spaces-readme.txt
+4.0K -rw-r--r-- 1 root root  647 Feb  8 01:23 packages/highlight-leading-spaces.log
+ 12K -rw-r--r-- 1 root root  12K Feb  8 01:23 packages/highlight-numbers-20181013.1744.el
+4.0K -rw-r--r-- 1 root root  413 Feb  8 01:23 packages/highlight-numbers-20181013.1744.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-numbers-badge.svg
+4.0K -rw-r--r-- 1 root root  306 Feb  8 01:23 packages/highlight-numbers-readme.txt
+4.0K -rw-r--r-- 1 root root  590 Feb  8 01:23 packages/highlight-numbers.log
+4.0K -rw-r--r-- 1 root root 2.8K Feb  8 01:23 packages/highlight-operators-20170213.2220.el
+4.0K -rw-r--r-- 1 root root  303 Feb  8 01:23 packages/highlight-operators-20170213.2220.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-operators-badge.svg
+4.0K -rw-r--r-- 1 root root  419 Feb  8 01:23 packages/highlight-operators-readme.txt
+4.0K -rw-r--r-- 1 root root  607 Feb  8 01:23 packages/highlight-operators.log
+ 12K -rw-r--r-- 1 root root  11K Feb  8 01:23 packages/highlight-parentheses-20210104.1625.el
+4.0K -rw-r--r-- 1 root root  421 Feb  8 01:23 packages/highlight-parentheses-20210104.1625.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-parentheses-badge.svg
+4.0K -rw-r--r-- 1 root root  154 Feb  8 01:23 packages/highlight-parentheses-readme.txt
+4.0K -rw-r--r-- 1 root root  623 Feb  8 01:23 packages/highlight-parentheses.log
+8.0K -rw-r--r-- 1 root root 4.2K Feb  8 01:23 packages/highlight-quoted-20140916.1822.el
+4.0K -rw-r--r-- 1 root root  375 Feb  8 01:23 packages/highlight-quoted-20140916.1822.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-quoted-badge.svg
+4.0K -rw-r--r-- 1 root root   64 Feb  8 01:23 packages/highlight-quoted-readme.txt
+4.0K -rw-r--r-- 1 root root  582 Feb  8 01:23 packages/highlight-quoted.log
+ 32K -rw-r--r-- 1 root root  31K Feb  8 04:21 packages/highlight-readme.txt
+ 12K -rw-r--r-- 1 root root  12K Feb  8 01:23 packages/highlight-refontification-20170211.2024.el
+4.0K -rw-r--r-- 1 root root  375 Feb  8 01:23 packages/highlight-refontification-20170211.2024.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-refontification-badge.svg
+8.0K -rw-r--r-- 1 root root 4.7K Feb  8 01:23 packages/highlight-refontification-readme.txt
+4.0K -rw-r--r-- 1 root root  659 Feb  8 01:23 packages/highlight-refontification.log
+ 12K -rw-r--r-- 1 root root  12K Feb  8 01:23 packages/highlight-stages-20161212.1457.el
+4.0K -rw-r--r-- 1 root root  275 Feb  8 01:23 packages/highlight-stages-20161212.1457.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-stages-badge.svg
+4.0K -rw-r--r-- 1 root root  167 Feb  8 01:23 packages/highlight-stages-readme.txt
+4.0K -rw-r--r-- 1 root root  582 Feb  8 01:23 packages/highlight-stages.log
+ 20K -rw-r--r-- 1 root root  18K Feb  8 01:23 packages/highlight-symbol-20160102.2009.el
+4.0K -rw-r--r-- 1 root root  389 Feb  8 01:23 packages/highlight-symbol-20160102.2009.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-symbol-badge.svg
+4.0K -rw-r--r-- 1 root root  921 Feb  8 01:23 packages/highlight-symbol-readme.txt
+4.0K -rw-r--r-- 1 root root  585 Feb  8 01:23 packages/highlight-symbol.log
+ 12K -rw-r--r-- 1 root root  11K Feb  8 01:23 packages/highlight-thing-20181229.1301.el
+4.0K -rw-r--r-- 1 root root  408 Feb  8 01:23 packages/highlight-thing-20181229.1301.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-thing-badge.svg
+4.0K -rw-r--r-- 1 root root  305 Feb  8 01:23 packages/highlight-thing-readme.txt
+4.0K -rw-r--r-- 1 root root  578 Feb  8 01:23 packages/highlight-thing.log
+8.0K -rw-r--r-- 1 root root 5.9K Feb  8 01:23 packages/highlight-unique-symbol-20130612.542.el
+4.0K -rw-r--r-- 1 root root  406 Feb  8 01:23 packages/highlight-unique-symbol-20130612.542.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 01:23 packages/highlight-unique-symbol-badge.svg
+4.0K -rw-r--r-- 1 root root  369 Feb  8 01:23 packages/highlight-unique-symbol-readme.txt
+4.0K -rw-r--r-- 1 root root  645 Feb  8 01:23 packages/highlight-unique-symbol.log

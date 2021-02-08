@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/emacscollective/auto-compile
 ;; Keywords: compile, convenience, lisp
 ;; Package-Version: 20201122.1157
-;; Package-Commit: f8619d1616b523918323914ec77bfbee2c559781
+;; Package-Commit: 4952a1a1cadf1bdf7018610a71f8c3acb67962c2
 
 ;; Package-Requires: ((emacs "25.1") (packed "3.0.1"))
 

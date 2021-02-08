@@ -7,7 +7,7 @@
 
 ;; Package-Requires: ((emacs "25.1") (forge "0.2.0") (magit "2.90.1") (org "9.3") (orgit "1.6.2"))
 ;; Package-Version: 20200621.2144
-;; Package-Commit: 63a19d1df1434e583aac1329ba4dcfa2ee59d7c1
+;; Package-Commit: 051d92661ef12b67ffadb231324806d87d1e6a54
 ;; Homepage: https://github.com/magit/orgit-forge
 
 ;; This library is free software; you can redistribute it and/or modify

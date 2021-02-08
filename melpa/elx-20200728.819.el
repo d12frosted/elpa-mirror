@@ -6,7 +6,7 @@
 ;; Created: 20081202
 ;; Package-Requires: ((emacs "25.1"))
 ;; Package-Version: 20200728.819
-;; Package-Commit: f9f810ffcd3cce7ed15848c72ce299609ec09414
+;; Package-Commit: 01ad699c562887dfe135f21dbf65d72cfe7d9cd9
 ;; Homepage: https://github.com/emacscollective/elx
 ;; Keywords: docs, libraries, packages
 
