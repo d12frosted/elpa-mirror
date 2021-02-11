@@ -1028,6 +1028,16 @@
 	  ("Toby Cubitt" . "toby-predictive@dr-qubit.org"))
 	 (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 	 (:url . "http://www.dr-qubit.org/emacs.php"))])
+ (hiddenquote .
+	      [(1 1)
+	       ((emacs
+		 (25 1)))
+	       "Major mode for doing hidden quote puzzles" tar
+	       ((:url . "http://mauroaranda.com/puzzles/hidden-quote-puzzle/")
+		(:maintainer "Mauro Aranda" . "maurooaranda@gmail.com")
+		(:authors
+		 ("Mauro Aranda" . "maurooaranda@gmail.com"))
+		(:keywords "games"))])
  (highlight-escape-sequences .
 			     [(0 4)
 			      nil "Highlight escape sequences" single
@@ -1769,15 +1779,15 @@
 	  ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	 (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (rcirc-color .
-	      [(0 4 1)
+	      [(0 4 2)
 	       ((emacs
 		 (24 4)))
-	       "color nicks" single
-	       ((:url . "http://elpa.gnu.org/packages/rcirc-color.html")
-		(:keywords "comm")
+	       "color nicks" tar
+	       ((:maintainer "Alex Schroeder" . "alex@gnu.org")
 		(:authors
 		 ("Alex Schroeder" . "alex@gnu.org"))
-		(:maintainer "Alex Schroeder" . "alex@gnu.org"))])
+		(:keywords "comm")
+		(:url . "https://elpa.gnu.org/packages/rcirc-color.html"))])
  (rcirc-menu .
 	     [(1 1)
 	      nil "A menu of all your rcirc connections" single
