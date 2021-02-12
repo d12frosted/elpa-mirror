@@ -9,7 +9,7 @@ to find the XMPP client service for the domain gmail.com:
 
 (srv-lookup "_xmpp-client._tcp.gmail.com")
 -> (("xmpp.l.google.com" . 5222)
-("alt3.xmpp.l.google.com" . 5222)
-("alt4.xmpp.l.google.com" . 5222)
-("alt1.xmpp.l.google.com" . 5222)
-("alt2.xmpp.l.google.com" . 5222))
+    ("alt3.xmpp.l.google.com" . 5222)
+    ("alt4.xmpp.l.google.com" . 5222)
+    ("alt1.xmpp.l.google.com" . 5222)
+    ("alt2.xmpp.l.google.com" . 5222))

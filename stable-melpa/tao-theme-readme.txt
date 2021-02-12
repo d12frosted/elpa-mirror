@@ -1,7 +1,7 @@
 
 Colors blind people’s eyes;
 
-Lao Tzu - Tao Te Ching (Ch. 12	Sentence 1)
+        Lao Tzu - Tao Te Ching (Ch. 12	Sentence 1)
 
 This package provides two parametrized uncoloured color themes for Emacs: tao-yin and tao-yang.
 

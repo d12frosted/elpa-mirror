@@ -4,4 +4,4 @@ Usage:
 
 Select some text and run this interactive function:
 
-(carbon-now-sh)
+    (carbon-now-sh)

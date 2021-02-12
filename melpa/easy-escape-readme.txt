@@ -5,10 +5,10 @@ single ones, and applies a special face to each.  The underlying buffer text
 is not modified.
 
 For example, `easy-escape` prettifies this:
-"\\(?:\\_<\\\\newcommand\\_>\\s-*\\)?"
+  "\\(?:\\_<\\\\newcommand\\_>\\s-*\\)?"
 into this (`^' indicates a different color):
-"(?:\_<\\newcommand\_>\s-*)?".
-^                        ^
+  "(?:\_<\\newcommand\_>\s-*)?".
+   ^                        ^
 
 The default is to use a single \ character instead of two, and to hide
 backslashes preceding parentheses or `|'.  The escape character and its color
@@ -16,7 +16,7 @@ can be customized using `easy-escape-face' and `easy-escape-character' (which se
 before ()| can be shown by disabling `easy-escape-hide-escapes-before-delimiters'.
 
 Suggested setup:
-(add-hook 'lisp-mode-hook 'easy-escape-minor-mode)
+  (add-hook 'lisp-mode-hook 'easy-escape-minor-mode)
 
 NOTE: If you find the distinction between the fontified double-slash and the
 single slash too subtle, try the following:

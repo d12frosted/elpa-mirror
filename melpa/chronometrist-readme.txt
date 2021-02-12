@@ -4,15 +4,15 @@ A time tracker in Emacs with a nice interface
 Largely modelled after the Android application, [A Time Tracker](https://github.com/netmackan/ATimeTracker)
 
 * Benefits
-1. Extremely simple and efficient to use
-2. Displays useful information about your time usage
-3. Support for both mouse and keyboard
-4. Human errors in tracking are easily fixed by editing a plain text file
-5. Hooks to let you perform arbitrary actions when starting/stopping tasks
+  1. Extremely simple and efficient to use
+  2. Displays useful information about your time usage
+  3. Support for both mouse and keyboard
+  4. Human errors in tracking are easily fixed by editing a plain text file
+  5. Hooks to let you perform arbitrary actions when starting/stopping tasks
 
 * Limitations
-1. No support (yet) for adding a task without clocking into it.
-2. No support for concurrent tasks.
+  1. No support (yet) for adding a task without clocking into it.
+  2. No support for concurrent tasks.
 
 ## Comparisons
 ### timeclock.el

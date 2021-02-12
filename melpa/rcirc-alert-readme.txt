@@ -7,11 +7,11 @@ This code integrates part of the original sources. It departs from the original 
 
 - five different types of alerts are considered here, three of them may be disabled
 
-"message" - someone talks to the user by classical "user_nick: ... " (always enabled)
-"keyword" - keyword detected
-"private" - private message (always enabled)
-"nick"    - given nicks changes status (join, ...)
-"always"  - alert of any message
+  "message" - someone talks to the user by classical "user_nick: ... " (always enabled)
+  "keyword" - keyword detected
+  "private" - private message (always enabled)
+  "nick"    - given nicks changes status (join, ...)
+  "always"  - alert of any message
 
 As long as this code only triggers an action, an example a bash script ('rcirc-alert.sh') is necessary
 the alerts. This script will create a notification or whatever the user needs. It accepts four input

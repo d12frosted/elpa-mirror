@@ -4,7 +4,7 @@ or cconv (https://github.com/xiaoyjy/cconv).  Customizable through
 
 Put this file into your load-path and the following into your
 ~/.emacs:
-(require 'chinese-conv)
+  (require 'chinese-conv)
 
 Commands `chinese-conv' and `chinese-conv-replace' can be used
 interactively or non-interactively.

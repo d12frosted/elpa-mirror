@@ -1,16 +1,16 @@
 This package lets you see a hierarchy of maildirs in a separate buffer:
 
 mymail@gmail.com
-[Gmail]
-.Trash [0/25]
-.Starred [0/0]
-.Spam [0/3]
-.Sent Mail [0/4]
-.Important [0/21]
-.Drafts [0/0]
-.All Mail [0/56]
-Trash [0/0]
-Inbox [2/45]
+ [Gmail]
+  .Trash [0/25]
+  .Starred [0/0]
+  .Spam [0/3]
+  .Sent Mail [0/4]
+  .Important [0/21]
+  .Drafts [0/0]
+  .All Mail [0/56]
+ Trash [0/0]
+ Inbox [2/45]
 
 M-x `mu4e-overview' displays a buffer with a list of all maildirs.  The root
 maildir can be set via the variable `mu4e-maildir'.

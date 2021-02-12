@@ -25,28 +25,28 @@ Features
 ========
 
 * One player quest mode
-(press SPC on start-up)
+  (press SPC on start-up)
 
 * Two player face-off mode
-(press 2 on start-up)
+  (press 2 on start-up)
 
 * God mode: instantly apply Elisp framents to hack the game environment
-(press G during the game)
+  (press G during the game)
 
 * Slime training mode: a statistical learning algorithm for training
-opponent slimes
-(press t on start-up,
-use M-: (slime-volleyball-save-strategy ...) to save the strategy, make
-sure to manually save the quantize, hash-situation and controller
-functions you come up with -- see green-slime.el.gz)
+                       opponent slimes
+  (press t on start-up,
+   use M-: (slime-volleyball-save-strategy ...) to save the strategy, make
+   sure to manually save the quantize, hash-situation and controller
+   functions you come up with -- see green-slime.el.gz)
 
-I used this mode to train Green Slime and Grey Slime.
+  I used this mode to train Green Slime and Grey Slime.
 
 * Frame-by-frame debugging
-(F9 to enter/exit frame-by-frame mode, F8 to advance a frame)
+  (F9 to enter/exit frame-by-frame mode, F8 to advance a frame)
 
 * Music: disabled by default due to EMMS requirement
-(customize slime-volleyball-enable-sound)
+  (customize slime-volleyball-enable-sound)
 
 Controls
 ========

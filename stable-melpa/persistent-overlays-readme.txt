@@ -14,7 +14,7 @@ along with GNU Emacs.  If not, see <http://www.gnu.org/licenses/>.
 About
 
 Bugs should be reported on the github issues page:
-https://github.com/mneilly/Emacs-Persistent-Overlays/issues
+  https://github.com/mneilly/Emacs-Persistent-Overlays/issues
 
 The goal for persistent-overlays is to maintain persistent overlays
 between Emacs sessions.  It has been tested with hideshow and

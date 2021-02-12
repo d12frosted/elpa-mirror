@@ -3,7 +3,7 @@ TODO
 
 Ideas
 - Add list of files  in commit to menu (with function
-switch-to-buffer or find-file)
+  switch-to-buffer or find-file)
 - Better remove/add (no dups)
 - deployment ?
 - foo deploy ?

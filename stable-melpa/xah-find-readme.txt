@@ -52,11 +52,11 @@ IGNORE DIRECTORIES
 By default, .git dir is ignored. You can add to it by adding the following in your init:
 
 (setq
-xah-find-dir-ignore-regex-list
-[
-"\\.git/"
-; more regex here. regex is matched against file full path
-])
+ xah-find-dir-ignore-regex-list
+ [
+  "\\.git/"
+   ; more regex here. regex is matched against file full path
+  ])
 
 to customize the color for matched text, call `customize-group' and then give xah-find.
 

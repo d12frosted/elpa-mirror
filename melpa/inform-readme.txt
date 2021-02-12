@@ -30,21 +30,21 @@ function-name or are quoted and prefixed like `M-x function-name'.
 3. Function names appearing behind the following forms, which
 occur, for example, in the Elisp manual:
 
--- Special Form: function-name
--- Command:
--- Function:
--- Macro:
+  -- Special Form: function-name
+  -- Command:
+  -- Function:
+  -- Macro:
 
 4. And variables names behind the following text:
 
--- User Option: variable-name
--- Variable:
+  -- User Option: variable-name
+  -- Variable:
 
 Inform is checking if the Info documents are relevant Elisp and
 Emacs related files to avoid false positives.  Please see the
 customization variable `inform-none-emacs-or-elisp-documents'.
 
-In any case all symbol names must be known to Emacs, i.e. their
+ In any case all symbol names must be known to Emacs, i.e. their
 names are found in the variable `obarray'.
 
 The code reuses, mostly, mechanisms from Emacs' lisp/help-mode.el

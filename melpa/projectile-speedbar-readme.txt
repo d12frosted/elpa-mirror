@@ -9,7 +9,7 @@ project.
 
 Features that are required by this library:
 
-`speedbar' `sr-speedbar' `projectile'
+ `speedbar' `sr-speedbar' `projectile'
 
 To invoke this function manually:
 
@@ -20,4 +20,4 @@ To invoke this function manually:
 
 Copy speedbar-projectile.el to your load-path and add this to ~/.emacs
 
-(require 'projectile-speedbar)
+ (require 'projectile-speedbar)

@@ -9,6 +9,6 @@ Usage:
 
 2. Add code to the Emacs config file:
 
-(unless (display-graphic-p)
-(require 'terminal-focus-reporting)
-(terminal-focus-reporting-mode))
+      (unless (display-graphic-p)
+        (require 'terminal-focus-reporting)
+        (terminal-focus-reporting-mode))

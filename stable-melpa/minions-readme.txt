@@ -8,4 +8,4 @@ list of enabled minor-modes that is displayed in the mode line by
 default.  To use the menu like this, enable Minions mode.
 
 Alternatively the menu can be bound globally, for example:
-(global-set-key [S-down-mouse-3] 'minions-minor-modes-menu)
+  (global-set-key [S-down-mouse-3] 'minions-minor-modes-menu)

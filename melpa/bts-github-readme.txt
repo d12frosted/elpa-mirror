@@ -34,4 +34,4 @@ Width of issue labels column in summary buffer.
 `bts-github:summary-label-decorating'
 Whether to decorate issue labels column.
 
-*** END auto-documentation
+ *** END auto-documentation

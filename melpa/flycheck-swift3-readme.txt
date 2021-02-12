@@ -7,10 +7,10 @@ Features:
 
 - Apple swift-mode.el support
 - Apple Swift 5.3 support
-If you use the toolchain option, you can use the old version of Swift.
+  If you use the toolchain option, you can use the old version of Swift.
 - The `xcrun' command support (only on macOS)
 
 Usage:
 
 (with-eval-after-load 'flycheck
-(add-hook 'flycheck-mode-hook #'flycheck-swift3-setup))
+  (add-hook 'flycheck-mode-hook #'flycheck-swift3-setup))

@@ -9,10 +9,10 @@ DEMO site: http://coldnew.github.io/org-ioslide
 
 If you have `melpa` and `emacs24` installed, simply type:
 
-M-x package-install ox-ioslide
+     M-x package-install ox-ioslide
 
 In your .emacs
 
-(require 'ox-ioslide)
+     (require 'ox-ioslide)
 
 For more information, please see `README.org'

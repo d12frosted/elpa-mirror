@@ -8,7 +8,7 @@
 ;; Modified: January 23, 2021
 ;; Version: 0.0.1
 ;; Package-Version: 20210202.1948
-;; Package-Commit: f2b2a19f180890988039da48b17c627eabb8116f
+;; Package-Commit: bed9e4da626ede148c7d362188b2e7729e2a8a4f
 ;; Homepage: https://github.com/elken/doom-modeline-now-playing
 ;; Package-Requires: ((emacs "24.4") (doom-modeline "3.0.0") (async "1.9.3"))
 ;; SPDX-License-Identifier: GPL3

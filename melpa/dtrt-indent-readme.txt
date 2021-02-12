@@ -43,9 +43,9 @@ Certain lines are ignored during analysis:
 * Empty lines.
 * Lines that are not indented (indentation offset 0).
 * Lines that are the continuation of a multi-line comment or a
-multi-line statement or expression.
+  multi-line statement or expression.
 * Lines that only contain a single character can be ignored; by
-default, however, they are included.
+  default, however, they are included.
 
 If, after ignoring any lines that are not eligible, the number of
 relevant lines is smaller than a given threshold then the file is
@@ -115,14 +115,14 @@ Configuration settings used at this stage:
 Files not touched by dtrt-indent:
 
 - Files that specify the corresponding variable
-(e.g. c-basic-offset) as a File Variable.
+  (e.g. c-basic-offset) as a File Variable.
 
 - Files that specify dtrt-indent-mode: 0 as a File Variable.
 
 - Files with a major mode that dtrt-indent doesn't hook into.
 
 - Files for which the indentation offset cannot be guessed
-reliably.
+  reliably.
 
 - Files for which `dtrt-indent-explicit-offset' is true; this can be
 - used in `.dir-locals.el' files, for example.
@@ -130,15 +130,15 @@ reliably.
 Limitations:
 
 - dtrt-indent can't deal well with files that use variable
-indentation offsets, e.g. files that use varying indentation
-based on the outer construct.
+  indentation offsets, e.g. files that use varying indentation
+  based on the outer construct.
 
 - dtrt-indent currently only supports a limited number of languages
-(major-modes).
+  (major-modes).
 
 - dtrt-indent only guesses the indendation offset, not the
-indentation style.  For instance, it does not detect whether a
-C-like file uses hanging braces or not.
+  indentation style.  For instance, it does not detect whether a
+  C-like file uses hanging braces or not.
 
 - dtrt-indent can't deal well with files that mix hard tabs with
 - spaces for indentation.

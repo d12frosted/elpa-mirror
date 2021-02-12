@@ -16,8 +16,8 @@ You probably will want to have a hotkey for showing the log
 buffer, so also add something like
 
 (global-set-key
-(kbd "C-h C-l")
-(lambda () (interactive) (display-buffer ilog-buffer-name)))
+ (kbd "C-h C-l")
+ (lambda () (interactive) (display-buffer ilog-buffer-name)))
 
 Alternatively, there is a command `ilog-show-in-new-frame' that
 you can use to display the log buffer in a little new frame whose

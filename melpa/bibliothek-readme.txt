@@ -9,18 +9,18 @@ Presently, bibliothek.el displays PDF files from directories in
 The functionality provided by this program is as such:
 
 - List PDF files from directories specified in ‘bibliothek-path’,
-recursively if ‘bibliothek-recursive’ is non-nil.
+  recursively if ‘bibliothek-recursive’ is non-nil.
 
-This list includes three columns: title, author, path.  Sorting
-based on these via clicking the table headers is possible.
+  This list includes three columns: title, author, path.  Sorting
+  based on these via clicking the table headers is possible.
 
 - Filter this list with ‘bibliothek-filter’
 
-Using this function, the list can be filtered.  Currently this is
-rather unsophisticated, and only allows matching a single regexp
-against all the metadata PDF-tools can fetch from a file, with a
-match being counted positive if any of the fields match.  More
-complex mechanisms for better filtering are planned.
+  Using this function, the list can be filtered.  Currently this is
+  rather unsophisticated, and only allows matching a single regexp
+  against all the metadata PDF-tools can fetch from a file, with a
+  match being counted positive if any of the fields match.  More
+  complex mechanisms for better filtering are planned.
 
 - View metadata of file under cursor.
 

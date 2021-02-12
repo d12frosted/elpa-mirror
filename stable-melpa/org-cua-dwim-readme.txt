@@ -1,8 +1,8 @@
 
-To use this, just put in load path and then:
+ To use this, just put in load path and then:
 
-(require 'org-cua-dwim)
-(org-cua-dwim-activate)
-To activate,
+ (require 'org-cua-dwim)
+ (org-cua-dwim-activate)
+ To activate,
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

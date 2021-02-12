@@ -7,12 +7,12 @@ CIDER is available as a package in melpa.org and stable.melpa.org.  First, make 
 enabled one of the repositories in your Emacs config:
 
 (add-to-list 'package-archives
-'("melpa" . "https://melpa.org/packages/"))
+             '("melpa" . "https://melpa.org/packages/"))
 
 or
 
 (add-to-list 'package-archives
-'("melpa-stable" . "https://stable.melpa.org/packages/") t)
+             '("melpa-stable" . "https://stable.melpa.org/packages/") t)
 
 Afterwards, installing CIDER is as easy as:
 

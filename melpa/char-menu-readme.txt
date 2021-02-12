@@ -7,18 +7,18 @@ use.
 Features:
 
 * it allows you organize all symbols you ever need into a hierarchy you
-define;
+  define;
 
 * in that tree-like structure most frequently used commands will require
-only one key-press, while others may get dedicated section (for
-example, “arrows”) so you first select that section and then you choose
-a symbol in it;
+  only one key-press, while others may get dedicated section (for
+  example, “arrows”) so you first select that section and then you choose
+  a symbol in it;
 
 * it makes sense to have paired characters in that menu, like “” (and for
-that matter arbitrary combinations of symbols);
+  that matter arbitrary combinations of symbols);
 
 * however insertion of paired characters will place the point between
-them;
+  them;
 
 * …and if you insert paired characters while some text is selected, they
-will wrap it.
+  will wrap it.

@@ -26,7 +26,7 @@ Enjoy! ;)
 
 Copy sr-speedbar.el to your load-path and add to your ~/.emacs
 
-(require 'sr-speedbar)
-(global-set-key (kbd "s-s") 'sr-speedbar-toggle)
+ (require 'sr-speedbar)
+ (global-set-key (kbd "s-s") 'sr-speedbar-toggle)
 
 ... or any key binding you like.

@@ -10,6 +10,6 @@ docs for that variable.
 
 Usage:
 
-(when (eq system-type 'darwin) (ns-auto-titlebar-mode))
+    (when (eq system-type 'darwin) (ns-auto-titlebar-mode))
 
 Note that it is safe to omit the "when" condition if you prefer.

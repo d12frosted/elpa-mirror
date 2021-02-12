@@ -6,11 +6,11 @@ be stored in.
 
 To use it, just load the file in your .emacs:
 
-(load "initsplit")
+  (load "initsplit")
 
 If you want configuration files byte-compiled, add this after it:
 
-(add-hook 'after-save-hook 'initsplit-byte-compile-files t)
+  (add-hook 'after-save-hook 'initsplit-byte-compile-files t)
 
 Note that that you *must* load each file that contains your various
 customizations from your .emacs.  Otherwise, the variables won't

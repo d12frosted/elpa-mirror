@@ -7,8 +7,8 @@ edit, mess, pick, base, drop, fold, and roll commits.
 This package provides the major-mode `hg-histedit-mode' which adds
 some additional keybindings.
 
-C-c C-c  Tell Hg to make it happen.
-C-c C-k  Tell Hg that you changed your mind, i.e. abort.
+  C-c C-c  Tell Hg to make it happen.
+  C-c C-k  Tell Hg that you changed your mind, i.e. abort.
 
 as well as shortkey commands to modify the changeset.
 

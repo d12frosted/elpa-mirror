@@ -5,4 +5,4 @@ from whencever you might acquire them).
 
 ; Installation:
 
-M-x package-install diffview
+    M-x package-install diffview

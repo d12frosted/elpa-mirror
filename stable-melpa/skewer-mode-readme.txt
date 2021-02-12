@@ -1,26 +1,26 @@
 Quick start (without package.el):
 
-1. Put this directory in your `load-path'
-2. Load skewer-mode.el
-3. M-x `run-skewer' to attach a browser to Emacs
-4. From a `js2-mode' buffer with `skewer-mode' minor mode enabled,
-send forms to the browser to evaluate
+ 1. Put this directory in your `load-path'
+ 2. Load skewer-mode.el
+ 3. M-x `run-skewer' to attach a browser to Emacs
+ 4. From a `js2-mode' buffer with `skewer-mode' minor mode enabled,
+    send forms to the browser to evaluate
 
 The function `skewer-setup' can be used to configure all of mode
 hooks (previously this was the default). This can also be done
 manually like so,
 
-(add-hook 'js2-mode-hook 'skewer-mode)
-(add-hook 'css-mode-hook 'skewer-css-mode)
-(add-hook 'html-mode-hook 'skewer-html-mode)
+    (add-hook 'js2-mode-hook 'skewer-mode)
+    (add-hook 'css-mode-hook 'skewer-css-mode)
+    (add-hook 'html-mode-hook 'skewer-html-mode)
 
 The keybindings for evaluating expressions in the browser are just
 like the Lisp modes. These are provided by the minor mode
 `skewer-mode'.
 
-* C-x C-e -- `skewer-eval-last-expression'
-* C-M-x   -- `skewer-eval-defun'
-* C-c C-k -- `skewer-load-buffer'
+ * C-x C-e -- `skewer-eval-last-expression'
+ * C-M-x   -- `skewer-eval-defun'
+ * C-c C-k -- `skewer-load-buffer'
 
 The result of the expression is echoed in the minibuffer.
 
@@ -46,12 +46,12 @@ any fragile browser state you might care about.
 
 To skewer your own document rather than the provided blank page,
 
-1. Load the dependencies
-2. Load skewer-mode.el
-3. Start the HTTP server (`httpd-start')
-4. Include "http://localhost:8080/skewer" as a script
-(see `example.html' and check your `httpd-port')
-5. Visit the document from your browser
+ 1. Load the dependencies
+ 2. Load skewer-mode.el
+ 3. Start the HTTP server (`httpd-start')
+ 4. Include "http://localhost:8080/skewer" as a script
+    (see `example.html' and check your `httpd-port')
+ 5. Visit the document from your browser
 
 Skewer fully supports CORS, so the document need not be hosted by
 Emacs itself. A Greasemonkey userscript and a bookmarklet are

@@ -5,4 +5,4 @@ Many thanks to the authors of puppet-mode.el, from where I found a
 useful indentation function that I've modified to suit this situation.
 
 Put this file into your load-path and the following into your ~/.emacs:
-(require 'nginx-mode)
+  (require 'nginx-mode)

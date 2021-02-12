@@ -6,27 +6,27 @@ Representing the point with "|", pressing a-z, A-Z, or 0-9 while
 the text is as below will call a command instead of inserting these
 characters:
 
-|* foo
-*|* bar
-|#+ baz
+  |* foo
+  *|* bar
+  |#+ baz
 
 As you see, the general theme is beginning of line + org markup.
 Below, "#+..." will be referred to as markup.
 Similar to vi, "hjkl" represent the arrow keys:
 
 - "j" moves down across headings and markup, but does not switch
-between either: use "h"/"l" for that. The exception is the first
-markup in the file that does not belong to any heading.
+  between either: use "h"/"l" for that. The exception is the first
+  markup in the file that does not belong to any heading.
 
 - "k" moves up across headings and markup, with same rules as "j".
 
 - "h" moves left, i.e. to the parent heading of current thing.
-You can use it e.g. to go from fifth level 3 heading to the
-parent level 2 heading, or from the second source block to the
-parent heading.
+  You can use it e.g. to go from fifth level 3 heading to the
+  parent level 2 heading, or from the second source block to the
+  parent heading.
 
 - "l" moves right (i.e. to the first child of current heading).
-You can use it to get to the first markup of current heading.
+  You can use it to get to the first markup of current heading.
 
 Worf borrows the idea of verbs and nouns from vi: the commands are
 sentences, combinations of a verb and a noun used together.
@@ -87,15 +87,15 @@ Verb #9 is `worf-mark-mode', bound to "m". It's similar to
 Some other things included in worf, that don't fit into the
 verb-noun structure, are:
 
-- "o" (`worf-ace-link'): open a link within current heading that's
-visible on screen. See https://github.com/abo-abo/ace-link for a
-package that uses this method in other modes.
+ - "o" (`worf-ace-link'): open a link within current heading that's
+   visible on screen. See https://github.com/abo-abo/ace-link for a
+   package that uses this method in other modes.
 
-- "g" (`worf-goto'): select an outline in the current buffer, with
-completion.  It's very good when you want to search/navigate to
-a heading by word or level. See https://github.com/abo-abo/lispy
-for a package that uses this method to navigate Lisp code.
+ - "g" (`worf-goto'): select an outline in the current buffer, with
+   completion.  It's very good when you want to search/navigate to
+   a heading by word or level. See https://github.com/abo-abo/lispy
+   for a package that uses this method to navigate Lisp code.
 
-- "L" (`worf-copy-heading-id'): copy the link to current heading
-to the kill ring. This may be useful when you want to create a
-lot of links.
+ - "L" (`worf-copy-heading-id'): copy the link to current heading
+   to the kill ring. This may be useful when you want to create a
+   lot of links.

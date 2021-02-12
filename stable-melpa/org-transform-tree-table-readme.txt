@@ -17,11 +17,11 @@ More about column view:
 
 ### From org tree to table
 
-;; Org outline to an org table
-M-x org-transform-tree/org-table-buffer-from-outline
+    ;; Org outline to an org table
+    M-x org-transform-tree/org-table-buffer-from-outline
 
-;; Org outline to CSV (or rather, tab-separated value)
-M-x org-transform-tree/csv-table-buffer-from-outline
+    ;; Org outline to CSV (or rather, tab-separated value)
+    M-x org-transform-tree/csv-table-buffer-from-outline
 
 If the region is active, convert that part of the
 tree. Otherwise, if point is on an org heading, convert that
@@ -39,17 +39,17 @@ the user has added to capture information).
 
 Special values that can't be represented in an org table are escaped:
 
-|                   ==> \vert{}
-first leading space ==> non-breaking space (C-x 8 SPC)
+    |                   ==> \vert{}
+    first leading space ==> non-breaking space (C-x 8 SPC)
 
 
 ### From table to org tree
 
-;; From an org table to an org outline
-M-x org-transform-table/org-tree-buffer-from-org-table
+    ;; From an org table to an org outline
+    M-x org-transform-table/org-tree-buffer-from-org-table
 
-;; From CSV (tab separated) to an org outline
-M-x org-transform-table/org-tree-buffer-from-csv
+    ;; From CSV (tab separated) to an org outline
+    M-x org-transform-table/org-tree-buffer-from-csv
 
 When converting from an org table, point must be on a table.
 
@@ -64,31 +64,31 @@ Tiny example
 
 This outline:
 
-* Pages
-:PROPERTIES:
-:COLUMNS:  %30ITEM %10Access %10Cost
-:END:
-** Products
-:PROPERTIES:
-:Access:   All
-:END:
-*** Free Widget
-:PROPERTIES:
-:Access:   All
-:END:
-*** Paid Thingy
-:PROPERTIES:
-:Access:   Paid
-:Cost:     30
-:END:
+    * Pages
+      :PROPERTIES:
+      :COLUMNS:  %30ITEM %10Access %10Cost
+      :END:
+    ** Products
+       :PROPERTIES:
+       :Access:   All
+       :END:
+    *** Free Widget
+        :PROPERTIES:
+        :Access:   All
+        :END:
+    *** Paid Thingy
+        :PROPERTIES:
+        :Access:   Paid
+        :Cost:     30
+        :END:
 
 Transforms into:
 
-| Heading         | Access | Cost | COLUMNS                   |
-| * Pages         |        |      | %30ITEM %10Access %10Cost |
-| ** Products     | All    |      |                           |
-| *** Free Widget | All    |      |                           |
-| *** Paid Thingy | Paid   |   30 |                           |
+    | Heading         | Access | Cost | COLUMNS                   |
+    | * Pages         |        |      | %30ITEM %10Access %10Cost |
+    | ** Products     | All    |      |                           |
+    | *** Free Widget | All    |      |                           |
+    | *** Paid Thingy | Paid   |   30 |                           |
 
 Note that the special property COLUMNS are out on the right, to be out
 of the way when the table is being edited in e.g. Excel or Open
@@ -106,11 +106,11 @@ Install org-transform-tree-table using MELPA.
 
 Or clone the repo into somewhere in the load-path.
 
-git clone https://github.com/jplindstrom/emacs-org-transform-tree-table.git
+    git clone https://github.com/jplindstrom/emacs-org-transform-tree-table.git
 
 and initialize with:
 
-(require 'org-transform-tree-table)
+   (require 'org-transform-tree-table)
 
 
 ; Changes

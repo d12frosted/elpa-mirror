@@ -48,15 +48,15 @@ Customization:
 If there are other functions you often use, maybe it´s advisable to save these function calls as bookmark. You can make your own bookmark functions. See the functions for file-bookmarks below.
 
 (defun simple-bookmarks-interactive-add-file (&optional name path more)
-(interactive "Sfile-bookmark name: \nffile-bookmark path:\ni")
-(simple-bookmarks-interactive-add name 'find-file (list path) more))
+  (interactive "Sfile-bookmark name: \nffile-bookmark path:\ni")
+  (simple-bookmarks-interactive-add name 'find-file (list path) more))
 
 The two functions below are just filtered versions of "simple-bookmarks-interactive-remove-file" and "simple-bookmarks-interactive-execute-file", so these are not really needed. If you want to provide them, of course you has to provide the corresponding filter.
 
 (defun simple-bookmarks-interactive-remove-file ()
-(interactive)
-(simple-bookmarks-interactive-remove 'simple-bookmarks-filters-file-bookmark-p))
+  (interactive)
+  (simple-bookmarks-interactive-remove 'simple-bookmarks-filters-file-bookmark-p))
 
 (defun simple-bookmarks-interactive-execute-file ()
-(interactive)
-(simple-bookmarks-interactive-execute 'simple-bookmarks-filters-file-bookmark-p))
+  (interactive)
+  (simple-bookmarks-interactive-execute 'simple-bookmarks-filters-file-bookmark-p))

@@ -4,7 +4,7 @@ shell commands to run in that buffer.  Simply pressing <RET> at
 
 To set it up you bind the definer to some key, e.g:
 
-(global-set-key (kbd "C-c C-t") #'quick-shell-keybind)
+    (global-set-key (kbd "C-c C-t") #'quick-shell-keybind)
 
 Using this will now start the prompt sequence.
 

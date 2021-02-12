@@ -26,4 +26,4 @@ Nothing.
 `gnus-x-gm-raw:imap-server'
 IMAP server of Gmail
 
-*** END auto-documentation
+ *** END auto-documentation

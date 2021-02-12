@@ -1,10 +1,10 @@
 
 Quickstart
 
-(require 'dynamic-fonts)
+    (require 'dynamic-fonts)
 
-(dynamic-fonts-setup)     ; finds "best" fonts and sets faces:
-; default, fixed-pitch, variable-pitch
+    (dynamic-fonts-setup)     ; finds "best" fonts and sets faces:
+                              ; default, fixed-pitch, variable-pitch
 
 Explanation
 
@@ -17,26 +17,26 @@ You may set a list of fonts in order of preference using customize.
 
 See Also
 
-M-x customize-group RET dynamic-fonts RET
-M-x customize-group RET font-utils RET
+    M-x customize-group RET dynamic-fonts RET
+    M-x customize-group RET font-utils RET
 
 Notes
 
 Compatibility and Requirements
 
-GNU Emacs version 24.4-devel     : yes, at the time of writing
-GNU Emacs version 24.3           : yes
-GNU Emacs version 23.3           : yes
-GNU Emacs version 22.3 and lower : no
+    GNU Emacs version 24.4-devel     : yes, at the time of writing
+    GNU Emacs version 24.3           : yes
+    GNU Emacs version 23.3           : yes
+    GNU Emacs version 22.3 and lower : no
 
-Requires font-utils.el
+    Requires font-utils.el
 
 Bugs
 
-Checking for font availability is slow on most systems.  This
-library can add up to several seconds to startup time.
-Workaround: where supported, font information will be cached
-to disk.  See customization options for font-utils.
+    Checking for font availability is slow on most systems.  This
+    library can add up to several seconds to startup time.
+    Workaround: where supported, font information will be cached
+    to disk.  See customization options for font-utils.
 
 TODO
 
@@ -48,14 +48,14 @@ Redistribution and use in source and binary forms, with or
 without modification, are permitted provided that the following
 conditions are met:
 
-1. Redistributions of source code must retain the above
-copyright notice, this list of conditions and the following
-disclaimer.
+   1. Redistributions of source code must retain the above
+      copyright notice, this list of conditions and the following
+      disclaimer.
 
-2. Redistributions in binary form must reproduce the above
-copyright notice, this list of conditions and the following
-disclaimer in the documentation and/or other materials
-provided with the distribution.
+   2. Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials
+      provided with the distribution.
 
 This software is provided by Roland Walker "AS IS" and any express
 or implied warranties, including, but not limited to, the implied

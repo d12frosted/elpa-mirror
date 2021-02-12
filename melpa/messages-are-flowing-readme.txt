@@ -18,4 +18,4 @@ parts of your message might be reflowed when the recipient reads it.
 To activate `messages-are-flowing', add the following to your .emacs:
 
 (with-eval-after-load "message"
-(add-hook 'message-mode-hook 'messages-are-flowing-use-and-mark-hard-newlines))
+  (add-hook 'message-mode-hook 'messages-are-flowing-use-and-mark-hard-newlines))

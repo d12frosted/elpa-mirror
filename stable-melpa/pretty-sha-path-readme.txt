@@ -6,15 +6,15 @@ There is also `global-pretty-sha-path-mode' for global prettifying.
 
 To install, add the following to your emacs init file:
 
-(add-to-list 'load-path "/path/to/pretty-sha-path")
-(autoload 'pretty-sha-path-mode "pretty-sha-path" nil t)
-(autoload 'global-pretty-sha-path-mode "pretty-sha-path" nil t)
+  (add-to-list 'load-path "/path/to/pretty-sha-path")
+  (autoload 'pretty-sha-path-mode "pretty-sha-path" nil t)
+  (autoload 'global-pretty-sha-path-mode "pretty-sha-path" nil t)
 
 If you want to enable/disable composition after "M-x font-lock-mode",
 use the following setting:
 
-(setq font-lock-extra-managed-props
-(cons 'composition font-lock-extra-managed-props))
+  (setq font-lock-extra-managed-props
+        (cons 'composition font-lock-extra-managed-props))
 
 Credits:
 

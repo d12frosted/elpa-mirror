@@ -3,8 +3,8 @@ Popwin makes you free from the hell of annoying buffers such like
 
 To use popwin, just add the following code into your .emacs:
 
-(require 'popwin)
-(popwin-mode 1)
+    (require 'popwin)
+    (popwin-mode 1)
 
 Then try to show some buffer, for example *Help* or
 *Completeions*.  Unlike standard behavior, their buffers may be
@@ -28,7 +28,7 @@ If you want to use some useful commands such like
 `popwin:popup-buffer' and `popwin:find-file' easily.  You may bind
 `popwin:keymap' to `C-z', for example, like:
 
-(global-set-key (kbd "C-z") popwin:keymap)
+    (global-set-key (kbd "C-z") popwin:keymap)
 
 See also `popwin:keymap' documentation.
 

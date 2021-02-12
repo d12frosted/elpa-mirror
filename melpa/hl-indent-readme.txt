@@ -17,13 +17,13 @@ If the minor mode `hl-indent-mode-blocks' is on, this mode will
 instead highlight blocks of indentation like so:
 
 xxxxxxxxxxxxxx
-oooooooooooo
-oooooooooooo
-*******
-*******
-**********
-oooooooooooo
-**********
+  oooooooooooo
+  oooooooooooo
+       *******
+       *******
+    **********
+  oooooooooooo
+    **********
 xxxxxxxxxxxxxx
 
 (where different symbols represent different colours).
@@ -42,17 +42,17 @@ Screenshot:
 Notes:
 
 - You can customize faces `hl-indent-face' (which is `fringe' by
-default), and also `hl-indent-block-face-1', from 1 to 6.
+  default), and also `hl-indent-block-face-1', from 1 to 6.
 
 - To easily see where `hl-indent-mode' puts its highlights, use the
-function `hl-indent--debug-faces' together with either
-`hl-indent-mode' or `hl-indent-mode-blocks'.
+  function `hl-indent--debug-faces' together with either
+  `hl-indent-mode' or `hl-indent-mode-blocks'.
 
 - FIXME The mode will refuse to turn on in a very very large file,
-because right now it examines every single line once, which can
-take too long.
+  because right now it examines every single line once, which can
+  take too long.
 
 - FIXME Indentation highlights override any non-trivial background.
-This is a problem for things like comments that might have a
-background different from the default background. It also
-conflicts with other highlights, like hl-line-mode.
+  This is a problem for things like comments that might have a
+  background different from the default background. It also
+  conflicts with other highlights, like hl-line-mode.

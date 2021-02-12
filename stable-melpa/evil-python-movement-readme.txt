@@ -8,4 +8,4 @@ I was explained that these tools wouldn't be available through
 Evil.  So, I implemented them myself.
 
 TL;DR: this is best explained looking at https://stackoverflow.com/a/28284564
-or the unit tests (not yet availaible)
+       or the unit tests (not yet availaible)

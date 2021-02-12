@@ -8,17 +8,17 @@ manipulate data within the template.
 (require 'templatel)
 
 (templatel-render-string
-"<h1>{{ title }}</h1>
+ "<h1>{{ title }}</h1>
 <ul>
-{% for user in users %}
-<li><a href=\"{{ user.url }}\">{{ user.name }}</a></li>
-{% endfor %}
+  {% for user in users %}
+    <li><a href=\"{{ user.url }}\">{{ user.name }}</a></li>
+  {% endfor %}
 </ul>"
-'(("title" . "A nice web page")
-("users" . ((("url" . "http://clarete.li")
-("name" . "link"))
-(("url" . "http://gnu.org")
-("name" . "Gnu!!"))))))
+ '(("title" . "A nice web page")
+   ("users" . ((("url" . "http://clarete.li")
+                ("name" . "link"))
+               (("url" . "http://gnu.org")
+                ("name" . "Gnu!!"))))))
 
 This library also provides template in heritance and automatic HTML
 entity escaping among other things.  Take a look at the

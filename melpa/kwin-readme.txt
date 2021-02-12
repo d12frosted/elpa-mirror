@@ -5,6 +5,6 @@ between scripts.
 
 This file contains
 
-* a major mode for displaying output and errors.
-* a minor mode for sending code portions or whole files from
-other buffers to KWin, `kwin-minor-mode'.
+  * a major mode for displaying output and errors.
+  * a minor mode for sending code portions or whole files from
+    other buffers to KWin, `kwin-minor-mode'.

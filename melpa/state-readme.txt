@@ -10,8 +10,8 @@ There is no predefined workspaces to switch to. To switch back and
 forth to the *Messages* buffer by pressing C-c s m:
 
 (state-define-state
-message
-:key "m"
-:switch "*Messages*")
+ message
+ :key "m"
+ :switch "*Messages*")
 
 See full documentation on https://github.com/thisirs/state#state

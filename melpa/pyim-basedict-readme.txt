@@ -12,13 +12,13 @@ pyim-basedict 是 pyim 输入法的默认词库，词库来源:
 超过300万，不适合计算机 cpu 和内存不足的用户）。用户也可以使用其它方式
 添加词库，具体请阅读 pyim README：
 
-https://github.com/tumashu/pyim
+        https://github.com/tumashu/pyim
 
 ** 安装和使用
 1. 配置melpa源，参考：http://melpa.org/#/getting-started
 2. M-x package-install RET pyim-basedict RET
 3. 在emacs配置文件中（比如: ~/.emacs）添加如下代码：
-#+BEGIN_EXAMPLE
-(require 'pyim-basedict)
-(pyim-basedict-enable)
-#+END_EXAMPLE
+   #+BEGIN_EXAMPLE
+   (require 'pyim-basedict)
+   (pyim-basedict-enable)
+   #+END_EXAMPLE

@@ -19,10 +19,10 @@ The math is available under the public domain.
 The following functions provide the conversions
 from RGB to/from HSLUV and HPLUV:
 
-(hsluv-hsluv-to-rgb (list H S Luv))
-(hsluv-hpluv-to-rgb (list H P Luv))
-(hsluv-rgb-to-hsluv (list R G B))
-(hsluv-rgb-to-hpluv (list R G B))
+  (hsluv-hsluv-to-rgb (list H S Luv))
+  (hsluv-hpluv-to-rgb (list H P Luv))
+  (hsluv-rgb-to-hsluv (list R G B))
+  (hsluv-rgb-to-hpluv (list R G B))
 
 ; Changelog
 

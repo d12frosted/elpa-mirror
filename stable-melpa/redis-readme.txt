@@ -6,4 +6,4 @@ Also offers a `redis-mode' for pseudo redis scripts which uses "#"
 (number sign) as comment line. You can send the pseudo scripts to
 redis removing the comments:
 
-$ grep -v '^#' myscript.redis | nc 127.0.0.1 6379
+     $ grep -v '^#' myscript.redis | nc 127.0.0.1 6379

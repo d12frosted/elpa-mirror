@@ -5,10 +5,10 @@ the `load-path' from the current process.
 Other values must be passed explicitly by making them part of the
 form, e.g. by writing
 
-(let ((my-int 10))
-(subemacs-eval `(+ 5 ',my-int)))
+    (let ((my-int 10))
+      (subemacs-eval `(+ 5 ',my-int)))
 
-=> 15
+        => 15
 
 `subemacs-eval' also supports errors raised by Emacs' `signal' and
 related functions, and displays messages emitted in the subprocess.
@@ -68,21 +68,21 @@ superset of the functionality of `subemacs.el', with
 `subemacs-eval'. However, a few complementary properties allow
 `subemacs.el' to remain useful.
 
-- `subemacs-eval' forwards the STDOUT and STDERR of the
-subprocess and allows access to the contents as a string.
-`async-sandbox' does not.
+  - `subemacs-eval' forwards the STDOUT and STDERR of the
+    subprocess and allows access to the contents as a string.
+    `async-sandbox' does not.
 
-- With `subemacs-byte-compile-file', the module contains a
-useful development tool, that is optimized for quickly
-checking against compiler warnings.
+  - With `subemacs-byte-compile-file', the module contains a
+    useful development tool, that is optimized for quickly
+    checking against compiler warnings.
 
-- On Windows at least, `async-sandbox' has more overhead.
+  - On Windows at least, `async-sandbox' has more overhead.
 
-(async-sandbox '(lambda ())) ; ≈ 0.75 seconds
-(subemacs-eval '(progn))     ; ≈ 0.35 seconds
+        (async-sandbox '(lambda ())) ; ≈ 0.75 seconds
+        (subemacs-eval '(progn))     ; ≈ 0.35 seconds
 
-- On Windows, I sometimes experience `async-sandbox' hanging,
-while I never had such a problem with `subemacs-eval'.
+  - On Windows, I sometimes experience `async-sandbox' hanging,
+    while I never had such a problem with `subemacs-eval'.
 
 
 <!--

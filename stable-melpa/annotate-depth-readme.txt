@@ -4,12 +4,12 @@ and disabled when exiting it. The face `annotate-depth-face' is applied at inden
 to end-of-line for each line on or beyond threshold.
 
 Usage:
-(add-hook 'prog-mode-hook 'annotate-depth-mode)
+  (add-hook 'prog-mode-hook 'annotate-depth-mode)
 
 The threshold can be fine-tuned for specific modes if necessary:
-(add-hook 'annotate-depth-mode-hook
-(lambda ()
-(if (equal major-mode 'emacs-lisp-mode)
-(setq-local annotate-depth-threshold 10)
-(when (equal major-mode 'c++-mode)
-(setq-local annotate-depth-threshold 4)))))
+  (add-hook 'annotate-depth-mode-hook
+              (lambda ()
+                (if (equal major-mode 'emacs-lisp-mode)
+                    (setq-local annotate-depth-threshold 10)
+                  (when (equal major-mode 'c++-mode)
+                    (setq-local annotate-depth-threshold 4)))))

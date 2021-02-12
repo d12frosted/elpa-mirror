@@ -5,21 +5,21 @@ other occurrences changed in the same way, with visual feedback as you type.
 
 `iedit-mode' is a great alternative of build-in replace commands:
 
-- A more intuitive way to alter all the occurrences at once
-- Visual feedback
-- Less keystrokes in most cases
+ - A more intuitive way to alter all the occurrences at once
+ - Visual feedback
+ - Less keystrokes in most cases
 
 Normal work flow of Iedit mode is like:
 
-- Move to certain point and press C-; (The default key binding).  All
-occurrences of a symbol, string or a region in the buffer are highlighted
-corresponding to the thing under the point, current mark and prefix argument.
-Refer to the document of `iedit-mode' for details.
+ - Move to certain point and press C-; (The default key binding).  All
+   occurrences of a symbol, string or a region in the buffer are highlighted
+   corresponding to the thing under the point, current mark and prefix argument.
+   Refer to the document of `iedit-mode' for details.
 
-- Edit one of the occurrences
-The change is applied to other occurrences simultaneously.
+ - Edit one of the occurrences
+   The change is applied to other occurrences simultaneously.
 
-- Finish - by pressing C-; again
+ - Finish - by pressing C-; again
 
 Many other work flows to highlight occurrences are possible, for example,
 activation from isearch, incremental selection and markup tag pair selection.
@@ -31,23 +31,23 @@ when in Iedit mode - it toggles hiding non-matching lines.
 
 `iedit-mode' is optimized for renaming refactoring in many ways:
 
-- The symbol under point is selected as occurrence by default and only complete
-symbols are matched
+ - The symbol under point is selected as occurrence by default and only complete
+   symbols are matched
 
-- With digit prefix argument 0, only occurrences in current function are matched
+ - With digit prefix argument 0, only occurrences in current function are matched
 
-- Restricting symbols in current region can be done by pressing C-; again
+ - Restricting symbols in current region can be done by pressing C-; again
 
-- Last renaming refactoring is remembered and can be applied to other buffers
-later
+ - Last renaming refactoring is remembered and can be applied to other buffers
+   later
 
-- Restricting the search area to just the current line can be done by
-pressing M-I.
+ - Restricting the search area to just the current line can be done by
+   pressing M-I.
 
-- Restricting the search area to the lines near the current line can
-be done by pressing M-{ and M-}. These will expand the search
-region one line at a time from the top and bottom.  Add a prefix
-argument to go the opposite direction.
+ - Restricting the search area to the lines near the current line can
+   be done by pressing M-{ and M-}. These will expand the search
+   region one line at a time from the top and bottom.  Add a prefix
+   argument to go the opposite direction.
 
 Iedit-rectangle-mode provides rectangle support with *visible rectangle*
 highlighting, which is similar with cua mode rectangle support.  But it's

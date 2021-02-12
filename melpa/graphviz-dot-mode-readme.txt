@@ -3,7 +3,7 @@ https://www.graphviz.org.
 
 To use graphviz-dot-mode, add
 (use-package graphviz-dot-mode
-:ensure t)
+  :ensure t)
 to your ~/.emacs.el file.
 
 The graphviz-dot-mode will do font locking, indentation, preview of

@@ -1,6 +1,6 @@
 Usage:
-(require 'flymake-css)
-(add-hook 'css-mode-hook 'flymake-css-load)
+  (require 'flymake-css)
+  (add-hook 'css-mode-hook 'flymake-css-load)
 
 Beware that csslint is quite slow, so there can be a significant lag
 between editing and the highlighting of resulting errors.

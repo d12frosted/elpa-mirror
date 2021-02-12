@@ -13,13 +13,13 @@ insert themselves.
 
 Example, here "|" represents the point position:
 
-print |("2+2=%d" % (2 + 2))
+   print |("2+2=%d" % (2 + 2))
 
 Here, if you press the key "e", the whole line will be evaluated
 and "2+2=4" will be printed in the Echo Area.  Note that if
 `lpy-mode' was off, pressing "e" would instead result in:
 
-print e|("2+2=%d" % (2 + 2))
+   print e|("2+2=%d" % (2 + 2))
 
 So inserting any key isn't actually useful with that point position
 and e.g. the "e" can be used for evaluating the current statement.

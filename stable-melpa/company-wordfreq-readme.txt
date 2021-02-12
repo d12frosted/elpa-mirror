@@ -25,9 +25,9 @@ systems.  On windows you might have to tweak it somehow.
 achieved by setting the variables `company-backends' and
 `company-transformers' buffer locally in `text-mode' buffers by
 
-(add-hook 'text-mode-hook (lambda ()
-(setq-local company-backends '(company-wordfreq))
-(setq-local company-transformers nil)))
+    (add-hook 'text-mode-hook (lambda ()
+                             (setq-local company-backends '(company-wordfreq))
+                             (setq-local company-transformers nil)))
 
 Usually you don't need to configure the language picked to get the word
 completions.  `company-wordfreq' uses the variable
@@ -37,7 +37,7 @@ completions.  `company-wordfreq' uses the variable
 
 To download a word list use
 
-M-x company-wordfreq-download-list
+    M-x company-wordfreq-download-list
 
 You are presented a list of languages to choose.  For some languages the
 word lists are huge, which can lead to noticeable latency when the

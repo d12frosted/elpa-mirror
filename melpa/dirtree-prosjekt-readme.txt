@@ -6,7 +6,7 @@ project root.
 To activate this function, add dirtree-prosjekt.el to your load
 path and add
 
-(require 'dirtree-prosjekt)
+  (require 'dirtree-prosjekt)
 
 to your emacs config.
 

@@ -4,4 +4,4 @@ details list.
 
 The latest protocols.el is always available from:
 
-<URL:https://github.com/davep/protocols.el>
+  <URL:https://github.com/davep/protocols.el>

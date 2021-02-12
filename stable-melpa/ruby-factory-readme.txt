@@ -5,4 +5,4 @@ Allows one to switch between factory and backing class via `ruby-factory-switch-
 YASnippet snippets are provided for all supported libraries.
 
 To enable the mode automatically add a `ruby-mode-hook`:
-(add-hook 'ruby-mode-hook 'ruby-factory-mode)
+ (add-hook 'ruby-mode-hook 'ruby-factory-mode)

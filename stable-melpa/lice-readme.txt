@@ -12,7 +12,7 @@ Usage
 Usage is very easy, put `lice.el` in your Emacs system, and open a new
 file, and run:
 
-M-x lice
+    M-x lice
 
 Then, `lice.el` tell to use which license (default is gpl-3.0).  You
 can select license on minibuffer completion.

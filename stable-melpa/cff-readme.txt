@@ -10,8 +10,8 @@ Add the following to your .emacs file:
 ;; defines shortcut for find source/header file for the current
 ;; file
 (add-hook 'c++-mode-hook
-'(lambda ()
-(define-key c-mode-base-map (kbd "M-o") 'cff-find-other-file)))
+          '(lambda ()
+             (define-key c-mode-base-map (kbd "M-o") 'cff-find-other-file)))
 (add-hook 'c-mode-hook
-'(lambda ()
-(define-key c-mode-base-map (kbd "M-o") 'cff-find-other-file)))
+          '(lambda ()
+             (define-key c-mode-base-map (kbd "M-o") 'cff-find-other-file)))

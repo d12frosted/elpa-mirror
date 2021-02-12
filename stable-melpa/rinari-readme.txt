@@ -26,5 +26,5 @@ Note: if you cloned this from a git repo, you will have to grab the
 submodules which can be done by running the following commands from
 the root of the rinari directory
 
-git submodule init
-git submodule update
+ git submodule init
+ git submodule update

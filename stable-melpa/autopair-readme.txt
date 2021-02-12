@@ -12,8 +12,8 @@ pair, skip or delete.
 
 ; Installation:
 
-(require 'autopair)
-(autopair-global-mode) ;; to enable in all buffers
+  (require 'autopair)
+  (autopair-global-mode) ;; to enable in all buffers
 
 To enable autopair in just some types of buffers, comment out the
 `autopair-global-mode' and put autopair-mode in some major-mode
@@ -27,7 +27,7 @@ emacs < 24), or just using (autopair-mode -1) (for emacs >= 24)
 like:
 
 (add-hook 'c-mode-common-hook
-#'(lambda ()
-(setq autopair-dont-activate t)
-(autopair-mode -1)))
+          #'(lambda ()
+            (setq autopair-dont-activate t)
+            (autopair-mode -1)))
 

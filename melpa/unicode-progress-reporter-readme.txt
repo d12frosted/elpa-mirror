@@ -1,12 +1,12 @@
 
 Quickstart
 
-(require 'unicode-progress-reporter)
+    (require 'unicode-progress-reporter)
 
-(unicode-progress-reporter-setup)
+    (unicode-progress-reporter-setup)
 
-;; to see a demo
-(unicode-progress-reporter-test)
+    ;; to see a demo
+    (unicode-progress-reporter-test)
 
 Explanation
 
@@ -17,26 +17,26 @@ To use unicode-progress-reporter, place the
 unicode-progress-reporter.el library somewhere Emacs can
 find it, and add the following to your ~/.emacs file:
 
-(require 'unicode-progress-reporter)
-(unicode-progress-reporter-setup)
+    (require 'unicode-progress-reporter)
+    (unicode-progress-reporter-setup)
 
 See Also
 
-M-x customize-group RET unicode-progress-reporter RET
+    M-x customize-group RET unicode-progress-reporter RET
 
 Notes
 
-redefines `progress-reporter-do-update'
+    redefines `progress-reporter-do-update'
 
-alters private variable `progress-reporter--pulse-characters'
+    alters private variable `progress-reporter--pulse-characters'
 
 Compatibility and Requirements
 
-GNU Emacs version 24.4-devel     : yes, at the time of writing
-GNU Emacs version 24.3           : yes
-GNU Emacs version 23.3 and lower : no
+    GNU Emacs version 24.4-devel     : yes, at the time of writing
+    GNU Emacs version 24.3           : yes
+    GNU Emacs version 23.3 and lower : no
 
-Requires ucs-utils.el
+    Requires ucs-utils.el
 
 Bugs
 

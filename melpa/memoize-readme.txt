@@ -3,15 +3,15 @@ symbol's function definition is memoized and installed overtop of
 the original function definition. When given a function, it returns
 a memoized version of that function.
 
-(memoize 'my-expensive-function)
+    (memoize 'my-expensive-function)
 
 `defmemoize' defines a memoized function directly, behaving just
 like `defun'.
 
-(defmemoize my-expensive-function (n)
-(if (zerop n)
-1
-(* n (my-expensive-function (1- n)))))
+    (defmemoize my-expensive-function (n)
+      (if (zerop n)
+          1
+        (* n (my-expensive-function (1- n)))))
 
 Memoizing an interactive function will render that function
 non-interactive. It would be easy to fix this problem when it comes

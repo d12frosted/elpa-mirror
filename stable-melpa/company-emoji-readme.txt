@@ -24,12 +24,12 @@ you’ll need to add something like this to your init file (thanks to
 
 ```elisp
 (defun --set-emoji-font (frame)
-"Adjust the font settings of FRAME so Emacs can display emoji properly."
-(if (eq system-type 'darwin)
-;; For NS/Cocoa
-(set-fontset-font t 'symbol (font-spec :family "Apple Color Emoji") frame 'prepend)
-;; For Linux
-(set-fontset-font t 'symbol (font-spec :family "Symbola") frame 'prepend)))
+  "Adjust the font settings of FRAME so Emacs can display emoji properly."
+  (if (eq system-type 'darwin)
+      ;; For NS/Cocoa
+      (set-fontset-font t 'symbol (font-spec :family "Apple Color Emoji") frame 'prepend)
+    ;; For Linux
+    (set-fontset-font t 'symbol (font-spec :family "Symbola") frame 'prepend)))
 
 ;; For when Emacs is started in GUI mode:
 (--set-emoji-font nil)
@@ -45,7 +45,7 @@ apt-get install ttf-ancient-fonts
 ```
 
 **NB:** The `set-fontset-font` function is apparently only available
-when Emacs has been compiled with a window system.
+ when Emacs has been compiled with a window system.
 
 ### custom variables
 
@@ -59,7 +59,7 @@ taste:
 ```
 Hide Company Emoji Aliases:
 [INS] [DEL] Symbol: :woman_man_holding_hands:
-String: :couple:
+            String: :couple:
 [INS]
 ```
 

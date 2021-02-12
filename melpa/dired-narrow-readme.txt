@@ -12,11 +12,11 @@ available.  You can customize the binding by changing
 `dired-narrow-map'.
 
 * `dired-narrow-next-file' (<down> or C-n) - move the point to the
-next file
+  next file
 * `dired-narrow-previous-file' (<up> or C-p) - move the point to the
-previous file
+  previous file
 * `dired-narrow-enter-directory' (<right> or C-j) - descend into the
-directory under point and immediately go back to narrowing mode
+  directory under point and immediately go back to narrowing mode
 
 You can customize what happens after exiting the live filtering
 mode by customizing `dired-narrow-exit-action'.

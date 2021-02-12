@@ -11,8 +11,8 @@ OR
 
 (global-robe-mode)
 
-- M-. to jump to the definition
-- M-, to jump back
-- C-c C-d to see the documentation
-- C-c C-k to refresh Rails environment
-- C-M-i to complete the symbol at point
+ - M-. to jump to the definition
+ - M-, to jump back
+ - C-c C-d to see the documentation
+ - C-c C-k to refresh Rails environment
+ - C-M-i to complete the symbol at point

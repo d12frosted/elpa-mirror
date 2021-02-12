@@ -197,21 +197,21 @@ manually in your Emacs initialization file.
 Most users will have five variables that need to be configured
 before use:
 
-- ‘snitch-network-policy’ -- whether to allow or deny network
+ - ‘snitch-network-policy’ -- whether to allow or deny network
 connections by default.
 
-- ‘snitch-process-policy’ -- whether to allow or deny subprocesses
+ - ‘snitch-process-policy’ -- whether to allow or deny subprocesses
 by default.
 
-- ‘snitch-log-policy’ -- which events to log (to see the options,
+ - ‘snitch-log-policy’ -- which events to log (to see the options,
 run ‘M-x describe-variable <RET> snitch-log-policies’)
 
-- ‘snitch-network-*list’ -- filter rules containing exceptions to
+ - ‘snitch-network-*list’ -- filter rules containing exceptions to
 the default network policy.  See FILTER RULES below.  Use
 ‘-whitelist’ if the default policy is ‘deny’, or ‘-blacklist’ if
 the default policy is ‘allow’
 
-- ‘snitch-process-*list’ -- filter rules containing exceptions to
+ - ‘snitch-process-*list’ -- filter rules containing exceptions to
 the default process policy.  See FILTER RULES below.  Use
 ‘-whitelist’ if the default policy is ‘deny’, or ‘-blacklist’ if
 the default policy is ‘allow’
@@ -491,12 +491,12 @@ to the socket.
 
 === TODO ===
 
-- send notifications in batches?
-- interactive prompts?
-- handle service strings as port numbers
-- ensure the inverted negation rules make sense
-- add blacklist for timer functions
-- profit!
+ - send notifications in batches?
+ - interactive prompts?
+ - handle service strings as port numbers
+ - ensure the inverted negation rules make sense
+ - add blacklist for timer functions
+ - profit!
 
 
 === VERSION HISTORY ===
@@ -505,29 +505,29 @@ v0.3.1 (development)
 
 v0.3.0 (2021-02-02)
 
-- published on MELPA
-- make snitch a global minor mode
-- introduce (snitch-mode)
-- make (snitch-init) private (snitch--init)
-- make (snitch-deinit) private (snitch--deinit)
-- add init and deinit hooks
-- customizable keymap for log filter wizard
-- fixed several byte compiler warnings
+  - published on MELPA
+  - make snitch a global minor mode
+    - introduce (snitch-mode)
+    - make (snitch-init) private (snitch--init)
+    - make (snitch-deinit) private (snitch--deinit)
+  - add init and deinit hooks
+  - customizable keymap for log filter wizard
+  - fixed several byte compiler warnings
 
 v0.2.0 (2020-12-09)
 
-- first published version
+  - first published version
 
 v0.1.0 (before 2020-12-09)
 
-- Initial development and testing
-- Network and process firewall functionality
-- Audit logging
-- Whitelist + blacklist filtering
-- Backtrace processing
-- Timer backtrace expansion
-- User event and logging hooks
-- ert test framework
+  - Initial development and testing
+  - Network and process firewall functionality
+  - Audit logging
+  - Whitelist + blacklist filtering
+  - Backtrace processing
+  - Timer backtrace expansion
+  - User event and logging hooks
+  - ert test framework
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

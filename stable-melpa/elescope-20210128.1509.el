@@ -5,7 +5,7 @@
 ;; Author: Stéphane Maniaci <stephane.maniaci@gmail.com>
 ;; URL: https://github.com/freesteph/elescope
 ;; Package-Version: 20210128.1509
-;; Package-Commit: 44dc8135d10d1f8b741dd35494a26887bf513f9d
+;; Package-Commit: cd3ce082e47c0c13cfce34e6f6957c2275f9416b
 ;; Package-Requires: ((emacs "25.1") (ivy "0.10") (request "0.3") (seq "2.0"))
 ;; Keywords: vc
 ;; Version: 0.2

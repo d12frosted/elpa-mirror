@@ -17,8 +17,8 @@ M-x howdoi-query-line-at-point ;; takes a query from a line at point
 
 To get an answer containing only code snippet you could use:
 M-x howdoi-query-line-at-point-replace-by-code-snippet
-this command replaces current line with a code snippet
-parsed from an answer.
+    this command replaces current line with a code snippet
+    parsed from an answer.
 
 In case of last command you could get situation when it returns not
 good enough code snippet. Or may be after that command you would

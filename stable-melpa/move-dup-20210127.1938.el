@@ -18,7 +18,7 @@
 ;; Author: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
 ;; Version: 2.0.0
 ;; Package-Version: 20210127.1938
-;; Package-Commit: f69e88f0f688d0e44bc56d60e4051cf7a23b4d78
+;; Package-Commit: 5906503e0b9b832b1d5062c9cd27cf72a2ce4817
 ;; Created: 11 June 2014
 ;; Url: https://github.com/wyuenho/move-dup
 ;; Package-Requires: ((emacs "25.1"))

@@ -13,16 +13,16 @@ happy.
 Available commands:
 
 - `cabledolphin-trace-new-connections': start capturing packets for
-any new connections whose name matches a certain regexp.
+  any new connections whose name matches a certain regexp.
 
 - `cabledolphin-trace-existing-connection': start capturing packets
-for an existing connection.
+  for an existing connection.
 
 - `cabledolphin-set-pcap-file': change the file that data is
-written to.
+  written to.
 
 - `cabledolphin-stop': stop capturing, and stop matching new
-connections.
+  connections.
 
 If you prefer output in "classic" PCAP format, set
 `cabledolphin-output-type' to `pcap' before calling

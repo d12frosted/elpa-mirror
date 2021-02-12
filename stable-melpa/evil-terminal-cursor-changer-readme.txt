@@ -14,18 +14,18 @@ When running in terminal, It's especially helpful to recognize evil's state.
 
 3. Add code to your emacs config file:（for example: ~/.emacs）：
 
-(unless (display-graphic-p)
-(require 'evil-terminal-cursor-changer)
-(evil-terminal-cursor-changer-activate) ; or (etcc-on)
-)
+     (unless (display-graphic-p)
+             (require 'evil-terminal-cursor-changer)
+             (evil-terminal-cursor-changer-activate) ; or (etcc-on)
+             )
 
 If want change cursor shape type, add below line. This is evil's setting.
 
-(setq evil-motion-state-cursor 'box)  ; █
-(setq evil-visual-state-cursor 'box)  ; █
-(setq evil-normal-state-cursor 'box)  ; █
-(setq evil-insert-state-cursor 'bar)  ; ⎸
-(setq evil-emacs-state-cursor  'hbar) ; _
+     (setq evil-motion-state-cursor 'box)  ; █
+     (setq evil-visual-state-cursor 'box)  ; █
+     (setq evil-normal-state-cursor 'box)  ; █
+     (setq evil-insert-state-cursor 'bar)  ; ⎸
+     (setq evil-emacs-state-cursor  'hbar) ; _
 
 Now, works in XTerm, Gnome Terminal(Gnome Desktop), iTerm(Mac OS
 X), Konsole(KDE Desktop), dumb(etc. mintty), Apple

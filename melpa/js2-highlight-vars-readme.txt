@@ -8,7 +8,7 @@ scope.
 Install this package from MELPA using `M-x install-package` and put
 the following in your ~/.emacs.d/init.el:
 (eval-after-load "js2-highlight-vars-autoloads"
-'(add-hook 'js2-mode-hook (lambda () (js2-highlight-vars-mode))))
+  '(add-hook 'js2-mode-hook (lambda () (js2-highlight-vars-mode))))
 
 If you aren't already using MELPA, see:
 http://melpa.milkbox.net/#/getting-started

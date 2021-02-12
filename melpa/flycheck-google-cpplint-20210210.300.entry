@@ -1,0 +1,11 @@
+(flycheck-google-cpplint .
+			 [(20210210 300)
+			  ((flycheck
+			    (0 20 -4 1)))
+			  "Help to comply with the Google C++ Style Guide" single
+			  ((:commit . "6e2bc77da6e2a8812246b4717d97b68675ed84f1")
+			   (:authors
+			    ("Akiha Senda" . "senda.akiha@gmail.com"))
+			   (:maintainer "Jen-Chieh Shen" . "jcs090218@gmail.com")
+			   (:keywords "flycheck" "c" "c++")
+			   (:url . "https://github.com/flycheck/flycheck-google-cpplint/"))])

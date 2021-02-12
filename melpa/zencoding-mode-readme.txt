@@ -6,13 +6,13 @@ See `zencoding-mode' for more information.
 
 Copy zencoding-mode.el to your load-path and add to your .emacs:
 
-(require 'zencoding-mode)
+   (require 'zencoding-mode)
 
 Example setup:
 
-(add-to-list 'load-path "~/Emacs/zencoding/")
-(require 'zencoding-mode)
-(add-hook 'sgml-mode-hook 'zencoding-mode) ;; Auto-start on any markup modes
+   (add-to-list 'load-path "~/Emacs/zencoding/")
+   (require 'zencoding-mode)
+   (add-hook 'sgml-mode-hook 'zencoding-mode) ;; Auto-start on any markup modes
 
 Enable the minor mode with M-x zencoding-mode.
 

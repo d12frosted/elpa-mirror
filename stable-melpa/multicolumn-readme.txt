@@ -41,8 +41,8 @@ Place this package in a directory in the load-path. To activate it,
 use *customize* or place the following lines in a suitable init
 file:
 
-(require 'multicolumn)
-(multicolumn-global-mode 1)
+   (require 'multicolumn)
+   (multicolumn-global-mode 1)
 
 Creating side-by-side windows:
 
@@ -81,7 +81,7 @@ previous windows. This package does not provide a function to
 select the next. However, it binds `C-x 4 n' to `other-window'.
 
 * `C-x 4 DIGIT' (`multicolumn-select-window-number') go to window
-number DIGIT, where 1 is the leftmost.
+  number DIGIT, where 1 is the leftmost.
 
 * `C-x 4 :' (`multicolumn-select-minibuffer') go to the minibuffer.
 
@@ -126,12 +126,12 @@ functions only return the dimensions of the primary monitor, in
 some Emacs versions. To make this package use the full display, you
 can do something like:
 
-(defun my-display-pixel-width ()
-;; The full width of the display
-3200)
+    (defun my-display-pixel-width ()
+      ;; The full width of the display
+      3200)
 
-(setq multicolumn-display-pixel-width-function
-'my-display-pixel-width)
+    (setq multicolumn-display-pixel-width-function
+          'my-display-pixel-width)
 
 OS X Notes:
 

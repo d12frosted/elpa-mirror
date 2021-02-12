@@ -41,8 +41,8 @@ that one might learn to like them too much.
 
 The latest version is available at:
 
-<https://github.com/hniksic/emacs-htmlize>
-<https://code.orgmode.org/mirrors/emacs-htmlize>
+       <https://github.com/hniksic/emacs-htmlize>
+       <https://code.orgmode.org/mirrors/emacs-htmlize>
 
 
 Thanks go to the many people who have sent reports and contributed
@@ -51,4 +51,4 @@ Weiner, Toni Drabik, Peter Breton, Ville Skytta, Thomas Vogels,
 Juri Linkov, Maciek Pasternacki, and many others.
 
 User quotes: "You sir, are a sick, sick, _sick_ person. :)"
--- Bill Perry, author of Emacs/W3
+                 -- Bill Perry, author of Emacs/W3

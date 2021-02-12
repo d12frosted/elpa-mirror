@@ -13,8 +13,8 @@ EasyMotion. It really attract me a lot. So I decide to write
 one for Emacs and MAKE IT BETTER.
 
 So I want to thank to :
-Bartlomiej P.   for his PreciseJump
-Kim Silkebækken for his EasyMotion
+        Bartlomiej P.   for his PreciseJump
+        Kim Silkebækken for his EasyMotion
 
 
 What's ace-jump-mode ?
@@ -35,10 +35,10 @@ the key that you prefer to.
 ;;
 (add-to-list 'load-path "/full/path/where/ace-jump-mode.el/in/")
 (autoload
-'ace-jump-mode
-"ace-jump-mode"
-"Emacs quick move minor mode"
-t)
+  'ace-jump-mode
+  "ace-jump-mode"
+  "Emacs quick move minor mode"
+  t)
 ;; you can select the key you prefer to
 (define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
@@ -46,12 +46,12 @@ t)
 ;; enable a more powerful jump back function from ace jump mode
 ;;
 (autoload
-'ace-jump-mode-pop-mark
-"ace-jump-mode"
-"Ace jump back:-)"
-t)
+  'ace-jump-mode-pop-mark
+  "ace-jump-mode"
+  "Ace jump back:-)"
+  t)
 (eval-after-load "ace-jump-mode"
-'(ace-jump-mode-enable-mark-sync))
+  '(ace-jump-mode-enable-mark-sync))
 (define-key global-map (kbd "C-x SPC") 'ace-jump-mode-pop-mark)
 
 ;;If you use viper mode :

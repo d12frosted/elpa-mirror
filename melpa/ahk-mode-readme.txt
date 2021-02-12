@@ -59,8 +59,8 @@ existing issues :
 
 paren broken across multiple lines
 DllCall("SetWindowPos", "uint", Window%PrevRowText%, "uint", Window%PPrevRowText%
-, "int", 0, "int", 0, "int", 0, "int", 0
-, "uint", 0x13)  ; NOSIZE|NOMOVE|NOACTIVATE (0x1|0x2|0x10)
+        , "int", 0, "int", 0, "int", 0, "int", 0
+          , "uint", 0x13)  ; NOSIZE|NOMOVE|NOACTIVATE (0x1|0x2|0x10)
 
 
 ; HISTORY

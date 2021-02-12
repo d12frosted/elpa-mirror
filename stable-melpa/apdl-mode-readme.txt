@@ -12,7 +12,7 @@ targeted for Ansys users with little Emacs experience.  An online
 version of its documention can be found at
 https://dieter-wilhelm.github.io/apdl-mode/.
 
-The code is available on
-https://github.com/dieter-wilhelm/apdl-mode/.  Regarding
-installation and further information please consult the
-accompanying README.org file.
+ The code is available on
+ https://github.com/dieter-wilhelm/apdl-mode/.  Regarding
+ installation and further information please consult the
+ accompanying README.org file.

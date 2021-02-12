@@ -35,7 +35,7 @@ Pallet is currently tested with Emacs versions 24.3 through 24.4.
 ##Use
 Pallet has a very simple interface:
 - `M-x pallet-init` creates a Cask file using information about
-installed packages from the package.el system
+  installed packages from the package.el system
 - `M-x pallet-install` installs packages listed in your Cask file
 - `M-x pallet-update` updates installed packages
 
@@ -54,42 +54,42 @@ After installing Cask, there are two ways you can go, depending on
 your situation:
 
 1. **I have a working Emacs install, with packages already installed,
-and can access [Melpa](http://melpa.org).**
+   and can access [Melpa](http://melpa.org).**
 
-In this case run `M-x list-packages`, and install pallet.  Then,
-run `M-x pallet-init`. Now you have a Cask file in your emacs.d
-directory which contains listings for all files you've previously
-installed via `package-install`. Run `M-x pallet-install`, and your
-.emacs.d/elpa directory will be replicated under .emacs.d/.cask/.
+   In this case run `M-x list-packages`, and install pallet.  Then,
+   run `M-x pallet-init`. Now you have a Cask file in your emacs.d
+   directory which contains listings for all files you've previously
+   installed via `package-install`. Run `M-x pallet-install`, and your
+   .emacs.d/elpa directory will be replicated under .emacs.d/.cask/.
 
-You can if you wish now delete your .emacs.d/elpa directory, and
-remove any lines from your init.el adding archives to
-`package-archive`, or running `package-initialize`.
+   You can if you wish now delete your .emacs.d/elpa directory, and
+   remove any lines from your init.el adding archives to
+   `package-archive`, or running `package-initialize`.
 
 2. **I have a newly installed Emacs and/or am not set up to access
-Melpa.**
+   Melpa.**
 
-In this case, create a file called `Cask` in your emacs.d
-directory. Add the following lines to it:
+   In this case, create a file called `Cask` in your emacs.d
+   directory. Add the following lines to it:
 
-```lisp
-(source melpa)
+   ```lisp
+   (source melpa)
 
-(depends-on "pallet")
-```
+   (depends-on "pallet")
+   ```
 
-Then, in terminal and in your emacs.d directory, run
+   Then, in terminal and in your emacs.d directory, run
 
-```
-cask install
-```
+   ```
+   cask install
+   ```
 
-This will create a .cask directory inside your .emacs.d directory,
-initialize a package directory under .emacs.d/.cask/, and install
-pallet to it.
+   This will create a .cask directory inside your .emacs.d directory,
+   initialize a package directory under .emacs.d/.cask/, and install
+   pallet to it.
 
 **Finally, make sure the following lines are in your init.el, before any
-packages are required:**
+  packages are required:**
 
 ```lisp
 (require 'cask "<path-to-cask>/cask.el")

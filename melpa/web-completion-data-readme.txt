@@ -14,6 +14,6 @@ html-tag-short-docs  - tags documantation
 If you decide extend with own completion data, let say "Bootstrap" data:
 
 (unless (assoc "Bootstrap" web-completion-data-sources)
-(setq web-completion-data-sources
-(cons (cons "Bootstrap" "/path/to/complete/data")
-web-completion-data-sources)))
+  (setq web-completion-data-sources
+        (cons (cons "Bootstrap" "/path/to/complete/data")
+              web-completion-data-sources)))

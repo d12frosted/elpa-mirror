@@ -9,13 +9,13 @@ with indenting and code navigation support.
 
 These file extensions are mapped to the following major modes:
 
-.dat .fis .fin  :  itasca-general-mode
-.fdat           :  itasca-flac-mode
-.f3dat          :  itasca-flac3d-mode
-.udat           :  itasca-udec-mode
-.pdat           :  itasca-pfc-mode
-.p3dat .p2dat   :  itasca-pfc5-mode
-.3ddat          :  itasca-3dec-mode
+ .dat .fis .fin  :  itasca-general-mode
+ .fdat           :  itasca-flac-mode
+ .f3dat          :  itasca-flac3d-mode
+ .udat           :  itasca-udec-mode
+ .pdat           :  itasca-pfc-mode
+ .p3dat .p2dat   :  itasca-pfc5-mode
+ .3ddat          :  itasca-3dec-mode
 
 itasca-general-mode does not have any code-specific keyword/FISH
 highlighting. To associate a specific file extension with a

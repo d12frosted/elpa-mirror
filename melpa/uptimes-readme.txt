@@ -5,4 +5,4 @@ uptimes of your Emacs sessions. Simply loading uptimes.el from your
 
 The latest version of uptimes.el can be found at:
 
-<URL:https://github.com/davep/uptimes.el>
+  <URL:https://github.com/davep/uptimes.el>

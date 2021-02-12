@@ -41,39 +41,39 @@ CONFIGURATION LAYOUT
 
 Smotitah structures the Emacs configuration as follows:
 
-.emacs.d/
-+ profiles/
-+ modules/
-+ packages/
+  .emacs.d/
+     + profiles/
+     + modules/
+     + packages/
 
 A profile file has the following structure:
 ----------------------------------------------------------------------
 (sm-profile-pre (profile-name)
-;; code to be executed *before* loading the modules
-)
+  ;; code to be executed *before* loading the modules
+  )
 
 ;;; Modules to activate,
 (sm-require-modules "C" "Python")
 
 (sm-profile-post (job)
-;; Code to be executed *after* loading the modules
-)
+ ;; Code to be executed *after* loading the modules
+  )
 ----------------------------------------------------------------------
 
 A module file has the following structure (example: C programming):
 ----------------------------------------------------------------------
 (sm-module C
-:unmanaged-p nil
-;; Required packages list
-:require-packages '(yasnippet auto-complete-clang c-eldoc))
+           :unmanaged-p nil
+           ;; Required packages list
+           :require-packages '(yasnippet auto-complete-clang c-eldoc))
 
 (sm-module-pre (C)
-;; Code to be executed *before* loading and configuring the packages
-)
+  ;; Code to be executed *before* loading and configuring the packages
+  )
 
 (sm-module-post (C)
-;; Code to be executed *after* loading and configuring the packages
-)
+  ;; Code to be executed *after* loading and configuring the packages
+  )
 
 (sm-provide :module C)
 ----------------------------------------------------------------------
@@ -81,14 +81,14 @@ A module file has the following structure (example: C programming):
 A package file has the following structure (example: yasnippet):
 ----------------------------------------------------------------------
 (sm-package yasnippet
-:package-manager "package"
-:unmanaged-p nil)
+            :package-manager "package"
+            :unmanaged-p nil)
 
 ;; Put the package's base configuration here.
 (require 'yasnippet)
 
 (defun add-yasnippet-ac-sources ()
-(add-to-list 'ac-sources 'ac-source-yasnippet))
+  (add-to-list 'ac-sources 'ac-source-yasnippet))
 
 (sm-provide :package yasnippet)
 ----------------------------------------------------------------------
@@ -105,20 +105,20 @@ It works like `eval-after-load' (but with no need to quote the block of
 code to be executed, and with an implicit progn) if a string or symbol
 is given as its first argument, but it can also take a list of the form
 
-(:package package-name)
+  (:package package-name)
 or
-(:module module-name)
+  (:module module-name)
 
 A example from my evil package configuration:
 
-(sm-integrate-with (:package direx)
-(evil-global-set-key 'normal (kbd "C-d") 'popwin:direx))
+  (sm-integrate-with (:package direx)
+    (evil-global-set-key 'normal (kbd "C-d") 'popwin:direx))
 
-(sm-integrate-with (:package ipa)
-(evil-global-set-key 'normal (kbd "M-i M-i") 'ipa-toggle)
-(evil-global-set-key 'normal (kbd "M-i i") 'ipa-insert)
-(evil-global-set-key 'normal (kbd "M-i e") 'ipa-edit)
-(evil-global-set-key 'normal (kbd "M-i m") 'ipa-move))
+  (sm-integrate-with (:package ipa)
+    (evil-global-set-key 'normal (kbd "M-i M-i") 'ipa-toggle)
+    (evil-global-set-key 'normal (kbd "M-i i") 'ipa-insert)
+    (evil-global-set-key 'normal (kbd "M-i e") 'ipa-edit)
+    (evil-global-set-key 'normal (kbd "M-i m") 'ipa-move))
 
 
 USAGE
@@ -130,23 +130,23 @@ its source code or you installed it with package.el.
 
 Put this in your .emacs or init.el file if you manually downloaded the sources:
 
-(add-to-list 'load-path user-emacs-directory)
+    (add-to-list 'load-path user-emacs-directory)
 
-(setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")))
+    (setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")))
 
-(add-to-list 'load-path "path/to/smotitah")
-(require 'smotitah)
-(sm-initialize)
+    (add-to-list 'load-path "path/to/smotitah")
+    (require 'smotitah)
+    (sm-initialize)
 
 Put this in your .emacs or init.el file if you installed smotitah with package.el.
 
-(add-to-list 'load-path user-emacs-directory)
-(setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")))
+    (add-to-list 'load-path user-emacs-directory)
+    (setq package-archives '(("melpa" . "http://melpa.milkbox.net/packages/")))
 
-(let ((package-enable-at-startup nil))
-(package-initialize t)
-(package-activate 'smotitah (package-desc-vers (cdr (assoc 'smotitah package-alist)))))
-(sm-initialize)
+    (let ((package-enable-at-startup nil))
+      (package-initialize t)
+      (package-activate 'smotitah (package-desc-vers (cdr (assoc 'smotitah package-alist)))))
+    (sm-initialize)
 
 
 Smotitah profile, module and package files stubs can be created from template
@@ -167,7 +167,7 @@ To load a given profile, set the EMACS_PROFILE environment variable
 to the profile name to load:
 
 Example: use profile-1
-$ EMACS_PROFILE="profile-1" emacs
+   $ EMACS_PROFILE="profile-1" emacs
 
 or alternatively put this in your initialization file (init.el or .emacs):
 
@@ -180,5 +180,5 @@ To load only a given set of modules, set the EMACS_MODULES environment
 variable to a comma-separated list of module names:
 
 Example: load C and python modules:
-$ EMACS_MODULES="C, python" emacs
+   $ EMACS_MODULES="C, python" emacs
 

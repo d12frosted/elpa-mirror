@@ -10,9 +10,9 @@ Suggested keybindings:
 Or via use-package:
 
 (use-package detour
-:bind
-([(control \.)] . detour-mark)
-([(control \,)] . detour-back))
+  :bind
+  ([(control \.)] . detour-mark)
+  ([(control \,)] . detour-back))
 
 Internally, a register is used to store the position.  If you
 manually set this register, these functions will not work.

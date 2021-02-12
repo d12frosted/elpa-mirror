@@ -4,12 +4,12 @@ and provides DB-accessing API and the simple management UI.
 ; Installation:
 
 This program depends on following programs:
-- deferred.el, concurrent.el / https://github.com/kiwanami/emacs-deferred
-- epc.el      / https://github.com/kiwanami/emacs-epc
-- ctable.el   / https://github.com/kiwanami/emacs-ctable
-- Perl/CPAN
-- RPC::EPC::Service (and some dependent modules)
-- DBI and drivers, DBD::Sqlite, DBD::Pg, DBD::mysql
+ - deferred.el, concurrent.el / https://github.com/kiwanami/emacs-deferred
+ - epc.el      / https://github.com/kiwanami/emacs-epc
+ - ctable.el   / https://github.com/kiwanami/emacs-ctable
+ - Perl/CPAN
+   - RPC::EPC::Service (and some dependent modules)
+   - DBI and drivers, DBD::Sqlite, DBD::Pg, DBD::mysql
 
 Place this program (edbi.el and edbi-bridge.pl) in your load path
 and add following code.

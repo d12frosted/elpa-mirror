@@ -1,6 +1,6 @@
 Vimtutor adapted for Evil.
 
-M-x evil-tutor-ja-start
+    M-x evil-tutor-ja-start
 
 This will create a working file in `evil-tutor-ja-working-directory' (defaults
 to `~/.emacs.d/.tutor-ja')

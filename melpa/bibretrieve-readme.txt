@@ -1,6 +1,6 @@
 
 Usage: call
-M-x bibretrieve
+  M-x bibretrieve
 Enter (part of) the author's name and/or title.
 Matching BibTeX entries are fetched using the configured backends
 and displayed in a selection buffer.
@@ -10,7 +10,7 @@ or inserted into the current buffer.
 Configuration:
 To select which backends to use customize the variable "bibretrieve-backends".
 To select a backend for a single invocation call the function with
-C-u M-x bibretrieve
+  C-u M-x bibretrieve
 
 Extension:
 To create a new backend define a new function

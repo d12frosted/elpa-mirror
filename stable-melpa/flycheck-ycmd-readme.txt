@@ -8,5 +8,5 @@ is invoked.
 
 Basic usage:
 
-(require 'flycheck-ycmd)
-(flycheck-ycmd-setup)
+ (require 'flycheck-ycmd)
+ (flycheck-ycmd-setup)

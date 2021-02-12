@@ -4,7 +4,7 @@ well as selection of files within a project.
 
 To activate, add helm-prosjekt.el to your load path and
 
-(require 'helm-prosjekt)
+  (require 'helm-prosjekt)
 
 to your .emacs. You can then use the interactive function
 `helm-prosjekt`

@@ -4,14 +4,14 @@ extend evil-mode.
 
 To write a test use `evil-test-buffer':
 
-(require 'evil-test-helpers)
+    (require 'evil-test-helpers)
 
-(ert-deftest evil-test ()
-:tags '(evil)
-(evil-test-buffer
-"[T]his creates a test buffer." ; cursor on "T"
-("w")                           ; key sequence
-"This [c]reates a test buffer."))) ; cursor moved to "c"
+    (ert-deftest evil-test ()
+      :tags '(evil)
+      (evil-test-buffer
+       "[T]his creates a test buffer." ; cursor on "T"
+       ("w")                           ; key sequence
+       "This [c]reates a test buffer."))) ; cursor moved to "c"
 
 The initial state, the cursor syntax, etc., can be changed
 with keyword arguments.  See the documentation string of

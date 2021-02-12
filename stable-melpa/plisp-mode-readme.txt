@@ -11,7 +11,7 @@ main advantages provided by this package are:
 * an actively maintained and supported system;
 
 * access to the PicoLisp reference documentation, including via
-Eldoc;
+  Eldoc;
 
 * basic Imenu support;
 
@@ -24,14 +24,14 @@ Eldoc;
 - [Features](#features)
 - [Installation](#installation)
 - [Usage](#usage)
-- [Syntax highlighting](#highlighting)
-- [REPL](#repl)
-- [Inferior PicoLisp](#inferior-picolisp)
-- [Org Babel](#org-babel)
-- [Documentation](#documentation)
-- [Commenting](#commenting)
-- [Indentation](#indentation)
-- [Miscellaneous](#miscellanous)
+ - [Syntax highlighting](#highlighting)
+ - [REPL](#repl)
+ - [Inferior PicoLisp](#inferior-picolisp)
+  - [Org Babel](#org-babel)
+ - [Documentation](#documentation)
+ - [Commenting](#commenting)
+ - [Indentation](#indentation)
+ - [Miscellaneous](#miscellanous)
 - [TODO](#todo)
 - [Issues](#issues)
 - [License](#license)
@@ -39,7 +39,7 @@ Eldoc;
 ## Features
 
 * Syntax highlighting of PicoLisp code. (But please read the below
-[note on syntax highlighting](#note-highlighting).)
+  [note on syntax highlighting](#note-highlighting).)
 
 * Comint-based `pil' REPL buffers.
 
@@ -83,26 +83,26 @@ With `inferior-plisp' loaded, the following bindings are available
 in `plisp-mode' and `plisp-repl-mode':
 
 * `M-C-x' / `C-c C-e' : Send the current definition to the inferior PicoLisp
-process (`inferior-plisp-send-definition').
+  process (`inferior-plisp-send-definition').
 
 * `C-x C-e' : Send the last sexp before point to the inferior
-PicoLisp process (`inferior-plisp-send-last-sexp').
+  PicoLisp process (`inferior-plisp-send-last-sexp').
 
 * `C-c M-e' : Send the current definition to the inferior PicoLisp
-process and switch to its buffer
-(`inferior-plisp-send-definition-and-go').
+  process and switch to its buffer
+  (`inferior-plisp-send-definition-and-go').
 
 * `C-c C-r' : Send the region to the inferior PicoLisp process
-(`inferior-plisp-send-region').
+  (`inferior-plisp-send-region').
 
 * `C-c M-r' : Send the region to the inferior PicoLisp process and
-switch to its buffer (`inferior-plisp-send-region-and-go').
+  switch to its buffer (`inferior-plisp-send-region-and-go').
 
 * `C-c C-l' : Load a PicoLisp file into the inferior PicoLisp
-process (`inferior-plisp-load-file')."
+  process (`inferior-plisp-load-file')."
 
 * `C-c C-x' : Switch to the inferior PicoLisp buffer
-(`inferior-plisp-switch-to-picolisp').
+  (`inferior-plisp-switch-to-picolisp').
 
 Multiple inferior PicoLisp processes can be created and used; the
 documentation for the variable `inferior-plisp-picolisp-buffer'
@@ -213,13 +213,13 @@ noted:
 * as a TODO item, or
 
 * in [the project's "Issues" section on
-GitHub](https://github.com/flexibeast/plisp-mode/issues),
+  GitHub](https://github.com/flexibeast/plisp-mode/issues),
 
 please create a new issue with as much detail as possible,
 including:
 
 * which version of Emacs you're running on which operating system,
-and
+  and
 
 * how you installed `plisp-mode'.
 

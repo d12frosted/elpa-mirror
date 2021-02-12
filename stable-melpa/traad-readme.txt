@@ -16,4 +16,4 @@ init.el, or something).
 
 Example config:
 
-(require 'traad)
+  (require 'traad)

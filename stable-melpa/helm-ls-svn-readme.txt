@@ -11,7 +11,7 @@ Installation
 To install, make sure this file is saved in a directory in your `load-path',
 and add the line:
 
-(require 'helm-ls-svn)
+  (require 'helm-ls-svn)
 
 to your Emacs initialization file.
 

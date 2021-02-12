@@ -13,13 +13,13 @@ click.
 1. ivy-posframe-display
 2. ivy-posframe-display-at-frame-center
 3. ivy-posframe-display-at-window-center
-[[./snapshots/ivy-posframe-display-at-window-center.png]]
+   [[./snapshots/ivy-posframe-display-at-window-center.png]]
 4. ivy-posframe-display-at-frame-bottom-left
 5. ivy-posframe-display-at-window-bottom-left
-[[./snapshots/ivy-posframe-display-at-window-bottom-left.png]]
+   [[./snapshots/ivy-posframe-display-at-window-bottom-left.png]]
 6. ivy-posframe-display-at-frame-bottom-window-center
 7. ivy-posframe-display-at-point
-[[./snapshots/ivy-posframe-display-at-point.png]]
+   [[./snapshots/ivy-posframe-display-at-point.png]]
 
 ** How to enable ivy-posframe
 *** Global mode
@@ -39,10 +39,10 @@ click.
 (require 'ivy-posframe)
 ;; Different command can use different display function.
 (setq ivy-posframe-display-functions-alist
-'((swiper          . ivy-posframe-display-at-point)
-(complete-symbol . ivy-posframe-display-at-point)
-(counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
-(t               . ivy-posframe-display)))
+      '((swiper          . ivy-posframe-display-at-point)
+        (complete-symbol . ivy-posframe-display-at-point)
+        (counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
+        (t               . ivy-posframe-display)))
 (ivy-posframe-mode 1)
 #+END_EXAMPLE
 
@@ -53,10 +53,10 @@ of Swiper at point hides the contents of the buffer.
 (require 'ivy-posframe)
 ;; Different command can use different display function.
 (setq ivy-posframe-display-functions-alist
-'((swiper          . ivy-display-function-fallback)
-(complete-symbol . ivy-posframe-display-at-point)
-(counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
-(t               . ivy-posframe-display)))
+      '((swiper          . ivy-display-function-fallback)
+        (complete-symbol . ivy-posframe-display-at-point)
+        (counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
+        (t               . ivy-posframe-display)))
 (ivy-posframe-mode 1)
 #+END_EXAMPLE
 
@@ -70,13 +70,13 @@ and displays other functions in posframe at the location specified on
 (require 'ivy-posframe)
 ;; Different command can use different display function.
 (setq ivy-posframe-height-alist '((swiper . 20)
-(t      . 40)))
+                                  (t      . 40)))
 
 (setq ivy-posframe-display-functions-alist
-'((swiper          . ivy-display-function-fallback)
-(complete-symbol . ivy-posframe-display-at-point)
-(counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
-(t               . ivy-posframe-display)))
+      '((swiper          . ivy-display-function-fallback)
+        (complete-symbol . ivy-posframe-display-at-point)
+        (counsel-M-x     . ivy-posframe-display-at-window-bottom-left)
+        (t               . ivy-posframe-display)))
 (ivy-posframe-mode 1)
 #+END_EXAMPLE
 
@@ -95,8 +95,8 @@ by ivy to find display function in `ivy-display-functions-alist',
 *** How to show fringe to ivy-posframe
 #+BEGIN_EXAMPLE
 (setq ivy-posframe-parameters
-'((left-fringe . 8)
-(right-fringe . 8)))
+      '((left-fringe . 8)
+        (right-fringe . 8)))
 #+END_EXAMPLE
 
 By the way, User can set *any* parameters of ivy-posframe with
@@ -107,7 +107,7 @@ the help of `ivy-posframe-parameters'.
 The simplest way is:
 #+BEGIN_EXAMPLE
 (defun ivy-posframe-display-at-XXX (str)
-(ivy-posframe--display str #'your-own-poshandler-function))
+  (ivy-posframe--display str #'your-own-poshandler-function))
 (setq ivy-posframe-display-functions-alist '((t . ivy-posframe-display-at-XXX)))
 (ivy-posframe-mode 1) ; This line is needed.
 #+END_EXAMPLE

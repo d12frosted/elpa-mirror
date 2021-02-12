@@ -8,7 +8,7 @@ http://common-lisp.net/project/bese/repos/arnesi_dev/src/csv.lisp
 It was ported to Emacs Lisp by Matt Curtis.
 
 (parse-csv->list "a,b,\"c,d\"")
-=> ("a" "b" "c,d")
+    => ("a" "b" "c,d")
 
 (parse-csv-string "a;b;'c;d'" ?\; ?\')
-=> ("a" "b" "c;d")
+    => ("a" "b" "c;d")

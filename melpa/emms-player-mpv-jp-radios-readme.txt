@@ -1,11 +1,11 @@
 This provides EMMS players and stream lists of Japan radio stations.
 
 * Available in Japan due to access restriction
-Radiko, らじる★らじる, 超！A&G+, 音泉, 響, アニたまどっとコム,
-animate.tv
+    Radiko, らじる★らじる, 超！A&G+, 音泉, 響, アニたまどっとコム,
+    animate.tv
 
 * Available anywhere
-SimulRadio, ListenRadio, Sea Side Communications, Lantis, ファミ通.com
+    SimulRadio, ListenRadio, Sea Side Communications, Lantis, ファミ通.com
 
 The following plugins are available:
 + emms-streams-jp-radios.el
@@ -19,7 +19,7 @@ https://github.com/momomo5717/emms-player-mpv-jp-radios  ( README.org )
 Other Requirements:
 
 + mpv v0.7 or later
-+ ffmpeg ( the build with –enable-librtmp (for Radiko, らじる★らじる) )
+  + ffmpeg ( the build with –enable-librtmp (for Radiko, らじる★らじる) )
 + wget (for Radiko, アニたまどっとコム)
 + swftools (for Radiko)
 
@@ -52,12 +52,12 @@ emms-streams-jp-radios.el provides `emms-streams-jp-radios' and
 
 ;; If `anything' is installed, `emms-streams-jp-radios-anything' is available.
 (autoload 'emms-streams-jp-radios-anything
-"emms-streams-jp-radios-anything" nil t)
+  "emms-streams-jp-radios-anything" nil t)
 
 ;; If `helm' is installed, `emms-streams-jp-radios-helm' is available.
 (autoload 'emms-streams-jp-radios-helm
-"emms-streams-jp-radios-helm" nil t)
+  "emms-streams-jp-radios-helm" nil t)
 
 ;; If `ivy' is installed, `emms-streams-jp-radios-counsel' is available.
 (autoload 'emms-streams-jp-radios-counsel
-"emms-streams-jp-radios-counsel" nil t)
+  "emms-streams-jp-radios-counsel" nil t)

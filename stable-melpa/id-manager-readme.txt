@@ -4,7 +4,7 @@ This utility manages ID-password list and generates passwords.
 The ID-password DB is saved in the tab-separated file.  The default
 file name of the DB `idm-database-file' is "~/.idm-db.gpg".
 The file format is following:
-(name)^t(ID)^t(password)^t(Update date "YYYY/MM/DD")[^t(memo)]
+  (name)^t(ID)^t(password)^t(Update date "YYYY/MM/DD")[^t(memo)]
 . One can prepare an initial data or modify the data by hand or
 the Excel.
 
@@ -39,11 +39,11 @@ For alpaca users:
 (autoload 'id-manager "id-manager" nil t)
 (global-set-key (kbd "M-7") 'id-manager) ; helm UI
 (setq idm-db-buffer-save-function ; adjustment for alpaca.el
-(lambda (file)
-(set-visited-file-name file)
-(alpaca-save-buffer))
-idm-db-buffer-password-var  ; if you are using `alpaca-cache-passphrase'.
-'alpaca-passphrase)
+      (lambda (file)
+        (set-visited-file-name file)
+        (alpaca-save-buffer))
+      idm-db-buffer-password-var  ; if you are using `alpaca-cache-passphrase'.
+        'alpaca-passphrase)
 
 ; Current implementation:
 

@@ -5,9 +5,9 @@ JavaScript IDE in Emacs that started with js2-mode.
 
 Start by installing the dependencies:
 
-* js2-mode https://github.com/mooz/js2-mode/
-* dash https://github.com/magnars/dash.el
-* multiple-cursors https://github.com/magnars/multiple-cursors.el
+ * js2-mode https://github.com/mooz/js2-mode/
+ * dash https://github.com/magnars/dash.el
+ * multiple-cursors https://github.com/magnars/multiple-cursors.el
 
 It is also recommended to get
 [expand-region](https://github.com/magnars/expand-region.el) to more easily mark
@@ -15,9 +15,9 @@ vars, method calls and functions for refactorings.
 
 Then add this to your Emacs settings:
 
-(require 'js2-refactor)
-(add-hook 'js2-mode-hook #'js2-refactor-mode)
-(js2r-add-keybindings-with-prefix "C-c C-m")
+    (require 'js2-refactor)
+    (add-hook 'js2-mode-hook #'js2-refactor-mode)
+    (js2r-add-keybindings-with-prefix "C-c C-m")
 
 Note: I am working on a smoother installation path through package.el,
 but I haven't had the time to whip this project into that sort of
@@ -27,51 +27,51 @@ structure - yet.
 
 All refactorings start with `C-c C-m` and then a two-letter mnemonic shortcut.
 
-* `ee` is `expand-node-at-point`: Expand bracketed list according to node type at point (array, object, function, call args).
-* `cc` is `contract-node-at-point`: Contract bracketed list according to node type at point (array, object, function, call args).
-* `ef` is `extract-function`: Extracts the marked expressions out into a new named function.
-* `em` is `extract-method`: Extracts the marked expressions out into a new named method in an object literal.
-* `tf` is `toggle-function-expression-and-declaration`: Toggle between function name() {} and var name = function ();
-* `ta` is `toggle-arrow-function-and-expression`: Toggle between function expression to arrow function.
-* `ts` is `toggle-function-async`: Toggle between an async and a regular function.
-* `ip` is `introduce-parameter`: Changes the marked expression to a parameter in a local function.
-* `lp` is `localize-parameter`: Changes a parameter to a local var in a local function.
-* `wi` is `wrap-buffer-in-iife`: Wraps the entire buffer in an immediately invoked function expression
-* `ig` is `inject-global-in-iife`: Creates a shortcut for a marked global by injecting it in the wrapping immediately invoked function expression
-* `ag` is `add-to-globals-annotation`: Creates a `/*global */` annotation if it is missing, and adds the var at point to it.
-* `ev` is `extract-var`: Takes a marked expression and replaces it with a var.
-* `el` is `extract-var`: Takes a marked expression and replaces it with a let.
-* `ec` is `extract-var`: Takes a marked expression and replaces it with a const.
-* `iv` is `inline-var`: Replaces all instances of a variable with its initial value.
-* `rv` is `rename-var`: Renames the variable on point and all occurrences in its lexical scope.
-* `vt` is `var-to-this`: Changes local `var a` to be `this.a` instead.
-* `ao` is `arguments-to-object`: Replaces arguments to a function call with an object literal of named arguments.
-* `3i` is `ternary-to-if`: Converts ternary operator to if-statement.
-* `sv` is `split-var-declaration`: Splits a `var` with multiple vars declared, into several `var` statements.
-* `ss` is `split-string`: Splits a `string`.
-* `st` is `string-to-template`: Converts a `string` into a template string.
-* `uw` is `unwrap`: Replaces the parent statement with the selected region.
-* `lt` is `log-this`: Adds a console.log() statement for what is at point (or region).  With a prefix argument, use JSON pretty-printing.
-* `dt` is `debug-this`: Adds a debug() statement for what is at point (or region).
-* `sl` is `forward-slurp`: Moves the next statement into current function, if-statement, for-loop or while-loop.
-* `ba` is `forward-barf`: Moves the last child out of current function, if-statement, for-loop or while-loop.
-* `k` is `kill`: Kills to the end of the line, but does not cross semantic boundaries.
+ * `ee` is `expand-node-at-point`: Expand bracketed list according to node type at point (array, object, function, call args).
+ * `cc` is `contract-node-at-point`: Contract bracketed list according to node type at point (array, object, function, call args).
+ * `ef` is `extract-function`: Extracts the marked expressions out into a new named function.
+ * `em` is `extract-method`: Extracts the marked expressions out into a new named method in an object literal.
+ * `tf` is `toggle-function-expression-and-declaration`: Toggle between function name() {} and var name = function ();
+ * `ta` is `toggle-arrow-function-and-expression`: Toggle between function expression to arrow function.
+ * `ts` is `toggle-function-async`: Toggle between an async and a regular function.
+ * `ip` is `introduce-parameter`: Changes the marked expression to a parameter in a local function.
+ * `lp` is `localize-parameter`: Changes a parameter to a local var in a local function.
+ * `wi` is `wrap-buffer-in-iife`: Wraps the entire buffer in an immediately invoked function expression
+ * `ig` is `inject-global-in-iife`: Creates a shortcut for a marked global by injecting it in the wrapping immediately invoked function expression
+ * `ag` is `add-to-globals-annotation`: Creates a `/*global */` annotation if it is missing, and adds the var at point to it.
+ * `ev` is `extract-var`: Takes a marked expression and replaces it with a var.
+ * `el` is `extract-var`: Takes a marked expression and replaces it with a let.
+ * `ec` is `extract-var`: Takes a marked expression and replaces it with a const.
+ * `iv` is `inline-var`: Replaces all instances of a variable with its initial value.
+ * `rv` is `rename-var`: Renames the variable on point and all occurrences in its lexical scope.
+ * `vt` is `var-to-this`: Changes local `var a` to be `this.a` instead.
+ * `ao` is `arguments-to-object`: Replaces arguments to a function call with an object literal of named arguments.
+ * `3i` is `ternary-to-if`: Converts ternary operator to if-statement.
+ * `sv` is `split-var-declaration`: Splits a `var` with multiple vars declared, into several `var` statements.
+ * `ss` is `split-string`: Splits a `string`.
+ * `st` is `string-to-template`: Converts a `string` into a template string.
+ * `uw` is `unwrap`: Replaces the parent statement with the selected region.
+ * `lt` is `log-this`: Adds a console.log() statement for what is at point (or region).  With a prefix argument, use JSON pretty-printing.
+ * `dt` is `debug-this`: Adds a debug() statement for what is at point (or region).
+ * `sl` is `forward-slurp`: Moves the next statement into current function, if-statement, for-loop or while-loop.
+ * `ba` is `forward-barf`: Moves the last child out of current function, if-statement, for-loop or while-loop.
+ * `k` is `kill`: Kills to the end of the line, but does not cross semantic boundaries.
 
 There are also some minor conveniences bundled:
 
-* `C-S-down` and `C-S-up` moves the current line up or down.  If the line is an
-element in an object or array literal, it makes sure that the commas are
-still correctly placed.
-* `k` `kill-line`: Like `kill-line` but respecting the AST.
+ * `C-S-down` and `C-S-up` moves the current line up or down.  If the line is an
+   element in an object or array literal, it makes sure that the commas are
+   still correctly placed.
+ * `k` `kill-line`: Like `kill-line` but respecting the AST.
 
 ## Todo
 
 A list of some wanted improvements for the current refactorings.
 
-* expand- and contract-array: should work recursively with nested object literals and nested arrays.
-* expand- and contract-function: should deal better with nested object literals, array declarations, and statements terminated only by EOLs (without semicolons).
-* wrap-buffer-in-iife: should skip comments and namespace initializations at buffer start.
-* extract-variable: could end with a query-replace of the expression in its scope.
+ * expand- and contract-array: should work recursively with nested object literals and nested arrays.
+ * expand- and contract-function: should deal better with nested object literals, array declarations, and statements terminated only by EOLs (without semicolons).
+ * wrap-buffer-in-iife: should skip comments and namespace initializations at buffer start.
+ * extract-variable: could end with a query-replace of the expression in its scope.
 
 ## Contributions
 
@@ -88,10 +88,10 @@ can discuss your changes a little before diving into the elisp :-).
 
 To fetch the test dependencies:
 
-$ cd /path/to/multiple-cursors
-$ git submodule init
-$ git submodule update
+    $ cd /path/to/multiple-cursors
+    $ git submodule init
+    $ git submodule update
 
 Run the tests with:
 
-$ ./util/ecukes/ecukes features
+    $ ./util/ecukes/ecukes features

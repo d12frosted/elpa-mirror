@@ -6,7 +6,7 @@ to this package to your `load-path' (for example in your .emacs).
 Afterwards run M-x haskell-emacs-init.
 
 (Text.tails "EMACS")
-=> ("EMACS" "MACS" "ACS" "CS" "S" "")
+  => ("EMACS" "MACS" "ACS" "CS" "S" "")
 
 If you want to use these functions in your library, put there the
 following:

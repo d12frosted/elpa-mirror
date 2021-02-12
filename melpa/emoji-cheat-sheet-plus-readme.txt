@@ -4,12 +4,12 @@ This is an improved and somewhat rewritten version of
 Features available only in this version are:
 - emoji buffer has its own major-mode
 - automatic display of emoji code in the minibuffer while browsing the
-emoji buffer
+  emoji buffer
 - new minor mode `emoji-cheat-sheet-plus-display-mode' which replaces
-emoji codes in buffer by the corresponding image
+  emoji codes in buffer by the corresponding image
 - new function `emoji-cheat-sheet-plus-insert' to insert an emoji at point
-using an helm front-end. It is possible to insert several emoji with helm
-persistent action mechanism or multiple selection.
+  using an helm front-end. It is possible to insert several emoji with helm
+  persistent action mechanism or multiple selection.
 
 This version is stand-alone and does not require the original package
 `emacs-emoji-cheat-sheet'.

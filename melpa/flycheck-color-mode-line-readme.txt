@@ -10,5 +10,5 @@ To enable this mode in Flycheck, add it to `flycheck-mode-hook':
 
 Thanks go to:
 - Thomas Järvstrand (tjarvstrand) for the initial code from the excellent
-EDTS package
+  EDTS package
 - Sebastian Wiesner (lunaryorn) for flycheck and his awesome support.

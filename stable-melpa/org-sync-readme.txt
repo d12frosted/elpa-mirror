@@ -33,5 +33,5 @@ the bug.
 
 To add a bug, just insert a new headline under the buglist you want
 to modify e.g.:
-** OPEN my new bug
+    ** OPEN my new bug
 Then simply call `org-sync'.

@@ -8,7 +8,7 @@ From melpa, `M-x package-install RET grip-mode RET`.
 (add-hook 'markdown-mode-hook #'grip-mode)
 or
 (use-package grip-mode
-:ensure t
-:bind (:map markdown-mode-command-map
-("g" . grip-mode)))
+  :ensure t
+  :bind (:map markdown-mode-command-map
+         ("g" . grip-mode)))
 Run `M-x grip-mode` to preview the markdown file with the default browser.

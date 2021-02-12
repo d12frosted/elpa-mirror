@@ -1,2 +1,2 @@
 Usage:
-(eval-after-load "rst" '(auto-complete-rst-init))
+   (eval-after-load "rst" '(auto-complete-rst-init))

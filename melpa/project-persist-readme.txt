@@ -18,7 +18,7 @@ easily add other settings like this:
 
 ```lisp
 (add-to-list 'project-persist-additional-settings
-'(my-setting . (lambda () (read-from-minibuffer "My setting: "))))
+  '(my-setting . (lambda () (read-from-minibuffer "My setting: "))))
 ```
 
 Each element of the list is a cons cell with car a symbol naming the new setting

@@ -30,24 +30,24 @@ INSTALLATION
 
 Put this in your init.el or .emacs file:
 
-(autoload 'showcss-mode "show-css"
-"Display the css of the class or id the cursor is at" t)
+  (autoload 'showcss-mode "show-css"
+     "Display the css of the class or id the cursor is at" t)
 
 Personally, I find this mode to distracting to use all the time, so I
 use this function to quickly toggle the mode on and off.
 
-(defun sm/toggle-showcss()
-"Toggle showcss-mode"
-(interactive)
-(if (derived-mode-p
-'html-mode
-'nxml-mode
-'nxhtml-mode
-'web-mode
-'handlebars-mode)
-(showcss-mode 'toggle)
-(message "Not in an html mode")))
-(global-set-key (kbd "C-c C-k") 'sm/toggle-showcss)
+  (defun sm/toggle-showcss()
+    "Toggle showcss-mode"
+    (interactive)
+    (if (derived-mode-p
+         'html-mode
+         'nxml-mode
+         'nxhtml-mode
+         'web-mode
+         'handlebars-mode)
+        (showcss-mode 'toggle)
+      (message "Not in an html mode")))
+  (global-set-key (kbd "C-c C-k") 'sm/toggle-showcss)
 
 BUGS
 

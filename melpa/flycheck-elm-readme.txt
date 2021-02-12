@@ -1,5 +1,5 @@
 Enable this checker automatically by adding code like the following
 to your startup files:
 
-(eval-after-load 'flycheck
-'(flycheck-elm-setup))
+    (eval-after-load 'flycheck
+      '(flycheck-elm-setup))

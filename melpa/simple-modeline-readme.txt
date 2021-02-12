@@ -4,5 +4,5 @@ To enable, put this code in your init file:
 (simple-modeline-mode 1)
 or
 (use-package simple-modeline
-:ensure t
-:hook (after-init . simple-modeline-mode))
+  :ensure t
+  :hook (after-init . simple-modeline-mode))

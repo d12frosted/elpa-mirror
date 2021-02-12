@@ -30,22 +30,22 @@ file, or setting `load-prefer-newer' in a system-wide init file.
 
 If you use `package.el' then use something like this:
 
-;;; init.el --- user init file
-(setq load-prefer-newer t)
-(package-initialize)
-(require 'auto-compile)
-(auto-compile-on-load-mode)
-(auto-compile-on-save-mode)
+    ;;; init.el --- user init file
+    (setq load-prefer-newer t)
+    (package-initialize)
+    (require 'auto-compile)
+    (auto-compile-on-load-mode)
+    (auto-compile-on-save-mode)
 
 otherwise:
 
-;;; init.el --- user init file
-(setq load-prefer-newer t)
-(add-to-list 'load-path "/path/to/packed")
-(add-to-list 'load-path "/path/to/auto-compile")
-(require 'auto-compile)
-(auto-compile-on-load-mode)
-(auto-compile-on-save-mode)
+    ;;; init.el --- user init file
+    (setq load-prefer-newer t)
+    (add-to-list 'load-path "/path/to/packed")
+    (add-to-list 'load-path "/path/to/auto-compile")
+    (require 'auto-compile)
+    (auto-compile-on-load-mode)
+    (auto-compile-on-save-mode)
 
 You might want to set the file-local value of `no-byte-compile' to
 t, e.g. by adding "-*- no-byte-compile: t -*-" (without the quotes)
@@ -57,14 +57,14 @@ exception.
 If you are using Emacs 27 or later, then these settings should be
 placed in `early-init.el', which should never be compiled:
 
-;;; early-init.el --- early bird  -*- no-byte-compile: t -*-
-(setq load-prefer-newer t)
-(add-to-list 'load-path "/path/to/packed")
-(add-to-list 'load-path "/path/to/auto-compile")
-(require 'auto-compile)
-(auto-compile-on-load-mode)
-(auto-compile-on-save-mode)
-;;; early-init.el ends here
+    ;;; early-init.el --- early bird  -*- no-byte-compile: t -*-
+    (setq load-prefer-newer t)
+    (add-to-list 'load-path "/path/to/packed")
+    (add-to-list 'load-path "/path/to/auto-compile")
+    (require 'auto-compile)
+    (auto-compile-on-load-mode)
+    (auto-compile-on-save-mode)
+    ;;; early-init.el ends here
 
 Usage
 -----
@@ -89,8 +89,8 @@ Once you have done that you might also want to keep that buffer
 from being automatically displayed and instead only show the number
 of compile warnings for the current file in the mode-line.
 
-(setq auto-compile-display-buffer nil)
-(setq auto-compile-mode-line-counter t)
+    (setq auto-compile-display-buffer nil)
+    (setq auto-compile-mode-line-counter t)
 
 To display the buffer use `M-x auto-compile-display-log' or click
 on the counter in the mode-line.

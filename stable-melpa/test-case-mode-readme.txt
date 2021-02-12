@@ -18,7 +18,7 @@ To enable it automatically when opening test files:
 
 If you want to run all visited tests after a compilation, add:
 (add-hook 'compilation-finish-functions
-'test-case-compilation-finish-run-all)
+          'test-case-compilation-finish-run-all)
 
 If failures have occurred, they are highlighted in the buffer and/or its
 fringes (if fringe-helper.el is installed).

@@ -45,14 +45,14 @@ For example:
 
 ```elisp
 (if (not (string= dkl-keyboard-name "standard"))
-(user-error "Layout `qwerty-us' must be used with `dkl-keyboard-name' set to \"standard\"")
-(progn
-(setq dkl--current-layout-script-direction 'left-to-right)
-(setq dkl--current-layout
-'(;; Top row
-(60 . ((0 . ("`" "~"))
-(4 . ("1" "!"))
-...
+    (user-error "Layout `qwerty-us' must be used with `dkl-keyboard-name' set to \"standard\"")
+  (progn
+    (setq dkl--current-layout-script-direction 'left-to-right)
+    (setq dkl--current-layout
+          '(;; Top row
+            (60 . ((0 . ("`" "~"))
+                   (4 . ("1" "!"))
+            ...
 ```
 
 The layout data structure is an alist. Each entry in the alist represents a keyboard row:
@@ -61,15 +61,15 @@ The layout data structure is an alist. Each entry in the alist represents a keyb
 
 * The `cdr` of the entry is itself an alist, where:
 
-* the `car` of each entry is an offset, in characters, from the first glyph in that row;
+  * the `car` of each entry is an offset, in characters, from the first glyph in that row;
 
-* the `cdr` of each entry is a list of the unshifted and shifted glyphs to display.
+  * the `cdr` of each entry is a list of the unshifted and shifted glyphs to display.
 
 ## TODO
 
 * `devanagari-inscript` layout:
 
-* Fix failure to highlight certain keys during composition.
+  * Fix failure to highlight certain keys during composition.
 
 ## Issues / bugs
 

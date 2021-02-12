@@ -5,13 +5,13 @@ README is soon to come.
 
 In your shell:
 
-$ cd ~/.emacs.d/packges
-$ git clone git://github.com/superbobry/io-mode.git
+    $ cd ~/.emacs.d/packges
+    $ git clone git://github.com/superbobry/io-mode.git
 
 In your Emacs config:
 
-(add-to-list 'load-path "~/.emacs.d/packages/io-mode")
-(require 'io-mode)
+    (add-to-list 'load-path "~/.emacs.d/packages/io-mode")
+    (require 'io-mode)
 
 ; Thanks
 

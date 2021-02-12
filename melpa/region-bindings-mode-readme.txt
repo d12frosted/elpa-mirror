@@ -17,4 +17,4 @@ Alternatively, you can install this easily via MELPA through the
 Emacs package manager. To add MELPA to the package archives:
 
 (add-to-list 'package-archives
-'("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)

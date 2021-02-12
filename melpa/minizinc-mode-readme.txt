@@ -12,7 +12,7 @@ file or any your emacs start file to install it from the melpa.
 
 (require 'package)
 (add-to-list 'package-archives
-'("melpa" . "https://melpa.org/packages/"))
+             '("melpa" . "https://melpa.org/packages/"))
 (unless package-archive-contents (package-refresh-contents))
 (package-initialize)
 

@@ -10,7 +10,7 @@ repository or directory tree and work with a single command.
 I use the following configuration to add key bindings for these
 grep operations:
 
-(use-package git-grep
-:commands (git-grep git-grep-repo)
-:bind (("C-c g g" . git-grep)
-("C-c g r" . git-grep-repo)))
+  (use-package git-grep
+    :commands (git-grep git-grep-repo)
+    :bind (("C-c g g" . git-grep)
+           ("C-c g r" . git-grep-repo)))

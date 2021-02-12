@@ -10,27 +10,27 @@ by preparing user's migemo dictionaries or customizing `avy-migemo-get-function'
 
 The following functions are provided:
 
-+ avy-migemo-goto-char
-+ avy-migemo-goto-char-2
-+ avy-migemo-goto-char-in-line
-+ avy-migemo-goto-char-timer
-+ avy-migemo-goto-subword-1
-+ avy-migemo-goto-word-1
-+ avy-migemo-isearch
-+ avy-migemo-org-goto-heading-timer
-+ avy-migemo--overlay-at
-+ avy-migemo--overlay-at-full
-+ avy-migemo--read-candidates
+  + avy-migemo-goto-char
+  + avy-migemo-goto-char-2
+  + avy-migemo-goto-char-in-line
+  + avy-migemo-goto-char-timer
+  + avy-migemo-goto-subword-1
+  + avy-migemo-goto-word-1
+  + avy-migemo-isearch
+  + avy-migemo-org-goto-heading-timer
+  + avy-migemo--overlay-at
+  + avy-migemo--overlay-at-full
+  + avy-migemo--read-candidates
 
-These are the same as avy's predefined functions
-except for adding candidates via migemo (simply using migemo instead of `regexp-quote').
+ These are the same as avy's predefined functions
+ except for adding candidates via migemo (simply using migemo instead of `regexp-quote').
 
 The following extensions are available:
 
-+ avy-migemo-e.g.zzz-to-char.el
-+ avy-migemo-e.g.ivy.el
-+ avy-migemo-e.g.swiper.el
-+ avy-migemo-e.g.counsel.el
+  + avy-migemo-e.g.zzz-to-char.el
+  + avy-migemo-e.g.ivy.el
+  + avy-migemo-e.g.swiper.el
+  + avy-migemo-e.g.counsel.el
 
 Further information is available from:
 https://github.com/momomo5717/avy-migemo  (README.org or README.jp.org)

@@ -5,6 +5,6 @@ You can install the package by either cloning it yourself, or by doing M-x packa
 
 After that, you can enable it by putting the following in your init file:
 
-(su-mode +1)
+    (su-mode +1)
 
 See the README for more info.

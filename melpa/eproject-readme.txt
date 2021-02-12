@@ -15,8 +15,8 @@ Let's create a "perl" project type, for Perl projects that have a
 Makefile.PL.
 
 (define-project-type perl (generic)
-(look-for "Makefile.PL")
-:relevant-files ("\\.pm$" "\\.t$"))
+  (look-for "Makefile.PL")
+  :relevant-files ("\\.pm$" "\\.t$"))
 
 Now when you open a file and somewhere above in the directory tree
 there is a Makefile.PL, it will be a "perl project".
@@ -65,9 +65,9 @@ including access (eproject-type) and (eproject-root).
 As an example, in my perl-project-file-visit-hook, I do this:
 
 (lambda ()
-(ignore-errors
-(stylish-repl-eval-perl
-(format "use lib '%s'" (car (perl-project-includes)))))))
+  (ignore-errors
+    (stylish-repl-eval-perl
+     (format "use lib '%s'" (car (perl-project-includes)))))))
 
 This will add the library directory of this project to my current
 stylish-repl session, so that I can use my project in the REPL

@@ -3,7 +3,7 @@ This elegant Org-enhancing color theme "leuven" ROCKS!
 
 To use it, put the following in your Emacs configuration file:
 
-(load-theme 'leuven t)
+  (load-theme 'leuven t)
 
 Requirements: Emacs 24+.
 

@@ -3,11 +3,11 @@ see URL `http://www.kx.com') in Emacs.
 
 Some of its major features include:
 
-- syntax highlighting (font lock),
+ - syntax highlighting (font lock),
 
-- interaction with inferior q[con] instance,
+ - interaction with inferior q[con] instance,
 
-- scans declarations and places them in a menu.
+ - scans declarations and places them in a menu.
 
 To load `q-mode' on-demand, instead of at startup, add this to your
 initialization file
@@ -24,9 +24,9 @@ with S-mode.  To stop this, add the following lines to your
 initialization file.
 
 (defun remove-ess-q-extn ()
-(when (assoc "\\.[qsS]\\'" auto-mode-alist)
-(setq auto-mode-alist
-(remassoc "\\.[qsS]\\'" auto-mode-alist))))
+  (when (assoc "\\.[qsS]\\'" auto-mode-alist)
+   (setq auto-mode-alist
+         (remassoc "\\.[qsS]\\'" auto-mode-alist))))
 (add-hook 'ess-mode-hook 'remove-ess-q-extn)
 (add-hook 'inferior-ess-mode-hook 'remove-ess-q-extn)
 

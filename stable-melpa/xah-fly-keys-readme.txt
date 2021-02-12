@@ -14,7 +14,7 @@ put the following in your emacs init file:
 (require 'xah-fly-keys)
 (xah-fly-keys-set-layout "qwerty") ; required
 
-possible layout values: azerty, azerty-be, colemak, colemak-mod-dh, dvorak, programer-dvorak, qwerty, qwerty-abnt, qwerty-no (qwerty Norwegian), qwertz, workman, norman
+possible layout values: azerty, azerty-be, colemak, colemak-mod-dh, dvorak, programer-dvorak, qwerty, qwerty-abnt, qwerty-no (qwerty Norwegian), qwertz, workman, norman, neo2, koy, adnw
 
 (xah-fly-keys 1)
 

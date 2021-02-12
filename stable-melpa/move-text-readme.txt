@@ -22,4 +22,4 @@ And the following to your ~/.emacs startup file.
 
 ; Acknowledgements:
 
-Original v1.x was a Feature extracted from basic-edit-toolkit.el - by Andy Stewart (LazyCat)
+ Original v1.x was a Feature extracted from basic-edit-toolkit.el - by Andy Stewart (LazyCat)

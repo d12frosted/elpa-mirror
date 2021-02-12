@@ -7,7 +7,7 @@
 ;; Created: March 11, 2020
 ;; URL: https://github.com/shg/julia-vterm.el
 ;; Package-Version: 20201223.741
-;; Package-Commit: 06ee45bffb6e711278a7af5207899d2b4316706c
+;; Package-Commit: c051cdc4ba574039b622fce37a5f61685dcc6d89
 ;; Package-Requires: ((emacs "25.1") (vterm "0.0.1"))
 ;; Version: 0.11
 ;; Keywords: languages, julia

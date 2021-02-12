@@ -13,7 +13,7 @@ It provides:
 - A clean look
 - The basics you need to make Emacs functionality discoverable
 - A set of third-party packages that set the standard for the
-essential functionality they provide
+  essential functionality they provide
 - Some plumbing to make the above 'just work', seamlessly and silently
 
 Although Graphene is intended to help users of GUI editors such as
@@ -61,22 +61,22 @@ research and discover on your own what the Emacs community has largely
 decided on as best-in-class packages.
 
 - [project-persist](https://github.com/rdallasgray/project-persist)
-Disclaimer: this is my own project, and is perhaps the exception to the
-above rule. It provides simple project loading and saving;
-Graphene adds a project 'drawer' using
-[Sr-Speedbar](https://github.com/emacsmirror/sr-speedbar)
+  Disclaimer: this is my own project, and is perhaps the exception to the
+  above rule. It provides simple project loading and saving;
+  Graphene adds a project 'drawer' using
+  [Sr-Speedbar](https://github.com/emacsmirror/sr-speedbar)
 - [Smartparens](https://github.com/Fuco1/smartparens)
-For auto-pairing
+  For auto-pairing
 - [Company](http://company-mode.github.io)
-For code completion
+  For code completion
 - [Web-mode](https://github.com/fxbois/web-mode)
-For mixed-mode editing
+  For mixed-mode editing
 - [Smex](http://www.emacswiki.org/Smex)
-For command completion
+  For command completion
 - [Ido](http://emacswiki.org/emacs/InteractivelyDoThings)
-For general completion
+  For general completion
 - [Flycheck](https://github.com/flycheck/flycheck)
-For error checking
+  For error checking
 
 ## Installation
 Graphene is available on [Melpa](http://melpa.org).
@@ -125,7 +125,7 @@ said, there are some Graphene-specific things you need to know.
 Graphene creates some new keybindings, and alters some existing ones:
 
 - `C-x k` always kills the active buffer, rather than asking you which
-one you want to kill
+  one you want to kill
 - `C-x C-k` kills the default buffer and closes its window
 - `C-c n` creates a new buffer
 - `C-c N` creates a new instance of Emacs

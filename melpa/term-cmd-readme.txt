@@ -21,9 +21,9 @@ Usage
 
 To register a command:
 
-(add-to-list
-'term-cmd-commands-alist
-'("command" . some-callback-function))
+    (add-to-list
+     'term-cmd-commands-alist
+     '("command" . some-callback-function))
 
 where "command" is the name of the command, and
 some-callback-function is the function you want to be called when
@@ -33,7 +33,7 @@ argument.
 
 To send a command, use the emacs-term-cmd script:
 
-emacs-term-cmd command arg
+    emacs-term-cmd command arg
 
 If called outside Emacs, this does nothing (i.e. it won't mess
 things up).

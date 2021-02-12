@@ -6,5 +6,5 @@ use vale to provide natural language linting.
 
 Basic usage:
 
-(require 'flycheck-vale)
-(flycheck-vale-setup)
+ (require 'flycheck-vale)
+ (flycheck-vale-setup)

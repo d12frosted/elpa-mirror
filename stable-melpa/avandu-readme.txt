@@ -4,7 +4,7 @@ has gathered.
 
 The simplest way to install it is to use package.el:
 
-(package-install-file "/path/to/avandu.el")
+    (package-install-file "/path/to/avandu.el")
 
 For further information I would like to refer you to the avandu
 info file.

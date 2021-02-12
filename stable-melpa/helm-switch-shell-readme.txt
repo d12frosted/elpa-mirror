@@ -25,14 +25,14 @@ C-v: open the indicated shell in a vertical split (split-window-right)
 
 Other options for customization:
 
-helm-switch-shell-truncate-lines: set to non-nil to truncate candidates
-helm-switch-shell-show-shell-indicator: set to non-nil to show an
-indicator of what kind of shell the candidate is in the list
-(e.g. [V] for vterm, [E] for eshell, etc)
+  helm-switch-shell-truncate-lines: set to non-nil to truncate candidates
+  helm-switch-shell-show-shell-indicator: set to non-nil to show an
+  indicator of what kind of shell the candidate is in the list
+  (e.g. [V] for vterm, [E] for eshell, etc)
 
 Faces:
 
-helm-switch-shell-buffer-name-face: Face for the candidate buffer name
-helm-switch-shell-indicator-face: Face for the candidate indicator type
-helm-switch-shell-path-face: Face for the candidate path name
-helm-switch-shell-new-shell-face: Face for the [+] new shell indicator
+  helm-switch-shell-buffer-name-face: Face for the candidate buffer name
+  helm-switch-shell-indicator-face: Face for the candidate indicator type
+  helm-switch-shell-path-face: Face for the candidate path name
+  helm-switch-shell-new-shell-face: Face for the [+] new shell indicator

@@ -9,5 +9,5 @@ Basic settings:
 M-x org-octopress
 
 Note:
-In octopress/_config.yml, you must set the permelink attribute:
-permalink: /blog/:year-:month-:day-:title.html
+ In octopress/_config.yml, you must set the permelink attribute:
+   permalink: /blog/:year-:month-:day-:title.html

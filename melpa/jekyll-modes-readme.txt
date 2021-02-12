@@ -8,5 +8,5 @@ The package includes two modes, `jekyll-markdown-mode` and
 `jekyll-html-mode`, which can be enabled as normal by adding the
 following to you init file:
 
-(add-to-list 'auto-mode-alist '("\\.md$" . jekyll-markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.html" . jekyll-html-mode))
+    (add-to-list 'auto-mode-alist '("\\.md$" . jekyll-markdown-mode))
+    (add-to-list 'auto-mode-alist '("\\.html" . jekyll-html-mode))

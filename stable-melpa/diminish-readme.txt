@@ -19,16 +19,16 @@ To prepend another directory to load-path, put a line like
 (add-to-list 'load-path "c:/My_Directory") in your .emacs file.
 
 To create diminished modes interactively, type
-M-x load-library
+  M-x load-library
 to get a prompt like
-Load library:
+  Load library:
 and respond `diminish' (unquoted).  Then type
-M-x diminish
+  M-x diminish
 to get a prompt like
-Diminish what minor mode:
+  Diminish what minor mode:
 and respond with the name of some minor mode, like mouse-avoidance-mode.
 You'll then get this prompt:
-To what mode-line display:
+  To what mode-line display:
 Respond by just hitting <Enter> if you want the name of the mode
 completely removed from the mode line.  If you prefer, you can abbreviate
 the name.  If your abbreviation is 2 characters or more, such as "Av",
@@ -46,7 +46,7 @@ displays them all as minor.  They remain diminished on the mode line.
 
 To convert a diminished mode back to a minor mode, type M-x diminish-undo
 to get a prompt like
-Restore what diminished mode:
+  Restore what diminished mode:
 Respond with the name of some diminished mode.  To convert all
 diminished modes back to minor modes, respond to that prompt
 with `diminished-modes' (unquoted, & note the hyphen).
@@ -59,10 +59,10 @@ auto-fill-mode is named by "auto-fill-function".
 
 To create diminished modes noninteractively in your .emacs file, put
 code like
-(require 'diminish)
-(diminish 'abbrev-mode "Abv")
-(diminish 'jiggle-mode)
-(diminish 'mouse-avoidance-mode "M")
+  (require 'diminish)
+  (diminish 'abbrev-mode "Abv")
+  (diminish 'jiggle-mode)
+  (diminish 'mouse-avoidance-mode "M")
 near the end of your .emacs file.  It should be near the end so that any
 minor modes your .emacs loads will already have been loaded by the time
 they're to be converted to diminished modes.

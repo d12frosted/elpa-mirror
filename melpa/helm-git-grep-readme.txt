@@ -6,7 +6,7 @@ Add the following to your Emacs init file:
 (define-key isearch-mode-map (kbd "C-c g") 'helm-git-grep-from-isearch)
 ;; Invoke `helm-git-grep' from other helm.
 (eval-after-load 'helm
-'(define-key helm-map (kbd "C-c g") 'helm-git-grep-from-helm))
+  '(define-key helm-map (kbd "C-c g") 'helm-git-grep-from-helm))
 
 For more information, See the following URL:
 https://github.com/yasuyk/helm-git-grep

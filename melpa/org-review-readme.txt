@@ -26,17 +26,17 @@ Example use.
 
 1 - To display the things to review in the agenda.
 
-(setq org-agenda-custom-commands (quote ( ...
-("R" "Review projects" tags-todo "-CANCELLED/"
-((org-agenda-overriding-header "Reviews Scheduled")
-(org-agenda-skip-function 'org-review-agenda-skip)
-(org-agenda-cmp-user-defined 'org-review-compare)
-(org-agenda-sorting-strategy '(user-defined-down)))) ... )))
+  (setq org-agenda-custom-commands (quote ( ...
+       ("R" "Review projects" tags-todo "-CANCELLED/"
+        ((org-agenda-overriding-header "Reviews Scheduled")
+        (org-agenda-skip-function 'org-review-agenda-skip)
+        (org-agenda-cmp-user-defined 'org-review-compare)
+        (org-agenda-sorting-strategy '(user-defined-down)))) ... )))
 
 2 - To set a key binding to review from the agenda
 
-(add-hook 'org-agenda-mode-hook (lambda () (local-set-key (kbd "C-c
-C-r") 'org-review-insert-last-review)))
+  (add-hook 'org-agenda-mode-hook (lambda () (local-set-key (kbd "C-c
+       C-r") 'org-review-insert-last-review)))
 
 ; Changes
 

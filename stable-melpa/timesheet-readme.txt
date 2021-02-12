@@ -16,14 +16,14 @@ Ensure TEXINPUTS is set to (in your ~/.bashrc)
 export TEXINPUTS=.:$HOME/.emacs.d/elpa/auctex-11.87.4/latex:
 
 Start by creating an example client...
-M-x timesheet-example
-You will be viewing the buffer yoyodyne.org that already has some example
-time entries... Create an invoice with
-M-x timesheet-invoice-this
+  M-x timesheet-example
+  You will be viewing the buffer yoyodyne.org that already has some example
+  time entries... Create an invoice with
+  M-x timesheet-invoice-this
 
 Next steps...
 - customize your name (in defs.tex) and logo (in logo.pdf).
 - update some time entries.
 
 Example key bindings
-see example.emacs.d/foo/bindings.el
+ see example.emacs.d/foo/bindings.el

@@ -3,4 +3,4 @@ Adams' `info+' package.
 
 To enable this:
 
-(add-hook 'Info-selection-hook 'info-colors-fontify-node)
+    (add-hook 'Info-selection-hook 'info-colors-fontify-node)

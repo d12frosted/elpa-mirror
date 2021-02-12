@@ -14,9 +14,9 @@ overview of tasks in a subtree.
 Call these commands to display sidebars:
 
 - `org-sidebar:' Display the default item sidebars for the current
-Org buffer.
+                 Org buffer.
 - `org-sidebar-tree:' Display tree-view sidebar for current Org
-buffer.
+                      buffer.
 
 Toggling versions of those commands are also available:
 

@@ -6,11 +6,11 @@ Install
 
 `click-mode' is available on melpa. You can install it with:
 
-M-x package-install RET click-mode RET
+    M-x package-install RET click-mode RET
 
 Then simply open a `.click` file and enjoy!
 
 You may also want to add this to your `.emacs`:
 
-(add-to-list 'auto-mode-alist '("\\.template\\'" . click-mode))
-(add-to-list 'auto-mode-alist '("\\.inc\\'" . click-mode))
+    (add-to-list 'auto-mode-alist '("\\.template\\'" . click-mode))
+    (add-to-list 'auto-mode-alist '("\\.inc\\'" . click-mode))

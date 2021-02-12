@@ -24,7 +24,7 @@ Set `scpaste-http-destination' and `scpaste-scp-destination' to
 appropriate values, and add this to your Emacs config:
 
 (setq scpaste-http-destination "https://p.hagelb.org"
-scpaste-scp-destination "p.hagelb.org:p.hagelb.org")
+      scpaste-scp-destination "p.hagelb.org:p.hagelb.org")
 
 If you have a different keyfile, you can set that, too:
 (setq scpaste-scp-pubkey "~/.ssh/my_keyfile.pub")
@@ -40,7 +40,7 @@ Optionally you can set the displayed name for the footer and where
 it should link to:
 
 (setq scpaste-user-name "Technomancy"
-scpaste-user-address "https://technomancy.us/")
+      scpaste-user-address "https://technomancy.us/")
 
 ; Usage
 

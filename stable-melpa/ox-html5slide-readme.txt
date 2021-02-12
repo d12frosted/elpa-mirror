@@ -6,8 +6,8 @@ and only support org-mode 8.0 or above.
 
 If you have `melpa` and `emacs24` installed, simply type:
 
-M-x package-install org-html5slide
+     M-x package-install org-html5slide
 
 In your .emacs
 
-(require 'ox-html5slide)
+     (require 'ox-html5slide)

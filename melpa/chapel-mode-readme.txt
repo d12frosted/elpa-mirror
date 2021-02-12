@@ -10,7 +10,7 @@ Installation:
 
 The simple way is to use package.el:
 
-M-x package-install chapel-mode
+  M-x package-install chapel-mode
 
 Or, copy chapel-mode.el to some location in your Emacs load
 path.  Then add "(require 'chapel-mode)" to your Emacs initialization
@@ -18,4 +18,4 @@ path.  Then add "(require 'chapel-mode)" to your Emacs initialization
 
 Example config:
 
-(require 'chapel-mode)
+  (require 'chapel-mode)

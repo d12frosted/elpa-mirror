@@ -1,9 +1,0 @@
-(bind-key .
-	  [(20200805 1727)
-	   nil "A simple way to manage personal keybindings" single
-	   ((:commit . "e6b4bf8458f94227ed64df6e8e873d147e42916f")
-	    (:authors
-	     ("John Wiegley" . "johnw@newartisans.com"))
-	    (:maintainer "John Wiegley" . "johnw@newartisans.com")
-	    (:keywords "keys" "keybinding" "config" "dotemacs")
-	    (:url . "https://github.com/jwiegley/use-package"))])

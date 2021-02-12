@@ -56,66 +56,66 @@ The value of the `org-vcard-append-to-existing-import-buffer' and `org-vcard-app
 
 The structure of the `tree' contacts style is:
 
-* [Contact name]
-:PROPERTIES:
-:KIND: individual
-:FIELDTYPE: name
-:END:
-** [Information type]
-*** [Information value]
-:PROPERTIES:
-:FIELDTYPE: [Field type]
-[:PREFERRED:]
-:END:
+    * [Contact name]
+    :PROPERTIES:
+    :KIND: individual
+    :FIELDTYPE: name
+    :END:
+    ** [Information type]
+    *** [Information value]
+    :PROPERTIES:
+    :FIELDTYPE: [Field type]
+    [:PREFERRED:]
+    :END:
 
 Here's an example:
 
-* Joan Smith
-:PROPERTIES:
-:KIND: individual
-:FIELDTYPE: name
-:END:
-** Mobile
-*** 0000 999 999
-:PROPERTIES:
-:FIELDTYPE: cell
-:END:
-** Email
-*** Work
-**** address1@hidden
-:PROPERTIES:
-:FIELDTYPE: email-work
-:PREFERRED:
-:END:
-*** Home
-**** address2@hidden
-:PROPERTIES:
-:FIELDTYPE: email-home
-:END:
+    * Joan Smith
+    :PROPERTIES:
+    :KIND: individual
+    :FIELDTYPE: name
+    :END:
+    ** Mobile
+    *** 0000 999 999
+    :PROPERTIES:
+    :FIELDTYPE: cell
+    :END:
+    ** Email
+    *** Work
+    **** address1@hidden
+    :PROPERTIES:
+    :FIELDTYPE: email-work
+    :PREFERRED:
+    :END:
+    *** Home
+    **** address2@hidden
+    :PROPERTIES:
+    :FIELDTYPE: email-home
+    :END:
 
 As the `tree' style uses a heading's FIELDTYPE property to associate fields with their data, the above hierarchy is only one way to structure contacts; equivalently, one could do:
 
-* People
-** Joan Smith
-:PROPERTIES:
-:KIND: individual
-:FIELDTYPE: name
-:END:
-*** Cell
-**** 0000 999 999
-:PROPERTIES:
-:FIELDTYPE: cell
-:END:
-*** Email
-**** address1@hidden
-:PROPERTIES:
-:FIELDTYPE: email-work
-:PREFERRED:
-:END:
-**** address2@hidden
-:PROPERTIES:
-:FIELDTYPE: email-home
-:END:
+    * People
+    ** Joan Smith
+    :PROPERTIES:
+    :KIND: individual
+    :FIELDTYPE: name
+    :END:
+    *** Cell
+    **** 0000 999 999
+    :PROPERTIES:
+    :FIELDTYPE: cell
+    :END:
+    *** Email
+    **** address1@hidden
+    :PROPERTIES:
+    :FIELDTYPE: email-work
+    :PREFERRED:
+    :END:
+    **** address2@hidden
+    :PROPERTIES:
+    :FIELDTYPE: email-home
+    :END:
 
 ## TODO
 

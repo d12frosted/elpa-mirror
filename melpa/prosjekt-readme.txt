@@ -26,24 +26,24 @@ anything sources "anything-c-source-prosjekt-files" and
 
 Example config:
 
-(require 'prosjekt)
-(require 'anything-prosjekt)
+  (require 'prosjekt)
+  (require 'anything-prosjekt)
 
-(require 'anything)
-(add-to-list 'anything-sources 'anything-c-source-prosjekt-files t)
-(add-to-list 'anything-sources 'anything-c-source-prosjekt-projects t)
+  (require 'anything)
+  (add-to-list 'anything-sources 'anything-c-source-prosjekt-files t)
+  (add-to-list 'anything-sources 'anything-c-source-prosjekt-projects t)
 
 Tool descriptions:
 
 The ":tools" section of a project defines commands which are
 associated with the project. Each tool has a name, a function run
 for the tool, an optional sequence of keybindings. A tool description looks like this:
-((:name . "name of tool")
-(:command ...tool function...))
-(:keys ...list of keybinding...))
+  ((:name . "name of tool")
+   (:command ...tool function...))
+   (:keys ...list of keybinding...))
 
 for example:
 
-((:name . "git status")
-(:command git-status)
-(:keys "[f5]"))
+  ((:name . "git status")
+   (:command git-status)
+   (:keys "[f5]"))

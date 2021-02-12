@@ -14,7 +14,7 @@ Links are opened via the standard org funktion ~org-open-at-point~.
 Evaluate the elisp source file in some manner.  If you like quelpa,
 this line would also work in your init.el:
 
-(when (not (require 'org-linkotron nil 'noerror))
-(quelpa '(org-linkotron :repo "perweij/org-linkotron" :fetcher gitlab)))
-(require 'org-linkotron)
+  (when (not (require 'org-linkotron nil 'noerror))
+    (quelpa '(org-linkotron :repo "perweij/org-linkotron" :fetcher gitlab)))
+  (require 'org-linkotron)
 

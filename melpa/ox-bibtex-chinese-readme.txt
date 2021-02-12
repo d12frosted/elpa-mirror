@@ -12,10 +12,10 @@ through Emacs package management system.
 ** Usage
 1. Install bibtex2html to your system
 2. Configure Emacs
-#+BEGIN_EXAMPLE
-(require 'org)
-(require 'ox-bibtex)
-(require 'ox-bibtex-chinese)
-(ox-bibtex-chinese-enable)
-#+END_EXAMPLE
+   #+BEGIN_EXAMPLE
+   (require 'org)
+   (require 'ox-bibtex)
+   (require 'ox-bibtex-chinese)
+   (ox-bibtex-chinese-enable)
+   #+END_EXAMPLE
 3. See the format of "example/thesis.org" and try export it to html file.

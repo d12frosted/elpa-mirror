@@ -14,14 +14,14 @@ Suggestions, improvements, and bug reports are welcome. This is a
 Installation instructions:
 
 1. Put this file in your emacs load path OR add the following to
-your .emacs file (modifying the path appropriately):
+   your .emacs file (modifying the path appropriately):
 
-(add-to-list 'load-path "/home/agrif/emacsinclude")
+   (add-to-list 'load-path "/home/agrif/emacsinclude")
 
 2. Add the following to your .emacs file to load this file
-automatically when M-x pianobar is run:
+   automatically when M-x pianobar is run:
 
-(autoload 'pianobar "pianobar" nil t)
+   (autoload 'pianobar "pianobar" nil t)
 
 3. (Optional) Customize pianobar! See the README for information on
-what variables are available to set.
+    what variables are available to set.

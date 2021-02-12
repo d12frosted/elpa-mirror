@@ -1,13 +1,13 @@
 
 Quickstart
 
-(require 'simpleclip)
+    (require 'simpleclip)
 
-(simpleclip-mode 1)
+    (simpleclip-mode 1)
 
-;; Press super-c to copy without affecting the kill ring.
-;; Press super-x or super-v to cut or paste.
-;; On OS X, use ⌘-c, ⌘-v, ⌘-x.
+    ;; Press super-c to copy without affecting the kill ring.
+    ;; Press super-x or super-v to cut or paste.
+    ;; On OS X, use ⌘-c, ⌘-v, ⌘-x.
 
 Explanation
 
@@ -25,8 +25,8 @@ set up custom keybindings if you want to take advantage of that.
 To use simpleclip, place the simpleclip.el library somewhere
 Emacs can find it, and add the following to your ~/.emacs file:
 
-(require 'simpleclip)
-(simpleclip-mode 1)
+    (require 'simpleclip)
+    (simpleclip-mode 1)
 
 Keybindings
 
@@ -39,20 +39,20 @@ kill/yank keys (control-k, control-y, meta-y) are unaffected.
 
 The default keybindings are
 
-super-c   simpleclip-copy
-super-x   simpleclip-cut
-super-v   simpleclip-paste
+             super-c   simpleclip-copy
+             super-x   simpleclip-cut
+             super-v   simpleclip-paste
 
-control-<insert>   simpleclip-copy
-shift-<delete>   simpleclip-cut
-shift-<insert>   simpleclip-paste
+    control-<insert>   simpleclip-copy
+      shift-<delete>   simpleclip-cut
+      shift-<insert>   simpleclip-paste
 
 The "super" keybindings are friendly for OS X.  The "insert"/"delete"
 keybindings are better suited for Unix and MS Windows.
 
 See Also
 
-M-x customize-group RET simpleclip RET
+    M-x customize-group RET simpleclip RET
 
 Notes
 
@@ -68,32 +68,32 @@ simpleclip's TTY support.
 
 The following functions may be useful to call from Lisp:
 
-`simpleclip-get-contents'
-`simpleclip-set-contents'
+    `simpleclip-get-contents'
+    `simpleclip-set-contents'
 
 Compatibility and Requirements
 
-No external dependencies
+    No external dependencies
 
-Tested on OS X, X11, and MS Windows
+    Tested on OS X, X11, and MS Windows
 
 Bugs
 
-Assumes that transient-mark-mode is on.
+    Assumes that transient-mark-mode is on.
 
-Menu items under Edit are rebound successfully, but the visible
-menu text does not change.  cua-mode does this correctly --
-because of remap?  because of emulation-mode-map-alists?
+    Menu items under Edit are rebound successfully, but the visible
+    menu text does not change.  cua-mode does this correctly --
+    because of remap?  because of emulation-mode-map-alists?
 
-Key bindings do not work out-of-the-box with Aquamacs.
+    Key bindings do not work out-of-the-box with Aquamacs.
 
 TODO
 
-TTY-friendly key bindings.
+    TTY-friendly key bindings.
 
-Keep kill-ring commands in Edit menu under modified names.
+    Keep kill-ring commands in Edit menu under modified names.
 
-Support non-string data types.
+    Support non-string data types.
 
 ; License
 
@@ -103,14 +103,14 @@ Redistribution and use in source and binary forms, with or
 without modification, are permitted provided that the following
 conditions are met:
 
-1. Redistributions of source code must retain the above
-copyright notice, this list of conditions and the following
-disclaimer.
+  1. Redistributions of source code must retain the above
+     copyright notice, this list of conditions and the following
+     disclaimer.
 
-2. Redistributions in binary form must reproduce the above
-copyright notice, this list of conditions and the following
-disclaimer in the documentation and/or other materials
-provided with the distribution.
+  2. Redistributions in binary form must reproduce the above
+     copyright notice, this list of conditions and the following
+     disclaimer in the documentation and/or other materials
+     provided with the distribution.
 
 This software is provided by Roland Walker "AS IS" and any express
 or implied warranties, including, but not limited to, the implied

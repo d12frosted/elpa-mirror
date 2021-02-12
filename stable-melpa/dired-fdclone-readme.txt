@@ -25,7 +25,7 @@ dired-fdclone.el provides the following interactive commands:
 The above functions are mostly usable stand-alone, but if you feel
 like "omakase", add the following line to your setup.
 
-(dired-fdclone)
+  (dired-fdclone)
 
 This makes dired:
 
@@ -34,12 +34,12 @@ This makes dired:
 - alter key bindings to mimic FD/FDclone
 - not open a new buffer when you navigate to a new directory
 - run a shell command in ansi-term to allow launching interactive
-commands
+  commands
 - automatically revert the buffer after running a command with
-obvious side-effects
+  obvious side-effects
 
 Without spoiling dired's existing features.
 
 As usual, customization is available via:
 
-M-x customize-group dired-fdclone RET
+  M-x customize-group dired-fdclone RET

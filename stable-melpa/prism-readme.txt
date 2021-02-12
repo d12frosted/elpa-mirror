@@ -9,11 +9,11 @@ Usage:
 
 1.  Run the appropriate command for the current buffer:
 
-- For Lisp and C-like languages, use `prism-mode'.
+  - For Lisp and C-like languages, use `prism-mode'.
 
-- For significant-whitespace languages like Python, or ones whose
-depth is not always indicated by parenthetical characters, like
-shell, use `prism-whitespace-mode' instead.
+  - For significant-whitespace languages like Python, or ones whose
+    depth is not always indicated by parenthetical characters, like
+    shell, use `prism-whitespace-mode' instead.
 
 2.  Enjoy.
 
@@ -43,18 +43,18 @@ those colors by default.
 
 Here's an example that the author finds pleasant:
 
-(prism-set-colors :num 16
-:desaturations (cl-loop for i from 0 below 16
-collect (* i 2.5))
-:lightens (cl-loop for i from 0 below 16
-collect (* i 2.5))
-:colors (list "sandy brown" "dodgerblue" "medium sea green")
+  (prism-set-colors :num 16
+    :desaturations (cl-loop for i from 0 below 16
+                            collect (* i 2.5))
+    :lightens (cl-loop for i from 0 below 16
+                       collect (* i 2.5))
+    :colors (list "sandy brown" "dodgerblue" "medium sea green")
 
-:comments-fn
-(lambda (color)
-(prism-blend color
-(face-attribute 'font-lock-comment-face :foreground) 0.25))
+    :comments-fn
+    (lambda (color)
+      (prism-blend color
+        (face-attribute 'font-lock-comment-face :foreground) 0.25))
 
-:strings-fn
-(lambda (color)
-(prism-blend color "white" 0.5)))
+    :strings-fn
+    (lambda (color)
+      (prism-blend color "white" 0.5)))

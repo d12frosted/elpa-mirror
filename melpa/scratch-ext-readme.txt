@@ -6,5 +6,5 @@ when it is killed or Emacs quits.
 
 In addition,
 * killing *scratch* becomes simply (erase-buffer) it.
-So you can easily undo it.
+  So you can easily undo it.
 * After you save *scratch* to file by hand, new *scratch* buffer is created.

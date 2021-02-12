@@ -6,7 +6,7 @@ buffers.
 
 To activate, just bind `imenu-anywhere' to a convenient key:
 
-(global-set-key (kbd "C-.") 'imenu-anywhere)
+   (global-set-key (kbd "C-.") 'imenu-anywhere)
 
 By default `imenu-anywhere' uses plain `completing-read'. `ido-imenu-anywhere',
 `ivy-imenu-anywhere' and `helm-imenu-anywhere' are specialized interfaces.

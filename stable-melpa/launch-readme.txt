@@ -19,7 +19,7 @@ Launch is available from MELPA <http://melpa.milkbox.net/>.
 Just run \\[package-install] and install `launch'.
 
 Then, in your ~/.emacs configuration, add:
-(global-launch-mode +1)
+    (global-launch-mode +1)
 
 If you only want to enable it for certain modes, add:
-(add-hook 'html-mode 'turn-on-launch-mode)
+    (add-hook 'html-mode 'turn-on-launch-mode)

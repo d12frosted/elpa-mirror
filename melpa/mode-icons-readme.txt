@@ -31,7 +31,7 @@ among others:
 
 To enable this minor mode add the following line to your init file:
 
-(mode-icons-mode)
+    (mode-icons-mode)
 
 As of version 0.3.0 this project includes some icons which can use icon
 fonts instead of images.  These fonts are:

@@ -22,45 +22,45 @@ through tabs.
 These commands, and default keyboard shortcuts, are provided:
 
 `tabbar-mode'
-Toggle the Tabbar global minor mode.  When enabled a tab bar is
-displayed in the header line.
+    Toggle the Tabbar global minor mode.  When enabled a tab bar is
+    displayed in the header line.
 
 `tabbar-local-mode'         (C-c <C-f10>)
-Toggle the Tabbar-Local minor mode.  Provided the global minor
-mode is turned on, the tab bar becomes local in the current
-buffer when the local minor mode is enabled.  This permits to
-see the tab bar in a buffer where the header line is already
-used by another mode (like `Info-mode' for example).
+    Toggle the Tabbar-Local minor mode.  Provided the global minor
+    mode is turned on, the tab bar becomes local in the current
+    buffer when the local minor mode is enabled.  This permits to
+    see the tab bar in a buffer where the header line is already
+    used by another mode (like `Info-mode' for example).
 
 `tabbar-mwheel-mode'
-Toggle the Tabbar-Mwheel global minor mode.  When enabled you
-can use the mouse wheel to navigate through tabs of groups.
+    Toggle the Tabbar-Mwheel global minor mode.  When enabled you
+    can use the mouse wheel to navigate through tabs of groups.
 
 `tabbar-press-home'         (C-c <C-home>)
 `tabbar-press-scroll-left'  (C-c <C-prior>)
 `tabbar-press-scroll-right' (C-c <C-next>)
-Simulate a mouse-1 click on respectively the "home", "scroll
-left", and "scroll right" buttons.  A numeric prefix argument
-value of 2, or 3, respectively simulates a mouse-2, or mouse-3
-click.
+    Simulate a mouse-1 click on respectively the "home", "scroll
+    left", and "scroll right" buttons.  A numeric prefix argument
+    value of 2, or 3, respectively simulates a mouse-2, or mouse-3
+    click.
 
 `tabbar-backward'           (C-c <C-left>)
 `tabbar-forward'            (C-c <C-right>)
-Are the basic commands to navigate cyclically through tabs or
-groups of tabs.  The cycle is controlled by the
-`tabbar-cycle-scope' option.  The default is to navigate
-through all tabs across all existing groups of tabs.  You can
-change the default behavior to navigate only through the tabs
-visible on the tab bar, or through groups of tabs only.  Or use
-the more specialized commands below.
+    Are the basic commands to navigate cyclically through tabs or
+    groups of tabs.  The cycle is controlled by the
+    `tabbar-cycle-scope' option.  The default is to navigate
+    through all tabs across all existing groups of tabs.  You can
+    change the default behavior to navigate only through the tabs
+    visible on the tab bar, or through groups of tabs only.  Or use
+    the more specialized commands below.
 
 `tabbar-backward-tab'
 `tabbar-forward-tab'
-Navigate through the tabs visible on the tab bar.
+    Navigate through the tabs visible on the tab bar.
 
 `tabbar-backward-group'     (C-c <C-up>)
 `tabbar-forward-group'      (C-c <C-down>)
-Navigate through existing groups of tabs.
+    Navigate through existing groups of tabs.
 
 
 Core
@@ -102,12 +102,12 @@ following variables are available, for respectively the `home',
 `scroll-left' and `scroll-right' value of `<button>':
 
 `tabbar-<button>-function'
-Function called when <button> is selected.  The function is
-passed the mouse event received.
+   Function called when <button> is selected.  The function is
+   passed the mouse event received.
 
 `tabbar-<button>-help-function'
-Function called with no arguments to obtain a help string
-displayed when the mouse is over <button>.
+   Function called with no arguments to obtain a help string
+   displayed when the mouse is over <button>.
 
 To increase performance, each tab set automatically maintains its
 visual representation in a cache.  As far as possible, the cache is

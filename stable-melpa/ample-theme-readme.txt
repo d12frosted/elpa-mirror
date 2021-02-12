@@ -1,11 +1,11 @@
 
-ample-theme is part of the ample themes, a collection of 3 themes
-sharing a similar pallet with a light, dark, and flat version.
+ ample-theme is part of the ample themes, a collection of 3 themes
+ sharing a similar pallet with a light, dark, and flat version.
 
-Ample-theme is a calm dark theme with a focus on being easy on the eyes
-during night and day.
+ Ample-theme is a calm dark theme with a focus on being easy on the eyes
+ during night and day.
 
-Terminals with 256 colors and up will display this theme correctly.
+ Terminals with 256 colors and up will display this theme correctly.
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

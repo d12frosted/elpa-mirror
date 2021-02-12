@@ -10,24 +10,24 @@ reStructuredText, AsciiDoc, and Org.  It also assumes you’ve set up
 Pelican with “pelican-quickstart” or something like it.  In
 particular it expects:
 
-* The existence of “pelicanconf.py” and “Makefile” in some
-ancestor directory.
-* The first component of the path (e.g. “content”) after that
-ancestor is irrelevant.
-* If the next component is “pages”, that indicates a page
-rather than an article.
+ * The existence of “pelicanconf.py” and “Makefile” in some
+   ancestor directory.
+ * The first component of the path (e.g. “content”) after that
+   ancestor is irrelevant.
+ * If the next component is “pages”, that indicates a page
+   rather than an article.
 
 To enable by default on all text files in a Pelican site:
 
-(require 'pelican-mode)
-(pelican-global-mode)
+    (require 'pelican-mode)
+    (pelican-global-mode)
 
 Or with ‘use-package’ and deferred loading:
 
-(use-package pelican-mode
-:demand :after (:any org rst markdown-mode adoc-mode)
-:config
-(pelican-global-mode))
+    (use-package pelican-mode
+      :demand :after (:any org rst markdown-mode adoc-mode)
+      :config
+      (pelican-global-mode))
 
 Or, register ‘pelican-mode’ or ‘pelican-mode-enable-if-site’
 as hook functions for more direct control.

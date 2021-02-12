@@ -13,5 +13,5 @@ Call `helm-proc' and:
 type 'firefox'
 => lists all processes named firefox or with firefox in args
 press RET to send TERM signal
-or
+ or
 press TAB for list of possible actions

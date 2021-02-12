@@ -9,5 +9,5 @@ Add the following to your .emacs to install:
 or:
 
 (use-package pine-script-mode
-:ensure t
-:mode ("\\.pine\\'"))
+  :ensure t
+  :mode ("\\.pine\\'"))

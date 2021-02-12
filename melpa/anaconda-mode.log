@@ -3,9 +3,19 @@ Fetcher: github
 Source:  https://github.com/pythonic-emacs/anaconda-mode.git
 
 Updating /mnt/store/melpa/working/anaconda-mode/
-Built anaconda-mode in 8.294s, finished at Mon Feb  8 03:51:06 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/anaconda-mode/
+  to /tmp/anaconda-modeAD682y/anaconda-mode-20210210.852
+    anaconda-mode.el -> anaconda-mode.el
+    anaconda-mode.py -> anaconda-mode.py
+Created anaconda-mode-20210210.852.tar containing:
+  anaconda-mode-20210210.852/
+  anaconda-mode-20210210.852/anaconda-mode-pkg.el
+  anaconda-mode-20210210.852/anaconda-mode.el
+  anaconda-mode-20210210.852/anaconda-mode.py
+Built anaconda-mode in 3.801s, finished at Fri Feb 12 03:14:59 2021
  ✓ Success:
- 36K -rw-r--r-- 1 root root  35K Feb  8 03:51 packages/anaconda-mode-20210101.833.el
-4.0K -rw-r--r-- 1 root root  464 Feb  8 03:51 packages/anaconda-mode-20210101.833.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  8 03:51 packages/anaconda-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   33 Feb  8 03:51 packages/anaconda-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  461 Feb 12 03:14 packages/anaconda-mode-20210210.852.entry
+ 40K -rw-r--r-- 1 root root  40K Feb 12 03:14 packages/anaconda-mode-20210210.852.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 12 03:14 packages/anaconda-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   33 Feb 12 03:14 packages/anaconda-mode-readme.txt

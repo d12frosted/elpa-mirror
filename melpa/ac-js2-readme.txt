@@ -8,7 +8,7 @@ Easiest way to get ac-js2 is to install it from MELPA. You may need
 this snippet
 
 `(add-to-list 'package-archives
-'("melpa" . "http://melpa.milkbox.net/packages/") t)'
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)'
 
 if you don't have it already to fetch packages from MELPA.
 

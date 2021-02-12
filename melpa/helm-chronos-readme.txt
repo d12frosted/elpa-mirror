@@ -17,8 +17,8 @@ There is a predefined list helm-chronos-standard-timers, empty by default,
 which can be set in your init file like:
 
 (setq helm-chronos-standard-timers
-'( "     4/Tea"
-"=16:20/Time for tea"))
+      '( "     4/Tea"
+         "=16:20/Time for tea"))
 
 In this example, two timers are offered as standard: one to go off in 4
 minutes from when it is set, and another that will expire at 4:20pm today.

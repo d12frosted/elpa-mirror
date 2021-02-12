@@ -7,4 +7,4 @@ resolution, but should be enough for general usage.
 
 Get development version from git:
 
-git clone git://github.com/kanru/uuidgen-el.git
+    git clone git://github.com/kanru/uuidgen-el.git

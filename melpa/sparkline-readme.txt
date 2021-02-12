@@ -14,13 +14,13 @@ underlying data.
 Creating sparkline graphs is done by the function `sparkline-make-sparkline',
 for example:
 
-(sparkline-make-sparkline 80 11 '(10 20 4 23.3 22.1 3.3 4.5 6.7))
+  (sparkline-make-sparkline 80 11 '(10 20 4 23.3 22.1 3.3 4.5 6.7))
 
 which creates an image which can be inserted in a buffer with the
 standard image functions such as:
 
-(insert-image
-(sparkline-make-sparkline 80 11 '(10 20 4 23.3 22.1 3.3 4.5 6.7)))
+  (insert-image
+     (sparkline-make-sparkline 80 11 '(10 20 4 23.3 22.1 3.3 4.5 6.7)))
 
 
 GENERAL DRAWING FEATURES

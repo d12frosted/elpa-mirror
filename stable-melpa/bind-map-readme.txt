@@ -6,15 +6,15 @@ and allows for an arbitrary number of "leader keys". This is probably best
 explained with an example.
 
 (bind-map my-base-leader-map
-:keys ("M-m")
-:evil-keys ("SPC")
-:evil-states (normal motion visual))
+  :keys ("M-m")
+  :evil-keys ("SPC")
+  :evil-states (normal motion visual))
 
 (bind-map my-elisp-map
-:keys ("M-m m" "M-RET")
-:evil-keys ("SPC m" ",")
-:major-modes (emacs-lisp-mode
-lisp-interaction-mode))
+  :keys ("M-m m" "M-RET")
+  :evil-keys ("SPC m" ",")
+  :major-modes (emacs-lisp-mode
+                lisp-interaction-mode))
 
 This will make my-base-leader-map (automatically creating the map if it's not
 defined yet) available under the prefixes (or leaders) M-m and SPC, where the
@@ -33,9 +33,9 @@ is specified. This declaration, for example, makes no use of the evil
 package.
 
 (bind-map my-elisp-map
-:keys ("M-m m" "M-RET")
-:major-modes (emacs-lisp-mode
-lisp-interaction-mode))
+  :keys ("M-m m" "M-RET")
+  :major-modes (emacs-lisp-mode
+                lisp-interaction-mode))
 
 The idea behind this package is that you want to organize your personal
 bindings in a series of keymaps separate from built-in mode maps. You can
@@ -51,24 +51,24 @@ those who want a different interface, the following functions are also
 provided, which both just use define-key internally, but allow for multiple
 bindings without much syntax.
 
-(bind-map-set-keys my-base-leader-map
-"c" 'compile
-"C" 'check
-;; ...
-)
-;; is the same as
-;; (define-key my-base-leader-map (kbd "c") 'compile)
-;; (define-key my-base-leader-map (kbd "C") 'check)
-;; ...
+  (bind-map-set-keys my-base-leader-map
+    "c" 'compile
+    "C" 'check
+    ;; ...
+    )
+  ;; is the same as
+  ;; (define-key my-base-leader-map (kbd "c") 'compile)
+  ;; (define-key my-base-leader-map (kbd "C") 'check)
+  ;; ...
 
-(bind-map-set-key-defaults my-base-leader-map
-"c" 'compile
-;; ...
-)
-;; is the same as
-;; (unless (lookup-key my-base-leader-map (kbd "c"))
-;;   (define-key my-base-leader-map (kbd "c") 'compile))
-;; ...
+  (bind-map-set-key-defaults my-base-leader-map
+    "c" 'compile
+    ;; ...
+    )
+  ;; is the same as
+  ;; (unless (lookup-key my-base-leader-map (kbd "c"))
+  ;;   (define-key my-base-leader-map (kbd "c") 'compile))
+  ;; ...
 
 The second function only adds the bindings if there is no existing binding
 for that key. It is probably only useful for shared configurations, where you

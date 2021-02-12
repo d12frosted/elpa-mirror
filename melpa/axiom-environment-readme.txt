@@ -3,16 +3,16 @@ work with, and understand, the Axiom, OpenAxiom and FriCAS computer
 algebra systems.  It implements four different major modes for the
 Emacs text editor:
 
-1. axiom-process-mode: for interaction with a running Axiom
-process.
+  1. axiom-process-mode: for interaction with a running Axiom
+     process.
 
-2. axiom-help-mode: for displaying help information about the
-Axiom system.
+  2. axiom-help-mode: for displaying help information about the
+     Axiom system.
 
-3. axiom-input-mode: for editing a .input (Axiom script) file.
+  3. axiom-input-mode: for editing a .input (Axiom script) file.
 
-4. axiom-spad-mode: for editing Axiom library code written in the
-SPAD language.
+  4. axiom-spad-mode: for editing Axiom library code written in the
+     SPAD language.
 
 The main features of these modes (so far) are syntax highlighting
 to display package, domain & category names (and their

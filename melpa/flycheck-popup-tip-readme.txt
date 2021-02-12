@@ -14,4 +14,4 @@ https://github.com/flycheck/flycheck-popup-tip
 Add to your `init.el':
 
 (with-eval-after-load 'flycheck
-'(add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode))
+  '(add-hook 'flycheck-mode-hook 'flycheck-popup-tip-mode))

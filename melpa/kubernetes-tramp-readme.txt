@@ -14,10 +14,10 @@ All the merits should go to [*Mario Rodas*](marsam@users.noreply.github.com) whi
 
 Offers the TRAMP method `kubectl` to access running containers
 
-C-x C-f /kubectl:container:/path/to/file
+    C-x C-f /kubectl:container:/path/to/file
 
-where
-container      is the name of the container
+    where
+      container      is the name of the container
 
 ## Caveats
 

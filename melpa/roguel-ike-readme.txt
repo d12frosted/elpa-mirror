@@ -14,8 +14,8 @@ Usage:
 
 To load the file write this in your Emacs configuration:
 
-(add-to-list 'load-path "/path/to/roguel-ike/")
-(require 'roguel-ike)
+    (add-to-list 'load-path "/path/to/roguel-ike/")
+    (require 'roguel-ike)
 
 Then, type `M-x roguel-ike`.
 
@@ -32,8 +32,8 @@ This project is an experiment :
 
 * This is my first serious attempt to create a roguelike
 * I'm using Emacs Lisp because I want to make it run on Emacs,
-but also to gain experience in Lisp programming and to see
-how a large Lisp program can be managed
+  but also to gain experience in Lisp programming and to see
+  how a large Lisp program can be managed
 
 Compatibilities:
 

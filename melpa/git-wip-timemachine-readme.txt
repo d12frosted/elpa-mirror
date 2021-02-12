@@ -6,8 +6,8 @@ Control the time machine using the following keys:
 . -- Visit current WIP version.
 > -- Visit current WIP version.
 < -- Visit oldest WIP version
-(equivalent to merge base of current branch and associated WIP branch
-*if* merge base introduces changes to current file).
+     (equivalent to merge base of current branch and associated WIP branch
+     *if* merge base introduces changes to current file).
 p -- Visit previous WIP version.
 n -- Visit next WIP version.
 g -- Visit nth WIP version.
@@ -23,26 +23,26 @@ will turn it off (and vice versa).
 
 1. If you haven't already, set up `git-wip`:
 
-- Clone the "git-wip" package to your $HOME directory:
+   - Clone the "git-wip" package to your $HOME directory:
 
-$ cd
-$ git clone https://github.com/itsjeyd/git-wip
+     $ cd
+     $ git clone https://github.com/itsjeyd/git-wip
 
-If you decide to clone to a different directory and that
-directory is *not* part of your `exec-path' in Emacs, you'll
-need to add the following code to your init-file (to make sure
-Emacs can find the git-wip script):
+     If you decide to clone to a different directory and that
+     directory is *not* part of your `exec-path' in Emacs, you'll
+     need to add the following code to your init-file (to make sure
+     Emacs can find the git-wip script):
 
-(add-to-list 'exec-path "/path/to/git-wip")
+     (add-to-list 'exec-path "/path/to/git-wip")
 
-- Add the following code to your init-file:
+   - Add the following code to your init-file:
 
-(load "/path/to/git-wip/emacs/git-wip.el")
+     (load "/path/to/git-wip/emacs/git-wip.el")
 
-From now on, every time you save a file that is part of a git
-repository, Emacs will automatically create a WIP commit by
-calling out to git-wip for you.
+     From now on, every time you save a file that is part of a git
+     repository, Emacs will automatically create a WIP commit by
+     calling out to git-wip for you.
 
 2. Install `git-wip-timemachine' from MELPA via:
 
-M-x package-install RET git-wip-timemachine RET
+   M-x package-install RET git-wip-timemachine RET

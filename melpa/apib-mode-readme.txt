@@ -8,5 +8,5 @@ please see https://github.com/apiaryio/drafter for more information
 ; Installation:
 
 (autoload 'apib-mode "apib-mode"
-"Major mode for editing API Blueprint files" t)
+       "Major mode for editing API Blueprint files" t)
 (add-to-list 'auto-mode-alist '("\\.apib\\'" . apib-mode))

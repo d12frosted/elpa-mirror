@@ -1,12 +1,12 @@
 
 Quickstart
 
-(require 'buffer-utils)
+    (require 'buffer-utils)
 
-(buffer-utils-save-order
-(bury-buffer "*scratch*"))
+    (buffer-utils-save-order
+      (bury-buffer "*scratch*"))
 
-;; buffer order is now restored
+    ;; buffer order is now restored
 
 Explanation
 
@@ -18,20 +18,20 @@ generally useful only for programming in Emacs Lisp.
 To use buffer-utils, place the buffer-utils.el library somewhere
 Emacs can find it, and add the following to your ~/.emacs file:
 
-(require 'buffer-utils)
+    (require 'buffer-utils)
 
 The following functions and macros are provided:
 
-`buffer-utils-all-in-mode'
-`buffer-utils-all-matching'
-`buffer-utils-bury-and-forget'   ; can be called interactively
-`buffer-utils-first-matching'
-`buffer-utils-huge-p'
-`buffer-utils-in-mode'
-`buffer-utils-most-recent-file-associated'
-`buffer-utils-narrowed-p'
-`buffer-utils-save-order'
-`buffer-utils-set-order'
+    `buffer-utils-all-in-mode'
+    `buffer-utils-all-matching'
+    `buffer-utils-bury-and-forget'   ; can be called interactively
+    `buffer-utils-first-matching'
+    `buffer-utils-huge-p'
+    `buffer-utils-in-mode'
+    `buffer-utils-most-recent-file-associated'
+    `buffer-utils-narrowed-p'
+    `buffer-utils-save-order'
+    `buffer-utils-set-order'
 
 of which `buffer-utils-save-order' is the most notable.
 
@@ -42,13 +42,13 @@ Notes
 
 Compatibility and Requirements
 
-GNU Emacs version 24.4-devel     : yes, at the time of writing
-GNU Emacs version 24.3           : yes
-GNU Emacs version 23.3           : yes
-GNU Emacs version 22.2           : yes, with some limitations
-GNU Emacs version 21.x and lower : unknown
+    GNU Emacs version 24.4-devel     : yes, at the time of writing
+    GNU Emacs version 24.3           : yes
+    GNU Emacs version 23.3           : yes
+    GNU Emacs version 22.2           : yes, with some limitations
+    GNU Emacs version 21.x and lower : unknown
 
-No external dependencies
+   No external dependencies
 
 Bugs
 
@@ -62,14 +62,14 @@ Redistribution and use in source and binary forms, with or
 without modification, are permitted provided that the following
 conditions are met:
 
-1. Redistributions of source code must retain the above
-copyright notice, this list of conditions and the following
-disclaimer.
+   1. Redistributions of source code must retain the above
+      copyright notice, this list of conditions and the following
+      disclaimer.
 
-2. Redistributions in binary form must reproduce the above
-copyright notice, this list of conditions and the following
-disclaimer in the documentation and/or other materials
-provided with the distribution.
+   2. Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials
+      provided with the distribution.
 
 This software is provided by Roland Walker "AS IS" and any express
 or implied warranties, including, but not limited to, the implied

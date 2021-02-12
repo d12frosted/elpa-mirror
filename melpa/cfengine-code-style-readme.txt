@@ -2,12 +2,12 @@ Usage:
 
 To enable coding style for the current buffer:
 
-M-x c-set-style cfengine
+    M-x c-set-style cfengine
 
 To enable coding style permanently, create file .dir-locals.el with the
 following contents in the directory with the source code:
 
-((c-mode . ((c-file-style . "cfengine"))))
+    ((c-mode . ((c-file-style . "cfengine"))))
 
 
 

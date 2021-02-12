@@ -20,6 +20,6 @@ Add (require 'paredit-menu) to your .emacs. This will also force loading of
 paredit. If you autoload paredit, then
 
 (eval-after-load "paredit.el"
-'(require 'paredit-menu))
+   '(require 'paredit-menu))
 
 will achieve the same effect.

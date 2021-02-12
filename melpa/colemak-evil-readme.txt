@@ -8,8 +8,8 @@ Shai Coleman's awesome Vim remappings in Emacs
 Here are the main differences from Shai's mappings:
 
 * The only Vim mapping that works in insert mode is Esc (this avoids
-conflicts with Emacs's shortucts). Tab in insert mode doesn't take
-you into normal mode.
+  conflicts with Emacs's shortucts). Tab in insert mode doesn't take
+  you into normal mode.
 * Folding and several other features aren't implemented.
 
 Setup
@@ -18,7 +18,7 @@ Setup
 You can install Colemak Evil (as `colemak-evil`) from the MELPA repository.
 Once it's installed, add the following to your `.emacs` file:
 
-(require 'colemak-evil)
+    (require 'colemak-evil)
 
 Tips
 ----
@@ -33,12 +33,12 @@ relatively uncommon in English "hn" and "td." If you find yourself
 unintentionally entering normal mode when typing quickly, you might
 try reducing the key delay:
 
-(key-chord-define-global "td" 'evil-normal-state)
-(setq key-chord-two-keys-delay .01)
+    (key-chord-define-global "td" 'evil-normal-state)
+    (setq key-chord-two-keys-delay .01)
 
 If this doesn't work, you can use the spacebar as one of the keys:
 
-(key-chord-define-global " e" 'evil-normal-state)
+    (key-chord-define-global " e" 'evil-normal-state)
 
 There are also some Vim features that haven't yet been implemented in
 Evil. You'll probably have to add quite a few of your own mappings to

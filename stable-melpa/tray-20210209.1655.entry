@@ -1,0 +1,13 @@
+(tray .
+      [(20210209 1655)
+       ((emacs
+	 (27 1))
+	(transient
+	 (0 3 0)))
+       "Various transient menus" single
+       ((:commit . "ba04344c90094910cfa4f2f5e56b0b33934cebf7")
+	(:authors
+	 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	(:keywords "compile" "convenience" "lisp")
+	(:url . "https://git.sr.ht/~tarsius/tray"))])

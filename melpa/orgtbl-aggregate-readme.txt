@@ -42,4 +42,4 @@ A wizard can be used:
 M-x org-insert-dblock:aggregate
 
 Full documentation here:
-https://github.com/tbanel/orgaggregate/blob/master/README.org
+  https://github.com/tbanel/orgaggregate/blob/master/README.org

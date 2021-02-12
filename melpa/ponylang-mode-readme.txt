@@ -10,7 +10,7 @@ Installation:
 
 The simple way is to use package.el:
 
-M-x package-install ponylang-mode
+  M-x package-install ponylang-mode
 
 Or, copy ponylang-mode.el to some location in your Emacs load
 path.  Then add "(require 'ponylang-mode)" to your Emacs initialization
@@ -18,4 +18,4 @@ path.  Then add "(require 'ponylang-mode)" to your Emacs initialization
 
 Example config:
 
-(require 'ponylang-mode)
+  (require 'ponylang-mode)

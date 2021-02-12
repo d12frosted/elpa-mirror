@@ -12,9 +12,9 @@ the librime should be already installed.
 Emacs configuration:
 
 #+BEGIN_SRC emacs-lisp
-(use-package rime
-:custom
-(default-input-method "rime"))
+  (use-package rime
+    :custom
+    (default-input-method "rime"))
 #+END_SRC
 
 ** MacOS
@@ -22,19 +22,19 @@ Emacs configuration:
 Download librime release.
 
 #+BEGIN_SRC bash
-wget https://github.com/rime/librime/releases/download/1.7.1/rime-1.7.1-osx.zip
-unzip rime-1.7.1-osx.zip -d ~/.emacs.d/librime
-rm -rf rime-1.7.1-osx.zip
+  wget https://github.com/rime/librime/releases/download/1.7.1/rime-1.7.1-osx.zip
+  unzip rime-1.7.1-osx.zip -d ~/.emacs.d/librime
+  rm -rf rime-1.7.1-osx.zip
 #+END_SRC
 
 Emacs configuration:
 
 #+BEGIN_SRC emacs-lisp
-(use-package rime
-:init
-:custom
-(rime-librime-root "~/.emacs.d/librime/dist")
-(default-input-method "rime"))
+  (use-package rime
+    :init
+    :custom
+    (rime-librime-root "~/.emacs.d/librime/dist")
+    (default-input-method "rime"))
 #+END_SRC
 
 * Keybindings in Rime.
@@ -45,9 +45,9 @@ Since you may want them to help you with cursor navigation, candidate pagination
 Currently the keybinding with Control(C-), Meta(M-) and Shift(S-) is supported.
 
 #+BEGIN_SRC emacs-lisp
-;; defaults
-(setq rime-translate-keybindings
-'("C-f" "C-b" "C-n" "C-p" "C-g"))
+  ;; defaults
+  (setq rime-translate-keybindings
+    '("C-f" "C-b" "C-n" "C-p" "C-g"))
 #+END_SRC
 
 * Candidate menu style
@@ -76,10 +76,10 @@ If you want specific a list of rules to automatically enable ascii mode, you can
 Following is a example to use ascii mode in ~evil-normal-state~ or when cursor is after alphabet character or when cursor is in code.
 
 #+BEGIN_SRC emacs-lisp
-(setq rime-disable-predicates
-'(evil-normal-state-p
-rime--after-alphabet-char-p
-rime--prog-in-code-p))
+  (setq rime-disable-predicates
+        '(evil-normal-state-p
+          rime--after-alphabet-char-p
+          rime--prog-in-code-p))
 #+END_SRC
 
 ** Force enable
@@ -94,7 +94,7 @@ You probably want to give this command a keybinding.
 Default to ~|~ , you can customize it with
 
 #+BEGIN_SRC emacs-lisp
-(setq rime-cursor "˰")
+  (setq rime-cursor "˰")
 #+END_SRC
 
 * Shortcut to open Rime configuration file

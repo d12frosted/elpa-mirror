@@ -8,14 +8,14 @@ On MS-Windows, Ruby must be installed.
 Usage:
 
 * `M-x highlight2clipboard-copy-region-to-clipboard RET' -- Copy
-the region, with formatting, to the clipboard.
+  the region, with formatting, to the clipboard.
 
 * `M-x highlight2clipboard-copy-buffer-to-clipboard RET' -- Copy
-the buffer, with formatting, to the clipboard.
+  the buffer, with formatting, to the clipboard.
 
 * Highlight2clipboard mode -- Global minor mode, when enabled, all
-copies and cuts are exported, with formatting information, to the
-clipboard.
+  copies and cuts are exported, with formatting information, to the
+  clipboard.
 
 Supported systems:
 

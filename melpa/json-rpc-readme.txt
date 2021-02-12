@@ -10,6 +10,6 @@ Here's an example using the bitcoind JSON-RPC API:
 (json-rpc rpc "setgenerate" t 3)
 
 TODO:
-* asynchronous requests
-* response timeout
-* detect auth rejection
+ * asynchronous requests
+ * response timeout
+ * detect auth rejection

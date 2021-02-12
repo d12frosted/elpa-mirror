@@ -9,8 +9,8 @@ To activate the minor mode, add something like the following to
 your init file:
 
 (use-package notmuch-bookmarks
-:after notmuch
-:config
-(notmuch-bookmarks-mode))
+  :after notmuch
+  :config
+  (notmuch-bookmarks-mode))
 
 This package is NOT part of the official notmuch Emacs suite.

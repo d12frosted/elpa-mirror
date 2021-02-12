@@ -7,6 +7,6 @@ To bind keys to next/previous font.
 
 Example:
 
-(when (display-graphic-p)
-(define-key global-map (kbd "<M-prior>") 'default-font-presets-forward)
-(define-key global-map (kbd "<M-next>") 'default-font-presets-backward))
+  (when (display-graphic-p)
+    (define-key global-map (kbd "<M-prior>") 'default-font-presets-forward)
+    (define-key global-map (kbd "<M-next>") 'default-font-presets-backward))

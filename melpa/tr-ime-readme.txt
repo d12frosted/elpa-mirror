@@ -23,14 +23,14 @@ To use standard features (stable but less functionality) of the tr-ime
 package, add the following code to your init.el or .emacs
 It loads the tr-ime-mod DLL module if you use Emacs 27.
 
-(tr-ime-standard-install)
-(setq default-input-method "W32-IME")
-(w32-ime-initialize)
+  (tr-ime-standard-install)
+  (setq default-input-method "W32-IME")
+  (w32-ime-initialize)
 
 To use advanced features (experimental but more functionality) of the
 tr-ime package, add the following code to your init.el or .emacs
 It loads the tr-ime-modadv DLL module.
 
-(tr-ime-advanced-install)
-(setq default-input-method "W32-IME")
-(w32-ime-initialize)
+  (tr-ime-advanced-install)
+  (setq default-input-method "W32-IME")
+  (w32-ime-initialize)

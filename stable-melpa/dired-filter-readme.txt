@@ -1,7 +1,7 @@
 Adds much-lacking filtering facilities to dired.
 
-Introduction
-------------
+ Introduction
+ ------------
 
 The filtering system is designed after ibuffer: every dired
 buffer has associated "filter stack" where user can push
@@ -30,7 +30,7 @@ All the provided interactive functions are available from
 a prefix for this map or bind it manually to a prefix of your
 choice using:
 
-(define-key dired-mode-map (kbd "some-key") dired-filter-map)
+    (define-key dired-mode-map (kbd "some-key") dired-filter-map)
 
 The bindings follow a convention where the filters are mapped on
 lower-case letters or punctuation, operators are mapped on symbols
@@ -47,7 +47,7 @@ counterpart `dired-filter-mark-by-*'.  These are available from
 `dired-filter-mark-prefix' a prefix for this map or bind it
 manually to a prefix of your choice using:
 
-(define-key dired-mode-map (kbd "some-key") dired-filter-mark-map)
+    (define-key dired-mode-map (kbd "some-key") dired-filter-mark-map)
 
 The marking operations are not placed on stack, instead, the marks
 are immediately updated by "OR"-ing them together.  To remove marks
@@ -59,8 +59,8 @@ filter, you can call the function with a double prefix argument
 You can use saved filters to mark files by calling
 `dired-filter-mark-by-saved-filters'.
 
-Stack operations
-----------------
+ Stack operations
+ ----------------
 
 To remove the filter from the stack, use `dired-filter-pop' or
 `dired-filter-pop-all'
@@ -72,8 +72,8 @@ the stack.
 You can transpose the filters on the top of the stack using
 `dired-filter-transpose'
 
-Built-in filters
-----------------
+ Built-in filters
+ ----------------
 
 Here's a list of built-in filters:
 
@@ -109,8 +109,8 @@ To define your own filters, you can use the macro
 `dired-filter-define'.  If you define some interesting filter,
 please consider contributing it to the upstream.
 
-Saved filters
--------------
+ Saved filters
+ -------------
 
 In addition to the built-in filters and your own custom filters,
 this package provides an option to save complex compound filters
@@ -141,11 +141,11 @@ filters each time you want this specific view.
 As a concrete example of above, author uses a saved filter "media"
 with value:
 
-(extension "ogg" "flv" "mpg" "avi" "mp4" "mp3")
-;; show all files matching any of these extensions
+    (extension "ogg" "flv" "mpg" "avi" "mp4" "mp3")
+    ;; show all files matching any of these extensions
 
-Filter groups
--------------
+ Filter groups
+ -------------
 
 Furthermore, instead of only filtering the dired buffer by
 removing lines you are not interested in, you can also group
@@ -177,17 +177,17 @@ http://i.imgur.com/TDUsEKq.png
 The `dired-filter-group-saved-groups' used in the above screenshot is the following:
 
 (("default"
-("PDF"
-(extension . "pdf"))
-("LaTeX"
-(extension "tex" "bib"))
-("Org"
-(extension . "org"))
-("Archives"
-(extension "zip" "rar" "gz" "bz2" "tar"))))
+  ("PDF"
+   (extension . "pdf"))
+  ("LaTeX"
+   (extension "tex" "bib"))
+  ("Org"
+   (extension . "org"))
+  ("Archives"
+   (extension "zip" "rar" "gz" "bz2" "tar"))))
 
-Other features
---------------
+ Other features
+ --------------
 
 You can clone the currently visible dired buffer by calling
 `dired-filter-clone-filtered-buffer'.

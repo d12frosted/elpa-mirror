@@ -14,6 +14,6 @@ How to configure
 add something like this to your Emacs configuration:
 
 (setf schrute-shortcuts-commands '((avy-goto-line   . (next-line previous-line))
-(avy-goto-word-1 . (left-char right-char))))
+                                   (avy-goto-word-1 . (left-char right-char))))
 
 (schrute-mode) ;; and turn on the minor mode.

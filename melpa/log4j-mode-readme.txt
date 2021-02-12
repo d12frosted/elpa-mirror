@@ -59,10 +59,10 @@ and `C-down' to move to the end and beginning of the current log record.
 Put the following lines of code in your init file:
 
 (add-hook
-'log4j-mode-hook
-(lambda ()
-(define-key log4j-mode-local-map [(control down)] 'log4j-forward-record)
-(define-key log4j-mode-local-map [(control up)] 'log4j-backward-record)))
+ 'log4j-mode-hook
+ (lambda ()
+   (define-key log4j-mode-local-map [(control down)] 'log4j-forward-record)
+   (define-key log4j-mode-local-map [(control up)] 'log4j-backward-record)))
 
 XEmacs:
 
@@ -75,4 +75,4 @@ To tell XEmacs which tags table files to use for log files, modify variable
 you could put the following lines of code in your init file:
 
 (setq tag-table-alist '(("\\.\\(java\\|log\\)$" . "c:/java/j2sdk1.4.2/src")
-("\\.\\(java\\|log\\)$" . "c:/projects/tetris/src")))
+                        ("\\.\\(java\\|log\\)$" . "c:/projects/tetris/src")))

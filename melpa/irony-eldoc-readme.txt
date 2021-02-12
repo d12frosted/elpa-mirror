@@ -19,12 +19,12 @@ Screenshot:
 Notes:
 
 - It is based on irony-mode, which is in turn based on libclang. As a
-result, it avoid reparsing files when possible and is quite
-accurate.
+  result, it avoid reparsing files when possible and is quite
+  accurate.
 
 - TODO It is a little imprecise when it comes to function calls:
-right now it resolves overloaded function calls by the number of
-arguments, but doesn't take arguments' types into account. It
-will show all matching functions in the minibuffer message, but
-that will include some irrelevant ones too. There is a plan to
-incorporate a precise version of this feature into `irony-mode'.
+  right now it resolves overloaded function calls by the number of
+  arguments, but doesn't take arguments' types into account. It
+  will show all matching functions in the minibuffer message, but
+  that will include some irrelevant ones too. There is a plan to
+  incorporate a precise version of this feature into `irony-mode'.

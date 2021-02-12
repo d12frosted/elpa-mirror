@@ -10,22 +10,22 @@ an Emacs package manager.
 * Common Lisp Extensions, bundled with all recent versions of Emacs.
 
 * A modern list library for Emacs Lisp: @magnars's excellent Dash[4] -- to
-promote better ways to write Emacs Lisp.
+  promote better ways to write Emacs Lisp.
 
 * The long lost Emacs string manipulation library: s.el[5] -- also by
-@magnars.
+  @magnars.
 
 ; Installation:
 
 Thanks to @yasuyk, Wand is available in MELPA.  Make sure you have MELPA
 repository added to `package-archives' and simply call `package-install':
 
-(add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
-(package-initialize)
-(package-install 'wand)
+  (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+  (package-initialize)
+  (package-install 'wand)
 
 Or `M-x package-install RET wand RET`.
 
 Then `require' it:
 
-(require 'wand)
+  (require 'wand)

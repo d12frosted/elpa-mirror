@@ -5,8 +5,8 @@ It's similar to Edit with Emacs, but has some advantages as below with the
 help of websocket.
 
 * Live update
-The input on Emacs is reflected to the browser instantly and continuously.
+  The input on Emacs is reflected to the browser instantly and continuously.
 * Bidirectional communication
-You can edit both on the browser and Emacs, they are synced to the same.
+  You can edit both on the browser and Emacs, they are synced to the same.
 
 Firefox is supported via the GhostText browser addon.

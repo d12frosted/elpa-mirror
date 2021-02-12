@@ -26,11 +26,11 @@ just press `RET' or `C-j' to select it.
 (savehist-mode 1)
 
 (with-eval-after-load 'dired
-(require 'helm-dired-history)
+  (require 'helm-dired-history)
 ;; if you are using ido,you'd better disable ido for dired
 ;; (define-key (cdr ido-minor-mode-map-entry) [remap dired] nil) ;in ido-setup-hook
-(define-key dired-mode-map "," 'dired))
+  (define-key dired-mode-map "," 'dired))
 or
 (with-eval-after-load 'dired
-(require 'helm-dired-history)
-(define-key dired-mode-map "," 'dired))
+  (require 'helm-dired-history)
+  (define-key dired-mode-map "," 'dired))

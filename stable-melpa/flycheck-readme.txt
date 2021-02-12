@@ -23,7 +23,7 @@ Windows, too.
 
 To enable Flycheck add the following to your init file:
 
-(add-hook 'after-init-hook #'global-flycheck-mode)
+   (add-hook 'after-init-hook #'global-flycheck-mode)
 
 Flycheck will then automatically check buffers in supported languages, as
 long as all necessary tools are present.  Use `flycheck-verify-setup' to

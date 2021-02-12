@@ -1,31 +1,31 @@
 This JavaScript editing mode supports:
 
-- the full JavaScript language through version 1.8
-- support for most Rhino and SpiderMonkey extensions from 1.5 to 1.8
-- accurate syntax highlighting using a recursive-descent parser
-- syntax-error and strict-mode warning reporting
-- smart line-wrapping within comments (Emacs 22+) and strings
-- code folding:
-- show some or all function bodies as {...}
-- show some or all block comments as /*...*/
-- context-sensitive menu bar and popup menus
-- code browsing using the `imenu' package
-- typing helpers (e.g. inserting matching braces/parens)
-- many customization options
+ - the full JavaScript language through version 1.8
+ - support for most Rhino and SpiderMonkey extensions from 1.5 to 1.8
+ - accurate syntax highlighting using a recursive-descent parser
+ - syntax-error and strict-mode warning reporting
+ - smart line-wrapping within comments (Emacs 22+) and strings
+ - code folding:
+   - show some or all function bodies as {...}
+   - show some or all block comments as /*...*/
+ - context-sensitive menu bar and popup menus
+ - code browsing using the `imenu' package
+ - typing helpers (e.g. inserting matching braces/parens)
+ - many customization options
 
 It is only compatible with GNU Emacs versions 21 and higher (not XEmacs).
 
 Installation:
 
-- put `js3.el' somewhere in your emacs load path
-- M-x byte-compile-file RET <path-to-js3.el> RET
-Note:  it will refuse to run unless byte-compiled
-- add these lines to your .emacs file:
-(autoload 'js3-mode "js3" nil t)
-(add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
+ - put `js3.el' somewhere in your emacs load path
+ - M-x byte-compile-file RET <path-to-js3.el> RET
+   Note:  it will refuse to run unless byte-compiled
+ - add these lines to your .emacs file:
+   (autoload 'js3-mode "js3" nil t)
+   (add-to-list 'auto-mode-alist '("\\.js$" . js3-mode))
 
 To customize how it works:
-M-x customize-group RET js3-mode RET
+  M-x customize-group RET js3-mode RET
 
 The variable `js3-mode-version' is a date stamp.  When you upgrade
 to a newer version, you must byte-compile the file again.

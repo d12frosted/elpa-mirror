@@ -79,45 +79,45 @@ Keybindings:
 
 - combinators: these set `f3-current-combinator', take the current pattern
 as the find predicate, and clear the minibuffer
-- 'M-+' = union ("or")
-- 'M-*' = intersection ("and")
+    - 'M-+' = union ("or")
+    - 'M-*' = intersection ("and")
 - groupings: these add open or closed parentheses to the current find
 command and clear the minibuffer
-- 'M-(' = open paren
-- `f3' will implicitly close any remaining open parens by adding `)'
+    - 'M-(' = open paren
+        - `f3' will implicitly close any remaining open parens by adding `)'
 to the end of the `find' command line produced
-- 'C-u M-(' = open paren, with `-not' on
-- 'M-) M-+' = close paren / or
-- if there are no unclosed `)', they will be implicitly added
-- 'M-) M-*' = close paren / and
+    - 'C-u M-(' = open paren, with `-not' on
+    - 'M-) M-+' = close paren / or
+        - if there are no unclosed `)', they will be implicitly added
+    - 'M-) M-*' = close paren / and
 - modes: these do NOT clear the minibuffer, just change the current `find'
 predicate
-- 'M-t' = normal text mode (not regex mode)
-- 'M-x' = regex mode
-- 'M-r' = "find" mode (just input raw find arguments)
-- 'M-f' = filetype (`b|c|d|f|l|p|s')
-- 'M-p' = perm
+    - 'M-t' = normal text mode (not regex mode)
+    - 'M-x' = regex mode
+    - 'M-r' = "find" mode (just input raw find arguments)
+    - 'M-f' = filetype (`b|c|d|f|l|p|s')
+    - 'M-p' = perm
 - complement: this toggles whether `-not' is applied to the current
 predicate
-- 'M-q' = toggle complement (current)
+    - 'M-q' = toggle complement (current)
 - actions
-- 'M-d' = exit helm and list the files in a `find-dired' buffer
-- 'RET' = visit
-- 'TAB' = preview
-- 'M-b' = bounce to raw (can use 'M-R' afterwards to restore previous)
+    - 'M-d' = exit helm and list the files in a `find-dired' buffer
+    - 'RET' = visit
+    - 'TAB' = preview
+    - 'M-b' = bounce to raw (can use 'M-R' afterwards to restore previous)
 - meta
-- 'M-u' = undo whatever was just done
-- 'M-U' = redo
-- 'M-<' = set `mindepth'
-- 'M->' = set `maxdepth'
-- 'M-R' = restore from previous command
-- 'C-M-R' = undo restore (move up and down a previous command stack)
+    - 'M-u' = undo whatever was just done
+    - 'M-U' = redo
+    - 'M-<' = set `mindepth'
+    - 'M->' = set `maxdepth'
+    - 'M-R' = restore from previous command
+    - 'C-M-R' = undo restore (move up and down a previous command stack)
 - changing directories
-- 'M-o' = start search from project root
-- 'M-i' = start search from initial choice of `default-directory'
-- 'M-c' = choose directory to search from, starting at whatever the
+    - 'M-o' = start search from project root
+    - 'M-i' = start search from initial choice of `default-directory'
+    - 'M-c' = choose directory to search from, starting at whatever the
 current choice is
-- 'M-j' = start searching a directory up
+    - 'M-j' = start searching a directory up
 
 
 Updates:
@@ -131,9 +131,9 @@ Further Work:
 
 - add docstrings containing the info in this readme
 - show state of undo/redo in some readable way
-- also consider making it a traversable tree like emacs's `undo-tree'
+    - also consider making it a traversable tree like emacs's `undo-tree'
 - fix highlighting of results in helm and highlighting of previews
-- maybe use some logic in `f3--filter-buffer-candidates'?
+    - maybe use some logic in `f3--filter-buffer-candidates'?
 
 
 License:

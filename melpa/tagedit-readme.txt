@@ -7,27 +7,27 @@ I highly recommended installing tagedit through elpa.
 It's available on [marmalade](http://marmalade-repo.org/) and
 [melpa](http://melpa.milkbox.net/):
 
-M-x package-install tagedit
+    M-x package-install tagedit
 
 You can also install the dependencies on your own, and just dump
 tagedit in your path somewhere:
 
-- <a href="https://github.com/magnars/s.el">s.el</a>
-- <a href="https://github.com/magnars/dash.el">dash.el</a>
+ - <a href="https://github.com/magnars/s.el">s.el</a>
+ - <a href="https://github.com/magnars/dash.el">dash.el</a>
 
 ## Functions
 
 This is it at the moment:
 
-- `tagedit-forward-slurp-tag` moves the next sibling into this tag.
-- `tagedit-forward-barf-tag` moves the last child out of this tag.
-- `tagedit-raise-tag` replaces the parent tag with this tag.
-- `tagedit-splice-tag` replaces the parent tag with its contents.
-- `tagedit-kill` kills to the end of the line, while preserving the structure.
+ - `tagedit-forward-slurp-tag` moves the next sibling into this tag.
+ - `tagedit-forward-barf-tag` moves the last child out of this tag.
+ - `tagedit-raise-tag` replaces the parent tag with this tag.
+ - `tagedit-splice-tag` replaces the parent tag with its contents.
+ - `tagedit-kill` kills to the end of the line, while preserving the structure.
 
 Not part of paredit:
 
-- `tagedit-kill-attribute` kills the html attribute at point.
+ - `tagedit-kill-attribute` kills the html attribute at point.
 
 ## Setup
 
@@ -35,10 +35,10 @@ If you want tagedit to bind to the same keys as paredit, there's this:
 
 ```cl
 (eval-after-load 'sgml-mode
-'(progn
-(require 'tagedit)
-(tagedit-add-paredit-like-keybindings)
-(add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))))
+  '(progn
+     (require 'tagedit)
+     (tagedit-add-paredit-like-keybindings)
+     (add-hook 'html-mode-hook (lambda () (tagedit-mode 1)))))
 ```
 
 Or you can cherry-pick functions and bind them however you want:
@@ -80,8 +80,8 @@ then after `M-q`:
 
 ```html
 <p>
-My one very long text inside a tag that
-I'd like to refill
+  My one very long text inside a tag that
+  I'd like to refill
 </p>
 ```
 

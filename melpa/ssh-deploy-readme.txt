@@ -34,47 +34,47 @@ Add to init-script: (ssh-deploy-add-find-file-hook)
 (ssh-deploy-add-menu)
 
 - To set global key-bindings do something like this:
-(global-set-key (kbd "C-c C-z") 'ssh-deploy-prefix-map)
+    (global-set-key (kbd "C-c C-z") 'ssh-deploy-prefix-map)
 
 - To set global key-bindings for the pre-defined hydra do something like this:
-(ssh-deploy-hydra "C-c C-z")
+    (ssh-deploy-hydra "C-c C-z")
 
 - To install and set-up using use-package and hydra do this:
-(use-package ssh-deploy
-:ensure t
-:after hydra
-:demand
-:hook ((after-save . ssh-deploy-after-save)
-(find-file . ssh-deploy-find-file))
-:config
-(ssh-deploy-line-mode) ;; If you want mode-line feature
-(ssh-deploy-add-menu) ;; If you want menu-bar feature
-(ssh-deploy-hydra "C-c C-z") ;; If you the hydra feature
-)
+  (use-package ssh-deploy
+    :ensure t
+    :after hydra
+    :demand
+    :hook ((after-save . ssh-deploy-after-save)
+           (find-file . ssh-deploy-find-file))
+    :config
+    (ssh-deploy-line-mode) ;; If you want mode-line feature
+    (ssh-deploy-add-menu) ;; If you want menu-bar feature
+    (ssh-deploy-hydra "C-c C-z") ;; If you the hydra feature
+   )
 
 
 Here is an example for SSH deployment, /Users/Chris/Web/Site1/.dir-locals.el, with forced explicit uploads:
 ((nil . (
-(ssh-deploy-root-local . "/Users/Chris/Web/Site1/")
-(ssh-deploy-root-remote . "/ssh:myuser@myserver.com:/var/www/site1/")
-(ssh-deploy-on-explicit-save . 1)
-(ssh-deploy-force-on-explicit-save . 1)
-(ssh-deploy-async . 1)
+  (ssh-deploy-root-local . "/Users/Chris/Web/Site1/")
+  (ssh-deploy-root-remote . "/ssh:myuser@myserver.com:/var/www/site1/")
+  (ssh-deploy-on-explicit-save . 1)
+  (ssh-deploy-force-on-explicit-save . 1)
+  (ssh-deploy-async . 1)
 )))
 
 Here is an example for SFTP deployment, /Users/Chris/Web/Site2/.dir-locals.el:
 ((nil . (
-(ssh-deploy-root-local . "/Users/Chris/Web/Site2/")
-(ssh-deploy-root-remote . "/sftp:myuser@myserver.com:/var/www/site2/")
-(ssh-deploy-on-explicit-save . 0)
-(ssh-deploy-async . 0)
-(ssh-deploy-script . (lambda() (let ((default-directory ssh-deploy-root-remote))(shell-command "bash compile.sh"))))
+  (ssh-deploy-root-local . "/Users/Chris/Web/Site2/")
+  (ssh-deploy-root-remote . "/sftp:myuser@myserver.com:/var/www/site2/")
+  (ssh-deploy-on-explicit-save . 0)
+  (ssh-deploy-async . 0)
+  (ssh-deploy-script . (lambda() (let ((default-directory ssh-deploy-root-remote))(shell-command "bash compile.sh"))))
 )))
 
 Here is an example for FTP deployment, /Users/Chris/Web/Site3/.dir-locals.el:
 ((nil . (
-(ssh-deploy-root-local . "/Users/Chris/Web/Site3/")
-(ssh-deploy-root-remote . "/ftp:myuser@myserver.com:/var/www/site3/")
+  (ssh-deploy-root-local . "/Users/Chris/Web/Site3/")
+  (ssh-deploy-root-remote . "/ftp:myuser@myserver.com:/var/www/site3/")
 )))
 
 

@@ -8,33 +8,33 @@ which code derived from Kelvin H's [[https://github.com/kelvinh/org-page][org-pa
 The main differents of two projects are as follow:
 
 1. org2web's core *don't hard code git*, its process is like below:
-#+BEGIN_EXAMPLE
+   #+BEGIN_EXAMPLE
 
-[ Org files in repository]  [ Website project configure ]
+  [ Org files in repository]  [ Website project configure ]
 
-|                           |
-< Export >                 < Generate >
-|                           |
+               |                           |
+          < Export >                 < Generate >
+               |                           |
 
-[ HTML files ]               [ Uploader ]  <- ( Uploader is a bash script )
+         [ HTML files ]               [ Uploader ]  <- ( Uploader is a bash script )
 
-|                           |
-|                           |
-+-------------+-------------+
-|
-|
-< Run Uploader >  <- ( For example: git uploader, rclone uploader or others )
-|
-|
+               |                           |
+               |                           |
+               +-------------+-------------+
+                             |
+                             |
+                     < Run Uploader >  <- ( For example: git uploader, rclone uploader or others )
+                             |
+                             |
 
-[ REMOTE ]
+                         [ REMOTE ]
 
-#+END_EXAMPLE
+   #+END_EXAMPLE
 
 2. org2web's default config is `org-publish-project-alist' style alist,
-which can manage multi-site configs in an emacs session easily.
+   which can manage multi-site configs in an emacs session easily.
 3. org-website find theme-files from a *themes-list* in sequence and same theme-file
-first found will be used. User can set *fallback theme* with the help of this feature.
+   first found will be used. User can set *fallback theme* with the help of this feature.
 4. org-website include a tiny emacs web server, which can be used to test publish.
 5. org-website can use other uploaders to upload website, for example: rclone.
 6. ...
@@ -60,18 +60,18 @@ you can adjust and paste it to your =.emacs= file:
 (require 'org2web)
 
 (org2web-add-project
-'("tumashu.github.com"
-:repository-directory "~/project/emacs-packages/tumashu.github.com"
-:remote (git "https://github.com/tumashu/tumashu.github.com.git" "master")
-;; you can use `rclone` with `:remote (rclone "remote-name" "/remote/path/location")` instead.
-:site-domain "http://tumashu.github.com/"
-:site-main-title "Tumashu 的个人小站"
-:site-sub-title "(九天十地，太上忘情！！！)"
-:theme (worg)
-:source-browse-url ("Github" "https://github.com/tumashu/tumashu.github.com")
-:personal-avatar "/media/img/horse.jpg"
-:personal-duoshuo-shortname "tumashu-website"
-:web-server-port 7654))
+ '("tumashu.github.com"
+   :repository-directory "~/project/emacs-packages/tumashu.github.com"
+   :remote (git "https://github.com/tumashu/tumashu.github.com.git" "master")
+   ;; you can use `rclone` with `:remote (rclone "remote-name" "/remote/path/location")` instead.
+   :site-domain "http://tumashu.github.com/"
+   :site-main-title "Tumashu 的个人小站"
+   :site-sub-title "(九天十地，太上忘情！！！)"
+   :theme (worg)
+   :source-browse-url ("Github" "https://github.com/tumashu/tumashu.github.com")
+   :personal-avatar "/media/img/horse.jpg"
+   :personal-duoshuo-shortname "tumashu-website"
+   :web-server-port 7654))
 #+END_EXAMPLE
 
 [[https://github.com/tumashu/pyim][pyim]] 's org2web [[https://github.com/tumashu/pyim/blob/master/pyim-devtools.el][config]] is a more complex example.
@@ -105,11 +105,11 @@ M-x org2web-publish
 ** Known issues
 
 1. Currently the deletion change handler has not been implemented so
-if you deleted some org sources, you may have to manually delete
-corresponding generated html files.
+   if you deleted some org sources, you may have to manually delete
+   corresponding generated html files.
 2. URI path change detection is not available. That is, if you make a
-post with the URI "/blog/2013/03/25/the-old-post-name" and then
-change this value in your org source, org2web would be unable to
-detect that this has happened. it will only publish a new html
-file for you so you need to delete the old html file related to
-the old URI manually.
+   post with the URI "/blog/2013/03/25/the-old-post-name" and then
+   change this value in your org source, org2web would be unable to
+   detect that this has happened. it will only publish a new html
+   file for you so you need to delete the old html file related to
+   the old URI manually.

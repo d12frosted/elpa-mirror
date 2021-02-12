@@ -13,6 +13,6 @@ with Clojure in Emacs, you should almost certaily be using it.
 Available as a package in melpa.org
 
 (add-to-list 'package-archives
-'("melpa" . "http://melpa.org/packages/") t)
+             '("melpa" . "http://melpa.org/packages/") t)
 
 M-x package-install kibit-helper

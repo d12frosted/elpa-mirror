@@ -16,21 +16,21 @@ foo-lang projects at once, and your Emacs startup time is 45
 minutes, so you don't want to globally modify your PATH.  If you
 just do
 
-(setq-local exec-path (cons "/opt/foo/bin" exec-path))
-(put 'exec-path 'permanent-local t)
+  (setq-local exec-path (cons "/opt/foo/bin" exec-path))
+  (put 'exec-path 'permanent-local t)
 
 then you'll run into a problem, because foo-mode calls fooc inside
 a with-temp-buffer call to capture the output!  Instead, you can do
 
-(inherit-local-permanent exec-path
-(cons "/opt/foo/bin" exec-path))
-(defun around-generate (orig name)
-(if (eq (aref name 0) ?\s)
-(let ((buf (funcall orig name)))
-(inherit-local-inherit-child buf)
-buf)
-(funcall orig name)))
-(advice-add 'generate-new-buffer :around #'around-generate)
+  (inherit-local-permanent exec-path
+    (cons "/opt/foo/bin" exec-path))
+  (defun around-generate (orig name)
+    (if (eq (aref name 0) ?\s)
+        (let ((buf (funcall orig name)))
+          (inherit-local-inherit-child buf)
+          buf)
+      (funcall orig name)))
+  (advice-add 'generate-new-buffer :around #'around-generate)
 
 and your local exec-path will be inherited by internal buffers
 without affecting any others.

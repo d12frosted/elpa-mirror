@@ -14,13 +14,13 @@ beautiful PDF file
 
 EXAMPLE ORG FILE HEADER:
 
-#+title:Readme ox-notes
-#+author: Matthias David
-#+options: toc:nil
-#+ou:Zoom
-#+quand: 20/2/2021
-#+projet: ox-minutes
-#+absent: C. Robert,T. tartanpion
-#+present: K. Soulet,I. Payet
-#+excuse:Sophie Fonsec,Karine Soulet
-#+logo: logo.png
+  #+title:Readme ox-notes
+  #+author: Matthias David
+  #+options: toc:nil
+  #+ou:Zoom
+  #+quand: 20/2/2021
+  #+projet: ox-minutes
+  #+absent: C. Robert,T. tartanpion
+  #+present: K. Soulet,I. Payet
+  #+excuse:Sophie Fonsec,Karine Soulet
+  #+logo: logo.png

@@ -9,6 +9,6 @@ This program does not provide an ac-source for arbitrary timing yet.
 Add following lines below the tern setup code.
 
 (eval-after-load 'tern
-'(progn
-(require 'tern-auto-complete)
-(tern-ac-setup)))
+   '(progn
+      (require 'tern-auto-complete)
+      (tern-ac-setup)))

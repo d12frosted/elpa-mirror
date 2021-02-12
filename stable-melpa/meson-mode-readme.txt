@@ -5,4 +5,4 @@ via `completion-at-point'.  To start completion, use either C-M-i
 or install completion frameworks such as `company'.  To enable
 `company' add the following to your .emacs:
 
-(add-hook 'meson-mode-hook 'company-mode)
+    (add-hook 'meson-mode-hook 'company-mode)

@@ -11,15 +11,15 @@ In an Org mode buffer:
 
 - Toggle the global-mode with {M-x org-pretty-tags-global-mode RET}.
 - Activate the global-mode in every buffer with {C-u M-x
-org-pretty-tags-global-mode RET}.
+  org-pretty-tags-global-mode RET}.
 - Deactivate the global-mode in every buffer with {C-u -1 M-x
-org-pretty-tags-global-mode RET}.
+  org-pretty-tags-global-mode RET}.
 
 Refresh agenda buffers (key =g= or =r=) to follow the latest setting
 of pretty tags in the buffers.
 
 - Turn the mode on by default by configuring in {M-x
-customize-variable RET org-pretty-tags-global-mode RET}.
+  customize-variable RET org-pretty-tags-global-mode RET}.
 
 Use {M-x customize-variable RET org-pretty-tags-surrogate-strings RET} to
 define surrogate strings for tags.  E.g. add the pair "money", "$$$".

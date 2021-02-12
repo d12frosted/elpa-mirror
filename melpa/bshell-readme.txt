@@ -5,7 +5,7 @@ keybindings to manage multiple inferior shells.  To summarize, this
 includes:
 * A major mode for switching to, deleting and starting new shells.
 * Fast switching with customized key bindings through the customize
-framework.
+  framework.
 * Track and rename shells by name through the shell entry management mode.
 * Interact with buffer shell (entries) as objects with a straight forward
-API.
+  API.

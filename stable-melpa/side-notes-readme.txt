@@ -22,10 +22,10 @@ By default a notes file found in any parent directory will open that
 file rather than visit a non-existing file in the current directory, but
 you can override this by prefixing side-notes-toggle-notes with...
 
-- C-u C-u to force visiting side-notes-file within the current
-directory.
-- C-u C-u C-u to force visiting side-notes-secondary-file within
-the current directory.
+ - C-u C-u to force visiting side-notes-file within the current
+   directory.
+ - C-u C-u C-u to force visiting side-notes-secondary-file within
+   the current directory.
 
 Of course, you can use Markdown or Org Mode or whatever by changing the
 file extensions of side-notes-file and/or side-notes-secondary-file.
@@ -40,7 +40,7 @@ Installation
 Install from [MELPA stable][1] then add something like the following to
 your init file:
 
-(define-key (current-global-map) (kbd "M-s n") #'side-notes-toggle-notes)
+    (define-key (current-global-map) (kbd "M-s n") #'side-notes-toggle-notes)
 
 
 Bugs and Feature Requests
@@ -49,7 +49,7 @@ Bugs and Feature Requests
 Send me an email (address in the package header). For bugs, please
 ensure you can reproduce with:
 
-$ emacs -Q -l side-notes.el
+    $ emacs -Q -l side-notes.el
 
 Known issues are tracked with FIXME comments in the source.
 

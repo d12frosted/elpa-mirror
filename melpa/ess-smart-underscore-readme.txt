@@ -3,8 +3,8 @@
 
 To use without using a package manager:
 
-- Put the library in a directory in the emacs load path, like ~/.emacs.d
-- Add (require 'ess-smart-underscore) in your ~/.emacs file
+ - Put the library in a directory in the emacs load path, like ~/.emacs.d
+ - Add (require 'ess-smart-underscore) in your ~/.emacs file
 
 This is in emacswiki, so this package can also be installed using el-get.
 
@@ -12,19 +12,19 @@ After installing el-get, Type M-x el-get-install ess-smart-underscore.
 * Ess-Smart Underscore Package Information
 Smart "_" key: insert `ess-S-assign', unless:
 
-1. in string/comment
-2. after a $ (like d$one_two) (toggle with `ess-S-underscore-after-$')
-3. when the underscore is part of a variable definition previously defined.
-(toggle with `ess-S-underscore-after-defined')
-4. when the underscore is after a "=" or "<-" on the same line.
-5. inside a parenthetical statement () or [].
-(toggle with `ess-S-underscore-when-inside-paren')
-6. At the beginning of a line.
-7. In a variable that contains underscores already (for example foo_a)
-(toggle with `ess-S-underscore-when-variable-contains-underscores')
-8. The preceding character is not a tab/space (toggle with
-`ess-S-underscore-when-last-character-is-a-space'.  Not enabled
-by default.)
+  1. in string/comment
+  2. after a $ (like d$one_two) (toggle with `ess-S-underscore-after-$')
+  3. when the underscore is part of a variable definition previously defined.
+     (toggle with `ess-S-underscore-after-defined')
+  4. when the underscore is after a "=" or "<-" on the same line.
+  5. inside a parenthetical statement () or [].
+     (toggle with `ess-S-underscore-when-inside-paren')
+  6. At the beginning of a line.
+  7. In a variable that contains underscores already (for example foo_a)
+     (toggle with `ess-S-underscore-when-variable-contains-underscores')
+  8. The preceding character is not a tab/space (toggle with
+     `ess-S-underscore-when-last-character-is-a-space'.  Not enabled
+     by default.)
 
 An exception to
 

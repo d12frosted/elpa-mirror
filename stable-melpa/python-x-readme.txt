@@ -6,14 +6,14 @@ Quick overview:
 
 Use `python-x-setup' in your emacs startup:
 
-(python-x-setup)
+  (python-x-setup)
 
 In any `python-mode' buffer use [C-c C-p] to start a new interpreter,
 then use [C-c C-c] to evaluate the current section. The default
 section delimiter is "# ---" but can be changed via
 `python-section-delimiter' to be similar to Spyder/Pyzo:
 
-(setq python-section-delimiter "##")
+  (setq python-section-delimiter "##")
 
 See the `python-x' customization group for additional settings.
 
@@ -31,28 +31,28 @@ tracked in the modeline, in order to know when the evaluation is complete.
 
 The following functions are introduced:
 - `python-shell-send-line': evaluate and print the current line, accounting
-for statement and line continuations.
+  for statement and line continuations.
 - `python-shell-send-paragraph': evaluate the current paragraph.
 - `python-shell-send-region-or-paragraph': evaluate the current region when
-active, otherwise evaluate the current paragraph.
+  active, otherwise evaluate the current paragraph.
 - `python-shell-send-fold-or-section': evaluate the region defined by the
-current code fold or section.
+  current code fold or section.
 - `python-shell-send-dwim': evaluate the region when active,
-otherwise revert to the current fold or section.
+  otherwise revert to the current fold or section.
 - `python-shell-print-region-or-symbol': evaluate and print the current
-region or symbol at point, displaying the inferior process output.
+  region or symbol at point, displaying the inferior process output.
 - `python-shell-display-shell': Display the inferior Python process output
-in another window.
+  in another window.
 - `python-shell-switch-to-shell-or-buffer': Switch between the buffer and
-the inferior (cycling command).
+  the inferior (cycling command).
 - `python-shell-restart-process': Restart the inferior Python process.
 - `python-forward-fold-or-section': Move forward by fold/sections.
 - `python-backward-fold-or-section': Move backward by fold/sections.
 - `python-mark-fold-or-section': Mark current fold or section.
 - `python-eldoc-for-region-or-symbol': Summary help for the active
-region or symbol at point.
+  region or symbol at point.
 - `python-help-for-region-or-symbol': Display full help for the active
-region or symbol at point.
+  region or symbol at point.
 
 All "python-shell-send-*" functions are also provided in a "*-and-step"
 variant that moves the point after evaluation.

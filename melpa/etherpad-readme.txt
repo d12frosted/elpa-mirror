@@ -5,12 +5,12 @@ This package enables read-write access to pads on an Etherpad server
 as if they were filelike but is not (yet) suitable for use as a
 collaborative Etherpad client.
 
-details -> https://etherpad.org/doc/v1.8.5/#index_http_api
+ details -> https://etherpad.org/doc/v1.8.5/#index_http_api
 
 
-known bugs, limitations, shortcomings, etc
-- doesn't do realtime editing
-- the server and api key could be buffer local to enable editing on more than one server
-- doesn't automate API interface generation from openapi.json
-- not much in the way of error checking or recovery
-- etc
+ known bugs, limitations, shortcomings, etc
+ - doesn't do realtime editing
+ - the server and api key could be buffer local to enable editing on more than one server
+ - doesn't automate API interface generation from openapi.json
+ - not much in the way of error checking or recovery
+ - etc

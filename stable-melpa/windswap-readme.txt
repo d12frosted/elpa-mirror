@@ -5,5 +5,5 @@ neighbouring windows.  The idea is to bind keys similarly to
 `windmove', so that the two packages can be used interchangeably to
 navigate and rearrange windows.
 
-(windmove-default-keybindings 'control)
-(windswap-default-keybindings 'control 'shift)
+  (windmove-default-keybindings 'control)
+  (windswap-default-keybindings 'control 'shift)

@@ -1,7 +1,7 @@
 This package enables automatic disassembly of Java bytecode.
 
 It was inspired by a blog post of Christopher Wellons:
-http://nullprogram.com/blog/2012/08/01/
+   http://nullprogram.com/blog/2012/08/01/
 
 Disassembly can happen in two cases:
 (a) when opening a Java .class file

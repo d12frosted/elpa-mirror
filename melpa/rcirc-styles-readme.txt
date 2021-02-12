@@ -16,11 +16,11 @@ parser.
 So I did that.  In addition to those cases supported in the previous
 library, this code correctly handles:
 * Background colors, including implicit backgrounds when a new code
-provides only a foreground color.
+  provides only a foreground color.
 * Colors at codes between 8 and 15 (and correct colors for codes < 8).
 * Color specifications implicitly terminated by EOL.
 * Color specifications implicitly terminated by new color
-specifications.
+  specifications.
 * The ^O character terminating color specifications.
 
 While I was at it, I noticed some areas in which the both the stock

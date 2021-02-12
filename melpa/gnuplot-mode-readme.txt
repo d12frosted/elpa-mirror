@@ -15,7 +15,7 @@ Use package.el. You'll need to add MELPA to your archives:
 
 (require 'package)
 (add-to-list 'package-archives
-'("melpa" . "https://melpa.org/packages/") t)
+             '("melpa" . "https://melpa.org/packages/") t)
 
 Alternatively, you can just save this file and do the standard
 (add-to-list 'load-path "/path/to/gnuplot-mode.el")
@@ -36,11 +36,11 @@ of autoloading.  You can customize features using `defvar' and
 ;; spell-checking for strings and comments and automatically cleans
 ;; up whitespace on save.
 (eval-after-load 'gnuplot-mode
-'(add-hook 'gnuplot-mode-hook
-(lambda ()
-(flyspell-prog-mode)
-(add-hook 'before-save-hook
-'whitespace-cleanup nil t))))
+  '(add-hook 'gnuplot-mode-hook
+             (lambda ()
+               (flyspell-prog-mode)
+               (add-hook 'before-save-hook
+                         'whitespace-cleanup nil t))))
 
 If you installed this file manually, you probably don't want to
 muck around with autoload commands.  Instead, add something like
@@ -58,7 +58,7 @@ the following to your .emacs:
 ;; spell-checking for strings and comments and automatically cleans
 ;; up whitespace on save.
 (add-hook 'gnuplot-mode-hook
-(lambda ()
-(flyspell-prog-mode)
-(add-hook 'before-save-hook
-'whitespace-cleanup nil t)))
+          (lambda ()
+            (flyspell-prog-mode)
+            (add-hook 'before-save-hook
+                      'whitespace-cleanup nil t)))

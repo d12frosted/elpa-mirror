@@ -3,5 +3,5 @@ zsh script.
 
 Example usage:
 
-(require 'dired-k)
-(define-key dired-mode-map (kbd "K") 'dired-k)
+  (require 'dired-k)
+  (define-key dired-mode-map (kbd "K") 'dired-k)

@@ -12,26 +12,26 @@ than `electric-indent-mode'.
 
 This package is available fom Melpa, you may install it by calling
 
-M-x package-install RET aggressive-indent
+    M-x package-install RET aggressive-indent
 
 Then activate it with
 
-(add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
-(add-hook 'css-mode-hook #'aggressive-indent-mode)
+    (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
+    (add-hook 'css-mode-hook #'aggressive-indent-mode)
 
 You can use this hook on any mode you want, `aggressive-indent' is not
 exclusive to emacs-lisp code.  In fact, if you want to turn it on for
 every programming mode, you can do something like:
 
-(global-aggressive-indent-mode 1)
-(add-to-list 'aggressive-indent-excluded-modes 'html-mode)
+    (global-aggressive-indent-mode 1)
+    (add-to-list 'aggressive-indent-excluded-modes 'html-mode)
 
 ### Manual Installation ###
 
 If you don't want to install from Melpa, you can download it manually,
 place it in your `load-path' and require it with
 
-(require 'aggressive-indent)
+    (require 'aggressive-indent)
 
 ; Instructions:
 
@@ -41,7 +41,7 @@ This package is available fom Melpa, you may install it by calling
 M-x package-install RET aggressive-indent.
 
 Then activate it with
-(add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
+    (add-hook 'emacs-lisp-mode-hook #'aggressive-indent-mode)
 
 You can also use an equivalent hook for another mode,
 `aggressive-indent' is not exclusive to emacs-lisp code.
@@ -49,4 +49,4 @@ You can also use an equivalent hook for another mode,
 Alternatively, you can download it manually, place it in your
 `load-path' and require it with
 
-(require 'aggressive-indent)
+    (require 'aggressive-indent)

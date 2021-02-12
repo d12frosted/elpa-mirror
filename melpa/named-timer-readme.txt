@@ -8,17 +8,17 @@ setting the variable to that value. For example:
 (require 'timer)
 (defvar my-timer nil)
 (defun activate-my-timer ()
-(when my-timer
-(cancel-timer my-timer)
-(setq my-timer nil))
-(setq my-timer
-(run-with-timer 5 nil #'message "My timer ran!")))
+  (when my-timer
+    (cancel-timer my-timer)
+    (setq my-timer nil))
+  (setq my-timer
+        (run-with-timer 5 nil #'message "My timer ran!")))
 
 With named timers, this simplifies to a single line:
 
 (require 'named-timer)
 (defun activate-my-timer ()
-(named-timer-run :my-timer 5 nil #'message "My timer ran!"))
+  (named-timer-run :my-timer 5 nil #'message "My timer ran!"))
 
 In addition to being shorter, this code is less error prone: since
 running a named timer automatically cancels any existing timer with

@@ -12,15 +12,15 @@ to stop.  `(dispwatch-mode)` toggles.
 
 Example
 
-(defun my-display-changed-hook (disp)
-(message "rejiggering for %s" disp)
-(cond ((equal disp '(3840 . 1080))   ; laptop + ext monitor
-(setq font-size-pt 10))
-((equal disp '(1920 . 1080))    ; just laptop
-(setq font-size-pt 11))
-(t (message "Unknown display size %sx%s" (car disp) (cdr disp)))))
+ (defun my-display-changed-hook (disp)
+   (message "rejiggering for %s" disp)
+   (cond ((equal disp '(3840 . 1080))   ; laptop + ext monitor
+          (setq font-size-pt 10))
+         ((equal disp '(1920 . 1080))    ; just laptop
+          (setq font-size-pt 11))
+         (t (message "Unknown display size %sx%s" (car disp) (cdr disp)))))
 
-(use-package dispwatch
-:config (and
-(add-hook 'dispwatch-display-change-hooks #'my-display-changed-hook)
-(dispwatch-mode 1)))
+  (use-package dispwatch
+    :config (and
+       (add-hook 'dispwatch-display-change-hooks #'my-display-changed-hook)
+       (dispwatch-mode 1)))

@@ -26,10 +26,10 @@ Usage:
 This package provides two minor modes:
 
 - `nocomments-mode' - Local minor mode that makes all comments in
-current buffer invisible.
+  current buffer invisible.
 
 - `nocomments-global-mode' - Global minor mode that makes all
-comments in all buffers invisible.
+  comments in all buffers invisible.
 
 Configuration:
 
@@ -37,4 +37,4 @@ For convenience, you can bind a key to toggle the visibility of
 comment.  For example, you can place the following in a suitable
 init file to make F12 toggle comments:
 
-(global-set-key (kbd "<f12>") #'nocomments-mode)
+    (global-set-key (kbd "<f12>") #'nocomments-mode)

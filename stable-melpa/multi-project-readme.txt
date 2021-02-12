@@ -15,7 +15,7 @@ files within a project, compilation, or grepping a project.
 C-xpa - Anchor a project          Remember the current project
 C-xpc - Project compile           Run the compilation command for a project
 C-xpj - Project jump              Displays a list of projects
-multi-project-anchored
+                                  multi-project-anchored
 C-xpg - Run grep-find             Runs grep-find at project root
 C-xpl - Last project or anchor    Jumps to the last project or anchor
 C-xpp - Present project           Jumps to the current project root
@@ -30,7 +30,7 @@ C-xpv - Visit a project           Visits another project in a separate frame
 
 From the project selection buffer the following bindings are present:
 a     - Anchor a project          Remembers the project to quickly return
-after visiting another project.
+                                  after visiting another project.
 C-n   - Next project              Move the cursor to the next project
 C-p   - Previous project          Move the cursor to the previous project
 d     - Delete a project          Marks the project for deletion
@@ -47,13 +47,13 @@ The multi-project-compilation-command variable can be set to a function
 that provides a customized compilation command.  For example,
 
 (defun my-compilation-command (project-list)
-(let ((project-name (car project-list))
-(project-dir (nth 1 project-list))
-(project-subdir (nth 2 project-list)))
+  (let ((project-name (car project-list))
+   (project-dir (nth 1 project-list))
+   (project-subdir (nth 2 project-list)))
 
-(cond ((string-match "proj1" project-name)
-(concat "ant -f " project-dir "/" project-subdir "/build.xml"))
-(t
-(concat "make -C " project-dir "/" project-subdir)))))
+    (cond ((string-match "proj1" project-name)
+      (concat "ant -f " project-dir "/" project-subdir "/build.xml"))
+     (t
+      (concat "make -C " project-dir "/" project-subdir)))))
 
 (setq multi-project-compilation-command 'my-compilation-command)

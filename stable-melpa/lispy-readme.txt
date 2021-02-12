@@ -35,7 +35,7 @@ To move the point into a special position, use:
 "[" - calls `lispy-backward'
 "C-3" - calls `lispy-right' (exit current list forwards)
 ")" - calls `lispy-right-nostring' (exit current list
-forwards, but self-insert in strings and comments)
+      forwards, but self-insert in strings and comments)
 
 These are the few Lispy commands that don't care whether the point
 is special or not.  Other such bindings are `DEL', `C-d', `C-k'.

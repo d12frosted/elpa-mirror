@@ -12,7 +12,7 @@ location information of each node.  Ruby >=2.5 works out of the box;
 if you have an older version of Ruby, run the following command to
 install the latest version of `psych', the YAML parser:
 
-% gem install psych --user
+  % gem install psych --user
 
 The parser only parses a document without evaluating it, so there
 should be no security concerns.
@@ -21,4 +21,4 @@ should be no security concerns.
 
 Add the following line to your init file:
 
-(yaml-imenu-enable)
+  (yaml-imenu-enable)

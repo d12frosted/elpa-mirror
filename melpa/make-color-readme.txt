@@ -4,18 +4,18 @@ changing foreground/background color of any text sample.
 To manually install the package, copy this file to a directory from
 `load-path' and add the following to your init-file:
 
-(autoload 'make-color "make-color" nil t)
-(autoload 'make-color-switch-to-buffer "make-color" nil t)
+  (autoload 'make-color "make-color" nil t)
+  (autoload 'make-color-switch-to-buffer "make-color" nil t)
 
 Usage: select any region and call "M-x make-color".  You will see a
 buffer in `make-color-mode'.  Select some text in it and press "n" to
 set this text for colorizing.  Now you can modify a color with the
 following keys:
 
-- r/R, g/G, b/B - decrease/increase red, green, blue components
-- c/C, m/M, y/Y - decrease/increase cyan, magenta, yellow components
-- h/H, s/S, l/L - decrease/increase hue, saturation, luminance
-- RET - change current color (prompt for a value)
+  - r/R, g/G, b/B - decrease/increase red, green, blue components
+  - c/C, m/M, y/Y - decrease/increase cyan, magenta, yellow components
+  - h/H, s/S, l/L - decrease/increase hue, saturation, luminance
+  - RET - change current color (prompt for a value)
 
 If you are satisfied with current color, press "k" to put the color
 into `kill-ring'.  At any time you can set a new probing region with

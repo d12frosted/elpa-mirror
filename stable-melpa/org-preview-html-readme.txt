@@ -5,4 +5,4 @@ Quick start:
 
 Put this file under your load-path.
 Enable the org-preview-html-mode in your org buffer:
-M-x org-preview-html-mode
+  M-x org-preview-html-mode

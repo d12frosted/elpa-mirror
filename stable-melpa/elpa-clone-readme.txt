@@ -9,9 +9,9 @@ Mirror an ELPA archive into a directory.
 
 Prerequisites:
 
-- Emacs 24.4 or later
-- cl-lib
-- rsync (optional, but recommended)
+  - Emacs 24.4 or later
+  - cl-lib
+  - rsync (optional, but recommended)
 
 Installation:
 
@@ -28,7 +28,7 @@ Usage:
 To clone an ELPA archive `http://host/elpa' into `/path/to/elpa', invoke
 `elpa-clone':
 
-(elpa-clone "http://host/elpa" "/path/to/elpa")
+    (elpa-clone "http://host/elpa" "/path/to/elpa")
 
 `elpa-clone' can also be invoked via `M-x'.
 
@@ -39,29 +39,29 @@ note that the *real* interval is `(max elpa-clone-download-interval 5)'.
 
 Some ELPA archives can more efficiently be cloned using rsync:
 
-(elpa-clone "elpa.gnu.org::elpa/" "/path/to/elpa")
-(elpa-clone "rsync://melpa.org/packages/" "/path/to/elpa")
-(elpa-clone "rsync://stable.melpa.org/packages/" "/path/to/elpa")
+    (elpa-clone "elpa.gnu.org::elpa/" "/path/to/elpa")
+    (elpa-clone "rsync://melpa.org/packages/" "/path/to/elpa")
+    (elpa-clone "rsync://stable.melpa.org/packages/" "/path/to/elpa")
 
 Currently, only the following archives support rsync:
 
-- GNU ELPA
-- MELPA
-- MELPA Stable
+  - GNU ELPA
+  - MELPA
+  - MELPA Stable
 
 By default, `elpa-clone` selects the appropriate sync method based on the
 upstream url, but you can also specify the method you want:
 
-(elpa-clone "foo/" "bar/" :sync-method 'rsync)
-(elpa-clone "foo::bar/" "/path/to/elpa" :sync-method 'local)
-(elpa-clone "rsync://foo/bar/" "/path/to/elpa" :sync-method 'url)
+    (elpa-clone "foo/" "bar/" :sync-method 'rsync)
+    (elpa-clone "foo::bar/" "/path/to/elpa" :sync-method 'local)
+    (elpa-clone "rsync://foo/bar/" "/path/to/elpa" :sync-method 'url)
 
 Available methods are:
 
-- `rsync`: use rsync (recommended)
-- `url`: use the `url` library
-- `local`: treat upstream as a local directory
-- `nil`: choose a method based on upstream
+  - `rsync`: use rsync (recommended)
+  - `url`: use the `url` library
+  - `local`: treat upstream as a local directory
+  - `nil`: choose a method based on upstream
 
 Note:
 

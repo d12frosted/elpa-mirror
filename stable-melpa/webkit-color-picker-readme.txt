@@ -7,8 +7,8 @@ webkit-color-picker is available on [[https://melpa.org/][MELPA]]. Example confi
 
 #+BEGIN_SRC emacs-lisp
 (use-package webkit-color-picker
-:ensure t
-:bind (("C-c C-p" . webkit-color-picker-show)))
+  :ensure t
+  :bind (("C-c C-p" . webkit-color-picker-show)))
 #+END_SRC
 
 ** Screenshot

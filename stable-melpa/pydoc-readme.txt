@@ -13,7 +13,7 @@ pydoc.el provides the following functions.
 `pydoc-browse-kill' kills the pydoc web server.
 
 `pydoc' renders some Sphinx markup as links. Images are shown as overlays.
-Most org-links should be active.
+ Most org-links should be active.
 
 LaTeX fragments are shown with org-rendered overlays. ;; Note you need to
 escape some things in the python docstrings, e.g. \\f, \\b, \\\\, \\r, \\n or

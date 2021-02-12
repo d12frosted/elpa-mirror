@@ -17,10 +17,10 @@ Make sure to place `jira-markup-mode.el` somewhere in the load-path and add
 the following lines to your `.emacs` file to associate jira-markup-mode
 with `.text` files:
 
-(autoload 'jira-markup-mode "jira-markup-mode"
-"Major mode for editing JIRA markup files" t)
-(setq auto-mode-alist
-(cons '("\\.text" . jira-markup-mode) auto-mode-alist))
+    (autoload 'jira-markup-mode "jira-markup-mode"
+       "Major mode for editing JIRA markup files" t)
+    (setq auto-mode-alist
+       (cons '("\\.text" . jira-markup-mode) auto-mode-alist))
 
 
 ; Acknowledgments:

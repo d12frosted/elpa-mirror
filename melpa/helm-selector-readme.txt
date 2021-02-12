@@ -6,7 +6,7 @@ It is especially helpful to create Helm sessions to navigate buffers of a
 given mode in a "do what I mean" fashion:
 
 - If current buffer is not of mode X, switch to last buffer of mode X, or
-create one if none exists.
+  create one if none exists.
 - If current buffer is of mode X, show a Helm session of all buffers in mode X.
 
 In the Helm session, it's also possible to input an arbitrary name which will be

@@ -4,8 +4,8 @@ To install, put this file along your Emacs-Lisp `load-path' and add
 the following into your ~/.emacs startup file or set
 `global-smart-tab-mode' to non-nil with customize:
 
-(require 'smart-tab)
-(global-smart-tab-mode 1)
+    (require 'smart-tab)
+    (global-smart-tab-mode 1)
 
 DESCRIPTION
 
@@ -18,4 +18,4 @@ There are a number of available customizations on that page.
 
 Features that might be required by this library:
 
-`easy-mmmode'
+  `easy-mmmode'

@@ -28,15 +28,15 @@ init.el, or something).
 
 Example config:
 
-(require 'ycmd)
-(ycmd-setup)
+  (require 'ycmd)
+  (ycmd-setup)
 
 Basic usage:
 
 First you'll want to configure a few things. If you've got a global
 ycmd config file, you can specify that with `ycmd-global-config':
 
-(set-variable 'ycmd-global-config "/path/to/global_conf.py")
+  (set-variable 'ycmd-global-config "/path/to/global_conf.py")
 
 Then you'll want to configure your "extra-config whitelist"
 patterns. These patterns determine which extra-conf files will get
@@ -44,7 +44,7 @@ loaded automatically by ycmd. So, for example, if you want to make
 sure that ycmd will automatically load all of the extra-conf files
 underneath your "~/projects" directory, do this:
 
-(set-variable 'ycmd-extra-conf-whitelist '("~/projects/*"))
+  (set-variable 'ycmd-extra-conf-whitelist '("~/projects/*"))
 
 Now, the first time you open a file for which ycmd can perform
 completions, a ycmd server will be automatically started.
@@ -61,7 +61,7 @@ automatically ignored.
 Use `ycmd-get-completions' to get completions at some point in a
 file. For example:
 
-(ycmd-get-completions buffer position)
+  (ycmd-get-completions buffer position)
 
 You can use `ycmd-display-completions' to toy around with completion
 interactively and see the shape of the structures in use.

@@ -79,4 +79,4 @@ Seconds as interval to check the finish of fetching ticket.
 `bts:ticket-multi-view-preferred'
 Whether to open a multi view if marked entry is multiple in summary buffer.
 
-*** END auto-documentation
+ *** END auto-documentation

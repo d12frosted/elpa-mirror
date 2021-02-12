@@ -10,4 +10,4 @@ To enable this checker in all files visited by dedukti-mode, add
 the following code to your Emacs configuration file:
 
 (eval-after-load 'dedukti-mode
-'(add-hook 'dedukti-mode-hook 'flycheck-dedukti-hook))
+  '(add-hook 'dedukti-mode-hook 'flycheck-dedukti-hook))

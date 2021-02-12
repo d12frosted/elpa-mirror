@@ -2,16 +2,16 @@ This library provides common desirable features using the Org interface for
 when writing about the Quran and the Bible:
 
 0. Links “quran:chapter:verse|colour|size|no-info-p”, or just “quran:chapter:verse”
-for retrieving a verse from the Quran. Use “Quran:chapter:verse” to HTML export
-as a tooltip. The particular translation can be selected by altering the
-HOLY-BOOKS-QURAN-TRANSLAITON variable.
+   for retrieving a verse from the Quran. Use “Quran:chapter:verse” to HTML export
+   as a tooltip. The particular translation can be selected by altering the
+   HOLY-BOOKS-QURAN-TRANSLAITON variable.
 
 1. Likewise, “bible:book:chapter:verse”.
-The particular version can be selected by altering the
-HOLY-BOOKS-BIBLE-VERSION variable.
+   The particular version can be selected by altering the
+   HOLY-BOOKS-BIBLE-VERSION variable.
 
 2. Two functions, HOLY-BOOKS-QURAN and HOLY-BOOKS-BIBLE that do the heavy
-work of the link types.
+   work of the link types.
 
 3. A link type to produce the Arabic basmallah; e.g., “basmala:darkgreen|20px|span”.
 

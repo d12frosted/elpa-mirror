@@ -20,6 +20,6 @@ press '?'
 To install: put this file on the load-path and place the following
 in your .emacs file:
 
-(require 'stgit)
+   (require 'stgit)
 
 To start: `M-x stgit'

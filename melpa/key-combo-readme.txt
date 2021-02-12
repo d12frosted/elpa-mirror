@@ -12,9 +12,9 @@ Add to your ~/.emacs
 
 and some chords, for example
 
-(key-combo-define-global (kbd "=") '(" = " " == " " === " ))
-(key-combo-define-global (kbd "=>") " => ")
+ (key-combo-define-global (kbd "=") '(" = " " == " " === " ))
+ (key-combo-define-global (kbd "=>") " => ")
 
 or load default settings
 
-(key-combo-load-default)
+ (key-combo-load-default)

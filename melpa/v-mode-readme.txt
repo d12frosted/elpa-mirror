@@ -10,7 +10,7 @@ Installation:
 
 The simple way is to use package.el:
 
-M-x package-install v-mode
+  M-x package-install v-mode
 
 Or, copy v-mode.el to some location in your Emacs load
 path.  Then add "(require 'v-mode)" to your Emacs initialization
@@ -18,4 +18,4 @@ path.  Then add "(require 'v-mode)" to your Emacs initialization
 
 Example config:
 
-(require 'v-mode)
+  (require 'v-mode)

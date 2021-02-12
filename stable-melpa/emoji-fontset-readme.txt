@@ -4,4 +4,4 @@ http://users.teilar.gr/~g1951d/
 
 put into your own .emacs file (init.el)
 
-(emoji-fontset-enable "Symbola")
+  (emoji-fontset-enable "Symbola")

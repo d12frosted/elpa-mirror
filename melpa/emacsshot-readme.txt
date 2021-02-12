@@ -65,10 +65,10 @@ Or evaluate
 
 #+BEGIN_EXAMPLE
 (global-set-key [print]
-(lambda (&optional current-window)
-(interactive "P")
-(if current-window (emacsshot-snap-window)
-(emacsshot-snap-frame))))
+ (lambda (&optional current-window)
+  (interactive "P")
+  (if current-window (emacsshot-snap-window)
+    (emacsshot-snap-frame))))
 #+END_EXAMPLE
 
 to be able to snap the frame by pressing the print-key and to snap the

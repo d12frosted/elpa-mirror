@@ -1,16 +1,16 @@
 Commands inserting paired delimiters, by default literatim.
 
 With \\[universal-argument] and with active region,
---i.e. transient-mark-mode-- wrap around. With numerical ARG insert the
+ --i.e. transient-mark-mode-- wrap around. With numerical ARG insert the
 delimiter arg times
 
 Create your own commands by just providing the delimiting
 charakters as shown below with math white square brackets:
 
 (defun simple-paren-mathematical-white-square-bracket (arg)
-"Insert MATHEMATICAL LEFT/RIGHT WHITE SQUARE BRACKETs"
-(interactive "*P") (simple-paren--intern ?⟦ ?⟧
-arg))
+  "Insert MATHEMATICAL LEFT/RIGHT WHITE SQUARE BRACKETs"
+ (interactive "*P") (simple-paren--intern ?⟦ ?⟧
+    arg))
 
 Or even shorter:
 (simple-paren-define mathematical-white-square-bracketwhitespace ?⟦  ?⟧)

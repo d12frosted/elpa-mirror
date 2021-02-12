@@ -4,28 +4,28 @@ Totally rewritten.
 
 Features:
 
-* Custom puzzle editor
-* Printing puzzles (TeX source generator)
-* Puzzle Solver (simple heuristics + trial and error)
-* Auto-insert assistance (S1, H1, CC i.e. Constrained Cell)
-* Step-by-step puzzle deduce (using S1, H1 and CC heuristics)
-* Nifty pencils (assist for Nishio, Cycles, Loops)
-* Undo/Redo operations
-* Optimal (single solution) puzzles generator (very
-straightforward, but usable)
-* Board downloader (from websudoku.com and menneske.no)
-* Save/Load puzzles
-* Collection of built-in puzzles
+  * Custom puzzle editor
+  * Printing puzzles (TeX source generator)
+  * Puzzle Solver (simple heuristics + trial and error)
+  * Auto-insert assistance (S1, H1, CC i.e. Constrained Cell)
+  * Step-by-step puzzle deduce (using S1, H1 and CC heuristics)
+  * Nifty pencils (assist for Nishio, Cycles, Loops)
+  * Undo/Redo operations
+  * Optimal (single solution) puzzles generator (very
+    straightforward, but usable)
+  * Board downloader (from websudoku.com and menneske.no)
+  * Save/Load puzzles
+  * Collection of built-in puzzles
 
 Usage
 ~~~~~
 To start using sudoku, add one of:
 
-(require 'sudoku)
+  (require 'sudoku)
 
 or, more preferable way:
 
-(autoload 'sudoku "sudoku" "Start playing sudoku." t)
+  (autoload 'sudoku "sudoku" "Start playing sudoku." t)
 
 to your init.el file.
 
@@ -35,18 +35,18 @@ Customization
 ~~~~~~~~~~~~~
 You might want to customize next variables:
 
-* `sudoku-level'     - Level for puzzles
-* `sudoku-download'  - Non-nil to download puzzles
-* `sudoku-download-source' - Source to download puzzles from
-* `sudoku-modeline-show-values' - Show possible values in modeline
+  * `sudoku-level'     - Level for puzzles
+  * `sudoku-download'  - Non-nil to download puzzles
+  * `sudoku-download-source' - Source to download puzzles from
+  * `sudoku-modeline-show-values' - Show possible values in modeline
 
 To create custom puzzle (snatched from newspaper or magazine) do:
 M-x sudoku-custom RET and follow instructions.
 
 If you use `desktop.el' you might want next code in your init.el:
 
-(push 'sudoku-custom-puzzles desktop-globals-to-save)
-(push 'sudoku-solved-puzzles desktop-globals-to-save)
+  (push 'sudoku-custom-puzzles desktop-globals-to-save)
+  (push 'sudoku-solved-puzzles desktop-globals-to-save)
 
 Deduce/Auto-insert
 ~~~~~~~~~~~~~~~~~~
@@ -56,12 +56,12 @@ help not to get bored with filling simple values.  Deduce method
 every `medium' sudoku puzzle in conjunction with
 `sudoku-insert-single'.  To enable auto-insert feature, use:
 
-(sudoku-turn-on-autoinsert)
+  (sudoku-turn-on-autoinsert)
 
 or use method suitable for autoloading:
 
-(setq sudoku-autoinsert-mode t)
-(add-hook 'sudoku-after-change-hook 'sudoku-autoinsert)
+  (setq sudoku-autoinsert-mode t)
+  (add-hook 'sudoku-after-change-hook 'sudoku-autoinsert)
 
 You might also want to customize `sudoku-deduce-methods' variable.
 
@@ -95,4 +95,4 @@ format, http://www.sadmansoftware.com/sudoku/faq19.htm) with
 
 To make Emacs load puzzle with `C-x C-f' add next to init.el
 
-(add-to-list 'auto-mode-alist '("\\.sdk\\'" . sudoku-mode))
+  (add-to-list 'auto-mode-alist '("\\.sdk\\'" . sudoku-mode))

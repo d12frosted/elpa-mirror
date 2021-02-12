@@ -15,10 +15,10 @@ TODO
 
 Note
 1 You must kill all Eshell buffers and re-enter Eshell to make your new
-prompt take effect.
+  prompt take effect.
 2 You must set `eshell-prompt-regexp' to FULLY match your Eshell prompt,
-sometimes it is impossible, especially when you don't want use any special
-characters (e.g., '$') to state the end of your Eshell prompt
+  sometimes it is impossible, especially when you don't want use any special
+  characters (e.g., '$') to state the end of your Eshell prompt
 3 If you set `eshell-prompt-function' or `eshell-prompt-regexp' incorrectly,
-Eshell may crashes, if it happens, you can M-x `eshell-git-prompt-use-theme'
-to revert to the default Eshell prompt, then read Note #1.
+  Eshell may crashes, if it happens, you can M-x `eshell-git-prompt-use-theme'
+  to revert to the default Eshell prompt, then read Note #1.

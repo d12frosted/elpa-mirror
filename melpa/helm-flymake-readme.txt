@@ -18,5 +18,5 @@ the `helm-flymake' mini-buffer.
 
 Add followings on your .emacs.
 
-(require 'helm-config)
-(require 'helm-flymake)
+  (require 'helm-config)
+  (require 'helm-flymake)

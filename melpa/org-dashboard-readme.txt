@@ -4,42 +4,42 @@ tasks.
 For example, if an org file (known by `org-dashboard-files') contains
 the following:
 
-* Project: Better Health
-:PROPERTIES:
-:CATEGORY: health
-:END:
+    * Project: Better Health
+    :PROPERTIES:
+    :CATEGORY: health
+    :END:
 
-** Milestones
-*** [66%] run 10 km/week
-**** TODO learn proper warmup
-**** DONE look for a jogging partner
-**** DONE run 10 minutes on monday
+    ** Milestones
+    *** [66%] run 10 km/week
+    **** TODO learn proper warmup
+    **** DONE look for a jogging partner
+    **** DONE run 10 minutes on monday
 
-* Project: Super Widget
-:PROPERTIES:
-:CATEGORY: widget
-:END:
+    * Project: Super Widget
+    :PROPERTIES:
+    :CATEGORY: widget
+    :END:
 
-** Milestones
-*** [1/6] release 0.1
-**** DONE git import
-**** TODO create github project
-**** TODO add readme
-**** TODO publish
+    ** Milestones
+    *** [1/6] release 0.1
+    **** DONE git import
+    **** TODO create github project
+    **** TODO add readme
+    **** TODO publish
 
 Then `M-x org-dashboard-display' generates the following report and
 displays it in a new buffer:
 
-health                run 10 km/week [||||||||||||||||||||||           ]  66%
-widget                   0.1 release [||||||                           ]  18%
+    health                run 10 km/week [||||||||||||||||||||||           ]  66%
+    widget                   0.1 release [||||||                           ]  18%
 
 A dynamic block form is also supported. Writing the following in an
 org file and then running `org-dblock-update', or placing the
 cursor on the first line of the block and then typing `C-c C-c',
 will insert the same report shown above into the block:
 
-#+BEGIN: block-dashboard
-#+END:
+    #+BEGIN: block-dashboard
+    #+END:
 
 Configuration:
 
@@ -53,12 +53,12 @@ For example, to avoid displaying entries that are finished
 (progress = 100), not started (progress = 0), or are tagged with
 "archive", use the following:
 
-(defun my/org-dashboard-filter (entry)
-(and (> (plist-get entry :progress-percent) 0)
-(< (plist-get entry :progress-percent) 100)
-(not (member "archive" (plist-get entry :tags)))))
+   (defun my/org-dashboard-filter (entry)
+     (and (> (plist-get entry :progress-percent) 0)
+          (< (plist-get entry :progress-percent) 100)
+          (not (member "archive" (plist-get entry :tags)))))
 
-(setq org-dashboard-filter 'my/org-dashboard-filter)
+   (setq org-dashboard-filter 'my/org-dashboard-filter)
 
 Notes:
 
@@ -72,7 +72,7 @@ keyword, the category defaults to the file name without extension.
 To set category on a per-file basis, you can add the following at
 the bottom of the org file:
 
-#+CATEGORY: xyz
+   #+CATEGORY: xyz
 
 Related work:
 

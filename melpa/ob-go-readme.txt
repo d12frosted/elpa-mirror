@@ -17,9 +17,9 @@ very limited implementation:
 ; Requirements:
 
 - You must have go1 installed and the go should be in your `exec-path'. If
-not, feel free to modify `org-babel-go-command' to the location of your
-go command.
+  not, feel free to modify `org-babel-go-command' to the location of your
+  go command.
 
 - `go-mode' is also recommended for syntax highlighting and
-formatting. Not this particularly needs it, it just assumes you
-have it.
+  formatting. Not this particularly needs it, it just assumes you
+  have it.

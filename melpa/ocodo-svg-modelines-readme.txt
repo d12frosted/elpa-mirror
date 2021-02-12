@@ -103,25 +103,25 @@ Also:
 
 Package installation via MELPA
 
-M-x package-install RET ocodo-svg-modelines
+    M-x package-install RET ocodo-svg-modelines
 
 ## Manual Installation
 
 Follow these steps:
 
-git clone https://github.com/ocodo/ocodo-svg-modelines ~/ocodo-svg-modelines-0.1.4
-rm -rf ~/ocodo-svg-modelines-0.1.4/.git && cd ~
-tar cf ~/ocodo-svg-modelines-0.1.4.tar ocodo-svg-modelines-0.1.4
+    git clone https://github.com/ocodo/ocodo-svg-modelines ~/ocodo-svg-modelines-0.1.4
+    rm -rf ~/ocodo-svg-modelines-0.1.4/.git && cd ~
+    tar cf ~/ocodo-svg-modelines-0.1.4.tar ocodo-svg-modelines-0.1.4
 
 Subsequently, from Emacs:
 
-M-x package-install <RET> svg-mode-line-themes
-M-x package-install-file <RET> ~/ocodo-svg-modelines-0.1.4.tar
+    M-x package-install <RET> svg-mode-line-themes
+    M-x package-install-file <RET> ~/ocodo-svg-modelines-0.1.4.tar
 
 ## Usage
 
-M-x ocodo-svg-modelines-init
-M-x smt/set-theme
+    M-x ocodo-svg-modelines-init
+    M-x smt/set-theme
 
 Now select one of the ocodo themes listed...
 
@@ -137,7 +137,7 @@ Port on OS X or...
 
 You can also build Emacs on OS X with `brew` using:
 
-brew install emacs --HEAD --with-cocoa --with-librsvg
+    brew install emacs --HEAD --with-cocoa --with-librsvg
 
 When building Linux, `./configure` using `--with-librsvg` (ensure rsvg
 support was reported by configure.)

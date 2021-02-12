@@ -18,15 +18,15 @@ to display the project drawer.
 An adaptor must implement the following functions:
 ```elisp
 (eval-after-load 'project-persist-drawer
-'(progn
-(defun project-persist-drawer--get-window ()
-"Return the window associated with the project drawer.")
+  '(progn
+    (defun project-persist-drawer--get-window ()
+      "Return the window associated with the project drawer.")
 
-(defun project-persist-drawer--open (dir)
-"Open the project drawer in DIR.")
+    (defun project-persist-drawer--open (dir)
+      "Open the project drawer in DIR.")
 
-(defun project-persist-drawer--close ()
-"Close the project drawer.")))
+    (defun project-persist-drawer--close ()
+      "Close the project drawer.")))
 ```
 
 The function declarations should be wrapped in an `eval-after-load` block to ensure project-persist-drawer is loaded first.

@@ -11,7 +11,7 @@ is opened.
 
 Otherwise, put snakemake-mode.el in your `load-path' and add
 
-(require 'snakemake-mode)
+    (require 'snakemake-mode)
 
 to your initialization file.
 

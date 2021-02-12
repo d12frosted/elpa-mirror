@@ -16,9 +16,9 @@ Features:
 - automatic indentation of block-statements
 - generating and saving diagrams generated through WSD's online API.
 - support for WSD premium features (svg-export, etc) if API-key is
-provided.
+  provided.
 - rendering diagrams inline in Emacs, or in external OS viewer if image
-format is not supported by Emacs.
+  format is not supported by Emacs.
 
 
 Customization:

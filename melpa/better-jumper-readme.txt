@@ -5,7 +5,7 @@ evil.
 
 To enable globally:
 
-(require 'better-jumper)
-(better-jumper-mode 1)
+    (require 'better-jumper)
+    (better-jumper-mode 1)
 
 See included README.md for more information.

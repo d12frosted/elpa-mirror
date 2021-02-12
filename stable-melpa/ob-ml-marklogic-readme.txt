@@ -28,7 +28,7 @@ supported:
 You'll probably need to change some of these settings.  The request
 URI is constructed by concatenation:
 
-:ml-scheme "://" :ml-host ":" :ml-port :ml-*-path
+    :ml-scheme "://" :ml-host ":" :ml-port :ml-*-path
 
 If you don't specify :ml-auth, then the requests will be made without
 authentication.  Setting :ml-save-output will prevent the temporary
@@ -42,12 +42,12 @@ to the underlying query.
 
 For example:
 
-#+begin_src ml-xquery :var startDate="2017-04-19T12:34:57"
+   #+begin_src ml-xquery :var startDate="2017-04-19T12:34:57"
 
 This passes the variable "startDate" to the query (where it can
 be accessed by declaring it external). Alternatively:
 
-#+begin_src ml-xquery :var &database="Documents"
+   #+begin_src ml-xquery :var &database="Documents"
 
 This sets the "database" query parameter to the eval endpoint.
 (We're careful to set "database" and "txid" parameters on the
@@ -64,20 +64,20 @@ weird, please open an issue.
 The results are very dependent on the "-v" output from curl.  Here's
 what I expect:
 
-*   Trying 172.17.0.2...
-...
-* upload completely sent off: 192 out of 192 bytes
-< HTTP/1.1 200 OK
-< Content-type: application/sparql-results+json; charset=UTF-8
-< Server: MarkLogic
-< Content-Length: 123
-< Connection: Keep-Alive
-< Keep-Alive: timeout=5
-<
-{ [123 bytes data]
-* Connection #0 to host f23-builder left intact
+   *   Trying 172.17.0.2...
+     ...
+   * upload completely sent off: 192 out of 192 bytes
+   < HTTP/1.1 200 OK
+   < Content-type: application/sparql-results+json; charset=UTF-8
+   < Server: MarkLogic
+   < Content-Length: 123
+   < Connection: Keep-Alive
+   < Keep-Alive: timeout=5
+   <
+   { [123 bytes data]
+   * Connection #0 to host f23-builder left intact
 
-ACTUAL RESULTS GO HERE
+   ACTUAL RESULTS GO HERE
 
 In brief: ignore all of the results up to the line that contains
 "upload completely sent off".  Then skip the HTTP/1.1 and parse
@@ -91,10 +91,10 @@ Because...
 
 If there's only one part:
 
-* If it's JSON and 'json-reformat-region is available, the
-result is reformatted before returning it.
-* If it's XML and nxml-mode is available, the result
-is reformatted before returning it.
+  * If it's JSON and 'json-reformat-region is available, the
+    result is reformatted before returning it.
+  * If it's XML and nxml-mode is available, the result
+    is reformatted before returning it.
 
 If there's more than one part, you just get the whole thing as
 it appeared on the wire.
@@ -106,5 +106,5 @@ individually.
 TODO:
 
 * Consider reformatting the individual parts of a multipart
-response
+  response
 * Consider using some Emacs HTTP library instead of calling curl.

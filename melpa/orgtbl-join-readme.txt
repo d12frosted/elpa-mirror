@@ -5,4 +5,4 @@ the reference table are selected.  The matching succeeds when the
 key cells of the master row and the reference row are equal.
 
 Full documentation here:
-https://github.com/tbanel/orgtbljoin/blob/master/README.org
+  https://github.com/tbanel/orgtbljoin/blob/master/README.org

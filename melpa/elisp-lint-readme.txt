@@ -7,7 +7,7 @@ $(EMACS) -Q --batch -l elisp-lint.el -f elisp-lint-files-batch *.el
 You can disable individual checks by passing flags on the command line:
 
 $(EMACS) -Q --batch -l elisp-lint.el -f elisp-lint-files-batch \
---no-indent *.el
+         --no-indent *.el
 
 Alternatively, you can disable checks using file variables or the following
 .dir-locals.el file:

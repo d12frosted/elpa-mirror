@@ -87,8 +87,8 @@ with custiomize-face
 Advanced usage:
 #+BEGIN_EXAMPLE
 (setq switch-window-auto-resize-window
-(lambda ()
-(equal (buffer-name) "*scratch*"))) ;when return t, run auto switch
+      (lambda ()
+        (equal (buffer-name) "*scratch*"))) ;when return t, run auto switch
 (setq switch-window-default-window-size '(0.8 . 0.6)) ;80% width and 60% height of frame
 #+END_EXAMPLE
 
@@ -120,16 +120,16 @@ with *small* ascii char.
 
 *** I want to use image or icon as label.
 1. Prepare your label images, rename them to:
-1.png ... 9.png, a.png ... z.png.
+   1.png ... 9.png, a.png ... z.png.
 
-You can use other image types supported by
-Emacs, please see: `image-types'.
+   You can use other image types supported by
+   Emacs, please see: `image-types'.
 2. Put all above images to directory:
-`switch-window-image-directory'.
+   `switch-window-image-directory'.
 3. Set variable: `switch-window-shortcut-appearance'
-#+BEGIN_EXAMPLE
-(setq switch-window-shortcut-appearance 'image)
-#+END_EXAMPLE
+   #+BEGIN_EXAMPLE
+   (setq switch-window-shortcut-appearance 'image)
+   #+END_EXAMPLE
 
 [[./snapshots/switch-window-2.png]]
 
@@ -140,7 +140,7 @@ the below variable:
 
 #+BEGIN_EXAMPLE
 (setq switch-window-label-buffer-function
-'my-switch-window-label-buffer-function)
+      'my-switch-window-label-buffer-function)
 #+END_EXAMPLE
 
 *** Have any other similar package exist?
@@ -154,17 +154,17 @@ the below variable:
 3. Show orig text with label: see `switch-window-background'
 4. Switch between frames:  see `switch-window-multiple-frames'
 5. [incompatible] `switch-window-label-buffer-function''s arguments have changed,
-user should update when use it.
+   user should update when use it.
 
 *** 1.5.0 - 2017-04-29
 - Implement commands:
-1. switch-window-then-maximize
-2. switch-window-then-delete
-3. switch-window-then-split-below
-4. switch-window-then-split-right
-5. switch-window-then-split-horizontally
-6. switch-window-then-split-vertically
-7. switch-window-then-swap-buffer
+  1. switch-window-then-maximize
+  2. switch-window-then-delete
+  3. switch-window-then-split-below
+  4. switch-window-then-split-right
+  5. switch-window-then-split-horizontally
+  6. switch-window-then-split-vertically
+  7. switch-window-then-swap-buffer
 - Let switch-window work well with Exwm (Emacs X window manager).
 - User can customize switch-window label's appearance.
 
@@ -173,7 +173,7 @@ user should update when use it.
 
 *** 0.11 - 2013-09-14
 - restore point to end-of-buffer for windows where it was the case after
-switching, fixing an anoying bug.
+  switching, fixing an anoying bug.
 
 *** 0.10 - 2011-06-19
 - implement M-x delete-other-window (thanks developernotes on github)
@@ -187,7 +187,7 @@ switching, fixing an anoying bug.
 
 *** 0.7 - 2010-08-23 - window-dedicated-p
 - temporarily unset the window dedicated flag for displaying the
-numbers, patch from René Kyllingstad <Rene@Kyllingstad.com>
+  numbers, patch from René Kyllingstad <Rene@Kyllingstad.com>
 - fix timeout and RET handling wrt to not changing window selection
 
 *** 0.6 - 2010-08-12 - *Minibuf-1*

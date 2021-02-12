@@ -59,7 +59,7 @@ http://www.cbrunzema.de/software.html#ll-debug
 and put it in your load-path. Add the following form to your init
 file (~/.emacs or ~/.emacs.d/init.el):
 
-(require 'll-debug)
+ (require 'll-debug)
 
 Now you can bind ll-debug commands to keystrokes yourself or just
 call `ll-debug-mode'. `ll-debug-mode' is a minor mode that installs
@@ -85,11 +85,11 @@ Usage example 1:
 If you activate `ll-debug-mode', hitting C-v C-d
 in a c-mode buffer called 'main.c' produces:
 
-printf("DEBUG-1-main.c\n");
+   printf("DEBUG-1-main.c\n");
 
 a second C-v C-d prints
 
-printf("DEBUG-2-main.c\n");
+   printf("DEBUG-2-main.c\n");
 
 and so on. The following conversation uses the variable output (the
 part in '[' and ']' takes place in the minibuffer):
@@ -98,7 +98,7 @@ C-u C-v C-d [ foo <RET> s <RET> bar <RET> d <RET> baz <RET> f <RET> <RET> ]
 
 This gives:
 
-printf("DEBUG-3-main.c foo:%s  bar:%d  baz:%f\n", foo, bar, baz);
+   printf("DEBUG-3-main.c foo:%s  bar:%d  baz:%f\n", foo, bar, baz);
 
 
 Usage example 2:
@@ -140,8 +140,8 @@ your debug output won't disturb gnuplot datafiles anymore.
 If you don't like c++'s streams, you can request the printf style
 output by putting the following in your init file:
 
-(setcdr (assq 'c++-mode ll-debug-statement-alist)
-(cdr (assq 'c-mode ll-debug-statement-alist)))
+ (setcdr (assq 'c++-mode ll-debug-statement-alist)
+         (cdr (assq 'c-mode ll-debug-statement-alist)))
 
 
 If you want to have dynamic output not only according to the major
@@ -150,12 +150,12 @@ For example, the following snippet uses prefix 'printk' instead of
 'printf' if you are editing c-sources in a file on a path
 containing a 'linux' component:
 
-(setf (ll-debug-struct-prefix (cdr (assq 'c-mode
-ll-debug-statement-alist)))
-#'(lambda ()
-(if (string-match "linux" (buffer-file-name))
-"printk("
-"printf(")))
+ (setf (ll-debug-struct-prefix (cdr (assq 'c-mode
+                                          ll-debug-statement-alist)))
+        #'(lambda ()
+            (if (string-match "linux" (buffer-file-name))
+                "printk("
+              "printf(")))
 
 
 
@@ -170,100 +170,100 @@ If you want to teach ll-debug new modes, see
 
 History:
 2020-11-28  Claus Brunzema
-* Prepare/cleanup for Melpa
-* Version 2.0.3
+        * Prepare/cleanup for Melpa
+        * Version 2.0.3
 2020-11-26  Claus Brunzema
-* Small fixes and cleanup
-* Remove compatibility hacks (sorry xemacs...)
-* Add support for javascript, typescript and clojure
-* Version 2.0.2
+        * Small fixes and cleanup
+        * Remove compatibility hacks (sorry xemacs...)
+        * Add support for javascript, typescript and clojure
+        * Version 2.0.2
 2020-11-15  alstjr7375
-* Deprecated lib cl to cl-lib
-* Active lexical binding
-* Version 2.0.1
+        * Deprecated lib cl to cl-lib
+        * Active lexical binding
+        * Version 2.0.1
 2004-12-28  Claus Brunzema
-* Major rewrite using defstruct.
-* New ll-debug-insert instead of
-ll-debug-insert-debug-output and
-ll-debug-insert-variable-output.
-* New ll-debug-register-mode.
-* Version 2.0.0
+        * Major rewrite using defstruct.
+        * New ll-debug-insert instead of
+          ll-debug-insert-debug-output and
+          ll-debug-insert-variable-output.
+        * New ll-debug-register-mode.
+        * Version 2.0.0
 2003-05-21  Claus Brunzema
-* Added java support.
-* Moved prefix calculation stuff into new
-ll-debug-insert-debug-output-statement.
-* Some cleanup.
-* Version 1.3.0
+        * Added java support.
+        * Moved prefix calculation stuff into new
+          ll-debug-insert-debug-output-statement.
+        * Some cleanup.
+        * Version 1.3.0
 2003-05-15  Claus Brunzema
-* Added ll-debug-install-suggested-keybindings.
+        * Added ll-debug-install-suggested-keybindings.
 2003-03-10  Claus Brunzema
-* Added package/namespace identifiers to common lisp/c++ code
-* Version 1.2.6
+        * Added package/namespace identifiers to common lisp/c++ code
+        * Version 1.2.6
 2003-03-10  Claus Brunzema
-* Put in ll-debug-output-prefix instead of the hardcoded
-default (thanks to Stefan Kamphausen for the idea with
-gnuplot).
-* More documentation.
-* Version 1.2.5
+        * Put in ll-debug-output-prefix instead of the hardcoded
+          default (thanks to Stefan Kamphausen for the idea with
+          gnuplot).
+        * More documentation.
+        * Version 1.2.5
 2003-01-30  Claus Brunzema
-* added ll-debug-insert-emacs-lisp-variable-output.
-* ll-debug-insert-perl-variable-output doesn't insert
-the '$' automatically anymore. That always confused me.
-* various cleanup and documentation changes.
-* Version 1.2.3
+        * added ll-debug-insert-emacs-lisp-variable-output.
+        * ll-debug-insert-perl-variable-output doesn't insert
+          the '$' automatically anymore. That always confused me.
+        * various cleanup and documentation changes.
+        * Version 1.2.3
 2003-01-29  Claus Brunzema
-* added ll-debug-insert-perl-variable-dumper-output.
+        * added ll-debug-insert-perl-variable-dumper-output.
 2003-01-28  Claus Brunzema
-* after (un)commenting a single line the point is moved
-to the next line.
+        * after (un)commenting a single line the point is moved
+          to the next line.
 2002-11-20  Claus Brunzema
-* added ll-debug-insert-scheme-variable-output.
-* Version 1.2.0
+        * added ll-debug-insert-scheme-variable-output.
+        * Version 1.2.0
 2002-11-11  Claus Brunzema
-* added ll-debug-create-next-debug-string (thanks to Scott Frazer).
-* updated skeletons to use ll-debug-create-next-debug-string.
-* Version 1.1.0
+        * added ll-debug-create-next-debug-string (thanks to Scott Frazer).
+        * updated skeletons to use ll-debug-create-next-debug-string.
+        * Version 1.1.0
 2002-11-09  Claus Brunzema
-* added DEBUG to skeletons.
-* added ll-debug-revert (thanks to Scott Frazer for the idea).
-* removed automatic linebreaks from skeletons, so ll-debug-revert
-doesn't leave half statemets behind.
+        * added DEBUG to skeletons.
+        * added ll-debug-revert (thanks to Scott Frazer for the idea).
+        * removed automatic linebreaks from skeletons, so ll-debug-revert
+          doesn't leave half statemets behind.
 2002-10-15  Claus Brunzema
-* fixed ll-debug-region-or-line-comment-start to look
-for comment-chars starting a line only (thanks to Stefan
-Kamphausen for the bug report).
-* Code cleanup.
-* Version 1.0.0
+        * fixed ll-debug-region-or-line-comment-start to look
+          for comment-chars starting a line only (thanks to Stefan
+          Kamphausen for the bug report).
+        * Code cleanup.
+        * Version 1.0.0
 2002-09-04  Claus Brunzema
-* fixed point position after
-ll-debug-copy-and-comment-region-or-line
-* Version 0.2.2
+        * fixed point position after
+          ll-debug-copy-and-comment-region-or-line
+        * Version 0.2.2
 2002-08-17  Claus Brunzema
-* use (search-forward comment-start ...) instead of
-(re-search-forward comment-start-skip ...).
-* use ll-debug-region-or-line-comment-start instead of
-the optional ignore-current-column argument for
-ll-debug-region-or-line-start.
-* ll-debug-copy-and-comment-region-or-line works correctly
-now if point is in the middle of the line.
-* Version 0.2.1
+        * use (search-forward comment-start ...) instead of
+          (re-search-forward comment-start-skip ...).
+        * use ll-debug-region-or-line-comment-start instead of
+          the optional ignore-current-column argument for
+          ll-debug-region-or-line-start.
+        * ll-debug-copy-and-comment-region-or-line works correctly
+          now if point is in the middle of the line.
+        * Version 0.2.1
 2002-08-11  Claus Brunzema
-* Variable output support for Common Lisp, perl and c.
-* Various cleanup.
-* Version 0.2.0
+        * Variable output support for Common Lisp, perl and c.
+        * Various cleanup.
+        * Version 0.2.0
 2002-08-08  Claus Brunzema
-* Uncommenting doesn't check the current column anymore
-(thanks to Stefan Kamphausen).
-* More blurb.
-* Version 0.1.1
+        * Uncommenting doesn't check the current column anymore
+          (thanks to Stefan Kamphausen).
+        * More blurb.
+        * Version 0.1.1
 2002-08-07  Claus Brunzema
-* First public version 0.1.0
+        * First public version 0.1.0
 
 
 ToDo:
 * Check if the strange log calculation in ll-debug-insert is really
-necessary. I want the number of C-u keypresses to dispatch
-alternatives on the content slot value of a ll-debug-struct, but
-every C-u multiplies prefix-numeric-value by 4. Is there a better
-way to do this?
+  necessary. I want the number of C-u keypresses to dispatch
+  alternatives on the content slot value of a ll-debug-struct, but
+  every C-u multiplies prefix-numeric-value by 4. Is there a better
+  way to do this?
 * Make preferred output stream customizable.

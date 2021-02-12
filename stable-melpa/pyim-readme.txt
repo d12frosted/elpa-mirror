@@ -27,11 +27,11 @@ pyim 的目标是： *尽最大的努力成为一个好用的 Emacs 中文输入
 具体可表现为三个方面：
 
 1. Fallback:     当外部输入法不能使用时，比如在 console 或者 cygwin 环境
-下，尽最大可能让 Emacs 用户不必为输入中文而烦恼。
+   下，尽最大可能让 Emacs 用户不必为输入中文而烦恼。
 2. Integration:  尽最大可能减少输入法切换频率，让中文输入不影响 Emacs
-的体验。
+   的体验。
 3. Exchange:     尽最大可能简化 pyim 使用其他优秀输入法的词库
-的难度和复杂度。
+   的难度和复杂度。
 
 ** 特点
 1. pyim 支持全拼，双拼，五笔和仓颉，其中对全拼的支持最好。
@@ -42,12 +42,12 @@ pyim 的目标是： *尽最大的努力成为一个好用的 Emacs 中文输入
 1. 配置 melpa 源，参考：http://melpa.org/#/getting-started
 2. M-x package-install RET pyim RET
 3. 在 Emacs 配置文件中（比如: ~/.emacs）添加如下代码：
-#+BEGIN_EXAMPLE
-(require 'pyim)
-(require 'pyim-basedict) ; 拼音词库设置，五笔用户 *不需要* 此行设置
-(pyim-basedict-enable)   ; 拼音词库，五笔用户 *不需要* 此行设置
-(setq default-input-method "pyim")
-#+END_EXAMPLE
+   #+BEGIN_EXAMPLE
+   (require 'pyim)
+   (require 'pyim-basedict) ; 拼音词库设置，五笔用户 *不需要* 此行设置
+   (pyim-basedict-enable)   ; 拼音词库，五笔用户 *不需要* 此行设置
+   (setq default-input-method "pyim")
+   #+END_EXAMPLE
 
 ** 配置
 
@@ -56,49 +56,49 @@ pyim 的目标是： *尽最大的努力成为一个好用的 Emacs 中文输入
 
 #+BEGIN_EXAMPLE
 (use-package pyim
-:ensure nil
-:demand t
-:config
-;; 激活 basedict 拼音词库，五笔用户请继续阅读 README
-(use-package pyim-basedict
-:ensure nil
-:config (pyim-basedict-enable))
+  :ensure nil
+  :demand t
+  :config
+  ;; 激活 basedict 拼音词库，五笔用户请继续阅读 README
+  (use-package pyim-basedict
+    :ensure nil
+    :config (pyim-basedict-enable))
 
-(setq default-input-method "pyim")
+  (setq default-input-method "pyim")
 
-;; 我使用全拼
-(setq pyim-default-scheme 'quanpin)
+  ;; 我使用全拼
+  (setq pyim-default-scheme 'quanpin)
 
-;; 设置 pyim 探针设置，这是 pyim 高级功能设置，可以实现 *无痛* 中英文切换 :-)
-;; 我自己使用的中英文动态切换规则是：
-;; 1. 光标只有在注释里面时，才可以输入中文。
-;; 2. 光标前是汉字字符时，才能输入中文。
-;; 3. 使用 M-j 快捷键，强制将光标前的拼音字符串转换为中文。
-(setq-default pyim-english-input-switch-functions
-'(pyim-probe-dynamic-english
-pyim-probe-isearch-mode
-pyim-probe-program-mode
-pyim-probe-org-structure-template))
+  ;; 设置 pyim 探针设置，这是 pyim 高级功能设置，可以实现 *无痛* 中英文切换 :-)
+  ;; 我自己使用的中英文动态切换规则是：
+  ;; 1. 光标只有在注释里面时，才可以输入中文。
+  ;; 2. 光标前是汉字字符时，才能输入中文。
+  ;; 3. 使用 M-j 快捷键，强制将光标前的拼音字符串转换为中文。
+  (setq-default pyim-english-input-switch-functions
+                '(pyim-probe-dynamic-english
+                  pyim-probe-isearch-mode
+                  pyim-probe-program-mode
+                  pyim-probe-org-structure-template))
 
-(setq-default pyim-punctuation-half-width-functions
-'(pyim-probe-punctuation-line-beginning
-pyim-probe-punctuation-after-punctuation))
+  (setq-default pyim-punctuation-half-width-functions
+                '(pyim-probe-punctuation-line-beginning
+                  pyim-probe-punctuation-after-punctuation))
 
-;; 开启拼音搜索功能
-(pyim-isearch-mode 1)
+  ;; 开启拼音搜索功能
+  (pyim-isearch-mode 1)
 
-;; 使用 popup-el 来绘制选词框, 如果用 emacs26, 建议设置
-;; 为 'posframe, 速度很快并且菜单不会变形，不过需要用户
-;; 手动安装 posframe 包。
-;; (setq pyim-page-tooltip 'posframe)
-(setq pyim-page-tooltip 'popup)
+  ;; 使用 popup-el 来绘制选词框, 如果用 emacs26, 建议设置
+  ;; 为 'posframe, 速度很快并且菜单不会变形，不过需要用户
+  ;; 手动安装 posframe 包。
+  ;; (setq pyim-page-tooltip 'posframe)
+  (setq pyim-page-tooltip 'popup)
 
-;; 选词框显示5个候选词
-(setq pyim-page-length 5)
+  ;; 选词框显示5个候选词
+  (setq pyim-page-length 5)
 
-:bind
-(("M-j" . pyim-convert-string-at-point) ;与 pyim-probe-dynamic-english 配合
-("C-;" . pyim-delete-word-from-personal-buffer)))
+  :bind
+  (("M-j" . pyim-convert-string-at-point) ;与 pyim-probe-dynamic-english 配合
+   ("C-;" . pyim-delete-word-from-personal-buffer)))
 #+END_EXAMPLE
 
 *** 添加词库文件
@@ -151,16 +151,16 @@ pyim 支持双拼输入模式，用户可以通过变量 `pyim-default-scheme' �
 
 1. 安裝配置 liberime 和 pyim, 方式见：[[https://github.com/merrickluo/liberime][liberime]].
 2. 使用 rime 全拼输入法的用户，也可以使用 rime-quanpin scheme,
-这个 scheme 是专门针对 rime 全拼输入法定制的，支持全拼v快捷键。
-#+BEGIN_EXAMPLE
-(setq pyim-default-scheme 'rime-quanpin)
-#+END_EXAMPLE
+   这个 scheme 是专门针对 rime 全拼输入法定制的，支持全拼v快捷键。
+   #+BEGIN_EXAMPLE
+   (setq pyim-default-scheme 'rime-quanpin)
+   #+END_EXAMPLE
 3. 如果通过 rime 使用微软双拼，可以用以下设置：
-#+BEGIN_EXAMPLE
-(liberime-select-schema "double_pinyin_mspy")
-(setq pyim-default-scheme 'rime-microsoft-shuangpin)
-#+END_EXAMPLE
-默认是用繁体中文，想要改成简体中文的话，可以参考 [[https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E7%B0%A1%E5%8C%96%E5%AD%97%E8%BC%B8%E5%87%BA][rime wiki]]，或者[[http://wenshanren.org/?p=1070#orgc7dbd8e][这篇博客]]
+   #+BEGIN_EXAMPLE
+   (liberime-select-schema "double_pinyin_mspy")
+   (setq pyim-default-scheme 'rime-microsoft-shuangpin)
+   #+END_EXAMPLE
+   默认是用繁体中文，想要改成简体中文的话，可以参考 [[https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E7%B0%A1%E5%8C%96%E5%AD%97%E8%BC%B8%E5%87%BA][rime wiki]]，或者[[http://wenshanren.org/?p=1070#orgc7dbd8e][这篇博客]]
 *** 使用五笔输入
 pyim 支持五笔输入模式，用户可以通过变量 `pyim-default-scheme' 来设定：
 
@@ -189,7 +189,7 @@ pyim 支持五笔输入模式，用户可以通过变量 `pyim-default-scheme' �
 另外 Ye FeiYu 同学维护着 pyim-wbdict 的一个 fork, 里面包含着极点
 五笔和清歌五笔的词库，不做发布，有兴趣的同学可以了解一下：
 
-https://github.com/yefeiyu/pyim-wbdict
+    https://github.com/yefeiyu/pyim-wbdict
 
 如果用户在使用五笔输入法的过程中，忘记了某个字的五笔码，可以按 TAB
 键临时切换到辅助输入法来输入，选词完成之后自动退出。辅助输入法可以
@@ -225,14 +225,14 @@ pyim 支持其它版本的仓颉，但需要用户自己创建词库文件。
 用户可以通过下面的设置让 pyim 在 *光标处* 显示一个选词框：
 
 1. 使用 popup 包来绘制选词框 （emacs overlay 机制）
-#+BEGIN_EXAMPLE
-(setq pyim-page-tooltip 'popup)
-#+END_EXAMPLE
+   #+BEGIN_EXAMPLE
+   (setq pyim-page-tooltip 'popup)
+   #+END_EXAMPLE
 2. 使用 posframe 来绘制选词框
-#+BEGIN_EXAMPLE
-(setq pyim-page-tooltip 'posframe)
-#+END_EXAMPLE
-注意：pyim 不会自动安装 posframe, 用户需要手动安装这个包，
+   #+BEGIN_EXAMPLE
+   (setq pyim-page-tooltip 'posframe)
+   #+END_EXAMPLE
+   注意：pyim 不会自动安装 posframe, 用户需要手动安装这个包，
 
 *** 调整 tooltip 选词框的显示样式
 pyim 的 tooltip 选词框默认使用 *双行显示* 的样式，在一些特
@@ -256,35 +256,35 @@ pyim 的 tooltip 选词框默认使用 *双行显示* 的样式，在一些特
 输入 “二呆”，“一个超级帅的小伙子” 上屏 :-)
 #+BEGIN_EXAMPLE
 (defun my-converter (string)
-(if (equal string "二呆")
-"“一个超级帅的小伙子”"
-string))
+  (if (equal string "二呆")
+      "“一个超级帅的小伙子”"
+    string))
 (setq pyim-magic-converter #'my-converter)
 #+END_EXAMPLE
 
 *** 切换全角标点与半角标点
 
 1. 第一种方法：使用命令 `pyim-punctuation-toggle'，全局切换。
-这个命令主要用来设置变量： `pyim-punctuation-translate-p', 用户也可以
-手动设置这个变量， 比如：
-#+BEGIN_EXAMPLE
-(setq pyim-punctuation-translate-p '(yes no auto))   ;使用全角标点。
-(setq pyim-punctuation-translate-p '(no yes auto))   ;使用半角标点。
-(setq pyim-punctuation-translate-p '(auto yes no))   ;中文使用全角标点，英文使用半角标点。
-#+END_EXAMPLE
+   这个命令主要用来设置变量： `pyim-punctuation-translate-p', 用户也可以
+   手动设置这个变量， 比如：
+   #+BEGIN_EXAMPLE
+   (setq pyim-punctuation-translate-p '(yes no auto))   ;使用全角标点。
+   (setq pyim-punctuation-translate-p '(no yes auto))   ;使用半角标点。
+   (setq pyim-punctuation-translate-p '(auto yes no))   ;中文使用全角标点，英文使用半角标点。
+   #+END_EXAMPLE
 2. 第二种方法：使用命令 `pyim-punctuation-translate-at-point' 只切换光
-标处标点的样式。
+   标处标点的样式。
 3. 第三种方法：设置变量 `pyim-translate-trigger-char' ，输入变量设定的
-字符会切换光标处标点的样式。
+   字符会切换光标处标点的样式。
 
 *** 手动加词和删词
 
 1. `pyim-create-Ncchar-word-at-point 这是一组命令，从光标前提取N个汉
-字字符组成字符串，并将其加入个人词库。
+   字字符组成字符串，并将其加入个人词库。
 2. `pyim-translate-trigger-char' 以默认设置为例：在“我爱吃红烧肉”后输
-入“5v” 可以将“爱吃红烧肉”这个词条保存到用户个人词库。
+   入“5v” 可以将“爱吃红烧肉”这个词条保存到用户个人词库。
 3. `pyim-create-word-from-selection', 选择一个词条，运行这个命令后，就
-可以将这个词条添加到个人词库。
+   可以将这个词条添加到个人词库。
 4. `pyim-delete-word' 从个人词库中删除当前高亮选择的词条。
 
 *** pyim 高级功能
@@ -314,13 +314,13 @@ string))
 
 #+BEGIN_EXAMPLE
 (setq-default pyim-english-input-switch-functions
-'(probe-function1 probe-function2 probe-function3))
+              '(probe-function1 probe-function2 probe-function3))
 #+END_EXAMPLE
 
 注意事项：
 1. 上述函数列表中，任意一个函数的返回值为 t 时，pyim 切换到英文输入模式。
 2. [[https://github.com/DogLooksGood/emacs-rime][Emacs-rime]] 和 [[https://github.com/laishulu/emacs-smart-input-source][smart-input-source]]
-也有类似探针的功能，其对应函数可以直接或者简单包装后作为 pyim 探针使用，有兴趣的同学可以了解一下。
+   也有类似探针的功能，其对应函数可以直接或者简单包装后作为 pyim 探针使用，有兴趣的同学可以了解一下。
 
 **** 根据环境自动切换到半角标点输入模式
 
@@ -335,7 +335,7 @@ string))
 
 #+BEGIN_EXAMPLE
 (setq-default pyim-punctuation-half-width-functions
-'(probe-function4 probe-function5 probe-function6))
+              '(probe-function4 probe-function5 probe-function6))
 #+END_EXAMPLE
 
 注：上述函数列表中，任意一个函数的返回值为 t 时，pyim 切换到半角标点输入模式。
@@ -346,7 +346,7 @@ string))
 1. 通过支付宝收款账户：tumashu@163.com
 2. 通过支付宝钱包扫描：
 
-[[file:snapshots/QR-code-for-author.jpg]]
+   [[file:snapshots/QR-code-for-author.jpg]]
 
 
 ** Tips
@@ -372,7 +372,7 @@ string))
 pyim 的文档隐藏在 comment 中，如果用户喜欢阅读 html 格式的文档，
 可以查看在线文档；
 
-http://tumashu.github.io/pyim/
+  http://tumashu.github.io/pyim/
 
 *** 将光标处的拼音或者五笔字符串转换为中文 (与 vimim 的 “点石成金” 功能类似)
 #+BEGIN_EXAMPLE
@@ -388,9 +388,9 @@ http://tumashu.github.io/pyim/
 *** 如何用 ";" 来选择第二个候选词
 #+BEGIN_EXAMPLE
 (define-key pyim-mode-map ";"
-(lambda ()
-(interactive)
-(pyim-page-select-word-by-number 2)))
+  (lambda ()
+    (interactive)
+    (pyim-page-select-word-by-number 2)))
 #+END_EXAMPLE
 
 *** 如何添加自定义拼音词库
@@ -402,7 +402,7 @@ pyim 默认没有携带任何拼音词库，用户可以使用下面几种方式
 获取其他 pyim 用户的拼音词库，比如，某个同学测试 pyim
 时创建了一个中文拼音词库，词条数量大约60万。
 
-http://tumashu.github.io/pyim-bigdict/pyim-bigdict.pyim.gz
+   http://tumashu.github.io/pyim-bigdict/pyim-bigdict.pyim.gz
 
 下载上述词库后，运行 `pyim-dicts-manager' ，按照命令提示，将下载得到的词库
 文件信息添加到 `pyim-dicts' 中，最后运行命令 `pyim-restart' 或者重启
@@ -447,8 +447,8 @@ E-Neo 同学编写了一个词库转换工具: [[https://github.com/E-Neo/scel2p
 
 #+BEGIN_EXAMPLE
 (setq pyim-dicts
-'((:name "dict1" :file "/path/to/pyim-dict1.pyim")
-(:name "dict2" :file "/path/to/pyim-dict2.pyim")))
+      '((:name "dict1" :file "/path/to/pyim-dict1.pyim")
+        (:name "dict2" :file "/path/to/pyim-dict2.pyim")))
 #+END_EXAMPLE
 
 注意事项:
@@ -460,7 +460,7 @@ E-Neo 同学编写了一个词库转换工具: [[https://github.com/E-Neo/scel2p
 
 #+BEGIN_EXAMPLE
 (add-hook 'emacs-startup-hook
-#'(lambda () (pyim-restart-1 t)))
+          #'(lambda () (pyim-restart-1 t)))
 #+END_EXAMPLE
 
 *** 将汉字字符串转换为拼音字符串
@@ -475,10 +475,10 @@ pyim 包含了一个简单的分词函数：`pyim-cstring-split-to-list', 可以
 将一个中文字符串分成一个词条列表，比如：
 
 #+BEGIN_EXAMPLE
-(("天安" 5 7)
+                  (("天安" 5 7)
 我爱北京天安门 ->  ("天安门" 5 8)
-("北京" 3 5)
-("我爱" 1 3))
+                   ("北京" 3 5)
+                   ("我爱" 1 3))
 #+END_EXAMPLE
 
 其中，每一个词条列表中包含三个元素，第一个元素为词条本身，第二个元素为词条
@@ -528,5 +528,5 @@ pyim 安装后，可以通过下面的设置开启拼音搜索功能：
 
 #+BEGIN_EXAMPLE
 (setq-default pyim-english-input-switch-functions
-'(pyim-probe-isearch-mode))
+              '(pyim-probe-isearch-mode))
 #+END_EXAMPLE

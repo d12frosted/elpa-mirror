@@ -9,10 +9,10 @@ When you call `M-x yesterbox', you will see a new *yesterbox*
 buffer containing something like:
 
 Days  Count
-1     19
-2      5
-3      7
-4-6     13
+   1     19
+   2      5
+   3      7
+ 4-6     13
 7-10     21
 
 This shows that there are 19 messages in the inbox from yesterday

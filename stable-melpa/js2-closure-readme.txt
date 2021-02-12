@@ -27,15 +27,15 @@ and pass this script the path of the `closure/goog` folder.
 Here's an example command for regenerating the provides index that you can
 add to your `~/.bashrc` file:
 
-jsi() {
-local github="https://raw.githubusercontent.com"
-local script="js2-closure-provides.sh"
-bash <(wget -qO- ${github}/jart/js2-closure/master/${script}) \
-~/code/closure-library/closure/goog \
-~/code/my-project/js \
-~/code/my-project/soy \
->~/.emacs.d/js2-closure-provides.el
-}
+    jsi() {
+      local github="https://raw.githubusercontent.com"
+      local script="js2-closure-provides.sh"
+      bash <(wget -qO- ${github}/jart/js2-closure/master/${script}) \
+        ~/code/closure-library/closure/goog \
+        ~/code/my-project/js \
+        ~/code/my-project/soy \
+        >~/.emacs.d/js2-closure-provides.el
+    }
 
 That will generate an index file in your `~/.emacs.d` directory.  If you
 want to store it in a different place, then `js2-closure-provides-file' will

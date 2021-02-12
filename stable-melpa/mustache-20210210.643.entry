@@ -1,0 +1,15 @@
+(mustache .
+	  [(20210210 643)
+	   ((ht
+	     (0 9))
+	    (s
+	     (1 3 0))
+	    (dash
+	     (1 2 0)))
+	   "a mustache templating library in emacs lisp" tar
+	   ((:commit . "ebecf704d1431e03f1be6df9e45e07944b359a56")
+	    (:authors
+	     ("Wilfred Hughes" . "me@wilfred.me.uk"))
+	    (:maintainer "Wilfred Hughes" . "me@wilfred.me.uk")
+	    (:keywords "convenience" "mustache" "template")
+	    (:url . "https://github.com/Wilfred/mustache.el"))])

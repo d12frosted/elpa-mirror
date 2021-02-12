@@ -43,4 +43,4 @@ Delay to show quick help.
 `ctxmenu:warning-menu-number-threshold'
 Number as the threshold whether show the warning about the slowness of Emacs.
 
-*** END auto-documentation
+ *** END auto-documentation

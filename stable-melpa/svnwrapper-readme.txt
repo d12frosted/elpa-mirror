@@ -24,9 +24,9 @@ First, `e2ansi' must be configured.  This is done by setting
 environment variables recognized by `less', typically in a suitable
 init file.  For example (using bash syntax):
 
-export "LESSOPEN=||-/PATH/TO/emacs --batch -Q -l ~/.emacs
--l e2ansi-silent -l bin/e2ansi-cat %s"
-export "LESS=-r -j20"
+    export "LESSOPEN=||-/PATH/TO/emacs --batch -Q -l ~/.emacs
+                        -l e2ansi-silent -l bin/e2ansi-cat %s"
+    export "LESS=-r -j20"
 
 See the documentation of `e2ansi' for more information.
 
@@ -35,7 +35,7 @@ Configuring `svnwrapper.rb':
 Add an alias to be used to run `svnwrapper.rb'.  Of course, you can
 pick `svn'.
 
-alias svn="ruby ~/PATH/TO/e2ansi/bin/svnwrapper.rb -E -X ----"
+    alias svn="ruby ~/PATH/TO/e2ansi/bin/svnwrapper.rb -E -X ----"
 
 In the examples, replace "/PATH/TO" with the real paths.
 
@@ -54,21 +54,21 @@ If you (like me) have a huge Emacs init file, you might need to
 reexamine it, to make sure that it works smoothly in batch mode.
 
 * Make sure you don't refer to functions or variables that aren't
-avaiable in batch mode.  (You can use `fboundp' or `boundp' to
-check if a function or variable is present, respectively.)
+  avaiable in batch mode.  (You can use `fboundp' or `boundp' to
+  check if a function or variable is present, respectively.)
 
 * Make sure your init file is quiet.  (The `e2ansi' package
-contains the module `e2ansi-silence.el' that can silence output
-from `message' and `load'.)
+  contains the module `e2ansi-silence.el' that can silence output
+  from `message' and `load'.)
 
 * Avoid loading things that take a lot of time, that you don't need
-in batch mode.
+  in batch mode.
 
 You can use the Emacs varibale `noninteractive' to conditinally run
 code.  For example:
 
-(unless noninteractive
-(do-something-that-would-be-pointless-in-batch-mode))
+    (unless noninteractive
+      (do-something-that-would-be-pointless-in-batch-mode))
 
 Alternatively, you could have a simpler init file when running
 Emacs in batch mode, say `.my-batch-emacs', and modify the
@@ -78,17 +78,17 @@ The `svnwrapper.rb' utility:
 
 The core of this package is the file `svnwrapper.rb', written in Ruby.
 
-svnwrapper [args-to-svnwrapper] [args-to-less ... ----] args-to-svn ...
+    svnwrapper [args-to-svnwrapper] [args-to-less ... ----] args-to-svn ...
 
 The following options can be specified:
 
 * `--forward-slashes' Make 'svn status' and 'svn update' output
-forward slashes (useful under Windows).
+  forward slashes (useful under Windows).
 
 * `--svn-command CMD' Use CMD when running svn, defaults to "svn".
 
 * `----' is used as a separator between arguments passed to `less'
-and arguments passed to `svn'.
+  and arguments passed to `svn'.
 
 Limitations:
 

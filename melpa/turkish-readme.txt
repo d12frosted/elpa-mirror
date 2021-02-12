@@ -5,13 +5,13 @@ keyboard.
 
 If you have `melpa' and `emacs24' installed, simply type:
 
-M-x package-install turkish
+	M-x package-install turkish
 
 Add following lines to your init file:
 
-(require 'turkish)
+    (require 'turkish)
 Then turn on the turkish mode:
-M-x turkish-mode
+      M-x turkish-mode
 
 
 Emacs Turkish Extension (c) Deniz Yuret, 2006, 2010
@@ -22,12 +22,12 @@ use M-x turkish-correct-region.  If the program makes a mistake
 you can toggle a character's accent using C-t.
 
 The program was inspired by Gokhan Tur's deasciifier:
-http://www.hlst.sabanciuniv.edu/TL/deascii.html
+      http://www.hlst.sabanciuniv.edu/TL/deascii.html
 
 The program uses decision lists (included at the end of this file)
 which was created based on sample Turkish news text using the GPA
 algorithm.  For more information on GPA:
-http://www.denizyuret.com/pub/iscis06
+      http://www.denizyuret.com/pub/iscis06
 
 Current test set accuracy is approximately 1 error every 214
 corrections, or every 140 words.  (Using 1000000 training, 100000

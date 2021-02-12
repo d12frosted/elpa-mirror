@@ -1,9 +1,9 @@
 beeminder.el provides a way for Emacs to interact with the Beeminder API.  It
 adds the following functionality:
-- A client for viewing and modifying Beeminder goals.
-- Functions for adding data to Beeminder goals.
-- Integration with org-mode for submitting clocked time and task completions.
-- API access methods for fetching and modifying Beeminder goal information.
+  - A client for viewing and modifying Beeminder goals.
+  - Functions for adding data to Beeminder goals.
+  - Integration with org-mode for submitting clocked time and task completions.
+  - API access methods for fetching and modifying Beeminder goal information.
 
 Please set `beeminder-username' and `beeminder-auth-token' before using.
 
@@ -35,13 +35,13 @@ C-c b w    - Display username in message line.
 The same setup for `use-package` looks like this:
 
 (use-package beeminder
-:after (org)
-:bind
-(("C-c b a" . beeminder-add-data)
-("C-c b g" . beeminder-goals)
-("C-c b i" . beeminder-my-goals-org)
-("C-c b r" . beeminder-refresh-goal)
-("C-c b w" . beeminder-whoami)))
+  :after (org)
+  :bind
+  (("C-c b a" . beeminder-add-data)
+   ("C-c b g" . beeminder-goals)
+   ("C-c b i" . beeminder-my-goals-org)
+   ("C-c b r" . beeminder-refresh-goal)
+   ("C-c b w" . beeminder-whoami)))
 
 org-mode integration:
 

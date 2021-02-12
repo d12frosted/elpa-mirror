@@ -6,7 +6,7 @@ to this package to your `load-path' (for example in your .emacs).
 Afterwards run M-x haskell-emacs-init.
 
 (Base.product '(1 2 3))
-=> 6.0
+  => 6.0
 
 If you want to use these functions in your library, put there the
 following:

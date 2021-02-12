@@ -6,12 +6,12 @@ To install the game manually, you need:
 
 Add the following to your emacs init file:
 
-(add-to-list 'load-path "/path/to/ducpel-dir")
-(autoload 'ducpel "ducpel" nil t)
+  (add-to-list 'load-path "/path/to/ducpel-dir")
+  (autoload 'ducpel "ducpel" nil t)
 
 Also if you keep levels separately:
 
-(setq ducpel-levels-directory "/path/to/ducpel-levels-dir")
+  (setq ducpel-levels-directory "/path/to/ducpel-levels-dir")
 
 After that you can "M-x ducpel" and enjoy.  Use:
 

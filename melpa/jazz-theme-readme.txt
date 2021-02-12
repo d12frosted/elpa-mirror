@@ -1,5 +1,5 @@
 
-Drop the theme in a folder that is on `custom-theme-load-path'
+  Drop the theme in a folder that is on `custom-theme-load-path'
 and enjoy
 
 or

@@ -21,13 +21,13 @@ project you care to download you should just work straight away, no
 matter if it contains TypeScript, React, Node, ES6, Deno, or
 whatever; now and going forward.   By work, it means it should:
 
-1. Be able to understand the syntax as defined by the project
-itself, not a global concept of JavaScript syntax.
-2. Highlight errors based ond the configured style of the
-project itself.
-3. Have completions, documentations, and refactoring at the
-current point based on the sources of the current project.
-4. find and navigate to symbolic references
+  1. Be able to understand the syntax as defined by the project
+     itself, not a global concept of JavaScript syntax.
+  2. Highlight errors based ond the configured style of the
+     project itself.
+  3. Have completions, documentations, and refactoring at the
+     current point based on the sources of the current project.
+  4. find and navigate to symbolic references
 
 Usage:
 

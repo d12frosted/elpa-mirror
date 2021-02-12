@@ -8,8 +8,8 @@ brightness percentage nears zero.
 
 USAGE
 
-M-x backlight
-Then use '<' or '>' to adjust backlight brightness, 'C-g' when done.
+ M-x backlight
+  Then use '<' or '>' to adjust backlight brightness, 'C-g' when done.
 
-M-x backlight-set-raw
-prompts for a value to write directly to the device file.
+ M-x backlight-set-raw
+  prompts for a value to write directly to the device file.

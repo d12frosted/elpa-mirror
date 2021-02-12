@@ -4,16 +4,16 @@ This program provides a major mode for AppleScript.
 
 Put files in your load-path and add the following to your init file.
 
-(autoload 'apples-mode "apples-mode" "Happy AppleScripting!" t)
-(autoload 'apples-open-scratch "apples-mode" "Open scratch buffer for AppleScript." t)
-(add-to-list 'auto-mode-alist '("\\.\\(applescri\\|sc\\)pt\\'" . apples-mode))
+   (autoload 'apples-mode "apples-mode" "Happy AppleScripting!" t)
+   (autoload 'apples-open-scratch "apples-mode" "Open scratch buffer for AppleScript." t)
+   (add-to-list 'auto-mode-alist '("\\.\\(applescri\\|sc\\)pt\\'" . apples-mode))
 or
-(require 'apples-mode)
-(add-to-list 'auto-mode-alist '("\\.\\(applescri\\|sc\\)pt\\'" . apples-mode))
+   (require 'apples-mode)
+   (add-to-list 'auto-mode-alist '("\\.\\(applescri\\|sc\\)pt\\'" . apples-mode))
 
 After that you should byte-compile apples-mode.el.
 
-M-x byte-compile-file RET /path/to/apples-mode.el RET
+   M-x byte-compile-file RET /path/to/apples-mode.el RET
 
 During the byte-compilation, you may get some warnings, but you should
 ignore them.

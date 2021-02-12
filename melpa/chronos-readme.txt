@@ -1,9 +1,9 @@
 Chronos provides multiple countdown / countup timers, shown sorted by expiry
 time in a special buffer *chronos*.
 
-Expiry      Elapsed      To go  Message
-[17:02]                         --now--
-[17:07]           9       4:51  Coffee
+   Expiry      Elapsed      To go  Message
+   [17:02]                         --now--
+   [17:07]           9       4:51  Coffee
 
 In this example, the time 'now' is 17:02. A five minute countdown
 timer was set up 9 seconds ago.  It is expected to expire in 4 minutes

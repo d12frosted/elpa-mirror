@@ -24,17 +24,17 @@ itself. They all work out of the box and are completely customizable!
 
 * Visit the package's homepage with `v' (or just use the provided buttons).
 * Shortcuts for package filtering:
-* <f r> filters by regexp (`occur');
-* <f u> display only packages with upgrades;
-* <f k> filters by keyword.
+    * <f r> filters by regexp (`occur');
+    * <f u> display only packages with upgrades;
+    * <f k> filters by keyword.
 * `hl-line-mode' enabled by default.
 * Display useful information on the mode-line and cleanup a bunch of
-useless stuff.
+  useless stuff.
 * **Customization!** Just call M-x `paradox-customize' to see what you can
-do.
-* Customize column widths.
-* Customize faces (`paradox-star-face', `paradox-status-face-alist' and `paradox-archive-face').
-* Customize local variables.
+  do.
+    * Customize column widths.
+    * Customize faces (`paradox-star-face', `paradox-status-face-alist' and `paradox-archive-face').
+    * Customize local variables.
 
 ### Package Ratings ###
 
@@ -43,10 +43,10 @@ Paradox also integrates with
 That is, Paradox package menu will:
 
 1. Display the number of GitHub Stars each package has (assuming it's
-in a github repo, of course);
+   in a github repo, of course);
 2. Possibly automatically star packages you install, and unstar
-packages you delete (you will be asked the first time whether you
-want this);
+   packages you delete (you will be asked the first time whether you
+   want this);
 3. Let you star and unstar packages by hitting the `s' key;
 4. Let you star all packages you have installed with M-x `paradox-star-all-installed-packages'.
 

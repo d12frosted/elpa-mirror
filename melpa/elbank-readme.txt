@@ -7,5 +7,5 @@ Data is stored as JSON in `elbank-data-file' which defaults to
 Transactions are automatically categorized with `elbank-categories', an
 association list of the form:
 
-'(("category1" . ("regexp1" "regexp2"))
-(("category2" . ("regexp")))
+  '(("category1" . ("regexp1" "regexp2"))
+    (("category2" . ("regexp")))

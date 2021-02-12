@@ -5,11 +5,11 @@ color using CIEDE2000 algorithm.
 
 Usage:
 
-(contrast-color "#ff00ff") ; -> "#1b5e20"
+  (contrast-color "#ff00ff") ; -> "#1b5e20"
 
-or
+                 or
 
-(contrast-color "Brightmagenta") ; -> "#1b5e20"
+  (contrast-color "Brightmagenta") ; -> "#1b5e20"
 
 
 Note that as default color candidates, this package uses
@@ -17,6 +17,6 @@ Note that as default color candidates, this package uses
 on Google’s material design, but if you want to change this color
 definition you can do like this:
 
-(contrast-color-set '("black" "white"))
+   (contrast-color-set '("black" "white"))
 
 But keep in mind that providing many colors may increase calculation time.

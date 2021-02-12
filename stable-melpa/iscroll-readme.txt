@@ -7,7 +7,7 @@ package provides.)
 
 To use this package:
 
-M-x iscroll-mode RET
+    M-x iscroll-mode RET
 
 This mode remaps mouse scrolling functions and `next/previous-line'.
 If you use other commands, you need to adapt them accordingly. See

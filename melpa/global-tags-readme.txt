@@ -17,7 +17,7 @@ Alternatively, you can manually configure project.el and xref.el, add their
 (add-to-list 'project-find-functions 'global-tags-try-project-root)
 ;; to update database after save
 (add-hook 'c++-mode-hook (lambda ()
-(add-hook 'after-save-hook
-#'global-tags-update-database-with-buffer
-nil
-t)))
+                           (add-hook 'after-save-hook
+                                     #'global-tags-update-database-with-buffer
+                                     nil
+                                     t)))

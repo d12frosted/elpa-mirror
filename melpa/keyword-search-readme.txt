@@ -24,7 +24,7 @@ To use:
 Example of a direct search binding:
 
 (eval-after-load 'haskell-mode
-'(define-key haskell-mode-map (kbd "C-c h")
-(lambda ()
-(interactive)
-(keyword-search "hayoo"))))
+  '(define-key haskell-mode-map (kbd "C-c h")
+     (lambda ()
+       (interactive)
+       (keyword-search "hayoo"))))

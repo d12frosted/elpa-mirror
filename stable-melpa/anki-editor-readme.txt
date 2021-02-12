@@ -1,32 +1,32 @@
 
-This package is for people who use Anki as SRS but would like to
-make cards in Org-mode.
+ This package is for people who use Anki as SRS but would like to
+ make cards in Org-mode.
 
-With this package, you can make cards from something like:
-(which is inspired by `org-dirll')
+ With this package, you can make cards from something like:
+ (which is inspired by `org-dirll')
 
-* Item                     :emacs:lisp:programming:
-:PROPERTIES:
-:ANKI_DECK: Computing
-:ANKI_NOTE_TYPE: Basic
-:END:
-** Front
-How to hello world in elisp ?
-** Back
-#+BEGIN_SRC emacs-lisp
-(message "Hello, world!")
-#+END_SRC
+ * Item                     :emacs:lisp:programming:
+   :PROPERTIES:
+   :ANKI_DECK: Computing
+   :ANKI_NOTE_TYPE: Basic
+   :END:
+ ** Front
+    How to hello world in elisp ?
+ ** Back
+    #+BEGIN_SRC emacs-lisp
+      (message "Hello, world!")
+    #+END_SRC
 
-This package extends Org-mode's built-in HTML backend to generate
-HTML for contents of note fields with specific syntax (e.g. latex)
-translated to Anki style, then save the note to Anki.
+ This package extends Org-mode's built-in HTML backend to generate
+ HTML for contents of note fields with specific syntax (e.g. latex)
+ translated to Anki style, then save the note to Anki.
 
-For this package to work, you have to setup these external dependencies:
-- curl
-- AnkiConnect, an Anki addon that runs an HTTP server to expose
-Anki functions as RESTful APIs, see
-https://github.com/FooSoft/anki-connect#installation
-for installation instructions
+ For this package to work, you have to setup these external dependencies:
+ - curl
+ - AnkiConnect, an Anki addon that runs an HTTP server to expose
+                Anki functions as RESTful APIs, see
+                https://github.com/FooSoft/anki-connect#installation
+                for installation instructions
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

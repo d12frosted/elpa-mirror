@@ -23,5 +23,5 @@ to switch to 2-character `avy' or `ace-jump-mode' (not yet supported) once
 
 To use this package, add following code to your init file.
 
-(require 'ace-isearch)
-(global-ace-isearch-mode +1)
+  (require 'ace-isearch)
+  (global-ace-isearch-mode +1)

@@ -5,10 +5,10 @@ Setup:
 
 put into your own =.emacs= file (=init.el=)
 
-(require 'auto-read-only)
-(auto-read-only-mode 1)
+    (require 'auto-read-only)
+    (auto-read-only-mode 1)
 
 Customize:
 
-;; Third party codes are installed in vendor/ directory.
-(add-to-list 'auto-read-only-file-regexps "/vendor/")
+    ;; Third party codes are installed in vendor/ directory.
+    (add-to-list 'auto-read-only-file-regexps "/vendor/")

@@ -18,5 +18,5 @@ it will probably work there as well.
 
 
 (*) There is a base implementation for the file recognition, but it
-needs improvement so you can always jump back from a found file.
-Some (somewhat) less common files are not recognised yet.
+    needs improvement so you can always jump back from a found file.
+    Some (somewhat) less common files are not recognised yet.

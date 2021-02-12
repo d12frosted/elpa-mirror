@@ -3,14 +3,14 @@ A port of Hemisu theme to Emacs. (https://github.com/noahfrederick/Hemisu)
 
 ; Installation:
 
-M-x package-install -> hemisu-theme
+  M-x package-install -> hemisu-theme
 
 
-(load-theme 'hemisu-dark t)
+  (load-theme 'hemisu-dark t)
 
-or
+    or
 
-(load-theme 'hemisu-light t)
+  (load-theme 'hemisu-light t)
 
 Don't forget that the theme requires Emacs 24.
 

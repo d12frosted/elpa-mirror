@@ -12,13 +12,13 @@ If you don't like this keybind, just reassign the
 `google-this-mode-submap' variable.
 My personal preference is "C-x g":
 
-(global-set-key (kbd "C-x g") 'google-this-mode-submap)
+       (global-set-key (kbd "C-x g") 'google-this-mode-submap)
 
 Or, if you don't want google-this to overwrite the default ("C-c /")
 key insert the following line BEFORE everything else (even before
 the `require' command):
 
-(setq google-this-keybind (kbd "C-x g"))
+       (setq google-this-keybind (kbd "C-x g"))
 
 
 To start a blank search, do `google-search' (C-c / RET). If you
@@ -44,7 +44,7 @@ Finally there's also a google-cpp-reference function (C-c / r).
 
 INSTALLATION
 
-Make sure "google-this.el" is in your load path, then place
-this code in your .emacs file:
-(require 'google-this)
-(google-this-mode 1)
+ Make sure "google-this.el" is in your load path, then place
+     this code in your .emacs file:
+	(require 'google-this)
+             (google-this-mode 1)

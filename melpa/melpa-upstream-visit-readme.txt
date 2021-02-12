@@ -2,7 +2,7 @@ This package provides an interactive command to `browse-url' a
 melpa-hosted package's homepage.
 
 To (try to) visit a package's homepage, just
-M-x muv RET package-name RET
+  M-x muv RET package-name RET
 and the package's homepage (actually, its repo page) will be hopefully
 opened in your browser.
 

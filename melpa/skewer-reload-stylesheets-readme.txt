@@ -29,7 +29,7 @@ If you're live-editing Less, SCSS, or similar, add
 `skewer-reload-stylesheets-start-editing' to the appropriate hook variable,
 then set `skewer-reload-css-compile-command' to your transpile command:
 
-(setq skewer-reload-stylesheets-compile-command "gulp css")
+    (setq skewer-reload-stylesheets-compile-command "gulp css")
 
 This variable is best set in .dir-locals.el, so it can be set correctly
 per-project.

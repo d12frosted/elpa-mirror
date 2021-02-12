@@ -4,19 +4,19 @@ bind to a convenient key), offering you relevant actions to use on
 a target determined by the context:
 
 - In the minibuffer, the target is the current best completion
-candidate.
+ candidate.
 - In the `*Completions*' buffer the target is the completion at point.
 - In a regular buffer, the target is the region if active, or else the
-file, symbol or url at point.
+ file, symbol or url at point.
 
 The type of actions offered depend on the type of the target:
 
 - For files you get offered actions like deleting, copying,
-renaming, visiting in another window, running a shell command on the
-file, etc.
+ renaming, visiting in another window, running a shell command on the
+ file, etc.
 - For buffers the actions include switching to or killing the buffer.
 - For package names the actions include installing, removing or
-visiting the homepage.
+ visiting the homepage.
 
 Everything is easily configurable: determining the current target,
 classifying it, and deciding with actions are offered for each type
@@ -60,17 +60,17 @@ completions of your input.  Embark provides three commands to work
 on candidate sets:
 
 - The `embark-collect-snapshot' command produces a buffer listing
-all candidates, for you to peruse and run actions on at your
-leisure.  The candidates can be viewed in a grid or as a list
-showing additional annotations.  The `embark-collect-live'
-variant produces "live" Embark Collect buffers, meaning they
-autoupdate as the set of candidates changes.
+  all candidates, for you to peruse and run actions on at your
+  leisure.  The candidates can be viewed in a grid or as a list
+  showing additional annotations.  The `embark-collect-live'
+  variant produces "live" Embark Collect buffers, meaning they
+  autoupdate as the set of candidates changes.
 
 - The `embark-export' command tries to open a buffer in an
-appropriate major mode for the set of candidates.  If the
-candidates are files export produces a Dired buffer; if they are
-buffers, you get an Ibuffer buffer; and if they are packages you
-get a buffer in package menu mode.
+  appropriate major mode for the set of candidates.  If the
+  candidates are files export produces a Dired buffer; if they are
+  buffers, you get an Ibuffer buffer; and if they are packages you
+  get a buffer in package menu mode.
 
 These are always available as "actions" (although they do not act
 on just the current target but on all candidates) for embark-act and

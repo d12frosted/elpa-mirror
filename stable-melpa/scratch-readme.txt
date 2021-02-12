@@ -44,8 +44,8 @@ title on all `org-mode' scratch buffers, you could do:
 
 
 (add-hook 'org-mode-hook
-(lambda ()
-(when scratch-buffer
-(save-excursion
-(goto-char (point-min))
-(insert "#+TITLE: Scratch\n\n")))))
+          (lambda ()
+            (when scratch-buffer
+              (save-excursion
+                (goto-char (point-min))
+                (insert "#+TITLE: Scratch\n\n")))))

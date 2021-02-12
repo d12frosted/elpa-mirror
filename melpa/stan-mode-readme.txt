@@ -6,4 +6,4 @@ This major mode supports syntax-highlighting, indentation,
 
 Usage:
 
-(require 'stan-mode)
+  (require 'stan-mode)

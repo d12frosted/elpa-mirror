@@ -23,16 +23,16 @@ in the buffer.
 Xenops carries out such a user action as follows:
 
 1. Identify the set of *handlers* corresponding to the operation. A handler is a function that
-takes an element plist as its first argument. The mapping from operations to handlers is
-defined in the `xenops-ops' data structure.
+   takes an element plist as its first argument. The mapping from operations to handlers is
+   defined in the `xenops-ops' data structure.
 
 2. Visit each element in sequence:
 
-2.1 At an element, select a single handler which is valid for that element type. (There will
-usually be only one choice.) The mapping from element types to valid handlers is defined
-in the `xenops-elements' data structure.
+   2.1 At an element, select a single handler which is valid for that element type. (There will
+       usually be only one choice.) The mapping from element types to valid handlers is defined
+       in the `xenops-elements' data structure.
 
-2.2 Call the selected handler on the element.
+   2.2 Call the selected handler on the element.
 
 This traversal and dispatch-to-handler logic is implemented in xenops-apply.el.
 

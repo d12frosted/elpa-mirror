@@ -13,12 +13,12 @@ The main function you should use as interface to ri is M-x yari
 bind it on some key local when you are ruby-mode. Here is the example:
 
 (defun ri-bind-key ()
-(local-set-key [f1] 'yari))
+  (local-set-key [f1] 'yari))
 
-or
+ or
 
 (defun ri-bind-key ()
-(local-set-key [f1] 'yari-helm))
+  (local-set-key [f1] 'yari-helm))
 
 (add-hook 'ruby-mode-hook 'ri-bind-key)
 

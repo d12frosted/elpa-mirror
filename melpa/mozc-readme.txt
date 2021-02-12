@@ -27,8 +27,8 @@ mozc-mode supports LEIM (Library of Emacs Input Method) and
 you only need the following settings in your init file
 (~/.emacs.d/init.el or ~/.emacs).
 
-(require 'mozc)  ; or (load-file "/path/to/mozc.el")
-(setq default-input-method "japanese-mozc")
+  (require 'mozc)  ; or (load-file "/path/to/mozc.el")
+  (setq default-input-method "japanese-mozc")
 
 Having the above settings, just type \C-\\ which is bound to
 `toggle-input-method' by default.
@@ -53,7 +53,7 @@ directory.
 You need a command line option '--mode=config_dialog' as the
 following.
 
-$ /usr/lib/mozc/mozc_tool --mode=config_dialog
+  $ /usr/lib/mozc/mozc_tool --mode=config_dialog
 
 Then, it shows a GUI dialog to edit your user settings.
 
@@ -70,11 +70,11 @@ There are two built-in kana key maps, one for 106 JP keyboards and
 one for 101 US keyboards.  You can choose one of them by setting
 `mozc-keymap-kana' variable.
 
-;; for 106 JP keyboards
-(setq mozc-keymap-kana mozc-keymap-kana-106jp)
+  ;; for 106 JP keyboards
+  (setq mozc-keymap-kana mozc-keymap-kana-106jp)
 
-;; for 101 US keyboards
-(setq mozc-keymap-kana mozc-keymap-kana-101us)
+  ;; for 101 US keyboards
+  (setq mozc-keymap-kana mozc-keymap-kana-101us)
 
 For advanced users, there are APIs for more detailed customization
 or even creating your own key map.

@@ -5,6 +5,6 @@ Provides Emacs input methods for Myanmar
 To install, just drop this file into a directory in your
 `load-path' and (optionally) byte-compile it. And add:
 
-(require 'myanmar-input-methods)
+   (require 'myanmar-input-methods)
 
 to your .emacs file.

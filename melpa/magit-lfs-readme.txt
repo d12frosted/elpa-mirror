@@ -10,19 +10,19 @@ To use this plugin,
 
 - For Vanilla Emacs (After install magit, magit-lfs):
 
-(require 'magit-lfs)
+  (require 'magit-lfs)
 
 - For Emacs with `use-package' (After load magit, dash):
 
-(use-package magit-lfs
-:ensure t
-:pin melpa)
+  (use-package magit-lfs
+     :ensure t
+     :pin melpa)
 
 - For Emacs with `req-package' (After install dash):
 
-(req-package magit-lfs
-:loader :elpa
-:pin melpa
-:require (magit))
+  (req-package magit-lfs
+     :loader :elpa
+     :pin melpa
+     :require (magit))
 
 For more detail information, please see README.md

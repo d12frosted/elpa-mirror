@@ -16,7 +16,7 @@ is also displayed in the modeline.
 In each of these modes, the following commands are available:
 
 - M-<right> (`fxrd-next-field') and M-<left> (`fxrd-previous-field') move to
-the next and previous fields, respectively.
+  the next and previous fields, respectively.
 - C-. (`fxrd-next-error') moves to the next invalid field.
 
 Installation:

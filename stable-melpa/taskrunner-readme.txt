@@ -43,8 +43,8 @@ packages:
 grunt.el[1] which helped me retrieve the tasks from grunt
 gulp-task-runner[2] which helped me retrieve the tasks from gulp
 helm-make[3] which helped me figure out the regexps needed to retrieve
-makefile targets
+             makefile targets
 
-[1] https://github.com/gempesaw/grunt.el
-[2] https://github.com/NicolasPetton/gulp-task-runner/tree/877990e956b1d71e2d9c7c3e5a129ad199b9debb
-[3] https://github.com/abo-abo/helm-make
+ [1] https://github.com/gempesaw/grunt.el
+ [2] https://github.com/NicolasPetton/gulp-task-runner/tree/877990e956b1d71e2d9c7c3e5a129ad199b9debb
+ [3] https://github.com/abo-abo/helm-make

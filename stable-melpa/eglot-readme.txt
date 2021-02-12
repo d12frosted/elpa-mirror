@@ -22,7 +22,7 @@ eglot-shutdown.
 
 You can also do:
 
-(add-hook 'foo-mode-hook 'eglot-ensure)
+  (add-hook 'foo-mode-hook 'eglot-ensure)
 
 To attempt to start an eglot session automatically everytime a
 foo-mode buffer is visited.

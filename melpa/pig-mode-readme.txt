@@ -8,4 +8,4 @@ support new Pig features ASAP.
 Put this file into your Emacs lisp path (eg. site-lisp) and add the
 following line to your ~/.emacs file:
 
-(require 'pig-mode)
+  (require 'pig-mode)

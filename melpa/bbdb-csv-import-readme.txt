@@ -67,29 +67,29 @@ mapping table given sample data.
 
 Mapping table tips:
 * The repeat keyword expands numbered field names, based on the first
-field, as many times as they exist in the csv data.
+  field, as many times as they exist in the csv data.
 * All mapping fields are optional. A simple mapping table could be
-(setq bbdb-csv-import-mapping-table '((:mail "Primary Email")))
+  (setq bbdb-csv-import-mapping-table '((:mail "Primary Email")))
 * :xfields uses the csv field name to create custom fields in bbdb. It downcases
-the field name, and replaces spaces with "-", and repeating dashes with a
-single one . For example, if you had a csv named "Mail Alias" or "Mail - alias",
-you could add it to :xfields in a mapping table and it would become "mail-alias"
-in bbdb.
+  the field name, and replaces spaces with "-", and repeating dashes with a
+  single one . For example, if you had a csv named "Mail Alias" or "Mail - alias",
+  you could add it to :xfields in a mapping table and it would become "mail-alias"
+  in bbdb.
 
 ; Misc tips/troubleshooting:
 
 - ASynK looks promising for syncing bbdb/google/outlook.
 - The git repo contains a test folder with exactly tested version info and working
-test data.  Software, and especially online services are prone to changing how they
-export. Please send feedback if you run into problems.
+  test data.  Software, and especially online services are prone to changing how they
+  export. Please send feedback if you run into problems.
 - bbdb doesn't work if you delete the bbdb database file in
-the middle of an emacs session. If you want to empty the current bbdb database,
-do M-x bbdb then .* then C-u * d on the beginning of a record.
+  the middle of an emacs session. If you want to empty the current bbdb database,
+  do M-x bbdb then .* then C-u * d on the beginning of a record.
 - After changing a mapping table variable, don't forget to re-execute
-(setq bbdb-csv-import-mapping-table ...) so that it propagates.
+  (setq bbdb-csv-import-mapping-table ...) so that it propagates.
 - :namelist is used instead of :name if 2 or more non-empty fields from :namelist are
-found in a record. If :name is empty, we try a single non-empty field from :namelist
-This sounds a bit strange, but it's to try and deal with Thunderbird idiosyncrasies.
+  found in a record. If :name is empty, we try a single non-empty field from :namelist
+  This sounds a bit strange, but it's to try and deal with Thunderbird idiosyncrasies.
 
 ; Bugs, patches, discussion, feedback
 

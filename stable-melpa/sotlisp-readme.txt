@@ -50,8 +50,8 @@ on any undefined functions/variables, write their definitions, and hit
 With the above (assuming you use something like paredit or
 electric-pair-mode), if you write:
 
-( w t b M-RET i SPC text
+  ( w t b M-RET i SPC text
 
 You get
 
-(with-temp-buffer (insert text))
+  (with-temp-buffer (insert text))

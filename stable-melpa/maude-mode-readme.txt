@@ -12,6 +12,6 @@ Todo:
 - Full Maude (and parametrised modules)
 
 - C-u C-c C-c to move point to end of inferior-maude buffer before
-evaluating buffer.
+  evaluating buffer.
 
 - Sometimes font-lock gets into an endless loop

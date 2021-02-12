@@ -1,1 +1,1 @@
-Invoke fasd functionality right from `evil-ex'
+ Invoke fasd functionality right from `evil-ex'

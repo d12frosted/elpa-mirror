@@ -20,6 +20,6 @@ or *helpful*.
 issue:
 
 1. Library authors can wrap code that plans to execute processes in
-temporary buffers with the `inheritenv' macro.
+   temporary buffers with the `inheritenv' macro.
 2. End users can modify commands like `shell-command-to-string' using
-the `inheritenv-add-advice' macro.
+   the `inheritenv-add-advice' macro.

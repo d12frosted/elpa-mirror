@@ -8,4 +8,4 @@ html version can be found at https://mitpress.mit.edu/sicp.
 
 If you want to recreate the info file, you can do so using
 
-makeinfo -–no-split sicp.texi -o sicp.info
+  makeinfo -–no-split sicp.texi -o sicp.info

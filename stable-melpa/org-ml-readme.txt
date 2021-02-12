@@ -8,14 +8,14 @@ of this package, the resulting parse tree is composed of 'nodes'.
 This library exposes the following types of functions:
 - builder: build new nodes to be inserted into a parse tree
 - property functions: return either property values (get) or nodes with
-modified properties (set and map)
+  modified properties (set and map)
 - children functions: return either children of nodes (get) or return a node
-with modified children (set and map)
+  with modified children (set and map)
 - node predicates: return t if node meets a condition
 - pattern matching: return nodes based on a pattern that matches the parse
-tree (and perform operations on those nodes depending on the function)
+  tree (and perform operations on those nodes depending on the function)
 - parsers: parse a buffer (optionally at current point) and return a parse
-tree
+  tree
 - writers: insert/update the contents of a buffer given a parse tree
 
 For examples please see full documentation at:

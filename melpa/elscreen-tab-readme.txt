@@ -1,6 +1,6 @@
 This minor is for users who;
 - dislike setting `elscreen-display-tab' to `t', because which highjacks `header-line-format'
-which you reserved for the other purpose such as `which-func-mode' or alike.
+  which you reserved for the other purpose such as `which-func-mode' or alike.
 - dislike the tab menu is displayed at the top.
 
 [Usage]

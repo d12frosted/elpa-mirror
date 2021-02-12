@@ -10,21 +10,21 @@ context as to which object was collected. The object itself must
 *not* be on of these arguments.
 
 -- Function: `finalize-register' object finalizer &rest finalizer-args
-Registers an object for finalization. FINALIZER will be called
-with FINALIZER-ARGS when OBJECT has been garbage collected.
+     Registers an object for finalization. FINALIZER will be called
+     with FINALIZER-ARGS when OBJECT has been garbage collected.
 
 Usage:
 
-(cl-defstruct (pinger (:constructor pinger--create))
-process host)
+    (cl-defstruct (pinger (:constructor pinger--create))
+      process host)
 
-(defun pinger-create (host)
-(let* ((process (start-process "pinger" nil "ping" host))
-(object (pinger--create :process process :host host)))
-(finalize-register object #'kill-process process)
-object))
+    (defun pinger-create (host)
+      (let* ((process (start-process "pinger" nil "ping" host))
+             (object (pinger--create :process process :host host)))
+        (finalize-register object #'kill-process process)
+        object))
 
 There is also a "finalizable" mixin class for EIEIO that provides a
 `finalize' generic function.
 
-(require 'finalizable)
+    (require 'finalizable)

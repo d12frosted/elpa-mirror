@@ -6,11 +6,11 @@ certain files from grepping.  It turned out that `rg --files` provides the list 
 
 - `find-file-rg'
 
-Asks for project dir if needed and reads filename with completing function.
-`project-current' is used as the default directory to search in.
-If invoked with prefix argument, always asks for directory to find files in.
+  Asks for project dir if needed and reads filename with completing function.
+  `project-current' is used as the default directory to search in.
+  If invoked with prefix argument, always asks for directory to find files in.
 
 - `find-file-rg-at-point'
 
-Calls `find-file-rg' with active region or filename at point as initial value
-for completing function.
+  Calls `find-file-rg' with active region or filename at point as initial value
+  for completing function.

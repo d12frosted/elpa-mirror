@@ -2,11 +2,11 @@ Ruby refactor is inspired by the Vim plugin vim-refactoring-ruby,
 currently found at https://github.com/ecomba/vim-ruby-refactoring.
 
 I've implemented 5 refactorings
-- Extract to Method
-- Extract Local Variable
-- Extract Constant
-- Add Parameter
-- Extract to Let
+ - Extract to Method
+ - Extract Local Variable
+ - Extract Constant
+ - Add Parameter
+ - Extract to Let
 
 ; ## Install
 Add this file to your load path.
@@ -50,19 +50,19 @@ walks up to the first describe/context it finds.
 You can also specify a different regex, so that you can just
 use "describe" if you want.
 If you are on a line:
-a = Something.else.doing
-becomes
-let(:a){ Something.else.doing }
+  a = Something.else.doing
+    becomes
+  let(:a){ Something.else.doing }
 
 If you are selecting a region:
-a = Something.else
-a.stub(:blah)
-becomes
-let :a do
-_a = Something.else
-_a.stub(:blah)
-_a
-end
+  a = Something.else
+  a.stub(:blah)
+    becomes
+  let :a do
+    _a = Something.else
+    _a.stub(:blah)
+    _a
+  end
 
 In both cases, you need the line, first line to have an ' = ' in it,
 as that drives conversion.
@@ -77,4 +77,4 @@ it closest.  I kinda got nutty with this one.
 
 ## TODO
 From the vim plugin, these remain to be done (I don't plan to do them all.)
-- remove inline temp (sexy!)
+ - remove inline temp (sexy!)

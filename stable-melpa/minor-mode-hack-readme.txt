@@ -11,8 +11,8 @@ raises priority of `view-mode-map'.
 
 Below are complete command list:
 
-`show-minor-mode-map-priority'
-Show priority of `minor-mode-map-alist'.
+ `show-minor-mode-map-priority'
+   Show priority of `minor-mode-map-alist'.
 
 ; Customizable Options:
 

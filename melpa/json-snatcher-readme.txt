@@ -30,9 +30,9 @@ To install add the json-snatcher.el file to your load-path, and
 add the following lines to your .emacs file:
 (require 'json-snatcher)
 (defun js-mode-bindings ()
-"Sets a hotkey for using the json-snatcher plugin."
-(when (string-match  "\\.json$" (buffer-name))
-(local-set-key (kbd "C-c C-g") 'jsons-print-path)))
+  "Sets a hotkey for using the json-snatcher plugin."
+  (when (string-match  "\\.json$" (buffer-name))
+      (local-set-key (kbd "C-c C-g") 'jsons-print-path)))
 (add-hook 'js-mode-hook 'js-mode-bindings)
 (add-hook 'js2-mode-hook 'js-mode-bindings)
 

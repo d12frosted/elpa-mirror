@@ -10,20 +10,20 @@ happy.
 But, just run `M-x resize-window`. There are only a few commands to learn,
 and they mimic the normal motions in emacs.
 
-n : Makes the window vertically bigger, think scrolling down. Use
-N  to enlarge 5 lines at once.
-p : Makes the window vertically smaller, again, like scrolling. Use
-P  to shrink 5 lines at once.
-f : Makes the window horizontally bigger, like scrolling forward;
-F  for five lines at once.
-b : window horizontally smaller,  B  for five lines at once.
-r : reset window layout to standard
-w : cycle through windows so that you can adjust other window
-panes.  W  cycles in the opposite direction.
-2 : create a new horizontal split
-3 : create a new vertical split
-0 : delete the current window
-k : kill all buffers and put window config on the stack
-y : make the window configuration according to the last config
-pushed onto the stack
-? : Display menu listing commands
+  n : Makes the window vertically bigger, think scrolling down. Use
+       N  to enlarge 5 lines at once.
+  p : Makes the window vertically smaller, again, like scrolling. Use
+       P  to shrink 5 lines at once.
+  f : Makes the window horizontally bigger, like scrolling forward;
+       F  for five lines at once.
+  b : window horizontally smaller,  B  for five lines at once.
+  r : reset window layout to standard
+  w : cycle through windows so that you can adjust other window
+      panes.  W  cycles in the opposite direction.
+  2 : create a new horizontal split
+  3 : create a new vertical split
+  0 : delete the current window
+  k : kill all buffers and put window config on the stack
+  y : make the window configuration according to the last config
+  pushed onto the stack
+  ? : Display menu listing commands

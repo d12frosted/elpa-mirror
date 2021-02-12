@@ -4,14 +4,14 @@ blocks and links:
 0. A unified interface, the ‘defblock’ macro, for making new block and link types.
 
 1. Colours: Regions of text and inline text can be coloured using 19 colours;
-easily extendable; below is an example.
+ easily extendable; below is an example.
 
-#+begin_red org
-/This/
-*text*
-_is_
-red!
-#+end_red
+            #+begin_red org
+            /This/
+                  *text*
+                         _is_
+                              red!
+            #+end_red
 
 2. Multiple columns: Regions of text are exported into multiple side-by-side
 columns

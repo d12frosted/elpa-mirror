@@ -1,8 +1,8 @@
 
 This extension provides navigation like the Vimperator Hint Mode of Firefox.
 The interface has the following flow.
-1. pop-up tip about the matched point for some action which user want.
-2. do some action for the user selecting.
+ 1. pop-up tip about the matched point for some action which user want.
+ 2. do some action for the user selecting.
 
 For more infomation, see <https://github.com/aki2o/emacs-pophint/blob/master/README.md>
 
@@ -62,4 +62,4 @@ Whether do pop-up at all windows.
 `pophint:use-pos-tip'
 Whether use pos-tip.el to show prompt.
 
-*** END auto-documentation
+ *** END auto-documentation

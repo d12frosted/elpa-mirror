@@ -8,8 +8,8 @@ user preferences,
 
 (lastfm-tag-get-top-tracks "rock" :limit 3)
 => (("Nirvana" "Smells Like Teen Spirit")
-("The Killers" "Mr Brightside")
-("Oasis" "Wonderwall"))
+    ("The Killers" "Mr Brightside")
+    ("Oasis" "Wonderwall"))
 
 Or add a track to your list of loved songs,
 

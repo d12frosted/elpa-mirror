@@ -11,8 +11,8 @@ projects.
 
 Recommended binding: =C-c !=
 
-(require 'shell-here)
-(define-key (current-global-map) "\C-c!" 'shell-here)
+  (require 'shell-here)
+  (define-key (current-global-map) "\C-c!" 'shell-here)
 
 Usage:
 

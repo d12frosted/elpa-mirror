@@ -3,8 +3,8 @@ Inspired by the Async/Await implementation of TypeScript.
 
 Usage:
 See `async-await-examples.el' for details.
-https://raw.githubusercontent.com/chuntaro/emacs-async-await/master/examples/async-await-examples.el
-You can check the operation while downloading and running it interactively.
+ https://raw.githubusercontent.com/chuntaro/emacs-async-await/master/examples/async-await-examples.el
+ You can check the operation while downloading and running it interactively.
 
 (require 'async-await)
 
@@ -12,23 +12,23 @@ You can check the operation while downloading and running it interactively.
 (promise-rejection-tracking-enable '((all-rejections . t)))
 
 (defun wait-async (n)
-(promise-new (lambda (resolve _reject)
-(run-at-time n
-nil
-(lambda ()
-(funcall resolve n))))))
+  (promise-new (lambda (resolve _reject)
+                 (run-at-time n
+                              nil
+                              (lambda ()
+                                (funcall resolve n))))))
 
 (async-defun example2 ()
-(print (await (wait-async 0.5)))
-(message "---")
+  (print (await (wait-async 0.5)))
+  (message "---")
 
-(print (await (wait-async 1.0)))
-(message "---")
+  (print (await (wait-async 1.0)))
+  (message "---")
 
-(print (await (wait-async 1.5)))
-(message "---")
+  (print (await (wait-async 1.5)))
+  (message "---")
 
-(message "await done"))
+  (message "await done"))
 
 (example2) =>
 

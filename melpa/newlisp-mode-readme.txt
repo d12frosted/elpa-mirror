@@ -8,6 +8,6 @@ Major mode for editing newLISP script.
 
 You should add this to .emacs file after putting it on your load-path:
 
-(require 'newlisp-mode)
+  (require 'newlisp-mode)
 
 If Emacs 24.1+, you can install package from MELPA.

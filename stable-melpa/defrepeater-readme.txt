@@ -11,24 +11,24 @@ needed to stop the repetition so you could press "p" normally).
 
 First, define repeating commands:
 
-;; Automatically defines `winner-redo-repeat' command:
-(defrepeater #'winner-redo)
+    ;; Automatically defines `winner-redo-repeat' command:
+    (defrepeater #'winner-redo)
 
-;; Optionally specify the name of the repeater, like using `defalias':
-(defrepeater 'winner-undo-repeat #'winner-undo)
+    ;; Optionally specify the name of the repeater, like using `defalias':
+    (defrepeater 'winner-undo-repeat #'winner-undo)
 
 Then bind keys to the new commands (example using general.el):
 
-(general-def
-[remap winner-redo] #'winner-redo-repeat
-[remap winner-undo] #'winner-undo-repeat)
+    (general-def
+      [remap winner-redo] #'winner-redo-repeat
+      [remap winner-undo] #'winner-undo-repeat)
 
 For example, "M-SPC w p" was bound to `winner-undo', so now "M-SPC w p p p" can be pressed to
 call `winner-undo' 3 times.
 
 `defrepeater' can also be used directly in a key-binding expression:
 
-(global-set-key (kbd "C-x o") (defrepeater #'other-window))
+    (global-set-key (kbd "C-x o") (defrepeater #'other-window))
 
 ;; Installation
 

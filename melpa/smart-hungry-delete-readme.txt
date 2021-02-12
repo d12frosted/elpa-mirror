@@ -7,5 +7,5 @@ Usage:
 with use-package:
 
 (use-package smart-hungry-delete
-:bind (("<backspace>" . smart-hungry-delete-backward-char)
-("C-d" . smart-hungry-delete-forward-char)))
+  :bind (("<backspace>" . smart-hungry-delete-backward-char)
+		 ("C-d" . smart-hungry-delete-forward-char)))

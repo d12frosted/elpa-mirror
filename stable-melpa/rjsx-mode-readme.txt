@@ -6,7 +6,7 @@ plus proper syntax checking and highlighting of JSX code blocks.
 Some features that this mode adds to js2:
 
 - Highlighting JSX tag names and attributes (using the rjsx-tag and
-rjsx-attr faces)
+  rjsx-attr faces)
 - Highlight undeclared JSX components
 - Parsing the spread operator {...otherProps}
 - Parsing && and || in child expressions {cond && <BigComponent/>}

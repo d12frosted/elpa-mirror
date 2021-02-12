@@ -10,7 +10,7 @@ importing (like text-mode).
 *** textmate-import-svn-get-pkgs
 =(textmate-import-svn-get-pkgs)=
 
-- Gets textmate bundles from svn
+ - Gets textmate bundles from svn
 
 *** textmate-import-svn-snippets
 =(textmate-import-svn-snippets SNIPPET-URL PLIST TEXTMATE-NAME)=
@@ -20,12 +20,12 @@ importing (like text-mode).
 *** textmate-regexp-to-emacs-regexp
 =(textmate-regexp-to-emacs-regexp REXP)=
 
-- Convert a textmate regular expression to an emacs regular expression (as much as possible)
+ - Convert a textmate regular expression to an emacs regular expression (as much as possible)
 
 *** textmate-yas-menu
 =(textmate-yas-menu PLIST &optional MODE-NAME)=
 
-- Builds `yas-define-menu'from info.plist file
+ - Builds `yas-define-menu'from info.plist file
 
 *** textmate-yas-menu-get-items
 =(textmate-yas-menu-get-items TXT)=
@@ -35,28 +35,28 @@ Gets items from TXT and puts them into a list
 *** yas---t/
 =(yas---t/ TEXTMATE-REG TEXTMATE-REP &optional TEXTMATE-OPTION T-TEXT)=
 
-- Textmate like mirror.  Uses textmate regular expression and textmate formatting.
+ - Textmate like mirror.  Uses textmate regular expression and textmate formatting.
 
 *** yas-format-match-?-buf
 =(yas-format-match-\?-buf TEXT &optional STRING EMPTY-MISSING
 START-POINT STOP-POINT)=
 
-- Recursive call to temporary buffer to replace conditional formats.
+ - Recursive call to temporary buffer to replace conditional formats.
 
 *** yas-getenv
 =(yas-getenv VAR)=
 
-- Gets environment variable or customized variable for Textmate->Yasnippet conversion
+ - Gets environment variable or customized variable for Textmate->Yasnippet conversion
 
 *** yas-replace-match
 =(yas-replace-match TEXT &optional STRING
 TREAT-EMPTY-MATCHES-AS-MISSING-MATCHES SUBEXP)=
 
-- yas-replace-match is similar to emacs replace-match but using Textmate formats
+ - yas-replace-match is similar to emacs replace-match but using Textmate formats
 
 *** yas-text-on-moving-away
 =(yas-text-on-moving-away DEFAULT-TEXT)=
 
-- Changes text when moving away AND original text has not changed
+ - Changes text when moving away AND original text has not changed
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

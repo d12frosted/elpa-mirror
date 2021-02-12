@@ -11,7 +11,7 @@ Manual installation:
 Save recompile-on-save.el to a directory on your load-path (e.g.,
 ~/.emacs.d/elisp), then add the following to your .emacs file:
 
-(require 'recompile-on-save)
+ (require 'recompile-on-save)
 
 
 ; Using recompile-on-save:

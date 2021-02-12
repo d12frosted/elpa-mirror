@@ -12,9 +12,9 @@ Variables:
 You can customize like this to append new items to this talbe:
 
 (setq kaomoji-table
-(append '((("angry" "furious") . "(／‵Д′)／~ ╧╧ ")
-(("angry" "punch") . "#ﾟÅﾟ）⊂彡☆))ﾟДﾟ)･∵"))
-kaomoji-table))
+      (append '((("angry" "furious") . "(／‵Д′)／~ ╧╧ ")
+                (("angry" "punch") . "#ﾟÅﾟ）⊂彡☆))ﾟДﾟ)･∵"))
+              kaomoji-table))
 
 `kaomoji-patterns-inserted-along-with' : When your input (from Helm
 minibuffer) contains any of the patterns, insert the input along

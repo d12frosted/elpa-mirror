@@ -43,28 +43,28 @@ For details see [3].  This leads to an 8-bit design for this
 implementation.  So the following fitting implementation is used
 here.
 - Multiplication and inverting in GF(2^8) are implemented as table
-lookups.
+  lookups.
 - The state is implemented as a unibyte string of length 4 * Nb.
 - Plaintext and ciphertext are implemented as unibyte strings.
 - The expanded key is implemented as a list of length 4 * Nb * (1 +
-Nr) with entries '((A . B) . (C . D)), where A, B, C and D are
-bytes.  It is precalculated before the en-/decryption algorithms.
+  Nr) with entries '((A . B) . (C . D)), where A, B, C and D are
+  bytes.  It is precalculated before the en-/decryption algorithms.
 - The S-boxes are implemented by lookup tables.
 - The three operations ByteSub, ShiftRow and MixColumn together
-with round-key-addition are implemented in the functions
-`aes-SubShiftMixKeys' and `aes-InvSubShiftMixKeys' for encryption
-and decryption respectively.
+  with round-key-addition are implemented in the functions
+  `aes-SubShiftMixKeys' and `aes-InvSubShiftMixKeys' for encryption
+  and decryption respectively.
 - CBC mode is implemented straightforward, using a Zero [12] or
-PKCS#7 [7] padding.  The IV is appended to and saved with the
-ciphertext.
+  PKCS#7 [7] padding.  The IV is appended to and saved with the
+  ciphertext.
 - OCB mode made the implementation of a pmac, based on AES,
-necessary, but the further details were straightforward.  The IV
-is appended to the ciphertext.  During decryption the created
-hash-value is checked.
+  necessary, but the further details were straightforward.  The IV
+  is appended to the ciphertext.  During decryption the created
+  hash-value is checked.
 - the function `aes-key-from-passwd' generates an AES key from an
-user input string (password).
+  user input string (password).
 - Further `aes-insert-password' generates random passwords, based
-on random user input like mousemovement, time and keyinput.
+  on random user input like mousemovement, time and keyinput.
 
 The version of the internal storage format of encrypted data is
 1.3.  Version 1.2 will be supported until at least December
@@ -80,21 +80,21 @@ Known Bugs / Limitations / TODO:
 - This implementation is not resistant against DPA attacks [8].
 - `aes-auto-decrypt' is not completely compliant to Emacs standards.
 - Handle CBC and OCB in two different functions instead of the
-single function `aes-encrypt-buffer-or-string'.
+  single function `aes-encrypt-buffer-or-string'.
 - don't handle padding in `aes-cbc-encrypt'.
 - refactor `aes-user-entropy'
 - test random number generator
 
 References:
-[1] http://csrc.nist.gov/archive/aes/rijndael/Rijndael-ammended.pdf
-[2] http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf
-[3] http://www.openssl.org/
-[4] http://en.wikipedia.org/wiki/Block_cipher_modes_of_operation
-[5] http://tools.ietf.org/html/draft-krovetz-ocb-00
-[6] http://www.cs.ucdavis.edu/~rogaway/ocb/license.htm
-[7] http://tools.ietf.org/html/rfc5652#section-6.3
-[8] http://en.wikipedia.org/wiki/Differential_power_analysis
-[9] http://melpa.org/
+ [1] http://csrc.nist.gov/archive/aes/rijndael/Rijndael-ammended.pdf
+ [2] http://csrc.nist.gov/publications/fips/fips197/fips-197.pdf
+ [3] http://www.openssl.org/
+ [4] http://en.wikipedia.org/wiki/Block_cipher_modes_of_operation
+ [5] http://tools.ietf.org/html/draft-krovetz-ocb-00
+ [6] http://www.cs.ucdavis.edu/~rogaway/ocb/license.htm
+ [7] http://tools.ietf.org/html/rfc5652#section-6.3
+ [8] http://en.wikipedia.org/wiki/Differential_power_analysis
+ [9] http://melpa.org/
 [10] http://marmalade-repo.org/
 [11] http://debbugs.gnu.org/cgi/bugreport.cgi?bug=15501
 [12] http://en.wikipedia.org/wiki/Padding_(cryptography)#Zero_padding

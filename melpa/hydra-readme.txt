@@ -13,28 +13,28 @@ mode that disables itself automagically.
 Here's an example Hydra, bound in the global map (you can use any
 keymap in place of `global-map'):
 
-(defhydra hydra-zoom (global-map "<f2>")
-"zoom"
-("g" text-scale-increase "in")
-("l" text-scale-decrease "out"))
+    (defhydra hydra-zoom (global-map "<f2>")
+      "zoom"
+      ("g" text-scale-increase "in")
+      ("l" text-scale-decrease "out"))
 
 It allows to start a command chain either like this:
 "<f2> gg4ll5g", or "<f2> lgllg".
 
 Here's another approach, when you just want a "callable keymap":
 
-(defhydra hydra-toggle (:color blue)
-"toggle"
-("a" abbrev-mode "abbrev")
-("d" toggle-debug-on-error "debug")
-("f" auto-fill-mode "fill")
-("t" toggle-truncate-lines "truncate")
-("w" whitespace-mode "whitespace")
-("q" nil "cancel"))
+    (defhydra hydra-toggle (:color blue)
+      "toggle"
+      ("a" abbrev-mode "abbrev")
+      ("d" toggle-debug-on-error "debug")
+      ("f" auto-fill-mode "fill")
+      ("t" toggle-truncate-lines "truncate")
+      ("w" whitespace-mode "whitespace")
+      ("q" nil "cancel"))
 
 This binds nothing so far, but if you follow up with:
 
-(global-set-key (kbd "C-c C-v") 'hydra-toggle/body)
+    (global-set-key (kbd "C-c C-v") 'hydra-toggle/body)
 
 you will have bound "C-c C-v a", "C-c C-v d" etc.
 

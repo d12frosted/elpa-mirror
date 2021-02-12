@@ -6,7 +6,7 @@ phi-search-migemo-toggle" で migemo の有効/無効を切り替えることが
 きます。 phi-search-default-map にキーバインドを追加しておいても便利
 です。
 
-(define-key phi-search-default-map (kbd "M-m") 'phi-search-toggle-migemo)
+  (define-key phi-search-default-map (kbd "M-m") 'phi-search-toggle-migemo)
 
 "phi-search-migemo", "phi-search-migemo-backward" は、 phi-search を
 起動し migemo を有効にするところまでをひとまとめにしたコマンドです。

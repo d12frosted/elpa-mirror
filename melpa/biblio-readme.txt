@@ -23,7 +23,7 @@ Quick start: ‘M-x biblio-lookup’.  Each source can also be accessed independ
 * `M-x dblp-lookup’ to query DBLP
 * ‘M-x doi-insert’ to insert a BibTeX record by DOI
 * ‘M-x dissemin-lookup’ to show information about the open access status of a
-particular DOI
+  particular DOI
 
 Most of these commands work together: for example, ‘crossref-lookup’ displays a
 list of results in ‘biblio-selection-mode’.  In that mode, use:
@@ -38,21 +38,21 @@ list of results in ‘biblio-selection-mode’.  In that mode, use:
 ## Examples
 
 * To insert a clean BibTeX entry for https://doi.org/10.1145/2676726.2677006
-in the current buffer, use
+  in the current buffer, use
 
-M-x crossref-lookup RET fiat deductive delaware RET i
+        M-x crossref-lookup RET fiat deductive delaware RET i
 
-(the last ‘i’ inserts the BibTeX record of the currently selected entry in
-your buffer).
+  (the last ‘i’ inserts the BibTeX record of the currently selected entry in
+   your buffer).
 
 * To find publications by computer scientist Leslie Lamport, use ‘M-x
-dblp-lookup RET author:Lamport RET’ (see more info about DBLP's syntax at
-<https://dblp.uni-trier.de/search/>)
+  dblp-lookup RET author:Lamport RET’ (see more info about DBLP's syntax at
+  <https://dblp.uni-trier.de/search/>)
 
 * To check whether an article is freely available online, use ‘x’ in the list
-of results.  For example ‘M-x crossref-lookup RET Emacs stallman RET’
-followed by ‘x Dissemin RET’ will help you find open access copies of
-Stallman's paper on EMACS (spoiler: https://hdl.handle.net/1721.1/5736).
+  of results.  For example ‘M-x crossref-lookup RET Emacs stallman RET’
+  followed by ‘x Dissemin RET’ will help you find open access copies of
+  Stallman's paper on EMACS (spoiler: https://hdl.handle.net/1721.1/5736).
 
 See https://github.com/cpitclaudel/biblio.el for more information, including
 documentation on extending this framework.

@@ -11,23 +11,23 @@ By default mini-frame is placed at the top of the current frame and occupied
 full width.  Those who use vertical completion candidates list may configure
 mini-frame not to occupy full width:
 
-(custom-set-variables
-'(mini-frame-show-parameters
-'((top . 10)
-(width . 0.7)
-(left . 0.5))))
+  (custom-set-variables
+   '(mini-frame-show-parameters
+     '((top . 10)
+       (width . 0.7)
+       (left . 0.5))))
 
 Users of Emacs 27 will benefits the most because of `resize-mini-frames`
 variable: mini-frame will be resized vertically to fit content.
 
 Users of Emacs 26 will need to configure frame height explicitly, e.g.:
 
-(custom-set-variables
-'(mini-frame-show-parameters
-'((top . 0)
-(width . 1.0)
-(left . 0.5)
-(height . 15))))
+  (custom-set-variables
+   '(mini-frame-show-parameters
+     '((top . 0)
+       (width . 1.0)
+       (left . 0.5)
+       (height . 15))))
 
 One can configure the list of commands that must not be shown in the child
 frame by customizing the `mini-frame-ignore-commands`.

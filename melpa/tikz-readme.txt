@@ -19,7 +19,7 @@ or use =M-x package-install RET tikz=.
 M-x tikz-mode
 #+end_example
 - Now, when you are in idle time, the pdf will be refreshed
-automatically with the content of the current buffer.
+  automatically with the content of the current buffer.
 - Every time you modify your preamble, you must turn off/on the TikZ mode.
 
 ** Screenshot
@@ -42,7 +42,7 @@ the right side, Zathura viewing the pdf.
 - Pdftex the temp file.
 - It uses Zathura to view the pdf.
 - In idle time, copy the current buffer to the temp file and compile
-it. Zathura automatically refreshes the view.
+  it. Zathura automatically refreshes the view.
 
 ** Alternatives
 - QtikZ

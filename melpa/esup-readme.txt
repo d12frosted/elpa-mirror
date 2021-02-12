@@ -13,11 +13,11 @@ Installation:
 Place esup.el and esup-child.el on your `load-path' by adding this
 to your `user-init-file', usually ~/.emacs or ~/.emacs.d/init.el
 
-(add-to-list 'load-path "~/dir/to-esup")
+  (add-to-list 'load-path "~/dir/to-esup")
 
 Load the code:
 
-(autoload 'esup "esup" "Emacs Start Up Profiler." nil)
+  (autoload 'esup "esup" "Emacs Start Up Profiler." nil)
 
 M-x `esup' to profile your Emacs startup and display the results.
 

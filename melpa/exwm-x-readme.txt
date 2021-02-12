@@ -8,11 +8,11 @@ which focus on Mouse-Control-People.
 ** Showcase
 1. Tilling windows
 
-[[./snapshots/tilling-window.png]]
+   [[./snapshots/tilling-window.png]]
 
 2. Floating windows
 
-[[./snapshots/floating-window.png]]
+   [[./snapshots/floating-window.png]]
 
 ** Feature
 *** Appconfig
@@ -63,11 +63,11 @@ Its value is a list of four elements:
 #+END_EXAMPLE
 
 1. if element >= 1, it regard as: number of pixel,
-if 0 < element < 1, it regard as: screen * element.
+   if 0 < element < 1, it regard as: screen * element.
 2. user can set x-pos and y-pos to 'center, which
-mean that put the window to the center of screen.
+   mean that put the window to the center of screen.
 3. User can set fallback value with the variable:
-`exwmx-floating-default-size-and-position'.
+   `exwmx-floating-default-size-and-position'.
 
 **** :add-prefix-keys
 Add a key to `exwm-input-prefix-keys' of application.
@@ -162,15 +162,15 @@ in minibuffer, and execute it.
 
 `exwmx-dmenu' support some command prefixes:
 1. ",command": run "command" in terminal emulator, for example,
-",top" will execute a terminal emulator, then run shell command: "top" .
+   ",top" will execute a terminal emulator, then run shell command: "top" .
 
-Note: user can change terminal emulator by variable `exwmx-terminal-emulator'.
+   Note: user can change terminal emulator by variable `exwmx-terminal-emulator'.
 
 2. ";command": run an emacs command which name is exwmx:"command".
 3. "-Num1Num2": split window top-to-bottom, for example,
-the result of command "-32" is: 3 windows on top and 2 windows in buttom.
+   the result of command "-32" is: 3 windows on top and 2 windows in buttom.
 4. "|Num1Num2": split window left-to-right, for example,
-the result of command "|32" is: 3 windows at left and 2 window at right.
+   the result of command "|32" is: 3 windows at left and 2 window at right.
 
 User can customize the prefixes of `exwmx-dmenu' with the help of
 `exwmx-dmenu-prefix-setting'.
@@ -182,8 +182,8 @@ tool but very useful, for example:
 
 1. Find a Unicode character then search it to with google.
 2. Input Chinese without install ibus, fcitx or other external input method,
-just use emacs's buildin input method, for example: chinese-pyim, chinese-py,
-a good emergency tools :-)
+   just use emacs's buildin input method, for example: chinese-pyim, chinese-py,
+   a good emergency tools :-)
 3. Write three line emacs-lisp example and send it to github.
 4. Draw an ascii table with table.el and send it to BBC.
 5. ......
@@ -318,4 +318,4 @@ like the below line *before load exwmx-loader*.
 ** Issues
 
 1. When exwmx-xfce is enabled, header-line of floating window will
-dispear when move it to another workspace.
+   dispear when move it to another workspace.

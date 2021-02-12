@@ -16,16 +16,16 @@ Predefined key bindings on the displayed image in this mode include:
 - c (dynamic-graphs-remove-cycles) change whether cycles are removed
 - 1-9 (dynamic-graphs-zoom-by-key) set maximum displayed distance from a root node
 - mouse-1 (dynamic-graphs-shift-focus-or-follow-link) shift root
-node or follow link defined in imap file - that is, in URL
-attribute of the node.  Link is followed by customizable
-function, by default `browse-url' - but
-`org-link-open-from-string' might be more useful.  See docstring
-for details.
+  node or follow link defined in imap file - that is, in URL
+  attribute of the node.  Link is followed by customizable
+  function, by default `browse-url' - but
+  `org-link-open-from-string' might be more useful.  See docstring
+  for details.
 
 Example:
 
 (dynamic-graphs-display-graph "test" nil
-(lambda ()
-(insert "digraph Gr {A->B B->C C->A A->E->F->G}"))
-'(2 remove-cycles "N {style=\"filled\",fillcolor=\"lightgreen\"}"
-node-refs boxize))
+	   (lambda ()
+	     (insert "digraph Gr {A->B B->C C->A A->E->F->G}"))
+	   '(2 remove-cycles "N {style=\"filled\",fillcolor=\"lightgreen\"}"
+                  node-refs boxize))

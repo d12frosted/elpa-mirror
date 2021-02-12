@@ -6,5 +6,5 @@ organize personal finances for Emacs users.  If you don't like this,
 try `ledger-mode'.
 
 Note: You must have hledger installed to be able to create the
-reports: overall report, daily report, balancesheet, income
-statement, etc.
+      reports: overall report, daily report, balancesheet, income
+      statement, etc.

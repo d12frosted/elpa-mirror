@@ -14,12 +14,12 @@ Detailed Description
 Minimal Setup
 -------------
 (with-eval-after-load 'company
-(add-to-list 'company-backends 'company-ledger))
+  (add-to-list 'company-backends 'company-ledger))
 
 Use-Package Setup
 -----------------
 (use-package company-ledger
-:ensure company
-:init
-(with-eval-after-load 'company
-(add-to-list 'company-backends 'company-ledger)))
+  :ensure company
+  :init
+  (with-eval-after-load 'company
+    (add-to-list 'company-backends 'company-ledger)))

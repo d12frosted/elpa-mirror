@@ -1,16 +1,16 @@
 Basic usage:
 
 (add-hook 'nxml-mode-hook
-(lambda () (and buffer-file-name
-(string-match "^modes\\.xml$\\|\\.\\(dix\\|metadix\\|t[0-9s]x\\|lrx\\)$"
-buffer-file-name)
-(dix-mode 1))))
+	  (lambda () (and buffer-file-name
+			  (string-match "^modes\\.xml$\\|\\.\\(dix\\|metadix\\|t[0-9s]x\\|lrx\\)$"
+                                     buffer-file-name)
+			  (dix-mode 1))))
 
 Unless you installed from MELPA, you'll also need
 
 (add-to-list 'load-path "/path/to/dix.el-folder")
 (autoload 'dix-mode "dix"
-"dix-mode is a minor mode for editing Apertium XML dictionary files."  t)
+  "dix-mode is a minor mode for editing Apertium XML dictionary files."  t)
 
 If you actually work on Apertium packages, you'll probaby want some
 other related Emacs extensions as well; see
@@ -45,8 +45,8 @@ elements, respectively.
 
 I like having the following set too:
 (setq nxml-sexp-element-flag t 		; treat <e>...</e> as a sexp
-nxml-completion-hook '(rng-complete t) ; C-RET completes based on DTD
-rng-nxml-auto-validate-flag nil)       ; 8MB of XML takes a while
+      nxml-completion-hook '(rng-complete t) ; C-RET completes based on DTD
+      rng-nxml-auto-validate-flag nil)       ; 8MB of XML takes a while
 You can always turn on validation again with C-c C-v.  Validation
 is necessary for the C-RET completion, which is really handy in
 transfer files.
@@ -59,29 +59,29 @@ column numbers with M-x customize-group RET dix.
 
 Plan / long term TODO:
 - Yank into <i/l/r> or pardef n="" should replace spaces with either
-a <b/> or a _
+  a <b/> or a _
 - Functions shouldn't modify the kill-ring.
 - Functions should be agnostic to formatting (ie. only use nxml
-movement functions, never forward-line).
+  movement functions, never forward-line).
 - Real indentation function for one-entry-one-line format.
 - `dix-LR-restriction-copy' should work on a region of <e>'s.
 - `dix-expand-lemma-at-point' (either using `dix-goto-pardef' or
-`lt-expand')
+  `lt-expand')
 - Some sort of interactive view of the translation process . When
-looking at a word in monodix, you should easily get confirmation on
-whether (and what) it is in the bidix or other monodix (possibly
-just using `apertium-transfer' and `lt-proc' on the expanded
-paradigm).
+  looking at a word in monodix, you should easily get confirmation on
+  whether (and what) it is in the bidix or other monodix (possibly
+  just using `apertium-transfer' and `lt-proc' on the expanded
+  paradigm).
 - Function for creating a prelimenary list of bidix entries from
-monodix entries, and preferably from two such lists which
-we "paste" side-by-side.
+  monodix entries, and preferably from two such lists which
+  we "paste" side-by-side.
 - `dix-LR-restriction-copy' (and the other copy functions) could
-add a="author"
+  add a="author"
 - `dix-dixfiles' could auto-add files from Makefile?
 - `dix-sort-e-by-r' doesn't work if there's an <re> element after
-the <r>; and doesn't sort correctly by <l>-element, possibly to
-do with spaces
+  the <r>; and doesn't sort correctly by <l>-element, possibly to
+  do with spaces
 - `dix-reverse' should be able to reverse on a regexp match, so
-that we can do `dix-suffix-sort' by eg. <l>-elements.
+  that we can do `dix-suffix-sort' by eg. <l>-elements.
 - Investigate if Emacs built-in `tildify-mode' should be used to
-implement `dix-space'.
+  implement `dix-space'.

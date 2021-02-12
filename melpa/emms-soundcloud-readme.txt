@@ -3,6 +3,6 @@ to the relevant EMMS source commands.
 
 Example usage:
 
-M-x emms-play-soundcloud-set RET
-http://soundcloud.com/devolverdigital/sets/hotline-miami-official
-RET
+   M-x emms-play-soundcloud-set RET
+   http://soundcloud.com/devolverdigital/sets/hotline-miami-official
+   RET

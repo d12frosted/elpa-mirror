@@ -12,7 +12,7 @@ Features:
 * Auto-remembering/-forgetting what file belongs to a project.
 * Open/close project files with 1 command.
 * Doesn't touch your Emacs configs & doesn't write anywhere except 1
-special file in project directory.
+  special file in project directory.
 * Detects file moving withing project sub-directories & outside of
-project directory.
+  project directory.
 * Menu for quick projects switching.

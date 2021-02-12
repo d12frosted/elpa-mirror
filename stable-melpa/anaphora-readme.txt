@@ -1,18 +1,18 @@
 
 Quickstart
 
-(require 'anaphora)
+    (require 'anaphora)
 
-(awhen (big-long-calculation)
-(foo it)      ; `it' is provided as
-(bar it))     ; a temporary variable
+    (awhen (big-long-calculation)
+      (foo it)      ; `it' is provided as
+      (bar it))     ; a temporary variable
 
-;; anonymous function to compute factorial using `self'
-(alambda (x) (if (= x 0) 1 (* x (self (1- x)))))
+    ;; anonymous function to compute factorial using `self'
+    (alambda (x) (if (= x 0) 1 (* x (self (1- x)))))
 
-;; to fontify `it' and `self'
-(with-eval-after-load "lisp-mode"
-(anaphora-install-font-lock-keywords))
+    ;; to fontify `it' and `self'
+    (with-eval-after-load "lisp-mode"
+      (anaphora-install-font-lock-keywords))
 
 Explanation
 
@@ -24,34 +24,34 @@ recursion for anonymous functions.
 To use anaphora, place the anaphora.el library somewhere
 Emacs can find it, and add the following to your ~/.emacs file:
 
-(require 'anaphora)
+    (require 'anaphora)
 
 The following macros are made available
 
-`aand'
-`ablock'
-`acase'
-`acond'
-`aecase'
-`aetypecase'
-`aif'
-`alambda'
-`alet'
-`aprog1'
-`aprog2'
-`atypecase'
-`awhen'
-`awhile'
-`a+'
-`a-'
-`a*'
-`a/'
+    `aand'
+    `ablock'
+    `acase'
+    `acond'
+    `aecase'
+    `aetypecase'
+    `aif'
+    `alambda'
+    `alet'
+    `aprog1'
+    `aprog2'
+    `atypecase'
+    `awhen'
+    `awhile'
+    `a+'
+    `a-'
+    `a*'
+    `a/'
 
 See Also
 
-M-x customize-group RET anaphora RET
-http://en.wikipedia.org/wiki/On_Lisp
-http://en.wikipedia.org/wiki/Anaphoric_macro
+    M-x customize-group RET anaphora RET
+    http://en.wikipedia.org/wiki/On_Lisp
+    http://en.wikipedia.org/wiki/Anaphoric_macro
 
 Notes
 
@@ -60,18 +60,18 @@ Graham.
 
 Compatibility and Requirements
 
-GNU Emacs version 26.1           : yes
-GNU Emacs version 25.x           : yes
-GNU Emacs version 24.x           : yes
-GNU Emacs version 23.x           : yes
-GNU Emacs version 22.x           : yes
-GNU Emacs version 21.x and lower : unknown
+    GNU Emacs version 26.1           : yes
+    GNU Emacs version 25.x           : yes
+    GNU Emacs version 24.x           : yes
+    GNU Emacs version 23.x           : yes
+    GNU Emacs version 22.x           : yes
+    GNU Emacs version 21.x and lower : unknown
 
 Bugs
 
 TODO
 
-better face for it and self
+    better face for it and self
 
 ; License
 

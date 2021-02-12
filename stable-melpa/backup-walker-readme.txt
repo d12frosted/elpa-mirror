@@ -7,18 +7,18 @@ This package helps me traverse those backups if I'm looking for something.
 
 The typical workflow is:
 
-1) I'm in a buffer and realize I need to check some backups.
+  1) I'm in a buffer and realize I need to check some backups.
 
-M-x backup-walker-start
+       M-x backup-walker-start
 
-2) I press <p> to go backwards in history until I see something
-interesting.  Then I press <enter> to bring it up.  OOPs this isn't
-it, I go back to the backup-walker window and find the right file.
+  2) I press <p> to go backwards in history until I see something
+     interesting.  Then I press <enter> to bring it up.  OOPs this isn't
+     it, I go back to the backup-walker window and find the right file.
 
-3) I get what I need from the backup, go back to backup-walker, and press
-<q> and kill all open backups.
+  3) I get what I need from the backup, go back to backup-walker, and press
+     <q> and kill all open backups.
 
-4) the end.
+  4) the end.
 
 Additionally, note that all the diff-mode facilities are available in the
 `backup-walker' buffer.

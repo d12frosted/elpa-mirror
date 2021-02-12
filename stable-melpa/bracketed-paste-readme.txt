@@ -18,5 +18,5 @@ articles.
 
 Please put the following to your ~/.emacs file then restart Emacs:
 
-(require 'bracketed-paste)
-(bracketed-paste-enable)
+  (require 'bracketed-paste)
+  (bracketed-paste-enable)

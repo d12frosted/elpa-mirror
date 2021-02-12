@@ -14,35 +14,35 @@ N is the optional parameter of `eacl-complete-line'.
 
 Modify `grep-find-ignored-directories' and `grep-find-ignored-files'
 to setup directories and files grep should ignore:
-(with-eval-after-load 'grep
-(dolist (v '("node_modules"
-"bower_components"
-".sass_cache"
-".cache"
-".npm"))
-(add-to-list 'grep-find-ignored-directories v))
-(dolist (v '("*.min.js"
-"*.bundle.js"
-"*.min.css"
-"*.json"
-"*.log"))
-(add-to-list 'grep-find-ignored-files v)))
+  (with-eval-after-load 'grep
+     (dolist (v '("node_modules"
+                  "bower_components"
+                  ".sass_cache"
+                  ".cache"
+                  ".npm"))
+       (add-to-list 'grep-find-ignored-directories v))
+     (dolist (v '("*.min.js"
+                  "*.bundle.js"
+                  "*.min.css"
+                  "*.json"
+                  "*.log"))
+       (add-to-list 'grep-find-ignored-files v)))
 
 Or you can setup above ignore options in ".dir-locals.el".
 The content of ".dir-locals.el":
-((nil . ((eval . (progn
-(dolist (v '("node_modules"
-"bower_components"
-".sass_cache"
-".cache"
-".npm"))
-(add-to-list 'grep-find-ignored-directories v))
-(dolist (v '("*.min.js"
-"*.bundle.js"
-"*.min.css"
-"*.json"
-"*.log"))
-(add-to-list 'grep-find-ignored-files v)))))))
+  ((nil . ((eval . (progn
+                     (dolist (v '("node_modules"
+                                  "bower_components"
+                                  ".sass_cache"
+                                  ".cache"
+                                  ".npm"))
+                       (add-to-list 'grep-find-ignored-directories v))
+                     (dolist (v '("*.min.js"
+                                  "*.bundle.js"
+                                  "*.min.css"
+                                  "*.json"
+                                  "*.log"))
+                       (add-to-list 'grep-find-ignored-files v)))))))
 
 "git grep" is automatically used for grepping in git repository.
 Please note "git grep" does NOT use `grep-find-ignored-directories' OR

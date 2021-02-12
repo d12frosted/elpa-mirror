@@ -16,20 +16,20 @@ Or Use [use-package](https://github.com/jwiegley/use-package) with
 
 ``` emacs-lisp
 (use-package spdx
-:ensure t
-:straight (:host github :repo "condy0919/spdx.el")
-:bind (:map prog-mode-map
-("C-c i l" . spdx-insert-spdx))
-:custom
-(spdx-copyright-holder 'auto)
-(spdx-project-detection 'auto))
+  :ensure t
+  :straight (:host github :repo "condy0919/spdx.el")
+  :bind (:map prog-mode-map
+         ("C-c i l" . spdx-insert-spdx))
+  :custom
+  (spdx-copyright-holder 'auto)
+  (spdx-project-detection 'auto))
 ```
 
 Then you can press `C-c i l` to trigger `spdx-insert-spdx`
 
 Or manual run:
 
-M-x spdx-insert-spdx
+    M-x spdx-insert-spdx
 
 Then, `spdx.el` will ask you to select a license. It's done by
 `completing-read'.

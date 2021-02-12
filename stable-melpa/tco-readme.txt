@@ -6,16 +6,16 @@ function body in a loop that repeatedly evaluates the thunk.  Roughly
 speaking, a function `foo':
 
 (defun-tco foo (...)
-(...)
-(foo (...)))
+  (...)
+  (foo (...)))
 
 Is rewritten as follows:
 
 (defun foo (...)
-(cl-flet (foo-thunk (...)
-(...)
-(lambda () (foo-thunk (...))))
-(let ((result-sym (apply foo-thunk (...))))
-(while (is-trampoline-result-p result-sym)
-(setq result-sym (funcall (unwrap result-sym))))
-result-sym)))
+   (cl-flet (foo-thunk (...)
+               (...)
+               (lambda () (foo-thunk (...))))
+     (let ((result-sym (apply foo-thunk (...))))
+       (while (is-trampoline-result-p result-sym)
+         (setq result-sym (funcall (unwrap result-sym))))
+       result-sym)))

@@ -1,7 +1,7 @@
 
-Framework based on the initial structure found within "Ample Theme"
-(originally created by Jordon Biondo)
-URL: https://github.com/jordonbiondo/ample-theme
+ Framework based on the initial structure found within "Ample Theme"
+ (originally created by Jordon Biondo)
+ URL: https://github.com/jordonbiondo/ample-theme
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

@@ -53,17 +53,17 @@ look like your org files.  It is called «*Weather Forecast*».
 
 (require 'forecast)
 (setq calendar-latitude 41.168602
-calendar-longitude 29.047024
-calendar-location-name "İstanbul, Türkiye"
-forecast-api-key "<deduced>")
+      calendar-longitude 29.047024
+      calendar-location-name "İstanbul, Türkiye"
+      forecast-api-key "<deduced>")
 
 Or, for the privacy of the API key:
 
 (require 'forecast)
 (setq calendar-latitude 41.168602
-calendar-longitude 29.047024
-calendar-location-name "İstanbul, Türkiye"
-forecast-city "İstanbul")
+      calendar-longitude 29.047024
+      calendar-location-name "İstanbul, Türkiye"
+      forecast-city "İstanbul")
 
 (load (locate-user-emacs-file "forecast-api-key.el"))
 

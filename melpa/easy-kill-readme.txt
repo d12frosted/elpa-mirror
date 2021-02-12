@@ -9,4 +9,4 @@ immediately. It can be a handy replacement for `mark-sexp' allowing
 To use: (global-set-key [remap mark-sexp] 'easy-mark)
 
 Please send bug reports or feature requests to:
-https://github.com/leoliu/easy-kill/issues
+     https://github.com/leoliu/easy-kill/issues

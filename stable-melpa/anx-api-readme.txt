@@ -18,13 +18,13 @@ conversion in its own buffer is three-fold:
 * Visibility: you can always inspect and change data
 
 * Convenience: leverage the existing Emacs UI paradigms (buffers,
-keychords, &c.)
+  keychords, &c.)
 
 This package uses global keybindings (prefixed with 'C-x C-a') for
 convenience and speed of access.  However, they aren't turned on by
 default. To turn them on, put the following in your .emacs:
 
-(setq anx-use-global-keybindings t)
+   (setq anx-use-global-keybindings t)
 
 Getting Started:
 
@@ -84,16 +84,16 @@ C-x C-a d                     'anx-browse-api-docs
 Known Issues:
 
 * This package assumes all API responses are JSON that needs to be
-converted to Lisp.  This doesn't work for things like reporting.
+  converted to Lisp.  This doesn't work for things like reporting.
 
 * There is no convenient reporting workflow yet.  You have to
-resort to curl/wget or `anx-raw-get' ('C-x C-a g').
+  resort to curl/wget or `anx-raw-get' ('C-x C-a g').
 
 * The URL retrieval functionality is synchronous and blocks Emacs.
-This hasn't been an issue for me yet because the API servers are
-fast.  However, it's not the right way to do things and needs
-rewriting.
+  This hasn't been an issue for me yet because the API servers are
+  fast.  However, it's not the right way to do things and needs
+  rewriting.
 
 * There are too many others to list; I can't remember them all
-right now.  Feel free to open an issue at Github:
-https://github.com/rmloveland/emacs-appnexus-api
+  right now.  Feel free to open an issue at Github:
+  https://github.com/rmloveland/emacs-appnexus-api

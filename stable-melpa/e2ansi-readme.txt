@@ -23,13 +23,13 @@ Syntax:
 The `e2ansi-cat' command line tool is written in Emacs Lisp. To
 start it, use:
 
-emacs --batch [...Emacs options...] -l bin/e2ansi-cat [...options...]
+    emacs --batch [...Emacs options...] -l bin/e2ansi-cat [...options...]
 
 Alternatively, on UNIX-like operating systems the `e2ansi-cat' can
 be executed directly, assuming that the `bin' directory is in the
 load path. This assumes that Emacs is installed as `/usr/bin/emacs':
 
-e2ansi-cat [...options...]
+    e2ansi-cat [...options...]
 
 Note, due to how Emacs parses options, some options passed to
 `e2ansi-cat' is parsed by Emacs. Most notably, passing the option
@@ -40,8 +40,8 @@ Command line options:
 * `--background-mode' -- Specify `light' or `dark' background mode.
 
 * `--colors' -- Number of colors, or `rgb24' for full 24 bit
-colors. This is both used when mapping faces to actual colors and
-to decide the kind of ANSI sequences that is used.
+  colors. This is both used when mapping faces to actual colors and
+  to decide the kind of ANSI sequences that is used.
 
 * `--color-class' -- Specify `color', `grayscale' or `mono'.
 
@@ -57,9 +57,9 @@ generate a syntax highlighted version. This is enabled by setting
 the following environment variables, for example, to (using bash
 syntax):
 
-export "LESSOPEN=|emacs --batch -l ~/.emacs -l bin/e2ansi-cat %s"
-export "LESS=-R"
-export "MORE=-R"
+    export "LESSOPEN=|emacs --batch -l ~/.emacs -l bin/e2ansi-cat %s"
+    export "LESS=-R"
+    export "MORE=-R"
 
 The `LESSOPEN' environment variable is used by `less' to specify an
 input preprocessor. When using `e2ansi', the first character should
@@ -75,13 +75,13 @@ location of the `e2ansi' package to the load path.
 Modern versions of `less' can also use the input preprocessor when
 used in a pipe, for example:
 
-svn diff | less
+    svn diff | less
 
 For this, the `LESSOPEN' environment variable must start with `|-'.
 In this case, the file name `-' is passed to the input
 preprocessor, which is expected to read from standard input.
 
-export "LESSOPEN=|-emacs --batch -l ~/.emacs -l bin/e2ansi-cat %s"
+    export "LESSOPEN=|-emacs --batch -l ~/.emacs -l bin/e2ansi-cat %s"
 
 Note: If your version of `less' is too old, using `|-' typically
 yields error like "/bin/bash: -/: invalid option".
@@ -104,12 +104,12 @@ but not the user init file.
 If you want to load your personal init file, you can load it using
 -l command line option, for example:
 
-emacs -l ~/.emacs -l bin/e2ansi-cat file ...
+    emacs -l ~/.emacs -l bin/e2ansi-cat file ...
 
 To avoid loading the system init file, you can specify the -Q
 command line option:
 
-emacs -Q -l ~/.emacs -l bin/e2ansi-cat file ...
+    emacs -Q -l ~/.emacs -l bin/e2ansi-cat file ...
 
 Adapting your init file to batch mode:
 
@@ -119,8 +119,8 @@ mode.
 
 To exclude something when in batch mode, you can use:
 
-(unless noninteractive
-.. original code goes here ... )
+    (unless noninteractive
+      .. original code goes here ... )
 
 Silencing messages:
 
@@ -131,7 +131,7 @@ are loaded.
 On UNIX-like operating systems, the standard error stream can be
 redirected to /dev/null, for example:
 
-emacs --batch -l ~/.emacs -l bin/e2ansi-cat 2> /dev/null
+    emacs --batch -l ~/.emacs -l bin/e2ansi-cat 2> /dev/null
 
 Alternatively, the file `e2ansi-silent' can be loaded. This file
 has the advantages that the Usage information of `e2ansi-cat' is
@@ -139,7 +139,7 @@ printed (when started without arguments) and that it works on all
 operating systems. (If you load it before your init file, you might
 need to specify the full path.)
 
-emacs --batch -l e2ansi-silent -l ~/.emacs -l bin/e2ansi-cat ...
+    emacs --batch -l e2ansi-silent -l ~/.emacs -l bin/e2ansi-cat ...
 
 Silencing messages in `site-start.el':
 
@@ -148,7 +148,7 @@ file specified on the command line. To silence messages emitted by
 this file, you can suppress loading it using -Q, load
 `e2ansi-silent' and explicitly load the site-start file:
 
-emacs --batch -Q -l e2ansi-silent -l ../site-lisp/site-start -l ...
+    emacs --batch -Q -l e2ansi-silent -l ../site-lisp/site-start -l ...
 
 Note: When -Q is used, the `site-lisp' directory is not included in
 the load path, the `../site-lisp' part compensate for this.
@@ -156,22 +156,22 @@ the load path, the `../site-lisp' part compensate for this.
 Emacs modules:
 
 * `e2ansi.el' -- Render a syntax highlighted buffer using ANSI
-escape sequences. This can be used both in normal interactive
-mode and in batch mode.
+  escape sequences. This can be used both in normal interactive
+  mode and in batch mode.
 
 * `e2ansi-magic.el' -- Set up `magic-mode-alist' to recognize file
-formats based on the content of files. This is useful when using
-`less' in pipes where Emacs can't use the file name extension to
-select a suitable major mode.
+  formats based on the content of files. This is useful when using
+  `less' in pipes where Emacs can't use the file name extension to
+  select a suitable major mode.
 
 * `e2ansi-silent.el' -- Load this in batch mode to silence some
-messages from init files.
+  messages from init files.
 
 * `bin/e2ansi-cat' -- The command line tool for converting files in
-batch mode.
+  batch mode.
 
 * `bin/e2ansi-info' -- Print various ANSI-related information to
-help you trim your ANSI environment.
+  help you trim your ANSI environment.
 
 Background:
 
@@ -190,21 +190,21 @@ Emacs provides state-of-the-art syntax highlighting.
 Why use Emacs to power syntax highlighting in the terminal:
 
 * Emacs has support for a vast range of programming languages and
-other structured text formats.
+  other structured text formats.
 
 * Emacs is fast and accurate -- it is designed for interactive use,
-and provides advanced support for ensuring that a source buffer
-is parsed correctly.
+  and provides advanced support for ensuring that a source buffer
+  is parsed correctly.
 
 * Emacs supports color themes. If you don't like the ones provided,
-and can't find one on internet, you can easily write your own.
+  and can't find one on internet, you can easily write your own.
 
 * To add syntax highlighting support for other formats can easily be
-done by providing a standard Emacs major mode, where the syntax
-highlighting is provided by Font Lock keywords. You can use
-`font-lock-studio' to debug those keywords, it allows you single
-step match by match and it visualizes matches using a palette of
-background colors.
+  done by providing a standard Emacs major mode, where the syntax
+  highlighting is provided by Font Lock keywords. You can use
+  `font-lock-studio' to debug those keywords, it allows you single
+  step match by match and it visualizes matches using a palette of
+  background colors.
 
 ANSI sequences:
 
@@ -226,11 +226,11 @@ Four modes are supported:
 * 8 -- The eight basic ANSI colors are supported.
 
 * 16 -- The eight basic colors, plus 8 "bright" colors. These are
-represented as "bold" versions of the above.
+  represented as "bold" versions of the above.
 
 * 256 -- Some modern terminal programs support a larger palette.
-This consist of the 16 basic colors, a 6*6*6 color cube plus a
-grayscale.
+  This consist of the 16 basic colors, a 6*6*6 color cube plus a
+  grayscale.
 
 * 24 bit -- Support for 256*256*256 colors.
 
@@ -334,23 +334,23 @@ More command line tools:
 More command line tools could make life simpler. For example:
 
 * `e2ansi-exec' -- Run another command line tools and convert all
-arguments (that looks like files) to the corresponding ansi
-format. (To avoid converting files that should not be converted,
-this tool must include knowledge regarding common commands.) One
-problem with this tool is the bizarre way Emacs treats command
-line options -- hence, the entire tool, or parts of it, must be
-written in another script language like Ruby.q
+  arguments (that looks like files) to the corresponding ansi
+  format. (To avoid converting files that should not be converted,
+  this tool must include knowledge regarding common commands.) One
+  problem with this tool is the bizarre way Emacs treats command
+  line options -- hence, the entire tool, or parts of it, must be
+  written in another script language like Ruby.q
 
 * `e2ansi-tmp' -- Render a syntax highlighted version of a file as
-a temporary file and print the file name. This way a user could
-use the shell backquote syntax to feed syntax highlighted
-versions of a file to a third tool, for example:
+  a temporary file and print the file name. This way a user could
+  use the shell backquote syntax to feed syntax highlighted
+  versions of a file to a third tool, for example:
 
-atool `e2ansi-tmp afile.c`
+        atool `e2ansi-tmp afile.c`
 
-A technical problem with this tool is that it leaves the
-temporary file behind. Hence, some kind of garbage collection
-mechanism must be put in place.
+  A technical problem with this tool is that it leaves the
+  temporary file behind. Hence, some kind of garbage collection
+  mechanism must be put in place.
 
 Generalization:
 
@@ -361,28 +361,28 @@ to break out the generic parts to a separate package.
 Faster response time:
 
 * By using a resident Emacs process, response time could be greatly
-reduced. Today, a bare-bone Emacs start fast, however, if you use
-a heavy init file (like I do) the start-up time goes up
-noticeably.
+  reduced. Today, a bare-bone Emacs start fast, however, if you use
+  a heavy init file (like I do) the start-up time goes up
+  noticeably.
 
 * Incremental syntax highlighting. Today, the entire buffer is
-syntax highlighted at once, before it is converted to ANSI. By
-only run font-lock on parts of the buffer before printing it, a
-receiving application like `less' could start faster.
+  syntax highlighted at once, before it is converted to ANSI. By
+  only run font-lock on parts of the buffer before printing it, a
+  receiving application like `less' could start faster.
 
 Miscellaneous:
 
 Various things.
 
 * Check how things look when using a dark background, maybe
-something would need to be added to the overrides list.
+  something would need to be added to the overrides list.
 
 * Don't use the "brightxxx" color names, they are not used by Emacs
-and it's only confusing.
+  and it's only confusing.
 
 * Add unit tests for individual parts and full source file tests
-where the entire output is compared against a known ANSI
-representation, as done in my `faceup' package.
+  where the entire output is compared against a known ANSI
+  representation, as done in my `faceup' package.
 
 * Describe Emacs font specification selection process.
 
@@ -391,30 +391,30 @@ representation, as done in my `faceup' package.
 * Customization support.
 
 * Optimize ANSI sequences. Today, whenever there is a change, a
-reset is emitted, plus codes to set all properties. However,
-sometimes it would be shorter to simple, say, add underline, and
-without touching the other properties.
+  reset is emitted, plus codes to set all properties. However,
+  sometimes it would be shorter to simple, say, add underline, and
+  without touching the other properties.
 
 * Security issues: Don't allow file local variables, or anything
-else, allow arbitrary elisp code to be executed when a file is
-viewed.
+  else, allow arbitrary elisp code to be executed when a file is
+  viewed.
 
 * Use floating point numbers when scoring, rather than scaling
-down.
+  down.
 
 * Promote some of the "list" commands from the "test" package.
 
 * Inhibit rendering ANSI sequences when running `less' on a file
-already containing ANSI sequences.
+  already containing ANSI sequences.
 
 * Add `--force' to force e2ansi to render a file using ANSI
-sequences, even when such sequences are found in the file.
+  sequences, even when such sequences are found in the file.
 
 * Mention `||-' in the documentation.
 
 * Investigate why backgrounds spanning mutiple lines misbehaves in
-Terminal.app (and other terminals). Maybe always reset the
-background at the end of each line?
+  Terminal.app (and other terminals). Maybe always reset the
+  background at the end of each line?
 
 Acknowledgment:
 

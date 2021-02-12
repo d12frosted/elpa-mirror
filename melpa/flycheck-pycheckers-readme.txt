@@ -27,13 +27,13 @@ Quick start:
 
 Installation via MELPA is easiest:
 
-M-x install-package flycheck-pycheckers
+    M-x install-package flycheck-pycheckers
 
 Then, in your `init.el':
 
 (global-flycheck-mode 1)
 (with-eval-after-load 'flycheck
-(add-hook 'flycheck-mode-hook #'flycheck-pycheckers-setup))
+  (add-hook 'flycheck-mode-hook #'flycheck-pycheckers-setup))
 
 Start editing a Python file!
 
@@ -51,13 +51,13 @@ installed somewhere on your PATH where Emacs can find them.
 Alternatives:
 
 * Other Flycheck-based checkers -
-http://www.flycheck.org/en/latest/languages.html#python.  Some are
-officially part of the Flycheck package, and some (like this one) are
-external plugins.
+  http://www.flycheck.org/en/latest/languages.html#python.  Some are
+  officially part of the Flycheck package, and some (like this one) are
+  external plugins.
 
 * Flymake - https://www.emacswiki.org/emacs/FlyMake.  Flymake is an older
-syntax-checking minor mode for Emacs, and is generally less supported and
-featureful than Flycheck.
+  syntax-checking minor mode for Emacs, and is generally less supported and
+  featureful than Flycheck.
 
 Configuration options:
 
@@ -71,21 +71,21 @@ include:
 * `flycheck-pycheckers-args' - general arguments to pass to `pycheckers.py'.
 
 * `flycheck-pycheckers-checkers' - the set of checkers to run (pylint, pep8,
-mypy, etc.).  Can be set in `.pycheckers' files with the variable
-`checkers' as a comma-separated list of checker names.
+   mypy, etc.).  Can be set in `.pycheckers' files with the variable
+   `checkers' as a comma-separated list of checker names.
 
 * `flycheck-pycheckers-ignore-codes' - a set of error codes to universally
-ignore.  These can be set more granularly (e.g. per-project) using the
-`.pycheckers' file described below.
+  ignore.  These can be set more granularly (e.g. per-project) using the
+  `.pycheckers' file described below.
 
 * `flycheck-pycheckers-max-line-length' - the default maximum line
-length.  Can be overridden via `.pycheckers' file.
+  length.  Can be overridden via `.pycheckers' file.
 
 * `flycheck-pycheckers-multi-thread' - whether to run each checker
-simultaneously in its own thread, for performance.
+  simultaneously in its own thread, for performance.
 
 * `flycheck-pycheckers-venv-root' - a directory containing Python virtual
-environments, so that imports may be found.
+  environments, so that imports may be found.
 
 Additionally, a `.pycheckers' file may be created in a directory to control
 options for every file under this directory.  These files may be logically
@@ -94,9 +94,9 @@ overridden in a specific subdirectory.
 
 Example .pycheckers file:
 
-[DEFAULT]
-max_line_length = 120
-mypy_config_file = ci/mypy.ini
+    [DEFAULT]
+    max_line_length = 120
+    mypy_config_file = ci/mypy.ini
 
 Variables that can be set in the configuration file include the following.
 Note that these are implemented as modifying the values received by
@@ -104,33 +104,33 @@ Note that these are implemented as modifying the values received by
 --help` is a good way to find other options that may be specified.
 
 * `max-line-length' - the maximum allowable line-length.  This is a good
-option to place in a project-specific directory if you have a personal
-line length preference set by default via
-`flycheck-pycheckers-max-line-length', but also work on projects that
-follow different standards.
+  option to place in a project-specific directory if you have a personal
+  line length preference set by default via
+  `flycheck-pycheckers-max-line-length', but also work on projects that
+  follow different standards.
 
 * `checkers' - a comma-separated list of checkers to be run for files under
-this directory.  If, for instance, pep8 should not be run on a directory of
-auto-generated code, this option can accomplish that.
+  this directory.  If, for instance, pep8 should not be run on a directory of
+  auto-generated code, this option can accomplish that.
 
 * `ignore_codes' - a comma-separated list of error/warning codes to ignore
-for files under this directory.  Replaces the current set of codes
-completely.
+  for files under this directory.  Replaces the current set of codes
+  completely.
 
 * `merge_configs' - whether to keep traversing upwards when parsing
-`.pycheckers' files, or stop at this one.
+  `.pycheckers' files, or stop at this one.
 
 * `extra_ignore_codes' - a comma-separated list of error/warning codes to
-add to the current set of ignored errors.  This can be used to make
-certain directories conform to different levels of syntax enforcement.
-For example, a directory containing auto-generated code may omit various
-warnings about indentation or code style.
+  add to the current set of ignored errors.  This can be used to make
+  certain directories conform to different levels of syntax enforcement.
+  For example, a directory containing auto-generated code may omit various
+  warnings about indentation or code style.
 
 * `pylint_rcfile' - the location of a project-specific configuration file
-for pylint
+  for pylint
 
 * `mypy_config_file' - the location of a project-specific configuration file
-for mypy
+  for mypy
 
 * `flake8_config_file' - the location of a project-specific configuration file
-for flake8
+  for flake8

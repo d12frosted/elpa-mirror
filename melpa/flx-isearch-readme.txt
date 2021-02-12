@@ -18,5 +18,5 @@ Usage:
 By default, `flx-isearch` does not bind any keys. `package.el' will
 automatically setup the appropriate autoloads, and you can then do this:
 
-(global-set-key (kbd "C-M-s") #'flx-isearch-forward)
-(global-set-key (kbd "C-M-r") #'flx-isearch-backward)
+    (global-set-key (kbd "C-M-s") #'flx-isearch-forward)
+    (global-set-key (kbd "C-M-r") #'flx-isearch-backward)

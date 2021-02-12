@@ -5,8 +5,8 @@ set below configuration to your .emacs
 You can change ag's option by pushing C-o from below variable on minibuffer
 See ag --help about available options
 (setq helm-ag-r-option-list
-'("-S -U --hidden"
-"-S -U -l"))
+      '("-S -U --hidden"
+        "-S -U -l"))
 To use helm-ag-r-google-contacts-list command, specify your google
 mail address to helm-ag-r-google-contacts-user variable.(If you
 specified gmail-address to user-mail-address, then you don't need

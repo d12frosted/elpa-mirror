@@ -44,9 +44,9 @@ Sidebar
 You'll mostly interact with the project structure via the sidebar.
 
 -  binder-toggle-sidebar (C-c ') toggles the visibility of the binder
-sidebar
+   sidebar
 -  binder-reveal-in-sidebar (C-c ;) finds the current file in the
-sidebar
+   sidebar
 
 Each project item is a file reference relative to the project directory.
 
@@ -56,14 +56,14 @@ will visit the corresponding file.
 
 Each item in the sidebar displays the following information:
 
-1. x -- denotes that this item is included when concatenating the
-project (see **Concatenating** below)
-2. * -- denotes that this item has some notes (see **Notes** below),
-or...
-3. ? -- denotes that the item's corresponding file cannot be found
-4. name -- either the file relative to the project directory or an
-arbitrary display name
-5. #tag1 #tag2 ... -- arbitrary item tags (see **Tags** below)
+ 1. x -- denotes that this item is included when concatenating the
+    project (see **Concatenating** below)
+ 2. * -- denotes that this item has some notes (see **Notes** below),
+    or...
+ 3. ? -- denotes that the item's corresponding file cannot be found
+ 4. name -- either the file relative to the project directory or an
+    arbitrary display name
+ 5. #tag1 #tag2 ... -- arbitrary item tags (see **Tags** below)
 
 An item's display name can be changed with binder-sidebar-rename (r).
 If a file cannot be found, relocate with binder-sidebar-relocate (R).
@@ -188,7 +188,7 @@ Installation
 The latest stable release of Binder is available via [MELPA-stable][1].
 First, add MELPA-stable to your package archives:
 
-M-x customize-option RET package-archives RET
+    M-x customize-option RET package-archives RET
 
 Insert an entry named melpa-stable with URL:
 https://stable.melpa.org/packages/
@@ -196,7 +196,7 @@ https://stable.melpa.org/packages/
 You can then find the latest stable version of binder in the list
 returned by:
 
-M-x list-packages RET
+    M-x list-packages RET
 
 If you prefer the latest but perhaps unstable version, do the above
 using [MELPA][2].
@@ -208,13 +208,13 @@ Advanced Installation
 Download the latest tagged release, move this file into your load-path
 and add to your init.el file:
 
-(require 'binder)
-(require 'binder-tutorial)  ;; optional
+    (require 'binder)
+    (require 'binder-tutorial)  ;; optional
 
 If you wish to contribute to or alter Binder's code, clone the
 repository into your load-path and require as above:
 
-git clone https://github.com/rnkn/binder.git
+    git clone https://github.com/rnkn/binder.git
 
 
 Bugs and Feature Requests
@@ -223,7 +223,7 @@ Bugs and Feature Requests
 Send me an email (address in the package header). For bugs, please
 ensure you can reproduce with:
 
-$ emacs -Q -l binder.el
+    $ emacs -Q -l binder.el
 
 Known issues are tracked with FIXME comments in the source.
 

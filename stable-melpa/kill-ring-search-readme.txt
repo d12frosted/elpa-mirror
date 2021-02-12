@@ -1,8 +1,8 @@
 
 To install, add the following to your .emacs file:
 (autoload 'kill-ring-search "kill-ring-search"
-"Search the kill ring in the minibuffer."
-(interactive))
+ "Search the kill ring in the minibuffer."
+ (interactive))
 (global-set-key "\M-\C-y" 'kill-ring-search)
 
 Just call kill-ring-search and enter your search.

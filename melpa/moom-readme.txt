@@ -5,11 +5,11 @@ frame geometry so that the frame width could be maintained at 80 as default.
 Now make your dominant hand FREE from your mouse by Moom.
 
 Install:
-- Get moom.el and moom-font.el from MELPA or GitHub.
+ - Get moom.el and moom-font.el from MELPA or GitHub.
 
 Setup:
-- After installing, activate Moom by (moom-mode 1) in your init.el.
+ - After installing, activate Moom by (moom-mode 1) in your init.el.
 
 Keybindings:
-- The moom-mode-map is available.
-- To see more details and examples, go https://github.com/takaxp/moom.
+ - The moom-mode-map is available.
+ - To see more details and examples, go https://github.com/takaxp/moom.

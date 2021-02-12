@@ -24,24 +24,24 @@ surprisingly difficult to find that balance.  My approach is as
 follows:
 
 1. Take the SIL english word list and intersect it with the New
-Oxford English Dictionary which comes with mac osx.  I then
-removed the three letter words which were obviously acronyms,
-abbreviations for longer words, or racial slurs.  This is the
-"expert" word list and contains about 85,000 words.
-(source: http://www-01.sil.org/linguistics/wordlists/english/)
+   Oxford English Dictionary which comes with mac osx.  I then
+   removed the three letter words which were obviously acronyms,
+   abbreviations for longer words, or racial slurs.  This is the
+   "expert" word list and contains about 85,000 words.
+   (source: http://www-01.sil.org/linguistics/wordlists/english/)
 
 2. Take the "8" word list from
-http://www.keithv.com/software/wlist/ and intersect it with the
-"expert" list.  This becomes the "hard" list and contains about
-47,000 words.
+   http://www.keithv.com/software/wlist/ and intersect it with the
+   "expert" list.  This becomes the "hard" list and contains about
+   47,000 words.
 
 3. Take the "9" word list from the above link and intersect with
-with the "expert" list.  This is the "medium" list and contains
-about 36,000 words.
+   with the "expert" list.  This is the "medium" list and contains
+   about 36,000 words.
 
 4. Take the "10" word list from the above link and intersect it
-with the "expert" list.  This contains 21,000 words and is the
-"easy" list.
+   with the "expert" list.  This contains 21,000 words and is the
+   "easy" list.
 
 Let me know how you find the difficulty levels -- I'd really
 appreciate the feedback!
@@ -52,7 +52,7 @@ Use package.el. You'll need to add MELPA to your archives:
 
 (require 'package)
 (add-to-list 'package-archives
-'("melpa" . "http://melpa.milkbox.net/packages/") t)
+             '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 Alternatively, you can just save this file and do the standard
 (add-to-list 'load-path "/path/to/jumblr.el")

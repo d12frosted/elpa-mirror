@@ -1,12 +1,12 @@
 
 Package installed from elpa.gnu.org:
 
-(add-hook 'after-init-hook #'company-statistics-mode)
+  (add-hook 'after-init-hook #'company-statistics-mode)
 
 Manually installed: make sure that this file is in load-path, and
 
-(require 'company-statistics)
-(company-statistics-mode)
+  (require 'company-statistics)
+  (company-statistics-mode)
 
 Every time a candidate is chosen using company-mode, we keep track of this
 (for a limited amount of recent choices).  When presenting completion

@@ -1,8 +1,8 @@
 Add `company-distel' to the `company-backends' list in your .emacs.
 E.g.
-(require 'company)
-(require 'company-distel)
-(add-to-list 'company-backends 'company-distel)
+  (require 'company)
+  (require 'company-distel)
+  (add-to-list 'company-backends 'company-distel)
 
 Customize
 ------------------

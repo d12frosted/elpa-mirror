@@ -1,12 +1,12 @@
 After installing goto-last-change.el in a `load-path' directory and
 compiling it with `M-x byte-compile-file', load it with
-(require 'goto-last-change)
+     (require 'goto-last-change)
 or autoload it with
-(autoload 'goto-last-change "goto-last-change"
-"Set point to the position of the last change." t)
+     (autoload 'goto-last-change "goto-last-change"
+       "Set point to the position of the last change." t)
 
 You may also want to bind a key to `M-x goto-last-change', e.g.
-(global-set-key "\C-x\C-\\" 'goto-last-change)
+     (global-set-key "\C-x\C-\\" 'goto-last-change)
 
 goto-last-change.el was written in response to the following:
 

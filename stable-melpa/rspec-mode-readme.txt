@@ -13,7 +13,7 @@ will fallback to defaults.
 
 You can also launch specs from Dired buffers, to do that, add this:
 
-(add-hook 'dired-mode-hook 'rspec-dired-mode)
+  (add-hook 'dired-mode-hook 'rspec-dired-mode)
 
 It has almost the same keybindings, but there's no toggle-spec
 command, and `rspec-dired-verify-single' runs all marked files, or

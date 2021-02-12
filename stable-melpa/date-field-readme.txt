@@ -26,4 +26,4 @@ Nothing.
 
 [EVAL] (autodoc-document-lisp-buffer :type 'user-variable :prefix "date-field-[^-]" :docstring t)
 
-*** END auto-documentation
+ *** END auto-documentation

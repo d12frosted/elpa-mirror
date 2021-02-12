@@ -24,7 +24,7 @@ Once configured, the main entrypoint is `x86-lookup'. You may want
 to bind this to a key. The interactive prompt will default to the
 mnemonic under the point. Here's a suggestion:
 
-(global-set-key (kbd "C-h x") #'x86-lookup)
+  (global-set-key (kbd "C-h x") #'x86-lookup)
 
 This package pairs well with `nasm-mode'!
 

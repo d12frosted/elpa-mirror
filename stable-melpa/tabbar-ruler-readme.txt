@@ -16,13 +16,13 @@ Also allows auto-hiding of toolbar and menu.
 To use this, put the library in your load path and use
 
 
-(setq tabbar-ruler-global-tabbar t) ; If you want tabbar
-(setq tabbar-ruler-global-ruler t) ; if you want a global ruler
-(setq tabbar-ruler-popup-menu t) ; If you want a popup menu.
-(setq tabbar-ruler-popup-toolbar t) ; If you want a popup toolbar
-(setq tabbar-ruler-popup-scrollbar t) ; If you want to only show the
-; scroll bar when your mouse is moving.
-(require 'tabbar-ruler)
+  (setq tabbar-ruler-global-tabbar t) ; If you want tabbar
+  (setq tabbar-ruler-global-ruler t) ; if you want a global ruler
+  (setq tabbar-ruler-popup-menu t) ; If you want a popup menu.
+  (setq tabbar-ruler-popup-toolbar t) ; If you want a popup toolbar
+  (setq tabbar-ruler-popup-scrollbar t) ; If you want to only show the
+                                        ; scroll bar when your mouse is moving.
+  (require 'tabbar-ruler)
 
 
 
@@ -31,25 +31,25 @@ To use this, put the library in your load path and use
 The default behavior for tabbar-ruler is to group the tabs by frame.
 You can change this back to the old-behavior by:
 
-(tabbar-ruler-group-buffer-groups)
+  (tabbar-ruler-group-buffer-groups)
 
 or by issuing the following code:
 
 
-(setq tabbar-buffer-groups-function 'tabbar-buffer-groups)
+  (setq tabbar-buffer-groups-function 'tabbar-buffer-groups)
 
 
 In addition, you can also group by projectile project easily by:
 
 
-(tabbar-ruler-group-by-projectile-project)
+  (tabbar-ruler-group-by-projectile-project)
 
 * Adding key-bindings to tabbar-ruler
 You can add key-bindings to change the current tab.  The easiest way
 to add the bindings is to add a key like:
 
 
-(global-set-key (kbd "C-c t") 'tabbar-ruler-move)
+  (global-set-key (kbd "C-c t") 'tabbar-ruler-move)
 
 
 After that, all you would need to press is Control+c t and then the

@@ -5,24 +5,24 @@ Quick start:
 Enable the mode origami-predef-global-mode.  This will add a find-file-hook that will fold every tagged line.
 Tag the lines you need to be initialy folded with *autofold*.
 
-public void boringMethod(){ // *autofold*
-foo();
-bar();
-}
+  public void boringMethod(){ // *autofold*
+     foo();
+     bar();
+  }
 
 Sometimes, the tag can not be placed in the same line you need to be folded.  In these cases, *autofold:*
 will fold the next line.
 
-# A very long shell variable with newlines
-# *autofold:*
-LOREM="
-Pellentesque dapibus suscipit ligula.
-Donec posuere augue in quam.
-Etiam vel tortor sodales tellus ultricies commodo.
-Suspendisse potenti.
-Aenean in sem ac leo mollis blandit.
-...
-"
+  # A very long shell variable with newlines
+   # *autofold:*
+  LOREM="
+    Pellentesque dapibus suscipit ligula.
+    Donec posuere augue in quam.
+    Etiam vel tortor sodales tellus ultricies commodo.
+    Suspendisse potenti.
+    Aenean in sem ac leo mollis blandit.
+    ...
+  "
 
 The tags can be changed with customize.
 

@@ -18,11 +18,11 @@ Replaces dired buffer with features from Ranger
 ; KNOWN ISSUES
 
 - window specific settings needed
-- current tab
-- history
-- current-file
-- cloasing last ranger does not clear variables
-- multiple ranger windows
+ - current tab
+ - history
+ - current-file
+ - cloasing last ranger does not clear variables
+ - multiple ranger windows
 
 ; HISTORY
 

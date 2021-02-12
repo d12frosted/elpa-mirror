@@ -23,8 +23,8 @@ Invoking it works like this:
 
 1. If the region is active the associated action is invoked directly.
 2. Otherwise nothing happens, but the editor is now listening for an
-object.  This activates a set of bindings that makes it convenient
-to input objects.  For instance pressing `l` makes the action
-operate on the current line.
+   object.  This activates a set of bindings that makes it convenient
+   to input objects.  For instance pressing `l` makes the action
+   operate on the current line.
 3. After the object has been entered the action is invoked on the
-specified object.
+   specified object.

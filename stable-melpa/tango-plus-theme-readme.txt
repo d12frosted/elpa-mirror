@@ -6,8 +6,8 @@ mu4e, helm, epresent, and markdown-mode among others.
 
 For details and screenshots visit the project page on Github:
 
-https://github.com/tmalsburg/tango-plus-theme
+    https://github.com/tmalsburg/tango-plus-theme
 
 To use this theme put the following in your startup file:
 
-(load-theme 'tango-plus t)
+    (load-theme 'tango-plus t)

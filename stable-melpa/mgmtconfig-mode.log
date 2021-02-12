@@ -5,20 +5,18 @@ Source:  https://github.com/purpleidea/mgmt.git
 Updating /mnt/store/melpa/working/mgmtconfig-mode/
 Command '(env LC_ALL=C git submodule update --init --recursive)' exited with non-zero status 1: Fetching origin
 warning: unable to rmdir 'vendor/github.com/coreos/etcd': Directory not empty
-HEAD is now at 60dd34d make: Drop support for Go 1.9 in `make build`
+warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/go-grpc-prometheus': Directory not empty
+warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/grpc-gateway': Directory not empty
+HEAD is now at ccbaca2 gopath: Remove this unused directory
 Synchronizing submodule url for 'vendor/github.com/docker/distribution'
 Synchronizing submodule url for 'vendor/github.com/docker/docker'
 Synchronizing submodule url for 'vendor/github.com/docker/go-connections'
-Synchronizing submodule url for 'vendor/github.com/grpc-ecosystem/go-grpc-prometheus'
-Synchronizing submodule url for 'vendor/github.com/grpc-ecosystem/grpc-gateway'
 Synchronizing submodule url for 'vendor/github.com/hashicorp/go-multierror'
 Synchronizing submodule url for 'vendor/github.com/ugorji/go'
 Synchronizing submodule url for 'vendor/go.etcd.io/etcd'
 Synchronizing submodule url for 'vendor/google.golang.org/grpc'
 Synchronizing submodule url for 'vendor/gopkg.in/fsnotify.v1'
 Synchronizing submodule url for 'vendor/honnef.co/go/augeas'
-Submodule path 'vendor/github.com/grpc-ecosystem/go-grpc-prometheus': checked out 'c225b8c3b01faf2899099b768856a9e916e5087b'
-Submodule path 'vendor/github.com/grpc-ecosystem/grpc-gateway': checked out 'ad529a448ba494a88058f9e5be0988713174ac86'
 error: Your local changes to the following files would be overwritten by checkout:
 	.github/ISSUE_TEMPLATE.md
 	.github/PULL_REQUEST_TEMPLATE.md
@@ -272,6 +270,6 @@ error: The following untracked working tree files would be overwritten by checko
 	Documentation/v2/benchmarks/etcd-2-2-0-rc-benchmarks.md
 	Documentation/v2/benchmarks/e
 Aborting
-Submodule path 'vendor/google.golang.org/grpc': checked out '39e8a7b072a67ca2a75f57fa2e0d50995f5b22f6'
-Unable to checkout '3cf2f69b5738fb702ba1a935590f36b52b18979b' in submodule path 'vendor/go.etcd.io/etcd'
+Submodule path 'vendor/google.golang.org/grpc': checked out '754ee590a4f386d0910d887f3b8776354042260b'
+Unable to checkout '8a03d2e9614b8192ebaa5a25ef92f6ff62e3593c' in submodule path 'vendor/go.etcd.io/etcd'
 

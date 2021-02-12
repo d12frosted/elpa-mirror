@@ -30,19 +30,19 @@ of them, `audio-notes-mode' deactivates itself.
 INSTALLATION
 
 Configuration is simple. Require the package and define the following two variables:
-(require 'audio-notes-mode)
-(setq anm/notes-directory "~/Directory/where/your/notes/are/")
-(setq anm/goto-file "~/path/to/file.org") ;File in which you'll write your notes as they are played.
+          (require 'audio-notes-mode)
+          (setq anm/notes-directory "~/Directory/where/your/notes/are/")
+          (setq anm/goto-file "~/path/to/file.org") ;File in which you'll write your notes as they are played.
 
 Then just choose how you want to activate it.
 1) If you use `org-mobile-pull', you can do
-(setq anm/hook-into-org-pull t)
-and `audio-notes-mode' will activate whenever you call
-org-mobile-pull.
+      (setq anm/hook-into-org-pull t)
+   and `audio-notes-mode' will activate whenever you call
+   org-mobile-pull.
 
 2) The second options is to just bind `audio-notes-mode' to
-some key and call it when you want.
-(global-set-key [f8] 'audio-notes-mode)
+   some key and call it when you want.
+      (global-set-key [f8] 'audio-notes-mode)
 
 If you installed manually, first require the feature with:
 then use one of the methods above.

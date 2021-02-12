@@ -1,27 +1,27 @@
 
 Quickstart
 
-(require 'syntactic-sugar)
+    (require 'syntactic-sugar)
 
-(if t
-(then (message "true"))
-(else (message "false")))
+    (if t
+        (then (message "true"))
+      (else (message "false")))
 
-(unwind-protect
-(protected
-(error "Error"))
-(unwind
-(message "cleanup")))
+    (unwind-protect
+        (protected
+          (error "Error"))
+      (unwind
+        (message "cleanup")))
 
 Explanation
 
 This library offers absolutely no functionality!  The following
 macros are provided as synonyms for `progn':
 
-`then'
-`else'
-`protected'
-`unwind'
+    `then'
+    `else'
+    `protected'
+    `unwind'
 
 These macros can be used to clarify `if' or `unwind-protect' forms.
 
@@ -29,13 +29,13 @@ Note that as synonyms for `progn', these forms have no useful
 effects, and no additional syntax check is done, so nothing
 prevents you from writing obfuscatory expressions such as
 
-(if t (else 1) (then 2))      ; same as (if t (progn 1) (progn 2))
+    (if t (else 1) (then 2))      ; same as (if t (progn 1) (progn 2))
 
 or idiotic expressions such as
 
-(if t
-(protected 1)
-(unwind 2))
+    (if t
+        (protected 1)
+      (unwind 2))
 
 So, think of these macros as glorified comments.  And realize that
 if you are tempted to use them, if in fact you have even read the
@@ -44,11 +44,11 @@ documentation to this point, you are hopelessly impure at heart.
 To use syntactic-sugar, place the syntactic-sugar.el library somewhere
 Emacs can find it, and add the following to your ~/.emacs file:
 
-(require 'syntactic-sugar)
+    (require 'syntactic-sugar)
 
 See Also
 
-M-x customize-group RET syntactic-sugar RET
+    M-x customize-group RET syntactic-sugar RET
 
 Notes
 
@@ -60,11 +60,11 @@ are outside the package namespace.
 
 Compatibility and Requirements
 
-GNU Emacs version 24.4-devel     : yes, at the time of writing
-GNU Emacs version 24.3           : yes
-GNU Emacs version 23.3           : yes
-GNU Emacs version 22.2           : yes
-GNU Emacs version 21.x and lower : unknown
+    GNU Emacs version 24.4-devel     : yes, at the time of writing
+    GNU Emacs version 24.3           : yes
+    GNU Emacs version 23.3           : yes
+    GNU Emacs version 22.2           : yes
+    GNU Emacs version 21.x and lower : unknown
 
 Bugs
 
@@ -78,14 +78,14 @@ Redistribution and use in source and binary forms, with or
 without modification, are permitted provided that the following
 conditions are met:
 
-1. Redistributions of source code must retain the above
-copyright notice, this list of conditions and the following
-disclaimer.
+   1. Redistributions of source code must retain the above
+      copyright notice, this list of conditions and the following
+      disclaimer.
 
-2. Redistributions in binary form must reproduce the above
-copyright notice, this list of conditions and the following
-disclaimer in the documentation and/or other materials
-provided with the distribution.
+   2. Redistributions in binary form must reproduce the above
+      copyright notice, this list of conditions and the following
+      disclaimer in the documentation and/or other materials
+      provided with the distribution.
 
 This software is provided by Roland Walker "AS IS" and any express
 or implied warranties, including, but not limited to, the implied

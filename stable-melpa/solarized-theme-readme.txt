@@ -3,7 +3,7 @@ A port of Solarized to Emacs.
 
 ; Installation:
 
-Drop the `solarized-theme.el` somewhere in your `load-path` and
+  Drop the `solarized-theme.el` somewhere in your `load-path` and
 the two themes in a folder that is on `custom-theme-load-path'
 and enjoy!
 

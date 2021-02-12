@@ -11,7 +11,7 @@ Installation:
 1. Make sure `company-mode' is installed and configured.
 2. Add `company-tabnine' to `company-backends':
 
-(add-to-list 'company-backends #'company-tabnine)
+  (add-to-list 'company-backends #'company-tabnine)
 
 3. Run M-x company-tabnine-install-binary to install the TabNine binary for your system.
 
@@ -24,8 +24,8 @@ Recommended Configuration:
 
 - Trigger completion immediately.
 
-(setq company-idle-delay 0)
+  (setq company-idle-delay 0)
 
 - Number the candidates (use M-1, M-2 etc to select completions).
 
-(setq company-show-numbers t)
+  (setq company-show-numbers t)

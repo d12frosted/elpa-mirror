@@ -24,14 +24,14 @@ work in Emacs earlier versions, but not tested.
 To install `jump-tree-mode', make sure this file is saved in a directory in
 your `load-path', and add the line:
 
-(require 'jump-tree)
+  (require 'jump-tree)
 
 to your .emacs file.  Byte-compiling jump-tree.el is recommended (e.g. using
 "M-x byte-compile-file" from within Emacs).
 
 If you want to enable it globally, you can add:
 
-(global-jump-tree-mode)
+  (global-jump-tree-mode)
 
 to your .emacs file.
 
@@ -67,20 +67,20 @@ The default `jump-tree-pos-list-skip-buffers` value is as follows(this may be ch
 The record of the jump node is decided by the `jump-tree-pos-list-record-commands` variable. The default value is as follows:
 ```
 '(beginning-of-buffer
-end-of-buffer backward-up-list
-beginning-of-defun end-of-defun
-unimacs-move-beginning-of-line unimacs-move-end-of-line
-unimacs-move-beginning-of-window unimacs-move-end-of-window
-helm-swoop helm-imenu helm-find-files helm-multi-files
-helm-projectile-switch-project helm-projectile-find-file
-helm-gtags-find-pattern helm-gtags-find-tag-adapter
-helm-gtags-find-rtag-adapter helm-ag-select-directory
-find-function find-variable
-mark-defun mark-whole-buffer
-avy-goto-char avy-goto-char-2
-ensime-edit-definition
-ensime-edit-definition-with-fallback
-isearch-forward)
+  end-of-buffer backward-up-list
+  beginning-of-defun end-of-defun
+  unimacs-move-beginning-of-line unimacs-move-end-of-line
+  unimacs-move-beginning-of-window unimacs-move-end-of-window
+  helm-swoop helm-imenu helm-find-files helm-multi-files
+  helm-projectile-switch-project helm-projectile-find-file
+  helm-gtags-find-pattern helm-gtags-find-tag-adapter
+  helm-gtags-find-rtag-adapter helm-ag-select-directory
+  find-function find-variable
+  mark-defun mark-whole-buffer
+  avy-goto-char avy-goto-char-2
+  ensime-edit-definition
+  ensime-edit-definition-with-fallback
+  isearch-forward)
 ```
 
 We can support the record the position, when the movement or offset is exceeding the threshold. The default threshold points `jump-tree-pos-list-offset-threshold` is:
@@ -94,122 +94,122 @@ t
 ```
 
 `jump-tree-mode' and `global-jump-tree-mode'
-Enable jump-tree mode (either in the current buffer or globally).
+  Enable jump-tree mode (either in the current buffer or globally).
 
 M-, (`jump-tree-jump-prev')
-Jump-Prev positions.
+  Jump-Prev positions.
 
 C-? (`jump-tree-jump-next')
-Jump-Next positions.
+  Jump-Next positions.
 
 `jump-tree-switch-branch'
-Switch jump-tree branch.
-(What does this mean? Better press the button and see!)
+  Switch jump-tree branch.
+  (What does this mean? Better press the button and see!)
 
 C-x j  (`jump-tree-visualize')
-Visualize the position tree.
-(Better try pressing this button too!)
+  Visualize the position tree.
+  (Better try pressing this button too!)
 
 C-x r u  (`jump-tree-save-state-to-register')
-Save current buffer state to register.
+  Save current buffer state to register.
 
 C-x r U  (`jump-tree-restore-state-from-register')
-Restore buffer state from register.
+  Restore buffer state from register.
 
 
 
 In the jump-tree visualizer:
 
 <up>  p  C-p  (`jump-tree-visualize-jump-prev')
-Jump-Prev positions.
+  Jump-Prev positions.
 
 <down>  n  C-n  (`jump-tree-visualize-jump-next')
-Jump-Next positions.
+  Jump-Next positions.
 
 <left>  b  C-b  (`jump-tree-visualize-switch-branch-left')
-Switch to previous jump-tree branch.
+  Switch to previous jump-tree branch.
 
 <right>  f  C-f  (`jump-tree-visualize-switch-branch-right')
-Switch to next jump-tree branch.
+  Switch to next jump-tree branch.
 
 C-<up>  M-{  (`jump-tree-visualize-jump-prev-to-x')
-Jump-Prev changes up to last branch point.
+  Jump-Prev changes up to last branch point.
 
 <down>  n  C-n  (`jump-tree-visualize-jump-next')
-Jump-Next positions.
+  Jump-Next positions.
 
 <mouse-1>  (`jump-tree-visualizer-mouse-set')
-Set state to node at mouse click.
+  Set state to node at mouse click.
 
 t  (`jump-tree-visualizer-toggle-timestamps')
-Toggle display of time-stamps.
+  Toggle display of time-stamps.
 
 d  (`jump-tree-visualizer-toggle-diff')
-Toggle diff display.
+  Toggle diff display.
 
 s  (`jump-tree-visualizer-selection-mode')
-Toggle keyboard selection mode.
+  Toggle keyboard selection mode.
 
 q  (`jump-tree-visualizer-quit')
-Quit jump-tree-visualizer.
+  Quit jump-tree-visualizer.
 
 C-q  (`jump-tree-visualizer-abort')
-Abort jump-tree-visualizer.
+  Abort jump-tree-visualizer.
 
 ,  <
-Scroll left.
+  Scroll left.
 
 .  >
-Scroll right.
+  Scroll right.
 
 <pgup>  M-v
-Scroll up.
+  Scroll up.
 
 <pgdown>  C-v
-Scroll down.
+  Scroll down.
 
 
 
 In visualizer selection mode:
 
 <up>  p  C-p  (`jump-tree-visualizer-select-previous')
-Select previous node.
+  Select previous node.
 
 <down>  n  C-n  (`jump-tree-visualizer-select-next')
-Select next node.
+  Select next node.
 
 <left>  b  C-b  (`jump-tree-visualizer-select-left')
-Select left sibling node.
+  Select left sibling node.
 
 <right>  f  C-f  (`jump-tree-visualizer-select-right')
-Select right sibling node.
+  Select right sibling node.
 
 <pgup>  M-v
-Select node 10 above.
+  Select node 10 above.
 
 <pgdown>  C-v
-Select node 10 below.
+  Select node 10 below.
 
 <enter>  (`jump-tree-visualizer-set')
-Set state to selected node and exit selection mode.
+  Set state to selected node and exit selection mode.
 
 s  (`jump-tree-visualizer-mode')
-Exit selection mode.
+  Exit selection mode.
 
 t  (`jump-tree-visualizer-toggle-timestamps')
-Toggle display of time-stamps.
+  Toggle display of time-stamps.
 
 q  (`jump-tree-visualizer-quit')
-Quit jump-tree-visualizer.
+  Quit jump-tree-visualizer.
 
 C-q  (`jump-tree-visualizer-abort')
-Abort jump-tree-visualizer.
+  Abort jump-tree-visualizer.
 
 ,  <
-Scroll left.
+  Scroll left.
 
 .  >
-Scroll right.
+  Scroll right.
 
 
 
@@ -225,69 +225,69 @@ example.  Imagine you make a few edits in a buffer.  As you edit, you
 accumulate a history of changes, which we might visualize as a string of
 past buffer states, growing downwards:
 
-o  (initial buffer state)
-|
-|
-o  (first edit)
-|
-|
-o  (second edit)
-|
-|
-x  (current buffer state)
+                               o  (initial buffer state)
+                               |
+                               |
+                               o  (first edit)
+                               |
+                               |
+                               o  (second edit)
+                               |
+                               |
+                               x  (current buffer state)
 
 
 Now imagine that you position the last two positions.  We can visualize
 this as rewinding the current state back two steps:
 
-o  (initial buffer state)
-|
-|
-x  (current buffer state)
-|
-|
-o
-|
-|
-o
+                               o  (initial buffer state)
+                               |
+                               |
+                               x  (current buffer state)
+                               |
+                               |
+                               o
+                               |
+                               |
+                               o
 
 
 However, this isn't a good representation of what Emacs' position system
 does.  Instead, it treats the jump-prevs as *new* changes to the buffer,
 and adds them to the history:
 
-o  (initial buffer state)
-|
-|
-o  (first edit)
-|
-|
-o  (second edit)
-|
-|
-x  (buffer state before position)
-|
-|
-o  (first position)
-|
-|
-x  (second position)
+                               o  (initial buffer state)
+                               |
+                               |
+                               o  (first edit)
+                               |
+                               |
+                               o  (second edit)
+                               |
+                               |
+                               x  (buffer state before position)
+                               |
+                               |
+                               o  (first position)
+                               |
+                               |
+                               x  (second position)
 
 
 Actually, since the buffer returns to a previous state after an position,
 perhaps a better way to visualize it is to imagine the string of changes
 turning back on itself:
 
-(initial buffer state)  o
-|
-|
-(first edit)  o  x  (second position)
-|  |
-|  |
-(second edit)  o  o  (first position)
-| /
-|/
-o  (buffer state before position)
+       (initial buffer state)  o
+                               |
+                               |
+                 (first edit)  o  x  (second position)
+                               |  |
+                               |  |
+                (second edit)  o  o  (first position)
+                               | /
+                               |/
+                               o  (buffer state before position)
 
 Treating jump-prevs as new changes might seem a strange thing to do.  But
 the advantage becomes clear as soon as we imagine what happens when you
@@ -295,37 +295,37 @@ edit the buffer again.  Since you've jump-prevne a couple of changes, new
 edits will branch off from the buffer state that you've rewound to.
 Conceptually, it looks like this:
 
-o  (initial buffer state)
-|
-|
-o
-|\
-| \
-o  x  (new edit)
-|
-|
-o
+                               o  (initial buffer state)
+                               |
+                               |
+                               o
+                               |\
+                               | \
+                               o  x  (new edit)
+                               |
+                               |
+                               o
 
 The standard jump-prev/jump-next system only lets you go backwards and
 forwards linearly.  So as soon as you make that new edit, it discards the
 old branch.  Emacs' position just keeps adding changes to the end of the
 string.  So the position history in the two systems now looks like this:
 
-Jump-Prev/Jump-Next:                      Emacs' position
+           Jump-Prev/Jump-Next:                      Emacs' position
 
-o                                o
-|                                |
-|                                |
-o                                o  o
-.\                               |  |\
-. \                              |  | \
-.  x  (new edit)                 o  o  |
-(discarded  .                                | /   |
-branch)   .                                |/    |
-.                                o     |
-|
-|
-x  (new edit)
+              o                                o
+              |                                |
+              |                                |
+              o                                o  o
+              .\                               |  |\
+              . \                              |  | \
+              .  x  (new edit)                 o  o  |
+  (discarded  .                                | /   |
+    branch)   .                                |/    |
+              .                                o     |
+                                                     |
+                                                     |
+                                                     x  (new edit)
 
 Now, what if you change your mind about those jump-prevs, and decide you
 did like those other changes you'd made after all? With the standard
@@ -340,19 +340,19 @@ jump-prevs!) as new changes,
 you're really weaving backwards and forwards through the history, all the
 time adding new changes to the end of the string as you go:
 
-o
-|
-|
-o  o     o  (position new edit)
-|  |\    |\
-|  | \   | \
-o  o  |  |  o  (position the position)
-| /   |  |  |
-|/    |  |  |
-(trying to get   o     |  |  x  (position the position)
-to this state)        | /
-|/
-o
+                      o
+                      |
+                      |
+                      o  o     o  (position new edit)
+                      |  |\    |\
+                      |  | \   | \
+                      o  o  |  |  o  (position the position)
+                      | /   |  |  |
+                      |/    |  |  |
+     (trying to get   o     |  |  x  (position the position)
+      to this state)        | /
+                            |/
+                            o
 
 So far, this is still reasonably intuitive to use.  It doesn't behave so
 differently to standard jump-prev/jump-next, except that by going back far
@@ -364,19 +364,19 @@ actually want to rewind right back to the initial state.  If you're lucky,
 and haven't invoked any command since the last position, you can just keep
 on jump-preving until you get back to the start:
 
-(trying to get   o              x  (got there!)
-to this state)  |              |
-|              |
-o  o     o     o  (keep jump-preving)
-|  |\    |\    |
-|  | \   | \   |
-o  o  |  |  o  o  (keep jump-preving)
-| /   |  |  | /
-|/    |  |  |/
-(already undid   o     |  |  o  (got this far)
-to this state)        | /
-|/
-o
+     (trying to get   o              x  (got there!)
+      to this state)  |              |
+                      |              |
+                      o  o     o     o  (keep jump-preving)
+                      |  |\    |\    |
+                      |  | \   | \   |
+                      o  o  |  |  o  o  (keep jump-preving)
+                      | /   |  |  | /
+                      |/    |  |  |/
+     (already undid   o     |  |  o  (got this far)
+      to this state)        | /
+                            |/
+                            o
 
 But if you're unlucky, and you happen to have moved the point (say) after
 getting to the state labelled "got this far", then you've "broken the
@@ -385,22 +385,22 @@ get hairy.  If you try to position now, Emacs thinks you're trying to
 position the jump-prevs! So to get back to the initial state you now have
 to rewind through *all* the changes, including the jump-prevs you just did:
 
-(trying to get   o                          x  (finally got there!)
-to this state)  |                          |
-|                          |
-o  o     o     o     o     o
-|  |\    |\    |\    |\    |
-|  | \   | \   | \   | \   |
-o  o  |  |  o  o  |  |  o  o
-| /   |  |  | /   |  |  | /
-|/    |  |  |/    |  |  |/
-(already undid   o     |  |  o<.   |  |  o
-to this state)        | /     :   | /
-|/      :   |/
-o       :   o
-:
-(got this far, but
-broke the position chain)
+     (trying to get   o                          x  (finally got there!)
+      to this state)  |                          |
+                      |                          |
+                      o  o     o     o     o     o
+                      |  |\    |\    |\    |\    |
+                      |  | \   | \   | \   | \   |
+                      o  o  |  |  o  o  |  |  o  o
+                      | /   |  |  | /   |  |  | /
+                      |/    |  |  |/    |  |  |/
+     (already undid   o     |  |  o<.   |  |  o
+      to this state)        | /     :   | /
+                            |/      :   |/
+                            o       :   o
+                                    :
+                            (got this far, but
+                             broke the position chain)
 
 Confused?
 
@@ -418,16 +418,16 @@ them, and edit again)? The diagram that conceptually represented our
 position history, before we started discussing specific position systems?
 It looked like this:
 
-o  (initial buffer state)
-|
-|
-o
-|\
-| \
-o  x  (current state)
-|
-|
-o
+                               o  (initial buffer state)
+                               |
+                               |
+                               o
+                               |\
+                               | \
+                               o  x  (current state)
+                               |
+                               |
+                               o
 
 Well, that's *exactly* what the position history looks like to
 `jump-tree-mode'.  It doesn't discard the old branch (as standard
@@ -439,31 +439,31 @@ make up the entire position history.
 If you position from this point, you'll rewind back up the tree to the
 previous state:
 
-o
-|
-|
-x  (position)
-|\
-| \
-o  o
-|
-|
-o
+                               o
+                               |
+                               |
+                               x  (position)
+                               |\
+                               | \
+                               o  o
+                               |
+                               |
+                               o
 
 If you were to position again, you'd rewind back to the initial state.
 If on the other hand you jump-next the change, you'll end up back at the
 bottom of the most recent branch:
 
-o  (position takes you here)
-|
-|
-o  (start here)
-|\
-| \
-o  x  (jump-next takes you here)
-|
-|
-o
+                               o  (position takes you here)
+                               |
+                               |
+                               o  (start here)
+                               |\
+                               | \
+                               o  x  (jump-next takes you here)
+                               |
+                               |
+                               o
 
 So far, this is just like the standard jump-prev/jump-next system.
 But what if you want to return to a buffer state located on a previous
@@ -471,16 +471,16 @@ branch of the history? Since `jump-tree-mode' keeps the entire history,
 you simply need to tell it to switch to a different branch, and then
 jump-next the changes you want:
 
-o
-|
-|
-o  (start here, but switch
-|\  to the other branch)
-| \
-(jump-next)  o  o
-|
-|
-(jump-next)  x
+                               o
+                               |
+                               |
+                               o  (start here, but switch
+                               |\  to the other branch)
+                               | \
+                       (jump-next)  o  o
+                               |
+                               |
+                       (jump-next)  x
 
 Now you're on the other branch, if you position and jump-next changes
 you'll stay on that branch, moving up and down through the buffer states
@@ -489,16 +489,16 @@ course.
 
 Real position trees might have multiple branches and sub-branches:
 
-o
-____|______
-/           \
-o             o
-____|__         __|
-/    |  \       /   \
-o     o   o     o     x
-|               |
-/ \             / \
-o   o           o   o
+                               o
+                           ____|______
+                          /           \
+                         o             o
+                     ____|__         __|
+                    /    |  \       /   \
+                   o     o   o     o     x
+                   |               |
+                  / \             / \
+                 o   o           o   o
 
 Trying to imagine what Emacs' position would do as you move about such a
 tree will likely frazzle your brain circuits! But in `jump-tree-mode',

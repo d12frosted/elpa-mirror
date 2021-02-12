@@ -8,15 +8,15 @@ the fuzzy completion modes of SLIME.
 
 ; Installation:
 
-Put this file somewhere into your load-path
-(or just into slime-path/contribs) and then call
+ Put this file somewhere into your load-path
+ (or just into slime-path/contribs) and then call
 
-(slime-setup '(slime-company))
+  (slime-setup '(slime-company))
 
 I also have the following, IMO more convenient key bindings for
 company mode in my .emacs:
 
-(define-key company-active-map (kbd "\C-n") 'company-select-next)
-(define-key company-active-map (kbd "\C-p") 'company-select-previous)
-(define-key company-active-map (kbd "\C-d") 'company-show-doc-buffer)
-(define-key company-active-map (kbd "M-.") 'company-show-location)
+  (define-key company-active-map (kbd "\C-n") 'company-select-next)
+  (define-key company-active-map (kbd "\C-p") 'company-select-previous)
+  (define-key company-active-map (kbd "\C-d") 'company-show-doc-buffer)
+  (define-key company-active-map (kbd "M-.") 'company-show-location)

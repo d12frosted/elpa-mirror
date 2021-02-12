@@ -6,18 +6,18 @@ I'd also like to thank [[http://twitter.com/ionrock][Eric Larson]] for pushing m
 
 This minor mode allows you to run test-kitchen in a separate buffer
 
-* Run test-kitchen destroy in another buffer
-* Run test-kitchen list in another buffer
-* Run test-kitchen test in another buffer
-* Run test-kitchen verify in another buffer
+ * Run test-kitchen destroy in another buffer
+ * Run test-kitchen list in another buffer
+ * Run test-kitchen test in another buffer
+ * Run test-kitchen verify in another buffer
 
 You'll probably want to define some key bindings to run these.
 
-(global-set-key (kbd "C-c C-d") 'test-kitchen-destroy)
-(global-set-key (kbd "C-c C-t") 'test-kitchen-test)
-(global-set-key (kbd "C-c l") 'test-kitchen-list)
-(global-set-key (kbd "C-c C-kv") 'test-kitchen-verify)
-(global-set-key (kbd "C-c C-kc") 'test-kitchen-converge)
+  (global-set-key (kbd "C-c C-d") 'test-kitchen-destroy)
+  (global-set-key (kbd "C-c C-t") 'test-kitchen-test)
+  (global-set-key (kbd "C-c l") 'test-kitchen-list)
+  (global-set-key (kbd "C-c C-kv") 'test-kitchen-verify)
+  (global-set-key (kbd "C-c C-kc") 'test-kitchen-converge)
 
 TODO:
 

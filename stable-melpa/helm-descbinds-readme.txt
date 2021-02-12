@@ -8,8 +8,8 @@ just needs to be installed.
 
 Add followings on your .emacs.
 
-(require 'helm-descbinds)
-(helm-descbinds-mode)
+  (require 'helm-descbinds)
+  (helm-descbinds-mode)
 
 or use customize to set `helm-descbinds-mode' to t.
 
@@ -23,14 +23,14 @@ documentation.
 In the Helm completions buffer, you match key bindings with the
 Helm interface:
 
-- When you type RET, the selected candidate command is executed.
+ - When you type RET, the selected candidate command is executed.
 
-- When you hit RET on a prefix key, the candidates are narrowed to
-this prefix
+ - When you hit RET on a prefix key, the candidates are narrowed to
+   this prefix
 
-- When you type TAB, you can select "Execute", "Describe" or "Find
-Function" by the menu (i.e. these are the available "actions"
-and are of course also available via their usual shortcuts).
+ - When you type TAB, you can select "Execute", "Describe" or "Find
+   Function" by the menu (i.e. these are the available "actions"
+   and are of course also available via their usual shortcuts).
 
-- When you type C-z (aka "persistent action"), the selected
-command is described without quitting Helm.
+ - When you type C-z (aka "persistent action"), the selected
+   command is described without quitting Helm.

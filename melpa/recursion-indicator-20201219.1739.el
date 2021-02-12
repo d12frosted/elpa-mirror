@@ -5,7 +5,7 @@
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
 ;; Package-Version: 20201219.1739
-;; Package-Commit: 54d9914b270975e92fec56bcb3911c7335aeed7d
+;; Package-Commit: 348030d5d65524b4f6a2dfad1d53f2ca92dbd49c
 ;; Package-Requires: ((emacs "26"))
 ;; Homepage: https://github.com/minad/recursion-indicator
 

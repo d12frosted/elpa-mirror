@@ -6,4 +6,4 @@ activating `sclang-extensions-mode'.
 
 Add this mode to your sclang hooks:
 
-(add-hook 'sclang-mode-hook 'sclang-extensions-mode)
+  (add-hook 'sclang-mode-hook 'sclang-extensions-mode)

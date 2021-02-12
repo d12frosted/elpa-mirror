@@ -15,10 +15,10 @@ fully implementation:
 - coffee-script :: http://coffeescript.org/
 
 - coffee-mode :: Can be installed through ELPA, or from
-https://raw.githubusercontent.com/defunkt/coffee-mode/master/coffee-mode.el
+  https://raw.githubusercontent.com/defunkt/coffee-mode/master/coffee-mode.el
 
 - inf-coffee :: Can be installed through from
-https://raw.githubusercontent.com/brantou/inf-coffee/master/inf-coffee.el
+  https://raw.githubusercontent.com/brantou/inf-coffee/master/inf-coffee.el
 
 
 ; TODO

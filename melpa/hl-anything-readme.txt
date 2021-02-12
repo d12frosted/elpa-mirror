@@ -7,7 +7,7 @@ Of course, there're more advanced features:
 * Save highlights and restore them next time Emacs opened.
 * Select highlighted things smartly and search forwardly or backwardly.
 * Assign highlighting specific faces which makes them always on the top of
-current line highlight.
+  current line highlight.
 * More... Check official website for details:
 https://github.com/hl-anything/hl-anything-emacs
 

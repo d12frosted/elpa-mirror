@@ -21,13 +21,13 @@ which `drag-stuff-mode' should not be activated in (note, only if
 you use the global mode) because of conflicting use.
 
 You can add new except modes:
-(add-to-list 'drag-stuff-except-modes 'conflicting-mode)
+  (add-to-list 'drag-stuff-except-modes 'conflicting-mode)
 
 Default modifier key is the meta-key. This can be changed and is
 controlled by the variable `drag-stuff-modifier'.
 
 Control key as modifier:
-(setq drag-stuff-modifier 'control)
+  (setq drag-stuff-modifier 'control)
 
 Meta and Shift keys as modifier:
-(setq drag-stuff-modifier '(meta shift))
+  (setq drag-stuff-modifier '(meta shift))

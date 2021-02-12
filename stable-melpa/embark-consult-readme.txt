@@ -2,8 +2,8 @@ This package provides integration between Embark and Consult. To
 use it, arrange for it to be loaded once both of those are loaded:
 
 (with-eval-after-load 'consult
-(with-eval-after-load 'embark
-(require 'embark-consult)))
+  (with-eval-after-load 'embark
+    (require 'embark-consult)))
 
 Some of the functionality here was previously contained in Embark
 itself:
@@ -41,4 +41,4 @@ If you don't want the minor mode automatically on and prefer to
 trigger the consult previews manually use this instead:
 
 (define-key embark-collect-mode-map (kbd "C-j")
-#'embark-consult-preview-at-point)
+  #'embark-consult-preview-at-point)

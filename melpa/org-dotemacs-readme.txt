@@ -107,7 +107,7 @@ org-dotemacs.el will look for two command line options when loaded: error-handli
 `org-dotemacs-error-handling') and tag-match (for specifying which headers to load).
 For example if you enter the following at the command line:
 
-emacs --error-handling retry --tag-match "settings-mouse"
+       emacs --error-handling retry --tag-match "settings-mouse"
 
 Then only code blocks tagged "settings" but not "mouse" will be loaded, and org-dotemacs will try to reload any
 blocks that have errors. If no tag-match is specified on the command line then `org-dotemacs-conditional-tags'

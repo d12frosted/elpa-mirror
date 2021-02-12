@@ -15,8 +15,8 @@ Usage:
 
 The same as `persp-mode':
 
-(require 'persp-fr)    ;; was (require 'persp-mode)
-(persp-fr-start)
+   (require 'persp-fr)    ;; was (require 'persp-mode)
+   (persp-fr-start)
 
 Customization:
 
@@ -26,13 +26,13 @@ RET 'persp-fr' RET.
 Useful keys to change to next/previous perspective, as in most user
 interfaces using tabs, and to move current perspective to left/right:
 
-(global-set-key [(control prior)] 'persp-prev)
-(global-set-key [(control next)] 'persp-next)
-(global-set-key [(control meta next)] 'persp-fr-move-right)
-(global-set-key [(control meta prior)] 'persp-fr-move-left)
+    (global-set-key [(control prior)] 'persp-prev)
+    (global-set-key [(control next)] 'persp-next)
+    (global-set-key [(control meta next)] 'persp-fr-move-right)
+    (global-set-key [(control meta prior)] 'persp-fr-move-left)
 
 
 Tested only under Linux / Gnome.  Feedback welcome!
 
 Thanks to:
-- Naoya Yamashita, for fixing some lint issues
+   - Naoya Yamashita, for fixing some lint issues

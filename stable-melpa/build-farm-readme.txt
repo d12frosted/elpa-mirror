@@ -1,9 +1,9 @@
 This package provides Emacs interface for Hydra and Cuirass (Nix and
 Guix build farms):
 
-https://hydra.nixos.org            (Hydra)
-https://hydra.gnu.org              (Hydra)
-https://berlin.guixsd.org          (Cuirass)
+  https://hydra.nixos.org            (Hydra)
+  https://hydra.gnu.org              (Hydra)
+  https://berlin.guixsd.org          (Cuirass)
 
 Set `build-farm-url' variable to choose what build farm you wish to
 use.

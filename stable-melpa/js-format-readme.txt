@@ -1,9 +1,9 @@
 Send region or buffer to a format server (will setup localhost:58000 by default), with below formatters:
-- [standard](http://standardjs.com)  # zero config
-- [jsbeautify](https://github.com/beautify-web/js-beautify)  # little config
-- [esformatter](https://github.com/millermedeiros/esformatter)  # total config
-- [airbnb](https://github.com/airbnb/babel-preset-airbnb)  # **Airbnb** style formatter
-- [stylefmt](https://github.com/morishitter/stylefmt)  # css
+ - [standard](http://standardjs.com)  # zero config
+ - [jsbeautify](https://github.com/beautify-web/js-beautify)  # little config
+ - [esformatter](https://github.com/millermedeiros/esformatter)  # total config
+ - [airbnb](https://github.com/airbnb/babel-preset-airbnb)  # **Airbnb** style formatter
+ - [stylefmt](https://github.com/morishitter/stylefmt)  # css
 
 ## Install
 
@@ -11,14 +11,14 @@ Send region or buffer to a format server (will setup localhost:58000 by default)
 
 2. `js-format.el` is available via MELPA and can be installed via
 
-M-x package-install js-format
+    M-x package-install js-format
 
-If failed, ensure you have
+ If failed, ensure you have
 
-(add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
-;; or (add-to-list 'load-path "folder-of-js-format.el")
+    (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
+    ;; or (add-to-list 'load-path "folder-of-js-format.el")
 
-line in your package config.
+ line in your package config.
 
 3. It should auto setup for the first time of use, according to different style package's setup command.
 
@@ -30,27 +30,27 @@ After `(require 'js-format)`, below function can be used:
 With C-u prefix, you can also setup the server (buffer local).
 To make different mode using different format style, you can add below:
 
-;; automatically switch to JSB-CSS style using jsbeautify-css as formatter
-(after-load 'css-mode
-(add-hook 'css-mode-hook
-(lambda()
-(js-format-setup "jsb-css"))))
+ ;; automatically switch to JSB-CSS style using jsbeautify-css as formatter
+ (after-load 'css-mode
+   (add-hook 'css-mode-hook
+         (lambda()
+           (js-format-setup "jsb-css"))))
 
 The style name is from "styles.json" file, you can change the key to any.
 
 `js-format-mark-statement` to mark current statement under point (only in `js2-mode').
 
 `js-format-region` to try mark current statement, pass it to `js-format-server', then get
-back the result code to replace the statement.
+ back the result code to replace the statement.
 
 `js-format-buffer` to format the whole buffer.
 
 You may also want to bind above func to keys:
 
-(global-set-key (kbd "M-,") 'js-format-mark-statement)
-(global-set-key (kbd "C-x j j") 'js-format-region)
-(global-set-key (kbd "C-x j b") 'js-format-buffer)
-(global-set-key (kbd "C-x j s") 'js-format-setup)
+    (global-set-key (kbd "M-,") 'js-format-mark-statement)
+    (global-set-key (kbd "C-x j j") 'js-format-region)
+    (global-set-key (kbd "C-x j b") 'js-format-buffer)
+    (global-set-key (kbd "C-x j s") 'js-format-setup)
 
 ## Add new format style guide
 

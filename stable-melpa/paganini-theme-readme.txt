@@ -1,1 +1,1 @@
-A colorful, dark and warm Emacs theme.
+ A colorful, dark and warm Emacs theme.

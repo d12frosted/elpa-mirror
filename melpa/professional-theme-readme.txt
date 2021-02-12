@@ -1,5 +1,5 @@
 
-Port of Narayanan Lyer's Vim professional Theme.
+ Port of Narayanan Lyer's Vim professional Theme.
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

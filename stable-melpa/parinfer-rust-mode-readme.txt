@@ -15,21 +15,21 @@ For example, if we start off with the cursor before `(foo`
 
 ```
 |(foo
-bar)
+   bar)
 ```
 
 and the user inserts a space
 ```
 _|(foo
-bar)
+   bar)
 ```
 
 then parinfer will maintain, infer, that a space is needed in front of `bar)` to maintain
 indentation
 
 ```
-|(foo
-_bar)
+ |(foo
+   _bar)
 ```
 
 Indent Mode gives you full control of indentation, while Parinfer corrects or inserts
@@ -39,20 +39,20 @@ Now the cursor is before `4`
 
 ```
 (foo [1 2 3]
-|4 5 6)
+    |4 5 6)
 ```
 
 and the user inserts a space
 ```
 (foo [1 2 3]
-_|4 5 6)
+    _|4 5 6)
 ```
 
 then parinfer will adjust the `]` and move it down to the follow line to enclose the 4 5 6
 
 ```
 (foo [1 2 3
-|4 5 6])
+     |4 5 6])
 ```
 
 Smart Mode is like Indent Mode, but it tries to preserve the structure too. This roughly
@@ -64,15 +64,15 @@ The cursor is before `(+`
 ```
 (let [x (fn [])]
 |(+ 1
-2)
-x)
+    2)
+ x)
 ```
 
 and the user add several spaces to the sexp
 ```
 (let [x (fn [])]
-________|(+ 1
-2)
+ ________|(+ 1
+    2)
 x)
 ```
 
@@ -81,8 +81,8 @@ structure
 
 ```
 (let [x (fn []
-|(+ 1
-_________2))]
+        |(+ 1
+   _________2))]
 x)
 ```
 

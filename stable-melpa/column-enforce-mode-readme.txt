@@ -1,11 +1,11 @@
 
-Highlight text that extends beyond a certain column (80 column rule)
+ Highlight text that extends beyond a certain column (80 column rule)
 
-By default, text after 80 columns will be highlighted in red
+ By default, text after 80 columns will be highlighted in red
 
-To customize behavior, see `column-enforce-column' and `column-enforce-face'
+ To customize behavior, see `column-enforce-column' and `column-enforce-face'
 
-To enable: M-x column-enforce-mode
+ To enable: M-x column-enforce-mode
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 

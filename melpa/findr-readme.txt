@@ -35,17 +35,17 @@ Two other entrypoints let you to act on regexps within the files:
 Change Log:
 
 0.1: Added prompt to open file, if uses so chooses, following
-request and code example from Thomas Plass.
+     request and code example from Thomas Plass.
 0.2: Made `findr' not stop after the first match, based on the
-request by Thomas Plass.
-Also, fixed a minor bug where findr was finding additional
-files that were not correct matches, based on
-`file-relative-name' misuse (I had to add the 2nd arg to it).
+     request by Thomas Plass.
+     Also, fixed a minor bug where findr was finding additional
+     files that were not correct matches, based on
+     `file-relative-name' misuse (I had to add the 2nd arg to it).
 0.3: Added a `sit-for' for redisplay reasons.
-Modifications as suggested by RMS: e.g. docstring.
+     Modifications as suggested by RMS: e.g. docstring.
 0.4  Added `findr-query-replace', courtesy of Dan Nelsen.
 0.5  Fixed spelling and minor bug in `findr-query-replace' when
-non-byte-compiled.
+     non-byte-compiled.
 0.6  http://groups.google.com/groups?selm=cxjhfml4b2c.fsf_-_%40acs5.bu.edu :
 From: David Bakhash (cadet@bu.edu)
 Subject: Re: latest version of findr.el (5)
@@ -67,7 +67,7 @@ dave
 0.7: Added `findr-search', broke `findr' by Patrick Anderson
 0.8: fixed 0.7 breakage by Patrick Anderson
 0.9: Added customize variables, added file/directory filter regexp
-minibuffer history by attila.lendvai@gmail.com
+     minibuffer history by attila.lendvai@gmail.com
 0.9.1: Updated date at the top of the file, added .svn filter
 0.9.2: Added support for skipping symlinks by attila.lendvai@gmail.com
 0.9.3: Smarter minibuffer handling by attila.lendvai@gmail.com

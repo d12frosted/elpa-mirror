@@ -8,5 +8,5 @@ to be bound to shortcut key like F12 to toggle it off-and-on.
 To install manually, clone the git repo somewhere and put it in your
 load-path, e.g., add something like this to your init.el:
 (add-to-list 'load-path
-"~/.emacs.d/equake/")
-(require 'equake)
+            "~/.emacs.d/equake/")
+ (require 'equake)

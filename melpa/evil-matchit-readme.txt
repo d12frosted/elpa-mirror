@@ -8,8 +8,8 @@ The shortcut "%" is defined in `evilmi-shortcut'.  It's both the name of
 text object and shortcut of `evilmi-jump-items'.  Some people prefer set it
 to "m".  Here is sample setup:
 
-(setq evilmi-shortcut "m")
-(global-evil-matchit-mode 1)
+  (setq evilmi-shortcut "m")
+  (global-evil-matchit-mode 1)
 
 See https://github.com/redguardtoo/evil-matchit/ for help.
 

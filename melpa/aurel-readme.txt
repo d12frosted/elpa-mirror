@@ -4,16 +4,16 @@ Repository (AUR) <https://aur.archlinux.org/>.
 
 To manually install the package, add the following to your init-file:
 
-(add-to-list 'load-path "/path/to/aurel-dir")
-(autoload 'aurel-package-info "aurel" nil t)
-(autoload 'aurel-package-search "aurel" nil t)
-(autoload 'aurel-package-search-by-name "aurel" nil t)
-(autoload 'aurel-maintainer-search "aurel" nil t)
-(autoload 'aurel-installed-packages "aurel" nil t)
+  (add-to-list 'load-path "/path/to/aurel-dir")
+  (autoload 'aurel-package-info "aurel" nil t)
+  (autoload 'aurel-package-search "aurel" nil t)
+  (autoload 'aurel-package-search-by-name "aurel" nil t)
+  (autoload 'aurel-maintainer-search "aurel" nil t)
+  (autoload 'aurel-installed-packages "aurel" nil t)
 
 Also set a directory where downloaded packages will be put:
 
-(setq aurel-download-directory "~/aur")
+  (setq aurel-download-directory "~/aur")
 
 To search for packages, use `aurel-package-search' or
 `aurel-maintainer-search' commands.  If you know the name of a
@@ -44,7 +44,7 @@ unvote/unsubscribe) in a package info buffer (you should have an AUR
 account for that).  To add information about "Voted"/"Subscribed"
 status, use the following:
 
-(setq aurel-aur-user-package-info-check t)
+  (setq aurel-aur-user-package-info-check t)
 
 For full description and screenshots, see
 <https://github.com/alezost/aurel>.

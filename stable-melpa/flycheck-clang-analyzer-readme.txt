@@ -12,5 +12,5 @@ irony and rtags flycheck checkers.
 ;; Setup
 
 (with-eval-after-load 'flycheck
-(require 'flycheck-clang-analyzer)
-(flycheck-clang-analyzer-setup))
+   (require 'flycheck-clang-analyzer)
+   (flycheck-clang-analyzer-setup))

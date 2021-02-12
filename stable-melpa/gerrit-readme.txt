@@ -4,11 +4,11 @@ This package contains
 * (`gerrit-upload-transient` and `gerrit-download`)
 
 * `gerrit-dashboard`, function for displaying a dashboard, similar to the
-one of the gerrit webinterface
+  one of the gerrit webinterface
 
 * open-reviews section for the magit-status buffer (`magit-gerrit-insert-status`)
 
-section local keymap:
-RET - opens change in browser
+    section local keymap:
+       RET - opens change in browser
 
-See the README.md on the github project page for more information.
+ See the README.md on the github project page for more information.

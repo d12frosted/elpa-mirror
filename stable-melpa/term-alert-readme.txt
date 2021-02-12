@@ -9,7 +9,7 @@ to see if that command has finished.  So you use term-alert:
 
 1. In the terminal buffer, run `term-alert-next-command-toggle'.
 2. When the running command finishes, a notification pops up to
-tell you.
+   tell you.
 
 If you want to get notifications for all commands in a buffer (not
 just the current/next one), run `term-alert-all-toggle', and all
@@ -25,10 +25,10 @@ set up correctly).
 
 Set up keybindings:
 
-;; I'm on a UK keyboard, where # and ' are next to Enter
-(define-key term-raw-map (kbd "C-#") 'term-alert-next-command-toggle)
-(define-key term-raw-map (kbd "M-#") 'term-alert-all-toggle)
-(define-key term-raw-map (kbd "C-'") 'term-alert-runtime)
+    ;; I'm on a UK keyboard, where # and ' are next to Enter
+    (define-key term-raw-map (kbd "C-#") 'term-alert-next-command-toggle)
+    (define-key term-raw-map (kbd "M-#") 'term-alert-all-toggle)
+    (define-key term-raw-map (kbd "C-'") 'term-alert-runtime)
 
 You can change what happens when an alert occurs by setting the
 variable `term-alert-function'.

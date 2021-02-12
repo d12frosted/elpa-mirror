@@ -10,9 +10,9 @@ and activate with
 or
 
 (use-package amsreftex
-:ensure t
-:config
-(amsreftex-turn-on))
+  :ensure t
+  :config
+  (amsreftex-turn-on))
 
 - Manually: download `amsreftex.el`, put it somewhere in your load-path
 and then do
@@ -52,20 +52,20 @@ for `amsrefs` databases (.ltb files).  Customize
 By default, `amsreftex-sort-bibliography` sorts by author
 then year.  The list of fields to sort by is contained in
 `amsreftex-sort-fields' so do
-(setq amsreftex-sort-fields '("author" "title"))
+    (setq amsreftex-sort-fields '("author" "title"))
 to sort by author then title.
 
 You can choose how to sort names by setting
 `amsreftex-sort-name-parts'.  By default, we sort by last
 name then initial.  Do
-(setq amsreftex-sort-name-parts '(first last))
+    (setq amsreftex-sort-name-parts '(first last))
 in the unlikely event that you want to sort by first name
 then last name!
 
 NEWS:
 v0.2: -`amsreftex-sort-bibliography' added
-- Rename turn-on/off-amsreftex to amsreftex-turn-on/off to
-placate package-lint.
+      - Rename turn-on/off-amsreftex to amsreftex-turn-on/off to
+        placate package-lint.
 v0.1: initial release.
 
 Implementation:

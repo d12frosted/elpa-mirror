@@ -2,10 +2,10 @@ Org-babel support for prolog.
 
 To activate ob-prolog add the following to your init.el file:
 
-(add-to-list 'load-path "/path/to/ob-prolog-dir")
-(org-babel-do-load-languages
-'org-babel-load-languages
-'((prolog . t)))
+ (add-to-list 'load-path "/path/to/ob-prolog-dir")
+ (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((prolog . t)))
 
 It is unnecessary to add the directory to the load path if you
 install using the package manager.

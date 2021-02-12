@@ -22,7 +22,7 @@ npm install -g colorguard
 
 Add following to your Emacs init.el file:
 (eval-after-load 'flycheck
-'(progn
-(require 'flycheck-css-colorguard)
-(flycheck-add-next-checker 'css-csslint
-'css-colorguard 'append)))
+  '(progn
+     (require 'flycheck-css-colorguard)
+     (flycheck-add-next-checker 'css-csslint
+                                'css-colorguard 'append)))

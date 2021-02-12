@@ -12,8 +12,8 @@ Installation:
 
 The simple way is to use package.el:
 
-M-x package-install counsel-codesearch
+  M-x package-install counsel-codesearch
 
 Example config:
 
-(require 'counsel-codesearch)
+  (require 'counsel-codesearch)

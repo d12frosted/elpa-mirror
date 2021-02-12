@@ -35,15 +35,15 @@ your emacs initialization file and define some key bindings, for example:
 (global-set-key "\M-P" 'fastnav-sprint-backward)
 
 This library can be originally found at:
-http://www.emacswiki.org/emacs/FastNav
+  http://www.emacswiki.org/emacs/FastNav
 Package.el compatible version can be found at
-https://github.com/gleber/fastnav.el
+  https://github.com/gleber/fastnav.el
 it has been uploaded to ELPA and Marmalade
 
 ; Changes Log:
-2010-02-05: Fix for org mode, all commands were broken.
-Fix for electric characters in certain modes.
-2010-02-11: Yet another minor fix for switching to next/previous char.
-2010-05-28: Added sprint commands.
-2010-08-06: Make fastnav compatible with package.el
-2011-08-10: Add fastnav- prefix to autoload-ed functions
+  2010-02-05: Fix for org mode, all commands were broken.
+              Fix for electric characters in certain modes.
+  2010-02-11: Yet another minor fix for switching to next/previous char.
+  2010-05-28: Added sprint commands.
+  2010-08-06: Make fastnav compatible with package.el
+  2011-08-10: Add fastnav- prefix to autoload-ed functions

@@ -14,7 +14,7 @@ Installation:
 
 The simple way is to use package.el:
 
-M-x package-install projectile-codesearch
+    M-x package-install projectile-codesearch
 
 Or, copy projectile-codesearch.el to some location in your emacs
 load path. Then add "(require 'projectile-codesearch)" to your
@@ -22,4 +22,4 @@ emacs initialization (.emacs, init.el, or something).
 
 Example config:
 
-(require 'projectile-codesearch)
+  (require 'projectile-codesearch)

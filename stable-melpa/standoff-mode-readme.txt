@@ -21,13 +21,13 @@ Usage:
 
 Add the following lines to your Emacs config:
 
-(add-to-list 'load-path "/path/to/standoff-mode-directory")
+ (add-to-list 'load-path "/path/to/standoff-mode-directory")
 
-(autoload 'standoff-mode "standoff-mode.el"
-"Mode for creating and editing stand-off markup, aka external markup" t)
+ (autoload 'standoff-mode "standoff-mode.el"
+   "Mode for creating and editing stand-off markup, aka external markup" t)
 
-;; auto-load standoff-mode for files ending with .TEI-P5.xml:
-(add-to-list 'auto-mode-alist '("\\.TEI-P5.xml$" . standoff-mode))
+ ;; auto-load standoff-mode for files ending with .TEI-P5.xml:
+ (add-to-list 'auto-mode-alist '("\\.TEI-P5.xml$" . standoff-mode))
 
 You also have to choose a backend for storing the annotations. See
 standoff-dummy.el or standoff-json-file.el for instructions.

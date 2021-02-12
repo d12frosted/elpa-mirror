@@ -19,5 +19,5 @@ Usage:
 
 ; and activate the mode with
 (unkillable-scratch 1)
-- or -
+  - or -
 M-x unkillable-scratch

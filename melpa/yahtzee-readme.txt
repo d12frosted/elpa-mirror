@@ -22,15 +22,15 @@ Configuration variables:
 
 The user might want to set the following variables
 (see associated docstrings)
-- `yahtzee-output-file-base'
-- `yahtzee-fields-alist'      for adding extra fields
-- `yahtzee-players-names'     set names of players
-use (setq-default yahtzee-players-names ...)
+  - `yahtzee-output-file-base'
+  - `yahtzee-fields-alist'      for adding extra fields
+  - `yahtzee-players-names'     set names of players
+                                use (setq-default yahtzee-players-names ...)
 
 Note:
-personally I don't enjoy playing with "Yahtzee bonuses" and "Joker rules"
-so they are not implemented (even thought they are simple to include).
-Only the "63 bonus" is available (see `yahtzee-compute-bonus').
-Furthermore, some scores differ from the official ones.  Changing all
-this can be done by simply modifying the corresponding functions in the
-definition of `yahtzee-fields-alist'.
+   personally I don't enjoy playing with "Yahtzee bonuses" and "Joker rules"
+   so they are not implemented (even thought they are simple to include).
+   Only the "63 bonus" is available (see `yahtzee-compute-bonus').
+   Furthermore, some scores differ from the official ones.  Changing all
+   this can be done by simply modifying the corresponding functions in the
+   definition of `yahtzee-fields-alist'.

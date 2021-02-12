@@ -14,4 +14,4 @@ See https://shopify.github.io/shadowenv/ for more details.
 Here's an example use-package configuration:
 
 (use-package shadowenv
-:hook (after-init . shadowenv-global-mode))
+  :hook (after-init . shadowenv-global-mode))

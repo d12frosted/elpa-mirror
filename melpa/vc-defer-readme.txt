@@ -10,16 +10,16 @@ Usage is simple: require the package, configure the list of
 problematic backends (there are no defaults), and enable
 `vc-defer-mode' (a global mode).  For example:
 
-(require 'vc-defer)
-(add-to-list 'vc-defer-backends 'Hg)
-(vc-defer-mode)
+  (require 'vc-defer)
+  (add-to-list 'vc-defer-backends 'Hg)
+  (vc-defer-mode)
 
 ...or a similar use-package incantation:
 
-(use-package vc-defer
-:config
-(add-to-list 'vc-defer-backends 'Hg)
-(vc-defer-mode))
+  (use-package vc-defer
+    :config
+    (add-to-list 'vc-defer-backends 'Hg)
+    (vc-defer-mode))
 
 The `vc-defer' customization group used for a similar effect.
 
@@ -48,7 +48,7 @@ A thread in r/emacs on Reddit claimed that disabling VC mode was
 "The biggest performance improvement to Emacs I've made in years":
 http://redd.it/4c0mi3, and it amounts to:
 
-(remove-hook 'find-file-hooks 'vc-find-file-hook)
+  (remove-hook 'find-file-hooks 'vc-find-file-hook)
 
 This hack, however totally disables VC mode for the affected files.
 For example, later invoking "M-x vc-diff" results in an error.

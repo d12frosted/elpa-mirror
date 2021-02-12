@@ -19,11 +19,11 @@ least because it's awesome.
 
 Currently most motions are supported, and it's easy to define your own easymotions.
 
-(evilem-define (kbd "SPC w") 'evil-forward-word-begin)
+  (evilem-define (kbd "SPC w") 'evil-forward-word-begin)
 
 To define easymotions for all motions that evil defines by default, add
 
-(evilem-default-keybindings "SPC")
+  (evilem-default-keybindings "SPC")
 
 This binds all motions under the prefix `SPC` in `evil-motion-state-map`. This is not done by default for motions defined manually. You will need to supply the prefix.
 

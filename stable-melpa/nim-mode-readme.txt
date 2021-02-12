@@ -8,25 +8,25 @@ this information was outdated):
 
 Activate nimsuggest dedicated mode on `nim-mode':
 
-(add-hook 'nim-mode-hook 'nimsuggest-mode)
+  (add-hook 'nim-mode-hook 'nimsuggest-mode)
 
 Below configs are can be optional
 
 The `nimsuggest-path' will be set the value of (executable-find "nimsuggest")
 automatically.
 
-(setq nimsuggest-path "path/to/nimsuggest")
+  (setq nimsuggest-path "path/to/nimsuggest")
 
 You may need to install below packages if you haven't installed yet.
 
 -- Auto completion --
 You can omit if you configured company-mode on 'prog-mode-hook
-(add-hook 'nimsuggest-mode-hook 'company-mode)  ; auto complete package
+  (add-hook 'nimsuggest-mode-hook 'company-mode)  ; auto complete package
 
 -- Auto lint --
 You can omit if you configured flycheck-mode on 'prog-mode-hook
 
-(add-hook 'nimsuggest-mode-hook 'flycheck-mode) ; auto linter package
+  (add-hook 'nimsuggest-mode-hook 'flycheck-mode) ; auto linter package
 
 See more information at https://github.com/nim-lang/nim-mode
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

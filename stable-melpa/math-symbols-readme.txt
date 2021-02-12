@@ -63,9 +63,9 @@ GPL.
 | subscript                | partial   | no       | yes      |
 | superscript              | partial   | no       | yes      |
 
-※ `greeks' include greek symbols and nabla (ϵ, ϑ, ϰ, ϕ, ϱ, ϖ, ∇).
+ ※ `greeks' include greek symbols and nabla (ϵ, ϑ, ϰ, ϕ, ϱ, ϖ, ∇).
 
 * References
 
 - UTR#25 UNICODE SUPPORT FOR MATHEMATICS
-(http://www.unicode.org/reports/tr25/tr25-6.html)
+  (http://www.unicode.org/reports/tr25/tr25-6.html)

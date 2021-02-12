@@ -5,16 +5,16 @@ the previously visible buffer part after each scroll.
 Installation: Put this library somewhere in your load-path, or
 install via M-x package-list-packages.  Then add to your init-file:
 
-(require 'on-screen)
+  (require 'on-screen)
 
 To invoke on-screen globally for all buffers, also add
 
-(on-screen-global-mode +1)
+  (on-screen-global-mode +1)
 
 Alternatively you can use the buffer local version `on-screen-mode'.
 For example, add this line to your init file:
 
-(add-hook 'Info-mode-hook 'on-screen-mode)
+  (add-hook 'Info-mode-hook 'on-screen-mode)
 
 to enable it in all Info buffers.
 
@@ -26,10 +26,10 @@ want to define mode specific settings by using buffer local
 variables.  For example, to use non intrusive fringe markers by
 default, but transparent overlays in w3m, you would add
 
-(add-hook
-'w3m-mode-hook
-(defun my-w3m-setup-on-screen ()
-(setq-local on-screen-highlight-method 'shadow)))
+  (add-hook
+   'w3m-mode-hook
+   (defun my-w3m-setup-on-screen ()
+     (setq-local on-screen-highlight-method 'shadow)))
 
 to your .emacs.
 

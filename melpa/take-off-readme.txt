@@ -20,12 +20,12 @@ Installation
 Available in the melpa repository.
 If not present, add melpa to the list of archives (in your .emacs):
 
-(add-to-list 'package-archives
-'("melpa" . "http://melpa.milkbox.net/packages/") t)
+  (add-to-list 'package-archives
+    '("melpa" . "http://melpa.milkbox.net/packages/") t)
 
 Download and install:
 
-M-x package-install RET take-off RET
+  M-x package-install RET take-off RET
 
 
 ### Manual installaion
@@ -34,22 +34,22 @@ Make sure the web-server dependency is installed https://github.com/eschulte/ema
 
 In your emacs configuration file (.emacs) :
 
-(add-to-list 'load-path "~/.emacs.d/take-off")
+    (add-to-list 'load-path "~/.emacs.d/take-off")
 
 Run
 ---
 
 Loading take-off:
 
-(require 'take-off)
+    (require 'take-off)
 
 The following starts the web-server:
 
-(take-off-start <port>)
+    (take-off-start <port>)
 
 To stop the server:
 
-(take-off-stop)
+    (take-off-stop)
 
 emacs will be available at : `http://<local address>:<port>/`
 

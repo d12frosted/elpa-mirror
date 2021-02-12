@@ -6,8 +6,8 @@ Commands:
 
 Below are complete command list:
 
-`ac-complete-with-helm'
-Select auto-complete candidates by `helm'.
+ `ac-complete-with-helm'
+   Select auto-complete candidates by `helm'.
 
 Customizable Options:
 

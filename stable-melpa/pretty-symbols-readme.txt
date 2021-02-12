@@ -8,7 +8,7 @@ and Arthur Danskin's pretty-mode[2]; but aims to replace those modes, and
 the many others scattered on emacswiki.org, with:
 
 * A simple framework that others can use to define their own symbol
-replacements,
+  replacements,
 * that doesn't turn on all sorts of crazy mathematical symbols by default,
 * is a self-contained project under source control, open to contributions,
 * available from the MELPA package repository[4].

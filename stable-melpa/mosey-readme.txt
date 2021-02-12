@@ -48,11 +48,11 @@ You might even want to rebind your keys to 'em, maybe like this:
 `:bind*' form:
 
 (use-package mosey
-:bind* (
-;; My personal favorites
-("C-a" . mosey-backward-bounce)
-("C-e" . mosey-forward-bounce)
-))
+  :bind* (
+          ;; My personal favorites
+          ("C-a" . mosey-backward-bounce)
+          ("C-e" . mosey-forward-bounce)
+          ))
 
 ;; Make your own moseys
 
@@ -60,12 +60,12 @@ It's easy to make your own moseys with defmosey, somethin' like
 this (this example uses functions from smartparens):
 
 (defmosey '(beginning-of-line
-back-to-indentation
-sp-backward-sexp  ; Moves across lines
-sp-forward-sexp   ; Moves across lines
-mosey-goto-end-of-code
-mosey-goto-beginning-of-comment-text)
-:prefix "lisp")
+            back-to-indentation
+            sp-backward-sexp  ; Moves across lines
+            sp-forward-sexp   ; Moves across lines
+            mosey-goto-end-of-code
+            mosey-goto-beginning-of-comment-text)
+  :prefix "lisp")
 
 That'll cook up six functions for ya:
 
@@ -80,8 +80,8 @@ Then maybe you'd want to use 'em in your `emacs-lisp-mode',
 somethin' like this:
 
 (bind-keys :map emacs-lisp-mode-map
-("C-a" . mosey-lisp-backward-cycle)
-("C-e" . mosey-lisp-forward-cycle))
+           ("C-a" . mosey-lisp-backward-cycle)
+           ("C-e" . mosey-lisp-forward-cycle))
 
 ; Credits
 

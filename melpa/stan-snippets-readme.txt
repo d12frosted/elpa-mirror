@@ -4,4 +4,4 @@ and all functions.
 
 Usage:
 
-(require 'stan-snippets)
+  (require 'stan-snippets)

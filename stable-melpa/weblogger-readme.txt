@@ -19,7 +19,7 @@ site :) )
 
 To set up your profile:
 
-M-x weblogger-setup-weblog RET
+   M-x weblogger-setup-weblog RET
 
 You will be prompted for some information.  The URL should be the
 one that uses the API you're using, not the one you would use for
@@ -37,4 +37,4 @@ typing an entry.  For instance, in wordpress, use
 
 You can also set up your server information using
 
-M-x customize-group RET weblogger RET
+   M-x customize-group RET weblogger RET

@@ -6,8 +6,8 @@ your init.el/.emacs:
 Using ELPA (When installed from `list-packages'):
 (require 'pungi)
 (add-hook #'python-mode-hook
-'(lambda ()
-(pungi:setup-jedi)))
+          '(lambda ()
+             (pungi:setup-jedi)))
 
 Verification that everything is setup correctly:
 When visiting a python buffer, move the cursor over a symbol

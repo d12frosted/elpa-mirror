@@ -11,5 +11,5 @@ Apart from that, these bindings expose the full power of rtags.
 
 Enable like this:
 
-(require 'rtags-xref)
-(add-hook 'c-mode-common-hook #'rtags-xref-enable)
+  (require 'rtags-xref)
+  (add-hook 'c-mode-common-hook #'rtags-xref-enable)

@@ -17,10 +17,10 @@ cursor to K/2 - K/4.
 Below is an illustration of how you can use binary line navigation to reach
 character `e' at column 10 from character `b' at column 34 in four steps:
 
-________________|    bln-backward-half (\\[bln-backward-half])
-________|                     bln-backward-half (\\[bln-backward-half])
-|___                           bln-forward-half  (\\[bln-forward-half])
-_|                          bln-backward-half (\\[bln-backward-half])
+                  ________________|    bln-backward-half (\\[bln-backward-half])
+         ________|                     bln-backward-half (\\[bln-backward-half])
+        |___                           bln-forward-half  (\\[bln-forward-half])
+           _|                          bln-backward-half (\\[bln-backward-half])
 ..........e.......................b.....
 
 This approach requires at most log(N) invocations to move from any position
@@ -46,10 +46,10 @@ Navigation using thse keybindings is rather cumbersome
 however. Using the `hydra` package, the following bindings
 provide a much more convenient interface:
 
-(defhydra hydra-bln ()
-\"Binary line navigation mode\"
-(\"j\" bln-backward-half \"Backward in line\")
-(\"k\" bln-forward-half \"Forward in line\")
-(\"u\" bln-backward-half-v \"Backward in window\")
-(\"i\" bln-forward-half-v \"Forward in window\"))
-(define-key bln-mode-map (kbd \"M-j\") 'hydra-bln/body)
+    (defhydra hydra-bln ()
+      \"Binary line navigation mode\"
+      (\"j\" bln-backward-half \"Backward in line\")
+      (\"k\" bln-forward-half \"Forward in line\")
+      (\"u\" bln-backward-half-v \"Backward in window\")
+      (\"i\" bln-forward-half-v \"Forward in window\"))
+    (define-key bln-mode-map (kbd \"M-j\") 'hydra-bln/body)

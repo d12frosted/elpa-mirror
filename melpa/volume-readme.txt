@@ -1,8 +1,8 @@
 To use this program, put this file in your `load-path',
 and put the following autoload in your ~/.emacs:
 
-(autoload 'volume "volume"
-"Tweak your sound card volume." t)
+  (autoload 'volume "volume"
+    "Tweak your sound card volume." t)
 
 Then type `M-x volume <RET>' to run the program.  Of course,
 use `M-x customize-group <RET> volume <RET>' to customize it.

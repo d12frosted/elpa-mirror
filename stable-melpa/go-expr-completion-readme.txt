@@ -5,7 +5,7 @@
 To use this package, add these lines to your init.el or .emacs file:
 
 (with-eval-after-load 'go-mode
-(define-key go-mode-map (kbd "C-c C-c") 'go-expr-completion))
+  (define-key go-mode-map (kbd "C-c C-c") 'go-expr-completion))
 
 ----------------------------------------------------------------
 

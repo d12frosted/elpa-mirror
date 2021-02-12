@@ -34,8 +34,8 @@ buffer list.
 
 Here is an illustration of what happens in a couple of different scenarios:
 
-Minibuffer    Actual
-display       buffer list
+                   Minibuffer    Actual
+                   display       buffer list
 --------------------------------------------
 Original:                        A B C D E
 Forward flip:      A [B] C D E   B A C D E
@@ -69,7 +69,7 @@ INSTALLATION
 
 To load iflipb, store iflipb.el in your Emacs load path and put
 
-(require 'iflipb)
+  (require 'iflipb)
 
 in your .emacs file or equivalent.
 
@@ -78,20 +78,20 @@ use M-h and M-H (i.e., M-S-h) since I don't use the standard binding of M-h
 (mark-paragraph) and M-h is quick and easy to press. To install iflipb with
 M-h and M-H as keyboard bindings, put something like this in your .emacs:
 
-(global-set-key (kbd "M-h") 'iflipb-next-buffer)
-(global-set-key (kbd "M-H") 'iflipb-previous-buffer)
+  (global-set-key (kbd "M-h") 'iflipb-next-buffer)
+  (global-set-key (kbd "M-H") 'iflipb-previous-buffer)
 
 Another alternative is to use C-tab and C-S-tab:
 
-(global-set-key (kbd "<C-tab>") 'iflipb-next-buffer)
-(global-set-key
-(if (featurep 'xemacs) (kbd "<C-iso-left-tab>") (kbd "<C-S-iso-lefttab>"))
-'iflipb-previous-buffer)
+  (global-set-key (kbd "<C-tab>") 'iflipb-next-buffer)
+  (global-set-key
+   (if (featurep 'xemacs) (kbd "<C-iso-left-tab>") (kbd "<C-S-iso-lefttab>"))
+   'iflipb-previous-buffer)
 
 Or perhaps use functions keys like F9 and F10:
 
-(global-set-key (kbd "<f10>") 'iflipb-next-buffer)
-(global-set-key (kbd "<f9>")  'iflipb-previous-buffer)
+  (global-set-key (kbd "<f10>") 'iflipb-next-buffer)
+  (global-set-key (kbd "<f9>")  'iflipb-previous-buffer)
 
 
 ABOUT

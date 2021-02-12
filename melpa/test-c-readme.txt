@@ -17,7 +17,7 @@ You can customize the compilation and run commands from the source
 itself using special definitions lines (very similar to Emacs file
 local variables in concept). Those lines must be of the form:
 
-/*= var: value =*/
+                     /*= var: value =*/
 
 The 'compile' and 'run' variable are the one used respectively for
 compiling and running the file. You can refer to other variable

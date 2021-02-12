@@ -12,7 +12,7 @@ just turn the mode off.
 
 To install the dimming keywords add this to your init file:
 
-(global-dim-autoload-cookies-mode 1)
+   (global-dim-autoload-cookies-mode 1)
 
 You might even want to dim the cookie lines some more by using
 a foreground color in `dim-autoload-cookies-line' that is very
@@ -29,5 +29,5 @@ Use the command `cycle-autoload-cookies-visibility' to cycle
 between the three possible styles in the current buffer, like
 so:
 
-,-> Show -> Dim -> Hide -.
-'------------------------'
+   ,-> Show -> Dim -> Hide -.
+   '------------------------'

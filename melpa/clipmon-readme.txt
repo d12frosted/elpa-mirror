@@ -10,10 +10,10 @@ into a clipboard manager for text - you can then use a package like
 browse-kill-ring or helm-ring to view and manage your clipboard history.
 
 **Warning (2015-12-24): in an X-windows system with clipmon-mode on, bringing
-up a graphical menu (e.g. Shift+Mouse-1) will cause Emacs to hang. See
-http://debbugs.gnu.org/cgi/bugreport.cgi?bug=22214.
-X-windows starts a timer when checking the contents of the clipboard, which
-interferes with the clipmon timer.**
+  up a graphical menu (e.g. Shift+Mouse-1) will cause Emacs to hang. See
+  http://debbugs.gnu.org/cgi/bugreport.cgi?bug=22214.
+  X-windows starts a timer when checking the contents of the clipboard, which
+  interferes with the clipmon timer.**
 
 Update (2016-01-27): in an X-windows system, Clipmon now uses the clipboard
 instead of the primary selection - see https://github.com/bburns/clipmon/issues/4.
@@ -25,34 +25,34 @@ you can just select text to add it to Emacs.
 
 Here's a diagram - text flows from the top to the bottom:
 
-+---------------------+
-|   Other programs    |+
-+---------------------+|
-+---------------------+
-/
-+-----------+
-|  System   |
-| clipboard |
-+-----------+
-OS                /
----------------------------------------------------
-Emacs           /
-/
-+--------------+      +---------------+
-| clipmon-mode |......|  autoinsert   |
-+--------------+      +---------------+
-|                     .
-+-----------+               .
-| Emacs     ++              .
-| kill ring ++       +--------------+
-+-----------+|+      |  transforms  |
-+-----------+|      +--------------+
-+-----------+             .
-|                  .
-| yank             . autoinsert
-+--------------------------+
-|      Emacs buffer        |
-+--------------------------+
+                 +---------------------+
+                 |   Other programs    |+
+                 +---------------------+|
+                  +---------------------+
+                          /
+                    +-----------+
+                    |  System   |
+                    | clipboard |
+                    +-----------+
+    OS                /
+    ---------------------------------------------------
+    Emacs           /
+                   /
+          +--------------+      +---------------+
+          | clipmon-mode |......|  autoinsert   |
+          +--------------+      +---------------+
+                  |                     .
+            +-----------+               .
+            | Emacs     ++              .
+            | kill ring ++       +--------------+
+            +-----------+|+      |  transforms  |
+             +-----------+|      +--------------+
+              +-----------+             .
+                     |                  .
+                     | yank             . autoinsert
+                +--------------------------+
+                |      Emacs buffer        |
+                +--------------------------+
 
 
 The solid line is turned on and off with `clipmon-mode', while the dotted
@@ -71,7 +71,7 @@ the system clipboard and add any new text it sees to the kill ring.)
 
 It's simplest to use the package manager:
 
-M-: (package-install 'clipmon)
+    M-: (package-install 'clipmon)
 
 It will then be ready to use, and will also be available the next time you
 start Emacs.
@@ -91,7 +91,7 @@ is on, since it only monitors the system clipboard.
 You can turn off autoinsert with the same command - to add a keybinding to it
 add something like this to your init file:
 
-(global-set-key (kbd "<M-f2>") 'clipmon-autoinsert-toggle)
+    (global-set-key (kbd "<M-f2>") 'clipmon-autoinsert-toggle)
 
 You can also turn it on and off from the Options menu.
 
@@ -118,8 +118,8 @@ Note that when you turn on autoinsert, it also turns on clipmon-mode, to
 capture text to the kill ring, but if you'd like to turn on clipmon-mode
 automatically, you can add this to your init file:
 
-;; monitor the system clipboard and add any changes to the kill ring
-(add-to-list 'after-init-hook 'clipmon-mode-start)
+    ;; monitor the system clipboard and add any changes to the kill ring
+    (add-to-list 'after-init-hook 'clipmon-mode-start)
 
 You can also use the package browse-kill-ring to manage the kill ring - you
 can install it with M-: (package-install 'browse-kill-ring), then call
@@ -132,8 +132,8 @@ that this might involve writing sensitive information like passwords to the
 disk - although you could always delete such text from the kill ring with
 `browse-kill-ring-delete'). To do so, add this to your init file:
 
-;; persist the kill ring between sessions
-(add-to-list 'after-init-hook 'clipmon-persist)
+    ;; persist the kill ring between sessions
+    (add-to-list 'after-init-hook 'clipmon-persist)
 
 This will use Emacs's savehist library to save the kill ring, both at the end
 of the session and at set intervals. However, savehist also saves various
@@ -141,17 +141,17 @@ other settings by default, including the minibuffer history - see
 `savehist-mode' for more details. To change the autosave interval, add
 something like this:
 
-(setq savehist-autosave-interval (* 5 60)) ; save every 5 minutes (default)
+    (setq savehist-autosave-interval (* 5 60)) ; save every 5 minutes (default)
 
 The kill ring has a fixed number of entries which you can set, depending on
 how much history you want to save between sessions:
 
-(setq kill-ring-max 500) ; default is 60 in Emacs 24.4
+    (setq kill-ring-max 500) ; default is 60 in Emacs 24.4
 
 To see how much space the kill-ring is taking up, you can call this function:
 
-(clipmon-kill-ring-total)
-=> 29670 characters
+    (clipmon-kill-ring-total)
+    => 29670 characters
 
 
 ;; Options
@@ -159,28 +159,28 @@ To see how much space the kill-ring is taking up, you can call this function:
 
 There are various options you can set with customize:
 
-(customize-group 'clipmon)
+    (customize-group 'clipmon)
 
 or set them in your init file - these are the default values:
 
-(setq clipmon-timer-interval 2)       ; check system clipboard every n secs
-(setq clipmon-autoinsert-sound t)     ; t for included beep, or path or nil
-(setq clipmon-autoinsert-color "red") ; color of cursor when autoinsert is on
-(setq clipmon-autoinsert-timeout 5)   ; stop autoinsert after n mins inactivity
+    (setq clipmon-timer-interval 2)       ; check system clipboard every n secs
+    (setq clipmon-autoinsert-sound t)     ; t for included beep, or path or nil
+    (setq clipmon-autoinsert-color "red") ; color of cursor when autoinsert is on
+    (setq clipmon-autoinsert-timeout 5)   ; stop autoinsert after n mins inactivity
 
 before inserting the text, transformations are performed on it in this order:
 
-(setq clipmon-transform-trim t)        ; remove leading whitespace
-(setq clipmon-transform-remove         ; remove text matching this regexp
-"\\[[0-9][0-9]?[0-9]?\\]\\|\\[citation needed\\]\\|\\[by whom?\\]")
-(setq clipmon-transform-prefix "")     ; add to start of text
-(setq clipmon-transform-suffix "\n\n") ; add to end of text
-(setq clipmon-transform-function nil)  ; additional transform function
+    (setq clipmon-transform-trim t)        ; remove leading whitespace
+    (setq clipmon-transform-remove         ; remove text matching this regexp
+          "\\[[0-9][0-9]?[0-9]?\\]\\|\\[citation needed\\]\\|\\[by whom?\\]")
+    (setq clipmon-transform-prefix "")     ; add to start of text
+    (setq clipmon-transform-suffix "\n\n") ; add to end of text
+    (setq clipmon-transform-function nil)  ; additional transform function
 
 
 ;; Todo
 ----------------------------------------------------------------------------
 
 - Prefix with C-u to set a target point, then allow cut/copy/pasting from
-within Emacs, eg to take notes from another buffer, or move text elsewhere.
+  within Emacs, eg to take notes from another buffer, or move text elsewhere.
 

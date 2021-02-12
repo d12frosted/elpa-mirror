@@ -10,7 +10,7 @@ Installation:
 
 The simple way is to use package.el:
 
-M-x package-install verona-mode
+  M-x package-install verona-mode
 
 Or, copy verona-mode.el to some location in your Emacs load
 path.  Then add "(require 'verona-mode)" to your Emacs initialization
@@ -18,4 +18,4 @@ path.  Then add "(require 'verona-mode)" to your Emacs initialization
 
 Example config:
 
-(require 'verona-mode)
+  (require 'verona-mode)

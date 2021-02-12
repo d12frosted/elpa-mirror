@@ -14,7 +14,7 @@ Installation:
 
 The simple way is to use package.el:
 
-M-x package-install codesearch
+  M-x package-install codesearch
 
 Or, copy codesearch.el to some location in your emacs load
 path. Then add "(require 'codesearch)" to your emacs initialization
@@ -22,7 +22,7 @@ path. Then add "(require 'codesearch)" to your emacs initialization
 
 Example config:
 
-(require 'codesearch)
+  (require 'codesearch)
 
 This elisp extension assumes you've got the codesearch tools -
 csearch and cindex - installed. See the codesearch-csearch and

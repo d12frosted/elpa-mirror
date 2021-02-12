@@ -3,8 +3,8 @@ Cargo project.
 
 # Setup
 
-(with-eval-after-load 'rust-mode
-(add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
+    (with-eval-after-load 'rust-mode
+      (add-hook 'flycheck-mode-hook #'flycheck-rust-setup))
 
 # Usage
 

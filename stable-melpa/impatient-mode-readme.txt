@@ -7,7 +7,7 @@ the local server.  There will be a listing of all the buffers that
 currently have impatient-mode enabled.  This is likely to be found
 here:
 
-http://localhost:8080/imp/
+  http://localhost:8080/imp/
 
 Except for html-mode buffers, buffers will be prettied up with
 htmlize before being sent to clients.  This can be toggled at any

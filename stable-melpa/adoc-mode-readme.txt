@@ -33,23 +33,23 @@ to read this.
 ## Install the traditional way
 
 1. Copy the file adoc-mode.el to a directory in your load-path, e.g.
-\~/.emacs.d. To add a specific directory to the load path, add this to our
-initialization file (probably ~/.emacs): `(add-to-list 'load-path
-"mypath")`
+   \~/.emacs.d. To add a specific directory to the load path, add this to our
+   initialization file (probably ~/.emacs): `(add-to-list 'load-path
+   "mypath")`
 
 2. Add either of the two following lines to your initialization file. The
-first only loads adoc mode when necessary, the 2nd always during startup
-of Emacs.
+   first only loads adoc mode when necessary, the 2nd always during startup
+   of Emacs.
 
-* `(autoload 'adoc-mode "adoc-mode" nil t)`
+   * `(autoload 'adoc-mode "adoc-mode" nil t)`
 
-* `(require 'adoc-mode)`
+   * `(require 'adoc-mode)`
 
 3. Optionally byte compile adoc-mode.el for faster startup: `M-x
-byte-compile`
+   byte-compile`
 
 4. To use adoc mode, call adoc-mode after you opened an AsciiDoc file: `M-x
-adoc-mode`
+   adoc-mode`
 
 
 ## Install via Emacs Lisp Packages (on Marmalade)
@@ -67,14 +67,14 @@ packages library is already included. adoc-mode is on the
 Each of the following is optional
 
 * According to AsciiDoc manual, .txt is the standard file extension of
-AsciiDoc files. Add the following to your initialization file to open all
-.txt files with adoc-mode as major mode automatically: `(add-to-list
-'auto-mode-alist (cons "\\.txt\\'" 'adoc-mode))`
+  AsciiDoc files. Add the following to your initialization file to open all
+  .txt files with adoc-mode as major mode automatically: `(add-to-list
+  'auto-mode-alist (cons "\\.txt\\'" 'adoc-mode))`
 
 * If your default face is a fixed pitch (monospace) face, but in AsciiDoc
-files you liked to have normal text with a variable pitch face,
-buffer-face-mode is for you: `(add-hook 'adoc-mode-hook (lambda()
-(buffer-face-mode t)))`
+  files you liked to have normal text with a variable pitch face,
+  buffer-face-mode is for you: `(add-hook 'adoc-mode-hook (lambda()
+  (buffer-face-mode t)))`
 
 
 # Features

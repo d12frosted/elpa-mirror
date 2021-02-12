@@ -17,15 +17,15 @@ partly typed identifiers, and functions for managing tags table files.
 The following interactive functions are included in jtags mode:
 
 - jtags-member-completion:      find all completions of the partly typed
-method or variable name at point
+                                method or variable name at point
 - jtags-show-declaration:       look up and display the declaration of the
-indentifier at point
+                                indentifier at point
 - jtags-show-documentation:     look up and display the Javadoc for the
-indentifier at point
+                                indentifier at point
 - jtags-update-tags-files:      update all tags table files with the latest
-source code changes
+                                source code changes
 - jtags-update-this-tags-file:  update the tags table file in which the
-class in the current buffer is tagged
+                                class in the current buffer is tagged
 - jtags-clear-caches:           clear internal caches, see section Caching
 
 Throughout this file, the two terms DECLARATION and DEFINITION are used
@@ -58,13 +58,13 @@ your project's source code is located.
 GNU Emacs example:
 
 (setq tags-table-list '("c:/java/jdk1.8.0/src"
-"c:/projects/tetris/src"))
+                        "c:/projects/tetris/src"))
 (setq tags-revert-without-query 't)
 
 XEmacs example:
 
 (setq tag-table-alist '(("\\.java$" . "c:/java/jdk1.8.0/src")
-("\\.java$" . "c:/projects/tetris/src")))
+                        ("\\.java$" . "c:/projects/tetris/src")))
 (setq tags-auto-read-changed-tag-files 't)
 
 Type `M-x jtags-update-tags-files' to update all of the files in the tags

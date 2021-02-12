@@ -10,9 +10,9 @@ By default, any command when executed sets the current state to
 `lisp state`.
 
 For example, to slurp three times while in normal state:
-<leader> 3 s
+    <leader> 3 s
 Or to wrap a symbol in parenthesis then slurping two times:
-<leader> w 2 s
+    <leader> w 2 s
 
 Key Binding  | Function
 -------------|------------------------------------------------------------

@@ -13,5 +13,5 @@ is turned into this:
 
 The latest obfusurl.el is always available from:
 
-<URL:https://github.com/davep/obfusurl.el>
-<URL:https://github.com/%64%61%76%65%70/%6f%62%66%75%73%75%72%6c%2e%65%6c>
+  <URL:https://github.com/davep/obfusurl.el>
+  <URL:https://github.com/%64%61%76%65%70/%6f%62%66%75%73%75%72%6c%2e%65%6c>

@@ -18,5 +18,5 @@ Floor, Boston, MA 02110-1301, USA.
 
 Features that might be required by this library:
 
-`vterm'
-`project'
+ `vterm'
+ `project'

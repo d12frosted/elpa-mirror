@@ -9,20 +9,20 @@ hamburger menu is particularly useful when
 
 Add the [MELPA](https://melpa.org/) repository to Emacs.  Then run:
 
-M-x package-install hamburger-menu
+    M-x package-install hamburger-menu
 
 Afterwards, configure as follows:
 
 1. Disable `menu-bar-mode', because having two menus is superfluous:
 
-M-x customize-set-variable RET menu-bar-mode RET n
-M-x customize-save-customized
+       M-x customize-set-variable RET menu-bar-mode RET n
+       M-x customize-save-customized
 
 2. Add the following to your `~/.emacs'.  This will place the
-hamburger menu button at the very left of your mode line:
+   hamburger menu button at the very left of your mode line:
 
-(require 'hamburger-menu)
-(setq mode-line-front-space 'hamburger-menu-mode-line)
+       (require 'hamburger-menu)
+       (setq mode-line-front-space 'hamburger-menu-mode-line)
 
 3. Restart Emacs.  Enjoy.
 

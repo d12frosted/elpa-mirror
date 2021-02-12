@@ -10,11 +10,11 @@ Usage:
 
 Enable the package in elisp and ielm modes as follows:
 
-(require 'elisp-slime-nav) ;; optional if installed via package.el
-(dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
-(add-hook hook 'turn-on-elisp-slime-nav-mode))
+  (require 'elisp-slime-nav) ;; optional if installed via package.el
+  (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
+    (add-hook hook 'turn-on-elisp-slime-nav-mode))
 
 Known issues:
 
-When navigating into Emacs' C source, "M-," will not be bound to
-the same command, but "M-*" will typically do the trick.
+  When navigating into Emacs' C source, "M-," will not be bound to
+  the same command, but "M-*" will typically do the trick.

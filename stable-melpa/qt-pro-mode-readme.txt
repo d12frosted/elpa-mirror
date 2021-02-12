@@ -13,5 +13,5 @@ Add the following to your .emacs to install:
 or:
 
 (use-package qt-pro-mode
-:ensure t
-:mode ("\\.pro\\'" "\\.pri\\'"))
+  :ensure t
+  :mode ("\\.pro\\'" "\\.pri\\'"))

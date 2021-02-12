@@ -25,19 +25,19 @@ and add the following to your init.el:
 Or, with use-package:
 
 (use-package register-quicknav
-:bind (("C-<f5>"   . register-quicknav-prev-register)
-("C-<f6>"   . register-quicknav-next-register)
-("C-<f7>"   . register-quicknav-point-to-unused-register)
-("C-S-<f7>" . register-quicknav-clear-current-register)))
+  :bind (("C-<f5>"   . register-quicknav-prev-register)
+         ("C-<f6>"   . register-quicknav-next-register)
+         ("C-<f7>"   . register-quicknav-point-to-unused-register)
+         ("C-S-<f7>" . register-quicknav-clear-current-register)))
 
 Variables:
 
 * `register-quicknav-buffer-only': Cycle only through position registers in
-current buffer.  Can be safely set as file- and/or dir-local variable.
+  current buffer.  Can be safely set as file- and/or dir-local variable.
 * `register-quicknav-unused-registers-begin': Beginning of the range that is
-used to search for unused registers.  Defaults to `?A'.
+  used to search for unused registers.  Defaults to `?A'.
 * `register-quicknav-unused-registers-end': End of the range that is used to
-search for unused registers.  Defaults to `?Z'.
+  search for unused registers.  Defaults to `?Z'.
 
 Differences to similar packages:
 
@@ -51,6 +51,6 @@ Differences to similar packages:
 [register-channel](https://github.com/YangZhao11/register-channel):
 
 * Is limited to 5 position registers by default, needs an extra keybinding
-for each additional register.
+  for each additional register.
 * Can't be restricted to the current buffer.
 * Has no ability to jump to the next/previous register.

@@ -1,5 +1,5 @@
-This package is a datamuse api or Ispell backends for fixing typos, getting suggestions and
-finding the correct word with ~helm~ or ~company-mode~.
+ This package is a datamuse api or Ispell backends for fixing typos, getting suggestions and
+ finding the correct word with ~helm~ or ~company-mode~.
 
 This package relies on the third-party Datamuse's /sug API (doc: https://www.datamuse.com/api/)
 if you select to use datamuse backend.  The API is free to use any usage and without API key has

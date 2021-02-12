@@ -6,13 +6,13 @@ definitions on their own.
 Basically it's a multi-phase adoption process:
 
 1. `tree-sitter-langs' populates global registries of grammars and queries.
-These global registries are defined by `tree-sitter-mode' and other
-`tree-sitter'-based language-agnostic minor modes, to extend existing
-major modes.
+   These global registries are defined by `tree-sitter-mode' and other
+   `tree-sitter'-based language-agnostic minor modes, to extend existing
+   major modes.
 
 2. New `tree-sitter'-based language-specific minor modes use these global
-registries to extend existing major modes.
+   registries to extend existing major modes.
 
 3. Major modes adopt new `tree-sitter'-based features, and distribute the
-grammars and queries on their own. They can either put these definitions
-in the global registries, or keep using them only internally.
+   grammars and queries on their own. They can either put these definitions
+   in the global registries, or keep using them only internally.

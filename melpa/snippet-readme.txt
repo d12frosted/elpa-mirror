@@ -9,13 +9,13 @@ template via `snippet-next-field' and `snippet-prev-field'.
 For example, the following template might be a useful while editing
 HTML:
 
-<a href="$$">$$</a>
+  <a href="$$">$$</a>
 
 This template might be useful for python developers.  In this
 example, reasonable defaults have been supplied:
 
-for $${element} in $${sequence}:
-match = $${regexp}.search($${element})
+  for $${element} in $${sequence}:
+      match = $${regexp}.search($${element})
 
 When a template is inserted into a buffer (could be triggered by an
 abbrev expansion, or simply bound to some key), point is moved to
@@ -46,9 +46,9 @@ the snippet, unless the user has specified a place within the
 template with the `snippet-exit-identifier' ("$." by default).  For
 example:
 
-if ($${test} {
-$.
-}
+  if ($${test} {
+      $.
+  }
 
 Indentation can be controlled on a per line basis by including the
 `snippet-indent' string within the template.  Most often one would
@@ -56,7 +56,7 @@ include this at the beginning of a line; however, there are times
 when indentation is better performed in other parts of the line.
 The following shows how to use the functionality:
 
-if ($${test}) {
-$>this line would be indented
-this line will be indented after being inserted$>
-}
+  if ($${test}) {
+  $>this line would be indented
+  this line will be indented after being inserted$>
+  }

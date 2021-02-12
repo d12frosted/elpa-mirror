@@ -1,10 +1,10 @@
-Emacs Grails mode with Projectile for project-management.
-- You can run pre-defined or arbitrary Grails commans for a project.
-- You can also search service, domain or controller files against the current file or project.
-- You can browse documentation (wiki, guide, apidocs).
-- You can search plugins by tag or query string.
-- Menubar contributions if you make use of the menubar.
-- The default keymap prefix is `C-c ;` (see `grails-projectile-keymap-prefix`)
+ Emacs Grails mode with Projectile for project-management.
+   - You can run pre-defined or arbitrary Grails commans for a project.
+   - You can also search service, domain or controller files against the current file or project.
+   - You can browse documentation (wiki, guide, apidocs).
+   - You can search plugins by tag or query string.
+   - Menubar contributions if you make use of the menubar.
+   - The default keymap prefix is `C-c ;` (see `grails-projectile-keymap-prefix`)
 
 You can customize the mode using `M-x customize-group` [RET] grails-projectile.
 

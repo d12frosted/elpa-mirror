@@ -4,10 +4,10 @@ sekka.el is a client for Sekka IME server.
 
 you might want to enable IME:
 
-(require 'sekka)
-(global-sekka-mode 1)
+ (require 'sekka)
+ (global-sekka-mode 1)
 
 To enable sticky-shift with ";" key:
 
-(setq sekka-sticky-shift t)
+ (setq sekka-sticky-shift t)
 

@@ -9,8 +9,8 @@ You can install via [melpa](http://melpa.org).
 
 If installing this package manually:
 
-(add-to-list 'load-path "/path/to/bing-dict.el")
-(require 'bing-dict)
+    (add-to-list 'load-path "/path/to/bing-dict.el")
+    (require 'bing-dict)
 
 ## Usage
 You can call `bing-dict-brief` to get the explanations of you query. The results
@@ -22,7 +22,7 @@ Here is the screenshot:
 
 You should probably give this command a key binding:
 
-(global-set-key (kbd "C-c d") 'bing-dict-brief)
+    (global-set-key (kbd "C-c d") 'bing-dict-brief)
 
 ## Customization
 You can set the value of `bing-dict-add-to-kill-ring` to control whether the
@@ -37,7 +37,7 @@ Also, sometimes synonyms and antonyms could be useful, set
 `'antonym` only shows the corresponding part, and setting it to `'both` will
 show both synonyms and antonyms at the same time:
 
-(setq bing-dict-show-thesaurus 'both)
+    (setq bing-dict-show-thesaurus 'both)
 
 The variable `bing-dict-pronunciation-style` controls how the pronunciation is
 shown. By default, its value is `'us` and the pronunciation is shown using
@@ -45,11 +45,11 @@ shown. By default, its value is `'us` and the pronunciation is shown using
 Alphabet" (IPA) by setting its value to `'uk` (In fact, any value other than
 `'us` will work):
 
-(setq bing-dict-pronunciation-style 'uk)
+    (setq bing-dict-pronunciation-style 'uk)
 
 You can also build your own vocabulary by saving all your queries and their
 results into `bing-dict-vocabulary-save` (which points to
-`~/.emacs.d/var/bing-dict/vocabulary.org` by default):
+                                                `~/.emacs.d/var/bing-dict/vocabulary.org` by default):
 
 (setq bing-dict-vocabulary-save t)
 
@@ -81,7 +81,7 @@ Add the following script to your `PATH` to look up a word from the command line:
 (add-to-list 'load-path "/path/to/bing-dict.el")
 (require 'bing-dict)
 (defun main ()
-(bing-dict-brief (format "%s" command-line-args-left) t))
+  (bing-dict-brief (format "%s" command-line-args-left) t))
 (main)
 ```
 
@@ -97,28 +97,28 @@ options: using the external browser to do this or contributing to the repo by
 adding more parsers. For the first option, the following code could partly
 achieve the goal:
 
-(browse-url
-(concat "http://www.bing.com/dict/search?mkt=zh-cn&q="
-(url-hexify-string
-(read-string "Query: "))))
+    (browse-url
+     (concat "http://www.bing.com/dict/search?mkt=zh-cn&q="
+           (url-hexify-string
+            (read-string "Query: "))))
 
 If you prefer to browse inside Emacs, use `eww` instead:
 
 ```
 (eww-browse-url
-(concat "http://www.bing.com/dict/search?mkt=zh-cn&q="
-(url-hexify-string
-(read-string "Query: "))))
+  (concat "http://www.bing.com/dict/search?mkt=zh-cn&q="
+          (url-hexify-string
+           (read-string "Query: "))))
 ```
 
 Or open the web page in other window:
 
 ```
 (switch-to-buffer-other-window
-(eww-browse-url
-(concat "http://www.bing.com/dict/search?mkt=zh-cn&q="
-(url-hexify-string
-(read-string "Query: ")))))
+ (eww-browse-url
+  (concat "http://www.bing.com/dict/search?mkt=zh-cn&q="
+          (url-hexify-string
+           (read-string "Query: ")))))
 ```
 
 For the second option, you're welcome to contribute to this extension by adding

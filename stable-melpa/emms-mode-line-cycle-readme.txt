@@ -1,7 +1,7 @@
-This is a minor mode for updating `emms-mode-line-string' cyclically within specified width
-with `emms-playing-time-display'.
+ This is a minor mode for updating `emms-mode-line-string' cyclically within specified width
+ with `emms-playing-time-display'.
 
-It is useful for long track titles.
+ It is useful for long track titles.
 
 Further information is available from:
 https://github.com/momomo5717/emms-mode-line-cycle  (README.org)
@@ -23,9 +23,9 @@ Setup:
 
 User Option:
 
-+ `emms-mode-line-cycle-max-width'
-+ `emms-mode-line-cycle-any-width-p'
-+ `emms-mode-line-cycle-additional-space-num'
-+ `emms-mode-line-cycle-use-icon-p'
-+ `emms-mode-line-cycle-current-title-function'
-+ `emms-mode-line-cycle-velocity'
+ + `emms-mode-line-cycle-max-width'
+ + `emms-mode-line-cycle-any-width-p'
+ + `emms-mode-line-cycle-additional-space-num'
+ + `emms-mode-line-cycle-use-icon-p'
+ + `emms-mode-line-cycle-current-title-function'
+ + `emms-mode-line-cycle-velocity'

@@ -5,7 +5,7 @@ This Flycheck extension provides an `ats2' syntax checker.
 Add the following to your init file:
 
 (with-eval-after-load 'flycheck
-(flycheck-ats2-setup))
+  (flycheck-ats2-setup))
 
 The ATSHOME environment variable may need to be set from within Emacs:
 

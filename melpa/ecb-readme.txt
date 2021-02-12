@@ -9,14 +9,14 @@ The informational windows can contain:
 - A directory tree,
 - a list of source files in the current directory,
 - a list of functions/classes/methods/... in the current file, (ECB uses
-the Semantic Bovinator, or Imenu, or etags, for getting this list so all
-languages supported by any of these tools are automatically supported by
-ECB too)
+  the Semantic Bovinator, or Imenu, or etags, for getting this list so all
+  languages supported by any of these tools are automatically supported by
+  ECB too)
 - a history of recently visited files,
 - the Speedbar and
 - output from compilation (the "*compilation*" window) and other modes like
-help, grep etc. or whatever a user defines to be displayed in this
-window.
+  help, grep etc. or whatever a user defines to be displayed in this
+  window.
 
 As an added bonus, ECB makes sure to keep these informational windows visible,
 even when you use C-x 1 and similar commands.
@@ -27,27 +27,27 @@ ready-made window layouts to choose from.
 
 Here is an ascii-screenshot of what ECB offers you:
 
-------------------------------------------------------------------
-|              |                                                 |
-| Directories  |                                                 |
-|              |                                                 |
-|--------------|                                                 |
-|              |                                                 |
-| Sources      |                                                 |
-|              |                                                 |
-|--------------|                   Edit-area                     |
-|              |    (can be splitted in several edit-windows)    |
-| Methods/Vars |                                                 |
-|              |                                                 |
-|--------------|                                                 |
-|              |                                                 |
-| History      |                                                 |
-|              |                                                 |
-------------------------------------------------------------------
-|                                                                |
-|                 Compilation-window (optional)                  |
-|                                                                |
-------------------------------------------------------------------
+  ------------------------------------------------------------------
+  |              |                                                 |
+  | Directories  |                                                 |
+  |              |                                                 |
+  |--------------|                                                 |
+  |              |                                                 |
+  | Sources      |                                                 |
+  |              |                                                 |
+  |--------------|                   Edit-area                     |
+  |              |    (can be splitted in several edit-windows)    |
+  | Methods/Vars |                                                 |
+  |              |                                                 |
+  |--------------|                                                 |
+  |              |                                                 |
+  | History      |                                                 |
+  |              |                                                 |
+  ------------------------------------------------------------------
+  |                                                                |
+  |                 Compilation-window (optional)                  |
+  |                                                                |
+  ------------------------------------------------------------------
 
 
 ; Installation
@@ -57,34 +57,34 @@ following line to your .emacs file:
 
 If you want autoloading ECB after first start:
 
-(require 'ecb-autoloads)
+   (require 'ecb-autoloads)
 
 or if you want loading the complete ECB:
 
-(require 'ecb)
+   (require 'ecb)
 
 Optional: You can byte-compile ECB with `ecb-byte-compile' after the
-ECB-package is loaded
+          ECB-package is loaded
 
 
 ; Requirements
 
 - Semantic, author-version between >= 1.4
-(http://cedet.sourceforge.net/semantic.shtml).
+  (http://cedet.sourceforge.net/semantic.shtml).
 - Eieio, author-version >= 0.17
-(http://cedet.sourceforge.net/eieio.shtml).
+  (http://cedet.sourceforge.net/eieio.shtml).
 - speedbar, author version >= 0.14beta1
-(http://cedet.sourceforge.net/speedbar.shtml)
+  (http://cedet.sourceforge.net/speedbar.shtml)
 - Optional: If Java code is edited the ECB works best when the JDEE package
-(http://sunsite.auc.dk/jde) is installed.
+  (http://sunsite.auc.dk/jde) is installed.
 
 
 ; Activation
 
 ECB is either activated and started by calling
-M-x ecb-activate
+   M-x ecb-activate
 or
-via the menu "Tools --> Start Code Browser (ECB)"
+   via the menu "Tools --> Start Code Browser (ECB)"
 
 ECB can also be (de)activated/toggled by M-x ecb-minor-mode.
 

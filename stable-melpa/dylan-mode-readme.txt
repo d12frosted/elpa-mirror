@@ -24,10 +24,10 @@ Bugs / to-do list
 
 * See bugs on GitHub: https://github.com/dylan-lang/dylan-mode/issues
 * Don't highlight macro variables (e.g., "?x:" in ?x:name) as keywords.
-Just highlight the "x" as a variable binding.
+  Just highlight the "x" as a variable binding.
 * Customize fill-column to some acceptable value so that auto-filled
-comments are filled at a standard place > 70.  I use 89 myself.
+  comments are filled at a standard place > 70.  I use 89 myself.
 * It appears as though some code matches only some of the graphic-character
-BNF when it should match all graphic chars.
+  BNF when it should match all graphic chars.
 
 

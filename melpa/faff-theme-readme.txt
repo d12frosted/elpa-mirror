@@ -8,6 +8,6 @@ Comments and change suggestions welcome
 
 To use it, put the following in your Emacs configuration file:
 
-(load-theme 'faff t)
+  (load-theme 'faff t)
 
 Requirements: Emacs 24.
