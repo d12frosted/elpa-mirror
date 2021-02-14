@@ -11,7 +11,7 @@
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://github.com/clojure-emacs/clojure-mode
 ;; Package-Version: 20201126.1558
-;; Package-Commit: 53ef8ac076ae7811627fbdd408e519ab7fca9a0b
+;; Package-Commit: f26379bc18b089e794d4c3c3a2756c8c9ec0882f
 ;; Keywords: languages clojure clojurescript lisp
 ;; Version: 5.13.0-snapshot
 ;; Package-Requires: ((emacs "25.1"))

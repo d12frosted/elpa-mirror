@@ -313,6 +313,7 @@ missing package or change you would like to see.
     syslog-mode
     table (built-in table.el)
     telephone-line
+    terraform-mode
     term
     tomatinho
     transient (pop-up windows like Magit's)

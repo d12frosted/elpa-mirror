@@ -1,0 +1,19 @@
+(kubel .
+       [(20210212 2154)
+	((transient
+	  (0 1 0))
+	 (emacs
+	  (25 3))
+	 (dash
+	  (2 12 0))
+	 (s
+	  (1 2 0))
+	 (yaml-mode
+	  (0 0 14)))
+	"Control Kubernetes with limited permissions" single
+	((:commit . "5d5639cac5d98bca74cad44b5a1e128df77050bd")
+	 (:authors
+	  ("Adrien Brochard"))
+	 (:maintainer "Adrien Brochard")
+	 (:keywords "kubernetes" "k8s" "tools" "processes")
+	 (:url . "https://github.com/abrochard/kubel"))])

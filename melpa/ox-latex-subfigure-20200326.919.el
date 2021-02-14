@@ -5,7 +5,7 @@
 ;; Author: Quang Linh LE <linktohack@gmail.com>
 ;; URL: http://github.com/linktohack/ox-latex-subfigure
 ;; Package-Version: 20200326.919
-;; Package-Commit: be0a0dde62fde8cdf8d72b6968344906aa8c6f54
+;; Package-Commit: c4487689309dddff3228603754b69ab381cfa5dc
 ;; Version: 0.0.2
 ;; Keywords: convenience ox latex subfigure org org-mode
 ;; Package-Requires: ((emacs "24.4") (org "9.0"))

@@ -1,0 +1,11 @@
+(flymake-aspell .
+		[(20210213 1822)
+		 ((emacs
+		   (26 1)))
+		 "Aspell checker for flymake" single
+		 ((:commit . "8cd2e747c3f3c1a0879f66b42db090b2878af508")
+		  (:authors
+		   ("Leo Gaskin" . "leo.gaskin@brg-feldkirchen.at"))
+		  (:maintainer "Leo Gaskin" . "leo.gaskin@brg-feldkirchen.at")
+		  (:keywords "wp" "flymake" "spell" "aspell")
+		  (:url . "https://github.com/leotaku/flycheck-aspell"))])

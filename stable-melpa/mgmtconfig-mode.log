@@ -5,18 +5,25 @@ Source:  https://github.com/purpleidea/mgmt.git
 Updating /mnt/store/melpa/working/mgmtconfig-mode/
 Command '(env LC_ALL=C git submodule update --init --recursive)' exited with non-zero status 1: Fetching origin
 warning: unable to rmdir 'vendor/github.com/coreos/etcd': Directory not empty
+warning: unable to rmdir 'vendor/github.com/docker/go-connections': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/go-grpc-prometheus': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/grpc-gateway': Directory not empty
-HEAD is now at ccbaca2 gopath: Remove this unused directory
+HEAD is now at 6a61774 docker: Bump docker dependencies, add containerd
+Synchronizing submodule url for 'vendor/github.com/containerd/containerd'
 Synchronizing submodule url for 'vendor/github.com/docker/distribution'
 Synchronizing submodule url for 'vendor/github.com/docker/docker'
-Synchronizing submodule url for 'vendor/github.com/docker/go-connections'
 Synchronizing submodule url for 'vendor/github.com/hashicorp/go-multierror'
 Synchronizing submodule url for 'vendor/github.com/ugorji/go'
 Synchronizing submodule url for 'vendor/go.etcd.io/etcd'
 Synchronizing submodule url for 'vendor/google.golang.org/grpc'
 Synchronizing submodule url for 'vendor/gopkg.in/fsnotify.v1'
 Synchronizing submodule url for 'vendor/honnef.co/go/augeas'
+From https://github.com/purpleidea/distribution
+ * branch              a778dab7d0f94fcd7950a8eb439fa1accb445839 -> FETCH_HEAD
+Submodule path 'vendor/github.com/docker/distribution': checked out 'a778dab7d0f94fcd7950a8eb439fa1accb445839'
+From https://github.com/purpleidea/docker
+ * branch                  6c6f9d8cf0bae08f7c91c6794906eba3ebac9205 -> FETCH_HEAD
+Submodule path 'vendor/github.com/docker/docker': checked out '6c6f9d8cf0bae08f7c91c6794906eba3ebac9205'
 error: Your local changes to the following files would be overwritten by checkout:
 	.github/ISSUE_TEMPLATE.md
 	.github/PULL_REQUEST_TEMPLATE.md

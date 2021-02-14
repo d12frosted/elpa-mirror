@@ -5,33 +5,40 @@ Source:  https://github.com/minad/consult.git
 Updating /mnt/store/melpa/working/consult/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/consult/
-  to /tmp/consultrjiE5r/consult-20210211.2232
+  to /tmp/consultbShUnM/consult-20210213.2014
+    consult-compile.el -> consult-compile.el
     consult-flymake.el -> consult-flymake.el
     consult-icomplete.el -> consult-icomplete.el
     consult-selectrum.el -> consult-selectrum.el
     consult.el -> consult.el
     consult.texi -> consult.texi
-Created /tmp/consultrjiE5r/consult-20210211.2232/consult.info
-Created consult-20210211.2232.tar containing:
-  consult-20210211.2232/
-  consult-20210211.2232/consult-flymake.el
-  consult-20210211.2232/consult-icomplete.el
-  consult-20210211.2232/consult-pkg.el
-  consult-20210211.2232/consult-selectrum.el
-  consult-20210211.2232/consult.el
-  consult-20210211.2232/consult.info
-  consult-20210211.2232/dir
-Built consult in 13.375s, finished at Fri Feb 12 03:23:12 2021
+Created /tmp/consultbShUnM/consult-20210213.2014/consult.info
+Created consult-20210213.2014.tar containing:
+  consult-20210213.2014/
+  consult-20210213.2014/consult-compile.el
+  consult-20210213.2014/consult-flymake.el
+  consult-20210213.2014/consult-icomplete.el
+  consult-20210213.2014/consult-pkg.el
+  consult-20210213.2014/consult-selectrum.el
+  consult-20210213.2014/consult.el
+  consult-20210213.2014/consult.info
+  consult-20210213.2014/dir
+Built consult in 10.981s, finished at Sun Feb 14 03:44:24 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  311 Feb 12 03:23 packages/consult-20210211.2232.entry
-220K -rw-r--r-- 1 root root 220K Feb 12 03:23 packages/consult-20210211.2232.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 12 03:23 packages/consult-badge.svg
-4.0K -rw-r--r-- 1 root root 3.8K Feb 12 03:23 packages/consult-flycheck-20210210.1821.el
-4.0K -rw-r--r-- 1 root root  412 Feb 12 03:23 packages/consult-flycheck-20210210.1821.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 12 03:23 packages/consult-flycheck-badge.svg
-4.0K -rw-r--r-- 1 root root  135 Feb 12 03:23 packages/consult-flycheck-readme.txt
-4.0K -rw-r--r-- 1 root root  572 Feb 12 03:23 packages/consult-flycheck.log
-4.0K -rw-r--r-- 1 root root  834 Feb 12 03:23 packages/consult-readme.txt
+4.0K -rw-r--r-- 1 root root  311 Feb 14 03:44 packages/consult-20210213.2014.entry
+232K -rw-r--r-- 1 root root 230K Feb 14 03:44 packages/consult-20210213.2014.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 14 03:44 packages/consult-badge.svg
+4.0K -rw-r--r-- 1 root root 3.8K Feb 14 03:44 packages/consult-flycheck-20210213.1620.el
+4.0K -rw-r--r-- 1 root root  412 Feb 14 03:44 packages/consult-flycheck-20210213.1620.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 14 03:44 packages/consult-flycheck-badge.svg
+4.0K -rw-r--r-- 1 root root  135 Feb 14 03:44 packages/consult-flycheck-readme.txt
+4.0K -rw-r--r-- 1 root root  572 Feb 14 03:44 packages/consult-flycheck.log
+8.0K -rw-r--r-- 1 root root 5.6K Feb 14 03:44 packages/consult-notmuch-20210213.2003.el
+4.0K -rw-r--r-- 1 root root  408 Feb 14 03:44 packages/consult-notmuch-20210213.2003.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 14 03:44 packages/consult-notmuch-badge.svg
+4.0K -rw-r--r-- 1 root root  322 Feb 14 03:44 packages/consult-notmuch-readme.txt
+4.0K -rw-r--r-- 1 root root  566 Feb 14 03:44 packages/consult-notmuch.log
+4.0K -rw-r--r-- 1 root root  834 Feb 14 03:44 packages/consult-readme.txt
 4.0K -rw-r--r-- 1 root root 3.5K Dec 24 21:28 packages/consult-selectrum-20201224.1239.el
 4.0K -rw-r--r-- 1 root root 1.2K Jan 13 02:47 packages/consult-selectrum-badge.svg
 4.0K -rw-r--r-- 1 root root   32 Jan 13 02:47 packages/consult-selectrum-readme.txt

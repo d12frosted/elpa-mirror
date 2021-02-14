@@ -1,0 +1,14 @@
+(org-id-cleanup .
+		[(20210212 1158)
+		 ((org
+		   (9 3))
+		  (dash
+		   (2 12))
+		  (emacs
+		   (26 3)))
+		 "Interactively find, present and maybe clean up unused IDs of org-id" single
+		 ((:commit . "87752d5b4811f94d0e5b2cc220aa30147a89a7ea")
+		  (:authors
+		   ("Marc Ihm" . "1@2484.de"))
+		  (:maintainer "Marc Ihm" . "1@2484.de")
+		  (:url . "https://github.com/marcIhm/org-id-cleanup"))])

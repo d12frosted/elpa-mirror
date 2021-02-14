@@ -5,7 +5,7 @@
 ;; Authors: Jonas Bernoulli <jonas@bernoul.li>
 ;; URL: https://git.sr.ht/~tarsius/llama
 ;; Package-Version: 20210201.837
-;; Package-Commit: fa28bed90b77487e275e3908c3bd0f00f94ab88b
+;; Package-Commit: f2f1476e88153b167bf4ce755f7455fcb3f98458
 ;; Keywords: extensions
 
 ;; Package-Requires: ((seq "2.20"))
