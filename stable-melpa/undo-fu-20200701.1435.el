@@ -6,7 +6,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-undo-fu
 ;; Package-Version: 20200701.1435
-;; Package-Commit: c0806c1903c5a0e4c69b6615cdc3366470a9b8ca
+;; Package-Commit: f4db4c9b9875134df6f5279281099361ae11c2e9
 ;; Version: 0.4
 ;; Package-Requires: ((emacs "24.3"))
 

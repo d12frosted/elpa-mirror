@@ -8,6 +8,7 @@ warning: unable to rmdir 'vendor/github.com/coreos/etcd': Directory not empty
 warning: unable to rmdir 'vendor/github.com/docker/go-connections': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/go-grpc-prometheus': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/grpc-gateway': Directory not empty
+Checking out files:  98% (475/480)   Checking out files:  99% (476/480)   Checking out files: 100% (480/480)   Checking out files: 100% (480/480), done.
 HEAD is now at 6a61774 docker: Bump docker dependencies, add containerd
 Synchronizing submodule url for 'vendor/github.com/containerd/containerd'
 Synchronizing submodule url for 'vendor/github.com/docker/distribution'

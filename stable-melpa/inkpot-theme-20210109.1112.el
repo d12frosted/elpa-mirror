@@ -4,7 +4,7 @@
 ;;         Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://gitlab.com/ideasman42/emacs-inkpot-theme
 ;; Package-Version: 20210109.1112
-;; Package-Commit: c010838770bad2a3fc37fcb5c497bf92d5aca27b
+;; Package-Commit: e8ae7b2345b8b21dd866fc043906ceecd40832c7
 ;; Version: 0.1
 ;; Keywords: color, theme
 

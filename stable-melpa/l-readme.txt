@@ -16,15 +16,9 @@ all of which are turned into:
     (lambda (% %2 &rest %*)
       (list % %2 %*))
 
-This behaves similarly to backquote/unquote syntax, which is why I
-recommend using the first variant, with the "`" character.  I have
-also considered using "," instead of "%" as the unquote character,
-but have decided against it because it cannot be used by itself at
-the end of a list.
-
 You may wish to substitute some fancy character for `l':
 
     (defun my-prettify-l-symbol ()
       (cl-pushnew '("l" . ?ƒ) prettify-symbols-alist))
     (add-hook 'emacs-lisp-mode-hook 'my-prettify-l-symbol)
-    (add-hook 'emacs-lisp-mode-hook 'lisp-prettify-more-symbols)
+    (global-prettify-symbols-mode 1)

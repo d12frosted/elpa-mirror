@@ -1,0 +1,15 @@
+(window-purpose .
+		[(20210214 1451)
+		 ((emacs
+		   (24 4))
+		  (let-alist
+		      (1 0 3))
+		  (imenu-list
+		   (0 1)))
+		 "Purpose-based window management for Emacs" tar
+		 ((:commit . "cb61b9381ef9865e725c4641588d7b8945d35003")
+		  (:authors
+		   ("Bar Magal"))
+		  (:maintainer "Bar Magal")
+		  (:keywords "frames")
+		  (:url . "https://github.com/bmag/emacs-purpose"))])

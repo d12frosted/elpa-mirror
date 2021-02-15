@@ -1,6 +1,6 @@
 Transient menus for a wide variety of things.
 
-For suggest key bindings see
+For suggested key bindings see
 (find-function 'tray-add-suggested-bindings).
 
 A few of my transient menus are distributed separately:

@@ -6,7 +6,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-mode-line-idle
 ;; Package-Version: 20210208.652
-;; Package-Commit: 4995d75cdabe2f4e8a41a56d041f8e3b24e3ea10
+;; Package-Commit: 1aafe9b0a8cb2999b267db01e36095c1d975897e
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 

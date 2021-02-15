@@ -6,7 +6,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-default-font-presets
 ;; Package-Version: 20201227.2319
-;; Package-Commit: dd143e7e6cf5384d203a76e50fe677a77f1cd615
+;; Package-Commit: e5aad0510139cca42b37614d3599951ac0a28ccc
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 

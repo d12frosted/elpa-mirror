@@ -7,7 +7,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-undo-fu-session
 ;; Package-Version: 20201218.400
-;; Package-Commit: 702210384a0c68f04aabc23e08ebd4d6f43ea2c7
+;; Package-Commit: a0389147365c10c974ad68b797b185affb935fe3
 ;; Keywords: convenience
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "24.1"))

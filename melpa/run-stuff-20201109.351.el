@@ -6,7 +6,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-run-stuff
 ;; Package-Version: 20201109.351
-;; Package-Commit: 54787de62839c48428f2e1edc4e2aa64851e9849
+;; Package-Commit: 80661d33cf705c1128975ab371b3ed4139e4e0f8
 ;; Version: 0.0.1
 ;; Keywords: files lisp files convenience hypermedia
 ;; Package-Requires: ((emacs "24.4"))
