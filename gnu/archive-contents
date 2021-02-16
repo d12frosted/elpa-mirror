@@ -454,13 +454,15 @@
 	      ("João Távora" . "joaotavora@gmail.com"))
 	     (:maintainer "João Távora" . "joaotavora@gmail.com"))])
  (dash .
-       [(2 12 0)
-	nil "A modern list library for Emacs" tar
-	((:maintainer "Magnar Sveen" . "magnars@gmail.com")
+       [(2 18 0)
+	((emacs
+	  (24)))
+	"A modern list library for Emacs" tar
+	((:url . "https://github.com/magnars/dash.el")
+	 (:maintainer "Magnar Sveen" . "magnars@gmail.com")
 	 (:authors
 	  ("Magnar Sveen" . "magnars@gmail.com"))
-	 (:keywords "lists")
-	 (:url . "http://elpa.gnu.org/packages/dash.html"))])
+	 (:keywords "extensions" "lisp"))])
  (dbus-codegen .
 	       [(0 1)
 		((cl-lib
