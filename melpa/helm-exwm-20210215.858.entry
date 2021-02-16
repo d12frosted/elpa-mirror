@@ -1,0 +1,15 @@
+(helm-exwm .
+	   [(20210215 858)
+	    ((emacs
+	      (25 2))
+	     (helm
+	      (2 8 5))
+	     (exwm
+	      (0 15)))
+	    "Helm for EXWM buffers" single
+	    ((:commit . "5b35a42ff10fbcbf673268987df700ea6b6288e8")
+	     (:authors
+	      ("Pierre Neidhardt" . "mail@ambrevar.xyz"))
+	     (:maintainer "Pierre Neidhardt" . "mail@ambrevar.xyz")
+	     (:keywords "helm" "exwm")
+	     (:url . "https://github.com/emacs-helm/helm-exwm"))])
