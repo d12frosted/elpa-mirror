@@ -1958,7 +1958,7 @@
 	      ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (rt-liberation .
-		[(2 1)
+		[(2 2)
 		 nil "Emacs interface to RT" tar
 		 ((:url . "http://www.nongnu.org/rtliber/")
 		  (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
@@ -2589,7 +2589,7 @@
 	 ("Thien-Thi Nguyen" . "ttn@gnu.org"))
 	(:keywords "multimedia" "xpm"))])
  (xr .
-     [(1 20)
+     [(1 21)
       ((emacs
 	(26 1)))
       "Convert string regexp to rx notation" tar
