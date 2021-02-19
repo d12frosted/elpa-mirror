@@ -1,7 +1,7 @@
 
 The Modus themes conform with the highest standard for color-contrast
 accessibility between background and foreground values (WCAG AAA).
-This file contains all customisation options, helper functions,
+This file contains all customization options, helper functions,
 interactive commands, and face specifications.  Please refer to the
 official Info manual for further documentation (distributed with the
 themes, or available at: <https://protesilaos.com/modus-themes>).
@@ -65,6 +65,7 @@ missing package or change you would like to see.
     auto-dim-other-buffers
     avy
     awesome-tray
+    bbdb
     binder
     bm
     bongo

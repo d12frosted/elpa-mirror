@@ -1,8 +1,9 @@
 Provides commands and a minor mode for easily reformatting SQL
 using external programs such as "sqlformat" and "pg_format".
 
-Install the "sqlparse" (Python) package to get "sqlformat", or
-"pgformatter" to get "pg_format".
+Install the "sqlparse" (Python) package to get "sqlformat",
+or "pgformatter" to get "pg_format",
+or "sqlfluff" (Python) to get "sqlfluff",
 
 Customise the `sqlformat-command' variable as desired.  For example,
 to use "pgformatter" (i.e., the `pg_format` command) with

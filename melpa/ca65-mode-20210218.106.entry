@@ -1,0 +1,11 @@
+(ca65-mode .
+	   [(20210218 106)
+	    ((emacs
+	      (26 1)))
+	    "Major mode for ca65 assembly files" single
+	    ((:commit . "590d90cc0e1c1864dd7ce03df99b741ba866d52a")
+	     (:authors
+	      ("Wendel Scardua" . "wendel@scardua.net"))
+	     (:maintainer "Wendel Scardua" . "wendel@scardua.net")
+	     (:keywords "languages" "assembly" "ca65" "6502")
+	     (:url . "https://github.com/wendelscardua/ca65-mode"))])

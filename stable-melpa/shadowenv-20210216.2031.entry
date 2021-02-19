@@ -1,0 +1,11 @@
+(shadowenv .
+	   [(20210216 2031)
+	    ((emacs
+	      (24 3)))
+	    "Shadowenv integration." single
+	    ((:commit . "e4563469fe20b9e6e63d7b19c86ac8b8b615df1d")
+	     (:authors
+	      ("Dante Catalfamo" . "dante.catalfamo@shopify.com"))
+	     (:maintainer "Dante Catalfamo" . "dante.catalfamo@shopify.com")
+	     (:keywords "shadowenv" "tools")
+	     (:url . "https://github.com/Shopify/shadowenv.el"))])

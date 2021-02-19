@@ -1,0 +1,13 @@
+(calc-at-point .
+	       [(20210219 1252)
+		((emacs
+		  (26))
+		 (dash
+		  (2 18 0)))
+		"Perform calculations at point or over selection" single
+		((:commit . "0c1a9e94b519b0edb0abcbacdf6101eea2f2a524")
+		 (:authors
+		  ("Sebastian Wålinder" . "s.walinder@gmail.com"))
+		 (:maintainer "Sebastian Wålinder" . "s.walinder@gmail.com")
+		 (:keywords "convenience")
+		 (:url . "https://github.com/walseb/calc-at-point"))])

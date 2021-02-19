@@ -1,0 +1,11 @@
+(ado-mode .
+	  [(20210219 1548)
+	   ((emacs
+	     (24 1)))
+	   "Major mode for editing Stata-related files" tar
+	   ((:commit . "438e2b9ca1ce9fd1043998359dfe5a32a0ddb6d0")
+	    (:authors
+	     ("Bill Rising" . "brising@alum.mit.edu"))
+	    (:maintainer "Bill Rising" . "brising@alum.mit.edu")
+	    (:keywords "tools" "languages" "files" "convenience" "stata" "mata" "ado")
+	    (:url . "https://github.com/louabill/ado-mode"))])

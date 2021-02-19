@@ -8,8 +8,7 @@ warning: unable to rmdir 'vendor/github.com/coreos/etcd': Directory not empty
 warning: unable to rmdir 'vendor/github.com/docker/go-connections': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/go-grpc-prometheus': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/grpc-gateway': Directory not empty
-Checking out files:  95% (467/488)   Checking out files:  96% (469/488)   Checking out files:  97% (474/488)   Checking out files:  98% (479/488)   Checking out files:  99% (484/488)   Checking out files: 100% (488/488)   Checking out files: 100% (488/488), done.
-HEAD is now at e1bfe4a test: Add GitHub Actions test support
+HEAD is now at ccd8ba4 test: Exclude generated ragel parser from golint
 Synchronizing submodule url for 'vendor/github.com/containerd/containerd'
 Synchronizing submodule url for 'vendor/github.com/docker/distribution'
 Synchronizing submodule url for 'vendor/github.com/docker/docker'

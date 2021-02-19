@@ -3,7 +3,7 @@
 ;; Author: Sebastian Christ <rudolfo.christ@gmail.com>
 ;; URL: https://github.com/rudolfochrist/interleave
 ;; Package-Version: 20191129.958
-;; Package-Commit: 383eb955bf0084a6e6ec03c9bd34511e20e0407d
+;; Package-Commit: e1791a96a2633a9f5ea99fc0a20ebacedcefdaaa
 ;; Version: 1.4.20161123-610
 
 ;; This file is not part of GNU Emacs

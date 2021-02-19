@@ -21,3 +21,7 @@ Alternatively, you can manually configure project.el and xref.el, add their
                                      #'global-tags-update-database-with-buffer
                                      nil
                                      t)))
+
+By default, the global-tags backend will pre-fetch expensive calls (list
+files, get all symbols) to keep a snappy flow.  It is assumed that files
+or symbols being looked up don't change much within an Emacs session.

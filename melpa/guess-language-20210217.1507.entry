@@ -1,0 +1,13 @@
+(guess-language .
+		[(20210217 1507)
+		 ((cl-lib
+		   (0 5))
+		  (emacs
+		   (24)))
+		 "Robust automatic language detection" tar
+		 ((:commit . "e7decda098ee6819b37bacd958260c7c789962cb")
+		  (:authors
+		   ("Titus von der Malsburg" . "malsburg@posteo.de"))
+		  (:maintainer "Titus von der Malsburg" . "malsburg@posteo.de")
+		  (:keywords "wp")
+		  (:url . "https://github.com/tmalsburg/guess-language.el"))])

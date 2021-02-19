@@ -3,9 +3,21 @@ Fetcher: github
 Source:  https://github.com/QiangF/imbot.git
 
 Updating /mnt/store/melpa/working/imbot/
-Built imbot in 4.564s, finished at Tue Feb 16 02:09:21 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/imbot/
+  to /tmp/imbotSRXHMI/imbot-20210217.30
+    imbot--fcitx5.el -> imbot--fcitx5.el
+    imbot--ibus.el -> imbot--ibus.el
+    imbot.el -> imbot.el
+Created imbot-20210217.30.tar containing:
+  imbot-20210217.30/
+  imbot-20210217.30/imbot--fcitx5.el
+  imbot-20210217.30/imbot--ibus.el
+  imbot-20210217.30/imbot-pkg.el
+  imbot-20210217.30/imbot.el
+Built imbot in 3.276s, finished at Fri Feb 19 18:32:36 2021
  ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Feb 16 02:09 packages/imbot-20210210.909.el
-4.0K -rw-r--r-- 1 root root  235 Feb 16 02:09 packages/imbot-20210210.909.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 16 02:09 packages/imbot-badge.svg
-4.0K -rw-r--r-- 1 root root  659 Feb 16 02:09 packages/imbot-readme.txt
+4.0K -rw-r--r-- 1 root root  231 Feb 19 18:32 packages/imbot-20210217.30.entry
+ 20K -rw-r--r-- 1 root root  20K Feb 19 18:32 packages/imbot-20210217.30.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 19 18:32 packages/imbot-badge.svg
+4.0K -rw-r--r-- 1 root root  659 Feb 19 18:32 packages/imbot-readme.txt

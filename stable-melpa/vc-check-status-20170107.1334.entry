@@ -1,9 +1,0 @@
-(vc-check-status .
-		 [(20170107 1334)
-		  nil "Warn you when quitting emacs and leaving repo dirty." tar
-		  ((:commit . "37734beb16bfd8633ea328059bf9a47eed826d5c")
-		   (:authors
-		    ("Sylvain Rousseau <thisirs at gmail dot com>"))
-		   (:maintainer "Sylvain Rousseau <thisirs at gmail dot com>")
-		   (:keywords "vc" "convenience")
-		   (:url . "https://github.com/thisirs/vc-check-status"))])
