@@ -1517,17 +1517,17 @@
 	       ("Felix Lee <felix8a@gmail.com>, Michal Nazarewicz" . "mina86@mina86.com"))
 	      (:maintainer "Michal Nazarewicz" . "mina86@mina86.com"))])
  (oauth2 .
-	 [(0 15)
+	 [(0 16)
 	  ((cl-lib
 	    (0 5))
 	   (nadvice
 	    (0 3)))
-	  "OAuth 2.0 Authorization Protocol" single
-	  ((:url . "http://elpa.gnu.org/packages/oauth2.html")
-	   (:keywords "comm")
+	  "OAuth 2.0 Authorization Protocol" tar
+	  ((:maintainer "Julien Danjou" . "julien@danjou.info")
 	   (:authors
 	    ("Julien Danjou" . "julien@danjou.info"))
-	   (:maintainer "Julien Danjou" . "julien@danjou.info"))])
+	   (:keywords "comm")
+	   (:url . "https://elpa.gnu.org/packages/oauth2.html"))])
  (objed .
 	[(0 8 3)
 	 ((emacs
