@@ -1,0 +1,17 @@
+(org-ml .
+	[(20210220 314)
+	 ((emacs
+	   (26 1))
+	  (org
+	   (9 3))
+	  (dash
+	   (2 17))
+	  (s
+	   (1 12)))
+	 "Functional Org Mode API" tar
+	 ((:commit . "cc10946d58897af171390c2b511d4d04277dc8bc")
+	  (:authors
+	   ("Nathan Dwarshuis" . "ndwar@yavin4.ch"))
+	  (:maintainer "Nathan Dwarshuis" . "ndwar@yavin4.ch")
+	  (:keywords "org-mode" "outlines")
+	  (:url . "https://github.com/ndwarshuis/org-ml"))])

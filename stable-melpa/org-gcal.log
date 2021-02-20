@@ -3,9 +3,19 @@ Fetcher: github
 Source:  https://github.com/kidd/org-gcal.el.git
 
 Updating /mnt/store/melpa/working/org-gcal/
-Built org-gcal in 4.107s, finished at Fri Feb 19 18:46:15 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-gcal/
+  to /tmp/org-gcalnWuxuX/org-gcal-20210220.806
+    org-gcal.el -> org-gcal.el
+    org-generic-id.el -> org-generic-id.el
+Created org-gcal-20210220.806.tar containing:
+  org-gcal-20210220.806/
+  org-gcal-20210220.806/org-gcal-pkg.el
+  org-gcal-20210220.806/org-gcal.el
+  org-gcal-20210220.806/org-generic-id.el
+Built org-gcal in 3.397s, finished at Sat Feb 20 15:30:45 2021
  ✓ Success:
- 72K -rw-r--r-- 1 root root  72K Feb 19 18:46 packages/org-gcal-20201113.2330.el
-4.0K -rw-r--r-- 1 root root  484 Feb 19 18:46 packages/org-gcal-20201113.2330.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 18:46 packages/org-gcal-badge.svg
-4.0K -rw-r--r-- 1 root root   75 Feb 19 18:46 packages/org-gcal-readme.txt
+4.0K -rw-r--r-- 1 root root  480 Feb 20 15:30 packages/org-gcal-20210220.806.entry
+ 92K -rw-r--r-- 1 root root  90K Feb 20 15:30 packages/org-gcal-20210220.806.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 15:30 packages/org-gcal-badge.svg
+4.0K -rw-r--r-- 1 root root   75 Feb 20 15:30 packages/org-gcal-readme.txt

@@ -3,7 +3,9 @@ Fetcher: git
 Source:  https://gitea.petton.fr/nico/json-process-client.git
 
 Updating /mnt/store/melpa/working/json-process-client/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://gitea.petton.fr/nico/json-process-client.git/': Failed to connect to gitea.petton.fr port 443: Connection timed out
-error: Could not fetch origin
-
+Built json-process-client in 5.188s, finished at Sat Feb 20 15:19:13 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  13K Feb 20 15:19 packages/json-process-client-20190827.1858.el
+4.0K -rw-r--r-- 1 root root  436 Feb 20 15:19 packages/json-process-client-20190827.1858.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 15:19 packages/json-process-client-badge.svg
+4.0K -rw-r--r-- 1 root root  130 Feb 20 15:19 packages/json-process-client-readme.txt

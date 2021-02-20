@@ -6,7 +6,7 @@
 ;; Maintainer: Tom Regner <tom@goochesa.de>
 ;; Version: 0.5.0
 ;; Package-Version: 20201022.939
-;; Package-Commit: 95fc14c676f650ad7c965950967cb27c2495c16e
+;; Package-Commit: 4a683d81a0f34e19caacabd6fa5badd4a509c5ca
 ;; Keywords: fullscreen
 ;; Package-Requires: ((cl-lib "0.5"))
 
