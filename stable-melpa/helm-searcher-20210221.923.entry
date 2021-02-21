@@ -1,0 +1,18 @@
+(helm-searcher .
+	       [(20210221 923)
+		((emacs
+		  (25 1))
+		 (helm
+		  (2 0))
+		 (searcher
+		  (0 1 8))
+		 (s
+		  (1 12 0))
+		 (f
+		  (0 20 0)))
+		"Helm interface to use searcher" single
+		((:commit . "181f60cb8505aec05393a9dbf414733d19f76d2a")
+		 (:authors
+		  ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		 (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		 (:url . "https://github.com/emacs-helm/helm-searcher"))])

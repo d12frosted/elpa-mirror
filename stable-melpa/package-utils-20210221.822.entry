@@ -1,0 +1,11 @@
+(package-utils .
+	       [(20210221 822)
+		((restart-emacs
+		  (0 1 1)))
+		"Extensions for package.el" single
+		((:commit . "6a26accfdf9c0f1cbceb09d970bf9c25a72f562a")
+		 (:authors
+		  ("Philippe Vaucher" . "philippe.vaucher@gmail.com"))
+		 (:maintainer "Philippe Vaucher" . "philippe.vaucher@gmail.com")
+		 (:keywords "package" "convenience")
+		 (:url . "https://github.com/Silex/package-utils"))])
