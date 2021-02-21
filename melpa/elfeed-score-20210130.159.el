@@ -5,7 +5,7 @@
 ;; Author: Michael Herstine <sp1ff@pobox.com>
 ;; Version: 0.6.5
 ;; Package-Version: 20210130.159
-;; Package-Commit: 43609d6fdf388caac91e848dc50d368f0bf83296
+;; Package-Commit: 8934fa50783a1edbb8b07dea940c07212af6a1df
 ;; Package-Requires: ((emacs "24.4") (elfeed "3.3.0"))
 ;; Keywords: news
 ;; URL: https://github.com/sp1ff/elfeed-score

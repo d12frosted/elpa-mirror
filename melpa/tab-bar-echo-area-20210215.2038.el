@@ -5,7 +5,7 @@
 ;; Author: Fritz Grabo <me@fritzgrabo.com>
 ;; URL: https://github.com/fritzgrabo/tab-bar-echo-area
 ;; Package-Version: 20210215.2038
-;; Package-Commit: f1e2120865cccae31fbf0a6ce74e06aebf3d710a
+;; Package-Commit: bbd9aa8079c910ff2e7bd1f42e2d8da143959ffd
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: convenience

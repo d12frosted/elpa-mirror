@@ -5,7 +5,7 @@
 ;; Author: Fritz Grabo <me@fritzgrabo.com>
 ;; URL: https://github.com/fritzgrabo/tab-bar-groups
 ;; Package-Version: 20210213.2138
-;; Package-Commit: d18e80804abb08cc2f033b986a84fdb0b1ece944
+;; Package-Commit: 930a86edcfe7c0e33e16bfe2501dbe285a443df9
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1") (s "1.12.0"))
 ;; Keywords: convenience

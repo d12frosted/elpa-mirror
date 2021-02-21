@@ -7,7 +7,7 @@
 ;; Created: 2009-09-08
 ;; Version: 1.2.4
 ;; Package-Version: 20191022.1955
-;; Package-Commit: 284d7bb285bd382be6c1936077de7e2246fa2374
+;; Package-Commit: d4b286a0db70a44e519cd9d6fece783d7a862efc
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: matching
 ;; URL: https://github.com/fourier/loccur
