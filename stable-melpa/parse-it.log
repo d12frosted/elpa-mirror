@@ -5,69 +5,23 @@ Source:  https://github.com/jcs-elpa/parse-it.git
 Updating /mnt/store/melpa/working/parse-it/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/parse-it/
-  to /tmp/parse-itOkNxPO/parse-it-20210128.1345
-    parse-it-actionscript.el -> parse-it-actionscript.el
-    parse-it-asm.el -> parse-it-asm.el
+  to /tmp/parse-it56d0mh/parse-it-20210222.1623
     parse-it-ast.el -> parse-it-ast.el
-    parse-it-c++.el -> parse-it-c++.el
-    parse-it-c.el -> parse-it-c.el
-    parse-it-csharp.el -> parse-it-csharp.el
-    parse-it-css.el -> parse-it-css.el
-    parse-it-elisp.el -> parse-it-elisp.el
-    parse-it-go.el -> parse-it-go.el
-    parse-it-html.el -> parse-it-html.el
-    parse-it-java.el -> parse-it-java.el
-    parse-it-js.el -> parse-it-js.el
-    parse-it-json.el -> parse-it-json.el
-    parse-it-kotlin.el -> parse-it-kotlin.el
     parse-it-lex.el -> parse-it-lex.el
-    parse-it-lisp.el -> parse-it-lisp.el
-    parse-it-lua.el -> parse-it-lua.el
-    parse-it-markdown.el -> parse-it-markdown.el
-    parse-it-objc.el -> parse-it-objc.el
-    parse-it-php.el -> parse-it-php.el
-    parse-it-python.el -> parse-it-python.el
-    parse-it-r.el -> parse-it-r.el
-    parse-it-sql.el -> parse-it-sql.el
-    parse-it-swift.el -> parse-it-swift.el
-    parse-it-typescript.el -> parse-it-typescript.el
     parse-it-util.el -> parse-it-util.el
-    parse-it-xml.el -> parse-it-xml.el
     parse-it.el -> parse-it.el
-Created parse-it-20210128.1345.tar containing:
-  parse-it-20210128.1345/
-  parse-it-20210128.1345/parse-it-actionscript.el
-  parse-it-20210128.1345/parse-it-asm.el
-  parse-it-20210128.1345/parse-it-ast.el
-  parse-it-20210128.1345/parse-it-c++.el
-  parse-it-20210128.1345/parse-it-c.el
-  parse-it-20210128.1345/parse-it-csharp.el
-  parse-it-20210128.1345/parse-it-css.el
-  parse-it-20210128.1345/parse-it-elisp.el
-  parse-it-20210128.1345/parse-it-go.el
-  parse-it-20210128.1345/parse-it-html.el
-  parse-it-20210128.1345/parse-it-java.el
-  parse-it-20210128.1345/parse-it-js.el
-  parse-it-20210128.1345/parse-it-json.el
-  parse-it-20210128.1345/parse-it-kotlin.el
-  parse-it-20210128.1345/parse-it-lex.el
-  parse-it-20210128.1345/parse-it-lisp.el
-  parse-it-20210128.1345/parse-it-lua.el
-  parse-it-20210128.1345/parse-it-markdown.el
-  parse-it-20210128.1345/parse-it-objc.el
-  parse-it-20210128.1345/parse-it-php.el
-  parse-it-20210128.1345/parse-it-pkg.el
-  parse-it-20210128.1345/parse-it-python.el
-  parse-it-20210128.1345/parse-it-r.el
-  parse-it-20210128.1345/parse-it-sql.el
-  parse-it-20210128.1345/parse-it-swift.el
-  parse-it-20210128.1345/parse-it-typescript.el
-  parse-it-20210128.1345/parse-it-util.el
-  parse-it-20210128.1345/parse-it-xml.el
-  parse-it-20210128.1345/parse-it.el
-Built parse-it in 3.665s, finished at Sun Feb 21 09:32:12 2021
+Created parse-it-20210222.1623.tar containing:
+  parse-it-20210222.1623/
+  parse-it-20210222.1623/parse-it-ast.el
+  parse-it-20210222.1623/parse-it-lex.el
+  parse-it-20210222.1623/parse-it-pkg.el
+  parse-it-20210222.1623/parse-it-util.el
+  parse-it-20210222.1623/parse-it.el
+Built parse-it in 5.244s, finished at Mon Feb 22 17:51:44 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  363 Feb 21 09:32 packages/parse-it-20210128.1345.entry
-132K -rw-r--r-- 1 root root 130K Feb 21 09:32 packages/parse-it-20210128.1345.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 21 09:32 packages/parse-it-badge.svg
-4.0K -rw-r--r-- 1 root root   29 Feb 21 09:32 packages/parse-it-readme.txt
+4.0K -rw-r--r-- 1 root root  363 Feb 22 14:15 packages/parse-it-20210128.1345.entry
+132K -rw-r--r-- 1 root root 130K Feb 22 14:15 packages/parse-it-20210128.1345.tar
+4.0K -rw-r--r-- 1 root root  363 Feb 22 17:51 packages/parse-it-20210222.1623.entry
+ 32K -rw-r--r-- 1 root root  30K Feb 22 17:51 packages/parse-it-20210222.1623.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 22 17:51 packages/parse-it-badge.svg
+4.0K -rw-r--r-- 1 root root   29 Feb 22 17:51 packages/parse-it-readme.txt

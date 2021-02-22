@@ -11,7 +11,8 @@ The Emacs frame from which the command is issued will hide away
 during the screenshot taking, except if a prefix argument has been
 given (so to allow taking images of the Emacs session itself).
 
-Requires the "import" command from the ImageMagick suite
+You can customize the command that is executed for taking the
+screenshot. Look at the various customization variables.
 
 Put this file into your load-path and the following into your ~/.emacs:
   (require 'org-attach-screenshot)

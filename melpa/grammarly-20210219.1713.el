@@ -8,7 +8,7 @@
 ;; Keyword: grammar api interface english
 ;; Version: 0.3.0
 ;; Package-Version: 20210219.1713
-;; Package-Commit: c07abd22389e88db23b2e344368279cebee74abb
+;; Package-Commit: e11a5a67307f05e08812be190b23460a1bf97687
 ;; Package-Requires: ((emacs "24.4") (s "1.12.0") (request "0.3.0") (websocket "1.6"))
 ;; URL: https://github.com/emacs-grammarly/grammarly
 

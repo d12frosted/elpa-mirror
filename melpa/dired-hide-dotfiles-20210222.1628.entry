@@ -1,0 +1,11 @@
+(dired-hide-dotfiles .
+		     [(20210222 1628)
+		      ((emacs
+			(25 1)))
+		      "Hide dotfiles in dired" single
+		      ((:commit . "efed61309765d6365bb448fc4c89b3bfa48db457")
+		       (:authors
+			("Mattias Bengtsson" . "mattias.jc.bengtsson@gmail.com"))
+		       (:maintainer "Mattias Bengtsson" . "mattias.jc.bengtsson@gmail.com")
+		       (:keywords "files")
+		       (:url . "https://github.com/mattiasb/dired-hide-dotfiles"))])

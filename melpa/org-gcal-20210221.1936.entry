@@ -1,0 +1,19 @@
+(org-gcal .
+	  [(20210221 1936)
+	   ((request
+	     (20190901))
+	    (request-deferred
+	     (20181129))
+	    (alert
+	     (0))
+	    (persist
+	     (0))
+	    (emacs
+	     (26)))
+	   "Org sync with Google Calendar" tar
+	   ((:commit . "ee3885122a78e61a9ca568ea86803bf3fecb2a8b")
+	    (:authors
+	     ("myuhe <yuhei.maeda_at_gmail.com>"))
+	    (:maintainer "Raimon Grau" . "raimonster@gmail.com")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/kidd/org-gcal.el"))])

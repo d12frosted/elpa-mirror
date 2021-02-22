@@ -1,0 +1,11 @@
+(teletext .
+	  [(20210222 901)
+	   ((emacs
+	     (24 3)))
+	   "Teletext broadcast viewer" single
+	   ((:commit . "7092a52b18b4b13b36f4558fade98f89e182e00d")
+	    (:authors
+	     ("Lassi Kortela" . "lassi@lassi.io"))
+	    (:maintainer "Lassi Kortela" . "lassi@lassi.io")
+	    (:keywords "comm" "help" "hypermedia")
+	    (:url . "https://github.com/lassik/emacs-teletext"))])

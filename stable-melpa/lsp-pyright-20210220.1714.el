@@ -5,7 +5,7 @@
 ;; Author: Arif Rezai, Vincent Zhang, Andrew Christianson
 ;; Version: 0.2.0
 ;; Package-Version: 20210220.1714
-;; Package-Commit: 53aea28f3536b929d858f2984e91c7639beb1bd9
+;; Package-Commit: 65fb14128127fb1ddf68dd4cb3140d6c7911a093
 ;; Package-Requires: ((emacs "26.1") (lsp-mode "7.0") (dash "2.18.0") (ht "2.0"))
 ;; Homepage: https://github.com/emacs-lsp/lsp-pyright
 ;; Keywords: languages, tools, lsp

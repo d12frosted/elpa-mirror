@@ -1,0 +1,11 @@
+(tab-bar-echo-area .
+		   [(20210221 2336)
+		    ((emacs
+		      (27 1)))
+		    "Display tab names of the tab bar in the echo area" single
+		    ((:commit . "7fe200bf2c7397abe5623d1b05983eaccc467320")
+		     (:authors
+		      ("Fritz Grabo" . "me@fritzgrabo.com"))
+		     (:maintainer "Fritz Grabo" . "me@fritzgrabo.com")
+		     (:keywords "convenience")
+		     (:url . "https://github.com/fritzgrabo/tab-bar-echo-area"))])

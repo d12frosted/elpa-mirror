@@ -21,7 +21,7 @@
 ;; Author: Christian Garbs <mitch@cgarbs.de>
 ;; URL: https://github.com/mmitch/ox-bb
 ;; Package-Version: 20210220.2121
-;; Package-Commit: 5639b889d3b6c457c080310f6b73fc8a780c57de
+;; Package-Commit: a022078a3e95b6cd4fc416c14ca7004d59bbcffa
 ;; Keywords: bbcode, org, export, outlines
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4") (org "8.0"))
