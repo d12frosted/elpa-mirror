@@ -1,0 +1,17 @@
+(metal-archives .
+		[(20210223 1638)
+		 ((emacs
+		   (26 3))
+		  (alert
+		   (1 2))
+		  (ht
+		   (2 3))
+		  (request
+		   (0 2 2)))
+		 "List future releases using Metal-Archives API" single
+		 ((:commit . "a218d63b990365edeef6a2394f72d1f2286aeeae")
+		  (:authors
+		   ("Sébastien Le Maguer" . "lemagues@tcd.ie"))
+		  (:maintainer "Sébastien Le Maguer" . "lemagues@tcd.ie")
+		  (:keywords "lisp" "calendar")
+		  (:url . "https://github.com/seblemaguer/metal-archives.el"))])

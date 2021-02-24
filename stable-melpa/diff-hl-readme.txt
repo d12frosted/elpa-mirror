@@ -8,6 +8,7 @@ Provided commands:
 `diff-hl-revert-hunk'     C-x v n
 `diff-hl-previous-hunk'   C-x v [
 `diff-hl-next-hunk'       C-x v ]
+`diff-hl-show-hunk'       C-x v *
 `diff-hl-set-reference-rev'
 `diff-hl-reset-reference-rev'
 

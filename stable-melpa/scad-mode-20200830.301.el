@@ -6,7 +6,7 @@
 ;; Modified:   28 Jun 2020
 ;; Keywords:   languages
 ;; Package-Version: 20200830.301
-;; Package-Commit: 24181afb4cd2b5d051d43a5b41b11448eaf32992
+;; Package-Commit: 400ec5bd3247db73e619b2958ab06b26f03b4f36
 ;; URL:        https://raw.github.com/openscad/openscad/master/contrib/scad-mode.el
 ;; Version:    92.0
 

@@ -25,3 +25,7 @@ Alternatively, you can manually configure project.el and xref.el, add their
 By default, the global-tags backend will pre-fetch expensive calls (list
 files, get all symbols) to keep a snappy flow.  It is assumed that files
 or symbols being looked up don't change much within an Emacs session.
+
+Also, when standing on a include file like «#include "someheader.h"», if
+you do M-. `xref-find-definitions' it will look for that header file.
+This is a feature based on `ggtags-find-tag-dwim'.

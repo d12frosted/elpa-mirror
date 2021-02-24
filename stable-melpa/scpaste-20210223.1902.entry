@@ -1,0 +1,11 @@
+(scpaste .
+	 [(20210223 1902)
+	  ((htmlize
+	    (1 39)))
+	  "Paste to the web via scp." single
+	  ((:commit . "4ec352fb9fe261ffb8b78449dea986dc34d337b3")
+	   (:authors
+	    ("Phil Hagelberg"))
+	   (:maintainer "Phil Hagelberg")
+	   (:keywords "convenience" "hypermedia")
+	   (:url . "https://git.sr.ht/~technomancy/scpaste"))])

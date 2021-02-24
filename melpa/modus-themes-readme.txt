@@ -288,6 +288,7 @@ missing package or change you would like to see.
     ruler-mode
     sallet
     selectrum
+    selectrum-prescient
     semantic
     sesman
     shell-script-mode

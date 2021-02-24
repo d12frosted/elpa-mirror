@@ -5,23 +5,29 @@ Source:  https://github.com/dgutov/diff-hl.git
 Updating /mnt/store/melpa/working/diff-hl/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/diff-hl/
-  to /tmp/diff-hl2j3nDa/diff-hl-20210213.41
+  to /tmp/diff-hlKgOwYC/diff-hl-20210223.2303
     diff-hl-amend.el -> diff-hl-amend.el
     diff-hl-dired.el -> diff-hl-dired.el
     diff-hl-flydiff.el -> diff-hl-flydiff.el
+    diff-hl-inline-popup.el -> diff-hl-inline-popup.el
     diff-hl-margin.el -> diff-hl-margin.el
+    diff-hl-show-hunk-posframe.el -> diff-hl-show-hunk-posframe.el
+    diff-hl-show-hunk.el -> diff-hl-show-hunk.el
     diff-hl.el -> diff-hl.el
-Created diff-hl-20210213.41.tar containing:
-  diff-hl-20210213.41/
-  diff-hl-20210213.41/diff-hl-amend.el
-  diff-hl-20210213.41/diff-hl-dired.el
-  diff-hl-20210213.41/diff-hl-flydiff.el
-  diff-hl-20210213.41/diff-hl-margin.el
-  diff-hl-20210213.41/diff-hl-pkg.el
-  diff-hl-20210213.41/diff-hl.el
-Built diff-hl in 4.599s, finished at Mon Feb 22 17:02:53 2021
+Created diff-hl-20210223.2303.tar containing:
+  diff-hl-20210223.2303/
+  diff-hl-20210223.2303/diff-hl-amend.el
+  diff-hl-20210223.2303/diff-hl-dired.el
+  diff-hl-20210223.2303/diff-hl-flydiff.el
+  diff-hl-20210223.2303/diff-hl-inline-popup.el
+  diff-hl-20210223.2303/diff-hl-margin.el
+  diff-hl-20210223.2303/diff-hl-pkg.el
+  diff-hl-20210223.2303/diff-hl-show-hunk-posframe.el
+  diff-hl-20210223.2303/diff-hl-show-hunk.el
+  diff-hl-20210223.2303/diff-hl.el
+Built diff-hl in 4.225s, finished at Wed Feb 24 06:38:54 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  376 Feb 22 17:02 packages/diff-hl-20210213.41.entry
- 64K -rw-r--r-- 1 root root  60K Feb 22 17:02 packages/diff-hl-20210213.41.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 22 17:02 packages/diff-hl-badge.svg
-4.0K -rw-r--r-- 1 root root  701 Feb 22 17:02 packages/diff-hl-readme.txt
+4.0K -rw-r--r-- 1 root root  378 Feb 24 06:38 packages/diff-hl-20210223.2303.entry
+100K -rw-r--r-- 1 root root 100K Feb 24 06:38 packages/diff-hl-20210223.2303.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 24 06:38 packages/diff-hl-badge.svg
+4.0K -rw-r--r-- 1 root root  735 Feb 24 06:38 packages/diff-hl-readme.txt

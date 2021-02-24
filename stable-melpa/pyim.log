@@ -3,42 +3,45 @@ Fetcher: github
 Source:  https://github.com/tumashu/pyim.git
 
 Updating /mnt/store/melpa/working/pyim/
+Note: pyim :files spec is equivalent to the default.
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pyim/
-  to /tmp/pyimWdfM6N/pyim-20210222.843
+  to /tmp/pyimWeyDVX/pyim-20210224.535
     pyim-common.el -> pyim-common.el
     pyim-dhashcache.el -> pyim-dhashcache.el
     pyim-dregcache.el -> pyim-dregcache.el
     pyim-probe.el -> pyim-probe.el
     pyim-pymap.el -> pyim-pymap.el
     pyim.el -> pyim.el
-Created pyim-20210222.843.tar containing:
-  pyim-20210222.843/
-  pyim-20210222.843/pyim-common.el
-  pyim-20210222.843/pyim-dhashcache.el
-  pyim-20210222.843/pyim-dregcache.el
-  pyim-20210222.843/pyim-pkg.el
-  pyim-20210222.843/pyim-probe.el
-  pyim-20210222.843/pyim-pymap.el
-  pyim-20210222.843/pyim.el
-Built pyim in 4.970s, finished at Mon Feb 22 17:56:45 2021
+Created pyim-20210224.535.tar containing:
+  pyim-20210224.535/
+  pyim-20210224.535/pyim-common.el
+  pyim-20210224.535/pyim-dhashcache.el
+  pyim-20210224.535/pyim-dregcache.el
+  pyim-20210224.535/pyim-pkg.el
+  pyim-20210224.535/pyim-probe.el
+  pyim-20210224.535/pyim-pymap.el
+  pyim-20210224.535/pyim.el
+Built pyim in 5.129s, finished at Wed Feb 24 07:27:31 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  471 Feb 22 17:56 packages/pyim-20210222.843.entry
-320K -rw-r--r-- 1 root root 320K Feb 22 17:56 packages/pyim-20210222.843.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 22 17:56 packages/pyim-badge.svg
-4.0K -rw-r--r-- 1 root root  375 Feb 22 17:56 packages/pyim-basedict-20190719.1252.entry
-2.2M -rw-r--r-- 1 root root 2.2M Feb 22 17:56 packages/pyim-basedict-20190719.1252.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 22 14:20 packages/pyim-basedict-badge.svg
-4.0K -rw-r--r-- 1 root root  984 Feb 22 17:56 packages/pyim-basedict-readme.txt
-4.0K -rw-r--r-- 1 root root  604 Feb 22 17:56 packages/pyim-basedict.log
-4.0K -rw-r--r-- 1 root root  449 Feb 22 14:20 packages/pyim-cangjie5dict-20170730.246.entry
-880K -rw-r--r-- 1 root root 880K Feb 22 14:20 packages/pyim-cangjie5dict-20170730.246.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 22 14:20 packages/pyim-cangjie5dict-badge.svg
-4.0K -rw-r--r-- 1 root root  485 Feb 22 14:20 packages/pyim-cangjie5dict-readme.txt
-4.0K -rw-r--r-- 1 root root  155 Feb 22 17:56 packages/pyim-cangjie5dict.log
- 24K -rw-r--r-- 1 root root  22K Feb 22 17:56 packages/pyim-readme.txt
-4.0K -rw-r--r-- 1 root root  409 Feb 22 14:20 packages/pyim-wbdict-20210111.923.entry
-3.4M -rw-r--r-- 1 root root 3.4M Feb 22 14:20 packages/pyim-wbdict-20210111.923.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 22 14:20 packages/pyim-wbdict-badge.svg
-4.0K -rw-r--r-- 1 root root  922 Feb 22 14:20 packages/pyim-wbdict-readme.txt
-4.0K -rw-r--r-- 1 root root  137 Feb 22 17:56 packages/pyim-wbdict.log
+4.0K -rw-r--r-- 1 root root  471 Feb 24 04:07 packages/pyim-20210224.238.entry
+312K -rw-r--r-- 1 root root 310K Feb 24 04:07 packages/pyim-20210224.238.tar
+4.0K -rw-r--r-- 1 root root  471 Feb 24 07:27 packages/pyim-20210224.535.entry
+312K -rw-r--r-- 1 root root 310K Feb 24 07:27 packages/pyim-20210224.535.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 24 07:27 packages/pyim-badge.svg
+4.0K -rw-r--r-- 1 root root  375 Feb 24 07:27 packages/pyim-basedict-20190719.1252.entry
+2.2M -rw-r--r-- 1 root root 2.2M Feb 24 07:27 packages/pyim-basedict-20190719.1252.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 24 07:27 packages/pyim-basedict-badge.svg
+4.0K -rw-r--r-- 1 root root  984 Feb 24 07:27 packages/pyim-basedict-readme.txt
+4.0K -rw-r--r-- 1 root root 1021 Feb 24 07:27 packages/pyim-basedict.log
+4.0K -rw-r--r-- 1 root root  449 Feb 24 04:07 packages/pyim-cangjie5dict-20170730.246.entry
+880K -rw-r--r-- 1 root root 880K Feb 24 04:07 packages/pyim-cangjie5dict-20170730.246.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 24 04:07 packages/pyim-cangjie5dict-badge.svg
+4.0K -rw-r--r-- 1 root root  485 Feb 24 04:07 packages/pyim-cangjie5dict-readme.txt
+4.0K -rw-r--r-- 1 root root  155 Feb 24 07:27 packages/pyim-cangjie5dict.log
+ 24K -rw-r--r-- 1 root root  22K Feb 24 07:27 packages/pyim-readme.txt
+4.0K -rw-r--r-- 1 root root  409 Feb 24 04:07 packages/pyim-wbdict-20210111.923.entry
+3.4M -rw-r--r-- 1 root root 3.4M Feb 24 04:07 packages/pyim-wbdict-20210111.923.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 24 04:07 packages/pyim-wbdict-badge.svg
+4.0K -rw-r--r-- 1 root root  922 Feb 24 04:07 packages/pyim-wbdict-readme.txt
+4.0K -rw-r--r-- 1 root root  137 Feb 24 07:27 packages/pyim-wbdict.log

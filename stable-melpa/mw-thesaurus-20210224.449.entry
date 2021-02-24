@@ -1,0 +1,15 @@
+(mw-thesaurus .
+	      [(20210224 449)
+	       ((emacs
+		 (25))
+		(request
+		 (0 3 0))
+		(dash
+		 (2 16 0)))
+	       "Merriam-Webster Thesaurus" single
+	       ((:commit . "96f02694bc28f31c2a280a05d47e6ff589f525f3")
+		(:authors
+		 ("Ag Ibragimov"))
+		(:maintainer "Ag Ibragimov")
+		(:keywords "wp" "matching")
+		(:url . "https://github.com/agzam/mw-thesaurus.el"))])
