@@ -1735,6 +1735,21 @@
 	      (:authors
 	       ("Scott Andrew Borton" . "scott@pp.htv.fi"))
 	      (:maintainer "John Darrington" . "john@darrington.wattle.id.au"))])
+ (pyim .
+       [(3 2)
+	((emacs
+	  (24 4))
+	 (async
+	  (1 6))
+	 (xr
+	  (1 13)))
+	"A Chinese input method support quanpin, shuangpin, wubi and cangjie." tar
+	((:url . "https://github.com/tumashu/pyim")
+	 (:maintainer "Feng Shu" . "tumashu@163.com")
+	 (:authors
+	  ("Ye Wenbin" . "wenbinye@163.com")
+	  ("Feng Shu" . "tumashu@163.com"))
+	 (:keywords "convenience" "chinese" "pinyin" "input-method"))])
  (python .
 	 [(0 27 1)
 	  ((emacs
