@@ -49,13 +49,3 @@ see the major mode documentation below.
 The global minor mode `csv-field-index-mode' provides display of
 the current field index in the mode line, cf. `line-number-mode'
 and `column-number-mode'.  It is on by default.
-
-Installation:
-
-Put this file somewhere that Emacs can find it (i.e. in one of the
-directories in your `load-path' such as `site-lisp'), optionally
-byte-compile it (recommended), and put this in your .emacs file:
-
-(add-to-list 'auto-mode-alist '("\\.[Cc][Ss][Vv]\\'" . csv-mode))
-(autoload 'csv-mode "csv-mode"
-  "Major mode for editing comma-separated value files." t)

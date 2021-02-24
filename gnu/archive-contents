@@ -424,7 +424,7 @@
 	   ("Gary D. Foster" . "Gary.Foster@Corp.Sun.COM"))
 	  (:maintainer "Luke Lee" . "luke.yx.lee@gmail.com"))])
  (csv-mode .
-	   [(1 14)
+	   [(1 15)
 	    ((emacs
 	      (24 1))
 	     (cl-lib
@@ -434,7 +434,7 @@
 	     (:authors
 	      ("\"Francis J. Wright\"" . "F.J.Wright@qmul.ac.uk"))
 	     (:keywords "convenience")
-	     (:url . "http://elpa.gnu.org/packages/csv-mode.html"))])
+	     (:url . "https://elpa.gnu.org/packages/csv-mode.html"))])
  (cycle-quotes .
 	       [(0 1)
 		nil "Cycle between quote styles" tar
