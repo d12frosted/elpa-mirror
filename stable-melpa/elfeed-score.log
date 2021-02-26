@@ -3,9 +3,35 @@ Fetcher: github
 Source:  https://github.com/sp1ff/elfeed-score.git
 
 Updating /mnt/store/melpa/working/elfeed-score/
-Built elfeed-score in 4.349s, finished at Wed Feb 24 06:43:14 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elfeed-score/
+  to /tmp/elfeed-scoreE75Seg/elfeed-score-20210226.106
+    elfeed-score-log.el -> elfeed-score-log.el
+    elfeed-score-maint.el -> elfeed-score-maint.el
+    elfeed-score-pkg.el -> elfeed-score-pkg.el
+    elfeed-score-rules.el -> elfeed-score-rules.el
+    elfeed-score-scoring.el -> elfeed-score-scoring.el
+    elfeed-score-serde.el -> elfeed-score-serde.el
+    elfeed-score.el -> elfeed-score.el
+  ! doc/elfeed-score.texi -> elfeed-score.texi
+  ! doc/version.texi -> version.texi
+Created /tmp/elfeed-scoreE75Seg/elfeed-score-20210226.106/elfeed-score.info
+Created /tmp/elfeed-scoreE75Seg/elfeed-score-20210226.106/version.info
+Created elfeed-score-20210226.106.tar containing:
+  elfeed-score-20210226.106/
+  elfeed-score-20210226.106/dir
+  elfeed-score-20210226.106/elfeed-score-log.el
+  elfeed-score-20210226.106/elfeed-score-maint.el
+  elfeed-score-20210226.106/elfeed-score-pkg.el
+  elfeed-score-20210226.106/elfeed-score-rules.el
+  elfeed-score-20210226.106/elfeed-score-scoring.el
+  elfeed-score-20210226.106/elfeed-score-serde.el
+  elfeed-score-20210226.106/elfeed-score.el
+  elfeed-score-20210226.106/elfeed-score.info
+  elfeed-score-20210226.106/version.info
+Built elfeed-score in 12.003s, finished at Fri Feb 26 10:38:32 2021
  ✓ Success:
- 96K -rw-r--r-- 1 root root  95K Feb 24 06:43 packages/elfeed-score-20210130.159.el
-4.0K -rw-r--r-- 1 root root  387 Feb 24 06:43 packages/elfeed-score-20210130.159.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 24 06:43 packages/elfeed-score-badge.svg
-4.0K -rw-r--r-- 1 root root  629 Feb 24 06:43 packages/elfeed-score-readme.txt
+4.0K -rw-r--r-- 1 root root  384 Feb 26 10:38 packages/elfeed-score-20210226.106.entry
+172K -rw-r--r-- 1 root root 170K Feb 26 10:38 packages/elfeed-score-20210226.106.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 26 10:38 packages/elfeed-score-badge.svg
+4.0K -rw-r--r-- 1 root root  629 Feb 26 10:38 packages/elfeed-score-readme.txt

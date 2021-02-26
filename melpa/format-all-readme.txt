@@ -41,7 +41,7 @@ Supported languages:
 - JavaScript/JSON/JSX (prettier, standard)
 - Jsonnet (jsonnetfmt)
 - Kotlin (ktlint)
-- LaTeX (latexindent)
+- LaTeX (latexindent, auctex)
 - Ledger (ledger-mode)
 - Lua (lua-fmt, prettier plugin-lua)
 - Markdown (prettier)

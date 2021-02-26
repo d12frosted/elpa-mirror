@@ -40,6 +40,8 @@ This makes dired:
   commands
 - automatically revert the buffer after running a command with
   obvious side-effects
+- automatically add visited files to `file-name-history`
+  (customizable)
 
 Without spoiling dired's existing features.
 

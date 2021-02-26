@@ -1,0 +1,17 @@
+(difflib .
+	 [(20210224 2242)
+	  ((emacs
+	    (24 4))
+	   (cl-generic
+	    (0 3))
+	   (ht
+	    (2 2))
+	   (s
+	    (1 12 0)))
+	  "Helpers for computing deltas between sequences." single
+	  ((:commit . "646fc4388274fe765bbf4661e17a24e4d081250c")
+	   (:authors
+	    ("Diego A. Mundo" . "dieggsy@pm.me"))
+	   (:maintainer "Diego A. Mundo" . "dieggsy@pm.me")
+	   (:keywords "matching" "tools" "string")
+	   (:url . "http://github.com/dieggsy/difflib.el"))])

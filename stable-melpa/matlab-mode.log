@@ -5,7 +5,7 @@ Source:  https://git.code.sf.net/p/matlab-emacs/src
 Updating /mnt/store/melpa/working/matlab-mode/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/matlab-mode/
-  to /tmp/matlab-modeYoh3kx/matlab-mode-20201204.736
+  to /tmp/matlab-modei91DHV/matlab-mode-20210225.1441
     cedet-matlab.el -> cedet-matlab.el
     company-matlab-shell.el -> company-matlab-shell.el
     linemark.el -> linemark.el
@@ -44,54 +44,54 @@ Copying files (->) and directories (=>)
     toolbox/+emacs/@EmacsServer/EmacsServer.m -> toolbox/+emacs/@EmacsServer/EmacsServer.m
     toolbox/+emacs/@Stack/Stack.m -> toolbox/+emacs/@Stack/Stack.m
     templates/srecode-matlab.srt -> templates/srecode-matlab.srt
-Created matlab-mode-20201204.736.tar containing:
-  matlab-mode-20201204.736/
-  matlab-mode-20201204.736/cedet-matlab.el
-  matlab-mode-20201204.736/company-matlab-shell.el
-  matlab-mode-20201204.736/dl_emacs_support.m
-  matlab-mode-20201204.736/linemark.el
-  matlab-mode-20201204.736/matlab-cgen.el
-  matlab-mode-20201204.736/matlab-compat.el
-  matlab-mode-20201204.736/matlab-complete.el
-  matlab-mode-20201204.736/matlab-maint.el
-  matlab-mode-20201204.736/matlab-mode-pkg.el
-  matlab-mode-20201204.736/matlab-netshell.el
-  matlab-mode-20201204.736/matlab-publish.el
-  matlab-mode-20201204.736/matlab-shell-gud.el
-  matlab-mode-20201204.736/matlab-shell.el
-  matlab-mode-20201204.736/matlab-topic.el
-  matlab-mode-20201204.736/matlab.el
-  matlab-mode-20201204.736/mlint.el
-  matlab-mode-20201204.736/semantic-matlab.el
-  matlab-mode-20201204.736/semanticdb-matlab.el
-  matlab-mode-20201204.736/srecode-matlab.el
-  matlab-mode-20201204.736/templates/
-  matlab-mode-20201204.736/templates/srecode-matlab.srt
-  matlab-mode-20201204.736/tlc.el
-  matlab-mode-20201204.736/toolbox/
-  matlab-mode-20201204.736/toolbox/+emacs/
-  matlab-mode-20201204.736/toolbox/+emacs/@Breakpoints/
-  matlab-mode-20201204.736/toolbox/+emacs/@Breakpoints/Breakpoints.m
-  matlab-mode-20201204.736/toolbox/+emacs/@EmacsServer/
-  matlab-mode-20201204.736/toolbox/+emacs/@EmacsServer/EmacsServer.m
-  matlab-mode-20201204.736/toolbox/+emacs/@Stack/
-  matlab-mode-20201204.736/toolbox/+emacs/@Stack/Stack.m
-  matlab-mode-20201204.736/toolbox/+emacs/set.m
-  matlab-mode-20201204.736/toolbox/dbhotlink.m
-  matlab-mode-20201204.736/toolbox/ebclear.m
-  matlab-mode-20201204.736/toolbox/ebstack.m
-  matlab-mode-20201204.736/toolbox/ebstatus.m
-  matlab-mode-20201204.736/toolbox/ebstop.m
-  matlab-mode-20201204.736/toolbox/emacscd.m
-  matlab-mode-20201204.736/toolbox/emacsdocomplete.m
-  matlab-mode-20201204.736/toolbox/emacsinit.m
-  matlab-mode-20201204.736/toolbox/emacsnetshell.m
-  matlab-mode-20201204.736/toolbox/emacsrunregion.m
-  matlab-mode-20201204.736/toolbox/emacstipstring.m
-  matlab-mode-20201204.736/toolbox/help.m
-  matlab-mode-20201204.736/toolbox/opentoline.m
-Built matlab-mode in 5.065s, finished at Wed Feb 24 07:12:05 2021
+Created matlab-mode-20210225.1441.tar containing:
+  matlab-mode-20210225.1441/
+  matlab-mode-20210225.1441/cedet-matlab.el
+  matlab-mode-20210225.1441/company-matlab-shell.el
+  matlab-mode-20210225.1441/dl_emacs_support.m
+  matlab-mode-20210225.1441/linemark.el
+  matlab-mode-20210225.1441/matlab-cgen.el
+  matlab-mode-20210225.1441/matlab-compat.el
+  matlab-mode-20210225.1441/matlab-complete.el
+  matlab-mode-20210225.1441/matlab-maint.el
+  matlab-mode-20210225.1441/matlab-mode-pkg.el
+  matlab-mode-20210225.1441/matlab-netshell.el
+  matlab-mode-20210225.1441/matlab-publish.el
+  matlab-mode-20210225.1441/matlab-shell-gud.el
+  matlab-mode-20210225.1441/matlab-shell.el
+  matlab-mode-20210225.1441/matlab-topic.el
+  matlab-mode-20210225.1441/matlab.el
+  matlab-mode-20210225.1441/mlint.el
+  matlab-mode-20210225.1441/semantic-matlab.el
+  matlab-mode-20210225.1441/semanticdb-matlab.el
+  matlab-mode-20210225.1441/srecode-matlab.el
+  matlab-mode-20210225.1441/templates/
+  matlab-mode-20210225.1441/templates/srecode-matlab.srt
+  matlab-mode-20210225.1441/tlc.el
+  matlab-mode-20210225.1441/toolbox/
+  matlab-mode-20210225.1441/toolbox/+emacs/
+  matlab-mode-20210225.1441/toolbox/+emacs/@Breakpoints/
+  matlab-mode-20210225.1441/toolbox/+emacs/@Breakpoints/Breakpoints.m
+  matlab-mode-20210225.1441/toolbox/+emacs/@EmacsServer/
+  matlab-mode-20210225.1441/toolbox/+emacs/@EmacsServer/EmacsServer.m
+  matlab-mode-20210225.1441/toolbox/+emacs/@Stack/
+  matlab-mode-20210225.1441/toolbox/+emacs/@Stack/Stack.m
+  matlab-mode-20210225.1441/toolbox/+emacs/set.m
+  matlab-mode-20210225.1441/toolbox/dbhotlink.m
+  matlab-mode-20210225.1441/toolbox/ebclear.m
+  matlab-mode-20210225.1441/toolbox/ebstack.m
+  matlab-mode-20210225.1441/toolbox/ebstatus.m
+  matlab-mode-20210225.1441/toolbox/ebstop.m
+  matlab-mode-20210225.1441/toolbox/emacscd.m
+  matlab-mode-20210225.1441/toolbox/emacsdocomplete.m
+  matlab-mode-20210225.1441/toolbox/emacsinit.m
+  matlab-mode-20210225.1441/toolbox/emacsnetshell.m
+  matlab-mode-20210225.1441/toolbox/emacsrunregion.m
+  matlab-mode-20210225.1441/toolbox/emacstipstring.m
+  matlab-mode-20210225.1441/toolbox/help.m
+  matlab-mode-20210225.1441/toolbox/opentoline.m
+Built matlab-mode in 3.146s, finished at Fri Feb 26 11:02:17 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  157 Feb 24 07:12 packages/matlab-mode-20201204.736.entry
-540K -rw-r--r-- 1 root root 540K Feb 24 07:12 packages/matlab-mode-20201204.736.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 24 07:12 packages/matlab-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  158 Feb 26 11:02 packages/matlab-mode-20210225.1441.entry
+552K -rw-r--r-- 1 root root 550K Feb 26 11:02 packages/matlab-mode-20210225.1441.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 26 11:02 packages/matlab-mode-badge.svg

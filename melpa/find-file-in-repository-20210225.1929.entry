@@ -1,0 +1,9 @@
+(find-file-in-repository .
+			 [(20210225 1929)
+			  nil "Quickly find files in a git, mercurial or other repository" single
+			  ((:commit . "047eeeb8bf1958397a048d9ea8aaa43f80bac34e")
+			   (:authors
+			    ("Samuel Hoffstaetter" . "samuel@hoffstaetter.com"))
+			   (:maintainer "Samuel Hoffstaetter" . "samuel@hoffstaetter.com")
+			   (:keywords "files" "convenience" "repository" "project" "source control")
+			   (:url . "https://github.com/hoffstaetter/find-file-in-repository"))])

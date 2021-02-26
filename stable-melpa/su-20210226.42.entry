@@ -1,0 +1,11 @@
+(su .
+    [(20210226 42)
+     ((emacs
+       (26 1)))
+     "Automatically read and write files as other users" single
+     ((:commit . "787f78989253f4568942a4cece5f135f005e135f")
+      (:authors
+       ("PythonNut" . "pythonnut@pythonnut.com"))
+      (:maintainer "PythonNut" . "pythonnut@pythonnut.com")
+      (:keywords "convenience" "helm" "fuzzy" "flx")
+      (:url . "https://github.com/PythonNut/su.el"))])

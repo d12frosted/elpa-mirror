@@ -147,20 +147,9 @@ pyim 支持双拼输入模式，用户可以通过变量 `pyim-default-scheme' �
 2. 用户可以使用函数 `pyim-scheme-add' 添加自定义双拼方案。
 3. 用户可能需要重新设置 `pyim-translate-trigger-char'。
 
-*** 通过 pyim 来支持 rime 所有输入法
+*** 使用 rime 输入法
+具体安装和使用方式请查看 pyim-liberime 包的 Commentary 部分。
 
-1. 安裝配置 liberime 和 pyim, 方式见：[[https://github.com/merrickluo/liberime][liberime]].
-2. 使用 rime 全拼输入法的用户，也可以使用 rime-quanpin scheme,
-   这个 scheme 是专门针对 rime 全拼输入法定制的，支持全拼v快捷键。
-   #+BEGIN_EXAMPLE
-   (setq pyim-default-scheme 'rime-quanpin)
-   #+END_EXAMPLE
-3. 如果通过 rime 使用微软双拼，可以用以下设置：
-   #+BEGIN_EXAMPLE
-   (liberime-select-schema "double_pinyin_mspy")
-   (setq pyim-default-scheme 'rime-microsoft-shuangpin)
-   #+END_EXAMPLE
-   默认是用繁体中文，想要改成简体中文的话，可以参考 [[https://github.com/rime/home/wiki/CustomizationGuide#%E4%B8%80%E4%BE%8B%E5%AE%9A%E8%A3%BD%E7%B0%A1%E5%8C%96%E5%AD%97%E8%BC%B8%E5%87%BA][rime wiki]]，或者[[http://wenshanren.org/?p=1070#orgc7dbd8e][这篇博客]]
 *** 使用五笔输入
 pyim 支持五笔输入模式，用户可以通过变量 `pyim-default-scheme' 来设定：
 

@@ -5,7 +5,7 @@ Source:  https://github.com/joaotavora/sly.git
 Updating /mnt/store/melpa/working/sly/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sly/
-  to /tmp/slym7Uv5s/sly-20210222.1117
+  to /tmp/slyFxITB3/sly-20210224.1024
     sly.el -> sly.el
   ! doc/contributors.texi -> contributors.texi
   ! doc/sly.texi -> sly.texi
@@ -13,122 +13,122 @@ Copying files (->) and directories (=>)
     slynk => slynk
     contrib => contrib
   ! doc/images => images
-Created /tmp/slym7Uv5s/sly-20210222.1117/contributors.info
-Created /tmp/slym7Uv5s/sly-20210222.1117/sly.info
-Created sly-20210222.1117.tar containing:
-  sly-20210222.1117/
-  sly-20210222.1117/contrib/
-  sly-20210222.1117/contrib/sly-autodoc.el
-  sly-20210222.1117/contrib/sly-fancy-inspector.el
-  sly-20210222.1117/contrib/sly-fancy-trace.el
-  sly-20210222.1117/contrib/sly-fancy.el
-  sly-20210222.1117/contrib/sly-fontifying-fu.el
-  sly-20210222.1117/contrib/sly-indentation.el
-  sly-20210222.1117/contrib/sly-mrepl.el
-  sly-20210222.1117/contrib/sly-package-fu.el
-  sly-20210222.1117/contrib/sly-profiler.el
-  sly-20210222.1117/contrib/sly-retro.el
-  sly-20210222.1117/contrib/sly-scratch.el
-  sly-20210222.1117/contrib/sly-stickers.el
-  sly-20210222.1117/contrib/sly-trace-dialog.el
-  sly-20210222.1117/contrib/sly-tramp.el
-  sly-20210222.1117/contrib/slynk-arglists.lisp
-  sly-20210222.1117/contrib/slynk-fancy-inspector.lisp
-  sly-20210222.1117/contrib/slynk-indentation.lisp
-  sly-20210222.1117/contrib/slynk-mrepl.lisp
-  sly-20210222.1117/contrib/slynk-package-fu.lisp
-  sly-20210222.1117/contrib/slynk-profiler.lisp
-  sly-20210222.1117/contrib/slynk-retro.lisp
-  sly-20210222.1117/contrib/slynk-stickers.lisp
-  sly-20210222.1117/contrib/slynk-trace-dialog.lisp
-  sly-20210222.1117/contrib/sylvesters.txt
-  sly-20210222.1117/contributors.info
-  sly-20210222.1117/dir
-  sly-20210222.1117/images/
-  sly-20210222.1117/images/stickers-1-placed-stickers.png
-  sly-20210222.1117/images/stickers-2-armed-stickers.png
-  sly-20210222.1117/images/stickers-3-replay-stickers.png
-  sly-20210222.1117/images/stickers-4-breaking-stickers.png
-  sly-20210222.1117/images/stickers-5-fetch-recordings.png
-  sly-20210222.1117/images/tutorial-1.png
-  sly-20210222.1117/images/tutorial-2.png
-  sly-20210222.1117/images/tutorial-3.png
-  sly-20210222.1117/images/tutorial-4.png
-  sly-20210222.1117/images/tutorial-5.png
-  sly-20210222.1117/images/tutorial-6.png
-  sly-20210222.1117/lib/
-  sly-20210222.1117/lib/.nosearch
-  sly-20210222.1117/lib/hyperspec.el
-  sly-20210222.1117/lib/sly-buttons.el
-  sly-20210222.1117/lib/sly-cl-indent.el
-  sly-20210222.1117/lib/sly-common.el
-  sly-20210222.1117/lib/sly-completion.el
-  sly-20210222.1117/lib/sly-messages.el
-  sly-20210222.1117/lib/sly-parse.el
-  sly-20210222.1117/lib/sly-tests.el
-  sly-20210222.1117/sly-pkg.el
-  sly-20210222.1117/sly.el
-  sly-20210222.1117/sly.info
-  sly-20210222.1117/slynk/
-  sly-20210222.1117/slynk/backend/
-  sly-20210222.1117/slynk/backend/abcl.lisp
-  sly-20210222.1117/slynk/backend/allegro.lisp
-  sly-20210222.1117/slynk/backend/ccl.lisp
-  sly-20210222.1117/slynk/backend/clasp.lisp
-  sly-20210222.1117/slynk/backend/clisp.lisp
-  sly-20210222.1117/slynk/backend/cmucl.lisp
-  sly-20210222.1117/slynk/backend/corman.lisp
-  sly-20210222.1117/slynk/backend/ecl.lisp
-  sly-20210222.1117/slynk/backend/lispworks.lisp
-  sly-20210222.1117/slynk/backend/mkcl.lisp
-  sly-20210222.1117/slynk/backend/sbcl.lisp
-  sly-20210222.1117/slynk/backend/scl.lisp
-  sly-20210222.1117/slynk/metering.lisp
-  sly-20210222.1117/slynk/slynk-apropos.lisp
-  sly-20210222.1117/slynk/slynk-backend.lisp
-  sly-20210222.1117/slynk/slynk-completion.lisp
-  sly-20210222.1117/slynk/slynk-gray.lisp
-  sly-20210222.1117/slynk/slynk-loader.lisp
-  sly-20210222.1117/slynk/slynk-match.lisp
-  sly-20210222.1117/slynk/slynk-rpc.lisp
-  sly-20210222.1117/slynk/slynk-source-file-cache.lisp
-  sly-20210222.1117/slynk/slynk-source-path-parser.lisp
-  sly-20210222.1117/slynk/slynk.asd
-  sly-20210222.1117/slynk/slynk.lisp
-  sly-20210222.1117/slynk/start-slynk.lisp
-  sly-20210222.1117/slynk/xref.lisp
-Built sly in 28.533s, finished at Wed Feb 24 07:34:03 2021
+Created /tmp/slyFxITB3/sly-20210224.1024/contributors.info
+Created /tmp/slyFxITB3/sly-20210224.1024/sly.info
+Created sly-20210224.1024.tar containing:
+  sly-20210224.1024/
+  sly-20210224.1024/contrib/
+  sly-20210224.1024/contrib/sly-autodoc.el
+  sly-20210224.1024/contrib/sly-fancy-inspector.el
+  sly-20210224.1024/contrib/sly-fancy-trace.el
+  sly-20210224.1024/contrib/sly-fancy.el
+  sly-20210224.1024/contrib/sly-fontifying-fu.el
+  sly-20210224.1024/contrib/sly-indentation.el
+  sly-20210224.1024/contrib/sly-mrepl.el
+  sly-20210224.1024/contrib/sly-package-fu.el
+  sly-20210224.1024/contrib/sly-profiler.el
+  sly-20210224.1024/contrib/sly-retro.el
+  sly-20210224.1024/contrib/sly-scratch.el
+  sly-20210224.1024/contrib/sly-stickers.el
+  sly-20210224.1024/contrib/sly-trace-dialog.el
+  sly-20210224.1024/contrib/sly-tramp.el
+  sly-20210224.1024/contrib/slynk-arglists.lisp
+  sly-20210224.1024/contrib/slynk-fancy-inspector.lisp
+  sly-20210224.1024/contrib/slynk-indentation.lisp
+  sly-20210224.1024/contrib/slynk-mrepl.lisp
+  sly-20210224.1024/contrib/slynk-package-fu.lisp
+  sly-20210224.1024/contrib/slynk-profiler.lisp
+  sly-20210224.1024/contrib/slynk-retro.lisp
+  sly-20210224.1024/contrib/slynk-stickers.lisp
+  sly-20210224.1024/contrib/slynk-trace-dialog.lisp
+  sly-20210224.1024/contrib/sylvesters.txt
+  sly-20210224.1024/contributors.info
+  sly-20210224.1024/dir
+  sly-20210224.1024/images/
+  sly-20210224.1024/images/stickers-1-placed-stickers.png
+  sly-20210224.1024/images/stickers-2-armed-stickers.png
+  sly-20210224.1024/images/stickers-3-replay-stickers.png
+  sly-20210224.1024/images/stickers-4-breaking-stickers.png
+  sly-20210224.1024/images/stickers-5-fetch-recordings.png
+  sly-20210224.1024/images/tutorial-1.png
+  sly-20210224.1024/images/tutorial-2.png
+  sly-20210224.1024/images/tutorial-3.png
+  sly-20210224.1024/images/tutorial-4.png
+  sly-20210224.1024/images/tutorial-5.png
+  sly-20210224.1024/images/tutorial-6.png
+  sly-20210224.1024/lib/
+  sly-20210224.1024/lib/.nosearch
+  sly-20210224.1024/lib/hyperspec.el
+  sly-20210224.1024/lib/sly-buttons.el
+  sly-20210224.1024/lib/sly-cl-indent.el
+  sly-20210224.1024/lib/sly-common.el
+  sly-20210224.1024/lib/sly-completion.el
+  sly-20210224.1024/lib/sly-messages.el
+  sly-20210224.1024/lib/sly-parse.el
+  sly-20210224.1024/lib/sly-tests.el
+  sly-20210224.1024/sly-pkg.el
+  sly-20210224.1024/sly.el
+  sly-20210224.1024/sly.info
+  sly-20210224.1024/slynk/
+  sly-20210224.1024/slynk/backend/
+  sly-20210224.1024/slynk/backend/abcl.lisp
+  sly-20210224.1024/slynk/backend/allegro.lisp
+  sly-20210224.1024/slynk/backend/ccl.lisp
+  sly-20210224.1024/slynk/backend/clasp.lisp
+  sly-20210224.1024/slynk/backend/clisp.lisp
+  sly-20210224.1024/slynk/backend/cmucl.lisp
+  sly-20210224.1024/slynk/backend/corman.lisp
+  sly-20210224.1024/slynk/backend/ecl.lisp
+  sly-20210224.1024/slynk/backend/lispworks.lisp
+  sly-20210224.1024/slynk/backend/mkcl.lisp
+  sly-20210224.1024/slynk/backend/sbcl.lisp
+  sly-20210224.1024/slynk/backend/scl.lisp
+  sly-20210224.1024/slynk/metering.lisp
+  sly-20210224.1024/slynk/slynk-apropos.lisp
+  sly-20210224.1024/slynk/slynk-backend.lisp
+  sly-20210224.1024/slynk/slynk-completion.lisp
+  sly-20210224.1024/slynk/slynk-gray.lisp
+  sly-20210224.1024/slynk/slynk-loader.lisp
+  sly-20210224.1024/slynk/slynk-match.lisp
+  sly-20210224.1024/slynk/slynk-rpc.lisp
+  sly-20210224.1024/slynk/slynk-source-file-cache.lisp
+  sly-20210224.1024/slynk/slynk-source-path-parser.lisp
+  sly-20210224.1024/slynk/slynk.asd
+  sly-20210224.1024/slynk/slynk.lisp
+  sly-20210224.1024/slynk/start-slynk.lisp
+  sly-20210224.1024/slynk/xref.lisp
+Built sly in 18.530s, finished at Fri Feb 26 11:20:00 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  262 Feb 24 07:34 packages/sly-20210222.1117.entry
-3.0M -rw-r--r-- 1 root root 3.0M Feb 24 07:34 packages/sly-20210222.1117.tar
-4.0K -rw-r--r-- 1 root root  372 Feb 24 07:33 packages/sly-asdf-20200306.433.entry
-120K -rw-r--r-- 1 root root 120K Feb 24 07:33 packages/sly-asdf-20200306.433.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 24 07:33 packages/sly-asdf-badge.svg
-4.0K -rw-r--r-- 1 root root  237 Feb 24 07:33 packages/sly-asdf-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Feb 24 07:33 packages/sly-asdf.log
-4.0K -rw-r--r-- 1 root root 1.2K Feb 24 07:34 packages/sly-badge.svg
-4.0K -rw-r--r-- 1 root root  397 Feb 24 07:33 packages/sly-hello-world-20200225.1755.entry
- 20K -rw-r--r-- 1 root root  20K Feb 24 07:33 packages/sly-hello-world-20200225.1755.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 24 07:33 packages/sly-hello-world-badge.svg
-4.0K -rw-r--r-- 1 root root  152 Feb 24 07:33 packages/sly-hello-world-readme.txt
-4.0K -rw-r--r-- 1 root root 1.3K Feb 24 07:33 packages/sly-hello-world.log
-4.0K -rw-r--r-- 1 root root  302 Feb 24 07:33 packages/sly-macrostep-20191211.1630.entry
- 32K -rw-r--r-- 1 root root  30K Feb 24 07:33 packages/sly-macrostep-20191211.1630.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 24 07:33 packages/sly-macrostep-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Feb 24 07:33 packages/sly-macrostep.log
-4.0K -rw-r--r-- 1 root root  438 Feb 24 07:33 packages/sly-named-readtables-20191013.2138.entry
- 20K -rw-r--r-- 1 root root  20K Feb 24 07:33 packages/sly-named-readtables-20191013.2138.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 24 07:33 packages/sly-named-readtables-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Feb 24 07:33 packages/sly-named-readtables-readme.txt
-4.0K -rw-r--r-- 1 root root 1.6K Feb 24 07:33 packages/sly-named-readtables.log
-4.0K -rw-r--r-- 1 root root  383 Feb 24 07:33 packages/sly-quicklisp-20200707.1635.entry
- 20K -rw-r--r-- 1 root root  20K Feb 24 07:33 packages/sly-quicklisp-20200707.1635.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 24 07:33 packages/sly-quicklisp-badge.svg
-4.0K -rw-r--r-- 1 root root  165 Feb 24 07:33 packages/sly-quicklisp-readme.txt
-4.0K -rw-r--r-- 1 root root 1.3K Feb 24 07:33 packages/sly-quicklisp.log
-4.0K -rw-r--r-- 1 root root 1.4K Feb 24 07:34 packages/sly-readme.txt
-4.0K -rw-r--r-- 1 root root 2.5K Feb 24 07:33 packages/sly-repl-ansi-color-20171020.1516.el
-4.0K -rw-r--r-- 1 root root  495 Feb 24 07:33 packages/sly-repl-ansi-color-20171020.1516.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 24 07:33 packages/sly-repl-ansi-color-badge.svg
-4.0K -rw-r--r-- 1 root root  145 Feb 24 07:33 packages/sly-repl-ansi-color-readme.txt
-4.0K -rw-r--r-- 1 root root  609 Feb 24 07:33 packages/sly-repl-ansi-color.log
+4.0K -rw-r--r-- 1 root root  262 Feb 26 11:19 packages/sly-20210224.1024.entry
+3.0M -rw-r--r-- 1 root root 3.0M Feb 26 11:19 packages/sly-20210224.1024.tar
+4.0K -rw-r--r-- 1 root root  372 Feb 26 11:19 packages/sly-asdf-20200306.433.entry
+120K -rw-r--r-- 1 root root 120K Feb 26 11:19 packages/sly-asdf-20200306.433.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 26 11:19 packages/sly-asdf-badge.svg
+4.0K -rw-r--r-- 1 root root  237 Feb 26 11:19 packages/sly-asdf-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Feb 26 11:19 packages/sly-asdf.log
+4.0K -rw-r--r-- 1 root root 1.2K Feb 26 11:20 packages/sly-badge.svg
+4.0K -rw-r--r-- 1 root root  397 Feb 26 11:19 packages/sly-hello-world-20200225.1755.entry
+ 20K -rw-r--r-- 1 root root  20K Feb 26 11:19 packages/sly-hello-world-20200225.1755.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 26 11:19 packages/sly-hello-world-badge.svg
+4.0K -rw-r--r-- 1 root root  152 Feb 26 11:19 packages/sly-hello-world-readme.txt
+4.0K -rw-r--r-- 1 root root 1.3K Feb 26 11:19 packages/sly-hello-world.log
+4.0K -rw-r--r-- 1 root root  302 Feb 26 11:19 packages/sly-macrostep-20191211.1630.entry
+ 32K -rw-r--r-- 1 root root  30K Feb 26 11:19 packages/sly-macrostep-20191211.1630.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 26 11:19 packages/sly-macrostep-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Feb 26 11:19 packages/sly-macrostep.log
+4.0K -rw-r--r-- 1 root root  438 Feb 26 11:19 packages/sly-named-readtables-20191013.2138.entry
+ 20K -rw-r--r-- 1 root root  20K Feb 26 11:19 packages/sly-named-readtables-20191013.2138.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 26 11:19 packages/sly-named-readtables-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Feb 26 11:19 packages/sly-named-readtables-readme.txt
+4.0K -rw-r--r-- 1 root root 1.6K Feb 26 11:19 packages/sly-named-readtables.log
+4.0K -rw-r--r-- 1 root root  383 Feb 26 11:19 packages/sly-quicklisp-20200707.1635.entry
+ 20K -rw-r--r-- 1 root root  20K Feb 26 11:19 packages/sly-quicklisp-20200707.1635.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 26 11:19 packages/sly-quicklisp-badge.svg
+4.0K -rw-r--r-- 1 root root  165 Feb 26 11:19 packages/sly-quicklisp-readme.txt
+4.0K -rw-r--r-- 1 root root 1.3K Feb 26 11:19 packages/sly-quicklisp.log
+4.0K -rw-r--r-- 1 root root 1.4K Feb 26 11:19 packages/sly-readme.txt
+4.0K -rw-r--r-- 1 root root 2.5K Feb 26 11:19 packages/sly-repl-ansi-color-20171020.1516.el
+4.0K -rw-r--r-- 1 root root  495 Feb 26 11:19 packages/sly-repl-ansi-color-20171020.1516.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 26 11:19 packages/sly-repl-ansi-color-badge.svg
+4.0K -rw-r--r-- 1 root root  145 Feb 26 11:19 packages/sly-repl-ansi-color-readme.txt
+4.0K -rw-r--r-- 1 root root  609 Feb 26 11:19 packages/sly-repl-ansi-color.log

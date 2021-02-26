@@ -292,6 +292,7 @@ missing package or change you would like to see.
     semantic
     sesman
     shell-script-mode
+    shortdoc
     show-paren-mode
     shr
     side-notes

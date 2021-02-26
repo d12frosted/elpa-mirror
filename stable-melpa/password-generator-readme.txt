@@ -9,4 +9,4 @@ password-generator-custom   - generate custome password from your alphabete.
 
 Use C-u <length> password-generator-simple to specify length of generated password. This works with other functions too.
 
-See full docs here: http://github.com/zargener/emacs-password-genarator
+See full docs here: http://github.com/vandrlexay/emacs-password-genarator
