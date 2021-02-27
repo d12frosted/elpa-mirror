@@ -5,7 +5,7 @@
 ;; Author: Musa Al-hassy <alhassy@gmail.com>
 ;; Version: 1.3
 ;; Package-Version: 20210221.312
-;; Package-Commit: 8ec2ad60be89ca62aec0c5f896428467c5007455
+;; Package-Commit: ff5b18329d2d510412aee122b35768e31f7a63c2
 ;; Package-Requires: ((s "1.12.0") (dash "2.16.0") (emacs "27.1") (org "9.1"))
 ;; Keywords: quran, bible, links, tooltips, convenience, comm, hypermedia
 ;; Repo: https://github.com/alhassy/holy-books

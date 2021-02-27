@@ -4,6 +4,8 @@
 
 ;; Author: Tom Willemse <tom@ryuslash.org>
 ;; Keywords: convenience
+;; Package-Version: 20140119.2143
+;; Package-Commit: 244c2e7f9f0a1050aa8a47ad0b38f4e4584682dd
 ;; Version: 1.2.0
 ;; URL: http://projects.ryuslash.org/desktop-registry/
 

@@ -5,33 +5,33 @@ Source:  https://github.com/dylan-lang/dylan-mode.git
 Updating /mnt/store/melpa/working/dylan-mode/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dylan-mode/
-  to /tmp/dylan-modeSZ836l/dylan-mode-20201212.2106
+  to /tmp/dylan-mode5zsD2m/dylan-mode-20210227.136
     dime-compat.el -> dime-compat.el
     dime-compiler-notes-tree.el -> dime-compiler-notes-tree.el
     dime-dylan.el -> dime-dylan.el
     dime-repl.el -> dime-repl.el
     dime.el -> dime.el
+    dylan-lid.el -> dylan-lid.el
     dylan-mode.el -> dylan-mode.el
     dylan-optimization-coloring.el -> dylan-optimization-coloring.el
-    dylanlid-mode.el -> dylanlid-mode.el
     dtags -> dtags
     etags.regex -> etags.regex
-Created dylan-mode-20201212.2106.tar containing:
-  dylan-mode-20201212.2106/
-  dylan-mode-20201212.2106/dime-compat.el
-  dylan-mode-20201212.2106/dime-compiler-notes-tree.el
-  dylan-mode-20201212.2106/dime-dylan.el
-  dylan-mode-20201212.2106/dime-repl.el
-  dylan-mode-20201212.2106/dime.el
-  dylan-mode-20201212.2106/dtags
-  dylan-mode-20201212.2106/dylan-mode-pkg.el
-  dylan-mode-20201212.2106/dylan-mode.el
-  dylan-mode-20201212.2106/dylan-optimization-coloring.el
-  dylan-mode-20201212.2106/dylanlid-mode.el
-  dylan-mode-20201212.2106/etags.regex
-Built dylan-mode in 3.918s, finished at Sat Feb 27 01:23:02 2021
+Created dylan-mode-20210227.136.tar containing:
+  dylan-mode-20210227.136/
+  dylan-mode-20210227.136/dime-compat.el
+  dylan-mode-20210227.136/dime-compiler-notes-tree.el
+  dylan-mode-20210227.136/dime-dylan.el
+  dylan-mode-20210227.136/dime-repl.el
+  dylan-mode-20210227.136/dime.el
+  dylan-mode-20210227.136/dtags
+  dylan-mode-20210227.136/dylan-lid.el
+  dylan-mode-20210227.136/dylan-mode-pkg.el
+  dylan-mode-20210227.136/dylan-mode.el
+  dylan-mode-20210227.136/dylan-optimization-coloring.el
+  dylan-mode-20210227.136/etags.regex
+Built dylan-mode in 3.378s, finished at Sat Feb 27 07:12:35 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  308 Feb 27 01:23 packages/dylan-mode-20201212.2106.entry
-432K -rw-r--r-- 1 root root 430K Feb 27 01:23 packages/dylan-mode-20201212.2106.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 27 01:23 packages/dylan-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Feb 27 01:23 packages/dylan-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  307 Feb 27 07:12 packages/dylan-mode-20210227.136.entry
+432K -rw-r--r-- 1 root root 430K Feb 27 07:12 packages/dylan-mode-20210227.136.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 27 07:12 packages/dylan-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Feb 27 07:12 packages/dylan-mode-readme.txt
