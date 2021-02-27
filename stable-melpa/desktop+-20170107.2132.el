@@ -3,8 +3,6 @@
 ;; Copyright (C) 2014-2015 François Févotte
 ;; Author:  François Févotte <fevotte@gmail.com>
 ;; URL: https://github.com/ffevotte/desktop-plus
-;; Package-Version: 20170107.2132
-;; Package-Commit: 88055cee526a000056201898499cebbd35e3ea76
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "24.4") (dash "2.11.0") (f "0.17.2"))
 
