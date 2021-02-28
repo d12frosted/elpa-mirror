@@ -1,0 +1,12 @@
+(circleci-api .
+	      [(20210227 1607)
+	       ((emacs
+		 (27))
+		(request
+		 (0 3 2)))
+	       "Bindings for the CircleCI API" single
+	       ((:commit . "2e39c5896819bb2063f9d7795c4299f419cf5542")
+		(:authors
+		 ("Robin Schroer"))
+		(:maintainer "Robin Schroer")
+		(:url . "https://github.com/sulami/circleci-api"))])

@@ -5,7 +5,7 @@
 ;; Author: GitHub user "Jcaw"
 ;; URL: https://github.com/jcaw/json-rpc-server.el
 ;; Package-Version: 20190714.1521
-;; Package-Commit: 1623346b308dc8f593346dc947fdc4092d674834
+;; Package-Commit: 2f41d292b87916f6989e7ff5dc94da18ae6a9e4e
 ;; Keywords: tools, comm, json, rpc
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "26"))

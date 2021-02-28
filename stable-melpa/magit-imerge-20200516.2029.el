@@ -5,7 +5,7 @@
 ;; Author: Kyle Meyer <kyle@kyleam.com>
 ;; URL: https://github.com/magit/magit-imerge
 ;; Package-Version: 20200516.2029
-;; Package-Commit: 14e6c533d999a6816ec24621743e9531f177777d
+;; Package-Commit: a6130871e5f4421618e66d9254d0b5df9f3a1ef2
 ;; Keywords: vc, tools
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.4") (magit "2.10.0"))

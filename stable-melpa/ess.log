@@ -5,7 +5,7 @@ Source:  https://github.com/emacs-ess/ESS.git
 Updating /mnt/store/melpa/working/ess/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ess/
-  to /tmp/essSRuut0/ess-20210217.935
+  to /tmp/ess1ocVi8/ess-20210227.2101
     .dir-locals.el -> .dir-locals.el
   ! lisp/ess-bugs-d.el -> ess-bugs-d.el
   ! lisp/ess-bugs-l.el -> ess-bugs-l.el
@@ -49,114 +49,114 @@ Copying files (->) and directories (=>)
   ! lisp/obsolete/ess-r-a.el -> obsolete/ess-r-a.el
   ! lisp/obsolete/mouseme.el -> obsolete/mouseme.el
   ! lisp/obsolete/msdos.el -> obsolete/msdos.el
-Created /tmp/essSRuut0/ess-20210217.935/ess.info
-Created ess-20210217.935.tar containing:
-  ess-20210217.935/
-  ess-20210217.935/.dir-locals.el
-  ess-20210217.935/dir
-  ess-20210217.935/ess-bugs-d.el
-  ess-20210217.935/ess-bugs-l.el
-  ess-20210217.935/ess-custom.el
-  ess-20210217.935/ess-gretl.el
-  ess-20210217.935/ess-help.el
-  ess-20210217.935/ess-inf.el
-  ess-20210217.935/ess-jags-d.el
-  ess-20210217.935/ess-julia.el
-  ess-20210217.935/ess-mode.el
-  ess-20210217.935/ess-pkg.el
-  ess-20210217.935/ess-r-completion.el
-  ess-20210217.935/ess-r-flymake.el
-  ess-20210217.935/ess-r-mode.el
-  ess-20210217.935/ess-r-package.el
-  ess-20210217.935/ess-r-syntax.el
-  ess-20210217.935/ess-r-xref.el
-  ess-20210217.935/ess-rd.el
-  ess-20210217.935/ess-rdired.el
-  ess-20210217.935/ess-roxy.el
-  ess-20210217.935/ess-s-lang.el
-  ess-20210217.935/ess-sas-a.el
-  ess-20210217.935/ess-sas-d.el
-  ess-20210217.935/ess-sas-l.el
-  ess-20210217.935/ess-site.el
-  ess-20210217.935/ess-sp6-d.el
-  ess-20210217.935/ess-toolbar.el
-  ess-20210217.935/ess-tracebug.el
-  ess-20210217.935/ess-trns.el
-  ess-20210217.935/ess-utils.el
-  ess-20210217.935/ess.el
-  ess-20210217.935/ess.info
-  ess-20210217.935/essd-els.el
-  ess-20210217.935/etc/
-  ess-20210217.935/etc/ESSR.rds
-  ess-20210217.935/etc/ESSR/
-  ess-20210217.935/etc/ESSR/BUILDESSR
-  ess-20210217.935/etc/ESSR/LOADREMOTE
-  ess-20210217.935/etc/ESSR/R/
-  ess-20210217.935/etc/ESSR/R/.basic.R
-  ess-20210217.935/etc/ESSR/R/.load.R
-  ess-20210217.935/etc/ESSR/R/completion.R
-  ess-20210217.935/etc/ESSR/R/debug.R
-  ess-20210217.935/etc/ESSR/R/misc.R
-  ess-20210217.935/etc/ESSR/R/mpi.R
-  ess-20210217.935/etc/ESSR/R/ns-eval.R
-  ess-20210217.935/etc/ESSR/R/pkg.R
-  ess-20210217.935/etc/Makefile
-  ess-20210217.935/etc/ess-julia.jl
-  ess-20210217.935/etc/ess-sas-sh-command
-  ess-20210217.935/etc/icons/
-  ess-20210217.935/etc/icons/README
-  ess-20210217.935/etc/icons/rbuffer.xpm
-  ess-20210217.935/etc/icons/rfunction.xpm
-  ess-20210217.935/etc/icons/rline.xpm
-  ess-20210217.935/etc/icons/rregion.xpm
-  ess-20210217.935/etc/icons/splus_letter_small.xpm
-  ess-20210217.935/etc/icons/splus_letters_large.png
-  ess-20210217.935/etc/icons/splus_letters_large.xpm
-  ess-20210217.935/etc/icons/spluslogo.xpm
-  ess-20210217.935/etc/icons/spluslogo.xpm.safe
-  ess-20210217.935/etc/icons/startr.xpm
-  ess-20210217.935/etc/icons/switch_ess.xpm
-  ess-20210217.935/etc/icons/switchr.xpm
-  ess-20210217.935/etc/icons/switchs.xpm
-  ess-20210217.935/obsolete/
-  ess-20210217.935/obsolete/ess-eldoc.el
-  ess-20210217.935/obsolete/ess-mouse.el
-  ess-20210217.935/obsolete/ess-r-a.el
-  ess-20210217.935/obsolete/mouseme.el
-  ess-20210217.935/obsolete/msdos.el
-Built ess in 21.129s, finished at Sat Feb 27 07:16:54 2021
+Created /tmp/ess1ocVi8/ess-20210227.2101/ess.info
+Created ess-20210227.2101.tar containing:
+  ess-20210227.2101/
+  ess-20210227.2101/.dir-locals.el
+  ess-20210227.2101/dir
+  ess-20210227.2101/ess-bugs-d.el
+  ess-20210227.2101/ess-bugs-l.el
+  ess-20210227.2101/ess-custom.el
+  ess-20210227.2101/ess-gretl.el
+  ess-20210227.2101/ess-help.el
+  ess-20210227.2101/ess-inf.el
+  ess-20210227.2101/ess-jags-d.el
+  ess-20210227.2101/ess-julia.el
+  ess-20210227.2101/ess-mode.el
+  ess-20210227.2101/ess-pkg.el
+  ess-20210227.2101/ess-r-completion.el
+  ess-20210227.2101/ess-r-flymake.el
+  ess-20210227.2101/ess-r-mode.el
+  ess-20210227.2101/ess-r-package.el
+  ess-20210227.2101/ess-r-syntax.el
+  ess-20210227.2101/ess-r-xref.el
+  ess-20210227.2101/ess-rd.el
+  ess-20210227.2101/ess-rdired.el
+  ess-20210227.2101/ess-roxy.el
+  ess-20210227.2101/ess-s-lang.el
+  ess-20210227.2101/ess-sas-a.el
+  ess-20210227.2101/ess-sas-d.el
+  ess-20210227.2101/ess-sas-l.el
+  ess-20210227.2101/ess-site.el
+  ess-20210227.2101/ess-sp6-d.el
+  ess-20210227.2101/ess-toolbar.el
+  ess-20210227.2101/ess-tracebug.el
+  ess-20210227.2101/ess-trns.el
+  ess-20210227.2101/ess-utils.el
+  ess-20210227.2101/ess.el
+  ess-20210227.2101/ess.info
+  ess-20210227.2101/essd-els.el
+  ess-20210227.2101/etc/
+  ess-20210227.2101/etc/ESSR.rds
+  ess-20210227.2101/etc/ESSR/
+  ess-20210227.2101/etc/ESSR/BUILDESSR
+  ess-20210227.2101/etc/ESSR/LOADREMOTE
+  ess-20210227.2101/etc/ESSR/R/
+  ess-20210227.2101/etc/ESSR/R/.basic.R
+  ess-20210227.2101/etc/ESSR/R/.load.R
+  ess-20210227.2101/etc/ESSR/R/completion.R
+  ess-20210227.2101/etc/ESSR/R/debug.R
+  ess-20210227.2101/etc/ESSR/R/misc.R
+  ess-20210227.2101/etc/ESSR/R/mpi.R
+  ess-20210227.2101/etc/ESSR/R/ns-eval.R
+  ess-20210227.2101/etc/ESSR/R/pkg.R
+  ess-20210227.2101/etc/Makefile
+  ess-20210227.2101/etc/ess-julia.jl
+  ess-20210227.2101/etc/ess-sas-sh-command
+  ess-20210227.2101/etc/icons/
+  ess-20210227.2101/etc/icons/README
+  ess-20210227.2101/etc/icons/rbuffer.xpm
+  ess-20210227.2101/etc/icons/rfunction.xpm
+  ess-20210227.2101/etc/icons/rline.xpm
+  ess-20210227.2101/etc/icons/rregion.xpm
+  ess-20210227.2101/etc/icons/splus_letter_small.xpm
+  ess-20210227.2101/etc/icons/splus_letters_large.png
+  ess-20210227.2101/etc/icons/splus_letters_large.xpm
+  ess-20210227.2101/etc/icons/spluslogo.xpm
+  ess-20210227.2101/etc/icons/spluslogo.xpm.safe
+  ess-20210227.2101/etc/icons/startr.xpm
+  ess-20210227.2101/etc/icons/switch_ess.xpm
+  ess-20210227.2101/etc/icons/switchr.xpm
+  ess-20210227.2101/etc/icons/switchs.xpm
+  ess-20210227.2101/obsolete/
+  ess-20210227.2101/obsolete/ess-eldoc.el
+  ess-20210227.2101/obsolete/ess-mouse.el
+  ess-20210227.2101/obsolete/ess-r-a.el
+  ess-20210227.2101/obsolete/mouseme.el
+  ess-20210227.2101/obsolete/msdos.el
+Built ess in 24.905s, finished at Sun Feb 28 09:35:57 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  839 Feb 27 07:16 packages/ess-20210217.935.entry
-1.5M -rw-r--r-- 1 root root 1.5M Feb 27 07:16 packages/ess-20210217.935.tar
-8.0K -rw-r--r-- 1 root root 5.0K Feb 27 07:16 packages/ess-R-data-view-20130509.1158.el
-4.0K -rw-r--r-- 1 root root  419 Feb 27 07:16 packages/ess-R-data-view-20130509.1158.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 27 07:16 packages/ess-R-data-view-badge.svg
-4.0K -rw-r--r-- 1 root root  328 Feb 27 07:16 packages/ess-R-data-view-readme.txt
-4.0K -rw-r--r-- 1 root root  576 Feb 27 07:16 packages/ess-R-data-view.log
-4.0K -rw-r--r-- 1 root root 1.2K Feb 27 07:16 packages/ess-badge.svg
- 20K -rw-r--r-- 1 root root  19K Feb 27 07:16 packages/ess-r-insert-obj-20200916.843.el
-4.0K -rw-r--r-- 1 root root  411 Feb 27 07:16 packages/ess-r-insert-obj-20200916.843.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 27 07:16 packages/ess-r-insert-obj-badge.svg
-4.0K -rw-r--r-- 1 root root  771 Feb 27 07:16 packages/ess-r-insert-obj-readme.txt
-4.0K -rw-r--r-- 1 root root  585 Feb 27 07:16 packages/ess-r-insert-obj.log
-4.0K -rw-r--r-- 1 root root  265 Feb 27 07:16 packages/ess-readme.txt
- 72K -rw-r--r-- 1 root root  72K Feb 27 07:16 packages/ess-smart-equals-20190204.449.el
-4.0K -rw-r--r-- 1 root root  473 Feb 27 07:16 packages/ess-smart-equals-20190204.449.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 27 07:16 packages/ess-smart-equals-badge.svg
-8.0K -rw-r--r-- 1 root root 7.1K Feb 27 07:16 packages/ess-smart-equals-readme.txt
-4.0K -rw-r--r-- 1 root root  582 Feb 27 07:16 packages/ess-smart-equals.log
-4.0K -rw-r--r-- 1 root root  350 Feb 27 07:16 packages/ess-smart-underscore-20190309.101.entry
- 32K -rw-r--r-- 1 root root  30K Feb 27 07:16 packages/ess-smart-underscore-20190309.101.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 27 07:16 packages/ess-smart-underscore-badge.svg
-4.0K -rw-r--r-- 1 root root 1.8K Feb 27 07:16 packages/ess-smart-underscore-readme.txt
-4.0K -rw-r--r-- 1 root root 1.3K Feb 27 07:16 packages/ess-smart-underscore.log
- 12K -rw-r--r-- 1 root root  12K Feb 27 07:16 packages/ess-view-20181001.1730.el
-4.0K -rw-r--r-- 1 root root  437 Feb 27 07:16 packages/ess-view-20181001.1730.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 27 07:16 packages/ess-view-badge.svg
- 88K -rw-r--r-- 1 root root  88K Feb 27 07:16 packages/ess-view-data-20201202.1124.el
-4.0K -rw-r--r-- 1 root root  388 Feb 27 07:16 packages/ess-view-data-20201202.1124.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 27 07:16 packages/ess-view-data-badge.svg
-4.0K -rw-r--r-- 1 root root 2.1K Feb 27 07:16 packages/ess-view-data-readme.txt
-4.0K -rw-r--r-- 1 root root  563 Feb 27 07:16 packages/ess-view-data.log
-4.0K -rw-r--r-- 1 root root 1.2K Feb 27 07:16 packages/ess-view-readme.txt
-4.0K -rw-r--r-- 1 root root  924 Feb 27 07:16 packages/ess-view.log
+4.0K -rw-r--r-- 1 root root  840 Feb 28 09:35 packages/ess-20210227.2101.entry
+1.5M -rw-r--r-- 1 root root 1.5M Feb 28 09:35 packages/ess-20210227.2101.tar
+8.0K -rw-r--r-- 1 root root 5.0K Feb 28 09:35 packages/ess-R-data-view-20130509.1158.el
+4.0K -rw-r--r-- 1 root root  419 Feb 28 09:35 packages/ess-R-data-view-20130509.1158.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 28 09:35 packages/ess-R-data-view-badge.svg
+4.0K -rw-r--r-- 1 root root  328 Feb 28 09:35 packages/ess-R-data-view-readme.txt
+4.0K -rw-r--r-- 1 root root  576 Feb 28 09:35 packages/ess-R-data-view.log
+4.0K -rw-r--r-- 1 root root 1.2K Feb 28 09:35 packages/ess-badge.svg
+ 20K -rw-r--r-- 1 root root  19K Feb 28 09:35 packages/ess-r-insert-obj-20200916.843.el
+4.0K -rw-r--r-- 1 root root  411 Feb 28 09:35 packages/ess-r-insert-obj-20200916.843.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 28 09:35 packages/ess-r-insert-obj-badge.svg
+4.0K -rw-r--r-- 1 root root  771 Feb 28 09:35 packages/ess-r-insert-obj-readme.txt
+4.0K -rw-r--r-- 1 root root  585 Feb 28 09:35 packages/ess-r-insert-obj.log
+4.0K -rw-r--r-- 1 root root  265 Feb 28 09:35 packages/ess-readme.txt
+ 72K -rw-r--r-- 1 root root  72K Feb 28 09:35 packages/ess-smart-equals-20190204.449.el
+4.0K -rw-r--r-- 1 root root  473 Feb 28 09:35 packages/ess-smart-equals-20190204.449.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 28 09:35 packages/ess-smart-equals-badge.svg
+8.0K -rw-r--r-- 1 root root 7.1K Feb 28 09:35 packages/ess-smart-equals-readme.txt
+4.0K -rw-r--r-- 1 root root  582 Feb 28 09:35 packages/ess-smart-equals.log
+4.0K -rw-r--r-- 1 root root  350 Feb 28 09:35 packages/ess-smart-underscore-20190309.101.entry
+ 32K -rw-r--r-- 1 root root  30K Feb 28 09:35 packages/ess-smart-underscore-20190309.101.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 28 09:35 packages/ess-smart-underscore-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Feb 28 09:35 packages/ess-smart-underscore-readme.txt
+4.0K -rw-r--r-- 1 root root 1.3K Feb 28 09:35 packages/ess-smart-underscore.log
+ 12K -rw-r--r-- 1 root root  12K Feb 28 09:35 packages/ess-view-20181001.1730.el
+4.0K -rw-r--r-- 1 root root  437 Feb 28 09:35 packages/ess-view-20181001.1730.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 28 09:35 packages/ess-view-badge.svg
+ 88K -rw-r--r-- 1 root root  88K Feb 28 09:35 packages/ess-view-data-20201202.1124.el
+4.0K -rw-r--r-- 1 root root  388 Feb 28 09:35 packages/ess-view-data-20201202.1124.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 28 09:35 packages/ess-view-data-badge.svg
+4.0K -rw-r--r-- 1 root root 2.1K Feb 28 09:35 packages/ess-view-data-readme.txt
+4.0K -rw-r--r-- 1 root root  563 Feb 28 09:35 packages/ess-view-data.log
+4.0K -rw-r--r-- 1 root root 1.2K Feb 28 09:35 packages/ess-view-readme.txt
+4.0K -rw-r--r-- 1 root root  924 Feb 28 09:35 packages/ess-view.log

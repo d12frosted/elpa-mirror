@@ -519,3 +519,9 @@ pyim 安装后，可以通过下面的设置开启拼音搜索功能：
 (setq-default pyim-english-input-switch-functions
               '(pyim-probe-isearch-mode))
 #+END_EXAMPLE
+
+*** 让 ivy 支持拼音搜索候选项功能
+#+BEGIN_EXAMPLE
+(setq ivy-re-builders-alist
+      '((t . pyim-ivy-cregexp)))
+#+END_EXAMPLE

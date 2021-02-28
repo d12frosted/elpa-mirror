@@ -1,0 +1,11 @@
+(cascading-dir-locals .
+		      [(20210221 1516)
+		       ((emacs
+			 (26 1)))
+		       "Apply all (!) .dir-locals.el from root to current directory" single
+		       ((:commit . "efdf5e6d62b955ee0ca3c170eae1d388799f9fa0")
+			(:authors
+			 ("Fritz Grabo" . "me@fritzgrabo.com"))
+			(:maintainer "Fritz Grabo" . "me@fritzgrabo.com")
+			(:keywords "convenience")
+			(:url . "https://github.com/fritzgrabo/cascading-dir-locals"))])

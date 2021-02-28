@@ -5,7 +5,7 @@
 ;; Author: jtbm37
 ;; Version: 1.0
 ;; Package-Version: 20210211.1226
-;; Package-Commit: 2123f786bc824ef89306953939acbc312639f178
+;; Package-Commit: dd685166818b92470bcccb3e398f2d443f513e63
 ;; Keywords: files icons dired
 ;; Package-Requires: ((emacs "24.4") (all-the-icons "2.2.0"))
 ;; URL: https://github.com/jtbm37/all-the-icons-dired

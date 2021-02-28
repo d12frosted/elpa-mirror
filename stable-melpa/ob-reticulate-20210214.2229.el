@@ -3,7 +3,7 @@
 ;; Author: Jack Kamm
 ;; Keywords: literate programming, reproducible research, R, Python, statistics, languages, outlines, processes
 ;; Package-Version: 20210214.2229
-;; Package-Commit: a5c532b34000ccfee3e827a19fea23fd427b954a
+;; Package-Commit: 8109fb02fb6339b1cf9290df29fc0c1109a33c04
 ;; Package-Requires: ((org "9.4") (emacs "24.4"))
 ;; Homepage: https://github.com/jackkamm/ob-reticulate
 ;; Version: 1.0.0
