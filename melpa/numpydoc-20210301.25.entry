@@ -1,0 +1,15 @@
+(numpydoc .
+	  [(20210301 25)
+	   ((emacs
+	     (25 1))
+	    (s
+	     (1 12 0))
+	    (dash
+	     (2 18 0)))
+	   "NumPy style docstring insertion" single
+	   ((:commit . "cd9f5d23dca0fffeeeec3664782fc7291452a739")
+	    (:authors
+	     ("Doug Davis" . "ddavis@ddavis.io"))
+	    (:maintainer "Doug Davis" . "ddavis@ddavis.io")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/douglasdavis/numpydoc.el"))])

@@ -229,6 +229,7 @@ missing package or change you would like to see.
     messages
     minibuffer-line
     minimap
+    mmm-mode
     modeline
     mood-line
     mpdel
