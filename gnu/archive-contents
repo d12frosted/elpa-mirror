@@ -1528,6 +1528,14 @@
 	    ("Julien Danjou" . "julien@danjou.info"))
 	   (:keywords "comm")
 	   (:url . "https://elpa.gnu.org/packages/oauth2.html"))])
+ (ob-haxe .
+	  [(1 0)
+	   nil "org-babel functions for haxe evaluation" tar
+	   ((:url . "https://orgmode.org")
+	    (:maintainer "Ian Martins" . "ianxm@jhu.edu")
+	    (:authors
+	     ("Ian Martins" . "ianxm@jhu.edu"))
+	    (:keywords "literate programming" "reproducible research"))])
  (objed .
 	[(0 8 3)
 	 ((emacs
