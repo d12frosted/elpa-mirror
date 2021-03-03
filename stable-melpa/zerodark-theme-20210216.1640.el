@@ -5,7 +5,7 @@
 ;; Author: Nicolas Petton <nicolas@petton.fr>
 ;; Keywords: themes
 ;; Package-Version: 20210216.1640
-;; Package-Commit: 65a4b57d064cd4bfe61750d105206c3654ac5bba
+;; Package-Commit: ee49ea9e875d7a3da63386880ca3a9e10b1051e5
 ;; URL: https://github.com/NicolasPetton/zerodark-theme
 ;; Version: 4.3
 ;; Package: zerodark-theme

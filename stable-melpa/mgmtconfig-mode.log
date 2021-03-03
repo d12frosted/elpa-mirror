@@ -8,7 +8,8 @@ warning: unable to rmdir 'vendor/github.com/coreos/etcd': Directory not empty
 warning: unable to rmdir 'vendor/github.com/docker/go-connections': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/go-grpc-prometheus': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/grpc-gateway': Directory not empty
-HEAD is now at 887d374 lang: funcs: Catch simple function api usage without types
+Checking out files:  99% (507/511)   Checking out files: 100% (511/511)   Checking out files: 100% (511/511), done.
+HEAD is now at 7f39705 test: Skip more tests
 Synchronizing submodule url for 'vendor/github.com/containerd/containerd'
 Synchronizing submodule url for 'vendor/github.com/docker/distribution'
 Synchronizing submodule url for 'vendor/github.com/docker/docker'
