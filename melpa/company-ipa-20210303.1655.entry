@@ -1,0 +1,13 @@
+(company-ipa .
+	     [(20210303 1655)
+	      ((emacs
+		(24 3))
+	       (company
+		(0 8 12)))
+	      "IPA backend for company" single
+	      ((:commit . "26fbe5438ae5e63d2b3aaa0a9bd284e064a8213d")
+	       (:authors
+		("Matías Guzmán Naranjo" . "mguzmann89@gmail.com"))
+	       (:maintainer "Matías Guzmán Naranjo" . "mguzmann89@gmail.com")
+	       (:keywords "convenience" "company" "ipa")
+	       (:url . "https://github.com/mguzmann/company-ipa"))])

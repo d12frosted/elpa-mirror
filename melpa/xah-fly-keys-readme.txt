@@ -19,6 +19,7 @@ azerty
 azerty-be
 colemak
 colemak-mod-dh
+colemak-mod-dh-new
 dvorak
 programer-dvorak
 qwerty
