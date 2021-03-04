@@ -305,6 +305,7 @@ missing package or change you would like to see.
     spaceline
     speedbar
     spell-fu
+    spray
     stripes
     suggest
     switch-window

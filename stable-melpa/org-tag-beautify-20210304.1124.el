@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "4.0.0"))
-;; Package-Version: 20210202.628
-;; Package-Commit: 4a6de709ee0d4ee719c83df6dce86f38f9db1f75
+;; Package-Version: 20210304.1124
+;; Package-Commit: e655ced70140cbec8fe12f9207614ca2b3a6c37c
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://github.com/stardiviner/org-tag-beautify
@@ -324,6 +324,8 @@
                   ("Edge" . ,(all-the-icons-fileicon "edge" :face '(:foreground "DodgerBlue")))
                   ("Safari" . ,(all-the-icons-faicon "safari" :face '(:foreground "LightSkyBlue")))
                   ("terminal" . ,(all-the-icons-fileicon "terminal" :face '(:foreground "black")))
+                  ("command" . ,(all-the-icons-fileicon "terminal" :face '(:foreground "MediumSeaGreen")))
+                  ("ssh" . ,(all-the-icons-fileicon "terminal" :face '(:foreground "SteelBlue")))
                   ("powershell" . ,(all-the-icons-fileicon "powershell" :face '(:foreground "RoyalBlue")))
                   ("CMake" . ,(all-the-icons-fileicon "cmake" :face '(:foreground "CornflowerBlue")))
                   ("Tcl" . ,(all-the-icons-fileicon "tcl" :face '(:foreground "SteelBlue")))
@@ -404,11 +406,11 @@
                   ("Shell" . ,(all-the-icons-alltheicon "script" :face '(:foreground "DeepSkyBlue")))
                   ("LISP" . ,(all-the-icons-fileicon "lisp" :face '(:foreground "OrangeRed")))
                   ("Common_Lisp" . ,(all-the-icons-fileicon "clisp" :face '(:foreground "black")))
+                  ("Emacs_Lisp" . ,(all-the-icons-fileicon "elisp" :face '(:foreground "RoyalBlue")))
                   ("Clojure" . ,(all-the-icons-alltheicon "clojure-line" :v-adjust -0.05 :face '(:foreground "DeepSkyBlue")))
                   ("ClojureScript" . ,(all-the-icons-fileicon "cljs" :v-adjust -0.01 :face '(:foreground "DeepSkyBlue")))
                   ("Scheme" . ,(all-the-icons-fileicon "scheme" :face '(:foreground "LightBlue")))
                   ("Racket" . ,(all-the-icons-fileicon "racket" :face '(:foreground "DarkOrange")))
-                  ("EmacsLisp" . ,(all-the-icons-fileicon "elisp" :face '(:foreground "RoyalBlue")))
                   ("Python" . ,(all-the-icons-alltheicon "python" :face '(:foreground "orange")))
                   ("Cython" . ,(all-the-icons-fileicon "cython" :face '(:foreground "orange")))
                   ("Haskell" . ,(all-the-icons-alltheicon "haskell" :face '(:foreground "orange")))

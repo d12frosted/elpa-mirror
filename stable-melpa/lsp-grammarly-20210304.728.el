@@ -7,8 +7,8 @@
 ;; Description: LSP Clients for Grammarly.
 ;; Keyword: lsp grammarly checker
 ;; Version: 0.1.0
-;; Package-Version: 20210304.344
-;; Package-Commit: 25a304cd80b6124be39611ca92ef91a943ecd3fc
+;; Package-Version: 20210304.728
+;; Package-Commit: f1b5daa3e213651b929943885262f87d2ab70864
 ;; Package-Requires: ((emacs "24.3") (lsp-mode "6.1"))
 ;; URL: https://github.com/emacs-grammarly/lsp-grammarly
 
@@ -46,7 +46,7 @@ Link: https://github.com/znck/grammarly"
 (defcustom lsp-grammarly-modes '(text-mode latex-mode org-mode markdown-mode)
   "List of major mode that work with Grammarly."
   :type 'list
-  :group 'eglot-grammarly)
+  :group 'lsp-grammarly)
 
 (defcustom lsp-grammarly-auto-activate t
   "Enable Grammarly service when a supported document is opened."
