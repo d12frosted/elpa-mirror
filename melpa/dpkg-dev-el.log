@@ -3,30 +3,8 @@ Fetcher: git
 Source:  https://salsa.debian.org/emacsen-team/dpkg-dev-el.git
 
 Updating /mnt/store/melpa/working/dpkg-dev-el/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/dpkg-dev-el/
-  to /tmp/dpkg-dev-elnzasHn/dpkg-dev-el-20190824.2314
-    debian-autoloads.el -> debian-autoloads.el
-    debian-bts-control.el -> debian-bts-control.el
-    debian-changelog-mode.el -> debian-changelog-mode.el
-    debian-control-mode.el -> debian-control-mode.el
-    debian-copyright.el -> debian-copyright.el
-    dpkg-dev-el-pkg.el -> dpkg-dev-el-pkg.el
-    dpkg-dev-el.el -> dpkg-dev-el.el
-    readme-debian.el -> readme-debian.el
-Created dpkg-dev-el-20190824.2314.tar containing:
-  dpkg-dev-el-20190824.2314/
-  dpkg-dev-el-20190824.2314/debian-autoloads.el
-  dpkg-dev-el-20190824.2314/debian-bts-control.el
-  dpkg-dev-el-20190824.2314/debian-changelog-mode.el
-  dpkg-dev-el-20190824.2314/debian-control-mode.el
-  dpkg-dev-el-20190824.2314/debian-copyright.el
-  dpkg-dev-el-20190824.2314/dpkg-dev-el-pkg.el
-  dpkg-dev-el-20190824.2314/dpkg-dev-el.el
-  dpkg-dev-el-20190824.2314/readme-debian.el
-Built dpkg-dev-el in 2.916s, finished at Thu Mar  4 11:22:55 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  301 Mar  4 11:22 packages/dpkg-dev-el-20190824.2314.entry
-172K -rw-r--r-- 1 root root 170K Mar  4 11:22 packages/dpkg-dev-el-20190824.2314.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar  4 11:22 packages/dpkg-dev-el-badge.svg
-4.0K -rw-r--r-- 1 root root  278 Mar  4 11:22 packages/dpkg-dev-el-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: GitLab is not responding
+fatal: unable to access 'https://salsa.debian.org/emacsen-team/dpkg-dev-el.git/': The requested URL returned error: 502
+error: Could not fetch origin
+
