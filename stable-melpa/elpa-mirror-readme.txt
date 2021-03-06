@@ -9,8 +9,8 @@ This is the ONLY way to have 100% portable Emacs setup.
 
 Usage in Emacs,
 Run `elpamr-create-mirror-for-installed'.
+
 CLI program tar is required.  It's already installed on Windows10/Linux/macOS.
-On old window, the easiest way to get tar is installing Cygwin/MSYS2.
 
 Usage in Shell,
   Emacs --batch -l ~/.emacs.d/init.el

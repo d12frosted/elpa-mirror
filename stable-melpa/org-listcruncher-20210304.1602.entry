@@ -1,0 +1,13 @@
+(org-listcruncher .
+		  [(20210304 1602)
+		   ((seq
+		     (2 3))
+		    (emacs
+		     (26 1)))
+		   "Planning tool - Parse Org mode lists into table" single
+		   ((:commit . "b0269843f317b6715dbde8a4e955aac9c38cbdb6")
+		    (:authors
+		     ("Derek Feichtinger" . "dfeich@gmail.com"))
+		    (:maintainer "Derek Feichtinger" . "dfeich@gmail.com")
+		    (:keywords "convenience")
+		    (:url . "https://github.com/dfeich/org-listcruncher"))])

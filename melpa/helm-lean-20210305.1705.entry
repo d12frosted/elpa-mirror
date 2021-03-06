@@ -1,0 +1,20 @@
+(helm-lean .
+	   [(20210305 1705)
+	    ((emacs
+	      (24 3))
+	     (dash
+	      (2 18 0))
+	     (helm
+	      (2 8 0))
+	     (lean-mode
+	      (3 3 0)))
+	    "Helm interfaces for lean-mode" single
+	    ((:commit . "5c50338ac149ca5225fc737be291db1f63c45f1d")
+	     (:authors
+	      ("Leonardo de Moura" . "leonardo@microsoft.com")
+	      ("Soonho Kong      " . "soonhok@cs.cmu.edu")
+	      ("Gabriel Ebner    " . "gebner@gebner.org")
+	      ("Sebastian Ullrich" . "sebasti@nullri.ch"))
+	     (:maintainer "Sebastian Ullrich" . "sebasti@nullri.ch")
+	     (:keywords "languages")
+	     (:url . "https://github.com/leanprover/lean-mode"))])

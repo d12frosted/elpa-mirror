@@ -3,8 +3,15 @@ style docstrings for Python functions: `numpydoc-generate'. The
 NumPy docstring style guide can be found at
 https://numpydoc.readthedocs.io/en/latest/format.html
 
-Customizations include opting in or out of a minibuffer prompt for
-entering various components of the docstring (which can be toggled
-with `numpydoc-toggle-prompt'), templates for when opting out of
-the prompt, the quoting style used, and whether or not to include
-an Examples block. See the `numpydoc' customization group.
+There are three ways that one can be guided to insert descriptions
+for the components:
+
+1. Minibuffer prompt (the default).
+2. yasnippet expansion (requires `yasnippet' to be installed)
+3. Nothing (template text is inserted).
+
+Convenience functions are provided to interactively configure the
+insertion style symbol:
+- `numpydoc-use-prompt'
+- `numpydoc-use-yasnippet'
+- `numpydoc-use-templates'

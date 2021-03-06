@@ -1,0 +1,10 @@
+(znc .
+     [(20210304 2337)
+      ((cl-lib
+	(0 2)))
+      "ZNC + ERC" single
+      ((:commit . "e795739ec182d217ffaf3c595819c308911540ee")
+       (:authors
+	("Yaroslav Shirokov"))
+       (:maintainer "Yaroslav Shirokov")
+       (:url . "https://github.com/sshirokov/ZNC.el"))])
