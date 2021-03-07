@@ -4,6 +4,8 @@
 
 ;; Author: Tom Jakubowski
 ;; Version: 0.1.1
+;; Package-Version: 20160301.243
+;; Package-Commit: 0fd386b8b29c4175022a04ad70ea5643185b6726
 ;; Package-Requires: ((request "0.2.0") (cl-lib "0.5"))
 ;; Keywords: tools
 

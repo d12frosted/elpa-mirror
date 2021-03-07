@@ -5,7 +5,7 @@
 ;; Author: alpha22jp <alpha22jp@gmail.com>
 ;; Package-Requires: ((emacs "24.4") (let-alist "1.0.4") (websocket "1.4"))
 ;; Package-Version: 20210221.59
-;; Package-Commit: d0414210c8eea8b80d293e79f2c8991948ab38cb
+;; Package-Commit: c73367d8aa660f2b3c3f70ef5c39f5b502d60404
 ;; Keywords: chrome edit textarea
 ;; URL: https://github.com/alpha22jp/atomic-chrome
 ;; Version: 2.0.0

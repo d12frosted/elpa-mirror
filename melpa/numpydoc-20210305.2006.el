@@ -6,7 +6,7 @@
 ;; Maintainer: Doug Davis <ddavis@ddavis.io>
 ;; URL: https://github.com/douglasdavis/numpydoc.el
 ;; Package-Version: 20210305.2006
-;; Package-Commit: 1549f362fda96b75760f20cee9b471362823ef4e
+;; Package-Commit: a8bc2a58220e7eb92d61a637c2c6d8cb2ccb270b
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "25.1") (s "1.12.0") (dash "2.18.0"))
