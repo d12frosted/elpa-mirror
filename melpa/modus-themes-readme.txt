@@ -24,7 +24,7 @@ are disabled by default (nil):
     modus-themes-mode-line                      (choice)
     modus-themes-diffs                          (choice)
     modus-themes-syntax                         (choice)
-    modus-themes-intense-hl-line                (boolean)
+    modus-themes-hl-line                        (choice)
     modus-themes-subtle-line-numbers            (boolean)
     modus-themes-paren-match                    (choice)
     modus-themes-region                         (choice)

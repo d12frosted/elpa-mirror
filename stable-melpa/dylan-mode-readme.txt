@@ -1,8 +1,6 @@
 Dylan mode is a major mode for editing Dylan programs. It provides
 indenting and syntax highlighting support.
 
-This code requires Emacs 24 or newer.
-
 Testing
 
 dylan-mode-test.dylan contains Dylan code that is indented in the preferred way. One
@@ -18,7 +16,7 @@ comment.
 
 With so many cascading defvars and the fact that eval-buffer doesn't reset
 their values, frequently the easiest way to test changes is to start a new
-emacs.
+Emacs.
 
 Bugs / to-do list
 
@@ -29,5 +27,3 @@ Bugs / to-do list
   comments are filled at a standard place > 70.  I use 89 myself.
 * It appears as though some code matches only some of the graphic-character
   BNF when it should match all graphic chars.
-
-

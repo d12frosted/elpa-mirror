@@ -1,0 +1,11 @@
+(steam .
+       [(20210307 1756)
+	((cl-lib
+	  (0 5)))
+	"Organize and launch Steam games" single
+	((:commit . "b0b79d9bd8f1f15c43ab60997f5a341a769651af")
+	 (:authors
+	  ("Erik Sjöstrand"))
+	 (:maintainer "Erik Sjöstrand")
+	 (:keywords "games")
+	 (:url . "http://github.com/Kungsgeten/steam.el"))])

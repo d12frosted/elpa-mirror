@@ -1,0 +1,15 @@
+(leaf-defaults .
+	       [(20210301 118)
+		((emacs
+		  (26 1))
+		 (leaf
+		  (4 1))
+		 (leaf-keywords
+		  (1 1)))
+		"Awesome leaf config collections" tar
+		((:commit . "96ce39d4f16736f1e654e24eac16a2603976c724")
+		 (:authors
+		  ("Naoya Yamashita" . "conao3@gmail.com"))
+		 (:maintainer "Naoya Yamashita" . "conao3@gmail.com")
+		 (:keywords "convenience")
+		 (:url . "https://github.com/conao3/leaf-defaults.el"))])

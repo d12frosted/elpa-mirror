@@ -1,0 +1,11 @@
+(lisp-local .
+	    [(20210307 1545)
+	     ((emacs
+	       (24 3)))
+	     "Allow different Lisp indentation in each buffer" single
+	     ((:commit . "3a3237a5c25db9526dfbe1b3ac1e7125f8f459b0")
+	      (:authors
+	       ("Lassi Kortela" . "lassi@lassi.io"))
+	      (:maintainer "Lassi Kortela" . "lassi@lassi.io")
+	      (:keywords "languages" "lisp")
+	      (:url . "https://github.com/lispunion/emacs-lisp-local"))])
