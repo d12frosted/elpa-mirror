@@ -129,6 +129,7 @@ missing package or change you would like to see.
     eldoc-box
     elfeed
     elfeed-score
+    embark
     emms
     enhanced-ruby-mode
     epa

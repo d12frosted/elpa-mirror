@@ -13,9 +13,9 @@ Custom functions can be triggered when a new language is detected
 such that users can do things like changing the input method when
 needed.
 
-The detection algorithm is based on counts of character trigrams.
-At this time, supported languages are Arabic, Czech, Danish, Dutch,
-English, Esperanto, Finnish, French, German, Italian, Norwegian,
-Polish, Portuguese, Russian, Serbian, Slovak, Slovenian, Spanish, and
-Swedish. Adding further languages is very easy and this package
-already contains language statistics for 49 additional languages.
+The detection algorithm is based on counts of character trigrams. At this
+time, supported languages are Arabic, Czech, Danish, Dutch, English,
+Esperanto, Finnish, French, German, Italian, Norwegian, Polish, Portuguese,
+Russian, Serbian, Slovak, Slovenian, Spanish, Swedish and Vietnamese. Adding
+further languages is very easy and this package already contains language
+statistics for 49 additional languages.
