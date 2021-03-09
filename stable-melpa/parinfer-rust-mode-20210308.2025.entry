@@ -1,0 +1,11 @@
+(parinfer-rust-mode .
+		    [(20210308 2025)
+		     ((emacs
+		       (26 1)))
+		     "An interface for the parinfer-rust library" tar
+		     ((:commit . "c19374a3cf9ce57a356a044731063040c552df32")
+		      (:authors
+		       ("Justin Barclay" . "justinbarclay@gmail.com"))
+		      (:maintainer "Justin Barclay" . "justinbarclay@gmail.com")
+		      (:keywords "lisp" "tools")
+		      (:url . "https://github.com/justinbarclay/parinfer-rust-mode"))])
