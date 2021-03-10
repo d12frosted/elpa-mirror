@@ -1,0 +1,11 @@
+(desktop-mail-user-agent .
+			 [(20210309 1355)
+			  ((emacs
+			    (24 3)))
+			  "Call OS default mail program to compose mail" single
+			  ((:commit . "64d0a75491414b119e044ea8fdf771753491a8cc")
+			   (:authors
+			    ("Lassi Kortela" . "lassi@lassi.io"))
+			   (:maintainer "Lassi Kortela" . "lassi@lassi.io")
+			   (:keywords "mail")
+			   (:url . "https://github.com/lassik/emacs-desktop-mail-user-agent"))])

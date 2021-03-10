@@ -8,6 +8,7 @@ warning: unable to rmdir 'vendor/github.com/coreos/etcd': Directory not empty
 warning: unable to rmdir 'vendor/github.com/docker/go-connections': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/go-grpc-prometheus': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/grpc-gateway': Directory not empty
+Checking out files:  94% (482/511)   Checking out files:  95% (486/511)   Checking out files:  96% (491/511)   Checking out files:  97% (496/511)   Checking out files:  98% (501/511)   Checking out files:  99% (506/511)   Checking out files: 100% (511/511)   Checking out files: 100% (511/511), done.
 HEAD is now at 1873e02 test: Add guard when no commit needs testing
 Synchronizing submodule url for 'vendor/github.com/containerd/containerd'
 Synchronizing submodule url for 'vendor/github.com/docker/distribution'
