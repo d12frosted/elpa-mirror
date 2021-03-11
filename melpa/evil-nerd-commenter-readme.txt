@@ -55,7 +55,9 @@ or `evilnc-copy-and-comment-operator',
   - Place the commented out text above original text
   - Or place the original text above commented out text
 
-We defined comment text object "c" which can have multi-lines.
+`evilnc-yank-and-comment-operator' (un)comment&yank text in one shot.
+
+Comment text object "c" is defined.  It can have multi-lines.
 Press "vac" to select outer object (comment with limiters).
 Press "vic" to select inner object (comment without limiter).
 

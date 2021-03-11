@@ -1,0 +1,13 @@
+(flymake-nasm .
+	      [(20210310 1540)
+	       ((flymake-quickdef
+		 (1 0 0))
+		(emacs
+		 (26 1)))
+	       "A flymake handler for asm-mode files using nasm" single
+	       ((:commit . "27e58d7f3a48ca6fc12238fe6c888a3fdffc3f75")
+		(:authors
+		 ("Jürgen Hötzel" . "juergen@hoetzel.info"))
+		(:maintainer "Jürgen Hötzel")
+		(:keywords "tools" "languages")
+		(:url . "http://github.com/juergenhoetzel/flymake-nasm"))])

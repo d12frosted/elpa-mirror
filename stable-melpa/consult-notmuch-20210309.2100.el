@@ -4,7 +4,7 @@
 ;; Maintainer: Jose A Ortega Ruiz
 ;; Keywords: mail
 ;; Package-Version: 20210309.2100
-;; Package-Commit: 5a2ebb29c6eb0808995a9759df5f17051f2095ad
+;; Package-Commit: f3f8ffe3d2e15e67ded5d7aaa7f50bf17c2b1aa4
 ;; License: GPL-3.0-or-later
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "26.1") (consult "0.5") (notmuch "0.21"))

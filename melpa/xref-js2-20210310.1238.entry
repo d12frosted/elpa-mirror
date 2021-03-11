@@ -1,0 +1,13 @@
+(xref-js2 .
+	  [(20210310 1238)
+	   ((emacs
+	     (25 1))
+	    (js2-mode
+	     (20150909)))
+	   "Jump to references/definitions using ag & js2-mode's AST" single
+	   ((:commit . "fd6b723e7f1f9793d189a815e1904364dc026b03")
+	    (:authors
+	     ("Nicolas Petton" . "nicolas@petton.fr"))
+	    (:maintainer "Nicolas Petton" . "nicolas@petton.fr")
+	    (:keywords "javascript" "convenience" "tools")
+	    (:url . "https://github.com/NicolasPetton/xref-js2"))])
