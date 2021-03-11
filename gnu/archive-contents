@@ -394,11 +394,13 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (counsel .
-	  [(0 13 1)
+	  [(0 13 4)
 	   ((emacs
 	     (24 5))
+	    (ivy
+	     (0 13 4))
 	    (swiper
-	     (0 13 1)))
+	     (0 13 4)))
 	   "Various completion functions using Ivy" tar
 	   ((:url . "https://github.com/abo-abo/swiper")
 	    (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
@@ -1109,7 +1111,7 @@
 	       ("Michael Heerdegen" . "michael_heerdegen@web.de"))
 	      (:maintainer "Michael Heerdegen" . "michael_heerdegen@web.de"))])
  (ivy .
-      [(0 13 1)
+      [(0 13 4)
        ((emacs
 	 (24 5)))
        "Incremental Vertical completYon" tar
@@ -1118,6 +1120,20 @@
 	(:authors
 	 ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	(:keywords "matching"))])
+ (ivy-avy .
+	  [(0 13 4)
+	   ((emacs
+	     (24 5))
+	    (ivy
+	     (0 13 4))
+	    (avy
+	     (0 5 0)))
+	   "Avy integration for Ivy" tar
+	   ((:url . "https://github.com/abo-abo/swiper")
+	    (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
+	    (:authors
+	     ("Oleh Krehel" . "ohwoeowho@gmail.com"))
+	    (:keywords "convenience"))])
  (ivy-explorer .
 	       [(0 3 2)
 		((emacs
@@ -1130,6 +1146,20 @@
 		  ("Clemens Radermacher" . "clemera@posteo.net"))
 		 (:maintainer "Clemens Radermacher" . "clemera@posteo.net")
 		 (:url . "https://github.com/clemera/ivy-explorer"))])
+ (ivy-hydra .
+	    [(0 13 4)
+	     ((emacs
+	       (24 5))
+	      (ivy
+	       (0 13 4))
+	      (hydra
+	       (0 15 0)))
+	     "Additional key bindings for Ivy" tar
+	     ((:url . "https://github.com/abo-abo/swiper")
+	      (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
+	      (:authors
+	       ("Oleh Krehel" . "ohwoeowho@gmail.com"))
+	      (:keywords "convenience"))])
  (ivy-posframe .
 	       [(0 5 5)
 		((emacs
@@ -2237,11 +2267,11 @@
 	       ("Ulf Jasper" . "ulf.jasper@web.de"))
 	      (:maintainer "Ulf Jasper" . "ulf.jasper@web.de"))])
  (swiper .
-	 [(0 13 1)
+	 [(0 13 4)
 	  ((emacs
 	    (24 5))
 	   (ivy
-	    (0 13 1)))
+	    (0 13 4)))
 	  "Isearch with an overview. Oh, man!" tar
 	  ((:url . "https://github.com/abo-abo/swiper")
 	   (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
