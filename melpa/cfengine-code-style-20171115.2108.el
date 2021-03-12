@@ -3,7 +3,7 @@
 ;; Author: Mikhail Gusarov <mikhail.gusarov@cfengine.com>
 ;; URL: https://github.com/cfengine/core
 ;; Package-Version: 20171115.2108
-;; Package-Commit: 33f3ad67d309d51234ebbc0aa5ab9d754e65c68b
+;; Package-Commit: 60a0cff3bb99fec88c40f9f6c0fa16f84c2a7dea
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
