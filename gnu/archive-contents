@@ -1147,13 +1147,13 @@
 		 (:maintainer "Clemens Radermacher" . "clemera@posteo.net")
 		 (:url . "https://github.com/clemera/ivy-explorer"))])
  (ivy-hydra .
-	    [(0 13 4)
+	    [(0 13 5)
 	     ((emacs
 	       (24 5))
 	      (ivy
 	       (0 13 4))
 	      (hydra
-	       (0 15 0)))
+	       (0 14 0)))
 	     "Additional key bindings for Ivy" tar
 	     ((:url . "https://github.com/abo-abo/swiper")
 	      (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
