@@ -1,0 +1,13 @@
+(flycheck-cfn .
+	      [(20201120 2307)
+	       ((emacs
+		 (26 1))
+		(flycheck
+		 (31)))
+	       "Flycheck backend for AWS cloudformation" single
+	       ((:commit . "a4ca40978e680f9edc86c141e696e0ae57c63533")
+		(:authors
+		 ("William Orr" . "will@worrbase.com"))
+		(:maintainer "William Orr" . "will@worrbase.com")
+		(:keywords "convenience")
+		(:url . "https://gitlab.com/worr/cfn-mode"))])

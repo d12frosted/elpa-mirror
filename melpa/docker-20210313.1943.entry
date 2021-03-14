@@ -1,0 +1,23 @@
+(docker .
+	[(20210313 1943)
+	 ((dash
+	   (2 14 1))
+	  (docker-tramp
+	   (0 1))
+	  (emacs
+	   (24 5))
+	  (json-mode
+	   (1 7 0))
+	  (s
+	   (1 12 0))
+	  (tablist
+	   (0 70))
+	  (transient
+	   (0 2 0)))
+	 "Emacs interface to Docker" tar
+	 ((:commit . "ed0cdf08597ceb3a1f85e065d1b2b7aefd7e35ee")
+	  (:authors
+	   ("Philippe Vaucher" . "philippe.vaucher@gmail.com"))
+	  (:maintainer "Philippe Vaucher" . "philippe.vaucher@gmail.com")
+	  (:keywords "filename" "convenience")
+	  (:url . "https://github.com/Silex/docker.el"))])
