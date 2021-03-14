@@ -8,7 +8,6 @@ warning: unable to rmdir 'vendor/github.com/coreos/etcd': Directory not empty
 warning: unable to rmdir 'vendor/github.com/docker/go-connections': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/go-grpc-prometheus': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/grpc-gateway': Directory not empty
-Checking out files:  90% (462/512)   Checking out files:  91% (466/512)   Checking out files:  92% (472/512)   Checking out files:  93% (477/512)   Checking out files:  94% (482/512)   Checking out files:  95% (487/512)   Checking out files:  96% (492/512)   Checking out files:  97% (497/512)   Checking out files:  98% (502/512)   Checking out files:  99% (507/512)   Checking out files: 100% (512/512)   Checking out files: 100% (512/512), done.
 HEAD is now at 48fa796 test: Disable failing test
 Synchronizing submodule url for 'vendor/github.com/containerd/containerd'
 Synchronizing submodule url for 'vendor/github.com/docker/distribution'

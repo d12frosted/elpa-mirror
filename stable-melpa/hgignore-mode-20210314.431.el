@@ -4,8 +4,8 @@
 
 ;; Author: Omair Majid <omair.majid@gmail.com>
 ;; URL: http://github.com/omajid/hgignore-mode
-;; Package-Version: 20160501.7
-;; Package-Commit: 7aa9f3b8a9c610dbd80b952061b40194e1d9c5bd
+;; Package-Version: 20210314.431
+;; Package-Commit: 2c5aa4c238848f5b4f2955afcfb5f21ea513653b
 ;; Keywords: convenience vc hg
 ;; Version: 0.1.20150329
 
@@ -42,13 +42,13 @@
 
 (defun hgignore--completion-at-point ()
   "`completion-at-point' support for hgignore-mode."
-  (if (looking-back "^syntax: ?")
+  (if (looking-back "^syntax: ?" nil)
       (hgignore--complete-syntax)
     (hgignore--complete-raw-path)))
 
 (defun hgignore--complete-syntax ()
-  "Complete the `syntax' parts of hgingore."
-  (when (looking-back "^syntax: ?")
+  "Complete the `syntax' parts of hgignore."
+  (when (looking-back "^syntax: ?" nil)
     (list (line-beginning-position) (point)
           (list "syntax: regexp" "syntax: glob"))))
 

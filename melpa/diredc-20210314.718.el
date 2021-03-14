@@ -6,8 +6,8 @@
 ;; Homepage: https://github.com/Boruch-Baum/emacs-diredc
 ;; License: GPL3+
 ;; Keywords: files
-;; Package-Version: 20210312.758
-;; Package-Commit: 354b7a38d1e5778fa88287ddf2f54a8177bf78ad
+;; Package-Version: 20210314.718
+;; Package-Commit: 0d1641959f3d680929f043857a991f111a15b959
 ;; Package: diredc
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "26.1"))
@@ -690,11 +690,11 @@ and `diredc-browse-exclude-helper'."
   ;; FIXME: Only tested for (eq system-type 'gnu/linux). Please submit
   ;;        corrections or additions.
   (list
-    (list 'gnu          "/usr/bin/file" "-b" "\\<text\\>" "/usr/bin/file" "-b" "\\<ELF\\>")
-    (list 'gnu/linux    "/usr/bin/file" "-b" "\\<text\\>" "/usr/bin/file" "-b" "\\<ELF\\>")
-    (list 'gnu/kfreebsd "/usr/bin/file" "-b" "\\<text\\>" "/usr/bin/file" "-b" "\\<ELF\\>")
-    (list 'darwin       "/usr/bin/file" "-b" "\\<text\\>" "/usr/bin/file" "-b" "\\<ELF\\>")
-    (list 'cygwin       "/usr/bin/file" "-b" "\\<text\\>" "/usr/bin/file" "-b" "\\<ELF\\>")
+    (list 'gnu          "/usr/bin/file" "-bi" "\\<text\\>" "/usr/bin/file" "-bi" "\\<ELF\\>\\|\\<binary\\>")
+    (list 'gnu/linux    "/usr/bin/file" "-bi" "\\<text\\>" "/usr/bin/file" "-bi" "\\<ELF\\>\\|\\<binary\\>")
+    (list 'gnu/kfreebsd "/usr/bin/file" "-bi" "\\<text\\>" "/usr/bin/file" "-bi" "\\<ELF\\>\\|\\<binary\\>")
+    (list 'darwin       "/usr/bin/file" "-bi" "\\<text\\>" "/usr/bin/file" "-bi" "\\<ELF\\>\\|\\<binary\\>")
+    (list 'cygwin       "/usr/bin/file" "-bi" "\\<text\\>" "/usr/bin/file" "-bi" "\\<ELF\\>\\|\\<binary\\>")
     (list 'ms-dos       "" "" "" "" "" "")
     (list 'windows-nt   "" "" "" "" "" ""))
   "External helper programs to determine files not to be browsed.
@@ -1292,7 +1292,7 @@ variable `diredc-browse-exclude-helper' is used (see there)."
                 ((helper (assq system-type diredc-browse-exclude-helper))
                  (output (when helper
                            (shell-command-to-string
-                             (format "%s %s %s" (nth 1 helper) (nth 2 helper) filename)))))
+                             (format "%s %s \"%s\"" (nth 1 helper) (nth 2 helper) filename)))))
                (when output
                  (if (string-match (nth 3 helper) output)
                    ;; the inclusion test passes
@@ -1302,7 +1302,7 @@ variable `diredc-browse-exclude-helper' is used (see there)."
                          (nth 6 helper)
                          (setq output (condition-case nil
                            (shell-command-to-string
-                             (format "%s %s %s" (nth 4 helper) (nth 5 helper) filename))
+                             (format "%s %s \"%s\"" (nth 4 helper) (nth 5 helper) filename))
                            (error ""))))
                        (match-string 0 output)))))))
       (erase-buffer)
