@@ -6,7 +6,7 @@
 ;;       Olin Shivers <shivers@cs.cmu.edu>
 ;; URL: http://github.com/clojure-emacs/inf-clojure
 ;; Package-Version: 20210307.740
-;; Package-Commit: f4a279ef5b007c3d43b79e22fecca6a331c5f3f0
+;; Package-Commit: aaca7737a8a77cafa9d4cfabc1473ed3ef845048
 ;; Keywords: processes, clojure
 ;; Version: 3.1.0-snapshot
 ;; Package-Requires: ((emacs "25.1") (clojure-mode "5.11"))

@@ -1,0 +1,12 @@
+(helm-w3m .
+	  [(20210315 723)
+	   ((helm
+	     (1 5))
+	    (w3m
+	     (0 0))
+	    (cl-lib
+	     (0 5))
+	    (emacs
+	     (24 1)))
+	   "W3m bookmark - helm interface." single
+	   ((:commit . "0a25a2b1df9bc660a90d633beb301b3815556e4e"))])

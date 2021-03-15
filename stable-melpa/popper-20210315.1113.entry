@@ -1,0 +1,11 @@
+(popper .
+	[(20210315 1113)
+	 ((emacs
+	   (26 1)))
+	 "Summon and dismiss buffers as popups" single
+	 ((:commit . "e45500829f6f6c7220da4b4030c4a11c9e3db8ab")
+	  (:authors
+	   ("Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com"))
+	  (:maintainer "Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com")
+	  (:keywords "convenience")
+	  (:url . "https://github.com/karthink/popper"))])

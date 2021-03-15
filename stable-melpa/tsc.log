@@ -5,32 +5,32 @@ Source:  https://github.com/ubolonton/emacs-tree-sitter.git
 Updating /mnt/store/melpa/working/tsc/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tsc/
-  to /tmp/tscXMjdUT/tsc-20210310.1533
+  to /tmp/tscy1XXks/tsc-20210315.238
   ! core/tsc-dyn-get.el -> tsc-dyn-get.el
   ! core/tsc-obsolete.el -> tsc-obsolete.el
   ! core/tsc.el -> tsc.el
   ! core/Cargo.toml -> Cargo.toml
   ! core/src => src
-Created tsc-20210310.1533.tar containing:
-  tsc-20210310.1533/
-  tsc-20210310.1533/Cargo.toml
-  tsc-20210310.1533/src/
-  tsc-20210310.1533/src/cursor.rs
-  tsc-20210310.1533/src/error.rs
-  tsc-20210310.1533/src/lang.rs
-  tsc-20210310.1533/src/lib.rs
-  tsc-20210310.1533/src/node.rs
-  tsc-20210310.1533/src/parser.rs
-  tsc-20210310.1533/src/query.rs
-  tsc-20210310.1533/src/tree.rs
-  tsc-20210310.1533/src/types.rs
-  tsc-20210310.1533/tsc-dyn-get.el
-  tsc-20210310.1533/tsc-obsolete.el
-  tsc-20210310.1533/tsc-pkg.el
-  tsc-20210310.1533/tsc.el
-Built tsc in 5.495s, finished at Mon Mar 15 02:50:29 2021
+Created tsc-20210315.238.tar containing:
+  tsc-20210315.238/
+  tsc-20210315.238/Cargo.toml
+  tsc-20210315.238/src/
+  tsc-20210315.238/src/cursor.rs
+  tsc-20210315.238/src/error.rs
+  tsc-20210315.238/src/lang.rs
+  tsc-20210315.238/src/lib.rs
+  tsc-20210315.238/src/node.rs
+  tsc-20210315.238/src/parser.rs
+  tsc-20210315.238/src/query.rs
+  tsc-20210315.238/src/tree.rs
+  tsc-20210315.238/src/types.rs
+  tsc-20210315.238/tsc-dyn-get.el
+  tsc-20210315.238/tsc-obsolete.el
+  tsc-20210315.238/tsc-pkg.el
+  tsc-20210315.238/tsc.el
+Built tsc in 4.869s, finished at Mon Mar 15 14:55:54 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  495 Mar 15 02:50 packages/tsc-20210310.1533.entry
- 92K -rw-r--r-- 1 root root  90K Mar 15 02:50 packages/tsc-20210310.1533.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 15 02:50 packages/tsc-badge.svg
-4.0K -rw-r--r-- 1 root root   91 Mar 15 02:50 packages/tsc-readme.txt
+4.0K -rw-r--r-- 1 root root  494 Mar 15 14:55 packages/tsc-20210315.238.entry
+ 92K -rw-r--r-- 1 root root  90K Mar 15 14:55 packages/tsc-20210315.238.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 15 14:55 packages/tsc-badge.svg
+4.0K -rw-r--r-- 1 root root   91 Mar 15 14:55 packages/tsc-readme.txt
