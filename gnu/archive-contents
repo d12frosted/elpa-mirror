@@ -724,13 +724,13 @@
 		      ("William Xu" . "william.xwl@gmail.com"))
 		     (:maintainer "William Xu" . "william.xwl@gmail.com"))])
  (elisp-benchmarks .
-		   [(1 9)
+		   [(1 10)
 		    nil "elisp benchmarks collection" tar
 		    ((:maintainer "Andrea Corallo" . "akrl@sdf.org")
 		     (:authors
 		      ("Andrea Corallo" . "akrl@sdf.org"))
 		     (:keywords "languages" "lisp")
-		     (:url . "http://elpa.gnu.org/packages/elisp-benchmarks.html"))])
+		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html"))])
  (emms .
        [(6 3)
 	((cl-lib

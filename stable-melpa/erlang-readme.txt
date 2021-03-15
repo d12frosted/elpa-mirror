@@ -22,10 +22,8 @@ the installation procedure.
 Reporting Bugs:
 --------------
 
-Please send bug reports to the following email address:
-     erlang-bugs@erlang.org
-or if you have a patch suggestion to:
-     erlang-patches@erlang.org
+Please report bugs at:
+     https://github.com/erlang/otp/issues
 Please state as exactly as possible:
    - Version number of Erlang Mode (see the menu), Emacs, Erlang,
      and of any other relevant software.
@@ -34,6 +32,8 @@ Please state as exactly as possible:
    - A description of the unexpected result.
    - Relevant pieces of Erlang code causing the problem.
    - Personal Emacs customisations, if any.
+Patch suggestions are welcome at:
+     https://github.com/erlang/otp/pulls
 
 Should the Emacs generate an error, please set the Emacs variable
 `debug-on-error' to `t'.  Repeat the error and enclose the debug
