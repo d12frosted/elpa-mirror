@@ -1,0 +1,10 @@
+(flymake-shellcheck .
+		    [(20210314 2048)
+		     ((emacs
+		       (26)))
+		     "A bash/sh Flymake backend powered by ShellCheck" single
+		     ((:commit . "ac534e9ef15c82ac86ae65fe5004d29dbc8c92c7")
+		      (:authors
+		       ("Federico Tedin" . "federicotedin@gmail.com"))
+		      (:maintainer "Federico Tedin" . "federicotedin@gmail.com")
+		      (:url . "https://github.com/federicotdn/flymake-shellcheck"))])
