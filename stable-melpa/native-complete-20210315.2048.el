@@ -4,8 +4,8 @@
 
 ;; Author: Troy Hinckley <troy.hinckley@gmail.com>
 ;; URL: https://github.com/CeleritasCelery/emacs-native-shell-complete
-;; Package-Version: 20200814.2301
-;; Package-Commit: be7ced29c5a86e29c364f19d248634b8b54d0e52
+;; Package-Version: 20210315.2048
+;; Package-Commit: cf142e84eaa4dd91bc75d96a5d26dab5e38eba4c
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -45,7 +45,7 @@
   "Native completion in a shell buffer."
   :group 'shell)
 
-(defcustom native-complete-major-modes '(shell-mode)
+(defcustom native-complete-major-modes '(shell-mode comint-mode)
   "Major modes for which native completion is enabled."
   :type '(repeat function))
 
