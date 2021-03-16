@@ -6,8 +6,8 @@
 ;; Homepage: https://github.com/Boruch-Baum/emacs-diredc
 ;; License: GPL3+
 ;; Keywords: files
-;; Package-Version: 20210314.718
-;; Package-Commit: 0d1641959f3d680929f043857a991f111a15b959
+;; Package-Version: 20210315.2321
+;; Package-Commit: c831224609f52f35918d9dd33ed7255df1afd9cf
 ;; Package: diredc
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "26.1"))
@@ -1059,7 +1059,8 @@ A hook function for `post-command-hook'. It creates and kills
 `view-mode' buffers for `diredc-browse-mode'."
   (unless (or diredc-browse--buffer
               (minibuffer-window-active-p (selected-window))
-              (not (string-match "#<frame diredc " (format "%s" (selected-frame)))))
+              (not (string-match "#<frame diredc " (format "%s" (selected-frame))))
+              (eq this-command 'push-button))
     (let ((original-win (selected-window))
           (new-file (condition-case nil
                       (dired-get-filename nil t)
@@ -1267,6 +1268,14 @@ Returns a coding-system symbol. See variables
                 val))
              (t val))))))
 
+(defun diredc-browse--button-describe-action (button)
+  "Perform `describe-variable' for the variable at BUTTON."
+  (describe-variable (button-get button 'var)))
+
+(defun diredc-browse--button-return-action (button)
+  "Navigate away from the diredc-browse window of BUTTON."
+  (diredc-other-window))
+
 (defun diredc-browse--exclude (filename)
   "Decide whether to browse readable file FILENAME.
 Reports in the 'diredc browse' buffer any reason not to browse.
@@ -1307,16 +1316,42 @@ variable `diredc-browse-exclude-helper' is used (see there)."
                        (match-string 0 output)))))))
       (erase-buffer)
       (insert
-        (concat "File excluded from being browsed.\n\n Exclusion criteria: "
+        (concat "\nThis file is excluded from being browsed because it has\n"
           (cond
            (ext-match
-             (format "filename extension\"%s\".\n\n Reference: variable 'diredc-browse-exclude-file-extensions'" ext-match))
+             (setq var 'diredc-browse-exclude-file-extensions)
+             (format "filename extension \"%s\".\n\nSee variable %s"
+                     ext-match var))
            (coding-match
-             (format "coding system \"%s\".\n\n Reference: variable 'diredc-browse-exclude-coding-systems'" (car coding-match)))
+             (setq var 'diredc-browse-exclude-coding-systems)
+             (format "coding system \"%s\".\n\nSee variable %s"
+                     (car coding-match) var))
            (helper-match
-             (format "property \"%s\".\n\n Reference: variable 'diredc-browse-exclude-helper'" helper-match))
-           (t "")))) ; WARNING: This condition should never be reached
-      t))) ; Return t when exclusion is true
+             (setq var 'diredc-browse-exclude-helper)
+             (format "property \"%s\".\n\nSee variable %s"
+                     helper-match var))
+           (browse-binary
+             (setq var 'diredc-browse-binary)
+             (format "property \"binary-file\".\n\nSee variable %s"
+                     var))
+           (t "")) ; WARNING: This condition should never be reached
+          "\n\nYou can customize this variable."))
+      (goto-char (point-min))
+      (when (re-search-forward (symbol-name var) nil t)
+        (make-text-button (match-beginning 0) (match-end 0)
+                          :type 'help-xref
+                          'action 'diredc-browse--button-describe-action 'var var))
+      (when (re-search-forward "\\<customize\\>" nil t)
+        (help-xref-button 0 'help-customize-variable var))
+      (let ((p1 (+ 2 (goto-char (point-max)))))
+        (insert "\n\nReturn to diredc.")
+        (make-text-button p1 (1- (point-max))
+                          :type 'help-xref
+                          'action 'diredc-browse--button-return-action))
+      (local-set-key "\t"              'forward-button)
+      (local-set-key (kbd "<backtab>") 'backward-button)
+      t) ; Return t when exclusion is true
+    ))
 
 (defun diredc-trash--show-more-file-info--freedesktop ()
   "Internal function for `diredc-mode' 'Trash' file buffers.
