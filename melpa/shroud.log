@@ -3,7 +3,35 @@ Fetcher: git
 Source:  https://git.savannah.nongnu.org/git/emacs-shroud.git
 
 Updating /mnt/store/melpa/working/shroud/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://git.savannah.nongnu.org/git/emacs-shroud.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/shroud/
+  to /tmp/shroudlf1faZ/shroud-20210220.1952
+  ! src/shroud-bui.el -> shroud-bui.el
+  ! src/shroud-cli.el -> shroud-cli.el
+  ! src/shroud-el.el -> shroud-el.el
+  ! src/shroud.el -> shroud.el
+  ! doc/emacs-shroud.texi -> emacs-shroud.texi
+    README -> README
+    NEWS -> NEWS
+    AUTHORS -> AUTHORS
+    COPYING -> COPYING
+Created /tmp/shroudlf1faZ/shroud-20210220.1952/emacs-shroud.info
+Created shroud-20210220.1952.tar containing:
+  shroud-20210220.1952/
+  shroud-20210220.1952/AUTHORS
+  shroud-20210220.1952/COPYING
+  shroud-20210220.1952/NEWS
+  shroud-20210220.1952/README
+  shroud-20210220.1952/dir
+  shroud-20210220.1952/emacs-shroud.info
+  shroud-20210220.1952/shroud-bui.el
+  shroud-20210220.1952/shroud-cli.el
+  shroud-20210220.1952/shroud-el.el
+  shroud-20210220.1952/shroud-pkg.el
+  shroud-20210220.1952/shroud.el
+Built shroud in 9.645s, finished at Tue Mar 16 09:22:08 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  406 Mar 16 09:22 packages/shroud-20210220.1952.entry
+152K -rw-r--r-- 1 root root 150K Mar 16 09:22 packages/shroud-20210220.1952.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 16 09:22 packages/shroud-badge.svg
+4.0K -rw-r--r-- 1 root root 2.9K Mar 16 09:22 packages/shroud-readme.txt

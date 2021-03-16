@@ -1,0 +1,15 @@
+(flycheck-raku .
+	       [(20210316 820)
+		((emacs
+		  (26 3))
+		 (flycheck
+		  (0 22)))
+		"Raku support in Flycheck" single
+		((:commit . "4163c0dcc1447bc98bb20b835eb23cb68a638ba9")
+		 (:authors
+		  ("Hinrik Örn Sigurðsson" . "hinrik.sig@gmail.com")
+		  ("Johnathon Weare" . "jrweare@gmail.com")
+		  ("Siavash Askari Nasr" . "siavash.askari.nasr@gmail.com"))
+		 (:maintainer "Hinrik Örn Sigurðsson" . "hinrik.sig@gmail.com")
+		 (:keywords "tools" "convenience")
+		 (:url . "https://github.com/Raku/flycheck-raku"))])
