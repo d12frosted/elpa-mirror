@@ -1,0 +1,13 @@
+(basic-mode .
+	    [(20210316 1253)
+	     ((seq
+	       (2 20))
+	      (emacs
+	       (24 3)))
+	     "major mode for editing BASIC code" single
+	     ((:commit . "0f135eb6581dabe69fff07f31082c8f53b4dcc70")
+	      (:authors
+	       ("Johan Dykstrom"))
+	      (:maintainer "Johan Dykstrom")
+	      (:keywords "basic" "languages")
+	      (:url . "https://github.com/dykstrom/basic-mode"))])

@@ -4,33 +4,35 @@ Source:  https://github.com/auto-complete/popup-el.git
 
 Updating /mnt/store/melpa/working/popup/
 Note: popup :files spec is equivalent to the default.
-Built popup in 3.679s, finished at Tue Mar 16 09:15:26 2021
+Built popup in 8.553s, finished at Wed Mar 17 03:42:42 2021
  ✓ Success:
- 56K -rw-r--r-- 1 root root  55K Mar 16 09:15 packages/popup-20210108.1821.el
-4.0K -rw-r--r-- 1 root root  293 Mar 16 09:15 packages/popup-20210108.1821.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 16 09:15 packages/popup-badge.svg
-4.0K -rw-r--r-- 1 root root 3.0K Mar 16 09:15 packages/popup-complete-20141109.308.el
-4.0K -rw-r--r-- 1 root root  336 Mar 16 09:15 packages/popup-complete-20141109.308.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 16 09:15 packages/popup-complete-badge.svg
-4.0K -rw-r--r-- 1 root root   87 Mar 16 09:15 packages/popup-complete-readme.txt
-4.0K -rw-r--r-- 1 root root  236 Mar 16 09:15 packages/popup-complete.log
-8.0K -rw-r--r-- 1 root root 6.0K Mar 16 09:15 packages/popup-edit-menu-20170404.1425.el
-4.0K -rw-r--r-- 1 root root  360 Mar 16 06:09 packages/popup-edit-menu-20170404.1425.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 16 06:09 packages/popup-edit-menu-badge.svg
-4.0K -rw-r--r-- 1 root root  665 Mar 16 06:09 packages/popup-edit-menu-readme.txt
-4.0K -rw-r--r-- 1 root root  150 Mar 16 09:15 packages/popup-edit-menu.log
-8.0K -rw-r--r-- 1 root root 7.8K Mar 16 06:09 packages/popup-imenu-20170326.1040.el
-4.0K -rw-r--r-- 1 root root  437 Mar 16 06:09 packages/popup-imenu-20170326.1040.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 16 06:09 packages/popup-imenu-badge.svg
-4.0K -rw-r--r-- 1 root root  134 Mar 16 06:09 packages/popup-imenu-readme.txt
-4.0K -rw-r--r-- 1 root root  136 Mar 16 09:15 packages/popup-imenu.log
- 16K -rw-r--r-- 1 root root  16K Mar 16 06:09 packages/popup-kill-ring-20131020.1854.el
-4.0K -rw-r--r-- 1 root root  441 Mar 16 06:09 packages/popup-kill-ring-20131020.1854.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 16 06:09 packages/popup-kill-ring-badge.svg
-4.0K -rw-r--r-- 1 root root  162 Mar 16 06:09 packages/popup-kill-ring-readme.txt
-   0 -rw-r--r-- 1 root root    0 Mar 16 09:15 packages/popup-kill-ring.log
-4.0K -rw-r--r-- 1 root root  192 Mar 16 09:15 packages/popup-readme.txt
- 20K -rw-r--r-- 1 root root  18K Mar 16 06:09 packages/popup-switcher-20201216.2229.el
-4.0K -rw-r--r-- 1 root root  427 Mar 16 06:09 packages/popup-switcher-20201216.2229.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 16 06:09 packages/popup-switcher-badge.svg
-   0 -rw-r--r-- 1 root root    0 Mar 16 09:15 packages/popup-switcher.log
+ 56K -rw-r--r-- 1 root root  55K Mar 17 00:40 packages/popup-20210108.1821.el
+4.0K -rw-r--r-- 1 root root  293 Mar 17 00:40 packages/popup-20210108.1821.entry
+ 56K -rw-r--r-- 1 root root  55K Mar 17 03:42 packages/popup-20210317.138.el
+4.0K -rw-r--r-- 1 root root  347 Mar 17 03:42 packages/popup-20210317.138.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 17 03:42 packages/popup-badge.svg
+4.0K -rw-r--r-- 1 root root 3.0K Mar 17 03:42 packages/popup-complete-20141109.308.el
+4.0K -rw-r--r-- 1 root root  336 Mar 17 03:42 packages/popup-complete-20141109.308.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 17 03:42 packages/popup-complete-badge.svg
+4.0K -rw-r--r-- 1 root root   87 Mar 17 03:42 packages/popup-complete-readme.txt
+4.0K -rw-r--r-- 1 root root  572 Mar 17 03:42 packages/popup-complete.log
+8.0K -rw-r--r-- 1 root root 6.0K Mar 17 03:42 packages/popup-edit-menu-20170404.1425.el
+4.0K -rw-r--r-- 1 root root  360 Mar 17 03:42 packages/popup-edit-menu-20170404.1425.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 17 03:42 packages/popup-edit-menu-badge.svg
+4.0K -rw-r--r-- 1 root root  665 Mar 17 03:42 packages/popup-edit-menu-readme.txt
+4.0K -rw-r--r-- 1 root root  576 Mar 17 03:42 packages/popup-edit-menu.log
+8.0K -rw-r--r-- 1 root root 7.8K Mar 17 00:40 packages/popup-imenu-20170326.1040.el
+4.0K -rw-r--r-- 1 root root  437 Mar 17 00:40 packages/popup-imenu-20170326.1040.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 17 00:40 packages/popup-imenu-badge.svg
+4.0K -rw-r--r-- 1 root root  134 Mar 17 00:40 packages/popup-imenu-readme.txt
+4.0K -rw-r--r-- 1 root root  136 Mar 17 03:42 packages/popup-imenu.log
+ 16K -rw-r--r-- 1 root root  16K Mar 17 00:40 packages/popup-kill-ring-20131020.1854.el
+4.0K -rw-r--r-- 1 root root  441 Mar 17 00:40 packages/popup-kill-ring-20131020.1854.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 17 00:40 packages/popup-kill-ring-badge.svg
+4.0K -rw-r--r-- 1 root root  162 Mar 17 00:40 packages/popup-kill-ring-readme.txt
+   0 -rw-r--r-- 1 root root    0 Mar 17 03:42 packages/popup-kill-ring.log
+4.0K -rw-r--r-- 1 root root  192 Mar 17 03:42 packages/popup-readme.txt
+ 20K -rw-r--r-- 1 root root  18K Mar 17 00:40 packages/popup-switcher-20201216.2229.el
+4.0K -rw-r--r-- 1 root root  427 Mar 17 00:40 packages/popup-switcher-20201216.2229.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 17 00:40 packages/popup-switcher-badge.svg
+   0 -rw-r--r-- 1 root root    0 Mar 17 03:42 packages/popup-switcher.log

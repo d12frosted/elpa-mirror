@@ -5,6 +5,8 @@
 ;; Author: imfine <lorniu@gmail.com>
 ;; Created: 2018-11-11
 ;; Version: 1.0
+;; Package-Version: 20181211.953
+;; Package-Commit: 9d3ec9a6326289074d8620e97d65e3105307ff51
 ;; Package-Requires: ((org "8.3"))
 ;; Keywords: presentation
 
@@ -766,3 +768,5 @@ To be continued..."
 
 (provide 'ox-spectacle)
 ;;; ox-spectacle ends here
+
+;;; ox-spectacle.el ends here

@@ -1,0 +1,10 @@
+(imenu-list .
+	    [(20210316 2102)
+	     ((cl-lib
+	       (0 5)))
+	     "Show imenu entries in a separate buffer" single
+	     ((:commit . "b50222378412fbe321622a84cb2b036e084c697a")
+	      (:authors
+	       ("Bar Magal (2015)"))
+	      (:maintainer "Bar Magal (2015)")
+	      (:url . "https://github.com/bmag/imenu-list"))])

@@ -3,8 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sasanidas/gitlab-snip-helm.git
 
 Updating /mnt/store/melpa/working/gitlab-snip-helm/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal server error
-fatal: unable to access 'https://gitlab.com/sasanidas/gitlab-snip-helm.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Built gitlab-snip-helm in 3.707s, finished at Wed Mar 17 03:16:21 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.7K Mar 17 03:16 packages/gitlab-snip-helm-20200427.2014.el
+4.0K -rw-r--r-- 1 root root  455 Mar 17 03:16 packages/gitlab-snip-helm-20200427.2014.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 17 03:16 packages/gitlab-snip-helm-badge.svg
+4.0K -rw-r--r-- 1 root root   73 Mar 17 03:16 packages/gitlab-snip-helm-readme.txt
