@@ -5,7 +5,7 @@
 ;; Author: Magnar Sveen <magnars@gmail.com>
 ;; Version: 0.3.0
 ;; Package-Version: 20190904.1950
-;; Package-Commit: 1376d50f1fc91f9345351aeb4960b54bf83be59e
+;; Package-Commit: 755b0dfb3bd676c769c4b4aeb81c2cd5828bd207
 ;; Package-Requires: ((emacs "26") (s "1.4.0") (cider "0.21.0") (parseedn "0.1.0"))
 ;; URL: https://github.com/magnars/kaocha-runner.el
 

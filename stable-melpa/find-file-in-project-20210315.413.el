@@ -5,7 +5,7 @@
 ;;
 ;; Version: 6.0.3
 ;; Package-Version: 20210315.413
-;; Package-Commit: 6a6328c59a96b09e771cbcc5f4188f20d0757aca
+;; Package-Commit: 50607615352df980dfe99d464f5fd0b3d70a4381
 ;; Author: Phil Hagelberg, Doug Alcorn, and Will Farrington
 ;; Maintainer: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: https://github.com/technomancy/find-file-in-project
