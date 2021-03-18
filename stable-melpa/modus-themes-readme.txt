@@ -314,9 +314,10 @@ missing package or change you would like to see.
     swoop
     sx
     symbol-overlay
+    syslog-mode
+    tab-bar-groups
     tab-bar-mode
     tab-line-mode
-    syslog-mode
     table (built-in table.el)
     telephone-line
     terraform-mode

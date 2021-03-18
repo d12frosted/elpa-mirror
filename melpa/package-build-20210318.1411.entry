@@ -1,0 +1,13 @@
+(package-build .
+	       [(20210318 1411)
+		((cl-lib
+		  (0 5))
+		 (emacs
+		  (25 1)))
+		"Tools for assembling a package archive" tar
+		((:commit . "af4f87beb48afc3fb455c58648749e5bfdda1d03")
+		 (:authors
+		  ("Donald Ephraim Curtis" . "dcurtis@milkbox.net"))
+		 (:maintainer "Donald Ephraim Curtis" . "dcurtis@milkbox.net")
+		 (:keywords "tools")
+		 (:url . "https://github.com/melpa/package-build"))])
