@@ -3,7 +3,7 @@
 ;; Author: Ono Hiroko <azazabc123@gmail.com>
 ;; Keywords: tools, docs
 ;; Package-Version: 20200330.1025
-;; Package-Commit: 269bda7001613c0b70c0662d2a74d200765c1dcb
+;; Package-Commit: d59405bd72f3379417b9e73f06e8848b43cb021d
 ;; Package-Requires: ((emacs "24.3") (request "0.3.0"))
 ;; X-URL: https://github.com/kuanyui/tldr.el
 ;; Version: {{VERSION}}

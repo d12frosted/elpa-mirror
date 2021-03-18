@@ -3,8 +3,8 @@
 ;; Copyright (C) 2013-2020 Skye Shaw and others
 ;; Author: Skye Shaw <skye.shaw@gmail.com>
 ;; Version: 0.8.3
-;; Package-Version: 20210121.235
-;; Package-Commit: d6eef8051003a9a0966e4524232648d110199c74
+;; Package-Version: 20210318.313
+;; Package-Commit: 2b510cf3f28bed842853294fc4ee23c7f8b6435a
 ;; Keywords: git, vc, github, bitbucket, gitlab, sourcehut, convenience
 ;; URL: http://github.com/sshaw/git-link
 ;; Package-Requires: ((emacs "24.3"))
@@ -396,6 +396,13 @@ return (FILENAME . REVISION) otherwise nil."
                     "\\1/_git/"
                     path)))
 
+      ;; For Savannah
+      (when (string= "git.savannah.gnu.org" host)
+        (cond
+         ((string-match "\\`git/" path)
+          (setq path (substring path 4)))
+         ((string-match "\\`srv/git/" path)
+          (setq path (substring path 8)))))
 
       (list host path))))
 
