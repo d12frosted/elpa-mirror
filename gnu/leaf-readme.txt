@@ -32,9 +32,11 @@
   - [[:commands keyword]]
   - [[:after keyword]]
   - [[:bind, :bind* keywords]]
+  - [[:bind-keymap, :bind-keymap* keywords]]
 - [[Configure variables keywords]]
   - [[:custom, :custom*, :custom-face keywords]]
   - [[:pre-setq, :setq, :setq-default keywords]]
+  - [[:setf, :push, :pre-setf, :pre-push keywords]]
 - [[Configure list keywords]]
   - [[:mode, :interpreter keywords]]
   - [[:magic, :magic-fallback keywords]]
@@ -855,6 +857,210 @@ If you omit ~:package~, use leaf--name as ~:package~ to lazy load.
                       ("M-O" . isearch-moccur-all)))))))
 #+end_src
 
+** :bind-keymap, :bind-keymap* keywords
+
+~:bind-keymap~ and ~:bind-keymap*~ provide frontend for keybind manager for binding keymap.
+
+Basic usage is same as ~:bind~ and ~:bind*~
+
+#+begin_src emacs-lisp
+  (cort-deftest-with-macroexpand leaf/bind
+    '(
+      ;; cons-cell will be accepted
+      ((leaf macrostep
+         :ensure t
+         :bind ("C-c e" . macrostep-expand))
+       (prog1 'macrostep
+         (unless (fboundp 'macrostep-expand) (autoload #'macrostep-expand "macrostep" nil t))
+         (declare-function macrostep-expand "macrostep")
+         (leaf-handler-package macrostep macrostep nil)
+         (leaf-keys (("C-c e" . macrostep-expand)))))
+
+      ;; multi cons-cell will be accepted
+      ((leaf color-moccur
+         :bind
+         ("M-s O" . moccur)
+         ("M-o" . isearch-moccur)
+         ("M-O" . isearch-moccur-all))
+       (prog1 'color-moccur
+         (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur-all) (autoload #'isearch-moccur-all "color-moccur" nil t))
+         (declare-function moccur "color-moccur")
+         (declare-function isearch-moccur "color-moccur")
+         (declare-function isearch-moccur-all "color-moccur")
+         (leaf-keys (("M-s O" . moccur)
+                     ("M-o" . isearch-moccur)
+                     ("M-O" . isearch-moccur-all)))))
+
+      ;; multi cons-cell in list will be accepted
+      ((leaf color-moccur
+         :bind (("M-s O" . moccur)
+                ("M-o" . isearch-moccur)
+                ("M-O" . isearch-moccur-all)))
+       (prog1 'color-moccur
+         (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur-all) (autoload #'isearch-moccur-all "color-moccur" nil t))
+         (declare-function moccur "color-moccur")
+         (declare-function isearch-moccur "color-moccur")
+         (declare-function isearch-moccur-all "color-moccur")
+         (leaf-keys (("M-s O" . moccur)
+                     ("M-o" . isearch-moccur)
+                     ("M-O" . isearch-moccur-all)))))
+
+      ;; bind to nil to unbind shortcut
+      ((leaf color-moccur
+         :bind (("M-s" . nil)
+                ("M-s o" . isearch-moccur)
+                ("M-s i" . isearch-moccur-all)))
+       (prog1 'color-moccur
+         (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur-all) (autoload #'isearch-moccur-all "color-moccur" nil t))
+         (declare-function isearch-moccur "color-moccur")
+         (declare-function isearch-moccur-all "color-moccur")
+         (leaf-keys (("M-s")
+                     ("M-s o" . isearch-moccur)
+                     ("M-s i" . isearch-moccur-all)))))
+
+      ;; nested cons-cell list will be accepted
+      ((leaf color-moccur
+         :bind (("M-s O" . moccur)
+                (("M-o" . isearch-moccur)
+                 (("M-O" . isearch-moccur-all))
+                 ("M-s" . isearch-moccur-some))))
+       (prog1 'color-moccur
+         (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur-all) (autoload #'isearch-moccur-all "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur-some) (autoload #'isearch-moccur-some "color-moccur" nil t))
+         (declare-function moccur "color-moccur")
+         (declare-function isearch-moccur "color-moccur")
+         (declare-function isearch-moccur-all "color-moccur")
+         (declare-function isearch-moccur-some "color-moccur")
+         (leaf-keys (("M-s O" . moccur)
+                     ("M-o" . isearch-moccur)
+                     ("M-O" . isearch-moccur-all)
+                     ("M-s" . isearch-moccur-some)))))
+
+      ;; use keyword at first element to bind specific map
+      ((leaf color-moccur
+         :bind (("M-s O" . moccur)
+                (:isearch-mode-map
+                 ("M-o" . isearch-moccur)
+                 ("M-O" . isearch-moccur-all))))
+       (prog1 'color-moccur
+         (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur-all) (autoload #'isearch-moccur-all "color-moccur" nil t))
+         (declare-function moccur "color-moccur")
+         (declare-function isearch-moccur "color-moccur")
+         (declare-function isearch-moccur-all "color-moccur")
+         (defvar isearch-mode-map)
+         (leaf-keys (("M-s O" . moccur)
+                     (:isearch-mode-map
+                      :package color-moccur
+                      ("M-o" . isearch-moccur)
+                      ("M-O" . isearch-moccur-all))))))
+
+      ;; specific map at top-level will be accepted
+      ((leaf color-moccur
+         :bind
+         ("M-s O" . moccur)
+         (:isearch-mode-map
+          ("M-o" . isearch-moccur)
+          ("M-O" . isearch-moccur-all)))
+       (prog1 'color-moccur
+         (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur-all) (autoload #'isearch-moccur-all "color-moccur" nil t))
+         (declare-function moccur "color-moccur")
+         (declare-function isearch-moccur "color-moccur")
+         (declare-function isearch-moccur-all "color-moccur")
+         (defvar isearch-mode-map)
+         (leaf-keys (("M-s O" . moccur)
+                     (:isearch-mode-map
+                      :package color-moccur
+                      ("M-o" . isearch-moccur)
+                      ("M-O" . isearch-moccur-all))))))
+
+      ;; use :package to deffering :iserch-mode-map declared
+      ((leaf color-moccur
+         :bind (("M-s O" . moccur)
+                (:isearch-mode-map
+                 :package isearch
+                 ("M-o" . isearch-moccur)
+                 ("M-O" . isearch-moccur-all))))
+       (prog1 'color-moccur
+         (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur-all) (autoload #'isearch-moccur-all "color-moccur" nil t))
+         (declare-function moccur "color-moccur")
+         (declare-function isearch-moccur "color-moccur")
+         (declare-function isearch-moccur-all "color-moccur")
+         (defvar isearch-mode-map)
+         (leaf-keys (("M-s O" . moccur)
+                     (:isearch-mode-map
+                      :package isearch
+                      ("M-o" . isearch-moccur)
+                      ("M-O" . isearch-moccur-all))))))
+
+      ;; you can use symbol instead of keyword to specify map
+      ((leaf color-moccur
+         :bind (("M-s O" . moccur)
+                (isearch-mode-map
+                 :package isearch
+                 ("M-o" . isearch-moccur)
+                 ("M-O" . isearch-moccur-all))))
+       (prog1 'color-moccur
+         (unless (fboundp 'moccur) (autoload #'moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur) (autoload #'isearch-moccur "color-moccur" nil t))
+         (unless (fboundp 'isearch-moccur-all) (autoload #'isearch-moccur-all "color-moccur" nil t))
+         (declare-function moccur "color-moccur")
+         (declare-function isearch-moccur "color-moccur")
+         (declare-function isearch-moccur-all "color-moccur")
+         (defvar isearch-mode-map)
+         (leaf-keys (("M-s O" . moccur)
+                     (isearch-mode-map
+                      :package isearch
+                      ("M-o" . isearch-moccur)
+                      ("M-O" . isearch-moccur-all))))))
+
+      ;; you can use vectors to remap etc
+      ((leaf swiper
+          :ensure t
+          :bind (([remap isearch-forward] . swiper)))
+       (prog1 'swiper
+         (unless (fboundp 'swiper) (autoload #'swiper "swiper" nil t))
+         (declare-function swiper "swiper")
+
+         (leaf-handler-package swiper swiper nil)
+         (leaf-keys (([remap isearch-forward] . swiper)))))
+
+      ((leaf files
+          :bind (([(control ?x) (control ?f)] . find-file)))
+       (prog1 'files
+         (unless (fboundp 'find-file) (autoload #'find-file "files" nil t))
+         (declare-function find-file "files")
+         (leaf-keys (([(control ?x) (control ?f)] . find-file)))))))
+
+  (cort-deftest-with-macroexpand leaf/bind*
+    '(
+      ;; bind* to bind override any key-bind map
+      ((leaf color-moccur
+         :bind*
+         ("M-s O" . moccur)
+         ("M-o" . isearch-moccur)
+         ("M-O" . isearch-moccur-all))
+       (prog1 'color-moccur
+         (autoload #'moccur "color-moccur" nil t)
+         (autoload #'isearch-moccur "color-moccur" nil t)
+         (autoload #'isearch-moccur-all "color-moccur" nil t)
+         (leaf-keys* (("M-s O" . moccur)
+                      ("M-o" . isearch-moccur)
+                      ("M-O" . isearch-moccur-all)))))))
+#+end_src
+
 ** COMMENT :defaults keyword
 
 ~:defalts~ provide to download recommended settings for specified package.
@@ -1073,6 +1279,46 @@ result of some S expression to variable.
          (require 'alloc)
          (setq-default gc-cons-threshold 536870912)
          (setq-default garbage-collection-messages t)))))
+#+end_src
+
+** :setf, :push, :pre-setf, :pre-push keywords
+
+These keywords provide a front end to ~setf~ and ~push~.
+
+Note that, *unlike :setq*, it always requires a list of cons cell.
+
+#+begin_src emacs-lisp
+  (cort-deftest-with-macroexpand leaf/setf
+    '(
+      ;; :setf require cons-cell list ONLY.
+      ((leaf alloc
+         :setf ((gc-cons-threshold . 536870912)
+                (garbage-collection-messages . t))
+         :require t)
+       (prog1 'alloc
+         (require 'alloc)
+         (setf gc-cons-threshold 536870912)
+         (setf garbage-collection-messages t)))
+
+      ;; left value could generalized variable (alist-get, plist-get...)
+      ;; note that it is specified as the car of the cons list.
+      ((leaf emacs
+         :setf
+         (((alist-get "gnu" package-archives) . "http://elpa.gnu.org/packages/")
+          ((alist-get 'vertical-scroll-bars default-frame-alist) . nil)))
+       (prog1 'emacs
+         (setf (alist-get "gnu" package-archives) "http://elpa.gnu.org/packages/")
+         (setf (alist-get 'vertical-scroll-bars default-frame-alist) nil)))))
+
+  (cort-deftest-with-macroexpand leaf/push
+    '(
+      ;; :setf require cons-cell list ONLY.
+      ((leaf emacs
+         :push ((package-archives . '("melpa" . "https://melpa.org/packages/"))
+                (auto-mode-alist . '("\\.jpe?g\\'" . image-mode))))
+       (prog1 'emacs
+         (push '("melpa" . "https://melpa.org/packages/") package-archives)
+         (push '("\\.jpe?g\\'" . image-mode) auto-mode-alist)))))
 #+end_src
 
 * Configure list keywords

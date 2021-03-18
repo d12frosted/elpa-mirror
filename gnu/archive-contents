@@ -1,14 +1,14 @@
 (1
  (ace-window .
-	     [(0 9 0)
+	     [(0 10 0)
 	      ((avy
-		(0 2 0)))
-	      "Quickly switch windows." single
-	      ((:keywords "window" "location")
+		(0 5 0)))
+	      "Quickly switch windows." tar
+	      ((:url . "https://github.com/abo-abo/ace-window")
+	       (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
 	       (:authors
 		("Oleh Krehel" . "ohwoeowho@gmail.com"))
-	       (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
-	       (:url . "https://github.com/abo-abo/ace-window"))])
+	       (:keywords "window" "location"))])
  (ack .
       [(1 10)
        nil "interface to ack-like tools" tar
@@ -211,7 +211,7 @@
 	      (:maintainer "Raffael Stocker" . "r.stocker@mnet-mail.de")
 	      (:url . "https://gitlab.com/rstocker/emacs-bluetooth"))])
  (bnf-mode .
-	   [(0 4 4)
+	   [(0 4 5)
 	    ((cl-lib
 	      (0 5))
 	     (emacs
@@ -303,15 +303,15 @@
 	      ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (clipboard-collector .
-		      [(0 2)
+		      [(0 3)
 		       ((emacs
 			 (25)))
-		       "Collect clipboard entries according to regex rules" single
-		       ((:keywords "convenience")
+		       "Collect clipboard entries according to regex rules" tar
+		       ((:url . "https://github.com/clemera/clipboard-collector")
+			(:maintainer "Clemens Radermacher" . "clemera@posteo.net")
 			(:authors
 			 ("Clemens Radermacher" . "clemera@posteo.net"))
-			(:maintainer "Clemens Radermacher" . "clemera@posteo.net")
-			(:url . "https://github.com/clemera/clipboard-collector"))])
+			(:keywords "convenience"))])
  (cobol-mode .
 	     [(1 0 0)
 	      ((cl-lib
@@ -360,11 +360,11 @@
 		  ("Jan Tatarik" . "jan.tatarik@gmail.com"))
 		 (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net"))])
  (company-math .
-	       [(1 3)
+	       [(1 4)
 		((company
 		  (0 8 0))
 		 (math-symbol-lists
-		  (1 2)))
+		  (1 3)))
 		"Completion backends for unicode math symbols and latex tags" tar
 		((:url . "https://github.com/vspinu/company-math")
 		 (:maintainer "Vitalie Spinu" . "spinuvit@gmail.com")
@@ -1235,7 +1235,7 @@
 	   ("Ivan Kanis" . "ivan@kanis.fr"))
 	  (:maintainer "Ivan Kanis" . "ivan@kanis.fr"))])
  (kiwix .
-	[(1 0 1)
+	[(1 0 3)
 	 ((emacs
 	   (24 4))
 	  (request
@@ -1265,7 +1265,7 @@
 	      ("Terrence Brannon" . "metaperl@gmail.com"))
 	     (:maintainer nil . "emacs-devel@gnu.org"))])
  (leaf .
-       [(4 4 0)
+       [(4 4 4)
 	((emacs
 	  (24 1)))
 	"Simplify your init.el configuration, extended use-package" tar

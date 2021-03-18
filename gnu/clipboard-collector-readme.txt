@@ -1,3 +1,7 @@
+#+BEGIN_HTML
+<a href="https://elpa.gnu.org/packages/clipboard-collector.html"><img alt="ELPA" src="https://elpa.gnu.org/favicon.png"/></a>
+#+END_HTML
+
 * Introduction
 
 When collecting information using copy/paste, it would be useful if one could
@@ -62,7 +66,27 @@ regex in that function, too:
  (("https?://\\([^/]*\\)"  "Url: %s" (lambda (item) (match-string 1 item)))))
 #+END_SRC
 
+If you just want to apply a matched group to the format string you can provide
+the match group number instead of using a function, too:
+
+#+BEGIN_SRC elisp
+(clipboard-collector-create
+ cc-youtube-rss
+ (("https://www.youtube.com/user/\\(.*\\)"
+   "https://www.youtube.com/feeds/videos.xml?user=%s"
+   1)
+  ("https://www.youtube.com/channel/\\(.*\\)"
+   "https://www.youtube.com/feeds/videos.xml?channel_id=%s"
+   1)))
+#+END_SRC
+
 * Related projects
 
 There is [[https://github.com/bburns/clipmon][clipmon]] but I wanted something more flexible and I wanted it to work for text
 copied in and outside of Emacs.
+
+* Contribute
+
+See the
+[[https://github.com/clemera/clipboard-collector/blob/master/CONTRIBUTE.asc][contribute]]
+file.

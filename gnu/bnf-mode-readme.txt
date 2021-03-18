@@ -95,3 +95,10 @@ https://github.com/sergeyklay/bnf-mode/blob/master/NEWS .
 
 BNF Mode is open source software licensed under the [[https://github.com/sergeyklay/bnf-mode/blob/master/LICENSE][GNU General Public Licence version 3]].
 Copyright © 2019, 2020, Free Software Foundation, Inc.
+
+*** Note On Copyright Years
+
+In copyright notices where the copyright holder is the Free Software Foundation,
+then where a range of years appears, this is an inclusive range that applies to
+every year in the range.  For example: 2005-2008 represents the years 2005,
+2006, 2007, and 2008.
