@@ -5,6 +5,8 @@
 ;; Author:      Marcin Swieczkowski <marcin.swieczkowski@gmail.com>
 ;; Created:     Fri Feb 15 2019
 ;; Version:     1.2
+;; Package-Version: 20191216.2353
+;; Package-Commit: ae20a538b2b4dcec139089bb44f1e4abc5b04f72
 ;; Package-Requires: ((emacs "24") (org "9.0"))
 ;; URL:         https://github.com/m-cat/org-recur
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;

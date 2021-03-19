@@ -2,8 +2,8 @@
 ;;
 ;; Author: Lincoln Clarete <lincoln@clarete.li>
 ;; URL: https://clarete.li/templatel
-;; Package-Version: 20210318.2258
-;; Package-Commit: 42be57bed82335636ce159bcb861f28377ec6c0c
+;; Package-Version: 20210319.426
+;; Package-Commit: a7eed2d8b0ea5d082b27667418c8943cb4cf768f
 ;; Version: 0.1.5
 ;; Package-Requires: ((emacs "25.1"))
 ;;
@@ -344,6 +344,12 @@
 (defun templatel--token-in (scanner)
   "Read 'in' off SCANNER's input."
   (let ((m (templatel--scanner-matchs scanner "in")))
+    (templatel--parser-_ scanner)
+    (templatel--join-chars m)))
+
+(defun templatel--token-is (scanner)
+  "Read 'is' off SCANNER's input."
+  (let ((m (templatel--scanner-matchs scanner "is")))
     (templatel--parser-_ scanner)
     (templatel--join-chars m)))
 
@@ -818,19 +824,27 @@ operator (RATORFN)."
        (lambda() (templatel--token-slash s))
        (lambda() (templatel--token-dslash s)))))))
 
-;; GR: Power               <- Filter ((POWER / MOD) Filter)*
+;; GR: Power               <- Test ((POWER / MOD) Test)*
 (defun templatel--parser-power (scanner)
   "Read Power from SCANNER."
   (templatel--parser-binary
    scanner
    nil ; "Power"
-   #'templatel--parser-filter
+   #'templatel--parser-test
    (lambda(s)
      (templatel--scanner-or
       s
       (list
        (lambda() (templatel--token-** s))
        (lambda() (templatel--token-% s)))))))
+
+;; GR: Test              <- Filter (_IS Filter)*
+(defun templatel--parser-test (scanner)
+  "Read Test from SCANNER."
+  (templatel--parser-binary
+   scanner
+   "Test"
+   #'templatel--parser-filter #'templatel--token-is))
 
 ;; GR: Filter              <- Unary (_PIPE Unary)*
 (defun templatel--parser-filter (scanner)
@@ -894,11 +908,11 @@ operator (RATORFN)."
    "Attribute"
    (cons
     (templatel--parser-identifier scanner)
-    (progn
-      (templatel--token-dot scanner)
-      (templatel--scanner-one-or-more
-       scanner
-       (lambda() (templatel--parser-identifier scanner)))))))
+    (templatel--scanner-one-or-more
+     scanner
+     (lambda()
+       (templatel--token-dot scanner)
+       (templatel--parser-identifier scanner))))))
 
 ;; GR: Element             <- Value / Attribute / FnCall / Identifier
 (defun templatel--parser-element (scanner)
@@ -1249,6 +1263,9 @@ finished."
                           ;; deprecated in favor of `attr` filter.
                           ("getattr"     . templatel-filters-attr)))
 
+            (rt/tests '(("defined"       . templatel-tests-defined)
+                        ("divisible"     . templatel-tests-divisible)))
+
             (rt/lookup-var
              (lambda(name)
                (catch '-brk
@@ -1256,11 +1273,7 @@ finished."
                    (let ((value (assoc name ivars)))
                      (unless (null value)
                        (throw '-brk (cdr value)))))
-                 (signal
-                  'templatel-runtime-error
-                  (format "%s: Variable `%s' not declared"
-                          rt/template-name
-                          name)))))
+                 'undefined)))
             (rt/lookup-block
              (lambda(name)
                (catch '-brk
@@ -1419,59 +1432,19 @@ be inspected by `rt/lookup-parent-block'."
   "Walk through attributes on TREE."
   (if (null (cdr tree))
       (templatel--compiler-identifier (cdar tree))
-    `(cdr (assoc ,(cdar tree) ,(templatel--compiler--attr (cdr tree))))))
+    `(let ((el (assoc ,(cdar tree) ,(templatel--compiler--attr (cdr tree)))))
+       (if el
+           (cdr el)
+         'undefined))))
 
 (defun templatel--compiler-attribute (tree)
   "Compile attribute access from TREE."
   (templatel--compiler--attr (reverse tree)))
 
-(defun templatel--compiler-filter-identifier (item)
-  "Compile a filter without params from ITEM.
-
-This filter takes a single parameter: the value being piped into
-it.  The code generated must first ensure that such filter is
-registered in the local `filters' variable, failing if it isn't.
-If the filter exists, it must then call its associated handler."
-  (let ((fname (cdar (cdr item))))
-    `(let ((entry ,(templatel--compiler-get-filter fname)))
-       (if (null entry)
-           (signal
-            'templatel-runtime-error
-            (format "Filter `%s' doesn't exist" ,fname))
-         (push (funcall (cdr entry) (pop rt/valstk)) rt/valstk)))))
-
 (defun templatel--compiler-get-filter (name)
   "Produce accessor for filter NAME."
   `(or (assoc ,name rt/filters)
        (templatel--env-filter (rt/get :env) ,name)))
-
-(defun templatel--compiler-filter-fncall (item)
-  "Compiler filter with params from ITEM.
-
-A filter can have multiple parameters.  In that case, the value
-piped into the filter becomes the first parameter and the other
-parameters are shifted to accommodate this change.  E.g.:
-
-  {{ number | int(16) }}
-
-Will be converted into the following:
-
-  (int number 16)
-
-Notice the parameter list is compiled before being passed to the
-function call."
-  (let ((fname (cdr (cadr (cadr item))))
-        (params (cddr (cadr item))))
-    `(let ((entry ,(templatel--compiler-get-filter fname)))
-       (if (null entry)
-           (signal
-            'templatel-runtime-error
-            (format "Filter `%s' doesn't exist" ,fname))
-         (push (apply
-                (cdr entry)
-                (cons (pop rt/valstk)
-                      (list ,@(templatel--compiler-run params))))
-               rt/valstk)))))
 
 (defun templatel--compiler-filter-fncall-standalone (item)
   "Compiler standalone filter with params from ITEM.
@@ -1501,6 +1474,49 @@ function call."
                    (mapcar (lambda(_) (pop rt/valstk)) ',params))
                   rt/valstk)))))))
 
+(defun templatel--compiler-filter-identifier (item)
+  "Compile a filter without params from ITEM.
+
+This filter takes a single parameter: the value being piped into
+it.  The code generated must first ensure that such filter is
+registered in the local `filters' variable, failing if it isn't.
+If the filter exists, it must then call its associated handler."
+  (let ((fname (cdar (cdr item))))
+    `(let ((entry ,(templatel--compiler-get-filter fname)))
+       (if (null entry)
+           (signal
+            'templatel-runtime-error
+            (format "Filter `%s' doesn't exist" ,fname))
+         (push (funcall (cdr entry) (pop rt/valstk)) rt/valstk)))))
+
+(defun templatel--compiler-filter-fncall (item)
+  "Compiler filter with params from ITEM.
+
+A filter can have multiple parameters.  In that case, the value
+piped into the filter becomes the first parameter and the other
+parameters are shifted to accommodate this change.  E.g.:
+
+  {{ number | int(16) }}
+
+Will be converted into the following:
+
+  (int number 16)
+
+Notice the parameter list is compiled before being passed to the
+function call."
+  (let ((fname (cdr (cadr (cadr item))))
+        (params (cddr (cadr item))))
+    `(let ((entry ,(templatel--compiler-get-filter fname)))
+       (if (null entry)
+           (signal
+            'templatel-runtime-error
+            (format "Filter `%s' doesn't exist" ,fname))
+         (push (apply
+                (cdr entry)
+                (cons (pop rt/valstk)
+                      (list ,@(templatel--compiler-run params))))
+               rt/valstk)))))
+
 (defun templatel--compiler-filter-item (item)
   "Handle compilation of single filter described by ITEM.
 
@@ -1521,6 +1537,69 @@ call `templatel--compiler-filter-item' on each entry."
      ,(templatel--compiler-run (car tree))
      ,@(mapcar #'templatel--compiler-filter-item (cdr tree))))
 
+(defun templatel--compiler-get-test (name)
+  "Produce accessor for test NAME."
+  `(or (assoc ,name rt/tests)
+       (templatel--env-test (rt/get :env) ,name)))
+
+(defun templatel--compiler-test-identifier (item)
+  "Compile a test without params from ITEM.
+
+This test takes a single parameter: the value being piped into
+it.  The code generated must first ensure that such test is
+registered in the local `tests' variable, failing if it isn't.
+If the test exists, it must then call its associated handler."
+  (let ((fname (cdar (cdr item))))
+    `(let ((entry ,(templatel--compiler-get-test fname)))
+       (if (null entry)
+           (signal
+            'templatel-runtime-error
+            (format "Test `%s' doesn't exist" ,fname))
+         (push (funcall (cdr entry) (pop rt/valstk)) rt/valstk)))))
+
+(defun templatel--compiler-test-fncall (item)
+  "Compiler test with params from ITEM.
+
+A test can have multiple parameters.  In that case, the value
+piped into the test becomes the first parameter and the other
+parameters are shifted to accommodate this change.  E.g.:
+
+  {{ number | int(16) }}
+
+Will be converted into the following:
+
+  (int number 16)
+
+Notice the parameter list is compiled before being passed to the
+function call."
+  (let ((fname (cdr (cadr (cadr item))))
+        (params (cddr (cadr item))))
+    `(let ((entry ,(templatel--compiler-get-test fname)))
+       (if (null entry)
+           (signal
+            'templatel-runtime-error
+            (format "Test `%s' doesn't exist" ,fname))
+         (push (apply
+                (cdr entry)
+                (cons (pop rt/valstk)
+                      (list ,@(templatel--compiler-run params))))
+               rt/valstk)))))
+
+(defun templatel--compiler-test-item (item)
+  "Handle compilation of single test described by ITEM.
+
+This function routes the item to be compiled to the appropriate
+function.  A test could be either just an identifier or a
+function call."
+  (if (string= (caar (cddr item)) "Identifier")
+      (templatel--compiler-test-identifier (cdr item))
+    (templatel--compiler-test-fncall (cdr item))))
+
+(defun templatel--compiler-test-list (tree)
+  "Compile a test from TREE."
+  `(progn
+     ,(templatel--compiler-run (car tree))
+     ,@(mapcar #'templatel--compiler-test-item (cdr tree))))
 
 (defun templatel--compiler-named-param (tree)
   "Compile named param from TREE."
@@ -1567,7 +1646,8 @@ Otherwise its HTML entities are escaped."
   "Compile cond from elif statements in TREE."
   (let ((expr (cadr tree))
         (tmpl (caddr tree)))
-    `((progn ,(templatel--compiler-run expr) (pop rt/valstk))
+    `((progn ,(templatel--compiler-run expr)
+             (templatel--truthy (pop rt/valstk)))
       ,@(templatel--compiler-run tmpl))))
 
 (defun templatel--compiler-if-elif (tree)
@@ -1576,7 +1656,8 @@ Otherwise its HTML entities are escaped."
         (body (cadr tree))
         (elif (caddr tree))
         (else (cadr (cadddr tree))))
-    `(cond ((progn ,(templatel--compiler-run expr) (pop rt/valstk))
+    `(cond ((progn ,(templatel--compiler-run expr)
+                   (templatel--truthy (pop rt/valstk)))
             ,@(templatel--compiler-run body))
            ,@(mapcar #'templatel--compiler-if-elif-cond elif)
            (t ,@(templatel--compiler-run else)))))
@@ -1586,7 +1667,8 @@ Otherwise its HTML entities are escaped."
   (let ((expr (car tree))
         (body (cadr tree))
         (else (cadr (caddr tree))))
-    `(if (progn ,(templatel--compiler-run expr) (pop rt/valstk))
+    `(if (progn ,(templatel--compiler-run expr)
+                (templatel--truthy (pop rt/valstk)))
          (progn ,@(templatel--compiler-run body))
        ,@(templatel--compiler-run else))))
 
@@ -1594,8 +1676,15 @@ Otherwise its HTML entities are escaped."
   "Compile if statement off TREE."
   (let ((expr (car tree))
         (body (cadr tree)))
-    `(if (progn ,(templatel--compiler-run expr) (pop rt/valstk))
+    `(if (progn ,(templatel--compiler-run expr)
+                (templatel--truthy (pop rt/valstk)))
          (progn ,@(templatel--compiler-run body)))))
+
+(defun templatel--truthy (v)
+  "Define if V should be evaluated to true or false."
+  (if (eq 'undefined v)
+      nil
+    v))
 
 (defun templatel--compiler-for (tree)
   "Compile for statement off TREE."
@@ -1671,6 +1760,7 @@ Otherwise its HTML entities are escaped."
     (`("Attribute"         . ,a) (templatel--compiler-attribute a))
     (`("Filter"            . ,a) (templatel--compiler-filter-list a))
     (`("FnCall"            . ,a) (templatel--compiler-filter-fncall-standalone a))
+    (`("Test"              . ,a) (templatel--compiler-test-list a))
     (`("NamedParams"       . ,a) (templatel--compiler-named-params a))
     (`("Expr"              . ,a) (templatel--compiler-expr a))
     (`("Expression"        . ,a) (templatel--compiler-expression a))
@@ -1698,6 +1788,7 @@ Otherwise its HTML entities are escaped."
     (`(safe . ,x) (cons 'safe (funcall fn x)))
     (x (funcall fn x))))
 
+
 ;; Filters
 
 (defun templatel-filters-abs (n)
@@ -1819,6 +1910,18 @@ Hi <b>you</b>!
 
 
 
+;; Tests
+
+(defun templatel-tests-defined (v)
+  "Return t if V is defined."
+  (not (eq v 'undefined)))
+
+(defun templatel-tests-divisible (value d)
+  "Return t if VALUE is divisible by D."
+  (eq 0 (% value d)))
+
+
+
 (defun templatel--get (lst sym default)
   "Pick SYM from LST or return DEFAULT."
   (let ((val (assoc sym lst)))
@@ -1887,7 +1990,9 @@ environment via ~:importfn~ parameter.
                        (lambda(_e _n) (error "Import function not defined")))
       ;; 2. Where we keep the filter functions
       ,(make-hash-table :test 'equal)
-      ;; 3. Autoescape flag that defaults to true
+      ;; 3. Where we keep the test functions
+      ,(make-hash-table :test 'equal)
+      ;; 4. Autoescape flag that defaults to true
       nil]))
 
 (defun templatel-env-add-template (env name template)
@@ -1929,6 +2034,17 @@ This function reverts the effect of a previous call to
 [[anchor:symbol-templatel-env-add-filter][templatel-env-add-filter]]."
   (remhash name (elt env 2)))
 
+(defun templatel-env-add-test (env name test)
+  "Add TEST to ENV under key NAME."
+  (puthash name test (elt env 3)))
+
+(defun templatel-env-remove-test (env name)
+  "Remove test from ENV under key NAME.
+
+This function reverts the effect of a previous call to
+[[anchor:symbol-templatel-env-add-test][templatel-env-add-test]]."
+  (remhash name (elt env 2)))
+
 (defun templatel--env-source (env name)
   "Get source code of template NAME within ENV."
   (gethash name (elt env 0)))
@@ -1936,6 +2052,11 @@ This function reverts the effect of a previous call to
 (defun templatel--env-filter (env name)
   "Get filter NAME within ENV."
   (let ((entry (gethash name (elt env 2))))
+    (or (and entry (cons name entry)))))
+
+(defun templatel--env-test (env name)
+  "Get test NAME within ENV."
+  (let ((entry (gethash name (elt env 3))))
     (or (and entry (cons name entry)))))
 
 (defun templatel--env-run-importfn (env name)
@@ -1946,11 +2067,11 @@ This function reverts the effect of a previous call to
 
 (defun templatel-env-get-autoescape (env)
   "Get autoescape flag of ENV."
-  (elt env 3))
+  (elt env 4))
 
 (defun templatel-env-set-autoescape (env autoescape)
   "Set AUTOESCAPE flag of ENV to either true or false."
-  (aset env 3 autoescape))
+  (aset env 4 autoescape))
 
 (defun templatel-env-render (env name vars)
   "Render template NAME within ENV with VARS as parameters."

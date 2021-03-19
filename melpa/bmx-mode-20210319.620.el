@@ -4,8 +4,8 @@
 
 ;; Author: Jostein Kjønigsen <jostein@gmail.com>
 ;; URL: http://github.com/josteink/bmx-mode
-;; Package-Version: 20180929.1132
-;; Package-Commit: 30122e2a6bfb00834e18363e7909182b2701ce82
+;; Package-Version: 20210319.620
+;; Package-Commit: 6f008707efe0bb5646f0c1b0d6f57f0a8800e200
 ;; Version: 0.1
 ;; Keywords: c convenience tools
 ;; Package-Requires: ((emacs "25.1") (cl-lib "0.5") (company "0.9.4") (dash "2.13.0") (s "1.12.0"))
@@ -193,7 +193,7 @@
                    "\\)\\>"))))
 
 (defun bmx--label-navigate-to (label)
-  (ring-insert find-tag-marker-ring (point-marker))
+  (xref-push-marker-stack)
   (goto-char (point-min))
   (search-forward-regexp (concat "^" (bmx--label-normalize (regexp-quote label)) "\s*$"))
   (beginning-of-line))
@@ -360,7 +360,7 @@
                    "\\)"))))
 
 (defun bmx--variable-navigate-to (variable)
-  (ring-insert find-tag-marker-ring (point-marker))
+  (xref-push-marker-stack)
   (goto-char (point-min))
   (search-forward-regexp (concat
                           "set\s+\"?"

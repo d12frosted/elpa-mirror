@@ -4,8 +4,8 @@
 
 ;; Author: Thanh Vuong <thanhvg@gmail.com>
 ;; URL: https://github.com/thanhvg/emacs-hnreader/
-;; Package-Version: 20200726.654
-;; Package-Commit: 7ff808d4728ce4e269b6d99a73604063dd9b374a
+;; Package-Version: 20210319.527
+;; Package-Commit: ae52af1424ccde2b20e88ff8c589eb772162a560
 ;; Package-Requires: ((emacs "25.1") (promise "1.1") (request "0.3.0") (org "9.2"))
 ;; Version: 0.2
 
@@ -270,7 +270,7 @@ third one is 80.")
 
 (defun hnreader--print-comments (dom url)
   "Print DOM comment and URL to buffer."
-  (let ((comments (dom-by-class dom "^athing comtr $"))
+  (let ((comments (dom-by-class dom "^athing comtr$"))
         (title (hnreader--get-title dom))
         (info (hnreader--get-post-info dom))
         (more-link (dom-by-class dom "morelink")))
