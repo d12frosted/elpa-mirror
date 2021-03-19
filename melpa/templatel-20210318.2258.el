@@ -2,8 +2,8 @@
 ;;
 ;; Author: Lincoln Clarete <lincoln@clarete.li>
 ;; URL: https://clarete.li/templatel
-;; Package-Version: 20210316.1345
-;; Package-Commit: a044918bf86cf4b6dfddcf87948e62777f185928
+;; Package-Version: 20210318.2258
+;; Package-Commit: 42be57bed82335636ce159bcb861f28377ec6c0c
 ;; Version: 0.1.5
 ;; Package-Requires: ((emacs "25.1"))
 ;;
@@ -1240,6 +1240,7 @@ finished."
                           ("min"         . templatel-filters-min)
                           ("round"       . templatel-filters-round)
                           ("safe"        . templatel-filters-safe)
+                          ("sort"        . templatel-filters-sort)
                           ("sum"         . templatel-filters-sum)
                           ("title"       . templatel-filters-title)
                           ("upper"       . templatel-filters-upper)
@@ -1600,7 +1601,9 @@ Otherwise its HTML entities are escaped."
   "Compile for statement off TREE."
   (let ((id (cdar tree)))
     `(let ((subenv '((,id . nil)))
-           (iterable ,(templatel--compiler-run (cadr tree))))
+           (iterable (progn
+                       ,(templatel--compiler-run (cadr tree))
+                       (pop rt/valstk))))
        (push subenv rt/varstk)
        (mapc
         (lambda(id)
@@ -1810,6 +1813,9 @@ Hi <b>you</b>!
 #+END_SRC"
   (templatel-mark-safe s))
 
+(defun templatel-filters-sort (s)
+  "Return S sorted."
+  (sort s #'<))
 
 
 

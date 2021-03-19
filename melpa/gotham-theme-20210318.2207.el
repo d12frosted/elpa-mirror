@@ -4,8 +4,8 @@
 
 ;; Author: Vasilij Schneidermann <mail@vasilij.de>
 ;; URL: https://depp.brause.cc/gotham-theme
-;; Package-Version: 20200506.1250
-;; Package-Commit: a549cd031859e24fd37a779323e1542aefe86d43
+;; Package-Version: 20210318.2207
+;; Package-Commit: 51876a72dbe5a16aeadde2e885da6bbf75909bd1
 ;; Version: 1.1.8
 
 ;; This file is NOT part of GNU Emacs.
@@ -582,9 +582,9 @@ depending on DISPLAY for keys which are either :foreground or
    (debbugs-gnu-tagged :foreground red)
 
    ;; diff-hl
-   (diff-hl-change :foreground cyan)
-   (diff-hl-delete :foreground red)
-   (diff-hl-insert :foreground green)
+   (diff-hl-change :foreground cyan :background base5)
+   (diff-hl-delete :foreground red :background orange)
+   (diff-hl-insert :foreground green :background base2)
 
    ;; dired-async
    (dired-async-failures :inherit error)
@@ -820,7 +820,7 @@ depending on DISPLAY for keys which are either :foreground or
    (magit-diff-removed-highlight :foreground red :weight bold)
    (magit-diffstat-added :foreground green)
    (magit-diffstat-removed :foreground red)
-   (magit-dimmed :inherit shadow)
+   (magit-dimmed :foreground base1)
    (magit-hash :foreground base5)
    (magit-log-author :foreground orange)
    (magit-log-date :foreground magenta)
