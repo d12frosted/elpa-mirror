@@ -1425,15 +1425,17 @@
 	      ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
 	     (:keywords "convenience" "faces" "languages" "tools"))])
  (modus-operandi-theme .
-		       [(0 12 0)
+		       [(0 13 1)
 			((emacs
-			  (26 1)))
-			"Accessible light theme (WCAG AAA)" single
-			((:keywords "faces" "theme" "accessibility")
+			  (26 1))
+			 (modus-themes
+			  (1 2 4)))
+			"Accessible light theme (WCAG AAA)" tar
+			((:url . "https://gitlab.com/protesilaos/modus-themes")
+			 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 			 (:authors
 			  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-			 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-			 (:url . "https://gitlab.com/protesilaos/modus-themes"))])
+			 (:keywords "faces" "theme" "accessibility"))])
  (modus-themes .
 	       [(1 2 4)
 		((emacs
@@ -1445,15 +1447,17 @@
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		 (:keywords "faces" "theme" "accessibility"))])
  (modus-vivendi-theme .
-		      [(0 12 0)
+		      [(0 13 1)
 		       ((emacs
-			 (26 1)))
-		       "Accessible dark theme (WCAG AAA)" single
-		       ((:keywords "faces" "theme" "accessibility")
+			 (26 1))
+			(modus-themes
+			 (1 2 4)))
+		       "Accessible light theme (WCAG AAA)" tar
+		       ((:url . "https://gitlab.com/protesilaos/modus-themes")
+			(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 			(:authors
 			 ("Protesilaos Stavrou" . "info@protesilaos.com"))
-			(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
-			(:url . "https://gitlab.com/protesilaos/modus-themes"))])
+			(:keywords "faces" "theme" "accessibility"))])
  (multishell .
 	     [(1 1 9)
 	      ((cl-lib

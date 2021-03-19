@@ -5,7 +5,7 @@ Source:  https://github.com/minad/consult.git
 Updating /mnt/store/melpa/working/consult/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/consult/
-  to /tmp/consultScBboh/consult-20210318.1440
+  to /tmp/consults0JqTP/consult-20210318.1440
     consult-compile.el -> consult-compile.el
     consult-flymake.el -> consult-flymake.el
     consult-icomplete.el -> consult-icomplete.el
@@ -13,7 +13,7 @@ Copying files (->) and directories (=>)
     consult-xref.el -> consult-xref.el
     consult.el -> consult.el
     consult.texi -> consult.texi
-Created /tmp/consultScBboh/consult-20210318.1440/consult.info
+Created /tmp/consults0JqTP/consult-20210318.1440/consult.info
 Created consult-20210318.1440.tar containing:
   consult-20210318.1440/
   consult-20210318.1440/consult-compile.el
@@ -25,30 +25,28 @@ Created consult-20210318.1440.tar containing:
   consult-20210318.1440/consult.el
   consult-20210318.1440/consult.info
   consult-20210318.1440/dir
-Built consult in 10.872s, finished at Thu Mar 18 15:24:48 2021
+Built consult in 11.286s, finished at Thu Mar 18 21:32:51 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  311 Mar 18 12:21 packages/consult-20210316.1230.entry
-252K -rw-r--r-- 1 root root 250K Mar 18 12:21 packages/consult-20210316.1230.tar
-4.0K -rw-r--r-- 1 root root  311 Mar 18 15:24 packages/consult-20210318.1440.entry
-252K -rw-r--r-- 1 root root 250K Mar 18 15:24 packages/consult-20210318.1440.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 18 15:24 packages/consult-badge.svg
-8.0K -rw-r--r-- 1 root root 4.2K Mar 18 15:24 packages/consult-flycheck-20210301.2310.el
-4.0K -rw-r--r-- 1 root root  412 Mar 18 15:24 packages/consult-flycheck-20210301.2310.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 18 15:24 packages/consult-flycheck-badge.svg
-4.0K -rw-r--r-- 1 root root  135 Mar 18 15:24 packages/consult-flycheck-readme.txt
-4.0K -rw-r--r-- 1 root root  572 Mar 18 15:24 packages/consult-flycheck.log
-8.0K -rw-r--r-- 1 root root 6.6K Mar 18 15:24 packages/consult-notmuch-20210312.2201.el
-4.0K -rw-r--r-- 1 root root  408 Mar 18 15:24 packages/consult-notmuch-20210312.2201.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 18 15:24 packages/consult-notmuch-badge.svg
-4.0K -rw-r--r-- 1 root root  322 Mar 18 15:24 packages/consult-notmuch-readme.txt
-4.0K -rw-r--r-- 1 root root  570 Mar 18 15:24 packages/consult-notmuch.log
-4.0K -rw-r--r-- 1 root root  834 Mar 18 15:24 packages/consult-readme.txt
+4.0K -rw-r--r-- 1 root root  311 Mar 18 21:32 packages/consult-20210318.1440.entry
+252K -rw-r--r-- 1 root root 250K Mar 18 21:32 packages/consult-20210318.1440.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 18 21:32 packages/consult-badge.svg
+8.0K -rw-r--r-- 1 root root 4.2K Mar 18 21:32 packages/consult-flycheck-20210301.2310.el
+4.0K -rw-r--r-- 1 root root  412 Mar 18 21:32 packages/consult-flycheck-20210301.2310.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 18 21:32 packages/consult-flycheck-badge.svg
+4.0K -rw-r--r-- 1 root root  135 Mar 18 21:32 packages/consult-flycheck-readme.txt
+4.0K -rw-r--r-- 1 root root  572 Mar 18 21:32 packages/consult-flycheck.log
+8.0K -rw-r--r-- 1 root root 6.6K Mar 18 21:32 packages/consult-notmuch-20210312.2201.el
+4.0K -rw-r--r-- 1 root root  408 Mar 18 21:32 packages/consult-notmuch-20210312.2201.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 18 21:32 packages/consult-notmuch-badge.svg
+4.0K -rw-r--r-- 1 root root  322 Mar 18 21:32 packages/consult-notmuch-readme.txt
+4.0K -rw-r--r-- 1 root root  570 Mar 18 21:32 packages/consult-notmuch.log
+4.0K -rw-r--r-- 1 root root  834 Mar 18 21:32 packages/consult-readme.txt
 4.0K -rw-r--r-- 1 root root 3.5K Dec 24 21:28 packages/consult-selectrum-20201224.1239.el
 4.0K -rw-r--r-- 1 root root 1.2K Jan 13 02:47 packages/consult-selectrum-badge.svg
 4.0K -rw-r--r-- 1 root root   32 Jan 13 02:47 packages/consult-selectrum-readme.txt
 4.0K -rw-r--r-- 1 root root  848 Jan 13 02:47 packages/consult-selectrum.log
-8.0K -rw-r--r-- 1 root root 4.8K Mar 18 15:24 packages/consult-spotify-20210220.2229.el
-4.0K -rw-r--r-- 1 root root  438 Mar 18 15:24 packages/consult-spotify-20210220.2229.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 18 15:24 packages/consult-spotify-badge.svg
-4.0K -rw-r--r-- 1 root root  652 Mar 18 15:24 packages/consult-spotify-readme.txt
-4.0K -rw-r--r-- 1 root root  559 Mar 18 15:24 packages/consult-spotify.log
+8.0K -rw-r--r-- 1 root root 4.8K Mar 18 21:32 packages/consult-spotify-20210220.2229.el
+4.0K -rw-r--r-- 1 root root  438 Mar 18 21:32 packages/consult-spotify-20210220.2229.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 18 21:32 packages/consult-spotify-badge.svg
+4.0K -rw-r--r-- 1 root root  652 Mar 18 21:32 packages/consult-spotify-readme.txt
+4.0K -rw-r--r-- 1 root root  559 Mar 18 21:32 packages/consult-spotify.log
