@@ -5,7 +5,7 @@ Source:  https://github.com/ProofGeneral/PG.git
 Updating /mnt/store/melpa/working/proof-general/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/proof-general/
-  to /tmp/proof-generald7XE6y/proof-general-20210317.510
+  to /tmp/proof-generalo6hyMl/proof-general-20210317.510
     proof-general-pkg.el -> proof-general-pkg.el
     proof-general.el -> proof-general.el
   ! doc/dir -> dir
@@ -38,8 +38,8 @@ Copying files (->) and directories (=>)
     pghaskell => pghaskell
     pgocaml => pgocaml
     pgshell => pgshell
-Created /tmp/proof-generald7XE6y/proof-general-20210317.510/PG-adapting.info
-Created /tmp/proof-generald7XE6y/proof-general-20210317.510/ProofGeneral.info
+Created /tmp/proof-generalo6hyMl/proof-general-20210317.510/PG-adapting.info
+Created /tmp/proof-generalo6hyMl/proof-general-20210317.510/ProofGeneral.info
 Created proof-general-20210317.510.tar containing:
   proof-general-20210317.510/
   proof-general-20210317.510/AUTHORS
@@ -173,9 +173,9 @@ Created proof-general-20210317.510.tar containing:
   proof-general-20210317.510/phox/sqrt2.phx
   proof-general-20210317.510/proof-general-pkg.el
   proof-general-20210317.510/proof-general.el
-Built proof-general in 57.238s, finished at Fri Mar 19 22:47:09 2021
+Built proof-general in 36.123s, finished at Sat Mar 20 01:54:22 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  250 Mar 19 22:47 packages/proof-general-20210317.510.entry
-2.6M -rw-r--r-- 1 root root 2.6M Mar 19 22:47 packages/proof-general-20210317.510.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 19 22:47 packages/proof-general-badge.svg
-4.0K -rw-r--r-- 1 root root  491 Mar 19 22:47 packages/proof-general-readme.txt
+4.0K -rw-r--r-- 1 root root  250 Mar 20 01:54 packages/proof-general-20210317.510.entry
+2.6M -rw-r--r-- 1 root root 2.6M Mar 20 01:54 packages/proof-general-20210317.510.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 20 01:54 packages/proof-general-badge.svg
+4.0K -rw-r--r-- 1 root root  491 Mar 20 01:54 packages/proof-general-readme.txt
