@@ -5,7 +5,7 @@
 ;; Author: Nicolas Petton <petton.nicolas@gmail.com>
 ;; Keywords: help
 ;; Package-Version: 20160719.1504
-;; Package-Commit: f57b7d182372c33a7e52a785363acf292422c8aa
+;; Package-Commit: 58a0e556b4b96e1d23082a7ec2e8c0d4183a1a24
 ;; Version: 0.1
 ;; Package-Requires: ((makey "0.3") (js2-mode "20140114") (js2-refactor "0.6.1") (s "1.9.0"))
 
