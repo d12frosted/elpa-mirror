@@ -3,7 +3,9 @@ Fetcher: git
 Source:  https://git.flintfam.org/swf-projects/emacs-pushover.git
 
 Updating /mnt/store/melpa/working/pushover/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://git.flintfam.org/swf-projects/emacs-pushover.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
+Built pushover in 8.097s, finished at Fri Mar 19 22:46:52 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.1K Mar 19 22:46 packages/pushover-20170818.2103.el
+4.0K -rw-r--r-- 1 root root  371 Mar 19 22:46 packages/pushover-20170818.2103.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 19 22:46 packages/pushover-badge.svg
+4.0K -rw-r--r-- 1 root root  121 Mar 19 22:46 packages/pushover-readme.txt
