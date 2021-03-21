@@ -1,0 +1,11 @@
+(kconfig-mode .
+	      [(20210321 1106)
+	       ((emacs
+		 (24 3)))
+	       "Major mode for editing Kconfig files" single
+	       ((:commit . "7d03fa239e6879854c3b26c8e750489eceb58503")
+		(:authors
+		 ("Dela Anthonio" . "dell.anthonio@gmail.com"))
+		(:maintainer "Dela Anthonio" . "dell.anthonio@gmail.com")
+		(:keywords "kconfig" "languages" "linux" "kernel")
+		(:url . "https://github.com/delaanthonio/kconfig-mode"))])

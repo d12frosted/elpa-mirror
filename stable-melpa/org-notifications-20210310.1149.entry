@@ -1,0 +1,19 @@
+(org-notifications .
+		   [(20210310 1149)
+		    ((emacs
+		      (25 1))
+		     (org
+		      (9 0))
+		     (sound-wav
+		      (0 2))
+		     (alert
+		      (1 2))
+		     (seq
+		      (2 21)))
+		    "Creates notifications for org-mode entries" tar
+		    ((:commit . "66edc4869c34d9b601cea82892ebb08af9b7b778")
+		     (:authors
+		      ("doppelc"))
+		     (:maintainer "doppelc")
+		     (:keywords "outlines")
+		     (:url . "https://github.com/doppelc/org-notifications"))])
