@@ -1,0 +1,10 @@
+(org-static-blog .
+		 [(20210321 2008)
+		  ((emacs
+		    (24 3)))
+		  "a simple org-mode based static blog generator" single
+		  ((:commit . "e0265c97dd9d014760eb6280be6c8bb81793cdf5")
+		   (:authors
+		    ("Bastian Bechtold"))
+		   (:maintainer "Bastian Bechtold")
+		   (:url . "https://github.com/bastibe/org-static-blog"))])

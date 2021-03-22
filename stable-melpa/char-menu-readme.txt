@@ -1,24 +1,14 @@
-This package allows to insert arbitrary symbols in Emacs in a very
-efficient and straightforward way.  Whether you ever need to insert only
-a couple of proper punctuation symbols or you're a Unicode geek who likes
-all sorts of arrows and fancy math symbols, this package may be of some
-use.
+This package allows the user to create a menu for fast insertion of
+arbitrary symbols.
 
 Features:
 
-* it allows you organize all symbols you ever need into a hierarchy you
-  define;
+* The symbols can be organized in hierarchies.
 
-* in that tree-like structure most frequently used commands will require
-  only one key-press, while others may get dedicated section (for
-  example, “arrows”) so you first select that section and then you choose
-  a symbol in it;
+* Most frequently used symbols require only one keystroke, while others
+  are placed in dedicated sub-menus (for example, “arrows”) and can be
+  inserted with two or three keystrokes.
 
-* it makes sense to have paired characters in that menu, like “” (and for
-  that matter arbitrary combinations of symbols);
-
-* however insertion of paired characters will place the point between
-  them;
-
-* …and if you insert paired characters while some text is selected, they
-  will wrap it.
+* Paired characters like `“”` can be inserted.  Normally, the point will
+  be placed between the characters, but if some text is selected, the
+  paired character will wrap it without moving the point.
