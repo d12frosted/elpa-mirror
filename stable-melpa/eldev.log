@@ -2,28 +2,3 @@ Package: eldev
 Fetcher: github
 Source:  https://github.com/doublep/eldev.git
 
-Updating /mnt/store/melpa/working/eldev/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/eldev/
-  to /tmp/eldev3lKUqv/eldev-20210228.2242
-    eldev-buttercup.el -> eldev-buttercup.el
-    eldev-ert.el -> eldev-ert.el
-    eldev-plugins.el -> eldev-plugins.el
-    eldev-util.el -> eldev-util.el
-    eldev-vc.el -> eldev-vc.el
-    eldev.el -> eldev.el
-Created eldev-20210228.2242.tar containing:
-  eldev-20210228.2242/
-  eldev-20210228.2242/eldev-buttercup.el
-  eldev-20210228.2242/eldev-ert.el
-  eldev-20210228.2242/eldev-pkg.el
-  eldev-20210228.2242/eldev-plugins.el
-  eldev-20210228.2242/eldev-util.el
-  eldev-20210228.2242/eldev-vc.el
-  eldev-20210228.2242/eldev.el
-Built eldev in 3.598s, finished at Sun Mar 21 23:07:12 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  340 Mar 21 23:07 packages/eldev-20210228.2242.entry
-380K -rw-r--r-- 1 root root 380K Mar 21 23:07 packages/eldev-20210228.2242.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 21 23:07 packages/eldev-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Mar 21 23:07 packages/eldev-readme.txt

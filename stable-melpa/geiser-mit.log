@@ -1,0 +1,26 @@
+Package: geiser-mit
+Fetcher: gitlab
+Source:  https://gitlab.com/emacs-geiser/mit.git
+
+Updating /mnt/store/melpa/working/geiser-mit/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/geiser-mit/
+  to /tmp/geiser-mitZ3CTe2/geiser-mit-20210308.257
+    geiser-mit.el -> geiser-mit.el
+    src/geiser => src/geiser
+Created geiser-mit-20210308.257.tar containing:
+  geiser-mit-20210308.257/
+  geiser-mit-20210308.257/geiser-mit-pkg.el
+  geiser-mit-20210308.257/geiser-mit.el
+  geiser-mit-20210308.257/src/
+  geiser-mit-20210308.257/src/geiser/
+  geiser-mit-20210308.257/src/geiser/compile.scm
+  geiser-mit-20210308.257/src/geiser/emacs.scm
+  geiser-mit-20210308.257/src/geiser/geiser.pkg
+  geiser-mit-20210308.257/src/geiser/load.scm
+Built geiser-mit in 3.128s, finished at Mon Mar 22 07:15:48 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  452 Mar 22 07:15 packages/geiser-mit-20210308.257.entry
+ 32K -rw-r--r-- 1 root root  30K Mar 22 07:15 packages/geiser-mit-20210308.257.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 22 07:15 packages/geiser-mit-badge.svg
+4.0K -rw-r--r-- 1 root root   56 Mar 22 07:15 packages/geiser-mit-readme.txt
