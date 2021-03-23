@@ -1425,12 +1425,12 @@
 	      ("Michael Abraham Shulman" . "viritrilbia@gmail.com"))
 	     (:keywords "convenience" "faces" "languages" "tools"))])
  (modus-operandi-theme .
-		       [(0 13 1)
+		       [(0 13 2)
 			((emacs
 			  (26 1))
 			 (modus-themes
 			  (1 2 4)))
-			"Accessible light theme (WCAG AAA)" tar
+			"Accessible light theme (WCAG AAA) [DEPRECATED]" tar
 			((:url . "https://gitlab.com/protesilaos/modus-themes")
 			 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 			 (:authors
@@ -1447,12 +1447,12 @@
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 		 (:keywords "faces" "theme" "accessibility"))])
  (modus-vivendi-theme .
-		      [(0 13 1)
+		      [(0 13 2)
 		       ((emacs
 			 (26 1))
 			(modus-themes
 			 (1 2 4)))
-		       "Accessible light theme (WCAG AAA)" tar
+		       "Accessible dark theme (WCAG AAA) [DEPRECATED]" tar
 		       ((:url . "https://gitlab.com/protesilaos/modus-themes")
 			(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 			(:authors

@@ -1,5 +1,5 @@
 This package is obsolete.  It has been replaced by `modus-themes',
-which includes the modus-vivendi and modus-vivendi themes.
+which includes the modus-operandi and modus-vivendi themes.
 
 Users updating to the new `modus-themes' package, are advised to read
 the anouncement on the emacs-devel mailing list:
