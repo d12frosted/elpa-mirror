@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2020 Free Software Foundation, Inc.
 
 ;; Version: 1.7
-;; Package-Version: 20210319.2010
-;; Package-Commit: b4ffcf26fb392ed83f6c40bc9b62cbe54483119c
+;; Package-Version: 20210326.1008
+;; Package-Commit: 2fbcab293e11e1502a0128ca5f59de0ea7888a75
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -1743,9 +1743,11 @@ THINGS are either registrations or unregisterations (sic)."
   (append
    (eglot--VersionedTextDocumentIdentifier)
    (list :languageId
-         (if (string-match "\\(.*\\)-mode" (symbol-name major-mode))
-             (match-string 1 (symbol-name major-mode))
-           "unknown")
+	 (cond
+           ((get major-mode 'eglot-language-id))
+           ((string-match "\\(.*\\)-mode" (symbol-name major-mode))
+            (match-string 1 (symbol-name major-mode)))
+           (t "unknown"))
          :text
          (eglot--widening
           (buffer-substring-no-properties (point-min) (point-max))))))
