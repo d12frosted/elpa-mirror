@@ -1,4 +1,4 @@
-Provides `macrostep' support for scheme by leveraging `geiser'.
+Provides `macrostep' support for `geiser' and `cider'.
 
 To enable `macrostep' in `geiser-mode' buffer, execute
 `macrostep-geiser-setup'. The latter function can be added to
@@ -16,3 +16,13 @@ Or, using `use-package':
 (use-package macrostep-geiser
   :after geiser-repl
   :config (add-hook 'geiser-repl-mode-hook #'macrostep-geiser-setup))
+
+Additionally, for `cider' integration:
+
+(eval-after-load 'cider-mode '(add-hook 'cider-mode-hook #'macrostep-geiser-setup))
+
+Or, using `use-package':
+
+(use-package macrostep-geiser
+  :after cider-mode
+  :config (add-hook 'cider-mode-hook #'macrostep-geiser-setup))

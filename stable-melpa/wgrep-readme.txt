@@ -51,7 +51,7 @@ The following keybindings are defined:
 - Can handle newline insertion in *grep* buffer.
 - Delete whole line include newline.
 
-### Similar softwares:
+### Similar software:
 
 [GNU sed](https://www.gnu.org/software/sed/)
 [helm-ag](https://github.com/syohex/emacs-helm-ag) has a similar feature.

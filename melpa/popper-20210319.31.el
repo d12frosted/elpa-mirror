@@ -5,7 +5,7 @@
 ;; Author: Karthik Chikmagalur <karthik.chikmagalur@gmail.com>
 ;; Version: 0.30
 ;; Package-Version: 20210319.31
-;; Package-Commit: 89ed8ab2da330ffefa0d32ac34491467fc6be228
+;; Package-Commit: 767d4ffd0eac9da272a09eeedb640557c85aec00
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: convenience
 ;; URL: https://github.com/karthink/popper

@@ -5,7 +5,7 @@
 ;; Author: Masahiro Hayashi <mhayashi1120@gmail.com>
 ;; Keywords: grep edit extensions
 ;; Package-Version: 20200217.1028
-;; Package-Commit: f0ef9bfa44db503cdb2f83fcfbd2fa4e2382ef1f
+;; Package-Commit: f9687c28bbc2e84f87a479b6ce04407bb97cfb23
 ;; Package-Requires: ((wgrep "2.3.2"))
 ;; URL: http://github.com/mhayashi1120/Emacs-wgrep/raw/master/wgrep-ag.el
 ;; Emacs: GNU Emacs 25 or later

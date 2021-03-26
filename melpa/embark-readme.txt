@@ -29,7 +29,7 @@ variable associates target types with variable containing keymaps,
 and those keymaps containing binds for the actions.  For example,
 in the default configuration the type `file' is associated with the
 symbol `embark-file-keymap'.  That symbol names a keymap with
-single-letter keybindings for common Emacs file commands, for
+single-letter key bindings for common Emacs file commands, for
 instance `c' is bound to `copy-file'.  This means that if while you
 are in the minibuffer after running a command that prompts for a
 file, such as `find-file' or `rename-file', you can copy a file by
@@ -39,7 +39,7 @@ These action keymaps are very convenient but not strictly necessary
 when using `embark-act': you can use any command that reads from the
 minibuffer as an action and the target of the action will be inserted
 at the first minibuffer prompt.  After running `embark-act' all of your
-keybindings and even `execute-extended-command' can be used to run a
+key bindings and even `execute-extended-command' can be used to run a
 command.  The action keymaps are normal Emacs keymaps and you should
 feel free to bind in them whatever commands you find useful as actions.
 

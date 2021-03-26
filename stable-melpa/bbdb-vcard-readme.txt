@@ -70,7 +70,7 @@ Mapping of vCard types to BBDB types:
 | ROLE                    | Xfields<role                            |
 | AGENT                   | Xfields<agent                           |
 | MAILER                  | Xfields<mailer                          |
-| UID                     | Xfields<uid                             |
+| UID                     | Xfields<vcard-uid                       |
 | PRODID                  | Xfields<prodid                          |
 | CLASS                   | Xfields<class                           |
 | X-BBDB-FOO              | Xfields<foo                             |

@@ -5,37 +5,45 @@ Source:  https://github.com/nbfalcon/ptemplate-templates.git
 Updating /mnt/store/melpa/working/ptemplate-templates/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ptemplate-templates/
-  to /tmp/ptemplate-templatesM30p7P/ptemplate-templates-20210222.1555
+  to /tmp/ptemplate-templatesRNuZwF/ptemplate-templates-20210324.1443
     ptemplate-templates.el -> ptemplate-templates.el
     rsc => rsc
-Created ptemplate-templates-20210222.1555.tar containing:
-  ptemplate-templates-20210222.1555/
-  ptemplate-templates-20210222.1555/ptemplate-templates-pkg.el
-  ptemplate-templates-20210222.1555/ptemplate-templates.el
-  ptemplate-templates-20210222.1555/rsc/
-  ptemplate-templates-20210222.1555/rsc/project-templates/
-  ptemplate-templates-20210222.1555/rsc/project-templates/C-C++/
-  ptemplate-templates-20210222.1555/rsc/project-templates/C-C++/meson-project/
-  ptemplate-templates-20210222.1555/rsc/project-templates/C-C++/meson-project/.ptemplate.el
-  ptemplate-templates-20210222.1555/rsc/project-templates/C-C++/meson-project/README.md
-  ptemplate-templates-20210222.1555/rsc/project-templates/C-C++/meson-project/include/
-  ptemplate-templates-20210222.1555/rsc/project-templates/C-C++/meson-project/include/.gitkeep
-  ptemplate-templates-20210222.1555/rsc/project-templates/C-C++/meson-project/meson.build.autoyas
-  ptemplate-templates-20210222.1555/rsc/project-templates/C-C++/meson-project/src/
-  ptemplate-templates-20210222.1555/rsc/project-templates/C-C++/meson-project/src/main.c.yas
-  ptemplate-templates-20210222.1555/rsc/project-templates/Emacs/
-  ptemplate-templates-20210222.1555/rsc/project-templates/Emacs/cask-plugin/
-  ptemplate-templates-20210222.1555/rsc/project-templates/Emacs/cask-plugin/.ptemplate.el
-  ptemplate-templates-20210222.1555/rsc/project-templates/Emacs/cask-plugin/Cask.autoyas
-  ptemplate-templates-20210222.1555/rsc/project-templates/Emacs/cask-plugin/README.md
-  ptemplate-templates-20210222.1555/rsc/project-templates/Emacs/plugin/
-  ptemplate-templates-20210222.1555/rsc/project-templates/Emacs/plugin/.ptemplate.el
-  ptemplate-templates-20210222.1555/rsc/project-templates/Emacs/plugin/COPYING.txt
-  ptemplate-templates-20210222.1555/rsc/project-templates/Emacs/plugin/README.md
-  ptemplate-templates-20210222.1555/rsc/project-templates/Emacs/plugin/src.el.yas
-Built ptemplate-templates in 3.387s, finished at Mon Mar 22 16:17:35 2021
+Created ptemplate-templates-20210324.1443.tar containing:
+  ptemplate-templates-20210324.1443/
+  ptemplate-templates-20210324.1443/ptemplate-templates-pkg.el
+  ptemplate-templates-20210324.1443/ptemplate-templates.el
+  ptemplate-templates-20210324.1443/rsc/
+  ptemplate-templates-20210324.1443/rsc/project-templates/
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/.ptemplate.el
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/CMakeLists.txt.autoyas
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/gui/
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/gui/Application.cpp
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/gui/Application.hpp
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/main.cpp
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/.ptemplate.el
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/README.md
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/include/
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/include/.gitkeep
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/meson.build.autoyas
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/src/
+  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/src/main.c.yas
+  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/
+  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/cask-plugin/
+  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/cask-plugin/.ptemplate.el
+  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/cask-plugin/Cask.autoyas
+  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/cask-plugin/README.md
+  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/
+  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/.ptemplate.el
+  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/COPYING.txt
+  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/README.md
+  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/src.el.yas
+Built ptemplate-templates in 3.455s, finished at Fri Mar 26 00:01:35 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  419 Mar 22 16:17 packages/ptemplate-templates-20210222.1555.entry
- 60K -rw-r--r-- 1 root root  60K Mar 22 16:17 packages/ptemplate-templates-20210222.1555.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 22 16:17 packages/ptemplate-templates-badge.svg
-4.0K -rw-r--r-- 1 root root  600 Mar 22 16:17 packages/ptemplate-templates-readme.txt
+4.0K -rw-r--r-- 1 root root  419 Mar 26 00:01 packages/ptemplate-templates-20210324.1443.entry
+ 72K -rw-r--r-- 1 root root  70K Mar 26 00:01 packages/ptemplate-templates-20210324.1443.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 26 00:01 packages/ptemplate-templates-badge.svg
+4.0K -rw-r--r-- 1 root root  600 Mar 26 00:01 packages/ptemplate-templates-readme.txt

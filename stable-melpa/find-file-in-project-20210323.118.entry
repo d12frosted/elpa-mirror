@@ -1,0 +1,11 @@
+(find-file-in-project .
+		      [(20210323 118)
+		       ((emacs
+			 (25 1)))
+		       "Find file/directory and review Diff/Patch/Commit efficiently everywhere" single
+		       ((:commit . "595c6ac9d5e5b2dc138b472a40bc85c7f20a56c0")
+			(:authors
+			 ("Phil Hagelberg, Doug Alcorn, and Will Farrington"))
+			(:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
+			(:keywords "project" "convenience")
+			(:url . "https://github.com/technomancy/find-file-in-project"))])

@@ -7,7 +7,7 @@
 ;; License: GPL3+
 ;; Keywords: games
 ;; Package-Version: 20210216.1703
-;; Package-Commit: fa80bfef81168509ddbd840d95c6671efe91c253
+;; Package-Commit: cb2e2a435ea9f4fa8c7517b4909af8b62bca8a3e
 ;; Package: crossword
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "26.1"))

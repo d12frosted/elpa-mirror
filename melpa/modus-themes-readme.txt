@@ -319,6 +319,7 @@ missing package or change you would like to see.
     tab-bar-mode
     tab-line-mode
     table (built-in table.el)
+    telega
     telephone-line
     terraform-mode
     term
