@@ -3,7 +3,7 @@
 ;; Copyright (C) 2018 J. Alexander Branham (alex DOT branham AT gmail DOT com)
 
 ;; Package-Requires: ((emacs "26.1") (package-lint "0.5"))
-;; Package-Commit: 967a5b3acf750d1300203992ed9dea04931b1bea
+;; Package-Commit: 16e589114cc1f2514d95a58d53e1ae7c2ce941b4
 ;; Package-Version: 20210110.2231
 ;; Package-X-Original-Version: 0
 ;; Homepage: https://github.com/purcell/package-lint
