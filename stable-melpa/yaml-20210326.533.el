@@ -4,8 +4,8 @@
 
 ;; Author: Zachary Romero <zkry@posteo.org>
 ;; Version: 0.1.0
-;; Package-Version: 20210325.2057
-;; Package-Commit: ab86db9bb27343567ec6140647765547dbf916f7
+;; Package-Version: 20210326.533
+;; Package-Commit: 9ebddb55238d746dc5a5d46db04c9f360c140b99
 ;; Homepage: https://github.com/zkry/yaml.el
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools
@@ -31,13 +31,8 @@
 ;;; Commentary:
 
 ;; yaml.el contains the code for parsing YAML natively in Elisp with
-;; no dependencies.  Rules for the grammar were generated from the
-;; YAML Projects JSON version of the grammar spec
-;; (https://github.com/yaml/yaml-grammar) via the 'grammargen.bb'
-;; script.
-;;
-;; The main function which parses YAML is `yaml-parse-string'.  The following
-;; are some examples of its usage:
+;; no dependencies.  The main function to parse YAML provided is
+;; `yaml-parse-string'.  The following are some examples of its usage:
 ;;
 ;; (yaml-parse-string "key1: value1\nkey2: value2")
 ;; (yaml-parse-string "key1: value1\nkey2: value2" :object-type 'alist)
@@ -976,9 +971,9 @@ value.  It defaults to the symbol :false."
                  (yaml--top))))
 
       (when (< yaml--parsing-position (length yaml--parsing-input))
-        (error (format "parser finished before end of input %s/%s"
-                       yaml--parsing-position
-                       (length yaml--parsing-input))))
+        (error "Unable to parse YAML stream.  Parser finished before end of input %s/%s"
+               yaml--parsing-position
+               (length yaml--parsing-input)))
       (when yaml--parse-debug (message "Parsed data: %s" (pp-to-string res)))
       (yaml--walk-events res)
       (if (zerop (hash-table-count yaml--anchor-mappings))
