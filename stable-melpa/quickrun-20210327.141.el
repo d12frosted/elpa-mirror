@@ -4,8 +4,8 @@
 
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/syohex/emacs-quickrun
-;; Package-Version: 20210326.1543
-;; Package-Commit: 45af67c0a4d9f817d426a07fcb6c059fa6bf29aa
+;; Package-Version: 20210327.141
+;; Package-Commit: 57db985c6d293747dc8c40c4e08b465e148613a8
 ;; Version: 2.3.1
 ;; Package-Requires: ((emacs "24.3"))
 
@@ -287,6 +287,9 @@ FMT and ARGS passed `message'."
                    (:description . "Run Lisp file with ccl")))
     ("scheme/gosh" . ((:command . "gosh")
                       (:description . "Run Scheme file with gosh(Gauche)")))
+    ("st/gst" . ((:command . "gst")
+                 (:exec . "%c -f %s %a")
+                 (:description . "Run Smalltalk file with GNU Smalltalk")))
     ("racket" . ((:command . "racket")
                  (:exec . "%c --require-script %s")
                  (:description . "Run racket script")))
@@ -504,6 +507,7 @@ if you set your own language configuration.")
     ("\\.\\(el\\|elisp\\)\\'" . "emacs")
     ("\\.\\(lisp\\|lsp\\)\\'" . "lisp")
     ("\\.\\(scm\\|scheme\\)\\'" . "scheme")
+    ("\\.st\\'" . "st/gst")
     ("\\.rkt\\'" . "racket")
     ("\\.js\\'" . "javascript")
     ("\\.clj\\'" . "clojure")
@@ -557,6 +561,7 @@ if you set your own language configuration.")
     (emacs-lisp-mode . "emacs")
     (lisp-mode . "lisp")
     (scheme-mode . "scheme")
+    (smalltalk-mode . "st/gst")
     (racket-mode . "racket")
     ((javascript-mode js-mode js2-mode) . "javascript")
     (clojure-mode . "clojure")
@@ -1165,8 +1170,8 @@ Place holders are beginning with '%' and replaced by:
 ;;
 
 (defconst quickrun--support-languages
-  '("c" "c++" "objc" "c#" "perl" "perl6" "ruby" "python" "php" "emacs" "lisp" "scheme" "racket"
-    "javascript" "clojure" "erlang" "ocaml" "fsharp" "go" "io" "haskell" "java"
+  '("c" "c++" "objc" "c#" "perl" "perl6" "ruby" "python" "php" "emacs" "lisp" "scheme" "st"
+    "racket" "javascript" "clojure" "erlang" "ocaml" "fsharp" "go" "io" "haskell" "java"
     "d" "markdown" "coffee" "scala" "groovy" "sass" "less" "shellscript" "awk"
     "lua" "rust" "dart" "elixir" "tcl" "jsx" "typescript" "fortran" "haml"
     "swift" "ats" "r" "nim" "nimscript" "fish" "julia" "gnuplot" "kotlin" "crystal" "v")

@@ -18,8 +18,8 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;; Version: 1.0
-;; Package-Version: 20200819.1759
-;; Package-Commit: 6ec97ab934023a8aa094705bb1c9803fd85d24c1
+;; Package-Version: 20210327.7
+;; Package-Commit: b8847cc15eee1a7e3c7e0eefc91f2296256f84b9
 ;; Author: Adrien Brochard
 ;; Keywords: mermaid graphs tools processes
 ;; URL: https://github.com/abrochard/mermaid-mode
@@ -29,7 +29,7 @@
 ;;; Commentary:
 
 ;; Major mode for working with mermaid graphs.
-;; See https://mermaidjs.github.io/
+;; See https://mermaid-js.github.io/
 
 ;;; Usage:
 
@@ -170,7 +170,7 @@ STR is the declaration."
   "Open the current buffer or active region in the mermaid live editor."
   (interactive)
   (browse-url
-   (concat "https://mermaidjs.github.io/mermaid-live-editor/#/edit/"
+   (concat "https://mermaid-js.github.io/mermaid-live-editor/#/edit/"
            (replace-regexp-in-string "\n" ""
                                      (base64-encode-string
                                       (if (use-region-p)
@@ -180,7 +180,7 @@ STR is the declaration."
 (defun mermaid-open-doc ()
   "Open the mermaid home page and doc."
   (interactive)
-  (browse-url "https://mermaidjs.github.io/"))
+  (browse-url "https://mermaid-js.github.io/"))
 
 (defvar mermaid-mode-map
   (let ((map (make-sparse-keymap)))

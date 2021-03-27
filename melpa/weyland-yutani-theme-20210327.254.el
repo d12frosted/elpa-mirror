@@ -5,8 +5,8 @@
 ;; Author: Joe Staursky
 ;; Homepage: https://github.com/jstaursky/weyland-yutani-theme
 ;; Version: 0.1
-;; Package-Version: 20210325.2111
-;; Package-Commit: acf8724a7366eca54d8a5b0d874c1500325822f4
+;; Package-Version: 20210327.254
+;; Package-Commit: 2a9707dd097e812adc87e00a8a719ff1484126e6
 ;; Package-Requires: ((emacs "24.1"))
 
 ;; SPECIAL THANKS goes to emacs-theme-generator
@@ -53,14 +53,14 @@ the parenthetical noise."
 
 (let (
       (fg              "#a9b7ca")
-      (fg-alt          "#606873")
+      (fg-alt          "#2b2c2e")       ;#606873
       (hl              "#26282c")
 
       (White           "#C3D0DF")
 
       (base0           "#9ca4b7")
       (base1           "#8c97a7")
-      (base2           "#6e788c")       ;
+      (base2           "#6e788c")
       (base3           "#8f8e9a")
       (base4           "#3e4044")
       (base5           "#4e5054")
@@ -90,7 +90,7 @@ the parenthetical noise."
       (key3            "#6aa454")
 
       ;; Main Palette
-      (HarlequinGreen        "#79c151")
+      (HarlequinGreen        "#83CB55") ;#79c151 #a2e960 #8ED559
       (Indigo                "#877CEB")
       (Violet                "#c291eb")
       (Magenta               "#C264C6")
@@ -115,7 +115,7 @@ the parenthetical noise."
 
       ;; LIGHT VARIANTS
       (_light-Crimson        "#FF6066")
-      (Orange                "#fb8a69")
+      (Orange                "#e98061")
       (light-IcebergBlue     "#4FAED9")
       (light-Indigo          "#A28BE7")
       (light-Orchid          "#ee78e8")
