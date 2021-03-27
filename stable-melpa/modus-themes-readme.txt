@@ -259,6 +259,7 @@ missing package or change you would like to see.
     outline-minor-faces
     package (M-x list-packages)
     page-break-lines
+    pandoc-mode
     paradox
     paren-face
     parrot
