@@ -897,17 +897,15 @@
 	 (:maintainer nil . "akrl@sdf.org")
 	 (:url . "https://gitlab.com/koral/gcmh"))])
  (ggtags .
-	 [(0 8 13)
+	 [(0 9 0)
 	  ((emacs
-	    (24))
-	   (cl-lib
-	    (0 5)))
-	  "emacs frontend to GNU Global source code tagging system" single
-	  ((:keywords "tools" "convenience")
+	    (25)))
+	  "emacs frontend to GNU Global source code tagging system" tar
+	  ((:url . "https://github.com/leoliu/ggtags")
+	   (:maintainer "Leo Liu" . "sdl.web@gmail.com")
 	   (:authors
 	    ("Leo Liu" . "sdl.web@gmail.com"))
-	   (:maintainer "Leo Liu" . "sdl.web@gmail.com")
-	   (:url . "https://github.com/leoliu/ggtags"))])
+	   (:keywords "tools" "convenience"))])
  (gited .
 	[(0 6 0)
 	 ((emacs
