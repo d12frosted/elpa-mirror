@@ -7,7 +7,7 @@
 ;; Author: Paul W. Rankin <pwr@bydasein.com>
 ;; Keywords: wp, text
 ;; Package-Version: 20210225.1517
-;; Package-Commit: 9b0079c10c73e5f0785a8e727c1240ea9a781a5d
+;; Package-Commit: 2c0d06cc5d9cc97af98522d0c7cd5db1fa10bbce
 ;; Version: 3.4.1
 ;; Package-Requires: ((emacs "24.4") (seq "2.20"))
 ;; URL: https://github.com/rnkn/fountain-mode

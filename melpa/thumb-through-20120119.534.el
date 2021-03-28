@@ -6,8 +6,6 @@
 ;; Copyright (C) 2007, 2008, 2009 Jason Blevins
 
 ;; Version: 0.3
-;; Package-Version: 20120119.534
-;; Package-Commit: 08d8fb720f93c6172653e035191a8fa9c3305e63
 ;; Keywords: html
 
 ;; This file is NOT part of GNU Emacs
