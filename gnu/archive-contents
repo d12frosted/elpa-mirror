@@ -592,13 +592,13 @@
 	     ("Chong Yidong" . "cyd@gnu.org"))
 	    (:maintainer "Chong Yidong" . "cyd@gnu.org"))])
  (dts-mode .
-	   [(0 1 0)
-	    nil "Major mode for Device Tree source files" single
-	    ((:url . "http://elpa.gnu.org/packages/dts-mode.html")
-	     (:keywords "languages")
+	   [(0 1 1)
+	    nil "Major mode for Device Tree source files" tar
+	    ((:maintainer "Ben Gamari" . "ben@smart-cactus.org")
 	     (:authors
 	      ("Ben Gamari" . "ben@smart-cactus.org"))
-	     (:maintainer "Ben Gamari" . "ben@smart-cactus.org"))])
+	     (:keywords "languages")
+	     (:url . "https://elpa.gnu.org/packages/dts-mode.html"))])
  (easy-kill .
 	    [(0 9 4)
 	     ((emacs
