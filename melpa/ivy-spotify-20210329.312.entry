@@ -1,0 +1,15 @@
+(ivy-spotify .
+	     [(20210329 312)
+	      ((emacs
+		(26 1))
+	       (espotify
+		(0 1))
+	       (ivy
+		(0 13 1)))
+	      "Search spotify with ivy" single
+	      ((:commit . "eefcb49d740570f6c874302d87be33e5b0ec54ff")
+	       (:authors
+		("Jose A Ortega Ruiz" . "jao@gnu.org"))
+	       (:maintainer "Jose A Ortega Ruiz")
+	       (:keywords "multimedia")
+	       (:url . "https://codeberg.org/jao/espotify"))])

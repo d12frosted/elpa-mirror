@@ -1,6 +1,7 @@
-This package provides a counsel interface to spotify's search API,
-analogous to counsel-spotify, using the smaller espotify library.
-There following interactive commands are defined:
+This package provides an ivy-based completion interface to
+spotify's search API, analogous to counsel-spotify, using the
+smaller espotify library.  The following interactive commands
+are defined:
 
  - `ivy-spotify-album'
  - `ivy-spotify-artist'

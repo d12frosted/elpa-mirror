@@ -1,20 +1,19 @@
-This file contains extensions for programming in Open Dylan.
+Dime is the Dylan interaction mode for Emacs.  It is essentially an
+IDE (integrated development environment) for the Dylan programming
+language and the Open Dylan toolchain.
+
 The main features are:
 
-* A socket-based communication/RPC interface between Emacs and
-  Dylan, enabling introspection and remote development.
+* The `dime-mode' minor-mode.  It augments `dylan-mode' with many
+  commands for interacting with Open Dylan.
 
-* The `dime-mode' minor-mode complementing `dylan-mode'.  This new
-  mode includes many commands for interacting with the Open Dylan
-  process.
+* The ability to display compiler messages directly at their source
+  code locations.
 
-* A Dylan debugger written in Emacs Lisp.  The debugger pops up
-  an Emacs buffer similar to the Emacs/Elisp debugger.
+* A debugger running in Emacs, similar to the Emacs Lisp debugger.
 
-* A Open Dylan inspector to interactively look at run-time data.
+* An inspector to interactively look at run-time data.
 
-* Trapping compiler messages and creating annotations in the source
-  file on the appropriate forms.
-
-In order to run Dime, a supporting Dylan server called Swank is
-required.
+Dime works by opening a socket between Emacs and Open Dylan and
+communicating via the dswank protocol.  Dime traces its history back
+to SLIME (the Superior Lisp Interaction Mode for Emacs).

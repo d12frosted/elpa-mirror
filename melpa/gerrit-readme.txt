@@ -4,7 +4,7 @@ This package contains
 * (`gerrit-upload-transient` and `gerrit-download`)
 
 * `gerrit-dashboard`, function for displaying a dashboard, similar to the
-  one of the gerrit webinterface
+  one of the gerrit web-interface
 
 * open-reviews section for the magit-status buffer (`magit-gerrit-insert-status`)
 
