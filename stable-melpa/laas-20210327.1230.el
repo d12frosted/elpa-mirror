@@ -8,7 +8,7 @@
 ;; Modified: February 13, 2021
 ;; Version: 0.2
 ;; Package-Version: 20210327.1230
-;; Package-Commit: ff512c3ec2a3c6ea170703c292eaaac61c4d5816
+;; Package-Commit: 654ea30aa0263e85891ddcabc0b7a0f0144b9e27
 ;; Keywords: tools, tex
 ;; Homepage: https://github.com/tecosaur/LaTeX-auto-activating-snippets
 ;; Package-Requires: ((emacs "26.3") (auctex "11.88") (aas "0.2") (yasnippet "0.14"))

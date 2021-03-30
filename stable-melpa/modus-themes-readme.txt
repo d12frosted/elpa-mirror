@@ -131,7 +131,7 @@ missing package or change you would like to see.
     elfeed-score
     embark
     emms
-    enhanced-ruby-mode
+    enh-ruby-mode (enhanced-ruby-mode)
     epa
     equake
     erc
