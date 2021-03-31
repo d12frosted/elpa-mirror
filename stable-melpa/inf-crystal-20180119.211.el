@@ -4,9 +4,7 @@
 
 ;; Author: Brantou <brantou89@gmail.com>
 ;; URL: https://github.com/brantou/inf-crystal.el
-;; Package-Commit: 02007b2a2a3bea44902d7c83c4acba1e39d278e3
-;; Package-Version: 20180119.211
-;; Package-X-Original-Version: 20180105.1610
+;; Package-Version: 20180105.1610
 ;; Keywords: languages crystal
 ;; Version: 0.1.1
 ;; Package-Requires: ((emacs "24.3") (crystal-mode "0.1.0"))

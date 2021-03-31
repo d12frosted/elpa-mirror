@@ -4,8 +4,6 @@
 
 ;; Author: Jonathan Arnett <jonathan.arnett@protonmail.com>
 ;; URL: https://github.com/J3RN/inf-elixir
-;; Package-Version: 20210315.1723
-;; Package-Commit: b526ce852886d1863163e054fcbbcbb83c55b32a
 ;; Keywords: languages, processes, tools
 ;; Version: 2.0.0
 ;; Package-Requires: ((emacs "25.1"))
