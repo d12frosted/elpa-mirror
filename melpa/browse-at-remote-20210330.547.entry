@@ -1,0 +1,15 @@
+(browse-at-remote .
+		  [(20210330 547)
+		   ((f
+		     (0 17 2))
+		    (s
+		     (1 9 0))
+		    (cl-lib
+		     (0 5)))
+		   "Open github/gitlab/bitbucket/stash/gist/phab/sourcehut page from Emacs" single
+		   ((:commit . "cf8ffb9bfdbfaf5635c36de35fe2aaa4b282227d")
+		    (:authors
+		     ("Rustem Muslimov" . "r.muslimov@gmail.com"))
+		    (:maintainer "Rustem Muslimov" . "r.muslimov@gmail.com")
+		    (:keywords "github" "gitlab" "bitbucket" "gist" "stash" "phabricator" "sourcehut" "pagure")
+		    (:url . "https://github.com/rmuslimov/browse-at-remote"))])
