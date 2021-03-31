@@ -1,13 +1,13 @@
 (company-posframe .
-		  [(20210329 253)
+		  [(20210331 325)
 		   ((emacs
 		     (26 0))
 		    (company
 		     (0 9 0))
 		    (posframe
-		     (0 1 0)))
+		     (0 9 0)))
 		   "Use a posframe as company candidate menu" single
-		   ((:commit . "6a410ed8976999abd8bc91e3f0fd8993d4e6dafc")
+		   ((:commit . "a28f38213a2a30ce68fdb0b124cadc68ebbcb24f")
 		    (:authors
 		     ("Clément Pit-Claudel, Feng Shu, Lars Andersen" . "expez@expez.com"))
 		    (:maintainer "Feng Shu" . "tumashu@163.com")

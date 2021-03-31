@@ -5,11 +5,11 @@
 ;; Author: Clément Pit-Claudel, Feng Shu, Lars Andersen <expez@expez.com>
 ;; Maintainer: Feng Shu <tumashu@163.com>
 ;; URL: https://github.com/tumashu/company-posframe
-;; Package-Version: 20210329.253
-;; Package-Commit: 6a410ed8976999abd8bc91e3f0fd8993d4e6dafc
-;; Version: 0.5.0
+;; Package-Version: 20210331.325
+;; Package-Commit: a28f38213a2a30ce68fdb0b124cadc68ebbcb24f
+;; Version: 0.6.0
 ;; Keywords: abbrev, convenience, matching
-;; Package-Requires: ((emacs "26.0")(company "0.9.0")(posframe "0.1.0"))
+;; Package-Requires: ((emacs "26.0")(company "0.9.0")(posframe "0.9.0"))
 
 ;; This file is not part of GNU Emacs.
 
@@ -248,8 +248,8 @@ be triggered manually using `company-posframe-quickhelp-show'."
          (point (with-current-buffer (window-buffer parent-window)
                   (max (line-beginning-position)
                        (- (plist-get info :position)
-                          (length company-prefix)
-                          company-tooltip-margin))))
+                          (plist-get info :company-prefix-length)
+                          (plist-get info :company-margin)))))
          (info (plist-put info :position-info (posn-at-point point parent-window))))
     (posframe-poshandler-point-bottom-left-corner info)))
 
@@ -258,13 +258,17 @@ be triggered manually using `company-posframe-quickhelp-show'."
   (let* ((height (min company-tooltip-limit company-candidates-length))
          (meta (when company-posframe-show-metadata
                  (company-fetch-metadata)))
-         (lines (company--create-lines company-selection height))
+         (company-lines (company--create-lines company-selection height))
+         (margin
+          (if (numberp (car company-lines))
+              (car company-lines)
+            company-tooltip-margin))
          (lines
           ;; Please see: company--create-lines return value changed #52
           ;; https://github.com/tumashu/company-posframe/issues/52
-          (if (numberp (car lines))
-              (cdr lines)
-            lines))
+          (if (numberp (car company-lines))
+              (cdr company-lines)
+            company-lines))
          (backend-names (when company-posframe-show-indicator
                           (funcall company-posframe-backend-format-function company-backends company-posframe-backend-separator)))
          (width (max (min (length (car lines)) company-tooltip-maximum-width) company-tooltip-minimum-width))
@@ -293,6 +297,9 @@ be triggered manually using `company-posframe-quickhelp-show'."
            :background-color (face-attribute 'company-tooltip :background)
            :lines-truncate t
            :poshandler company-posframe-poshandler
+           :poshandler-extra-info
+           (list :company-margin margin
+                 :company-prefix-length (length company-prefix))
            company-posframe-show-params)))
 
 (defun company-posframe-hide ()

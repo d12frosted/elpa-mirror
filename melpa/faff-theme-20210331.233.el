@@ -4,8 +4,8 @@
 
 ;; Author: James Ferguson <(concat "wjcferguson" at-sign "gmail.com")>
 ;; URL: https://github.com/WJCFerguson/emacs-faff-theme
-;; Package-Version: 20210324.1332
-;; Package-Commit: 38cddb422572ca6f7dc004583bb8ba6a99b3315a
+;; Package-Version: 20210331.233
+;; Package-Commit: ef7efae7a86979e9267f9a600ef1482e0f6a2aa3
 ;; Version: 2.6
 ;; Keywords: color theme
 
@@ -138,7 +138,7 @@
  '(lsp-face-highlight-read ((t (:background "cornsilk2"))))
  '(lsp-face-highlight-textual ((t (:background "cornsilk4"))))
  '(lsp-face-highlight-write ((t (:background "palegreen1"))))
- '(lsp-ui-sideline-current-symbol ((t (:inherit lsp-ui-sideline-symbol :box (:line-width (1 . 1) :color "cornsilk2") :weight bold))))
+ '(lsp-ui-sideline-current-symbol ((t (:inherit lsp-ui-sideline-symbol :box (:line-width (1 . 1) :color "cornsilk4") :weight bold))))
  '(lsp-ui-sideline-symbol ((t (:foreground "cornsilk2"))))
  '(lsp-ui-sideline-symbol-info ((t (:foreground "gray60" :slant italic))))
  '(helm-M-x-key ((t (:foreground "orange4" :underline t))))
