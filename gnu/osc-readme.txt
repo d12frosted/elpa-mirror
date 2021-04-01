@@ -10,10 +10,6 @@ In particular:
 * `osc-server-set-handler' can be used to change handlers for particular
   OSC paths on a server process object on the fly.
 
-BUGS/TODO:
-
-* Timetags are not supported yet.
-
 Usage:
 
 Client: (setq my-client (osc-make-client "127.0.0.1" 7770))

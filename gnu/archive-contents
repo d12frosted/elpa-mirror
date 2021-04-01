@@ -1653,13 +1653,13 @@
 	      ("Nicolas Goaziou" . "mail@nicolasgoaziou.fr"))
 	     (:maintainer "Nicolas Goaziou" . "mail@nicolasgoaziou.fr"))])
  (osc .
-      [(0 2)
-       nil "Open Sound Control protocol library" single
-       ((:url . "http://elpa.gnu.org/packages/osc.html")
-	(:keywords "comm" "processes" "multimedia")
+      [(0 3)
+       nil "Open Sound Control protocol library" tar
+       ((:maintainer "Mario Lang" . "mlang@blind.guru")
 	(:authors
 	 ("Mario Lang" . "mlang@blind.guru"))
-	(:maintainer "Mario Lang" . "mlang@blind.guru"))])
+	(:keywords "comm" "processes" "multimedia")
+	(:url . "https://elpa.gnu.org/packages/osc.html"))])
  (other-frame-window .
 		     [(1 0 6)
 		      ((emacs
