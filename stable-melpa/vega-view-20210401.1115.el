@@ -4,8 +4,8 @@
 
 ;; Author: Jack Rusher <jack@appliedscience.studio>
 ;; URL: https://www.github.com/applied-science/emacs-vega-view
-;; Package-Version: 20210227.1507
-;; Package-Commit: bb8159ad25886d81fcc2d3a9ec5af7ef669a87a6
+;; Package-Version: 20210401.1115
+;; Package-Commit: 3793025a523a86acc6255b4183b12ebfc95e1116
 ;; Created: 20200330
 ;; Version: 1.0
 ;; Keywords: multimedia
@@ -131,6 +131,7 @@ pass it to `vega-view--json' to display in `VEGA-BUFFER`."
                                   (cider-emit-into-popup-buffer buffer warning 'font-lock-warning-face t)))))
 
 ;; TODO should come in "view-preceding-sexp" and "view-defun" versions
+;;;###autoload
 (defun vega-view ()
   "Convert the preceding sexp (in supported languages) to JSON
 and pass it through the Vega command line tools, then display the
