@@ -1,0 +1,13 @@
+(subsonic .
+	  [(20210331 1845)
+	   ((emacs
+	     (27 1))
+	    (transient
+	     (0 2)))
+	   "Browse and play music from subsonic servers with mpv" single
+	   ((:commit . "9764405dede46791e411cdcc7963808f76201529")
+	    (:authors
+	     ("Alex McGrath" . "amk@amk.ie"))
+	    (:maintainer "Alex McGrath" . "amk@amk.ie")
+	    (:keywords "multimedia")
+	    (:url . "https://git.sr.ht/~amk/subsonic.el"))])

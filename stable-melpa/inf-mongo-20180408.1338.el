@@ -4,6 +4,8 @@
 
 ;; Author: Tobias Svensson
 ;; URL: http://github.com/endofunky/inf-mongo
+;; Package-Version: 20180408.1338
+;; Package-Commit: 2e498d1c88bd1904eeec18ed06b1a0cf8bdc2a92
 ;; Created: 1 March 2013
 ;; Keywords: databases mongodb
 ;; Version: 1.0.0

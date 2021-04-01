@@ -22,6 +22,14 @@ wordlists below:
 https://www.eff.org/files/2016/07/18/eff_large_wordlist.txt
 http://world.std.com/%7Ereinhold/diceware.wordlist.asc
 
+The above wordlist from the EFF is also provided as a
+pre-internalized form in ‘dw-eff-large’.  If you prefer to try out
+the package *without* having to download a separate file, just add
+the following to your init:
+
+(with-eval-after-load 'dw
+  (setq-default dw-current-wordlist dw-eff-large))
+
 The former generates passphrases with long, common words while the
 latter favors short words and letter combinations, which may be
 harder to remember but quicker to type.  You can find wordlists
