@@ -5,6 +5,8 @@
 ;; Author: Matthew Carter <m@ahungry.com>
 ;; Maintainer: Matthew Carter <m@ahungry.com>
 ;; URL: https://github.com/ahungry/md4rd
+;; Package-Version: 20201203.545
+;; Package-Commit: 8ed075874425c4aa1081608dd66f46e5dfa333c0
 ;; Version: 0.3.1
 ;; Keywords: ahungry reddit browse news
 ;; Package-Requires: ((emacs "25.1") (hierarchy "0.7.0") (request "0.3.0") (cl-lib "0.6.1") (dash "2.12.0") (s "1.12.0") (tree-mode "1.0.0"))

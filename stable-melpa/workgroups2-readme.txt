@@ -1,5 +1,5 @@
 
-Workgroups2 is an Emacs session manager. It is based on the
+Workgroups2 is an Emacs session manager.  It is based on the
 experimental branch of the original "workgroups" extension.
 
 If you find a bug - please post it here:
@@ -7,8 +7,8 @@ https://github.com/pashinin/workgroups2/issues
 
 Quick start,
 
-- use `wg-create-workgroup' to save current windows layout
-- use `wg-open-workgroup' to open saved windows layout
+- `wg-create-workgroup' to save current windows layout
+- `wg-open-workgroup' to open saved windows layout
 
 Optionally, you can use minor-mode `workgroups-mode' by put below
 line into .emacs ,
@@ -26,7 +26,6 @@ By default prefix is: "C-c z"
 <prefix> <key>
 
 <prefix> c    - create workgroup
-<prefix> A    - rename workgroup
 <prefix> k    - kill workgroup
 <prefix> v    - switch to workgroup
 <prefix> C-s  - save session

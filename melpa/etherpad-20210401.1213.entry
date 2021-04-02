@@ -1,0 +1,21 @@
+(etherpad .
+	  [(20210401 1213)
+	   ((emacs
+	     (26 3))
+	    (request
+	     (0 3))
+	    (let-alist
+		(0 0))
+	    (websocket
+	     (1 12))
+	    (parsec
+	     (0 1))
+	    (0xc
+	     (0 1)))
+	   "Interface to the Etherpad API" tar
+	   ((:commit . "fc7de212b34c34d93f5f0f19af846924404e38ae")
+	    (:authors
+	     ("nik gaffney" . "nik@fo.am"))
+	    (:maintainer "nik gaffney" . "nik@fo.am")
+	    (:keywords "comm" "etherpad" "collaborative editing")
+	    (:url . "https://github.com/zzkt/ethermacs"))])

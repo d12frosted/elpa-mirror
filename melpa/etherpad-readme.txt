@@ -9,7 +9,7 @@ collaborative Etherpad client.
 
 
  known bugs, limitations, shortcomings, etc
- - doesn't do realtime editing
+ - various problems with realtime editing using easysync
  - the server and api key could be buffer local to enable editing on more than one server
  - doesn't automate API interface generation from openapi.json
  - not much in the way of error checking or recovery
