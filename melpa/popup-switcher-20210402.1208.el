@@ -4,8 +4,8 @@
 
 ;; Author: Kostafey <kostafey@gmail.com>
 ;; URL: https://github.com/kostafey/popup-switcher
-;; Package-Version: 20210402.1016
-;; Package-Commit: 5ffad35e0f5f8f1b53db38fa8b44152cbbbec9f7
+;; Package-Version: 20210402.1208
+;; Package-Commit: 94e01b9ea7970e86ed0f2fbeaa8cd320b60ae821
 ;; Keywords: popup, switch, buffers, functions
 ;; Version: 0.2.15
 ;; Package-Requires: ((cl-lib "0.3")(popup "0.5.3")(dash "2.10.0"))
@@ -348,7 +348,6 @@ Please install it to use this command"))
            (fboundp 'projectile-mode)
            (fboundp 'projectile-current-project-files)
            (fboundp 'projectile-project-root))
-
       (psw-switcher
        :items-list (let ((current-projectile-mode projectile-mode)
                          (files (projectile-current-project-files)))

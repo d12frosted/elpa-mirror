@@ -25,12 +25,8 @@ By default prefix is: "C-c z"
 
 <prefix> <key>
 
-<prefix> c    - create workgroup
-<prefix> k    - kill workgroup
-<prefix> v    - switch to workgroup
-<prefix> C-s  - save session
-<prefix> C-f  - load session
-<prefix> ?    -  for more help
+<prefix> C-c    - create new workgroup
+<prefix> C-v    - open existing workgroup
 
 Change workgroups session file,
 (setq wg-session-file "~/.emacs.d/.emacs_workgroups"
