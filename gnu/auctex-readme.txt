@@ -1,6 +1,6 @@
 This is the README file for the AUCTeX distribution.
 
-     Copyright (C) 2008, 2017 Free Software Foundation, Inc.
+     Copyright (C) 2008-2021 Free Software Foundation, Inc.
 
      Copying and distribution of this file, with or without
      modification, are permitted in any medium without royalty provided
@@ -48,10 +48,10 @@ new features for your own needs.  It is a GNU project and distributed
 under the 'GNU General Public License Version 3'.
 
 The most recent version is always available at
-<http://ftp.gnu.org/pub/gnu/auctex/>.
+<https://ftp.gnu.org/pub/gnu/auctex/>.
 
 WWW users may want to check out the AUCTeX page at
-<http://www.gnu.org/software/auctex/>.
+<https://www.gnu.org/software/auctex/>.
 
 For comprehensive information about how to install AUCTeX read the file
 'INSTALL' or 'INSTALL.windows', respectively.
@@ -175,7 +175,7 @@ case, 'dvipng' will be used for converting DVI files and Ghostscript
 (with a 'PNG' device) for converting PDF files.  'dvipng' is much faster
 than the combination of Dvips and Ghostscript.  You can get downloads,
 access to its CVS archive and further information from its project site
-(http://savannah.nongnu.org/projects/dvipng).
+(https://savannah.nongnu.org/projects/dvipng).
 
 5 More documentation
 ********************
@@ -204,9 +204,9 @@ will display it.
 **************
 
 The preview-latex project is now part of AUCTeX and accessible as part
-of the AUCTeX project page (http://savannah.gnu.org/projects/auctex).
+of the AUCTeX project page (https://savannah.gnu.org/projects/auctex).
 You can get its files from the AUCTeX download area
-(ftp://ftp.gnu.org/pub/gnu/auctex).  As of AUCTeX 11.81, preview-latex
+(https://ftp.gnu.org/pub/gnu/auctex).  As of AUCTeX 11.81, preview-latex
 should already be integrated into AUCTeX, so no separate download will
 be necessary.
 
@@ -222,7 +222,7 @@ installation fails (but this should be a rare event), report bugs to
 <bug-auctex@gnu.org>.
 
 There is a general discussion list for AUCTeX which also covers
-preview-latex, look at <http://lists.gnu.org/mailman/listinfo/auctex>.
+preview-latex, look at <https://lists.gnu.org/mailman/listinfo/auctex>.
 For more information on the mailing list, send a message with just the
 word "help" as subject or body to <auctex-request@gnu.org>.  For the
 developers, there is the <auctex-devel@gnu.org> list; it would probably

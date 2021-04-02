@@ -1,11 +1,13 @@
 (popup-switcher .
-		[(20201216 2229)
+		[(20210402 1016)
 		 ((cl-lib
 		   (0 3))
 		  (popup
-		   (0 5 3)))
+		   (0 5 3))
+		  (dash
+		   (2 10 0)))
 		 "switch to other buffers and files via popup." single
-		 ((:commit . "166a90c13310b829bd392235bf7cc1e45188faff")
+		 ((:commit . "5ffad35e0f5f8f1b53db38fa8b44152cbbbec9f7")
 		  (:authors
 		   ("Kostafey" . "kostafey@gmail.com"))
 		  (:maintainer "Kostafey" . "kostafey@gmail.com")

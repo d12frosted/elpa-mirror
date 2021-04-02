@@ -2,8 +2,6 @@
 
 ;; Author: Alexander Gromnitsky <alexander.gromnitsky@gmail.com>
 ;; Version: 0.0.2
-;; Package-Version: 20160923.500
-;; Package-Commit: c662366226abfb07204ab442b4f853ed85438d8a
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: multimedia
 ;; URL: https://github.com/gromnitsky/read-aloud.el

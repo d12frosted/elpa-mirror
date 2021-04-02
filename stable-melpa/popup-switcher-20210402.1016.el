@@ -4,11 +4,11 @@
 
 ;; Author: Kostafey <kostafey@gmail.com>
 ;; URL: https://github.com/kostafey/popup-switcher
-;; Package-Version: 20201216.2229
-;; Package-Commit: 166a90c13310b829bd392235bf7cc1e45188faff
+;; Package-Version: 20210402.1016
+;; Package-Commit: 5ffad35e0f5f8f1b53db38fa8b44152cbbbec9f7
 ;; Keywords: popup, switch, buffers, functions
-;; Version: 0.2.14
-;; Package-Requires: ((cl-lib "0.3")(popup "0.5.3"))
+;; Version: 0.2.15
+;; Package-Requires: ((cl-lib "0.3")(popup "0.5.3")(dash "2.10.0"))
 
 ;; This file is not part of GNU Emacs.
 
@@ -30,6 +30,8 @@
 (require 'popup)
 (require 'artist)
 (require 'recentf)
+(require 'dash)                         ; use -mapcat inside psw-flatten-index
+(require 'imenu)
 
 (defgroup popup-switcher nil
   "Switch to other buffers and files via popup."
@@ -114,13 +116,13 @@ Highlight current buffer for `psw-switch-buffer' when nil (by default)."
 
 (defun psw-get-buffer-list (file-buffers-only)
   (cl-remove-if (lambda (buf) (or (minibufferp buf)
-                             (let ((buf-name (buffer-name buf)))
-                               (and (>= (length buf-name) 2)
-                                    (equal (substring buf-name 0 2) " *")))
-                             (if file-buffers-only
-                                 (or (not (with-current-buffer buf
-                                            (buffer-file-name)))
-                                     (psw-is-temp-buffer buf)))))
+                                  (let ((buf-name (buffer-name buf)))
+                                    (and (>= (length buf-name) 2)
+                                         (equal (substring buf-name 0 2) " *")))
+                                  (if file-buffers-only
+                                      (or (not (with-current-buffer buf
+                                                 (buffer-file-name)))
+                                          (psw-is-temp-buffer buf)))))
                 (buffer-list)))
 
 (defun psw-copy-face (old-face new-face)
@@ -276,7 +278,7 @@ INITIAL-INDEX - if non-nil, provides an initial selected  menu item."
   (run-hooks 'psw-after-switch-hook))
 
 ;;;###autoload
-(defun psw-switch-buffer (arg)
+(defun psw-switch-buffer (&optional arg)
   "Show buffers list menu to switch buffer.
 If ARG show only buffers with files and without * in the beginning and end of
 the buffer name."
@@ -334,41 +336,56 @@ the buffer name."
    :item-name-getter 'identity
    :switcher 'find-file))
 
+(defun psw--error-projectile-is-missing ()
+  "Projectile is optional, but needed for some commands."
+  (user-error "This command requires the projectile library. \
+Please install it to use this command"))
+
 ;;;###autoload
 (defun psw-switch-projectile-files ()
   (interactive)
-  (psw-switcher
-   :items-list (let ((current-projectile-mode projectile-mode)
-                     (files (projectile-current-project-files)))
-                 (setq projectile-mode current-projectile-mode)
-                 files)
-   :item-name-getter 'identity
-   :switcher (lambda (file)
-               (find-file
-                (expand-file-name file
-                                  (projectile-project-root))))))
+  (if (and (require 'projectile nil :no-error)
+           (fboundp 'projectile-mode)
+           (fboundp 'projectile-current-project-files)
+           (fboundp 'projectile-project-root))
+
+      (psw-switcher
+       :items-list (let ((current-projectile-mode projectile-mode)
+                         (files (projectile-current-project-files)))
+                     (setq projectile-mode current-projectile-mode)
+                     files)
+       :item-name-getter 'identity
+       :switcher (lambda (file)
+                   (find-file
+                    (expand-file-name file
+                                      (projectile-project-root)))))
+    (psw--error-projectile-is-missing)))
 
 ;;;###autoload
 (defun psw-switch-projectile-projects ()
   (interactive)
-  (psw-switcher
-   :items-list (sort
-                (cl-mapcar 'cons
-                           (mapcar 'projectile-project-name
-                                   projectile-known-projects)
-                           projectile-known-projects)
-                (lambda (p1 p2) (string-lessp (car p1) (car p2))))
-   :item-name-getter 'car
-   :switcher (lambda (p)
-               (let ((p-root (cdr p)))
-                 (psw-switcher
-                  :items-list (projectile-project-files
-                               (expand-file-name p-root))
-                  :item-name-getter 'identity
-                  :switcher (lambda (file)
-                              (find-file
-                               (expand-file-name file
-                                                 p-root))))))))
+  (if (and (require 'projectile nil :no-error)
+           (boundp 'projectile-known-projects)
+           (fboundp 'projectile-project-files))
+      (psw-switcher
+       :items-list (sort
+                    (cl-mapcar 'cons
+                               (mapcar 'projectile-project-name
+                                       projectile-known-projects)
+                               projectile-known-projects)
+                    (lambda (p1 p2) (string-lessp (car p1) (car p2))))
+       :item-name-getter 'car
+       :switcher (lambda (p)
+                   (let ((p-root (cdr p)))
+                     (psw-switcher
+                      :items-list (projectile-project-files
+                                   (expand-file-name p-root))
+                      :item-name-getter 'identity
+                      :switcher (lambda (file)
+                                  (find-file
+                                   (expand-file-name file
+                                                     p-root)))))))
+    (psw--error-projectile-is-missing)))
 
 ;;;###autoload
 (defun psw-navigate-files (&optional start-path)
