@@ -16,6 +16,8 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 ;; Version: 0.4.2
+;; Package-Version: 20170822.2309
+;; Package-Commit: 7fe9a2cc0ebdb0b1e54a24eb7971d757fb588ac3
 ;; Keywords: comment coq proof
 ;; Author: Junyoung Clare Jang <jjc9310@gmail.com>
 ;; Maintainer: Junyoung Clare Jang <jjc9310@gmail.com>

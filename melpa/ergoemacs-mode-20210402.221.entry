@@ -1,5 +1,5 @@
 (ergoemacs-mode .
-		[(20210401 2140)
+		[(20210402 221)
 		 ((emacs
 		   (24 1))
 		  (undo-tree
@@ -7,7 +7,7 @@
 		  (cl-lib
 		   (0 5)))
 		 "Emacs mode based on common modern interface and ergonomics." tar
-		 ((:commit . "fc097bd8bcd313beb9563b5d48a60bc1f4b621c7")
+		 ((:commit . "dc9c56735d8acdf069044c483506f64a1bc40b83")
 		  (:authors
 		   ("Xah Lee" . "xah@xahlee.org")
 		   ("David Capello" . "davidcapello@gmail.com")
