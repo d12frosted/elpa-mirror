@@ -3,7 +3,9 @@ Fetcher: git
 Source:  https://gitlab.kitware.com/cmake/cmake.git
 
 Updating /mnt/store/melpa/working/cmake-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://gitlab.kitware.com/cmake/cmake.git/': Failed to connect to gitlab.kitware.com port 443: Connection timed out
-error: Could not fetch origin
-
+Built cmake-mode in 32.825s, finished at Sat Apr  3 15:26:19 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  17K Apr  3 15:26 packages/cmake-mode-20210104.1831.el
+4.0K -rw-r--r-- 1 root root  184 Apr  3 15:26 packages/cmake-mode-20210104.1831.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr  3 15:26 packages/cmake-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  324 Apr  3 15:26 packages/cmake-mode-readme.txt

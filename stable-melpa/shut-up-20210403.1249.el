@@ -6,8 +6,8 @@
 ;; Author: Johan Andersson <johan.rejeep@gmail.com>
 ;; Maintainer: Johan Andersson <johan.rejeep@gmail.com>
 ;; Package-Requires: ((cl-lib "0.3") (emacs "24"))
-;; Package-Version: 20180628.1830
-;; Package-Commit: 081d6b01e3ba0e60326558e545c4019219e046ce
+;; Package-Version: 20210403.1249
+;; Package-Commit: ff6f06f3b080ee833a25a22da8cb5b96e911dc77
 ;; Version: 0.3.2
 ;; URL: http://github.com/rejeep/shut-up.el
 
@@ -111,25 +111,25 @@ have any affect."
   (declare (indent 0))
   `(let ((shut-up-sink (generate-new-buffer " *shutup*"))
          (inhibit-message t))
-    (cl-labels ((shut-up-current-output () (or (shut-up-buffer-string shut-up-sink) "")))
-      (if shut-up-ignore
-          (progn ,@body)
-        (unwind-protect
-            ;; Override `standard-output', for `print' and friends, and
-            ;; monkey-patch `message'
-            (cl-letf ((standard-output
-                       (lambda (char)
-                         (shut-up-insert-to-buffer char shut-up-sink)))
-                      ((symbol-function 'message)
-                       (lambda (fmt &rest args)
-                         (when fmt
-                           (let ((text (concat (apply #'format fmt args) "\n")))
-                            (shut-up-insert-to-buffer text shut-up-sink)))))
-                      ((symbol-function 'write-region) #'shut-up-write-region)
-                      ((symbol-function 'load) #'shut-up-load))
-              ,@body)
-          (and (buffer-name shut-up-sink)
-               (kill-buffer shut-up-sink)))))))
+     (cl-labels ((shut-up-current-output () (or (shut-up-buffer-string shut-up-sink) "")))
+       (if shut-up-ignore
+           (progn ,@body)
+         (unwind-protect
+             ;; Override `standard-output', for `print' and friends, and
+             ;; monkey-patch `message'
+             (cl-letf ((standard-output
+                        (lambda (char)
+                          (shut-up-insert-to-buffer char shut-up-sink)))
+                       ((symbol-function 'message)
+                        (lambda (fmt &rest args)
+                          (when fmt
+                            (let ((text (concat (apply #'format fmt args) "\n")))
+                              (shut-up-insert-to-buffer text shut-up-sink)))))
+                       ((symbol-function 'write-region) #'shut-up-write-region)
+                       ((symbol-function 'load) #'shut-up-load))
+               ,@body)
+           (and (buffer-name shut-up-sink)
+                (kill-buffer shut-up-sink)))))))
 
 ;;;###autoload
 (defun shut-up-silence-emacs ()

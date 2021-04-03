@@ -5,8 +5,8 @@
 ;; Author: Matúš Goljer <matus.goljer@gmail.com>
 ;; Maintainer: Matúš Goljer <matus.goljer@gmail.com>
 ;; Version: 1.1.0
-;; Package-Version: 20210110.1714
-;; Package-Commit: d1a2bda6aa8f890cb367297ed93aee6d3b5ba388
+;; Package-Version: 20210403.1230
+;; Package-Commit: 7c0ef09d57a80068a11edc74c3568e5ead5cc15a
 ;; Created: 15th July 2017
 ;; Package-requires: ((dash "2.10.0") (f "0.19.0") (dired-hacks-utils "0.0.1"))
 ;; Keywords: files
@@ -143,7 +143,7 @@ filename (for example when the final directory is empty)."
             (let ((path (dired-utils-get-filename))
                   files)
               (while (and (file-directory-p path)
-                          (file-readable-p path)
+                          (file-accessible-directory-p path)
                           (setq files (f-entries path))
                           (= 1 (length files)))
                 (setq path (car files)))

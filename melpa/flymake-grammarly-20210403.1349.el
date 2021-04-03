@@ -7,8 +7,8 @@
 ;; Description: Flymake support for Grammarly.
 ;; Keyword: grammar check
 ;; Version: 0.2.1
-;; Package-Version: 20210217.909
-;; Package-Commit: 41d10f26a76208612fa184d1155ab40130f4cbf0
+;; Package-Version: 20210403.1349
+;; Package-Commit: f09caa56254e6c639993afba29f5a4b8b9f9c73e
 ;; Package-Requires: ((emacs "26.1") (grammarly "0.3.0"))
 ;; URL: https://github.com/emacs-grammarly/flymake-grammarly
 
@@ -45,7 +45,7 @@
   "Flymake support for Grammarly."
   :prefix "flymake-grammarly-"
   :group 'flymake
-  :link '(url-link :tag "Github" "https://github.com/flymake/flymake-grammarly"))
+  :link '(url-link :tag "Github" "https://github.com/emacs-grammarly/flymake-grammarly"))
 
 (defcustom flymake-grammarly-active-modes
   '(text-mode latex-mode org-mode markdown-mode)

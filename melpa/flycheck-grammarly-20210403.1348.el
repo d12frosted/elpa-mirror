@@ -7,8 +7,8 @@
 ;; Description: Grammarly support for Flycheck.
 ;; Keyword: grammar check
 ;; Version: 0.2.3
-;; Package-Version: 20210217.909
-;; Package-Commit: 67c1135193f98cfa4ee1ff83cc502dc11f648334
+;; Package-Version: 20210403.1348
+;; Package-Commit: 46f34659bbdab8725398ff9507f9ea5f4aa0697e
 ;; Package-Requires: ((emacs "25.1") (flycheck "0.14") (grammarly "0.3.0"))
 ;; URL: https://github.com/emacs-grammarly/flycheck-grammarly
 
@@ -45,7 +45,13 @@
   "Grammarly support for Flycheck."
   :prefix "flycheck-grammarly-"
   :group 'flycheck
-  :link '(url-link :tag "Github" "https://github.com/jcs-elpa/flycheck-grammarly"))
+  :link '(url-link :tag "Github" "https://github.com/emacs-grammarly/flycheck-grammarly"))
+
+(defcustom flycheck-grammarly-active-modes
+  '(text-mode latex-mode org-mode markdown-mode)
+  "List of major mode that work with Grammarly."
+  :type 'list
+  :group 'flycheck-grammarly)
 
 (defcustom flycheck-grammarly-check-time 0.8
   "How long do we call request after we done typing."
@@ -205,7 +211,7 @@
 (flycheck-define-generic-checker 'grammarly-checker
   "Grammarly flycheck definition."
   :start #'flycheck-grammarly--start
-  :modes '(text-mode latex-mode org-mode markdown-mode))
+  :modes flycheck-grammarly-active-modes)
 
 (add-to-list 'flycheck-checkers 'grammarly-checker)
 (add-to-list 'grammarly-on-open-function-list 'flycheck-grammarly--on-open)
