@@ -6,8 +6,6 @@
 ;;          Noam Postavsky <npostavs@gmail.com>
 ;; Maintainer: Noam Postavsky <npostavs@gmail.com>
 ;; Version: 0.14.0
-;; Package-Version: 20200604.246
-;; Package-Commit: 5cbdbf0d2015540c59ed8ee0fcf4788effdf75b6
 ;; X-URL: http://github.com/joaotavora/yasnippet
 ;; Keywords: convenience, emulation
 ;; URL: http://github.com/joaotavora/yasnippet
