@@ -4,8 +4,8 @@
 
 ;; Author: Bas Alberts <bas@anti.computer>
 ;; URL: https://github.com/anticomputer/ovpn-mode
-;; Package-Version: 20200509.236
-;; Package-Commit: 3fb9b09506f06cfc7678a93b5401f49d2bf538bc
+;; Package-Version: 20210403.440
+;; Package-Commit: 4492098c771d094dd0661a5bc6906f65fb530825
 
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "25") (cl-lib "0.5"))
@@ -247,7 +247,8 @@ Example authinfo entry: machine CONFIG.OVPN login USER password PASS"
 (defmacro ovpn-mode-sudo (name buffer &rest args)
   "Sudo exec a command ARGS as NAME and output to BUFFER."
   `(with-current-buffer ,buffer
-     (let* ((default-directory "/sudo::/tmp")
+     (let* ((tramp-connection-properties '((nil "session-timeout" nil)))
+            (default-directory "/sudo::/tmp")
             (process (start-file-process ,name ,buffer ,@args)))
        (when (process-live-p process)
          (set-process-filter process
@@ -371,7 +372,8 @@ Example authinfo entry: machine CONFIG.OVPN login USER password PASS"
     ;; cycle through the setup commands synchronously as root
     (with-current-buffer netns-buffer
       ;; init namespace
-      (let ((default-directory "/sudo::/tmp"))
+      (let ((tramp-connection-properties '((nil "session-timeout" nil)))
+            (default-directory "/sudo::/tmp"))
         (dolist (cmd (append setup-cmds
                              ;; check if we're on a firewalld enabled system per chance
                              (if (equal (shell-command-to-string (format "%s firewalld" pgrep)) "")
@@ -407,7 +409,8 @@ Example authinfo entry: machine CONFIG.OVPN login USER password PASS"
 
     (with-current-buffer netns-buffer
       ;; wait for the link to actually be up
-      (let ((default-directory "/sudo::/tmp"))
+      (let ((tramp-connection-properties '((nil "session-timeout" nil)))
+            (default-directory "/sudo::/tmp"))
         (ovpn-mode-assert-shell-command
          (format "%s netns exec %s %s route delete default via \"%s\" dev %s"
                  ip
@@ -433,7 +436,8 @@ Example authinfo entry: machine CONFIG.OVPN login USER password PASS"
 
     ;; failure here is less critical
     (with-current-buffer netns-buffer
-      (let ((default-directory "/sudo::/tmp"))
+      (let ((tramp-connection-properties '((nil "session-timeout" nil)))
+            (default-directory "/sudo::/tmp"))
         ;; clear out the namespace and delete the links we created (these might error but you can safely ignore interface not found errors)
         (shell-command (format "%s netns delete %s" ip namespace))
         (shell-command (format "%s -rf /etc/netns/%s" rm (shell-quote-argument namespace)))
@@ -667,7 +671,8 @@ Example authinfo entry: machine CONFIG.OVPN login USER password PASS"
                 (message "Setting DNS option for %s to nameserver %s"
                          (file-name-nondirectory conf) dns)
                 (with-current-buffer netns-buffer
-                  (let ((default-directory "/sudo::/tmp"))
+                  (let ((tramp-connection-properties '((nil "session-timeout" nil)))
+                        (default-directory "/sudo::/tmp"))
                     (shell-command
                      (format
                       "%s -e \"nameserver %s\\n\" > /etc/netns/%s/resolv.conf"
@@ -764,30 +769,31 @@ Example authinfo entry: machine CONFIG.OVPN login USER password PASS"
       (error "No openvpn binary found in exec-path"))
 
     (with-current-buffer buffer
-      (cd (format "/sudo::%s" default-directory))
-      (let ((process (apply 'start-file-process
-                            buffer-name
-                            buffer
-                            (if (and with-namespace netns)
-                                ;; set up an openvpn instance for conf inside a given namespace
-                                (progn
-                                  (message "Starting %s with namespace %s"
-                                           (file-name-nondirectory conf)
-                                           (plist-get netns :netns))
-                                  (list ip
-                                        "netns" "exec"
-                                        (format "%s" (plist-get netns :netns))
-                                        openvpn
-                                        ;; be explicitly verbose to the max default range
-                                        "--verb" "4"
-                                        "--cd" (file-name-directory conf)
-                                        "--config" conf
-                                        "--dev" (plist-get netns :netns-tunvpn)))
-                              ;; just start normally for the main system route
-                              (list openvpn
-                                    "--verb" "4"
-                                    "--cd" (file-name-directory conf)
-                                    "--config" conf)))))
+      (let* ((tramp-connection-properties '((nil "session-timeout" nil)))
+             (default-directory (format "/sudo::%s" default-directory))
+             (process (apply 'start-file-process
+                             buffer-name
+                             buffer
+                             (if (and with-namespace netns)
+                                 ;; set up an openvpn instance for conf inside a given namespace
+                                 (progn
+                                   (message "Starting %s with namespace %s"
+                                            (file-name-nondirectory conf)
+                                            (plist-get netns :netns))
+                                   (list ip
+                                         "netns" "exec"
+                                         (format "%s" (plist-get netns :netns))
+                                         openvpn
+                                         ;; be explicitly verbose to the max default range
+                                         "--verb" "4"
+                                         "--cd" (file-name-directory conf)
+                                         "--config" conf
+                                         "--dev" (plist-get netns :netns-tunvpn)))
+                               ;; just start normally for the main system route
+                               (list openvpn
+                                     "--verb" "4"
+                                     "--cd" (file-name-directory conf)
+                                     "--config" conf)))))
 
         (unless (process-live-p process)
           (error "Could not start openvpn for %s" (file-name-nondirectory conf)))

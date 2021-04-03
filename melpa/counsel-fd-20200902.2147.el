@@ -3,8 +3,6 @@
 ;; Copyright © 2020, Chetan Koneru tall rights reserved.
 
 ;; Version: 0.1.0
-;; Package-Version: 20200902.2147
-;; Package-Commit: 533d70f229abc73b013668bd03f7486effa1e369
 ;; URL: https://github.com/CsBigDataHub/counsel-fd
 ;; Package-Requires: ((counsel "0.12.0"))
 ;; Keywords: tools
