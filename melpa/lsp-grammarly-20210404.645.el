@@ -6,9 +6,9 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: LSP Clients for Grammarly.
 ;; Keyword: lsp grammarly checker
-;; Version: 0.2.1
-;; Package-Version: 20210330.623
-;; Package-Commit: 4b30c572e185738983f6ef10821c43f0d2cb42e1
+;; Version: 0.2.2
+;; Package-Version: 20210404.645
+;; Package-Commit: 984037557b7e445183453faffc965fbe56df12f2
 ;; Package-Requires: ((emacs "27.1") (lsp-mode "6.1") (grammarly "0.3.0") (request "0.3.0") (s "1.12.0") (ht "2.3"))
 ;; URL: https://github.com/emacs-grammarly/lsp-grammarly
 
@@ -58,11 +58,14 @@ This is only for development use."
   :type 'string
   :group 'lsp-grammarly)
 
-(defcustom lsp-grammarly-modes
+(defcustom lsp-grammarly-active-modes
   '(text-mode latex-mode org-mode markdown-mode)
   "List of major mode that work with Grammarly."
   :type 'list
   :group 'lsp-grammarly)
+
+(define-obsolete-variable-alias
+  'lsp-grammarly-modes 'lsp-grammarly-active-modes "0.2.1")
 
 (defcustom lsp-grammarly-auto-activate t
   "Enable Grammarly service when a supported document is opened."
@@ -77,7 +80,7 @@ This is only for development use."
   :group 'lsp-grammarly)
 
 (defcustom lsp-grammarly-dialect "american"
-  "Sets the default audience for every document."
+  "Sets the default dialect for every document."
   :type '(choice (const "american")
                  (const "australian")
                  (const "british")
@@ -85,7 +88,7 @@ This is only for development use."
   :group 'lsp-grammarly)
 
 (defcustom lsp-grammarly-domain "general"
-  "Sets the default audience for every document."
+  "Sets the default domain for every document."
   :type '(choice (const "academic")
                  (const "business")
                  (const "general")
@@ -249,7 +252,7 @@ For argument CALLBACK, see object `lsp--client' description."
 (lsp-register-client
  (make-lsp-client
   :new-connection (lsp-stdio-connection #'lsp-grammarly--server-command)
-  :activation-fn (lambda (&rest _) (apply #'derived-mode-p lsp-grammarly-modes))
+  :activation-fn (lambda (&rest _) (apply #'derived-mode-p lsp-grammarly-active-modes))
   :priority -1
   :server-id 'grammarly-ls
   :download-server-fn (lambda (_client callback error-callback _update?)

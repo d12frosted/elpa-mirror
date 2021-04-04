@@ -3,8 +3,6 @@
 ;; Copyright (C) 2014-2015 Andrey Kotlarski <m00naticus@gmail.com>
 
 ;; Version: 1.2
-;; Package-Version: 20150102.1512
-;; Package-Commit: 4b0ecec769919ecb05ca4fb15ec51911ba589929
 ;; Keywords: eww, browse, conkeror
 ;; Author: Andrey Kotlarski <m00naticus@gmail.com>
 ;; URL: https://github.com/m00natic/eww-lnum

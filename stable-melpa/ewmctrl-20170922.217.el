@@ -7,8 +7,6 @@
 ;; Maintainer: Alexis <flexibeast@gmail.com>
 ;; Created: 2015-01-08
 ;; URL: https://github.com/flexibeast/ewmctrl
-;; Package-Version: 20170922.217
-;; Package-Commit: 3d0217c4d6cdb5c308b6cb4293574f470d4faacf
 ;; Keywords: desktop, windows, ewmh, netwm
 
 ;;
