@@ -64,7 +64,7 @@
 		  ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		 (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (aggressive-completion .
-			[(1 0)
+			[(1 1)
 			 ((emacs
 			   (27 1)))
 			 "Automatic minibuffer completion" tar
@@ -2533,15 +2533,15 @@
 	     (:maintainer "Ian Dunn" . "dunni@gnu.org")
 	     (:url . "https://elpa.gnu.org/packages/vigenere.html"))])
  (visual-filename-abbrev .
-			 [(1 0)
+			 [(1 1)
 			  ((emacs
 			    (26 1)))
-			  "Visually abbreviate filenames" single
-			  ((:url . "http://elpa.gnu.org/packages/visual-filename-abbrev.html")
-			   (:keywords "tools")
+			  "Visually abbreviate filenames" tar
+			  ((:maintainer "Tassilo Horn" . "tsdh@gnu.org")
 			   (:authors
 			    ("Tassilo Horn" . "tsdh@gnu.org"))
-			   (:maintainer "Tassilo Horn" . "tsdh@gnu.org"))])
+			   (:keywords "tools")
+			   (:url . "https://elpa.gnu.org/packages/visual-filename-abbrev.html"))])
  (visual-fill .
 	      [(0 1)
 	       nil "Auto-refill paragraphs without modifying the buffer" single

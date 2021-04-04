@@ -5,7 +5,7 @@ Source:  https://gitlab.com/jaor/geiser.git
 Updating /mnt/store/melpa/working/geiser/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser/
-  to /tmp/geiserHURZRo/geiser-20210404.430
+  to /tmp/geiserDHeDTJ/geiser-20210404.430
   ! elisp/geiser-autodoc.el -> geiser-autodoc.el
   ! elisp/geiser-base.el -> geiser-base.el
   ! elisp/geiser-company.el -> geiser-company.el
@@ -41,50 +41,50 @@ Copying files (->) and directories (=>)
   ! doc/thanks.texi -> thanks.texi
   ! doc/top.texi -> top.texi
   ! doc/web.texi -> web.texi
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/cheat.texi -o /tmp/geiserHURZRo/geiser-20210404.430/cheat.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/cheat.texi -o /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
 ")
-Created /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserHURZRo/geiser-20210404.430/cheat.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
 ")
-Created /tmp/geiserHURZRo/geiser-20210404.430/geiser.info
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/index.texi -o /tmp/geiserHURZRo/geiser-20210404.430/index.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/geiserDHeDTJ/geiser-20210404.430/geiser.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/index.texi -o /tmp/geiserDHeDTJ/geiser-20210404.430/index.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
 ")
-Created /tmp/geiserHURZRo/geiser-20210404.430/index.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserHURZRo/geiser-20210404.430/index.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/geiserDHeDTJ/geiser-20210404.430/index.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserDHeDTJ/geiser-20210404.430/index.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/index.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/index.info
 ")
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/install.texi -o /tmp/geiserHURZRo/geiser-20210404.430/install.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/install.texi -o /tmp/geiserDHeDTJ/geiser-20210404.430/install.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/index.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/index.info
 /mnt/store/melpa/working/geiser/doc/install.texi:17: warning: undefined flag: EMACS_VERSION
 /mnt/store/melpa/working/geiser/doc/install.texi:22: unknown command `supimpl'
 /mnt/store/melpa/working/geiser/doc/install.texi:22: misplaced {
@@ -122,16 +122,16 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Prev reference to nonexistent `Introduction'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Up reference to nonexistent `Top'
 ")
-Created /tmp/geiserHURZRo/geiser-20210404.430/install.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserHURZRo/geiser-20210404.430/install.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/geiserDHeDTJ/geiser-20210404.430/install.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserDHeDTJ/geiser-20210404.430/install.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/index.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/index.info
 /mnt/store/melpa/working/geiser/doc/install.texi:17: warning: undefined flag: EMACS_VERSION
 /mnt/store/melpa/working/geiser/doc/install.texi:22: unknown command `supimpl'
 /mnt/store/melpa/working/geiser/doc/install.texi:22: misplaced {
@@ -168,17 +168,17 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Next reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Prev reference to nonexistent `Introduction'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/install.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/install.info
 ")
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/intro.texi -o /tmp/geiserHURZRo/geiser-20210404.430/intro.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/intro.texi -o /tmp/geiserDHeDTJ/geiser-20210404.430/intro.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/index.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/index.info
 /mnt/store/melpa/working/geiser/doc/install.texi:17: warning: undefined flag: EMACS_VERSION
 /mnt/store/melpa/working/geiser/doc/install.texi:22: unknown command `supimpl'
 /mnt/store/melpa/working/geiser/doc/install.texi:22: misplaced {
@@ -215,23 +215,23 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Next reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Prev reference to nonexistent `Introduction'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/install.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/install.info
 /mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
 ")
-Created /tmp/geiserHURZRo/geiser-20210404.430/intro.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserHURZRo/geiser-20210404.430/intro.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/geiserDHeDTJ/geiser-20210404.430/intro.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserDHeDTJ/geiser-20210404.430/intro.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/index.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/index.info
 /mnt/store/melpa/working/geiser/doc/install.texi:17: warning: undefined flag: EMACS_VERSION
 /mnt/store/melpa/working/geiser/doc/install.texi:22: unknown command `supimpl'
 /mnt/store/melpa/working/geiser/doc/install.texi:22: misplaced {
@@ -268,24 +268,24 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Next reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Prev reference to nonexistent `Introduction'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/install.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/install.info
 /mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/intro.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/intro.info
 ")
-Created /tmp/geiserHURZRo/geiser-20210404.430/macros.info
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/parens.texi -o /tmp/geiserHURZRo/geiser-20210404.430/parens.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/geiserDHeDTJ/geiser-20210404.430/macros.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/parens.texi -o /tmp/geiserDHeDTJ/geiser-20210404.430/parens.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/index.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/index.info
 /mnt/store/melpa/working/geiser/doc/install.texi:17: warning: undefined flag: EMACS_VERSION
 /mnt/store/melpa/working/geiser/doc/install.texi:22: unknown command `supimpl'
 /mnt/store/melpa/working/geiser/doc/install.texi:22: misplaced {
@@ -322,15 +322,15 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Next reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Prev reference to nonexistent `Introduction'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/install.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/install.info
 /mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/intro.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/intro.info
 /mnt/store/melpa/working/geiser/doc/macros.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/geiserHURZRo/geiser-20210404.430/macros.info'
+install-info: warning: no info dir entry in `/tmp/geiserDHeDTJ/geiser-20210404.430/macros.info'
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: unknown command `img'
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced {
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced }
@@ -375,16 +375,16 @@ source's mouth'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Prev reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Up reference to nonexistent `Top'
 ")
-Created /tmp/geiserHURZRo/geiser-20210404.430/parens.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserHURZRo/geiser-20210404.430/parens.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/geiserDHeDTJ/geiser-20210404.430/parens.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserDHeDTJ/geiser-20210404.430/parens.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/index.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/index.info
 /mnt/store/melpa/working/geiser/doc/install.texi:17: warning: undefined flag: EMACS_VERSION
 /mnt/store/melpa/working/geiser/doc/install.texi:22: unknown command `supimpl'
 /mnt/store/melpa/working/geiser/doc/install.texi:22: misplaced {
@@ -421,15 +421,15 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Next reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Prev reference to nonexistent `Introduction'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/install.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/install.info
 /mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/intro.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/intro.info
 /mnt/store/melpa/working/geiser/doc/macros.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/geiserHURZRo/geiser-20210404.430/macros.info'
+install-info: warning: no info dir entry in `/tmp/geiserDHeDTJ/geiser-20210404.430/macros.info'
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: unknown command `img'
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced {
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced }
@@ -473,17 +473,17 @@ source's mouth'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Next reference to nonexistent `Cheat sheet'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Prev reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/parens.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/parens.info
 ")
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/repl.texi -o /tmp/geiserHURZRo/geiser-20210404.430/repl.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/repl.texi -o /tmp/geiserDHeDTJ/geiser-20210404.430/repl.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/index.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/index.info
 /mnt/store/melpa/working/geiser/doc/install.texi:17: warning: undefined flag: EMACS_VERSION
 /mnt/store/melpa/working/geiser/doc/install.texi:22: unknown command `supimpl'
 /mnt/store/melpa/working/geiser/doc/install.texi:22: misplaced {
@@ -520,15 +520,15 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Next reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Prev reference to nonexistent `Introduction'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/install.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/install.info
 /mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/intro.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/intro.info
 /mnt/store/melpa/working/geiser/doc/macros.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/geiserHURZRo/geiser-20210404.430/macros.info'
+install-info: warning: no info dir entry in `/tmp/geiserDHeDTJ/geiser-20210404.430/macros.info'
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: unknown command `img'
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced {
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced }
@@ -572,7 +572,7 @@ source's mouth'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Next reference to nonexistent `Cheat sheet'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Prev reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/parens.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/parens.info
 /mnt/store/melpa/working/geiser/doc/repl.texi:28: unknown command `altr'
 /mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced {
 /mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced }
@@ -614,16 +614,16 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/repl.texi:1: Prev reference to nonexistent `Installation'
 /mnt/store/melpa/working/geiser/doc/repl.texi:1: Up reference to nonexistent `Top'
 ")
-Created /tmp/geiserHURZRo/geiser-20210404.430/repl.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserHURZRo/geiser-20210404.430/repl.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/geiserDHeDTJ/geiser-20210404.430/repl.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserDHeDTJ/geiser-20210404.430/repl.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/index.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/index.info
 /mnt/store/melpa/working/geiser/doc/install.texi:17: warning: undefined flag: EMACS_VERSION
 /mnt/store/melpa/working/geiser/doc/install.texi:22: unknown command `supimpl'
 /mnt/store/melpa/working/geiser/doc/install.texi:22: misplaced {
@@ -660,15 +660,15 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Next reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Prev reference to nonexistent `Introduction'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/install.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/install.info
 /mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/intro.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/intro.info
 /mnt/store/melpa/working/geiser/doc/macros.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/geiserHURZRo/geiser-20210404.430/macros.info'
+install-info: warning: no info dir entry in `/tmp/geiserDHeDTJ/geiser-20210404.430/macros.info'
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: unknown command `img'
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced {
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced }
@@ -712,7 +712,7 @@ source's mouth'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Next reference to nonexistent `Cheat sheet'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Prev reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/parens.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/parens.info
 /mnt/store/melpa/working/geiser/doc/repl.texi:28: unknown command `altr'
 /mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced {
 /mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced }
@@ -753,17 +753,17 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/repl.texi:1: Next reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/repl.texi:1: Prev reference to nonexistent `Installation'
 /mnt/store/melpa/working/geiser/doc/repl.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/repl.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/repl.info
 ")
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/thanks.texi -o /tmp/geiserHURZRo/geiser-20210404.430/thanks.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/geiser/doc/thanks.texi -o /tmp/geiserDHeDTJ/geiser-20210404.430/thanks.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/index.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/index.info
 /mnt/store/melpa/working/geiser/doc/install.texi:17: warning: undefined flag: EMACS_VERSION
 /mnt/store/melpa/working/geiser/doc/install.texi:22: unknown command `supimpl'
 /mnt/store/melpa/working/geiser/doc/install.texi:22: misplaced {
@@ -800,15 +800,15 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Next reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Prev reference to nonexistent `Introduction'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/install.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/install.info
 /mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/intro.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/intro.info
 /mnt/store/melpa/working/geiser/doc/macros.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/geiserHURZRo/geiser-20210404.430/macros.info'
+install-info: warning: no info dir entry in `/tmp/geiserDHeDTJ/geiser-20210404.430/macros.info'
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: unknown command `img'
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced {
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced }
@@ -852,7 +852,7 @@ source's mouth'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Next reference to nonexistent `Cheat sheet'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Prev reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/parens.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/parens.info
 /mnt/store/melpa/working/geiser/doc/repl.texi:28: unknown command `altr'
 /mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced {
 /mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced }
@@ -893,21 +893,21 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/repl.texi:1: Next reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/repl.texi:1: Prev reference to nonexistent `Installation'
 /mnt/store/melpa/working/geiser/doc/repl.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/repl.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/repl.info
 /mnt/store/melpa/working/geiser/doc/thanks.texi:1: Next reference to nonexistent `Index'
 /mnt/store/melpa/working/geiser/doc/thanks.texi:1: Prev reference to nonexistent `Cheat sheet'
 /mnt/store/melpa/working/geiser/doc/thanks.texi:1: Up reference to nonexistent `Top'
 ")
-Created /tmp/geiserHURZRo/geiser-20210404.430/thanks.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserHURZRo/geiser-20210404.430/thanks.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/geiserDHeDTJ/geiser-20210404.430/thanks.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/geiserDHeDTJ/geiser-20210404.430/thanks.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 45c4905 we need macros.texi
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Next reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Prev reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/cheat.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/cheat.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/cheat.info
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Prev reference to nonexistent `No hacker is an island'
 /mnt/store/melpa/working/geiser/doc/index.texi:5: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/index.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/index.info
 /mnt/store/melpa/working/geiser/doc/install.texi:17: warning: undefined flag: EMACS_VERSION
 /mnt/store/melpa/working/geiser/doc/install.texi:22: unknown command `supimpl'
 /mnt/store/melpa/working/geiser/doc/install.texi:22: misplaced {
@@ -944,15 +944,15 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Next reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Prev reference to nonexistent `Introduction'
 /mnt/store/melpa/working/geiser/doc/install.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/install.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/install.info
 /mnt/store/melpa/working/geiser/doc/intro.texi:5: @ref reference to nonexistent node `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:6: @ref reference to nonexistent node `The REPL'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Next reference to nonexistent `Installation'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Prev reference to nonexistent `Top'
 /mnt/store/melpa/working/geiser/doc/intro.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/intro.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/intro.info
 /mnt/store/melpa/working/geiser/doc/macros.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/geiserHURZRo/geiser-20210404.430/macros.info'
+install-info: warning: no info dir entry in `/tmp/geiserDHeDTJ/geiser-20210404.430/macros.info'
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: unknown command `img'
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced {
 /mnt/store/melpa/working/geiser/doc/parens.texi:36: misplaced }
@@ -996,7 +996,7 @@ source's mouth'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Next reference to nonexistent `Cheat sheet'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Prev reference to nonexistent `The REPL'
 /mnt/store/melpa/working/geiser/doc/parens.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/parens.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/parens.info
 /mnt/store/melpa/working/geiser/doc/repl.texi:28: unknown command `altr'
 /mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced {
 /mnt/store/melpa/working/geiser/doc/repl.texi:28: misplaced }
@@ -1037,14 +1037,14 @@ install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.43
 /mnt/store/melpa/working/geiser/doc/repl.texi:1: Next reference to nonexistent `Between the parens'
 /mnt/store/melpa/working/geiser/doc/repl.texi:1: Prev reference to nonexistent `Installation'
 /mnt/store/melpa/working/geiser/doc/repl.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/repl.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/repl.info
 /mnt/store/melpa/working/geiser/doc/thanks.texi:1: Next reference to nonexistent `Index'
 /mnt/store/melpa/working/geiser/doc/thanks.texi:1: Prev reference to nonexistent `Cheat sheet'
 /mnt/store/melpa/working/geiser/doc/thanks.texi:1: Up reference to nonexistent `Top'
-install-info: No such file or directory for /tmp/geiserHURZRo/geiser-20210404.430/thanks.info
+install-info: No such file or directory for /tmp/geiserDHeDTJ/geiser-20210404.430/thanks.info
 ")
-Created /tmp/geiserHURZRo/geiser-20210404.430/top.info
-Created /tmp/geiserHURZRo/geiser-20210404.430/web.info
+Created /tmp/geiserDHeDTJ/geiser-20210404.430/top.info
+Created /tmp/geiserDHeDTJ/geiser-20210404.430/web.info
 Created geiser-20210404.430.tar containing:
   geiser-20210404.430/
   geiser-20210404.430/dir
@@ -1077,54 +1077,54 @@ Created geiser-20210404.430.tar containing:
   geiser-20210404.430/macros.info
   geiser-20210404.430/top.info
   geiser-20210404.430/web.info
-Built geiser in 47.393s, finished at Sun Apr  4 07:07:30 2021
+Built geiser in 46.562s, finished at Sun Apr  4 11:18:21 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  374 Apr  4 07:07 packages/geiser-20210404.430.entry
-400K -rw-r--r-- 1 root root 400K Apr  4 07:07 packages/geiser-20210404.430.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  4 07:07 packages/geiser-badge.svg
-4.0K -rw-r--r-- 1 root root  443 Apr  4 07:06 packages/geiser-chez-20210328.239.entry
- 32K -rw-r--r-- 1 root root  30K Apr  4 07:06 packages/geiser-chez-20210328.239.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  4 07:06 packages/geiser-chez-badge.svg
-4.0K -rw-r--r-- 1 root root   57 Apr  4 07:06 packages/geiser-chez-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Apr  4 07:06 packages/geiser-chez.log
-4.0K -rw-r--r-- 1 root root  424 Apr  4 07:06 packages/geiser-chibi-20210328.312.entry
- 32K -rw-r--r-- 1 root root  30K Apr  4 07:06 packages/geiser-chibi-20210328.312.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  4 07:06 packages/geiser-chibi-badge.svg
-4.0K -rw-r--r-- 1 root root   51 Apr  4 07:06 packages/geiser-chibi-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Apr  4 07:06 packages/geiser-chibi.log
-4.0K -rw-r--r-- 1 root root  389 Apr  4 07:06 packages/geiser-chicken-20210328.418.entry
- 60K -rw-r--r-- 1 root root  60K Apr  4 07:06 packages/geiser-chicken-20210328.418.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  4 07:06 packages/geiser-chicken-badge.svg
-4.0K -rw-r--r-- 1 root root   69 Apr  4 07:06 packages/geiser-chicken-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Apr  4 07:06 packages/geiser-chicken.log
-4.0K -rw-r--r-- 1 root root  416 Apr  4 07:06 packages/geiser-gambit-20210328.326.entry
-140K -rw-r--r-- 1 root root 140K Apr  4 07:06 packages/geiser-gambit-20210328.326.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  4 07:06 packages/geiser-gambit-badge.svg
-4.0K -rw-r--r-- 1 root root  148 Apr  4 07:06 packages/geiser-gambit-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Apr  4 07:06 packages/geiser-gambit.log
-4.0K -rw-r--r-- 1 root root  430 Apr  4 07:06 packages/geiser-gauche-20200802.1300.entry
- 32K -rw-r--r-- 1 root root  30K Apr  4 07:06 packages/geiser-gauche-20200802.1300.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  4 07:06 packages/geiser-gauche-badge.svg
-4.0K -rw-r--r-- 1 root root   65 Apr  4 07:06 packages/geiser-gauche-readme.txt
-4.0K -rw-r--r-- 1 root root 1016 Apr  4 07:06 packages/geiser-gauche.log
-4.0K -rw-r--r-- 1 root root  440 Apr  4 07:06 packages/geiser-guile-20210403.2136.entry
- 60K -rw-r--r-- 1 root root  60K Apr  4 07:06 packages/geiser-guile-20210403.2136.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  4 07:06 packages/geiser-guile-badge.svg
-4.0K -rw-r--r-- 1 root root   69 Apr  4 07:06 packages/geiser-guile-readme.txt
-4.0K -rw-r--r-- 1 root root 1.4K Apr  4 07:06 packages/geiser-guile.log
-4.0K -rw-r--r-- 1 root root  461 Apr  4 07:06 packages/geiser-kawa-20200507.1305.entry
-140K -rw-r--r-- 1 root root 140K Apr  4 07:06 packages/geiser-kawa-20200507.1305.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  4 07:06 packages/geiser-kawa-badge.svg
-4.0K -rw-r--r-- 1 root root   87 Apr  4 07:06 packages/geiser-kawa-readme.txt
-4.0K -rw-r--r-- 1 root root 3.6K Apr  4 07:06 packages/geiser-kawa.log
-4.0K -rw-r--r-- 1 root root  453 Apr  4 07:06 packages/geiser-mit-20210321.2240.entry
- 32K -rw-r--r-- 1 root root  30K Apr  4 07:06 packages/geiser-mit-20210321.2240.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  4 07:06 packages/geiser-mit-badge.svg
-4.0K -rw-r--r-- 1 root root   56 Apr  4 07:06 packages/geiser-mit-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Apr  4 07:06 packages/geiser-mit.log
-4.0K -rw-r--r-- 1 root root  415 Apr  4 07:06 packages/geiser-racket-20210328.444.entry
- 80K -rw-r--r-- 1 root root  80K Apr  4 07:06 packages/geiser-racket-20210328.444.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  4 07:06 packages/geiser-racket-badge.svg
-4.0K -rw-r--r-- 1 root root   94 Apr  4 07:06 packages/geiser-racket-readme.txt
-4.0K -rw-r--r-- 1 root root 1.9K Apr  4 07:06 packages/geiser-racket.log
-4.0K -rw-r--r-- 1 root root 1.4K Apr  4 07:07 packages/geiser-readme.txt
+4.0K -rw-r--r-- 1 root root  374 Apr  4 11:18 packages/geiser-20210404.430.entry
+400K -rw-r--r-- 1 root root 400K Apr  4 11:18 packages/geiser-20210404.430.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 11:18 packages/geiser-badge.svg
+4.0K -rw-r--r-- 1 root root  443 Apr  4 11:17 packages/geiser-chez-20210328.239.entry
+ 32K -rw-r--r-- 1 root root  30K Apr  4 11:17 packages/geiser-chez-20210328.239.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 11:17 packages/geiser-chez-badge.svg
+4.0K -rw-r--r-- 1 root root   57 Apr  4 11:17 packages/geiser-chez-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Apr  4 11:17 packages/geiser-chez.log
+4.0K -rw-r--r-- 1 root root  424 Apr  4 11:17 packages/geiser-chibi-20210328.312.entry
+ 32K -rw-r--r-- 1 root root  30K Apr  4 11:17 packages/geiser-chibi-20210328.312.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 11:17 packages/geiser-chibi-badge.svg
+4.0K -rw-r--r-- 1 root root   51 Apr  4 11:17 packages/geiser-chibi-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Apr  4 11:17 packages/geiser-chibi.log
+4.0K -rw-r--r-- 1 root root  389 Apr  4 11:17 packages/geiser-chicken-20210328.418.entry
+ 60K -rw-r--r-- 1 root root  60K Apr  4 11:17 packages/geiser-chicken-20210328.418.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 11:17 packages/geiser-chicken-badge.svg
+4.0K -rw-r--r-- 1 root root   69 Apr  4 11:17 packages/geiser-chicken-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 11:17 packages/geiser-chicken.log
+4.0K -rw-r--r-- 1 root root  416 Apr  4 11:17 packages/geiser-gambit-20210328.326.entry
+140K -rw-r--r-- 1 root root 140K Apr  4 11:17 packages/geiser-gambit-20210328.326.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 11:17 packages/geiser-gambit-badge.svg
+4.0K -rw-r--r-- 1 root root  148 Apr  4 11:17 packages/geiser-gambit-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 11:17 packages/geiser-gambit.log
+4.0K -rw-r--r-- 1 root root  430 Apr  4 11:17 packages/geiser-gauche-20200802.1300.entry
+ 32K -rw-r--r-- 1 root root  30K Apr  4 11:17 packages/geiser-gauche-20200802.1300.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 11:17 packages/geiser-gauche-badge.svg
+4.0K -rw-r--r-- 1 root root   65 Apr  4 11:17 packages/geiser-gauche-readme.txt
+4.0K -rw-r--r-- 1 root root 1016 Apr  4 11:17 packages/geiser-gauche.log
+4.0K -rw-r--r-- 1 root root  440 Apr  4 11:17 packages/geiser-guile-20210403.2136.entry
+ 60K -rw-r--r-- 1 root root  60K Apr  4 11:17 packages/geiser-guile-20210403.2136.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 11:17 packages/geiser-guile-badge.svg
+4.0K -rw-r--r-- 1 root root   69 Apr  4 11:17 packages/geiser-guile-readme.txt
+4.0K -rw-r--r-- 1 root root 1.4K Apr  4 11:17 packages/geiser-guile.log
+4.0K -rw-r--r-- 1 root root  461 Apr  4 11:17 packages/geiser-kawa-20200507.1305.entry
+140K -rw-r--r-- 1 root root 140K Apr  4 11:17 packages/geiser-kawa-20200507.1305.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 11:17 packages/geiser-kawa-badge.svg
+4.0K -rw-r--r-- 1 root root   87 Apr  4 11:17 packages/geiser-kawa-readme.txt
+4.0K -rw-r--r-- 1 root root 3.6K Apr  4 11:17 packages/geiser-kawa.log
+4.0K -rw-r--r-- 1 root root  453 Apr  4 11:17 packages/geiser-mit-20210321.2240.entry
+ 32K -rw-r--r-- 1 root root  30K Apr  4 11:17 packages/geiser-mit-20210321.2240.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 11:17 packages/geiser-mit-badge.svg
+4.0K -rw-r--r-- 1 root root   56 Apr  4 11:17 packages/geiser-mit-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 11:17 packages/geiser-mit.log
+4.0K -rw-r--r-- 1 root root  415 Apr  4 11:17 packages/geiser-racket-20210328.444.entry
+ 80K -rw-r--r-- 1 root root  80K Apr  4 11:17 packages/geiser-racket-20210328.444.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 11:17 packages/geiser-racket-badge.svg
+4.0K -rw-r--r-- 1 root root   94 Apr  4 11:17 packages/geiser-racket-readme.txt
+4.0K -rw-r--r-- 1 root root 1.9K Apr  4 11:17 packages/geiser-racket.log
+4.0K -rw-r--r-- 1 root root 1.4K Apr  4 11:18 packages/geiser-readme.txt

@@ -7,8 +7,8 @@
 ;; Description: Management for indentation level.
 ;; Keyword: control indent tab generic level
 ;; Version: 0.3.4
-;; Package-Version: 20210309.1151
-;; Package-Commit: 383ea506a6e6145bbb6327a7b1e509b40edf446b
+;; Package-Version: 20210404.727
+;; Package-Commit: 5048c685e7071631dbad52988dbf91ffc67a4af3
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/jcs-elpa/indent-control
 
@@ -58,6 +58,8 @@
     (csharp-mode           . 4)
     (css-mode              . 2)
     (dockerfile-mode       . 2)
+    (elixir-mode           . 2)
+    (elm-mode              . 4)
     (elisp-mode            . 2)
     (emacs-lisp-mode       . 2)
     (go-mode               . 4)
@@ -97,6 +99,8 @@
     (c++-mode              . c-basic-offset)
     (csharp-mode           . (c-basic-offset
                               csharp-mode-indent-offset))
+    (elixir-mode           . elixir-smie-indent-basic)
+    (elm-mode              . elm-indent-offset)
     (java-mode             . c-basic-offset)
     (jayces-mode           . c-basic-offset)
     (objc-mode             . c-basic-offset)
