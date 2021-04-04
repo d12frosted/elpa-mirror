@@ -2,6 +2,8 @@
 ;;
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Url: https://github.com/emacsfodder/emacs-clues-theme
+;; Package-Version: 20161213.1127
+;; Package-Commit: abd61f2b7f3e98de58ca26e6d1230e70c6406cc7
 ;; Version: 1.0.1
 ;; Package-Requires: ((emacs "24.0"))
 ;;
