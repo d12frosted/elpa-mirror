@@ -5,7 +5,7 @@ Source:  https://github.com/danielmartin/swift-helpful.git
 Updating /mnt/store/melpa/working/swift-helpful/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/swift-helpful/
-  to /tmp/swift-helpfulBfENKN/swift-helpful-20201031.1654
+  to /tmp/swift-helpfulApVDuE/swift-helpful-20210402.1934
     swift-helpful-regex.el -> swift-helpful-regex.el
     swift-helpful.el -> swift-helpful.el
   ! swift-info/swift-reference.info -> swift-reference.info
@@ -71,79 +71,79 @@ Copying files (->) and directories (=>)
   ! swift-info/images/weakReference01_2x.png -> images/weakReference01_2x.png
   ! swift-info/images/weakReference02_2x.png -> images/weakReference02_2x.png
   ! swift-info/images/weakReference03_2x.png -> images/weakReference03_2x.png
-Created swift-helpful-20201031.1654.tar containing:
-  swift-helpful-20201031.1654/
-  swift-helpful-20201031.1654/dir
-  swift-helpful-20201031.1654/images/
-  swift-helpful-20201031.1654/images/CollectionTypes_intro_2x.png
-  swift-helpful-20201031.1654/images/UTF16_2x.png
-  swift-helpful-20201031.1654/images/UTF8_2x.png
-  swift-helpful-20201031.1654/images/UnicodeScalar_2x.png
-  swift-helpful-20201031.1654/images/barcode_QR_2x.png
-  swift-helpful-20201031.1654/images/barcode_UPC_2x.png
-  swift-helpful-20201031.1654/images/bitshiftSignedAddition_2x.png
-  swift-helpful-20201031.1654/images/bitshiftSignedFour_2x.png
-  swift-helpful-20201031.1654/images/bitshiftSignedMinusFourValue_2x.png
-  swift-helpful-20201031.1654/images/bitshiftSignedMinusFour_2x.png
-  swift-helpful-20201031.1654/images/bitshiftSigned_2x.png
-  swift-helpful-20201031.1654/images/bitshiftUnsigned_2x.png
-  swift-helpful-20201031.1654/images/bitwiseAND_2x.png
-  swift-helpful-20201031.1654/images/bitwiseNOT_2x.png
-  swift-helpful-20201031.1654/images/bitwiseOR_2x.png
-  swift-helpful-20201031.1654/images/bitwiseXOR_2x.png
-  swift-helpful-20201031.1654/images/chessBoard_2x.png
-  swift-helpful-20201031.1654/images/closureReferenceCycle01_2x.png
-  swift-helpful-20201031.1654/images/closureReferenceCycle02_2x.png
-  swift-helpful-20201031.1654/images/computedProperties_2x.png
-  swift-helpful-20201031.1654/images/coordinateGraphComplex_2x.png
-  swift-helpful-20201031.1654/images/coordinateGraphMedium_2x.png
-  swift-helpful-20201031.1654/images/coordinateGraphSimple_2x.png
-  swift-helpful-20201031.1654/images/initializerDelegation01_2x.png
-  swift-helpful-20201031.1654/images/initializerDelegation02_2x.png
-  swift-helpful-20201031.1654/images/initializersExample01_2x.png
-  swift-helpful-20201031.1654/images/initializersExample02_2x.png
-  swift-helpful-20201031.1654/images/initializersExample03_2x.png
-  swift-helpful-20201031.1654/images/memory_increment_2x.png
-  swift-helpful-20201031.1654/images/memory_share_health_maria_2x.png
-  swift-helpful-20201031.1654/images/memory_share_health_oscar_2x.png
-  swift-helpful-20201031.1654/images/memory_shopping_2x.png
-  swift-helpful-20201031.1654/images/multilineStringWhitespace_2x.png
-  swift-helpful-20201031.1654/images/overflowAddition_2x.png
-  swift-helpful-20201031.1654/images/overflowSignedSubtraction_2x.png
-  swift-helpful-20201031.1654/images/overflowUnsignedSubtraction_2x.png
-  swift-helpful-20201031.1654/images/referenceCycle01_2x.png
-  swift-helpful-20201031.1654/images/referenceCycle02_2x.png
-  swift-helpful-20201031.1654/images/referenceCycle03_2x.png
-  swift-helpful-20201031.1654/images/remainderInteger_2x.png
-  swift-helpful-20201031.1654/images/setEulerDiagram_2x.png
-  swift-helpful-20201031.1654/images/setVennDiagram_2x.png
-  swift-helpful-20201031.1654/images/sharedStateClass_2x.png
-  swift-helpful-20201031.1654/images/sharedStateStruct_2x.png
-  swift-helpful-20201031.1654/images/snakesAndLadders_2x.png
-  swift-helpful-20201031.1654/images/stackPoppedOneString_2x.png
-  swift-helpful-20201031.1654/images/stackPushPop_2x.png
-  swift-helpful-20201031.1654/images/stackPushedFourStrings_2x.png
-  swift-helpful-20201031.1654/images/staticPropertiesVUMeter_2x.png
-  swift-helpful-20201031.1654/images/stringSubstring_2x.png
-  swift-helpful-20201031.1654/images/subscriptMatrix01_2x.png
-  swift-helpful-20201031.1654/images/subscriptMatrix02_2x.png
-  swift-helpful-20201031.1654/images/twoPhaseInitialization01_2x.png
-  swift-helpful-20201031.1654/images/twoPhaseInitialization02_2x.png
-  swift-helpful-20201031.1654/images/unownedOptionalReference_2x.png
-  swift-helpful-20201031.1654/images/unownedReference01_2x.png
-  swift-helpful-20201031.1654/images/unownedReference02_2x.png
-  swift-helpful-20201031.1654/images/vectorAddition_2x.png
-  swift-helpful-20201031.1654/images/weakReference01_2x.png
-  swift-helpful-20201031.1654/images/weakReference02_2x.png
-  swift-helpful-20201031.1654/images/weakReference03_2x.png
-  swift-helpful-20201031.1654/swift-helpful-pkg.el
-  swift-helpful-20201031.1654/swift-helpful-regex.el
-  swift-helpful-20201031.1654/swift-helpful.el
-  swift-helpful-20201031.1654/swift-reference.info
-  swift-helpful-20201031.1654/swift.info
-Built swift-helpful in 4.796s, finished at Sat Apr  3 15:10:49 2021
+Created swift-helpful-20210402.1934.tar containing:
+  swift-helpful-20210402.1934/
+  swift-helpful-20210402.1934/dir
+  swift-helpful-20210402.1934/images/
+  swift-helpful-20210402.1934/images/CollectionTypes_intro_2x.png
+  swift-helpful-20210402.1934/images/UTF16_2x.png
+  swift-helpful-20210402.1934/images/UTF8_2x.png
+  swift-helpful-20210402.1934/images/UnicodeScalar_2x.png
+  swift-helpful-20210402.1934/images/barcode_QR_2x.png
+  swift-helpful-20210402.1934/images/barcode_UPC_2x.png
+  swift-helpful-20210402.1934/images/bitshiftSignedAddition_2x.png
+  swift-helpful-20210402.1934/images/bitshiftSignedFour_2x.png
+  swift-helpful-20210402.1934/images/bitshiftSignedMinusFourValue_2x.png
+  swift-helpful-20210402.1934/images/bitshiftSignedMinusFour_2x.png
+  swift-helpful-20210402.1934/images/bitshiftSigned_2x.png
+  swift-helpful-20210402.1934/images/bitshiftUnsigned_2x.png
+  swift-helpful-20210402.1934/images/bitwiseAND_2x.png
+  swift-helpful-20210402.1934/images/bitwiseNOT_2x.png
+  swift-helpful-20210402.1934/images/bitwiseOR_2x.png
+  swift-helpful-20210402.1934/images/bitwiseXOR_2x.png
+  swift-helpful-20210402.1934/images/chessBoard_2x.png
+  swift-helpful-20210402.1934/images/closureReferenceCycle01_2x.png
+  swift-helpful-20210402.1934/images/closureReferenceCycle02_2x.png
+  swift-helpful-20210402.1934/images/computedProperties_2x.png
+  swift-helpful-20210402.1934/images/coordinateGraphComplex_2x.png
+  swift-helpful-20210402.1934/images/coordinateGraphMedium_2x.png
+  swift-helpful-20210402.1934/images/coordinateGraphSimple_2x.png
+  swift-helpful-20210402.1934/images/initializerDelegation01_2x.png
+  swift-helpful-20210402.1934/images/initializerDelegation02_2x.png
+  swift-helpful-20210402.1934/images/initializersExample01_2x.png
+  swift-helpful-20210402.1934/images/initializersExample02_2x.png
+  swift-helpful-20210402.1934/images/initializersExample03_2x.png
+  swift-helpful-20210402.1934/images/memory_increment_2x.png
+  swift-helpful-20210402.1934/images/memory_share_health_maria_2x.png
+  swift-helpful-20210402.1934/images/memory_share_health_oscar_2x.png
+  swift-helpful-20210402.1934/images/memory_shopping_2x.png
+  swift-helpful-20210402.1934/images/multilineStringWhitespace_2x.png
+  swift-helpful-20210402.1934/images/overflowAddition_2x.png
+  swift-helpful-20210402.1934/images/overflowSignedSubtraction_2x.png
+  swift-helpful-20210402.1934/images/overflowUnsignedSubtraction_2x.png
+  swift-helpful-20210402.1934/images/referenceCycle01_2x.png
+  swift-helpful-20210402.1934/images/referenceCycle02_2x.png
+  swift-helpful-20210402.1934/images/referenceCycle03_2x.png
+  swift-helpful-20210402.1934/images/remainderInteger_2x.png
+  swift-helpful-20210402.1934/images/setEulerDiagram_2x.png
+  swift-helpful-20210402.1934/images/setVennDiagram_2x.png
+  swift-helpful-20210402.1934/images/sharedStateClass_2x.png
+  swift-helpful-20210402.1934/images/sharedStateStruct_2x.png
+  swift-helpful-20210402.1934/images/snakesAndLadders_2x.png
+  swift-helpful-20210402.1934/images/stackPoppedOneString_2x.png
+  swift-helpful-20210402.1934/images/stackPushPop_2x.png
+  swift-helpful-20210402.1934/images/stackPushedFourStrings_2x.png
+  swift-helpful-20210402.1934/images/staticPropertiesVUMeter_2x.png
+  swift-helpful-20210402.1934/images/stringSubstring_2x.png
+  swift-helpful-20210402.1934/images/subscriptMatrix01_2x.png
+  swift-helpful-20210402.1934/images/subscriptMatrix02_2x.png
+  swift-helpful-20210402.1934/images/twoPhaseInitialization01_2x.png
+  swift-helpful-20210402.1934/images/twoPhaseInitialization02_2x.png
+  swift-helpful-20210402.1934/images/unownedOptionalReference_2x.png
+  swift-helpful-20210402.1934/images/unownedReference01_2x.png
+  swift-helpful-20210402.1934/images/unownedReference02_2x.png
+  swift-helpful-20210402.1934/images/vectorAddition_2x.png
+  swift-helpful-20210402.1934/images/weakReference01_2x.png
+  swift-helpful-20210402.1934/images/weakReference02_2x.png
+  swift-helpful-20210402.1934/images/weakReference03_2x.png
+  swift-helpful-20210402.1934/swift-helpful-pkg.el
+  swift-helpful-20210402.1934/swift-helpful-regex.el
+  swift-helpful-20210402.1934/swift-helpful.el
+  swift-helpful-20210402.1934/swift-reference.info
+  swift-helpful-20210402.1934/swift.info
+Built swift-helpful in 4.499s, finished at Sat Apr  3 23:11:41 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  455 Apr  3 15:10 packages/swift-helpful-20201031.1654.entry
-3.3M -rw-r--r-- 1 root root 3.3M Apr  3 15:10 packages/swift-helpful-20201031.1654.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  3 15:10 packages/swift-helpful-badge.svg
-4.0K -rw-r--r-- 1 root root  434 Apr  3 15:10 packages/swift-helpful-readme.txt
+4.0K -rw-r--r-- 1 root root  455 Apr  3 23:11 packages/swift-helpful-20210402.1934.entry
+3.3M -rw-r--r-- 1 root root 3.3M Apr  3 23:11 packages/swift-helpful-20210402.1934.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  3 23:11 packages/swift-helpful-badge.svg
+4.0K -rw-r--r-- 1 root root  434 Apr  3 23:11 packages/swift-helpful-readme.txt

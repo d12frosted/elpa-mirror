@@ -63,6 +63,16 @@
 		 (:authors
 		  ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		 (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
+ (aggressive-completion .
+			[(1 0)
+			 ((emacs
+			   (27 1)))
+			 "Automatic minibuffer completion" tar
+			 ((:maintainer "Tassilo Horn" . "tsdh@gnu.org")
+			  (:authors
+			   ("Tassilo Horn" . "tsdh@gnu.org"))
+			  (:keywords "minibuffer" "completion")
+			  (:url . "https://elpa.gnu.org/packages/aggressive-completion.html"))])
  (aggressive-indent .
 		    [(1 8 3)
 		     ((emacs

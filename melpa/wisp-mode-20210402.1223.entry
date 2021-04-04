@@ -1,0 +1,11 @@
+(wisp-mode .
+	   [(20210402 1223)
+	    ((emacs
+	      (24 4)))
+	    "Tools for wisp: the Whitespace-to-Lisp preprocessor" single
+	    ((:commit . "50741a39a8985595d524e5e20f69921b355d7d0c")
+	     (:authors
+	      ("Arne Babenhauserheide" . "arne_bab@web.de"))
+	     (:maintainer "Arne Babenhauserheide" . "arne_bab@web.de")
+	     (:keywords "languages" "lisp" "scheme")
+	     (:url . "http://www.draketo.de/english/wisp"))])

@@ -15,6 +15,11 @@ compiler[1], have a look at wispjs-mode[2].
 
 ChangeLog:
 
+ - 0.2.8: use electric-indent-inhibit instead of electric-indent-local-mode
+          rename gpl.txt to COPYING for melpa
+          use the variable defined by define-derived-mode
+ - 0.2.7: dependency declared, always use wisp--prefix, homepage url
+ - 0.2.6: remove unnecessary autoloads
  - 0.2.5: backtab chooses existing lower indentation values from previous lines.
  - 0.2.4: better indentation support:
           cycle forward on tab,

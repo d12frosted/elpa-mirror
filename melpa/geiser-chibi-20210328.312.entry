@@ -1,0 +1,13 @@
+(geiser-chibi .
+	      [(20210328 312)
+	       ((emacs
+		 (24 4))
+		(geiser
+		 (0 12)))
+	       "Chibi Scheme's implementation of the geiser protocols" tar
+	       ((:commit . "9c6afab691ee3bd9c7ee05008d37b621adf8184b")
+		(:authors
+		 ("Peter" . "craven@gmx.net"))
+		(:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
+		(:keywords "languages" "chibi" "scheme" "geiser")
+		(:url . "https://gitlab.com/emacs-geiser/chibi"))])

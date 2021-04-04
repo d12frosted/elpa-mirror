@@ -1,0 +1,13 @@
+(geiser-chez .
+	     [(20210328 239)
+	      ((emacs
+		(26 1))
+	       (geiser
+		(0 12)))
+	      "Chez Scheme's implementation of the geiser protocols" tar
+	      ((:commit . "52b122a0e6e137f8058e3ca0d55c5e91233fc625")
+	       (:authors
+		("Peter" . "craven@gmx.net"))
+	       (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
+	       (:keywords "languages" "chez" "scheme" "geiser")
+	       (:url . "https://gitlab.com/emacs-geiser/chez"))])
