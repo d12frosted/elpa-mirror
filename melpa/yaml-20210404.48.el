@@ -4,8 +4,8 @@
 
 ;; Author: Zachary Romero <zkry@posteo.org>
 ;; Version: 0.1.0
-;; Package-Version: 20210326.533
-;; Package-Commit: 9ebddb55238d746dc5a5d46db04c9f360c140b99
+;; Package-Version: 20210404.48
+;; Package-Commit: a45f60c999bf1a3c860bb5138e26d48fef666b6f
 ;; Homepage: https://github.com/zkry/yaml.el
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools
@@ -32,11 +32,14 @@
 
 ;; yaml.el contains the code for parsing YAML natively in Elisp with
 ;; no dependencies.  The main function to parse YAML provided is
-;; `yaml-parse-string'.  The following are some examples of its usage:
+;; `yaml-parse-string'.  `yaml-encode' is also provided to encode a
+;; Lisp object to YAML.  The following are some examples of its usage:
 ;;
 ;; (yaml-parse-string "key1: value1\nkey2: value2")
 ;; (yaml-parse-string "key1: value1\nkey2: value2" :object-type 'alist)
 ;; (yaml-parse-string "numbers: [1, 2, 3]" :sequence-type 'list)
+;;
+;; (yaml-encode '((count . 3) (value . 10) (items ("ruby" "diamond"))))
 
 ;;; Code:
 
@@ -73,6 +76,7 @@ This flag is intended for development purposes.")
   "Stack of parsing states.")
 
 (defvar yaml--parsing-object-type nil)
+(defvar yaml--parsing-object-key-type nil)
 (defvar yaml--parsing-sequence-type nil)
 (defvar yaml--parsing-null-object nil)
 (defvar yaml--parsing-false-object nil)
@@ -411,6 +415,9 @@ This flag is intended for development purposes.")
       (progn
         (let ((key (pop yaml--cache))
               (table (car yaml--object-stack)))
+          (when (and (eql 'symbol yaml--parsing-object-key-type)
+                     (stringp key))
+            (setq key (intern key)))
           (puthash key value table))
         (pop yaml--state-stack)))
      ((equal top-state :trail-comments)
@@ -946,6 +953,7 @@ value.  It defaults to the symbol :false."
   (setq yaml--anchor-mappings (make-hash-table :test 'equal))
   (setq yaml--resolve-aliases nil)
   (let ((object-type (plist-get args :object-type))
+        (object-key-type (plist-get args :object-key-type))
         (sequence-type (plist-get args :sequence-type))
         (null-object (plist-get args :null-object))
         (false-object (plist-get args :false-object)))
@@ -958,6 +966,13 @@ value.  It defaults to the symbol :false."
      ((equal 'plist object-type)
       (setq yaml--parsing-object-type 'plist))
      (t (error "Invalid object-type.  object-type must be hash-table, alist, or plist")))
+    (cond
+     ((or (not object-key-type)
+          (equal 'string object-key-type))
+      (setq yaml--parsing-object-key-type 'string))
+     ((equal 'symbol object-key-type)
+      (setq yaml--parsing-object-key-type 'symbol))
+     (t (error "Invalid object-key-type.  object-key-type must be string, or symbol")))
     (cond
      ((or (not sequence-type)
           (equal sequence-type 'array))
@@ -2339,6 +2354,131 @@ Rules for this function are defined by the yaml-spec JSON file."
        (yaml--frame "ns-flow-yaml-content"
          (yaml--parse-from-grammar 'ns-plain n c))))
     (_ (error "Unknown parsing grammar state: %s %s" state args))))
+
+;;; Encoding
+
+(defun yaml-encode (object)
+  "Encode OBJECT to a YAML string."
+  (with-temp-buffer
+    (yaml--encode-object object 0)
+    (buffer-string)))
+
+(defun yaml--encode-object (object indent &optional auto-indent)
+  "Encode a Lisp OBJECT to YAML.
+
+INDENT indicates how deeply nested the object will be displayed
+in the YAML.  If AUTO-INDENT is non-nil, then emit the object
+without first inserting a newline."
+  (cond
+   ((yaml--scalarp object) (yaml--encode-scalar object))
+   ((hash-table-p object) (yaml--encode-hash-table object indent auto-indent))
+   ((listp object) (yaml--encode-list object indent auto-indent))
+   (t (error "Unknown object %s" object))))
+
+(defun yaml--scalarp (object)
+  "Return non-nil if OBJECT correlates to a YAML scalar."
+  (or (numberp object)
+      (symbolp object)
+      (stringp object)
+      (not object)))
+
+(defun yaml--encode-escape-string (s)
+  "Escape yaml special characters in string S."
+  (let* ((s (replace-regexp-in-string "\\\\" "\\\\" s))
+         (s (replace-regexp-in-string "\n" "\\\\n" s))
+         (s (replace-regexp-in-string "\t" "\\\\t" s))
+         (s (replace-regexp-in-string "\r" "\\\\r" s))
+         (s (replace-regexp-in-string "\"" "\\\\\"" s)))
+    s))
+
+
+
+(defun yaml--encode-scalar (s)
+  "Encode scalar S to buffer."
+  (cond
+   ((not s) (insert "nil"))
+   ((eql t s) (insert "true"))
+   ((symbolp s) (insert (symbol-name s)))
+   ((numberp s) (insert (number-to-string s)))
+   ((stringp s)
+    (if (string-match "\\`[-_a-zA-Z0-9]+\\'" s)
+        (insert s)
+      (insert "\"" (yaml--encode-escape-string s) "\"")))))
+
+(defun yaml--alist-to-hash-table (l)
+  "Return hash representation of L if it is an alist, nil otherwise."
+  (when (and (listp l) (seq-every-p (lambda (x) (and (consp x) (atom (car x)))) l))
+    (let ((h (make-hash-table)))
+      (seq-map (lambda (cpair)
+                 (let ((k (car cpair))
+                       (v (cdr cpair)))
+                   (puthash k v h)))
+               l)
+      h)))
+
+(defun yaml--encode-list (l indent &optional auto-indent)
+  "Encode list L to a string in the context of being INDENT deep.
+
+If AUTO-INDENT is non-nil, start the list on the current line,
+auto-detecting the indentation"
+  (let ((ht (yaml--alist-to-hash-table l)))
+    (cond (ht
+           (yaml--encode-hash-table ht indent auto-indent))
+          ((zerop (length l))
+           (insert "[]"))
+          ((seq-every-p #'yaml--scalarp l)
+           (insert "[")
+           (yaml--encode-object (car l) 0)
+           (seq-do (lambda (object)
+                     (insert ", ")
+                     (yaml--encode-object object 0))
+                   (cdr l))
+           (insert "]"))
+          (t
+           (let ((first t)
+                 (indent-string (make-string (* 2 indent) ?\s)))
+             (seq-do (lambda (object)
+                       (if (not first)
+                           (insert "\n" indent-string "- ")
+                         (if auto-indent
+                             (let ((curr-indent (yaml--encode-auto-detect-indent)))
+                               (insert (make-string (- indent curr-indent) ?\s)  "- "))
+                           (insert "\n" indent-string "- "))
+                         (setq first nil))
+                       (yaml--encode-object object (+ indent 2)
+                                            (or
+                                             (hash-table-p object)
+                                             (yaml--alist-to-hash-table object))))
+                     l))))))
+
+(defun yaml--encode-auto-detect-indent ()
+  "Return the amount of indentation at current place in encoding."
+  (length (thing-at-point 'line)))
+
+(defun yaml--encode-hash-table (m indent &optional auto-indent)
+  "Encode hash table M to a string in the context of being INDENT deep.
+
+If AUTO-INDENT is non-nil, auto-detect the indent on the current
+line and insert accordingly."
+  (cond ((zerop (hash-table-size m))
+         (insert "{}"))
+        (t
+         (let ((first t)
+               (indent-string (make-string indent ?\s)))
+           (maphash (lambda (k v)
+                      (if (not first)
+                          (insert "\n" indent-string)
+                        (if auto-indent
+                            (let ((curr-indent (yaml--encode-auto-detect-indent)))
+                              (when (> curr-indent indent)
+                                (setq indent (+ curr-indent 1)))
+                              (insert (make-string (- indent curr-indent) ?\s)))
+                          (insert "\n" indent-string))
+                        (setq first nil))
+                      (yaml--encode-object k indent nil)
+                      (insert ": ")
+                      (yaml--encode-object v (+ indent 2)))
+                    m)))))
 
 (provide 'yaml)
 

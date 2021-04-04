@@ -1,9 +1,11 @@
 (utop .
-      [(20190715 1836)
+      [(20210404 318)
        ((emacs
-	 (24)))
+	 (24))
+	(tuareg
+	 (2 2 0)))
        "Universal toplevel for OCaml" single
-       ((:commit . "ac9c21cfcf9ca2eb7d445419be3561a76a233a76")
+       ((:commit . "1660e5989af099ede2404d42e68834a5acca75ba")
 	(:authors
 	 ("Jeremie Dimino" . "jeremie@dimino.org"))
 	(:maintainer "Jeremie Dimino" . "jeremie@dimino.org")

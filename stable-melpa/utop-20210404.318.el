@@ -3,11 +3,11 @@
 ;; Copyright: (c) 2011, Jeremie Dimino <jeremie@dimino.org>
 ;; Author: Jeremie Dimino <jeremie@dimino.org>
 ;; URL: https://github.com/diml/utop
-;; Package-Version: 20190715.1836
-;; Package-Commit: ac9c21cfcf9ca2eb7d445419be3561a76a233a76
+;; Package-Version: 20210404.318
+;; Package-Commit: 1660e5989af099ede2404d42e68834a5acca75ba
 ;; Licence: BSD3
 ;; Version: 1.11
-;; Package-Requires: ((emacs "24"))
+;; Package-Requires: ((emacs "24") (tuareg "2.2.0"))
 ;; Keywords: ocaml languages
 
 ;; This file is a part of utop.
@@ -22,6 +22,7 @@
 (require 'easymenu)
 (require 'pcase)
 (require 'tabulated-list)
+(require 'tuareg)
 
 ;; +-----------------------------------------------------------------+
 ;; | License                                                         |
@@ -271,12 +272,18 @@ modes you need to set these variables:
 
 (defun utop-tuareg-next-phrase ()
   "Move to the next phrase after point."
-  (let* ((pos (tuareg--after-double-colon))
+  (let* ((pos (save-excursion
+                (when (looking-at-p "[;[:blank:]]*$")
+                  (skip-chars-backward ";[:blank:]")
+                  (when (> (point) 1)
+                    (- (point) 1)))))
          (pos (if pos pos (point)))
          (phrase (tuareg-discover-phrase pos)))
     (when phrase
       (goto-char (caddr phrase))
-      (tuareg--skip-double-colon)
+      (tuareg-skip-blank-and-comments)
+      (when (looking-at ";;[ \t\n]*")
+        (goto-char (match-end 0)))
       (tuareg-skip-blank-and-comments))))
 
 (defun utop-compat-next-phrase-beginning ()
@@ -1076,8 +1083,8 @@ defaults to 0."
   "Return the arguments of the utop command to run."
   ;; Read the command to run
   (when utop-edit-command
-    (setq utop-command (read-shell-command "utop command line: " utop-command))
-    (utop-arguments)))
+    (setq utop-command (read-shell-command "utop command line: " utop-command)))
+  (utop-arguments))
 
 (defun utop-start (arguments)
   "Start utop given ARGUMENTS."
@@ -1133,6 +1140,8 @@ See https://github.com/diml/utop for configuration information."))
             map)
   ;; Load local file variables
   (add-hook 'hack-local-variables-hook 'utop-hack-local-variables))
+
+(defvar company-backends)
 
 ;;;###autoload
 (define-derived-mode utop-mode fundamental-mode "utop"
@@ -1217,6 +1226,9 @@ Special keys for utop:
         ;; Put it in utop mode
         (with-current-buffer buf (utop-mode)))))
     buf))
+
+(declare-function company-begin-backend "ext:company")
+(declare-function company-grab-symbol-cons "ext:company")
 
 (defun utop-company-backend (command &optional _arg &rest ignored)
   "company backend for utop completions"

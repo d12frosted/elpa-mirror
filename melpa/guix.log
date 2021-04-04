@@ -5,7 +5,7 @@ Source:  https://github.com/alezost/guix.el.git
 Updating /mnt/store/melpa/working/guix/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/guix/
-  to /tmp/guix6ukDPQ/guix-20210224.1601
+  to /tmp/guixrW0ujq/guix-20210224.1601
   ! elisp/guix-about.el -> guix-about.el
   ! elisp/guix-auto-mode.el -> guix-auto-mode.el
   ! elisp/guix-build-log.el -> guix-build-log.el
@@ -53,7 +53,7 @@ Copying files (->) and directories (=>)
     images/guix-logo.svg -> images/guix-logo.svg
     scheme/emacs-guix => scheme/emacs-guix
     scheme/emacs-guix.scm -> scheme/emacs-guix.scm
-Created /tmp/guix6ukDPQ/guix-20210224.1601/emacs-guix.info
+Created /tmp/guixrW0ujq/guix-20210224.1601/emacs-guix.info
 Created guix-20210224.1601.tar containing:
   guix-20210224.1601/
   guix-20210224.1601/dir
@@ -124,9 +124,9 @@ Created guix-20210224.1601.tar containing:
   guix-20210224.1601/scheme/emacs-guix/system-generations.scm
   guix-20210224.1601/scheme/emacs-guix/system.scm
   guix-20210224.1601/scheme/emacs-guix/utils.scm
-Built guix in 11.598s, finished at Sat Apr  3 23:46:23 2021
+Built guix in 10.675s, finished at Sun Apr  4 04:03:45 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  435 Apr  3 23:46 packages/guix-20210224.1601.entry
-752K -rw-r--r-- 1 root root 750K Apr  3 23:46 packages/guix-20210224.1601.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  3 23:46 packages/guix-badge.svg
-4.0K -rw-r--r-- 1 root root  474 Apr  3 23:46 packages/guix-readme.txt
+4.0K -rw-r--r-- 1 root root  435 Apr  4 04:03 packages/guix-20210224.1601.entry
+752K -rw-r--r-- 1 root root 750K Apr  4 04:03 packages/guix-20210224.1601.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 04:03 packages/guix-badge.svg
+4.0K -rw-r--r-- 1 root root  474 Apr  4 04:03 packages/guix-readme.txt

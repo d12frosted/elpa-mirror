@@ -5,8 +5,6 @@
 ;; Author: Chad Albers <calbers@neomantic.com>
 ;; Maintainer: Chad Albers <calbers@neomantic.com>
 ;; URL: https://github.com/neomantic/helm-rubygems-org
-;; Package-Version: 20140826.1156
-;; Package-Commit: 6aaed984f698cbdf9f9aceb0221404563e28764d
 ;; Created: 25th August 2014
 ;; Version: 0.0.1
 ;; Keywords: ruby, rubygems, gemfile, helm
