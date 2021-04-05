@@ -4,10 +4,8 @@ which automatically completes for you after a short delay
 using the standard completion help (unless the number of possible
 completions exceeds `aggressive-completion-max-shown-completions').
 
-Automatic completion is temporarily disabled after all commands in
-`aggressive-completion-no-complete-commands'.  Basically all deletion/kill
-commands are listed here in order not to complete back to the thing you just
-deleted.
+Automatic completion is done after all commands in
+`aggressive-completion-auto-complete-commands'.
 
 Aggressive completion can be toggled using
 `aggressive-completion-toggle-auto-complete' (bound to `M-t' by default)
