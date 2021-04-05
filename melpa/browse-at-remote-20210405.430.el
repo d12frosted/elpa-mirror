@@ -4,8 +4,8 @@
 ;;
 ;; Author:     Rustem Muslimov <r.muslimov@gmail.com>
 ;; Version:    0.14.0
-;; Package-Version: 20210330.547
-;; Package-Commit: cf8ffb9bfdbfaf5635c36de35fe2aaa4b282227d
+;; Package-Version: 20210405.430
+;; Package-Commit: e02ad2189c87da33f80bf4967a968772ce3e4431
 ;; Keywords:   github, gitlab, bitbucket, gist, stash, phabricator, sourcehut, pagure
 ;; Homepage:   https://github.com/rmuslimov/browse-at-remote
 ;; Package-Requires: ((f "0.17.2") (s "1.9.0") (cl-lib "0.5"))
@@ -51,6 +51,7 @@
     ("git.savannah.gnu.org" . "gnu")
     ("gist.github.com" . "gist")
     ("git.sr.ht" . "sourcehut")
+    ("vs-ssh.visualstudio.com" . "ado")
     ("pagure.io" . "pagure")
     ("src.fedoraproject.org" . "pagure"))
   "Alist of domain patterns to remote types."
@@ -62,6 +63,7 @@
                              (const :tag "Bitbucket" "bitbucket")
                              (const :tag "Stash/Bitbucket Server" "stash")
                              (const :tag "git.savannah.gnu.org" "gnu")
+                             (const :tag "Azure DevOps" "ado")
                              (const :tag "Phabricator" "phabricator")
                              (const :tag "gist.github.com" "gist")
                              (const :tag "sourcehut" "sourcehut")
@@ -255,6 +257,37 @@ If HEAD is detached, return nil."
 (defun browse-at-remote--format-commit-url-as-github (repo-url commithash)
   "Commit URL formatted for github"
   (format "%s/commit/%s" repo-url commithash))
+
+(defun browse-at-remote-ado-format-url (repo-url)
+  "Get an ado formatted URL."
+  (let* ((s (split-string repo-url "/")))
+    ;; [protocol]//[organization].visualstudio.com/[project]/_git/[repository]
+    (format "%s//%s/%s/_git/%s"
+            (nth 0 s)
+            (replace-regexp-in-string "^vs-ssh" (nth 4 s) (nth 2 s))
+            (nth 5 s)
+            (nth 6 s))))
+
+(defun browse-at-remote--format-region-url-as-ado (repo-url location filename &optional linestart lineend)
+  "URL formatted for ado"
+  (let* (
+         ;; NOTE: I'm not sure what's the meaning of the "GB"
+         ;; prefix. My guess is that it stands for a "Git Branch".
+         (base-url (format "%s?version=%s%s&path=/%s"
+                           (browse-at-remote-ado-format-url repo-url)
+                           "GB"
+                           location
+                           filename)))
+  (cond
+   ((and linestart lineend)
+    (format "%s&line=%d&lineEnd=%d&lineStartColumn=1&lineEndColumn=1" base-url linestart (+ 1 lineend)))
+   (linestart (format "%s&line=%d&lineStartColumn=1&lineEndColumn=1" base-url linestart))
+   (t base-url))))
+
+(defun browse-at-remote--format-commit-url-as-ado (repo-url commithash)
+  "Commit URL formatted for ado"
+  ;; They does not seem to have anything like permalinks from github.
+  (error "The ado version of the commit-url is not implemented"))
 
 (defun browse-at-remote--format-region-url-as-bitbucket (repo-url location filename &optional linestart lineend)
   "URL formatted for bitbucket"
