@@ -1,0 +1,13 @@
+(flymake-flycheck .
+		  [(20210404 2128)
+		   ((flycheck
+		     (31))
+		    (emacs
+		     (26 1)))
+		   "Use flycheck checkers as flymake backends" single
+		   ((:commit . "d34a9ccc04de646df4364871e36c325ebe17c9bc")
+		    (:authors
+		     ("Steve Purcell" . "steve@sanityinc.com"))
+		    (:maintainer "Steve Purcell" . "steve@sanityinc.com")
+		    (:keywords "convenience" "languages" "tools")
+		    (:url . "https://github.com/purcell/flymake-flycheck"))])
