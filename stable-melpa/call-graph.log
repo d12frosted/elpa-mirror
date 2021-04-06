@@ -1,0 +1,25 @@
+Package: call-graph
+Fetcher: github
+Source:  https://github.com/beacoder/call-graph.git
+
+Updating /mnt/store/melpa/working/call-graph/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/call-graph/
+  to /tmp/call-graphfa5jJu/call-graph-20210311.831
+    call-graph.el -> call-graph.el
+    cg-global.el -> cg-global.el
+    cg-lib.el -> cg-lib.el
+    cg-python.el -> cg-python.el
+Created call-graph-20210311.831.tar containing:
+  call-graph-20210311.831/
+  call-graph-20210311.831/call-graph-pkg.el
+  call-graph-20210311.831/call-graph.el
+  call-graph-20210311.831/cg-global.el
+  call-graph-20210311.831/cg-lib.el
+  call-graph-20210311.831/cg-python.el
+Built call-graph in 3.557s, finished at Tue Apr  6 07:34:18 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  595 Apr  6 07:34 packages/call-graph-20210311.831.entry
+ 60K -rw-r--r-- 1 root root  60K Apr  6 07:34 packages/call-graph-20210311.831.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  6 07:34 packages/call-graph-badge.svg
+4.0K -rw-r--r-- 1 root root   52 Apr  6 07:34 packages/call-graph-readme.txt
