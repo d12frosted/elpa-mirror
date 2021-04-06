@@ -5,9 +5,10 @@
 ;; Author: Artem Malyshev <proofit404@gmail.com>
 ;; Homepage: https://github.com/proofit404/blacken
 ;; Version: 0.0.1
-;; Package-Version: 20210405.2129
-;; Package-Commit: 69d80126a30f58ae556d2a3e960f911f4af727f3
+;; Package-Version: 20210406.813
+;; Package-Commit: 880cf502198753643a3e2ccd4131ee6973be2e8a
 ;; Package-Requires: ((emacs "25.2"))
+;; SPDX-License-Identifier: GPL-3.0-or-later
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published
