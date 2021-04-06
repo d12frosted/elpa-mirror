@@ -1,0 +1,13 @@
+(geiser-mit .
+	    [(20210405 1920)
+	     ((emacs
+	       (24 4))
+	      (geiser
+	       (0 12)))
+	     "MIT/GNU Scheme's implementation of the geiser protocols" tar
+	     ((:commit . "d17394f577aaa2854a74a1a0039cb8f73378b400")
+	      (:authors
+	       ("Peter" . "craven@gmx.net"))
+	      (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
+	      (:keywords "languages" "mit" "scheme" "geiser")
+	      (:url . "https://gitlab.com/emacs-geiser/mit"))])

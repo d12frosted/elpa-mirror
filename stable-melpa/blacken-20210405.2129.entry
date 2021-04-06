@@ -1,0 +1,10 @@
+(blacken .
+	 [(20210405 2129)
+	  ((emacs
+	    (25 2)))
+	  "Reformat python buffers using the \"black\" formatter" single
+	  ((:commit . "69d80126a30f58ae556d2a3e960f911f4af727f3")
+	   (:authors
+	    ("Artem Malyshev" . "proofit404@gmail.com"))
+	   (:maintainer "Artem Malyshev" . "proofit404@gmail.com")
+	   (:url . "https://github.com/proofit404/blacken"))])

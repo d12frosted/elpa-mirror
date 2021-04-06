@@ -15,6 +15,7 @@ compiler[1], have a look at wispjs-mode[2].
 
 ChangeLog:
 
+ - 0.2.9: enabled imenu - thanks to Greg Reagle!
  - 0.2.8: use electric-indent-inhibit instead of electric-indent-local-mode
           rename gpl.txt to COPYING for melpa
           use the variable defined by define-derived-mode
