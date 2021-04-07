@@ -3,10 +3,8 @@
 ;; Copyright (C) 2013-2020  Steve Purcell
 
 ;; Author: Steve Purcell <steve@sanityinc.com>
-;; Package-Version: 20210106.224
-;; Package-X-Original-Version: 0
+;; Package-Version: 0
 ;; Package-Requires: ((emacs "24.1"))
-;; Package-Commit: d458fb5891e0da85271b1cba3ee0ee69ea66a374
 ;; URL: https://github.com/purcell/ruby-hash-syntax
 ;; Keywords: languages
 
