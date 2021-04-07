@@ -2,8 +2,8 @@
 
 ;; Author: Fox Kiester <noct@posteo.net>
 ;; URL: https://github.com/noctuid/link-hint.el
-;; Package-Version: 20201127.2144
-;; Package-Commit: 09ba5727d8ba4a2e5d4f5ce924aaebbc7478ff13
+;; Package-Version: 20210406.2054
+;; Package-Commit: 18bd6cb747fdb12e79c349884a9cf32efb04d0ae
 ;; Keywords: convenience url avy link links hyperlink
 ;; Package-Requires: ((avy "0.4.0") (emacs "24.4"))
 ;; Version: 0.1
@@ -725,7 +725,7 @@ Only search the range between just after the point and BOUND."
 (defun link-hint--overlay-epkg-category (overlay)
   "If OVERLAY contains a category of epkg, return it."
   (let ((category (overlay-get overlay 'category)))
-    (when category
+    (when (and category (require 'epkg nil t))
       (catch 'category
         (dolist (type '(epkg-package
                         epkg-author
