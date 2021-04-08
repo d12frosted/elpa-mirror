@@ -3,8 +3,8 @@
 ;; Copyright (C) 2016  Tamas K. Papp
 ;; Author: Tamas Papp <tkpapp@gmail.com>
 ;; Keywords: languages
-;; Package-Version: 20210407.1206
-;; Package-Commit: 2c25fe223fb107a385d38b0c26d4e1018de6066a
+;; Package-Version: 20210408.639
+;; Package-Commit: 79e686e3ebf164bd39fc2ea5cf09d38d0e1d763a
 ;; Version: 1.3.0
 ;; Package-Requires: ((emacs "25.1")(s "1.12"))
 ;; URL: https://github.com/tpapp/julia-repl
@@ -233,13 +233,21 @@ When PASTE-P, “bracketed paste” mode will be used. When RET-P, terminate wit
 ;; global variables
 ;;
 
+(defconst julia-repl--rx-at
+  (rx (seq "@" (syntax whitespace)
+           (? (group (+ alnum)) space)  ; package name
+           (group (+ (not (any space ">" "<" "(" ")" "\t" "\n" "," "'" "\"" ";" ":")))) ; path
+           ":" (group (+ num))))        ; line
+  "Matches “@ Foo ~/code/Foo/src/Foo.jl:100”")
+
 (defvar julia-repl--compilation-regexp-alist
-  '(;; matches "while loading /tmp/Foo.jl, in expression starting on line 2"
+  `(;; matches "while loading /tmp/Foo.jl, in expression starting on line 2"
     (julia-load-error . ("while loading \\([^ ><()\t\n,'\";:]+\\), in expression starting on line \\([0-9]+\\)" 1 2))
     ;; matches "around /tmp/Foo.jl:2", also starting with "at" or "Revise"
     (julia-loc . ("\\(around\\|at\\|Revise\\) \\([^ ><()\t\n,'\";:]+\\):\\([0-9]+\\)" 2 3))
     ;; matches "omitting file /tmp/Foo.jl due to parsing error near line 2", from Revise.parse_source!
     (julia-warn-revise . ("omitting file \\([^ ><()\t\n,'\";:]+\\) due to parsing error near line \\([0-9]+\\)" 1 2))
+    (julia-error-at . (,julia-repl--rx-at 2 3))
     )
   "Specifications for highlighting error locations.
 

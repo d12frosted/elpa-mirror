@@ -1,0 +1,21 @@
+Package: phpunit
+Fetcher: github
+Source:  https://github.com/nlamirault/phpunit.el.git
+
+Updating /mnt/store/melpa/working/phpunit/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/phpunit/
+  to /tmp/phpunitF2PR6l/phpunit-20180829.1438
+    phpunit-mode.el -> phpunit-mode.el
+    phpunit.el -> phpunit.el
+Created phpunit-20180829.1438.tar containing:
+  phpunit-20180829.1438/
+  phpunit-20180829.1438/phpunit-mode.el
+  phpunit-20180829.1438/phpunit-pkg.el
+  phpunit-20180829.1438/phpunit.el
+Built phpunit in 3.889s, finished at Thu Apr  8 12:02:05 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  553 Apr  8 12:02 packages/phpunit-20180829.1438.entry
+ 20K -rw-r--r-- 1 root root  20K Apr  8 12:02 packages/phpunit-20180829.1438.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  8 12:02 packages/phpunit-badge.svg
+4.0K -rw-r--r-- 1 root root  424 Apr  8 12:02 packages/phpunit-readme.txt

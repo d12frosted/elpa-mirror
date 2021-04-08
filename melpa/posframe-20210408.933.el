@@ -5,8 +5,8 @@
 ;; Author: Feng Shu <tumashu@163.com>
 ;; Maintainer: Feng Shu <tumashu@163.com>
 ;; URL: https://github.com/tumashu/posframe
-;; Package-Version: 20210407.924
-;; Package-Commit: 16d085eaa43afc50eb6c306b7da2d7465807f841
+;; Package-Version: 20210408.933
+;; Package-Commit: 98e420ad42c90099871d289b767edf86834fbf9e
 ;; Version: 0.9.0
 ;; Keywords: convenience, tooltip
 ;; Package-Requires: ((emacs "26"))
@@ -326,7 +326,7 @@ This posframe's buffer is BUFFER-OR-NAME."
                        ,(when font
                           (cons 'font font))
                        (title . "posframe")
-                       (parent-frame . ,(or parent-frame (window-frame)))
+                       (parent-frame . ,parent-frame)
                        (keep-ratio ,keep-ratio)
                        (posframe-buffer . ,(cons (buffer-name buffer)
                                                  buffer))
@@ -420,14 +420,19 @@ This posframe's buffer is BUFFER-OR-NAME."
                          refresh
                          accept-focus
                          hidehandler
+                         parent-frame-poshandler
                          &allow-other-keys)
   "Pop up a posframe and show STRING at POSITION.
+
+(1) POSITION
 
 POSITION can be:
 1. An integer, meaning point position.
 2. A cons of two integers, meaning absolute X and Y coordinates.
 3. Other type, in which case the corresponding POSHANDLER should be
    provided.
+
+(2) POSHANDLER
 
 POSHANDLER is a function of one argument returning an actual
 position.  Its argument is a plist of the following form:
@@ -455,6 +460,9 @@ position.  Its argument is a plist of the following form:
    :tab-line-height xxx
    :x-pixel-offset xxx
    :y-pixel-offset xxx)
+
+Note: poshandler info include :parent-frame-position, but user
+should never use it in poshandler function.
 
 By default, poshandler is auto-selected based on the type of POSITION,
 but the selection can be overridden using the POSHANDLER argument.
@@ -488,15 +496,23 @@ by the way, poshandler can be used by other packages easily
      `((left . ,(car posn))
        (top . ,(cdr posn))))
 
+(3) POSHANDLER-EXTRA-INFO
+
 POSHANDLER-EXTRA-INFO is a plist, which will prepend to the
 argument of poshandler function: 'info', it will *OVERRIDE* the
 exist key in 'info'.
 
+(4) BUFFER-OR-NAME
+
 This posframe's buffer is BUFFER-OR-NAME, which can be a buffer
 or a name of a (possibly nonexistent) buffer.
 
+(5) NO-PROPERTIES
+
 If NO-PROPERTIES is non-nil, The STRING's properties will
 be removed before being shown in posframe.
+
+(6) WIDTH, MIN-WIDTH, HEIGHT and MIN-HEIGHT
 
 WIDTH, MIN-WIDTH, HEIGHT and MIN-HEIGHT, specify bounds on the
 new total size of posframe.  MIN-HEIGHT and MIN-WIDTH default to
@@ -504,48 +520,70 @@ the values of ‘window-min-height’ and ‘window-min-width’
 respectively.  These arguments are specified in the canonical
 character width and height of posframe.
 
+(7) LEFT-FRINGE and RIGHT-FRINGE
+
 If LEFT-FRINGE or RIGHT-FRINGE is a number, left fringe or
 right fringe with be shown with the specified width.
+
+(8) BORDER-WIDTH, BORDER-COLOR, INTERNAL-BORDER-WIDTH and INTERNAL-BORDER-COLOR
 
 By default, posframe shows no borders, but users can specify
 borders by setting BORDER-WIDTH to a positive number.  Border
 color can be specified by BORDER-COLOR.
 
 INTERNAL-BORDER-WIDTH and INTERNAL-BORDER-COLOR are same as
-BORDER-WIDTH and INTERNAL-BORDER-COLOR, but do not suggest to use
-for the reason:
+BORDER-WIDTH and BORDER-COLOR, but do not suggest to use for the
+reason:
 
    Add distinct controls for child frames' borders (Bug#45620)
    http://git.savannah.gnu.org/cgit/emacs.git/commit/?id=ff7b1a133bfa7f2614650f8551824ffaef13fadc
+
+(9) FONT, FOREGROUND-COLOR and BACKGROUND-COLOR
 
 Posframe's font as well as foreground and background colors are
 derived from the current frame by default, but can be overridden
 using the FONT, FOREGROUND-COLOR and BACKGROUND-COLOR arguments,
 respectively.
 
+(10) RESPECT-HEADER-LINE and RESPECT-MODE-LINE
+
 By default, posframe will display no header-line, mode-line and
 tab-line.  In case a header-line, mode-line or tab-line is
 desired, users can set RESPECT-HEADER-LINE and RESPECT-MODE-LINE
 to t.
 
+(11) INITIALIZE
+
 INITIALIZE is a function with no argument.  It will run when
 posframe buffer is first selected with `with-current-buffer'
 in `posframe-show', and only run once (for performance reasons).
 
+(12) LINES-TRUNCATE
+
 If LINES-TRUNCATE is non-nil, then lines will truncate in the
 posframe instead of wrap.
+
+(13) OVERRIDE-PARAMETERS
 
 OVERRIDE-PARAMETERS is very powful, *all* the frame parameters
 used by posframe's frame can be overridden by it.
 
+(14) TIMEOUT
+
 TIMEOUT can specify the number of seconds after which the posframe
 will auto-hide.
+
+(15) REFRESH
 
 If REFRESH is a number, posframe's frame-size will be re-adjusted
 every REFRESH seconds.
 
+(16) ACCEPT-FOCUS
+
 When ACCEPT-FOCUS is non-nil, posframe will accept focus.
 be careful, you may face some bugs when set it to non-nil.
+
+(17) HIDEHANDLER
 
 HIDEHANDLER is a function, when it return t, posframe will be
 hide when `post-command-hook' is executed, this function has a
@@ -558,6 +596,19 @@ The builtin hidehandler functions are listed below:
 
 1. `posframe-hidehandler-when-buffer-switch'
 
+(18) PARENT-FRAME-POSHANDLER
+
+PARENT-FRAME-POSHANDLER is a function, posframe can get current
+frame's position in screen by call this function, PLEASE NOTE:
+this argument will disable child-frame feature, the user case at
+the moment I know is let ivy-posframe run properly in EXWM
+environment (let posframe show on the other appliction window).
+DO NOT USE UNLESS NECESSARY. an example parent frame poshandler
+function is:
+
+1. `posframe-parent-frame-poshandler-xwininfo'
+
+(19) Others
 
 You can use `posframe-delete-all' to delete all posframes."
   (let* ((position (or (funcall posframe-arghandler buffer-or-name :position position) (point)))
@@ -589,6 +640,7 @@ You can use `posframe-delete-all' to delete all posframes."
          (refresh (funcall posframe-arghandler buffer-or-name :refresh refresh))
          (accept-focus (funcall posframe-arghandler buffer-or-name :accept-focus accept-focus))
          (hidehandler (funcall posframe-arghandler buffer-or-name :hidehandler hidehandler))
+         (parent-frame-poshandler (funcall posframe-arghandler buffer-or-name :parent-frame-poshandler parent-frame-poshandler))
          ;;-----------------------------------------------------
          (buffer (get-buffer-create buffer-or-name))
          (parent-window (selected-window))
@@ -603,6 +655,9 @@ You can use `posframe-delete-all' to delete all posframes."
          (parent-frame (window-frame parent-window))
          (parent-frame-width (frame-pixel-width parent-frame))
          (parent-frame-height (frame-pixel-height parent-frame))
+         (parent-frame-position
+          (when (functionp parent-frame-poshandler)
+            (funcall parent-frame-poshandler)))
          (font-width (default-font-width))
          (font-height (with-current-buffer (window-buffer parent-window)
                         (posframe--get-font-height position)))
@@ -629,7 +684,9 @@ You can use `posframe-delete-all' to delete all posframes."
             (posframe--create-posframe
              buffer
              :font font
-             :parent-frame parent-frame
+             :parent-frame
+             (unless parent-frame-position
+               parent-frame)
              :left-fringe left-fringe
              :right-fringe right-fringe
              :border-width border-width
@@ -673,6 +730,7 @@ You can use `posframe-delete-all' to delete all posframes."
                   :parent-frame parent-frame
                   :parent-frame-width parent-frame-width
                   :parent-frame-height parent-frame-height
+                  :parent-frame-position parent-frame-position
                   :parent-window parent-window
                   :parent-window-top parent-window-top
                   :parent-window-left parent-window-left
@@ -990,17 +1048,32 @@ of `posframe-show'."
   (if (equal info posframe--last-poshandler-info)
       posframe--last-posframe-pixel-position
     (setq posframe--last-poshandler-info info)
-    (funcall
-     (or (plist-get info :poshandler)
-         (let ((position (plist-get info :position)))
-           (cond ((integerp position)
-                  #'posframe-poshandler-point-bottom-left-corner)
-                 ((and (consp position)
-                       (integerp (car position))
-                       (integerp (cdr position)))
-                  #'posframe-poshandler-absolute-x-y)
-                 (t (error "Posframe: have no valid poshandler")))))
-     info)))
+    (let* ((posframe-width (plist-get info :posframe-width))
+           (posframe-height (plist-get info :posframe-height))
+           (parent-frame-position (plist-get info :parent-frame-position))
+           (parent-frame-x (or (car parent-frame-position) 0))
+           (parent-frame-y (or (cdr parent-frame-position) 0))
+           (position (funcall
+                      (or (plist-get info :poshandler)
+                          (let ((position (plist-get info :position)))
+                            (cond ((integerp position)
+                                   #'posframe-poshandler-point-bottom-left-corner)
+                                  ((and (consp position)
+                                        (integerp (car position))
+                                        (integerp (cdr position)))
+                                   #'posframe-poshandler-absolute-x-y)
+                                  (t (error "Posframe: have no valid poshandler")))))
+                      info))
+           (x (car position))
+           (y (cdr position)))
+      (if (not parent-frame-position)
+          position
+        (when (< x 0)
+          (setq x (+ posframe-width x)))
+        (when (< y 0)
+          (setq y (+ posframe-height y)))
+        (cons (+ parent-frame-x x)
+              (+ parent-frame-y y))))))
 
 (cl-defun posframe-poshandler-argbuilder (&optional
                                           child-frame
@@ -1331,6 +1404,29 @@ bottom center.  The structure of INFO can be found in docstring of
     (cons (+ window-left (/ (- window-width posframe-width) 2))
           (+ window-top window-height
              (- 0 mode-line-height posframe-height)))))
+
+(defun posframe-parent-frame-poshandler-xwininfo ()
+  "Parent frame poshander function.
+Get the position of parent frame (current frame) with the help of
+xwininfo."
+  (when (executable-find "xwininfo")
+    (with-temp-buffer
+      (let ((case-fold-search nil)
+            (args (format "xwininfo -display %s -id %s"
+		          (frame-parameter nil 'display)
+		          (frame-parameter nil 'window-id))))
+        (call-process shell-file-name nil t nil shell-command-switch args)
+        (goto-char (point-min))
+        (search-forward "Absolute upper-left")
+        (let ((x (string-to-number
+                  (buffer-substring-no-properties
+	           (search-forward "X: ")
+	           (line-end-position))))
+              (y (string-to-number
+                  (buffer-substring-no-properties
+	           (search-forward "Y: ")
+	           (line-end-position)))))
+          (cons x y))))))
 
 
 (provide 'posframe)
