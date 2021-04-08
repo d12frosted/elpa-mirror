@@ -4,7 +4,7 @@
 ;;
 ;; Version: 0.0.1
 ;; Package-Version: 20201229.1035
-;; Package-Commit: 68b0aaaefc18b267e4e383df36a8dfb7448bc83c
+;; Package-Commit: a8d867e7cc446afcd4dc71d4f528e58d639840e1
 ;; Keywords: convenience
 ;; Author: Chen Bin <chenbin DOT sh AT gmail DOT com>
 ;; URL: https://github.com/redguardtoo/imenu-extra

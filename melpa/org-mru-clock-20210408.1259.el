@@ -4,8 +4,8 @@
 
 ;; Author: Kevin Brubeck Unhammer <unhammer@fsfe.org>
 ;; Version: 0.6.0
-;; Package-Version: 20210216.1141
-;; Package-Commit: 99ac0c85060f9e4710de73db4a19120a0a23c39e
+;; Package-Version: 20210408.1259
+;; Package-Commit: 229461b92ff89fd96cd7730df9fd589a8b0ef949
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/unhammer/org-mru-clock
 ;; Keywords: convenience, calendar
@@ -410,9 +410,10 @@ string."
       (goto-char pos)
       (org-show-context 'agenda)
       (org-end-of-meta-data 'full)
+      (insert "\n")
+      (backward-char 1)
       (indent-for-tab-command)
-      (insert (format "%s\n" link))
-      (indent-for-tab-command)
+      (insert link)
       (message "Stored a link under %s" (car task)))))
 
 (defun org-mru-clock-show-narrowed (task)

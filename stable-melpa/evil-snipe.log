@@ -3,7 +3,9 @@ Fetcher: github
 Source:  https://github.com/hlissner/evil-snipe.git
 
 Updating /mnt/store/melpa/working/evil-snipe/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/hlissner/evil-snipe.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
+Built evil-snipe in 3.543s, finished at Thu Apr  8 14:58:37 2021
+ ✓ Success:
+ 28K -rwxr-xr-x 1 root root  26K Apr  8 14:58 packages/evil-snipe-20200531.1008.el
+4.0K -rw-r--r-- 1 root root  484 Apr  8 14:58 packages/evil-snipe-20200531.1008.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr  8 14:58 packages/evil-snipe-badge.svg
+4.0K -rw-r--r-- 1 root root  478 Apr  8 14:58 packages/evil-snipe-readme.txt
