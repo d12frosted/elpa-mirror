@@ -4,6 +4,8 @@
 
 ;; Author: Arthur Leonard Andersen <leoc.git@gmail.com>
 ;; URL: http://github.com/leoc/ruby-interpolation.el
+;; Package-Version: 20131112.1652
+;; Package-Commit: 1978e337601222cedf00e117bf4b5cac15d1f203
 ;; Version: 0.1.0
 
 ;; This program is free software; you can redistribute it and/or modify

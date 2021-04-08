@@ -6,7 +6,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-spell-fu
 ;; Package-Version: 20210328.413
-;; Package-Commit: 0d9c929c12c431cb7e22d6b32ac6858d46414a0b
+;; Package-Commit: c566ed568aae0a73202a51e97a73c5e4af0053d2
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))

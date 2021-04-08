@@ -6,7 +6,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-xref-rst
 ;; Package-Version: 20210320.1123
-;; Package-Commit: f5bcb89e026562abb8da4ea337457d43fed2e71b
+;; Package-Commit: 8d8e00352e6f7e86d38d9ea4330f6cb2380fb2ec
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 

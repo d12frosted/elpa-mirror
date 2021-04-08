@@ -1,6 +1,8 @@
 ;;; salesforce-utils.el --- simple utilities for Salesforce
 
 ;; Version: 1.0
+;; Package-Version: 20160814.154
+;; Package-Commit: 73328baf0fb94ac0d0de645a8f6d42e5ae27f773
 ;; Author: Sean McAfee
 ;; Url: https://github.com/grimnebulin/emacs-salesforce
 ;; Package-Requires: ((cl-lib "0.5"))

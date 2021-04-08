@@ -335,6 +335,7 @@ missing package or change you would like to see.
     vc (built-in mode line status for version control)
     vc-annotate (C-x v g)
     vdiff
+    vertico
     vimish-fold
     visible-mark
     visual-regexp
