@@ -1,0 +1,21 @@
+Package: etherpad
+Fetcher: github
+Source:  https://github.com/zzkt/ethermacs.git
+
+Updating /mnt/store/melpa/working/etherpad/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/etherpad/
+  to /tmp/etherpadJSYF2X/etherpad-20210401.1213
+    etherpad.el -> etherpad.el
+    ethersync.el -> ethersync.el
+Created etherpad-20210401.1213.tar containing:
+  etherpad-20210401.1213/
+  etherpad-20210401.1213/etherpad-pkg.el
+  etherpad-20210401.1213/etherpad.el
+  etherpad-20210401.1213/ethersync.el
+Built etherpad in 3.541s, finished at Fri Apr  9 03:37:24 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  501 Apr  9 03:37 packages/etherpad-20210401.1213.entry
+ 40K -rw-r--r-- 1 root root  40K Apr  9 03:37 packages/etherpad-20210401.1213.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  9 03:37 packages/etherpad-badge.svg
+4.0K -rw-r--r-- 1 root root  655 Apr  9 03:37 packages/etherpad-readme.txt
