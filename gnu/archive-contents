@@ -2522,6 +2522,15 @@
 		  ("Michael McNamara" . "mac@verilog.com")
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:keywords "languages"))])
+ (vertico .
+	  [(0 2)
+	   ((emacs
+	     (27 1)))
+	   "VERTical Interactive COmpletion" tar
+	   ((:url . "https://github.com/minad/vertico")
+	    (:maintainer "Daniel Mendler")
+	    (:authors
+	     ("Daniel Mendler")))])
  (vigenere .
 	   [(1 0)
 	    ((emacs
