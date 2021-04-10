@@ -3,6 +3,8 @@
 ;; Author: Sam Kleinman
 ;; Maintainer: tychoish <garen@tychoish.com>
 ;; Version: 1.0
+;; Package-Version: 20200920.1751
+;; Package-Commit: 12ff6045e9b6aa42f98abd4ddc44d670268a0849
 ;; Package-Requires: ((projectile "0.10.0"))
 ;; Homepage: https://github.com/tychoish/git-grep.el
 ;; Keywords: matching files grep search using git-grep

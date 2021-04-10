@@ -6,10 +6,10 @@
 ;; Maintainer: Shigeaki Nishina
 ;; Created: March 11, 2020
 ;; URL: https://github.com/shg/julia-vterm.el
-;; Package-Version: 20210327.657
-;; Package-Commit: 1d70c7f9fb91654e38fc868baf0ef72399f75ded
+;; Package-Version: 20210410.40
+;; Package-Commit: b8a749f19bef179c58068d3fa5cd53c3db5d1ecf
 ;; Package-Requires: ((emacs "25.1") (vterm "0.0.1"))
-;; Version: 0.12
+;; Version: 0.13
 ;; Keywords: languages, julia
 
 ;; This file is not part of GNU Emacs.
@@ -98,7 +98,7 @@ If there exists no such buffer, one is created and returned.
 With non-nil RESTART, the existing buffer will be killed and
 recreated."
   (if-let ((buffer (get-buffer (julia-vterm-repl-buffer-name session-name)))
-	   (proc (with-current-buffer buffer vterm--process))
+	   (alive (vterm-check-proc buffer))
 	   (no-restart (not restart)))
       buffer
     (if (get-buffer-process buffer) (delete-process buffer))

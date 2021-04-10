@@ -5,9 +5,9 @@
 ;; Author: Feng Shu <tumashu@163.com>
 ;; Maintainer: Feng Shu <tumashu@163.com>
 ;; URL: https://github.com/tumashu/posframe
-;; Package-Version: 20210409.627
-;; Package-Commit: f8b099069fad4b0a4d8c6a047a6676c2a60008c1
-;; Version: 0.9.0
+;; Package-Version: 20210410.528
+;; Package-Commit: ae3c4ddfce698f4e24a0fcab938267e41e74da90
+;; Version: 1.0.0
 ;; Keywords: convenience, tooltip
 ;; Package-Requires: ((emacs "26"))
 
@@ -661,7 +661,8 @@ You can use `posframe-delete-all' to delete all posframes."
          (parent-frame-height (frame-pixel-height parent-frame))
          (ref-position
           (when (functionp refposhandler)
-            (funcall refposhandler parent-frame)))
+            (ignore-errors
+              (funcall refposhandler parent-frame))))
          (font-width (default-font-width))
          (font-height (with-current-buffer (window-buffer parent-window)
                         (posframe--get-font-height position)))
