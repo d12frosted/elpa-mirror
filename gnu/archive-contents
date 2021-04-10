@@ -64,7 +64,7 @@
 		  ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		 (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (aggressive-completion .
-			[(1 4)
+			[(1 5)
 			 ((emacs
 			   (27 1)))
 			 "Automatic minibuffer completion" tar
@@ -1167,11 +1167,11 @@
 	       ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	      (:keywords "convenience"))])
  (ivy-posframe .
-	       [(0 5 5)
+	       [(0 6 0)
 		((emacs
 		  (26 0))
 		 (posframe
-		  (0 8 0))
+		  (1 0 0))
 		 (ivy
 		  (0 13 0)))
 		"Using posframe to show Ivy" tar
@@ -1761,7 +1761,7 @@
 	   ("Mario Lang" . "mlang@delysid.org"))
 	  (:maintainer "Mario Lang" . "mlang@delysid.org"))])
  (posframe .
-	   [(0 9 0)
+	   [(1 0 0)
 	    ((emacs
 	      (26)))
 	    "Pop a posframe (just a frame) at point" tar
