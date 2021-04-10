@@ -1,0 +1,17 @@
+(merlin-company .
+		[(20210409 1323)
+		 ((emacs
+		   (25 1))
+		  (merlin
+		   (3))
+		  (company
+		   (0 9)))
+		 "Merlin and company mode integration." single
+		 ((:commit . "cb1094ee0aeb5bd2bf5530911157c61cb316e6f3")
+		  (:authors
+		   ("Simon Castellan <simon.castellan(_)iuwt.fr>")
+		   ("Frédéric Bour <frederic.bour(_)lakaban.net>")
+		   ("Thomas Refis <thomas.refis(_)gmail.com>"))
+		  (:maintainer "Simon Castellan <simon.castellan(_)iuwt.fr>")
+		  (:keywords "ocaml" "languages")
+		  (:url . "http://github.com/ocaml/merlin"))])

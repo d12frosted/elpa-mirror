@@ -6,7 +6,7 @@ http://www.intel.com/content/www/us/en/processors/architectures-software-develop
 
 Building the index specifically requires Poppler's pdftotext, not
 just any PDF to text converter. It has a critical feature over the
-others: conventional line feed characters (U+000C) are output
+others: conventional form feed characters (U+000C) are output
 between pages, allowing precise tracking of page numbers. These are
 the markers Emacs uses for `forward-page' and `backward-page'.
 

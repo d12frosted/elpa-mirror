@@ -1,0 +1,11 @@
+(geiser .
+	[(20210410 51)
+	 ((emacs
+	   (24 4)))
+	 "GNU Emacs and Scheme talk to each other" tar
+	 ((:commit . "003c9aec8d678ad2392fed25e83fa07d5ec875ef")
+	  (:authors
+	   ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
+	  (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
+	  (:keywords "languages" "scheme" "geiser")
+	  (:url . "https://gitlab.com/emacs-geiser/"))])

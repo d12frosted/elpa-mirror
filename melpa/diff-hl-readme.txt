@@ -14,6 +14,8 @@ Provided commands:
 
 The mode takes advantage of `smartrep' if it is installed.
 
+Alternatively, it integrates with `repeat-mode' (Emacs 28+).
+
 Add either of the following to your init file.
 
 To use it in all buffers:
