@@ -3,8 +3,19 @@ Fetcher: gitlab
 Source:  https://gitlab.com/mavit/poly-ansible.git
 
 Updating /mnt/store/melpa/working/poly-ansible/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal server error
-fatal: unable to access 'https://gitlab.com/mavit/poly-ansible.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/poly-ansible/
+  to /tmp/poly-ansibleqiy264/poly-ansible-20200826.1542
+    poly-ansible-jinja2-filters.el -> poly-ansible-jinja2-filters.el
+    poly-ansible.el -> poly-ansible.el
+Created poly-ansible-20200826.1542.tar containing:
+  poly-ansible-20200826.1542/
+  poly-ansible-20200826.1542/poly-ansible-jinja2-filters.el
+  poly-ansible-20200826.1542/poly-ansible-pkg.el
+  poly-ansible-20200826.1542/poly-ansible.el
+Built poly-ansible in 3.304s, finished at Sun Apr 11 03:46:21 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  489 Apr 11 03:46 packages/poly-ansible-20200826.1542.entry
+ 12K -rw-r--r-- 1 root root  10K Apr 11 03:46 packages/poly-ansible-20200826.1542.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 11 03:46 packages/poly-ansible-badge.svg
+4.0K -rw-r--r-- 1 root root   67 Apr 11 03:46 packages/poly-ansible-readme.txt

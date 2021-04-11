@@ -26,9 +26,11 @@ Usage,
   `counsel-etags-universal-ctags-p' to detect if Universal Ctags is used.
   `counsel-etags-exuberant-ctags-p' to detect if Exuberant Ctags is used.
   See documentation of `counsel-etags-use-ripgrep-force' on using ripgrep.
-  If it's not set, correct grep program is autmatically detected.
+  If it's not set, correct grep program is automatically detected.
 
 Tips,
+- Use `pop-tag-mark' to jump back.
+
 - The grep program path on Native Windows Emacs uses either forward slash or
   backward slash.  Like "C:/rg.exe" or "C:\\\\rg.exe".
   If grep program path is added to environment variable PATH, you don't need

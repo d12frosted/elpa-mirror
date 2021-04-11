@@ -1,0 +1,13 @@
+(counsel-etags .
+	       [(20210410 1256)
+		((emacs
+		  (25 1))
+		 (counsel
+		  (0 13 0)))
+		"Fast and complete Ctags/Etags solution using ivy" single
+		((:commit . "5d7ee6776ed5c314472e2af2797ebfdc725e6a70")
+		 (:authors
+		  ("Chen Bin <chenbin dot sh AT gmail dot com>"))
+		 (:maintainer "Chen Bin <chenbin dot sh AT gmail dot com>")
+		 (:keywords "tools" "convenience")
+		 (:url . "http://github.com/redguardtoo/counsel-etags"))])
