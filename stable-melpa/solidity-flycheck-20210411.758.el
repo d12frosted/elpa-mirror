@@ -4,8 +4,8 @@
 
 ;; Author: Lefteris Karapetsas  <lefteris@refu.co>
 ;; Keywords: languages, solidity, flycheck
-;; Package-Version: 20210331.1709
-;; Package-Commit: 9b1b7097fb5aaecb2aeec558b7d975bb3d7b8d10
+;; Package-Version: 20210411.758
+;; Package-Commit: b83354943626ea7c50011d5806b17be17077d1c4
 ;; Version: 0.1.11
 ;; Package-Requires: ((flycheck "32-cvs") (solidity-mode "0.1.9") (dash "2.17.0"))
 
@@ -214,11 +214,9 @@ no .soliumrc.json is found, `project-roots' is used."
 (defun solidity-flycheck--solc-remappings ()
   (let* ((allow-paths (solidity-flycheck--solc-allow-paths)))
     (->> allow-paths
-         (mapcar
-          #'solidity-flycheck--only-subdirectories)
-
+         (remove-if-not #'file-exists-p)
+         (mapcar #'solidity-flycheck--only-subdirectories)
          -flatten
-
          (mapcar
           (lambda (dir)
             (let ((prefix (file-name-nondirectory dir)))

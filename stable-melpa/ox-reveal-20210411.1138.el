@@ -5,8 +5,8 @@
 ;; Author: Yujie Wen <yjwen.ty at gmail dot com>
 ;; Created: 2013-04-27
 ;; Version: 1.0
-;; Package-Version: 20210215.1605
-;; Package-Commit: 499c5777174dbc7318e3f32fd50357c2823b228a
+;; Package-Version: 20210411.1138
+;; Package-Commit: 58540c7dde7dbf4e922209d7fb3e6739570f49b5
 ;; Package-Requires: ((org "8.3"))
 ;; Keywords: outlines, hypermedia, slideshow, presentation
 
@@ -1159,7 +1159,7 @@ contextual information."
 			       loc)))
 		      num-start))))
 	   (code-attribs (or (org-export-read-attribute
-			 :attr_reveal src-block :code_attribs) ""))
+			      :attr_reveal src-block :code_attribs) ""))
            (label (let ((lbl (org-element-property :name src-block)))
                     (if (not lbl) ""
                       (format " id=\"%s\"" lbl))))
@@ -1211,10 +1211,10 @@ window.klipse_settings = { " langselector  ": \".klipse\" };
 	       (format "\n<pre%s%s><code class=\"%s\" %s>%s</code></pre>"
 		       (or (frag-class src-block info) "")
 		       label lang code-attribs code)
-	     (format "\n<pre %s%s><code trim>%s</code></pre>"
+	     (format "\n<pre %s%s %s><code trim>%s</code></pre>"
 		     (or (frag-class src-block info)
 			 (format " class=\"src src-%s\"" lang))
-		     label code))))))))
+		     label code-attribs code))))))))
 
 (defun org-reveal-quote-block (quote-block contents info)
   "Transcode a QUOTE-BLOCK element from Org to Reveal.
