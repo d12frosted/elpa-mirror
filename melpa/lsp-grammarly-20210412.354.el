@@ -7,8 +7,8 @@
 ;; Description: LSP Clients for Grammarly.
 ;; Keyword: lsp grammarly checker
 ;; Version: 0.2.2
-;; Package-Version: 20210404.645
-;; Package-Commit: aa2e70eec5755651ed6c9d9f4063542634760c91
+;; Package-Version: 20210412.354
+;; Package-Commit: fcc48b086ac3fe95f093636ffc8e8a6b5e1c3ba4
 ;; Package-Requires: ((emacs "27.1") (lsp-mode "6.1") (grammarly "0.3.0") (request "0.3.0") (s "1.12.0") (ht "2.3"))
 ;; URL: https://github.com/emacs-grammarly/lsp-grammarly
 
@@ -41,8 +41,8 @@
 (require 'ht)
 (require 'json)
 
-(unless (require 'keytar nil t)
-  (warn "`Keytar' is required for login into Grammarly account."))
+(unless (require 'auth-source-keytar nil t)
+  (warn "`auth-source-keytar' is required for login into Grammarly account."))
 
 (defgroup lsp-grammarly nil
   "Settings for the Grammarly Language Server.
@@ -193,14 +193,14 @@ For argument CALLBACK, see object `lsp--client' description."
 
 (defun lsp-grammarly--store-token (_workspace _uri _callback &rest _)
   "Save the token once."
-  (keytar-set-password
+  (auth-source-keytar-set-password
    lsp-grammarly--cookie-key lsp-grammarly--account lsp-grammarly--password-string))
 
 (defun lsp-grammarly--init (&rest _)
   "Get Grammarly API ready."
   (unless (lsp-grammarly-login-p)
     (let ((pass (ignore-errors
-                  (keytar-get-password lsp-grammarly--cookie-key lsp-grammarly--account))))
+                  (auth-source-keytar-get-password lsp-grammarly--cookie-key lsp-grammarly--account))))
       (when pass
         (setq lsp-grammarly--password-string pass
               lsp-grammarly--password (lsp-grammarly--json-read pass))))
@@ -399,7 +399,7 @@ Argument CODE is the query string from URI."
                                   ("isPremium" . ,premium)
                                   ("token" . ,token)
                                   ("username" . ,email))))
-                (keytar-set-password
+                (auth-source-keytar-set-password
                  lsp-grammarly--cookie-key lsp-grammarly--account
                  (lsp-grammarly--json-encode auth-info))
                 ;; TODO: This is slow, need to improve the performance for better
@@ -418,7 +418,7 @@ Argument CODE is the query string from URI."
 (defun lsp-grammarly-login ()
   "Login to Grammarly.com."
   (interactive)
-  (keytar--ckeck)
+  (auth-source-keytar--ckeck)
   (if (lsp-grammarly-login-p)
       (message "[INFO] You are already logged in with `%s`" (lsp-grammarly--username))
     (setq lsp-grammarly--code-verifier
@@ -433,10 +433,10 @@ Argument CODE is the query string from URI."
 (defun lsp-grammarly-logout ()
   "Logout from Grammarly.com."
   (interactive)
-  (keytar--ckeck)
+  (auth-source-keytar--ckeck)
   (if (not (lsp-grammarly-login-p))
       (message "[INFO] You are already logout from Grammarly.com")
-    (if (keytar-delete-password lsp-grammarly--cookie-key lsp-grammarly--account)
+    (if (auth-source-keytar-delete-password lsp-grammarly--cookie-key lsp-grammarly--account)
         (progn
           (setq lsp-grammarly--password nil
                 lsp-grammarly--password-string nil)
