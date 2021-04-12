@@ -3,9 +3,19 @@ Fetcher: github
 Source:  https://github.com/raxod502/el-patch.git
 
 Updating /mnt/store/melpa/working/el-patch/
-Built el-patch in 3.355s, finished at Sun Apr 11 11:11:57 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/el-patch/
+  to /tmp/el-patchoSPnjc/el-patch-20210411.1954
+    el-patch-template.el -> el-patch-template.el
+    el-patch.el -> el-patch.el
+Created el-patch-20210411.1954.tar containing:
+  el-patch-20210411.1954/
+  el-patch-20210411.1954/el-patch-pkg.el
+  el-patch-20210411.1954/el-patch-template.el
+  el-patch-20210411.1954/el-patch.el
+Built el-patch in 3.501s, finished at Mon Apr 12 03:27:25 2021
  ✓ Success:
- 44K -rw-r--r-- 1 root root  41K Apr 11 11:11 packages/el-patch-20210226.411.el
-4.0K -rw-r--r-- 1 root root  370 Apr 11 11:11 packages/el-patch-20210226.411.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 11 11:11 packages/el-patch-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Apr 11 11:11 packages/el-patch-readme.txt
+4.0K -rw-r--r-- 1 root root  368 Apr 12 03:27 packages/el-patch-20210411.1954.entry
+ 80K -rw-r--r-- 1 root root  80K Apr 12 03:27 packages/el-patch-20210411.1954.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 12 03:27 packages/el-patch-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Apr 12 03:27 packages/el-patch-readme.txt

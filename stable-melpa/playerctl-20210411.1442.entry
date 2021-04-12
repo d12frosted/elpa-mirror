@@ -1,0 +1,9 @@
+(playerctl .
+	   [(20210411 1442)
+	    nil "Control your music player (e.g. Spotify) with playerctl" single
+	    ((:commit . "41564d453c9f936a4ce2699afacc6d1dff974f1c")
+	     (:authors
+	      ("Thomas Luquet" . "thomas@luquet.net"))
+	     (:maintainer "Thomas Luquet" . "thomas@luquet.net")
+	     (:keywords "multimedia" "playerctl" "music")
+	     (:url . "https://github.com/thomasluquet/playerctl.el"))])

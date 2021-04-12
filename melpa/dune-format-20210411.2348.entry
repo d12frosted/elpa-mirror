@@ -1,0 +1,13 @@
+(dune-format .
+	     [(20210411 2348)
+	      ((reformatter
+		(0 6))
+	       (emacs
+		(24 1)))
+	      "Reformat OCaml's dune files automatically" single
+	      ((:commit . "22af9fcf75eea577a39fc315fd9bcaa709fb4e1c")
+	       (:authors
+		("Steve Purcell" . "steve@sanityinc.com"))
+	       (:maintainer "Steve Purcell" . "steve@sanityinc.com")
+	       (:keywords "languages")
+	       (:url . "https://github.com/purcell/dune-format-el"))])
