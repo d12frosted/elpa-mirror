@@ -6,6 +6,8 @@
 #+texinfo_dir_title: Vertico: (vertico).
 #+texinfo_dir_desc: VERTical Interactive COmpletion.
 
+#+html: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Vertigomovie_restoration.jpg/800px-Vertigomovie_restoration.jpg" align="right" width="30%">
+
 * Introduction
 
 This package provides a minimalistic vertical completion UI, which is based on
@@ -14,8 +16,6 @@ full compatibility with built-in Emacs commands and completion tables. Vertico
 is pretty bare-bone and only provides a minimal set of commands. The code base
 is less than 500 lines of code. Additional optional enhancements can be provided
 externally by complementary packages.
-
-[[https://github.com/minad/vertico/blob/main/screenshot.svg?raw=true]]
 
 * Features
 
@@ -27,12 +27,16 @@ externally by complementary packages.
 - Long candidates with newlines are formatted to take up less space
 - Support for ~annotation-function~, ~affixation-function~ and ~x-group-function~
 
+[[https://github.com/minad/vertico/blob/main/screenshot.svg?raw=true]]
+
 * Configuration
 
 Vertico is available from [[http://elpa.gnu.org/packages/vertico.html][GNU ELPA]], such that it can be installed directly via
 ~package-install~. After installation, the global minor mode can be enabled with
 =M-x vertico-mode=. In order to configure Vertico and other packages in your
-init.el, you may want to use ~use-package~. Here is an example configuration:
+init.el, you may want to use ~use-package~. I recommend to give orderless
+completion a try, which is different from the familiar prefix TAB completion.
+Here is an example configuration:
 
 #+begin_src emacs-lisp
   ;; Enable vertico
@@ -87,21 +91,35 @@ of =TAB= to ~vertico-insert~ and the bindings of ~vertico-exit/exit-input~.
 - =<C-return>= -> ~vertico-exit-input~
 - =TAB= -> ~vertico-insert~
 
-Note that none of the bindings of the ~minibuffer-local-completion-map~ are
-bound by default. If you prefer to have the default completion commands a key
-press away you may want to add a few bindings. Then the default completion
-commands will work as usual. For example you can use =M-TAB= to cycle between
-candidates if you have set ~completion-cycle-threshold~.
+* TAB completion
+
+The bindings of the ~minibuffer-local-completion-map~ are not available in
+Vertico by default. This means that TAB works differently from what you may
+expect from the default Emacs completion system.
+
+If you prefer to have the default completion commands a key press away you can
+add new bindings or even replace the Vertico bindings. Then the default
+completion commands will work as usual. For example you can use =M-TAB= to cycle
+between candidates if you have set ~completion-cycle-threshold~.
 
 #+begin_src emacs-lisp
   (define-key vertico-map "?" #'minibuffer-completion-help)
-  (define-key vertico-map "\M-\r" #'minibuffer-force-complete-and-exit)
-  (define-key vertico-map "\M-\t" #'minibuffer-complete)
+  (define-key vertico-map (kbd "M-RET") #'minibuffer-force-complete-and-exit)
+  (define-key vertico-map (kbd "M-TAB") #'minibuffer-complete)
 #+end_src
 
-If Vertico is active, you may want to disable the automatic =*Completions*=
-buffer by setting ~completion-auto-help~ to ~nil~ and make TAB-completion less
-noisy by setting ~completion-show-inline-help~ to ~nil~.
+The ~orderless~ completion style does not support TAB prefix completion. In
+order to enable that you may want to combine ~orderless~ with ~substring~, or
+not use ~orderless~ at all.
+
+#+begin_src emacs-lisp
+  (setq completion-styles '(substring orderless))
+  (setq completion-styles '(basic substring partial-completion flex))
+#+end_src
+
+If Vertico is active, it makes sense to disable the automatic =*Completions*=
+buffer by setting ~completion-auto-help~ to ~nil~. TAB-completion can be made
+less noisy by setting ~completion-show-inline-help~ to ~nil~.
 
 #+begin_src emacs-lisp
   (advice-add #'vertico--setup :after
@@ -147,3 +165,8 @@ follow a similar philosophy:
   the current candidate always appears at the top. From my perspective,
   candidate rotation feels a bit less intuitive than the UI provided by Vertico
   or Selectrum.
+
+* Contributions
+
+Since this package is part of GNU ELPA, contributions require copyright
+assignment to the FSF.
