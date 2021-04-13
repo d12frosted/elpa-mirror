@@ -1,4 +1,7 @@
 * helm-posframe README                                :README:
+** Need new maintainer !!!
+I do not use helm and hard to maintain this package, for I
+do not know the details of helm. need a new maintainer !!!
 
 ** What is helm-posframe
 helm-posframe is a helm extension, which let helm use posframe

@@ -5,7 +5,7 @@
 ;; Author: Jérémy Compostella <jeremy.compostella@gmail.com>
 ;; Created: January 2018
 ;; Keywords: extensions mail
-;; Package-Commit: e57af9c057d97d14536cef08aca7a19bdf194830
+;; Package-Commit: 61ad744a4e54f3211c77e561c727781b7ed814b1
 ;; Homepage: https://github.com/jeremy-compostella/org-msg
 ;; Package-Version: 20210409.1813
 ;; Package-X-Original-Version: 3.4

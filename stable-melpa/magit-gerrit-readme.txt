@@ -1,4 +1,3 @@
-
 Magit plugin to make Gerrit code review easy-to-use from emacs and
 without the need for a browser!
 
