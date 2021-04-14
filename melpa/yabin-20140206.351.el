@@ -4,6 +4,8 @@
 
 ;; Author: Daisuke Kobayashi <d5884jp@gmail.com>
 ;; Keywords: data
+;; Package-Version: 20140206.351
+;; Package-Commit: db8c404507560ef9147fcce2b94cd706fbfa03b5
 ;; Version: 1.1
 
 ;; This program is free software; you can redistribute it and/or modify

@@ -4,7 +4,7 @@
 ;; Author: Yaroslav Shirokov
 ;; URL: https://github.com/sshirokov/ZNC.el
 ;; Package-Version: 20210304.2337
-;; Package-Commit: e795739ec182d217ffaf3c595819c308911540ee
+;; Package-Commit: 57d89fc1e17d94a8e9f3365b0d647a80520cc4a8
 ;; Version: 0.0.3
 ;; Package-Requires: ((cl-lib "0.2"))
 ;; Also available via Marmalade http://marmalade-repo.org/

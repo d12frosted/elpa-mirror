@@ -7,7 +7,7 @@
 ;;         Keith Amidon <camalot@picnicpark.org>
 ;; Version: 5.0.0
 ;; Package-Version: 20210210.1908
-;; Package-Commit: 468bba286fc20d739ed7724ec884357907ac8bda
+;; Package-Commit: fa8b964494c1ef42035fad340ff5f29fcdbed21c
 ;; Package-Requires: ((emacs "27.1"))
 ;; Url: https://github.com/DamienCassou/auth-source-pass
 ;; Created: 07 Jun 2015

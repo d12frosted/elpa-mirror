@@ -4,8 +4,6 @@
 
 ;; Author: DarkSun <lujun9972@gmail.com>
 ;; Keywords: lisp, anki, translator, chinese
-;; Package-Version: 20200103.325
-;; Package-Commit: 863fe0219577f996ab126f1b7902db3c2cc59b2b
 ;; Package: anki-vocabulary
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.4") (s "1.0") (youdao-dictionary "0.4") (anki-connect "1.0") (s "1.10"))

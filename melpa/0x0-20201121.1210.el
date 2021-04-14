@@ -3,7 +3,7 @@
 ;; Author: Philip K. <philipk@posteo.net>
 ;; Version: 0.4.1
 ;; Package-Version: 20201121.1210
-;; Package-Commit: 996f822a7c6a7ff7caf49ee537e92c0d01be1f9c
+;; Package-Commit: eb4d1ec4b667040429aa496838f758823dc55788
 ;; Keywords: comm
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL: https://git.sr.ht/~zge/nullpointer-emacs

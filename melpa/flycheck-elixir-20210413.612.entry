@@ -1,0 +1,9 @@
+(flycheck-elixir .
+		 [(20210413 612)
+		  ((flycheck
+		    (0 25)))
+		  "Support Elixir in flycheck" single
+		  ((:commit . "b57a77a21d6cf9621b3387831cba34135c4fa35d")
+		   (:authors
+		    ("Lorenzo Bolla" . "lbolla@gmail.com"))
+		   (:maintainer "Lorenzo Bolla" . "lbolla@gmail.com"))])

@@ -3,3 +3,21 @@ Fetcher: github
 Source:  https://github.com/abingham/emacs-ycmd.git
 
 Updating /mnt/store/melpa/working/ycmd/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ycmd/
+  to /tmp/ycmdS3M9xL/ycmd-20190416.807
+    ycmd.el -> ycmd.el
+    ycmd-eldoc.el -> ycmd-eldoc.el
+  ! contrib/ycmd-next-error.el -> ycmd-next-error.el
+Created ycmd-20190416.807.tar containing:
+  ycmd-20190416.807/
+  ycmd-20190416.807/ycmd-eldoc.el
+  ycmd-20190416.807/ycmd-next-error.el
+  ycmd-20190416.807/ycmd-pkg.el
+  ycmd-20190416.807/ycmd.el
+Built ycmd in 4.686s, finished at Wed Apr 14 11:40:52 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  406 Apr 14 11:40 packages/ycmd-20190416.807.entry
+112K -rw-r--r-- 1 root root 110K Apr 14 11:40 packages/ycmd-20190416.807.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 14 11:40 packages/ycmd-badge.svg
+4.0K -rw-r--r-- 1 root root 2.5K Apr 14 11:40 packages/ycmd-readme.txt

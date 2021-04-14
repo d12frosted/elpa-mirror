@@ -27,7 +27,7 @@ Or Use [use-package](https://github.com/jwiegley/use-package) with
 
 Then you can press `C-c i l` to trigger `spdx-insert-spdx`
 
-Or manual run:
+Or manually run:
 
     M-x spdx-insert-spdx
 
@@ -41,4 +41,6 @@ After that, the license header will be written. An example follows.
 ## Customization
 
 - `spdx-copyright-holder'
+- `spdx-copyright-sign'
 - `spdx-project-detection'
+- `spdx-ignore-deprecated'
