@@ -4,8 +4,8 @@
 
 ;; Author: Zachary Romero <zkry@posteo.org>
 ;; Version: 0.1.0
-;; Package-Version: 20210406.156
-;; Package-Commit: d8ac09e8cad7f67339e19c53e77da1cd0ff98d36
+;; Package-Version: 20210415.705
+;; Package-Commit: 7f055d207c69bd4a418cfc6691ca005ff85188f4
 ;; Homepage: https://github.com/zkry/yaml.el
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools
@@ -53,20 +53,20 @@
 This flag is intended for development purposes.")
 
 (defconst yaml--tracing-ignore '("s-space"
-                                "s-tab"
-                                "s-white"
-                                "l-comment"
-                                "b-break"
-                                "b-line-feed"
-                                "b-carriage-return"
-                                "s-b-comment"
-                                "b-comment"
-                                "l-comment"
-                                "ns-char"
-                                "nb-char"
-                                "b-char"
-                                "c-printable"
-                                "b-as-space"))
+                                 "s-tab"
+                                 "s-white"
+                                 "l-comment"
+                                 "b-break"
+                                 "b-line-feed"
+                                 "b-carriage-return"
+                                 "s-b-comment"
+                                 "b-comment"
+                                 "l-comment"
+                                 "ns-char"
+                                 "nb-char"
+                                 "b-char"
+                                 "c-printable"
+                                 "b-as-space"))
 
 (defvar yaml--parsing-input ""
   "The string content of the current item being processed.")
@@ -82,7 +82,7 @@ This flag is intended for development purposes.")
 (defvar yaml--parsing-false-object nil)
 
 (cl-defstruct (yaml--state (:constructor yaml--state-create)
-                          (:copier nil))
+                           (:copier nil))
   doc tt m name lvl beg end)
 
 (defmacro yaml--parse (data &rest forms)
@@ -105,12 +105,12 @@ This flag is intended for development purposes.")
     (while states
       (let* ((top-state (car states))
              (new-state (yaml--state-create :doc (yaml--state-doc top-state)
-                                           :tt (yaml--state-tt top-state)
-                                           :m val
-                                           :name (yaml--state-name top-state)
-                                           :lvl (yaml--state-lvl top-state)
-                                           :beg (yaml--state-beg top-state)
-                                           :end (yaml--state-end top-state))))
+                                            :tt (yaml--state-tt top-state)
+                                            :m val
+                                            :name (yaml--state-name top-state)
+                                            :lvl (yaml--state-lvl top-state)
+                                            :beg (yaml--state-beg top-state)
+                                            :end (yaml--state-end top-state))))
         (setcar states new-state))
       (setq states (cdr states)))))
 
@@ -120,12 +120,12 @@ This flag is intended for development purposes.")
     (while states
       (let* ((top-state (car states))
              (new-state (yaml--state-create :doc (yaml--state-doc top-state)
-                                           :tt val
-                                           :m (yaml--state-m top-state)
-                                           :name (yaml--state-name top-state)
-                                           :lvl (yaml--state-lvl top-state)
-                                           :beg (yaml--state-beg top-state)
-                                           :end (yaml--state-end top-state))))
+                                            :tt val
+                                            :m (yaml--state-m top-state)
+                                            :name (yaml--state-name top-state)
+                                            :lvl (yaml--state-lvl top-state)
+                                            :beg (yaml--state-beg top-state)
+                                            :end (yaml--state-end top-state))))
         (setcar states new-state))
       (setq states (cdr states)))))
 
@@ -149,40 +149,40 @@ This flag is intended for development purposes.")
   "Add a new state frame with NAME."
   (let* ((curr-state (yaml--state-curr))
          (new-state (yaml--state-create
-                    :doc (yaml--state-curr-doc)
-                    :tt (yaml--state-curr-t)
-                    :m (yaml--state-curr-m)
-                    :name name
-                    :lvl (1+ (yaml--state-lvl curr-state))
-                    :beg yaml--parsing-position
-                    :end nil)))
+                     :doc (yaml--state-curr-doc)
+                     :tt (yaml--state-curr-t)
+                     :m (yaml--state-curr-m)
+                     :name name
+                     :lvl (1+ (yaml--state-lvl curr-state))
+                     :beg yaml--parsing-position
+                     :end nil)))
     (push new-state yaml--states)))
 
 (defun yaml--pop-state ()
   "Pop the current state."
   (let ((popped-state (car yaml--states)))
-   (setq yaml--states (cdr yaml--states))
-   (let ((top-state (car yaml--states)))
-     (when top-state
-       (setcar yaml--states
-               (yaml--state-create :doc (yaml--state-doc top-state)
-                                  :tt (yaml--state-tt top-state)
-                                  :m (yaml--state-m top-state)
-                                  :name (yaml--state-name top-state)
-                                  :lvl (yaml--state-lvl top-state)
-                                  :beg (yaml--state-beg popped-state)
-                                  :end yaml--parsing-position))))))
+    (setq yaml--states (cdr yaml--states))
+    (let ((top-state (car yaml--states)))
+      (when top-state
+        (setcar yaml--states
+                (yaml--state-create :doc (yaml--state-doc top-state)
+                                    :tt (yaml--state-tt top-state)
+                                    :m (yaml--state-m top-state)
+                                    :name (yaml--state-name top-state)
+                                    :lvl (yaml--state-lvl top-state)
+                                    :beg (yaml--state-beg popped-state)
+                                    :end yaml--parsing-position))))))
 
 (defun yaml--initialize-state ()
   "Initialize the yaml state for parsing."
   (setq yaml--states
         (list (yaml--state-create :doc nil
-                                 :tt nil
-                                 :m nil
-                                 :name nil
-                                 :lvl 0
-                                 :beg nil
-                                 :end nil))))
+                                  :tt nil
+                                  :m nil
+                                  :name nil
+                                  :lvl 0
+                                  :beg nil
+                                  :end nil))))
 
 (defconst yaml--grammar-resolution-rules
   '(("ns-plain" . literal))
@@ -218,12 +218,12 @@ This flag is intended for development purposes.")
          (char (and (< pos (length header)) (aref header pos)))
          (process-char (lambda (char)
                          (when char
-                          (cond
-                           ((< ?0 char ?9)
-                            (progn (setq indentation-indicator (- char ?0))))
-                           ((equal char ?\-) (setq chomp-indicator :strip))
-                           ((equal char ?\+) (setq chomp-indicator :keep)))
-                          (setq pos (1+ pos))))))
+                           (cond
+                            ((< ?0 char ?9)
+                             (progn (setq indentation-indicator (- char ?0))))
+                            ((equal char ?\-) (setq chomp-indicator :strip))
+                            ((equal char ?\+) (setq chomp-indicator :keep)))
+                           (setq pos (1+ pos))))))
     (when (or (eq char ?\|) (eq char ?\>))
       (setq pos (1+ pos))
       (setq char (and (< pos (length header)) (aref header pos))))
@@ -415,9 +415,12 @@ This flag is intended for development purposes.")
       (progn
         (let ((key (pop yaml--cache))
               (table (car yaml--object-stack)))
-          (when (and (eql 'symbol yaml--parsing-object-key-type)
-                     (stringp key))
-            (setq key (intern key)))
+          (when (stringp key)
+            (cond
+             ((eql 'symbol yaml--parsing-object-key-type)
+              (setq key (intern key)))
+             ((eql 'keyword yaml--parsing-object-key-type)
+              (setq key (intern (format ":%s" key))))))
           (puthash key value table))
         (pop yaml--state-stack)))
      ((equal top-state :trail-comments)
@@ -553,7 +556,7 @@ reverse order."
                                                (if (> (length x) 1)
                                                    (substring x 1)
                                                  "'"))
-                                            replaced)))
+                                             replaced)))
                              (yaml--scalar-event "single" (substring replaced 1 (1- (length replaced)))))))
     ("c-double-quoted" . (lambda (text)
                            (let* ((replaced (replace-regexp-in-string
@@ -667,28 +670,28 @@ reverse order."
                          (replace-regexp-in-string "\n" "↓" (yaml--slice yaml--parsing-position)))))
            (_ (yaml--push-state ,name))
            (,res-symbol ,rule))
-      (when (and yaml--parse-debug ,res-symbol (not (member ,name yaml--tracing-ignore)))
-        (message "<%s|%s %40s = '%s'"
-                 (make-string (length yaml--states) ?-)
-                 (make-string (- 70 (length yaml--states)) ?\s)
-                 ,name
-                 (replace-regexp-in-string "\n" "↓" (substring yaml--parsing-input beg yaml--parsing-position))))
-      (yaml--pop-state)
-      (if (not ,res-symbol)
-          nil
-        (let ((res-type (cdr (assoc ,name yaml--grammar-resolution-rules)))
-              (,res-symbol (if (member ,name yaml--terminal-rules)
-                               t ;; Ignore children if at-rule is indicated to be terminal.
-                             ,res-symbol)))
-          (cond
-           ((or (assoc ,name yaml--grammar-events-in)
-                (assoc ,name yaml--grammar-events-out))
-            (list ,name
-                  (substring yaml--parsing-input beg yaml--parsing-position)
-                  ,res-symbol))
-           ((equal res-type 'list) (list ,name ,res-symbol))
-           ((equal res-type 'literal) (substring yaml--parsing-input beg yaml--parsing-position))
-           (t ,res-symbol)))))))
+       (when (and yaml--parse-debug ,res-symbol (not (member ,name yaml--tracing-ignore)))
+         (message "<%s|%s %40s = '%s'"
+                  (make-string (length yaml--states) ?-)
+                  (make-string (- 70 (length yaml--states)) ?\s)
+                  ,name
+                  (replace-regexp-in-string "\n" "↓" (substring yaml--parsing-input beg yaml--parsing-position))))
+       (yaml--pop-state)
+       (if (not ,res-symbol)
+           nil
+         (let ((res-type (cdr (assoc ,name yaml--grammar-resolution-rules)))
+               (,res-symbol (if (member ,name yaml--terminal-rules)
+                                t ;; Ignore children if at-rule is indicated to be terminal.
+                              ,res-symbol)))
+           (cond
+            ((or (assoc ,name yaml--grammar-events-in)
+                 (assoc ,name yaml--grammar-events-out))
+             (list ,name
+                   (substring yaml--parsing-input beg yaml--parsing-position)
+                   ,res-symbol))
+            ((equal res-type 'list) (list ,name ,res-symbol))
+            ((equal res-type 'literal) (substring yaml--parsing-input beg yaml--parsing-position))
+            (t ,res-symbol)))))))
 
 (defun yaml--end-of-stream ()
   "Return non-nil if the current position is after the end of the document."
@@ -747,7 +750,7 @@ reverse order."
   `(yaml--run-all
     ,@(mapcar (lambda (form)
                 `(lambda () ,form))
-             forms)))
+              forms)))
 
 (defmacro yaml--any (&rest forms)
   "Pass if any of FORMS pass."
@@ -969,10 +972,14 @@ value.  It defaults to the symbol :false."
     (cond
      ((or (not object-key-type)
           (equal 'string object-key-type))
-      (setq yaml--parsing-object-key-type 'string))
+      (if (equal 'plist yaml--parsing-object-type)
+          (setq yaml--parsing-object-key-type 'keyword)
+        (setq yaml--parsing-object-key-type 'string)))
      ((equal 'symbol object-key-type)
       (setq yaml--parsing-object-key-type 'symbol))
-     (t (error "Invalid object-key-type.  object-key-type must be string, or symbol")))
+     ((equal 'keyword object-key-type)
+      (setq yaml--parsing-object-key-type 'keyword))
+     (t (error "Invalid object-key-type.  object-key-type must be string, keyword, or symbol")))
     (cond
      ((or (not sequence-type)
           (equal sequence-type 'array))
@@ -2399,8 +2406,8 @@ If AUTO-INDENT is non-nil, start the list on the current line,
 auto-detecting the indentation.  Functionality defers to
 `yaml--encode-list'."
   (yaml--encode-list (seq-map #'identity a)
-                      indent
-                      auto-indent))
+                     indent
+                     auto-indent))
 
 
 (defun yaml--encode-scalar (s)

@@ -4,8 +4,8 @@
 
 ;; Author: Ian Y.E. Pan
 ;; URL: https://github.com/ianpan870102/vscode-dark-plus-emacs-theme
-;; Package-Version: 20210414.319
-;; Package-Commit: bb286a02bbd0e579873c45526d70ddb0081fff70
+;; Package-Version: 20210415.728
+;; Package-Commit: da847c8c05fcd63b7b9755bcc16297d315b934de
 ;; Version: 1.5.0
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -540,6 +540,7 @@
    `(tree-sitter-hl-face:type.builtin         ((t (:inherit font-lock-keyword-face))))
    `(tree-sitter-hl-face:number               ((t (:inherit highlight-numbers-number))))
    `(tree-sitter-hl-face:variable.special     ((t (:inherit font-lock-keyword-face))))
+   `(tree-sitter-hl-face:keyword              ((t (:inherit ,ms-magenta))))
 
    `(lsp-ui-doc-background                    ((t (:background ,bg2))))
 
