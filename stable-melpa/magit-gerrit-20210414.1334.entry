@@ -1,0 +1,14 @@
+(magit-gerrit .
+	      [(20210414 1334)
+	       ((emacs
+		 (25 1))
+		(magit
+		 (2 90 1))
+		(transient
+		 (0 3 0)))
+	       "Magit plugin for Gerrit Code Review" single
+	       ((:commit . "31f5ce30e374716818df7deb0cdbf462ef67e679")
+		(:authors
+		 ("Brian Fransioli" . "assem@terranpro.org"))
+		(:maintainer "Brian Fransioli" . "assem@terranpro.org")
+		(:url . "https://github.com/terranpro/magit-gerrit"))])

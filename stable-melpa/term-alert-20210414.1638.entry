@@ -1,0 +1,17 @@
+(term-alert .
+	    [(20210414 1638)
+	     ((emacs
+	       (24 0))
+	      (term-cmd
+	       (1 1))
+	      (alert
+	       (1 1))
+	      (f
+	       (0 18 2)))
+	     "Notifications when commands complete in term.el." tar
+	     ((:commit . "ca1b48ad911bc972b049f48fe0531e702dbc553c")
+	      (:authors
+	       ("Callie Cameron" . "cjcameron7@gmail.com"))
+	      (:maintainer "Callie Cameron" . "cjcameron7@gmail.com")
+	      (:keywords "notifications" "processes")
+	      (:url . "https://github.com/calliecameron/term-alert"))])
