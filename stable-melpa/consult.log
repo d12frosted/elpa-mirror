@@ -5,7 +5,7 @@ Source:  https://github.com/minad/consult.git
 Updating /mnt/store/melpa/working/consult/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/consult/
-  to /tmp/consultmF5Lag/consult-20210416.100
+  to /tmp/consultH1XE0d/consult-20210416.100
     consult-compile.el -> consult-compile.el
     consult-flymake.el -> consult-flymake.el
     consult-icomplete.el -> consult-icomplete.el
@@ -14,7 +14,7 @@ Copying files (->) and directories (=>)
     consult-xref.el -> consult-xref.el
     consult.el -> consult.el
     consult.texi -> consult.texi
-Created /tmp/consultmF5Lag/consult-20210416.100/consult.info
+Created /tmp/consultH1XE0d/consult-20210416.100/consult.info
 Created consult-20210416.100.tar containing:
   consult-20210416.100/
   consult-20210416.100/consult-compile.el
@@ -27,33 +27,33 @@ Created consult-20210416.100.tar containing:
   consult-20210416.100/consult.el
   consult-20210416.100/consult.info
   consult-20210416.100/dir
-Built consult in 9.870s, finished at Sat Apr 17 03:30:44 2021
+Built consult in 10.651s, finished at Sat Apr 17 11:27:18 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  310 Apr 17 03:30 packages/consult-20210416.100.entry
-252K -rw-r--r-- 1 root root 250K Apr 17 03:30 packages/consult-20210416.100.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 17 03:30 packages/consult-badge.svg
-8.0K -rw-r--r-- 1 root root 4.6K Apr 17 03:30 packages/consult-flycheck-20210410.1355.el
-4.0K -rw-r--r-- 1 root root  412 Apr 17 03:30 packages/consult-flycheck-20210410.1355.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 17 03:30 packages/consult-flycheck-badge.svg
-4.0K -rw-r--r-- 1 root root  135 Apr 17 03:30 packages/consult-flycheck-readme.txt
-4.0K -rw-r--r-- 1 root root  572 Apr 17 03:30 packages/consult-flycheck.log
-8.0K -rw-r--r-- 1 root root 6.6K Apr 17 03:30 packages/consult-notmuch-20210312.2201.el
-4.0K -rw-r--r-- 1 root root  408 Apr 17 03:30 packages/consult-notmuch-20210312.2201.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 17 03:30 packages/consult-notmuch-badge.svg
-4.0K -rw-r--r-- 1 root root  322 Apr 17 03:30 packages/consult-notmuch-readme.txt
-4.0K -rw-r--r-- 1 root root  570 Apr 17 03:30 packages/consult-notmuch.log
-4.0K -rw-r--r-- 1 root root  834 Apr 17 03:30 packages/consult-readme.txt
-8.0K -rw-r--r-- 1 root root 4.7K Apr 17 03:30 packages/consult-recoll-20210411.1300.el
-4.0K -rw-r--r-- 1 root root  380 Apr 17 03:30 packages/consult-recoll-20210411.1300.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 17 03:30 packages/consult-recoll-badge.svg
-4.0K -rw-r--r-- 1 root root  219 Apr 17 03:30 packages/consult-recoll-readme.txt
-4.0K -rw-r--r-- 1 root root  562 Apr 17 03:30 packages/consult-recoll.log
+4.0K -rw-r--r-- 1 root root  310 Apr 17 11:27 packages/consult-20210416.100.entry
+252K -rw-r--r-- 1 root root 250K Apr 17 11:27 packages/consult-20210416.100.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 17 11:27 packages/consult-badge.svg
+8.0K -rw-r--r-- 1 root root 4.6K Apr 17 11:27 packages/consult-flycheck-20210410.1355.el
+4.0K -rw-r--r-- 1 root root  412 Apr 17 11:27 packages/consult-flycheck-20210410.1355.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 17 11:27 packages/consult-flycheck-badge.svg
+4.0K -rw-r--r-- 1 root root  135 Apr 17 11:27 packages/consult-flycheck-readme.txt
+4.0K -rw-r--r-- 1 root root  572 Apr 17 11:27 packages/consult-flycheck.log
+8.0K -rw-r--r-- 1 root root 6.6K Apr 17 11:27 packages/consult-notmuch-20210312.2201.el
+4.0K -rw-r--r-- 1 root root  408 Apr 17 11:27 packages/consult-notmuch-20210312.2201.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 17 11:27 packages/consult-notmuch-badge.svg
+4.0K -rw-r--r-- 1 root root  322 Apr 17 11:27 packages/consult-notmuch-readme.txt
+4.0K -rw-r--r-- 1 root root  570 Apr 17 11:27 packages/consult-notmuch.log
+4.0K -rw-r--r-- 1 root root  834 Apr 17 11:27 packages/consult-readme.txt
+8.0K -rw-r--r-- 1 root root 4.7K Apr 17 11:27 packages/consult-recoll-20210411.1300.el
+4.0K -rw-r--r-- 1 root root  380 Apr 17 11:27 packages/consult-recoll-20210411.1300.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 17 11:27 packages/consult-recoll-badge.svg
+4.0K -rw-r--r-- 1 root root  219 Apr 17 11:27 packages/consult-recoll-readme.txt
+4.0K -rw-r--r-- 1 root root  562 Apr 17 11:27 packages/consult-recoll.log
 4.0K -rw-r--r-- 1 root root 3.5K Dec 24 21:28 packages/consult-selectrum-20201224.1239.el
 4.0K -rw-r--r-- 1 root root 1.2K Jan 13 02:47 packages/consult-selectrum-badge.svg
 4.0K -rw-r--r-- 1 root root   32 Jan 13 02:47 packages/consult-selectrum-readme.txt
 4.0K -rw-r--r-- 1 root root  848 Jan 13 02:47 packages/consult-selectrum.log
-8.0K -rw-r--r-- 1 root root 4.7K Apr 17 03:30 packages/consult-spotify-20210411.1305.el
-4.0K -rw-r--r-- 1 root root  438 Apr 17 03:30 packages/consult-spotify-20210411.1305.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 17 03:30 packages/consult-spotify-badge.svg
-4.0K -rw-r--r-- 1 root root  652 Apr 17 03:30 packages/consult-spotify-readme.txt
-4.0K -rw-r--r-- 1 root root  559 Apr 17 03:30 packages/consult-spotify.log
+8.0K -rw-r--r-- 1 root root 4.7K Apr 17 11:27 packages/consult-spotify-20210411.1305.el
+4.0K -rw-r--r-- 1 root root  438 Apr 17 11:27 packages/consult-spotify-20210411.1305.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 17 11:27 packages/consult-spotify-badge.svg
+4.0K -rw-r--r-- 1 root root  652 Apr 17 11:27 packages/consult-spotify-readme.txt
+4.0K -rw-r--r-- 1 root root  559 Apr 17 11:27 packages/consult-spotify.log

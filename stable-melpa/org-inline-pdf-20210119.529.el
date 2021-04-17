@@ -7,7 +7,7 @@
 ;; Created: November 30, 2020
 ;; URL: https://github.com/shg/org-inline-pdf.el
 ;; Package-Version: 20210119.529
-;; Package-Commit: f9a3321712626d2f43a8849203ceb089cf8233b1
+;; Package-Commit: b2dfbf41efac55edacde8a8a6bd0275418de6454
 ;; Package-Requires: ((emacs "25.1") (org "9.4"))
 ;; Version: 0.2b
 ;; Keywords: org, outlines, hypermedia

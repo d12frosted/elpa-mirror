@@ -217,9 +217,15 @@ Pasting the below line to "~/.emacs" is a simple way.
 #+END_EXAMPLE
 
 *** Edit "~/.initrc" file or "~/.xsession" file
-You should edit "~/.initrc" file or "~/.xsession" file like below example:
+You should edit "~/.initrc" file, "~/.xsession" file or "~/.xsessionrc" file like below example:
 
 #+BEGIN_EXAMPLE
+
+# Support exwm-xim.
+# export XMODIFIERS=@im=exwm-xim
+# export GTK_IM_MODULE=xim
+# export QT_IM_MODULE=xim
+# export CLUTTER_IM_MODULE=xim
 
 # Fallback cursor
 # xsetroot -cursor_name left_ptr
@@ -298,6 +304,7 @@ can be used too :-)
 | "C-t 3"   | exwmx-switch-to-3-workspace     |
 | "C-t 4"   | exwmx-switch-to-4-workspace     |
 | "C-x o"   | switch-window                   |
+| "C-c y"   | exwmx-sendstring-from-kill-ring |
 
 If exwmx-example doesn't suit for your need, just copy and paste
 its useful pieces to your "~/.exwm-x" file.

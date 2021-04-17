@@ -401,6 +401,15 @@
 		     (:authors
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
+ (corfu .
+	[(0 1)
+	 ((emacs
+	   (27 1)))
+	 "Completion Overlay Region FUnction" tar
+	 ((:url . "https://github.com/minad/corfu")
+	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+	  (:authors
+	   ("Daniel Mendler" . "mail@daniel-mendler.de")))])
  (counsel .
 	  [(0 13 4)
 	   ((emacs
