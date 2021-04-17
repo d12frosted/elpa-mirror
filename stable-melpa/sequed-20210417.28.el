@@ -4,8 +4,8 @@
 
 ;; Author: Bruce Rannala <brannala@ucdavis.edu
 ;; URL: https://github.com/brannala/sequed
-;; Package-Version: 20210315.2012
-;; Package-Commit: 50c5dca413a12fe2d8a89eae833f10967c2f38d2
+;; Package-Version: 20210417.28
+;; Package-Commit: b28e20bf3e0ec7c56c705632e38ab842083d9c49
 ;; Version: 1.00
 ;; Package-Requires: ((emacs "25.2"))
 ;; License: GNU General Public License Version 3
@@ -31,15 +31,19 @@
 ;;
 ;; M-x sequed-mode to invoke.  Automatically invoked as major mode for .fa and .aln files.
 ;; Sequed-mode major mode:
+;; M-x sequed-reverse-complement [C-c C-r c] -> generate reverse complement of selected DNA region
+;; M-x sequed-translate [C-c C-r t] -> generate amino acid sequence by translation of selected DNA region
 ;; M-x sequed-export [C-c C-e] -> export to new buffer in BPP/Phylip format
 ;; M-x sequed-mkaln [C-c C-a] -> create an alignment view in read-only buffer in sequed-aln-mode
 ;; sequed-aln-mode major mode:
 ;; M-x sequed-aln-gotobase [C-c C-b] -> prompt for base number to move cursor to that column in alignment
 ;; M-x sequed-aln-seqfeatures [C-c C-f] -> print number of sequences and number of sites
+;; M-x sequed-aln-kill-alignment [C-c C-k] -> quit alignment view buffer
 
 ;;; Code:
 
 (require 'subr-x)
+(require 'seq)
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.\\(?:fa\\|aln\\)\\'" . sequed-mode))
@@ -92,6 +96,8 @@
     ;; assign sequed-mode commands to keys
     (define-key km (kbd "C-c C-a") 'sequed-mkaln)
     (define-key km (kbd "C-c C-e") 'sequed-export)
+    (define-key km (kbd "C-c C-r c") 'sequed-reverse-complement)
+    (define-key km (kbd "C-c C-r t") 'sequed-translate)
     (define-key km [menu-bar sequed]
       (cons "SequEd" (make-sparse-keymap "SequEd")))
     ;; assign sequed-mode commands to menu
@@ -101,6 +107,12 @@
     (define-key km
       [menu-bar sequed sequed-export]
       '("Export" . sequed-export))
+    (define-key km
+      [menu-bar sequed sequed-reverse-complement]
+      '("Reverse Complement" . sequed-reverse-complement))
+    (define-key km
+      [menu-bar sequed sequed-translate]
+      '("Translation" . sequed-translate))
     km)
   "Keymap used in Sequed mode.")
       
@@ -112,6 +124,7 @@
   (setq font-lock-defaults '(sequed-colors))
   (if (eq (sequed-check-fasta) nil) (user-error "Not a fasta file"))
   (font-lock-ensure)
+  (sequed-get-sequence-length)
   (setq-local comment-start "; ")
   (setq-local comment-end ""))
 
@@ -120,6 +133,7 @@
     ;; assign sequed-aln-mode commands to keys
     (define-key km2 (kbd "C-c C-b") 'sequed-aln-gotobase)
     (define-key km2 (kbd "C-c C-f") 'sequed-aln-seqfeatures)
+    (define-key km2 (kbd "C-c C-k") 'sequed-aln-kill-alignment)
     (define-key km2 [menu-bar sequedaln]
       (cons "SequEdAln" (make-sparse-keymap "SequEdAln")))
     ;; define sequed-aln-mode menu
@@ -127,6 +141,8 @@
       '("Move to base" . sequed-aln-gotobase))
     (define-key km2 [menu-bar sequedaln features]
       '("Sequence features" . sequed-aln-seqfeatures))
+    (define-key km2 [menu-bar sequedaln quit]
+      '("Quit Alignment" . sequed-aln-kill-alignment))
     km2)
   "Keymap used in SequedAln mode.")
 
@@ -141,9 +157,10 @@
 			       mode-line-buffer-identification
 			       "  SeqID:" '(:eval (aref sequed-seqID (- (string-to-number (format-mode-line "%l")) 1)))
 			       " BasePos:" '(:eval (if (>  (- (current-column) (- sequed-label-length 1)) 0)
-						       (number-to-string (- (string-to-number
-									     (format-mode-line "%c"))
-									    (- sequed-label-length 1)))))
+						       (number-to-string (+ (- (string-to-number
+										(format-mode-line "%c"))
+									       (- sequed-label-length 1))
+									    (- sequed-startpos 1)))))
 			       "   "
 			       mode-line-modes mode-line-misc-info mode-line-end-spaces)))
 
@@ -163,13 +180,40 @@
 (defvar-local sequed-seq-length nil)
 (defvar-local sequed-noseqs nil)
 (defvar-local sequed-seqID nil)
+(defvar-local sequed-startpos nil)
+(defvar-local sequed-endpos nil)
+
+
+(defun sequed-get-sequence-length ()
+  "Get length of first sequence."
+  (let (f-buffer f-lines f-linenum f-concatlines (oldbuf (current-buffer)))
+  (with-temp-buffer
+    (insert-buffer-substring oldbuf)
+    (setq-local comment-start "; ")
+    (setq-local comment-end "")
+    (sequed-remove-fasta-comments)
+    (setq f-buffer (buffer-substring-no-properties (point-min) (point-max))))
+    (setq f-lines (split-string
+		   f-buffer ">\\([[:word:]\-/|_.]+\\)\\([\s]+.*\n\\)?" t))
+    (setq f-linenum 0) ; Counts the original file's line number being evaluated
+    (while (< f-linenum (length f-lines))
+      (push (mapconcat #'concat (split-string
+				 (nth f-linenum f-lines)
+				 "\n" t) "") f-concatlines)
+      (setq f-linenum (+ 1 f-linenum)))
+    (setq sequed-seq-length (length (car f-concatlines)))))
 
 ;; Create a read-only buffer with pretty alignment displayed
-(defun sequed-mkaln ()
-  "Create read-only buffer for alignment viewing."
-  (interactive)
+(defun sequed-mkaln (startpos endpos)
+  "Create read-only buffer for alignment viewing.
+Argument STARTPOS First nucleotide position in alignment to display.
+Argument ENDPOS Last nucleotide position in alignment to display."
+  (interactive
+   (let ((spos (read-number "Start Pos: " 1))
+	 (epos (read-number "End Pos: " sequed-seq-length)))
+     (list spos epos)))
   (if (eq (sequed-check-fasta) nil) (user-error "Not a fasta file"))
-  (let (f-buffer f-lines f-seqcount f-linenum f-labels f-pos f-concatlines
+  (let (f-buffer f-lines f-seqcount f-linenum f-labels f-pos f-concatlines f-trimmed
 		 elabels (buf (get-buffer-create "*Alignment Viewer*")) text
 		 (inhibit-read-only t) (oldbuf (current-buffer)))
     (with-temp-buffer
@@ -196,12 +240,15 @@
 				 "\n" t) "") f-concatlines)
       (setq f-linenum (+ 1 f-linenum)))
     (setq elabels (sequed-labels-equal-length f-labels))
-
+    (setq f-linenum 0)
+    (while (< f-linenum (length f-concatlines))
+      (push (substring (nth f-linenum f-concatlines) (- startpos 1) endpos) f-trimmed)
+      (setq f-linenum (+ 1 f-linenum)))
     (setq f-linenum 0) ; Counts the original file's line number being evaluated
     (while (< f-linenum (length f-lines))
       (push (concat
 	     (nth f-linenum elabels)
-	     (nth f-linenum f-concatlines))
+	     (nth f-linenum f-trimmed))
 	    text)
       (setq f-linenum (+ 1 f-linenum)))
     (with-current-buffer buf
@@ -211,6 +258,8 @@
       (setq sequed-seq-length (length (car f-concatlines)))
       (setq sequed-noseqs (length elabels))
       (setq sequed-seqID (sequed-short-labels f-labels))
+      (setq sequed-startpos startpos)
+      (setq sequed-endpos endpos)
       (setq truncate-lines t)
       (setq f-linenum 0) ; Counts the original file's line number being evaluated
     (while (< f-linenum (length f-lines))
@@ -218,22 +267,30 @@
       (setq f-linenum (+ 1 f-linenum)))
     (sequed-color-labels)
     (read-only-mode))
-    (display-buffer buf)))
+    (display-buffer buf))
+  (other-window 1)
+  (goto-char(point-min))
+  (sequed-aln-gotobase sequed-startpos))
 
 (defun sequed-aln-gotobase (position)
   "Move to base at POSITION in sequence that cursor is positioned in."
   (interactive "nPosition of base: ")
-  (if (or (< position 1)
-	  (> position sequed-seq-length))
+  (if (or (< position sequed-startpos)
+	  (> position sequed-endpos))
       (user-error "Attempt to move to base outside sequence"))
   (beginning-of-line)
-  (move-to-column (+ position (- sequed-label-length 1))))
+  (move-to-column (- (+ position (- sequed-label-length 1)) (- sequed-startpos 1))))
 
 (defun sequed-aln-seqfeatures ()
   "List number of sequences and length of region."
   (interactive)
   (message "Sequences:%d Sites:%d"
 	   sequed-noseqs sequed-seq-length))
+
+(defun sequed-aln-kill-alignment ()
+  "Kill alignment buffer and window."
+  (interactive)
+  (kill-buffer-and-window))
 
 (defun sequed-export ()
   "Export alignment in format for phylogenetic software."
@@ -264,6 +321,120 @@
 	(delete-char 1))
       (fundamental-mode)
       (display-buffer( current-buffer)))))
+
+(defvar sequed-genetic-code-universal)
+
+(setq sequed-genetic-code-universal (make-hash-table :test 'equal))
+(puthash "ttt" ?F sequed-genetic-code-universal)
+(puthash "ttc" ?F sequed-genetic-code-universal)
+(puthash "tta" ?L sequed-genetic-code-universal)
+(puthash "ttg" ?L sequed-genetic-code-universal)
+(puthash "tct" ?S sequed-genetic-code-universal)
+(puthash "tcc" ?S sequed-genetic-code-universal)
+(puthash "tca" ?S sequed-genetic-code-universal)
+(puthash "tcg" ?S sequed-genetic-code-universal)
+(puthash "taa" ?* sequed-genetic-code-universal)
+(puthash "tag" ?* sequed-genetic-code-universal)
+(puthash "tat" ?Y sequed-genetic-code-universal)
+(puthash "tac" ?Y sequed-genetic-code-universal)
+(puthash "tgt" ?C sequed-genetic-code-universal)
+(puthash "tgc" ?C sequed-genetic-code-universal)
+(puthash "tga" ?* sequed-genetic-code-universal)
+(puthash "tgg" ?W sequed-genetic-code-universal)
+(puthash "ctt" ?L sequed-genetic-code-universal)
+(puthash "ctc" ?L sequed-genetic-code-universal)
+(puthash "cta" ?L sequed-genetic-code-universal)
+(puthash "ctg" ?L sequed-genetic-code-universal)
+(puthash "cct" ?P sequed-genetic-code-universal)
+(puthash "ccc" ?P sequed-genetic-code-universal)
+(puthash "cca" ?P sequed-genetic-code-universal)
+(puthash "ccg" ?P sequed-genetic-code-universal)
+(puthash "cat" ?H sequed-genetic-code-universal)
+(puthash "cac" ?H sequed-genetic-code-universal)
+(puthash "caa" ?Q sequed-genetic-code-universal)
+(puthash "cag" ?Q sequed-genetic-code-universal)
+(puthash "cgt" ?R sequed-genetic-code-universal)
+(puthash "cgc" ?R sequed-genetic-code-universal)
+(puthash "cga" ?R sequed-genetic-code-universal)
+(puthash "cgg" ?R sequed-genetic-code-universal)
+(puthash "att" ?I sequed-genetic-code-universal)
+(puthash "atc" ?I sequed-genetic-code-universal)
+(puthash "ata" ?I sequed-genetic-code-universal)
+(puthash "atg" ?M sequed-genetic-code-universal)
+(puthash "act" ?T sequed-genetic-code-universal)
+(puthash "acc" ?T sequed-genetic-code-universal)
+(puthash "aca" ?T sequed-genetic-code-universal)
+(puthash "acg" ?T sequed-genetic-code-universal)
+(puthash "aat" ?N sequed-genetic-code-universal)
+(puthash "aac" ?N sequed-genetic-code-universal)
+(puthash "aaa" ?K sequed-genetic-code-universal)
+(puthash "aag" ?K sequed-genetic-code-universal)
+(puthash "agt" ?S sequed-genetic-code-universal)
+(puthash "agc" ?S sequed-genetic-code-universal)
+(puthash "aga" ?R sequed-genetic-code-universal)
+(puthash "agg" ?R sequed-genetic-code-universal)
+(puthash "gtt" ?V sequed-genetic-code-universal)
+(puthash "gtc" ?V sequed-genetic-code-universal)
+(puthash "gta" ?V sequed-genetic-code-universal)
+(puthash "gtg" ?V sequed-genetic-code-universal)
+(puthash "gct" ?A sequed-genetic-code-universal)
+(puthash "gcc" ?A sequed-genetic-code-universal)
+(puthash "gca" ?A sequed-genetic-code-universal)
+(puthash "gcg" ?A sequed-genetic-code-universal)
+(puthash "gat" ?D sequed-genetic-code-universal)
+(puthash "gac" ?D sequed-genetic-code-universal)
+(puthash "gaa" ?E sequed-genetic-code-universal)
+(puthash "gag" ?E sequed-genetic-code-universal)
+(puthash "ggt" ?G sequed-genetic-code-universal)
+(puthash "ggc" ?G sequed-genetic-code-universal)
+(puthash "gga" ?G sequed-genetic-code-universal)
+(puthash "ggg" ?G sequed-genetic-code-universal)
+
+(defvar sequed-translation)
+
+(defun sequed-translate (seqbegin seqend)
+  "Translation of marked DNA region SEQBEGIN SEQEND into Amino Acids."
+  (interactive "r")
+  (let (z y x (i 0) (j 0) codon)
+    (setq x (replace-regexp-in-string "[\s]*\n" "" (buffer-substring-no-properties seqbegin seqend)))
+    (setq y (make-vector (/ (length x) 3) ?.))
+    (while (< i (- (length x) 2))
+      (setq codon (substring x i (+ i 3)))
+      (if (string-match "[agct][agct][agct]" codon)
+	  (aset y j (gethash codon sequed-genetic-code-universal))
+	(aset y j ?.))
+      (setq i (+ i 3))
+      (setq j (+ j 1)))
+    (setq z (seq-into y 'string))
+    (setq sequed-translation (generate-new-buffer "*translation*"))
+    (print z sequed-translation)
+    (switch-to-buffer sequed-translation)))
+
+(defvar sequed-revb)
+
+(defun sequed-basepair (base)
+  "Find the complement of a DNA BASE."
+  (let ((case-fold-search nil))
+    (cond
+     ((char-equal ?a base) ?t)
+     ((char-equal ?t base) ?a)
+     ((char-equal ?c base) ?g)
+     ((char-equal ?g base) ?c)
+     ((char-equal ?A base) ?T)
+     ((char-equal ?T base) ?A)
+     ((char-equal ?C base) ?G)
+     ((char-equal ?G base) ?C)
+     (t base))))
+
+(defun sequed-reverse-complement (seqbegin seqend)
+  "Get reverse-complement of marked region SEQBEGIN SEQEND in new buffer."
+  (interactive "r")
+  (let (revcmp x)
+    (setq revcmp (reverse (concat (seq-map #'sequed-basepair (buffer-substring-no-properties seqbegin seqend)))))
+    (setq x (replace-regexp-in-string "[\s]*\n" "" revcmp))
+    (setq sequed-revb (generate-new-buffer "*reverse complement*"))
+    (print x sequed-revb)
+    (switch-to-buffer sequed-revb)))
 
 ;; Pad labels to equal length to allow viewing of alignments
 (defun sequed-labels-equal-length (labels)

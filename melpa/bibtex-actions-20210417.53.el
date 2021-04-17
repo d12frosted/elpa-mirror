@@ -7,8 +7,8 @@
 ;; Created: February 27, 2021
 ;; License: GPL-3.0-or-later
 ;; Version: 0.4
-;; Package-Version: 20210415.2253
-;; Package-Commit: d2233991bf8db07ef501db7184c4e66f46af7b44
+;; Package-Version: 20210417.53
+;; Package-Commit: 90b7bacb47c5efa85b24bdab572324c925fccc77
 ;; Homepage: https://github.com/bdarcus/bibtex-actions
 ;; Package-Requires: ((emacs "26.3") (bibtex-completion "1.0"))
 ;;
@@ -59,7 +59,7 @@ display and for search."
 (defcustom bibtex-actions-template-suffix
   '((t . "          ${=key=:15}    ${=type=:12}    ${tags:*}"))
   "Configures formatting for the BibTeX entry suffix.
-When combined wiht the main template, the same string is used for
+When combined with the main template, the same string is used for
 display and for search."
     :group 'bibtex-actions
     :type  '(alist :key-type symbol :value-type function))
