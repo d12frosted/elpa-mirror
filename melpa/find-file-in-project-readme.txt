@@ -5,16 +5,16 @@ Features,
 - Works on Windows with minimum setup
 - Works on Tramp Mode (https://www.emacswiki.org/emacs/TrampMode)
 - fd (faster alternative of find, see https://github.com/sharkdp/fd) is supported
-- Uses native API `completing-read' and supports ido/helm/ivy/consult/selectrum out of box.
-
-  Ido setup,
-    (ido-mode 1)
+- Uses native API `completing-read' and supports helm/ivy/consult/selectrum out of box.
 
   Helm setup,
     (helm-mode 1)
 
   Ivy setup,
     (ivy-mode 1)
+
+  Ido setup,
+    (setq ffip-prefer-ido-mode t)
 
 Usage,
   - You can insert "(setq ffip-use-rust-fd t)" into ".emacs" to use fd (alternative of find)

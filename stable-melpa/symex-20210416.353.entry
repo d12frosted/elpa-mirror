@@ -1,0 +1,27 @@
+(symex .
+       [(20210416 353)
+	((emacs
+	  (24 4))
+	 (lispy
+	  (0 26 0))
+	 (paredit
+	  (24))
+	 (evil-cleverparens
+	  (20170718 413))
+	 (evil
+	  (1 2 14))
+	 (evil-surround
+	  (1 0 4))
+	 (hydra
+	  (0 15 0))
+	 (seq
+	  (2 22))
+	 (undo-tree
+	  (0 7 5)))
+	"An evil way to edit Lisp symbolic expressions as trees" tar
+	((:commit . "3af93352a522bf8b88841a0d7114789a11741bb2")
+	 (:authors
+	  ("Siddhartha Kasivajhula" . "sid@countvajhula.com"))
+	 (:maintainer "Siddhartha Kasivajhula" . "sid@countvajhula.com")
+	 (:keywords "lisp" "evil")
+	 (:url . "https://github.com/countvajhula/symex.el"))])

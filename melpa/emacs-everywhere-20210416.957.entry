@@ -1,0 +1,13 @@
+(emacs-everywhere .
+		  [(20210416 957)
+		   ((emacs
+		     (26 3))
+		    (cl-lib
+		     (0 5)))
+		   "System-wide popup windows for quick edits" single
+		   ((:commit . "d65ba8d322c4789f40f851b47d76e9995f6d4af6")
+		    (:authors
+		     ("TEC <https://github.com/tecosaur>"))
+		    (:maintainer "TEC" . "tec@tecosaur.com")
+		    (:keywords "conenience" "frames")
+		    (:url . "https://github.com/tecosaur/emacs-everywhere"))])

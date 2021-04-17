@@ -157,8 +157,7 @@ or
 #+END_EXAMPLE
 
 *** Dmenu
-`exwmx-dmenu' let user input or select (with the help of ivy) a command
-in minibuffer, and execute it.
+`exwmx-dmenu' let user input or select a command in minibuffer, and execute it.
 
 `exwmx-dmenu' support some command prefixes:
 1. ",command": run "command" in terminal emulator, for example,
@@ -194,9 +193,6 @@ be sent to the input field of current application.
 
 `exwmx-sendstring-from-minibuffer' is a simple version of `exwmx-sendstring',
 it use minibuffer to get input.
-
-`exwmx-sendstring-from-kill-ring' can select a string in kill-ring then send
-this string to application.
 
 `exwmx-sendstring--send' can send a string to application, it is used by elisp.
 
@@ -302,7 +298,6 @@ can be used too :-)
 | "C-t 3"   | exwmx-switch-to-3-workspace     |
 | "C-t 4"   | exwmx-switch-to-4-workspace     |
 | "C-x o"   | switch-window                   |
-| "C-c y"   | exwmx-sendstring-from-kill-ring |
 
 If exwmx-example doesn't suit for your need, just copy and paste
 its useful pieces to your "~/.exwm-x" file.

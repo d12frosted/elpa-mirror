@@ -1,0 +1,15 @@
+(exwm-x .
+	[(20210416 2222)
+	 ((cl-lib
+	   (0 5))
+	  (async
+	   (1 6))
+	  (exwm
+	   (0 22)))
+	 "A derivative wm based on EXWM (emacs x window manager)" tar
+	 ((:commit . "6a1393d94176b5edac69dcbde70107d572cfd10b")
+	  (:authors
+	   ("Feng Shu" . "tumashu@163.com"))
+	  (:maintainer "Feng Shu" . "tumashu@163.com")
+	  (:keywords "window-manager" "exwm")
+	  (:url . "https://github.com/tumashu/exwm-x"))])

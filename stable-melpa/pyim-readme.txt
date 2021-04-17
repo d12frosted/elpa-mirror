@@ -525,3 +525,12 @@ pyim 安装后，可以通过下面的设置开启拼音搜索功能：
 (setq ivy-re-builders-alist
       '((t . pyim-ivy-cregexp)))
 #+END_EXAMPLE
+
+*** 让 vertico, selectrum 等补全框架，通过 orderless 支持拼音搜索候选项功能。
+#+BEGIN_EXAMPLE
+(defun my-orderless-regexp (orig_func component)
+  (let ((result (funcall orig_func component)))
+    (pyim-cregexp-build result)))
+
+(advice-add 'orderless-regexp :around #'my-orderless-regexp)
+#+END_EXAMPLE
