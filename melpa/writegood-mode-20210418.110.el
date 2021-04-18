@@ -3,8 +3,8 @@
 ;; Author: Benjamin Beckwith
 ;; Created: 2010-8-12
 ;; Version: 2.0
-;; Package-Version: 20180525.1343
-;; Package-Commit: b71757ec337e226909fb0422f0224e31acc71733
+;; Package-Version: 20210418.110
+;; Package-Commit: ed42d918d98826ad88928b7af9f2597502afc6b0
 ;; Last-Updated: 2015-03-25
 ;; URL: http://github.com/bnbeckwith/writegood-mode
 ;; Keywords: writing weasel-words grammar
@@ -25,6 +25,7 @@
 ;;
 ;;; Change Log:
 ;;
+;; 2.0.4 Remove cl dependency
 ;; 2.0.3 Add in a small decription of the Flesch-Kincaid score
 ;; 2.0.2 Fix Formatting in Org-mode files, make faces underline
 ;; 2.0.1 Make user additions to word lists dynamic
@@ -65,9 +66,6 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;
 ;;; Code:
-
-(eval-when-compile
-  (require 'cl))
 
 (require 'regexp-opt)
 (require 'faces)

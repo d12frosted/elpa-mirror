@@ -6,8 +6,8 @@
 ;; Author: Benjamin Beckwith
 ;; Created: 2010-6-19
 ;; Version: 1.4
-;; Package-Version: 20200108.1841
-;; Package-Commit: 79107d1130e8be3e1db4619373b98045b4fd9033
+;; Package-Version: 20210418.47
+;; Package-Commit: 63be1433b8a63cdc3239cc751e36360429c42b51
 ;; Last-Updated: 2019-06-28
 ;; URL: https://github.com/bnbeckwith/wc-mode
 ;; Package-Requires: ((emacs "24.1"))
@@ -189,13 +189,10 @@ Format will be evaluated in `wc-generate-modeline'")
 
 (defvar wc-mode-hooks nil "Hooks to run upon entry to wc-mode")
 
-(defvar-local wc-timer-tracker nil
-  "Buffer-local timers for wc-count.  Each buffer where wc-mode
-is enabled has a timer, and this allows them to be found and
-cleaned up when their respective buffers are closed.
+(defvar wc-timer-tracker nil
+  "Global timer for wc-count.
 
-TODO: word-count stats should not be generated for
-inactive/hidden buffers.")
+Ensure functions on this timer are not run when wc-mode is false.")
 
 (defvar-local wc-buffer-stats nil
   "This variable holds the per-buffer word-count statistics used to
@@ -327,12 +324,8 @@ operate over the entire buffer.
       (run-with-idle-timer
        wc-idle-wait t
        '(lambda ()
-          (setq wc-buffer-stats (wc-mode-update)))))
-
-(add-hook 'kill-buffer-hook
-          (lambda ()
-            (when (timerp wc-timer-tracker)
-              (cancel-timer wc-timer-tracker))))
+          (when wc-mode
+            (setq wc-buffer-stats (wc-mode-update))))))
 
 ;;;###autoload
 (define-minor-mode wc-mode
