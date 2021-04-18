@@ -26,13 +26,23 @@ UIs.  Using the following configuration, it works quite well with the
 vertico package:
 
 Disable completion help since vertico shows the candidates anyhow.
+
 (setq aggressive-completion-auto-completion-help nil)
 
 A command which just expands the common part without selecting a candidate.
+
 (defun th/vertico-complete ()
   (interactive)
   (minibuffer-complete)
-  (vertico--exhibit))
+  (when vertico--count-ov ;; Only if vertico is active.
+    (vertico--exhibit)))
 
 Use that for auto-completion.
-(setq aggressive-completion-auto-complete-fn #'th/vertico-complete))
+
+(setq aggressive-completion-auto-complete-fn #'th/vertico-complete)
+
+The inline help messages like "Next char not uniqe" make point bump to the
+right because of vertico's overlays which is a bit annoying.  And since you
+already see your candidates anyhow, the messages aren't important anyhow.
+
+(setq completion-show-inline-help nil)

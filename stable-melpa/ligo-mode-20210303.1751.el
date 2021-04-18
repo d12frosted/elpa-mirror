@@ -1,6 +1,8 @@
 ;;; ligo-mode.el --- A major mode for editing LIGO source code
 
 ;; Version: 0.1.0
+;; Package-Version: 20210303.1751
+;; Package-Commit: 70fc18317c621b19a0da81a0c564ce25453e0028
 ;; Author: LigoLang SASU
 ;; Url: https://gitlab.com/ligolang/ligo/-/tree/dev/tools/emacs
 ;; Keywords: languages
