@@ -86,6 +86,7 @@ missing package or change you would like to see.
     compilation-mode
     completions
     consult
+    corfu
     counsel
     counsel-css
     counsel-notmuch

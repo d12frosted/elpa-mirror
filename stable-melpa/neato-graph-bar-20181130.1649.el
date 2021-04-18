@@ -2,8 +2,6 @@
 
 ;; Author: Robert Cochran <robert-git@cochranmail.com>.
 ;; URL: https://gitlab.com/RobertCochran/neato-graph-bar
-;; Package-Version: 20181130.1649
-;; Package-Commit: a7ae35afd67911e8924f36e646bce0d3e3c1bbe6
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.3"))
 

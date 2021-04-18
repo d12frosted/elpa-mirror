@@ -14,49 +14,64 @@ point. Corfu can be considered the minimalistic completion-in-region counterpart
 of Vertico.
 
 Icomplete provides both completion-in-region and minibuffer completion in a
-single package. While Corfu and Vertico are technically very similar to
-Icomplete, Corfu and Vertico are two separate packages in order to optimize the
-UI for the two distinct use cases, also leading to code bases which are easier
-to understand.
+single package. While Corfu and Vertico are technically similar to Icomplete,
+Corfu and Vertico are two separate packages in order to optimize the UI for the
+two distinct use cases, also leading to code bases which are easier to
+understand.
 
 Corfu is a minimal package of less than 500 lines of code (my arbitrary limit
 for small components providing a single specific feature). In contrast to the
-very featureful and complex Company package, Corfu only provides the completion
-UI. No custom backends are provided. Only ~completion-at-point-functions~ are
-supported. However many code completion backends provide
+featureful and complex Company package, Corfu only provides the completion
+UI. No custom backends are provided. The completions are provided by the
+~completion-at-point-functions~. However many code completion backends provide
 ~completion-at-point-functions~, such that relying only on the default
-completion is often sufficient.
+completion may often be sufficient.
 
 [[https://github.com/minad/corfu/blob/main/screenshot.png?raw=true]]
 
 * Features
 
-- Popup display with arrow key navigation
+- Popup display with scrollbar indicator and arrow key navigation
 - The popup must be summoned explicitly by =TAB=
 - The current candidate is inserted with =TAB= and selected with =RET=
 - Candidates sorting by prefix, string length and alphabetically
-- Completion is automatically left, after a candidate has been selected.
+- Completion is automatically terminated after candidate selection
 - Filter string can contain arbitrary characters and spaces (needed
   when filtering with the [[https://github.com/oantolin/orderless][Orderless]] completion style)
+- Deferred completion style highlighting for performance
+- Jumping to location/documentation of current candidate (Company extension)
+- Support for ~annotation-function~ and ~affixation-function~
+
+Notable non-feature: Timer-based automatic completions are not supported.
 
 * Configuration
 
-Corfu must be installed manually as of now. After installation, the local minor
-mode can be enabled with =M-x corfu-mode=. In order to configure Corfu and other
-packages in your init.el, you may want to use ~use-package~. I recommend to give
-orderless completion a try, which is different from the familiar prefix TAB
-completion. Here is an example configuration:
+Corfu is available from [[http://elpa.gnu.org/packages/corfu.html][GNU ELPA]], such that it can be installed directly via
+~package-install~. After installation, the local minor mode can be enabled with
+=M-x corfu-mode=. In order to configure Corfu and other packages in your
+init.el, you may want to use ~use-package~. I recommend to give orderless
+completion a try, which is different from the familiar prefix TAB completion.
+Here is an example configuration:
 
 #+begin_src emacs-lisp
-  ;; Enable TAB completion
-  (use-package emacs
-    :init
-    (setq tab-always-indent 'complete))
-
-  ;; Enable corfu
+  ;; Configure corfu
   (use-package corfu
+    ;; Optionally use TAB for cycling, default is `corfu-complete'.
+    ;; :bind (:map corfu-map
+    ;;        ("TAB" . corfu-next)
+    ;;        ("S-TAB" . corfu-previous))
+
+    ;; Enable the overlay only for certain modes.
+    ;; For example it is not a useful UI for completions at point in the
+    ;; minibuffer.
     :hook ((prog-mode . corfu-mode)
-           (eshell-mode . corfu-mode)))
+           (eshell-mode . corfu-mode))
+
+    :config
+
+    ;; Optionally enable cycling for `corfu-next' and `corfu-previous'.
+    ;; (setq corfu-cycle t)
+  )
 
   ;; Use the `orderless' completion style.
   ;; Enable `partial-completion' for files to allow path expansion.
@@ -66,6 +81,16 @@ completion. Here is an example configuration:
     (setq completion-styles '(orderless)
           completion-category-defaults nil
           completion-category-overrides '((file (styles . (partial-completion))))))
+
+  ;; A few more useful configurations...
+  (use-package emacs
+    :init
+    ;; TAB cycle if there are only few candidates
+    (setq completion-cycle-threshold 3)
+
+    ;; Enable indentation+completion using the TAB key.
+    ;; Completion is often bound to M-TAB.
+    (setq tab-always-indent 'complete))
 #+end_src
 
 * Complementary packages
@@ -77,6 +102,23 @@ expressions are separated by spaces.
 
 You may also want to look into my [[https://github.com/minad/vertico][Vertico]] package, which provides a vertical
 minibuffer completion system. Vertico is the minibuffer counterpart of Corfu.
+
+* Caveats
+
+This package is experimental and new. I am not yet claiming that this package
+works correctly. There are a few known caveats.
+
+- No caching, the completion table is called directly.
+- The =:exit-function= handling is probably insufficient.
+- The overlay popup is brittle (Alternatives: Posframe, Postip?)
+- The thin popup borders are only drawn if =line-spacing=nil=.
+- The abort handling could be improved. Undo the completion input?
+- The ~completion-in-region-mode-predicate~ is deliberatly ignored in order to
+  give the completion style full control. This predicate checks if the start
+  position of the completion changed by calling the backend.
+- Completion is terminated if there are no matches. Add optional confirmation?
+- Company kind icons are not supported (~company-kind~)
+- Company metadata is not shown (~company-docsig~)
 
 * Contributions
 

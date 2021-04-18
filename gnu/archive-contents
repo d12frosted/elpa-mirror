@@ -141,7 +141,7 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:keywords "async"))])
  (auctex .
-	 [(13 0 6)
+	 [(13 0 7)
 	  ((emacs
 	    (24 3)))
 	  "Integrated environment for *TeX*" tar
@@ -402,7 +402,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 1)
+	[(0 2)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -2532,14 +2532,14 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:keywords "languages"))])
  (vertico .
-	  [(0 4)
+	  [(0 5)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar
 	   ((:url . "https://github.com/minad/vertico")
-	    (:maintainer "Daniel Mendler")
+	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
-	     ("Daniel Mendler")))])
+	     ("Daniel Mendler" . "mail@daniel-mendler.de")))])
  (vigenere .
 	   [(1 0)
 	    ((emacs

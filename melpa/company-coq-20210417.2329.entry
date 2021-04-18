@@ -1,0 +1,19 @@
+(company-coq .
+	     [(20210417 2329)
+	      ((cl-lib
+		(0 5))
+	       (dash
+		(2 12 1))
+	       (yasnippet
+		(0 11 0))
+	       (company
+		(0 8 12))
+	       (company-math
+		(1 1)))
+	      "A collection of extensions for Proof General's Coq mode" tar
+	      ((:commit . "9cef9d2933c531f7fa77348927137302579101b2")
+	       (:authors
+		("Clément Pit-Claudel" . "clement.pitclaudel@live.com"))
+	       (:maintainer "Clément Pit-Claudel" . "clement.pitclaudel@live.com")
+	       (:keywords "convenience" "languages")
+	       (:url . "https://github.com/cpitclaudel/company-coq"))])

@@ -1,0 +1,15 @@
+(term-cmd .
+	  [(20210417 1447)
+	   ((emacs
+	     (27 2))
+	    (dash
+	     (2 12 0))
+	    (f
+	     (0 18 2)))
+	   "Send commands from programs running in term.el." tar
+	   ((:commit . "281b9a6d864ca85dc1451dc46baca98f48dc3f60")
+	    (:authors
+	     ("Callie Cameron" . "cjcameron7@gmail.com"))
+	    (:maintainer "Callie Cameron" . "cjcameron7@gmail.com")
+	    (:keywords "processes")
+	    (:url . "https://github.com/calliecameron/term-cmd"))])
