@@ -23,7 +23,7 @@ are disabled by default (nil):
     modus-themes-mode-line                      (choice)
     modus-themes-diffs                          (choice)
     modus-themes-syntax                         (choice)
-    modus-themes-intense-hl-line                (boolean)
+    modus-themes-hl-line                        (choice)
     modus-themes-subtle-line-numbers            (boolean)
     modus-themes-paren-match                    (choice)
     modus-themes-region                         (choice)
@@ -85,6 +85,7 @@ missing package or change you would like to see.
     compilation-mode
     completions
     consult
+    corfu
     counsel
     counsel-css
     counsel-notmuch
@@ -128,8 +129,9 @@ missing package or change you would like to see.
     eldoc-box
     elfeed
     elfeed-score
+    embark
     emms
-    enhanced-ruby-mode
+    enh-ruby-mode (enhanced-ruby-mode)
     epa
     equake
     erc
@@ -257,6 +259,7 @@ missing package or change you would like to see.
     outline-minor-faces
     package (M-x list-packages)
     page-break-lines
+    pandoc-mode
     paradox
     paren-face
     parrot
@@ -312,10 +315,12 @@ missing package or change you would like to see.
     swoop
     sx
     symbol-overlay
+    syslog-mode
+    tab-bar-groups
     tab-bar-mode
     tab-line-mode
-    syslog-mode
     table (built-in table.el)
+    telega
     telephone-line
     terraform-mode
     term
@@ -330,6 +335,7 @@ missing package or change you would like to see.
     vc (built-in mode line status for version control)
     vc-annotate (C-x v g)
     vdiff
+    vertico
     vimish-fold
     visible-mark
     visual-regexp
