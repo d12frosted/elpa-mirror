@@ -12,5 +12,5 @@ on the Emacs `completing-read' API, notably the default completion
 system, Icomplete, Selectrum and Embark.
 
 Consult has been inspired by Counsel. Some of the Consult commands
-originated in the Selectrum wiki. See the README for a full list of
-contributors.
+originated in the Counsel package or the Selectrum wiki. See the
+README for a full list of contributors.

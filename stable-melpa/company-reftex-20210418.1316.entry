@@ -1,0 +1,15 @@
+(company-reftex .
+		[(20210418 1316)
+		 ((emacs
+		   (25 1))
+		  (s
+		   (1 12))
+		  (company
+		   (0 8)))
+		 "Company backend based on RefTeX." single
+		 ((:commit . "42eb98c6504e65989635d95ab81b65b9d5798e76")
+		  (:authors
+		   ("Eivind Fonn" . "evfonn@gmail.com"))
+		  (:maintainer "Eivind Fonn" . "evfonn@gmail.com")
+		  (:keywords "bib" "tex" "company" "latex" "reftex" "references" "labels" "citations")
+		  (:url . "https://github.com/TheBB/company-reftex"))])

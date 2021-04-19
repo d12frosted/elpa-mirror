@@ -75,7 +75,7 @@ Evil integration of [embrace.el].
   The keys that are processed by `evil-surround' are saved in the
   variable `evil-embrace-evil-surround-keys'. The default value is:
   ,----
-  | (?\( ?\[ ?\{ ?\) ?\] ?\} ?\" ?\' ?< ?> ?b ?B ?t)
+  | (?\( ?\[ ?\{ ?\) ?\] ?\} ?\" ?\' ?< ?> ?b ?B ?t ?w ?W ?s ?p)
   `----
 
   Note that this variable is buffer-local. You should change it in the

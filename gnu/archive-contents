@@ -2109,7 +2109,7 @@
 	(:keywords "sequences")
 	(:url . "http://elpa.gnu.org/packages/seq.html"))])
  (setup .
-	[(0 1 2)
+	[(0 2 0)
 	 ((emacs
 	   (26 1)))
 	 "Helpful Configuration Macro" tar
@@ -2127,7 +2127,7 @@
 	     ("Michael R. Mauger" . "michael@mauger.com"))
 	    (:maintainer "Michael R. Mauger" . "michael@mauger.com"))])
  (shell-command+ .
-		 [(2 0 0)
+		 [(2 1 0)
 		  ((emacs
 		    (24 1)))
 		  "An extended shell-command" tar

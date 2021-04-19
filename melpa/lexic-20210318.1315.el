@@ -10,8 +10,6 @@
 ;;
 ;; Maintainer: TEC <tec@tecosaur.com>
 ;; Version: 0.0.1
-;; Package-Version: 20210318.1315
-;; Package-Commit: 4ded6be2ce3e8dadc5635a534827181a8c8ab602
 ;; Homepage: https://github.com/tecosaur/lexic
 ;; Package-Requires: ((emacs "26.3") (dash "2.17.0") (visual-fill-column "2.2"))
 
