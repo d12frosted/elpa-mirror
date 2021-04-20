@@ -493,7 +493,7 @@
 		  ("Daiki Ueno" . "ueno@gnu.org"))
 		 (:maintainer nil . "emacs-devel@gnu.org"))])
  (debbugs .
-	  [(0 27)
+	  [(0 28)
 	   ((emacs
 	     (25 1))
 	    (soap-client
@@ -503,7 +503,7 @@
 	    (:authors
 	     ("Michael Albinus" . "michael.albinus@gmx.de"))
 	    (:keywords "comm" "hypermedia")
-	    (:url . "http://elpa.gnu.org/packages/debbugs.html"))])
+	    (:url . "https://elpa.gnu.org/packages/debbugs.html"))])
  (delight .
 	  [(1 7)
 	   ((cl-lib
