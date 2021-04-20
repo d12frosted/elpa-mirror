@@ -1,0 +1,11 @@
+(osx-trash .
+	   [(20210419 2229)
+	    ((emacs
+	      (24 1)))
+	    "System trash for OS X" tar
+	    ((:commit . "af74a2055a15bf4182d8196600f7decd66eec634")
+	     (:authors
+	      ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
+	     (:maintainer "Sebastian Wiesner" . "swiesner@lunaryorn.com")
+	     (:keywords "files" "convenience" "tools" "unix")
+	     (:url . "https://github.com/lunaryorn/osx-trash.el"))])

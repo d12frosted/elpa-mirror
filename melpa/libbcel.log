@@ -3,3 +3,29 @@ Fetcher: github
 Source:  https://github.com/DamienCassou/libbcel.git
 
 Updating /mnt/store/melpa/working/libbcel/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/libbcel/
+  to /tmp/libbcelV77QBa/libbcel-20191203.654
+    libbcel-actions.el -> libbcel-actions.el
+    libbcel-client.el -> libbcel-client.el
+    libbcel-nav.el -> libbcel-nav.el
+    libbcel-oauth.el -> libbcel-oauth.el
+    libbcel-structs.el -> libbcel-structs.el
+    libbcel-util.el -> libbcel-util.el
+    libbcel.el -> libbcel.el
+Created libbcel-20191203.654.tar containing:
+  libbcel-20191203.654/
+  libbcel-20191203.654/libbcel-actions.el
+  libbcel-20191203.654/libbcel-client.el
+  libbcel-20191203.654/libbcel-nav.el
+  libbcel-20191203.654/libbcel-oauth.el
+  libbcel-20191203.654/libbcel-pkg.el
+  libbcel-20191203.654/libbcel-structs.el
+  libbcel-20191203.654/libbcel-util.el
+  libbcel-20191203.654/libbcel.el
+Built libbcel in 4.127s, finished at Tue Apr 20 11:03:25 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  356 Apr 20 11:03 packages/libbcel-20191203.654.entry
+ 52K -rw-r--r-- 1 root root  50K Apr 20 11:03 packages/libbcel-20191203.654.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 20 11:03 packages/libbcel-badge.svg
+4.0K -rw-r--r-- 1 root root  177 Apr 20 11:03 packages/libbcel-readme.txt

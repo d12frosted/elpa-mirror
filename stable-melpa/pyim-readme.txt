@@ -205,10 +205,13 @@ pyim 支持仓颉输入法，用户可以通过变量 `pyim-default-scheme' 来�
 #+END_EXAMPLE
 
 如果用户使用仓颉第五代，最简单的方式是从 melpa 中安装 pyim-cangjie5dict 包，
-然后根据它的 [[https://github.com/erstern/pyim-cangjie5dict][README]] 来配置。
+然后根据它的 [[https://github.com/p1uxtar/pyim-cangjie5dict][README]] 来配置。
 pyim 支持其它版本的仓颉，但需要用户自己创建词库文件。
 
 用户可以使用命令：`pyim-search-word-code' 来查询当前选择词条的仓颉编码
+
+*** 使用三码郑码（至至郑码）输入法
+具体细节参考：https://github.com/p1uxtar/pyim-smzmdict
 
 *** 让选词框跟随光标
 用户可以通过下面的设置让 pyim 在 *光标处* 显示一个选词框：
