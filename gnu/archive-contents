@@ -295,12 +295,12 @@
 		("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	       (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (cl-lib .
-	 [(0 6 1)
-	  nil "Forward cl-lib compatibility library for Emacs<24.3" single
-	  ((:url . "http://elpa.gnu.org/packages/cl-lib.html")
+	 [(0 7)
+	  nil "Forward cl-lib compatibility library for Emacs<24.3" tar
+	  ((:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca")
 	   (:authors
 	    ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-	   (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
+	   (:url . "https://elpa.gnu.org/packages/cl-lib.html"))])
  (cl-print .
 	   [(1 0)
 	    ((emacs
