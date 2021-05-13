@@ -13,9 +13,9 @@
 Vertico provides a minimalistic vertical completion UI, which is based on the
 default completion system. By reusing the default system, Vertico achieves full
 compatibility with built-in Emacs commands and completion tables. Vertico is
-pretty bare-bone and only provides a minimal set of commands. The code base is
-less than 500 lines of code. Additional optional enhancements can be provided
-externally by complementary packages.
+pretty bare-bone and comes with only a minimal set of commands. The code base is
+small (~500 lines of code without whitespace and comments). Additional
+enhancements can be installed separately via complementary packages.
 
 * Features
 
@@ -26,7 +26,7 @@ externally by complementary packages.
 - Candidates sorting by history, string length and alphabetically
 - Long candidates with newlines are formatted to take up less space
 - Deferred completion style highlighting for performance
-- Support for ~annotation-function~, ~affixation-function~ and ~x-group-function~
+- Support for ~annotation-function~, ~affixation-function~ and ~x-title-function~
 
 [[https://github.com/minad/vertico/blob/main/screenshot.svg?raw=true]]
 
@@ -79,15 +79,16 @@ Here is an example configuration:
     (setq enable-recursive-minibuffers t))
 #+end_src
 
-* Keymap
+* Key bindings
 
 Vertico defines its own local keymap in the minibuffer which is derived from
 ~minibuffer-local-map~. The keymap mostly keeps the ~fundamental-mode~
-keybindings intact, but rebinds a few commands. Note in particular the binding
-of =TAB= to ~vertico-insert~ and the bindings of ~vertico-exit/exit-input~.
+keybindings intact and remaps and binds only a few commands. Note in particular
+the binding of =TAB= to ~vertico-insert~ and the bindings of
+~vertico-exit/exit-input~.
 
-- ~beginning-of-buffer~, ~minibuffer-beginning-of-buffer~ -> ~vertico-beginning-of-buffer~
-- ~end-of-buffer~ -> ~vertico-end-of-buffer~
+- ~beginning-of-buffer~, ~minibuffer-beginning-of-buffer~ -> ~vertico-first~
+- ~end-of-buffer~ -> ~vertico-last~
 - ~scroll-down-command~ -> ~vertico-scroll-down~
 - ~scroll-up-command~ -> ~vertico-scroll-up~
 - ~next-line~, ~next-line-or-history-element~ -> ~vertico-next~
@@ -151,7 +152,7 @@ the same spirit as Vertico.
 * Alternatives
 
 There are many alternative completion UIs, each UI with its own advantages and
-disadvantages. The [[https://github.com/raxod502/selectrum][Selectrum readme]] provides an extensive comparison of many
+disadvantages. The [[https://github.com/raxod502/selectrum][Selectrum readme]] gives an extensive comparison of many
 available completion systems from the perspective of Selectrum.
 
 Vertico aims to be fully compliant with all Emacs commands and achieves that
@@ -167,52 +168,66 @@ with Emacs. There are at least two other interactive completion UIs, which
 follow a similar philosophy:
 
 - [[https://github.com/raxod502/selectrum][Selectrum]]: If you are looking for a less minimalistic and more full-featured
-  (but also more complex) package, you may be interested in Selectrum, which
-  provides a similar UI as Vertico. Additionally Selectrum supports Avy-style
-  quick keys, a horizontal display and a configurable buffer display.
+  (but also more complex) package, you may be interested in Selectrum, which has
+  a similar UI as Vertico. Additionally Selectrum optimizes Tramp file directory
+  browsing with caching, supports Avy-style quick keys, a horizontal display and
+  a configurable buffer display.
 - [[https://github.com/oantolin/icomplete-vertical][Icomplete-vertical]]: This package enhances the Emacs builtin Icomplete with a
   vertical display. In contrast to Vertico, the candidates are rotated such that
   the current candidate always appears at the top. From my perspective,
-  candidate rotation feels a bit less intuitive than the UI provided by Vertico
-  or Selectrum.
+  candidate rotation feels a bit less intuitive than the UI of Vertico or
+  Selectrum.
 
-* Problematic completion commands
+* Caveats
 
-** ~org-set-tags-command~
+Vertico is robust and works well for most use cases, except when navigating
+remote directories via Tramp (See [[https://github.com/minad/vertico/issues/20][issue 20]]). My opinion is that the Tramp
+performance problems should be resolved on a lower layer within the file
+completion table. In case you are a heavy Tramp user, I recommend to give
+Selectrum a try. Furthermore there are a few problematic completion commands
+described in the next section.
 
- ~org-set-tags-command~ implements a completion table which relies on the ~basic~
- completion style and TAB completion. This table does not work well with Vertico
- and Icomplete. The issue can be mitigated by deactivating most of the Vertico UI
- and relying purely on TAB completion. The UI is still enhanced by Vertico, since
- Vertico shows the available tags.
+** Problematic completion commands
 
- #+begin_src emacs-lisp
-   (defun disable-selection ()
-     (when (eq minibuffer-completion-table #'org-tags-completion-function)
-       (setq-local vertico-map minibuffer-local-completion-map
-                   completion-cycle-threshold nil
-                   completion-styles '(basic))))
-   (advice-add #'vertico--setup :before #'disable-selection)
- #+end_src
+   A few completion commands make certain assumptions about the completion
+   styles and the completion UI. Some of the assumptions may not hold in Vertico
+   and as such require minor workarounds.
 
- In order to fix the issues properly, ~org-set-tags-command~ should be
- implemented using ~completing-read-multiple~ as discussed on the [[https://lists.gnu.org/archive/html/emacs-orgmode/2020-07/msg00222.html][mailing list]].
+*** ~org-set-tags-command~
 
-** ~Info-goto-node~
+  ~org-set-tags-command~ implements a completion table which relies on the ~basic~
+  completion style and TAB completion. This table does not work well with Vertico
+  and Icomplete. The issue can be mitigated by deactivating most of the Vertico UI
+  and relying purely on TAB completion. The UI is still enhanced by Vertico, since
+  Vertico shows the available tags.
 
- The command ~Info-goto-node~ uses the ~Info-read-node-name~ completion table,
- which almost works as is with Vertico. However there is the issue that the
- completion table sometimes throws unexpected errors (bug#47771).
+  #+begin_src emacs-lisp
+    (defun disable-selection ()
+      (when (eq minibuffer-completion-table #'org-tags-completion-function)
+        (setq-local vertico-map minibuffer-local-completion-map
+                    completion-cycle-threshold nil
+                    completion-styles '(basic))))
+    (advice-add #'vertico--setup :before #'disable-selection)
+  #+end_src
 
-** ~tmm-menubar~
+  In order to fix the issues properly, ~org-set-tags-command~ should be
+  implemented using ~completing-read-multiple~ as discussed on the [[https://lists.gnu.org/archive/html/emacs-orgmode/2020-07/msg00222.html][mailing list]].
 
- The text menu bar works well with Vertico but always shows a =*Completions*=
- buffer, which is unwanted if you are using the Vertico UI. This completion
- buffer can be disabled as follows.
+*** ~Info-goto-node~
 
- #+begin_src emacs-lisp
-   (advice-add #'tmm-add-prompt :after #'minibuffer-hide-completions)
- #+end_src
+  The command ~Info-goto-node~ uses the ~Info-read-node-name~ completion table,
+  which almost works as is with Vertico. However there is the issue that the
+  completion table sometimes throws unexpected errors (bug#47771).
+
+*** ~tmm-menubar~
+
+  The text menu bar works well with Vertico but always shows a =*Completions*=
+  buffer, which is unwanted if you are using the Vertico UI. This completion
+  buffer can be disabled as follows.
+
+  #+begin_src emacs-lisp
+    (advice-add #'tmm-add-prompt :after #'minibuffer-hide-completions)
+  #+end_src
 
 * Contributions
 

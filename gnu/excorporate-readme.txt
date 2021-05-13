@@ -3,15 +3,11 @@ Excorporate provides Exchange integration for Emacs.
 Most Recent Improvements
 ------------------------
 
-New in Excorporate 0.9.5, released 2021-04-07:
+New in Excorporate 0.9.6, released 2021-04-26:
 
-** Set time zone when creating calendar items
+** Fix Emacs < 24.4 incompatibility in time zone support
 
-** Add excorporate-disconnect function
-
-** Document how to disconnect and how to handle a stuck connection
-
-** Use new exco-select-connection-identifier function in API Usage examples
+** Require cl-lib package explicitly
 
 Quick Start
 -----------
