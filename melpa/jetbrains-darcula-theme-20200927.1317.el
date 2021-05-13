@@ -5,7 +5,7 @@
 ;; Author: Ian Y.E. Pan
 ;; URL: https://github.com/ianpan870102/jetbrains-darcula-emacs-theme
 ;; Package-Version: 20200927.1317
-;; Package-Commit: 7a934115238d7b80df230a5ba7a70d866bc18c66
+;; Package-Commit: b9b3c39743be5aeba17d4d8e5d379613451ddec6
 ;; Version: 1.0.0
 
 ;; This program is free software: you can redistribute it and/or modify

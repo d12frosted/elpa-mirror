@@ -1,0 +1,14 @@
+(projector .
+	   [(20210421 1728)
+	    ((alert
+	      (1 1))
+	     (projectile
+	      (0 11 0))
+	     (cl-lib
+	      (0 5)))
+	    "Lightweight library for managing project-aware shell and command buffers" single
+	    ((:commit . "7bbee0ef70817d52339119d4517dbbcbab930de6")
+	     (:authors
+	      ("Justin Talbott" . "justin@waymondo.com"))
+	     (:maintainer "Justin Talbott" . "justin@waymondo.com")
+	     (:url . "https://github.com/waymondo/projector.el"))])

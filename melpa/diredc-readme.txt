@@ -24,6 +24,8 @@ almost all 'file managers', and also some unique features:
     * empty the trash, along with its administrative overhead
     * view trash summary information
   * Navigate 'up' n parent directories
+  * Launch persistent asynchronous processes for files
+    * Processes will survive even after exiting Emacs.
   * Quick shell window
     * choose your default shell / terminal emulation mode
     * choose your default shell program
@@ -63,6 +65,7 @@ Bonus customization features
 Suggested (not part of Emacs):
 
   popup       -- for popup-menu*
+  key-assist  -- for key-assist
 
 
 ; Installation:

@@ -30,6 +30,7 @@ are disabled by default (nil):
     modus-themes-region                         (choice)
     modus-themes-links                          (choice)
     modus-themes-completions                    (choice)
+    modus-themes-success-deuteranopia           (boolean)
 
 The default scale for headings is as follows (it can be customized as
 well---remember, no scaling takes place by default):
@@ -70,6 +71,7 @@ missing package or change you would like to see.
     bm
     bongo
     boon
+    bookmark
     breakpoint (provided by built-in gdb-mi.el)
     buffer-expose
     calendar and diary
@@ -232,7 +234,7 @@ missing package or change you would like to see.
     minibuffer-line
     minimap
     mmm-mode
-    modeline
+    mode-line
     mood-line
     mpdel
     mu4e
@@ -278,6 +280,7 @@ missing package or change you would like to see.
     prism (see "Note for prism.el" in the manual)
     proced
     prodigy
+    pulse
     quick-peek
     racket-mode
     rainbow-blocks

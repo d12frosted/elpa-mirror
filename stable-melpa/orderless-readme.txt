@@ -23,4 +23,4 @@ word prefixes.  It is easy to add new styles: they are functions
 from strings to strings that map a component to a regexp to match
 against.  The variable `orderless-matching-styles' lists the
 matching styles to be used for components, by default it allows
-literal, regexp and initialism matching.
+literal and regexp matching.

@@ -3,9 +3,7 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/pointback.git
 
 Updating /mnt/store/melpa/working/pointback/
-Built pointback in 4.846s, finished at Tue Apr 20 11:19:33 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.5K Apr 20 11:19 packages/pointback-20100210.1552.el
-4.0K -rw-r--r-- 1 root root  324 Apr 20 11:19 packages/pointback-20100210.1552.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 20 11:19 packages/pointback-badge.svg
-4.0K -rw-r--r-- 1 root root  460 Apr 20 11:19 packages/pointback-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: could not read Username for 'https://github.com': No such device or address
+error: Could not fetch origin
+

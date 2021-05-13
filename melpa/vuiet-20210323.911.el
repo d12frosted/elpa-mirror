@@ -5,7 +5,7 @@
 ;; Author: Mihai Olteanu <mihai_olteanu@fastmail.fm>
 ;; Version: 1.0
 ;; Package-Version: 20210323.911
-;; Package-Commit: 16f9d9ee4744f4170ab9eab361783e3e32e3b627
+;; Package-Commit: 43b9364042922950f612ac57d8c526921a01b291
 ;; Package-Requires: ((emacs "26.1") (lastfm "1.1") (versuri "1.0") (s "1.12.0") (bind-key "2.4") (mpv "0.1.0"))
 ;; Keywords: multimedia
 ;; URL: https://github.com/mihaiolteanu/vuiet

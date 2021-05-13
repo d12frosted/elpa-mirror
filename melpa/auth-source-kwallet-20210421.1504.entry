@@ -1,0 +1,10 @@
+(auth-source-kwallet .
+		     [(20210421 1504)
+		      ((emacs
+			(24 4)))
+		      "KWallet integration for auth-source" single
+		      ((:commit . "c2abee6ada13d7332725bd700ad76da8aebea530")
+		       (:authors
+			("Ekaterina Vaartis" . "vaartis@kotobank.ch"))
+		       (:maintainer "Ekaterina Vaartis" . "vaartis@kotobank.ch")
+		       (:url . "https://github.com/vaartis/auth-source-kwallet"))])

@@ -42,7 +42,7 @@ To:
 
     Another Keyword
         [Documentation]    A very long text
-        ...    | that describes the keyword.
+        ...    |that describes the keyword.
 
 #### Add spacing for an argument
 

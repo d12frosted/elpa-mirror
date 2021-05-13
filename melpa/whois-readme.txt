@@ -1,4 +1,3 @@
-
 This package complements (does not replace) the standard whois
 functionality of GNU Emacs.  It provides:
 

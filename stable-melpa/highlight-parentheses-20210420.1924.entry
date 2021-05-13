@@ -1,0 +1,11 @@
+(highlight-parentheses .
+		       [(20210420 1924)
+			((emacs
+			  (24 3)))
+			"Highlight surrounding parentheses" single
+			((:commit . "891538de31524956136e1419e1206af0c8befe02")
+			 (:authors
+			  ("Nikolaj Schumacher <bugs * nschum de>"))
+			 (:maintainer "Tassilo Horn" . "tsdh@gnu.org")
+			 (:keywords "faces" "matching")
+			 (:url . "https://sr.ht/~tsdh/highlight-parentheses.el/"))])

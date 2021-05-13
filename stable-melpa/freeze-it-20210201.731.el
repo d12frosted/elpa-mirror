@@ -5,7 +5,7 @@
 ;; Author: Paul W. Rankin <pwr@bydasein.com>
 ;; Keywords: wp, text
 ;; Package-Version: 20210201.731
-;; Package-Commit: 752fe042ba3153473cd149875388c8dd9b4a8a26
+;; Package-Commit: d5dc811fc892d78e042394bb4a1342dea2480b5c
 ;; Version: 0.2.2
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/rnkn/freeze-it

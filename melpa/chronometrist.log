@@ -1,51 +1,31 @@
 Package: chronometrist
-Fetcher: github
-Source:  https://github.com/contrapunctus-1/chronometrist.git
+Fetcher: git
+Source:  https://tildegit.org/contrapunctus/chronometrist.git
 
 Updating /mnt/store/melpa/working/chronometrist/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/chronometrist/
-  to /tmp/chronometrist3JtxCj/chronometrist-20210211.601
+  to /tmp/chronometristnS6wKg/chronometrist-20210507.923
   ! doc/manual.info -> manual.info
-  ! elisp/chronometrist-common.el -> chronometrist-common.el
   ! elisp/chronometrist-diary-view.el -> chronometrist-diary-view.el
-  ! elisp/chronometrist-events.el -> chronometrist-events.el
   ! elisp/chronometrist-key-values.el -> chronometrist-key-values.el
-  ! elisp/chronometrist-migrate.el -> chronometrist-migrate.el
-  ! elisp/chronometrist-plist-pp.el -> chronometrist-plist-pp.el
-  ! elisp/chronometrist-queries.el -> chronometrist-queries.el
-  ! elisp/chronometrist-report.el -> chronometrist-report.el
-  ! elisp/chronometrist-sexp.el -> chronometrist-sexp.el
-  ! elisp/chronometrist-statistics.el -> chronometrist-statistics.el
-  ! elisp/chronometrist-time.el -> chronometrist-time.el
-  ! elisp/chronometrist-timer.el -> chronometrist-timer.el
   ! elisp/chronometrist.el -> chronometrist.el
-Created chronometrist-20210211.601.tar containing:
-  chronometrist-20210211.601/
-  chronometrist-20210211.601/chronometrist-common.el
-  chronometrist-20210211.601/chronometrist-diary-view.el
-  chronometrist-20210211.601/chronometrist-events.el
-  chronometrist-20210211.601/chronometrist-key-values.el
-  chronometrist-20210211.601/chronometrist-migrate.el
-  chronometrist-20210211.601/chronometrist-pkg.el
-  chronometrist-20210211.601/chronometrist-plist-pp.el
-  chronometrist-20210211.601/chronometrist-queries.el
-  chronometrist-20210211.601/chronometrist-report.el
-  chronometrist-20210211.601/chronometrist-sexp.el
-  chronometrist-20210211.601/chronometrist-statistics.el
-  chronometrist-20210211.601/chronometrist-time.el
-  chronometrist-20210211.601/chronometrist-timer.el
-  chronometrist-20210211.601/chronometrist.el
-  chronometrist-20210211.601/dir
-  chronometrist-20210211.601/manual.info
-Built chronometrist in 4.599s, finished at Tue Apr 20 11:47:35 2021
+Created chronometrist-20210507.923.tar containing:
+  chronometrist-20210507.923/
+  chronometrist-20210507.923/chronometrist-diary-view.el
+  chronometrist-20210507.923/chronometrist-key-values.el
+  chronometrist-20210507.923/chronometrist-pkg.el
+  chronometrist-20210507.923/chronometrist.el
+  chronometrist-20210507.923/dir
+  chronometrist-20210507.923/manual.info
+Built chronometrist in 4.057s, finished at Thu May 13 09:14:49 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  501 Apr 20 11:47 packages/chronometrist-20210211.601.entry
-172K -rw-r--r-- 1 root root 170K Apr 20 11:47 packages/chronometrist-20210211.601.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 20 11:47 packages/chronometrist-badge.svg
- 12K -rw-r--r-- 1 root root  12K Apr 20 11:47 packages/chronometrist-goal-20210104.336.el
-4.0K -rw-r--r-- 1 root root  525 Apr 20 10:29 packages/chronometrist-goal-20210104.336.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 20 10:29 packages/chronometrist-goal-badge.svg
-4.0K -rw-r--r-- 1 root root  169 Apr 20 11:47 packages/chronometrist-goal-readme.txt
-4.0K -rw-r--r-- 1 root root  166 Apr 20 11:47 packages/chronometrist-goal.log
-4.0K -rw-r--r-- 1 root root 2.0K Apr 20 11:47 packages/chronometrist-readme.txt
+4.0K -rw-r--r-- 1 root root  485 May 13 09:14 packages/chronometrist-20210507.923.entry
+ 40K -rw-r--r-- 1 root root  40K May 13 09:14 packages/chronometrist-20210507.923.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 13 09:14 packages/chronometrist-badge.svg
+ 12K -rw-r--r-- 1 root root  12K May 13 09:14 packages/chronometrist-goal-20210510.1831.el
+4.0K -rw-r--r-- 1 root root  531 May 13 05:55 packages/chronometrist-goal-20210510.1831.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 13 05:55 packages/chronometrist-goal-badge.svg
+4.0K -rw-r--r-- 1 root root  153 May 13 09:14 packages/chronometrist-goal-readme.txt
+4.0K -rw-r--r-- 1 root root  163 May 13 09:14 packages/chronometrist-goal.log
+4.0K -rw-r--r-- 1 root root 2.0K May 13 09:14 packages/chronometrist-readme.txt

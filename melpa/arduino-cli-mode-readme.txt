@@ -13,4 +13,4 @@ see the README at https://github.com/motform/arduino-cli-mode
 For more information on arduino-cli itself,
 see https://github.com/arduino/arduino-cli
 
-Tested against arduino-cli >= 0.10.0
+Tested against arduino-cli <= 0.10.0

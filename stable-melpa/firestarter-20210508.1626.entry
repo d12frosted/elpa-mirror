@@ -1,0 +1,11 @@
+(firestarter .
+	     [(20210508 1626)
+	      ((emacs
+		(24 1)))
+	      "Execute (shell) commands on save" single
+	      ((:commit . "76070c9074aa363350abe6ad06143e90b3e12ab1")
+	       (:authors
+		("Vasilij Schneidermann" . "mail@vasilij.de"))
+	       (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de")
+	       (:keywords "convenience")
+	       (:url . "https://depp.brause.cc/firestarter"))])

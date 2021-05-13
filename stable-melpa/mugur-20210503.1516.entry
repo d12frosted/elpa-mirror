@@ -1,0 +1,19 @@
+(mugur .
+       [(20210503 1516)
+	((emacs
+	  (26 1))
+	 (s
+	  (1 12 0))
+	 (anaphora
+	  (1 0 4))
+	 (dash
+	  (2 18 1))
+	 (cl-lib
+	  (1 0)))
+	"Configurator for QMK compatible keyboards" single
+	((:commit . "b84752c391c5fe515960f77c80d08f313df57f33")
+	 (:authors
+	  ("Mihai Olteanu" . "mihai_olteanu@fastmail.fm"))
+	 (:maintainer "Mihai Olteanu" . "mihai_olteanu@fastmail.fm")
+	 (:keywords "multimedia")
+	 (:url . "https://github.com/mihaiolteanu/mugur"))])

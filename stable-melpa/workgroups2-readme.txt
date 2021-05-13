@@ -19,14 +19,13 @@ Most commands start with prefix `wg-prefix-key'.
 You can change it before activating workgroups.
 Change prefix key (before activating WG)
 
-(setq wg-prefix-key (kbd "C-c z"))
+(setq wg-prefix-key "C-c z")
 
 By default prefix is: "C-c z"
-
-<prefix> <key>
 
 <prefix> C-c    - create new workgroup
 <prefix> C-v    - open existing workgroup
 
 Change workgroups session file,
-(setq wg-session-file "~/.emacs.d/.emacs_workgroups"
+
+  (setq wg-session-file "~/.emacs.d/.emacs_workgroups")

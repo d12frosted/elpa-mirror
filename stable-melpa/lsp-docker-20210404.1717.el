@@ -5,7 +5,7 @@
 ;; Author: Ivan Yonchovski <yyoncho@gmail.com>
 ;; URL: https://github.com/emacs-lsp/lsp-docker
 ;; Package-Version: 20210404.1717
-;; Package-Commit: 5a9c7e39905756d6cd58b686f6aa203f31c2271c
+;; Package-Commit: 1909466ee7f7f4aeef624acd10c710afe685ef8a
 ;; Keywords: languages langserver
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "25.1") (dash "2.14.1") (lsp-mode "6.2.1"))

@@ -1,4 +1,4 @@
-Provides a major mode for the Lean programming language.
+Provides a major mode for the Lean 3 programming language.
 
 Provides highlighting, diagnostics, goal visualization,
 and many other useful features for Lean users.

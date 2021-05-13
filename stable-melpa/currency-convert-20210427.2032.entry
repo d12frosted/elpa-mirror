@@ -1,0 +1,11 @@
+(currency-convert .
+		  [(20210427 2032)
+		   ((emacs
+		     (24 4)))
+		   "Currency converter" single
+		   ((:commit . "12805ea66aa8421de5eedda39d23f709de634460")
+		    (:authors
+		     ("Lassi Kortela" . "lassi@lassi.io"))
+		    (:maintainer "Lassi Kortela" . "lassi@lassi.io")
+		    (:keywords "comm" "convenience" "i18n")
+		    (:url . "https://github.com/lassik/emacs-currency-convert"))])

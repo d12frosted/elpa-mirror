@@ -1,0 +1,13 @@
+(counsel-mairix .
+		[(20210422 649)
+		 ((emacs
+		   (26 3))
+		  (ivy
+		   (0 13 1)))
+		 "Counsel interface for Mairix" single
+		 ((:commit . "39fa2ad10a5f899cb3f3275f9a6ebd166c51216a")
+		  (:authors
+		   ("Antoine Kalmbach" . "ane@iki.fi"))
+		  (:maintainer "Antoine Kalmbach" . "ane@iki.fi")
+		  (:keywords "mail")
+		  (:url . "https://sr.ht/~ane/counsel-mairix"))])

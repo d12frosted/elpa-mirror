@@ -1,0 +1,13 @@
+(magit-imerge .
+	      [(20210512 408)
+	       ((emacs
+		 (24 4))
+		(magit
+		 (2 10 0)))
+	       "Magit extension for git-imerge" single
+	       ((:commit . "04633693d1e902d54d19d404e96201637714361d")
+		(:authors
+		 ("Kyle Meyer" . "kyle@kyleam.com"))
+		(:maintainer "Kyle Meyer" . "kyle@kyleam.com")
+		(:keywords "vc" "tools")
+		(:url . "https://github.com/magit/magit-imerge"))])

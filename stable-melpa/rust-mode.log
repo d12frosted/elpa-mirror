@@ -3,9 +3,27 @@ Fetcher: github
 Source:  https://github.com/rust-lang/rust-mode.git
 
 Updating /mnt/store/melpa/working/rust-mode/
-Built rust-mode in 4.924s, finished at Tue Apr 20 11:24:58 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rust-mode/
+  to /tmp/rust-moden91T6H/rust-mode-20210423.1157
+    rust-cargo.el -> rust-cargo.el
+    rust-compile.el -> rust-compile.el
+    rust-mode.el -> rust-mode.el
+    rust-playpen.el -> rust-playpen.el
+    rust-rustfmt.el -> rust-rustfmt.el
+    rust-utils.el -> rust-utils.el
+Created rust-mode-20210423.1157.tar containing:
+  rust-mode-20210423.1157/
+  rust-mode-20210423.1157/rust-cargo.el
+  rust-mode-20210423.1157/rust-compile.el
+  rust-mode-20210423.1157/rust-mode-pkg.el
+  rust-mode-20210423.1157/rust-mode.el
+  rust-mode-20210423.1157/rust-playpen.el
+  rust-mode-20210423.1157/rust-rustfmt.el
+  rust-mode-20210423.1157/rust-utils.el
+Built rust-mode in 4.494s, finished at Thu May 13 10:13:18 2021
  ✓ Success:
- 84K -rw-r--r-- 1 root root  84K Apr 20 11:24 packages/rust-mode-20210226.1106.el
-4.0K -rw-r--r-- 1 root root  341 Apr 20 11:24 packages/rust-mode-20210226.1106.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 20 11:24 packages/rust-mode-badge.svg
-   0 -rw-r--r-- 1 root root    0 Apr 20 11:24 packages/rust-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  332 May 13 10:13 packages/rust-mode-20210423.1157.entry
+100K -rw-r--r-- 1 root root 100K May 13 10:13 packages/rust-mode-20210423.1157.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 13 10:13 packages/rust-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   67 May 13 10:13 packages/rust-mode-readme.txt
