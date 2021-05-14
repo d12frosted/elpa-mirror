@@ -23,7 +23,7 @@ enhancements can be installed separately via complementary packages.
 - Shows the index of the current candidate and the total number of candidates
 - The current candidate is inserted with =TAB= and selected with =RET=
 - Non-existing candidates are entered by moving the point to the prompt line
-- Candidates sorting by history, string length and alphabetically
+- Candidates sorting by history position, string length and alphabetically
 - Long candidates with newlines are formatted to take up less space
 - Deferred completion style highlighting for performance
 - Support for ~annotation-function~, ~affixation-function~ and ~x-title-function~
@@ -43,7 +43,11 @@ Here is an example configuration:
   ;; Enable vertico
   (use-package vertico
     :init
-    (vertico-mode))
+    (vertico-mode)
+
+    ;; Optionally enable cycling for `vertico-next' and `vertico-previous'.
+    ;; (setq vertico-cycle t)
+  )
 
   ;; Use the `orderless' completion style.
   ;; Enable `partial-completion' for files to allow path expansion.
@@ -54,7 +58,7 @@ Here is an example configuration:
           completion-category-defaults nil
           completion-category-overrides '((file (styles . (partial-completion))))))
 
-  ;; Persist history over Emacs restarts. Vertico sorts by history.
+  ;; Persist history over Emacs restarts. Vertico sorts by history position.
   (use-package savehist
     :init
     (savehist-mode))
@@ -176,7 +180,7 @@ follow a similar philosophy:
   vertical display. In contrast to Vertico, the candidates are rotated such that
   the current candidate always appears at the top. From my perspective,
   candidate rotation feels a bit less intuitive than the UI of Vertico or
-  Selectrum.
+  Selectrum. Note that Emacs 28 offers an built-in ~icomplete-vertical-mode~.
 
 * Caveats
 
@@ -231,5 +235,5 @@ described in the next section.
 
 * Contributions
 
-Since this package is part of GNU ELPA, contributions require copyright
+Since this package is part of [[http://elpa.gnu.org/packages/vertico.html][GNU ELPA]] contributions require a copyright
 assignment to the FSF.
