@@ -1,0 +1,28 @@
+Package: realgud-node-inspect
+Fetcher: github
+Source:  https://github.com/realgud/realgud-node-inspect.git
+
+Updating /mnt/store/melpa/working/realgud-node-inspect/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/realgud-node-inspect/
+  to /tmp/realgud-node-inspect6091b1/realgud-node-inspect-20190523.1251
+    realgud-node-inspect.el -> realgud-node-inspect.el
+    realgud-node-inspect/core.el -> realgud-node-inspect/core.el
+    realgud-node-inspect/init.el -> realgud-node-inspect/init.el
+    realgud-node-inspect/node-inspect.el -> realgud-node-inspect/node-inspect.el
+    realgud-node-inspect/track-mode.el -> realgud-node-inspect/track-mode.el
+Created realgud-node-inspect-20190523.1251.tar containing:
+  realgud-node-inspect-20190523.1251/
+  realgud-node-inspect-20190523.1251/realgud-node-inspect-pkg.el
+  realgud-node-inspect-20190523.1251/realgud-node-inspect.el
+  realgud-node-inspect-20190523.1251/realgud-node-inspect/
+  realgud-node-inspect-20190523.1251/realgud-node-inspect/core.el
+  realgud-node-inspect-20190523.1251/realgud-node-inspect/init.el
+  realgud-node-inspect-20190523.1251/realgud-node-inspect/node-inspect.el
+  realgud-node-inspect-20190523.1251/realgud-node-inspect/track-mode.el
+Built realgud-node-inspect in 3.967s, finished at Fri May 14 19:30:23 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  450 May 14 19:30 packages/realgud-node-inspect-20190523.1251.entry
+ 32K -rw-r--r-- 1 root root  30K May 14 19:30 packages/realgud-node-inspect-20190523.1251.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 14 19:30 packages/realgud-node-inspect-badge.svg
+4.0K -rw-r--r-- 1 root root  243 May 14 19:30 packages/realgud-node-inspect-readme.txt
