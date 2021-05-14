@@ -11,5 +11,5 @@ hidden in the buffer.
 
 Alternatively, you can type C-u C-c / (ie. provide a prefix
 argument to the hide-lines command) to hide all lines that *do not*
-match the specified regexp. If you want to reveal previously hidden
+match the specified regexp.  If you want to reveal previously hidden
 lines you can use any other prefix, e.g. C-u C-u C-c /
