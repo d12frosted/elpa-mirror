@@ -30,7 +30,7 @@ sees them. So some functions will not have ido completion even when
 this mode is enabled. Some other functions have ido disabled in
 them because their packages already provide support for ido via
 other means (for example, magit). See `M-x describe-variable
-ido-cr+-function-blacklist' for more information.
+ido-cr+-disable-list' for more information.
 
 ido-completing-read+ version 4.0 is a major update. The formerly
 separate package ido-ubiquitous has been subsumed into

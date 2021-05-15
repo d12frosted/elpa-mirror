@@ -91,7 +91,6 @@ missing package or change you would like to see.
     corfu
     counsel
     counsel-css
-    counsel-notmuch
     counsel-org-capture-string
     cov
     cperl-mode
@@ -336,7 +335,7 @@ missing package or change you would like to see.
     tuareg
     typescript
     undo-tree
-    vc (built-in mode line status for version control)
+    vc (vc-dir.el, vc-hooks.el)
     vc-annotate (C-x v g)
     vdiff
     vertico
