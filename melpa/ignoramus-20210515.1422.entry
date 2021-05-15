@@ -1,0 +1,11 @@
+(ignoramus .
+	   [(20210515 1422)
+	    ((emacs
+	      (24 3)))
+	    "Ignore backups, build files, et al." single
+	    ((:commit . "e509e134eeb81617414e5381b610108c967dbc45")
+	     (:authors
+	      ("Roland Walker" . "walker@pobox.com"))
+	     (:maintainer "Roland Walker" . "walker@pobox.com")
+	     (:keywords "convenience" "tools")
+	     (:url . "http://github.com/rolandwalker/ignoramus"))])
