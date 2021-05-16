@@ -3,7 +3,9 @@ Fetcher: git
 Source:  https://git.launchpad.net/frecentf.el
 
 Updating /mnt/store/melpa/working/frecentf/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://git.launchpad.net/frecentf.el/': Operation timed out after 300009 milliseconds with 0 out of 0 bytes received
-error: Could not fetch origin
-
+Built frecentf in 6.936s, finished at Sun May 16 19:50:57 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.8K May 16 19:50 packages/frecentf-20210330.1521.el
+4.0K -rw-r--r-- 1 root root  459 May 16 19:50 packages/frecentf-20210330.1521.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 16 19:50 packages/frecentf-badge.svg
+4.0K -rw-r--r-- 1 root root  231 May 16 19:50 packages/frecentf-readme.txt

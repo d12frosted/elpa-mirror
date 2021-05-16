@@ -18,7 +18,12 @@ the definition of Bazel targets.
 
 To simplify running Bazel commands, the package provides the commands
 ‘bazel-build’, ‘bazel-test’, ‘bazel-coverage’ and ‘bazel-run’, which execute
-the corresponding Bazel commands in a compilation mode buffer.
+the corresponding Bazel commands in a compilation mode buffer.  In a buffer
+that visits a test file, you can also have Emacs try to detect and execute
+the test at point using ‘bazel-test-at-point’.
+
+When editing a WORKSPACE file, you can use the command
+‘bazel-insert-http-archive’ to quickly insert an http_archive rule.
 
 You can customize some aspects of this package using the ‘bazel’
 customization group.  If you set the user option ‘bazel-display-coverage’ to

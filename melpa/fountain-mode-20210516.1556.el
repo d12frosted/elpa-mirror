@@ -6,8 +6,8 @@
 
 ;; Author: Paul W. Rankin <pwr@bydasein.com>
 ;; Keywords: wp, text
-;; Package-Version: 20210508.938
-;; Package-Commit: d8c0a9b842f332c2b781a1cae03777ef193929c3
+;; Package-Version: 20210516.1556
+;; Package-Commit: 5ad4cc2e13a3f5b98309d1ba97b67f83726e3591
 ;; Version: 3.5.0
 ;; Package-Requires: ((emacs "24.4") (seq "2.20"))
 ;; URL: https://github.com/rnkn/fountain-mode
@@ -143,7 +143,7 @@
 (eval-when-compile (require 'subr-x))
 (require 'seq)
 
-;;; Top-Level Options
+;;; Top-Level Options ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defgroup fountain ()
   "Major mode for screenwriting in Fountain markup."
@@ -235,8 +235,8 @@ this option."
                  (with-current-buffer buffer
                    (when (derived-mode-p 'fountain-mode)
                      (if fountain-hide-emphasis-markup
-                         (add-to-invisibility-spec 'fountain-emphasis-delim)
-                       (remove-from-invisibility-spec 'fountain-emphasis-delim))
+                         (add-to-invisibility-spec 'fountain-emphasis-markup)
+                       (remove-from-invisibility-spec 'fountain-emphasis-markup))
                      (font-lock-refresh-defaults))))
                (buffer-list))))
 
@@ -255,8 +255,8 @@ this option."
                  (with-current-buffer buffer
                    (when (derived-mode-p 'fountain-mode)
                      (if fountain-hide-element-markup
-                         (add-to-invisibility-spec 'fountain-syntax-chars)
-                       (remove-from-invisibility-spec 'fountain-syntax-chars))
+                         (add-to-invisibility-spec 'fountain-element-markup)
+                       (remove-from-invisibility-spec 'fountain-element-markup))
                      (font-lock-refresh-defaults))))
                (buffer-list))))
 
@@ -308,7 +308,6 @@ The default \" %x - %n:\" inserts something like:
                       (const :tag "Synopses" synopsis)
                       (const :tag "Notes" note)
                       (const :tag "Metadata" metadata)
-                      (const :tag "Center Text" center)
                       (const :tag "Page Breaks" page-break)))
   :group 'fountain
   :set 'fountain--set-and-refresh-font-lock)
@@ -526,12 +525,9 @@ whatever extension you like."
   :group 'fountain
   :type '(repeat (string :tag "Extension")))
 
-(defconst fountain-action-regexp
-  "^\\(!\\)?\\(.*\\)[\s\t]*$"
-  "Regular expression for forced action.
-
-  Group 1: match forced action mark
-  Group 2: match trimmed whitespace")
+(defconst fountain-forced-action-regexp
+  "^\\(!\\)\\(.*\\)[\s\t]*$"
+  "Regular expression for forced action.")
 
 ;; FIXME: a comment without whitespace will be fontified as italic, e.g.
 ;;     /*comment*/
@@ -541,10 +537,10 @@ whatever extension you like."
 ;;
 ;; Comments should not receive any fontification, i.e. the
 ;; `fountain-comment' face should override any previous faces.
+;;
+;; Unused variable.
 (defconst fountain-comment-regexp
-  (concat "\\(?://[\s\t]*\\(?:.*\\)\\)"
-          "\\|"
-          "\\(?:\\(?:/\\*\\)[\s\t]*\\(?:\\(?:.\\|\n\\)*?\\)[\s\t]*\\*/\\)")
+  "/\\*+[.\n]*?\\*/"
   "Regular expression for matching comments.")
 
 (defconst fountain-metadata-regexp
@@ -556,9 +552,9 @@ Requires `fountain-match-metadata' for `bobp'.")
 
 (defconst fountain-character-regexp
   (concat "^[\s\t]*"
-          "\\(?:\\(?1:@\\)\\(?2:[^<>\n]+?\\)"
+          "\\(?:\\(?1:@\\)\\(?2:[^\n]+?\\)"
           "\\|"
-          "\\(?2:[^<>\n[:lower:]]*?[[:upper:]]+[^<>\n[:lower:]]*?\\)"
+          "\\(?2:[^<>\n[:lower:]\\\[]*?[[:upper:]]+[^<>\n[:lower:]\\\[]*?\\)"
           "\\)"
           "\\(?3:[\s\t]*\\(?4:\(\\)[^\)\n]*\)?\\)*?"
           "\\(?5:[\s\t]*^\\)?"
@@ -596,7 +592,7 @@ dialogue.")
   Group 1: ===")
 
 (defconst fountain-note-regexp
-  "\\[\\[[\s\t]*\\(\\(?:.\\|\n\\)*?\\)[\s\t]*]]"
+  "\\[\\[[\s\t]*\\(\\(?:\s\s\n\\|.\n?\\)*?\\)[\s\t]*]]"
   "Regular expression for matching notes.
 
   Group 1: note text")
@@ -653,7 +649,7 @@ be specified with the bold-italic delimiters together, e.g.
   "Regular expression for matching lyrics.")
 
 
-;;; Aligning
+;;; Aligning ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defgroup fountain-align ()
   "Options for element alignment.
@@ -789,7 +785,7 @@ This option does not affect file contents."
   :set #'fountain--set-and-refresh-font-lock)
 
 
-;;; Autoinsert
+;;; Autoinsert ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'autoinsert)
 
@@ -807,7 +803,14 @@ This option does not affect file contents."
   fountain-metadata-skeleton)
 
 
-;;; Element Matching
+;;; Element Matching ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defsubst fountain-comment-p ()
+  "Return non-nil if point is at comment (boneyard)."
+  (let ((faceprop (get-char-property (point) 'face)))
+    (if (listp faceprop)
+        (memq 'fountain-comment faceprop)
+      (eq 'fountain-comment faceprop))))
 
 (defun fountain-blank-before-p ()
   "Return non-nil if preceding line is blank or a comment."
@@ -881,9 +884,9 @@ This option does not affect file contents."
         (save-restriction
           (widen)
           (let ((x (point)))
-            (and (re-search-backward "\\[\\[" nil t)
-                 (looking-at fountain-note-regexp)
-                 (< x (match-end 0))))))))
+            (progn (re-search-backward "\\`\\|^$" nil 'move)
+                   (and (re-search-forward fountain-note-regexp nil t)
+                        (<= (match-beginning 0) x (match-end 0)))))))))
 
 (defun fountain-match-scene-heading ()
   "Match scene heading if point is at a scene heading, nil otherwise."
@@ -898,7 +901,7 @@ When LOOSE is non-nil, do not require non-blank line after."
   (unless (fountain-match-scene-heading)
     (save-excursion
       (beginning-of-line)
-      (and (not (looking-at "!"))
+      (and (not (looking-at fountain-forced-action-regexp))
            (let (case-fold-search)
              (looking-at fountain-character-regexp))
            (fountain-blank-before-p)
@@ -908,7 +911,7 @@ When LOOSE is non-nil, do not require non-blank line after."
   "Match dialog if point is at dialog, nil otherwise."
   (unless (or (and (bolp) (eolp))
               (fountain-match-paren)
-              (fountain-match-note))
+              (fountain-comment-p))
     (save-excursion
       (save-restriction
         (widen)
@@ -949,34 +952,11 @@ When LOOSE is non-nil, do not require non-blank line after."
     (beginning-of-line)
     (looking-at fountain-center-regexp)))
 
-;; FIXME: It's expensive to test all match functions for every block of action.
-(defun fountain-match-action ()
-  "Match action text if point is at action, nil otherwise.
-Assumes that all other element matching has been done."
-  (save-excursion
-    (save-restriction
-      (widen)
-      (beginning-of-line)
-      (or (and (looking-at fountain-action-regexp)
-               (match-string-no-properties 1))
-          (and (not (or (and (bolp) (eolp))
-                        (fountain-match-section-heading)
-                        (fountain-match-scene-heading)
-                        (fountain-match-page-break)
-                        (fountain-match-character)
-                        (fountain-match-dialog)
-                        (fountain-match-paren)
-                        (fountain-match-trans)
-                        (fountain-match-center)
-                        (fountain-match-synopsis)
-                        (fountain-match-metadata)
-                        (fountain-match-note)))
-               (looking-at fountain-action-regexp))))))
-
 (defun fountain-get-element ()
   "Return element at point as a symbol."
   (cond
-   ((and (bolp) (eolp)) nil)
+   ((and (bolp) (eolp))                 nil)
+   ((fountain-comment-p)                nil)
    ((fountain-match-section-heading)    'section-heading)
    ((fountain-match-scene-heading)      'scene-heading)
    ((fountain-match-character)
@@ -1002,8 +982,19 @@ Assumes that all other element matching has been done."
    ((fountain-match-note)               'note)
    (t                                   'action)))
 
+(defun fountain-match-action ()
+  "Match action text if point is at action, nil otherwise.
+Assumes that all other element matching has been done."
+  (save-excursion
+    (save-restriction
+      (widen)
+      (beginning-of-line)
+      (or (looking-at fountain-forced-action-regexp)
+          (and (eq (fountain-get-element) 'action)
+               (looking-at ".+"))))))
+
 
-;;; Auto-completion
+;;; Auto-completion ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defvar-local fountain--completion-locations
   nil
@@ -1189,7 +1180,7 @@ Add to `fountain-mode-hook' to have completion upon load."
   (message "Completion candidates updated"))
 
 
-;;; Outlining
+;;; Outlining ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'outline)
 
@@ -1590,7 +1581,7 @@ buffer windows are opened."
     (narrow-to-region beg end)))
 
 
-;;; Navigation
+;;; Navigation ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun fountain-move-forward-scene (n)
   "Move forward N scene headings (backward if N is negative).
@@ -1671,7 +1662,7 @@ halt at end of scene."
   (fountain-forward-character (- n)))
 
 
-;;; Parsing
+;;; Parsing ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun fountain-get-character (&optional n limit)
   "Return Nth next character (or Nth previous if N is negative).
@@ -1740,7 +1731,7 @@ within left-side dual dialogue, and nil otherwise."
                'left))))))
 
 
-;;; Editing
+;;; Editing ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun fountain--auto-upcase-maybe ()
   "Upcase all or part of the current line contextually.
@@ -1913,7 +1904,7 @@ to remove previous string first."
         (progress-reporter-done job)))))
 
 
-;;; Scene Numbers
+;;; Scene Numbers ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defgroup fountain-scene-numbers ()
   "Options for scene numbers."
@@ -2236,7 +2227,7 @@ scene number from being auto-upcased."
         (progress-reporter-done job)))))
 
 
-;;; Pages
+;;; Pages ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defgroup fountain-pagination ()
   "Options for calculating page length."
@@ -2672,7 +2663,7 @@ your preferred tool's pagination method."
     (if interactive (message string) string)))
 
 
-;;; Filling
+;;; Filling ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defvar fountain-fill-section-heading
   '(0 . 61)
@@ -2748,7 +2739,7 @@ The car sets `left-margin' and cdr `fill-column'.")
 The car sets `left-margin' and cdr `fill-column'.")
 
 
-;;; Exporting
+;;; Exporting ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defgroup fountain-export ()
   "Options for exporting Fountain files."
@@ -2845,6 +2836,7 @@ Export command profiles are defined in
         (format-spec-make
          ?b (shell-quote-argument (or infile ""))
          ?B (shell-quote-argument (or infile-base ""))
+         ?n (shell-quote-argument (or user-full-name ""))
          ?t (shell-quote-argument (or (cdr (assq 'title metadata)) ""))
          ?a (shell-quote-argument (or (cdr (assq 'author metadata)) ""))
          ?F (shell-quote-argument (format-time-string "%F"))
@@ -2906,15 +2898,7 @@ The file is then passed to `dired-guess-default'."
     (call-process command nil 0 nil file)))
 
 
-;;; Font Lock
-
-(defun fountain--get-section-heading-face ()
-  "Return appropriate face for current heading."
-  (save-excursion
-    (beginning-of-line)
-    (looking-at outline-regexp)
-    (intern-soft (format "fountain-section-heading-%s"
-                         (funcall outline-level)))))
+;;; Font Lock ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defmacro define-fountain-font-lock-matcher (fun)
   "Define a `font-lock-mode' matcher for FUN."
@@ -2962,176 +2946,194 @@ Return non-nil if match occurs." fun)))
   (message "Element markup is now %s"
            (if fountain-hide-element-markup "invisible" "visible")))
 
-(defvar fountain--font-lock-keywords
-  '((section-heading
-     (quote eval)
-     (2 list fountain-section-heading-regexp
-        0 '(fountain--get-section-heading-face)))
-    (section-heading
-     fountain-section-heading-regexp
-     (1 nil nil nil fountain-syntax-chars)
-     (2 fountain-non-printing prepend))
-    (scene-heading
-     (define-fountain-font-lock-matcher fountain-match-scene-heading)
-     (0 fountain-scene-heading)
-     (8 nil prepend t fountain-syntax-chars)
-     (10 nil prepend t fountain-syntax-chars)
-     (1 nil prepend t fountain-syntax-chars))
-    (action
-     (define-fountain-font-lock-matcher fountain-match-action)
-     (0 fountain-action)
-     (1 fountain-non-printing t t fountain-syntax-chars))
-    (character
-     (define-fountain-font-lock-matcher fountain-match-character)
-     (0 fountain-character)
-     (1 fountain-non-printing t t fountain-syntax-chars)
-     (5 highlight prepend t))
-    (dialog
-     (define-fountain-font-lock-matcher fountain-match-dialog)
-     (0 fountain-dialog))
-    (paren
-     (define-fountain-font-lock-matcher fountain-match-paren)
-     (0 fountain-paren))
-    (trans
-     (define-fountain-font-lock-matcher fountain-match-trans)
-     (0 fountain-trans)
-     (1 fountain-non-printing t t fountain-syntax-chars))
-    (synopsis
-     (define-fountain-font-lock-matcher fountain-match-synopsis)
-     (0 fountain-synopsis)
-     (1 nil nil nil fountain-syntax-chars)
-     (2 fountain-non-printing prepend))
-    (note
-     (define-fountain-font-lock-matcher fountain-match-note)
-     (0 fountain-note))
-    (metadata
-     (define-fountain-font-lock-matcher fountain-match-metadata)
-     (0 fountain-metadata-key nil t)
-     (2 fountain-metadata-value t t))
-    (center
-     fountain-center-regexp
-     (1 fountain-non-printing t nil fountain-syntax-chars)
-     (3 fountain-non-printing t nil fountain-syntax-chars))
-    (page-break
-     fountain-page-break-regexp
-     (0 fountain-page-break))
-    (underline
-     fountain-underline-regexp
-     (2 fountain-non-printing prepend nil fountain-emphasis-delim)
-     (1 underline prepend)
-     (4 fountain-non-printing prepend nil fountain-emphasis-delim))
-    (italic
-     fountain-italic-regexp
-     (2 fountain-non-printing prepend nil fountain-emphasis-delim)
-     (1 italic prepend)
-     (4 fountain-non-printing prepend nil fountain-emphasis-delim))
-    (bold
-     fountain-bold-regexp
-     (2 fountain-non-printing prepend nil fountain-emphasis-delim)
-     (1 bold prepend)
-     (4 fountain-non-printing prepend nil fountain-emphasis-delim))
-    (bold-italic
-     fountain-bold-italic-regexp
-     (2 fountain-non-printing prepend nil fountain-emphasis-delim)
-     (1 bold-italic prepend)
-     (4 fountain-non-printing prepend nil fountain-emphasis-delim))
-    (lyrics
-     fountain-lyrics-regexp
-     (1 fountain-non-printing prepend nil fountain-emphasis-delim)
-     (2 italic prepend)))
-  "Association list of properties for generating `font-lock-keywords'.")
+(defun fountain--get-section-heading-face ()
+  "Return appropriate face for current heading."
+  (save-excursion
+    (beginning-of-line)
+    (looking-at outline-regexp)
+    (intern-soft (format "fountain-section-heading-%s"
+                         (funcall outline-level)))))
+
+(defun fountain--normalize-align-facespec (value)
+  "Return appropriate face property for VALUE.
+VALUE is from options group `fountain-align' and return value
+takes the form:
+
+    (space :align-to N)"
+  (when (and value fountain-align-elements)
+    (list 'space :align-to
+          (if (integerp value) value
+              (cdr (or (assoc-string
+                        (or (cdr (assq 'format (fountain-read-metadata)))
+                            fountain-default-script-format)
+                        value)
+                       (car value)))))))
+
+(defun fountain--get-scene-number-facespec (subexp)
+  "Return `font-lock-mode' display faceprop for scene heading SUBEXP."
+  (if (and (stringp (match-string-no-properties subexp))
+           fountain-scene-numbers-display-in-margin)
+      (let ((scene-num (match-string-no-properties 9))
+            (both (<= 28 emacs-major-version)))
+        (cond ((and (= subexp 7) both)
+               `(face nil display ((margin left-margin)
+                 (space :width (- left-margin ,(+ (string-width scene-num) 4))))))
+              ((and (= subexp 8) both)
+               `(face nil display ((margin left-margin) ,scene-num)))
+              ((= subexp 9)
+               `(face nil display ((margin right-margin) ,scene-num)))
+              ((or (<= 7 subexp 10))
+               '(face nil invisible t))))
+    (if (or (= subexp 8) (= subexp 10))
+        '(face fountain-non-printing
+               display nil invisible fountain-element-markup)
+      '(face nil display nil invisible nil))))
 
 (defun fountain-init-font-lock ()
-  "Return a new list of `font-lock-keywords' for elements."
-  (let (keywords)
-    ;; For each fountain element...
-    (mapc
-     (lambda (element)
-       (let ((highlightp (memq (car element)
-                               (append fountain-highlight-elements
-                                       fountain-highlight-elements-always)))
-             (matcher (eval (cadr element)))
-             (subexp-highlight-list (cddr element))
-             use-form align-col highlight)
-         ;; When MATCHER is 'eval, flag that we're using a form.
-         (when (eq matcher 'eval) (setq use-form t))
-         (setq align-col
-               (eval (intern-soft (format "fountain-align-%s" (car element)))))
-         ;; When we're aligning elements, find the align column for the current
-         ;; script format, defaulting to `fountain-default-script-format'.
-         (when (and align-col fountain-align-elements)
-           (unless (integerp align-col)
-             (setq align-col
-                   (cdr (or (assoc-string
-                             (or (cdr (assq 'format (fountain-read-metadata)))
-                                 fountain-default-script-format)
-                             align-col)
-                            (car align-col))))))
-         ;; For each match highlighter in each element...
-         (mapc (lambda (match-highlighter)
-                 ;; If the matcher is an elisp form, set the highlighter to that form,
-                 ;; otherwise construct a font-lock facespec.
-                 (if use-form
-                     (setq highlight
-                           (if highlightp (cdr match-highlighter) '(quote ignore)))
-                   (let ((subexp (nth 0 match-highlighter))
-                         (face
-                          (when highlightp
-                            (nth 1 match-highlighter)))
-                         (align
-                          (when (integerp align-col)
-                            `(line-prefix (space :align-to ,align-col)
-                              wrap-prefix (space :align-to ,align-col))))
-                         (invisible
-                          (when (nth 4 match-highlighter)
-                            `(invisible ,(nth 4 match-highlighter))))
-                         (override (nth 2 match-highlighter))
-                         (laxmatch (nth 3 match-highlighter)))
-                     ;; Push the face-spec to the highlighter.
-                     (push (list subexp `(quote (face ,face ,@align ,@invisible))
-                                 override laxmatch)
-                           highlight))))
-               subexp-highlight-list)
-         ;; Add the matcher-highlighter to the keywords list.
-         (push (cons matcher (if use-form highlight (reverse highlight)))
-               keywords)))
-     fountain--font-lock-keywords)
-    (reverse keywords)))
+  "Return a new list of `font-lock-keywords'."
+  (let ((highlight-elements
+         (append fountain-highlight-elements
+                 fountain-highlight-elements-always)))
+    (list
+     ;; Section Headings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (let ((face (when (memq 'section-heading highlight-elements)
+                   '(fountain--get-section-heading-face)))
+           (align (fountain--normalize-align-facespec fountain-align-section-heading)))
+       (cons 'eval
+             `(cons fountain-section-heading-regexp
+                    '((0 (list 'face ,face
+                               'line-prefix (quote ,align)
+                               'wrap-prefix (quote ,align)))
+                      (1 '(face nil invisible fountain-element-markup))
+                      (2 '(face fountain-non-printing) prepend)))))
 
-(defun fountain-redisplay-scene-numbers (start end)
-  "Apply display text properties to scene numbers between START and END.
+     ;; Scene Headings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (let ((face (when (memq 'scene-heading highlight-elements)
+                   'fountain-scene-heading))
+           (align (fountain--normalize-align-facespec fountain-align-scene-heading)))
+       (cons 'eval
+             `(cons
+               (define-fountain-font-lock-matcher fountain-match-scene-heading)
+               '((0 '(face ,face line-prefix ,align wrap-prefix ,align))
+                 (1 '(face fountain-non-printing
+                           invisible fountain-element-markup)
+                    prepend t)
+                 (7 (fountain--get-scene-number-facespec 7)  t t)
+                 (8 (fountain--get-scene-number-facespec 8)  prepend t)
+                 (9 (fountain--get-scene-number-facespec 9)  prepend t)
+                (10 (fountain--get-scene-number-facespec 10) prepend t)))))
 
-If `fountain-scene-numbers-display-in-margin' is non-nil and
-scene heading has scene number, apply display text properties to
-redisplay in margin. Otherwise, remove display text properties."
-  ;; FIXME: Why use jit-lock rather than font-lock?
-  (goto-char start)
-  (while (< (point) (min end (point-max)))
-    (when (fountain-match-scene-heading)
-      (if (and fountain-scene-numbers-display-in-margin
-               (match-string-no-properties 9))
-          (let ((scene-num (match-string-no-properties 9)))
-        (if (<= 28 emacs-major-version)
-            (progn
-              (put-text-property (match-beginning 7) (match-end 8)
-               'display `((margin left-margin)
-                          (space :width (- left-margin
-                                           ,(+ (string-width scene-num) 4)))))
-              (put-text-property (match-beginning 9) (match-end 9)
-               'display `((margin left-margin) ,scene-num))
-              (put-text-property (match-beginning 10) (match-end 10)
-               'display `((margin right-margin) ,scene-num)))
-          (put-text-property (match-beginning 7) (match-end 10)
-           'display `((margin right-margin) ,scene-num))))
-        (remove-text-properties (match-beginning 0) (match-end 0) '(display))))
-    (forward-line)))
+     ;; Action ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (let ((face (when (memq 'action highlight-elements) 'fountain-action))
+           (align (fountain--normalize-align-facespec fountain-align-action)))
+       (cons (define-fountain-font-lock-matcher fountain-match-action)
+             `((0 '(face ,face line-prefix ,align wrap-prefix ,align))
+               (1 '(face fountain-non-printing invisible fountain-element-markup)
+                  prepend t))))
+
+     ;; Characters ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (let ((face (when (memq 'character highlight-elements)
+                   'fountain-character))
+           (align (fountain--normalize-align-facespec fountain-align-character)))
+       (cons (define-fountain-font-lock-matcher fountain-match-character)
+             `((0 '(face ,face line-prefix ,align wrap-prefix ,align))
+               (1 '(face fountain-non-printing invisible fountain-element-markup)
+                  prepend t)
+               (5 '(face highlight) prepend t))))
+
+     ;; Dialogue ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (let ((face (when (memq 'dialog highlight-elements)
+                   'fountain-dialog))
+           (align (fountain--normalize-align-facespec fountain-align-dialog)))
+       (cons (define-fountain-font-lock-matcher fountain-match-dialog)
+             `(0 '(face ,face line-prefix ,align wrap-prefix ,align))))
+
+     ;; Parentheticals ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (let ((face (when (memq 'paren highlight-elements)
+                   'fountain-paren))
+           (align (fountain--normalize-align-facespec fountain-align-paren)))
+       (cons (define-fountain-font-lock-matcher fountain-match-paren)
+             `(0 '(face ,face line-prefix ,align wrap-prefix ,align))))
+
+     ;; Transitions ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (let ((face (when (memq 'trans highlight-elements) 'fountain-trans))
+           (align (fountain--normalize-align-facespec fountain-align-trans)))
+       (cons (define-fountain-font-lock-matcher fountain-match-trans)
+             `((0 '(face ,face line-prefix ,align wrap-prefix ,align))
+               (1 '(face fountain-non-printing invisible fountain-element-markup)
+                  prepend t))))
+
+     ;; Synopses ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (let ((face (when (memq 'synopsis highlight-elements) 'fountain-synopsis))
+           (align (fountain--normalize-align-facespec fountain-align-synopsis)))
+       (cons (define-fountain-font-lock-matcher fountain-match-synopsis)
+             `((0 '(face ,face line-prefix ,align wrap-prefix ,align))
+               (1 '(face nil invisible fountain-element-markup))
+               (2 '(face fountain-non-printing) prepend))))
+
+     ;; Notes ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (let ((face (when (memq 'note highlight-elements) 'fountain-note)))
+       (cons (define-fountain-font-lock-matcher fountain-match-note)
+             `(0 '(face ,face) t)))
+
+     ;; Center ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (let ((face (when (memq 'action highlight-elements) 'fountain-action))
+           (align (fountain--normalize-align-facespec fountain-align-center)))
+       (cons fountain-center-regexp
+             `((0 '(face ,face line-prefix ,align wrap-prefix ,align))
+               (1 '(face fountain-non-printing invisible fountain-element-markup)
+                  prepend)
+               (3 '(face fountain-non-printing invisible fountain-element-markup)
+                  prepend))))
+
+     ;; Metadata ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (let ((face (memq 'metadata highlight-elements)))
+       (cons (define-fountain-font-lock-matcher fountain-match-metadata)
+             `((0 '(face ,(when face 'fountain-metadata-key)))
+               (2 '(face ,(when face 'fountain-metadata-value)) t t))))
+
+     ;; Page-Break ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (let ((face (when (memq 'page-break highlight-elements)
+                   'fountain-page-break)))
+       (cons fountain-page-break-regexp
+                 `((0 '(face ,face)))))
+
+     ;; Lyrics ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (cons fountain-lyrics-regexp
+           '((1 '(face fountain-non-printing invisible fountain-element-markup)
+                prepend)
+             (2 '(face italic) prepend)))
+
+     ;; Underline ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (cons fountain-underline-regexp
+           '((2 '(face nil invisible fountain-emphasis-markup) prepend)
+             (1 '(face underline) prepend)
+             (4 '(face nil invisible fountain-emphasis-markup) prepend)))
+
+     ;; Italic ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (cons fountain-italic-regexp
+           '((2 '(face nil invisible fountain-emphasis-markup) prepend)
+             (1 '(face italic) prepend)
+             (4 '(face nil invisible fountain-emphasis-markup) prepend)))
+
+     ;; Bold ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (cons fountain-bold-regexp
+           '((2 '(face nil invisible fountain-emphasis-markup) prepend)
+             (1 '(face bold) prepend)
+             (4 '(face nil invisible fountain-emphasis-markup) prepend)))
+
+     ;; Bold-Italic ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+     (cons fountain-bold-italic-regexp
+           '((2 '(face nil invisible fountain-emphasis-markup) prepend)
+             (1 '(face bold-italic) prepend)
+             (4 '(face nil invisible fountain-emphasis-markup) prepend))))))
 
 
-;;; Key Bindings
+;;; Key Bindings ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defvar fountain-mode-map
   (let ((map (make-sparse-keymap)))
-    ;; Editing commands:
+    ;; Editing commands ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     (define-key map (kbd "TAB") #'fountain-dwim)
     (define-key map (kbd "C-c RET") #'fountain-upcase-line-and-newline)
     (define-key map (kbd "<S-return>") #'fountain-upcase-line-and-newline)
@@ -3146,18 +3148,18 @@ redisplay in margin. Otherwise, remove display text properties."
     (define-key map (kbd "C-c C-x a") #'fountain-completion-update)
     (define-key map (kbd "C-c C-x *") #'fountain-toggle-hide-emphasis-markup)
     (define-key map (kbd "C-c C-x !") #'fountain-toggle-hide-element-markup)
-    ;; Navigation commands:
+    ;; Navigation commands ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     (define-key map [remap beginning-of-defun] #'fountain-outline-beginning)
     (define-key map (kbd "M-g s") #'fountain-goto-scene)
     (define-key map (kbd "M-g p") #'fountain-goto-page)
     (define-key map (kbd "M-n") #'fountain-forward-character)
     (define-key map (kbd "M-p") #'fountain-backward-character)
-    ;; Block editing commands:
+    ;; Block editing commands ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     (define-key map (kbd "<M-down>") #'fountain-forward-paragraph-or-transpose)
     (define-key map (kbd "ESC <down>") #'fountain-forward-paragraph-or-transpose)
     (define-key map (kbd "<M-up>") #'fountain-backward-paragraph-or-transpose)
     (define-key map (kbd "ESC <up>") #'fountain-backward-paragraph-or-transpose)
-    ;; Outline commands:
+    ;; Outline commands ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     (define-key map [remap forward-list] #'fountain-outline-next)
     (define-key map [remap backward-list] #'fountain-outline-previous)
     (define-key map [remap forward-sexp] #'fountain-outline-forward)
@@ -3170,19 +3172,19 @@ redisplay in margin. Otherwise, remove display text properties."
     (define-key map (kbd "C-M-i") #'fountain-outline-cycle-buffer)
     (define-key map (kbd "M-RET") #'fountain-insert-section-heading)
     (define-key map (kbd "C-c C-x b") #'fountain-outline-to-indirect-buffer)
-    ;; Pages
+    ;; Pagination commands ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     (define-key map [remap forward-page] #'fountain-forward-page)
     (define-key map [remap backward-page] #'fountain-backward-page)
     (define-key map (kbd "C-c C-p") #'fountain-count-pages)
     (define-key map (kbd "C-c C-x p") #'fountain-pagination-update)
-    ;; Exporting commands:
+    ;; Exporting commands ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
     (define-key map (kbd "C-c C-e") #'fountain-export-command)
     (define-key map (kbd "C-c C-v") #'fountain-export-view)
     map)
   "Mode map for `fountain-mode'.")
 
 
-;;; Menu
+;;; Menu ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (require 'easymenu)
 
@@ -3312,10 +3314,6 @@ redisplay in margin. Otherwise, remove display text properties."
       (fountain-toggle-highlight-element 'metadata)
       :style toggle
       :selected (memq 'metadata fountain-highlight-elements)]
-     ["Center Text"
-      (fountain-toggle-highlight-element 'center)
-      :style toggle
-      :selected (memq 'center fountain-highlight-elements)]
      ["Page Breaks"
       (fountain-toggle-highlight-element 'page-break)
       :style toggle
@@ -3375,7 +3373,7 @@ redisplay in margin. Otherwise, remove display text properties."
     (when unsaved (custom-save-all))))
 
 
-;;; Emacs Bugs
+;;; Emacs Bugs ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defcustom fountain-patch-emacs-bugs
   t
@@ -3421,7 +3419,7 @@ If POS is nil, use `point' instead."
       (message "fountain-mode: Function `outline-invisible-p' has been patched"))))
 
 
-;;; Initializing
+;;; Initializing ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defun fountain-init-scene-heading-regexp ()
   "Initialize scene heading regular expression.
@@ -3560,10 +3558,8 @@ buffers."
   (setq-local completion-ignore-case t)
   (setq-local completion-cycle-threshold t)
   (setq-local which-func-functions '(fountain-count-pages))
-  (setq-local completion-at-point-functions
-              '(fountain-completion-at-point))
-  (setq-local font-lock-extra-managed-props
-              '(line-prefix wrap-prefix invisible))
+  (setq-local completion-at-point-functions '(fountain-completion-at-point))
+  (setq-local font-lock-extra-managed-props '(line-prefix wrap-prefix invisible))
   ;; FIXME: This should be temporary. Feels better to ensure appropriate
   ;; case-fold within each function.
   (setq case-fold-search t)
@@ -3572,12 +3568,12 @@ buffers."
   (setq font-lock-defaults '(fountain-init-font-lock nil t))
   (add-to-invisibility-spec (cons 'outline t))
   (when fountain-hide-emphasis-markup
-    (add-to-invisibility-spec 'fountain-emphasis-delim))
+    (add-to-invisibility-spec 'fountain-emphasis-markup))
   (when fountain-hide-element-markup
-    (add-to-invisibility-spec 'fountain-syntax-chars)))
+    (add-to-invisibility-spec 'fountain-element-markup)))
 
 
-;;; Mode Definition
+;;; Mode Definition ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.fountain\\'" . fountain-mode))
@@ -3589,8 +3585,7 @@ buffers."
   (fountain-init-vars)
   (face-remap-add-relative 'default 'fountain)
   (add-hook 'post-self-insert-hook #'fountain--auto-upcase-maybe nil t)
-  (when fountain-patch-emacs-bugs (fountain-patch-emacs-bugs))
-  (jit-lock-register #'fountain-redisplay-scene-numbers))
+  (when fountain-patch-emacs-bugs (fountain-patch-emacs-bugs)))
 
 (provide 'fountain-mode)
 

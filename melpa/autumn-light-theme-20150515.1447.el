@@ -5,6 +5,8 @@
 ;; Author: Adam Alpern <adam.alpern@gmail.com>
 ;; Maintainer: Adam Alpern <adam.alpern@gmail.com>
 ;; URL: http://github.com/aalpern/emacs-color-theme-autumn-light
+;; Package-Version: 20150515.1447
+;; Package-Commit: 1e3b2a43a3001e4a97a5ff073ba3f0d2ea3888f9
 ;; Keywords: color, theme
 ;; Version: 1.0.0
 ;;

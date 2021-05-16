@@ -5,7 +5,7 @@
 ;; Author: Fritz Grabo <me@fritzgrabo.com>
 ;; URL: https://github.com/fritzgrabo/cascading-dir-locals
 ;; Package-Version: 20210221.1516
-;; Package-Commit: efdf5e6d62b955ee0ca3c170eae1d388799f9fa0
+;; Package-Commit: 53967a3f4b2ac742ab8fd6b639c87cbb0229d5f8
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: convenience
