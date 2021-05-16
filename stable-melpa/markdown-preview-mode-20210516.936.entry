@@ -1,7 +1,7 @@
 (markdown-preview-mode .
-		       [(20210207 2114)
+		       [(20210516 936)
 			((emacs
-			  (24 3))
+			  (24 4))
 			 (websocket
 			  (1 6))
 			 (markdown-mode
@@ -11,7 +11,7 @@
 			 (web-server
 			  (0 1 1)))
 			"markdown realtime preview minor mode." tar
-			((:commit . "01af98ac1adcc9cb247fbc6c80fb159c30360ee6")
+			((:commit . "dde87b96de9e81dd01d174da67ef68687b3a5eb5")
 			 (:authors
 			  ("Igor Shymko" . "igor.shimko@gmail.com"))
 			 (:maintainer "Igor Shymko" . "igor.shimko@gmail.com")

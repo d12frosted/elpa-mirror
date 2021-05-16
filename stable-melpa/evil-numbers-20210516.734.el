@@ -8,8 +8,8 @@
 ;;               Michael Markert <markert.michael@gmail.com>
 ;;               Julia Path <julia@jpath.de>
 ;; URL: http://github.com/juliapath/evil-numbers
-;; Package-Version: 20210515.1406
-;; Package-Commit: 626ea72a2179251aa2bf19f23ba27ae77dbef6b2
+;; Package-Version: 20210516.734
+;; Package-Commit: 7ca411f4ace573193fe7b10e97f123b55222c835
 ;; Git-Repository: git://github.com/juliapath/evil-numbers.git
 ;; Created: 2011-09-02
 ;; Version: 0.5
@@ -109,11 +109,31 @@
 (defun evil-numbers--translate-with-alist (alist string)
   "Translate every symbol in STRING using ALIST."
   (funcall
-   (if (stringp string) #'concat (lambda (x) x))
+   (if (stringp string) #'concat #'identity)
    (mapcar (lambda (c) (cdr (assoc c alist))) string)))
 
+(defun evil-numbers--encode-super (x)
+  "Convert X string into super-script."
+  (evil-numbers--translate-with-alist
+   evil-numbers--superscript-alist x))
+(defun evil-numbers--decode-super (x)
+  "Convert X string from super-script into regular characters."
+  (evil-numbers--translate-with-alist
+   (evil-numbers--swap-alist evil-numbers--superscript-alist) x))
+
+(defun evil-numbers--encode-sub (x)
+  "Convert X string into sub-script."
+  (evil-numbers--translate-with-alist
+   evil-numbers--subscript-alist x))
+(defun evil-numbers--decode-sub (x)
+  "Convert X string from sub-script into regular characters."
+  (evil-numbers--translate-with-alist
+   (evil-numbers--swap-alist evil-numbers--subscript-alist) x))
+
 ;;;###autoload (autoload 'evil-numbers/inc-at-pt "evil-numbers" nil t)
-(evil-define-operator evil-numbers/inc-at-pt (amount beg end type &optional incremental padded)
+(evil-define-operator evil-numbers/inc-at-pt
+  (amount beg end type &optional incremental padded no-error no-offset)
+
   "Increment the number at point or after point before `end-of-line' by AMOUNT.
 When region is selected, increment all numbers in the region by AMOUNT
 
@@ -129,16 +149,26 @@ behaviour set by `evil-numbers/pad-default', t is the opposite of
 `evil-numbers/pad-default', '(t) enables padding and '(nil) disables padding.
 Numbers with a leading zero are always padded. Signs are preserved when padding
 is enabled, i.e. increasing a negative number to a positive will result in a
-number with a + sign."
+number with a + sign.
+
+NO-ERROR when non-nil, don't call error when no number is found.
+
+NO-OFFSET don't apply offsets, expected  for VIM like behavior.
+- Don't move the character back one at the end of the word.
+- Don't move the character forward one to prevent the previous word
+  from matching.
+  This simplifies calling this function in a loop."
   :motion nil
   (interactive "*<c><R>")
 
   (setq amount (or amount 1))
   (setq padded (if (consp padded)
                    (car padded)
-                 (funcall (if padded #'not (lambda (x) x))
+                 (funcall (if padded #'not #'identity)
                           evil-numbers/padDefault)))
   (cond
+   ;; Handle selection (block or line).
+   ;; Run this function in a loop (falling through to the `t' case).
    ((and beg end type)
     (let ((count 1))
       (save-excursion
@@ -149,118 +179,106 @@ number with a + sign."
              (lambda (f) (funcall f beg end)))
            (lambda (beg end)
              (evil-with-restriction beg end
-               (while (re-search-forward
-                       (rx
-                        (or (and "0"
-                                 (or (and (in "Bb") (any "0-1"))
-                                     (and (in "Oo") (any "0-7"))
-                                     (and (in "Xx") xdigit)))
-                            (and (? (in "+-")) (any "0-9"))
-                            (and (? (in "⁺⁻")) (in "⁰¹²³⁴⁵⁶⁷⁸⁹"))
-                            (and (? (in "₊₋")) (in "₀₁₂₃₄₅₆₇₈₉"))))
-                       nil t)
-                 ;; Backward char, to cancel out the forward-char below. We need
-                 ;; this, as `re-search-forwards' puts us behind the match.
-                 (backward-char)
-                 (evil-numbers/inc-at-pt (* amount count) nil nil nil)
-                 (if incremental (setq count (+ count 1)))
-                 ;; Undo VIM compatibility.
-                 (forward-char 1)))))))))
+               (goto-char beg)
+               (while (evil-numbers/inc-at-pt
+                       (* amount count)
+                       ;; Don't search back before this point.
+                       (point)
+                       ;; Ignore values after this point.
+                       ;; Rely on narrowing, don't use `end' since
+                       ;; edits cause the absolute maximum point
+                       ;; to change while looping.
+                       (point-max)
+                       ;; Type is handled here, ignore.
+                       nil
+                       ;; Incremental is handled here, ignore.
+                       nil
+                       ;; Causes padded to be used as-is,
+                       ;; without modification.
+                       (list padded)
+                       ;; No error, silently fails once there are
+                       ;; no other numbers to operate on.
+                       ;; Or even if there were no numbers
+                       ;; (this matches VIM's behavior).
+                       t
+                       ;; No offset, simplifies stepping in this loop.
+                       t)
+                 (when incremental
+                   (setq count (+ count 1)))))))))))
    (t
-    (save-match-data
-      ;; forward-char, so that we do not match the number directly behind us.
-      (forward-char)
-      (if (not (evil-numbers--search-number))
-          (error "No number at point or until end of line")
-        (let ((replace-with
-               (lambda (from to)
-                 (skip-chars-backward
-                  (funcall from "0123456789"))
-                 (skip-chars-backward
-                  (funcall from "+-") (- (point) 1))
-                 (when (looking-at
-                        (format
-                         "[%s]?\\([%s]+\\)"
-                         (funcall from "-+")
-                         (funcall from "0123456789")))
-                   (replace-match
-                    (funcall
-                     from
-                     (let* ((padded
-                             (or padded
-                                 (eq ?0 (string-to-char (match-string 1)))))
-                            (input (string-to-number
-                                    (funcall to (match-string 0))))
-                            (output (+ amount input))
-                            (len (- (match-end 0) (match-beginning 0)))
-                            (signed (and
-                                     (memq (string-to-char (match-string 0))
-                                           (funcall from '(?+ ?-)))
-                                     (or padded (>= input 0)))))
-                       (format
-                        (format "%%%s0%dd"
-                                (if signed "+" "")
-                                (if padded len 0))
-                        output))))
-                   ;; Moves point one position back to conform with VIM
-                   (forward-char -1)
-                   t))))
-          (or
+    (let ((point-next nil))
+      (save-excursion
+        (save-match-data
+          (cond
+           ((not (evil-numbers--search-number
+                  (or beg (point-at-bol))
+                  (or end (point-at-eol))))
+            (unless no-error
+              (error "No number at point or until end of line")))
+
            ;; Find binary literals.
-           (evil-numbers--search-and-replace
-            '(("+-" . *)
-              ("0"  . 1)
-              ("bB" . 1)
-              ("01" . +))
-            1 ;; Sign group.
-            4 ;; Number group.
-            amount 2)
+           ((evil-numbers--search-and-replace
+             '(("+-" . *)
+               ("0"  . 1)
+               ("bB" . 1)
+               ("01" . +))
+             1 ;; Sign group.
+             4 ;; Number group.
+             amount 2 padded)
+            (setq point-next (point)))
 
            ;; Find octal literals.
-           (evil-numbers--search-and-replace
-            '(("+-"  . *)
-              ("0"   . 1)
-              ("oO"  . 1)
-              ("0-7" . +))
-            1 ;; Sign group.
-            4 ;; Number group.
-            amount 8)
+           ((evil-numbers--search-and-replace
+             '(("+-"  . *)
+               ("0"   . 1)
+               ("oO"  . 1)
+               ("0-7" . +))
+             1 ;; Sign group.
+             4 ;; Number group.
+             amount 8 padded)
+            (setq point-next (point)))
 
            ;; Find hex literals.
-           (evil-numbers--search-and-replace
-            '(("+-"         . *)
-              ("0"          . 1)
-              ("xX"         . 1)
-              ("[:xdigit:]" . +))
-            1 ;; Sign group.
-            4 ;; Number group.
-            amount 16)
+           ((evil-numbers--search-and-replace
+             '(("+-"         . *)
+               ("0"          . 1)
+               ("xX"         . 1)
+               ("[:xdigit:]" . +))
+             1 ;; Sign group.
+             4 ;; Number group.
+             amount 16 padded)
+            (setq point-next (point)))
 
            ;; Find superscript literals.
-           (funcall
-            replace-with
-            (lambda (x)
-              (evil-numbers--translate-with-alist
-               evil-numbers--superscript-alist x))
-            (lambda (x)
-              (evil-numbers--translate-with-alist
-               (evil-numbers--swap-alist evil-numbers--superscript-alist)
-               x)))
+           ((evil-numbers--search-and-replace-decimal
+             amount padded
+             #'evil-numbers--decode-super
+             #'evil-numbers--encode-super)
+            (setq point-next (point)))
 
            ;; Find subscript literals.
-           (funcall
-            replace-with
-            (lambda (x)
-              (evil-numbers--translate-with-alist
-               evil-numbers--subscript-alist x))
-            (lambda (x)
-              (evil-numbers--translate-with-alist
-               (evil-numbers--swap-alist evil-numbers--subscript-alist)
-               x)))
+           ((evil-numbers--search-and-replace-decimal
+             amount padded
+             #'evil-numbers--decode-sub
+             #'evil-numbers--encode-sub)
+            (setq point-next (point)))
 
            ;; Find normal decimal literals.
-           (funcall replace-with (lambda (x) x) (lambda (x) x))
-           (error "No number at point or until end of line"))))))))
+           ((evil-numbers--search-and-replace-decimal
+             amount padded
+             #'identity #'identity)
+            (setq point-next (point)))
+
+           (t
+            (unless no-error
+              (error "No number at point or until end of line"))))))
+
+      (when point-next
+        (unless no-offset
+          ;; Moves point one position back to conform with VIM.
+          (setq point-next (1- point-next)))
+        (goto-char point-next)
+        t)))))
 
 ;;;###autoload (autoload 'evil-numbers/dec-at-pt "evil-numbers" nil t)
 (evil-define-operator evil-numbers/dec-at-pt (amount beg end type &optional incremental padded)
@@ -294,7 +312,7 @@ on."
 
 ;;; Utilities.
 
-(defun evil-numbers--search-number ()
+(defun evil-numbers--search-number (beg end)
   "Return non-nil if a number literal at or after point.
 
 If point is already within or after a literal it stays.
@@ -303,28 +321,42 @@ Literals may be in binary, octal, hexadecimal or decimal forms:
 binary: 0[bB][01]+, e.g. 0b101 or 0B0
 octal: 0[oO][0-7]+, e.g. 0o42 or 0O5
 hexadecimal 0[xX][0-9a-fA-F]+, e.g. 0xBEEF or 0Xcafe
-decimal: [0-9]+, e.g. 42 or 23"
+decimal: [0-9]+, e.g. 42 or 23.
+
+BEG and END are limits for searching,
+note that searching still starts at POINT."
   (or
    ;; Numbers or format specifier in front.
-   (looking-back
-    (rx (or (+? digit)
-            (in "⁰¹²³⁴⁵⁶⁷⁸⁹")
-            (in "₀₁₂₃₄₅₆₇₈₉" )
-            (and "0" (or (and (in "bB") (*? (in "01")))
-                         (and (in "oO") (*? (in "0-7")))
-                         (and (in "xX") (*? (in digit "A-Fa-f")))))))
-    (point-at-bol))
+   (and (> (point) beg)
+        (save-excursion
+          ;; `forward-char' so that we do not match the number
+          ;; directly behind us.
+          ;;
+          ;; Check the range to avoid end-of-buffer warning.
+          ;; Harmless but happens with block selection every
+          ;; time which is unreasonably noisy.
+          (unless (>= (1+ (point)) (point-max))
+            (forward-char))
+          (looking-back
+           (rx (or (+? digit)
+                   (in "⁰¹²³⁴⁵⁶⁷⁸⁹")
+                   (in "₀₁₂₃₄₅₆₇₈₉" )
+                   (and "0"
+                        (or (and (in "bB") (*? (in "01")))
+                            (and (in "oO") (*? (in "0-7")))
+                            (and (in "xX") (*? (in xdigit)))))))
+           beg)))
    ;; Search for number in rest of line match 0 of specifier or digit,
    ;; being in a literal and after specifier is handled above.
    (and
-    (re-search-forward "[[:digit:]⁰¹²³⁴⁵⁶⁷⁸⁹₀₁₂₃₄₅₆₇₈₉]" (point-at-eol) t)
+    (re-search-forward "[[:digit:]⁰¹²³⁴⁵⁶⁷⁸⁹₀₁₂₃₄₅₆₇₈₉]" end t)
     (or
      (not (memq (char-after) '(?b ?B ?o ?O ?x ?X)))
      (/= (char-before) ?0)
-     (and (> (point) 2) ;; Should also take bofp into consideration.
-          (not (looking-back "\\W0" 2)))
+     ;; Should also take bofp into consideration.
+     (not (looking-back "\\W0" (max beg (- (point) 2))))
      ;; Skip format specifiers and interpret as boolean.
-     (<= 0 (skip-chars-forward "bBoOxX"))))))
+     (<= 0 (skip-chars-forward "bBoOxX" end))))))
 
 (defun evil-numbers--match-from-skip-chars (skip-chars dir do-check do-match)
   "Match SKIP-CHARS in DIR (-1 or 1).
@@ -402,15 +434,60 @@ Each item in SKIP-CHARS is a cons pair.
         (set-match-data match-list)))
     t))
 
-(defun evil-numbers--search-and-replace (skip-chars sign-group num-group inc base)
+(defun evil-numbers--search-and-replace-decimal (amount padded decode-fn encode-fn)
+  "Perform the increment/decrement on the current line.
+
+When PADDED is non-nil,
+the number keeps it's current width (with leading zeroes).
+
+DECODE-FN and ENCODE-FN optionally decode/encode the string
+into ASCII text (use for subscript & superscript).
+
+When all characters are found in sequence,
+replace number incremented by AMOUNT and return non-nil."
+  (skip-chars-backward
+   (funcall encode-fn "0123456789"))
+  (skip-chars-backward
+   (funcall encode-fn "+-") (- (point) 1))
+  (when (looking-at
+         (format
+          "[%s]?\\([%s]+\\)"
+          (funcall encode-fn "-+")
+          (funcall encode-fn "0123456789")))
+    (replace-match
+     (funcall
+      encode-fn
+      (let* ((padded
+              (or padded
+                  (eq ?0 (string-to-char (match-string 1)))))
+             (input (string-to-number
+                     (funcall decode-fn (match-string 0))))
+             (output (+ amount input))
+             (len (- (match-end 0) (match-beginning 0)))
+             (signed (and
+                      (memq (string-to-char (match-string 0))
+                            (funcall encode-fn '(?+ ?-)))
+                      (or padded (>= input 0)))))
+        (format
+         (format "%%%s0%dd"
+                 (if signed "+" "")
+                 (if padded len 0))
+         output))))
+
+    t))
+
+(defun evil-numbers--search-and-replace (skip-chars sign-group num-group amount base padded)
   "Perform the increment/decrement on the current line.
 
 For SKIP-CHARS docs see `evil-numbers--match-from-skip-chars'.
 NUM-GROUP is the match group used to evaluate the number.
 SIGN-GROUP is the match group used for the sign ('-' or '+').
 
+When PADDED is non-nil,
+the number keeps it's current width (with leading zeroes).
+
 When all characters are found in sequence,
-replace number incremented by INC in BASE and return non-nil."
+replace number incremented by AMOUNT in BASE and return non-nil."
   (save-match-data
     (when (save-excursion
             ;; Skip backwards (as needed), there may be no
@@ -425,11 +502,11 @@ replace number incremented by INC in BASE and return non-nil."
                (concat (match-string sign-group)
                        (match-string num-group))
                base))
-             (num-next (+ inc num-prev))
+             (num-next (+ amount num-prev))
              (str-next
               (evil-numbers--format
                (abs num-next)
-               (if evil-numbers/padDefault
+               (if padded
                    (- (match-end num-group)
                       (match-beginning num-group))
                  1)
@@ -446,9 +523,6 @@ replace number incremented by INC in BASE and return non-nil."
 
         ;; Replace the number.
         (replace-match str-next t t nil num-group))
-
-      ;; Moves point one position back to conform with VIM.
-      (forward-char -1)
 
       t)))
 
