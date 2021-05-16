@@ -1,0 +1,27 @@
+(frontside-javascript .
+		      [(20210515 1811)
+		       ((emacs
+			 (25 1))
+			(add-node-modules-path
+			 (1 2 0))
+			(company
+			 (0 9 2))
+			(flycheck
+			 (20201228 2104))
+			(js2-mode
+			 (20201220))
+			(js2-refactor
+			 (0 9 0))
+			(rjsx-mode
+			 (0 5 0))
+			(tide
+			 (4 0 2))
+			(web-mode
+			 (17)))
+		       "JS  development that just work™️" single
+		       ((:commit . "79293c8b22ca0872703476272bd139b23663dde1")
+			(:authors
+			 ("Frontside Engineering" . "engineering@frontside.com"))
+			(:maintainer "Frontside Engineering" . "engineering@frontside.com")
+			(:keywords "files" "tools")
+			(:url . "https://github.com/thefrontside/frontmacs"))])

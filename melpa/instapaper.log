@@ -3,7 +3,8 @@ Fetcher: git
 Source:  https://git.carcosa.net/jmcbray/emacs-instapaper.git
 
 Updating /mnt/store/melpa/working/instapaper/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://git.carcosa.net/jmcbray/emacs-instapaper.git/': Failed to connect to git.carcosa.net port 443: Connection refused
-error: Could not fetch origin
-
+Built instapaper in 5.119s, finished at Sun May 16 03:54:03 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K May 16 03:54 packages/instapaper-20110419.1355.el
+4.0K -rw-r--r-- 1 root root  343 May 16 03:54 packages/instapaper-20110419.1355.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 16 03:54 packages/instapaper-badge.svg
