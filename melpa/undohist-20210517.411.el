@@ -4,8 +4,8 @@
 
 ;; Author: MATSUYAMA Tomohiro <m2ym.pub@gmail.com>
 ;; Package-Requires: ((cl-lib "1.0"))
-;; Package-Version: 20210516.658
-;; Package-Commit: 30d0e3f5cb0e1b18644d87b8a00f34ff59401cfd
+;; Package-Version: 20210517.411
+;; Package-Commit: 56c6f58873f8ebb743e4dc5aff143744720375bd
 ;; Keywords: convenience
 ;; Version: 0.2.1
 
@@ -231,9 +231,9 @@ To use undohist, you just call this function."
                       for c = (random 3) do
                       (ignore-errors
                         (cl-case c
-                          (0 (loop for j to 10 do
-                                   (insert (make-string (1+ (random 20))
-                                                        (+ (random 26) 65)))))
+                          (0 (cl-loop for j to 10 do
+                                      (insert (make-string (1+ (random 20))
+                                                           (+ (random 26) 65)))))
                           (1 (newline))
                           (2 (insert "\t"))
                           (3 (forward-line))

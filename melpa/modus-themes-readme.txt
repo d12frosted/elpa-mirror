@@ -30,6 +30,7 @@ are disabled by default (nil):
     modus-themes-region                         (choice)
     modus-themes-links                          (choice)
     modus-themes-completions                    (choice)
+    modus-themes-mail-citations                 (choice)
     modus-themes-success-deuteranopia           (boolean)
 
 The default scale for headings is as follows (it can be customized as

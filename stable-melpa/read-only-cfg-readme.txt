@@ -1,4 +1,3 @@
-
 `read-only-cfg' is a GNU Emacs minor mode which can automatically make
  files read-only based on user configuration.  User configuration is
  very simple and it consists of prefix directories or regex patterns.

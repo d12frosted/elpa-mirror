@@ -1,9 +1,9 @@
 (read-only-cfg .
-	       [(20210509 1114)
+	       [(20210517 749)
 		((emacs
 		  (24 3)))
 		"Make files read-only based on user config" single
-		((:commit . "6b3e82c69e3ecca67a2becbd710a52982711572c")
+		((:commit . "c128c9412f768adf89ff5c4ad433cf0beab6656a")
 		 (:authors
 		  ("pfchen" . "pfchen31@gmail.com"))
 		 (:maintainer "pfchen" . "pfchen31@gmail.com")
