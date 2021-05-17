@@ -1,6 +1,6 @@
 Increment / Decrement binary, octal, decimal and hex literals.
 
-Works like C-a/C-x in vim, i.e. searches for number up to EOL and
+Works like C-a/C-x in VIM, i.e. searches for number up to EOL and
 then increments or decrements and keep zero padding up.
 
 Known Bugs:

@@ -7,6 +7,8 @@
 ;; Description: Line annotation for changed and saved lines.
 ;; Keyword: annotation line number linum reminder highlight display
 ;; Version: 0.4.5
+;; Package-Version: 20210426.1859
+;; Package-Commit: 8c9f824b1dc67c8489afef05b06d9525b29dab00
 ;; Package-Requires: ((emacs "24.4") (indicators "0.0.4") (fringe-helper "1.0.1"))
 ;; URL: https://github.com/jcs-elpa/line-reminder
 

@@ -1,0 +1,13 @@
+(lsp-rescript .
+	      [(20210505 1921)
+	       ((lsp-mode
+		 (7 0 1))
+		(emacs
+		 (25 1)))
+	       "LSP client configuration for lsp-mode and rescript-vscode" single
+	       ((:commit . "6b693d9084f3d8da0782116634bbb0ac169d021c")
+		(:authors
+		 ("John Lee"))
+		(:maintainer "John Lee")
+		(:keywords "languages")
+		(:url . "https://github.com/jjlee/lsp-rescript"))])
