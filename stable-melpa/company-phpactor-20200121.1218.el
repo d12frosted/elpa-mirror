@@ -7,7 +7,7 @@
 ;; Created: 18 Apr 2018
 ;; Version: 0.1.0
 ;; Package-Version: 20200121.1218
-;; Package-Commit: 98b345c6751009d17c92fa3ade5bddce8f64e0c4
+;; Package-Commit: debf66848c6099415c731b179dcd47e96db3b50b
 ;; Keywords: tools, php
 ;; Package-Requires: ((emacs "24.3") (company "0.9.6") (phpactor "0.1.0"))
 ;; URL: https://github.com/emacs-php/phpactor.el

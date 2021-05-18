@@ -6,8 +6,8 @@
 ;; Created: 8 Dec 2019
 ;; Homepage: https://github.com/raxod502/selectrum
 ;; Keywords: extensions
-;; Package-Version: 20210510.1316
-;; Package-Commit: bfefb8e1a350d44b56290b2c7ddc3418ec217b30
+;; Package-Version: 20210517.2306
+;; Package-Commit: d4fc3c22c9a857f71de5a5b8c6ad3f7e732f7481
 ;; Package-Requires: ((emacs "26.1"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 3.1
@@ -871,14 +871,21 @@ content height is greater than the window height."
 
 (defun selectrum--group-by (fun elems)
   "Group ELEMS by FUN."
-  (let ((groups))
-    (dolist (cand elems)
-      (let* ((key (funcall fun cand nil))
-             (group (assoc key groups)))
-        (if group
-            (setcdr group (cons cand (cdr group)))
-          (push (list key cand) groups))))
-    (mapcan (lambda (x) (nreverse (cdr x))) (nreverse groups))))
+  (when elems
+    (let ((groups))
+      (while elems
+        (let* ((key (funcall fun (car elems) nil))
+               (group (cdr (assoc key groups))))
+          (if group
+              (setcdr group (setcdr (cdr group) elems)) ;; Append to tail of group
+            (push `(,key ,elems . ,elems) groups)) ;; New group (key head . tail)
+          (setq elems (cdr elems))))
+      (setcdr (cddar groups) nil) ;; Unlink last tail
+      (setq groups (nreverse groups))
+      (prog1 (cadar groups)
+        (while (cdr groups)
+          (setcdr (cddar groups) (cadadr groups)) ;; Link groups
+          (setq groups (cdr groups)))))))
 
 (defun selectrum--vertical-display-style
     (win input nrows _ncols index
@@ -917,8 +924,8 @@ displayed first and LAST-INDEX-DISPLAYED the index of the last one."
                   (plist-get completion-extra-properties
                              :affixation-function)))
          (docsigf (plist-get completion-extra-properties :company-docsig))
-         (titlef (and selectrum-group-format
-                      (completion-metadata-get metadata 'x-title-function)))
+         (groupf (and selectrum-group-format
+                      (completion-metadata-get metadata 'group-function)))
          (candidates (cond (aff
                             (selectrum--affixate aff highlighted-candidates))
                            ((or annotf docsigf)
@@ -928,11 +935,11 @@ displayed first and LAST-INDEX-DISPLAYED the index of the last one."
          (last-title nil)
          (lines ()))
     (dolist (cand candidates)
-      (when-let (new-title (and titlef (funcall titlef cand nil)))
+      (when-let (new-title (and groupf (funcall groupf cand nil)))
         (unless (equal last-title new-title)
           (push (format selectrum-group-format (setq last-title new-title)) lines)
           (push "\n" lines))
-        (setq cand (funcall titlef cand 'transform)))
+        (setq cand (funcall groupf cand 'transform)))
       (let* ((formatting-current-candidate
               (eq i index))
              (newline
@@ -1140,7 +1147,7 @@ defaults to the current one and MAX which defaults to
 (defun selectrum--preprocess (candidates)
   "Preprocess CANDIDATES list.
 The preprocessing applies the `selectrum-preprocess-candidates-function'
-and the `x-title-function'."
+and the `group-function'."
   (setq-local selectrum--preprocessed-candidates
               (funcall selectrum-preprocess-candidates-function
                        candidates))
@@ -1202,7 +1209,7 @@ and the `x-title-function'."
                          input cands)))
   ;; Group candidates. This has to be done after refinement, since
   ;; refinement can reorder the candidates.
-  (when-let (titlef (selectrum--get-meta 'x-title-function))
+  (when-let (groupf (selectrum--get-meta 'group-function))
     ;; Ensure that default candidate appears at the top if
     ;; `selectrum-move-default-candidate' is set. It is redundant to
     ;; do this here, since we move the default candidate also
@@ -1216,7 +1223,7 @@ and the `x-title-function'."
                    selectrum--refined-candidates)))
     (setq-local
      selectrum--refined-candidates
-     (selectrum--group-by titlef selectrum--refined-candidates)))
+     (selectrum--group-by groupf selectrum--refined-candidates)))
   (when selectrum--virtual-default-file
     (unless (equal selectrum--virtual-default-file "")
       (setq-local selectrum--refined-candidates
