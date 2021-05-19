@@ -4,6 +4,8 @@
 
 ;; Author: Giap Tran <txgvnn@gmail.com>
 ;; URL: https://github.com/TxGVNN/terraform-doc
+;; Package-Version: 20210514.737
+;; Package-Commit: 5d35efbf2c1619d9385ef00ed74e9de1ea7cf32d
 ;; Version: 1.0.1
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: comm
