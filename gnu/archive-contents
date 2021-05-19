@@ -400,7 +400,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 7)
+	[(0 8)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -1117,6 +1117,16 @@
 	    ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
 	   (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
 	   (:url . "https://github.com/thierryvolpiatto/ioccur"))])
+ (isearch-mb .
+	     [(0 2)
+	      ((emacs
+		(27 1)))
+	      "Control Isearch from the minibuffer" tar
+	      ((:url . "https://github.com/astoff/isearch-mb")
+	       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
+	       (:authors
+		("Augusto Stoffel" . "arstoffel@gmail.com"))
+	       (:keywords "matching"))])
  (iterators .
 	    [(0 1 1)
 	     ((emacs
@@ -2534,7 +2544,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:keywords "languages"))])
  (vertico .
-	  [(0 9)
+	  [(0 10)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar

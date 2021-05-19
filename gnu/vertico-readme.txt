@@ -20,10 +20,10 @@ enhancements can be installed separately via complementary packages.
 * Features
 
 - Vertical display with arrow key navigation
-- Shows the index of the current candidate and the total number of candidates
+- Prompt shows the current candidate index and the total number of candidates
 - The current candidate is inserted with =TAB= and selected with =RET=
-- Non-existing candidates are entered by moving the point to the prompt line
-- Candidates sorting by history position, string length and alphabetically
+- Non-existing candidates can be entered by moving the point to the prompt line
+- Sorting by history position, string length and alphabetically
 - Long candidates with newlines are formatted to take up less space
 - Deferred completion style highlighting for performance
 - Support for ~annotation-function~, ~affixation-function~ and ~x-title-function~
@@ -149,6 +149,10 @@ completion UI. These packages are fully supported:
 - [[https://github.com/oantolin/embark][Embark]]: Minibuffer actions and context menu
 - [[https://github.com/oantolin/orderless][Orderless]]: Advanced completion style
 
+In case you want to use Vertico for completion-at-point/completion-in-region,
+you can use the function ~consult-completion-in-region~ provided by the Consult
+package.
+
 You may also want to look into my [[https://github.com/minad/corfu][Corfu]] package, which provides a minimal
 completion system for completion-in-region using overlays. Corfu is developed in
 the same spirit as Vertico.
@@ -173,65 +177,50 @@ follow a similar philosophy:
 
 - [[https://github.com/raxod502/selectrum][Selectrum]]: If you are looking for a less minimalistic and more full-featured
   (but also more complex) package, you may be interested in Selectrum, which has
-  a similar UI as Vertico. Additionally Selectrum optimizes Tramp file directory
-  browsing with caching, supports Avy-style quick keys, a horizontal display and
-  a configurable buffer display.
+  a similar UI as Vertico. Additionally Selectrum supports Avy-style quick keys,
+  a horizontal display and a configurable buffer display.
 - [[https://github.com/oantolin/icomplete-vertical][Icomplete-vertical]]: This package enhances the Emacs builtin Icomplete with a
   vertical display. In contrast to Vertico, the candidates are rotated such that
   the current candidate always appears at the top. From my perspective,
   candidate rotation feels a bit less intuitive than the UI of Vertico or
   Selectrum. Note that Emacs 28 offers an built-in ~icomplete-vertical-mode~.
 
-* Caveats
+* Problematic completion commands
 
-Vertico is robust and works well for most use cases, except when navigating
-remote directories via Tramp (See [[https://github.com/minad/vertico/issues/20][issue 20]]). My opinion is that the Tramp
-performance problems should be resolved on a lower layer within the file
-completion table. In case you are a heavy Tramp user, I recommend to give
-Selectrum a try. Furthermore there are a few problematic completion commands
-described in the next section.
+  Vertico works well and is robust in most scenarios. However a few completion
+  commands make certain assumptions about the completion styles and the
+  completion UI. Some of these assumptions may not hold in Vertico and as such
+  require minor workarounds.
 
-** Problematic completion commands
+** ~org-set-tags-command~
 
-   A few completion commands make certain assumptions about the completion
-   styles and the completion UI. Some of the assumptions may not hold in Vertico
-   and as such require minor workarounds.
+ ~org-set-tags-command~ implements a completion table which relies on the ~basic~
+ completion style and TAB completion. This table does not work well with Vertico
+ and Icomplete. The issue can be mitigated by deactivating most of the Vertico UI
+ and relying purely on TAB completion. The UI is still enhanced by Vertico, since
+ Vertico shows the available tags.
 
-*** ~org-set-tags-command~
+ #+begin_src emacs-lisp
+   (defun disable-selection ()
+     (when (eq minibuffer-completion-table #'org-tags-completion-function)
+       (setq-local vertico-map minibuffer-local-completion-map
+                   completion-cycle-threshold nil
+                   completion-styles '(basic))))
+   (advice-add #'vertico--setup :before #'disable-selection)
+ #+end_src
 
-  ~org-set-tags-command~ implements a completion table which relies on the ~basic~
-  completion style and TAB completion. This table does not work well with Vertico
-  and Icomplete. The issue can be mitigated by deactivating most of the Vertico UI
-  and relying purely on TAB completion. The UI is still enhanced by Vertico, since
-  Vertico shows the available tags.
+ In order to fix the issues properly, ~org-set-tags-command~ should be
+ implemented using ~completing-read-multiple~ as discussed on the [[https://lists.gnu.org/archive/html/emacs-orgmode/2020-07/msg00222.html][mailing list]].
 
-  #+begin_src emacs-lisp
-    (defun disable-selection ()
-      (when (eq minibuffer-completion-table #'org-tags-completion-function)
-        (setq-local vertico-map minibuffer-local-completion-map
-                    completion-cycle-threshold nil
-                    completion-styles '(basic))))
-    (advice-add #'vertico--setup :before #'disable-selection)
-  #+end_src
+** ~tmm-menubar~
 
-  In order to fix the issues properly, ~org-set-tags-command~ should be
-  implemented using ~completing-read-multiple~ as discussed on the [[https://lists.gnu.org/archive/html/emacs-orgmode/2020-07/msg00222.html][mailing list]].
+ The text menu bar works well with Vertico but always shows a =*Completions*=
+ buffer, which is unwanted if you are using the Vertico UI. This completion
+ buffer can be disabled as follows.
 
-*** ~Info-goto-node~
-
-  The command ~Info-goto-node~ uses the ~Info-read-node-name~ completion table,
-  which almost works as is with Vertico. However there is the issue that the
-  completion table sometimes throws unexpected errors (bug#47771).
-
-*** ~tmm-menubar~
-
-  The text menu bar works well with Vertico but always shows a =*Completions*=
-  buffer, which is unwanted if you are using the Vertico UI. This completion
-  buffer can be disabled as follows.
-
-  #+begin_src emacs-lisp
-    (advice-add #'tmm-add-prompt :after #'minibuffer-hide-completions)
-  #+end_src
+ #+begin_src emacs-lisp
+   (advice-add #'tmm-add-prompt :after #'minibuffer-hide-completions)
+ #+end_src
 
 * Contributions
 
