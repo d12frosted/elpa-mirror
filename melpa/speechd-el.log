@@ -5,7 +5,7 @@ Source:  https://github.com/brailcom/speechd-el.git
 Updating /mnt/store/melpa/working/speechd-el/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/speechd-el/
-  to /tmp/speechd-elAvlolm/speechd-el-20200706.1236
+  to /tmp/speechd-el2DMBnv/speechd-el-20200706.1236
     braille.el -> braille.el
     brltty.el -> brltty.el
     mmanager.el -> mmanager.el
@@ -24,31 +24,31 @@ Copying files (->) and directories (=>)
     gpl.texi -> gpl.texi
     speechd-el.cs.texi -> speechd-el.cs.texi
     speechd-el.texi -> speechd-el.texi
-Created /tmp/speechd-elAvlolm/speechd-el-20200706.1236/fdl.info
-Created /tmp/speechd-elAvlolm/speechd-el-20200706.1236/gpl.info
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi -o /tmp/speechd-elAvlolm/speechd-el-20200706.1236/speechd-el.cs.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/speechd-el2DMBnv/speechd-el-20200706.1236/fdl.info
+Created /tmp/speechd-el2DMBnv/speechd-el-20200706.1236/gpl.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi -o /tmp/speechd-el2DMBnv/speechd-el-20200706.1236/speechd-el.cs.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 058f91b Speak online the killed part on kill-line
 /mnt/store/melpa/working/speechd-el/fdl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/speechd-elAvlolm/speechd-el-20200706.1236/fdl.info'
+install-info: warning: no info dir entry in `/tmp/speechd-el2DMBnv/speechd-el-20200706.1236/fdl.info'
 /mnt/store/melpa/working/speechd-el/gpl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/speechd-elAvlolm/speechd-el-20200706.1236/gpl.info'
+install-info: warning: no info dir entry in `/tmp/speechd-el2DMBnv/speechd-el-20200706.1236/gpl.info'
 /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced {
 /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced }
 ./fdl.texi:404: raising the section level of @appendixsubsec which is too low
 ")
-Created /tmp/speechd-elAvlolm/speechd-el-20200706.1236/speechd-el.cs.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/speechd-elAvlolm/speechd-el-20200706.1236/speechd-el.cs.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/speechd-el2DMBnv/speechd-el-20200706.1236/speechd-el.cs.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/speechd-el2DMBnv/speechd-el-20200706.1236/speechd-el.cs.info)' exited with non-zero status 1: Fetching origin
 HEAD is now at 058f91b Speak online the killed part on kill-line
 /mnt/store/melpa/working/speechd-el/fdl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/speechd-elAvlolm/speechd-el-20200706.1236/fdl.info'
+install-info: warning: no info dir entry in `/tmp/speechd-el2DMBnv/speechd-el-20200706.1236/fdl.info'
 /mnt/store/melpa/working/speechd-el/gpl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/speechd-elAvlolm/speechd-el-20200706.1236/gpl.info'
+install-info: warning: no info dir entry in `/tmp/speechd-el2DMBnv/speechd-el-20200706.1236/gpl.info'
 /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced {
 /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced }
 ./fdl.texi:404: raising the section level of @appendixsubsec which is too low
-install-info: No such file or directory for /tmp/speechd-elAvlolm/speechd-el-20200706.1236/speechd-el.cs.info
+install-info: No such file or directory for /tmp/speechd-el2DMBnv/speechd-el-20200706.1236/speechd-el.cs.info
 ")
-Created /tmp/speechd-elAvlolm/speechd-el-20200706.1236/speechd-el.info
+Created /tmp/speechd-el2DMBnv/speechd-el-20200706.1236/speechd-el.info
 Created speechd-el-20200706.1236.tar containing:
   speechd-el-20200706.1236/
   speechd-el-20200706.1236/braille.el
@@ -69,8 +69,8 @@ Created speechd-el-20200706.1236.tar containing:
   speechd-el-20200706.1236/speechd-ssip.el
   speechd-el-20200706.1236/speechd-version.el
   speechd-el-20200706.1236/speechd.el
-Built speechd-el in 27.396s, finished at Wed May 19 10:29:45 2021
+Built speechd-el in 25.719s, finished at Wed May 19 20:06:46 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  169 May 19 10:29 packages/speechd-el-20200706.1236.entry
-440K -rw-r--r-- 1 root root 440K May 19 10:29 packages/speechd-el-20200706.1236.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 19 10:29 packages/speechd-el-badge.svg
+4.0K -rw-r--r-- 1 root root  169 May 19 20:06 packages/speechd-el-20200706.1236.entry
+440K -rw-r--r-- 1 root root 440K May 19 20:06 packages/speechd-el-20200706.1236.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 19 20:06 packages/speechd-el-badge.svg

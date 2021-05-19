@@ -18,6 +18,9 @@ almost all 'file managers', and also some unique features:
     * inspired by, and similar to, midnight commander's "M-t"
       * superior configurability
       * directly choose a specific panel view, or toggle to next
+  * Swap panels (use "M-u")
+    * inspired by, and similar to, midnight commander's "C-u"
+      * a TRUE and complete swap (including history entries)
   * Trash management
     * per xfreedesktop standard
     * restore trashed files to their original locations
@@ -45,6 +48,7 @@ Bonus customization features
   * toggle display of "hidden" or "undesirable" files (dired-omit mode)
   * auto-refresh buffers (auto-revert-mode)
   * highlight current line (hl-line-mode)
+    * current buffer highlights with a unique face.
   * don't wrap long lines (toggle-truncate-lines)
   * to disable:
     * option 1: M-x customize-variable diredc-bonus-configuration

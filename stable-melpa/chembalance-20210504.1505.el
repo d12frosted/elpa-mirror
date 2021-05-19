@@ -7,7 +7,7 @@
 ;; Created: 2021
 ;; Version: 1.0
 ;; Package-Version: 20210504.1505
-;; Package-Commit: dc081acfcca44cf5b7d8762d6b2ef9d580abf566
+;; Package-Commit: 80c8fd4c806366a4b75a27a656420e9e36316543
 ;; Keywords: convenience, chemistry
 ;; Homepage: https://github.com/sergiruiztrepat/chembalance
 ;; Package-Requires: ((emacs "24.4"))
