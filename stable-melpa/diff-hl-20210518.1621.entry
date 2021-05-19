@@ -1,0 +1,13 @@
+(diff-hl .
+	 [(20210518 1621)
+	  ((cl-lib
+	    (0 2))
+	   (emacs
+	    (25 1)))
+	  "Highlight uncommitted changes using VC" tar
+	  ((:commit . "4f23c36da5bf102fcf6e7435fa79041feb7f1fbe")
+	   (:authors
+	    ("Dmitry Gutov" . "dgutov@yandex.ru"))
+	   (:maintainer "Dmitry Gutov" . "dgutov@yandex.ru")
+	   (:keywords "vc" "diff")
+	   (:url . "https://github.com/dgutov/diff-hl"))])

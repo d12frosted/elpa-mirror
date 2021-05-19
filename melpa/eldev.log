@@ -5,15 +5,22 @@ Source:  https://github.com/doublep/eldev.git
 Updating /mnt/store/melpa/working/eldev/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldevYlecGF/eldev-20210516.2029
+  to /tmp/eldevENh72v/eldev-20210516.2029
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-ert.el -> eldev-ert.el
     eldev-plugins.el -> eldev-plugins.el
     eldev-util.el -> eldev-util.el
     eldev-vc.el -> eldev-vc.el
     eldev.el -> eldev.el
+    bin/eldev -> bin/eldev
+    bin/eldev.bat -> bin/eldev.bat
+    bin/eldev.ps1 -> bin/eldev.ps1
 Created eldev-20210516.2029.tar containing:
   eldev-20210516.2029/
+  eldev-20210516.2029/bin/
+  eldev-20210516.2029/bin/eldev
+  eldev-20210516.2029/bin/eldev.bat
+  eldev-20210516.2029/bin/eldev.ps1
   eldev-20210516.2029/eldev-buttercup.el
   eldev-20210516.2029/eldev-ert.el
   eldev-20210516.2029/eldev-pkg.el
@@ -21,9 +28,9 @@ Created eldev-20210516.2029.tar containing:
   eldev-20210516.2029/eldev-util.el
   eldev-20210516.2029/eldev-vc.el
   eldev-20210516.2029/eldev.el
-Built eldev in 4.678s, finished at Tue May 18 10:46:16 2021
+Built eldev in 5.816s, finished at Wed May 19 03:14:41 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  340 May 18 10:46 packages/eldev-20210516.2029.entry
-400K -rw-r--r-- 1 root root 400K May 18 10:46 packages/eldev-20210516.2029.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 18 10:46 packages/eldev-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K May 18 10:46 packages/eldev-readme.txt
+4.0K -rw-r--r-- 1 root root  340 May 19 03:14 packages/eldev-20210516.2029.entry
+412K -rw-r--r-- 1 root root 410K May 19 03:14 packages/eldev-20210516.2029.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 19 03:14 packages/eldev-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K May 19 03:14 packages/eldev-readme.txt

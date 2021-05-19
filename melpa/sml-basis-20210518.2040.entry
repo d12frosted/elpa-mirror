@@ -1,0 +1,11 @@
+(sml-basis .
+	   [(20210518 2040)
+	    ((emacs
+	      (24 5)))
+	    "Standard ML Basis Library lookup" tar
+	    ((:commit . "c048d575e30a20ec825fd0c5eb9c8a4428a43298")
+	     (:authors
+	      ("Lassi Kortela" . "lassi@lassi.io"))
+	     (:maintainer "Lassi Kortela" . "lassi@lassi.io")
+	     (:keywords "languages" "util")
+	     (:url . "https://github.com/lassik/emacs-sml-basis"))])
