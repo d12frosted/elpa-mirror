@@ -6,7 +6,7 @@
 ;; Author: Frontside Engineering <engineering@frontside.com>
 ;; Version: 1.0.0
 ;; Package-Version: 20210515.1811
-;; Package-Commit: 79293c8b22ca0872703476272bd139b23663dde1
+;; Package-Commit: f11fea0cf3b92eddf1d083e0ce1abfc396f06631
 ;; Package-Requires: ((emacs "25.1") (add-node-modules-path "1.2.0") (company "0.9.2") (flycheck "20201228.2104") (js2-mode "20201220") (js2-refactor "0.9.0") (rjsx-mode "0.5.0") (tide "4.0.2") (web-mode "17"))
 ;; Keywords: files, tools
 ;; URL: https://github.com/thefrontside/frontmacs

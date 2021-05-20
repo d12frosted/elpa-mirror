@@ -5,10 +5,10 @@
 ;; Author: Jérémy Compostella <jeremy.compostella@gmail.com>
 ;; Created: January 2018
 ;; Keywords: extensions mail
-;; Package-Commit: ad56603155b5841f83ede263df624a43fa90d659
+;; Package-Commit: 4c92c627b6cfb234fd257b714a5dbfc72d7af8d2
 ;; Homepage: https://github.com/jeremy-compostella/org-msg
-;; Package-Version: 20210514.2057
-;; Package-X-Original-Version: 3.7
+;; Package-Version: 20210518.2355
+;; Package-X-Original-Version: 3.8
 ;; Package-Requires: ((emacs "24.4") (htmlize "1.54"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -430,9 +430,10 @@ buffer temporarily current."
        (save-window-excursion
 	 (let* ((notmuch-show-only-matching-messages t)
 	       (,buf (notmuch-show (format "id:%s" (substring ,id 1 -1)))))
-	   (with-current-notmuch-show-message
-	    (prog1 (progn ,@body)
-	      (kill-buffer ,buf))))))))
+	   (notmuch-show-view-raw-message)
+	   (prog1 (progn ,@body)
+	     (kill-buffer ,buf)
+	     (kill-buffer)))))))
 
 (defun org-msg-save-article-for-reply-notmuch ()
   "Export the currently visited notmuch article as HTML."
@@ -556,15 +557,18 @@ expression into multi-level quote blocks."
 	  (goto-char (line-beginning-position))
 	  (let ((new-begin (point-marker)))
 	    (insert "#+begin_" suffix)
-	    (when (re-search-forward "^\\([^ >]\\| [^>]\\)" end t)
-	      (goto-char (line-beginning-position))
-	      (insert "#+end_" suffix)
-	      (let ((new-end (point-marker)))
-		(goto-char new-begin)
-		(while (re-search-forward "^ ?>" new-end t)
-		  (replace-match "")
-		  (forward-char 1))
-		(org-msg-ascii-blockquote (1+ level) new-begin new-end)))))))))
+	    (if (re-search-forward "^\\([^ >]\\| [^>]\\)" end t)
+		(goto-char (line-beginning-position))
+	      (goto-char (point-max))
+	      (unless (= (point) (line-beginning-position))
+		(insert "\n")))
+	    (insert "#+end_" suffix)
+	    (let ((new-end (point-marker)))
+	      (goto-char new-begin)
+	      (while (re-search-forward "^ ?>" new-end t)
+		(replace-match "")
+		(forward-char 1))
+	      (org-msg-ascii-blockquote (1+ level) new-begin new-end))))))))
 
 (defun org-msg-build-style (tag class css)
   "Given a TAG and CLASS selector, it builds a CSS style string.
@@ -900,15 +904,16 @@ buffer otherwise, the buffer is left untouched."
       (goto-char (point-min))
       (let (stack res)
 	(while (re-search-forward "<#\\\(/?[a-z]+\\\)[ >]" nil t)
-	  (let ((tag (match-string-no-properties 1)))
-	    (unless (string= tag "secure")
-	      (if (string= (substring tag 0 1) "/")
-		  (let ((cur (pop stack)))
-		    (while (not (string= (substring tag 1) (car cur)))
-		      (setf cur (pop stack)))
-		    (unless stack
-		      (push (list (cdr cur) (line-end-position)) res)))
-		(push (cons tag (line-beginning-position)) stack)))))
+	  (unless (org-in-block-p '(""))
+	    (let ((tag (match-string-no-properties 1)))
+	      (unless (string= tag "secure")
+		(if (string= (substring tag 0 1) "/")
+		    (let ((cur (pop stack)))
+		      (while (not (string= (substring tag 1) (car cur)))
+			(setf cur (pop stack)))
+		      (unless stack
+			(push (list (cdr cur) (line-end-position)) res)))
+		  (push (cons tag (line-beginning-position)) stack))))))
 	(setf mml (mapconcat (lambda (x)
 			       (apply 'delete-and-extract-region x))
 			     res "\n"))
@@ -1506,8 +1511,8 @@ Type \\[org-msg-attach] to call the dispatcher for attachment
   (cond ((message-mail-alias-type-p 'abbrev) (mail-abbrevs-setup))
 	((message-mail-alias-type-p 'ecomplete) (ecomplete-setup)))
   (setq org-font-lock-keywords
-	(append org-font-lock-keywords gnus-message-citation-keywords
-		message-font-lock-keywords org-msg-font-lock-keywords))
+	(append message-font-lock-keywords org-font-lock-keywords
+		gnus-message-citation-keywords org-msg-font-lock-keywords))
   (toggle-truncate-lines)
   (org-msg-mua-call 'edit-mode)
   (setq-local kill-buffer-hook 'org-msg-kill-buffer

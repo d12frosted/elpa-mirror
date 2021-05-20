@@ -4,8 +4,8 @@
 
 ;; Author: Carl Lieberman <dev@carl.ac>
 ;; Keywords: kdeconnect, android
-;; Package-Version: 20201019.2211
-;; Package-Commit: 0f84d916bece8cc4dbfc67a95851f560c5e8e47b
+;; Package-Version: 20210519.2016
+;; Package-Commit: 4977af8cb5fdc21da770f3ee43ad7823f2937da3
 ;; Version: 1.2.2
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -96,6 +96,25 @@
                     (shell-quote-argument kdeconnect-active-device)
                     "--share" (shell-quote-argument
                                (expand-file-name path))) " ")))
+
+;;;###autoload
+(defun kdeconnect-send-text (text)
+  "Send TEXT to the active device."
+  (interactive "MEnter a text to share: ")
+  (shell-command
+   (mapconcat 'identity
+              (list "kdeconnect-cli" "-d"
+                    (shell-quote-argument kdeconnect-active-device)
+                    "--share-text" (shell-quote-argument text)) " ")))
+
+;;;###autoload
+(defun kdeconnect-send-text-region-or-prompt ()
+  "Send text to the active device interactively.
+If the REGION is active send that text, otherwise prompt for what to send"
+  (interactive )
+  (if (use-region-p)
+      (kdeconnect-send-text (buffer-substring (region-beginning) (region-end)))
+    (call-interactively 'kdeconnect-send-text)))
 
 ;;;###autoload
 (defun kdeconnect-select-active-device (name)
