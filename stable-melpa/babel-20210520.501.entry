@@ -1,0 +1,10 @@
+(babel .
+       [(20210520 501)
+	nil "interface to web translation services such as Babelfish" single
+	((:commit . "1f68c175e8a3223f37858167239051e9ab9e540c")
+	 (:authors
+	  ("Juergen Hoetzel" . "juergen@hoetzel.info")
+	  ("Eric Marsden" . "emarsden@laas.fr"))
+	 (:maintainer "Juergen Hoetzel" . "juergen@hoetzel.info")
+	 (:keywords "translation" "web")
+	 (:url . "http://github.com/juergenhoetzel/babel"))])

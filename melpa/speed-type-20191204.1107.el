@@ -5,8 +5,6 @@
 ;; Author: Gunther Hagleitner
 ;; Maintainer: Julien Pagès <j.parkouss@gmail.com>
 ;; Version: 1.2
-;; Package-Version: 20191204.1107
-;; Package-Commit: 5ef695f7159aa1f20c7c9e55f0c39bcdacce8d21
 ;; Keywords: games
 ;; URL: https://github.com/parkouss/speed-type
 ;; Package-Requires: ((emacs "24.3") (cl-lib "0.3"))

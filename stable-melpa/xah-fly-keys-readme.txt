@@ -32,6 +32,9 @@ neo2
 koy
 adnw
 pt-nativo
+carpalx-qgmlwy
+carpalx-qgmlwb
+carpalx-qfmlwy
 
 (xah-fly-keys 1)
 
