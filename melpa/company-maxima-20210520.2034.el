@@ -6,8 +6,8 @@
 ;; Maintainer: Fermin Munoz <fmfs@posteo.net>
 ;; Created: 5 October 2020
 ;; Version: 0.7.6
-;; Package-Version: 20201207.2204
-;; Package-Commit: 5e80033e6fa9089d5cd6fa93f6484b544f2ba059
+;; Package-Version: 20210520.2034
+;; Package-Commit: f92eafd716ae6e36665bbf027309477c2efa336d
 ;; Keywords: languages,tools,convenience
 ;; URL: https://gitlab.com/sasanidas/maxima
 ;; Package-Requires: ((emacs "25.1")(maxima "0.6.1")(seq "2.20")(company "0.9.13"))
@@ -47,7 +47,8 @@ It requires COMMAND, optionally _ARG and IGNORED."
   (interactive (list 'interactive))
   (cl-case command
     (interactive (company-begin-backend 'company-maxima-backend))
-    (prefix (and (eq major-mode 'maxima-mode)
+    (prefix (and (or (eq major-mode 'maxima-mode )
+		     (eq major-mode 'maxima-inferior-mode))
 		 (company-in-string-or-comment)
 		 ;; FIXME this could be improve, if the load string is in other line, it doesn't work
 		 (string-match (rx (literal "load")(syntax open-parenthesis)(syntax string-quote)) (thing-at-point 'line t))
@@ -61,7 +62,8 @@ It requires COMMAND, optionally _ARG and IGNORED."
   (interactive (list 'interactive))
   (cl-case command
     (interactive (company-begin-backend 'company-maxima-backend))
-    (prefix (and (eq major-mode 'maxima-mode)
+    (prefix (and (or (eq major-mode 'maxima-mode )
+		     (eq major-mode 'maxima-inferior-mode))
 		 (not (company-in-string-or-comment))
 		 (company-grab-symbol)))
     (duplicates t)
