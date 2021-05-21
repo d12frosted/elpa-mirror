@@ -581,15 +581,17 @@
 	       (:maintainer "Pierre Neidhardt" . "mail@ambrevar.xyz")
 	       (:url . "https://gitlab.com/Ambrevar/emacs-disk-usage"))])
  (dismal .
-	 [(1 5)
+	 [(1 5 2)
 	  ((cl-lib
-	    (0)))
+	    (0))
+	   (emacs
+	    (24 3)))
 	  "Dis Mode Ain't Lotus: Spreadsheet program Emacs" tar
 	  ((:maintainer "UnMaintainer" . "emacs-devel@gnu.org")
 	   (:authors
 	    (nil . "David Fox, fox@cs.nyu.edu")
 	    (nil . "Frank E. Ritter, ritter@cs.cmu.edu"))
-	   (:url . "http://elpa.gnu.org/packages/dismal.html"))])
+	   (:url . "https://elpa.gnu.org/packages/dismal.html"))])
  (djvu .
        [(1 1 1)
 	nil "Edit and view Djvu files via djvused" single
@@ -795,7 +797,7 @@
 		    ("Matthew L. Fidler" . "matthew.fidler@gmail.com"))
 		   (:keywords "convenience"))])
  (excorporate .
-	      [(0 9 6)
+	      [(1 0 0)
 	       ((emacs
 		 (24 1))
 		(cl-lib
