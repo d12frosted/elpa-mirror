@@ -1,0 +1,11 @@
+(battery-notifier .
+		  [(20210521 1238)
+		   ((alert
+		     (1 3)))
+		   "Notify when battery capacity is low" single
+		   ((:commit . "ae2043db954e131d9de7347ab1a6107fd07e8893")
+		    (:authors
+		     ("Jason Johnson" . "jason@fullsteamlabs.com"))
+		    (:maintainer "Jason Johnson" . "jason@fullsteamlabs.com")
+		    (:keywords "hardware" "battery")
+		    (:url . "https://github.com/jasonmj/battery-notifier"))])
