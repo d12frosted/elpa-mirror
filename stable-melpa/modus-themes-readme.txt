@@ -1,21 +1,23 @@
 
 The Modus themes conform with the highest standard for color-contrast
 accessibility between background and foreground values (WCAG AAA).
-This file contains all customization options, helper functions,
+This file contains all customization variables, helper functions,
 interactive commands, and face specifications.  Please refer to the
 official Info manual for further documentation (distributed with the
 themes, or available at: <https://protesilaos.com/modus-themes>).
 
-The themes share the following customization options, all of which
+The themes share the following customization variables, all of which
 are disabled by default (nil):
 
     modus-themes-slanted-constructs             (boolean)
     modus-themes-bold-constructs                (boolean)
     modus-themes-variable-pitch-headings        (boolean)
     modus-themes-variable-pitch-ui              (boolean)
+    modus-themes-scale-headings                 (boolean)
+    modus-themes-subtle-line-numbers            (boolean)
+    modus-themes-success-deuteranopia           (boolean)
     modus-themes-no-mixed-fonts                 (boolean)
     modus-themes-headings                       (alist)
-    modus-themes-scale-headings                 (boolean)
     modus-themes-fringes                        (choice)
     modus-themes-lang-checkers                  (choice)
     modus-themes-org-blocks                     (choice)
@@ -25,13 +27,11 @@ are disabled by default (nil):
     modus-themes-diffs                          (choice)
     modus-themes-syntax                         (choice)
     modus-themes-hl-line                        (choice)
-    modus-themes-subtle-line-numbers            (boolean)
     modus-themes-paren-match                    (choice)
     modus-themes-region                         (choice)
     modus-themes-links                          (choice)
     modus-themes-completions                    (choice)
     modus-themes-mail-citations                 (choice)
-    modus-themes-success-deuteranopia           (boolean)
 
 The default scale for headings is as follows (it can be customized as
 well---remember, no scaling takes place by default):
@@ -42,7 +42,7 @@ well---remember, no scaling takes place by default):
     modus-themes-scale-4 1.2
     modus-themes-scale-5 1.3
 
-There also exist two unique customization options for overriding
+There also exist two unique customization variables for overriding
 color palette values.  The specifics are documented in the manual.
 The symbols are:
 

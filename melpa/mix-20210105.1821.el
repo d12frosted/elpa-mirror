@@ -23,7 +23,7 @@
 ;; Author: Ayrat Badykov <ayratin555@gmail.com>
 ;; URL: https://github.com/ayrat555/mix.el
 ;; Package-Version: 20210105.1821
-;; Package-Commit: 39a7d3e35769086c0008389b3975dd90b91b657c
+;; Package-Commit: 6bb7e91022b549c2f033e41f971b67b25863f2a5
 ;; Version  : 0.0.3
 ;; Keywords: tools
 ;; Package-Requires: ((emacs "25.1"))
