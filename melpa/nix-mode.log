@@ -5,7 +5,7 @@ Source:  https://github.com/NixOS/nix-mode.git
 Updating /mnt/store/melpa/working/nix-mode/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nix-mode/
-  to /tmp/nix-modeowLVkI/nix-mode-20210124.204
+  to /tmp/nix-modeJuzeJP/nix-mode-20210522.348
     nix-build.el -> nix-build.el
     nix-drv-mode.el -> nix-drv-mode.el
     nix-edit.el -> nix-edit.el
@@ -20,26 +20,28 @@ Copying files (->) and directories (=>)
     nix-shell.el -> nix-shell.el
     nix-store.el -> nix-store.el
     nix.el -> nix.el
-Created nix-mode-20210124.204.tar containing:
-  nix-mode-20210124.204/
-  nix-mode-20210124.204/nix-build.el
-  nix-mode-20210124.204/nix-drv-mode.el
-  nix-mode-20210124.204/nix-edit.el
-  nix-mode-20210124.204/nix-format.el
-  nix-mode-20210124.204/nix-instantiate.el
-  nix-mode-20210124.204/nix-log.el
-  nix-mode-20210124.204/nix-mode-pkg.el
-  nix-mode-20210124.204/nix-mode.el
-  nix-mode-20210124.204/nix-prettify-mode.el
-  nix-mode-20210124.204/nix-repl.el
-  nix-mode-20210124.204/nix-search.el
-  nix-mode-20210124.204/nix-shebang.el
-  nix-mode-20210124.204/nix-shell.el
-  nix-mode-20210124.204/nix-store.el
-  nix-mode-20210124.204/nix.el
-Built nix-mode in 4.234s, finished at Sat May 22 01:22:40 2021
+Created nix-mode-20210522.348.tar containing:
+  nix-mode-20210522.348/
+  nix-mode-20210522.348/nix-build.el
+  nix-mode-20210522.348/nix-drv-mode.el
+  nix-mode-20210522.348/nix-edit.el
+  nix-mode-20210522.348/nix-format.el
+  nix-mode-20210522.348/nix-instantiate.el
+  nix-mode-20210522.348/nix-log.el
+  nix-mode-20210522.348/nix-mode-pkg.el
+  nix-mode-20210522.348/nix-mode.el
+  nix-mode-20210522.348/nix-prettify-mode.el
+  nix-mode-20210522.348/nix-repl.el
+  nix-mode-20210522.348/nix-search.el
+  nix-mode-20210522.348/nix-shebang.el
+  nix-mode-20210522.348/nix-shell.el
+  nix-mode-20210522.348/nix-store.el
+  nix-mode-20210522.348/nix.el
+Built nix-mode in 4.775s, finished at Sat May 22 04:49:11 2021
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  324 May 22 01:22 packages/nix-mode-20210124.204.entry
 100K -rw-r--r-- 1 root root 100K May 22 01:22 packages/nix-mode-20210124.204.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 22 01:22 packages/nix-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  140 May 22 01:22 packages/nix-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  324 May 22 04:49 packages/nix-mode-20210522.348.entry
+100K -rw-r--r-- 1 root root 100K May 22 04:49 packages/nix-mode-20210522.348.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 22 04:49 packages/nix-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  140 May 22 04:49 packages/nix-mode-readme.txt

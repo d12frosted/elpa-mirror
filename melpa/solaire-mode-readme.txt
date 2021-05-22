@@ -11,19 +11,8 @@ Praise the sun.
 M-x package-install RET solaire-mode
 
   (require 'solaire-mode)
+  (solaire-global-mode +1)
 
-Brighten buffers that represent real files:
-
-  (add-hook 'change-major-mode-hook #'turn-on-solaire-mode)
-
-If you use auto-revert-mode:
-
-  (add-hook 'after-revert-hook #'turn-on-solaire-mode)
-
-And to unconditionally brighten certain buffers:
+And to unconditionally darken certain buffers:
 
   (add-hook 'ediff-prepare-buffer-hook #'solaire-mode)
-
-You can do similar with the minibuffer when it is active:
-
-  (add-hook 'minibuffer-setup-hook #'solaire-mode-in-minibuffer)

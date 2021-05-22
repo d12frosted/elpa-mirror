@@ -1,0 +1,11 @@
+(run-stuff .
+	   [(20210522 243)
+	    ((emacs
+	      (25 1)))
+	    "Context based command execution" single
+	    ((:commit . "767eea8928b92da032aca7c8a429b1cced46781d")
+	     (:authors
+	      ("Campbell Barton" . "ideasman42@gmail.com"))
+	     (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+	     (:keywords "files" "lisp" "files" "convenience" "hypermedia")
+	     (:url . "https://gitlab.com/ideasman42/emacs-run-stuff"))])
