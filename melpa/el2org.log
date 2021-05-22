@@ -1,1 +1,11 @@
-bash: line 4: 29255 Segmentation fault      /usr/bin/timeout -k 60 600 emacs --no-site-file --batch -L /mnt/store/melpa/package-build --eval '(progn (setq package-build-working-dir "/mnt/store/melpa/working/") (setq package-build-archive-dir "/mnt/store/melpa/packages/") (setq package-build-recipes-dir "/mnt/store/melpa/recipes/") (setq package-build-stable nil) (setq package-build-write-melpa-badge-images t) (setq package-build-timeout-secs (when (string= "linux" (symbol-name system-type)) 600)))' --load package-build.el --eval "(package-build-archive \"el2org\")"
+Package: el2org
+Fetcher: github
+Source:  https://github.com/tumashu/el2org.git
+
+Updating /mnt/store/melpa/working/el2org/
+Built el2org in 4.495s, finished at Sat May 22 00:46:30 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  13K May 22 00:46 packages/el2org-20200408.146.el
+4.0K -rw-r--r-- 1 root root  331 May 22 00:46 packages/el2org-20200408.146.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 22 00:46 packages/el2org-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K May 22 00:46 packages/el2org-readme.txt

@@ -3,52 +3,8 @@ Fetcher: git
 Source:  https://forge.tedomum.net/hjuvi/eide.git
 
 Updating /mnt/store/melpa/working/eide/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/eide/
-  to /tmp/eideywUO0z/eide-20200702.2009
-  ! src/eide-compare.el -> eide-compare.el
-  ! src/eide-config.el -> eide-config.el
-  ! src/eide-display.el -> eide-display.el
-  ! src/eide-edit.el -> eide-edit.el
-  ! src/eide-help.el -> eide-help.el
-  ! src/eide-keys.el -> eide-keys.el
-  ! src/eide-menu.el -> eide-menu.el
-  ! src/eide-pkg.el -> eide-pkg.el
-  ! src/eide-popup.el -> eide-popup.el
-  ! src/eide-project.el -> eide-project.el
-  ! src/eide-search.el -> eide-search.el
-  ! src/eide-vc.el -> eide-vc.el
-  ! src/eide-windows.el -> eide-windows.el
-  ! src/eide.el -> eide.el
-  ! src/themes/eide-browsing-theme.el -> eide-browsing-theme.el
-  ! src/themes/eide-dark-theme.el -> eide-dark-theme.el
-  ! src/themes/eide-display-theme.el -> eide-display-theme.el
-  ! src/themes/eide-light-theme.el -> eide-light-theme.el
-  ! src/themes/eide-settings-theme.el -> eide-settings-theme.el
-Created eide-20200702.2009.tar containing:
-  eide-20200702.2009/
-  eide-20200702.2009/eide-browsing-theme.el
-  eide-20200702.2009/eide-compare.el
-  eide-20200702.2009/eide-config.el
-  eide-20200702.2009/eide-dark-theme.el
-  eide-20200702.2009/eide-display-theme.el
-  eide-20200702.2009/eide-display.el
-  eide-20200702.2009/eide-edit.el
-  eide-20200702.2009/eide-help.el
-  eide-20200702.2009/eide-keys.el
-  eide-20200702.2009/eide-light-theme.el
-  eide-20200702.2009/eide-menu.el
-  eide-20200702.2009/eide-pkg.el
-  eide-20200702.2009/eide-popup.el
-  eide-20200702.2009/eide-project.el
-  eide-20200702.2009/eide-search.el
-  eide-20200702.2009/eide-settings-theme.el
-  eide-20200702.2009/eide-vc.el
-  eide-20200702.2009/eide-windows.el
-  eide-20200702.2009/eide.el
-Built eide in 12.187s, finished at Fri May 21 17:34:48 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  287 May 21 17:34 packages/eide-20200702.2009.entry
-340K -rw-r--r-- 1 root root 340K May 21 17:34 packages/eide-20200702.2009.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 21 17:34 packages/eide-badge.svg
-4.0K -rw-r--r-- 1 root root  548 May 21 17:34 packages/eide-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: 404 page not found
+fatal: repository 'https://forge.tedomum.net/hjuvi/eide.git/' not found
+error: Could not fetch origin
+
