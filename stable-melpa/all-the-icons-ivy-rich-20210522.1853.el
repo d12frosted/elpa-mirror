@@ -4,9 +4,9 @@
 
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
-;; Version: 1.5.1
-;; Package-Version: 20210505.840
-;; Package-Commit: 0138c7e7f3b7a6c09665e45a6dd2168359efd47c
+;; Version: 1.6.0
+;; Package-Version: 20210522.1853
+;; Package-Commit: ddebc7d272b9b9222b7bb6dbe93ea03d4697d877
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -149,7 +149,14 @@ It respects `all-the-icons-color-icons'."
     counsel-describe-symbol
     (:columns
      ((all-the-icons-ivy-rich-symbol-icon)
-      (ivy-rich-candidate))
+      (ivy-rich-candidate (:width 0.3))
+      (all-the-icons-ivy-rich-counsel-symbol-docstring (:face font-lock-doc-face)))
+     :delimiter "\t")
+    counsel-describe-face
+    (:columns
+     ((all-the-icons-ivy-rich-symbol-icon)
+      (ivy-rich-candidate (:width 0.3))
+      (all-the-icons-ivy-rich-counsel-face-docstring (:face font-lock-doc-face)))
      :delimiter "\t")
     counsel-set-variable
     (:columns
@@ -159,12 +166,14 @@ It respects `all-the-icons-color-icons'."
     counsel-apropos
     (:columns
      ((all-the-icons-ivy-rich-symbol-icon)
-      (ivy-rich-candidate))
+      (ivy-rich-candidate (:width 0.3))
+      (all-the-icons-ivy-rich-counsel-symbol-docstring (:face font-lock-doc-face)))
      :delimiter "\t")
     counsel-info-lookup-symbol
     (:columns
      ((all-the-icons-ivy-rich-symbol-icon)
-      (ivy-rich-candidate))
+      (ivy-rich-candidate (:width 0.3))
+      (all-the-icons-ivy-rich-counsel-symbol-docstring (:face font-lock-doc-face)))
      :delimiter "\t")
     counsel-descbinds
     (:columns
@@ -436,6 +445,7 @@ See `ivy-rich-display-transformers-list' for details."
 
 
 
+;; Add icons to `kill-buffer'
 (defun all-the-icons-ivy-rich-kill-buffer (&optional buffer-or-name)
   "Kill the buffer specified by BUFFER-OR-NAME."
   (interactive
@@ -447,6 +457,7 @@ See `ivy-rich-display-transformers-list' for details."
                           (buffer-name))))
   (kill-buffer buffer-or-name))
 
+;; Support `counsel-bookmark'
 (defun all-the-icons-ivy-rich-bookmark-name (candidate)
   "Return bookmark name from CANDIDATE."
   (car (assoc candidate bookmark-alist)))
@@ -463,6 +474,7 @@ See `ivy-rich-display-transformers-list' for details."
                   filename)
                  (t filename))))))
 
+;; Support `counsel-package'
 (defun all-the-icons-ivy-rich-package-install-summary (candidate)
   "Return package install summary from CANDIDATE. Used for `counsel-package'."
   (ivy-rich-package-install-summary (substring candidate 1)))
@@ -474,6 +486,31 @@ See `ivy-rich-display-transformers-list' for details."
 (defun all-the-icons-ivy-rich-package-version (candidate)
   "Return package version from CANDIDATE. Used for `counsel-package'."
   (ivy-rich-package-version (substring candidate 1)))
+
+;; Support `counsel-describe-face'
+(defun all-the-icons-ivy-rich-counsel-face-docstring (candidate)
+  "Return face's documentation from CANDIDATE."
+  (let ((doc (face-doc-string (intern-soft candidate))))
+    (if (and doc (string-match "^\\(.+\\)\\([\r\n]\\)?" doc))
+        (setq doc (match-string 1 doc))
+      "")))
+
+;; Support `counsel-describe-symbol', `counsel-info-lookup-symbol' and `counsel-apropos'
+(defun all-the-icons-ivy-rich-counsel-symbol-docstring (candidate)
+  "Return symbol's documentation from CANDIDATE."
+  (let ((symbol (intern-soft candidate)))
+    (cond
+     ((fboundp symbol)
+      (ivy-rich-counsel-function-docstring candidate))
+     ((and (boundp symbol) (not (keywordp symbol)))
+      (ivy-rich-counsel-variable-docstring candidate))
+     ((facep symbol)
+      (all-the-icons-ivy-rich-counsel-face-docstring candidate))
+     (t ""))))
+
+;;
+;; Icons
+;;
 
 (defun all-the-icons-ivy-rich--align-icons ()
   "Set tab size to 1, to insert tabs as delimiters."

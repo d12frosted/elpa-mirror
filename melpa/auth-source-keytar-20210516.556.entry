@@ -1,0 +1,14 @@
+(auth-source-keytar .
+		    [(20210516 556)
+		     ((emacs
+		       (24 4))
+		      (keytar
+		       (0 1 2))
+		      (s
+		       (1 12 0)))
+		     "Integrate auth-source with keytar" single
+		     ((:commit . "6edf8ec86d74f1e9853da23052291cc28d2df8bc")
+		      (:authors
+		       ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		      (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		      (:url . "https://github.com/emacs-grammarly/auth-source-keytar"))])
