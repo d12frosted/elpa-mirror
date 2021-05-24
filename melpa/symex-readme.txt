@@ -1,4 +1,3 @@
-
 Symex mode (pronounced sym-ex, as in symbolic expression) is a vim-
 inspired way of editing Lisp code as trees.  Entering symex mode
 allows you to reason about your code in terms of its structure,

@@ -8,7 +8,7 @@ default, is required for this.
 Out of the box, there are no keybindings and, in fact, only a small
 number of editing commands is provided.  Rather, the idea is that
 you can create your own cell-aware commands from regular ones
-through the `code-cells-command' function and the `code-cells-do' macro.  See
-the README for configuration examples.  There is also a
+through the `code-cells-command' function and the `code-cells-do'
+macro.  See the README for configuration examples.  There is also a
 `code-cells-mode' minor mode, which, among other things, provides
 outline support.

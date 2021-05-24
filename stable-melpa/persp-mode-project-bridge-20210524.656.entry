@@ -1,0 +1,14 @@
+(persp-mode-project-bridge .
+			   [(20210524 656)
+			    ((emacs
+			      (27 1))
+			     (persp-mode
+			      (2 9)))
+			    "Integration of persp-mode + project.el" single
+			    ((:commit . "c8a2b76c4972c1e00648def5a9b59a2942bd462a")
+			     (:authors
+			      ("Constantin Kulikov (Bad_ptr)" . "zxnotdead@gmail.com")
+			      ("Siavash Askari Nasr" . "siavash.askari.nasr@gmail.com"))
+			     (:maintainer "Siavash Askari Nasr" . "siavash.askari.nasr@gmail.com")
+			     (:keywords "vc" "persp-mode" "perspective" "project" "project.el")
+			     (:url . "https://github.com/CIAvash/persp-mode-project-bridge"))])

@@ -18,6 +18,8 @@ almost all 'file managers', and also some unique features:
     * inspired by, and similar to, midnight commander's "M-t"
       * superior configurability
       * directly choose a specific panel view, or toggle to next
+  * Extensive and easy-to-use sort options
+    * including options not in 'ls': sort by chmod, owner, group
   * Swap panels (use "M-u")
     * inspired by, and similar to, midnight commander's "C-u"
       * a TRUE and complete swap (including history entries)
