@@ -1,0 +1,20 @@
+(magit .
+       [(20210524 1513)
+	((emacs
+	  (25 1))
+	 (dash
+	  (20200524))
+	 (git-commit
+	  (20200516))
+	 (transient
+	  (20200601))
+	 (with-editor
+	  (20200522)))
+	"A Git porcelain inside Emacs." tar
+	((:commit . "c93d98c59d1c286545c2542fa3eba3a884f8b601")
+	 (:authors
+	  ("Marius Vollmer" . "marius.vollmer@gmail.com")
+	  ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	 (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	 (:keywords "git" "tools" "vc")
+	 (:url . "https://github.com/magit/magit"))])
