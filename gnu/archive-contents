@@ -2141,11 +2141,11 @@
 	     ("Michael R. Mauger" . "michael@mauger.com"))
 	    (:maintainer "Michael R. Mauger" . "michael@mauger.com"))])
  (shell-command+ .
-		 [(2 1 0)
+		 [(2 2 0)
 		  ((emacs
 		    (24 1)))
 		  "An extended shell-command" tar
-		  ((:url . "http://elpa.gnu.org/packages/shell-command+.html")
+		  ((:url . "https://git.sr.ht/~zge/bang")
 		   (:maintainer "Philip K." . "philipk@posteo.net")
 		   (:authors
 		    ("Philip K." . "philipk@posteo.net"))

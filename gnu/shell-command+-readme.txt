@@ -25,10 +25,11 @@ Delete all instances of the charachters a, b, c, ..., z, in the
 selected region (or buffer, if no region was selected).
 
 
-	... make
+	man fprintf
 
-Run Eshell's make (via `compile') in the parent's parent
-directory.
+Open a man-page using Emacs default man page viewer.
+`shell-command+' can be extended to use custom Elisp handlers via
+as specified in `shell-command+-substitute-alist'.
 
 See `shell-command+'s docstring for more details on how it's input
 is interpreted..
