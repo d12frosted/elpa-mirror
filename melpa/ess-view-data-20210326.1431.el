@@ -6,7 +6,7 @@
 ;; Created: 2019/04/06
 ;; Version: 1.0
 ;; Package-Version: 20210326.1431
-;; Package-Commit: 27b9e9d27a365f62e5c977533233977612c32e9b
+;; Package-Commit: da4ec6c386d113fb45cc96f08ab3752141597b87
 ;; URL: https://github.com/ShuguangSun/ess-view-data
 ;; Package-Requires: ((emacs "26.1") (ess "18.10.1") (csv-mode "1.12"))
 ;; Keywords: tools
