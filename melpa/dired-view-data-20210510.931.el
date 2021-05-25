@@ -6,7 +6,7 @@
 ;; Created: 2021/03/28
 ;; Version: 1.0
 ;; Package-Version: 20210510.931
-;; Package-Commit: 80a5f254fc9e0a8f022e429a53c3d8b1da26c4b8
+;; Package-Commit: 805391a02031a68acc6d829d72b48de79b309869
 ;; URL: https://github.com/ShuguangSun/dired-view-data
 ;; Package-Requires: ((emacs "26.1") (ess "18.10.1") (ess-view-data "1.0"))
 ;; Keywords: tools

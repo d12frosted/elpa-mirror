@@ -4,8 +4,6 @@
 
 ;; Author: Nicolas Petton <nicolas@petton.fr>
 ;; Version: 0.2
-;; Package-Version: 20170324.1213
-;; Package-Commit: 72b0b700d80f1a0442e62bbbb6a0c8c59182f97f
 ;; Package: snapshot-timemachine-rsnapshot
 ;; Package-Requires: ((snapshot-timemachine "20160222.132") (seq "2.19"))
 

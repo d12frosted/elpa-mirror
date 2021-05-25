@@ -5,7 +5,7 @@
 ;; Maintainer: Sid Kasivajhula <sid@countvajhula.com>
 ;; URL: https://github.com/countvajhula/dynaring
 ;; Package-Version: 20210523.500
-;; Package-Commit: 928dba3e6e4aba87527f6d743629baf7da9e4355
+;; Package-Commit: 58cc51baa4e80f1c49f57fff8bf4b9ac9bde85b4
 ;; Created: 2009-4-16
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "25.1"))

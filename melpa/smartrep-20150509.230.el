@@ -7,8 +7,6 @@
 ;; Copyright (C) :2011,2012 myuhe all rights reserved.
 ;; Created: :2011-12-19
 ;; Version: 1.0.0
-;; Package-Version: 20150509.230
-;; Package-Commit: f0ff5a6d7b8603603598ae3045c98b011e58d86e
 ;; Keywords: convenience
 ;; URL: https://github.com/myuhe/smartrep.el
 

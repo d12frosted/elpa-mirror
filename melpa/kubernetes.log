@@ -5,7 +5,7 @@ Source:  https://github.com/chrisbarrett/kubernetes-el.git
 Updating /mnt/store/melpa/working/kubernetes/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/kubernetes/
-  to /tmp/kubernetesoKtOVg/kubernetes-20210521.956
+  to /tmp/kubernetesZa69Og/kubernetes-20210521.956
     kubernetes-ast.el -> kubernetes-ast.el
     kubernetes-commands.el -> kubernetes-commands.el
     kubernetes-configmaps.el -> kubernetes-configmaps.el
@@ -69,24 +69,24 @@ Created kubernetes-20210521.956.tar containing:
   kubernetes-20210521.956/kubernetes-vars.el
   kubernetes-20210521.956/kubernetes-yaml.el
   kubernetes-20210521.956/kubernetes.el
-Built kubernetes in 5.073s, finished at Mon May 24 18:19:03 2021
+Built kubernetes in 4.371s, finished at Tue May 25 03:52:43 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  417 May 24 18:19 packages/kubernetes-20210521.956.entry
-232K -rw-r--r-- 1 root root 230K May 24 18:19 packages/kubernetes-20210521.956.tar
-4.0K -rw-r--r-- 1 root root 1.2K May 24 18:19 packages/kubernetes-badge.svg
-4.0K -rw-r--r-- 1 root root 3.0K May 24 15:07 packages/kubernetes-evil-20191108.615.el
-4.0K -rw-r--r-- 1 root root  344 May 24 15:07 packages/kubernetes-evil-20191108.615.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 24 15:08 packages/kubernetes-evil-badge.svg
-4.0K -rw-r--r-- 1 root root   60 May 24 15:07 packages/kubernetes-evil-readme.txt
-4.0K -rw-r--r-- 1 root root  152 May 24 18:18 packages/kubernetes-evil.log
-8.0K -rw-r--r-- 1 root root 4.7K May 24 15:07 packages/kubernetes-helm-20190201.320.el
-4.0K -rw-r--r-- 1 root root  431 May 24 15:08 packages/kubernetes-helm-20190201.320.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 24 15:08 packages/kubernetes-helm-badge.svg
-4.0K -rw-r--r-- 1 root root   71 May 24 15:08 packages/kubernetes-helm-readme.txt
-4.0K -rw-r--r-- 1 root root  151 May 24 18:18 packages/kubernetes-helm.log
-   0 -rw-r--r-- 1 root root    0 May 24 18:19 packages/kubernetes-readme.txt
-8.0K -rw-r--r-- 1 root root 5.5K May 24 15:08 packages/kubernetes-tramp-20181228.922.el
-4.0K -rw-r--r-- 1 root root  489 May 24 15:08 packages/kubernetes-tramp-20181228.922.entry
-4.0K -rw-r--r-- 1 root root 1.2K May 24 15:08 packages/kubernetes-tramp-badge.svg
-4.0K -rw-r--r-- 1 root root  878 May 24 15:08 packages/kubernetes-tramp-readme.txt
-4.0K -rw-r--r-- 1 root root  154 May 24 18:19 packages/kubernetes-tramp.log
+4.0K -rw-r--r-- 1 root root  417 May 25 03:52 packages/kubernetes-20210521.956.entry
+232K -rw-r--r-- 1 root root 230K May 25 03:52 packages/kubernetes-20210521.956.tar
+4.0K -rw-r--r-- 1 root root 1.2K May 25 03:52 packages/kubernetes-badge.svg
+4.0K -rw-r--r-- 1 root root 3.0K May 25 03:52 packages/kubernetes-evil-20191108.615.el
+4.0K -rw-r--r-- 1 root root  344 May 25 03:52 packages/kubernetes-evil-20191108.615.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 25 00:41 packages/kubernetes-evil-badge.svg
+4.0K -rw-r--r-- 1 root root   60 May 25 03:52 packages/kubernetes-evil-readme.txt
+4.0K -rw-r--r-- 1 root root  152 May 25 03:52 packages/kubernetes-evil.log
+8.0K -rw-r--r-- 1 root root 4.7K May 25 03:52 packages/kubernetes-helm-20190201.320.el
+4.0K -rw-r--r-- 1 root root  431 May 25 03:52 packages/kubernetes-helm-20190201.320.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 25 00:41 packages/kubernetes-helm-badge.svg
+4.0K -rw-r--r-- 1 root root   71 May 25 03:52 packages/kubernetes-helm-readme.txt
+4.0K -rw-r--r-- 1 root root  151 May 25 03:52 packages/kubernetes-helm.log
+   0 -rw-r--r-- 1 root root    0 May 25 03:52 packages/kubernetes-readme.txt
+8.0K -rw-r--r-- 1 root root 5.5K May 25 00:41 packages/kubernetes-tramp-20181228.922.el
+4.0K -rw-r--r-- 1 root root  489 May 25 00:41 packages/kubernetes-tramp-20181228.922.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 25 00:41 packages/kubernetes-tramp-badge.svg
+4.0K -rw-r--r-- 1 root root  878 May 25 00:41 packages/kubernetes-tramp-readme.txt
+4.0K -rw-r--r-- 1 root root  154 May 25 03:52 packages/kubernetes-tramp.log
