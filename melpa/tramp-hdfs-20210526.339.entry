@@ -1,0 +1,10 @@
+(tramp-hdfs .
+	    [(20210526 339)
+	     ((emacs
+	       (24 4)))
+	     "Tramp extension to access hadoop/hdfs file system in Emacs" single
+	     ((:commit . "aa93bdbb3d5619c262ce53af1981edcd2a0705e5")
+	      (:authors
+	       ("Raghav Kumar Gautam" . "raghav@apache.org"))
+	      (:maintainer "Raghav Kumar Gautam" . "raghav@apache.org")
+	      (:keywords "tramp" "emacs" "hdfs" "hadoop" "webhdfs" "rest"))])

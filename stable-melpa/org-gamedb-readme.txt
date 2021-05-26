@@ -8,4 +8,7 @@
 
  If you don't know what to query, make an empty query!
 
+ You need to take an API key from here https://www.giantbomb.com/api/ and
+ set `org-gamedb-api-key' with it.
+
  For further details, refer to the homepage.

@@ -3,10 +3,10 @@ https://bazel.build/ for background on Bazel.
 
 The package provides four major modes for editing Bazel-related files:
 ‘bazel-build-mode’ for BUILD files, ‘bazel-workspace-mode’ for WORKSPACE
-files, ‘bazelrc-mode’ for .bazelrc configuration files, and
-‘bazel-starlark-mode’ for extension files written in the Starlark language.
-These modes also extend Imenu and ‘find-file-at-point’ to support
-Bazel-specific syntax.
+files, ‘bazelrc-mode’ for .bazelrc configuration files, ‘bazelignore-mode’
+for .bazelignore files, and ‘bazel-starlark-mode’ for extension files
+written in the Starlark language.  These modes also extend Imenu and
+‘find-file-at-point’ to support Bazel-specific syntax.
 
 If Buildifier is available, the ‘bazel-mode-flymake’ backend for Flymake
 provides on-the-fly syntax checking for Bazel files.  You can also run

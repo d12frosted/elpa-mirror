@@ -3,8 +3,9 @@ Fetcher: git
 Source:  https://bitbucket.org/sbarbit/eigv
 
 Updating /mnt/store/melpa/working/igv/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: unable to authorize current user, internal server error
-fatal: unable to access 'https://bitbucket.org/sbarbit/eigv/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Built igv in 12.640s, finished at Wed May 26 11:45:19 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K May 26 11:45 packages/igv-20141210.1227.el
+4.0K -rw-r--r-- 1 root root  289 May 26 11:45 packages/igv-20141210.1227.entry
+4.0K -rw-r--r-- 1 root root 1.2K May 26 11:45 packages/igv-badge.svg
+4.0K -rw-r--r-- 1 root root  198 May 26 11:45 packages/igv-readme.txt
