@@ -219,6 +219,7 @@ missing package or change you would like to see.
     jupyter
     kaocha-runner
     keycast
+    ledger-mode
     line numbers (`display-line-numbers-mode' and global variant)
     lsp-mode
     lsp-ui

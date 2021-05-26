@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2020 Free Software Foundation, Inc.
 
 ;; Version: 1.7
-;; Package-Version: 20210522.2001
-;; Package-Commit: a5b7b7d933b97db9ce5f8b7dcc8c866f7c35b220
+;; Package-Version: 20210526.1424
+;; Package-Commit: 835aa0e9b351e371be82f0661e438b13e641a5eb
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -2779,7 +2779,7 @@ at point.  With prefix argument, prompt for ACTION-KIND."
                    (eglot--glob-compile globPattern t t))
                  watchers))
          (dirs-to-watch
-          (eglot--directories-matched-by-globs default-directory globs)))
+          (eglot--directories-recursively default-directory)))
     (cl-labels
         ((handle-event
           (event)
@@ -2880,37 +2880,14 @@ If NOERROR, return predicate, else erroring function."
   (when (eq ?! (aref arg 1)) (aset arg 1 ?^))
   `(,self () (re-search-forward ,(concat "\\=" arg)) (,next)))
 
-(defun eglot--files-recursively (&optional dir)
-  "Because `directory-files-recursively' isn't complete in 26.3."
-  (cons (setq dir (expand-file-name (or dir default-directory)))
-        (cl-loop with default-directory = dir
-                 with completion-regexp-list = '("^[^.]")
-                 for f in (file-name-all-completions "" dir)
-                 if (file-directory-p f) append (eglot--files-recursively f)
-                 else collect (expand-file-name f))))
-
 (defun eglot--directories-recursively (&optional dir)
   "Because `directory-files-recursively' isn't complete in 26.3."
   (cons (setq dir (expand-file-name (or dir default-directory)))
         (cl-loop with default-directory = dir
                  with completion-regexp-list = '("^[^.]")
                  for f in (file-name-all-completions "" dir)
-                 if (file-directory-p f) append (eglot--files-recursively f)
-                 else collect (expand-file-name f))))
-
-(defun eglot--directories-matched-by-globs (dir globs)
-  "Discover subdirectories of DIR with files matched by one of GLOBS.
-Each element of GLOBS is either an uncompiled glob-string or a
-compiled glob."
-  (setq globs (cl-loop for g in globs
-                       collect (if (stringp g) (eglot--glob-compile g t t) g)))
-  (cl-loop for f in (eglot--files-recursively dir)
-           for fdir = (file-name-directory f)
-           when (and
-                 (not (member fdir dirs))
-                 (cl-loop for g in globs thereis (funcall g f)))
-           collect fdir into dirs
-           finally (cl-return (delete-dups dirs))))
+                 if (and (file-directory-p f) (not (string= "node_modules/" f)))
+                 append (eglot--directories-recursively f))))
 
 
 ;;; Rust-specific
