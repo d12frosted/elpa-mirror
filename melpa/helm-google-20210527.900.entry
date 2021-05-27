@@ -1,0 +1,11 @@
+(helm-google .
+	     [(20210527 900)
+	      ((helm
+		(0)))
+	      "Emacs Helm Interface for quick Google searches" single
+	      ((:commit . "27834161391c350ef790062391cb7eab1d59fb62")
+	       (:authors
+		("steckerhalter"))
+	       (:maintainer "steckerhalter")
+	       (:keywords "helm" "google" "search" "browse" "searx")
+	       (:url . "https://framagit.org/steckerhalter/helm-google"))])

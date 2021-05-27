@@ -1,0 +1,19 @@
+(chronometrist .
+	       [(20210526 2345)
+		((emacs
+		  (25 1))
+		 (literate-elisp
+		  (0 1))
+		 (dash
+		  (2 16 0))
+		 (seq
+		  (2 20))
+		 (ts
+		  (0 2)))
+		"A time tracker with a nice interface" tar
+		((:commit . "b9c800232bbe35c94b96419ceecf089679b99720")
+		 (:authors
+		  ("contrapunctus" . "xmpp:contrapunctus@jabber.fr"))
+		 (:maintainer "contrapunctus" . "xmpp:contrapunctus@jabber.fr")
+		 (:keywords "calendar")
+		 (:url . "https://github.com/contrapunctus-1/chronometrist"))])
