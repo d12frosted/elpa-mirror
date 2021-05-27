@@ -4,8 +4,8 @@
 
 ;; Author: lorniu <lorniu@gmail.com>
 ;; URL: https://github.com/lorniu/go-translate
-;; Package-Version: 20201203.203
-;; Package-Commit: ea63d0ad9816aa1c478c66bd1ff9978e8330d3cb
+;; Package-Version: 20210527.1257
+;; Package-Commit: 7a9b7978057bf747ed06fa6c9d2f30047714aa05
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: convenience
 ;; SPDX-License-Identifier: MIT
@@ -741,7 +741,7 @@ If BACKWARDP is t, then choose prev one."
          (if (pdf-view-active-region-p)
              (car (pdf-view-active-region-text))))
         ((use-region-p)
-         (string-trim (buffer-substring (region-beginning) (region-end))))
+         (string-trim (buffer-substring-no-properties (region-beginning) (region-end))))
         (t (current-word t t))))
 
 (defun go-translate-default-prompt-inputs (&optional text direction)
