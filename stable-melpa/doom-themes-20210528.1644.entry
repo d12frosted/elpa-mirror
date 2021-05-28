@@ -1,0 +1,13 @@
+(doom-themes .
+	     [(20210528 1644)
+	      ((emacs
+		(25 1))
+	       (cl-lib
+		(0 5)))
+	      "an opinionated pack of modern color-themes" tar
+	      ((:commit . "58b1ca44eb3033c622c92406822e849c75850a12")
+	       (:authors
+		("Henrik Lissner <http://github/hlissner>"))
+	       (:maintainer "Henrik Lissner" . "henrik@lissner.net")
+	       (:keywords "dark" "light" "blue" "atom" "one" "theme" "neotree" "icons" "faces" "nova")
+	       (:url . "https://github.com/hlissner/emacs-doom-theme"))])

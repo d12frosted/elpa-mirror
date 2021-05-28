@@ -1,0 +1,13 @@
+(literate-calc-mode .
+		    [(20210528 815)
+		     ((emacs
+		       (25 1))
+		      (s
+		       (1 12 0)))
+		     "Inline results from calc" single
+		     ((:commit . "29bb40a7150b6cfe1a96948ae1f36e9c107eb759")
+		      (:authors
+		       ("Robin Schroer"))
+		      (:maintainer "Robin Schroer")
+		      (:keywords "calc" "languages" "tools")
+		      (:url . "https://github.com/sulami/literate-calc-mode.el"))])

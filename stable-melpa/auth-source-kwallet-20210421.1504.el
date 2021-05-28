@@ -7,7 +7,7 @@
 ;;; Created: 13 Dec 2020
 ;;; URL: https://github.com/vaartis/auth-source-kwallet
 ;; Package-Version: 20210421.1504
-;; Package-Commit: c2abee6ada13d7332725bd700ad76da8aebea530
+;; Package-Commit: 1309cfcd00264a2bb8e0d1b435d4d03e3e02f314
 
 ;;; Package-Requires: ((emacs "24.4"))
 
