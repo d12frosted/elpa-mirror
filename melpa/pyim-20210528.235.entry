@@ -1,0 +1,16 @@
+(pyim .
+      [(20210528 235)
+       ((emacs
+	 (24 4))
+	(async
+	 (1 6))
+	(xr
+	 (1 13)))
+       "A Chinese input method support quanpin, shuangpin, wubi and cangjie." tar
+       ((:commit . "6416f62728c82082bc0eda780c17dd15ca866137")
+	(:authors
+	 ("Ye Wenbin" . "wenbinye@163.com")
+	 ("Feng Shu" . "tumashu@163.com"))
+	(:maintainer "Feng Shu" . "tumashu@163.com")
+	(:keywords "convenience" "chinese" "pinyin" "input-method")
+	(:url . "https://github.com/tumashu/pyim"))])
