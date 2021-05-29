@@ -5,8 +5,8 @@
 ;; Author: USAMI Kenta <tadsan@zonu.me>
 ;; Created: 26 Oct 2015
 ;; Version: 0.2.1
-;; Package-Version: 20210528.1706
-;; Package-Commit: c90dddb4b91c28ee951ada94f34a42148db7ae92
+;; Package-Version: 20210528.1902
+;; Package-Commit: c019ea85a9c589815b0af60153858d09bcef130e
 ;; Homepage: https://github.com/zonuexe/init-open-recentf.el
 ;; Keywords: files recentf after-init-hook
 ;; Package-Requires: ((emacs "24.4"))
@@ -98,7 +98,7 @@
 (defun init-open-recentf--opened-file-buffer ()
   "Return T when there are opened file buffers."
   (cl-loop for buf in (buffer-list)
-           if (with-current-buffer buf buffer-file-name)
+           if (buffer-local-value 'buffer-file-name buf)
            return t))
 
 (defun init-open-recentf-interface ()

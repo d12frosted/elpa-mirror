@@ -2,8 +2,6 @@
 
 ;; Author: Leonardo Santos
 ;; URL: https://github.com/leodcs/erblint-emacs
-;; Package-Version: 20200622.5
-;; Package-Commit: 89af42f776d8dc656104322edaace2ede7499932
 ;; Version: 0.0.1
 ;; Keywords: project, convenience
 ;; Package-Requires: ((emacs "24"))

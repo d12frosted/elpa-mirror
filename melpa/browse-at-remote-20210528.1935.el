@@ -4,8 +4,8 @@
 ;;
 ;; Author:     Rustem Muslimov <r.muslimov@gmail.com>
 ;; Version:    0.14.0
-;; Package-Version: 20210527.1829
-;; Package-Commit: 46edf44272119fa5d20509e741ef9c24e07561c2
+;; Package-Version: 20210528.1935
+;; Package-Commit: a67063bc40a83509284d989589c86c3136b6651f
 ;; Keywords:   github, gitlab, bitbucket, gist, stash, phabricator, sourcehut, pagure
 ;; Homepage:   https://github.com/rmuslimov/browse-at-remote
 ;; Package-Requires: ((f "0.17.2") (s "1.9.0") (cl-lib "0.5"))
@@ -405,7 +405,7 @@ Currently the same as for github."
 (defun browse-at-remote--gerrit-url-cleanup (repo-url)
   "Remove -review from REPO-URL, so we end up at gitiles instead of gerrit"
   (replace-regexp-in-string
-   "^\\(https?://\\)\\([a-z]+\\)-review\\(\\.googlesource\\.com/\\)"
+   "^\\(https?://\\)\\([A-Za-z0-9-]+\\)-review\\(\\.googlesource\\.com/\\)"
    "\\1\\2\\3"
    repo-url))
 
