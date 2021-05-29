@@ -1,13 +1,13 @@
-;;; ox-qmd.el --- Qiita Markdown Back-End for Org Export Engine
+;;; ox-qmd.el --- Qiita Markdown Back-End for Org Export Engine -*- lexical-binding: t -*-
 
-;; Copyright (C) 2015-2020 0x60DF
+;; Copyright (C) 2015, 2016, 2017, 2020, 2021 0x60DF and Contributors
 
 ;; Author: 0x60DF <0x60DF@gmail.com>
 ;; URL: https://github.com/0x60df/ox-qmd
-;; Package-Version: 20201205.721
-;; Package-Commit: de78970b85dfd342b49f9956f350c6f7d0a13050
+;; Package-Version: 20210529.1012
+;; Package-Commit: 7e69c04626f8d35756f3b049bd7836fb751f7734
 ;; Version: 1.0.5
-;; Package-Requires: ((org "8.0"))
+;; Package-Requires: ((emacs "24.4")(org "8.0"))
 ;; Keywords: wp
 
 ;; This file is not part of GNU Emacs.
@@ -88,8 +88,8 @@ When non-nil, `ox-qmd' do unfill paragraph"
 
 ;;; Filters
 
-(defun org-qmd--unfill-paragraph (paragraph backend info)
-  "Unfill PARAGRAPH element.
+(defun org-qmd--unfill-paragraph (paragraph backend _info)
+  "Unfill PARAGRAPH element when BACKEND is qmd.
 Remove newline from PARAGRAPH and replace line-break string
 with newline in PARAGRAPH if user-configurable variable
 `ox-qmd-unfill-paragraph' is non-nil."
@@ -107,7 +107,7 @@ with newline in PARAGRAPH if user-configurable variable
 
 (defun org-qmd--headline (headline contents info)
   "Transcode HEADLINE element into Qiita Markdown format.
-CONTENTS is a content of the HEADLINE. INFO is a plist used
+CONTENTS is a content of the HEADLINE.  INFO is a plist used
 as a communication channel."
   (let* ((info (copy-sequence info))
          (info (plist-put info :with-toc nil)))
@@ -116,7 +116,7 @@ as a communication channel."
 
 (defun org-qmd--inner-template (contents info)
   "Return body of document after converting it to Qiita Markdown syntax.
-CONTENTS is the transcoded contents string. INFO is a plist
+CONTENTS is the transcoded contents string.  INFO is a plist
 holding export options."
   (let* ((info (copy-sequence info))
          (info (plist-put info :with-toc nil)))
@@ -125,16 +125,16 @@ holding export options."
 
 (defun org-qmd--keyword (keyword contents info)
   "Transcode a KEYWORD element into Qiita Markdown format.
-CONTENTS is nil. INFO is a plist used as a communication
+CONTENTS is nil.  INFO is a plist used as a communication
 channel."
   (let* ((info (copy-sequence info))
          (info (plist-put info :with-toc nil)))
     (org-html-keyword keyword contents info)))
 
 
-(defun org-qmd--src-block (src-block contents info)
+(defun org-qmd--src-block (src-block _contents info)
   "Transcode SRC-BLOCK element into Qiita Markdown format.
-CONTENTS is nil. INFO is a plist used as a communication
+CONTENTS is nil.  INFO is a plist used as a communication
 channel."
   (let* ((lang (org-element-property :language src-block))
          (lang (or (cdr (assoc lang ox-qmd-language-keyword-alist)) lang))
@@ -145,23 +145,23 @@ channel."
     (concat prefix code suffix)))
 
 
-(defun org-qmd--strike-through (strike-through contents info)
+(defun org-qmd--strike-through (_strike-through contents _info)
   "Transcode STRIKE-THROUGH element into Qiita Markdown format.
-CONTENTS is a content of the STRIKE-THROUGH. INFO is a plist
-used as a communication channel."
+CONTENTS is a content of the STRIKE-THROUGH.  INFO is
+a plist used as a communication channel."
   (format "~~%s~~" contents))
 
 
-(defun org-qmd--undeline (underline contents info)
+(defun org-qmd--undeline (_underline contents _info)
   "Transcode UNDERLINE element into Qiita Markdown format.
-CONTENTS is a content of the UNDELINE. INFO is a plist used
+CONTENTS is a content of the UNDELINE.  INFO is a plist used
 as a communication channel."
   contents)
 
 
 (defun org-qmd--latex-fragment (latex-fragment contents info)
   "Transcode a LATEX-FRAGMENT element into Qiita Markdown format.
-CONTENTS is nil. INFO is a plist used as a communication
+CONTENTS is nil.  INFO is a plist used as a communication
 channel."
   (replace-regexp-in-string
    "^\\\\(\\(.+\\)\\\\)$" "$\\1$"
@@ -174,7 +174,7 @@ channel."
 
 (defun org-qmd--latex-environment (latex-environment contents info)
   "Transcode a LATEX-ENVIRONMENT element into Qiita Markdown format.
-CONTENTS is nil. INFO is a plist used as a communication
+CONTENTS is nil.  INFO is a plist used as a communication
 channel."
   (replace-regexp-in-string
    "^.*?\\\\begin{.+}.*?$" "```math"
@@ -185,9 +185,9 @@ channel."
       (org-html-latex-environment latex-environment contents info)))))
 
 
-(defun org-qmd--table (table contents info)
+(defun org-qmd--table (table _contents info)
   "Transcode a TABLE element into Qiita Markdown format.
-CONTENTS is a content of the table. INFO is a plist used as
+CONTENTS is a content of the table.  INFO is a plist used as
 a communication channel."
   (letrec ((filter (lambda (p l)
                      (cond ((null l) l)
@@ -230,7 +230,10 @@ a communication channel."
                            (let ((alignment (car tuple))
                                  (width (cadr tuple))
                                  (cell (caddr tuple)))
-                             (format (format " %%-%ds" (- width 1))
+                             (format (format (if (eq alignment 'right)
+                                                 "%%%ds "
+                                               " %%-%ds")
+                                             (- width 1))
                                      (or (org-export-data
                                           (org-element-contents cell)
                                           info)
@@ -271,7 +274,7 @@ its narrowed part.
 If a region is active, export that region.
 
 A non-nil optional argument ASYNC means the process should
-happen asynchronously. The resulting buffer should be
+happen asynchronously.  The resulting buffer should be
 accessible through the `org-export-stack' interface.
 
 When optional argument SUBTREEP is non-nil, export the
@@ -291,9 +294,9 @@ will be displayed when
 ;;;###autoload
 (defun org-qmd-convert-region-to-md ()
   "Convert region into Qiita Markdown format.
-Assume the current region has org-mode syntax, and convert
-it to Qiita Markdown. This can be used in any buffer. For
-example, you can write an itemized list in org-mode syntax
+Assume the current region has org mode syntax,  and convert
+it to Qiita Markdown.  This can be used in any buffer.  For
+example, you can write an itemized list in org mode syntax
 in a Markdown buffer and use this command to convert it."
   (interactive)
   (org-export-replace-region-by 'qmd))
@@ -309,7 +312,7 @@ its narrowed part.
 If a region is active, export that region.
 
 A non-nil optional argument ASYNC means the process should
-happen asynchronously. The resulting file should be
+happen asynchronously.  The resulting file should be
 accessible through the `org-export-stack' interface.
 
 When optional argument SUBTREEP is non-nil, export the

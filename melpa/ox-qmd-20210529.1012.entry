@@ -1,9 +1,11 @@
 (ox-qmd .
-	[(20201205 721)
-	 ((org
+	[(20210529 1012)
+	 ((emacs
+	   (24 4))
+	  (org
 	   (8 0)))
 	 "Qiita Markdown Back-End for Org Export Engine" single
-	 ((:commit . "de78970b85dfd342b49f9956f350c6f7d0a13050")
+	 ((:commit . "7e69c04626f8d35756f3b049bd7836fb751f7734")
 	  (:authors
 	   ("0x60DF" . "0x60DF@gmail.com"))
 	  (:maintainer "0x60DF" . "0x60DF@gmail.com")

@@ -7,8 +7,8 @@
 ;; Description: Line annotation for changed and saved lines.
 ;; Keyword: annotation line number linum reminder highlight display
 ;; Version: 0.5.0
-;; Package-Version: 20210528.1426
-;; Package-Commit: 4d73b84a84227b01b7fbc6f717f6c380682cde2f
+;; Package-Version: 20210529.856
+;; Package-Commit: 26b98105cfe8e447254c4116b7e631bac5b5ca26
 ;; Package-Requires: ((emacs "24.4") (indicators "0.0.4") (fringe-helper "1.0.1"))
 ;; URL: https://github.com/jcs-elpa/line-reminder
 
@@ -394,7 +394,9 @@ or less than zero line in current buffer."
 (defun line-reminder--before-change-functions (beg end)
   "Do stuff before buffer is changed with BEG and END."
   (when (line-reminder--is-valid-line-reminder-situation beg end)
-    (setq line-reminder--undo-cancel-p undo-in-progress)
+    ;; If buffer consider virtual buffer like `*scratch*`, then always
+    ;; treat it as modified
+    (setq line-reminder--undo-cancel-p (and (buffer-file-name) undo-in-progress))
     (line-reminder--ind-delete-dups)
     (setq line-reminder--before-max-pt (point-max)
           line-reminder--before-max-linum (line-reminder--line-number-at-pos (point-max)))
