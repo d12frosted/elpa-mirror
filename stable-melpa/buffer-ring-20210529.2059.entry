@@ -1,0 +1,17 @@
+(buffer-ring .
+	     [(20210529 2059)
+	      ((emacs
+		(25 1))
+	       (dynaring
+		(0 2 0))
+	       (s
+		(1 12 0))
+	       (ht
+		(2 0)))
+	      "Rings and tori for buffer navigation" single
+	      ((:commit . "30572b4d8fff519c4996078a5ad743583fb22b0e")
+	       (:authors
+		("Mike Mattie" . "codermattie@gmail.com")
+		("Sid Kasivajhula" . "sid@countvajhula.com"))
+	       (:maintainer "Sid Kasivajhula" . "sid@countvajhula.com")
+	       (:url . "https://github.com/countvajhula/buffer-ring"))])

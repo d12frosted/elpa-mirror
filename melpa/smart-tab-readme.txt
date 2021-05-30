@@ -18,4 +18,5 @@ There are a number of available customizations on that page.
 
 Features that might be required by this library:
 
+  `cl-macs'
   `easy-mmmode'
