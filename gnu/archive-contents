@@ -389,6 +389,15 @@
 		       (:authors
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
+ (consult .
+	  [(0 8)
+	   ((emacs
+	     (26 1)))
+	   "Consulting completing-read" tar
+	   ((:url . "https://github.com/minad/consult")
+	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+	    (:authors
+	     ("Daniel Mendler and Consult contributors")))])
  (context-coloring .
 		   [(8 1 0)
 		    ((emacs
@@ -1384,6 +1393,15 @@
 	 ("Nicolas Petton" . "nicolas@petton.fr"))
 	(:keywords "extensions" "lisp")
 	(:url . "https://elpa.gnu.org/packages/map.html"))])
+ (marginalia .
+	     [(0 6)
+	      ((emacs
+		(26 1)))
+	      "Enrich existing commands with completion annotations" tar
+	      ((:url . "https://github.com/minad/marginalia")
+	       (:maintainer "Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de")
+	       (:authors
+		("Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de")))])
  (markchars .
 	    [(0 2 2)
 	     nil "Mark chars fitting certain characteristics" single

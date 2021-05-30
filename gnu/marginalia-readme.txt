@@ -1,0 +1,113 @@
+#+title: marginalia.el - Marginalia in the minibuffer
+#+author: Omar Antolín Camarena, Daniel Mendler
+#+language: en
+#+export_file_name: marginalia.texi
+#+texinfo_dir_category: Emacs
+#+texinfo_dir_title: Marginalia: (marginalia).
+#+texinfo_dir_desc: Marginalia in the minibuffer
+
+#+html: <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Marginalia_%285095211566%29.jpg" align="right" width="30%">
+
+#+html: <a href="https://melpa.org/#/marginalia"><img alt="MELPA" src="https://melpa.org/packages/marginalia-badge.svg"/></a>
+#+html: <a href="https://stable.melpa.org/#/marginalia"><img alt="MELPA Stable" src="https://stable.melpa.org/packages/marginalia-badge.svg"/></a>
+
+* Introduction
+
+This package provides =marginalia-mode= which adds marginalia to the
+minibuffer completions.
+[[https://en.wikipedia.org/wiki/Marginalia][Marginalia]] are marks or
+annotations placed at the margin of the page of a book or in this case
+helpful colorful annotations placed at the margin of the minibuffer for
+your completion candidates. Marginalia can only add annotations to be
+displayed with the completion candidates. It cannot modify the
+appearance of the candidates themselves, which are shown as supplied by
+the original commands.
+
+The annotations are added based on the completion category. For example
+=find-file= reports the =file= category and =M-x= reports the =command=
+category. You can cycle between more or less detailed annotators with the
+command =marginalia-cycle=.
+
+Since many commands do not report a completion category themselves,
+Marginalia provides a classifier system, which tries to guess the
+correct category based for example on the prompt (see the variable
+=marginalia-prompt-categories=). Usually these heuristic classifiers
+work well, but if they do not there is always the possibility to
+overwrite categories by command name. This way you can associate a fixed
+category with the completion initiated by the command (see the variable
+=marginalia-command-categories=). The list of available classifiers is
+specified by the variable =marginalia-classifiers=.
+
+#+html: <img src="https://github.com/minad/marginalia/blob/main/marginalia-mode.png?raw=true">
+
+* Configuration
+
+It is recommended to use Marginalia together with either the [[https://github.com/raxod502/selectrum][Selectrum]], [[https://github.com/minad/vertico][Vertico]]
+or the [[https://github.com/oantolin/icomplete-vertical][Icomplete-vertical]] completion system. Furthermore Marginalia can be
+combined with [[https://github.com/oantolin/embark][Embark]] for action support and [[https://github.com/minad/consult][Consult]], which provides many useful
+commands.
+
+#+begin_src emacs-lisp
+;; Enable richer annotations using the Marginalia package
+(use-package marginalia
+  ;; Either bind `marginalia-cycle` globally or only in the minibuffer
+  :bind (("M-A" . marginalia-cycle)
+         :map minibuffer-local-map
+         ("M-A" . marginalia-cycle))
+
+  ;; The :init configuration is always executed (Not lazy!)
+  :init
+
+  ;; Must be in the :init section of use-package such that the mode gets
+  ;; enabled right away. Note that this forces loading the package.
+  (marginalia-mode))
+#+end_src
+
+* Using builtin or lightweight annotators
+
+Marginalia activates rich annotators by default. Depending on your preference
+you may want to use the builtin annotators or even no annotators by default and
+only activate the annotators on demand by invoking ~marginalia-cycle~.
+
+In order to use the builtin annotators by default, you can use the following
+command. Replace =builtin= by =none= to disable annotators by default.
+
+#+begin_src emacs-lisp
+  (defun marginalia-use-builtin ()
+    (interactive)
+    (mapc
+     (lambda (x)
+       (setcdr x (cons 'builtin (remq 'builtin (cdr x)))))
+     marginalia-annotator-registry))
+#+end_src
+
+If a completion category supports two annotators, you can toggle between
+those using this command.
+
+#+begin_src emacs-lisp
+  (defun marginalia-toggle ()
+    (interactive)
+    (mapc
+     (lambda (x)
+       (setcdr x (append (reverse (remq 'none
+                                        (remq 'builtin (cdr x))))
+                         '(builtin none))))
+     marginalia-annotator-registry))
+#+end_src
+
+After cycling the annotators you may want to automatically save the
+configuration. This can be achieved using an advice which calls
+~customize-save-variable~.
+
+#+begin_src emacs-lisp
+  (advice-add #'marginalia-cycle :after
+              (lambda ()
+                (let ((inhibit-message t))
+                  (customize-save-variable 'marginalia-annotator-registry
+                                           marginalia-annotator-registry))))
+#+end_src
+
+* Contributions
+
+Since this package is part of [[http://elpa.gnu.org/packages/marginalia.html][GNU ELPA]] contributions require a copyright
+assignment to the FSF.
