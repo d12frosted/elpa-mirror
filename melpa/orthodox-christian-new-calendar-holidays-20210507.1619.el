@@ -5,7 +5,7 @@
 ;;; Author: Carson Chittom <carson@wistly.net>
 ;;; URL: https://github.com/cmchittom/orthodox-christian-new-calendar-holidays
 ;; Package-Version: 20210507.1619
-;; Package-Commit: 71216d56575da602ec713bf1bbe75c92606c1049
+;; Package-Commit: c0ba49bb01d037ce8800aa04db06f454ef043cb6
 ;;; Version: 1.3.1
 ;;; Keywords: calendar
 
