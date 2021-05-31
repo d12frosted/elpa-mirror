@@ -1,0 +1,19 @@
+(chronometrist .
+	       [(20210530 1951)
+		((emacs
+		  (25 1))
+		 (literate-elisp
+		  (0 1))
+		 (dash
+		  (2 16 0))
+		 (seq
+		  (2 20))
+		 (ts
+		  (0 2)))
+		"A time tracker with a nice interface" tar
+		((:commit . "bdae4e024500ea4a3f3bbaf284dcb251c5ad340d")
+		 (:authors
+		  ("contrapunctus" . "xmpp:contrapunctus@jabber.fr"))
+		 (:maintainer "contrapunctus" . "xmpp:contrapunctus@jabber.fr")
+		 (:keywords "calendar")
+		 (:url . "https://tildegit.org/contrapunctus/chronometrist"))])

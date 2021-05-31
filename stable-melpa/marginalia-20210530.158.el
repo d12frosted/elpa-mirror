@@ -7,7 +7,7 @@
 ;; Created: 2020
 ;; Version: 0.6
 ;; Package-Version: 20210530.158
-;; Package-Commit: ca9a5e35913569d66d34193a87d8511b2bb9d2b2
+;; Package-Commit: 94fc7f0f3e687b4b5c5753f8a214274ffaca9459
 ;; Package-Requires: ((emacs "26.1"))
 ;; Homepage: https://github.com/minad/marginalia
 

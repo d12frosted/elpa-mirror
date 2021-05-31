@@ -1,2 +1,3 @@
-Creat formatted url on current buffer(w3m, eww).
+Create formatted url depending on the context.
 M-x create-link
+M-x create-link-manual
