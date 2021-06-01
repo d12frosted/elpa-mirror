@@ -5,7 +5,7 @@
 ;; Author: Christopher Lloyd <cjl8zf@virginia.edu>
 ;; URL: https://github.com/cjl8zf/langtool-ignore-fonts
 ;; Package-Version: 20210526.2340
-;; Package-Commit: a5d04c3840c293f1b11db3c28e7210d0d20f53af
+;; Package-Commit: c3291c85b733b9047653cbb1f525655394610bdb
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "25.1") (langtool "2.2.1"))
 

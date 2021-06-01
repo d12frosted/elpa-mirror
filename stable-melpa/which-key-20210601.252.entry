@@ -1,0 +1,10 @@
+(which-key .
+	   [(20210601 252)
+	    ((emacs
+	      (24 4)))
+	    "Display available keybindings in popup" single
+	    ((:commit . "fc29864395fdaf688e2ef5111831663bad89a020")
+	     (:authors
+	      ("Justin Burkett" . "justin@burkett.cc"))
+	     (:maintainer "Justin Burkett" . "justin@burkett.cc")
+	     (:url . "https://github.com/justbur/emacs-which-key"))])
