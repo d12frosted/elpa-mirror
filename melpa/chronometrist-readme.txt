@@ -31,4 +31,4 @@ Chronometrist and Org time tracking seem to be equivalent in terms of capabiliti
 * Chronometrist's UI is cleaner, since the storage is separate from the display. It doesn't show tasks as trees like Org, but it uses tags and key-values to achieve that. Additionally, navigating a flat list takes fewer user operations than navigating a tree.
 * Chronometrist data is just s-expressions (plists), and may be easier to parse than a complex text format with numerous use-cases.
 
-For information on usage and customization, see https://github.com/contrapunctus-1/chronometrist/blob/master/README.md
+For information on usage and customization, see https://tildegit.org/contrapunctus/chronometrist or the included manual.org

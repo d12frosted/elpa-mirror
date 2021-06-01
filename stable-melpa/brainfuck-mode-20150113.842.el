@@ -4,6 +4,8 @@
 
 ;; Author: Tomoya Tanjo <ttanjo@gmail.com>
 ;; URL: https://github.com/tom-tan/brainfuck-mode/
+;; Package-Version: 20150113.842
+;; Package-Commit: 36e69552bb3b97a4f888d362c59845651bd0d492
 ;; Package-Requires: ((langdoc "20130601.1450"))
 ;; Keywords: brainfuck, langdoc
 

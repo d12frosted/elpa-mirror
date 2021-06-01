@@ -5,7 +5,7 @@
 ;; Author: Andrew Gwozdziewycz <git@apgwoz.com>
 ;; URL : https://github.com/apgwoz/mvn-el
 ;; Package-Version: 20181002.1617
-;; Package-Commit: ffa40235b7dabb6c6c165f64f32a963cde8031f0
+;; Package-Commit: 223723d9ceeb2878b884e83abb8ca74ad2e42081
 ;; Version: 0.1
 ;; Keywords: compilation, maven, java
 
