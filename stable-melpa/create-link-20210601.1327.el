@@ -6,7 +6,7 @@
 ;; Author: Kijima Daigo <norimaking777@gmail.com>
 ;; Version: 1.0.0
 ;; Package-Version: 20210601.1327
-;; Package-Commit: ca28f5578c18d99a4a99b26b15b449e4a465e8bd
+;; Package-Commit: 771a405e262c98b802e2c5302306aed802d8233e
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: link format browser convenience
 ;; URL: https://github.com/kijimaD/create-link

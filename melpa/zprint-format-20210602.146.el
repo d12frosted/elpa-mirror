@@ -5,7 +5,7 @@
 ;; Author: Derek Passen <dpassen1@gmail.com>
 ;; Keywords: clojure, zprint, tools, languages
 ;; Package-Version: 20210602.146
-;; Package-Commit: fa575c17a40033189f2f23f1a5b27b88c399d200
+;; Package-Commit: 6051a5709ea6182974d7239f26e04c9731e04447
 ;; URL: http://www.github.com/dpassen/zprint-format
 ;; Package-Requires: ((emacs "24") (reformatter "0.3"))
 ;; Version: 1.0.0
