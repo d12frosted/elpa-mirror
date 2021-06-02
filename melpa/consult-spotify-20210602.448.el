@@ -3,12 +3,12 @@
 ;; Author: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Maintainer: Jose A Ortega Ruiz
 ;; Keywords: multimedia
-;; Package-Version: 20210411.1305
-;; Package-Commit: 22b81067ebcaef2cea633f967a4b55454af9326a
+;; Package-Version: 20210602.448
+;; Package-Commit: 9c2c876aea361f4022d9985af542fcd3436d10cf
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
 ;; Homepage: https://codeberg.org/jao/espotify
-;; Package-Requires: ((emacs "26.1") (consult "0.5") (marginalia "0.3") (espotify "0.1"))
+;; Package-Requires: ((emacs "26.1") (consult "0.5") (espotify "0.1"))
 
 ;; Copyright (C) 2021  Jose A Ortega Ruiz
 
@@ -113,24 +113,25 @@
   (espotify-play-candidate (consult-spotify-by 'playlist)))
 
 
-(defun consult-spotify--annotate (cand)
-  "Compute marginalia fields for candidate CAND."
-  (when-let (x (espotify-candidate-metadata cand))
-    (marginalia--fields
-     ((alist-get 'type x "") :face 'marginalia-mode :width 10)
-     ((if-let (d (alist-get 'duration_ms x))
-          (let ((secs (/ d 1000)))
-            (format "%02d:%02d" (/ secs 60) (mod secs 60)))
-        ""))
-     ((if-let (d (alist-get 'total_tracks x)) (format "%s tracks" d) "")
-      :face 'marginalia-size :width 12)
-     ((if-let (d (alist-get 'release_date (alist-get 'album x x)))
-          (format "%s" d)
-        "")
-      :face 'marginalia-date :width 10))))
+(with-eval-after-load "marginalia"
+  (defun consult-spotify--annotate (cand)
+    "Compute marginalia fields for candidate CAND."
+    (when-let (x (espotify-candidate-metadata cand))
+      (marginalia--fields
+       ((alist-get 'type x "") :face 'marginalia-mode :width 10)
+       ((if-let (d (alist-get 'duration_ms x))
+            (let ((secs (/ d 1000)))
+              (format "%02d:%02d" (/ secs 60) (mod secs 60)))
+          ""))
+       ((if-let (d (alist-get 'total_tracks x)) (format "%s tracks" d) "")
+        :face 'marginalia-size :width 12)
+       ((if-let (d (alist-get 'release_date (alist-get 'album x x)))
+            (format "%s" d)
+          "")
+        :face 'marginalia-date :width 10))))
 
-(add-to-list 'marginalia-annotators-heavy
-             '(spotify-search-item . consult-spotify--annotate))
+  (add-to-list 'marginalia-annotator-registry
+               '(spotify-search-item consult-spotify--annotate)))
 
 
 (provide 'consult-spotify)
