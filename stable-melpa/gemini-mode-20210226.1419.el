@@ -2,14 +2,14 @@
 
 ;; Copyright (C) 2020  Jason McBrayer
 
-;; Author: Jason McBrayer <jmcbray@carcosa.net>, tastytea <tastytea@tastytea.de>
+;; Author: Jason McBrayer <jmcbray@carcosa.net>, tastytea <tastytea@tastytea.de>, Étienne Deparis <etienne@depar.is>
 ;; Created: 20 May 2020
-;; Version: 0.6.0
-;; Package-Version: 20200813.1424
-;; Package-Commit: d114bacfb12f9e66821254ff0a1fb85443700b24
+;; Version: 1.0.0
+;; Package-Version: 20210226.1419
+;; Package-Commit: 0a227125a4112266c06ed7247de039090314b525
 ;; Keywords: languages
 ;; Homepage: https://git.carcosa.net/jmcbray/gemini.el
-;; Package-Requires: ((emacs "24.3"))
+;; Package-Requires: ((emacs "24.4"))
 
 ;;; Commentary:
 
@@ -34,6 +34,12 @@
 ;;; Code:
 (require 'cl-lib)
 
+(eval-when-compile
+  (defvar font-lock-beg)
+  (defvar font-lock-end)
+  (defun elpher-go (_))
+  (defun visual-fill-column-mode (_)))
+
 (defface gemini-heading-face-1
   '((t :inherit bold :height 1.8))
   "Face for Gemini headings level 1"
@@ -54,37 +60,56 @@
   '((t :inherit italic))
   "Face for quoted lines in Gemini"
   :group 'gemini-mode)
+(defface gemini-ulist-face
+  '((t :inherit font-lock-keyword-face))
+  "Face for unordered list items in Gemini"
+  :group 'gemini-mode)
+
+(defcustom gemini-mode-hook 'turn-on-visual-line-mode
+  "Normal hook run when entering Gemini mode. Usually used to set line
+wrapping"
+  :type 'hook
+  :options '(turn-on-visual-line-mode turn-on-visual-fill-column-mode)
+  :group 'gemini-mode)
+
+;; See RFC 3986 (URI).
+(defconst gemini-regex-uri
+  "\\([a-zA-z0-9+-.]+:[^]\t\n\r<>,;() ]+\\)"
+  "Regular expression for matching URIs.")
+
+(defconst gemini-regex-link-line
+  "^=>[[:blank:]]?\\([^[:blank:]]+\\)\\([[:blank:]]?.*\\)?$"
+  "Regular expression for matching link lines.
+Used by ‘font-lock-defaults’ and ‘gemini-link-at-point’.")
 
 (defvar gemini-highlights
-  (let* ((gemini-heading-3-regexp "^###\s.*$")
-         (gemini-heading-2-regexp "^##\s.*$")
-         (gemini-heading-1-regexp "^#\s.*$")
-         (gemini-heading-rest-regexp "^###+\s.*$")
-         (gemini-link-regexp "^=>.*$")
+  (let* ((gemini-preformatted-regexp "^```[^`]+```$")
+         (gemini-heading-rest-regexp "^####+[[:blank:]]*.*$")
+         (gemini-heading-3-regexp "^###[[:blank:]]*.*$")
+         (gemini-heading-2-regexp "^##[[:blank:]]*.*$")
+         (gemini-heading-1-regexp "^#[[:blank:]]*.*$")
          (gemini-ulist-regexp "^\\* .*$")
-         (gemini-preformatted-regexp "^```")
-         (gemini-quote-regexp "^> .*$"))
-    `((,gemini-heading-rest-regexp . 'gemini-heading-face-rest)
+         (gemini-quote-regexp "^>[[:blank:]]*.*$"))
+    ;; preformatted must be declared first has it must absolutely be set
+    ;; before any other face (for exemple to avoid a title inside a
+    ;; preformatted block to hijack it).
+    `((,gemini-preformatted-regexp . 'font-lock-builtin-face)
+      (,gemini-heading-rest-regexp . 'gemini-heading-face-rest)
       (,gemini-heading-3-regexp . 'gemini-heading-face-3)
       (,gemini-heading-2-regexp . 'gemini-heading-face-2)
       (,gemini-heading-1-regexp . 'gemini-heading-face-1)
-      (,gemini-link-regexp . 'link)
-      (,gemini-ulist-regexp . 'font-lock-keyword-face)
-      (,gemini-preformatted-regexp . 'font-lock-builtin-face)
+      (,gemini-regex-link-line 1 'link)
+      (,gemini-ulist-regexp . 'gemini-ulist-face)
       (,gemini-quote-regexp . 'gemini-quote-face)))
   "Font lock keywords for `gemini-mode'.")
 
 (defvar gemini-mode-map
   (let ((map (make-keymap)))
     (define-key map (kbd "C-c C-l") #'gemini-insert-link)
+    (define-key map (kbd "C-c C-o") #'gemini-open-link-at-point)
     (define-key map (kbd "C-c RET") #'gemini-insert-list-item)
     map)
   "Keymap for `gemini-mode'.")
-
-;; See RFC 3986 (URI).
-(defconst gemini-regex-uri
-  "\\([a-zA-z0-9+-.]+:[^]\t\n\r<>,;() ]+\\)"
-  "Regular expression for matching URIs.")
 
 (defun gemini-get-used-uris ()
   "Return a list of all used URIs in the buffer."
@@ -135,13 +160,58 @@ insert a list item."
     (newline)
     (insert "* ")))
 
+(defun gemini-link-at-point ()
+  "Return the link present on the line at point."
+  (let ((line (thing-at-point 'line t)))
+    (when (string-match gemini-regex-link-line line)
+      (match-string 1 line))))
+
+(defun gemini-open-link-at-point ()
+  "Open the link at point with elpher if it is installed."
+  (interactive)
+  (let ((link (gemini-link-at-point)))
+    (when link
+      (cond ((string-prefix-p "gemini://" link t)
+             (when (require 'elpher nil t)
+               (elpher-go link)))
+            ((file-exists-p link)
+             (find-file link))
+            ((string-match "https?://" link)
+             (browse-url link))
+            (t (error "Don't know what to do with %s" link))))))
+
+(defun gemini-font-lock-extend-region-for-preformatted-blocks ()
+  "Extend the current font-lock focus to allow preformatted block discovering."
+  (save-excursion
+    (let (block-start block-end)
+      (goto-char font-lock-beg)
+      (end-of-line)
+      (when (re-search-backward "^```.*$" nil t)
+        (setq block-start (match-beginning 0))
+        (unless (eq block-start (point-min))
+          (setq block-start (1- block-start))))
+      (goto-char font-lock-end)
+      (beginning-of-line)
+      (when (re-search-forward "^```$" nil t)
+        (setq block-end (match-end 0))
+        (unless (eq block-end (point-max))
+          (setq block-end (1+ block-end))))
+      (when (and block-start block-end)
+        (setq font-lock-beg block-start
+              font-lock-end block-end)))))
+
+(defun turn-on-visual-fill-column-mode nil
+  (require 'visual-fill-column)
+  (visual-fill-column-mode 1))
+
 ;;;###autoload
 (define-derived-mode gemini-mode text-mode "gemini"
   "Major mode for editing text/gemini 'geminimap' documents"
   (setq font-lock-defaults '(gemini-highlights))
+  (add-hook 'font-lock-extend-region-functions
+            #'gemini-font-lock-extend-region-for-preformatted-blocks)
   (visual-line-mode 1)
-  (when (featurep 'visual-fill-column)
-    (visual-fill-column-mode 1)))
+  (run-hooks 'gemini-mode-hook))
 
 ;;;###autoload
 (progn

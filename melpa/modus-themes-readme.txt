@@ -21,8 +21,8 @@ are disabled by default (nil):
     modus-themes-headings                       (alist)
     modus-themes-fringes                        (choice)
     modus-themes-lang-checkers                  (choice)
+    modus-themes-org-agenda                     (alist)
     modus-themes-org-blocks                     (choice)
-    modus-themes-org-habit                      (choice)
     modus-themes-prompts                        (choice)
     modus-themes-mode-line                      (choice)
     modus-themes-diffs                          (choice)
@@ -37,11 +37,11 @@ are disabled by default (nil):
 The default scale for headings is as follows (it can be customized as
 well---remember, no scaling takes place by default):
 
-    modus-themes-scale-1 1.05
-    modus-themes-scale-2 1.1
-    modus-themes-scale-3 1.15
-    modus-themes-scale-4 1.2
-    modus-themes-scale-5 1.3
+    modus-themes-scale-1                        1.05
+    modus-themes-scale-2                        1.1
+    modus-themes-scale-3                        1.15
+    modus-themes-scale-4                        1.2
+    modus-themes-scale-title                    1.3
 
 There also exist two unique customization variables for overriding
 color palette values.  The specifics are documented in the manual.
