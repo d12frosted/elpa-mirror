@@ -6,7 +6,7 @@
 ;; Created: 2021/01/14
 ;; Version: 1.0
 ;; Package-Version: 20210426.835
-;; Package-Commit: 55e3455490319e2edc6d19574c715a93010506b8
+;; Package-Commit: 1c4fdfba4650d9fb65921a6e39b5d476432b305b
 ;; URL: https://github.com/ShuguangSun/find-dupes-dired
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: tools

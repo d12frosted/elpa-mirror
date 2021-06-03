@@ -1,0 +1,13 @@
+(lsp-tailwindcss .
+		 [(20210603 630)
+		  ((lsp-mode
+		    (3 0))
+		   (emacs
+		    (24 3)))
+		  "A lsp-mode client for tailwindcss" single
+		  ((:commit . "839ecc8237201ae836d516086d8ed385272c5c11")
+		   (:authors
+		    ("A.I." . "merrick@luois.me"))
+		   (:maintainer "A.I." . "merrick@luois.me")
+		   (:keywords "language" "tools")
+		   (:url . "https://github.com/merrickluo/lsp-tailwindcss"))])

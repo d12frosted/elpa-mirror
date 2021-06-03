@@ -6,7 +6,7 @@
 ;; Created: 2019/04/06
 ;; Version: 1.0
 ;; Package-Version: 20200916.843
-;; Package-Commit: 0a08da119859e48bf4fd68e06180403f9e7be7c3
+;; Package-Commit: bf7dc1b934411ac9a139cd338b4eeafc14ef971b
 ;; URL: https://github.com/ShuguangSun/ess-r-insert-obj
 ;; Package-Requires: ((emacs "26.1") (ess "18.10.1"))
 ;; Keywords: tools
