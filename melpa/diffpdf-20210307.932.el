@@ -6,7 +6,7 @@
 ;; Created: 2021/02/20
 ;; Version: 1.0
 ;; Package-Version: 20210307.932
-;; Package-Commit: d8c44ce9524b441fb047a3288bf91b372833ffd1
+;; Package-Commit: 96861493f95fe88118942bbe64954142250d6c24
 ;; URL: https://github.com/ShuguangSun/diffpdf.el
 ;; Package-Requires: ((emacs "25.1") (transient "0.3.0"))
 ;; Keywords: tools

@@ -3,9 +3,7 @@ Fetcher: github
 Source:  https://github.com/sggutier/mexican-holidays.git
 
 Updating /mnt/store/melpa/working/mexican-holidays/
-Built mexican-holidays in 4.927s, finished at Thu Jun  3 10:48:18 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.8K Jun  3 10:48 packages/mexican-holidays-20200622.132.el
-4.0K -rw-r--r-- 1 root root  364 Jun  3 10:48 packages/mexican-holidays-20200622.132.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun  3 10:48 packages/mexican-holidays-badge.svg
-4.0K -rw-r--r-- 1 root root  295 Jun  3 10:48 packages/mexican-holidays-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: could not read Username for 'https://github.com': No such device or address
+error: Could not fetch origin
+
