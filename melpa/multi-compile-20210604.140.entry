@@ -1,0 +1,13 @@
+(multi-compile .
+	       [(20210604 140)
+		((emacs
+		  (24))
+		 (dash
+		  (2 12 1)))
+		"Multi target interface to compile." single
+		((:commit . "948ee25878c509d0f9ba8715b209eae79143b76e")
+		 (:authors
+		  ("Kvashnin Vladimir" . "reangd@gmail.com"))
+		 (:maintainer "Kvashnin Vladimir" . "reangd@gmail.com")
+		 (:keywords "tools" "compile" "build")
+		 (:url . "https://github.com/ReanGD/emacs-multi-compile"))])
