@@ -16,6 +16,6 @@ The function used to display the image is bound to the variable
 `erc-image-display-func'. There are two possible values for that,
 `erc-image-insert-inline' and `erc-image-insert-other-buffer'.
 
-Set the value of erc-image-inline-rescale to a number for max size
-of images to be displayed (resized if bigger). set the value to
-'window to take window height as this value
+Set the value of erc-image-inline-rescale to a number (e.g., 400) or 'window
+to resize images whose height or width exceeds the number, or dimensions
+exceed the 'window. Requires ImageMagick or Emacs 27.1.

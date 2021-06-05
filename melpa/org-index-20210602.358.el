@@ -5,7 +5,7 @@
 ;; Author: Marc Ihm <1@2484.de>
 ;; URL: https://github.com/marcIhm/org-index
 ;; Package-Version: 20210602.358
-;; Package-Commit: 6d9a83ad6e1d879ba177850902655d56c93e024d
+;; Package-Commit: 40716a4cfd36304b4a16977020b1e82870faec15
 ;; Version: 7.2.1
 ;; Package-Requires: ((org "9.3") (dash "2.12") (s "1.12") (emacs "26.3"))
 
