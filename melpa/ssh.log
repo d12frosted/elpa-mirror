@@ -3,29 +3,29 @@ Fetcher: github
 Source:  https://github.com/ieure/ssh-el.git
 
 Updating /mnt/store/melpa/working/ssh/
-Built ssh in 5.891s, finished at Sat Jun  5 03:28:11 2021
+Built ssh in 4.331s, finished at Sat Jun  5 09:30:57 2021
  ✓ Success:
- 16K -rw-r--r-- 1 root root  16K Jun  5 03:28 packages/ssh-20120904.2042.el
-4.0K -rw-r--r-- 1 root root  299 Jun  5 03:28 packages/ssh-20120904.2042.entry
- 16K -rw-r--r-- 1 root root  14K Jun  5 03:28 packages/ssh-agency-20200329.1558.el
-4.0K -rw-r--r-- 1 root root  411 Jun  5 00:27 packages/ssh-agency-20200329.1558.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun  5 00:27 packages/ssh-agency-badge.svg
-4.0K -rw-r--r-- 1 root root  362 Jun  5 03:28 packages/ssh-agency-readme.txt
-4.0K -rw-r--r-- 1 root root  132 Jun  5 03:28 packages/ssh-agency.log
-4.0K -rw-r--r-- 1 root root 1.2K Jun  5 03:28 packages/ssh-badge.svg
-4.0K -rw-r--r-- 1 root root  379 Jun  5 00:27 packages/ssh-config-mode-20210517.1925.entry
- 20K -rw-r--r-- 1 root root  20K Jun  5 03:28 packages/ssh-config-mode-20210517.1925.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jun  5 00:27 packages/ssh-config-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  562 Jun  5 00:27 packages/ssh-config-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  459 Jun  5 03:28 packages/ssh-config-mode.log
-4.0K -rw-r--r-- 1 root root  430 Jun  5 00:27 packages/ssh-deploy-20201016.1439.entry
-100K -rw-r--r-- 1 root root 100K Jun  5 00:27 packages/ssh-deploy-20201016.1439.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jun  5 00:27 packages/ssh-deploy-badge.svg
-8.0K -rw-r--r-- 1 root root 5.3K Jun  5 00:27 packages/ssh-deploy-readme.txt
-4.0K -rw-r--r-- 1 root root  143 Jun  5 03:28 packages/ssh-deploy.log
-4.0K -rw-r--r-- 1 root root  469 Jun  5 03:28 packages/ssh-readme.txt
-4.0K -rw-r--r-- 1 root root  380 Jun  5 00:27 packages/ssh-tunnels-20190622.931.entry
- 32K -rw-r--r-- 1 root root  30K Jun  5 00:27 packages/ssh-tunnels-20190622.931.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jun  5 00:27 packages/ssh-tunnels-badge.svg
-4.0K -rw-r--r-- 1 root root  789 Jun  5 00:27 packages/ssh-tunnels-readme.txt
-4.0K -rw-r--r-- 1 root root  135 Jun  5 03:28 packages/ssh-tunnels.log
+ 16K -rw-r--r-- 1 root root  16K Jun  5 09:30 packages/ssh-20120904.2042.el
+4.0K -rw-r--r-- 1 root root  299 Jun  5 09:30 packages/ssh-20120904.2042.entry
+ 16K -rw-r--r-- 1 root root  14K Jun  5 09:30 packages/ssh-agency-20200329.1558.el
+4.0K -rw-r--r-- 1 root root  411 Jun  5 09:30 packages/ssh-agency-20200329.1558.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun  5 06:28 packages/ssh-agency-badge.svg
+4.0K -rw-r--r-- 1 root root  362 Jun  5 09:30 packages/ssh-agency-readme.txt
+4.0K -rw-r--r-- 1 root root  132 Jun  5 09:30 packages/ssh-agency.log
+4.0K -rw-r--r-- 1 root root 1.2K Jun  5 09:30 packages/ssh-badge.svg
+4.0K -rw-r--r-- 1 root root  379 Jun  5 09:30 packages/ssh-config-mode-20210517.1925.entry
+ 20K -rw-r--r-- 1 root root  20K Jun  5 09:30 packages/ssh-config-mode-20210517.1925.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jun  5 06:28 packages/ssh-config-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  562 Jun  5 09:30 packages/ssh-config-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  654 Jun  5 09:30 packages/ssh-config-mode.log
+4.0K -rw-r--r-- 1 root root  430 Jun  5 06:28 packages/ssh-deploy-20201016.1439.entry
+100K -rw-r--r-- 1 root root 100K Jun  5 06:28 packages/ssh-deploy-20201016.1439.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jun  5 06:28 packages/ssh-deploy-badge.svg
+8.0K -rw-r--r-- 1 root root 5.3K Jun  5 06:28 packages/ssh-deploy-readme.txt
+4.0K -rw-r--r-- 1 root root  143 Jun  5 09:30 packages/ssh-deploy.log
+4.0K -rw-r--r-- 1 root root  469 Jun  5 09:30 packages/ssh-readme.txt
+4.0K -rw-r--r-- 1 root root  380 Jun  5 06:28 packages/ssh-tunnels-20190622.931.entry
+ 32K -rw-r--r-- 1 root root  30K Jun  5 06:28 packages/ssh-tunnels-20190622.931.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jun  5 06:28 packages/ssh-tunnels-badge.svg
+4.0K -rw-r--r-- 1 root root  789 Jun  5 06:28 packages/ssh-tunnels-readme.txt
+4.0K -rw-r--r-- 1 root root  135 Jun  5 09:30 packages/ssh-tunnels.log

@@ -4,8 +4,6 @@
 
 ;; Author: 徐春阳 <mail@xuchunyang.me>
 ;; URL: https://github.com/xuchunyang/emacs-opencc
-;; Package-Version: 20170722.816
-;; Package-Commit: 8c539f72669ba9a99d8b5198db5ea930897ad1b9
 ;; Version: 0
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: Chinese
