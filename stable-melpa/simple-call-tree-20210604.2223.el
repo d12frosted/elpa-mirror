@@ -7,8 +7,8 @@
 ;; Copyleft (Ↄ) 2012, Joe Bloggs, all rites reversed.
 ;; Created: 2012-11-01 21:28:07
 ;; Version: 20151116.1603
-;; Package-Version: 20210604.2100
-;; Package-Commit: 96aef82363fe2c6bfd8fc76d506d27c8d5cbb349
+;; Package-Version: 20210604.2223
+;; Package-Commit: 55f25886c1f9492c7efc72e995a4970be273b66c
 ;; Package-Requires: ((emacs "24.3") (anaphora "1.0.0"))
 ;; Last-Updated: Mon Nov 16 16:03:18 2015
 ;;           By: Joe Bloggs
@@ -1031,15 +1031,15 @@ By default it is set to a list containing the current buffer."
            (regexps (mapcar (lambda (lst) (concat symstart
                                                   (regexp-opt lst t)
                                                   symend))
-                            (cl-loop for i from 0 to (1- (length lengths))
+                            (cl-loop for i from 0 to (length lengths)
 				     with sum = 0
 				     with start = 0
 				     if (and (< sum simple-call-tree-regex-maxlen)
-					     (< i (1- (length lengths))))
+					     (< i (length lengths)))
 				     do (setq sum (+ sum (nth i lengths)))
 				     else
 				     collect (cl-subseq names start i)
-				     and do (setq start (1+ i) sum 0))))
+				     and do (setq start i sum (nth i lengths)))))
            (invalidfonts (or (third (assoc mode simple-call-tree-major-mode-alist))
                              simple-call-tree-default-invalid-fonts)))
       (cl-loop for item in simple-call-tree-alist
