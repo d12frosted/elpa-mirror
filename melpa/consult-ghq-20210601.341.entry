@@ -1,0 +1,15 @@
+(consult-ghq .
+	     [(20210601 341)
+	      ((emacs
+		(26 1))
+	       (consult
+		(0 8))
+	       (affe
+		(0 1)))
+	      "Ghq interface using consult" single
+	      ((:commit . "56d4d7fc6553b4bec29c19f822c4f50fbb4157f9")
+	       (:authors
+		("Tomoya Otake" . "tomoya.ton@gmail.com"))
+	       (:maintainer "Tomoya Otake" . "tomoya.ton@gmail.com")
+	       (:keywords "convenience" "usability" "consult" "ghq")
+	       (:url . "https://github.com/tomoya/consult-ghq"))])
