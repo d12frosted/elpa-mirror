@@ -1,0 +1,11 @@
+(c-eval .
+	[(20210603 1716)
+	 ((emacs
+	   (24 5)))
+	 "Compile and run one-off C code snippets" single
+	 ((:commit . "f79be8354a3c01fddbf38b731aa8934421cef22f")
+	  (:authors
+	   ("Lassi Kortela" . "lassi@lassi.io"))
+	  (:maintainer "Lassi Kortela" . "lassi@lassi.io")
+	  (:keywords "c" "languages")
+	  (:url . "https://github.com/lassik/emacs-c-eval"))])

@@ -1,0 +1,11 @@
+(cargo-mode .
+	    [(20210605 1003)
+	     ((emacs
+	       (25 1)))
+	     "Cargo Major Mode. Cargo is the Rust package manager" single
+	     ((:commit . "96407fccbde5f2ccb02682f421910a6f4a17e30a")
+	      (:authors
+	       ("Ayrat Badykov" . "ayratin555@gmail.com"))
+	      (:maintainer "Ayrat Badykov" . "ayratin555@gmail.com")
+	      (:keywords "tools")
+	      (:url . "https://github.com/ayrat555/cargo-mode"))])

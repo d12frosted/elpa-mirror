@@ -1,0 +1,15 @@
+(consult-spotify .
+		 [(20210605 1502)
+		  ((emacs
+		    (26 1))
+		   (consult
+		    (0 5))
+		   (espotify
+		    (0 1)))
+		  "Spotify queries using consult" single
+		  ((:commit . "3d62a3319ab03a810030058d3fb368b28dfd82d5")
+		   (:authors
+		    ("Jose A Ortega Ruiz" . "jao@gnu.org"))
+		   (:maintainer "Jose A Ortega Ruiz")
+		   (:keywords "multimedia")
+		   (:url . "https://codeberg.org/jao/espotify"))])
