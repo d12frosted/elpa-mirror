@@ -139,7 +139,7 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:keywords "async"))])
  (auctex .
-	 [(13 0 11)
+	 [(13 0 12)
 	  ((emacs
 	    (24 3)))
 	  "Integrated environment for *TeX*" tar
@@ -1139,10 +1139,10 @@
 	   (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
 	   (:url . "https://github.com/thierryvolpiatto/ioccur"))])
  (isearch-mb .
-	     [(0 2)
+	     [(0 3)
 	      ((emacs
 		(27 1)))
-	      "Control Isearch from the minibuffer" tar
+	      "Control isearch from the minibuffer" tar
 	      ((:url . "https://github.com/astoff/isearch-mb")
 	       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	       (:authors
