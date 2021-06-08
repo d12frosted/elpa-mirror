@@ -3,9 +3,7 @@ Fetcher: github
 Source:  https://github.com/GuiltyDolphin/inform7-mode.git
 
 Updating /mnt/store/melpa/working/inform7/
-Built inform7 in 3.643s, finished at Tue Jun  8 03:49:10 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.4K Jun  8 03:49 packages/inform7-20200430.1539.el
-4.0K -rw-r--r-- 1 root root  407 Jun  8 03:49 packages/inform7-20200430.1539.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun  8 03:49 packages/inform7-badge.svg
-4.0K -rw-r--r-- 1 root root  128 Jun  8 03:49 packages/inform7-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/GuiltyDolphin/inform7-mode.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+

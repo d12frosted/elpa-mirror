@@ -8,8 +8,6 @@
 
 ;; Author: Alvin Francis Dumalus
 ;; URL: https://github.com/alvinfrancis/spark
-;; Package-Version: 20160415.201
-;; Package-Commit: 0bf148c3ede3b31d56fd75f347cdd0b0eae60025
 ;; Version: 20160412.1606
 ;; Keywords: lisp, data
 ;; Package-Requires: ((emacs "24.3"))
