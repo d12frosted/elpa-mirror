@@ -55,7 +55,7 @@ Supported languages:
 - R (styler)
 - Reason (bsrefmt)
 - ReScript (rescript)
-- Ruby (rufo)
+- Ruby (rubocop, rufo, standardrb)
 - Rust (rustfmt)
 - Scala (scalafmt)
 - Shell script (beautysh, shfmt)
