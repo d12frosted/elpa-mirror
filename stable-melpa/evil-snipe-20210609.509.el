@@ -7,8 +7,8 @@
 ;; Created: December 5, 2014
 ;; Modified: July 31, 2018
 ;; Version: 2.1.2
-;; Package-Version: 20210607.420
-;; Package-Commit: 9bd7345476174dfc6eeaa700a505e45b155ddb83
+;; Package-Version: 20210609.509
+;; Package-Commit: a9b9b39a7915e66b7d5da9cecfaf002c72d08196
 ;; Keywords: emulation, vim, evil, sneak, seek
 ;; Homepage: https://github.com/hlissner/evil-snipe
 ;; Package-Requires: ((emacs "24.4") (evil "1.2.12") (cl-lib "0.5"))
@@ -600,13 +600,13 @@ explicitly choose the function names."
 
 (defvar evil-snipe-override-local-mode-map
   (let ((map (make-sparse-keymap)))
-    (evil-define-minor-mode-key 'motion 'evil-snipe-local-mode
+    (evil-define-minor-mode-key 'motion 'evil-snipe-override-local-mode
       "f" #'evil-snipe-f
       "F" #'evil-snipe-F
       "t" #'evil-snipe-t
       "T" #'evil-snipe-T)
     (when evil-snipe-override-evil-repeat-keys
-      (evil-define-minor-mode-key 'motion 'evil-snipe-local-mode
+      (evil-define-minor-mode-key 'motion 'evil-snipe-override-local-mode
         ";" #'evil-snipe-repeat
         "," #'evil-snipe-repeat-reverse))
     map))
