@@ -6,8 +6,8 @@
 ;; Homepage: https://github.com/Boruch-Baum/emacs-diredc
 ;; License: GPL3+
 ;; Keywords: files
-;; Package-Version: 20210603.2349
-;; Package-Commit: 43159042ca788be74c387cc59ba3fffc57079993
+;; Package-Version: 20210609.1558
+;; Package-Commit: e93c0caf0c0bd249628930ebf5b02e57fb8cb0f1
 ;; Package: diredc
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "26.1") (key-assist "1.0"))
@@ -536,7 +536,7 @@ Applicable when variable `diredc-bonus-configuration' is non-nil.")
 Applicable when variable `diredc-bonus-configuration' is non-nil.")
 
 (defconst diredc--chmod-font-lock-regex
-  " \\([dl-]\\)\\([r-]\\)\\([w-]\\)\\([xsgt-]\\)\\([r-]\\)\\([w-]\\)\\([xsgt-]\\)\\([r-]\\)\\([w-]\\)\\([xsgt-]\\) "
+  " \\([dl-]\\)\\([r-]\\)\\([w-]\\)\\([xsgt-]\\)\\([r-]\\)\\([w-]\\)\\([xsgt-]\\)\\([r-]\\)\\([w-]\\)\\([xsgt-]\\)\\+? "
   "Regexp to identify alphanumeric permission mode strings.
 This constant is used to colorize the string, using `font-lock',
 when variable `diredc-bonus-configuration' is non-nil.")
@@ -1354,6 +1354,66 @@ locally define `dired-read-shell-command'. See there."
                  command))
         (user-error "Not a valid command!"))
       command)))
+
+(defun diredc--advice--repeat-over-lines (_oldfun arg function)
+  "Fix Emacs bug #48883 (2021-06-06: improper marking of lines).
+
+_OLDFUN is function `dired-repeat-over-lines', which is never
+called by this advice. ARG is a positive or negative integer
+number of lines on which to operate, and FUNCTION is the
+operation to perform.
+
+Ref: http://debbugs.gnu.org/cgi/bugreport.cgi?bug=48883
+
+The advised function was: 1) operating on directory heading
+lines; 2) operating on the lines for the \"not-real\" files '.'
+and ',,', and; 3) advancing POINT undesirablly. I submitted two
+solutions there. Here in `diredc', in order to limit advising the
+underlying Emacs package, I'm using the version that alters just
+function `dired-repeat-over-lines'. A second version submitted
+there applies the fix by changing also function
+`dired-between-two-lines'."
+  (let ((pos (make-marker)))
+    (beginning-of-line)
+    (cond
+     ((> arg 0)
+       (while (and (> arg 0) (not (eobp)))
+         (setq arg (1- arg))
+         (beginning-of-line)
+       ;;(while (and (not (eobp)) (dired-between-files)) (forward-line 1))
+         (while (and (not (eobp))
+                     (condition-case nil
+                       (not (dired-get-filename))
+                       (error t)))
+           (forward-line 1))
+         (save-excursion
+           (forward-line 1)
+           (move-marker pos (1+ (point))))
+         (unless (eobp)
+           (save-excursion (funcall function))
+           ;; Advance to the next line--actually, to the line that *was* next.
+           ;; (If FUNCTION inserted some new lines in between, skip them.)
+           (goto-char pos)))
+       (when (eobp)
+         (forward-line -1)
+         (dired-move-to-filename)))
+     ((< arg 0)
+       (while (and (< arg 0) (not (bobp)))
+         (setq arg (1+ arg))
+         (forward-line -1)
+       ;;(while (and (not (bobp)) (dired-between-files)) (forward-line -1))
+         (while (and (not (bobp))
+                     (condition-case nil
+                       (not (dired-get-filename))
+                       (error t)))
+           (forward-line -1))
+         (beginning-of-line)
+         (when (condition-case nil
+                 (dired-get-filename)
+                 (error nil))
+           (save-excursion (funcall function))))
+       (move-marker pos nil)
+       (dired-move-to-filename)))))
 
 
 ;;
@@ -2889,8 +2949,8 @@ Optionally, navigate prefix argument ARG number of history elements."
      (setf (nth 2 (nth diredc-hist--history-position hist)) dired-omit-mode)
      (find-alternate-file (car hist-elem))
      (set-window-dedicated-p nil t)
-     (goto-char (nth 1 hist-elem))
      (diredc--set-omit-mode (nth 2 hist-elem))
+     (goto-char (nth 1 hist-elem))
      (when special-sort
        (diredc--sort-special special-sort))
      (setq diredc-hist--history-list hist
@@ -2950,10 +3010,10 @@ and navigates to that location."
        (let ((omit-mode dired-omit-mode)
              (special-sort diredc--sort-option-special))
          (find-alternate-file new-dir)
+         (diredc--set-omit-mode omit-mode)
          (when (setq restore-point
                  (diredc--hist-guess-restore-point hist pos))
            (goto-char restore-point))
-         (diredc--set-omit-mode omit-mode)
          (when special-sort
            (diredc--sort-special special-sort)))
        (set-window-dedicated-p nil t)
@@ -3016,10 +3076,10 @@ With optional prefix argument, repeat ARG times."
               (when dir
                 (setq dir (file-name-directory (substring dir 0 -1)))))
             (find-alternate-file (or dir "/"))
+            (diredc--set-omit-mode omit-mode)
             (when (setq restore-point
                     (diredc--hist-guess-restore-point hist pos))
               (goto-char restore-point))
-            (diredc--set-omit-mode omit-mode)
             (when special-sort
               (diredc--sort-special special-sort))
             (setq new (diredc-hist--update-directory-history hist pos)
@@ -3456,6 +3516,8 @@ turn the mode on; Otherwise, turn it off."
            diredc--lc-collate-original-value (getenv "LC_COLLATE"))
      (add-hook 'dired-mode-hook  #'diredc--hook-function)
      (add-to-list 'window-state-change-functions 'diredc--window-state-change-hook-function)
+     (advice-add 'dired-repeat-over-lines
+                 :around #'diredc--advice--repeat-over-lines)
      (advice-add 'dired-internal-noselect
                  :around #'diredc--advice--dired-internal-noselect)
      (advice-add 'dired-guess-default
@@ -3481,6 +3543,8 @@ turn the mode on; Otherwise, turn it off."
      ;; Do not set `diredc-allow-duplicate-buffers' to NIL, because it
      ;; may be required by other minor modes or features (eg.
      ;; dired-frame.el)
+     (advice-remove 'dired-repeat-over-lines
+                    #'diredc--advice--repeat-over-lines)
      (advice-remove 'dired-guess-default
                     #'diredc--advice--shell-guess-fallback)
      (advice-remove 'dired-run-shell-command

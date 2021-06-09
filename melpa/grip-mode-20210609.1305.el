@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/grip-mode
 ;; Version: 2.3.0
-;; Package-Version: 20210515.1548
-;; Package-Commit: 02b7a8109fa1ae248e61c91da3bd8676f8d2e175
+;; Package-Version: 20210609.1305
+;; Package-Commit: 0ef2a3566f76e1c03ec64ac64cbb916530e40e32
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience, markdown, preview
 
@@ -85,6 +85,11 @@ When nil, only update the preview on file save."
   :type 'boolean
   :group 'grip)
 
+(defcustom grip-preview-host "localhost"
+  "Preview hostname."
+  :type 'string
+  :group 'grip)
+
 (defcustom grip-preview-use-webkit t
   "Use embedded webkit to preview.
 
@@ -136,7 +141,7 @@ Use default browser unless `xwidget' is available."
 
 (defun grip--preview-url ()
   "Return grip preview url."
-  (format "http://localhost:%d" grip--port))
+  (format "http://%s:%d" grip-preview-host grip--port))
 
 (defun grip-start-process ()
   "Render and preview with grip."

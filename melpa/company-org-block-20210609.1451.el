@@ -2,8 +2,8 @@
 
 ;; Author: Alvaro Ramirez
 ;; Package-Requires: ((emacs "25.1") (company "0.8.0") (org "9.2.0"))
-;; Package-Version: 20210608.1831
-;; Package-Commit: 86a84a0ccef43943854c98a814f71629a94ab4b2
+;; Package-Version: 20210609.1451
+;; Package-Commit: e1ff6f1696f286100e0468cfb03a23fa6f39de66
 ;; URL: https://github.com/xenodium/company-org-block
 ;; Version: 0.3
 
@@ -144,7 +144,7 @@ COMMAND and ARG are sent by company itself."
   (save-excursion
     (insert "\n")
     (org-indent-line)
-    (insert (format "#+end_%s\n" end)))
+    (insert (format "#+end_%s" end)))
   (cond ((and (eq company-org-block-edit-style 'auto)
               (company-org-block--edit-src-code-p))
          (org-edit-src-code))

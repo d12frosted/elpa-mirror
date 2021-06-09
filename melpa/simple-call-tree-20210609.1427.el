@@ -7,8 +7,8 @@
 ;; Copyleft (Ↄ) 2012, Joe Bloggs, all rites reversed.
 ;; Created: 2012-11-01 21:28:07
 ;; Version: 20151116.1603
-;; Package-Version: 20210608.1402
-;; Package-Commit: 23cdf9583615127c93ae86204296bed9c4f442ff
+;; Package-Version: 20210609.1427
+;; Package-Commit: 8afae56c4d653d0ff561093252756d28feaa1dc0
 ;; Package-Requires: ((emacs "24.3") (anaphora "1.0.0"))
 ;; Last-Updated: Mon Nov 16 16:03:18 2015
 ;;           By: Joe Bloggs
@@ -389,9 +389,10 @@ This only applies to toplevel headers, see `simple-call-tree-default-recenter' f
                  (const :tag "Middle" middle)
                  (const :tag "Bottom" bottom)))
 
-;; simple-call-tree-info: TODO
-(defcustom simple-call-tree-window-splits nil
-  "Alist of window split information to use when viewing code (e.g. in follow mode). 
+;; simple-call-tree-info: TODO  allow option to show code in separate frame
+(defcustom simple-call-tree-window-splits '((4 below 0.7) (1 right 0.7))
+  "TODO: finish documentation
+Alist of window split information to use when viewing code (e.g. in follow mode). 
 The car of each element is a positive integer representing a tree depth,
 and the cdr is a list in the form '(TYPE N) where TYPE is either 'vertical or 'horizontal,
 and N is either a float between 0 & 1 or a positive integer, indicating the proportion of 
@@ -399,20 +400,28 @@ window space or number of lines to display respectively.
 Window split info is chosen by selecting the alist entry with the highest car that is not 
 larger than the current tree depth."
   :group 'simple-call-tree
-  :type '(alist :key-type (integer :tag "Minimum tree depth"
-				   :validate
-				   (lambda (w)
-				     (when (< (widget-value w) 1)
-				       (widget-put
-					w :error
-					"Depth must be greater than 0")
-				       w)))
+  :type '(alist :key-type
+		(choice :tag "Condition"
+			(integer :tag "Minimum depth"
+				 :help-echo "Select split if tree depth is at least this number"
+				 :validate
+				 (lambda (w)
+				   (when (< (widget-value w) 1)
+				     (widget-put
+				      w :error
+				      "Depth must be greater than 0")
+				     w)))
+			(sexp
+			 :tag "S-expression"
+			 :help-echo "Select split if sexp evaluates to non-nil"))
 		:value-type
 		(choice :tag "Code window display"
 			(list
 			 (choice :tag "Orientation"
-				 (const :tag "Horizontal" 'horizontal)
-				 (const :tag "Vertical" 'vertical))
+				 (const :tag "Left" 'left)
+				 (const :tag "Right" 'right)
+				 (const :tag "Above" 'above)
+				 (const :tag "Below" 'below))
 			 (choice :tag "Size"
 				 (float :tag "Proportion of frame"
 					:validate
@@ -433,7 +442,7 @@ larger than the current tree depth."
 					      w)))))
 			(function :tag "Function"
 				  :help-echo
-				  "Function takes no args & returns a cons cell in the form (ORIENTATION . SIZE)"))))
+				  "Function should take 1 arg (the *Simple Call Tree* buffer) & return a cons cell in the form (ORIENTATION . SIZE)"))))
 
 ;; simple-call-tree-info: DONE
 (defcustom simple-call-tree-default-valid-fonts
@@ -984,9 +993,13 @@ If non-nil then children correspond to callers of parents in the outline tree.
 Otherwise it's the other way around.")
 
 ;; simple-call-tree-info: DONE
-(defvar simple-call-tree-current-maxdepth nil
+(defvar-local simple-call-tree-current-maxdepth nil
   "The current maximum depth of the tree in the *Simple Call Tree* buffer.
 The minimum value is 0 which means show top level functions only.")
+
+;; simple-call-tree-info: DONE set this variable whenever lines in *Simple Call Tree* buffer are altered
+(defvar-local simple-call-tree-max-linewidth '(1 . 1)
+  "The maximum length of the lines in the *Simple Call Tree* buffer.")
 
 ;; simple-call-tree-info: DONE
 (defcustom simple-call-tree-jump-ring-max 20
@@ -1258,14 +1271,21 @@ information. If UPDATESRC is nil then don't bother updating the source code."
       (goto-char (point-min))
       (if (simple-call-tree-goto-func func)
           (let ((hidden (not (outshine-subheadings-visible-p)))
-                (marked (simple-call-tree-marked-p func)))
+                (marked (simple-call-tree-marked-p func))
+		width)
             (if hidden (show-children)) ;hack! otherwise it doesn't always work properly
             (read-only-mode -1)
             (beginning-of-line)
             (kill-line)
-            (simple-call-tree-insert-item item 1 nil marked)
-            (read-only-mode 1)
-            (if hidden (outline-hide-subtree)))))))
+            (setf width (simple-call-tree-insert-item item 1 nil marked)
+		  (car simple-call-tree-max-linewidth)
+		  (max (car width)
+		       (car simple-call-tree-max-linewidth))
+		  (cdr simple-call-tree-max-linewidth)
+		  (max (cdr width)
+		       (car simple-call-tree-max-linewidth)))
+	    (read-only-mode 1)
+	    (if hidden (outline-hide-subtree)))))))
 
 ;; simple-call-tree-info: DONE
 (cl-defun simple-call-tree-set-todo (value funcs &optional remove)
@@ -1483,7 +1503,7 @@ otherwise it will be narrowed around FUNC."
   (if wide (simple-call-tree-toggle-narrowing 1)
     (simple-call-tree-toggle-narrowing -1)))
 
-;; simple-call-tree-info: DONE
+;; simple-call-tree-info: CHECK  
 (cl-defun simple-call-tree-list-callers-and-functions (&optional (maxdepth simple-call-tree-default-maxdepth)
 								 (funclist simple-call-tree-alist))
   "List callers and functions in FUNCLIST to depth MAXDEPTH.
@@ -1493,12 +1513,17 @@ By default FUNCLIST is set to `simple-call-tree-alist'."
       (simple-call-tree-mode))
   (read-only-mode -1)
   (erase-buffer)
-  (let ((maxdepth (max maxdepth 1)))
+  (let ((maxdepth (max maxdepth 1))
+	(maxwidth1 (or (car simple-call-tree-max-linewidth) 1))
+	(maxwidth2 (or (cdr simple-call-tree-max-linewidth) 1)))
     (dolist (item funclist)
-      (simple-call-tree-list-callees-recursively
-       (car item)
-       maxdepth 1 funclist))
-    (setq simple-call-tree-current-maxdepth (max maxdepth 1))
+      (aprog1 (simple-call-tree-list-callees-recursively
+	       (car item)
+	       maxdepth 1 funclist)
+	(setq maxwidth1 (max maxwidth1 (car it))
+	      maxwidth2 (max maxwidth2 (cdr it)))))
+    (setq simple-call-tree-current-maxdepth (max maxdepth 1)
+	  simple-call-tree-max-linewidth (cons maxwidth1 maxwidth2))
     ;; remove the empty line at the end
     (delete-char -1)
     (read-only-mode 1)))
@@ -1570,13 +1595,13 @@ The style of links used for child headers is controlled by `simple-call-tree-org
           (insert text))))
     (if display (switch-to-buffer exportbuf))))
 
-;; simple-call-tree-info: DONE
+;; simple-call-tree-info: CHECK  
 (cl-defun simple-call-tree-list-callees-recursively (item &optional (maxdepth 2)
-                                                        (curdepth 1)
-                                                        (funclist simple-call-tree-alist)
-                                                        (inverted simple-call-tree-inverted)
-                                                        (displayfunc 'simple-call-tree-insert-item)
-                                                        (marked simple-call-tree-marked-items))
+							  (curdepth 1)
+							  (funclist simple-call-tree-alist)
+							  (inverted simple-call-tree-inverted)
+							  (displayfunc 'simple-call-tree-insert-item)
+							  (marked simple-call-tree-marked-items))
   "Insert a call tree for the item, to depth MAXDEPTH.
 item must be the car of one of the elements of FUNCLIST which is set to `simple-call-tree-alist' by default.
 The optional arguments MAXDEPTH and CURDEPTH specify the maximum and current depth of the tree respectively.
@@ -1586,22 +1611,31 @@ MARKED is a list of marked items (default `simple-call-tree-marked-items', which
 This is a recursive function, and you should not need to set CURDEPTH."
   (let* ((fname (first item))
          (callees (cdr (simple-call-tree-get-item fname funclist)))
+	 (widths (funcall displayfunc item curdepth inverted (simple-call-tree-marked-p fname marked)))
+	 (max1 (car widths))
+	 (max2 (cdr widths))
          done)
-    (funcall displayfunc item curdepth inverted (simple-call-tree-marked-p fname marked))
     (insert "\n")
     (if (< curdepth maxdepth)
         (dolist (callee callees)
           (unless (and simple-call-tree-nodups (member (car callee) done))
-            (simple-call-tree-list-callees-recursively callee maxdepth (1+ curdepth) funclist inverted displayfunc))
-          (add-to-list 'done (car callee))))))
+            (setq widths
+		  (simple-call-tree-list-callees-recursively
+		   callee maxdepth (1+ curdepth) funclist inverted displayfunc)
+		  max1 (max max1 (car widths))
+		  max2 (max max2 (car widths))))
+          (add-to-list 'done (car callee))))
+    (cons max1 max2)))
 
 ;; Propertize todo, priority & tags appropriately
 ;; Add invisibility property to text so that `simple-call-tree-hide-marked' works
-;; simple-call-tree-info: DONE
+;; simple-call-tree-info: CHECK  
 (defun simple-call-tree-insert-item (item curdepth &optional inverted marked)
   "Display ITEM at depth CURDEPTH in the call tree.
 If optional arg INVERTED is non-nil reverse the arrow for the item.
-If optional arg MARKED is non-nil use a * instead of a |."
+If optional arg MARKED is non-nil use a * instead of a |.
+Return a cons cell whose car contains the length of the line excluding tags,
+and whose cdr contains the length including tags."
   (let* ((fname (first item))
          (pos (second item))
          (todo (fourth item))
@@ -1623,12 +1657,15 @@ If optional arg MARKED is non-nil use a * instead of a |."
                        (propertize fname
                                    'font-lock-face (list :inherit (or fnface 'default) :underline t)
                                    'mouse-face 'highlight
-                                   'location pos))))
-    (insert pre2)
-    (when tags
-      (insert (concat tags
-		      (make-string (max 0 (- (/ (window-width) 2) (length pre2))) 32)
-		      tags)))))
+                                   'location pos)))
+	 (str (concat pre2 (when tags
+			     (concat tags
+				     (make-string (max 0 (- (/ (window-width) 2)
+							    (length pre2)))
+						  32)
+				     tags)))))
+    (insert str)
+    (cons (length pre2) (length str))))
 
 ;; simple-call-tree-info: DONE
 (defun simple-call-tree-insert-org-header (item curdepth &optional inverted marked)
@@ -2068,12 +2105,15 @@ need to move to the appropriate child node before invoking again."
 
 ;; simple-call-tree-info: DONE
 (defun simple-call-tree-change-maxdepth (maxdepth)
-  "Alter the maximum tree depth in the *Simple Call Tree* buffer."
+  "Alter the maximum tree depth (MAXDEPTH) in the *Simple Call Tree* buffer."
   (interactive "P")
   (setq simple-call-tree-current-maxdepth
         (if current-prefix-arg (prefix-numeric-value current-prefix-arg)
           (floor (abs (read-number "Maximum depth to display: " 2)))))
-  (simple-call-tree-revert 1))
+  (let ((fm fm-working))
+    (when fm (simple-call-tree-delete-other-windows))
+    (simple-call-tree-revert 1)
+    (when fm (fm-toggle))))
 
 ;; simple-call-tree-info: DONE
 (defun simple-call-tree-change-default-view (view1 view2)
@@ -2117,7 +2157,35 @@ If called with a prefix ARG the portion viewed will be the opposite to normal (e
           (middle (recenter))
           (bottom (recenter -1)))))))
 
-;; simple-call-tree-info: TODO
+;; simple-call-tree-info: TODO  handle option to show code in separate frame
+(cl-defun simple-call-tree-split-window (win)
+  "Split the *Simple Call Tree* buffer to accomodate the code buffer.
+Use the values in `simple-call-tree-window-splits' to determine the split."
+  (if (not (eq (window-buffer win)
+	       (get-buffer simple-call-tree-buffer-name)))
+      (funcall old-split-window-function win)
+    (cl-labels ((err (x) (error "Invalid entry in simple-call-tree-window-splits: %s" x))
+		(choosesplit (c) (cond
+				  ((integerp c) (>= simple-call-tree-current-maxdepth c))
+				  ((consp c) (eval c))
+				  (t (err x)))))
+      (let ((specs (cdr (assoc-if #'choosesplit simple-call-tree-window-splits)))
+	    orientation size n)
+	(when (functionp specs)
+	  (setq specs (funcall specs (get-buffer simple-call-tree-buffer-name))))
+	(setq orientation (car specs) size (cadr specs))
+	(split-window win
+		      (- (cond ((integerp size) size)
+			       ((floatp size)
+				(floor (* size
+					  (cl-case orientation
+					    ((left right) (window-width))
+					    ((above below) (window-height))
+					    (t (err x))))))
+			       (t (err x))))
+		      orientation)))))
+
+;; simple-call-tree-info: TODO  handle option to show code in separate frame
 (cl-defun simple-call-tree-visit-function (&optional arg)
   "Visit the source code corresponding to the current header.
 If the current header is a calling or toplevel function then visit that function.
@@ -2139,7 +2207,10 @@ the source buffer to the function."
          (parent (simple-call-tree-get-toplevel))
          (visitfunc (if simple-call-tree-inverted
                         thisfunc
-                      (or parent thisfunc))))
+                      (or parent thisfunc)))
+	 (even-window-heights nil)
+	 (old-split-window-function split-window-preferred-function)
+	 (split-window-preferred-function 'simple-call-tree-split-window))
     (pop-to-buffer buf)
     (goto-char pos)
     (unless (not (featurep 'fm))

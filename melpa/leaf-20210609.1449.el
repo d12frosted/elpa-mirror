@@ -5,8 +5,8 @@
 ;; Author: Naoya Yamashita <conao3@gmail.com>
 ;; Maintainer: Naoya Yamashita <conao3@gmail.com>
 ;; Keywords: lisp settings
-;; Package-Version: 20210603.1518
-;; Package-Commit: af0d4d8daaa323c34502d3cbea85ec8f70b06c00
+;; Package-Version: 20210609.1449
+;; Package-Commit: 024ea5f956756e46afca5548f0e5f9e499503d6c
 ;; Version: 4.4.8
 ;; URL: https://github.com/conao3/leaf.el
 ;; Package-Requires: ((emacs "24.1"))
@@ -638,7 +638,7 @@ see `alist-get'."
    (when load-file-name
      (format " at `%s'" load-file-name))))
 
-(defun leaf-this-file ()
+(defsubst leaf-this-file ()
   "Return path to this file."
   (or leaf--load-file-name
       load-file-name
