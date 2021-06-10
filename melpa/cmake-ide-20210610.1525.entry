@@ -1,5 +1,5 @@
 (cmake-ide .
-	   [(20210603 1522)
+	   [(20210610 1525)
 	    ((emacs
 	      (24 4))
 	     (cl-lib
@@ -11,7 +11,7 @@
 	     (s
 	      (1 11 0)))
 	    "Calls CMake to find out include paths and other compiler flags" single
-	    ((:commit . "9b1100bd8d65b961b7478f9c011f0f6eb8cfcdd9")
+	    ((:commit . "28dc4ab5bd01d99553901b4efeb7234280928b18")
 	     (:authors
 	      ("Atila Neves" . "atila.neves@gmail.com"))
 	     (:maintainer "Atila Neves" . "atila.neves@gmail.com")

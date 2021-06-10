@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
 ;; Version: 1.6.0
-;; Package-Version: 20210608.1739
-;; Package-Commit: 6e04ed364f16600ecb442445d6c227a8369da35f
+;; Package-Version: 20210610.1930
+;; Package-Commit: 21aea4674712cb9f248cb8651004dffad28f4c21
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -579,7 +579,7 @@ Display the true name when the file is a symlink."
   (let ((file (if (ivy--dirname-p candidate)
                   (propertize candidate 'face 'ivy-subdir)
                 candidate))
-        (type (file-symlink-p (expand-file-name candidate ivy--directory))))
+        (type (nth 0 (file-attributes (expand-file-name candidate ivy--directory)))))
     (if (stringp type)
         (concat file
                 (propertize (concat " -> " type)

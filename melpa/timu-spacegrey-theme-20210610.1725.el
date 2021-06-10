@@ -6,8 +6,8 @@
 ;; Maintainer: Aimé Bertrand <aime.bertrand@macowners.club>
 ;; Created: 06 Jun 2021
 ;; Keywords: faces themes
-;; Package-Version: 20210609.2006
-;; Package-Commit: 7ecd9cc1d0c4acf29c3d84d017c727b10bf6fdae
+;; Package-Version: 20210610.1725
+;; Package-Commit: 292a90fc47b1a3c46570161a1bcff7510114a900
 ;; Version: 1.2
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://gitlab.com/aimebertrand/timu-spacegrey-theme
@@ -1233,8 +1233,8 @@ Sourced other themes to get information about font faces for packages.")
    `(powerline-active1 ((,class (:inherit mode-line :background ,bg))))
    `(powerline-active2 ((,class (:inherit mode-line :foreground ,spacegrey8 :background ,bg))))
    `(powerline-inactive0 ((,class (:inherit mode-line-inactive :background ,spacegrey2))))
-   `(powerline-inactive1 ((,class (:inherit mode-line-inactive :background spacegrey2))))
-   `(powerline-inactive2 ((,class (:inherit mode-line-inactive :background spacegrey2))))
+   `(powerline-inactive1 ((,class (:inherit mode-line-inactive :background ,spacegrey2))))
+   `(powerline-inactive2 ((,class (:inherit mode-line-inactive :background ,spacegrey2))))
 
 ;;;; rainbow-delimiters
    `(rainbow-delimiters-depth-1-face ((,class (:foreground ,blue))))

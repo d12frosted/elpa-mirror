@@ -4,8 +4,8 @@
 
 ;; Author:  Atila Neves <atila.neves@gmail.com>
 ;; Version: 0.6
-;; Package-Version: 20210603.1522
-;; Package-Commit: 9b1100bd8d65b961b7478f9c011f0f6eb8cfcdd9
+;; Package-Version: 20210610.1525
+;; Package-Commit: 28dc4ab5bd01d99553901b4efeb7234280928b18
 ;; Package-Requires: ((emacs "24.4") (cl-lib "0.5") (seq "1.11") (levenshtein "0") (s "1.11.0"))
 ;; Keywords: languages
 ;; URL: http://github.com/atilaneves/cmake-ide
@@ -553,7 +553,7 @@ the object file's name just above."
   (if cmake-ide-header-search-other-file
       (when (and buffer (buffer-live-p buffer))
         (with-current-buffer buffer
-          (let ((other-file-name (ff-other-file-name)))
+          (let ((other-file-name (ff-find-the-other-file)))
             (if other-file-name (expand-file-name other-file-name) nil))))
     nil))
 

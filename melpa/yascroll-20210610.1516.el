@@ -6,8 +6,8 @@
 ;; Author: Tomohiro Matsuyama <m2ym.pub@gmail.com>
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Keywords: convenience
-;; Package-Version: 20210427.645
-;; Package-Commit: bd20a61ab7cd610625137c051c7f15e7404b7829
+;; Package-Version: 20210610.1516
+;; Package-Commit: 631faad69ade592679261afcf7022a2717292a6e
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/emacsorphanage/yascroll
@@ -125,14 +125,15 @@ not be displayed."
   :group 'yascroll)
 
 (defcustom yascroll:enabled-window-systems
-  '(nil x w32 ns pc mac)
+  '(nil x w32 ns pc mac pgtk)
   "A list of window-system's where yascroll can work."
   :type '(repeat (choice (const :tag "Termcap" nil)
                          (const :tag "X window" x)
                          (const :tag "MS-Windows" w32)
                          (const :tag "Macintosh Cocoa" ns)
                          (const :tag "Macintosh Emacs Port" mac)
-                         (const :tag "MS-DOS" pc)))
+                         (const :tag "MS-DOS" pc)
+                         (const :tag "Pure GTK3 Emacs Fork" pgtk)))
   :group 'yascroll)
 
 (defcustom yascroll:disabled-modes
@@ -245,16 +246,22 @@ Doc-this WINDOW-LINES, BUFFER-LINES and SCROLL-TOP."
 
 (defun yascroll:choose-scroll-bar ()
   "Choose scroll bar by fringe position."
-  (when (memq window-system yascroll:enabled-window-systems)
-    (cl-destructuring-bind (left-width right-width outside-margins &rest _)
-        (window-fringes)
-      (cl-loop for scroll-bar in (yascroll:listify yascroll:scroll-bar)
-               if (or (eq scroll-bar 'text-area)
-                      (and (eq scroll-bar 'left-fringe)
-                           (> left-width 0))
-                      (and (eq scroll-bar 'right-fringe)
-                           (> right-width 0)))
-               return scroll-bar))))
+  (if (memq window-system yascroll:enabled-window-systems)
+      (cl-destructuring-bind (left-width right-width outside-margins &rest _)
+          (window-fringes)
+        (cl-loop for scroll-bar in (yascroll:listify yascroll:scroll-bar)
+                 if (or (eq scroll-bar 'text-area)
+                        (and (eq scroll-bar 'left-fringe)
+                             (> left-width 0))
+                        (and (eq scroll-bar 'right-fringe)
+                             (> right-width 0)))
+                 return scroll-bar))
+
+    (display-warning
+     'yascroll
+     (format "Not enabling yascroll because window-system '%s' is not in '%s' %s"
+             window-system 'yascroll:enabled-window-systems yascroll:enabled-window-systems)
+     :warning)))
 
 (defun yascroll:show-scroll-bar-internal ()
   "Show scroll bar in buffer."
