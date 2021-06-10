@@ -6,9 +6,9 @@
 
 ;; Author: Natalie Weizenbaum <nex342@gmail.com>
 ;; URL: http://github.com/nex3/perspective-el
-;; Package-Version: 20210610.1
-;; Package-Commit: 9a5c5d81fb9c3065dc6ab5eaeb4b2c9733e772f9
-;; Package-Requires: ((emacs "25.3") (cl-lib "0.5"))
+;; Package-Version: 20210610.548
+;; Package-Commit: 68b13cef8435cae581850415cdda17e245dd0eae
+;; Package-Requires: ((emacs "24.4") (cl-lib "0.5"))
 ;; Version: 2.15
 ;; Created: 2008-03-05
 ;; By: Natalie Weizenbaum <nex342@gmail.com>
@@ -36,7 +36,6 @@
 (require 'rx)
 (require 'subr-x)
 (require 'thingatpt)
-(require 'xref)
 
 
 ;;; --- customization
@@ -678,7 +677,7 @@ If NORECORD is non-nil, do not update the
       (unless norecord
         (run-hooks 'persp-before-switch-hook))
       (persp-activate persp)
-      (persp--set-xref-marker-ring)
+      (when (fboundp 'persp--set-xref-marker-ring) (persp--set-xref-marker-ring))
       (unless norecord
         (setf (persp-last-switch-time persp) (current-time))
         (run-hooks 'persp-switch-hook))
@@ -865,7 +864,7 @@ perspective and no others are killed."
     (mapc 'persp-remove-buffer (persp-current-buffers))
     (setf (persp-killed (persp-curr)) t))
   (remhash name (perspectives-hash))
-  (remhash name persp--xref-marker-ring)
+  (when (boundp 'persp--xref-marker-ring) (remhash name persp--xref-marker-ring))
   (persp-update-modestring)
   (when (and (persp-last) (equal name (persp-name (persp-last))))
     (set-frame-parameter
@@ -1702,15 +1701,20 @@ restored."
 
 ;;; --- xref code
 
-(defvar persp--xref-marker-ring (make-hash-table :test 'equal))
+;; xref is not available in Emacs 24, so be careful:
+(when (require 'xref nil t)
 
-(defun persp--set-xref-marker-ring ()
-  "Set xref--marker-ring per persp."
-  (let ((persp-curr-name (persp-name (persp-curr))))
-    (unless (gethash persp-curr-name persp--xref-marker-ring)
-      (puthash persp-curr-name (make-ring xref-marker-ring-length)
-               persp--xref-marker-ring))
-    (setq xref--marker-ring (gethash persp-curr-name persp--xref-marker-ring))))
+  (defvar persp--xref-marker-ring (make-hash-table :test 'equal))
+
+  (defun persp--set-xref-marker-ring ()
+    "Set xref--marker-ring per persp."
+    (defvar xref-marker-ring-length)
+    (defvar xref--marker-ring)
+    (let ((persp-curr-name (persp-name (persp-curr))))
+      (unless (gethash persp-curr-name persp--xref-marker-ring)
+        (puthash persp-curr-name (make-ring xref-marker-ring-length)
+                 persp--xref-marker-ring))
+      (setq xref--marker-ring (gethash persp-curr-name persp--xref-marker-ring)))))
 
 
 ;;; --- done

@@ -7,8 +7,8 @@
 ;; Copyright (C) 1995-2019, Drew Adams, all rights reserved.
 ;; Created: Wed Oct 11 15:07:46 1995
 ;; Version: 0
-;; Package-Version: 20190710.1527
-;; Package-Commit: 9258a2b8362d737115cbd87618f947eadb140411
+;; Package-Version: 20210318.2248
+;; Package-Commit: 28557cb8d99b96eb509aaec1334c7cdda162517f
 ;; Package-Requires: ()
 ;; Last-Updated: Wed Jul 10 08:19:22 2019 (-0700)
 ;;           By: dradams
@@ -1100,10 +1100,12 @@
 ;;; Code:
 
 (eval-when-compile (unless (fboundp 'dolist) (require 'cl))) ;; dolist
+(require 'facemenu) ;; facemenu-add-face, facemenu-add-new-face, facemenu-menu
 (require 'easymenu) ;; easy-menu-add-item
 (require 'frame-fns nil t) ;; (no error if not found): flash-ding
 (require 'menu-bar+ nil t) ;; (no error if not found): menu-bar-edit-region-menu
 (when (> emacs-major-version 21) (require 'font-lock+ nil t)) ;; (no error if not found)
+(require 'facemenu+ nil t) ;; (no error if not found)
 
 ;; Quiet the byte-compiler for Emacs 20
 (defvar facemenu-mouse-menu)            ; In `facemenu+.el'

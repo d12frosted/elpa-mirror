@@ -2,6 +2,10 @@
 #+TITLE: PYIM 是一个 Emacs 中文输入法，支持全拼，双拼，五笔，仓颉 和 Rime 等
 #+AUTHOR: Feng Shu
 
+#+html: <a href="http://elpa.gnu.org/packages/pyim.html"><img alt="GNU ELPA" src="https://elpa.gnu.org/packages/pyim.svg"/></a>
+#+html: <a href="http://elpa.gnu.org/devel/pyim.html"><img alt="GNU-devel ELPA" src="https://elpa.gnu.org/devel/pyim.svg"/></a>
+#+html: <a href="https://melpa.org/#/pyim"><img alt="MELPA" src="https://melpa.org/packages/pyim-badge.svg"/></a>
+
 * Changlog
 
 ** <2021-04-28 Wed> 五笔输入法和仓颉输入法的不兼容更新
@@ -94,9 +98,9 @@ pyim 的目标是： *尽最大的努力成为一个好用的 Emacs 中文输入
 (define-key minibuffer-local-map (kbd "C-<return>") 'pyim-cregexp-convert-at-point)
 
 ;; 我使用全拼
-(setq pyim-default-scheme 'quanpin)
-;; (setq pyim-default-scheme 'wubi)
-;; (setq pyim-default-scheme 'cangjie)
+(pyim-default-scheme 'quanpin)
+;; (pyim-default-scheme 'wubi)
+;; (pyim-default-scheme 'cangjie)
 
 ;; pyim 探针设置
 ;; 设置 pyim 探针设置，这是 pyim 高级功能设置，可以实现 *无痛* 中英文切换 :-)
@@ -165,7 +169,7 @@ pyim 当前的默认的拼音词库是 pyim-basedict, 这个词库的词条量8�
 pyim 支持双拼输入模式，用户可以通过变量 `pyim-default-scheme' 来设定：
 
 #+begin_example
-(setq pyim-default-scheme 'pyim-shuangpin)
+(pyim-default-scheme 'pyim-shuangpin)
 #+end_example
 
 注意：
@@ -320,6 +324,10 @@ pyim 的选词框默认使用 *双行显示* 的样式，在一些特殊的情�
    [[file:snapshots/QR-code-for-author.jpg]]
 
 * Tips
+
+** 如何快速切换 scheme
+
+可以试试 pyim-default-scheme 命令。
 
 ** 关闭输入联想词功能 (默认开启)
 
