@@ -3,7 +3,7 @@
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (all-the-icons "4.0.0"))
 ;; Package-Version: 20210222.227
-;; Package-Commit: 4662b3a7b9244aa35aae2f469f87be4a44a6b1bb
+;; Package-Commit: 1995e0cd87eb7f3e9274a7a3053639f1c0f847cf
 ;; Version: 1.2.1
 ;; Keywords: hypermedia
 ;; homepage: https://github.com/stardiviner/org-link-beautify

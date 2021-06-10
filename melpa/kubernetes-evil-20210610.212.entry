@@ -1,0 +1,11 @@
+(kubernetes-evil .
+		 [(20210610 212)
+		  ((kubernetes
+		    (0 14 0))
+		   (evil
+		    (1 2 12)))
+		  "Kubernetes keybindings for evil-mode." single
+		  ((:commit . "a54c492f3e6e9cf09017d6e26180fb5b71202c47")
+		   (:authors
+		    ("Chris Barrett" . "chris+emacs@walrus.cool"))
+		   (:maintainer "Chris Barrett" . "chris+emacs@walrus.cool"))])
