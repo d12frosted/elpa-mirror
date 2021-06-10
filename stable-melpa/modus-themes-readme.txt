@@ -282,6 +282,7 @@ missing package or change you would like to see.
     prism (see "Note for prism.el" in the manual)
     proced
     prodigy
+    pulse
     quick-peek
     racket-mode
     rainbow-blocks
