@@ -1209,7 +1209,7 @@
 	       ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	      (:keywords "convenience"))])
  (ivy-posframe .
-	       [(0 6 0)
+	       [(0 6 1)
 		((emacs
 		  (26 0))
 		 (posframe
@@ -2535,6 +2535,16 @@
 	   (:authors
 	    ("Yuan Fu" . "casouri@gmail.com"))
 	   (:keywords "convenience" "text" "table"))])
+ (vc-hgcmd .
+	   [(1 14)
+	    ((emacs
+	      (25 1)))
+	    "VC mercurial backend that uses hg command server" tar
+	    ((:url . "https://github.com/muffinmad/emacs-vc-hgcmd")
+	     (:maintainer "Andrii Kolomoiets" . "andreyk.mad@gmail.com")
+	     (:authors
+	      ("Andrii Kolomoiets" . "andreyk.mad@gmail.com"))
+	     (:keywords "vc"))])
  (vcard .
 	[(0 2 1)
 	 ((emacs

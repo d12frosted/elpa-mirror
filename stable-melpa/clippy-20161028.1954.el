@@ -6,8 +6,6 @@
 ;; Maintainer: Matus Goljer <matus.goljer@gmail.com>
 ;; Created: 18 Mar 2013
 ;; Keywords: docs
-;; Package-Version: 20161028.1954
-;; Package-Commit: e77f6b63e54d74e243be98accad474e38f7e2a86
 ;; Version: 1.1
 ;; Package-Requires: ((pos-tip "1.0"))
 ;; URL: https://github.com/Fuco1/clippy.el
