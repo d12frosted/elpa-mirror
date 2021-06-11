@@ -4,8 +4,8 @@
 ;; Author: Juergen Hoetzel <juergen@hoetzel.info>
 ;;         Eric Marsden <emarsden@laas.fr>
 ;; URL: http://github.com/juergenhoetzel/babel
-;; Package-Version: 20210611.735
-;; Package-Commit: 369d3ef6e513e3948b48de4f21d06d8d455f3739
+;; Package-Version: 20210611.1352
+;; Package-Commit: a6028ec6780f22b5b15c4458d968f7b49be3974b
 ;; Version: 1.4
 ;; Keywords: translation, web
 
@@ -375,9 +375,8 @@ configuration."
   "Keymap used in Babel mode.")
 
 (defvar babel-backends
-  '(("Google" . google)
-    ("FreeTranslation" . free)
-    ("Apertium" .  apertium))
+  '(("Libretranslate" . libretranslate)
+    ("Google" . google))
   "List of backends for babel translations.")
 
 (defun babel-sentence-end()
@@ -780,64 +779,6 @@ If optional argument HERE is non-nil, insert version number at point."
         version-string))))
 
 
-;; FreeTranslation.com stuff ===========================================
-
-;; translation from  generic letter names to FreeTranslation names
-(defconst babel-free-languages
-  '(("en" . "English")
-    ("de" . "German")
-    ("it" . "Italian")
-    ("nl" . "Dutch")
-    ("pt" . "Portuguese")
-    ("es" . "Spanish")
-    ("no" . "Norwegian")
-    ("ru" . "Russian")
-    ("zh" . "SimplifiedChinese")
-    ("zh" . "TraditionalChinese")
-    ("fr" . "French")))
-
-;; those inter-language translations that FreeTranslation is capable of
-(defconst babel-free-translations
-  '("English/Spanish" "English/French" "English/German" "English/Italian" "English/Dutch" "English/Portuguese"
-    "English/Russian" "English/Norwegian" "English/SimplifiedChinese" "English/TraditionalChinese" "Spanish/English"
-    "French/English" "German/English" "Italian/English" "Dutch/English" "Portuguese/English"))
-
-(defun babel-free-translation (from to)
-  (let* ((ffrom (cdr (assoc from babel-free-languages)))
-         (fto   (cdr (assoc to babel-free-languages)))
-         (trans (concat ffrom "/" fto)))
-    (cl-find trans babel-free-translations :test #'string=)))
-
-(defun babel-free-fetch (msg from to)
-  "Connect to the FreeTranslation server and request the translation."
-  (let ((coding-system-for-read 'utf-8)
-	(translation (babel-free-translation from to))
-	(url "http://ets.freetranslation.com/"))
-    (unless translation
-      (error "FreeTranslation can't translate from %s to %s" from to))
-    (let* ((pairs `(("sequence"  . "core")
-                    ("mode"      . "html")
-                    ("template"  . "results_en-us.htm")
-                    ("srctext"   . ,msg)
-		    ("charset"   . "UTF-8")
-                    ("language"  . ,translation)))
-           (url-request-data (babel-form-encode pairs))
-	   (url-mime-accept-string "text/html")
-           (url-request-method "POST")
-	   (url-privacy-level '(email agent))
-	   (url-mime-charset-string "utf-8")
-           (url-request-extra-headers
-            '(("Content-Type" . "application/x-www-form-urlencoded")
-	      ("Referer" . "http://ets.freetranslation.com/"))))
-      (babel-url-retrieve url))))
-
-(defun babel-free-wash ()
-  "Extract the useful information from the HTML returned by FreeTranslation."
-  ;;; <textarea name="dsttext" cols="40" rows="6">hello together</textarea><br />
-  (if (not (babel-wash-regex "<textarea name=\"dsttext\"[^>]+>\\([^<]*\\)</textarea>"))
-      (error "FreeTranslations HTML has changed ; please look for a new version of babel.el")))
-
-
 ;; Google stuff ===========================================
 
 ;; Google supports all languages
@@ -873,12 +814,12 @@ If optional argument HERE is non-nil, insert version number at point."
 
 (defun json-get (json path)
   "Traverse a json object JSON along PATH."
-  (reduce (lambda (obj prop)
-            (cond ((symbolp prop) (cdr (assoc prop obj)))
-                  ((numberp prop) (when obj (aref obj prop)))
-                  (t (error "Type not suppored: %s" prop))))
-          path
-          :initial-value json))
+  (cl-reduce (lambda (obj prop)
+               (cond ((symbolp prop) (cdr (assoc prop obj)))
+                     ((numberp prop) (when obj (aref obj prop)))
+                     (t (error "Type not suppored: %s" prop))))
+             path
+             :initial-value json))
 
 (defun babel-google-wash ()
   "Extract the useful information from the HTML returned by google."
@@ -894,37 +835,58 @@ If optional argument HERE is non-nil, insert version number at point."
             (error "Api error: %s" err-text)
           (error "Google API has changed ; please look for a new version of babel.el"))))))
 
-(defconst babel-apertium-languages
-  '(("English" . "en")
-    ("Spanish" . "es")
-    ("Esperanto" . "eo")))
+;;  https://libretranslate.com/
 
- (defun babel-apertium-translation (from to)
-   (member (cons from to)
-	   '(("en" . "es")
-	     ("es" . "en")
-	     ("en" . "eo"))))
-
-(defun babel-apertium-fetch (msg from to)
-  "Connect to apertium server and request the translation."
-  (if (not (babel-apertium-translation from to))
-      (error "Apertium can't translate from %s to %s" from to)
-     (let* ((lang-pair (concat from "-" to))
-	    (pairs `(("pair" . ,lang-pair)
-		     ("text" . ,msg)))
-	    (request-url
-	     (concat "http://www.neuralnoise.com/ApertiumWeb2/xml.php?"
-		     (babel-form-encode pairs)))
-	    (url-request-method "GET"))
-       (babel-url-retrieve request-url))))
+;; FIXME: Use https://libretranslate.com/languages on first use
+(defconst babel-libretranslate-languages
+  '(("en" . "English")
+    ("ar" . "Arabic")
+    ("zh" . "Chinese")
+    ("fr" . "French")
+    ("de" . "German")
+    ("hi" . "Hindi")
+    ("ga" . "Irish")
+    ("it" . "Italian")
+    ("ja" . "Japanese")
+    ("ko" . "Korean")
+    ("pt" . "Portuguese")
+    ("ru" . "Russian")
+    ("es" . "Spanish")))
 
 
-(defun babel-apertium-wash ()
-  "Extract the useful information from the XML returned by apertium."
-   (if (not (babel-wash-regex
-	     "<translation>\\(\\(.\\|\n\\)*?\\)</translation>"))
-	     (error "Apertium XML has changed ; please look for a
-	     new version of babel.el")))
+(defun babel-libretranslate-translation (from to)
+  (and
+   (assoc from babel-libretranslate-languages)
+   (assoc to babel-libretranslate-languages)))
+
+;; FIXME: Custom URL
+(defun babel-libretranslate-fetch (msg from to)
+  "Connect to libretranslate.com and request the translation."
+  (unless (babel-libretranslate-translation from to)
+    (error "Libretranslate can't translate from %s to %s" from to))
+  (let* ((pairs `(("source" . ,from)
+		  ("target" . ,to)
+		  ("q" . ,msg)
+		  ("api_key" . "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx")))
+	 (url-request-extra-headers
+          '(("Content-Type" . "application/x-www-form-urlencoded")
+	    ("Origin" . "https://libretranslate.com")))
+	 (request-url "https://libretranslate.com/translate")
+	 (url-request-method "POST")
+	 (url-request-data (babel-form-encode pairs)))
+    (babel-url-retrieve request-url)))
+
+(defun babel-libretranslate-wash ()
+  "Parse JSON response of Libretranslate.com."
+  (beginning-of-buffer)
+  (let* ((json-object-type 'alist)
+	 (json-response (json-read))
+	 (translation (json-get json-response '(translatedText)))
+	 (error-message (json-get json-response '(error))))
+    (erase-buffer)
+    (when error-message
+      (error "Api error: %s" error-message))
+    (insert translation)))
 
 ;; TODO: ecs.freetranslation.com
 

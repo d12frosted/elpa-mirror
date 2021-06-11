@@ -5,9 +5,9 @@
 ;; Author: Naoya Yamashita <conao3@gmail.com>
 ;; Maintainer: Naoya Yamashita <conao3@gmail.com>
 ;; Keywords: lisp settings
-;; Package-Version: 20210610.1612
-;; Package-Commit: 58d432689a23f440573e5a095b8b4998d8c7bfd0
-;; Version: 4.4.8
+;; Package-Version: 20210611.1550
+;; Package-Commit: a4fd520f5c31f54e0797155866e0b35df277664e
+;; Version: 4.5.2
 ;; URL: https://github.com/conao3/leaf.el
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -91,6 +91,7 @@ Same as `list' but this macro does not evaluate any arguments."
    :tag               `(,@leaf--body)
    :file              `(,@leaf--body)
    :url               `(,@leaf--body)
+   :added             `(,@leaf--body)
 
    :emacs<            (when leaf--body `((when (version<  emacs-version ,leaf--value)  ,@leaf--body)))
    :emacs<=           (when leaf--body `((when (version<= emacs-version ,leaf--value)  ,@leaf--body)))
