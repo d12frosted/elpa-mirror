@@ -4,8 +4,8 @@
 
 ;; Author: Karthik Chikmagalur <karthik.chikmagalur@gmail.com>
 ;; Version: 0.30
-;; Package-Version: 20210602.847
-;; Package-Commit: 2be084a77cc2bc79ea7dc23edada161f4ff6dfdb
+;; Package-Version: 20210610.1945
+;; Package-Commit: 4c51182f5f5dd7a1ffa69fb994ef5ef6f9592686
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: convenience
 ;; URL: https://github.com/karthink/popper
@@ -237,7 +237,8 @@ directory as a fall back."
     (user-error "Cannot find project directory to group popups.
   Please install `project' or customize
   `popper-group-function'"))
-  (project-root (project-current)))
+  (when-let ((project (project-current)))
+    (project-root project)))
 
 (defun popper-group-by-projectile ()
   "Return an identifier to group popups.
