@@ -5,7 +5,7 @@ Source:  https://github.com/kiwanami/emacs-window-manager.git
 Updating /mnt/store/melpa/working/e2wm/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/e2wm/
-  to /tmp/e2wm6wQ3sa/e2wm-20170215.36
+  to /tmp/e2wmXOiL7Y/e2wm-20170215.36
     e2wm.el -> e2wm.el
     e2wm-vcs.el -> e2wm-vcs.el
 Created e2wm-20170215.36.tar containing:
@@ -13,44 +13,44 @@ Created e2wm-20170215.36.tar containing:
   e2wm-20170215.36/e2wm-pkg.el
   e2wm-20170215.36/e2wm-vcs.el
   e2wm-20170215.36/e2wm.el
-Built e2wm in 4.292s, finished at Thu Jun 10 23:03:51 2021
+Built e2wm in 4.524s, finished at Fri Jun 11 02:16:13 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  342 Jun 10 23:03 packages/e2wm-20170215.36.entry
-172K -rw-r--r-- 1 root root 170K Jun 10 23:03 packages/e2wm-20170215.36.tar
- 40K -rw-r--r-- 1 root root  38K Jun 10 19:48 packages/e2wm-R-20151230.926.el
-4.0K -rw-r--r-- 1 root root  371 Jun 10 19:48 packages/e2wm-R-20151230.926.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun 10 19:48 packages/e2wm-R-badge.svg
-4.0K -rw-r--r-- 1 root root  148 Jun 10 19:48 packages/e2wm-R-readme.txt
-4.0K -rw-r--r-- 1 root root  125 Jun 10 23:03 packages/e2wm-R.log
-4.0K -rw-r--r-- 1 root root 1.2K Jun 10 23:03 packages/e2wm-badge.svg
- 12K -rw-r--r-- 1 root root  12K Jun 10 19:48 packages/e2wm-bookmark-20151123.521.el
-4.0K -rw-r--r-- 1 root root  310 Jun 10 19:48 packages/e2wm-bookmark-20151123.521.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun 10 19:49 packages/e2wm-bookmark-badge.svg
-4.0K -rw-r--r-- 1 root root  199 Jun 10 19:48 packages/e2wm-bookmark-readme.txt
-4.0K -rw-r--r-- 1 root root  144 Jun 10 23:03 packages/e2wm-bookmark.log
-8.0K -rw-r--r-- 1 root root 5.3K Jun 10 19:48 packages/e2wm-direx-20200805.1414.el
-4.0K -rw-r--r-- 1 root root  453 Jun 10 19:48 packages/e2wm-direx-20200805.1414.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun 10 19:49 packages/e2wm-direx-badge.svg
-4.0K -rw-r--r-- 1 root root   65 Jun 10 19:48 packages/e2wm-direx-readme.txt
-4.0K -rw-r--r-- 1 root root  132 Jun 10 23:03 packages/e2wm-direx.log
- 12K -rw-r--r-- 1 root root 9.2K Jun 10 19:49 packages/e2wm-pkgex4pl-20140525.1047.el
-4.0K -rw-r--r-- 1 root root  434 Jun 10 19:49 packages/e2wm-pkgex4pl-20140525.1047.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun 10 19:49 packages/e2wm-pkgex4pl-badge.svg
-4.0K -rw-r--r-- 1 root root   68 Jun 10 19:49 packages/e2wm-pkgex4pl-readme.txt
-4.0K -rw-r--r-- 1 root root  141 Jun 10 23:03 packages/e2wm-pkgex4pl.log
-4.0K -rw-r--r-- 1 root root 4.0K Jun 10 23:03 packages/e2wm-readme.txt
-4.0K -rw-r--r-- 1 root root 2.1K Jun 10 19:49 packages/e2wm-svg-clock-20150106.1306.el
-4.0K -rw-r--r-- 1 root root  387 Jun 10 19:49 packages/e2wm-svg-clock-20150106.1306.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun 10 19:49 packages/e2wm-svg-clock-badge.svg
-4.0K -rw-r--r-- 1 root root   28 Jun 10 19:49 packages/e2wm-svg-clock-readme.txt
-   0 -rw-r--r-- 1 root root    0 Jun 10 23:03 packages/e2wm-svg-clock.log
- 16K -rw-r--r-- 1 root root  14K Jun 10 19:49 packages/e2wm-sww-20200805.1339.el
-4.0K -rw-r--r-- 1 root root  395 Jun 10 19:49 packages/e2wm-sww-20200805.1339.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun 10 19:49 packages/e2wm-sww-badge.svg
-4.0K -rw-r--r-- 1 root root   63 Jun 10 19:49 packages/e2wm-sww-readme.txt
-   0 -rw-r--r-- 1 root root    0 Jun 10 23:03 packages/e2wm-sww.log
- 60K -rw-r--r-- 1 root root  60K Jun 10 19:49 packages/e2wm-term-20200322.729.el
-4.0K -rw-r--r-- 1 root root  470 Jun 10 19:49 packages/e2wm-term-20200322.729.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun 10 19:49 packages/e2wm-term-badge.svg
-4.0K -rw-r--r-- 1 root root  617 Jun 10 19:49 packages/e2wm-term-readme.txt
-   0 -rw-r--r-- 1 root root    0 Jun 10 23:03 packages/e2wm-term.log
+4.0K -rw-r--r-- 1 root root  342 Jun 11 02:16 packages/e2wm-20170215.36.entry
+172K -rw-r--r-- 1 root root 170K Jun 11 02:16 packages/e2wm-20170215.36.tar
+ 40K -rw-r--r-- 1 root root  38K Jun 10 23:03 packages/e2wm-R-20151230.926.el
+4.0K -rw-r--r-- 1 root root  371 Jun 10 23:03 packages/e2wm-R-20151230.926.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 10 23:03 packages/e2wm-R-badge.svg
+4.0K -rw-r--r-- 1 root root  148 Jun 10 23:03 packages/e2wm-R-readme.txt
+4.0K -rw-r--r-- 1 root root  125 Jun 11 02:16 packages/e2wm-R.log
+4.0K -rw-r--r-- 1 root root 1.2K Jun 11 02:16 packages/e2wm-badge.svg
+ 12K -rw-r--r-- 1 root root  12K Jun 10 23:03 packages/e2wm-bookmark-20151123.521.el
+4.0K -rw-r--r-- 1 root root  310 Jun 10 23:03 packages/e2wm-bookmark-20151123.521.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 10 23:03 packages/e2wm-bookmark-badge.svg
+4.0K -rw-r--r-- 1 root root  199 Jun 10 23:03 packages/e2wm-bookmark-readme.txt
+4.0K -rw-r--r-- 1 root root  144 Jun 11 02:16 packages/e2wm-bookmark.log
+8.0K -rw-r--r-- 1 root root 5.3K Jun 10 23:03 packages/e2wm-direx-20200805.1414.el
+4.0K -rw-r--r-- 1 root root  453 Jun 10 23:03 packages/e2wm-direx-20200805.1414.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 10 23:03 packages/e2wm-direx-badge.svg
+4.0K -rw-r--r-- 1 root root   65 Jun 10 23:03 packages/e2wm-direx-readme.txt
+4.0K -rw-r--r-- 1 root root  132 Jun 11 02:16 packages/e2wm-direx.log
+ 12K -rw-r--r-- 1 root root 9.2K Jun 10 23:03 packages/e2wm-pkgex4pl-20140525.1047.el
+4.0K -rw-r--r-- 1 root root  434 Jun 10 23:03 packages/e2wm-pkgex4pl-20140525.1047.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 10 23:03 packages/e2wm-pkgex4pl-badge.svg
+4.0K -rw-r--r-- 1 root root   68 Jun 10 23:03 packages/e2wm-pkgex4pl-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jun 11 02:16 packages/e2wm-pkgex4pl.log
+4.0K -rw-r--r-- 1 root root 4.0K Jun 11 02:16 packages/e2wm-readme.txt
+4.0K -rw-r--r-- 1 root root 2.1K Jun 10 23:03 packages/e2wm-svg-clock-20150106.1306.el
+4.0K -rw-r--r-- 1 root root  387 Jun 10 23:03 packages/e2wm-svg-clock-20150106.1306.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 10 23:03 packages/e2wm-svg-clock-badge.svg
+4.0K -rw-r--r-- 1 root root   28 Jun 10 23:03 packages/e2wm-svg-clock-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jun 11 02:16 packages/e2wm-svg-clock.log
+ 16K -rw-r--r-- 1 root root  14K Jun 10 23:03 packages/e2wm-sww-20200805.1339.el
+4.0K -rw-r--r-- 1 root root  395 Jun 10 23:03 packages/e2wm-sww-20200805.1339.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 10 23:03 packages/e2wm-sww-badge.svg
+4.0K -rw-r--r-- 1 root root   63 Jun 10 23:03 packages/e2wm-sww-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jun 11 02:16 packages/e2wm-sww.log
+ 60K -rw-r--r-- 1 root root  60K Jun 10 23:03 packages/e2wm-term-20200322.729.el
+4.0K -rw-r--r-- 1 root root  470 Jun 10 23:03 packages/e2wm-term-20200322.729.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 10 23:03 packages/e2wm-term-badge.svg
+4.0K -rw-r--r-- 1 root root  617 Jun 10 23:03 packages/e2wm-term-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jun 11 02:16 packages/e2wm-term.log
