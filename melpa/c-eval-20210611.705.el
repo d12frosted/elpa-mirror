@@ -5,8 +5,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-c-eval
-;; Package-Version: 20210603.1716
-;; Package-Commit: f79be8354a3c01fddbf38b731aa8934421cef22f
+;; Package-Version: 20210611.705
+;; Package-Commit: fd129bfcb75475ac6820cc33862bd8efb8097fae
 ;; Package-Requires: ((emacs "24.5"))
 ;; Version: 0.1.0
 ;; Keywords: c languages
@@ -105,6 +105,11 @@
       (write-region (point-min) (point-max) (concat tmpdir "c-eval.c")))
     (with-current-buffer (get-buffer-create "*c-eval-output*")
       (display-buffer (current-buffer))
+      (let ((window (get-buffer-window (current-buffer))))
+        ;; Scroll window to the end to ensure output is visible.
+        (when window
+          (with-selected-window window
+            (goto-char (point-max)))))
       (setq default-directory tmpdir)
       (let ((p
              (start-process "c-eval"

@@ -4,8 +4,8 @@
 ;; Author: Juergen Hoetzel <juergen@hoetzel.info>
 ;;         Eric Marsden <emarsden@laas.fr>
 ;; URL: http://github.com/juergenhoetzel/babel
-;; Package-Version: 20210520.501
-;; Package-Commit: 1f68c175e8a3223f37858167239051e9ab9e540c
+;; Package-Version: 20210611.735
+;; Package-Commit: 369d3ef6e513e3948b48de4f21d06d8d455f3739
 ;; Version: 1.4
 ;; Keywords: translation, web
 
@@ -209,6 +209,7 @@
 ;;; Code:
 
 (require 'cl-lib)
+(require 'cl-seq)
 (require 'mm-url)
 (require 'json)
 (require 'easymenu)
@@ -405,7 +406,7 @@ function, not available on other emacsen"
       (let* ((url-show-status nil)
 	     (tmp (url-retrieve-synchronously url)))
 	(unless (cadr (url-insert tmp))
-	  (mm-decode-coding-region (point-min) (point-max) 'utf-8))
+	  (decode-coding-region (point-min) (point-max) 'utf-8))
 	(kill-buffer tmp)))))
 
 (defun babel-wash-regex (regex)
@@ -441,7 +442,7 @@ available in buffer `*babel*' even though that buffer is not
 automatically displayed."
   (interactive "sTranslate phrase: ")
   (let* ((completion-ignore-case t)
-         (from-suggest (or (first babel-from-history) (caar babel-languages)))
+         (from-suggest (or (car babel-from-history) (caar babel-languages)))
          (from-long
           (if accept-default-setup
               babel-preferred-from-language
@@ -450,10 +451,10 @@ automatically displayed."
                              nil
                              'babel-from-history
 			     from-suggest)))
-         (to-avail (remove* from-long babel-languages
+         (to-avail (cl-remove from-long babel-languages
                             :test #'(lambda (a b) (string= a (car b)))))
-         (to-suggest (or (first
-			  (remove* from-long babel-to-history
+         (to-suggest (or (car
+			  (cl-remove from-long babel-to-history
 				   :test #'string=))
 			 (caar to-avail)))
          (to-long
@@ -474,7 +475,7 @@ automatically displayed."
               (if accept-default-setup (caar backends)
                 (completing-read "Using translation service: "
                                  backends nil t
-                                 (cons (or (member (first babel-backend-history)
+                                 (cons (or (member (car babel-backend-history)
                                                    backends) (caar backends)) 0)
                                  'babel-backend-history)))
 	     (backend (symbol-name (cdr (assoc backend-str babel-backends))))
@@ -805,7 +806,7 @@ If optional argument HERE is non-nil, insert version number at point."
   (let* ((ffrom (cdr (assoc from babel-free-languages)))
          (fto   (cdr (assoc to babel-free-languages)))
          (trans (concat ffrom "/" fto)))
-    (find trans babel-free-translations :test #'string=)))
+    (cl-find trans babel-free-translations :test #'string=)))
 
 (defun babel-free-fetch (msg from to)
   "Connect to the FreeTranslation server and request the translation."
@@ -845,14 +846,14 @@ If optional argument HERE is non-nil, insert version number at point."
 
 (defun babel-google-translation (from to)
   ;; Google can always translate in both directions
-  (find to babel-google-languages
+  (cl-find to babel-google-languages
 	:test '(lambda (st el)
 		 (string= (cdr el) st))))
 
 (defun babel-google-fetch (msg from to)
   "Connect to google server and request the translation."
   ;; Google can always translate in both directions
-  (if (not (find to babel-google-languages
+  (if (not (cl-find to babel-google-languages
 	    :test '(lambda (st el)
 		     (string= (cdr el) st))))
       (error "Google can't translate from %s to %s" from to)
