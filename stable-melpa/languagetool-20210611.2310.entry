@@ -1,0 +1,13 @@
+(languagetool .
+	      [(20210611 2310)
+	       ((emacs
+		 (25 1))
+		(request
+		 (0 3 2)))
+	       "LanguageTool integration for grammar and spell check" tar
+	       ((:commit . "21ad874bc82cbc818cf0b34fc949a1e58efbb829")
+		(:authors
+		 ("Joar Buitrago" . "jebuitragoc@unal.edu.co"))
+		(:maintainer "Joar Buitrago" . "jebuitragoc@unal.edu.co")
+		(:keywords "grammar" "text" "docs" "tools" "convenience" "checker")
+		(:url . "https://github.com/PillFall/Emacs-LanguageTool.el"))])

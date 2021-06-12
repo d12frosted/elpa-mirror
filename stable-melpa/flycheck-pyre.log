@@ -1,0 +1,22 @@
+Package: flycheck-pyre
+Fetcher: github
+Source:  https://github.com/linnik/flycheck-pyre.git
+
+Updating /mnt/store/melpa/working/flycheck-pyre/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-pyre/
+  to /tmp/flycheck-pyrehL51Rj/flycheck-pyre-20190215.1222
+    flycheck-pyre.el -> flycheck-pyre.el
+    bin => bin
+Created flycheck-pyre-20190215.1222.tar containing:
+  flycheck-pyre-20190215.1222/
+  flycheck-pyre-20190215.1222/bin/
+  flycheck-pyre-20190215.1222/bin/pyrewrapper.sh
+  flycheck-pyre-20190215.1222/flycheck-pyre-pkg.el
+  flycheck-pyre-20190215.1222/flycheck-pyre.el
+Built flycheck-pyre in 3.868s, finished at Fri Jun 11 23:15:34 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  397 Jun 11 23:15 packages/flycheck-pyre-20190215.1222.entry
+ 12K -rw-r--r-- 1 root root  10K Jun 11 23:15 packages/flycheck-pyre-20190215.1222.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jun 11 23:15 packages/flycheck-pyre-badge.svg
+4.0K -rw-r--r-- 1 root root  467 Jun 11 23:15 packages/flycheck-pyre-readme.txt
