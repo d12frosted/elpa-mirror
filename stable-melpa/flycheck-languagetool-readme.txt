@@ -1,0 +1,2 @@
+
+Flycheck support for LanguageTool.

@@ -2,8 +2,8 @@
 
 ;; Author: Alvaro Ramirez
 ;; Package-Requires: ((emacs "25.1") (company "0.8.0") (org "9.2.0"))
-;; Package-Version: 20210609.1451
-;; Package-Commit: e1ff6f1696f286100e0468cfb03a23fa6f39de66
+;; Package-Version: 20210612.1527
+;; Package-Commit: d5d1898351177eaba8cbf58782afcae1d330f307
 ;; URL: https://github.com/xenodium/company-org-block
 ;; Version: 0.3
 
@@ -55,6 +55,11 @@
 	  (const :tag "inline: no edit mode invoked after insertion" inline)
 	  (const :tag "prompt: ask before entering edit mode" prompt)
 	  (const :tag "auto: automatically enter edit mode" auto)))
+
+(defcustom company-org-block-auto-indent t
+  "If t, automatically indent source block using `org-indent-line'.
+Otherwise, insert block at cursor position."
+  :type 'boolean)
 
 (defvar company-org-block--regexp "<\\([^ ]*\\)")
 
@@ -137,7 +142,8 @@ COMMAND and ARG are sent by company itself."
 #+begin_BEGIN
   |
 #+end_END"
-  (org-indent-line)
+  (when company-org-block-auto-indent
+    (org-indent-line))
   (insert (format "#+begin_%s\n" begin))
   (org-indent-line) ;; pushes to start of indented code-block.
   (insert (make-string org-edit-src-content-indentation ?\s))
