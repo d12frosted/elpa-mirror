@@ -5,8 +5,6 @@
 ;; Author: Rémi Attab <remi.attab@gmail.com>
 ;; Created: 2013-09-29
 ;; Version: 0.1
-;; Package-Version: 20171023.1422
-;; Package-Commit: abbec7f308f9ce97beeb57e459fff35f559b4c18
 ;; Keywords:: tools
 ;; License: BSD-2-clause
 ;; Url: https://github.com/RAttab/iasm-mode
