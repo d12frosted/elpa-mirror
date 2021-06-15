@@ -5,7 +5,7 @@ Source:  https://github.com/magit/forge.git
 Updating /mnt/store/melpa/working/forge/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/forge/
-  to /tmp/forgeskU4gk/forge-20210525.1345
+  to /tmp/forgeUsBBBa/forge-20210615.1040
   ! lisp/forge-bitbucket.el -> forge-bitbucket.el
   ! lisp/forge-commands.el -> forge-commands.el
   ! lisp/forge-core.el -> forge-core.el
@@ -25,33 +25,35 @@ Copying files (->) and directories (=>)
   ! lisp/forge-topic.el -> forge-topic.el
   ! lisp/forge.el -> forge.el
   ! docs/forge.texi -> forge.texi
-Created /tmp/forgeskU4gk/forge-20210525.1345/forge.info
-Created forge-20210525.1345.tar containing:
-  forge-20210525.1345/
-  forge-20210525.1345/dir
-  forge-20210525.1345/forge-bitbucket.el
-  forge-20210525.1345/forge-commands.el
-  forge-20210525.1345/forge-core.el
-  forge-20210525.1345/forge-db.el
-  forge-20210525.1345/forge-gitea.el
-  forge-20210525.1345/forge-github.el
-  forge-20210525.1345/forge-gitlab.el
-  forge-20210525.1345/forge-gogs.el
-  forge-20210525.1345/forge-issue.el
-  forge-20210525.1345/forge-list.el
-  forge-20210525.1345/forge-notify.el
-  forge-20210525.1345/forge-pkg.el
-  forge-20210525.1345/forge-post.el
-  forge-20210525.1345/forge-pullreq.el
-  forge-20210525.1345/forge-repo.el
-  forge-20210525.1345/forge-revnote.el
-  forge-20210525.1345/forge-semi.el
-  forge-20210525.1345/forge-topic.el
-  forge-20210525.1345/forge.el
-  forge-20210525.1345/forge.info
-Built forge in 9.620s, finished at Tue Jun 15 10:32:49 2021
+Created /tmp/forgeUsBBBa/forge-20210615.1040/forge.info
+Created forge-20210615.1040.tar containing:
+  forge-20210615.1040/
+  forge-20210615.1040/dir
+  forge-20210615.1040/forge-bitbucket.el
+  forge-20210615.1040/forge-commands.el
+  forge-20210615.1040/forge-core.el
+  forge-20210615.1040/forge-db.el
+  forge-20210615.1040/forge-gitea.el
+  forge-20210615.1040/forge-github.el
+  forge-20210615.1040/forge-gitlab.el
+  forge-20210615.1040/forge-gogs.el
+  forge-20210615.1040/forge-issue.el
+  forge-20210615.1040/forge-list.el
+  forge-20210615.1040/forge-notify.el
+  forge-20210615.1040/forge-pkg.el
+  forge-20210615.1040/forge-post.el
+  forge-20210615.1040/forge-pullreq.el
+  forge-20210615.1040/forge-repo.el
+  forge-20210615.1040/forge-revnote.el
+  forge-20210615.1040/forge-semi.el
+  forge-20210615.1040/forge-topic.el
+  forge-20210615.1040/forge.el
+  forge-20210615.1040/forge.info
+Built forge in 10.459s, finished at Tue Jun 15 19:59:24 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  534 Jun 15 10:32 packages/forge-20210525.1345.entry
-320K -rw-r--r-- 1 root root 320K Jun 15 10:32 packages/forge-20210525.1345.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jun 15 10:32 packages/forge-badge.svg
-4.0K -rw-r--r-- 1 root root  314 Jun 15 10:32 packages/forge-readme.txt
+4.0K -rw-r--r-- 1 root root  534 Jun 15 16:50 packages/forge-20210525.1345.entry
+320K -rw-r--r-- 1 root root 320K Jun 15 16:50 packages/forge-20210525.1345.tar
+4.0K -rw-r--r-- 1 root root  534 Jun 15 19:59 packages/forge-20210615.1040.entry
+320K -rw-r--r-- 1 root root 320K Jun 15 19:59 packages/forge-20210615.1040.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jun 15 19:59 packages/forge-badge.svg
+4.0K -rw-r--r-- 1 root root  314 Jun 15 19:59 packages/forge-readme.txt

@@ -1,0 +1,12 @@
+(elisp-refs .
+	    [(20210615 1624)
+	     ((dash
+	       (2 12 0))
+	      (s
+	       (1 11 0)))
+	     "find callers of elisp functions or macros" single
+	     ((:commit . "fdde21e34b1272783d566d8230b5ed2dc4749048")
+	      (:authors
+	       ("Wilfred Hughes" . "me@wilfred.me.uk"))
+	      (:maintainer "Wilfred Hughes" . "me@wilfred.me.uk")
+	      (:keywords "lisp"))])
