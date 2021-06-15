@@ -17,6 +17,8 @@
 
 ;; Author: John Allen <jallen@fb.com>, Wilfred Hughes <me@wilfred.me.uk>
 ;; Version: 1.2.0
+;; Package-Version: 20210519.108
+;; Package-Commit: f9315be69954b95b6a3ceaa37f31a88f8369a59f
 ;; Package-Requires: ((emacs "25.1") (s "1.11.0"))
 ;; URL: https://github.com/hhvm/hack-mode
 
