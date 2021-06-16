@@ -5,7 +5,7 @@ Source:  https://github.com/zevlg/telega.el.git
 Updating /mnt/store/melpa/working/telega/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/telega/
-  to /tmp/telega6e7fWQ/telega-20210615.858
+  to /tmp/telega7JvhKc/telega-20210616.750
     telega-chat.el -> telega-chat.el
     telega-company.el -> telega-company.el
     telega-core.el -> telega-core.el
@@ -39,115 +39,117 @@ Copying files (->) and directories (=>)
     server => server
     contrib => contrib
     Makefile -> Makefile
-Created telega-20210615.858.tar containing:
-  telega-20210615.858/
-  telega-20210615.858/Makefile
-  telega-20210615.858/contrib/
-  telega-20210615.858/contrib/ol-telega.el
-  telega-20210615.858/contrib/telega-alert.el
-  telega-20210615.858/contrib/telega-dashboard.el
-  telega-20210615.858/contrib/telega-dired-dwim.el
-  telega-20210615.858/contrib/telega-live-location.el
-  telega-20210615.858/contrib/telega-mnz.el
-  telega-20210615.858/contrib/telega-status-history.el
-  telega-20210615.858/contrib/telega-stories.el
-  telega-20210615.858/contrib/telega-transient.el
-  telega-20210615.858/contrib/telega-url-shorten.el
-  telega-20210615.858/etc/
-  telega-20210615.858/etc/Dockerfile
-  telega-20210615.858/etc/TODO-tdlib-1.4.0.org
-  telega-20210615.858/etc/TODO-tdlib-1.5.0.org
-  telega-20210615.858/etc/TODO-tdlib-1.6.0.org
-  telega-20210615.858/etc/TODO-tdlib-1.7.0.org
-  telega-20210615.858/etc/asound.conf
-  telega-20210615.858/etc/chat_emacs_telega.svg
-  telega-20210615.858/etc/emacs-stories.svg
-  telega-20210615.858/etc/emacs-stories64.png
-  telega-20210615.858/etc/emojis.alist
-  telega-20210615.858/etc/fa-brands/
-  telega-20210615.858/etc/fa-brands/github-octocat.svg
-  telega-20210615.858/etc/fa-brands/github.svg
-  telega-20210615.858/etc/fa-brands/gitlab-rgb.svg
-  telega-20210615.858/etc/fa-brands/gitlab.svg
-  telega-20210615.858/etc/fa-brands/instagram-rgb.svg
-  telega-20210615.858/etc/fa-brands/instagram.svg
-  telega-20210615.858/etc/fa-brands/wikipedia-rgb.svg
-  telega-20210615.858/etc/fa-brands/wikipedia.svg
-  telega-20210615.858/etc/fa-brands/youtube-rgb.svg
-  telega-20210615.858/etc/fa-brands/youtube.svg
-  telega-20210615.858/etc/guix.scm
-  telega-20210615.858/etc/langs/
-  telega-20210615.858/etc/langs/en.plist
-  telega-20210615.858/etc/langs/zh.plist
-  telega-20210615.858/etc/sounds/
-  telega-20210615.858/etc/sounds/call_busy.mp3
-  telega-20210615.858/etc/sounds/call_connect.mp3
-  telega-20210615.858/etc/sounds/call_end.mp3
-  telega-20210615.858/etc/sounds/call_incoming.mp3
-  telega-20210615.858/etc/sounds/call_outgoing.mp3
-  telega-20210615.858/etc/sounds/msg_incoming.mp3
-  telega-20210615.858/etc/td-api-1.3.0.tl
-  telega-20210615.858/etc/td-api-1.4.0.tl
-  telega-20210615.858/etc/td-api-1.5.0.tl
-  telega-20210615.858/etc/td-api-1.6.0.tl
-  telega-20210615.858/etc/td-api-1.6.6.tl
-  telega-20210615.858/etc/td-api-1.7.0.tl
-  telega-20210615.858/etc/td-api-1.7.3.tl
-  telega-20210615.858/etc/telega-logo.png
-  telega-20210615.858/etc/telega-logo.svg
-  telega-20210615.858/etc/telega-logo.xpm
-  telega-20210615.858/etc/telega-logo64.png
-  telega-20210615.858/etc/telega-make.el
-  telega-20210615.858/etc/telegram-logo.png
-  telega-20210615.858/etc/telegram-logo.svg
-  telega-20210615.858/etc/telegram-logo.xpm
-  telega-20210615.858/etc/telegram-msgin.wav
-  telega-20210615.858/etc/ton-lite-client-test1.config.json
-  telega-20210615.858/etc/tonlib_api.tl
-  telega-20210615.858/etc/verified.svg
-  telega-20210615.858/server/
-  telega-20210615.858/server/Makefile
-  telega-20210615.858/server/run_tests.py
-  telega-20210615.858/server/telega-appindicator.c
-  telega-20210615.858/server/telega-dat.c
-  telega-20210615.858/server/telega-dat.h
-  telega-20210615.858/server/telega-emoji.h
-  telega-20210615.858/server/telega-pngext.c
-  telega-20210615.858/server/telega-server.c
-  telega-20210615.858/server/telega-voip.cpp
-  telega-20210615.858/telega-chat.el
-  telega-20210615.858/telega-company.el
-  telega-20210615.858/telega-core.el
-  telega-20210615.858/telega-customize.el
-  telega-20210615.858/telega-ffplay.el
-  telega-20210615.858/telega-filter.el
-  telega-20210615.858/telega-folders.el
-  telega-20210615.858/telega-i18n.el
-  telega-20210615.858/telega-info.el
-  telega-20210615.858/telega-inline.el
-  telega-20210615.858/telega-ins.el
-  telega-20210615.858/telega-media.el
-  telega-20210615.858/telega-modes.el
-  telega-20210615.858/telega-msg.el
-  telega-20210615.858/telega-notifications.el
-  telega-20210615.858/telega-obsolete.el
-  telega-20210615.858/telega-pkg.el
-  telega-20210615.858/telega-root.el
-  telega-20210615.858/telega-server.el
-  telega-20210615.858/telega-sort.el
-  telega-20210615.858/telega-sticker.el
-  telega-20210615.858/telega-tdlib-events.el
-  telega-20210615.858/telega-tdlib.el
-  telega-20210615.858/telega-tme.el
-  telega-20210615.858/telega-user.el
-  telega-20210615.858/telega-util.el
-  telega-20210615.858/telega-voip.el
-  telega-20210615.858/telega-vvnote.el
-  telega-20210615.858/telega-webpage.el
-  telega-20210615.858/telega.el
-Built telega in 4.035s, finished at Wed Jun 16 02:59:26 2021
+Created telega-20210616.750.tar containing:
+  telega-20210616.750/
+  telega-20210616.750/Makefile
+  telega-20210616.750/contrib/
+  telega-20210616.750/contrib/ol-telega.el
+  telega-20210616.750/contrib/telega-alert.el
+  telega-20210616.750/contrib/telega-dashboard.el
+  telega-20210616.750/contrib/telega-dired-dwim.el
+  telega-20210616.750/contrib/telega-live-location.el
+  telega-20210616.750/contrib/telega-mnz.el
+  telega-20210616.750/contrib/telega-status-history.el
+  telega-20210616.750/contrib/telega-stories.el
+  telega-20210616.750/contrib/telega-transient.el
+  telega-20210616.750/contrib/telega-url-shorten.el
+  telega-20210616.750/etc/
+  telega-20210616.750/etc/Dockerfile
+  telega-20210616.750/etc/TODO-tdlib-1.4.0.org
+  telega-20210616.750/etc/TODO-tdlib-1.5.0.org
+  telega-20210616.750/etc/TODO-tdlib-1.6.0.org
+  telega-20210616.750/etc/TODO-tdlib-1.7.0.org
+  telega-20210616.750/etc/asound.conf
+  telega-20210616.750/etc/chat_emacs_telega.svg
+  telega-20210616.750/etc/emacs-stories.svg
+  telega-20210616.750/etc/emacs-stories64.png
+  telega-20210616.750/etc/emojis.alist
+  telega-20210616.750/etc/fa-brands/
+  telega-20210616.750/etc/fa-brands/github-octocat.svg
+  telega-20210616.750/etc/fa-brands/github.svg
+  telega-20210616.750/etc/fa-brands/gitlab-rgb.svg
+  telega-20210616.750/etc/fa-brands/gitlab.svg
+  telega-20210616.750/etc/fa-brands/instagram-rgb.svg
+  telega-20210616.750/etc/fa-brands/instagram.svg
+  telega-20210616.750/etc/fa-brands/wikipedia-rgb.svg
+  telega-20210616.750/etc/fa-brands/wikipedia.svg
+  telega-20210616.750/etc/fa-brands/youtube-rgb.svg
+  telega-20210616.750/etc/fa-brands/youtube.svg
+  telega-20210616.750/etc/guix.scm
+  telega-20210616.750/etc/langs/
+  telega-20210616.750/etc/langs/en.plist
+  telega-20210616.750/etc/langs/zh.plist
+  telega-20210616.750/etc/sounds/
+  telega-20210616.750/etc/sounds/call_busy.mp3
+  telega-20210616.750/etc/sounds/call_connect.mp3
+  telega-20210616.750/etc/sounds/call_end.mp3
+  telega-20210616.750/etc/sounds/call_incoming.mp3
+  telega-20210616.750/etc/sounds/call_outgoing.mp3
+  telega-20210616.750/etc/sounds/msg_incoming.mp3
+  telega-20210616.750/etc/td-api-1.3.0.tl
+  telega-20210616.750/etc/td-api-1.4.0.tl
+  telega-20210616.750/etc/td-api-1.5.0.tl
+  telega-20210616.750/etc/td-api-1.6.0.tl
+  telega-20210616.750/etc/td-api-1.6.6.tl
+  telega-20210616.750/etc/td-api-1.7.0.tl
+  telega-20210616.750/etc/td-api-1.7.3.tl
+  telega-20210616.750/etc/telega-logo.png
+  telega-20210616.750/etc/telega-logo.svg
+  telega-20210616.750/etc/telega-logo.xpm
+  telega-20210616.750/etc/telega-logo64.png
+  telega-20210616.750/etc/telega-make.el
+  telega-20210616.750/etc/telegram-logo.png
+  telega-20210616.750/etc/telegram-logo.svg
+  telega-20210616.750/etc/telegram-logo.xpm
+  telega-20210616.750/etc/telegram-msgin.wav
+  telega-20210616.750/etc/ton-lite-client-test1.config.json
+  telega-20210616.750/etc/tonlib_api.tl
+  telega-20210616.750/etc/verified.svg
+  telega-20210616.750/server/
+  telega-20210616.750/server/Makefile
+  telega-20210616.750/server/run_tests.py
+  telega-20210616.750/server/telega-appindicator.c
+  telega-20210616.750/server/telega-dat.c
+  telega-20210616.750/server/telega-dat.h
+  telega-20210616.750/server/telega-emoji.h
+  telega-20210616.750/server/telega-pngext.c
+  telega-20210616.750/server/telega-server.c
+  telega-20210616.750/server/telega-voip.cpp
+  telega-20210616.750/telega-chat.el
+  telega-20210616.750/telega-company.el
+  telega-20210616.750/telega-core.el
+  telega-20210616.750/telega-customize.el
+  telega-20210616.750/telega-ffplay.el
+  telega-20210616.750/telega-filter.el
+  telega-20210616.750/telega-folders.el
+  telega-20210616.750/telega-i18n.el
+  telega-20210616.750/telega-info.el
+  telega-20210616.750/telega-inline.el
+  telega-20210616.750/telega-ins.el
+  telega-20210616.750/telega-media.el
+  telega-20210616.750/telega-modes.el
+  telega-20210616.750/telega-msg.el
+  telega-20210616.750/telega-notifications.el
+  telega-20210616.750/telega-obsolete.el
+  telega-20210616.750/telega-pkg.el
+  telega-20210616.750/telega-root.el
+  telega-20210616.750/telega-server.el
+  telega-20210616.750/telega-sort.el
+  telega-20210616.750/telega-sticker.el
+  telega-20210616.750/telega-tdlib-events.el
+  telega-20210616.750/telega-tdlib.el
+  telega-20210616.750/telega-tme.el
+  telega-20210616.750/telega-user.el
+  telega-20210616.750/telega-util.el
+  telega-20210616.750/telega-voip.el
+  telega-20210616.750/telega-vvnote.el
+  telega-20210616.750/telega-webpage.el
+  telega-20210616.750/telega.el
+Built telega in 4.162s, finished at Wed Jun 16 09:16:44 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  399 Jun 16 02:59 packages/telega-20210615.858.entry
-4.7M -rw-r--r-- 1 root root 4.7M Jun 16 02:59 packages/telega-20210615.858.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jun 16 02:59 packages/telega-badge.svg
-4.0K -rw-r--r-- 1 root root   88 Jun 16 02:59 packages/telega-readme.txt
+4.0K -rw-r--r-- 1 root root  399 Jun 16 06:06 packages/telega-20210615.858.entry
+4.7M -rw-r--r-- 1 root root 4.7M Jun 16 06:06 packages/telega-20210615.858.tar
+4.0K -rw-r--r-- 1 root root  399 Jun 16 09:16 packages/telega-20210616.750.entry
+4.7M -rw-r--r-- 1 root root 4.7M Jun 16 09:16 packages/telega-20210616.750.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jun 16 09:16 packages/telega-badge.svg
+4.0K -rw-r--r-- 1 root root   88 Jun 16 09:16 packages/telega-readme.txt
