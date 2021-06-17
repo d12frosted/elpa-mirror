@@ -8,14 +8,15 @@ harder to type unicode symbols, which often makes it more difficult
 to type, or impossible if you don't know the symbols names/numbers.
 
 This package tries to make it easier to use kaomojis, by using
-`completing-read' and different categories. The main user functions
-are therefore `insert-kaomoji' to insert a kaomoji at point, and
-`insert-kaomoji-into-kill-ring' to push a kaomoji onto the kill ring.
+`completing-read' and different categories.  The main user
+functions are therefore `insert-kaomoji' to insert a kaomoji at
+point, and `insert-kaomoji-into-kill-ring' to push a kaomoji onto
+the kill ring.
 
 The emoticons aren't stored in this file, but (usually) in the
 KAOMOJIS file that should be in the same directory as this source
-file. This file is parsed by `insert-kaomoji--parse-buffer' and then
-stored in `insert-kaomoji-alist'.
+file.  This file is parsed during byte-compilation and then stored
+in `insert-kaomoji-alist'.
 
 The kaomojis in KAOMOJIS have been selected and collected from these
 sites:
