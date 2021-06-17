@@ -2,7 +2,7 @@
 
 ;; Keywords: languages
 ;; Package-Version: 20200212.1903
-;; Package-Commit: 634db2a77a268889051f49074c984582941bf196
+;; Package-Commit: 8327f12ad9000aa01ee8d5e3c3af9ee6e36b5325
 ;; Package-Requires: ((emacs "24"))
 
 ;; Licensed to the Apache Software Foundation (ASF) under one
