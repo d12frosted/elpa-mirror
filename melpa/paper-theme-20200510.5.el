@@ -3,7 +3,7 @@
 ;;
 ;; Author: Göktuğ Kayaalp
 ;; Keywords: theme paper
-;; Package-Commit: 76fbdc0ce70074aebcb618e7b810991407e8c2f0
+;; Package-Commit: 8a3b529d5ece261a8847298ea03ed35615cc9bfa
 ;; Package-Version: 20200510.5
 ;; Package-X-Original-Version: 1.0.1
 ;; Package-Requires: ((emacs "24"))
