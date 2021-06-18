@@ -5,8 +5,8 @@
 ;; Author: USAMI Kenta <tadsan@zonu.me>
 ;; Created: 15 Mar 2018
 ;; Version: 0.5.0
-;; Package-Version: 20210617.1036
-;; Package-Commit: 9350e23969bf26de5b240d5eb7f5ac8d7c4889b6
+;; Package-Version: 20210617.2237
+;; Package-Commit: 56617fa87c9bec037d4e4a0a143b7d70a989c082
 ;; Keywords: tools, php
 ;; Homepage: https://github.com/emacs-php/phpstan.el
 ;; Package-Requires: ((emacs "24.3") (flycheck "26") (phpstan "0.5.0"))
@@ -50,7 +50,8 @@
   "Return path to phpstan configure file, and set buffer execute in side effect."
   (let ((enabled (phpstan-enabled)))
     (prog1 enabled
-      (when (and phpstan-flycheck-auto-set-executable
+      (when (and enabled
+                 phpstan-flycheck-auto-set-executable
                  (null (bound-and-true-p flycheck-phpstan-executable))
                  (or (stringp phpstan-executable)
                      (eq 'docker phpstan-executable)
@@ -59,7 +60,7 @@
                      (and (stringp (car-safe phpstan-executable))
                           (listp (cdr-safe phpstan-executable)))
                      (null phpstan-executable)))
-        (setq-local flycheck-phpstan-executable (nth 0 (phpstan-get-executable)))))))
+        (setq-local flycheck-phpstan-executable (car (phpstan-get-executable-and-args)))))))
 
 (flycheck-define-checker phpstan
   "PHP static analyzer based on PHPStan."

@@ -5,8 +5,8 @@
 ;; Author: USAMI Kenta <tadsan@zonu.me>
 ;; Created: 31 Mar 2020
 ;; Version: 0.5.0
-;; Package-Version: 20201122.950
-;; Package-Commit: 9350e23969bf26de5b240d5eb7f5ac8d7c4889b6
+;; Package-Version: 20210617.2223
+;; Package-Commit: 56617fa87c9bec037d4e4a0a143b7d70a989c082
 ;; Keywords: tools, php
 ;; Homepage: https://github.com/emacs-php/phpstan.el
 ;; Package-Requires: ((emacs "26.1") (phpstan "0.5.0"))
@@ -92,7 +92,7 @@
 
 (defun flymake-phpstan (report-fn &rest _ignored-args)
   "Flymake backend for PHPStan report using REPORT-FN."
-  (let ((command-args (phpstan-get-command-args)))
+  (let ((command-args (phpstan-get-command-args t)))
     (unless (car command-args)
       (user-error "Cannot find a phpstan executable command"))
     (when (process-live-p flymake-phpstan--proc)

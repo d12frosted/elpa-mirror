@@ -6,8 +6,8 @@
 ;; Author: Tomohiro Matsuyama <m2ym.pub@gmail.com>
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Keywords: convenience
-;; Package-Version: 20210610.1516
-;; Package-Commit: 631faad69ade592679261afcf7022a2717292a6e
+;; Package-Version: 20210617.1947
+;; Package-Commit: 0e0fb02a91960cbd821272216912c4a068648703
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/emacsorphanage/yascroll
@@ -348,7 +348,7 @@ to the selected window if the value is nil."
 
 (defun yascroll:after-window-scroll (window start)
   "After WINDOW scrools from START."
-  (yascroll:safe-show-scroll-bar window))
+  (yascroll:safe-show-scroll-bar))
 
 (defun yascroll:after-window-configuration-change ()
   "Window configure change function call."
