@@ -66,6 +66,7 @@ Supported languages:
 - Terraform (terraform fmt)
 - TOML (prettier prettier-plugin-toml)
 - TypeScript/TSX (prettier)
+- V (v fmt)
 - Verilog (iStyle)
 - YAML (prettier)
 
