@@ -524,11 +524,11 @@
 	    (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
 	    (:url . "https://savannah.nongnu.org/projects/delight"))])
  (devdocs .
-	  [(0 1)
+	  [(0 2)
 	   ((emacs
 	     (27 1)))
 	   "Emacs viewer for DevDocs" tar
-	   ((:url . "https://github.com/astoff/devdocs")
+	   ((:url . "https://github.com/astoff/devdocs.el")
 	    (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	    (:authors
 	     ("Augusto Stoffel" . "arstoffel@gmail.com"))
