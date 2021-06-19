@@ -3,7 +3,7 @@
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/org-ql
 ;; Package-Version: 20210608.1556
-;; Package-Commit: 88151b7f0022e08b400013eee33a2aba56e333e7
+;; Package-Commit: 87b3d0bd972c357d5d80005e99e012209e6c0d2f
 ;; Version: 0.6-pre
 ;; Package-Requires: ((emacs "26.1") (dash "2.18.1") (s "1.12.0") (helm-org "1.0") (org-ql "0.6-pre"))
 

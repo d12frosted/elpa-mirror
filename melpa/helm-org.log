@@ -4,29 +4,29 @@ Source:  https://github.com/emacs-helm/helm-org.git
 
 Updating /mnt/store/melpa/working/helm-org/
 Note: helm-org :files spec is equivalent to the default.
-Built helm-org in 4.294s, finished at Sat Jun 19 01:03:38 2021
+Built helm-org in 4.300s, finished at Sat Jun 19 17:03:49 2021
  ✓ Success:
- 24K -rw-r--r-- 1 root root  22K Jun 19 01:03 packages/helm-org-20210324.1927.el
-4.0K -rw-r--r-- 1 root root  408 Jun 19 01:03 packages/helm-org-20210324.1927.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun 19 01:03 packages/helm-org-badge.svg
- 24K -rw-r--r-- 1 root root  21K Jun 18 21:54 packages/helm-org-multi-wiki-20210228.1853.el
-4.0K -rw-r--r-- 1 root root  600 Jun 18 21:54 packages/helm-org-multi-wiki-20210228.1853.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun 18 21:54 packages/helm-org-multi-wiki-badge.svg
-4.0K -rw-r--r-- 1 root root   58 Jun 18 21:54 packages/helm-org-multi-wiki-readme.txt
-4.0K -rw-r--r-- 1 root root  155 Jun 19 01:03 packages/helm-org-multi-wiki.log
-8.0K -rw-r--r-- 1 root root 7.7K Jun 18 21:54 packages/helm-org-ql-20210608.1556.el
-4.0K -rw-r--r-- 1 root root  448 Jun 18 21:54 packages/helm-org-ql-20210608.1556.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun 18 21:54 packages/helm-org-ql-badge.svg
-4.0K -rw-r--r-- 1 root root  293 Jun 18 21:54 packages/helm-org-ql-readme.txt
-4.0K -rw-r--r-- 1 root root  134 Jun 19 01:03 packages/helm-org-ql.log
-4.0K -rw-r--r-- 1 root root   48 Jun 19 01:03 packages/helm-org-readme.txt
-8.0K -rw-r--r-- 1 root root 4.5K Jun 18 21:54 packages/helm-org-recent-headings-20201213.837.el
-4.0K -rw-r--r-- 1 root root  598 Jun 18 21:54 packages/helm-org-recent-headings-20201213.837.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun 18 21:54 packages/helm-org-recent-headings-badge.svg
-4.0K -rw-r--r-- 1 root root   73 Jun 18 21:54 packages/helm-org-recent-headings-readme.txt
-4.0K -rw-r--r-- 1 root root  173 Jun 19 01:03 packages/helm-org-recent-headings.log
- 84K -rw-r--r-- 1 root root  82K Jun 18 21:54 packages/helm-org-rifle-20200512.1943.el
-4.0K -rw-r--r-- 1 root root  468 Jun 18 21:54 packages/helm-org-rifle-20200512.1943.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jun 18 21:54 packages/helm-org-rifle-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jun 18 21:54 packages/helm-org-rifle-readme.txt
-4.0K -rw-r--r-- 1 root root  143 Jun 19 01:03 packages/helm-org-rifle.log
+ 24K -rw-r--r-- 1 root root  22K Jun 19 17:03 packages/helm-org-20210324.1927.el
+4.0K -rw-r--r-- 1 root root  408 Jun 19 17:03 packages/helm-org-20210324.1927.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 19 17:03 packages/helm-org-badge.svg
+ 24K -rw-r--r-- 1 root root  21K Jun 19 17:03 packages/helm-org-multi-wiki-20210228.1853.el
+4.0K -rw-r--r-- 1 root root  600 Jun 19 13:51 packages/helm-org-multi-wiki-20210228.1853.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 19 13:51 packages/helm-org-multi-wiki-badge.svg
+4.0K -rw-r--r-- 1 root root   58 Jun 19 17:03 packages/helm-org-multi-wiki-readme.txt
+4.0K -rw-r--r-- 1 root root  155 Jun 19 17:03 packages/helm-org-multi-wiki.log
+8.0K -rw-r--r-- 1 root root 7.7K Jun 19 13:51 packages/helm-org-ql-20210608.1556.el
+4.0K -rw-r--r-- 1 root root  448 Jun 19 13:51 packages/helm-org-ql-20210608.1556.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 19 13:51 packages/helm-org-ql-badge.svg
+4.0K -rw-r--r-- 1 root root  293 Jun 19 13:51 packages/helm-org-ql-readme.txt
+4.0K -rw-r--r-- 1 root root  134 Jun 19 17:03 packages/helm-org-ql.log
+4.0K -rw-r--r-- 1 root root   48 Jun 19 17:03 packages/helm-org-readme.txt
+8.0K -rw-r--r-- 1 root root 4.4K Jun 19 17:03 packages/helm-org-recent-headings-20201213.837.el
+4.0K -rw-r--r-- 1 root root  598 Jun 19 13:51 packages/helm-org-recent-headings-20201213.837.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 19 13:51 packages/helm-org-recent-headings-badge.svg
+4.0K -rw-r--r-- 1 root root   73 Jun 19 13:51 packages/helm-org-recent-headings-readme.txt
+4.0K -rw-r--r-- 1 root root  173 Jun 19 17:03 packages/helm-org-recent-headings.log
+ 84K -rw-r--r-- 1 root root  82K Jun 19 13:51 packages/helm-org-rifle-20200512.1943.el
+4.0K -rw-r--r-- 1 root root  468 Jun 19 13:51 packages/helm-org-rifle-20200512.1943.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 19 13:51 packages/helm-org-rifle-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jun 19 13:51 packages/helm-org-rifle-readme.txt
+4.0K -rw-r--r-- 1 root root  143 Jun 19 17:03 packages/helm-org-rifle.log

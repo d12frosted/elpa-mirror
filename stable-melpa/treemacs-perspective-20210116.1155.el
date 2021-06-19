@@ -6,7 +6,7 @@
 ;;   Jason Dufair <jase@dufair.org>
 ;; Package-Requires: ((emacs "26.1") (treemacs "0.0") (perspective "2.8") (dash "2.11.0"))
 ;; Package-Version: 20210116.1155
-;; Package-Commit: c2b0beaeb0383c3e6cbc453d6c42cdbc87c6da5e
+;; Package-Commit: c1326ae424c1558f2319916a92206d174e13e65e
 ;; Version: 0
 ;; Homepage: https://github.com/Alexander-Miller/treemacs
 

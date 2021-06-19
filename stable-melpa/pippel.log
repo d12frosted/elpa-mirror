@@ -3,7 +3,18 @@ Fetcher: github
 Source:  https://github.com/arifer612/pippel.git
 
 Updating /mnt/store/melpa/working/pippel/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: could not read Username for 'https://github.com': No such device or address
-error: Could not fetch origin
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pippel/
+  to /tmp/pippelmn9x4k/pippel-20210614.1655
+    pippel.el -> pippel.el
+    pippel.py -> pippel.py
+Created pippel-20210614.1655.tar containing:
+  pippel-20210614.1655/
+  pippel-20210614.1655/pippel-pkg.el
+  pippel-20210614.1655/pippel.el
+  pippel-20210614.1655/pippel.py
+Built pippel in 3.782s, finished at Sat Jun 19 17:28:19 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  372 Jun 19 17:28 packages/pippel-20210614.1655.entry
+ 32K -rw-r--r-- 1 root root  30K Jun 19 17:28 packages/pippel-20210614.1655.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jun 19 17:28 packages/pippel-badge.svg
