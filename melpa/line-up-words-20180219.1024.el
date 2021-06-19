@@ -3,7 +3,7 @@
 ;; Copyright 2018 Jane Street Group, LLC <opensource@janestreet.com>
 ;; URL: https://github.com/janestreet/line-up-words
 ;; Package-Version: 20180219.1024
-;; Package-Commit: 68e59d0fff1eb76c7b1a72c438f344c251115e81
+;; Package-Commit: a52bd2bce9d6fb73dc7fe1e867e3ea804b5abd07
 ;; Version: 1.0
 
 ;;; Commentary:
