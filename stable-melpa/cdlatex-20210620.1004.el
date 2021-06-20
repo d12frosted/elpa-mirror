@@ -3,8 +3,8 @@
 ;;
 ;; Author: Carsten Dominik <carsten.dominik@gmail.com>
 ;; Keywords: tex
-;; Package-Version: 20201016.1659
-;; Package-Commit: adf96bab0bbf28f65c882c0874f1c14fdb216bd8
+;; Package-Version: 20210620.1004
+;; Package-Commit: 3adedafd20da04ed690c3af9b3bb13f250163264
 ;; Version: 4.11
 ;;
 ;; This file is not part of GNU Emacs.
@@ -556,6 +556,23 @@ When nil, use \\(...\\) instead."
 (defcustom cdlatex-use-fonts t
   "*Non-nil means, use fonts in label menu and on-the-fly help.
 Font-lock must be loaded as well to actually get fontified display."
+  :group 'cdlatex-miscellaneous-configurations
+  :type '(boolean))
+
+(defcustom cdlatex-takeover-parenthesis t
+  "*Non-nil means, cdlatex is allowed to take over the parenthesis insertion.
+THis means it will redefine the `(', `{', and `[' keys."
+  :group 'cdlatex-miscellaneous-configurations
+  :type '(boolean))
+
+(defcustom cdlatex-takeover-dollar t
+  "*Non-nil means, cdlatex is allowed to take over the $.
+THis means it will redefine the `$' keys."
+  :group 'cdlatex-miscellaneous-configurations
+  :type '(boolean))
+
+(defcustom cdlatex-takeover-subsuperscript t
+  "*Non-nil means, cdlatex is allowed to take over the ^ and _ keys."
   :group 'cdlatex-miscellaneous-configurations
   :type '(boolean))
 
@@ -2158,14 +2175,19 @@ these variables via `cdlatex-add-to-label-alist'."
 
 ;;; Keybindings --------------------------------------------------------------
 
-(define-key cdlatex-mode-map  "$"         'cdlatex-dollar)
-(define-key cdlatex-mode-map  "("         'cdlatex-pbb)
-(define-key cdlatex-mode-map  "{"         'cdlatex-pbb)
-(define-key cdlatex-mode-map  "["         'cdlatex-pbb)
-(define-key cdlatex-mode-map  "|"         'cdlatex-pbb)
-(define-key cdlatex-mode-map  "<"         'cdlatex-pbb)
-(define-key cdlatex-mode-map  "^"         'cdlatex-sub-superscript)
-(define-key cdlatex-mode-map  "_"         'cdlatex-sub-superscript)
+(if cdlatex-takeover-dollar
+    (define-key cdlatex-mode-map  "$"         'cdlatex-dollar))
+(if cdlatex-takeover-parenthesis
+    (progn
+      (define-key cdlatex-mode-map  "("         'cdlatex-pbb)
+      (define-key cdlatex-mode-map  "{"         'cdlatex-pbb)
+      (define-key cdlatex-mode-map  "["         'cdlatex-pbb)
+      (define-key cdlatex-mode-map  "|"         'cdlatex-pbb)
+      (define-key cdlatex-mode-map  "<"         'cdlatex-pbb)))
+(if cdlatex-takeover-subsuperscript
+    (progn
+      (define-key cdlatex-mode-map  "^"         'cdlatex-sub-superscript)
+      (define-key cdlatex-mode-map  "_"         'cdlatex-sub-superscript)))
 
 (define-key cdlatex-mode-map  "\t"        'cdlatex-tab)
 (define-key cdlatex-mode-map  "\C-c?"     'cdlatex-command-help)

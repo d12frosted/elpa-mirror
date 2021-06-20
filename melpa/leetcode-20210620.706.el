@@ -4,11 +4,11 @@
 
 ;; Author: Wang Kai <kaiwkx@gmail.com>
 ;; Keywords: extensions, tools
-;; Package-Version: 20210121.1600
-;; Package-Commit: 9c44791407c3f4f76d903ee43367547803ae9c32
+;; Package-Version: 20210620.706
+;; Package-Commit: aeba19919e6d8f1c0529330572240143a2af38e0
 ;; URL: https://github.com/kaiwk/leetcode.el
 ;; Package-Requires: ((emacs "26") (dash "2.16.0") (graphql "0.1.1") (spinner "1.7.3") (aio "1.0") (log4e "0.3.3"))
-;; Version: 0.1.21
+;; Version: 0.1.22
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -105,7 +105,7 @@ The object with following attributes:
 The object with following attributes:
 :num      Number
 :tag      String
-:problems Vector
+:problems List
 
 The elements of :problems has attributes:
 :status     String
@@ -302,7 +302,7 @@ USER-AND-PROBLEMS is an alist comes from
                 :easy     .ac_easy
                 :medium   .ac_medium
                 :hard     .ac_hard))
-    (leetcode--debug "problem status pairs: %s" .stat_status_pairs)
+    (leetcode--debug "set user: %s, solved %s in %s problems" .user_name .num_solved .num_total)
     ;; problem list
     (setq leetcode--all-problems
           (list
@@ -310,11 +310,12 @@ USER-AND-PROBLEMS is an alist comes from
            :tag "all"
            :problems
            (let* ((len .num_total)
-                  (problems (make-vector len nil)))
+                  (problems nil))
              (dotimes (i len)
                (let-alist (aref .stat_status_pairs i)
-                 (aset problems (1- .stat.frontend_question_id)
-                       (list
+                 (leetcode--debug "frontend_question_id: %s, question_id: %s, title: %s"
+                                  .stat.frontend_question_id .stat.question_id .stat.question__title)
+                 (push (list
                         :status .status
                         :id .stat.frontend_question_id
                         :backend-id .stat.question_id
@@ -325,15 +326,15 @@ USER-AND-PROBLEMS is an alist comes from
                                         (/ (float .stat.total_acs)
                                            .stat.total_submitted)))
                         :difficulty .difficulty.level
-                        :paid-only (eq .paid_only t)))))
+                        :paid-only (eq .paid_only t))
+                       problems)))
              problems)))))
 
 (defun leetcode--set-tags (all-tags)
   "Set `leetcode--all-tags' and `leetcode--all-problems' with ALL-TAGS."
-  (leetcode--debug "all tags: %s" all-tags)
   (let-alist all-tags
     ;; set problems tags
-    (dovec (problem (plist-get leetcode--all-problems :problems))
+    (dolist (problem (plist-get leetcode--all-problems :problems))
       (dolist (topic (to-list .topics))
         (let-alist topic
           (when (member (plist-get problem :backend-id) (to-list .questions))
@@ -343,7 +344,7 @@ USER-AND-PROBLEMS is an alist comes from
     ;; set leetcode--all-tags
     (dolist (topic (to-list .topics))
       (let-alist topic
-        (unless (member topic leetcode--all-tags)
+        (unless (member .slug leetcode--all-tags)
           (push .slug leetcode--all-tags))))))
 
 (defun leetcode--slugify-title (title)
@@ -460,7 +461,7 @@ Return a list of rows, each row is a vector:
         (medium-tag "medium")
         (hard-tag "hard")
         rows)
-    (dovec (p problems)
+    (dolist (p problems)
       (setq rows
             (cons
              (vector
@@ -475,8 +476,8 @@ Return a list of rows, each row is a vector:
               (number-to-string (plist-get p :id))
               ;; title
               (concat
-	           (plist-get p :title)
-	           " "
+               (plist-get p :title)
+               " "
                (if (eq (plist-get p :paid-only) t)
                    (prog1 leetcode--paid
                      (put-text-property
@@ -488,7 +489,7 @@ Return a list of rows, each row is a vector:
               ;; difficulty
               (leetcode--stringify-difficulty (plist-get p :difficulty))
               ;; tags
-              (string-join (plist-get p :tags) ", "))
+              (if leetcode--display-tags (string-join (plist-get p :tags) ", ") ""))
              rows)))
     (reverse rows)))
 
@@ -502,7 +503,6 @@ Return a list of rows, each row is a vector:
 
 (defun leetcode--filter (rows)
   "Filter ROWS by `leetcode--filter-regex', `leetcode--filter-tag' and `leetcode--filter-difficulty'."
-  (leetcode--debug "filter rows: %s" rows)
   (seq-filter
    (lambda (row)
      (and
@@ -555,6 +555,12 @@ Return a list of rows, each row is a vector:
         (completing-read "Difficulty: " leetcode--all-difficulties))
   (leetcode-refresh))
 
+(defun leetcode-toggle-tag-display ()
+  "Toggle `leetcode--display-tags` and refresh"
+  (interactive)
+  (setq leetcode--display-tags (not leetcode--display-tags))
+  (leetcode-refresh))
+
 (aio-defun leetcode--fetch-all-tags ()
   (let* ((url-request-method "GET")
          (url-request-extra-headers
@@ -589,7 +595,8 @@ Return a list of rows, each row is a vector:
 (defun leetcode-refresh ()
   "Make `tabulated-list-entries'."
   (interactive)
-  (let* ((header-names '(" " "#" "Problem" "Acceptance" "Difficulty" "Tags"))
+  (let* ((header-names (append '(" " "#" "Problem" "Acceptance" "Difficulty")
+                               (if leetcode--display-tags '("Tags"))))
          (rows (leetcode--filter (leetcode--problems-rows)))
          (headers (leetcode--make-tabulated-headers header-names rows)))
     (with-current-buffer (get-buffer-create leetcode--buffer-name)
@@ -613,6 +620,7 @@ Return a list of rows, each row is a vector:
         (leetcode--set-user-and-problems users-and-problems)
         (leetcode--set-tags all-tags))
     (leetcode--warn "LeetCode parse user and problems failed"))
+  (setq leetcode--display-tags leetcode-prefer-tag-display)
   (leetcode-reset-filter)
   (leetcode-refresh))
 
@@ -1035,6 +1043,13 @@ Call `leetcode-solve-problem' on the current problem id."
            (get-buffer (leetcode--get-code-buffer-name title))))
         leetcode--problem-titles))
 
+(defcustom leetcode-prefer-tag-display t
+  "Whether to display tags by default in the *leetcode* buffer."
+  :type :boolean)
+
+(defvar leetcode--display-tags leetcode-prefer-tag-display
+  "(Internal) Whether tags are displayed the *leetcode* buffer.")
+
 (defvar leetcode-prefer-language "python3"
   "LeetCode programming language.
 c, cpp, csharp, golang, java, javascript, kotlin, php, python,
@@ -1106,11 +1121,9 @@ python3, ruby, rust, scala, swift, mysql, mssql, oraclesql.")
 
 (defun leetcode--get-problem-by-id (id)
   "Get problem from `leetcode--all-problems' by ID."
-  (let ((num (plist-get leetcode--all-problems :num))
-        (problems (plist-get leetcode--all-problems :problems)))
-    (when (or (< id 1) (> id num))
-      (user-error "Not found: No such problem with given id `%d'" id))
-    (aref problems (1- id))))
+  (seq-find (lambda (p)
+              (equal id (plist-get p :id)))
+            (plist-get leetcode--all-problems :problems)))
 
 (defun leetcode--get-problem-id (slug-title)
   "Get problem id by SLUG-TITLE."
@@ -1191,6 +1204,7 @@ major mode by `leetcode-prefer-language'and `auto-mode-alist'."
       (define-key map "s" #'leetcode-set-filter-regex)
       (define-key map "l" #'leetcode-set-prefer-language)
       (define-key map "t" #'leetcode-set-filter-tag)
+      (define-key map "T" #'leetcode-toggle-tag-display)
       (define-key map "d" #'leetcode-set-filter-difficulty)
       (define-key map "g" #'leetcode-refresh)
       (define-key map "G" #'leetcode-refresh-fetch)
