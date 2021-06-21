@@ -7,8 +7,8 @@
 ;; Description: Flycheck support for LanguageTool.
 ;; Keyword: grammar check
 ;; Version: 0.2.0
-;; Package-Version: 20210618.1803
-;; Package-Commit: 5608a330e09222d05bf0354f1847f537168e22dd
+;; Package-Version: 20210621.306
+;; Package-Commit: c7d47e4171493cf55fe6afe1ba7d9587a2df9f34
 ;; Package-Requires: ((emacs "25.1") (flycheck "0.14") (s "1.9.0"))
 ;; URL: https://github.com/emacs-languagetool/flycheck-languagetool
 
@@ -127,7 +127,7 @@ Rest argument ARGS is the rest of the argument for CMD."
   (let ((matches (cdr (assoc 'matches flycheck-languagetool--output)))
         check-list)
     (dolist (match matches)
-      (let* ((pt-beg (1+ (cdr (assoc 'offset match))))
+      (let* ((pt-beg (cdr (assoc 'offset match)))
              (len (cdr (assoc 'length match)))
              (pt-end (+ pt-beg len))
              (ln (line-number-at-pos pt-beg))
@@ -137,6 +137,9 @@ Rest argument ARGS is the rest of the argument for CMD."
              (col-end (flycheck-languagetool--column-at-pos pt-end)))
         (push (list ln col-start type desc :end-column col-end)
               check-list)))
+    (progn  ; Remove fitst and last element to avoid quote warnings
+      (pop check-list)
+      (setq check-list (butlast check-list)))
     check-list))
 
 (defun flycheck-languagetool--cache-parse-result (output)
@@ -158,7 +161,7 @@ Rest argument ARGS is the rest of the argument for CMD."
              (when (buffer-live-p source)
                (with-current-buffer source (flycheck-languagetool--cache-parse-result output))))
            (format "echo %s | java -jar %s %s --json -b %s"
-                   (s-replace "\n" " " (buffer-string))
+                   (shell-quote-argument (s-replace "\n" " " (buffer-string)))
                    flycheck-languagetool-commandline-jar
                    (if (stringp flycheck-languagetool-language)
                        (concat "-l " flycheck-languagetool-language)
