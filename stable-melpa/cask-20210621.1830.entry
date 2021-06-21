@@ -1,5 +1,5 @@
 (cask .
-      [(20210528 1605)
+      [(20210621 1830)
        ((emacs
 	 (24 1))
 	(s
@@ -17,7 +17,7 @@
 	(ansi
 	 (0 4 1)))
        "Cask: Project management for package development" tar
-       ((:commit . "daee4bec9c7d96a165366f7edeaa4616837bf432")
+       ((:commit . "9fbc15dfe8b0739082e7bbff65f226dfe74ac9dd")
 	(:authors
 	 ("Johan Andersson" . "johan.rejeep@gmail.com"))
 	(:maintainer "Johan Andersson" . "johan.rejeep@gmail.com")

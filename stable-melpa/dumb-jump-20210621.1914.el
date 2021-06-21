@@ -2,8 +2,8 @@
 ;; Copyright (C) 2015-2019 jack angers
 ;; Author: jack angers and contributors
 ;; Url: https://github.com/jacktasia/dumb-jump
-;; Package-Version: 20210303.1714
-;; Package-Commit: 8f70acbe164553b225476fed55019ecddcf0bbd6
+;; Package-Version: 20210621.1914
+;; Package-Commit: 0fad329d02b12c11a1f0c26290238d1b8903767a
 ;; Version: 0.5.3
 ;; Package-Requires: ((emacs "24.3") (s "1.11.0") (dash "2.9.0") (popup "0.5.3"))
 ;; Keywords: programming
@@ -2021,7 +2021,7 @@ for user to select.  Filters PROJ path from files for display."
       (funcall dumb-jump-ivy-jump-to-selected-function results choices proj))
      ((and (eq dumb-jump-selector 'helm) (fboundp 'helm))
       (helm :sources
-            (helm-build-sync-source "Jump to: "
+            (helm-make-source "Jump to: " 'helm-source-sync
                                     :action '(("Jump to match" . dumb-jump-result-follow))
                                     :candidates (-zip choices results)
                                     :persistent-action 'dumb-jump-helm-persist-action)
