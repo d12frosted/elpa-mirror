@@ -1,11 +1,9 @@
 (flymake-proselint .
-		   [(20200927 640)
+		   [(20210621 929)
 		    ((emacs
-		      (26 1))
-		     (flymake-quickdef
-		      (1 0 0)))
+		      (26 1)))
 		    "Flymake backend for proselint" single
-		    ((:commit . "b94950301139846002d2020bc630440ff834bf24")
+		    ((:commit . "adf1ce7daf1380cb50f365a36548165fe4a32423")
 		     (:authors
 		      ("Manuel Uberti" . "manuel.uberti@inventati.org"))
 		     (:maintainer "Manuel Uberti" . "manuel.uberti@inventati.org")

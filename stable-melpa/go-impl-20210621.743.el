@@ -4,8 +4,8 @@
 
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/syohex/emacs-go-impl
-;; Package-Version: 20170125.1552
-;; Package-Commit: 69f0d0ef05771487e15abec500cd06befd171abf
+;; Package-Version: 20210621.743
+;; Package-Commit: 1eebba6ccd02d11a5a82ad4540a8d562797bc3b3
 ;; Version: 0.14
 ;; Package-Requires: ((emacs "24.3") (go-mode "1.3.0"))
 
@@ -83,8 +83,8 @@
 
 (defun go-impl--collect-interface (package)
   (with-temp-buffer
-    (unless (zerop (process-file "godoc" nil t nil "-src" package))
-      (error "Failed: 'godoc -src %s'" package))
+    (unless (zerop (process-file "go" nil t nil "doc" "-src" package))
+      (error "Failed: 'go doc -src %s'" package))
     (goto-char (point-min))
     (cl-loop with re = "^type\\s-+\\(\\S-+\\)\\s-+interface"
              with real-package = (go-impl--real-package-name package)
