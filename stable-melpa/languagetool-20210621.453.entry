@@ -1,11 +1,11 @@
 (languagetool .
-	      [(20210611 2310)
+	      [(20210621 453)
 	       ((emacs
 		 (25 1))
 		(request
 		 (0 3 2)))
 	       "LanguageTool integration for grammar and spell check" tar
-	       ((:commit . "21ad874bc82cbc818cf0b34fc949a1e58efbb829")
+	       ((:commit . "feea3f9271ce920490a0d9dcd11e669e3eaad1d0")
 		(:authors
 		 ("Joar Buitrago" . "jebuitragoc@unal.edu.co"))
 		(:maintainer "Joar Buitrago" . "jebuitragoc@unal.edu.co")

@@ -8,10 +8,11 @@ warning: unable to rmdir 'vendor/github.com/coreos/etcd': Directory not empty
 warning: unable to rmdir 'vendor/github.com/docker/go-connections': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/go-grpc-prometheus': Directory not empty
 warning: unable to rmdir 'vendor/github.com/grpc-ecosystem/grpc-gateway': Directory not empty
-HEAD is now at d285aae test: Add a test for AddEdge
+HEAD is now at 530c5a6 vendor: Pin version of consul until we're on golang 1.16
 Synchronizing submodule url for 'vendor/github.com/containerd/containerd'
 Synchronizing submodule url for 'vendor/github.com/docker/distribution'
 Synchronizing submodule url for 'vendor/github.com/docker/docker'
+Synchronizing submodule url for 'vendor/github.com/hashicorp/consul'
 Synchronizing submodule url for 'vendor/github.com/hashicorp/go-multierror'
 Synchronizing submodule url for 'vendor/github.com/ugorji/go'
 Synchronizing submodule url for 'vendor/go.etcd.io/etcd'

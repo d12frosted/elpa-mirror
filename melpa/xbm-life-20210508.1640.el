@@ -4,8 +4,6 @@
 
 ;; Author: Vasilij Schneidermann <mail@vasilij.de>
 ;; URL: https://depp.brause.cc/xbm-life
-;; Package-Version: 20210508.1640
-;; Package-Commit: ec6abb0182068294a379cb49ad5346b1d757457d
 ;; Version: 0.1.3
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: games

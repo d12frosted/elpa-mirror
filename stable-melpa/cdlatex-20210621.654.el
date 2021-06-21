@@ -3,8 +3,8 @@
 ;;
 ;; Author: Carsten Dominik <carsten.dominik@gmail.com>
 ;; Keywords: tex
-;; Package-Version: 20210620.1004
-;; Package-Commit: 3adedafd20da04ed690c3af9b3bb13f250163264
+;; Package-Version: 20210621.654
+;; Package-Commit: 720f9145d88b3e54b5388742c8a1a2b963d74581
 ;; Version: 4.11
 ;;
 ;; This file is not part of GNU Emacs.
@@ -850,6 +850,7 @@ When pressed twice, make the sub/superscript roman."
     (if (and (stringp cdlatex-paired-parens)
              (string-match (regexp-quote paren) cdlatex-paired-parens)
              (string= close (char-to-string (following-char))))
+        ; parens are inserted paired, and there is already a closing parenthesis
         (delete-char 1))
     (insert "\\left" paren1 " ? \\right" close1)
     (cdlatex-position-cursor)))
@@ -1374,6 +1375,7 @@ zZ
     (if (get-buffer-window " *CDLaTeX Help*")
         (select-window (get-buffer-window " *CDLaTeX Help*"))
       (switch-to-buffer-other-window " *CDLaTeX Help*"))
+    (if buffer-read-only (read-only-mode 'toggle))
     (erase-buffer)
     (make-local-variable 'truncate-lines)
     (setq truncate-lines t)
