@@ -409,7 +409,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 8)
+	[(0 9)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -1394,7 +1394,7 @@
 	(:keywords "extensions" "lisp")
 	(:url . "https://elpa.gnu.org/packages/map.html"))])
  (marginalia .
-	     [(0 6)
+	     [(0 7)
 	      ((emacs
 		(26 1)))
 	      "Enrich existing commands with completion annotations" tar
@@ -2584,7 +2584,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:keywords "languages"))])
  (vertico .
-	  [(0 11)
+	  [(0 12)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar

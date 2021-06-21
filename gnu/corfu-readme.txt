@@ -6,6 +6,9 @@
 #+texinfo_dir_title: Corfu: (corfu).
 #+texinfo_dir_desc: Completion Overlay Region FUnction
 
+#+html: <a href="http://elpa.gnu.org/packages/corfu.html"><img alt="GNU ELPA" src="https://elpa.gnu.org/packages/corfu.svg"/></a>
+#+html: <a href="http://elpa.gnu.org/devel/corfu.html"><img alt="GNU-devel ELPA" src="https://elpa.gnu.org/devel/corfu.svg"/></a>
+
 * Introduction
 
 Corfu enhances the default completion in region function with a completion
@@ -71,11 +74,13 @@ Orderless is not a necessity. Here is an example configuration:
     ;;        (shell-mode . corfu-mode)
     ;;        (eshell-mode . corfu-mode))
 
-    :config
 
     ;; Recommended: Enable Corfu globally.
     ;; This is recommended since dabbrev can be used globally (M-/).
+    :init
     (corfu-global-mode)
+
+    :config
 
     ;; Optionally enable cycling for `corfu-next' and `corfu-previous'.
     ;; (setq corfu-cycle t)

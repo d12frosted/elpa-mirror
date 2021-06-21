@@ -6,16 +6,20 @@
 #+texinfo_dir_title: Vertico: (vertico).
 #+texinfo_dir_desc: VERTical Interactive COmpletion.
 
+#+html: <a href="http://elpa.gnu.org/packages/vertico.html"><img alt="GNU ELPA" src="https://elpa.gnu.org/packages/vertico.svg"/></a>
+#+html: <a href="http://elpa.gnu.org/devel/vertico.html"><img alt="GNU-devel ELPA" src="https://elpa.gnu.org/devel/vertico.svg"/></a>
 #+html: <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/75/Vertigomovie_restoration.jpg/800px-Vertigomovie_restoration.jpg" align="right" width="30%">
 
 * Introduction
 
-Vertico provides a minimalistic vertical completion UI, which is based on the
-default completion system. By reusing the default system, Vertico achieves full
-compatibility with built-in Emacs commands and completion tables. Vertico is
-pretty bare-bone and comes with only a minimal set of commands. The code base is
-small (~500 lines of code without whitespace and comments). Additional
-enhancements can be installed separately via complementary packages.
+Vertico provides a performant and minimalistic vertical completion UI, which is
+based on the default completion system. By reusing the built-in facilities
+system, Vertico achieves /full compatibility/ with built-in Emacs completion
+commands and completion tables. Vertico only provides the completion UI and
+comes with a minimal set of commands. The code base is small and maintainable
+(~600 lines of code without whitespace and comments).
+
+Additional enhancements can be installed separately via complementary packages.
 
 * Features
 
@@ -26,7 +30,8 @@ enhancements can be installed separately via complementary packages.
 - Sorting by history position, string length and alphabetically
 - Long candidates with newlines are formatted to take up less space
 - Deferred completion style highlighting for performance
-- Support for ~annotation-function~, ~affixation-function~ and ~group-function~
+- Support for annotations (~annotation-function~ and ~affixation-function~)
+- Support for grouping and group cycling commands (~group-function~)
 
 [[https://github.com/minad/vertico/blob/main/screenshot.svg?raw=true]]
 
@@ -97,6 +102,8 @@ the binding of =TAB= to ~vertico-insert~ and the bindings of
 - ~scroll-up-command~ -> ~vertico-scroll-up~
 - ~next-line~, ~next-line-or-history-element~ -> ~vertico-next~
 - ~previous-line~, ~previous-line-or-history-element~ -> ~vertico-previous~
+- ~forward-paragraph~ -> ~vertico-next-group~
+- ~backward-paragraph~ -> ~vertico-previous-group~
 - ~exit-minibuffer~ -> ~vertico-exit~
 - ~kill-ring-save~ -> ~vertico-save~
 - =<C-return>= -> ~vertico-exit-input~
@@ -128,15 +135,15 @@ not use ~orderless~ at all.
   (setq completion-styles '(basic substring partial-completion flex))
 #+end_src
 
-If Vertico is active, it makes sense to disable the automatic =*Completions*=
-buffer by setting ~completion-auto-help~ to ~nil~. TAB-completion can be made
-less noisy by setting ~completion-show-inline-help~ to ~nil~.
+Because Vertico is fully compatible with Emacs default completion
+system, further customization of completion behavior can be achieved
+by setting the designated Emacs variables. For example, one may wish
+to disable case-sensitivity for file and buffer matching when built-in
+completion styles are used instead of ~orderless~:
 
 #+begin_src emacs-lisp
-  (advice-add #'vertico--setup :after
-              (lambda (&rest _)
-                (setq-local completion-auto-help nil
-                            completion-show-inline-help nil)))
+  (setq read-file-name-completion-ignore-case t
+        read-buffer-completion-ignore-case t)
 #+end_src
 
 * Complementary packages
@@ -160,13 +167,15 @@ the same spirit as Vertico.
 * Alternatives
 
 There are many alternative completion UIs, each UI with its own advantages and
-disadvantages. The [[https://github.com/raxod502/selectrum][Selectrum readme]] gives an extensive comparison of many
-available completion systems from the perspective of Selectrum.
+disadvantages.
 
-Vertico aims to be fully compliant with all Emacs commands and achieves that
-with a minimal code base, relying purely on ~completing-read~ while avoiding to
+Vertico aims to be 100% compliant with all Emacs commands and achieves that with
+a minimal code base, relying purely on ~completing-read~ while avoiding to
 invent its own APIs. Inventing a custom API as Helm or Ivy is explicitly avoided
-in order to increase flexibility and package reuse.
+in order to increase flexibility and package reuse. Due to its small code base
+and reuse of the Emacs built-in facilities, bugs are less likely to occur in
+comparison to completion UIs or full completion systems, which reimplement a lot
+of functionality.
 
 Since Vertico only provides the UI, you may want to combine it with some of the
 complementary packages, to give a full-featured completion experience similar to
@@ -175,15 +184,20 @@ to their liking - completion plays an integral part in how the users interacts
 with Emacs. There are at least two other interactive completion UIs, which
 follow a similar philosophy:
 
-- [[https://github.com/raxod502/selectrum][Selectrum]]: If you are looking for a less minimalistic and more full-featured
-  (but also more complex) package, you may be interested in Selectrum, which has
-  a similar UI as Vertico. Additionally Selectrum supports Avy-style quick keys,
-  a horizontal display and a configurable buffer display.
+- [[https://github.com/raxod502/selectrum][Selectrum]]: Selectrum has a similar UI as Vertico. Vertico offers more commands
+  for grouping support. Selectrum supports additional Avy-style quick keys and a
+  horizontal display. On the other hand, Selectrum is significantly more complex
+  and not fully compatible with every Emacs completion command ([[https://github.com/raxod502/selectrum/issues/481][Issue #481]]),
+  since it uses its own filtering infrastructure, which deviates from the
+  standard Emacs completion facilities.
 - [[https://github.com/oantolin/icomplete-vertical][Icomplete-vertical]]: This package enhances the Emacs builtin Icomplete with a
   vertical display. In contrast to Vertico, the candidates are rotated such that
   the current candidate always appears at the top. From my perspective,
   candidate rotation feels a bit less intuitive than the UI of Vertico or
-  Selectrum. Note that Emacs 28 offers an built-in ~icomplete-vertical-mode~.
+  Selectrum. Note that Emacs 28 offers a built-in ~icomplete-vertical-mode~.
+
+See also the [[https://github.com/raxod502/selectrum][Selectrum readme]], which gives an extensive comparison of many
+available completion systems from the perspective of Selectrum.
 
 * Problematic completion commands
 
@@ -211,6 +225,26 @@ follow a similar philosophy:
 
  In order to fix the issues properly, ~org-set-tags-command~ should be
  implemented using ~completing-read-multiple~ as discussed on the [[https://lists.gnu.org/archive/html/emacs-orgmode/2020-07/msg00222.html][mailing list]].
+
+** ~org-refile~
+
+   ~org-refile~ uses ~org-olpath-completing-read~ to complete the outline path
+   in steps, when ~org-refile-use-outline-path~ is non-nil.
+
+   Unfortunately the implementation of this Org completion table is broken. In
+   order to fix the issue at the root, the completion table should make use of
+   completion boundaries and should be written in the same way as the built-in
+   file completion table.
+
+   In order to workaround the issues with the current implementation it is
+   recommended to disable the outline path completion in steps. The completion
+   on the full path is also faster since the input string matches directly
+   against the full path, which works very well with Orderless.
+
+   #+begin_src emacs-lisp
+     (setq org-refile-use-outline-path 'file
+           org-outline-path-complete-in-steps nil)
+   #+end_src
 
 ** ~tmm-menubar~
 
