@@ -1,8 +1,8 @@
 ;;; lsp-haskell.el --- Haskell support for lsp-mode
 
 ;; Version: 1.0
-;; Package-Version: 20210209.2150
-;; Package-Commit: 7efbef3d206989faa8b691a4230a3ed872542187
+;; Package-Version: 20210621.1334
+;; Package-Commit: eb37ac4a6a43277263bbb17aed6a862a0992ae8e
 ;; Package-Requires: ((emacs "24.3") (lsp-mode "3.0") (haskell-mode "1.0"))
 ;; Keywords: haskell
 ;; URL: https://github.com/emacs-lsp/lsp-haskell
@@ -70,7 +70,7 @@ Turn off to only generate diagnostics on file save."
   :group 'lsp-haskell
   :type 'boolean)
 (defcustom lsp-haskell-completion-snippets-on
-  t
+  lsp-enable-snippet
   "Show snippets with type information when using code completion."
   :group 'lsp-haskell
   :type 'boolean)
