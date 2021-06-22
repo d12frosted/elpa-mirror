@@ -1,0 +1,11 @@
+(shellcop .
+	  [(20210622 721)
+	   ((emacs
+	     (25 1)))
+	   "Analyze info&error in shell-mode" single
+	   ((:commit . "7c025b10173ef380ea539dbbdcd7d60977119e24")
+	    (:authors
+	     ("Chen Bin <chenbin DOT sh AT gmail DOT com>"))
+	    (:maintainer "Chen Bin <chenbin DOT sh AT gmail DOT com>")
+	    (:keywords "unix" "tools")
+	    (:url . "https://github.com/redguardtoo/shellcop"))])
