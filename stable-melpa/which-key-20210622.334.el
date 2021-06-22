@@ -5,8 +5,8 @@
 ;; Author: Justin Burkett <justin@burkett.cc>
 ;; Maintainer: Justin Burkett <justin@burkett.cc>
 ;; URL: https://github.com/justbur/emacs-which-key
-;; Package-Version: 20210622.233
-;; Package-Commit: d8445fd80e81b6ad2acdb5be2e36740e6d4839d7
+;; Package-Version: 20210622.334
+;; Package-Commit: 28f386cc4af8c0fe21269bb587a5bb229ba3834e
 ;; Version: 3.5.1
 ;; Keywords:
 ;; Package-Requires: ((emacs "24.4"))
@@ -1345,7 +1345,9 @@ width) in lines and characters respectively."
   "Sorting function used for `which-key-key-order' and
 `which-key-key-order-alpha'."
   (save-match-data
-    (let* ((rngrgxp "^\\([^ ]+\\) \\.\\. [^ ]+")
+    (let* ((a (which-key--extract-key a))
+           (b (which-key--extract-key b))
+           (rngrgxp "^\\([^ ]+\\) \\.\\. [^ ]+")
            (a (if (string-match rngrgxp a) (match-string 1 a) a))
            (b (if (string-match rngrgxp b) (match-string 1 b) b))
            (aem? (string-equal a ""))

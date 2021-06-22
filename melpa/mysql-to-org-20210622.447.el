@@ -5,8 +5,8 @@
 ;; Author: Tijs Mallaerts <tijs.mallaerts@gmail.com>
 
 ;; Package-Requires: ((emacs "24.3") (s "1.11.0"))
-;; Package-Version: 20200602.2019
-;; Package-Commit: f3afc506f8b0d037238e49290de4b028c6ad9dd1
+;; Package-Version: 20210622.447
+;; Package-Commit: c5eefc71200f2e1d0d67a13ed897b3cdfa835117
 
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -188,7 +188,7 @@ selected database."
 (defun mysql-to-org--start-process ()
   "Start the mysql to org mysql process."
   (when (not (get-process "mysql-to-org"))
-    (make-comint "mysql-to-org" "mysql" nil
+    (make-comint "mysql-to-org" mysql-to-org-mysql-command nil
                  (concat "-u" mysql-to-org-mysql-user)
                  (concat "-p" (read-passwd "mysql passwd: ")))
     (mysql-to-org--load-completion-candidates)))
