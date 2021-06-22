@@ -3,3 +3,23 @@ Fetcher: github
 Source:  https://github.com/clojure-emacs/parseclj.git
 
 Updating /mnt/store/melpa/working/parseclj/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/parseclj/
+  to /tmp/parsecljmzmxhK/parseclj-20201012.712
+    parseclj-ast.el -> parseclj-ast.el
+    parseclj-lex.el -> parseclj-lex.el
+    parseclj-parser.el -> parseclj-parser.el
+    parseclj.el -> parseclj.el
+Created parseclj-20201012.712.tar containing:
+  parseclj-20201012.712/
+  parseclj-20201012.712/parseclj-ast.el
+  parseclj-20201012.712/parseclj-lex.el
+  parseclj-20201012.712/parseclj-parser.el
+  parseclj-20201012.712/parseclj-pkg.el
+  parseclj-20201012.712/parseclj.el
+Built parseclj in 3.232s, finished at Tue Jun 22 19:21:17 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  352 Jun 22 19:21 packages/parseclj-20201012.712.entry
+ 52K -rw-r--r-- 1 root root  50K Jun 22 19:21 packages/parseclj-20201012.712.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jun 22 19:21 packages/parseclj-badge.svg
+4.0K -rw-r--r-- 1 root root   38 Jun 22 19:21 packages/parseclj-readme.txt

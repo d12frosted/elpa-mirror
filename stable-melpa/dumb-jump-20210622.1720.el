@@ -2,8 +2,8 @@
 ;; Copyright (C) 2015-2019 jack angers
 ;; Author: jack angers and contributors
 ;; Url: https://github.com/jacktasia/dumb-jump
-;; Package-Version: 20210621.1914
-;; Package-Commit: 0fad329d02b12c11a1f0c26290238d1b8903767a
+;; Package-Version: 20210622.1720
+;; Package-Commit: 542e72d3feba986a12119f6def515ef1347cb4ca
 ;; Version: 0.5.3
 ;; Package-Requires: ((emacs "24.3") (s "1.11.0") (dash "2.9.0") (popup "0.5.3"))
 ;; Keywords: programming
@@ -759,6 +759,23 @@ or most optimal searcher."
     (:type "type" :supports ("ag" "grep" "rg" "git-grep") :language "scala"
            :regex "object\\s*JJJ\\s*\\\(?"
            :tests ("object test(object)"))
+
+    ;; solidity
+    (:type "function" :supports ("ag" "grep" "rg" "git-grep") :language "solidity"
+           :regex  "function\\s*JJJ\\s*\\\("
+           :tests ("function test() internal" "function test (uint x, address y)" "function test() external"))
+
+    (:type "modifier" :supports ("ag" "grep" "rg" "git-grep") :language "solidity"
+           :regex  "modifier\\s*JJJ\\s*\\\("
+           :tests ("modifier test()" "modifier test ()"))
+
+    (:type "event" :supports ("ag" "grep" "rg" "git-grep") :language "solidity"
+           :regex  "event\\s*JJJ\\s*\\\("
+           :tests ("event test();" "event test (uint indexed x)" "event test(uint x, address y)"))
+
+    (:type "error" :supports ("ag" "grep" "rg" "git-grep") :language "solidity"
+           :regex  "error\\s*JJJ\\s*\\\("
+           :tests ("error test();" "error test (uint x)" "error test(uint x, address y)"))
 
     ;; R
     (:type "variable" :supports ("ag" "grep" "rg" "git-grep") :language "r"
@@ -1641,6 +1658,7 @@ or most optimal searcher."
     (:language "shell" :ext "ksh" :agtype nil :rgtype nil)
     (:language "shell" :ext "tcsh" :agtype nil :rgtype nil)
     (:language "sml" :ext "sml" :agtype "sml" :rgtype "sml")
+    (:language "solidity" :ext "sol" :agtype nil :rgtype nil)
     (:language "sql" :ext "sql" :agtype "sql" :rgtype "sql")
     (:language "swift" :ext "swift" :agtype nil :rgtype "swift")
     (:language "tex" :ext "tex" :agtype "tex" :rgtype "tex")
@@ -2335,6 +2353,7 @@ current file."
     (:comment "//" :language "scala")
     (:comment ";" :language "scheme")
     (:comment "#" :language "shell")
+    (:comment "//" :language "solidity")
     (:comment "//" :language "swift")
     (:comment "#" :language "elixir")
     (:comment "%" :language "erlang")

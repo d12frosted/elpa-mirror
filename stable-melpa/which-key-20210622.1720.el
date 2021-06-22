@@ -5,8 +5,8 @@
 ;; Author: Justin Burkett <justin@burkett.cc>
 ;; Maintainer: Justin Burkett <justin@burkett.cc>
 ;; URL: https://github.com/justbur/emacs-which-key
-;; Package-Version: 20210622.1137
-;; Package-Commit: 6290c9e21710c3ebbcdec795c916994682e07c94
+;; Package-Version: 20210622.1720
+;; Package-Commit: 4c27fc0c565cdda58270dae4024ad03a0017de43
 ;; Version: 3.5.1
 ;; Keywords:
 ;; Package-Requires: ((emacs "24.4"))
@@ -256,7 +256,7 @@ disabled by default. Try this to see the effect.
   :type 'string)
 
 (defcustom which-key-show-prefix 'echo
-  "Whether to and where to display the current prefix sequence.
+  "Whether to and where to display the current prefix sequence
 Possible choices are echo for echo area (the default), left, top
 and nil. Nil turns the feature off."
   :group 'which-key
@@ -268,7 +268,7 @@ and nil. Nil turns the feature off."
                 (const :tag "Hide" nil)))
 
 (defcustom which-key-popup-type 'side-window
-  "Supported types are minibuffer, side-window, frame, and custom."
+  "Supported types are minibuffer, side-window, frame, and custom"
   :group 'which-key
   :type '(radio (const :tag "Show in minibuffer" minibuffer)
                 (const :tag "Show in side window" side-window)
@@ -276,12 +276,12 @@ and nil. Nil turns the feature off."
                 (const :tag "Use your custom display functions" custom)))
 
 (defcustom which-key-min-display-lines 1
-  "The minimum number of horizontal lines to display in the which-key buffer."
+  "Minimum number of horizontal lines to display in the which-key buffer"
   :group 'which-key
   :type 'integer)
 
 (defcustom which-key-max-display-columns nil
-  "The maximum number of columns to display in the which-key buffer.
+  "Maximum number of columns to display in the which-key buffer
 nil means don't impose a maximum."
   :group 'which-key
   :type '(choice integer (const :tag "Unbounded" nil)))
@@ -306,25 +306,23 @@ location is tried."
 docstring of `display-buffer-in-side-window',
 
 ‘slot’ if non-nil, specifies the window slot where to display
-  BUFFER.  A value of zero or nil means use the middle slot on
-  the specified side.  A negative value means use a slot
-  preceding (that is, above or on the left of) the middle slot.
-  A positive value means use a slot following (that is, below or
-  on the right of) the middle slot.  The default is zero."
+BUFFER.  A value of zero or nil means use the middle slot on the
+specified side.  A negative value means use a slot
+preceding (that is, above or on the left of) the middle slot.  A
+positive value means use a slot following (that is, below or on
+the right of) the middle slot.  The default is zero."
   :group 'which-key
   :type 'integer)
 
 (defcustom which-key-side-window-max-width 0.333
-  "Maximum width of which-key popup when type is side-window and
-location is left or right.
-This variable can also be a number between 0 and 1. In that case, it denotes
-a percentage out of the frame's width."
+  "Maximum width of which-key popup when type is side-window
+This variable can also be a number between 0 and 1. In that case,
+it denotes a percentage out of the frame's width."
   :group 'which-key
   :type 'float)
 
 (defcustom which-key-side-window-max-height 0.25
-  "Maximum height of which-key popup when type is side-window and
-location is top or bottom.
+  "Maximum height of which-key popup when type is side-window
 This variable can also be a number between 0 and 1. In that case, it denotes
 a percentage out of the frame's height."
   :group 'which-key
@@ -899,42 +897,30 @@ but more functional."
 ;;;###autoload
 (defun which-key-add-keymap-based-replacements (keymap key replacement &rest more)
   "Replace the description of KEY using REPLACEMENT in KEYMAP.
-KEY should take a format suitable for use in
-`kbd'. REPLACEMENT is the string to use to describe the
-command associated with KEY in the KEYMAP. You may also use a
-cons cell of the form \(STRING . COMMAND\) for each REPLACEMENT,
-where STRING is the replacement string and COMMAND is a symbol
-corresponding to the intended command to be replaced. In the
-latter case, which-key will verify the intended command before
-performing the replacement. COMMAND should be nil if the binding
-corresponds to a key prefix. For example,
+KEY should take a format suitable for use in `kbd'. REPLACEMENT
+should be a cons cell of the form \(STRING . COMMAND\) for each
+REPLACEMENT, where STRING is the replacement string and COMMAND
+is a symbol corresponding to the intended command to be
+replaced. COMMAND can be nil if the binding corresponds to a key
+prefix. An example is
 
 \(which-key-add-keymap-based-replacements global-map
-  \"C-x w\" \"Save as\"\)
+  \"C-x w\" '\(\"Save as\" . write-file\)\).
 
-and
-
-\(which-key-add-keymap-based-replacements global-map
-  \"C-x w\" '\(\"Save as\" . write-file\)\)
-
-both have the same effect for the \"C-x C-w\" key binding, but
-the latter causes which-key to verify that the key sequence is
-actually bound to write-file before performing the replacement."
+For backwards compatibility, REPLACEMENT can also be a string,
+but the above format is preferred, and the option to use a string
+for REPLACEMENT will eventually be removed."
   (while key
-    (cond ((consp replacement)
-           (define-key keymap (kbd key) replacement))
-          ((stringp replacement)
-           (let ((binding (lookup-key keymap (kbd key))))
-             (if (or (null binding)
-                     (numberp binding))
-                 ;; using a keymap in case someone intends to make this a
-                 ;; prefix. If they want to bind something else, they will just
-                 ;; end up overriding the prefix map
-                 (define-key keymap (kbd key)
-                   (cons replacement (make-sparse-keymap)))
-               (define-key keymap (kbd key) (cons replacement binding)))))
-          (t
-           (user-error "replacement is neither a cons cell or a string")))
+    (let ((def
+           (cond
+            ((consp replacement) replacement)
+            ((stringp replacement)
+             (cons replacement
+                   (or (which-key--safe-lookup-key keymap (kbd key))
+                       (make-sparse-keymap))))
+            (t
+             (user-error "replacement is neither a cons cell or a string")))))
+      (define-key keymap (kbd key) def))
     (setq key (pop more)
           replacement (pop more))))
 (put 'which-key-add-keymap-based-replacements 'lisp-indent-function 'defun)
@@ -1457,8 +1443,13 @@ local bindings coming first. Within these categories order using
   (if (stringp maybe-string) (string-width maybe-string) 0))
 
 (defsubst which-key--safe-lookup-key (keymap key)
-  "Version of `lookup-key' that allows KEYMAP to be nil. KEY is not checked."
-  (when (keymapp keymap) (lookup-key keymap key)))
+  "Version of `lookup-key' that allows KEYMAP to be nil.
+Also convert numeric results of `lookup-key' to nil. KEY is not
+checked."
+  (when (keymapp keymap)
+    (let ((result (lookup-key keymap key)))
+      (when (and result (not (numberp result)))
+        result))))
 
 (defsubst which-key--butlast-string (str)
   (mapconcat #'identity (butlast (split-string str)) " "))
@@ -1508,7 +1499,7 @@ local bindings coming first. Within these categories order using
         (setq key-binding (which-key--replace-in-binding key-binding repl))))
     (when found `(replaced . ,key-binding))))
 
-(defun which-key--maybe-replace (key-binding &optional prefix)
+(defun which-key--maybe-replace (key-binding)
   "Use `which-key--replacement-alist' to maybe replace KEY-BINDING.
 KEY-BINDING is a cons cell of the form \(KEY . BINDING\) each of
 which are strings. KEY is of the form produced by `key-binding'."
@@ -1723,17 +1714,13 @@ alists. Returns a list (key separator description)."
         (local-map (current-local-map))
         new-list)
     (dolist (key-binding unformatted)
-      (let* ((key (car key-binding))
+      (let* ((keys (car key-binding))
              (orig-desc (cdr key-binding))
              (group (which-key--group-p orig-desc))
-             ;; At top-level prefix is nil
-             (keys (if prefix
-                       (concat (key-description prefix) " " key)
-                     key))
              (local (eq (which-key--safe-lookup-key local-map (kbd keys))
                         (intern orig-desc)))
              (hl-face (which-key--highlight-face orig-desc))
-             (key-binding (which-key--maybe-replace (cons keys orig-desc) prefix))
+             (key-binding (which-key--maybe-replace key-binding))
              (final-desc (which-key--propertize-description
                           (cdr key-binding) group local hl-face orig-desc)))
         (when final-desc

@@ -9,6 +9,7 @@ Supported packages:
 - company-mode
 - dashboard
 - deft
+- diff-hl
 - doom-modeline
 - elfeed
 - evil
