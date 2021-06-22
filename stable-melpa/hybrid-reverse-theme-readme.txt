@@ -40,6 +40,7 @@ Supported packages:
 
 Supported defaults:
 - custom (M-x customize)
+- diff-mode
 - dired
 - display-line-numbers-mode
 - font-lock-mode
