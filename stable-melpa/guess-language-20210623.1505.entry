@@ -1,11 +1,11 @@
 (guess-language .
-		[(20210308 1514)
+		[(20210623 1505)
 		 ((cl-lib
 		   (0 5))
 		  (emacs
 		   (24)))
 		 "Robust automatic language detection" tar
-		 ((:commit . "7e511d23ee4315a79081c53596398c471572fb0f")
+		 ((:commit . "e6b78ed2a36bf5debd3d07ffd99a5a8ca60609d6")
 		  (:authors
 		   ("Titus von der Malsburg" . "malsburg@posteo.de"))
 		  (:maintainer "Titus von der Malsburg" . "malsburg@posteo.de")

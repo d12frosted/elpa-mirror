@@ -4,8 +4,8 @@
 
 ;; Author: Phil Hagelberg
 ;; URL: https://gitlab.com/technomancy/fennel-mode
-;; Package-Version: 20210622.1544
-;; Package-Commit: 0e8e2afbc1cfb3ea18d9de0b8356c037d6d6e894
+;; Package-Version: 20210623.1605
+;; Package-Commit: 2bb0e8280424e2eecb4a8077efd1d4b502d0eb74
 ;; Version: 0.3.0
 ;; Created: 2018-02-18
 ;; Package-Requires: ((emacs "25.1"))
@@ -63,7 +63,8 @@
   (set (make-local-variable 'lisp-describe-sym-command) "(doc %s)\n")
   (set (make-local-variable 'inferior-lisp-prompt) ">> ")
   (set (make-local-variable 'lisp-arglist-command) fennel-arglist-command)
-  (set (make-local-variable 'completion-at-point-functions) '(fennel-complete)))
+  (make-local-variable 'completion-at-point-functions)
+  (add-to-list 'completion-at-point-functions 'fennel-complete))
 
 (define-key fennel-repl-mode-map (kbd "TAB") 'completion-at-point)
 
@@ -201,7 +202,8 @@ STATE is the `parse-partial-sexp' state for that position."
        ;; won't work if the fennel module name has changed but beats nothing
        "((. (require :fennel) :dofile) %s)")
   (set (make-local-variable 'lisp-arglist-command) fennel-arglist-command)
-  (set (make-local-variable 'completion-at-point-functions) '(fennel-complete))
+  (make-local-variable 'completion-at-point-functions)
+  (add-to-list 'completion-at-point-functions 'fennel-complete)
   (set-syntax-table fennel-mode-syntax-table)
   (fennel-font-lock-setup)
   ;; work around slime bug: https://gitlab.com/technomancy/fennel-mode/issues/3

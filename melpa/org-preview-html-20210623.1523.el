@@ -5,8 +5,8 @@
 ;; Author: DarkSun <lujun9972@gmail.com>
 ;; Created: 2015-12-27
 ;; Version: 0.2
-;; Package-Commit: 8ba7ecd7ac624f33b3e2395f477bbff4f1ec4efe
-;; Package-Version: 20180625.619
+;; Package-Commit: 3fe7dd85b8a7dc4ead7495095a3abaad28e2f809
+;; Package-Version: 20210623.1523
 ;; Package-X-Original-Version: 20160905.2215
 ;; Keywords: convenience, eww, org
 ;; Package-Requires: ((org "8.0") (emacs "24.4"))
@@ -55,7 +55,7 @@
 
 ;;;###autoload
 (defun org-preview-html/preview ()
-  "Export current org-mode buffer to a temp file and call `eww-open-file' to preview it."
+  "Export current 'org-mode' buffer to a temp file and call `eww-open-file' to preview it."
   (interactive)
   ;; temp filename into a buffer local variable
   (unless org-preview-html/htmlfilename
@@ -81,13 +81,13 @@
   (add-hook 'after-save-hook #'org-preview-html/preview nil t)
   ;; bogus file change to be able to save
   (insert " ")
-  (delete-backward-char 1)
+  (delete-char -1)
   ;; trigger creation of preview buffer
   (save-buffer)
   (message "Eww preview is on"))
 
 (defun org-preview-html//cleanning-the-preview ()
-  "Kill the preview buffer and delete the preview file"
+  "Kill the preview buffer and delete the preview file."
   (if (get-buffer "*eww*")
       (kill-buffer "*eww*"))
   (if (and (boundp 'org-preview-html/htmlfilename)

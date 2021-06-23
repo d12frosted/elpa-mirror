@@ -5,7 +5,7 @@ Source:  https://github.com/tmalsburg/guess-language.el.git
 Updating /mnt/store/melpa/working/guess-language/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/guess-language/
-  to /tmp/guess-languageoAwHod/guess-language-20210308.1514
+  to /tmp/guess-languagepmwoV2/guess-language-20210623.1505
     guess-language.el -> guess-language.el
   ! trigrams/README.org -> README.org
   ! trigrams/af -> af
@@ -75,81 +75,83 @@ Copying files (->) and directories (=>)
   ! trigrams/vi -> vi
   ! trigrams/xh -> xh
   ! trigrams/zu -> zu
-Created guess-language-20210308.1514.tar containing:
-  guess-language-20210308.1514/
-  guess-language-20210308.1514/README.org
-  guess-language-20210308.1514/af
-  guess-language-20210308.1514/ar
-  guess-language-20210308.1514/az
-  guess-language-20210308.1514/bg
-  guess-language-20210308.1514/ca
-  guess-language-20210308.1514/ceb
-  guess-language-20210308.1514/cs
-  guess-language-20210308.1514/cy
-  guess-language-20210308.1514/da
-  guess-language-20210308.1514/de
-  guess-language-20210308.1514/en
-  guess-language-20210308.1514/eo
-  guess-language-20210308.1514/es
-  guess-language-20210308.1514/et
-  guess-language-20210308.1514/eu
-  guess-language-20210308.1514/fa
-  guess-language-20210308.1514/fi
-  guess-language-20210308.1514/fr
-  guess-language-20210308.1514/guess-language-pkg.el
-  guess-language-20210308.1514/guess-language.el
-  guess-language-20210308.1514/ha
-  guess-language-20210308.1514/haw
-  guess-language-20210308.1514/hi
-  guess-language-20210308.1514/hr
-  guess-language-20210308.1514/hu
-  guess-language-20210308.1514/id
-  guess-language-20210308.1514/is
-  guess-language-20210308.1514/it
-  guess-language-20210308.1514/kk
-  guess-language-20210308.1514/ky
-  guess-language-20210308.1514/la
-  guess-language-20210308.1514/lt
-  guess-language-20210308.1514/lv
-  guess-language-20210308.1514/mk
-  guess-language-20210308.1514/mn
-  guess-language-20210308.1514/nb
-  guess-language-20210308.1514/ne
-  guess-language-20210308.1514/nl
-  guess-language-20210308.1514/nr
-  guess-language-20210308.1514/nso
-  guess-language-20210308.1514/pl
-  guess-language-20210308.1514/ps
-  guess-language-20210308.1514/pt
-  guess-language-20210308.1514/pt_BR
-  guess-language-20210308.1514/pt_PT
-  guess-language-20210308.1514/ro
-  guess-language-20210308.1514/ru
-  guess-language-20210308.1514/sk
-  guess-language-20210308.1514/sl
-  guess-language-20210308.1514/so
-  guess-language-20210308.1514/sq
-  guess-language-20210308.1514/sr
-  guess-language-20210308.1514/sr_LAT
-  guess-language-20210308.1514/ss
-  guess-language-20210308.1514/st
-  guess-language-20210308.1514/sv
-  guess-language-20210308.1514/sw
-  guess-language-20210308.1514/tl
-  guess-language-20210308.1514/tlh
-  guess-language-20210308.1514/tn
-  guess-language-20210308.1514/tr
-  guess-language-20210308.1514/ts
-  guess-language-20210308.1514/uk
-  guess-language-20210308.1514/ur
-  guess-language-20210308.1514/uz
-  guess-language-20210308.1514/ve
-  guess-language-20210308.1514/vi
-  guess-language-20210308.1514/xh
-  guess-language-20210308.1514/zu
-Built guess-language in 4.619s, finished at Wed Jun 23 14:05:20 2021
+Created guess-language-20210623.1505.tar containing:
+  guess-language-20210623.1505/
+  guess-language-20210623.1505/README.org
+  guess-language-20210623.1505/af
+  guess-language-20210623.1505/ar
+  guess-language-20210623.1505/az
+  guess-language-20210623.1505/bg
+  guess-language-20210623.1505/ca
+  guess-language-20210623.1505/ceb
+  guess-language-20210623.1505/cs
+  guess-language-20210623.1505/cy
+  guess-language-20210623.1505/da
+  guess-language-20210623.1505/de
+  guess-language-20210623.1505/en
+  guess-language-20210623.1505/eo
+  guess-language-20210623.1505/es
+  guess-language-20210623.1505/et
+  guess-language-20210623.1505/eu
+  guess-language-20210623.1505/fa
+  guess-language-20210623.1505/fi
+  guess-language-20210623.1505/fr
+  guess-language-20210623.1505/guess-language-pkg.el
+  guess-language-20210623.1505/guess-language.el
+  guess-language-20210623.1505/ha
+  guess-language-20210623.1505/haw
+  guess-language-20210623.1505/hi
+  guess-language-20210623.1505/hr
+  guess-language-20210623.1505/hu
+  guess-language-20210623.1505/id
+  guess-language-20210623.1505/is
+  guess-language-20210623.1505/it
+  guess-language-20210623.1505/kk
+  guess-language-20210623.1505/ky
+  guess-language-20210623.1505/la
+  guess-language-20210623.1505/lt
+  guess-language-20210623.1505/lv
+  guess-language-20210623.1505/mk
+  guess-language-20210623.1505/mn
+  guess-language-20210623.1505/nb
+  guess-language-20210623.1505/ne
+  guess-language-20210623.1505/nl
+  guess-language-20210623.1505/nr
+  guess-language-20210623.1505/nso
+  guess-language-20210623.1505/pl
+  guess-language-20210623.1505/ps
+  guess-language-20210623.1505/pt
+  guess-language-20210623.1505/pt_BR
+  guess-language-20210623.1505/pt_PT
+  guess-language-20210623.1505/ro
+  guess-language-20210623.1505/ru
+  guess-language-20210623.1505/sk
+  guess-language-20210623.1505/sl
+  guess-language-20210623.1505/so
+  guess-language-20210623.1505/sq
+  guess-language-20210623.1505/sr
+  guess-language-20210623.1505/sr_LAT
+  guess-language-20210623.1505/ss
+  guess-language-20210623.1505/st
+  guess-language-20210623.1505/sv
+  guess-language-20210623.1505/sw
+  guess-language-20210623.1505/tl
+  guess-language-20210623.1505/tlh
+  guess-language-20210623.1505/tn
+  guess-language-20210623.1505/tr
+  guess-language-20210623.1505/ts
+  guess-language-20210623.1505/uk
+  guess-language-20210623.1505/ur
+  guess-language-20210623.1505/uz
+  guess-language-20210623.1505/ve
+  guess-language-20210623.1505/vi
+  guess-language-20210623.1505/xh
+  guess-language-20210623.1505/zu
+Built guess-language in 4.578s, finished at Wed Jun 23 17:16:29 2021
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  410 Jun 23 14:05 packages/guess-language-20210308.1514.entry
 172K -rw-r--r-- 1 root root 170K Jun 23 14:05 packages/guess-language-20210308.1514.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jun 23 14:05 packages/guess-language-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jun 23 14:05 packages/guess-language-readme.txt
+4.0K -rw-r--r-- 1 root root  410 Jun 23 17:16 packages/guess-language-20210623.1505.entry
+172K -rw-r--r-- 1 root root 170K Jun 23 17:16 packages/guess-language-20210623.1505.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jun 23 17:16 packages/guess-language-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jun 23 17:16 packages/guess-language-readme.txt
