@@ -6,6 +6,8 @@
 #+texinfo_dir_title: Consult: (consult).
 #+texinfo_dir_desc: Useful commands built on completing-read.
 
+#+html: <a href="http://elpa.gnu.org/packages/consult.html"><img alt="GNU ELPA" src="https://elpa.gnu.org/packages/consult.svg"/></a>
+#+html: <a href="http://elpa.gnu.org/devel/consult.html"><img alt="GNU-devel ELPA" src="https://elpa.gnu.org/devel/consult.svg"/></a>
 #+html: <a href="https://melpa.org/#/consult"><img alt="MELPA" src="https://melpa.org/packages/consult-badge.svg"/></a>
 #+html: <a href="https://stable.melpa.org/#/consult"><img alt="MELPA Stable" src="https://stable.melpa.org/packages/consult-badge.svg"/></a>
 
@@ -360,10 +362,10 @@ their descriptions.
    be used for =completion-at-point=. This function is particularily useful in
    combination with Vertico or Icomplete, since these UIs do not provide their
    own =completion-in-region-function=. Selectrum already comes with its own
-   function. However you may not want to transfer the completion at point into
-   the minibuffer and prefer to see the completions directly in the buffer as a
-   small popup. In that case you can either use the [[https://github.com/minad/corfu][Corfu]] or the [[https://github.com/company-mode/company-mode][Company]]
-   package.
+   function, which is similar to =consult-completion-in-region=. However you may
+   not want to transfer the completion at point into the minibuffer and prefer
+   to see the completions directly in the buffer as a small popup. In that case
+   you can either use the [[https://github.com/minad/corfu][Corfu]] or the [[https://github.com/company-mode/company-mode][Company]] package.
  - =consult-theme=: Select a theme and disable all currently enabled
    themes. Supports live preview of the theme while scrolling through the
    candidates.
@@ -403,10 +405,50 @@ their descriptions.
  =consult-preview-key= variable. Furthermore it is possible to specify
  keybindings which trigger the preview manually as shown in the [[#use-package-example][example
  configuration]]. The default setting of =consult-preview-key= is =any= which
- means that the preview will be triggered on any keypress when the selected
- candidate changes. Each command can be configured individually with its own
- =:preview-key=, such that preview can be manual for some commands, for some
- commands automatic and for some commands completely disabled.
+ means that the preview will be triggered /immediately/ on any keypress when the
+ selected candidate changes. Each command can be configured individually with
+ its own =:preview-key=. The preview key can be configured to be:
+
+ - Automatic and immediate =any=
+ - Automatic and delayed =(:debounce 0.5 any)=
+ - Manual and immediate =(kbd "M-.")=
+ - Manual and delayed =(list :debounce 0.5 (kbd "M-."))=
+ - Disabled =nil=
+
+ A safe recommendation is to leave automatic immediate previews enabled in
+ general and disable the automatic preview only for commands, where the preview
+ may be expensive due to file loading.
+
+ #+begin_src emacs-lisp
+   (consult-customize
+    consult-ripgrep consult-git-grep consult-grep
+    consult-bookmark consult-recent-file consult-xref
+    consult--source-file consult--source-project-file consult--source-bookmark
+    :preview-key (kbd "M-."))
+ #+end_src
+
+ In this case one may wonder what the difference is between using an Embark
+ action on the current candidate in comparison to a manually triggered preview.
+ The main difference is that the files opened by manual preview are closed again
+ after the completion session. Furthermore during preview some functionality is
+ disabled to improve the performance, see for example
+ =consult-preview-excluded-hooks=. Files larger than =consult-preview-raw-size=
+ are previewed literally without syntax highlighting and without changing the
+ major mode.
+
+ Delaying the preview is particularily useful for =consult-theme=, since the theme
+ preview is a little bit slow. The delay can result in a smoother UI.
+
+ #+begin_src emacs-lisp
+   ;; Preview on any key press, but delay 0.5s
+   (consult-customize consult-theme :preview-key '(:debounce 0.5 any))
+   ;; Preview immediately on M-., on up/down after 0.5s, on any other key after 1s
+   (consult-customize consult-theme
+                      :preview-key
+                      (list (kbd "M-.")
+                            :debounce 0.5 (kbd "<up>") (kbd "<down>")
+                            :debounce 1 any))
+ #+end_src
 
 ** Narrowing and grouping
    :properties:
@@ -466,12 +508,12 @@ their descriptions.
  The default splitting style is configured with the variable
  ~consult-async-split-style~.
 
- For the =space=/=comma=/=semicolon= splitting styles, the first word before the
- space/comma/semicolon is passed to grep, the remaining string is used for
- filtering.
+ With the =space=, =comma= and =semicolon= splitting styles, the first word
+ before the space/comma/semicolon is passed to grep, the remaining string is
+ used for filtering.
 
- For the =perl= splitting style, the input string is split at a punctuation
- character, using a similar syntax as Perl regular expressions.
+ The =perl= splitting style splits the input string at a punctuation character,
+ using a similar syntax as Perl regular expressions.
 
  Examples:
 
@@ -484,9 +526,9 @@ their descriptions.
    must be longer than =consult-async-min-input= characters by default.
  - =#defun -- --invert-match#=: Pass argument =--invert-match= to grep.
 
- For asynchronous processes like =find= and =grep=,
- there is an error log buffer =_*consult-async*= (note the leading space).
- The prompt has a small indicator showing the process status:
+ Asynchronous processes like =find= and =grep= create an error log buffer
+ =_*consult-async*= (note the leading space), which is useful for
+ troubleshooting. The prompt has a small indicator showing the process status:
 
  - =:= the usual prompt colon, before input is provided.
  - =*= with warning face, the process is running.
@@ -565,8 +607,9 @@ their descriptions.
   perform preview.
 
   #+begin_src emacs-lisp
-  (dolist (src '(consult--source-file consult--source-project-file consult--source-bookmark))
-    (set src (plist-put (symbol-value src) :preview-key (kbd "M-."))))
+    (consult-customize
+     consult--source-file consult--source-project-file consult--source-bookmark
+     :preview-key (kbd "M-."))
   #+end_src
 
   Sources can be added directly to the =consult-buffer-source= list for
@@ -683,9 +726,9 @@ their descriptions.
   :description: Example configuration and customization variables
   :end:
 
-Consult can be installed from [[https://melpa.org/][MELPA]] via the Emacs built-in package manager.
-Alternatively it can be directly installed from the development repository via
-other non-standard package managers.
+Consult can be installed from [[http://elpa.gnu.org/packages/consult.html][ELPA]] or [[https://melpa.org/#/consult][MELPA]] via the Emacs built-in package
+manager. Alternatively it can be directly installed from the development
+repository via other non-standard package managers.
 
 There is the [[https://github.com/minad/consult/wiki][Consult wiki]], where additional configuration examples can be
 contributed.
@@ -738,7 +781,7 @@ contributed.
             ("M-g f" . consult-flymake)               ;; Alternative: consult-flycheck
             ("M-g g" . consult-goto-line)             ;; orig. goto-line
             ("M-g M-g" . consult-goto-line)           ;; orig. goto-line
-            ("M-g o" . consult-outline)
+            ("M-g o" . consult-outline)               ;; Alternative: consult-org-heading
             ("M-g m" . consult-mark)
             ("M-g k" . consult-global-mark)
             ("M-g i" . consult-imenu)
@@ -758,7 +801,7 @@ contributed.
             :map isearch-mode-map
             ("M-e" . consult-isearch)                 ;; orig. isearch-edit-string
             ("M-s e" . consult-isearch)               ;; orig. isearch-edit-string
-            ("M-s l" . consult-line))                 ;; required by consult-line to detect isearch
+            ("M-s l" . consult-line))                 ;; needed by consult-line to detect isearch
 
      ;; Enable automatic preview at point in the *Completions* buffer.
      ;; This is relevant when you use the default completion UI,
@@ -794,7 +837,10 @@ contributed.
      ;; For some commands and buffer sources it is useful to configure the
      ;; :preview-key on a per-command basis using the `consult-customize' macro.
      (consult-customize
-      consult-ripgrep consult-git-grep consult-grep consult-bookmark consult-recent-file
+      consult-theme
+      :preview-key '(:debounce 0.2 any)
+      consult-ripgrep consult-git-grep consult-grep
+      consult-bookmark consult-recent-file consult-xref
       consult--source-file consult--source-project-file consult--source-bookmark
       :preview-key (kbd "M-."))
 
@@ -862,6 +908,7 @@ contributed.
  | consult-mode-histories           | ...              | Mode-specific history variables                       |
  | consult-narrow-key               | nil              | Narrowing prefix key during completion                |
  | consult-preview-key              | 'any             | Keys which triggers preview                           |
+ | consult-preview-excluded-hooks   | ...              | List of =find-file= hooks to avoid during preview     |
  | consult-preview-max-count        | 10               | Maximum number of files to keep open during preview   |
  | consult-preview-max-size         | 10485760         | Files larger than this size are not previewed         |
  | consult-preview-raw-size         | 102400           | Files larger than this size are previewed in raw form |
@@ -896,7 +943,8 @@ contributed.
  - =:history= set the history variable symbol
  - =:add-history= add items to the future history, for example symbol at point
  - =:sort= enable or disable sorting
- - =:group= set to nil in order to disable candidate grouping and titles.
+ - =:group= set to nil to disable candidate grouping and titles.
+ - =:inherit-input-method= set to non-nil to inherit the input method.
 
  #+begin_src emacs-lisp
    (consult-customize
@@ -965,9 +1013,9 @@ is not desired.
 
 The Selectrum repository provides a [[https://github.com/raxod502/selectrum/tree/master/test][set of scripts]] which allow experimenting
 with multiple package combinations including various completion systems and
-Consult. After cloning the Selectrum repository, the scripts can be executed
-with =cd selectrum/test; ./run.sh <package-combo.el>=. The scripts do not modify
-your existing Emacs configuration, but create a separate Emacs configuration in
+Consult. After cloning the repository, the scripts can be executed with =cd
+selectrum/test; ./run.sh <package-combo.el>=. The scripts do not modify your
+existing Emacs configuration, but create a separate Emacs configuration in
 =/tmp=.
 
 * Bug reports
@@ -1056,9 +1104,7 @@ command snippets.
 You probably guessed from the name that this package took inspiration from
 [[https://github.com/abo-abo/swiper#counsel][Counsel]] by Oleh Krehel. Some of the Consult commands originated in the Counsel
 package or the [[https://github.com/raxod502/selectrum/wiki/Useful-Commands][Selectrum wiki]]. The commands have been rewritten and greatly
-enhanced in comparison to the original versions. In particular all
-Selectrum-specific code has been removed, such that the commands are compatible
-with the =completing-read= API.
+enhanced in comparison to the original versions.
 
 Code contributions:
 - [[https://github.com/oantolin/][Omar Antolín Camarena]]
