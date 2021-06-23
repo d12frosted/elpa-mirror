@@ -4,8 +4,8 @@
 
 ;; Author: Tom Willemse <tom@ryuslash.org>
 ;; Keywords: faces
-;; Package-Version: 20210509.520
-;; Package-Commit: 9a26f361083ed1d0dd56e659fae913ffea51c739
+;; Package-Version: 20210623.544
+;; Package-Commit: 4aa2a0d0c3e3b7c408d680df8cc5ede53c18e923
 ;; Version: 6.2.0
 ;; URL: http://projects.ryuslash.org/yoshi-theme/
 
@@ -48,10 +48,10 @@
                       5)))
    `(:line-width ,line-width :color ,border-color)))
 
-(let ((yoshi-0 "#111414")
-      (yoshi-1 "#2c3434")
-      (yoshi-2 "#475454")
-      (yoshi-3 "#627373")
+(let ((yoshi-0 "#222424")
+      (yoshi-1 "#3f4242")
+      (yoshi-2 "#5b6161")
+      (yoshi-3 "#787f7f")
       (yoshi-4 "#848484")
       (yoshi-5 "#a2a2a2")
       (yoshi-6 "#bfbfbf")
@@ -198,7 +198,7 @@
    `(eshell-ls-unreadable ((t (:foreground ,fgred))))
    `(eshell-prompt ((t (:foreground ,yoshi-5 :weight unspecified))))
 
-   `(fill-column-indicator ((t (:foreground ,bgred :inherit unspecified))))
+   `(fill-column-indicator ((t (:foreground ,yoshi-2 :inherit unspecified))))
 
    ;; Flycheck
    `(flycheck-error ((t (:inherit unspecified :underline (:color ,fgred :style wave)))))

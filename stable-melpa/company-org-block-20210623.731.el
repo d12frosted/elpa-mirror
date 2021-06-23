@@ -2,8 +2,8 @@
 
 ;; Author: Alvaro Ramirez
 ;; Package-Requires: ((emacs "25.1") (company "0.8.0") (org "9.2.0"))
-;; Package-Version: 20210613.1212
-;; Package-Commit: d63fe9c6853aa52297a0c9c65d88149a0de8c8e0
+;; Package-Version: 20210623.731
+;; Package-Commit: 4fd9a9c673225196e211bb3ced411d0ef9ff2f88
 ;; URL: https://github.com/xenodium/company-org-block
 ;; Version: 0.3
 
@@ -23,7 +23,7 @@
 ;;; Commentary:
 ;; `company-complete' org blocks using "<" as a trigger.
 ;;
-;; To enable, add `company-org-block' to `company-backend'.
+;; To enable, add `company-org-block' to `company-backends'.
 ;;
 ;; Configure edit style via `company-org-block-edit-style'.
 ;;
