@@ -4,7 +4,7 @@
 
 ;; Author: Nick Lanham
 ;; URL: https://github.com/mgyucht/jsonnet-mode
-;; Package-Commit: 54a89b0aaba7a68782008c5e1ab00d5ec757316a
+;; Package-Commit: ac0ea2e798d792533a35edb32cf6d74af14d8080
 ;; Package-Version: 20210527.1557
 ;; Package-X-Original-Version: 0.0.1
 ;; Keywords: languages

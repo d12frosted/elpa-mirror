@@ -3,9 +3,9 @@
 ;; Copyright © 2012-2021 by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 4.3.20210110193401
-;; Package-Version: 20210111.334
-;; Package-Commit: 8948fa8f18023868731a1666f9893abc08f370e1
+;; Version: 4.3.20210623202649
+;; Package-Version: 20210624.327
+;; Package-Commit: 16b8d62ddb1d5548fcd78a0371481434390ebd54
 ;; Created: 02 April 2012
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: convenience, extensions, files, tools, unix
@@ -297,18 +297,10 @@ Version 2018-09-22"
 home page:
 URL `http://ergoemacs.org/emacs/elisp-xah-find-text.html'
 
-\\{xah-find-output-mode-map}"
-
+\\{xah-find-output-mode-map}
+Version 2021-06-23"
   (setq font-lock-defaults '((xah-find-font-lock-keywords)))
-
-(set-syntax-table xah-find-output-syntax-table)
-
-  (progn
-    (when (null buffer-display-table)
-      (setq buffer-display-table (make-display-table)))
-    (aset buffer-display-table ?\^L
-          (vconcat (make-list 70 (make-glyph-code ?─ 'font-lock-comment-face)))))
-
+  (set-syntax-table xah-find-output-syntax-table)
   :group 'xah-find
   )
 
@@ -431,7 +423,7 @@ Version 2019-03-14"
     (format "Write to file: %s\n" @write-file-p )
     (format "Backup: %s\n" @backup-p )
     (format "Search string: %s\n" @search-str )
-    (when @replace-str (format "Replace string ❬%s❭\n" @replace-str))
+    (when @replace-str (format "Replace string [[%s]]\n" @replace-str))
     "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\n\n"
     )
    @bufferObj))
