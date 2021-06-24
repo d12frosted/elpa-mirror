@@ -5,7 +5,7 @@
 ;;
 ;; Version: 0.0.4
 ;; Package-Version: 20201119.816
-;; Package-Commit: d970dd53dec76f9f72ade5b1f8717dea3d45bb3c
+;; Package-Commit: ab01c290860ab0d8f43afcf1f7466fdced24e123
 ;; Keywords: convenience
 ;; Author: Chen Bin <chenbin DOT sh AT gmail DOT com>
 ;; URL: https://github.com/redguardtoo/js2hl
