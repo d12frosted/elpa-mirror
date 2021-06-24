@@ -15,26 +15,29 @@ put the following in your emacs init file:
 (xah-fly-keys-set-layout "qwerty") ; required
 
 possible layout values:
+
+adnw
 azerty
 azerty-be
+beopy
+bepo
+carpalx-qfmlwy
+carpalx-qgmlwb
+carpalx-qgmlwy
 colemak
 colemak-mod-dh
 colemak-mod-dh-new
 dvorak
+koy
+neo2
+norman
 programer-dvorak
+pt-nativo
 qwerty
 qwerty-abnt
 qwerty-no (qwerty Norwegian)
 qwertz
 workman
-norman
-neo2
-koy
-adnw
-pt-nativo
-carpalx-qgmlwy
-carpalx-qgmlwb
-carpalx-qfmlwy
 
 (xah-fly-keys 1)
 

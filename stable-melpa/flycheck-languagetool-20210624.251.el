@@ -7,8 +7,8 @@
 ;; Description: Flycheck support for LanguageTool.
 ;; Keyword: grammar check
 ;; Version: 0.2.0
-;; Package-Version: 20210621.306
-;; Package-Commit: c7d47e4171493cf55fe6afe1ba7d9587a2df9f34
+;; Package-Version: 20210624.251
+;; Package-Commit: ac6fe98116d6cfec63e25c6f4444f683340f80a0
 ;; Package-Requires: ((emacs "25.1") (flycheck "0.14") (s "1.9.0"))
 ;; URL: https://github.com/emacs-languagetool/flycheck-languagetool
 
@@ -44,7 +44,7 @@
   :link '(url-link :tag "Github" "https://github.com/emacs-languagetool/flycheck-languagetool"))
 
 (defcustom flycheck-languagetool-active-modes
-  '(text-mode latex-mode org-mode markdown-mode)
+  '(text-mode latex-mode org-mode markdown-mode message-mode)
   "List of major mode that work with LanguageTool."
   :type 'list
   :group 'flycheck-languagetool)

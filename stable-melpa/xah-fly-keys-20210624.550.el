@@ -3,9 +3,9 @@
 ;; Copyright © 2013-2021, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 13.9.20210519224008
-;; Package-Version: 20210520.540
-;; Package-Commit: 3022cbf1e0b16c4fe632d03bd49832afac12510c
+;; Version: 13.11.20210623225018
+;; Package-Version: 20210624.550
+;; Package-Commit: 3971ab58974bb6d7b2f6f38198ae9945e679a419
 ;; Created: 10 Sep 2013
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: convenience, emulations, vim, ergoemacs
@@ -33,26 +33,29 @@
 ;; (xah-fly-keys-set-layout "qwerty") ; required
 
 ;; possible layout values:
+
+;; adnw
 ;; azerty
 ;; azerty-be
+;; beopy
+;; bepo
+;; carpalx-qfmlwy
+;; carpalx-qgmlwb
+;; carpalx-qgmlwy
 ;; colemak
 ;; colemak-mod-dh
 ;; colemak-mod-dh-new
 ;; dvorak
+;; koy
+;; neo2
+;; norman
 ;; programer-dvorak
+;; pt-nativo
 ;; qwerty
 ;; qwerty-abnt
 ;; qwerty-no (qwerty Norwegian)
 ;; qwertz
 ;; workman
-;; norman
-;; neo2
-;; koy
-;; adnw
-;; pt-nativo
-;; carpalx-qgmlwy
-;; carpalx-qgmlwb
-;; carpalx-qfmlwy
 
 ;; (xah-fly-keys 1)
 
@@ -2453,7 +2456,7 @@ Version 2018-10-12"
  xah-run-current-file-map
  '(
    ("php" . "php")
-   ("pl" . "perl")
+   ("pl" . "d:/Strawberry/perl/bin/perl.exe")
    ("py" . "python")
    ("py2" . "python2")
    ("py3" . "python3")
@@ -3427,7 +3430,11 @@ Version 2017-01-29"
     ("m" . "m")
     ("w" . ",")
     ("v" . ".")
-    ("z" . "j"))
+    ("z" . "j")
+
+    ("/" . "ß")
+    ("[" . "-")
+    ("-" . "y"))
   "A alist, each element is of the form(\"e\" . \"d\"). First char is Dvorak, second is corresponding neo2 layout. Not all chars are in the list, such as digits. When not in this alist, they are assumed to be the same.")
 
 (defvar xah--dvorak-to-koy-kmap
@@ -3656,16 +3663,64 @@ Version 2017-01-29"
     ("z" . "/"))
   "A alist, each element is of the form(\"e\" . \"d\"). First char is Dvorak, second is corresponding Carpalx QFMLWY layout. Not all chars are in the list, such as digits. When not in this alist, they are assumed to be the same.")
 
+(defvar xah--dvorak-to-bepo-kmap
+  '(("'" . "b")
+    ("," . "é")
+    ("." . "p")
+    ("p" . "o")
+    ("y" . "è")
+
+    ("f" . "^") ; NOTE: dead key
+    ("g" . "v")
+    ("c" . "d")
+    ("r" . "l")
+    ("l" . "j")
+
+    ("a" . "a")
+    ("o" . "u")
+    ("e" . "i")
+    ("u" . "e")
+    ("i" . ",")
+
+    ("d" . "c")
+    ("h" . "t")
+    ("t" . "s")
+    ("n" . "r")
+    ("s" . "n")
+
+    (":" . "à")
+    ("q" . "y")
+    ("j" . "x")
+    ("k" . ".")
+    ("x" . "k")
+
+    ("b" . "’")
+    ("m" . "q")
+    ("w" . "g")
+    ("v" . "h")
+    ("z" . "f")
+
+    ("3" . "»")
+    ("4" . "(")
+    ("5" . ")")
+    ("6" . "@")
+    ("7" . "+")
+    ("8" . "-")
+    ("9" . "/"))
+
+  "A alist, each element is of the form (\"e\" . \"d\"). First char is Dvorak, second is corresponding BEPO layout. Not all chars are in the list. When not in this alist, they are assumed to be the same.")
+
 (define-obsolete-variable-alias 'xah-fly-key--current-layout 'xah-fly-key-current-layout "2020-04-09")
 (defcustom xah-fly-key-current-layout nil
   "The current keyboard layout. Use `xah-fly-keys-set-layout' to set the layout.
 If the value is nil, it's automatically set to \"dvorak\"."
   :type '(choice  (const :tag "AZERTY" azerty)
                   (const :tag "Belgian AZERTY" azerty-be)
-		          (const :tag "BEOPY" beopy)
+                  (const :tag "BEOPY" beopy)
+                  (const :tag "BEPO" bepo)
                   (const :tag "Colemak" colemak)
                   (const :tag "Colemak Mod-DH" colemak-mod-dh)
-		          (const :tag "New Colemak Mod-DH with M on the home row" colemak-mod-dh-new)
+                  (const :tag "New Colemak Mod-DH with M on the home row" colemak-mod-dh-new)
                   (const :tag "Dvorak" dvorak)
                   (const :tag "Programmer Dvorak" programer-dvorak)
                   (const :tag "QWERTY" qwerty)
@@ -3677,7 +3732,7 @@ If the value is nil, it's automatically set to \"dvorak\"."
                   (const :tag "Neo2" neo2)
                   (const :tag "Koy" koy)
                   (const :tag "Adnw" adnw)
-		          (const :tag "PT-nativo" pt-nativo)
+                  (const :tag "PT-nativo" pt-nativo)
                   (const :tag "Carpalx QGMLWY" carpalx-qgmlwy)
                   (const :tag "Carpalx QGMLWB" carpalx-qgmlwb)
                   (const :tag "Carpalx QFMLWY" carpalx-qfmlwy))
@@ -3740,8 +3795,6 @@ Version 2020-04-18"
 
 ;; HHH___________________________________________________________________
 ;; keymaps
-
-;; (defvar xah-fly-swapped-1-8-and-2-7-p nil "If non-nil, it means keys 1 and 8 are swapped, and 2 and 7 are swapped. See: http://xahlee.info/kbd/best_number_key_layout.html")
 
 (defvar xah-fly-key-map (make-sparse-keymap)
   "Backward-compatibility map for `xah-fly-keys' minor mode.
@@ -3859,15 +3912,6 @@ minor modes loaded later may override bindings in this map.")
    ("y" . set-mark-command)
    ("z" . xah-goto-matching-bracket)))
 
-;; (when xah-fly-swapped-1-8-and-2-7-p
-;;     (xah-fly--define-keys
-;;      xah-command-key-map
-;;      '(
-;;        ("8" . pop-global-mark)
-;;        ("7" . xah-pop-local-mark-ring)
-;;        ("2" . xah-select-line)
-;;        ("1" . xah-extend-selection))))
-
 ;; HHH___________________________________________________________________
 ;; set control meta, etc keys
 
@@ -3897,50 +3941,53 @@ minor modes loaded later may override bindings in this map.")
      ("<C-prior>" . xah-previous-user-buffer)
      ("<C-next>" . xah-next-user-buffer)
 
-     ("C-SPC" . xah-fly-leader-key-map)
-
-     ("C-9" . scroll-down-command)
-     ("C-0" . scroll-up-command)
-
-     ("C-7" . xah-previous-user-buffer)
-     ("C-8" . xah-next-user-buffer)
-
-     ("C-5" . xah-previous-emacs-buffer)
-     ("C-6" . xah-next-emacs-buffer)
+     ;; ("C-SPC" . xah-fly-leader-key-map)
 
      ("C-3" . previous-error)
      ("C-4" . next-error)
+     ("C-5" . xah-previous-emacs-buffer)
+     ("C-6" . xah-next-emacs-buffer)
+     ("C-7" . xah-previous-user-buffer)
+     ("C-8" . xah-next-user-buffer)
+     ("C-9" . scroll-down-command)
+     ("C-0" . scroll-up-command)
 
-     ("C-a" . mark-whole-buffer)
-     ("C-t" . xah-new-empty-buffer)
-     ("C-n" . xah-new-empty-buffer)
+     ("C--" . text-scale-decrease)
+     ("C-=" . text-scale-increase)
+
      ("C-S-n" . make-frame-command)
-     ("C-o" . find-file)
-     ("C-s" . save-buffer)
      ("C-S-s" . write-file)
      ("C-S-t" . xah-open-last-closed)
+
+     ("C-a" . mark-whole-buffer)
+     ;; ("C-b" . nil)
+     ;; ("C-c" . nil)
+     ("C-d" . pop-global-mark)
+     ;; ("C-e" . nil)
+     ;; ("C-f" . nil)
+     ;; ("C-g" . nil)
+     ;; ("C-h" . nil)
+     ;; ("C-i" . nil)
+     ;; ("C-j" . nil)
+     ;; ("C-k" . nil)
+     ;; ("C-l" . nil)
+     ;; ("C-m" . nil)
+     ("C-n" . xah-new-empty-buffer)
+     ("C-o" . find-file)
+     ;; ("C-p" . nil)
+     ;; ("C-q" . nil)
+     ;; ("C-r" . nil)
+     ("C-s" . save-buffer)
+     ;; ("C-t" . nil)
+     ;; ("C-u" . nil)
      ("C-v" . yank)
      ("C-w" . xah-close-current-buffer)
+     ;; ("C-x" . nil)
+     ;; ("C-y" . nil)
      ("C-z" . undo)
-
-     ("C-=" . text-scale-increase)
-     ("C--" . text-scale-decrease)
-
-     ("C-d" . pop-global-mark))
-   :direct)
-
-  ;; (if xah-fly-swapped-1-8-and-2-7-p
-  ;;     (xah-fly--define-keys
-  ;;      xah-fly-shared-map
-  ;;      '(("C-2" . xah-previous-user-buffer)
-  ;;        ("C-1" . xah-next-user-buffer))
-  ;;      :direct)
-  ;;   (xah-fly--define-keys
-  ;;    xah-fly-shared-map
-  ;;    '(("C-7" . xah-previous-user-buffer)
-  ;;      ("C-8" . xah-next-user-buffer))
-  ;;    :direct))
-  )
+     ;;
+     )
+   :direct))
 
 (when xah-fly-use-isearch-arrows
   (xah-fly--define-keys
@@ -4446,6 +4493,7 @@ Argument must be one of:
  'azerty
  'azerty-be
  'beopy
+ 'bepo
  'colemak
  'colemak-mod-dh
  'colemak-mod-dh-new
