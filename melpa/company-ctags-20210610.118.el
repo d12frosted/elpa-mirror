@@ -5,7 +5,7 @@
 ;; Author: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: https://github.com/redguardtoo/company-ctags
 ;; Package-Version: 20210610.118
-;; Package-Commit: ecf951fae561cab261e86cbab18c0a035d7a876a
+;; Package-Commit: 3f65a42b983784402c9d206c1b9b3ab9d596ae9d
 ;; Version: 0.0.5
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "25.1") (company "0.9.0"))
