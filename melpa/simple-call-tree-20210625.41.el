@@ -7,8 +7,8 @@
 ;; Copyleft (Ↄ) 2012, Joe Bloggs, all rites reversed.
 ;; Created: 2012-11-01 21:28:07
 ;; Version: 20151116.1603
-;; Package-Version: 20210617.1126
-;; Package-Commit: 2a774720f17ed4ee78c9d840252069867fac9d3a
+;; Package-Version: 20210625.41
+;; Package-Commit: 56a39602c890394692525568b7e86307df4a6aa9
 ;; Package-Requires: ((emacs "24.3") (anaphora "1.0.0"))
 ;; Last-Updated: Mon Nov 16 16:03:18 2015
 ;;           By: Joe Bloggs
@@ -378,7 +378,7 @@ and by `simple-call-tree-visit-function' and `simple-call-tree-view-function' (f
                  (const :tag "Bottom" bottom)))
 
 ;; simple-call-tree-info: DONE
-(defcustom simple-call-tree-default-view 'middle
+(defcustom simple-call-tree-default-view 'top
   "How to recenter the window after viewing a toplevel header.
 This applied to viewing with `simple-call-tree-view-function', and with `simple-call-tree-visit-function'
 in follow-mode. It can be one of the following symbols: 'top 'middle 'bottom. 
@@ -389,7 +389,7 @@ This only applies to toplevel headers, see `simple-call-tree-default-recenter' f
                  (const :tag "Middle" middle)
                  (const :tag "Bottom" bottom)))
 
-;; simple-call-tree-info: CHECK
+;; simple-call-tree-info: DONE  
 (define-widget 'window-split 'lazy
   "Window split location; either an integer number of rows/columns or a proportion of the existing window size.
 The value is used as an argument to the `split-window' function.
@@ -416,6 +416,17 @@ absolute value indicates the size of the new window created after splitting."
 					  "Value must be between -1.0 & 1.0")
 			      w))))))
 
+;; simple-call-tree-info: DONE
+(define-widget 'split-orientation 'lazy
+  "Side parameter used by `split-window' function"
+  :tag "Window location"
+  :type '(choice :value below
+		 (const :tag "Left" left)
+		 (const :tag "Right" right)
+		 (const :tag "Above" above)
+		 (const :tag "Below" below)))
+
+;; simple-call-tree-info: DONE
 (define-widget 'positive-float 'float
   "Positive floating point number."
   :tag "Float"
@@ -424,77 +435,105 @@ absolute value indicates the size of the new window created after splitting."
 		(widget-put w :error "Value must be positive")
 		w)))
 
-;; simple-call-tree-info: TODO  allow option to show code in separate frame, and for orientation of adaptive splits
-(defcustom simple-call-tree-window-splits '((2 0.8 0.7 0.3 0.3 0.4) (1 3 below))
+;; simple-call-tree-info: TODO  allow option to show code in separate frame
+(defcustom simple-call-tree-window-splits '((2 1.5 5.0 right below 5 2) (1 3 below))
   "Alist of items containing info about how to split the window when viewing code (e.g. in follow mode). 
-The item used to determing the split is the first item with a car that is either an integer less 
+The item used to determine the split is the first item with a car that is either an integer less 
 than or equal to the current depth, or an s-expression that evaluates to non-nil.
 
-The cdr is used to determing the size and orientation of the split, which are then fed into the
+The cdr is used to determine the size and orientation of the split, which are then fed into the
 `split-window' function. It can be either a list of size & orientation values for fixed splitting,
-or a list of 5 parameters for adaptive splitting.
-In the case of adaptive splitting the first two parameters are used to calculate horizontal & vertical 
-split locations respectively. The exact interpretation of these numbers depends on their sign & type:
+or a list of 6 parameters for adaptive splitting.
+For fixed splitting the size parameter can be interpreted in one of the following ways:
 
  positive integer - number of columns/rows to use for the *Simple Call Tree* window
  negative integer - number of columns/rows to use for the code window
- float in range (0,1) - for horizonal splits this is the number of columns to use for the
-                    *Simple Call Tree* window measured as a proportion of the maximum line
-                    length (excluding tags). For vertical splits it's the number of rows to
-                    use for the *Simple Call Tree* window measured as a proportion of the
-                    number of branches in the largest subtree.
- float in range (-1,0) - proportion of columns/rows in existing window to use for the code window
-                         after the split
+ float in range (0,1) - proportion of total columns/rows in existing window to use for 
+                        the *Simple Call Tree* window after the split
+ float in range (-1,0) - proportion of total columns/rows in existing window to use for the 
+                         code window after the split
 
-The third & fourth parameters indicate how columns/rows (respectively) in the *Simple Call Tree* 
-window should be valued relative to columns/rows in the code window. They correspond to 
-cval1/cval2 and rval1/rval2 in the description below. 
-The final fifth parameter is a threshold used to decide between horizontal & vertical splitting
-and corresponds to cval2/rval2 in the description below. It can be interpreted as the relative value 
-of columns to rows in the code window (e.g. a value of 3 indicates that columns are three times 
-more valuable than rows in the code window).
+The orientation parameter can be either 'left, 'right, 'above, 'below, and indicates the position 
+of the code window relative to the *Simple Call Tree* window after the split.
 
-These parameters are used to assign values to horizontal & vertical splits, and then select the
-one with the highest value. The values are calculated from the following formulas:
+For adaptive splitting the following 6 parameters need to be specified (or left at default values):
+ 1st param: value of space in code window relative to space in call-tree window (c2t in formulas below). 
+            A larger value means that the split will have a larger code window. Values between 1 & 5 work well.
+ 2nd param: value of rows relative to columns (v2h in formulas below). A larger value increases the likelihood 
+            of a vertical split. Values between 1 & 20 work well.
+ 3rd param: orientation of code window for horizontal splits (either left or right)
+ 4th param: orientation of code window for vertical splits (either above or below)
+ 5th param: minimum number of columns in horizontal split windows. If the split would otherwise result in
+            a code window or call-tree window smaller than this value, it will be enlarged. The value
+            can be a positive integer, or a proportion of total columns (i.e. a float between 0.0 & 1.0).
+ 6th param: minimum number of rows in vertical split windows as either a positive integer, or a 
+            proportion of total rows (i.e. a float between 0.0 & 1.0).
 
- value of horizontal split: c1*cval1 + c2*cval2 + (r1+r2)*(rval1+rval2)
- value of vertical split:   (c1+c2)*(cval1+cval2) + r1*rval1 + r2*rval2
+To calculate the location and orientation of the adaptive split the following formulas are used:
 
-So: value of horizontal split > value of vertical split 
-     <=> (r1+r2*(rval1/rval2))/(c1+c2*(cval1/cval2)) > cval2/rval2 (= threshold)
+ value of horizontal split: c2t*(width-hsplit) - (maxl-hsplit)^1.5 
+ value of vertical split:   v2h*c2t*(height-vsplit) - v2h*(maxh-vsplit)^1.5
 
-where: c1 & c2 = number of columns in *Simple Call Tree* & code windows respectively
-       r1 & r2 = number of rows in *Simple Call Tree* & code windows respectively
- cval1 & cval2 = values assigned to columns in *Simple Call Tree* & code windows respectively
- rval1 & rval2 = values assigned to rows in *Simple Call Tree* & code windows respectively"
+where:
+  width & height = width & height of *Simple Call Tree* window before the split
+ hsplit & vsplit = positions of horizontal & vertical splits (in number of columns/rows)
+            maxl = maximum length of lines in *Simple Call Tree* buffer (excluding tags)
+            maxh = maximum number of lines under headers in *Simple Call Tree* buffer
+             c2t = value of space in code window relative to space in *Simple Call Tree* window
+             v2h = value of vertical split rows relative to horizontal split columns
+
+The values of hsplit & vsplit are chosen to maximize the above mentioned formulas. These value are then
+adjusted to ensure that they are within the bounds specified by the 5th & 6th parameters, and maxh & maxl 
+respectively, and then substituted back into the formulas to obtain values for the horizontal & vertical splits. 
+Whichever has the greatest value is the chosen split."
+  ;; Note: several different value formulas were tried before arriving at the ones stated above. It is tempting to
+  ;; take square roots of the first term (to have a decreasing marginal value of code window size), or a power of
+  ;; 2 instead of 1.5 for the second term, but this results in formulas that are harder to maximize or less responsive
+  ;; to parameter changes.
   :group 'simple-call-tree
   :type '(alist :key-type
 		(choice :tag "Condition"
 			(integer :tag "Minimum depth"
 				 :help-echo "Select split if tree depth is at least this number"
+				 :value 1
 				 :validate
 				 (lambda (w)
 				   (when (< (widget-value w) 1)
 				     (widget-put w :error "Depth must be greater than 0")
 				     w)))
-			(sexp
-			 :tag "S-expression"
-			 :help-echo "Select split if sexp evaluates to non-nil"))
+			(sexp :tag "S-expression"
+			      :help-echo "Select split if sexp evaluates to non-nil"))
 		:value-type
 		(choice :tag "Code window display"
 			(list :tag "Fixed"
-			      (window-split :tag "Size")
-			      (choice :tag "Orientation of code window"
-				      (const :tag "Left" left)
-				      (const :tag "Right" right)
-				      (const :tag "Above" above)
-				      (const :tag "Below" below)))
+			      (window-split :tag "Size" :value 10)
+			      (split-orientation :tag "Orientation of code window"
+						 :value below))
 			(list :tag "Adaptive"
-			      (window-split :tag "Horizontal split")
-			      (window-split :tag "Vertical split")
-			      (positive-float :tag "Ratio of column values")
-			      (positive-float :tag "Ratio of row values")
-			      (positive-float :tag "Orientation threshold")))))
+			      (positive-float
+			       :tag "Ratio of values of code to call-tree windows"
+			       :value 2.0)
+			      (positive-float
+			       :tag "Ratio of values of rows to columns"
+			       :value 3.0)
+			      (split-orientation
+			       :tag "Location of code window for horizontal split"
+			       :value right)
+			      (split-orientation
+			       :tag "Location of code window for vertical split"
+			       :value below)
+			      (window-split :tag "Min columns" :value 5
+					    :validate
+					    (lambda (w)
+					      (when (<= (widget-value w) 0)
+						(widget-put w :error "Value must be > 0")
+						w)))
+			      (window-split :tag "Min rows" :value 2
+					    :validate
+					    (lambda (w)
+					      (when (<= (widget-value w) 0)
+						(widget-put w :error "Value must be > 0")
+						w)))))))
 
 ;; simple-call-tree-info: DONE
 (defcustom simple-call-tree-default-valid-fonts
@@ -714,15 +753,6 @@ as a flat list."
                                     (equal x "|")))
                     (cl-mapcan 'identity org-todo-keywords))))
 
-;; Saves a little typing
-;; simple-call-tree-info: DONE
-(defmacro whilelast (&rest forms)
-  `(while (progn ,@forms)))
-
-;; simple-call-tree-info: DONE
-(defmacro whilenotlast (&rest forms)
-  `(while (not (progn ,@forms))))
-
 ;; simple-call-tree-info: DONE
 (cl-defun simple-call-tree-get-item (func &optional (alist simple-call-tree-alist))
   "Return the item in `simple-call-tree-alist' corresponding with function named FUNC."
@@ -752,6 +782,7 @@ as a flat list."
         outline-level 'simple-call-tree-outline-level)
   ;; Define keys
   (define-key simple-call-tree-mode-map (kbd "q") 'simple-call-tree-quit)
+  (define-key simple-call-tree-mode-map (kbd "C-x C-s") 'simple-call-tree-save)
   ;; Sorting commands
   (define-prefix-command 'simple-call-tree-sort-map)
   (define-key simple-call-tree-mode-map (kbd "s") 'simple-call-tree-sort-map)
@@ -1054,7 +1085,7 @@ The minimum value is 0 which means show top level functions only.")
   "The maximum length of the lines in the current *Simple Call Tree* buffer.
 First number is without tags, second number is with tags.")
 
-;; simple-call-tree-info: CHECK
+;; simple-call-tree-info: DONE  
 (defvar-local simple-call-tree-max-header-size 0
   "The most number of branches of any subtree in the current *Simple Call Tree* buffer.")
 
@@ -1099,7 +1130,7 @@ be shown in the tree.")
 (defvar-local simple-call-tree-marked-items nil
   "List of names of items in the *Simple Call Tree* buffer that are or should be marked.")
 
-;; simple-call-tree-info: TODO 
+;; simple-call-tree-info: DONE  
 (defvar-local simple-call-tree-killed-items nil
   "List of names of items in the *Simple Call Tree* buffer that have been killed.")
 
@@ -1482,14 +1513,14 @@ functions to display in the tree. When called interactively with a prefix arg,
 files will be prompted for and only functions in the current buffer will be used."
   (interactive (if current-prefix-arg
 		   (let (dir regexp files)
-		     (whilelast
-		      (setq dir (read-directory-name "Dir containing files to add: "))
-		      (list-directory dir)
-		      (setq regexp (read-regexp "Regexp matching filenames (RET to finish)"))
-		      (unless (string= regexp "")
-			(mapc (lambda (name) (if (string-match regexp name)
-						 (add-to-list 'files (concat dir name))))
-			      (directory-files dir))))
+		     (while (progn
+			      (setq dir (read-directory-name "Dir containing files to add: "))
+			      (list-directory dir)
+			      (setq regexp (read-regexp "Regexp matching filenames (RET to finish)"))
+			      (unless (string= regexp "")
+				(mapc (lambda (name) (if (string-match regexp name)
+							 (add-to-list 'files (concat dir name))))
+				      (directory-files dir)))))
 		     files)))
   (let ((buffers (save-excursion
 		   (cl-loop for file in files
@@ -1561,12 +1592,14 @@ otherwise it will be narrowed around FUNC."
   "List callers and functions in FUNCLIST to depth MAXDEPTH.
 By default FUNCLIST is set to `simple-call-tree-alist'."
   (switch-to-buffer (get-buffer-create simple-call-tree-buffer-name))
+  (setq simple-call-tree-max-linewidth 0
+	simple-call-tree-max-header-size 1)
   (if (not (eq major-mode 'simple-call-tree-mode))
       (simple-call-tree-mode))
   (read-only-mode -1)
   (erase-buffer)
   (let ((maxdepth (max maxdepth 1))
-	(maxwidth (or simple-call-tree-max-linewidth 1))
+	(maxwidth simple-call-tree-max-linewidth)
 	(maxsize 0))
     (dolist (item funclist)
       (aprog1 (simple-call-tree-list-callees-recursively
@@ -1907,6 +1940,20 @@ and when sorting the branches of those items the items in the cdr are passed."
       (lambda (a b)
         (funcall predicate (car a) (car b))))))
 
+;; simple-call-tree-info: DONE  
+(defun simple-call-tree-save nil
+  "Save the file corresponding to header at point."
+  (interactive)
+  (save-excursion
+    (beginning-of-line)
+    (re-search-forward outline-regexp)
+    (with-current-buffer
+	(marker-buffer (get-text-property
+			(next-single-property-change
+			 (line-beginning-position)
+			 'location) 'location))
+      (save-buffer))))
+
 ;; simple-call-tree-info: DONE
 (defun simple-call-tree-reverse nil
   "Reverse the order of the branches & sub-branches in `simple-call-tree-alist' and `simple-call-tree-inverted-alist'."
@@ -2210,40 +2257,29 @@ If called with a prefix ARG the portion viewed will be the opposite to normal (e
           (middle (recenter))
           (bottom (recenter -1)))))))
 
-;; simple-call-tree-info: TODO
-(defun simple-call-tree-adaptive-split (hval vval cratio rratio thresh)
+;; simple-call-tree-info: CHECK
+(cl-defun simple-call-tree-adaptive-split (c2t v2h hside vside &optional (minh 5) (minv 2))
   "Return values for split size & orientation, based on call tree statistics.
-HVAL 
 The split is determined according to parameters defined in `simple-call-tree-window-splits'.
 See documentation of that option for details on the algorithm used to determine the split."
-  (let* ((maxwidth simple-call-tree-max-linewidth)
-	 (height (window-height (get-buffer-window simple-call-tree-buffer-name)))
-	 (width (window-width (get-buffer-window simple-call-tree-buffer-name)))
-	 (errmsg "Invalid value for simple-call-tree-adaptive-split-params")
-	 (hsplit (cond ((floatp hval)
-			(floor (if (> (abs hval) 1.0)
-				   (error errmsg)
-				 (* hval (if (< hval 0)
-					     width
-					   maxwidth)))))
-		       ((integerp hval) hval)
-		       (t (error errmsg))))
-	 (vsplit (cond ((floatp vval)
-			(floor (if (> (abs vval) 1.0)
-				   (error errmsg)
-				 (* vval (if (< vval 0)
-					     height
-					   simple-call-tree-max-header-size)))))
-		       ((integerp vval) vval)
-		       (t (error errmsg))))
-	 (hsplit2 (min width (max 5 (if (>= hsplit 0) hsplit (+ width hsplit))))) 
-	 (vsplit2 (min width (max 2 (if (>= vsplit 0) vsplit (+ height vsplit)))))
-	 (rval (/ (+ vsplit2 (* (- height vsplit2) rratio))
-		  (+ hsplit2 (* (- width hsplit2) cratio)))))
-    (message "simple-call-tree-adaptive-split: rval = %.3f, thresh = %.3f" rval thresh) 
-    (if (> rval thresh)
-	(list hsplit2 'right)
-      (list vsplit2 'below))))
+  (cl-flet ((optsplit (r max1) (- max1 (/ (* 4 r r) 9)))
+	    (splitval (z v1 v2 max1 max2)
+		      (- (* (- max2 z) v2) (* (expt (- max1 z) 1.5) v1))))
+    (let* ((width (window-width (get-buffer-window simple-call-tree-buffer-name)))
+	   (height (window-height (get-buffer-window simple-call-tree-buffer-name)))
+	   (maxwidth simple-call-tree-max-linewidth)
+	   (maxheight simple-call-tree-max-header-size)
+	   (errmsg "Invalid value for simple-call-tree-adaptive-split-params")
+	   (mincols (if (floatp minh) (round (* minh width)) minh))
+	   (minrows (if (floatp minv) (round (* minv height)) minv))
+	   (hsplit (round (min (- width mincols)
+			       (max mincols (optsplit c2t maxwidth)))))
+	   (vsplit (round (min (- height minrows)
+			       (max minrows (optsplit c2t maxheight))))))
+      (if (> (splitval hsplit 1.0 c2t maxwidth width)
+	     (splitval vsplit v2h (* v2h c2t) maxheight height))
+	  (list hsplit hside)
+	(list vsplit vside)))))
 
 ;; simple-call-tree-info: TODO  handle option to show code in separate frame
 (cl-defun simple-call-tree-split-window (win)
@@ -2260,6 +2296,12 @@ Use the values in `simple-call-tree-window-splits' to determine the split."
       (let ((specs (cdr (assoc-if #'choosesplit simple-call-tree-window-splits))))
 	(when (> (length specs) 2)
 	  (setq specs (apply 'simple-call-tree-adaptive-split specs)))
+	(when (floatp (car specs))
+	  (setf (car specs)
+		(* (car specs)
+		   (case (cadr specs)
+		     ((above below) (window-height win))
+		     ((left right) (window-width win))))))
 	(apply 'split-window win specs)))))
 
 ;; simple-call-tree-info: TODO  handle option to show code in separate frame
@@ -2371,7 +2413,7 @@ prefix arg) then the header at point, and FNSTR will both be added to `simple-ca
         (top (recenter 0))
         (middle (recenter))
         (bottom (recenter -1))
-        (t (recenter arg))))))
+        (t (error "Invalid value for simple-call-tree-default-recenter"))))))
 
 ;; simple-call-tree-info: DONE
 (defun simple-call-tree-jump-prev nil
@@ -2556,7 +2598,7 @@ When narrowed, the buffer will be narrowed to the subtree at point."
   (with-current-buffer simple-call-tree-buffer-name
     (simple-call-tree-revert 1)))
 
-;; simple-call-tree-info: DONE
+;; simple-call-tree-info: TODO  use completing-read with a history list that includes edebug-eval-defun 
 (cl-defun simple-call-tree-apply-command (cmd &optional
 					      (funcs (or simple-call-tree-marked-items
 							 (list (or (unless simple-call-tree-inverted
