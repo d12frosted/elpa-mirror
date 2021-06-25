@@ -5,8 +5,6 @@
 ;;
 ;; Author: Nikolaj Schumacher <bugs * nschum de>
 ;; Version: 1.0
-;; Package-Version: 20140223.1732
-;; Package-Commit: 761d846e105b150f8e6d13d7a8983f0248313a45
 ;; Keywords: tools, matching
 ;; URL: http://nschum.de/src/emacs/full-ack/
 ;; Compatibility: GNU Emacs 22.x, GNU Emacs 23.x, GNU Emacs 24.x
