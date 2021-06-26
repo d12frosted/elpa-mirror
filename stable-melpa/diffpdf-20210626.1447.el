@@ -5,8 +5,8 @@
 ;; Author: Shuguang Sun <shuguang79@qq.com>
 ;; Created: 2021/02/20
 ;; Version: 1.0
-;; Package-Version: 20210307.932
-;; Package-Commit: 96861493f95fe88118942bbe64954142250d6c24
+;; Package-Version: 20210626.1447
+;; Package-Commit: a5b203b549e373cb9b0ef3f00c0010bd34dd644a
 ;; URL: https://github.com/ShuguangSun/diffpdf.el
 ;; Package-Requires: ((emacs "25.1") (transient "0.3.0"))
 ;; Keywords: tools
@@ -57,22 +57,29 @@
   (completing-read-multiple "Select pdf file(s): "
                             #'read-file-name-internal nil t))
 
+(defun diffpdf--assert (args)
+  "Parse transient ARGS."
+  (let (ret1 ret2)
+    ;; -a, -c, -w
+    (setq ret1 (mapcar (lambda(x)
+                         (if (string-match-p "--characters\\|--words" x) x))
+                       args))
+    (setq ret2 (mapcar (lambda(x)
+                         (if (string-match-p "\\`--file[12]=.+" x)
+                             (shell-quote-argument (substring x 8))))
+                         args))
+    (append ret1 ret2)))
+
+
 (defun diffpdf--command (&optional args)
   "Invoke the compile mode with the run command and ARGS if provided."
   (interactive (list (diffpdf-arguments)))
   (unless (and diffpdf-program (executable-find diffpdf-program))
     (user-error "`diffpdf-program' is not defined or not in the PATH."))
   (save-excursion
-    (let* ((arguments (string-join args " "))
-           (files (diffpdf--choose-files))
-           (m (safe-length files))
+    (let* ((arguments (string-join (diffpdf--assert args) " "))
            command)
-      (when files (setq files (mapcar #'shell-quote-argument files)))
-      (setq command
-            (concat diffpdf-program " " arguments " "
-                    (if (> m 2)
-                        (string-join (nbutlast files (- m 2)) " ")
-                      (string-join files " "))))
+      (setq command (concat diffpdf-program " " arguments))
       (if diffpdf-use-compile-p
           (progn
             (setq compilation-read-command t)
@@ -87,7 +94,7 @@
   (unless (and diffpdf-program (executable-find diffpdf-program))
     (user-error "`diffpdf-program' is not defined or not in the PATH."))
   (save-excursion
-    (let* ((arguments (string-join args " "))
+    (let* ((arguments (string-join (diffpdf--assert args) " "))
            (files (dired-get-marked-files))
            (m (safe-length files))
            command)
@@ -114,13 +121,15 @@ Just for autoload."
 ;; Transient menus
 (transient-define-prefix diffpdf-menu ()
   "Open diffpdf transient menu pop up."
-    ["Arguments"
-     ("-a" "set the initial comparison mode to Appearance"  "--appearance")
-     ("-c" "set the initial comparison mode to Characters"  "--characters")
-     ("-w" "set the initial comparison mode to Words"       "--words")]
-    [["Command"
-      ("d" "run diffpdf"       diffpdf--command)
-      ("D" "run diffpdf from dired"       diffpdf-dired--command)]]
+  ["Arguments"
+   ("-f" "File1" "--file1=" transient-read-file)
+   ("-F" "File2" "--file2=" transient-read-file)
+   ("-a" "set the initial comparison mode to Appearance"  "--appearance")
+   ("-c" "set the initial comparison mode to Characters"  "--characters")
+   ("-w" "set the initial comparison mode to Words"       "--words")]
+  [["Command"
+    ("d" "run diffpdf"       diffpdf--command)
+    ("D" "run diffpdf from dired"       diffpdf-dired--command)]]
   (interactive)
   (transient-setup 'diffpdf-menu))
 
