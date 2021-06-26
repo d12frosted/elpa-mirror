@@ -5,8 +5,8 @@
 ;; Author: Jeronimo Pellegrini (j_p@aleph0.info)
 ;; Maintainer: Jeronimo Pellegrini (j_p@aleph0.info)
 ;; URL: https://gitlab.com/emacs-geiser/stklos
-;; Package-Version: 20210503.944
-;; Package-Commit: 0e3a0570354c03c0cfa25da82fb34ad2e81c1981
+;; Package-Version: 20210626.1440
+;; Package-Commit: be482a03225720d7adb003c28e4515f6252e7ce2
 ;; Homepage: https://gitlab.com/emacs-geiser/stklos
 ;; Keywords: languages, stklos, scheme, geiser
 ;; Package-Requires: ((emacs "24.4") (geiser "0.16"))
@@ -26,9 +26,9 @@
 ;; major and minor modes for Scheme development.
 ;;
 ;; STklos (http://stklos.net) is a free Scheme system mostly compliant
-;; with the languages features defined in R7RS small. The aim of this
-;; implementation is to be fast as well as light. The implementation is
-;; based on an ad-hoc Virtual Machine. STklos can also be compiled as a
+;; with the languages features defined in R7RS small.  The aim of this
+;; implementation is to be fast as well as light.  The implementation is
+;; based on an ad-hoc Virtual Machine.  STklos can also be compiled as a
 ;; library and embedded in an application.
 ;;
 ;; Geiser-Stklos adds STklos Scheme support to the Geiser package.
@@ -51,7 +51,8 @@
 ;;
 ;; * finding the definition of a symbol (no support in STklos)
 ;; * seeing callees and callers of a procedure (no support in STklos)
-;; * looking up symbols in the manual (would need to download the index from STklos manual and parse the DOM of its index; a bit too much, maybe someday...)
+;; * looking up symbols in the manual (would need to download the index from the STklos
+;;   manual and parse the DOM of its index; a bit too much, maybe someday...)
 ;;
 ;; Usage
 ;; ─────
