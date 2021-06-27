@@ -2305,7 +2305,7 @@
 		 ("Filipp Gunbin" . "fgunbin@fastmail.fm"))
 		(:maintainer "Filipp Gunbin" . "fgunbin@fastmail.fm"))])
  (sql-indent .
-	     [(1 5)
+	     [(1 6)
 	      ((cl-lib
 		(0 5)))
 	      "Support for indenting code in SQL files." tar
@@ -2315,7 +2315,7 @@
 		("Alex Harsanyi" . "AlexHarsanyi@gmail.com"))
 	       (:keywords "languages" "sql"))])
  (ssh-deploy .
-	     [(3 1 12)
+	     [(3 1 13)
 	      ((emacs
 		(25)))
 	      "Deployment via Tramp, global or per directory." tar
