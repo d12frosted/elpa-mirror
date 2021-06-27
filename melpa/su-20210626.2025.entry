@@ -1,9 +1,9 @@
 (su .
-    [(20210226 42)
+    [(20210626 2025)
      ((emacs
        (26 1)))
-     "Automatically read and write files as other users" single
-     ((:commit . "787f78989253f4568942a4cece5f135f005e135f")
+     "Automatically read and write files using su or sudo" single
+     ((:commit . "36db018de8423a6e380a49d4e602d376a0740f6d")
       (:authors
        ("PythonNut" . "pythonnut@pythonnut.com"))
       (:maintainer "PythonNut" . "pythonnut@pythonnut.com")

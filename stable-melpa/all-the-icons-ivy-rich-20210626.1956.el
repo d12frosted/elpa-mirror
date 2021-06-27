@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
 ;; Version: 1.6.2
-;; Package-Version: 20210616.1136
-;; Package-Commit: 5345326afeb48018acb7bf97d93f8a8f5931a151
+;; Package-Version: 20210626.1956
+;; Package-Commit: 07b8c5271719afa6a4c598c2a19f4a096ca6efe8
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -53,9 +53,34 @@
   (require 'bookmark)
   (require 'project))
 
+
+
 ;; Depress warnings
 (defvar ivy-posframe-buffer)
 (declare-function ivy-posframe--display 'ivy-posframe)
+
+;; Compatibility
+(unless (fboundp #'file-attribute-user-id)
+  (defsubst file-attribute-user-id (attributes)
+    (nth 2 attributes)))
+
+(unless (fboundp #'file-attribute-group-id)
+  (defsubst file-attribute-group-id (attributes)
+    (nth 3 attributes)))
+
+(unless (fboundp #'file-attribute-modification-time)
+  (defsubst file-attribute-modification-time (attributes)
+    (nth 5 attributes)))
+
+(unless (fboundp #'file-attribute-size)
+  (defsubst file-attribute-size (attributes)
+    (nth 7 attributes)))
+
+(unless (fboundp #'file-attribute-modes)
+  (defsubst file-attribute-modes (attributes)
+    (nth 8 attributes)))
+
+
 
 (defgroup all-the-icons-ivy-rich nil
   "Better experience using icons in ivy."

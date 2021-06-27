@@ -1,12 +1,12 @@
-;;; su.el --- Automatically read and write files as other users -*- lexical-binding: t -*-
+;;; su.el --- Automatically read and write files using su or sudo -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2018 PythonNut
 
 ;; Author: PythonNut <pythonnut@pythonnut.com>
 ;; SPDX-License-Identifier: MIT
 ;; Keywords: convenience, helm, fuzzy, flx
-;; Package-Version: 20210226.42
-;; Package-Commit: 787f78989253f4568942a4cece5f135f005e135f
+;; Package-Version: 20210626.2025
+;; Package-Commit: 36db018de8423a6e380a49d4e602d376a0740f6d
 ;; Version: 20200819
 ;; URL: https://github.com/PythonNut/su.el
 ;; Package-Requires: ((emacs "26.1"))
