@@ -98,7 +98,7 @@ Here is a list of other variables you can set globally or per directory:
 * `ssh-deploy-script' - Our custom lambda function that will be called using (funcall) when running deploy script *(function)*
 * `ssh-deploy-async-with-threads' - Whether to use threads (make threads) instead of processes (async-start) for asynchronous operations *(integer)*
 
-When integers are used as booleans, above zero means true, zero means false and nil means unset and fallback to global settings.
+When integers are used as booleans, above zero means true, zero means false and nil means unset and indicates to fallback to global settings.
 
 Please see README.md from the same repository for more extended documentation.
 

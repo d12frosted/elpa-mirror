@@ -1,0 +1,11 @@
+(uci-mode .
+	  [(20210626 1956)
+	   ((emacs
+	     (25 1)))
+	   "Major-mode for chess engine interaction" single
+	   ((:commit . "2cdf4de5af96d56108a0a5716416ef3c8ac7bb7c")
+	    (:authors
+	     ("Dodge Coates and Roland Walker"))
+	    (:maintainer "Dodge Coates and Roland Walker")
+	    (:keywords "data" "games" "chess")
+	    (:url . "https://github.com/dwcoates/uci-mode"))])
