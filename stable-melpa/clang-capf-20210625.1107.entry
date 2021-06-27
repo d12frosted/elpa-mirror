@@ -1,9 +1,9 @@
 (clang-capf .
-	    [(20201205 1229)
+	    [(20210625 1107)
 	     ((emacs
 	       (24 4)))
 	     "Completion-at-point backend for c/c++ using clang" single
-	     ((:commit . "6d0fcae75044d930e989903673b6ab22d0401418")
+	     ((:commit . "e422f339395aac6d023954880d19bc76a0d1072d")
 	      (:authors
 	       ("Philip K. <philipk [at] posteo [dot] net>"))
 	      (:maintainer "Philip K. <philipk [at] posteo [dot] net>")

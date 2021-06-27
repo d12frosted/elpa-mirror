@@ -4,8 +4,8 @@
 
 ;; Author: Nick Lanham
 ;; URL: https://github.com/mgyucht/jsonnet-mode
-;; Package-Commit: be89cf6fbe8018a1a0ee8789229bb3e517e48353
-;; Package-Version: 20210527.1557
+;; Package-Commit: 134b1a020eed9c283b79b56cfec30833d2e85169
+;; Package-Version: 20210627.1451
 ;; Package-X-Original-Version: 0.0.1
 ;; Keywords: languages
 ;; Package-Requires: ((emacs "24") (dash "2.17.0"))
@@ -653,26 +653,27 @@ TYPE is an opening paren-like character."
     (when-let ((output-window (get-buffer-window output-buffer-name t)))
       (quit-window nil output-window)
       (redisplay))
-    (with-current-buffer (get-buffer-create output-buffer-name)
-      (setq buffer-read-only nil)
-      (erase-buffer)
-      (let ((args (nconc jsonnet-command-options
-                         (cl-loop for dir in search-dirs
-                                  collect "-J"
-                                  collect dir)
-                         (list file-to-eval))))
-        (if (zerop (apply #'call-process jsonnet-command nil t nil args))
+    (let ((cmd jsonnet-command)
+          (args (append jsonnet-command-options
+                        (cl-loop for dir in search-dirs
+                                collect "-J"
+                                collect dir)
+                       (list file-to-eval))))
+      (with-current-buffer (get-buffer-create output-buffer-name)
+        (setq buffer-read-only nil)
+        (erase-buffer)
+        (if (zerop (apply #'call-process cmd nil t nil args))
             (progn
               (when (fboundp 'json-mode)
                 (json-mode))
               (view-mode))
-          (compilation-mode nil)))
-      (goto-char (point-min))
-      (display-buffer (current-buffer)
-                      '((display-buffer-pop-up-window
-                         display-buffer-reuse-window
-                         display-buffer-at-bottom
-                         display-buffer-pop-up-frame))))))
+          (compilation-mode nil))
+        (goto-char (point-min))
+        (display-buffer (current-buffer)
+                        '((display-buffer-pop-up-window
+                           display-buffer-reuse-window
+                           display-buffer-at-bottom
+                           display-buffer-pop-up-frame)))))))
 
 (define-key jsonnet-mode-map (kbd "C-c C-c") 'jsonnet-eval-buffer)
 

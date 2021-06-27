@@ -1,9 +1,9 @@
 ;;; clang-capf.el --- Completion-at-point backend for c/c++ using clang -*- lexical-binding: t -*-
 
 ;; Author: Philip K. <philipk [at] posteo [dot] net>
-;; Version: 1.2.0
-;; Package-Version: 20201205.1229
-;; Package-Commit: 6d0fcae75044d930e989903673b6ab22d0401418
+;; Version: 1.2.1
+;; Package-Version: 20210625.1107
+;; Package-Commit: e422f339395aac6d023954880d19bc76a0d1072d
 ;; Keywords: c, abbrev, convenience
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://git.sr.ht/~zge/clang-capf
@@ -20,8 +20,8 @@
 ;;
 ;; Emacs built-in `completion-at-point' completion mechanism doesn't
 ;; support C in any meaningful by default, which this package tries to
-;; remedy, by using clang's completion mechanism. Hence this package
-;; requires clang to be installed (as specified in `clang-capf-clang'.
+;; remedy, by using clang's completion mechanism.  Hence this package
+;; requires clang to be installed (see `clang-capf-clang') .
 ;;
 ;; If a header file is not automatically found or in the default path,
 ;; extending `clang-capf-include-paths' or `clang-capf-extra-flags' might
@@ -151,7 +151,7 @@ FINISHED contains the final state of the completion."
 ;;;###autoload
 (defun clang-capf ()
   "Function used for `completion-at-point-functions' using clang."
-  (unless clang-capf-clang
+  (unless (executable-find clang-capf-clang)
     (error "Company either not installed or not in path"))
   (let ((beg (save-excursion
                (skip-syntax-backward "w_")
@@ -159,8 +159,9 @@ FINISHED contains the final state of the completion."
         (end (save-excursion
                (skip-syntax-forward "w_")
                (point))))
-    (and (or clang-capf-complete-empty
-             (/= beg end))
+    (and (or (not clang-capf-complete-empty)
+             (/= beg end)
+             (not (looking-back (rx (or bol (+ space))) (point-min))))
          (list beg end
                (completion-table-with-cache #'clang-capf--completions
                                             clang-capf-ignore-case)

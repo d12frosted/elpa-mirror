@@ -1,11 +1,11 @@
 Package: autocrypt
 Fetcher: git
-Source:  https://git.sr.ht/~zge/autocrypt
+Source:  https://git.sr.ht/~pkal/autocrypt
 
-Updating /mnt/store/melpa/working/autocrypt/
+Cloning https://git.sr.ht/~pkal/autocrypt to /mnt/store/melpa/working/autocrypt/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/autocrypt/
-  to /tmp/autocryptC75osT/autocrypt-20210412.1127
+  to /tmp/autocryptfyL4NG/autocrypt-20210412.1127
     autocrypt-gnus.el -> autocrypt-gnus.el
     autocrypt-message.el -> autocrypt-message.el
     autocrypt-mu4e.el -> autocrypt-mu4e.el
@@ -19,9 +19,9 @@ Created autocrypt-20210412.1127.tar containing:
   autocrypt-20210412.1127/autocrypt-pkg.el
   autocrypt-20210412.1127/autocrypt-rmail.el
   autocrypt-20210412.1127/autocrypt.el
-Built autocrypt in 5.213s, finished at Sun Jun 27 12:57:09 2021
+Built autocrypt in 4.644s, finished at Sun Jun 27 19:40:21 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  388 Jun 27 12:57 packages/autocrypt-20210412.1127.entry
- 40K -rw-r--r-- 1 root root  40K Jun 27 12:57 packages/autocrypt-20210412.1127.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jun 27 12:57 packages/autocrypt-badge.svg
-4.0K -rw-r--r-- 1 root root  259 Jun 27 12:57 packages/autocrypt-readme.txt
+4.0K -rw-r--r-- 1 root root  388 Jun 27 19:40 packages/autocrypt-20210412.1127.entry
+ 40K -rw-r--r-- 1 root root  40K Jun 27 19:40 packages/autocrypt-20210412.1127.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jun 27 19:40 packages/autocrypt-badge.svg
+4.0K -rw-r--r-- 1 root root  259 Jun 27 19:40 packages/autocrypt-readme.txt

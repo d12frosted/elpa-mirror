@@ -1,8 +1,8 @@
 
 Emacs built-in `completion-at-point' completion mechanism doesn't
 support C in any meaningful by default, which this package tries to
-remedy, by using clang's completion mechanism. Hence this package
-requires clang to be installed (as specified in `clang-capf-clang'.
+remedy, by using clang's completion mechanism.  Hence this package
+requires clang to be installed (see `clang-capf-clang') .
 
 If a header file is not automatically found or in the default path,
 extending `clang-capf-include-paths' or `clang-capf-extra-flags' might
