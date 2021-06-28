@@ -7,10 +7,10 @@
 ;; Description: Line annotation for changed and saved lines.
 ;; Keyword: annotation line number linum reminder highlight display
 ;; Version: 0.5.0
-;; Package-Version: 20210531.743
-;; Package-Commit: 1856034d0ed8ce41a29a1ea051184ee7c2f3e276
+;; Package-Version: 20210627.2121
+;; Package-Commit: 355cdcb6888fe6668e85a96dfe694d4bd050372e
 ;; Package-Requires: ((emacs "24.4") (indicators "0.0.4") (fringe-helper "1.0.1"))
-;; URL: https://github.com/jcs-elpa/line-reminder
+;; URL: https://github.com/emacs-vs/line-reminder
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -41,7 +41,7 @@
   "Line annotation for changed and saved lines."
   :prefix "line-reminder-"
   :group 'tool
-  :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/line-reminder"))
+  :link '(url-link :tag "Repository" "https://github.com/emacs-vs/line-reminder"))
 
 (defcustom line-reminder-show-option 'linum
   "Option to show indicators in buffer."

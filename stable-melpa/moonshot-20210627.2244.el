@@ -4,8 +4,8 @@
 
 ;; Author: Jong-Hyouk Yun <ageldama@gmail.com>
 ;; URL: https://github.com/ageldama/moonshot
-;; Package-Commit: c9f363b1b5f2b92006e03116580540dadb7364ea
-;; Package-Version: 20200210.2356
+;; Package-Commit: ec37a12825888047a90d9ee8131aa4bea348edf7
+;; Package-Version: 20210627.2244
 ;; Package-X-Original-Version: 1.0.0
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "25.1") (cl-lib "0.5") (f "0.18") (s "1.11.0") (projectile "2.0.0") (counsel "0.11.0") (realgud "1.5.1") (seq "2.20") (levenshtein "1.0"))
@@ -105,6 +105,8 @@
 
 (defvar-local moonshot-runners-preset
   '("cmake -S\"%p\" -B\"%b\" -GNinja -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=on"
+    "cd \"%p\"; ninja -v"
+    "cd \"%p\"; VERBOSE=1 make"
     "cd \"%b\"; ninja"
     "source \"${VIRTUAL_ENV}/bin/activate\"; cd \"%d\"; \"%a\"  # Run with Virtualenv"
     "source \"${VIRTUAL_ENV}/bin/activate\"; cd \"%d\"; pip install -r requirements.txt  # Run with Virtualenv"

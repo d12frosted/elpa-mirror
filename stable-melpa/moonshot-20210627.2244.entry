@@ -1,5 +1,5 @@
 (moonshot .
-	  [(20200210 2356)
+	  [(20210627 2244)
 	   ((emacs
 	     (25 1))
 	    (cl-lib
@@ -19,7 +19,7 @@
 	    (levenshtein
 	     (1 0)))
 	   "Run executable file, debug and build commands on project" single
-	   ((:commit . "c9f363b1b5f2b92006e03116580540dadb7364ea")
+	   ((:commit . "ec37a12825888047a90d9ee8131aa4bea348edf7")
 	    (:authors
 	     ("Jong-Hyouk Yun" . "ageldama@gmail.com"))
 	    (:maintainer "Jong-Hyouk Yun" . "ageldama@gmail.com")
