@@ -3,9 +3,9 @@
 ;; Copyright © 2013-2021, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 13.12.20210625140905
-;; Package-Version: 20210625.2109
-;; Package-Commit: 2f4e1ceec1b387336df236ca179f73bc97381832
+;; Version: 13.13.20210627144552
+;; Package-Version: 20210627.2146
+;; Package-Commit: 2257b73396ce587f380264996a4eebda0684e9c8
 ;; Created: 10 Sep 2013
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: convenience, emulations, vim, ergoemacs
@@ -3941,7 +3941,7 @@ minor modes loaded later may override bindings in this map.")
      ("<C-prior>" . xah-previous-user-buffer)
      ("<C-next>" . xah-next-user-buffer)
 
-     ;; ("C-SPC" . xah-fly-leader-key-map)
+     ("<f7>" . xah-fly-leader-key-map)
 
      ("C-3" . previous-error)
      ("C-4" . next-error)

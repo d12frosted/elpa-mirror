@@ -3,9 +3,9 @@
 ;; Copyright (C) 2019-2021 , Jen-Chieh Shen
 
 ;; Author: Jen-Chieh Shen
-;; URL: https://github.com/jcs090218/vs-light-theme
-;; Package-Version: 20210427.727
-;; Package-Commit: e324120248c1d513a6516edff250d161f876aad9
+;; URL: https://github.com/emacs-vs/vs-light-theme
+;; Package-Version: 20210627.2121
+;; Package-Commit: a8bff6913f603a30bd98bef882ace01476c440bf
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "24.1"))
 ;; Created with emacs-theme-generator, https://github.com/mswift42/theme-creator.

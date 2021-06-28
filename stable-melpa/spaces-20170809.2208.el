@@ -3,6 +3,8 @@
 ;; Author: Steven Thomas
 ;; Created: 16 Oct 2011
 ;; Keywords: frames convenience
+;; Package-Version: 20170809.2208
+;; Package-Commit: 6bdb51e9a346907d60a9625f6180bddd06be6674
 ;; Version: 0.1.0
 ;; URL: https://github.com/chumpage/chumpy-windows
 ;;

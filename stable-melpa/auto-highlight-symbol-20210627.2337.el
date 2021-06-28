@@ -7,9 +7,9 @@
 
 ;; Author: Mitsuo Saito <arch320@NOSPAM.gmail.com>
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
-;; Version: 1.59
-;; Package-Version: 20210108.1841
-;; Package-Commit: 5ad84d0a12b175360b18504cd04e6bf7ab1cf5c8
+;; Version: 1.60
+;; Package-Version: 20210627.2337
+;; Package-Commit: d5125800b038d1275aabd14008ede75a3a858587
 ;; Keywords: highlight face match convenience
 ;; URL: http://github.com/jcs-elpa/auto-highlight-symbol
 ;; Compatibility: GNU Emacs 22.3 23.x 24.x later
@@ -187,6 +187,10 @@
 
 ;;; (@* "Changelog" )
 ;;
+;; v1.60
+;;   allow mouse movement and still be highlighted
+;;   don't remove highlight if symbol are the same as last one
+;;
 ;; v1.59
 ;;   fix copyright information
 ;;
@@ -265,7 +269,7 @@
   (defvar dropdown-list-overlays nil))
 
 (eval-and-compile
-  (defconst ahs-web "http://github.com/mitsuo-saito/auto-highlight-symbol-mode/")
+  (defconst ahs-web "http://github.com/jcs-elpa/auto-highlight-symbol-mode/")
   ;; Compatibility
   (if (or (>= emacs-major-version 24)
           (and (= emacs-major-version 23)
@@ -292,42 +296,42 @@
   :link `(url-link :tag "Information" ,(eval-when-compile ahs-web)))
 
 (defcustom ahs-modes
-  '( actionscript-mode
-     apache-mode
-     bat-generic-mode
-     c++-mode
-     c-mode
-     csharp-mode
-     css-mode
-     dos-mode
-     emacs-lisp-mode
-     html-mode
-     ini-generic-mode
-     java-mode
-     javascript-mode
-     js-mode
-     lisp-interaction-mode
-     lua-mode
-     latex-mode
-     makefile-mode
-     makefile-gmake-mode
-     markdown-mode
-     moccur-edit-mode
-     nxml-mode
-     nxhtml-mode
-     outline-mode
-     perl-mode cperl-mode
-     php-mode
-     python-mode
-     rc-generic-mode
-     reg-generic-mode
-     ruby-mode
-     sgml-mode
-     sh-mode
-     squirrel-mode
-     text-mode
-     tcl-mode
-     visual-basic-mode )
+  '(actionscript-mode
+    apache-mode
+    bat-generic-mode
+    c++-mode
+    c-mode
+    csharp-mode
+    css-mode
+    dos-mode
+    emacs-lisp-mode
+    html-mode
+    ini-generic-mode
+    java-mode
+    javascript-mode
+    js-mode
+    lisp-interaction-mode
+    lua-mode
+    latex-mode
+    makefile-mode
+    makefile-gmake-mode
+    markdown-mode
+    moccur-edit-mode
+    nxml-mode
+    nxhtml-mode
+    outline-mode
+    perl-mode cperl-mode
+    php-mode
+    python-mode
+    rc-generic-mode
+    reg-generic-mode
+    ruby-mode
+    sgml-mode
+    sh-mode
+    squirrel-mode
+    text-mode
+    tcl-mode
+    visual-basic-mode )
   "Major modes function `auto-highlight-symbol-mode' can run on."
   :group 'auto-highlight-symbol
   :type '(repeat symbol))
@@ -365,8 +369,9 @@
   "Behavior when selected symbol in hidden text.
 
 When the value is
-  `immediate' Open hidden text. When leaving opened text, close it immediately.
-  `temporary' Open hidden text. When unhighlight or change plugin, close the opened texts except selected.
+  `immediate' Open hidden text.  When leaving opened text, close it immediately.
+  `temporary' Open hidden text.  When unhighlight or change plugin, close the
+              opened texts except selected.
   `open'      Open hidden text permanently.
   `skip'      Select next visible symbol.
 
@@ -378,7 +383,7 @@ Affects only overlay(hidden text) has a property `isearch-open-invisible'."
                  (const :tag "Skip over all symbols in hidden text" skip)))
 
 (defcustom auto-highlight-symbol-mode-hook nil
-  "Hook for `auto-highlight-symbol-mode'."
+  "Hook for function `auto-highlight-symbol-mode'."
   :group 'auto-highlight-symbol
   :type 'hook)
 
@@ -393,7 +398,7 @@ Affects only overlay(hidden text) has a property `isearch-open-invisible'."
   :type 'hook)
 
 (defvar ahs-idle-timer nil
-  "Timer used to highlighting symbol whenever emacs is idle.")
+  "Timer used to highlighting symbol whenever Emacs is idle.")
 
 (defcustom ahs-idle-interval 1.0
   "Number of seconds to wait before highlighting symbol."
@@ -478,7 +483,7 @@ This variable can be set in three different types.
 
   3. `alist'
       '(
-        ( emacs-lisp-mode . \"REGEXP\")          ;; Regular expression in emacs-lisp-mode
+        ( `emacs-lisp-mode' . \"REGEXP\")          ;; Regular expression in emacs-lisp-mode
         ( php-mode        . my-include-function) ;; Function predicate in php-mode
         )
     If major mode not in list `ahs-default-symbol-regexp' will be used instead."
@@ -501,7 +506,7 @@ This variable can be set in three different types.
 
   3. `alist'
       '(
-        ( ruby-mode . \"\\_<\\(end\\|def\\|class\\)\\_>\") ;; Regular expression in ruby-mode
+        ( `ruby-mode' . \"\\_<\\(end\\|def\\|class\\)\\_>\") ;; Regular expression in ruby-mode
         ( dos-mode  . i-hate-wxxxxxs)                      ;; Function predicate in dos-mode
         )
       If major mode not in list all symbols can be highlighted."
@@ -517,18 +522,21 @@ This variable can be set in three different types.
   :type 'boolean)
 
 (defcustom ahs-inhibit-face-list
-  '( font-lock-comment-delimiter-face
-     font-lock-comment-face
-     font-lock-doc-face
-     font-lock-doc-string-face
-     font-lock-string-face )
+  '(font-lock-comment-delimiter-face
+    font-lock-comment-face
+    font-lock-doc-face
+    font-lock-doc-string-face
+    font-lock-string-face
+    tree-sitter-hl-face:comment
+    tree-sitter-hl-face:doc
+    tree-sitter-hl-face:string)
   "Face list for inhibit highlighting."
   :group 'auto-highlight-symbol
   :type '(repeat symbol))
 
 (defcustom ahs-definition-face-list
-  '( font-lock-function-name-face
-     font-lock-variable-name-face )
+  '(font-lock-function-name-face
+    font-lock-variable-name-face)
   "Face list for higilight definition."
   :group 'auto-highlight-symbol
   :type  '(repeat symbol))
@@ -547,13 +555,13 @@ This variable can be set in three different types.
     (define-key map (kbd "C-x C-'") 'ahs-change-range)
     (define-key map (kbd "C-x C-a") 'ahs-edit-mode)
     map)
-  "Keymap used in `auto-highlight-symbol-mode'.")
+  "Keymap used in function `auto-highlight-symbol-mode'.")
 
 
 (defmacro ahs-onekey-edit (keys plugin-name &optional keep keymap)
   "Macro of One Key Edit.
 
-ahs-change-range   -> ahs-edit-mode -> editing... ->
+`ahs-change-range'   -> `ahs-edit-mode' -> editing... ->
 ahs-edit-mode(off) -> ahs-change-range... sigh...
 
 You can do these operations at One Key!
@@ -561,7 +569,7 @@ You can do these operations at One Key!
    `KEYS'        Keyboard macro
    `PLUGIN-NAME' Plugin name
    `KEEP'        Keep plugin after exiting edit mode.
-   `KEYMAP'      Keymap If value is `nil' or not keymap
+   `KEYMAP'      Keymap If value is nil or not keymap
                         `auto-highlight-symbol-mode-map' will be used instead.
 
   ex.(ahs-onekey-edit \"C-x C-y\" beginning-of-defun)"
@@ -578,7 +586,7 @@ You can do these operations at One Key!
 
     `KEYS'        Keyboard macro
     `PLUGIN-NAME' Plugin name
-    `KEYMAP'      Keymap If value is `nil' or not keymap
+    `KEYMAP'      Keymap If value is nil or not keymap
                          `auto-highlight-symbol-mode-map' will be used instead.
 
   ex.(ahs-onekey-change \"C-x C-y\" display)"
@@ -608,8 +616,9 @@ You can do these operations at One Key!
     ahs-display-stat
     ahs-edit-mode
     ahs-forward
-    ahs-forward-definition)
-  "")
+    ahs-forward-definition
+    ignore)
+  "Commands allow to be highlight.")
 
 (defvar ahs-range-plugin-list nil
   "List of installed plugin.")
@@ -629,6 +638,7 @@ You can do these operations at One Key!
 (defvar ahs-overlay-list nil)
 (defvar ahs-start-modification nil)
 (defvar ahs-start-point nil)
+(defvar ahs-last-symbol nil)
 
 (make-variable-buffer-local 'ahs-current-overlay)
 (make-variable-buffer-local 'ahs-current-range)
@@ -641,6 +651,7 @@ You can do these operations at One Key!
 (make-variable-buffer-local 'ahs-overlay-list)
 (make-variable-buffer-local 'ahs-start-modification)
 (make-variable-buffer-local 'ahs-start-point)
+(make-variable-buffer-local 'ahs-last-symbol)
 
 ;;
 ;; (@* "Logging" )
@@ -676,18 +687,20 @@ You can do these operations at One Key!
     ( stat               . "Current plugin `%s' matched %s  displayed %s  hidden %s  before %s  after %s.")
     ( self               . "%s")
     )
-  "Log data")
+  "Log data.")
 
 (defmacro ahs-decorate-if (body face)
+  "Not documented, BODY and FACE."
   `(if ahs-decorate-log
        (propertize ,body 'face ,face)
      ,body))
 
 (defmacro ahs-log-format (key)
+  "Not documented, KEY."
   `(cdr (assoc ,key ahs-log-data)))
 
 (defun ahs-log (key &rest args)
-  "Display log."
+  "Display log, KEY with it's ARGS."
   (unless ahs-suppress-log
     (let* ((data (ahs-log-format key))
            (msg (apply #'format data args))
@@ -940,13 +953,10 @@ You can do these operations at One Key!
 
 (defun ahs-idle-function ()
   "Idle function. Called by `ahs-idle-timer'."
-  (when (and auto-highlight-symbol-mode
-             (not ahs-highlighted))
+  (when (and auto-highlight-symbol-mode (not ahs-highlighted))
     (let ((hl (ahs-highlight-p)))
       (when hl
-        (ahs-highlight (nth 0 hl)
-                       (nth 1 hl)
-                       (nth 2 hl))))))
+        (ahs-highlight (nth 0 hl) (nth 1 hl) (nth 2 hl))))))
 
 (defmacro ahs-add-overlay-face (pos face)
   `(if ahs-face-check-include-overlay
@@ -1133,16 +1143,18 @@ You can do these operations at One Key!
         (setq ahs-highlighted  t
               ahs-start-point  beg
               ahs-search-work  nil
-              ahs-need-fontify nil)
-        (add-hook 'pre-command-hook #'ahs-unhighlight nil t) t))))
+              ahs-need-fontify nil
+              ahs-last-symbol symbol)
+        (add-hook 'post-command-hook #'ahs-unhighlight nil t)
+        t))))
 
 (defun ahs-unhighlight (&optional force)
   "Unhighlight"
   (when (or force
-            (not (memq this-command
-                       ahs-unhighlight-allowed-commands)))
+            (and (not (memq this-command ahs-unhighlight-allowed-commands))
+                 (not (equal ahs-last-symbol (thing-at-point 'symbol)))))
     (ahs-remove-all-overlay)
-    (remove-hook 'pre-command-hook #'ahs-unhighlight t)))
+    (remove-hook 'post-command-hook #'ahs-unhighlight t)))
 
 (defun ahs-highlight-current-symbol (beg end)
   "Highlight current symbol."
@@ -1221,7 +1233,7 @@ You can do these operations at One Key!
         ahs-start-modification   nil
         ahs-inhibit-modification nil)
   (overlay-put ahs-current-overlay 'face ahs-edit-mode-face)
-  (remove-hook 'pre-command-hook #'ahs-unhighlight t)
+  (remove-hook 'post-command-hook #'ahs-unhighlight t)
   (add-hook 'post-command-hook #'ahs-edit-post-command-hook-function nil t)
   (run-hooks 'ahs-edit-mode-on-hook)
 
@@ -1253,7 +1265,7 @@ You can do these operations at One Key!
            (ahs-inside-overlay-p ahs-current-overlay))
       (progn
         (overlay-put ahs-current-overlay 'face (ahs-current-plugin-prop 'face))
-        (add-hook 'pre-command-hook #'ahs-unhighlight nil t))
+        (add-hook 'post-command-hook #'ahs-unhighlight nil t))
     (ahs-remove-all-overlay))
   (remove-hook 'post-command-hook #'ahs-edit-post-command-hook-function t)
   (run-hooks 'ahs-edit-mode-off-hook)

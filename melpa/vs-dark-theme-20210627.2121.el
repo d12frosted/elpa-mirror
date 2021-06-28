@@ -3,9 +3,9 @@
 ;; Copyright (C) 2019-2021 , Jen-Chieh Shen
 
 ;; Author: Jen-Chieh Shen
-;; URL: https://github.com/jcs090218/vs-dark-theme
-;; Package-Version: 20210427.727
-;; Package-Commit: 5a826e6ea3e9edd9241e3253ce97333955c8ae1a
+;; URL: https://github.com/emacs-vs/vs-dark-theme
+;; Package-Version: 20210627.2121
+;; Package-Commit: bda27d3a7f11fee0550055b0552c2633c167dd96
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "24.1"))
 ;; Created with emacs-theme-generator, https://github.com/mswift42/theme-creator.
