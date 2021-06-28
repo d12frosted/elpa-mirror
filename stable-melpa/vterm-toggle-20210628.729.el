@@ -2,8 +2,8 @@
 
 ;; Author: jixiuf  jixiuf@qq.com
 ;; Keywords: vterm terminals
-;; Package-Version: 20210531.1453
-;; Package-Commit: afe60b814d9d045b968f4a464bbedb241b35392b
+;; Package-Version: 20210628.729
+;; Package-Commit: 63723fcaf602cb6cc6e5a13d8c57ef7967a3653a
 ;; Version: 0.0.4
 ;; URL: https://github.com/jixiuf/vterm-toggle
 ;; Package-Requires: ((emacs "25.1") (vterm "0.0.1"))
@@ -50,6 +50,8 @@
 (declare-function vterm-send-string "vterm")
 (declare-function vterm-send-return "vterm")
 (declare-function vterm-other-window "vterm")
+(declare-variable vterm-other-window "vterm")
+(defvar vterm-buffer-name  "*vterm*")
 
 (defcustom vterm-toggle-show-hook nil
   "Hooks when swith to vterm buffer."
