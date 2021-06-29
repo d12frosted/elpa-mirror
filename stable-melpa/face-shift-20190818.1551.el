@@ -3,7 +3,7 @@
 ;; Author: Philip K. <philip@warpmail.net>
 ;; Version: 0.1.0
 ;; Package-Version: 20190818.1551
-;; Package-Commit: 8dd6fb5f6277d3a594654aeb3e6a7b7b5581656a
+;; Package-Commit: 8c62d7a27a0e3092942742362ed73e17e254e904
 ;; Keywords: faces
 ;; Package-Requires: ((emacs "24.4") (cl-lib "0.5"))
 ;; URL: https://git.sr.ht/~zge/face-shift

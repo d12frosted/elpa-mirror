@@ -3,8 +3,10 @@ Fetcher: git
 Source:  https://gitlab.lrde.epita.fr/spot/emacs-modes.git
 
 Updating /mnt/store/melpa/working/hoa-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: GitLab is not responding
-fatal: unable to access 'https://gitlab.lrde.epita.fr/spot/emacs-modes.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
+Note: hoa-mode :files spec is equivalent to the default.
+Built hoa-mode in 5.629s, finished at Tue Jun 29 01:50:04 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jun 29 01:50 packages/hoa-mode-20200610.1339.el
+4.0K -rw-r--r-- 1 root root  392 Jun 29 01:50 packages/hoa-mode-20200610.1339.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 29 01:50 packages/hoa-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  249 Jun 29 01:50 packages/hoa-mode-readme.txt
