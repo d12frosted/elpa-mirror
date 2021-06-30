@@ -1,0 +1,15 @@
+(icsql .
+       [(20210612 1340)
+	((emacs
+	  (26))
+	 (choice-program
+	  (0 13))
+	 (buffer-manage
+	  (0 12)))
+	"Interactive iSQL iteraface to ciSQL" single
+	((:commit . "4521e9d2debef7687bfd26a664479f0c46688a36")
+	 (:authors
+	  ("Paul Landes"))
+	 (:maintainer "Paul Landes")
+	 (:keywords "isql" "sql" "rdbms" "data")
+	 (:url . "https://github.com/plandes/icsql"))])

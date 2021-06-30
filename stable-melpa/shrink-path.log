@@ -3,7 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/bennya/shrink-path.el.git
 
 Updating /mnt/store/melpa/working/shrink-path/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: the remote end hung up unexpectedly
-error: Could not fetch origin
-
+Built shrink-path in 8.790s, finished at Wed Jun 30 19:59:20 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Jun 30 19:59 packages/shrink-path-20190208.1335.el
+4.0K -rw-r--r-- 1 root root  375 Jun 30 19:59 packages/shrink-path-20190208.1335.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jun 30 19:59 packages/shrink-path-badge.svg
+4.0K -rw-r--r-- 1 root root  235 Jun 30 19:59 packages/shrink-path-readme.txt
