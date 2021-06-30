@@ -1,0 +1,22 @@
+(xenops .
+	[(20210630 740)
+	 ((emacs
+	   (26 1))
+	  (aio
+	   (1 0))
+	  (auctex
+	   (12 2 0))
+	  (avy
+	   (0 5 0))
+	  (dash
+	   (2 18 0))
+	  (f
+	   (0 20 0))
+	  (s
+	   (1 12 0)))
+	 "A LaTeX editing environment for mathematical documents" tar
+	 ((:commit . "95b0b37cf5bb6474f054056b0dad9402c700c5b7")
+	  (:authors
+	   ("Dan Davison" . "dandavison7@gmail.com"))
+	  (:maintainer "Dan Davison" . "dandavison7@gmail.com")
+	  (:url . "https://github.com/dandavison/xenops"))])

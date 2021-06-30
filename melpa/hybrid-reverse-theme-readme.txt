@@ -14,6 +14,7 @@ Supported packages:
 - elfeed
 - evil
 - flycheck
+- flyspell-correct
 - hydra
 - ido-vertical-mode
 - linum-relative
@@ -44,6 +45,7 @@ Supported defaults:
 - diff-mode
 - dired
 - display-line-numbers-mode
+- flyspell
 - font-lock-mode
 - ido-mode
 - info
