@@ -1,0 +1,10 @@
+(erc-matterircd .
+		[(20210701 32)
+		 ((emacs
+		   (27 1)))
+		 "Integrate matterircd with ERC" single
+		 ((:commit . "6e9698310f5df5193bccb334839bca29e4bbfe30")
+		  (:authors
+		   ("Alex Murray" . "murray.alex@gmail.com"))
+		  (:maintainer "Alex Murray" . "murray.alex@gmail.com")
+		  (:url . "https://github.com/alexmurray/erc-matterircd"))])
