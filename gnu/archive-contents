@@ -2151,14 +2151,14 @@
 	(:keywords "sequences")
 	(:url . "http://elpa.gnu.org/packages/seq.html"))])
  (setup .
-	[(0 2 0)
+	[(0 2 1)
 	 ((emacs
 	   (26 1)))
 	 "Helpful Configuration Macro" tar
 	 ((:url . "https://git.sr.ht/~zge/setup")
-	  (:maintainer "Philip K." . "philipk@posteo.net")
+	  (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
 	  (:authors
-	   ("Philip K." . "philipk@posteo.net"))
+	   ("Philip Kaludercic" . "philipk@posteo.net"))
 	  (:keywords "lisp" "local"))])
  (shelisp .
 	  [(0 9 1)

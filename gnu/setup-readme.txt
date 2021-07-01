@@ -1,4 +1,6 @@
-The `setup' macro simplifies repetitive configuration patterns.
+The `setup` macro simplifies repetitive configuration patterns, by
+providing context-sensitive local macros in `setup` bodies.
+
 For example, these macros:
 
    (setup shell

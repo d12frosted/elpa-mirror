@@ -1,0 +1,13 @@
+(projectile .
+	    [(20210701 441)
+	     ((emacs
+	       (25 1))
+	      (pkg-info
+	       (0 4)))
+	     "Manage and navigate projects in Emacs easily" single
+	     ((:commit . "da08a9103b5ba3b38ef031a9627a19436eb318b5")
+	      (:authors
+	       ("Bozhidar Batsov" . "bozhidar@batsov.com"))
+	      (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
+	      (:keywords "project" "convenience")
+	      (:url . "https://github.com/bbatsov/projectile"))])
