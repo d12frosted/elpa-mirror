@@ -7,6 +7,8 @@
 ;; Author: Jon de Andrés Frías <jondeandres@gmail.com>
 ;;         Raimon Grau Cuscó <raimonster@gmail.com>
 ;; Version: 0.9
+;; Package-Version: 20210604.753
+;; Package-Commit: 883084f0801d46a5ccf183e51ae9a734755bbb97
 ;; Keywords: multimedia
 
 ;; This program is free software; you can redistribute it and/or modify
