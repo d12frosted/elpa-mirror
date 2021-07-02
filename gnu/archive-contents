@@ -2289,13 +2289,15 @@
 	    (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
 	    (:url . "https://github.com/Malabarba/speed-of-thought-lisp"))])
  (spinner .
-	  [(1 7 3)
-	   nil "Add spinners and progress-bars to the mode-line for ongoing operations" single
-	   ((:keywords "processes" "mode-line")
+	  [(1 7 4)
+	   ((emacs
+	     (24 3)))
+	   "Add spinners and progress-bars to the mode-line for ongoing operations" tar
+	   ((:url . "https://github.com/Malabarba/spinner.el")
+	    (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
 	    (:authors
 	     ("Artur Malabarba" . "emacs@endlessparentheses.com"))
-	    (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
-	    (:url . "https://github.com/Malabarba/spinner.el"))])
+	    (:keywords "processes" "mode-line"))])
  (sql-beeline .
 	      [(0 1)
 	       nil "Beeline support for sql.el" single

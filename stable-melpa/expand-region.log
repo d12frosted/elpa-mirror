@@ -5,7 +5,7 @@ Source:  https://github.com/magnars/expand-region.el.git
 Updating /mnt/store/melpa/working/expand-region/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/expand-region/
-  to /tmp/expand-regionYiPAQg/expand-region-20210701.1935
+  to /tmp/expand-regionkoDEyg/expand-region-20210702.537
     cc-mode-expansions.el -> cc-mode-expansions.el
     clojure-mode-expansions.el -> clojure-mode-expansions.el
     cperl-mode-expansions.el -> cperl-mode-expansions.el
@@ -34,39 +34,41 @@ Copying files (->) and directories (=>)
     text-mode-expansions.el -> text-mode-expansions.el
     the-org-mode-expansions.el -> the-org-mode-expansions.el
     web-mode-expansions.el -> web-mode-expansions.el
-Created expand-region-20210701.1935.tar containing:
-  expand-region-20210701.1935/
-  expand-region-20210701.1935/cc-mode-expansions.el
-  expand-region-20210701.1935/clojure-mode-expansions.el
-  expand-region-20210701.1935/cperl-mode-expansions.el
-  expand-region-20210701.1935/css-mode-expansions.el
-  expand-region-20210701.1935/enh-ruby-mode-expansions.el
-  expand-region-20210701.1935/er-basic-expansions.el
-  expand-region-20210701.1935/erlang-mode-expansions.el
-  expand-region-20210701.1935/expand-region-core.el
-  expand-region-20210701.1935/expand-region-custom.el
-  expand-region-20210701.1935/expand-region-pkg.el
-  expand-region-20210701.1935/expand-region.el
-  expand-region-20210701.1935/feature-mode-expansions.el
-  expand-region-20210701.1935/html-mode-expansions.el
-  expand-region-20210701.1935/js-mode-expansions.el
-  expand-region-20210701.1935/js2-mode-expansions.el
-  expand-region-20210701.1935/jsp-expansions.el
-  expand-region-20210701.1935/latex-mode-expansions.el
-  expand-region-20210701.1935/nxml-mode-expansions.el
-  expand-region-20210701.1935/octave-expansions.el
-  expand-region-20210701.1935/python-el-expansions.el
-  expand-region-20210701.1935/python-el-fgallina-expansions.el
-  expand-region-20210701.1935/python-mode-expansions.el
-  expand-region-20210701.1935/ruby-mode-expansions.el
-  expand-region-20210701.1935/sml-mode-expansions.el
-  expand-region-20210701.1935/subword-mode-expansions.el
-  expand-region-20210701.1935/text-mode-expansions.el
-  expand-region-20210701.1935/the-org-mode-expansions.el
-  expand-region-20210701.1935/web-mode-expansions.el
-Built expand-region in 3.824s, finished at Fri Jul  2 02:48:14 2021
+    yaml-mode-expansions.el -> yaml-mode-expansions.el
+Created expand-region-20210702.537.tar containing:
+  expand-region-20210702.537/
+  expand-region-20210702.537/cc-mode-expansions.el
+  expand-region-20210702.537/clojure-mode-expansions.el
+  expand-region-20210702.537/cperl-mode-expansions.el
+  expand-region-20210702.537/css-mode-expansions.el
+  expand-region-20210702.537/enh-ruby-mode-expansions.el
+  expand-region-20210702.537/er-basic-expansions.el
+  expand-region-20210702.537/erlang-mode-expansions.el
+  expand-region-20210702.537/expand-region-core.el
+  expand-region-20210702.537/expand-region-custom.el
+  expand-region-20210702.537/expand-region-pkg.el
+  expand-region-20210702.537/expand-region.el
+  expand-region-20210702.537/feature-mode-expansions.el
+  expand-region-20210702.537/html-mode-expansions.el
+  expand-region-20210702.537/js-mode-expansions.el
+  expand-region-20210702.537/js2-mode-expansions.el
+  expand-region-20210702.537/jsp-expansions.el
+  expand-region-20210702.537/latex-mode-expansions.el
+  expand-region-20210702.537/nxml-mode-expansions.el
+  expand-region-20210702.537/octave-expansions.el
+  expand-region-20210702.537/python-el-expansions.el
+  expand-region-20210702.537/python-el-fgallina-expansions.el
+  expand-region-20210702.537/python-mode-expansions.el
+  expand-region-20210702.537/ruby-mode-expansions.el
+  expand-region-20210702.537/sml-mode-expansions.el
+  expand-region-20210702.537/subword-mode-expansions.el
+  expand-region-20210702.537/text-mode-expansions.el
+  expand-region-20210702.537/the-org-mode-expansions.el
+  expand-region-20210702.537/web-mode-expansions.el
+  expand-region-20210702.537/yaml-mode-expansions.el
+Built expand-region in 4.068s, finished at Fri Jul  2 09:01:56 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  304 Jul  2 02:48 packages/expand-region-20210701.1935.entry
-140K -rw-r--r-- 1 root root 140K Jul  2 02:48 packages/expand-region-20210701.1935.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  2 02:48 packages/expand-region-badge.svg
-8.0K -rw-r--r-- 1 root root 4.2K Jul  2 02:48 packages/expand-region-readme.txt
+4.0K -rw-r--r-- 1 root root  303 Jul  2 09:01 packages/expand-region-20210702.537.entry
+140K -rw-r--r-- 1 root root 140K Jul  2 09:01 packages/expand-region-20210702.537.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  2 09:01 packages/expand-region-badge.svg
+8.0K -rw-r--r-- 1 root root 4.2K Jul  2 09:01 packages/expand-region-readme.txt
