@@ -2,6 +2,8 @@
 
 ;; Author: Oleh Krehel <ohwoeowho@gmail.com>
 ;; URL: https://github.com/abo-abo/ukrainian-holidays
+;; Package-Version: 20130720.1349
+;; Package-Commit: e52b0c92843e9f4d0415a7ba3b8559785497d23d
 ;; Version: 1.0
 
 ;; This file is free software; you can redistribute it and/or modify

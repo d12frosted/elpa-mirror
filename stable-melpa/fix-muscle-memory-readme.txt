@@ -87,5 +87,7 @@
      - Fix Spelling mistakes in code.
    - v 0.92 ::
      - Package format fixes from syohex
-   - v 0.93
+   - v 0.93 ::
      - Forgot to include emoji jiggerypokery. :(
+   - v 0.94 ::
+     - Emacs 27 compatability fix.
