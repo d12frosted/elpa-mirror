@@ -1,11 +1,11 @@
 (package-build .
-	       [(20210616 2110)
+	       [(20210702 2007)
 		((cl-lib
 		  (0 5))
 		 (emacs
 		  (25 1)))
 		"Tools for assembling a package archive" tar
-		((:commit . "95e021756ee5c5255a63cce8351178e298c68363")
+		((:commit . "bd425fa616e4c8e8bad93f3e30b43aef00b0fa81")
 		 (:authors
 		  ("Donald Ephraim Curtis" . "dcurtis@milkbox.net"))
 		 (:maintainer "Donald Ephraim Curtis" . "dcurtis@milkbox.net")

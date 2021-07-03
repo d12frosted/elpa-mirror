@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (all-the-icons "4.0.0"))
-;; Package-Version: 20210702.1606
-;; Package-Commit: 078ccd733e81b9ea86eda03b60c918dceebd0567
+;; Package-Version: 20210703.52
+;; Package-Commit: eb98707c87de4fd54404739ebb29c8ee1a77e54e
 ;; Version: 1.2.1
 ;; Keywords: hypermedia
 ;; homepage: https://github.com/stardiviner/org-link-beautify
@@ -321,18 +321,35 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
 (defun org-link-beautify--preview-text-file (file lines)
   "Return first LINES of FILE."
   (with-temp-buffer
-    (insert-file-contents-literally file)
-    (cl-loop repeat lines
-             unless (eobp)
-             collect (prog1 (buffer-substring-no-properties
-                             (line-beginning-position)
-                             (line-end-position))
-                       (forward-line 1)))))
+    (condition-case nil
+        (progn
+          (insert-file-contents-literally file)
+          (format
+           (mapconcat
+            'concat
+            ;; extract lines of file contents
+            (cl-loop repeat lines
+                     unless (eobp)
+                     collect (prog1 (buffer-substring-no-properties
+                                     (line-beginning-position)
+                                     (line-end-position))
+                               (forward-line 1)))
+            "\n")))
+      (file-error
+       (funcall (if noerror #'message #'user-error)
+		        "Unable to read file %S"
+		        file)
+	   nil))))
 
-(defun org-link-beautify--preview-text (path start end)
+;;; test
+;; (org-link-beautify--preview-text-file
+;;  (expand-file-name "~/Code/Emacs/org-link-beautify/org-link-beautify.el")
+;;  3)
+
+(defun org-link-beautify--preview-text (path start end &optional lines)
   "Preview TEXT file PATH and display on link between START and END."
   (let* ((text-file (expand-file-name (org-link-unescape path)))
-         (preview-lines 10)
+         (preview-lines (or lines 10))
          (preview-content (org-link-beautify--preview-text-file text-file preview-lines)))
     (org-link-beautify--add-overlay-marker (1+ end) (+ end 2))
     (org-link-beautify--add-keymap (1+ end) (+ end 2))
@@ -461,6 +478,20 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
      (propertize icon 'face '(:inherit nil :underline nil :foreground "gray"))
      (propertize ")" 'face '(:inherit nil :underline nil :foreground "orange"))))))
 
+(defun org-link-beautify--display-not-exist (start end description icon)
+  "Display error color and ICON on START and END with DESCRIPTION."
+  (put-text-property
+   start end
+   'display
+   (propertize
+    (concat
+     (propertize "[" 'face '(:inherit nil :underline nil :foreground "black"))
+     (propertize description 'face '(:underline t :foreground "red" :strike-through t))
+     (propertize "]" 'face '(:inherit nil :underline nil :foreground "black"))
+     (propertize "(" 'face '(:inherit nil :underline nil :foreground "black"))
+     (propertize icon 'face '(:inherit nil :underline nil :foreground "orange red"))
+     (propertize ")" 'face '(:inherit nil :underline nil :foreground "black"))))))
+
 (defun org-link-beautify-display (start end path bracket-p)
   "Display icon for the link type based on PATH from START to END."
   ;; DEBUG:
@@ -523,6 +554,11 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
                (member extension org-link-beautify-text-preview-list)
                org-link-beautify-text-preview)
           (org-link-beautify--preview-text path start end))
+         ;; file does not exist
+         ((and (equal type "file") (not (file-exists-p path)))
+          ;; DEBUG (message path)
+          (org-link-beautify--add-overlay-marker start end)
+          (org-link-beautify--display-not-exist start end description icon))
          ;; general icons
          (t
           ;; DEBUG:

@@ -2,8 +2,8 @@
 
 ;; Author: Fox Kiester <noct@posteo.net>
 ;; URL: https://github.com/noctuid/lispyville
-;; Package-Version: 20200808.2240
-;; Package-Commit: 89316f01822b2135e52ca27fd308d207ef618052
+;; Package-Version: 20210702.2031
+;; Package-Commit: 9c14bed0359f659e246d345c706f895737c3d172
 ;; Created: March 03, 2016
 ;; Keywords: vim, evil, lispy, lisp, parentheses
 ;; Package-Requires: ((lispy "0") (evil "1.2.12") (cl-lib "0.5") (emacs "24.4"))
@@ -824,6 +824,10 @@ This won't jump to the beginning of the buffer if there is no paren there."
 (evil-define-motion lispyville-end-of-defun (count)
   "This is the evil motion equivalent of `end-of-defun'.
 This won't jump to the end of the buffer if there is no paren there."
+  (when (<= (- (line-end-position)
+              (point))
+           1)
+    (forward-line))
   (end-of-defun (or count 1))
   (re-search-backward lispy-right nil t)
   (lispyville--maybe-enter-special))
