@@ -8,8 +8,8 @@
 ;; Maintainer: Neil Okamoto <neil.okamoto+melpa@gmail.com>
 ;;             Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacsorphanage/git-gutter
-;; Package-Version: 20210511.427
-;; Package-Commit: d050abdd7f5a46c9cfbec2953d2fca90095e2857
+;; Package-Version: 20210703.1007
+;; Package-Commit: 35aa068bc2bd6ad8b0070d9f3948d30b76c2e939
 ;; Version: 0.91
 ;; Package-Requires: ((emacs "24.3"))
 
@@ -883,7 +883,7 @@ Argument TEST is the case before BODY execution."
   (git-gutter:awhen (or diffinfo
                         (git-gutter:search-here-diffinfo git-gutter:diffinfos))
     (save-selected-window
-      (pop-to-buffer (git-gutter:update-popuped-buffer it)))))
+      (display-buffer (git-gutter:update-popuped-buffer it)))))
 
 (defun git-gutter:next-hunk (arg)
   "Move to next diff hunk"
