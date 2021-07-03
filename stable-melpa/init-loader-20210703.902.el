@@ -2,9 +2,10 @@
 
 ;; Author: IMAKADO <ken.imakado@gmail.com>
 ;; URL: https://github.com/emacs-jp/init-loader/
-;; Package-Version: 20200520.2345
-;; Package-Commit: 10b8d7b12acbd1036e68dfb59f460714baedaa33
+;; Package-Version: 20210703.902
+;; Package-Commit: ecab5a66b40227c4173992adfa5cfeae09f1657e
 ;; Version: 0.02
+;; Package-Requires: ((cl-lib "0.5"))
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -80,7 +81,7 @@
 
 ;;; Code:
 
-(eval-when-compile (require 'cl))
+(require 'cl-lib)
 (require 'benchmark)
 
 ;;; customize-variables
@@ -142,11 +143,11 @@ example, 00_foo.el, 01_bar.el ... 99_keybinds.el."
   :type 'regexp)
 
 ;;;###autoload
-(defun* init-loader-load (&optional (init-dir init-loader-directory))
+(cl-defun init-loader-load (&optional (init-dir init-loader-directory))
   "Load configuration files in INIT-DIR."
   (let ((init-dir (init-loader-follow-symlink init-dir))
         (is-carbon-emacs nil))
-    (assert (and (stringp init-dir) (file-directory-p init-dir)))
+    (cl-assert (and (stringp init-dir) (file-directory-p init-dir)))
     (init-loader-re-load init-loader-default-regexp init-dir t)
 
     ;; Windows
@@ -179,7 +180,7 @@ example, 00_foo.el, 01_bar.el ... 99_keybinds.el."
     (when (not window-system)
       (init-loader-re-load init-loader-nw-regexp init-dir))
 
-    (case init-loader-show-log-after-init
+    (cl-case init-loader-show-log-after-init
       (error-only (add-hook 'after-init-hook 'init-loader--show-log-error-only))
       ('t (add-hook 'after-init-hook 'init-loader-show-log)))))
 
@@ -231,13 +232,13 @@ example, 00_foo.el, 01_bar.el ... 99_keybinds.el."
 ;; 2011/JUN/12 zqwell Read first byte-compiled file if it exist.
 ;; See. http://twitter.com/#!/fkmn/statuses/21411277599
 (defun init-loader--re-load-files (re dir &optional sort)
-  (loop for el in (directory-files dir t)
-        when (and (string-match re (file-name-nondirectory el))
-                  (or (string-match "elc\\'" el)
-                      (and (string-match "el\\'" el)
-                           (not (locate-library (concat el "c"))))))
-        collect (file-name-nondirectory el) into ret
-        finally return (if sort (sort ret 'string<) ret)))
+  (cl-loop for el in (directory-files dir t)
+           when (and (string-match re (file-name-nondirectory el))
+                     (or (string-match "elc\\'" el)
+                         (and (string-match "el\\'" el)
+                              (not (locate-library (concat el "c"))))))
+           collect (file-name-nondirectory el) into ret
+           finally return (if sort (sort ret 'string<) ret)))
 
 (defun init-loader--show-log-error-only ()
   (let ((err (init-loader-error-log)))

@@ -1,0 +1,28 @@
+Package: moe-theme
+Fetcher: github
+Source:  https://github.com/kuanyui/moe-theme.el.git
+
+Updating /mnt/store/melpa/working/moe-theme/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/moe-theme/
+  to /tmp/moe-themeo2iKCj/moe-theme-20210308.1053
+    moe-dark-theme.el -> moe-dark-theme.el
+    moe-light-theme.el -> moe-light-theme.el
+    moe-theme-flavours.el -> moe-theme-flavours.el
+    moe-theme-pkg.el -> moe-theme-pkg.el
+    moe-theme-switcher.el -> moe-theme-switcher.el
+    moe-theme.el -> moe-theme.el
+Created moe-theme-20210308.1053.tar containing:
+  moe-theme-20210308.1053/
+  moe-theme-20210308.1053/moe-dark-theme.el
+  moe-theme-20210308.1053/moe-light-theme.el
+  moe-theme-20210308.1053/moe-theme-flavours.el
+  moe-theme-20210308.1053/moe-theme-pkg.el
+  moe-theme-20210308.1053/moe-theme-switcher.el
+  moe-theme-20210308.1053/moe-theme.el
+Built moe-theme in 4.026s, finished at Sat Jul  3 10:21:07 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  357 Jul  3 10:21 packages/moe-theme-20210308.1053.entry
+172K -rw-r--r-- 1 root root 170K Jul  3 10:21 packages/moe-theme-20210308.1053.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  3 10:21 packages/moe-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  113 Jul  3 10:21 packages/moe-theme-readme.txt

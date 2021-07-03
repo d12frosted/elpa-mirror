@@ -5,7 +5,7 @@ Source:  https://github.com/emacs-lsp/lsp-mode.git
 Updating /mnt/store/melpa/working/lsp-mode/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-mode/
-  to /tmp/lsp-modezU0em7/lsp-mode-20210702.831
+  to /tmp/lsp-modeviumGC/lsp-mode-20210702.831
     lsp-completion.el -> lsp-completion.el
     lsp-diagnostics.el -> lsp-diagnostics.el
     lsp-dired.el -> lsp-dired.el
@@ -18,7 +18,6 @@ Copying files (->) and directories (=>)
     lsp-modeline.el -> lsp-modeline.el
     lsp-protocol.el -> lsp-protocol.el
     lsp-semantic-tokens.el -> lsp-semantic-tokens.el
-    lsp-use-package.el -> lsp-use-package.el
     lsp.el -> lsp.el
   ! clients/lsp-actionscript.el -> lsp-actionscript.el
   ! clients/lsp-ada.el -> lsp-ada.el
@@ -148,7 +147,6 @@ Created lsp-mode-20210702.831.tar containing:
   lsp-mode-20210702.831/lsp-svelte.el
   lsp-mode-20210702.831/lsp-terraform.el
   lsp-mode-20210702.831/lsp-tex.el
-  lsp-mode-20210702.831/lsp-use-package.el
   lsp-mode-20210702.831/lsp-v.el
   lsp-mode-20210702.831/lsp-vala.el
   lsp-mode-20210702.831/lsp-verilog.el
@@ -159,9 +157,9 @@ Created lsp-mode-20210702.831.tar containing:
   lsp-mode-20210702.831/lsp-yaml.el
   lsp-mode-20210702.831/lsp-zig.el
   lsp-mode-20210702.831/lsp.el
-Built lsp-mode in 5.711s, finished at Sat Jul  3 04:03:48 2021
+Built lsp-mode in 7.147s, finished at Sat Jul  3 10:17:55 2021
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  511 Jul  3 04:03 packages/lsp-mode-20210702.831.entry
-1.1M -rw-r--r-- 1 root root 1.1M Jul  3 04:03 packages/lsp-mode-20210702.831.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  3 04:03 packages/lsp-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   54 Jul  3 04:03 packages/lsp-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  511 Jul  3 10:17 packages/lsp-mode-20210702.831.entry
+1.1M -rw-r--r-- 1 root root 1.1M Jul  3 10:17 packages/lsp-mode-20210702.831.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  3 10:17 packages/lsp-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   54 Jul  3 10:17 packages/lsp-mode-readme.txt
