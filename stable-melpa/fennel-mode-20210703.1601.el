@@ -4,9 +4,9 @@
 
 ;; Author: Phil Hagelberg
 ;; URL: https://gitlab.com/technomancy/fennel-mode
-;; Package-Version: 20210624.1431
-;; Package-Commit: f37a3de72c6cbf37f82d4b2f37d9009af5058099
-;; Version: 0.3.0
+;; Package-Version: 20210703.1601
+;; Package-Commit: 0ee97b00330cbb8b0188cf04a00b27406dddd6ff
+;; Version: 0.3.1
 ;; Created: 2018-02-18
 ;; Package-Requires: ((emacs "25.1"))
 ;;
@@ -36,6 +36,7 @@
 ;;; Code:
 (require 'lisp-mode)
 (require 'inf-lisp)
+(require 'thingatpt)
 (require 'xref)
 
 (declare-function paredit-open-curly "ext:paredit")
@@ -121,6 +122,7 @@ lookup that Fennel does in the REPL."
 (define-key fennel-repl-mode-map (kbd "C-c C-d") 'fennel-show-documentation)
 (define-key fennel-repl-mode-map (kbd "C-c C-v") 'fennel-show-variable-documentation)
 (define-key fennel-repl-mode-map (kbd "C-c C-a") 'fennel-show-arglist)
+(define-key fennel-repl-mode-map (kbd "M-.") 'fennel-find-definition)
 
 (defvar fennel-repl--buffer "*Fennel REPL*")
 
@@ -323,22 +325,24 @@ buffer, or when given a prefix arg."
 
 (defun fennel-completions (input)
   "Query completions for the INPUT from the `inferior-lisp-proc'."
-  (let ((command (format ",complete %s\n" input))
-        (buf (get-buffer-create "*fennel-completion*")))
-    (with-current-buffer buf
-      (delete-region (point-min) (point-max))
-      (with-current-buffer (process-buffer (inferior-lisp-proc))
-        (comint-redirect-send-command command buf nil t))
-      (accept-process-output (inferior-lisp-proc) 0.01)
-      (goto-char (point-min))
-      ;; readline makes completion slow; without this there's a race condition
-      (when (not (search-forward inferior-lisp-prompt nil t))
-        (sleep-for 0.05)
-        (accept-process-output (inferior-lisp-proc) 0.01))
-      (move-end-of-line nil)
-      (let ((contents (buffer-substring-no-properties (point-min) (point))))
-        ;; readline will insert ansi escape codes; gotta strip them out
-        (split-string (ansi-color-apply contents))))))
+  (condition-case nil
+      (let ((command (format ",complete %s\n" input))
+            (buf (get-buffer-create "*fennel-completion*")))
+        (with-current-buffer buf
+          (delete-region (point-min) (point-max))
+          (with-current-buffer (process-buffer (inferior-lisp-proc))
+            (comint-redirect-send-command command buf nil t))
+          (accept-process-output (inferior-lisp-proc) 0.01)
+          (goto-char (point-min))
+          ;; readline makes completion slow; without this there's a race condition
+          (when (not (search-forward inferior-lisp-prompt nil t))
+            (sleep-for 0.05)
+            (accept-process-output (inferior-lisp-proc) 0.01))
+          (move-end-of-line nil)
+          (let ((contents (buffer-substring-no-properties (point-min) (point))))
+            ;; readline will insert ansi escape codes; gotta strip them out
+            (split-string (ansi-color-apply contents)))))
+    (error nil)))
 
 (defun fennel-complete ()
   "Return a list of completion data for `completion-at-point'.
@@ -347,7 +351,8 @@ Requires Fennel 0.9.3+."
   (interactive)
   (let ((bounds (bounds-of-thing-at-point 'symbol))
         (completions (fennel-completions (symbol-at-point))))
-    (list (car bounds) (cdr bounds) completions)))
+    (when completions
+      (list (car bounds) (cdr bounds) completions))))
 
 (defun fennel-find-definition-go (location)
   "Go to the definition LOCATION."
@@ -382,7 +387,10 @@ Requires Fennel 0.9.3+."
 This will only work when the reference to the function is in scope for the repl;
 for instance if you have already entered (local foo (require :foo)) then foo.bar
 can be resolved.  It also requires line number correlation."
-  (interactive (list (read-string "Find definition: ")))
+  (interactive (list (let ((prompt (if (symbol-at-point)
+                                       (format "Find definition (default %s): "
+                                               (symbol-at-point)))))
+                       (read-string prompt nil nil sym))))
   (xref-push-marker-stack (point-marker))
   (fennel-find-definition-go (fennel-find-definition-for identifier)))
 

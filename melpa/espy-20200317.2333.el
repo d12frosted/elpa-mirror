@@ -2,6 +2,8 @@
 
 ;; Author: Sebastian Wålinder <s.walinder@gmail.com>
 ;; URL: https://github.com/walseb/espy
+;; Package-Version: 20200317.2333
+;; Package-Commit: 2c01be937a5e5bde62921684a0b27300705fb4e0
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24"))
 ;; Keywords: convenience
