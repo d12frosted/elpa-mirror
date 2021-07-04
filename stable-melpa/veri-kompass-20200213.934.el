@@ -6,6 +6,8 @@
 ;; Package: veri-kompass
 ;; Homepage: https://gitlab.com/koral/veri-kompass
 ;; Version: 0.2
+;; Package-Version: 20200213.934
+;; Package-Commit: 271903cdf92db05898ee7cffb65641f30fa08280
 ;; Package-Requires: ((emacs "25") (cl-lib "0.5") (org "8.2.0"))
 ;; Keywords: languages, extensions, verilog, hardware, rtl
 

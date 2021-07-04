@@ -5,7 +5,7 @@
 ;; Author: Phil Hagelberg
 ;; URL: https://gitlab.com/technomancy/fennel-mode
 ;; Package-Version: 20210703.1601
-;; Package-Commit: 0ee97b00330cbb8b0188cf04a00b27406dddd6ff
+;; Package-Commit: 8f15f4e0b5c626c8473365a3abdc227b025a07c9
 ;; Version: 0.3.1
 ;; Created: 2018-02-18
 ;; Package-Requires: ((emacs "25.1"))
