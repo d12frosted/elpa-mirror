@@ -8,7 +8,7 @@
 ;; Modified: June 26, 2021
 ;; Version: 1.0.0
 ;; Package-Version: 20210701.839
-;; Package-Commit: 86f6d910d4d7abfd909ed4a6917668936ac896f1
+;; Package-Commit: 9d804ac9b8dcf585bddaa91bb4f5597238a839bf
 ;; Homepage: https://gitlab.com/willvaughn/emacs-0x0
 ;; Package-Requires: ((emacs "26.1"))
 ;;
