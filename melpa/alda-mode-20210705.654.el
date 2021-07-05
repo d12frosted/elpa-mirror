@@ -3,8 +3,8 @@
 ;; Copyright (C) 2016-2017 Jay Kamat
 ;; Author: Jay Kamat <jaygkamat@gmail.com>
 ;; Version: 0.3.0
-;; Package-Version: 20180608.605
-;; Package-Commit: 1692b9003d2c3de403251ec452c6ce43ec819c84
+;; Package-Version: 20210705.654
+;; Package-Commit: 4de011d572e958a377fb16daae05a1b411f0c8ad
 ;; Keywords: alda, highlight
 ;; URL: http://gitlab.com/jgkamat/alda-mode
 ;; Package-Requires: ((emacs "24.0"))
@@ -41,14 +41,16 @@
 (defconst +alda-output-buffer+ "*alda-output*")
 (defconst +alda-output-name+ "alda-playback")
 (defconst +alda-comment-str+ "#")
+(defconst +alda-marker-name+ "alda-mode-internal-marker")
 
 (require 'comint)
+(require 'subr-x)
 
 ;;; Code:
 ;;;; -- Variables --
 (defvar *alda-history*
   ""
-  "Holds the history to be sent to the alda server.
+  "Holds the history to be sent to alda.
 If you are experiencing problems, try clearing your history with 'alda-history-clear'.")
 
 ;;;; -- Region playback functions --
@@ -135,33 +137,29 @@ When set to nil, will not set to repl"
   :type 'boolean
   :group 'Alda)
 
-(defun alda-server ()
-  "Start an alda server in an Emacs process."
-  (interactive)
-  (start-process +alda-output-name+ +alda-output-buffer+ (alda-location)  "server"))
-
 (defun alda-run-cmd (&rest args)
   "Run a given alda command with specified args.
 Argument ARGS a list of arguments to pass to alda"
   (interactive "sEnter alda command: ")
-  (let ((server-down
-          (if (string-match "[Ss]erver [Dd]own" (shell-command-to-string (concat (alda-location) " status")))
-            (progn (message "Alda server down, starting in Emacs.") t)
-            nil)))
-    (if (not (alda-location))
+  (if (not (alda-location))
       (message "Alda was not found on your $PATH and alda-binary-location was nil.")
-      (progn
-        (when server-down
-          (alda-server)
-          (sleep-for 2)) ;; Try to stop a race condition
-        (apply #'start-process +alda-output-name+ +alda-output-buffer+
-          (alda-location) args)))))
+    (apply #'start-process +alda-output-name+ +alda-output-buffer+
+           (alda-location) args)))
 
 (defun alda-play-text (text)
-  "Plays the specified TEXT in the alda server.
+  "Plays the specified TEXT in alda.
 This does include any history you might have added.
-ARGUMENT TEXT The text to play with the current alda server."
-  (alda-run-cmd "play" "--history" *alda-history* "--code" text))
+ARGUMENT TEXT The text to play with alda."
+  (let* ((use-marker (> (length (string-trim *alda-history*)) 0)))
+    (alda-run-cmd "play"
+                  "-F"
+                  (if use-marker +alda-marker-name+ "")
+                  "--code"
+                  (concat
+                   *alda-history*
+                   (when use-marker
+                     (concat "\n%" +alda-marker-name+ "\n"))
+                   text))))
 
 (defun alda-stop ()
   "Stop current alda playback."

@@ -4,9 +4,9 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net
 ;; URL: http://github.com/alphapapa/ts.el
-;; Package-Version: 20201212.1041
-;; Package-Commit: b7ca357a0ed57694e0b25ec1b1ca12e24a4ce541
-;; Version: 0.2
+;; Package-Version: 20210705.341
+;; Package-Commit: b6814e7e688781a586a775ef3504b9252af65b93
+;; Version: 0.3-pre
 ;; Package-Requires: ((emacs "26.1") (dash "2.14.1") (s "1.12.0"))
 ;; Keywords: calendar, lisp
 
@@ -400,15 +400,15 @@ to `make-ts'."
 (defmacro ts-define-fill ()
   "Define `ts-fill' function that fills all applicable slots of `ts' object from its `unix' slot."
   (let* ((slots (->> (cl-struct-slot-info 'ts)
-                     (--select (and (not (member (car it) '(unix internal cl-tag-slot)))
-                                    (plist-get (cddr it) :constructor)))
+                  (--select (and (not (member (car it) '(unix internal cl-tag-slot)))
+                                 (plist-get (cddr it) :constructor)))
 
-                     (--map (list (intern (concat ":" (symbol-name (car it))))
-                                  (cddr it)))))
+                  (--map (list (intern (concat ":" (symbol-name (car it))))
+                               (cddr it)))))
          (keywords (-map #'car slots))
          (constructors (->> slots
-                            (--map (plist-get (cadr it) :constructor))
-                            -non-nil))
+                         (--map (plist-get (cadr it) :constructor))
+                         -non-nil))
          (types (--map (plist-get (cadr it) :type) slots))
          (format-string (s-join "\f" constructors))
          (value-conversions (cl-loop for type in types
@@ -419,12 +419,13 @@ to `make-ts'."
                                                             ('integer `(string-to-number ,val))
                                                             (_ val))))))
     ;; MAYBE: Construct the record manually?  Probably not worth it, but might eke out a bit more speed.
-    `(defun ts-fill (ts)
+    `(defun ts-fill (ts &optional zone)
        "Return TS having filled all slots from its Unix timestamp.
-This is non-destructive."
+This is non-destructive.  ZONE is passed to `format-time-string',
+which see."
        ;; MAYBE: Use `decode-time' instead of `format-time-string'?  It provides most of the values we need.  Should benchmark.
        (let ((time-values (save-match-data
-                            (split-string (format-time-string ,format-string (ts-unix ts)) "\f"))))
+                            (split-string (format-time-string ,format-string (ts-unix ts) zone) "\f"))))
          (make-ts :unix (ts-unix ts) ,@value-conversions)))))
 (ts-define-fill)
 

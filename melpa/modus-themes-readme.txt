@@ -10,7 +10,7 @@ The themes share the following customization variables, all of which
 are disabled by default (nil):
 
     modus-themes-inhibit-reload                 (boolean)
-    modus-themes-slanted-constructs             (boolean)
+    modus-themes-italic-constructs              (boolean)
     modus-themes-bold-constructs                (boolean)
     modus-themes-variable-pitch-headings        (boolean)
     modus-themes-variable-pitch-ui              (boolean)
