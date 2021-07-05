@@ -2195,7 +2195,7 @@
 	      (:maintainer "Ralph Amissah" . "ralph.amissah@gmail.com")
 	      (:url . "http://www.sisudoc.org/"))])
  (slime-volleyball .
-		   [(1 1 7)
+		   [(1 2 0)
 		    ((cl-lib
 		      (0 5)))
 		    "An SVG Slime Volleyball Game" tar
@@ -2203,7 +2203,7 @@
 		     (:authors
 		      ("Thomas Fitzsimmons" . "fitzsim@fitzsim.org"))
 		     (:keywords "games")
-		     (:url . "http://elpa.gnu.org/packages/slime-volleyball.html"))])
+		     (:url . "https://elpa.gnu.org/packages/slime-volleyball.html"))])
  (sm-c-mode .
 	    [(1 1)
 	     nil "C major mode based on SMIE" single

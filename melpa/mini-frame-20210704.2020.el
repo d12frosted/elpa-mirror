@@ -4,10 +4,10 @@
 
 ;; Author: Andrii Kolomoiets <andreyk.mad@gmail.com>
 ;; Keywords: frames
-;; Package-Commit: 41afb3d79cd269726e955ef0896dc077562de0f5
+;; Package-Commit: 50fc66655bca819b56100212bc7b8535c76570e0
 ;; URL: https://github.com/muffinmad/emacs-mini-frame
-;; Package-Version: 20210212.2041
-;; Package-X-Original-Version: 1.16
+;; Package-Version: 20210704.2020
+;; Package-X-Original-Version: 1.18
 ;; Package-Requires: ((emacs "26.1"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -276,6 +276,7 @@ This function used as value for `resize-mini-frames' variable."
                                      (z-group . above))))))
     (set-face-background 'fringe nil frame)
     (when mini-frame-internal-border-color
+      (set-face-background 'child-frame-border mini-frame-internal-border-color frame)
       (set-face-background 'internal-border mini-frame-internal-border-color frame))
     frame))
 
@@ -388,6 +389,7 @@ ALIST is passed to `window--display-buffer'."
    ((or mini-frame-ignore-this
         (not (display-graphic-p))
         (minibufferp)
+        isearch-mode
         (and (symbolp this-command)
              (catch 'ignored
                (dolist (ignored-command mini-frame-ignore-commands)

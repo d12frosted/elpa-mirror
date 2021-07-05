@@ -6,8 +6,8 @@
 ;; Maintainer: Joe Bloggs <vapniks@yahoo.com>
 ;; Created: 2003-03-17 18:50:12 Harley Gorrell
 ;; URL: https://github.com/vapniks/syslog-mode
-;; Package-Version: 20190913.2040
-;; Package-Commit: 18f441bf57dd70cdd48a71f1f4566ab35facdb35
+;; Package-Version: 20210704.1716
+;; Package-Commit: c624043771638df0c5ac61cde62a450bf45cbe00
 ;; Keywords: unix
 ;; Compatibility: GNU Emacs 24.3.1
 ;; Package-Requires:  ((hide-lines "20130623") (ov "20150311"))
@@ -381,7 +381,7 @@ a prefix argument is used in which case they are prompted for."
 		0 -1))))
 
 (defun syslog-open-files (files &optional label)
-  "Insert log FILES into new buffer.
+  "Insert log FILES into new buffer, and switch to that buffer.
 If the optional argument LABEL is non-nil then each new line will be labelled
 with the corresponding filename.
 When called interactively the FILES are prompted for using `syslog-get-filenames'."
@@ -408,7 +408,7 @@ When called interactively the FILES are prompted for using `syslog-get-filenames
     (switch-to-buffer buf)))
 
 ;;;###autoload
-(defun syslog-view (files &optional label rxshowstart rxshowend
+(defun syslog-view (files &optional label washes rxshowstart rxshowend
 			  rxhidestart rxhideend startdate enddate removedates
 			  highlights bufname)
   "Open a view of syslog files with optional filters and highlights applied.
@@ -434,9 +434,20 @@ highlight those regexps with."
 	  (startdate (getstr startdate))
 	  (enddate (getstr enddate))
 	  (bufname (getstr bufname))) 
-      (if files (syslog-open-files (syslog-get-filenames files) label))
+      (when files (syslog-open-files (syslog-get-filenames files) label))
       (if (not (eq major-mode 'syslog-mode))
 	  (error "Not in syslog-mode")
+	(dolist (wash washes)
+	  (cond ((functionp wash) (funcall wash))
+		((and (consp wash)
+		      (stringp (car wash))
+		      (functionp (cdr wash)))
+		 (save-excursion
+		   (goto-char (point-min))
+		   (while (re-search-forward (car wash) nil t)
+		     (replace-match (funcall (cdr wash) (match-string 1))
+				    t nil nil 1))))
+		(t (error "Invalid washes arg"))))
 	(if rxshowstart
 	    (if rxshowend
 		(hide-blocks-not-matching rxshowstart rxshowend)
@@ -576,13 +587,49 @@ With prefix ARG: remove matching blocks."
 ;;;###autoload
 (defcustom syslog-views nil
   "A list of views.
-If regexps matching end lines are left blank then lines will be filtered instead of blocks (see `syslog-filter-lines')."
+Each view is a list of:
+ - a name for the view
+ - a list of files to display; each item in the list is a cons cell whose car is the base log file, 
+     and whose cdr is a number indicating how many previous log files of the same type to include
+ - a boolean indicating whether or not to label each line with the filename
+ - an optional list of functions to apply to transform the buffer before filtering & highlighting. 
+     Each element is either:
+     - a function of no args for performing a batch transformation of the buffer, or
+     - a cons cell whose car is a regexp containing a match group, and whose cdr is a function that 
+       takes the text captured by that match group as its only arg, and returns some text to replace it.
+       This function will be applied to all matches to the regexp in the buffer.
+ - a regexp matching start lines of blocks to show
+ - a regexp matching end lines of blocks to show (if blank then lines will be filtered instead of blocks)
+ - a regexp matching start lines of blocks to hide
+ - a regexp matching end lines of blocks to hide (if blank then lines will be hidden instead of blocks)
+ - an optional start date for filtering lines with `syslog-filter-dates'
+ - an optional end date for filtering lines with `syslog-filter-dates'
+ - a boolean; if non-nil hide lines matching above dates, otherwise display only those lines
+ - a list of highlighting info; each element is a cons cell whose car is a regexp to highlight and 
+   whose cdr is a face to use for highlighting
+ - an optional name to rename the buffer 
+"
   :group 'syslog
   :type '(repeat (list (string :tag "Name")
 		       (repeat (cons (string :tag "Base file")
 				     (number :tag "Number of previous files/days")))
 		       (choice (const :tag "No file labels" nil)
 			       (const :tag "Add file labels" t))
+		       (repeat (choice (function :tag "Washing function"
+						 :help-echo "Function with no arguments, called in the buffer")
+				       (cons (regexp
+					      :help-echo "Regexp containing a match group"
+					      :validate
+					      (lambda (w)
+						(let ((v (widget-value w)))
+						  (when (< (regexp-opt-depth v) 1)
+						    (widget-put
+						     w :error
+						     "Regexp must have at least one match group")
+						    w))))
+					     (function
+					      :help-echo
+					      "Function of one argument (a string captured by regexp match group)"))))
 		       (regexp :tag "Regexp matching start lines of blocks to show")
 		       (regexp :tag "Regexp matching end lines of blocks to show")
 		       (regexp :tag "Regexp matching start lines of blocks to hide")
@@ -750,6 +797,77 @@ The ARG and SEARCH-STRING arguments are the same as for `whois'."
 				      "Whois: ") nil nil default))))
   (let ((whois-server-name whois-reverse-lookup-server))
     (whois arg search-string)))
+
+(defun syslog-get-pipes (pids)
+  "Return info about unix pipes used by processes with ids in PIDS.
+A list of lists, each containing info about a particular pipe is returned.
+The first element of each list is a string containing the inode for the pipe, 
+and subsequent elements contain pipe endpoint info as returned by the lsof command.
+See the lsof manpage for more info."
+  (let ((pipes (mapcar (lambda (l)
+			 (let ((parts (split-string l "\s+")))
+			   (cons (nth 7 parts) (nthcdr 9 parts))))
+		       (cl-remove-if (lambda (s) (< (length s) 1))
+				     (split-string
+				      (shell-command-to-string (concat "lsof -n -P -L -E -p "
+								       (mapconcat 'number-to-string pids " -p ")
+								       " | grep ' FIFO '"))
+				      "\n"))))
+	pipes2)
+    (cl-loop for p in pipes
+	     for elem = (assoc (car p) pipes2)
+	     for lst = (cdr elem)
+	     if elem do (progn (dolist (p2 (cdr p)) (add-to-list 'lst p2))
+			       (setcdr elem lst))
+	     else do (add-to-list 'pipes2 p))
+    pipes2))
+
+(defun syslog-pid-to-comm (pid)
+  "Return name of process associated with PID"
+  (let ((str (shell-command-to-string
+	      (concat "ps -p " pid " -o comm --no-headers"))))
+    (if (> (length str) 0)
+	(substring-no-properties str 0 -1)
+      pid)))
+
+(defun syslog-replace-pipes (pids)
+  ""
+  (save-excursion
+    (dolist (pipe (syslog-get-pipes pids))
+      (goto-char (point-min))
+      (replace-string (concat "pipe:\[" (car pipe) "\]")
+		      (concat "pipe:[" (mapconcat (lambda (x) (replace-regexp-in-string "[0-9]+," "" x))
+						  (cdr pipe) ":")
+			      "]")))))
+
+(defun syslog-strace-get-pids nil
+  "Get list of PIDs from strace output.
+Return list of unique PID strings."
+  (let (pids)
+    (goto-char (point-min))
+    (while (re-search-forward "^[0-9]+" nil t)
+      (add-to-list 'pids (match-string 0)))
+    pids))
+
+(defun syslog-replace-pids (pidrx)
+  "Replace PIDs with processs names in buffer.
+PIDRX should be a regexp with a single match group for matching
+PIDs to be replaced."
+  (interactive (list (read-regexp
+		      "Regexp with match group for PID"
+		      '("^\\([0-9]+\\)" "pid=\\([0-9]+\\)"))))
+  (when (< (regexp-opt-depth pidrx) 1)
+    (error "No match group in regexp"))
+  (save-excursion
+    (let (pids)
+      (goto-char (point-min))
+      (while (re-search-forward pidrx nil t)
+	(add-to-list 'pids (match-string 1)))
+      (mapc (lambda (p)
+	      (goto-char (point-min))
+	      (let ((rx (concat "^" p)))
+		(replace-regexp rx (syslog-pid-to-comm p))))
+	    pids))))
 
 (defface syslog-ip
   '((t :underline t :slant italic :weight bold))

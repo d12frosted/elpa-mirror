@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (all-the-icons "4.0.0"))
-;; Package-Version: 20210703.52
-;; Package-Commit: eb98707c87de4fd54404739ebb29c8ee1a77e54e
+;; Package-Version: 20210704.2214
+;; Package-Commit: 40d40c1e6187ec9c13292beb3f7f319f189264d8
 ;; Version: 1.2.1
 ;; Keywords: hypermedia
 ;; homepage: https://github.com/stardiviner/org-link-beautify
@@ -298,12 +298,16 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
               ;;     (number-to-string thumbnail-size))
               ))
             ('darwin                    ; for macOS "epub-thumbnailer" command
+             ;; DEBUG
+             ;; (message epub-file)
+             ;; (message thumbnail)
+             ;; (message (number-to-string org-link-beautify-epub-preview-size))
              (make-process
               :name "org-link-beautify--epub-preview"
               :command (list org-link-beautify-epub-preview
                              epub-file
                              thumbnail
-                             (number-to-string org-link-beautify-epub-preview-size))
+                             (number-to-string thumbnail-size))
               :buffer " *org-link-beautify epub-preview*"
               :sentinel (lambda (proc event)
                           (message (format "> proc: %s\n> event: %s" proc event))
@@ -313,7 +317,8 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
                             ;; (kill-process proc)
                             ))
               :stdout " *org-link-beautify epub-preview*"
-              :stderr " *org-link-beautify epub-preview*"))))
+              :stderr " *org-link-beautify epub-preview*"))
+            (t (user-error "This system platform currently not supported by org-link-beautify.\n Please contribute code to support"))))
         (org-link-beautify--add-overlay-marker start end)
         (org-link-beautify--add-keymap start end)
         (org-link-beautify--display-thumbnail thumbnail thumbnail-size start end))))
