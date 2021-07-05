@@ -8,8 +8,8 @@
 ;; Author: Mitsuo Saito <arch320@NOSPAM.gmail.com>
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Version: 1.60
-;; Package-Version: 20210702.1556
-;; Package-Commit: 93458049093e902045fde2439bd1aed16d3e631d
+;; Package-Version: 20210705.1351
+;; Package-Commit: e8809909565ec0184920eb4236709581a607fafe
 ;; Keywords: highlight face match convenience
 ;; URL: http://github.com/jcs-elpa/auto-highlight-symbol
 ;; Package-Requires: ((emacs "24.4") (ht "2.3"))
@@ -449,6 +449,8 @@ Affects only overlay(hidden text) has a property `isearch-open-invisible'."
   "Face used in `display' plugin (current)."
   :group 'auto-highlight-symbol)
 (defvar ahs-plugin-default-face 'ahs-plugin-default-face)
+
+(define-obsolete-face-alias 'ahs-plugin-defalt-face 'ahs-plugin-default-face "1.60")
 
 (defface ahs-plugin-default-face-unfocused
   '((t (:foreground "Black" :background "Orange1")))
