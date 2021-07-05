@@ -1,10 +1,10 @@
-;;; toc-mode.el --- Manage outlines of pdf and djvu document  -*- lexical-binding: t; -*-
+;;; toc-mode.el --- Manage outlines/table of contents of pdf and djvu documents  -*- lexical-binding: t; -*-
 ;; Copyright (C) 2020  Daniel Laurens Nicolai
 
 ;; Author: Daniel Laurens Nicolai <dalanicolai@gmail.com>
 ;; Version: 0
-;; Package-Version: 20201028.1141
-;; Package-Commit: 36fe728f387ab2087e4096cb4734a8642dd7f880
+;; Package-Version: 20210705.1026
+;; Package-Commit: 487177a81bef46e805de0bee936e900fb80beef4
 ;; Keywords: tools, outlines, convenience
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/dalanicolai/toc-mode
