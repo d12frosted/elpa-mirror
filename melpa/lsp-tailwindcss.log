@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/merrickluo/lsp-tailwindcss.git
 
 Updating /mnt/store/melpa/working/lsp-tailwindcss/
-Built lsp-tailwindcss in 7.637s, finished at Tue Jul  6 10:49:47 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.8K Jul  6 10:49 packages/lsp-tailwindcss-20210605.315.el
-4.0K -rw-r--r-- 1 root root  400 Jul  6 10:49 packages/lsp-tailwindcss-20210605.315.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:49 packages/lsp-tailwindcss-badge.svg
-4.0K -rw-r--r-- 1 root root   67 Jul  6 10:49 packages/lsp-tailwindcss-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

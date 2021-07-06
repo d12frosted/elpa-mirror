@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/Wilfred/logstash-conf.el.git
 
 Updating /mnt/store/melpa/working/logstash-conf/
-Built logstash-conf in 3.720s, finished at Tue Jul  6 10:49:08 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.9K Jul  6 10:49 packages/logstash-conf-20210123.1949.el
-4.0K -rw-r--r-- 1 root root  277 Jul  6 10:49 packages/logstash-conf-20210123.1949.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:49 packages/logstash-conf-badge.svg
-4.0K -rw-r--r-- 1 root root  126 Jul  6 10:49 packages/logstash-conf-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/phillord/pabbrev.git
 
 Updating /mnt/store/melpa/working/pabbrev/
-Built pabbrev in 2.928s, finished at Tue Jul  6 11:00:13 2021
- ✓ Success:
- 64K -rw-r--r-- 1 root root  64K Jul  6 11:00 packages/pabbrev-20160320.2101.el
-4.0K -rw-r--r-- 1 root root  278 Jul  6 11:00 packages/pabbrev-20160320.2101.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:00 packages/pabbrev-badge.svg
-8.0K -rw-r--r-- 1 root root 4.1K Jul  6 11:00 packages/pabbrev-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

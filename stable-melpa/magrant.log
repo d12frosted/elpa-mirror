@@ -3,27 +3,10 @@ Fetcher: github
 Source:  https://github.com/p3r7/magrant.git
 
 Updating /mnt/store/melpa/working/magrant/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/magrant/
-  to /tmp/magrant3UTF1f/magrant-20210705.605
-    magrant-box.el -> magrant-box.el
-    magrant-core.el -> magrant-core.el
-    magrant-faces.el -> magrant-faces.el
-    magrant-machine.el -> magrant-machine.el
-    magrant-utils.el -> magrant-utils.el
-    magrant.el -> magrant.el
-Created magrant-20210705.605.tar containing:
-  magrant-20210705.605/
-  magrant-20210705.605/magrant-box.el
-  magrant-20210705.605/magrant-core.el
-  magrant-20210705.605/magrant-faces.el
-  magrant-20210705.605/magrant-machine.el
-  magrant-20210705.605/magrant-pkg.el
-  magrant-20210705.605/magrant-utils.el
-  magrant-20210705.605/magrant.el
-Built magrant in 3.720s, finished at Tue Jul  6 10:50:47 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  387 Jul  6 10:50 packages/magrant-20210705.605.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:50 packages/magrant-20210705.605.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:50 packages/magrant-badge.svg
-4.0K -rw-r--r-- 1 root root  425 Jul  6 10:50 packages/magrant-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

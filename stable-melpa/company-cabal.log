@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/iquiw/company-cabal.git
 
 Updating /mnt/store/melpa/working/company-cabal/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/company-cabal/
-  to /tmp/company-cabalFBmL3r/company-cabal-20170917.1317
-    company-cabal-fields.el -> company-cabal-fields.el
-    company-cabal.el -> company-cabal.el
-Created company-cabal-20170917.1317.tar containing:
-  company-cabal-20170917.1317/
-  company-cabal-20170917.1317/company-cabal-fields.el
-  company-cabal-20170917.1317/company-cabal-pkg.el
-  company-cabal-20170917.1317/company-cabal.el
-Built company-cabal in 3.612s, finished at Tue Jul  6 10:18:28 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  368 Jul  6 10:18 packages/company-cabal-20170917.1317.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:18 packages/company-cabal-20170917.1317.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:18 packages/company-cabal-badge.svg
-4.0K -rw-r--r-- 1 root root  231 Jul  6 10:18 packages/company-cabal-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

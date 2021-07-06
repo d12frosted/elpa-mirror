@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/chmouel/isgd.el.git
 
 Updating /mnt/store/melpa/working/isgd/
-Built isgd in 8.226s, finished at Tue Jul  6 10:44:27 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.6K Jul  6 10:44 packages/isgd-20150414.936.el
-4.0K -rw-r--r-- 1 root root  330 Jul  6 10:44 packages/isgd-20150414.936.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:44 packages/isgd-badge.svg
-4.0K -rw-r--r-- 1 root root  308 Jul  6 10:44 packages/isgd-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

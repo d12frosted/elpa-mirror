@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm-wikipedia.git
 
 Updating /mnt/store/melpa/working/helm-wikipedia/
-Built helm-wikipedia in 5.163s, finished at Tue Jul  6 10:41:07 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.9K Jul  6 10:41 packages/helm-wikipedia-20210525.717.el
-4.0K -rw-r--r-- 1 root root  239 Jul  6 10:41 packages/helm-wikipedia-20210525.717.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:41 packages/helm-wikipedia-badge.svg
-4.0K -rw-r--r-- 1 root root   41 Jul  6 10:41 packages/helm-wikipedia-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

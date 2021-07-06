@@ -3,14 +3,10 @@ Fetcher: github
 Source:  https://github.com/nbfalcon/ptemplate.git
 
 Updating /mnt/store/melpa/working/ptemplate/
-Built ptemplate in 4.275s, finished at Tue Jul  6 11:04:21 2021
- ✓ Success:
- 60K -rw-r--r-- 1 root root  59K Jul  6 11:04 packages/ptemplate-20210324.1446.el
-4.0K -rw-r--r-- 1 root root  390 Jul  6 11:04 packages/ptemplate-20210324.1446.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:04 packages/ptemplate-badge.svg
-4.0K -rw-r--r-- 1 root root  618 Jul  6 11:04 packages/ptemplate-readme.txt
-4.0K -rw-r--r-- 1 root root  419 Jul  6 08:03 packages/ptemplate-templates-20210324.1443.entry
- 72K -rw-r--r-- 1 root root  70K Jul  6 08:03 packages/ptemplate-templates-20210324.1443.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 08:03 packages/ptemplate-templates-badge.svg
-4.0K -rw-r--r-- 1 root root  600 Jul  6 08:03 packages/ptemplate-templates-readme.txt
-4.0K -rw-r--r-- 1 root root  162 Jul  6 11:04 packages/ptemplate-templates.log
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

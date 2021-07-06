@@ -3,18 +3,10 @@ Fetcher: github
 Source:  https://github.com/rdallasgray/pallet.git
 
 Updating /mnt/store/melpa/working/pallet/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pallet/
-  to /tmp/palletzSSA0b/pallet-20150512.702
-  ! lib/pallet-pkg.el -> pallet-pkg.el
-  ! lib/pallet.el -> pallet.el
-Created pallet-20150512.702.tar containing:
-  pallet-20150512.702/
-  pallet-20150512.702/pallet-pkg.el
-  pallet-20150512.702/pallet.el
-Built pallet in 3.970s, finished at Tue Jul  6 11:00:28 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  391 Jul  6 11:00 packages/pallet-20150512.702.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 11:00 packages/pallet-20150512.702.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:00 packages/pallet-badge.svg
-8.0K -rw-r--r-- 1 root root 5.6K Jul  6 11:00 packages/pallet-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

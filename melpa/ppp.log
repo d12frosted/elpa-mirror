@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/conao3/ppp.el.git
 
 Updating /mnt/store/melpa/working/ppp/
-Built ppp in 3.902s, finished at Tue Jul  6 11:03:26 2021
- ✓ Success:
- 24K -rw-r--r-- 1 root root  24K Jul  6 11:03 packages/ppp-20200812.844.el
-4.0K -rw-r--r-- 1 root root  392 Jul  6 11:03 packages/ppp-20200812.844.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:03 packages/ppp-badge.svg
-4.0K -rw-r--r-- 1 root root   39 Jul  6 11:03 packages/ppp-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

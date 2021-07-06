@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacsfodder/emacs-lavender-theme.git
 
 Updating /mnt/store/melpa/working/lavender-theme/
-Built lavender-theme in 3.940s, finished at Tue Jul  6 10:47:43 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Jul  6 10:47 packages/lavender-theme-20170808.1313.el
-4.0K -rw-r--r-- 1 root root  320 Jul  6 10:47 packages/lavender-theme-20170808.1313.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:47 packages/lavender-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  119 Jul  6 10:47 packages/lavender-theme-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/p1uxtar/pyim-smzmdict.git
 
 Updating /mnt/store/melpa/working/pyim-smzmdict/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pyim-smzmdict/
-  to /tmp/pyim-smzmdictaS8LZ0/pyim-smzmdict-20210505.1445
-    pyim-smzmdict.el -> pyim-smzmdict.el
-    pyim-smzmdict.pyim -> pyim-smzmdict.pyim
-Created pyim-smzmdict-20210505.1445.tar containing:
-  pyim-smzmdict-20210505.1445/
-  pyim-smzmdict-20210505.1445/pyim-smzmdict-pkg.el
-  pyim-smzmdict-20210505.1445/pyim-smzmdict.el
-  pyim-smzmdict-20210505.1445/pyim-smzmdict.pyim
-Built pyim-smzmdict in 3.592s, finished at Tue Jul  6 11:04:50 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  357 Jul  6 11:04 packages/pyim-smzmdict-20210505.1445.entry
-120K -rw-r--r-- 1 root root 120K Jul  6 11:04 packages/pyim-smzmdict-20210505.1445.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:04 packages/pyim-smzmdict-badge.svg
-4.0K -rw-r--r-- 1 root root  765 Jul  6 11:04 packages/pyim-smzmdict-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

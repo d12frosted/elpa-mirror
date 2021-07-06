@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/remyhonig/elfeed-org.git
 
 Updating /mnt/store/melpa/working/elfeed-org/
-Built elfeed-org in 3.808s, finished at Tue Jul  6 10:25:50 2021
- ✓ Success:
- 20K -rw-r--r-- 1 root root  17K Jul  6 10:25 packages/elfeed-org-20210510.1219.el
-4.0K -rw-r--r-- 1 root root  522 Jul  6 10:25 packages/elfeed-org-20210510.1219.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:25 packages/elfeed-org-badge.svg
-4.0K -rw-r--r-- 1 root root  466 Jul  6 10:25 packages/elfeed-org-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

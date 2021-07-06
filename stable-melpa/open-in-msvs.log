@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/evgeny-panasyuk/open-in-msvs.el.git
 
 Updating /mnt/store/melpa/working/open-in-msvs/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/open-in-msvs/
-  to /tmp/open-in-msvsVReh4R/open-in-msvs-20170123.2228
-    open-in-msvs.el -> open-in-msvs.el
-    open-in-msvs.vbs -> open-in-msvs.vbs
-Created open-in-msvs-20170123.2228.tar containing:
-  open-in-msvs-20170123.2228/
-  open-in-msvs-20170123.2228/open-in-msvs-pkg.el
-  open-in-msvs-20170123.2228/open-in-msvs.el
-  open-in-msvs-20170123.2228/open-in-msvs.vbs
-Built open-in-msvs in 3.739s, finished at Tue Jul  6 10:56:55 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  396 Jul  6 10:56 packages/open-in-msvs-20170123.2228.entry
- 12K -rw-r--r-- 1 root root  10K Jul  6 10:56 packages/open-in-msvs-20170123.2228.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:56 packages/open-in-msvs-badge.svg
-4.0K -rw-r--r-- 1 root root  132 Jul  6 10:56 packages/open-in-msvs-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

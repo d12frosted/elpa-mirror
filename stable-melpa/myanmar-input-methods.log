@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/yelinkyaw/emacs-myanmar-input-methods.git
 
 Updating /mnt/store/melpa/working/myanmar-input-methods/
-Built myanmar-input-methods in 4.302s, finished at Tue Jul  6 10:53:48 2021
- ✓ Success:
- 24K -rw-r--r-- 1 root root  24K Jul  6 10:53 packages/myanmar-input-methods-20160106.1537.el
-4.0K -rw-r--r-- 1 root root  394 Jul  6 10:53 packages/myanmar-input-methods-20160106.1537.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:53 packages/myanmar-input-methods-badge.svg
-4.0K -rw-r--r-- 1 root root  230 Jul  6 10:53 packages/myanmar-input-methods-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

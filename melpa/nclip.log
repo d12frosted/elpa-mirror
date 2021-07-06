@@ -3,21 +3,10 @@ Fetcher: github
 Source:  https://github.com/maio/nclip.el.git
 
 Updating /mnt/store/melpa/working/nclip/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nclip/
-  to /tmp/nclipKJPzof/nclip-20130617.2015
-    nclip.el -> nclip.el
-    nclip.rb -> nclip.rb
-    nclip.py -> nclip.py
-Created nclip-20130617.2015.tar containing:
-  nclip-20130617.2015/
-  nclip-20130617.2015/nclip-pkg.el
-  nclip-20130617.2015/nclip.el
-  nclip-20130617.2015/nclip.py
-  nclip-20130617.2015/nclip.rb
-Built nclip in 3.631s, finished at Tue Jul  6 10:54:14 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  352 Jul  6 10:54 packages/nclip-20130617.2015.entry
- 12K -rw-r--r-- 1 root root  10K Jul  6 10:54 packages/nclip-20130617.2015.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:54 packages/nclip-badge.svg
-4.0K -rw-r--r-- 1 root root  470 Jul  6 10:54 packages/nclip-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

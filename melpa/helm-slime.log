@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm-slime.git
 
 Updating /mnt/store/melpa/working/helm-slime/
-Built helm-slime in 4.174s, finished at Tue Jul  6 10:40:45 2021
- ✓ Success:
- 24K -rw-r--r-- 1 root root  22K Jul  6 10:40 packages/helm-slime-20191016.1601.el
-4.0K -rw-r--r-- 1 root root  506 Jul  6 10:40 packages/helm-slime-20191016.1601.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:40 packages/helm-slime-badge.svg
-4.0K -rw-r--r-- 1 root root  851 Jul  6 10:40 packages/helm-slime-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

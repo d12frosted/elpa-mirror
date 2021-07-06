@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/yuutayamada/helm-rb.git
 
 Updating /mnt/store/melpa/working/helm-rb/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/helm-rb/
-  to /tmp/helm-rbmluZbe/helm-rb-20131123.1639
-    helm-rb.el -> helm-rb.el
-    get_methods.rb -> get_methods.rb
-Created helm-rb-20131123.1639.tar containing:
-  helm-rb-20131123.1639/
-  helm-rb-20131123.1639/get_methods.rb
-  helm-rb-20131123.1639/helm-rb-pkg.el
-  helm-rb-20131123.1639/helm-rb.el
-Built helm-rb in 3.379s, finished at Tue Jul  6 10:40:32 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  409 Jul  6 10:40 packages/helm-rb-20131123.1639.entry
- 12K -rw-r--r-- 1 root root  10K Jul  6 10:40 packages/helm-rb-20131123.1639.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:40 packages/helm-rb-badge.svg
-4.0K -rw-r--r-- 1 root root   14 Jul  6 10:40 packages/helm-rb-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

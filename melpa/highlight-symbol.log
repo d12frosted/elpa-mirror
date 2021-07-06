@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/nschum/highlight-symbol.el.git
 
 Updating /mnt/store/melpa/working/highlight-symbol/
-Built highlight-symbol in 4.210s, finished at Tue Jul  6 10:41:39 2021
- ✓ Success:
- 20K -rw-r--r-- 1 root root  18K Jul  6 10:41 packages/highlight-symbol-20160102.2009.el
-4.0K -rw-r--r-- 1 root root  389 Jul  6 10:41 packages/highlight-symbol-20160102.2009.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:41 packages/highlight-symbol-badge.svg
-4.0K -rw-r--r-- 1 root root  921 Jul  6 10:41 packages/highlight-symbol-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

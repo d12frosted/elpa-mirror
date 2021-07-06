@@ -3,9 +3,7 @@ Fetcher: git
 Source:  https://git.carcosa.net/jmcbray/gemini.el.git
 
 Updating /mnt/store/melpa/working/gemini-mode/
-Built gemini-mode in 4.892s, finished at Tue Jul  6 10:35:21 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.0K Jul  6 10:35 packages/gemini-mode-20210611.1833.el
-4.0K -rw-r--r-- 1 root root  552 Jul  6 10:35 packages/gemini-mode-20210611.1833.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:35 packages/gemini-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  795 Jul  6 10:35 packages/gemini-mode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://git.carcosa.net/jmcbray/gemini.el.git/': Failed to connect to git.carcosa.net port 443: Connection timed out
+error: Could not fetch origin
+

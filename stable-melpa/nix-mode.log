@@ -3,43 +3,10 @@ Fetcher: github
 Source:  https://github.com/NixOS/nix-mode.git
 
 Updating /mnt/store/melpa/working/nix-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nix-mode/
-  to /tmp/nix-modeo30yFB/nix-mode-20210706.249
-    nix-build.el -> nix-build.el
-    nix-drv-mode.el -> nix-drv-mode.el
-    nix-edit.el -> nix-edit.el
-    nix-format.el -> nix-format.el
-    nix-instantiate.el -> nix-instantiate.el
-    nix-log.el -> nix-log.el
-    nix-mode.el -> nix-mode.el
-    nix-prettify-mode.el -> nix-prettify-mode.el
-    nix-repl.el -> nix-repl.el
-    nix-search.el -> nix-search.el
-    nix-shebang.el -> nix-shebang.el
-    nix-shell.el -> nix-shell.el
-    nix-store.el -> nix-store.el
-    nix.el -> nix.el
-Created nix-mode-20210706.249.tar containing:
-  nix-mode-20210706.249/
-  nix-mode-20210706.249/nix-build.el
-  nix-mode-20210706.249/nix-drv-mode.el
-  nix-mode-20210706.249/nix-edit.el
-  nix-mode-20210706.249/nix-format.el
-  nix-mode-20210706.249/nix-instantiate.el
-  nix-mode-20210706.249/nix-log.el
-  nix-mode-20210706.249/nix-mode-pkg.el
-  nix-mode-20210706.249/nix-mode.el
-  nix-mode-20210706.249/nix-prettify-mode.el
-  nix-mode-20210706.249/nix-repl.el
-  nix-mode-20210706.249/nix-search.el
-  nix-mode-20210706.249/nix-shebang.el
-  nix-mode-20210706.249/nix-shell.el
-  nix-mode-20210706.249/nix-store.el
-  nix-mode-20210706.249/nix.el
-Built nix-mode in 4.345s, finished at Tue Jul  6 10:54:38 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  348 Jul  6 10:54 packages/nix-mode-20210706.249.entry
-100K -rw-r--r-- 1 root root 100K Jul  6 10:54 packages/nix-mode-20210706.249.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:54 packages/nix-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  140 Jul  6 10:54 packages/nix-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/crystal-ameba/ameba.el.git
 
 Updating /mnt/store/melpa/working/ameba/
-Built ameba in 4.231s, finished at Tue Jul  6 10:11:43 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.4K Jul  6 10:11 packages/ameba-20200103.1454.el
-4.0K -rw-r--r-- 1 root root  318 Jul  6 10:11 packages/ameba-20200103.1454.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:11 packages/ameba-badge.svg
-4.0K -rw-r--r-- 1 root root  422 Jul  6 10:11 packages/ameba-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

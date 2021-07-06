@@ -3,25 +3,10 @@ Fetcher: github
 Source:  https://github.com/redguardtoo/cliphist.git
 
 Updating /mnt/store/melpa/working/cliphist/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cliphist/
-  to /tmp/cliphist0vreI6/cliphist-20210426.245
-    cliphist-clipit.el -> cliphist-clipit.el
-    cliphist-flycut.el -> cliphist-flycut.el
-    cliphist-greenclip.el -> cliphist-greenclip.el
-    cliphist-parcellite.el -> cliphist-parcellite.el
-    cliphist.el -> cliphist.el
-Created cliphist-20210426.245.tar containing:
-  cliphist-20210426.245/
-  cliphist-20210426.245/cliphist-clipit.el
-  cliphist-20210426.245/cliphist-flycut.el
-  cliphist-20210426.245/cliphist-greenclip.el
-  cliphist-20210426.245/cliphist-parcellite.el
-  cliphist-20210426.245/cliphist-pkg.el
-  cliphist-20210426.245/cliphist.el
-Built cliphist in 3.657s, finished at Tue Jul  6 10:17:24 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  446 Jul  6 10:17 packages/cliphist-20210426.245.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:17 packages/cliphist-20210426.245.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:17 packages/cliphist-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:17 packages/cliphist-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

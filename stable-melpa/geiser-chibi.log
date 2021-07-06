@@ -3,22 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/chibi.git
 
 Updating /mnt/store/melpa/working/geiser-chibi/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/geiser-chibi/
-  to /tmp/geiser-chibiei2dlc/geiser-chibi-20210421.123
-    geiser-chibi.el -> geiser-chibi.el
-    src/geiser => src/geiser
-Created geiser-chibi-20210421.123.tar containing:
-  geiser-chibi-20210421.123/
-  geiser-chibi-20210421.123/geiser-chibi-pkg.el
-  geiser-chibi-20210421.123/geiser-chibi.el
-  geiser-chibi-20210421.123/src/
-  geiser-chibi-20210421.123/src/geiser/
-  geiser-chibi-20210421.123/src/geiser/geiser.scm
-  geiser-chibi-20210421.123/src/geiser/geiser.sld
-Built geiser-chibi in 3.672s, finished at Tue Jul  6 10:35:12 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  424 Jul  6 10:35 packages/geiser-chibi-20210421.123.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:35 packages/geiser-chibi-20210421.123.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:35 packages/geiser-chibi-badge.svg
-4.0K -rw-r--r-- 1 root root   51 Jul  6 10:35 packages/geiser-chibi-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

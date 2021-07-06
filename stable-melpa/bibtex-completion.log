@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/tmalsburg/helm-bibtex.git
 
 Updating /mnt/store/melpa/working/bibtex-completion/
-Built bibtex-completion in 4.508s, finished at Tue Jul  6 10:14:20 2021
- ✓ Success:
- 76K -rw-r--r-- 1 root root  75K Jul  6 10:14 packages/bibtex-completion-20210408.1649.el
-4.0K -rw-r--r-- 1 root root  627 Jul  6 10:14 packages/bibtex-completion-20210408.1649.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:14 packages/bibtex-completion-badge.svg
-4.0K -rw-r--r-- 1 root root  185 Jul  6 10:14 packages/bibtex-completion-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/hotpxl/company-irony-c-headers.git
 
 Updating /mnt/store/melpa/working/company-irony-c-headers/
-Built company-irony-c-headers in 4.137s, finished at Tue Jul  6 10:18:43 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.8K Jul  6 10:18 packages/company-irony-c-headers-20151018.909.el
-4.0K -rw-r--r-- 1 root root  486 Jul  6 10:18 packages/company-irony-c-headers-20151018.909.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:18 packages/company-irony-c-headers-badge.svg
-4.0K -rw-r--r-- 1 root root  584 Jul  6 10:18 packages/company-irony-c-headers-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

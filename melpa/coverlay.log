@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/twada/coverlay.el.git
 
 Updating /mnt/store/melpa/working/coverlay/
-Built coverlay in 3.760s, finished at Tue Jul  6 10:20:13 2021
- ✓ Success:
- 24K -rw-r--r-- 1 root root  23K Jul  6 10:20 packages/coverlay-20190414.940.el
-4.0K -rw-r--r-- 1 root root  399 Jul  6 10:20 packages/coverlay-20190414.940.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:20 packages/coverlay-badge.svg
-4.0K -rw-r--r-- 1 root root  477 Jul  6 10:20 packages/coverlay-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

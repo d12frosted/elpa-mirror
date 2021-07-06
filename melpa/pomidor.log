@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/TatriX/pomidor.git
 
 Updating /mnt/store/melpa/working/pomidor/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pomidor/
-  to /tmp/pomidor0hJnOP/pomidor-20210111.919
-    pomidor.el -> pomidor.el
-    tick.wav -> tick.wav
-    tack.wav -> tack.wav
-    overwork.wav -> overwork.wav
-Created pomidor-20210111.919.tar containing:
-  pomidor-20210111.919/
-  pomidor-20210111.919/overwork.wav
-  pomidor-20210111.919/pomidor-pkg.el
-  pomidor-20210111.919/pomidor.el
-  pomidor-20210111.919/tack.wav
-  pomidor-20210111.919/tick.wav
-Built pomidor in 4.735s, finished at Tue Jul  6 11:03:02 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  422 Jul  6 11:03 packages/pomidor-20210111.919.entry
-220K -rw-r--r-- 1 root root 220K Jul  6 11:03 packages/pomidor-20210111.919.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:03 packages/pomidor-badge.svg
-4.0K -rw-r--r-- 1 root root   94 Jul  6 11:03 packages/pomidor-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

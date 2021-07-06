@@ -3,62 +3,10 @@ Fetcher: git
 Source:  https://scm.osdn.net/gitroot/howm/howm.git
 
 Updating /mnt/store/melpa/working/howm/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/howm/
-  to /tmp/howmX2pBtf/howm-20210217.1128
-    action-lock.el -> action-lock.el
-    bcomp.el -> bcomp.el
-    cheat-font-lock.el -> cheat-font-lock.el
-    gfunc.el -> gfunc.el
-    honest-report.el -> honest-report.el
-    howm-backend.el -> howm-backend.el
-    howm-common.el -> howm-common.el
-    howm-date.el -> howm-date.el
-    howm-lang-en.el -> howm-lang-en.el
-    howm-lang-fr.el -> howm-lang-fr.el
-    howm-lang-ja.el -> howm-lang-ja.el
-    howm-menu-en.el -> howm-menu-en.el
-    howm-menu-fr.el -> howm-menu-fr.el
-    howm-menu-ja.el -> howm-menu-ja.el
-    howm-menu.el -> howm-menu.el
-    howm-misc.el -> howm-misc.el
-    howm-mkmenu.el -> howm-mkmenu.el
-    howm-mode.el -> howm-mode.el
-    howm-reminder.el -> howm-reminder.el
-    howm-vars.el -> howm-vars.el
-    howm-view.el -> howm-view.el
-    howm.el -> howm.el
-    illusion.el -> illusion.el
-    riffle.el -> riffle.el
-Created howm-20210217.1128.tar containing:
-  howm-20210217.1128/
-  howm-20210217.1128/action-lock.el
-  howm-20210217.1128/bcomp.el
-  howm-20210217.1128/cheat-font-lock.el
-  howm-20210217.1128/gfunc.el
-  howm-20210217.1128/honest-report.el
-  howm-20210217.1128/howm-backend.el
-  howm-20210217.1128/howm-common.el
-  howm-20210217.1128/howm-date.el
-  howm-20210217.1128/howm-lang-en.el
-  howm-20210217.1128/howm-lang-fr.el
-  howm-20210217.1128/howm-lang-ja.el
-  howm-20210217.1128/howm-menu-en.el
-  howm-20210217.1128/howm-menu-fr.el
-  howm-20210217.1128/howm-menu-ja.el
-  howm-20210217.1128/howm-menu.el
-  howm-20210217.1128/howm-misc.el
-  howm-20210217.1128/howm-mkmenu.el
-  howm-20210217.1128/howm-mode.el
-  howm-20210217.1128/howm-pkg.el
-  howm-20210217.1128/howm-reminder.el
-  howm-20210217.1128/howm-vars.el
-  howm-20210217.1128/howm-view.el
-  howm-20210217.1128/howm.el
-  howm-20210217.1128/illusion.el
-  howm-20210217.1128/riffle.el
-Built howm in 3.540s, finished at Tue Jul  6 10:42:07 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  309 Jul  6 10:42 packages/howm-20210217.1128.entry
-440K -rw-r--r-- 1 root root 440K Jul  6 10:42 packages/howm-20210217.1128.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:42 packages/howm-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

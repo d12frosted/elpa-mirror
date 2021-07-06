@@ -3,24 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/oer/org-re-reveal-ref.git
 
 Updating /mnt/store/melpa/working/org-re-reveal-ref/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-re-reveal-ref/
-  to /tmp/org-re-reveal-ref1sad7I/org-re-reveal-ref-20210104.1650
-    org-re-reveal-ref.el -> org-re-reveal-ref.el
-    LICENSES => LICENSES
-    README.org -> README.org
-    references.bib -> references.bib
-Created org-re-reveal-ref-20210104.1650.tar containing:
-  org-re-reveal-ref-20210104.1650/
-  org-re-reveal-ref-20210104.1650/LICENSES/
-  org-re-reveal-ref-20210104.1650/LICENSES/GPL-3.0-or-later.txt
-  org-re-reveal-ref-20210104.1650/README.org
-  org-re-reveal-ref-20210104.1650/org-re-reveal-ref-pkg.el
-  org-re-reveal-ref-20210104.1650/org-re-reveal-ref.el
-  org-re-reveal-ref-20210104.1650/references.bib
-Built org-re-reveal-ref in 3.983s, finished at Tue Jul  6 10:58:25 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  502 Jul  6 10:58 packages/org-re-reveal-ref-20210104.1650.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 10:58 packages/org-re-reveal-ref-20210104.1650.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:58 packages/org-re-reveal-ref-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Jul  6 10:58 packages/org-re-reveal-ref-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

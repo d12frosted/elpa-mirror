@@ -3,71 +3,10 @@ Fetcher: github
 Source:  https://github.com/jcs-elpa/parse-it.git
 
 Updating /mnt/store/melpa/working/parse-it/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/parse-it/
-  to /tmp/parse-itl9vyqS/parse-it-20210306.821
-    parse-it-ast.el -> parse-it-ast.el
-    parse-it-lex.el -> parse-it-lex.el
-    parse-it-util.el -> parse-it-util.el
-    parse-it.el -> parse-it.el
-  ! langs/parse-it-actionscript.el -> parse-it-actionscript.el
-  ! langs/parse-it-asm.el -> parse-it-asm.el
-  ! langs/parse-it-c++.el -> parse-it-c++.el
-  ! langs/parse-it-c.el -> parse-it-c.el
-  ! langs/parse-it-csharp.el -> parse-it-csharp.el
-  ! langs/parse-it-css.el -> parse-it-css.el
-  ! langs/parse-it-elisp.el -> parse-it-elisp.el
-  ! langs/parse-it-go.el -> parse-it-go.el
-  ! langs/parse-it-html.el -> parse-it-html.el
-  ! langs/parse-it-java.el -> parse-it-java.el
-  ! langs/parse-it-js.el -> parse-it-js.el
-  ! langs/parse-it-json.el -> parse-it-json.el
-  ! langs/parse-it-kotlin.el -> parse-it-kotlin.el
-  ! langs/parse-it-lisp.el -> parse-it-lisp.el
-  ! langs/parse-it-lua.el -> parse-it-lua.el
-  ! langs/parse-it-markdown.el -> parse-it-markdown.el
-  ! langs/parse-it-objc.el -> parse-it-objc.el
-  ! langs/parse-it-php.el -> parse-it-php.el
-  ! langs/parse-it-python.el -> parse-it-python.el
-  ! langs/parse-it-r.el -> parse-it-r.el
-  ! langs/parse-it-sql.el -> parse-it-sql.el
-  ! langs/parse-it-swift.el -> parse-it-swift.el
-  ! langs/parse-it-typescript.el -> parse-it-typescript.el
-  ! langs/parse-it-xml.el -> parse-it-xml.el
-Created parse-it-20210306.821.tar containing:
-  parse-it-20210306.821/
-  parse-it-20210306.821/parse-it-actionscript.el
-  parse-it-20210306.821/parse-it-asm.el
-  parse-it-20210306.821/parse-it-ast.el
-  parse-it-20210306.821/parse-it-c++.el
-  parse-it-20210306.821/parse-it-c.el
-  parse-it-20210306.821/parse-it-csharp.el
-  parse-it-20210306.821/parse-it-css.el
-  parse-it-20210306.821/parse-it-elisp.el
-  parse-it-20210306.821/parse-it-go.el
-  parse-it-20210306.821/parse-it-html.el
-  parse-it-20210306.821/parse-it-java.el
-  parse-it-20210306.821/parse-it-js.el
-  parse-it-20210306.821/parse-it-json.el
-  parse-it-20210306.821/parse-it-kotlin.el
-  parse-it-20210306.821/parse-it-lex.el
-  parse-it-20210306.821/parse-it-lisp.el
-  parse-it-20210306.821/parse-it-lua.el
-  parse-it-20210306.821/parse-it-markdown.el
-  parse-it-20210306.821/parse-it-objc.el
-  parse-it-20210306.821/parse-it-php.el
-  parse-it-20210306.821/parse-it-pkg.el
-  parse-it-20210306.821/parse-it-python.el
-  parse-it-20210306.821/parse-it-r.el
-  parse-it-20210306.821/parse-it-sql.el
-  parse-it-20210306.821/parse-it-swift.el
-  parse-it-20210306.821/parse-it-typescript.el
-  parse-it-20210306.821/parse-it-util.el
-  parse-it-20210306.821/parse-it-xml.el
-  parse-it-20210306.821/parse-it.el
-Built parse-it in 3.539s, finished at Tue Jul  6 11:00:44 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  362 Jul  6 11:00 packages/parse-it-20210306.821.entry
-132K -rw-r--r-- 1 root root 130K Jul  6 11:00 packages/parse-it-20210306.821.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:00 packages/parse-it-badge.svg
-4.0K -rw-r--r-- 1 root root   29 Jul  6 11:00 packages/parse-it-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

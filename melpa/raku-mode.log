@@ -3,31 +3,10 @@ Fetcher: github
 Source:  https://github.com/Raku/raku-mode.git
 
 Updating /mnt/store/melpa/working/raku-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/raku-mode/
-  to /tmp/raku-modejDsHrZ/raku-mode-20210412.2342
-    raku-detect.el -> raku-detect.el
-    raku-font-lock.el -> raku-font-lock.el
-    raku-imenu.el -> raku-imenu.el
-    raku-indent.el -> raku-indent.el
-    raku-mode.el -> raku-mode.el
-    raku-repl.el -> raku-repl.el
-    raku-skeletons.el -> raku-skeletons.el
-    raku-unicode-menu.el -> raku-unicode-menu.el
-Created raku-mode-20210412.2342.tar containing:
-  raku-mode-20210412.2342/
-  raku-mode-20210412.2342/raku-detect.el
-  raku-mode-20210412.2342/raku-font-lock.el
-  raku-mode-20210412.2342/raku-imenu.el
-  raku-mode-20210412.2342/raku-indent.el
-  raku-mode-20210412.2342/raku-mode-pkg.el
-  raku-mode-20210412.2342/raku-mode.el
-  raku-mode-20210412.2342/raku-repl.el
-  raku-mode-20210412.2342/raku-skeletons.el
-  raku-mode-20210412.2342/raku-unicode-menu.el
-Built raku-mode in 4.737s, finished at Tue Jul  6 11:05:33 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  433 Jul  6 11:05 packages/raku-mode-20210412.2342.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 11:05 packages/raku-mode-20210412.2342.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:05 packages/raku-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  104 Jul  6 11:05 packages/raku-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,41 +3,10 @@ Fetcher: github
 Source:  https://github.com/brotzeit/rustic.git
 
 Updating /mnt/store/melpa/working/rustic/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/rustic/
-  to /tmp/rusticWvF7qf/rustic-20210609.1900
-    rustic-babel.el -> rustic-babel.el
-    rustic-cargo.el -> rustic-cargo.el
-    rustic-compile.el -> rustic-compile.el
-    rustic-doc.el -> rustic-doc.el
-    rustic-flycheck.el -> rustic-flycheck.el
-    rustic-interaction.el -> rustic-interaction.el
-    rustic-lsp.el -> rustic-lsp.el
-    rustic-playpen.el -> rustic-playpen.el
-    rustic-popup.el -> rustic-popup.el
-    rustic-racer.el -> rustic-racer.el
-    rustic-rustfix.el -> rustic-rustfix.el
-    rustic-rustfmt.el -> rustic-rustfmt.el
-    rustic.el -> rustic.el
-Created rustic-20210609.1900.tar containing:
-  rustic-20210609.1900/
-  rustic-20210609.1900/rustic-babel.el
-  rustic-20210609.1900/rustic-cargo.el
-  rustic-20210609.1900/rustic-compile.el
-  rustic-20210609.1900/rustic-doc.el
-  rustic-20210609.1900/rustic-flycheck.el
-  rustic-20210609.1900/rustic-interaction.el
-  rustic-20210609.1900/rustic-lsp.el
-  rustic-20210609.1900/rustic-pkg.el
-  rustic-20210609.1900/rustic-playpen.el
-  rustic-20210609.1900/rustic-popup.el
-  rustic-20210609.1900/rustic-racer.el
-  rustic-20210609.1900/rustic-rustfix.el
-  rustic-20210609.1900/rustic-rustfmt.el
-  rustic-20210609.1900/rustic.el
-Built rustic in 3.725s, finished at Tue Jul  6 11:07:55 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  451 Jul  6 11:07 packages/rustic-20210609.1900.entry
-200K -rw-r--r-- 1 root root 200K Jul  6 11:07 packages/rustic-20210609.1900.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:07 packages/rustic-badge.svg
-4.0K -rw-r--r-- 1 root root  410 Jul  6 11:07 packages/rustic-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

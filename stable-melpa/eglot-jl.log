@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/non-Jedi/eglot-jl.git
 
 Updating /mnt/store/melpa/working/eglot-jl/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/eglot-jl/
-  to /tmp/eglot-jl82g3Yf/eglot-jl-20210415.1207
-    eglot-jl.el -> eglot-jl.el
-    eglot-jl.jl -> eglot-jl.jl
-    Manifest.toml -> Manifest.toml
-    Project.toml -> Project.toml
-Created eglot-jl-20210415.1207.tar containing:
-  eglot-jl-20210415.1207/
-  eglot-jl-20210415.1207/Manifest.toml
-  eglot-jl-20210415.1207/Project.toml
-  eglot-jl-20210415.1207/eglot-jl-pkg.el
-  eglot-jl-20210415.1207/eglot-jl.el
-  eglot-jl-20210415.1207/eglot-jl.jl
-Built eglot-jl in 3.612s, finished at Tue Jul  6 10:25:14 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  446 Jul  6 10:25 packages/eglot-jl-20210415.1207.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:25 packages/eglot-jl-20210415.1207.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:25 packages/eglot-jl-badge.svg
-4.0K -rw-r--r-- 1 root root  332 Jul  6 10:25 packages/eglot-jl-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

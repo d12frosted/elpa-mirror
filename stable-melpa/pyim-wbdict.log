@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/tumashu/pyim-wbdict.git
 
 Updating /mnt/store/melpa/working/pyim-wbdict/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pyim-wbdict/
-  to /tmp/pyim-wbdictBUCned/pyim-wbdict-20210504.1144
-    pyim-wbdict.el -> pyim-wbdict.el
-    pyim-wbdict-v86.pyim -> pyim-wbdict-v86.pyim
-    pyim-wbdict-v98-morphe.pyim -> pyim-wbdict-v98-morphe.pyim
-    pyim-wbdict-v98.pyim -> pyim-wbdict-v98.pyim
-Created pyim-wbdict-20210504.1144.tar containing:
-  pyim-wbdict-20210504.1144/
-  pyim-wbdict-20210504.1144/pyim-wbdict-pkg.el
-  pyim-wbdict-20210504.1144/pyim-wbdict-v86.pyim
-  pyim-wbdict-20210504.1144/pyim-wbdict-v98-morphe.pyim
-  pyim-wbdict-20210504.1144/pyim-wbdict-v98.pyim
-  pyim-wbdict-20210504.1144/pyim-wbdict.el
-Built pyim-wbdict in 3.974s, finished at Tue Jul  6 11:04:50 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  410 Jul  6 11:04 packages/pyim-wbdict-20210504.1144.entry
-4.5M -rw-r--r-- 1 root root 4.5M Jul  6 11:04 packages/pyim-wbdict-20210504.1144.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:04 packages/pyim-wbdict-badge.svg
-4.0K -rw-r--r-- 1 root root  958 Jul  6 11:04 packages/pyim-wbdict-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

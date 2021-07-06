@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/myTerminal/meta-presenter.git
 
 Updating /mnt/store/melpa/working/meta-presenter/
-Built meta-presenter in 4.099s, finished at Tue Jul  6 10:51:47 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.4K Jul  6 10:51 packages/meta-presenter-20190414.1720.el
-4.0K -rw-r--r-- 1 root root  400 Jul  6 10:51 packages/meta-presenter-20190414.1720.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:51 packages/meta-presenter-badge.svg
-4.0K -rw-r--r-- 1 root root  299 Jul  6 10:51 packages/meta-presenter-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

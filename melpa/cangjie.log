@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/kisaragi-hiu/cangjie.el.git
 
 Updating /mnt/store/melpa/working/cangjie/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cangjie/
-  to /tmp/cangjiePDVnSh/cangjie-20200808.828
-    cangjie-practice.el -> cangjie-practice.el
-    cangjie.el -> cangjie.el
-Created cangjie-20200808.828.tar containing:
-  cangjie-20200808.828/
-  cangjie-20200808.828/cangjie-pkg.el
-  cangjie-20200808.828/cangjie-practice.el
-  cangjie-20200808.828/cangjie.el
-Built cangjie in 9.054s, finished at Tue Jul  6 10:16:07 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  332 Jul  6 10:16 packages/cangjie-20200808.828.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:16 packages/cangjie-20200808.828.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:16 packages/cangjie-badge.svg
-4.0K -rw-r--r-- 1 root root   55 Jul  6 10:16 packages/cangjie-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

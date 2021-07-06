@@ -3,9 +3,10 @@ Fetcher: git
 Source:  https://git.sr.ht/~tarsius/notmuch-maildir
 
 Updating /mnt/store/melpa/working/notmuch-maildir/
-Built notmuch-maildir in 4.043s, finished at Tue Jul  6 10:55:03 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Jul  6 10:55 packages/notmuch-maildir-20210615.1513.el
-4.0K -rw-r--r-- 1 root root  401 Jul  6 10:55 packages/notmuch-maildir-20210615.1513.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:55 packages/notmuch-maildir-badge.svg
-4.0K -rw-r--r-- 1 root root  133 Jul  6 10:55 packages/notmuch-maildir-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,53 +3,10 @@ Fetcher: github
 Source:  https://github.com/NicolasPetton/Indium.git
 
 Updating /mnt/store/melpa/working/indium/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/indium/
-  to /tmp/indiumBUexOS/indium-20210309.1210
-    indium-breakpoint.el -> indium-breakpoint.el
-    indium-chrome.el -> indium-chrome.el
-    indium-client.el -> indium-client.el
-    indium-debugger-litable.el -> indium-debugger-litable.el
-    indium-debugger-locals.el -> indium-debugger-locals.el
-    indium-debugger.el -> indium-debugger.el
-    indium-faces.el -> indium-faces.el
-    indium-inspector.el -> indium-inspector.el
-    indium-interaction.el -> indium-interaction.el
-    indium-list-sources.el -> indium-list-sources.el
-    indium-nodejs.el -> indium-nodejs.el
-    indium-render.el -> indium-render.el
-    indium-repl.el -> indium-repl.el
-    indium-scratch.el -> indium-scratch.el
-    indium-seq-fix.el -> indium-seq-fix.el
-    indium-structs.el -> indium-structs.el
-    indium.el -> indium.el
-  ! doc/Indium.texi -> Indium.texi
-Created /tmp/indiumBUexOS/indium-20210309.1210/Indium.info
-Created indium-20210309.1210.tar containing:
-  indium-20210309.1210/
-  indium-20210309.1210/Indium.info
-  indium-20210309.1210/dir
-  indium-20210309.1210/indium-breakpoint.el
-  indium-20210309.1210/indium-chrome.el
-  indium-20210309.1210/indium-client.el
-  indium-20210309.1210/indium-debugger-litable.el
-  indium-20210309.1210/indium-debugger-locals.el
-  indium-20210309.1210/indium-debugger.el
-  indium-20210309.1210/indium-faces.el
-  indium-20210309.1210/indium-inspector.el
-  indium-20210309.1210/indium-interaction.el
-  indium-20210309.1210/indium-list-sources.el
-  indium-20210309.1210/indium-nodejs.el
-  indium-20210309.1210/indium-pkg.el
-  indium-20210309.1210/indium-render.el
-  indium-20210309.1210/indium-repl.el
-  indium-20210309.1210/indium-scratch.el
-  indium-20210309.1210/indium-seq-fix.el
-  indium-20210309.1210/indium-structs.el
-  indium-20210309.1210/indium.el
-Built indium in 8.256s, finished at Tue Jul  6 10:43:31 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  507 Jul  6 10:43 packages/indium-20210309.1210.entry
-172K -rw-r--r-- 1 root root 170K Jul  6 10:43 packages/indium-20210309.1210.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:43 packages/indium-badge.svg
-4.0K -rw-r--r-- 1 root root  273 Jul  6 10:43 packages/indium-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

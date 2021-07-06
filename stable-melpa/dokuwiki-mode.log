@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/kai2nenobu/emacs-dokuwiki-mode.git
 
 Updating /mnt/store/melpa/working/dokuwiki-mode/
-Built dokuwiki-mode in 3.576s, finished at Tue Jul  6 10:23:48 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.0K Jul  6 10:23 packages/dokuwiki-mode-20170223.1301.el
-4.0K -rw-r--r-- 1 root root  380 Jul  6 10:23 packages/dokuwiki-mode-20170223.1301.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:23 packages/dokuwiki-mode-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul  6 10:23 packages/dokuwiki-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

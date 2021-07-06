@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/aborn/v2ex-mode.git
 
 Updating /mnt/store/melpa/working/v2ex-mode/
-Built v2ex-mode in 4.114s, finished at Tue Jul  6 11:16:43 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.8K Jul  6 11:16 packages/v2ex-mode-20160720.345.el
-4.0K -rw-r--r-- 1 root root  456 Jul  6 11:16 packages/v2ex-mode-20160720.345.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:16 packages/v2ex-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   64 Jul  6 11:16 packages/v2ex-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

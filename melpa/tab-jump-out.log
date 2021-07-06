@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/victorteokw/tab-jump-out.git
 
 Updating /mnt/store/melpa/working/tab-jump-out/
-Built tab-jump-out in 3.635s, finished at Tue Jul  6 11:13:46 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.5K Jul  6 11:13 packages/tab-jump-out-20151006.130.el
-4.0K -rw-r--r-- 1 root root  352 Jul  6 11:13 packages/tab-jump-out-20151006.130.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:13 packages/tab-jump-out-badge.svg
-4.0K -rw-r--r-- 1 root root  119 Jul  6 11:13 packages/tab-jump-out-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

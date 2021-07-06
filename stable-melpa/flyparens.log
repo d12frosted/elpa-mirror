@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/jiyoo/flyparens.git
 
 Updating /mnt/store/melpa/working/flyparens/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/flyparens/
-  to /tmp/flyparensFgK6hw/flyparens-20140723.1846
-    flyparens-config-example-1.el -> flyparens-config-example-1.el
-    flyparens.el -> flyparens.el
-Created flyparens-20140723.1846.tar containing:
-  flyparens-20140723.1846/
-  flyparens-20140723.1846/flyparens-config-example-1.el
-  flyparens-20140723.1846/flyparens-pkg.el
-  flyparens-20140723.1846/flyparens.el
-Built flyparens in 3.863s, finished at Tue Jul  6 10:34:00 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  305 Jul  6 10:34 packages/flyparens-20140723.1846.entry
- 12K -rw-r--r-- 1 root root  10K Jul  6 10:34 packages/flyparens-20140723.1846.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:34 packages/flyparens-badge.svg
-4.0K -rw-r--r-- 1 root root  402 Jul  6 10:34 packages/flyparens-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

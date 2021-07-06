@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/fourier/cff.git
 
 Updating /mnt/store/melpa/working/cff/
-Built cff in 4.002s, finished at Tue Jul  6 10:16:38 2021
- ✓ Success:
- 24K -rw-r--r-- 1 root root  22K Jul  6 10:16 packages/cff-20160118.2018.el
-4.0K -rw-r--r-- 1 root root  449 Jul  6 10:16 packages/cff-20160118.2018.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:16 packages/cff-badge.svg
-4.0K -rw-r--r-- 1 root root  563 Jul  6 10:16 packages/cff-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

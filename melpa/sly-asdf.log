@@ -3,25 +3,10 @@ Fetcher: github
 Source:  https://github.com/mmgeorge/sly-asdf.git
 
 Updating /mnt/store/melpa/working/sly-asdf/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sly-asdf/
-  to /tmp/sly-asdfAkjd2e/sly-asdf-20210407.600
-    sly-asdf-flymake-base.el -> sly-asdf-flymake-base.el
-    sly-asdf-flymake.el -> sly-asdf-flymake.el
-    sly-asdf.el -> sly-asdf.el
-    slynk-asdf.lisp -> slynk-asdf.lisp
-    slynk-asdf.asd -> slynk-asdf.asd
-Created sly-asdf-20210407.600.tar containing:
-  sly-asdf-20210407.600/
-  sly-asdf-20210407.600/sly-asdf-flymake-base.el
-  sly-asdf-20210407.600/sly-asdf-flymake.el
-  sly-asdf-20210407.600/sly-asdf-pkg.el
-  sly-asdf-20210407.600/sly-asdf.el
-  sly-asdf-20210407.600/slynk-asdf.asd
-  sly-asdf-20210407.600/slynk-asdf.lisp
-Built sly-asdf in 3.693s, finished at Tue Jul  6 11:10:07 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  372 Jul  6 11:10 packages/sly-asdf-20210407.600.entry
-120K -rw-r--r-- 1 root root 120K Jul  6 11:10 packages/sly-asdf-20210407.600.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:10 packages/sly-asdf-badge.svg
-4.0K -rw-r--r-- 1 root root  237 Jul  6 11:10 packages/sly-asdf-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

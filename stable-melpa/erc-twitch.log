@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/vibhavp/erc-twitch.git
 
 Updating /mnt/store/melpa/working/erc-twitch/
-Built erc-twitch in 3.807s, finished at Tue Jul  6 10:27:55 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.1K Jul  6 10:27 packages/erc-twitch-20170427.606.el
-4.0K -rw-r--r-- 1 root root  426 Jul  6 10:27 packages/erc-twitch-20170427.606.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:27 packages/erc-twitch-badge.svg
-4.0K -rw-r--r-- 1 root root   68 Jul  6 10:27 packages/erc-twitch-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

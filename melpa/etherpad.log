@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/zzkt/ethermacs.git
 
 Updating /mnt/store/melpa/working/etherpad/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/etherpad/
-  to /tmp/etherpadfRUTTH/etherpad-20210401.1213
-    etherpad.el -> etherpad.el
-    ethersync.el -> ethersync.el
-Created etherpad-20210401.1213.tar containing:
-  etherpad-20210401.1213/
-  etherpad-20210401.1213/etherpad-pkg.el
-  etherpad-20210401.1213/etherpad.el
-  etherpad-20210401.1213/ethersync.el
-Built etherpad in 3.707s, finished at Tue Jul  6 10:28:46 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  501 Jul  6 10:28 packages/etherpad-20210401.1213.entry
- 40K -rw-r--r-- 1 root root  40K Jul  6 10:28 packages/etherpad-20210401.1213.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:28 packages/etherpad-badge.svg
-4.0K -rw-r--r-- 1 root root  655 Jul  6 10:28 packages/etherpad-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

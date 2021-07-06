@@ -3,14 +3,10 @@ Fetcher: github
 Source:  https://github.com/cyrus-and/zoom.git
 
 Updating /mnt/store/melpa/working/zoom/
-Built zoom in 3.714s, finished at Tue Jul  6 11:21:08 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Jul  6 11:21 packages/zoom-20201215.1913.el
-4.0K -rw-r--r-- 1 root root  363 Jul  6 11:21 packages/zoom-20201215.1913.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:21 packages/zoom-badge.svg
-4.0K -rw-r--r-- 1 root root  306 Jul  6 11:21 packages/zoom-readme.txt
- 16K -rw-r--r-- 1 root root  14K Jul  6 08:20 packages/zoom-window-20201205.1038.el
-4.0K -rw-r--r-- 1 root root  352 Jul  6 08:20 packages/zoom-window-20201205.1038.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 08:20 packages/zoom-window-badge.svg
-4.0K -rw-r--r-- 1 root root  157 Jul  6 08:20 packages/zoom-window-readme.txt
-4.0K -rw-r--r-- 1 root root  144 Jul  6 11:21 packages/zoom-window.log
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

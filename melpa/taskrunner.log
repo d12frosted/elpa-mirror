@@ -3,35 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-taskrunner/emacs-taskrunner.git
 
 Updating /mnt/store/melpa/working/taskrunner/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/taskrunner/
-  to /tmp/taskrunnersQXlts/taskrunner-20190916.1608
-    taskrunner-clang.el -> taskrunner-clang.el
-    taskrunner-general.el -> taskrunner-general.el
-    taskrunner-java.el -> taskrunner-java.el
-    taskrunner-leiningen.el -> taskrunner-leiningen.el
-    taskrunner-mix.el -> taskrunner-mix.el
-    taskrunner-ruby.el -> taskrunner-ruby.el
-    taskrunner-shell.el -> taskrunner-shell.el
-    taskrunner-static-targets.el -> taskrunner-static-targets.el
-    taskrunner-web.el -> taskrunner-web.el
-    taskrunner.el -> taskrunner.el
-Created taskrunner-20190916.1608.tar containing:
-  taskrunner-20190916.1608/
-  taskrunner-20190916.1608/taskrunner-clang.el
-  taskrunner-20190916.1608/taskrunner-general.el
-  taskrunner-20190916.1608/taskrunner-java.el
-  taskrunner-20190916.1608/taskrunner-leiningen.el
-  taskrunner-20190916.1608/taskrunner-mix.el
-  taskrunner-20190916.1608/taskrunner-pkg.el
-  taskrunner-20190916.1608/taskrunner-ruby.el
-  taskrunner-20190916.1608/taskrunner-shell.el
-  taskrunner-20190916.1608/taskrunner-static-targets.el
-  taskrunner-20190916.1608/taskrunner-web.el
-  taskrunner-20190916.1608/taskrunner.el
-Built taskrunner in 3.300s, finished at Tue Jul  6 11:13:53 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  571 Jul  6 11:13 packages/taskrunner-20190916.1608.entry
-100K -rw-r--r-- 1 root root 100K Jul  6 11:13 packages/taskrunner-20190916.1608.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:13 packages/taskrunner-badge.svg
-4.0K -rw-r--r-- 1 root root 1.6K Jul  6 11:13 packages/taskrunner-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

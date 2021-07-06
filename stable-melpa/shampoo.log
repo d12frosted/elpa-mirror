@@ -3,54 +3,10 @@ Fetcher: github
 Source:  https://github.com/dmatveev/shampoo-emacs.git
 
 Updating /mnt/store/melpa/working/shampoo/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/shampoo/
-  to /tmp/shampooDzaZYd/shampoo-20131230.1019
-    shampoo-auth.el -> shampoo-auth.el
-    shampoo-compile.el -> shampoo-compile.el
-    shampoo-dialect.el -> shampoo-dialect.el
-    shampoo-dict.el -> shampoo-dict.el
-    shampoo-faces.el -> shampoo-faces.el
-    shampoo-fetcher.el -> shampoo-fetcher.el
-    shampoo-fileout.el -> shampoo-fileout.el
-    shampoo-layout.el -> shampoo-layout.el
-    shampoo-list-mode.el -> shampoo-list-mode.el
-    shampoo-modes.el -> shampoo-modes.el
-    shampoo-networking.el -> shampoo-networking.el
-    shampoo-regexp.el -> shampoo-regexp.el
-    shampoo-requests.el -> shampoo-requests.el
-    shampoo-response.el -> shampoo-response.el
-    shampoo-state-format.el -> shampoo-state-format.el
-    shampoo-state.el -> shampoo-state.el
-    shampoo-tools.el -> shampoo-tools.el
-    shampoo-utils.el -> shampoo-utils.el
-    shampoo-xml.el -> shampoo-xml.el
-    shampoo.el -> shampoo.el
-Created shampoo-20131230.1019.tar containing:
-  shampoo-20131230.1019/
-  shampoo-20131230.1019/shampoo-auth.el
-  shampoo-20131230.1019/shampoo-compile.el
-  shampoo-20131230.1019/shampoo-dialect.el
-  shampoo-20131230.1019/shampoo-dict.el
-  shampoo-20131230.1019/shampoo-faces.el
-  shampoo-20131230.1019/shampoo-fetcher.el
-  shampoo-20131230.1019/shampoo-fileout.el
-  shampoo-20131230.1019/shampoo-layout.el
-  shampoo-20131230.1019/shampoo-list-mode.el
-  shampoo-20131230.1019/shampoo-modes.el
-  shampoo-20131230.1019/shampoo-networking.el
-  shampoo-20131230.1019/shampoo-pkg.el
-  shampoo-20131230.1019/shampoo-regexp.el
-  shampoo-20131230.1019/shampoo-requests.el
-  shampoo-20131230.1019/shampoo-response.el
-  shampoo-20131230.1019/shampoo-state-format.el
-  shampoo-20131230.1019/shampoo-state.el
-  shampoo-20131230.1019/shampoo-tools.el
-  shampoo-20131230.1019/shampoo-utils.el
-  shampoo-20131230.1019/shampoo-xml.el
-  shampoo-20131230.1019/shampoo.el
-Built shampoo in 3.561s, finished at Tue Jul  6 11:09:08 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  141 Jul  6 11:09 packages/shampoo-20131230.1019.entry
-100K -rw-r--r-- 1 root root 100K Jul  6 11:09 packages/shampoo-20131230.1019.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:09 packages/shampoo-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

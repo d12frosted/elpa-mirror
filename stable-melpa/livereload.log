@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/joaotavora/emacs-livereload.git
 
 Updating /mnt/store/melpa/working/livereload/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/livereload/
-  to /tmp/livereloadZeCiii/livereload-20170629.650
-    livereload.el -> livereload.el
-    livereload.js -> livereload.js
-Created livereload-20170629.650.tar containing:
-  livereload-20170629.650/
-  livereload-20170629.650/livereload-pkg.el
-  livereload-20170629.650/livereload.el
-  livereload-20170629.650/livereload.js
-Built livereload in 4.269s, finished at Tue Jul  6 10:48:50 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  356 Jul  6 10:48 packages/livereload-20170629.650.entry
- 80K -rw-r--r-- 1 root root  80K Jul  6 10:48 packages/livereload-20170629.650.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:48 packages/livereload-badge.svg
-4.0K -rw-r--r-- 1 root root  112 Jul  6 10:48 packages/livereload-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

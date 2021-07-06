@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/chocoelho/flycheck-prospector.git
 
 Updating /mnt/store/melpa/working/flycheck-prospector/
-Built flycheck-prospector in 8.718s, finished at Tue Jul  6 10:32:44 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.2K Jul  6 10:32 packages/flycheck-prospector-20180524.450.el
-4.0K -rw-r--r-- 1 root root  395 Jul  6 10:32 packages/flycheck-prospector-20180524.450.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:32 packages/flycheck-prospector-badge.svg
-4.0K -rw-r--r-- 1 root root  412 Jul  6 10:32 packages/flycheck-prospector-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

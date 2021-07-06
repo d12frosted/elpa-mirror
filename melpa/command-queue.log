@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/Yuki-Inoue/command-queue.git
 
 Updating /mnt/store/melpa/working/command-queue/
-Built command-queue in 3.803s, finished at Tue Jul  6 10:18:15 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 4.0K Jul  6 10:18 packages/command-queue-20160328.1725.el
-4.0K -rw-r--r-- 1 root root  340 Jul  6 10:18 packages/command-queue-20160328.1725.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:18 packages/command-queue-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

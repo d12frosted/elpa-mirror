@@ -3,70 +3,10 @@ Fetcher: github
 Source:  https://github.com/CestDiego/nand2tetris.el.git
 
 Updating /mnt/store/melpa/working/nand2tetris/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nand2tetris/
-  to /tmp/nand2tetrisNNxsiG/nand2tetris-20171201.1813
-    nand2tetris.el -> nand2tetris.el
-    nand2tetris-core.el -> nand2tetris-core.el
-    snippets => snippets
-Created nand2tetris-20171201.1813.tar containing:
-  nand2tetris-20171201.1813/
-  nand2tetris-20171201.1813/nand2tetris-core.el
-  nand2tetris-20171201.1813/nand2tetris-pkg.el
-  nand2tetris-20171201.1813/nand2tetris.el
-  nand2tetris-20171201.1813/snippets/
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/.yas-parents
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/ALU
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Adders/
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Adders/Add16
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Adders/FullAdder
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Adders/HalfAdder
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Adders/Inc16
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Aregister
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Bit
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/CPU
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/DFF
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/DMux/
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/DMux/DMux
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/DMux/DMux4Way
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/DMux/DMux8Way
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/DRegister
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Keyboard
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/And
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/And16
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Nand
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Not
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Not16
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Or
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Or16
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Or8Way
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Logical/Xor
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Memory
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Mux/
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Mux/Mux
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Mux/Mux16
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Mux/Mux4Way16
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Mux/Mux8Way16
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/PC
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/RAM/
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/RAM/RAM16K
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/RAM/RAM4K
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/RAM/RAM512
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/RAM/RAM64
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/RAM/RAM8
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/ROM32K
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Register
-  nand2tetris-20171201.1813/snippets/nand2tetris-mode/Screen
-Built nand2tetris in 4.189s, finished at Tue Jul  6 10:54:01 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  426 Jul  6 10:54 packages/nand2tetris-20171201.1813.entry
- 80K -rw-r--r-- 1 root root  80K Jul  6 10:54 packages/nand2tetris-20171201.1813.tar
- 16K -rw-r--r-- 1 root root  13K Jul  6 10:54 packages/nand2tetris-assembler-20171201.1813.el
-4.0K -rw-r--r-- 1 root root  435 Jul  6 10:54 packages/nand2tetris-assembler-20171201.1813.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:53 packages/nand2tetris-assembler-badge.svg
-4.0K -rw-r--r-- 1 root root  126 Jul  6 10:54 packages/nand2tetris-assembler-readme.txt
-4.0K -rw-r--r-- 1 root root  162 Jul  6 10:53 packages/nand2tetris-assembler.log
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:54 packages/nand2tetris-badge.svg
-4.0K -rw-r--r-- 1 root root  116 Jul  6 10:54 packages/nand2tetris-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

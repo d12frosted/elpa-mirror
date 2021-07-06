@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/vic/color-theme-buffer-local.git
 
 Updating /mnt/store/melpa/working/load-theme-buffer-local/
-Built load-theme-buffer-local in 3.783s, finished at Tue Jul  6 10:48:56 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.7K Jul  6 10:48 packages/load-theme-buffer-local-20120702.2036.el
-4.0K -rw-r--r-- 1 root root  384 Jul  6 10:48 packages/load-theme-buffer-local-20120702.2036.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:48 packages/load-theme-buffer-local-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

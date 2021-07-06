@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/Malabarba/speed-of-thought-clojure.git
 
 Updating /mnt/store/melpa/working/sotclojure/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sotclojure/
-  to /tmp/sotclojurecCjf5A/sotclojure-20170922.8
-    sotclojure-on.el -> sotclojure-on.el
-    sotclojure.el -> sotclojure.el
-Created sotclojure-20170922.8.tar containing:
-  sotclojure-20170922.8/
-  sotclojure-20170922.8/sotclojure-on.el
-  sotclojure-20170922.8/sotclojure-pkg.el
-  sotclojure-20170922.8/sotclojure.el
-Built sotclojure in 3.843s, finished at Tue Jul  6 11:11:12 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  544 Jul  6 11:11 packages/sotclojure-20170922.8.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 11:11 packages/sotclojure-20170922.8.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:11 packages/sotclojure-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Jul  6 11:11 packages/sotclojure-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

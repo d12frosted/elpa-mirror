@@ -3,36 +3,10 @@ Fetcher: github
 Source:  https://github.com/hlolli/csound-mode.git
 
 Updating /mnt/store/melpa/working/csound-mode/
-Note: csound-mode :files spec is equivalent to the default.
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/csound-mode/
-  to /tmp/csound-modeS4wJXw/csound-mode-20200518.1546
-    csound-eldoc.el -> csound-eldoc.el
-    csound-font-lock.el -> csound-font-lock.el
-    csound-indentation.el -> csound-indentation.el
-    csound-mode.el -> csound-mode.el
-    csound-opcodes.el -> csound-opcodes.el
-    csound-repl-interaction.el -> csound-repl-interaction.el
-    csound-repl.el -> csound-repl.el
-    csound-score.el -> csound-score.el
-    csound-skeleton.el -> csound-skeleton.el
-    csound-util.el -> csound-util.el
-Created csound-mode-20200518.1546.tar containing:
-  csound-mode-20200518.1546/
-  csound-mode-20200518.1546/csound-eldoc.el
-  csound-mode-20200518.1546/csound-font-lock.el
-  csound-mode-20200518.1546/csound-indentation.el
-  csound-mode-20200518.1546/csound-mode-pkg.el
-  csound-mode-20200518.1546/csound-mode.el
-  csound-mode-20200518.1546/csound-opcodes.el
-  csound-mode-20200518.1546/csound-repl-interaction.el
-  csound-mode-20200518.1546/csound-repl.el
-  csound-mode-20200518.1546/csound-score.el
-  csound-mode-20200518.1546/csound-skeleton.el
-  csound-mode-20200518.1546/csound-util.el
-Built csound-mode in 4.164s, finished at Tue Jul  6 10:20:33 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  486 Jul  6 10:20 packages/csound-mode-20200518.1546.entry
-332K -rw-r--r-- 1 root root 330K Jul  6 10:20 packages/csound-mode-20200518.1546.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:20 packages/csound-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  132 Jul  6 10:20 packages/csound-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

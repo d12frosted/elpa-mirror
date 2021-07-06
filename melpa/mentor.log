@@ -3,25 +3,10 @@ Fetcher: github
 Source:  https://github.com/skangas/mentor.git
 
 Updating /mnt/store/melpa/working/mentor/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/mentor/
-  to /tmp/mentorOfPgq7/mentor-20201121.1649
-    mentor-data.el -> mentor-data.el
-    mentor-files.el -> mentor-files.el
-    mentor-rpc.el -> mentor-rpc.el
-    mentor.el -> mentor.el
-    url-scgi.el -> url-scgi.el
-Created mentor-20201121.1649.tar containing:
-  mentor-20201121.1649/
-  mentor-20201121.1649/mentor-data.el
-  mentor-20201121.1649/mentor-files.el
-  mentor-20201121.1649/mentor-pkg.el
-  mentor-20201121.1649/mentor-rpc.el
-  mentor-20201121.1649/mentor.el
-  mentor-20201121.1649/url-scgi.el
-Built mentor in 3.656s, finished at Tue Jul  6 10:51:38 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  403 Jul  6 10:51 packages/mentor-20201121.1649.entry
-112K -rw-r--r-- 1 root root 110K Jul  6 10:51 packages/mentor-20201121.1649.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:51 packages/mentor-badge.svg
-4.0K -rw-r--r-- 1 root root  659 Jul  6 10:51 packages/mentor-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

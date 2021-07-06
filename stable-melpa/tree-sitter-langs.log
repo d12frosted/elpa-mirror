@@ -3,47 +3,10 @@ Fetcher: github
 Source:  https://github.com/ubolonton/tree-sitter-langs.git
 
 Updating /mnt/store/melpa/working/tree-sitter-langs/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/tree-sitter-langs/
-  to /tmp/tree-sitter-langsj8u9Sf/tree-sitter-langs-20210314.1704
-    tree-sitter-langs-build.el -> tree-sitter-langs-build.el
-    tree-sitter-langs.el -> tree-sitter-langs.el
-    queries => queries
-Created tree-sitter-langs-20210314.1704.tar containing:
-  tree-sitter-langs-20210314.1704/
-  tree-sitter-langs-20210314.1704/queries/
-  tree-sitter-langs-20210314.1704/queries/c/
-  tree-sitter-langs-20210314.1704/queries/c/highlights.scm
-  tree-sitter-langs-20210314.1704/queries/cpp/
-  tree-sitter-langs-20210314.1704/queries/cpp/highlights.scm
-  tree-sitter-langs-20210314.1704/queries/css/
-  tree-sitter-langs-20210314.1704/queries/css/highlights.scm
-  tree-sitter-langs-20210314.1704/queries/go/
-  tree-sitter-langs-20210314.1704/queries/go/highlights.scm
-  tree-sitter-langs-20210314.1704/queries/html/
-  tree-sitter-langs-20210314.1704/queries/html/highlights.scm
-  tree-sitter-langs-20210314.1704/queries/java/
-  tree-sitter-langs-20210314.1704/queries/java/highlights.scm
-  tree-sitter-langs-20210314.1704/queries/javascript/
-  tree-sitter-langs-20210314.1704/queries/javascript/highlights.scm
-  tree-sitter-langs-20210314.1704/queries/php/
-  tree-sitter-langs-20210314.1704/queries/php/highlights.scm
-  tree-sitter-langs-20210314.1704/queries/python/
-  tree-sitter-langs-20210314.1704/queries/python/highlights.scm
-  tree-sitter-langs-20210314.1704/queries/ruby/
-  tree-sitter-langs-20210314.1704/queries/ruby/highlights.scm
-  tree-sitter-langs-20210314.1704/queries/rust/
-  tree-sitter-langs-20210314.1704/queries/rust/highlights.scm
-  tree-sitter-langs-20210314.1704/queries/tsx/
-  tree-sitter-langs-20210314.1704/queries/tsx/highlights.scm
-  tree-sitter-langs-20210314.1704/queries/typescript/
-  tree-sitter-langs-20210314.1704/queries/typescript/highlights.scm
-  tree-sitter-langs-20210314.1704/tree-sitter-langs-build.el
-  tree-sitter-langs-20210314.1704/tree-sitter-langs-pkg.el
-  tree-sitter-langs-20210314.1704/tree-sitter-langs.el
-Built tree-sitter-langs in 4.446s, finished at Tue Jul  6 11:15:31 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  489 Jul  6 11:15 packages/tree-sitter-langs-20210314.1704.entry
- 80K -rw-r--r-- 1 root root  80K Jul  6 11:15 packages/tree-sitter-langs-20210314.1704.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:15 packages/tree-sitter-langs-badge.svg
-4.0K -rw-r--r-- 1 root root  786 Jul  6 11:15 packages/tree-sitter-langs-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,21 +3,10 @@ Fetcher: github
 Source:  https://github.com/fgeller/fingers.el.git
 
 Updating /mnt/store/melpa/working/fingers/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/fingers/
-  to /tmp/fingersPMKpE6/fingers-20160817.829
-    fingers-neo.el -> fingers-neo.el
-    fingers-qwerty.el -> fingers-qwerty.el
-    fingers.el -> fingers.el
-Created fingers-20160817.829.tar containing:
-  fingers-20160817.829/
-  fingers-20160817.829/fingers-neo.el
-  fingers-20160817.829/fingers-pkg.el
-  fingers-20160817.829/fingers-qwerty.el
-  fingers-20160817.829/fingers.el
-Built fingers in 3.886s, finished at Tue Jul  6 10:30:58 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  380 Jul  6 10:30 packages/fingers-20160817.829.entry
- 40K -rw-r--r-- 1 root root  40K Jul  6 10:30 packages/fingers-20160817.829.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:30 packages/fingers-badge.svg
-4.0K -rw-r--r-- 1 root root  400 Jul  6 10:30 packages/fingers-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,27 +3,10 @@ Fetcher: github
 Source:  https://github.com/Malabarba/paradox.git
 
 Updating /mnt/store/melpa/working/paradox/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/paradox/
-  to /tmp/paradoxByA9pN/paradox-20191011.1111
-    paradox-commit-list.el -> paradox-commit-list.el
-    paradox-core.el -> paradox-core.el
-    paradox-execute.el -> paradox-execute.el
-    paradox-github.el -> paradox-github.el
-    paradox-menu.el -> paradox-menu.el
-    paradox.el -> paradox.el
-Created paradox-20191011.1111.tar containing:
-  paradox-20191011.1111/
-  paradox-20191011.1111/paradox-commit-list.el
-  paradox-20191011.1111/paradox-core.el
-  paradox-20191011.1111/paradox-execute.el
-  paradox-20191011.1111/paradox-github.el
-  paradox-20191011.1111/paradox-menu.el
-  paradox-20191011.1111/paradox-pkg.el
-  paradox-20191011.1111/paradox.el
-Built paradox in 3.856s, finished at Tue Jul  6 11:00:34 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  536 Jul  6 11:00 packages/paradox-20191011.1111.entry
-100K -rw-r--r-- 1 root root 100K Jul  6 11:00 packages/paradox-20191011.1111.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:00 packages/paradox-badge.svg
-4.0K -rw-r--r-- 1 root root 2.9K Jul  6 11:00 packages/paradox-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

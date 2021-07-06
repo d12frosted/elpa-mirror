@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/plandes/cframe.git
 
 Updating /mnt/store/melpa/working/cframe/
-Built cframe in 4.111s, finished at Tue Jul  6 10:16:40 2021
- ✓ Success:
- 16K -rw-r--r-- 1 root root  14K Jul  6 10:16 packages/cframe-20201222.1930.el
-4.0K -rw-r--r-- 1 root root  364 Jul  6 10:16 packages/cframe-20201222.1930.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:16 packages/cframe-badge.svg
-4.0K -rw-r--r-- 1 root root  979 Jul  6 10:16 packages/cframe-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

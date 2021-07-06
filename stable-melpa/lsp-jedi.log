@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/fredcamps/lsp-jedi.git
 
 Updating /mnt/store/melpa/working/lsp-jedi/
-Built lsp-jedi in 4.162s, finished at Tue Jul  6 10:49:28 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.5K Jul  6 10:49 packages/lsp-jedi-20210602.1925.el
-4.0K -rw-r--r-- 1 root root  432 Jul  6 10:49 packages/lsp-jedi-20210602.1925.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:49 packages/lsp-jedi-badge.svg
-4.0K -rw-r--r-- 1 root root   79 Jul  6 10:49 packages/lsp-jedi-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

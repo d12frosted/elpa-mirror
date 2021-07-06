@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/kenoss/debug-print.git
 
 Updating /mnt/store/melpa/working/debug-print/
-Built debug-print in 5.928s, finished at Tue Jul  6 10:21:56 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  11K Jul  6 10:21 packages/debug-print-20140126.19.el
-4.0K -rw-r--r-- 1 root root  429 Jul  6 10:21 packages/debug-print-20140126.19.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:21 packages/debug-print-badge.svg
-4.0K -rw-r--r-- 1 root root 2.1K Jul  6 10:21 packages/debug-print-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

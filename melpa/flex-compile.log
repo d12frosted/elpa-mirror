@@ -3,49 +3,10 @@ Fetcher: github
 Source:  https://github.com/plandes/flex-compile.git
 
 Updating /mnt/store/melpa/working/flex-compile/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/flex-compile/
-  to /tmp/flex-compileLYaI5Y/flex-compile-20201218.1549
-    flex-compile-base.el -> flex-compile-base.el
-    flex-compile-choice-program.el -> flex-compile-choice-program.el
-    flex-compile-clojure.el -> flex-compile-clojure.el
-    flex-compile-comint.el -> flex-compile-comint.el
-    flex-compile-command.el -> flex-compile-command.el
-    flex-compile-config.el -> flex-compile-config.el
-    flex-compile-ess.el -> flex-compile-ess.el
-    flex-compile-make.el -> flex-compile-make.el
-    flex-compile-manage.el -> flex-compile-manage.el
-    flex-compile-org-export.el -> flex-compile-org-export.el
-    flex-compile-python.el -> flex-compile-python.el
-    flex-compile-repl.el -> flex-compile-repl.el
-    flex-compile-script.el -> flex-compile-script.el
-    flex-compile-single-buffer.el -> flex-compile-single-buffer.el
-    flex-compile-xml-validate.el -> flex-compile-xml-validate.el
-    flex-compile.el -> flex-compile.el
-    flex-compiler.el -> flex-compiler.el
-Created flex-compile-20201218.1549.tar containing:
-  flex-compile-20201218.1549/
-  flex-compile-20201218.1549/flex-compile-base.el
-  flex-compile-20201218.1549/flex-compile-choice-program.el
-  flex-compile-20201218.1549/flex-compile-clojure.el
-  flex-compile-20201218.1549/flex-compile-comint.el
-  flex-compile-20201218.1549/flex-compile-command.el
-  flex-compile-20201218.1549/flex-compile-config.el
-  flex-compile-20201218.1549/flex-compile-ess.el
-  flex-compile-20201218.1549/flex-compile-make.el
-  flex-compile-20201218.1549/flex-compile-manage.el
-  flex-compile-20201218.1549/flex-compile-org-export.el
-  flex-compile-20201218.1549/flex-compile-pkg.el
-  flex-compile-20201218.1549/flex-compile-python.el
-  flex-compile-20201218.1549/flex-compile-repl.el
-  flex-compile-20201218.1549/flex-compile-script.el
-  flex-compile-20201218.1549/flex-compile-single-buffer.el
-  flex-compile-20201218.1549/flex-compile-xml-validate.el
-  flex-compile-20201218.1549/flex-compile.el
-  flex-compile-20201218.1549/flex-compiler.el
-Built flex-compile in 4.070s, finished at Tue Jul  6 10:31:20 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  415 Jul  6 10:31 packages/flex-compile-20201218.1549.entry
-120K -rw-r--r-- 1 root root 120K Jul  6 10:31 packages/flex-compile-20201218.1549.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:31 packages/flex-compile-badge.svg
-4.0K -rw-r--r-- 1 root root  418 Jul  6 10:31 packages/flex-compile-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

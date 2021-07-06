@@ -3,18 +3,10 @@ Fetcher: github
 Source:  https://github.com/ardumont/markdown-toc.git
 
 Updating /mnt/store/melpa/working/markdown-toc/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/markdown-toc/
-  to /tmp/markdown-tocLhJjZJ/markdown-toc-20210629.931
-    markdown-toc-pkg.el -> markdown-toc-pkg.el
-    markdown-toc.el -> markdown-toc.el
-Created markdown-toc-20210629.931.tar containing:
-  markdown-toc-20210629.931/
-  markdown-toc-20210629.931/markdown-toc-pkg.el
-  markdown-toc-20210629.931/markdown-toc.el
-Built markdown-toc in 3.619s, finished at Tue Jul  6 10:51:11 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  436 Jul  6 10:51 packages/markdown-toc-20210629.931.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:51 packages/markdown-toc-20210629.931.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:51 packages/markdown-toc-badge.svg
-4.0K -rw-r--r-- 1 root root  904 Jul  6 10:51 packages/markdown-toc-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

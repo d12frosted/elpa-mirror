@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/wamei/elscreen-multi-term.git
 
 Updating /mnt/store/melpa/working/elscreen-multi-term/
-Built elscreen-multi-term in 5.872s, finished at Tue Jul  6 10:26:32 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.6K Jul  6 10:26 packages/elscreen-multi-term-20200417.821.el
-4.0K -rw-r--r-- 1 root root  401 Jul  6 10:26 packages/elscreen-multi-term-20200417.821.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:26 packages/elscreen-multi-term-badge.svg
-4.0K -rw-r--r-- 1 root root  588 Jul  6 10:26 packages/elscreen-multi-term-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/sanel/monroe.git
 
 Updating /mnt/store/melpa/working/monroe/
-Built monroe in 3.973s, finished at Tue Jul  6 10:52:51 2021
- ✓ Success:
- 28K -rw-r--r-- 1 root root  25K Jul  6 10:52 packages/monroe-20201013.1754.el
-4.0K -rw-r--r-- 1 root root  341 Jul  6 10:52 packages/monroe-20201013.1754.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:52 packages/monroe-badge.svg
-4.0K -rw-r--r-- 1 root root  151 Jul  6 10:52 packages/monroe-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

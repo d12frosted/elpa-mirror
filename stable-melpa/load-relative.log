@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/rocky/emacs-load-relative.git
 
 Updating /mnt/store/melpa/working/load-relative/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/load-relative/
-  to /tmp/load-relativeZnz5PO/load-relative-20201130.2202
-    el-get-install.el -> el-get-install.el
-    load-relative.el -> load-relative.el
-Created load-relative-20201130.2202.tar containing:
-  load-relative-20201130.2202/
-  load-relative-20201130.2202/el-get-install.el
-  load-relative-20201130.2202/load-relative-pkg.el
-  load-relative-20201130.2202/load-relative.el
-Built load-relative in 3.604s, finished at Tue Jul  6 10:48:55 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  364 Jul  6 10:48 packages/load-relative-20201130.2202.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:48 packages/load-relative-20201130.2202.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:48 packages/load-relative-badge.svg
-4.0K -rw-r--r-- 1 root root 2.8K Jul  6 10:48 packages/load-relative-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

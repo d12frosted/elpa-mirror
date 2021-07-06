@@ -3,38 +3,10 @@ Fetcher: github
 Source:  https://github.com/seanirby/evalator.git
 
 Updating /mnt/store/melpa/working/evalator/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/evalator/
-  to /tmp/evalatorOSzo7c/evalator-20160213.128
-    evalator-config.el -> evalator-config.el
-    evalator-context.el -> evalator-context.el
-    evalator-elisp.el -> evalator-elisp.el
-    evalator-faces.el -> evalator-faces.el
-    evalator-history.el -> evalator-history.el
-    evalator-key-map.el -> evalator-key-map.el
-    evalator-state.el -> evalator-state.el
-    evalator-utils.el -> evalator-utils.el
-    evalator.el -> evalator.el
-Created evalator-20160213.128.tar containing:
-  evalator-20160213.128/
-  evalator-20160213.128/evalator-config.el
-  evalator-20160213.128/evalator-context.el
-  evalator-20160213.128/evalator-elisp.el
-  evalator-20160213.128/evalator-faces.el
-  evalator-20160213.128/evalator-history.el
-  evalator-20160213.128/evalator-key-map.el
-  evalator-20160213.128/evalator-pkg.el
-  evalator-20160213.128/evalator-state.el
-  evalator-20160213.128/evalator-utils.el
-  evalator-20160213.128/evalator.el
-Built evalator in 3.592s, finished at Tue Jul  6 10:28:51 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  386 Jul  6 10:28 packages/evalator-20160213.128.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 10:28 packages/evalator-20160213.128.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:28 packages/evalator-badge.svg
-4.0K -rw-r--r-- 1 root root  446 Jul  6 10:28 packages/evalator-clojure-20160208.2148.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:28 packages/evalator-clojure-20160208.2148.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:27 packages/evalator-clojure-badge.svg
-4.0K -rw-r--r-- 1 root root  535 Jul  6 10:28 packages/evalator-clojure-readme.txt
-4.0K -rw-r--r-- 1 root root  656 Jul  6 10:28 packages/evalator-clojure.log
-   0 -rw-r--r-- 1 root root    0 Jul  6 10:28 packages/evalator-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

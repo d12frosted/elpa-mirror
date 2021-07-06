@@ -3,31 +3,10 @@ Fetcher: github
 Source:  https://github.com/MaskRay/emacs-ccls.git
 
 Updating /mnt/store/melpa/working/ccls/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ccls/
-  to /tmp/ccls4xfoe1/ccls-20200820.308
-    ccls-call-hierarchy.el -> ccls-call-hierarchy.el
-    ccls-code-lens.el -> ccls-code-lens.el
-    ccls-common.el -> ccls-common.el
-    ccls-inheritance-hierarchy.el -> ccls-inheritance-hierarchy.el
-    ccls-member-hierarchy.el -> ccls-member-hierarchy.el
-    ccls-semantic-highlight.el -> ccls-semantic-highlight.el
-    ccls-tree.el -> ccls-tree.el
-    ccls.el -> ccls.el
-Created ccls-20200820.308.tar containing:
-  ccls-20200820.308/
-  ccls-20200820.308/ccls-call-hierarchy.el
-  ccls-20200820.308/ccls-code-lens.el
-  ccls-20200820.308/ccls-common.el
-  ccls-20200820.308/ccls-inheritance-hierarchy.el
-  ccls-20200820.308/ccls-member-hierarchy.el
-  ccls-20200820.308/ccls-pkg.el
-  ccls-20200820.308/ccls-semantic-highlight.el
-  ccls-20200820.308/ccls-tree.el
-  ccls-20200820.308/ccls.el
-Built ccls in 3.929s, finished at Tue Jul  6 10:16:25 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  379 Jul  6 10:16 packages/ccls-20200820.308.entry
- 72K -rw-r--r-- 1 root root  70K Jul  6 10:16 packages/ccls-20200820.308.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:16 packages/ccls-badge.svg
-4.0K -rw-r--r-- 1 root root  122 Jul  6 10:16 packages/ccls-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

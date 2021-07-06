@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-docker.git
 
 Updating /mnt/store/melpa/working/lsp-docker/
-Built lsp-docker in 4.498s, finished at Tue Jul  6 10:49:21 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  11K Jul  6 10:49 packages/lsp-docker-20210529.621.el
-4.0K -rw-r--r-- 1 root root  465 Jul  6 10:49 packages/lsp-docker-20210529.621.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:49 packages/lsp-docker-badge.svg
-4.0K -rw-r--r-- 1 root root   35 Jul  6 10:49 packages/lsp-docker-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

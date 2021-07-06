@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacsmirror/dsvn.git
 
 Updating /mnt/store/melpa/working/dsvn/
-Built dsvn in 4.419s, finished at Tue Jul  6 10:24:08 2021
- ✓ Success:
- 80K -rw-r--r-- 1 root root  79K Jul  6 10:24 packages/dsvn-20190316.2201.el
-4.0K -rw-r--r-- 1 root root  323 Jul  6 10:24 packages/dsvn-20190316.2201.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:24 packages/dsvn-badge.svg
-4.0K -rw-r--r-- 1 root root 2.7K Jul  6 10:24 packages/dsvn-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

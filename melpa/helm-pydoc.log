@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/helm-pydoc.git
 
 Updating /mnt/store/melpa/working/helm-pydoc/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/helm-pydoc/
-  to /tmp/helm-pydocFbtNN2/helm-pydoc-20160918.542
-    helm-pydoc.el -> helm-pydoc.el
-    helm-pydoc.py -> helm-pydoc.py
-Created helm-pydoc-20160918.542.tar containing:
-  helm-pydoc-20160918.542/
-  helm-pydoc-20160918.542/helm-pydoc-pkg.el
-  helm-pydoc-20160918.542/helm-pydoc.el
-  helm-pydoc-20160918.542/helm-pydoc.py
-Built helm-pydoc in 3.542s, finished at Tue Jul  6 10:40:31 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  388 Jul  6 10:40 packages/helm-pydoc-20160918.542.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:40 packages/helm-pydoc-20160918.542.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:40 packages/helm-pydoc-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul  6 10:40 packages/helm-pydoc-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

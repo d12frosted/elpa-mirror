@@ -3,26 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/gvol/emacs-achievements.git
 
 Updating /mnt/store/melpa/working/achievements/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/achievements/
-  to /tmp/achievementsHbe8jk/achievements-20150531.1317
-    achievements-functions.el -> achievements-functions.el
-    achievements-pkg.el -> achievements-pkg.el
-    achievements.el -> achievements.el
-    advanced-achievements.el -> advanced-achievements.el
-    basic-achievements.el -> basic-achievements.el
-    ideas-achievements.el -> ideas-achievements.el
-Created achievements-20150531.1317.tar containing:
-  achievements-20150531.1317/
-  achievements-20150531.1317/achievements-functions.el
-  achievements-20150531.1317/achievements-pkg.el
-  achievements-20150531.1317/achievements.el
-  achievements-20150531.1317/advanced-achievements.el
-  achievements-20150531.1317/basic-achievements.el
-  achievements-20150531.1317/ideas-achievements.el
-Built achievements in 3.601s, finished at Tue Jul  6 10:10:59 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  318 Jul  6 10:10 packages/achievements-20150531.1317.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 10:10 packages/achievements-20150531.1317.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:10 packages/achievements-badge.svg
-4.0K -rw-r--r-- 1 root root  205 Jul  6 10:10 packages/achievements-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/atgreen/paperless.git
 
 Updating /mnt/store/melpa/working/paperless/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/paperless/
-  to /tmp/paperlessUGEEEG/paperless-20201130.1241
-    org-paperless.el -> org-paperless.el
-    paperless.el -> paperless.el
-Created paperless-20201130.1241.tar containing:
-  paperless-20201130.1241/
-  paperless-20201130.1241/org-paperless.el
-  paperless-20201130.1241/paperless-pkg.el
-  paperless-20201130.1241/paperless.el
-Built paperless in 3.612s, finished at Tue Jul  6 11:00:33 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  490 Jul  6 11:00 packages/paperless-20201130.1241.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 11:00 packages/paperless-20201130.1241.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:00 packages/paperless-badge.svg
-4.0K -rw-r--r-- 1 root root   45 Jul  6 11:00 packages/paperless-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

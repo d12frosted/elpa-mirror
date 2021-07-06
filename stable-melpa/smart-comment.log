@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/paldepind/smart-comment.git
 
 Updating /mnt/store/melpa/working/smart-comment/
-Built smart-comment in 5.357s, finished at Tue Jul  6 11:10:15 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.1K Jul  6 11:10 packages/smart-comment-20160322.1839.el
-4.0K -rw-r--r-- 1 root root  278 Jul  6 11:10 packages/smart-comment-20160322.1839.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:10 packages/smart-comment-badge.svg
-4.0K -rw-r--r-- 1 root root  710 Jul  6 11:10 packages/smart-comment-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

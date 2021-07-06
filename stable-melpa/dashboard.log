@@ -3,41 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-dashboard/emacs-dashboard.git
 
 Updating /mnt/store/melpa/working/dashboard/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/dashboard/
-  to /tmp/dashboardYmGiSi/dashboard-20210427.705
-    dashboard-widgets.el -> dashboard-widgets.el
-    dashboard.el -> dashboard.el
-    banners => banners
-Created dashboard-20210427.705.tar containing:
-  dashboard-20210427.705/
-  dashboard-20210427.705/banners/
-  dashboard-20210427.705/banners/1.txt
-  dashboard-20210427.705/banners/2.txt
-  dashboard-20210427.705/banners/3.txt
-  dashboard-20210427.705/banners/emacs.png
-  dashboard-20210427.705/banners/logo.png
-  dashboard-20210427.705/dashboard-pkg.el
-  dashboard-20210427.705/dashboard-widgets.el
-  dashboard-20210427.705/dashboard.el
-Built dashboard in 7.020s, finished at Tue Jul  6 10:21:23 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  425 Jul  6 10:21 packages/dashboard-20210427.705.entry
-140K -rw-r--r-- 1 root root 140K Jul  6 10:21 packages/dashboard-20210427.705.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:21 packages/dashboard-badge.svg
-4.0K -rw-r--r-- 1 root root 3.8K Jul  6 10:21 packages/dashboard-hackernews-20190109.205.el
-4.0K -rw-r--r-- 1 root root  432 Jul  6 10:21 packages/dashboard-hackernews-20190109.205.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:19 packages/dashboard-hackernews-badge.svg
-4.0K -rw-r--r-- 1 root root   34 Jul  6 10:21 packages/dashboard-hackernews-readme.txt
-4.0K -rw-r--r-- 1 root root  168 Jul  6 10:21 packages/dashboard-hackernews.log
-4.0K -rw-r--r-- 1 root root 3.4K Jul  6 07:19 packages/dashboard-ls-20210108.1857.el
-4.0K -rw-r--r-- 1 root root  452 Jul  6 07:19 packages/dashboard-ls-20210108.1857.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:19 packages/dashboard-ls-badge.svg
-4.0K -rw-r--r-- 1 root root   62 Jul  6 07:19 packages/dashboard-ls-readme.txt
-4.0K -rw-r--r-- 1 root root  148 Jul  6 10:21 packages/dashboard-ls.log
-4.0K -rw-r--r-- 1 root root 3.9K Jul  6 07:19 packages/dashboard-project-status-20190202.1354.el
-4.0K -rw-r--r-- 1 root root  483 Jul  6 07:19 packages/dashboard-project-status-20190202.1354.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:19 packages/dashboard-project-status-badge.svg
-4.0K -rw-r--r-- 1 root root   96 Jul  6 07:19 packages/dashboard-project-status-readme.txt
-4.0K -rw-r--r-- 1 root root  191 Jul  6 10:21 packages/dashboard-project-status.log
-4.0K -rw-r--r-- 1 root root  118 Jul  6 10:21 packages/dashboard-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

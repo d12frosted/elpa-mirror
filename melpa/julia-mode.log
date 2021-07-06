@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/JuliaEditorSupport/julia-emacs.git
 
 Updating /mnt/store/melpa/working/julia-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/julia-mode/
-  to /tmp/julia-modeQ7Smlb/julia-mode-20210323.612
-    julia-mode-latexsubs.el -> julia-mode-latexsubs.el
-    julia-mode.el -> julia-mode.el
-Created julia-mode-20210323.612.tar containing:
-  julia-mode-20210323.612/
-  julia-mode-20210323.612/julia-mode-latexsubs.el
-  julia-mode-20210323.612/julia-mode-pkg.el
-  julia-mode-20210323.612/julia-mode.el
-Built julia-mode in 3.865s, finished at Tue Jul  6 10:46:09 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  283 Jul  6 10:46 packages/julia-mode-20210323.612.entry
-172K -rw-r--r-- 1 root root 170K Jul  6 10:46 packages/julia-mode-20210323.612.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:46 packages/julia-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   60 Jul  6 10:46 packages/julia-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

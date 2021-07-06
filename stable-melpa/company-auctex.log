@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/alexeyr/company-auctex.git
 
 Updating /mnt/store/melpa/working/company-auctex/
-Built company-auctex in 3.853s, finished at Tue Jul  6 10:18:25 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Jul  6 10:18 packages/company-auctex-20200529.1835.el
-4.0K -rw-r--r-- 1 root root  508 Jul  6 10:18 packages/company-auctex-20200529.1835.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:18 packages/company-auctex-badge.svg
-4.0K -rw-r--r-- 1 root root  102 Jul  6 10:18 packages/company-auctex-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

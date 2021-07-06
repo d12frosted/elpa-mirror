@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/drothlis/pretty-symbols.git
 
 Updating /mnt/store/melpa/working/pretty-symbols/
-Built pretty-symbols in 6.132s, finished at Tue Jul  6 11:03:37 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.5K Jul  6 11:03 packages/pretty-symbols-20140814.959.el
-4.0K -rw-r--r-- 1 root root  356 Jul  6 11:03 packages/pretty-symbols-20140814.959.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:03 packages/pretty-symbols-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:03 packages/pretty-symbols-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

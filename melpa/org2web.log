@@ -3,79 +3,10 @@ Fetcher: github
 Source:  https://github.com/tumashu/org2web.git
 
 Updating /mnt/store/melpa/working/org2web/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org2web/
-  to /tmp/org2webONcMl8/org2web-20210203.324
-    org2web-config.el -> org2web-config.el
-    org2web-devtools.el -> org2web-devtools.el
-    org2web-el2org.el -> org2web-el2org.el
-    org2web-export.el -> org2web-export.el
-    org2web-pkg.el -> org2web-pkg.el
-    org2web-resource.el -> org2web-resource.el
-    org2web-template.el -> org2web-template.el
-    org2web-util.el -> org2web-util.el
-    org2web-vars.el -> org2web-vars.el
-    org2web-webserver.el -> org2web-webserver.el
-    org2web.el -> org2web.el
-    documents => documents
-    themes => themes
-    uploaders => uploaders
-Created org2web-20210203.324.tar containing:
-  org2web-20210203.324/
-  org2web-20210203.324/documents/
-  org2web-20210203.324/documents/tips.org
-  org2web-20210203.324/org2web-config.el
-  org2web-20210203.324/org2web-devtools.el
-  org2web-20210203.324/org2web-el2org.el
-  org2web-20210203.324/org2web-export.el
-  org2web-20210203.324/org2web-pkg.el
-  org2web-20210203.324/org2web-resource.el
-  org2web-20210203.324/org2web-template.el
-  org2web-20210203.324/org2web-util.el
-  org2web-20210203.324/org2web-vars.el
-  org2web-20210203.324/org2web-webserver.el
-  org2web-20210203.324/org2web.el
-  org2web-20210203.324/themes/
-  org2web-20210203.324/themes/default/
-  org2web-20210203.324/themes/default/resources/
-  org2web-20210203.324/themes/default/resources/css/
-  org2web-20210203.324/themes/default/resources/css/main.css
-  org2web-20210203.324/themes/default/resources/css/prettify.css
-  org2web-20210203.324/themes/default/resources/img/
-  org2web-20210203.324/themes/default/resources/img/search.png
-  org2web-20210203.324/themes/default/resources/js/
-  org2web-20210203.324/themes/default/resources/js/main.js
-  org2web-20210203.324/themes/default/templates/
-  org2web-20210203.324/themes/default/templates/about.mustache
-  org2web-20210203.324/themes/default/templates/category-index.mustache
-  org2web-20210203.324/themes/default/templates/container.mustache
-  org2web-20210203.324/themes/default/templates/footer.mustache
-  org2web-20210203.324/themes/default/templates/header.mustache
-  org2web-20210203.324/themes/default/templates/index.mustache
-  org2web-20210203.324/themes/default/templates/nav.mustache
-  org2web-20210203.324/themes/default/templates/post.mustache
-  org2web-20210203.324/themes/default/templates/summary-index.mustache
-  org2web-20210203.324/themes/default/templates/summary.mustache
-  org2web-20210203.324/themes/killjs/
-  org2web-20210203.324/themes/killjs/templates/
-  org2web-20210203.324/themes/killjs/templates/footer.mustache
-  org2web-20210203.324/themes/killjs/templates/header.mustache
-  org2web-20210203.324/themes/worg/
-  org2web-20210203.324/themes/worg/resources/
-  org2web-20210203.324/themes/worg/resources/css/
-  org2web-20210203.324/themes/worg/resources/css/main.css
-  org2web-20210203.324/themes/worg/resources/img/
-  org2web-20210203.324/themes/worg/resources/img/horse.jpg
-  org2web-20210203.324/themes/worg/templates/
-  org2web-20210203.324/themes/worg/templates/nav.mustache
-  org2web-20210203.324/uploaders/
-  org2web-20210203.324/uploaders/common/
-  org2web-20210203.324/uploaders/common/git-simple.mustache
-  org2web-20210203.324/uploaders/common/git.mustache
-  org2web-20210203.324/uploaders/common/rclone.mustache
-Built org2web in 3.908s, finished at Tue Jul  6 10:59:07 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  666 Jul  6 10:59 packages/org2web-20210203.324.entry
-232K -rw-r--r-- 1 root root 230K Jul  6 10:59 packages/org2web-20210203.324.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:59 packages/org2web-badge.svg
-8.0K -rw-r--r-- 1 root root 5.1K Jul  6 10:59 packages/org2web-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

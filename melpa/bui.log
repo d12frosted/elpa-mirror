@@ -3,31 +3,10 @@ Fetcher: github
 Source:  https://github.com/alezost/bui.el.git
 
 Updating /mnt/store/melpa/working/bui/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/bui/
-  to /tmp/bui0EEhKd/bui-20210108.1141
-    bui-button.el -> bui-button.el
-    bui-core.el -> bui-core.el
-    bui-entry.el -> bui-entry.el
-    bui-history.el -> bui-history.el
-    bui-info.el -> bui-info.el
-    bui-list.el -> bui-list.el
-    bui-utils.el -> bui-utils.el
-    bui.el -> bui.el
-Created bui-20210108.1141.tar containing:
-  bui-20210108.1141/
-  bui-20210108.1141/bui-button.el
-  bui-20210108.1141/bui-core.el
-  bui-20210108.1141/bui-entry.el
-  bui-20210108.1141/bui-history.el
-  bui-20210108.1141/bui-info.el
-  bui-20210108.1141/bui-list.el
-  bui-20210108.1141/bui-pkg.el
-  bui-20210108.1141/bui-utils.el
-  bui-20210108.1141/bui.el
-Built bui in 3.321s, finished at Tue Jul  6 10:15:20 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  368 Jul  6 10:15 packages/bui-20210108.1141.entry
-112K -rw-r--r-- 1 root root 110K Jul  6 10:15 packages/bui-20210108.1141.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:15 packages/bui-badge.svg
-4.0K -rw-r--r-- 1 root root  584 Jul  6 10:15 packages/bui-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

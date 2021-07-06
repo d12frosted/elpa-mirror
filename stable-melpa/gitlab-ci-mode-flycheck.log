@@ -3,9 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/joewreschnig/gitlab-ci-mode-flycheck.git
 
 Updating /mnt/store/melpa/working/gitlab-ci-mode-flycheck/
-Built gitlab-ci-mode-flycheck in 4.803s, finished at Tue Jul  6 10:36:16 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.0K Jul  6 10:36 packages/gitlab-ci-mode-flycheck-20190323.1829.el
-4.0K -rw-r--r-- 1 root root  455 Jul  6 10:36 packages/gitlab-ci-mode-flycheck-20190323.1829.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:36 packages/gitlab-ci-mode-flycheck-badge.svg
-4.0K -rw-r--r-- 1 root root  272 Jul  6 10:36 packages/gitlab-ci-mode-flycheck-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

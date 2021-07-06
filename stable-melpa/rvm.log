@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/senny/rvm.el.git
 
 Updating /mnt/store/melpa/working/rvm/
-Built rvm in 4.077s, finished at Tue Jul  6 11:07:57 2021
- ✓ Success:
- 20K -rw-r--r-- 1 root root  18K Jul  6 11:07 packages/rvm-20201222.17.el
-4.0K -rw-r--r-- 1 root root  332 Jul  6 11:07 packages/rvm-20201222.17.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:07 packages/rvm-badge.svg
-4.0K -rw-r--r-- 1 root root  257 Jul  6 11:07 packages/rvm-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/youngker/elogcat.el.git
 
 Updating /mnt/store/melpa/working/elogcat/
-Built elogcat in 4.130s, finished at Tue Jul  6 10:26:12 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  11K Jul  6 10:26 packages/elogcat-20151121.41.el
-4.0K -rw-r--r-- 1 root root  306 Jul  6 10:26 packages/elogcat-20151121.41.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:26 packages/elogcat-badge.svg
-4.0K -rw-r--r-- 1 root root   27 Jul  6 10:26 packages/elogcat-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

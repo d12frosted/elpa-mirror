@@ -3,20 +3,10 @@ Fetcher: github
 Source:  https://github.com/immerrr/lua-mode.git
 
 Updating /mnt/store/melpa/working/lua-mode/
-Note: lua-mode :files spec is equivalent to the default.
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lua-mode/
-  to /tmp/lua-modeArD97a/lua-mode-20210619.652
-    init-tryout.el -> init-tryout.el
-    lua-mode.el -> lua-mode.el
-Created lua-mode-20210619.652.tar containing:
-  lua-mode-20210619.652/
-  lua-mode-20210619.652/init-tryout.el
-  lua-mode-20210619.652/lua-mode-pkg.el
-  lua-mode-20210619.652/lua-mode.el
-Built lua-mode in 7.464s, finished at Tue Jul  6 10:49:51 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  913 Jul  6 10:49 packages/lua-mode-20210619.652.entry
-100K -rw-r--r-- 1 root root 100K Jul  6 10:49 packages/lua-mode-20210619.652.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:49 packages/lua-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 2.1K Jul  6 10:49 packages/lua-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

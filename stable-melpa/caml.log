@@ -3,39 +3,10 @@ Fetcher: github
 Source:  https://github.com/ocaml/caml-mode.git
 
 Updating /mnt/store/melpa/working/caml/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/caml/
-  to /tmp/caml6Z7ZMR/caml-20190413.1205
-    caml-compat.el -> caml-compat.el
-    caml-emacs.el -> caml-emacs.el
-    caml-font-old.el -> caml-font-old.el
-    caml-font.el -> caml-font.el
-    caml-help.el -> caml-help.el
-    caml-hilit.el -> caml-hilit.el
-    caml-mode-site-file.el -> caml-mode-site-file.el
-    caml-types.el -> caml-types.el
-    caml-xemacs.el -> caml-xemacs.el
-    caml.el -> caml.el
-    camldebug.el -> camldebug.el
-    inf-caml.el -> inf-caml.el
-Created caml-20190413.1205.tar containing:
-  caml-20190413.1205/
-  caml-20190413.1205/caml-compat.el
-  caml-20190413.1205/caml-emacs.el
-  caml-20190413.1205/caml-font-old.el
-  caml-20190413.1205/caml-font.el
-  caml-20190413.1205/caml-help.el
-  caml-20190413.1205/caml-hilit.el
-  caml-20190413.1205/caml-mode-site-file.el
-  caml-20190413.1205/caml-pkg.el
-  caml-20190413.1205/caml-types.el
-  caml-20190413.1205/caml-xemacs.el
-  caml-20190413.1205/caml.el
-  caml-20190413.1205/camldebug.el
-  caml-20190413.1205/inf-caml.el
-Built caml in 9.031s, finished at Tue Jul  6 10:16:05 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  386 Jul  6 10:16 packages/caml-20190413.1205.entry
-232K -rw-r--r-- 1 root root 230K Jul  6 10:16 packages/caml-20190413.1205.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:16 packages/caml-badge.svg
-4.0K -rw-r--r-- 1 root root  455 Jul  6 10:16 packages/caml-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

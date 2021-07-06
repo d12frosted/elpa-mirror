@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/vutran1710/Ayu-Theme-Emacs.git
 
 Updating /mnt/store/melpa/working/ayu-theme/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ayu-theme/
-  to /tmp/ayu-themeBR8vN3/ayu-theme-20200521.1157
-    ayu-dark-theme.el -> ayu-dark-theme.el
-    ayu-grey-theme.el -> ayu-grey-theme.el
-    ayu-light-theme.el -> ayu-light-theme.el
-    ayu-theme.el -> ayu-theme.el
-Created ayu-theme-20200521.1157.tar containing:
-  ayu-theme-20200521.1157/
-  ayu-theme-20200521.1157/ayu-dark-theme.el
-  ayu-theme-20200521.1157/ayu-grey-theme.el
-  ayu-theme-20200521.1157/ayu-light-theme.el
-  ayu-theme-20200521.1157/ayu-theme-pkg.el
-  ayu-theme-20200521.1157/ayu-theme.el
-Built ayu-theme in 3.444s, finished at Tue Jul  6 10:13:29 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  326 Jul  6 10:13 packages/ayu-theme-20200521.1157.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:13 packages/ayu-theme-20200521.1157.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:13 packages/ayu-theme-badge.svg
-4.0K -rw-r--r-- 1 root root   74 Jul  6 10:13 packages/ayu-theme-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

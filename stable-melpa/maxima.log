@@ -3,44 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sasanidas/maxima.git
 
 Updating /mnt/store/melpa/working/maxima/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/maxima/
-  to /tmp/maxima8hkSbQ/maxima-20210526.1525
-    maxima.el -> maxima.el
-    maxima-font-lock.el -> maxima-font-lock.el
-    keywords/constants -> keywords/constants
-    keywords/functions -> keywords/functions
-    keywords/global -> keywords/global
-    keywords/graphic -> keywords/graphic
-    keywords/object -> keywords/object
-    keywords/operators -> keywords/operators
-    keywords/options -> keywords/options
-    keywords/plot -> keywords/plot
-    keywords/properties -> keywords/properties
-    keywords/scene -> keywords/scene
-    keywords/special -> keywords/special
-    keywords/system_variables -> keywords/system_variables
-Created maxima-20210526.1525.tar containing:
-  maxima-20210526.1525/
-  maxima-20210526.1525/keywords/
-  maxima-20210526.1525/keywords/constants
-  maxima-20210526.1525/keywords/functions
-  maxima-20210526.1525/keywords/global
-  maxima-20210526.1525/keywords/graphic
-  maxima-20210526.1525/keywords/object
-  maxima-20210526.1525/keywords/operators
-  maxima-20210526.1525/keywords/options
-  maxima-20210526.1525/keywords/plot
-  maxima-20210526.1525/keywords/properties
-  maxima-20210526.1525/keywords/scene
-  maxima-20210526.1525/keywords/special
-  maxima-20210526.1525/keywords/system_variables
-  maxima-20210526.1525/maxima-font-lock.el
-  maxima-20210526.1525/maxima-pkg.el
-  maxima-20210526.1525/maxima.el
-Built maxima in 3.826s, finished at Tue Jul  6 10:51:26 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  416 Jul  6 10:51 packages/maxima-20210526.1525.entry
-192K -rw-r--r-- 1 root root 190K Jul  6 10:51 packages/maxima-20210526.1525.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:51 packages/maxima-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul  6 10:51 packages/maxima-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

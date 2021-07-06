@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/john2x/plan9-theme.el.git
 
 Updating /mnt/store/melpa/working/plan9-theme/
-Built plan9-theme in 3.891s, finished at Tue Jul  6 11:02:26 2021
- ✓ Success:
- 36K -rw-r--r-- 1 root root  36K Jul  6 11:02 packages/plan9-theme-20180804.1441.el
-4.0K -rw-r--r-- 1 root root  360 Jul  6 11:02 packages/plan9-theme-20180804.1441.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:02 packages/plan9-theme-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul  6 11:02 packages/plan9-theme-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

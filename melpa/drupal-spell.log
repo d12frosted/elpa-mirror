@@ -3,20 +3,10 @@ Fetcher: github
 Source:  https://github.com/arnested/drupal-spell.git
 
 Updating /mnt/store/melpa/working/drupal-spell/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/drupal-spell/
-  to /tmp/drupal-spellMYvVx6/drupal-spell-20130520.1655
-    drupal-spell.el -> drupal-spell.el
-    dict => dict
-Created drupal-spell-20130520.1655.tar containing:
-  drupal-spell-20130520.1655/
-  drupal-spell-20130520.1655/dict/
-  drupal-spell-20130520.1655/dict/drupal.txt
-  drupal-spell-20130520.1655/drupal-spell-pkg.el
-  drupal-spell-20130520.1655/drupal-spell.el
-Built drupal-spell in 4.029s, finished at Tue Jul  6 10:24:07 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  345 Jul  6 10:24 packages/drupal-spell-20130520.1655.entry
- 12K -rw-r--r-- 1 root root  10K Jul  6 10:24 packages/drupal-spell-20130520.1655.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:24 packages/drupal-spell-badge.svg
-4.0K -rw-r--r-- 1 root root   65 Jul  6 10:24 packages/drupal-spell-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

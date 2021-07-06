@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/mopemope/meghanada-emacs.git
 
 Updating /mnt/store/melpa/working/meghanada/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/meghanada/
-  to /tmp/meghanadarO1HkT/meghanada-20210505.652
-    company-meghanada.el -> company-meghanada.el
-    eldoc-meghanada.el -> eldoc-meghanada.el
-    flycheck-meghanada.el -> flycheck-meghanada.el
-    meghanada.el -> meghanada.el
-Created meghanada-20210505.652.tar containing:
-  meghanada-20210505.652/
-  meghanada-20210505.652/company-meghanada.el
-  meghanada-20210505.652/eldoc-meghanada.el
-  meghanada-20210505.652/flycheck-meghanada.el
-  meghanada-20210505.652/meghanada-pkg.el
-  meghanada-20210505.652/meghanada.el
-Built meghanada in 3.532s, finished at Tue Jul  6 10:51:33 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  507 Jul  6 10:51 packages/meghanada-20210505.652.entry
-112K -rw-r--r-- 1 root root 110K Jul  6 10:51 packages/meghanada-20210505.652.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:51 packages/meghanada-badge.svg
-4.0K -rw-r--r-- 1 root root  118 Jul  6 10:51 packages/meghanada-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

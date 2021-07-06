@@ -3,25 +3,10 @@ Fetcher: github
 Source:  https://github.com/CestDiego/c-c-combo.el.git
 
 Updating /mnt/store/melpa/working/c-c-combo/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/c-c-combo/
-  to /tmp/c-c-combo2YGvxo/c-c-combo-20151224.255
-    c-c-combo.el -> c-c-combo.el
-    fatality.wav -> fatality.wav
-    flawless_spree.wav -> flawless_spree.wav
-    stop_this_modafoca.wav -> stop_this_modafoca.wav
-    unstoppable.wav -> unstoppable.wav
-Created c-c-combo-20151224.255.tar containing:
-  c-c-combo-20151224.255/
-  c-c-combo-20151224.255/c-c-combo-pkg.el
-  c-c-combo-20151224.255/c-c-combo.el
-  c-c-combo-20151224.255/fatality.wav
-  c-c-combo-20151224.255/flawless_spree.wav
-  c-c-combo-20151224.255/stop_this_modafoca.wav
-  c-c-combo-20151224.255/unstoppable.wav
-Built c-c-combo in 3.910s, finished at Tue Jul  6 10:15:32 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  349 Jul  6 10:15 packages/c-c-combo-20151224.255.entry
-1.6M -rw-r--r-- 1 root root 1.6M Jul  6 10:15 packages/c-c-combo-20151224.255.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:15 packages/c-c-combo-badge.svg
-4.0K -rw-r--r-- 1 root root   61 Jul  6 10:15 packages/c-c-combo-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

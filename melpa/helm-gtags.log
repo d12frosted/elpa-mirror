@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/helm-gtags.git
 
 Updating /mnt/store/melpa/working/helm-gtags/
-Built helm-gtags in 3.934s, finished at Tue Jul  6 10:39:49 2021
- ✓ Success:
- 60K -rw-r--r-- 1 root root  58K Jul  6 10:39 packages/helm-gtags-20200602.1610.el
-4.0K -rw-r--r-- 1 root root  387 Jul  6 10:39 packages/helm-gtags-20200602.1610.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:39 packages/helm-gtags-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul  6 10:39 packages/helm-gtags-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

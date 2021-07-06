@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/unhammer/bbdb2erc.git
 
 Updating /mnt/store/melpa/working/bbdb2erc/
-Built bbdb2erc in 4.042s, finished at Tue Jul  6 10:13:55 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.3K Jul  6 10:13 packages/bbdb2erc-20190822.907.el
-4.0K -rw-r--r-- 1 root root  388 Jul  6 10:13 packages/bbdb2erc-20190822.907.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:13 packages/bbdb2erc-badge.svg
-4.0K -rw-r--r-- 1 root root  786 Jul  6 10:13 packages/bbdb2erc-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

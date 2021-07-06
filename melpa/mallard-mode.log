@@ -3,21 +3,10 @@ Fetcher: github
 Source:  https://github.com/jhradilek/emacs-mallard-mode.git
 
 Updating /mnt/store/melpa/working/mallard-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/mallard-mode/
-  to /tmp/mallard-modeTy4pMW/mallard-mode-20131204.425
-    mallard-mode.el -> mallard-mode.el
-    schema => schema
-Created mallard-mode-20131204.425.tar containing:
-  mallard-mode-20131204.425/
-  mallard-mode-20131204.425/mallard-mode-pkg.el
-  mallard-mode-20131204.425/mallard-mode.el
-  mallard-mode-20131204.425/schema/
-  mallard-mode-20131204.425/schema/mallard-1.0.rnc
-  mallard-mode-20131204.425/schema/schemas.xml
-Built mallard-mode in 3.587s, finished at Tue Jul  6 10:50:55 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  372 Jul  6 10:50 packages/mallard-mode-20131204.425.entry
- 40K -rw-r--r-- 1 root root  40K Jul  6 10:50 packages/mallard-mode-20131204.425.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:50 packages/mallard-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   40 Jul  6 10:50 packages/mallard-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

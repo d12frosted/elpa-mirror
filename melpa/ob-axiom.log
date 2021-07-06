@@ -3,9 +3,10 @@ Fetcher: git
 Source:  https://bitbucket.org/pdo/axiom-environment
 
 Updating /mnt/store/melpa/working/ob-axiom/
-Built ob-axiom in 8.234s, finished at Tue Jul  6 10:55:36 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.0K Jul  6 10:55 packages/ob-axiom-20190623.2052.el
-4.0K -rw-r--r-- 1 root root  348 Jul  6 10:55 packages/ob-axiom-20190623.2052.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:55 packages/ob-axiom-badge.svg
-4.0K -rw-r--r-- 1 root root 2.4K Jul  6 10:55 packages/ob-axiom-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

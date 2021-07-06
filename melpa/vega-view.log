@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/applied-science/emacs-vega-view.git
 
 Updating /mnt/store/melpa/working/vega-view/
-Built vega-view in 4.769s, finished at Tue Jul  6 11:17:03 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.2K Jul  6 11:17 packages/vega-view-20210401.1115.el
-4.0K -rw-r--r-- 1 root root  464 Jul  6 11:17 packages/vega-view-20210401.1115.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:17 packages/vega-view-badge.svg
-4.0K -rw-r--r-- 1 root root   72 Jul  6 11:17 packages/vega-view-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

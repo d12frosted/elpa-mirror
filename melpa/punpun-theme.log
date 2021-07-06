@@ -3,21 +3,10 @@ Fetcher: git
 Source:  https://depp.brause.cc/punpun-theme.git
 
 Updating /mnt/store/melpa/working/punpun-theme/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/punpun-theme/
-  to /tmp/punpun-themevwMIBh/punpun-theme-20210508.1635
-    punpun-common.el -> punpun-common.el
-    punpun-dark-theme.el -> punpun-dark-theme.el
-    punpun-light-theme.el -> punpun-light-theme.el
-    punpun-theme-pkg.el -> punpun-theme-pkg.el
-Created punpun-theme-20210508.1635.tar containing:
-  punpun-theme-20210508.1635/
-  punpun-theme-20210508.1635/punpun-common.el
-  punpun-theme-20210508.1635/punpun-dark-theme.el
-  punpun-theme-20210508.1635/punpun-light-theme.el
-  punpun-theme-20210508.1635/punpun-theme-pkg.el
-Built punpun-theme in 4.172s, finished at Tue Jul  6 11:04:27 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  163 Jul  6 11:04 packages/punpun-theme-20210508.1635.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 11:04 packages/punpun-theme-20210508.1635.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:04 packages/punpun-theme-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

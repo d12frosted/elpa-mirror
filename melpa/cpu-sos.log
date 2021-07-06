@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/oitofelix/cpu-sos.git
 
 Updating /mnt/store/melpa/working/cpu-sos/
-Built cpu-sos in 4.466s, finished at Tue Jul  6 10:20:19 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  11K Jul  6 10:20 packages/cpu-sos-20200409.2356.el
-4.0K -rw-r--r-- 1 root root  385 Jul  6 10:20 packages/cpu-sos-20200409.2356.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:20 packages/cpu-sos-badge.svg
-4.0K -rw-r--r-- 1 root root 1.6K Jul  6 10:20 packages/cpu-sos-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

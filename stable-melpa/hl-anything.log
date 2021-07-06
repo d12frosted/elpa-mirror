@@ -3,34 +3,10 @@ Fetcher: github
 Source:  https://github.com/hl-anything/hl-anything-emacs.git
 
 Updating /mnt/store/melpa/working/hl-anything/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hl-anything/
-  to /tmp/hl-anythingjVFTbE/hl-anything-20160422.1708
-    hl-anything.el -> hl-anything.el
-    images/killall-highlights.xpm -> images/killall-highlights.xpm
-    images/off.xpm -> images/off.xpm
-    images/on.xpm -> images/on.xpm
-    images/toggle-global-highlight.xpm -> images/toggle-global-highlight.xpm
-    images/killall-highlights.png -> images/killall-highlights.png
-    images/off.png -> images/off.png
-    images/on.png -> images/on.png
-    images/toggle-global-highlight.png -> images/toggle-global-highlight.png
-Created hl-anything-20160422.1708.tar containing:
-  hl-anything-20160422.1708/
-  hl-anything-20160422.1708/hl-anything-pkg.el
-  hl-anything-20160422.1708/hl-anything.el
-  hl-anything-20160422.1708/images/
-  hl-anything-20160422.1708/images/killall-highlights.png
-  hl-anything-20160422.1708/images/killall-highlights.xpm
-  hl-anything-20160422.1708/images/off.png
-  hl-anything-20160422.1708/images/off.xpm
-  hl-anything-20160422.1708/images/on.png
-  hl-anything-20160422.1708/images/on.xpm
-  hl-anything-20160422.1708/images/toggle-global-highlight.png
-  hl-anything-20160422.1708/images/toggle-global-highlight.xpm
-Built hl-anything in 3.710s, finished at Tue Jul  6 10:41:46 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  266 Jul  6 10:41 packages/hl-anything-20160422.1708.entry
- 80K -rw-r--r-- 1 root root  80K Jul  6 10:41 packages/hl-anything-20160422.1708.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:41 packages/hl-anything-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:41 packages/hl-anything-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

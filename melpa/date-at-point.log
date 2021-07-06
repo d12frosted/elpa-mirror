@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/alezost/date-at-point.el.git
 
 Updating /mnt/store/melpa/working/date-at-point/
-Built date-at-point in 8.666s, finished at Tue Jul  6 10:21:33 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.2K Jul  6 10:21 packages/date-at-point-20150308.1243.el
-4.0K -rw-r--r-- 1 root root  350 Jul  6 10:21 packages/date-at-point-20150308.1243.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:21 packages/date-at-point-badge.svg
-4.0K -rw-r--r-- 1 root root  385 Jul  6 10:21 packages/date-at-point-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

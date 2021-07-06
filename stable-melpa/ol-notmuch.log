@@ -3,9 +3,10 @@ Fetcher: git
 Source:  https://git.sr.ht/~tarsius/ol-notmuch
 
 Updating /mnt/store/melpa/working/ol-notmuch/
-Built ol-notmuch in 3.874s, finished at Tue Jul  6 10:56:39 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.8K Jul  6 10:56 packages/ol-notmuch-20210530.2054.el
-4.0K -rw-r--r-- 1 root root  454 Jul  6 10:56 packages/ol-notmuch-20210530.2054.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:56 packages/ol-notmuch-badge.svg
-4.0K -rw-r--r-- 1 root root  584 Jul  6 10:56 packages/ol-notmuch-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

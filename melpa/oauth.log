@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/psanford/emacs-oauth.git
 
 Updating /mnt/store/melpa/working/oauth/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/oauth/
-  to /tmp/oauthJfFwUd/oauth-20130128.151
-    hmac-sha1.el -> hmac-sha1.el
-    oauth.el -> oauth.el
-Created oauth-20130128.151.tar containing:
-  oauth-20130128.151/
-  oauth-20130128.151/hmac-sha1.el
-  oauth-20130128.151/oauth-pkg.el
-  oauth-20130128.151/oauth.el
-Built oauth in 7.551s, finished at Tue Jul  6 10:55:25 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  269 Jul  6 10:55 packages/oauth-20130128.151.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:55 packages/oauth-20130128.151.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:55 packages/oauth-badge.svg
-4.0K -rw-r--r-- 1 root root 2.1K Jul  6 10:55 packages/oauth-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/corpix/ob-blockdiag.el.git
 
 Updating /mnt/store/melpa/working/ob-blockdiag/
-Built ob-blockdiag in 8.762s, finished at Tue Jul  6 10:55:37 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.0K Jul  6 10:55 packages/ob-blockdiag-20210412.1541.el
-4.0K -rw-r--r-- 1 root root  336 Jul  6 10:55 packages/ob-blockdiag-20210412.1541.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:55 packages/ob-blockdiag-badge.svg
-4.0K -rw-r--r-- 1 root root  114 Jul  6 10:55 packages/ob-blockdiag-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

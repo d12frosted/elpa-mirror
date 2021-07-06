@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/matsievskiysv/vimish-fold.git
 
 Updating /mnt/store/melpa/working/vimish-fold/
-Built vimish-fold in 4.467s, finished at Tue Jul  6 11:17:16 2021
- ✓ Success:
- 24K -rw-r--r-- 1 root root  22K Jul  6 11:17 packages/vimish-fold-20201205.1156.el
-4.0K -rw-r--r-- 1 root root  434 Jul  6 11:17 packages/vimish-fold-20201205.1156.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:17 packages/vimish-fold-badge.svg
-4.0K -rw-r--r-- 1 root root  711 Jul  6 11:17 packages/vimish-fold-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

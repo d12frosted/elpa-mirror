@@ -3,34 +3,10 @@ Fetcher: github
 Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ghub/
-  to /tmp/ghubJb1P9T/ghub-20210619.1405
-    buck.el -> buck.el
-    ghub-graphql.el -> ghub-graphql.el
-    ghub-pkg.el -> ghub-pkg.el
-    ghub.el -> ghub.el
-    glab.el -> glab.el
-    gogs.el -> gogs.el
-    gsexp.el -> gsexp.el
-    gtea.el -> gtea.el
-    ghub.texi -> ghub.texi
-Created /tmp/ghubJb1P9T/ghub-20210619.1405/ghub.info
-Created ghub-20210619.1405.tar containing:
-  ghub-20210619.1405/
-  ghub-20210619.1405/buck.el
-  ghub-20210619.1405/dir
-  ghub-20210619.1405/ghub-graphql.el
-  ghub-20210619.1405/ghub-pkg.el
-  ghub-20210619.1405/ghub.el
-  ghub-20210619.1405/ghub.info
-  ghub-20210619.1405/glab.el
-  ghub-20210619.1405/gogs.el
-  ghub-20210619.1405/gsexp.el
-  ghub-20210619.1405/gtea.el
-Built ghub in 8.500s, finished at Tue Jul  6 10:35:39 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  401 Jul  6 10:35 packages/ghub-20210619.1405.entry
-152K -rw-r--r-- 1 root root 150K Jul  6 10:35 packages/ghub-20210619.1405.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:35 packages/ghub-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jul  6 10:35 packages/ghub-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

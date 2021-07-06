@@ -3,27 +3,10 @@ Fetcher: github
 Source:  https://github.com/mrmekon/snitch-el.git
 
 Updating /mnt/store/melpa/working/snitch/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/snitch/
-  to /tmp/snitchqcxnrY/snitch-20210202.1730
-    snitch-backtrace.el -> snitch-backtrace.el
-    snitch-custom.el -> snitch-custom.el
-    snitch-filter.el -> snitch-filter.el
-    snitch-log.el -> snitch-log.el
-    snitch-timer.el -> snitch-timer.el
-    snitch.el -> snitch.el
-Created snitch-20210202.1730.tar containing:
-  snitch-20210202.1730/
-  snitch-20210202.1730/snitch-backtrace.el
-  snitch-20210202.1730/snitch-custom.el
-  snitch-20210202.1730/snitch-filter.el
-  snitch-20210202.1730/snitch-log.el
-  snitch-20210202.1730/snitch-pkg.el
-  snitch-20210202.1730/snitch-timer.el
-  snitch-20210202.1730/snitch.el
-Built snitch in 4.771s, finished at Tue Jul  6 11:10:57 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  350 Jul  6 11:10 packages/snitch-20210202.1730.entry
-120K -rw-r--r-- 1 root root 120K Jul  6 11:10 packages/snitch-20210202.1730.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:10 packages/snitch-badge.svg
- 20K -rw-r--r-- 1 root root  20K Jul  6 11:10 packages/snitch-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,27 +3,10 @@ Fetcher: github
 Source:  https://github.com/eschulte/org-ehtml.git
 
 Updating /mnt/store/melpa/working/org-ehtml/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-ehtml/
-  to /tmp/org-ehtmlLQ2Kqv/org-ehtml-20210428.1547
-  ! src/org-ehtml-server.el -> org-ehtml-server.el
-  ! src/org-ehtml-util.el -> org-ehtml-util.el
-  ! src/org-ehtml.el -> org-ehtml.el
-  ! src/ox-ehtml.el -> ox-ehtml.el
-  ! src/ox-ehtml.js -> ox-ehtml.js
-  ! src/ox-ehtml.css -> ox-ehtml.css
-Created org-ehtml-20210428.1547.tar containing:
-  org-ehtml-20210428.1547/
-  org-ehtml-20210428.1547/org-ehtml-pkg.el
-  org-ehtml-20210428.1547/org-ehtml-server.el
-  org-ehtml-20210428.1547/org-ehtml-util.el
-  org-ehtml-20210428.1547/org-ehtml.el
-  org-ehtml-20210428.1547/ox-ehtml.css
-  org-ehtml-20210428.1547/ox-ehtml.el
-  org-ehtml-20210428.1547/ox-ehtml.js
-Built org-ehtml in 3.563s, finished at Tue Jul  6 10:57:36 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  411 Jul  6 10:57 packages/org-ehtml-20210428.1547.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:57 packages/org-ehtml-20210428.1547.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:57 packages/org-ehtml-badge.svg
-4.0K -rw-r--r-- 1 root root  505 Jul  6 10:57 packages/org-ehtml-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

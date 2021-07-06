@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/HKey/el-init-viewer.git
 
 Updating /mnt/store/melpa/working/el-init-viewer/
-Built el-init-viewer in 3.867s, finished at Tue Jul  6 10:25:26 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  11K Jul  6 10:25 packages/el-init-viewer-20150303.828.el
-4.0K -rw-r--r-- 1 root root  461 Jul  6 10:25 packages/el-init-viewer-20150303.828.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:25 packages/el-init-viewer-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Jul  6 10:25 packages/el-init-viewer-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

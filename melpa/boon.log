@@ -3,56 +3,10 @@ Fetcher: github
 Source:  https://github.com/jyp/boon.git
 
 Updating /mnt/store/melpa/working/boon/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/boon/
-  to /tmp/boongXvRhi/boon-20210518.1244
-    boon-arguments.el -> boon-arguments.el
-    boon-colemak.el -> boon-colemak.el
-    boon-core.el -> boon-core.el
-    boon-dvorak.el -> boon-dvorak.el
-    boon-emacs.el -> boon-emacs.el
-    boon-hl.el -> boon-hl.el
-    boon-keys.el -> boon-keys.el
-    boon-loaddefs.el -> boon-loaddefs.el
-    boon-main.el -> boon-main.el
-    boon-moves.el -> boon-moves.el
-    boon-pkg.el -> boon-pkg.el
-    boon-powerline.el -> boon-powerline.el
-    boon-qwerty.el -> boon-qwerty.el
-    boon-qwertz.el -> boon-qwertz.el
-    boon-regs.el -> boon-regs.el
-    boon-search.el -> boon-search.el
-    boon-spaceline.el -> boon-spaceline.el
-    boon-tutorial.el -> boon-tutorial.el
-    boon-utils.el -> boon-utils.el
-    boon-workman.el -> boon-workman.el
-    boon.el -> boon.el
-Created boon-20210518.1244.tar containing:
-  boon-20210518.1244/
-  boon-20210518.1244/boon-arguments.el
-  boon-20210518.1244/boon-colemak.el
-  boon-20210518.1244/boon-core.el
-  boon-20210518.1244/boon-dvorak.el
-  boon-20210518.1244/boon-emacs.el
-  boon-20210518.1244/boon-hl.el
-  boon-20210518.1244/boon-keys.el
-  boon-20210518.1244/boon-loaddefs.el
-  boon-20210518.1244/boon-main.el
-  boon-20210518.1244/boon-moves.el
-  boon-20210518.1244/boon-pkg.el
-  boon-20210518.1244/boon-powerline.el
-  boon-20210518.1244/boon-qwerty.el
-  boon-20210518.1244/boon-qwertz.el
-  boon-20210518.1244/boon-regs.el
-  boon-20210518.1244/boon-search.el
-  boon-20210518.1244/boon-spaceline.el
-  boon-20210518.1244/boon-tutorial.el
-  boon-20210518.1244/boon-utils.el
-  boon-20210518.1244/boon-workman.el
-  boon-20210518.1244/boon.el
-Built boon in 3.824s, finished at Tue Jul  6 10:14:49 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  266 Jul  6 10:14 packages/boon-20210518.1244.entry
-160K -rw-r--r-- 1 root root 160K Jul  6 10:14 packages/boon-20210518.1244.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:14 packages/boon-badge.svg
-4.0K -rw-r--r-- 1 root root  211 Jul  6 10:14 packages/boon-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

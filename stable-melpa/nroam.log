@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/NicolasPetton/nroam.git
 
 Updating /mnt/store/melpa/working/nroam/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nroam/
-  to /tmp/nroamFOQwti/nroam-20210325.2015
-    nroam-backlinks.el -> nroam-backlinks.el
-    nroam-unlinked.el -> nroam-unlinked.el
-    nroam-utils.el -> nroam-utils.el
-    nroam.el -> nroam.el
-Created nroam-20210325.2015.tar containing:
-  nroam-20210325.2015/
-  nroam-20210325.2015/nroam-backlinks.el
-  nroam-20210325.2015/nroam-pkg.el
-  nroam-20210325.2015/nroam-unlinked.el
-  nroam-20210325.2015/nroam-utils.el
-  nroam-20210325.2015/nroam.el
-Built nroam in 3.680s, finished at Tue Jul  6 10:55:08 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  410 Jul  6 10:55 packages/nroam-20210325.2015.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:55 packages/nroam-20210325.2015.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:55 packages/nroam-badge.svg
-4.0K -rw-r--r-- 1 root root  283 Jul  6 10:55 packages/nroam-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

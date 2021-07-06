@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/10sr/term-run-el.git
 
 Updating /mnt/store/melpa/working/term-run/
-Built term-run in 3.887s, finished at Tue Jul  6 11:14:12 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K Jul  6 11:14 packages/term-run-20200128.702.el
-4.0K -rw-r--r-- 1 root root  388 Jul  6 11:14 packages/term-run-20200128.702.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:14 packages/term-run-badge.svg
-4.0K -rw-r--r-- 1 root root  901 Jul  6 11:14 packages/term-run-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

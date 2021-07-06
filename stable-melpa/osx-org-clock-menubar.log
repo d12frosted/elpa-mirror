@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/jordonbiondo/osx-org-clock-menubar.git
 
 Updating /mnt/store/melpa/working/osx-org-clock-menubar/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/osx-org-clock-menubar/
-  to /tmp/osx-org-clock-menubar2hlV9Y/osx-org-clock-menubar-20150205.2111
-    osx-org-clock-menubar.el -> osx-org-clock-menubar.el
-    ocm-server.rb -> ocm-server.rb
-Created osx-org-clock-menubar-20150205.2111.tar containing:
-  osx-org-clock-menubar-20150205.2111/
-  osx-org-clock-menubar-20150205.2111/ocm-server.rb
-  osx-org-clock-menubar-20150205.2111/osx-org-clock-menubar-pkg.el
-  osx-org-clock-menubar-20150205.2111/osx-org-clock-menubar.el
-Built osx-org-clock-menubar in 3.486s, finished at Tue Jul  6 10:59:26 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  390 Jul  6 10:59 packages/osx-org-clock-menubar-20150205.2111.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:59 packages/osx-org-clock-menubar-20150205.2111.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:59 packages/osx-org-clock-menubar-badge.svg
-4.0K -rw-r--r-- 1 root root  609 Jul  6 10:59 packages/osx-org-clock-menubar-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

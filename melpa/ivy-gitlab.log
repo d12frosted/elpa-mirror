@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/nlamirault/emacs-gitlab.git
 
 Updating /mnt/store/melpa/working/ivy-gitlab/
-Built ivy-gitlab in 3.977s, finished at Tue Jul  6 10:44:49 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.3K Jul  6 10:44 packages/ivy-gitlab-20181228.826.el
-4.0K -rw-r--r-- 1 root root  504 Jul  6 10:44 packages/ivy-gitlab-20181228.826.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:44 packages/ivy-gitlab-badge.svg
-4.0K -rw-r--r-- 1 root root   36 Jul  6 10:44 packages/ivy-gitlab-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/stsquad/dired-rsync.git
 
 Updating /mnt/store/melpa/working/dired-rsync/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/dired-rsync/
-  to /tmp/dired-rsyncPmawKf/dired-rsync-20201224.2214
-    dired-rsync-ert.el -> dired-rsync-ert.el
-    dired-rsync.el -> dired-rsync.el
-Created dired-rsync-20201224.2214.tar containing:
-  dired-rsync-20201224.2214/
-  dired-rsync-20201224.2214/dired-rsync-ert.el
-  dired-rsync-20201224.2214/dired-rsync-pkg.el
-  dired-rsync-20201224.2214/dired-rsync.el
-Built dired-rsync in 4.261s, finished at Tue Jul  6 10:23:00 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  393 Jul  6 10:23 packages/dired-rsync-20201224.2214.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:23 packages/dired-rsync-20201224.2214.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:23 packages/dired-rsync-badge.svg
-4.0K -rw-r--r-- 1 root root  484 Jul  6 10:23 packages/dired-rsync-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

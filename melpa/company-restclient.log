@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/iquiw/company-restclient.git
 
 Updating /mnt/store/melpa/working/company-restclient/
-Built company-restclient in 6.411s, finished at Tue Jul  6 10:19:06 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.3K Jul  6 10:19 packages/company-restclient-20190426.1312.el
-4.0K -rw-r--r-- 1 root root  550 Jul  6 10:19 packages/company-restclient-20190426.1312.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:19 packages/company-restclient-badge.svg
-4.0K -rw-r--r-- 1 root root  180 Jul  6 10:19 packages/company-restclient-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,29 +3,10 @@ Fetcher: github
 Source:  https://github.com/eutro/zenscript-mode.git
 
 Updating /mnt/store/melpa/working/zenscript-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/zenscript-mode/
-  to /tmp/zenscript-modezZNtHc/zenscript-mode-20210102.1350
-    zenscript-common.el -> zenscript-common.el
-    zenscript-completion.el -> zenscript-completion.el
-    zenscript-highlighting.el -> zenscript-highlighting.el
-    zenscript-indentation.el -> zenscript-indentation.el
-    zenscript-language.el -> zenscript-language.el
-    zenscript-mode.el -> zenscript-mode.el
-    zenscript-parser.el -> zenscript-parser.el
-Created zenscript-mode-20210102.1350.tar containing:
-  zenscript-mode-20210102.1350/
-  zenscript-mode-20210102.1350/zenscript-common.el
-  zenscript-mode-20210102.1350/zenscript-completion.el
-  zenscript-mode-20210102.1350/zenscript-highlighting.el
-  zenscript-mode-20210102.1350/zenscript-indentation.el
-  zenscript-mode-20210102.1350/zenscript-language.el
-  zenscript-mode-20210102.1350/zenscript-mode-pkg.el
-  zenscript-mode-20210102.1350/zenscript-mode.el
-  zenscript-mode-20210102.1350/zenscript-parser.el
-Built zenscript-mode in 3.630s, finished at Tue Jul  6 11:20:53 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  220 Jul  6 11:20 packages/zenscript-mode-20210102.1350.entry
-132K -rw-r--r-- 1 root root 130K Jul  6 11:20 packages/zenscript-mode-20210102.1350.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:20 packages/zenscript-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   26 Jul  6 11:20 packages/zenscript-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

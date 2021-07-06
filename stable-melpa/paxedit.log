@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/promethial/paxedit.git
 
 Updating /mnt/store/melpa/working/paxedit/
-Note: paxedit :files spec is equivalent to the default.
-Built paxedit in 4.367s, finished at Tue Jul  6 11:00:57 2021
- ✓ Success:
- 80K -rw-r--r-- 1 root root  78K Jul  6 11:00 packages/paxedit-20160730.1727.el
-4.0K -rw-r--r-- 1 root root  385 Jul  6 11:00 packages/paxedit-20160730.1727.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:00 packages/paxedit-badge.svg
-4.0K -rw-r--r-- 1 root root  127 Jul  6 11:00 packages/paxedit-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

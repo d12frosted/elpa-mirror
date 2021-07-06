@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/joddie/pcre2el.git
 
 Updating /mnt/store/melpa/working/pcre2el/
-Note: pcre2el :files spec is equivalent to the default.
-Built pcre2el in 5.261s, finished at Tue Jul  6 11:01:11 2021
- ✓ Success:
-116K -rw-r--r-- 1 root root 115K Jul  6 11:01 packages/pcre2el-20161120.2103.el
-4.0K -rw-r--r-- 1 root root  332 Jul  6 11:01 packages/pcre2el-20161120.2103.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:01 packages/pcre2el-badge.svg
- 16K -rw-r--r-- 1 root root  16K Jul  6 11:01 packages/pcre2el-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

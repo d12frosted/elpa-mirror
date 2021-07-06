@@ -3,27 +3,12 @@ Fetcher: gitlab
 Source:  https://gitlab.com/protesilaos/modus-themes.git
 
 Updating /mnt/store/melpa/working/modus-themes/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/modus-themes/
-  to /tmp/modus-themescITeqU/modus-themes-20210705.1031
-    modus-operandi-theme.el -> modus-operandi-theme.el
-    modus-themes.el -> modus-themes.el
-    modus-vivendi-theme.el -> modus-vivendi-theme.el
-  ! doc/modus-themes.info -> modus-themes.info
-  ! doc/doclicense.texi -> doclicense.texi
-Created /tmp/modus-themescITeqU/modus-themes-20210705.1031/doclicense.info
-Created modus-themes-20210705.1031.tar containing:
-  modus-themes-20210705.1031/
-  modus-themes-20210705.1031/dir
-  modus-themes-20210705.1031/doclicense.info
-  modus-themes-20210705.1031/modus-operandi-theme.el
-  modus-themes-20210705.1031/modus-themes-pkg.el
-  modus-themes-20210705.1031/modus-themes.el
-  modus-themes-20210705.1031/modus-themes.info
-  modus-themes-20210705.1031/modus-vivendi-theme.el
-Built modus-themes in 6.360s, finished at Tue Jul  6 10:52:41 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  416 Jul  6 10:52 packages/modus-themes-20210705.1031.entry
-612K -rw-r--r-- 1 root root 610K Jul  6 10:52 packages/modus-themes-20210705.1031.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:52 packages/modus-themes-badge.svg
-8.0K -rw-r--r-- 1 root root 8.0K Jul  6 10:52 packages/modus-themes-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+From https://gitlab.com/protesilaos/modus-themes
+   c405b34..99d4e5d  main       -> origin/main
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

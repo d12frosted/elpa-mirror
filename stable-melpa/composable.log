@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/paldepind/composable.el.git
 
 Updating /mnt/store/melpa/working/composable/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/composable/
-  to /tmp/composablepVzElh/composable-20201024.1458
-    composable-mark.el -> composable-mark.el
-    composable.el -> composable.el
-Created composable-20201024.1458.tar containing:
-  composable-20201024.1458/
-  composable-20201024.1458/composable-mark.el
-  composable-20201024.1458/composable-pkg.el
-  composable-20201024.1458/composable.el
-Built composable in 3.901s, finished at Tue Jul  6 10:19:26 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  320 Jul  6 10:19 packages/composable-20201024.1458.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:19 packages/composable-20201024.1458.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:19 packages/composable-badge.svg
-4.0K -rw-r--r-- 1 root root 1.5K Jul  6 10:19 packages/composable-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

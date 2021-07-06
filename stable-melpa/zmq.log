@@ -3,39 +3,10 @@ Fetcher: github
 Source:  https://github.com/nnicandro/emacs-zmq.git
 
 Updating /mnt/store/melpa/working/zmq/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/zmq/
-  to /tmp/zmqBrQ6PS/zmq-20210613.343
-    zmq.el -> zmq.el
-    Makefile -> Makefile
-    src => src
-Created zmq-20210613.343.tar containing:
-  zmq-20210613.343/
-  zmq-20210613.343/Makefile
-  zmq-20210613.343/src/
-  zmq-20210613.343/src/Makefile.am
-  zmq-20210613.343/src/configure.ac
-  zmq-20210613.343/src/constants.c
-  zmq-20210613.343/src/context.c
-  zmq-20210613.343/src/context.h
-  zmq-20210613.343/src/core.c
-  zmq-20210613.343/src/core.h
-  zmq-20210613.343/src/emacs-module.h
-  zmq-20210613.343/src/emacs-zmq.c
-  zmq-20210613.343/src/emacs-zmq.h
-  zmq-20210613.343/src/msg.c
-  zmq-20210613.343/src/msg.h
-  zmq-20210613.343/src/poll.c
-  zmq-20210613.343/src/poll.h
-  zmq-20210613.343/src/socket.c
-  zmq-20210613.343/src/socket.h
-  zmq-20210613.343/src/util.c
-  zmq-20210613.343/src/util.h
-  zmq-20210613.343/zmq-pkg.el
-  zmq-20210613.343/zmq.el
-Built zmq in 4.350s, finished at Tue Jul  6 11:21:03 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  403 Jul  6 11:21 packages/zmq-20210613.343.entry
-152K -rw-r--r-- 1 root root 150K Jul  6 11:21 packages/zmq-20210613.343.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:21 packages/zmq-badge.svg
-4.0K -rw-r--r-- 1 root root   60 Jul  6 11:21 packages/zmq-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

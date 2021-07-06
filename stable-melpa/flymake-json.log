@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/purcell/flymake-json.git
 
 Updating /mnt/store/melpa/working/flymake-json/
-Built flymake-json in 4.487s, finished at Tue Jul  6 10:33:36 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.5K Jul  6 10:33 packages/flymake-json-20180511.911.el
-4.0K -rw-r--r-- 1 root root  366 Jul  6 10:33 packages/flymake-json-20180511.911.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:33 packages/flymake-json-badge.svg
-4.0K -rw-r--r-- 1 root root  449 Jul  6 10:33 packages/flymake-json-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

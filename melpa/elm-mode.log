@@ -3,35 +3,10 @@ Fetcher: github
 Source:  https://github.com/jcollard/elm-mode.git
 
 Updating /mnt/store/melpa/working/elm-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elm-mode/
-  to /tmp/elm-mode0eBUih/elm-mode-20210525.152
-    elm-font-lock.el -> elm-font-lock.el
-    elm-format.el -> elm-format.el
-    elm-imenu.el -> elm-imenu.el
-    elm-indent-simple.el -> elm-indent-simple.el
-    elm-indent.el -> elm-indent.el
-    elm-interactive.el -> elm-interactive.el
-    elm-mode.el -> elm-mode.el
-    elm-tags.el -> elm-tags.el
-    elm-util.el -> elm-util.el
-    elm.tags -> elm.tags
-Created elm-mode-20210525.152.tar containing:
-  elm-mode-20210525.152/
-  elm-mode-20210525.152/elm-font-lock.el
-  elm-mode-20210525.152/elm-format.el
-  elm-mode-20210525.152/elm-imenu.el
-  elm-mode-20210525.152/elm-indent-simple.el
-  elm-mode-20210525.152/elm-indent.el
-  elm-mode-20210525.152/elm-interactive.el
-  elm-mode-20210525.152/elm-mode-pkg.el
-  elm-mode-20210525.152/elm-mode.el
-  elm-mode-20210525.152/elm-tags.el
-  elm-mode-20210525.152/elm-util.el
-  elm-mode-20210525.152/elm.tags
-Built elm-mode in 3.597s, finished at Tue Jul  6 10:26:06 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  383 Jul  6 10:26 packages/elm-mode-20210525.152.entry
-132K -rw-r--r-- 1 root root 130K Jul  6 10:26 packages/elm-mode-20210525.152.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:26 packages/elm-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  157 Jul  6 10:26 packages/elm-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

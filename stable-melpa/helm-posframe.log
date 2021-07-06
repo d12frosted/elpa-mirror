@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/tumashu/helm-posframe.git
 
 Updating /mnt/store/melpa/working/helm-posframe/
-Built helm-posframe in 3.775s, finished at Tue Jul  6 10:40:26 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.1K Jul  6 10:40 packages/helm-posframe-20210412.1147.el
-4.0K -rw-r--r-- 1 root root  408 Jul  6 10:40 packages/helm-posframe-20210412.1147.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:40 packages/helm-posframe-badge.svg
-4.0K -rw-r--r-- 1 root root  776 Jul  6 10:40 packages/helm-posframe-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

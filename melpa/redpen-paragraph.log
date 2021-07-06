@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/karronoli/redpen-paragraph.el.git
 
 Updating /mnt/store/melpa/working/redpen-paragraph/
-Built redpen-paragraph in 3.880s, finished at Tue Jul  6 11:06:13 2021
- ✓ Success:
- 16K -rw-r--r-- 1 root root  13K Jul  6 11:06 packages/redpen-paragraph-20160625.1050.el
-4.0K -rw-r--r-- 1 root root  405 Jul  6 11:06 packages/redpen-paragraph-20160625.1050.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:06 packages/redpen-paragraph-badge.svg
-4.0K -rw-r--r-- 1 root root  266 Jul  6 11:06 packages/redpen-paragraph-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

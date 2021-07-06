@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/GongYiLiao/theme-anchor.git
 
 Updating /mnt/store/melpa/working/theme-anchor/
-Note: theme-anchor :files spec is equivalent to the default.
-Built theme-anchor in 5.181s, finished at Tue Jul  6 11:14:32 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.1K Jul  6 11:14 packages/theme-anchor-20210408.2149.el
-4.0K -rw-r--r-- 1 root root  407 Jul  6 11:14 packages/theme-anchor-20210408.2149.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:14 packages/theme-anchor-badge.svg
-4.0K -rw-r--r-- 1 root root  153 Jul  6 11:14 packages/theme-anchor-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

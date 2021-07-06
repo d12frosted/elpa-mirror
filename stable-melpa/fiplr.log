@@ -3,17 +3,10 @@ Fetcher: github
 Source:  https://github.com/grizzl/fiplr.git
 
 Updating /mnt/store/melpa/working/fiplr/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/fiplr/
-  to /tmp/fiplrBHfEkp/fiplr-20140724.645
-    fiplr-pkg.el -> fiplr-pkg.el
-    fiplr.el -> fiplr.el
-Created fiplr-20140724.645.tar containing:
-  fiplr-20140724.645/
-  fiplr-20140724.645/fiplr-pkg.el
-  fiplr-20140724.645/fiplr.el
-Built fiplr in 3.899s, finished at Tue Jul  6 10:30:59 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  384 Jul  6 10:30 packages/fiplr-20140724.645.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:30 packages/fiplr-20140724.645.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:30 packages/fiplr-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/stardiviner/inline-docs.el.git
 
 Updating /mnt/store/melpa/working/inline-docs/
-Built inline-docs in 4.295s, finished at Tue Jul  6 10:43:45 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.1K Jul  6 10:43 packages/inline-docs-20170523.450.el
-4.0K -rw-r--r-- 1 root root  406 Jul  6 10:43 packages/inline-docs-20170523.450.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:43 packages/inline-docs-badge.svg
-4.0K -rw-r--r-- 1 root root  313 Jul  6 10:43 packages/inline-docs-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

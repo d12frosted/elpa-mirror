@@ -3,21 +3,10 @@ Fetcher: github
 Source:  https://github.com/Wilfred/python-info.git
 
 Updating /mnt/store/melpa/working/python-info/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/python-info/
-  to /tmp/python-infoPW9Khf/python-info-20151228.1852
-    python-info.el -> python-info.el
-    python.info -> python.info
-    python.texi -> python.texi
-Created python-info-20151228.1852.tar containing:
-  python-info-20151228.1852/
-  python-info-20151228.1852/dir
-  python-info-20151228.1852/python-info-pkg.el
-  python-info-20151228.1852/python-info.el
-  python-info-20151228.1852/python.info
-Built python-info in 1.270s, finished at Tue Jul  6 11:21:20 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  150 Jul  6 11:21 packages/python-info-20151228.1852.entry
- 11M -rw-r--r-- 1 root root  11M Jul  6 11:21 packages/python-info-20151228.1852.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:21 packages/python-info-badge.svg
-4.0K -rw-r--r-- 1 root root  160 Jul  6 11:21 packages/python-info-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

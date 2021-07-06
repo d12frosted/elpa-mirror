@@ -3,26 +3,10 @@ Fetcher: github
 Source:  https://github.com/eschulte/rhtml.git
 
 Updating /mnt/store/melpa/working/rhtml-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/rhtml-mode/
-  to /tmp/rhtml-modelups7E/rhtml-mode-20130422.1311
-    rhtml-erb.el -> rhtml-erb.el
-    rhtml-fonts.el -> rhtml-fonts.el
-    rhtml-mode.el -> rhtml-mode.el
-    rhtml-navigation.el -> rhtml-navigation.el
-    rhtml-ruby-hook.el -> rhtml-ruby-hook.el
-    rhtml-sgml-hacks.el -> rhtml-sgml-hacks.el
-Created rhtml-mode-20130422.1311.tar containing:
-  rhtml-mode-20130422.1311/
-  rhtml-mode-20130422.1311/rhtml-erb.el
-  rhtml-mode-20130422.1311/rhtml-fonts.el
-  rhtml-mode-20130422.1311/rhtml-mode-pkg.el
-  rhtml-mode-20130422.1311/rhtml-mode.el
-  rhtml-mode-20130422.1311/rhtml-navigation.el
-  rhtml-mode-20130422.1311/rhtml-ruby-hook.el
-  rhtml-mode-20130422.1311/rhtml-sgml-hacks.el
-Built rhtml-mode in 7.358s, finished at Tue Jul  6 11:07:11 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  152 Jul  6 11:07 packages/rhtml-mode-20130422.1311.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 11:07 packages/rhtml-mode-20130422.1311.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:07 packages/rhtml-mode-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

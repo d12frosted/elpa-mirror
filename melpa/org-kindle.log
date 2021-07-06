@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/stardiviner/org-kindle.git
 
 Updating /mnt/store/melpa/working/org-kindle/
-Built org-kindle in 3.841s, finished at Tue Jul  6 10:57:53 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.5K Jul  6 10:57 packages/org-kindle-20200906.944.el
-4.0K -rw-r--r-- 1 root root  368 Jul  6 10:57 packages/org-kindle-20200906.944.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:57 packages/org-kindle-badge.svg
-4.0K -rw-r--r-- 1 root root  628 Jul  6 10:57 packages/org-kindle-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

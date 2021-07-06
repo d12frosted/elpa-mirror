@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/hoaproject/Contributions-Emacs-Pp.git
 
 Updating /mnt/store/melpa/working/hoa-pp-mode/
-Built hoa-pp-mode in 4.041s, finished at Tue Jul  6 10:41:57 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Jul  6 10:41 packages/hoa-pp-mode-20151027.736.el
-4.0K -rw-r--r-- 1 root root  388 Jul  6 10:41 packages/hoa-pp-mode-20151027.736.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:41 packages/hoa-pp-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  145 Jul  6 10:41 packages/hoa-pp-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

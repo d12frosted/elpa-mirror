@@ -3,23 +3,10 @@ Fetcher: git
 Source:  https://tildegit.org/contrapunctus/chronometrist.git
 
 Updating /mnt/store/melpa/working/chronometrist-key-values/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/chronometrist-key-values/
-  to /tmp/chronometrist-key-valuesj6ZX1z/chronometrist-key-values-20210617.1707
-  ! elisp/chronometrist-key-values.el -> chronometrist-key-values.el
-  ! elisp/chronometrist-spark.el -> chronometrist-spark.el
-  ! elisp/chronometrist-key-values.org -> chronometrist-key-values.org
-  ! elisp/chronometrist-spark.org -> chronometrist-spark.org
-Created chronometrist-key-values-20210617.1707.tar containing:
-  chronometrist-key-values-20210617.1707/
-  chronometrist-key-values-20210617.1707/chronometrist-key-values-pkg.el
-  chronometrist-key-values-20210617.1707/chronometrist-key-values.el
-  chronometrist-key-values-20210617.1707/chronometrist-key-values.org
-  chronometrist-key-values-20210617.1707/chronometrist-spark.el
-  chronometrist-key-values-20210617.1707/chronometrist-spark.org
-Built chronometrist-key-values in 2.911s, finished at Tue Jul  6 10:16:59 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  448 Jul  6 10:16 packages/chronometrist-key-values-20210617.1707.entry
- 72K -rw-r--r-- 1 root root  70K Jul  6 10:16 packages/chronometrist-key-values-20210617.1707.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:16 packages/chronometrist-key-values-badge.svg
-4.0K -rw-r--r-- 1 root root  329 Jul  6 10:16 packages/chronometrist-key-values-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/ZungBang/emacs-grep-a-lot.git
 
 Updating /mnt/store/melpa/working/grep-a-lot/
-Built grep-a-lot in 3.812s, finished at Tue Jul  6 10:37:38 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Jul  6 10:37 packages/grep-a-lot-20210618.1420.el
-4.0K -rw-r--r-- 1 root root  406 Jul  6 10:37 packages/grep-a-lot-20210618.1420.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:37 packages/grep-a-lot-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jul  6 10:37 packages/grep-a-lot-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/jart/disaster.git
 
 Updating /mnt/store/melpa/working/disaster/
-Note: disaster :files spec is equivalent to the default.
-Built disaster in 4.015s, finished at Tue Jul  6 10:23:13 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Jul  6 10:23 packages/disaster-20171016.2152.el
-4.0K -rw-r--r-- 1 root root  352 Jul  6 10:23 packages/disaster-20171016.2152.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:23 packages/disaster-badge.svg
-4.0K -rw-r--r-- 1 root root  752 Jul  6 10:23 packages/disaster-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

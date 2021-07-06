@@ -3,47 +3,10 @@ Fetcher: github
 Source:  https://github.com/nbfalcon/ptemplate-templates.git
 
 Updating /mnt/store/melpa/working/ptemplate-templates/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ptemplate-templates/
-  to /tmp/ptemplate-templates8ULWWa/ptemplate-templates-20210324.1443
-    ptemplate-templates.el -> ptemplate-templates.el
-    rsc => rsc
-Created ptemplate-templates-20210324.1443.tar containing:
-  ptemplate-templates-20210324.1443/
-  ptemplate-templates-20210324.1443/ptemplate-templates-pkg.el
-  ptemplate-templates-20210324.1443/ptemplate-templates.el
-  ptemplate-templates-20210324.1443/rsc/
-  ptemplate-templates-20210324.1443/rsc/project-templates/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/.ptemplate.el
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/CMakeLists.txt.autoyas
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/gui/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/gui/Application.cpp
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/gui/Application.hpp
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/cmake-qt-project/src/main.cpp
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/.ptemplate.el
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/README.md
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/include/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/include/.gitkeep
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/meson.build.autoyas
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/src/
-  ptemplate-templates-20210324.1443/rsc/project-templates/C-C++/meson-project/src/main.c.yas
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/cask-plugin/
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/cask-plugin/.ptemplate.el
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/cask-plugin/Cask.autoyas
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/cask-plugin/README.md
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/.ptemplate.el
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/COPYING.txt
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/README.md
-  ptemplate-templates-20210324.1443/rsc/project-templates/Emacs/plugin/src.el.yas
-Built ptemplate-templates in 3.918s, finished at Tue Jul  6 11:04:23 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  419 Jul  6 11:04 packages/ptemplate-templates-20210324.1443.entry
- 72K -rw-r--r-- 1 root root  70K Jul  6 11:04 packages/ptemplate-templates-20210324.1443.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:04 packages/ptemplate-templates-badge.svg
-4.0K -rw-r--r-- 1 root root  600 Jul  6 11:04 packages/ptemplate-templates-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

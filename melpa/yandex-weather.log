@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/acme4j/yandex-weather.el.git
 
 Updating /mnt/store/melpa/working/yandex-weather/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/yandex-weather/
-  to /tmp/yandex-weatherFBsNqj/yandex-weather-20160311.2037
-    org-yandex-weather.el -> org-yandex-weather.el
-    yandex-weather.el -> yandex-weather.el
-Created yandex-weather-20160311.2037.tar containing:
-  yandex-weather-20160311.2037/
-  yandex-weather-20160311.2037/org-yandex-weather.el
-  yandex-weather-20160311.2037/yandex-weather-pkg.el
-  yandex-weather-20160311.2037/yandex-weather.el
-Built yandex-weather in 3.542s, finished at Tue Jul  6 11:20:22 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  144 Jul  6 11:20 packages/yandex-weather-20160311.2037.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 11:20 packages/yandex-weather-20160311.2037.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:20 packages/yandex-weather-badge.svg
-4.0K -rw-r--r-- 1 root root  529 Jul  6 11:20 packages/yandex-weather-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

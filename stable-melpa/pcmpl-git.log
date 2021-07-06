@@ -3,21 +3,10 @@ Fetcher: github
 Source:  https://github.com/leoliu/pcmpl-git-el.git
 
 Updating /mnt/store/melpa/working/pcmpl-git/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pcmpl-git/
-  to /tmp/pcmpl-gitEokVjV/pcmpl-git-20170121.59
-    pcmpl-git-parse.el -> pcmpl-git-parse.el
-    pcmpl-git.el -> pcmpl-git.el
-    git-options -> git-options
-Created pcmpl-git-20170121.59.tar containing:
-  pcmpl-git-20170121.59/
-  pcmpl-git-20170121.59/git-options
-  pcmpl-git-20170121.59/pcmpl-git-parse.el
-  pcmpl-git-20170121.59/pcmpl-git-pkg.el
-  pcmpl-git-20170121.59/pcmpl-git.el
-Built pcmpl-git in 5.257s, finished at Tue Jul  6 11:01:03 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  265 Jul  6 11:01 packages/pcmpl-git-20170121.59.entry
- 72K -rw-r--r-- 1 root root  70K Jul  6 11:01 packages/pcmpl-git-20170121.59.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:01 packages/pcmpl-git-badge.svg
-4.0K -rw-r--r-- 1 root root  267 Jul  6 11:01 packages/pcmpl-git-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

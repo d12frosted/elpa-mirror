@@ -3,19 +3,10 @@ Fetcher: git
 Source:  https://git.sr.ht/~pkal/insert-kaomoji
 
 Updating /mnt/store/melpa/working/insert-kaomoji/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/insert-kaomoji/
-  to /tmp/insert-kaomojifrBSJa/insert-kaomoji-20210618.2249
-    insert-kaomoji.el -> insert-kaomoji.el
-    KAOMOJIS -> KAOMOJIS
-Created insert-kaomoji-20210618.2249.tar containing:
-  insert-kaomoji-20210618.2249/
-  insert-kaomoji-20210618.2249/KAOMOJIS
-  insert-kaomoji-20210618.2249/insert-kaomoji-pkg.el
-  insert-kaomoji-20210618.2249/insert-kaomoji.el
-Built insert-kaomoji in 3.331s, finished at Tue Jul  6 10:43:49 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  335 Jul  6 10:43 packages/insert-kaomoji-20210618.2249.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:43 packages/insert-kaomoji-20210618.2249.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:43 packages/insert-kaomoji-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul  6 10:43 packages/insert-kaomoji-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

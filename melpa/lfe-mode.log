@@ -3,21 +3,10 @@ Fetcher: github
 Source:  https://github.com/rvirding/lfe.git
 
 Updating /mnt/store/melpa/working/lfe-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lfe-mode/
-  to /tmp/lfe-modeOuxak1/lfe-mode-20210603.1241
-  ! emacs/inferior-lfe.el -> inferior-lfe.el
-  ! emacs/lfe-mode.el -> lfe-mode.el
-  ! emacs/lfe-indent.el -> lfe-indent.el
-Created lfe-mode-20210603.1241.tar containing:
-  lfe-mode-20210603.1241/
-  lfe-mode-20210603.1241/inferior-lfe.el
-  lfe-mode-20210603.1241/lfe-indent.el
-  lfe-mode-20210603.1241/lfe-mode-pkg.el
-  lfe-mode-20210603.1241/lfe-mode.el
-Built lfe-mode in 6.503s, finished at Tue Jul  6 10:48:06 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  136 Jul  6 10:48 packages/lfe-mode-20210603.1241.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:48 packages/lfe-mode-20210603.1241.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:48 packages/lfe-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   46 Jul  6 10:48 packages/lfe-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

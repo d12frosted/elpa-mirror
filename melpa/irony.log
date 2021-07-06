@@ -3,84 +3,10 @@ Fetcher: github
 Source:  https://github.com/Sarcasm/irony-mode.git
 
 Updating /mnt/store/melpa/working/irony/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/irony/
-  to /tmp/ironywlJXOA/irony-20210321.1750
-    .dir-locals.el -> .dir-locals.el
-    irony-cdb-clang-complete.el -> irony-cdb-clang-complete.el
-    irony-cdb-json.el -> irony-cdb-json.el
-    irony-cdb-libclang.el -> irony-cdb-libclang.el
-    irony-cdb.el -> irony-cdb.el
-    irony-completion.el -> irony-completion.el
-    irony-diagnostics.el -> irony-diagnostics.el
-    irony-iotask.el -> irony-iotask.el
-    irony-snippet.el -> irony-snippet.el
-    irony.el -> irony.el
-    server => server
-Created irony-20210321.1750.tar containing:
-  irony-20210321.1750/
-  irony-20210321.1750/.dir-locals.el
-  irony-20210321.1750/irony-cdb-clang-complete.el
-  irony-20210321.1750/irony-cdb-json.el
-  irony-20210321.1750/irony-cdb-libclang.el
-  irony-20210321.1750/irony-cdb.el
-  irony-20210321.1750/irony-completion.el
-  irony-20210321.1750/irony-diagnostics.el
-  irony-20210321.1750/irony-iotask.el
-  irony-20210321.1750/irony-pkg.el
-  irony-20210321.1750/irony-snippet.el
-  irony-20210321.1750/irony.el
-  irony-20210321.1750/server/
-  irony-20210321.1750/server/.clang-format
-  irony-20210321.1750/server/.clang-tidy
-  irony-20210321.1750/server/CMakeLists.txt
-  irony-20210321.1750/server/build-aux/
-  irony-20210321.1750/server/build-aux/run-clang-tidy/
-  irony-20210321.1750/server/build-aux/run-clang-tidy/LICENSE.TXT
-  irony-20210321.1750/server/build-aux/run-clang-tidy/README
-  irony-20210321.1750/server/build-aux/run-clang-tidy/run-clang-tidy.py
-  irony-20210321.1750/server/cmake/
-  irony-20210321.1750/server/cmake/CheckClangResourceDir.cmake
-  irony-20210321.1750/server/cmake/LibClangDiagnosticsChecker.cpp
-  irony-20210321.1750/server/cmake/modules/
-  irony-20210321.1750/server/cmake/modules/FindLibClang.cmake
-  irony-20210321.1750/server/src/
-  irony-20210321.1750/server/src/CMakeLists.txt
-  irony-20210321.1750/server/src/Command.cpp
-  irony-20210321.1750/server/src/Command.h
-  irony-20210321.1750/server/src/Commands.def
-  irony-20210321.1750/server/src/CompDBCache.cpp
-  irony-20210321.1750/server/src/CompDBCache.h
-  irony-20210321.1750/server/src/Irony.cpp
-  irony-20210321.1750/server/src/Irony.h
-  irony-20210321.1750/server/src/Style.h
-  irony-20210321.1750/server/src/TUManager.cpp
-  irony-20210321.1750/server/src/TUManager.h
-  irony-20210321.1750/server/src/main.cpp
-  irony-20210321.1750/server/src/support/
-  irony-20210321.1750/server/src/support/CIndex.h
-  irony-20210321.1750/server/src/support/CommandLineParser.cpp
-  irony-20210321.1750/server/src/support/CommandLineParser.h
-  irony-20210321.1750/server/src/support/NonCopyable.h
-  irony-20210321.1750/server/src/support/TemporaryFile.cpp
-  irony-20210321.1750/server/src/support/TemporaryFile.h
-  irony-20210321.1750/server/src/support/iomanip_quoted.h
-  irony-20210321.1750/server/test/
-  irony-20210321.1750/server/test/CMakeLists.txt
-  irony-20210321.1750/server/test/elisp/
-  irony-20210321.1750/server/test/elisp/CMakeLists.txt
-  irony-20210321.1750/server/test/elisp/irony-cdb-json.el
-  irony-20210321.1750/server/test/elisp/irony-iotask.el
-  irony-20210321.1750/server/test/elisp/irony.el
-  irony-20210321.1750/server/test/elisp/test-config.el
-Built irony in 7.665s, finished at Tue Jul  6 10:44:21 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  399 Jul  6 10:44 packages/irony-20210321.1750.entry
-252K -rw-r--r-- 1 root root 250K Jul  6 10:44 packages/irony-20210321.1750.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:44 packages/irony-badge.svg
- 20K -rw-r--r-- 1 root root  19K Jul  6 10:44 packages/irony-eldoc-20200622.2214.el
-4.0K -rw-r--r-- 1 root root  467 Jul  6 07:43 packages/irony-eldoc-20200622.2214.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:43 packages/irony-eldoc-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul  6 07:43 packages/irony-eldoc-readme.txt
-4.0K -rw-r--r-- 1 root root  137 Jul  6 10:44 packages/irony-eldoc.log
-4.0K -rw-r--r-- 1 root root  631 Jul  6 10:44 packages/irony-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

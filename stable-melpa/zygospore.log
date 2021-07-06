@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/LouisKottmann/zygospore.el.git
 
 Updating /mnt/store/melpa/working/zygospore/
-Built zygospore in 2.731s, finished at Tue Jul  6 11:21:17 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.8K Jul  6 11:21 packages/zygospore-20140703.852.el
-4.0K -rw-r--r-- 1 root root  356 Jul  6 11:21 packages/zygospore-20140703.852.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:21 packages/zygospore-badge.svg
-4.0K -rw-r--r-- 1 root root  277 Jul  6 11:21 packages/zygospore-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

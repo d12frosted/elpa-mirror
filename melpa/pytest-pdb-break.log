@@ -3,35 +3,10 @@ Fetcher: github
 Source:  https://github.com/poppyschmo/pytest-pdb-break.git
 
 Updating /mnt/store/melpa/working/pytest-pdb-break/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pytest-pdb-break/
-  to /tmp/pytest-pdb-breaktcqyOO/pytest-pdb-break-20200804.848
-  ! emacs/pytest-pdb-break-extra.el -> pytest-pdb-break-extra.el
-  ! emacs/pytest-pdb-break.el -> pytest-pdb-break.el
-  ! pytest_pdb_break.py -> lib/pytest_pdb_break.py
-  ! setup.py -> lib/setup.py
-  ! helpers => lib/helpers
-  ! emacs/setup_code_wrapper.py -> lib/emacs/setup_code_wrapper.py
-Created pytest-pdb-break-20200804.848.tar containing:
-  pytest-pdb-break-20200804.848/
-  pytest-pdb-break-20200804.848/lib/
-  pytest-pdb-break-20200804.848/lib/emacs/
-  pytest-pdb-break-20200804.848/lib/emacs/setup_code_wrapper.py
-  pytest-pdb-break-20200804.848/lib/helpers/
-  pytest-pdb-break-20200804.848/lib/helpers/__init__.py
-  pytest-pdb-break-20200804.848/lib/helpers/common.py
-  pytest-pdb-break-20200804.848/lib/helpers/ensure_venv.py
-  pytest-pdb-break-20200804.848/lib/helpers/get_collected.py
-  pytest-pdb-break-20200804.848/lib/helpers/get_config_info.py
-  pytest-pdb-break-20200804.848/lib/helpers/main.py
-  pytest-pdb-break-20200804.848/lib/pytest_pdb_break.py
-  pytest-pdb-break-20200804.848/lib/setup.py
-  pytest-pdb-break-20200804.848/pytest-pdb-break-extra.el
-  pytest-pdb-break-20200804.848/pytest-pdb-break-pkg.el
-  pytest-pdb-break-20200804.848/pytest-pdb-break.el
-Built pytest-pdb-break in 3.547s, finished at Tue Jul  6 11:04:55 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  396 Jul  6 11:04 packages/pytest-pdb-break-20200804.848.entry
-100K -rw-r--r-- 1 root root 100K Jul  6 11:04 packages/pytest-pdb-break-20200804.848.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:04 packages/pytest-pdb-break-badge.svg
-4.0K -rw-r--r-- 1 root root  650 Jul  6 11:04 packages/pytest-pdb-break-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

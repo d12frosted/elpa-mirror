@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/gollth/helm-catkin.git
 
 Updating /mnt/store/melpa/working/helm-catkin/
-Built helm-catkin in 5.013s, finished at Tue Jul  6 10:39:07 2021
- ✓ Success:
- 36K -rw-r--r-- 1 root root  35K Jul  6 10:39 packages/helm-catkin-20190425.1520.el
-4.0K -rw-r--r-- 1 root root  492 Jul  6 10:39 packages/helm-catkin-20190425.1520.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:39 packages/helm-catkin-badge.svg
-4.0K -rw-r--r-- 1 root root 1.7K Jul  6 10:39 packages/helm-catkin-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

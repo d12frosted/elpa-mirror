@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/ruby-test-mode/ruby-test-mode.git
 
 Updating /mnt/store/melpa/working/ruby-test-mode/
-Built ruby-test-mode in 3.984s, finished at Tue Jul  6 11:07:47 2021
- ✓ Success:
- 28K -rw-r--r-- 1 root root  25K Jul  6 11:07 packages/ruby-test-mode-20210205.1107.el
-4.0K -rw-r--r-- 1 root root  516 Jul  6 11:07 packages/ruby-test-mode-20210205.1107.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:07 packages/ruby-test-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jul  6 11:07 packages/ruby-test-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

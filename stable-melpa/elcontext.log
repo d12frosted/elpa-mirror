@@ -3,27 +3,10 @@ Fetcher: github
 Source:  https://github.com/rollacaster/elcontext.git
 
 Updating /mnt/store/melpa/working/elcontext/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elcontext/
-  to /tmp/elcontextoYJUfi/elcontext-20210109.1238
-    elcontext-action.el -> elcontext-action.el
-    elcontext-directory.el -> elcontext-directory.el
-    elcontext-location.el -> elcontext-location.el
-    elcontext-time.el -> elcontext-time.el
-    elcontext-utils.el -> elcontext-utils.el
-    elcontext.el -> elcontext.el
-Created elcontext-20210109.1238.tar containing:
-  elcontext-20210109.1238/
-  elcontext-20210109.1238/elcontext-action.el
-  elcontext-20210109.1238/elcontext-directory.el
-  elcontext-20210109.1238/elcontext-location.el
-  elcontext-20210109.1238/elcontext-pkg.el
-  elcontext-20210109.1238/elcontext-time.el
-  elcontext-20210109.1238/elcontext-utils.el
-  elcontext-20210109.1238/elcontext.el
-Built elcontext in 3.721s, finished at Tue Jul  6 10:25:33 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  490 Jul  6 10:25 packages/elcontext-20210109.1238.entry
- 40K -rw-r--r-- 1 root root  40K Jul  6 10:25 packages/elcontext-20210109.1238.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:25 packages/elcontext-badge.svg
-4.0K -rw-r--r-- 1 root root  393 Jul  6 10:25 packages/elcontext-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/mattiasb/dired-hide-dotfiles.git
 
 Updating /mnt/store/melpa/working/dired-hide-dotfiles/
-Built dired-hide-dotfiles in 4.344s, finished at Tue Jul  6 10:22:49 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.5K Jul  6 10:22 packages/dired-hide-dotfiles-20210222.1919.el
-4.0K -rw-r--r-- 1 root root  437 Jul  6 10:22 packages/dired-hide-dotfiles-20210222.1919.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:22 packages/dired-hide-dotfiles-badge.svg
-4.0K -rw-r--r-- 1 root root  365 Jul  6 10:22 packages/dired-hide-dotfiles-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

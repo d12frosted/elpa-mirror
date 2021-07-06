@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/wlemuel/alarm-clock.git
 
 Updating /mnt/store/melpa/working/alarm-clock/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/alarm-clock/
-  to /tmp/alarm-clockZ5FMnN/alarm-clock-20191204.716
-    alarm-clock.el -> alarm-clock.el
-    alarm.mp3 -> alarm.mp3
-Created alarm-clock-20191204.716.tar containing:
-  alarm-clock-20191204.716/
-  alarm-clock-20191204.716/alarm-clock-pkg.el
-  alarm-clock-20191204.716/alarm-clock.el
-  alarm-clock-20191204.716/alarm.mp3
-Built alarm-clock in 4.822s, finished at Tue Jul  6 10:11:27 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  411 Jul  6 10:11 packages/alarm-clock-20191204.716.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:11 packages/alarm-clock-20191204.716.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:11 packages/alarm-clock-badge.svg
-4.0K -rw-r--r-- 1 root root  295 Jul  6 10:11 packages/alarm-clock-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

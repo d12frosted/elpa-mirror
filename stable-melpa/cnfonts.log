@@ -3,20 +3,10 @@ Fetcher: github
 Source:  https://github.com/tumashu/cnfonts.git
 
 Updating /mnt/store/melpa/working/cnfonts/
-Note: cnfonts :files spec is equivalent to the default.
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cnfonts/
-  to /tmp/cnfontsDyCPtS/cnfonts-20200824.240
-    cnfonts-ui.el -> cnfonts-ui.el
-    cnfonts.el -> cnfonts.el
-Created cnfonts-20200824.240.tar containing:
-  cnfonts-20200824.240/
-  cnfonts-20200824.240/cnfonts-pkg.el
-  cnfonts-20200824.240/cnfonts-ui.el
-  cnfonts-20200824.240/cnfonts.el
-Built cnfonts in 4.001s, finished at Tue Jul  6 10:17:49 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  357 Jul  6 10:17 packages/cnfonts-20200824.240.entry
-100K -rw-r--r-- 1 root root 100K Jul  6 10:17 packages/cnfonts-20200824.240.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:17 packages/cnfonts-badge.svg
- 16K -rw-r--r-- 1 root root  13K Jul  6 10:17 packages/cnfonts-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

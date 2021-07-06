@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/flycheck/flycheck-haskell.git
 
 Updating /mnt/store/melpa/working/flycheck-haskell/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/flycheck-haskell/
-  to /tmp/flycheck-haskelllk5oea/flycheck-haskell-20200927.1603
-    flycheck-haskell.el -> flycheck-haskell.el
-    get-cabal-configuration.hs -> get-cabal-configuration.hs
-Created flycheck-haskell-20200927.1603.tar containing:
-  flycheck-haskell-20200927.1603/
-  flycheck-haskell-20200927.1603/flycheck-haskell-pkg.el
-  flycheck-haskell-20200927.1603/flycheck-haskell.el
-  flycheck-haskell-20200927.1603/get-cabal-configuration.hs
-Built flycheck-haskell in 3.539s, finished at Tue Jul  6 10:32:10 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  578 Jul  6 10:32 packages/flycheck-haskell-20200927.1603.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 10:32 packages/flycheck-haskell-20200927.1603.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:32 packages/flycheck-haskell-badge.svg
-4.0K -rw-r--r-- 1 root root  578 Jul  6 10:32 packages/flycheck-haskell-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

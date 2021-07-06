@@ -3,41 +3,10 @@ Fetcher: github
 Source:  https://github.com/bbatsov/solarized-emacs.git
 
 Updating /mnt/store/melpa/working/solarized-theme/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/solarized-theme/
-  to /tmp/solarized-themePqkEKb/solarized-theme-20210519.925
-    solarized-dark-high-contrast-theme.el -> solarized-dark-high-contrast-theme.el
-    solarized-dark-theme.el -> solarized-dark-theme.el
-    solarized-faces.el -> solarized-faces.el
-    solarized-gruvbox-dark-theme.el -> solarized-gruvbox-dark-theme.el
-    solarized-gruvbox-light-theme.el -> solarized-gruvbox-light-theme.el
-    solarized-light-high-contrast-theme.el -> solarized-light-high-contrast-theme.el
-    solarized-light-theme.el -> solarized-light-theme.el
-    solarized-palettes.el -> solarized-palettes.el
-    solarized-theme-utils.el -> solarized-theme-utils.el
-    solarized-theme.el -> solarized-theme.el
-    solarized-wombat-dark-theme.el -> solarized-wombat-dark-theme.el
-    solarized-zenburn-theme.el -> solarized-zenburn-theme.el
-    solarized.el -> solarized.el
-Created solarized-theme-20210519.925.tar containing:
-  solarized-theme-20210519.925/
-  solarized-theme-20210519.925/solarized-dark-high-contrast-theme.el
-  solarized-theme-20210519.925/solarized-dark-theme.el
-  solarized-theme-20210519.925/solarized-faces.el
-  solarized-theme-20210519.925/solarized-gruvbox-dark-theme.el
-  solarized-theme-20210519.925/solarized-gruvbox-light-theme.el
-  solarized-theme-20210519.925/solarized-light-high-contrast-theme.el
-  solarized-theme-20210519.925/solarized-light-theme.el
-  solarized-theme-20210519.925/solarized-palettes.el
-  solarized-theme-20210519.925/solarized-theme-pkg.el
-  solarized-theme-20210519.925/solarized-theme-utils.el
-  solarized-theme-20210519.925/solarized-theme.el
-  solarized-theme-20210519.925/solarized-wombat-dark-theme.el
-  solarized-theme-20210519.925/solarized-zenburn-theme.el
-  solarized-theme-20210519.925/solarized.el
-Built solarized-theme in 4.678s, finished at Tue Jul  6 11:11:05 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  426 Jul  6 11:11 packages/solarized-theme-20210519.925.entry
-192K -rw-r--r-- 1 root root 190K Jul  6 11:11 packages/solarized-theme-20210519.925.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:11 packages/solarized-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  329 Jul  6 11:11 packages/solarized-theme-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

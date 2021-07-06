@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/porterjamesj/virtualenvwrapper.el.git
 
 Updating /mnt/store/melpa/working/virtualenvwrapper/
-Built virtualenvwrapper in 3.854s, finished at Tue Jul  6 11:17:19 2021
- ✓ Success:
- 24K -rw-r--r-- 1 root root  22K Jul  6 11:17 packages/virtualenvwrapper-20190223.1919.el
-4.0K -rw-r--r-- 1 root root  488 Jul  6 11:17 packages/virtualenvwrapper-20190223.1919.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:17 packages/virtualenvwrapper-badge.svg
-4.0K -rw-r--r-- 1 root root  258 Jul  6 11:17 packages/virtualenvwrapper-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/uk-ar/flex-autopair.git
 
 Updating /mnt/store/melpa/working/flex-autopair/
-Built flex-autopair in 4.307s, finished at Tue Jul  6 10:31:19 2021
- ✓ Success:
- 44K -rw-r--r-- 1 root root  42K Jul  6 10:31 packages/flex-autopair-20120809.1218.el
-4.0K -rw-r--r-- 1 root root  426 Jul  6 10:31 packages/flex-autopair-20120809.1218.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:31 packages/flex-autopair-badge.svg
-4.0K -rw-r--r-- 1 root root  239 Jul  6 10:31 packages/flex-autopair-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

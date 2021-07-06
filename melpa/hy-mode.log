@@ -3,25 +3,10 @@ Fetcher: github
 Source:  https://github.com/hylang/hy-mode.git
 
 Updating /mnt/store/melpa/working/hy-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hy-mode/
-  to /tmp/hy-modeiOBmzD/hy-mode-20201010.1351
-    hy-base.el -> hy-base.el
-    hy-font-lock.el -> hy-font-lock.el
-    hy-jedhy.el -> hy-jedhy.el
-    hy-mode.el -> hy-mode.el
-    hy-shell.el -> hy-shell.el
-Created hy-mode-20201010.1351.tar containing:
-  hy-mode-20201010.1351/
-  hy-mode-20201010.1351/hy-base.el
-  hy-mode-20201010.1351/hy-font-lock.el
-  hy-mode-20201010.1351/hy-jedhy.el
-  hy-mode-20201010.1351/hy-mode-pkg.el
-  hy-mode-20201010.1351/hy-mode.el
-  hy-mode-20201010.1351/hy-shell.el
-Built hy-mode in 3.692s, finished at Tue Jul  6 10:42:22 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  320 Jul  6 10:42 packages/hy-mode-20201010.1351.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 10:42 packages/hy-mode-20201010.1351.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:42 packages/hy-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  576 Jul  6 10:42 packages/hy-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

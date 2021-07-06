@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/dwcoates/uci-mode.git
 
 Updating /mnt/store/melpa/working/uci-mode/
-Built uci-mode in 3.969s, finished at Tue Jul  6 11:16:03 2021
- ✓ Success:
- 16K -rw-r--r-- 1 root root  15K Jul  6 11:16 packages/uci-mode-20210626.1956.el
-4.0K -rw-r--r-- 1 root root  377 Jul  6 11:16 packages/uci-mode-20210626.1956.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:16 packages/uci-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  768 Jul  6 11:16 packages/uci-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

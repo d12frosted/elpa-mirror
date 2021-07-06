@@ -3,57 +3,10 @@ Fetcher: github
 Source:  https://github.com/sigma/gh.el.git
 
 Updating /mnt/store/melpa/working/gh/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/gh/
-  to /tmp/gh1SD0II/gh-20201222.438
-    gh-api.el -> gh-api.el
-    gh-auth.el -> gh-auth.el
-    gh-cache.el -> gh-cache.el
-    gh-comments.el -> gh-comments.el
-    gh-common.el -> gh-common.el
-    gh-gist.el -> gh-gist.el
-    gh-issue-comments.el -> gh-issue-comments.el
-    gh-issues.el -> gh-issues.el
-    gh-oauth.el -> gh-oauth.el
-    gh-orgs.el -> gh-orgs.el
-    gh-pkg.el -> gh-pkg.el
-    gh-profile.el -> gh-profile.el
-    gh-pull-comments.el -> gh-pull-comments.el
-    gh-pulls.el -> gh-pulls.el
-    gh-repos.el -> gh-repos.el
-    gh-search.el -> gh-search.el
-    gh-url.el -> gh-url.el
-    gh-users.el -> gh-users.el
-    gh.el -> gh.el
-Created gh-20201222.438.tar containing:
-  gh-20201222.438/
-  gh-20201222.438/gh-api.el
-  gh-20201222.438/gh-auth.el
-  gh-20201222.438/gh-cache.el
-  gh-20201222.438/gh-comments.el
-  gh-20201222.438/gh-common.el
-  gh-20201222.438/gh-gist.el
-  gh-20201222.438/gh-issue-comments.el
-  gh-20201222.438/gh-issues.el
-  gh-20201222.438/gh-oauth.el
-  gh-20201222.438/gh-orgs.el
-  gh-20201222.438/gh-pkg.el
-  gh-20201222.438/gh-profile.el
-  gh-20201222.438/gh-pull-comments.el
-  gh-20201222.438/gh-pulls.el
-  gh-20201222.438/gh-repos.el
-  gh-20201222.438/gh-search.el
-  gh-20201222.438/gh-url.el
-  gh-20201222.438/gh-users.el
-  gh-20201222.438/gh.el
-Built gh in 3.777s, finished at Tue Jul  6 10:35:29 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  368 Jul  6 10:35 packages/gh-20201222.438.entry
-112K -rw-r--r-- 1 root root 110K Jul  6 10:35 packages/gh-20201222.438.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:35 packages/gh-badge.svg
-8.0K -rw-r--r-- 1 root root 6.8K Jul  6 10:35 packages/gh-md-20151207.1740.el
-4.0K -rw-r--r-- 1 root root  371 Jul  6 10:35 packages/gh-md-20151207.1740.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:33 packages/gh-md-badge.svg
-4.0K -rw-r--r-- 1 root root  416 Jul  6 10:35 packages/gh-md-readme.txt
-4.0K -rw-r--r-- 1 root root  126 Jul  6 10:35 packages/gh-md.log
-   0 -rw-r--r-- 1 root root    0 Jul  6 10:35 packages/gh-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

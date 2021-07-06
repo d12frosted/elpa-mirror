@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/akirak/helm-tail.git
 
 Updating /mnt/store/melpa/working/helm-tail/
-Built helm-tail in 5.397s, finished at Tue Jul  6 10:40:59 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.1K Jul  6 10:40 packages/helm-tail-20181124.439.el
-4.0K -rw-r--r-- 1 root root  433 Jul  6 10:40 packages/helm-tail-20181124.439.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:40 packages/helm-tail-badge.svg
-4.0K -rw-r--r-- 1 root root  115 Jul  6 10:40 packages/helm-tail-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

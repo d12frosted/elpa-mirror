@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/justbur/emacs-bind-map.git
 
 Updating /mnt/store/melpa/working/bind-map/
-Built bind-map in 4.074s, finished at Tue Jul  6 10:14:25 2021
- ✓ Success:
- 20K -rw-r--r-- 1 root root  19K Jul  6 10:14 packages/bind-map-20161207.1511.el
-4.0K -rw-r--r-- 1 root root  358 Jul  6 10:14 packages/bind-map-20161207.1511.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:14 packages/bind-map-badge.svg
-4.0K -rw-r--r-- 1 root root 3.2K Jul  6 10:14 packages/bind-map-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

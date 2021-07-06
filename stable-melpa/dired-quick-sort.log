@@ -3,9 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/xuhdev/dired-quick-sort.git
 
 Updating /mnt/store/melpa/working/dired-quick-sort/
-Built dired-quick-sort in 4.164s, finished at Tue Jul  6 10:22:55 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  11K Jul  6 10:22 packages/dired-quick-sort-20201221.403.el
-4.0K -rw-r--r-- 1 root root  457 Jul  6 10:22 packages/dired-quick-sort-20201221.403.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:22 packages/dired-quick-sort-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jul  6 10:22 packages/dired-quick-sort-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/mooz/fyure.git
 
 Updating /mnt/store/melpa/working/fyure/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/fyure/
-  to /tmp/fyurerFAGA3/fyure-20130216.1314
-    fyure.el -> fyure.el
-    fyure.py -> fyure.py
-Created fyure-20130216.1314.tar containing:
-  fyure-20130216.1314/
-  fyure-20130216.1314/fyure-pkg.el
-  fyure-20130216.1314/fyure.el
-  fyure-20130216.1314/fyure.py
-Built fyure in 3.881s, finished at Tue Jul  6 10:35:00 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  294 Jul  6 10:34 packages/fyure-20130216.1314.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:34 packages/fyure-20130216.1314.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:35 packages/fyure-badge.svg
-4.0K -rw-r--r-- 1 root root  268 Jul  6 10:34 packages/fyure-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

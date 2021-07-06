@@ -3,24 +3,10 @@ Fetcher: github
 Source:  https://github.com/ruediger/weather-metno-el.git
 
 Updating /mnt/store/melpa/working/weather-metno/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/weather-metno/
-  to /tmp/weather-metnoAedgxh/weather-metno-20150901.107
-    org-weather-metno.el -> org-weather-metno.el
-    weather-metno-mode-line.el -> weather-metno-mode-line.el
-    weather-metno-query.el -> weather-metno-query.el
-    weather-metno.el -> weather-metno.el
-  ! weather-metno-pkg.el.in -> weather-metno-pkg.el
-Created weather-metno-20150901.107.tar containing:
-  weather-metno-20150901.107/
-  weather-metno-20150901.107/org-weather-metno.el
-  weather-metno-20150901.107/weather-metno-mode-line.el
-  weather-metno-20150901.107/weather-metno-pkg.el
-  weather-metno-20150901.107/weather-metno-query.el
-  weather-metno-20150901.107/weather-metno.el
-Built weather-metno in 4.644s, finished at Tue Jul  6 11:17:59 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  403 Jul  6 11:17 packages/weather-metno-20150901.107.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 11:17 packages/weather-metno-20150901.107.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:17 packages/weather-metno-badge.svg
-4.0K -rw-r--r-- 1 root root   87 Jul  6 11:17 packages/weather-metno-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

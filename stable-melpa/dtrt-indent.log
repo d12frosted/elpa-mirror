@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/jscheid/dtrt-indent.git
 
 Updating /mnt/store/melpa/working/dtrt-indent/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/dtrt-indent/
-  to /tmp/dtrt-indentUG0WEk/dtrt-indent-20210423.745
-    dtrt-indent-diag.el -> dtrt-indent-diag.el
-    dtrt-indent.el -> dtrt-indent.el
-Created dtrt-indent-20210423.745.tar containing:
-  dtrt-indent-20210423.745/
-  dtrt-indent-20210423.745/dtrt-indent-diag.el
-  dtrt-indent-20210423.745/dtrt-indent-pkg.el
-  dtrt-indent-20210423.745/dtrt-indent.el
-Built dtrt-indent in 3.441s, finished at Tue Jul  6 10:24:12 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  338 Jul  6 10:24 packages/dtrt-indent-20210423.745.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 10:24 packages/dtrt-indent-20210423.745.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:24 packages/dtrt-indent-badge.svg
-8.0K -rw-r--r-- 1 root root 5.6K Jul  6 10:24 packages/dtrt-indent-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

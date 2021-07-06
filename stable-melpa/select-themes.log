@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/jasonm23/emacs-select-themes.git
 
 Updating /mnt/store/melpa/working/select-themes/
-Built select-themes in 3.753s, finished at Tue Jul  6 11:08:42 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 1.9K Jul  6 11:08 packages/select-themes-20160221.106.el
-4.0K -rw-r--r-- 1 root root  337 Jul  6 11:08 packages/select-themes-20160221.106.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:08 packages/select-themes-badge.svg
-4.0K -rw-r--r-- 1 root root  169 Jul  6 11:08 packages/select-themes-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

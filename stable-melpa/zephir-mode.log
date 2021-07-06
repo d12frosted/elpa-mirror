@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/zephir-lang/zephir-mode.git
 
 Updating /mnt/store/melpa/working/zephir-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/zephir-mode/
-  to /tmp/zephir-modecK3Ssh/zephir-mode-20200417.830
-    zephir-face.el -> zephir-face.el
-    zephir-indent.el -> zephir-indent.el
-    zephir-mode.el -> zephir-mode.el
-    zephir.el -> zephir.el
-Created zephir-mode-20200417.830.tar containing:
-  zephir-mode-20200417.830/
-  zephir-mode-20200417.830/zephir-face.el
-  zephir-mode-20200417.830/zephir-indent.el
-  zephir-mode-20200417.830/zephir-mode-pkg.el
-  zephir-mode-20200417.830/zephir-mode.el
-  zephir-mode-20200417.830/zephir.el
-Built zephir-mode in 3.447s, finished at Tue Jul  6 11:20:54 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  454 Jul  6 11:20 packages/zephir-mode-20200417.830.entry
- 52K -rw-r--r-- 1 root root  50K Jul  6 11:20 packages/zephir-mode-20200417.830.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:20 packages/zephir-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  132 Jul  6 11:20 packages/zephir-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacsattic/org-wunderlist.git
 
 Updating /mnt/store/melpa/working/org-wunderlist/
-Built org-wunderlist in 3.866s, finished at Tue Jul  6 10:59:03 2021
- ✓ Success:
- 40K -rw-r--r-- 1 root root  38K Jul  6 10:59 packages/org-wunderlist-20191017.1917.el
-4.0K -rw-r--r-- 1 root root  457 Jul  6 10:59 packages/org-wunderlist-20191017.1917.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:59 packages/org-wunderlist-badge.svg
-4.0K -rw-r--r-- 1 root root   87 Jul  6 10:59 packages/org-wunderlist-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

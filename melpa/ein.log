@@ -3,93 +3,10 @@ Fetcher: github
 Source:  https://github.com/millejoh/emacs-ipython-notebook.git
 
 Updating /mnt/store/melpa/working/ein/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ein/
-  to /tmp/einEBE2AA/ein-20210522.1036
-  ! lisp/ein-cell.el -> ein-cell.el
-  ! lisp/ein-classes.el -> ein-classes.el
-  ! lisp/ein-completer.el -> ein-completer.el
-  ! lisp/ein-contents-api.el -> ein-contents-api.el
-  ! lisp/ein-core.el -> ein-core.el
-  ! lisp/ein-dev.el -> ein-dev.el
-  ! lisp/ein-events.el -> ein-events.el
-  ! lisp/ein-file.el -> ein-file.el
-  ! lisp/ein-gat.el -> ein-gat.el
-  ! lisp/ein-ipdb.el -> ein-ipdb.el
-  ! lisp/ein-ipynb-mode.el -> ein-ipynb-mode.el
-  ! lisp/ein-jupyter.el -> ein-jupyter.el
-  ! lisp/ein-kernel.el -> ein-kernel.el
-  ! lisp/ein-kernelinfo.el -> ein-kernelinfo.el
-  ! lisp/ein-kill-ring.el -> ein-kill-ring.el
-  ! lisp/ein-log.el -> ein-log.el
-  ! lisp/ein-markdown-mode.el -> ein-markdown-mode.el
-  ! lisp/ein-node.el -> ein-node.el
-  ! lisp/ein-notebook.el -> ein-notebook.el
-  ! lisp/ein-notebooklist.el -> ein-notebooklist.el
-  ! lisp/ein-notification.el -> ein-notification.el
-  ! lisp/ein-output-area.el -> ein-output-area.el
-  ! lisp/ein-pager.el -> ein-pager.el
-  ! lisp/ein-pkg.el -> ein-pkg.el
-  ! lisp/ein-process.el -> ein-process.el
-  ! lisp/ein-python-send.el -> ein-python-send.el
-  ! lisp/ein-pytools.el -> ein-pytools.el
-  ! lisp/ein-query.el -> ein-query.el
-  ! lisp/ein-scratchsheet.el -> ein-scratchsheet.el
-  ! lisp/ein-shared-output.el -> ein-shared-output.el
-  ! lisp/ein-traceback.el -> ein-traceback.el
-  ! lisp/ein-utils.el -> ein-utils.el
-  ! lisp/ein-websocket.el -> ein-websocket.el
-  ! lisp/ein-worksheet.el -> ein-worksheet.el
-  ! lisp/ein.el -> ein.el
-  ! lisp/ob-ein.el -> ob-ein.el
-  ! lisp/poly-ein.el -> poly-ein.el
-Created ein-20210522.1036.tar containing:
-  ein-20210522.1036/
-  ein-20210522.1036/ein-cell.el
-  ein-20210522.1036/ein-classes.el
-  ein-20210522.1036/ein-completer.el
-  ein-20210522.1036/ein-contents-api.el
-  ein-20210522.1036/ein-core.el
-  ein-20210522.1036/ein-dev.el
-  ein-20210522.1036/ein-events.el
-  ein-20210522.1036/ein-file.el
-  ein-20210522.1036/ein-gat.el
-  ein-20210522.1036/ein-ipdb.el
-  ein-20210522.1036/ein-ipynb-mode.el
-  ein-20210522.1036/ein-jupyter.el
-  ein-20210522.1036/ein-kernel.el
-  ein-20210522.1036/ein-kernelinfo.el
-  ein-20210522.1036/ein-kill-ring.el
-  ein-20210522.1036/ein-log.el
-  ein-20210522.1036/ein-markdown-mode.el
-  ein-20210522.1036/ein-node.el
-  ein-20210522.1036/ein-notebook.el
-  ein-20210522.1036/ein-notebooklist.el
-  ein-20210522.1036/ein-notification.el
-  ein-20210522.1036/ein-output-area.el
-  ein-20210522.1036/ein-pager.el
-  ein-20210522.1036/ein-pkg.el
-  ein-20210522.1036/ein-process.el
-  ein-20210522.1036/ein-python-send.el
-  ein-20210522.1036/ein-pytools.el
-  ein-20210522.1036/ein-query.el
-  ein-20210522.1036/ein-scratchsheet.el
-  ein-20210522.1036/ein-shared-output.el
-  ein-20210522.1036/ein-traceback.el
-  ein-20210522.1036/ein-utils.el
-  ein-20210522.1036/ein-websocket.el
-  ein-20210522.1036/ein-worksheet.el
-  ein-20210522.1036/ein.el
-  ein-20210522.1036/ob-ein.el
-  ein-20210522.1036/poly-ein.el
-Built ein in 3.913s, finished at Tue Jul  6 10:25:19 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  481 Jul  6 10:25 packages/ein-20210522.1036.entry
-820K -rw-r--r-- 1 root root 820K Jul  6 10:25 packages/ein-20210522.1036.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:25 packages/ein-badge.svg
- 12K -rw-r--r-- 1 root root 9.3K Jul  6 10:25 packages/ein-mumamo-20150302.28.el
-4.0K -rw-r--r-- 1 root root  378 Jul  6 07:24 packages/ein-mumamo-20150302.28.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:24 packages/ein-mumamo-badge.svg
-4.0K -rw-r--r-- 1 root root  595 Jul  6 10:25 packages/ein-mumamo-readme.txt
-4.0K -rw-r--r-- 1 root root  135 Jul  6 10:25 packages/ein-mumamo.log
-4.0K -rw-r--r-- 1 root root  534 Jul  6 10:25 packages/ein-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

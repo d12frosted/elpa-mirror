@@ -3,22 +3,10 @@ Fetcher: github
 Source:  https://github.com/hpdeifel/synosaurus.git
 
 Updating /mnt/store/melpa/working/synosaurus/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/synosaurus/
-  to /tmp/synosaurusXMfX5n/synosaurus-20191125.552
-    synosaurus-openthesaurus.el -> synosaurus-openthesaurus.el
-    synosaurus-pkg.el -> synosaurus-pkg.el
-    synosaurus-wordnet.el -> synosaurus-wordnet.el
-    synosaurus.el -> synosaurus.el
-Created synosaurus-20191125.552.tar containing:
-  synosaurus-20191125.552/
-  synosaurus-20191125.552/synosaurus-openthesaurus.el
-  synosaurus-20191125.552/synosaurus-pkg.el
-  synosaurus-20191125.552/synosaurus-wordnet.el
-  synosaurus-20191125.552/synosaurus.el
-Built synosaurus in 3.761s, finished at Tue Jul  6 11:13:34 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  356 Jul  6 11:13 packages/synosaurus-20191125.552.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 11:13 packages/synosaurus-20191125.552.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:13 packages/synosaurus-badge.svg
-4.0K -rw-r--r-- 1 root root  353 Jul  6 11:13 packages/synosaurus-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/abelianring/plain-theme.git
 
 Updating /mnt/store/melpa/working/plain-theme/
-Built plain-theme in 3.523s, finished at Tue Jul  6 11:02:24 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 1.8K Jul  6 11:02 packages/plain-theme-20171124.410.el
-4.0K -rw-r--r-- 1 root root  183 Jul  6 11:02 packages/plain-theme-20171124.410.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:02 packages/plain-theme-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

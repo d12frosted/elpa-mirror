@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/PillFall/Emacs-LanguageTool.el.git
 
 Updating /mnt/store/melpa/working/languagetool/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/languagetool/
-  to /tmp/languagetoolg9i8VG/languagetool-20210621.453
-    languagetool-issue-faces.el -> languagetool-issue-faces.el
-    languagetool.el -> languagetool.el
-Created languagetool-20210621.453.tar containing:
-  languagetool-20210621.453/
-  languagetool-20210621.453/languagetool-issue-faces.el
-  languagetool-20210621.453/languagetool-pkg.el
-  languagetool-20210621.453/languagetool.el
-Built languagetool in 3.688s, finished at Tue Jul  6 10:47:32 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  479 Jul  6 10:47 packages/languagetool-20210621.453.entry
- 40K -rw-r--r-- 1 root root  40K Jul  6 10:47 packages/languagetool-20210621.453.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:47 packages/languagetool-badge.svg
-4.0K -rw-r--r-- 1 root root  340 Jul  6 10:47 packages/languagetool-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/jmdeldin/underwater-theme.el.git
 
 Updating /mnt/store/melpa/working/underwater-theme/
-Built underwater-theme in 3.786s, finished at Tue Jul  6 11:16:10 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.3K Jul  6 11:16 packages/underwater-theme-20131118.2.el
-4.0K -rw-r--r-- 1 root root  308 Jul  6 11:16 packages/underwater-theme-20131118.2.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:16 packages/underwater-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  397 Jul  6 11:16 packages/underwater-theme-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/sergiruiztrepat/molar-mass.git
 
 Updating /mnt/store/melpa/working/molar-mass/
-Built molar-mass in 4.263s, finished at Tue Jul  6 10:52:40 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  11K Jul  6 10:52 packages/molar-mass-20210519.1342.el
-4.0K -rw-r--r-- 1 root root  384 Jul  6 10:52 packages/molar-mass-20210519.1342.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:52 packages/molar-mass-badge.svg
-4.0K -rw-r--r-- 1 root root  736 Jul  6 10:52 packages/molar-mass-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

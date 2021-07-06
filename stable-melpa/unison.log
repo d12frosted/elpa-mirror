@@ -3,14 +3,10 @@ Fetcher: github
 Source:  https://github.com/unhammer/unison.el.git
 
 Updating /mnt/store/melpa/working/unison/
-Built unison in 3.694s, finished at Tue Jul  6 11:16:26 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.5K Jul  6 11:16 packages/unison-20160704.740.el
-4.0K -rw-r--r-- 1 root root  343 Jul  6 11:16 packages/unison-20160704.740.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:16 packages/unison-badge.svg
-8.0K -rw-r--r-- 1 root root 5.7K Jul  6 11:16 packages/unison-mode-20160513.1501.el
-4.0K -rw-r--r-- 1 root root  417 Jul  6 11:16 packages/unison-mode-20160513.1501.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 08:16 packages/unison-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  524 Jul  6 11:16 packages/unison-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  138 Jul  6 11:16 packages/unison-mode.log
-4.0K -rw-r--r-- 1 root root  256 Jul  6 11:16 packages/unison-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

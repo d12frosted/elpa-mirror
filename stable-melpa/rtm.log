@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/pmiddend/emacs-rtm.git
 
 Updating /mnt/store/melpa/working/rtm/
-Built rtm in 3.754s, finished at Tue Jul  6 11:07:37 2021
- ✓ Success:
- 24K -rw-r--r-- 1 root root  24K Jul  6 11:07 packages/rtm-20180329.1508.el
-4.0K -rw-r--r-- 1 root root  459 Jul  6 11:07 packages/rtm-20180329.1508.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:07 packages/rtm-badge.svg
-4.0K -rw-r--r-- 1 root root  147 Jul  6 11:07 packages/rtm-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

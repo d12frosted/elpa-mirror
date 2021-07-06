@@ -3,9 +3,10 @@ Fetcher: git
 Source:  https://bitbucket.org/sbarbit/eigv
 
 Updating /mnt/store/melpa/working/igv/
-Built igv in 5.455s, finished at Tue Jul  6 10:43:08 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Jul  6 10:43 packages/igv-20141210.1227.el
-4.0K -rw-r--r-- 1 root root  289 Jul  6 10:43 packages/igv-20141210.1227.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:43 packages/igv-badge.svg
-4.0K -rw-r--r-- 1 root root  198 Jul  6 10:43 packages/igv-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

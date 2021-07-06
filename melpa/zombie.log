@@ -3,14 +3,10 @@ Fetcher: github
 Source:  https://github.com/zk-phi/zombie.git
 
 Updating /mnt/store/melpa/working/zombie/
-Built zombie in 4.671s, finished at Tue Jul  6 11:21:04 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.6K Jul  6 11:21 packages/zombie-20141222.1616.el
-4.0K -rw-r--r-- 1 root root  239 Jul  6 11:21 packages/zombie-20141222.1616.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:21 packages/zombie-badge.svg
-4.0K -rw-r--r-- 1 root root  112 Jul  6 11:21 packages/zombie-readme.txt
-8.0K -rw-r--r-- 1 root root 4.5K Jul  6 08:20 packages/zombie-trellys-mode-20150304.1448.el
-4.0K -rw-r--r-- 1 root root  467 Jul  6 08:20 packages/zombie-trellys-mode-20150304.1448.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 08:20 packages/zombie-trellys-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  432 Jul  6 08:20 packages/zombie-trellys-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  172 Jul  6 11:21 packages/zombie-trellys-mode.log
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

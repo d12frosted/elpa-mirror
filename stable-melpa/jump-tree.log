@@ -3,21 +3,10 @@ Fetcher: github
 Source:  https://github.com/yangwen0228/jump-tree.git
 
 Updating /mnt/store/melpa/working/jump-tree/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/jump-tree/
-  to /tmp/jump-treewapQzN/jump-tree-20171014.1551
-    jump-tree-pos.el -> jump-tree-pos.el
-    jump-tree-visualizer.el -> jump-tree-visualizer.el
-    jump-tree.el -> jump-tree.el
-Created jump-tree-20171014.1551.tar containing:
-  jump-tree-20171014.1551/
-  jump-tree-20171014.1551/jump-tree-pkg.el
-  jump-tree-20171014.1551/jump-tree-pos.el
-  jump-tree-20171014.1551/jump-tree-visualizer.el
-  jump-tree-20171014.1551/jump-tree.el
-Built jump-tree in 3.620s, finished at Tue Jul  6 10:46:16 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  385 Jul  6 10:46 packages/jump-tree-20171014.1551.entry
-132K -rw-r--r-- 1 root root 130K Jul  6 10:46 packages/jump-tree-20171014.1551.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:46 packages/jump-tree-badge.svg
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:46 packages/jump-tree-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,24 +3,10 @@ Fetcher: github
 Source:  https://github.com/alvinfrancis/cl-format.git
 
 Updating /mnt/store/melpa/working/cl-format/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cl-format/
-  to /tmp/cl-formatmVbuxF/cl-format-20160413.45
-    cl-format-builtins.el -> cl-format-builtins.el
-    cl-format-def.el -> cl-format-def.el
-    cl-format-pkg.el -> cl-format-pkg.el
-    cl-format.el -> cl-format.el
-    clisp-format.el -> clisp-format.el
-Created cl-format-20160413.45.tar containing:
-  cl-format-20160413.45/
-  cl-format-20160413.45/cl-format-builtins.el
-  cl-format-20160413.45/cl-format-def.el
-  cl-format-20160413.45/cl-format-pkg.el
-  cl-format-20160413.45/cl-format.el
-  cl-format-20160413.45/clisp-format.el
-Built cl-format in 3.401s, finished at Tue Jul  6 10:17:15 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  289 Jul  6 10:17 packages/cl-format-20160413.45.entry
-140K -rw-r--r-- 1 root root 140K Jul  6 10:17 packages/cl-format-20160413.45.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:17 packages/cl-format-badge.svg
-4.0K -rw-r--r-- 1 root root 1.5K Jul  6 10:17 packages/cl-format-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

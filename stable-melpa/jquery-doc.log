@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/ananthakumaran/jquery-doc.el.git
 
 Updating /mnt/store/melpa/working/jquery-doc/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/jquery-doc/
-  to /tmp/jquery-doc52CfLP/jquery-doc-20150812.758
-    jquery-doc-data.el -> jquery-doc-data.el
-    jquery-doc.el -> jquery-doc.el
-Created jquery-doc-20150812.758.tar containing:
-  jquery-doc-20150812.758/
-  jquery-doc-20150812.758/jquery-doc-data.el
-  jquery-doc-20150812.758/jquery-doc-pkg.el
-  jquery-doc-20150812.758/jquery-doc.el
-Built jquery-doc in 3.614s, finished at Tue Jul  6 10:45:45 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  339 Jul  6 10:45 packages/jquery-doc-20150812.758.entry
-740K -rw-r--r-- 1 root root 740K Jul  6 10:45 packages/jquery-doc-20150812.758.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:45 packages/jquery-doc-badge.svg
-4.0K -rw-r--r-- 1 root root   66 Jul  6 10:45 packages/jquery-doc-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

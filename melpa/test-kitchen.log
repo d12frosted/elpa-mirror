@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/jjasghar/test-kitchen-el.git
 
 Updating /mnt/store/melpa/working/test-kitchen/
-Built test-kitchen in 4.178s, finished at Tue Jul  6 11:14:24 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.6K Jul  6 11:14 packages/test-kitchen-20171129.2035.el
-4.0K -rw-r--r-- 1 root root  318 Jul  6 11:14 packages/test-kitchen-20171129.2035.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:14 packages/test-kitchen-badge.svg
-4.0K -rw-r--r-- 1 root root 1.0K Jul  6 11:14 packages/test-kitchen-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

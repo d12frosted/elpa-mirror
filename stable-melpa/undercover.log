@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/undercover-el/undercover.el.git
 
 Updating /mnt/store/melpa/working/undercover/
-Built undercover in 3.776s, finished at Tue Jul  6 11:16:09 2021
- ✓ Success:
- 60K -rw-r--r-- 1 root root  57K Jul  6 11:16 packages/undercover-20210602.2119.el
-4.0K -rw-r--r-- 1 root root  503 Jul  6 11:16 packages/undercover-20210602.2119.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:16 packages/undercover-badge.svg
-4.0K -rw-r--r-- 1 root root   49 Jul  6 11:16 packages/undercover-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/zk-phi/bfbuilder.git
 
 Updating /mnt/store/melpa/working/bfbuilder/
-Built bfbuilder in 3.647s, finished at Tue Jul  6 10:14:12 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.6K Jul  6 10:14 packages/bfbuilder-20210228.1740.el
-4.0K -rw-r--r-- 1 root root  336 Jul  6 10:14 packages/bfbuilder-20210228.1740.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:14 packages/bfbuilder-badge.svg
-4.0K -rw-r--r-- 1 root root  234 Jul  6 10:14 packages/bfbuilder-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

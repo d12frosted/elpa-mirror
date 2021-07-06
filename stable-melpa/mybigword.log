@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/redguardtoo/mybigword.git
 
 Updating /mnt/store/melpa/working/mybigword/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/mybigword/
-  to /tmp/mybigwordgv2ujN/mybigword-20201030.1253
-    mybigword.el -> mybigword.el
-    eng.zipf -> eng.zipf
-Created mybigword-20201030.1253.tar containing:
-  mybigword-20201030.1253/
-  mybigword-20201030.1253/eng.zipf
-  mybigword-20201030.1253/mybigword-pkg.el
-  mybigword-20201030.1253/mybigword.el
-Built mybigword in 3.800s, finished at Tue Jul  6 10:53:49 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  415 Jul  6 10:53 packages/mybigword-20201030.1253.entry
-1.3M -rw-r--r-- 1 root root 1.3M Jul  6 10:53 packages/mybigword-20201030.1253.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:53 packages/mybigword-badge.svg
-4.0K -rw-r--r-- 1 root root 2.7K Jul  6 10:53 packages/mybigword-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

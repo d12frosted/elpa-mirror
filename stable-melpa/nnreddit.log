@@ -3,33 +3,10 @@ Fetcher: github
 Source:  https://github.com/dickmao/nnreddit.git
 
 Updating /mnt/store/melpa/working/nnreddit/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nnreddit/
-  to /tmp/nnreddit5WgSy4/nnreddit-20201130.39
-  ! lisp/nnreddit-pkg.el -> nnreddit-pkg.el
-  ! lisp/nnreddit.el -> nnreddit.el
-    setup.py -> setup.py
-    requirements.txt -> requirements.txt
-    nnreddit => nnreddit
-Created nnreddit-20201130.39.tar containing:
-  nnreddit-20201130.39/
-  nnreddit-20201130.39/nnreddit-pkg.el
-  nnreddit-20201130.39/nnreddit.el
-  nnreddit-20201130.39/nnreddit/
-  nnreddit-20201130.39/nnreddit/VERSION
-  nnreddit-20201130.39/nnreddit/__init__.py
-  nnreddit-20201130.39/nnreddit/__main__.py
-  nnreddit-20201130.39/nnreddit/authenticated_reddit.py
-  nnreddit-20201130.39/nnreddit/pylintrc
-  nnreddit-20201130.39/nnreddit/templates/
-  nnreddit-20201130.39/nnreddit/templates/index.html
-  nnreddit-20201130.39/nnreddit/templates/mailcap
-  nnreddit-20201130.39/nnreddit/templates/rtv.cfg
-  nnreddit-20201130.39/requirements.txt
-  nnreddit-20201130.39/setup.py
-Built nnreddit in 3.487s, finished at Tue Jul  6 10:54:44 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  399 Jul  6 10:54 packages/nnreddit-20201130.39.entry
-120K -rw-r--r-- 1 root root 120K Jul  6 10:54 packages/nnreddit-20201130.39.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:54 packages/nnreddit-badge.svg
-4.0K -rw-r--r-- 1 root root   27 Jul  6 10:54 packages/nnreddit-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

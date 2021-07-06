@@ -3,9 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jgkamat/bpftrace-mode.git
 
 Updating /mnt/store/melpa/working/bpftrace-mode/
-Built bpftrace-mode in 4.301s, finished at Tue Jul  6 10:14:54 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.8K Jul  6 10:14 packages/bpftrace-mode-20190608.2201.el
-4.0K -rw-r--r-- 1 root root  376 Jul  6 10:14 packages/bpftrace-mode-20190608.2201.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:14 packages/bpftrace-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  175 Jul  6 10:14 packages/bpftrace-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

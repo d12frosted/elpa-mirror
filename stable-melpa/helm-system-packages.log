@@ -3,31 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm-system-packages.git
 
 Updating /mnt/store/melpa/working/helm-system-packages/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/helm-system-packages/
-  to /tmp/helm-system-packagesCu9ZTP/helm-system-packages-20210628.1727
-    helm-system-packages-brew.el -> helm-system-packages-brew.el
-    helm-system-packages-dnf.el -> helm-system-packages-dnf.el
-    helm-system-packages-dpkg.el -> helm-system-packages-dpkg.el
-    helm-system-packages-guix.el -> helm-system-packages-guix.el
-    helm-system-packages-pacman.el -> helm-system-packages-pacman.el
-    helm-system-packages-portage.el -> helm-system-packages-portage.el
-    helm-system-packages-xbps.el -> helm-system-packages-xbps.el
-    helm-system-packages.el -> helm-system-packages.el
-Created helm-system-packages-20210628.1727.tar containing:
-  helm-system-packages-20210628.1727/
-  helm-system-packages-20210628.1727/helm-system-packages-brew.el
-  helm-system-packages-20210628.1727/helm-system-packages-dnf.el
-  helm-system-packages-20210628.1727/helm-system-packages-dpkg.el
-  helm-system-packages-20210628.1727/helm-system-packages-guix.el
-  helm-system-packages-20210628.1727/helm-system-packages-pacman.el
-  helm-system-packages-20210628.1727/helm-system-packages-pkg.el
-  helm-system-packages-20210628.1727/helm-system-packages-portage.el
-  helm-system-packages-20210628.1727/helm-system-packages-xbps.el
-  helm-system-packages-20210628.1727/helm-system-packages.el
-Built helm-system-packages in 4.715s, finished at Tue Jul  6 10:40:56 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  465 Jul  6 10:40 packages/helm-system-packages-20210628.1727.entry
-132K -rw-r--r-- 1 root root 130K Jul  6 10:40 packages/helm-system-packages-20210628.1727.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:40 packages/helm-system-packages-badge.svg
-4.0K -rw-r--r-- 1 root root   45 Jul  6 10:40 packages/helm-system-packages-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

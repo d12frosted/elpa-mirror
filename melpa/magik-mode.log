@@ -3,53 +3,10 @@ Fetcher: github
 Source:  https://github.com/roadrunner1776/magik.git
 
 Updating /mnt/store/melpa/working/magik-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/magik-mode/
-  to /tmp/magik-modeknHMBI/magik-mode-20200304.1323
-    magik-aliases.el -> magik-aliases.el
-    magik-cb-ac.el -> magik-cb-ac.el
-    magik-cb.el -> magik-cb.el
-    magik-electric.el -> magik-electric.el
-    magik-indent.el -> magik-indent.el
-    magik-keys.el -> magik-keys.el
-    magik-lint.el -> magik-lint.el
-    magik-loadlist.el -> magik-loadlist.el
-    magik-menu.el -> magik-menu.el
-    magik-mode.el -> magik-mode.el
-    magik-module.el -> magik-module.el
-    magik-msg.el -> magik-msg.el
-    magik-pragma.el -> magik-pragma.el
-    magik-product.el -> magik-product.el
-    magik-session-filter.el -> magik-session-filter.el
-    magik-session.el -> magik-session.el
-    magik-template.el -> magik-template.el
-    magik-utils.el -> magik-utils.el
-    magik-version.el -> magik-version.el
-Created magik-mode-20200304.1323.tar containing:
-  magik-mode-20200304.1323/
-  magik-mode-20200304.1323/magik-aliases.el
-  magik-mode-20200304.1323/magik-cb-ac.el
-  magik-mode-20200304.1323/magik-cb.el
-  magik-mode-20200304.1323/magik-electric.el
-  magik-mode-20200304.1323/magik-indent.el
-  magik-mode-20200304.1323/magik-keys.el
-  magik-mode-20200304.1323/magik-lint.el
-  magik-mode-20200304.1323/magik-loadlist.el
-  magik-mode-20200304.1323/magik-menu.el
-  magik-mode-20200304.1323/magik-mode-pkg.el
-  magik-mode-20200304.1323/magik-mode.el
-  magik-mode-20200304.1323/magik-module.el
-  magik-mode-20200304.1323/magik-msg.el
-  magik-mode-20200304.1323/magik-pragma.el
-  magik-mode-20200304.1323/magik-product.el
-  magik-mode-20200304.1323/magik-session-filter.el
-  magik-mode-20200304.1323/magik-session.el
-  magik-mode-20200304.1323/magik-template.el
-  magik-mode-20200304.1323/magik-utils.el
-  magik-mode-20200304.1323/magik-version.el
-Built magik-mode in 3.768s, finished at Tue Jul  6 10:50:20 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  242 Jul  6 10:50 packages/magik-mode-20200304.1323.entry
-440K -rw-r--r-- 1 root root 440K Jul  6 10:50 packages/magik-mode-20200304.1323.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:50 packages/magik-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   71 Jul  6 10:50 packages/magik-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

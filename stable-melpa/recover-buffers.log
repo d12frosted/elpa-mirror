@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/tripleee/recover-buffers.git
 
 Updating /mnt/store/melpa/working/recover-buffers/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/recover-buffers/
-  to /tmp/recover-buffersZxrlud/recover-buffers-20171009.437
-    50recover-buffers.el -> 50recover-buffers.el
-    recover-buffers.el -> recover-buffers.el
-Created recover-buffers-20171009.437.tar containing:
-  recover-buffers-20171009.437/
-  recover-buffers-20171009.437/50recover-buffers.el
-  recover-buffers-20171009.437/recover-buffers-pkg.el
-  recover-buffers-20171009.437/recover-buffers.el
-Built recover-buffers in 3.749s, finished at Tue Jul  6 11:06:07 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  279 Jul  6 11:06 packages/recover-buffers-20171009.437.entry
- 12K -rw-r--r-- 1 root root  10K Jul  6 11:06 packages/recover-buffers-20171009.437.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:06 packages/recover-buffers-badge.svg
-4.0K -rw-r--r-- 1 root root  451 Jul  6 11:06 packages/recover-buffers-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

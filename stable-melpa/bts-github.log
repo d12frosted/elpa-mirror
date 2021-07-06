@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/aki2o/emacs-bts-github.git
 
 Updating /mnt/store/melpa/working/bts-github/
-Built bts-github in 4.536s, finished at Tue Jul  6 10:15:08 2021
- ✓ Success:
- 60K -rw-r--r-- 1 root root  59K Jul  6 10:15 packages/bts-github-20170401.1249.el
-4.0K -rw-r--r-- 1 root root  445 Jul  6 10:15 packages/bts-github-20170401.1249.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:15 packages/bts-github-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul  6 10:15 packages/bts-github-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

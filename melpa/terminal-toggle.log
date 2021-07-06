@@ -3,9 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/mtekman/terminal-toggle.el.git
 
 Updating /mnt/store/melpa/working/terminal-toggle/
-Built terminal-toggle in 3.803s, finished at Tue Jul  6 11:14:17 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.5K Jul  6 11:14 packages/terminal-toggle-20190226.1510.el
-4.0K -rw-r--r-- 1 root root  356 Jul  6 11:14 packages/terminal-toggle-20190226.1510.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:14 packages/terminal-toggle-badge.svg
-4.0K -rw-r--r-- 1 root root  181 Jul  6 11:14 packages/terminal-toggle-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

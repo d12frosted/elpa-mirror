@@ -3,59 +3,10 @@ Fetcher: github
 Source:  https://github.com/countvajhula/symex.el.git
 
 Updating /mnt/store/melpa/working/symex/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/symex/
-  to /tmp/symexVeNqeM/symex-20210630.1816
-    symex-computations.el -> symex-computations.el
-    symex-custom.el -> symex-custom.el
-    symex-data.el -> symex-data.el
-    symex-dsl.el -> symex-dsl.el
-    symex-evaluator.el -> symex-evaluator.el
-    symex-evil-support.el -> symex-evil-support.el
-    symex-evil.el -> symex-evil.el
-    symex-hydra.el -> symex-hydra.el
-    symex-interface-arc.el -> symex-interface-arc.el
-    symex-interface-clojure.el -> symex-interface-clojure.el
-    symex-interface-common-lisp.el -> symex-interface-common-lisp.el
-    symex-interface-elisp.el -> symex-interface-elisp.el
-    symex-interface-racket.el -> symex-interface-racket.el
-    symex-interface-scheme.el -> symex-interface-scheme.el
-    symex-interop.el -> symex-interop.el
-    symex-misc.el -> symex-misc.el
-    symex-primitives.el -> symex-primitives.el
-    symex-transformations.el -> symex-transformations.el
-    symex-traversals.el -> symex-traversals.el
-    symex-ui.el -> symex-ui.el
-    symex-utils.el -> symex-utils.el
-    symex.el -> symex.el
-Created symex-20210630.1816.tar containing:
-  symex-20210630.1816/
-  symex-20210630.1816/symex-computations.el
-  symex-20210630.1816/symex-custom.el
-  symex-20210630.1816/symex-data.el
-  symex-20210630.1816/symex-dsl.el
-  symex-20210630.1816/symex-evaluator.el
-  symex-20210630.1816/symex-evil-support.el
-  symex-20210630.1816/symex-evil.el
-  symex-20210630.1816/symex-hydra.el
-  symex-20210630.1816/symex-interface-arc.el
-  symex-20210630.1816/symex-interface-clojure.el
-  symex-20210630.1816/symex-interface-common-lisp.el
-  symex-20210630.1816/symex-interface-elisp.el
-  symex-20210630.1816/symex-interface-racket.el
-  symex-20210630.1816/symex-interface-scheme.el
-  symex-20210630.1816/symex-interop.el
-  symex-20210630.1816/symex-misc.el
-  symex-20210630.1816/symex-pkg.el
-  symex-20210630.1816/symex-primitives.el
-  symex-20210630.1816/symex-transformations.el
-  symex-20210630.1816/symex-traversals.el
-  symex-20210630.1816/symex-ui.el
-  symex-20210630.1816/symex-utils.el
-  symex-20210630.1816/symex.el
-Built symex in 3.846s, finished at Tue Jul  6 11:13:30 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  608 Jul  6 11:13 packages/symex-20210630.1816.entry
-180K -rw-r--r-- 1 root root 180K Jul  6 11:13 packages/symex-20210630.1816.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:13 packages/symex-badge.svg
-4.0K -rw-r--r-- 1 root root  767 Jul  6 11:13 packages/symex-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/nschum/kill-ring-search.el.git
 
 Updating /mnt/store/melpa/working/kill-ring-search/
-Built kill-ring-search in 3.849s, finished at Tue Jul  6 10:47:01 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.7K Jul  6 10:47 packages/kill-ring-search-20140422.1555.el
-4.0K -rw-r--r-- 1 root root  391 Jul  6 10:47 packages/kill-ring-search-20140422.1555.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:47 packages/kill-ring-search-badge.svg
-4.0K -rw-r--r-- 1 root root  364 Jul  6 10:47 packages/kill-ring-search-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

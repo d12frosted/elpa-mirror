@@ -3,20 +3,10 @@ Fetcher: github
 Source:  https://github.com/legoscia/archive-rpm.git
 
 Updating /mnt/store/melpa/working/archive-rpm/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/archive-rpm/
-  to /tmp/archive-rpmUAx0PS/archive-rpm-20180706.1232
-    archive-cpio.el -> archive-cpio.el
-    archive-rpm-pkg.el -> archive-rpm-pkg.el
-    archive-rpm.el -> archive-rpm.el
-Created archive-rpm-20180706.1232.tar containing:
-  archive-rpm-20180706.1232/
-  archive-rpm-20180706.1232/archive-cpio.el
-  archive-rpm-20180706.1232/archive-rpm-pkg.el
-  archive-rpm-20180706.1232/archive-rpm.el
-Built archive-rpm in 3.533s, finished at Tue Jul  6 10:12:22 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  342 Jul  6 10:12 packages/archive-rpm-20180706.1232.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:12 packages/archive-rpm-20180706.1232.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:12 packages/archive-rpm-badge.svg
-4.0K -rw-r--r-- 1 root root  269 Jul  6 10:12 packages/archive-rpm-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

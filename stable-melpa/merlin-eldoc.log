@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/Khady/merlin-eldoc.git
 
 Updating /mnt/store/melpa/working/merlin-eldoc/
-Built merlin-eldoc in 4.092s, finished at Tue Jul  6 10:51:41 2021
- ✓ Success:
- 28K -rw-r--r-- 1 root root  28K Jul  6 10:51 packages/merlin-eldoc-20190830.517.el
-4.0K -rw-r--r-- 1 root root  414 Jul  6 10:51 packages/merlin-eldoc-20190830.517.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:51 packages/merlin-eldoc-badge.svg
-4.0K -rw-r--r-- 1 root root  252 Jul  6 10:51 packages/merlin-eldoc-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

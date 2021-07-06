@@ -3,35 +3,10 @@ Fetcher: github
 Source:  https://github.com/ataka/blgrep.git
 
 Updating /mnt/store/melpa/working/blgrep/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/blgrep/
-  to /tmp/blgrep3191F4/blgrep-20150401.1416
-    blg-2ch.el -> blg-2ch.el
-    blg-autoloads.el -> blg-autoloads.el
-    blg-bib.el -> blg-bib.el
-    blg-cc.el -> blg-cc.el
-    blg-changelog.el -> blg-changelog.el
-    blg-css.el -> blg-css.el
-    blg-elisp.el -> blg-elisp.el
-    blg-outline.el -> blg-outline.el
-    blgrep.el -> blgrep.el
-    clgrep.el -> clgrep.el
-Created blgrep-20150401.1416.tar containing:
-  blgrep-20150401.1416/
-  blgrep-20150401.1416/blg-2ch.el
-  blgrep-20150401.1416/blg-autoloads.el
-  blgrep-20150401.1416/blg-bib.el
-  blgrep-20150401.1416/blg-cc.el
-  blgrep-20150401.1416/blg-changelog.el
-  blgrep-20150401.1416/blg-css.el
-  blgrep-20150401.1416/blg-elisp.el
-  blgrep-20150401.1416/blg-outline.el
-  blgrep-20150401.1416/blgrep-pkg.el
-  blgrep-20150401.1416/blgrep.el
-  blgrep-20150401.1416/clgrep.el
-Built blgrep in 3.539s, finished at Tue Jul  6 10:14:33 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  306 Jul  6 10:14 packages/blgrep-20150401.1416.entry
- 80K -rw-r--r-- 1 root root  80K Jul  6 10:14 packages/blgrep-20150401.1416.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:14 packages/blgrep-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul  6 10:14 packages/blgrep-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

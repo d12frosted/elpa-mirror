@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/jcs-elpa/manage-minor-mode-table.git
 
 Updating /mnt/store/melpa/working/manage-minor-mode-table/
-Built manage-minor-mode-table in 3.788s, finished at Tue Jul  6 10:50:59 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.3K Jul  6 10:50 packages/manage-minor-mode-table-20200717.809.el
-4.0K -rw-r--r-- 1 root root  420 Jul  6 10:50 packages/manage-minor-mode-table-20200717.809.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:50 packages/manage-minor-mode-table-badge.svg
-4.0K -rw-r--r-- 1 root root   30 Jul  6 10:50 packages/manage-minor-mode-table-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,36 +3,10 @@ Fetcher: github
 Source:  https://github.com/joostkremers/ebib.git
 
 Updating /mnt/store/melpa/working/ebib/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ebib/
-  to /tmp/ebibeQFJ8N/ebib-20210607.2206
-    ebib-biblio.el -> ebib-biblio.el
-    ebib-db.el -> ebib-db.el
-    ebib-filters.el -> ebib-filters.el
-    ebib-keywords.el -> ebib-keywords.el
-    ebib-notes.el -> ebib-notes.el
-    ebib-reading-list.el -> ebib-reading-list.el
-    ebib-utils.el -> ebib-utils.el
-    ebib.el -> ebib.el
-    org-ebib.el -> org-ebib.el
-    ebib.info -> ebib.info
-Created ebib-20210607.2206.tar containing:
-  ebib-20210607.2206/
-  ebib-20210607.2206/dir
-  ebib-20210607.2206/ebib-biblio.el
-  ebib-20210607.2206/ebib-db.el
-  ebib-20210607.2206/ebib-filters.el
-  ebib-20210607.2206/ebib-keywords.el
-  ebib-20210607.2206/ebib-notes.el
-  ebib-20210607.2206/ebib-pkg.el
-  ebib-20210607.2206/ebib-reading-list.el
-  ebib-20210607.2206/ebib-utils.el
-  ebib-20210607.2206/ebib.el
-  ebib-20210607.2206/ebib.info
-  ebib-20210607.2206/org-ebib.el
-Built ebib in 3.833s, finished at Tue Jul  6 10:24:41 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  380 Jul  6 10:24 packages/ebib-20210607.2206.entry
-580K -rw-r--r-- 1 root root 580K Jul  6 10:24 packages/ebib-20210607.2206.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:24 packages/ebib-badge.svg
-4.0K -rw-r--r-- 1 root root  540 Jul  6 10:24 packages/ebib-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/tumashu/pyim-basedict.git
 
 Updating /mnt/store/melpa/working/pyim-basedict/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pyim-basedict/
-  to /tmp/pyim-basedict5dFMJI/pyim-basedict-20210517.43
-    pyim-basedict.el -> pyim-basedict.el
-    pyim-basedict.pyim -> pyim-basedict.pyim
-Created pyim-basedict-20210517.43.tar containing:
-  pyim-basedict-20210517.43/
-  pyim-basedict-20210517.43/pyim-basedict-pkg.el
-  pyim-basedict-20210517.43/pyim-basedict.el
-  pyim-basedict-20210517.43/pyim-basedict.pyim
-Built pyim-basedict in 3.996s, finished at Tue Jul  6 11:04:48 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  373 Jul  6 11:04 packages/pyim-basedict-20210517.43.entry
-2.7M -rw-r--r-- 1 root root 2.7M Jul  6 11:04 packages/pyim-basedict-20210517.43.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:04 packages/pyim-basedict-badge.svg
-4.0K -rw-r--r-- 1 root root  719 Jul  6 11:04 packages/pyim-basedict-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

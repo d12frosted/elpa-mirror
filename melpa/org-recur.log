@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/m-cat/org-recur.git
 
 Updating /mnt/store/melpa/working/org-recur/
-Built org-recur in 4.199s, finished at Tue Jul  6 10:58:26 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Jul  6 10:58 packages/org-recur-20191216.2353.el
-4.0K -rw-r--r-- 1 root root  399 Jul  6 10:58 packages/org-recur-20191216.2353.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:58 packages/org-recur-badge.svg
-4.0K -rw-r--r-- 1 root root 1.8K Jul  6 10:58 packages/org-recur-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

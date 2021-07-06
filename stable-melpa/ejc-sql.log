@@ -3,69 +3,10 @@ Fetcher: github
 Source:  https://github.com/kostafey/ejc-sql.git
 
 Updating /mnt/store/melpa/working/ejc-sql/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ejc-sql/
-  to /tmp/ejc-sqlsf8xyM/ejc-sql-20201129.2043
-    ejc-autocomplete.el -> ejc-autocomplete.el
-    ejc-company.el -> ejc-company.el
-    ejc-completion-common.el -> ejc-completion-common.el
-    ejc-direx.el -> ejc-direx.el
-    ejc-doc.el -> ejc-doc.el
-    ejc-eldoc.el -> ejc-eldoc.el
-    ejc-flx.el -> ejc-flx.el
-    ejc-format.el -> ejc-format.el
-    ejc-interaction.el -> ejc-interaction.el
-    ejc-lib.el -> ejc-lib.el
-    ejc-result-buffer.el -> ejc-result-buffer.el
-    ejc-result-mode.el -> ejc-result-mode.el
-    ejc-sql.el -> ejc-sql.el
-    project.clj -> project.clj
-    src => src
-    snippets => snippets
-Created ejc-sql-20201129.2043.tar containing:
-  ejc-sql-20201129.2043/
-  ejc-sql-20201129.2043/ejc-autocomplete.el
-  ejc-sql-20201129.2043/ejc-company.el
-  ejc-sql-20201129.2043/ejc-completion-common.el
-  ejc-sql-20201129.2043/ejc-direx.el
-  ejc-sql-20201129.2043/ejc-doc.el
-  ejc-sql-20201129.2043/ejc-eldoc.el
-  ejc-sql-20201129.2043/ejc-flx.el
-  ejc-sql-20201129.2043/ejc-format.el
-  ejc-sql-20201129.2043/ejc-interaction.el
-  ejc-sql-20201129.2043/ejc-lib.el
-  ejc-sql-20201129.2043/ejc-result-buffer.el
-  ejc-sql-20201129.2043/ejc-result-mode.el
-  ejc-sql-20201129.2043/ejc-sql-pkg.el
-  ejc-sql-20201129.2043/ejc-sql.el
-  ejc-sql-20201129.2043/project.clj
-  ejc-sql-20201129.2043/snippets/
-  ejc-sql-20201129.2043/snippets/sql-mode/
-  ejc-sql-20201129.2043/snippets/sql-mode/alter.yasnippet
-  ejc-sql-20201129.2043/snippets/sql-mode/begin.snippet
-  ejc-sql-20201129.2043/snippets/sql-mode/delete.yasnippet
-  ejc-sql-20201129.2043/snippets/sql-mode/grant.yasnippet
-  ejc-sql-20201129.2043/snippets/sql-mode/inner.yasnippet
-  ejc-sql-20201129.2043/snippets/sql-mode/insert.yasnippet
-  ejc-sql-20201129.2043/snippets/sql-mode/left.yasnippet
-  ejc-sql-20201129.2043/snippets/sql-mode/revoke.yasnippet
-  ejc-sql-20201129.2043/snippets/sql-mode/right.yasnippet
-  ejc-sql-20201129.2043/snippets/sql-mode/select.yasnippet
-  ejc-sql-20201129.2043/snippets/sql-mode/update.yasnippet
-  ejc-sql-20201129.2043/snippets/sql-mode/where.yasnippet
-  ejc-sql-20201129.2043/src/
-  ejc-sql-20201129.2043/src/ejc_sql/
-  ejc-sql-20201129.2043/src/ejc_sql/cache.clj
-  ejc-sql-20201129.2043/src/ejc_sql/classpath.clj
-  ejc-sql-20201129.2043/src/ejc_sql/connect.clj
-  ejc-sql-20201129.2043/src/ejc_sql/deps_resolver.clj
-  ejc-sql-20201129.2043/src/ejc_sql/keywords.clj
-  ejc-sql-20201129.2043/src/ejc_sql/lib.clj
-  ejc-sql-20201129.2043/src/ejc_sql/output.clj
-  ejc-sql-20201129.2043/src/ejc_sql/structure.clj
-Built ejc-sql in 3.766s, finished at Tue Jul  6 10:25:21 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  454 Jul  6 10:25 packages/ejc-sql-20201129.2043.entry
-220K -rw-r--r-- 1 root root 220K Jul  6 10:25 packages/ejc-sql-20201129.2043.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:25 packages/ejc-sql-badge.svg
-4.0K -rw-r--r-- 1 root root  149 Jul  6 10:25 packages/ejc-sql-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

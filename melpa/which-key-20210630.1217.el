@@ -6,7 +6,7 @@
 ;; Maintainer: Justin Burkett <justin@burkett.cc>
 ;; URL: https://github.com/justbur/emacs-which-key
 ;; Package-Version: 20210630.1217
-;; Package-Commit: 27d9fec33abb989b030f7677ccf5f799287d6472
+;; Package-Commit: 253751458e66f44a6e7deac83a47eabf3958f064
 ;; Version: 3.5.1
 ;; Keywords:
 ;; Package-Requires: ((emacs "24.4"))

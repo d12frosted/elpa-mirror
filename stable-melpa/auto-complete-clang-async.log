@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/Golevka/emacs-clang-complete-async.git
 
 Updating /mnt/store/melpa/working/auto-complete-clang-async/
-Built auto-complete-clang-async in 4.071s, finished at Tue Jul  6 10:12:53 2021
- ✓ Success:
- 24K -rw-r--r-- 1 root root  24K Jul  6 10:12 packages/auto-complete-clang-async-20130526.1514.el
-4.0K -rw-r--r-- 1 root root  232 Jul  6 10:12 packages/auto-complete-clang-async-20130526.1514.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:12 packages/auto-complete-clang-async-badge.svg
-4.0K -rw-r--r-- 1 root root  129 Jul  6 10:12 packages/auto-complete-clang-async-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/golang/lint.git
 
 Updating /mnt/store/melpa/working/golint/
-Built golint in 4.297s, finished at Tue Jul  6 10:37:02 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 1.6K Jul  6 10:37 packages/golint-20180221.2015.el
-4.0K -rw-r--r-- 1 root root  177 Jul  6 10:37 packages/golint-20180221.2015.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:37 packages/golint-badge.svg
-4.0K -rw-r--r-- 1 root root  404 Jul  6 10:37 packages/golint-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

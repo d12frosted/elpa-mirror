@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/Malabarba/names.git
 
 Updating /mnt/store/melpa/working/names/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/names/
-  to /tmp/names3jYegk/names-20180321.1155
-    names-dev.el -> names-dev.el
-    names.el -> names.el
-Created names-20180321.1155.tar containing:
-  names-20180321.1155/
-  names-20180321.1155/names-dev.el
-  names-20180321.1155/names-pkg.el
-  names-20180321.1155/names.el
-Built names in 3.622s, finished at Tue Jul  6 10:53:59 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  432 Jul  6 10:53 packages/names-20180321.1155.entry
- 72K -rw-r--r-- 1 root root  70K Jul  6 10:53 packages/names-20180321.1155.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:53 packages/names-badge.svg
-4.0K -rw-r--r-- 1 root root  265 Jul  6 10:53 packages/names-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

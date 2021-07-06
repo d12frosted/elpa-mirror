@@ -3,31 +3,10 @@ Fetcher: github
 Source:  https://github.com/Deducteam/lambdapi.git
 
 Updating /mnt/store/melpa/working/lambdapi-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lambdapi-mode/
-  to /tmp/lambdapi-modeyMaFrT/lambdapi-mode-20210520.1737
-  ! editors/emacs/lambdapi-abbrev.el -> lambdapi-abbrev.el
-  ! editors/emacs/lambdapi-capf.el -> lambdapi-capf.el
-  ! editors/emacs/lambdapi-input.el -> lambdapi-input.el
-  ! editors/emacs/lambdapi-layout.el -> lambdapi-layout.el
-  ! editors/emacs/lambdapi-mode.el -> lambdapi-mode.el
-  ! editors/emacs/lambdapi-proofs.el -> lambdapi-proofs.el
-  ! editors/emacs/lambdapi-smie.el -> lambdapi-smie.el
-  ! editors/emacs/lambdapi-vars.el -> lambdapi-vars.el
-Created lambdapi-mode-20210520.1737.tar containing:
-  lambdapi-mode-20210520.1737/
-  lambdapi-mode-20210520.1737/lambdapi-abbrev.el
-  lambdapi-mode-20210520.1737/lambdapi-capf.el
-  lambdapi-mode-20210520.1737/lambdapi-input.el
-  lambdapi-mode-20210520.1737/lambdapi-layout.el
-  lambdapi-mode-20210520.1737/lambdapi-mode-pkg.el
-  lambdapi-mode-20210520.1737/lambdapi-mode.el
-  lambdapi-mode-20210520.1737/lambdapi-proofs.el
-  lambdapi-mode-20210520.1737/lambdapi-smie.el
-  lambdapi-mode-20210520.1737/lambdapi-vars.el
-Built lambdapi-mode in 4.198s, finished at Tue Jul  6 10:47:27 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  404 Jul  6 10:47 packages/lambdapi-mode-20210520.1737.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 10:47 packages/lambdapi-mode-20210520.1737.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:47 packages/lambdapi-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  150 Jul  6 10:47 packages/lambdapi-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

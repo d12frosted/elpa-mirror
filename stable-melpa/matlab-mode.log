@@ -3,95 +3,10 @@ Fetcher: git
 Source:  https://git.code.sf.net/p/matlab-emacs/src
 
 Updating /mnt/store/melpa/working/matlab-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/matlab-mode/
-  to /tmp/matlab-modewgZCTT/matlab-mode-20210504.1439
-    cedet-matlab.el -> cedet-matlab.el
-    company-matlab-shell.el -> company-matlab-shell.el
-    linemark.el -> linemark.el
-    matlab-cgen.el -> matlab-cgen.el
-    matlab-compat.el -> matlab-compat.el
-    matlab-complete.el -> matlab-complete.el
-    matlab-maint.el -> matlab-maint.el
-    matlab-mode-pkg.el -> matlab-mode-pkg.el
-    matlab-netshell.el -> matlab-netshell.el
-    matlab-publish.el -> matlab-publish.el
-    matlab-shell-gud.el -> matlab-shell-gud.el
-    matlab-shell.el -> matlab-shell.el
-    matlab-topic.el -> matlab-topic.el
-    matlab.el -> matlab.el
-    mlint.el -> mlint.el
-    semantic-matlab.el -> semantic-matlab.el
-    semanticdb-matlab.el -> semanticdb-matlab.el
-    srecode-matlab.el -> srecode-matlab.el
-    tlc.el -> tlc.el
-    dl_emacs_support.m -> dl_emacs_support.m
-    toolbox/dbhotlink.m -> toolbox/dbhotlink.m
-    toolbox/ebclear.m -> toolbox/ebclear.m
-    toolbox/ebstack.m -> toolbox/ebstack.m
-    toolbox/ebstatus.m -> toolbox/ebstatus.m
-    toolbox/ebstop.m -> toolbox/ebstop.m
-    toolbox/emacscd.m -> toolbox/emacscd.m
-    toolbox/emacsdocomplete.m -> toolbox/emacsdocomplete.m
-    toolbox/emacsinit.m -> toolbox/emacsinit.m
-    toolbox/emacsnetshell.m -> toolbox/emacsnetshell.m
-    toolbox/emacsrunregion.m -> toolbox/emacsrunregion.m
-    toolbox/emacstipstring.m -> toolbox/emacstipstring.m
-    toolbox/help.m -> toolbox/help.m
-    toolbox/opentoline.m -> toolbox/opentoline.m
-    toolbox/+emacs/set.m -> toolbox/+emacs/set.m
-    toolbox/+emacs/@Breakpoints/Breakpoints.m -> toolbox/+emacs/@Breakpoints/Breakpoints.m
-    toolbox/+emacs/@EmacsServer/EmacsServer.m -> toolbox/+emacs/@EmacsServer/EmacsServer.m
-    toolbox/+emacs/@Stack/Stack.m -> toolbox/+emacs/@Stack/Stack.m
-    templates/srecode-matlab.srt -> templates/srecode-matlab.srt
-Created matlab-mode-20210504.1439.tar containing:
-  matlab-mode-20210504.1439/
-  matlab-mode-20210504.1439/cedet-matlab.el
-  matlab-mode-20210504.1439/company-matlab-shell.el
-  matlab-mode-20210504.1439/dl_emacs_support.m
-  matlab-mode-20210504.1439/linemark.el
-  matlab-mode-20210504.1439/matlab-cgen.el
-  matlab-mode-20210504.1439/matlab-compat.el
-  matlab-mode-20210504.1439/matlab-complete.el
-  matlab-mode-20210504.1439/matlab-maint.el
-  matlab-mode-20210504.1439/matlab-mode-pkg.el
-  matlab-mode-20210504.1439/matlab-netshell.el
-  matlab-mode-20210504.1439/matlab-publish.el
-  matlab-mode-20210504.1439/matlab-shell-gud.el
-  matlab-mode-20210504.1439/matlab-shell.el
-  matlab-mode-20210504.1439/matlab-topic.el
-  matlab-mode-20210504.1439/matlab.el
-  matlab-mode-20210504.1439/mlint.el
-  matlab-mode-20210504.1439/semantic-matlab.el
-  matlab-mode-20210504.1439/semanticdb-matlab.el
-  matlab-mode-20210504.1439/srecode-matlab.el
-  matlab-mode-20210504.1439/templates/
-  matlab-mode-20210504.1439/templates/srecode-matlab.srt
-  matlab-mode-20210504.1439/tlc.el
-  matlab-mode-20210504.1439/toolbox/
-  matlab-mode-20210504.1439/toolbox/+emacs/
-  matlab-mode-20210504.1439/toolbox/+emacs/@Breakpoints/
-  matlab-mode-20210504.1439/toolbox/+emacs/@Breakpoints/Breakpoints.m
-  matlab-mode-20210504.1439/toolbox/+emacs/@EmacsServer/
-  matlab-mode-20210504.1439/toolbox/+emacs/@EmacsServer/EmacsServer.m
-  matlab-mode-20210504.1439/toolbox/+emacs/@Stack/
-  matlab-mode-20210504.1439/toolbox/+emacs/@Stack/Stack.m
-  matlab-mode-20210504.1439/toolbox/+emacs/set.m
-  matlab-mode-20210504.1439/toolbox/dbhotlink.m
-  matlab-mode-20210504.1439/toolbox/ebclear.m
-  matlab-mode-20210504.1439/toolbox/ebstack.m
-  matlab-mode-20210504.1439/toolbox/ebstatus.m
-  matlab-mode-20210504.1439/toolbox/ebstop.m
-  matlab-mode-20210504.1439/toolbox/emacscd.m
-  matlab-mode-20210504.1439/toolbox/emacsdocomplete.m
-  matlab-mode-20210504.1439/toolbox/emacsinit.m
-  matlab-mode-20210504.1439/toolbox/emacsnetshell.m
-  matlab-mode-20210504.1439/toolbox/emacsrunregion.m
-  matlab-mode-20210504.1439/toolbox/emacstipstring.m
-  matlab-mode-20210504.1439/toolbox/help.m
-  matlab-mode-20210504.1439/toolbox/opentoline.m
-Built matlab-mode in 3.241s, finished at Tue Jul  6 10:51:21 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  158 Jul  6 10:51 packages/matlab-mode-20210504.1439.entry
-552K -rw-r--r-- 1 root root 550K Jul  6 10:51 packages/matlab-mode-20210504.1439.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:51 packages/matlab-mode-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

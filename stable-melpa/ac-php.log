@@ -3,14 +3,10 @@ Fetcher: github
 Source:  https://github.com/xcwen/ac-php.git
 
 Updating /mnt/store/melpa/working/ac-php/
-Built ac-php in 5.698s, finished at Tue Jul  6 10:10:47 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.1K Jul  6 10:10 packages/ac-php-20200916.751.el
-4.0K -rw-r--r-- 1 root root  387 Jul  6 10:10 packages/ac-php-20200916.751.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:10 packages/ac-php-badge.svg
-4.0K -rw-r--r-- 1 root root  524 Jul  6 10:10 packages/ac-php-core-20210617.949.entry
-2.2M -rw-r--r-- 1 root root 2.2M Jul  6 10:10 packages/ac-php-core-20210617.949.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:10 packages/ac-php-core-badge.svg
-4.0K -rw-r--r-- 1 root root  980 Jul  6 10:10 packages/ac-php-core-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:10 packages/ac-php-core.log
-4.0K -rw-r--r-- 1 root root 1.1K Jul  6 10:10 packages/ac-php-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

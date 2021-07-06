@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/crystal-ameba/ameba.el.git
 
 Updating /mnt/store/melpa/working/flycheck-ameba/
-Built flycheck-ameba in 3.842s, finished at Tue Jul  6 10:31:36 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.9K Jul  6 10:31 packages/flycheck-ameba-20191226.1011.el
-4.0K -rw-r--r-- 1 root root  294 Jul  6 10:31 packages/flycheck-ameba-20191226.1011.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:31 packages/flycheck-ameba-badge.svg
-4.0K -rw-r--r-- 1 root root  209 Jul  6 10:31 packages/flycheck-ameba-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

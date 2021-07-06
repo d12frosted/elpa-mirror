@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/RedPRL/sml-redprl.git
 
 Updating /mnt/store/melpa/working/redprl/
-Built redprl in 10.156s, finished at Tue Jul  6 11:06:19 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  11K Jul  6 11:06 packages/redprl-20180418.1434.el
-4.0K -rw-r--r-- 1 root root  342 Jul  6 11:06 packages/redprl-20180418.1434.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:06 packages/redprl-badge.svg
-4.0K -rw-r--r-- 1 root root  378 Jul  6 11:06 packages/redprl-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/felipeochoa/rjsx-mode.git
 
 Updating /mnt/store/melpa/working/rjsx-mode/
-Built rjsx-mode in 4.505s, finished at Tue Jul  6 11:07:24 2021
- ✓ Success:
- 64K -rw-r--r-- 1 root root  61K Jul  6 11:07 packages/rjsx-mode-20200120.1446.el
-4.0K -rw-r--r-- 1 root root  404 Jul  6 11:07 packages/rjsx-mode-20200120.1446.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:07 packages/rjsx-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  734 Jul  6 11:07 packages/rjsx-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

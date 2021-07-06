@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/mola-T/fifo-class.git
 
 Updating /mnt/store/melpa/working/fifo-class/
-Built fifo-class in 4.243s, finished at Tue Jul  6 10:30:45 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.5K Jul  6 10:30 packages/fifo-class-20160425.558.el
-4.0K -rw-r--r-- 1 root root  345 Jul  6 10:30 packages/fifo-class-20160425.558.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:30 packages/fifo-class-badge.svg
-4.0K -rw-r--r-- 1 root root   51 Jul  6 10:30 packages/fifo-class-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

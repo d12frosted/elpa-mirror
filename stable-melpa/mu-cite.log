@@ -3,22 +3,10 @@ Fetcher: github
 Source:  https://github.com/ksato9700/mu-cite.git
 
 Updating /mnt/store/melpa/working/mu-cite/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/mu-cite/
-  to /tmp/mu-citeCq1bL0/mu-cite-20190803.439
-    latex-math-symbol.el -> latex-math-symbol.el
-    mu-cite-pkg.el -> mu-cite-pkg.el
-    mu-cite.el -> mu-cite.el
-    mu-register.el -> mu-register.el
-Created mu-cite-20190803.439.tar containing:
-  mu-cite-20190803.439/
-  mu-cite-20190803.439/latex-math-symbol.el
-  mu-cite-20190803.439/mu-cite-pkg.el
-  mu-cite-20190803.439/mu-cite.el
-  mu-cite-20190803.439/mu-register.el
-Built mu-cite in 3.859s, finished at Tue Jul  6 10:53:18 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  370 Jul  6 10:53 packages/mu-cite-20190803.439.entry
- 40K -rw-r--r-- 1 root root  40K Jul  6 10:53 packages/mu-cite-20190803.439.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:53 packages/mu-cite-badge.svg
-4.0K -rw-r--r-- 1 root root  559 Jul  6 10:53 packages/mu-cite-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/minad/affe.git
 
 Updating /mnt/store/melpa/working/affe/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/affe/
-  to /tmp/affeqzv9td/affe-20210603.1139
-    affe-backend.el -> affe-backend.el
-    affe.el -> affe.el
-    affe.texi -> affe.texi
-Created /tmp/affeqzv9td/affe-20210603.1139/affe.info
-Created affe-20210603.1139.tar containing:
-  affe-20210603.1139/
-  affe-20210603.1139/affe-backend.el
-  affe-20210603.1139/affe-pkg.el
-  affe-20210603.1139/affe.el
-  affe-20210603.1139/affe.info
-  affe-20210603.1139/dir
-Built affe in 7.037s, finished at Tue Jul  6 10:11:15 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  298 Jul  6 10:11 packages/affe-20210603.1139.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:11 packages/affe-20210603.1139.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:11 packages/affe-badge.svg
-4.0K -rw-r--r-- 1 root root   36 Jul  6 10:11 packages/affe-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

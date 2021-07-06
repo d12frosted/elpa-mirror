@@ -3,26 +3,10 @@ Fetcher: github
 Source:  https://github.com/realgud/realgud-node-debug.git
 
 Updating /mnt/store/melpa/working/realgud-node-debug/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/realgud-node-debug/
-  to /tmp/realgud-node-debugp1P7iW/realgud-node-debug-20190525.1634
-    realgud-node-debug.el -> realgud-node-debug.el
-    realgud-node-debug/core.el -> realgud-node-debug/core.el
-    realgud-node-debug/init.el -> realgud-node-debug/init.el
-    realgud-node-debug/node-debug.el -> realgud-node-debug/node-debug.el
-    realgud-node-debug/track-mode.el -> realgud-node-debug/track-mode.el
-Created realgud-node-debug-20190525.1634.tar containing:
-  realgud-node-debug-20190525.1634/
-  realgud-node-debug-20190525.1634/realgud-node-debug-pkg.el
-  realgud-node-debug-20190525.1634/realgud-node-debug.el
-  realgud-node-debug-20190525.1634/realgud-node-debug/
-  realgud-node-debug-20190525.1634/realgud-node-debug/core.el
-  realgud-node-debug-20190525.1634/realgud-node-debug/init.el
-  realgud-node-debug-20190525.1634/realgud-node-debug/node-debug.el
-  realgud-node-debug-20190525.1634/realgud-node-debug/track-mode.el
-Built realgud-node-debug in 3.735s, finished at Tue Jul  6 11:05:57 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  491 Jul  6 11:05 packages/realgud-node-debug-20190525.1634.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 11:05 packages/realgud-node-debug-20190525.1634.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:05 packages/realgud-node-debug-badge.svg
-4.0K -rw-r--r-- 1 root root  171 Jul  6 11:05 packages/realgud-node-debug-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,30 +3,10 @@ Fetcher: github
 Source:  https://github.com/alezost/ducpel.git
 
 Updating /mnt/store/melpa/working/ducpel/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ducpel/
-  to /tmp/ducpelupZfih/ducpel-20140702.1154
-    ducpel-glyphs.el -> ducpel-glyphs.el
-    ducpel.el -> ducpel.el
-    levels => levels
-Created ducpel-20140702.1154.tar containing:
-  ducpel-20140702.1154/
-  ducpel-20140702.1154/ducpel-glyphs.el
-  ducpel-20140702.1154/ducpel-pkg.el
-  ducpel-20140702.1154/ducpel.el
-  ducpel-20140702.1154/levels/
-  ducpel-20140702.1154/levels/0001
-  ducpel-20140702.1154/levels/0002
-  ducpel-20140702.1154/levels/0003
-  ducpel-20140702.1154/levels/0004
-  ducpel-20140702.1154/levels/0005
-  ducpel-20140702.1154/levels/0006
-  ducpel-20140702.1154/levels/0007
-  ducpel-20140702.1154/levels/0008
-  ducpel-20140702.1154/levels/0009
-Built ducpel in 3.565s, finished at Tue Jul  6 10:24:13 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  329 Jul  6 10:24 packages/ducpel-20140702.1154.entry
-112K -rw-r--r-- 1 root root 110K Jul  6 10:24 packages/ducpel-20140702.1154.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:24 packages/ducpel-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul  6 10:24 packages/ducpel-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

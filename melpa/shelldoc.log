@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/mhayashi1120/Emacs-shelldoc.git
 
 Updating /mnt/store/melpa/working/shelldoc/
-Note: shelldoc :files spec is equivalent to the default.
-Built shelldoc in 3.997s, finished at Tue Jul  6 11:09:18 2021
- ✓ Success:
- 32K -rw-r--r-- 1 root root  29K Jul  6 11:09 packages/shelldoc-20200513.1206.el
-4.0K -rw-r--r-- 1 root root  432 Jul  6 11:09 packages/shelldoc-20200513.1206.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:09 packages/shelldoc-badge.svg
-4.0K -rw-r--r-- 1 root root 1.0K Jul  6 11:09 packages/shelldoc-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

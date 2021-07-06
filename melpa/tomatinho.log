@@ -3,21 +3,10 @@ Fetcher: github
 Source:  https://github.com/konr/tomatinho.git
 
 Updating /mnt/store/melpa/working/tomatinho/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/tomatinho/
-  to /tmp/tomatinhoxtnuxX/tomatinho-20180621.1748
-    tomatinho.el -> tomatinho.el
-    tick.wav -> tick.wav
-    tack.wav -> tack.wav
-Created tomatinho-20180621.1748.tar containing:
-  tomatinho-20180621.1748/
-  tomatinho-20180621.1748/tack.wav
-  tomatinho-20180621.1748/tick.wav
-  tomatinho-20180621.1748/tomatinho-pkg.el
-  tomatinho-20180621.1748/tomatinho.el
-Built tomatinho in 4.161s, finished at Tue Jul  6 11:15:03 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  350 Jul  6 11:15 packages/tomatinho-20180621.1748.entry
- 40K -rw-r--r-- 1 root root  40K Jul  6 11:15 packages/tomatinho-20180621.1748.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:15 packages/tomatinho-badge.svg
-4.0K -rw-r--r-- 1 root root  236 Jul  6 11:15 packages/tomatinho-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

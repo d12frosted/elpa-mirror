@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/alhassy/ob-latex-as-png.git
 
 Updating /mnt/store/melpa/working/ob-latex-as-png/
-Built ob-latex-as-png in 4.249s, finished at Tue Jul  6 10:56:10 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.2K Jul  6 10:56 packages/ob-latex-as-png-20200629.1013.el
-4.0K -rw-r--r-- 1 root root  475 Jul  6 10:56 packages/ob-latex-as-png-20200629.1013.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:56 packages/ob-latex-as-png-badge.svg
-4.0K -rw-r--r-- 1 root root  788 Jul  6 10:56 packages/ob-latex-as-png-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

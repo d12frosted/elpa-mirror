@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/Junker/describe-hash.git
 
 Updating /mnt/store/melpa/working/describe-hash/
-Built describe-hash in 4.027s, finished at Tue Jul  6 10:22:11 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.2K Jul  6 10:22 packages/describe-hash-20200718.1556.el
-4.0K -rw-r--r-- 1 root root  211 Jul  6 10:22 packages/describe-hash-20200718.1556.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:22 packages/describe-hash-badge.svg
-4.0K -rw-r--r-- 1 root root   98 Jul  6 10:22 packages/describe-hash-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

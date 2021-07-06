@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/neuromage/ycm.el.git
 
 Updating /mnt/store/melpa/working/ycm/
-Built ycm in 4.385s, finished at Tue Jul  6 11:20:35 2021
- ✓ Success:
- 16K -rw-r--r-- 1 root root  15K Jul  6 11:20 packages/ycm-20150822.1836.el
-4.0K -rw-r--r-- 1 root root  330 Jul  6 11:20 packages/ycm-20150822.1836.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:20 packages/ycm-badge.svg
-4.0K -rw-r--r-- 1 root root  121 Jul  6 11:20 packages/ycm-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

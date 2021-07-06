@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/seudut/perspeen.git
 
 Updating /mnt/store/melpa/working/perspeen/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/perspeen/
-  to /tmp/perspeen3izaVY/perspeen-20171203.1021
-    perspeen-tab.el -> perspeen-tab.el
-    perspeen.el -> perspeen.el
-Created perspeen-20171203.1021.tar containing:
-  perspeen-20171203.1021/
-  perspeen-20171203.1021/perspeen-pkg.el
-  perspeen-20171203.1021/perspeen-tab.el
-  perspeen-20171203.1021/perspeen.el
-Built perspeen in 3.531s, finished at Tue Jul  6 11:01:44 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  372 Jul  6 11:01 packages/perspeen-20171203.1021.entry
- 40K -rw-r--r-- 1 root root  40K Jul  6 11:01 packages/perspeen-20171203.1021.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:01 packages/perspeen-badge.svg
-4.0K -rw-r--r-- 1 root root  242 Jul  6 11:01 packages/perspeen-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: git
 Source:  https://bitbucket.org/EugeneMakei/belarus-holidays.el
 
 Updating /mnt/store/melpa/working/belarus-holidays/
-Built belarus-holidays in 4.749s, finished at Tue Jul  6 10:14:01 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.1K Jul  6 10:14 packages/belarus-holidays-20190102.1343.el
-4.0K -rw-r--r-- 1 root root  356 Jul  6 10:14 packages/belarus-holidays-20190102.1343.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:14 packages/belarus-holidays-badge.svg
-4.0K -rw-r--r-- 1 root root 1.8K Jul  6 10:14 packages/belarus-holidays-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

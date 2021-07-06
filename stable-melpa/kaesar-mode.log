@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/mhayashi1120/Emacs-kaesar.git
 
 Updating /mnt/store/melpa/working/kaesar-mode/
-Built kaesar-mode in 3.966s, finished at Tue Jul  6 10:46:22 2021
- ✓ Success:
- 16K -rw-r--r-- 1 root root  14K Jul  6 10:46 packages/kaesar-mode-20160128.1008.el
-4.0K -rw-r--r-- 1 root root  460 Jul  6 10:46 packages/kaesar-mode-20160128.1008.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:46 packages/kaesar-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  340 Jul  6 10:46 packages/kaesar-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

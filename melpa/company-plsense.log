@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/CeleritasCelery/company-plsense.git
 
 Updating /mnt/store/melpa/working/company-plsense/
-Built company-plsense in 4.675s, finished at Tue Jul  6 10:18:56 2021
- ✓ Success:
- 32K -rw-r--r-- 1 root root  29K Jul  6 10:18 packages/company-plsense-20180118.58.el
-4.0K -rw-r--r-- 1 root root  467 Jul  6 10:18 packages/company-plsense-20180118.58.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:18 packages/company-plsense-badge.svg
-4.0K -rw-r--r-- 1 root root  666 Jul  6 10:18 packages/company-plsense-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

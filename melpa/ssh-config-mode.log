@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/jhgorrell/ssh-config-mode-el.git
 
 Updating /mnt/store/melpa/working/ssh-config-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ssh-config-mode/
-  to /tmp/ssh-config-modeyEgPw7/ssh-config-mode-20210703.951
-    ssh-config-mode.el -> ssh-config-mode.el
-    ssh-config-keywords.txt -> ssh-config-keywords.txt
-Created ssh-config-mode-20210703.951.tar containing:
-  ssh-config-mode-20210703.951/
-  ssh-config-mode-20210703.951/ssh-config-keywords.txt
-  ssh-config-mode-20210703.951/ssh-config-mode-pkg.el
-  ssh-config-mode-20210703.951/ssh-config-mode.el
-Built ssh-config-mode in 4.367s, finished at Tue Jul  6 11:12:03 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  378 Jul  6 11:12 packages/ssh-config-mode-20210703.951.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 11:12 packages/ssh-config-mode-20210703.951.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:12 packages/ssh-config-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  562 Jul  6 11:12 packages/ssh-config-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

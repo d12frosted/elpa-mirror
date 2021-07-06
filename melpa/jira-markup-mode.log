@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/mnuessler/jira-markup-mode.git
 
 Updating /mnt/store/melpa/working/jira-markup-mode/
-Built jira-markup-mode in 3.794s, finished at Tue Jul  6 10:45:38 2021
- ✓ Success:
- 48K -rw-r--r-- 1 root root  46K Jul  6 10:45 packages/jira-markup-mode-20150601.2109.el
-4.0K -rw-r--r-- 1 root root  406 Jul  6 10:45 packages/jira-markup-mode-20150601.2109.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:45 packages/jira-markup-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul  6 10:45 packages/jira-markup-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

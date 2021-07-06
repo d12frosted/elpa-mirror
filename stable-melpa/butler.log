@@ -3,22 +3,10 @@ Fetcher: github
 Source:  https://github.com/AshtonKem/Butler.git
 
 Updating /mnt/store/melpa/working/butler/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/butler/
-  to /tmp/butlerc38qlq/butler-20150812.8
-    butler-pkg.el -> butler-pkg.el
-    butler-servers.el -> butler-servers.el
-    butler-util.el -> butler-util.el
-    butler.el -> butler.el
-Created butler-20150812.8.tar containing:
-  butler-20150812.8/
-  butler-20150812.8/butler-pkg.el
-  butler-20150812.8/butler-servers.el
-  butler-20150812.8/butler-util.el
-  butler-20150812.8/butler.el
-Built butler in 3.453s, finished at Tue Jul  6 10:15:27 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  418 Jul  6 10:15 packages/butler-20150812.8.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:15 packages/butler-20150812.8.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:15 packages/butler-badge.svg
-4.0K -rw-r--r-- 1 root root   58 Jul  6 10:15 packages/butler-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

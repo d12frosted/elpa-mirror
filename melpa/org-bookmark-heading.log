@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/alphapapa/org-bookmark-heading.git
 
 Updating /mnt/store/melpa/working/org-bookmark-heading/
-Built org-bookmark-heading in 3.377s, finished at Tue Jul  6 10:57:15 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.3K Jul  6 10:57 packages/org-bookmark-heading-20200103.514.el
-4.0K -rw-r--r-- 1 root root  433 Jul  6 10:57 packages/org-bookmark-heading-20200103.514.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:57 packages/org-bookmark-heading-badge.svg
-4.0K -rw-r--r-- 1 root root  943 Jul  6 10:57 packages/org-bookmark-heading-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

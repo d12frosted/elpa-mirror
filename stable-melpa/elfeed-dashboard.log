@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/Manoj321/elfeed-dashboard.git
 
 Updating /mnt/store/melpa/working/elfeed-dashboard/
-Built elfeed-dashboard in 4.051s, finished at Tue Jul  6 10:25:48 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.8K Jul  6 10:25 packages/elfeed-dashboard-20201218.347.el
-4.0K -rw-r--r-- 1 root root  474 Jul  6 10:25 packages/elfeed-dashboard-20201218.347.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:25 packages/elfeed-dashboard-badge.svg
-4.0K -rw-r--r-- 1 root root  130 Jul  6 10:25 packages/elfeed-dashboard-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

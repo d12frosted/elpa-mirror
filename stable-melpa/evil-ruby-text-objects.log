@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/porras/evil-ruby-text-objects.git
 
 Updating /mnt/store/melpa/working/evil-ruby-text-objects/
-Built evil-ruby-text-objects in 4.055s, finished at Tue Jul  6 10:29:35 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.1K Jul  6 10:29 packages/evil-ruby-text-objects-20200323.1552.el
-4.0K -rw-r--r-- 1 root root  418 Jul  6 10:29 packages/evil-ruby-text-objects-20200323.1552.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:29 packages/evil-ruby-text-objects-badge.svg
-4.0K -rw-r--r-- 1 root root  139 Jul  6 10:29 packages/evil-ruby-text-objects-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

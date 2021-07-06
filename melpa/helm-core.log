@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm.git
 
 Updating /mnt/store/melpa/working/helm-core/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/helm-core/
-  to /tmp/helm-coreay13l9/helm-core-20210704.556
-    helm-core-pkg.el -> helm-core-pkg.el
-    helm.el -> helm.el
-    helm-lib.el -> helm-lib.el
-    helm-source.el -> helm-source.el
-    helm-multi-match.el -> helm-multi-match.el
-Created helm-core-20210704.556.tar containing:
-  helm-core-20210704.556/
-  helm-core-20210704.556/helm-core-pkg.el
-  helm-core-20210704.556/helm-lib.el
-  helm-core-20210704.556/helm-multi-match.el
-  helm-core-20210704.556/helm-source.el
-  helm-core-20210704.556/helm.el
-Built helm-core in 3.911s, finished at Tue Jul  6 10:39:15 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  193 Jul  6 10:39 packages/helm-core-20210704.556.entry
-452K -rw-r--r-- 1 root root 450K Jul  6 10:39 packages/helm-core-20210704.556.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:39 packages/helm-core-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/company-mode/company-statistics.git
 
 Updating /mnt/store/melpa/working/company-statistics/
-Built company-statistics in 5.880s, finished at Tue Jul  6 10:19:13 2021
- ✓ Success:
- 16K -rw-r--r-- 1 root root  16K Jul  6 10:19 packages/company-statistics-20170210.1933.el
-4.0K -rw-r--r-- 1 root root  486 Jul  6 10:19 packages/company-statistics-20170210.1933.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:19 packages/company-statistics-badge.svg
-4.0K -rw-r--r-- 1 root root  887 Jul  6 10:19 packages/company-statistics-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

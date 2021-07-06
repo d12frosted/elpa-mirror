@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/jobbflykt/x509-mode.git
 
 Updating /mnt/store/melpa/working/x509-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/x509-mode/
-  to /tmp/x509-modeRUW0g5/x509-mode-20210407.627
-    x509-mode.el -> x509-mode.el
-    constants.txt -> constants.txt
-    keyword+constant.txt -> keyword+constant.txt
-    keywords.txt -> keywords.txt
-Created x509-mode-20210407.627.tar containing:
-  x509-mode-20210407.627/
-  x509-mode-20210407.627/constants.txt
-  x509-mode-20210407.627/keyword+constant.txt
-  x509-mode-20210407.627/keywords.txt
-  x509-mode-20210407.627/x509-mode-pkg.el
-  x509-mode-20210407.627/x509-mode.el
-Built x509-mode in 3.799s, finished at Tue Jul  6 11:19:44 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  401 Jul  6 11:19 packages/x509-mode-20210407.627.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 11:19 packages/x509-mode-20210407.627.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:19 packages/x509-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  392 Jul  6 11:19 packages/x509-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

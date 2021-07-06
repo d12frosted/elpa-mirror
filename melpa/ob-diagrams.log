@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/bergey/org-babel-diagrams.git
 
 Updating /mnt/store/melpa/working/ob-diagrams/
-Built ob-diagrams in 7.860s, finished at Tue Jul  6 10:55:59 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.1K Jul  6 10:55 packages/ob-diagrams-20160407.1237.el
-4.0K -rw-r--r-- 1 root root  350 Jul  6 10:55 packages/ob-diagrams-20160407.1237.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:55 packages/ob-diagrams-badge.svg
-4.0K -rw-r--r-- 1 root root  385 Jul  6 10:55 packages/ob-diagrams-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

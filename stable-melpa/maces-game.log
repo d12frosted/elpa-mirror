@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/pawelbx/maces-game.git
 
 Updating /mnt/store/melpa/working/maces-game/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/maces-game/
-  to /tmp/maces-gameoKWtgw/maces-game-20170903.1551
-    maces-game.el -> maces-game.el
-    words.txt -> words.txt
-Created maces-game-20170903.1551.tar containing:
-  maces-game-20170903.1551/
-  maces-game-20170903.1551/maces-game-pkg.el
-  maces-game-20170903.1551/maces-game.el
-  maces-game-20170903.1551/words.txt
-Built maces-game in 7.092s, finished at Tue Jul  6 10:50:14 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  462 Jul  6 10:50 packages/maces-game-20170903.1551.entry
-800K -rw-r--r-- 1 root root 800K Jul  6 10:50 packages/maces-game-20170903.1551.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:50 packages/maces-game-badge.svg
-4.0K -rw-r--r-- 1 root root  322 Jul  6 10:50 packages/maces-game-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

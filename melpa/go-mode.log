@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/dominikh/go-mode.el.git
 
 Updating /mnt/store/melpa/working/go-mode/
-Built go-mode in 4.175s, finished at Tue Jul  6 10:36:49 2021
- ✓ Success:
-112K -rw-r--r-- 1 root root 111K Jul  6 10:36 packages/go-mode-20210509.2353.el
-4.0K -rw-r--r-- 1 root root  322 Jul  6 10:36 packages/go-mode-20210509.2353.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:36 packages/go-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  304 Jul  6 10:36 packages/go-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

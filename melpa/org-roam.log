@@ -3,57 +3,10 @@ Fetcher: github
 Source:  https://github.com/org-roam/org-roam.git
 
 Updating /mnt/store/melpa/working/org-roam/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-roam/
-  to /tmp/org-roam38fQRc/org-roam-20210609.1221
-    org-roam-buffer.el -> org-roam-buffer.el
-    org-roam-capture.el -> org-roam-capture.el
-    org-roam-compat.el -> org-roam-compat.el
-    org-roam-completion.el -> org-roam-completion.el
-    org-roam-dailies.el -> org-roam-dailies.el
-    org-roam-db.el -> org-roam-db.el
-    org-roam-dev.el -> org-roam-dev.el
-    org-roam-doctor.el -> org-roam-doctor.el
-    org-roam-faces.el -> org-roam-faces.el
-    org-roam-graph.el -> org-roam-graph.el
-    org-roam-link.el -> org-roam-link.el
-    org-roam-macs.el -> org-roam-macs.el
-    org-roam-protocol.el -> org-roam-protocol.el
-    org-roam.el -> org-roam.el
-  ! doc/org-roam.texi -> org-roam.texi
-Created /tmp/org-roam38fQRc/org-roam-20210609.1221/org-roam.info
-Created org-roam-20210609.1221.tar containing:
-  org-roam-20210609.1221/
-  org-roam-20210609.1221/dir
-  org-roam-20210609.1221/org-roam-buffer.el
-  org-roam-20210609.1221/org-roam-capture.el
-  org-roam-20210609.1221/org-roam-compat.el
-  org-roam-20210609.1221/org-roam-completion.el
-  org-roam-20210609.1221/org-roam-dailies.el
-  org-roam-20210609.1221/org-roam-db.el
-  org-roam-20210609.1221/org-roam-dev.el
-  org-roam-20210609.1221/org-roam-doctor.el
-  org-roam-20210609.1221/org-roam-faces.el
-  org-roam-20210609.1221/org-roam-graph.el
-  org-roam-20210609.1221/org-roam-link.el
-  org-roam-20210609.1221/org-roam-macs.el
-  org-roam-20210609.1221/org-roam-pkg.el
-  org-roam-20210609.1221/org-roam-protocol.el
-  org-roam-20210609.1221/org-roam.el
-  org-roam-20210609.1221/org-roam.info
-Built org-roam in 11.082s, finished at Tue Jul  6 10:58:38 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  557 Jul  6 10:58 packages/org-roam-20210609.1221.entry
-332K -rw-r--r-- 1 root root 330K Jul  6 10:58 packages/org-roam-20210609.1221.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:58 packages/org-roam-badge.svg
-4.0K -rw-r--r-- 1 root root  550 Jul  6 10:58 packages/org-roam-bibtex-20210602.2113.entry
-192K -rw-r--r-- 1 root root 190K Jul  6 10:58 packages/org-roam-bibtex-20210602.2113.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:58 packages/org-roam-bibtex-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jul  6 10:58 packages/org-roam-bibtex-readme.txt
-4.0K -rw-r--r-- 1 root root 1.5K Jul  6 10:58 packages/org-roam-bibtex.log
-4.0K -rw-r--r-- 1 root root  179 Jul  6 10:58 packages/org-roam-readme.txt
-4.0K -rw-r--r-- 1 root root  531 Jul  6 10:58 packages/org-roam-server-20210521.1055.entry
-1.3M -rw-r--r-- 1 root root 1.3M Jul  6 10:58 packages/org-roam-server-20210521.1055.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:58 packages/org-roam-server-badge.svg
-4.0K -rw-r--r-- 1 root root  166 Jul  6 10:58 packages/org-roam-server-readme.txt
-4.0K -rw-r--r-- 1 root root 1.6K Jul  6 10:58 packages/org-roam-server.log
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

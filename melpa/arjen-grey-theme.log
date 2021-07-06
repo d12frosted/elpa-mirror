@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/credmp/arjen-grey-theme.git
 
 Updating /mnt/store/melpa/working/arjen-grey-theme/
-Built arjen-grey-theme in 3.689s, finished at Tue Jul  6 10:12:27 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.3K Jul  6 10:12 packages/arjen-grey-theme-20170522.2047.el
-4.0K -rw-r--r-- 1 root root  352 Jul  6 10:12 packages/arjen-grey-theme-20170522.2047.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:12 packages/arjen-grey-theme-badge.svg
-4.0K -rw-r--r-- 1 root root   36 Jul  6 10:12 packages/arjen-grey-theme-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

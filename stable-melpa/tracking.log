@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/jorgenschaefer/circe.git
 
 Updating /mnt/store/melpa/working/tracking/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/tracking/
-  to /tmp/trackingtRXsqd/tracking-20210528.754
-    tracking.el -> tracking.el
-    shorten.el -> shorten.el
-Created tracking-20210528.754.tar containing:
-  tracking-20210528.754/
-  tracking-20210528.754/shorten.el
-  tracking-20210528.754/tracking-pkg.el
-  tracking-20210528.754/tracking.el
-Built tracking in 3.416s, finished at Tue Jul  6 11:15:14 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  328 Jul  6 11:15 packages/tracking-20210528.754.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 11:15 packages/tracking-20210528.754.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:15 packages/tracking-badge.svg
-4.0K -rw-r--r-- 1 root root  357 Jul  6 11:15 packages/tracking-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,57 +3,10 @@ Fetcher: github
 Source:  https://github.com/dandavison/xenops.git
 
 Updating /mnt/store/melpa/working/xenops/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/xenops/
-  to /tmp/xenopsmQL24e/xenops-20210630.740
-  ! lisp/xenops-aio.el -> xenops-aio.el
-  ! lisp/xenops-apply.el -> xenops-apply.el
-  ! lisp/xenops-auctex.el -> xenops-auctex.el
-  ! lisp/xenops-avy.el -> xenops-avy.el
-  ! lisp/xenops-doctor.el -> xenops-doctor.el
-  ! lisp/xenops-element.el -> xenops-element.el
-  ! lisp/xenops-elements.el -> xenops-elements.el
-  ! lisp/xenops-font.el -> xenops-font.el
-  ! lisp/xenops-footnote.el -> xenops-footnote.el
-  ! lisp/xenops-image.el -> xenops-image.el
-  ! lisp/xenops-math-latex.el -> xenops-math-latex.el
-  ! lisp/xenops-math.el -> xenops-math.el
-  ! lisp/xenops-minted.el -> xenops-minted.el
-  ! lisp/xenops-overlay.el -> xenops-overlay.el
-  ! lisp/xenops-parse.el -> xenops-parse.el
-  ! lisp/xenops-png.el -> xenops-png.el
-  ! lisp/xenops-src.el -> xenops-src.el
-  ! lisp/xenops-style.el -> xenops-style.el
-  ! lisp/xenops-util.el -> xenops-util.el
-  ! lisp/xenops-xen.el -> xenops-xen.el
-  ! lisp/xenops.el -> xenops.el
-Created xenops-20210630.740.tar containing:
-  xenops-20210630.740/
-  xenops-20210630.740/xenops-aio.el
-  xenops-20210630.740/xenops-apply.el
-  xenops-20210630.740/xenops-auctex.el
-  xenops-20210630.740/xenops-avy.el
-  xenops-20210630.740/xenops-doctor.el
-  xenops-20210630.740/xenops-element.el
-  xenops-20210630.740/xenops-elements.el
-  xenops-20210630.740/xenops-font.el
-  xenops-20210630.740/xenops-footnote.el
-  xenops-20210630.740/xenops-image.el
-  xenops-20210630.740/xenops-math-latex.el
-  xenops-20210630.740/xenops-math.el
-  xenops-20210630.740/xenops-minted.el
-  xenops-20210630.740/xenops-overlay.el
-  xenops-20210630.740/xenops-parse.el
-  xenops-20210630.740/xenops-pkg.el
-  xenops-20210630.740/xenops-png.el
-  xenops-20210630.740/xenops-src.el
-  xenops-20210630.740/xenops-style.el
-  xenops-20210630.740/xenops-util.el
-  xenops-20210630.740/xenops-xen.el
-  xenops-20210630.740/xenops.el
-Built xenops in 3.890s, finished at Tue Jul  6 11:19:56 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  470 Jul  6 11:19 packages/xenops-20210630.740.entry
-152K -rw-r--r-- 1 root root 150K Jul  6 11:19 packages/xenops-20210630.740.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:19 packages/xenops-badge.svg
-4.0K -rw-r--r-- 1 root root 1.9K Jul  6 11:19 packages/xenops-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

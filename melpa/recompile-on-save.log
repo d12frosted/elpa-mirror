@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/maio/recompile-on-save.el.git
 
 Updating /mnt/store/melpa/working/recompile-on-save/
-Built recompile-on-save in 4.247s, finished at Tue Jul  6 11:06:06 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.1K Jul  6 11:06 packages/recompile-on-save-20151126.1446.el
-4.0K -rw-r--r-- 1 root root  489 Jul  6 11:06 packages/recompile-on-save-20151126.1446.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:06 packages/recompile-on-save-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:06 packages/recompile-on-save-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

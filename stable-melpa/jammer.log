@@ -3,9 +3,10 @@ Fetcher: git
 Source:  https://depp.brause.cc/jammer.git
 
 Updating /mnt/store/melpa/working/jammer/
-Built jammer in 4.307s, finished at Tue Jul  6 10:45:13 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.3K Jul  6 10:45 packages/jammer-20210508.1633.el
-4.0K -rw-r--r-- 1 root root  361 Jul  6 10:45 packages/jammer-20210508.1633.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:45 packages/jammer-badge.svg
-4.0K -rw-r--r-- 1 root root  145 Jul  6 10:45 packages/jammer-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,28 +3,10 @@ Fetcher: github
 Source:  https://github.com/kiwanami/emacs-edbi.git
 
 Updating /mnt/store/melpa/working/edbi/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/edbi/
-  to /tmp/edbix3pyvq/edbi-20160225.141
-    edbi-pkg.el -> edbi-pkg.el
-    edbi.el -> edbi.el
-    edbi-bridge.pl -> edbi-bridge.pl
-Created edbi-20160225.141.tar containing:
-  edbi-20160225.141/
-  edbi-20160225.141/edbi-bridge.pl
-  edbi-20160225.141/edbi-pkg.el
-  edbi-20160225.141/edbi.el
-Built edbi in 3.301s, finished at Tue Jul  6 10:24:43 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  407 Jul  6 10:24 packages/edbi-20160225.141.entry
-100K -rw-r--r-- 1 root root 100K Jul  6 10:24 packages/edbi-20160225.141.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:24 packages/edbi-badge.svg
-4.0K -rw-r--r-- 1 root root  969 Feb  2  2020 packages/edbi-database-url-badge.svg
-4.0K -rw-r--r-- 1 root root   33 Feb  2  2020 packages/edbi-database-url-readme.txt
-4.0K -rw-r--r-- 1 root root  969 Feb  2  2020 packages/edbi-django-badge.svg
-4.0K -rw-r--r-- 1 root root   33 Feb  2  2020 packages/edbi-django-readme.txt
-4.0K -rw-r--r-- 1 root root  969 Feb  2  2020 packages/edbi-minor-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   33 Feb  2  2020 packages/edbi-minor-mode-readme.txt
-4.0K -rw-r--r-- 1 root root 2.0K Jul  6 10:24 packages/edbi-readme.txt
-4.0K -rw-r--r-- 1 root root  969 Feb  2  2020 packages/edbi-sqlite-badge.svg
-4.0K -rw-r--r-- 1 root root   33 Feb  2  2020 packages/edbi-sqlite-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

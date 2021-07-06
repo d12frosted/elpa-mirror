@@ -3,37 +3,10 @@ Fetcher: github
 Source:  https://github.com/bmag/emacs-purpose.git
 
 Updating /mnt/store/melpa/working/window-purpose/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/window-purpose/
-  to /tmp/window-purpose82JGKY/window-purpose-20210628.715
-    window-purpose-configuration.el -> window-purpose-configuration.el
-    window-purpose-core.el -> window-purpose-core.el
-    window-purpose-fixes.el -> window-purpose-fixes.el
-    window-purpose-layout.el -> window-purpose-layout.el
-    window-purpose-prefix-overload.el -> window-purpose-prefix-overload.el
-    window-purpose-switch.el -> window-purpose-switch.el
-    window-purpose-utils.el -> window-purpose-utils.el
-    window-purpose-x.el -> window-purpose-x.el
-    window-purpose.el -> window-purpose.el
-    layouts => layouts
-Created window-purpose-20210628.715.tar containing:
-  window-purpose-20210628.715/
-  window-purpose-20210628.715/layouts/
-  window-purpose-20210628.715/layouts/edit-terminal-general.window-layout
-  window-purpose-20210628.715/layouts/edit-terminal.window-layout
-  window-purpose-20210628.715/window-purpose-configuration.el
-  window-purpose-20210628.715/window-purpose-core.el
-  window-purpose-20210628.715/window-purpose-fixes.el
-  window-purpose-20210628.715/window-purpose-layout.el
-  window-purpose-20210628.715/window-purpose-pkg.el
-  window-purpose-20210628.715/window-purpose-prefix-overload.el
-  window-purpose-20210628.715/window-purpose-switch.el
-  window-purpose-20210628.715/window-purpose-utils.el
-  window-purpose-20210628.715/window-purpose-x.el
-  window-purpose-20210628.715/window-purpose.el
-Built window-purpose in 3.933s, finished at Tue Jul  6 11:19:10 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  376 Jul  6 11:19 packages/window-purpose-20210628.715.entry
-200K -rw-r--r-- 1 root root 200K Jul  6 11:19 packages/window-purpose-20210628.715.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:19 packages/window-purpose-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Jul  6 11:19 packages/window-purpose-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

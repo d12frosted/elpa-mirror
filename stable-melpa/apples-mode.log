@@ -3,37 +3,10 @@ Fetcher: github
 Source:  https://github.com/tequilasunset/apples-mode.git
 
 Updating /mnt/store/melpa/working/apples-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/apples-mode/
-  to /tmp/apples-modetzWx7Z/apples-mode-20110121.418
-    apples-mode.el -> apples-mode.el
-    apples-mode => apples-mode
-Created apples-mode-20110121.418.tar containing:
-  apples-mode-20110121.418/
-  apples-mode-20110121.418/apples-mode-pkg.el
-  apples-mode-20110121.418/apples-mode.el
-  apples-mode-20110121.418/apples-mode/
-  apples-mode-20110121.418/apples-mode/comment
-  apples-mode-20110121.418/apples-mode/considering
-  apples-mode-20110121.418/apples-mode/considering-application-responses
-  apples-mode-20110121.418/apples-mode/display-dialog
-  apples-mode-20110121.418/apples-mode/if
-  apples-mode-20110121.418/apples-mode/ignoring
-  apples-mode-20110121.418/apples-mode/ignoring-application-responses
-  apples-mode-20110121.418/apples-mode/on
-  apples-mode-20110121.418/apples-mode/repeat
-  apples-mode-20110121.418/apples-mode/repeat-until
-  apples-mode-20110121.418/apples-mode/repeat-while
-  apples-mode-20110121.418/apples-mode/repeat-with
-  apples-mode-20110121.418/apples-mode/tell-application
-  apples-mode-20110121.418/apples-mode/tell-application-to-activate
-  apples-mode-20110121.418/apples-mode/try
-  apples-mode-20110121.418/apples-mode/using-terms-from-application
-  apples-mode-20110121.418/apples-mode/with-timeout-of-seconds
-  apples-mode-20110121.418/apples-mode/with-transaction
-Built apples-mode in 3.936s, finished at Tue Jul  6 10:12:17 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  361 Jul  6 10:12 packages/apples-mode-20110121.418.entry
- 80K -rw-r--r-- 1 root root  80K Jul  6 10:12 packages/apples-mode-20110121.418.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:12 packages/apples-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  903 Jul  6 10:12 packages/apples-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

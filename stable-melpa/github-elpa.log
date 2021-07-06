@@ -3,20 +3,10 @@ Fetcher: github
 Source:  https://github.com/10sr/github-elpa.git
 
 Updating /mnt/store/melpa/working/github-elpa/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/github-elpa/
-  to /tmp/github-elpaZeq3OV/github-elpa-20200129.417
-    github-elpa.el -> github-elpa.el
-    bin => bin
-Created github-elpa-20200129.417.tar containing:
-  github-elpa-20200129.417/
-  github-elpa-20200129.417/bin/
-  github-elpa-20200129.417/bin/github-elpa
-  github-elpa-20200129.417/github-elpa-pkg.el
-  github-elpa-20200129.417/github-elpa.el
-Built github-elpa in 4.561s, finished at Tue Jul  6 10:36:06 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  429 Jul  6 10:36 packages/github-elpa-20200129.417.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:36 packages/github-elpa-20200129.417.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:36 packages/github-elpa-badge.svg
-4.0K -rw-r--r-- 1 root root  389 Jul  6 10:36 packages/github-elpa-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

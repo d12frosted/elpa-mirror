@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/ericdanan/counsel-projectile.git
 
 Updating /mnt/store/melpa/working/counsel-projectile/
-Built counsel-projectile in 4.770s, finished at Tue Jul  6 10:20:06 2021
- ✓ Success:
- 76K -rw-r--r-- 1 root root  73K Jul  6 10:20 packages/counsel-projectile-20201015.1109.el
-4.0K -rw-r--r-- 1 root root  422 Jul  6 10:20 packages/counsel-projectile-20201015.1109.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:20 packages/counsel-projectile-badge.svg
-4.0K -rw-r--r-- 1 root root  538 Jul  6 10:20 packages/counsel-projectile-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

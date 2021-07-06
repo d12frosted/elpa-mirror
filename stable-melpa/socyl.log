@@ -3,33 +3,10 @@ Fetcher: github
 Source:  https://github.com/nlamirault/socyl.git
 
 Updating /mnt/store/melpa/working/socyl/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/socyl/
-  to /tmp/socylFhDv79/socyl-20170212.642
-    socyl-ag.el -> socyl-ag.el
-    socyl-backend.el -> socyl-backend.el
-    socyl-custom.el -> socyl-custom.el
-    socyl-mode.el -> socyl-mode.el
-    socyl-pt.el -> socyl-pt.el
-    socyl-ripgrep.el -> socyl-ripgrep.el
-    socyl-sift.el -> socyl-sift.el
-    socyl-version.el -> socyl-version.el
-    socyl.el -> socyl.el
-Created socyl-20170212.642.tar containing:
-  socyl-20170212.642/
-  socyl-20170212.642/socyl-ag.el
-  socyl-20170212.642/socyl-backend.el
-  socyl-20170212.642/socyl-custom.el
-  socyl-20170212.642/socyl-mode.el
-  socyl-20170212.642/socyl-pkg.el
-  socyl-20170212.642/socyl-pt.el
-  socyl-20170212.642/socyl-ripgrep.el
-  socyl-20170212.642/socyl-sift.el
-  socyl-20170212.642/socyl-version.el
-  socyl-20170212.642/socyl.el
-Built socyl in 4.322s, finished at Tue Jul  6 11:11:00 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  467 Jul  6 11:11 packages/socyl-20170212.642.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 11:10 packages/socyl-20170212.642.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:11 packages/socyl-badge.svg
-4.0K -rw-r--r-- 1 root root  220 Jul  6 11:10 packages/socyl-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

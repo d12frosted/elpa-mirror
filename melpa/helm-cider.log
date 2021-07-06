@@ -3,30 +3,10 @@ Fetcher: github
 Source:  https://github.com/clojure-emacs/helm-cider.git
 
 Updating /mnt/store/melpa/working/helm-cider/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/helm-cider/
-  to /tmp/helm-ciderm2XRfs/helm-cider-20180307.458
-    helm-cider-cheatsheet.el -> helm-cider-cheatsheet.el
-    helm-cider-repl.el -> helm-cider-repl.el
-    helm-cider-spec.el -> helm-cider-spec.el
-    helm-cider-util.el -> helm-cider-util.el
-    helm-cider.el -> helm-cider.el
-Created helm-cider-20180307.458.tar containing:
-  helm-cider-20180307.458/
-  helm-cider-20180307.458/helm-cider-cheatsheet.el
-  helm-cider-20180307.458/helm-cider-pkg.el
-  helm-cider-20180307.458/helm-cider-repl.el
-  helm-cider-20180307.458/helm-cider-spec.el
-  helm-cider-20180307.458/helm-cider-util.el
-  helm-cider-20180307.458/helm-cider.el
-Built helm-cider in 4.791s, finished at Tue Jul  6 10:39:09 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  493 Jul  6 10:39 packages/helm-cider-20180307.458.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 10:39 packages/helm-cider-20180307.458.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:39 packages/helm-cider-badge.svg
-4.0K -rw-r--r-- 1 root root 1.9K Jul  6 07:37 packages/helm-cider-history-20150719.2120.el
-4.0K -rw-r--r-- 1 root root  443 Jul  6 07:37 packages/helm-cider-history-20150719.2120.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:37 packages/helm-cider-history-badge.svg
-4.0K -rw-r--r-- 1 root root   62 Jul  6 07:37 packages/helm-cider-history-readme.txt
-4.0K -rw-r--r-- 1 root root  156 Jul  6 10:39 packages/helm-cider-history.log
-4.0K -rw-r--r-- 1 root root  153 Jul  6 10:39 packages/helm-cider-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

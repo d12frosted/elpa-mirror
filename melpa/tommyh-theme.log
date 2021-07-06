@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/wglass/tommyh-theme.git
 
 Updating /mnt/store/melpa/working/tommyh-theme/
-Built tommyh-theme in 3.515s, finished at Tue Jul  6 11:15:08 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.9K Jul  6 11:15 packages/tommyh-theme-20131004.2330.el
-4.0K -rw-r--r-- 1 root root  289 Jul  6 11:15 packages/tommyh-theme-20131004.2330.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:15 packages/tommyh-theme-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

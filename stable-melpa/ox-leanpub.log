@@ -3,23 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/zzamboni/ox-leanpub.git
 
 Updating /mnt/store/melpa/working/ox-leanpub/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ox-leanpub/
-  to /tmp/ox-leanpub7tuzWs/ox-leanpub-20201129.2027
-    ox-leanpub-book.el -> ox-leanpub-book.el
-    ox-leanpub-markdown.el -> ox-leanpub-markdown.el
-    ox-leanpub-markua.el -> ox-leanpub-markua.el
-    ox-leanpub.el -> ox-leanpub.el
-Created ox-leanpub-20201129.2027.tar containing:
-  ox-leanpub-20201129.2027/
-  ox-leanpub-20201129.2027/ox-leanpub-book.el
-  ox-leanpub-20201129.2027/ox-leanpub-markdown.el
-  ox-leanpub-20201129.2027/ox-leanpub-markua.el
-  ox-leanpub-20201129.2027/ox-leanpub-pkg.el
-  ox-leanpub-20201129.2027/ox-leanpub.el
-Built ox-leanpub in 3.935s, finished at Tue Jul  6 10:59:52 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  500 Jul  6 10:59 packages/ox-leanpub-20201129.2027.entry
- 80K -rw-r--r-- 1 root root  80K Jul  6 10:59 packages/ox-leanpub-20201129.2027.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:59 packages/ox-leanpub-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Jul  6 10:59 packages/ox-leanpub-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

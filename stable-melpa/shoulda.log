@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/marcwebbie/shoulda.el.git
 
 Updating /mnt/store/melpa/working/shoulda/
-Built shoulda in 4.055s, finished at Tue Jul  6 11:09:24 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.6K Jul  6 11:09 packages/shoulda-20140616.1833.el
-4.0K -rw-r--r-- 1 root root  316 Jul  6 11:09 packages/shoulda-20140616.1833.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:09 packages/shoulda-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul  6 11:09 packages/shoulda-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

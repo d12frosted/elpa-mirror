@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/mina86/auto-dim-other-buffers.el.git
 
 Updating /mnt/store/melpa/working/auto-dim-other-buffers/
-Built auto-dim-other-buffers in 4.200s, finished at Tue Jul  6 10:12:59 2021
- ✓ Success:
- 20K -rw-r--r-- 1 root root  18K Jul  6 10:12 packages/auto-dim-other-buffers-20210210.1744.el
-4.0K -rw-r--r-- 1 root root  364 Jul  6 10:12 packages/auto-dim-other-buffers-20210210.1744.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:12 packages/auto-dim-other-buffers-badge.svg
-4.0K -rw-r--r-- 1 root root 1.6K Jul  6 10:12 packages/auto-dim-other-buffers-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

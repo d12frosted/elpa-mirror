@@ -3,9 +3,10 @@ Fetcher: git
 Source:  https://git.sr.ht/~tarsius/l
 
 Updating /mnt/store/melpa/working/l/
-Built l in 4.866s, finished at Tue Jul  6 10:47:22 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.2K Jul  6 10:47 packages/l-20210705.2113.el
-4.0K -rw-r--r-- 1 root root  233 Jul  6 10:47 packages/l-20210705.2113.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:47 packages/l-badge.svg
-4.0K -rw-r--r-- 1 root root  703 Jul  6 10:47 packages/l-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

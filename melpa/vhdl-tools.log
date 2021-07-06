@@ -3,9 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-elisp/vhdl-tools.git
 
 Updating /mnt/store/melpa/working/vhdl-tools/
-Built vhdl-tools in 3.961s, finished at Tue Jul  6 11:17:09 2021
- ✓ Success:
- 28K -rw-r--r-- 1 root root  28K Jul  6 11:17 packages/vhdl-tools-20200330.1819.el
-4.0K -rw-r--r-- 1 root root  493 Jul  6 11:17 packages/vhdl-tools-20200330.1819.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:17 packages/vhdl-tools-badge.svg
-4.0K -rw-r--r-- 1 root root  293 Jul  6 11:17 packages/vhdl-tools-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/andcarnivorous/linguistic.git
 
 Updating /mnt/store/melpa/working/linguistic/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/linguistic/
-  to /tmp/linguisticc5L1Q6/linguistic-20181129.2116
-    linguistic.el -> linguistic.el
-    graphs.org -> graphs.org
-Created linguistic-20181129.2116.tar containing:
-  linguistic-20181129.2116/
-  linguistic-20181129.2116/graphs.org
-  linguistic-20181129.2116/linguistic-pkg.el
-  linguistic-20181129.2116/linguistic.el
-Built linguistic in 3.766s, finished at Tue Jul  6 10:48:25 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  434 Jul  6 10:48 packages/linguistic-20181129.2116.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:48 packages/linguistic-20181129.2116.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:48 packages/linguistic-badge.svg
-4.0K -rw-r--r-- 1 root root  329 Jul  6 10:48 packages/linguistic-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

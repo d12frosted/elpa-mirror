@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/stan-dev/stan-mode.git
 
 Updating /mnt/store/melpa/working/company-stan/
-Built company-stan in 7.437s, finished at Tue Jul  6 10:19:14 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.3K Jul  6 10:19 packages/company-stan-20210130.1325.el
-4.0K -rw-r--r-- 1 root root  485 Jul  6 10:19 packages/company-stan-20210130.1325.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:19 packages/company-stan-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul  6 10:19 packages/company-stan-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

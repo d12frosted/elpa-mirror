@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/saf-dmitry/taskpaper-mode.git
 
 Updating /mnt/store/melpa/working/taskpaper-mode/
-Built taskpaper-mode in 3.913s, finished at Tue Jul  6 11:13:53 2021
- ✓ Success:
-224K -rw-r--r-- 1 root root 224K Jul  6 11:13 packages/taskpaper-mode-20210415.1322.el
-4.0K -rw-r--r-- 1 root root  430 Jul  6 11:13 packages/taskpaper-mode-20210415.1322.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:13 packages/taskpaper-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  518 Jul  6 11:13 packages/taskpaper-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

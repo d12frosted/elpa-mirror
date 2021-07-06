@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/vspinu/math-symbol-lists.git
 
 Updating /mnt/store/melpa/working/math-symbol-lists/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/math-symbol-lists/
-  to /tmp/math-symbol-listsdliCD6/math-symbol-lists-20200131.2333
-    math-symbol-lists.el -> math-symbol-lists.el
-    msl-build.el -> msl-build.el
-Created math-symbol-lists-20200131.2333.tar containing:
-  math-symbol-lists-20200131.2333/
-  math-symbol-lists-20200131.2333/math-symbol-lists-pkg.el
-  math-symbol-lists-20200131.2333/math-symbol-lists.el
-  math-symbol-lists-20200131.2333/msl-build.el
-Built math-symbol-lists in 3.660s, finished at Tue Jul  6 10:51:21 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  415 Jul  6 10:51 packages/math-symbol-lists-20200131.2333.entry
-192K -rw-r--r-- 1 root root 190K Jul  6 10:51 packages/math-symbol-lists-20200131.2333.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:51 packages/math-symbol-lists-badge.svg
-4.0K -rw-r--r-- 1 root root  817 Jul  6 10:51 packages/math-symbol-lists-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

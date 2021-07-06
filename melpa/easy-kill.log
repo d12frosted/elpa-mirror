@@ -3,14 +3,10 @@ Fetcher: github
 Source:  https://github.com/leoliu/easy-kill.git
 
 Updating /mnt/store/melpa/working/easy-kill/
-Built easy-kill in 3.946s, finished at Tue Jul  6 10:24:37 2021
- ✓ Success:
- 36K -rw-r--r-- 1 root root  34K Jul  6 10:24 packages/easy-kill-20181114.2330.el
-4.0K -rw-r--r-- 1 root root  398 Jul  6 10:24 packages/easy-kill-20181114.2330.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:24 packages/easy-kill-badge.svg
-4.0K -rw-r--r-- 1 root root  402 Jul  6 10:24 packages/easy-kill-extras-20210529.945.entry
- 72K -rw-r--r-- 1 root root  70K Jul  6 10:24 packages/easy-kill-extras-20210529.945.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:24 packages/easy-kill-extras-badge.svg
-4.0K -rw-r--r-- 1 root root 2.5K Jul  6 10:24 packages/easy-kill-extras-readme.txt
-4.0K -rw-r--r-- 1 root root 1.3K Jul  6 10:24 packages/easy-kill-extras.log
-4.0K -rw-r--r-- 1 root root  452 Jul  6 10:24 packages/easy-kill-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

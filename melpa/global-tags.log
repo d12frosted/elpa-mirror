@@ -3,9 +3,10 @@ Fetcher: git
 Source:  https://git.launchpad.net/global-tags.el
 
 Updating /mnt/store/melpa/working/global-tags/
-Built global-tags in 7.570s, finished at Tue Jul  6 10:36:25 2021
- ✓ Success:
- 32K -rw-r--r-- 1 root root  29K Jul  6 10:36 packages/global-tags-20210705.2024.el
-4.0K -rw-r--r-- 1 root root  509 Jul  6 10:36 packages/global-tags-20210705.2024.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:36 packages/global-tags-badge.svg
-4.0K -rw-r--r-- 1 root root 1.6K Jul  6 10:36 packages/global-tags-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

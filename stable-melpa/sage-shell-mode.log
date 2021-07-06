@@ -3,25 +3,10 @@ Fetcher: github
 Source:  https://github.com/sagemath/sage-shell-mode.git
 
 Updating /mnt/store/melpa/working/sage-shell-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sage-shell-mode/
-  to /tmp/sage-shell-modetELD4f/sage-shell-mode-20201225.1011
-    sage-shell-blocks.el -> sage-shell-blocks.el
-    sage-shell-mode.el -> sage-shell-mode.el
-    sage-shell-view.el -> sage-shell-view.el
-    emacs_sage_shell.py -> emacs_sage_shell.py
-    emacs_sage_shell_view.py -> emacs_sage_shell_view.py
-Created sage-shell-mode-20201225.1011.tar containing:
-  sage-shell-mode-20201225.1011/
-  sage-shell-mode-20201225.1011/emacs_sage_shell.py
-  sage-shell-mode-20201225.1011/emacs_sage_shell_view.py
-  sage-shell-mode-20201225.1011/sage-shell-blocks.el
-  sage-shell-mode-20201225.1011/sage-shell-mode-pkg.el
-  sage-shell-mode-20201225.1011/sage-shell-mode.el
-  sage-shell-mode-20201225.1011/sage-shell-view.el
-Built sage-shell-mode in 4.022s, finished at Tue Jul  6 11:08:01 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  472 Jul  6 11:08 packages/sage-shell-mode-20201225.1011.entry
-280K -rw-r--r-- 1 root root 280K Jul  6 11:08 packages/sage-shell-mode-20201225.1011.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:08 packages/sage-shell-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  829 Jul  6 11:08 packages/sage-shell-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

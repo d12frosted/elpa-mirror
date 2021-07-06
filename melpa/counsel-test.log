@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/xmagpie/counsel-test.git
 
 Updating /mnt/store/melpa/working/counsel-test/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/counsel-test/
-  to /tmp/counsel-testJfWh0j/counsel-test-20190819.1920
-    counsel-test-core.el -> counsel-test-core.el
-    counsel-test-ctest.el -> counsel-test-ctest.el
-    counsel-test-pytest.el -> counsel-test-pytest.el
-    counsel-test.el -> counsel-test.el
-Created counsel-test-20190819.1920.tar containing:
-  counsel-test-20190819.1920/
-  counsel-test-20190819.1920/counsel-test-core.el
-  counsel-test-20190819.1920/counsel-test-ctest.el
-  counsel-test-20190819.1920/counsel-test-pkg.el
-  counsel-test-20190819.1920/counsel-test-pytest.el
-  counsel-test-20190819.1920/counsel-test.el
-Built counsel-test in 3.646s, finished at Tue Jul  6 10:20:07 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  338 Jul  6 10:20 packages/counsel-test-20190819.1920.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:20 packages/counsel-test-20190819.1920.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:20 packages/counsel-test-badge.svg
-4.0K -rw-r--r-- 1 root root  212 Jul  6 10:20 packages/counsel-test-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

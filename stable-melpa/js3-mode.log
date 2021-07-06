@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/tamzinblake/js3-mode.git
 
 Updating /mnt/store/melpa/working/js3-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/js3-mode/
-  to /tmp/js3-mode8jltTG/js3-mode-20160515.1550
-    js3-mode.el -> js3-mode.el
-    js3.el -> js3.el
-Created js3-mode-20160515.1550.tar containing:
-  js3-mode-20160515.1550/
-  js3-mode-20160515.1550/js3-mode-pkg.el
-  js3-mode-20160515.1550/js3-mode.el
-  js3-mode-20160515.1550/js3.el
-Built js3-mode in 3.993s, finished at Tue Jul  6 10:45:56 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  312 Jul  6 10:45 packages/js3-mode-20160515.1550.entry
-872K -rw-r--r-- 1 root root 870K Jul  6 10:45 packages/js3-mode-20160515.1550.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:45 packages/js3-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 2.1K Jul  6 10:45 packages/js3-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

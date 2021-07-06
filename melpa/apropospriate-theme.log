@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/waymondo/apropospriate-theme.git
 
 Updating /mnt/store/melpa/working/apropospriate-theme/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/apropospriate-theme/
-  to /tmp/apropospriate-themeZ6I4It/apropospriate-theme-20210514.1710
-    apropospriate-dark-theme.el -> apropospriate-dark-theme.el
-    apropospriate-light-theme.el -> apropospriate-light-theme.el
-    apropospriate-theme-pkg.el -> apropospriate-theme-pkg.el
-    apropospriate-theme.el -> apropospriate-theme.el
-    apropospriate.el -> apropospriate.el
-Created apropospriate-theme-20210514.1710.tar containing:
-  apropospriate-theme-20210514.1710/
-  apropospriate-theme-20210514.1710/apropospriate-dark-theme.el
-  apropospriate-theme-20210514.1710/apropospriate-light-theme.el
-  apropospriate-theme-20210514.1710/apropospriate-theme-pkg.el
-  apropospriate-theme-20210514.1710/apropospriate-theme.el
-  apropospriate-theme-20210514.1710/apropospriate.el
-Built apropospriate-theme in 3.709s, finished at Tue Jul  6 10:12:19 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  208 Jul  6 10:12 packages/apropospriate-theme-20210514.1710.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 10:12 packages/apropospriate-theme-20210514.1710.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:12 packages/apropospriate-theme-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

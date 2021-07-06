@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/rejeep/html-script-src.el.git
 
 Updating /mnt/store/melpa/working/html-script-src/
-Built html-script-src in 3.848s, finished at Tue Jul  6 10:42:10 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Jul  6 10:42 packages/html-script-src-20120403.1815.el
-4.0K -rw-r--r-- 1 root root  408 Jul  6 10:42 packages/html-script-src-20120403.1815.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:42 packages/html-script-src-badge.svg
-4.0K -rw-r--r-- 1 root root  368 Jul  6 10:42 packages/html-script-src-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

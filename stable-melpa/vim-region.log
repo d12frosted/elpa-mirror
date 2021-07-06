@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/ongaeshi/emacs-vim-region.git
 
 Updating /mnt/store/melpa/working/vim-region/
-Built vim-region in 3.760s, finished at Tue Jul  6 11:17:14 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.2K Jul  6 11:17 packages/vim-region-20140329.1624.el
-4.0K -rw-r--r-- 1 root root  368 Jul  6 11:17 packages/vim-region-20140329.1624.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:17 packages/vim-region-badge.svg
-4.0K -rw-r--r-- 1 root root  134 Jul  6 11:17 packages/vim-region-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

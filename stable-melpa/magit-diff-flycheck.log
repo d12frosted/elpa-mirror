@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/ragone/magit-diff-flycheck.git
 
 Updating /mnt/store/melpa/working/magit-diff-flycheck/
-Built magit-diff-flycheck in 4.173s, finished at Tue Jul  6 10:50:24 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Jul  6 10:50 packages/magit-diff-flycheck-20190524.551.el
-4.0K -rw-r--r-- 1 root root  489 Jul  6 10:50 packages/magit-diff-flycheck-20190524.551.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:50 packages/magit-diff-flycheck-badge.svg
-4.0K -rw-r--r-- 1 root root  272 Jul  6 10:50 packages/magit-diff-flycheck-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,33 +3,10 @@ Fetcher: github
 Source:  https://github.com/AdrieanKhisbe/cask-package-toolset.el.git
 
 Updating /mnt/store/melpa/working/cask-package-toolset/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/cask-package-toolset/
-  to /tmp/cask-package-toolsetW47K4u/cask-package-toolset-20170921.2256
-    cask-package-toolset.el -> cask-package-toolset.el
-    bin => bin
-    templates => templates
-Created cask-package-toolset-20170921.2256.tar containing:
-  cask-package-toolset-20170921.2256/
-  cask-package-toolset-20170921.2256/bin/
-  cask-package-toolset-20170921.2256/bin/package-toolset
-  cask-package-toolset-20170921.2256/cask-package-toolset-pkg.el
-  cask-package-toolset-20170921.2256/cask-package-toolset.el
-  cask-package-toolset-20170921.2256/templates/
-  cask-package-toolset-20170921.2256/templates/.ert-runner
-  cask-package-toolset-20170921.2256/templates/.gitignore
-  cask-package-toolset-20170921.2256/templates/.nosearch
-  cask-package-toolset-20170921.2256/templates/.travis.yml
-  cask-package-toolset-20170921.2256/templates/Makefile
-  cask-package-toolset-20170921.2256/templates/test/
-  cask-package-toolset-20170921.2256/templates/test/package-test.el
-  cask-package-toolset-20170921.2256/templates/test/test-helper.el
-  cask-package-toolset-20170921.2256/templates/undercover.el
-  cask-package-toolset-20170921.2256/templates/void
-  cask-package-toolset-20170921.2256/templates/void-template
-Built cask-package-toolset in 4.754s, finished at Tue Jul  6 10:16:19 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  574 Jul  6 10:16 packages/cask-package-toolset-20170921.2256.entry
- 40K -rw-r--r-- 1 root root  40K Jul  6 10:16 packages/cask-package-toolset-20170921.2256.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:16 packages/cask-package-toolset-badge.svg
-4.0K -rw-r--r-- 1 root root  276 Jul  6 10:16 packages/cask-package-toolset-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

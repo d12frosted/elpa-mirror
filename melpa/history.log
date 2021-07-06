@@ -3,34 +3,10 @@ Fetcher: github
 Source:  https://github.com/tcw165/history.git
 
 Updating /mnt/store/melpa/working/history/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/history/
-  to /tmp/historyg1x9gQ/history-20160821.1602
-    history.el -> history.el
-    images/add-history.xpm -> images/add-history.xpm
-    images/goto-history.xpm -> images/goto-history.xpm
-    images/next-history.xpm -> images/next-history.xpm
-    images/prev-history.xpm -> images/prev-history.xpm
-    images/add-history.png -> images/add-history.png
-    images/goto-history.png -> images/goto-history.png
-    images/next-history.png -> images/next-history.png
-    images/prev-history.png -> images/prev-history.png
-Created history-20160821.1602.tar containing:
-  history-20160821.1602/
-  history-20160821.1602/history-pkg.el
-  history-20160821.1602/history.el
-  history-20160821.1602/images/
-  history-20160821.1602/images/add-history.png
-  history-20160821.1602/images/add-history.xpm
-  history-20160821.1602/images/goto-history.png
-  history-20160821.1602/images/goto-history.xpm
-  history-20160821.1602/images/next-history.png
-  history-20160821.1602/images/next-history.xpm
-  history-20160821.1602/images/prev-history.png
-  history-20160821.1602/images/prev-history.xpm
-Built history in 3.587s, finished at Tue Jul  6 10:41:45 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  279 Jul  6 10:41 packages/history-20160821.1602.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 10:41 packages/history-20160821.1602.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:41 packages/history-badge.svg
-4.0K -rw-r--r-- 1 root root 2.1K Jul  6 10:41 packages/history-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

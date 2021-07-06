@@ -3,18 +3,10 @@ Fetcher: github
 Source:  https://github.com/yyr/timer-revert.git
 
 Updating /mnt/store/melpa/working/timer-revert/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/timer-revert/
-  to /tmp/timer-revertyqqXWt/timer-revert-20150122.2032
-    timer-revert-pkg.el -> timer-revert-pkg.el
-    timer-revert.el -> timer-revert.el
-Created timer-revert-20150122.2032.tar containing:
-  timer-revert-20150122.2032/
-  timer-revert-20150122.2032/timer-revert-pkg.el
-  timer-revert-20150122.2032/timer-revert.el
-Built timer-revert in 3.422s, finished at Tue Jul  6 11:14:44 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  377 Jul  6 11:14 packages/timer-revert-20150122.2032.entry
- 12K -rw-r--r-- 1 root root  10K Jul  6 11:14 packages/timer-revert-20150122.2032.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:14 packages/timer-revert-badge.svg
-4.0K -rw-r--r-- 1 root root  717 Jul  6 11:14 packages/timer-revert-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

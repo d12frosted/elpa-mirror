@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/mkmcc/jumblr.git
 
 Updating /mnt/store/melpa/working/jumblr/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/jumblr/
-  to /tmp/jumblrCht99X/jumblr-20170727.2043
-    jumblr.el -> jumblr.el
-    dict => dict
-Created jumblr-20170727.2043.tar containing:
-  jumblr-20170727.2043/
-  jumblr-20170727.2043/dict/
-  jumblr-20170727.2043/dict/easy.txt
-  jumblr-20170727.2043/dict/expert.txt
-  jumblr-20170727.2043/dict/hard.txt
-  jumblr-20170727.2043/dict/medium.txt
-  jumblr-20170727.2043/jumblr-pkg.el
-  jumblr-20170727.2043/jumblr.el
-Built jumblr in 3.641s, finished at Tue Jul  6 10:46:14 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  256 Jul  6 10:46 packages/jumblr-20170727.2043.entry
-1.7M -rw-r--r-- 1 root root 1.7M Jul  6 10:46 packages/jumblr-20170727.2043.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:46 packages/jumblr-badge.svg
-4.0K -rw-r--r-- 1 root root 2.5K Jul  6 10:46 packages/jumblr-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/zk-phi/scad-preview.git
 
 Updating /mnt/store/melpa/working/scad-preview/
-Built scad-preview in 3.610s, finished at Tue Jul  6 11:08:13 2021
- ✓ Success:
- 16K -rw-r--r-- 1 root root  14K Jul  6 11:08 packages/scad-preview-20210306.426.el
-4.0K -rw-r--r-- 1 root root  310 Jul  6 11:08 packages/scad-preview-20210306.426.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:08 packages/scad-preview-badge.svg
-4.0K -rw-r--r-- 1 root root  668 Jul  6 11:08 packages/scad-preview-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

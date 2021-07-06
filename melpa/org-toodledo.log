@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/myuhe/org-toodledo.git
 
 Updating /mnt/store/melpa/working/org-toodledo/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-toodledo/
-  to /tmp/org-toodledoQBd96b/org-toodledo-20150301.1113
-    org-toodledo-sim.el -> org-toodledo-sim.el
-    org-toodledo.el -> org-toodledo.el
-Created org-toodledo-20150301.1113.tar containing:
-  org-toodledo-20150301.1113/
-  org-toodledo-20150301.1113/org-toodledo-pkg.el
-  org-toodledo-20150301.1113/org-toodledo-sim.el
-  org-toodledo-20150301.1113/org-toodledo.el
-Built org-toodledo in 3.670s, finished at Tue Jul  6 10:58:53 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  401 Jul  6 10:58 packages/org-toodledo-20150301.1113.entry
-132K -rw-r--r-- 1 root root 130K Jul  6 10:58 packages/org-toodledo-20150301.1113.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:58 packages/org-toodledo-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:58 packages/org-toodledo-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

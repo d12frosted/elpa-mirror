@@ -3,72 +3,10 @@ Fetcher: github
 Source:  https://github.com/magnars/expand-region.el.git
 
 Updating /mnt/store/melpa/working/expand-region/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/expand-region/
-  to /tmp/expand-regionab012r/expand-region-20210702.537
-    cc-mode-expansions.el -> cc-mode-expansions.el
-    clojure-mode-expansions.el -> clojure-mode-expansions.el
-    cperl-mode-expansions.el -> cperl-mode-expansions.el
-    css-mode-expansions.el -> css-mode-expansions.el
-    enh-ruby-mode-expansions.el -> enh-ruby-mode-expansions.el
-    er-basic-expansions.el -> er-basic-expansions.el
-    erlang-mode-expansions.el -> erlang-mode-expansions.el
-    expand-region-core.el -> expand-region-core.el
-    expand-region-custom.el -> expand-region-custom.el
-    expand-region-pkg.el -> expand-region-pkg.el
-    expand-region.el -> expand-region.el
-    feature-mode-expansions.el -> feature-mode-expansions.el
-    html-mode-expansions.el -> html-mode-expansions.el
-    js-mode-expansions.el -> js-mode-expansions.el
-    js2-mode-expansions.el -> js2-mode-expansions.el
-    jsp-expansions.el -> jsp-expansions.el
-    latex-mode-expansions.el -> latex-mode-expansions.el
-    nxml-mode-expansions.el -> nxml-mode-expansions.el
-    octave-expansions.el -> octave-expansions.el
-    python-el-expansions.el -> python-el-expansions.el
-    python-el-fgallina-expansions.el -> python-el-fgallina-expansions.el
-    python-mode-expansions.el -> python-mode-expansions.el
-    ruby-mode-expansions.el -> ruby-mode-expansions.el
-    sml-mode-expansions.el -> sml-mode-expansions.el
-    subword-mode-expansions.el -> subword-mode-expansions.el
-    text-mode-expansions.el -> text-mode-expansions.el
-    the-org-mode-expansions.el -> the-org-mode-expansions.el
-    web-mode-expansions.el -> web-mode-expansions.el
-    yaml-mode-expansions.el -> yaml-mode-expansions.el
-Created expand-region-20210702.537.tar containing:
-  expand-region-20210702.537/
-  expand-region-20210702.537/cc-mode-expansions.el
-  expand-region-20210702.537/clojure-mode-expansions.el
-  expand-region-20210702.537/cperl-mode-expansions.el
-  expand-region-20210702.537/css-mode-expansions.el
-  expand-region-20210702.537/enh-ruby-mode-expansions.el
-  expand-region-20210702.537/er-basic-expansions.el
-  expand-region-20210702.537/erlang-mode-expansions.el
-  expand-region-20210702.537/expand-region-core.el
-  expand-region-20210702.537/expand-region-custom.el
-  expand-region-20210702.537/expand-region-pkg.el
-  expand-region-20210702.537/expand-region.el
-  expand-region-20210702.537/feature-mode-expansions.el
-  expand-region-20210702.537/html-mode-expansions.el
-  expand-region-20210702.537/js-mode-expansions.el
-  expand-region-20210702.537/js2-mode-expansions.el
-  expand-region-20210702.537/jsp-expansions.el
-  expand-region-20210702.537/latex-mode-expansions.el
-  expand-region-20210702.537/nxml-mode-expansions.el
-  expand-region-20210702.537/octave-expansions.el
-  expand-region-20210702.537/python-el-expansions.el
-  expand-region-20210702.537/python-el-fgallina-expansions.el
-  expand-region-20210702.537/python-mode-expansions.el
-  expand-region-20210702.537/ruby-mode-expansions.el
-  expand-region-20210702.537/sml-mode-expansions.el
-  expand-region-20210702.537/subword-mode-expansions.el
-  expand-region-20210702.537/text-mode-expansions.el
-  expand-region-20210702.537/the-org-mode-expansions.el
-  expand-region-20210702.537/web-mode-expansions.el
-  expand-region-20210702.537/yaml-mode-expansions.el
-Built expand-region in 7.078s, finished at Tue Jul  6 10:30:07 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  303 Jul  6 10:30 packages/expand-region-20210702.537.entry
-140K -rw-r--r-- 1 root root 140K Jul  6 10:30 packages/expand-region-20210702.537.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:30 packages/expand-region-badge.svg
-8.0K -rw-r--r-- 1 root root 4.2K Jul  6 10:30 packages/expand-region-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

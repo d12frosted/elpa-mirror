@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/dotemacs/ipcalc.el.git
 
 Updating /mnt/store/melpa/working/ipcalc/
-Built ipcalc in 9.054s, finished at Tue Jul  6 10:44:09 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.8K Jul  6 10:44 packages/ipcalc-20200809.1444.el
-4.0K -rw-r--r-- 1 root root  356 Jul  6 10:44 packages/ipcalc-20200809.1444.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:44 packages/ipcalc-badge.svg
-4.0K -rw-r--r-- 1 root root   44 Jul  6 10:44 packages/ipcalc-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

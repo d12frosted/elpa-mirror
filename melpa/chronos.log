@@ -3,20 +3,10 @@ Fetcher: github
 Source:  https://github.com/dxknight/chronos.git
 
 Updating /mnt/store/melpa/working/chronos/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/chronos/
-  to /tmp/chronoss8hCoC/chronos-20150602.1529
-    chronos.el -> chronos.el
-    chronos.info -> chronos.info
-Created chronos-20150602.1529.tar containing:
-  chronos-20150602.1529/
-  chronos-20150602.1529/chronos-pkg.el
-  chronos-20150602.1529/chronos.el
-  chronos-20150602.1529/chronos.info
-  chronos-20150602.1529/dir
-Built chronos in 4.361s, finished at Tue Jul  6 10:17:04 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  347 Jul  6 10:17 packages/chronos-20150602.1529.entry
- 80K -rw-r--r-- 1 root root  80K Jul  6 10:17 packages/chronos-20150602.1529.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:17 packages/chronos-badge.svg
-4.0K -rw-r--r-- 1 root root  881 Jul  6 10:17 packages/chronos-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

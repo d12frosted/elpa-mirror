@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/rmm5t/maxframe.el.git
 
 Updating /mnt/store/melpa/working/maxframe/
-Built maxframe in 3.853s, finished at Tue Jul  6 10:51:25 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.3K Jul  6 10:51 packages/maxframe-20170120.1705.el
-4.0K -rw-r--r-- 1 root root  287 Jul  6 10:51 packages/maxframe-20170120.1705.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:51 packages/maxframe-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:51 packages/maxframe-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

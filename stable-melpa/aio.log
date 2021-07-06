@@ -3,21 +3,10 @@ Fetcher: github
 Source:  https://github.com/skeeto/emacs-aio.git
 
 Updating /mnt/store/melpa/working/aio/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/aio/
-  to /tmp/aiow6Z7fQ/aio-20200610.1904
-    aio.el -> aio.el
-    README.md -> README.md
-    UNLICENSE -> UNLICENSE
-Created aio-20200610.1904.tar containing:
-  aio-20200610.1904/
-  aio-20200610.1904/README.md
-  aio-20200610.1904/UNLICENSE
-  aio-20200610.1904/aio-pkg.el
-  aio-20200610.1904/aio.el
-Built aio in 4.390s, finished at Tue Jul  6 10:11:21 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  353 Jul  6 10:11 packages/aio-20200610.1904.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:11 packages/aio-20200610.1904.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:11 packages/aio-badge.svg
-4.0K -rw-r--r-- 1 root root  703 Jul  6 10:11 packages/aio-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

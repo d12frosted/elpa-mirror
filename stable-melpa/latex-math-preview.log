@@ -3,9 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/latex-math-preview/latex-math-preview.git
 
 Updating /mnt/store/melpa/working/latex-math-preview/
-Built latex-math-preview in 3.972s, finished at Tue Jul  6 10:47:36 2021
- ✓ Success:
-108K -rw-r--r-- 1 root root 108K Jul  6 10:47 packages/latex-math-preview-20190123.802.el
-4.0K -rw-r--r-- 1 root root  406 Jul  6 10:47 packages/latex-math-preview-20190123.802.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:47 packages/latex-math-preview-badge.svg
- 16K -rw-r--r-- 1 root root  14K Jul  6 10:47 packages/latex-math-preview-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

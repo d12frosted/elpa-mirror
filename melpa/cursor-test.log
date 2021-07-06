@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/ainame/cursor-test.el.git
 
 Updating /mnt/store/melpa/working/cursor-test/
-Built cursor-test in 3.682s, finished at Tue Jul  6 10:20:51 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.1K Jul  6 10:20 packages/cursor-test-20131207.1732.el
-4.0K -rw-r--r-- 1 root root  313 Jul  6 10:20 packages/cursor-test-20131207.1732.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:20 packages/cursor-test-badge.svg
-4.0K -rw-r--r-- 1 root root   52 Jul  6 10:20 packages/cursor-test-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

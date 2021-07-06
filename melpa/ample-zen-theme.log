@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/mjwall/ample-zen.git
 
 Updating /mnt/store/melpa/working/ample-zen-theme/
-Built ample-zen-theme in 4.114s, finished at Tue Jul  6 10:11:46 2021
- ✓ Success:
- 40K -rw-r--r-- 1 root root  38K Jul  6 10:11 packages/ample-zen-theme-20150119.2154.el
-4.0K -rw-r--r-- 1 root root  315 Jul  6 10:11 packages/ample-zen-theme-20150119.2154.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:11 packages/ample-zen-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  389 Jul  6 10:11 packages/ample-zen-theme-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

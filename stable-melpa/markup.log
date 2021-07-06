@@ -3,15 +3,10 @@ Fetcher: github
 Source:  https://github.com/leoc/markup.el.git
 
 Updating /mnt/store/melpa/working/markup/
-Note: markup :files spec is equivalent to the default.
-Built markup in 3.354s, finished at Tue Jul  6 10:51:13 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.8K Jul  6 10:51 packages/markup-20170420.1129.el
-4.0K -rw-r--r-- 1 root root  384 Jul  6 10:51 packages/markup-20170420.1129.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:51 packages/markup-badge.svg
- 20K -rw-r--r-- 1 root root  19K Jul  6 07:50 packages/markup-faces-20141110.817.el
-4.0K -rw-r--r-- 1 root root  375 Jul  6 07:50 packages/markup-faces-20141110.817.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:50 packages/markup-faces-badge.svg
-4.0K -rw-r--r-- 1 root root  318 Jul  6 07:50 packages/markup-faces-readme.txt
-4.0K -rw-r--r-- 1 root root  142 Jul  6 10:51 packages/markup-faces.log
-4.0K -rw-r--r-- 1 root root   90 Jul  6 10:51 packages/markup-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

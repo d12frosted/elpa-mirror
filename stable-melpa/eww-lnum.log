@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/m00natic/eww-lnum.git
 
 Updating /mnt/store/melpa/working/eww-lnum/
-Built eww-lnum in 3.759s, finished at Tue Jul  6 10:29:58 2021
- ✓ Success:
- 36K -rw-r--r-- 1 root root  33K Jul  6 10:29 packages/eww-lnum-20150102.1512.el
-4.0K -rw-r--r-- 1 root root  375 Jul  6 10:29 packages/eww-lnum-20150102.1512.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:29 packages/eww-lnum-badge.svg
-4.0K -rw-r--r-- 1 root root  219 Jul  6 10:29 packages/eww-lnum-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

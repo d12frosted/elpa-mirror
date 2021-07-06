@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/Fuco1/prognth.git
 
 Updating /mnt/store/melpa/working/prognth/
-Built prognth in 4.831s, finished at Tue Jul  6 11:03:48 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.3K Jul  6 11:03 packages/prognth-20130920.1759.el
-4.0K -rw-r--r-- 1 root root  287 Jul  6 11:03 packages/prognth-20130920.1759.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:03 packages/prognth-badge.svg
-4.0K -rw-r--r-- 1 root root  516 Jul  6 11:03 packages/prognth-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

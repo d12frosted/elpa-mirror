@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/Kurvivor19/rubik-mode.git
 
 Updating /mnt/store/melpa/working/rubik/
-Built rubik in 3.824s, finished at Tue Jul  6 11:07:38 2021
- ✓ Success:
- 32K -rw-r--r-- 1 root root  30K Jul  6 11:07 packages/rubik-20180222.2014.el
-4.0K -rw-r--r-- 1 root root  361 Jul  6 11:07 packages/rubik-20180222.2014.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:07 packages/rubik-badge.svg
-4.0K -rw-r--r-- 1 root root  329 Jul  6 11:07 packages/rubik-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,26 +3,10 @@ Fetcher: github
 Source:  https://github.com/k-talo/foreign-regexp.el.git
 
 Updating /mnt/store/melpa/working/foreign-regexp/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/foreign-regexp/
-  to /tmp/foreign-regexp0YMcZc/foreign-regexp-20200325.50
-    foreign-regexp.el -> foreign-regexp.el
-    bin/foreign-regexp-quote-meta-aux.pl -> bin/foreign-regexp-quote-meta-aux.pl
-    bin/foreign-regexp-replace-aux.pl -> bin/foreign-regexp-replace-aux.pl
-    bin/foreign-regexp-quote-meta-aux.rb -> bin/foreign-regexp-quote-meta-aux.rb
-    bin/foreign-regexp-replace-aux.rb -> bin/foreign-regexp-replace-aux.rb
-Created foreign-regexp-20200325.50.tar containing:
-  foreign-regexp-20200325.50/
-  foreign-regexp-20200325.50/bin/
-  foreign-regexp-20200325.50/bin/foreign-regexp-quote-meta-aux.pl
-  foreign-regexp-20200325.50/bin/foreign-regexp-quote-meta-aux.rb
-  foreign-regexp-20200325.50/bin/foreign-regexp-replace-aux.pl
-  foreign-regexp-20200325.50/bin/foreign-regexp-replace-aux.rb
-  foreign-regexp-20200325.50/foreign-regexp-pkg.el
-  foreign-regexp-20200325.50/foreign-regexp.el
-Built foreign-regexp in 3.616s, finished at Tue Jul  6 10:34:18 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  378 Jul  6 10:34 packages/foreign-regexp-20200325.50.entry
-260K -rw-r--r-- 1 root root 260K Jul  6 10:34 packages/foreign-regexp-20200325.50.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:34 packages/foreign-regexp-badge.svg
- 20K -rw-r--r-- 1 root root  17K Jul  6 10:34 packages/foreign-regexp-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

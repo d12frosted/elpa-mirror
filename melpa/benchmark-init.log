@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/dholm/benchmark-init-el.git
 
 Updating /mnt/store/melpa/working/benchmark-init/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/benchmark-init/
-  to /tmp/benchmark-inita0SlVk/benchmark-init-20150905.938
-    benchmark-init-modes.el -> benchmark-init-modes.el
-    benchmark-init.el -> benchmark-init.el
-Created benchmark-init-20150905.938.tar containing:
-  benchmark-init-20150905.938/
-  benchmark-init-20150905.938/benchmark-init-modes.el
-  benchmark-init-20150905.938/benchmark-init-pkg.el
-  benchmark-init-20150905.938/benchmark-init.el
-Built benchmark-init in 4.331s, finished at Tue Jul  6 10:14:02 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  272 Jul  6 10:14 packages/benchmark-init-20150905.938.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:14 packages/benchmark-init-20150905.938.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:14 packages/benchmark-init-badge.svg
-4.0K -rw-r--r-- 1 root root  479 Jul  6 10:14 packages/benchmark-init-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

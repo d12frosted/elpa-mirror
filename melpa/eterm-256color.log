@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/dieggsy/eterm-256color.git
 
 Updating /mnt/store/melpa/working/eterm-256color/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/eterm-256color/
-  to /tmp/eterm-256colorkEiQHR/eterm-256color-20210224.2241
-    eterm-256color.el -> eterm-256color.el
-    eterm-256color.ti -> eterm-256color.ti
-Created eterm-256color-20210224.2241.tar containing:
-  eterm-256color-20210224.2241/
-  eterm-256color-20210224.2241/eterm-256color-pkg.el
-  eterm-256color-20210224.2241/eterm-256color.el
-  eterm-256color-20210224.2241/eterm-256color.ti
-Built eterm-256color in 3.545s, finished at Tue Jul  6 10:28:45 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  408 Jul  6 10:28 packages/eterm-256color-20210224.2241.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:28 packages/eterm-256color-20210224.2241.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:28 packages/eterm-256color-badge.svg
-4.0K -rw-r--r-- 1 root root  180 Jul  6 10:28 packages/eterm-256color-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

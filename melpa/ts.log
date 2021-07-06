@@ -3,14 +3,10 @@ Fetcher: github
 Source:  https://github.com/alphapapa/ts.el.git
 
 Updating /mnt/store/melpa/working/ts/
-Built ts in 4.019s, finished at Tue Jul  6 11:15:45 2021
- ✓ Success:
- 28K -rw-r--r-- 1 root root  26K Jul  6 11:15 packages/ts-20210705.341.el
-4.0K -rw-r--r-- 1 root root  433 Jul  6 11:15 packages/ts-20210705.341.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:15 packages/ts-badge.svg
- 12K -rw-r--r-- 1 root root 8.2K Jul  6 11:15 packages/ts-comint-20181219.719.el
-4.0K -rw-r--r-- 1 root root  416 Jul  6 08:15 packages/ts-comint-20181219.719.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 08:15 packages/ts-comint-badge.svg
-4.0K -rw-r--r-- 1 root root  898 Jul  6 08:15 packages/ts-comint-readme.txt
-4.0K -rw-r--r-- 1 root root  140 Jul  6 11:15 packages/ts-comint.log
-4.0K -rw-r--r-- 1 root root  952 Jul  6 11:15 packages/ts-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

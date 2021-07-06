@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/c301/gtm-emacs-plugin.git
 
 Updating /mnt/store/melpa/working/git-time-metric/
-Built git-time-metric in 3.991s, finished at Tue Jul  6 10:35:57 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.3K Jul  6 10:35 packages/git-time-metric-20181116.2011.el
-4.0K -rw-r--r-- 1 root root  429 Jul  6 10:35 packages/git-time-metric-20181116.2011.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:35 packages/git-time-metric-badge.svg
-4.0K -rw-r--r-- 1 root root  587 Jul  6 10:35 packages/git-time-metric-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/d5884/yabin.git
 
 Updating /mnt/store/melpa/working/yabin/
-Built yabin in 3.873s, finished at Tue Jul  6 11:20:15 2021
- ✓ Success:
- 40K -rw-r--r-- 1 root root  39K Jul  6 11:20 packages/yabin-20140206.351.el
-4.0K -rw-r--r-- 1 root root  301 Jul  6 11:20 packages/yabin-20140206.351.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:20 packages/yabin-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Jul  6 11:20 packages/yabin-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

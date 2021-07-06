@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/unhammer/org-random-todo.git
 
 Updating /mnt/store/melpa/working/org-random-todo/
-Note: org-random-todo :files spec is equivalent to the default.
-Built org-random-todo in 3.250s, finished at Tue Jul  6 10:58:22 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.3K Jul  6 10:58 packages/org-random-todo-20190214.2057.el
-4.0K -rw-r--r-- 1 root root  467 Jul  6 10:58 packages/org-random-todo-20190214.2057.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:58 packages/org-random-todo-badge.svg
-4.0K -rw-r--r-- 1 root root  177 Jul  6 10:58 packages/org-random-todo-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-elsa/flycheck-elsa.git
 
 Updating /mnt/store/melpa/working/flycheck-elsa/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/flycheck-elsa/
-  to /tmp/flycheck-elsawSolnp/flycheck-elsa-20200203.1758
-    Elsafile.el -> Elsafile.el
-    flycheck-elsa.el -> flycheck-elsa.el
-Created flycheck-elsa-20200203.1758.tar containing:
-  flycheck-elsa-20200203.1758/
-  flycheck-elsa-20200203.1758/Elsafile.el
-  flycheck-elsa-20200203.1758/flycheck-elsa-pkg.el
-  flycheck-elsa-20200203.1758/flycheck-elsa.el
-Built flycheck-elsa in 4.781s, finished at Tue Jul  6 10:32:03 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  382 Jul  6 10:32 packages/flycheck-elsa-20200203.1758.entry
- 12K -rw-r--r-- 1 root root  10K Jul  6 10:32 packages/flycheck-elsa-20200203.1758.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:32 packages/flycheck-elsa-badge.svg
-4.0K -rw-r--r-- 1 root root   46 Jul  6 10:32 packages/flycheck-elsa-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

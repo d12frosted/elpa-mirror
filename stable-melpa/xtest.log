@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/promethial/xtest.git
 
 Updating /mnt/store/melpa/working/xtest/
-Built xtest in 4.139s, finished at Tue Jul  6 11:20:11 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.1K Jul  6 11:20 packages/xtest-20141214.1706.el
-4.0K -rw-r--r-- 1 root root  305 Jul  6 11:20 packages/xtest-20141214.1706.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:20 packages/xtest-badge.svg
-4.0K -rw-r--r-- 1 root root  101 Jul  6 11:20 packages/xtest-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

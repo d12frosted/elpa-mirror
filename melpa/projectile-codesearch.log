@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/abingham/emacs-codesearch.git
 
 Updating /mnt/store/melpa/working/projectile-codesearch/
-Built projectile-codesearch in 3.855s, finished at Tue Jul  6 11:03:57 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.8K Jul  6 11:03 packages/projectile-codesearch-20180508.1522.el
-4.0K -rw-r--r-- 1 root root  481 Jul  6 11:03 packages/projectile-codesearch-20180508.1522.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:03 packages/projectile-codesearch-badge.svg
-4.0K -rw-r--r-- 1 root root  613 Jul  6 11:03 packages/projectile-codesearch-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

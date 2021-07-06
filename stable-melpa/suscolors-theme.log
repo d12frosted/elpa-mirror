@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/TheSuspiciousWombat/SusColors-emacs.git
 
 Updating /mnt/store/melpa/working/suscolors-theme/
-Built suscolors-theme in 3.743s, finished at Tue Jul  6 11:13:08 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.5K Jul  6 11:13 packages/suscolors-theme-20190713.1009.el
-4.0K -rw-r--r-- 1 root root  227 Jul  6 11:13 packages/suscolors-theme-20190713.1009.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:13 packages/suscolors-theme-badge.svg
-4.0K -rw-r--r-- 1 root root   37 Jul  6 11:13 packages/suscolors-theme-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

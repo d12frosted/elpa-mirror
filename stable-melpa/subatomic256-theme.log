@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/d11wtq/subatomic256.git
 
 Updating /mnt/store/melpa/working/subatomic256-theme/
-Built subatomic256-theme in 7.752s, finished at Tue Jul  6 11:12:49 2021
- ✓ Success:
- 16K -rw-r--r-- 1 root root  14K Jul  6 11:12 packages/subatomic256-theme-20130621.210.el
-4.0K -rw-r--r-- 1 root root  342 Jul  6 11:12 packages/subatomic256-theme-20130621.210.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:12 packages/subatomic256-theme-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

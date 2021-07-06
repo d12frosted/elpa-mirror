@@ -3,8 +3,10 @@ Fetcher: github
 Source:  https://github.com/thierryvolpiatto/psession.git
 
 Updating /mnt/store/melpa/working/psession/
-Built psession in 3.953s, finished at Tue Jul  6 11:04:19 2021
- ✓ Success:
- 20K -rw-r--r-- 1 root root  19K Jul  6 11:04 packages/psession-20210203.828.el
-4.0K -rw-r--r-- 1 root root  427 Jul  6 11:04 packages/psession-20210203.828.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:04 packages/psession-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

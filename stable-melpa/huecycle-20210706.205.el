@@ -6,7 +6,7 @@
 ;; Maintainer: Phillip O'Reggio
 ;; Version: 1.0.0
 ;; Package-Version: 20210706.205
-;; Package-Commit: a581536f8a47e3465dcb495b8643617d8122a668
+;; Package-Commit: c343b2085dea11b820d4da6c6183e1102ec08698
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: faces
 ;; Homepage: https://github.com/pnor/huecycle

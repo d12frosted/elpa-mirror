@@ -3,27 +3,10 @@ Fetcher: github
 Source:  https://github.com/rust-lang/rust-mode.git
 
 Updating /mnt/store/melpa/working/rust-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/rust-mode/
-  to /tmp/rust-mode5a2fme/rust-mode-20210423.1157
-    rust-cargo.el -> rust-cargo.el
-    rust-compile.el -> rust-compile.el
-    rust-mode.el -> rust-mode.el
-    rust-playpen.el -> rust-playpen.el
-    rust-rustfmt.el -> rust-rustfmt.el
-    rust-utils.el -> rust-utils.el
-Created rust-mode-20210423.1157.tar containing:
-  rust-mode-20210423.1157/
-  rust-mode-20210423.1157/rust-cargo.el
-  rust-mode-20210423.1157/rust-compile.el
-  rust-mode-20210423.1157/rust-mode-pkg.el
-  rust-mode-20210423.1157/rust-mode.el
-  rust-mode-20210423.1157/rust-playpen.el
-  rust-mode-20210423.1157/rust-rustfmt.el
-  rust-mode-20210423.1157/rust-utils.el
-Built rust-mode in 3.899s, finished at Tue Jul  6 11:07:55 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  332 Jul  6 11:07 packages/rust-mode-20210423.1157.entry
-100K -rw-r--r-- 1 root root 100K Jul  6 11:07 packages/rust-mode-20210423.1157.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:07 packages/rust-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   67 Jul  6 11:07 packages/rust-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

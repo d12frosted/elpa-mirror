@@ -3,33 +3,10 @@ Fetcher: github
 Source:  https://github.com/swift-emacs/swift-mode.git
 
 Updating /mnt/store/melpa/working/swift-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/swift-mode/
-  to /tmp/swift-mode2ZGTIk/swift-mode-20210613.543
-    src-autoloads.el -> src-autoloads.el
-    swift-mode-beginning-of-defun.el -> swift-mode-beginning-of-defun.el
-    swift-mode-font-lock.el -> swift-mode-font-lock.el
-    swift-mode-imenu.el -> swift-mode-imenu.el
-    swift-mode-indent.el -> swift-mode-indent.el
-    swift-mode-lexer.el -> swift-mode-lexer.el
-    swift-mode-repl.el -> swift-mode-repl.el
-    swift-mode-standard-types.el -> swift-mode-standard-types.el
-    swift-mode.el -> swift-mode.el
-Created swift-mode-20210613.543.tar containing:
-  swift-mode-20210613.543/
-  swift-mode-20210613.543/src-autoloads.el
-  swift-mode-20210613.543/swift-mode-beginning-of-defun.el
-  swift-mode-20210613.543/swift-mode-font-lock.el
-  swift-mode-20210613.543/swift-mode-imenu.el
-  swift-mode-20210613.543/swift-mode-indent.el
-  swift-mode-20210613.543/swift-mode-lexer.el
-  swift-mode-20210613.543/swift-mode-pkg.el
-  swift-mode-20210613.543/swift-mode-repl.el
-  swift-mode-20210613.543/swift-mode-standard-types.el
-  swift-mode-20210613.543/swift-mode.el
-Built swift-mode in 3.854s, finished at Tue Jul  6 11:13:17 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  319 Jul  6 11:13 packages/swift-mode-20210613.543.entry
-440K -rw-r--r-- 1 root root 440K Jul  6 11:13 packages/swift-mode-20210613.543.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:13 packages/swift-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   51 Jul  6 11:13 packages/swift-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

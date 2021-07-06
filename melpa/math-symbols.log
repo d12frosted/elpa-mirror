@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/kawabata/math-symbols.git
 
 Updating /mnt/store/melpa/working/math-symbols/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/math-symbols/
-  to /tmp/math-symbols8meJtc/math-symbols-20201005.2313
-    math-symbols.el -> math-symbols.el
-    unimathsymbols.txt -> unimathsymbols.txt
-Created math-symbols-20201005.2313.tar containing:
-  math-symbols-20201005.2313/
-  math-symbols-20201005.2313/math-symbols-pkg.el
-  math-symbols-20201005.2313/math-symbols.el
-  math-symbols-20201005.2313/unimathsymbols.txt
-Built math-symbols in 3.662s, finished at Tue Jul  6 10:51:21 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  399 Jul  6 10:51 packages/math-symbols-20201005.2313.entry
-260K -rw-r--r-- 1 root root 260K Jul  6 10:51 packages/math-symbols-20201005.2313.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:51 packages/math-symbols-badge.svg
-4.0K -rw-r--r-- 1 root root 2.6K Jul  6 10:51 packages/math-symbols-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,27 +3,10 @@ Fetcher: github
 Source:  https://github.com/jsalzbergedu/rdxmk.git
 
 Updating /mnt/store/melpa/working/rdxmk/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/rdxmk/
-  to /tmp/rdxmk1rqX2n/rdxmk-20170630.134
-    rdxmk.el -> rdxmk.el
-    dir -> dir
-    rdxmk.info -> rdxmk.info
-    fdl-1.3.texi -> fdl-1.3.texi
-    rdxmkinfo.texi -> rdxmkinfo.texi
-Created /tmp/rdxmk1rqX2n/rdxmk-20170630.134/fdl-1.3.info
-Created /tmp/rdxmk1rqX2n/rdxmk-20170630.134/rdxmkinfo.info
-Created rdxmk-20170630.134.tar containing:
-  rdxmk-20170630.134/
-  rdxmk-20170630.134/dir
-  rdxmk-20170630.134/fdl-1.3.info
-  rdxmk-20170630.134/rdxmk-pkg.el
-  rdxmk-20170630.134/rdxmk.el
-  rdxmk-20170630.134/rdxmk.info
-  rdxmk-20170630.134/rdxmkinfo.info
-Built rdxmk in 9.733s, finished at Tue Jul  6 11:05:52 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  364 Jul  6 11:05 packages/rdxmk-20170630.134.entry
-100K -rw-r--r-- 1 root root 100K Jul  6 11:05 packages/rdxmk-20170630.134.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:05 packages/rdxmk-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:05 packages/rdxmk-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

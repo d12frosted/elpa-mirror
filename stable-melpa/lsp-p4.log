@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/dmakarov/p4ls.git
 
 Updating /mnt/store/melpa/working/lsp-p4/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/lsp-p4/
-  to /tmp/lsp-p4uLKL16/lsp-p4-20190127.1049
-  ! clients/emacs/lsp-p4.el -> lsp-p4.el
-  ! clients/emacs/p4lang-mode.el -> p4lang-mode.el
-Created lsp-p4-20190127.1049.tar containing:
-  lsp-p4-20190127.1049/
-  lsp-p4-20190127.1049/lsp-p4-pkg.el
-  lsp-p4-20190127.1049/lsp-p4.el
-  lsp-p4-20190127.1049/p4lang-mode.el
-Built lsp-p4 in 4.093s, finished at Tue Jul  6 10:49:35 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  290 Jul  6 10:49 packages/lsp-p4-20190127.1049.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:49 packages/lsp-p4-20190127.1049.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:49 packages/lsp-p4-badge.svg
-4.0K -rw-r--r-- 1 root root  294 Jul  6 10:49 packages/lsp-p4-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

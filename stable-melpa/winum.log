@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/deb0ch/emacs-winum.git
 
 Updating /mnt/store/melpa/working/winum/
-Built winum in 4.498s, finished at Tue Jul  6 11:19:16 2021
- ✓ Success:
- 24K -rw-r--r-- 1 root root  24K Jul  6 11:19 packages/winum-20190911.1607.el
-4.0K -rw-r--r-- 1 root root  445 Jul  6 11:19 packages/winum-20190911.1607.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:19 packages/winum-badge.svg
-4.0K -rw-r--r-- 1 root root  446 Jul  6 11:19 packages/winum-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

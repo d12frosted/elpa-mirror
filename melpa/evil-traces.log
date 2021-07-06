@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/mamapanda/evil-traces.git
 
 Updating /mnt/store/melpa/working/evil-traces/
-Built evil-traces in 4.020s, finished at Tue Jul  6 10:29:48 2021
- ✓ Success:
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:29 packages/evil-traces-20191214.558.el
-4.0K -rw-r--r-- 1 root root  436 Jul  6 10:29 packages/evil-traces-20191214.558.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:29 packages/evil-traces-badge.svg
-4.0K -rw-r--r-- 1 root root  180 Jul  6 10:29 packages/evil-traces-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

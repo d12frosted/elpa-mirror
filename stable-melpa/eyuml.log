@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/antham/eyuml.git
 
 Updating /mnt/store/melpa/working/eyuml/
-Built eyuml in 3.845s, finished at Tue Jul  6 10:30:15 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.5K Jul  6 10:30 packages/eyuml-20141028.2227.el
-4.0K -rw-r--r-- 1 root root  375 Jul  6 10:30 packages/eyuml-20141028.2227.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:30 packages/eyuml-badge.svg
-4.0K -rw-r--r-- 1 root root  330 Jul  6 10:30 packages/eyuml-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

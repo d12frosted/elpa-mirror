@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/chmouel/gerrit-download.el.git
 
 Updating /mnt/store/melpa/working/gerrit-download/
-Built gerrit-download in 4.089s, finished at Tue Jul  6 10:35:26 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.7K Jul  6 10:35 packages/gerrit-download-20150714.1408.el
-4.0K -rw-r--r-- 1 root root  438 Jul  6 10:35 packages/gerrit-download-20150714.1408.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:35 packages/gerrit-download-badge.svg
-4.0K -rw-r--r-- 1 root root  422 Jul  6 10:35 packages/gerrit-download-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,32 +3,10 @@ Fetcher: github
 Source:  https://github.com/shaneikennedy/npm.el.git
 
 Updating /mnt/store/melpa/working/npm/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/npm/
-  to /tmp/npmM52uOr/npm-20210601.1122
-    npm-common.el -> npm-common.el
-    npm-init.el -> npm-init.el
-    npm-install.el -> npm-install.el
-    npm-run.el -> npm-run.el
-    npm-update.el -> npm-update.el
-    npm.el -> npm.el
-Created npm-20210601.1122.tar containing:
-  npm-20210601.1122/
-  npm-20210601.1122/npm-common.el
-  npm-20210601.1122/npm-init.el
-  npm-20210601.1122/npm-install.el
-  npm-20210601.1122/npm-pkg.el
-  npm-20210601.1122/npm-run.el
-  npm-20210601.1122/npm-update.el
-  npm-20210601.1122/npm.el
-Built npm in 5.108s, finished at Tue Jul  6 10:55:05 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  366 Jul  6 10:55 packages/npm-20210601.1122.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:55 packages/npm-20210601.1122.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:55 packages/npm-badge.svg
-8.0K -rw-r--r-- 1 root root 7.6K Jul  6 07:54 packages/npm-mode-20190616.2025.el
-4.0K -rw-r--r-- 1 root root  419 Jul  6 07:54 packages/npm-mode-20190616.2025.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:54 packages/npm-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul  6 07:54 packages/npm-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  129 Jul  6 10:55 packages/npm-mode.log
-4.0K -rw-r--r-- 1 root root   58 Jul  6 10:55 packages/npm-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

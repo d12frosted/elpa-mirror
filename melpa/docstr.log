@@ -3,59 +3,10 @@ Fetcher: github
 Source:  https://github.com/jcs-elpa/docstr.git
 
 Updating /mnt/store/melpa/working/docstr/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/docstr/
-  to /tmp/docstrYivG3a/docstr-20210417.1315
-    docstr-faces.el -> docstr-faces.el
-    docstr-key.el -> docstr-key.el
-    docstr-util.el -> docstr-util.el
-    docstr-writers.el -> docstr-writers.el
-    docstr.el -> docstr.el
-  ! langs/docstr-actionscript.el -> docstr-actionscript.el
-  ! langs/docstr-c++.el -> docstr-c++.el
-  ! langs/docstr-c.el -> docstr-c.el
-  ! langs/docstr-csharp.el -> docstr-csharp.el
-  ! langs/docstr-go.el -> docstr-go.el
-  ! langs/docstr-groovy.el -> docstr-groovy.el
-  ! langs/docstr-java.el -> docstr-java.el
-  ! langs/docstr-js.el -> docstr-js.el
-  ! langs/docstr-lua.el -> docstr-lua.el
-  ! langs/docstr-objc.el -> docstr-objc.el
-  ! langs/docstr-php.el -> docstr-php.el
-  ! langs/docstr-python.el -> docstr-python.el
-  ! langs/docstr-ruby.el -> docstr-ruby.el
-  ! langs/docstr-rust.el -> docstr-rust.el
-  ! langs/docstr-scala.el -> docstr-scala.el
-  ! langs/docstr-swift.el -> docstr-swift.el
-  ! langs/docstr-typescript.el -> docstr-typescript.el
-Created docstr-20210417.1315.tar containing:
-  docstr-20210417.1315/
-  docstr-20210417.1315/docstr-actionscript.el
-  docstr-20210417.1315/docstr-c++.el
-  docstr-20210417.1315/docstr-c.el
-  docstr-20210417.1315/docstr-csharp.el
-  docstr-20210417.1315/docstr-faces.el
-  docstr-20210417.1315/docstr-go.el
-  docstr-20210417.1315/docstr-groovy.el
-  docstr-20210417.1315/docstr-java.el
-  docstr-20210417.1315/docstr-js.el
-  docstr-20210417.1315/docstr-key.el
-  docstr-20210417.1315/docstr-lua.el
-  docstr-20210417.1315/docstr-objc.el
-  docstr-20210417.1315/docstr-php.el
-  docstr-20210417.1315/docstr-pkg.el
-  docstr-20210417.1315/docstr-python.el
-  docstr-20210417.1315/docstr-ruby.el
-  docstr-20210417.1315/docstr-rust.el
-  docstr-20210417.1315/docstr-scala.el
-  docstr-20210417.1315/docstr-swift.el
-  docstr-20210417.1315/docstr-typescript.el
-  docstr-20210417.1315/docstr-util.el
-  docstr-20210417.1315/docstr-writers.el
-  docstr-20210417.1315/docstr.el
-Built docstr in 3.605s, finished at Tue Jul  6 10:23:47 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  338 Jul  6 10:23 packages/docstr-20210417.1315.entry
-120K -rw-r--r-- 1 root root 120K Jul  6 10:23 packages/docstr-20210417.1315.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:23 packages/docstr-badge.svg
-4.0K -rw-r--r-- 1 root root   82 Jul  6 10:23 packages/docstr-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

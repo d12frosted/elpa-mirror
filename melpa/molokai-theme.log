@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/alloy-d/color-theme-molokai.git
 
 Updating /mnt/store/melpa/working/molokai-theme/
-Built molokai-theme in 3.802s, finished at Tue Jul  6 10:52:43 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.7K Jul  6 10:52 packages/molokai-theme-20151016.1545.el
-4.0K -rw-r--r-- 1 root root  330 Jul  6 10:52 packages/molokai-theme-20151016.1545.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:52 packages/molokai-theme-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul  6 10:52 packages/molokai-theme-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

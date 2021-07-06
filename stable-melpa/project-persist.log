@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/rdallasgray/project-persist.git
 
 Updating /mnt/store/melpa/working/project-persist/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/project-persist/
-  to /tmp/project-persistBprrXh/project-persist-20180906.1302
-  ! lib/project-persist-pkg.el -> project-persist-pkg.el
-  ! lib/project-persist.el -> project-persist.el
-Created project-persist-20180906.1302.tar containing:
-  project-persist-20180906.1302/
-  project-persist-20180906.1302/project-persist-pkg.el
-  project-persist-20180906.1302/project-persist.el
-Built project-persist in 3.904s, finished at Tue Jul  6 11:03:52 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  367 Jul  6 11:03 packages/project-persist-20180906.1302.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 11:03 packages/project-persist-20180906.1302.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:03 packages/project-persist-badge.svg
-4.0K -rw-r--r-- 1 root root  445 Jul  6 08:03 packages/project-persist-drawer-20151108.1222.entry
- 12K -rw-r--r-- 1 root root  10K Jul  6 08:03 packages/project-persist-drawer-20151108.1222.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 08:03 packages/project-persist-drawer-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul  6 08:03 packages/project-persist-drawer-readme.txt
-4.0K -rw-r--r-- 1 root root  480 Jul  6 11:03 packages/project-persist-drawer.log
-4.0K -rw-r--r-- 1 root root 1.6K Jul  6 11:03 packages/project-persist-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

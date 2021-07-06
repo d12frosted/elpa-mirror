@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/mrkkrp/cyphejor.git
 
 Updating /mnt/store/melpa/working/cyphejor/
-Built cyphejor in 4.192s, finished at Tue Jul  6 10:20:57 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.1K Jul  6 10:20 packages/cyphejor-20210319.1423.el
-4.0K -rw-r--r-- 1 root root  403 Jul  6 10:20 packages/cyphejor-20210319.1423.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:20 packages/cyphejor-badge.svg
-4.0K -rw-r--r-- 1 root root   77 Jul  6 10:20 packages/cyphejor-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/bgamari/dts-mode.git
 
 Updating /mnt/store/melpa/working/dts-mode/
-Built dts-mode in 3.568s, finished at Tue Jul  6 10:24:12 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.9K Jul  6 10:24 packages/dts-mode-20161103.1223.el
-4.0K -rw-r--r-- 1 root root  298 Jul  6 10:24 packages/dts-mode-20161103.1223.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:24 packages/dts-mode-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul  6 10:24 packages/dts-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

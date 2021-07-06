@@ -3,31 +3,10 @@ Fetcher: github
 Source:  https://github.com/dickmao/nndiscourse.git
 
 Updating /mnt/store/melpa/working/nndiscourse/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nndiscourse/
-  to /tmp/nndiscourseIE37cQ/nndiscourse-20210219.1949
-    nndiscourse.el -> nndiscourse.el
-    nndiscourse/Gemfile -> nndiscourse/Gemfile
-    nndiscourse/Gemfile.lock -> nndiscourse/Gemfile.lock
-    nndiscourse/nndiscourse.gemspec -> nndiscourse/nndiscourse.gemspec
-    nndiscourse/nndiscourse.thor -> nndiscourse/nndiscourse.thor
-    nndiscourse/lib => nndiscourse/lib
-Created nndiscourse-20210219.1949.tar containing:
-  nndiscourse-20210219.1949/
-  nndiscourse-20210219.1949/nndiscourse-pkg.el
-  nndiscourse-20210219.1949/nndiscourse.el
-  nndiscourse-20210219.1949/nndiscourse/
-  nndiscourse-20210219.1949/nndiscourse/Gemfile
-  nndiscourse-20210219.1949/nndiscourse/Gemfile.lock
-  nndiscourse-20210219.1949/nndiscourse/lib/
-  nndiscourse-20210219.1949/nndiscourse/lib/nndiscourse.rb
-  nndiscourse-20210219.1949/nndiscourse/lib/nndiscourse/
-  nndiscourse-20210219.1949/nndiscourse/lib/nndiscourse/version.rb
-  nndiscourse-20210219.1949/nndiscourse/nndiscourse.gemspec
-  nndiscourse-20210219.1949/nndiscourse/nndiscourse.thor
-Built nndiscourse in 3.547s, finished at Tue Jul  6 10:54:43 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  370 Jul  6 10:54 packages/nndiscourse-20210219.1949.entry
- 72K -rw-r--r-- 1 root root  70K Jul  6 10:54 packages/nndiscourse-20210219.1949.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:54 packages/nndiscourse-badge.svg
-4.0K -rw-r--r-- 1 root root   30 Jul  6 10:54 packages/nndiscourse-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

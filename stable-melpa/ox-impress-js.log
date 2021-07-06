@@ -3,24 +3,10 @@ Fetcher: github
 Source:  https://github.com/nullpofy/org-impress-js.el.git
 
 Updating /mnt/store/melpa/working/ox-impress-js/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ox-impress-js/
-  to /tmp/ox-impress-jsC0eMQl/ox-impress-js-20150412.1716
-    ox-impress-js.el -> ox-impress-js.el
-    resources => resources
-Created ox-impress-js-20150412.1716.tar containing:
-  ox-impress-js-20150412.1716/
-  ox-impress-js-20150412.1716/ox-impress-js-pkg.el
-  ox-impress-js-20150412.1716/ox-impress-js.el
-  ox-impress-js-20150412.1716/resources/
-  ox-impress-js-20150412.1716/resources/css/
-  ox-impress-js-20150412.1716/resources/css/impress-demo.css
-  ox-impress-js-20150412.1716/resources/css/mystyle.css
-  ox-impress-js-20150412.1716/resources/js/
-  ox-impress-js-20150412.1716/resources/js/impress.js
-Built ox-impress-js in 3.393s, finished at Tue Jul  6 10:59:46 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  422 Jul  6 10:59 packages/ox-impress-js-20150412.1716.entry
-100K -rw-r--r-- 1 root root 100K Jul  6 10:59 packages/ox-impress-js-20150412.1716.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:59 packages/ox-impress-js-badge.svg
-4.0K -rw-r--r-- 1 root root  344 Jul  6 10:59 packages/ox-impress-js-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/gonewest818/geolocation.el.git
 
 Updating /mnt/store/melpa/working/geolocation/
-Built geolocation in 4.157s, finished at Tue Jul  6 10:35:24 2021
- ✓ Success:
- 36K -rw-r--r-- 1 root root  33K Jul  6 10:35 packages/geolocation-20200317.1559.el
-4.0K -rw-r--r-- 1 root root  477 Jul  6 10:35 packages/geolocation-20200317.1559.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:35 packages/geolocation-badge.svg
-4.0K -rw-r--r-- 1 root root 4.0K Jul  6 10:35 packages/geolocation-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

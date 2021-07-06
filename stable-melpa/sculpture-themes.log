@@ -3,21 +3,10 @@ Fetcher: github
 Source:  https://github.com/t-e-r-m/sculpture-themes.git
 
 Updating /mnt/store/melpa/working/sculpture-themes/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sculpture-themes/
-  to /tmp/sculpture-themesdXafQe/sculpture-themes-20210530.624
-    sculpture-themes-dark-theme.el -> sculpture-themes-dark-theme.el
-    sculpture-themes-light-theme.el -> sculpture-themes-light-theme.el
-    sculpture-themes.el -> sculpture-themes.el
-Created sculpture-themes-20210530.624.tar containing:
-  sculpture-themes-20210530.624/
-  sculpture-themes-20210530.624/sculpture-themes-dark-theme.el
-  sculpture-themes-20210530.624/sculpture-themes-light-theme.el
-  sculpture-themes-20210530.624/sculpture-themes-pkg.el
-  sculpture-themes-20210530.624/sculpture-themes.el
-Built sculpture-themes in 3.597s, finished at Tue Jul  6 11:08:32 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  349 Jul  6 11:08 packages/sculpture-themes-20210530.624.entry
- 80K -rw-r--r-- 1 root root  80K Jul  6 11:08 packages/sculpture-themes-20210530.624.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:08 packages/sculpture-themes-badge.svg
-4.0K -rw-r--r-- 1 root root  141 Jul  6 11:08 packages/sculpture-themes-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

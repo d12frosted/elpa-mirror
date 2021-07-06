@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/jschaf/esup.git
 
 Updating /mnt/store/melpa/working/esup/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/esup/
-  to /tmp/esupd8TLMc/esup-20200814.1400
-    esup-child.el -> esup-child.el
-    esup.el -> esup.el
-Created esup-20200814.1400.tar containing:
-  esup-20200814.1400/
-  esup-20200814.1400/esup-child.el
-  esup-20200814.1400/esup-pkg.el
-  esup-20200814.1400/esup.el
-Built esup in 3.832s, finished at Tue Jul  6 10:28:39 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  390 Jul  6 10:28 packages/esup-20200814.1400.entry
- 52K -rw-r--r-- 1 root root  50K Jul  6 10:28 packages/esup-20200814.1400.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:28 packages/esup-badge.svg
-4.0K -rw-r--r-- 1 root root  996 Jul  6 10:28 packages/esup-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

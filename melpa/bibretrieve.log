@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/pzorin/bibretrieve.git
 
 Updating /mnt/store/melpa/working/bibretrieve/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/bibretrieve/
-  to /tmp/bibretriever5yebX/bibretrieve-20191124.1855
-    bibretrieve-base.el -> bibretrieve-base.el
-    bibretrieve.el -> bibretrieve.el
-Created bibretrieve-20191124.1855.tar containing:
-  bibretrieve-20191124.1855/
-  bibretrieve-20191124.1855/bibretrieve-base.el
-  bibretrieve-20191124.1855/bibretrieve-pkg.el
-  bibretrieve-20191124.1855/bibretrieve.el
-Built bibretrieve in 3.837s, finished at Tue Jul  6 10:14:17 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  451 Jul  6 10:14 packages/bibretrieve-20191124.1855.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:14 packages/bibretrieve-20191124.1855.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:14 packages/bibretrieve-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jul  6 10:14 packages/bibretrieve-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

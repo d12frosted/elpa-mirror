@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/tomoya/search-web.el.git
 
 Updating /mnt/store/melpa/working/search-web/
-Built search-web in 3.427s, finished at Tue Jul  6 11:08:35 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.8K Jul  6 11:08 packages/search-web-20150312.1103.el
-4.0K -rw-r--r-- 1 root root  293 Jul  6 11:08 packages/search-web-20150312.1103.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:08 packages/search-web-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul  6 11:08 packages/search-web-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

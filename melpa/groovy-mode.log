@@ -3,20 +3,10 @@ Fetcher: github
 Source:  https://github.com/Groovy-Emacs-Modes/groovy-emacs-modes.git
 
 Updating /mnt/store/melpa/working/groovy-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/groovy-mode/
-  to /tmp/groovy-mode0HOOYb/groovy-mode-20210510.317
-    groovy-electric.el -> groovy-electric.el
-    groovy-mode.el -> groovy-mode.el
-    inf-groovy.el -> inf-groovy.el
-Created groovy-mode-20210510.317.tar containing:
-  groovy-mode-20210510.317/
-  groovy-mode-20210510.317/groovy-electric.el
-  groovy-mode-20210510.317/groovy-mode-pkg.el
-  groovy-mode-20210510.317/groovy-mode.el
-  groovy-mode-20210510.317/inf-groovy.el
-Built groovy-mode in 3.885s, finished at Tue Jul  6 10:37:43 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  467 Jul  6 10:37 packages/groovy-mode-20210510.317.entry
- 72K -rw-r--r-- 1 root root  70K Jul  6 10:37 packages/groovy-mode-20210510.317.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:37 packages/groovy-mode-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,76 +3,10 @@ Fetcher: git
 Source:  https://git.notmuchmail.org/git/notmuch
 
 Updating /mnt/store/melpa/working/notmuch/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/notmuch/
-  to /tmp/notmuchaPdrNW/notmuch-20210703.2336
-  ! emacs/coolj.el -> coolj.el
-  ! emacs/make-deps.el -> make-deps.el
-  ! emacs/notmuch-address.el -> notmuch-address.el
-  ! emacs/notmuch-company.el -> notmuch-company.el
-  ! emacs/notmuch-compat.el -> notmuch-compat.el
-  ! emacs/notmuch-crypto.el -> notmuch-crypto.el
-  ! emacs/notmuch-draft.el -> notmuch-draft.el
-  ! emacs/notmuch-hello.el -> notmuch-hello.el
-  ! emacs/notmuch-jump.el -> notmuch-jump.el
-  ! emacs/notmuch-lib.el -> notmuch-lib.el
-  ! emacs/notmuch-maildir-fcc.el -> notmuch-maildir-fcc.el
-  ! emacs/notmuch-message.el -> notmuch-message.el
-  ! emacs/notmuch-mua.el -> notmuch-mua.el
-  ! emacs/notmuch-parser.el -> notmuch-parser.el
-  ! emacs/notmuch-print.el -> notmuch-print.el
-  ! emacs/notmuch-query.el -> notmuch-query.el
-  ! emacs/notmuch-show.el -> notmuch-show.el
-  ! emacs/notmuch-tag.el -> notmuch-tag.el
-  ! emacs/notmuch-tree.el -> notmuch-tree.el
-  ! emacs/notmuch-wash.el -> notmuch-wash.el
-  ! emacs/notmuch.el -> notmuch.el
-  ! emacs/rstdoc.el -> rstdoc.el
-  ! emacs/notmuch-logo.png -> notmuch-logo.png
-Created notmuch-20210703.2336.tar containing:
-  notmuch-20210703.2336/
-  notmuch-20210703.2336/coolj.el
-  notmuch-20210703.2336/make-deps.el
-  notmuch-20210703.2336/notmuch-address.el
-  notmuch-20210703.2336/notmuch-company.el
-  notmuch-20210703.2336/notmuch-compat.el
-  notmuch-20210703.2336/notmuch-crypto.el
-  notmuch-20210703.2336/notmuch-draft.el
-  notmuch-20210703.2336/notmuch-hello.el
-  notmuch-20210703.2336/notmuch-jump.el
-  notmuch-20210703.2336/notmuch-lib.el
-  notmuch-20210703.2336/notmuch-logo.png
-  notmuch-20210703.2336/notmuch-maildir-fcc.el
-  notmuch-20210703.2336/notmuch-message.el
-  notmuch-20210703.2336/notmuch-mua.el
-  notmuch-20210703.2336/notmuch-parser.el
-  notmuch-20210703.2336/notmuch-pkg.el
-  notmuch-20210703.2336/notmuch-print.el
-  notmuch-20210703.2336/notmuch-query.el
-  notmuch-20210703.2336/notmuch-show.el
-  notmuch-20210703.2336/notmuch-tag.el
-  notmuch-20210703.2336/notmuch-tree.el
-  notmuch-20210703.2336/notmuch-wash.el
-  notmuch-20210703.2336/notmuch.el
-  notmuch-20210703.2336/rstdoc.el
-Built notmuch in 4.808s, finished at Tue Jul  6 10:54:59 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  169 Jul  6 10:54 packages/notmuch-20210703.2336.entry
-432K -rw-r--r-- 1 root root 430K Jul  6 10:54 packages/notmuch-20210703.2336.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:54 packages/notmuch-badge.svg
- 16K -rw-r--r-- 1 root root  13K Jul  6 10:54 packages/notmuch-bookmarks-20200322.1925.el
-4.0K -rw-r--r-- 1 root root  487 Jul  6 07:54 packages/notmuch-bookmarks-20200322.1925.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:54 packages/notmuch-bookmarks-badge.svg
-4.0K -rw-r--r-- 1 root root  611 Jul  6 07:54 packages/notmuch-bookmarks-readme.txt
-4.0K -rw-r--r-- 1 root root  162 Jul  6 10:54 packages/notmuch-bookmarks.log
-4.0K -rw-r--r-- 1 root root  436 Jul  6 07:54 packages/notmuch-labeler-20131230.1719.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 07:54 packages/notmuch-labeler-20131230.1719.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:54 packages/notmuch-labeler-badge.svg
-4.0K -rw-r--r-- 1 root root  959 Jul  6 07:54 packages/notmuch-labeler-readme.txt
-4.0K -rw-r--r-- 1 root root  154 Jul  6 10:54 packages/notmuch-labeler.log
-8.0K -rw-r--r-- 1 root root 4.5K Jul  6 07:54 packages/notmuch-maildir-20210615.1513.el
-4.0K -rw-r--r-- 1 root root  401 Jul  6 07:54 packages/notmuch-maildir-20210615.1513.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:54 packages/notmuch-maildir-badge.svg
-4.0K -rw-r--r-- 1 root root  133 Jul  6 07:54 packages/notmuch-maildir-readme.txt
-4.0K -rw-r--r-- 1 root root  142 Jul  6 10:54 packages/notmuch-maildir.log
-4.0K -rw-r--r-- 1 root root 1.4K Jul  6 10:54 packages/notmuch-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

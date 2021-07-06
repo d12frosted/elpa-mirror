@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/flycheck/flycheck-google-cpplint.git
 
 Updating /mnt/store/melpa/working/flycheck-google-cpplint/
-Built flycheck-google-cpplint in 3.953s, finished at Tue Jul  6 10:32:08 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.1K Jul  6 10:32 packages/flycheck-google-cpplint-20210210.300.el
-4.0K -rw-r--r-- 1 root root  445 Jul  6 10:32 packages/flycheck-google-cpplint-20210210.300.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:32 packages/flycheck-google-cpplint-badge.svg
-4.0K -rw-r--r-- 1 root root  673 Jul  6 10:32 packages/flycheck-google-cpplint-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

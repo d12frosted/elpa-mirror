@@ -3,57 +3,10 @@ Fetcher: github
 Source:  https://github.com/the-kenny/weechat.el.git
 
 Updating /mnt/store/melpa/working/weechat/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/weechat/
-  to /tmp/weechatzML1ok/weechat-20190520.1551
-    weechat-button.el -> weechat-button.el
-    weechat-cmd.el -> weechat-cmd.el
-    weechat-color.el -> weechat-color.el
-    weechat-complete.el -> weechat-complete.el
-    weechat-core.el -> weechat-core.el
-    weechat-corrector.el -> weechat-corrector.el
-    weechat-image.el -> weechat-image.el
-    weechat-latex.el -> weechat-latex.el
-    weechat-notifications.el -> weechat-notifications.el
-    weechat-read-marker.el -> weechat-read-marker.el
-    weechat-relay.el -> weechat-relay.el
-    weechat-sauron.el -> weechat-sauron.el
-    weechat-secrets.el -> weechat-secrets.el
-    weechat-smiley.el -> weechat-smiley.el
-    weechat-speedbar.el -> weechat-speedbar.el
-    weechat-spelling.el -> weechat-spelling.el
-    weechat-tracking.el -> weechat-tracking.el
-    weechat.el -> weechat.el
-  ! weechat-pkg.el.in -> weechat-pkg.el
-Created weechat-20190520.1551.tar containing:
-  weechat-20190520.1551/
-  weechat-20190520.1551/weechat-button.el
-  weechat-20190520.1551/weechat-cmd.el
-  weechat-20190520.1551/weechat-color.el
-  weechat-20190520.1551/weechat-complete.el
-  weechat-20190520.1551/weechat-core.el
-  weechat-20190520.1551/weechat-corrector.el
-  weechat-20190520.1551/weechat-image.el
-  weechat-20190520.1551/weechat-latex.el
-  weechat-20190520.1551/weechat-notifications.el
-  weechat-20190520.1551/weechat-pkg.el
-  weechat-20190520.1551/weechat-read-marker.el
-  weechat-20190520.1551/weechat-relay.el
-  weechat-20190520.1551/weechat-sauron.el
-  weechat-20190520.1551/weechat-secrets.el
-  weechat-20190520.1551/weechat-smiley.el
-  weechat-20190520.1551/weechat-speedbar.el
-  weechat-20190520.1551/weechat-spelling.el
-  weechat-20190520.1551/weechat-tracking.el
-  weechat-20190520.1551/weechat.el
-Built weechat in 9.069s, finished at Tue Jul  6 11:18:34 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  571 Jul  6 11:18 packages/weechat-20190520.1551.entry
-220K -rw-r--r-- 1 root root 220K Jul  6 11:18 packages/weechat-20190520.1551.tar
-4.0K -rw-r--r-- 1 root root 2.5K Jul  6 11:18 packages/weechat-alert-20160416.1248.el
-4.0K -rw-r--r-- 1 root root  419 Jul  6 11:18 packages/weechat-alert-20160416.1248.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:18 packages/weechat-alert-badge.svg
-4.0K -rw-r--r-- 1 root root  137 Jul  6 11:18 packages/weechat-alert-readme.txt
-4.0K -rw-r--r-- 1 root root  557 Jul  6 11:18 packages/weechat-alert.log
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:18 packages/weechat-badge.svg
-4.0K -rw-r--r-- 1 root root  116 Jul  6 11:18 packages/weechat-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/paddymcall/indian-ext.git
 
 Updating /mnt/store/melpa/working/indian-ext/
-Built indian-ext in 4.230s, finished at Tue Jul  6 10:43:26 2021
- ✓ Success:
- 16K -rw-r--r-- 1 root root  16K Jul  6 10:43 packages/indian-ext-20190424.1547.el
-4.0K -rw-r--r-- 1 root root  444 Jul  6 10:43 packages/indian-ext-20190424.1547.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:43 packages/indian-ext-badge.svg
-4.0K -rw-r--r-- 1 root root  937 Jul  6 10:43 packages/indian-ext-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/yoshinari-nomura/epic.git
 
 Updating /mnt/store/melpa/working/epic/
-Built epic in 6.352s, finished at Tue Jul  6 10:27:37 2021
- ✓ Success:
- 28K -rw-r--r-- 1 root root  28K Jul  6 10:27 packages/epic-20170210.23.el
-4.0K -rw-r--r-- 1 root root  375 Jul  6 10:27 packages/epic-20170210.23.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:27 packages/epic-badge.svg
-4.0K -rw-r--r-- 1 root root  144 Jul  6 10:27 packages/epic-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

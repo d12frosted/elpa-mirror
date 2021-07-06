@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/raxod502/el-patch.git
 
 Updating /mnt/store/melpa/working/el-patch/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/el-patch/
-  to /tmp/el-patchuHOdqU/el-patch-20210411.1954
-    el-patch-template.el -> el-patch-template.el
-    el-patch.el -> el-patch.el
-Created el-patch-20210411.1954.tar containing:
-  el-patch-20210411.1954/
-  el-patch-20210411.1954/el-patch-pkg.el
-  el-patch-20210411.1954/el-patch-template.el
-  el-patch-20210411.1954/el-patch.el
-Built el-patch in 3.532s, finished at Tue Jul  6 10:25:27 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  368 Jul  6 10:25 packages/el-patch-20210411.1954.entry
- 80K -rw-r--r-- 1 root root  80K Jul  6 10:25 packages/el-patch-20210411.1954.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:25 packages/el-patch-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jul  6 10:25 packages/el-patch-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/DamienCassou/orgtbl-show-header.git
 
 Updating /mnt/store/melpa/working/orgtbl-show-header/
-Built orgtbl-show-header in 3.593s, finished at Tue Jul  6 10:59:17 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.0K Jul  6 10:59 packages/orgtbl-show-header-20141023.837.el
-4.0K -rw-r--r-- 1 root root  326 Jul  6 10:59 packages/orgtbl-show-header-20141023.837.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:59 packages/orgtbl-show-header-badge.svg
-4.0K -rw-r--r-- 1 root root   56 Jul  6 10:59 packages/orgtbl-show-header-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

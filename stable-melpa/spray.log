@@ -3,9 +3,10 @@ Fetcher: git
 Source:  https://git.sr.ht/~iank/spray
 
 Updating /mnt/store/melpa/working/spray/
-Built spray in 4.166s, finished at Tue Jul  6 11:11:44 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root  11K Jul  6 11:11 packages/spray-20160304.2220.el
-4.0K -rw-r--r-- 1 root root  314 Jul  6 11:11 packages/spray-20160304.2220.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:11 packages/spray-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:11 packages/spray-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

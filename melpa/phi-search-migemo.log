@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/zk-phi/phi-search-migemo.git
 
 Updating /mnt/store/melpa/working/phi-search-migemo/
-Built phi-search-migemo in 4.077s, finished at Tue Jul  6 11:01:55 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.9K Jul  6 11:01 packages/phi-search-migemo-20170618.921.el
-4.0K -rw-r--r-- 1 root root  335 Jul  6 11:01 packages/phi-search-migemo-20170618.921.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:01 packages/phi-search-migemo-badge.svg
-4.0K -rw-r--r-- 1 root root  934 Jul  6 11:01 packages/phi-search-migemo-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

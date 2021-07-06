@@ -3,14 +3,10 @@ Fetcher: github
 Source:  https://github.com/defunkt/textmate.el.git
 
 Updating /mnt/store/melpa/working/textmate/
-Built textmate in 4.505s, finished at Tue Jul  6 11:14:25 2021
- ✓ Success:
- 20K -rw-r--r-- 1 root root  19K Jul  6 11:14 packages/textmate-20110816.2146.el
-4.0K -rw-r--r-- 1 root root  299 Jul  6 11:14 packages/textmate-20110816.2146.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:14 packages/textmate-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Jul  6 11:14 packages/textmate-readme.txt
-4.0K -rw-r--r-- 1 root root  348 Jul  6 08:13 packages/textmate-to-yas-20160409.1708.entry
-112K -rw-r--r-- 1 root root 110K Jul  6 08:13 packages/textmate-to-yas-20160409.1708.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 08:13 packages/textmate-to-yas-badge.svg
-4.0K -rw-r--r-- 1 root root 1.9K Jul  6 08:13 packages/textmate-to-yas-readme.txt
-4.0K -rw-r--r-- 1 root root  155 Jul  6 11:14 packages/textmate-to-yas.log
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

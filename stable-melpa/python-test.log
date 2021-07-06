@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/emacs-pe/python-test.el.git
 
 Updating /mnt/store/melpa/working/python-test/
-Built python-test in 5.233s, finished at Tue Jul  6 11:05:04 2021
- ✓ Success:
- 24K -rw-r--r-- 1 root root  21K Jul  6 11:05 packages/python-test-20181018.29.el
-4.0K -rw-r--r-- 1 root root  432 Jul  6 11:05 packages/python-test-20181018.29.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:05 packages/python-test-badge.svg
-4.0K -rw-r--r-- 1 root root  674 Jul  6 11:05 packages/python-test-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

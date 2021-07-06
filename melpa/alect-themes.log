@@ -3,29 +3,10 @@ Fetcher: github
 Source:  https://github.com/alezost/alect-themes.git
 
 Updating /mnt/store/melpa/working/alect-themes/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/alect-themes/
-  to /tmp/alect-themesaQ0W8F/alect-themes-20200801.2041
-    alect-black-alt-theme.el -> alect-black-alt-theme.el
-    alect-black-theme.el -> alect-black-theme.el
-    alect-dark-alt-theme.el -> alect-dark-alt-theme.el
-    alect-dark-theme.el -> alect-dark-theme.el
-    alect-light-alt-theme.el -> alect-light-alt-theme.el
-    alect-light-theme.el -> alect-light-theme.el
-    alect-themes.el -> alect-themes.el
-Created alect-themes-20200801.2041.tar containing:
-  alect-themes-20200801.2041/
-  alect-themes-20200801.2041/alect-black-alt-theme.el
-  alect-themes-20200801.2041/alect-black-theme.el
-  alect-themes-20200801.2041/alect-dark-alt-theme.el
-  alect-themes-20200801.2041/alect-dark-theme.el
-  alect-themes-20200801.2041/alect-light-alt-theme.el
-  alect-themes-20200801.2041/alect-light-theme.el
-  alect-themes-20200801.2041/alect-themes-pkg.el
-  alect-themes-20200801.2041/alect-themes.el
-Built alect-themes in 4.987s, finished at Tue Jul  6 10:11:28 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  398 Jul  6 10:11 packages/alect-themes-20200801.2041.entry
-120K -rw-r--r-- 1 root root 120K Jul  6 10:11 packages/alect-themes-20200801.2041.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:11 packages/alect-themes-badge.svg
-4.0K -rw-r--r-- 1 root root 1.5K Jul  6 10:11 packages/alect-themes-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

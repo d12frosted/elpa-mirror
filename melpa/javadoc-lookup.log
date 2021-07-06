@@ -3,24 +3,10 @@ Fetcher: github
 Source:  https://github.com/skeeto/javadoc-lookup.git
 
 Updating /mnt/store/melpa/working/javadoc-lookup/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/javadoc-lookup/
-  to /tmp/javadoc-lookupkMrnwk/javadoc-lookup-20160214.31
-    javadoc-import.el -> javadoc-import.el
-    javadoc-lookup.el -> javadoc-lookup.el
-    maven-fetch.el -> maven-fetch.el
-    webcache/http+++docs.oracle.com+javase+8+docs+api+.v4 -> webcache/http+++docs.oracle.com+javase+8+docs+api+.v4
-Created javadoc-lookup-20160214.31.tar containing:
-  javadoc-lookup-20160214.31/
-  javadoc-lookup-20160214.31/javadoc-import.el
-  javadoc-lookup-20160214.31/javadoc-lookup-pkg.el
-  javadoc-lookup-20160214.31/javadoc-lookup.el
-  javadoc-lookup-20160214.31/maven-fetch.el
-  javadoc-lookup-20160214.31/webcache/
-  javadoc-lookup-20160214.31/webcache/http+++docs.oracle.com+javase+8+docs+api+.v4
-Built javadoc-lookup in 3.563s, finished at Tue Jul  6 10:45:19 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  364 Jul  6 10:45 packages/javadoc-lookup-20160214.31.entry
-412K -rw-r--r-- 1 root root 410K Jul  6 10:45 packages/javadoc-lookup-20160214.31.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:45 packages/javadoc-lookup-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jul  6 10:45 packages/javadoc-lookup-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,56 +3,10 @@ Fetcher: github
 Source:  https://github.com/wanderlust/semi.git
 
 Updating /mnt/store/melpa/working/semi/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/semi/
-  to /tmp/semiz7aZ3b/semi-20210613.948
-    mail-mime-setup.el -> mail-mime-setup.el
-    mime-edit.el -> mime-edit.el
-    mime-image.el -> mime-image.el
-    mime-mac.el -> mime-mac.el
-    mime-partial.el -> mime-partial.el
-    mime-pgp.el -> mime-pgp.el
-    mime-play.el -> mime-play.el
-    mime-setup.el -> mime-setup.el
-    mime-shr.el -> mime-shr.el
-    mime-signature.el -> mime-signature.el
-    mime-tnef.el -> mime-tnef.el
-    mime-vcard.el -> mime-vcard.el
-    mime-view.el -> mime-view.el
-    mime-w3.el -> mime-w3.el
-    semi-def.el -> semi-def.el
-    semi-pkg.el -> semi-pkg.el
-    semi-setup.el -> semi-setup.el
-    signature.el -> signature.el
-    mime-ui-en.texi -> mime-ui-en.texi
-    mime-ui-ja.texi -> mime-ui-ja.texi
-Created /tmp/semiz7aZ3b/semi-20210613.948/mime-ui-en.info
-Created /tmp/semiz7aZ3b/semi-20210613.948/mime-ui-ja.info
-Created semi-20210613.948.tar containing:
-  semi-20210613.948/
-  semi-20210613.948/dir
-  semi-20210613.948/mail-mime-setup.el
-  semi-20210613.948/mime-edit.el
-  semi-20210613.948/mime-image.el
-  semi-20210613.948/mime-mac.el
-  semi-20210613.948/mime-partial.el
-  semi-20210613.948/mime-pgp.el
-  semi-20210613.948/mime-play.el
-  semi-20210613.948/mime-setup.el
-  semi-20210613.948/mime-shr.el
-  semi-20210613.948/mime-signature.el
-  semi-20210613.948/mime-tnef.el
-  semi-20210613.948/mime-ui-en.info
-  semi-20210613.948/mime-ui-ja.info
-  semi-20210613.948/mime-vcard.el
-  semi-20210613.948/mime-view.el
-  semi-20210613.948/mime-w3.el
-  semi-20210613.948/semi-def.el
-  semi-20210613.948/semi-pkg.el
-  semi-20210613.948/semi-setup.el
-  semi-20210613.948/signature.el
-Built semi in 11.697s, finished at Tue Jul  6 11:08:56 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  207 Jul  6 11:08 packages/semi-20210613.948.entry
-360K -rw-r--r-- 1 root root 360K Jul  6 11:08 packages/semi-20210613.948.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:08 packages/semi-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

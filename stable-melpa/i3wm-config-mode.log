@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/Alexander-Miller/i3wm-Config-Mode.git
 
 Updating /mnt/store/melpa/working/i3wm-config-mode/
-Built i3wm-config-mode in 3.608s, finished at Tue Jul  6 10:42:30 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.9K Jul  6 10:42 packages/i3wm-config-mode-20201105.2022.el
-4.0K -rw-r--r-- 1 root root  453 Jul  6 10:42 packages/i3wm-config-mode-20201105.2022.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:42 packages/i3wm-config-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  100 Jul  6 10:42 packages/i3wm-config-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

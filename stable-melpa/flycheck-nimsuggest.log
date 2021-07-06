@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/yuutayamada/flycheck-nimsuggest.git
 
 Updating /mnt/store/melpa/working/flycheck-nimsuggest/
-Built flycheck-nimsuggest in 4.372s, finished at Tue Jul  6 10:32:28 2021
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.8K Jul  6 10:32 packages/flycheck-nimsuggest-20171027.2208.el
-4.0K -rw-r--r-- 1 root root  430 Jul  6 10:32 packages/flycheck-nimsuggest-20171027.2208.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:32 packages/flycheck-nimsuggest-badge.svg
-4.0K -rw-r--r-- 1 root root  646 Jul  6 10:32 packages/flycheck-nimsuggest-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

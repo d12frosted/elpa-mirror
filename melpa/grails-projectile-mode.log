@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/yveszoundi/grails-projectile-mode.git
 
 Updating /mnt/store/melpa/working/grails-projectile-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/grails-projectile-mode/
-  to /tmp/grails-projectile-modeMsv2pT/grails-projectile-mode-20160327.1324
-    grails-projectile-commands.el -> grails-projectile-commands.el
-    grails-projectile-config.el -> grails-projectile-config.el
-    grails-projectile-discover.el -> grails-projectile-discover.el
-    grails-projectile-mode.el -> grails-projectile-mode.el
-Created grails-projectile-mode-20160327.1324.tar containing:
-  grails-projectile-mode-20160327.1324/
-  grails-projectile-mode-20160327.1324/grails-projectile-commands.el
-  grails-projectile-mode-20160327.1324/grails-projectile-config.el
-  grails-projectile-mode-20160327.1324/grails-projectile-discover.el
-  grails-projectile-mode-20160327.1324/grails-projectile-mode-pkg.el
-  grails-projectile-mode-20160327.1324/grails-projectile-mode.el
-Built grails-projectile-mode in 3.555s, finished at Tue Jul  6 10:37:26 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  465 Jul  6 10:37 packages/grails-projectile-mode-20160327.1324.entry
- 52K -rw-r--r-- 1 root root  50K Jul  6 10:37 packages/grails-projectile-mode-20160327.1324.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:37 packages/grails-projectile-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:37 packages/grails-projectile-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

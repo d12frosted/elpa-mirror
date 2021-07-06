@@ -3,14 +3,10 @@ Fetcher: github
 Source:  https://github.com/rlister/org-present.git
 
 Updating /mnt/store/melpa/working/org-present/
-Built org-present in 3.836s, finished at Tue Jul  6 10:58:14 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.6K Jul  6 10:58 packages/org-present-20210619.1614.el
-4.0K -rw-r--r-- 1 root root  325 Jul  6 10:58 packages/org-present-20210619.1614.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:58 packages/org-present-badge.svg
-4.0K -rw-r--r-- 1 root root 1022 Jul  6 10:58 packages/org-present-readme.txt
-8.0K -rw-r--r-- 1 root root 6.2K Jul  6 07:57 packages/org-present-remote-20191206.533.el
-4.0K -rw-r--r-- 1 root root  499 Jul  6 07:57 packages/org-present-remote-20191206.533.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 07:57 packages/org-present-remote-badge.svg
-4.0K -rw-r--r-- 1 root root  158 Jul  6 07:57 packages/org-present-remote-readme.txt
-4.0K -rw-r--r-- 1 root root  163 Jul  6 10:58 packages/org-present-remote.log
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

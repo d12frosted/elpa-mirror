@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/ema2159/centaur-tabs.git
 
 Updating /mnt/store/melpa/working/centaur-tabs/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/centaur-tabs/
-  to /tmp/centaur-tabs7wo5BS/centaur-tabs-20210507.1633
-    centaur-tabs-elements.el -> centaur-tabs-elements.el
-    centaur-tabs-functions.el -> centaur-tabs-functions.el
-    centaur-tabs-interactive.el -> centaur-tabs-interactive.el
-    centaur-tabs.el -> centaur-tabs.el
-Created centaur-tabs-20210507.1633.tar containing:
-  centaur-tabs-20210507.1633/
-  centaur-tabs-20210507.1633/centaur-tabs-elements.el
-  centaur-tabs-20210507.1633/centaur-tabs-functions.el
-  centaur-tabs-20210507.1633/centaur-tabs-interactive.el
-  centaur-tabs-20210507.1633/centaur-tabs-pkg.el
-  centaur-tabs-20210507.1633/centaur-tabs.el
-Built centaur-tabs in 4.176s, finished at Tue Jul  6 10:16:31 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  410 Jul  6 10:16 packages/centaur-tabs-20210507.1633.entry
-112K -rw-r--r-- 1 root root 110K Jul  6 10:16 packages/centaur-tabs-20210507.1633.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:16 packages/centaur-tabs-badge.svg
-4.0K -rw-r--r-- 1 root root  617 Jul  6 10:16 packages/centaur-tabs-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

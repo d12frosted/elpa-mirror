@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/febuiles/tumble.git
 
 Updating /mnt/store/melpa/working/tumble/
-Built tumble in 3.615s, finished at Tue Jul  6 11:15:49 2021
- ✓ Success:
- 16K -rw-r--r-- 1 root root  13K Jul  6 11:15 packages/tumble-20160112.729.el
-4.0K -rw-r--r-- 1 root root  334 Jul  6 11:15 packages/tumble-20160112.729.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:15 packages/tumble-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Jul  6 11:15 packages/tumble-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

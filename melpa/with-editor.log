@@ -3,21 +3,10 @@ Fetcher: github
 Source:  https://github.com/magit/with-editor.git
 
 Updating /mnt/store/melpa/working/with-editor/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/with-editor/
-  to /tmp/with-editorMIoXs9/with-editor-20210524.1654
-    with-editor.el -> with-editor.el
-    with-editor.texi -> with-editor.texi
-Created /tmp/with-editorMIoXs9/with-editor-20210524.1654/with-editor.info
-Created with-editor-20210524.1654.tar containing:
-  with-editor-20210524.1654/
-  with-editor-20210524.1654/dir
-  with-editor-20210524.1654/with-editor-pkg.el
-  with-editor-20210524.1654/with-editor.el
-  with-editor-20210524.1654/with-editor.info
-Built with-editor in 7.177s, finished at Tue Jul  6 11:19:21 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  381 Jul  6 11:19 packages/with-editor-20210524.1654.entry
- 72K -rw-r--r-- 1 root root  70K Jul  6 11:19 packages/with-editor-20210524.1654.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:19 packages/with-editor-badge.svg
-4.0K -rw-r--r-- 1 root root 2.3K Jul  6 11:19 packages/with-editor-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

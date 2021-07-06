@@ -3,99 +3,13 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/dap-mode.git
 
 Updating /mnt/store/melpa/working/dap-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/dap-mode/
-  to /tmp/dap-modePmEaMh/dap-mode-20210519.1554
-    dap-chrome.el -> dap-chrome.el
-    dap-codelldb.el -> dap-codelldb.el
-    dap-cpptools.el -> dap-cpptools.el
-    dap-edge.el -> dap-edge.el
-    dap-elixir.el -> dap-elixir.el
-    dap-firefox.el -> dap-firefox.el
-    dap-gdb-lldb.el -> dap-gdb-lldb.el
-    dap-go.el -> dap-go.el
-    dap-hydra.el -> dap-hydra.el
-    dap-launch.el -> dap-launch.el
-    dap-lldb.el -> dap-lldb.el
-    dap-mode.el -> dap-mode.el
-    dap-mouse.el -> dap-mouse.el
-    dap-netcore.el -> dap-netcore.el
-    dap-node.el -> dap-node.el
-    dap-overlays.el -> dap-overlays.el
-    dap-php.el -> dap-php.el
-    dap-pwsh.el -> dap-pwsh.el
-    dap-python.el -> dap-python.el
-    dap-ruby.el -> dap-ruby.el
-    dap-ui.el -> dap-ui.el
-    dap-utils.el -> dap-utils.el
-    dap-variables.el -> dap-variables.el
-    dapui.el -> dapui.el
-    icons => icons
-Created dap-mode-20210519.1554.tar containing:
-  dap-mode-20210519.1554/
-  dap-mode-20210519.1554/dap-chrome.el
-  dap-mode-20210519.1554/dap-codelldb.el
-  dap-mode-20210519.1554/dap-cpptools.el
-  dap-mode-20210519.1554/dap-edge.el
-  dap-mode-20210519.1554/dap-elixir.el
-  dap-mode-20210519.1554/dap-firefox.el
-  dap-mode-20210519.1554/dap-gdb-lldb.el
-  dap-mode-20210519.1554/dap-go.el
-  dap-mode-20210519.1554/dap-hydra.el
-  dap-mode-20210519.1554/dap-launch.el
-  dap-mode-20210519.1554/dap-lldb.el
-  dap-mode-20210519.1554/dap-mode-pkg.el
-  dap-mode-20210519.1554/dap-mode.el
-  dap-mode-20210519.1554/dap-mouse.el
-  dap-mode-20210519.1554/dap-netcore.el
-  dap-mode-20210519.1554/dap-node.el
-  dap-mode-20210519.1554/dap-overlays.el
-  dap-mode-20210519.1554/dap-php.el
-  dap-mode-20210519.1554/dap-pwsh.el
-  dap-mode-20210519.1554/dap-python.el
-  dap-mode-20210519.1554/dap-ruby.el
-  dap-mode-20210519.1554/dap-ui.el
-  dap-mode-20210519.1554/dap-utils.el
-  dap-mode-20210519.1554/dap-variables.el
-  dap-mode-20210519.1554/dapui.el
-  dap-mode-20210519.1554/icons/
-  dap-mode-20210519.1554/icons/eclipse/
-  dap-mode-20210519.1554/icons/eclipse/collapsed.png
-  dap-mode-20210519.1554/icons/eclipse/expanded.png
-  dap-mode-20210519.1554/icons/eclipse/inspect.png
-  dap-mode-20210519.1554/icons/eclipse/project-running.png
-  dap-mode-20210519.1554/icons/eclipse/project-stopped.png
-  dap-mode-20210519.1554/icons/eclipse/scope.png
-  dap-mode-20210519.1554/icons/eclipse/stack-frame-running.png
-  dap-mode-20210519.1554/icons/eclipse/stack-frame-stopped.png
-  dap-mode-20210519.1554/icons/eclipse/thread-running.png
-  dap-mode-20210519.1554/icons/eclipse/thread-stopped.png
-  dap-mode-20210519.1554/icons/eclipse/variable.png
-  dap-mode-20210519.1554/icons/vscode/
-  dap-mode-20210519.1554/icons/vscode/close-all.png
-  dap-mode-20210519.1554/icons/vscode/continue-disabled.png
-  dap-mode-20210519.1554/icons/vscode/continue.png
-  dap-mode-20210519.1554/icons/vscode/disconnect-disabled.png
-  dap-mode-20210519.1554/icons/vscode/disconnect.png
-  dap-mode-20210519.1554/icons/vscode/pause-disabled.png
-  dap-mode-20210519.1554/icons/vscode/pause.png
-  dap-mode-20210519.1554/icons/vscode/restart-disabled.png
-  dap-mode-20210519.1554/icons/vscode/restart.png
-  dap-mode-20210519.1554/icons/vscode/reverse-continue.png
-  dap-mode-20210519.1554/icons/vscode/start.png
-  dap-mode-20210519.1554/icons/vscode/step-back.png
-  dap-mode-20210519.1554/icons/vscode/step-into-disabled.png
-  dap-mode-20210519.1554/icons/vscode/step-into.png
-  dap-mode-20210519.1554/icons/vscode/step-out-disabled.png
-  dap-mode-20210519.1554/icons/vscode/step-out.png
-  dap-mode-20210519.1554/icons/vscode/step-over-disabled.png
-  dap-mode-20210519.1554/icons/vscode/step-over.png
-  dap-mode-20210519.1554/icons/vscode/stop-disabled.png
-  dap-mode-20210519.1554/icons/vscode/stop.png
-  dap-mode-20210519.1554/icons/vscode/toggle-breakpoints.png
-Built dap-mode in 4.199s, finished at Tue Jul  6 10:21:05 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  586 Jul  6 10:21 packages/dap-mode-20210519.1554.entry
-332K -rw-r--r-- 1 root root 330K Jul  6 10:21 packages/dap-mode-20210519.1554.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:21 packages/dap-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   41 Jul  6 10:21 packages/dap-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+From https://github.com/emacs-lsp/dap-mode
+   cc395e0..01d9297  master     -> origin/master
+   3681ec4..1798e5c  gh-pages   -> origin/gh-pages
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

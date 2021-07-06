@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/onurtemizkan/paganini.git
 
 Updating /mnt/store/melpa/working/paganini-theme/
-Built paganini-theme in 4.144s, finished at Tue Jul  6 11:00:25 2021
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.7K Jul  6 11:00 packages/paganini-theme-20180815.1921.el
-4.0K -rw-r--r-- 1 root root  297 Jul  6 11:00 packages/paganini-theme-20180815.1921.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:00 packages/paganini-theme-badge.svg
-4.0K -rw-r--r-- 1 root root   40 Jul  6 11:00 packages/paganini-theme-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

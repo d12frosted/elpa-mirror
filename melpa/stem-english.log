@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/kawabata/stem-english.git
 
 Updating /mnt/store/melpa/working/stem-english/
-Built stem-english in 4.628s, finished at Tue Jul  6 11:12:17 2021
- ✓ Success:
- 32K -rw-r--r-- 1 root root  29K Jul  6 11:12 packages/stem-english-20180109.358.el
-4.0K -rw-r--r-- 1 root root  404 Jul  6 11:12 packages/stem-english-20180109.358.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:12 packages/stem-english-badge.svg
-4.0K -rw-r--r-- 1 root root  873 Jul  6 11:12 packages/stem-english-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

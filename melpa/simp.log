@@ -3,30 +3,10 @@ Fetcher: github
 Source:  https://github.com/re5et/simp.git
 
 Updating /mnt/store/melpa/working/simp/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/simp/
-  to /tmp/simpNHwtNs/simp-20180607.254
-    simp-project-files.el -> simp-project-files.el
-    simp-project-git.el -> simp-project-git.el
-    simp-project-ibuffer.el -> simp-project-ibuffer.el
-    simp-project-rgrep.el -> simp-project-rgrep.el
-    simp-project-root-dired.el -> simp-project-root-dired.el
-    simp-project-with-bookmarks.el -> simp-project-with-bookmarks.el
-    simp-project.el -> simp-project.el
-    simp.el -> simp.el
-Created simp-20180607.254.tar containing:
-  simp-20180607.254/
-  simp-20180607.254/simp-pkg.el
-  simp-20180607.254/simp-project-files.el
-  simp-20180607.254/simp-project-git.el
-  simp-20180607.254/simp-project-ibuffer.el
-  simp-20180607.254/simp-project-rgrep.el
-  simp-20180607.254/simp-project-root-dired.el
-  simp-20180607.254/simp-project-with-bookmarks.el
-  simp-20180607.254/simp-project.el
-  simp-20180607.254/simp.el
-Built simp in 3.334s, finished at Tue Jul  6 11:09:38 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  315 Jul  6 11:09 packages/simp-20180607.254.entry
- 40K -rw-r--r-- 1 root root  40K Jul  6 11:09 packages/simp-20180607.254.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:09 packages/simp-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

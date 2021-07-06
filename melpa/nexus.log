@@ -3,21 +3,10 @@ Fetcher: github
 Source:  https://github.com/juergenhoetzel/emacs-nexus.git
 
 Updating /mnt/store/melpa/working/nexus/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/nexus/
-  to /tmp/nexusNsS1uf/nexus-20140114.1305
-    ac-nexus.el -> ac-nexus.el
-    nexus-widget.el -> nexus-widget.el
-    nexus.el -> nexus.el
-Created nexus-20140114.1305.tar containing:
-  nexus-20140114.1305/
-  nexus-20140114.1305/ac-nexus.el
-  nexus-20140114.1305/nexus-pkg.el
-  nexus-20140114.1305/nexus-widget.el
-  nexus-20140114.1305/nexus.el
-Built nexus in 3.502s, finished at Tue Jul  6 10:54:25 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  294 Jul  6 10:54 packages/nexus-20140114.1305.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:54 packages/nexus-20140114.1305.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:54 packages/nexus-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul  6 10:54 packages/nexus-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

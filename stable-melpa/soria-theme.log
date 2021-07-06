@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/mssola/soria.git
 
 Updating /mnt/store/melpa/working/soria-theme/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/soria-theme/
-  to /tmp/soria-themeWSk6lk/soria-theme-20210426.1433
-    soria-theme-tree.el -> soria-theme-tree.el
-    soria-theme.el -> soria-theme.el
-Created soria-theme-20210426.1433.tar containing:
-  soria-theme-20210426.1433/
-  soria-theme-20210426.1433/soria-theme-pkg.el
-  soria-theme-20210426.1433/soria-theme-tree.el
-  soria-theme-20210426.1433/soria-theme.el
-Built soria-theme in 4.440s, finished at Tue Jul  6 11:11:12 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  411 Jul  6 11:11 packages/soria-theme-20210426.1433.entry
- 60K -rw-r--r-- 1 root root  60K Jul  6 11:11 packages/soria-theme-20210426.1433.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:11 packages/soria-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  189 Jul  6 11:11 packages/soria-theme-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

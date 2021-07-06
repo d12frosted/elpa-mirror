@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/ajgrf/edwina.git
 
 Updating /mnt/store/melpa/working/edwina/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/edwina/
-  to /tmp/edwinaSXYQ7Y/edwina-20200113.1714
-    edwin.el -> edwin.el
-    edwina.el -> edwina.el
-Created edwina-20200113.1714.tar containing:
-  edwina-20200113.1714/
-  edwina-20200113.1714/edwin.el
-  edwina-20200113.1714/edwina-pkg.el
-  edwina-20200113.1714/edwina.el
-Built edwina in 3.788s, finished at Tue Jul  6 10:25:06 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  315 Jul  6 10:25 packages/edwina-20200113.1714.entry
- 20K -rw-r--r-- 1 root root  20K Jul  6 10:25 packages/edwina-20200113.1714.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:25 packages/edwina-badge.svg
-4.0K -rw-r--r-- 1 root root  162 Jul  6 10:25 packages/edwina-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/tali713/esxml.git
 
 Updating /mnt/store/melpa/working/esxml/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/esxml/
-  to /tmp/esxmlCaOEwg/esxml-20210323.1102
-    esxml.el -> esxml.el
-    esxml-query.el -> esxml-query.el
-Created esxml-20210323.1102.tar containing:
-  esxml-20210323.1102/
-  esxml-20210323.1102/esxml-pkg.el
-  esxml-20210323.1102/esxml-query.el
-  esxml-20210323.1102/esxml.el
-Built esxml in 3.776s, finished at Tue Jul  6 10:28:41 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  329 Jul  6 10:28 packages/esxml-20210323.1102.entry
- 52K -rw-r--r-- 1 root root  50K Jul  6 10:28 packages/esxml-20210323.1102.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:28 packages/esxml-badge.svg
-4.0K -rw-r--r-- 1 root root  882 Jul  6 10:28 packages/esxml-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

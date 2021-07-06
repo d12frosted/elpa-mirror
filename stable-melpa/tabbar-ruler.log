@@ -3,21 +3,10 @@ Fetcher: github
 Source:  https://github.com/mattfidler/tabbar-ruler.el.git
 
 Updating /mnt/store/melpa/working/tabbar-ruler/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/tabbar-ruler/
-  to /tmp/tabbar-rulerrYuvim/tabbar-ruler-20160802.307
-    tabbar-ruler.el -> tabbar-ruler.el
-    dir -> dir
-    tabbar-ruler.info -> tabbar-ruler.info
-Created tabbar-ruler-20160802.307.tar containing:
-  tabbar-ruler-20160802.307/
-  tabbar-ruler-20160802.307/dir
-  tabbar-ruler-20160802.307/tabbar-ruler-pkg.el
-  tabbar-ruler-20160802.307/tabbar-ruler.el
-  tabbar-ruler-20160802.307/tabbar-ruler.info
-Built tabbar-ruler in 3.488s, finished at Tue Jul  6 11:13:47 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  486 Jul  6 11:13 packages/tabbar-ruler-20160802.307.entry
-100K -rw-r--r-- 1 root root 100K Jul  6 11:13 packages/tabbar-ruler-20160802.307.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:13 packages/tabbar-ruler-badge.svg
-4.0K -rw-r--r-- 1 root root 1.9K Jul  6 11:13 packages/tabbar-ruler-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

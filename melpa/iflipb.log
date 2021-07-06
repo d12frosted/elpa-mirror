@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/jrosdahl/iflipb.git
 
 Updating /mnt/store/melpa/working/iflipb/
-Built iflipb in 3.784s, finished at Tue Jul  6 10:43:05 2021
- ✓ Success:
- 20K -rw-r--r-- 1 root root  19K Jul  6 10:43 packages/iflipb-20210515.829.el
-4.0K -rw-r--r-- 1 root root  313 Jul  6 10:43 packages/iflipb-20210515.829.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:43 packages/iflipb-badge.svg
-4.0K -rw-r--r-- 1 root root 3.9K Jul  6 10:43 packages/iflipb-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

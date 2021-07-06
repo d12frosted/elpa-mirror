@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/noctuid/general.el.git
 
 Updating /mnt/store/melpa/working/general/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/general/
-  to /tmp/generalsNVDX2/general-20200516.50
-    .dirs-local.el -> .dirs-local.el
-    general.el -> general.el
-Created general-20200516.50.tar containing:
-  general-20200516.50/
-  general-20200516.50/.dirs-local.el
-  general-20200516.50/general-pkg.el
-  general-20200516.50/general.el
-Built general in 4.229s, finished at Tue Jul  6 10:35:23 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  406 Jul  6 10:35 packages/general-20200516.50.entry
-132K -rw-r--r-- 1 root root 130K Jul  6 10:35 packages/general-20200516.50.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:35 packages/general-badge.svg
-4.0K -rw-r--r-- 1 root root  560 Jul  6 10:35 packages/general-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

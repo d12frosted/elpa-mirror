@@ -3,26 +3,10 @@ Fetcher: github
 Source:  https://github.com/joaotavora/sly-macrostep.git
 
 Updating /mnt/store/melpa/working/sly-macrostep/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/sly-macrostep/
-  to /tmp/sly-macrostepTIMrBR/sly-macrostep-20191211.1630
-    sly-macrostep-autoloads.el -> sly-macrostep-autoloads.el
-    sly-macrostep.el -> sly-macrostep.el
-    collect-macro-forms.lisp -> collect-macro-forms.lisp
-    package.lisp -> package.lisp
-    slynk-macrostep.lisp -> slynk-macrostep.lisp
-    slynk-macrostep.asd -> slynk-macrostep.asd
-Created sly-macrostep-20191211.1630.tar containing:
-  sly-macrostep-20191211.1630/
-  sly-macrostep-20191211.1630/collect-macro-forms.lisp
-  sly-macrostep-20191211.1630/package.lisp
-  sly-macrostep-20191211.1630/sly-macrostep-autoloads.el
-  sly-macrostep-20191211.1630/sly-macrostep-pkg.el
-  sly-macrostep-20191211.1630/sly-macrostep.el
-  sly-macrostep-20191211.1630/slynk-macrostep.asd
-  sly-macrostep-20191211.1630/slynk-macrostep.lisp
-Built sly-macrostep in 4.952s, finished at Tue Jul  6 11:10:09 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  302 Jul  6 11:10 packages/sly-macrostep-20191211.1630.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 11:10 packages/sly-macrostep-20191211.1630.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:10 packages/sly-macrostep-badge.svg
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

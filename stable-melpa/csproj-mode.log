@@ -3,38 +3,10 @@ Fetcher: github
 Source:  https://github.com/omajid/csproj-mode.git
 
 Updating /mnt/store/melpa/working/csproj-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/csproj-mode/
-  to /tmp/csproj-modeLosD0s/csproj-mode-20200801.1732
-    csproj-mode.el -> csproj-mode.el
-    snippets => snippets
-Created csproj-mode-20200801.1732.tar containing:
-  csproj-mode-20200801.1732/
-  csproj-mode-20200801.1732/csproj-mode-pkg.el
-  csproj-mode-20200801.1732/csproj-mode.el
-  csproj-mode-20200801.1732/snippets/
-  csproj-mode-20200801.1732/snippets/csproj-mode/
-  csproj-mode-20200801.1732/snippets/csproj-mode/Compile
-  csproj-mode-20200801.1732/snippets/csproj-mode/Content
-  csproj-mode-20200801.1732/snippets/csproj-mode/DefineConstants
-  csproj-mode-20200801.1732/snippets/csproj-mode/DotNetCliToolReference
-  csproj-mode-20200801.1732/snippets/csproj-mode/Import
-  csproj-mode-20200801.1732/snippets/csproj-mode/IsPackable
-  csproj-mode-20200801.1732/snippets/csproj-mode/ItemGroup
-  csproj-mode-20200801.1732/snippets/csproj-mode/Message
-  csproj-mode-20200801.1732/snippets/csproj-mode/None
-  csproj-mode-20200801.1732/snippets/csproj-mode/OutputType
-  csproj-mode-20200801.1732/snippets/csproj-mode/PackageLicenseExpression
-  csproj-mode-20200801.1732/snippets/csproj-mode/PackageReference
-  csproj-mode-20200801.1732/snippets/csproj-mode/Project
-  csproj-mode-20200801.1732/snippets/csproj-mode/ProjectReference
-  csproj-mode-20200801.1732/snippets/csproj-mode/PropertyGroup
-  csproj-mode-20200801.1732/snippets/csproj-mode/RuntimeIdentifiers
-  csproj-mode-20200801.1732/snippets/csproj-mode/Target
-  csproj-mode-20200801.1732/snippets/csproj-mode/TargetFramework
-Built csproj-mode in 3.547s, finished at Tue Jul  6 10:20:33 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  409 Jul  6 10:20 packages/csproj-mode-20200801.1732.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 10:20 packages/csproj-mode-20200801.1732.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:20 packages/csproj-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   99 Jul  6 10:20 packages/csproj-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

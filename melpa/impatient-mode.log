@@ -3,23 +3,10 @@ Fetcher: github
 Source:  https://github.com/skeeto/impatient-mode.git
 
 Updating /mnt/store/melpa/working/impatient-mode/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/impatient-mode/
-  to /tmp/impatient-modexmDZg1/impatient-mode-20200723.2117
-    index.html -> index.html
-    loading.html -> loading.html
-    jquery.js -> jquery.js
-    impatient-mode.el -> impatient-mode.el
-Created impatient-mode-20200723.2117.tar containing:
-  impatient-mode-20200723.2117/
-  impatient-mode-20200723.2117/impatient-mode-pkg.el
-  impatient-mode-20200723.2117/impatient-mode.el
-  impatient-mode-20200723.2117/index.html
-  impatient-mode-20200723.2117/jquery.js
-  impatient-mode-20200723.2117/loading.html
-Built impatient-mode in 3.673s, finished at Tue Jul  6 10:43:19 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  385 Jul  6 10:43 packages/impatient-mode-20200723.2117.entry
-240K -rw-r--r-- 1 root root 240K Jul  6 10:43 packages/impatient-mode-20200723.2117.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 10:43 packages/impatient-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  991 Jul  6 10:43 packages/impatient-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+

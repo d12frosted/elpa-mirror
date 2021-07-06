@@ -3,19 +3,10 @@ Fetcher: github
 Source:  https://github.com/pillar-markup/pillar-mode.git
 
 Updating /mnt/store/melpa/working/pillar/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pillar/
-  to /tmp/pillaraAkV8V/pillar-20141112.1811
-    pillar-latex2pillar.el -> pillar-latex2pillar.el
-    pillar.el -> pillar.el
-Created pillar-20141112.1811.tar containing:
-  pillar-20141112.1811/
-  pillar-20141112.1811/pillar-latex2pillar.el
-  pillar-20141112.1811/pillar-pkg.el
-  pillar-20141112.1811/pillar.el
-Built pillar in 4.016s, finished at Tue Jul  6 11:02:12 2021
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  374 Jul  6 11:02 packages/pillar-20141112.1811.entry
- 32K -rw-r--r-- 1 root root  30K Jul  6 11:02 packages/pillar-20141112.1811.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  6 11:02 packages/pillar-badge.svg
-4.0K -rw-r--r-- 1 root root   36 Jul  6 11:02 packages/pillar-readme.txt
+Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
+
+    -a, --auto            set refs/remotes/<name>/HEAD according to remote
+    -d, --delete          delete refs/remotes/<name>/HEAD
+
+
