@@ -1,0 +1,11 @@
+(zoxide .
+	[(20210705 448)
+	 ((emacs
+	   (25 1)))
+	 "Find file by zoxide" single
+	 ((:commit . "f68d7cf9c8c813bdc1ec75f880e0dd1b64112f7c")
+	  (:authors
+	   ("Ruoyu Feng" . "emacs@vonfry.name"))
+	  (:maintainer "Ruoyu Feng" . "emacs@vonfry.name")
+	  (:keywords "converience" "matching")
+	  (:url . "https://gitlab.com/Vonfry/zoxide.el"))])

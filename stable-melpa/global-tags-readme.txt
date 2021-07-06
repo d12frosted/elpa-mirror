@@ -15,6 +15,8 @@ Alternatively, you can manually configure project.el and xref.el, add their
 (add-to-list 'xref-backend-functions 'global-tags-xref-backend)
 ;; project.el (finding files)
 (add-to-list 'project-find-functions 'global-tags-try-project-root)
+;; configure Imenu
+(add-hook 'ruby-mode-hook #'global-tags-imenu-mode)
 ;; to update database after save
 (add-hook 'c++-mode-hook (lambda ()
                            (add-hook 'after-save-hook
