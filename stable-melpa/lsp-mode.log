@@ -3,10 +3,88 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-mode.git
 
 Updating /mnt/store/melpa/working/lsp-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: lsp-mode :files spec is equivalent to the default.
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-mode/
+  to /tmp/lsp-modeq4LfCI/lsp-mode-20200807.204
+    lsp-clients.el -> lsp-clients.el
+    lsp-clojure.el -> lsp-clojure.el
+    lsp-completion.el -> lsp-completion.el
+    lsp-cpp.el -> lsp-cpp.el
+    lsp-csharp.el -> lsp-csharp.el
+    lsp-css.el -> lsp-css.el
+    lsp-diagnostics.el -> lsp-diagnostics.el
+    lsp-elm.el -> lsp-elm.el
+    lsp-erlang.el -> lsp-erlang.el
+    lsp-eslint.el -> lsp-eslint.el
+    lsp-fsharp.el -> lsp-fsharp.el
+    lsp-gdscript.el -> lsp-gdscript.el
+    lsp-go.el -> lsp-go.el
+    lsp-haxe.el -> lsp-haxe.el
+    lsp-headerline.el -> lsp-headerline.el
+    lsp-html.el -> lsp-html.el
+    lsp-intelephense.el -> lsp-intelephense.el
+    lsp-json.el -> lsp-json.el
+    lsp-lens.el -> lsp-lens.el
+    lsp-mode.el -> lsp-mode.el
+    lsp-modeline.el -> lsp-modeline.el
+    lsp-perl.el -> lsp-perl.el
+    lsp-protocol.el -> lsp-protocol.el
+    lsp-pwsh.el -> lsp-pwsh.el
+    lsp-pyls.el -> lsp-pyls.el
+    lsp-rust.el -> lsp-rust.el
+    lsp-serenata.el -> lsp-serenata.el
+    lsp-solargraph.el -> lsp-solargraph.el
+    lsp-sqls.el -> lsp-sqls.el
+    lsp-terraform.el -> lsp-terraform.el
+    lsp-verilog.el -> lsp-verilog.el
+    lsp-vetur.el -> lsp-vetur.el
+    lsp-vhdl.el -> lsp-vhdl.el
+    lsp-xml.el -> lsp-xml.el
+    lsp-yaml.el -> lsp-yaml.el
+    lsp.el -> lsp.el
+Created lsp-mode-20200807.204.tar containing:
+  lsp-mode-20200807.204/
+  lsp-mode-20200807.204/lsp-clients.el
+  lsp-mode-20200807.204/lsp-clojure.el
+  lsp-mode-20200807.204/lsp-completion.el
+  lsp-mode-20200807.204/lsp-cpp.el
+  lsp-mode-20200807.204/lsp-csharp.el
+  lsp-mode-20200807.204/lsp-css.el
+  lsp-mode-20200807.204/lsp-diagnostics.el
+  lsp-mode-20200807.204/lsp-elm.el
+  lsp-mode-20200807.204/lsp-erlang.el
+  lsp-mode-20200807.204/lsp-eslint.el
+  lsp-mode-20200807.204/lsp-fsharp.el
+  lsp-mode-20200807.204/lsp-gdscript.el
+  lsp-mode-20200807.204/lsp-go.el
+  lsp-mode-20200807.204/lsp-haxe.el
+  lsp-mode-20200807.204/lsp-headerline.el
+  lsp-mode-20200807.204/lsp-html.el
+  lsp-mode-20200807.204/lsp-intelephense.el
+  lsp-mode-20200807.204/lsp-json.el
+  lsp-mode-20200807.204/lsp-lens.el
+  lsp-mode-20200807.204/lsp-mode-pkg.el
+  lsp-mode-20200807.204/lsp-mode.el
+  lsp-mode-20200807.204/lsp-modeline.el
+  lsp-mode-20200807.204/lsp-perl.el
+  lsp-mode-20200807.204/lsp-protocol.el
+  lsp-mode-20200807.204/lsp-pwsh.el
+  lsp-mode-20200807.204/lsp-pyls.el
+  lsp-mode-20200807.204/lsp-rust.el
+  lsp-mode-20200807.204/lsp-serenata.el
+  lsp-mode-20200807.204/lsp-solargraph.el
+  lsp-mode-20200807.204/lsp-sqls.el
+  lsp-mode-20200807.204/lsp-terraform.el
+  lsp-mode-20200807.204/lsp-verilog.el
+  lsp-mode-20200807.204/lsp-vetur.el
+  lsp-mode-20200807.204/lsp-vhdl.el
+  lsp-mode-20200807.204/lsp-xml.el
+  lsp-mode-20200807.204/lsp-yaml.el
+  lsp-mode-20200807.204/lsp.el
+Built lsp-mode in 4.638s, finished at Wed Jul  7 08:59:19 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  549 Jul  7 08:59 packages/lsp-mode-20200807.204.entry
+740K -rw-r--r-- 1 root root 740K Jul  7 08:59 packages/lsp-mode-20200807.204.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:59 packages/lsp-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   54 Jul  7 08:59 packages/lsp-mode-readme.txt

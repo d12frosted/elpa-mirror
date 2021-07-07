@@ -3,10 +3,232 @@ Fetcher: github
 Source:  https://github.com/emacs-jp/replace-colorthemes.git
 
 Updating /mnt/store/melpa/working/color-theme-modern/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/color-theme-modern/
+  to /tmp/color-theme-modernQK0B8F/color-theme-modern-20161219.1144
+    aalto-dark-theme.el -> aalto-dark-theme.el
+    aalto-light-theme.el -> aalto-light-theme.el
+    aliceblue-theme.el -> aliceblue-theme.el
+    andreas-theme.el -> andreas-theme.el
+    arjen-theme.el -> arjen-theme.el
+    beige-diff-theme.el -> beige-diff-theme.el
+    beige-eshell-theme.el -> beige-eshell-theme.el
+    bharadwaj-slate-theme.el -> bharadwaj-slate-theme.el
+    bharadwaj-theme.el -> bharadwaj-theme.el
+    billw-theme.el -> billw-theme.el
+    black-on-gray-theme.el -> black-on-gray-theme.el
+    blippblopp-theme.el -> blippblopp-theme.el
+    blue-erc-theme.el -> blue-erc-theme.el
+    blue-eshell-theme.el -> blue-eshell-theme.el
+    blue-gnus-theme.el -> blue-gnus-theme.el
+    blue-mood-theme.el -> blue-mood-theme.el
+    blue-sea-theme.el -> blue-sea-theme.el
+    calm-forest-theme.el -> calm-forest-theme.el
+    charcoal-black-theme.el -> charcoal-black-theme.el
+    clarity-theme.el -> clarity-theme.el
+    classic-theme.el -> classic-theme.el
+    cobalt-theme.el -> cobalt-theme.el
+    color-theme-modern-pkg.el -> color-theme-modern-pkg.el
+    color-theme-modern.el -> color-theme-modern.el
+    comidia-theme.el -> comidia-theme.el
+    dark-blue-theme.el -> dark-blue-theme.el
+    dark-blue2-theme.el -> dark-blue2-theme.el
+    dark-erc-theme.el -> dark-erc-theme.el
+    dark-font-lock-theme.el -> dark-font-lock-theme.el
+    dark-gnus-theme.el -> dark-gnus-theme.el
+    dark-green-theme.el -> dark-green-theme.el
+    dark-info-theme.el -> dark-info-theme.el
+    dark-laptop-theme.el -> dark-laptop-theme.el
+    deep-blue-theme.el -> deep-blue-theme.el
+    desert-theme.el -> desert-theme.el
+    digital-ofs1-theme.el -> digital-ofs1-theme.el
+    emacs-21-theme.el -> emacs-21-theme.el
+    emacs-nw-theme.el -> emacs-nw-theme.el
+    euphoria-theme.el -> euphoria-theme.el
+    feng-shui-theme.el -> feng-shui-theme.el
+    fischmeister-theme.el -> fischmeister-theme.el
+    gnome-theme.el -> gnome-theme.el
+    gnome2-theme.el -> gnome2-theme.el
+    goldenrod-theme.el -> goldenrod-theme.el
+    gray1-theme.el -> gray1-theme.el
+    gray30-theme.el -> gray30-theme.el
+    greiner-theme.el -> greiner-theme.el
+    gtk-ide-theme.el -> gtk-ide-theme.el
+    high-contrast-theme.el -> high-contrast-theme.el
+    hober-theme.el -> hober-theme.el
+    infodoc-theme.el -> infodoc-theme.el
+    jb-simple-theme.el -> jb-simple-theme.el
+    jedit-grey-theme.el -> jedit-grey-theme.el
+    jonadabian-slate-theme.el -> jonadabian-slate-theme.el
+    jonadabian-theme.el -> jonadabian-theme.el
+    jsc-dark-theme.el -> jsc-dark-theme.el
+    jsc-light-theme.el -> jsc-light-theme.el
+    jsc-light2-theme.el -> jsc-light2-theme.el
+    julie-theme.el -> julie-theme.el
+    katester-theme.el -> katester-theme.el
+    kingsajz-theme.el -> kingsajz-theme.el
+    late-night-theme.el -> late-night-theme.el
+    lawrence-theme.el -> lawrence-theme.el
+    ld-dark-theme.el -> ld-dark-theme.el
+    lethe-theme.el -> lethe-theme.el
+    marine-theme.el -> marine-theme.el
+    marquardt-theme.el -> marquardt-theme.el
+    matrix-theme.el -> matrix-theme.el
+    midnight-theme.el -> midnight-theme.el
+    mistyday-theme.el -> mistyday-theme.el
+    montz-theme.el -> montz-theme.el
+    oswald-theme.el -> oswald-theme.el
+    parus-theme.el -> parus-theme.el
+    pierson-theme.el -> pierson-theme.el
+    pok-wob-theme.el -> pok-wob-theme.el
+    pok-wog-theme.el -> pok-wog-theme.el
+    railscast-theme.el -> railscast-theme.el
+    ramangalahy-theme.el -> ramangalahy-theme.el
+    raspopovic-theme.el -> raspopovic-theme.el
+    renegade-theme.el -> renegade-theme.el
+    resolve-theme.el -> resolve-theme.el
+    retro-green-theme.el -> retro-green-theme.el
+    retro-orange-theme.el -> retro-orange-theme.el
+    robin-hood-theme.el -> robin-hood-theme.el
+    rotor-theme.el -> rotor-theme.el
+    ryerson-theme.el -> ryerson-theme.el
+    salmon-diff-theme.el -> salmon-diff-theme.el
+    salmon-font-lock-theme.el -> salmon-font-lock-theme.el
+    scintilla-theme.el -> scintilla-theme.el
+    shaman-theme.el -> shaman-theme.el
+    simple-1-theme.el -> simple-1-theme.el
+    sitaramv-nt-theme.el -> sitaramv-nt-theme.el
+    sitaramv-solaris-theme.el -> sitaramv-solaris-theme.el
+    snow-theme.el -> snow-theme.el
+    snowish-theme.el -> snowish-theme.el
+    standard-ediff-theme.el -> standard-ediff-theme.el
+    standard-theme.el -> standard-theme.el
+    subdued-theme.el -> subdued-theme.el
+    subtle-blue-theme.el -> subtle-blue-theme.el
+    subtle-hacker-theme.el -> subtle-hacker-theme.el
+    taming-mr-arneson-theme.el -> taming-mr-arneson-theme.el
+    taylor-theme.el -> taylor-theme.el
+    tty-dark-theme.el -> tty-dark-theme.el
+    vim-colors-theme.el -> vim-colors-theme.el
+    whateveryouwant-theme.el -> whateveryouwant-theme.el
+    wheat-theme.el -> wheat-theme.el
+    word-perfect-theme.el -> word-perfect-theme.el
+    xemacs-theme.el -> xemacs-theme.el
+    xp-theme.el -> xp-theme.el
+Created color-theme-modern-20161219.1144.tar containing:
+  color-theme-modern-20161219.1144/
+  color-theme-modern-20161219.1144/aalto-dark-theme.el
+  color-theme-modern-20161219.1144/aalto-light-theme.el
+  color-theme-modern-20161219.1144/aliceblue-theme.el
+  color-theme-modern-20161219.1144/andreas-theme.el
+  color-theme-modern-20161219.1144/arjen-theme.el
+  color-theme-modern-20161219.1144/beige-diff-theme.el
+  color-theme-modern-20161219.1144/beige-eshell-theme.el
+  color-theme-modern-20161219.1144/bharadwaj-slate-theme.el
+  color-theme-modern-20161219.1144/bharadwaj-theme.el
+  color-theme-modern-20161219.1144/billw-theme.el
+  color-theme-modern-20161219.1144/black-on-gray-theme.el
+  color-theme-modern-20161219.1144/blippblopp-theme.el
+  color-theme-modern-20161219.1144/blue-erc-theme.el
+  color-theme-modern-20161219.1144/blue-eshell-theme.el
+  color-theme-modern-20161219.1144/blue-gnus-theme.el
+  color-theme-modern-20161219.1144/blue-mood-theme.el
+  color-theme-modern-20161219.1144/blue-sea-theme.el
+  color-theme-modern-20161219.1144/calm-forest-theme.el
+  color-theme-modern-20161219.1144/charcoal-black-theme.el
+  color-theme-modern-20161219.1144/clarity-theme.el
+  color-theme-modern-20161219.1144/classic-theme.el
+  color-theme-modern-20161219.1144/cobalt-theme.el
+  color-theme-modern-20161219.1144/color-theme-modern-pkg.el
+  color-theme-modern-20161219.1144/color-theme-modern.el
+  color-theme-modern-20161219.1144/comidia-theme.el
+  color-theme-modern-20161219.1144/dark-blue-theme.el
+  color-theme-modern-20161219.1144/dark-blue2-theme.el
+  color-theme-modern-20161219.1144/dark-erc-theme.el
+  color-theme-modern-20161219.1144/dark-font-lock-theme.el
+  color-theme-modern-20161219.1144/dark-gnus-theme.el
+  color-theme-modern-20161219.1144/dark-green-theme.el
+  color-theme-modern-20161219.1144/dark-info-theme.el
+  color-theme-modern-20161219.1144/dark-laptop-theme.el
+  color-theme-modern-20161219.1144/deep-blue-theme.el
+  color-theme-modern-20161219.1144/desert-theme.el
+  color-theme-modern-20161219.1144/digital-ofs1-theme.el
+  color-theme-modern-20161219.1144/emacs-21-theme.el
+  color-theme-modern-20161219.1144/emacs-nw-theme.el
+  color-theme-modern-20161219.1144/euphoria-theme.el
+  color-theme-modern-20161219.1144/feng-shui-theme.el
+  color-theme-modern-20161219.1144/fischmeister-theme.el
+  color-theme-modern-20161219.1144/gnome-theme.el
+  color-theme-modern-20161219.1144/gnome2-theme.el
+  color-theme-modern-20161219.1144/goldenrod-theme.el
+  color-theme-modern-20161219.1144/gray1-theme.el
+  color-theme-modern-20161219.1144/gray30-theme.el
+  color-theme-modern-20161219.1144/greiner-theme.el
+  color-theme-modern-20161219.1144/gtk-ide-theme.el
+  color-theme-modern-20161219.1144/high-contrast-theme.el
+  color-theme-modern-20161219.1144/hober-theme.el
+  color-theme-modern-20161219.1144/infodoc-theme.el
+  color-theme-modern-20161219.1144/jb-simple-theme.el
+  color-theme-modern-20161219.1144/jedit-grey-theme.el
+  color-theme-modern-20161219.1144/jonadabian-slate-theme.el
+  color-theme-modern-20161219.1144/jonadabian-theme.el
+  color-theme-modern-20161219.1144/jsc-dark-theme.el
+  color-theme-modern-20161219.1144/jsc-light-theme.el
+  color-theme-modern-20161219.1144/jsc-light2-theme.el
+  color-theme-modern-20161219.1144/julie-theme.el
+  color-theme-modern-20161219.1144/katester-theme.el
+  color-theme-modern-20161219.1144/kingsajz-theme.el
+  color-theme-modern-20161219.1144/late-night-theme.el
+  color-theme-modern-20161219.1144/lawrence-theme.el
+  color-theme-modern-20161219.1144/ld-dark-theme.el
+  color-theme-modern-20161219.1144/lethe-theme.el
+  color-theme-modern-20161219.1144/marine-theme.el
+  color-theme-modern-20161219.1144/marquardt-theme.el
+  color-theme-modern-20161219.1144/matrix-theme.el
+  color-theme-modern-20161219.1144/midnight-theme.el
+  color-theme-modern-20161219.1144/mistyday-theme.el
+  color-theme-modern-20161219.1144/montz-theme.el
+  color-theme-modern-20161219.1144/oswald-theme.el
+  color-theme-modern-20161219.1144/parus-theme.el
+  color-theme-modern-20161219.1144/pierson-theme.el
+  color-theme-modern-20161219.1144/pok-wob-theme.el
+  color-theme-modern-20161219.1144/pok-wog-theme.el
+  color-theme-modern-20161219.1144/railscast-theme.el
+  color-theme-modern-20161219.1144/ramangalahy-theme.el
+  color-theme-modern-20161219.1144/raspopovic-theme.el
+  color-theme-modern-20161219.1144/renegade-theme.el
+  color-theme-modern-20161219.1144/resolve-theme.el
+  color-theme-modern-20161219.1144/retro-green-theme.el
+  color-theme-modern-20161219.1144/retro-orange-theme.el
+  color-theme-modern-20161219.1144/robin-hood-theme.el
+  color-theme-modern-20161219.1144/rotor-theme.el
+  color-theme-modern-20161219.1144/ryerson-theme.el
+  color-theme-modern-20161219.1144/salmon-diff-theme.el
+  color-theme-modern-20161219.1144/salmon-font-lock-theme.el
+  color-theme-modern-20161219.1144/scintilla-theme.el
+  color-theme-modern-20161219.1144/shaman-theme.el
+  color-theme-modern-20161219.1144/simple-1-theme.el
+  color-theme-modern-20161219.1144/sitaramv-nt-theme.el
+  color-theme-modern-20161219.1144/sitaramv-solaris-theme.el
+  color-theme-modern-20161219.1144/snow-theme.el
+  color-theme-modern-20161219.1144/snowish-theme.el
+  color-theme-modern-20161219.1144/standard-ediff-theme.el
+  color-theme-modern-20161219.1144/standard-theme.el
+  color-theme-modern-20161219.1144/subdued-theme.el
+  color-theme-modern-20161219.1144/subtle-blue-theme.el
+  color-theme-modern-20161219.1144/subtle-hacker-theme.el
+  color-theme-modern-20161219.1144/taming-mr-arneson-theme.el
+  color-theme-modern-20161219.1144/taylor-theme.el
+  color-theme-modern-20161219.1144/tty-dark-theme.el
+  color-theme-modern-20161219.1144/vim-colors-theme.el
+  color-theme-modern-20161219.1144/whateveryouwant-theme.el
+  color-theme-modern-20161219.1144/wheat-theme.el
+  color-theme-modern-20161219.1144/word-perfect-theme.el
+  color-theme-modern-20161219.1144/xemacs-theme.el
+  color-theme-modern-20161219.1144/xp-theme.el
+Built color-theme-modern in 4.535s, finished at Wed Jul  7 11:39:49 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  404 Jul  7 11:39 packages/color-theme-modern-20161219.1144.entry
+1.1M -rw-r--r-- 1 root root 1.1M Jul  7 11:39 packages/color-theme-modern-20161219.1144.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:39 packages/color-theme-modern-badge.svg
+4.0K -rw-r--r-- 1 root root   68 Jul  7 11:39 packages/color-theme-modern-readme.txt

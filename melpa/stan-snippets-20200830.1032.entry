@@ -1,0 +1,16 @@
+(stan-snippets .
+	       [(20200830 1032)
+		((emacs
+		  (24 3))
+		 (stan-mode
+		  (10 1 0))
+		 (yasnippet
+		  (0 8 0)))
+		"Yasnippets for Stan" tar
+		((:commit . "2dd330604563d143031fc8ffd516266217aa1f9b")
+		 (:authors
+		  ("Jeffrey Arnold" . "jeffrey.arnold@gmail.com")
+		  ("Kazuki Yoshida" . "kazukiyoshida@mail.harvard.edu"))
+		 (:maintainer "Kazuki Yoshida" . "kazukiyoshida@mail.harvard.edu")
+		 (:keywords "languages" "tools")
+		 (:url . "https://github.com/stan-dev/stan-mode/tree/master/stan-snippets"))])

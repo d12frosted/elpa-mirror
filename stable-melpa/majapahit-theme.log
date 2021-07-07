@@ -3,10 +3,21 @@ Fetcher: gitlab
 Source:  https://gitlab.com/franksn/majapahit-theme.git
 
 Updating /mnt/store/melpa/working/majapahit-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/majapahit-theme/
+  to /tmp/majapahit-themewJUFpw/majapahit-theme-20160817.1848
+    majapahit-common.el -> majapahit-common.el
+    majapahit-dark-theme.el -> majapahit-dark-theme.el
+    majapahit-light-theme.el -> majapahit-light-theme.el
+    majapahit-theme-pkg.el -> majapahit-theme-pkg.el
+Created majapahit-theme-20160817.1848.tar containing:
+  majapahit-theme-20160817.1848/
+  majapahit-theme-20160817.1848/majapahit-common.el
+  majapahit-theme-20160817.1848/majapahit-dark-theme.el
+  majapahit-theme-20160817.1848/majapahit-light-theme.el
+  majapahit-theme-20160817.1848/majapahit-theme-pkg.el
+Built majapahit-theme in 4.042s, finished at Wed Jul  7 09:00:15 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  159 Jul  7 09:00 packages/majapahit-theme-20160817.1848.entry
+132K -rw-r--r-- 1 root root 130K Jul  7 09:00 packages/majapahit-theme-20160817.1848.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:00 packages/majapahit-theme-badge.svg

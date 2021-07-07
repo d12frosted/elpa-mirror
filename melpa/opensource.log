@@ -3,10 +3,27 @@ Fetcher: github
 Source:  https://github.com/OpenSourceOrg/el-opensourceorg.git
 
 Updating /mnt/store/melpa/working/opensource/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/opensource/
+  to /tmp/opensourceeHj08f/opensource-20160802.1003
+    opensource-api.el -> opensource-api.el
+    opensource-http.el -> opensource-http.el
+    opensource-licenses.el -> opensource-licenses.el
+    opensource-utils.el -> opensource-utils.el
+    opensource-version.el -> opensource-version.el
+    opensource.el -> opensource.el
+Created opensource-20160802.1003.tar containing:
+  opensource-20160802.1003/
+  opensource-20160802.1003/opensource-api.el
+  opensource-20160802.1003/opensource-http.el
+  opensource-20160802.1003/opensource-licenses.el
+  opensource-20160802.1003/opensource-pkg.el
+  opensource-20160802.1003/opensource-utils.el
+  opensource-20160802.1003/opensource-version.el
+  opensource-20160802.1003/opensource.el
+Built opensource in 4.076s, finished at Wed Jul  7 09:06:25 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  513 Jul  7 09:06 packages/opensource-20160802.1003.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:06 packages/opensource-20160802.1003.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/opensource-badge.svg
+4.0K -rw-r--r-- 1 root root  324 Jul  7 09:06 packages/opensource-readme.txt

@@ -1,0 +1,9 @@
+(cpputils-cmake .
+		[(20160515 803)
+		 nil "Easy real time C++ syntax check and intellisense if you use CMake" tar
+		 ((:commit . "55e5c69554379632692a0fa20bfadeef9194fbdd")
+		  (:authors
+		   ("Chen Bin" . "chenbin.sh@gmail.com"))
+		  (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
+		  (:keywords "cmake" "intellisense" "flymake" "flycheck")
+		  (:url . "http://github.com/redguardtoo/cpputils-cmake"))])

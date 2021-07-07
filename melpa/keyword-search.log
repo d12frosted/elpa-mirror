@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/keyword-search/keyword-search.git
 
 Updating /mnt/store/melpa/working/keyword-search/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/keyword-search/
+  to /tmp/keyword-search5Rjvdo/keyword-search-20180424.1102
+    keyword-search-extra.el -> keyword-search-extra.el
+    keyword-search-mad.el -> keyword-search-mad.el
+    keyword-search.el -> keyword-search.el
+Created keyword-search-20180424.1102.tar containing:
+  keyword-search-20180424.1102/
+  keyword-search-20180424.1102/keyword-search-extra.el
+  keyword-search-20180424.1102/keyword-search-mad.el
+  keyword-search-20180424.1102/keyword-search-pkg.el
+  keyword-search-20180424.1102/keyword-search.el
+Built keyword-search in 3.542s, finished at Wed Jul  7 08:56:21 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  275 Jul  7 08:56 packages/keyword-search-20180424.1102.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 08:56 packages/keyword-search-20180424.1102.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:56 packages/keyword-search-badge.svg
+4.0K -rw-r--r-- 1 root root  936 Jul  7 08:56 packages/keyword-search-readme.txt

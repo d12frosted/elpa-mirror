@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/joaotavora/sly-quicklisp.git
 
 Updating /mnt/store/melpa/working/sly-quicklisp/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sly-quicklisp/
+  to /tmp/sly-quicklispGVsmuP/sly-quicklisp-20200707.1635
+    sly-quicklisp-autoloads.el -> sly-quicklisp-autoloads.el
+    sly-quicklisp.el -> sly-quicklisp.el
+    slynk-quicklisp.lisp -> slynk-quicklisp.lisp
+    slynk-quicklisp.asd -> slynk-quicklisp.asd
+Created sly-quicklisp-20200707.1635.tar containing:
+  sly-quicklisp-20200707.1635/
+  sly-quicklisp-20200707.1635/sly-quicklisp-autoloads.el
+  sly-quicklisp-20200707.1635/sly-quicklisp-pkg.el
+  sly-quicklisp-20200707.1635/sly-quicklisp.el
+  sly-quicklisp-20200707.1635/slynk-quicklisp.asd
+  sly-quicklisp-20200707.1635/slynk-quicklisp.lisp
+Built sly-quicklisp in 9.606s, finished at Wed Jul  7 09:20:25 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  383 Jul  7 09:20 packages/sly-quicklisp-20200707.1635.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:20 packages/sly-quicklisp-20200707.1635.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:20 packages/sly-quicklisp-badge.svg
+4.0K -rw-r--r-- 1 root root  165 Jul  7 09:20 packages/sly-quicklisp-readme.txt

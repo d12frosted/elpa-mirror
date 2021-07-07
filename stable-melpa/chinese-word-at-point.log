@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/chinese-word-at-point.el.git
 
 Updating /mnt/store/melpa/working/chinese-word-at-point/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: chinese-word-at-point :files spec is equivalent to the default.
+Built chinese-word-at-point in 4.731s, finished at Wed Jul  7 11:38:11 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.7K Jul  7 11:38 packages/chinese-word-at-point-20150619.138.el
+4.0K -rw-r--r-- 1 root root  426 Jul  7 11:38 packages/chinese-word-at-point-20150619.138.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:38 packages/chinese-word-at-point-badge.svg
+4.0K -rw-r--r-- 1 root root  494 Jul  7 11:38 packages/chinese-word-at-point-readme.txt

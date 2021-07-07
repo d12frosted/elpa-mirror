@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/genovese/win-switch.git
 
 Updating /mnt/store/melpa/working/win-switch/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built win-switch in 4.526s, finished at Wed Jul  7 09:28:59 2021
+ ✓ Success:
+ 68K -rw-r--r-- 1 root root  68K Jul  7 09:28 packages/win-switch-20161009.1627.el
+4.0K -rw-r--r-- 1 root root  459 Jul  7 09:28 packages/win-switch-20161009.1627.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:28 packages/win-switch-badge.svg
+ 12K -rw-r--r-- 1 root root 8.1K Jul  7 09:28 packages/win-switch-readme.txt

@@ -3,10 +3,18 @@ Fetcher: github
 Source:  https://github.com/ardumont/emacs-creds.git
 
 Updating /mnt/store/melpa/working/creds/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/creds/
+  to /tmp/credsFDyl63/creds-20140510.1706
+    creds-pkg.el -> creds-pkg.el
+    creds.el -> creds.el
+Created creds-20140510.1706.tar containing:
+  creds-20140510.1706/
+  creds-20140510.1706/creds-pkg.el
+  creds-20140510.1706/creds.el
+Built creds in 3.614s, finished at Wed Jul  7 11:41:55 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  414 Jul  7 11:41 packages/creds-20140510.1706.entry
+ 12K -rw-r--r-- 1 root root  10K Jul  7 11:41 packages/creds-20140510.1706.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:41 packages/creds-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Jul  7 11:41 packages/creds-readme.txt

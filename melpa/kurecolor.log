@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacsfodder/kurecolor.git
 
 Updating /mnt/store/melpa/working/kurecolor/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built kurecolor in 4.946s, finished at Wed Jul  7 08:56:47 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  17K Jul  7 08:56 packages/kurecolor-20180401.1221.el
+4.0K -rw-r--r-- 1 root root  320 Jul  7 08:56 packages/kurecolor-20180401.1221.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:56 packages/kurecolor-badge.svg
+4.0K -rw-r--r-- 1 root root 3.2K Jul  7 08:56 packages/kurecolor-readme.txt

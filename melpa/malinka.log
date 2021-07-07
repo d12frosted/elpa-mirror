@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/LefterisJP/malinka.git
 
 Updating /mnt/store/melpa/working/malinka/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built malinka in 4.632s, finished at Wed Jul  7 09:00:22 2021
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root  49K Jul  7 09:00 packages/malinka-20141219.2337.el
+4.0K -rw-r--r-- 1 root root  524 Jul  7 09:00 packages/malinka-20141219.2337.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:00 packages/malinka-badge.svg
+4.0K -rw-r--r-- 1 root root  888 Jul  7 09:00 packages/malinka-readme.txt

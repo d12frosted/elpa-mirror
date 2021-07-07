@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/glyph/python-docstring-mode.git
 
 Updating /mnt/store/melpa/working/python-docstring/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/python-docstring/
+  to /tmp/python-docstringXvwnV8/python-docstring-20190716.921
+    docstring_wrap.py -> docstring_wrap.py
+    python-docstring.el -> python-docstring.el
+Created python-docstring-20190716.921.tar containing:
+  python-docstring-20190716.921/
+  python-docstring-20190716.921/docstring_wrap.py
+  python-docstring-20190716.921/python-docstring-pkg.el
+  python-docstring-20190716.921/python-docstring.el
+Built python-docstring in 3.861s, finished at Wed Jul  7 09:14:55 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  153 Jul  7 09:14 packages/python-docstring-20190716.921.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 09:14 packages/python-docstring-20190716.921.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:14 packages/python-docstring-badge.svg
+4.0K -rw-r--r-- 1 root root  321 Jul  7 09:14 packages/python-docstring-readme.txt

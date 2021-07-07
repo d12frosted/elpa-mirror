@@ -3,10 +3,26 @@ Fetcher: github
 Source:  https://github.com/realgud/realgud-ipdb.git
 
 Updating /mnt/store/melpa/working/realgud-ipdb/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/realgud-ipdb/
+  to /tmp/realgud-ipdbc5JPJ6/realgud-ipdb-20200722.1116
+    realgud-ipdb.el -> realgud-ipdb.el
+    ipdb/core.el -> ipdb/core.el
+    ipdb/init.el -> ipdb/init.el
+    ipdb/ipdb.el -> ipdb/ipdb.el
+    ipdb/track-mode.el -> ipdb/track-mode.el
+Created realgud-ipdb-20200722.1116.tar containing:
+  realgud-ipdb-20200722.1116/
+  realgud-ipdb-20200722.1116/ipdb/
+  realgud-ipdb-20200722.1116/ipdb/core.el
+  realgud-ipdb-20200722.1116/ipdb/init.el
+  realgud-ipdb-20200722.1116/ipdb/ipdb.el
+  realgud-ipdb-20200722.1116/ipdb/track-mode.el
+  realgud-ipdb-20200722.1116/realgud-ipdb-pkg.el
+  realgud-ipdb-20200722.1116/realgud-ipdb.el
+Built realgud-ipdb in 3.805s, finished at Wed Jul  7 09:15:53 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  384 Jul  7 09:15 packages/realgud-ipdb-20200722.1116.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 09:15 packages/realgud-ipdb-20200722.1116.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:15 packages/realgud-ipdb-badge.svg
+4.0K -rw-r--r-- 1 root root   71 Jul  7 09:15 packages/realgud-ipdb-readme.txt

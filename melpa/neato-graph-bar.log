@@ -3,10 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/RobertCochran/neato-graph-bar.git
 
 Updating /mnt/store/melpa/working/neato-graph-bar/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built neato-graph-bar in 5.327s, finished at Wed Jul  7 09:04:03 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Jul  7 09:04 packages/neato-graph-bar-20181130.1649.el
+4.0K -rw-r--r-- 1 root root  380 Jul  7 09:04 packages/neato-graph-bar-20181130.1649.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:04 packages/neato-graph-bar-badge.svg
+4.0K -rw-r--r-- 1 root root  112 Jul  7 09:04 packages/neato-graph-bar-readme.txt

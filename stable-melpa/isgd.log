@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/chmouel/isgd.el.git
 
 Updating /mnt/store/melpa/working/isgd/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built isgd in 3.715s, finished at Wed Jul  7 12:05:31 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Jul  7 12:05 packages/isgd-20150414.936.el
+4.0K -rw-r--r-- 1 root root  330 Jul  7 12:05 packages/isgd-20150414.936.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:05 packages/isgd-badge.svg
+4.0K -rw-r--r-- 1 root root  308 Jul  7 12:05 packages/isgd-readme.txt

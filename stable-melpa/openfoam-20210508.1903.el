@@ -5,7 +5,7 @@
 ;; Author: Ralph Schleicher <rs@ralph-schleicher.de>
 ;; Keywords: languages
 ;; Package-Version: 20210508.1903
-;; Package-Commit: 1623aa8d9f72128cc007f84b108d2f6c6205c330
+;; Package-Commit: 7808319de0326aa293636df6c213467c279ff1ea
 ;; Version: 0.13
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/ralph-schleicher/emacs-openfoam

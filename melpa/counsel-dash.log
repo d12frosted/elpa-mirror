@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/dash-docs-el/counsel-dash.git
 
 Updating /mnt/store/melpa/working/counsel-dash/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built counsel-dash in 4.001s, finished at Wed Jul  7 11:41:30 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.2K Jul  7 11:41 packages/counsel-dash-20160524.652.el
+4.0K -rw-r--r-- 1 root root  475 Jul  7 11:41 packages/counsel-dash-20160524.652.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:41 packages/counsel-dash-badge.svg
+4.0K -rw-r--r-- 1 root root   82 Jul  7 11:41 packages/counsel-dash-readme.txt

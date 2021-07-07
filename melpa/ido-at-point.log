@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/katspaugh/ido-at-point.git
 
 Updating /mnt/store/melpa/working/ido-at-point/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ido-at-point in 3.740s, finished at Wed Jul  7 12:04:06 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.6K Jul  7 12:04 packages/ido-at-point-20151021.757.el
+4.0K -rw-r--r-- 1 root root  329 Jul  7 12:04 packages/ido-at-point-20151021.757.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:04 packages/ido-at-point-badge.svg
+4.0K -rw-r--r-- 1 root root  280 Jul  7 12:04 packages/ido-at-point-readme.txt

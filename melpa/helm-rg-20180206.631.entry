@@ -1,0 +1,17 @@
+(helm-rg .
+	 [(20180206 631)
+	  ((emacs
+	    (25))
+	   (helm
+	    (2 8 8))
+	   (cl-lib
+	    (0 5))
+	   (dash
+	    (2 13 0)))
+	  "a helm interface to ripgrep" single
+	  ((:commit . "96dcbeb366caa0b158668384113458ee5f7c4dfd")
+	   (:authors
+	    ("Danny McClanahan"))
+	   (:maintainer "Danny McClanahan")
+	   (:keywords "find" "file" "files" "helm" "fast" "rg" "ripgrep" "grep" "search")
+	   (:url . "https://github.com/cosmicexplorer/helm-rg"))])

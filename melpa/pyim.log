@@ -3,10 +3,51 @@ Fetcher: github
 Source:  https://github.com/tumashu/pyim.git
 
 Updating /mnt/store/melpa/working/pyim/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: pyim :files spec is equivalent to the default.
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pyim/
+  to /tmp/pyimkn4HxC/pyim-20210224.535
+    pyim-common.el -> pyim-common.el
+    pyim-dhashcache.el -> pyim-dhashcache.el
+    pyim-dregcache.el -> pyim-dregcache.el
+    pyim-probe.el -> pyim-probe.el
+    pyim-pymap.el -> pyim-pymap.el
+    pyim.el -> pyim.el
+Created pyim-20210224.535.tar containing:
+  pyim-20210224.535/
+  pyim-20210224.535/pyim-common.el
+  pyim-20210224.535/pyim-dhashcache.el
+  pyim-20210224.535/pyim-dregcache.el
+  pyim-20210224.535/pyim-pkg.el
+  pyim-20210224.535/pyim-probe.el
+  pyim-20210224.535/pyim-pymap.el
+  pyim-20210224.535/pyim.el
+Built pyim in 8.008s, finished at Wed Jul  7 09:14:41 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  471 Jul  7 09:14 packages/pyim-20210224.535.entry
+312K -rw-r--r-- 1 root root 310K Jul  7 09:14 packages/pyim-20210224.535.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:14 packages/pyim-badge.svg
+4.0K -rw-r--r-- 1 root root  375 Jul  7 06:01 packages/pyim-basedict-20170726.1515.entry
+2.2M -rw-r--r-- 1 root root 2.2M Jul  7 06:01 packages/pyim-basedict-20170726.1515.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:01 packages/pyim-basedict-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:01 packages/pyim-basedict-readme.txt
+4.0K -rw-r--r-- 1 root root  143 Jul  7 09:14 packages/pyim-basedict.log
+4.0K -rw-r--r-- 1 root root 1.2K Apr 29 04:47 packages/pyim-cangjie5dict-badge.svg
+4.0K -rw-r--r-- 1 root root  524 Apr 29 04:47 packages/pyim-cangjie5dict-readme.txt
+4.0K -rw-r--r-- 1 root root  215 May  1 17:49 packages/pyim-cangjie5dict.log
+4.0K -rw-r--r-- 1 root root  436 Jul  7 06:01 packages/pyim-cangjiedict-20210617.934.entry
+5.0M -rw-r--r-- 1 root root 5.0M Jul  7 06:01 packages/pyim-cangjiedict-20210617.934.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:01 packages/pyim-cangjiedict-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Jul  7 06:01 packages/pyim-cangjiedict-readme.txt
+4.0K -rw-r--r-- 1 root root  152 Jul  7 09:14 packages/pyim-cangjiedict.log
+ 24K -rw-r--r-- 1 root root  22K Jul  7 09:14 packages/pyim-readme.txt
+4.0K -rw-r--r-- 1 root root  357 Jul  7 06:01 packages/pyim-smzmdict-20210505.1445.entry
+120K -rw-r--r-- 1 root root 120K Jul  7 06:01 packages/pyim-smzmdict-20210505.1445.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:01 packages/pyim-smzmdict-badge.svg
+4.0K -rw-r--r-- 1 root root  765 Jul  7 06:01 packages/pyim-smzmdict-readme.txt
+4.0K -rw-r--r-- 1 root root  143 Jul  7 09:14 packages/pyim-smzmdict.log
+4.0K -rw-r--r-- 1 root root  410 Jul  7 06:01 packages/pyim-wbdict-20170724.2227.entry
+1.2M -rw-r--r-- 1 root root 1.2M Jul  7 06:01 packages/pyim-wbdict-20170724.2227.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:01 packages/pyim-wbdict-badge.svg
+4.0K -rw-r--r-- 1 root root  490 Jul  7 06:01 packages/pyim-wbdict-readme.txt
+4.0K -rw-r--r-- 1 root root  137 Jul  7 09:14 packages/pyim-wbdict.log

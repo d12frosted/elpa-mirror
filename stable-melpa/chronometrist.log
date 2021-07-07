@@ -3,10 +3,33 @@ Fetcher: git
 Source:  https://tildegit.org/contrapunctus/chronometrist.git
 
 Updating /mnt/store/melpa/working/chronometrist/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/chronometrist/
+  to /tmp/chronometristmZxnwW/chronometrist-20210601.1145
+  ! elisp/chronometrist-spark.el -> chronometrist-spark.el
+  ! elisp/chronometrist.el -> chronometrist.el
+  ! elisp/chronometrist-spark.org -> chronometrist-spark.org
+  ! elisp/chronometrist.org -> chronometrist.org
+Created chronometrist-20210601.1145.tar containing:
+  chronometrist-20210601.1145/
+  chronometrist-20210601.1145/chronometrist-pkg.el
+  chronometrist-20210601.1145/chronometrist-spark.el
+  chronometrist-20210601.1145/chronometrist-spark.org
+  chronometrist-20210601.1145/chronometrist.el
+  chronometrist-20210601.1145/chronometrist.org
+Built chronometrist in 3.700s, finished at Wed Jul  7 11:38:12 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  456 Jul  7 11:38 packages/chronometrist-20210601.1145.entry
+260K -rw-r--r-- 1 root root 260K Jul  7 11:38 packages/chronometrist-20210601.1145.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:38 packages/chronometrist-badge.svg
+ 12K -rw-r--r-- 1 root root  12K Jul  7 11:38 packages/chronometrist-goal-20210510.1831.el
+4.0K -rw-r--r-- 1 root root  531 Jul  7 11:38 packages/chronometrist-goal-20210510.1831.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:25 packages/chronometrist-goal-badge.svg
+4.0K -rw-r--r-- 1 root root  153 Jul  7 11:38 packages/chronometrist-goal-readme.txt
+4.0K -rw-r--r-- 1 root root  163 Jul  7 11:38 packages/chronometrist-goal.log
+4.0K -rw-r--r-- 1 root root  448 Jul  7 11:38 packages/chronometrist-key-values-20210530.1937.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 11:38 packages/chronometrist-key-values-20210530.1937.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:25 packages/chronometrist-key-values-badge.svg
+4.0K -rw-r--r-- 1 root root  379 Jul  7 11:38 packages/chronometrist-key-values-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Jul  7 11:38 packages/chronometrist-key-values.log
+4.0K -rw-r--r-- 1 root root 2.0K Jul  7 11:38 packages/chronometrist-readme.txt

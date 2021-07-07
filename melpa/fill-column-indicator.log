@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/alpaker/fill-column-indicator.git
 
 Updating /mnt/store/melpa/working/fill-column-indicator/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built fill-column-indicator in 4.680s, finished at Wed Jul  7 11:52:30 2021
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root  37K Jul  7 11:52 packages/fill-column-indicator-20171209.1919.el
+4.0K -rw-r--r-- 1 root root  316 Jul  7 11:52 packages/fill-column-indicator-20171209.1919.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:52 packages/fill-column-indicator-badge.svg
+8.0K -rw-r--r-- 1 root root 6.1K Jul  7 11:52 packages/fill-column-indicator-readme.txt

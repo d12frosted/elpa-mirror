@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/bard/emacs-run-command.git
 
 Updating /mnt/store/melpa/working/run-command/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built run-command in 4.313s, finished at Wed Jul  7 09:17:31 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  18K Jul  7 09:17 packages/run-command-20210529.1505.el
+4.0K -rw-r--r-- 1 root root  432 Jul  7 09:17 packages/run-command-20210529.1505.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:17 packages/run-command-badge.svg
+4.0K -rw-r--r-- 1 root root  176 Jul  7 09:17 packages/run-command-readme.txt

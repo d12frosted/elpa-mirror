@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/flycheck/flycheck-haskell.git
 
 Updating /mnt/store/melpa/working/flycheck-haskell/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-haskell/
+  to /tmp/flycheck-haskellifVgRa/flycheck-haskell-20160524.816
+    flycheck-haskell.el -> flycheck-haskell.el
+    get-cabal-configuration.hs -> get-cabal-configuration.hs
+    get-flags.hs -> get-flags.hs
+Created flycheck-haskell-20160524.816.tar containing:
+  flycheck-haskell-20160524.816/
+  flycheck-haskell-20160524.816/flycheck-haskell-pkg.el
+  flycheck-haskell-20160524.816/flycheck-haskell.el
+  flycheck-haskell-20160524.816/get-cabal-configuration.hs
+  flycheck-haskell-20160524.816/get-flags.hs
+Built flycheck-haskell in 3.694s, finished at Wed Jul  7 11:53:46 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  577 Jul  7 11:53 packages/flycheck-haskell-20160524.816.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:53 packages/flycheck-haskell-20160524.816.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:53 packages/flycheck-haskell-badge.svg
+4.0K -rw-r--r-- 1 root root  441 Jul  7 11:53 packages/flycheck-haskell-readme.txt

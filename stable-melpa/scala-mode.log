@@ -3,10 +3,33 @@ Fetcher: github
 Source:  https://github.com/hvesalai/emacs-scala-mode.git
 
 Updating /mnt/store/melpa/working/scala-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/scala-mode/
+  to /tmp/scala-modeVtLfW7/scala-mode-20190929.1522
+    scala-mode-fontlock.el -> scala-mode-fontlock.el
+    scala-mode-imenu.el -> scala-mode-imenu.el
+    scala-mode-indent.el -> scala-mode-indent.el
+    scala-mode-lib.el -> scala-mode-lib.el
+    scala-mode-map.el -> scala-mode-map.el
+    scala-mode-paragraph.el -> scala-mode-paragraph.el
+    scala-mode-prettify-symbols.el -> scala-mode-prettify-symbols.el
+    scala-mode-syntax.el -> scala-mode-syntax.el
+    scala-mode.el -> scala-mode.el
+Created scala-mode-20190929.1522.tar containing:
+  scala-mode-20190929.1522/
+  scala-mode-20190929.1522/scala-mode-fontlock.el
+  scala-mode-20190929.1522/scala-mode-imenu.el
+  scala-mode-20190929.1522/scala-mode-indent.el
+  scala-mode-20190929.1522/scala-mode-lib.el
+  scala-mode-20190929.1522/scala-mode-map.el
+  scala-mode-20190929.1522/scala-mode-paragraph.el
+  scala-mode-20190929.1522/scala-mode-pkg.el
+  scala-mode-20190929.1522/scala-mode-prettify-symbols.el
+  scala-mode-20190929.1522/scala-mode-syntax.el
+  scala-mode-20190929.1522/scala-mode.el
+Built scala-mode in 4.026s, finished at Wed Jul  7 09:17:55 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  240 Jul  7 09:17 packages/scala-mode-20190929.1522.entry
+132K -rw-r--r-- 1 root root 130K Jul  7 09:17 packages/scala-mode-20190929.1522.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:17 packages/scala-mode-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:17 packages/scala-mode-readme.txt

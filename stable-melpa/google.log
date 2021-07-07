@@ -3,10 +3,34 @@ Fetcher: github
 Source:  https://github.com/hober/google-el.git
 
 Updating /mnt/store/melpa/working/google/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built google in 3.297s, finished at Wed Jul  7 11:58:28 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.9K Jul  7 11:58 packages/google-20140416.1748.el
+4.0K -rw-r--r-- 1 root root  291 Jul  7 11:58 packages/google-20140416.1748.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:58 packages/google-badge.svg
+8.0K -rw-r--r-- 1 root root 6.2K Jul  7 08:46 packages/google-c-style-20180130.1736.el
+4.0K -rw-r--r-- 1 root root  175 Jul  7 08:46 packages/google-c-style-20180130.1736.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:46 packages/google-c-style-badge.svg
+4.0K -rw-r--r-- 1 root root  405 Jul  7 08:46 packages/google-c-style-readme.txt
+4.0K -rw-r--r-- 1 root root  141 Jul  7 11:58 packages/google-c-style.log
+4.0K -rw-r--r-- 1 root root  405 Jul  7 08:46 packages/google-contacts-20201012.1056.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 08:46 packages/google-contacts-20201012.1056.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:46 packages/google-contacts-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Jul  7 08:46 packages/google-contacts-readme.txt
+4.0K -rw-r--r-- 1 root root  147 Jul  7 11:58 packages/google-contacts.log
+4.0K -rw-r--r-- 1 root root  300 Jul  7 08:46 packages/google-maps-20130412.930.entry
+ 56K -rw-r--r-- 1 root root  50K Jul  7 08:46 packages/google-maps-20130412.930.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:46 packages/google-maps-badge.svg
+4.0K -rw-r--r-- 1 root root    5 Jul  7 08:46 packages/google-maps-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jul  7 11:58 packages/google-maps.log
+4.0K -rw-r--r-- 1 root root  511 Jul  7 11:58 packages/google-readme.txt
+ 20K -rwxr-xr-x 1 root root  19K Jul  7 08:46 packages/google-this-20170810.1215.el
+4.0K -rw-r--r-- 1 root root  454 Jul  7 08:46 packages/google-this-20170810.1215.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:46 packages/google-this-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Jul  7 08:46 packages/google-this-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jul  7 11:58 packages/google-this.log
+4.0K -rw-r--r-- 1 root root  381 Jul  7 08:46 packages/google-translate-20200610.110.entry
+100K -rw-r--r-- 1 root root 100K Jul  7 08:46 packages/google-translate-20200610.110.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:46 packages/google-translate-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Jul  7 08:46 packages/google-translate-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jul  7 11:58 packages/google-translate.log

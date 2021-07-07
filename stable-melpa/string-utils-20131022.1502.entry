@@ -1,0 +1,11 @@
+(string-utils .
+	      [(20131022 1502)
+	       ((list-utils
+		 (0 4 2)))
+	       "String-manipulation utilities" single
+	       ((:commit . "3ae530143899f533a9ef5e1f26f28b577ebe72ee")
+		(:authors
+		 ("Roland Walker" . "walker@pobox.com"))
+		(:maintainer "Roland Walker" . "walker@pobox.com")
+		(:keywords "extensions")
+		(:url . "http://github.com/rolandwalker/string-utils"))])

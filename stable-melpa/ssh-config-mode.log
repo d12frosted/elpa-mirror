@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/jhgorrell/ssh-config-mode-el.git
 
 Updating /mnt/store/melpa/working/ssh-config-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ssh-config-mode/
+  to /tmp/ssh-config-mode6VcwSg/ssh-config-mode-20210703.951
+    ssh-config-mode.el -> ssh-config-mode.el
+    ssh-config-keywords.txt -> ssh-config-keywords.txt
+Created ssh-config-mode-20210703.951.tar containing:
+  ssh-config-mode-20210703.951/
+  ssh-config-mode-20210703.951/ssh-config-keywords.txt
+  ssh-config-mode-20210703.951/ssh-config-mode-pkg.el
+  ssh-config-mode-20210703.951/ssh-config-mode.el
+Built ssh-config-mode in 4.611s, finished at Wed Jul  7 09:22:05 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  378 Jul  7 09:22 packages/ssh-config-mode-20210703.951.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:22 packages/ssh-config-mode-20210703.951.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:22 packages/ssh-config-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  562 Jul  7 09:22 packages/ssh-config-mode-readme.txt

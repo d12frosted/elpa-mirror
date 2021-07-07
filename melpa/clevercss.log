@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/jschaf/CleverCSS-Mode.git
 
 Updating /mnt/store/melpa/working/clevercss/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built clevercss in 4.122s, finished at Wed Jul  7 11:38:38 2021
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root  26K Jul  7 11:38 packages/clevercss-20131229.155.el
+4.0K -rw-r--r-- 1 root root  314 Jul  7 11:38 packages/clevercss-20131229.155.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:38 packages/clevercss-badge.svg
+4.0K -rw-r--r-- 1 root root  792 Jul  7 11:38 packages/clevercss-readme.txt

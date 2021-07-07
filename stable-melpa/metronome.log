@@ -3,10 +3,22 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jagrg/metronome.git
 
 Updating /mnt/store/melpa/working/metronome/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/metronome/
+  to /tmp/metronome87UI5c/metronome-20200502.1748
+    metronome.el -> metronome.el
+    sounds => sounds
+Created metronome-20200502.1748.tar containing:
+  metronome-20200502.1748/
+  metronome-20200502.1748/metronome-pkg.el
+  metronome-20200502.1748/metronome.el
+  metronome-20200502.1748/sounds/
+  metronome-20200502.1748/sounds/high.wav
+  metronome-20200502.1748/sounds/low.wav
+Built metronome in 3.726s, finished at Wed Jul  7 09:01:20 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Jul  3  2020 packages/metronome-20200502.1748.el
+4.0K -rw-r--r-- 1 root root  349 Jul  7 09:01 packages/metronome-20200502.1748.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 09:01 packages/metronome-20200502.1748.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:01 packages/metronome-badge.svg
+4.0K -rw-r--r-- 1 root root  675 Jul  7 09:01 packages/metronome-readme.txt

@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/magit-section/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/magit-section/
+  to /tmp/magit-sectionUhwsfe/magit-section-20210702.819
+  ! lisp/magit-section.el -> magit-section.el
+  ! Documentation/magit-section.texi -> magit-section.texi
+Created /tmp/magit-sectionUhwsfe/magit-section-20210702.819/magit-section.info
+Created magit-section-20210702.819.tar containing:
+  magit-section-20210702.819/
+  magit-section-20210702.819/dir
+  magit-section-20210702.819/magit-section-pkg.el
+  magit-section-20210702.819/magit-section.el
+  magit-section-20210702.819/magit-section.info
+Built magit-section in 7.464s, finished at Wed Jul  7 09:00:05 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  370 Jul  7 09:00 packages/magit-section-20210702.819.entry
+100K -rw-r--r-- 1 root root 100K Jul  7 09:00 packages/magit-section-20210702.819.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:00 packages/magit-section-badge.svg
+4.0K -rw-r--r-- 1 root root  255 Jul  7 09:00 packages/magit-section-readme.txt

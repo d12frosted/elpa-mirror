@@ -1,0 +1,10 @@
+(flymake-ruby .
+	      [(20121104 1859)
+	       ((flymake-easy
+		 (0 1)))
+	       "A flymake handler for ruby-mode files" single
+	       ((:commit . "e14e8e2abda223bd3920dbad0eefd5af5973ae6d")
+		(:authors
+		 ("Steve Purcell" . "steve@sanityinc.com"))
+		(:maintainer "Steve Purcell" . "steve@sanityinc.com")
+		(:url . "https://github.com/purcell/flymake-ruby"))])

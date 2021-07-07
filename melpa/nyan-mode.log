@@ -3,10 +3,31 @@ Fetcher: github
 Source:  https://github.com/TeMPOraL/nyan-mode.git
 
 Updating /mnt/store/melpa/working/nyan-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nyan-mode/
+  to /tmp/nyan-modepcn9LP/nyan-mode-20200526.1054
+    nyan-mode.el -> nyan-mode.el
+    img => img
+    mus => mus
+Created nyan-mode-20200526.1054.tar containing:
+  nyan-mode-20200526.1054/
+  nyan-mode-20200526.1054/img/
+  nyan-mode-20200526.1054/img/nyan-frame-1.xpm
+  nyan-mode-20200526.1054/img/nyan-frame-2.xpm
+  nyan-mode-20200526.1054/img/nyan-frame-3.xpm
+  nyan-mode-20200526.1054/img/nyan-frame-4.xpm
+  nyan-mode-20200526.1054/img/nyan-frame-5.xpm
+  nyan-mode-20200526.1054/img/nyan-frame-6.xpm
+  nyan-mode-20200526.1054/img/nyan.xpm
+  nyan-mode-20200526.1054/img/outerspace.xpm
+  nyan-mode-20200526.1054/img/rainbow.xpm
+  nyan-mode-20200526.1054/mus/
+  nyan-mode-20200526.1054/mus/nyanlooped.mp3
+  nyan-mode-20200526.1054/nyan-mode-pkg.el
+  nyan-mode-20200526.1054/nyan-mode.el
+Built nyan-mode in 3.777s, finished at Wed Jul  7 09:05:08 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  472 Jul  7 09:05 packages/nyan-mode-20200526.1054.entry
+480K -rw-r--r-- 1 root root 480K Jul  7 09:05 packages/nyan-mode-20200526.1054.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:05 packages/nyan-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  536 Jul  7 09:05 packages/nyan-mode-readme.txt

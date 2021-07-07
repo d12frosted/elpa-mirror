@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/cstby/solo-jazz-emacs-theme.git
 
 Updating /mnt/store/melpa/working/solo-jazz-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built solo-jazz-theme in 4.698s, finished at Wed Jul  7 09:21:11 2021
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root  32K Jul  7 09:21 packages/solo-jazz-theme-20200909.257.el
+4.0K -rw-r--r-- 1 root root  224 Jul  7 09:21 packages/solo-jazz-theme-20200909.257.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:21 packages/solo-jazz-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  110 Jul  7 09:21 packages/solo-jazz-theme-readme.txt

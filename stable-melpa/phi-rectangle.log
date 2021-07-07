@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/zk-phi/phi-rectangle.git
 
 Updating /mnt/store/melpa/working/phi-rectangle/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: phi-rectangle :files spec is equivalent to the default.
+Built phi-rectangle in 4.228s, finished at Wed Jul  7 09:11:41 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  14K Jul  7 09:11 packages/phi-rectangle-20200911.204.el
+4.0K -rw-r--r-- 1 root root  265 Jul  7 09:11 packages/phi-rectangle-20200911.204.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:11 packages/phi-rectangle-badge.svg
+4.0K -rw-r--r-- 1 root root  727 Jul  7 09:11 packages/phi-rectangle-readme.txt

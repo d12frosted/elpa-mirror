@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/humanoid-colors/emacs-humanoid-themes.git
 
 Updating /mnt/store/melpa/working/humanoid-themes/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/humanoid-themes/
+  to /tmp/humanoid-themesyuVt4S/humanoid-themes-20210525.2259
+    humanoid-dark-theme.el -> humanoid-dark-theme.el
+    humanoid-light-theme.el -> humanoid-light-theme.el
+    humanoid-themes.el -> humanoid-themes.el
+Created humanoid-themes-20210525.2259.tar containing:
+  humanoid-themes-20210525.2259/
+  humanoid-themes-20210525.2259/humanoid-dark-theme.el
+  humanoid-themes-20210525.2259/humanoid-light-theme.el
+  humanoid-themes-20210525.2259/humanoid-themes-pkg.el
+  humanoid-themes-20210525.2259/humanoid-themes.el
+Built humanoid-themes in 3.785s, finished at Wed Jul  7 12:03:38 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  371 Jul  7 12:03 packages/humanoid-themes-20210525.2259.entry
+112K -rw-r--r-- 1 root root 110K Jul  7 12:03 packages/humanoid-themes-20210525.2259.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:03 packages/humanoid-themes-badge.svg
+4.0K -rw-r--r-- 1 root root  106 Jul  7 12:03 packages/humanoid-themes-readme.txt

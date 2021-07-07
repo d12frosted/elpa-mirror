@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/dominikh/go-mode.el.git
 
 Updating /mnt/store/melpa/working/go-guru/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built go-guru in 3.591s, finished at Wed Jul  7 11:58:09 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  19K Jul  7 11:58 packages/go-guru-20161117.1131.el
+4.0K -rw-r--r-- 1 root root  235 Jul  7 11:58 packages/go-guru-20161117.1131.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:58 packages/go-guru-badge.svg
+4.0K -rw-r--r-- 1 root root  936 Jul  7 11:58 packages/go-guru-readme.txt

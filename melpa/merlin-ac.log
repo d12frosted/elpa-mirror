@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ocaml/merlin.git
 
 Updating /mnt/store/melpa/working/merlin-ac/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built merlin-ac in 4.656s, finished at Wed Jul  7 09:01:08 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jul  7 09:01 packages/merlin-ac-20210409.1323.el
+4.0K -rw-r--r-- 1 root root  572 Jul  7 09:01 packages/merlin-ac-20210409.1323.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:01 packages/merlin-ac-badge.svg
+4.0K -rw-r--r-- 1 root root  328 Jul  7 09:01 packages/merlin-ac-readme.txt

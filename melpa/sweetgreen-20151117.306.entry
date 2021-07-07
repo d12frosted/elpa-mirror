@@ -1,0 +1,17 @@
+(sweetgreen .
+	    [(20151117 306)
+	     ((dash
+	       (2 12 1))
+	      (helm
+	       (1 5 6))
+	      (request
+	       (0 2 0))
+	      (cl-lib
+	       (0 5)))
+	     "Order Salads from sweetgreen.com" single
+	     ((:commit . "e40d2821ff941695e50a9b003a8c96d32c19bfdc")
+	      (:authors
+	       ("Diego Berrocal" . "cestdiego@gmail.com"))
+	      (:maintainer "Diego Berrocal" . "cestdiego@gmail.com")
+	      (:keywords "salad" "food" "sweetgreen" "request")
+	      (:url . "https://www.github.com/CestDiego/sweetgreen.el"))])

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/andre-richter/emacs-lush-theme.git
 
 Updating /mnt/store/melpa/working/lush-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built lush-theme in 3.730s, finished at Wed Jul  7 08:59:31 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.6K Jul  7 08:59 packages/lush-theme-20180816.2200.el
+4.0K -rw-r--r-- 1 root root  434 Jul  7 08:59 packages/lush-theme-20180816.2200.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:59 packages/lush-theme-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul  7 08:59 packages/lush-theme-readme.txt

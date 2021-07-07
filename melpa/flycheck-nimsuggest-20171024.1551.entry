@@ -1,0 +1,14 @@
+(flycheck-nimsuggest .
+		     [(20171024 1551)
+		      ((flycheck
+			(0 23))
+		       (nim-mode
+			(0 4 1))
+		       (emacs
+			(24)))
+		      "flycheck backend for Nim using nimsuggest" single
+		      ((:commit . "8b1c69e9aa924368bc4dadd4cde818ff158cd3f0")
+		       (:authors
+			("Yuta Yamada <cokesboy\"at\"gmail.com>"))
+		       (:maintainer "Yuta Yamada <cokesboy\"at\"gmail.com>")
+		       (:url . "https://github.com/yuutayamada/flycheck-nimsuggest"))])

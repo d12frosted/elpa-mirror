@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/mhayashi1120/Emacs-image-diredx.git
 
 Updating /mnt/store/melpa/working/image-dired+/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built image-dired+ in 3.991s, finished at Wed Jul  7 12:04:26 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  20K Jul  7 12:04 packages/image-dired+-20150430.544.el
+4.0K -rw-r--r-- 1 root root  404 Jul  7 12:04 packages/image-dired+-20150430.544.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:04 packages/image-dired+-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul  7 12:04 packages/image-dired+-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Ailrun/magit-lfs.git
 
 Updating /mnt/store/melpa/working/magit-lfs/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built magit-lfs in 3.844s, finished at Wed Jul  7 08:59:55 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  16K Jul  7 08:59 packages/magit-lfs-20190831.118.el
+4.0K -rw-r--r-- 1 root root  462 Jul  7 08:59 packages/magit-lfs-20190831.118.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:59 packages/magit-lfs-badge.svg
+4.0K -rw-r--r-- 1 root root  626 Jul  7 08:59 packages/magit-lfs-readme.txt

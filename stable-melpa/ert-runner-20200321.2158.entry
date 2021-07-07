@@ -1,0 +1,21 @@
+(ert-runner .
+	    [(20200321 2158)
+	     ((s
+	       (1 6 1))
+	      (dash
+	       (1 8 0))
+	      (f
+	       (0 10 0))
+	      (commander
+	       (0 2 0))
+	      (ansi
+	       (0 1 0))
+	      (shut-up
+	       (0 1 0)))
+	     "Opinionated Ert testing workflow" tar
+	     ((:commit . "1829f05c46b0baaae160d900f89c8881f4fcdbcc")
+	      (:authors
+	       ("Johan Andersson" . "johan.rejeep@gmail.com"))
+	      (:maintainer "Johan Andersson" . "johan.rejeep@gmail.com")
+	      (:keywords "test")
+	      (:url . "http://github.com/rejeep/ert-runner.el"))])

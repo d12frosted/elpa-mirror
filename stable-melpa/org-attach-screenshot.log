@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/dfeich/org-screenshot.git
 
 Updating /mnt/store/melpa/working/org-attach-screenshot/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built org-attach-screenshot in 3.911s, finished at Wed Jul  7 09:06:34 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.6K Jul  7 09:06 packages/org-attach-screenshot-20210221.1336.el
+4.0K -rw-r--r-- 1 root root  427 Jul  7 09:06 packages/org-attach-screenshot-20210221.1336.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/org-attach-screenshot-badge.svg
+4.0K -rw-r--r-- 1 root root  850 Jul  7 09:06 packages/org-attach-screenshot-readme.txt

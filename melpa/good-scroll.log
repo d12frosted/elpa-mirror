@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/io12/good-scroll.el.git
 
 Updating /mnt/store/melpa/working/good-scroll/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/good-scroll/
+  to /tmp/good-scrollrMru3Z/good-scroll-20210612.503
+    good-scroll-bezier.el -> good-scroll-bezier.el
+    good-scroll-linear.el -> good-scroll-linear.el
+    good-scroll.el -> good-scroll.el
+Created good-scroll-20210612.503.tar containing:
+  good-scroll-20210612.503/
+  good-scroll-20210612.503/good-scroll-bezier.el
+  good-scroll-20210612.503/good-scroll-linear.el
+  good-scroll-20210612.503/good-scroll-pkg.el
+  good-scroll-20210612.503/good-scroll.el
+Built good-scroll in 3.528s, finished at Wed Jul  7 11:58:28 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  353 Jul  7 11:58 packages/good-scroll-20210612.503.entry
+ 56K -rw-r--r-- 1 root root  50K Jul  7 11:58 packages/good-scroll-20210612.503.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:58 packages/good-scroll-badge.svg
+4.0K -rw-r--r-- 1 root root  131 Jul  7 11:58 packages/good-scroll-readme.txt

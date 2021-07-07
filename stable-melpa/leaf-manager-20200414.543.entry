@@ -1,0 +1,17 @@
+(leaf-manager .
+	      [(20200414 543)
+	       ((emacs
+		 (26 1))
+		(leaf
+		 (4 1))
+		(leaf-convert
+		 (1 0))
+		(ppp
+		 (2 1)))
+	       "Configuration manager for leaf based init.el" single
+	       ((:commit . "f2ae35e02ebe218daa3076a0e9d83b4feadfbb0a")
+		(:authors
+		 ("Naoya Yamashita" . "conao3@gmail.com"))
+		(:maintainer "Naoya Yamashita" . "conao3@gmail.com")
+		(:keywords "convenience" "leaf")
+		(:url . "https://github.com/conao3/leaf-manager.el"))])

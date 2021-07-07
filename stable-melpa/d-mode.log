@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Emacs-D-Mode-Maintainers/Emacs-D-Mode.git
 
 Updating /mnt/store/melpa/working/d-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built d-mode in 4.608s, finished at Wed Jul  7 11:42:33 2021
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root  31K Jul  7 11:42 packages/d-mode-20191009.903.el
+4.0K -rw-r--r-- 1 root root  326 Jul  7 11:42 packages/d-mode-20191009.903.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:42 packages/d-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  342 Jul  7 11:42 packages/d-mode-readme.txt

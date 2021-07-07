@@ -3,10 +3,42 @@ Fetcher: github
 Source:  https://github.com/jcs-elpa/organize-imports-java.git
 
 Updating /mnt/store/melpa/working/organize-imports-java/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/organize-imports-java/
+  to /tmp/organize-imports-javaSoTNN6/organize-imports-java-20210113.1838
+    organize-imports-java.el -> organize-imports-java.el
+    sdk => sdk
+    default => default
+Created organize-imports-java-20210113.1838.tar containing:
+  organize-imports-java-20210113.1838/
+  organize-imports-java-20210113.1838/default/
+  organize-imports-java-20210113.1838/default/oij.config
+  organize-imports-java-20210113.1838/organize-imports-java-pkg.el
+  organize-imports-java-20210113.1838/organize-imports-java.el
+  organize-imports-java-20210113.1838/sdk/
+  organize-imports-java-20210113.1838/sdk/jre/
+  organize-imports-java-20210113.1838/sdk/jre/lib/
+  organize-imports-java-20210113.1838/sdk/jre/lib/charsets.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/ext/
+  organize-imports-java-20210113.1838/sdk/jre/lib/ext/cldrdata.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/ext/dnsns.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/ext/jaccess.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/ext/jfxrt.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/ext/localedata.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/ext/nashorn.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/ext/sunec.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/ext/sunjce_provider.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/ext/sunmscapi.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/ext/sunpkcs11.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/ext/zipfs.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/jfr.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/jsse.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/resources.jar
+  organize-imports-java-20210113.1838/sdk/jre/lib/rt.jar
+  organize-imports-java-20210113.1838/sdk/version.txt
+Built organize-imports-java in 14.602s, finished at Wed Jul  7 09:09:04 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  469 Jul  7 09:09 packages/organize-imports-java-20210113.1838.entry
+ 88M -rw-r--r-- 1 root root  88M Jul  7 09:09 packages/organize-imports-java-20210113.1838.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:09 packages/organize-imports-java-badge.svg
+4.0K -rw-r--r-- 1 root root  185 Jul  7 09:09 packages/organize-imports-java-readme.txt

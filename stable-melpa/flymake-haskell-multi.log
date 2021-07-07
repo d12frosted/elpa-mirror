@@ -3,10 +3,20 @@ Fetcher: github
 Source:  https://github.com/purcell/flymake-haskell-multi.git
 
 Updating /mnt/store/melpa/working/flymake-haskell-multi/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flymake-haskell-multi/
+  to /tmp/flymake-haskell-multiH5mFT0/flymake-haskell-multi-20130415.942
+    flymake-haskell-multi-pkg.el -> flymake-haskell-multi-pkg.el
+    flymake-haskell-multi.el -> flymake-haskell-multi.el
+    haskell_multi -> haskell_multi
+Created flymake-haskell-multi-20130415.942.tar containing:
+  flymake-haskell-multi-20130415.942/
+  flymake-haskell-multi-20130415.942/flymake-haskell-multi-pkg.el
+  flymake-haskell-multi-20130415.942/flymake-haskell-multi.el
+  flymake-haskell-multi-20130415.942/haskell_multi
+Built flymake-haskell-multi in 4.017s, finished at Wed Jul  7 11:54:43 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  387 Jul  7 11:54 packages/flymake-haskell-multi-20130415.942.entry
+ 12K -rw-r--r-- 1 root root  10K Jul  7 11:54 packages/flymake-haskell-multi-20130415.942.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:54 packages/flymake-haskell-multi-badge.svg
+4.0K -rw-r--r-- 1 root root  167 Jul  7 11:54 packages/flymake-haskell-multi-readme.txt

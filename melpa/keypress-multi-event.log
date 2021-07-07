@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Boruch-Baum/emacs-keypress-multi-event.git
 
 Updating /mnt/store/melpa/working/keypress-multi-event/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built keypress-multi-event in 3.930s, finished at Wed Jul  7 08:56:18 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.2K Jul  7 08:56 packages/keypress-multi-event-20190109.530.el
+4.0K -rw-r--r-- 1 root root  456 Jul  7 08:56 packages/keypress-multi-event-20190109.530.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:56 packages/keypress-multi-event-badge.svg
+4.0K -rw-r--r-- 1 root root  942 Jul  7 08:56 packages/keypress-multi-event-readme.txt

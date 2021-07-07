@@ -6,7 +6,6 @@ The following applications are supportted:
 - Mail
 - Terminal
 - Skim
-- qutebrowser
 
 The following link types are supported:
 - plain:    https://www.wikipedia.org/

@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/nlamirault/phpunit.el.git
 
 Updating /mnt/store/melpa/working/phpunit/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/phpunit/
+  to /tmp/phpunitzob8iB/phpunit-20180812.1324
+    phpunit-mode.el -> phpunit-mode.el
+    phpunit.el -> phpunit.el
+Created phpunit-20180812.1324.tar containing:
+  phpunit-20180812.1324/
+  phpunit-20180812.1324/phpunit-mode.el
+  phpunit-20180812.1324/phpunit-pkg.el
+  phpunit-20180812.1324/phpunit.el
+Built phpunit in 3.622s, finished at Wed Jul  7 09:11:54 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  553 Jul  7 09:11 packages/phpunit-20180812.1324.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:11 packages/phpunit-20180812.1324.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:11 packages/phpunit-badge.svg
+4.0K -rw-r--r-- 1 root root  424 Jul  7 09:11 packages/phpunit-readme.txt

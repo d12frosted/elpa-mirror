@@ -1,0 +1,20 @@
+(traad .
+       [(20180507 1511)
+	((dash
+	  (2 13 0))
+	 (deferred
+	   (0 3 2))
+	 (popup
+	  (0 5 0))
+	 (request
+	  (0 2 0))
+	 (request-deferred
+	  (0 2 0))
+	 (virtualenvwrapper
+	  (20151123)))
+	"emacs interface to the traad refactoring server." single
+	((:commit . "1f05cb4e5e96a90d2fb2bbc93093084327c40cf2")
+	 (:authors
+	  ("Austin Bingham" . "austin.bingham@gmail.com"))
+	 (:maintainer "Austin Bingham" . "austin.bingham@gmail.com")
+	 (:url . "https://github.com/abingham/traad"))])

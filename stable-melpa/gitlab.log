@@ -3,10 +3,63 @@ Fetcher: github
 Source:  https://github.com/nlamirault/emacs-gitlab.git
 
 Updating /mnt/store/melpa/working/gitlab/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gitlab/
+  to /tmp/gitlabaccILa/gitlab-20160519.1003
+    gitlab-api.el -> gitlab-api.el
+    gitlab-groups.el -> gitlab-groups.el
+    gitlab-http.el -> gitlab-http.el
+    gitlab-issues.el -> gitlab-issues.el
+    gitlab-milestones.el -> gitlab-milestones.el
+    gitlab-mode.el -> gitlab-mode.el
+    gitlab-notes.el -> gitlab-notes.el
+    gitlab-projects.el -> gitlab-projects.el
+    gitlab-session.el -> gitlab-session.el
+    gitlab-ui.el -> gitlab-ui.el
+    gitlab-users.el -> gitlab-users.el
+    gitlab-utils.el -> gitlab-utils.el
+    gitlab-version.el -> gitlab-version.el
+    gitlab.el -> gitlab.el
+Created gitlab-20160519.1003.tar containing:
+  gitlab-20160519.1003/
+  gitlab-20160519.1003/gitlab-api.el
+  gitlab-20160519.1003/gitlab-groups.el
+  gitlab-20160519.1003/gitlab-http.el
+  gitlab-20160519.1003/gitlab-issues.el
+  gitlab-20160519.1003/gitlab-milestones.el
+  gitlab-20160519.1003/gitlab-mode.el
+  gitlab-20160519.1003/gitlab-notes.el
+  gitlab-20160519.1003/gitlab-pkg.el
+  gitlab-20160519.1003/gitlab-projects.el
+  gitlab-20160519.1003/gitlab-session.el
+  gitlab-20160519.1003/gitlab-ui.el
+  gitlab-20160519.1003/gitlab-users.el
+  gitlab-20160519.1003/gitlab-utils.el
+  gitlab-20160519.1003/gitlab-version.el
+  gitlab-20160519.1003/gitlab.el
+Built gitlab in 3.585s, finished at Wed Jul  7 11:57:35 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  436 Jul  7 11:57 packages/gitlab-20160519.1003.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 11:57 packages/gitlab-20160519.1003.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:57 packages/gitlab-badge.svg
+ 16K -rw-r--r-- 1 root root  15K Jul  7 08:45 packages/gitlab-ci-mode-20190824.1528.el
+4.0K -rw-r--r-- 1 root root  361 Jul  7 08:45 packages/gitlab-ci-mode-20190824.1528.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:45 packages/gitlab-ci-mode-badge.svg
+8.0K -rw-r--r-- 1 root root 4.9K Jul  7 08:45 packages/gitlab-ci-mode-flycheck-20180604.2204.el
+4.0K -rw-r--r-- 1 root root  455 Jul  7 08:45 packages/gitlab-ci-mode-flycheck-20180604.2204.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:45 packages/gitlab-ci-mode-flycheck-badge.svg
+4.0K -rw-r--r-- 1 root root  193 Jul  7 08:45 packages/gitlab-ci-mode-flycheck-readme.txt
+4.0K -rw-r--r-- 1 root root  178 Jul  7 11:57 packages/gitlab-ci-mode-flycheck.log
+4.0K -rw-r--r-- 1 root root  431 Jul  7 08:45 packages/gitlab-ci-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  151 Jul  7 11:57 packages/gitlab-ci-mode.log
+8.0K -rw-r--r-- 1 root root 5.4K Jul  7 08:45 packages/gitlab-pipeline-20210430.151.el
+4.0K -rw-r--r-- 1 root root  410 Jul  7 08:45 packages/gitlab-pipeline-20210430.151.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:45 packages/gitlab-pipeline-badge.svg
+4.0K -rw-r--r-- 1 root root  222 Jul  7 08:45 packages/gitlab-pipeline-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jul  7 11:57 packages/gitlab-pipeline.log
+4.0K -rw-r--r-- 1 root root  225 Jul  7 11:57 packages/gitlab-readme.txt
+8.0K -rw-r--r-- 1 root root 4.7K Jul  7 08:45 packages/gitlab-snip-helm-20200427.2014.el
+4.0K -rw-r--r-- 1 root root  455 Jul  7 08:45 packages/gitlab-snip-helm-20200427.2014.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:45 packages/gitlab-snip-helm-badge.svg
+4.0K -rw-r--r-- 1 root root   73 Jul  7 08:45 packages/gitlab-snip-helm-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jul  7 11:57 packages/gitlab-snip-helm.log

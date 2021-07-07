@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/cute-jumper/embrace.el.git
 
 Updating /mnt/store/melpa/working/embrace/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built embrace in 4.415s, finished at Wed Jul  7 11:48:21 2021
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root  34K Jul  7 11:48 packages/embrace-20171031.1833.el
+4.0K -rw-r--r-- 1 root root  357 Jul  7 11:48 packages/embrace-20171031.1833.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:48 packages/embrace-badge.svg
+ 12K -rw-r--r-- 1 root root  11K Jul  7 11:48 packages/embrace-readme.txt

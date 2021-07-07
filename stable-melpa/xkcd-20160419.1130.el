@@ -4,7 +4,7 @@
 
 ;; Url: https://github.com/vibhavp/emacs-xkcd
 ;; Package-Version: 20160419.1130
-;; Package-Commit: 66e928706fd660cfdab204c98a347b49c4267bdf
+;; Package-Commit: 2c538d41a9728939cc5e8292faa78ed50997877d
 ;; Author: Vibhav Pant <vibhavp@gmail.com>
 ;; Version: 1.0
 ;; Package-Requires: ((json "1.3"))

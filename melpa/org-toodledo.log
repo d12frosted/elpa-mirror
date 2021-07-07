@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/myuhe/org-toodledo.git
 
 Updating /mnt/store/melpa/working/org-toodledo/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-toodledo/
+  to /tmp/org-toodledoEn2veY/org-toodledo-20110924.1927
+    http-post-simple.el -> http-post-simple.el
+    org-toodledo.el -> org-toodledo.el
+    w3mexcerpt.el -> w3mexcerpt.el
+Created org-toodledo-20110924.1927.tar containing:
+  org-toodledo-20110924.1927/
+  org-toodledo-20110924.1927/http-post-simple.el
+  org-toodledo-20110924.1927/org-toodledo-pkg.el
+  org-toodledo-20110924.1927/org-toodledo.el
+  org-toodledo-20110924.1927/w3mexcerpt.el
+Built org-toodledo in 4.061s, finished at Wed Jul  7 09:08:23 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  151 Jul  7 09:08 packages/org-toodledo-20110924.1927.entry
+ 92K -rw-r--r-- 1 root root  90K Jul  7 09:08 packages/org-toodledo-20110924.1927.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:08 packages/org-toodledo-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul  6 16:59 packages/org-toodledo-readme.txt

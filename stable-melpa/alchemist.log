@@ -3,10 +3,110 @@ Fetcher: github
 Source:  https://github.com/tonini/alchemist.el.git
 
 Updating /mnt/store/melpa/working/alchemist/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/alchemist/
+  to /tmp/alchemistKvCkhq/alchemist-20170330.753
+    alchemist-company.el -> alchemist-company.el
+    alchemist-compile.el -> alchemist-compile.el
+    alchemist-complete.el -> alchemist-complete.el
+    alchemist-eval.el -> alchemist-eval.el
+    alchemist-execute.el -> alchemist-execute.el
+    alchemist-file.el -> alchemist-file.el
+    alchemist-goto.el -> alchemist-goto.el
+    alchemist-help.el -> alchemist-help.el
+    alchemist-hex.el -> alchemist-hex.el
+    alchemist-hooks.el -> alchemist-hooks.el
+    alchemist-iex.el -> alchemist-iex.el
+    alchemist-info.el -> alchemist-info.el
+    alchemist-interact.el -> alchemist-interact.el
+    alchemist-key.el -> alchemist-key.el
+    alchemist-macroexpand.el -> alchemist-macroexpand.el
+    alchemist-message.el -> alchemist-message.el
+    alchemist-mix.el -> alchemist-mix.el
+    alchemist-phoenix.el -> alchemist-phoenix.el
+    alchemist-project.el -> alchemist-project.el
+    alchemist-refcard.el -> alchemist-refcard.el
+    alchemist-report.el -> alchemist-report.el
+    alchemist-scope.el -> alchemist-scope.el
+    alchemist-server.el -> alchemist-server.el
+    alchemist-test-mode.el -> alchemist-test-mode.el
+    alchemist-utils.el -> alchemist-utils.el
+    alchemist.el -> alchemist.el
+    alchemist-server => alchemist-server
+Created alchemist-20170330.753.tar containing:
+  alchemist-20170330.753/
+  alchemist-20170330.753/alchemist-company.el
+  alchemist-20170330.753/alchemist-compile.el
+  alchemist-20170330.753/alchemist-complete.el
+  alchemist-20170330.753/alchemist-eval.el
+  alchemist-20170330.753/alchemist-execute.el
+  alchemist-20170330.753/alchemist-file.el
+  alchemist-20170330.753/alchemist-goto.el
+  alchemist-20170330.753/alchemist-help.el
+  alchemist-20170330.753/alchemist-hex.el
+  alchemist-20170330.753/alchemist-hooks.el
+  alchemist-20170330.753/alchemist-iex.el
+  alchemist-20170330.753/alchemist-info.el
+  alchemist-20170330.753/alchemist-interact.el
+  alchemist-20170330.753/alchemist-key.el
+  alchemist-20170330.753/alchemist-macroexpand.el
+  alchemist-20170330.753/alchemist-message.el
+  alchemist-20170330.753/alchemist-mix.el
+  alchemist-20170330.753/alchemist-phoenix.el
+  alchemist-20170330.753/alchemist-pkg.el
+  alchemist-20170330.753/alchemist-project.el
+  alchemist-20170330.753/alchemist-refcard.el
+  alchemist-20170330.753/alchemist-report.el
+  alchemist-20170330.753/alchemist-scope.el
+  alchemist-20170330.753/alchemist-server.el
+  alchemist-20170330.753/alchemist-server/
+  alchemist-20170330.753/alchemist-server/.gitignore
+  alchemist-20170330.753/alchemist-server/.travis.yml
+  alchemist-20170330.753/alchemist-server/Makefile
+  alchemist-20170330.753/alchemist-server/README.md
+  alchemist-20170330.753/alchemist-server/lib/
+  alchemist-20170330.753/alchemist-server/lib/api/
+  alchemist-20170330.753/alchemist-server/lib/api/comp.exs
+  alchemist-20170330.753/alchemist-server/lib/api/defl.exs
+  alchemist-20170330.753/alchemist-server/lib/api/docl.exs
+  alchemist-20170330.753/alchemist-server/lib/api/eval.exs
+  alchemist-20170330.753/alchemist-server/lib/api/info.exs
+  alchemist-20170330.753/alchemist-server/lib/api/ping.exs
+  alchemist-20170330.753/alchemist-server/lib/api/version.exs
+  alchemist-20170330.753/alchemist-server/lib/helpers/
+  alchemist-20170330.753/alchemist-server/lib/helpers/capture_io.exs
+  alchemist-20170330.753/alchemist-server/lib/helpers/complete.exs
+  alchemist-20170330.753/alchemist-server/lib/helpers/module_info.exs
+  alchemist-20170330.753/alchemist-server/lib/helpers/process_commands.exs
+  alchemist-20170330.753/alchemist-server/lib/helpers/response.exs
+  alchemist-20170330.753/alchemist-server/lib/server.exs
+  alchemist-20170330.753/alchemist-server/lib/server/
+  alchemist-20170330.753/alchemist-server/lib/server/io.exs
+  alchemist-20170330.753/alchemist-server/lib/server/socket.exs
+  alchemist-20170330.753/alchemist-server/run.exs
+  alchemist-20170330.753/alchemist-server/test/
+  alchemist-20170330.753/alchemist-server/test/api/
+  alchemist-20170330.753/alchemist-server/test/api/comp_test.exs
+  alchemist-20170330.753/alchemist-server/test/api/defl_test.exs
+  alchemist-20170330.753/alchemist-server/test/api/docl_test.exs
+  alchemist-20170330.753/alchemist-server/test/api/ping_test.exs
+  alchemist-20170330.753/alchemist-server/test/api_test.exs
+  alchemist-20170330.753/alchemist-server/test/fixtures/
+  alchemist-20170330.753/alchemist-server/test/fixtures/.gitkeep
+  alchemist-20170330.753/alchemist-server/test/helpers/
+  alchemist-20170330.753/alchemist-server/test/helpers/complete_test.exs
+  alchemist-20170330.753/alchemist-server/test/helpers/module_info_test.exs
+  alchemist-20170330.753/alchemist-server/test/helpers/process_commands_test.exs
+  alchemist-20170330.753/alchemist-server/test/server/
+  alchemist-20170330.753/alchemist-server/test/server/socket_test.exs
+  alchemist-20170330.753/alchemist-server/test/server_test.exs
+  alchemist-20170330.753/alchemist-server/test/test_helper.exs
+  alchemist-20170330.753/alchemist-test-mode.el
+  alchemist-20170330.753/alchemist-utils.el
+  alchemist-20170330.753/alchemist.el
+Built alchemist in 4.714s, finished at Wed Jul  7 11:32:40 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  566 Jul  7 11:32 packages/alchemist-20170330.753.entry
+292K -rw-r--r-- 1 root root 290K Jul  7 11:32 packages/alchemist-20170330.753.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:32 packages/alchemist-badge.svg
+4.0K -rw-r--r-- 1 root root  449 Jul  7 11:32 packages/alchemist-readme.txt

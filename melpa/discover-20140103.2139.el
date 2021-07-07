@@ -5,7 +5,7 @@
 ;; Author: Mickey Petersen <mickey@fyeah.org>
 ;; Keywords:
 ;; Package-Version: 20140103.2139
-;; Package-Commit: 7b0044bbb3b3bd5d811fdfb0f5ac6ec8de1239df
+;; Package-Commit: bbfda2b4e429985a8fa7971d264c942767cfa816
 ;; Version: 0.2
 ;; Package-Requires: ((makey "0.3"))
 

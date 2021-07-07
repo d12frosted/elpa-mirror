@@ -1,0 +1,13 @@
+(inflections .
+	     [(20170908 849)
+	      ((cl-lib
+		(0 5))
+	       (emacs
+		(24)))
+	      "convert english words between singular and plural" single
+	      ((:commit . "40a7ffdf734ffe7d1968909663146255d7ba69c8")
+	       (:authors
+		("Dmitry Galinsky, Howard Yeh"))
+	       (:maintainer "Dmitry Galinsky, Howard Yeh")
+	       (:keywords "languages" "tools" "wp")
+	       (:url . "https://github.com/eschulte/jump.el"))])

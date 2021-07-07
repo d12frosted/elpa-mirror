@@ -3,10 +3,20 @@ Fetcher: github
 Source:  https://github.com/cl-docker-images/slime-docker.git
 
 Updating /mnt/store/melpa/working/slime-docker/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/slime-docker/
+  to /tmp/slime-docker0MEGlM/slime-docker-20210426.1422
+    slime-docker.el -> slime-docker.el
+    bin => bin
+Created slime-docker-20210426.1422.tar containing:
+  slime-docker-20210426.1422/
+  slime-docker-20210426.1422/bin/
+  slime-docker-20210426.1422/bin/docker-run-ssh-agent-helper
+  slime-docker-20210426.1422/slime-docker-pkg.el
+  slime-docker-20210426.1422/slime-docker.el
+Built slime-docker in 7.839s, finished at Wed Jul  7 09:19:55 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  351 Jul  7 09:19 packages/slime-docker-20210426.1422.entry
+ 44K -rw-r--r-- 1 root root  40K Jul  7 09:19 packages/slime-docker-20210426.1422.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:19 packages/slime-docker-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul  7 09:19 packages/slime-docker-readme.txt

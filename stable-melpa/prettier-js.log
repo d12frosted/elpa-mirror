@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/prettier/prettier-emacs.git
 
 Updating /mnt/store/melpa/working/prettier-js/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built prettier-js in 3.840s, finished at Wed Jul  7 09:13:18 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.7K Jul  7 09:13 packages/prettier-js-20180109.726.el
+4.0K -rw-r--r-- 1 root root  383 Jul  7 09:13 packages/prettier-js-20180109.726.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:13 packages/prettier-js-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Jul  7 09:13 packages/prettier-js-readme.txt

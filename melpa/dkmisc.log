@@ -3,10 +3,18 @@ Fetcher: github
 Source:  https://github.com/davidkeegan/dkmisc.git
 
 Updating /mnt/store/melpa/working/dkmisc/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dkmisc/
+  to /tmp/dkmiscyPbBL2/dkmisc-20131110.1115
+    dkmisc-pkg.el -> dkmisc-pkg.el
+    dkmisc.el -> dkmisc.el
+Created dkmisc-20131110.1115.tar containing:
+  dkmisc-20131110.1115/
+  dkmisc-20131110.1115/dkmisc-pkg.el
+  dkmisc-20131110.1115/dkmisc.el
+Built dkmisc in 8.056s, finished at Wed Jul  7 11:45:05 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  375 Jul  7 11:45 packages/dkmisc-20131110.1115.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:45 packages/dkmisc-20131110.1115.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:45 packages/dkmisc-badge.svg
+4.0K -rw-r--r-- 1 root root   93 Jul  7 11:45 packages/dkmisc-readme.txt

@@ -3,10 +3,22 @@ Fetcher: github
 Source:  https://github.com/cask/servant.git
 
 Updating /mnt/store/melpa/working/servant/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/servant/
+  to /tmp/servantKIyFDI/servant-20140216.1219
+    servant-cli.el -> servant-cli.el
+    servant.el -> servant.el
+    bin => bin
+Created servant-20140216.1219.tar containing:
+  servant-20140216.1219/
+  servant-20140216.1219/bin/
+  servant-20140216.1219/bin/servant
+  servant-20140216.1219/servant-cli.el
+  servant-20140216.1219/servant-pkg.el
+  servant-20140216.1219/servant.el
+Built servant in 3.475s, finished at Wed Jul  7 09:18:45 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  598 Jul  7 09:18 packages/servant-20140216.1219.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:18 packages/servant-20140216.1219.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:18 packages/servant-badge.svg
+4.0K -rw-r--r-- 1 root root  115 Jul  7 09:18 packages/servant-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/nashamri/academic-phrases.git
 
 Updating /mnt/store/melpa/working/academic-phrases/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built academic-phrases in 3.892s, finished at Wed Jul  7 11:32:09 2021
+ ✓ Success:
+148K -rw-r--r-- 1 root root 148K Jul  7 11:32 packages/academic-phrases-20180723.1021.el
+4.0K -rw-r--r-- 1 root root  549 Jul  7 11:32 packages/academic-phrases-20180723.1021.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:32 packages/academic-phrases-badge.svg
+4.0K -rw-r--r-- 1 root root  808 Jul  7 11:32 packages/academic-phrases-readme.txt

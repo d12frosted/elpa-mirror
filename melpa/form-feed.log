@@ -3,10 +3,9 @@ Fetcher: git
 Source:  https://depp.brause.cc/form-feed.git
 
 Updating /mnt/store/melpa/working/form-feed/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built form-feed in 4.511s, finished at Wed Jul  7 11:55:29 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Jul  7 11:55 packages/form-feed-20201116.1108.el
+4.0K -rw-r--r-- 1 root root  364 Jul  7 11:55 packages/form-feed-20201116.1108.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:55 packages/form-feed-badge.svg
+4.0K -rw-r--r-- 1 root root  415 Jul  7 11:55 packages/form-feed-readme.txt

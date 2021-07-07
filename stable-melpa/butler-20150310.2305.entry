@@ -1,0 +1,15 @@
+(butler .
+	[(20150310 2305)
+	 ((deferred
+	    (3 2))
+	  (json
+	   (1 2))
+	  (emacs
+	   (24)))
+	 "Emacs client for Jenkins" tar
+	 ((:commit . "0e91e0f01ac9c09422f076a096ee567ee138e7a4")
+	  (:authors
+	   ("Ashton Kemerling" . "ashtonkemerling@gmail.com"))
+	  (:maintainer "Ashton Kemerling" . "ashtonkemerling@gmail.com")
+	  (:keywords "jenkins" "hudson" "ci")
+	  (:url . "http://www.github.com/AshtonKem/Butler.git"))])

@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/AdamNiederer/0xc.git
 
 Updating /mnt/store/melpa/working/0xc/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/0xc/
+  to /tmp/0xc5JAGFB/0xc-20201025.2105
+    0xc-live.el -> 0xc-live.el
+    0xc.el -> 0xc.el
+Created 0xc-20201025.2105.tar containing:
+  0xc-20201025.2105/
+  0xc-20201025.2105/0xc-live.el
+  0xc-20201025.2105/0xc-pkg.el
+  0xc-20201025.2105/0xc.el
+Built 0xc in 3.640s, finished at Wed Jul  7 11:31:32 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  399 Jul  7 11:31 packages/0xc-20201025.2105.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 11:31 packages/0xc-20201025.2105.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:31 packages/0xc-badge.svg
+4.0K -rw-r--r-- 1 root root  266 Jul  7 11:31 packages/0xc-readme.txt

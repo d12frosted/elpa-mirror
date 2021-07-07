@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/itome/smart-backspace.git
 
 Updating /mnt/store/melpa/working/smart-backspace/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built smart-backspace in 8.871s, finished at Wed Jul  7 09:20:25 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.1K Jul  7 09:20 packages/smart-backspace-20171014.526.el
+4.0K -rw-r--r-- 1 root root  335 Jul  7 09:20 packages/smart-backspace-20171014.526.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:20 packages/smart-backspace-badge.svg
+4.0K -rw-r--r-- 1 root root  736 Jul  7 09:20 packages/smart-backspace-readme.txt

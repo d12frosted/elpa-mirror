@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/dired-k.git
 
 Updating /mnt/store/melpa/working/dired-k/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dired-k/
+  to /tmp/dired-kD1KGZf/dired-k-20161116.916
+    dired-k.el -> dired-k.el
+    direx-k.el -> direx-k.el
+Created dired-k-20161116.916.tar containing:
+  dired-k-20161116.916/
+  dired-k-20161116.916/dired-k-pkg.el
+  dired-k-20161116.916/dired-k.el
+  dired-k-20161116.916/direx-k.el
+Built dired-k in 7.195s, finished at Wed Jul  7 11:44:08 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  359 Jul  7 11:44 packages/dired-k-20161116.916.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 11:44 packages/dired-k-20161116.916.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:44 packages/dired-k-badge.svg
+4.0K -rw-r--r-- 1 root root  166 Jul  7 11:44 packages/dired-k-readme.txt

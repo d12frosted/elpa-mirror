@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/harrybournis/org-fancy-priorities.git
 
 Updating /mnt/store/melpa/working/org-fancy-priorities/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built org-fancy-priorities in 5.650s, finished at Wed Jul  7 09:07:06 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jul  7 09:07 packages/org-fancy-priorities-20210427.900.el
+4.0K -rw-r--r-- 1 root root  417 Jul  7 09:07 packages/org-fancy-priorities-20210427.900.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:07 packages/org-fancy-priorities-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:07 packages/org-fancy-priorities-readme.txt

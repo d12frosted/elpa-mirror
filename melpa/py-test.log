@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Bogdanp/py-test.el.git
 
 Updating /mnt/store/melpa/working/py-test/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built py-test in 8.239s, finished at Wed Jul  7 09:14:28 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Jul  7 09:14 packages/py-test-20151117.622.el
+4.0K -rw-r--r-- 1 root root  433 Jul  7 09:14 packages/py-test-20151117.622.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:14 packages/py-test-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Jul  7 09:14 packages/py-test-readme.txt

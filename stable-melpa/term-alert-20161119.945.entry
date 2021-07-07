@@ -1,0 +1,17 @@
+(term-alert .
+	    [(20161119 945)
+	     ((emacs
+	       (24 0))
+	      (term-cmd
+	       (1 1))
+	      (alert
+	       (1 1))
+	      (f
+	       (0 18 2)))
+	     "Notifications when commands complete in term.el." tar
+	     ((:commit . "47af9e6fe483ef0d393098c145f499362a33292a")
+	      (:authors
+	       ("Callum J. Cameron" . "cjcameron7@gmail.com"))
+	      (:maintainer "Callum J. Cameron" . "cjcameron7@gmail.com")
+	      (:keywords "notifications" "processes")
+	      (:url . "https://github.com/CallumCameron/term-alert"))])

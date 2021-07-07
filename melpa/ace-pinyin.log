@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/cute-jumper/ace-pinyin.git
 
 Updating /mnt/store/melpa/working/ace-pinyin/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ace-pinyin in 4.061s, finished at Wed Jul  7 11:32:16 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  20K Jul  7 11:32 packages/ace-pinyin-20160506.2213.el
+4.0K -rw-r--r-- 1 root root  489 Jul  7 11:32 packages/ace-pinyin-20160506.2213.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:32 packages/ace-pinyin-badge.svg
+8.0K -rw-r--r-- 1 root root 7.1K Jul  7 11:32 packages/ace-pinyin-readme.txt

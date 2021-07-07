@@ -1,0 +1,19 @@
+(back-button .
+	     [(20131024 1415)
+	      ((nav-flash
+		(1 0 0))
+	       (smartrep
+		(0 0 3))
+	       (ucs-utils
+		(0 7 2))
+	       (persistent-soft
+		(0 8 8))
+	       (pcache
+		(0 2 3)))
+	      "Visual navigation through mark rings" single
+	      ((:commit . "c7b50a3e087a8dc5588d7292379cd387a1afff87")
+	       (:authors
+		("Roland Walker" . "walker@pobox.com"))
+	       (:maintainer "Roland Walker" . "walker@pobox.com")
+	       (:keywords "convenience" "navigation" "interface")
+	       (:url . "http://github.com/rolandwalker/back-button"))])

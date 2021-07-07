@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/tarao/term-plus-ki-el.git
 
 Updating /mnt/store/melpa/working/term+key-intercept/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built term+key-intercept in 4.320s, finished at Wed Jul  7 09:23:49 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jul  7 09:23 packages/term+key-intercept-20140211.750.el
+4.0K -rw-r--r-- 1 root root  450 Jul  7 09:23 packages/term+key-intercept-20140211.750.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:23 packages/term+key-intercept-badge.svg

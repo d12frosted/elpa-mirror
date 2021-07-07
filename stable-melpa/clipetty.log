@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/spudlyo/clipetty.git
 
 Updating /mnt/store/melpa/working/clipetty/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built clipetty in 4.257s, finished at Wed Jul  7 11:38:39 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.5K Jul  7 11:38 packages/clipetty-20191230.1556.el
+4.0K -rw-r--r-- 1 root root  410 Jul  7 11:38 packages/clipetty-20191230.1556.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:38 packages/clipetty-badge.svg
+4.0K -rw-r--r-- 1 root root  260 Jul  7 11:38 packages/clipetty-readme.txt

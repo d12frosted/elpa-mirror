@@ -3,10 +3,43 @@ Fetcher: github
 Source:  https://github.com/NixOS/nix-mode.git
 
 Updating /mnt/store/melpa/working/nix-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nix-mode/
+  to /tmp/nix-mode5e3djc/nix-mode-20200907.615
+    nix-build.el -> nix-build.el
+    nix-drv-mode.el -> nix-drv-mode.el
+    nix-edit.el -> nix-edit.el
+    nix-format.el -> nix-format.el
+    nix-instantiate.el -> nix-instantiate.el
+    nix-log.el -> nix-log.el
+    nix-mode.el -> nix-mode.el
+    nix-prettify-mode.el -> nix-prettify-mode.el
+    nix-repl.el -> nix-repl.el
+    nix-search.el -> nix-search.el
+    nix-shebang.el -> nix-shebang.el
+    nix-shell.el -> nix-shell.el
+    nix-store.el -> nix-store.el
+    nix.el -> nix.el
+Created nix-mode-20200907.615.tar containing:
+  nix-mode-20200907.615/
+  nix-mode-20200907.615/nix-build.el
+  nix-mode-20200907.615/nix-drv-mode.el
+  nix-mode-20200907.615/nix-edit.el
+  nix-mode-20200907.615/nix-format.el
+  nix-mode-20200907.615/nix-instantiate.el
+  nix-mode-20200907.615/nix-log.el
+  nix-mode-20200907.615/nix-mode-pkg.el
+  nix-mode-20200907.615/nix-mode.el
+  nix-mode-20200907.615/nix-prettify-mode.el
+  nix-mode-20200907.615/nix-repl.el
+  nix-mode-20200907.615/nix-search.el
+  nix-mode-20200907.615/nix-shebang.el
+  nix-mode-20200907.615/nix-shell.el
+  nix-mode-20200907.615/nix-store.el
+  nix-mode-20200907.615/nix.el
+Built nix-mode in 3.931s, finished at Wed Jul  7 09:04:28 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  322 Jul  7 09:04 packages/nix-mode-20200907.615.entry
+100K -rw-r--r-- 1 root root 100K Jul  7 09:04 packages/nix-mode-20200907.615.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:04 packages/nix-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  140 Jul  7 09:04 packages/nix-mode-readme.txt

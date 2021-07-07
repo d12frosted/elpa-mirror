@@ -3,10 +3,14 @@ Fetcher: github
 Source:  https://github.com/lassik/emacs-teletext.git
 
 Updating /mnt/store/melpa/working/teletext/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built teletext in 3.920s, finished at Wed Jul  7 09:23:43 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:23 packages/teletext-20210312.1951.el
+4.0K -rw-r--r-- 1 root root  375 Jul  7 09:23 packages/teletext-20210312.1951.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:23 packages/teletext-badge.svg
+4.0K -rw-r--r-- 1 root root  164 Jul  7 09:23 packages/teletext-readme.txt
+ 12K -rw-r--r-- 1 root root 8.1K Jul  7 09:23 packages/teletext-yle-20201019.756.el
+4.0K -rw-r--r-- 1 root root  427 Jul  7 06:11 packages/teletext-yle-20201019.756.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:11 packages/teletext-yle-badge.svg
+4.0K -rw-r--r-- 1 root root  538 Jul  7 09:23 packages/teletext-yle-readme.txt
+4.0K -rw-r--r-- 1 root root  145 Jul  7 09:23 packages/teletext-yle.log

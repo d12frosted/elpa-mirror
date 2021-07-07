@@ -4,9 +4,9 @@
 ;; Author: Tim Visher <tim.visher@gmail.com>
 ;; Maintainer: Tim Visher <tim.visher@gmail.com>
 ;; Created: 2011-11-02
-;; Version: 0.10.4-SNAPSHOT
+;; Version: 0.10.3
 ;; Package-Version: 20200205.1420
-;; Package-Commit: f565447ed294898588a19438d56c116555d8c628
+;; Package-Commit: 78e91f810a1b49d68ef19565e1c6513c84855e1e
 ;; Keywords: games vimgolf vim
 ;; URL: https://github.com/timvisher/vimgolf.el
 

@@ -3,10 +3,25 @@ Fetcher: github
 Source:  https://github.com/ncaq/symbolword-mode.git
 
 Updating /mnt/store/melpa/working/symbolword-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/symbolword-mode/
+  to /tmp/symbolword-modeRmV6se/symbolword-mode-20141002.841
+    symbolword-get.el -> symbolword-get.el
+    symbolword-kill.el -> symbolword-kill.el
+    symbolword-mode.el -> symbolword-mode.el
+    symbolword-rule.el -> symbolword-rule.el
+    symbolword-ward.el -> symbolword-ward.el
+Created symbolword-mode-20141002.841.tar containing:
+  symbolword-mode-20141002.841/
+  symbolword-mode-20141002.841/symbolword-get.el
+  symbolword-mode-20141002.841/symbolword-kill.el
+  symbolword-mode-20141002.841/symbolword-mode-pkg.el
+  symbolword-mode-20141002.841/symbolword-mode.el
+  symbolword-mode-20141002.841/symbolword-rule.el
+  symbolword-mode-20141002.841/symbolword-ward.el
+Built symbolword-mode in 3.734s, finished at Wed Jul  7 09:23:08 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  141 Jul  7 09:23 packages/symbolword-mode-20141002.841.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:23 packages/symbolword-mode-20141002.841.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:23 packages/symbolword-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  442 Jul  6 17:14 packages/symbolword-mode-readme.txt

@@ -3,10 +3,41 @@ Fetcher: github
 Source:  https://github.com/johnmastro/react-snippets.el.git
 
 Updating /mnt/store/melpa/working/react-snippets/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/react-snippets/
+  to /tmp/react-snippets7TtnxA/react-snippets-20170803.2250
+    react-snippets-pkg.el -> react-snippets-pkg.el
+    react-snippets.el -> react-snippets.el
+    snippets => snippets
+Created react-snippets-20170803.2250.tar containing:
+  react-snippets-20170803.2250/
+  react-snippets-20170803.2250/react-snippets-pkg.el
+  react-snippets-20170803.2250/react-snippets.el
+  react-snippets-20170803.2250/snippets/
+  react-snippets-20170803.2250/snippets/js-mode/
+  react-snippets-20170803.2250/snippets/js-mode/cc.yasnippet
+  react-snippets-20170803.2250/snippets/js-mode/cdm.yasnippet
+  react-snippets-20170803.2250/snippets/js-mode/cdu.yasnippet
+  react-snippets-20170803.2250/snippets/js-mode/cwm.yasnippet
+  react-snippets-20170803.2250/snippets/js-mode/cwrp.yasnippet
+  react-snippets-20170803.2250/snippets/js-mode/cwu.yasnippet
+  react-snippets-20170803.2250/snippets/js-mode/cwum.yasnippet
+  react-snippets-20170803.2250/snippets/js-mode/gdp.yasnippet
+  react-snippets-20170803.2250/snippets/js-mode/gis.yasnippet
+  react-snippets-20170803.2250/snippets/js-mode/r.yasnippet
+  react-snippets-20170803.2250/snippets/js-mode/rr.yasnippet
+  react-snippets-20170803.2250/snippets/js-mode/scu.yasnippet
+  react-snippets-20170803.2250/snippets/js-mode/sp.yasnippet
+  react-snippets-20170803.2250/snippets/js-mode/ss.yasnippet
+  react-snippets-20170803.2250/snippets/js2-mode/
+  react-snippets-20170803.2250/snippets/js2-mode/.yas-parents
+  react-snippets-20170803.2250/snippets/rjsx-mode/
+  react-snippets-20170803.2250/snippets/rjsx-mode/.yas-parents
+  react-snippets-20170803.2250/snippets/web-mode/
+  react-snippets-20170803.2250/snippets/web-mode/.yas-parents
+Built react-snippets in 4.061s, finished at Wed Jul  7 09:15:47 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  310 Jul  7 09:15 packages/react-snippets-20170803.2250.entry
+ 36K -rw-r--r-- 1 root root  30K Jul  7 09:15 packages/react-snippets-20170803.2250.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:15 packages/react-snippets-badge.svg
+4.0K -rw-r--r-- 1 root root   58 Jul  7 09:15 packages/react-snippets-readme.txt

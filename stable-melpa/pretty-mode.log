@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/pretty-mode/pretty-mode.git
 
 Updating /mnt/store/melpa/working/pretty-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built pretty-mode in 4.908s, finished at Wed Jul  7 09:13:21 2021
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root  34K Jul  7 09:13 packages/pretty-mode-20141201.1945.el
+4.0K -rw-r--r-- 1 root root  406 Jul  7 09:13 packages/pretty-mode-20141201.1945.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:13 packages/pretty-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  377 Jul  7 09:13 packages/pretty-mode-readme.txt

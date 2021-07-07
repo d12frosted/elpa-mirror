@@ -1,0 +1,11 @@
+(unkillable-scratch .
+		    [(20181203 2321)
+		     ((emacs
+		       (24)))
+		     "Disallow the \\*scratch\\* buffer from being killed" single
+		     ((:commit . "dac9dbed946a26829e6227ac15c0fa1d07ccd05f")
+		      (:authors
+		       ("Eric Crosson" . "eric.s.crosson@utexas.com"))
+		      (:maintainer "Eric Crosson" . "eric.s.crosson@utexas.com")
+		      (:keywords "convenience")
+		      (:url . "https://github.com/EricCrosson/unkillable-scratch"))])

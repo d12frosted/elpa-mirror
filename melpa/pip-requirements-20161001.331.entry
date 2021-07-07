@@ -1,0 +1,9 @@
+(pip-requirements .
+		  [(20161001 331)
+		   ((dash
+		     (2 8 0)))
+		   "A major mode for editing pip requirements files." single
+		   ((:commit . "93e0595f037e3a95c1c1cd6f00f7e052a9a25912")
+		    (:authors
+		     ("Wilfred Hughes" . "me@wilfred.me.uk"))
+		    (:maintainer "Wilfred Hughes" . "me@wilfred.me.uk"))])

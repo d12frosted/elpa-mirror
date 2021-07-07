@@ -3,10 +3,63 @@ Fetcher: github
 Source:  https://github.com/ergoemacs/ergoemacs-mode.git
 
 Updating /mnt/store/melpa/working/ergoemacs-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ergoemacs-mode/
+  to /tmp/ergoemacs-mode1Xg7On/ergoemacs-mode-20161013.427
+    ergoemacs-advice.el -> ergoemacs-advice.el
+    ergoemacs-command-loop.el -> ergoemacs-command-loop.el
+    ergoemacs-component.el -> ergoemacs-component.el
+    ergoemacs-debug.el -> ergoemacs-debug.el
+    ergoemacs-functions.el -> ergoemacs-functions.el
+    ergoemacs-key-description.el -> ergoemacs-key-description.el
+    ergoemacs-layouts.el -> ergoemacs-layouts.el
+    ergoemacs-lib.el -> ergoemacs-lib.el
+    ergoemacs-macros.el -> ergoemacs-macros.el
+    ergoemacs-map-properties.el -> ergoemacs-map-properties.el
+    ergoemacs-map.el -> ergoemacs-map.el
+    ergoemacs-mapkeymap.el -> ergoemacs-mapkeymap.el
+    ergoemacs-mode.el -> ergoemacs-mode.el
+    ergoemacs-score.el -> ergoemacs-score.el
+    ergoemacs-test.el -> ergoemacs-test.el
+    ergoemacs-theme-engine.el -> ergoemacs-theme-engine.el
+    ergoemacs-themes.el -> ergoemacs-themes.el
+    ergoemacs-translate.el -> ergoemacs-translate.el
+    kbd-ergo.svg -> kbd-ergo.svg
+    kbd.svg -> kbd.svg
+    ahk-us.ahk -> ahk-us.ahk
+    ergoemacs-mode.info -> ergoemacs-mode.info
+    dir -> dir
+    os_x_qwerty.dict.txt -> os_x_qwerty.dict.txt
+Created ergoemacs-mode-20161013.427.tar containing:
+  ergoemacs-mode-20161013.427/
+  ergoemacs-mode-20161013.427/ahk-us.ahk
+  ergoemacs-mode-20161013.427/dir
+  ergoemacs-mode-20161013.427/ergoemacs-advice.el
+  ergoemacs-mode-20161013.427/ergoemacs-command-loop.el
+  ergoemacs-mode-20161013.427/ergoemacs-component.el
+  ergoemacs-mode-20161013.427/ergoemacs-debug.el
+  ergoemacs-mode-20161013.427/ergoemacs-functions.el
+  ergoemacs-mode-20161013.427/ergoemacs-key-description.el
+  ergoemacs-mode-20161013.427/ergoemacs-layouts.el
+  ergoemacs-mode-20161013.427/ergoemacs-lib.el
+  ergoemacs-mode-20161013.427/ergoemacs-macros.el
+  ergoemacs-mode-20161013.427/ergoemacs-map-properties.el
+  ergoemacs-mode-20161013.427/ergoemacs-map.el
+  ergoemacs-mode-20161013.427/ergoemacs-mapkeymap.el
+  ergoemacs-mode-20161013.427/ergoemacs-mode-pkg.el
+  ergoemacs-mode-20161013.427/ergoemacs-mode.el
+  ergoemacs-mode-20161013.427/ergoemacs-mode.info
+  ergoemacs-mode-20161013.427/ergoemacs-score.el
+  ergoemacs-mode-20161013.427/ergoemacs-test.el
+  ergoemacs-mode-20161013.427/ergoemacs-theme-engine.el
+  ergoemacs-mode-20161013.427/ergoemacs-themes.el
+  ergoemacs-mode-20161013.427/ergoemacs-translate.el
+  ergoemacs-mode-20161013.427/kbd-ergo.svg
+  ergoemacs-mode-20161013.427/kbd.svg
+  ergoemacs-mode-20161013.427/os_x_qwerty.dict.txt
+Built ergoemacs-mode in 4.206s, finished at Wed Jul  7 11:49:15 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  558 Jul  7 11:49 packages/ergoemacs-mode-20161013.427.entry
+1.5M -rw-r--r-- 1 root root 1.5M Jul  7 11:49 packages/ergoemacs-mode-20161013.427.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:49 packages/ergoemacs-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  159 Jul  7 11:49 packages/ergoemacs-mode-readme.txt

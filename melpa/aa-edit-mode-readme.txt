@@ -1,5 +1,3 @@
-（´д｀）
-
 aa-edit-mode is Major mode for AA (アスキーアート, known as Shift_JIS art).
 
 https://en.wikipedia.org/wiki/Shift_JIS_art

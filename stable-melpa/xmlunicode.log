@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/ndw/xmlunicode.git
 
 Updating /mnt/store/melpa/working/xmlunicode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/xmlunicode/
+  to /tmp/xmlunicode3FxFyM/xmlunicode-20200823.755
+    xmlunicode-character-list.el -> xmlunicode-character-list.el
+    xmlunicode-helm.el -> xmlunicode-helm.el
+    xmlunicode.el -> xmlunicode.el
+Created xmlunicode-20200823.755.tar containing:
+  xmlunicode-20200823.755/
+  xmlunicode-20200823.755/xmlunicode-character-list.el
+  xmlunicode-20200823.755/xmlunicode-helm.el
+  xmlunicode-20200823.755/xmlunicode-pkg.el
+  xmlunicode-20200823.755/xmlunicode.el
+Built xmlunicode in 3.620s, finished at Wed Jul  7 09:30:00 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  313 Jul  7 09:29 packages/xmlunicode-20200823.755.entry
+2.2M -rw-r--r-- 1 root root 2.2M Jul  7 09:29 packages/xmlunicode-20200823.755.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:30 packages/xmlunicode-badge.svg
+8.0K -rw-r--r-- 1 root root 6.3K Jul  7 09:29 packages/xmlunicode-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/seanfarley/xonsh-mode.git
 
 Updating /mnt/store/melpa/working/xonsh-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built xonsh-mode in 4.083s, finished at Wed Jul  7 09:30:01 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.5K Jul  7 09:30 packages/xonsh-mode-20201020.52.el
+4.0K -rw-r--r-- 1 root root  387 Jul  7 09:30 packages/xonsh-mode-20201020.52.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:30 packages/xonsh-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  221 Jul  7 09:30 packages/xonsh-mode-readme.txt

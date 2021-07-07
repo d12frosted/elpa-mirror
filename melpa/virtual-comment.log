@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/thanhvg/emacs-virtual-comment.git
 
 Updating /mnt/store/melpa/working/virtual-comment/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built virtual-comment in 3.802s, finished at Wed Jul  7 09:27:33 2021
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root  32K Jul  7 09:27 packages/virtual-comment-20210210.255.el
+4.0K -rw-r--r-- 1 root root  338 Jul  7 09:27 packages/virtual-comment-20210210.255.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:27 packages/virtual-comment-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul  7 09:27 packages/virtual-comment-readme.txt

@@ -3,10 +3,30 @@ Fetcher: github
 Source:  https://github.com/org-roam/org-roam-server.git
 
 Updating /mnt/store/melpa/working/org-roam-server/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-roam-server/
+  to /tmp/org-roam-serverJTJUOE/org-roam-server-20210201.1122
+    org-roam-server.el -> org-roam-server.el
+    index.html -> index.html
+    assets => assets
+Created org-roam-server-20210201.1122.tar containing:
+  org-roam-server-20210201.1122/
+  org-roam-server-20210201.1122/assets/
+  org-roam-server-20210201.1122/assets/bootstrap-toggle.min.css
+  org-roam-server-20210201.1122/assets/bootstrap-toggle.min.js
+  org-roam-server-20210201.1122/assets/bootstrap.min.css
+  org-roam-server-20210201.1122/assets/bootstrap.min.js
+  org-roam-server-20210201.1122/assets/jquery-3.5.0.min.js
+  org-roam-server-20210201.1122/assets/org.css
+  org-roam-server-20210201.1122/assets/select2.min.css
+  org-roam-server-20210201.1122/assets/select2.min.js
+  org-roam-server-20210201.1122/assets/vis-network.min.js
+  org-roam-server-20210201.1122/index.html
+  org-roam-server-20210201.1122/org-roam-server-pkg.el
+  org-roam-server-20210201.1122/org-roam-server.el
+Built org-roam-server in 4.618s, finished at Wed Jul  7 09:08:03 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  531 Jul  7 09:08 packages/org-roam-server-20210201.1122.entry
+1.3M -rw-r--r-- 1 root root 1.3M Jul  7 09:08 packages/org-roam-server-20210201.1122.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:08 packages/org-roam-server-badge.svg
+4.0K -rw-r--r-- 1 root root  166 Jul  7 09:08 packages/org-roam-server-readme.txt

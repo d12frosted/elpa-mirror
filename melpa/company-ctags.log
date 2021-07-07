@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/redguardtoo/company-ctags.git
 
 Updating /mnt/store/melpa/working/company-ctags/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built company-ctags in 3.983s, finished at Wed Jul  7 11:40:15 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  20K Jul  7 11:40 packages/company-ctags-20210629.1038.el
+4.0K -rw-r--r-- 1 root root  409 Jul  7 11:40 packages/company-ctags-20210629.1038.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:40 packages/company-ctags-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Jul  7 11:40 packages/company-ctags-readme.txt

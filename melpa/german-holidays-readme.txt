@@ -16,7 +16,7 @@ If you'd like to show holidays for Rhineland Palatinate only, you can use
 This works for for all states:
 
  `holiday-german-BW-holidays'
- `holiday-german-HE-holidays'
+ `holiday-german-HE-hoidays'
  `holiday-german-HH-holidays'
  etc.
 

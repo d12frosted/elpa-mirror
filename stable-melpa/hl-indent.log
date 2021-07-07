@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ikirill/hl-indent.git
 
 Updating /mnt/store/melpa/working/hl-indent/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built hl-indent in 3.838s, finished at Wed Jul  7 12:03:10 2021
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root  23K Jul  7 12:03 packages/hl-indent-20170429.2104.el
+4.0K -rw-r--r-- 1 root root  418 Jul  7 12:03 packages/hl-indent-20170429.2104.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:03 packages/hl-indent-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul  7 12:03 packages/hl-indent-readme.txt

@@ -3,10 +3,42 @@ Fetcher: github
 Source:  https://github.com/cpitclaudel/biblio.el.git
 
 Updating /mnt/store/melpa/working/biblio/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/biblio/
+  to /tmp/bibliozORJRM/biblio-20161014.2304
+    biblio-arxiv.el -> biblio-arxiv.el
+    biblio-crossref.el -> biblio-crossref.el
+    biblio-dblp.el -> biblio-dblp.el
+    biblio-dissemin.el -> biblio-dissemin.el
+    biblio-doi.el -> biblio-doi.el
+    biblio-download.el -> biblio-download.el
+    biblio-hal.el -> biblio-hal.el
+    biblio-pkg.el -> biblio-pkg.el
+    biblio.el -> biblio.el
+Created biblio-20161014.2304.tar containing:
+  biblio-20161014.2304/
+  biblio-20161014.2304/biblio-arxiv.el
+  biblio-20161014.2304/biblio-crossref.el
+  biblio-20161014.2304/biblio-dblp.el
+  biblio-20161014.2304/biblio-dissemin.el
+  biblio-20161014.2304/biblio-doi.el
+  biblio-20161014.2304/biblio-download.el
+  biblio-20161014.2304/biblio-hal.el
+  biblio-20161014.2304/biblio-pkg.el
+  biblio-20161014.2304/biblio.el
+Built biblio in 4.210s, finished at Wed Jul  7 11:35:42 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  500 Jul  7 11:35 packages/biblio-20161014.2304.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 11:35 packages/biblio-20161014.2304.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:35 packages/biblio-badge.svg
+8.0K -rw-r--r-- 1 root root 5.0K Jul  7 11:35 packages/biblio-bibsonomy-20190105.1200.el
+4.0K -rw-r--r-- 1 root root  451 Jul  7 11:35 packages/biblio-bibsonomy-20190105.1200.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:35 packages/biblio-bibsonomy-badge.svg
+4.0K -rw-r--r-- 1 root root  531 Jul  7 11:35 packages/biblio-bibsonomy-readme.txt
+4.0K -rw-r--r-- 1 root root  593 Jul  7 11:35 packages/biblio-bibsonomy.log
+ 36K -rw-r--r-- 1 root root  33K Jul  7 11:35 packages/biblio-core-20160901.1815.el
+4.0K -rw-r--r-- 1 root root  565 Jul  7 11:35 packages/biblio-core-20160901.1815.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:22 packages/biblio-core-badge.svg
+4.0K -rw-r--r-- 1 root root  254 Jul  7 11:35 packages/biblio-core-readme.txt
+4.0K -rw-r--r-- 1 root root  139 Jul  7 11:35 packages/biblio-core.log
+4.0K -rw-r--r-- 1 root root 2.6K Jul  7 11:35 packages/biblio-readme.txt

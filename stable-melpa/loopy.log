@@ -3,10 +3,34 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy.git
 
 Updating /mnt/store/melpa/working/loopy/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/loopy/
+  to /tmp/loopyJlIpbr/loopy-20210706.155
+    loopy-commands.el -> loopy-commands.el
+    loopy-iter.el -> loopy-iter.el
+    loopy-pcase.el -> loopy-pcase.el
+    loopy-seq.el -> loopy-seq.el
+    loopy.el -> loopy.el
+  ! doc/loopy.texi -> loopy.texi
+Created /tmp/loopyJlIpbr/loopy-20210706.155/loopy.info
+Created loopy-20210706.155.tar containing:
+  loopy-20210706.155/
+  loopy-20210706.155/dir
+  loopy-20210706.155/loopy-commands.el
+  loopy-20210706.155/loopy-iter.el
+  loopy-20210706.155/loopy-pcase.el
+  loopy-20210706.155/loopy-pkg.el
+  loopy-20210706.155/loopy-seq.el
+  loopy-20210706.155/loopy.el
+  loopy-20210706.155/loopy.info
+Built loopy in 13.637s, finished at Wed Jul  7 08:59:10 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  285 Jul  7 08:59 packages/loopy-20210706.155.entry
+360K -rw-r--r-- 1 root root 360K Jul  7 08:59 packages/loopy-20210706.155.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:59 packages/loopy-badge.svg
+8.0K -rw-r--r-- 1 root root 7.3K Jul  7 08:59 packages/loopy-dash-20210705.2006.el
+4.0K -rw-r--r-- 1 root root  392 Jul  7 08:59 packages/loopy-dash-20210705.2006.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:59 packages/loopy-dash-badge.svg
+4.0K -rw-r--r-- 1 root root  374 Jul  7 08:59 packages/loopy-dash-readme.txt
+4.0K -rw-r--r-- 1 root root  529 Jul  7 08:59 packages/loopy-dash.log
+4.0K -rw-r--r-- 1 root root 1.7K Jul  7 08:59 packages/loopy-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/k32/erlstack-mode.git
 
 Updating /mnt/store/melpa/working/erlstack-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built erlstack-mode in 4.137s, finished at Wed Jul  7 11:49:18 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  13K Jul  7 11:49 packages/erlstack-mode-20180806.2131.el
+4.0K -rw-r--r-- 1 root root  234 Jul  7 11:49 packages/erlstack-mode-20180806.2131.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:49 packages/erlstack-mode-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 11:49 packages/erlstack-mode-readme.txt

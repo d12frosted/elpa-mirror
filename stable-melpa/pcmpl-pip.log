@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/zwild/pcmpl-pip.git
 
 Updating /mnt/store/melpa/working/pcmpl-pip/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built pcmpl-pip in 4.843s, finished at Wed Jul  7 09:11:04 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.6K Jul  7 09:11 packages/pcmpl-pip-20181229.1420.el
+4.0K -rw-r--r-- 1 root root  374 Jul  7 09:11 packages/pcmpl-pip-20181229.1420.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:11 packages/pcmpl-pip-badge.svg
+4.0K -rw-r--r-- 1 root root   55 Jul  7 09:11 packages/pcmpl-pip-readme.txt

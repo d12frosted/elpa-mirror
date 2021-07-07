@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/fred-o/jekyll-modes.git
 
 Updating /mnt/store/melpa/working/jekyll-modes/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built jekyll-modes in 3.256s, finished at Wed Jul  7 12:06:33 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.3K Jul  7 12:06 packages/jekyll-modes-20141117.1314.el
+4.0K -rw-r--r-- 1 root root  414 Jul  7 12:06 packages/jekyll-modes-20141117.1314.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:06 packages/jekyll-modes-badge.svg
+4.0K -rw-r--r-- 1 root root  518 Jul  7 12:06 packages/jekyll-modes-readme.txt

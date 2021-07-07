@@ -3,10 +3,18 @@ Fetcher: github
 Source:  https://github.com/Malabarba/smart-mode-line.git
 
 Updating /mnt/store/melpa/working/smart-mode-line-powerline-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/smart-mode-line-powerline-theme/
+  to /tmp/smart-mode-line-powerline-themeEtA691/smart-mode-line-powerline-theme-20160706.38
+  ! themes/smart-mode-line-light-powerline-theme.el -> smart-mode-line-light-powerline-theme.el
+  ! themes/smart-mode-line-powerline-theme.el -> smart-mode-line-powerline-theme.el
+Created smart-mode-line-powerline-theme-20160706.38.tar containing:
+  smart-mode-line-powerline-theme-20160706.38/
+  smart-mode-line-powerline-theme-20160706.38/smart-mode-line-light-powerline-theme.el
+  smart-mode-line-powerline-theme-20160706.38/smart-mode-line-powerline-theme-pkg.el
+  smart-mode-line-powerline-theme-20160706.38/smart-mode-line-powerline-theme.el
+Built smart-mode-line-powerline-theme in 3.172s, finished at Wed Jul  7 09:20:38 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  553 Jul  7 09:20 packages/smart-mode-line-powerline-theme-20160706.38.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:20 packages/smart-mode-line-powerline-theme-20160706.38.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:20 packages/smart-mode-line-powerline-theme-badge.svg

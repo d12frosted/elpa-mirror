@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/cosmicexplorer/f3.git
 
 Updating /mnt/store/melpa/working/f3/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/f3/
+  to /tmp/f3BXjLW4/f3-20180130.856
+    f3.el -> f3.el
+    update-commentary.el -> update-commentary.el
+Created f3-20180130.856.tar containing:
+  f3-20180130.856/
+  f3-20180130.856/f3-pkg.el
+  f3-20180130.856/f3.el
+  f3-20180130.856/update-commentary.el
+Built f3 in 3.598s, finished at Wed Jul  7 11:51:51 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  412 Jul  7 11:51 packages/f3-20180130.856.entry
+ 56K -rw-r--r-- 1 root root  50K Jul  7 11:51 packages/f3-20180130.856.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:51 packages/f3-badge.svg
+8.0K -rw-r--r-- 1 root root 5.7K Jul  7 11:51 packages/f3-readme.txt

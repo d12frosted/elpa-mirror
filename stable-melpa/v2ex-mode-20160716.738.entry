@@ -1,0 +1,15 @@
+(v2ex-mode .
+	   [(20160716 738)
+	    ((cl-lib
+	      (0 5))
+	     (request
+	      (0 2))
+	     (let-alist
+		 (1 0 3)))
+	    "Major mode for visit http://v2ex.com/ site." single
+	    ((:commit . "7a59ac3be2b08d873ec271ec7a3d5ace309c1407")
+	     (:authors
+	      ("Aborn Jiang" . "aborn.jiang@gmail.com"))
+	     (:maintainer "Aborn Jiang" . "aborn.jiang@gmail.com")
+	     (:keywords "v2ex" "v2ex.com")
+	     (:url . "https://github.com/aborn/v2ex-mode"))])

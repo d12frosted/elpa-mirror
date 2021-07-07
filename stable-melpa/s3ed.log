@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/mattusifer/s3ed.git
 
 Updating /mnt/store/melpa/working/s3ed/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/s3ed/
+  to /tmp/s3edHsTY1B/s3ed-20200929.1317
+    s3ed-io.el -> s3ed-io.el
+    s3ed-mode.el -> s3ed-mode.el
+    s3ed-util.el -> s3ed-util.el
+    s3ed.el -> s3ed.el
+Created s3ed-20200929.1317.tar containing:
+  s3ed-20200929.1317/
+  s3ed-20200929.1317/s3ed-io.el
+  s3ed-20200929.1317/s3ed-mode.el
+  s3ed-20200929.1317/s3ed-pkg.el
+  s3ed-20200929.1317/s3ed-util.el
+  s3ed-20200929.1317/s3ed.el
+Built s3ed in 3.655s, finished at Wed Jul  7 09:17:41 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  377 Jul  7 09:17 packages/s3ed-20200929.1317.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 09:17 packages/s3ed-20200929.1317.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:17 packages/s3ed-badge.svg
+4.0K -rw-r--r-- 1 root root  168 Jul  7 09:17 packages/s3ed-readme.txt

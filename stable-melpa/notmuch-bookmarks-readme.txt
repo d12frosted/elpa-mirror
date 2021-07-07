@@ -11,6 +11,6 @@ your init file:
 (use-package notmuch-bookmarks
   :after notmuch
   :config
-  (notmuch-bookmarks-mode))
+  (notmuch-bookmarks))
 
 This package is NOT part of the official notmuch Emacs suite.

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/astahlman/ob-async.git
 
 Updating /mnt/store/melpa/working/ob-async/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ob-async in 4.029s, finished at Wed Jul  7 09:05:14 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.8K Jul  7 09:05 packages/ob-async-20180429.1739.el
+4.0K -rw-r--r-- 1 root root  471 Jul  7 09:05 packages/ob-async-20180429.1739.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:05 packages/ob-async-badge.svg
+4.0K -rw-r--r-- 1 root root  123 Jul  7 09:05 packages/ob-async-readme.txt

@@ -1,0 +1,14 @@
+(helm-hayoo .
+	    [(20140730 2125)
+	     ((helm
+	       (1 6 0))
+	      (json
+	       (1 2))
+	      (haskell-mode
+	       (13 7)))
+	     "Source and configured helm for searching hayoo" single
+	     ((:commit . "f49a77e8b8704bb7eb0d1097eefb8010a6617664")
+	      (:authors
+	       ("Markus Hauck" . "markus1189@gmail.com"))
+	      (:maintainer "Markus Hauck" . "markus1189@gmail.com")
+	      (:keywords "helm"))])

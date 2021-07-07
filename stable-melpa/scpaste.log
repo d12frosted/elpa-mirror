@@ -3,10 +3,9 @@ Fetcher: git
 Source:  https://git.sr.ht/~technomancy/scpaste
 
 Updating /mnt/store/melpa/working/scpaste/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built scpaste in 6.067s, finished at Wed Jul  7 09:18:06 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jul  7 09:18 packages/scpaste-20210223.1902.el
+4.0K -rw-r--r-- 1 root root  328 Jul  7 09:18 packages/scpaste-20210223.1902.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:18 packages/scpaste-badge.svg
+4.0K -rw-r--r-- 1 root root 2.5K Jul  7 09:18 packages/scpaste-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/austinhaas/actionscript-mode.git
 
 Updating /mnt/store/melpa/working/actionscript-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built actionscript-mode in 4.017s, finished at Wed Jul  7 11:32:19 2021
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root  26K Jul  7 11:32 packages/actionscript-mode-20111221.1731.el
+4.0K -rw-r--r-- 1 root root  289 Jul  7 11:32 packages/actionscript-mode-20111221.1731.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:32 packages/actionscript-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  403 Jul  7 11:32 packages/actionscript-mode-readme.txt

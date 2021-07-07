@@ -1,0 +1,13 @@
+(comment-tags .
+	      [(20170807 15)
+	       ((emacs
+		 (24 5))
+		(pkg-info
+		 (0 4)))
+	       "Highlight and navigate comment tags like TODO, FIXME, etc" single
+	       ((:commit . "293a30026d7750f6657d6c2e6d6428abf1d7db5a")
+		(:authors
+		 ("Vincent Dumas" . "vincekd@gmail.com"))
+		(:maintainer "Vincent Dumas" . "vincekd@gmail.com")
+		(:keywords "convenience" "comments" "tags")
+		(:url . "https://github.com/vincekd/comment-tags"))])

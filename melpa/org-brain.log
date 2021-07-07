@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Kungsgeten/org-brain.git
 
 Updating /mnt/store/melpa/working/org-brain/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built org-brain in 4.650s, finished at Wed Jul  7 09:06:42 2021
+ ✓ Success:
+152K -rw-r--r-- 1 root root 152K Jul  7 09:06 packages/org-brain-20210706.1519.el
+4.0K -rw-r--r-- 1 root root  429 Jul  7 09:06 packages/org-brain-20210706.1519.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/org-brain-badge.svg
+4.0K -rw-r--r-- 1 root root  803 Jul  7 09:06 packages/org-brain-readme.txt

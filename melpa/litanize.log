@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/zzkt/litanizer.git
 
 Updating /mnt/store/melpa/working/litanize/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built litanize in 4.605s, finished at Wed Jul  7 08:58:28 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.0K Jul  7 08:58 packages/litanize-20200108.607.el
+4.0K -rw-r--r-- 1 root root  466 Jul  7 08:58 packages/litanize-20200108.607.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:58 packages/litanize-badge.svg
+4.0K -rw-r--r-- 1 root root  436 Jul  7 08:58 packages/litanize-readme.txt

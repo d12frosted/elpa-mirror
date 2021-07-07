@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/helm-css-scss.git
 
 Updating /mnt/store/melpa/working/helm-css-scss/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built helm-css-scss in 3.806s, finished at Wed Jul  7 12:00:23 2021
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root  34K Jul  7 12:00 packages/helm-css-scss-20191230.1549.el
+4.0K -rw-r--r-- 1 root root  445 Jul  7 12:00 packages/helm-css-scss-20191230.1549.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:00 packages/helm-css-scss-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Jul  7 12:00 packages/helm-css-scss-readme.txt

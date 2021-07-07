@@ -3,10 +3,51 @@ Fetcher: github
 Source:  https://github.com/mpenet/clojure-snippets.git
 
 Updating /mnt/store/melpa/working/clojure-snippets/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/clojure-snippets/
+  to /tmp/clojure-snippetsPqL2NK/clojure-snippets-20161010.652
+    clojure-snippets-pkg.el -> clojure-snippets-pkg.el
+    clojure-snippets.el -> clojure-snippets.el
+    snippets => snippets
+Created clojure-snippets-20161010.652.tar containing:
+  clojure-snippets-20161010.652/
+  clojure-snippets-20161010.652/clojure-snippets-pkg.el
+  clojure-snippets-20161010.652/clojure-snippets.el
+  clojure-snippets-20161010.652/snippets/
+  clojure-snippets-20161010.652/snippets/clojure-mode/
+  clojure-snippets-20161010.652/snippets/clojure-mode/bench
+  clojure-snippets-20161010.652/snippets/clojure-mode/com
+  clojure-snippets-20161010.652/snippets/clojure-mode/def
+  clojure-snippets-20161010.652/snippets/clojure-mode/defm
+  clojure-snippets-20161010.652/snippets/clojure-mode/defn
+  clojure-snippets-20161010.652/snippets/clojure-mode/defr
+  clojure-snippets-20161010.652/snippets/clojure-mode/deft
+  clojure-snippets-20161010.652/snippets/clojure-mode/doseq
+  clojure-snippets-20161010.652/snippets/clojure-mode/fn
+  clojure-snippets-20161010.652/snippets/clojure-mode/for
+  clojure-snippets-20161010.652/snippets/clojure-mode/if
+  clojure-snippets-20161010.652/snippets/clojure-mode/ifl
+  clojure-snippets-20161010.652/snippets/clojure-mode/import
+  clojure-snippets-20161010.652/snippets/clojure-mode/is
+  clojure-snippets-20161010.652/snippets/clojure-mode/let
+  clojure-snippets-20161010.652/snippets/clojure-mode/letfn
+  clojure-snippets-20161010.652/snippets/clojure-mode/main
+  clojure-snippets-20161010.652/snippets/clojure-mode/map
+  clojure-snippets-20161010.652/snippets/clojure-mode/map.lambda
+  clojure-snippets-20161010.652/snippets/clojure-mode/mdoc
+  clojure-snippets-20161010.652/snippets/clojure-mode/ns
+  clojure-snippets-20161010.652/snippets/clojure-mode/opts
+  clojure-snippets-20161010.652/snippets/clojure-mode/pr
+  clojure-snippets-20161010.652/snippets/clojure-mode/print
+  clojure-snippets-20161010.652/snippets/clojure-mode/reduce
+  clojure-snippets-20161010.652/snippets/clojure-mode/require
+  clojure-snippets-20161010.652/snippets/clojure-mode/test
+  clojure-snippets-20161010.652/snippets/clojure-mode/try
+  clojure-snippets-20161010.652/snippets/clojure-mode/use
+  clojure-snippets-20161010.652/snippets/clojure-mode/when
+  clojure-snippets-20161010.652/snippets/clojure-mode/whenl
+Built clojure-snippets in 9.338s, finished at Wed Jul  7 11:39:04 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  301 Jul  7 11:39 packages/clojure-snippets-20161010.652.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 11:39 packages/clojure-snippets-20161010.652.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:39 packages/clojure-snippets-badge.svg

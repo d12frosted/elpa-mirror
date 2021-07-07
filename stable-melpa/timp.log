@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/mola-T/timp.git
 
 Updating /mnt/store/melpa/working/timp/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/timp/
+  to /tmp/timpZM8ovA/timp-20160618.803
+    timp-packet.el -> timp-packet.el
+    timp-server.el -> timp-server.el
+    timp-socket.el -> timp-socket.el
+    timp.el -> timp.el
+Created timp-20160618.803.tar containing:
+  timp-20160618.803/
+  timp-20160618.803/timp-packet.el
+  timp-20160618.803/timp-pkg.el
+  timp-20160618.803/timp-server.el
+  timp-20160618.803/timp-socket.el
+  timp-20160618.803/timp.el
+Built timp in 3.622s, finished at Wed Jul  7 09:24:27 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  403 Jul  7 09:24 packages/timp-20160618.803.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 09:24 packages/timp-20160618.803.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:24 packages/timp-badge.svg
+4.0K -rw-r--r-- 1 root root  256 Jul  7 09:24 packages/timp-readme.txt

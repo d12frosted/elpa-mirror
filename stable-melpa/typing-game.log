@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/lujun9972/el-typing-game.git
 
 Updating /mnt/store/melpa/working/typing-game/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built typing-game in 8.828s, finished at Wed Jul  7 09:26:09 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.5K Jul  7 09:26 packages/typing-game-20160426.1220.el
+4.0K -rw-r--r-- 1 root root  292 Jul  7 09:26 packages/typing-game-20160426.1220.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:26 packages/typing-game-badge.svg
+4.0K -rw-r--r-- 1 root root  146 Jul  7 09:26 packages/typing-game-readme.txt

@@ -165,12 +165,6 @@ Bugs
     checked for validity.  Any errors for global buttons are also
     deferred until the mode is activated.
 
-    This package is generally incompatible with interactive modes
-    such as `comint-mode' and derivatives, due conflicting uses
-    of the rear-nonsticky text property.  To change this, :rear-sticky
-    can be set when `calling button-lock-set-button'.  See also
-    https://github.com/rolandwalker/fixmee/issues/8#issuecomment-75397467 .
-
 TODO
 
     Validate arguments to button-lock-register-global-button.

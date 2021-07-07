@@ -1,0 +1,15 @@
+(electric-operator .
+		   [(20180826 1622)
+		    ((dash
+		      (2 10 0))
+		     (names
+		      (20150618 0))
+		     (emacs
+		      (24 4)))
+		    "Automatically add spaces around operators" tar
+		    ((:commit . "21e6b84754118912768263a393442a7aefb4742b")
+		     (:authors
+		      ("David Shepherd" . "davidshepherd7@gmail.com"))
+		     (:maintainer "David Shepherd" . "davidshepherd7@gmail.com")
+		     (:keywords "electric")
+		     (:url . "https://github.com/davidshepherd7/electric-operator"))])

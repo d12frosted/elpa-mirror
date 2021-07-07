@@ -8,7 +8,7 @@ written text.  Unlike dynamic abbreviation, the text is analysed
 during idle time, while Emacs is doing nothing else.  `pabbrev-mode'
 tells you when this is happening.  If this irritates you unset
 `pabbrev-idle-timer-verbose'.  The advantage of this is that its
-very quick to look up potential abbreviations, which means that they
+very quick to look up potential abbreviations, which means that the
 can be constantly displayed, without interfering with the user as
 they type.  Certainly it works for me, on an old laptop, typing as
 fast as I can (which is fast, since I learnt to type with four

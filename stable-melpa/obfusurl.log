@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/davep/obfusurl.el.git
 
 Updating /mnt/store/melpa/working/obfusurl/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built obfusurl in 3.821s, finished at Wed Jul  7 09:05:51 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.1K Jul  7 09:05 packages/obfusurl-20170809.1524.el
+4.0K -rw-r--r-- 1 root root  384 Jul  7 09:05 packages/obfusurl-20170809.1524.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:05 packages/obfusurl-badge.svg
+4.0K -rw-r--r-- 1 root root  492 Jul  7 09:05 packages/obfusurl-readme.txt

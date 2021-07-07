@@ -1,0 +1,15 @@
+(ace-pinyin .
+	    [(20160506 2213)
+	     ((ace-jump-mode
+	       (2 0))
+	      (avy
+	       (0 2 0))
+	      (pinyinlib
+	       (0 1 0)))
+	     "Jump to Chinese characters using ace-jump-mode or avy" single
+	     ((:commit . "c444d8d6861dafd06dd41e694dc9db32652e3b7c")
+	      (:authors
+	       ("Junpeng Qiu" . "qjpchmail@gmail.com"))
+	      (:maintainer "Junpeng Qiu" . "qjpchmail@gmail.com")
+	      (:keywords "extensions")
+	      (:url . "https://github.com/cute-jumper/ace-pinyin"))])

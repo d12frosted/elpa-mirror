@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/lassik/emacs-posix-manual.git
 
 Updating /mnt/store/melpa/working/posix-manual/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/posix-manual/
+  to /tmp/posix-manualHgFWAX/posix-manual-20200301.1103
+    posix-manual-data.el -> posix-manual-data.el
+    posix-manual.el -> posix-manual.el
+Created posix-manual-20200301.1103.tar containing:
+  posix-manual-20200301.1103/
+  posix-manual-20200301.1103/posix-manual-data.el
+  posix-manual-20200301.1103/posix-manual-pkg.el
+  posix-manual-20200301.1103/posix-manual.el
+Built posix-manual in 3.291s, finished at Wed Jul  7 09:13:06 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  367 Jul  7 09:13 packages/posix-manual-20200301.1103.entry
+120K -rw-r--r-- 1 root root 120K Jul  7 09:13 packages/posix-manual-20200301.1103.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:13 packages/posix-manual-badge.svg
+4.0K -rw-r--r-- 1 root root  129 Jul  7 09:13 packages/posix-manual-readme.txt

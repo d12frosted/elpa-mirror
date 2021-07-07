@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/gnuvince/purp.git
 
 Updating /mnt/store/melpa/working/purp-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/purp-theme/
+  to /tmp/purp-themeoD4QsL/purp-theme-20190629.1829
+    blurb-theme.el -> blurb-theme.el
+    purp-common.el -> purp-common.el
+    purp-light-theme.el -> purp-light-theme.el
+    purp-theme.el -> purp-theme.el
+Created purp-theme-20190629.1829.tar containing:
+  purp-theme-20190629.1829/
+  purp-theme-20190629.1829/blurb-theme.el
+  purp-theme-20190629.1829/purp-common.el
+  purp-theme-20190629.1829/purp-light-theme.el
+  purp-theme-20190629.1829/purp-theme-pkg.el
+  purp-theme-20190629.1829/purp-theme.el
+Built purp-theme in 4.467s, finished at Wed Jul  7 09:14:08 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  353 Jul  7 09:14 packages/purp-theme-20190629.1829.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 09:14 packages/purp-theme-20190629.1829.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:14 packages/purp-theme-badge.svg
+4.0K -rw-r--r-- 1 root root   36 Jul  7 09:14 packages/purp-theme-readme.txt

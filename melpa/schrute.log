@@ -3,10 +3,9 @@ Fetcher: git
 Source:  https://bitbucket.org/shackra/dwight-k.-schrute
 
 Updating /mnt/store/melpa/working/schrute/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built schrute in 4.718s, finished at Wed Jul  7 09:17:59 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Jul  7 09:17 packages/schrute-20161124.2027.el
+4.0K -rw-r--r-- 1 root root  417 Jul  7 09:17 packages/schrute-20161124.2027.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:17 packages/schrute-badge.svg
+4.0K -rw-r--r-- 1 root root  870 Jul  7 09:17 packages/schrute-readme.txt

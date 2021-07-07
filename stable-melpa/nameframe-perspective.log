@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/john2x/nameframe.git
 
 Updating /mnt/store/melpa/working/nameframe-perspective/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built nameframe-perspective in 3.743s, finished at Wed Jul  7 09:03:43 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.2K Jul  7 09:03 packages/nameframe-perspective-20170406.119.el
+4.0K -rw-r--r-- 1 root root  400 Jul  7 09:03 packages/nameframe-perspective-20170406.119.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:03 packages/nameframe-perspective-badge.svg
+4.0K -rw-r--r-- 1 root root  210 Jul  7 09:03 packages/nameframe-perspective-readme.txt

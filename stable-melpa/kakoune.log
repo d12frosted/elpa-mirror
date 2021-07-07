@@ -3,10 +3,25 @@ Fetcher: github
 Source:  https://github.com/jmorag/kakoune.el.git
 
 Updating /mnt/store/melpa/working/kakoune/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kakoune/
+  to /tmp/kakouneUtd0ma/kakoune-20210220.1858
+    kakoune-exchange.el -> kakoune-exchange.el
+    kakoune-shell-commands.el -> kakoune-shell-commands.el
+    kakoune-unimpaired.el -> kakoune-unimpaired.el
+    kakoune-utils.el -> kakoune-utils.el
+    kakoune.el -> kakoune.el
+Created kakoune-20210220.1858.tar containing:
+  kakoune-20210220.1858/
+  kakoune-20210220.1858/kakoune-exchange.el
+  kakoune-20210220.1858/kakoune-pkg.el
+  kakoune-20210220.1858/kakoune-shell-commands.el
+  kakoune-20210220.1858/kakoune-unimpaired.el
+  kakoune-20210220.1858/kakoune-utils.el
+  kakoune-20210220.1858/kakoune.el
+Built kakoune in 9.479s, finished at Wed Jul  7 12:07:47 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  436 Jul  7 12:07 packages/kakoune-20210220.1858.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 12:07 packages/kakoune-20210220.1858.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:07 packages/kakoune-badge.svg
+4.0K -rw-r--r-- 1 root root  283 Jul  7 12:07 packages/kakoune-readme.txt

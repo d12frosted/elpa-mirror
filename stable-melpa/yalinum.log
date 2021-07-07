@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/tm8st/emacs-yalinum.git
 
 Updating /mnt/store/melpa/working/yalinum/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built yalinum in 4.302s, finished at Wed Jul  7 09:30:14 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  10K Jul  7 09:30 packages/yalinum-20130217.1043.el
+4.0K -rw-r--r-- 1 root root  284 Jul  7 09:30 packages/yalinum-20130217.1043.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:30 packages/yalinum-badge.svg
+4.0K -rw-r--r-- 1 root root  350 Jul  7 09:30 packages/yalinum-readme.txt

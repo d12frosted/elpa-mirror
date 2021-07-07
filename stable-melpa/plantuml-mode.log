@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/skuro/plantuml-mode.git
 
 Updating /mnt/store/melpa/working/plantuml-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built plantuml-mode in 4.349s, finished at Wed Jul  7 09:12:18 2021
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root  36K Jul  7 09:12 packages/plantuml-mode-20190903.2124.el
+4.0K -rw-r--r-- 1 root root  304 Jul  7 09:12 packages/plantuml-mode-20190903.2124.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:12 packages/plantuml-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  296 Jul  7 09:12 packages/plantuml-mode-readme.txt

@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/dabrahams/initsplit.git
 
 Updating /mnt/store/melpa/working/initsplit/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: initsplit :files spec is equivalent to the default.
+Built initsplit in 5.161s, finished at Wed Jul  7 12:05:02 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.7K Jul  7 12:05 packages/initsplit-20100330.1418.el
+4.0K -rw-r--r-- 1 root root  344 Jul  7 12:05 packages/initsplit-20100330.1418.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:05 packages/initsplit-badge.svg
+4.0K -rw-r--r-- 1 root root  939 Jul  7 12:05 packages/initsplit-readme.txt

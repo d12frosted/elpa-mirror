@@ -1,0 +1,13 @@
+(names .
+       [(20151201 1204)
+	((emacs
+	  (24 1))
+	 (cl-lib
+	  (0 5)))
+	"Namespaces for emacs-lisp. Avoid name clobbering without hiding symbols." tar
+	((:commit . "00862c57ae6363ba86d1e5ce138929a1b6d5c7e6")
+	 (:authors
+	  ("Artur Malabarba" . "emacs@endlessparentheses.com"))
+	 (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
+	 (:keywords "extensions" "lisp")
+	 (:url . "https://github.com/Malabarba/names"))])

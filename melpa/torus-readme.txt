@@ -19,22 +19,12 @@ Original idea by Stefan Kamphausen, see https://www.skamphausen.de/cgi-bin/ska/m
 
 See https://github.com/chimay/torus/blob/master/README.org for more details
 
-; License
-; ------------------------------
+Important note for version 1 users
 
-This file is not part of Emacs.
+The version 2 of Torus is built using the Duo library of inplace list
+operations. It means a cleaner code, easier to maintain and extend,
+but also a drastic change in the data structure.
 
-This program is free software; you can redistribute it and/or modify it
-under the terms of the GNU General Public License as published by
-the Free Software Foundation; either version 2, or (at your option)
-any later version.
-
-This program is distributed in the hope that it will be useful, but
-WITHOUT ANY WARRANTY; without even the implied warranty of
-MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
-General Public License for more details.
-
-You should have received a copy of the GNU General Public License
-along with this program; see the file COPYING. If not, write to the
-Free Software Foundation, Inc., 59 Temple Place - Suite 330,
-Boston, MA 02111-1307, USA.
+In particular, the format of torus files has changed, so it is
+recommended to backup your version 1 torus files, just in case
+something would go wrong with the conversion.

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ukari/speedbar-git-respect.git
 
 Updating /mnt/store/melpa/working/speedbar-git-respect/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built speedbar-git-respect in 4.231s, finished at Wed Jul  7 09:21:34 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.9K Jul  7 09:21 packages/speedbar-git-respect-20200831.450.el
+4.0K -rw-r--r-- 1 root root  404 Jul  7 09:21 packages/speedbar-git-respect-20200831.450.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:21 packages/speedbar-git-respect-badge.svg
+4.0K -rw-r--r-- 1 root root  465 Jul  7 09:21 packages/speedbar-git-respect-readme.txt

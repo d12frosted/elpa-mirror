@@ -1,0 +1,13 @@
+(org-random-todo .
+		 [(20190213 854)
+		  ((emacs
+		    (24 3))
+		   (alert
+		    (1 2)))
+		  "show a random TODO (with alert) every so often" single
+		  ((:commit . "09228e55f1cc702053d305fdea2b094b548e6dbe")
+		   (:authors
+		    ("Kevin Brubeck Unhammer" . "unhammer@fsfe.org"))
+		   (:maintainer "Kevin Brubeck Unhammer" . "unhammer@fsfe.org")
+		   (:keywords "org" "todo" "notification" "calendar")
+		   (:url . "https://github.com/unhammer/org-random-todo"))])

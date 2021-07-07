@@ -3,10 +3,59 @@ Fetcher: github
 Source:  https://github.com/hlissner/emacs-doom-themes.git
 
 Updating /mnt/store/melpa/working/doom-themes/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/doom-themes/
+  to /tmp/doom-themesRiHhhP/doom-themes-20180822.2042
+    doom-themes-common.el -> doom-themes-common.el
+    doom-themes-neotree.el -> doom-themes-neotree.el
+    doom-themes-org.el -> doom-themes-org.el
+    doom-themes-treemacs.el -> doom-themes-treemacs.el
+    doom-themes.el -> doom-themes.el
+  ! themes/doom-challenger-deep-theme.el -> doom-challenger-deep-theme.el
+  ! themes/doom-city-lights-theme.el -> doom-city-lights-theme.el
+  ! themes/doom-dracula-theme.el -> doom-dracula-theme.el
+  ! themes/doom-molokai-theme.el -> doom-molokai-theme.el
+  ! themes/doom-nord-light-theme.el -> doom-nord-light-theme.el
+  ! themes/doom-nord-theme.el -> doom-nord-theme.el
+  ! themes/doom-nova-theme.el -> doom-nova-theme.el
+  ! themes/doom-one-light-theme.el -> doom-one-light-theme.el
+  ! themes/doom-one-theme.el -> doom-one-theme.el
+  ! themes/doom-opera-light-theme.el -> doom-opera-light-theme.el
+  ! themes/doom-opera-theme.el -> doom-opera-theme.el
+  ! themes/doom-peacock-theme.el -> doom-peacock-theme.el
+  ! themes/doom-solarized-light-theme.el -> doom-solarized-light-theme.el
+  ! themes/doom-spacegrey-theme.el -> doom-spacegrey-theme.el
+  ! themes/doom-tomorrow-day-theme.el -> doom-tomorrow-day-theme.el
+  ! themes/doom-tomorrow-night-theme.el -> doom-tomorrow-night-theme.el
+  ! themes/doom-vibrant-theme.el -> doom-vibrant-theme.el
+Created doom-themes-20180822.2042.tar containing:
+  doom-themes-20180822.2042/
+  doom-themes-20180822.2042/doom-challenger-deep-theme.el
+  doom-themes-20180822.2042/doom-city-lights-theme.el
+  doom-themes-20180822.2042/doom-dracula-theme.el
+  doom-themes-20180822.2042/doom-molokai-theme.el
+  doom-themes-20180822.2042/doom-nord-light-theme.el
+  doom-themes-20180822.2042/doom-nord-theme.el
+  doom-themes-20180822.2042/doom-nova-theme.el
+  doom-themes-20180822.2042/doom-one-light-theme.el
+  doom-themes-20180822.2042/doom-one-theme.el
+  doom-themes-20180822.2042/doom-opera-light-theme.el
+  doom-themes-20180822.2042/doom-opera-theme.el
+  doom-themes-20180822.2042/doom-peacock-theme.el
+  doom-themes-20180822.2042/doom-solarized-light-theme.el
+  doom-themes-20180822.2042/doom-spacegrey-theme.el
+  doom-themes-20180822.2042/doom-themes-common.el
+  doom-themes-20180822.2042/doom-themes-neotree.el
+  doom-themes-20180822.2042/doom-themes-org.el
+  doom-themes-20180822.2042/doom-themes-pkg.el
+  doom-themes-20180822.2042/doom-themes-treemacs.el
+  doom-themes-20180822.2042/doom-themes.el
+  doom-themes-20180822.2042/doom-tomorrow-day-theme.el
+  doom-themes-20180822.2042/doom-tomorrow-night-theme.el
+  doom-themes-20180822.2042/doom-vibrant-theme.el
+Built doom-themes in 6.487s, finished at Wed Jul  7 11:45:33 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  532 Jul  7 11:45 packages/doom-themes-20180822.2042.entry
+232K -rw-r--r-- 1 root root 230K Jul  7 11:45 packages/doom-themes-20180822.2042.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:45 packages/doom-themes-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Jul  7 11:45 packages/doom-themes-readme.txt

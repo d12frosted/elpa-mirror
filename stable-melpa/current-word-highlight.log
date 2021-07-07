@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/kijimaD/current-word-highlight.git
 
 Updating /mnt/store/melpa/working/current-word-highlight/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built current-word-highlight in 4.546s, finished at Wed Jul  7 11:42:24 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Jul  7 11:42 packages/current-word-highlight-20210323.1346.el
+4.0K -rw-r--r-- 1 root root  416 Jul  7 11:42 packages/current-word-highlight-20210323.1346.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:42 packages/current-word-highlight-badge.svg
+4.0K -rw-r--r-- 1 root root  351 Jul  7 11:42 packages/current-word-highlight-readme.txt

@@ -1,0 +1,15 @@
+(org-projectile-helm .
+		     [(20170819 1526)
+		      ((org-projectile
+			(1 0 0))
+		       (helm
+			(2 3 1))
+		       (emacs
+			(25)))
+		      "helm functions for org-projectile" single
+		      ((:commit . "48f621b595e748c5e03431f237facf258ffc9443")
+		       (:authors
+			("Ivan Malison" . "IvanMalison@gmail.com"))
+		       (:maintainer "Ivan Malison" . "IvanMalison@gmail.com")
+		       (:keywords "org" "projectile" "todo" "helm" "outlines")
+		       (:url . "https://github.com/IvanMalison/org-projectile"))])

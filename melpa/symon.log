@@ -3,10 +3,15 @@ Fetcher: github
 Source:  https://github.com/zk-phi/symon.git
 
 Updating /mnt/store/melpa/working/symon/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: symon :files spec is equivalent to the default.
+Built symon in 4.124s, finished at Wed Jul  7 09:23:09 2021
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root  29K Jul  7 09:23 packages/symon-20160515.204.el
+4.0K -rw-r--r-- 1 root root  228 Jul  7 09:23 packages/symon-20160515.204.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:23 packages/symon-badge.svg
+ 24K -rw-r--r-- 1 root root  21K Jul  7 06:10 packages/symon-lingr-20150719.1342.el
+4.0K -rw-r--r-- 1 root root  335 Jul  7 06:10 packages/symon-lingr-20150719.1342.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:10 packages/symon-lingr-badge.svg
+4.0K -rw-r--r-- 1 root root  149 Jul  7 06:10 packages/symon-lingr-readme.txt
+4.0K -rw-r--r-- 1 root root  136 Jul  7 09:23 packages/symon-lingr.log
+4.0K -rw-r--r-- 1 root root  149 Jul  7 09:23 packages/symon-readme.txt

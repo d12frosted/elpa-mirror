@@ -3,10 +3,27 @@ Fetcher: github
 Source:  https://github.com/Silex/docker-api.el.git
 
 Updating /mnt/store/melpa/working/docker-api/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/docker-api/
+  to /tmp/docker-apie5zPhM/docker-api-20160525.720
+    docker-api-connection.el -> docker-api-connection.el
+    docker-api-containers.el -> docker-api-containers.el
+    docker-api-images.el -> docker-api-images.el
+    docker-api-networks.el -> docker-api-networks.el
+    docker-api-volumes.el -> docker-api-volumes.el
+    docker-api.el -> docker-api.el
+Created docker-api-20160525.720.tar containing:
+  docker-api-20160525.720/
+  docker-api-20160525.720/docker-api-connection.el
+  docker-api-20160525.720/docker-api-containers.el
+  docker-api-20160525.720/docker-api-images.el
+  docker-api-20160525.720/docker-api-networks.el
+  docker-api-20160525.720/docker-api-pkg.el
+  docker-api-20160525.720/docker-api-volumes.el
+  docker-api-20160525.720/docker-api.el
+Built docker-api in 6.751s, finished at Wed Jul  7 11:45:18 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  445 Jul  7 11:45 packages/docker-api-20160525.720.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 11:45 packages/docker-api-20160525.720.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:45 packages/docker-api-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 11:45 packages/docker-api-readme.txt

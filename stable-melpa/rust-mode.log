@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/rust-lang/rust-mode.git
 
 Updating /mnt/store/melpa/working/rust-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built rust-mode in 4.291s, finished at Wed Jul  7 09:17:35 2021
+ ✓ Success:
+ 84K -rw-r--r-- 1 root root  83K Jul  7 09:17 packages/rust-mode-20200618.1314.el
+4.0K -rw-r--r-- 1 root root  341 Jul  7 09:17 packages/rust-mode-20200618.1314.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:17 packages/rust-mode-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:17 packages/rust-mode-readme.txt

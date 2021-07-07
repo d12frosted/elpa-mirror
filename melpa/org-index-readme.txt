@@ -13,24 +13,22 @@ Purpose:
  Please note, that org-index uses org-id throughout and therefore adds
  an id-property to all nodes in the index.
 
- In addition to the index table, org-index introduces the concept of
+ In the addition to the index table, org-index introduces the concept of
  references: These are decorated numbers (e.g. 'R237' or '--455--');
  they are well suited to be used outside of org, e.g. in folder names,
- ticket systems or on printed documents. Use of references is optional.
+ ticket systems or on printed documents.
 
  On first invocation org-index will assist you in creating the index
- table. The index table is a normal org table, that needs to be stored
- in a dedicated node anywhere within your org files.
+ table.
 
- To start using your index, invoke the subcommand 'add' to create index
- entries and 'occur' to find them. The first call to 'add' will trigger
- the one-time assistant to create the index table.
+ To start using your index, invoke the subcommand 'add' to create
+ index entries and 'occur' to find them.
 
  The set of columns within the index-table is fixed (see variable
  `oidx--all-columns') but can be arranged in any order you wish; just
  edit the index table.  The number of columns shown during occur is
  determined by `org-index-occur-columns'.  Using both features allows to
- ignore columns during search.
+ make columns invisible, that you dont care about.
 
 
 Setup:
@@ -47,4 +45,4 @@ Further Information:
 
  - Watch the screencast at http://2484.de/org-index.html.
  - See the documentation of `org-index', which can also be read by
-   invoking `org-index' and typing 'help'.
+   invoking `org-index' and typing '?'.

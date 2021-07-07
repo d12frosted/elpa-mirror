@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/conao3/feather.el.git
 
 Updating /mnt/store/melpa/working/feather/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built feather in 5.764s, finished at Wed Jul  7 11:52:16 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  972 Jul  7 11:52 packages/feather-20181213.855.el
+4.0K -rw-r--r-- 1 root root  209 Jul  7 11:52 packages/feather-20181213.855.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:52 packages/feather-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 11:52 packages/feather-readme.txt

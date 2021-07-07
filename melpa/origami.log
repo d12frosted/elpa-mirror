@@ -3,10 +3,24 @@ Fetcher: github
 Source:  https://github.com/gregsexton/origami.el.git
 
 Updating /mnt/store/melpa/working/origami/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/origami/
+  to /tmp/origami2z1fEL/origami-20200331.1019
+    origami-parsers.el -> origami-parsers.el
+    origami.el -> origami.el
+Created origami-20200331.1019.tar containing:
+  origami-20200331.1019/
+  origami-20200331.1019/origami-parsers.el
+  origami-20200331.1019/origami-pkg.el
+  origami-20200331.1019/origami.el
+Built origami in 3.780s, finished at Wed Jul  7 09:09:12 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  415 Jul  7 09:09 packages/origami-20200331.1019.entry
+ 64K -rw-r--r-- 1 root root  60K Jul  7 09:09 packages/origami-20200331.1019.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:09 packages/origami-badge.svg
+8.0K -rw-r--r-- 1 root root 4.5K Jul  7 05:56 packages/origami-predef-20200615.1044.el
+4.0K -rw-r--r-- 1 root root  483 Jul  7 05:56 packages/origami-predef-20200615.1044.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 05:56 packages/origami-predef-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 05:56 packages/origami-predef-readme.txt
+4.0K -rw-r--r-- 1 root root  160 Jul  7 09:09 packages/origami-predef.log
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:09 packages/origami-readme.txt

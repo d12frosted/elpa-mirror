@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/emacs-php/phpactor.el.git
 
 Updating /mnt/store/melpa/working/phpactor/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/phpactor/
+  to /tmp/phpactorwEQPLC/phpactor-20180808.1417
+    phpactor.el -> phpactor.el
+    composer.json -> composer.json
+    composer.lock -> composer.lock
+Created phpactor-20180808.1417.tar containing:
+  phpactor-20180808.1417/
+  phpactor-20180808.1417/composer.json
+  phpactor-20180808.1417/composer.lock
+  phpactor-20180808.1417/phpactor-pkg.el
+  phpactor-20180808.1417/phpactor.el
+Built phpactor in 3.705s, finished at Wed Jul  7 09:11:53 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  399 Jul  7 09:11 packages/phpactor-20180808.1417.entry
+100K -rw-r--r-- 1 root root 100K Jul  7 09:11 packages/phpactor-20180808.1417.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:11 packages/phpactor-badge.svg
+4.0K -rw-r--r-- 1 root root  543 Jul  7 09:11 packages/phpactor-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/alexmurray/flycheck-clang-analyzer.git
 
 Updating /mnt/store/melpa/working/flycheck-clang-analyzer/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built flycheck-clang-analyzer in 3.537s, finished at Wed Jul  7 11:53:20 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Jul  7 11:53 packages/flycheck-clang-analyzer-20200429.238.el
+4.0K -rw-r--r-- 1 root root  421 Jul  7 11:53 packages/flycheck-clang-analyzer-20200429.238.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:53 packages/flycheck-clang-analyzer-badge.svg
+4.0K -rw-r--r-- 1 root root  605 Jul  7 11:53 packages/flycheck-clang-analyzer-readme.txt

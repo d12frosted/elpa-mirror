@@ -3,10 +3,37 @@ Fetcher: github
 Source:  https://github.com/dbrock/bongo.git
 
 Updating /mnt/store/melpa/working/bongo/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bongo/
+  to /tmp/bongoGmF3SF/bongo-20190722.1644
+    bongo.el -> bongo.el
+    lastfm-submit.el -> lastfm-submit.el
+    bongo.texi -> bongo.texi
+    images => images
+    tree-from-tags.rb -> tree-from-tags.rb
+Created /tmp/bongoGmF3SF/bongo-20190722.1644/bongo.info
+Created bongo-20190722.1644.tar containing:
+  bongo-20190722.1644/
+  bongo-20190722.1644/bongo-pkg.el
+  bongo-20190722.1644/bongo.el
+  bongo-20190722.1644/bongo.info
+  bongo-20190722.1644/dir
+  bongo-20190722.1644/images/
+  bongo-20190722.1644/images/action-track-icon.png
+  bongo-20190722.1644/images/audio-cd-track-icon.png
+  bongo-20190722.1644/images/bongo-logo.pbm
+  bongo-20190722.1644/images/collapsed-header-icon.png
+  bongo-20190722.1644/images/expanded-header-icon.png
+  bongo-20190722.1644/images/local-audio-file-track-icon.png
+  bongo-20190722.1644/images/local-video-file-track-icon.png
+  bongo-20190722.1644/images/track-mark-icon.png
+  bongo-20190722.1644/images/unknown-local-file-track-icon.png
+  bongo-20190722.1644/images/uri-track-icon.png
+  bongo-20190722.1644/lastfm-submit.el
+  bongo-20190722.1644/tree-from-tags.rb
+Built bongo in 9.763s, finished at Wed Jul  7 11:36:19 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  163 Jul  7 11:36 packages/bongo-20190722.1644.entry
+540K -rw-r--r-- 1 root root 540K Jul  7 11:36 packages/bongo-20190722.1644.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:36 packages/bongo-badge.svg
+4.0K -rw-r--r-- 1 root root  151 Jul  7 11:36 packages/bongo-readme.txt

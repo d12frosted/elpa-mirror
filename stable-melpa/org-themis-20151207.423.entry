@@ -1,0 +1,9 @@
+(org-themis .
+	    [(20151207 423)
+	     ((cl-lib
+	       (0 4)))
+	     "Experimental project management mode for org-mode" single
+	     ((:commit . "4b4bf1fa1e853664bf006dda8afe2db00e522aaa")
+	      (:maintainer "Zachary Elliott" . "contact@zell.io")
+	      (:keywords "org-mode" "elisp" "project")
+	      (:url . "http://github.com/zellio/org-themis"))])

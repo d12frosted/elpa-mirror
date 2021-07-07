@@ -4,11 +4,8 @@ files.  The key difference is, that pages are not prerendered by
 e.g. ghostscript and stored in the file-system, but rather created
 on-demand and stored in memory.
 
-Note: This package is built and tested on GNU/Linux systems. It
-works on macOS and Windows, but is officially supported only on
-GNU/Linux systems. This package will not make macOS or Windows
-specific functionality changes, behaviour on these systems is
-provided as-is.
+Note: This package requires external libraries and works currently
+only on GNU/Linux systems.
 
 Note: If you ever update it, you need to restart Emacs afterwards.
 

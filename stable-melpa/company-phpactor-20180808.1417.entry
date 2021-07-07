@@ -1,0 +1,15 @@
+(company-phpactor .
+		  [(20180808 1417)
+		   ((emacs
+		     (24 3))
+		    (cl-lib
+		     (0 5))
+		    (company
+		     (0 9 6)))
+		   "company-mode backend for Phpactor" single
+		   ((:commit . "61e4eab638168b7034eef0f11e35a89223fa7687")
+		    (:authors
+		     ("Martin Tang" . "martin.tang365@gmail.com"))
+		    (:maintainer "Martin Tang" . "martin.tang365@gmail.com")
+		    (:keywords "tools" "php")
+		    (:url . "https://github.com/emacs-php/phpactor.el"))])

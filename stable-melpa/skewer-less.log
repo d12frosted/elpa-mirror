@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/purcell/skewer-less.git
 
 Updating /mnt/store/melpa/working/skewer-less/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built skewer-less in 4.449s, finished at Wed Jul  7 09:19:42 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.1K Jul  7 09:19 packages/skewer-less-20131015.1322.el
+4.0K -rw-r--r-- 1 root root  366 Jul  7 09:19 packages/skewer-less-20131015.1322.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:19 packages/skewer-less-badge.svg
+4.0K -rw-r--r-- 1 root root  883 Jul  7 09:19 packages/skewer-less-readme.txt

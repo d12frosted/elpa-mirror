@@ -17,9 +17,6 @@ other related Emacs extensions as well; see
 http://wiki.apertium.org/wiki/Emacs#Quickstart for an init file
 that installs and configures both dix.el and some related packages.
 
-Optional dependencies:
-* `strie' – for the `dix-guess-pardef' function
-
 If you want keybindings that use `C-c' followed by letters, you
 should also add
 (add-hook 'dix-mode-hook #'dix-C-c-letter-keybindings)

@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/mhayashi1120/Emacs-gather.git
 
 Updating /mnt/store/melpa/working/gather/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: gather :files spec is equivalent to the default.
+Built gather in 8.154s, finished at Wed Jul  7 11:56:24 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Jul  7 11:56 packages/gather-20141115.1119.el
+4.0K -rw-r--r-- 1 root root  386 Jul  7 11:56 packages/gather-20141115.1119.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:56 packages/gather-badge.svg
+4.0K -rw-r--r-- 1 root root  356 Jul  7 11:56 packages/gather-readme.txt

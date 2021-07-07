@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/noctuid/emacs-sentence-navigation.git
 
 Updating /mnt/store/melpa/working/sentence-navigation/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built sentence-navigation in 4.213s, finished at Wed Jul  7 09:18:40 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  16K Jul  7 09:18 packages/sentence-navigation-20180408.1619.el
+4.0K -rw-r--r-- 1 root root  501 Jul  7 09:18 packages/sentence-navigation-20180408.1619.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:18 packages/sentence-navigation-badge.svg
+4.0K -rw-r--r-- 1 root root  578 Jul  7 09:18 packages/sentence-navigation-readme.txt

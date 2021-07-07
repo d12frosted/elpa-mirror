@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/terlar/indent-info.el.git
 
 Updating /mnt/store/melpa/working/indent-info/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built indent-info in 3.902s, finished at Wed Jul  7 12:04:42 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  13K Jul  7 12:04 packages/indent-info-20210111.745.el
+4.0K -rw-r--r-- 1 root root  407 Jul  7 12:04 packages/indent-info-20210111.745.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:04 packages/indent-info-badge.svg
+4.0K -rw-r--r-- 1 root root  147 Jul  7 12:04 packages/indent-info-readme.txt

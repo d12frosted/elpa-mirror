@@ -3,10 +3,21 @@ Fetcher: git
 Source:  https://thelambdalab.xyz/git/elpher.git
 
 Updating /mnt/store/melpa/working/elpher/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elpher/
+  to /tmp/elpherrVYeLW/elpher-20200919.1009
+    elpher.el -> elpher.el
+    elpher.texi -> elpher.texi
+Created /tmp/elpherrVYeLW/elpher-20200919.1009/elpher.info
+Created elpher-20200919.1009.tar containing:
+  elpher-20200919.1009/
+  elpher-20200919.1009/dir
+  elpher-20200919.1009/elpher-pkg.el
+  elpher-20200919.1009/elpher.el
+  elpher-20200919.1009/elpher.info
+Built elpher in 7.264s, finished at Wed Jul  7 11:47:58 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  351 Jul  7 11:47 packages/elpher-20200919.1009.entry
+120K -rw-r--r-- 1 root root 120K Jul  7 11:47 packages/elpher-20200919.1009.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:47 packages/elpher-badge.svg
+4.0K -rw-r--r-- 1 root root  930 Jul  7 11:47 packages/elpher-readme.txt

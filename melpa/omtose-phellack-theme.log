@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/franksn/omtose-phellack-theme.git
 
 Updating /mnt/store/melpa/working/omtose-phellack-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/omtose-phellack-theme/
+  to /tmp/omtose-phellack-themes0WImY/omtose-phellack-theme-20161111.2120
+  ! variants/omtose-darker-theme.el -> omtose-darker-theme.el
+  ! variants/omtose-phellack-theme-pkg.el -> omtose-phellack-theme-pkg.el
+  ! variants/omtose-softer-theme.el -> omtose-softer-theme.el
+Created omtose-phellack-theme-20161111.2120.tar containing:
+  omtose-phellack-theme-20161111.2120/
+  omtose-phellack-theme-20161111.2120/omtose-darker-theme.el
+  omtose-phellack-theme-20161111.2120/omtose-phellack-theme-pkg.el
+  omtose-phellack-theme-20161111.2120/omtose-softer-theme.el
+Built omtose-phellack-theme in 3.824s, finished at Wed Jul  7 09:06:16 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  164 Jul  7 09:06 packages/omtose-phellack-theme-20161111.2120.entry
+220K -rw-r--r-- 1 root root 220K Jul  7 09:06 packages/omtose-phellack-theme-20161111.2120.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/omtose-phellack-theme-badge.svg

@@ -3,10 +3,31 @@ Fetcher: github
 Source:  https://github.com/xwl/electric-spacing.git
 
 Updating /mnt/store/melpa/working/electric-spacing/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/electric-spacing/
+  to /tmp/electric-spacingghyqMT/electric-spacing-20210625.1722
+    electric-spacing-cc-mode.el -> electric-spacing-cc-mode.el
+    electric-spacing-emacs-lisp-mode.el -> electric-spacing-emacs-lisp-mode.el
+    electric-spacing-init.el -> electric-spacing-init.el
+    electric-spacing-org-mode.el -> electric-spacing-org-mode.el
+    electric-spacing-python-mode.el -> electric-spacing-python-mode.el
+    electric-spacing-rust-mode.el -> electric-spacing-rust-mode.el
+    electric-spacing-text-mode.el -> electric-spacing-text-mode.el
+    electric-spacing.el -> electric-spacing.el
+Created electric-spacing-20210625.1722.tar containing:
+  electric-spacing-20210625.1722/
+  electric-spacing-20210625.1722/electric-spacing-cc-mode.el
+  electric-spacing-20210625.1722/electric-spacing-emacs-lisp-mode.el
+  electric-spacing-20210625.1722/electric-spacing-init.el
+  electric-spacing-20210625.1722/electric-spacing-org-mode.el
+  electric-spacing-20210625.1722/electric-spacing-pkg.el
+  electric-spacing-20210625.1722/electric-spacing-python-mode.el
+  electric-spacing-20210625.1722/electric-spacing-rust-mode.el
+  electric-spacing-20210625.1722/electric-spacing-text-mode.el
+  electric-spacing-20210625.1722/electric-spacing.el
+Built electric-spacing in 3.530s, finished at Wed Jul  7 11:47:21 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  293 Jul  7 11:47 packages/electric-spacing-20210625.1722.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 11:47 packages/electric-spacing-20210625.1722.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:47 packages/electric-spacing-badge.svg
+4.0K -rw-r--r-- 1 root root  428 Jul  7 11:47 packages/electric-spacing-readme.txt

@@ -3,10 +3,59 @@ Fetcher: github
 Source:  https://github.com/idris-hackers/idris-mode.git
 
 Updating /mnt/store/melpa/working/idris-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/idris-mode/
+  to /tmp/idris-modeqINR5r/idris-mode-20200522.808
+    idris-commands.el -> idris-commands.el
+    idris-common-utils.el -> idris-common-utils.el
+    idris-compat.el -> idris-compat.el
+    idris-core.el -> idris-core.el
+    idris-events.el -> idris-events.el
+    idris-highlight-input.el -> idris-highlight-input.el
+    idris-hole-list.el -> idris-hole-list.el
+    idris-info.el -> idris-info.el
+    idris-ipkg-mode.el -> idris-ipkg-mode.el
+    idris-keys.el -> idris-keys.el
+    idris-log.el -> idris-log.el
+    idris-mode.el -> idris-mode.el
+    idris-prover.el -> idris-prover.el
+    idris-repl.el -> idris-repl.el
+    idris-settings.el -> idris-settings.el
+    idris-simple-indent.el -> idris-simple-indent.el
+    idris-syntax.el -> idris-syntax.el
+    idris-tree-info.el -> idris-tree-info.el
+    idris-warnings-tree.el -> idris-warnings-tree.el
+    idris-warnings.el -> idris-warnings.el
+    inferior-idris.el -> inferior-idris.el
+    logo-small.png -> logo-small.png
+Created idris-mode-20200522.808.tar containing:
+  idris-mode-20200522.808/
+  idris-mode-20200522.808/idris-commands.el
+  idris-mode-20200522.808/idris-common-utils.el
+  idris-mode-20200522.808/idris-compat.el
+  idris-mode-20200522.808/idris-core.el
+  idris-mode-20200522.808/idris-events.el
+  idris-mode-20200522.808/idris-highlight-input.el
+  idris-mode-20200522.808/idris-hole-list.el
+  idris-mode-20200522.808/idris-info.el
+  idris-mode-20200522.808/idris-ipkg-mode.el
+  idris-mode-20200522.808/idris-keys.el
+  idris-mode-20200522.808/idris-log.el
+  idris-mode-20200522.808/idris-mode-pkg.el
+  idris-mode-20200522.808/idris-mode.el
+  idris-mode-20200522.808/idris-prover.el
+  idris-mode-20200522.808/idris-repl.el
+  idris-mode-20200522.808/idris-settings.el
+  idris-mode-20200522.808/idris-simple-indent.el
+  idris-mode-20200522.808/idris-syntax.el
+  idris-mode-20200522.808/idris-tree-info.el
+  idris-mode-20200522.808/idris-warnings-tree.el
+  idris-mode-20200522.808/idris-warnings.el
+  idris-mode-20200522.808/inferior-idris.el
+  idris-mode-20200522.808/logo-small.png
+Built idris-mode in 4.029s, finished at Wed Jul  7 12:04:18 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  331 Jul  7 12:04 packages/idris-mode-20200522.808.entry
+260K -rw-r--r-- 1 root root 260K Jul  7 12:04 packages/idris-mode-20200522.808.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:04 packages/idris-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  150 Jul  7 12:04 packages/idris-mode-readme.txt

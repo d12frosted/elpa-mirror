@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Sliim/helm-project-persist.git
 
 Updating /mnt/store/melpa/working/helm-project-persist/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built helm-project-persist in 4.096s, finished at Wed Jul  7 12:01:31 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.3K Jul  7 12:01 packages/helm-project-persist-20150612.1610.el
+4.0K -rw-r--r-- 1 root root  388 Jul  7 12:01 packages/helm-project-persist-20150612.1610.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:01 packages/helm-project-persist-badge.svg
+4.0K -rw-r--r-- 1 root root  101 Jul  7 12:01 packages/helm-project-persist-readme.txt

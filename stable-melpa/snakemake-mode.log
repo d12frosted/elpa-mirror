@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/kyleam/snakemake-mode.git
 
 Updating /mnt/store/melpa/working/snakemake-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/snakemake-mode/
+  to /tmp/snakemake-mode4KEdJ1/snakemake-mode-20201109.315
+    snakemake-mode.el -> snakemake-mode.el
+    snakemake.el -> snakemake.el
+Created snakemake-mode-20201109.315.tar containing:
+  snakemake-mode-20201109.315/
+  snakemake-mode-20201109.315/snakemake-mode-pkg.el
+  snakemake-mode-20201109.315/snakemake-mode.el
+  snakemake-mode-20201109.315/snakemake.el
+Built snakemake-mode in 3.540s, finished at Wed Jul  7 09:20:57 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  415 Jul  7 09:20 packages/snakemake-mode-20201109.315.entry
+ 60K -rw-r--r-- 1 root root  60K Jul  7 09:20 packages/snakemake-mode-20201109.315.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:20 packages/snakemake-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  746 Jul  7 09:20 packages/snakemake-mode-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-vs/line-reminder.git
 
 Updating /mnt/store/melpa/working/line-reminder/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built line-reminder in 4.387s, finished at Wed Jul  7 08:58:09 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  20K Jul  7 08:58 packages/line-reminder-20210528.1426.el
+4.0K -rw-r--r-- 1 root root  417 Jul  7 08:58 packages/line-reminder-20210528.1426.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:58 packages/line-reminder-badge.svg
+4.0K -rw-r--r-- 1 root root   46 Jul  7 08:58 packages/line-reminder-readme.txt

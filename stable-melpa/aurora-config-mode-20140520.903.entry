@@ -1,0 +1,9 @@
+(aurora-config-mode .
+		    [(20140520 903)
+		     nil "Major mode for Apache Aurora configuration files" single
+		     ((:commit . "0a7ca7987c3a0824e25470389c7d25c337a81593")
+		      (:authors
+		       ("Berk D. Demir" . "bdd@mindcast.org"))
+		      (:maintainer "Berk D. Demir" . "bdd@mindcast.org")
+		      (:keywords "languages" "configuration")
+		      (:url . "https://github.com/bdd/aurora-config.el"))])

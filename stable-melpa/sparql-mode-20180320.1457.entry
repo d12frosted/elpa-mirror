@@ -1,0 +1,12 @@
+(sparql-mode .
+	     [(20180320 1457)
+	      ((cl-lib
+		(0 5))
+	       (emacs
+		(24 3)))
+	      "Edit and interactively evaluate SPARQL queries." tar
+	      ((:commit . "2837b97244111515c61fb3823c1479bc126a458b")
+	       (:authors
+		("Craig Andera <candera at wangdera dot com>"))
+	       (:maintainer "Bjarte Johansen <Bjarte dot Johansen at gmail dot com>")
+	       (:url . "https://github.com/ljos/sparql-mode"))])

@@ -3,24 +3,17 @@ major mode name in your mode-line and places like Ibuffer with an
 icon.  Currently the following programming modes are supported,
 among others:
 
-- C
-- C++
-- C#
 - CSS
 - Coffee
-- Dart
 - Emacs-Lisp
 - HTML
 - Haml
 - JavaScript
 - Lisp
-- Lua
 - nXML
 - PHP
 - Python
-- React
 - Ruby
-- Rust
 - Sass/Scss
 - Scheme
 - Shell-script

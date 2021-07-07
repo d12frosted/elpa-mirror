@@ -3,10 +3,29 @@ Fetcher: github
 Source:  https://github.com/hvesalai/emacs-sbt-mode.git
 
 Updating /mnt/store/melpa/working/sbt-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sbt-mode/
+  to /tmp/sbt-mode3yEhz6/sbt-mode-20180511.1622
+    sbt-mode-buffer.el -> sbt-mode-buffer.el
+    sbt-mode-comint.el -> sbt-mode-comint.el
+    sbt-mode-hydra.el -> sbt-mode-hydra.el
+    sbt-mode-project.el -> sbt-mode-project.el
+    sbt-mode-rgrep.el -> sbt-mode-rgrep.el
+    sbt-mode-vars.el -> sbt-mode-vars.el
+    sbt-mode.el -> sbt-mode.el
+Created sbt-mode-20180511.1622.tar containing:
+  sbt-mode-20180511.1622/
+  sbt-mode-20180511.1622/sbt-mode-buffer.el
+  sbt-mode-20180511.1622/sbt-mode-comint.el
+  sbt-mode-20180511.1622/sbt-mode-hydra.el
+  sbt-mode-20180511.1622/sbt-mode-pkg.el
+  sbt-mode-20180511.1622/sbt-mode-project.el
+  sbt-mode-20180511.1622/sbt-mode-rgrep.el
+  sbt-mode-20180511.1622/sbt-mode-vars.el
+  sbt-mode-20180511.1622/sbt-mode.el
+Built sbt-mode in 3.810s, finished at Wed Jul  7 09:17:53 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  255 Jul  7 09:17 packages/sbt-mode-20180511.1622.entry
+ 80K -rw-r--r-- 1 root root  80K Jul  7 09:17 packages/sbt-mode-20180511.1622.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:17 packages/sbt-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   67 Jul  7 09:17 packages/sbt-mode-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Trevoke/sqlup-mode.el.git
 
 Updating /mnt/store/melpa/working/sqlup-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built sqlup-mode in 4.055s, finished at Wed Jul  7 09:21:56 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.5K Jul  7 09:21 packages/sqlup-mode-20170610.1537.el
+4.0K -rw-r--r-- 1 root root  385 Jul  7 09:21 packages/sqlup-mode-20170610.1537.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:21 packages/sqlup-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:21 packages/sqlup-mode-readme.txt

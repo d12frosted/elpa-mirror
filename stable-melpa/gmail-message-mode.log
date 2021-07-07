@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Malabarba/gmail-mode.git
 
 Updating /mnt/store/melpa/working/gmail-message-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built gmail-message-mode in 3.437s, finished at Wed Jul  7 11:57:45 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  16K Jul  7 11:57 packages/gmail-message-mode-20160627.1847.el
+4.0K -rw-r--r-- 1 root root  495 Jul  7 11:57 packages/gmail-message-mode-20160627.1847.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:57 packages/gmail-message-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 2.0K Jul  7 11:57 packages/gmail-message-mode-readme.txt

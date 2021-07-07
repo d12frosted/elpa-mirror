@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/raxod502/ctrlf.git
 
 Updating /mnt/store/melpa/working/ctrlf/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ctrlf in 4.468s, finished at Wed Jul  7 11:42:14 2021
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root  52K Jul  7 11:42 packages/ctrlf-20210227.551.el
+4.0K -rw-r--r-- 1 root root  354 Jul  7 11:42 packages/ctrlf-20210227.551.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:42 packages/ctrlf-badge.svg
+4.0K -rw-r--r-- 1 root root  496 Jul  7 11:42 packages/ctrlf-readme.txt

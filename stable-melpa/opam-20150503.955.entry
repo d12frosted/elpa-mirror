@@ -1,0 +1,11 @@
+(opam .
+      [(20150503 955)
+       ((emacs
+	 (24 1)))
+       "OPAM tools" single
+       ((:commit . "83fb2850d29ec792754e0af18b015e089aad2695")
+	(:authors
+	 ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
+	(:maintainer "Sebastian Wiesner" . "swiesner@lunaryorn.com")
+	(:keywords "convenience")
+	(:url . "https://github.com/lunaryorn/opam.el"))])

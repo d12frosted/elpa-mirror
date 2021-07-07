@@ -17,11 +17,14 @@ Features:
 - generating and saving diagrams generated through WSD's online API.
 - support for WSD premium features (svg-export, etc) if API-key is
   provided.
-- rendering diagrams inline in Emacs, or in external OS viewer if image
+- rendering diagrams inline in emacs, or in external OS viewer if image
   format is not supported by Emacs.
 
 
 Customization:
+
+The mode can be slightly customized. Documenting this fully is on the
+TODO-list.
 
 To create mode-specific emacs-customizations, please use the
 wsd-mode-hook.
@@ -32,4 +35,3 @@ A short summary of customizable variables:
 - wsd-format (default png. svg requires premium, thus api-key.)
 - wsd-style (default modern-blue)
 - wsd-indent-offset (default 4)
-- wsd-font-lock-keywords

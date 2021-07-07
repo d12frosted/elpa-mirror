@@ -1,0 +1,17 @@
+(sourcekit .
+	   [(20170126 1153)
+	    ((emacs
+	      (24 3))
+	     (dash
+	      (2 12 1))
+	     (dash-functional
+	      (1 2 0))
+	     (request
+	      (0 2 0)))
+	    "Library to interact with sourcekittendaemon" single
+	    ((:commit . "8ba62ac25bf533b7f148f333bcb5c1db799f749b")
+	     (:authors
+	      ("Nathan Kot" . "nk@nathankot.com"))
+	     (:maintainer "Nathan Kot" . "nk@nathankot.com")
+	     (:keywords "tools" "processes")
+	     (:url . "https://github.com/nathankot/company-sourcekit"))])

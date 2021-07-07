@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/knu/phi-search-mc.el.git
 
 Updating /mnt/store/melpa/working/phi-search-mc/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built phi-search-mc in 4.637s, finished at Wed Jul  7 09:11:42 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jul  7 09:11 packages/phi-search-mc-20150218.655.el
+4.0K -rw-r--r-- 1 root root  417 Jul  7 09:11 packages/phi-search-mc-20150218.655.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:11 packages/phi-search-mc-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Jul  7 09:11 packages/phi-search-mc-readme.txt

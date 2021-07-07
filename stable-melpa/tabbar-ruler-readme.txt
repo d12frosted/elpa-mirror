@@ -1,6 +1,6 @@
 
 * Introduction
-Tabbar ruler is an Emacs package that allows both the tabbar and the
+Tabbar ruler is an emacs package that allows both the tabbar and the
 ruler to be used together.  In addition it allows auto-hiding of the
 menu-bar and tool-bar.
 
@@ -8,7 +8,7 @@ menu-bar and tool-bar.
 Tabbar appearance based on reverse engineering Aquaemacs code and
 changing to my preferences, and Emacs Wiki.
 
-Tabbar/Ruler integration is new.  Tabbar should be active on mouse
+Tabbar/Ruler integration is new. Tabbar should be active on mouse
 move.  Ruler should be active on self-insert commands.
 
 Also allows auto-hiding of toolbar and menu.

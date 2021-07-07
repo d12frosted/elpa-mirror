@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/robert-zaremba/auto-virtualenvwrapper.el.git
 
 Updating /mnt/store/melpa/working/auto-virtualenvwrapper/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built auto-virtualenvwrapper in 3.675s, finished at Wed Jul  7 11:34:40 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jul  7 11:34 packages/auto-virtualenvwrapper-20200510.1006.el
+4.0K -rw-r--r-- 1 root root  475 Jul  7 11:34 packages/auto-virtualenvwrapper-20200510.1006.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:34 packages/auto-virtualenvwrapper-badge.svg
+4.0K -rw-r--r-- 1 root root  343 Jul  7 11:34 packages/auto-virtualenvwrapper-readme.txt

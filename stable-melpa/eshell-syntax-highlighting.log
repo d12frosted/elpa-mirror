@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/akreisher/eshell-syntax-highlighting.git
 
 Updating /mnt/store/melpa/working/eshell-syntax-highlighting/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built eshell-syntax-highlighting in 4.223s, finished at Wed Jul  7 11:49:36 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Jul  7 11:49 packages/eshell-syntax-highlighting-20200921.903.el
+4.0K -rw-r--r-- 1 root root  448 Jul  7 11:49 packages/eshell-syntax-highlighting-20200921.903.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:49 packages/eshell-syntax-highlighting-badge.svg
+4.0K -rw-r--r-- 1 root root  114 Jul  7 11:49 packages/eshell-syntax-highlighting-readme.txt

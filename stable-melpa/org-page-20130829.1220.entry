@@ -1,0 +1,17 @@
+(org-page .
+	  [(20130829 1220)
+	   ((ht
+	     (1 5))
+	    (mustache
+	     (0 22))
+	    (htmlize
+	     (1 47))
+	    (org
+	     (8)))
+	   "a static site generator based on org mode" tar
+	   ((:commit . "09febf89d8dcb226aeedf8164169b31937b64439")
+	    (:authors
+	     ("Kelvin Hu <ini DOT kelvin AT gmail DOT com>"))
+	    (:maintainer "Kelvin Hu <ini DOT kelvin AT gmail DOT com>")
+	    (:keywords "org-mode" "convenience" "beautify")
+	    (:url . "https://github.com/kelvinh/org-page"))])

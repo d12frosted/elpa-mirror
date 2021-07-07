@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/dimitri/mbsync-el.git
 
 Updating /mnt/store/melpa/working/mbsync/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built mbsync in 4.186s, finished at Wed Jul  7 09:00:54 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.6K Jul  7 09:00 packages/mbsync-20200128.1053.el
+4.0K -rw-r--r-- 1 root root  296 Jul  7 09:00 packages/mbsync-20200128.1053.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:00 packages/mbsync-badge.svg
+4.0K -rw-r--r-- 1 root root   27 Jul  7 09:00 packages/mbsync-readme.txt

@@ -1,14 +1,20 @@
- Configuration,
-
+ Setup:
   "Ctags" (Universal Ctags is recommended) should exist.
+  "GNU Find" is used if it's installed but it's optional.
   Or else, customize `counsel-etags-update-tags-backend' to generate tags file.
   Please note etags bundled with Emacs is not supported any more.
 
-Usage,
+Usage:
 
   `counsel-etags-find-tag-at-point' to navigate.  This command will also
-  run `counsel-etags-scan-code' AUTOMATICALLY if tags file does not exist.
+  run `counsel-etags-scan-code' AUTOMATICALLY if tags file is not built yet.
   It also calls `counsel-etags-fallback-grep-function' if not tag is found.
+
+  Run `counsel-etags-list-tag-in-current-file' to list tags in current file.
+
+  Or just use native imenu with below setup,
+     (setq imenu-create-index-function
+           'counsel-etags-imenu-default-create-index-function)
 
   Use `counsel-etags-imenu-excluded-names' to exclude tags by name.
   Use `counsel-etags-imenu-excluded-types' to exclude tags by type
@@ -25,16 +31,8 @@ Usage,
   (".gitignore", ".hgignore", etc).  Path is either absolute or relative to the tags file.
   `counsel-etags-universal-ctags-p' to detect if Universal Ctags is used.
   `counsel-etags-exuberant-ctags-p' to detect if Exuberant Ctags is used.
-  See documentation of `counsel-etags-use-ripgrep-force' on using ripgrep.
-  If it's not set, correct grep program is automatically detected.
 
-Tips,
-- Use `pop-tag-mark' to jump back.
-
-- The grep program path on Native Windows Emacs uses either forward slash or
-  backward slash.  Like "C:/rg.exe" or "C:\\\\rg.exe".
-  If grep program path is added to environment variable PATH, you don't need
-  worry about slash problem.
+Tips:
 
 - Add below code into "~/.emacs" to AUTOMATICALLY update tags file:
 
@@ -56,7 +54,7 @@ Tips,
     (setq counsel-etags-extra-tags-files
           '("./TAGS" "/usr/include/TAGS" "$PROJ1/include/TAGS"))
 
-  Files in `counsel-etags-extra-tags-files' should have symbols with absolute path only.
+  Files in `counsel-etags-extra-tags-files' have only symbol with absolute path.
 
 - You can set up `counsel-etags-ignore-directories' and `counsel-etags-ignore-filenames',
   (with-eval-after-load 'counsel-etags
@@ -70,7 +68,6 @@ Tips,
  - Rust programming language is supported.
    The easiest setup is to use ".dir-locals.el".
   in root directory.  The content of .dir-locals.el" is as below,
-
   ((nil . ((counsel-etags-update-tags-backend . (lambda (src-dir) (shell-command "rusty-tags Emacs")))
            (counsel-etags-tags-file-name . "rusty-tags.emacs"))))
 
@@ -87,29 +84,24 @@ Tips,
  - `counsel-etags-find-tag-name-function' finds tag name at point.  If it returns nil,
    `find-tag-default' is used.  `counsel-etags-word-at-point' gets word at point.
 
- - You can append extra content into tags file in `counsel-etags-after-update-tags-hook'.
+ - User could append the extra content into tags file in `counsel-etags-after-update-tags-hook'.
    The parameter of hook is full path of the tags file.
-   `counsel-etags-tag-line' and `counsel-etags-append-to-tags-file' are helper functions
-   to update tags file in the hook.
+   `counsel-etags-tag-line' and `counsel-etags-append-to-tags-file' are helper functions to
+   update tags file in the hook.
 
  - The ignore files (.gitignore, etc) are automatically detected and append to ctags
    cli options as "--exclude="@/ignore/file/path".
    Set `counsel-etags-ignore-config-files' to nil to turn off this feature.
 
- - If base configuration file "~/.ctags.exuberant" exists, it's used to
+ - If base configuration file  "~/.ctags.exuberant" exists, it's used to
    generate "~/.ctags" automatically.
-   "~/.ctags.exuberant" is Exuberant Ctags format, but the "~/.ctags" could be
-   Universal Ctags format if Universal Ctags is used.
+   "~/.ctags.exuberant" is in Exuberant Ctags format, but the "~/.ctags" is
+   in Universal Ctags format if Universal Ctags is used.
    You can customize `counsel-etags-ctags-options-base' to change the path of
    base configuration file.
 
  - Grep result is sorted by string distance of current file path and candidate file path.
    The sorting happens in Emacs 27+.
    You can set `counsel-etags-sort-grep-result-p' to nil to disable sorting.
-
- - Run `counsel-etags-list-tag-in-current-file' to list tags in current file.
-   You can also use native imenu with below setup,
-     (setq imenu-create-index-function
-           'counsel-etags-imenu-default-create-index-function)
 
 See https://github.com/redguardtoo/counsel-etags/ for more tips.

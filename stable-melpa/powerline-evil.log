@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/johnson-christopher/powerline-evil.git
 
 Updating /mnt/store/melpa/working/powerline-evil/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/powerline-evil/
+  to /tmp/powerline-evilexIDDe/powerline-evil-20190603.340
+    powerline-evil-themes.el -> powerline-evil-themes.el
+    powerline-evil.el -> powerline-evil.el
+Created powerline-evil-20190603.340.tar containing:
+  powerline-evil-20190603.340/
+  powerline-evil-20190603.340/powerline-evil-pkg.el
+  powerline-evil-20190603.340/powerline-evil-themes.el
+  powerline-evil-20190603.340/powerline-evil.el
+Built powerline-evil in 3.366s, finished at Wed Jul  7 09:13:11 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  463 Jul  7 09:13 packages/powerline-evil-20190603.340.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:13 packages/powerline-evil-20190603.340.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:13 packages/powerline-evil-badge.svg
+4.0K -rw-r--r-- 1 root root   73 Jul  7 09:13 packages/powerline-evil-readme.txt

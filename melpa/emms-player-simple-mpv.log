@@ -3,10 +3,25 @@ Fetcher: github
 Source:  https://github.com/momomo5717/emms-player-simple-mpv.git
 
 Updating /mnt/store/melpa/working/emms-player-simple-mpv/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/emms-player-simple-mpv/
+  to /tmp/emms-player-simple-mpvej1NdP/emms-player-simple-mpv-20160924.1525
+    emms-player-simple-mpv-control-functions.el -> emms-player-simple-mpv-control-functions.el
+    emms-player-simple-mpv-e.g.hydra.el -> emms-player-simple-mpv-e.g.hydra.el
+    emms-player-simple-mpv-e.g.playlist-fname.el -> emms-player-simple-mpv-e.g.playlist-fname.el
+    emms-player-simple-mpv-e.g.time-display.el -> emms-player-simple-mpv-e.g.time-display.el
+    emms-player-simple-mpv.el -> emms-player-simple-mpv.el
+Created emms-player-simple-mpv-20160924.1525.tar containing:
+  emms-player-simple-mpv-20160924.1525/
+  emms-player-simple-mpv-20160924.1525/emms-player-simple-mpv-control-functions.el
+  emms-player-simple-mpv-20160924.1525/emms-player-simple-mpv-e.g.hydra.el
+  emms-player-simple-mpv-20160924.1525/emms-player-simple-mpv-e.g.playlist-fname.el
+  emms-player-simple-mpv-20160924.1525/emms-player-simple-mpv-e.g.time-display.el
+  emms-player-simple-mpv-20160924.1525/emms-player-simple-mpv-pkg.el
+  emms-player-simple-mpv-20160924.1525/emms-player-simple-mpv.el
+Built emms-player-simple-mpv in 3.901s, finished at Wed Jul  7 11:48:29 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  417 Jul  7 11:48 packages/emms-player-simple-mpv-20160924.1525.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 11:48 packages/emms-player-simple-mpv-20160924.1525.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:48 packages/emms-player-simple-mpv-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Jul  7 11:48 packages/emms-player-simple-mpv-readme.txt

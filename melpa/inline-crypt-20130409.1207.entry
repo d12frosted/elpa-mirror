@@ -1,0 +1,9 @@
+(inline-crypt .
+	      [(20130409 1207)
+	       nil "Simple inline encryption via openssl" tar
+	       ((:commit . "497ce9dc29a8ccac0b6dd6854f5d120514350282")
+		(:authors
+		 ("Daniel Ralston" . "Wubbulous@gmail.com"))
+		(:maintainer "Daniel Ralston" . "Wubbulous@gmail.com")
+		(:keywords "crypt")
+		(:url . "https://github.com/Sodel-the-Vociferous/inline-crypt-el"))])

@@ -3,10 +3,25 @@ Fetcher: github
 Source:  https://github.com/abo-abo/pamparam.git
 
 Updating /mnt/store/melpa/working/pamparam/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pamparam/
+  to /tmp/pamparamfMGfEc/pamparam-20210105.1513
+    pamparam.el -> pamparam.el
+    doc => doc
+Created pamparam-20210105.1513.tar containing:
+  pamparam-20210105.1513/
+  pamparam-20210105.1513/doc/
+  pamparam-20210105.1513/doc/sets/
+  pamparam-20210105.1513/doc/sets/capitals/
+  pamparam-20210105.1513/doc/sets/capitals/capitals.org
+  pamparam-20210105.1513/doc/sets/clojure/
+  pamparam-20210105.1513/doc/sets/clojure/clojure.org
+  pamparam-20210105.1513/pamparam-pkg.el
+  pamparam-20210105.1513/pamparam.el
+Built pamparam in 3.584s, finished at Wed Jul  7 09:10:25 2021
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root  38K Feb  1  2019 packages/pamparam-20190122.1412.el
+4.0K -rw-r--r-- 1 root root  482 Jul  7 09:10 packages/pamparam-20210105.1513.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 09:10 packages/pamparam-20210105.1513.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:10 packages/pamparam-badge.svg
+4.0K -rw-r--r-- 1 root root  144 Jul  7 09:10 packages/pamparam-readme.txt

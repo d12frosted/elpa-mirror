@@ -3,10 +3,28 @@ Fetcher: git
 Source:  https://salsa.debian.org/emacsen-team/dpkg-dev-el.git
 
 Updating /mnt/store/melpa/working/dpkg-dev-el/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dpkg-dev-el/
+  to /tmp/dpkg-dev-elwkSRGx/dpkg-dev-el-20180624.6
+    debian-bts-control.el -> debian-bts-control.el
+    debian-changelog-mode.el -> debian-changelog-mode.el
+    debian-control-mode.el -> debian-control-mode.el
+    debian-copyright.el -> debian-copyright.el
+    dpkg-dev-el-pkg.el -> dpkg-dev-el-pkg.el
+    dpkg-dev-el.el -> dpkg-dev-el.el
+    readme-debian.el -> readme-debian.el
+Created dpkg-dev-el-20180624.6.tar containing:
+  dpkg-dev-el-20180624.6/
+  dpkg-dev-el-20180624.6/debian-bts-control.el
+  dpkg-dev-el-20180624.6/debian-changelog-mode.el
+  dpkg-dev-el-20180624.6/debian-control-mode.el
+  dpkg-dev-el-20180624.6/debian-copyright.el
+  dpkg-dev-el-20180624.6/dpkg-dev-el-pkg.el
+  dpkg-dev-el-20180624.6/dpkg-dev-el.el
+  dpkg-dev-el-20180624.6/readme-debian.el
+Built dpkg-dev-el in 3.977s, finished at Wed Jul  7 11:45:39 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  175 Jul  7 11:45 packages/dpkg-dev-el-20180624.6.entry
+172K -rw-r--r-- 1 root root 170K Jul  7 11:45 packages/dpkg-dev-el-20180624.6.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:45 packages/dpkg-dev-el-badge.svg
+4.0K -rw-r--r-- 1 root root   67 Jul  7 11:45 packages/dpkg-dev-el-readme.txt

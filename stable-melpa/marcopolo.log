@@ -3,10 +3,33 @@ Fetcher: github
 Source:  https://github.com/nlamirault/marcopolo.git
 
 Updating /mnt/store/melpa/working/marcopolo/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/marcopolo/
+  to /tmp/marcopoloxoMUsd/marcopolo-20150326.1618
+    marcopolo-api.el -> marcopolo-api.el
+    marcopolo-custom.el -> marcopolo-custom.el
+    marcopolo-hub.el -> marcopolo-hub.el
+    marcopolo-mode.el -> marcopolo-mode.el
+    marcopolo-registry.el -> marcopolo-registry.el
+    marcopolo-ui.el -> marcopolo-ui.el
+    marcopolo-utils.el -> marcopolo-utils.el
+    marcopolo-version.el -> marcopolo-version.el
+    marcopolo.el -> marcopolo.el
+Created marcopolo-20150326.1618.tar containing:
+  marcopolo-20150326.1618/
+  marcopolo-20150326.1618/marcopolo-api.el
+  marcopolo-20150326.1618/marcopolo-custom.el
+  marcopolo-20150326.1618/marcopolo-hub.el
+  marcopolo-20150326.1618/marcopolo-mode.el
+  marcopolo-20150326.1618/marcopolo-pkg.el
+  marcopolo-20150326.1618/marcopolo-registry.el
+  marcopolo-20150326.1618/marcopolo-ui.el
+  marcopolo-20150326.1618/marcopolo-utils.el
+  marcopolo-20150326.1618/marcopolo-version.el
+  marcopolo-20150326.1618/marcopolo.el
+Built marcopolo in 3.764s, finished at Wed Jul  7 09:00:29 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  488 Jul  7 09:00 packages/marcopolo-20150326.1618.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 09:00 packages/marcopolo-20150326.1618.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:00 packages/marcopolo-badge.svg
+4.0K -rw-r--r-- 1 root root  232 Jul  7 09:00 packages/marcopolo-readme.txt

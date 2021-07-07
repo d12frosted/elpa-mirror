@@ -1,0 +1,17 @@
+(merlin-iedit .
+	      [(20210409 1323)
+	       ((emacs
+		 (25 1))
+		(merlin
+		 (3))
+		(iedit
+		 (0 9)))
+	       "Merlin and iedit integration." single
+	       ((:commit . "fe7380bb13ff91f8ed5cfbfea6a6ca01ee1ef88c")
+		(:authors
+		 ("Simon Castellan <simon.castellan(_)iuwt.fr>")
+		 ("Frédéric Bour <frederic.bour(_)lakaban.net>")
+		 ("Thomas Refis <thomas.refis(_)gmail.com>"))
+		(:maintainer "Simon Castellan <simon.castellan(_)iuwt.fr>")
+		(:keywords "ocaml" "languages")
+		(:url . "http://github.com/ocaml/merlin"))])

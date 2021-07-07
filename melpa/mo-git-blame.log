@@ -3,10 +3,8 @@ Fetcher: gitlab
 Source:  https://gitlab.com/mbunkus/mo-git-blame.git
 
 Updating /mnt/store/melpa/working/mo-git-blame/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built mo-git-blame in 4.272s, finished at Wed Jul  7 09:01:53 2021
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root  37K Jul  7 09:01 packages/mo-git-blame-20160129.1759.el
+4.0K -rw-r--r-- 1 root root  313 Jul  7 09:01 packages/mo-git-blame-20160129.1759.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:01 packages/mo-git-blame-badge.svg

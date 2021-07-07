@@ -3,7 +3,7 @@
 ;; Author: Thamer Mahmoud <thamer.mahmoud@gmail.com>
 ;; Version: 1.10
 ;; Package-Version: 20160529.2017
-;; Package-Commit: ad328a15c5deffc1021af9b3f19a745dcd8f4415
+;; Package-Commit: b17b3087e0084a5571a9ac4d47ccfc36d96b109e
 ;; Time-stamp: <2016-05-29 19:12:11 thamer>
 ;; URL: https://github.com/thamer/diredful
 ;; Keywords: dired, colors, extension, widget

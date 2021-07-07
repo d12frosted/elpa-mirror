@@ -1,0 +1,13 @@
+(direnv .
+	[(20200229 1525)
+	 ((emacs
+	   (25))
+	  (dash
+	   (2 12 0)))
+	 "Support for direnv" single
+	 ((:commit . "1f93e3f9cae5ec171939fe5c1fe9744a28fa6576")
+	  (:authors
+	   ("wouter bolsterlee" . "wouter@bolsterl.ee"))
+	  (:maintainer "wouter bolsterlee" . "wouter@bolsterl.ee")
+	  (:keywords "direnv" "environment" "processes" "unix" "tools")
+	  (:url . "https://github.com/wbolster/emacs-direnv"))])

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/seagle0128/all-the-icons-ivy-rich.git
 
 Updating /mnt/store/melpa/working/all-the-icons-ivy-rich/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built all-the-icons-ivy-rich in 4.036s, finished at Wed Jul  7 11:32:47 2021
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root  42K Jul  7 11:32 packages/all-the-icons-ivy-rich-20210626.1956.el
+4.0K -rw-r--r-- 1 root root  490 Jul  7 11:32 packages/all-the-icons-ivy-rich-20210626.1956.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:32 packages/all-the-icons-ivy-rich-badge.svg
+4.0K -rw-r--r-- 1 root root  243 Jul  7 11:32 packages/all-the-icons-ivy-rich-readme.txt

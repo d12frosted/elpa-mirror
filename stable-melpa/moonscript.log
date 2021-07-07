@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/k2052/moonscript-mode.git
 
 Updating /mnt/store/melpa/working/moonscript/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/moonscript/
+  to /tmp/moonscriptgqtt9u/moonscript-20170831.2226
+    moonscript-repl.el -> moonscript-repl.el
+    moonscript.el -> moonscript.el
+Created moonscript-20170831.2226.tar containing:
+  moonscript-20170831.2226/
+  moonscript-20170831.2226/moonscript-pkg.el
+  moonscript-20170831.2226/moonscript-repl.el
+  moonscript-20170831.2226/moonscript.el
+Built moonscript in 3.626s, finished at Wed Jul  7 09:02:23 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  344 Jul  7 09:02 packages/moonscript-20170831.2226.entry
+ 12K -rw-r--r-- 1 root root  10K Jul  7 09:02 packages/moonscript-20170831.2226.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:02 packages/moonscript-badge.svg
+4.0K -rw-r--r-- 1 root root  150 Jul  7 09:02 packages/moonscript-readme.txt

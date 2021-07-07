@@ -1,0 +1,10 @@
+(ido-yes-or-no .
+	       [(20160218 17)
+		((ido-completing-read+
+		  (0)))
+		"Use Ido to answer yes-or-no questions" single
+		((:commit . "9ddee9e878ad62d58c9f4b3a7685f22b8e36e420")
+		 (:authors
+		  ("Ryan C. Thompson"))
+		 (:maintainer "Ryan C. Thompson")
+		 (:url . "https://github.com/DarwinAwardWinner/ido-yes-or-no"))])

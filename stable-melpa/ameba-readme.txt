@@ -1,5 +1,4 @@
-
-Ameba <https://github.com/crystal-ameba/ameba> is a static code analysis tool for Crystal.
+Ameba <https://github.com/veelenga/ameba> is a static code analysis tool for Crystal.
 This package allows you to use this tool directly in Emacs.
 
 Usage:
@@ -12,7 +11,7 @@ Run Ameba on the currently visited file:
 
 Run Ameba on the entire project:
 
-    (ameba-check-project)
+    (ameba-check-current-project)
 
 Prompt from a directory on which to run Ameba:
 

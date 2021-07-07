@@ -1,3 +1,4 @@
+
 Provides quick access to Scheme Requests for Implementation (SRFI)
 documents from within Emacs:
 
@@ -9,6 +10,4 @@ documents from within Emacs:
 * The *SRFI* buffer provides one-key commands to visit the SRFI
   document, its discussion (mailing list) archive, and its version
   control repository. These commands open the right web pages in
-  your web browser using `browse-url'. The standard variable
-  `browse-url-browser-function' can be used to control which web
-  browser is used to open what pages.
+  your web browser using `browse-url'.

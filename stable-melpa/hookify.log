@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Silex/hookify.git
 
 Updating /mnt/store/melpa/working/hookify/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built hookify in 3.719s, finished at Wed Jul  7 12:03:21 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.2K Jul  7 12:03 packages/hookify-20141216.2209.el
+4.0K -rw-r--r-- 1 root root  422 Jul  7 12:03 packages/hookify-20141216.2209.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:03 packages/hookify-badge.svg
+4.0K -rw-r--r-- 1 root root   70 Jul  7 12:03 packages/hookify-readme.txt

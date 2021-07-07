@@ -1,0 +1,13 @@
+(mpmc-queue .
+	    [(20180302 1653)
+	     ((emacs
+	       (26 0))
+	      (queue
+	       (0 2 0)))
+	     "a multiple-producer-multiple-consumer queue" single
+	     ((:commit . "4775ddcb120528828ef1fcb7ee761524a0907a31")
+	      (:authors
+	       ("Sho Mizoe" . "sho.mizoe@gmail.com"))
+	      (:maintainer "Sho Mizoe" . "sho.mizoe@gmail.com")
+	      (:keywords "lisp" "async")
+	      (:url . "https://github.com/smizoe/mpmc-queue"))])

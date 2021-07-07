@@ -1,0 +1,11 @@
+(ranger .
+	[(20161003 636)
+	 ((emacs
+	   (24 4)))
+	 "Make dired more like ranger" single
+	 ((:commit . "584e4ae8cce1c54a44b40dd4c77fbb2f06d73ecb")
+	  (:authors
+	   ("Rich Alesi <https://github.com/ralesi>"))
+	  (:maintainer "Rich Alesi <https://github.com/ralesi>")
+	  (:keywords "files" "convenience")
+	  (:url . "https://github.com/ralesi/ranger"))])

@@ -3,10 +3,22 @@ Fetcher: github
 Source:  https://github.com/sergeyklay/bnf-mode.git
 
 Updating /mnt/store/melpa/working/bnf-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bnf-mode/
+  to /tmp/bnf-modefyJlIy/bnf-mode-20200301.2140
+    bnf-mode.el -> bnf-mode.el
+    dir -> dir
+    bnf-mode.info -> bnf-mode.info
+    bnf-mode.texi -> bnf-mode.texi
+Created bnf-mode-20200301.2140.tar containing:
+  bnf-mode-20200301.2140/
+  bnf-mode-20200301.2140/bnf-mode-pkg.el
+  bnf-mode-20200301.2140/bnf-mode.el
+  bnf-mode-20200301.2140/bnf-mode.info
+  bnf-mode-20200301.2140/dir
+Built bnf-mode in 4.182s, finished at Wed Jul  7 11:36:13 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  408 Jul  7 11:36 packages/bnf-mode-20200301.2140.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:36 packages/bnf-mode-20200301.2140.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:36 packages/bnf-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  228 Jul  7 11:36 packages/bnf-mode-readme.txt

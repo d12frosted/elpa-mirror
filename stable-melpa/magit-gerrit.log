@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/magit-gerrit.git
 
 Updating /mnt/store/melpa/working/magit-gerrit/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built magit-gerrit in 4.006s, finished at Wed Jul  7 08:59:51 2021
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root  21K Jul  7 08:59 packages/magit-gerrit-20151124.400.el
+4.0K -rw-r--r-- 1 root root  361 Jul  7 08:59 packages/magit-gerrit-20151124.400.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:59 packages/magit-gerrit-badge.svg
+4.0K -rw-r--r-- 1 root root  308 Jul  7 08:59 packages/magit-gerrit-readme.txt

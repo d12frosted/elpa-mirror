@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/rolandwalker/ucs-utils.git
 
 Updating /mnt/store/melpa/working/ucs-utils/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ucs-utils/
+  to /tmp/ucs-utilsq9mmBp/ucs-utils-20150826.1414
+    ucs-utils-6.0-delta.el -> ucs-utils-6.0-delta.el
+    ucs-utils.el -> ucs-utils.el
+Created ucs-utils-20150826.1414.tar containing:
+  ucs-utils-20150826.1414/
+  ucs-utils-20150826.1414/ucs-utils-6.0-delta.el
+  ucs-utils-20150826.1414/ucs-utils-pkg.el
+  ucs-utils-20150826.1414/ucs-utils.el
+Built ucs-utils in 3.523s, finished at Wed Jul  7 09:26:14 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  462 Jul  7 09:26 packages/ucs-utils-20150826.1414.entry
+732K -rw-r--r-- 1 root root 730K Jul  7 09:26 packages/ucs-utils-20150826.1414.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:26 packages/ucs-utils-badge.svg
+8.0K -rw-r--r-- 1 root root 4.5K Jul  7 09:26 packages/ucs-utils-readme.txt

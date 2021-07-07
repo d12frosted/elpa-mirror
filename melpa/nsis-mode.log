@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/mattfidler/nsis-mode.git
 
 Updating /mnt/store/melpa/working/nsis-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nsis-mode/
+  to /tmp/nsis-modePkUaJN/nsis-mode-20120820.1809
+    nsis-mode.el -> nsis-mode.el
+    nsis-mode.texi -> nsis-mode.texi
+Created /tmp/nsis-modePkUaJN/nsis-mode-20120820.1809/nsis-mode.info
+Created nsis-mode-20120820.1809.tar containing:
+  nsis-mode-20120820.1809/
+  nsis-mode-20120820.1809/dir
+  nsis-mode-20120820.1809/nsis-mode-pkg.el
+  nsis-mode-20120820.1809/nsis-mode.el
+  nsis-mode-20120820.1809/nsis-mode.info
+Built nsis-mode in 7.249s, finished at Wed Jul  7 09:05:03 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  288 Jul  7 09:05 packages/nsis-mode-20120820.1809.entry
+ 92K -rw-r--r-- 1 root root  90K Jul  7 09:05 packages/nsis-mode-20120820.1809.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:05 packages/nsis-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  500 Jul  7 09:05 packages/nsis-mode-readme.txt

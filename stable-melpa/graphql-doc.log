@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ifitzpatrick/graphql-doc.el.git
 
 Updating /mnt/store/melpa/working/graphql-doc/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built graphql-doc in 3.079s, finished at Wed Jul  7 11:58:51 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Jul  7 11:58 packages/graphql-doc-20210520.533.el
+4.0K -rw-r--r-- 1 root root  374 Jul  7 11:58 packages/graphql-doc-20210520.533.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:58 packages/graphql-doc-badge.svg
+4.0K -rw-r--r-- 1 root root  339 Jul  7 11:58 packages/graphql-doc-readme.txt

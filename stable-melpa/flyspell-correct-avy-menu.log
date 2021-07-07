@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/d12frosted/flyspell-correct.git
 
 Updating /mnt/store/melpa/working/flyspell-correct-avy-menu/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built flyspell-correct-avy-menu in 3.763s, finished at Wed Jul  7 11:55:09 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Jul  7 11:55 packages/flyspell-correct-avy-menu-20191230.630.el
+4.0K -rw-r--r-- 1 root root  550 Jul  7 11:55 packages/flyspell-correct-avy-menu-20191230.630.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:55 packages/flyspell-correct-avy-menu-badge.svg
+4.0K -rw-r--r-- 1 root root  494 Jul  7 11:55 packages/flyspell-correct-avy-menu-readme.txt

@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/zellio/j-mode.git
 
 Updating /mnt/store/melpa/working/j-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/j-mode/
+  to /tmp/j-modejQvweV/j-mode-20140702.1509
+    j-console.el -> j-console.el
+    j-font-lock.el -> j-font-lock.el
+    j-help.el -> j-help.el
+    j-mode.el -> j-mode.el
+Created j-mode-20140702.1509.tar containing:
+  j-mode-20140702.1509/
+  j-mode-20140702.1509/j-console.el
+  j-mode-20140702.1509/j-font-lock.el
+  j-mode-20140702.1509/j-help.el
+  j-mode-20140702.1509/j-mode-pkg.el
+  j-mode-20140702.1509/j-mode.el
+Built j-mode in 3.602s, finished at Wed Jul  7 12:06:12 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  212 Jul  7 12:06 packages/j-mode-20140702.1509.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 12:06 packages/j-mode-20140702.1509.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:06 packages/j-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  468 Jul  7 12:06 packages/j-mode-readme.txt

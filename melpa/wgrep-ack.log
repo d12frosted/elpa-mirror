@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/mhayashi1120/Emacs-wgrep.git
 
 Updating /mnt/store/melpa/working/wgrep-ack/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built wgrep-ack in 3.736s, finished at Wed Jul  7 09:28:38 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.5K Jul  7 09:28 packages/wgrep-ack-20200128.109.el
+4.0K -rw-r--r-- 1 root root  470 Jul  7 09:28 packages/wgrep-ack-20200128.109.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:28 packages/wgrep-ack-badge.svg
+4.0K -rw-r--r-- 1 root root   97 Jul  7 09:28 packages/wgrep-ack-readme.txt

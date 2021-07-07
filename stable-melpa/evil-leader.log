@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/cofi/evil-leader.git
 
 Updating /mnt/store/melpa/working/evil-leader/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built evil-leader in 7.887s, finished at Wed Jul  7 11:50:38 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.9K Jul  7 11:50 packages/evil-leader-20140606.1240.el
+4.0K -rw-r--r-- 1 root root  421 Jul  7 11:50 packages/evil-leader-20140606.1240.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:50 packages/evil-leader-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Jul  7 11:50 packages/evil-leader-readme.txt

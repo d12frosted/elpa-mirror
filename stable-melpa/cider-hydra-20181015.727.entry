@@ -1,0 +1,13 @@
+(cider-hydra .
+	     [(20181015 727)
+	      ((cider
+		(0 18 0))
+	       (hydra
+		(0 13 0)))
+	      "Hydras for CIDER." single
+	      ((:commit . "5956c3909cd9beae11f64973e4f0d830cea7860d")
+	       (:authors
+		("Tianxiang Xiong" . "tianxiang.xiong@gmail.com"))
+	       (:maintainer "Tianxiang Xiong" . "tianxiang.xiong@gmail.com")
+	       (:keywords "convenience" "tools")
+	       (:url . "https://github.com/clojure-emacs/cider-hydra"))])

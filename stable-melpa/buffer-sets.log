@@ -3,10 +3,9 @@ Fetcher: git
 Source:  https://git.flintfam.org/swf-projects/buffer-sets.git
 
 Updating /mnt/store/melpa/working/buffer-sets/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built buffer-sets in 3.236s, finished at Wed Jul  7 11:36:43 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  13K Jul  7 11:36 packages/buffer-sets-20170718.340.el
+4.0K -rw-r--r-- 1 root root  411 Jul  7 11:36 packages/buffer-sets-20170718.340.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:36 packages/buffer-sets-badge.svg
+4.0K -rw-r--r-- 1 root root    4 Jul  7 11:36 packages/buffer-sets-readme.txt

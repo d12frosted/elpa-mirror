@@ -11,8 +11,6 @@ following to your .emacs:
 
 ; Changes Log:
 
-   Fix numbering of minibuffer for recent Emacs versions.
-
 2013-03-23 (1.1.2)
    Fix numbering in terminal mode with menu bar visible.
    Add face for window number.  (thanks to Chen Bin)

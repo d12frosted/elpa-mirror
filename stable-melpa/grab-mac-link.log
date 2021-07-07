@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/grab-mac-link.el.git
 
 Updating /mnt/store/melpa/working/grab-mac-link/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built grab-mac-link in 3.769s, finished at Wed Jul  7 11:58:44 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  13K Jul  7 11:58 packages/grab-mac-link-20200712.428.el
+4.0K -rw-r--r-- 1 root root  342 Jul  7 11:58 packages/grab-mac-link-20200712.428.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:58 packages/grab-mac-link-badge.svg
+4.0K -rw-r--r-- 1 root root  628 Jul  7 11:58 packages/grab-mac-link-readme.txt

@@ -1,0 +1,11 @@
+(erefactor .
+	   [(20150621 43)
+	    ((cl-lib
+	      (0 3)))
+	    "Emacs-Lisp refactoring utilities" single
+	    ((:commit . "fde3fd42c815c76e8015f69518a92f6bfcfde990")
+	     (:authors
+	      ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
+	     (:maintainer "Masahiro Hayashi" . "mhayashi1120@gmail.com")
+	     (:keywords "extensions" "tools" "maint")
+	     (:url . "https://github.com/mhayashi1120/Emacs-erefactor"))])

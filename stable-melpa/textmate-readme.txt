@@ -10,8 +10,6 @@ features.
    ⌘[ - Shift Left
  ⌥⌘] - Align Assignments
  ⌥⌘[ - Indent Line
-   ⌥↑ - Column Up
-   ⌥↓ - Column Down
  ⌘RET - Insert Newline at Line's End
  ⌥⌘T - Reset File Cache (for Go to File)
 

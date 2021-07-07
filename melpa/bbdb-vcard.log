@@ -3,10 +3,22 @@ Fetcher: github
 Source:  https://github.com/tohojo/bbdb-vcard.git
 
 Updating /mnt/store/melpa/working/bbdb-vcard/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bbdb-vcard/
+  to /tmp/bbdb-vcardOoS5ip/bbdb-vcard-20100421.958
+    bbdb-vcard.el -> bbdb-vcard.el
+    test-bbdb-vcard.el -> test-bbdb-vcard.el
+    vcard.el -> vcard.el
+Created bbdb-vcard-20100421.958.tar containing:
+  bbdb-vcard-20100421.958/
+  bbdb-vcard-20100421.958/bbdb-vcard-pkg.el
+  bbdb-vcard-20100421.958/bbdb-vcard.el
+  bbdb-vcard-20100421.958/test-bbdb-vcard.el
+  bbdb-vcard-20100421.958/vcard.el
+Built bbdb-vcard in 4.212s, finished at Wed Jul  7 11:35:24 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  390 Jul  7 11:35 packages/bbdb-vcard-20100421.958.entry
+132K -rw-r--r-- 1 root root 130K Jul  7 11:35 packages/bbdb-vcard-20100421.958.tar
+ 64K -rw-r--r-- 1 root root  62K Oct 20  2020 packages/bbdb-vcard-20201016.1902.el
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:35 packages/bbdb-vcard-badge.svg
+ 12K -rw-r--r-- 1 root root 9.1K Jul  7 11:35 packages/bbdb-vcard-readme.txt

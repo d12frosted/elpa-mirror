@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ffevotte/sync-recentf.git
 
 Updating /mnt/store/melpa/working/sync-recentf/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built sync-recentf in 4.248s, finished at Wed Jul  7 09:23:12 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.2K Jul  7 09:23 packages/sync-recentf-20160326.2001.el
+4.0K -rw-r--r-- 1 root root  384 Jul  7 09:23 packages/sync-recentf-20160326.2001.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:23 packages/sync-recentf-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:23 packages/sync-recentf-readme.txt

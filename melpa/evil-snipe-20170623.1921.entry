@@ -1,0 +1,15 @@
+(evil-snipe .
+	    [(20170623 1921)
+	     ((emacs
+	       (24 4))
+	      (evil
+	       (1 2 12))
+	      (cl-lib
+	       (0 5)))
+	     "emulate vim-sneak & vim-seek" single
+	     ((:commit . "dc62ac317fd29f018e9785c1b3b7dd7ad57b3938")
+	      (:authors
+	       ("Henrik Lissner <http://github/hlissner>"))
+	      (:maintainer "Henrik Lissner" . "henrik@lissner.net")
+	      (:keywords "emulation" "vim" "evil" "sneak" "seek")
+	      (:url . "https://github.com/hlissner/evil-snipe"))])

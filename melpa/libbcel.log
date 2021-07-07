@@ -3,10 +3,25 @@ Fetcher: github
 Source:  https://github.com/DamienCassou/libbcel.git
 
 Updating /mnt/store/melpa/working/libbcel/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/libbcel/
+  to /tmp/libbcelnRyp5U/libbcel-20190924.633
+    libbcel-client.el -> libbcel-client.el
+    libbcel-nav.el -> libbcel-nav.el
+    libbcel-oauth.el -> libbcel-oauth.el
+    libbcel-structs.el -> libbcel-structs.el
+    libbcel.el -> libbcel.el
+Created libbcel-20190924.633.tar containing:
+  libbcel-20190924.633/
+  libbcel-20190924.633/libbcel-client.el
+  libbcel-20190924.633/libbcel-nav.el
+  libbcel-20190924.633/libbcel-oauth.el
+  libbcel-20190924.633/libbcel-pkg.el
+  libbcel-20190924.633/libbcel-structs.el
+  libbcel-20190924.633/libbcel.el
+Built libbcel in 3.925s, finished at Wed Jul  7 08:58:00 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  356 Jul  7 08:57 packages/libbcel-20190924.633.entry
+ 44K -rw-r--r-- 1 root root  40K Jul  7 08:57 packages/libbcel-20190924.633.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:58 packages/libbcel-badge.svg
+4.0K -rw-r--r-- 1 root root  177 Jul  7 08:57 packages/libbcel-readme.txt

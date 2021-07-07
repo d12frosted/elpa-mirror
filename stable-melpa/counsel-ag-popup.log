@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/gexplorer/counsel-ag-popup.git
 
 Updating /mnt/store/melpa/working/counsel-ag-popup/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built counsel-ag-popup in 3.837s, finished at Wed Jul  7 11:41:27 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.8K Jul  7 11:41 packages/counsel-ag-popup-20210121.805.el
+4.0K -rw-r--r-- 1 root root  491 Jul  7 11:41 packages/counsel-ag-popup-20210121.805.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:41 packages/counsel-ag-popup-badge.svg
+4.0K -rw-r--r-- 1 root root   97 Jul  7 11:41 packages/counsel-ag-popup-readme.txt

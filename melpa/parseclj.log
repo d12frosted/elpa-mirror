@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/clojure-emacs/parseclj.git
 
 Updating /mnt/store/melpa/working/parseclj/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/parseclj/
+  to /tmp/parsecljUtX8fK/parseclj-20201012.712
+    parseclj-ast.el -> parseclj-ast.el
+    parseclj-lex.el -> parseclj-lex.el
+    parseclj-parser.el -> parseclj-parser.el
+    parseclj.el -> parseclj.el
+Created parseclj-20201012.712.tar containing:
+  parseclj-20201012.712/
+  parseclj-20201012.712/parseclj-ast.el
+  parseclj-20201012.712/parseclj-lex.el
+  parseclj-20201012.712/parseclj-parser.el
+  parseclj-20201012.712/parseclj-pkg.el
+  parseclj-20201012.712/parseclj.el
+Built parseclj in 3.946s, finished at Wed Jul  7 09:10:43 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  352 Jul  7 09:10 packages/parseclj-20201012.712.entry
+ 56K -rw-r--r-- 1 root root  50K Jul  7 09:10 packages/parseclj-20201012.712.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:10 packages/parseclj-badge.svg
+4.0K -rw-r--r-- 1 root root   38 Jul  7 09:10 packages/parseclj-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/kiyoka/sekka.git
 
 Updating /mnt/store/melpa/working/sekka/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built sekka in 4.215s, finished at Wed Jul  7 09:18:31 2021
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root  60K Jul  7 09:18 packages/sekka-20170803.1247.el
+4.0K -rw-r--r-- 1 root root  399 Jul  7 09:18 packages/sekka-20170803.1247.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:18 packages/sekka-badge.svg
+4.0K -rw-r--r-- 1 root root  279 Jul  7 09:18 packages/sekka-readme.txt

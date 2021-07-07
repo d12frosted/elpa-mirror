@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/lewang/flx.git
 
 Updating /mnt/store/melpa/working/flx-ido/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built flx-ido in 4.381s, finished at Wed Jul  7 11:53:12 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.9K Jul  7 11:53 packages/flx-ido-20151030.1812.el
+4.0K -rw-r--r-- 1 root root  279 Jul  7 11:53 packages/flx-ido-20151030.1812.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:53 packages/flx-ido-badge.svg
+4.0K -rw-r--r-- 1 root root  579 Jul  7 11:53 packages/flx-ido-readme.txt

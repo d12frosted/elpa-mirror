@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/vibhavp/go-complete.git
 
 Updating /mnt/store/melpa/working/go-complete/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built go-complete in 3.784s, finished at Wed Jul  7 11:58:02 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Jul  7 11:58 packages/go-complete-20190409.516.el
+4.0K -rw-r--r-- 1 root root  421 Jul  7 11:58 packages/go-complete-20190409.516.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:58 packages/go-complete-badge.svg
+4.0K -rw-r--r-- 1 root root  303 Jul  7 11:58 packages/go-complete-readme.txt

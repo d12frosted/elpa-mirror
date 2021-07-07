@@ -1,0 +1,10 @@
+(list-unicode-display .
+		      [(20150219 901)
+		       ((cl-lib
+			 (0 5)))
+		       "Search for and list unicode characters by name" single
+		       ((:commit . "59770cf3572bd36c3e9ba044846dc420c0dca09b")
+			(:authors
+			 ("Steve Purcell" . "steve@sanityinc.com"))
+			(:maintainer "Steve Purcell" . "steve@sanityinc.com")
+			(:keywords "convenience"))])

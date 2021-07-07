@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/muffinmad/emacs-vc-hgcmd.git
 
 Updating /mnt/store/melpa/working/vc-hgcmd/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built vc-hgcmd in 3.888s, finished at Wed Jul  7 09:27:09 2021
+ ✓ Success:
+ 68K -rw-r--r-- 1 root root  65K Jul  7 09:27 packages/vc-hgcmd-20210608.1030.el
+4.0K -rw-r--r-- 1 root root  401 Jul  7 09:27 packages/vc-hgcmd-20210608.1030.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:27 packages/vc-hgcmd-badge.svg
+8.0K -rw-r--r-- 1 root root 6.8K Jul  7 09:27 packages/vc-hgcmd-readme.txt

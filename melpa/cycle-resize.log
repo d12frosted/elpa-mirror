@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/pierre-lecocq/cycle-resize.git
 
 Updating /mnt/store/melpa/working/cycle-resize/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built cycle-resize in 3.678s, finished at Wed Jul  7 11:42:27 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.7K Jul  7 11:42 packages/cycle-resize-20160521.1557.el
+4.0K -rw-r--r-- 1 root root  312 Jul  7 11:42 packages/cycle-resize-20160521.1557.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:42 packages/cycle-resize-badge.svg
+4.0K -rw-r--r-- 1 root root  531 Jul  7 11:42 packages/cycle-resize-readme.txt

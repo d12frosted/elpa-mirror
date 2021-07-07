@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/franburstall/amsreftex.git
 
 Updating /mnt/store/melpa/working/amsreftex/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built amsreftex in 3.924s, finished at Wed Jul  7 11:32:59 2021
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root  39K Jul  7 11:32 packages/amsreftex-20201004.2148.el
+4.0K -rw-r--r-- 1 root root  402 Jul  7 11:32 packages/amsreftex-20201004.2148.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:32 packages/amsreftex-badge.svg
+4.0K -rw-r--r-- 1 root root 3.5K Jul  7 11:32 packages/amsreftex-readme.txt

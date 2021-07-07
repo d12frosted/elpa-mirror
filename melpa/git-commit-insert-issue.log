@@ -3,10 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-stuff/git-commit-insert-issue.git
 
 Updating /mnt/store/melpa/working/git-commit-insert-issue/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built git-commit-insert-issue in 4.264s, finished at Wed Jul  7 11:57:10 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  14K Jul  7 11:57 packages/git-commit-insert-issue-20201230.1721.el
+4.0K -rw-r--r-- 1 root root  517 Jul  7 11:57 packages/git-commit-insert-issue-20201230.1721.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:57 packages/git-commit-insert-issue-badge.svg
+4.0K -rw-r--r-- 1 root root  171 Jul  7 11:57 packages/git-commit-insert-issue-readme.txt

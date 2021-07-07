@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ocaml/merlin.git
 
 Updating /mnt/store/melpa/working/merlin-iedit/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built merlin-iedit in 5.795s, finished at Wed Jul  7 09:01:12 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Jul  7 09:01 packages/merlin-iedit-20210409.1323.el
+4.0K -rw-r--r-- 1 root root  523 Jul  7 09:01 packages/merlin-iedit-20210409.1323.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:01 packages/merlin-iedit-badge.svg
+4.0K -rw-r--r-- 1 root root  141 Jul  7 09:01 packages/merlin-iedit-readme.txt

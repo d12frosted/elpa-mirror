@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/kawabata/aozora-view.git
 
 Updating /mnt/store/melpa/working/aozora-view/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/aozora-view/
+  to /tmp/aozora-viewyvIVHR/aozora-view-20140310.1317
+    aozora-view.el -> aozora-view.el
+    aozora_gaiji_chuki.txt -> aozora_gaiji_chuki.txt
+Created aozora-view-20140310.1317.tar containing:
+  aozora-view-20140310.1317/
+  aozora-view-20140310.1317/aozora-view-pkg.el
+  aozora-view-20140310.1317/aozora-view.el
+  aozora-view-20140310.1317/aozora_gaiji_chuki.txt
+Built aozora-view in 7.150s, finished at Wed Jul  7 11:33:28 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  384 Jul  7 11:33 packages/aozora-view-20140310.1317.entry
+652K -rw-r--r-- 1 root root 650K Jul  7 11:33 packages/aozora-view-20140310.1317.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:33 packages/aozora-view-badge.svg
+4.0K -rw-r--r-- 1 root root   82 Jul  7 11:33 packages/aozora-view-readme.txt

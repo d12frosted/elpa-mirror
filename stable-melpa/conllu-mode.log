@@ -3,10 +3,29 @@ Fetcher: github
 Source:  https://github.com/odanoburu/conllu-mode.git
 
 Updating /mnt/store/melpa/working/conllu-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/conllu-mode/
+  to /tmp/conllu-modelq9tSv/conllu-mode-20190203.1356
+    conllu-align.el -> conllu-align.el
+    conllu-edit.el -> conllu-edit.el
+    conllu-flycheck.el -> conllu-flycheck.el
+    conllu-mode.el -> conllu-mode.el
+    conllu-move.el -> conllu-move.el
+    conllu-parse.el -> conllu-parse.el
+    conllu-thing.el -> conllu-thing.el
+Created conllu-mode-20190203.1356.tar containing:
+  conllu-mode-20190203.1356/
+  conllu-mode-20190203.1356/conllu-align.el
+  conllu-mode-20190203.1356/conllu-edit.el
+  conllu-mode-20190203.1356/conllu-flycheck.el
+  conllu-mode-20190203.1356/conllu-mode-pkg.el
+  conllu-mode-20190203.1356/conllu-mode.el
+  conllu-mode-20190203.1356/conllu-move.el
+  conllu-mode-20190203.1356/conllu-parse.el
+  conllu-mode-20190203.1356/conllu-thing.el
+Built conllu-mode in 5.439s, finished at Wed Jul  7 11:41:10 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  498 Jul  7 11:41 packages/conllu-mode-20190203.1356.entry
+ 60K -rw-r--r-- 1 root root  60K Jul  7 11:41 packages/conllu-mode-20190203.1356.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:41 packages/conllu-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  373 Jul  7 11:41 packages/conllu-mode-readme.txt

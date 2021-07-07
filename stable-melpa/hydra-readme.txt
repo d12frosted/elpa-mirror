@@ -6,7 +6,7 @@ Once you summon the Hydra (through the prefixed binding), all the
 heads can be called in succession with only a short extension.
 The Hydra is vanquished once Hercules, any binding that isn't the
 Hydra's head, arrives.  Note that Hercules, besides vanquishing the
-Hydra, will still serve his original purpose, calling his proper
+Hydra, will still serve his orignal purpose, calling his proper
 command.  This makes the Hydra very seamless, it's like a minor
 mode that disables itself automagically.
 

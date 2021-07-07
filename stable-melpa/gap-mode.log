@@ -3,10 +3,23 @@ Fetcher: gitlab
 Source:  https://gitlab.com/gvol/gap-mode.git
 
 Updating /mnt/store/melpa/working/gap-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gap-mode/
+  to /tmp/gap-modefvaN3c/gap-mode-20191110.2237
+    gap-mode.el -> gap-mode.el
+    gap-process.el -> gap-process.el
+    gap-smie.el -> gap-smie.el
+    emacs.gaprc -> emacs.gaprc
+Created gap-mode-20191110.2237.tar containing:
+  gap-mode-20191110.2237/
+  gap-mode-20191110.2237/emacs.gaprc
+  gap-mode-20191110.2237/gap-mode-pkg.el
+  gap-mode-20191110.2237/gap-mode.el
+  gap-mode-20191110.2237/gap-process.el
+  gap-mode-20191110.2237/gap-smie.el
+Built gap-mode in 7.368s, finished at Wed Jul  7 11:56:21 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  465 Jul  7 11:56 packages/gap-mode-20191110.2237.entry
+112K -rw-r--r-- 1 root root 110K Jul  7 11:56 packages/gap-mode-20191110.2237.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:56 packages/gap-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  243 Jul  7 11:56 packages/gap-mode-readme.txt

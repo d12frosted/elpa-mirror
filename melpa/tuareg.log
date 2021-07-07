@@ -3,10 +3,29 @@ Fetcher: github
 Source:  https://github.com/ocaml/tuareg.git
 
 Updating /mnt/store/melpa/working/tuareg/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tuareg/
+  to /tmp/tuareg8CB5o9/tuareg-20180914.2024
+    dot-emacs.el -> dot-emacs.el
+    ocamldebug.el -> ocamldebug.el
+    tuareg-jbuild.el -> tuareg-jbuild.el
+    tuareg-menhir.el -> tuareg-menhir.el
+    tuareg-opam.el -> tuareg-opam.el
+    tuareg-site-file.el -> tuareg-site-file.el
+    tuareg.el -> tuareg.el
+Created tuareg-20180914.2024.tar containing:
+  tuareg-20180914.2024/
+  tuareg-20180914.2024/dot-emacs.el
+  tuareg-20180914.2024/ocamldebug.el
+  tuareg-20180914.2024/tuareg-jbuild.el
+  tuareg-20180914.2024/tuareg-menhir.el
+  tuareg-20180914.2024/tuareg-opam.el
+  tuareg-20180914.2024/tuareg-pkg.el
+  tuareg-20180914.2024/tuareg-site-file.el
+  tuareg-20180914.2024/tuareg.el
+Built tuareg in 7.621s, finished at Wed Jul  7 09:25:46 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  594 Jul  7 09:25 packages/tuareg-20180914.2024.entry
+220K -rw-r--r-- 1 root root 220K Jul  7 09:25 packages/tuareg-20180914.2024.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:25 packages/tuareg-badge.svg
+4.0K -rw-r--r-- 1 root root  441 Jul  7 09:25 packages/tuareg-readme.txt

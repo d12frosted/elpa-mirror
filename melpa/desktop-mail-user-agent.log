@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/lassik/emacs-desktop-mail-user-agent.git
 
 Updating /mnt/store/melpa/working/desktop-mail-user-agent/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built desktop-mail-user-agent in 3.879s, finished at Wed Jul  7 11:43:29 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.8K Jul  7 11:43 packages/desktop-mail-user-agent-20210309.1053.el
+4.0K -rw-r--r-- 1 root root  414 Jul  7 11:43 packages/desktop-mail-user-agent-20210309.1053.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:43 packages/desktop-mail-user-agent-badge.svg
+4.0K -rw-r--r-- 1 root root  600 Jul  7 11:43 packages/desktop-mail-user-agent-readme.txt

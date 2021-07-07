@@ -46,9 +46,7 @@ on-the-fly help.
        templates also contain labels created with RefTeX.  In a
        template, text needs to be filled in at various places, which we
        call "points of interest".  You can use the TAB key to jump to
-       the next point of interest in the template.  If there is an
-       active region, the region will be wrappend into the environment,
-       ignoring the template content.
+       the next point of interest in the template.
 
        For many frequently used LaTeX environments, abbreviations are
        available.  Most of the time, the abbreviation consists of the
@@ -173,16 +171,7 @@ on-the-fly help.
    belong to a subscript or superscript, CDLaTeX removes the braces if
    the sub/superscript consists of a single character.  For example
    typing "$10^3<TAB>" inserts "$10^3$", but typing "$10^34<TAB>"
-   inserts "$10^{34}$".
-
-   If you press `_' or `^' twice, the template inserted will be
-   `_{\rm }' or `^{\rm }', respectively, to insert a roman
-   sub/super-script.  Style guides require that all sub and
-   superscipts that are descriptive (so not a mathematical or
-   physical quantity themselves) need to be roman.  So $x_i$ is i
-   is an index, but $x_{\rm max}$ to indicate the maximum value.  You
-   can disable this behavior through the variable
-   `cdlatex-make-sub-superscript-roman-if-pressed-twice'.
+   inserts "$10^{34}$"
 
 5. THE OVERLOADED TAB KEY
    ----------------------

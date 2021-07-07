@@ -3,10 +3,143 @@ Fetcher: github
 Source:  https://github.com/rejeep/git.el.git
 
 Updating /mnt/store/melpa/working/git/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built git in 3.816s, finished at Wed Jul  7 11:57:01 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.9K Jul  7 11:57 packages/git-20140128.1041.el
+4.0K -rw-r--r-- 1 root root  425 Jul  7 11:57 packages/git-20140128.1041.entry
+8.0K -rw-r--r-- 1 root root 6.9K Jul  7 08:44 packages/git-annex-20170120.141.el
+4.0K -rw-r--r-- 1 root root  385 Jul  7 08:44 packages/git-annex-20170120.141.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-annex-badge.svg
+4.0K -rw-r--r-- 1 root root  465 Jul  7 08:44 packages/git-annex-readme.txt
+4.0K -rw-r--r-- 1 root root  135 Jul  7 11:56 packages/git-annex.log
+4.0K -rw-r--r-- 1 root root 3.3K Jul  7 08:44 packages/git-assembler-mode-20210207.1545.el
+4.0K -rw-r--r-- 1 root root  451 Jul  7 08:44 packages/git-assembler-mode-20210207.1545.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-assembler-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  279 Jul  7 08:44 packages/git-assembler-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  160 Jul  7 11:56 packages/git-assembler-mode.log
+4.0K -rw-r--r-- 1 root root  364 Jul  7 08:44 packages/git-attr-20180925.2003.entry
+ 12K -rw-r--r-- 1 root root  10K Jul  7 08:44 packages/git-attr-20180925.2003.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-attr-badge.svg
+4.0K -rw-r--r-- 1 root root  496 Jul  7 08:44 packages/git-attr-readme.txt
+4.0K -rw-r--r-- 1 root root  135 Jul  7 11:57 packages/git-attr.log
+ 12K -rw-r--r-- 1 root root 9.5K Jul  7 08:44 packages/git-auto-commit-mode-20200828.653.el
+4.0K -rw-r--r-- 1 root root  380 Jul  7 08:44 packages/git-auto-commit-mode-20200828.653.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-auto-commit-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  398 Jul  7 08:44 packages/git-auto-commit-mode-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jul  7 11:57 packages/git-auto-commit-mode.log
+ 12K -rw-r--r-- 1 root root  11K Jul  7 08:44 packages/git-backup-20191209.2144.el
+4.0K -rw-r--r-- 1 root root  443 Jul  7 08:44 packages/git-backup-20191209.2144.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-backup-badge.svg
+8.0K -rw-r--r-- 1 root root 5.9K Jul  7 08:44 packages/git-backup-ivy-20200709.818.el
+4.0K -rw-r--r-- 1 root root  470 Jul  7 08:44 packages/git-backup-ivy-20200709.818.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-backup-ivy-badge.svg
+4.0K -rw-r--r-- 1 root root  177 Jul  7 08:44 packages/git-backup-ivy-readme.txt
+4.0K -rw-r--r-- 1 root root  564 Jul  7 08:44 packages/git-backup-ivy.log
+4.0K -rw-r--r-- 1 root root   72 Jul  7 08:44 packages/git-backup-readme.txt
+4.0K -rw-r--r-- 1 root root  944 Jul  7 08:44 packages/git-backup.log
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:57 packages/git-badge.svg
+ 16K -rw-r--r-- 1 root root  16K Jul  7 08:44 packages/git-blamed-20161028.1926.el
+4.0K -rw-r--r-- 1 root root  225 Jul  7 08:44 packages/git-blamed-20161028.1926.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-blamed-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Jul  7 08:44 packages/git-blamed-readme.txt
+4.0K -rw-r--r-- 1 root root  534 Jul  7 08:44 packages/git-blamed.log
+8.0K -rw-r--r-- 1 root root 6.7K Jul  7 08:44 packages/git-command-20151228.900.el
+4.0K -rw-r--r-- 1 root root  463 Jul  7 08:44 packages/git-command-20151228.900.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-command-badge.svg
+4.0K -rw-r--r-- 1 root root  733 Jul  7 08:44 packages/git-command-readme.txt
+4.0K -rw-r--r-- 1 root root  541 Jul  7 08:44 packages/git-command.log
+ 44K -rw-r--r-- 1 root root  42K Jul  7 08:44 packages/git-commit-20210702.819.el
+4.0K -rw-r--r-- 1 root root  646 Jul  7 08:44 packages/git-commit-20210702.819.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-commit-badge.svg
+ 16K -rw-r--r-- 1 root root  14K Jul  7 08:44 packages/git-commit-insert-issue-20201230.1721.el
+4.0K -rw-r--r-- 1 root root  517 Jul  7 08:44 packages/git-commit-insert-issue-20201230.1721.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-commit-insert-issue-badge.svg
+4.0K -rw-r--r-- 1 root root  171 Jul  7 08:44 packages/git-commit-insert-issue-readme.txt
+4.0K -rw-r--r-- 1 root root  643 Jul  7 08:44 packages/git-commit-insert-issue.log
+4.0K -rw-r--r-- 1 root root 3.5K Jul  7 08:44 packages/git-commit-readme.txt
+4.0K -rw-r--r-- 1 root root  983 Jul  7 08:44 packages/git-commit.log
+8.0K -rw-r--r-- 1 root root 6.2K Jul  7 08:44 packages/git-dwim-20170126.1214.el
+4.0K -rw-r--r-- 1 root root  406 Jul  7 08:44 packages/git-dwim-20170126.1214.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-dwim-badge.svg
+4.0K -rw-r--r-- 1 root root  383 Jul  7 08:44 packages/git-dwim-readme.txt
+4.0K -rw-r--r-- 1 root root  527 Jul  7 08:44 packages/git-dwim.log
+4.0K -rw-r--r-- 1 root root 3.3K Jul  7 08:44 packages/git-grep-20200920.1751.el
+4.0K -rw-r--r-- 1 root root  389 Jul  7 08:44 packages/git-grep-20200920.1751.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-grep-badge.svg
+4.0K -rw-r--r-- 1 root root  732 Jul  7 08:44 packages/git-grep-readme.txt
+4.0K -rw-r--r-- 1 root root  523 Jul  7 08:44 packages/git-grep.log
+ 48K -rw-r--r-- 1 root root  46K Jul  7 08:44 packages/git-gutter+-20150924.749.el
+4.0K -rw-r--r-- 1 root root  407 Jul  7 08:44 packages/git-gutter+-20150924.749.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-gutter+-badge.svg
+4.0K -rw-r--r-- 1 root root   62 Jul  7 08:44 packages/git-gutter+-readme.txt
+4.0K -rw-r--r-- 1 root root  609 Jul  7 08:44 packages/git-gutter+.log
+ 44K -rw-r--r-- 1 root root  43K Jul  7 08:44 packages/git-gutter-20201026.850.el
+4.0K -rw-r--r-- 1 root root  382 Jul  7 08:44 packages/git-gutter-20201026.850.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-gutter-badge.svg
+8.0K -rw-r--r-- 1 root root 4.9K Jul  7 08:44 packages/git-gutter-fringe+-20130523.1926.el
+4.0K -rw-r--r-- 1 root root  448 Jul  7 08:44 packages/git-gutter-fringe+-20130523.1926.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-gutter-fringe+-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 08:44 packages/git-gutter-fringe+-readme.txt
+4.0K -rw-r--r-- 1 root root  674 Jul  7 08:44 packages/git-gutter-fringe+.log
+8.0K -rw-r--r-- 1 root root 5.0K Jul  7 08:44 packages/git-gutter-fringe-20160520.2356.el
+4.0K -rw-r--r-- 1 root root  481 Jul  7 08:44 packages/git-gutter-fringe-20160520.2356.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-gutter-fringe-badge.svg
+4.0K -rw-r--r-- 1 root root  331 Jul  7 08:44 packages/git-gutter-fringe-readme.txt
+4.0K -rw-r--r-- 1 root root  598 Jul  7 08:44 packages/git-gutter-fringe.log
+4.0K -rw-r--r-- 1 root root   53 Jul  7 08:44 packages/git-gutter-readme.txt
+4.0K -rw-r--r-- 1 root root 1.4K Jul  7 08:44 packages/git-gutter.log
+4.0K -rw-r--r-- 1 root root  456 Jul  7 08:44 packages/git-identity-20200124.1856.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 08:44 packages/git-identity-20200124.1856.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-identity-badge.svg
+4.0K -rw-r--r-- 1 root root  341 Jul  7 08:44 packages/git-identity-readme.txt
+4.0K -rw-r--r-- 1 root root 1012 Jul  7 08:44 packages/git-identity.log
+4.0K -rw-r--r-- 1 root root 2.9K Jul  7 08:44 packages/git-io-20180317.1752.el
+4.0K -rw-r--r-- 1 root root  356 Jul  7 08:44 packages/git-io-20180317.1752.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-io-badge.svg
+4.0K -rw-r--r-- 1 root root  259 Jul  7 08:44 packages/git-io-readme.txt
+4.0K -rw-r--r-- 1 root root  513 Jul  7 08:44 packages/git-io.log
+ 12K -rw-r--r-- 1 root root 8.1K Jul  7 08:44 packages/git-lens-20180328.1417.el
+4.0K -rw-r--r-- 1 root root  401 Jul  7 08:44 packages/git-lens-20180328.1417.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-lens-badge.svg
+4.0K -rw-r--r-- 1 root root  134 Jul  7 08:44 packages/git-lens-readme.txt
+4.0K -rw-r--r-- 1 root root  516 Jul  7 08:44 packages/git-lens.log
+ 28K -rw-r--r-- 1 root root  25K Jul  7 08:44 packages/git-link-20210121.235.el
+4.0K -rw-r--r-- 1 root root  440 Jul  7 08:44 packages/git-link-20210121.235.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-link-badge.svg
+4.0K -rw-r--r-- 1 root root  351 Jul  7 08:44 packages/git-link-readme.txt
+4.0K -rw-r--r-- 1 root root  515 Jul  7 08:44 packages/git-link.log
+ 16K -rw-r--r-- 1 root root  16K Jul  7 08:44 packages/git-messenger-20170101.1331.el
+4.0K -rw-r--r-- 1 root root  380 Jul  7 08:44 packages/git-messenger-20170101.1331.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-messenger-badge.svg
+4.0K -rw-r--r-- 1 root root  295 Jul  7 08:44 packages/git-messenger-readme.txt
+4.0K -rw-r--r-- 1 root root  566 Jul  7 08:44 packages/git-messenger.log
+8.0K -rw-r--r-- 1 root root 4.7K Jul  7 08:44 packages/git-msg-prefix-20191031.1304.el
+4.0K -rw-r--r-- 1 root root  427 Jul  7 08:44 packages/git-msg-prefix-20191031.1304.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-msg-prefix-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Jul  7 08:44 packages/git-msg-prefix-readme.txt
+4.0K -rw-r--r-- 1 root root  567 Jul  7 08:44 packages/git-msg-prefix.log
+ 16K -rw-r--r-- 1 root root  14K Jul  7 08:44 packages/git-ps1-mode-20151228.902.el
+4.0K -rw-r--r-- 1 root root  377 Jul  7 08:44 packages/git-ps1-mode-20151228.902.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-ps1-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-ps1-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  549 Jul  7 08:44 packages/git-ps1-mode.log
+4.0K -rw-r--r-- 1 root root 2.3K Jul  6 16:36 packages/git-time-metric-20181116.2011.el
+4.0K -rw-r--r-- 1 root root  429 Jul  6 16:36 packages/git-time-metric-20181116.2011.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  6 16:36 packages/git-time-metric-badge.svg
+4.0K -rw-r--r-- 1 root root  587 Jul  6 16:36 packages/git-time-metric-readme.txt
+4.0K -rw-r--r-- 1 root root  223 Jul  7 08:44 packages/git-time-metric.log
+ 20K -rwxr-xr-x 1 root root  18K Jul  7 08:44 packages/git-timemachine-20190730.849.el
+4.0K -rw-r--r-- 1 root root  422 Jul  7 08:44 packages/git-timemachine-20190730.849.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:45 packages/git-timemachine-badge.svg
+4.0K -rw-r--r-- 1 root root   94 Jul  7 08:44 packages/git-timemachine-readme.txt
+4.0K -rw-r--r-- 1 root root  570 Jul  7 08:45 packages/git-timemachine.log
+4.0K -rw-r--r-- 1 root root  422 Jul  7 08:44 packages/git-walktree-20191101.302.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 08:44 packages/git-walktree-20191101.302.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:44 packages/git-walktree-badge.svg
+4.0K -rw-r--r-- 1 root root  282 Jul  7 08:44 packages/git-walktree-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:45 packages/git-walktree.log
+ 16K -rw-r--r-- 1 root root  13K Jul  7 08:45 packages/git-wip-timemachine-20150408.828.el
+4.0K -rw-r--r-- 1 root root  406 Jul  7 08:45 packages/git-wip-timemachine-20150408.828.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:45 packages/git-wip-timemachine-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul  7 08:45 packages/git-wip-timemachine-readme.txt
+4.0K -rw-r--r-- 1 root root  605 Jul  7 08:45 packages/git-wip-timemachine.log

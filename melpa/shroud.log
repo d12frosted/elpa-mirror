@@ -3,10 +3,53 @@ Fetcher: git
 Source:  https://git.savannah.nongnu.org/git/emacs-shroud.git
 
 Updating /mnt/store/melpa/working/shroud/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/shroud/
+  to /tmp/shroudpD4pns/shroud-20191219.1722
+  ! src/shroud-bui.el -> shroud-bui.el
+  ! src/shroud-cli.el -> shroud-cli.el
+  ! src/shroud-el.el -> shroud-el.el
+  ! src/shroud.el -> shroud.el
+  ! doc/emacs-shroud.texi -> emacs-shroud.texi
+    README -> README
+    NEWS -> NEWS
+    AUTHORS -> AUTHORS
+    COPYING -> COPYING
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/shroud/doc/emacs-shroud.texi -o /tmp/shroudpD4pns/shroud-20191219.1722/emacs-shroud.info)' exited with non-zero status 1: Fetching origin
+origin/HEAD set to master
+HEAD is now at f758d49 autotools: target `manual' to build web manuals in GNU-style
+/mnt/store/melpa/working/shroud/doc/emacs-shroud.texi:5: @include: could not find version.texi
+/mnt/store/melpa/working/shroud/doc/emacs-shroud.texi:40: warning: undefined flag: EDITION
+/mnt/store/melpa/working/shroud/doc/emacs-shroud.texi:41: warning: undefined flag: UPDATED-MONTH
+/mnt/store/melpa/working/shroud/doc/emacs-shroud.texi:71: warning: undefined flag: VERSION
+/mnt/store/melpa/working/shroud/doc/emacs-shroud.texi:88: warning: undefined flag: EDITION
+")
+Created /tmp/shroudpD4pns/shroud-20191219.1722/emacs-shroud.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/shroudpD4pns/shroud-20191219.1722/emacs-shroud.info)' exited with non-zero status 1: Fetching origin
+origin/HEAD set to master
+HEAD is now at f758d49 autotools: target `manual' to build web manuals in GNU-style
+/mnt/store/melpa/working/shroud/doc/emacs-shroud.texi:5: @include: could not find version.texi
+/mnt/store/melpa/working/shroud/doc/emacs-shroud.texi:40: warning: undefined flag: EDITION
+/mnt/store/melpa/working/shroud/doc/emacs-shroud.texi:41: warning: undefined flag: UPDATED-MONTH
+/mnt/store/melpa/working/shroud/doc/emacs-shroud.texi:71: warning: undefined flag: VERSION
+/mnt/store/melpa/working/shroud/doc/emacs-shroud.texi:88: warning: undefined flag: EDITION
+install-info: No such file or directory for /tmp/shroudpD4pns/shroud-20191219.1722/emacs-shroud.info
+")
+Created shroud-20191219.1722.tar containing:
+  shroud-20191219.1722/
+  shroud-20191219.1722/AUTHORS
+  shroud-20191219.1722/COPYING
+  shroud-20191219.1722/NEWS
+  shroud-20191219.1722/README
+  shroud-20191219.1722/dir
+  shroud-20191219.1722/shroud-bui.el
+  shroud-20191219.1722/shroud-cli.el
+  shroud-20191219.1722/shroud-el.el
+  shroud-20191219.1722/shroud-pkg.el
+  shroud-20191219.1722/shroud.el
+Built shroud in 7.760s, finished at Wed Jul  7 09:19:25 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  440 Jul  7 09:19 packages/shroud-20191219.1722.entry
+ 80K -rw-r--r-- 1 root root  80K Jul  7 09:19 packages/shroud-20191219.1722.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:19 packages/shroud-badge.svg
+4.0K -rw-r--r-- 1 root root 2.9K Jul  7 09:19 packages/shroud-readme.txt

@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/mooz/js2-mode.git
 
 Updating /mnt/store/melpa/working/js2-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/js2-mode/
+  to /tmp/js2-model42366/js2-mode-20201220.1631
+    js2-imenu-extras.el -> js2-imenu-extras.el
+    js2-mode.el -> js2-mode.el
+    js2-old-indent.el -> js2-old-indent.el
+Created js2-mode-20201220.1631.tar containing:
+  js2-mode-20201220.1631/
+  js2-mode-20201220.1631/js2-imenu-extras.el
+  js2-mode-20201220.1631/js2-mode-pkg.el
+  js2-mode-20201220.1631/js2-mode.el
+  js2-mode-20201220.1631/js2-old-indent.el
+Built js2-mode in 3.573s, finished at Wed Jul  7 12:06:57 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  491 Jul  7 12:06 packages/js2-mode-20201220.1631.entry
+552K -rw-r--r-- 1 root root 550K Jul  7 12:06 packages/js2-mode-20201220.1631.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:06 packages/js2-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 2.6K Jul  7 12:06 packages/js2-mode-readme.txt

@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/lateau/charmap.git
 
 Updating /mnt/store/melpa/working/charmap/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built charmap in 5.591s, finished at Wed Jul  7 11:37:58 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  14K Jul  7 11:37 packages/charmap-20131020.458.el
+4.0K -rw-r--r-- 1 root root  334 Jul  7 11:37 packages/charmap-20131020.458.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:37 packages/charmap-badge.svg

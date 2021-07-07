@@ -3,10 +3,14 @@ Fetcher: github
 Source:  https://github.com/seblemaguer/metal-archives.el.git
 
 Updating /mnt/store/melpa/working/metal-archives/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built metal-archives in 4.450s, finished at Wed Jul  7 09:01:15 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.9K Jul  7 09:01 packages/metal-archives-20210223.1638.el
+4.0K -rw-r--r-- 1 root root  476 Jul  7 09:01 packages/metal-archives-20210223.1638.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:01 packages/metal-archives-badge.svg
+4.0K -rw-r--r-- 1 root root   86 Jul  7 09:01 packages/metal-archives-readme.txt
+8.0K -rw-r--r-- 1 root root 6.0K Jul  7 09:01 packages/metal-archives-shopping-list-20201229.949.el
+4.0K -rw-r--r-- 1 root root  556 Jul  7 05:48 packages/metal-archives-shopping-list-20201229.949.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 05:48 packages/metal-archives-shopping-list-badge.svg
+4.0K -rw-r--r-- 1 root root  111 Jul  7 05:48 packages/metal-archives-shopping-list-readme.txt
+4.0K -rw-r--r-- 1 root root  181 Jul  7 09:01 packages/metal-archives-shopping-list.log

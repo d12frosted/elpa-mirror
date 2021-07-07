@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/ac-ispell.git
 
 Updating /mnt/store/melpa/working/ac-ispell/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ac-ispell in 3.433s, finished at Wed Jul  7 11:31:57 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.0K Jul  7 11:31 packages/ac-ispell-20150314.28.el
+4.0K -rw-r--r-- 1 root root  398 Jul  7 11:31 packages/ac-ispell-20150314.28.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:31 packages/ac-ispell-badge.svg
+4.0K -rw-r--r-- 1 root root  510 Jul  7 11:31 packages/ac-ispell-readme.txt

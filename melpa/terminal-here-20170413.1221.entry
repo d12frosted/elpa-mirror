@@ -1,0 +1,13 @@
+(terminal-here .
+	       [(20170413 1221)
+		((emacs
+		  (24))
+		 (cl-lib
+		  (0 5)))
+		"Run an external terminal in current directory" single
+		((:commit . "e176d1675dc5c41b6aebd05122fb2efc44b6cff0")
+		 (:authors
+		  ("David Shepherd" . "davidshepherd7@gmail.com"))
+		 (:maintainer "David Shepherd" . "davidshepherd7@gmail.com")
+		 (:keywords "tools" "frames")
+		 (:url . "https://github.com/davidshepherd7/terminal-here"))])

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/TheBB/company-reftex.git
 
 Updating /mnt/store/melpa/working/company-reftex/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built company-reftex in 3.832s, finished at Wed Jul  7 11:40:47 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.1K Jul  7 11:40 packages/company-reftex-20210418.1316.el
+4.0K -rw-r--r-- 1 root root  468 Jul  7 11:40 packages/company-reftex-20210418.1316.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:40 packages/company-reftex-badge.svg
+4.0K -rw-r--r-- 1 root root  596 Jul  7 11:40 packages/company-reftex-readme.txt

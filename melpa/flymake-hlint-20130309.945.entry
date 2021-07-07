@@ -1,0 +1,10 @@
+(flymake-hlint .
+	       [(20130309 945)
+		((flymake-easy
+		  (0 1)))
+		"A flymake handler for haskell-mode files using hlint" single
+		((:commit . "d540e250a80a09da3036c16bf86f9deb6d738c9c")
+		 (:authors
+		  ("Steve Purcell" . "steve@sanityinc.com"))
+		 (:maintainer "Steve Purcell" . "steve@sanityinc.com")
+		 (:url . "https://github.com/purcell/flymake-hlint"))])

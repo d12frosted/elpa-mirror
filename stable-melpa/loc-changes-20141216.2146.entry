@@ -1,0 +1,8 @@
+(loc-changes .
+	     [(20141216 2146)
+	      nil "Helps users and programs keep track of positions even after buffer changes." single
+	      ((:commit . "8447baff7cb4839ef8d1d747a14e5da85d0cee5b")
+	       (:authors
+		("Rocky Bernstein"))
+	       (:maintainer "Rocky Bernstein")
+	       (:url . "http://github.com/rocky/emacs-loc-changes"))])

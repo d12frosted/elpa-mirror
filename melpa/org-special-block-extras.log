@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/alhassy/org-special-block-extras.git
 
 Updating /mnt/store/melpa/working/org-special-block-extras/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built org-special-block-extras in 4.636s, finished at Wed Jul  7 09:08:10 2021
+ ✓ Success:
+ 64K -rw-r--r-- 1 root root  64K Jul  7 09:08 packages/org-special-block-extras-20201222.234.el
+4.0K -rw-r--r-- 1 root root  588 Jul  7 09:08 packages/org-special-block-extras-20201222.234.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:08 packages/org-special-block-extras-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Jul  7 09:08 packages/org-special-block-extras-readme.txt

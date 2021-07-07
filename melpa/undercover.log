@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/undercover-el/undercover.el.git
 
 Updating /mnt/store/melpa/working/undercover/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built undercover in 4.144s, finished at Wed Jul  7 09:26:20 2021
+ ✓ Success:
+ 60K -rw-r--r-- 1 root root  57K Jul  7 09:26 packages/undercover-20210602.2119.el
+4.0K -rw-r--r-- 1 root root  503 Jul  7 09:26 packages/undercover-20210602.2119.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:26 packages/undercover-badge.svg
+4.0K -rw-r--r-- 1 root root   49 Jul  7 09:26 packages/undercover-readme.txt

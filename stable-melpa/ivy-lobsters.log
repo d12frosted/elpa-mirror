@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/julienXX/ivy-lobsters.git
 
 Updating /mnt/store/melpa/working/ivy-lobsters/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ivy-lobsters in 4.534s, finished at Wed Jul  7 12:05:54 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.3K Jul  7 12:05 packages/ivy-lobsters-20200818.1406.el
+4.0K -rw-r--r-- 1 root root  392 Jul  7 12:05 packages/ivy-lobsters-20200818.1406.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:05 packages/ivy-lobsters-badge.svg
+4.0K -rw-r--r-- 1 root root   48 Jul  7 12:05 packages/ivy-lobsters-readme.txt

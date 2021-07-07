@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/ROCKTAKEY/grugru.git
 
 Updating /mnt/store/melpa/working/grugru/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/grugru/
+  to /tmp/grugruPrOFJ2/grugru-20210125.1458
+    grugru-default.el -> grugru-default.el
+    grugru-utils.el -> grugru-utils.el
+    grugru.el -> grugru.el
+Created grugru-20210125.1458.tar containing:
+  grugru-20210125.1458/
+  grugru-20210125.1458/grugru-default.el
+  grugru-20210125.1458/grugru-pkg.el
+  grugru-20210125.1458/grugru-utils.el
+  grugru-20210125.1458/grugru.el
+Built grugru in 4.608s, finished at Wed Jul  7 11:59:05 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  346 Jul  7 11:59 packages/grugru-20210125.1458.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 11:59 packages/grugru-20210125.1458.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:59 packages/grugru-badge.svg
+ 12K -rw-r--r-- 1 root root  12K Jul  7 11:59 packages/grugru-readme.txt

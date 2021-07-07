@@ -3,10 +3,33 @@ Fetcher: github
 Source:  https://github.com/NicolasPetton/elbank.git
 
 Updating /mnt/store/melpa/working/elbank/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elbank/
+  to /tmp/elbankH11mLk/elbank-20180215.1356
+    elbank-boobank.el -> elbank-boobank.el
+    elbank-budget.el -> elbank-budget.el
+    elbank-common.el -> elbank-common.el
+    elbank-compat.el -> elbank-compat.el
+    elbank-overview.el -> elbank-overview.el
+    elbank-progressbar.el -> elbank-progressbar.el
+    elbank-report.el -> elbank-report.el
+    elbank-transaction.el -> elbank-transaction.el
+    elbank.el -> elbank.el
+Created elbank-20180215.1356.tar containing:
+  elbank-20180215.1356/
+  elbank-20180215.1356/elbank-boobank.el
+  elbank-20180215.1356/elbank-budget.el
+  elbank-20180215.1356/elbank-common.el
+  elbank-20180215.1356/elbank-compat.el
+  elbank-20180215.1356/elbank-overview.el
+  elbank-20180215.1356/elbank-pkg.el
+  elbank-20180215.1356/elbank-progressbar.el
+  elbank-20180215.1356/elbank-report.el
+  elbank-20180215.1356/elbank-transaction.el
+  elbank-20180215.1356/elbank.el
+Built elbank in 3.917s, finished at Wed Jul  7 11:47:11 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  336 Jul  7 11:47 packages/elbank-20180215.1356.entry
+ 80K -rw-r--r-- 1 root root  80K Jul  7 11:47 packages/elbank-20180215.1356.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:47 packages/elbank-badge.svg
+4.0K -rw-r--r-- 1 root root  407 Jul  7 11:47 packages/elbank-readme.txt

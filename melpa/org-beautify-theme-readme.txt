@@ -1,7 +1,3 @@
-#+title: Read Me
-
-[[./screenshot.png]]
-
 * Making Org-mode Beautiful
 ** This theme is dedicated to my wife Shell
   Who—in her beauty, her love, and her love for beauty—has shown me
@@ -20,19 +16,11 @@
   still be active with the old theme.  Just unload org-beautify-theme
   and then reload it, and everything will be fine again.
 
-  If you still get really ugly headlines, customize the
-  ~org-beautify-theme-use-box-hack~ variable and set it to nil (false).
-
 * Changelog
-   - v0.4 :: [2017-09-08]
-     - Add org-beautify-theme-use-box-hack to allow the user to
-       fix ugly boxes.
-   - v0.3.2 :: [2017-08-29]
-     - Update License
-   - v0.3.1 :: [2016-10-19]
+   - v0.3.1 [2016-10-19]
      - Fix load path issues (Thanks PierreTechoueyres!)
      - reverse chronological changelog, because ah-doy!
-   - v0.2 :: [2016-08-08]
+   - v0.2 [2016-08-08]
      - Better repository Location
      - Fix so that you can load the theme properly.
    - v0.1.2 :: [2014-01-06]
@@ -40,4 +28,4 @@
    - v0.1.1 :: [2014-01-06]
      - Fix checkboxes
    - v0.1 :: First Release
-     - Make the colors suck a lot less, and the buffers look a lot nicer.
+         - Make the colors suck a lot less, and the buffers look a lot nicer.

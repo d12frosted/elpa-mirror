@@ -3,10 +3,33 @@ Fetcher: github
 Source:  https://github.com/nlamirault/socyl.git
 
 Updating /mnt/store/melpa/working/socyl/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/socyl/
+  to /tmp/socyla0VpOe/socyl-20170129.944
+    socyl-ag.el -> socyl-ag.el
+    socyl-backend.el -> socyl-backend.el
+    socyl-custom.el -> socyl-custom.el
+    socyl-mode.el -> socyl-mode.el
+    socyl-pt.el -> socyl-pt.el
+    socyl-ripgrep.el -> socyl-ripgrep.el
+    socyl-sift.el -> socyl-sift.el
+    socyl-version.el -> socyl-version.el
+    socyl.el -> socyl.el
+Created socyl-20170129.944.tar containing:
+  socyl-20170129.944/
+  socyl-20170129.944/socyl-ag.el
+  socyl-20170129.944/socyl-backend.el
+  socyl-20170129.944/socyl-custom.el
+  socyl-20170129.944/socyl-mode.el
+  socyl-20170129.944/socyl-pkg.el
+  socyl-20170129.944/socyl-pt.el
+  socyl-20170129.944/socyl-ripgrep.el
+  socyl-20170129.944/socyl-sift.el
+  socyl-20170129.944/socyl-version.el
+  socyl-20170129.944/socyl.el
+Built socyl in 5.037s, finished at Wed Jul  7 09:21:04 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  467 Jul  7 09:21 packages/socyl-20170129.944.entry
+ 36K -rw-r--r-- 1 root root  30K Jul  7 09:21 packages/socyl-20170129.944.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:21 packages/socyl-badge.svg
+4.0K -rw-r--r-- 1 root root  220 Jul  7 09:21 packages/socyl-readme.txt

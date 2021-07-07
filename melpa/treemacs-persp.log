@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Alexander-Miller/treemacs.git
 
 Updating /mnt/store/melpa/working/treemacs-persp/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built treemacs-persp in 5.862s, finished at Wed Jul  7 09:25:24 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.1K Jul  7 09:25 packages/treemacs-persp-20200309.2057.el
+4.0K -rw-r--r-- 1 root root  435 Jul  7 09:25 packages/treemacs-persp-20200309.2057.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:25 packages/treemacs-persp-badge.svg
+4.0K -rw-r--r-- 1 root root   69 Jul  7 09:25 packages/treemacs-persp-readme.txt

@@ -3,10 +3,53 @@ Fetcher: github
 Source:  https://github.com/NicolasPetton/Indium.git
 
 Updating /mnt/store/melpa/working/indium/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/indium/
+  to /tmp/indium4Xqimc/indium-20201103.2040
+    indium-breakpoint.el -> indium-breakpoint.el
+    indium-chrome.el -> indium-chrome.el
+    indium-client.el -> indium-client.el
+    indium-debugger-litable.el -> indium-debugger-litable.el
+    indium-debugger-locals.el -> indium-debugger-locals.el
+    indium-debugger.el -> indium-debugger.el
+    indium-faces.el -> indium-faces.el
+    indium-inspector.el -> indium-inspector.el
+    indium-interaction.el -> indium-interaction.el
+    indium-list-sources.el -> indium-list-sources.el
+    indium-nodejs.el -> indium-nodejs.el
+    indium-render.el -> indium-render.el
+    indium-repl.el -> indium-repl.el
+    indium-scratch.el -> indium-scratch.el
+    indium-seq-fix.el -> indium-seq-fix.el
+    indium-structs.el -> indium-structs.el
+    indium.el -> indium.el
+  ! doc/Indium.texi -> Indium.texi
+Created /tmp/indium4Xqimc/indium-20201103.2040/Indium.info
+Created indium-20201103.2040.tar containing:
+  indium-20201103.2040/
+  indium-20201103.2040/Indium.info
+  indium-20201103.2040/dir
+  indium-20201103.2040/indium-breakpoint.el
+  indium-20201103.2040/indium-chrome.el
+  indium-20201103.2040/indium-client.el
+  indium-20201103.2040/indium-debugger-litable.el
+  indium-20201103.2040/indium-debugger-locals.el
+  indium-20201103.2040/indium-debugger.el
+  indium-20201103.2040/indium-faces.el
+  indium-20201103.2040/indium-inspector.el
+  indium-20201103.2040/indium-interaction.el
+  indium-20201103.2040/indium-list-sources.el
+  indium-20201103.2040/indium-nodejs.el
+  indium-20201103.2040/indium-pkg.el
+  indium-20201103.2040/indium-render.el
+  indium-20201103.2040/indium-repl.el
+  indium-20201103.2040/indium-scratch.el
+  indium-20201103.2040/indium-seq-fix.el
+  indium-20201103.2040/indium-structs.el
+  indium-20201103.2040/indium.el
+Built indium in 8.807s, finished at Wed Jul  7 12:04:52 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  507 Jul  7 12:04 packages/indium-20201103.2040.entry
+172K -rw-r--r-- 1 root root 170K Jul  7 12:04 packages/indium-20201103.2040.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:04 packages/indium-badge.svg
+4.0K -rw-r--r-- 1 root root  273 Jul  7 12:04 packages/indium-readme.txt

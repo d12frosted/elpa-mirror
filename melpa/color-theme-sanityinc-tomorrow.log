@@ -3,10 +3,28 @@ Fetcher: github
 Source:  https://github.com/purcell/color-theme-sanityinc-tomorrow.git
 
 Updating /mnt/store/melpa/working/color-theme-sanityinc-tomorrow/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/color-theme-sanityinc-tomorrow/
+  to /tmp/color-theme-sanityinc-tomorrowjkZj8c/color-theme-sanityinc-tomorrow-20160917.58
+    color-theme-sanityinc-tomorrow-pkg.el -> color-theme-sanityinc-tomorrow-pkg.el
+    color-theme-sanityinc-tomorrow.el -> color-theme-sanityinc-tomorrow.el
+    sanityinc-tomorrow-blue-theme.el -> sanityinc-tomorrow-blue-theme.el
+    sanityinc-tomorrow-bright-theme.el -> sanityinc-tomorrow-bright-theme.el
+    sanityinc-tomorrow-day-theme.el -> sanityinc-tomorrow-day-theme.el
+    sanityinc-tomorrow-eighties-theme.el -> sanityinc-tomorrow-eighties-theme.el
+    sanityinc-tomorrow-night-theme.el -> sanityinc-tomorrow-night-theme.el
+Created color-theme-sanityinc-tomorrow-20160917.58.tar containing:
+  color-theme-sanityinc-tomorrow-20160917.58/
+  color-theme-sanityinc-tomorrow-20160917.58/color-theme-sanityinc-tomorrow-pkg.el
+  color-theme-sanityinc-tomorrow-20160917.58/color-theme-sanityinc-tomorrow.el
+  color-theme-sanityinc-tomorrow-20160917.58/sanityinc-tomorrow-blue-theme.el
+  color-theme-sanityinc-tomorrow-20160917.58/sanityinc-tomorrow-bright-theme.el
+  color-theme-sanityinc-tomorrow-20160917.58/sanityinc-tomorrow-day-theme.el
+  color-theme-sanityinc-tomorrow-20160917.58/sanityinc-tomorrow-eighties-theme.el
+  color-theme-sanityinc-tomorrow-20160917.58/sanityinc-tomorrow-night-theme.el
+Built color-theme-sanityinc-tomorrow in 3.773s, finished at Wed Jul  7 11:39:50 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  412 Jul  7 11:39 packages/color-theme-sanityinc-tomorrow-20160917.58.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 11:39 packages/color-theme-sanityinc-tomorrow-20160917.58.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:39 packages/color-theme-sanityinc-tomorrow-badge.svg
+4.0K -rw-r--r-- 1 root root  695 Jul  7 11:39 packages/color-theme-sanityinc-tomorrow-readme.txt

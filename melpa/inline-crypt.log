@@ -3,10 +3,18 @@ Fetcher: github
 Source:  https://github.com/Sodel-the-Vociferous/inline-crypt-el.git
 
 Updating /mnt/store/melpa/working/inline-crypt/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/inline-crypt/
+  to /tmp/inline-crypt8cSJMM/inline-crypt-20130409.1207
+    inline-crypt-pkg.el -> inline-crypt-pkg.el
+    inline-crypt.el -> inline-crypt.el
+Created inline-crypt-20130409.1207.tar containing:
+  inline-crypt-20130409.1207/
+  inline-crypt-20130409.1207/inline-crypt-pkg.el
+  inline-crypt-20130409.1207/inline-crypt.el
+Built inline-crypt in 4.710s, finished at Wed Jul  7 12:05:02 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  369 Jul  7 12:05 packages/inline-crypt-20130409.1207.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 12:05 packages/inline-crypt-20130409.1207.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:05 packages/inline-crypt-badge.svg
+4.0K -rw-r--r-- 1 root root  504 Jul  7 12:05 packages/inline-crypt-readme.txt

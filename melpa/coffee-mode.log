@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/defunkt/coffee-mode.git
 
 Updating /mnt/store/melpa/working/coffee-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built coffee-mode in 5.573s, finished at Wed Jul  7 11:39:43 2021
+ ✓ Success:
+ 48K -rw-r--r-- 1 root root  47K Jul  7 11:39 packages/coffee-mode-20160329.656.el
+4.0K -rw-r--r-- 1 root root  429 Jul  7 11:39 packages/coffee-mode-20160329.656.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:39 packages/coffee-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  134 Jul  7 11:39 packages/coffee-mode-readme.txt

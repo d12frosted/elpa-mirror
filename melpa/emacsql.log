@@ -3,10 +3,41 @@ Fetcher: github
 Source:  https://github.com/skeeto/emacsql.git
 
 Updating /mnt/store/melpa/working/emacsql/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/emacsql/
+  to /tmp/emacsqlBTC7mv/emacsql-20181031.1750
+    emacsql.el -> emacsql.el
+    emacsql-compiler.el -> emacsql-compiler.el
+    README.md -> README.md
+Created emacsql-20181031.1750.tar containing:
+  emacsql-20181031.1750/
+  emacsql-20181031.1750/README.md
+  emacsql-20181031.1750/emacsql-compiler.el
+  emacsql-20181031.1750/emacsql-pkg.el
+  emacsql-20181031.1750/emacsql.el
+Built emacsql in 3.785s, finished at Wed Jul  7 11:48:11 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  349 Jul  7 11:48 packages/emacsql-20181031.1750.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 11:48 packages/emacsql-20181031.1750.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:48 packages/emacsql-badge.svg
+8.0K -rw-r--r-- 1 root root 6.1K Jul  7 08:36 packages/emacsql-mysql-20171219.227.el
+4.0K -rw-r--r-- 1 root root  373 Jul  7 08:36 packages/emacsql-mysql-20171219.227.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:36 packages/emacsql-mysql-badge.svg
+4.0K -rw-r--r-- 1 root root   61 Jul  7 08:36 packages/emacsql-mysql-readme.txt
+4.0K -rw-r--r-- 1 root root  136 Jul  7 11:48 packages/emacsql-mysql.log
+4.0K -rw-r--r-- 1 root root  393 Jul  7 11:48 packages/emacsql-psql-20171219.227.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 11:48 packages/emacsql-psql-20171219.227.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:48 packages/emacsql-psql-badge.svg
+4.0K -rw-r--r-- 1 root root  189 Jul  7 11:48 packages/emacsql-psql-readme.txt
+4.0K -rw-r--r-- 1 root root  972 Jul  7 11:48 packages/emacsql-psql.log
+4.0K -rw-r--r-- 1 root root 1.8K Jul  7 11:48 packages/emacsql-readme.txt
+4.0K -rw-r--r-- 1 root root  377 Jul  7 08:36 packages/emacsql-sqlite-20180128.2052.entry
+7.5M -rw-r--r-- 1 root root 7.5M Jul  7 08:36 packages/emacsql-sqlite-20180128.2052.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:36 packages/emacsql-sqlite-badge.svg
+4.0K -rw-r--r-- 1 root root  125 Jul  7 08:36 packages/emacsql-sqlite-readme.txt
+4.0K -rw-r--r-- 1 root root  138 Jul  7 11:48 packages/emacsql-sqlite.log
+ 12K -rw-r--r-- 1 root root 9.9K Jul  7 08:36 packages/emacsql-sqlite3-20200914.508.el
+4.0K -rw-r--r-- 1 root root  413 Jul  7 08:36 packages/emacsql-sqlite3-20200914.508.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:36 packages/emacsql-sqlite3-badge.svg
+4.0K -rw-r--r-- 1 root root 2.1K Jul  7 08:36 packages/emacsql-sqlite3-readme.txt
+4.0K -rw-r--r-- 1 root root  147 Jul  7 11:48 packages/emacsql-sqlite3.log

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/kawabata/zone-select.git
 
 Updating /mnt/store/melpa/working/zone-select/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built zone-select in 4.625s, finished at Wed Jul  7 09:31:03 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.5K Jul  7 09:31 packages/zone-select-20160118.1419.el
+4.0K -rw-r--r-- 1 root root  423 Jul  7 09:31 packages/zone-select-20160118.1419.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:31 packages/zone-select-badge.svg
+4.0K -rw-r--r-- 1 root root   51 Jul  7 09:31 packages/zone-select-readme.txt

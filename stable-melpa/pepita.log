@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/sebasmonia/pepita.git
 
 Updating /mnt/store/melpa/working/pepita/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built pepita in 5.510s, finished at Wed Jul  7 09:11:17 2021
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root  22K Jul  7 09:11 packages/pepita-20200228.2257.el
+4.0K -rw-r--r-- 1 root root  422 Jul  7 09:11 packages/pepita-20200228.2257.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:11 packages/pepita-badge.svg
+4.0K -rw-r--r-- 1 root root  681 Jul  7 09:11 packages/pepita-readme.txt

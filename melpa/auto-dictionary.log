@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/nschum/auto-dictionary-mode.git
 
 Updating /mnt/store/melpa/working/auto-dictionary/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built auto-dictionary in 4.615s, finished at Wed Jul  7 11:34:29 2021
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root  41K Jul  7 11:34 packages/auto-dictionary-20130626.1746.el
+4.0K -rw-r--r-- 1 root root  367 Jul  7 11:34 packages/auto-dictionary-20130626.1746.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:34 packages/auto-dictionary-badge.svg
+4.0K -rw-r--r-- 1 root root  652 Jul  7 11:34 packages/auto-dictionary-readme.txt

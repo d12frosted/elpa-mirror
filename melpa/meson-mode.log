@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/wentasah/meson-mode.git
 
 Updating /mnt/store/melpa/working/meson-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/meson-mode/
+  to /tmp/meson-mode6JsWUb/meson-mode-20200907.743
+    meson-mode.el -> meson-mode.el
+    utils.el -> utils.el
+Created meson-mode-20200907.743.tar containing:
+  meson-mode-20200907.743/
+  meson-mode-20200907.743/meson-mode-pkg.el
+  meson-mode-20200907.743/meson-mode.el
+  meson-mode-20200907.743/utils.el
+Built meson-mode in 3.854s, finished at Wed Jul  7 09:01:12 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  410 Jul  7 09:01 packages/meson-mode-20200907.743.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 09:01 packages/meson-mode-20200907.743.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:01 packages/meson-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  411 Jul  7 09:01 packages/meson-mode-readme.txt

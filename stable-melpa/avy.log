@@ -3,10 +3,34 @@ Fetcher: github
 Source:  https://github.com/abo-abo/avy.git
 
 Updating /mnt/store/melpa/working/avy/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built avy in 4.392s, finished at Wed Jul  7 11:34:51 2021
+ ✓ Success:
+ 80K -rw-r--r-- 1 root root  79K Jul  7 11:34 packages/avy-20190511.1305.el
+4.0K -rw-r--r-- 1 root root  430 Jul  7 11:34 packages/avy-20190511.1305.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:34 packages/avy-badge.svg
+8.0K -rw-r--r-- 1 root root 4.1K Jul  7 11:34 packages/avy-embark-collect-20210112.2334.el
+4.0K -rw-r--r-- 1 root root  499 Jul  7 08:21 packages/avy-embark-collect-20210112.2334.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:21 packages/avy-embark-collect-badge.svg
+4.0K -rw-r--r-- 1 root root  185 Jul  7 08:21 packages/avy-embark-collect-readme.txt
+4.0K -rw-r--r-- 1 root root  147 Jul  7 11:34 packages/avy-embark-collect.log
+ 12K -rw-r--r-- 1 root root 9.2K Jul  7 11:34 packages/avy-flycheck-20160720.1500.el
+4.0K -rw-r--r-- 1 root root  489 Jul  7 11:34 packages/avy-flycheck-20160720.1500.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:21 packages/avy-flycheck-badge.svg
+4.0K -rw-r--r-- 1 root root  796 Jul  7 11:34 packages/avy-flycheck-readme.txt
+4.0K -rw-r--r-- 1 root root  143 Jul  7 11:34 packages/avy-flycheck.log
+8.0K -rw-r--r-- 1 root root 6.5K Jul  7 08:21 packages/avy-menu-20170519.545.el
+4.0K -rw-r--r-- 1 root root  408 Jul  7 08:21 packages/avy-menu-20170519.545.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:21 packages/avy-menu-badge.svg
+4.0K -rw-r--r-- 1 root root  261 Jul  7 08:21 packages/avy-menu-readme.txt
+4.0K -rw-r--r-- 1 root root  127 Jul  7 11:34 packages/avy-menu.log
+4.0K -rw-r--r-- 1 root root  387 Jul  7 08:21 packages/avy-migemo-20160321.1011.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 08:21 packages/avy-migemo-20160321.1011.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:21 packages/avy-migemo-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul  7 08:21 packages/avy-migemo-readme.txt
+4.0K -rw-r--r-- 1 root root  137 Jul  7 11:34 packages/avy-migemo.log
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:34 packages/avy-readme.txt
+8.0K -rw-r--r-- 1 root root 6.2K Jul  7 08:21 packages/avy-zap-20151029.1441.el
+4.0K -rw-r--r-- 1 root root  351 Jul  7 08:21 packages/avy-zap-20151029.1441.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:21 packages/avy-zap-badge.svg
+4.0K -rw-r--r-- 1 root root 2.5K Jul  7 08:21 packages/avy-zap-readme.txt
+4.0K -rw-r--r-- 1 root root  129 Jul  7 11:34 packages/avy-zap.log

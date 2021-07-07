@@ -1,0 +1,13 @@
+(inf-crystal .
+	     [(20180108 1052)
+	      ((emacs
+		(24 3))
+	       (crystal-mode
+		(0 1 0)))
+	      "Run a Inferior-Crystal process in a buffer" single
+	      ((:commit . "71a330f2d29e2fb4f51d223cf6230b88620a80af")
+	       (:authors
+		("Brantou" . "brantou89@gmail.com"))
+	       (:maintainer "Brantou" . "brantou89@gmail.com")
+	       (:keywords "languages" "crystal")
+	       (:url . "https://github.com/brantou/inf-crystal.el"))])

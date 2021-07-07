@@ -5,7 +5,7 @@
 ;; Author: Wang Kai <kaiwkx@gmail.com>
 ;; Keywords: extensions, tools
 ;; Package-Version: 20210620.706
-;; Package-Commit: 7ef1dffd44be9bba6450953d25ff787e122afc69
+;; Package-Commit: aeba19919e6d8f1c0529330572240143a2af38e0
 ;; URL: https://github.com/kaiwk/leetcode.el
 ;; Package-Requires: ((emacs "26") (dash "2.16.0") (graphql "0.1.1") (spinner "1.7.3") (aio "1.0") (log4e "0.3.3"))
 ;; Version: 0.1.22

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/jerrypnz/major-mode-hydra.el.git
 
 Updating /mnt/store/melpa/working/pretty-hydra/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built pretty-hydra in 4.092s, finished at Wed Jul  7 09:13:19 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  18K Jul  7 09:13 packages/pretty-hydra-20190930.2105.el
+4.0K -rw-r--r-- 1 root root  450 Jul  7 09:13 packages/pretty-hydra-20190930.2105.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:13 packages/pretty-hydra-badge.svg
+4.0K -rw-r--r-- 1 root root  100 Jul  7 09:13 packages/pretty-hydra-readme.txt

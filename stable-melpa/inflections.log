@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/eschulte/jump.el.git
 
 Updating /mnt/store/melpa/working/inflections/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built inflections in 4.250s, finished at Wed Jul  7 12:04:50 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.5K Jul  7 12:04 packages/inflections-20170908.849.el
+4.0K -rw-r--r-- 1 root root  423 Jul  7 12:04 packages/inflections-20170908.849.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:04 packages/inflections-badge.svg

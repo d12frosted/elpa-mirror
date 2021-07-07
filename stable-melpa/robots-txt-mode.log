@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-php/robots-txt-mode.git
 
 Updating /mnt/store/melpa/working/robots-txt-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built robots-txt-mode in 4.432s, finished at Wed Jul  7 09:17:08 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Jul  7 09:17 packages/robots-txt-mode-20190812.1858.el
+4.0K -rw-r--r-- 1 root root  365 Jul  7 09:17 packages/robots-txt-mode-20190812.1858.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:17 packages/robots-txt-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   47 Jul  7 09:17 packages/robots-txt-mode-readme.txt

@@ -3,10 +3,33 @@ Fetcher: github
 Source:  https://github.com/r0man/docopt.el.git
 
 Updating /mnt/store/melpa/working/docopt/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/docopt/
+  to /tmp/docoptO9KSfr/docopt-20201211.1008
+  ! src/docopt-abbrev.el -> docopt-abbrev.el
+  ! src/docopt-analyzer.el -> docopt-analyzer.el
+  ! src/docopt-argv.el -> docopt-argv.el
+  ! src/docopt-ast.el -> docopt-ast.el
+  ! src/docopt-generic.el -> docopt-generic.el
+  ! src/docopt-parser.el -> docopt-parser.el
+  ! src/docopt-transient.el -> docopt-transient.el
+  ! src/docopt-util.el -> docopt-util.el
+  ! src/docopt.el -> docopt.el
+Created docopt-20201211.1008.tar containing:
+  docopt-20201211.1008/
+  docopt-20201211.1008/docopt-abbrev.el
+  docopt-20201211.1008/docopt-analyzer.el
+  docopt-20201211.1008/docopt-argv.el
+  docopt-20201211.1008/docopt-ast.el
+  docopt-20201211.1008/docopt-generic.el
+  docopt-20201211.1008/docopt-parser.el
+  docopt-20201211.1008/docopt-pkg.el
+  docopt-20201211.1008/docopt-transient.el
+  docopt-20201211.1008/docopt-util.el
+  docopt-20201211.1008/docopt.el
+Built docopt in 3.650s, finished at Wed Jul  7 11:45:24 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  489 Jul  7 11:45 packages/docopt-20201211.1008.entry
+140K -rw-r--r-- 1 root root 140K Jul  7 11:45 packages/docopt-20201211.1008.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:45 packages/docopt-badge.svg
+4.0K -rw-r--r-- 1 root root   33 Jul  7 11:45 packages/docopt-readme.txt

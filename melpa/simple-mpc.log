@@ -3,10 +3,27 @@ Fetcher: github
 Source:  https://github.com/jorenvo/simple-mpc.git
 
 Updating /mnt/store/melpa/working/simple-mpc/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/simple-mpc/
+  to /tmp/simple-mpcqElO4c/simple-mpc-20200523.1804
+    simple-mpc-current-playlist.el -> simple-mpc-current-playlist.el
+    simple-mpc-mode.el -> simple-mpc-mode.el
+    simple-mpc-query.el -> simple-mpc-query.el
+    simple-mpc-utils.el -> simple-mpc-utils.el
+    simple-mpc-vars.el -> simple-mpc-vars.el
+    simple-mpc.el -> simple-mpc.el
+Created simple-mpc-20200523.1804.tar containing:
+  simple-mpc-20200523.1804/
+  simple-mpc-20200523.1804/simple-mpc-current-playlist.el
+  simple-mpc-20200523.1804/simple-mpc-mode.el
+  simple-mpc-20200523.1804/simple-mpc-pkg.el
+  simple-mpc-20200523.1804/simple-mpc-query.el
+  simple-mpc-20200523.1804/simple-mpc-utils.el
+  simple-mpc-20200523.1804/simple-mpc-vars.el
+  simple-mpc-20200523.1804/simple-mpc.el
+Built simple-mpc in 4.044s, finished at Wed Jul  7 09:19:32 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  396 Jul  7 09:19 packages/simple-mpc-20200523.1804.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 09:19 packages/simple-mpc-20200523.1804.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:19 packages/simple-mpc-badge.svg
+4.0K -rw-r--r-- 1 root root   86 Jul  7 09:19 packages/simple-mpc-readme.txt

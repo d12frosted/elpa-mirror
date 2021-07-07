@@ -1,0 +1,12 @@
+(flx-ido .
+	 [(20151030 1812)
+	  ((flx
+	    (0 1))
+	   (cl-lib
+	    (0 3)))
+	  "flx integration for ido" single
+	  ((:commit . "7fce6a4cdb65ac1b52e2b409ba548767581ce34c")
+	   (:authors
+	    ("Le Wang"))
+	   (:maintainer "Le Wang")
+	   (:url . "https://github.com/lewang/flx"))])

@@ -3,10 +3,9 @@ Fetcher: git
 Source:  https://depp.brause.cc/xbm-life.git
 
 Updating /mnt/store/melpa/working/xbm-life/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built xbm-life in 4.822s, finished at Wed Jul  7 09:29:48 2021
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root  28K Jul  7 09:29 packages/xbm-life-20210508.1640.el
+4.0K -rw-r--r-- 1 root root  378 Jul  7 09:29 packages/xbm-life-20210508.1640.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:29 packages/xbm-life-badge.svg
+4.0K -rw-r--r-- 1 root root   40 Jul  7 09:29 packages/xbm-life-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/DarthFennec/highlight-indent-guides.git
 
 Updating /mnt/store/melpa/working/highlight-indent-guides/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built highlight-indent-guides in 3.908s, finished at Wed Jul  7 12:02:51 2021
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root  50K Jul  7 12:02 packages/highlight-indent-guides-20200820.2328.el
+4.0K -rw-r--r-- 1 root root  397 Jul  7 12:02 packages/highlight-indent-guides-20200820.2328.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:02 packages/highlight-indent-guides-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul  7 12:02 packages/highlight-indent-guides-readme.txt

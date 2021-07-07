@@ -13,8 +13,3 @@ To enable:
 
 To only display string whose length is greater than or equal to 3
 (setq evil-search-highlight-string-min-len 3)
-
-To change the default highlight face:
-
-(set-face-background 'evil-ex-lazy-highlight "gold")
-(set-face-foreground 'evil-ex-lazy-highlight "black")

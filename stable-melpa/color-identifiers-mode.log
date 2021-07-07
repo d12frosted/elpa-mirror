@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ankurdave/color-identifiers-mode.git
 
 Updating /mnt/store/melpa/working/color-identifiers-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built color-identifiers-mode in 4.080s, finished at Wed Jul  7 11:39:45 2021
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:39 packages/color-identifiers-mode-20160519.1846.el
+4.0K -rw-r--r-- 1 root root  434 Jul  7 11:39 packages/color-identifiers-mode-20160519.1846.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:39 packages/color-identifiers-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  329 Jul  7 11:39 packages/color-identifiers-mode-readme.txt

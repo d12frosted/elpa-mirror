@@ -3,10 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/worr/cfn-mode.git
 
 Updating /mnt/store/melpa/working/flycheck-cfn/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built flycheck-cfn in 3.737s, finished at Wed Jul  7 11:53:19 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.1K Jul  7 11:53 packages/flycheck-cfn-20201120.2307.el
+4.0K -rw-r--r-- 1 root root  393 Jul  7 11:53 packages/flycheck-cfn-20201120.2307.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:53 packages/flycheck-cfn-badge.svg
+4.0K -rw-r--r-- 1 root root  501 Jul  7 11:53 packages/flycheck-cfn-readme.txt

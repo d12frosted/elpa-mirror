@@ -3,10 +3,31 @@ Fetcher: github
 Source:  https://github.com/gromnitsky/ph.git
 
 Updating /mnt/store/melpa/working/ph/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ph/
+  to /tmp/ph7W7G4Y/ph-20130312.1837
+    ph-metadata.el -> ph-metadata.el
+    ph-pkg.el -> ph-pkg.el
+    ph-u.el -> ph-u.el
+    ph-venture.el -> ph-venture.el
+    ph.el -> ph.el
+    meta.json -> meta.json
+    README -> README
+    bin/ph-project-new -> bin/ph-project-new
+Created ph-20130312.1837.tar containing:
+  ph-20130312.1837/
+  ph-20130312.1837/README
+  ph-20130312.1837/bin/
+  ph-20130312.1837/bin/ph-project-new
+  ph-20130312.1837/meta.json
+  ph-20130312.1837/ph-metadata.el
+  ph-20130312.1837/ph-pkg.el
+  ph-20130312.1837/ph-u.el
+  ph-20130312.1837/ph-venture.el
+  ph-20130312.1837/ph.el
+Built ph in 4.085s, finished at Wed Jul  7 09:11:35 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  183 Jul  7 09:11 packages/ph-20130312.1837.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 09:11 packages/ph-20130312.1837.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:11 packages/ph-badge.svg
+4.0K -rw-r--r-- 1 root root  670 Jul  6 17:02 packages/ph-readme.txt

@@ -12,7 +12,7 @@ Example:
 
    (package-initialize)
    (add-to-list 'package-archives
-     '("melpa" . "https://melpa.org/packages/") t)
+     '("melpa" . "http://melpa.milkbox.net/packages/") t)
    (unless (package-installed-p 'package+)
      (package-install 'package+))
 

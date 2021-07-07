@@ -1,0 +1,11 @@
+(flycheck-clang-tidy .
+		     [(20191030 814)
+		      ((flycheck
+			(0 30)))
+		      "Flycheck syntax checker using clang-tidy" single
+		      ((:commit . "2f89698ab0d78818875d5ef08d0b470a9ffc402f")
+		       (:authors
+			(nil . "Sebastian Nagel<sebastian.nagel@ncoding.at>"))
+		       (:maintainer "tastytea" . "tastytea@tastytea.de")
+		       (:keywords "convenience" "languages" "tools")
+		       (:url . "https://github.com/ch1bo/flycheck-clang-tidy"))])

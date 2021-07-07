@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/flycheck/flycheck-inline.git
 
 Updating /mnt/store/melpa/working/flycheck-inline/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built flycheck-inline in 3.708s, finished at Wed Jul  7 11:53:50 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jul  7 11:53 packages/flycheck-inline-20200808.1019.el
+4.0K -rw-r--r-- 1 root root  360 Jul  7 11:53 packages/flycheck-inline-20200808.1019.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:53 packages/flycheck-inline-badge.svg
+4.0K -rw-r--r-- 1 root root  270 Jul  7 11:53 packages/flycheck-inline-readme.txt

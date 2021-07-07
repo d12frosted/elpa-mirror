@@ -3,10 +3,20 @@ Fetcher: github
 Source:  https://github.com/10sr/github-elpa.git
 
 Updating /mnt/store/melpa/working/github-elpa/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/github-elpa/
+  to /tmp/github-elpaY7hDPW/github-elpa-20160922.1607
+    github-elpa.el -> github-elpa.el
+    bin => bin
+Created github-elpa-20160922.1607.tar containing:
+  github-elpa-20160922.1607/
+  github-elpa-20160922.1607/bin/
+  github-elpa-20160922.1607/bin/github-elpa
+  github-elpa-20160922.1607/github-elpa-pkg.el
+  github-elpa-20160922.1607/github-elpa.el
+Built github-elpa in 3.538s, finished at Wed Jul  7 11:57:27 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  430 Jul  7 11:57 packages/github-elpa-20160922.1607.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 11:57 packages/github-elpa-20160922.1607.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:57 packages/github-elpa-badge.svg
+4.0K -rw-r--r-- 1 root root  389 Jul  7 11:57 packages/github-elpa-readme.txt

@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/peterwvj/vdm-mode.git
 
 Updating /mnt/store/melpa/working/vdm-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/vdm-mode/
+  to /tmp/vdm-modeyFZ5wg/vdm-mode-20181127.2023
+    vdm-mode-util.el -> vdm-mode-util.el
+    vdm-mode.el -> vdm-mode.el
+Created vdm-mode-20181127.2023.tar containing:
+  vdm-mode-20181127.2023/
+  vdm-mode-20181127.2023/vdm-mode-pkg.el
+  vdm-mode-20181127.2023/vdm-mode-util.el
+  vdm-mode-20181127.2023/vdm-mode.el
+Built vdm-mode in 4.219s, finished at Wed Jul  7 09:27:16 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  428 Jul  7 09:27 packages/vdm-mode-20181127.2023.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:27 packages/vdm-mode-20181127.2023.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:27 packages/vdm-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  368 Jul  7 09:27 packages/vdm-mode-readme.txt

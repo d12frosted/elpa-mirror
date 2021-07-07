@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/balajisivaraman/emacs-one-themes.git
 
 Updating /mnt/store/melpa/working/one-themes/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/one-themes/
+  to /tmp/one-themes49XCD8/one-themes-20200720.1444
+    one-dark-theme.el -> one-dark-theme.el
+    one-light-theme.el -> one-light-theme.el
+    one-themes.el -> one-themes.el
+Created one-themes-20200720.1444.tar containing:
+  one-themes-20200720.1444/
+  one-themes-20200720.1444/one-dark-theme.el
+  one-themes-20200720.1444/one-light-theme.el
+  one-themes-20200720.1444/one-themes-pkg.el
+  one-themes-20200720.1444/one-themes.el
+Built one-themes in 3.703s, finished at Wed Jul  7 09:06:17 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  376 Jul  7 09:06 packages/one-themes-20200720.1444.entry
+ 44K -rw-r--r-- 1 root root  40K Jul  7 09:06 packages/one-themes-20200720.1444.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/one-themes-badge.svg
+4.0K -rw-r--r-- 1 root root  141 Jul  7 09:06 packages/one-themes-readme.txt

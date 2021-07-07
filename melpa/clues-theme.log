@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacsfodder/emacs-clues-theme.git
 
 Updating /mnt/store/melpa/working/clues-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built clues-theme in 8.468s, finished at Wed Jul  7 11:39:16 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Jul  7 11:39 packages/clues-theme-20161213.1127.el
+4.0K -rw-r--r-- 1 root root  390 Jul  7 11:39 packages/clues-theme-20161213.1127.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:39 packages/clues-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  550 Jul  7 11:39 packages/clues-theme-readme.txt

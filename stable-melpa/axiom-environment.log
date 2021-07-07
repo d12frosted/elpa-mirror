@@ -3,10 +3,67 @@ Fetcher: git
 Source:  https://bitbucket.org/pdo/axiom-environment
 
 Updating /mnt/store/melpa/working/axiom-environment/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/axiom-environment/
+  to /tmp/axiom-environment6dc6OZ/axiom-environment-20210312.2248
+    axiom-base.el -> axiom-base.el
+    axiom-boot-mode.el -> axiom-boot-mode.el
+    axiom-buffer-menu.el -> axiom-buffer-menu.el
+    axiom-environment.el -> axiom-environment.el
+    axiom-help-mode.el -> axiom-help-mode.el
+    axiom-input-mode.el -> axiom-input-mode.el
+    axiom-process-mode.el -> axiom-process-mode.el
+    axiom-selector.el -> axiom-selector.el
+    axiom-spad-mode.el -> axiom-spad-mode.el
+    data/axiom-standard-category-info.el -> data/axiom-standard-category-info.el
+    data/axiom-standard-domain-info.el -> data/axiom-standard-domain-info.el
+    data/axiom-standard-operation-info.el -> data/axiom-standard-operation-info.el
+    data/axiom-standard-package-info.el -> data/axiom-standard-package-info.el
+    data/fricas-standard-category-info.el -> data/fricas-standard-category-info.el
+    data/fricas-standard-domain-info.el -> data/fricas-standard-domain-info.el
+    data/fricas-standard-operation-info.el -> data/fricas-standard-operation-info.el
+    data/fricas-standard-package-info.el -> data/fricas-standard-package-info.el
+    data/openaxiom-standard-category-info.el -> data/openaxiom-standard-category-info.el
+    data/openaxiom-standard-domain-info.el -> data/openaxiom-standard-domain-info.el
+    data/openaxiom-standard-operation-info.el -> data/openaxiom-standard-operation-info.el
+    data/openaxiom-standard-package-info.el -> data/openaxiom-standard-package-info.el
+    themes/axiom-on-gcl-theme.el -> themes/axiom-on-gcl-theme.el
+    themes/fricas-on-ccl-theme.el -> themes/fricas-on-ccl-theme.el
+    themes/fricas-on-sbcl-theme.el -> themes/fricas-on-sbcl-theme.el
+    themes/openaxiom-on-sbcl-theme.el -> themes/openaxiom-on-sbcl-theme.el
+Created axiom-environment-20210312.2248.tar containing:
+  axiom-environment-20210312.2248/
+  axiom-environment-20210312.2248/axiom-base.el
+  axiom-environment-20210312.2248/axiom-boot-mode.el
+  axiom-environment-20210312.2248/axiom-buffer-menu.el
+  axiom-environment-20210312.2248/axiom-environment-pkg.el
+  axiom-environment-20210312.2248/axiom-environment.el
+  axiom-environment-20210312.2248/axiom-help-mode.el
+  axiom-environment-20210312.2248/axiom-input-mode.el
+  axiom-environment-20210312.2248/axiom-process-mode.el
+  axiom-environment-20210312.2248/axiom-selector.el
+  axiom-environment-20210312.2248/axiom-spad-mode.el
+  axiom-environment-20210312.2248/data/
+  axiom-environment-20210312.2248/data/axiom-standard-category-info.el
+  axiom-environment-20210312.2248/data/axiom-standard-domain-info.el
+  axiom-environment-20210312.2248/data/axiom-standard-operation-info.el
+  axiom-environment-20210312.2248/data/axiom-standard-package-info.el
+  axiom-environment-20210312.2248/data/fricas-standard-category-info.el
+  axiom-environment-20210312.2248/data/fricas-standard-domain-info.el
+  axiom-environment-20210312.2248/data/fricas-standard-operation-info.el
+  axiom-environment-20210312.2248/data/fricas-standard-package-info.el
+  axiom-environment-20210312.2248/data/openaxiom-standard-category-info.el
+  axiom-environment-20210312.2248/data/openaxiom-standard-domain-info.el
+  axiom-environment-20210312.2248/data/openaxiom-standard-operation-info.el
+  axiom-environment-20210312.2248/data/openaxiom-standard-package-info.el
+  axiom-environment-20210312.2248/themes/
+  axiom-environment-20210312.2248/themes/axiom-on-gcl-theme.el
+  axiom-environment-20210312.2248/themes/fricas-on-ccl-theme.el
+  axiom-environment-20210312.2248/themes/fricas-on-sbcl-theme.el
+  axiom-environment-20210312.2248/themes/openaxiom-on-sbcl-theme.el
+Built axiom-environment in 3.277s, finished at Wed Jul  7 11:34:58 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  372 Jul  7 11:34 packages/axiom-environment-20210312.2248.entry
+300K -rw-r--r-- 1 root root 300K Jul  7 11:34 packages/axiom-environment-20210312.2248.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:34 packages/axiom-environment-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul  7 11:34 packages/axiom-environment-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ajsquared/color-theme-x.git
 
 Updating /mnt/store/melpa/working/color-theme-x/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built color-theme-x in 4.101s, finished at Wed Jul  7 11:39:51 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.9K Jul  7 11:39 packages/color-theme-x-20201204.2245.el
+4.0K -rw-r--r-- 1 root root  418 Jul  7 11:39 packages/color-theme-x-20201204.2245.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:39 packages/color-theme-x-badge.svg
+4.0K -rw-r--r-- 1 root root  978 Jul  7 11:39 packages/color-theme-x-readme.txt

@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/Christoph-D/latex-unicode-math-mode.git
 
 Updating /mnt/store/melpa/working/latex-unicode-math-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/latex-unicode-math-mode/
+  to /tmp/latex-unicode-math-mode2B8AqL/latex-unicode-math-mode-20161201.1635
+    latex-unicode-math-mode.el -> latex-unicode-math-mode.el
+    unicode-math-mode.sty -> unicode-math-mode.sty
+Created latex-unicode-math-mode-20161201.1635.tar containing:
+  latex-unicode-math-mode-20161201.1635/
+  latex-unicode-math-mode-20161201.1635/latex-unicode-math-mode-pkg.el
+  latex-unicode-math-mode-20161201.1635/latex-unicode-math-mode.el
+  latex-unicode-math-mode-20161201.1635/unicode-math-mode.sty
+Built latex-unicode-math-mode in 7.715s, finished at Wed Jul  7 08:57:16 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  377 Jul  7 08:57 packages/latex-unicode-math-mode-20161201.1635.entry
+ 56K -rw-r--r-- 1 root root  50K Jul  7 08:57 packages/latex-unicode-math-mode-20161201.1635.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:57 packages/latex-unicode-math-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  635 Jul  7 08:57 packages/latex-unicode-math-mode-readme.txt

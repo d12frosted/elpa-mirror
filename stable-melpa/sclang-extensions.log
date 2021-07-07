@@ -3,10 +3,25 @@ Fetcher: github
 Source:  https://github.com/chrisbarrett/sclang-extensions.git
 
 Updating /mnt/store/melpa/working/sclang-extensions/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sclang-extensions/
+  to /tmp/sclang-extensions5pU1aN/sclang-extensions-20160509.338
+    sclang-ac-mode.el -> sclang-ac-mode.el
+    sclang-doc-mode.el -> sclang-doc-mode.el
+    sclang-extensions-utils.el -> sclang-extensions-utils.el
+    sclang-extensions.el -> sclang-extensions.el
+    sclang-post-mode.el -> sclang-post-mode.el
+Created sclang-extensions-20160509.338.tar containing:
+  sclang-extensions-20160509.338/
+  sclang-extensions-20160509.338/sclang-ac-mode.el
+  sclang-extensions-20160509.338/sclang-doc-mode.el
+  sclang-extensions-20160509.338/sclang-extensions-pkg.el
+  sclang-extensions-20160509.338/sclang-extensions-utils.el
+  sclang-extensions-20160509.338/sclang-extensions.el
+  sclang-extensions-20160509.338/sclang-post-mode.el
+Built sclang-extensions in 3.970s, finished at Wed Jul  7 09:18:00 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  490 Jul  7 09:18 packages/sclang-extensions-20160509.338.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 09:18 packages/sclang-extensions-20160509.338.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:18 packages/sclang-extensions-badge.svg
+4.0K -rw-r--r-- 1 root root  298 Jul  7 09:18 packages/sclang-extensions-readme.txt

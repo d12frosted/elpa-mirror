@@ -1,0 +1,14 @@
+(list-packages-ext .
+		   [(20151114 1125)
+		    ((s
+		      (1 6 0))
+		     (ht
+		      (1 5 0))
+		     (persistent-soft
+		      (0 8 6)))
+		    "Extras for list-packages" single
+		    ((:commit . "344719b313c208c644490f8f1130e21405402f05")
+		     (:authors
+		      ("Alessandro Piras" . "laynor@gmail.com"))
+		     (:maintainer "Alessandro Piras" . "laynor@gmail.com")
+		     (:keywords "convenience" "tools"))])

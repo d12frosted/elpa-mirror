@@ -3,10 +3,47 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-metals.git
 
 Updating /mnt/store/melpa/working/lsp-metals/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-metals/
+  to /tmp/lsp-metalsxBUA4I/lsp-metals-20210426.739
+    lsp-metals-protocol.el -> lsp-metals-protocol.el
+    lsp-metals-treeview.el -> lsp-metals-treeview.el
+    lsp-metals.el -> lsp-metals.el
+    icons => icons
+Created lsp-metals-20210426.739.tar containing:
+  lsp-metals-20210426.739/
+  lsp-metals-20210426.739/icons/
+  lsp-metals-20210426.739/icons/book-dark.png
+  lsp-metals-20210426.739/icons/book-light.png
+  lsp-metals-20210426.739/icons/bug-dark.png
+  lsp-metals-20210426.739/icons/bug-light.png
+  lsp-metals-20210426.739/icons/class.png
+  lsp-metals-20210426.739/icons/discord-dark.png
+  lsp-metals-20210426.739/icons/discord-light.png
+  lsp-metals-20210426.739/icons/enum.png
+  lsp-metals-20210426.739/icons/field.png
+  lsp-metals-20210426.739/icons/github-dark.png
+  lsp-metals-20210426.739/icons/github-light.png
+  lsp-metals-20210426.739/icons/gitter-dark.png
+  lsp-metals-20210426.739/icons/gitter-light.png
+  lsp-metals-20210426.739/icons/interface.png
+  lsp-metals-20210426.739/icons/issue-opened-dark.png
+  lsp-metals-20210426.739/icons/issue-opened-light.png
+  lsp-metals-20210426.739/icons/logo.png
+  lsp-metals-20210426.739/icons/method.png
+  lsp-metals-20210426.739/icons/object.png
+  lsp-metals-20210426.739/icons/trait.png
+  lsp-metals-20210426.739/icons/twitter-dark.png
+  lsp-metals-20210426.739/icons/twitter-light.png
+  lsp-metals-20210426.739/icons/val.png
+  lsp-metals-20210426.739/icons/var.png
+  lsp-metals-20210426.739/lsp-metals-pkg.el
+  lsp-metals-20210426.739/lsp-metals-protocol.el
+  lsp-metals-20210426.739/lsp-metals-treeview.el
+  lsp-metals-20210426.739/lsp-metals.el
+Built lsp-metals in 4.188s, finished at Wed Jul  7 08:59:18 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  700 Jul  7 08:59 packages/lsp-metals-20210426.739.entry
+112K -rw-r--r-- 1 root root 110K Jul  7 08:59 packages/lsp-metals-20210426.739.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:59 packages/lsp-metals-badge.svg
+4.0K -rw-r--r-- 1 root root   18 Jul  7 08:59 packages/lsp-metals-readme.txt

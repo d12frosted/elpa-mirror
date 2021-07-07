@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Fuco1/letcheck.git
 
 Updating /mnt/store/melpa/working/letcheck/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built letcheck in 5.160s, finished at Wed Jul  7 08:57:56 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Jul  7 08:57 packages/letcheck-20150726.1612.el
+4.0K -rw-r--r-- 1 root root  365 Jul  7 08:57 packages/letcheck-20150726.1612.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:57 packages/letcheck-badge.svg
+4.0K -rw-r--r-- 1 root root  351 Jul  7 08:57 packages/letcheck-readme.txt

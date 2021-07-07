@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/johnwalker/pixie-mode.git
 
 Updating /mnt/store/melpa/working/pixie-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built pixie-mode in 4.376s, finished at Wed Jul  7 09:12:10 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jul  7 09:12 packages/pixie-mode-20180626.541.el
+4.0K -rw-r--r-- 1 root root  413 Jul  7 09:12 packages/pixie-mode-20180626.541.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:12 packages/pixie-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   29 Jul  7 09:12 packages/pixie-mode-readme.txt

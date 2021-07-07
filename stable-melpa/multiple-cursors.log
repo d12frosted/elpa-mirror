@@ -3,10 +3,34 @@ Fetcher: github
 Source:  https://github.com/magnars/multiple-cursors.el.git
 
 Updating /mnt/store/melpa/working/multiple-cursors/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/multiple-cursors/
+  to /tmp/multiple-cursorsTI2CF9/multiple-cursors-20160519.2041
+    mc-cycle-cursors.el -> mc-cycle-cursors.el
+    mc-edit-lines.el -> mc-edit-lines.el
+    mc-hide-unmatched-lines-mode.el -> mc-hide-unmatched-lines-mode.el
+    mc-mark-more.el -> mc-mark-more.el
+    mc-mark-pop.el -> mc-mark-pop.el
+    mc-separate-operations.el -> mc-separate-operations.el
+    multiple-cursors-core.el -> multiple-cursors-core.el
+    multiple-cursors-pkg.el -> multiple-cursors-pkg.el
+    multiple-cursors.el -> multiple-cursors.el
+    rectangular-region-mode.el -> rectangular-region-mode.el
+Created multiple-cursors-20160519.2041.tar containing:
+  multiple-cursors-20160519.2041/
+  multiple-cursors-20160519.2041/mc-cycle-cursors.el
+  multiple-cursors-20160519.2041/mc-edit-lines.el
+  multiple-cursors-20160519.2041/mc-hide-unmatched-lines-mode.el
+  multiple-cursors-20160519.2041/mc-mark-more.el
+  multiple-cursors-20160519.2041/mc-mark-pop.el
+  multiple-cursors-20160519.2041/mc-separate-operations.el
+  multiple-cursors-20160519.2041/multiple-cursors-core.el
+  multiple-cursors-20160519.2041/multiple-cursors-pkg.el
+  multiple-cursors-20160519.2041/multiple-cursors.el
+  multiple-cursors-20160519.2041/rectangular-region-mode.el
+Built multiple-cursors in 7.563s, finished at Wed Jul  7 09:03:22 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  331 Jul  7 09:03 packages/multiple-cursors-20160519.2041.entry
+100K -rw-r--r-- 1 root root 100K Jul  7 09:03 packages/multiple-cursors-20160519.2041.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:03 packages/multiple-cursors-badge.svg
+8.0K -rw-r--r-- 1 root root 7.3K Jul  7 09:03 packages/multiple-cursors-readme.txt

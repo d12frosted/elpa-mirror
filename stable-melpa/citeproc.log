@@ -3,12 +3,66 @@ Fetcher: github
 Source:  https://github.com/andras-simonyi/citeproc-el.git
 
 Updating /mnt/store/melpa/working/citeproc/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-From https://github.com/andras-simonyi/citeproc-el
-   1f2f52c..fe52879  22-add_links -> origin/22-add_links
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/citeproc/
+  to /tmp/citeprocGba5nR/citeproc-20200612.2141
+    citeproc-bibtex.el -> citeproc-bibtex.el
+    citeproc-choose.el -> citeproc-choose.el
+    citeproc-cite.el -> citeproc-cite.el
+    citeproc-context.el -> citeproc-context.el
+    citeproc-date.el -> citeproc-date.el
+    citeproc-disamb.el -> citeproc-disamb.el
+    citeproc-formatters.el -> citeproc-formatters.el
+    citeproc-generic-elements.el -> citeproc-generic-elements.el
+    citeproc-itemdata.el -> citeproc-itemdata.el
+    citeproc-itemgetters.el -> citeproc-itemgetters.el
+    citeproc-lib.el -> citeproc-lib.el
+    citeproc-locale.el -> citeproc-locale.el
+    citeproc-macro.el -> citeproc-macro.el
+    citeproc-name.el -> citeproc-name.el
+    citeproc-number.el -> citeproc-number.el
+    citeproc-prange.el -> citeproc-prange.el
+    citeproc-proc.el -> citeproc-proc.el
+    citeproc-rt.el -> citeproc-rt.el
+    citeproc-s.el -> citeproc-s.el
+    citeproc-sort.el -> citeproc-sort.el
+    citeproc-style.el -> citeproc-style.el
+    citeproc-term.el -> citeproc-term.el
+    citeproc.el -> citeproc.el
+Created citeproc-20200612.2141.tar containing:
+  citeproc-20200612.2141/
+  citeproc-20200612.2141/citeproc-bibtex.el
+  citeproc-20200612.2141/citeproc-choose.el
+  citeproc-20200612.2141/citeproc-cite.el
+  citeproc-20200612.2141/citeproc-context.el
+  citeproc-20200612.2141/citeproc-date.el
+  citeproc-20200612.2141/citeproc-disamb.el
+  citeproc-20200612.2141/citeproc-formatters.el
+  citeproc-20200612.2141/citeproc-generic-elements.el
+  citeproc-20200612.2141/citeproc-itemdata.el
+  citeproc-20200612.2141/citeproc-itemgetters.el
+  citeproc-20200612.2141/citeproc-lib.el
+  citeproc-20200612.2141/citeproc-locale.el
+  citeproc-20200612.2141/citeproc-macro.el
+  citeproc-20200612.2141/citeproc-name.el
+  citeproc-20200612.2141/citeproc-number.el
+  citeproc-20200612.2141/citeproc-pkg.el
+  citeproc-20200612.2141/citeproc-prange.el
+  citeproc-20200612.2141/citeproc-proc.el
+  citeproc-20200612.2141/citeproc-rt.el
+  citeproc-20200612.2141/citeproc-s.el
+  citeproc-20200612.2141/citeproc-sort.el
+  citeproc-20200612.2141/citeproc-style.el
+  citeproc-20200612.2141/citeproc-term.el
+  citeproc-20200612.2141/citeproc.el
+Built citeproc in 5.283s, finished at Wed Jul  7 11:38:27 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  541 Jul  7 11:38 packages/citeproc-20200612.2141.entry
+212K -rw-r--r-- 1 root root 210K Jul  7 11:38 packages/citeproc-20200612.2141.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:38 packages/citeproc-badge.svg
+4.0K -rw-r--r-- 1 root root  525 Jul  7 11:38 packages/citeproc-org-20200610.1620.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 11:38 packages/citeproc-org-20200610.1620.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:38 packages/citeproc-org-badge.svg
+4.0K -rw-r--r-- 1 root root  177 Jul  7 11:38 packages/citeproc-org-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:38 packages/citeproc-org.log
+4.0K -rw-r--r-- 1 root root  126 Jul  7 11:38 packages/citeproc-readme.txt

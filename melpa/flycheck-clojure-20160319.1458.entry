@@ -1,0 +1,17 @@
+(flycheck-clojure .
+		  [(20160319 1458)
+		   ((cider
+		     (0 8 1))
+		    (flycheck
+		     (0 22 -4 1))
+		    (let-alist
+			(1 0 1))
+		    (emacs
+		     (24)))
+		   "Flycheck: Clojure support" single
+		   ((:commit . "fc0f1473c85b5287c8a62c1eee86894c98fbb84c")
+		    (:authors
+		     ("Peter Fraenkel" . "pnf@podsnap.com")
+		     ("Sebastian Wiesner" . "swiesner@lunaryorn.com"))
+		    (:maintainer "Peter Fraenkel" . "pnf@podsnap.com")
+		    (:url . "https://github.com/clojure-emacs/squiggly-clojure"))])

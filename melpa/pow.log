@@ -3,10 +3,29 @@ Fetcher: github
 Source:  https://github.com/yukihr/emacs-pow.git
 
 Updating /mnt/store/melpa/working/pow/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pow/
+  to /tmp/powEqBmd9/pow-20140420.806
+    pow-app-list.el -> pow-app-list.el
+    pow-app.el -> pow-app.el
+    pow-commands.el -> pow-commands.el
+    pow-helpers.el -> pow-helpers.el
+    pow-tail-log.el -> pow-tail-log.el
+    pow-variables.el -> pow-variables.el
+    pow.el -> pow.el
+Created pow-20140420.806.tar containing:
+  pow-20140420.806/
+  pow-20140420.806/pow-app-list.el
+  pow-20140420.806/pow-app.el
+  pow-20140420.806/pow-commands.el
+  pow-20140420.806/pow-helpers.el
+  pow-20140420.806/pow-pkg.el
+  pow-20140420.806/pow-tail-log.el
+  pow-20140420.806/pow-variables.el
+  pow-20140420.806/pow.el
+Built pow in 3.507s, finished at Wed Jul  7 09:13:08 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  399 Jul  7 09:13 packages/pow-20140420.806.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 09:13 packages/pow-20140420.806.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:13 packages/pow-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:13 packages/pow-readme.txt

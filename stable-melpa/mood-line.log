@@ -3,10 +3,9 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jessieh/mood-line.git
 
 Updating /mnt/store/melpa/working/mood-line/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built mood-line in 4.531s, finished at Wed Jul  7 09:02:20 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  14K Jul  7 09:02 packages/mood-line-20200722.2327.el
+4.0K -rw-r--r-- 1 root root  395 Jul  7 09:02 packages/mood-line-20200722.2327.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:02 packages/mood-line-badge.svg
+4.0K -rw-r--r-- 1 root root  356 Jul  7 09:02 packages/mood-line-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/AdamNiederer/vue-mode.git
 
 Updating /mnt/store/melpa/working/vue-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built vue-mode in 4.411s, finished at Wed Jul  7 09:27:51 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.9K Jul  7 09:27 packages/vue-mode-20180428.2031.el
+4.0K -rw-r--r-- 1 root root  438 Jul  7 09:27 packages/vue-mode-20180428.2031.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:27 packages/vue-mode-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:27 packages/vue-mode-readme.txt

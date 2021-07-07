@@ -1,0 +1,11 @@
+(gitpatch .
+	  [(20170810 1258)
+	   ((emacs
+	     (24 3)))
+	   "Git-format patch toolkit" single
+	   ((:commit . "94d40a2ee2b7cd7b209546ea02568079176b0034")
+	    (:authors
+	     ("Feng Shu" . "tumashu@163.com"))
+	    (:maintainer "Feng Shu" . "tumashu@163.com")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/tumashu/gitpatch"))])

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/nubank/emidje.git
 
 Updating /mnt/store/melpa/working/emidje/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built emidje in 4.763s, finished at Wed Jul  7 11:48:23 2021
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root  31K Jul  7 11:48 packages/emidje-20181219.1714.el
+4.0K -rw-r--r-- 1 root root  408 Jul  7 11:48 packages/emidje-20181219.1714.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:48 packages/emidje-badge.svg
+4.0K -rw-r--r-- 1 root root   80 Jul  7 11:48 packages/emidje-readme.txt

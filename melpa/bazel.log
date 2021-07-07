@@ -3,10 +3,12 @@ Fetcher: github
 Source:  https://github.com/bazelbuild/emacs-bazel-mode.git
 
 Updating /mnt/store/melpa/working/bazel/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built bazel in 4.391s, finished at Wed Jul  7 11:35:19 2021
+ ✓ Success:
+116K -rw-r--r-- 1 root root 114K Jul  7 11:35 packages/bazel-20210605.906.el
+4.0K -rw-r--r-- 1 root root  247 Jul  7 11:35 packages/bazel-20210605.906.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:35 packages/bazel-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Apr 13 13:41 packages/bazel-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   98 Apr 13 13:41 packages/bazel-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  248 May 13 09:11 packages/bazel-mode.log
+4.0K -rw-r--r-- 1 root root  155 Jul  7 11:35 packages/bazel-readme.txt

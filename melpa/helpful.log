@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Wilfred/helpful.git
 
 Updating /mnt/store/melpa/working/helpful/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built helpful in 4.487s, finished at Wed Jul  7 12:02:33 2021
+ ✓ Success:
+100K -rw-r--r-- 1 root root  99K Jul  7 12:02 packages/helpful-20200930.2311.el
+4.0K -rw-r--r-- 1 root root  478 Jul  7 12:02 packages/helpful-20200930.2311.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:02 packages/helpful-badge.svg
+4.0K -rw-r--r-- 1 root root  402 Jul  7 12:02 packages/helpful-readme.txt

@@ -1,0 +1,11 @@
+(exiftool .
+	  [(20190516 1523)
+	   ((emacs
+	     (25)))
+	   "Elisp wrapper around ExifTool" single
+	   ((:commit . "c1058d99c34e62b99dbfca13ada47519fb51bf73")
+	    (:authors
+	     ("Arun I" . "arunisaac@systemreboot.net"))
+	    (:maintainer "Arun I" . "arunisaac@systemreboot.net")
+	    (:keywords "data")
+	    (:url . "https://git.systemreboot.net/exiftool.el"))])

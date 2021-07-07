@@ -1,0 +1,16 @@
+(realgud-trepan-ni .
+		   [(20190528 2008)
+		    ((load-relative
+		      (1 2))
+		     (realgud
+		      (1 5 0))
+		     (cl-lib
+		      (0 5))
+		     (emacs
+		      (25)))
+		    "Realgud front-end to trepan-ni" tar
+		    ((:commit . "ce008862ea33de0a9e6c06099b9ddff8f620f2e4")
+		     (:authors
+		      ("Rocky Bernstein" . "rocky@gnu.org"))
+		     (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
+		     (:url . "http://github.com/realgud/realgud-trepan-ni"))])

@@ -1,0 +1,14 @@
+(helm-dash .
+	   [(20170531 835)
+	    ((helm
+	      (1 9 2))
+	     (cl-lib
+	      (0 5)))
+	    "Offline documentation browser for +150 APIs using Dash docsets." single
+	    ((:commit . "9a230125a7a11f5fa90aa048b61abd95eb78ddfe")
+	     (:authors
+	      ("Raimon Grau" . "raimonster@gmail.com")
+	      ("Toni Reina " . "areina0@gmail.com"))
+	     (:maintainer "Raimon Grau" . "raimonster@gmail.com")
+	     (:keywords "docs")
+	     (:url . "http://github.com/areina/helm-dash"))])

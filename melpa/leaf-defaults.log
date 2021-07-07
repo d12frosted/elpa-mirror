@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/conao3/leaf-defaults.el.git
 
 Updating /mnt/store/melpa/working/leaf-defaults/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/leaf-defaults/
+  to /tmp/leaf-defaultsGH2z99/leaf-defaults-20210301.118
+    leaf-defaults-recipe.el -> leaf-defaults-recipe.el
+    leaf-defaults.el -> leaf-defaults.el
+Created leaf-defaults-20210301.118.tar containing:
+  leaf-defaults-20210301.118/
+  leaf-defaults-20210301.118/leaf-defaults-pkg.el
+  leaf-defaults-20210301.118/leaf-defaults-recipe.el
+  leaf-defaults-20210301.118/leaf-defaults.el
+Built leaf-defaults in 7.142s, finished at Wed Jul  7 08:57:37 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  415 Jul  7 08:57 packages/leaf-defaults-20210301.118.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 08:57 packages/leaf-defaults-20210301.118.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:57 packages/leaf-defaults-badge.svg
+4.0K -rw-r--r-- 1 root root   33 Jul  7 08:57 packages/leaf-defaults-readme.txt

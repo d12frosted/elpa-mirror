@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/xcwen/ac-php.git
 
 Updating /mnt/store/melpa/working/ac-php-core/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ac-php-core/
+  to /tmp/ac-php-coreE3FSQ0/ac-php-core-20210218.559
+    ac-php-comm-tags-data.el -> ac-php-comm-tags-data.el
+    ac-php-core.el -> ac-php-core.el
+    phpctags -> phpctags
+    ac-php-comm-tags-data.json -> ac-php-comm-tags-data.json
+Created ac-php-core-20210218.559.tar containing:
+  ac-php-core-20210218.559/
+  ac-php-core-20210218.559/ac-php-comm-tags-data.el
+  ac-php-core-20210218.559/ac-php-comm-tags-data.json
+  ac-php-core-20210218.559/ac-php-core-pkg.el
+  ac-php-core-20210218.559/ac-php-core.el
+  ac-php-core-20210218.559/phpctags
+Built ac-php-core in 6.158s, finished at Wed Jul  7 11:32:05 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  524 Jul  7 11:32 packages/ac-php-core-20210218.559.entry
+2.1M -rw-r--r-- 1 root root 2.1M Jul  7 11:32 packages/ac-php-core-20210218.559.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:32 packages/ac-php-core-badge.svg
+4.0K -rw-r--r-- 1 root root  980 Jul  7 11:32 packages/ac-php-core-readme.txt

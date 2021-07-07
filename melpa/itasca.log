@@ -3,10 +3,50 @@ Fetcher: github
 Source:  https://github.com/jkfurtney/itasca-emacs.git
 
 Updating /mnt/store/melpa/working/itasca/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/itasca/
+  to /tmp/itascaOkW0v0/itasca-20170601.1622
+    itasca.el -> itasca.el
+    ac-dict => ac-dict
+    snippets => snippets
+Created itasca-20170601.1622.tar containing:
+  itasca-20170601.1622/
+  itasca-20170601.1622/ac-dict/
+  itasca-20170601.1622/ac-dict/itasca-3dec-mode
+  itasca-20170601.1622/ac-dict/itasca-flac3d-mode
+  itasca-20170601.1622/ac-dict/itasca-general-mode
+  itasca-20170601.1622/ac-dict/itasca-pfc-mode
+  itasca-20170601.1622/ac-dict/itasca-pfc5-mode
+  itasca-20170601.1622/ac-dict/itasca-udec-mode
+  itasca-20170601.1622/itasca-pkg.el
+  itasca-20170601.1622/itasca.el
+  itasca-20170601.1622/snippets/
+  itasca-20170601.1622/snippets/itasca-3dec-mode/
+  itasca-20170601.1622/snippets/itasca-3dec-mode/.yas-parents
+  itasca-20170601.1622/snippets/itasca-flac-mode/
+  itasca-20170601.1622/snippets/itasca-flac-mode/.yas-parents
+  itasca-20170601.1622/snippets/itasca-flac3d-mode/
+  itasca-20170601.1622/snippets/itasca-flac3d-mode/.yas-parents
+  itasca-20170601.1622/snippets/itasca-flac3d-mode/ploop
+  itasca-20170601.1622/snippets/itasca-general-mode/
+  itasca-20170601.1622/snippets/itasca-general-mode/acoff
+  itasca-20170601.1622/snippets/itasca-general-mode/cloop
+  itasca-20170601.1622/snippets/itasca-general-mode/com
+  itasca-20170601.1622/snippets/itasca-general-mode/def
+  itasca-20170601.1622/snippets/itasca-general-mode/fileio
+  itasca-20170601.1622/snippets/itasca-general-mode/idef
+  itasca-20170601.1622/snippets/itasca-general-mode/if
+  itasca-20170601.1622/snippets/itasca-general-mode/ife
+  itasca-20170601.1622/snippets/itasca-general-mode/ploop
+  itasca-20170601.1622/snippets/itasca-pfc-mode/
+  itasca-20170601.1622/snippets/itasca-pfc-mode/.yas-parents
+  itasca-20170601.1622/snippets/itasca-pfc5-mode/
+  itasca-20170601.1622/snippets/itasca-pfc5-mode/.yas-parents
+  itasca-20170601.1622/snippets/itasca-udec-mode/
+  itasca-20170601.1622/snippets/itasca-udec-mode/.yas-parents
+Built itasca in 3.302s, finished at Wed Jul  7 12:05:35 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  420 Jul  7 12:05 packages/itasca-20170601.1622.entry
+132K -rw-r--r-- 1 root root 130K Jul  7 12:05 packages/itasca-20170601.1622.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:05 packages/itasca-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Jul  7 12:05 packages/itasca-readme.txt

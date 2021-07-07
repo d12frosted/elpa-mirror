@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/andrmuel/ob-uart.git
 
 Updating /mnt/store/melpa/working/ob-uart/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ob-uart in 4.150s, finished at Wed Jul  7 09:05:51 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 4.0K Jul  7 09:05 packages/ob-uart-20170521.858.el
+4.0K -rw-r--r-- 1 root root  357 Jul  7 09:05 packages/ob-uart-20170521.858.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:05 packages/ob-uart-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:05 packages/ob-uart-readme.txt

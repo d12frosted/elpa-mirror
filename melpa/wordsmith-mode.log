@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/istib/wordsmith-mode.git
 
 Updating /mnt/store/melpa/working/wordsmith-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built wordsmith-mode in 4.200s, finished at Wed Jul  7 09:29:27 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.8K Jul  7 09:29 packages/wordsmith-mode-20140203.1227.el
+4.0K -rw-r--r-- 1 root root  275 Jul  7 09:29 packages/wordsmith-mode-20140203.1227.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:29 packages/wordsmith-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  445 Jul  7 09:29 packages/wordsmith-mode-readme.txt

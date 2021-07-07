@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/defaultxr/fluxus-mode.git
 
 Updating /mnt/store/melpa/working/fluxus-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built fluxus-mode in 3.418s, finished at Wed Jul  7 11:53:07 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Jul  7 11:53 packages/fluxus-mode-20191001.1716.el
+4.0K -rw-r--r-- 1 root root  416 Jul  7 11:53 packages/fluxus-mode-20191001.1716.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:53 packages/fluxus-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  510 Jul  7 11:53 packages/fluxus-mode-readme.txt

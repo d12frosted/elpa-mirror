@@ -1,0 +1,13 @@
+(sphinx-doc .
+	    [(20140524 1557)
+	     ((s
+	       (1 9 0))
+	      (cl-lib
+	       (0 5)))
+	     "Sphinx friendly docstrings for Python functions" single
+	     ((:commit . "b3459ecb9e6d3fffdee3cb7342563a56a32ce666")
+	      (:authors
+	       ("Vineet Naik" . "naikvin@gmail.com"))
+	      (:maintainer "Vineet Naik" . "naikvin@gmail.com")
+	      (:keywords "sphinx" "python")
+	      (:url . "https://github.com/naiquevin/sphinx-doc.el"))])

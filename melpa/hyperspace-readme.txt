@@ -18,8 +18,8 @@ Some concrete examples:
 
 | *If you enter*   | *then Hyperspace*                                        |
 |------------------+----------------------------------------------------------|
-| "el"             | opens info node "(elisp)Top"                             |
-| "el eval-region" | searches for "eval-region" in the elisp Info index       |
+| "lf"             | opens elfeed                                             |
+| "lf blah"        | opens elfeed, searches for "blah"                        |
 | "bb"             | shows all BBDB entries                                   |
 | "bb kenneth"     | shows all BBDB entries with a name matching "kenneth"    |
 | "ddg foo"        | searches DuckDuckGo for "foo" using browse-url           |

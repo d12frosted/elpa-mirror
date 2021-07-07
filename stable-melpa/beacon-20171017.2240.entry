@@ -1,0 +1,11 @@
+(beacon .
+	[(20171017 2240)
+	 ((seq
+	   (2 14)))
+	 "Highlight the cursor whenever the window scrolls" single
+	 ((:commit . "729338b02a0e331a4faf475da9f54771a3470106")
+	  (:authors
+	   ("Artur Malabarba" . "emacs@endlessparentheses.com"))
+	  (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
+	  (:keywords "convenience")
+	  (:url . "https://github.com/Malabarba/beacon"))])

@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/matthewlmcclure/dircmp-mode.git
 
 Updating /mnt/store/melpa/working/dircmp/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dircmp/
+  to /tmp/dircmpNOzLAG/dircmp-20141204.1756
+    dircmp.el -> dircmp.el
+    emacs-git-difftool.sh -> emacs-git-difftool.sh
+    emacs-git-mergetool.sh -> emacs-git-mergetool.sh
+Created dircmp-20141204.1756.tar containing:
+  dircmp-20141204.1756/
+  dircmp-20141204.1756/dircmp-pkg.el
+  dircmp-20141204.1756/dircmp.el
+  dircmp-20141204.1756/emacs-git-difftool.sh
+  dircmp-20141204.1756/emacs-git-mergetool.sh
+Built dircmp in 3.408s, finished at Wed Jul  7 11:43:52 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  349 Jul  7 11:43 packages/dircmp-20141204.1756.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:43 packages/dircmp-20141204.1756.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:43 packages/dircmp-badge.svg
+4.0K -rw-r--r-- 1 root root  728 Jul  7 11:43 packages/dircmp-readme.txt

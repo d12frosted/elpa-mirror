@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/jinzhu/zeal-at-point.git
 
 Updating /mnt/store/melpa/working/zeal-at-point/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built zeal-at-point in 3.498s, finished at Wed Jul  7 09:30:44 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.3K Jul  7 09:30 packages/zeal-at-point-20180131.2354.el
+4.0K -rw-r--r-- 1 root root  304 Jul  7 09:30 packages/zeal-at-point-20180131.2354.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:30 packages/zeal-at-point-badge.svg

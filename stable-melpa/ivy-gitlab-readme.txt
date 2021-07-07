@@ -1,1 +1,1 @@
-Provides an Ivy interface to Gitlab
+Provides a Helm interface to Gitlab

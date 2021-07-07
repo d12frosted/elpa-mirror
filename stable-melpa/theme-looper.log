@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/myTerminal/theme-looper.git
 
 Updating /mnt/store/melpa/working/theme-looper/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built theme-looper in 4.493s, finished at Wed Jul  7 09:24:13 2021
+ ✓ Success:
+ 12K -rwxr-xr-x 1 root root  12K Jul  7 09:24 packages/theme-looper-20201107.4.el
+4.0K -rw-r--r-- 1 root root  430 Jul  7 09:24 packages/theme-looper-20201107.4.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:24 packages/theme-looper-badge.svg
+4.0K -rw-r--r-- 1 root root  342 Jul  7 09:24 packages/theme-looper-readme.txt

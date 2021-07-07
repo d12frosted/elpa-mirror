@@ -3,10 +3,25 @@ Fetcher: gitlab
 Source:  https://gitlab.com/michael.sanders/swift-playground-mode.git
 
 Updating /mnt/store/melpa/working/swift-playground-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/swift-playground-mode/
+  to /tmp/swift-playground-modeDIALjW/swift-playground-mode-20190717.2223
+    swift-playground-mode.el -> swift-playground-mode.el
+  ! SwiftPlayground.vim/runner.sh -> runner.sh
+  ! SwiftPlayground.vim/PlaygroundRuntime.swift -> PlaygroundRuntime.swift
+  ! SwiftPlayground.vim/PlaygroundRuntimeCommon.swift -> PlaygroundRuntimeCommon.swift
+  ! SwiftPlayground.vim/PlaygroundRuntimeUI.swift -> PlaygroundRuntimeUI.swift
+Created swift-playground-mode-20190717.2223.tar containing:
+  swift-playground-mode-20190717.2223/
+  swift-playground-mode-20190717.2223/PlaygroundRuntime.swift
+  swift-playground-mode-20190717.2223/PlaygroundRuntimeCommon.swift
+  swift-playground-mode-20190717.2223/PlaygroundRuntimeUI.swift
+  swift-playground-mode-20190717.2223/runner.sh
+  swift-playground-mode-20190717.2223/swift-playground-mode-pkg.el
+  swift-playground-mode-20190717.2223/swift-playground-mode.el
+Built swift-playground-mode in 4.074s, finished at Wed Jul  7 09:22:56 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  319 Jul  7 09:22 packages/swift-playground-mode-20190717.2223.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 09:22 packages/swift-playground-mode-20190717.2223.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:22 packages/swift-playground-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  679 Jul  7 09:22 packages/swift-playground-mode-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/sachac/artbollocks-mode.git
 
 Updating /mnt/store/melpa/working/artbollocks-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built artbollocks-mode in 4.386s, finished at Wed Jul  7 11:33:57 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  16K Jul  7 11:33 packages/artbollocks-mode-20141212.2132.el
+4.0K -rw-r--r-- 1 root root  407 Jul  7 11:33 packages/artbollocks-mode-20141212.2132.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:33 packages/artbollocks-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  469 Jul  7 11:33 packages/artbollocks-mode-readme.txt

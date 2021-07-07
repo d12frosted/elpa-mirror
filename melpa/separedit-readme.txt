@@ -14,8 +14,6 @@ Edit comment/string/docstring/code block in separate buffer with your favorite m
     |          | <--------------------- |   ...)    | <--------------------- |   ...)    | ...
     +----------+     Commit changes     +-----------+     Commit changes     +-----------+
 
-{{TOC}}
-
 ## Installation
 
 Clone this repository, or install from MELPA. Add the following to your `.emacs`:
@@ -128,20 +126,6 @@ In edit buffer, the comment delimiter will be removed, for example (█ represen
      */
 
 If the language identifier of code block is omitted, the edit buffer uses the same mode as the source buffer.
-
-### Edit heredoc
-
-The heredoc marker can be used to specify the language:
-
-    source buffer       ->      edit buffer (css-mode)
-
-    ...<<CSS
-    h1 {                        h1 {
-      color: red;█                color: red;█
-    }                           }
-    CSS
-
-Both `LANG` and `__LANG__` are supported, see `separedit-heredoc-language-regexp-alist` for more detail.
 
 ### Edit value form of variable in help/helpful buffer
 
@@ -261,7 +245,7 @@ You may also like to enable `auto-fill-mode` in edit buffer:
   (let ((separedit-continue-fill-column t))
     (with-current-buffer (separedit-dwim)
       (fill-region (point-min) (point-max))
-      (execute-kbd-macro (kbd "C-c C-c")))))
+      (execute-kbd-macro (kbd "C-c C-k")))))
 ```
 
 ### Eval multiple-line sexp in comment
@@ -269,11 +253,10 @@ You may also like to enable `auto-fill-mode` in edit buffer:
 ``` elisp
 (defun separedit/eval-last-sexp-in-comment ()
   (interactive)
-  (let ((separedit-default-mode 'emacs-lisp-mode)
-        (separedit-inhibit-edit-window-p t))
+  (let ((separedit-default-mode 'emacs-lisp-mode))
     (with-current-buffer (separedit)
-      (unwind-protect (call-interactively #'eval-last-sexp)
-        (edit-indirect-abort)))))
+      (prog1 (call-interactively #'eval-last-sexp)
+        (execute-kbd-macro (kbd "C-c C-k"))))))
 
 (define-key emacs-lisp-mode-map (kbd "C-x C-e")
   (lambda ()

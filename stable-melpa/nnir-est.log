@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/kawabata/nnir-est.git
 
 Updating /mnt/store/melpa/working/nnir-est/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built nnir-est in 4.069s, finished at Wed Jul  7 09:04:35 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Jul  7 09:04 packages/nnir-est-20180710.2103.el
+4.0K -rw-r--r-- 1 root root  370 Jul  7 09:04 packages/nnir-est-20180710.2103.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:04 packages/nnir-est-badge.svg
+4.0K -rw-r--r-- 1 root root 2.5K Jul  7 09:04 packages/nnir-est-readme.txt

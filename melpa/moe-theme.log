@@ -3,10 +3,24 @@ Fetcher: github
 Source:  https://github.com/kuanyui/moe-theme.el.git
 
 Updating /mnt/store/melpa/working/moe-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/moe-theme/
+  to /tmp/moe-themeCAByVg/moe-theme-20200216.1927
+    moe-dark-theme.el -> moe-dark-theme.el
+    moe-light-theme.el -> moe-light-theme.el
+    moe-theme-pkg.el -> moe-theme-pkg.el
+    moe-theme-switcher.el -> moe-theme-switcher.el
+    moe-theme.el -> moe-theme.el
+Created moe-theme-20200216.1927.tar containing:
+  moe-theme-20200216.1927/
+  moe-theme-20200216.1927/moe-dark-theme.el
+  moe-theme-20200216.1927/moe-light-theme.el
+  moe-theme-20200216.1927/moe-theme-pkg.el
+  moe-theme-20200216.1927/moe-theme-switcher.el
+  moe-theme-20200216.1927/moe-theme.el
+Built moe-theme in 4.170s, finished at Wed Jul  7 09:02:06 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  357 Jul  7 09:02 packages/moe-theme-20200216.1927.entry
+160K -rw-r--r-- 1 root root 160K Jul  7 09:02 packages/moe-theme-20200216.1927.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:02 packages/moe-theme-badge.svg
+8.0K -rw-r--r-- 1 root root 4.1K Jul  7 09:02 packages/moe-theme-readme.txt

@@ -3,10 +3,29 @@ Fetcher: github
 Source:  https://github.com/msherry/fxrd-mode.git
 
 Updating /mnt/store/melpa/working/fxrd-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fxrd-mode/
+  to /tmp/fxrd-modehYUn0s/fxrd-mode-20170728.1801
+    fxrd-mode.el -> fxrd-mode.el
+    fxrd-validators.el -> fxrd-validators.el
+  ! fxrd-modes/cbnot-mode.el -> cbnot-mode.el
+  ! fxrd-modes/nacha-mode.el -> nacha-mode.el
+  ! fxrd-modes/rm37-mode.el -> rm37-mode.el
+  ! fxrd-modes/sample-mode.el -> sample-mode.el
+  ! fxrd-modes/tso6-mode.el -> tso6-mode.el
+Created fxrd-mode-20170728.1801.tar containing:
+  fxrd-mode-20170728.1801/
+  fxrd-mode-20170728.1801/cbnot-mode.el
+  fxrd-mode-20170728.1801/fxrd-mode-pkg.el
+  fxrd-mode-20170728.1801/fxrd-mode.el
+  fxrd-mode-20170728.1801/fxrd-validators.el
+  fxrd-mode-20170728.1801/nacha-mode.el
+  fxrd-mode-20170728.1801/rm37-mode.el
+  fxrd-mode-20170728.1801/sample-mode.el
+  fxrd-mode-20170728.1801/tso6-mode.el
+Built fxrd-mode in 7.345s, finished at Wed Jul  7 11:56:11 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  384 Jul  7 11:56 packages/fxrd-mode-20170728.1801.entry
+ 60K -rw-r--r-- 1 root root  60K Jul  7 11:56 packages/fxrd-mode-20170728.1801.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:56 packages/fxrd-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul  7 11:56 packages/fxrd-mode-readme.txt

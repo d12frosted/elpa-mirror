@@ -3,10 +3,21 @@ Fetcher: git
 Source:  https://git.madhouse-project.org/algernon/brutalist-theme.el.git
 
 Updating /mnt/store/melpa/working/brutalist-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/brutalist-theme/
+  to /tmp/brutalist-themewJHzGN/brutalist-theme-20181023.1222
+    brutalist-build.el -> brutalist-build.el
+    brutalist-dark-theme.el -> brutalist-dark-theme.el
+    brutalist-theme.el -> brutalist-theme.el
+Created brutalist-theme-20181023.1222.tar containing:
+  brutalist-theme-20181023.1222/
+  brutalist-theme-20181023.1222/brutalist-build.el
+  brutalist-theme-20181023.1222/brutalist-dark-theme.el
+  brutalist-theme-20181023.1222/brutalist-theme-pkg.el
+  brutalist-theme-20181023.1222/brutalist-theme.el
+Built brutalist-theme in 4.257s, finished at Wed Jul  7 11:36:33 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  282 Jul  7 11:36 packages/brutalist-theme-20181023.1222.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:36 packages/brutalist-theme-20181023.1222.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:36 packages/brutalist-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  114 Jul  7 11:36 packages/brutalist-theme-readme.txt

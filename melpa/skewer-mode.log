@@ -3,10 +3,36 @@ Fetcher: github
 Source:  https://github.com/skeeto/skewer-mode.git
 
 Updating /mnt/store/melpa/working/skewer-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/skewer-mode/
+  to /tmp/skewer-mode8cqKvH/skewer-mode-20180528.1628
+    example.html -> example.html
+    skewer-everything.user.js -> skewer-everything.user.js
+    skewer.js -> skewer.js
+    cache-table.el -> cache-table.el
+    skewer-bower.el -> skewer-bower.el
+    skewer-css.el -> skewer-css.el
+    skewer-html.el -> skewer-html.el
+    skewer-mode-pkg.el -> skewer-mode-pkg.el
+    skewer-mode.el -> skewer-mode.el
+    skewer-repl.el -> skewer-repl.el
+    skewer-setup.el -> skewer-setup.el
+Created skewer-mode-20180528.1628.tar containing:
+  skewer-mode-20180528.1628/
+  skewer-mode-20180528.1628/cache-table.el
+  skewer-mode-20180528.1628/example.html
+  skewer-mode-20180528.1628/skewer-bower.el
+  skewer-mode-20180528.1628/skewer-css.el
+  skewer-mode-20180528.1628/skewer-everything.user.js
+  skewer-mode-20180528.1628/skewer-html.el
+  skewer-mode-20180528.1628/skewer-mode-pkg.el
+  skewer-mode-20180528.1628/skewer-mode.el
+  skewer-mode-20180528.1628/skewer-repl.el
+  skewer-mode-20180528.1628/skewer-setup.el
+  skewer-mode-20180528.1628/skewer.js
+Built skewer-mode in 4.091s, finished at Wed Jul  7 09:19:44 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  459 Jul  7 09:19 packages/skewer-mode-20180528.1628.entry
+ 80K -rw-r--r-- 1 root root  80K Jul  7 09:19 packages/skewer-mode-20180528.1628.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:19 packages/skewer-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 3.1K Jul  7 09:19 packages/skewer-mode-readme.txt

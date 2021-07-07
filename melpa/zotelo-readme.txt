@@ -8,7 +8,7 @@ intended for bibtex and RefTeX users.
 
 zotelo-mode-map lives on  C-c z prefix.
 
-  *Installation*
+  *Instalation*
 
   (add-hook 'TeX-mode-hook 'zotelo-minor-mode)
 

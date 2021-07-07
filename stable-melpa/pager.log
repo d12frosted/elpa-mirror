@@ -3,10 +3,13 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/pager.git
 
 Updating /mnt/store/melpa/working/pager/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built pager in 4.346s, finished at Wed Jul  7 09:10:21 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.6K Jul  7 09:10 packages/pager-20151202.120.el
+4.0K -rw-r--r-- 1 root root  250 Jul  7 09:10 packages/pager-20151202.120.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:10 packages/pager-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Jul  7 05:57 packages/pager-default-keybindings-20130719.2057.el
+4.0K -rw-r--r-- 1 root root  417 Jul  7 05:57 packages/pager-default-keybindings-20130719.2057.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 05:57 packages/pager-default-keybindings-badge.svg
+4.0K -rw-r--r-- 1 root root  207 Jul  7 05:57 packages/pager-default-keybindings-readme.txt
+4.0K -rw-r--r-- 1 root root  178 Jul  7 09:10 packages/pager-default-keybindings.log

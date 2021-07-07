@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/tumashu/pyim-basedict.git
 
 Updating /mnt/store/melpa/working/pyim-basedict/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pyim-basedict/
+  to /tmp/pyim-basedictGfKoq9/pyim-basedict-20170726.1515
+    pyim-basedict.el -> pyim-basedict.el
+    pyim-basedict.pyim -> pyim-basedict.pyim
+Created pyim-basedict-20170726.1515.tar containing:
+  pyim-basedict-20170726.1515/
+  pyim-basedict-20170726.1515/pyim-basedict-pkg.el
+  pyim-basedict-20170726.1515/pyim-basedict.el
+  pyim-basedict-20170726.1515/pyim-basedict.pyim
+Built pyim-basedict in 7.292s, finished at Wed Jul  7 09:14:44 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  375 Jul  7 09:14 packages/pyim-basedict-20170726.1515.entry
+2.2M -rw-r--r-- 1 root root 2.2M Jul  7 09:14 packages/pyim-basedict-20170726.1515.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:14 packages/pyim-basedict-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:14 packages/pyim-basedict-readme.txt

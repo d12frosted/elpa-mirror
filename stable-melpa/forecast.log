@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/cadadr/elisp.git
 
 Updating /mnt/store/melpa/working/forecast/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built forecast in 4.701s, finished at Wed Jul  7 11:55:23 2021
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root  34K Jul  7 11:55 packages/forecast-20191004.1850.el
+4.0K -rw-r--r-- 1 root root  386 Jul  7 11:55 packages/forecast-20191004.1850.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:55 packages/forecast-badge.svg
+4.0K -rw-r--r-- 1 root root 2.5K Jul  7 11:55 packages/forecast-readme.txt

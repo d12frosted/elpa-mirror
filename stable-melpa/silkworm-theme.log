@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/mswift42/silkworm-theme.git
 
 Updating /mnt/store/melpa/working/silkworm-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built silkworm-theme in 3.979s, finished at Wed Jul  7 09:19:29 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Jul  7 09:19 packages/silkworm-theme-20160217.1309.el
+4.0K -rw-r--r-- 1 root root  256 Jul  7 09:19 packages/silkworm-theme-20160217.1309.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:19 packages/silkworm-theme-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:19 packages/silkworm-theme-readme.txt

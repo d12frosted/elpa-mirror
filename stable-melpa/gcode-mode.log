@@ -3,10 +3,19 @@ Fetcher: gitlab
 Source:  https://gitlab.com/wavexx/gcode-mode.el.git
 
 Updating /mnt/store/melpa/working/gcode-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gcode-mode/
+  to /tmp/gcode-modeudy4SO/gcode-mode-20210522.1025
+    gcode-mode-doc.el -> gcode-mode-doc.el
+    gcode-mode.el -> gcode-mode.el
+Created gcode-mode-20210522.1025.tar containing:
+  gcode-mode-20210522.1025/
+  gcode-mode-20210522.1025/gcode-mode-doc.el
+  gcode-mode-20210522.1025/gcode-mode-pkg.el
+  gcode-mode-20210522.1025/gcode-mode.el
+Built gcode-mode in 7.484s, finished at Wed Jul  7 11:56:26 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  408 Jul  7 11:56 packages/gcode-mode-20210522.1025.entry
+ 60K -rw-r--r-- 1 root root  60K Jul  7 11:56 packages/gcode-mode-20210522.1025.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:56 packages/gcode-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  595 Jul  7 11:56 packages/gcode-mode-readme.txt

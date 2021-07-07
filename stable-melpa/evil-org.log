@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/Somelauw/evil-org-mode.git
 
 Updating /mnt/store/melpa/working/evil-org/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-org/
+  to /tmp/evil-org06IsRO/evil-org-20200101.2017
+    evil-org-agenda.el -> evil-org-agenda.el
+    evil-org.el -> evil-org.el
+Created evil-org-20200101.2017.tar containing:
+  evil-org-20200101.2017/
+  evil-org-20200101.2017/evil-org-agenda.el
+  evil-org-20200101.2017/evil-org-pkg.el
+  evil-org-20200101.2017/evil-org.el
+Built evil-org in 5.706s, finished at Wed Jul  7 11:50:59 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  354 Jul  7 11:50 packages/evil-org-20200101.2017.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 11:50 packages/evil-org-20200101.2017.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:50 packages/evil-org-badge.svg
+4.0K -rw-r--r-- 1 root root   67 Jul  7 11:50 packages/evil-org-readme.txt

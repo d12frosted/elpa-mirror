@@ -3,10 +3,61 @@ Fetcher: github
 Source:  https://github.com/kawabata/emacs-trr.git
 
 Updating /mnt/store/melpa/working/trr/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/trr/
+  to /tmp/trr8TRg6J/trr-20150909.228
+    trr-files.el -> trr-files.el
+    trr-graphs.el -> trr-graphs.el
+    trr-menus.el -> trr-menus.el
+    trr-mesg.el -> trr-mesg.el
+    trr-sess.el -> trr-sess.el
+    trr.el -> trr.el
+    trr.info -> trr.info
+    trr.texi -> trr.texi
+    record => record
+    text => text
+    CONTENTS -> CONTENTS
+Created trr-20150909.228.tar containing:
+  trr-20150909.228/
+  trr-20150909.228/CONTENTS
+  trr-20150909.228/dir
+  trr-20150909.228/record/
+  trr-20150909.228/record/SCORES-CA
+  trr-20150909.228/record/SCORES-CJ
+  trr-20150909.228/record/SCORES-EL
+  trr-20150909.228/record/SCORES-IC
+  trr-20150909.228/record/SCORES-JV
+  trr-20150909.228/record/SCORES-OC
+  trr-20150909.228/record/SCORES-PY
+  trr-20150909.228/record/SCORES-TR
+  trr-20150909.228/text/
+  trr-20150909.228/text/C_programs
+  trr-20150909.228/text/C_programs.formed
+  trr-20150909.228/text/Constitution_of_the_USA
+  trr-20150909.228/text/Constitution_of_the_USA.formed
+  trr-20150909.228/text/Elisp_programs
+  trr-20150909.228/text/Elisp_programs.formed
+  trr-20150909.228/text/Iccad_90
+  trr-20150909.228/text/Iccad_90.formed
+  trr-20150909.228/text/Java_programs
+  trr-20150909.228/text/Java_programs.formed
+  trr-20150909.228/text/Ocaml_programs
+  trr-20150909.228/text/Ocaml_programs.formed
+  trr-20150909.228/text/Python_programs
+  trr-20150909.228/text/Python_programs.formed
+  trr-20150909.228/text/The_Constitution_Of_JAPAN
+  trr-20150909.228/text/The_Constitution_Of_JAPAN.formed
+  trr-20150909.228/trr-files.el
+  trr-20150909.228/trr-graphs.el
+  trr-20150909.228/trr-menus.el
+  trr-20150909.228/trr-mesg.el
+  trr-20150909.228/trr-pkg.el
+  trr-20150909.228/trr-sess.el
+  trr-20150909.228/trr.el
+  trr-20150909.228/trr.info
+Built trr in 6.183s, finished at Wed Jul  7 09:25:33 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  450 Jul  7 09:25 packages/trr-20150909.228.entry
+460K -rw-r--r-- 1 root root 460K Jul  7 09:25 packages/trr-20150909.228.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:25 packages/trr-badge.svg
+4.0K -rw-r--r-- 1 root root  772 Jul  7 09:25 packages/trr-readme.txt

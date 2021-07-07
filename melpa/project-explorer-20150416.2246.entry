@@ -1,0 +1,16 @@
+(project-explorer .
+		  [(20150416 2246)
+		   ((cl-lib
+		     (0 3))
+		    (es-lib
+		     (0 3))
+		    (es-windows
+		     (0 1))
+		    (emacs
+		     (24)))
+		   "A project explorer sidebar" single
+		   ((:commit . "7c2cc86a81f679dda355110f916366b64893a5d4")
+		    (:authors
+		     ("sabof"))
+		    (:maintainer "sabof")
+		    (:url . "https://github.com/sabof/project-explorer"))])

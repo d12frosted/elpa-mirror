@@ -1,0 +1,9 @@
+(shell-switcher .
+		[(20151011 1315)
+		 nil "Provide fast switching between shell buffers." tar
+		 ((:commit . "2c5575ae859a82041a4bacd1793b844bfc24c34f")
+		  (:authors
+		   ("Damien Cassou" . "damien.cassou@gmail.com"))
+		  (:maintainer "Damien Cassou" . "damien.cassou@gmail.com")
+		  (:keywords "emacs" "package" "elisp" "shell" "eshell" "term" "switcher")
+		  (:url . "https://github.com/DamienCassou/shell-switcher"))])

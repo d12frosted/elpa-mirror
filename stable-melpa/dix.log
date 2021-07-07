@@ -3,10 +3,26 @@ Fetcher: github
 Source:  https://github.com/unhammer/dix.git
 
 Updating /mnt/store/melpa/working/dix/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dix/
+  to /tmp/dixTa1sPA/dix-20181210.1200
+    dix.el -> dix.el
+    schemas.xml -> schemas.xml
+    local-schemas.xml -> local-schemas.xml
+Created dix-20181210.1200.tar containing:
+  dix-20181210.1200/
+  dix-20181210.1200/dix-pkg.el
+  dix-20181210.1200/dix.el
+  dix-20181210.1200/local-schemas.xml
+  dix-20181210.1200/schemas.xml
+Built dix in 7.718s, finished at Wed Jul  7 11:44:41 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  406 Jul  7 11:44 packages/dix-20181210.1200.entry
+112K -rw-r--r-- 1 root root 110K Jul  7 11:44 packages/dix-20181210.1200.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:44 packages/dix-badge.svg
+4.0K -rw-r--r-- 1 root root 2.2K Jul  7 11:44 packages/dix-evil-20170105.1423.el
+4.0K -rw-r--r-- 1 root root  416 Jul  7 11:44 packages/dix-evil-20170105.1423.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:44 packages/dix-evil-badge.svg
+4.0K -rw-r--r-- 1 root root  127 Jul  7 11:44 packages/dix-evil-readme.txt
+4.0K -rw-r--r-- 1 root root  201 Jul  7 11:44 packages/dix-evil.log
+4.0K -rw-r--r-- 1 root root 4.0K Jul  7 11:44 packages/dix-readme.txt

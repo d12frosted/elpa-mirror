@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/clojure-emacs/clomacs.git
 
 Updating /mnt/store/melpa/working/clomacs/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built clomacs in 9.684s, finished at Wed Jul  7 11:39:07 2021
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root  26K Jul  7 11:39 packages/clomacs-20200808.2347.el
+4.0K -rw-r--r-- 1 root root  461 Jul  7 11:39 packages/clomacs-20200808.2347.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:39 packages/clomacs-badge.svg
+4.0K -rw-r--r-- 1 root root  283 Jul  7 11:39 packages/clomacs-readme.txt

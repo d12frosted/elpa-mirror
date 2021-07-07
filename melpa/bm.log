@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/joodland/bm.git
 
 Updating /mnt/store/melpa/working/bm/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bm/
+  to /tmp/bmPI2Gum/bm-20190527.2110
+    bm-sync.el -> bm-sync.el
+    bm.el -> bm.el
+Created bm-20190527.2110.tar containing:
+  bm-20190527.2110/
+  bm-20190527.2110/bm-pkg.el
+  bm-20190527.2110/bm-sync.el
+  bm-20190527.2110/bm.el
+Built bm in 3.941s, finished at Wed Jul  7 11:36:08 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  365 Jul  7 11:36 packages/bm-20190527.2110.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 11:36 packages/bm-20190527.2110.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:36 packages/bm-badge.svg
+8.0K -rw-r--r-- 1 root root 8.0K Jul  7 11:36 packages/bm-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/garvinguan/emacs-one-time-pad.git
 
 Updating /mnt/store/melpa/working/one-time-pad-encrypt/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built one-time-pad-encrypt in 5.125s, finished at Wed Jul  7 09:06:20 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.1K Jul  7 09:06 packages/one-time-pad-encrypt-20160329.1513.el
+4.0K -rw-r--r-- 1 root root  385 Jul  7 09:06 packages/one-time-pad-encrypt-20160329.1513.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/one-time-pad-encrypt-badge.svg
+4.0K -rw-r--r-- 1 root root  162 Jul  7 09:06 packages/one-time-pad-encrypt-readme.txt

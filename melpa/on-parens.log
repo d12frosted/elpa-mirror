@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/willghatch/emacs-on-parens.git
 
 Updating /mnt/store/melpa/working/on-parens/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built on-parens in 4.054s, finished at Wed Jul  7 09:06:16 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Jul  7 09:06 packages/on-parens-20180202.2241.el
+4.0K -rw-r--r-- 1 root root  411 Jul  7 09:06 packages/on-parens-20180202.2241.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/on-parens-badge.svg
+4.0K -rw-r--r-- 1 root root  701 Jul  7 09:06 packages/on-parens-readme.txt

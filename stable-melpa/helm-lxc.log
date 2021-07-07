@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/montag451/helm-lxc.git
 
 Updating /mnt/store/melpa/working/helm-lxc/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built helm-lxc in 3.422s, finished at Wed Jul  7 12:01:13 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  20K Jul  7 12:01 packages/helm-lxc-20200321.1825.el
+4.0K -rw-r--r-- 1 root root  421 Jul  7 12:01 packages/helm-lxc-20200321.1825.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:01 packages/helm-lxc-badge.svg
+4.0K -rw-r--r-- 1 root root  273 Jul  7 12:01 packages/helm-lxc-readme.txt

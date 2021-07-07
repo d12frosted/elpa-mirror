@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/erikriverson/peek-mode.git
 
 Updating /mnt/store/melpa/working/peek-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/peek-mode/
+  to /tmp/peek-modeEdV6Xf/peek-mode-20130620.1946
+    index.html -> index.html
+    peek-mode.el -> peek-mode.el
+Created peek-mode-20130620.1946.tar containing:
+  peek-mode-20130620.1946/
+  peek-mode-20130620.1946/index.html
+  peek-mode-20130620.1946/peek-mode-pkg.el
+  peek-mode-20130620.1946/peek-mode.el
+Built peek-mode in 4.859s, finished at Wed Jul  7 09:11:14 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  374 Jul  7 09:11 packages/peek-mode-20130620.1946.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:11 packages/peek-mode-20130620.1946.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:11 packages/peek-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Jul  7 09:11 packages/peek-mode-readme.txt

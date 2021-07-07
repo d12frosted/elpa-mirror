@@ -3,10 +3,25 @@ Fetcher: git
 Source:  https://git.sr.ht/~pkal/autocrypt
 
 Updating /mnt/store/melpa/working/autocrypt/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/autocrypt/
+  to /tmp/autocryptmH4fbb/autocrypt-20210412.1127
+    autocrypt-gnus.el -> autocrypt-gnus.el
+    autocrypt-message.el -> autocrypt-message.el
+    autocrypt-mu4e.el -> autocrypt-mu4e.el
+    autocrypt-rmail.el -> autocrypt-rmail.el
+    autocrypt.el -> autocrypt.el
+Created autocrypt-20210412.1127.tar containing:
+  autocrypt-20210412.1127/
+  autocrypt-20210412.1127/autocrypt-gnus.el
+  autocrypt-20210412.1127/autocrypt-message.el
+  autocrypt-20210412.1127/autocrypt-mu4e.el
+  autocrypt-20210412.1127/autocrypt-pkg.el
+  autocrypt-20210412.1127/autocrypt-rmail.el
+  autocrypt-20210412.1127/autocrypt.el
+Built autocrypt in 3.620s, finished at Wed Jul  7 11:34:42 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  388 Jul  7 11:34 packages/autocrypt-20210412.1127.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 11:34 packages/autocrypt-20210412.1127.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:34 packages/autocrypt-badge.svg
+4.0K -rw-r--r-- 1 root root  259 Jul  7 11:34 packages/autocrypt-readme.txt

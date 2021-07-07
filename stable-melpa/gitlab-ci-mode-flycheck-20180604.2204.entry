@@ -1,0 +1,15 @@
+(gitlab-ci-mode-flycheck .
+			 [(20180604 2204)
+			  ((emacs
+			    (25))
+			   (flycheck
+			    (31))
+			   (gitlab-ci-mode
+			    (1)))
+			  "Flycheck support for ‘gitlab-ci-mode’" single
+			  ((:commit . "30ea0eab74b24818f187242b079845785035e967")
+			   (:authors
+			    ("Joe Wreschnig"))
+			   (:maintainer "Joe Wreschnig")
+			   (:keywords "tools" "vc" "convenience")
+			   (:url . "https://gitlab.com/joewreschnig/gitlab-ci-mode-flycheck/"))])

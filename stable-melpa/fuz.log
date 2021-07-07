@@ -3,10 +3,27 @@ Fetcher: github
 Source:  https://github.com/rustify-emacs/fuz.el.git
 
 Updating /mnt/store/melpa/working/fuz/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fuz/
+  to /tmp/fuzWmFlgO/fuz-20190805.1723
+    fuz-extra.el -> fuz-extra.el
+    fuz.el -> fuz.el
+    Cargo.toml -> Cargo.toml
+    Cargo.lock -> Cargo.lock
+    src => src
+Created fuz-20190805.1723.tar containing:
+  fuz-20190805.1723/
+  fuz-20190805.1723/Cargo.lock
+  fuz-20190805.1723/Cargo.toml
+  fuz-20190805.1723/fuz-extra.el
+  fuz-20190805.1723/fuz-pkg.el
+  fuz-20190805.1723/fuz.el
+  fuz-20190805.1723/src/
+  fuz-20190805.1723/src/dynmod.rs
+  fuz-20190805.1723/src/lib.rs
+Built fuz in 7.582s, finished at Wed Jul  7 11:56:04 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  368 Jul  7 11:56 packages/fuz-20190805.1723.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 11:56 packages/fuz-20190805.1723.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:56 packages/fuz-badge.svg
+4.0K -rw-r--r-- 1 root root  331 Jul  7 11:56 packages/fuz-readme.txt

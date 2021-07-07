@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ergoemacs/ergoemacs-status.git
 
 Updating /mnt/store/melpa/working/ergoemacs-status/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ergoemacs-status in 4.480s, finished at Wed Jul  7 11:49:16 2021
+ ✓ Success:
+ 68K -rw-r--r-- 1 root root  67K Jul  7 11:49 packages/ergoemacs-status-20160318.538.el
+4.0K -rw-r--r-- 1 root root  296 Jul  7 11:49 packages/ergoemacs-status-20160318.538.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:49 packages/ergoemacs-status-badge.svg
+4.0K -rw-r--r-- 1 root root  750 Jul  7 11:49 packages/ergoemacs-status-readme.txt

@@ -1,0 +1,13 @@
+(helm-make .
+	   [(20141208 1607)
+	    ((helm
+	      (1 5 3))
+	     (projectile
+	      (0 11 0)))
+	    "Select a Makefile target with helm" single
+	    ((:commit . "6558a79d20d04465419b312da198190be6832647")
+	     (:authors
+	      ("Oleh Krehel" . "ohwoeowho@gmail.com"))
+	     (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
+	     (:keywords "makefile")
+	     (:url . "https://github.com/abo-abo/helm-make"))])

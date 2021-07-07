@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/jamienicol/emacs-cd-compile.git
 
 Updating /mnt/store/melpa/working/cd-compile/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built cd-compile in 4.006s, finished at Wed Jul  7 11:37:32 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.4K Jul  7 11:37 packages/cd-compile-20141108.1957.el
+4.0K -rw-r--r-- 1 root root  281 Jul  7 11:37 packages/cd-compile-20141108.1957.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:37 packages/cd-compile-badge.svg
+4.0K -rw-r--r-- 1 root root  262 Jul  7 11:37 packages/cd-compile-readme.txt

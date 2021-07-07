@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/jaalto/project-emacs--folding-mode.git
 
 Updating /mnt/store/melpa/working/folding/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/folding/
+  to /tmp/foldingA215No/folding-20200901.953
+    folding.el -> folding.el
+    folding.texi -> folding.texi
+Created /tmp/foldingA215No/folding-20200901.953/folding.info
+Created folding-20200901.953.tar containing:
+  folding-20200901.953/
+  folding-20200901.953/dir
+  folding-20200901.953/folding-pkg.el
+  folding-20200901.953/folding.el
+  folding-20200901.953/folding.info
+Built folding in 6.880s, finished at Wed Jul  7 11:55:21 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  223 Jul  7 11:55 packages/folding-20200901.953.entry
+240K -rw-r--r-- 1 root root 240K Jul  7 11:55 packages/folding-20200901.953.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:55 packages/folding-badge.svg
+ 24K -rw-r--r-- 1 root root  22K Jul  7 11:55 packages/folding-readme.txt

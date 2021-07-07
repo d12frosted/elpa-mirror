@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/m00nlight/minizinc-mode.git
 
 Updating /mnt/store/melpa/working/minizinc-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built minizinc-mode in 4.651s, finished at Wed Jul  7 09:01:41 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.2K Jul  7 09:01 packages/minizinc-mode-20180201.1450.el
+4.0K -rw-r--r-- 1 root root  260 Jul  7 09:01 packages/minizinc-mode-20180201.1450.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:01 packages/minizinc-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  769 Jul  7 09:01 packages/minizinc-mode-readme.txt

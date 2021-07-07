@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/clarete/templatel.git
 
 Updating /mnt/store/melpa/working/templatel/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built templatel in 4.112s, finished at Wed Jul  7 09:23:45 2021
+ ✓ Success:
+ 72K -rw-r--r-- 1 root root  70K Dec  5  2020 packages/templatel-20200905.121.tar
+ 76K -rw-r--r-- 1 root root  75K Jul  7 09:23 packages/templatel-20210425.2215.el
+4.0K -rw-r--r-- 1 root root  336 Jul  7 09:23 packages/templatel-20210425.2215.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:23 packages/templatel-badge.svg
+4.0K -rw-r--r-- 1 root root  890 Jul  7 09:23 packages/templatel-readme.txt

@@ -3,10 +3,55 @@ Fetcher: github
 Source:  https://github.com/vermiculus/magithub.git
 
 Updating /mnt/store/melpa/working/magithub/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/magithub/
+  to /tmp/magithubiZfVZd/magithub-20180603.42
+    magithub-ci.el -> magithub-ci.el
+    magithub-comment.el -> magithub-comment.el
+    magithub-completion.el -> magithub-completion.el
+    magithub-core.el -> magithub-core.el
+    magithub-dash.el -> magithub-dash.el
+    magithub-edit-mode.el -> magithub-edit-mode.el
+    magithub-faces.el -> magithub-faces.el
+    magithub-issue-post.el -> magithub-issue-post.el
+    magithub-issue-tricks.el -> magithub-issue-tricks.el
+    magithub-issue-view.el -> magithub-issue-view.el
+    magithub-issue.el -> magithub-issue.el
+    magithub-label.el -> magithub-label.el
+    magithub-notification.el -> magithub-notification.el
+    magithub-orgs.el -> magithub-orgs.el
+    magithub-repo.el -> magithub-repo.el
+    magithub-settings.el -> magithub-settings.el
+    magithub-user.el -> magithub-user.el
+    magithub.el -> magithub.el
+    magithub.texi -> magithub.texi
+Created /tmp/magithubiZfVZd/magithub-20180603.42/magithub.info
+Created magithub-20180603.42.tar containing:
+  magithub-20180603.42/
+  magithub-20180603.42/dir
+  magithub-20180603.42/magithub-ci.el
+  magithub-20180603.42/magithub-comment.el
+  magithub-20180603.42/magithub-completion.el
+  magithub-20180603.42/magithub-core.el
+  magithub-20180603.42/magithub-dash.el
+  magithub-20180603.42/magithub-edit-mode.el
+  magithub-20180603.42/magithub-faces.el
+  magithub-20180603.42/magithub-issue-post.el
+  magithub-20180603.42/magithub-issue-tricks.el
+  magithub-20180603.42/magithub-issue-view.el
+  magithub-20180603.42/magithub-issue.el
+  magithub-20180603.42/magithub-label.el
+  magithub-20180603.42/magithub-notification.el
+  magithub-20180603.42/magithub-orgs.el
+  magithub-20180603.42/magithub-pkg.el
+  magithub-20180603.42/magithub-repo.el
+  magithub-20180603.42/magithub-settings.el
+  magithub-20180603.42/magithub-user.el
+  magithub-20180603.42/magithub.el
+  magithub-20180603.42/magithub.info
+Built magithub in 10.173s, finished at Wed Jul  7 09:00:15 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  505 Jul  7 09:00 packages/magithub-20180603.42.entry
+232K -rw-r--r-- 1 root root 230K Jul  7 09:00 packages/magithub-20180603.42.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:00 packages/magithub-badge.svg
+4.0K -rw-r--r-- 1 root root  604 Jul  7 09:00 packages/magithub-readme.txt

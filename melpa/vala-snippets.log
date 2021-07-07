@@ -3,10 +3,48 @@ Fetcher: github
 Source:  https://github.com/gopar/vala-snippets.git
 
 Updating /mnt/store/melpa/working/vala-snippets/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/vala-snippets/
+  to /tmp/vala-snippetskW5qrI/vala-snippets-20150429.352
+    vala-snippets.el -> vala-snippets.el
+    snippets => snippets
+Created vala-snippets-20150429.352.tar containing:
+  vala-snippets-20150429.352/
+  vala-snippets-20150429.352/snippets/
+  vala-snippets-20150429.352/snippets/vala-mode/
+  vala-snippets-20150429.352/snippets/vala-mode/classes/
+  vala-snippets-20150429.352/snippets/vala-mode/classes/class.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/classes/constructor.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/classes/property.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/classes/signal.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/classes/simple-property.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/cmain.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/controlflow/
+  vala-snippets-20150429.352/snippets/vala-mode/controlflow/do-while.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/controlflow/for.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/controlflow/foreach.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/controlflow/if-else-else.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/controlflow/if-else.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/controlflow/if.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/controlflow/switch.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/controlflow/while.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/enum.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/exceptions/
+  vala-snippets-20150429.352/snippets/vala-mode/exceptions/try-finally.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/exceptions/try.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/fixme.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/main.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/new.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/print-string.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/print.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/struct.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/todo.yasnippet
+  vala-snippets-20150429.352/snippets/vala-mode/var.yasnippet
+  vala-snippets-20150429.352/vala-snippets-pkg.el
+  vala-snippets-20150429.352/vala-snippets.el
+Built vala-snippets in 3.864s, finished at Wed Jul  7 09:26:59 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  278 Jul  7 09:26 packages/vala-snippets-20150429.352.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 09:26 packages/vala-snippets-20150429.352.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:26 packages/vala-snippets-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:26 packages/vala-snippets-readme.txt

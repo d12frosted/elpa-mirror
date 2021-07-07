@@ -1,0 +1,11 @@
+(hound .
+       [(20160801 406)
+	((request
+	  (0 2 0))
+	 (cl-lib
+	  (0 5)))
+	"Display hound search results in a compilation window" single
+	((:commit . "28cb804d99f9240d690d60098644e4300336b5fa")
+	 (:authors
+	  ("Ryan Young"))
+	 (:maintainer "Ryan Young"))])

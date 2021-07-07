@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/pmiddend/org-rtm.git
 
 Updating /mnt/store/melpa/working/org-rtm/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built org-rtm in 4.189s, finished at Wed Jul  7 09:08:03 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.4K Jul  7 09:08 packages/org-rtm-20160214.1236.el
+4.0K -rw-r--r-- 1 root root  409 Jul  7 09:08 packages/org-rtm-20160214.1236.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:08 packages/org-rtm-badge.svg
+4.0K -rw-r--r-- 1 root root  189 Jul  7 09:08 packages/org-rtm-readme.txt

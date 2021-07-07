@@ -3,10 +3,131 @@ Fetcher: github
 Source:  https://github.com/millejoh/emacs-ipython-notebook.git
 
 Updating /mnt/store/melpa/working/ein/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ein/
+  to /tmp/eing1Mjb5/ein-20200127.249
+  ! lisp/ein-ac.el -> ein-ac.el
+  ! lisp/ein-cell-edit.el -> ein-cell-edit.el
+  ! lisp/ein-cell-output.el -> ein-cell-output.el
+  ! lisp/ein-cell.el -> ein-cell.el
+  ! lisp/ein-classes.el -> ein-classes.el
+  ! lisp/ein-company.el -> ein-company.el
+  ! lisp/ein-completer.el -> ein-completer.el
+  ! lisp/ein-connect.el -> ein-connect.el
+  ! lisp/ein-console.el -> ein-console.el
+  ! lisp/ein-contents-api.el -> ein-contents-api.el
+  ! lisp/ein-core.el -> ein-core.el
+  ! lisp/ein-dev.el -> ein-dev.el
+  ! lisp/ein-events.el -> ein-events.el
+  ! lisp/ein-file.el -> ein-file.el
+  ! lisp/ein-helm.el -> ein-helm.el
+  ! lisp/ein-hy.el -> ein-hy.el
+  ! lisp/ein-iexec.el -> ein-iexec.el
+  ! lisp/ein-inspector.el -> ein-inspector.el
+  ! lisp/ein-ipdb.el -> ein-ipdb.el
+  ! lisp/ein-ipynb-mode.el -> ein-ipynb-mode.el
+  ! lisp/ein-jupyter.el -> ein-jupyter.el
+  ! lisp/ein-jupyterhub.el -> ein-jupyterhub.el
+  ! lisp/ein-kernel.el -> ein-kernel.el
+  ! lisp/ein-kernelinfo.el -> ein-kernelinfo.el
+  ! lisp/ein-kill-ring.el -> ein-kill-ring.el
+  ! lisp/ein-log.el -> ein-log.el
+  ! lisp/ein-multilang-fontify.el -> ein-multilang-fontify.el
+  ! lisp/ein-multilang.el -> ein-multilang.el
+  ! lisp/ein-node.el -> ein-node.el
+  ! lisp/ein-notebook.el -> ein-notebook.el
+  ! lisp/ein-notebooklist.el -> ein-notebooklist.el
+  ! lisp/ein-notification.el -> ein-notification.el
+  ! lisp/ein-org.el -> ein-org.el
+  ! lisp/ein-output-area.el -> ein-output-area.el
+  ! lisp/ein-pager.el -> ein-pager.el
+  ! lisp/ein-pkg.el -> ein-pkg.el
+  ! lisp/ein-process.el -> ein-process.el
+  ! lisp/ein-pseudo-console.el -> ein-pseudo-console.el
+  ! lisp/ein-python.el -> ein-python.el
+  ! lisp/ein-pytools.el -> ein-pytools.el
+  ! lisp/ein-query.el -> ein-query.el
+  ! lisp/ein-scratchsheet.el -> ein-scratchsheet.el
+  ! lisp/ein-shared-output.el -> ein-shared-output.el
+  ! lisp/ein-skewer.el -> ein-skewer.el
+  ! lisp/ein-smartrep.el -> ein-smartrep.el
+  ! lisp/ein-subpackages.el -> ein-subpackages.el
+  ! lisp/ein-timestamp.el -> ein-timestamp.el
+  ! lisp/ein-traceback.el -> ein-traceback.el
+  ! lisp/ein-utils.el -> ein-utils.el
+  ! lisp/ein-websocket.el -> ein-websocket.el
+  ! lisp/ein-worksheet.el -> ein-worksheet.el
+  ! lisp/ein.el -> ein.el
+  ! lisp/ein_inspector.py -> ein_inspector.py
+  ! lisp/ein_remote_safe.py -> ein_remote_safe.py
+  ! lisp/ob-ein.el -> ob-ein.el
+  ! lisp/poly-ein.el -> poly-ein.el
+Created ein-20200127.249.tar containing:
+  ein-20200127.249/
+  ein-20200127.249/ein-ac.el
+  ein-20200127.249/ein-cell-edit.el
+  ein-20200127.249/ein-cell-output.el
+  ein-20200127.249/ein-cell.el
+  ein-20200127.249/ein-classes.el
+  ein-20200127.249/ein-company.el
+  ein-20200127.249/ein-completer.el
+  ein-20200127.249/ein-connect.el
+  ein-20200127.249/ein-console.el
+  ein-20200127.249/ein-contents-api.el
+  ein-20200127.249/ein-core.el
+  ein-20200127.249/ein-dev.el
+  ein-20200127.249/ein-events.el
+  ein-20200127.249/ein-file.el
+  ein-20200127.249/ein-helm.el
+  ein-20200127.249/ein-hy.el
+  ein-20200127.249/ein-iexec.el
+  ein-20200127.249/ein-inspector.el
+  ein-20200127.249/ein-ipdb.el
+  ein-20200127.249/ein-ipynb-mode.el
+  ein-20200127.249/ein-jupyter.el
+  ein-20200127.249/ein-jupyterhub.el
+  ein-20200127.249/ein-kernel.el
+  ein-20200127.249/ein-kernelinfo.el
+  ein-20200127.249/ein-kill-ring.el
+  ein-20200127.249/ein-log.el
+  ein-20200127.249/ein-multilang-fontify.el
+  ein-20200127.249/ein-multilang.el
+  ein-20200127.249/ein-node.el
+  ein-20200127.249/ein-notebook.el
+  ein-20200127.249/ein-notebooklist.el
+  ein-20200127.249/ein-notification.el
+  ein-20200127.249/ein-org.el
+  ein-20200127.249/ein-output-area.el
+  ein-20200127.249/ein-pager.el
+  ein-20200127.249/ein-pkg.el
+  ein-20200127.249/ein-process.el
+  ein-20200127.249/ein-pseudo-console.el
+  ein-20200127.249/ein-python.el
+  ein-20200127.249/ein-pytools.el
+  ein-20200127.249/ein-query.el
+  ein-20200127.249/ein-scratchsheet.el
+  ein-20200127.249/ein-shared-output.el
+  ein-20200127.249/ein-skewer.el
+  ein-20200127.249/ein-smartrep.el
+  ein-20200127.249/ein-subpackages.el
+  ein-20200127.249/ein-timestamp.el
+  ein-20200127.249/ein-traceback.el
+  ein-20200127.249/ein-utils.el
+  ein-20200127.249/ein-websocket.el
+  ein-20200127.249/ein-worksheet.el
+  ein-20200127.249/ein.el
+  ein-20200127.249/ein_inspector.py
+  ein-20200127.249/ein_remote_safe.py
+  ein-20200127.249/ob-ein.el
+  ein-20200127.249/poly-ein.el
+Built ein in 4.506s, finished at Wed Jul  7 11:46:56 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  775 Jul  7 11:46 packages/ein-20200127.249.entry
+692K -rw-r--r-- 1 root root 690K Jul  7 11:46 packages/ein-20200127.249.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:46 packages/ein-badge.svg
+ 12K -rw-r--r-- 1 root root 9.3K Jul  7 11:46 packages/ein-mumamo-20150302.28.el
+4.0K -rw-r--r-- 1 root root  378 Jul  7 08:34 packages/ein-mumamo-20150302.28.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:34 packages/ein-mumamo-badge.svg
+4.0K -rw-r--r-- 1 root root  595 Jul  7 08:34 packages/ein-mumamo-readme.txt
+4.0K -rw-r--r-- 1 root root  135 Jul  7 11:46 packages/ein-mumamo.log
+4.0K -rw-r--r-- 1 root root  346 Jul  7 11:46 packages/ein-readme.txt

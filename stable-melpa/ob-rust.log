@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/micanzhang/ob-rust.git
 
 Updating /mnt/store/melpa/working/ob-rust/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-rust/
+  to /tmp/ob-rustS5e6Ds/ob-rust-20210204.244
+    ob-rust.el -> ob-rust.el
+    test-ob-rust.el -> test-ob-rust.el
+Created ob-rust-20210204.244.tar containing:
+  ob-rust-20210204.244/
+  ob-rust-20210204.244/ob-rust-pkg.el
+  ob-rust-20210204.244/ob-rust.el
+  ob-rust-20210204.244/test-ob-rust.el
+Built ob-rust in 3.312s, finished at Wed Jul  7 09:05:43 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  303 Jul  7 09:05 packages/ob-rust-20210204.244.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:05 packages/ob-rust-20210204.244.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:05 packages/ob-rust-badge.svg
+4.0K -rw-r--r-- 1 root root  861 Jul  7 09:05 packages/ob-rust-readme.txt

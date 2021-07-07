@@ -19,7 +19,6 @@ Press `fd` quickly to:
   - quit gist-list menu
   - quit helm-ag-edit
   - hide neotree buffer
-  - quit evil-multiedit
 And more to come !
 
 Configuration:

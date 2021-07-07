@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/skeeto/impatient-mode.git
 
 Updating /mnt/store/melpa/working/impatient-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/impatient-mode/
+  to /tmp/impatient-modeplFFeg/impatient-mode-20180528.1616
+    index.html -> index.html
+    loading.html -> loading.html
+    jquery.js -> jquery.js
+    impatient-mode.el -> impatient-mode.el
+Created impatient-mode-20180528.1616.tar containing:
+  impatient-mode-20180528.1616/
+  impatient-mode-20180528.1616/impatient-mode-pkg.el
+  impatient-mode-20180528.1616/impatient-mode.el
+  impatient-mode-20180528.1616/index.html
+  impatient-mode-20180528.1616/jquery.js
+  impatient-mode-20180528.1616/loading.html
+Built impatient-mode in 3.739s, finished at Wed Jul  7 12:04:36 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  385 Jul  7 12:04 packages/impatient-mode-20180528.1616.entry
+240K -rw-r--r-- 1 root root 240K Jul  7 12:04 packages/impatient-mode-20180528.1616.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:04 packages/impatient-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  980 Jul  7 12:04 packages/impatient-mode-readme.txt

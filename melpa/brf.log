@@ -3,10 +3,36 @@ Fetcher: git
 Source:  https://bitbucket.org/MikeWoolley/brf-mode
 
 Updating /mnt/store/melpa/working/brf/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/brf/
+  to /tmp/brfEV9hxd/brf-20210501.1723
+    brf-bookmark.el -> brf-bookmark.el
+    brf-compat.el -> brf-compat.el
+    brf-editing.el -> brf-editing.el
+    brf-marking.el -> brf-marking.el
+    brf-menu.el -> brf-menu.el
+    brf-movement.el -> brf-movement.el
+    brf-undo.el -> brf-undo.el
+    brf-window.el -> brf-window.el
+    brf.el -> brf.el
+    brf-mode.info -> brf-mode.info
+Created brf-20210501.1723.tar containing:
+  brf-20210501.1723/
+  brf-20210501.1723/brf-bookmark.el
+  brf-20210501.1723/brf-compat.el
+  brf-20210501.1723/brf-editing.el
+  brf-20210501.1723/brf-marking.el
+  brf-20210501.1723/brf-menu.el
+  brf-20210501.1723/brf-mode.info
+  brf-20210501.1723/brf-movement.el
+  brf-20210501.1723/brf-pkg.el
+  brf-20210501.1723/brf-undo.el
+  brf-20210501.1723/brf-window.el
+  brf-20210501.1723/brf.el
+  brf-20210501.1723/dir
+Built brf in 3.751s, finished at Wed Jul  7 11:36:27 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  425 Jul  7 11:36 packages/brf-20210501.1723.entry
+100K -rw-r--r-- 1 root root 100K Jul  7 11:36 packages/brf-20210501.1723.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:36 packages/brf-badge.svg
+4.0K -rw-r--r-- 1 root root  505 Jul  7 11:36 packages/brf-readme.txt

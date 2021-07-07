@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/monsanto/auto-complete-auctex.git
 
 Updating /mnt/store/melpa/working/auto-complete-auctex/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built auto-complete-auctex in 3.276s, finished at Wed Jul  7 11:34:21 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Jul  7 11:34 packages/auto-complete-auctex-20140223.1758.el
+4.0K -rw-r--r-- 1 root root  349 Jul  7 11:34 packages/auto-complete-auctex-20140223.1758.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:34 packages/auto-complete-auctex-badge.svg
+4.0K -rw-r--r-- 1 root root  103 Jul  7 11:34 packages/auto-complete-auctex-readme.txt

@@ -1,0 +1,9 @@
+(timer-revert .
+	      [(20150120 1128)
+	       nil "minor mode to revert buffer for a given time interval." single
+	       ((:commit . "31ad8d94b85807cd9f63fcba0c90c3e9a9515fa2")
+		(:authors
+		 ("Yagnesh Raghava Yakkala. http://yagnesh.org"))
+		(:maintainer nil . "hi@yagnesh.org")
+		(:keywords "timer" "revert" "auto-revert.")
+		(:url . "http://github.com/yyr/timer-revert"))])

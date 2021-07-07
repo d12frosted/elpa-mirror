@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/mrkkrp/ace-popup-menu.git
 
 Updating /mnt/store/melpa/working/ace-popup-menu/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ace-popup-menu in 4.178s, finished at Wed Jul  7 11:32:16 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.4K Jul  7 11:32 packages/ace-popup-menu-20170519.544.el
+4.0K -rw-r--r-- 1 root root  437 Jul  7 11:32 packages/ace-popup-menu-20170519.544.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:32 packages/ace-popup-menu-badge.svg
+4.0K -rw-r--r-- 1 root root  372 Jul  7 11:32 packages/ace-popup-menu-readme.txt

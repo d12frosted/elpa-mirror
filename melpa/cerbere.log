@@ -3,10 +3,25 @@ Fetcher: github
 Source:  https://github.com/nlamirault/cerbere.git
 
 Updating /mnt/store/melpa/working/cerbere/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cerbere/
+  to /tmp/cerbere2NGY8V/cerbere-20140417.1113
+    cerbere-common.el -> cerbere-common.el
+    cerbere-gotest.el -> cerbere-gotest.el
+    cerbere-phpunit.el -> cerbere-phpunit.el
+    cerbere-tox.el -> cerbere-tox.el
+    cerbere.el -> cerbere.el
+Created cerbere-20140417.1113.tar containing:
+  cerbere-20140417.1113/
+  cerbere-20140417.1113/cerbere-common.el
+  cerbere-20140417.1113/cerbere-gotest.el
+  cerbere-20140417.1113/cerbere-phpunit.el
+  cerbere-20140417.1113/cerbere-pkg.el
+  cerbere-20140417.1113/cerbere-tox.el
+  cerbere-20140417.1113/cerbere.el
+Built cerbere in 4.491s, finished at Wed Jul  7 11:37:41 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  504 Jul  7 11:37 packages/cerbere-20140417.1113.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:37 packages/cerbere-20140417.1113.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:37 packages/cerbere-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 11:37 packages/cerbere-readme.txt

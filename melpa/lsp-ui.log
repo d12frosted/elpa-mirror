@@ -3,10 +3,29 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-ui.git
 
 Updating /mnt/store/melpa/working/lsp-ui/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-ui/
+  to /tmp/lsp-uiSvdFBU/lsp-ui-20200807.154
+    lsp-ui-doc.el -> lsp-ui-doc.el
+    lsp-ui-flycheck.el -> lsp-ui-flycheck.el
+    lsp-ui-imenu.el -> lsp-ui-imenu.el
+    lsp-ui-peek.el -> lsp-ui-peek.el
+    lsp-ui-sideline.el -> lsp-ui-sideline.el
+    lsp-ui.el -> lsp-ui.el
+    lsp-ui-doc.html -> lsp-ui-doc.html
+Created lsp-ui-20200807.154.tar containing:
+  lsp-ui-20200807.154/
+  lsp-ui-20200807.154/lsp-ui-doc.el
+  lsp-ui-20200807.154/lsp-ui-doc.html
+  lsp-ui-20200807.154/lsp-ui-flycheck.el
+  lsp-ui-20200807.154/lsp-ui-imenu.el
+  lsp-ui-20200807.154/lsp-ui-peek.el
+  lsp-ui-20200807.154/lsp-ui-pkg.el
+  lsp-ui-20200807.154/lsp-ui-sideline.el
+  lsp-ui-20200807.154/lsp-ui.el
+Built lsp-ui in 3.916s, finished at Wed Jul  7 08:59:30 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  516 Jul  7 08:59 packages/lsp-ui-20200807.154.entry
+132K -rw-r--r-- 1 root root 130K Jul  7 08:59 packages/lsp-ui-20200807.154.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:59 packages/lsp-ui-badge.svg
+4.0K -rw-r--r-- 1 root root  104 Jul  7 08:59 packages/lsp-ui-readme.txt

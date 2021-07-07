@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/tarsius/orglink.git
 
 Updating /mnt/store/melpa/working/orglink/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built orglink in 10.788s, finished at Wed Jul  7 09:09:08 2021
+ ✓ Success:
+ 12K -rwxr-xr-x 1 root root  11K Jul  7 09:09 packages/orglink-20200719.917.el
+4.0K -rw-r--r-- 1 root root  401 Jul  7 09:09 packages/orglink-20200719.917.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:09 packages/orglink-badge.svg
+4.0K -rw-r--r-- 1 root root  480 Jul  7 09:09 packages/orglink-readme.txt

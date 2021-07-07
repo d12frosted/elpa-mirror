@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/kiwanami/emacs-skype.git
 
 Updating /mnt/store/melpa/working/skype/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/skype/
+  to /tmp/skypemSfL8q/skype-20160711.824
+    skype.el -> skype.el
+    skype-proxy.py -> skype-proxy.py
+Created skype-20160711.824.tar containing:
+  skype-20160711.824/
+  skype-20160711.824/skype-pkg.el
+  skype-20160711.824/skype-proxy.py
+  skype-20160711.824/skype.el
+Built skype in 3.894s, finished at Wed Jul  7 09:19:44 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  283 Jul  7 09:19 packages/skype-20160711.824.entry
+ 80K -rw-r--r-- 1 root root  80K Jul  7 09:19 packages/skype-20160711.824.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:19 packages/skype-badge.svg
+4.0K -rw-r--r-- 1 root root  409 Jul  7 09:19 packages/skype-readme.txt

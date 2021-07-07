@@ -3,10 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/stklos.git
 
 Updating /mnt/store/melpa/working/geiser-stklos/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: geiser-stklos :files spec is equivalent to the default.
+Built geiser-stklos in 4.457s, finished at Wed Jul  7 11:56:44 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  14K Jul  7 11:56 packages/geiser-stklos-20210503.944.el
+4.0K -rw-r--r-- 1 root root  440 Jul  7 11:56 packages/geiser-stklos-20210503.944.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:56 packages/geiser-stklos-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Jul  7 11:56 packages/geiser-stklos-readme.txt

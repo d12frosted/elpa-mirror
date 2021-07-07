@@ -3,10 +3,22 @@ Fetcher: github
 Source:  https://github.com/joostkremers/pandoc-mode.git
 
 Updating /mnt/store/melpa/working/pandoc-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pandoc-mode/
+  to /tmp/pandoc-modeANCbqe/pandoc-mode-20210308.2211
+    pandoc-mode-utils.el -> pandoc-mode-utils.el
+    pandoc-mode.el -> pandoc-mode.el
+    pandoc-mode.info -> pandoc-mode.info
+Created pandoc-mode-20210308.2211.tar containing:
+  pandoc-mode-20210308.2211/
+  pandoc-mode-20210308.2211/dir
+  pandoc-mode-20210308.2211/pandoc-mode-pkg.el
+  pandoc-mode-20210308.2211/pandoc-mode-utils.el
+  pandoc-mode-20210308.2211/pandoc-mode.el
+  pandoc-mode-20210308.2211/pandoc-mode.info
+Built pandoc-mode in 3.884s, finished at Wed Jul  7 09:10:28 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  443 Jul  7 09:10 packages/pandoc-mode-20210308.2211.entry
+192K -rw-r--r-- 1 root root 190K Jul  7 09:10 packages/pandoc-mode-20210308.2211.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:10 packages/pandoc-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  197 Jul  7 09:10 packages/pandoc-mode-readme.txt

@@ -3,10 +3,9 @@ Fetcher: git
 Source:  https://git.spwhitton.name/org-d20
 
 Updating /mnt/store/melpa/working/org-d20/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built org-d20 in 4.093s, finished at Wed Jul  7 09:06:52 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  18K Jul  7 09:06 packages/org-d20-20210212.139.el
+4.0K -rw-r--r-- 1 root root  461 Jul  7 09:06 packages/org-d20-20210212.139.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/org-d20-badge.svg
+4.0K -rw-r--r-- 1 root root  296 Jul  7 09:06 packages/org-d20-readme.txt

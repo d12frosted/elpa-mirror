@@ -1,0 +1,13 @@
+(flycheck-checkbashisms .
+			[(20160224 1706)
+			 ((emacs
+			   (24))
+			  (flycheck
+			   (0 25)))
+			 "checkbashisms checker for flycheck" single
+			 ((:commit . "39362240b8e38e6ddc1da2e2c2229e3fecdf6057")
+			  (:authors
+			   ("Cuong Le" . "cuong.manhle.vn@gmail.com"))
+			  (:maintainer "Cuong Le" . "cuong.manhle.vn@gmail.com")
+			  (:keywords "convenience" "tools" "sh" "unix")
+			  (:url . "https://github.com/Gnouc/flycheck-checkbashisms"))])

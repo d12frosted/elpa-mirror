@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/octicons.git
 
 Updating /mnt/store/melpa/working/octicons/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/octicons/
+  to /tmp/octiconsTZeURr/octicons-20150801.1329
+    octicons-data.el -> octicons-data.el
+    octicons.el -> octicons.el
+Created octicons-20150801.1329.tar containing:
+  octicons-20150801.1329/
+  octicons-20150801.1329/octicons-data.el
+  octicons-20150801.1329/octicons-pkg.el
+  octicons-20150801.1329/octicons.el
+Built octicons in 4.274s, finished at Wed Jul  7 09:06:02 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  325 Jul  7 09:06 packages/octicons-20150801.1329.entry
+ 12K -rw-r--r-- 1 root root  10K Jul  7 09:06 packages/octicons-20150801.1329.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/octicons-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:06 packages/octicons-readme.txt

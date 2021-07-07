@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/tarsius/vcomp.git
 
 Updating /mnt/store/melpa/working/vcomp/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built vcomp in 3.658s, finished at Wed Jul  7 09:27:10 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  10K Jul  7 09:27 packages/vcomp-20190128.20.el
+4.0K -rw-r--r-- 1 root root  312 Jul  7 09:27 packages/vcomp-20190128.20.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:27 packages/vcomp-badge.svg
+4.0K -rw-r--r-- 1 root root 2.5K Jul  7 09:27 packages/vcomp-readme.txt

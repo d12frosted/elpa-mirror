@@ -3,10 +3,27 @@ Fetcher: github
 Source:  https://github.com/baohaojun/bbyac.git
 
 Updating /mnt/store/melpa/working/bbyac/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bbyac/
+  to /tmp/bbyac9wAD9P/bbyac-20180206.1441
+    bbyac.el -> bbyac.el
+    c++.bbyac -> c++.bbyac
+    java.bbyac -> java.bbyac
+    js2.bbyac -> js2.bbyac
+    lua.bbyac -> lua.bbyac
+    ruby.bbyac -> ruby.bbyac
+Created bbyac-20180206.1441.tar containing:
+  bbyac-20180206.1441/
+  bbyac-20180206.1441/bbyac-pkg.el
+  bbyac-20180206.1441/bbyac.el
+  bbyac-20180206.1441/c++.bbyac
+  bbyac-20180206.1441/java.bbyac
+  bbyac-20180206.1441/js2.bbyac
+  bbyac-20180206.1441/lua.bbyac
+  bbyac-20180206.1441/ruby.bbyac
+Built bbyac in 3.706s, finished at Wed Jul  7 11:35:25 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  378 Jul  7 11:35 packages/bbyac-20180206.1441.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 11:35 packages/bbyac-20180206.1441.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:35 packages/bbyac-badge.svg
+4.0K -rw-r--r-- 1 root root  565 Jul  7 11:35 packages/bbyac-readme.txt

@@ -3,10 +3,14 @@ Fetcher: gitlab
 Source:  https://gitlab.com/phillord/org-drill.git
 
 Updating /mnt/store/melpa/working/org-drill/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built org-drill in 4.580s, finished at Wed Jul  7 09:06:57 2021
+ ✓ Success:
+156K -rw-r--r-- 1 root root 155K Jul  7 09:06 packages/org-drill-20200216.1336.el
+4.0K -rw-r--r-- 1 root root  505 Jul  7 09:06 packages/org-drill-20200216.1336.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/org-drill-badge.svg
+4.0K -rw-r--r-- 1 root root  721 Jul  7 09:06 packages/org-drill-readme.txt
+ 16K -rw-r--r-- 1 root root  13K Jul  7 09:06 packages/org-drill-table-20180115.1009.el
+4.0K -rw-r--r-- 1 root root  406 Jul  7 05:54 packages/org-drill-table-20180115.1009.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 05:54 packages/org-drill-table-badge.svg
+4.0K -rw-r--r-- 1 root root 2.7K Jul  7 05:54 packages/org-drill-table-readme.txt
+4.0K -rw-r--r-- 1 root root  154 Jul  7 09:06 packages/org-drill-table.log

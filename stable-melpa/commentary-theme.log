@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/pzel/commentary-theme.git
 
 Updating /mnt/store/melpa/working/commentary-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built commentary-theme in 4.235s, finished at Wed Jul  7 11:40:03 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.8K Jul  7 11:40 packages/commentary-theme-20181213.1045.el
+4.0K -rw-r--r-- 1 root root  246 Jul  7 11:40 packages/commentary-theme-20181213.1045.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:40 packages/commentary-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  372 Jul  7 11:40 packages/commentary-theme-readme.txt

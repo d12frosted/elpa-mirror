@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/arnested/emacs-git-attr.git
 
 Updating /mnt/store/melpa/working/git-attr/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/git-attr/
+  to /tmp/git-attrMGFNBV/git-attr-20180925.2003
+    git-attr-linguist.el -> git-attr-linguist.el
+    git-attr.el -> git-attr.el
+Created git-attr-20180925.2003.tar containing:
+  git-attr-20180925.2003/
+  git-attr-20180925.2003/git-attr-linguist.el
+  git-attr-20180925.2003/git-attr-pkg.el
+  git-attr-20180925.2003/git-attr.el
+Built git-attr in 3.939s, finished at Wed Jul  7 11:57:04 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  364 Jul  7 11:57 packages/git-attr-20180925.2003.entry
+ 12K -rw-r--r-- 1 root root  10K Jul  7 11:57 packages/git-attr-20180925.2003.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:57 packages/git-attr-badge.svg
+4.0K -rw-r--r-- 1 root root  496 Jul  7 11:57 packages/git-attr-readme.txt

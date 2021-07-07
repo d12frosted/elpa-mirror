@@ -3,10 +3,25 @@ Fetcher: github
 Source:  https://github.com/jd/google-contacts.el.git
 
 Updating /mnt/store/melpa/working/google-contacts/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/google-contacts/
+  to /tmp/google-contactsDW6BIz/google-contacts-20201012.1056
+    google-contacts-gnus.el -> google-contacts-gnus.el
+    google-contacts-message.el -> google-contacts-message.el
+    google-contacts.el -> google-contacts.el
+    google-oauth.el -> google-oauth.el
+    google-org-contacts.el -> google-org-contacts.el
+Created google-contacts-20201012.1056.tar containing:
+  google-contacts-20201012.1056/
+  google-contacts-20201012.1056/google-contacts-gnus.el
+  google-contacts-20201012.1056/google-contacts-message.el
+  google-contacts-20201012.1056/google-contacts-pkg.el
+  google-contacts-20201012.1056/google-contacts.el
+  google-contacts-20201012.1056/google-oauth.el
+  google-contacts-20201012.1056/google-org-contacts.el
+Built google-contacts in 3.172s, finished at Wed Jul  7 11:58:30 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  405 Jul  7 11:58 packages/google-contacts-20201012.1056.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 11:58 packages/google-contacts-20201012.1056.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:58 packages/google-contacts-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Jul  7 11:58 packages/google-contacts-readme.txt

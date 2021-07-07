@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/rolandwalker/unicode-fonts.git
 
 Updating /mnt/store/melpa/working/unicode-fonts/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built unicode-fonts in 5.048s, finished at Wed Jul  7 09:26:31 2021
+ ✓ Success:
+352K -rw-r--r-- 1 root root 352K Jul  7 09:26 packages/unicode-fonts-20181001.1509.el
+4.0K -rw-r--r-- 1 root root  506 Jul  7 09:26 packages/unicode-fonts-20181001.1509.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:26 packages/unicode-fonts-badge.svg
+ 20K -rw-r--r-- 1 root root  19K Jul  7 09:26 packages/unicode-fonts-readme.txt

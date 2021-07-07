@@ -3,10 +3,36 @@ Fetcher: github
 Source:  https://github.com/dajva/rg.el.git
 
 Updating /mnt/store/melpa/working/rg/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rg/
+  to /tmp/rgLY2paR/rg-20210625.939
+    rg-header.el -> rg-header.el
+    rg-history.el -> rg-history.el
+    rg-ibuffer.el -> rg-ibuffer.el
+    rg-info-hack.el -> rg-info-hack.el
+    rg-isearch.el -> rg-isearch.el
+    rg-menu.el -> rg-menu.el
+    rg-result.el -> rg-result.el
+    rg.el -> rg.el
+    wgrep-rg.el -> wgrep-rg.el
+    rgel.info -> rgel.info
+Created rg-20210625.939.tar containing:
+  rg-20210625.939/
+  rg-20210625.939/dir
+  rg-20210625.939/rg-header.el
+  rg-20210625.939/rg-history.el
+  rg-20210625.939/rg-ibuffer.el
+  rg-20210625.939/rg-info-hack.el
+  rg-20210625.939/rg-isearch.el
+  rg-20210625.939/rg-menu.el
+  rg-20210625.939/rg-pkg.el
+  rg-20210625.939/rg-result.el
+  rg-20210625.939/rg.el
+  rg-20210625.939/rgel.info
+  rg-20210625.939/wgrep-rg.el
+Built rg in 3.723s, finished at Wed Jul  7 09:16:53 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  500 Jul  7 09:16 packages/rg-20210625.939.entry
+200K -rw-r--r-- 1 root root 200K Jul  7 09:16 packages/rg-20210625.939.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:16 packages/rg-badge.svg
+4.0K -rw-r--r-- 1 root root  687 Jul  7 09:16 packages/rg-readme.txt

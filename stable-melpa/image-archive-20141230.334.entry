@@ -1,0 +1,13 @@
+(image-archive .
+	       [(20141230 334)
+		((emacs
+		  (24))
+		 (cl-lib
+		  (0 5)))
+		"Image thumbnails in archive file with non-blocking" single
+		((:commit . "699e967fa7b1dfcce2bf2ec878e74f4238bb6e45")
+		 (:authors
+		  ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
+		 (:maintainer "Masahiro Hayashi" . "mhayashi1120@gmail.com")
+		 (:keywords "multimedia")
+		 (:url . "https://github.com/mhayashi1120/Emacs-image-archive/raw/master/image-archive.el"))])

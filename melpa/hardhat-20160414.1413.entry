@@ -1,0 +1,11 @@
+(hardhat .
+	 [(20160414 1413)
+	  ((ignoramus
+	    (0 7 0)))
+	  "Protect against clobbering user-writable files" single
+	  ((:commit . "9038a49ab55cd4c502cf7f07ed0d1b9b6bc3626e")
+	   (:authors
+	    ("Roland Walker" . "walker@pobox.com"))
+	   (:maintainer "Roland Walker" . "walker@pobox.com")
+	   (:keywords "convenience")
+	   (:url . "http://github.com/rolandwalker/hardhat"))])

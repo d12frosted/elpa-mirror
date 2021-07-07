@@ -3,10 +3,10 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/gauche.git
 
 Updating /mnt/store/melpa/working/geiser-gauche/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: geiser-gauche :files spec is equivalent to the default.
+Built geiser-gauche in 4.764s, finished at Wed Jul  7 11:56:40 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jul  7 11:56 packages/geiser-gauche-20200717.758.el
+4.0K -rw-r--r-- 1 root root  143 Jul  7 11:56 packages/geiser-gauche-20200717.758.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:56 packages/geiser-gauche-badge.svg
+4.0K -rw-r--r-- 1 root root   65 Jul  6 16:35 packages/geiser-gauche-readme.txt

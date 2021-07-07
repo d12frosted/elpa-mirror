@@ -1,0 +1,15 @@
+(redpen-paragraph .
+		  [(20160613 1342)
+		   ((emacs
+		     (24))
+		    (cl-lib
+		     (0 5))
+		    (json
+		     (1 4)))
+		   "RedPen interface." single
+		   ((:commit . "f9569bc8e2993dea0f83cba5738a35ce32f82424")
+		    (:authors
+		     ("karronoli"))
+		    (:maintainer "karronoli")
+		    (:keywords "document" "proofreading" "help")
+		    (:url . "https://github.com/karronoli/redpen-paragraph.el"))])

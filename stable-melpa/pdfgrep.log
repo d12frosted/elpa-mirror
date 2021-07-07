@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/jeremy-compostella/pdfgrep.git
 
 Updating /mnt/store/melpa/working/pdfgrep/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built pdfgrep in 5.933s, finished at Wed Jul  7 09:11:13 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.4K Jul  7 09:11 packages/pdfgrep-20210203.1730.el
+4.0K -rw-r--r-- 1 root root  430 Jul  7 09:11 packages/pdfgrep-20210203.1730.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:11 packages/pdfgrep-badge.svg
+4.0K -rw-r--r-- 1 root root   75 Jul  7 09:11 packages/pdfgrep-readme.txt

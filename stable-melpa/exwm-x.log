@@ -3,10 +3,41 @@ Fetcher: github
 Source:  https://github.com/tumashu/exwm-x.git
 
 Updating /mnt/store/melpa/working/exwm-x/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/exwm-x/
+  to /tmp/exwm-xXfuOAc/exwm-x-20210417.653
+    exwm-x.el -> exwm-x.el
+    exwmx-appconfig.el -> exwmx-appconfig.el
+    exwmx-appmenu.el -> exwmx-appmenu.el
+    exwmx-button.el -> exwmx-button.el
+    exwmx-core.el -> exwmx-core.el
+    exwmx-dmenu.el -> exwmx-dmenu.el
+    exwmx-example.el -> exwmx-example.el
+    exwmx-floating.el -> exwmx-floating.el
+    exwmx-grocery.el -> exwmx-grocery.el
+    exwmx-loader.el -> exwmx-loader.el
+    exwmx-quickrun.el -> exwmx-quickrun.el
+    exwmx-sendstring.el -> exwmx-sendstring.el
+    exwmx-xfce.el -> exwmx-xfce.el
+Created exwm-x-20210417.653.tar containing:
+  exwm-x-20210417.653/
+  exwm-x-20210417.653/exwm-x-pkg.el
+  exwm-x-20210417.653/exwm-x.el
+  exwm-x-20210417.653/exwmx-appconfig.el
+  exwm-x-20210417.653/exwmx-appmenu.el
+  exwm-x-20210417.653/exwmx-button.el
+  exwm-x-20210417.653/exwmx-core.el
+  exwm-x-20210417.653/exwmx-dmenu.el
+  exwm-x-20210417.653/exwmx-example.el
+  exwm-x-20210417.653/exwmx-floating.el
+  exwm-x-20210417.653/exwmx-grocery.el
+  exwm-x-20210417.653/exwmx-loader.el
+  exwm-x-20210417.653/exwmx-quickrun.el
+  exwm-x-20210417.653/exwmx-sendstring.el
+  exwm-x-20210417.653/exwmx-xfce.el
+Built exwm-x in 3.765s, finished at Wed Jul  7 11:51:48 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  402 Jul  7 11:51 packages/exwm-x-20210417.653.entry
+100K -rw-r--r-- 1 root root 100K Jul  7 11:51 packages/exwm-x-20210417.653.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:51 packages/exwm-x-badge.svg
+ 12K -rw-r--r-- 1 root root 9.9K Jul  7 11:51 packages/exwm-x-readme.txt

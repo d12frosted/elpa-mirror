@@ -3,10 +3,31 @@ Fetcher: github
 Source:  https://github.com/cyrus-and/comb.git
 
 Updating /mnt/store/melpa/working/comb/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/comb/
+  to /tmp/combk8Igu7/comb-20180831.721
+    comb-browse.el -> comb-browse.el
+    comb-common.el -> comb-common.el
+    comb-configure.el -> comb-configure.el
+    comb-filter.el -> comb-filter.el
+    comb-report.el -> comb-report.el
+    comb-search.el -> comb-search.el
+    comb-session.el -> comb-session.el
+    comb.el -> comb.el
+Created comb-20180831.721.tar containing:
+  comb-20180831.721/
+  comb-20180831.721/comb-browse.el
+  comb-20180831.721/comb-common.el
+  comb-20180831.721/comb-configure.el
+  comb-20180831.721/comb-filter.el
+  comb-20180831.721/comb-pkg.el
+  comb-20180831.721/comb-report.el
+  comb-20180831.721/comb-search.el
+  comb-20180831.721/comb-session.el
+  comb-20180831.721/comb.el
+Built comb in 3.923s, finished at Wed Jul  7 11:39:55 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  367 Jul  7 11:39 packages/comb-20180831.721.entry
+ 60K -rw-r--r-- 1 root root  60K Jul  7 11:39 packages/comb-20180831.721.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:39 packages/comb-badge.svg
+4.0K -rw-r--r-- 1 root root  290 Jul  7 11:39 packages/comb-readme.txt

@@ -3,10 +3,32 @@ Fetcher: github
 Source:  https://github.com/djcb/sauron.git
 
 Updating /mnt/store/melpa/working/sauron/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sauron/
+  to /tmp/sauronLt54Rg/sauron-20130818.1834
+    sauron-dbus.el -> sauron-dbus.el
+    sauron-erc.el -> sauron-erc.el
+    sauron-identica.el -> sauron-identica.el
+    sauron-jabber.el -> sauron-jabber.el
+    sauron-notifications.el -> sauron-notifications.el
+    sauron-org.el -> sauron-org.el
+    sauron-twittering.el -> sauron-twittering.el
+    sauron.el -> sauron.el
+  ! sauron-pkg.el.in -> sauron-pkg.el
+Created sauron-20130818.1834.tar containing:
+  sauron-20130818.1834/
+  sauron-20130818.1834/sauron-dbus.el
+  sauron-20130818.1834/sauron-erc.el
+  sauron-20130818.1834/sauron-identica.el
+  sauron-20130818.1834/sauron-jabber.el
+  sauron-20130818.1834/sauron-notifications.el
+  sauron-20130818.1834/sauron-org.el
+  sauron-20130818.1834/sauron-pkg.el
+  sauron-20130818.1834/sauron-twittering.el
+  sauron-20130818.1834/sauron.el
+Built sauron in 3.776s, finished at Wed Jul  7 09:17:47 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  314 Jul  7 09:17 packages/sauron-20130818.1834.entry
+ 64K -rw-r--r-- 1 root root  60K Jul  7 09:17 packages/sauron-20130818.1834.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:17 packages/sauron-badge.svg
+4.0K -rw-r--r-- 1 root root  192 Jul  7 09:17 packages/sauron-readme.txt

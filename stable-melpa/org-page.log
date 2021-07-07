@@ -3,10 +3,70 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/org-page.git
 
 Updating /mnt/store/melpa/working/org-page/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-page/
+  to /tmp/org-pageZRw5WD/org-page-20130829.1220
+    op-enhance.el -> op-enhance.el
+    op-export.el -> op-export.el
+    op-git.el -> op-git.el
+    op-template.el -> op-template.el
+    op-util.el -> op-util.el
+    op-vars.el -> op-vars.el
+    org-page-pkg.el -> org-page-pkg.el
+    org-page.el -> org-page.el
+    doc => doc
+    themes => themes
+Created org-page-20130829.1220.tar containing:
+  org-page-20130829.1220/
+  org-page-20130829.1220/doc/
+  org-page-20130829.1220/doc/changelog.org
+  org-page-20130829.1220/doc/quick-guide.org
+  org-page-20130829.1220/op-enhance.el
+  org-page-20130829.1220/op-export.el
+  org-page-20130829.1220/op-git.el
+  org-page-20130829.1220/op-template.el
+  org-page-20130829.1220/op-util.el
+  org-page-20130829.1220/op-vars.el
+  org-page-20130829.1220/org-page-pkg.el
+  org-page-20130829.1220/org-page.el
+  org-page-20130829.1220/themes/
+  org-page-20130829.1220/themes/gray/
+  org-page-20130829.1220/themes/gray/README
+  org-page-20130829.1220/themes/gray/resources/
+  org-page-20130829.1220/themes/gray/resources/css/
+  org-page-20130829.1220/themes/gray/resources/css/main.css
+  org-page-20130829.1220/themes/gray/resources/font/
+  org-page-20130829.1220/themes/gray/resources/font/fontawesome-webfont.eot
+  org-page-20130829.1220/themes/gray/resources/font/fontawesome-webfont.svg
+  org-page-20130829.1220/themes/gray/resources/font/fontawesome-webfont.ttf
+  org-page-20130829.1220/themes/gray/resources/font/fontawesome-webfont.woff
+  org-page-20130829.1220/themes/gray/resources/img/
+  org-page-20130829.1220/themes/gray/resources/img/github.png
+  org-page-20130829.1220/themes/gray/resources/img/loading.gif
+  org-page-20130829.1220/themes/gray/resources/img/rss.png
+  org-page-20130829.1220/themes/gray/templates/
+  org-page-20130829.1220/themes/gray/templates/template.html
+  org-page-20130829.1220/themes/mdo/
+  org-page-20130829.1220/themes/mdo/resources/
+  org-page-20130829.1220/themes/mdo/resources/css/
+  org-page-20130829.1220/themes/mdo/resources/css/main.css
+  org-page-20130829.1220/themes/mdo/resources/img/
+  org-page-20130829.1220/themes/mdo/resources/img/search.png
+  org-page-20130829.1220/themes/mdo/templates/
+  org-page-20130829.1220/themes/mdo/templates/about.mustache
+  org-page-20130829.1220/themes/mdo/templates/category-index.mustache
+  org-page-20130829.1220/themes/mdo/templates/container.mustache
+  org-page-20130829.1220/themes/mdo/templates/footer.mustache
+  org-page-20130829.1220/themes/mdo/templates/header.mustache
+  org-page-20130829.1220/themes/mdo/templates/index.mustache
+  org-page-20130829.1220/themes/mdo/templates/nav.mustache
+  org-page-20130829.1220/themes/mdo/templates/post.mustache
+  org-page-20130829.1220/themes/mdo/templates/tag-index.mustache
+  org-page-20130829.1220/themes/mdo/templates/tag.mustache
+  org-page-20130829.1220/themes/mdo/templates/template.html
+Built org-page in 4.560s, finished at Wed Jul  7 09:07:38 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  488 Jul  7 09:07 packages/org-page-20130829.1220.entry
+420K -rw-r--r-- 1 root root 420K Jul  7 09:07 packages/org-page-20130829.1220.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:07 packages/org-page-badge.svg
+4.0K -rw-r--r-- 1 root root  569 Jul  7 09:07 packages/org-page-readme.txt

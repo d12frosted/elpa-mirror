@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/ajtulloch/mkdown.el.git
 
 Updating /mnt/store/melpa/working/mkdown/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/mkdown/
+  to /tmp/mkdown19gQSI/mkdown-20140517.1418
+    mkdown.el -> mkdown.el
+    mkdown.css -> mkdown.css
+Created mkdown-20140517.1418.tar containing:
+  mkdown-20140517.1418/
+  mkdown-20140517.1418/mkdown-pkg.el
+  mkdown-20140517.1418/mkdown.css
+  mkdown-20140517.1418/mkdown.el
+Built mkdown in 3.907s, finished at Wed Jul  7 09:01:47 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  322 Jul  7 09:01 packages/mkdown-20140517.1418.entry
+140K -rw-r--r-- 1 root root 140K Jul  7 09:01 packages/mkdown-20140517.1418.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:01 packages/mkdown-badge.svg
+4.0K -rw-r--r-- 1 root root  137 Jul  7 09:01 packages/mkdown-readme.txt

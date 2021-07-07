@@ -3,10 +3,19 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sasanidas/company-plisp.git
 
 Updating /mnt/store/melpa/working/company-plisp/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-plisp/
+  to /tmp/company-plispsTcNHr/company-plisp-20200531.1927
+    company-plisp.el -> company-plisp.el
+    company-plisp.l -> company-plisp.l
+Created company-plisp-20200531.1927.tar containing:
+  company-plisp-20200531.1927/
+  company-plisp-20200531.1927/company-plisp-pkg.el
+  company-plisp-20200531.1927/company-plisp.el
+  company-plisp-20200531.1927/company-plisp.l
+Built company-plisp in 3.748s, finished at Wed Jul  7 11:40:40 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  488 Jul  7 11:40 packages/company-plisp-20200531.1927.entry
+ 12K -rw-r--r-- 1 root root  10K Jul  7 11:40 packages/company-plisp-20200531.1927.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:40 packages/company-plisp-badge.svg
+4.0K -rw-r--r-- 1 root root   63 Jul  7 11:40 packages/company-plisp-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/jcinnamond/seeing-is-believing.git
 
 Updating /mnt/store/melpa/working/seeing-is-believing/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built seeing-is-believing in 4.343s, finished at Wed Jul  7 09:18:28 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.7K Jul  7 09:18 packages/seeing-is-believing-20170214.1320.el
+4.0K -rw-r--r-- 1 root root  273 Jul  7 09:18 packages/seeing-is-believing-20170214.1320.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:18 packages/seeing-is-believing-badge.svg
+4.0K -rw-r--r-- 1 root root  539 Jul  7 09:18 packages/seeing-is-believing-readme.txt

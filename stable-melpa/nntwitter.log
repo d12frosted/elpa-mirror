@@ -3,10 +3,20 @@ Fetcher: github
 Source:  https://github.com/dickmao/nntwitter.git
 
 Updating /mnt/store/melpa/working/nntwitter/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nntwitter/
+  to /tmp/nntwitterFTvveK/nntwitter-20210104.1423
+  ! lisp/nntwitter-api.el -> nntwitter-api.el
+  ! lisp/nntwitter-pkg.el -> nntwitter-pkg.el
+  ! lisp/nntwitter.el -> nntwitter.el
+Created nntwitter-20210104.1423.tar containing:
+  nntwitter-20210104.1423/
+  nntwitter-20210104.1423/nntwitter-api.el
+  nntwitter-20210104.1423/nntwitter-pkg.el
+  nntwitter-20210104.1423/nntwitter.el
+Built nntwitter in 3.574s, finished at Wed Jul  7 09:04:36 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  342 Jul  7 09:04 packages/nntwitter-20210104.1423.entry
+ 80K -rw-r--r-- 1 root root  80K Jul  7 09:04 packages/nntwitter-20210104.1423.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:04 packages/nntwitter-badge.svg
+4.0K -rw-r--r-- 1 root root   28 Jul  7 09:04 packages/nntwitter-readme.txt

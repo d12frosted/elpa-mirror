@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/vic/rebecca-theme.git
 
 Updating /mnt/store/melpa/working/rebecca-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built rebecca-theme in 5.005s, finished at Wed Jul  7 09:16:03 2021
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root  27K Jul  7 09:16 packages/rebecca-theme-20161227.1954.el
+4.0K -rw-r--r-- 1 root root  330 Jul  7 09:16 packages/rebecca-theme-20161227.1954.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:16 packages/rebecca-theme-badge.svg
+4.0K -rw-r--r-- 1 root root   28 Jul  7 09:16 packages/rebecca-theme-readme.txt

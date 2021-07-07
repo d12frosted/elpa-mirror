@@ -3,10 +3,18 @@ Fetcher: github
 Source:  https://github.com/xiaohanyu/ac-geiser.git
 
 Updating /mnt/store/melpa/working/ac-geiser/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ac-geiser/
+  to /tmp/ac-geiseriyZ8ye/ac-geiser-20130929.647
+    ac-geiser-pkg.el -> ac-geiser-pkg.el
+    ac-geiser.el -> ac-geiser.el
+Created ac-geiser-20130929.647.tar containing:
+  ac-geiser-20130929.647/
+  ac-geiser-20130929.647/ac-geiser-pkg.el
+  ac-geiser-20130929.647/ac-geiser.el
+Built ac-geiser in 3.297s, finished at Wed Jul  7 11:31:51 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  389 Jul  7 11:31 packages/ac-geiser-20130929.647.entry
+ 12K -rw-r--r-- 1 root root  10K Jul  7 11:31 packages/ac-geiser-20130929.647.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:31 packages/ac-geiser-badge.svg
+4.0K -rw-r--r-- 1 root root   68 Jul  7 11:31 packages/ac-geiser-readme.txt

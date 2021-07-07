@@ -3,10 +3,26 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/gnuplot.git
 
 Updating /mnt/store/melpa/working/gnuplot/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gnuplot/
+  to /tmp/gnuplot9hMtD8/gnuplot-20210104.1052
+    gnuplot.el -> gnuplot.el
+    gnuplot-gui.el -> gnuplot-gui.el
+    gnuplot-context.el -> gnuplot-context.el
+Created gnuplot-20210104.1052.tar containing:
+  gnuplot-20210104.1052/
+  gnuplot-20210104.1052/gnuplot-context.el
+  gnuplot-20210104.1052/gnuplot-gui.el
+  gnuplot-20210104.1052/gnuplot-pkg.el
+  gnuplot-20210104.1052/gnuplot.el
+Built gnuplot in 3.528s, finished at Wed Jul  7 11:57:52 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  407 Jul  7 11:57 packages/gnuplot-20210104.1052.entry
+260K -rw-r--r-- 1 root root 260K Jul  7 11:57 packages/gnuplot-20210104.1052.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:57 packages/gnuplot-badge.svg
+ 16K -rw-r--r-- 1 root root  16K Jul  7 08:45 packages/gnuplot-mode-20171013.1616.el
+4.0K -rw-r--r-- 1 root root  253 Jul  7 08:45 packages/gnuplot-mode-20171013.1616.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:45 packages/gnuplot-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 2.2K Jul  7 08:45 packages/gnuplot-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  138 Jul  7 11:57 packages/gnuplot-mode.log
+4.0K -rw-r--r-- 1 root root 2.3K Jul  7 11:57 packages/gnuplot-readme.txt

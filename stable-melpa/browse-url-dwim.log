@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/rolandwalker/browse-url-dwim.git
 
 Updating /mnt/store/melpa/working/browse-url-dwim/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built browse-url-dwim in 3.577s, finished at Wed Jul  7 11:36:32 2021
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root  26K Jul  7 11:36 packages/browse-url-dwim-20140731.1922.el
+4.0K -rw-r--r-- 1 root root  417 Jul  7 11:36 packages/browse-url-dwim-20140731.1922.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:36 packages/browse-url-dwim-badge.svg
+8.0K -rw-r--r-- 1 root root 4.5K Jul  7 11:36 packages/browse-url-dwim-readme.txt

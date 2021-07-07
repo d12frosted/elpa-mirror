@@ -1,0 +1,13 @@
+(guide-key-tip .
+	       [(20140407 120)
+		((guide-key
+		  (1 2 3))
+		 (pos-tip
+		  (0 4 5)))
+		"Show guide-key.el hints using pos-tip.el" single
+		((:commit . "e08b2585228529aeaae5e0ae0948f898e83a6200")
+		 (:authors
+		  ("Hiroaki Otsu" . "ootsuhiroaki@gmail.com"))
+		 (:maintainer "Hiroaki Otsu" . "ootsuhiroaki@gmail.com")
+		 (:keywords "help" "convenience" "tooltip")
+		 (:url . "https://github.com/aki2o/guide-key-tip"))])

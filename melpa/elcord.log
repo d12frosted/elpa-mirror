@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/Mstrodl/elcord.git
 
 Updating /mnt/store/melpa/working/elcord/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elcord/
+  to /tmp/elcordREc1Pa/elcord-20210524.1611
+    elcord.el -> elcord.el
+    stdpipe.ps1 -> stdpipe.ps1
+Created elcord-20210524.1611.tar containing:
+  elcord-20210524.1611/
+  elcord-20210524.1611/elcord-pkg.el
+  elcord-20210524.1611/elcord.el
+  elcord-20210524.1611/stdpipe.ps1
+Built elcord in 4.675s, finished at Wed Jul  7 11:47:14 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  375 Jul  7 11:47 packages/elcord-20210524.1611.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:47 packages/elcord-20210524.1611.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:47 packages/elcord-badge.svg
+4.0K -rw-r--r-- 1 root root  710 Jul  7 11:47 packages/elcord-readme.txt

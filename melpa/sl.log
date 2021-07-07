@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/sl.el.git
 
 Updating /mnt/store/melpa/working/sl/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sl/
+  to /tmp/slKav9yM/sl-20161217.1355
+    sl.el -> sl.el
+    D51-trains.txt -> D51-trains.txt
+    little-trains.txt -> little-trains.txt
+    smokes.txt -> smokes.txt
+Created sl-20161217.1355.tar containing:
+  sl-20161217.1355/
+  sl-20161217.1355/D51-trains.txt
+  sl-20161217.1355/little-trains.txt
+  sl-20161217.1355/sl-pkg.el
+  sl-20161217.1355/sl.el
+  sl-20161217.1355/smokes.txt
+Built sl in 4.105s, finished at Wed Jul  7 09:19:45 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  328 Jul  7 09:19 packages/sl-20161217.1355.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:19 packages/sl-20161217.1355.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:19 packages/sl-badge.svg
+4.0K -rw-r--r-- 1 root root  235 Jul  7 09:19 packages/sl-readme.txt

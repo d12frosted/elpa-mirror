@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/dieggsy/turing-machine.git
 
 Updating /mnt/store/melpa/working/turing-machine/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built turing-machine in 7.760s, finished at Wed Jul  7 09:25:50 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 8.0K Jul  7 09:25 packages/turing-machine-20180222.438.el
+4.0K -rw-r--r-- 1 root root  413 Jul  7 09:25 packages/turing-machine-20180222.438.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:25 packages/turing-machine-badge.svg
+4.0K -rw-r--r-- 1 root root  122 Jul  7 09:25 packages/turing-machine-readme.txt

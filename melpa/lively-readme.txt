@@ -6,7 +6,7 @@ Go to the end of any of the following lines and run `M-x lively'
   Unix processes:    (lively-shell-command "ps -a | wc -l")
 
 then the code will be replaced by its formatted result -- and
-periodically updated.  You can create little dashboards.
+periodically updated. You can create little dashboards.
 Use `M-x lively-stop' to restore order.
 
 Based on the Squeak hack by Scott Wallace.

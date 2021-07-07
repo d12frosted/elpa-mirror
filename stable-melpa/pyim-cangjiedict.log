@@ -3,10 +3,25 @@ Fetcher: github
 Source:  https://github.com/p1uxtar/pyim-cangjiedict.git
 
 Updating /mnt/store/melpa/working/pyim-cangjiedict/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pyim-cangjiedict/
+  to /tmp/pyim-cangjiedictgnelxd/pyim-cangjiedict-20210617.934
+    pyim-cangjie5dict.el -> pyim-cangjie5dict.el
+    pyim-cangjiedict.el -> pyim-cangjiedict.el
+    pyim-cangjie3dict.pyim -> pyim-cangjie3dict.pyim
+    pyim-cangjie5dict.pyim -> pyim-cangjie5dict.pyim
+    pyim-cangjie6dict.pyim -> pyim-cangjie6dict.pyim
+Created pyim-cangjiedict-20210617.934.tar containing:
+  pyim-cangjiedict-20210617.934/
+  pyim-cangjiedict-20210617.934/pyim-cangjie3dict.pyim
+  pyim-cangjiedict-20210617.934/pyim-cangjie5dict.el
+  pyim-cangjiedict-20210617.934/pyim-cangjie5dict.pyim
+  pyim-cangjiedict-20210617.934/pyim-cangjie6dict.pyim
+  pyim-cangjiedict-20210617.934/pyim-cangjiedict-pkg.el
+  pyim-cangjiedict-20210617.934/pyim-cangjiedict.el
+Built pyim-cangjiedict in 6.995s, finished at Wed Jul  7 09:14:44 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  436 Jul  7 09:14 packages/pyim-cangjiedict-20210617.934.entry
+5.0M -rw-r--r-- 1 root root 5.0M Jul  7 09:14 packages/pyim-cangjiedict-20210617.934.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:14 packages/pyim-cangjiedict-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Jul  7 09:14 packages/pyim-cangjiedict-readme.txt

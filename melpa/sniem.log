@@ -3,10 +3,31 @@ Fetcher: github
 Source:  https://github.com/SpringHan/sniem.git
 
 Updating /mnt/store/melpa/working/sniem/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sniem/
+  to /tmp/sniemdHDaLc/sniem-20210605.1242
+    sniem-cheatsheet.el -> sniem-cheatsheet.el
+    sniem-common.el -> sniem-common.el
+    sniem-macro.el -> sniem-macro.el
+    sniem-mark-jump.el -> sniem-mark-jump.el
+    sniem-object-catch.el -> sniem-object-catch.el
+    sniem-operation.el -> sniem-operation.el
+    sniem-var.el -> sniem-var.el
+    sniem.el -> sniem.el
+Created sniem-20210605.1242.tar containing:
+  sniem-20210605.1242/
+  sniem-20210605.1242/sniem-cheatsheet.el
+  sniem-20210605.1242/sniem-common.el
+  sniem-20210605.1242/sniem-macro.el
+  sniem-20210605.1242/sniem-mark-jump.el
+  sniem-20210605.1242/sniem-object-catch.el
+  sniem-20210605.1242/sniem-operation.el
+  sniem-20210605.1242/sniem-pkg.el
+  sniem-20210605.1242/sniem-var.el
+  sniem-20210605.1242/sniem.el
+Built sniem in 3.999s, finished at Wed Jul  7 09:21:02 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  351 Jul  7 09:21 packages/sniem-20210605.1242.entry
+132K -rw-r--r-- 1 root root 130K Jul  7 09:21 packages/sniem-20210605.1242.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:21 packages/sniem-badge.svg
+4.0K -rw-r--r-- 1 root root   30 Jul  7 09:21 packages/sniem-readme.txt

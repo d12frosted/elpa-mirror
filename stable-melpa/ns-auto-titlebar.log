@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/purcell/ns-auto-titlebar.git
 
 Updating /mnt/store/melpa/working/ns-auto-titlebar/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ns-auto-titlebar in 4.239s, finished at Wed Jul  7 09:05:00 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.8K Jul  7 09:04 packages/ns-auto-titlebar-20181022.2154.el
+4.0K -rw-r--r-- 1 root root  412 Jul  7 09:04 packages/ns-auto-titlebar-20181022.2154.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:05 packages/ns-auto-titlebar-badge.svg
+4.0K -rw-r--r-- 1 root root  578 Jul  7 09:04 packages/ns-auto-titlebar-readme.txt

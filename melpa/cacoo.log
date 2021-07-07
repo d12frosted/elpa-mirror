@@ -3,10 +3,20 @@ Fetcher: github
 Source:  https://github.com/kiwanami/emacs-cacoo.git
 
 Updating /mnt/store/melpa/working/cacoo/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cacoo/
+  to /tmp/cacooLbLkuj/cacoo-20120306.1006
+    cacoo-pkg.el -> cacoo-pkg.el
+    cacoo-plugins.el -> cacoo-plugins.el
+    cacoo.el -> cacoo.el
+Created cacoo-20120306.1006.tar containing:
+  cacoo-20120306.1006/
+  cacoo-20120306.1006/cacoo-pkg.el
+  cacoo-20120306.1006/cacoo-plugins.el
+  cacoo-20120306.1006/cacoo.el
+Built cacoo in 3.628s, finished at Wed Jul  7 11:37:07 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  393 Jul  7 11:37 packages/cacoo-20120306.1006.entry
+ 92K -rw-r--r-- 1 root root  90K Jul  7 11:37 packages/cacoo-20120306.1006.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:37 packages/cacoo-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul  7 11:37 packages/cacoo-readme.txt

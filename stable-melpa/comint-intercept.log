@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/hying-caritas/comint-intercept.git
 
 Updating /mnt/store/melpa/working/comint-intercept/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built comint-intercept in 3.871s, finished at Wed Jul  7 11:39:57 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.7K Jul  7 11:39 packages/comint-intercept-20200106.454.el
+4.0K -rw-r--r-- 1 root root  435 Jul  7 11:39 packages/comint-intercept-20200106.454.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:39 packages/comint-intercept-badge.svg
+4.0K -rw-r--r-- 1 root root  417 Jul  7 11:39 packages/comint-intercept-readme.txt

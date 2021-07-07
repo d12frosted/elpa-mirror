@@ -3,10 +3,18 @@ Fetcher: github
 Source:  https://github.com/rdallasgray/ppd-sr-speedbar.git
 
 Updating /mnt/store/melpa/working/ppd-sr-speedbar/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ppd-sr-speedbar/
+  to /tmp/ppd-sr-speedbarPjwSsI/ppd-sr-speedbar-20151108.1224
+  ! lib/ppd-sr-speedbar-pkg.el -> ppd-sr-speedbar-pkg.el
+  ! lib/ppd-sr-speedbar.el -> ppd-sr-speedbar.el
+Created ppd-sr-speedbar-20151108.1224.tar containing:
+  ppd-sr-speedbar-20151108.1224/
+  ppd-sr-speedbar-20151108.1224/ppd-sr-speedbar-pkg.el
+  ppd-sr-speedbar-20151108.1224/ppd-sr-speedbar.el
+Built ppd-sr-speedbar in 3.801s, finished at Wed Jul  7 09:13:12 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  430 Jul  7 09:13 packages/ppd-sr-speedbar-20151108.1224.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:13 packages/ppd-sr-speedbar-20151108.1224.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:13 packages/ppd-sr-speedbar-badge.svg
+4.0K -rw-r--r-- 1 root root  222 Jul  7 09:13 packages/ppd-sr-speedbar-readme.txt

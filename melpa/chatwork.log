@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ataka/chatwork.git
 
 Updating /mnt/store/melpa/working/chatwork/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built chatwork in 5.398s, finished at Wed Jul  7 11:37:58 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  18K Jul  7 11:37 packages/chatwork-20170511.442.el
+4.0K -rw-r--r-- 1 root root  345 Jul  7 11:37 packages/chatwork-20170511.442.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:37 packages/chatwork-badge.svg
+4.0K -rw-r--r-- 1 root root  360 Jul  7 11:37 packages/chatwork-readme.txt

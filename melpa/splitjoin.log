@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/splitjoin.git
 
 Updating /mnt/store/melpa/working/splitjoin/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built splitjoin in 4.461s, finished at Wed Jul  7 09:21:42 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.8K Jul  7 09:21 packages/splitjoin-20150209.957.el
+4.0K -rw-r--r-- 1 root root  331 Jul  7 09:21 packages/splitjoin-20150209.957.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:21 packages/splitjoin-badge.svg
+4.0K -rw-r--r-- 1 root root   75 Jul  7 09:21 packages/splitjoin-readme.txt

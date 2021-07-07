@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/gbgar/company-bibtex.git
 
 Updating /mnt/store/melpa/working/company-bibtex/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built company-bibtex in 3.633s, finished at Wed Jul  7 11:40:10 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.3K Jul  7 11:40 packages/company-bibtex-20171105.644.el
+4.0K -rw-r--r-- 1 root root  454 Jul  7 11:40 packages/company-bibtex-20171105.644.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:40 packages/company-bibtex-badge.svg
+4.0K -rw-r--r-- 1 root root  884 Jul  7 11:40 packages/company-bibtex-readme.txt

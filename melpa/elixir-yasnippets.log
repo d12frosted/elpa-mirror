@@ -3,10 +3,30 @@ Fetcher: github
 Source:  https://github.com/hisea/elixir-yasnippets.git
 
 Updating /mnt/store/melpa/working/elixir-yasnippets/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elixir-yasnippets/
+  to /tmp/elixir-yasnippetszqjyPH/elixir-yasnippets-20150322.2230
+    elixir-yasnippets-pkg.el -> elixir-yasnippets-pkg.el
+    elixir-yasnippets.el -> elixir-yasnippets.el
+    snippets => snippets
+Created elixir-yasnippets-20150322.2230.tar containing:
+  elixir-yasnippets-20150322.2230/
+  elixir-yasnippets-20150322.2230/elixir-yasnippets-pkg.el
+  elixir-yasnippets-20150322.2230/elixir-yasnippets.el
+  elixir-yasnippets-20150322.2230/snippets/
+  elixir-yasnippets-20150322.2230/snippets/elixir-mode/
+  elixir-yasnippets-20150322.2230/snippets/elixir-mode/case
+  elixir-yasnippets-20150322.2230/snippets/elixir-mode/cond
+  elixir-yasnippets-20150322.2230/snippets/elixir-mode/def
+  elixir-yasnippets-20150322.2230/snippets/elixir-mode/defmacro
+  elixir-yasnippets-20150322.2230/snippets/elixir-mode/defmacrop
+  elixir-yasnippets-20150322.2230/snippets/elixir-mode/defmodule
+  elixir-yasnippets-20150322.2230/snippets/elixir-mode/defp
+  elixir-yasnippets-20150322.2230/snippets/elixir-mode/doc
+  elixir-yasnippets-20150322.2230/snippets/elixir-mode/mdoc
+  elixir-yasnippets-20150322.2230/snippets/elixir-mode/pry
+Built elixir-yasnippets in 3.816s, finished at Wed Jul  7 11:47:43 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  333 Jul  7 11:47 packages/elixir-yasnippets-20150322.2230.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 11:47 packages/elixir-yasnippets-20150322.2230.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:47 packages/elixir-yasnippets-badge.svg

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/lassik/emacs-c-eval.git
 
 Updating /mnt/store/melpa/working/c-eval/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built c-eval in 4.256s, finished at Wed Jul  7 11:37:02 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Jul  7 11:37 packages/c-eval-20210611.705.el
+4.0K -rw-r--r-- 1 root root  353 Jul  7 11:37 packages/c-eval-20210611.705.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:37 packages/c-eval-badge.svg
+4.0K -rw-r--r-- 1 root root  450 Jul  7 11:37 packages/c-eval-readme.txt

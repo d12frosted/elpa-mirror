@@ -3,10 +3,29 @@ Fetcher: github
 Source:  https://github.com/mhayashi1120/Emacs-wgrep.git
 
 Updating /mnt/store/melpa/working/wgrep/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built wgrep in 4.260s, finished at Wed Jul  7 09:28:35 2021
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root  40K Jul  7 09:28 packages/wgrep-20200203.830.el
+4.0K -rw-r--r-- 1 root root  401 Jul  7 09:28 packages/wgrep-20200203.830.entry
+4.0K -rw-r--r-- 1 root root 3.5K Jul  7 06:16 packages/wgrep-ack-20200128.109.el
+4.0K -rw-r--r-- 1 root root  470 Jul  7 06:16 packages/wgrep-ack-20200128.109.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:16 packages/wgrep-ack-badge.svg
+4.0K -rw-r--r-- 1 root root   97 Jul  7 06:16 packages/wgrep-ack-readme.txt
+4.0K -rw-r--r-- 1 root root  138 Jul  7 09:28 packages/wgrep-ack.log
+8.0K -rw-r--r-- 1 root root 7.9K Jul  7 06:16 packages/wgrep-ag-20200128.109.el
+4.0K -rw-r--r-- 1 root root  446 Jul  7 06:16 packages/wgrep-ag-20200128.109.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:16 packages/wgrep-ag-badge.svg
+4.0K -rw-r--r-- 1 root root   84 Jul  7 06:16 packages/wgrep-ag-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:28 packages/wgrep-ag.log
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:28 packages/wgrep-badge.svg
+4.0K -rw-r--r-- 1 root root 3.7K Jul  7 06:16 packages/wgrep-helm-20200128.109.el
+4.0K -rw-r--r-- 1 root root  482 Jul  7 06:16 packages/wgrep-helm-20200128.109.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:16 packages/wgrep-helm-badge.svg
+4.0K -rw-r--r-- 1 root root   98 Jul  7 06:16 packages/wgrep-helm-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:28 packages/wgrep-helm.log
+4.0K -rw-r--r-- 1 root root 2.0K Jul  7 06:16 packages/wgrep-pt-20200128.109.el
+4.0K -rw-r--r-- 1 root root  504 Jul  7 06:16 packages/wgrep-pt-20200128.109.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:16 packages/wgrep-pt-badge.svg
+4.0K -rw-r--r-- 1 root root   84 Jul  7 06:16 packages/wgrep-pt-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:28 packages/wgrep-pt.log
+4.0K -rw-r--r-- 1 root root 2.5K Jul  7 09:28 packages/wgrep-readme.txt

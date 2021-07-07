@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/aaptel/test-c.git
 
 Updating /mnt/store/melpa/working/test-c/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built test-c in 4.789s, finished at Wed Jul  7 09:24:02 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Jul  7 09:24 packages/test-c-20180423.1720.el
+4.0K -rw-r--r-- 1 root root  320 Jul  7 09:24 packages/test-c-20180423.1720.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:24 packages/test-c-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Jul  7 09:24 packages/test-c-readme.txt

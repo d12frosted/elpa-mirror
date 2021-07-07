@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ahyatt/emacs-websocket.git
 
 Updating /mnt/store/melpa/working/websocket/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built websocket in 4.004s, finished at Wed Jul  7 09:28:28 2021
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root  47K Jul  7 09:28 packages/websocket-20210110.17.el
+4.0K -rw-r--r-- 1 root root  405 Jul  7 09:28 packages/websocket-20210110.17.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:28 packages/websocket-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul  7 09:28 packages/websocket-readme.txt

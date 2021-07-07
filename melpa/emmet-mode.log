@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/smihica/emmet-mode.git
 
 Updating /mnt/store/melpa/working/emmet-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built emmet-mode in 4.252s, finished at Wed Jul  7 11:48:24 2021
+ ✓ Success:
+132K -rw-r--r-- 1 root root 131K Jul  7 11:48 packages/emmet-mode-20140611.1011.el
+4.0K -rw-r--r-- 1 root root  367 Jul  7 11:48 packages/emmet-mode-20140611.1011.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:48 packages/emmet-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  852 Jul  7 11:48 packages/emmet-mode-readme.txt

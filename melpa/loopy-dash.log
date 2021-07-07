@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/okamsn/loopy.git
 
 Updating /mnt/store/melpa/working/loopy-dash/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built loopy-dash in 5.031s, finished at Wed Jul  7 08:59:03 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.3K Jul  7 08:59 packages/loopy-dash-20210705.2006.el
+4.0K -rw-r--r-- 1 root root  392 Jul  7 08:59 packages/loopy-dash-20210705.2006.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:59 packages/loopy-dash-badge.svg
+4.0K -rw-r--r-- 1 root root  374 Jul  7 08:59 packages/loopy-dash-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/pitkali/pos-tip.git
 
 Updating /mnt/store/melpa/working/pos-tip/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built pos-tip in 5.324s, finished at Wed Jul  7 09:13:06 2021
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root  34K Jul  7 09:13 packages/pos-tip-20140613.924.el
+4.0K -rw-r--r-- 1 root root  215 Jul  7 09:13 packages/pos-tip-20140613.924.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:13 packages/pos-tip-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul  7 09:13 packages/pos-tip-readme.txt

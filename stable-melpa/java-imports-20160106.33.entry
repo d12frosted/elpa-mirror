@@ -1,0 +1,15 @@
+(java-imports .
+	      [(20160106 33)
+	       ((emacs
+		 (24 4))
+		(s
+		 (1 10 0))
+		(pcache
+		 (0 3 2)))
+	       "Code for dealing with Java imports" single
+	       ((:commit . "275f354c245df741b45e88d085660722e81a12be")
+		(:authors
+		 ("Lee Hinman" . "lee@writequit.org"))
+		(:maintainer "Lee Hinman" . "lee@writequit.org")
+		(:keywords "java")
+		(:url . "http://www.github.com/dakrone/emacs-java-imports"))])

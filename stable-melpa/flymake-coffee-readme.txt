@@ -1,3 +1,4 @@
+
 Based in part on http://d.hatena.ne.jp/antipop/20110508/1304838383
 
 Usage:

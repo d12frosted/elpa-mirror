@@ -3,10 +3,34 @@ Fetcher: git
 Source:  https://salsa.debian.org/emacsen-team/debian-el.git
 
 Updating /mnt/store/melpa/working/debian-el/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/debian-el/
+  to /tmp/debian-elYddvM2/debian-el-20180701.947
+    apt-sources.el -> apt-sources.el
+    apt-utils.el -> apt-utils.el
+    deb-view.el -> deb-view.el
+    debian-bug.el -> debian-bug.el
+    debian-el-pkg.el -> debian-el-pkg.el
+    debian-el.el -> debian-el.el
+    gnus-BTS.el -> gnus-BTS.el
+    preseed.el -> preseed.el
+    debian-el.texi -> debian-el.texi
+Created /tmp/debian-elYddvM2/debian-el-20180701.947/debian-el.info
+Created debian-el-20180701.947.tar containing:
+  debian-el-20180701.947/
+  debian-el-20180701.947/apt-sources.el
+  debian-el-20180701.947/apt-utils.el
+  debian-el-20180701.947/deb-view.el
+  debian-el-20180701.947/debian-bug.el
+  debian-el-20180701.947/debian-el-pkg.el
+  debian-el-20180701.947/debian-el.el
+  debian-el-20180701.947/debian-el.info
+  debian-el-20180701.947/dir
+  debian-el-20180701.947/gnus-BTS.el
+  debian-el-20180701.947/preseed.el
+Built debian-el in 6.902s, finished at Wed Jul  7 11:43:11 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  151 Jul  7 11:43 packages/debian-el-20180701.947.entry
+272K -rw-r--r-- 1 root root 270K Jul  7 11:43 packages/debian-el-20180701.947.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:43 packages/debian-el-badge.svg
+4.0K -rw-r--r-- 1 root root   65 Jul  7 11:43 packages/debian-el-readme.txt

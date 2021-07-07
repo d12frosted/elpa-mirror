@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/vedang/el-spice.git
 
 Updating /mnt/store/melpa/working/el-spice/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/el-spice/
+  to /tmp/el-spicemfAYJ1/el-spice-20180128.1721
+    el-spice.el -> el-spice.el
+    list-callers.el -> list-callers.el
+Created el-spice-20180128.1721.tar containing:
+  el-spice-20180128.1721/
+  el-spice-20180128.1721/el-spice-pkg.el
+  el-spice-20180128.1721/el-spice.el
+  el-spice-20180128.1721/list-callers.el
+Built el-spice in 4.089s, finished at Wed Jul  7 11:47:08 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  384 Jul  7 11:47 packages/el-spice-20180128.1721.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:47 packages/el-spice-20180128.1721.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:47 packages/el-spice-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Jul  7 11:47 packages/el-spice-readme.txt

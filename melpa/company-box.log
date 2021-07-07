@@ -3,10 +3,130 @@ Fetcher: github
 Source:  https://github.com/sebastiencs/company-box.git
 
 Updating /mnt/store/melpa/working/company-box/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-box/
+  to /tmp/company-boxTQhbkB/company-box-20210330.1155
+    company-box-doc.el -> company-box-doc.el
+    company-box-icons.el -> company-box-icons.el
+    company-box.el -> company-box.el
+    images => images
+Created company-box-20210330.1155.tar containing:
+  company-box-20210330.1155/
+  company-box-20210330.1155/company-box-doc.el
+  company-box-20210330.1155/company-box-icons.el
+  company-box-20210330.1155/company-box-pkg.el
+  company-box-20210330.1155/company-box.el
+  company-box-20210330.1155/images/
+  company-box-20210330.1155/images/Class.png
+  company-box-20210330.1155/images/ColorPalette.png
+  company-box-20210330.1155/images/Constant.png
+  company-box-20210330.1155/images/Document.png
+  company-box-20210330.1155/images/EnumItem.png
+  company-box-20210330.1155/images/Enumerator.png
+  company-box-20210330.1155/images/Event.png
+  company-box-20210330.1155/images/Field.png
+  company-box-20210330.1155/images/Folder.png
+  company-box-20210330.1155/images/Interface.png
+  company-box-20210330.1155/images/Keyword.png
+  company-box-20210330.1155/images/LocalVariable.png
+  company-box-20210330.1155/images/Method.png
+  company-box-20210330.1155/images/Misc.png
+  company-box-20210330.1155/images/Namespace.png
+  company-box-20210330.1155/images/Property.png
+  company-box-20210330.1155/images/String.png
+  company-box-20210330.1155/images/Template.png
+  company-box-20210330.1155/images/eclipse/
+  company-box-20210330.1155/images/eclipse/boolean.png
+  company-box-20210330.1155/images/eclipse/boolean@2x.png
+  company-box-20210330.1155/images/eclipse/class.png
+  company-box-20210330.1155/images/eclipse/class@2x.png
+  company-box-20210330.1155/images/eclipse/constant.png
+  company-box-20210330.1155/images/eclipse/constant@2x.png
+  company-box-20210330.1155/images/eclipse/constructor.png
+  company-box-20210330.1155/images/eclipse/constructor@2x.png
+  company-box-20210330.1155/images/eclipse/enum.png
+  company-box-20210330.1155/images/eclipse/enum@2x.png
+  company-box-20210330.1155/images/eclipse/field.png
+  company-box-20210330.1155/images/eclipse/field@2x.png
+  company-box-20210330.1155/images/eclipse/function.png
+  company-box-20210330.1155/images/eclipse/function@2x.png
+  company-box-20210330.1155/images/eclipse/interface.png
+  company-box-20210330.1155/images/eclipse/interface@2x.png
+  company-box-20210330.1155/images/eclipse/keyword.png
+  company-box-20210330.1155/images/eclipse/keyword@2x.png
+  company-box-20210330.1155/images/eclipse/method.png
+  company-box-20210330.1155/images/eclipse/method@2x.png
+  company-box-20210330.1155/images/eclipse/module.png
+  company-box-20210330.1155/images/eclipse/module@2x.png
+  company-box-20210330.1155/images/eclipse/namespace.png
+  company-box-20210330.1155/images/eclipse/namespace@2x.png
+  company-box-20210330.1155/images/eclipse/number.png
+  company-box-20210330.1155/images/eclipse/number@2x.png
+  company-box-20210330.1155/images/eclipse/package.png
+  company-box-20210330.1155/images/eclipse/package@2x.png
+  company-box-20210330.1155/images/eclipse/property.png
+  company-box-20210330.1155/images/eclipse/property@2x.png
+  company-box-20210330.1155/images/eclipse/reference.png
+  company-box-20210330.1155/images/eclipse/reference@2x.png
+  company-box-20210330.1155/images/eclipse/snippet.png
+  company-box-20210330.1155/images/eclipse/snippet@2x.png
+  company-box-20210330.1155/images/eclipse/text.png
+  company-box-20210330.1155/images/eclipse/text@2x.png
+  company-box-20210330.1155/images/eclipse/value.png
+  company-box-20210330.1155/images/eclipse/value@2x.png
+  company-box-20210330.1155/images/eclipse/variable.png
+  company-box-20210330.1155/images/eclipse/variable@2x.png
+  company-box-20210330.1155/images/idea/
+  company-box-20210330.1155/images/idea/advice.png
+  company-box-20210330.1155/images/idea/class.png
+  company-box-20210330.1155/images/idea/enum.png
+  company-box-20210330.1155/images/idea/field.png
+  company-box-20210330.1155/images/idea/interface.png
+  company-box-20210330.1155/images/idea/method.png
+  company-box-20210330.1155/images/idea/misc.png
+  company-box-20210330.1155/images/idea/module.png
+  company-box-20210330.1155/images/idea/package.png
+  company-box-20210330.1155/images/idea/parameter.png
+  company-box-20210330.1155/images/idea/ppFile.png
+  company-box-20210330.1155/images/idea/property.png
+  company-box-20210330.1155/images/idea/readonly.png
+  company-box-20210330.1155/images/idea/snippet.png
+  company-box-20210330.1155/images/idea/sourceFolder.png
+  company-box-20210330.1155/images/idea/static.png
+  company-box-20210330.1155/images/idea/textArea.png
+  company-box-20210330.1155/images/idea/textField.png
+  company-box-20210330.1155/images/idea/variable.png
+  company-box-20210330.1155/images/netbeans/
+  company-box-20210330.1155/images/netbeans/attribute.png
+  company-box-20210330.1155/images/netbeans/class.png
+  company-box-20210330.1155/images/netbeans/color.gif
+  company-box-20210330.1155/images/netbeans/constant.png
+  company-box-20210330.1155/images/netbeans/constructor.png
+  company-box-20210330.1155/images/netbeans/empty.png
+  company-box-20210330.1155/images/netbeans/enum.png
+  company-box-20210330.1155/images/netbeans/enummember.png
+  company-box-20210330.1155/images/netbeans/event.png
+  company-box-20210330.1155/images/netbeans/field.png
+  company-box-20210330.1155/images/netbeans/file.png
+  company-box-20210330.1155/images/netbeans/folder.gif
+  company-box-20210330.1155/images/netbeans/function.png
+  company-box-20210330.1155/images/netbeans/interface.png
+  company-box-20210330.1155/images/netbeans/keyword.png
+  company-box-20210330.1155/images/netbeans/method.png
+  company-box-20210330.1155/images/netbeans/module.png
+  company-box-20210330.1155/images/netbeans/operator.png
+  company-box-20210330.1155/images/netbeans/property.png
+  company-box-20210330.1155/images/netbeans/reference.png
+  company-box-20210330.1155/images/netbeans/snippet.png
+  company-box-20210330.1155/images/netbeans/struct.png
+  company-box-20210330.1155/images/netbeans/text.png
+  company-box-20210330.1155/images/netbeans/typeparameter.gif
+  company-box-20210330.1155/images/netbeans/unit.png
+  company-box-20210330.1155/images/netbeans/value.png
+  company-box-20210330.1155/images/netbeans/variable.gif
+Built company-box in 3.793s, finished at Wed Jul  7 11:40:11 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  557 Jul  7 11:40 packages/company-box-20210330.1155.entry
+220K -rw-r--r-- 1 root root 220K Jul  7 11:40 packages/company-box-20210330.1155.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:40 packages/company-box-badge.svg
+4.0K -rw-r--r-- 1 root root  741 Jul  7 11:40 packages/company-box-readme.txt

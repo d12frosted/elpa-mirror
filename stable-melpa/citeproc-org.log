@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/andras-simonyi/citeproc-org.git
 
 Updating /mnt/store/melpa/working/citeproc-org/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/citeproc-org/
+  to /tmp/citeproc-orgJDfiDw/citeproc-org-20200610.1620
+    citeproc-org-setup.el -> citeproc-org-setup.el
+    citeproc-org.el -> citeproc-org.el
+    chicago-author-date.csl -> chicago-author-date.csl
+    locales-en-US.xml -> locales-en-US.xml
+Created citeproc-org-20200610.1620.tar containing:
+  citeproc-org-20200610.1620/
+  citeproc-org-20200610.1620/chicago-author-date.csl
+  citeproc-org-20200610.1620/citeproc-org-pkg.el
+  citeproc-org-20200610.1620/citeproc-org-setup.el
+  citeproc-org-20200610.1620/citeproc-org.el
+  citeproc-org-20200610.1620/locales-en-US.xml
+Built citeproc-org in 4.738s, finished at Wed Jul  7 11:38:26 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  525 Jul  7 11:38 packages/citeproc-org-20200610.1620.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 11:38 packages/citeproc-org-20200610.1620.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:38 packages/citeproc-org-badge.svg
+4.0K -rw-r--r-- 1 root root  177 Jul  7 11:38 packages/citeproc-org-readme.txt

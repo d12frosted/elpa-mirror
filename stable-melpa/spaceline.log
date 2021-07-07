@@ -3,10 +3,26 @@ Fetcher: github
 Source:  https://github.com/TheBB/spaceline.git
 
 Updating /mnt/store/melpa/working/spaceline/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/spaceline/
+  to /tmp/spacelineDoDmbr/spaceline-20160527.1218
+    spaceline-config.el -> spaceline-config.el
+    spaceline-segments.el -> spaceline-segments.el
+    spaceline.el -> spaceline.el
+Created spaceline-20160527.1218.tar containing:
+  spaceline-20160527.1218/
+  spaceline-20160527.1218/spaceline-config.el
+  spaceline-20160527.1218/spaceline-pkg.el
+  spaceline-20160527.1218/spaceline-segments.el
+  spaceline-20160527.1218/spaceline.el
+Built spaceline in 3.728s, finished at Wed Jul  7 09:21:25 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  519 Jul  7 09:21 packages/spaceline-20160527.1218.entry
+ 60K -rw-r--r-- 1 root root  60K Jul  7 09:21 packages/spaceline-20160527.1218.tar
+4.0K -rw-r--r-- 1 root root  544 Jul  7 06:08 packages/spaceline-all-the-icons-20170824.1209.entry
+100K -rw-r--r-- 1 root root 100K Jul  7 06:08 packages/spaceline-all-the-icons-20170824.1209.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:08 packages/spaceline-all-the-icons-badge.svg
+4.0K -rw-r--r-- 1 root root 3.0K Jul  7 06:08 packages/spaceline-all-the-icons-readme.txt
+4.0K -rw-r--r-- 1 root root  177 Jul  7 09:21 packages/spaceline-all-the-icons.log
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:21 packages/spaceline-badge.svg
+4.0K -rw-r--r-- 1 root root  239 Jul  7 09:21 packages/spaceline-readme.txt

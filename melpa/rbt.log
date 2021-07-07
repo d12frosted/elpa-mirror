@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/joeheyming/rbt.el.git
 
 Updating /mnt/store/melpa/working/rbt/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built rbt in 4.537s, finished at Wed Jul  7 09:15:36 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.5K Jul  7 09:15 packages/rbt-20170202.2302.el
+4.0K -rw-r--r-- 1 root root  359 Jul  7 09:15 packages/rbt-20170202.2302.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:15 packages/rbt-badge.svg
+4.0K -rw-r--r-- 1 root root  713 Jul  7 09:15 packages/rbt-readme.txt

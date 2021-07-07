@@ -1,6 +1,6 @@
 Bring animation like in Beamer into your org-tree-slide presentations!
 
-Manual installation:
+Maunal installation:
 Download the org-tree-slide-pauses.el.  Add the path to the `load-path'
 variable and load it.  This can be added to the .emacs initialization file:
 

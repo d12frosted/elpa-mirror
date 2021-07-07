@@ -3,10 +3,63 @@ Fetcher: github
 Source:  https://github.com/ecukes/ecukes.git
 
 Updating /mnt/store/melpa/working/ecukes/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ecukes/
+  to /tmp/ecukes7NRfaf/ecukes-20171216.1208
+    ecukes-byte-compile.el -> ecukes-byte-compile.el
+    ecukes-cli.el -> ecukes-cli.el
+    ecukes-core.el -> ecukes-core.el
+    ecukes-def.el -> ecukes-def.el
+    ecukes-helpers.el -> ecukes-helpers.el
+    ecukes-hooks.el -> ecukes-hooks.el
+    ecukes-load.el -> ecukes-load.el
+    ecukes-new.el -> ecukes-new.el
+    ecukes-parse.el -> ecukes-parse.el
+    ecukes-pkg.el -> ecukes-pkg.el
+    ecukes-project.el -> ecukes-project.el
+    ecukes-reporter.el -> ecukes-reporter.el
+    ecukes-run.el -> ecukes-run.el
+    ecukes-stats.el -> ecukes-stats.el
+    ecukes-steps.el -> ecukes-steps.el
+    ecukes-template.el -> ecukes-template.el
+    ecukes.el -> ecukes.el
+    templates => templates
+    bin => bin
+    reporters => reporters
+Created ecukes-20171216.1208.tar containing:
+  ecukes-20171216.1208/
+  ecukes-20171216.1208/bin/
+  ecukes-20171216.1208/bin/ecukes
+  ecukes-20171216.1208/ecukes-byte-compile.el
+  ecukes-20171216.1208/ecukes-cli.el
+  ecukes-20171216.1208/ecukes-core.el
+  ecukes-20171216.1208/ecukes-def.el
+  ecukes-20171216.1208/ecukes-helpers.el
+  ecukes-20171216.1208/ecukes-hooks.el
+  ecukes-20171216.1208/ecukes-load.el
+  ecukes-20171216.1208/ecukes-new.el
+  ecukes-20171216.1208/ecukes-parse.el
+  ecukes-20171216.1208/ecukes-pkg.el
+  ecukes-20171216.1208/ecukes-project.el
+  ecukes-20171216.1208/ecukes-reporter.el
+  ecukes-20171216.1208/ecukes-run.el
+  ecukes-20171216.1208/ecukes-stats.el
+  ecukes-20171216.1208/ecukes-steps.el
+  ecukes-20171216.1208/ecukes-template.el
+  ecukes-20171216.1208/ecukes.el
+  ecukes-20171216.1208/reporters/
+  ecukes-20171216.1208/reporters/ecukes-reporter-dot.el
+  ecukes-20171216.1208/reporters/ecukes-reporter-landing.el
+  ecukes-20171216.1208/reporters/ecukes-reporter-magnars.el
+  ecukes-20171216.1208/reporters/ecukes-reporter-progress.el
+  ecukes-20171216.1208/reporters/ecukes-reporter-spec.el
+  ecukes-20171216.1208/templates/
+  ecukes-20171216.1208/templates/env.tpl
+  ecukes-20171216.1208/templates/feature.tpl
+  ecukes-20171216.1208/templates/missing-step.tpl
+  ecukes-20171216.1208/templates/step-definition.tpl
+Built ecukes in 4.142s, finished at Wed Jul  7 11:46:23 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  252 Jul  7 11:46 packages/ecukes-20171216.1208.entry
+112K -rw-r--r-- 1 root root 110K Jul  7 11:46 packages/ecukes-20171216.1208.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:46 packages/ecukes-badge.svg

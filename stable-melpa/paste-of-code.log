@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/spebern/paste-of-code.el.git
 
 Updating /mnt/store/melpa/working/paste-of-code/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built paste-of-code in 3.977s, finished at Wed Jul  7 09:10:50 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.4K Jul  7 09:10 packages/paste-of-code-20170709.2355.el
+4.0K -rw-r--r-- 1 root root  344 Jul  7 09:10 packages/paste-of-code-20170709.2355.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:10 packages/paste-of-code-badge.svg
+4.0K -rw-r--r-- 1 root root   58 Jul  7 09:10 packages/paste-of-code-readme.txt

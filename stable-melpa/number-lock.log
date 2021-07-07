@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Liu233w/number-lock.el.git
 
 Updating /mnt/store/melpa/working/number-lock/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built number-lock in 5.374s, finished at Wed Jul  7 09:05:05 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.5K Jul  7 09:05 packages/number-lock-20160827.504.el
+4.0K -rw-r--r-- 1 root root  392 Jul  7 09:05 packages/number-lock-20160827.504.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:05 packages/number-lock-badge.svg
+4.0K -rw-r--r-- 1 root root  476 Jul  7 09:05 packages/number-lock-readme.txt

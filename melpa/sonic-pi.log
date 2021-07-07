@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/repl-electric/sonic-pi.el.git
 
 Updating /mnt/store/melpa/working/sonic-pi/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sonic-pi/
+  to /tmp/sonic-piMrXvcz/sonic-pi-20171205.1205
+    sonic-pi-console.el -> sonic-pi-console.el
+    sonic-pi-mode.el -> sonic-pi-mode.el
+    sonic-pi-osc.el -> sonic-pi-osc.el
+    sonic-pi.el -> sonic-pi.el
+Created sonic-pi-20171205.1205.tar containing:
+  sonic-pi-20171205.1205/
+  sonic-pi-20171205.1205/sonic-pi-console.el
+  sonic-pi-20171205.1205/sonic-pi-mode.el
+  sonic-pi-20171205.1205/sonic-pi-osc.el
+  sonic-pi-20171205.1205/sonic-pi-pkg.el
+  sonic-pi-20171205.1205/sonic-pi.el
+Built sonic-pi in 3.510s, finished at Wed Jul  7 09:21:13 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  474 Jul  7 09:21 packages/sonic-pi-20171205.1205.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 09:21 packages/sonic-pi-20171205.1205.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:21 packages/sonic-pi-badge.svg
+4.0K -rw-r--r-- 1 root root  142 Jul  7 09:21 packages/sonic-pi-readme.txt

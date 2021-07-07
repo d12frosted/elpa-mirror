@@ -3,10 +3,31 @@ Fetcher: github
 Source:  https://github.com/canatella/xwwp.git
 
 Updating /mnt/store/melpa/working/xwwp/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/xwwp/
+  to /tmp/xwwp0GETMO/xwwp-20200917.643
+    xwwp.el -> xwwp.el
+    xwwp-follow-link.el -> xwwp-follow-link.el
+    xwwp-follow-link-ido.el -> xwwp-follow-link-ido.el
+Created xwwp-20200917.643.tar containing:
+  xwwp-20200917.643/
+  xwwp-20200917.643/xwwp-follow-link-ido.el
+  xwwp-20200917.643/xwwp-follow-link.el
+  xwwp-20200917.643/xwwp-pkg.el
+  xwwp-20200917.643/xwwp.el
+Built xwwp in 3.669s, finished at Wed Jul  7 09:30:08 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  304 Jul  7 09:30 packages/xwwp-20200917.643.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 09:30 packages/xwwp-20200917.643.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:30 packages/xwwp-badge.svg
+4.0K -rw-r--r-- 1 root root 2.8K Jul  7 06:17 packages/xwwp-follow-link-helm-20200917.642.el
+4.0K -rw-r--r-- 1 root root  382 Jul  7 06:17 packages/xwwp-follow-link-helm-20200917.642.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:17 packages/xwwp-follow-link-helm-badge.svg
+4.0K -rw-r--r-- 1 root root   95 Jul  7 06:17 packages/xwwp-follow-link-helm-readme.txt
+4.0K -rw-r--r-- 1 root root  152 Jul  7 09:30 packages/xwwp-follow-link-helm.log
+8.0K -rw-r--r-- 1 root root 4.9K Jul  7 06:17 packages/xwwp-follow-link-ivy-20200917.642.el
+4.0K -rw-r--r-- 1 root root  389 Jul  7 06:17 packages/xwwp-follow-link-ivy-20200917.642.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:17 packages/xwwp-follow-link-ivy-badge.svg
+4.0K -rw-r--r-- 1 root root   94 Jul  7 06:17 packages/xwwp-follow-link-ivy-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:30 packages/xwwp-follow-link-ivy.log
+4.0K -rw-r--r-- 1 root root  210 Jul  7 09:30 packages/xwwp-readme.txt

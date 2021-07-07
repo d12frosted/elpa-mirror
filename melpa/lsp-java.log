@@ -3,10 +3,33 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-java.git
 
 Updating /mnt/store/melpa/working/lsp-java/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-java/
+  to /tmp/lsp-javaqMW0ii/lsp-java-20200804.1609
+    dap-java.el -> dap-java.el
+    lsp-java-boot.el -> lsp-java-boot.el
+    lsp-java.el -> lsp-java.el
+    lsp-jt.el -> lsp-jt.el
+    icons => icons
+Created lsp-java-20200804.1609.tar containing:
+  lsp-java-20200804.1609/
+  lsp-java-20200804.1609/dap-java.el
+  lsp-java-20200804.1609/icons/
+  lsp-java-20200804.1609/icons/vscode/
+  lsp-java-20200804.1609/icons/vscode/class.png
+  lsp-java-20200804.1609/icons/vscode/debug.png
+  lsp-java-20200804.1609/icons/vscode/method.png
+  lsp-java-20200804.1609/icons/vscode/package.png
+  lsp-java-20200804.1609/icons/vscode/placeholder.png
+  lsp-java-20200804.1609/icons/vscode/refresh.png
+  lsp-java-20200804.1609/icons/vscode/run.png
+  lsp-java-20200804.1609/lsp-java-boot.el
+  lsp-java-20200804.1609/lsp-java-pkg.el
+  lsp-java-20200804.1609/lsp-java.el
+  lsp-java-20200804.1609/lsp-jt.el
+Built lsp-java in 4.004s, finished at Wed Jul  7 08:59:12 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  505 Jul  7 08:59 packages/lsp-java-20200804.1609.entry
+160K -rw-r--r-- 1 root root 160K Jul  7 08:59 packages/lsp-java-20200804.1609.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:59 packages/lsp-java-badge.svg
+4.0K -rw-r--r-- 1 root root   35 Jul  7 08:59 packages/lsp-java-readme.txt

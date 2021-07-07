@@ -1,0 +1,13 @@
+(git-timemachine .
+		 [(20190730 849)
+		  ((emacs
+		    (24 3))
+		   (transient
+		    (0 1 0)))
+		  "Walk through git revisions of a file" single
+		  ((:commit . "391eb61050de321101e631fcf373fc70ec6e7700")
+		   (:authors
+		    ("Peter Stiernström" . "peter@stiernstrom.se"))
+		   (:maintainer "Peter Stiernström" . "peter@stiernstrom.se")
+		   (:keywords "vc")
+		   (:url . "https://gitlab.com/pidu/git-timemachine"))])

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/jstranik/emacs-quilt.git
 
 Updating /mnt/store/melpa/working/quilt/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built quilt in 5.027s, finished at Wed Jul  7 09:15:16 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Jul  7 09:15 packages/quilt-20190828.506.el
+4.0K -rw-r--r-- 1 root root  349 Jul  7 09:15 packages/quilt-20190828.506.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:15 packages/quilt-badge.svg
+4.0K -rw-r--r-- 1 root root  773 Jul  7 09:15 packages/quilt-readme.txt

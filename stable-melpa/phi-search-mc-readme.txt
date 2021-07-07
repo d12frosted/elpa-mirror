@@ -2,8 +2,8 @@
 phi-search-mc.el provides the following interactive commands:
 
 * phi-search-mc/mark-here
-* phi-search-mc/mark-next
-* phi-search-mc/mark-previous
+* phi-search-mc/mark-forward
+* phi-search-mc/mark-backward
 * phi-search-mc/mark-all
 
   These functions serve as great way to add fake cursors at your

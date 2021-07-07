@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/myuhe/color-moccur.el.git
 
 Updating /mnt/store/melpa/working/color-moccur/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built color-moccur in 3.715s, finished at Wed Jul  7 11:39:45 2021
+ ✓ Success:
+132K -rwxr-xr-x 1 root root 131K Jul  7 11:39 packages/color-moccur-20141223.35.el
+4.0K -rw-r--r-- 1 root root  242 Jul  7 11:39 packages/color-moccur-20141223.35.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:39 packages/color-moccur-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Jul  7 11:39 packages/color-moccur-readme.txt

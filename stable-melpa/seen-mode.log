@@ -3,10 +3,9 @@ Fetcher: git
 Source:  https://git.sr.ht/~shiorid/seen.el
 
 Updating /mnt/store/melpa/working/seen-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built seen-mode in 3.743s, finished at Wed Jul  7 09:18:30 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.9K Jul  7 09:18 packages/seen-mode-20210311.1935.el
+4.0K -rw-r--r-- 1 root root  417 Jul  7 09:18 packages/seen-mode-20210311.1935.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:18 packages/seen-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  120 Jul  7 09:18 packages/seen-mode-readme.txt

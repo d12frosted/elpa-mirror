@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/alpha-catharsis/sudo-utils.git
 
 Updating /mnt/store/melpa/working/sudo-utils/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built sudo-utils in 4.035s, finished at Wed Jul  7 09:22:36 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  14K Jul  7 09:22 packages/sudo-utils-20210119.1930.el
+4.0K -rw-r--r-- 1 root root  409 Jul  7 09:22 packages/sudo-utils-20210119.1930.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:22 packages/sudo-utils-badge.svg
+4.0K -rw-r--r-- 1 root root  296 Jul  7 09:22 packages/sudo-utils-readme.txt

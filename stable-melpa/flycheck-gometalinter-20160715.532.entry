@@ -1,0 +1,13 @@
+(flycheck-gometalinter .
+		       [(20160715 532)
+			((emacs
+			  (24))
+			 (flycheck
+			  (0 22)))
+			"flycheck checker for gometalinter" single
+			((:commit . "2e863429cc953cf4c14783e249df56d1ae669868")
+			 (:authors
+			  ("Diep Pham" . "me@favadi.com"))
+			 (:maintainer "Diep Pham" . "me@favadi.com")
+			 (:keywords "convenience" "tools" "go")
+			 (:url . "https://github.com/favadi/flycheck-gometalinter"))])

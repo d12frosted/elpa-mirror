@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/TobiasZawada/elgrep.git
 
 Updating /mnt/store/melpa/working/elgrep/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built elgrep in 4.232s, finished at Wed Jul  7 11:47:32 2021
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root  32K Jul  7 11:47 packages/elgrep-20190518.1539.el
+4.0K -rw-r--r-- 1 root root  388 Jul  7 11:47 packages/elgrep-20190518.1539.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:47 packages/elgrep-badge.svg
+4.0K -rw-r--r-- 1 root root  439 Jul  7 11:47 packages/elgrep-readme.txt

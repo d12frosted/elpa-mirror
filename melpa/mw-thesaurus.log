@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/agzam/mw-thesaurus.el.git
 
 Updating /mnt/store/melpa/working/mw-thesaurus/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built mw-thesaurus in 3.912s, finished at Wed Jul  7 09:03:32 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jul  7 09:03 packages/mw-thesaurus-20210224.449.el
+4.0K -rw-r--r-- 1 root root  367 Jul  7 09:03 packages/mw-thesaurus-20210224.449.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:03 packages/mw-thesaurus-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Jul  7 09:03 packages/mw-thesaurus-readme.txt

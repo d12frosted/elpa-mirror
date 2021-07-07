@@ -3,10 +3,32 @@ Fetcher: github
 Source:  https://github.com/michaelklishin/cucumber.el.git
 
 Updating /mnt/store/melpa/working/feature-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/feature-mode/
+  to /tmp/feature-mode3mxqzi/feature-mode-20120514.244
+    feature-mode-pkg.el -> feature-mode-pkg.el
+    feature-mode.el -> feature-mode.el
+    i18n.yml -> i18n.yml
+    snippets => snippets
+    support => support
+Created feature-mode-20120514.244.tar containing:
+  feature-mode-20120514.244/
+  feature-mode-20120514.244/feature-mode-pkg.el
+  feature-mode-20120514.244/feature-mode.el
+  feature-mode-20120514.244/i18n.yml
+  feature-mode-20120514.244/snippets/
+  feature-mode-20120514.244/snippets/feature-mode/
+  feature-mode-20120514.244/snippets/feature-mode/and
+  feature-mode-20120514.244/snippets/feature-mode/bac
+  feature-mode-20120514.244/snippets/feature-mode/fea
+  feature-mode-20120514.244/snippets/feature-mode/giv
+  feature-mode-20120514.244/snippets/feature-mode/sce
+  feature-mode-20120514.244/snippets/feature-mode/the
+  feature-mode-20120514.244/snippets/feature-mode/whe
+  feature-mode-20120514.244/support/
+  feature-mode-20120514.244/support/find_step.rb
+Built feature-mode in 5.244s, finished at Wed Jul  7 11:52:15 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  313 Jul  7 11:52 packages/feature-mode-20120514.244.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 11:52 packages/feature-mode-20120514.244.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:52 packages/feature-mode-badge.svg

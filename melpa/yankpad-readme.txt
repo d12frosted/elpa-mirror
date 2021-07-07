@@ -4,11 +4,6 @@ question is defined in `yankpad-file' and is set to "yankpad.org" in your
 category and each subheading of that category defines a snippet.  This way
 you can have different yankpads for different occasions.
 
-You can open your `yankpad-file' by using `yankpad-edit' (or just open it in
-any other way).  Another way to add new snippets is by using
-`yankpad-capture-snippet', which will add a snippet to the current
-`yankpad-category'.
-
 If you have yasnippet installed, yankpad will try to use it when pasting
 snippets.  This means that you can use the features that yasnippet provides
 (tab stops, elisp, etc).  You can use yankpad without yasnippet, and then the
@@ -41,13 +36,6 @@ another category (basically having several categories active at the same
 time), use `yankpad-append-category'.  If you have company-mode enabled,
 you can also use `company-yankpad`.
 
-A quick way to add short snippets with a keyword is to add a descriptive list
-to the category in your `yankpad-file'.  The key of each item in the list will be
-the keyword, and the description will be the snippet.  You can turn off this
-behaviour by setting `yankpad-descriptive-list-treatment' to nil, or change
-descriptive lists to use `abbrev-mode' by setting the variable to 'abbrev
-instead.
-
 For further customization, please see the Github page: https://github.com/Kungsgeten/yankpad
 
 Here's an example of what yankpad.org could look like:
@@ -71,16 +59,6 @@ Here's an example of what yankpad.org could look like:
    `yankpad-respect-current-org-level' to nil in order to change that.
 
 * Category 2
-
-  Descriptive lists will be treated as snippets.  You can set them to be
-  treated as `abbrev-mode' abbrevs instead, by setting
-  `yankpad-descriptive-list-treatment' to abbrev.  If a heading could be considered
-  to be a snippet, add the `snippetlist' tag to ignore the snippet and scan
-  it for descriptive lists instead.
-
-  - name :: Erik Sjöstrand
-  - key :: Typing "key" followed by `yankpad-expand' will insert this snippet.
-
 ** Snippet 1
 
    This is yet another snippet, in a different category.
@@ -106,15 +84,3 @@ Here's an example of what yankpad.org could look like:
 ** A snippet among many!
    This category will include snippets from Category 1 and Category 2.
    This is done by setting the INCLUDE property of the category.
-
-* Global category       :global:
-** Always available
-   Snippets in a category with the :global: tag are always available for expansion.
-* Default                                           :global:
-** Fallback for major-mode categories
-
-If you open a file, but have no category named after its major-mode, a
-category named "Default" will be used instead (if you have it defined in your
-                                                  Yankpad). It is probably a good idea to make this category global. You can
-change the name of the default category by setting the variable
-yankpad-default-category.

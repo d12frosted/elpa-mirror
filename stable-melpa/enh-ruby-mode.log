@@ -3,10 +3,22 @@ Fetcher: github
 Source:  https://github.com/zenspider/enhanced-ruby-mode.git
 
 Updating /mnt/store/melpa/working/enh-ruby-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/enh-ruby-mode/
+  to /tmp/enh-ruby-modewS3xSp/enh-ruby-mode-20191111.2243
+    enh-ruby-mode.el -> enh-ruby-mode.el
+    ruby/erm.rb -> ruby/erm.rb
+    ruby/erm_buffer.rb -> ruby/erm_buffer.rb
+Created enh-ruby-mode-20191111.2243.tar containing:
+  enh-ruby-mode-20191111.2243/
+  enh-ruby-mode-20191111.2243/enh-ruby-mode-pkg.el
+  enh-ruby-mode-20191111.2243/enh-ruby-mode.el
+  enh-ruby-mode-20191111.2243/ruby/
+  enh-ruby-mode-20191111.2243/ruby/erm.rb
+  enh-ruby-mode-20191111.2243/ruby/erm_buffer.rb
+Built enh-ruby-mode in 3.628s, finished at Wed Jul  7 11:48:41 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  338 Jul  7 11:48 packages/enh-ruby-mode-20191111.2243.entry
+ 92K -rw-r--r-- 1 root root  90K Jul  7 11:48 packages/enh-ruby-mode-20191111.2243.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:48 packages/enh-ruby-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  769 Jul  7 11:48 packages/enh-ruby-mode-readme.txt

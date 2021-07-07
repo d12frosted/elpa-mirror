@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/mihaiolteanu/vuiet.git
 
 Updating /mnt/store/melpa/working/vuiet/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built vuiet in 4.762s, finished at Wed Jul  7 09:27:53 2021
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root  33K Jul  7 09:27 packages/vuiet-20200413.1336.el
+4.0K -rw-r--r-- 1 root root  468 Jul  7 09:27 packages/vuiet-20200413.1336.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:27 packages/vuiet-badge.svg
+4.0K -rw-r--r-- 1 root root  145 Jul  7 09:27 packages/vuiet-readme.txt

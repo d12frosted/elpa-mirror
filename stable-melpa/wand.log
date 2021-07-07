@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/cmpitg/wand.git
 
 Updating /mnt/store/melpa/working/wand/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/wand/
+  to /tmp/wand7jvSFD/wand-20210511.725
+    wand-helper.el -> wand-helper.el
+    wand.el -> wand.el
+Created wand-20210511.725.tar containing:
+  wand-20210511.725/
+  wand-20210511.725/wand-helper.el
+  wand-20210511.725/wand-pkg.el
+  wand-20210511.725/wand.el
+Built wand in 4.242s, finished at Wed Jul  7 09:28:05 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  369 Jul  7 09:28 packages/wand-20210511.725.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:28 packages/wand-20210511.725.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:28 packages/wand-badge.svg
+4.0K -rw-r--r-- 1 root root  909 Jul  7 09:28 packages/wand-readme.txt

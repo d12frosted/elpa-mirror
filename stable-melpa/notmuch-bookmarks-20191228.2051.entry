@@ -1,0 +1,13 @@
+(notmuch-bookmarks .
+		   [(20191228 2051)
+		    ((seq
+		      (2 20))
+		     (emacs
+		      (26 1)))
+		    "Add bookmark handling for notmuch buffers" single
+		    ((:commit . "c0071310f01dd5296600bdc4d6135667d38ef0de")
+		     (:authors
+		      ("Jörg Volbers" . "joerg@joergvolbers.de"))
+		     (:maintainer "Jörg Volbers" . "joerg@joergvolbers.de")
+		     (:keywords "mail")
+		     (:url . "https://github.com/publicimageltd/notmuch-bookmarks"))])

@@ -3,10 +3,14 @@ Fetcher: github
 Source:  https://github.com/tonini/gitconfig.el.git
 
 Updating /mnt/store/melpa/working/gitconfig/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built gitconfig in 3.321s, finished at Wed Jul  7 11:57:24 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.3K Jul  7 11:57 packages/gitconfig-20130718.935.el
+4.0K -rw-r--r-- 1 root root  297 Jul  7 11:57 packages/gitconfig-20130718.935.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:57 packages/gitconfig-badge.svg
+8.0K -rw-r--r-- 1 root root 5.3K Jul  7 11:57 packages/gitconfig-mode-20210528.1856.el
+4.0K -rw-r--r-- 1 root root  390 Jul  7 11:57 packages/gitconfig-mode-20210528.1856.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:45 packages/gitconfig-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   43 Jul  7 11:57 packages/gitconfig-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  139 Jul  7 11:57 packages/gitconfig-mode.log
+4.0K -rw-r--r-- 1 root root 1.9K Jul  7 11:57 packages/gitconfig-readme.txt

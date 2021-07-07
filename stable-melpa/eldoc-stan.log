@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/stan-dev/stan-mode.git
 
 Updating /mnt/store/melpa/working/eldoc-stan/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eldoc-stan/
+  to /tmp/eldoc-stanrCfmGz/eldoc-stan-20200830.1032
+  ! eldoc-stan/eldoc-stan.el -> eldoc-stan.el
+  ! eldoc-stan/eldoc-stan.json -> eldoc-stan.json
+Created eldoc-stan-20200830.1032.tar containing:
+  eldoc-stan-20200830.1032/
+  eldoc-stan-20200830.1032/eldoc-stan-pkg.el
+  eldoc-stan-20200830.1032/eldoc-stan.el
+  eldoc-stan-20200830.1032/eldoc-stan.json
+Built eldoc-stan in 4.114s, finished at Wed Jul  7 11:47:18 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  477 Jul  7 11:47 packages/eldoc-stan-20200830.1032.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 11:47 packages/eldoc-stan-20200830.1032.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:47 packages/eldoc-stan-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Jul  7 11:47 packages/eldoc-stan-readme.txt

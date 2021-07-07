@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/redguardtoo/evil-nerd-commenter.git
 
 Updating /mnt/store/melpa/working/evil-nerd-commenter/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/evil-nerd-commenter/
+  to /tmp/evil-nerd-commenterJssIKp/evil-nerd-commenter-20210311.37
+    evil-nerd-commenter-operator.el -> evil-nerd-commenter-operator.el
+    evil-nerd-commenter-sdk.el -> evil-nerd-commenter-sdk.el
+    evil-nerd-commenter.el -> evil-nerd-commenter.el
+Created evil-nerd-commenter-20210311.37.tar containing:
+  evil-nerd-commenter-20210311.37/
+  evil-nerd-commenter-20210311.37/evil-nerd-commenter-operator.el
+  evil-nerd-commenter-20210311.37/evil-nerd-commenter-pkg.el
+  evil-nerd-commenter-20210311.37/evil-nerd-commenter-sdk.el
+  evil-nerd-commenter-20210311.37/evil-nerd-commenter.el
+Built evil-nerd-commenter in 7.409s, finished at Wed Jul  7 11:50:53 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  460 Jul  7 11:50 packages/evil-nerd-commenter-20210311.37.entry
+ 60K -rw-r--r-- 1 root root  60K Jul  7 11:50 packages/evil-nerd-commenter-20210311.37.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:50 packages/evil-nerd-commenter-badge.svg
+4.0K -rw-r--r-- 1 root root 3.6K Jul  7 11:50 packages/evil-nerd-commenter-readme.txt

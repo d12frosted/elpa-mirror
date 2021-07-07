@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/zenozeng/css-eldoc.git
 
 Updating /mnt/store/melpa/working/css-eldoc/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/css-eldoc/
+  to /tmp/css-eldocEg1Vuc/css-eldoc-20150125.323
+    css-eldoc.el -> css-eldoc.el
+    css-eldoc-hash-table.el -> css-eldoc-hash-table.el
+Created css-eldoc-20150125.323.tar containing:
+  css-eldoc-20150125.323/
+  css-eldoc-20150125.323/css-eldoc-hash-table.el
+  css-eldoc-20150125.323/css-eldoc-pkg.el
+  css-eldoc-20150125.323/css-eldoc.el
+Built css-eldoc in 3.758s, finished at Wed Jul  7 11:42:09 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  259 Jul  7 11:42 packages/css-eldoc-20150125.323.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:42 packages/css-eldoc-20150125.323.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:42 packages/css-eldoc-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Jul  7 11:42 packages/css-eldoc-readme.txt

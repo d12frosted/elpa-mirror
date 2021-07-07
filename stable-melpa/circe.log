@@ -3,10 +3,56 @@ Fetcher: github
 Source:  https://github.com/jorgenschaefer/circe.git
 
 Updating /mnt/store/melpa/working/circe/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/circe/
+  to /tmp/circeUJAwsJ/circe-20190322.1242
+    circe-chanop.el -> circe-chanop.el
+    circe-color-nicks.el -> circe-color-nicks.el
+    circe-compat.el -> circe-compat.el
+    circe-display-images.el -> circe-display-images.el
+    circe-lagmon.el -> circe-lagmon.el
+    circe-new-day-notifier.el -> circe-new-day-notifier.el
+    circe-pkg.el -> circe-pkg.el
+    circe.el -> circe.el
+    irc.el -> irc.el
+    lcs.el -> lcs.el
+    lui-autopaste.el -> lui-autopaste.el
+    lui-format.el -> lui-format.el
+    lui-irc-colors.el -> lui-irc-colors.el
+    lui-logging.el -> lui-logging.el
+    lui-track-bar.el -> lui-track-bar.el
+    lui.el -> lui.el
+    make-tls-process.el -> make-tls-process.el
+    shorten.el -> shorten.el
+    tracking.el -> tracking.el
+Created circe-20190322.1242.tar containing:
+  circe-20190322.1242/
+  circe-20190322.1242/circe-chanop.el
+  circe-20190322.1242/circe-color-nicks.el
+  circe-20190322.1242/circe-compat.el
+  circe-20190322.1242/circe-display-images.el
+  circe-20190322.1242/circe-lagmon.el
+  circe-20190322.1242/circe-new-day-notifier.el
+  circe-20190322.1242/circe-pkg.el
+  circe-20190322.1242/circe.el
+  circe-20190322.1242/irc.el
+  circe-20190322.1242/lcs.el
+  circe-20190322.1242/lui-autopaste.el
+  circe-20190322.1242/lui-format.el
+  circe-20190322.1242/lui-irc-colors.el
+  circe-20190322.1242/lui-logging.el
+  circe-20190322.1242/lui-track-bar.el
+  circe-20190322.1242/lui.el
+  circe-20190322.1242/make-tls-process.el
+  circe-20190322.1242/shorten.el
+  circe-20190322.1242/tracking.el
+Built circe in 4.276s, finished at Wed Jul  7 11:38:25 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  337 Jul  7 11:38 packages/circe-20190322.1242.entry
+360K -rw-r--r-- 1 root root 360K Jul  7 11:38 packages/circe-20190322.1242.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:38 packages/circe-badge.svg
+ 12K -rw-r--r-- 1 root root 9.4K Jul  7 11:38 packages/circe-notifications-20160902.742.el
+4.0K -rw-r--r-- 1 root root  420 Jul  7 11:38 packages/circe-notifications-20160902.742.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:25 packages/circe-notifications-badge.svg
+4.0K -rw-r--r-- 1 root root  160 Jul  7 11:38 packages/circe-notifications.log
+4.0K -rw-r--r-- 1 root root  227 Jul  7 11:38 packages/circe-readme.txt

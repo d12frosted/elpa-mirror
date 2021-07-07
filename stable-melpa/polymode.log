@@ -3,10 +3,39 @@ Fetcher: github
 Source:  https://github.com/polymode/polymode.git
 
 Updating /mnt/store/melpa/working/polymode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/polymode/
+  to /tmp/polymodeVrRYPY/polymode-20200316.1314
+    poly-lock.el -> poly-lock.el
+    polymode-base.el -> polymode-base.el
+    polymode-classes.el -> polymode-classes.el
+    polymode-compat.el -> polymode-compat.el
+    polymode-core.el -> polymode-core.el
+    polymode-debug.el -> polymode-debug.el
+    polymode-export.el -> polymode-export.el
+    polymode-methods.el -> polymode-methods.el
+    polymode-tangle.el -> polymode-tangle.el
+    polymode-test-utils.el -> polymode-test-utils.el
+    polymode-weave.el -> polymode-weave.el
+    polymode.el -> polymode.el
+Created polymode-20200316.1314.tar containing:
+  polymode-20200316.1314/
+  polymode-20200316.1314/poly-lock.el
+  polymode-20200316.1314/polymode-base.el
+  polymode-20200316.1314/polymode-classes.el
+  polymode-20200316.1314/polymode-compat.el
+  polymode-20200316.1314/polymode-core.el
+  polymode-20200316.1314/polymode-debug.el
+  polymode-20200316.1314/polymode-export.el
+  polymode-20200316.1314/polymode-methods.el
+  polymode-20200316.1314/polymode-pkg.el
+  polymode-20200316.1314/polymode-tangle.el
+  polymode-20200316.1314/polymode-test-utils.el
+  polymode-20200316.1314/polymode-weave.el
+  polymode-20200316.1314/polymode.el
+Built polymode in 3.314s, finished at Wed Jul  7 09:12:52 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  359 Jul  7 09:12 packages/polymode-20200316.1314.entry
+292K -rw-r--r-- 1 root root 290K Jul  7 09:12 packages/polymode-20200316.1314.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:12 packages/polymode-badge.svg
+4.0K -rw-r--r-- 1 root root  117 Jul  7 09:12 packages/polymode-readme.txt

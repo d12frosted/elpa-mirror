@@ -3,10 +3,18 @@ Fetcher: github
 Source:  https://github.com/rdallasgray/project-persist-drawer.git
 
 Updating /mnt/store/melpa/working/project-persist-drawer/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/project-persist-drawer/
+  to /tmp/project-persist-drawer9RepzY/project-persist-drawer-20151108.1222
+  ! lib/project-persist-drawer-pkg.el -> project-persist-drawer-pkg.el
+  ! lib/project-persist-drawer.el -> project-persist-drawer.el
+Created project-persist-drawer-20151108.1222.tar containing:
+  project-persist-drawer-20151108.1222/
+  project-persist-drawer-20151108.1222/project-persist-drawer-pkg.el
+  project-persist-drawer-20151108.1222/project-persist-drawer.el
+Built project-persist-drawer in 3.877s, finished at Wed Jul  7 09:13:36 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  445 Jul  7 09:13 packages/project-persist-drawer-20151108.1222.entry
+ 12K -rw-r--r-- 1 root root  10K Jul  7 09:13 packages/project-persist-drawer-20151108.1222.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:13 packages/project-persist-drawer-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul  7 09:13 packages/project-persist-drawer-readme.txt

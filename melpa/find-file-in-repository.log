@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/h/find-file-in-repository.git
 
 Updating /mnt/store/melpa/working/find-file-in-repository/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built find-file-in-repository in 3.613s, finished at Wed Jul  7 11:52:35 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.1K Jul  7 11:52 packages/find-file-in-repository-20121114.307.el
+4.0K -rw-r--r-- 1 root root  487 Jul  7 11:52 packages/find-file-in-repository-20121114.307.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:52 packages/find-file-in-repository-badge.svg
+4.0K -rw-r--r-- 1 root root 1004 Jul  7 11:52 packages/find-file-in-repository-readme.txt

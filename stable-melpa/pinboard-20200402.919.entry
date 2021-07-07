@@ -1,0 +1,13 @@
+(pinboard .
+	  [(20200402 919)
+	   ((emacs
+	     (25 1))
+	    (cl-lib
+	     (0 5)))
+	   "A pinboard.in client" single
+	   ((:commit . "7c57f20667ead2bb27ab1d0a03307c28ea728bd9")
+	    (:authors
+	     ("Dave Pearson" . "davep@davep.org"))
+	    (:maintainer "Dave Pearson" . "davep@davep.org")
+	    (:keywords "hypermedia" "bookmarking" "reading" "pinboard")
+	    (:url . "https://github.com/davep/pinboard.el"))])

@@ -3,10 +3,26 @@ Fetcher: github
 Source:  https://github.com/amake/flutter.el.git
 
 Updating /mnt/store/melpa/working/flutter/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flutter/
+  to /tmp/flutterodEyTg/flutter-20210304.1341
+    flutter.el -> flutter.el
+    flutter-project.el -> flutter-project.el
+    flutter-l10n.el -> flutter-l10n.el
+Created flutter-20210304.1341.tar containing:
+  flutter-20210304.1341/
+  flutter-20210304.1341/flutter-l10n.el
+  flutter-20210304.1341/flutter-pkg.el
+  flutter-20210304.1341/flutter-project.el
+  flutter-20210304.1341/flutter.el
+Built flutter in 3.731s, finished at Wed Jul  7 11:53:06 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  318 Jul  7 11:53 packages/flutter-20210304.1341.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:53 packages/flutter-20210304.1341.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:53 packages/flutter-badge.svg
+4.0K -rw-r--r-- 1 root root 2.6K Jul  7 08:40 packages/flutter-l10n-flycheck-20200221.1415.el
+4.0K -rw-r--r-- 1 root root  397 Jul  7 08:40 packages/flutter-l10n-flycheck-20200221.1415.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:40 packages/flutter-l10n-flycheck-badge.svg
+4.0K -rw-r--r-- 1 root root  123 Jul  7 08:40 packages/flutter-l10n-flycheck-readme.txt
+4.0K -rw-r--r-- 1 root root  154 Jul  7 11:53 packages/flutter-l10n-flycheck.log
+4.0K -rw-r--r-- 1 root root  142 Jul  7 11:53 packages/flutter-readme.txt

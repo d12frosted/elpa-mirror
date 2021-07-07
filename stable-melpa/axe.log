@@ -3,10 +3,29 @@ Fetcher: github
 Source:  https://github.com/cniles/axe.git
 
 Updating /mnt/store/melpa/working/axe/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/axe/
+  to /tmp/axe7T0q0o/axe-20201113.2237
+    axe-api.el -> axe-api.el
+    axe-buffer-mode.el -> axe-buffer-mode.el
+    axe-lambda.el -> axe-lambda.el
+    axe-logs.el -> axe-logs.el
+    axe-s3.el -> axe-s3.el
+    axe-util.el -> axe-util.el
+    axe.el -> axe.el
+Created axe-20201113.2237.tar containing:
+  axe-20201113.2237/
+  axe-20201113.2237/axe-api.el
+  axe-20201113.2237/axe-buffer-mode.el
+  axe-20201113.2237/axe-lambda.el
+  axe-20201113.2237/axe-logs.el
+  axe-20201113.2237/axe-pkg.el
+  axe-20201113.2237/axe-s3.el
+  axe-20201113.2237/axe-util.el
+  axe-20201113.2237/axe.el
+Built axe in 3.493s, finished at Wed Jul  7 11:34:57 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  450 Jul  7 11:34 packages/axe-20201113.2237.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 11:34 packages/axe-20201113.2237.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:34 packages/axe-badge.svg
+4.0K -rw-r--r-- 1 root root  449 Jul  7 11:34 packages/axe-readme.txt

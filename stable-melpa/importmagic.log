@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/anachronic/importmagic.el.git
 
 Updating /mnt/store/melpa/working/importmagic/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/importmagic/
+  to /tmp/importmagic8Rnskw/importmagic-20170703.144
+    importmagic.el -> importmagic.el
+    importmagicserver.py -> importmagicserver.py
+Created importmagic-20170703.144.tar containing:
+  importmagic-20170703.144/
+  importmagic-20170703.144/importmagic-pkg.el
+  importmagic-20170703.144/importmagic.el
+  importmagic-20170703.144/importmagicserver.py
+Built importmagic in 4.034s, finished at Wed Jul  7 12:04:41 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  470 Jul  7 12:04 packages/importmagic-20170703.144.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 12:04 packages/importmagic-20170703.144.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:04 packages/importmagic-badge.svg
+4.0K -rw-r--r-- 1 root root  598 Jul  7 12:04 packages/importmagic-readme.txt

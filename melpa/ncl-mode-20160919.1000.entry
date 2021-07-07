@@ -1,0 +1,11 @@
+(ncl-mode .
+	  [(20160919 1000)
+	   ((emacs
+	     (24)))
+	   "Major Mode for editing NCL scripts and other goodies" tar
+	   ((:commit . "164e504e25cec1812fbae5c3dae164d9f6018ece")
+	    (:authors
+	     ("Yagnesh Raghava Yakkala" . "hi@yagnesh.org"))
+	    (:maintainer "Yagnesh Raghava Yakkala" . "hi@yagnesh.org")
+	    (:keywords "ncl" "major mode" "ncl-mode" "atmospheric science.")
+	    (:url . "https://github.com/yyr/ncl-mode"))])

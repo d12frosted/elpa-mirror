@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Malabarba/Nameless.git
 
 Updating /mnt/store/melpa/working/nameless/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built nameless in 4.496s, finished at Wed Jul  7 09:03:46 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Jul  7 09:03 packages/nameless-20161012.1914.el
+4.0K -rw-r--r-- 1 root root  419 Jul  7 09:03 packages/nameless-20161012.1914.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:03 packages/nameless-badge.svg
+4.0K -rw-r--r-- 1 root root  423 Jul  7 09:03 packages/nameless-readme.txt

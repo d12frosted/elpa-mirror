@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/yyr/emacs-grads.git
 
 Updating /mnt/store/melpa/working/gs-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built gs-mode in 3.799s, finished at Wed Jul  7 11:59:06 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.3K Jul  7 11:59 packages/gs-mode-20151202.1006.el
+4.0K -rw-r--r-- 1 root root  312 Jul  7 11:59 packages/gs-mode-20151202.1006.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:59 packages/gs-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  245 Jul  7 11:59 packages/gs-mode-readme.txt

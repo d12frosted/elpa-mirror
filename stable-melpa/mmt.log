@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/mrkkrp/mmt.git
 
 Updating /mnt/store/melpa/working/mmt/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built mmt in 4.463s, finished at Wed Jul  7 09:01:52 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 4.0K Jul  7 09:01 packages/mmt-20170319.1134.el
+4.0K -rw-r--r-- 1 root root  411 Jul  7 09:01 packages/mmt-20170319.1134.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:01 packages/mmt-badge.svg
+4.0K -rw-r--r-- 1 root root  236 Jul  7 09:01 packages/mmt-readme.txt

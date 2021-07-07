@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/hron/yari.el.git
 
 Updating /mnt/store/melpa/working/yari/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built yari in 4.026s, finished at Wed Jul  7 09:30:25 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  19K Jul  7 09:30 packages/yari-20151128.739.el
+4.0K -rw-r--r-- 1 root root  291 Jul  7 09:30 packages/yari-20151128.739.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:30 packages/yari-badge.svg
+4.0K -rw-r--r-- 1 root root  832 Jul  7 09:30 packages/yari-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ccrusius/auth-source-xoauth2.git
 
 Updating /mnt/store/melpa/working/auth-source-xoauth2/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built auth-source-xoauth2 in 4.257s, finished at Wed Jul  7 11:34:17 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Jul  7 11:34 packages/auth-source-xoauth2-20200509.2304.el
+4.0K -rw-r--r-- 1 root root  390 Jul  7 11:34 packages/auth-source-xoauth2-20200509.2304.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:34 packages/auth-source-xoauth2-badge.svg
+4.0K -rw-r--r-- 1 root root  153 Jul  7 11:34 packages/auth-source-xoauth2-readme.txt

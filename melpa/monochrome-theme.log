@@ -3,10 +3,18 @@ Fetcher: github
 Source:  https://github.com/fxn/monochrome-theme.el.git
 
 Updating /mnt/store/melpa/working/monochrome-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/monochrome-theme/
+  to /tmp/monochrome-themesaCTlM/monochrome-theme-20140326.1050
+    monochrome-bright-theme.el -> monochrome-bright-theme.el
+    monochrome-theme.el -> monochrome-theme.el
+Created monochrome-theme-20140326.1050.tar containing:
+  monochrome-theme-20140326.1050/
+  monochrome-theme-20140326.1050/monochrome-bright-theme.el
+  monochrome-theme-20140326.1050/monochrome-theme-pkg.el
+  monochrome-theme-20140326.1050/monochrome-theme.el
+Built monochrome-theme in 4.600s, finished at Wed Jul  7 09:02:13 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  292 Jul  7 09:02 packages/monochrome-theme-20140326.1050.entry
+ 36K -rw-r--r-- 1 root root  30K Jul  7 09:02 packages/monochrome-theme-20140326.1050.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:02 packages/monochrome-theme-badge.svg

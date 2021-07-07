@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/frederic-santos/ob-ess-julia.git
 
 Updating /mnt/store/melpa/working/ob-ess-julia/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-ess-julia/
+  to /tmp/ob-ess-juliaAxUUVP/ob-ess-julia-20210414.1444
+    ob-ess-julia.el -> ob-ess-julia.el
+    ob-ess-julia-startup.jl -> ob-ess-julia-startup.jl
+Created ob-ess-julia-20210414.1444.tar containing:
+  ob-ess-julia-20210414.1444/
+  ob-ess-julia-20210414.1444/ob-ess-julia-pkg.el
+  ob-ess-julia-20210414.1444/ob-ess-julia-startup.jl
+  ob-ess-julia-20210414.1444/ob-ess-julia.el
+Built ob-ess-julia in 4.763s, finished at Wed Jul  7 09:05:27 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  378 Jul  7 09:05 packages/ob-ess-julia-20210414.1444.entry
+ 36K -rw-r--r-- 1 root root  30K Jul  7 09:05 packages/ob-ess-julia-20210414.1444.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:05 packages/ob-ess-julia-badge.svg
+4.0K -rw-r--r-- 1 root root   76 Jul  7 09:05 packages/ob-ess-julia-readme.txt

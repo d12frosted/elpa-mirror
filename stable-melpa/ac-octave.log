@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/coldnew/ac-octave.git
 
 Updating /mnt/store/melpa/working/ac-octave/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ac-octave in 4.259s, finished at Wed Jul  7 11:32:03 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.3K Jul  7 11:32 packages/ac-octave-20171122.1743.el
+4.0K -rw-r--r-- 1 root root  411 Jul  7 11:32 packages/ac-octave-20171122.1743.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:32 packages/ac-octave-badge.svg
+4.0K -rw-r--r-- 1 root root  252 Jul  7 11:32 packages/ac-octave-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/naiquevin/sphinx-doc.el.git
 
 Updating /mnt/store/melpa/working/sphinx-doc/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built sphinx-doc in 4.534s, finished at Wed Jul  7 09:21:38 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  19K Jul  7 09:21 packages/sphinx-doc-20140524.1557.el
+4.0K -rw-r--r-- 1 root root  441 Jul  7 09:21 packages/sphinx-doc-20140524.1557.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:21 packages/sphinx-doc-badge.svg
+4.0K -rw-r--r-- 1 root root  232 Jul  7 09:21 packages/sphinx-doc-readme.txt

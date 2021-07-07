@@ -1,0 +1,15 @@
+(ob-tmux .
+	 [(20180719 1551)
+	  ((emacs
+	    (25 1))
+	   (seq
+	    (2 3))
+	   (s
+	    (1 9 0)))
+	  "Babel Support for Interactive Terminal" single
+	  ((:commit . "8886f31291e979b41215f3eb97670732efffea34")
+	   (:authors
+	    ("Allard Hendriksen"))
+	   (:maintainer "Allard Hendriksen")
+	   (:keywords "literate programming" "interactive shell" "tmux")
+	   (:url . "https://github.com/ahendriksen/ob-tmux"))])

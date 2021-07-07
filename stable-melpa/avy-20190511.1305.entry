@@ -1,0 +1,13 @@
+(avy .
+     [(20190511 1305)
+      ((emacs
+	(24 1))
+       (cl-lib
+	(0 5)))
+      "Jump to arbitrary positions in visible text and select text quickly." single
+      ((:commit . "f2cf43b5372a6e2a7c101496c47caaf03338de36")
+       (:authors
+	("Oleh Krehel" . "ohwoeowho@gmail.com"))
+       (:maintainer "Oleh Krehel" . "ohwoeowho@gmail.com")
+       (:keywords "point" "location")
+       (:url . "https://github.com/abo-abo/avy"))])

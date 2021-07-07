@@ -3,10 +3,59 @@ Fetcher: github
 Source:  https://github.com/countvajhula/symex.el.git
 
 Updating /mnt/store/melpa/working/symex/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/symex/
+  to /tmp/symexDrvnjj/symex-20210319.329
+    symex-computations.el -> symex-computations.el
+    symex-custom.el -> symex-custom.el
+    symex-data.el -> symex-data.el
+    symex-dsl.el -> symex-dsl.el
+    symex-evaluator.el -> symex-evaluator.el
+    symex-evil-support.el -> symex-evil-support.el
+    symex-evil.el -> symex-evil.el
+    symex-hydra.el -> symex-hydra.el
+    symex-interface-arc.el -> symex-interface-arc.el
+    symex-interface-clojure.el -> symex-interface-clojure.el
+    symex-interface-common-lisp.el -> symex-interface-common-lisp.el
+    symex-interface-elisp.el -> symex-interface-elisp.el
+    symex-interface-racket.el -> symex-interface-racket.el
+    symex-interface-scheme.el -> symex-interface-scheme.el
+    symex-interop.el -> symex-interop.el
+    symex-misc.el -> symex-misc.el
+    symex-primitives.el -> symex-primitives.el
+    symex-transformations.el -> symex-transformations.el
+    symex-traversals.el -> symex-traversals.el
+    symex-ui.el -> symex-ui.el
+    symex-utils.el -> symex-utils.el
+    symex.el -> symex.el
+Created symex-20210319.329.tar containing:
+  symex-20210319.329/
+  symex-20210319.329/symex-computations.el
+  symex-20210319.329/symex-custom.el
+  symex-20210319.329/symex-data.el
+  symex-20210319.329/symex-dsl.el
+  symex-20210319.329/symex-evaluator.el
+  symex-20210319.329/symex-evil-support.el
+  symex-20210319.329/symex-evil.el
+  symex-20210319.329/symex-hydra.el
+  symex-20210319.329/symex-interface-arc.el
+  symex-20210319.329/symex-interface-clojure.el
+  symex-20210319.329/symex-interface-common-lisp.el
+  symex-20210319.329/symex-interface-elisp.el
+  symex-20210319.329/symex-interface-racket.el
+  symex-20210319.329/symex-interface-scheme.el
+  symex-20210319.329/symex-interop.el
+  symex-20210319.329/symex-misc.el
+  symex-20210319.329/symex-pkg.el
+  symex-20210319.329/symex-primitives.el
+  symex-20210319.329/symex-transformations.el
+  symex-20210319.329/symex-traversals.el
+  symex-20210319.329/symex-ui.el
+  symex-20210319.329/symex-utils.el
+  symex-20210319.329/symex.el
+Built symex in 3.973s, finished at Wed Jul  7 09:23:08 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  616 Jul  7 09:23 packages/symex-20210319.329.entry
+172K -rw-r--r-- 1 root root 170K Jul  7 09:23 packages/symex-20210319.329.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:23 packages/symex-badge.svg
+4.0K -rw-r--r-- 1 root root  768 Jul  7 09:23 packages/symex-readme.txt

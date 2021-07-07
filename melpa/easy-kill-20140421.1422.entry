@@ -1,0 +1,13 @@
+(easy-kill .
+	   [(20140421 1422)
+	    ((emacs
+	      (24))
+	     (cl-lib
+	      (0 5)))
+	    "kill & mark things easily" single
+	    ((:commit . "e3b2442e2096cefff94ea8656e49af07fee58f47")
+	     (:authors
+	      ("Leo Liu" . "sdl.web@gmail.com"))
+	     (:maintainer "Leo Liu" . "sdl.web@gmail.com")
+	     (:keywords "killing" "convenience")
+	     (:url . "https://github.com/leoliu/easy-kill"))])

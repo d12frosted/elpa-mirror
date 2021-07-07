@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/damon-kwok/chapel-mode.git
 
 Updating /mnt/store/melpa/working/chapel-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: chapel-mode :files spec is equivalent to the default.
+Built chapel-mode in 5.821s, finished at Wed Jul  7 11:37:57 2021
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root  23K Jul  7 11:37 packages/chapel-mode-20210513.457.el
+4.0K -rw-r--r-- 1 root root  344 Jul  7 11:37 packages/chapel-mode-20210513.457.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:37 packages/chapel-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  452 Jul  7 11:37 packages/chapel-mode-readme.txt

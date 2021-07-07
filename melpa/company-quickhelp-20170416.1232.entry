@@ -1,0 +1,15 @@
+(company-quickhelp .
+		   [(20170416 1232)
+		    ((emacs
+		      (24 4))
+		     (company
+		      (0 8 9))
+		     (pos-tip
+		      (0 4 6)))
+		    "Popup documentation for completion candidates" single
+		    ((:commit . "b2953c725654650677e3d66eaeec666826d5f65f")
+		     (:authors
+		      ("Lars Andersen" . "expez@expez.com"))
+		     (:maintainer "Lars Andersen" . "expez@expez.com")
+		     (:keywords "company" "popup" "documentation" "quickhelp")
+		     (:url . "https://www.github.com/expez/company-quickhelp"))])

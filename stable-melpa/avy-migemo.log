@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/momomo5717/avy-migemo.git
 
 Updating /mnt/store/melpa/working/avy-migemo/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/avy-migemo/
+  to /tmp/avy-migemo9ADDSm/avy-migemo-20160321.1011
+    avy-migemo-e.g.counsel.el -> avy-migemo-e.g.counsel.el
+    avy-migemo-e.g.swiper.el -> avy-migemo-e.g.swiper.el
+    avy-migemo-e.g.zzz-to-char.el -> avy-migemo-e.g.zzz-to-char.el
+    avy-migemo.el -> avy-migemo.el
+Created avy-migemo-20160321.1011.tar containing:
+  avy-migemo-20160321.1011/
+  avy-migemo-20160321.1011/avy-migemo-e.g.counsel.el
+  avy-migemo-20160321.1011/avy-migemo-e.g.swiper.el
+  avy-migemo-20160321.1011/avy-migemo-e.g.zzz-to-char.el
+  avy-migemo-20160321.1011/avy-migemo-pkg.el
+  avy-migemo-20160321.1011/avy-migemo.el
+Built avy-migemo in 3.811s, finished at Wed Jul  7 11:34:53 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  387 Jul  7 11:34 packages/avy-migemo-20160321.1011.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 11:34 packages/avy-migemo-20160321.1011.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:34 packages/avy-migemo-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul  7 11:34 packages/avy-migemo-readme.txt

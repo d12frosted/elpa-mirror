@@ -12,7 +12,7 @@ Commands defined here:
 
   `org-board-archive', `org-board-archive-dry-run',
   `org-board-cancel', `org-board-delete-all', `org-board-diff',
-  `org-board-diff3', `org-board-new', `org-board-open',
+  `org-board-diff', `org-board-new3', `org-board-open',
   `org-board-run-after-archive-function'.
 
 Functions defined here:
@@ -30,8 +30,7 @@ Variables defined here:
   `org-board-agent-header-alist', `org-board-archive-date-format',
   `org-board-default-browser', `org-board-domain-regexp-alist',
   `org-board-log-wget-invocation', `org-board-wget-program',
-  `org-board-wget-show-buffer', `org-board-wget-switches',
-  `org-board-make-relative'.
+  `org-board-wget-show-buffer', `org-board-wget-switches'.
 
 Keymap defined here:
 
@@ -117,7 +116,7 @@ Functions advised here:
  their respective header/user-agent arguments.  Set a
  `WGET_OPTIONS' property to a key of this alist (say,
  `Mac-OS-10.8') and org-board will replace the key with its
- corresponding value before calling wget.  This is useful for some
+ corresponding value before calling wget. This is useful for some
  sites that refuse to serve pages to `wget'.
 
  `org-board-wget-show-buffer' controls whether the archival process
@@ -141,9 +140,6 @@ Functions advised here:
  manual for details on the possible values of this string).  For an
  example use of `org-board-after-archive-functions', see the
  "Example usage" section below.
-
- `org-board-make-relative' (default nil) makes the stored link in
- mode to be relative to the org file holding it.
 
 ;; * Known limitations
 
@@ -224,15 +220,15 @@ Functions advised here:
             (domain (url-host parsed-url))
             (path (url-filename parsed-url))
             (output (shell-command-to-string
-                  (concat "ipfs add -r "
-                          (concat output-folder domain))))
+ 		     (concat "ipfs add -r "
+ 			     (concat output-folder domain))))
             (ipref
-          (nth 1 (split-string
-                  (car (last (split-string output "\n" t))) " "))))
+ 	     (nth 1 (split-string
+ 		     (car (last (split-string output "\n" t))) " "))))
        (with-current-buffer (get-buffer-create "*org-board-post-archive*")
          (princ (format "your file is at %s\n"
-                     (concat "http://localhost:8080/ipfs/" ipref path))
-             (current-buffer))))))
+ 			(concat "http://localhost:8080/ipfs/" ipref path))
+ 		(current-buffer))))))
 
  (eval-after-load "org-board"
    '(add-hook 'org-board-after-archive-functions 'org-board-add-to-ipfs))
@@ -286,7 +282,7 @@ Functions advised here:
 
  To install the keymap give it a prefix key, e.g.:
 
- (global-set-key (kbd "C-c o") org-board-keymap)
+ (global-set-key (kbd "C-c o") 'org-board-keymap)
 
  Then typing `C-c o a' would run `org-board-archive', for example.
 

@@ -3,10 +3,14 @@ Fetcher: github
 Source:  https://github.com/kai2nenobu/guide-key.git
 
 Updating /mnt/store/melpa/working/guide-key/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built guide-key in 4.456s, finished at Wed Jul  7 11:59:12 2021
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root  26K Jul  7 11:59 packages/guide-key-20141207.1707.el
+4.0K -rw-r--r-- 1 root root  430 Jul  7 11:59 packages/guide-key-20141207.1707.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:59 packages/guide-key-badge.svg
+8.0K -rw-r--r-- 1 root root 6.6K Jul  7 11:59 packages/guide-key-readme.txt
+8.0K -rw-r--r-- 1 root root 6.4K Jul  7 11:59 packages/guide-key-tip-20140407.120.el
+4.0K -rw-r--r-- 1 root root  427 Jul  7 11:59 packages/guide-key-tip-20140407.120.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:59 packages/guide-key-tip-badge.svg
+4.0K -rw-r--r-- 1 root root   59 Jul  7 11:59 packages/guide-key-tip-readme.txt
+4.0K -rw-r--r-- 1 root root  555 Jul  7 11:59 packages/guide-key-tip.log

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/sixpi/pdb-mode.git
 
 Updating /mnt/store/melpa/working/pdb-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built pdb-mode in 5.642s, finished at Wed Jul  7 09:11:08 2021
+ ✓ Success:
+ 76K -rw-r--r-- 1 root root  74K Jul  7 09:11 packages/pdb-mode-20150128.1751.el
+4.0K -rw-r--r-- 1 root root  346 Jul  7 09:11 packages/pdb-mode-20150128.1751.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:11 packages/pdb-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  160 Jul  7 09:11 packages/pdb-mode-readme.txt

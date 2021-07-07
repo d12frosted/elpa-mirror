@@ -1,0 +1,13 @@
+(flycheck-dmd-dub .
+		  [(20180208 1655)
+		   ((flycheck
+		     (0 24))
+		    (f
+		     (0 18 2)))
+		   "Sets flycheck-dmd-include-paths from dub package information" single
+		   ((:commit . "41a839e18eb7159175c59a2f8b2f5f283191e33f")
+		    (:authors
+		     ("Atila Neves" . "atila.neves@gmail.com"))
+		    (:maintainer "Atila Neves" . "atila.neves@gmail.com")
+		    (:keywords "languages")
+		    (:url . "http://github.com/atilaneves/flycheck-dmd-dub"))])

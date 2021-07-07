@@ -1,0 +1,11 @@
+(evil-visualstar .
+		 [(20150514 2110)
+		  ((evil
+		    (0)))
+		  "Starts a * or # search from the visual selection" single
+		  ((:commit . "eb996eca0081b6e8bab70b2c0a86ef1c71087bf6")
+		   (:authors
+		    ("Bailey Ling"))
+		   (:maintainer "Bailey Ling")
+		   (:keywords "evil" "vim" "visualstar")
+		   (:url . "https://github.com/bling/evil-visualstar"))])

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/jyp/dante.git
 
 Updating /mnt/store/melpa/working/dante/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built dante in 4.288s, finished at Wed Jul  7 11:42:38 2021
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root  41K Jul  7 11:42 packages/dante-20191004.1233.el
+4.0K -rw-r--r-- 1 root root  529 Jul  7 11:42 packages/dante-20191004.1233.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:42 packages/dante-badge.svg
+4.0K -rw-r--r-- 1 root root  196 Jul  7 11:42 packages/dante-readme.txt

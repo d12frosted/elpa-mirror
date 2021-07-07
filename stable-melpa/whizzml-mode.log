@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/whizzml/whizzml-mode.git
 
 Updating /mnt/store/melpa/working/whizzml-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/whizzml-mode/
+  to /tmp/whizzml-modepZNYCP/whizzml-mode-20191216.1743
+    whizzml-mode.el -> whizzml-mode.el
+    whizzml-skeletons.el -> whizzml-skeletons.el
+Created whizzml-mode-20191216.1743.tar containing:
+  whizzml-mode-20191216.1743/
+  whizzml-mode-20191216.1743/whizzml-mode-pkg.el
+  whizzml-mode-20191216.1743/whizzml-mode.el
+  whizzml-mode-20191216.1743/whizzml-skeletons.el
+Built whizzml-mode in 4.231s, finished at Wed Jul  7 09:28:48 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  349 Jul  7 09:28 packages/whizzml-mode-20191216.1743.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 09:28 packages/whizzml-mode-20191216.1743.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:28 packages/whizzml-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  158 Jul  7 09:28 packages/whizzml-mode-readme.txt

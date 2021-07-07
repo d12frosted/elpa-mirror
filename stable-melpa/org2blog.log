@@ -3,10 +3,26 @@ Fetcher: github
 Source:  https://github.com/org2blog/org2blog.git
 
 Updating /mnt/store/melpa/working/org2blog/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org2blog/
+  to /tmp/org2blogi8F77P/org2blog-20210422.339
+    org2blog-autoloads.el -> org2blog-autoloads.el
+    org2blog-pkg.el -> org2blog-pkg.el
+    org2blog-test-system.el -> org2blog-test-system.el
+    org2blog.el -> org2blog.el
+    ox-wp.el -> ox-wp.el
+    README.org -> README.org
+Created org2blog-20210422.339.tar containing:
+  org2blog-20210422.339/
+  org2blog-20210422.339/README.org
+  org2blog-20210422.339/org2blog-autoloads.el
+  org2blog-20210422.339/org2blog-pkg.el
+  org2blog-20210422.339/org2blog-test-system.el
+  org2blog-20210422.339/org2blog.el
+  org2blog-20210422.339/ox-wp.el
+Built org2blog in 7.832s, finished at Wed Jul  7 09:08:45 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  502 Jul  7 09:08 packages/org2blog-20210422.339.entry
+220K -rw-r--r-- 1 root root 220K Jul  7 09:08 packages/org2blog-20210422.339.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:08 packages/org2blog-badge.svg
+4.0K -rw-r--r-- 1 root root  163 Jul  7 09:08 packages/org2blog-readme.txt

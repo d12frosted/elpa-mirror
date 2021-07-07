@@ -1,5 +1,9 @@
-A major mode for creating Anki cards.
+TODO: documentation
 
-Requires Anki to be running, with the anki-connect addon installed.
+TODO: get card types from anki
 
-Usage: call `anki-mode-menu' to begin.
+TODO: list/edit existing cards?
+
+TODO: look at cloze stuff again
+
+TODO: testing with hash tables?

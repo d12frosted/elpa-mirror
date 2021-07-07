@@ -3,10 +3,29 @@ Fetcher: github
 Source:  https://github.com/sabof/svg-mode-line-themes.git
 
 Updating /mnt/store/melpa/working/svg-mode-line-themes/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/svg-mode-line-themes/
+  to /tmp/svg-mode-line-themesWVDdDk/svg-mode-line-themes-20150425.2006
+    svg-mode-line-themes-bio-diesel.el -> svg-mode-line-themes-bio-diesel.el
+    svg-mode-line-themes-black-crystal.el -> svg-mode-line-themes-black-crystal.el
+    svg-mode-line-themes-core.el -> svg-mode-line-themes-core.el
+    svg-mode-line-themes-diesel.el -> svg-mode-line-themes-diesel.el
+    svg-mode-line-themes-nasa.el -> svg-mode-line-themes-nasa.el
+    svg-mode-line-themes-widgets.el -> svg-mode-line-themes-widgets.el
+    svg-mode-line-themes.el -> svg-mode-line-themes.el
+Created svg-mode-line-themes-20150425.2006.tar containing:
+  svg-mode-line-themes-20150425.2006/
+  svg-mode-line-themes-20150425.2006/svg-mode-line-themes-bio-diesel.el
+  svg-mode-line-themes-20150425.2006/svg-mode-line-themes-black-crystal.el
+  svg-mode-line-themes-20150425.2006/svg-mode-line-themes-core.el
+  svg-mode-line-themes-20150425.2006/svg-mode-line-themes-diesel.el
+  svg-mode-line-themes-20150425.2006/svg-mode-line-themes-nasa.el
+  svg-mode-line-themes-20150425.2006/svg-mode-line-themes-pkg.el
+  svg-mode-line-themes-20150425.2006/svg-mode-line-themes-widgets.el
+  svg-mode-line-themes-20150425.2006/svg-mode-line-themes.el
+Built svg-mode-line-themes in 3.442s, finished at Wed Jul  7 09:22:47 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  306 Jul  7 09:22 packages/svg-mode-line-themes-20150425.2006.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 09:22 packages/svg-mode-line-themes-20150425.2006.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:22 packages/svg-mode-line-themes-badge.svg
+4.0K -rw-r--r-- 1 root root  144 Jul  7 09:22 packages/svg-mode-line-themes-readme.txt

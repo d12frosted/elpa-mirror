@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/emiliotorres/tikz.git
 
 Updating /mnt/store/melpa/working/tikz/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built tikz in 4.870s, finished at Wed Jul  7 09:24:24 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.7K Jul  7 09:24 packages/tikz-20200728.913.el
+4.0K -rw-r--r-- 1 root root  366 Jul  7 09:24 packages/tikz-20200728.913.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:24 packages/tikz-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul  7 09:24 packages/tikz-readme.txt

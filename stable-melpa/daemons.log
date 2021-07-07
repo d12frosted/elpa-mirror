@@ -3,10 +3,25 @@ Fetcher: github
 Source:  https://github.com/cbowdon/daemons.el.git
 
 Updating /mnt/store/melpa/working/daemons/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/daemons/
+  to /tmp/daemonsH70hm5/daemons-20180610.1510
+    daemons-brew.el -> daemons-brew.el
+    daemons-shepherd.el -> daemons-shepherd.el
+    daemons-systemd.el -> daemons-systemd.el
+    daemons-sysvinit.el -> daemons-sysvinit.el
+    daemons.el -> daemons.el
+Created daemons-20180610.1510.tar containing:
+  daemons-20180610.1510/
+  daemons-20180610.1510/daemons-brew.el
+  daemons-20180610.1510/daemons-pkg.el
+  daemons-20180610.1510/daemons-shepherd.el
+  daemons-20180610.1510/daemons-systemd.el
+  daemons-20180610.1510/daemons-sysvinit.el
+  daemons-20180610.1510/daemons.el
+Built daemons in 3.816s, finished at Wed Jul  7 11:42:35 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  333 Jul  7 11:42 packages/daemons-20180610.1510.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:42 packages/daemons-20180610.1510.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:42 packages/daemons-badge.svg
+4.0K -rw-r--r-- 1 root root  332 Jul  7 11:42 packages/daemons-readme.txt

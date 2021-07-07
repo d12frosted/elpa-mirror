@@ -3,10 +3,15 @@ Fetcher: github
 Source:  https://github.com/nicferrier/elwikicreole.git
 
 Updating /mnt/store/melpa/working/creole/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: creole :files spec is equivalent to the default.
+Built creole in 3.860s, finished at Wed Jul  7 11:41:57 2021
+ ✓ Success:
+ 68K -rw-r--r-- 1 root root  66K Jul  7 11:41 packages/creole-20140924.1500.el
+4.0K -rw-r--r-- 1 root root  341 Jul  7 11:41 packages/creole-20140924.1500.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:41 packages/creole-badge.svg
+4.0K -rw-r--r-- 1 root root 3.6K Jul  7 08:29 packages/creole-mode-20130722.50.el
+4.0K -rw-r--r-- 1 root root  373 Jul  7 08:29 packages/creole-mode-20130722.50.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:29 packages/creole-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  182 Jul  7 08:29 packages/creole-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  140 Jul  7 11:41 packages/creole-mode.log
+4.0K -rw-r--r-- 1 root root  416 Jul  7 11:41 packages/creole-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/davep/eg.el.git
 
 Updating /mnt/store/melpa/working/eg/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built eg in 3.784s, finished at Wed Jul  7 11:46:46 2021
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root  38K Jul  7 11:46 packages/eg-20170816.935.el
+4.0K -rw-r--r-- 1 root root  370 Jul  7 11:46 packages/eg-20170816.935.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:46 packages/eg-badge.svg
+4.0K -rw-r--r-- 1 root root  285 Jul  7 11:46 packages/eg-readme.txt

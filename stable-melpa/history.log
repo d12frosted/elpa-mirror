@@ -3,10 +3,34 @@ Fetcher: github
 Source:  https://github.com/tcw165/history.git
 
 Updating /mnt/store/melpa/working/history/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/history/
+  to /tmp/historyuWa0a5/history-20150114.1520
+    history.el -> history.el
+    images/add-history.xpm -> images/add-history.xpm
+    images/goto-history.xpm -> images/goto-history.xpm
+    images/next-history.xpm -> images/next-history.xpm
+    images/prev-history.xpm -> images/prev-history.xpm
+    images/add-history.png -> images/add-history.png
+    images/goto-history.png -> images/goto-history.png
+    images/next-history.png -> images/next-history.png
+    images/prev-history.png -> images/prev-history.png
+Created history-20150114.1520.tar containing:
+  history-20150114.1520/
+  history-20150114.1520/history-pkg.el
+  history-20150114.1520/history.el
+  history-20150114.1520/images/
+  history-20150114.1520/images/add-history.png
+  history-20150114.1520/images/add-history.xpm
+  history-20150114.1520/images/goto-history.png
+  history-20150114.1520/images/goto-history.xpm
+  history-20150114.1520/images/next-history.png
+  history-20150114.1520/images/next-history.xpm
+  history-20150114.1520/images/prev-history.png
+  history-20150114.1520/images/prev-history.xpm
+Built history in 4.150s, finished at Wed Jul  7 12:03:04 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  279 Jul  7 12:03 packages/history-20150114.1520.entry
+ 64K -rw-r--r-- 1 root root  60K Jul  7 12:03 packages/history-20150114.1520.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:03 packages/history-badge.svg
+4.0K -rw-r--r-- 1 root root 2.1K Jul  7 12:03 packages/history-readme.txt

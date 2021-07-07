@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-jp/init-loader.git
 
 Updating /mnt/store/melpa/working/init-loader/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built init-loader in 4.008s, finished at Wed Jul  7 12:05:01 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jul  7 12:05 packages/init-loader-20141031.633.el
+4.0K -rw-r--r-- 1 root root  331 Jul  7 12:05 packages/init-loader-20141031.633.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:05 packages/init-loader-badge.svg
+4.0K -rw-r--r-- 1 root root 2.4K Jul  7 12:05 packages/init-loader-readme.txt

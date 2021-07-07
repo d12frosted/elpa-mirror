@@ -3,10 +3,14 @@ Fetcher: github
 Source:  https://github.com/GioBo/ess-view.git
 
 Updating /mnt/store/melpa/working/ess-view/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ess-view in 4.158s, finished at Wed Jul  7 11:49:50 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Jul  7 11:49 packages/ess-view-20181001.1730.el
+4.0K -rw-r--r-- 1 root root  437 Jul  7 11:49 packages/ess-view-20181001.1730.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:49 packages/ess-view-badge.svg
+ 88K -rw-r--r-- 1 root root  88K Jul  7 11:49 packages/ess-view-data-20210603.1412.el
+4.0K -rw-r--r-- 1 root root  388 Jul  7 11:49 packages/ess-view-data-20210603.1412.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:37 packages/ess-view-data-badge.svg
+4.0K -rw-r--r-- 1 root root 2.1K Jul  7 11:49 packages/ess-view-data-readme.txt
+4.0K -rw-r--r-- 1 root root  147 Jul  7 11:49 packages/ess-view-data.log
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:49 packages/ess-view-readme.txt

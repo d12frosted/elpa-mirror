@@ -3,10 +3,24 @@ Fetcher: github
 Source:  https://github.com/kwrooijen/cargo.el.git
 
 Updating /mnt/store/melpa/working/cargo/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cargo/
+  to /tmp/cargoImjguk/cargo-20170621.2016
+    cargo-process.el -> cargo-process.el
+    cargo.el -> cargo.el
+Created cargo-20170621.2016.tar containing:
+  cargo-20170621.2016/
+  cargo-20170621.2016/cargo-pkg.el
+  cargo-20170621.2016/cargo-process.el
+  cargo-20170621.2016/cargo.el
+Built cargo in 3.720s, finished at Wed Jul  7 11:37:20 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  376 Jul  7 11:37 packages/cargo-20170621.2016.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:37 packages/cargo-20170621.2016.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:37 packages/cargo-badge.svg
+ 12K -rw-r--r-- 1 root root  12K Jul  7 08:24 packages/cargo-mode-20210605.1003.el
+4.0K -rw-r--r-- 1 root root  414 Jul  7 08:24 packages/cargo-mode-20210605.1003.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:24 packages/cargo-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  801 Jul  7 08:24 packages/cargo-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  135 Jul  7 11:37 packages/cargo-mode.log
+4.0K -rw-r--r-- 1 root root  823 Jul  7 11:37 packages/cargo-readme.txt

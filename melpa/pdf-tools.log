@@ -3,10 +3,92 @@ Fetcher: github
 Source:  https://github.com/vedang/pdf-tools.git
 
 Updating /mnt/store/melpa/working/pdf-tools/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pdf-tools/
+  to /tmp/pdf-toolsVEjcNz/pdf-tools-20181214.1913
+  ! lisp/pdf-annot.el -> pdf-annot.el
+  ! lisp/pdf-cache.el -> pdf-cache.el
+  ! lisp/pdf-dev.el -> pdf-dev.el
+  ! lisp/pdf-history.el -> pdf-history.el
+  ! lisp/pdf-info.el -> pdf-info.el
+  ! lisp/pdf-isearch.el -> pdf-isearch.el
+  ! lisp/pdf-links.el -> pdf-links.el
+  ! lisp/pdf-loader.el -> pdf-loader.el
+  ! lisp/pdf-misc.el -> pdf-misc.el
+  ! lisp/pdf-occur.el -> pdf-occur.el
+  ! lisp/pdf-outline.el -> pdf-outline.el
+  ! lisp/pdf-sync.el -> pdf-sync.el
+  ! lisp/pdf-tools.el -> pdf-tools.el
+  ! lisp/pdf-util.el -> pdf-util.el
+  ! lisp/pdf-view.el -> pdf-view.el
+  ! lisp/pdf-virtual.el -> pdf-virtual.el
+    README -> README
+  ! Makefile -> build/Makefile
+  ! server => build/server
+Created pdf-tools-20181214.1913.tar containing:
+  pdf-tools-20181214.1913/
+  pdf-tools-20181214.1913/README
+  pdf-tools-20181214.1913/build/
+  pdf-tools-20181214.1913/build/Makefile
+  pdf-tools-20181214.1913/build/server/
+  pdf-tools-20181214.1913/build/server/.gitignore
+  pdf-tools-20181214.1913/build/server/Makefile.am
+  pdf-tools-20181214.1913/build/server/autobuild
+  pdf-tools-20181214.1913/build/server/autogen.sh
+  pdf-tools-20181214.1913/build/server/configure.ac
+  pdf-tools-20181214.1913/build/server/epdfinfo.c
+  pdf-tools-20181214.1913/build/server/epdfinfo.h
+  pdf-tools-20181214.1913/build/server/m4/
+  pdf-tools-20181214.1913/build/server/m4/ax_check_compile_flag.m4
+  pdf-tools-20181214.1913/build/server/poppler-hack.cc
+  pdf-tools-20181214.1913/build/server/poppler-versions
+  pdf-tools-20181214.1913/build/server/synctex_parser.c
+  pdf-tools-20181214.1913/build/server/synctex_parser.h
+  pdf-tools-20181214.1913/build/server/synctex_parser_local.h
+  pdf-tools-20181214.1913/build/server/synctex_parser_readme.txt
+  pdf-tools-20181214.1913/build/server/synctex_parser_utils.c
+  pdf-tools-20181214.1913/build/server/synctex_parser_utils.h
+  pdf-tools-20181214.1913/build/server/synctex_parser_version.txt
+  pdf-tools-20181214.1913/build/server/test/
+  pdf-tools-20181214.1913/build/server/test/Makefile
+  pdf-tools-20181214.1913/build/server/test/docker/
+  pdf-tools-20181214.1913/build/server/test/docker/.gitignore
+  pdf-tools-20181214.1913/build/server/test/docker/lib/
+  pdf-tools-20181214.1913/build/server/test/docker/lib/run-tests
+  pdf-tools-20181214.1913/build/server/test/docker/lib/yes-or-enter
+  pdf-tools-20181214.1913/build/server/test/docker/templates/
+  pdf-tools-20181214.1913/build/server/test/docker/templates/Dockerfile.in
+  pdf-tools-20181214.1913/build/server/test/docker/templates/arch.Dockerfile.in
+  pdf-tools-20181214.1913/build/server/test/docker/templates/centos-7.Dockerfile.in
+  pdf-tools-20181214.1913/build/server/test/docker/templates/debian-8.Dockerfile.in
+  pdf-tools-20181214.1913/build/server/test/docker/templates/debian-9.Dockerfile.in
+  pdf-tools-20181214.1913/build/server/test/docker/templates/fedora-24.Dockerfile.in
+  pdf-tools-20181214.1913/build/server/test/docker/templates/fedora-25.Dockerfile.in
+  pdf-tools-20181214.1913/build/server/test/docker/templates/fedora-26.Dockerfile.in
+  pdf-tools-20181214.1913/build/server/test/docker/templates/gentoo.Dockerfile.in
+  pdf-tools-20181214.1913/build/server/test/docker/templates/ubuntu-14.Dockerfile.in
+  pdf-tools-20181214.1913/build/server/test/docker/templates/ubuntu-16.Dockerfile.in
+  pdf-tools-20181214.1913/build/server/test/docker/templates/ubuntu-17.Dockerfile.in
+  pdf-tools-20181214.1913/pdf-annot.el
+  pdf-tools-20181214.1913/pdf-cache.el
+  pdf-tools-20181214.1913/pdf-dev.el
+  pdf-tools-20181214.1913/pdf-history.el
+  pdf-tools-20181214.1913/pdf-info.el
+  pdf-tools-20181214.1913/pdf-isearch.el
+  pdf-tools-20181214.1913/pdf-links.el
+  pdf-tools-20181214.1913/pdf-loader.el
+  pdf-tools-20181214.1913/pdf-misc.el
+  pdf-tools-20181214.1913/pdf-occur.el
+  pdf-tools-20181214.1913/pdf-outline.el
+  pdf-tools-20181214.1913/pdf-sync.el
+  pdf-tools-20181214.1913/pdf-tools-pkg.el
+  pdf-tools-20181214.1913/pdf-tools.el
+  pdf-tools-20181214.1913/pdf-util.el
+  pdf-tools-20181214.1913/pdf-view.el
+  pdf-tools-20181214.1913/pdf-virtual.el
+Built pdf-tools in 5.378s, finished at Wed Jul  7 09:11:08 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  399 Jul  7 09:11 packages/pdf-tools-20181214.1913.entry
+860K -rw-r--r-- 1 root root 860K Jul  7 09:11 packages/pdf-tools-20181214.1913.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:11 packages/pdf-tools-badge.svg
+4.0K -rw-r--r-- 1 root root 1.7K Jul  7 09:11 packages/pdf-tools-readme.txt

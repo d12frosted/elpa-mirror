@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/DarwinAwardWinner/emacs-named-timer.git
 
 Updating /mnt/store/melpa/working/named-timer/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built named-timer in 3.687s, finished at Wed Jul  7 09:03:42 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Jul  7 09:03 packages/named-timer-20181120.2224.el
+4.0K -rw-r--r-- 1 root root  374 Jul  7 09:03 packages/named-timer-20181120.2224.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:03 packages/named-timer-badge.svg
+4.0K -rw-r--r-- 1 root root 2.1K Jul  7 09:03 packages/named-timer-readme.txt

@@ -3,10 +3,43 @@ Fetcher: github
 Source:  https://github.com/nim-lang/nim-mode.git
 
 Updating /mnt/store/melpa/working/nim-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nim-mode/
+  to /tmp/nim-mode4GAWrD/nim-mode-20171024.1431
+    flycheck-nimsuggest.el -> flycheck-nimsuggest.el
+    nim-capf.el -> nim-capf.el
+    nim-compile.el -> nim-compile.el
+    nim-eldoc.el -> nim-eldoc.el
+    nim-fill.el -> nim-fill.el
+    nim-helper.el -> nim-helper.el
+    nim-mode.el -> nim-mode.el
+    nim-rx.el -> nim-rx.el
+    nim-smie.el -> nim-smie.el
+    nim-suggest.el -> nim-suggest.el
+    nim-syntax.el -> nim-syntax.el
+    nim-util.el -> nim-util.el
+    nim-vars.el -> nim-vars.el
+    nimscript-mode.el -> nimscript-mode.el
+Created nim-mode-20171024.1431.tar containing:
+  nim-mode-20171024.1431/
+  nim-mode-20171024.1431/flycheck-nimsuggest.el
+  nim-mode-20171024.1431/nim-capf.el
+  nim-mode-20171024.1431/nim-compile.el
+  nim-mode-20171024.1431/nim-eldoc.el
+  nim-mode-20171024.1431/nim-fill.el
+  nim-mode-20171024.1431/nim-helper.el
+  nim-mode-20171024.1431/nim-mode-pkg.el
+  nim-mode-20171024.1431/nim-mode.el
+  nim-mode-20171024.1431/nim-rx.el
+  nim-mode-20171024.1431/nim-smie.el
+  nim-mode-20171024.1431/nim-suggest.el
+  nim-mode-20171024.1431/nim-syntax.el
+  nim-mode-20171024.1431/nim-util.el
+  nim-mode-20171024.1431/nim-vars.el
+  nim-mode-20171024.1431/nimscript-mode.el
+Built nim-mode in 4.449s, finished at Wed Jul  7 09:04:23 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  422 Jul  7 09:04 packages/nim-mode-20171024.1431.entry
+240K -rw-r--r-- 1 root root 240K Jul  7 09:04 packages/nim-mode-20171024.1431.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:04 packages/nim-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.7K Jul  7 09:04 packages/nim-mode-readme.txt

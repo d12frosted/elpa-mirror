@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/osx-dictionary.el.git
 
 Updating /mnt/store/melpa/working/osx-dictionary/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/osx-dictionary/
+  to /tmp/osx-dictionaryw4Uk7g/osx-dictionary-20161207.1610
+    osx-dictionary.el -> osx-dictionary.el
+    osx-dictionary.m -> osx-dictionary.m
+Created osx-dictionary-20161207.1610.tar containing:
+  osx-dictionary-20161207.1610/
+  osx-dictionary-20161207.1610/osx-dictionary-pkg.el
+  osx-dictionary-20161207.1610/osx-dictionary.el
+  osx-dictionary-20161207.1610/osx-dictionary.m
+Built osx-dictionary in 3.767s, finished at Wed Jul  7 09:09:18 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  378 Jul  7 09:09 packages/osx-dictionary-20161207.1610.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:09 packages/osx-dictionary-20161207.1610.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:09 packages/osx-dictionary-badge.svg
+4.0K -rw-r--r-- 1 root root  359 Jul  7 09:09 packages/osx-dictionary-readme.txt

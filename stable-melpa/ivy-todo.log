@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Kungsgeten/ivy-todo.git
 
 Updating /mnt/store/melpa/working/ivy-todo/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ivy-todo in 4.903s, finished at Wed Jul  7 12:06:07 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.3K Jul  7 12:06 packages/ivy-todo-20200323.2005.el
+4.0K -rw-r--r-- 1 root root  412 Jul  7 12:06 packages/ivy-todo-20200323.2005.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:06 packages/ivy-todo-badge.svg
+4.0K -rw-r--r-- 1 root root  290 Jul  7 12:06 packages/ivy-todo-readme.txt

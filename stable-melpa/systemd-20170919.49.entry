@@ -1,0 +1,10 @@
+(systemd .
+	 [(20170919 49)
+	  ((emacs
+	    (24 4)))
+	  "Major mode for editing systemd units" tar
+	  ((:commit . "1e7567a9973bf80cab0d7e0355656a84bee7ca96")
+	   (:authors
+	    ("Mark Oteiza" . "mvoteiza@udel.edu"))
+	   (:maintainer "Mark Oteiza" . "mvoteiza@udel.edu")
+	   (:keywords "tools" "unix"))])

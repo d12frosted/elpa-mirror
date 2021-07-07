@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/unhammer/flycheck-apertium.git
 
 Updating /mnt/store/melpa/working/flycheck-apertium/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-apertium/
+  to /tmp/flycheck-apertiumtOmptS/flycheck-apertium-20181122.1935
+    flycheck-apertium.el -> flycheck-apertium.el
+    dix.xsd -> dix.xsd
+Created flycheck-apertium-20181122.1935.tar containing:
+  flycheck-apertium-20181122.1935/
+  flycheck-apertium-20181122.1935/dix.xsd
+  flycheck-apertium-20181122.1935/flycheck-apertium-pkg.el
+  flycheck-apertium-20181122.1935/flycheck-apertium.el
+Built flycheck-apertium in 3.939s, finished at Wed Jul  7 11:53:13 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  440 Jul  7 11:53 packages/flycheck-apertium-20181122.1935.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 11:53 packages/flycheck-apertium-20181122.1935.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:53 packages/flycheck-apertium-badge.svg
+4.0K -rw-r--r-- 1 root root  497 Jul  7 11:53 packages/flycheck-apertium-readme.txt

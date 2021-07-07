@@ -1,0 +1,13 @@
+(ob-translate .
+	      [(20130718 1429)
+	       ((google-translate
+		 (0 4))
+		(org
+		 (8)))
+	       "Translation of text blocks in org-mode." single
+	       ((:commit . "6b39cc1a94a1071107a4391684b1bffb5b9826f3")
+		(:authors
+		 ("Kris Jenkins" . "krisajenkins@gmail.com"))
+		(:maintainer "Kris Jenkins" . "krisajenkins@gmail.com")
+		(:keywords "org" "babel" "translate" "translation")
+		(:url . "https://github.com/krisajenkins/ob-translate"))])

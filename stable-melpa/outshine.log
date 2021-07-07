@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/alphapapa/outshine.git
 
 Updating /mnt/store/melpa/working/outshine/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/outshine/
+  to /tmp/outshineittzCC/outshine-20190116.1748
+    outshine-org-cmds.el -> outshine-org-cmds.el
+    outshine.el -> outshine.el
+Created outshine-20190116.1748.tar containing:
+  outshine-20190116.1748/
+  outshine-20190116.1748/outshine-org-cmds.el
+  outshine-20190116.1748/outshine-pkg.el
+  outshine-20190116.1748/outshine.el
+Built outshine in 3.875s, finished at Wed Jul  7 09:09:30 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  307 Jul  7 09:09 packages/outshine-20190116.1748.entry
+352K -rw-r--r-- 1 root root 350K Jul  7 09:09 packages/outshine-20190116.1748.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:09 packages/outshine-badge.svg
+4.0K -rw-r--r-- 1 root root  178 Jul  6 17:00 packages/outshine-readme.txt

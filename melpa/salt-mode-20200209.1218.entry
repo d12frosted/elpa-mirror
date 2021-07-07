@@ -1,0 +1,17 @@
+(salt-mode .
+	   [(20200209 1218)
+	    ((emacs
+	      (24 4))
+	     (yaml-mode
+	      (0 0 12))
+	     (mmm-mode
+	      (0 5 4))
+	     (mmm-jinja2
+	      (0 1)))
+	    "Major mode for Salt States" single
+	    ((:commit . "6a1fedb4da7181b00f1bebfc88c87dd2f0c58766")
+	     (:authors
+	      ("Ben Hayden" . "hayden767@gmail.com"))
+	     (:maintainer "Glynn Forrest" . "me@glynnforrest.com")
+	     (:keywords "languages")
+	     (:url . "https://github.com/glynnforrest/salt-mode"))])

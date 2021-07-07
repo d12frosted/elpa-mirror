@@ -3,10 +3,29 @@ Fetcher: github
 Source:  https://github.com/nlamirault/timonier.git
 
 Updating /mnt/store/melpa/working/timonier/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/timonier/
+  to /tmp/timonier3jWp2v/timonier-20160928.1122
+    timonier-custom.el -> timonier-custom.el
+    timonier-io.el -> timonier-io.el
+    timonier-k8s.el -> timonier-k8s.el
+    timonier-mode.el -> timonier-mode.el
+    timonier-utils.el -> timonier-utils.el
+    timonier-version.el -> timonier-version.el
+    timonier.el -> timonier.el
+Created timonier-20160928.1122.tar containing:
+  timonier-20160928.1122/
+  timonier-20160928.1122/timonier-custom.el
+  timonier-20160928.1122/timonier-io.el
+  timonier-20160928.1122/timonier-k8s.el
+  timonier-20160928.1122/timonier-mode.el
+  timonier-20160928.1122/timonier-pkg.el
+  timonier-20160928.1122/timonier-utils.el
+  timonier-20160928.1122/timonier-version.el
+  timonier-20160928.1122/timonier.el
+Built timonier in 3.553s, finished at Wed Jul  7 09:24:27 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  572 Jul  7 09:24 packages/timonier-20160928.1122.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 09:24 packages/timonier-20160928.1122.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:24 packages/timonier-badge.svg
+4.0K -rw-r--r-- 1 root root  177 Jul  7 09:24 packages/timonier-readme.txt

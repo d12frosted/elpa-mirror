@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/arturovm/shades-of-purple-emacs.git
 
 Updating /mnt/store/melpa/working/shades-of-purple-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built shades-of-purple-theme in 3.868s, finished at Wed Jul  7 09:18:56 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jul  7 09:18 packages/shades-of-purple-theme-20210506.1448.el
+4.0K -rw-r--r-- 1 root root  353 Jul  7 09:18 packages/shades-of-purple-theme-20210506.1448.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:18 packages/shades-of-purple-theme-badge.svg
+4.0K -rw-r--r-- 1 root root   50 Jul  7 09:18 packages/shades-of-purple-theme-readme.txt

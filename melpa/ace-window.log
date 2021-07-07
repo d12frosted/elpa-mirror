@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/abo-abo/ace-window.git
 
 Updating /mnt/store/melpa/working/ace-window/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ace-window in 3.896s, finished at Wed Jul  7 11:32:16 2021
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root  35K Jul  7 11:32 packages/ace-window-20200311.1025.el
+4.0K -rw-r--r-- 1 root root  390 Jul  7 11:32 packages/ace-window-20200311.1025.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:32 packages/ace-window-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Jul  7 11:32 packages/ace-window-readme.txt

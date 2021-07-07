@@ -5,7 +5,7 @@
 ;; Author: AdrieanKhisbe <adriean.khisbe@live.fr>
 ;; Version: 0.1.0
 ;; Package-Version: 20150530.922
-;; Package-Commit: 146adc8281d0f115df39a3a3f982ac59ab61b754
+;; Package-Commit: 76bccd63e3b70233a6c9ca0798dd03550952cc76
 ;; Keywords: languages, tools
 ;; URL: http://github.com/shpec/shpec-mode
 ;; Package-Requires: ()

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/rejeep/nvm.el.git
 
 Updating /mnt/store/melpa/working/nvm/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built nvm in 3.759s, finished at Wed Jul  7 09:05:08 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Jul  7 09:05 packages/nvm-20190912.626.el
+4.0K -rw-r--r-- 1 root root  455 Jul  7 09:05 packages/nvm-20190912.626.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:05 packages/nvm-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:05 packages/nvm-readme.txt

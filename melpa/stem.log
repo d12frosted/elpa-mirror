@@ -3,10 +3,14 @@ Fetcher: github
 Source:  https://github.com/yuutayamada/stem.git
 
 Updating /mnt/store/melpa/working/stem/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built stem in 4.258s, finished at Wed Jul  7 09:22:16 2021
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root  28K Jul  7 09:22 packages/stem-20131102.1109.el
+4.0K -rw-r--r-- 1 root root  358 Jul  7 09:22 packages/stem-20131102.1109.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:22 packages/stem-badge.svg
+ 32K -rw-r--r-- 1 root root  29K Jul  7 09:22 packages/stem-english-20180109.358.el
+4.0K -rw-r--r-- 1 root root  404 Jul  7 06:09 packages/stem-english-20180109.358.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:09 packages/stem-english-badge.svg
+4.0K -rw-r--r-- 1 root root  873 Jul  7 06:09 packages/stem-english-readme.txt
+4.0K -rw-r--r-- 1 root root  141 Jul  7 09:22 packages/stem-english.log
+4.0K -rw-r--r-- 1 root root  501 Jul  7 09:22 packages/stem-readme.txt

@@ -3,10 +3,26 @@ Fetcher: github
 Source:  https://github.com/dholm/tabbar.git
 
 Updating /mnt/store/melpa/working/tabbar/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tabbar/
+  to /tmp/tabbargDWAYv/tabbar-20180726.1735
+    tabbar.el -> tabbar.el
+    down.png -> down.png
+    up.png -> up.png
+Created tabbar-20180726.1735.tar containing:
+  tabbar-20180726.1735/
+  tabbar-20180726.1735/down.png
+  tabbar-20180726.1735/tabbar-pkg.el
+  tabbar-20180726.1735/tabbar.el
+  tabbar-20180726.1735/up.png
+Built tabbar in 3.438s, finished at Wed Jul  7 09:23:25 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  274 Jul  7 09:23 packages/tabbar-20180726.1735.entry
+ 80K -rw-r--r-- 1 root root  80K Jul  7 09:23 packages/tabbar-20180726.1735.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:23 packages/tabbar-badge.svg
+8.0K -rw-r--r-- 1 root root 6.6K Jul  7 09:23 packages/tabbar-readme.txt
+4.0K -rw-r--r-- 1 root root  418 Jul  7 06:10 packages/tabbar-ruler-20150828.2139.entry
+ 92K -rw-r--r-- 1 root root  90K Jul  7 09:23 packages/tabbar-ruler-20150828.2139.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:10 packages/tabbar-ruler-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Jul  7 09:23 packages/tabbar-ruler-readme.txt
+4.0K -rw-r--r-- 1 root root  640 Jul  7 09:23 packages/tabbar-ruler.log

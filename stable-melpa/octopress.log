@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/aaronbieber/octopress.el.git
 
 Updating /mnt/store/melpa/working/octopress/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/octopress/
+  to /tmp/octopressVIF1Ya/octopress-20190123.107
+    octopress.el -> octopress.el
+    octopress.texi -> octopress.texi
+Created /tmp/octopressVIF1Ya/octopress-20190123.107/octopress.info
+Created octopress-20190123.107.tar containing:
+  octopress-20190123.107/
+  octopress-20190123.107/dir
+  octopress-20190123.107/octopress-pkg.el
+  octopress-20190123.107/octopress.el
+  octopress-20190123.107/octopress.info
+Built octopress in 6.380s, finished at Wed Jul  7 09:06:04 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  386 Jul  7 09:06 packages/octopress-20190123.107.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 09:06 packages/octopress-20190123.107.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/octopress-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/octopress-readme.txt

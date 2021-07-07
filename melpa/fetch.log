@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/cbrst/fetch.el.git
 
 Updating /mnt/store/melpa/working/fetch/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built fetch in 5.483s, finished at Wed Jul  7 11:52:23 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.3K Jul  7 11:52 packages/fetch-20131201.730.el
+4.0K -rw-r--r-- 1 root root  334 Jul  7 11:52 packages/fetch-20131201.730.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:52 packages/fetch-badge.svg
+4.0K -rw-r--r-- 1 root root  582 Jul  7 11:52 packages/fetch-readme.txt

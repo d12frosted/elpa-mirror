@@ -3,10 +3,25 @@ Fetcher: github
 Source:  https://github.com/ndw/ob-ml-marklogic.git
 
 Updating /mnt/store/melpa/working/ob-ml-marklogic/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-ml-marklogic/
+  to /tmp/ob-ml-marklogiccT9pQ4/ob-ml-marklogic-20190312.1314
+    ob-ml-common.el -> ob-ml-common.el
+    ob-ml-javascript.el -> ob-ml-javascript.el
+    ob-ml-marklogic.el -> ob-ml-marklogic.el
+    ob-ml-sparql.el -> ob-ml-sparql.el
+    ob-ml-xquery.el -> ob-ml-xquery.el
+Created ob-ml-marklogic-20190312.1314.tar containing:
+  ob-ml-marklogic-20190312.1314/
+  ob-ml-marklogic-20190312.1314/ob-ml-common.el
+  ob-ml-marklogic-20190312.1314/ob-ml-javascript.el
+  ob-ml-marklogic-20190312.1314/ob-ml-marklogic-pkg.el
+  ob-ml-marklogic-20190312.1314/ob-ml-marklogic.el
+  ob-ml-marklogic-20190312.1314/ob-ml-sparql.el
+  ob-ml-marklogic-20190312.1314/ob-ml-xquery.el
+Built ob-ml-marklogic in 3.528s, finished at Wed Jul  7 09:05:38 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  386 Jul  7 09:05 packages/ob-ml-marklogic-20190312.1314.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 09:05 packages/ob-ml-marklogic-20190312.1314.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:05 packages/ob-ml-marklogic-badge.svg
+4.0K -rw-r--r-- 1 root root 3.9K Jul  7 09:05 packages/ob-ml-marklogic-readme.txt

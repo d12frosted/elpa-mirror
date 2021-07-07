@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/stsquad/emacs-mark-tools.git
 
 Updating /mnt/store/melpa/working/mark-tools/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built mark-tools in 4.779s, finished at Wed Jul  7 09:00:35 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.3K Jul  7 09:00 packages/mark-tools-20130227.1125.el
+4.0K -rw-r--r-- 1 root root  352 Jul  7 09:00 packages/mark-tools-20130227.1125.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:00 packages/mark-tools-badge.svg
+4.0K -rw-r--r-- 1 root root  384 Jul  7 09:00 packages/mark-tools-readme.txt

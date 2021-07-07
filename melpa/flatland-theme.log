@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/gchp/flatland-emacs.git
 
 Updating /mnt/store/melpa/working/flatland-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: flatland-theme :files spec is equivalent to the default.
+Built flatland-theme in 3.678s, finished at Wed Jul  7 11:52:54 2021
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root  51K Jul  7 11:52 packages/flatland-theme-20171113.1521.el
+4.0K -rw-r--r-- 1 root root  365 Jul  7 11:52 packages/flatland-theme-20171113.1521.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:52 packages/flatland-theme-badge.svg
+4.0K -rw-r--r-- 1 root root   63 Jul  7 11:52 packages/flatland-theme-readme.txt

@@ -1,4 +1,4 @@
-This library provides a drop-in replacement for find-file (ie. the
+This libaray provides a drop-in replacement for find-file (ie. the
 "C-x f" command), that auto-completes all files in the current git,
 mercurial, or other type of repository. When outside of a
 repository, find-file-in-repository conveniently drops back to
@@ -12,10 +12,6 @@ completions, which means that repository features such as
 
 This library currently has support for:
     git, mercurial, darcs, bazaar, monotone, svn
-
-By default ido completion is used if ido is enabled. Completion
-method can be customized via `ffir-completion' variable. Possible
-values are nil (default), 'find-file, 'ido and 'ivy.
 
 Contributions for support of other repository types are welcome.
 Please send a pull request to

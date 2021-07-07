@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/legoscia/emacs-jabber-otr.git
 
 Updating /mnt/store/melpa/working/jabber-otr/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jabber-otr/
+  to /tmp/jabber-otrVviTR6/jabber-otr-20150918.1144
+    jabber-otr.el -> jabber-otr.el
+    emacs-otr.py -> emacs-otr.py
+Created jabber-otr-20150918.1144.tar containing:
+  jabber-otr-20150918.1144/
+  jabber-otr-20150918.1144/emacs-otr.py
+  jabber-otr-20150918.1144/jabber-otr-pkg.el
+  jabber-otr-20150918.1144/jabber-otr.el
+Built jabber-otr in 3.290s, finished at Wed Jul  7 12:06:14 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  441 Jul  7 12:06 packages/jabber-otr-20150918.1144.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 12:06 packages/jabber-otr-20150918.1144.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:06 packages/jabber-otr-badge.svg
+4.0K -rw-r--r-- 1 root root  529 Jul  7 12:06 packages/jabber-otr-readme.txt

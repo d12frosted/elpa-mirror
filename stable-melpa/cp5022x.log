@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/awasira/cp5022x.el.git
 
 Updating /mnt/store/melpa/working/cp5022x/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built cp5022x in 4.463s, finished at Wed Jul  7 11:41:49 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.4K Jul  7 11:41 packages/cp5022x-20120323.2335.el
+4.0K -rw-r--r-- 1 root root  344 Jul  7 11:41 packages/cp5022x-20120323.2335.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:41 packages/cp5022x-badge.svg
+4.0K -rw-r--r-- 1 root root   41 Jul  7 11:41 packages/cp5022x-readme.txt

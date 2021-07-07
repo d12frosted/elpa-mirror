@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/abo-abo/worf.git
 
 Updating /mnt/store/melpa/working/worf/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built worf in 4.762s, finished at Wed Jul  7 09:29:29 2021
+ ✓ Success:
+ 44K -rw-r--r-- 1 root root  41K Jul  7 09:29 packages/worf-20160207.1448.el
+4.0K -rw-r--r-- 1 root root  407 Jul  7 09:29 packages/worf-20160207.1448.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:29 packages/worf-badge.svg
+4.0K -rw-r--r-- 1 root root 3.9K Jul  7 09:29 packages/worf-readme.txt

@@ -3,10 +3,14 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/helm-ag.git
 
 Updating /mnt/store/melpa/working/helm-ag/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built helm-ag in 4.477s, finished at Wed Jul  7 11:59:49 2021
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root  54K Jul  7 11:59 packages/helm-ag-20200908.822.el
+4.0K -rw-r--r-- 1 root root  361 Jul  7 11:59 packages/helm-ag-20200908.822.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:59 packages/helm-ag-badge.svg
+ 16K -rw-r--r-- 1 root root  14K Jul  7 11:59 packages/helm-ag-r-20131123.1531.el
+4.0K -rw-r--r-- 1 root root  396 Jul  7 08:48 packages/helm-ag-r-20131123.1531.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:48 packages/helm-ag-r-badge.svg
+4.0K -rw-r--r-- 1 root root 1017 Jul  7 08:48 packages/helm-ag-r-readme.txt
+4.0K -rw-r--r-- 1 root root  193 Jul  7 11:59 packages/helm-ag-r.log
+4.0K -rw-r--r-- 1 root root  206 Jul  7 11:59 packages/helm-ag-readme.txt

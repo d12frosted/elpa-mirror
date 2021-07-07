@@ -3,10 +3,31 @@ Fetcher: github
 Source:  https://github.com/merrickluo/liberime.git
 
 Updating /mnt/store/melpa/working/liberime/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/liberime/
+  to /tmp/liberimeOke6yY/liberime-20200502.7
+    liberime.el -> liberime.el
+    src => src
+    LICENSE -> LICENSE
+    Makefile -> Makefile
+    README.org -> README.org
+Created liberime-20200502.7.tar containing:
+  liberime-20200502.7/
+  liberime-20200502.7/LICENSE
+  liberime-20200502.7/Makefile
+  liberime-20200502.7/README.org
+  liberime-20200502.7/liberime-pkg.el
+  liberime-20200502.7/liberime.el
+  liberime-20200502.7/src/
+  liberime-20200502.7/src/emacs-module.h
+  liberime-20200502.7/src/init.c
+  liberime-20200502.7/src/interface.c
+  liberime-20200502.7/src/interface.h
+  liberime-20200502.7/src/liberime-core.c
+  liberime-20200502.7/src/liberime-core.h
+Built liberime in 3.866s, finished at Wed Jul  7 08:58:01 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  244 Jul  7 08:58 packages/liberime-20200502.7.entry
+112K -rw-r--r-- 1 root root 110K Jul  7 08:58 packages/liberime-20200502.7.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:58 packages/liberime-badge.svg
+4.0K -rw-r--r-- 1 root root   25 Jul  7 08:58 packages/liberime-readme.txt

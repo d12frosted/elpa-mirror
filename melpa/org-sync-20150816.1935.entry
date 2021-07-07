@@ -1,0 +1,15 @@
+(org-sync .
+	  [(20150816 1935)
+	   ((cl-lib
+	     (0 5))
+	    (org
+	     (8 2))
+	    (emacs
+	     (24)))
+	   "Synchronize Org documents with External Issue Trackers" tar
+	   ((:commit . "8c65dceaa2f3d436f83ed591916f22556a6e7f91")
+	    (:authors
+	     ("Aurelien Aptel <aurelien dot aptel at gmail dot com>"))
+	    (:maintainer "Andrei Beliankou" . "arbox@yandex.ru")
+	    (:keywords "org" "synchronization" "issue tracking" "github" "redmine")
+	    (:url . "https://github.com/arbox/org-sync"))])

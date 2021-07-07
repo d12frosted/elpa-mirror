@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/petergardfjall/emacs-immaterial-theme.git
 
 Updating /mnt/store/melpa/working/immaterial-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/immaterial-theme/
+  to /tmp/immaterial-themeNBMhFg/immaterial-theme-20210109.1653
+    immaterial-dark-theme.el -> immaterial-dark-theme.el
+    immaterial-light-theme.el -> immaterial-light-theme.el
+    immaterial-theme.el -> immaterial-theme.el
+Created immaterial-theme-20210109.1653.tar containing:
+  immaterial-theme-20210109.1653/
+  immaterial-theme-20210109.1653/immaterial-dark-theme.el
+  immaterial-theme-20210109.1653/immaterial-light-theme.el
+  immaterial-theme-20210109.1653/immaterial-theme-pkg.el
+  immaterial-theme-20210109.1653/immaterial-theme.el
+Built immaterial-theme in 4.313s, finished at Wed Jul  7 12:04:36 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  381 Jul  7 12:04 packages/immaterial-theme-20210109.1653.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 12:04 packages/immaterial-theme-20210109.1653.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:04 packages/immaterial-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  220 Jul  7 12:04 packages/immaterial-theme-readme.txt

@@ -3,10 +3,42 @@ Fetcher: github
 Source:  https://github.com/emacs-eclim/emacs-eclim.git
 
 Updating /mnt/store/melpa/working/eclim/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eclim/
+  to /tmp/eclimgngpuV/eclim-20170112.2057
+    eclim-ant.el -> eclim-ant.el
+    eclim-common.el -> eclim-common.el
+    eclim-completion.el -> eclim-completion.el
+    eclim-debug.el -> eclim-debug.el
+    eclim-java-run.el -> eclim-java-run.el
+    eclim-java.el -> eclim-java.el
+    eclim-macros.el -> eclim-macros.el
+    eclim-maven.el -> eclim-maven.el
+    eclim-pkg.el -> eclim-pkg.el
+    eclim-problems.el -> eclim-problems.el
+    eclim-project.el -> eclim-project.el
+    eclim-scala.el -> eclim-scala.el
+    eclim.el -> eclim.el
+    eclimd.el -> eclimd.el
+Created eclim-20170112.2057.tar containing:
+  eclim-20170112.2057/
+  eclim-20170112.2057/eclim-ant.el
+  eclim-20170112.2057/eclim-common.el
+  eclim-20170112.2057/eclim-completion.el
+  eclim-20170112.2057/eclim-debug.el
+  eclim-20170112.2057/eclim-java-run.el
+  eclim-20170112.2057/eclim-java.el
+  eclim-20170112.2057/eclim-macros.el
+  eclim-20170112.2057/eclim-maven.el
+  eclim-20170112.2057/eclim-pkg.el
+  eclim-20170112.2057/eclim-problems.el
+  eclim-20170112.2057/eclim-project.el
+  eclim-20170112.2057/eclim-scala.el
+  eclim-20170112.2057/eclim.el
+  eclim-20170112.2057/eclimd.el
+Built eclim in 4.145s, finished at Wed Jul  7 11:46:21 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  257 Jul  7 11:46 packages/eclim-20170112.2057.entry
+172K -rw-r--r-- 1 root root 170K Jul  7 11:46 packages/eclim-20170112.2057.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:46 packages/eclim-badge.svg
+4.0K -rw-r--r-- 1 root root  232 Jul  7 11:46 packages/eclim-readme.txt

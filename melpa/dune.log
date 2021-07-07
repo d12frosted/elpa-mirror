@@ -3,10 +3,24 @@ Fetcher: github
 Source:  https://github.com/ocaml/dune.git
 
 Updating /mnt/store/melpa/working/dune/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dune/
+  to /tmp/dunegVnkFb/dune-20191016.1241
+  ! editor-integration/emacs/dune-flymake.el -> dune-flymake.el
+  ! editor-integration/emacs/dune.el -> dune.el
+Created dune-20191016.1241.tar containing:
+  dune-20191016.1241/
+  dune-20191016.1241/dune-flymake.el
+  dune-20191016.1241/dune-pkg.el
+  dune-20191016.1241/dune.el
+Built dune in 4.988s, finished at Wed Jul  7 11:45:57 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  195 Jul  7 11:45 packages/dune-20191016.1241.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:45 packages/dune-20191016.1241.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:45 packages/dune-badge.svg
+4.0K -rw-r--r-- 1 root root 2.0K Jul  7 11:45 packages/dune-format-20210505.108.el
+4.0K -rw-r--r-- 1 root root  438 Jul  7 11:45 packages/dune-format-20210505.108.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:45 packages/dune-format-badge.svg
+4.0K -rw-r--r-- 1 root root  335 Jul  7 11:45 packages/dune-format-readme.txt
+4.0K -rw-r--r-- 1 root root  547 Jul  7 11:45 packages/dune-format.log
+4.0K -rw-r--r-- 1 root root  871 Jul  7 11:45 packages/dune-readme.txt

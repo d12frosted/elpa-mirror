@@ -3,10 +3,55 @@ Fetcher: github
 Source:  https://github.com/yyr/ncl-mode.git
 
 Updating /mnt/store/melpa/working/ncl-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ncl-mode/
+  to /tmp/ncl-mode9O89Vm/ncl-mode-20160919.1000
+    inf-ncl.el -> inf-ncl.el
+    ncl-doc.el -> ncl-doc.el
+    ncl-mode-keywords.el -> ncl-mode-keywords.el
+    ncl-mode-pkg.el -> ncl-mode-pkg.el
+    ncl-mode.el -> ncl-mode.el
+    snippets => snippets
+    dict => dict
+    tools => tools
+    img => img
+Created ncl-mode-20160919.1000.tar containing:
+  ncl-mode-20160919.1000/
+  ncl-mode-20160919.1000/dict/
+  ncl-mode-20160919.1000/dict/inf-ncl-mode
+  ncl-mode-20160919.1000/dict/ncl-mode
+  ncl-mode-20160919.1000/img/
+  ncl-mode-20160919.1000/img/ncl-ac-inf.png
+  ncl-mode-20160919.1000/img/ncl-auto-complete.png
+  ncl-mode-20160919.1000/img/ncl-doc-usage.png
+  ncl-mode-20160919.1000/inf-ncl.el
+  ncl-mode-20160919.1000/ncl-doc.el
+  ncl-mode-20160919.1000/ncl-mode-keywords.el
+  ncl-mode-20160919.1000/ncl-mode-pkg.el
+  ncl-mode-20160919.1000/ncl-mode.el
+  ncl-mode-20160919.1000/snippets/
+  ncl-mode-20160919.1000/snippets/ncl-mode/
+  ncl-mode-20160919.1000/snippets/ncl-mode/begin-end-block.yasnippet
+  ncl-mode-20160919.1000/snippets/ncl-mode/do.yasnippet
+  ncl-mode-20160919.1000/snippets/ncl-mode/dow.yasnippet
+  ncl-mode-20160919.1000/snippets/ncl-mode/elif.yasnippet
+  ncl-mode-20160919.1000/snippets/ncl-mode/fun.yasnippet
+  ncl-mode-20160919.1000/snippets/ncl-mode/function-header.yasnippet
+  ncl-mode-20160919.1000/snippets/ncl-mode/if.yasnippet
+  ncl-mode-20160919.1000/snippets/ncl-mode/ife.yasnippet
+  ncl-mode-20160919.1000/snippets/ncl-mode/print.yasnippet
+  ncl-mode-20160919.1000/snippets/ncl-mode/proc.yasnippet
+  ncl-mode-20160919.1000/snippets/ncl-mode/procedure-header.yasnippet
+  ncl-mode-20160919.1000/snippets/ncl-mode/small-comment.yasnippet
+  ncl-mode-20160919.1000/snippets/ncl-mode/st.yasnippet
+  ncl-mode-20160919.1000/tools/
+  ncl-mode-20160919.1000/tools/gen-tags.sh
+  ncl-mode-20160919.1000/tools/ncl-mode
+  ncl-mode-20160919.1000/tools/ncl-mode-keywords.el
+  ncl-mode-20160919.1000/tools/ncl_keywords.py
+Built ncl-mode in 4.318s, finished at Wed Jul  7 09:04:00 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  434 Jul  7 09:03 packages/ncl-mode-20160919.1000.entry
+432K -rw-r--r-- 1 root root 430K Jul  7 09:03 packages/ncl-mode-20160919.1000.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:04 packages/ncl-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   32 Jul  7 09:03 packages/ncl-mode-readme.txt

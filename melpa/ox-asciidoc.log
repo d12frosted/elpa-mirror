@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/yashi/org-asciidoc.git
 
 Updating /mnt/store/melpa/working/ox-asciidoc/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ox-asciidoc in 3.944s, finished at Wed Jul  7 09:09:36 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  17K Jul  7 09:09 packages/ox-asciidoc-20181230.620.el
+4.0K -rw-r--r-- 1 root root  409 Jul  7 09:09 packages/ox-asciidoc-20181230.620.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:09 packages/ox-asciidoc-badge.svg
+4.0K -rw-r--r-- 1 root root  233 Jul  7 09:09 packages/ox-asciidoc-readme.txt

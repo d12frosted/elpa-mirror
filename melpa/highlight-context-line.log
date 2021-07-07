@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ska2342/highlight-context-line.git
 
 Updating /mnt/store/melpa/working/highlight-context-line/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built highlight-context-line in 3.611s, finished at Wed Jul  7 12:02:46 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.3K Jul  7 12:02 packages/highlight-context-line-20181122.2203.el
+4.0K -rw-r--r-- 1 root root  396 Jul  7 12:02 packages/highlight-context-line-20181122.2203.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:02 packages/highlight-context-line-badge.svg
+4.0K -rw-r--r-- 1 root root  766 Jul  7 12:02 packages/highlight-context-line-readme.txt

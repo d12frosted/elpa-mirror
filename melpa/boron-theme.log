@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacsfodder/emacs-boron-theme.git
 
 Updating /mnt/store/melpa/working/boron-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built boron-theme in 4.152s, finished at Wed Jul  7 11:36:20 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.1K Jul  7 11:36 packages/boron-theme-20170808.1308.el
+4.0K -rw-r--r-- 1 root root  336 Jul  7 11:36 packages/boron-theme-20170808.1308.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:36 packages/boron-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  116 Jul  7 11:36 packages/boron-theme-readme.txt

@@ -3,10 +3,67 @@ Fetcher: github
 Source:  https://github.com/projectional-haskell/structured-haskell-mode.git
 
 Updating /mnt/store/melpa/working/shm/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/shm/
+  to /tmp/shmtSALcg/shm-20150217.1308
+  ! elisp/shm-ast-documentation.el -> shm-ast-documentation.el
+  ! elisp/shm-ast.el -> shm-ast.el
+  ! elisp/shm-case-split.el -> shm-case-split.el
+  ! elisp/shm-constraint.el -> shm-constraint.el
+  ! elisp/shm-customizations.el -> shm-customizations.el
+  ! elisp/shm-debug.el -> shm-debug.el
+  ! elisp/shm-edit-string.el -> shm-edit-string.el
+  ! elisp/shm-evaporate.el -> shm-evaporate.el
+  ! elisp/shm-fold.el -> shm-fold.el
+  ! elisp/shm-in.el -> shm-in.el
+  ! elisp/shm-indent.el -> shm-indent.el
+  ! elisp/shm-insert-del.el -> shm-insert-del.el
+  ! elisp/shm-layout.el -> shm-layout.el
+  ! elisp/shm-macros.el -> shm-macros.el
+  ! elisp/shm-manipulation.el -> shm-manipulation.el
+  ! elisp/shm-nav.el -> shm-nav.el
+  ! elisp/shm-node.el -> shm-node.el
+  ! elisp/shm-overlays.el -> shm-overlays.el
+  ! elisp/shm-reformat.el -> shm-reformat.el
+  ! elisp/shm-simple-indent.el -> shm-simple-indent.el
+  ! elisp/shm-slot.el -> shm-slot.el
+  ! elisp/shm-test.el -> shm-test.el
+  ! elisp/shm-tests.el -> shm-tests.el
+  ! elisp/shm-type.el -> shm-type.el
+  ! elisp/shm-yank-kill.el -> shm-yank-kill.el
+  ! elisp/shm.el -> shm.el
+Created shm-20150217.1308.tar containing:
+  shm-20150217.1308/
+  shm-20150217.1308/shm-ast-documentation.el
+  shm-20150217.1308/shm-ast.el
+  shm-20150217.1308/shm-case-split.el
+  shm-20150217.1308/shm-constraint.el
+  shm-20150217.1308/shm-customizations.el
+  shm-20150217.1308/shm-debug.el
+  shm-20150217.1308/shm-edit-string.el
+  shm-20150217.1308/shm-evaporate.el
+  shm-20150217.1308/shm-fold.el
+  shm-20150217.1308/shm-in.el
+  shm-20150217.1308/shm-indent.el
+  shm-20150217.1308/shm-insert-del.el
+  shm-20150217.1308/shm-layout.el
+  shm-20150217.1308/shm-macros.el
+  shm-20150217.1308/shm-manipulation.el
+  shm-20150217.1308/shm-nav.el
+  shm-20150217.1308/shm-node.el
+  shm-20150217.1308/shm-overlays.el
+  shm-20150217.1308/shm-pkg.el
+  shm-20150217.1308/shm-reformat.el
+  shm-20150217.1308/shm-simple-indent.el
+  shm-20150217.1308/shm-slot.el
+  shm-20150217.1308/shm-test.el
+  shm-20150217.1308/shm-tests.el
+  shm-20150217.1308/shm-type.el
+  shm-20150217.1308/shm-yank-kill.el
+  shm-20150217.1308/shm.el
+Built shm in 3.757s, finished at Wed Jul  7 09:19:13 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  306 Jul  7 09:19 packages/shm-20150217.1308.entry
+220K -rw-r--r-- 1 root root 220K Jul  7 09:19 packages/shm-20150217.1308.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:19 packages/shm-badge.svg
+4.0K -rw-r--r-- 1 root root   55 Jul  7 09:19 packages/shm-readme.txt

@@ -3,10 +3,40 @@ Fetcher: github
 Source:  https://github.com/leanprover-community/yasnippet-lean.git
 
 Updating /mnt/store/melpa/working/yasnippet-lean/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yasnippet-lean/
+  to /tmp/yasnippet-leanPL3ipY/yasnippet-lean-20200526.326
+    yasnippet-lean.el -> yasnippet-lean.el
+    snippets => snippets
+Created yasnippet-lean-20200526.326.tar containing:
+  yasnippet-lean-20200526.326/
+  yasnippet-lean-20200526.326/snippets/
+  yasnippet-lean-20200526.326/snippets/lean-mode/
+  yasnippet-lean-20200526.326/snippets/lean-mode/begin-end
+  yasnippet-lean-20200526.326/snippets/lean-mode/block
+  yasnippet-lean-20200526.326/snippets/lean-mode/block-sorry
+  yasnippet-lean-20200526.326/snippets/lean-mode/by
+  yasnippet-lean-20200526.326/snippets/lean-mode/comment-block
+  yasnippet-lean-20200526.326/snippets/lean-mode/def
+  yasnippet-lean-20200526.326/snippets/lean-mode/def-namespace
+  yasnippet-lean-20200526.326/snippets/lean-mode/do
+  yasnippet-lean-20200526.326/snippets/lean-mode/docstring-block
+  yasnippet-lean-20200526.326/snippets/lean-mode/have
+  yasnippet-lean-20200526.326/snippets/lean-mode/if_then_else
+  yasnippet-lean-20200526.326/snippets/lean-mode/inductive-namespace
+  yasnippet-lean-20200526.326/snippets/lean-mode/lemma
+  yasnippet-lean-20200526.326/snippets/lean-mode/let
+  yasnippet-lean-20200526.326/snippets/lean-mode/license-boilerplate
+  yasnippet-lean-20200526.326/snippets/lean-mode/namespace
+  yasnippet-lean-20200526.326/snippets/lean-mode/section
+  yasnippet-lean-20200526.326/snippets/lean-mode/show
+  yasnippet-lean-20200526.326/snippets/lean-mode/suffices
+  yasnippet-lean-20200526.326/snippets/lean-mode/theorem
+  yasnippet-lean-20200526.326/yasnippet-lean-pkg.el
+  yasnippet-lean-20200526.326/yasnippet-lean.el
+Built yasnippet-lean in 3.781s, finished at Wed Jul  7 09:30:27 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  362 Jul  7 09:30 packages/yasnippet-lean-20200526.326.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 09:30 packages/yasnippet-lean-20200526.326.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:30 packages/yasnippet-lean-badge.svg
+4.0K -rw-r--r-- 1 root root   48 Jul  7 09:30 packages/yasnippet-lean-readme.txt

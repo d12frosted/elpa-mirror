@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/stanaka/dash-at-point.git
 
 Updating /mnt/store/melpa/working/dash-at-point/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built dash-at-point in 4.240s, finished at Wed Jul  7 11:42:50 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.9K Jul  7 11:42 packages/dash-at-point-20180710.1356.el
+4.0K -rw-r--r-- 1 root root  333 Jul  7 11:42 packages/dash-at-point-20180710.1356.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:42 packages/dash-at-point-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul  7 11:42 packages/dash-at-point-readme.txt

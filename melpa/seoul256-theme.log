@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/anandpiyer/seoul256-emacs.git
 
 Updating /mnt/store/melpa/working/seoul256-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built seoul256-theme in 3.853s, finished at Wed Jul  7 09:18:40 2021
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  19K Jul  7 09:18 packages/seoul256-theme-20180505.757.el
+4.0K -rw-r--r-- 1 root root  381 Jul  7 09:18 packages/seoul256-theme-20180505.757.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:18 packages/seoul256-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  244 Jul  7 09:18 packages/seoul256-theme-readme.txt

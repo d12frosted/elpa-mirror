@@ -3,10 +3,27 @@ Fetcher: github
 Source:  https://github.com/buzztaiki/lice-el.git
 
 Updating /mnt/store/melpa/working/lice/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lice/
+  to /tmp/liceM6YGZN/lice-20150312.2238
+    lice.el -> lice.el
+    template => template
+Created lice-20150312.2238.tar containing:
+  lice-20150312.2238/
+  lice-20150312.2238/lice-pkg.el
+  lice-20150312.2238/lice.el
+  lice-20150312.2238/template/
+  lice-20150312.2238/template/agpl-3.0
+  lice-20150312.2238/template/apache-2.0
+  lice-20150312.2238/template/bsd-2-clause
+  lice-20150312.2238/template/epl-1.0
+  lice-20150312.2238/template/gpl-2.0
+  lice-20150312.2238/template/gpl-3.0
+  lice-20150312.2238/template/mit
+  lice-20150312.2238/template/mozilla
+Built lice in 4.088s, finished at Wed Jul  7 08:58:03 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  348 Jul  7 08:58 packages/lice-20150312.2238.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 08:58 packages/lice-20150312.2238.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:58 packages/lice-badge.svg
+4.0K -rw-r--r-- 1 root root  518 Jul  7 08:58 packages/lice-readme.txt

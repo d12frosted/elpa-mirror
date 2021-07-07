@@ -3,10 +3,48 @@ Fetcher: github
 Source:  https://github.com/kawabata/emacs-ivariants.git
 
 Updating /mnt/store/melpa/working/ivariants/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ivariants/
+  to /tmp/ivariantsKlDc5B/ivariants-20170823.224
+    ivariants-browse.el -> ivariants-browse.el
+    ivariants-table.el -> ivariants-table.el
+    ivariants-to.el -> ivariants-to.el
+    ivariants.el -> ivariants.el
+    tables => tables
+Created ivariants-20170823.224.tar containing:
+  ivariants-20170823.224/
+  ivariants-20170823.224/ivariants-browse.el
+  ivariants-20170823.224/ivariants-pkg.el
+  ivariants-20170823.224/ivariants-table.el
+  ivariants-20170823.224/ivariants-to.el
+  ivariants-20170823.224/ivariants.el
+  ivariants-20170823.224/tables/
+  ivariants-20170823.224/tables/DailyUse
+  ivariants-20170823.224/tables/StandardizedVariants.txt
+  ivariants-20170823.224/tables/cjkvi-simplified.txt
+  ivariants-20170823.224/tables/cjkvi-variants.txt
+  ivariants-20170823.224/tables/duplicate-chars.txt
+  ivariants-20170823.224/tables/dypytz-variants.txt
+  ivariants-20170823.224/tables/hydzd-borrowed.txt
+  ivariants-20170823.224/tables/hydzd-variants.txt
+  ivariants-20170823.224/tables/hyogai-variants.txt
+  ivariants-20170823.224/tables/jinmei-variants.txt
+  ivariants-20170823.224/tables/jisx0212-variants.txt
+  ivariants-20170823.224/tables/jisx0213-variants.txt
+  ivariants-20170823.224/tables/joyo-variants.txt
+  ivariants-20170823.224/tables/jp-borrowed.txt
+  ivariants-20170823.224/tables/koseki-variants.txt
+  ivariants-20170823.224/tables/non-cjk.txt
+  ivariants-20170823.224/tables/non-cognates.txt
+  ivariants-20170823.224/tables/numeric-variants.txt
+  ivariants-20170823.224/tables/radical-variants.txt
+  ivariants-20170823.224/tables/sawndip-variants.txt
+  ivariants-20170823.224/tables/twedu-variants.txt
+  ivariants-20170823.224/tables/ucs-scs.txt
+  ivariants-20170823.224/tables/x0212-x0213-variants.txt
+Built ivariants in 3.586s, finished at Wed Jul  7 12:05:36 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  444 Jul  7 12:05 packages/ivariants-20170823.224.entry
+2.5M -rw-r--r-- 1 root root 2.5M Jul  7 12:05 packages/ivariants-20170823.224.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:05 packages/ivariants-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:05 packages/ivariants-readme.txt

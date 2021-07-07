@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/hlissner/emacs-pug-mode.git
 
 Updating /mnt/store/melpa/working/pug-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built pug-mode in 5.473s, finished at Wed Jul  7 09:14:03 2021
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root  22K Jul  7 09:14 packages/pug-mode-20210503.147.el
+4.0K -rw-r--r-- 1 root root  411 Jul  7 09:14 packages/pug-mode-20210503.147.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:14 packages/pug-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   89 Jul  7 09:14 packages/pug-mode-readme.txt

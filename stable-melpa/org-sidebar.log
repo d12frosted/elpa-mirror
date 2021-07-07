@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/alphapapa/org-sidebar.git
 
 Updating /mnt/store/melpa/working/org-sidebar/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built org-sidebar in 4.383s, finished at Wed Jul  7 09:08:08 2021
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root  35K Jul  7 09:08 packages/org-sidebar-20201030.2030.el
+4.0K -rw-r--r-- 1 root root  581 Jul  7 09:08 packages/org-sidebar-20201030.2030.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:08 packages/org-sidebar-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Jul  7 09:08 packages/org-sidebar-readme.txt

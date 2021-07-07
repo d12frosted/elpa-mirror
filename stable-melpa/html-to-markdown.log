@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/Malabarba/html-to-markdown.git
 
 Updating /mnt/store/melpa/working/html-to-markdown/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built html-to-markdown in 4.174s, finished at Wed Jul  7 12:03:29 2021
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root  22K Jul  7 12:03 packages/html-to-markdown-20151030.1117.el
+4.0K -rw-r--r-- 1 root root  423 Jul  7 12:03 packages/html-to-markdown-20151030.1117.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:03 packages/html-to-markdown-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul  7 12:03 packages/html-to-markdown-readme.txt

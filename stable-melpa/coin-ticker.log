@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/eklitzke/coin-ticker-mode.git
 
 Updating /mnt/store/melpa/working/coin-ticker/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built coin-ticker in 3.997s, finished at Wed Jul  7 11:39:42 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jul  7 11:39 packages/coin-ticker-20170611.727.el
+4.0K -rw-r--r-- 1 root root  416 Jul  7 11:39 packages/coin-ticker-20170611.727.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:39 packages/coin-ticker-badge.svg
+4.0K -rw-r--r-- 1 root root  103 Jul  7 11:39 packages/coin-ticker-readme.txt

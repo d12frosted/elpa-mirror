@@ -1,6 +1,6 @@
 
 Translate ANSI control sequences into text properties through state machine
-emulation. This provides a far more accurate, comprehensive result than
-`ansi-color.el' that is built-into Emacs, without compromising on performance.
+emulation. This provides a far more accurate, comprehensive and performant
+result than `ansi-color.el' which is built-into Emacs.
 
 Please see README.org for documentation including example configurations.

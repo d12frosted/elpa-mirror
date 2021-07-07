@@ -3,10 +3,44 @@ Fetcher: github
 Source:  https://github.com/haskell/haskell-snippets.git
 
 Updating /mnt/store/melpa/working/haskell-snippets/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/haskell-snippets/
+  to /tmp/haskell-snippetst0wLsr/haskell-snippets-20150612.1939
+    haskell-snippets.el -> haskell-snippets.el
+    snippets => snippets
+Created haskell-snippets-20150612.1939.tar containing:
+  haskell-snippets-20150612.1939/
+  haskell-snippets-20150612.1939/haskell-snippets-pkg.el
+  haskell-snippets-20150612.1939/haskell-snippets.el
+  haskell-snippets-20150612.1939/snippets/
+  haskell-snippets-20150612.1939/snippets/haskell-mode/
+  haskell-snippets-20150612.1939/snippets/haskell-mode/.yas-ignore-filenames-as-triggers
+  haskell-snippets-20150612.1939/snippets/haskell-mode/.yas-make-groups
+  haskell-snippets-20150612.1939/snippets/haskell-mode/case
+  haskell-snippets-20150612.1939/snippets/haskell-mode/comment.block
+  haskell-snippets-20150612.1939/snippets/haskell-mode/constraint
+  haskell-snippets-20150612.1939/snippets/haskell-mode/data.inline
+  haskell-snippets-20150612.1939/snippets/haskell-mode/data.record
+  haskell-snippets-20150612.1939/snippets/haskell-mode/fn
+  haskell-snippets-20150612.1939/snippets/haskell-mode/fn.clause
+  haskell-snippets-20150612.1939/snippets/haskell-mode/fn.guarded
+  haskell-snippets-20150612.1939/snippets/haskell-mode/get
+  haskell-snippets-20150612.1939/snippets/haskell-mode/if.block
+  haskell-snippets-20150612.1939/snippets/haskell-mode/if.inline
+  haskell-snippets-20150612.1939/snippets/haskell-mode/import
+  haskell-snippets-20150612.1939/snippets/haskell-mode/import.qualified
+  haskell-snippets-20150612.1939/snippets/haskell-mode/instance
+  haskell-snippets-20150612.1939/snippets/haskell-mode/lambda
+  haskell-snippets-20150612.1939/snippets/haskell-mode/lang-pragma
+  haskell-snippets-20150612.1939/snippets/haskell-mode/let
+  haskell-snippets-20150612.1939/snippets/haskell-mode/main
+  haskell-snippets-20150612.1939/snippets/haskell-mode/module
+  haskell-snippets-20150612.1939/snippets/haskell-mode/module.exports
+  haskell-snippets-20150612.1939/snippets/haskell-mode/newtype
+  haskell-snippets-20150612.1939/snippets/haskell-mode/opt-pragma
+Built haskell-snippets in 3.889s, finished at Wed Jul  7 11:59:34 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  395 Jul  7 11:59 packages/haskell-snippets-20150612.1939.entry
+ 44K -rw-r--r-- 1 root root  40K Jul  7 11:59 packages/haskell-snippets-20150612.1939.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:59 packages/haskell-snippets-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Jul  7 11:59 packages/haskell-snippets-readme.txt

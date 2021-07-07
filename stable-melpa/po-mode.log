@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/emacsmirror/po-mode.git
 
 Updating /mnt/store/melpa/working/po-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/po-mode/
+  to /tmp/po-mode18YG4X/po-mode-20200606.1404
+    po-compat.el -> po-compat.el
+    po-mode.el -> po-mode.el
+    start-po.el -> start-po.el
+Created po-mode-20200606.1404.tar containing:
+  po-mode-20200606.1404/
+  po-mode-20200606.1404/po-compat.el
+  po-mode-20200606.1404/po-mode-pkg.el
+  po-mode-20200606.1404/po-mode.el
+  po-mode-20200606.1404/start-po.el
+Built po-mode in 3.422s, finished at Wed Jul  7 09:12:30 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  174 Jul  7 09:12 packages/po-mode-20200606.1404.entry
+152K -rw-r--r-- 1 root root 150K Jul  7 09:12 packages/po-mode-20200606.1404.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:12 packages/po-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul  7 09:12 packages/po-mode-readme.txt

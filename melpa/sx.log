@@ -3,10 +3,69 @@ Fetcher: github
 Source:  https://github.com/vermiculus/sx.el.git
 
 Updating /mnt/store/melpa/working/sx/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/sx/
+  to /tmp/sxvvwOTH/sx-20150718.1325
+    sx-auth.el -> sx-auth.el
+    sx-babel.el -> sx-babel.el
+    sx-button.el -> sx-button.el
+    sx-cache.el -> sx-cache.el
+    sx-compose.el -> sx-compose.el
+    sx-encoding.el -> sx-encoding.el
+    sx-favorites.el -> sx-favorites.el
+    sx-filter.el -> sx-filter.el
+    sx-inbox.el -> sx-inbox.el
+    sx-interaction.el -> sx-interaction.el
+    sx-load.el -> sx-load.el
+    sx-method.el -> sx-method.el
+    sx-networks.el -> sx-networks.el
+    sx-notify.el -> sx-notify.el
+    sx-question-list.el -> sx-question-list.el
+    sx-question-mode.el -> sx-question-mode.el
+    sx-question-print.el -> sx-question-print.el
+    sx-question.el -> sx-question.el
+    sx-request.el -> sx-request.el
+    sx-search.el -> sx-search.el
+    sx-site.el -> sx-site.el
+    sx-switchto.el -> sx-switchto.el
+    sx-tab.el -> sx-tab.el
+    sx-tag.el -> sx-tag.el
+    sx-time.el -> sx-time.el
+    sx-user.el -> sx-user.el
+    sx.el -> sx.el
+Created sx-20150718.1325.tar containing:
+  sx-20150718.1325/
+  sx-20150718.1325/sx-auth.el
+  sx-20150718.1325/sx-babel.el
+  sx-20150718.1325/sx-button.el
+  sx-20150718.1325/sx-cache.el
+  sx-20150718.1325/sx-compose.el
+  sx-20150718.1325/sx-encoding.el
+  sx-20150718.1325/sx-favorites.el
+  sx-20150718.1325/sx-filter.el
+  sx-20150718.1325/sx-inbox.el
+  sx-20150718.1325/sx-interaction.el
+  sx-20150718.1325/sx-load.el
+  sx-20150718.1325/sx-method.el
+  sx-20150718.1325/sx-networks.el
+  sx-20150718.1325/sx-notify.el
+  sx-20150718.1325/sx-pkg.el
+  sx-20150718.1325/sx-question-list.el
+  sx-20150718.1325/sx-question-mode.el
+  sx-20150718.1325/sx-question-print.el
+  sx-20150718.1325/sx-question.el
+  sx-20150718.1325/sx-request.el
+  sx-20150718.1325/sx-search.el
+  sx-20150718.1325/sx-site.el
+  sx-20150718.1325/sx-switchto.el
+  sx-20150718.1325/sx-tab.el
+  sx-20150718.1325/sx-tag.el
+  sx-20150718.1325/sx-time.el
+  sx-20150718.1325/sx-user.el
+  sx-20150718.1325/sx.el
+Built sx in 4.813s, finished at Wed Jul  7 09:23:06 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  563 Jul  7 09:23 packages/sx-20150718.1325.entry
+260K -rw-r--r-- 1 root root 260K Jul  7 09:23 packages/sx-20150718.1325.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:23 packages/sx-badge.svg
+4.0K -rw-r--r-- 1 root root   64 Jul  7 09:23 packages/sx-readme.txt

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/helm-zhihu-daily.git
 
 Updating /mnt/store/melpa/working/helm-zhihu-daily/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built helm-zhihu-daily in 4.336s, finished at Wed Jul  7 12:02:31 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.8K Jul  7 12:02 packages/helm-zhihu-daily-20160625.1145.el
+4.0K -rw-r--r-- 1 root root  451 Jul  7 12:02 packages/helm-zhihu-daily-20160625.1145.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:02 packages/helm-zhihu-daily-badge.svg
+4.0K -rw-r--r-- 1 root root  293 Jul  7 12:02 packages/helm-zhihu-daily-readme.txt

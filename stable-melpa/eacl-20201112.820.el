@@ -4,7 +4,7 @@
 ;;
 ;; Version: 2.0.4
 ;; Package-Version: 20201112.820
-;; Package-Commit: 527df13dcfb11f7a059ca9e8e4d31ab79423d896
+;; Package-Commit: 85a76fa17ebd304392ec9b1dd87d223fdd8fa09f
 
 ;; Author: Chen Bin <chenbin DOT sh AT gmail DOT com>
 ;; URL: http://github.com/redguardtoo/eacl

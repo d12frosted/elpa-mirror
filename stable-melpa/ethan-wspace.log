@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/glasserc/ethan-wspace.git
 
 Updating /mnt/store/melpa/working/ethan-wspace/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ethan-wspace in 4.264s, finished at Wed Jul  7 11:49:56 2021
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root  38K Jul  7 11:49 packages/ethan-wspace-20170507.2030.el
+4.0K -rw-r--r-- 1 root root  356 Jul  7 11:49 packages/ethan-wspace-20170507.2030.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:49 packages/ethan-wspace-badge.svg
+4.0K -rw-r--r-- 1 root root 2.2K Jul  7 11:49 packages/ethan-wspace-readme.txt

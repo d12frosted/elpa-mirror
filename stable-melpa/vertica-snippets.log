@@ -3,10 +3,66 @@ Fetcher: github
 Source:  https://github.com/baron42bba/vertica-snippets.git
 
 Updating /mnt/store/melpa/working/vertica-snippets/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/vertica-snippets/
+  to /tmp/vertica-snippetsopx2lP/vertica-snippets-20200423.1200
+    vertica-snippets.el -> vertica-snippets.el
+    snippets => snippets
+Created vertica-snippets-20200423.1200.tar containing:
+  vertica-snippets-20200423.1200/
+  vertica-snippets-20200423.1200/snippets/
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/.dir-locals.el
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/busy-hours
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/check_rle_overridden
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/config-changes
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/current_epoch
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/errors
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/external_table_details
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/format_numbers
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/get-partitions
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/get-projections
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/grants
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/last-statement-timing
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/last-vertica-updates
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/licence-history
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/list-backups
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/list-tables-row-count-size
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/nodes
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/pool_queues
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/projection_storage
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/pset_footer
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-acquisition-queue
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-event-issues
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-long-acquisitions
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-requests
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-requests-expensive
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-requests-overview
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/query-times
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/rebalance_projection_status
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/rebalance_status
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/rebalance_times
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/resource-pool-move
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/resource_pool_status
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/resource_pool_status2
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/resource_pools
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/resources
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/ros_count
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/segmentation-islands1
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/segmentation-islands2
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/sessions
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/storage-containers
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/storage-locations
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/table_locks
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/user_sessions
+  vertica-snippets-20200423.1200/snippets/sql-interactive-mode/vertica_users
+  vertica-snippets-20200423.1200/snippets/sql-mode/
+  vertica-snippets-20200423.1200/snippets/sql-mode/.yas-parents
+  vertica-snippets-20200423.1200/vertica-snippets-pkg.el
+  vertica-snippets-20200423.1200/vertica-snippets.el
+Built vertica-snippets in 3.789s, finished at Wed Jul  7 09:27:24 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  428 Jul  7 09:27 packages/vertica-snippets-20200423.1200.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 09:27 packages/vertica-snippets-20200423.1200.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:27 packages/vertica-snippets-badge.svg
+4.0K -rw-r--r-- 1 root root   82 Jul  7 09:27 packages/vertica-snippets-readme.txt

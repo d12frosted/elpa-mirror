@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/tom-tan/esh-buf-stack.git
 
 Updating /mnt/store/melpa/working/esh-buf-stack/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built esh-buf-stack in 3.825s, finished at Wed Jul  7 11:49:26 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.3K Jul  7 11:49 packages/esh-buf-stack-20140107.1018.el
+4.0K -rw-r--r-- 1 root root  301 Jul  7 11:49 packages/esh-buf-stack-20140107.1018.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:49 packages/esh-buf-stack-badge.svg
+4.0K -rw-r--r-- 1 root root  497 Jul  7 11:49 packages/esh-buf-stack-readme.txt

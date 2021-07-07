@@ -3,10 +3,17 @@ Fetcher: github
 Source:  https://github.com/davidmiller/dizzee.git
 
 Updating /mnt/store/melpa/working/dizzee/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dizzee/
+  to /tmp/dizzeeXkqZEE/dizzee-20171201.916
+    dizzee-pkg.el -> dizzee-pkg.el
+    dizzee.el -> dizzee.el
+Created dizzee-20171201.916.tar containing:
+  dizzee-20171201.916/
+  dizzee-20171201.916/dizzee-pkg.el
+  dizzee-20171201.916/dizzee.el
+Built dizzee in 6.676s, finished at Wed Jul  7 11:44:42 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  384 Jul  7 11:44 packages/dizzee-20171201.916.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 11:44 packages/dizzee-20171201.916.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:44 packages/dizzee-badge.svg

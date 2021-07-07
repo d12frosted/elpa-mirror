@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/jjlee/rescript-mode.git
 
 Updating /mnt/store/melpa/working/rescript-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rescript-mode/
+  to /tmp/rescript-modevEJB05/rescript-mode-20210506.2101
+    rescript-indent.el -> rescript-indent.el
+    rescript-mode.el -> rescript-mode.el
+Created rescript-mode-20210506.2101.tar containing:
+  rescript-mode-20210506.2101/
+  rescript-mode-20210506.2101/rescript-indent.el
+  rescript-mode-20210506.2101/rescript-mode-pkg.el
+  rescript-mode-20210506.2101/rescript-mode.el
+Built rescript-mode in 3.797s, finished at Wed Jul  7 09:16:41 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  456 Jul  7 09:16 packages/rescript-mode-20210506.2101.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 09:16 packages/rescript-mode-20210506.2101.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:16 packages/rescript-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  268 Jul  7 09:16 packages/rescript-mode-readme.txt

@@ -1,0 +1,15 @@
+(edbi .
+      [(20130602 324)
+       ((concurrent
+	 (0 3 1))
+	(ctable
+	 (0 1 1))
+	(epc
+	 (0 1 1)))
+       "Emacs Database Interface" tar
+       ((:commit . "39b833d2e51ae5ce66ebdec7c5425ff0d34e02d2")
+	(:authors
+	 ("SAKURAI Masashi <m.sakurai at kiwanami.net>"))
+	(:maintainer "SAKURAI Masashi <m.sakurai at kiwanami.net>")
+	(:keywords "database" "epc")
+	(:url . "https://github.com/kiwanami/emacs-edbi"))])

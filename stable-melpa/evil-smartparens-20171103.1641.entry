@@ -1,0 +1,15 @@
+(evil-smartparens .
+		  [(20171103 1641)
+		   ((evil
+		     (1 0))
+		    (emacs
+		     (24 4))
+		    (smartparens
+		     (1 10 1)))
+		   "Evil support for smartparens" single
+		   ((:commit . "9fe4eed1c6327197afe6c13bb0771e18908aff00")
+		    (:authors
+		     ("Lars Andersen" . "expez@expez.com"))
+		    (:maintainer "Lars Andersen" . "expez@expez.com")
+		    (:keywords "evil" "smartparens")
+		    (:url . "https://www.github.com/expez/evil-smartparens"))])

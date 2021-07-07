@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/osx-trash.git
 
 Updating /mnt/store/melpa/working/osx-trash/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/osx-trash/
+  to /tmp/osx-trashMH3emm/osx-trash-20210419.2229
+    osx-trash.el -> osx-trash.el
+    trashfile.AppleScript -> trashfile.AppleScript
+Created osx-trash-20210419.2229.tar containing:
+  osx-trash-20210419.2229/
+  osx-trash-20210419.2229/osx-trash-pkg.el
+  osx-trash-20210419.2229/osx-trash.el
+  osx-trash-20210419.2229/trashfile.AppleScript
+Built osx-trash in 3.616s, finished at Wed Jul  7 09:09:23 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  414 Jul  7 09:09 packages/osx-trash-20210419.2229.entry
+ 12K -rw-r--r-- 1 root root  10K Jul  7 09:09 packages/osx-trash-20210419.2229.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:09 packages/osx-trash-badge.svg
+4.0K -rw-r--r-- 1 root root  720 Jul  7 09:09 packages/osx-trash-readme.txt

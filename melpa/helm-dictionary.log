@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm-dictionary.git
 
 Updating /mnt/store/melpa/working/helm-dictionary/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built helm-dictionary in 3.912s, finished at Wed Jul  7 12:00:26 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Jul  7 12:00 packages/helm-dictionary-20201006.1511.el
+4.0K -rw-r--r-- 1 root root  440 Jul  7 12:00 packages/helm-dictionary-20201006.1511.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:00 packages/helm-dictionary-badge.svg
+4.0K -rw-r--r-- 1 root root  390 Jul  7 12:00 packages/helm-dictionary-readme.txt

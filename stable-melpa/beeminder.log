@@ -3,10 +3,27 @@ Fetcher: github
 Source:  https://github.com/Sodaware/beeminder.el.git
 
 Updating /mnt/store/melpa/working/beeminder/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/beeminder/
+  to /tmp/beeminderIJZFJv/beeminder-20201227.1533
+    beeminder-api.el -> beeminder-api.el
+    beeminder-client-faces.el -> beeminder-client-faces.el
+    beeminder-client.el -> beeminder-client.el
+    beeminder-org.el -> beeminder-org.el
+    beeminder-settings.el -> beeminder-settings.el
+    beeminder.el -> beeminder.el
+Created beeminder-20201227.1533.tar containing:
+  beeminder-20201227.1533/
+  beeminder-20201227.1533/beeminder-api.el
+  beeminder-20201227.1533/beeminder-client-faces.el
+  beeminder-20201227.1533/beeminder-client.el
+  beeminder-20201227.1533/beeminder-org.el
+  beeminder-20201227.1533/beeminder-pkg.el
+  beeminder-20201227.1533/beeminder-settings.el
+  beeminder-20201227.1533/beeminder.el
+Built beeminder in 3.709s, finished at Wed Jul  7 11:35:28 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  435 Jul  7 11:35 packages/beeminder-20201227.1533.entry
+ 60K -rw-r--r-- 1 root root  60K Jul  7 11:35 packages/beeminder-20201227.1533.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:35 packages/beeminder-badge.svg
+4.0K -rw-r--r-- 1 root root 2.2K Jul  7 11:35 packages/beeminder-readme.txt

@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/elisp-demos.git
 
 Updating /mnt/store/melpa/working/elisp-demos/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elisp-demos/
+  to /tmp/elisp-demosIK8eXG/elisp-demos-20200219.742
+    elisp-demos.el -> elisp-demos.el
+    elisp-demos.org -> elisp-demos.org
+Created elisp-demos-20200219.742.tar containing:
+  elisp-demos-20200219.742/
+  elisp-demos-20200219.742/elisp-demos-pkg.el
+  elisp-demos-20200219.742/elisp-demos.el
+  elisp-demos-20200219.742/elisp-demos.org
+Built elisp-demos in 4.037s, finished at Wed Jul  7 11:47:35 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  326 Jul  7 11:47 packages/elisp-demos-20200219.742.entry
+260K -rw-r--r-- 1 root root 260K Jul  7 11:47 packages/elisp-demos-20200219.742.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:47 packages/elisp-demos-badge.svg
+4.0K -rw-r--r-- 1 root root   16 Jul  7 11:47 packages/elisp-demos-readme.txt

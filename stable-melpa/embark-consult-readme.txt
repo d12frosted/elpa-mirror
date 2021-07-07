@@ -26,12 +26,19 @@ Embark Collect buffer that is associated to an active minibuffer
 for a Consult command. For information on Consult preview, see
 Consult's info manual or its readme on GitHub.
 
+- `embark-consult-preview-at-point', a command to trigger Consult's
+preview for the entry at point.
+
+- `embark-consult-preview-minor-mode', a minor mode for Embark
+Collect buffers that automatically previews the entry at point as
+you move around.
+
 If you always want the minor mode enabled whenever it possible use:
 
-(add-hook 'embark-collect-mode-hook #'consult-preview-at-point-mode)
+(add-hook 'embark-collect-mode-hook #'embark-consult-preview-minor-mode)
 
 If you don't want the minor mode automatically on and prefer to
 trigger the consult previews manually use this instead:
 
 (define-key embark-collect-mode-map (kbd "C-j")
-  #'consult-preview-at-point)
+  #'embark-consult-preview-at-point)

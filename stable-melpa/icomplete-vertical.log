@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/oantolin/icomplete-vertical.git
 
 Updating /mnt/store/melpa/working/icomplete-vertical/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built icomplete-vertical in 4.512s, finished at Wed Jul  7 12:03:59 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  14K Jul  7 12:03 packages/icomplete-vertical-20201213.2230.el
+4.0K -rw-r--r-- 1 root root  461 Jul  7 12:03 packages/icomplete-vertical-20201213.2230.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:03 packages/icomplete-vertical-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Jul  7 12:03 packages/icomplete-vertical-readme.txt

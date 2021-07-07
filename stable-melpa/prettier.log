@@ -3,10 +3,26 @@ Fetcher: github
 Source:  https://github.com/jscheid/prettier.el.git
 
 Updating /mnt/store/melpa/working/prettier/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/prettier/
+  to /tmp/prettiereENYlB/prettier-20210126.849
+    prettier.el -> prettier.el
+    bootstrap-min.js -> bootstrap-min.js
+    prettier-el.js.gz.base64 -> prettier-el.js.gz.base64
+Created prettier-20210126.849.tar containing:
+  prettier-20210126.849/
+  prettier-20210126.849/bootstrap-min.js
+  prettier-20210126.849/prettier-el.js.gz.base64
+  prettier-20210126.849/prettier-pkg.el
+  prettier-20210126.849/prettier.el
+Built prettier in 3.837s, finished at Wed Jul  7 09:13:18 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  438 Jul  7 09:13 packages/prettier-20210126.849.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 09:13 packages/prettier-20210126.849.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:13 packages/prettier-badge.svg
+ 12K -rw-r--r-- 1 root root 8.7K Jul  7 09:13 packages/prettier-js-20180109.726.el
+4.0K -rw-r--r-- 1 root root  383 Jul  7 06:00 packages/prettier-js-20180109.726.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:00 packages/prettier-js-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Jul  7 06:00 packages/prettier-js-readme.txt
+4.0K -rw-r--r-- 1 root root  141 Jul  7 09:13 packages/prettier-js.log
+4.0K -rw-r--r-- 1 root root  255 Jul  7 09:13 packages/prettier-readme.txt

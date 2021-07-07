@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/dgtized/github-clone.el.git
 
 Updating /mnt/store/melpa/working/github-clone/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built github-clone in 3.775s, finished at Wed Jul  7 11:57:27 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.5K Jul  7 11:57 packages/github-clone-20141006.910.el
+4.0K -rw-r--r-- 1 root root  425 Jul  7 11:57 packages/github-clone-20141006.910.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:57 packages/github-clone-badge.svg
+4.0K -rw-r--r-- 1 root root  165 Jul  7 11:57 packages/github-clone-readme.txt

@@ -3,10 +3,14 @@ Fetcher: github
 Source:  https://github.com/r0man/vertica-el.git
 
 Updating /mnt/store/melpa/working/vertica/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built vertica in 3.805s, finished at Wed Jul  7 09:27:23 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Jul  7 09:27 packages/vertica-20131217.1511.el
+4.0K -rw-r--r-- 1 root root  311 Jul  7 09:27 packages/vertica-20131217.1511.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:27 packages/vertica-badge.svg
+4.0K -rw-r--r-- 1 root root   56 Jul  7 09:27 packages/vertica-readme.txt
+4.0K -rw-r--r-- 1 root root  428 Jul  7 06:14 packages/vertica-snippets-20200423.1200.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 06:14 packages/vertica-snippets-20200423.1200.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:14 packages/vertica-snippets-badge.svg
+4.0K -rw-r--r-- 1 root root   82 Jul  7 06:14 packages/vertica-snippets-readme.txt
+4.0K -rw-r--r-- 1 root root  381 Jul  7 09:27 packages/vertica-snippets.log

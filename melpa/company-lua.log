@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/ptrv/company-lua.git
 
 Updating /mnt/store/melpa/working/company-lua/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/company-lua/
+  to /tmp/company-luaIsOhDh/company-lua-20171108.2306
+    company-lua.el -> company-lua.el
+    lua => lua
+Created company-lua-20171108.2306.tar containing:
+  company-lua-20171108.2306/
+  company-lua-20171108.2306/company-lua-pkg.el
+  company-lua-20171108.2306/company-lua.el
+  company-lua-20171108.2306/lua/
+  company-lua-20171108.2306/lua/api/
+  company-lua-20171108.2306/lua/api/baselib.lua
+  company-lua-20171108.2306/lua/api/love2d.lua
+  company-lua-20171108.2306/lua/complete.lua
+Built company-lua in 3.471s, finished at Wed Jul  7 11:40:30 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  370 Jul  7 11:40 packages/company-lua-20171108.2306.entry
+332K -rw-r--r-- 1 root root 330K Jul  7 11:40 packages/company-lua-20171108.2306.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:40 packages/company-lua-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 11:40 packages/company-lua-readme.txt

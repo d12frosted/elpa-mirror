@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/clemera/objed.git
 
 Updating /mnt/store/melpa/working/objed/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/objed/
+  to /tmp/objedQoPAQf/objed-20190324.2350
+    objed-objects.el -> objed-objects.el
+    objed.el -> objed.el
+Created objed-20190324.2350.tar containing:
+  objed-20190324.2350/
+  objed-20190324.2350/objed-objects.el
+  objed-20190324.2350/objed-pkg.el
+  objed-20190324.2350/objed.el
+Built objed in 3.878s, finished at Wed Jul  7 09:05:53 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  369 Jul  7 09:05 packages/objed-20190324.2350.entry
+212K -rw-r--r-- 1 root root 210K Jul  7 09:05 packages/objed-20190324.2350.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:05 packages/objed-badge.svg
+8.0K -rw-r--r-- 1 root root 4.6K Jul  7 09:05 packages/objed-readme.txt

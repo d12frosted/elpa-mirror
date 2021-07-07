@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/jacobono/emacs-gradle-mode.git
 
 Updating /mnt/store/melpa/working/gradle-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built gradle-mode in 3.170s, finished at Wed Jul  7 11:58:45 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Jul  7 11:58 packages/gradle-mode-20150313.1905.el
+4.0K -rw-r--r-- 1 root root  416 Jul  7 11:58 packages/gradle-mode-20150313.1905.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:58 packages/gradle-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  120 Jul  7 11:58 packages/gradle-mode-readme.txt

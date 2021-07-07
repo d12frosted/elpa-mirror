@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/louietan/anki-editor.git
 
 Updating /mnt/store/melpa/working/anki-editor/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/anki-editor/
+  to /tmp/anki-editorNiqCvO/anki-editor-20190922.1223
+    anki-editor.el -> anki-editor.el
+    fix-notes-0.3.el -> fix-notes-0.3.el
+Created anki-editor-20190922.1223.tar containing:
+  anki-editor-20190922.1223/
+  anki-editor-20190922.1223/anki-editor-pkg.el
+  anki-editor-20190922.1223/anki-editor.el
+  anki-editor-20190922.1223/fix-notes-0.3.el
+Built anki-editor in 3.505s, finished at Wed Jul  7 11:33:05 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  361 Jul  7 11:33 packages/anki-editor-20190922.1223.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 11:33 packages/anki-editor-20190922.1223.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:33 packages/anki-editor-badge.svg
+4.0K -rw-r--r-- 1 root root 1.7K Jul  7 11:33 packages/anki-editor-readme.txt

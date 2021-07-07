@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ayrat555/cargo-mode.git
 
 Updating /mnt/store/melpa/working/cargo-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built cargo-mode in 3.851s, finished at Wed Jul  7 11:37:21 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Jul  7 11:37 packages/cargo-mode-20210605.1003.el
+4.0K -rw-r--r-- 1 root root  414 Jul  7 11:37 packages/cargo-mode-20210605.1003.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:37 packages/cargo-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  801 Jul  7 11:37 packages/cargo-mode-readme.txt

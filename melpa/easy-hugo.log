@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/masasam/emacs-easy-hugo.git
 
 Updating /mnt/store/melpa/working/easy-hugo/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built easy-hugo in 3.899s, finished at Wed Jul  7 11:46:15 2021
+ ✓ Success:
+ 96K -rw-r--r-- 1 root root  93K Jul  7 11:46 packages/easy-hugo-20210303.2352.el
+4.0K -rw-r--r-- 1 root root  394 Jul  7 11:46 packages/easy-hugo-20210303.2352.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:46 packages/easy-hugo-badge.svg
+4.0K -rw-r--r-- 1 root root  218 Jul  7 11:46 packages/easy-hugo-readme.txt

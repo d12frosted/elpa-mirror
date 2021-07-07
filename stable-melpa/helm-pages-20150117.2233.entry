@@ -1,0 +1,14 @@
+(helm-pages .
+	    [(20150117 2233)
+	     ((helm
+	       (1 6 5))
+	      (emacs
+	       (24))
+	      (cl-lib
+	       (0 5)))
+	     "Pages in current buffer as Helm datasource" single
+	     ((:commit . "e334ca3312e51d6fdfa989df5d3ebe683d673c0e")
+	      (:authors
+	       ("David Christiansen" . "david@davidchristiansen.dk"))
+	      (:maintainer "David Christiansen" . "david@davidchristiansen.dk")
+	      (:keywords "convenience" "helm" "outlines"))])

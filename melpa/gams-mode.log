@@ -3,10 +3,20 @@ Fetcher: github
 Source:  https://github.com/ShiroTakeda/gams-mode.git
 
 Updating /mnt/store/melpa/working/gams-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gams-mode/
+  to /tmp/gams-modeVXZl4T/gams-mode-20210227.251
+    gams-mode.el -> gams-mode.el
+    gams-logo.xpm -> gams-logo.xpm
+Created gams-mode-20210227.251.tar containing:
+  gams-mode-20210227.251/
+  gams-mode-20210227.251/gams-logo.xpm
+  gams-mode-20210227.251/gams-mode-pkg.el
+  gams-mode-20210227.251/gams-mode.el
+Built gams-mode in 7.421s, finished at Wed Jul  7 11:56:19 2021
+ ✓ Success:
+620K -rw-r--r-- 1 root root 618K Feb 28 18:40 packages/gams-mode-20210227.251.el
+4.0K -rw-r--r-- 1 root root  373 Jul  7 11:56 packages/gams-mode-20210227.251.entry
+632K -rw-r--r-- 1 root root 630K Jul  7 11:56 packages/gams-mode-20210227.251.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:56 packages/gams-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  485 Jul  7 11:56 packages/gams-mode-readme.txt

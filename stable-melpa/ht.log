@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/Wilfred/ht.el.git
 
 Updating /mnt/store/melpa/working/ht/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: ht :files spec is equivalent to the default.
+Built ht in 4.524s, finished at Wed Jul  7 12:03:29 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jul  7 12:03 packages/ht-20210113.822.el
+4.0K -rw-r--r-- 1 root root  346 Jul  7 12:03 packages/ht-20210113.822.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:03 packages/ht-badge.svg
+4.0K -rw-r--r-- 1 root root   97 Jul  7 12:03 packages/ht-readme.txt

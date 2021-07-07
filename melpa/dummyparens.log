@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/snosov1/dummyparens.git
 
 Updating /mnt/store/melpa/working/dummyparens/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built dummyparens in 3.913s, finished at Wed Jul  7 11:45:55 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Jul  7 11:45 packages/dummyparens-20141009.1024.el
+4.0K -rw-r--r-- 1 root root  412 Jul  7 11:45 packages/dummyparens-20141009.1024.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:45 packages/dummyparens-badge.svg
+4.0K -rw-r--r-- 1 root root  623 Jul  7 11:45 packages/dummyparens-readme.txt

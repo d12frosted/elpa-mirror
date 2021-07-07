@@ -3,10 +3,9 @@ Fetcher: git
 Source:  https://git.sr.ht/~abrahms/ox-gemini
 
 Updating /mnt/store/melpa/working/ox-gemini/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ox-gemini in 3.526s, finished at Wed Jul  7 09:09:39 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.8K Jul  7 09:09 packages/ox-gemini-20210102.1517.el
+4.0K -rw-r--r-- 1 root root  397 Jul  7 09:09 packages/ox-gemini-20210102.1517.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:09 packages/ox-gemini-badge.svg
+4.0K -rw-r--r-- 1 root root  254 Jul  7 09:09 packages/ox-gemini-readme.txt

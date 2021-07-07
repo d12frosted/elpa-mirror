@@ -3,10 +3,15 @@ Fetcher: github
 Source:  https://github.com/sfllaw/emacs-launch.git
 
 Updating /mnt/store/melpa/working/launch/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: launch :files spec is equivalent to the default.
+Built launch in 7.969s, finished at Wed Jul  7 08:57:20 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Jul  7 08:57 packages/launch-20130619.2204.el
+4.0K -rw-r--r-- 1 root root  356 Jul  7 08:57 packages/launch-20130619.2204.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:57 packages/launch-badge.svg
+4.0K -rw-r--r-- 1 root root  339 Jul  7 05:44 packages/launch-mode-20170106.512.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 05:44 packages/launch-mode-20170106.512.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 05:44 packages/launch-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   97 Jul  7 05:44 packages/launch-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  134 Jul  7 08:57 packages/launch-mode.log
+4.0K -rw-r--r-- 1 root root  897 Jul  7 08:57 packages/launch-readme.txt

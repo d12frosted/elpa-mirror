@@ -3,10 +3,27 @@ Fetcher: github
 Source:  https://github.com/algernon/elfeed-goodies.git
 
 Updating /mnt/store/melpa/working/elfeed-goodies/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elfeed-goodies/
+  to /tmp/elfeed-goodiesTjEyCF/elfeed-goodies-20190128.1631
+    elfeed-goodies-logging.el -> elfeed-goodies-logging.el
+    elfeed-goodies-new-entry-hooks.el -> elfeed-goodies-new-entry-hooks.el
+    elfeed-goodies-search-mode.el -> elfeed-goodies-search-mode.el
+    elfeed-goodies-show-mode.el -> elfeed-goodies-show-mode.el
+    elfeed-goodies-split-pane.el -> elfeed-goodies-split-pane.el
+    elfeed-goodies.el -> elfeed-goodies.el
+Created elfeed-goodies-20190128.1631.tar containing:
+  elfeed-goodies-20190128.1631/
+  elfeed-goodies-20190128.1631/elfeed-goodies-logging.el
+  elfeed-goodies-20190128.1631/elfeed-goodies-new-entry-hooks.el
+  elfeed-goodies-20190128.1631/elfeed-goodies-pkg.el
+  elfeed-goodies-20190128.1631/elfeed-goodies-search-mode.el
+  elfeed-goodies-20190128.1631/elfeed-goodies-show-mode.el
+  elfeed-goodies-20190128.1631/elfeed-goodies-split-pane.el
+  elfeed-goodies-20190128.1631/elfeed-goodies.el
+Built elfeed-goodies in 4.074s, finished at Wed Jul  7 11:47:28 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  413 Jul  7 11:47 packages/elfeed-goodies-20190128.1631.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:47 packages/elfeed-goodies-20190128.1631.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:47 packages/elfeed-goodies-badge.svg
+4.0K -rw-r--r-- 1 root root  298 Jul  7 11:47 packages/elfeed-goodies-readme.txt

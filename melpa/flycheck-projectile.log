@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/nbfalcon/flycheck-projectile.git
 
 Updating /mnt/store/melpa/working/flycheck-projectile/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: flycheck-projectile :files spec is equivalent to the default.
+Built flycheck-projectile in 3.897s, finished at Wed Jul  7 11:54:12 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jul  7 11:54 packages/flycheck-projectile-20201031.1952.el
+4.0K -rw-r--r-- 1 root root  450 Jul  7 11:54 packages/flycheck-projectile-20201031.1952.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:54 packages/flycheck-projectile-badge.svg
+4.0K -rw-r--r-- 1 root root   68 Jul  7 11:54 packages/flycheck-projectile-readme.txt

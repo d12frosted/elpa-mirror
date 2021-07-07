@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/mrkkrp/typit.git
 
 Updating /mnt/store/melpa/working/typit/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/typit/
+  to /tmp/typit4Wzp8n/typit-20170519.751
+    typit.el -> typit.el
+    dict => dict
+Created typit-20170519.751.tar containing:
+  typit-20170519.751/
+  typit-20170519.751/dict/
+  typit-20170519.751/dict/deutsch.txt
+  typit-20170519.751/dict/english.txt
+  typit-20170519.751/typit-pkg.el
+  typit-20170519.751/typit.el
+Built typit in 6.872s, finished at Wed Jul  7 09:26:09 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  386 Jul  7 09:26 packages/typit-20170519.751.entry
+120K -rw-r--r-- 1 root root 120K Jul  7 09:26 packages/typit-20170519.751.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:26 packages/typit-badge.svg
+4.0K -rw-r--r-- 1 root root  334 Jul  7 09:26 packages/typit-readme.txt

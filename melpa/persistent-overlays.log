@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/mneilly/Emacs-Persistent-Overlays.git
 
 Updating /mnt/store/melpa/working/persistent-overlays/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/persistent-overlays/
+  to /tmp/persistent-overlaysNY7IdG/persistent-overlays-20161128.700
+    persistent-overlays.el -> persistent-overlays.el
+    README.md -> README.md
+    LICENSE -> LICENSE
+Created persistent-overlays-20161128.700.tar containing:
+  persistent-overlays-20161128.700/
+  persistent-overlays-20161128.700/LICENSE
+  persistent-overlays-20161128.700/README.md
+  persistent-overlays-20161128.700/persistent-overlays-pkg.el
+  persistent-overlays-20161128.700/persistent-overlays.el
+Built persistent-overlays in 4.957s, finished at Wed Jul  7 09:11:22 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  432 Jul  7 09:11 packages/persistent-overlays-20161128.700.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 09:11 packages/persistent-overlays-20161128.700.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:11 packages/persistent-overlays-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Jul  7 09:11 packages/persistent-overlays-readme.txt

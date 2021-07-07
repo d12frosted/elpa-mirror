@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/danielsz/om-mode.git
 
 Updating /mnt/store/melpa/working/om-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built om-mode in 3.612s, finished at Wed Jul  7 09:06:10 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.3K Jul  7 09:06 packages/om-mode-20140915.2110.el
+4.0K -rw-r--r-- 1 root root  330 Jul  7 09:06 packages/om-mode-20140915.2110.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/om-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  240 Jul  7 09:06 packages/om-mode-readme.txt

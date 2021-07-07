@@ -5,7 +5,7 @@
 ;; Author: SAKURAI Masashi <m.sakurai at kiwanami.net>
 ;; Keywords: calendar, org
 ;; Package-Version: 20160303.258
-;; Package-Commit: 03abce97620a4a7f7ec5f911e669da9031ab9088
+;; Package-Commit: c538d3746449b4f0e16b16aad3073d4f7379d805
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

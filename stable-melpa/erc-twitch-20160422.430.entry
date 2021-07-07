@@ -1,0 +1,13 @@
+(erc-twitch .
+	    [(20160422 430)
+	     ((json
+	       (1 3))
+	      (erc
+	       (5 0)))
+	     "Support for Twitch emotes for ERC." single
+	     ((:commit . "6938191c787d66fef4c13674e0a98a9d64eff364")
+	      (:authors
+	       ("Vibhav Pant" . "vibhavp@gmail.com"))
+	      (:maintainer "Vibhav Pant" . "vibhavp@gmail.com")
+	      (:keywords "twitch" "erc" "emotes")
+	      (:url . "https://github.com/vibhavp/erc-twitch"))])

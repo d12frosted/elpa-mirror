@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/abo-abo/define-word.git
 
 Updating /mnt/store/melpa/working/define-word/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built define-word in 3.998s, finished at Wed Jul  7 11:43:17 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.8K Jul  7 11:43 packages/define-word-20150702.1300.el
+4.0K -rw-r--r-- 1 root root  387 Jul  7 11:43 packages/define-word-20150702.1300.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:43 packages/define-word-badge.svg
+4.0K -rw-r--r-- 1 root root  246 Jul  7 11:43 packages/define-word-readme.txt

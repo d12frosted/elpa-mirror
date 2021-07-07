@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/nicferrier/emacs-proc-net.git
 
 Updating /mnt/store/melpa/working/proc-net/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built proc-net in 4.175s, finished at Wed Jul  7 09:13:25 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.6K Jul  7 09:13 packages/proc-net-20130322.12.el
+4.0K -rw-r--r-- 1 root root  345 Jul  7 09:13 packages/proc-net-20130322.12.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:13 packages/proc-net-badge.svg
+4.0K -rw-r--r-- 1 root root   46 Jul  7 09:13 packages/proc-net-readme.txt

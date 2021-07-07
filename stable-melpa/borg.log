@@ -3,10 +3,25 @@ Fetcher: github
 Source:  https://github.com/emacscollective/borg.git
 
 Updating /mnt/store/melpa/working/borg/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/borg/
+  to /tmp/borgHbDFyf/borg-20210530.1158
+    borg-elpa.el -> borg-elpa.el
+    borg.el -> borg.el
+    borg.texi -> borg.texi
+    borg.mk -> borg.mk
+Created /tmp/borgHbDFyf/borg-20210530.1158/borg.info
+Created borg-20210530.1158.tar containing:
+  borg-20210530.1158/
+  borg-20210530.1158/borg-elpa.el
+  borg-20210530.1158/borg-pkg.el
+  borg-20210530.1158/borg.el
+  borg-20210530.1158/borg.info
+  borg-20210530.1158/borg.mk
+  borg-20210530.1158/dir
+Built borg in 9.867s, finished at Wed Jul  7 11:36:25 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  397 Jul  7 11:36 packages/borg-20210530.1158.entry
+112K -rw-r--r-- 1 root root 110K Jul  7 11:36 packages/borg-20210530.1158.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:36 packages/borg-badge.svg
+4.0K -rw-r--r-- 1 root root  462 Jul  7 11:36 packages/borg-readme.txt

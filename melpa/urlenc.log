@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/buzztaiki/urlenc-el.git
 
 Updating /mnt/store/melpa/working/urlenc/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built urlenc in 3.853s, finished at Wed Jul  7 09:26:46 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.9K Jul  7 09:26 packages/urlenc-20140116.1456.el
+4.0K -rw-r--r-- 1 root root  340 Jul  7 09:26 packages/urlenc-20140116.1456.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:26 packages/urlenc-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:26 packages/urlenc-readme.txt

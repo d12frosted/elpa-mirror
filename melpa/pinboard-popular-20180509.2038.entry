@@ -1,0 +1,8 @@
+(pinboard-popular .
+		  [(20180509 2038)
+		   ((loop
+		     (1 4)))
+		   "Displays links from the pinboard.in popular page." single
+		   ((:commit . "df6f5928f1e5a614fb770f6f4b9aefe0bf4d1c25")
+		    (:keywords "pinboard")
+		    (:url . "https://github.com/asimpson/pinboard-popular"))])

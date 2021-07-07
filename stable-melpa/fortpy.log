@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/rosenbrockc/fortpy-el.git
 
 Updating /mnt/store/melpa/working/fortpy/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fortpy/
+  to /tmp/fortpygI44l9/fortpy-20150715.2032
+    fortpy.el -> fortpy.el
+    fortpyepcserver.py -> fortpyepcserver.py
+    Makefile -> Makefile
+    setup.py -> setup.py
+Created fortpy-20150715.2032.tar containing:
+  fortpy-20150715.2032/
+  fortpy-20150715.2032/Makefile
+  fortpy-20150715.2032/fortpy-pkg.el
+  fortpy-20150715.2032/fortpy.el
+  fortpy-20150715.2032/fortpyepcserver.py
+  fortpy-20150715.2032/setup.py
+Built fortpy in 3.460s, finished at Wed Jul  7 11:55:31 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  376 Jul  7 11:55 packages/fortpy-20150715.2032.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 11:55 packages/fortpy-20150715.2032.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:55 packages/fortpy-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 11:55 packages/fortpy-readme.txt

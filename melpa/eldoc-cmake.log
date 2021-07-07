@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ikirill/eldoc-cmake.git
 
 Updating /mnt/store/melpa/working/eldoc-cmake/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built eldoc-cmake in 4.436s, finished at Wed Jul  7 11:47:17 2021
+ ✓ Success:
+184K -rw-r--r-- 1 root root 182K Jul  7 11:47 packages/eldoc-cmake-20190419.2244.el
+4.0K -rw-r--r-- 1 root root  309 Jul  7 11:47 packages/eldoc-cmake-20190419.2244.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:47 packages/eldoc-cmake-badge.svg
+4.0K -rw-r--r-- 1 root root  133 Jul  7 11:47 packages/eldoc-cmake-readme.txt

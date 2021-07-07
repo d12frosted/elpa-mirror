@@ -1,0 +1,15 @@
+(helm-fuz .
+	  [(20190805 1723)
+	   ((emacs
+	     (25 1))
+	    (fuz
+	     (1 3 0))
+	    (helm
+	     (3 2)))
+	   "Integrate Helm and Fuz" single
+	   ((:commit . "90ca9207a9c1decda24a552b94ff41169ecccb14")
+	    (:authors
+	     ("Zhu Zihao" . "all_but_last@163.com"))
+	    (:maintainer "Zhu Zihao" . "all_but_last@163.com")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/cireu/fuz.el"))])

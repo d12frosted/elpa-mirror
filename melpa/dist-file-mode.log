@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-php/dist-file-mode.el.git
 
 Updating /mnt/store/melpa/working/dist-file-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built dist-file-mode in 3.527s, finished at Wed Jul  7 11:44:32 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.4K Jul  7 11:44 packages/dist-file-mode-20180830.418.el
+4.0K -rw-r--r-- 1 root root  421 Jul  7 11:44 packages/dist-file-mode-20180830.418.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:44 packages/dist-file-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  234 Jul  7 11:44 packages/dist-file-mode-readme.txt

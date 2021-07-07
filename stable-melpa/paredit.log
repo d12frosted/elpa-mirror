@@ -3,10 +3,19 @@ Fetcher: git
 Source:  https://mumble.net/~campbell/git/paredit.git
 
 Updating /mnt/store/melpa/working/paredit/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: paredit :files spec is equivalent to the default.
+Built paredit in 4.217s, finished at Wed Jul  7 09:10:33 2021
+ ✓ Success:
+120K -rw-r--r-- 1 root root 119K Jul  7 09:10 packages/paredit-20141206.1742.el
+4.0K -rw-r--r-- 1 root root  248 Jul  7 09:10 packages/paredit-20141206.1742.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:10 packages/paredit-badge.svg
+4.0K -rw-r--r-- 1 root root 2.9K Jul  7 09:10 packages/paredit-everywhere-20140524.1104.el
+4.0K -rw-r--r-- 1 root root  387 Jul  7 09:10 packages/paredit-everywhere-20140524.1104.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:10 packages/paredit-everywhere-badge.svg
+4.0K -rw-r--r-- 1 root root  350 Jul  7 09:10 packages/paredit-everywhere-readme.txt
+4.0K -rw-r--r-- 1 root root  245 Jul  7 09:10 packages/paredit-everywhere.log
+4.0K -rw-r--r-- 1 root root 4.0K Jul  7 09:10 packages/paredit-menu-20160128.1733.el
+4.0K -rw-r--r-- 1 root root  346 Jul  7 05:57 packages/paredit-menu-20160128.1733.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 05:57 packages/paredit-menu-badge.svg
+4.0K -rw-r--r-- 1 root root 1017 Jul  7 05:57 packages/paredit-menu-readme.txt
+4.0K -rw-r--r-- 1 root root  141 Jul  7 09:10 packages/paredit-menu.log

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ralph-schleicher/emacs-openfoam.git
 
 Updating /mnt/store/melpa/working/openfoam/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built openfoam in 4.431s, finished at Wed Jul  7 09:06:23 2021
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root  54K Jul  7 09:06 packages/openfoam-20210508.1903.el
+4.0K -rw-r--r-- 1 root root  397 Jul  7 09:06 packages/openfoam-20210508.1903.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/openfoam-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul  7 09:06 packages/openfoam-readme.txt

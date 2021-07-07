@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/clojure-emacs/clj-refactor.el.git
 
 Updating /mnt/store/melpa/working/clj-refactor/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/clj-refactor/
+  to /tmp/clj-refactorGiMTAu/clj-refactor-20210216.928
+    clj-refactor-compat.el -> clj-refactor-compat.el
+    clj-refactor.el -> clj-refactor.el
+    CHANGELOG.md -> CHANGELOG.md
+Created clj-refactor-20210216.928.tar containing:
+  clj-refactor-20210216.928/
+  clj-refactor-20210216.928/CHANGELOG.md
+  clj-refactor-20210216.928/clj-refactor-compat.el
+  clj-refactor-20210216.928/clj-refactor-pkg.el
+  clj-refactor-20210216.928/clj-refactor.el
+Built clj-refactor in 4.170s, finished at Wed Jul  7 11:38:45 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  709 Jul  7 11:38 packages/clj-refactor-20210216.928.entry
+192K -rw-r--r-- 1 root root 190K Jul  7 11:38 packages/clj-refactor-20210216.928.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:38 packages/clj-refactor-badge.svg
+4.0K -rw-r--r-- 1 root root   66 Jul  7 11:38 packages/clj-refactor-readme.txt

@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/kenbeese/helm-bibtexkey.git
 
 Updating /mnt/store/melpa/working/helm-bibtexkey/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-bibtexkey/
+  to /tmp/helm-bibtexkeyRC6k0T/helm-bibtexkey-20140214.1504
+    helm-bibtexkey.el -> helm-bibtexkey.el
+    bibtexkey_source.py -> bibtexkey_source.py
+Created helm-bibtexkey-20140214.1504.tar containing:
+  helm-bibtexkey-20140214.1504/
+  helm-bibtexkey-20140214.1504/bibtexkey_source.py
+  helm-bibtexkey-20140214.1504/helm-bibtexkey-pkg.el
+  helm-bibtexkey-20140214.1504/helm-bibtexkey.el
+Built helm-bibtexkey in 4.789s, finished at Wed Jul  7 11:59:56 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  373 Jul  7 11:59 packages/helm-bibtexkey-20140214.1504.entry
+ 12K -rw-r--r-- 1 root root  10K Jul  7 11:59 packages/helm-bibtexkey-20140214.1504.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:59 packages/helm-bibtexkey-badge.svg
+4.0K -rw-r--r-- 1 root root  273 Jul  7 11:59 packages/helm-bibtexkey-readme.txt

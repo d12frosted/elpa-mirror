@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/yasuyk/helm-emmet.git
 
 Updating /mnt/store/melpa/working/helm-emmet/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built helm-emmet in 3.944s, finished at Wed Jul  7 12:00:30 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.1K Jul  7 12:00 packages/helm-emmet-20160713.1231.el
+4.0K -rw-r--r-- 1 root root  444 Jul  7 12:00 packages/helm-emmet-20160713.1231.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:00 packages/helm-emmet-badge.svg
+4.0K -rw-r--r-- 1 root root   37 Jul  7 12:00 packages/helm-emmet-readme.txt

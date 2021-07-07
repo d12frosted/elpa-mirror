@@ -11,5 +11,5 @@ selected minor mode.
 
 A call to `helm-disable-minor-mode' will give you a `helm'
 selection of active minor modes.  Selecting a target will
-deactivate the minor mode.  The persistent action is to show help
+disactivate the minor mode.  The persistent action is to show help
 about the selected minor mode.

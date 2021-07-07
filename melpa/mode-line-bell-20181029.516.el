@@ -5,7 +5,7 @@
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: convenience
 ;; Package-Version: 20181029.516
-;; Package-Commit: 26ac7d97abdeb762ceaeab6b892f3ed7e3412494
+;; Package-Commit: 4985ba42f5a19f46ddbf9b3622453a9694995ce5
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

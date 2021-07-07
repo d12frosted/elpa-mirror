@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/remvee/spotify-el.git
 
 Updating /mnt/store/melpa/working/spotify/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built spotify in 3.892s, finished at Wed Jul  7 09:21:44 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.8K Jul  7 09:21 packages/spotify-20181030.810.el
+4.0K -rw-r--r-- 1 root root  331 Jul  7 09:21 packages/spotify-20181030.810.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:21 packages/spotify-badge.svg
+4.0K -rw-r--r-- 1 root root  301 Jul  7 09:21 packages/spotify-readme.txt

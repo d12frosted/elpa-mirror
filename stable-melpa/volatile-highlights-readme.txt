@@ -19,7 +19,6 @@ load-path" within Emacs), then add the following line to your
    (require 'volatile-highlights)
    (volatile-highlights-mode t)
 
-
 USING
 =====
 To toggle volatile highlighting, type `M-x volatile-highlights-mode <RET>'.
@@ -67,23 +66,3 @@ Highlighting support for each operations can be turned on/off individually
 via customization. Also check out the customization group
 
   `M-x customize-group RET volatile-highlights RET'
-
-
-EXAMPLE SNIPPETS FOR USING VOLATILE HIGHLIGHTS WITH OTHER PACKAGES
-==================================================================
-
-- vip-mode
-
-  (vhl/define-extension 'vip 'vip-yank)
-  (vhl/install-extension 'vip)
-
-- evil-mode
-
-  (vhl/define-extension 'evil 'evil-paste-after 'evil-paste-before
-                        'evil-paste-pop 'evil-move)
-  (vhl/install-extension 'evil)
-
-- undo-tree
-
-  (vhl/define-extension 'undo-tree 'undo-tree-yank 'undo-tree-move)
-  (vhl/install-extension 'undo-tree)

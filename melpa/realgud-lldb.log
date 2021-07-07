@@ -3,10 +3,26 @@ Fetcher: github
 Source:  https://github.com/realgud/realgud-lldb.git
 
 Updating /mnt/store/melpa/working/realgud-lldb/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/realgud-lldb/
+  to /tmp/realgud-lldbJplFRU/realgud-lldb-20190604.702
+    realgud-lldb.el -> realgud-lldb.el
+    lldb/core.el -> lldb/core.el
+    lldb/init.el -> lldb/init.el
+    lldb/lldb.el -> lldb/lldb.el
+    lldb/track-mode.el -> lldb/track-mode.el
+Created realgud-lldb-20190604.702.tar containing:
+  realgud-lldb-20190604.702/
+  realgud-lldb-20190604.702/lldb/
+  realgud-lldb-20190604.702/lldb/core.el
+  realgud-lldb-20190604.702/lldb/init.el
+  realgud-lldb-20190604.702/lldb/lldb.el
+  realgud-lldb-20190604.702/lldb/track-mode.el
+  realgud-lldb-20190604.702/realgud-lldb-pkg.el
+  realgud-lldb-20190604.702/realgud-lldb.el
+Built realgud-lldb in 4.290s, finished at Wed Jul  7 09:15:54 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  382 Jul  7 09:15 packages/realgud-lldb-20190604.702.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 09:15 packages/realgud-lldb-20190604.702.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:15 packages/realgud-lldb-badge.svg
+4.0K -rw-r--r-- 1 root root   72 Jul  7 09:15 packages/realgud-lldb-readme.txt

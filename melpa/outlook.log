@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/asavonic/outlook.el.git
 
 Updating /mnt/store/melpa/working/outlook/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/outlook/
+  to /tmp/outlookTCUVlu/outlook-20180321.1921
+    outlook-mu4e.el -> outlook-mu4e.el
+    outlook.el -> outlook.el
+Created outlook-20180321.1921.tar containing:
+  outlook-20180321.1921/
+  outlook-20180321.1921/outlook-mu4e.el
+  outlook-20180321.1921/outlook-pkg.el
+  outlook-20180321.1921/outlook.el
+Built outlook in 3.600s, finished at Wed Jul  7 09:09:27 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  315 Jul  7 09:09 packages/outlook-20180321.1921.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 09:09 packages/outlook-20180321.1921.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:09 packages/outlook-badge.svg
+4.0K -rw-r--r-- 1 root root  218 Jul  7 09:09 packages/outlook-readme.txt

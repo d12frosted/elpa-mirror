@@ -1,0 +1,13 @@
+(mykie .
+       [(20150704 1632)
+	((emacs
+	  (24 3))
+	 (cl-lib
+	  (0 5)))
+	"Command multiplexer: Register multiple functions to a keybind" tar
+	((:commit . "ab8f7549f9018c26278d101af1b90997c9e5e0b3")
+	 (:authors
+	  ("Yuta Yamada <cokesboy\"at\"gmail.com>"))
+	 (:maintainer "Yuta Yamada <cokesboy\"at\"gmail.com>")
+	 (:keywords "emacs" "configuration" "keybind")
+	 (:url . "https://github.com/yuutayamada/mykie-el"))])

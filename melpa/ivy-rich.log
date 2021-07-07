@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/Yevgnen/ivy-rich.git
 
 Updating /mnt/store/melpa/working/ivy-rich/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: ivy-rich :files spec is equivalent to the default.
+Built ivy-rich in 5.544s, finished at Wed Jul  7 12:06:03 2021
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root  21K Jul  7 12:06 packages/ivy-rich-20200322.829.el
+4.0K -rw-r--r-- 1 root root  354 Jul  7 12:06 packages/ivy-rich-20200322.829.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:06 packages/ivy-rich-badge.svg
+4.0K -rw-r--r-- 1 root root  159 Jul  7 12:06 packages/ivy-rich-readme.txt

@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/victorhge/iedit.git
 
 Updating /mnt/store/melpa/working/iedit/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/iedit/
+  to /tmp/iedit9KFDye/iedit-20160928.26
+    iedit-lib.el -> iedit-lib.el
+    iedit-rect.el -> iedit-rect.el
+    iedit.el -> iedit.el
+Created iedit-20160928.26.tar containing:
+  iedit-20160928.26/
+  iedit-20160928.26/iedit-lib.el
+  iedit-20160928.26/iedit-pkg.el
+  iedit-20160928.26/iedit-rect.el
+  iedit-20160928.26/iedit.el
+Built iedit in 3.798s, finished at Wed Jul  7 12:04:23 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  379 Jul  7 12:04 packages/iedit-20160928.26.entry
+ 92K -rw-r--r-- 1 root root  90K Jul  7 12:04 packages/iedit-20160928.26.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:04 packages/iedit-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Jul  7 12:04 packages/iedit-readme.txt

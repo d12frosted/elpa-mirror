@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/agzam/exwm-edit.git
 
 Updating /mnt/store/melpa/working/exwm-edit/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built exwm-edit in 3.518s, finished at Wed Jul  7 11:51:43 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jul  7 11:51 packages/exwm-edit-20200728.8.el
+4.0K -rw-r--r-- 1 root root  317 Jul  7 11:51 packages/exwm-edit-20200728.8.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:51 packages/exwm-edit-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Jul  7 11:51 packages/exwm-edit-readme.txt

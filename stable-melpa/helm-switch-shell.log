@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/jamesnvc/helm-switch-shell.git
 
 Updating /mnt/store/melpa/working/helm-switch-shell/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built helm-switch-shell in 8.131s, finished at Wed Jul  7 12:02:17 2021
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Jul  7 12:02 packages/helm-switch-shell-20210106.1810.el
+4.0K -rw-r--r-- 1 root root  523 Jul  7 12:02 packages/helm-switch-shell-20210106.1810.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:02 packages/helm-switch-shell-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul  7 12:02 packages/helm-switch-shell-readme.txt

@@ -3,10 +3,18 @@ Fetcher: github
 Source:  https://github.com/rejeep/ruby-tools.el.git
 
 Updating /mnt/store/melpa/working/ruby-tools/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ruby-tools/
+  to /tmp/ruby-toolsgcrLNf/ruby-tools-20140113.845
+    ruby-tools-pkg.el -> ruby-tools-pkg.el
+    ruby-tools.el -> ruby-tools.el
+Created ruby-tools-20140113.845.tar containing:
+  ruby-tools-20140113.845/
+  ruby-tools-20140113.845/ruby-tools-pkg.el
+  ruby-tools-20140113.845/ruby-tools.el
+Built ruby-tools in 4.119s, finished at Wed Jul  7 09:17:28 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  402 Jul  7 09:17 packages/ruby-tools-20140113.845.entry
+ 12K -rw-r--r-- 1 root root  10K Jul  7 09:17 packages/ruby-tools-20140113.845.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:17 packages/ruby-tools-badge.svg
+4.0K -rw-r--r-- 1 root root  378 Jul  7 09:17 packages/ruby-tools-readme.txt

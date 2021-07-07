@@ -1,0 +1,17 @@
+(cmake-ide .
+	   [(20160701 1837)
+	    ((emacs
+	      (24 1))
+	     (cl-lib
+	      (0 5))
+	     (seq
+	      (1 11))
+	     (levenshtein
+	      (0)))
+	    "Calls CMake to find out include paths and other compiler flags" single
+	    ((:commit . "a2e476ad42e61075cae9beb35fb83e3c1bf8619e")
+	     (:authors
+	      ("Atila Neves" . "atila.neves@gmail.com"))
+	     (:maintainer "Atila Neves" . "atila.neves@gmail.com")
+	     (:keywords "languages")
+	     (:url . "http://github.com/atilaneves/cmake-ide"))])

@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/hawk/lux.git
 
 Updating /mnt/store/melpa/working/lux-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built lux-mode in 4.355s, finished at Wed Jul  7 08:59:33 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jul  7 08:59 packages/lux-mode-20210607.1130.el
+4.0K -rw-r--r-- 1 root root  291 Jul  7 08:59 packages/lux-mode-20210607.1130.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:59 packages/lux-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  233 Jul  7 08:59 packages/lux-mode-readme.txt

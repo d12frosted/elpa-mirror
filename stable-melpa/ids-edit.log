@@ -3,10 +3,21 @@ Fetcher: github
 Source:  https://github.com/kawabata/ids-edit.git
 
 Updating /mnt/store/melpa/working/ids-edit/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ids-edit/
+  to /tmp/ids-editIFW6eO/ids-edit-20170818.1502
+    ids-edit.el -> ids-edit.el
+    ids-cdp.txt -> ids-cdp.txt
+    ucs-strokes.txt -> ucs-strokes.txt
+Created ids-edit-20170818.1502.tar containing:
+  ids-edit-20170818.1502/
+  ids-edit-20170818.1502/ids-cdp.txt
+  ids-edit-20170818.1502/ids-edit-pkg.el
+  ids-edit-20170818.1502/ids-edit.el
+  ids-edit-20170818.1502/ucs-strokes.txt
+Built ids-edit in 3.685s, finished at Wed Jul  7 12:04:20 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  408 Jul  7 12:04 packages/ids-edit-20170818.1502.entry
+3.5M -rw-r--r-- 1 root root 3.5M Jul  7 12:04 packages/ids-edit-20170818.1502.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 12:04 packages/ids-edit-badge.svg
+4.0K -rw-r--r-- 1 root root 2.1K Jul  7 12:04 packages/ids-edit-readme.txt

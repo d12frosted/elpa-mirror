@@ -3,10 +3,23 @@ Fetcher: github
 Source:  https://github.com/yuutayamada/flycheck-tip.git
 
 Updating /mnt/store/melpa/working/flycheck-tip/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flycheck-tip/
+  to /tmp/flycheck-tip5KO1o0/flycheck-tip-20150725.2240
+    eclim-tip.el -> eclim-tip.el
+    error-tip.el -> error-tip.el
+    flycheck-tip.el -> flycheck-tip.el
+    flymake-tip.el -> flymake-tip.el
+Created flycheck-tip-20150725.2240.tar containing:
+  flycheck-tip-20150725.2240/
+  flycheck-tip-20150725.2240/eclim-tip.el
+  flycheck-tip-20150725.2240/error-tip.el
+  flycheck-tip-20150725.2240/flycheck-tip-pkg.el
+  flycheck-tip-20150725.2240/flycheck-tip.el
+  flycheck-tip-20150725.2240/flymake-tip.el
+Built flycheck-tip in 3.728s, finished at Wed Jul  7 11:54:25 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  429 Jul  7 11:54 packages/flycheck-tip-20150725.2240.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 11:54 packages/flycheck-tip-20150725.2240.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:54 packages/flycheck-tip-badge.svg
+4.0K -rw-r--r-- 1 root root  612 Jul  7 11:54 packages/flycheck-tip-readme.txt

@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/death/ssh-tunnels.git
 
 Updating /mnt/store/melpa/working/ssh-tunnels/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ssh-tunnels/
+  to /tmp/ssh-tunnels9XVUsu/ssh-tunnels-20190622.931
+    helm-ssh-tunnels.el -> helm-ssh-tunnels.el
+    ssh-tunnels.el -> ssh-tunnels.el
+Created ssh-tunnels-20190622.931.tar containing:
+  ssh-tunnels-20190622.931/
+  ssh-tunnels-20190622.931/helm-ssh-tunnels.el
+  ssh-tunnels-20190622.931/ssh-tunnels-pkg.el
+  ssh-tunnels-20190622.931/ssh-tunnels.el
+Built ssh-tunnels in 4.019s, finished at Wed Jul  7 09:22:05 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  380 Jul  7 09:22 packages/ssh-tunnels-20190622.931.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 09:22 packages/ssh-tunnels-20190622.931.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:22 packages/ssh-tunnels-badge.svg
+4.0K -rw-r--r-- 1 root root  789 Jul  7 09:22 packages/ssh-tunnels-readme.txt

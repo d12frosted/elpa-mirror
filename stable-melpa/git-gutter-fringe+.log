@@ -3,10 +3,10 @@ Fetcher: github
 Source:  https://github.com/nonsequitur/git-gutter-fringe-plus.git
 
 Updating /mnt/store/melpa/working/git-gutter-fringe+/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Note: git-gutter-fringe+ :files spec is equivalent to the default.
+Built git-gutter-fringe+ in 3.595s, finished at Wed Jul  7 11:57:14 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jul  7 11:57 packages/git-gutter-fringe+-20130523.1926.el
+4.0K -rw-r--r-- 1 root root  448 Jul  7 11:57 packages/git-gutter-fringe+-20130523.1926.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:57 packages/git-gutter-fringe+-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 11:57 packages/git-gutter-fringe+-readme.txt

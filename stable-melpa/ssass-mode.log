@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/AdamNiederer/ssass-mode.git
 
 Updating /mnt/store/melpa/working/ssass-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built ssass-mode in 4.990s, finished at Wed Jul  7 09:22:02 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.9K Jul  7 09:22 packages/ssass-mode-20180428.2039.el
+4.0K -rw-r--r-- 1 root root  417 Jul  7 09:22 packages/ssass-mode-20180428.2039.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:22 packages/ssass-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  225 Jul  7 09:22 packages/ssass-mode-readme.txt

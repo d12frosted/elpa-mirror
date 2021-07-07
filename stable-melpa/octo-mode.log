@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/cryon/octo-mode.git
 
 Updating /mnt/store/melpa/working/octo-mode/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built octo-mode in 4.980s, finished at Wed Jul  7 09:06:03 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.1K Jul  7 09:06 packages/octo-mode-20161008.1229.el
+4.0K -rw-r--r-- 1 root root  369 Jul  7 09:06 packages/octo-mode-20161008.1229.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/octo-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul  7 09:06 packages/octo-mode-readme.txt

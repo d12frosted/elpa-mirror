@@ -3,10 +3,8 @@ Fetcher: github
 Source:  https://github.com/mswift42/soft-stone-theme.git
 
 Updating /mnt/store/melpa/working/soft-stone-theme/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built soft-stone-theme in 3.525s, finished at Wed Jul  7 09:21:08 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.8K Jul  7 09:21 packages/soft-stone-theme-20140614.835.el
+4.0K -rw-r--r-- 1 root root  326 Jul  7 09:21 packages/soft-stone-theme-20140614.835.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:21 packages/soft-stone-theme-badge.svg

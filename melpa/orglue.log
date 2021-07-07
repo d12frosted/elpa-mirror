@@ -3,10 +3,19 @@ Fetcher: github
 Source:  https://github.com/yoshinari-nomura/orglue.git
 
 Updating /mnt/store/melpa/working/orglue/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/orglue/
+  to /tmp/orgluetixlrz/orglue-20200411.311
+    orglue-publish.el -> orglue-publish.el
+    orglue.el -> orglue.el
+Created orglue-20200411.311.tar containing:
+  orglue-20200411.311/
+  orglue-20200411.311/orglue-pkg.el
+  orglue-20200411.311/orglue-publish.el
+  orglue-20200411.311/orglue.el
+Built orglue in 8.425s, finished at Wed Jul  7 09:09:06 2021
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  308 Jul  7 09:09 packages/orglue-20200411.311.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 09:09 packages/orglue-20200411.311.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:09 packages/orglue-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 09:09 packages/orglue-readme.txt

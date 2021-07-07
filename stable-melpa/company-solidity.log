@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/ethereum/emacs-solidity.git
 
 Updating /mnt/store/melpa/working/company-solidity/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built company-solidity in 4.061s, finished at Wed Jul  7 11:40:49 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Jul  7 11:40 packages/company-solidity-20181117.1518.el
+4.0K -rw-r--r-- 1 root root  508 Jul  7 11:40 packages/company-solidity-20181117.1518.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:40 packages/company-solidity-badge.svg
+4.0K -rw-r--r-- 1 root root  122 Jul  7 11:40 packages/company-solidity-readme.txt

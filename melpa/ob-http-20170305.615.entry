@@ -1,0 +1,12 @@
+(ob-http .
+	 [(20170305 615)
+	  ((s
+	    (1 9 0))
+	   (cl-lib
+	    (0 5)))
+	  "http request in org-mode babel" tar
+	  ((:commit . "20393dd8130d21a3f06d8514da14c5ffdd88ae44")
+	   (:authors
+	    ("ZHOU Feng" . "zf.pascal@gmail.com"))
+	   (:maintainer "ZHOU Feng" . "zf.pascal@gmail.com")
+	   (:url . "http://github.com/zweifisch/ob-http"))])

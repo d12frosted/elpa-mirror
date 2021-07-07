@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/freesteph/elescope.git
 
 Updating /mnt/store/melpa/working/elescope/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built elescope in 4.549s, finished at Wed Jul  7 11:47:25 2021
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.4K Jul  7 11:47 packages/elescope-20210127.1111.el
+4.0K -rw-r--r-- 1 root root  475 Jul  7 11:47 packages/elescope-20210127.1111.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:47 packages/elescope-badge.svg
+4.0K -rw-r--r-- 1 root root   36 Jul  7 11:47 packages/elescope-readme.txt

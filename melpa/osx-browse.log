@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/rolandwalker/osx-browse.git
 
 Updating /mnt/store/melpa/working/osx-browse/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built osx-browse in 4.730s, finished at Wed Jul  7 09:09:18 2021
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root  21K Jul  7 09:09 packages/osx-browse-20131026.1917.el
+4.0K -rw-r--r-- 1 root root  452 Jul  7 09:09 packages/osx-browse-20131026.1917.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:09 packages/osx-browse-badge.svg
+8.0K -rw-r--r-- 1 root root 5.1K Jul  7 09:09 packages/osx-browse-readme.txt

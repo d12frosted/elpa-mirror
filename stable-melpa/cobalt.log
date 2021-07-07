@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/cobalt-org/cobalt.el.git
 
 Updating /mnt/store/melpa/working/cobalt/
-Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
-
-    -a, --auto            set refs/remotes/<name>/HEAD according to remote
-    -d, --delete          delete refs/remotes/<name>/HEAD
-
-
+Built cobalt in 9.108s, finished at Wed Jul  7 11:39:33 2021
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jul  7 11:39 packages/cobalt-20180304.1155.el
+4.0K -rw-r--r-- 1 root root  392 Jul  7 11:39 packages/cobalt-20180304.1155.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:39 packages/cobalt-badge.svg
+4.0K -rw-r--r-- 1 root root  178 Jul  7 11:39 packages/cobalt-readme.txt
