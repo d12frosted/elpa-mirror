@@ -177,6 +177,11 @@ Advanced usage:
     The global minor mode causes button-lock to be turned off/back
     on for every buffer.
 
+    This package is generally incompatible with interactive modes
+    such as `comint-mode' and derivatives, due conflicting uses
+    of the rear-nonsticky text property.  To change this, set
+    customizable variable wiki-nav-rear-nonsticky.
+
 [[<Compatibility and Requirements]]
 
     GNU Emacs version 24.5-devel     : not tested

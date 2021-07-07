@@ -1,0 +1,13 @@
+(osx-browse .
+	    [(20140508 2041)
+	     ((string-utils
+	       (0 3 2))
+	      (browse-url-dwim
+	       (0 6 6)))
+	     "Web browsing helpers for OS X" single
+	     ((:commit . "44ded7cc3a7ee426c1c3257fae534c121f7e752e")
+	      (:authors
+	       ("Roland Walker" . "walker@pobox.com"))
+	      (:maintainer "Roland Walker" . "walker@pobox.com")
+	      (:keywords "hypermedia" "external")
+	      (:url . "http://github.com/rolandwalker/osx-browse"))])

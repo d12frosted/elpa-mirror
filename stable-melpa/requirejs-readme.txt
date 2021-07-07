@@ -18,3 +18,10 @@ Here is a sample configuration that may be helpful to get going.
              (local-set-key [(super a) ?a ?r ] 'requirejs-add-to-define)
              (local-set-key [(super a) ?r ?j ] 'requirejs-jump-to-module)
              ))
+
+
+(setq requirejs-define-header-hook
+      '(lambda ()
+         (insert
+          (format "// (c) Copyright %s ACME, Inc.  All rights reserved.\n"
+                  (format-time-string "%Y")))))

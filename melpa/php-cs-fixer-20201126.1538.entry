@@ -1,0 +1,11 @@
+(php-cs-fixer .
+	      [(20201126 1538)
+	       ((cl-lib
+		 (0 5)))
+	       "php-cs-fixer wrapper." single
+	       ((:commit . "c5b5d8a4986b31bade5e2a57131469bf90630db8")
+		(:authors
+		 ("Philippe Ivaldi for OVYA"))
+		(:maintainer "Philippe Ivaldi for OVYA")
+		(:keywords "languages" "php")
+		(:url . "https://github.com/OVYA/php-cs-fixer"))])

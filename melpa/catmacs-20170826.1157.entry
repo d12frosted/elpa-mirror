@@ -1,0 +1,11 @@
+(catmacs .
+	 [(20170826 1157)
+	  ((emacs
+	    (24)))
+	  "Simple CAT interface for Yaesu Transceivers." single
+	  ((:commit . "65d3e0563abe6ff9577202cf2278074d4130fbdd")
+	   (:authors
+	    ("Frank Singleton" . "b17flyboy@gmail.com"))
+	   (:maintainer "Frank Singleton" . "b17flyboy@gmail.com")
+	   (:keywords "comm" "hardware")
+	   (:url . "https://bitbucket.org/pymaximus/catmacs"))])

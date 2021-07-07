@@ -1,0 +1,13 @@
+(vdiff .
+       [(20210426 155)
+	((emacs
+	  (24 4))
+	 (hydra
+	  (0 13 0)))
+	"A diff tool similar to  vimdiff" single
+	((:commit . "84b8243d9f5d8082b05794dbc998d43dbdd7676a")
+	 (:authors
+	  ("Justin Burkett" . "justin@burkett.cc"))
+	 (:maintainer "Justin Burkett" . "justin@burkett.cc")
+	 (:keywords "diff")
+	 (:url . "https://github.com/justbur/emacs-vdiff"))])

@@ -1,0 +1,13 @@
+(mocha .
+       [(20200729 1130)
+	((js2-mode
+	  (20150909))
+	 (f
+	  (0 18)))
+	"Run Mocha or Jasmine tests" single
+	((:commit . "6a72fa20e7be6e55c09b1bc9887ee09c5df28e45")
+	 (:authors
+	  ("Al Scott"))
+	 (:maintainer "Al Scott")
+	 (:keywords "javascript" "mocha" "jasmine")
+	 (:url . "http://github.com/scottaj/mocha.el"))])

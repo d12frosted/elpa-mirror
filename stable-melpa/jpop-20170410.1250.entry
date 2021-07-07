@@ -1,0 +1,15 @@
+(jpop .
+      [(20170410 1250)
+       ((emacs
+	 (24))
+	(dash
+	 (2 11 0))
+	(cl-lib
+	 (0 5)))
+       "Lightweight project caching and navigation framework" tar
+       ((:commit . "7628b03260be96576b34459d45959ee77d8b2110")
+	(:authors
+	 ("Dom Charlesworth" . "dgc336@gmail.com"))
+	(:maintainer "Dom Charlesworth" . "dgc336@gmail.com")
+	(:keywords "project" "convenience")
+	(:url . "https://github.com/domtronn/jpop.el"))])

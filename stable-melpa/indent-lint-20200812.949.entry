@@ -1,0 +1,15 @@
+(indent-lint .
+	     [(20200812 949)
+	      ((emacs
+		(25 1))
+	       (async-await
+		(1 0))
+	       (async
+		(1 9 4)))
+	      "Async indentation checker" single
+	      ((:commit . "c55f4ded11e8e50a96f43675a071354a8fb501c3")
+	       (:authors
+		("Naoya Yamashita" . "conao3@gmail.com"))
+	       (:maintainer "Naoya Yamashita" . "conao3@gmail.com")
+	       (:keywords "tools")
+	       (:url . "https://github.com/conao3/indent-lint.el"))])

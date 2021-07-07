@@ -1,0 +1,12 @@
+(rectangle-utils .
+		 [(20190411 1757)
+		  ((emacs
+		    (24))
+		   (cl-lib
+		    (0 5)))
+		  "Some useful rectangle functions." single
+		  ((:commit . "46f7e73340fee40c1ab9a4e766a08ae3fce83ebe")
+		   (:authors
+		    ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
+		   (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
+		   (:url . "https://github.com/thierryvolpiatto/rectangle-utils"))])

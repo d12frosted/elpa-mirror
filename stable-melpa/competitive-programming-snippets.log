@@ -5,178 +5,59 @@ Source:  https://github.com/sei40kr/competitive-programming-snippets.git
 Updating /mnt/store/melpa/working/competitive-programming-snippets/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/competitive-programming-snippets/
-  to /tmp/competitive-programming-snippetsz5p9jM/competitive-programming-snippets-20200213.1521
+  to /tmp/competitive-programming-snippets0ZarrJ/competitive-programming-snippets-20201115.1702
     competitive-programming-snippets.el -> competitive-programming-snippets.el
     snippets => snippets
-Created competitive-programming-snippets-20200213.1521.tar containing:
-  competitive-programming-snippets-20200213.1521/
-  competitive-programming-snippets-20200213.1521/competitive-programming-snippets-pkg.el
-  competitive-programming-snippets-20200213.1521/competitive-programming-snippets.el
-  competitive-programming-snippets-20200213.1521/snippets/
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/.yas-make-groups
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/competitive programming/
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/competitive programming/atcoder
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/competitive programming/leetcode
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/complex library/
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/complex library/complex
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/2dbit
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/generalbit
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/map
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/mergesorttree
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/persistentsegtree
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/rangeupdatepointquery
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/rangeupdaterangequery
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/rmqbasic
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/segtree
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/segtreelazy
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/sparsetable
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/stockspan
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/unionfind
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/data structs/xormax
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/dp/
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/dp/convexhulltrick
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/dp/lis
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/dp/longestvalidparentheses
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/dp/lpsino(n)
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/general/
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/general/bigint
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/general/fastio
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/general/modoptimisation
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/general/prefixsums
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/articulation
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/bellmanford
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/dijkstra
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/dinic
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/edmondkarp
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/hopcraftkarp
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/karger
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/kruskal
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/lca
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/mincut
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/scc
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/topologicalsort
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/graphs/triangles
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/basicmaths
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/binomialsummodp
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/chineseremainder
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/combinations
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/countprimes
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/discretelog
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/eucliddiophantine
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/eulertotientfunction
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/fibonaccimodm
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/general-combinations
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/millerrabin
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/mobius
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/partition(number-theory)
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/pollardbrent
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/primesieve
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/primitiveroot
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/stirling
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/maths/summation
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/matrices/
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/matrices/gaussxormax
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/matrices/matrix
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/matrices/matrixmodular
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/polynomials/
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/polynomials/fft
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/polynomials/fft2
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/polynomials/fftmod
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/polynomials/ntt
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/strings/
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/strings/kmp
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/strings/polynomialhashing
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/strings/suffixarray
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/strings/suffixtree
-  competitive-programming-snippets-20200213.1521/snippets/c++-mode/strings/zfunction
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/.yas-make-groups
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/data structures/
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/data structures/heap
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/data structures/linklist
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/data structures/queue
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/data structures/stack
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/graphs/
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/graphs/articulationpoint
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/graphs/bfs
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/graphs/biconnectedcomp
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/graphs/bridges
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/graphs/cycle
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/graphs/dfs
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/graphs/dijkstra
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/graphs/graph
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/graphs/kosaraju
-  competitive-programming-snippets-20200213.1521/snippets/c-mode/graphs/toposort
-  competitive-programming-snippets-20200213.1521/snippets/haskell-mode/
-  competitive-programming-snippets-20200213.1521/snippets/haskell-mode/.yas-make-groups
-  competitive-programming-snippets-20200213.1521/snippets/haskell-mode/competitive programming/
-  competitive-programming-snippets-20200213.1521/snippets/haskell-mode/competitive programming/atcoder
-  competitive-programming-snippets-20200213.1521/snippets/js-mode/
-  competitive-programming-snippets-20200213.1521/snippets/js-mode/.yas-make-groups
-  competitive-programming-snippets-20200213.1521/snippets/js-mode/competitive programming/
-  competitive-programming-snippets-20200213.1521/snippets/js-mode/competitive programming/atcoder
-  competitive-programming-snippets-20200213.1521/snippets/js2-mode/
-  competitive-programming-snippets-20200213.1521/snippets/js2-mode/.yas-parents
-  competitive-programming-snippets-20200213.1521/snippets/js3-mode/
-  competitive-programming-snippets-20200213.1521/snippets/js3-mode/.yas-parents
-  competitive-programming-snippets-20200213.1521/snippets/python-mode/
-  competitive-programming-snippets-20200213.1521/snippets/python-mode/.yas-make-groups
-  competitive-programming-snippets-20200213.1521/snippets/python-mode/competitive programming/
-  competitive-programming-snippets-20200213.1521/snippets/python-mode/competitive programming/atcoder
-  competitive-programming-snippets-20200213.1521/snippets/python-mode/maths/
-  competitive-programming-snippets-20200213.1521/snippets/python-mode/maths/basics
-  competitive-programming-snippets-20200213.1521/snippets/python-mode/maths/combinations
-  competitive-programming-snippets-20200213.1521/snippets/python-mode/maths/factorise
-  competitive-programming-snippets-20200213.1521/snippets/python-mode/maths/modinverse
-  competitive-programming-snippets-20200213.1521/snippets/python-mode/maths/primesieve
-  competitive-programming-snippets-20200213.1521/snippets/python-mode/polynomials/
-  competitive-programming-snippets-20200213.1521/snippets/python-mode/polynomials/64bit-fftmod
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/.yas-make-groups
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/competitive programming/
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/competitive programming/debug
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/competitive programming/dinitz
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/competitive programming/pqueue
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/data structure/
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/data structure/bitset
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/data structure/fenwicktree
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/data structure/fibonacciheap
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/data structure/rangeaddsegmenttree
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/data structure/segmenttree
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/data structure/sparsetable
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/data structure/suffixarray
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/data structure/treap
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/data structure/unionfind
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/geometry/
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/geometry/convexhull
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/geometry/minimumboundingcircle
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/graph/
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/graph/bridgedetection
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/graph/lca
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/graph/maximumflow
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/graph/mincostflow
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/graph/shortestpath
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/graph/stronglyconnectedcomponents
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/io/
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/io/input
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/math/
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/math/chineseremaindertheorem
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/math/combination
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/math/cumulativesum
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/math/maxrectangle
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/math/modint
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/string/
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/string/rollinghash
-  competitive-programming-snippets-20200213.1521/snippets/rust-mode/string/zalgorithm
-  competitive-programming-snippets-20200213.1521/snippets/rustic-mode/
-  competitive-programming-snippets-20200213.1521/snippets/rustic-mode/.yas-parents
-Built competitive-programming-snippets in 4.968s, finished at Wed Jul  7 11:41:01 2021
+Created competitive-programming-snippets-20201115.1702.tar containing:
+  competitive-programming-snippets-20201115.1702/
+  competitive-programming-snippets-20201115.1702/competitive-programming-snippets-pkg.el
+  competitive-programming-snippets-20201115.1702/competitive-programming-snippets.el
+  competitive-programming-snippets-20201115.1702/snippets/
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/.yas-make-groups
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Data Structure/
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Data Structure/bitset
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Data Structure/fenwicktree
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Data Structure/fibonacciheap
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Data Structure/persistentarray
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Data Structure/rangeaddsegmenttree
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Data Structure/segmenttree
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Data Structure/sparsetable
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Data Structure/suffixarray
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Data Structure/treap
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Data Structure/unionfind
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Geometry/
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Geometry/circle
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Geometry/convexhull
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Geometry/minimumboundingcircle
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Graph/
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Graph/bridgedetection
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Graph/costscalingpushrelabel
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Graph/lca
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Graph/maximumflow
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Graph/mincostflow
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Graph/shortestpath
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Graph/stronglyconnectedcomponents
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/IO/
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/IO/input
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Math/
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Math/chineseremaindertheorem
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Math/combination
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Math/cumulativesum
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Math/fastfouriertransform
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Math/floorsum
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Math/lagrangeinterpolation
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Math/maxrectangle
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Math/modint
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/Math/nextpermutation
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/String/
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/String/rollinghash
+  competitive-programming-snippets-20201115.1702/snippets/rust-mode/String/zalgorithm
+  competitive-programming-snippets-20201115.1702/snippets/rustic-mode/
+  competitive-programming-snippets-20201115.1702/snippets/rustic-mode/.yas-parents
+Built competitive-programming-snippets in 4.161s, finished at 2021-07-07T18:04:33+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  488 Jul  7 11:41 packages/competitive-programming-snippets-20200213.1521.entry
-380K -rw-r--r-- 1 root root 380K Jul  7 11:41 packages/competitive-programming-snippets-20200213.1521.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:41 packages/competitive-programming-snippets-badge.svg
-4.0K -rw-r--r-- 1 root root   48 Jul  7 11:41 packages/competitive-programming-snippets-readme.txt
+4.0K -rw-r--r-- 1 root root  488 Jul  7 18:04 packages/competitive-programming-snippets-20201115.1702.entry
+120K -rw-r--r-- 1 root root 120K Jul  7 18:04 packages/competitive-programming-snippets-20201115.1702.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:04 packages/competitive-programming-snippets-badge.svg
+4.0K -rw-r--r-- 1 root root   47 Jul  7 18:04 packages/competitive-programming-snippets-readme.txt

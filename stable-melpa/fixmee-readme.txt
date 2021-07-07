@@ -140,6 +140,11 @@ Bugs
     when sort headers are clicked while a different window is
     selected.
 
+    This package is generally incompatible with interactive modes
+    such as `comint-mode' and derivatives, due conflicting uses
+    of the rear-nonsticky text property.  To change this, set
+    customizable variable fixmee-rear-nonsticky.
+
 TODO
 
     Push mark for navigation which happens from the listview

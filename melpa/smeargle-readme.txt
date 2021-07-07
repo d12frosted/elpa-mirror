@@ -1,3 +1,3 @@
-`smeargle' is Emacs port of Vim's smeargle. `smeargle' provides highlighting
-regions by last update time / age of commits. We can know which part is changed
-recently and which part is not changed recently.
+`smeargle' is an Emacs port of Vim's smeargle.  `smeargle'
+highlights lines in a buffer by the last update time / age of last
+commit as a visual indication which parts have been changed recently.

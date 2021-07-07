@@ -3,9 +3,18 @@ bibtex-completion backend.  If you are familiar with helm-bibtex,
 this is the ivy version.
 
 News:
-- 04/18/2016: Improved support for Mendely/Jabref/Zotero way of
-  referencing PDFs.
-- 04/12/2016: Published ivy version of helm-bibtex.
+- 09/06/2018: Added virtual APA field `author-or-editor` for use in
+  notes templates.
+- 02/06/2018: Reload bibliography proactively when bib files are
+  changed.
+- 21/10/2017: Added support for multiple PDFs and other file
+  types.  See `bibtex-completion-pdf-extension' and
+  `bibtex-completion-find-additional-pdfs' for details.
+- 10/10/2017: Added support for ~@string~ constants.
+- 02/10/2017: Date field is used when year is undefined.
+- 29/09/2017: BibTeX entry, citation macro, or org-bibtex entry at
+  point, will be pre-selected in helm-bibtex and ivy-bibtex giving
+  quick access to PDFs and other functions.
 
 See NEWS.org for old news.
 

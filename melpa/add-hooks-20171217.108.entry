@@ -1,9 +1,0 @@
-(add-hooks .
-	   [(20171217 108)
-	    nil "Functions for setting multiple hooks" single
-	    ((:commit . "a1043b7cdb1ea98055a2c99f8d37584a553ca362")
-	     (:authors
-	      ("Nick McCurdy" . "nick@nickmccurdy.com"))
-	     (:maintainer "Nick McCurdy" . "nick@nickmccurdy.com")
-	     (:keywords "lisp")
-	     (:url . "https://github.com/nickmccurdy/add-hooks"))])

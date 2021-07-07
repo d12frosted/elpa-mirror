@@ -13,4 +13,4 @@ To use this package, add following code to your init.el or .emacs
          (ac-ispell-setup)))
 
    (add-hook 'git-commit-mode-hook 'ac-ispell-ac-setup)
-   (add-hook 'mail-mode-hook 'ac-ispell-ac-setupa)
+   (add-hook 'mail-mode-hook 'ac-ispell-ac-setup)

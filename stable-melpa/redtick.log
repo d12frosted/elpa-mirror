@@ -3,10 +3,22 @@ Fetcher: github
 Source:  https://github.com/ferfebles/redtick.git
 
 Updating /mnt/store/melpa/working/redtick/
-Note: redtick :files spec is equivalent to the default.
-Built redtick in 4.135s, finished at Wed Jul  7 09:16:16 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/redtick/
+  to /tmp/redtickHEtWBg/redtick-20180424.2136
+    redtick.el -> redtick.el
+    resources => resources
+Created redtick-20180424.2136.tar containing:
+  redtick-20180424.2136/
+  redtick-20180424.2136/redtick-pkg.el
+  redtick-20180424.2136/redtick.el
+  redtick-20180424.2136/resources/
+  redtick-20180424.2136/resources/end-rest.mp3
+  redtick-20180424.2136/resources/rest.wav
+  redtick-20180424.2136/resources/work.wav
+Built redtick in 3.356s, finished at 2021-07-07T18:53:12+0000
  ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.5K Jul  7 09:16 packages/redtick-20160403.2032.el
-4.0K -rw-r--r-- 1 root root  310 Jul  7 09:16 packages/redtick-20160403.2032.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:16 packages/redtick-badge.svg
-4.0K -rw-r--r-- 1 root root  548 Jul  7 09:16 packages/redtick-readme.txt
+4.0K -rw-r--r-- 1 root root  301 Jul  7 18:53 packages/redtick-20180424.2136.entry
+532K -rw-r--r-- 1 root root 530K Jul  7 18:53 packages/redtick-20180424.2136.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:53 packages/redtick-badge.svg
+4.0K -rw-r--r-- 1 root root  718 Jul  7 18:53 packages/redtick-readme.txt

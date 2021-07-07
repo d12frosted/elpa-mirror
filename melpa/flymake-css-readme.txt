@@ -1,4 +1,3 @@
-
 Usage:
   (require 'flymake-css)
   (add-hook 'css-mode-hook 'flymake-css-load)

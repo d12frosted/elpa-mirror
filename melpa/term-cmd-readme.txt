@@ -14,7 +14,7 @@ Emacs.
 
 This is a library, and doesn't make any user-visible changes.  For
 an example of something that uses it, see the 'term-alert' package
-(https://github.com/CallumCameron/term-alert).
+(https://github.com/calliecameron/term-alert).
 
 
 Usage

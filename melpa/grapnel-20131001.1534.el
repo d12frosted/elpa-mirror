@@ -5,7 +5,7 @@
 ;; Author: David Leatherman <leathekd@gmail.com>
 ;; URL: http://www.github.com/leathekd/grapnel
 ;; Package-Version: 20131001.1534
-;; Package-Commit: 7387234eb3f0285a490fddb1e06a4bf029719fb7
+;; Package-Commit: fbd0f9a51139973d35e4014855964fa435e8ecaf
 ;; Version: 0.5.3
 
 ;; This file is not part of GNU Emacs.

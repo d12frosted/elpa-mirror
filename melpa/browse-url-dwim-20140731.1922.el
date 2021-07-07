@@ -6,7 +6,7 @@
 ;; Homepage: http://github.com/rolandwalker/browse-url-dwim
 ;; URL: http://raw.githubusercontent.com/rolandwalker/browse-url-dwim/master/browse-url-dwim.el
 ;; Package-Version: 20140731.1922
-;; Package-Commit: 11f1c53126619c7ef1bb5f5d6914ce0b3cce0e30
+;; Package-Commit: 3d611dbb167c286109ac53995ad68286d87aafb9
 ;; Version: 0.6.8
 ;; Last-Updated: 31 Jul 2014
 ;; EmacsWiki: BrowseUrlDwim

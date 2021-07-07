@@ -5,9 +5,11 @@ Source:  https://github.com/Fuco1/smartparens.git
 Updating /mnt/store/melpa/working/smartparens/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/smartparens/
-  to /tmp/smartparenszCrxBY/smartparens-20171117.1433
+  to /tmp/smartparensFXoht6/smartparens-20210529.1129
+    smartparens-c.el -> smartparens-c.el
     smartparens-clojure.el -> smartparens-clojure.el
     smartparens-config.el -> smartparens-config.el
+    smartparens-crystal.el -> smartparens-crystal.el
     smartparens-elixir.el -> smartparens-elixir.el
     smartparens-ess.el -> smartparens-ess.el
     smartparens-haskell.el -> smartparens-haskell.el
@@ -21,36 +23,42 @@ Copying files (->) and directories (=>)
     smartparens-pkg.el -> smartparens-pkg.el
     smartparens-python.el -> smartparens-python.el
     smartparens-racket.el -> smartparens-racket.el
+    smartparens-rst.el -> smartparens-rst.el
     smartparens-ruby.el -> smartparens-ruby.el
     smartparens-rust.el -> smartparens-rust.el
     smartparens-scala.el -> smartparens-scala.el
     smartparens-text.el -> smartparens-text.el
     smartparens.el -> smartparens.el
-Created smartparens-20171117.1433.tar containing:
-  smartparens-20171117.1433/
-  smartparens-20171117.1433/smartparens-clojure.el
-  smartparens-20171117.1433/smartparens-config.el
-  smartparens-20171117.1433/smartparens-elixir.el
-  smartparens-20171117.1433/smartparens-ess.el
-  smartparens-20171117.1433/smartparens-haskell.el
-  smartparens-20171117.1433/smartparens-html.el
-  smartparens-20171117.1433/smartparens-javascript.el
-  smartparens-20171117.1433/smartparens-latex.el
-  smartparens-20171117.1433/smartparens-lua.el
-  smartparens-20171117.1433/smartparens-markdown.el
-  smartparens-20171117.1433/smartparens-ml.el
-  smartparens-20171117.1433/smartparens-org.el
-  smartparens-20171117.1433/smartparens-pkg.el
-  smartparens-20171117.1433/smartparens-python.el
-  smartparens-20171117.1433/smartparens-racket.el
-  smartparens-20171117.1433/smartparens-ruby.el
-  smartparens-20171117.1433/smartparens-rust.el
-  smartparens-20171117.1433/smartparens-scala.el
-  smartparens-20171117.1433/smartparens-text.el
-  smartparens-20171117.1433/smartparens.el
-Built smartparens in 3.966s, finished at Wed Jul  7 09:20:44 2021
+    sp-sublimetext-like.el -> sp-sublimetext-like.el
+Created smartparens-20210529.1129.tar containing:
+  smartparens-20210529.1129/
+  smartparens-20210529.1129/smartparens-c.el
+  smartparens-20210529.1129/smartparens-clojure.el
+  smartparens-20210529.1129/smartparens-config.el
+  smartparens-20210529.1129/smartparens-crystal.el
+  smartparens-20210529.1129/smartparens-elixir.el
+  smartparens-20210529.1129/smartparens-ess.el
+  smartparens-20210529.1129/smartparens-haskell.el
+  smartparens-20210529.1129/smartparens-html.el
+  smartparens-20210529.1129/smartparens-javascript.el
+  smartparens-20210529.1129/smartparens-latex.el
+  smartparens-20210529.1129/smartparens-lua.el
+  smartparens-20210529.1129/smartparens-markdown.el
+  smartparens-20210529.1129/smartparens-ml.el
+  smartparens-20210529.1129/smartparens-org.el
+  smartparens-20210529.1129/smartparens-pkg.el
+  smartparens-20210529.1129/smartparens-python.el
+  smartparens-20210529.1129/smartparens-racket.el
+  smartparens-20210529.1129/smartparens-rst.el
+  smartparens-20210529.1129/smartparens-ruby.el
+  smartparens-20210529.1129/smartparens-rust.el
+  smartparens-20210529.1129/smartparens-scala.el
+  smartparens-20210529.1129/smartparens-text.el
+  smartparens-20210529.1129/smartparens.el
+  smartparens-20210529.1129/sp-sublimetext-like.el
+Built smartparens in 8.687s, finished at 2021-07-07T18:57:43+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  490 Jul  7 09:20 packages/smartparens-20171117.1433.entry
-472K -rw-r--r-- 1 root root 470K Jul  7 09:20 packages/smartparens-20171117.1433.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:20 packages/smartparens-badge.svg
-4.0K -rw-r--r-- 1 root root  836 Jul  7 09:20 packages/smartparens-readme.txt
+4.0K -rw-r--r-- 1 root root  490 Jul  7 18:57 packages/smartparens-20210529.1129.entry
+512K -rw-r--r-- 1 root root 510K Jul  7 18:57 packages/smartparens-20210529.1129.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:57 packages/smartparens-badge.svg
+4.0K -rw-r--r-- 1 root root  836 Jul  7 18:57 packages/smartparens-readme.txt

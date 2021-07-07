@@ -1,0 +1,13 @@
+(org-edit-latex .
+		[(20170908 1522)
+		 ((emacs
+		   (24 4))
+		  (auctex
+		   (11 90)))
+		 "Edit embedded LaTeX in a dedicated buffer" single
+		 ((:commit . "1f228310ef2f3f2959a527f6d99e42ce977384c8")
+		  (:authors
+		   ("James Wong" . "jianwang.academic@gmail.com"))
+		  (:maintainer "James Wong" . "jianwang.academic@gmail.com")
+		  (:keywords "org" "latex")
+		  (:url . "https://github.com/et2010/org-edit-latex"))])

@@ -1,0 +1,17 @@
+(counsel-edit-mode .
+		   [(20210103 1508)
+		    ((emacs
+		      (26 1))
+		     (ht
+		      (2 3))
+		     (s
+		      (1 12 0))
+		     (counsel
+		      (0 10 0)))
+		    "Edit results of counsel commands in-place" single
+		    ((:commit . "82234306562f47ec50db212888dbcf21ef0b70f8")
+		     (:authors
+		      ("Tyler Dodge"))
+		     (:maintainer "Tyler Dodge")
+		     (:keywords "convenience" "matching")
+		     (:url . "https://github.com/tyler-dodge/counsel-edit-mode"))])

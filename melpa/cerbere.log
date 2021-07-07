@@ -5,23 +5,27 @@ Source:  https://github.com/nlamirault/cerbere.git
 Updating /mnt/store/melpa/working/cerbere/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cerbere/
-  to /tmp/cerbere2NGY8V/cerbere-20140417.1113
+  to /tmp/cerbereRweME5/cerbere-20181113.1641
     cerbere-common.el -> cerbere-common.el
-    cerbere-gotest.el -> cerbere-gotest.el
-    cerbere-phpunit.el -> cerbere-phpunit.el
-    cerbere-tox.el -> cerbere-tox.el
+    cerbere-elisp-ert-runner.el -> cerbere-elisp-ert-runner.el
+    cerbere-php-phpunit.el -> cerbere-php-phpunit.el
+    cerbere-python-tox.el -> cerbere-python-tox.el
+    cerbere-ruby-minitest.el -> cerbere-ruby-minitest.el
+    cerbere-rust-libtest.el -> cerbere-rust-libtest.el
     cerbere.el -> cerbere.el
-Created cerbere-20140417.1113.tar containing:
-  cerbere-20140417.1113/
-  cerbere-20140417.1113/cerbere-common.el
-  cerbere-20140417.1113/cerbere-gotest.el
-  cerbere-20140417.1113/cerbere-phpunit.el
-  cerbere-20140417.1113/cerbere-pkg.el
-  cerbere-20140417.1113/cerbere-tox.el
-  cerbere-20140417.1113/cerbere.el
-Built cerbere in 4.491s, finished at Wed Jul  7 11:37:41 2021
+Created cerbere-20181113.1641.tar containing:
+  cerbere-20181113.1641/
+  cerbere-20181113.1641/cerbere-common.el
+  cerbere-20181113.1641/cerbere-elisp-ert-runner.el
+  cerbere-20181113.1641/cerbere-php-phpunit.el
+  cerbere-20181113.1641/cerbere-pkg.el
+  cerbere-20181113.1641/cerbere-python-tox.el
+  cerbere-20181113.1641/cerbere-ruby-minitest.el
+  cerbere-20181113.1641/cerbere-rust-libtest.el
+  cerbere-20181113.1641/cerbere.el
+Built cerbere in 4.117s, finished at 2021-07-07T18:01:28+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  504 Jul  7 11:37 packages/cerbere-20140417.1113.entry
- 32K -rw-r--r-- 1 root root  30K Jul  7 11:37 packages/cerbere-20140417.1113.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:37 packages/cerbere-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul  7 11:37 packages/cerbere-readme.txt
+4.0K -rw-r--r-- 1 root root  455 Jul  7 18:01 packages/cerbere-20181113.1641.entry
+ 52K -rw-r--r-- 1 root root  50K Jul  7 18:01 packages/cerbere-20181113.1641.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:01 packages/cerbere-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 18:01 packages/cerbere-readme.txt

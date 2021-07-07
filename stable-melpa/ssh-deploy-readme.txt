@@ -6,7 +6,7 @@ running custom deployment scripts via Tramp.
 For asynchronous operations it uses package '`make-thread' or if not available '`async.el'.
 
 By setting the variables (globally, per directory or per file):
-ssh-deploy-root-local,ssh-deploy-root-remote, ssh-deploy-on-explicit-save
+ssh-deploy-root-local,ssh-deploy-root-remote
 you can setup a directory for Tramp deployment.
 
 For asynchronous transfers you need to setup ~/.authinfo.gpg or key-based authorization or equivalent for automatic authentication.
@@ -42,6 +42,7 @@ Add to init-script: (ssh-deploy-add-find-file-hook)
 - To install and set-up using use-package and hydra do this:
   (use-package ssh-deploy
     :ensure t
+    :after hydra
     :demand
     :hook ((after-save . ssh-deploy-after-save)
            (find-file . ssh-deploy-find-file))
@@ -52,11 +53,12 @@ Add to init-script: (ssh-deploy-add-find-file-hook)
    )
 
 
-Here is an example for SSH deployment, /Users/Chris/Web/Site1/.dir-locals.el:
+Here is an example for SSH deployment, /Users/Chris/Web/Site1/.dir-locals.el, with forced explicit uploads:
 ((nil . (
   (ssh-deploy-root-local . "/Users/Chris/Web/Site1/")
   (ssh-deploy-root-remote . "/ssh:myuser@myserver.com:/var/www/site1/")
   (ssh-deploy-on-explicit-save . 1)
+  (ssh-deploy-force-on-explicit-save . 1)
   (ssh-deploy-async . 1)
 )))
 
@@ -96,6 +98,10 @@ Here is a list of other variables you can set globally or per directory:
 * `ssh-deploy-script' - Our custom lambda function that will be called using (funcall) when running deploy script *(function)*
 * `ssh-deploy-async-with-threads' - Whether to use threads (make threads) instead of processes (async-start) for asynchronous operations *(integer)*
 
-When integers are used as booleans, above zero means true, zero means false and nil means unset and fallback to global settings.
+When integers are used as booleans, above zero means true, zero means false and nil means unset and indicates to fallback to global settings.
 
 Please see README.md from the same repository for more extended documentation.
+
+FIXME: This uses "path" in lots of places to mean "a complete file name
+starting from /", whereas the GNU convention is to only "file name" instead
+and keep "path" for lists of directories like load-path, exec-path.

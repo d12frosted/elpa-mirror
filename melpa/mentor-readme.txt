@@ -9,7 +9,7 @@ to be as close to the vanilla rTorrent curses interface as possible.
 
 You can find the latest development version of mentor here:
 
-http://www.github.com/skangas/mentor
+https://www.github.com/skangas/mentor
 
 Bug reports, comments, and suggestions are welcome! Send them to
 Stefan Kangas <stefankangas@gmail.com> or report them on GitHub.

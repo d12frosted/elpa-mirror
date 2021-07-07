@@ -3,7 +3,7 @@
 ;; Author: Boško Ivanišević <bosko.ivanisevic@gmail.com>
 ;; Version: 1.0.0
 ;; Package-Version: 20190524.1624
-;; Package-Commit: 328429219574555c5fb831a421b4b5d9a2338561
+;; Package-Commit: c4b02894466d8642ad3d49df4c4a80e023a672aa
 ;; Keywords: processes
 ;; URL: https://github.com/bosko/docker-cli
 

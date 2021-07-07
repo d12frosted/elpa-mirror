@@ -1,0 +1,11 @@
+(gl-conf-mode .
+	      [(20170714 1310)
+	       ((emacs
+		 (24 3)))
+	       "Mode for editing gitolite config files" single
+	       ((:commit . "9136a9b737e0a5b6471a91571d104c487c43f35b")
+		(:authors
+		 ("Luis Lloret"))
+		(:maintainer "Luis Lloret")
+		(:keywords "git" "gitolite" "languages")
+		(:url . "https://github.com/llloret/gitolite-emacs"))])

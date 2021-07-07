@@ -5,27 +5,32 @@ Source:  https://github.com/laynor/enotify.git
 Updating /mnt/store/melpa/working/enotify/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/enotify/
-  to /tmp/enotifyncoW9W/enotify-20120207.1927
+  to /tmp/enotifyLN0Gi7/enotify-20130407.1236
     enotify-group.el -> enotify-group.el
     enotify-messages.el -> enotify-messages.el
     enotify-mode-line.el -> enotify-mode-line.el
     enotify-network.el -> enotify-network.el
+    enotify-pkg.el -> enotify-pkg.el
+    enotify-plugin-support.el -> enotify-plugin-support.el
+    enotify-tdd.el -> enotify-tdd.el
     enotify.el -> enotify.el
     footer.el -> footer.el
     header.el -> header.el
-Created enotify-20120207.1927.tar containing:
-  enotify-20120207.1927/
-  enotify-20120207.1927/enotify-group.el
-  enotify-20120207.1927/enotify-messages.el
-  enotify-20120207.1927/enotify-mode-line.el
-  enotify-20120207.1927/enotify-network.el
-  enotify-20120207.1927/enotify-pkg.el
-  enotify-20120207.1927/enotify.el
-  enotify-20120207.1927/footer.el
-  enotify-20120207.1927/header.el
-Built enotify in 4.159s, finished at Wed Jul  7 11:48:46 2021
+Created enotify-20130407.1236.tar containing:
+  enotify-20130407.1236/
+  enotify-20130407.1236/enotify-group.el
+  enotify-20130407.1236/enotify-messages.el
+  enotify-20130407.1236/enotify-mode-line.el
+  enotify-20130407.1236/enotify-network.el
+  enotify-20130407.1236/enotify-pkg.el
+  enotify-20130407.1236/enotify-plugin-support.el
+  enotify-20130407.1236/enotify-tdd.el
+  enotify-20130407.1236/enotify.el
+  enotify-20130407.1236/footer.el
+  enotify-20130407.1236/header.el
+Built enotify in 4.048s, finished at 2021-07-07T18:12:51+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  131 Jul  7 11:48 packages/enotify-20120207.1927.entry
- 32K -rw-r--r-- 1 root root  30K Jul  7 11:48 packages/enotify-20120207.1927.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:48 packages/enotify-badge.svg
-4.0K -rw-r--r-- 1 root root 3.5K Jul  6 16:28 packages/enotify-readme.txt
+4.0K -rw-r--r-- 1 root root  291 Jul  7 18:12 packages/enotify-20130407.1236.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 18:12 packages/enotify-20130407.1236.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:12 packages/enotify-badge.svg
+4.0K -rw-r--r-- 1 root root 3.5K Jul  7 18:12 packages/enotify-readme.txt

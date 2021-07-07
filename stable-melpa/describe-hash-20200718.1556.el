@@ -2,7 +2,7 @@
 
 ;; Version: 0.1.0
 ;; Package-Version: 20200718.1556
-;; Package-Commit: 20dbbbea630055b2401f13a55fbb21216960dc46
+;; Package-Commit: 18e69a932d5495c8439571ba8f2d2ee123d434b1
 ;; URL: https://github.com/Junker/describe-hash
 ;; Original: https://www.emacswiki.org/emacs/HashMap
 

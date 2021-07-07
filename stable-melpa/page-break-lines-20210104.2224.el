@@ -4,7 +4,7 @@
 
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; URL: https://github.com/purcell/page-break-lines
-;; Package-Commit: 69caea070379f3324c530e96e06625c3cd097cb9
+;; Package-Commit: 3b8549cd414d4d7ee0168ab9917124133566d3db
 ;; Package-Version: 20210104.2224
 ;; Package-X-Original-Version: 0
 ;; Package-Requires: ((emacs "24.4"))

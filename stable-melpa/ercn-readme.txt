@@ -5,7 +5,7 @@ copy pasta) from erc-match to get the job done. See the
 documentation for `ercn-notify-rules' and `ercn-suppress-rules' to
 set it up.
 
-When a notification is needed, ercn calls the `ercn-notify-hook' hook so
+When a notification is needed, ercn calls `ercn-notify-hook' so
 that any notification mechanism available for your system can be
 utilized with a little elisp.
 
@@ -43,29 +43,29 @@ Download the source or clone the repo and add the following to
 Configuration
 =============
 
-Two variables control whether or not ercn calls the ercn-notify-hook hook:
+Two variables control whether or not ercn calls `ercn-notify-hook':
 
 * `ercn-notify-rules': Rules to determine if the hook should be called. It
   defaults to calling the hook whenever a pal speaks, a keyword is mentioned,
   your current-nick is mentioned, or a message is sent inside a query buffer.
 
 * `ercn-suppress-rules': Rules to determine if the notification should be
-  suppressed. Takes precedent over ercn-notify-rules. The default will
+  suppressed. Takes precedent over `ercn-notify-rules'. The default will
   suppress messages from fools, dangerous-hosts, and system messages.
 
 Both vars are alists that contain the category of message as the keys and as
-the value either the special symbol ‘all, a list of buffer names in which to
+the value either the symbol ‘all, a list of buffer names in which to
 notify or suppress, or a function predicate.
 
 The supported categories are:
 
 * message - category added to all messages
 * current-nick - messages that mention you
-* keyword - words in the erc-keywords list
-* pal - nicks in the erc-pals list
+* keyword - words in the `erc-keywords' list
+* pal - nicks in the `erc-pals' list
 * query-buffer - private messages
-* fool - nicks in the erc-fools list
-* dangerous-host - hosts in the erc-dangerous-hosts list
+* fool - nicks in the `erc-fools' list
+* dangerous-host - hosts in the `erc-dangerous-hosts' list
 * system - messages sent from the system (join, part, etc.)
 
 An example configuration
@@ -81,9 +81,9 @@ An example configuration
       ;; notification code goes here
   )
 
-  (add-hook 'ercn-notify 'do-notify)
+  (add-hook 'ercn-notify-hook 'do-notify)
 
-In this example, the `ercn-notify-hook' hook will be called whenever anyone
+In this example, `ercn-notify-hook' will be called whenever anyone
 mentions my nick or a keyword or when sent from a query buffer, or if a pal
 speaks in #emacs.
 

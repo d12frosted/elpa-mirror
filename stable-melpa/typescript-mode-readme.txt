@@ -1,4 +1,4 @@
-This is based on Karl Landstrom's barebones typescript-mode. This
+This is based on Karl Landstrom's barebones typescript-mode.  This
 is much more robust and works with cc-mode's comment filling
 (mostly).
 The modifications to the original javascript.el mode mainly consisted in

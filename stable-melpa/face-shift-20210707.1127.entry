@@ -1,0 +1,13 @@
+(face-shift .
+	    [(20210707 1127)
+	     ((emacs
+	       (24 4))
+	      (cl-lib
+	       (0 5)))
+	     "Shift the colour of certain faces" single
+	     ((:commit . "0170ab2993211eb0f514f7d1ce14e8194a11f6b2")
+	      (:authors
+	       ("Philip K." . "philip@warpmail.net"))
+	      (:maintainer "Philip K." . "philip@warpmail.net")
+	      (:keywords "faces")
+	      (:url . "https://git.sr.ht/~pkal/face-shift"))])

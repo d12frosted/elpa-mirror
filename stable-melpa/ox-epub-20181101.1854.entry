@@ -1,0 +1,13 @@
+(ox-epub .
+	 [(20181101 1854)
+	  ((emacs
+	    (24 3))
+	   (org
+	    (9)))
+	  "Export org mode projects to EPUB" single
+	  ((:commit . "c9629ef4b4bc40d51afefd8c0bb2c683931e6409")
+	   (:authors
+	    ("Mark Meyer" . "mark@ofosos.org"))
+	   (:maintainer "Mark Meyer" . "mark@ofosos.org")
+	   (:keywords "hypermedia")
+	   (:url . "http://github.com/ofosos/org-epub"))])

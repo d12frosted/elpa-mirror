@@ -1,1 +1,2 @@
-This package provides a Flycheck checker for MMark markdown processor.
+This package provides a Flycheck checker for the MMark markdown
+processor.

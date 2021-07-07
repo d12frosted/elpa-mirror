@@ -4,7 +4,7 @@
 
 ;; Author: Andrii Kolomoiets <andreyk.mad@gmail.com>
 ;; Keywords: vc
-;; Package-Commit: 12e102f8359095953e06ed17c7223cd6638e5cea
+;; Package-Commit: c00d792b34219a387832f8f9b4a689d7972f592a
 ;; URL: https://github.com/muffinmad/emacs-vc-hgcmd
 ;; Package-Version: 20210608.1030
 ;; Package-X-Original-Version: 1.14

@@ -19,7 +19,7 @@ Because it's entirely inside Emacs, you don't need to stop the
 command to enable an alert on it (an advantage over 'alert' shell
 commands, which usually require you to pause the command and
 restart it).  And because it uses term-cmd
-(https://github.com/CallumCameron/term-cmd), you can alert commands
+(https://github.com/calliecameron/term-cmd), you can alert commands
 running in tmux or over SSH, too (as long as the remote shell is
 set up correctly).
 

@@ -3,42 +3,9 @@ Fetcher: github
 Source:  https://github.com/RedPRL/sml-redprl.git
 
 Updating /mnt/store/melpa/working/redprl/
-Command '(env LC_ALL=C git submodule update --init --recursive)' exited with non-zero status 1: Fetching origin
-origin/HEAD set to master
-HEAD is now at d06d394 Fix/issue 182 (#183)
-Synchronizing submodule url for 'lib/cmlib'
-Synchronizing submodule url for 'lib/sml-cats'
-Synchronizing submodule url for 'lib/sml-dependent-lcf'
-Synchronizing submodule url for 'lib/sml-dependent-lcf/lib/cmlib'
-Synchronizing submodule url for 'lib/sml-dependent-lcf/lib/sml-cats'
-Synchronizing submodule url for 'lib/sml-dependent-lcf/lib/sml-telescopes'
-Synchronizing submodule url for 'lib/sml-dependent-lcf/lib/sml-telescopes/lib/cmlib'
-Synchronizing submodule url for 'lib/sml-dependent-lcf/lib/sml-typed-abts'
-Synchronizing submodule url for 'lib/sml-dependent-lcf/lib/sml-typed-abts/lib/cmlib'
-Synchronizing submodule url for 'lib/sml-dependent-lcf/models/modules/agda-prelude'
-Synchronizing submodule url for 'lib/sml-json'
-Synchronizing submodule url for 'lib/sml-json/lib/cmlib'
-Synchronizing submodule url for 'lib/sml-json/lib/sml-parcom'
-Synchronizing submodule url for 'lib/sml-json/lib/sml-parcom/lib/cmlib'
-Synchronizing submodule url for 'lib/sml-telescopes'
-Synchronizing submodule url for 'lib/sml-telescopes/lib/cmlib'
-Synchronizing submodule url for 'lib/sml-typed-abts'
-Synchronizing submodule url for 'lib/sml-typed-abts/lib/cmlib'
-Synchronizing submodule url for 'lib/sml-typed-abts/lib/sml-cats'
-Synchronizing submodule url for 'lib/sml-typed-abts/lib/sml-json'
-Synchronizing submodule url for 'lib/sml-typed-abts/lib/sml-json/lib/cmlib'
-Synchronizing submodule url for 'lib/sml-typed-abts/lib/sml-json/lib/sml-parcom'
-Synchronizing submodule url for 'lib/sml-typed-abts/lib/sml-json/lib/sml-parcom/lib/cmlib'
-Synchronizing submodule url for 'lib/sml-typed-abts/lib/sml-unparse'
-Synchronizing submodule url for 'lib/sml-unparse'
-Synchronizing submodule url for 'lib/sml-wpp'
-Cloning into '/mnt/store/melpa/working/redprl/lib/sml-dependent-lcf/models/modules/agda-prelude'...
-fatal: could not read Username for 'https://github.com': No such device or address
-fatal: clone of 'https://github.com/freebroccolo/agda-prelude.git' into submodule path '/mnt/store/melpa/working/redprl/lib/sml-dependent-lcf/models/modules/agda-prelude' failed
-Failed to clone 'models/modules/agda-prelude'. Retry scheduled
-Cloning into '/mnt/store/melpa/working/redprl/lib/sml-dependent-lcf/models/modules/agda-prelude'...
-fatal: could not read Username for 'https://github.com': No such device or address
-fatal: clone of 'https://github.com/freebroccolo/agda-prelude.git' into submodule path '/mnt/store/melpa/working/redprl/lib/sml-dependent-lcf/models/modules/agda-prelude' failed
-Failed to clone 'models/modules/agda-prelude' a second time, aborting
-Failed to recurse into submodule path 'lib/sml-dependent-lcf'
-
+Built redprl in 10.117s, finished at 2021-07-07T18:53:17+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Jul  7 18:53 packages/redprl-20180418.1434.el
+4.0K -rw-r--r-- 1 root root  342 Jul  7 18:53 packages/redprl-20180418.1434.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:53 packages/redprl-badge.svg
+4.0K -rw-r--r-- 1 root root  378 Jul  7 18:53 packages/redprl-readme.txt

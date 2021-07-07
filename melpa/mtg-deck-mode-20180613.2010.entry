@@ -1,0 +1,11 @@
+(mtg-deck-mode .
+	       [(20180613 2010)
+		((emacs
+		  (25 1)))
+		"Major mode to edit MTG decks" tar
+		((:commit . "8265b8ed17fcd4406760c19aa6ee9c76068b1ab0")
+		 (:authors
+		  ("Mattias Bengtsson" . "mattias.jc.bengtsson@gmail.com"))
+		 (:maintainer "Mattias Bengtsson" . "mattias.jc.bengtsson@gmail.com")
+		 (:keywords "data" "mtg" "magic")
+		 (:url . "https://github.com/mattiasb/mtg-deck-mode"))])

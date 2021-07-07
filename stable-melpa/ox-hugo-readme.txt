@@ -23,7 +23,7 @@ commands have bindings beginning with "H" (for Hugo).
 2. one-post-per-file flow :: A single Org file exports to only
      *one* Hugo post.  An Org file intended to be exported by this
      flow must not have any 'valid Hugo post subtrees', and instead
-     must have the #+TITLE property set.
+     must have the #+title property set.
 
 # Commonly used export commands
 
@@ -34,7 +34,7 @@ commands have bindings beginning with "H" (for Hugo).
                        export that subtree to a Hugo post in
                        Markdown.
                      - If the file is intended to be exported as a
-                       whole (i.e. has the #+TITLE keyword),
+                       whole (i.e. has the #+title keyword),
                        export the whole Org file to a Hugo post in
                        Markdown.
 
@@ -44,7 +44,7 @@ commands have bindings beginning with "H" (for Hugo).
                        Markdown.
                      - If the file is intended to be exported as a
                        whole (i.e. no 'valid Hugo post subtrees'
-                       at all, and has the #+TITLE keyword),
+                       at all, and has the #+title keyword),
                        export the whole Org file to a Hugo post in
                        Markdown.
 

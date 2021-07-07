@@ -8,8 +8,13 @@ Provided commands:
 `diff-hl-revert-hunk'     C-x v n
 `diff-hl-previous-hunk'   C-x v [
 `diff-hl-next-hunk'       C-x v ]
+`diff-hl-show-hunk'       C-x v *
+`diff-hl-set-reference-rev'
+`diff-hl-reset-reference-rev'
 
 The mode takes advantage of `smartrep' if it is installed.
+
+Alternatively, it integrates with `repeat-mode' (Emacs 28+).
 
 Add either of the following to your init file.
 

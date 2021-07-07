@@ -5,7 +5,7 @@
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: frames
 ;; Package-Version: 20181022.2154
-;; Package-Commit: b16092e8058af63ad2bc222f166b0aa3cb66bf9d
+;; Package-Commit: 60273e764bf8d95abc40dd2fdc23af87ea9ee33b
 ;; Homepage: https://github.com/purcell/ns-auto-titlebar
 ;; Version: 0
 ;; Package-Requires: ((emacs "24.4"))

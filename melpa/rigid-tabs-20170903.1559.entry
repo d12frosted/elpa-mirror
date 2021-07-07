@@ -1,0 +1,11 @@
+(rigid-tabs .
+	    [(20170903 1559)
+	     ((emacs
+	       (24 3)))
+	     "Fix TAB alignment in diff buffers" single
+	     ((:commit . "eba84ceaba2e57e76ad2dfbb7a7154238a25d956")
+	      (:authors
+	       ("Yuri D'Elia" . "wavexx@thregr.org"))
+	      (:maintainer "Yuri D'Elia" . "wavexx@thregr.org")
+	      (:keywords "diff" "whitespace" "version control" "magit")
+	      (:url . "https://github.com/wavexx/rigid-tabs.el"))])

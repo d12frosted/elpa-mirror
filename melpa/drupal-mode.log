@@ -5,32 +5,33 @@ Source:  https://github.com/arnested/drupal-mode.git
 Updating /mnt/store/melpa/working/drupal-mode/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/drupal-mode/
-  to /tmp/drupal-mode1kAArJ/drupal-mode-20170926.738
+  to /tmp/drupal-modeFqBiaN/drupal-mode-20200210.2222
     drupal-mode.el -> drupal-mode.el
     drush-make-mode.el -> drush-make-mode.el
     drupal => drupal
-Created drupal-mode-20170926.738.tar containing:
-  drupal-mode-20170926.738/
-  drupal-mode-20170926.738/drupal-mode-pkg.el
-  drupal-mode-20170926.738/drupal-mode.el
-  drupal-mode-20170926.738/drupal/
-  drupal-mode-20170926.738/drupal/autoinsert.el
-  drupal-mode-20170926.738/drupal/eldoc.el
-  drupal-mode-20170926.738/drupal/emacs-drush.el
-  drupal-mode-20170926.738/drupal/etags.el
-  drupal-mode-20170926.738/drupal/flycheck.el
-  drupal-mode-20170926.738/drupal/flymake-phpcs.el
-  drupal-mode-20170926.738/drupal/ggtags.el
-  drupal-mode-20170926.738/drupal/gtags.el
-  drupal-mode-20170926.738/drupal/helm-gtags.el
-  drupal-mode-20170926.738/drupal/ispell.el
-  drupal-mode-20170926.738/drupal/pcomplete.el
-  drupal-mode-20170926.738/drupal/phpcs.el
-  drupal-mode-20170926.738/drupal/webjump.el
-  drupal-mode-20170926.738/drush-make-mode.el
-Built drupal-mode in 4.675s, finished at Wed Jul  7 11:45:46 2021
+Created drupal-mode-20200210.2222.tar containing:
+  drupal-mode-20200210.2222/
+  drupal-mode-20200210.2222/drupal-mode-pkg.el
+  drupal-mode-20200210.2222/drupal-mode.el
+  drupal-mode-20200210.2222/drupal/
+  drupal-mode-20200210.2222/drupal/autoinsert.el
+  drupal-mode-20200210.2222/drupal/eldoc.el
+  drupal-mode-20200210.2222/drupal/emacs-drush.el
+  drupal-mode-20200210.2222/drupal/etags.el
+  drupal-mode-20200210.2222/drupal/flycheck.el
+  drupal-mode-20200210.2222/drupal/flymake-phpcs.el
+  drupal-mode-20200210.2222/drupal/ggtags.el
+  drupal-mode-20200210.2222/drupal/gtags.el
+  drupal-mode-20200210.2222/drupal/gxref.el
+  drupal-mode-20200210.2222/drupal/helm-gtags.el
+  drupal-mode-20200210.2222/drupal/ispell.el
+  drupal-mode-20200210.2222/drupal/pcomplete.el
+  drupal-mode-20200210.2222/drupal/phpcs.el
+  drupal-mode-20200210.2222/drupal/webjump.el
+  drupal-mode-20200210.2222/drush-make-mode.el
+Built drupal-mode in 4.502s, finished at 2021-07-07T18:09:27+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  420 Jul  7 11:45 packages/drupal-mode-20170926.738.entry
- 92K -rw-r--r-- 1 root root  90K Jul  7 11:45 packages/drupal-mode-20170926.738.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:45 packages/drupal-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  187 Jul  7 11:45 packages/drupal-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  421 Jul  7 18:09 packages/drupal-mode-20200210.2222.entry
+100K -rw-r--r-- 1 root root 100K Jul  7 18:09 packages/drupal-mode-20200210.2222.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:09 packages/drupal-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  187 Jul  7 18:09 packages/drupal-mode-readme.txt

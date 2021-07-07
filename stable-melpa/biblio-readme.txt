@@ -37,7 +37,7 @@ list of results in ‘biblio-selection-mode’.  In that mode, use:
 
 ## Examples
 
-* To insert a clean BibTeX entry for http://doi.org/10.1145/2676726.2677006
+* To insert a clean BibTeX entry for https://doi.org/10.1145/2676726.2677006
   in the current buffer, use
 
         M-x crossref-lookup RET fiat deductive delaware RET i
@@ -47,12 +47,12 @@ list of results in ‘biblio-selection-mode’.  In that mode, use:
 
 * To find publications by computer scientist Leslie Lamport, use ‘M-x
   dblp-lookup RET author:Lamport RET’ (see more info about DBLP's syntax at
-  <http://dblp.uni-trier.de/search/>)
+  <https://dblp.uni-trier.de/search/>)
 
 * To check whether an article is freely available online, use ‘x’ in the list
   of results.  For example ‘M-x crossref-lookup RET Emacs stallman RET’
   followed by ‘x Dissemin RET’ will help you find open access copies of
-  Stallman's paper on EMACS (spoiler: http://hdl.handle.net/1721.1/5736).
+  Stallman's paper on EMACS (spoiler: https://hdl.handle.net/1721.1/5736).
 
-See http://github.com/cpitclaudel/biblio.el for more information, including
+See https://github.com/cpitclaudel/biblio.el for more information, including
 documentation on extending this framework.

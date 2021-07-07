@@ -5,7 +5,7 @@
 ;; Author: William Orr <will@worrbase.com>
 ;; Version: 1.0.0
 ;; Package-Version: 20201120.2307
-;; Package-Commit: b4ffad5cabea7e858c66dc824d545653b1cdcb70
+;; Package-Commit: a4ca40978e680f9edc86c141e696e0ae57c63533
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "26.1") (flycheck "31"))
 ;; URL: https://gitlab.com/worr/cfn-mode

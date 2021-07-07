@@ -1,0 +1,13 @@
+(proced-narrow .
+	       [(20190911 1818)
+		((seq
+		  (2 20))
+		 (emacs
+		  (24)))
+		"Live-narrowing of search results for proced." single
+		((:commit . "0e2a4dfb072eb0369d0020b429e820ae620d325e")
+		 (:authors
+		  ("Travis Jeffery" . "tj@travisjeffery.com"))
+		 (:maintainer "Travis Jeffery" . "tj@travisjeffery.com")
+		 (:keywords "processes" "proced")
+		 (:url . "https://github.com/travisjeffery/proced-narrow"))])

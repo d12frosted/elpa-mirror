@@ -1,0 +1,14 @@
+(desktop+ .
+	  [(20170107 2132)
+	   ((emacs
+	     (24 4))
+	    (dash
+	     (2 11 0))
+	    (f
+	     (0 17 2)))
+	   "Handle special buffers when saving & restoring sessions" single
+	   ((:commit . "88055cee526a000056201898499cebbd35e3ea76")
+	    (:authors
+	     ("François Févotte" . "fevotte@gmail.com"))
+	    (:maintainer "François Févotte" . "fevotte@gmail.com")
+	    (:url . "https://github.com/ffevotte/desktop-plus"))])

@@ -1,1 +1,1 @@
-Library to generate call graph for cpp functions.
+Library to generate call graph for c/c++ functions.

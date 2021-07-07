@@ -1,0 +1,19 @@
+(feather .
+	 [(20200321 1237)
+	  ((emacs
+	    (26 3))
+	   (async
+	    (1 9))
+	   (async-await
+	    (1 0))
+	   (ppp
+	    (1 0))
+	   (page-break-lines
+	    (0 1)))
+	  "Parallel thread modern package manager" tar
+	  ((:commit . "3f19293dada8bf368e9f86f783610e7ca0a51ecb")
+	   (:authors
+	    ("Naoya Yamashita" . "conao3@gmail.com"))
+	   (:maintainer "Naoya Yamashita" . "conao3@gmail.com")
+	   (:keywords "convenience" "package")
+	   (:url . "https://github.com/conao3/feather.el"))])

@@ -1,0 +1,11 @@
+(xtest .
+       [(20141214 1706)
+	((cl-lib
+	  (0 5)))
+	"Simple Testing with Emacs & ERT" single
+	((:commit . "2c2bdf32667506dd9ddf6eb311832add616bdf1c")
+	 (:authors
+	  ("Mustafa Shameem"))
+	 (:maintainer "Mustafa Shameem")
+	 (:keywords "testing" "ert")
+	 (:url . "https://github.com/promethial/xtest"))])

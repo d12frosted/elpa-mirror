@@ -1,0 +1,13 @@
+(shelldoc .
+	  [(20200513 1206)
+	   ((cl-lib
+	     (0 3))
+	    (s
+	     (1 9 0)))
+	   "shell command editing support with man page." single
+	   ((:commit . "fa69f67b6229fad3f31d936955ca8d1982009b77")
+	    (:authors
+	     ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
+	    (:maintainer "Masahiro Hayashi" . "mhayashi1120@gmail.com")
+	    (:keywords "applications")
+	    (:url . "http://github.com/mhayashi1120/Emacs-shelldoc"))])

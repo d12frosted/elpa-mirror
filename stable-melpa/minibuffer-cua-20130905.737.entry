@@ -1,9 +1,0 @@
-(minibuffer-cua .
-		[(20130905 737)
-		 nil "Make CUA mode's S-up/S-down work in minibuffer" single
-		 ((:commit . "e8dcddc24d4f2e8d7987336fb58259e3cc78bbcb")
-		  (:authors
-		   ("Akinori MUSHA" . "knu@iDaemons.org"))
-		  (:maintainer "Akinori MUSHA" . "knu@iDaemons.org")
-		  (:keywords "completion" "editing")
-		  (:url . "https://github.com/knu/minibuffer-cua.el"))])

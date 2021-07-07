@@ -1,0 +1,12 @@
+(zetz-mode .
+	   [(20200823 536)
+	    ((emacs
+	      (25 1))
+	     (dash
+	      (2 17 0))
+	     (hydra
+	      (0 15 0)))
+	    "A major mode for the ZetZ programming language" single
+	    ((:commit . "04da33f4ffa9db5b3556f423276f4fd1db13ec67")
+	     (:keywords "languages" "programming")
+	     (:url . "https://github.com/damon-kwok/zetz-mode"))])

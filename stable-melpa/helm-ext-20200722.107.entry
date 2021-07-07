@@ -1,0 +1,12 @@
+(helm-ext .
+	  [(20200722 107)
+	   ((emacs
+	     (24 4))
+	    (helm
+	     (2 5 3)))
+	   "A few extensions to Helm" tar
+	   ((:commit . "c30f7772ec577a5ce1de3215f0507826e0725a69")
+	    (:authors
+	     ("Junpeng Qiu" . "qjpchmail@gmail.com"))
+	    (:maintainer "Junpeng Qiu" . "qjpchmail@gmail.com")
+	    (:keywords "extensions"))])

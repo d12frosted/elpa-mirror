@@ -23,7 +23,7 @@ adds it to current compilation.  M-x
 `compiler-explorer-remove-library' removes them.
 
 M-x `compiler-explorer-set-execution-args' sets the arguments for
-the executied program.
+the executed program.
 
 M-x `compiler-explorer-set-input' reads a string from minibuffer
 that will be used as input for the executed program.

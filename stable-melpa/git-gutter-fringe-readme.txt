@@ -1,5 +1,5 @@
-Show git diff information in fringe. You can use this package
-only GUI Emacs, not working no window emacs.
+Show git diff information in fringe.  You can use this package
+only with GUI Emacs, not in a terminal Emacs.
 
 To use this package, add following code to your init.el or .emacs
 

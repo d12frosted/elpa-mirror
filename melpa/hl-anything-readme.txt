@@ -9,7 +9,7 @@ Of course, there're more advanced features:
 * Assign highlighting specific faces which makes them always on the top of
   current line highlight.
 * More... Check official website for details:
-https://github.com/boyw165/hl-anything
+https://github.com/hl-anything/hl-anything-emacs
 
 Usage:
 ------

@@ -1,9 +1,0 @@
-(ert-async .
-	   [(20151011 1359)
-	    nil "Async support for ERT" single
-	    ((:commit . "f64a7ed5b0d2900c9a3d8cc33294bf8a79bc8526")
-	     (:authors
-	      ("Johan Andersson" . "johan.rejeep@gmail.com"))
-	     (:maintainer "Johan Andersson" . "johan.rejeep@gmail.com")
-	     (:keywords "test")
-	     (:url . "http://github.com/rejeep/ert-async.el"))])

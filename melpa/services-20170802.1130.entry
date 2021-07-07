@@ -1,0 +1,11 @@
+(services .
+	  [(20170802 1130)
+	   ((cl-lib
+	     (0 5)))
+	   "Services database access functions." single
+	   ((:commit . "04c7986041a33dfa0b0ae57c7d6fbd600548c596")
+	    (:authors
+	     ("Dave Pearson" . "davep@davep.org"))
+	    (:maintainer "Dave Pearson" . "davep@davep.org")
+	    (:keywords "convenience" "net" "services")
+	    (:url . "https://github.com/davep/services.el"))])

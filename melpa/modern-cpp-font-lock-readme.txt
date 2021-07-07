@@ -1,4 +1,4 @@
-Syntax highlighting support for "Modern C++" - until C++17 and
+Syntax highlighting support for "Modern C++" - until C++20 and
 Technical Specification. This package aims to provide a simple
 highlight of the C++ language without dependency.
 

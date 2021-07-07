@@ -1,0 +1,9 @@
+(fabric .
+	[(20171116 656)
+	 nil "Launch Fabric using Emacs" tar
+	 ((:commit . "df79be341d0b34ed23850f9894136092fa5fea8c")
+	  (:authors
+	   ("Nicolas Lamirault" . "nicolas.lamirault@chmouel.com"))
+	  (:maintainer "Nicolas Lamirault" . "nicolas.lamirault@chmouel.com")
+	  (:keywords "python" "fabric")
+	  (:url . "https://github.com/nlamirault/fabric.el"))])

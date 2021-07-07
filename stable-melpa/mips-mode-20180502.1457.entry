@@ -1,0 +1,9 @@
+(mips-mode .
+	   [(20180502 1457)
+	    nil "Major-mode for MIPS assembly" single
+	    ((:commit . "75152fc78baa762af4f83602f6cb3c8b9bcebca3")
+	     (:authors
+	      ("Henrik Lissner <http://github/hlissner>"))
+	     (:maintainer "Henrik Lissner" . "henrik@lissner.net")
+	     (:keywords "languages" "mips" "assembly")
+	     (:url . "https://github.com/hlissner/emacs-mips-mode"))])

@@ -1,7 +1,6 @@
 This package provides syntax highlighting and basic alda integration.
 Activate font-lock-mode to use the syntax features, and run 'alda-play-region' to play song files
 
-
 Variables:
 alda-binary-location: Set to the location of the binary executable.
 If nil, alda-mode will search for your binary executable on your path

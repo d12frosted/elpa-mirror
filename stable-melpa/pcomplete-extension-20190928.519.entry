@@ -1,0 +1,12 @@
+(pcomplete-extension .
+		     [(20190928 519)
+		      ((emacs
+			(24))
+		       (cl-lib
+			(0 5)))
+		      "additional completion for pcomplete" single
+		      ((:commit . "bc5eb204fee659e0980056009409b44bc7655716")
+		       (:authors
+			("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
+		       (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
+		       (:url . "https://github.com/thierryvolpiatto/pcomplete-extension"))])

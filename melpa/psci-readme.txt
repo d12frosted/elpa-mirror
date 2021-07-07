@@ -14,4 +14,4 @@ repl, you could use repl-toggle (available on melpa):
 (add-to-list 'rtog/mode-repl-alist '(purescript-mode . psci))
 
 More informations: https://ardumont/emacs-psci
-Issue tracker: https://github.com/ardumont/emacs-psci/issues
+Issue tracker: https://github.com/purescript-emacs/emacs-psci/issues

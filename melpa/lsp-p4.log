@@ -3,9 +3,19 @@ Fetcher: github
 Source:  https://github.com/dmakarov/p4ls.git
 
 Updating /mnt/store/melpa/working/lsp-p4/
-Built lsp-p4 in 6.021s, finished at Wed Jul  7 08:59:24 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-p4/
+  to /tmp/lsp-p4VIa8ZU/lsp-p4-20190127.1049
+  ! clients/emacs/lsp-p4.el -> lsp-p4.el
+  ! clients/emacs/p4lang-mode.el -> p4lang-mode.el
+Created lsp-p4-20190127.1049.tar containing:
+  lsp-p4-20190127.1049/
+  lsp-p4-20190127.1049/lsp-p4-pkg.el
+  lsp-p4-20190127.1049/lsp-p4.el
+  lsp-p4-20190127.1049/p4lang-mode.el
+Built lsp-p4 in 3.672s, finished at 2021-07-07T18:35:46+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  608 Jul  7 08:59 packages/lsp-p4-20180408.1814.el
-4.0K -rw-r--r-- 1 root root  287 Jul  7 08:59 packages/lsp-p4-20180408.1814.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:59 packages/lsp-p4-badge.svg
-4.0K -rw-r--r-- 1 root root  294 Jul  6 16:50 packages/lsp-p4-readme.txt
+4.0K -rw-r--r-- 1 root root  290 Jul  7 18:35 packages/lsp-p4-20190127.1049.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 18:35 packages/lsp-p4-20190127.1049.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:35 packages/lsp-p4-badge.svg
+4.0K -rw-r--r-- 1 root root  294 Jul  7 18:35 packages/lsp-p4-readme.txt

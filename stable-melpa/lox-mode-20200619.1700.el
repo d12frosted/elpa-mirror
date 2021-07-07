@@ -6,7 +6,7 @@
 ;; Maintainer: Timmy Jose <zoltan.jose@gmail.com>
 ;; Version: 1.0
 ;; Package-Version: 20200619.1700
-;; Package-Commit: 083a2299e188a516d1e46ef2dd1cbb89db1aec49
+;; Package-Commit: b6935b3f5b131d2c1c7685cf6464274f7cd64943
 ;; Keywords: languages, lox
 ;; Package-Requires: ((emacs "24.3"))
 

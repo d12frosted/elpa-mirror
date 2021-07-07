@@ -95,6 +95,9 @@ table that table will be used to insert something at that position.
 A tilde (~) can be used anywhere in a table string to insert nothing, to
 prevent the parser from recognizing some word, or to glue together words
 or dice-specifiers without a space to separate them.
+A possible expansion for a table name can have a weight added to make
+it more likely to be choosen like ("dragon" . 3) (making it three times
+as likely to be choosen as an expansion that has no weight given).
 The default-value for decide-tables contains some examples to hopefully
 make all this a bit less confusing.
 

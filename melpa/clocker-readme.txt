@@ -3,7 +3,7 @@ Copyright (C) 2015-2016 Roman Gonzalez.
 Author: Roman Gonzalez <romanandreg@gmail.com>
 Maintainer: Roman Gonzalez <romanandreg@gmail.com>
 Version: 0.0.11
-Package-Requires: ((projectile "0.11.0") (dash "2.10"))
+Package-Requires: ((projectile "0.11.0") (dash "2.10") (spaceline "2.0.1"))
 Keywords: org
 
 This file is not part of GNU Emacs.

@@ -16,15 +16,29 @@ _________________
 5 Related packages
 
 
+[[file:http://melpa.org/packages/avy-zap-badge.svg]]
+[[file:http://stable.melpa.org/packages/avy-zap-badge.svg]]
+
 Zap to char using [avy].
 
 Note: The behaviors of the *dwim* function when called with prefix and
 without prefix are inverted now! By default(i.e. when the *dwim*
 function is called without prefix), the avy version will be used now!
+For those who want the old behavior, set the following variable to
+`nil':
+,----
+| (setq avy-zap-dwim-prefer-avy nil)
+`----
 
 This package is basically a fork of the functionality of [ace-jump-zap],
 but using [avy] instead of [ace-jump-mode] as the jumping method.
 
+
+[[file:http://melpa.org/packages/avy-zap-badge.svg]]
+http://melpa.org/#/avy-zap
+
+[[file:http://stable.melpa.org/packages/avy-zap-badge.svg]]
+http://stable.melpa.org/#/avy-zap
 
 [avy] https://github.com/abo-abo/avy
 
@@ -44,7 +58,7 @@ but using [avy] instead of [ace-jump-mode] as the jumping method.
   Recommendation: install `avy-zap' via [melpa].
 
 
-  [melpa] http://melpa.org
+[melpa] http://melpa.org
 
 
 2 Usage
@@ -74,6 +88,11 @@ but using [avy] instead of [ace-jump-mode] as the jumping method.
     zapping from the current point. The default value is `nil'.
   - `avy-zap-function': Choose between `kill-region' and
     `delete-region'. The default value is `kill-region'.
+  - `avy-zap-dwim-prefer-avy': Whether the default dwim behavior(when
+    called without prefix) of `avy-zap' should use `avy' or not. The
+    default value is `t'. You can set this variable to `nil' if you
+    prefer using plain zap when calling the dwim commands without
+    prefix.
 
 
 4 Compared to ace-jump-zap
@@ -93,6 +112,6 @@ but using [avy] instead of [ace-jump-mode] as the jumping method.
   - [avy]
 
 
-  [ace-jump-zap] https://github.com/waymondo/ace-jump-zap
+[ace-jump-zap] https://github.com/waymondo/ace-jump-zap
 
-  [avy] https://github.com/abo-abo/avy
+[avy] https://github.com/abo-abo/avy

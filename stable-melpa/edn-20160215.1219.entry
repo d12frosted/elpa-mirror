@@ -1,0 +1,15 @@
+(edn .
+     [(20160215 1219)
+      ((cl-lib
+	(0 3))
+       (emacs
+	(24 1))
+       (peg
+	(0 6)))
+      "Support for reading and writing the edn data format from elisp" single
+      ((:commit . "21e120a6914ee9a694be0a051f9f2af34ef055e4")
+       (:authors
+	("Lars Andersen" . "expez@expez.com"))
+       (:maintainer "Lars Andersen" . "expez@expez.com")
+       (:keywords "edn" "clojure")
+       (:url . "https://www.github.com/expez/edn.el"))])

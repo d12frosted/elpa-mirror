@@ -6,7 +6,7 @@
 ;; Maintainer: Leon Barrett (leon@barrettnexus.com)
 ;; Version: 0.1.0
 ;; Package-Version: 20210311.2359
-;; Package-Commit: 8c0d9bec38f717be1549e74839360e35587739e0
+;; Package-Commit: 45c248fe72d4a15c5a9f26bc0b27adb874265f53
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: files languages tools
 ;; URL: https://github.com/leon-barrett/just-mode.el

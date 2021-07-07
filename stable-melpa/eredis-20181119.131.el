@@ -6,7 +6,7 @@
 
 ;; Version: 0.9.6
 ;; Package-Version: 20181119.131
-;; Package-Commit: cfbfc25832f6fbc507bdd56b02e3a0b851a3c368
+;; Package-Commit: bc86b9f63a3e7a5eb263875030d0e15d6f5f6e37
 ;; Package-Requires: (dash)
 ;; Keywords: redis, api, tools, org
 ;; URL: http://github.com/justinhj/eredis/

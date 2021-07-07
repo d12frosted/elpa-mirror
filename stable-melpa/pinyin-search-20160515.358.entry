@@ -1,0 +1,11 @@
+(pinyin-search .
+	       [(20160515 358)
+		((pinyinlib
+		  (0 1 0)))
+		"Search Chinese by Pinyin" single
+		((:commit . "2e877a76851009d41bde66eb33182a03a7f04262")
+		 (:authors
+		  ("Chunyang Xu" . "xuchunyang56@gmail.com"))
+		 (:maintainer "Chunyang Xu" . "xuchunyang56@gmail.com")
+		 (:keywords "chinese" "search")
+		 (:url . "https://github.com/xuchunyang/pinyin-search.el"))])

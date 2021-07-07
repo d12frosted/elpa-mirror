@@ -1,0 +1,13 @@
+(erc-scrolltoplace .
+		   [(20180608 606)
+		    ((emacs
+		      (24 0))
+		     (switch-buffer-functions
+		      (0 0 1)))
+		    "An Erc module to scrolltobottom better with keep-place" single
+		    ((:commit . "38cfd0c2e2f5f6533b217189c3afaf6640b5602e")
+		     (:authors
+		      ("Jay Kamat" . "jaygkamat@gmail.com"))
+		     (:maintainer "Jay Kamat" . "jaygkamat@gmail.com")
+		     (:keywords "erc" "module" "comm" "scrolltobottom" "keep-place")
+		     (:url . "http://gitlab.com/jgkamat/erc-scrolltoplace"))])

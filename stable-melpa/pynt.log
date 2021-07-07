@@ -3,21 +3,9 @@ Fetcher: github
 Source:  https://github.com/ebanner/pynt.git
 
 Updating /mnt/store/melpa/working/pynt/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pynt/
-  to /tmp/pyntQAjf9m/pynt-20180204.500
-  ! pynt/ast-server.py -> ast-server.py
-  ! pynt/node_transformers.py -> node_transformers.py
-  ! pynt/pynt.el -> pynt.el
-Created pynt-20180204.500.tar containing:
-  pynt-20180204.500/
-  pynt-20180204.500/ast-server.py
-  pynt-20180204.500/node_transformers.py
-  pynt-20180204.500/pynt-pkg.el
-  pynt-20180204.500/pynt.el
-Built pynt in 4.021s, finished at Wed Jul  7 09:14:49 2021
+Built pynt in 8.188s, finished at 2021-07-07T18:51:33+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  450 Jul  7 09:14 packages/pynt-20180204.500.entry
- 52K -rw-r--r-- 1 root root  50K Jul  7 09:14 packages/pynt-20180204.500.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:14 packages/pynt-badge.svg
-4.0K -rw-r--r-- 1 root root  646 Jul  7 09:14 packages/pynt-readme.txt
+ 32K -rw-r--r-- 1 root root  29K Jul  7 18:51 packages/pynt-20180710.726.el
+4.0K -rw-r--r-- 1 root root  435 Jul  7 18:51 packages/pynt-20180710.726.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:51 packages/pynt-badge.svg
+4.0K -rw-r--r-- 1 root root  646 Jul  7 18:51 packages/pynt-readme.txt

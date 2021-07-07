@@ -19,7 +19,7 @@ Interact with Bundler from Emacs.
 ; Install
 
 $ cd ~/.emacs.d/vendor
-$ git clone git://github.com/tobiassvn/bundler.el.git
+$ git clone git://github.com/endofunky/bundler.el.git
 
 In your emacs config:
 

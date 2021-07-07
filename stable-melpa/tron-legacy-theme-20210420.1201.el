@@ -5,7 +5,7 @@
 ;; Author: Ian Y.E. Pan
 ;; URL: https://github.com/ianpan870102/tron-legacy-emacs-theme
 ;; Package-Version: 20210420.1201
-;; Package-Commit: 74e0cf066392c6fa99327e42b24caf4ed2fc414f
+;; Package-Commit: e7d16ebe4a824e7d7766fb34ffe4ea3b002f3d23
 ;; Version: 2.0.0
 
 ;; This program is free software: you can redistribute it and/or modify

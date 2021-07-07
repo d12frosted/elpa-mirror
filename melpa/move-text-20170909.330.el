@@ -5,7 +5,7 @@
 ;; Author: Jason Milkins <jasonm23@gmail.com>
 ;; Keywords: edit
 ;; Package-Version: 20170909.330
-;; Package-Commit: bdaf3e3a0d33cd528cad1d10facbdf0635232e4d
+;; Package-Commit: bfc255110ad05732a43cf25d6a0e3b4a6710b58c
 ;; Url: https://github.com/emacsfodder/move-text
 ;; Compatibility: GNU Emacs 25.1
 ;; Version: 2.0.8

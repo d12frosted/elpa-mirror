@@ -8,3 +8,5 @@ help of websocket.
   The input on Emacs is reflected to the browser instantly and continuously.
 * Bidirectional communication
   You can edit both on the browser and Emacs, they are synced to the same.
+
+Firefox is supported via the GhostText browser addon.

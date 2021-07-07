@@ -105,7 +105,7 @@ The builtins are:
   notifier      - Uses terminal-notifier on OS X, if it is on the PATH
   osx-notifier  - Native OSX notifier using AppleScript
   toaster       - Use the toast notification system
-  x11 -         - Changes the urgency property of the window in the X Window System
+  x11           - Changes the urgency property of the window in the X Window System
 
 * Defining new styles
 

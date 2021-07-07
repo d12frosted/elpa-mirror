@@ -22,6 +22,7 @@ This is it at the moment:
  - `tagedit-forward-slurp-tag` moves the next sibling into this tag.
  - `tagedit-forward-barf-tag` moves the last child out of this tag.
  - `tagedit-raise-tag` replaces the parent tag with this tag.
+ - `tagedit-splice-tag` replaces the parent tag with its contents.
  - `tagedit-kill` kills to the end of the line, while preserving the structure.
 
 Not part of paredit:
@@ -33,7 +34,7 @@ Not part of paredit:
 If you want tagedit to bind to the same keys as paredit, there's this:
 
 ```cl
-(eval-after-load "sgml-mode"
+(eval-after-load 'sgml-mode
   '(progn
      (require 'tagedit)
      (tagedit-add-paredit-like-keybindings)
@@ -46,6 +47,7 @@ Or you can cherry-pick functions and bind them however you want:
 (define-key tagedit-mode-map (kbd "C-<right>") 'tagedit-forward-slurp-tag)
 (define-key tagedit-mode-map (kbd "C-<left>") 'tagedit-forward-barf-tag)
 (define-key tagedit-mode-map (kbd "M-r") 'tagedit-raise-tag)
+(define-key tagedit-mode-map (kbd "M-s") 'tagedit-splice-tag)
 (define-key tagedit-mode-map (kbd "C-k") 'tagedit-kill)
 (define-key tagedit-mode-map (kbd "s-k") 'tagedit-kill-attribute)
 ```

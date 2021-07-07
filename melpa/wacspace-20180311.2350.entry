@@ -1,0 +1,13 @@
+(wacspace .
+	  [(20180311 2350)
+	   ((dash
+	     (1 2 0))
+	    (cl-lib
+	     (0 2)))
+	   "The WACky WorkSPACE manager for emACS" tar
+	   ((:commit . "54d19aab6fd2bc5945b7ffc58104e695064927e2")
+	    (:authors
+	     ("Emanuel Evans" . "emanuel.evans@gmail.com"))
+	    (:maintainer "Emanuel Evans" . "emanuel.evans@gmail.com")
+	    (:keywords "workspace")
+	    (:url . "http://github.com/shosti/wacspace.el"))])

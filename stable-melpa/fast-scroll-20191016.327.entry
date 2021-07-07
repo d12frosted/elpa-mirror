@@ -1,0 +1,13 @@
+(fast-scroll .
+	     [(20191016 327)
+	      ((emacs
+		(25 1))
+	       (cl-lib
+		(0 6 1)))
+	      "Some utilities for faster scrolling over large buffers." single
+	      ((:commit . "3f6ca0d5556fe9795b74714304564f2295dcfa24")
+	       (:authors
+		("Matthew Carter" . "m@ahungry.com"))
+	       (:maintainer "Matthew Carter" . "m@ahungry.com")
+	       (:keywords "ahungry" "convenience" "fast" "scroll" "scrolling")
+	       (:url . "https://github.com/ahungry/fast-scroll"))])

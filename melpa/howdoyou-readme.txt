@@ -28,6 +28,8 @@ howdoyou-number-of-answers:       maximal number of answers to show, default is 
 howdoyou-switch-to-answer-buffer: switch to answer buffer if non nil, default is nil
 
 ; Changelog
+2021-07-06:
+- adapt to new SO change: trim score text
 2020-10-02:
 - update with change from google
 - impove test

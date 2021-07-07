@@ -1,0 +1,17 @@
+(copy-file-on-save .
+		   [(20200616 518)
+		    ((emacs
+		      (24 3))
+		     (cl-lib
+		      (0 5))
+		     (f
+		      (0 17))
+		     (s
+		      (1 7 0)))
+		    "Copy file on save, automatic deployment it." single
+		    ((:commit . "811c8fe638c5616b6471525421e61a4470be3b52")
+		     (:authors
+		      ("USAMI Kenta" . "tadsan@zonu.me"))
+		     (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+		     (:keywords "files" "comm" "deploy")
+		     (:url . "https://github.com/emacs-php/emacs-auto-deployment"))])

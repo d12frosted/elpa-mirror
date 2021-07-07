@@ -5,24 +5,26 @@ Source:  https://github.com/jscheid/prettier.el.git
 Updating /mnt/store/melpa/working/prettier/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/prettier/
-  to /tmp/prettiereENYlB/prettier-20210126.849
+  to /tmp/prettierfneqTs/prettier-20210606.1150
     prettier.el -> prettier.el
-    bootstrap-min.js -> bootstrap-min.js
-    prettier-el.js.gz.base64 -> prettier-el.js.gz.base64
-Created prettier-20210126.849.tar containing:
-  prettier-20210126.849/
-  prettier-20210126.849/bootstrap-min.js
-  prettier-20210126.849/prettier-el.js.gz.base64
-  prettier-20210126.849/prettier-pkg.el
-  prettier-20210126.849/prettier.el
-Built prettier in 3.837s, finished at Wed Jul  7 09:13:18 2021
+    bootstrap.js -> bootstrap.js
+    externs.js -> externs.js
+    prettier-el.js -> prettier-el.js
+Created prettier-20210606.1150.tar containing:
+  prettier-20210606.1150/
+  prettier-20210606.1150/bootstrap.js
+  prettier-20210606.1150/externs.js
+  prettier-20210606.1150/prettier-el.js
+  prettier-20210606.1150/prettier-pkg.el
+  prettier-20210606.1150/prettier.el
+Built prettier in 5.354s, finished at 2021-07-07T18:50:04+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  438 Jul  7 09:13 packages/prettier-20210126.849.entry
- 72K -rw-r--r-- 1 root root  70K Jul  7 09:13 packages/prettier-20210126.849.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:13 packages/prettier-badge.svg
- 12K -rw-r--r-- 1 root root 8.7K Jul  7 09:13 packages/prettier-js-20180109.726.el
-4.0K -rw-r--r-- 1 root root  383 Jul  7 06:00 packages/prettier-js-20180109.726.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 06:00 packages/prettier-js-badge.svg
-4.0K -rw-r--r-- 1 root root   60 Jul  7 06:00 packages/prettier-js-readme.txt
-4.0K -rw-r--r-- 1 root root  141 Jul  7 09:13 packages/prettier-js.log
-4.0K -rw-r--r-- 1 root root  255 Jul  7 09:13 packages/prettier-readme.txt
+4.0K -rw-r--r-- 1 root root  439 Jul  7 18:50 packages/prettier-20210606.1150.entry
+ 80K -rw-r--r-- 1 root root  80K Jul  7 18:50 packages/prettier-20210606.1150.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:50 packages/prettier-badge.svg
+ 12K -rw-r--r-- 1 root root 8.7K Jul  7 18:50 packages/prettier-js-20180109.726.el
+4.0K -rw-r--r-- 1 root root  383 Jul  7 18:50 packages/prettier-js-20180109.726.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 15:37 packages/prettier-js-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Jul  7 18:50 packages/prettier-js-readme.txt
+4.0K -rw-r--r-- 1 root root  141 Jul  7 18:49 packages/prettier-js.log
+4.0K -rw-r--r-- 1 root root  255 Jul  7 18:50 packages/prettier-readme.txt

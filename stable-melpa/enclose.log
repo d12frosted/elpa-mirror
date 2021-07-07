@@ -3,15 +3,18 @@ Fetcher: github
 Source:  https://github.com/rejeep/enclose.el.git
 
 Updating /mnt/store/melpa/working/enclose/
-Command '(env LC_ALL=C git submodule update --init --recursive)' exited with non-zero status 1: Fetching origin
-origin/HEAD set to master
-HEAD is now at 8c3a9c0 Update version to 0.0.2.
-Synchronizing submodule url for 'util/ecukes'
-Synchronizing submodule url for 'util/ecukes/test/el-mock'
-Synchronizing submodule url for 'util/ecukes/test/ert'
-Synchronizing submodule url for 'util/ert'
-Synchronizing submodule url for 'util/espuds'
-fatal: remote error: upload-pack: not our ref 6039afd28dd3eea64014f364ac490fb7c6eb0108
-Fetched in submodule path 'util/ecukes/test/el-mock', but it did not contain 6039afd28dd3eea64014f364ac490fb7c6eb0108. Direct fetching of that commit failed.
-Failed to recurse into submodule path 'util/ecukes'
-
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/enclose/
+  to /tmp/encloseRr5DnY/enclose-20120618.2019
+    enclose-pkg.el -> enclose-pkg.el
+    enclose.el -> enclose.el
+Created enclose-20120618.2019.tar containing:
+  enclose-20120618.2019/
+  enclose-20120618.2019/enclose-pkg.el
+  enclose-20120618.2019/enclose.el
+Built enclose in 4.330s, finished at 2021-07-07T18:12:46+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  362 Jul  7 18:12 packages/enclose-20120618.2019.entry
+ 20K -rw-r--r-- 1 root root  20K Jul  7 18:12 packages/enclose-20120618.2019.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:12 packages/enclose-badge.svg
+4.0K -rw-r--r-- 1 root root 1.7K Jul  7 18:12 packages/enclose-readme.txt

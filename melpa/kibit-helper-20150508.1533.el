@@ -7,7 +7,7 @@
 ;;         James Elliott <james@brunchboy.com>
 ;; URL: http://www.github.com/brunchboy/kibit-helper
 ;; Package-Version: 20150508.1533
-;; Package-Commit: ec5f154db3bb0c838e86f527353f08644cede926
+;; Package-Commit: 16bdfff785ee05d8e74a5780f6808506d990cef7
 ;; Version: 0.1.1
 ;; Package-Requires: ((s "0.8") (emacs "24"))
 ;; Keywords: languages, clojure, kibit

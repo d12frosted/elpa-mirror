@@ -5,23 +5,25 @@ Source:  https://github.com/cbowdon/daemons.el.git
 Updating /mnt/store/melpa/working/daemons/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/daemons/
-  to /tmp/daemonsH70hm5/daemons-20180610.1510
+  to /tmp/daemonsgorTVP/daemons-20200421.912
     daemons-brew.el -> daemons-brew.el
+    daemons-openrc.el -> daemons-openrc.el
     daemons-shepherd.el -> daemons-shepherd.el
     daemons-systemd.el -> daemons-systemd.el
     daemons-sysvinit.el -> daemons-sysvinit.el
     daemons.el -> daemons.el
-Created daemons-20180610.1510.tar containing:
-  daemons-20180610.1510/
-  daemons-20180610.1510/daemons-brew.el
-  daemons-20180610.1510/daemons-pkg.el
-  daemons-20180610.1510/daemons-shepherd.el
-  daemons-20180610.1510/daemons-systemd.el
-  daemons-20180610.1510/daemons-sysvinit.el
-  daemons-20180610.1510/daemons.el
-Built daemons in 3.816s, finished at Wed Jul  7 11:42:35 2021
+Created daemons-20200421.912.tar containing:
+  daemons-20200421.912/
+  daemons-20200421.912/daemons-brew.el
+  daemons-20200421.912/daemons-openrc.el
+  daemons-20200421.912/daemons-pkg.el
+  daemons-20200421.912/daemons-shepherd.el
+  daemons-20200421.912/daemons-systemd.el
+  daemons-20200421.912/daemons-sysvinit.el
+  daemons-20200421.912/daemons.el
+Built daemons in 7.697s, finished at 2021-07-07T18:06:33+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  333 Jul  7 11:42 packages/daemons-20180610.1510.entry
- 32K -rw-r--r-- 1 root root  30K Jul  7 11:42 packages/daemons-20180610.1510.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:42 packages/daemons-badge.svg
-4.0K -rw-r--r-- 1 root root  332 Jul  7 11:42 packages/daemons-readme.txt
+4.0K -rw-r--r-- 1 root root  332 Jul  7 18:06 packages/daemons-20200421.912.entry
+ 40K -rw-r--r-- 1 root root  40K Jul  7 18:06 packages/daemons-20200421.912.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:06 packages/daemons-badge.svg
+4.0K -rw-r--r-- 1 root root  350 Jul  7 18:06 packages/daemons-readme.txt

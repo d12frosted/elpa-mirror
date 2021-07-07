@@ -6,7 +6,7 @@
 ;; Created: Sep 2017
 ;; Version: 0.4.3
 ;; Package-Version: 20210316.1253
-;; Package-Commit: 0f135eb6581dabe69fff07f31082c8f53b4dcc70
+;; Package-Commit: eaa5f24d2fb303d9e5d7de2a28c7c18b01532ab6
 ;; Keywords: basic, languages
 ;; URL: https://github.com/dykstrom/basic-mode
 ;; Package-Requires: ((seq "2.20") (emacs "24.3"))

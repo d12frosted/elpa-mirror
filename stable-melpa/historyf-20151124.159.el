@@ -19,7 +19,7 @@
 
 ;; Version: 0.0.8
 ;; Package-Version: 20151124.159
-;; Package-Commit: 64ab6c9d2cd6dec6982622bf675326e011373cd2
+;; Package-Commit: 196c058ceb092fdd56b0e4ce85b7e714d6f72224
 ;; Author: k1LoW (Kenichirou Oyama), <k1lowxb [at] gmail [dot] com> <k1low [at] 101000lab [dot] org>
 ;; URL: https://github.com/k1LoW/emacs-historyf
 ;; Original-URL: http://code.101000lab.org

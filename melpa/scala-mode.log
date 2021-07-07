@@ -5,7 +5,8 @@ Source:  https://github.com/hvesalai/emacs-scala-mode.git
 Updating /mnt/store/melpa/working/scala-mode/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/scala-mode/
-  to /tmp/scala-modeVtLfW7/scala-mode-20190929.1522
+  to /tmp/scala-mode3q9Ebx/scala-mode-20210414.1126
+    scala-compile.el -> scala-compile.el
     scala-mode-fontlock.el -> scala-mode-fontlock.el
     scala-mode-imenu.el -> scala-mode-imenu.el
     scala-mode-indent.el -> scala-mode-indent.el
@@ -15,21 +16,22 @@ Copying files (->) and directories (=>)
     scala-mode-prettify-symbols.el -> scala-mode-prettify-symbols.el
     scala-mode-syntax.el -> scala-mode-syntax.el
     scala-mode.el -> scala-mode.el
-Created scala-mode-20190929.1522.tar containing:
-  scala-mode-20190929.1522/
-  scala-mode-20190929.1522/scala-mode-fontlock.el
-  scala-mode-20190929.1522/scala-mode-imenu.el
-  scala-mode-20190929.1522/scala-mode-indent.el
-  scala-mode-20190929.1522/scala-mode-lib.el
-  scala-mode-20190929.1522/scala-mode-map.el
-  scala-mode-20190929.1522/scala-mode-paragraph.el
-  scala-mode-20190929.1522/scala-mode-pkg.el
-  scala-mode-20190929.1522/scala-mode-prettify-symbols.el
-  scala-mode-20190929.1522/scala-mode-syntax.el
-  scala-mode-20190929.1522/scala-mode.el
-Built scala-mode in 4.026s, finished at Wed Jul  7 09:17:55 2021
+Created scala-mode-20210414.1126.tar containing:
+  scala-mode-20210414.1126/
+  scala-mode-20210414.1126/scala-compile.el
+  scala-mode-20210414.1126/scala-mode-fontlock.el
+  scala-mode-20210414.1126/scala-mode-imenu.el
+  scala-mode-20210414.1126/scala-mode-indent.el
+  scala-mode-20210414.1126/scala-mode-lib.el
+  scala-mode-20210414.1126/scala-mode-map.el
+  scala-mode-20210414.1126/scala-mode-paragraph.el
+  scala-mode-20210414.1126/scala-mode-pkg.el
+  scala-mode-20210414.1126/scala-mode-prettify-symbols.el
+  scala-mode-20210414.1126/scala-mode-syntax.el
+  scala-mode-20210414.1126/scala-mode.el
+Built scala-mode in 3.973s, finished at 2021-07-07T18:54:52+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  240 Jul  7 09:17 packages/scala-mode-20190929.1522.entry
-132K -rw-r--r-- 1 root root 130K Jul  7 09:17 packages/scala-mode-20190929.1522.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:17 packages/scala-mode-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul  7 09:17 packages/scala-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  240 Jul  7 18:54 packages/scala-mode-20210414.1126.entry
+140K -rw-r--r-- 1 root root 140K Jul  7 18:54 packages/scala-mode-20210414.1126.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:54 packages/scala-mode-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul  7 18:54 packages/scala-mode-readme.txt

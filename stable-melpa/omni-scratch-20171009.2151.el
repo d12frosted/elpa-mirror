@@ -6,7 +6,7 @@
 ;; Created:  2014-07-27
 ;; Version: 0.6.0
 ;; Package-Version: 20171009.2151
-;; Package-Commit: 636374c59c7d33c2f72c97ad8ba9fb4854f2324d
+;; Package-Commit: 9eee3161e5cb6df58618548a2173f4da7d194814
 ;; Keywords: convenience, languages, tools
 ;; Url: https://github.com/AdrieanKhisbe/omni-scratch.el
 

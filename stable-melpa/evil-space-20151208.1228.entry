@@ -1,0 +1,11 @@
+(evil-space .
+	    [(20151208 1228)
+	     ((evil
+	       (1 0 0)))
+	     "Repeat motion in Evil. Correct the behaviour of what SPC should do." single
+	     ((:commit . "a9c07284d308425deee134c9d88a2d538dd229e6")
+	      (:authors
+	       ("Quang Linh LE" . "linktohack@gmail.com"))
+	      (:maintainer "Quang Linh LE" . "linktohack@gmail.com")
+	      (:keywords "space" "repeat" "motion")
+	      (:url . "http://github.com/linktohack/evil-space"))])

@@ -14,4 +14,12 @@ The keyword lists are up to date as of NASM 2.12.01.
 http://www.nasm.us/doc/nasmdocb.html
 
 TODO:
- * Line continuation awareness
+[ ] Line continuation awareness
+[x] Don't run comment command if type ';' inside a string
+[ ] Nice multi-; comments, like in asm-mode
+[x] Be able to hit tab after typing mnemonic and insert a TAB
+[ ] Autocompletion
+[ ] Help menu with basic summaries of instructions
+[ ] Highlight errors, e.g. size mismatches "mov al, dword [rbx]"
+[ ] Work nicely with outline-minor-mode
+[ ] Highlighting of multiline macro definition arguments

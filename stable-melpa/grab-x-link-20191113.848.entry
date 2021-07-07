@@ -1,0 +1,13 @@
+(grab-x-link .
+	     [(20191113 848)
+	      ((emacs
+		(24))
+	       (cl-lib
+		(0 5)))
+	      "Grab links from X11 apps and insert into Emacs" single
+	      ((:commit . "d898db46e4864118359fdedfe915e180de3fe290")
+	       (:authors
+		("Xu Chunyang" . "mail@xuchunyang.me"))
+	       (:maintainer "Xu Chunyang" . "mail@xuchunyang.me")
+	       (:keywords "hyperlink")
+	       (:url . "https://github.com/xuchunyang/grab-x-link"))])

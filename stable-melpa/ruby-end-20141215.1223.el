@@ -6,7 +6,7 @@
 ;; Maintainer: Johan Andersson <johan.rejeep@gmail.com>
 ;; Version: 0.4.1
 ;; Package-Version: 20141215.1223
-;; Package-Commit: 648b81af136a581bcef387744d93c011d9cdf54b
+;; Package-Commit: a136f75abb6d5577ce40d61dfeb778c2e9bb09c0
 ;; Keywords: speed, convenience, ruby
 ;; URL: http://github.com/rejeep/ruby-end
 

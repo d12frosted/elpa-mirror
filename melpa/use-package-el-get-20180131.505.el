@@ -6,7 +6,7 @@
 ;; Created: 15 Jan 2018
 ;; Version: 0.1
 ;; Package-Version: 20180131.505
-;; Package-Commit: f33c448ed43ecb003b60ff601ee7ef9b08cff947
+;; Package-Commit: cba87c4e9a3a66b7c10962e3aefdf11c83d737bc
 ;; Package-Requires: ((use-package "1.0"))
 ;; Keywords: dotemacs startup speed config package tools
 ;; X-URL: https://github.com/edvorg/use-package-el-get

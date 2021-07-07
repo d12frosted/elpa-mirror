@@ -3,9 +3,17 @@ Fetcher: git
 Source:  https://gitlab.emacsos.com/sylecn/zero-el
 
 Updating /mnt/store/melpa/working/zero-input/
-Built zero-input in 6.472s, finished at Wed Jul  7 09:30:54 2021
- ✓ Success:
- 64K -rw-r--r-- 1 root root  63K Jul  7 09:30 packages/zero-input-20200405.1220.el
-4.0K -rw-r--r-- 1 root root  270 Jul  7 09:30 packages/zero-input-20200405.1220.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:30 packages/zero-input-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Jul  7 09:30 packages/zero-input-readme.txt
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zero-input/
+  to /tmp/zero-inputVY9X94/zero-input-20200405.1149
+    zero-input-framework.el -> zero-input-framework.el
+    zero-input-panel.el -> zero-input-panel.el
+    zero-input-pinyin-debug.el -> zero-input-pinyin-debug.el
+    zero-input-pinyin-service.el -> zero-input-pinyin-service.el
+    zero-input-pinyin.el -> zero-input-pinyin.el
+    zero-input-quickdial.el -> zero-input-quickdial.el
+    zero-input-reload-all.el -> zero-input-reload-all.el
+    zero-input-table.el -> zero-input-table.el
+    zero-input.el -> zero-input.el
+  ! zero-input.el.in -> zero-input.el
+File already exists: /tmp/zero-inputVY9X94/zero-input-20200405.1149/zero-input.el

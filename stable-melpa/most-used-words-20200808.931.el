@@ -6,7 +6,7 @@
 ;; Author: Udyant Wig <udyant.wig@gmail.com>
 ;; URL: https://github.com/udyantw/most-used-words
 ;; Package-Version: 20200808.931
-;; Package-Commit: 90c09da92b30c6497e9141f0edfe7842440c4d53
+;; Package-Commit: f712879493660c3c3ee3793470b8f8939b79c2b0
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: convenience, wp

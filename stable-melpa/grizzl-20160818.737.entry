@@ -1,0 +1,13 @@
+(grizzl .
+	[(20160818 737)
+	 ((cl-lib
+	   (0 5))
+	  (emacs
+	   (24 3)))
+	 "Fast fuzzy search index for Emacs." single
+	 ((:commit . "1e917253ce2b846f0272b8356fad3dbff9cd513a")
+	  (:authors
+	   ("Chris Corbyn" . "chris@w3style.co.uk"))
+	  (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
+	  (:keywords "convenience" "usability")
+	  (:url . "https://github.com/grizzl/grizzl"))])

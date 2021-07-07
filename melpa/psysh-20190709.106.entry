@@ -1,0 +1,17 @@
+(psysh .
+       [(20190709 106)
+	((emacs
+	  (24 3))
+	 (s
+	  (1 9 0))
+	 (f
+	  (0 17))
+	 (php-runtime
+	  (0 2)))
+	"PsySH, PHP interactive shell (REPL)" single
+	((:commit . "21250984ad8137aa3440ac12e52475ef03f19fcb")
+	 (:authors
+	  ("USAMI Kenta" . "tadsan@zonu.me"))
+	 (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+	 (:keywords "processes" "php")
+	 (:url . "https://github.com/zonuexe/psysh.el"))])

@@ -1,7 +1,3 @@
-  :PROPERTIES:
-  :ID:       7351e8d6-758c-4561-a938-1f9912f19f69
-  :END:
-
 ** What
 
 =emacsshot= provides a few commands to take a screenshot of
@@ -112,31 +108,10 @@ to your .emacs or whatever you use for Emacs intitialization.
 
 ** Development
 
-*** Lentic Literate Style
-
-This program is written in Emacs Lisp in lentic style based on the
-'lentic' package [[http://melpa.org/#/lentic][file:http://melpa.org/packages/lentic-badge.svg]].
-
-This means the that this file can be regarded just as an Emacs Lisp
-file.  But actually this file contains extra comments which allow the
-interpretation of the file as Org file.  Lentic-mode makes it easy to
-write this style.
-
-A possible initialization of lentic is this:
-
-#+BEGIN_EXAMPLE
-(global-lentic-start-mode)
-#+END_EXAMPLE
-
-Find more about lentic at
-[[http://melpa.org/#/lentic][file:http://melpa.org/packages/lentic-badge.svg]].
-
 *** Ideas, Contributions, Bugs
 
-Contributions, ideas and bug-reports are welcome.
-
-Please use the infrastructure of github for communication.  See
-https://github.com/marcowahl/emacsshot/issues.
+Contributions, ideas and bug-reports are welcome.  Contact the
+maintainer.
 
 ** Related
 

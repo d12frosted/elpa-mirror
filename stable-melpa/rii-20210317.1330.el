@@ -5,7 +5,7 @@
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: extensions, tools
 ;; Package-Version: 20210317.1330
-;; Package-Commit: 9df603a5c63ae38ec776e27dc93d3618e2b0fabe
+;; Package-Commit: d0cc3599129db735c23abe74d0876286a2fd6b6a
 
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.3"))

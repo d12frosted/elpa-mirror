@@ -6,7 +6,7 @@
 ;; Created: 13 Abril 2020
 ;; Version: 0.0.2
 ;; Package-Version: 20200427.2014
-;; Package-Commit: 5fe0a66642da6f4e7ba9e1e3a96572c7f1876e37
+;; Package-Commit: 782df679e33646db29e07508311bc8e8624b484e
 ;; Keywords: tools,files,convenience
 
 ;; URL: https://gitlab.com/sasanidas/gitlab-snip-helm

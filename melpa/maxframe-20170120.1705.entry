@@ -1,0 +1,8 @@
+(maxframe .
+	  [(20170120 1705)
+	   nil "maximize the emacs frame based on display size" single
+	   ((:commit . "f7048ce95443f2c06cb6b140814451e3a037103a")
+	    (:authors
+	     ("Ryan McGeary"))
+	    (:maintainer "Ryan McGeary")
+	    (:keywords "display" "frame" "window" "maximize"))])

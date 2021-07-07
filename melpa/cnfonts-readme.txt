@@ -63,8 +63,8 @@ profile 代表了一套字体配置，cnfonts 使用 profile 的概念，
 时使用 “Consolas + 微米黑”，在阅读文章时使用 “PragmataPro + 黑体”，
 等等。
 
-每一个 profile 都对应一个 emacs-lisp 文件, 保存在 `cnfonts-profiles-directory'
-目录中, 这些文件包含了英文字体设置，中文字体设置以及中文字体大小，
+每一个 profile 都对应一个 emacs-lisp 文件, 保存在 `cnfonts-directory'
+对应的目录中, 这些文件包含了英文字体设置，中文字体设置以及中文字体大小，
 其结构类似：
 
 #+BEGIN_EXAMPLE

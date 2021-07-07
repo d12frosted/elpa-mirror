@@ -12,10 +12,6 @@ Features:
 
 Installation:
 
-**Note:** The function and variable names were previously separated by “/”
-from the namespace.  To conform with MELPA rules the separator has been
-changed to “-”.
-
 To use `register-quicknav.el', get it from
 [MELPA](https://melpa.org/#/register-quicknav) or put it in your load-path
 and add the following to your init.el:

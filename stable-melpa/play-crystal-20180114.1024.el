@@ -4,7 +4,7 @@
 ;; Author: Vitalii Elenhaupt
 ;; URL: https://github.com/veelenga/play-crystal.el
 ;; Package-Version: 20180114.1024
-;; Package-Commit: 86b54346e7c832c14f8e5654a462f6490a6b11d7
+;; Package-Commit: 0b4810a9025213bd11dbcbfd38b3ca928829e0a5
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "24.4") (dash "2.12.0") (request "0.2.0"))
 

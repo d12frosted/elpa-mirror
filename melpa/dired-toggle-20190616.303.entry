@@ -1,0 +1,9 @@
+(dired-toggle .
+	      [(20190616 303)
+	       nil "Show dired as sidebar and will not create new buffers when changing dir" single
+	       ((:commit . "7fe5fe35c63d1b0da14d6d6d52bdf6b2a5410ba7")
+		(:authors
+		 ("Xu FaSheng <fasheng[AT]fasheng.info>"))
+		(:maintainer "Xu FaSheng")
+		(:keywords "dired" "sidebar")
+		(:url . "https://github.com/fasheng/dired-toggle"))])

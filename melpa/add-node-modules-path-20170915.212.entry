@@ -1,9 +1,0 @@
-(add-node-modules-path .
-		       [(20170915 212)
-			nil "Add node_modules to your exec-path" single
-			((:commit . "6f7801b2c41e3711406b7e1654257ad5557f5bb3")
-			 (:authors
-			  ("Neri Marschik" . "marschik_neri@cyberagent.co.jp"))
-			 (:maintainer "Neri Marschik" . "marschik_neri@cyberagent.co.jp")
-			 (:keywords "javascript" "node" "node_modules" "eslint")
-			 (:url . "https://github.com/codesuki/add-node-modules-path"))])

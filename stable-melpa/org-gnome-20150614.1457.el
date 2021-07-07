@@ -5,7 +5,7 @@
 ;; Author: Nicolas Petton <petton.nicolas@gmail.com>
 ;; Keywords: org gnome
 ;; Package-Version: 20150614.1457
-;; Package-Commit: 1012d47886cfd30eed25b73d9f18e475e0155f88
+;; Package-Commit: 122e14cf6f8104150a65246a9a7c10e1d7939862
 ;; Package: org-gnome
 ;; Package-Requires: ((alert "1.2") (telepathy "0.1") (gnome-calendar "0.1"))
 

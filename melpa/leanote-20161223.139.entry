@@ -1,0 +1,23 @@
+(leanote .
+	 [(20161223 139)
+	  ((emacs
+	    (24 4))
+	   (cl-lib
+	    (0 5))
+	   (request
+	    (0 2))
+	   (let-alist
+	       (1 0 3))
+	   (pcache
+	    (0 4 0))
+	   (s
+	    (1 10 0))
+	   (async
+	    (1 9)))
+	  "A minor mode writing markdown leanote" single
+	  ((:commit . "d499e7b59bb1f1a2fabc0e4c26fb101ed62ebc7b")
+	   (:authors
+	    ("Aborn Jiang" . "aborn.jiang@gmail.com"))
+	   (:maintainer "Aborn Jiang" . "aborn.jiang@gmail.com")
+	   (:keywords "leanote" "note" "markdown")
+	   (:url . "https://github.com/aborn/leanote-emacs"))])

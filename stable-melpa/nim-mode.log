@@ -5,11 +5,9 @@ Source:  https://github.com/nim-lang/nim-mode.git
 Updating /mnt/store/melpa/working/nim-mode/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nim-mode/
-  to /tmp/nim-mode4GAWrD/nim-mode-20171024.1431
-    flycheck-nimsuggest.el -> flycheck-nimsuggest.el
+  to /tmp/nim-mode35SX11/nim-mode-20191219.847
     nim-capf.el -> nim-capf.el
     nim-compile.el -> nim-compile.el
-    nim-eldoc.el -> nim-eldoc.el
     nim-fill.el -> nim-fill.el
     nim-helper.el -> nim-helper.el
     nim-mode.el -> nim-mode.el
@@ -19,27 +17,23 @@ Copying files (->) and directories (=>)
     nim-syntax.el -> nim-syntax.el
     nim-util.el -> nim-util.el
     nim-vars.el -> nim-vars.el
-    nimscript-mode.el -> nimscript-mode.el
-Created nim-mode-20171024.1431.tar containing:
-  nim-mode-20171024.1431/
-  nim-mode-20171024.1431/flycheck-nimsuggest.el
-  nim-mode-20171024.1431/nim-capf.el
-  nim-mode-20171024.1431/nim-compile.el
-  nim-mode-20171024.1431/nim-eldoc.el
-  nim-mode-20171024.1431/nim-fill.el
-  nim-mode-20171024.1431/nim-helper.el
-  nim-mode-20171024.1431/nim-mode-pkg.el
-  nim-mode-20171024.1431/nim-mode.el
-  nim-mode-20171024.1431/nim-rx.el
-  nim-mode-20171024.1431/nim-smie.el
-  nim-mode-20171024.1431/nim-suggest.el
-  nim-mode-20171024.1431/nim-syntax.el
-  nim-mode-20171024.1431/nim-util.el
-  nim-mode-20171024.1431/nim-vars.el
-  nim-mode-20171024.1431/nimscript-mode.el
-Built nim-mode in 4.449s, finished at Wed Jul  7 09:04:23 2021
+Created nim-mode-20191219.847.tar containing:
+  nim-mode-20191219.847/
+  nim-mode-20191219.847/nim-capf.el
+  nim-mode-20191219.847/nim-compile.el
+  nim-mode-20191219.847/nim-fill.el
+  nim-mode-20191219.847/nim-helper.el
+  nim-mode-20191219.847/nim-mode-pkg.el
+  nim-mode-20191219.847/nim-mode.el
+  nim-mode-20191219.847/nim-rx.el
+  nim-mode-20191219.847/nim-smie.el
+  nim-mode-20191219.847/nim-suggest.el
+  nim-mode-20191219.847/nim-syntax.el
+  nim-mode-20191219.847/nim-util.el
+  nim-mode-20191219.847/nim-vars.el
+Built nim-mode in 3.965s, finished at 2021-07-07T18:40:57+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  422 Jul  7 09:04 packages/nim-mode-20171024.1431.entry
-240K -rw-r--r-- 1 root root 240K Jul  7 09:04 packages/nim-mode-20171024.1431.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:04 packages/nim-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 1.7K Jul  7 09:04 packages/nim-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  435 Jul  7 18:40 packages/nim-mode-20191219.847.entry
+240K -rw-r--r-- 1 root root 240K Jul  7 18:40 packages/nim-mode-20191219.847.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:40 packages/nim-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul  7 18:40 packages/nim-mode-readme.txt

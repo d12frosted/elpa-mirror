@@ -28,4 +28,4 @@ m") for other key bindings.
 Buffer in `make-color-mode' is not read-only, so you can yank and
 delete text and undo the changes as you always do.
 
-For full description, see <http://github.com/alezost/make-color.el>.
+For full description, see <https://github.com/alezost/make-color.el>.

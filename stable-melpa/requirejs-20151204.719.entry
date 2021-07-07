@@ -1,0 +1,19 @@
+(requirejs .
+	   [(20151204 719)
+	    ((js2-mode
+	      (20150713))
+	     (popup
+	      (0 5 3))
+	     (s
+	      (1 9 0))
+	     (cl-lib
+	      (0 5))
+	     (yasnippet
+	      (20151011 1823)))
+	    "Requirejs import manipulation and source traversal." tar
+	    ((:commit . "4ea2a5fcbc76e4cbb6a7461e6f05f019b75865b1")
+	     (:authors
+	      ("Joe Heyming" . "joeheyming@gmail.com"))
+	     (:maintainer "Joe Heyming" . "joeheyming@gmail.com")
+	     (:keywords "javascript" "requirejs")
+	     (:url . "https://github.com/joeheyming/requirejs-emacs"))])

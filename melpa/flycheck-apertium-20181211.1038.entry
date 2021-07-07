@@ -1,0 +1,11 @@
+(flycheck-apertium .
+		   [(20181211 1038)
+		    ((flycheck
+		      (0 25)))
+		    "Apertium checkers in flycheck" tar
+		    ((:commit . "22b60a17836477ac1edd15dc85b14f88ca871ba9")
+		     (:authors
+		      ("Kevin Brubeck Unhammer" . "unhammer+apertium@mm.st"))
+		     (:maintainer "Kevin Brubeck Unhammer" . "unhammer+apertium@mm.st")
+		     (:keywords "convenience" "tools" "xml")
+		     (:url . "http://wiki.apertium.org/wiki/Emacs"))])

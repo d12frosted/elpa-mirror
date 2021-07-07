@@ -1,0 +1,17 @@
+(caseformat .
+	    [(20160115 1615)
+	     ((emacs
+	       (24))
+	      (cl-lib
+	       (0 5))
+	      (dash
+	       (2 12 1))
+	      (s
+	       (1 10 0)))
+	     "Format based letter case converter" single
+	     ((:commit . "75ddb9c64eeb78b46d9e1db99bef8d0fb1e46b99")
+	      (:authors
+	       ("Hiroki YAMAKAWA" . "s06139@gmail.com"))
+	      (:maintainer "Hiroki YAMAKAWA" . "s06139@gmail.com")
+	      (:keywords "convenience")
+	      (:url . "https://github.com/HKey/caseformat"))])

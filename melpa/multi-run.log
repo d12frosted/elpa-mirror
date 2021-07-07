@@ -3,9 +3,21 @@ Fetcher: github
 Source:  https://github.com/sagarjha/multi-run.git
 
 Updating /mnt/store/melpa/working/multi-run/
-Built multi-run in 7.814s, finished at Wed Jul  7 09:03:11 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/multi-run/
+  to /tmp/multi-runAaM8DX/multi-run-20190507.2349
+    multi-run-helpers.el -> multi-run-helpers.el
+    multi-run-vars.el -> multi-run-vars.el
+    multi-run.el -> multi-run.el
+Created multi-run-20190507.2349.tar containing:
+  multi-run-20190507.2349/
+  multi-run-20190507.2349/multi-run-helpers.el
+  multi-run-20190507.2349/multi-run-pkg.el
+  multi-run-20190507.2349/multi-run-vars.el
+  multi-run-20190507.2349/multi-run.el
+Built multi-run in 4.022s, finished at 2021-07-07T18:39:35+0000
  ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Jul  7 09:03 packages/multi-run-20180122.1509.el
-4.0K -rw-r--r-- 1 root root  392 Jul  7 09:03 packages/multi-run-20180122.1509.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:03 packages/multi-run-badge.svg
-4.0K -rw-r--r-- 1 root root  145 Jul  7 09:03 packages/multi-run-readme.txt
+4.0K -rw-r--r-- 1 root root  404 Jul  7 18:39 packages/multi-run-20190507.2349.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 18:39 packages/multi-run-20190507.2349.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:39 packages/multi-run-badge.svg
+4.0K -rw-r--r-- 1 root root   73 Jul  7 18:39 packages/multi-run-readme.txt

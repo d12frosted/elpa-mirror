@@ -7,7 +7,7 @@
 ;; License: GPL3+
 ;; URL: https://github.com/lafrenierejm/standard-dirs.el
 ;; Package-Version: 20200621.1603
-;; Package-Commit: e37b7e1c714c7798cd8e3a6569e4d71b96718a60
+;; Package-Commit: 92460e21f964cb7495d974c42acd0b726af3fbcb
 ;; Version: 1.0.0
 ;; Keywords: files
 ;; Package-Requires: ((emacs "26.1") (f "0.20.0") (s "1.7.0"))

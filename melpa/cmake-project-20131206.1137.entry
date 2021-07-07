@@ -1,9 +1,0 @@
-(cmake-project .
-	       [(20131206 1137)
-		nil "Integrates CMake build process with Emacs" single
-		((:commit . "ec61f687772cccdb699f64ebe1e8dc8ba83f790f")
-		 (:authors
-		  ("Alexander Lamaison" . "alexander.lamaison@gmail"))
-		 (:maintainer "Alexander Lamaison" . "alexander.lamaison@gmail")
-		 (:keywords "c" "cmake" "languages" "tools")
-		 (:url . "http://github.com/alamaison/emacs-cmake-project"))])

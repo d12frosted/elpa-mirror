@@ -8,5 +8,3 @@ for a programmer to edit the program but not restart execution of the program.
 
 Another use might be in a compilation buffer for errors and
 warnings which refer to file and line positions.
-
-Should be available via Melpa.

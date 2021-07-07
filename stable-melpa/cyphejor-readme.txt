@@ -1,2 +1,1 @@
-This package allows to shorten major mode names using a set of
-user-defined rules.
+This package shortens major mode names by using a set of user-defined rules.

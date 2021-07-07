@@ -10,18 +10,27 @@ almost all 'file managers', and also some unique features:
     * backward, forward, or to a direct history entry
   * File quick-preview mode
     * inspired by, and similar to, midnight commander's "C-x q"
+    * customizable exclusion criteria to suppress undesirable files
+      (eg. binaries)
   * Current file's supplemental information in minibuffer (optional)
     * eg. output from 'getfattr', 'getfacl', 'stat', 'exif'.
   * Multiple panel views
     * inspired by, and similar to, midnight commander's "M-t"
       * superior configurability
       * directly choose a specific panel view, or toggle to next
+  * Extensive and easy-to-use sort options
+    * including options not in 'ls': sort by chmod, owner, group
+  * Swap panels (use "M-u")
+    * inspired by, and similar to, midnight commander's "C-u"
+      * a TRUE and complete swap (including history entries)
   * Trash management
     * per xfreedesktop standard
     * restore trashed files to their original locations
     * empty the trash, along with its administrative overhead
     * view trash summary information
   * Navigate 'up' n parent directories
+  * Launch persistent asynchronous processes for files
+    * Processes will survive even after exiting Emacs.
   * Quick shell window
     * choose your default shell / terminal emulation mode
     * choose your default shell program
@@ -41,6 +50,7 @@ Bonus customization features
   * toggle display of "hidden" or "undesirable" files (dired-omit mode)
   * auto-refresh buffers (auto-revert-mode)
   * highlight current line (hl-line-mode)
+    * current buffer highlights with a unique face.
   * don't wrap long lines (toggle-truncate-lines)
   * to disable:
     * option 1: M-x customize-variable diredc-bonus-configuration
@@ -53,13 +63,16 @@ Bonus customization features
   dired       -- ... (doh) ...
   dired-x     -- for dired-guess-default, dired-omit-mode
   dired-aux   -- for dired-compress-files
+  help-mode   -- for help button widget
   hl-line     -- for hl-line-mode
+  subr        -- for string-match-p
   term        -- for term-line-mode, term-send-input
   view        -- for view-mode
 
 Suggested (not part of Emacs):
 
   popup       -- for popup-menu*
+  key-assist  -- for key-assist
 
 
 ; Installation:

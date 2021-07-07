@@ -1,0 +1,11 @@
+(html-to-markdown .
+		  [(20151105 840)
+		   ((cl-lib
+		     (0 5)))
+		   "HTML to Markdown converter written in Emacs-lisp." single
+		   ((:commit . "60c5498c801be186478cf7c05be05b4430c4a144")
+		    (:authors
+		     ("Artur Malabarba" . "bruce.connor.am@gmail.com"))
+		    (:maintainer "Artur Malabarba" . "bruce.connor.am@gmail.com")
+		    (:keywords "tools" "wp" "languages")
+		    (:url . "http://github.com/Bruce-Connor/html-to-markdown"))])

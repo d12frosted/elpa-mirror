@@ -31,3 +31,7 @@ CUSTOMIZATION
 You can customize `smartscan-use-extended-syntax' to alter
 (temporarily, when you search) the syntax table used by Smart Scan
 to find matches in your buffer.
+
+CHANGES
+
+0.3: Only consider `-' to be part of a word in LISP modes.

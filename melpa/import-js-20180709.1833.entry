@@ -1,0 +1,13 @@
+(import-js .
+	   [(20180709 1833)
+	    ((grizzl
+	      (0 1 0))
+	     (emacs
+	      (24)))
+	    "Import Javascript dependencies" single
+	    ((:commit . "fb1f167e33c388b09a2afd32fbda90a67bfb2e40")
+	     (:authors
+	      ("Kevin Kehl" . "kevin.kehl@gmail.com"))
+	     (:maintainer "Kevin Kehl" . "kevin.kehl@gmail.com")
+	     (:keywords "javascript")
+	     (:url . "http://github.com/Galooshi/emacs-import-js/"))])

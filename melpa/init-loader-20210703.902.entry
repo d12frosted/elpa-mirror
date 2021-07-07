@@ -1,0 +1,10 @@
+(init-loader .
+	     [(20210703 902)
+	      ((cl-lib
+		(0 5)))
+	      "Loader for configuration files" single
+	      ((:commit . "ecab5a66b40227c4173992adfa5cfeae09f1657e")
+	       (:authors
+		("IMAKADO" . "ken.imakado@gmail.com"))
+	       (:maintainer "IMAKADO" . "ken.imakado@gmail.com")
+	       (:url . "https://github.com/emacs-jp/init-loader/"))])

@@ -1,0 +1,13 @@
+(weather-metno .
+	       [(20150901 107)
+		((emacs
+		  (24))
+		 (cl-lib
+		  (0 3)))
+		"Weather data from met.no in Emacs" tar
+		((:commit . "bfc7137095e0ee71aad70ac46f2af677f3c051b6")
+		 (:authors
+		  ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.de"))
+		 (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.de")
+		 (:keywords "comm")
+		 (:url . "https://github.com/ruediger/weather-metno-el"))])

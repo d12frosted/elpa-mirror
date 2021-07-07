@@ -1,5 +1,5 @@
 Simply M-x eglot should be enough to get you started, but here's a
-little info (see the accompanying README.md or the URL for more).
+ ;; little info (see the accompanying README.md or the URL for more).
 
 M-x eglot starts a server via a shell-command guessed from
 `eglot-server-programs', using the current major-mode (for whatever

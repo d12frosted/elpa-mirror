@@ -1,0 +1,11 @@
+(clang-capf .
+	    [(20210707 1127)
+	     ((emacs
+	       (24 4)))
+	     "Completion-at-point backend for c/c++ using clang" single
+	     ((:commit . "258863d5cd77d2c9d07cc5dfa41b20db22a178f7")
+	      (:authors
+	       ("Philip K. <philipk [at] posteo [dot] net>"))
+	      (:maintainer "Philip K. <philipk [at] posteo [dot] net>")
+	      (:keywords "c" "abbrev" "convenience")
+	      (:url . "https://git.sr.ht/~pkal/clang-capf"))])

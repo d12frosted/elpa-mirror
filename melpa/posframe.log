@@ -3,9 +3,19 @@ Fetcher: github
 Source:  https://github.com/tumashu/posframe.git
 
 Updating /mnt/store/melpa/working/posframe/
-Built posframe in 4.639s, finished at Wed Jul  7 09:13:06 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/posframe/
+  to /tmp/posframemkg2V1/posframe-20210617.42
+    posframe-benchmark.el -> posframe-benchmark.el
+    posframe.el -> posframe.el
+Created posframe-20210617.42.tar containing:
+  posframe-20210617.42/
+  posframe-20210617.42/posframe-benchmark.el
+  posframe-20210617.42/posframe-pkg.el
+  posframe-20210617.42/posframe.el
+Built posframe in 4.229s, finished at 2021-07-07T18:49:49+0000
  ✓ Success:
- 56K -rw-r--r-- 1 root root  53K Jul  7 09:13 packages/posframe-20210208.229.el
-4.0K -rw-r--r-- 1 root root  369 Jul  7 09:13 packages/posframe-20210208.229.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:13 packages/posframe-badge.svg
-4.0K -rw-r--r-- 1 root root 3.4K Jul  7 09:13 packages/posframe-readme.txt
+4.0K -rw-r--r-- 1 root root  365 Jul  7 18:49 packages/posframe-20210617.42.entry
+ 72K -rw-r--r-- 1 root root  70K Jul  7 18:49 packages/posframe-20210617.42.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:49 packages/posframe-badge.svg
+4.0K -rw-r--r-- 1 root root  307 Jul  7 18:49 packages/posframe-readme.txt

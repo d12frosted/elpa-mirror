@@ -9,12 +9,12 @@ Overview
 Usage
 -----
 
-Usage is very easy, put `lice.el` in your emacs system, and open a new
+Usage is very easy, put `lice.el` in your Emacs system, and open a new
 file, and run:
 
     M-x lice
 
-Then, `lice.el` tell to use which license (default is gpl-3.0). You
+Then, `lice.el` tell to use which license (default is gpl-3.0).  You
 can select license on minibuffer completion.
 
 When you select license, and enter the `RET`, license and copyright is

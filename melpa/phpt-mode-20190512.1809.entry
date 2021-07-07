@@ -1,0 +1,15 @@
+(phpt-mode .
+	   [(20190512 1809)
+	    ((emacs
+	      (25))
+	     (polymode
+	      (0 1 5))
+	     (php-mode
+	      (1 21 2)))
+	    "Major mode for editing PHPT test code" single
+	    ((:commit . "deb386f1a81003074c476f15e1975d445ff6df01")
+	     (:authors
+	      ("USAMI Kenta" . "tadsan@zonu.me"))
+	     (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+	     (:keywords "languages" "php")
+	     (:url . "https://github.com/emacs-php/phpt-mode"))])

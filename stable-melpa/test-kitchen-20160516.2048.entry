@@ -1,9 +1,0 @@
-(test-kitchen .
-	      [(20160516 2048)
-	       nil "Run test-kitchen inside of emacs" single
-	       ((:commit . "ddbcb964ac4700973eaf30ae366f086e3319e51f")
-		(:authors
-		 ("JJ Asghar"))
-		(:maintainer "JJ Asghar")
-		(:keywords "chef" "ruby" "test-kitchen")
-		(:url . "http://github.com/jjasghar/test-kitchen-el"))])

@@ -1,13 +1,13 @@
 This file contains code to simplify importing new transactions into your
-Ledger file.  Transactions are fetched using a fetcher (only boobank from the
-weboob project is supported for now) and the OFX file format.  Then, the OFX
+Ledger file.  Transactions are fetched using a fetcher (only Bank from the
+woob project is supported for now) and the OFX file format.  Then, the OFX
 buffers are converted into Ledger format through ledger-autosync.
 
 To use ledger-import, you first have to install and configure boobank, from
-the weboob project:
+the woob project:
 
-- http://weboob.org/
-- http://weboob.org/applications/boobank
+- https://woob.tech/
+- https://woob.tech/applications/bank
 
 When you manage to visualize your bank accounts with boobank, you should
 configure each in `ledger-import-accounts'.  Use `customize-variable' to do

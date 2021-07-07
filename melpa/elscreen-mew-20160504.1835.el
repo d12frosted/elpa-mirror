@@ -6,7 +6,7 @@
 ;; Author: Takashi Masuda <masutaka.net@gmail.com>
 ;; URL: https://github.com/masutaka/elscreen-mew
 ;; Package-Version: 20160504.1835
-;; Package-Commit: 89871fad690ae161dc076e16ef481b1965612077
+;; Package-Commit: c90a23441d836da14a1cb12788432308ba58e2b6
 ;; Version: 1.0.2
 ;; Package-Requires: ((elscreen "20120413.807"))
 

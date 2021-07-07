@@ -6,7 +6,7 @@
 ;; Contributor: Ivan Andrus <darthandrus@gmail.com>
 ;; Keywords: grep edit extensions
 ;; Package-Version: 20200128.109
-;; Package-Commit: fcd8c22748024342af15d54f3e7ab5596cf5c4bd
+;; Package-Commit: f9687c28bbc2e84f87a479b6ce04407bb97cfb23
 ;; Package-Requires: ((wgrep "2.1.1"))
 ;; URL: http://github.com/mhayashi1120/Emacs-wgrep/raw/master/wgrep-ack.el
 ;; Emacs: GNU Emacs 22 or later

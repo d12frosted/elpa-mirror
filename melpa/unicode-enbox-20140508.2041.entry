@@ -1,0 +1,19 @@
+(unicode-enbox .
+	       [(20140508 2041)
+		((string-utils
+		  (0 3 2))
+		 (ucs-utils
+		  (0 7 6))
+		 (list-utils
+		  (0 4 2))
+		 (persistent-soft
+		  (0 8 8))
+		 (pcache
+		  (0 2 3)))
+		"Surround a string with box-drawing characters" single
+		((:commit . "77074fac1994a4236f111d6a1d0cf79ea3fca151")
+		 (:authors
+		  ("Roland Walker" . "walker@pobox.com"))
+		 (:maintainer "Roland Walker" . "walker@pobox.com")
+		 (:keywords "extensions" "interface")
+		 (:url . "http://github.com/rolandwalker/unicode-enbox"))])

@@ -367,6 +367,12 @@ also be customized.  By default, these faces inherit their
 properties from the standard font-lock faces defined by your current
 color theme.
 
+If you are experiencing slow performance with a large number of
+files, you can limit the number of files displayed in the buffer by
+seting `deft-file-limit' to a positive integer value.  This limits
+the number of file buttons that need to be rendered, making each
+update faster.
+
 Deft also provides several hooks: `deft-mode-hook',
 `deft-filter-hook', and `deft-open-file-hook'.  See the
 documentation for these variables for further details.

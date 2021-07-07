@@ -1,0 +1,11 @@
+(disable-mouse .
+	       [(20210512 2114)
+		((emacs
+		  (24 1)))
+		"Disable mouse commands globally" single
+		((:commit . "cae3be9dd012727b40ad3b511731191f79cebe42")
+		 (:authors
+		  ("Steve Purcell" . "steve@sanityinc.com"))
+		 (:maintainer "Steve Purcell" . "steve@sanityinc.com")
+		 (:keywords "mouse")
+		 (:url . "https://github.com/purcell/disable-mouse"))])

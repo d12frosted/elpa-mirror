@@ -1,0 +1,9 @@
+(letcheck .
+	  [(20160202 1948)
+	   nil "Check the erroneous assignments in let forms" single
+	   ((:commit . "edf188ca2f85349e971b83f164c6484264e79426")
+	    (:authors
+	     ("Matus Goljer" . "matus.goljer@gmail.com"))
+	    (:maintainer "Matus Goljer" . "matus.goljer@gmail.com")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/Fuco1/letcheck"))])

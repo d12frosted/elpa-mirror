@@ -4,7 +4,7 @@
 ;; Created: May 23 2011
 ;; Keywords: frames, processes
 ;; Package-Version: 20200325.539
-;; Package-Commit: 773a6dde790c4a240e643a9071e4c7bce09d40de
+;; Package-Commit: de8d09b08b0b30714c4f9b98c97e9577d47b9be6
 ;; URL: https://github.com/riscy/bifocal-mode
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Package-Requires: ((emacs "24.4"))

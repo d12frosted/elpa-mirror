@@ -1,1 +1,1 @@
-Competitive Programming snippets for Yasnippet.
+Competitive Programming snippets for yasnippet

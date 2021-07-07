@@ -1,0 +1,13 @@
+(pacfiles-mode .
+	       [(20200915 1815)
+		((emacs
+		  (26))
+		 (cl-lib
+		  (0 5)))
+		"pacnew and pacsave merging tool" tar
+		((:commit . "8d06f64abc98c3f3338560c8d6eb47719e034069")
+		 (:authors
+		  ("Carlos G. Cordero <http://github/UndeadKernel>"))
+		 (:maintainer "Carlos G. Cordero" . "pacfiles@binarycharly.com")
+		 (:keywords "files" "pacman" "arch" "pacnew" "pacsave" "update" "linux")
+		 (:url . "https://github.com/UndeadKernel/pacfiles-mode"))])

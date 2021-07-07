@@ -6,5 +6,6 @@ There is support for the following init systems and service managers:
 - SysVinit (RHEL6)
 - brew services (macOS)
 - GNU Shepherd for user services (GuixSD)
+- OpenRC (Gentoo)
 
 Managing daemons on remote systems is supported with TRAMP.

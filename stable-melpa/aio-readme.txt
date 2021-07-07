@@ -1,3 +1,8 @@
+`aio` is to Emacs Lisp as [`asyncio`][asyncio] is to Python. This
+package builds upon Emacs 25 generators to provide functions that
+pause while they wait on asynchronous events. They do not block any
+thread while paused.
+
 The main components of this package are `aio-defun' / `aio-lambda'
 to define async function, and `aio-await' to pause these functions
 while they wait on asynchronous events. When an asynchronous

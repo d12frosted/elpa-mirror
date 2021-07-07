@@ -4,7 +4,7 @@ I'd like to thank [[https://twitter.com/camdez][Cameron Desautels]] for the jump
 
 I'd also like to thank [[http://twitter.com/ionrock][Eric Larson]] for pushing me to keep this alive.
 
-This minor mode allows you to run test-kitchen in a seporate buffer
+This minor mode allows you to run test-kitchen in a separate buffer
 
  * Run test-kitchen destroy in another buffer
  * Run test-kitchen list in another buffer

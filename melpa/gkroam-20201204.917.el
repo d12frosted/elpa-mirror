@@ -4,7 +4,7 @@
 ;;
 ;; Version: 2.4.3
 ;; Package-Version: 20201204.917
-;; Package-Commit: 2552444f1037240cce4f459bff3ac2b1f331bbb6
+;; Package-Commit: b40555f45a844b8fefc419cd43dc9bf63205a0b4
 ;; Keywords: org, convenience
 ;; Author: Kinney Zhang <kinneyzhang666@gmail.com>
 ;; URL: https://github.com/Kinneyzhang/gkroam

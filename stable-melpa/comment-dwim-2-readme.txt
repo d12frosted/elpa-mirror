@@ -39,6 +39,12 @@ If you only want to comment the selected region (like
 
   (setq cd2/region-command 'cd2/comment-or-uncomment-region)
 
+# Org-mode
+
+For org-mode, consider using `org-comment-dwim-2':
+
+  (define-key org-mode-map (kbd "M-;") 'org-comment-dwim-2)
+
 ## Behavior when command is repeated
 
 `comment-dwim-2' will by default try to kill any end-of-line

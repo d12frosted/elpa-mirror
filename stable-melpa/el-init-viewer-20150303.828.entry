@@ -1,0 +1,20 @@
+(el-init-viewer .
+		[(20150303 828)
+		 ((emacs
+		   (24))
+		  (cl-lib
+		   (0 5))
+		  (ctable
+		   (0 1 2))
+		  (dash
+		   (2 10 0))
+		  (anaphora
+		   (1 0 0))
+		  (el-init
+		   (0 1 4)))
+		 "Record viewer for el-init" single
+		 ((:commit . "7c0169d356d6c007317e253e5776e1e48a60d6ad")
+		  (:authors
+		   ("Hiroki YAMAKAWA" . "s06139@gmail.com"))
+		  (:maintainer "Hiroki YAMAKAWA" . "s06139@gmail.com")
+		  (:url . "https://github.com/HKey/el-init-viewer"))])

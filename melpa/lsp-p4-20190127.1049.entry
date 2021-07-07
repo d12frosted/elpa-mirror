@@ -1,0 +1,11 @@
+(lsp-p4 .
+	[(20190127 1049)
+	 ((lsp-mode
+	   (3 0)))
+	 "P4 support for lsp-mode" tar
+	 ((:commit . "669460d93b87fb876df11b2b68229677e7ad1a26")
+	  (:authors
+	   ("Dmitri Makarov"))
+	  (:maintainer "Dmitri Makarov")
+	  (:keywords "lsp" "p4")
+	  (:url . "https://github.com/dmakarov/p4ls"))])

@@ -12,6 +12,11 @@ provide, so ac-html-bootstrap may be helpful for you.
 Install `ac-html' for `auto-complete' completion framework
 or `company-web' if you are using `company' framework.
 
+For  `ac-html' users:  Since ac-html  0.4 is  alpha stage,  and not
+stable yet. This package works with  ac-html 0.3 series, if you are
+using ac-html 0.4  series, you may downgrade  ac-html aka reinstall
+from melpa-stable. `ac-html' 0.4 will be supported in the future.
+
 Usage:
 
 Use `ac-html-bootstrap+' or `company-web-bootstrap+'

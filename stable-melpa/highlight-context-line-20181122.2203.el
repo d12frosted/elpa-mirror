@@ -7,7 +7,7 @@
 ;; Created: 2002
 ;; Version: 2.0
 ;; Package-Version: 20181122.2203
-;; Package-Commit: c3257c0ca9dba76167bbd7e0718a65ecd26ef26f
+;; Package-Commit: 6b334e8207c780835a05b6909b4d826898c33d26
 ;; Keywords: faces, services, user
 
 ;; This file is not part of GNU Emacs.

@@ -1,0 +1,11 @@
+(discover-my-major .
+		   [(20180606 511)
+		    ((makey
+		      (0 2)))
+		    "Discover key bindings and their meaning for the current Emacs major mode" single
+		    ((:commit . "c592e5e67454f0d1b68669ac0c270073164b16b3")
+		     (:authors
+		      ("steckerhalter"))
+		     (:maintainer "steckerhalter")
+		     (:keywords "discover" "help" "major-mode" "keys")
+		     (:url . "https://framagit.org/steckerhalter/discover-my-major"))])

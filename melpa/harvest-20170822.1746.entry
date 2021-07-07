@@ -1,0 +1,15 @@
+(harvest .
+	 [(20170822 1746)
+	  ((swiper
+	    (0 7 0))
+	   (hydra
+	    (0 13 0))
+	   (s
+	    (1 11 0)))
+	  "Harvest integration" single
+	  ((:commit . "7acbc0564b250521b67131ee2a0a92720239454f")
+	   (:authors
+	    ("Kosta Harlan" . "kosta@kostaharlan.net"))
+	   (:maintainer "Kosta Harlan" . "kosta@kostaharlan.net")
+	   (:keywords "harvest")
+	   (:url . "https://github.com/kostajh/harvest.el"))])

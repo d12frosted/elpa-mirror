@@ -9,7 +9,7 @@
 ;; Package-Version: 20200719.618
 ;; Package-X-Original-Version: 0.3
 ;; Package-Requires: ((emacs "24.3"))
-;; Package-Commit: 952d0c14258b0fd2d2e4642c6576708dac35c2f8
+;; Package-Commit: d4edb2cc110f1679ebc82cb52a4242cbc74636db
 ;; URL: https://github.com/jcs-elpa/undersea-theme
 
 ;; This file is NOT part of GNU Emacs.

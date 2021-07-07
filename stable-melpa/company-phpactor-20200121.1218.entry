@@ -1,0 +1,16 @@
+(company-phpactor .
+		  [(20200121 1218)
+		   ((emacs
+		     (24 3))
+		    (company
+		     (0 9 6))
+		    (phpactor
+		     (0 1 0)))
+		   "company-mode backend for Phpactor" single
+		   ((:commit . "272217fbb6b7e7f70615fc518d77c6d75f33a44f")
+		    (:authors
+		     ("Martin Tang" . "martin.tang365@gmail.com")
+		     ("Mikael Kermorgant" . "mikael@kgtech.fi"))
+		    (:maintainer "Martin Tang" . "martin.tang365@gmail.com")
+		    (:keywords "tools" "php")
+		    (:url . "https://github.com/emacs-php/phpactor.el"))])

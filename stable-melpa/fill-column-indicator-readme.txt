@@ -1,3 +1,10 @@
+NB: The functionality provided by this package has now been implemented
+natively in Emacs as `display-fill-column-indicator-mode`, available as of
+version 27.0.90. Unless you are forced to use an older Emacs, you should use
+the native implementation instead of `fci-mode`. It's unaffected by most of the
+compatibility issues that this add-on has. This package is no longer actively
+maintained.
+
 Many modern editors and IDEs can graphically indicate the location of the
 fill column by drawing a thin line (in design parlance, a `rule') down the
 length of the editing window.  Fill-column-indicator implements this
@@ -78,7 +85,7 @@ something like fci-mode when truncate-lines is nil.)
 
 Fci-mode needs free use of two characters (specifically, it needs the use
 of two characters whose display table entries it can change
-arbitrarily).  Its defualt is to use the first two characters of the
+arbitrarily).  Its default is to use the first two characters of the
 Private Use Area of the Unicode BMP, viz. U+E000 and U+E001.  If you need
 to use those characters for some other purpose, set `fci-eol-char' and
 `fci-blank-char' to different values.

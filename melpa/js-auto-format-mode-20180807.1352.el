@@ -5,7 +5,7 @@
 ;; Author: Masafumi Koba <ybiquitous@gmail.com>
 ;; Version: 1.1.1
 ;; Package-Version: 20180807.1352
-;; Package-Commit: 29d245b4d126a5fc5153a4d8f17396be4165b4a6
+;; Package-Commit: 516abed166d687aa8b197973315bd6ea0900fb62
 ;; Package-Requires: ((emacs "24"))
 ;; Keywords: languages
 ;; URL: https://github.com/ybiquitous/js-auto-format-mode

@@ -5,30 +5,44 @@ Source:  https://github.com/djcb/sauron.git
 Updating /mnt/store/melpa/working/sauron/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sauron/
-  to /tmp/sauronLt54Rg/sauron-20130818.1834
+  to /tmp/sauronDlX2SB/sauron-20201011.905
+    sauron-ams-org.el -> sauron-ams-org.el
+    sauron-appt.el -> sauron-appt.el
+    sauron-compilation.el -> sauron-compilation.el
     sauron-dbus.el -> sauron-dbus.el
+    sauron-elfeed.el -> sauron-elfeed.el
     sauron-erc.el -> sauron-erc.el
     sauron-identica.el -> sauron-identica.el
     sauron-jabber.el -> sauron-jabber.el
+    sauron-mu4e.el -> sauron-mu4e.el
     sauron-notifications.el -> sauron-notifications.el
     sauron-org.el -> sauron-org.el
+    sauron-tail.el -> sauron-tail.el
     sauron-twittering.el -> sauron-twittering.el
+    sauron-zeroconf.el -> sauron-zeroconf.el
     sauron.el -> sauron.el
   ! sauron-pkg.el.in -> sauron-pkg.el
-Created sauron-20130818.1834.tar containing:
-  sauron-20130818.1834/
-  sauron-20130818.1834/sauron-dbus.el
-  sauron-20130818.1834/sauron-erc.el
-  sauron-20130818.1834/sauron-identica.el
-  sauron-20130818.1834/sauron-jabber.el
-  sauron-20130818.1834/sauron-notifications.el
-  sauron-20130818.1834/sauron-org.el
-  sauron-20130818.1834/sauron-pkg.el
-  sauron-20130818.1834/sauron-twittering.el
-  sauron-20130818.1834/sauron.el
-Built sauron in 3.776s, finished at Wed Jul  7 09:17:47 2021
+Created sauron-20201011.905.tar containing:
+  sauron-20201011.905/
+  sauron-20201011.905/sauron-ams-org.el
+  sauron-20201011.905/sauron-appt.el
+  sauron-20201011.905/sauron-compilation.el
+  sauron-20201011.905/sauron-dbus.el
+  sauron-20201011.905/sauron-elfeed.el
+  sauron-20201011.905/sauron-erc.el
+  sauron-20201011.905/sauron-identica.el
+  sauron-20201011.905/sauron-jabber.el
+  sauron-20201011.905/sauron-mu4e.el
+  sauron-20201011.905/sauron-notifications.el
+  sauron-20201011.905/sauron-org.el
+  sauron-20201011.905/sauron-pkg.el
+  sauron-20201011.905/sauron-tail.el
+  sauron-20201011.905/sauron-twittering.el
+  sauron-20201011.905/sauron-zeroconf.el
+  sauron-20201011.905/sauron.el
+Built sauron in 3.581s, finished at 2021-07-07T18:54:43+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  314 Jul  7 09:17 packages/sauron-20130818.1834.entry
- 64K -rw-r--r-- 1 root root  60K Jul  7 09:17 packages/sauron-20130818.1834.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:17 packages/sauron-badge.svg
-4.0K -rw-r--r-- 1 root root  192 Jul  7 09:17 packages/sauron-readme.txt
+4.0K -rw-r--r-- 1 root root  313 Jul  7 18:54 packages/sauron-20201011.905.entry
+112K -rw-r--r-- 1 root root 110K Jul  7 18:54 packages/sauron-20201011.905.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:54 packages/sauron-badge.svg
+4.0K -rw-r--r-- 1 root root  192 Jul  7 18:54 packages/sauron-readme.txt

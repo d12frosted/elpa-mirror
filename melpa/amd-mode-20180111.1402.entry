@@ -1,0 +1,24 @@
+(amd-mode .
+	  [(20180111 1402)
+	   ((emacs
+	     (25))
+	    (projectile
+	     (20161008 47))
+	    (s
+	     (1 9 0))
+	    (f
+	     (0 16 2))
+	    (seq
+	     (2 16))
+	    (makey
+	     (0 3))
+	    (js2-mode
+	     (20140114))
+	    (js2-refactor
+	     (0 6 1)))
+	   "Minor mode for handling JavaScript AMD module requirements." single
+	   ((:commit . "01fd19e0d635ccaf8e812364d8720733f2e84126")
+	    (:authors
+	     ("Nicolas Petton" . "petton.nicolas@gmail.com"))
+	    (:maintainer "Nicolas Petton" . "petton.nicolas@gmail.com")
+	    (:keywords "javascript" "amd" "projectile"))])

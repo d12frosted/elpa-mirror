@@ -5,37 +5,37 @@ Source:  https://github.com/nnicandro/emacs-zmq.git
 Updating /mnt/store/melpa/working/zmq/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/zmq/
-  to /tmp/zmqC0eio4/zmq-20190613.138
+  to /tmp/zmqqOrC0G/zmq-20210613.343
     zmq.el -> zmq.el
     Makefile -> Makefile
     src => src
-Created zmq-20190613.138.tar containing:
-  zmq-20190613.138/
-  zmq-20190613.138/Makefile
-  zmq-20190613.138/src/
-  zmq-20190613.138/src/Makefile.am
-  zmq-20190613.138/src/configure.ac
-  zmq-20190613.138/src/constants.c
-  zmq-20190613.138/src/context.c
-  zmq-20190613.138/src/context.h
-  zmq-20190613.138/src/core.c
-  zmq-20190613.138/src/core.h
-  zmq-20190613.138/src/emacs-module.h
-  zmq-20190613.138/src/emacs-zmq.c
-  zmq-20190613.138/src/emacs-zmq.h
-  zmq-20190613.138/src/msg.c
-  zmq-20190613.138/src/msg.h
-  zmq-20190613.138/src/poll.c
-  zmq-20190613.138/src/poll.h
-  zmq-20190613.138/src/socket.c
-  zmq-20190613.138/src/socket.h
-  zmq-20190613.138/src/util.c
-  zmq-20190613.138/src/util.h
-  zmq-20190613.138/zmq-pkg.el
-  zmq-20190613.138/zmq.el
-Built zmq in 3.983s, finished at Wed Jul  7 09:30:59 2021
+Created zmq-20210613.343.tar containing:
+  zmq-20210613.343/
+  zmq-20210613.343/Makefile
+  zmq-20210613.343/src/
+  zmq-20210613.343/src/Makefile.am
+  zmq-20210613.343/src/configure.ac
+  zmq-20210613.343/src/constants.c
+  zmq-20210613.343/src/context.c
+  zmq-20210613.343/src/context.h
+  zmq-20210613.343/src/core.c
+  zmq-20210613.343/src/core.h
+  zmq-20210613.343/src/emacs-module.h
+  zmq-20210613.343/src/emacs-zmq.c
+  zmq-20210613.343/src/emacs-zmq.h
+  zmq-20210613.343/src/msg.c
+  zmq-20210613.343/src/msg.h
+  zmq-20210613.343/src/poll.c
+  zmq-20210613.343/src/poll.h
+  zmq-20210613.343/src/socket.c
+  zmq-20210613.343/src/socket.h
+  zmq-20210613.343/src/util.c
+  zmq-20210613.343/src/util.h
+  zmq-20210613.343/zmq-pkg.el
+  zmq-20210613.343/zmq.el
+Built zmq in 3.834s, finished at 2021-07-07T19:08:08+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  398 Jul  7 09:30 packages/zmq-20190613.138.entry
-152K -rw-r--r-- 1 root root 150K Jul  7 09:30 packages/zmq-20190613.138.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:30 packages/zmq-badge.svg
-4.0K -rw-r--r-- 1 root root   60 Jul  7 09:30 packages/zmq-readme.txt
+4.0K -rw-r--r-- 1 root root  403 Jul  7 19:08 packages/zmq-20210613.343.entry
+152K -rw-r--r-- 1 root root 150K Jul  7 19:08 packages/zmq-20210613.343.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 19:08 packages/zmq-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Jul  7 19:08 packages/zmq-readme.txt

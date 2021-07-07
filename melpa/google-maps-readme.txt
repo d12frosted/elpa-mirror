@@ -1,1 +1,1 @@
-None
+Display Google Maps directly inside Emacs.

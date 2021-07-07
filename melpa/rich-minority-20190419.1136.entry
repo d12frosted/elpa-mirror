@@ -1,0 +1,11 @@
+(rich-minority .
+	       [(20190419 1136)
+		((cl-lib
+		  (0 5)))
+		"Clean-up and Beautify the list of minor-modes." single
+		((:commit . "a03e693f6f9232cf75363aaaf1cb041f21675c19")
+		 (:authors
+		  ("Artur Malabarba" . "emacs@endlessparentheses.com"))
+		 (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
+		 (:keywords "mode-line" "faces")
+		 (:url . "https://github.com/Malabarba/rich-minority"))])

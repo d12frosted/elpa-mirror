@@ -5,7 +5,7 @@
 ;; Author: Nicolas Lamirault <nicolas.lamirault@gmail.com>
 ;; Version: 0.2.0
 ;; Package-Version: 20160107.1015
-;; Package-Commit: 8c3f3d14a351a2394027d72ee0599aa73b9f0d13
+;; Package-Commit: cdddba2d183146c340915003f1b5d09d13712c22
 ;; Keywords : sift projectile
 ;; Homepage: https://github.com/nlamirault/sift.el
 

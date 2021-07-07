@@ -27,23 +27,3 @@ the other features via menu.
 
 You can access to the customize group via menu or using the command
 `apples-customize-group'.
-
-Here is my configuration.
-
-(global-set-key (kbd "C-c a") 'apples-open-scratch)
-(setq apples-underline-syntax-class "w")
-(setq backward-delete-char-untabify-method 'all)
-(setq imenu-auto-rescan t)
-(defun my-apples-mode-hook ()
-  (local-set-key (kbd "<S-tab>") 'apples-toggle-indent)
-  (local-set-key (kbd "RET") 'newline-and-indent)
-  (local-set-key (kbd "DEL") 'backward-delete-char-untabify)
-  (setq imenu-case-fold-search nil)
-  (imenu-add-menubar-index))
-(add-hook 'apples-mode-hook 'my-apples-mode-hook)
-(eval-after-load "auto-complete"
-  '(progn
-     (add-to-list 'ac-modes 'apples-mode)
-     (add-hook 'apples-mode-hook
-               (lambda ()
-                 (add-to-list 'ac-sources 'ac-source-applescript t)))))

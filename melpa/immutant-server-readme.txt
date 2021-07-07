@@ -9,6 +9,13 @@ M-x immutant-server-start
 
 History
 
+1.2.1
+
+- Marked the immutant-server-start arg as optional
+
+- Added immutant-server-default-directory to control where Immutant
+  starts
+
 1.2.0
 
 - Added additional notice regexes to

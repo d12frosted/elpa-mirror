@@ -1,0 +1,15 @@
+(flycheck-eldev .
+		[(20210305 2231)
+		 ((flycheck
+		   (32))
+		  (dash
+		   (2 17))
+		  (emacs
+		   (24 4)))
+		 "Eldev support in Flycheck" single
+		 ((:commit . "2ed17db874da51fba3d2991a1e05cf375fca9619")
+		  (:authors
+		   ("Paul Pogonyshev" . "pogonyshev@gmail.com"))
+		  (:maintainer "Paul Pogonyshev" . "pogonyshev@gmail.com")
+		  (:keywords "tools" "convenience")
+		  (:url . "https://github.com/flycheck/flycheck-eldev"))])

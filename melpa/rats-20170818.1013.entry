@@ -1,0 +1,14 @@
+(rats .
+      [(20170818 1013)
+       ((s
+	 (1 10 0))
+	(go-mode
+	 (1 3 1))
+	(cl-lib
+	 (0 5)))
+       "Rapid testing suite for Go" single
+       ((:commit . "a6d55aebcc54f669c6c6ffedf84364c4097903cc")
+	(:authors
+	 ("Antoine Kalmbach" . "ane@iki.fi"))
+	(:maintainer "Antoine Kalmbach" . "ane@iki.fi")
+	(:keywords "go"))])

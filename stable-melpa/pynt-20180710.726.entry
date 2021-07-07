@@ -1,0 +1,17 @@
+(pynt .
+      [(20180710 726)
+       ((emacs
+	 (24 4))
+	(ein
+	 (0 13 1))
+	(epc
+	 (0 1 1))
+	(deferred
+	  (0 5 1)))
+       "Generate and scroll EIN buffers from python code" single
+       ((:commit . "86cf9ce78d34f92bfd0764c9cbb75427ebd429e6")
+	(:authors
+	 ("Edward Banner" . "edward.banner@gmail.com"))
+	(:maintainer "Edward Banner" . "edward.banner@gmail.com")
+	(:keywords "convenience")
+	(:url . "https://github.com/ebanner/pynt"))])

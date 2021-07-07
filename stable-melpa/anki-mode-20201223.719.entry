@@ -1,0 +1,19 @@
+(anki-mode .
+	   [(20201223 719)
+	    ((emacs
+	      (24 4))
+	     (dash
+	      (2 12 0))
+	     (markdown-mode
+	      (2 2))
+	     (s
+	      (1 11 0))
+	     (request
+	      (0 3 0)))
+	    "A major mode for creating anki cards" single
+	    ((:commit . "d9b84028cd6a1ae040fb5604080a8b5fa8138562")
+	     (:authors
+	      ("David Shepherd" . "davidshepherd7@gmail.com"))
+	     (:maintainer "David Shepherd" . "davidshepherd7@gmail.com")
+	     (:keywords "tools")
+	     (:url . "https://github.com/davidshepherd7/anki-mode"))])

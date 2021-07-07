@@ -6,37 +6,37 @@ strength of each signal to triangulate your latitude and longitude.
 
 The main entry point is:
 
-- `geolocation-update-position' which calls `geolocation-get-position'
-  on a regular interval, and sets `geolocation-location' with the
-  result.  The `geolocation-update-hook' functions are called after
+- 'geolocation-update-position' which calls 'geolocation-get-position'
+  on a regular interval, and sets 'geolocation-location' with the
+  result.  The 'geolocation-update-hook' functions are called after
   each update.  Customize the hook functions if you want to
   invoke functions based on your position, and customize the
-  `geolocation-update-interval' with the time granularity you need,
+  'geolocation-update-interval' with the time granularity you need,
   keeping in mind the underlying positioning APIs may have rate
   limits and/or costs associated with high frequency querying.
 
-  The variable `geolocation-location' will contain nil or an alist:
-  - `latitude' - latitude of the current position
-  - `longitude' - longitude of the current position
-  - `accuracy' - an error radius, in meters
-  - `timestamp' - timestamp via `float-time'
+  The variable 'geolocation-location' will contain nil or an alist:
+  - latitude  - latitude of the current position
+  - longitude - longitude of the current position
+  - accuracy  - an error radius, in meters
+  - timestamp - timestamp via 'float-time'
 
 Other potentially useful functions include:
 
-- `geolocation-get-position' which retrieves your estimated position
+- 'geolocation-get-position' which retrieves your estimated position
   once and invokes a callback with the position data.  The callback
-  receives an alist with the same format as `geolocation-location.'
+  receives an alist with the same format as 'geolocation-location.'
 
-- `geolocation-scan-wifi' which scans asynchronously for nearby wifi
+- 'geolocation-scan-wifi' which scans asynchronously for nearby wifi
   access points using available system utilities, and invokes a callback
   with the wifi data.  The callback receives a list of alists containing:
-  - `bssid' - mac address that uniquely identifies the AP
-  - `signal' - relative signal strength, or RSSI
-  - `channel' - transmission channel
+  - bssid   - mac address that uniquely identifies the AP
+  - signal  - relative signal strength, or RSSI
+  - channel - transmission channel
 
-- `geolocation-update-calendar' stores the latest position in
-  `calendar-latitude' and `calendar-longitude'.  This function works
-  as a `geolocation-update-hook'.
+- 'geolocation-update-calendar' stores the latest position in
+  'calendar-latitude' and 'calendar-longitude'.  This function works
+  as a 'geolocation-update-hook'.
 
   At present, wifi scanning is supported on Mac OSX and Windows.
   Linux support is planned but not yet implemented.
@@ -55,13 +55,13 @@ You have a choice of third party services to use for the positioning:
 This package offers a set of customizable variables you can use to
 select which service is used, declare your API access token, choose
 the nearest API endpoint, and so on.  Those settings can be found in
-`M-x customize`, then browse for "Environment", then "hardware", and
+'M-x customize', then browse for "Environment", then "hardware", and
 then "Geolocation".
 
 By default, access tokens are expected to be accessed via the built-in
-`auth-source` package.  You can configure any backend, as this package
+'auth-source' package.  You can configure any backend, as this package
 only requires the token to be searchable via
-`auth-source-pick-first-password`.
+'auth-source-pick-first-password'.
 
 Rate Limits and Costs:
 

@@ -1,0 +1,17 @@
+(gsettings .
+	   [(20210407 2045)
+	    ((emacs
+	      (24 3))
+	     (dash
+	      (2 16 0))
+	     (gvariant
+	      (1 0 0))
+	     (s
+	      (1 12 0)))
+	    "GSettings (Gnome) helpers" single
+	    ((:commit . "9f9fb1fe946bbba46307c26355f355225ea7262a")
+	     (:authors
+	      ("wouter bolsterlee" . "wouter@bolsterl.ee"))
+	     (:maintainer "wouter bolsterlee" . "wouter@bolsterl.ee")
+	     (:keywords "languages")
+	     (:url . "https://github.com/wbolster/emacs-gsettings"))])

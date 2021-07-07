@@ -1,0 +1,18 @@
+(helm-org-ql .
+	     [(20210608 1556)
+	      ((emacs
+		(26 1))
+	       (dash
+		(2 18 1))
+	       (s
+		(1 12 0))
+	       (helm-org
+		(1 0))
+	       (org-ql
+		(0 6 -1)))
+	      "Helm support for org-ql" single
+	      ((:commit . "8342656b2d9af4bb6af9daa0a8b037d3693bd940")
+	       (:authors
+		("Adam Porter" . "adam@alphapapa.net"))
+	       (:maintainer "Adam Porter" . "adam@alphapapa.net")
+	       (:url . "https://github.com/alphapapa/org-ql"))])

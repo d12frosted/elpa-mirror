@@ -1,0 +1,11 @@
+(kaesar .
+	[(20160128 1008)
+	 ((cl-lib
+	   (0 3)))
+	 "Another AES algorithm encrypt/decrypt string with password." single
+	 ((:commit . "d087075cb1a46c2c85cd075220e09b2eaef9b86e")
+	  (:authors
+	   ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
+	  (:maintainer "Masahiro Hayashi" . "mhayashi1120@gmail.com")
+	  (:keywords "data")
+	  (:url . "https://github.com/mhayashi1120/Emacs-kaesar"))])

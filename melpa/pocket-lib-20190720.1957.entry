@@ -1,0 +1,19 @@
+(pocket-lib .
+	    [(20190720 1957)
+	     ((emacs
+	       (25 1))
+	      (request
+	       (0 2))
+	      (dash
+	       (2 13 0))
+	      (kv
+	       (0 0 19))
+	      (s
+	       (1 12 0)))
+	     "Library for accessing getpocket.com API" single
+	     ((:commit . "f794e3e619e1f6cad25bbfd5fe019a7e62820bf4")
+	      (:authors
+	       ("Adam Porter" . "adam@alphapapa.net"))
+	      (:maintainer "Adam Porter" . "adam@alphapapa.net")
+	      (:keywords "pocket")
+	      (:url . "https://github.com/alphapapa/pocket-lib.el"))])

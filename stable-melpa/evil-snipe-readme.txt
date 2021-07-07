@@ -1,9 +1,9 @@
 
 Evil-snipe emulates vim-seek and/or vim-sneak in evil-mode.
 
-It provides 2-character motions for quickly (and more accurately) jumping around
-text, compared to evil's built-in f/F/t/T motions, incrementally highlighting
-candidate targets as you type.
+It provides 2-character versions of evil's f/F/t/T motions, for quick and
+more accurately jumping around text, plus incremental highlighting (for
+f/F/t/T as well).
 
 To enable globally:
 

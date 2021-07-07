@@ -9,7 +9,7 @@ The functions we add are relative versions of `load', `require' and
 `__FILE__' function and a `provide-me' macro.
 
 The latest version of this code is at:
-    http://github.com/rocky/emacs-load-relative/
+    https://github.com/rocky/emacs-load-relative/
 
 `__FILE__' returns the file name that that the calling program is
 running.  If you are `eval''ing a buffer then the file name of that

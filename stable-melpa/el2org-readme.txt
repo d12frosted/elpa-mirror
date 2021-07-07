@@ -2,10 +2,10 @@
 el2org is a simple tool, which can convert a emacs-lisp file to org file.
 You can write code and document in a elisp file with its help.
 
-#+BEGIN_EXAMPLE
+#+begin_example
            (convert to)                    (export to)
 elisp  -----------------> org (internal) --------------> other formats
-#+END_EXAMPLE
+#+end_example
 
 Note: el2org.el file may be a good example.
 
@@ -22,10 +22,10 @@ Note: el2org.el file may be a good example.
 
 ** Configure
 
-#+BEGIN_EXAMPLE
+#+begin_src emacs-lisp
 (require 'el2org)
 (require 'ox-gfm)
-#+END_EXAMPLE
+#+end_src
 
 ** Usage
 

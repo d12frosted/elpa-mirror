@@ -1,4 +1,4 @@
-Phan is static analizer for PHP.  https://github.com/etsy/phan
+Phan is static analizer for PHP.  https://github.com/phan/phan
 This package has utilities and major mode for phan log format.
 
 # Major modes

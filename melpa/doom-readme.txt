@@ -10,6 +10,10 @@ You can create a DOM from XML using `doom-make-document-from-xml'
 with the input from `libxml-parse-xml-region'. See function documentation
 below for an example
 
+This library is called doom instead of dom because Emacs now comes
+with its own library called dom which does something slightly
+different.
+
 ; On Interfaces and Classes
 
 The elisp DOM implementation uses the doom-node structure to store all

@@ -3,7 +3,7 @@
 ;; Author: Torsten Hilbrich <torsten.hilbrich@gmx.net>
 ;; Keywords: interface, hypermedia
 ;; Package-Version: 20191111.446
-;; Package-Commit: c9cad101100975e88873636bfd426b7a19304ebd
+;; Package-Commit: bdf0aa7761d1c1a3bc0652b2fdc4a54b3acdb06a
 ;; Version: 1.11
 
 ;; This file is free software; you can redistribute it and/or modify

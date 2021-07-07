@@ -65,7 +65,27 @@ Table of Contents
 1.2.1 MELPA
 ╌╌╌╌╌╌╌╌╌╌╌
 
-  WIP.
+  `org-commentary' is available on both MELPA and MELPA Stable. Enable
+  the corresponding repository by adding an entry to `package-archives':
+
+  ┌────
+  │ (require 'package)
+  │ ;; you can enable MELPA Stable instead:
+  │ ;; (add-to-list 'package-archives
+  │ ;;              '("melpa-stable" . "https://stable.melpa.org/packages/"))
+  │ (add-to-list 'package-archives
+  │ 	     '("melpa" . "https://melpa.org/packages/"))
+  │ (package-initialize)
+  └────
+
+  See the [documentation] on more details about setting up MELPA
+  repositories.
+
+  To install `org-commentary' use Emacs' package menu at `M-x
+  list-packages' or run `M-x package-install RET org-commentary RET'.
+
+
+  [documentation] https://melpa.org/#/getting-started
 
 
 1.3 Getting started

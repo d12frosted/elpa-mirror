@@ -5,7 +5,7 @@ Source:  https://github.com/projectional-haskell/structured-haskell-mode.git
 Updating /mnt/store/melpa/working/shm/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/shm/
-  to /tmp/shmtSALcg/shm-20150217.1308
+  to /tmp/shmKvgdf2/shm-20180327.57
   ! elisp/shm-ast-documentation.el -> shm-ast-documentation.el
   ! elisp/shm-ast.el -> shm-ast.el
   ! elisp/shm-case-split.el -> shm-case-split.el
@@ -18,6 +18,7 @@ Copying files (->) and directories (=>)
   ! elisp/shm-in.el -> shm-in.el
   ! elisp/shm-indent.el -> shm-indent.el
   ! elisp/shm-insert-del.el -> shm-insert-del.el
+  ! elisp/shm-languages.el -> shm-languages.el
   ! elisp/shm-layout.el -> shm-layout.el
   ! elisp/shm-macros.el -> shm-macros.el
   ! elisp/shm-manipulation.el -> shm-manipulation.el
@@ -27,43 +28,46 @@ Copying files (->) and directories (=>)
   ! elisp/shm-reformat.el -> shm-reformat.el
   ! elisp/shm-simple-indent.el -> shm-simple-indent.el
   ! elisp/shm-slot.el -> shm-slot.el
+  ! elisp/shm-stack.el -> shm-stack.el
   ! elisp/shm-test.el -> shm-test.el
   ! elisp/shm-tests.el -> shm-tests.el
   ! elisp/shm-type.el -> shm-type.el
   ! elisp/shm-yank-kill.el -> shm-yank-kill.el
   ! elisp/shm.el -> shm.el
-Created shm-20150217.1308.tar containing:
-  shm-20150217.1308/
-  shm-20150217.1308/shm-ast-documentation.el
-  shm-20150217.1308/shm-ast.el
-  shm-20150217.1308/shm-case-split.el
-  shm-20150217.1308/shm-constraint.el
-  shm-20150217.1308/shm-customizations.el
-  shm-20150217.1308/shm-debug.el
-  shm-20150217.1308/shm-edit-string.el
-  shm-20150217.1308/shm-evaporate.el
-  shm-20150217.1308/shm-fold.el
-  shm-20150217.1308/shm-in.el
-  shm-20150217.1308/shm-indent.el
-  shm-20150217.1308/shm-insert-del.el
-  shm-20150217.1308/shm-layout.el
-  shm-20150217.1308/shm-macros.el
-  shm-20150217.1308/shm-manipulation.el
-  shm-20150217.1308/shm-nav.el
-  shm-20150217.1308/shm-node.el
-  shm-20150217.1308/shm-overlays.el
-  shm-20150217.1308/shm-pkg.el
-  shm-20150217.1308/shm-reformat.el
-  shm-20150217.1308/shm-simple-indent.el
-  shm-20150217.1308/shm-slot.el
-  shm-20150217.1308/shm-test.el
-  shm-20150217.1308/shm-tests.el
-  shm-20150217.1308/shm-type.el
-  shm-20150217.1308/shm-yank-kill.el
-  shm-20150217.1308/shm.el
-Built shm in 3.757s, finished at Wed Jul  7 09:19:13 2021
+Created shm-20180327.57.tar containing:
+  shm-20180327.57/
+  shm-20180327.57/shm-ast-documentation.el
+  shm-20180327.57/shm-ast.el
+  shm-20180327.57/shm-case-split.el
+  shm-20180327.57/shm-constraint.el
+  shm-20180327.57/shm-customizations.el
+  shm-20180327.57/shm-debug.el
+  shm-20180327.57/shm-edit-string.el
+  shm-20180327.57/shm-evaporate.el
+  shm-20180327.57/shm-fold.el
+  shm-20180327.57/shm-in.el
+  shm-20180327.57/shm-indent.el
+  shm-20180327.57/shm-insert-del.el
+  shm-20180327.57/shm-languages.el
+  shm-20180327.57/shm-layout.el
+  shm-20180327.57/shm-macros.el
+  shm-20180327.57/shm-manipulation.el
+  shm-20180327.57/shm-nav.el
+  shm-20180327.57/shm-node.el
+  shm-20180327.57/shm-overlays.el
+  shm-20180327.57/shm-pkg.el
+  shm-20180327.57/shm-reformat.el
+  shm-20180327.57/shm-simple-indent.el
+  shm-20180327.57/shm-slot.el
+  shm-20180327.57/shm-stack.el
+  shm-20180327.57/shm-test.el
+  shm-20180327.57/shm-tests.el
+  shm-20180327.57/shm-type.el
+  shm-20180327.57/shm-yank-kill.el
+  shm-20180327.57/shm.el
+Built shm in 4.449s, finished at 2021-07-07T18:56:07+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  306 Jul  7 09:19 packages/shm-20150217.1308.entry
-220K -rw-r--r-- 1 root root 220K Jul  7 09:19 packages/shm-20150217.1308.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:19 packages/shm-badge.svg
-4.0K -rw-r--r-- 1 root root   55 Jul  7 09:19 packages/shm-readme.txt
+4.0K -rw-r--r-- 1 root root  304 Jul  7 18:56 packages/shm-20180327.57.entry
+252K -rw-r--r-- 1 root root 250K Jul  7 18:56 packages/shm-20180327.57.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:56 packages/shm-badge.svg
+4.0K -rw-r--r-- 1 root root   55 Jul  7 18:56 packages/shm-readme.txt

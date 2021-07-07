@@ -1,0 +1,13 @@
+(compiler-explorer .
+		   [(20210513 409)
+		    ((emacs
+		      (26 1))
+		     (request
+		      (0 3 0)))
+		    "Compiler explorer client (godbolt.org)" single
+		    ((:commit . "70cae42f0d624b6ce03b55c35ba9a6c2318a827d")
+		     (:authors
+		      ("Michał Krzywkowski" . "k.michal@zoho.com"))
+		     (:maintainer "Michał Krzywkowski" . "k.michal@zoho.com")
+		     (:keywords "c" "tools")
+		     (:url . "https://github.com/mkcms/compiler-explorer.el"))])

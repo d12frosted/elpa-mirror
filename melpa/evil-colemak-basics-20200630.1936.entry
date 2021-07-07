@@ -1,0 +1,15 @@
+(evil-colemak-basics .
+		     [(20200630 1936)
+		      ((emacs
+			(24 3))
+		       (evil
+			(1 2 12))
+		       (evil-snipe
+			(2 0 3)))
+		      "Basic Colemak key bindings for evil-mode" single
+		      ((:commit . "584f8f9496bf5250a439c9c9fee1d94f3b4883f0")
+		       (:authors
+			("Wouter Bolsterlee" . "wouter@bolsterl.ee"))
+		       (:maintainer "Wouter Bolsterlee" . "wouter@bolsterl.ee")
+		       (:keywords "convenience" "emulations" "colemak" "evil")
+		       (:url . "https://github.com/wbolster/evil-colemak-basics"))])

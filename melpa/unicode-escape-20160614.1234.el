@@ -5,7 +5,7 @@
 ;; Author: KOBAYASHI Shigeru (kosh) <shigeru.kb@gmail.com>
 ;; URL: https://github.com/kosh04/unicode-escape.el
 ;; Package-Version: 20160614.1234
-;; Package-Commit: b9cee7af45be62119b97033dc639bd1b5ed858f3
+;; Package-Commit: fc69ec780d9e54c364a9252bd0cf1d2507f3fab7
 ;; Original-URL: https://gist.github.com/kosh04/568800
 ;; Version: 1.1
 ;; Package-Requires: ((emacs "24") (names "20151201.0") (dash "2.12.1"))

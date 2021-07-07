@@ -24,7 +24,7 @@ Open Lua, Python, R, Julia and shell inferior buffers in new frames, enable
   :custom
   (dbc-verbose t)
   :config
-  (dbc-add-ruleset "pop-up-frame" '((display-buffer-reuse-window display-buffer-pop-up-frame) . ((reusable-frames . 0))))
+  (dbc-add-ruleset "pop-up-frame" dbc-right-side-action)
   (dbc-add-rule "pop-up-frame" "shell" :oldmajor "sh-mode" :newname "\\*shell\\*")
   (dbc-add-rule "pop-up-frame" "python" :newmajor "inferior-python-mode")
   (dbc-add-rule "pop-up-frame" "ess" :newmajor "inferior-ess-.+-mode")

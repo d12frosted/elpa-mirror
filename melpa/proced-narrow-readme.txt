@@ -1,6 +1,6 @@
-This package provides live filtering of processes in proced buffer.  In general, after calling
-proced-narrow you type a filter string into the minibuffer to filter the list of processes.  After
-each change proced-narrow automatically reflects the change in the buffer.  Typing C-g will
-cancel the narrowing and restore the original view, typing RET will exit the live filtering and
-leave the proced buffer in the narrow state.  To bring it back to the original view, you can call
-`revert buffer' (usually bound to g).
+This package provides live filtering of processes in proced buffers.  Open proced, call
+proced-narrow, and type the query to filter the processes with.  If you type "emacs" then
+proced-narrow will filter the processes listed to only the Emacs processes.  While in the
+minibuffer, typing RET will exit the minibuffer and leave the proced buffer in the narrowed
+state, and typing C-g will exit the minibuffer and restore the list of processes.  While in the
+proced buffer, to bring back all processes, call revert-buffer (default bind is g).

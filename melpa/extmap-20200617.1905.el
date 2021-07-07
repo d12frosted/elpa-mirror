@@ -6,7 +6,7 @@
 ;; Maintainer: Paul Pogonyshev <pogonyshev@gmail.com>
 ;; Version:    1.1.1
 ;; Package-Version: 20200617.1905
-;; Package-Commit: 341e3e16e217da5a006c0859cb3a59cbc40cfb84
+;; Package-Commit: 2a6373d4fad1a5ac95272cabb6f5e4af89233d67
 ;; Keywords:   lisp
 ;; Homepage:   https://github.com/doublep/extmap
 ;; Package-Requires: ((emacs "24.1"))

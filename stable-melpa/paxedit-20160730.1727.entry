@@ -1,0 +1,13 @@
+(paxedit .
+	 [(20160730 1727)
+	  ((cl-lib
+	    (0 5))
+	   (paredit
+	    (23)))
+	  "Structured, Context Driven LISP Editing and Refactoring" single
+	  ((:commit . "09f3d5aeb108937a801e77ef413e29eaa4ecc4be")
+	   (:authors
+	    ("Mustafa Shameem"))
+	   (:maintainer "Mustafa Shameem")
+	   (:keywords "lisp" "refactoring" "context")
+	   (:url . "https://github.com/promethial/paxedit"))])

@@ -3,9 +3,19 @@ Fetcher: github
 Source:  https://github.com/stardiviner/kiwix.el.git
 
 Updating /mnt/store/melpa/working/kiwix/
-Built kiwix in 4.310s, finished at Wed Jul  7 08:56:32 2021
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kiwix/
+  to /tmp/kiwixAfAgBz/kiwix-20210219.51
+    kiwix.el -> kiwix.el
+    org-kiwix.el -> org-kiwix.el
+Created kiwix-20210219.51.tar containing:
+  kiwix-20210219.51/
+  kiwix-20210219.51/kiwix-pkg.el
+  kiwix-20210219.51/kiwix.el
+  kiwix-20210219.51/org-kiwix.el
+Built kiwix in 3.986s, finished at 2021-07-07T18:32:55+0000
  ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Jul  7 08:56 packages/kiwix-20190325.352.el
-4.0K -rw-r--r-- 1 root root  383 Jul  7 08:56 packages/kiwix-20190325.352.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:56 packages/kiwix-badge.svg
-4.0K -rw-r--r-- 1 root root  120 Jul  7 08:56 packages/kiwix-readme.txt
+4.0K -rw-r--r-- 1 root root  382 Jul  7 18:32 packages/kiwix-20210219.51.entry
+ 32K -rw-r--r-- 1 root root  30K Jul  7 18:32 packages/kiwix-20210219.51.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:32 packages/kiwix-badge.svg
+4.0K -rw-r--r-- 1 root root  151 Jul  7 18:32 packages/kiwix-readme.txt

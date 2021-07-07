@@ -5,7 +5,7 @@ Source:  https://github.com/yaruopooner/msvc.git
 Updating /mnt/store/melpa/working/msvc/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/msvc/
-  to /tmp/msvcd72ppV/msvc-20191211.540
+  to /tmp/msvcL6MavK/msvc-20210503.1856
     msvc-env.el -> msvc-env.el
     msvc-flags.el -> msvc-flags.el
     msvc.el -> msvc.el
@@ -13,19 +13,19 @@ Copying files (->) and directories (=>)
     invoke-msbuild.bat -> invoke-msbuild.bat
     msvc-extractor.cflags.vcxproj -> msvc-extractor.cflags.vcxproj
     msvc-extractor.flymake.vcxproj -> msvc-extractor.flymake.vcxproj
-Created msvc-20191211.540.tar containing:
-  msvc-20191211.540/
-  msvc-20191211.540/empty.cpp
-  msvc-20191211.540/invoke-msbuild.bat
-  msvc-20191211.540/msvc-env.el
-  msvc-20191211.540/msvc-extractor.cflags.vcxproj
-  msvc-20191211.540/msvc-extractor.flymake.vcxproj
-  msvc-20191211.540/msvc-flags.el
-  msvc-20191211.540/msvc-pkg.el
-  msvc-20191211.540/msvc.el
-Built msvc in 4.100s, finished at Wed Jul  7 09:02:44 2021
+Created msvc-20210503.1856.tar containing:
+  msvc-20210503.1856/
+  msvc-20210503.1856/empty.cpp
+  msvc-20210503.1856/invoke-msbuild.bat
+  msvc-20210503.1856/msvc-env.el
+  msvc-20210503.1856/msvc-extractor.cflags.vcxproj
+  msvc-20210503.1856/msvc-extractor.flymake.vcxproj
+  msvc-20210503.1856/msvc-flags.el
+  msvc-20210503.1856/msvc-pkg.el
+  msvc-20210503.1856/msvc.el
+Built msvc in 3.899s, finished at 2021-07-07T18:39:20+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  466 Jul  7 09:02 packages/msvc-20191211.540.entry
-152K -rw-r--r-- 1 root root 150K Jul  7 09:02 packages/msvc-20191211.540.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:02 packages/msvc-badge.svg
- 12K -rw-r--r-- 1 root root 8.3K Jul  7 09:02 packages/msvc-readme.txt
+4.0K -rw-r--r-- 1 root root  467 Jul  7 18:39 packages/msvc-20210503.1856.entry
+152K -rw-r--r-- 1 root root 150K Jul  7 18:39 packages/msvc-20210503.1856.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:39 packages/msvc-badge.svg
+ 12K -rw-r--r-- 1 root root 8.3K Jul  7 18:39 packages/msvc-readme.txt

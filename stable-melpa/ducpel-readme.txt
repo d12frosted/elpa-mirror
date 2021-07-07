@@ -18,7 +18,7 @@ After that you can "M-x ducpel" and enjoy.  Use:
 - arrow keys to move your man;
 - TAB to switch to another man;
 - "u" to undo a move;
-- SPC to activate a special cell (currently only exit cell is special);
+- SPC to activate a special cell (exit or teleport);
 - "R" to restart the level;
 - "N"/"P"/"L" to go to the next/previous/particular level.
 

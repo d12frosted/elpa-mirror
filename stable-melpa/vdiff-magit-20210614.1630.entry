@@ -1,0 +1,17 @@
+(vdiff-magit .
+	     [(20210614 1630)
+	      ((emacs
+		(24 4))
+	       (vdiff
+		(0 3))
+	       (magit
+		(2 10 0))
+	       (transient
+		(0 1 0)))
+	      "magit integration for vdiff" single
+	      ((:commit . "fa62a260411387702dd4cc4791075c737519001f")
+	       (:authors
+		("Justin Burkett" . "justin@burkett.cc"))
+	       (:maintainer "Justin Burkett" . "justin@burkett.cc")
+	       (:keywords "diff")
+	       (:url . "https://github.com/justbur/emacs-vdiff-magit"))])

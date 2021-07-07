@@ -1,4 +1,3 @@
- -----------
 
 More friendly (permissive) TRAMP path constructions for us humans.
 

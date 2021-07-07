@@ -11,7 +11,7 @@ convenient features, but it is not contained in current Emacs.  It has
 functions such as displaying the on/off state of the IME in the mode line
 as UI/UX features.  It also has hooks to call when the IME state is
 changed.  With these hooks, you can change the color and shape of the
-cursor depending on the IME ON/OFF status to be visually known to the
+cursor depending on the IME on/off status to be visually known to the
 IME state.
 
 To use w32-ime.el, add the following code to your init.el or .emacs

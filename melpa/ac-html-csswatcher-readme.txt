@@ -1,5 +1,9 @@
 This package work `ac-html' and `company-web', please, install one of these.
 
+For `ac-html' users: Since  ac-html 0.4 is alpha  stage, and not stable  yet. This
+package works with ac-html 0.3 series, if you are using ac-html 0.4
+series, you may downgrade ac-html aka reinstall from melpa-stable.
+
 Preinstall:
 
 Install `csswatcher':
@@ -9,7 +13,7 @@ Install `csswatcher':
 Note:
 
 Please, keep CSS::Watcher up-to-date.
-Recommended version of csswatcher is 0.4.0 (run `csswatcher -v'). Update:
+Recommended version of csswatcher is 0.4.7 (run `csswatcher -v'). Update:
 
   sudo cpan i CSS::Watcher
 
@@ -31,6 +35,8 @@ File ".csswatcher" may indicate root of your project and used for set ignored fi
   ignore: \.css$
   # except app.css
   use: app\.css
+  # and skip recursive scanning node_modules, it may be slow!
+  skip: node_modules
 
 Otherwise projectile way used for root directory.
 

@@ -1,0 +1,13 @@
+(helm-taskswitch .
+		 [(20190304 1414)
+		  ((emacs
+		    (24))
+		   (helm
+		    (3 0)))
+		  "Use helm to switch windows and buffers" single
+		  ((:commit . "59f7cb99defa6e6bf6e7d599559fa8d5786cf8a9")
+		   (:authors
+		    ("Brian Caruso" . "briancaruso@gmail.com"))
+		   (:maintainer "Brian Caruso" . "briancaruso@gmail.com")
+		   (:keywords "frames")
+		   (:url . "https://github.com/bdc34/helm-taskswitch"))])

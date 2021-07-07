@@ -1,120 +1,106 @@
-Version: 3.0.0
-Package-Requires: ((emacs "24"))
-Keywords: convenience
+
+This program supports underlining with a certain character.
 
 When point is in an empty line then fill the line with a character
 making it as long as the line above.
 
-This program provides just command =underline-with-char=.
+This program provides just command `underline-with-char' and
+variable `underline-with-char-fill-char'.
 
+You can change the default underline character via
+
+M-x customize-variable underline-with-char-fill-char
+
+
+
 Examples
 ========
 
-Notation: <!> means point.
+Notation:
+- | means the cursor.
+- RET means the return key.
 
+
 Full underlining
 ................
 
-Input:
-^^^^^^
+Input
+_____
 
-#+begin_src text
 lala
-<!>
-#+end_src
+|
 
-Action:
-^^^^^^^
+Action
+______
 
-#+begin_src text
-M-x underline-with-char
-#+end_src
+M-x underline-with-char RET
 
-Output:
-^^^^^^^
+Output
+______
 
-#+begin_src text
 lala
-----<!>
-#+end_src
+----|
 
+
 Partial underlining
 ...................
 
-Input:
-^^^^^^
+Input
+_____
 
-#+begin_src text
-;; lolo
-;; <!>
-#+end_src
+lolololo
+//|
 
-Action:
-^^^^^^^
+Action
+______
 
-#+begin_src text
-M-x underline-with-char
-#+end_src
+M-x underline-with-char RET
 
-Output:
-^^^^^^^
+Output
+______
 
-#+begin_src text
-;; lolo
-;; ----<!>
-#+end_src
+lolololo
+//------|
 
-Use a certain char for current and subsequent underlinings
-..........................................................
+
+Use a certain char for current and subsequent underlinings (1)
+..............................................................
 
-Input:
-^^^^^^
+Input
+_____
 
-#+begin_src text
 lala
-<!>
-#+end_src
+|
 
-Action:
-^^^^^^^
+Action
+______
 
-#+begin_src text
-C-u M-x underline-with-char X
-#+end_src
+C-u M-x underline-with-char X RET
 
-Output:
-^^^^^^^
+Output
+______
 
-#+begin_src text
 lala
-XXXX<!>
-#+end_src
+XXXX|
 
-Change the buffer.  Example:
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Use a certain char for current and subsequent underlinings (2)
+..............................................................
 
-#+begin_src text
+Input
+_____
+
 lala
-XXXX
+|
 
-;; Worthy to be underlined
-;; <!>
-#+end_src
+Action
+______
 
-Go on without prefix argument (C-u):
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+C-u M-x underline-with-char X RET RET M-x underline-with-char RET
 
-#+begin_src text
-M-x underline-with-char X
-#+end_src
+Output
+______
 
-Output:
-^^^^^^^
-
-#+begin_src text
 lala
 XXXX
-
-;; Worthy to be underlined
-;; XXXXXXXXXXXXXXXXXXXXXXX<!>
-#+end_src
+XXXX|

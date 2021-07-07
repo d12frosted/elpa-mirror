@@ -5,11 +5,13 @@ Source:  https://github.com/dimitri/el-get.git
 Updating /mnt/store/melpa/working/el-get/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/el-get/
-  to /tmp/el-get26PC23/el-get-20140111.1648
+  to /tmp/el-getnBz36b/el-get-20210613.1418
     .dir-locals.el -> .dir-locals.el
-    el-get-autoloads.el -> el-get-autoloads.el
+    el-get-autoloading.el -> el-get-autoloading.el
     el-get-build.el -> el-get-build.el
+    el-get-bundle.el -> el-get-bundle.el
     el-get-byte-compile.el -> el-get-byte-compile.el
+    el-get-check.el -> el-get-check.el
     el-get-core.el -> el-get-core.el
     el-get-custom.el -> el-get-custom.el
     el-get-dependencies.el -> el-get-dependencies.el
@@ -22,52 +24,54 @@ Copying files (->) and directories (=>)
     el-get.el -> el-get.el
     recipes/el-get.rcp -> recipes/el-get.rcp
     methods => methods
-Created el-get-20140111.1648.tar containing:
-  el-get-20140111.1648/
-  el-get-20140111.1648/.dir-locals.el
-  el-get-20140111.1648/el-get-autoloads.el
-  el-get-20140111.1648/el-get-build.el
-  el-get-20140111.1648/el-get-byte-compile.el
-  el-get-20140111.1648/el-get-core.el
-  el-get-20140111.1648/el-get-custom.el
-  el-get-20140111.1648/el-get-dependencies.el
-  el-get-20140111.1648/el-get-install.el
-  el-get-20140111.1648/el-get-list-packages.el
-  el-get-20140111.1648/el-get-methods.el
-  el-get-20140111.1648/el-get-notify.el
-  el-get-20140111.1648/el-get-pkg.el
-  el-get-20140111.1648/el-get-recipes.el
-  el-get-20140111.1648/el-get-status.el
-  el-get-20140111.1648/el-get.el
-  el-get-20140111.1648/methods/
-  el-get-20140111.1648/methods/el-get-apt-get.el
-  el-get-20140111.1648/methods/el-get-brew.el
-  el-get-20140111.1648/methods/el-get-builtin.el
-  el-get-20140111.1648/methods/el-get-bzr.el
-  el-get-20140111.1648/methods/el-get-cvs.el
-  el-get-20140111.1648/methods/el-get-darcs.el
-  el-get-20140111.1648/methods/el-get-elpa.el
-  el-get-20140111.1648/methods/el-get-emacsmirror.el
-  el-get-20140111.1648/methods/el-get-emacswiki.el
-  el-get-20140111.1648/methods/el-get-fink.el
-  el-get-20140111.1648/methods/el-get-fossil.el
-  el-get-20140111.1648/methods/el-get-git-svn.el
-  el-get-20140111.1648/methods/el-get-git.el
-  el-get-20140111.1648/methods/el-get-github-tar.el
-  el-get-20140111.1648/methods/el-get-github-zip.el
-  el-get-20140111.1648/methods/el-get-github.el
-  el-get-20140111.1648/methods/el-get-go.el
-  el-get-20140111.1648/methods/el-get-hg.el
-  el-get-20140111.1648/methods/el-get-http-tar.el
-  el-get-20140111.1648/methods/el-get-http-zip.el
-  el-get-20140111.1648/methods/el-get-http.el
-  el-get-20140111.1648/methods/el-get-pacman.el
-  el-get-20140111.1648/methods/el-get-svn.el
-  el-get-20140111.1648/recipes/
-  el-get-20140111.1648/recipes/el-get.rcp
-Built el-get in 4.966s, finished at Wed Jul  7 11:47:03 2021
+Created el-get-20210613.1418.tar containing:
+  el-get-20210613.1418/
+  el-get-20210613.1418/.dir-locals.el
+  el-get-20210613.1418/el-get-autoloading.el
+  el-get-20210613.1418/el-get-build.el
+  el-get-20210613.1418/el-get-bundle.el
+  el-get-20210613.1418/el-get-byte-compile.el
+  el-get-20210613.1418/el-get-check.el
+  el-get-20210613.1418/el-get-core.el
+  el-get-20210613.1418/el-get-custom.el
+  el-get-20210613.1418/el-get-dependencies.el
+  el-get-20210613.1418/el-get-install.el
+  el-get-20210613.1418/el-get-list-packages.el
+  el-get-20210613.1418/el-get-methods.el
+  el-get-20210613.1418/el-get-notify.el
+  el-get-20210613.1418/el-get-pkg.el
+  el-get-20210613.1418/el-get-recipes.el
+  el-get-20210613.1418/el-get-status.el
+  el-get-20210613.1418/el-get.el
+  el-get-20210613.1418/methods/
+  el-get-20210613.1418/methods/el-get-apt-get.el
+  el-get-20210613.1418/methods/el-get-brew.el
+  el-get-20210613.1418/methods/el-get-builtin.el
+  el-get-20210613.1418/methods/el-get-bzr.el
+  el-get-20210613.1418/methods/el-get-cvs.el
+  el-get-20210613.1418/methods/el-get-darcs.el
+  el-get-20210613.1418/methods/el-get-elpa.el
+  el-get-20210613.1418/methods/el-get-emacsmirror.el
+  el-get-20210613.1418/methods/el-get-emacswiki.el
+  el-get-20210613.1418/methods/el-get-fink.el
+  el-get-20210613.1418/methods/el-get-fossil.el
+  el-get-20210613.1418/methods/el-get-git-svn.el
+  el-get-20210613.1418/methods/el-get-git.el
+  el-get-20210613.1418/methods/el-get-github-tar.el
+  el-get-20210613.1418/methods/el-get-github-zip.el
+  el-get-20210613.1418/methods/el-get-github.el
+  el-get-20210613.1418/methods/el-get-go.el
+  el-get-20210613.1418/methods/el-get-hg.el
+  el-get-20210613.1418/methods/el-get-http-tar.el
+  el-get-20210613.1418/methods/el-get-http-zip.el
+  el-get-20210613.1418/methods/el-get-http.el
+  el-get-20210613.1418/methods/el-get-pacman.el
+  el-get-20210613.1418/methods/el-get-svn.el
+  el-get-20210613.1418/recipes/
+  el-get-20210613.1418/recipes/el-get.rcp
+Built el-get in 5.064s, finished at 2021-07-07T18:10:50+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  487 Jul  7 11:47 packages/el-get-20140111.1648.entry
-280K -rw-r--r-- 1 root root 280K Jul  7 11:47 packages/el-get-20140111.1648.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 11:47 packages/el-get-badge.svg
-4.0K -rw-r--r-- 1 root root  689 Jul  7 11:47 packages/el-get-readme.txt
+4.0K -rw-r--r-- 1 root root  487 Jul  7 18:10 packages/el-get-20210613.1418.entry
+340K -rw-r--r-- 1 root root 340K Jul  7 18:10 packages/el-get-20210613.1418.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:10 packages/el-get-badge.svg
+4.0K -rw-r--r-- 1 root root  689 Jul  7 18:10 packages/el-get-readme.txt

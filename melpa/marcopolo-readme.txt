@@ -1,4 +1,4 @@
-Provides a Docker API client for Emacs.
+Provides a Docker HUB API client for Emacs.
 
 ; Installation:
 

@@ -1,0 +1,13 @@
+(kill-or-bury-alive .
+		    [(20210320 1231)
+		     ((emacs
+		       (24 4))
+		      (cl-lib
+		       (0 5)))
+		     "Precise control over buffer killing in Emacs" single
+		     ((:commit . "388067e764bf3922234196e2e9dd9e8f664c634d")
+		      (:authors
+		       ("Mark Karpov" . "markkarpov92@gmail.com"))
+		      (:maintainer "Mark Karpov" . "markkarpov92@gmail.com")
+		      (:keywords "buffer" "killing" "convenience")
+		      (:url . "https://github.com/mrkkrp/kill-or-bury-alive"))])

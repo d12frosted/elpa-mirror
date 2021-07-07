@@ -1,0 +1,13 @@
+(maven-test-mode .
+		 [(20141220 557)
+		  ((s
+		    (1 9))
+		   (emacs
+		    (24)))
+		  "Utilities for navigating test files and running maven test tasks." single
+		  ((:commit . "a19151861df2ad8ae4880a2e7c86ddf848cb569a")
+		   (:authors
+		    ("Renan Ranelli"))
+		   (:maintainer "Renan Ranelli")
+		   (:keywords "java" "maven" "test")
+		   (:url . "http://github.com/rranelli/maven-test-mode"))])

@@ -38,6 +38,8 @@ Mac OS X   Carbon Emacs       carbon-emacs-  carbon-emacs-applescript.el
 ------------------------------------------------------------------------
 GNU/Linux                     linux-         linux-commands.el
 ------------------------------------------------------------------------
+*BSD                          bsd-           bsd-commands.el
+------------------------------------------------------------------------
 All        Non-window system  nw-            nw-key.el
 
 If `init-loader-byte-compile' is non-nil, each configuration file

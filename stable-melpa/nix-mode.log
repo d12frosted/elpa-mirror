@@ -5,7 +5,7 @@ Source:  https://github.com/NixOS/nix-mode.git
 Updating /mnt/store/melpa/working/nix-mode/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nix-mode/
-  to /tmp/nix-mode5e3djc/nix-mode-20200907.615
+  to /tmp/nix-modetPsXsb/nix-mode-20210706.2217
     nix-build.el -> nix-build.el
     nix-drv-mode.el -> nix-drv-mode.el
     nix-edit.el -> nix-edit.el
@@ -20,26 +20,26 @@ Copying files (->) and directories (=>)
     nix-shell.el -> nix-shell.el
     nix-store.el -> nix-store.el
     nix.el -> nix.el
-Created nix-mode-20200907.615.tar containing:
-  nix-mode-20200907.615/
-  nix-mode-20200907.615/nix-build.el
-  nix-mode-20200907.615/nix-drv-mode.el
-  nix-mode-20200907.615/nix-edit.el
-  nix-mode-20200907.615/nix-format.el
-  nix-mode-20200907.615/nix-instantiate.el
-  nix-mode-20200907.615/nix-log.el
-  nix-mode-20200907.615/nix-mode-pkg.el
-  nix-mode-20200907.615/nix-mode.el
-  nix-mode-20200907.615/nix-prettify-mode.el
-  nix-mode-20200907.615/nix-repl.el
-  nix-mode-20200907.615/nix-search.el
-  nix-mode-20200907.615/nix-shebang.el
-  nix-mode-20200907.615/nix-shell.el
-  nix-mode-20200907.615/nix-store.el
-  nix-mode-20200907.615/nix.el
-Built nix-mode in 3.931s, finished at Wed Jul  7 09:04:28 2021
+Created nix-mode-20210706.2217.tar containing:
+  nix-mode-20210706.2217/
+  nix-mode-20210706.2217/nix-build.el
+  nix-mode-20210706.2217/nix-drv-mode.el
+  nix-mode-20210706.2217/nix-edit.el
+  nix-mode-20210706.2217/nix-format.el
+  nix-mode-20210706.2217/nix-instantiate.el
+  nix-mode-20210706.2217/nix-log.el
+  nix-mode-20210706.2217/nix-mode-pkg.el
+  nix-mode-20210706.2217/nix-mode.el
+  nix-mode-20210706.2217/nix-prettify-mode.el
+  nix-mode-20210706.2217/nix-repl.el
+  nix-mode-20210706.2217/nix-search.el
+  nix-mode-20210706.2217/nix-shebang.el
+  nix-mode-20210706.2217/nix-shell.el
+  nix-mode-20210706.2217/nix-store.el
+  nix-mode-20210706.2217/nix.el
+Built nix-mode in 4.384s, finished at 2021-07-07T18:41:02+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  322 Jul  7 09:04 packages/nix-mode-20200907.615.entry
-100K -rw-r--r-- 1 root root 100K Jul  7 09:04 packages/nix-mode-20200907.615.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:04 packages/nix-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  140 Jul  7 09:04 packages/nix-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  349 Jul  7 18:41 packages/nix-mode-20210706.2217.entry
+100K -rw-r--r-- 1 root root 100K Jul  7 18:41 packages/nix-mode-20210706.2217.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:41 packages/nix-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  140 Jul  7 18:41 packages/nix-mode-readme.txt

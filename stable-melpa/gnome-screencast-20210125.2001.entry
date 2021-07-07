@@ -1,0 +1,11 @@
+(gnome-screencast .
+		  [(20210125 2001)
+		   ((emacs
+		     (25)))
+		   "Use Gnome screen recording functionality using elisp" single
+		   ((:commit . "6450ee470e84ff14a15c5c3c0489c79ff593f165")
+		    (:authors
+		     ("Jürgen Hötzel" . "juergen@hoetzel.info"))
+		    (:maintainer "Jürgen Hötzel" . "juergen@hoetzel.info")
+		    (:keywords "tools" "multimedia")
+		    (:url . "https://github.com/juergenhoetzel/emacs-gnome-screencast"))])

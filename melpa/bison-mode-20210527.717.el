@@ -4,9 +4,9 @@
 ;;
 ;; Author:   Eric Beuscher <beuscher@eecs.tulane.edu>
 ;; Created:  2 Feb 1998
-;; Version:  0.3
+;; Version:  0.4
 ;; Package-Version: 20210527.717
-;; Package-Commit: 1193903e36adf6770b673c3936ac0fbdac609b95
+;; Package-Commit: 4f2e20394a475931409618c1635e9c9f1cf07d9c
 ;; Keywords: bison-mode, yacc-mode
 
 ;; This program is free software; you can redistribute it and/or modify

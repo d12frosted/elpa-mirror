@@ -1,0 +1,11 @@
+(protocols .
+	   [(20170802 1132)
+	    ((cl-lib
+	      (0 5)))
+	    "Protocol database access functions." single
+	    ((:commit . "d0f7c4acb05465f1a0d4be54363bbd2802647e77")
+	     (:authors
+	      ("Dave Pearson" . "davep@davep.org"))
+	     (:maintainer "Dave Pearson" . "davep@davep.org")
+	     (:keywords "convenience" "net" "protocols")
+	     (:url . "https://github.com/davep/protocols.el"))])

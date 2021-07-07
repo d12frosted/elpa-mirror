@@ -19,6 +19,7 @@ Installation:
 Add the following to your emacs init file:
 
 (require 'ac-helm) ;; Not necessary if using ELPA package
+(global-set-key (kbd "C-:") 'ac-complete-with-helm)
 (define-key ac-complete-mode-map (kbd "C-:") 'ac-complete-with-helm)
 
 That's all.

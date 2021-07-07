@@ -5,29 +5,36 @@ Source:  https://github.com/merrickluo/liberime.git
 Updating /mnt/store/melpa/working/liberime/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/liberime/
-  to /tmp/liberimeOke6yY/liberime-20200502.7
+  to /tmp/liberimePu0It2/liberime-20200915.542
     liberime.el -> liberime.el
     src => src
+    emacs-module => emacs-module
     LICENSE -> LICENSE
     Makefile -> Makefile
     README.org -> README.org
-Created liberime-20200502.7.tar containing:
-  liberime-20200502.7/
-  liberime-20200502.7/LICENSE
-  liberime-20200502.7/Makefile
-  liberime-20200502.7/README.org
-  liberime-20200502.7/liberime-pkg.el
-  liberime-20200502.7/liberime.el
-  liberime-20200502.7/src/
-  liberime-20200502.7/src/emacs-module.h
-  liberime-20200502.7/src/init.c
-  liberime-20200502.7/src/interface.c
-  liberime-20200502.7/src/interface.h
-  liberime-20200502.7/src/liberime-core.c
-  liberime-20200502.7/src/liberime-core.h
-Built liberime in 3.866s, finished at Wed Jul  7 08:58:01 2021
+Created liberime-20200915.542.tar containing:
+  liberime-20200915.542/
+  liberime-20200915.542/LICENSE
+  liberime-20200915.542/Makefile
+  liberime-20200915.542/README.org
+  liberime-20200915.542/emacs-module/
+  liberime-20200915.542/emacs-module/26/
+  liberime-20200915.542/emacs-module/26/emacs-module.h
+  liberime-20200915.542/emacs-module/27/
+  liberime-20200915.542/emacs-module/27/emacs-module.h
+  liberime-20200915.542/emacs-module/28/
+  liberime-20200915.542/emacs-module/28/emacs-module.h
+  liberime-20200915.542/liberime-pkg.el
+  liberime-20200915.542/liberime.el
+  liberime-20200915.542/src/
+  liberime-20200915.542/src/init.c
+  liberime-20200915.542/src/interface.c
+  liberime-20200915.542/src/interface.h
+  liberime-20200915.542/src/liberime-core.c
+  liberime-20200915.542/src/liberime-core.h
+Built liberime in 3.716s, finished at 2021-07-07T18:33:58+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  244 Jul  7 08:58 packages/liberime-20200502.7.entry
-112K -rw-r--r-- 1 root root 110K Jul  7 08:58 packages/liberime-20200502.7.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:58 packages/liberime-badge.svg
-4.0K -rw-r--r-- 1 root root   25 Jul  7 08:58 packages/liberime-readme.txt
+4.0K -rw-r--r-- 1 root root  325 Jul  7 18:33 packages/liberime-20200915.542.entry
+160K -rw-r--r-- 1 root root 160K Jul  7 18:33 packages/liberime-20200915.542.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:33 packages/liberime-badge.svg
+4.0K -rw-r--r-- 1 root root   59 Jul  7 18:33 packages/liberime-readme.txt

@@ -5,31 +5,35 @@ Source:  https://github.com/emacs-lsp/lsp-java.git
 Updating /mnt/store/melpa/working/lsp-java/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-java/
-  to /tmp/lsp-javaqMW0ii/lsp-java-20200804.1609
+  to /tmp/lsp-javac1W72d/lsp-java-20210701.725
     dap-java.el -> dap-java.el
     lsp-java-boot.el -> lsp-java-boot.el
     lsp-java.el -> lsp-java.el
     lsp-jt.el -> lsp-jt.el
     icons => icons
-Created lsp-java-20200804.1609.tar containing:
-  lsp-java-20200804.1609/
-  lsp-java-20200804.1609/dap-java.el
-  lsp-java-20200804.1609/icons/
-  lsp-java-20200804.1609/icons/vscode/
-  lsp-java-20200804.1609/icons/vscode/class.png
-  lsp-java-20200804.1609/icons/vscode/debug.png
-  lsp-java-20200804.1609/icons/vscode/method.png
-  lsp-java-20200804.1609/icons/vscode/package.png
-  lsp-java-20200804.1609/icons/vscode/placeholder.png
-  lsp-java-20200804.1609/icons/vscode/refresh.png
-  lsp-java-20200804.1609/icons/vscode/run.png
-  lsp-java-20200804.1609/lsp-java-boot.el
-  lsp-java-20200804.1609/lsp-java-pkg.el
-  lsp-java-20200804.1609/lsp-java.el
-  lsp-java-20200804.1609/lsp-jt.el
-Built lsp-java in 4.004s, finished at Wed Jul  7 08:59:12 2021
+Created lsp-java-20210701.725.tar containing:
+  lsp-java-20210701.725/
+  lsp-java-20210701.725/dap-java.el
+  lsp-java-20210701.725/icons/
+  lsp-java-20210701.725/icons/vscode/
+  lsp-java-20210701.725/icons/vscode/class.png
+  lsp-java-20210701.725/icons/vscode/debug.png
+  lsp-java-20210701.725/icons/vscode/history.png
+  lsp-java-20210701.725/icons/vscode/method.png
+  lsp-java-20210701.725/icons/vscode/package.png
+  lsp-java-20210701.725/icons/vscode/pass.png
+  lsp-java-20210701.725/icons/vscode/placeholder.png
+  lsp-java-20210701.725/icons/vscode/refresh.png
+  lsp-java-20210701.725/icons/vscode/run.png
+  lsp-java-20210701.725/icons/vscode/running.png
+  lsp-java-20210701.725/icons/vscode/test-error.png
+  lsp-java-20210701.725/lsp-java-boot.el
+  lsp-java-20210701.725/lsp-java-pkg.el
+  lsp-java-20210701.725/lsp-java.el
+  lsp-java-20210701.725/lsp-jt.el
+Built lsp-java in 4.482s, finished at 2021-07-07T18:35:37+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  505 Jul  7 08:59 packages/lsp-java-20200804.1609.entry
-160K -rw-r--r-- 1 root root 160K Jul  7 08:59 packages/lsp-java-20200804.1609.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 08:59 packages/lsp-java-badge.svg
-4.0K -rw-r--r-- 1 root root   35 Jul  7 08:59 packages/lsp-java-readme.txt
+4.0K -rw-r--r-- 1 root root  467 Jul  7 18:35 packages/lsp-java-20210701.725.entry
+180K -rw-r--r-- 1 root root 180K Jul  7 18:35 packages/lsp-java-20210701.725.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:35 packages/lsp-java-badge.svg
+4.0K -rw-r--r-- 1 root root   35 Jul  7 18:35 packages/lsp-java-readme.txt

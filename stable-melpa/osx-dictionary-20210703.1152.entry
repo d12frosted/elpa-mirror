@@ -1,0 +1,11 @@
+(osx-dictionary .
+		[(20210703 1152)
+		 ((cl-lib
+		   (0 5)))
+		 "Interface for OSX Dictionary.app" tar
+		 ((:commit . "1a4479d9f44ef1e6e5f7643c172c32f6fe6cce21")
+		  (:authors
+		   ("Chunyang Xu" . "mail@xuchunyang.me"))
+		  (:maintainer "Chunyang Xu" . "mail@xuchunyang.me")
+		  (:keywords "mac" "dictionary")
+		  (:url . "https://github.com/xuchunyang/osx-dictionary.el"))])

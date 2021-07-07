@@ -13,11 +13,8 @@ Then add the following lines to ~/.emacs:
      (require 'evil)
      (evil-mode 1)
 
-Evil requires undo-tree.el for linear undo and undo branches:
-
-     http://www.emacswiki.org/emacs/UndoTree
-
-Otherwise, Evil uses regular Emacs undo.
+Evil requires undo-redo (Emacs 28), undo-fu or undo-tree for redo
+functionality.  Otherwise, Evil uses regular Emacs undo.
 
 Evil requires `goto-last-change' and `goto-last-change-reverse'
 function for the corresponding motions g; g, as well as the

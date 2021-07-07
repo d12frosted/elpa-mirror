@@ -1,0 +1,12 @@
+(helm-apt .
+	  [(20210324 1929)
+	   ((helm
+	     (3 6))
+	    (emacs
+	     (25 1)))
+	   "Helm interface for Debian/Ubuntu packages (apt-*)" single
+	   ((:commit . "c952b5dc26015bc9c947973df99246212d276b63")
+	    (:authors
+	     ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
+	    (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
+	    (:url . "https://github.com/emacs-helm/helm-apt"))])

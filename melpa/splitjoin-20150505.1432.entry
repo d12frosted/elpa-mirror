@@ -1,0 +1,10 @@
+(splitjoin .
+	   [(20150505 1432)
+	    ((cl-lib
+	      (0 5)))
+	    "Transition between multiline and single-line code" single
+	    ((:commit . "e2945ee269e6e90f0243d6f2a33e067bb0a2873c")
+	     (:authors
+	      ("Syohei YOSHIDA" . "syohex@gmail.com"))
+	     (:maintainer "Syohei YOSHIDA" . "syohex@gmail.com")
+	     (:url . "https://github.com/syohex/emacs-splitjoin"))])

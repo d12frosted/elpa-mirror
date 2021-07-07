@@ -1,0 +1,9 @@
+(shift-number .
+	      [(20170301 1459)
+	       nil "Increase/decrease the number at point" single
+	       ((:commit . "cd099a5582fc996b800ac7607f6c38a004ce9740")
+		(:authors
+		 ("Alex Kost" . "alezost@gmail.com"))
+		(:maintainer "Alex Kost" . "alezost@gmail.com")
+		(:keywords "convenience")
+		(:url . "https://github.com/alezost/shift-number.el"))])

@@ -8,7 +8,7 @@ you won't forget password.
 ## Install:
 
 Put this file into load-path'ed directory, and
-!!!!!!!!!!!!!!! BYTE COMPILE IT !!!!!!!!!!!!!!!
+___!!!!!!!!!!!!!!! BYTE COMPILE IT !!!!!!!!!!!!!!!___
 And put the following expression into your .emacs.
 
     (require 'kaesar)
@@ -16,28 +16,28 @@ And put the following expression into your .emacs.
 ## Usage:
 
 * To encrypt a well encoded string (High level API)
-`kaesar-encrypt-string` <-> `kaesar-decrypt-string`
+`kaesar-encrypt-string' <-> `kaesar-decrypt-string'
 
 * To encrypt a unibyte string with algorithm (Middle level API)
-`kaesar-encrypt-bytes` <-> `kaesar-decrypt-bytes`
+`kaesar-encrypt-bytes' <-> `kaesar-decrypt-bytes'
 
 * To encrypt a unibyte with algorithm (Low level API)
-`kaesar-encrypt` <-> `kaesar-decrypt`
+`kaesar-encrypt' <-> `kaesar-decrypt'
 
 ## Sample:
 
 * To encrypt my secret
-  Please ensure that do not forget `clear-string` you want to hide.
+  Please ensure that do not forget `clear-string' you want to hide.
 
-      (defvar my-secret nil)
+    (defvar my-secret nil)
 
-      (let ((raw-string "My Secret"))
-        (setq my-secret (kaesar-encrypt-string raw-string))
-        (clear-string raw-string))
+    (let ((raw-string "My Secret"))
+      (setq my-secret (kaesar-encrypt-string raw-string))
+      (clear-string raw-string))
 
-* To decrypt `my-secret`
+* To decrypt `my-secret'
 
-      (kaesar-decrypt-string my-secret)
+    (kaesar-decrypt-string my-secret)
 
 ## NOTE:
 

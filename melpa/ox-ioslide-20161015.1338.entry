@@ -1,0 +1,19 @@
+(ox-ioslide .
+	    [(20161015 1338)
+	     ((emacs
+	       (24 1))
+	      (org
+	       (8 0))
+	      (cl-lib
+	       (0 5))
+	      (f
+	       (0 17 2))
+	      (makey
+	       (0 3)))
+	     "Export org-mode to Google I/O HTML5 slide." tar
+	     ((:commit . "6555680be5364c8ddd2bf446865cb1a82adb6b9e")
+	      (:authors
+	       ("coldnew" . "coldnew.tw@gmail.com"))
+	      (:maintainer "coldnew" . "coldnew.tw@gmail.com")
+	      (:keywords "html" "presentation")
+	      (:url . "http://github.com/coldnew/org-ioslide"))])

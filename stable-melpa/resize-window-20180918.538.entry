@@ -1,0 +1,13 @@
+(resize-window .
+	       [(20180918 538)
+		((emacs
+		  (24))
+		 (cl-lib
+		  (0 5)))
+		"easily resize windows" single
+		((:commit . "72018aa4d2401b60120588199d4cedd0dc1fbcfb")
+		 (:authors
+		  ("Dan Sutton " . "danielsutton01@gmail.com"))
+		 (:maintainer "Dan Sutton " . "danielsutton01@gmail.com")
+		 (:keywords "window" "resize")
+		 (:url . "https://github.com/dpsutton/resize-mode"))])

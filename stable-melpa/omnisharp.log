@@ -5,8 +5,9 @@ Source:  https://github.com/OmniSharp/omnisharp-emacs.git
 Updating /mnt/store/melpa/working/omnisharp/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/omnisharp/
-  to /tmp/omnisharpLCW6YX/omnisharp-20180121.1502
+  to /tmp/omnisharpLLoe5G/omnisharp-20201220.906
     omnisharp-auto-complete-actions.el -> omnisharp-auto-complete-actions.el
+    omnisharp-code-structure.el -> omnisharp-code-structure.el
     omnisharp-current-symbol-actions.el -> omnisharp-current-symbol-actions.el
     omnisharp-format-actions.el -> omnisharp-format-actions.el
     omnisharp-helm-integration.el -> omnisharp-helm-integration.el
@@ -17,27 +18,30 @@ Copying files (->) and directories (=>)
     omnisharp-server-management.el -> omnisharp-server-management.el
     omnisharp-settings.el -> omnisharp-settings.el
     omnisharp-solution-actions.el -> omnisharp-solution-actions.el
+    omnisharp-unit-test-actions.el -> omnisharp-unit-test-actions.el
     omnisharp-utils.el -> omnisharp-utils.el
     omnisharp.el -> omnisharp.el
-Created omnisharp-20180121.1502.tar containing:
-  omnisharp-20180121.1502/
-  omnisharp-20180121.1502/omnisharp-auto-complete-actions.el
-  omnisharp-20180121.1502/omnisharp-current-symbol-actions.el
-  omnisharp-20180121.1502/omnisharp-format-actions.el
-  omnisharp-20180121.1502/omnisharp-helm-integration.el
-  omnisharp-20180121.1502/omnisharp-http-utils.el
-  omnisharp-20180121.1502/omnisharp-navigation-actions.el
-  omnisharp-20180121.1502/omnisharp-pkg.el
-  omnisharp-20180121.1502/omnisharp-server-actions.el
-  omnisharp-20180121.1502/omnisharp-server-installation.el
-  omnisharp-20180121.1502/omnisharp-server-management.el
-  omnisharp-20180121.1502/omnisharp-settings.el
-  omnisharp-20180121.1502/omnisharp-solution-actions.el
-  omnisharp-20180121.1502/omnisharp-utils.el
-  omnisharp-20180121.1502/omnisharp.el
-Built omnisharp in 4.227s, finished at Wed Jul  7 09:06:16 2021
+Created omnisharp-20201220.906.tar containing:
+  omnisharp-20201220.906/
+  omnisharp-20201220.906/omnisharp-auto-complete-actions.el
+  omnisharp-20201220.906/omnisharp-code-structure.el
+  omnisharp-20201220.906/omnisharp-current-symbol-actions.el
+  omnisharp-20201220.906/omnisharp-format-actions.el
+  omnisharp-20201220.906/omnisharp-helm-integration.el
+  omnisharp-20201220.906/omnisharp-http-utils.el
+  omnisharp-20201220.906/omnisharp-navigation-actions.el
+  omnisharp-20201220.906/omnisharp-pkg.el
+  omnisharp-20201220.906/omnisharp-server-actions.el
+  omnisharp-20201220.906/omnisharp-server-installation.el
+  omnisharp-20201220.906/omnisharp-server-management.el
+  omnisharp-20201220.906/omnisharp-settings.el
+  omnisharp-20201220.906/omnisharp-solution-actions.el
+  omnisharp-20201220.906/omnisharp-unit-test-actions.el
+  omnisharp-20201220.906/omnisharp-utils.el
+  omnisharp-20201220.906/omnisharp.el
+Built omnisharp in 4.064s, finished at 2021-07-07T18:42:50+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  691 Jul  7 09:06 packages/omnisharp-20180121.1502.entry
-152K -rw-r--r-- 1 root root 150K Jul  7 09:06 packages/omnisharp-20180121.1502.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul  7 09:06 packages/omnisharp-badge.svg
-4.0K -rw-r--r-- 1 root root  278 Jul  7 09:06 packages/omnisharp-readme.txt
+4.0K -rw-r--r-- 1 root root  659 Jul  7 18:42 packages/omnisharp-20201220.906.entry
+160K -rw-r--r-- 1 root root 160K Jul  7 18:42 packages/omnisharp-20201220.906.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul  7 18:42 packages/omnisharp-badge.svg
+4.0K -rw-r--r-- 1 root root  278 Jul  7 18:42 packages/omnisharp-readme.txt

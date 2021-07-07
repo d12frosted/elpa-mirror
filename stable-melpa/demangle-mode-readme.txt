@@ -7,8 +7,8 @@ C++ symbols.  For example, in this mode:
 - the mangled C++ symbol `_ZTISt10ostrstream' displays as `typeinfo
   for std::ostrstream'
 
-- the mangled C++ `_GLOBAL__I_abc' displays as `global constructors
-  keyed to abc'
+- the mangled C++ symbol `_GLOBAL__I_abc' displays as `global
+  constructors keyed to abc'
 
 - the mangled D symbol `_D4test3fooAa' displays as `test.foo'
 

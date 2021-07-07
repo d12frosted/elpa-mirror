@@ -1,0 +1,11 @@
+(weibo .
+       [(20150307 2242)
+	((cl-lib
+	  (0 5)))
+	"Weibo client for Emacs" tar
+	((:commit . "a8abb50b7602fe15fe2bc6400ac29780e956b390")
+	 (:authors
+	  ("Austin" . "austiny.cn@gmail.com"))
+	 (:maintainer "Austin" . "austiny.cn@gmail.com")
+	 (:keywords "weibo")
+	 (:url . "https://github.com/austin-----/weibo.emacs"))])

@@ -27,6 +27,8 @@ I bind the following:
 (global-set-key (kbd "C-c p g") 'project-root-grep)
 (global-set-key (kbd "C-c p a") 'project-root-ack)
 (global-set-key (kbd "C-c p d") 'project-root-goto-root)
+(global-set-key (kbd "C-c p p") 'project-root-run-default-command)
+(global-set-key (kbd "C-c p l") 'project-root-browse-seen-projects)
 
 (global-set-key (kbd "C-c p M-x")
                 'project-root-execute-extended-command)

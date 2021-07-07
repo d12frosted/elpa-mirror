@@ -18,7 +18,7 @@
 
 * _Basic support for vCard 4.0, 3.0 and 2.1._
 
-`org-vcard' is working towards full compliance with the vCard 4.0 ([RFC 6350](https://tools.ietf.org/html/rfc6350)), 3.0 ([RFC 2426](https://tools.ietf.org/html/rfc2426) and [RFC 4770](https://tools.ietf.org/html/rfc4770)) and [2.1](http://www.imc.org/pdi/vcard-21.txt) specifications.
+`org-vcard' is working towards full compliance with the vCard 4.0 ([RFC 6350](https://tools.ietf.org/html/rfc6350)), 3.0 ([RFC 2426](https://tools.ietf.org/html/rfc2426) and [RFC 4770](https://tools.ietf.org/html/rfc4770)) and [2.1](https://web.archive.org/web/20120501162958/http://www.imc.org/pdi/vcard-21.doc) specifications.
 
 * _New contacts style: `tree'._
 
@@ -36,7 +36,7 @@ Install `org-vcard' from [MELPA](http://melpa.org/#/org-vcard), [MELPA Stable](h
 
 The main user commands are `org-vcard-export' and `org-vcard-import', which are intended to be called interactively; you can press TAB at many of the minibuffer prompts to get a list of the available options for a prompt.
 
-Both `org-vcard-export' and `org-vcard-import' are wrappers around the `org-vcard-transfer-helper' function. `org-vcard-transfer-helper' can be used to export and import programatically (i.e. via Emacs Lisp).
+Both `org-vcard-export' and `org-vcard-import' are wrappers around the `org-vcard-transfer-helper' function. `org-vcard-transfer-helper' can be used to export and import programmatically (i.e. via Emacs Lisp).
 
 Enabling `org-vcard-mode' will add an "Org-vCard" menu to the menu bar, from which one can access the various export, import and customisation options.
 

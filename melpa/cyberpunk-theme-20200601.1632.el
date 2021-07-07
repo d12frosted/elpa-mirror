@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/n3mo/cyberpunk-theme.el
 ;; Keywords: color theme cyberpunk
 ;; Package-Version: 20200601.1632
-;; Package-Commit: 81004fc774d373777d426926fc11abcf1e7ab334
+;; Package-Commit: cbd0d7193e69ff9e98262eb06aee3d27667ff5f5
 ;; Version: 1.22
 
 ;; This file is free software; you can redistribute it and/or modify

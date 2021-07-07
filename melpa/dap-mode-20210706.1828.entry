@@ -1,0 +1,27 @@
+(dap-mode .
+	  [(20210706 1828)
+	   ((emacs
+	     (26 1))
+	    (dash
+	     (2 18 0))
+	    (lsp-mode
+	     (6 0))
+	    (bui
+	     (1 1 0))
+	    (f
+	     (0 20 0))
+	    (s
+	     (1 12 0))
+	    (lsp-treemacs
+	     (0 1))
+	    (posframe
+	     (0 7 0))
+	    (ht
+	     (2 3)))
+	   "Debug Adapter Protocol mode" tar
+	   ((:commit . "01d92978d8a515b896b5bc6197620138e4a4f6ff")
+	    (:authors
+	     ("Ivan Yonchovski" . "yyoncho@gmail.com"))
+	    (:maintainer "Ivan Yonchovski" . "yyoncho@gmail.com")
+	    (:keywords "languages" "debug")
+	    (:url . "https://github.com/emacs-lsp/dap-mode"))])

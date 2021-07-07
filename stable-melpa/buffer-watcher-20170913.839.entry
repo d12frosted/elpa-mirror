@@ -1,0 +1,11 @@
+(buffer-watcher .
+		[(20170913 839)
+		 ((f
+		   (0 16 2))
+		  (cl-lib
+		   (0 5)))
+		 "Easily run shell scripts per filetype/directory when a buffer is saved" single
+		 ((:commit . "b32c67c8a5d724257d759f4c903d0dedc32246ef")
+		  (:authors
+		   ("Nicolas Petton" . "nicolas@petton.fr"))
+		  (:maintainer "Nicolas Petton" . "nicolas@petton.fr"))])

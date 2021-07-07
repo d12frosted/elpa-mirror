@@ -1,6 +1,6 @@
 test-simple.el is:
 
-* Simple. No need for
+* Simple.  No need for
   - context macros,
   - enclosing specifications,
   - required test tags.
@@ -9,9 +9,9 @@ test-simple.el is:
   add customized assert failure messages, or add summary messages
   before a group of tests.
 
-* Accomodates both interactive and non-interactive use.
+* Accommodates both interactive and non-interactive use.
    - For interactive use, one can use `eval-last-sexp', `eval-region',
-     and `eval-buffer'. One can `edebug' the code.
+     and `eval-buffer'.  One can `edebug' the code.
    -  For non-interactive use, run:
        emacs --batch --no-site-file --no-splash --load <test-lisp-code.el>
 
@@ -37,17 +37,17 @@ Here is an example using gcd.el found in the examples directory.
   (assert-equal 8 (gcd 8 32) "gcd(8,32)")
   (end-tests) ;; Stop the clock and print a summary
 
-Edit (with Emacs of course) test-gcd.el and run M-x eval-current-buffer
+Edit (with Emacs of course) gcd-tests.el and run M-x eval-current-buffer
 
 You should see in buffer *test-simple*:
 
-   test-gcd.el
+   gcd-tests.el
    ......
    0 failures in 6 assertions (0.002646 seconds)
 
 Now let us try from a command line:
 
-   $ emacs --batch --no-site-file --no-splash --load test-gcd.el
+   $ emacs --batch --no-site-file --no-splash --load gcd-tests.el
    Loading /src/external-vcs/emacs-test-simple/example/gcd.el (source)...
    *scratch*
    ......
