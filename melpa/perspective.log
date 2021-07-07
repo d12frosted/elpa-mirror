@@ -4,8 +4,6 @@ Source:  https://github.com/nex3/perspective-el.git
 
 Updating /mnt/store/melpa/working/perspective/
 Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-From https://github.com/nex3/perspective-el
-   2ff458a..b847965  master     -> origin/master
 usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
 
     -a, --auto            set refs/remotes/<name>/HEAD according to remote

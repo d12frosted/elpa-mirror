@@ -4,8 +4,6 @@ Source:  https://github.com/PyCQA/pylint.git
 
 Updating /mnt/store/melpa/working/pylint/
 Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-From https://github.com/PyCQA/pylint
-   70bd7d7b..0f8212f4  main       -> origin/main
 usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
 
     -a, --auto            set refs/remotes/<name>/HEAD according to remote

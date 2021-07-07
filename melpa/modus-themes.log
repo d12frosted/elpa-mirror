@@ -4,8 +4,6 @@ Source:  https://gitlab.com/protesilaos/modus-themes.git
 
 Updating /mnt/store/melpa/working/modus-themes/
 Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-From https://gitlab.com/protesilaos/modus-themes
-   c405b34..99d4e5d  main       -> origin/main
 usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
 
     -a, --auto            set refs/remotes/<name>/HEAD according to remote

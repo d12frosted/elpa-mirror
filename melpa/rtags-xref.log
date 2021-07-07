@@ -4,6 +4,8 @@ Source:  https://github.com/Andersbakken/rtags.git
 
 Updating /mnt/store/melpa/working/rtags-xref/
 Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
+From https://github.com/Andersbakken/rtags
+   e5120286..3df5d3ce  multiproject -> origin/multiproject
 usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
 
     -a, --auto            set refs/remotes/<name>/HEAD according to remote

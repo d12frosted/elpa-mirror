@@ -4,9 +4,6 @@ Source:  https://github.com/emacs-lsp/dap-mode.git
 
 Updating /mnt/store/melpa/working/dap-mode/
 Command '(env LC_ALL=C git remote set-head --auto)' exited with non-zero status 129: Fetching origin
-From https://github.com/emacs-lsp/dap-mode
-   cc395e0..01d9297  master     -> origin/master
-   3681ec4..1798e5c  gh-pages   -> origin/gh-pages
 usage: git remote set-head <name> (-a | --auto | -d | --delete | <branch>)
 
     -a, --auto            set refs/remotes/<name>/HEAD according to remote
