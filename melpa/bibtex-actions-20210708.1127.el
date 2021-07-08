@@ -7,8 +7,8 @@
 ;; Created: February 27, 2021
 ;; License: GPL-3.0-or-later
 ;; Version: 0.4
-;; Package-Version: 20210701.1916
-;; Package-Commit: d852821b99ae309fe958d488a77f03ae34d7eeca
+;; Package-Version: 20210708.1127
+;; Package-Commit: 4cded443baf91864f6cfb1c46063bafca5f6b930
 ;; Homepage: https://github.com/bdarcus/bibtex-actions
 ;; Package-Requires: ((emacs "26.3") (bibtex-completion "1.0"))
 ;;
@@ -46,6 +46,8 @@
 (declare-function org-element-type "org-element")
 (declare-function org-cite-get-references "org-cite")
 (declare-function org-cite-register-processor "org-cite")
+(declare-function org-cite-make-insert-processor "org-cite")
+(declare-function org-cite-basic--complete-style "org-cite")
 (declare-function embark-act "embark")
 
 ;;; Declare variables for byte compiler
@@ -467,9 +469,20 @@ TEMPLATE."
       ('citation
        (org-cite-get-references elt t)))))
 
-;; "follow" processor
+;; Org-cite "follow" and "insert" processor
+
+(defun bibtex-actions-org-cite-insert (multiple)
+  "Return a list of keys when MULTIPLE, or else a key string."
+  (let ((references (bibtex-actions-read)))
+    (if multiple
+        references
+      (car references))))
+
 (when (require 'oc nil t)
   (org-cite-register-processor 'bibtex-actions
+    :insert (org-cite-make-insert-processor
+             #'bibtex-actions-org-cite-insert
+             #'org-cite-basic--complete-style)
     :follow (lambda (_datum _arg) (call-interactively 'bibtex-actions-at-point))))
 
 ;;; Embark

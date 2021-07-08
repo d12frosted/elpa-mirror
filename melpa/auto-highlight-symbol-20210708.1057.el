@@ -8,8 +8,8 @@
 ;; Author: Mitsuo Saito <arch320@NOSPAM.gmail.com>
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Version: 1.60
-;; Package-Version: 20210705.1351
-;; Package-Commit: e8809909565ec0184920eb4236709581a607fafe
+;; Package-Version: 20210708.1057
+;; Package-Commit: 0e699a7289b77150733dc60878deeefdb3387fb0
 ;; Keywords: highlight face match convenience
 ;; URL: http://github.com/jcs-elpa/auto-highlight-symbol
 ;; Package-Requires: ((emacs "24.4") (ht "2.3"))
@@ -1725,14 +1725,13 @@ That's all."
   "Focus out hook."
   (ahs-unfocus-all))
 
-(eval-and-compile
-  (if (< emacs-major-version 27)
-      (with-no-warnings
-        (add-hook 'focus-in-hook #'ahs-focus-in)
-        (add-hook 'focus-out-hook #'ahs-focus-out))
-    (add-function :after after-focus-change-function
-                  (lambda (&rest _)
-                    (if (frame-focus-state) (ahs-focus-in) (ahs-focus-out))))))
+(if (< emacs-major-version 27)
+    (with-no-warnings
+      (add-hook 'focus-in-hook #'ahs-focus-in)
+      (add-hook 'focus-out-hook #'ahs-focus-out))
+  (add-function :after after-focus-change-function
+                (lambda (&rest _)
+                  (if (frame-focus-state) (ahs-focus-in) (ahs-focus-out)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;
 
