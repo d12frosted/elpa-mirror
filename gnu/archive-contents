@@ -74,17 +74,15 @@
 			  (:keywords "minibuffer" "completion")
 			  (:url . "https://elpa.gnu.org/packages/aggressive-completion.html"))])
  (aggressive-indent .
-		    [(1 8 3)
+		    [(1 10 0)
 		     ((emacs
-		       (24 1))
-		      (cl-lib
-		       (0 5)))
-		     "Minor mode to aggressively keep your code always indented" single
-		     ((:keywords "indent" "lisp" "maint" "tools")
+		       (24 3)))
+		     "Minor mode to aggressively keep your code always indented" tar
+		     ((:url . "https://github.com/Malabarba/aggressive-indent-mode")
+		      (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
 		      (:authors
 		       ("Artur Malabarba" . "emacs@endlessparentheses.com"))
-		      (:maintainer "Artur Malabarba" . "emacs@endlessparentheses.com")
-		      (:url . "https://github.com/Malabarba/aggressive-indent-mode"))])
+		      (:keywords "indent" "lisp" "maint" "tools"))])
  (ahungry-theme .
 		[(1 10 0)
 		 ((emacs
