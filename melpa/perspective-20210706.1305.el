@@ -7,7 +7,7 @@
 ;; Author: Natalie Weizenbaum <nex342@gmail.com>
 ;; URL: http://github.com/nex3/perspective-el
 ;; Package-Version: 20210706.1305
-;; Package-Commit: b847965128695ac6e18a7a218e6e2d2d5a1bd8c9
+;; Package-Commit: 8e5a51adb9336c8bb4259f9c478c18c79490002a
 ;; Package-Requires: ((emacs "24.4") (cl-lib "0.5"))
 ;; Version: 2.15
 ;; Created: 2008-03-05

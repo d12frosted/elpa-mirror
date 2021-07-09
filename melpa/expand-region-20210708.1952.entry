@@ -1,0 +1,8 @@
+(expand-region .
+	       [(20210708 1952)
+		nil "Increase selected region by semantic units." tar
+		((:commit . "95a773bd8f557cbd43d3b2dab2fa4417ec5927ab")
+		 (:authors
+		  ("Magnar Sveen" . "magnars@gmail.com"))
+		 (:maintainer "Magnar Sveen" . "magnars@gmail.com")
+		 (:keywords "marking" "region"))])
