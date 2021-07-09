@@ -6,8 +6,8 @@
 ;; Maintainer: Joe Bloggs <vapniks@yahoo.com>
 ;; Created: 2003-03-17 18:50:12 Harley Gorrell
 ;; URL: https://github.com/vapniks/syslog-mode
-;; Package-Version: 20210709.110
-;; Package-Commit: 42d47d9ef02a2e4e7dfee048c05dfc82136aff94
+;; Package-Version: 20210709.1717
+;; Package-Commit: 26ac871d9eebe8e87c98d36fa001ba862d41f13b
 ;; Keywords: unix
 ;; Compatibility: GNU Emacs 24.3.1
 ;; Package-Requires:  ((hide-lines "20130623") (ov "20150311"))
@@ -427,8 +427,8 @@ When called interactively the FILES are prompted for using `syslog-get-filenames
     (switch-to-buffer buf)))
 
 ;;;###autoload
-;; simple-call-tree-info: DONE
-(defun syslog-view (files &optional label washes rxshowstart rxshowend
+;; simple-call-tree-info: CHECK
+(defun syslog-view (files &optional label treatments rxshowstart rxshowend
 			  rxhidestart rxhideend startdate enddate removedates
 			  highlights bufname)
   "Open a view of syslog files with optional filters and highlights applied.
@@ -457,17 +457,29 @@ highlight those regexps with."
       (when files (syslog-open-files (syslog-get-filenames files) label))
       (if (not (eq major-mode 'syslog-mode))
 	  (error "Not in syslog-mode")
-	(dolist (wash washes)
-	  (cond ((functionp wash) (funcall wash))
-		((and (consp wash)
-		      (stringp (car wash))
-		      (functionp (cdr wash)))
+	(dolist (trt treatments)
+	  (cond ((and (consp trt)
+		      (functionp (car trt)))
+		 (let* ((args1 (cdadr (interactive-form (car trt))))
+			(args2 (cdr trt))
+			(args3 (cl-loop
+				for arg in args1
+				for i from 0
+				for arg2 = (nth i args2)
+				collect (if (eq (eval arg2) 'interactive)
+					    (eval arg)
+					  arg2))))
+		   (apply (car trt) args3)))
+		((and (consp trt)
+		      (stringp (car trt)))
 		 (save-excursion
 		   (goto-char (point-min))
-		   (while (re-search-forward (car wash) nil t)
-		     (replace-match (funcall (cdr wash) (match-string 1))
+		   (while (re-search-forward (car trt) nil t)
+		     (replace-match (if (functionp (cdr trt))
+					(funcall (cdr trt) (match-string 1))
+				      (cdr trt))
 				    t nil nil 1))))
-		(t (error "Invalid washes arg"))))
+		(t (error "Invalid treatments arg"))))
 	(if rxshowstart
 	    (if rxshowend
 		(hide-blocks-not-matching rxshowstart rxshowend)
@@ -618,14 +630,16 @@ With prefix ARG: remove matching blocks."
 Each view is a list of:
  - a name for the view
  - a list of files to display; each item in the list is a cons cell whose car is the base log file, 
-     and whose cdr is a number indicating how many previous log files of the same type to include
+     and whose cdr is a number indicating how many previous log files of the same type to include.
+     If nil then the view will be applied to the currently displayed file.
  - a boolean indicating whether or not to label each line with the filename
  - an optional list of functions to apply to transform the buffer before filtering & highlighting. 
      Each element is either:
-     - a function of no args for performing a batch transformation of the buffer, or
-     - a cons cell whose car is a regexp containing a match group, and whose cdr is a function that 
-       takes the text captured by that match group as its only arg, and returns some text to replace it.
-       This function will be applied to all matches to the regexp in the buffer.
+     - a list whose car is a function and whose cdr is a list of arguments for the function. The arglist
+       may contain the symbol 'interactive which means the value will be prompted for when the view is invoked.
+     - a cons cell whose car is a regexp containing a match group, and whose cdr is either a replacement
+       string, or a function that takes the text captured by that match group as its only arg, and returns 
+       some text to replace it. This function/string will be used for replacing all matches in the buffer.
  - a regexp matching start lines of blocks to show
  - a regexp matching end lines of blocks to show (if blank then lines will be filtered instead of blocks)
  - a regexp matching start lines of blocks to hide
@@ -635,16 +649,23 @@ Each view is a list of:
  - a boolean; if non-nil hide lines matching above dates, otherwise display only those lines
  - a list of highlighting info; each element is a cons cell whose car is a regexp to highlight and 
    whose cdr is a face to use for highlighting
- - an optional name to rename the buffer 
-"
+ - an optional name to rename the buffer"
   :group 'syslog
   :type '(repeat (list (string :tag "Name")
-		       (repeat (cons (string :tag "Base file")
+		       (repeat :tag "File(s)"
+			       (cons (string :tag "Base file")
 				     (number :tag "Number of previous files/days")))
 		       (choice (const :tag "No file labels" nil)
 			       (const :tag "Add file labels" t))
-		       (repeat (choice (function :tag "Washing function"
-						 :help-echo "Function with no arguments, called in the buffer")
+		       (repeat :tag "Treatment(s)"
+			       (choice (cons 
+					(function :tag "Function")
+					(repeat
+					 :tag "Args"
+					 (choice :tag "Arg"
+						 (sexp)
+						 (const :tag "Prompt user when view is invoked"
+							'interactive))))
 				       (cons (regexp
 					      :help-echo "Regexp containing a match group"
 					      :validate
@@ -655,9 +676,10 @@ Each view is a list of:
 						     w :error
 						     "Regexp must have at least one match group")
 						    w))))
-					     (function
-					      :help-echo
-					      "Function of one argument (a string captured by regexp match group)"))))
+					     (choice (function
+						      :help-echo
+						      "Function of one argument (a string captured by regexp match group)")
+						     (string :help-echo "Replacement string")))))
 		       (regexp :tag "Regexp matching start lines of blocks to show")
 		       (regexp :tag "Regexp matching end lines of blocks to show")
 		       (regexp :tag "Regexp matching start lines of blocks to hide")
@@ -666,7 +688,8 @@ Each view is a list of:
 		       (string :tag "End date")
 		       (choice (const :tag "Keep matching dates" nil)
 			       (const :tag "Remove matching dates" t))
-		       (repeat (cons (regexp :tag "Regexp to highlight")
+		       (repeat :tag "Highlights"
+			       (cons (regexp :tag "Regexp to highlight")
 				     (face :tag "Face")))
 		       (string :tag "Buffer name"))))
 

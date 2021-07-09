@@ -4,8 +4,8 @@
 
 ;; Author: Paul W. Rankin <pwr@bydasein.com>
 ;; Keywords: convenience
-;; Package-Version: 20210502.935
-;; Package-Commit: ca73cec33880322c5bbab407825d502d87f4cf0f
+;; Package-Version: 20210709.1403
+;; Package-Commit: 41fe8544661a772f764a0924e04080f258053955
 ;; Version: 0.4.1
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/rnkn/side-notes
@@ -215,4 +215,5 @@ the notes buffer."
 ;; fill-column: 80
 ;; require-final-newline: t
 ;; sentence-end-double-space: nil
+;; indent-tabs-mode: nil
 ;; End:

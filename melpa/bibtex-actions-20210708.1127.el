@@ -8,7 +8,7 @@
 ;; License: GPL-3.0-or-later
 ;; Version: 0.4
 ;; Package-Version: 20210708.1127
-;; Package-Commit: 4cded443baf91864f6cfb1c46063bafca5f6b930
+;; Package-Commit: d7f6b83b32e3b8c5c9484ed24331e0f774f1a60a
 ;; Homepage: https://github.com/bdarcus/bibtex-actions
 ;; Package-Requires: ((emacs "26.3") (bibtex-completion "1.0"))
 ;;
