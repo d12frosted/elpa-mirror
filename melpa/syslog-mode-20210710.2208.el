@@ -6,8 +6,8 @@
 ;; Maintainer: Joe Bloggs <vapniks@yahoo.com>
 ;; Created: 2003-03-17 18:50:12 Harley Gorrell
 ;; URL: https://github.com/vapniks/syslog-mode
-;; Package-Version: 20210709.2153
-;; Package-Commit: 2582d11dbe8dbb761ef3ede6e60e0a3892672545
+;; Package-Version: 20210710.2208
+;; Package-Commit: c2e10ad421c8ef727bad0b2500dd3a2493f78a56
 ;; Keywords: unix
 ;; Compatibility: GNU Emacs 24.3.1
 ;; Package-Requires:  ((hide-lines "20130623") (ov "20150311"))
@@ -215,7 +215,9 @@
     (define-key map (kbd "h p") 'highlight-phrase)
     (define-key map (kbd "h l") 'highlight-lines-matching-regexp)
     (define-key map (kbd "h u") 'unhighlight-regexp)
+    (define-key map (kbd "h U") 'highlight-regexp-unique)
     (define-key map (kbd "C-/") 'syslog-filter-dates)
+
     (define-key map "D" (lambda nil (interactive) (dired syslog-log-file-directory)))
     (define-key map "j" 'ffap)
     (define-key map "f" 'ffap)
@@ -623,6 +625,94 @@ With prefix ARG: remove matching blocks."
       (if (= n (length (overlays-in (point-min) (point-max))))
 	  (message "No matches found")))))
 
+;; simple-call-tree-info: TODO  allow more faces?
+(cl-defun highlight-regexp-unique (regexp &optional
+					  (facerx nil)
+					  (faces syslog-hi-face-defaults))
+  "Highlight each unique string matched by REGEXP with a different face.
+Interactively, prompt for REGEXP using `read-regexp', and prompt for a
+subset of FACES (default `syslog-hi-face-default') to use for highlighting either:
+ \"foreground\" (faces that change the foreground colour),
+ \"background\" (faces that change the background colour), 
+ or \"choose\" to specify a regexp (FACERX) to match the face names. 
+If a prefix arg is used then only the \"choose\" option is available,
+and the specified regexp will be used to filter all defined faces.
+
+If REGEXP contains non-shy match groups, then only those parts of the
+match will be treated as unique strings & highlighted (rather than the whole regexp).
+In this case overlays will always be used (which can be slow if there are many matches).
+If there are no non-shy match groups, and `font-lock-mode' is enabled then 
+that will be used for doing the highlighting."
+  (interactive
+   (list (hi-lock-regexp-okay
+	  (read-regexp "Regexp to highlight" 'regexp-history-last))
+	 (let ((choice (if current-prefix-arg
+			   "choose"
+			 (completing-read
+			  "Highlight type: " '("background" "foreground" "choose")))))
+	   (cond ((equal choice "background") "-[^b]\\|[^-].")
+		 ((equal choice "foreground") "-b$")
+		 ((equal choice "choose")
+		  (read-regexp "Regexp matching face names to use (default \".*\"): "
+			       ".*"))))
+	 (if current-prefix-arg (face-list) syslog-hi-face-defaults)))
+  (unless hi-lock-mode (hi-lock-mode 1))
+  (let* ((facerx (or facerx ".*"))
+	 (unused-faces (set-difference
+			(cl-remove-if-not
+			 (lambda (f) (string-match facerx (symbol-name f)))
+			 faces)
+			(mapcar (lambda (p) (eval (cadadr p)))
+				hi-lock-interactive-patterns)))
+	 (matchrx "[^(]*\\\\(\\(.*?\\)\\\\)"))
+    (cl-flet ((repmatch (i) (let (ss)
+			      (while (> i 0)
+				(setq ss (cons matchrx ss))
+				(setq i (1- i)))
+			      (apply 'concat ss))))
+      (cl-loop for pair in (syslog-unique-matches regexp)
+	       for face in unused-faces
+	       do (let* ((match (car pair))
+			 (i (cadr pair)))
+		    (hi-lock-set-subpattern
+		     (if (> i 0)
+			 (replace-regexp-in-string
+			  (if (> i 1) (repmatch i) matchrx)
+			  (regexp-quote match) regexp t t i)
+		       (regexp-quote match))
+		     face i))))))
+
+;; simple-call-tree-info: DONE (tweaked version of `hi-lock-set-pattern')
+(defun hi-lock-set-subpattern (regexp face subx)
+  "Highlight the SUBX match group of REGEXP with face FACE."
+  ;; Hashcons the regexp, so it can be passed to remove-overlays later.
+  (setq regexp (hi-lock--hashcons regexp))
+  (let ((pattern (list regexp (list 0 (list 'quote face) 'prepend))))
+    ;; Refuse to highlight a text that is already highlighted.
+    (unless (assoc regexp hi-lock-interactive-patterns)
+      (push pattern hi-lock-interactive-patterns)
+      (if (and font-lock-mode (font-lock-specified-p major-mode)
+	       (= subx 0))
+	  (progn
+	    (font-lock-add-keywords nil (list pattern) t)
+	    (font-lock-flush))
+        (let* ((range-min (- (point) (/ hi-lock-highlight-range 2)))
+               (range-max (+ (point) (/ hi-lock-highlight-range 2)))
+               (search-start
+                (max (point-min)
+                     (- range-min (max 0 (- range-max (point-max))))))
+               (search-end
+                (min (point-max)
+                     (+ range-max (max 0 (- (point-min) range-min))))))
+          (save-excursion
+            (goto-char search-start)
+            (while (re-search-forward regexp search-end t)
+              (let ((overlay (make-overlay (match-beginning subx) (match-end subx))))
+                (overlay-put overlay 'hi-lock-overlay t)
+                (overlay-put overlay 'hi-lock-overlay-regexp regexp)
+                (overlay-put overlay 'face face))
+              (goto-char (match-end 0)))))))))
+
 ;;;###autoload
 ;; simple-call-tree-info: DONE
 (defcustom syslog-views nil
@@ -707,8 +797,28 @@ It should contain one non-shy subexpression matching the datetime string."
   :group 'syslog
   :type 'directory)
 
-(defcustom syslog-hi-face-defaults '(hi-blue hi-green hi-yellow hi-pink hi-red-b
-					     hi-blue-b hi-green-b hi-black-b hi-black-hb)
+;; Add some extra faces for highlighting
+;; simple-call-tree-info: CHECK
+(defface hi-red
+  '((((background dark)) (:background "red" :foreground "black"))
+    (t (:background "red")))
+  "Face for hi-lock mode."
+  :group 'hi-lock-faces)
+(defface hi-yellow-b
+  '((((min-colors 88)) (:weight bold :foreground "yellow"))
+    (t (:weight bold :foreground "yellow")))
+  "Face for hi-lock mode."
+  :group 'hi-lock-faces)
+(defface hi-pink-b
+  '((((min-colors 88)) (:weight bold :foreground "pink"))
+    (t (:weight bold :foreground "pink")))
+  "Face for hi-lock mode."
+  :group 'hi-lock-faces)
+
+;; simple-call-tree-info: CHECK
+(defcustom syslog-hi-face-defaults '(hi-red hi-blue hi-green hi-yellow hi-pink
+					    hi-red-b hi-blue-b hi-green-b hi-yellow-b
+					    hi-pink-b hi-black-b hi-black-hb)
   "List of faces (as symbols) to use for automatic highlighting."
   :group 'syslog
   :type '(repeat (string :tag "Face")))
@@ -835,6 +945,32 @@ buffer respectively."
 ;; simple-call-tree-info: DONE
 (defvar syslog-boot-start-regexp "unix: SunOS"
   "Regexp to match the first line of boot sequence.")
+
+;; simple-call-tree-info: CHECK
+(defun syslog-unique-matches (rx &optional ignorecase)
+  (let ((ngrps (regexp-opt-depth rx))
+	(case-fold-search ignorecase)
+	matches)
+    (cl-flet ((addmatch (m i)
+			(let ((pair (assoc m matches)))
+			  (if pair
+			      (when (not (memq i (cdr pair)))
+				(setf (cdr pair) (cons i (cdr pair))))
+			    (add-to-list
+			     'matches
+			     (cons (substring-no-properties m)
+				   (list i)))))))
+      (save-excursion
+	(goto-char (point-min))
+	(if (> ngrps 0)
+	    (while (re-search-forward rx nil t)
+	      (cl-loop for i from 1
+		       for match = (match-string i)
+		       if match do (addmatch match i)
+		       else return nil))
+	  (while (re-search-forward rx nil t)
+	    (addmatch (match-string 0) 0)))))
+    matches))
 
 ;; simple-call-tree-info: DONE
 (defun syslog-count-matches (rx &optional display ignorecase)

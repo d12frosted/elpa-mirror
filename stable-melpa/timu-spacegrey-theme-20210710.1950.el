@@ -6,8 +6,8 @@
 ;; Maintainer: Aimé Bertrand <aime.bertrand@macowners.club>
 ;; Created: 06 Jun 2021
 ;; Keywords: faces themes
-;; Package-Version: 20210703.2216
-;; Package-Commit: 9aadca525d4e1ba102f9983adae59d937e428e62
+;; Package-Version: 20210710.1950
+;; Package-Commit: e0629d59adc92112f51b5f9300e06e714349488d
 ;; Version: 1.4
 ;; Package-Requires: ((emacs "25.1"))
 ;; Homepage: https://gitlab.com/aimebertrand/timu-spacegrey-theme
@@ -126,7 +126,7 @@ Possinle values: `dark' or `light'.")
      `(match ((,class (:foreground ,green :background ,spacegrey0 :weight bold))))
      `(trailing-whitespace ((,class (:background ,red))))
      `(nobreak-space ((,class (:inherit default :underline nil))))
-     `(vertical-border ((,class (:background ,bg :foreground ,bg))))
+     `(vertical-border ((,class (:background ,spacegrey4 :foreground ,spacegrey4))))
      `(link ((,class (:foreground ,orange :underline t :weight bold))))
      `(error ((,class (:foreground ,red))))
      `(warning ((,class (:foreground ,yellow))))

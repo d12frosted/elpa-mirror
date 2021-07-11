@@ -4,10 +4,10 @@
 
 ;; Author: Andrii Kolomoiets <andreyk.mad@gmail.com>
 ;; Keywords: frames
-;; Package-Commit: 50fc66655bca819b56100212bc7b8535c76570e0
+;; Package-Commit: b07faabfec1b5ba545dc1cb961545cc1e9d78db0
 ;; URL: https://github.com/muffinmad/emacs-mini-frame
-;; Package-Version: 20210704.2020
-;; Package-X-Original-Version: 1.18
+;; Package-Version: 20210710.1941
+;; Package-X-Original-Version: 1.19
 ;; Package-Requires: ((emacs "26.1"))
 
 ;; This file is NOT part of GNU Emacs.
@@ -70,7 +70,7 @@
   "Show minibuffer in child frame."
   :group 'minibuffer)
 
-(defcustom mini-frame-advice-functions '(read-from-minibuffer read-string)
+(defcustom mini-frame-advice-functions '(read-from-minibuffer read-string yes-or-no-p)
   "Functions to advice with `mini-frame-read-from-minibuffer'.
 Set this variable before `mini-frame' mode activation."
   :type '(repeat function))
