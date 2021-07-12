@@ -1,0 +1,13 @@
+(solaire-mode .
+	      [(20210711 2145)
+	       ((emacs
+		 (25 1))
+		(cl-lib
+		 (0 5)))
+	       "make certain buffers grossly incandescent" single
+	       ((:commit . "030964f7c62696c8cfb29125df6e7649d2bf9aeb")
+		(:authors
+		 ("Henrik Lissner <http://github/hlissner>"))
+		(:maintainer "Henrik Lissner" . "henrik@lissner.net")
+		(:keywords "dim" "bright" "window" "buffer" "faces")
+		(:url . "https://github.com/hlissner/emacs-solaire-mode"))])

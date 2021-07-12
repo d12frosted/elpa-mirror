@@ -6,8 +6,7 @@ interactive commands, and face specifications.  Please refer to the
 official Info manual for further documentation (distributed with the
 themes, or available at: <https://protesilaos.com/modus-themes>).
 
-The themes share the following customization variables, all of which
-are disabled by default (nil):
+The themes share the following customization variables:
 
     modus-themes-inhibit-reload                 (boolean)
     modus-themes-italic-constructs              (boolean)
