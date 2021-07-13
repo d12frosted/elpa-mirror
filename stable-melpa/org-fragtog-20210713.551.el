@@ -2,12 +2,12 @@
 
 ;; Copyright (C) 2020 Benjamin Levy - MIT/X11 License
 ;; Author: Benjamin Levy <blevy@protonmail.com>
-;; Version: 0.3.2
-;; Package-Version: 20210712.651
-;; Package-Commit: 90b748a62ca51b0869f68baaec7de7d21904079e
+;; Version: 0.3.3
+;; Package-Version: 20210713.551
+;; Package-Commit: 479e0a1c3610dfe918d89a5f5a92c8aec37f131d
 ;; Description: Automatically toggle Org mode LaTeX fragment previews as the cursor enters and exits them
 ;; Homepage: https://github.com/io12/org-fragtog
-;; Package-Requires: ((emacs "24.3") (org "9.3.2"))
+;; Package-Requires: ((emacs "27.1"))
 
 ;; Permission is hereby granted, free of charge, to any person obtaining a copy
 ;; of this software and associated documentation files (the "Software"), to deal

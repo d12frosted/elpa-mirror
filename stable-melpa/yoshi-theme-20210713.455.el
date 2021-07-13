@@ -4,8 +4,8 @@
 
 ;; Author: Tom Willemse <tom@ryuslash.org>
 ;; Keywords: faces
-;; Package-Version: 20210623.544
-;; Package-Commit: 4aa2a0d0c3e3b7c408d680df8cc5ede53c18e923
+;; Package-Version: 20210713.455
+;; Package-Commit: 06a6bcfc58d1f1cd8815c674c9fcbbf193bba0a9
 ;; Version: 6.2.0
 ;; URL: http://projects.ryuslash.org/yoshi-theme/
 
@@ -123,7 +123,7 @@
    `(company-tooltip-common ((t (:foreground ,fgcyan))))
    `(company-tooltip-search ((t (:background ,bgyellow :inherit unspecified))))
    `(company-tooltip-search-selection ((t (:background ,bgyellow :inherit unspecified))))
-   `(company-tooltip-selection ((t (:background ,bgblue))))
+   `(company-tooltip-selection ((t (:background ,yoshi-2))))
 
    ;; Compilation
    `(compilation-info ((t (:foreground ,fgblue :inherit unspecified))))
@@ -316,7 +316,7 @@
    `(isearch-fail ((t (:background ,bgred))))
 
    ;; Ivy
-   `(ivy-current-match ((t (:background ,bgblue :foreground ,yoshi-6))))
+   `(ivy-current-match ((t (:background ,yoshi-2 :foreground ,yoshi-6))))
    `(ivy-minibuffer-match-face-1 ((t (:background unspecified :underline t))))
    `(ivy-minibuffer-match-face-2 ((t (:background unspecified :weight bold))))
    `(ivy-minibuffer-match-face-3 ((t (:background unspecified :weight bold))))

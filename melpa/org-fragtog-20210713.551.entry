@@ -1,11 +1,9 @@
 (org-fragtog .
-	     [(20210712 651)
+	     [(20210713 551)
 	      ((emacs
-		(24 3))
-	       (org
-		(9 3 2)))
+		(27 1)))
 	      "Auto-toggle Org LaTeX fragments" single
-	      ((:commit . "90b748a62ca51b0869f68baaec7de7d21904079e")
+	      ((:commit . "479e0a1c3610dfe918d89a5f5a92c8aec37f131d")
 	       (:authors
 		("Benjamin Levy" . "blevy@protonmail.com"))
 	       (:maintainer "Benjamin Levy" . "blevy@protonmail.com")
