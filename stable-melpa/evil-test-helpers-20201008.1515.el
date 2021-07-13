@@ -4,7 +4,7 @@
 ;; Maintainer: Vegard Øye <vegard_oye at hotmail.com>
 ;; Package-Requires: ((evil "1.14.0"))
 ;; Package-Version: 20201008.1515
-;; Package-Commit: b237462feed177cc74a48f462bc9356681a60ff8
+;; Package-Commit: b0e2fa355364697cd3de9f46f740050cb92fc88c
 ;; Version: 1.14.0
 
 ;; This file is NOT part of GNU Emacs.

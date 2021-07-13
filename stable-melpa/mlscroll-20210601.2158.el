@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/jdtsmith/mlscroll
 ;; Package-Requires: ((emacs "27.1"))
 ;; Package-Version: 20210601.2158
-;; Package-Commit: d912fec98698c4f72a5f408d5a3f80e95327817d
+;; Package-Commit: 5ad0fd71634ac9dc6f97f653bc748f9fb58d80e4
 ;; Version: 0.1.1
 ;; Keywords: convenience
 ;; Prefix: mlscroll
