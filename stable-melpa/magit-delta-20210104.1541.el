@@ -3,7 +3,7 @@
 ;; Author: Dan Davison <dandavison7@gmail.com>
 ;; URL: https://github.com/dandavison/magit-delta
 ;; Package-Version: 20210104.1541
-;; Package-Commit: 1164a6c3e501e944f1a6a2e91f15374a193bb8d3
+;; Package-Commit: 56cdffd377279589aa0cb1df99455c098f1848cf
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "25.1") (magit "20200426") (xterm-color "2.0"))
 
