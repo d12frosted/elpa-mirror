@@ -5,7 +5,7 @@
 ;; Author: PythonNut <pythonnut@pythonnut.com>
 ;; Keywords: convenience
 ;; Package-Version: 20200203.1927
-;; Package-Commit: ac1bea7d99dd6965c72fabeb72d5fdc38c5380a4
+;; Package-Commit: 852cb4e72c0f78c8dbb2c972bdcb4e7b0108ff4c
 ;; Version: 20170111
 ;; URL: https://github.com/PythonNut/historian.el
 ;; Package-Requires: ((emacs "24.4"))

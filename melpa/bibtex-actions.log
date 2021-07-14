@@ -3,9 +3,19 @@ Fetcher: github
 Source:  https://github.com/bdarcus/bibtex-actions.git
 
 Updating /mnt/store/melpa/working/bibtex-actions/
-Built bibtex-actions in 7.511s, finished at 2021-07-13T17:18:27+0000
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bibtex-actions/
+  to /tmp/bibtex-actionsKW16Yw/bibtex-actions-20210713.1752
+    bibtex-actions-org-cite.el -> bibtex-actions-org-cite.el
+    bibtex-actions.el -> bibtex-actions.el
+Created bibtex-actions-20210713.1752.tar containing:
+  bibtex-actions-20210713.1752/
+  bibtex-actions-20210713.1752/bibtex-actions-org-cite.el
+  bibtex-actions-20210713.1752/bibtex-actions-pkg.el
+  bibtex-actions-20210713.1752/bibtex-actions.el
+Built bibtex-actions in 4.918s, finished at 2021-07-14T03:31:14+0000
  ✓ Success:
- 28K -rw-r--r-- 1 root root  25K Jul 13 17:18 packages/bibtex-actions-20210712.2100.el
-4.0K -rw-r--r-- 1 root root  405 Jul 13 17:18 packages/bibtex-actions-20210712.2100.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 13 17:18 packages/bibtex-actions-badge.svg
-4.0K -rw-r--r-- 1 root root  414 Jul 13 17:18 packages/bibtex-actions-readme.txt
+4.0K -rw-r--r-- 1 root root  402 Jul 14 03:31 packages/bibtex-actions-20210713.1752.entry
+ 32K -rw-r--r-- 1 root root  30K Jul 14 03:31 packages/bibtex-actions-20210713.1752.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 14 03:31 packages/bibtex-actions-badge.svg
+4.0K -rw-r--r-- 1 root root  414 Jul 14 03:31 packages/bibtex-actions-readme.txt
