@@ -177,6 +177,7 @@ missing package or change you would like to see.
     git-timemachine
     git-walktree
     gnus
+    gotest
     golden-ratio-scroll-screen
     helm
     helm-ls-git

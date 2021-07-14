@@ -1,0 +1,13 @@
+(syslog-mode .
+	     [(20210714 1400)
+	      ((hide-lines
+		(20130623))
+	       (ov
+		(20150311)))
+	      "Major-mode for viewing log files" single
+	      ((:commit . "c79f6ae957e303ca01220d0b4cd4389eb6991373")
+	       (:authors
+		("Harley Gorrell" . "harley@panix.com"))
+	       (:maintainer "Joe Bloggs" . "vapniks@yahoo.com")
+	       (:keywords "unix")
+	       (:url . "https://github.com/vapniks/syslog-mode"))])

@@ -3,7 +3,7 @@
 ;; Author: Fox Kiester <noct@posteo.net>
 ;; URL: https://github.com/noctuid/link-hint.el
 ;; Package-Version: 20150922.451
-;; Package-Commit: 541c07b0361c4834f7e944da1a44f0f0fc2cee26
+;; Package-Commit: 9fbf196d155016d9b8471a99318ed67a086cf257
 ;; Keywords: convenience url avy link links hyperlink
 ;; Package-Requires: ((avy "0.4.0") (emacs "24.4"))
 ;; Version: 0.1
@@ -76,6 +76,11 @@
     link-hint-nov-link
     link-hint-customize-widget
     link-hint-notmuch-hello
+    link-hint-completion-list-candidate
+    link-hint-dired-filename
+    link-hint-man-button
+    link-hint-org-agenda-item
+    link-hint-xref-item
     ;; generic
     link-hint-button
     link-hint-text-url
@@ -85,20 +90,24 @@
   :type '(repeat :tag "Types"
                  (choice
                   (const :tag "Button" link-hint-button)
+                  (const :tag "Completion List" link-hint-completion-list-candidate)
                   (const :tag "Compilation Link" link-hint-compilation-link)
                   (const :tag "Customize Widget" link-hint-customize-widget)
                   (const :tag "Deadgrep" link-hint-deadgrep)
+                  (const :tag "Dired filename" link-hint-dired-filename)
                   (const :tag "Epkg Button" link-hint-epkg-button)
                   (const :tag "File Link" link-hint-file-link)
                   (const :tag "Gnus W3m Image Url" link-hint-gnus-w3m-image-url)
                   (const :tag "Gnus W3m Url" link-hint-gnus-w3m-url)
                   (const :tag "Help Link" link-hint-help-link)
                   (const :tag "Info Link" link-hint-info-link)
+                  (const :tag "Man Button" link-hint-man-button)
                   (const :tag "Markdown Link" link-hint-markdown-link)
                   (const :tag "Mu4e Attachment" link-hint-mu4e-attachment)
                   (const :tag "Mu4e Url" link-hint-mu4e-url)
                   (const :tag "Notmuch Hello" link-hint-notmuch-hello)
                   (const :tag "Nov Link" link-hint-nov-link)
+                  (const :tag "Org Agenda" link-hint-org-agenda-item)
                   (const :tag "Org Link" link-hint-org-link)
                   (const :tag "Package Install Link" link-hint-package-install-link)
                   (const :tag "Package Keyword Link" link-hint-package-keyword-link)
@@ -109,6 +118,7 @@
                   (const :tag "W3m Link" link-hint-w3m-link)
                   (const :tag "W3m Message Link" link-hint-w3m-message-link)
                   (const :tag "Woman Button" link-hint-woman-button)
+                  (const :tag "Xref Item" link-hint-xref-item)
                   (symbol :tag "Custom Type"))))
 
 (defcustom link-hint-action-messages
@@ -976,13 +986,101 @@ Only search the range between just after the point and BOUND."
   :copy #'link-hint--copy-widget)
 
 ;; ** Man button
-
 (link-hint-define-type 'man-button
   :next #'link-hint--next-woman-button
   :at-point-p #'link-hint--button-at-point-p
   :vars '(Man-mode)
   :open #'push-button
   :copy #'kill-new)
+
+;; ** Completion List candidate
+(defun link-hint--next-completion-list-candidate (&optional bound)
+  "Find the next completion list candidate location.
+Only search the range between just after the point and BOUND."
+  (next-completion 1)
+  (let ((bound (or bound (window-end)))
+        (point (point)))
+    (when (< point bound)
+      point)))
+
+(defun link-hint--open-completion-list-candidate (&rest _ignore)
+  "Select completion list candidate at point."
+  (choose-completion))
+
+(defun link-hint--completion-list-candidate-at-point-p ()
+  "Return the completion list candidate at the point or nil."
+  (get-text-property (point) 'completion--string))
+
+(link-hint-define-type 'completion-list-candidate
+  :next #'link-hint--next-completion-list-candidate
+  :vars '(completion-list-mode)
+  :open #'link-hint--open-completion-list-candidate
+  :at-point-p #'link-hint--completion-list-candidate-at-point-p
+  :copy #'kill-new)
+
+;; ** Dired filename
+(defun link-hint--next-dired-filename (&optional bound)
+  "Find the next dired filename location.
+Only search the range between just after the point and BOUND."
+  (link-hint--next-property 'dired-filename bound))
+
+(defun link-hint--dired-filename-at-point-p ()
+  "Return the dired filename at the point or nil."
+  (when (get-text-property (point) 'dired-filename)
+    (link-hint--property-text 'dired-filename)))
+
+(declare-function dired-find-file "dired")
+
+(link-hint-define-type 'dired-filename
+  :next #'link-hint--next-dired-filename
+  :at-point-p #'link-hint--dired-filename-at-point-p
+  :vars '(dired-mode)
+  :open #'dired-find-file
+  :copy #'kill-new)
+
+;; ** Org Agenda item
+(defun link-hint--next-org-agenda-item (&optional bound)
+  "Find the next org agenda item.
+Only search the range between just after the point and BOUND."
+  (link-hint--next-property 'org-marker bound))
+
+(declare-function org-agenda-switch-to "org-agenda")
+
+(defun link-hint--open-org-agenda-item (&rest _ignore)
+  "Open org agenda item at point."
+  (org-agenda-switch-to))
+
+(defun link-hint--org-agenda-item-at-point-p ()
+  "Return the org agenda at the point or nil."
+  (get-text-property (point) 'txt))
+
+(link-hint-define-type 'org-agenda-item
+  :next #'link-hint--next-org-agenda-item
+  :vars '(org-agenda-mode)
+  :open #'link-hint--open-org-agenda-item
+  :at-point-p #'link-hint--org-agenda-item-at-point-p
+  :copy #'kill-new)
+
+;; ** Xref item
+(defun link-hint--next-xref-item (&optional bound)
+  "Find the next xref item.
+Only search the range between just after the point and BOUND."
+  (link-hint--next-property 'xref-item bound))
+
+(declare-function xref-goto-xref "xref")
+(declare-function xref--item-at-point "xref")
+(declare-function xref-item-summary "xref")
+
+(defun link-hint--copy-xref-item ()
+  "Copy a xref item in a xref buffer."
+  (kill-new (xref-item-summary (xref--item-at-point))))
+
+(link-hint-define-type 'xref-item
+  :next #'link-hint--next-xref-item
+  :vars '(xref--xref-buffer-mode)
+  :open #'xref-goto-xref
+  :at-point-p #'xref--item-at-point
+  :copy #'link-hint--copy-xref-item)
 
 ;; * Avy/Action Helper Functions
 (defun link-hint--collect (start end type)

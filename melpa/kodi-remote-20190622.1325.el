@@ -4,6 +4,8 @@
 
 ;; Author: Stefan Huchler <stefan.huchler@mail.de>
 ;; URL: http://github.com/spiderbit/kodi-remote.el
+;; Package-Version: 20190622.1325
+;; Package-Commit: f5e932036c16e2b61a63020e006fc601e38d181e
 ;; Package-Requires: ((request "0.2.0")(let-alist "1.0.4")(json "1.4")(cl-lib "0.5")(f "20190109.906"))
 ;; Keywords: kodi tools convinience
 ;; Version: 0
