@@ -7,6 +7,8 @@
 ;; Created: June 21, 2015
 ;; Modified: March 1, 2019
 ;; Version: 1.2.8
+;; Package-Version: 20190302.5
+;; Package-Commit: cd7b8394f6014c57897f65d335d6b2bd65dab1f4
 ;; Keywords: company dictionary ac-source-dictionary
 ;; Homepage: https://github.com/hlissner/emacs-company-dict
 ;; Package-Requires: ((emacs "24.4") (company "0.8.12") (parent-mode "2.3"))

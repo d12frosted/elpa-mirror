@@ -1,0 +1,13 @@
+(flymake-phpstan .
+		 [(20210714 1805)
+		  ((emacs
+		    (26 1))
+		   (phpstan
+		    (0 5 0)))
+		  "Flymake backend for PHP using PHPStan" single
+		  ((:commit . "0869b152f82a76138daa53e953285936b9d558bd")
+		   (:authors
+		    ("USAMI Kenta" . "tadsan@zonu.me"))
+		   (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+		   (:keywords "tools" "php")
+		   (:url . "https://github.com/emacs-php/phpstan.el"))])
