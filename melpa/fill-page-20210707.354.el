@@ -8,7 +8,7 @@
 ;; Keyword: fill page buffer
 ;; Version: 0.3.7
 ;; Package-Version: 20210707.354
-;; Package-Commit: 12c00527b514459dd06bb9c72813fe20531cce1a
+;; Package-Commit: cad66696f334f70adf2b8bdf9910852c017dbdd0
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs-elpa/fill-page
 
