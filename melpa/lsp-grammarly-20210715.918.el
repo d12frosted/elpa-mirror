@@ -7,8 +7,8 @@
 ;; Description: LSP Clients for Grammarly.
 ;; Keyword: lsp grammarly checker
 ;; Version: 0.2.2
-;; Package-Version: 20210616.1021
-;; Package-Commit: 57a698e69c0dacbcad30398c262cdc5711efba71
+;; Package-Version: 20210715.918
+;; Package-Commit: bb7fe5d70a3d21813858d93f70fe807beba99688
 ;; Package-Requires: ((emacs "27.1") (lsp-mode "6.1") (grammarly "0.3.0") (request "0.3.0") (s "1.12.0") (ht "2.3"))
 ;; URL: https://github.com/emacs-grammarly/lsp-grammarly
 
@@ -58,14 +58,14 @@ This is only for development use."
   :type 'string
   :group 'lsp-grammarly)
 
+(define-obsolete-variable-alias
+  'lsp-grammarly-modes 'lsp-grammarly-active-modes "0.2.1")
+
 (defcustom lsp-grammarly-active-modes
   '(text-mode latex-mode org-mode markdown-mode)
   "List of major mode that work with Grammarly."
   :type 'list
   :group 'lsp-grammarly)
-
-(define-obsolete-variable-alias
-  'lsp-grammarly-modes 'lsp-grammarly-active-modes "0.2.1")
 
 (defcustom lsp-grammarly-auto-activate t
   "Enable Grammarly service when a supported document is opened."
@@ -119,6 +119,15 @@ This is only for development use."
 
 (defvar lsp-grammarly--show-debug-message nil
   "Flag to see if we show debug messages.")
+
+;;
+;; (@* "External" )
+;;
+
+(declare-function keytar--check "ext:keytar.el")
+(declare-function keytar-set-password "ext:keytar.el")
+(declare-function keytar-get-password "ext:keytar.el")
+(declare-function keytar-delete-password "ext:keytar.el")
 
 ;;
 ;; (@* "Util" )

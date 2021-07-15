@@ -7,8 +7,8 @@
 ;; Description: Line annotation for changed and saved lines.
 ;; Keyword: annotation line number linum reminder highlight display
 ;; Version: 0.5.0
-;; Package-Version: 20210627.2121
-;; Package-Commit: 355cdcb6888fe6668e85a96dfe694d4bd050372e
+;; Package-Version: 20210715.839
+;; Package-Commit: 38ca45f01b31d5de07a4a5e43ec54c4644718dcf
 ;; Package-Requires: ((emacs "24.4") (indicators "0.0.4") (fringe-helper "1.0.1"))
 ;; URL: https://github.com/emacs-vs/line-reminder
 
@@ -149,7 +149,23 @@
 (defvar-local line-reminder--undo-cancel-p nil
   "If non-nil, we should remove record of changes/saved lines for undo actions.")
 
-;;; Util
+;;
+;; (@* "External" )
+;;
+
+(defvar linum-format)
+(defvar ind-managed-absolute-indicators)
+(defvar buffer-undo-tree)
+(defvar undo-tree-mode)
+
+(declare-function ind-create-indicator-at-line "ext:indicators.el")
+(declare-function ind-clear-indicators-absolute "ext:indicators.el")
+(declare-function undo-tree-current "ext:undo-tree.el")
+(declare-function undo-tree-node-previous "ext:undo-tree.el")
+
+;;
+;; (@* "Util" )
+;;
 
 (defun line-reminder--use-indicators-p ()
   "Return non-nil if using indicator, else return nil."
@@ -294,7 +310,50 @@ LN : pass in by `linum-format' variable."
     (setq result-sign (concat normal-sign reminder-sign))
     result-sign))
 
-;;; Core
+;;
+;; (@* "Entry" )
+;;
+
+(defun line-reminder--enable ()
+  "Enable `line-reminder' in current buffer."
+  (cl-case line-reminder-show-option
+    (linum
+     (require 'linum)
+     (setq-local linum-format 'line-reminder--linum-format))
+    (indicators
+     (require 'indicators)))
+  (add-hook 'before-change-functions #'line-reminder--before-change-functions nil t)
+  (add-hook 'after-change-functions #'line-reminder--after-change-functions nil t)
+  (add-hook 'post-command-hook #'line-reminder--post-command nil t)
+  (advice-add 'save-buffer :after #'line-reminder--save-buffer))
+
+(defun line-reminder--disable ()
+  "Disable `line-reminder' in current buffer."
+  (remove-hook 'before-change-functions #'line-reminder--before-change-functions t)
+  (remove-hook 'after-change-functions #'line-reminder--after-change-functions t)
+  (remove-hook 'post-command-hook #'line-reminder--post-command t)
+  (advice-remove 'save-buffer #'line-reminder--save-buffer)
+  (line-reminder-clear-reminder-lines-sign))
+
+;;;###autoload
+(define-minor-mode line-reminder-mode
+  "Minor mode 'line-reminder-mode'."
+  :lighter " LR"
+  :group line-reminder
+  (if line-reminder-mode (line-reminder--enable) (line-reminder--disable)))
+
+(defun line-reminder--turn-on-line-reminder-mode ()
+  "Turn on the 'line-reminder-mode'."
+  (line-reminder-mode 1))
+
+;;;###autoload
+(define-globalized-minor-mode global-line-reminder-mode
+  line-reminder-mode line-reminder--turn-on-line-reminder-mode
+  :require 'line-reminder)
+
+;;
+;; (@* "Core" )
+;;
 
 ;;;###autoload
 (defun line-reminder-clear-reminder-lines-sign ()
@@ -463,13 +522,17 @@ or less than zero line in current buffer."
         ;; Remove out range.
         (line-reminder--remove-lines-out-range)))))
 
-;;; Save
+;;
+;; (@* "Save" )
+;;
 
 (defun line-reminder--save-buffer (&rest _)
   "Advice execute after function `save-buffer'."
   (when line-reminder-mode (line-reminder-transfer-to-saved-lines)))
 
-;;; Undo
+;;
+;; (@* "Undo" )
+;;
 
 (defun line-reminder--undo-tree-root-p ()
   "Return non-nil, if undo is at the root of the undo list."
@@ -489,45 +552,6 @@ or less than zero line in current buffer."
     (setq line-reminder--change-lines '()
           line-reminder--saved-lines '())
     (line-reminder--ind-clear-indicators-absolute)))
-
-;;; Loading
-
-(defun line-reminder--enable ()
-  "Enable `line-reminder' in current buffer."
-  (cl-case line-reminder-show-option
-    (linum
-     (require 'linum)
-     (setq-local linum-format 'line-reminder--linum-format))
-    (indicators
-     (require 'indicators)))
-  (add-hook 'before-change-functions #'line-reminder--before-change-functions nil t)
-  (add-hook 'after-change-functions #'line-reminder--after-change-functions nil t)
-  (add-hook 'post-command-hook #'line-reminder--post-command nil t)
-  (advice-add 'save-buffer :after #'line-reminder--save-buffer))
-
-(defun line-reminder--disable ()
-  "Disable `line-reminder' in current buffer."
-  (remove-hook 'before-change-functions #'line-reminder--before-change-functions t)
-  (remove-hook 'after-change-functions #'line-reminder--after-change-functions t)
-  (remove-hook 'post-command-hook #'line-reminder--post-command t)
-  (advice-remove 'save-buffer #'line-reminder--save-buffer)
-  (line-reminder-clear-reminder-lines-sign))
-
-;;;###autoload
-(define-minor-mode line-reminder-mode
-  "Minor mode 'line-reminder-mode'."
-  :lighter " LR"
-  :group line-reminder
-  (if line-reminder-mode (line-reminder--enable) (line-reminder--disable)))
-
-(defun line-reminder--turn-on-line-reminder-mode ()
-  "Turn on the 'line-reminder-mode'."
-  (line-reminder-mode 1))
-
-;;;###autoload
-(define-globalized-minor-mode global-line-reminder-mode
-  line-reminder-mode line-reminder--turn-on-line-reminder-mode
-  :require 'line-reminder)
 
 (provide 'line-reminder)
 ;;; line-reminder.el ends here

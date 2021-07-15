@@ -1,11 +1,13 @@
 (lsp-ltex .
-	  [(20210616 1021)
+	  [(20210715 942)
 	   ((emacs
 	     (26 1))
 	    (lsp-mode
-	     (6 1)))
+	     (6 1))
+	    (f
+	     (0 20 0)))
 	   "LSP Clients for LTEX" single
-	   ((:commit . "cd6fa0b32118792e9f7bcbf4a26032bfff05d603")
+	   ((:commit . "b9a930757c71f7eb30a0828a502a237bfd882b43")
 	    (:authors
 	     ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
 	    (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")

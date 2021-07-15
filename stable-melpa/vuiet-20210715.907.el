@@ -4,8 +4,8 @@
 
 ;; Author: Mihai Olteanu <mihai_olteanu@fastmail.fm>
 ;; Version: 1.0
-;; Package-Version: 20210323.911
-;; Package-Commit: 43b9364042922950f612ac57d8c526921a01b291
+;; Package-Version: 20210715.907
+;; Package-Commit: b327a5224ab45f6689ce635878301e54ca753b3b
 ;; Package-Requires: ((emacs "26.1") (lastfm "1.1") (versuri "1.0") (s "1.12.0") (bind-key "2.4") (mpv "0.1.0"))
 ;; Keywords: multimedia
 ;; URL: https://github.com/mihaiolteanu/vuiet
@@ -25,10 +25,14 @@
 
 ;;; Commentary:
 
-;; Discover and play new music with Emacs.
-
-;; All the info for top tracks, top artists, tags and all similarities between
-;; them are taken from last.fm
+;; Vuiet is a music player and explorer for Emacs users. It is similar in scope
+;; to lastfm on which it is based. All tracks are played from youtube using mpv
+;; in the background and music info taken from last.fm. Vuiet supports the
+;; "discovery mode", where it lets you create your own playlists based on
+;; artist, genre or your loved songs similarities. Or, you can specify single
+;; tracks, top tracks from a given artist, known albums, etc. There is also a
+;; lyrics database that is optionally updated with each track you play and this
+;; database can be searched interactively and played from.
 
 ;;; Code:
 

@@ -7,9 +7,9 @@
 ;; Description: LSP Clients for LTEX.
 ;; Keyword: lsp languagetool checker
 ;; Version: 0.1.0
-;; Package-Version: 20210616.1021
-;; Package-Commit: cd6fa0b32118792e9f7bcbf4a26032bfff05d603
-;; Package-Requires: ((emacs "26.1") (lsp-mode "6.1"))
+;; Package-Version: 20210715.942
+;; Package-Commit: b9a930757c71f7eb30a0828a502a237bfd882b43
+;; Package-Requires: ((emacs "26.1") (lsp-mode "6.1") (f "0.20.0"))
 ;; URL: https://github.com/emacs-languagetool/lsp-ltex
 
 ;; This file is NOT part of GNU Emacs.
@@ -35,6 +35,7 @@
 ;;; Code:
 
 (require 'lsp-mode)
+(require 'f)
 
 (defgroup lsp-ltex nil
   "Settings for the LTEX Language Server.
@@ -91,13 +92,13 @@ https://github.com/valentjn/ltex-ls"
   :group 'lsp-ltex)
 
 (defcustom lsp-ltex-disabled-rules '()
-  "Lists of rules that should be disabled (if enabled by default by \
+  "Lists of rules that should be disabled (if enabled by default by
 LanguageTool)."
   :type 'list
   :group 'lsp-ltex)
 
 (defcustom lsp-ltex-enabled-rules '()
-  "Lists of rules that should be enabled (if disabled by default by \
+  "Lists of rules that should be enabled (if disabled by default by
 LanguageTool)."
   :type 'list
   :group 'lsp-ltex)
@@ -113,8 +114,8 @@ LanguageTool)."
   :group 'lsp-ltex)
 
 (defcustom lsp-ltex-latex-commands '()
-  "List of LATEX commands to be handled by the LATEX parser, listed \
-together with empty arguments."
+  "List of LATEX commands to be handled by the LATEX parser, listed together
+with empty arguments."
   :type 'list
   :group 'lsp-ltex)
 
@@ -129,7 +130,7 @@ together with empty arguments."
   :group 'lsp-ltex)
 
 (defcustom lsp-ltex-additional-rules-enable-picky-rules nil
-  "Enable LanguageTool rules that are marked as picky and that are disabled \
+  "Enable LanguageTool rules that are marked as picky and that are disabled
 by default, e.g., rules about passive voice, sentence length, etc."
   :type 'boolean
   :group 'lsp-ltex)
@@ -140,7 +141,7 @@ by default, e.g., rules about passive voice, sentence length, etc."
   :group 'lsp-ltex)
 
 (defcustom lsp-ltex-additional-rules-language-model ""
-  "Optional path to a directory with rules of a language model with \
+  "Optional path to a directory with rules of a language model with
 n-gram occurrence counts."
   :type 'string
   :group 'lsp-ltex)
@@ -156,8 +157,8 @@ n-gram occurrence counts."
   :group 'lsp-ltex)
 
 (defcustom lsp-ltex-languagetool-http-server-uri ""
-  "If set to a non-empty string, LTEX will not use the bundled, \
-built-in version of LanguageTool.  Instead, LTEX will connect to an \
+  "If set to a non-empty string, LTEX will not use the bundled,
+built-in version of LanguageTool.  Instead, LTEX will connect to an
 external LanguageTool HTTP server."
   :type 'string
   :group 'lsp-ltex)
@@ -174,16 +175,16 @@ external LanguageTool HTTP server."
   :group 'lsp-ltex)
 
 (defcustom lsp-ltex-java-path ""
-  "If set to an empty string and LTEX could not find Java on your computer, \
-LTEX automatically downloads a Java distribution (AdoptOpenJDK), stores it \
-in the folder of the extension, and uses it to run ltex-ls.  You can point \
-this setting to an existing Java installation on your computer to use that \
+  "If set to an empty string and LTEX could not find Java on your computer,
+LTEX automatically downloads a Java distribution (AdoptOpenJDK), stores it
+in the folder of the extension, and uses it to run ltex-ls.  You can point
+this setting to an existing Java installation on your computer to use that
 installation instead."
   :type 'string
   :group 'lsp-ltex)
 
 (defcustom lsp-ltex-java-force-try-system-wide nil
-  "If non-nil, always try to use a system-wide Java installation before \
+  "If non-nil, always try to use a system-wide Java installation before
 trying to use an automatically downloaded Java distribution."
   :type 'boolean
   :group 'lsp-ltex)
