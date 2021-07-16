@@ -2,8 +2,8 @@
 
 ;; Author: Philippe Vaucher <philippe.vaucher@gmail.com>
 ;; URL: https://github.com/Silex/elmacro
-;; Package-Version: 20200905.2130
-;; Package-Commit: 4888d1baa8b943adf0bab94419357c55b7e6e697
+;; Package-Version: 20210716.639
+;; Package-Commit: d2e05012cee4f54fab6d8d8d6aced6e5eeef4f31
 ;; Keywords: macro, elisp, convenience
 ;; Version: 1.1.1
 ;; Package-Requires: ((s "1.11.0") (dash "2.13.0"))
@@ -67,7 +67,7 @@ never stored."
   :group 'elmacro
   :type '(repeat symbol))
 
-(defcustom elmacro-unwanted-commands-regexps '("^(ido.*)$" "^(smex)$")
+(defcustom elmacro-unwanted-commands-regexps '("^(ido.*)$" "^(smex)$" "^(amx)$" "^(file-notify-.*)$")
   "Regexps used to filter unwanted commands."
   :group 'elmacro
   :type '(repeat regexp))
