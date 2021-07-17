@@ -60,9 +60,15 @@ or `evilnc-copy-and-comment-operator',
 Comment text object "c" is defined.  It can have multi-lines.
 Press "vac" to select outer object (comment with limiters).
 Press "vic" to select inner object (comment without limiter).
-
 You can assign other key instead of "c" to the text object by
-customizing `evilnc-comment-text-object'.
+customizing `evilnc-comment-text-object'.  Either,
+  (setq evilnc-comment-text-object "c")
+  (evilnc-default-hotkeys)
+
+Or,
+  (setq evilnc-comment-text-object "a")
+  (define-key evil-inner-text-objects-map evilnc-comment-text-object 'evilnc-inner-commenter)
+  (define-key evil-outer-text-objects-map evilnc-comment-text-object 'evilnc-outer-commenter)
 
 You can list of comments in current buffer through using imenu.
 by setup `imenu-create-index-function' to `evilnc-imenu-create-index-function',
