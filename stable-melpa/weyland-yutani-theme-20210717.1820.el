@@ -5,8 +5,8 @@
 ;; Author: Joe Staursky
 ;; Homepage: https://github.com/jstaursky/weyland-yutani-theme
 ;; Version: 0.1
-;; Package-Version: 20210717.1434
-;; Package-Commit: 74f92331462cd4a3d4b5b54906866cf3cf789e3d
+;; Package-Version: 20210717.1820
+;; Package-Commit: b533c8f39469a1a238e46acd7467eb23a34a7886
 ;; Package-Requires: ((emacs "24.1"))
 
 ;; SPECIAL THANKS goes to emacs-theme-generator
@@ -578,9 +578,14 @@ the parenthetical noise."
       :box (:line-width -1 :color ,base7)
       :extend t)
 
-    `(smerge-markers                                                             :background ,bg-Black
+    `(smerge-markers
+      :background ,bg-Black
       :underline ,vibrant-Purple
       :overline ,vibrant-Purple)
+    `(smerge-refined-removed :foreground ,vibrant-Red)
+    `(smerge-refined-added :foreground ,vibrant-Green)
+    `(smerge-upper :foreground "#dbddee" :background "#2a3341")
+    `(smerge-lower :foreground "#F0EDFE" :background ,bg-Violet)
     `(git-commit-comment-file                  :foreground ,Crimson)
 
     `(magit-filename                           :foreground ,Violet)
@@ -701,21 +706,30 @@ the parenthetical noise."
       :inherit highlight)
 
     ;; Face for highlighting odd-numbered non-current differences in buffer A.
+
     `(ediff-odd-diff-A
-      :foreground "#cfd6e0"
-      :background "#3b3f57")
+      :foreground "#ffc8c6"
+      :background "#834e4e")
+    `(ediff-even-diff-A
+      :foreground "#ffefee"
+      :background "#846867")
 
     `(ediff-odd-diff-B
-      :foreground "#cfd6e0"
-      :background "#3b3f57")
-
-    `(ediff-even-diff-A
-      :foreground "#cfd6e0"
-      :background "#3b3f57")
-
+      :foreground "#aae3a8"
+      :background "#4e6b4d")
     `(ediff-even-diff-B
-      :foreground "#cfd6e0"
-      :background "#3b3f57")
+      :foreground "#c8e5c7"
+      :background "#698368")
+
+    `(ediff-odd-diff-C :foreground "#F0EDFE"
+                       :background "#3c4663")
+
+    `(ediff-even-diff-C :foreground "#F0EDFE"
+                        :background "#3c4663")
+
+
+
+
 
     `(ediff-fine-diff-B
       :foreground ,bg-darker
@@ -730,6 +744,13 @@ the parenthetical noise."
       :foreground "#e7ebef"
       :background "#335533"
       )
+
+    `(ediff-fine-diff-C
+      :background ,dark-Slate
+      :foreground "#d2cc2b"
+      )
+
+    `(ediff-current-diff-C :foreground "#d2cc2b" :background ,bg)
 
     `(web-mode-builtin-face
       :inherit ,font-lock-builtin-face)

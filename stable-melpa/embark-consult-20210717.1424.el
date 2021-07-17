@@ -4,8 +4,8 @@
 
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
-;; Package-Version: 20210525.1515
-;; Package-Commit: 72b12097835fd234677b9226129fc6600d88891b
+;; Package-Version: 20210717.1424
+;; Package-Commit: 956ee04653c1db948afa986c883f6c84b768ca1a
 ;; Version: 0.1
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "25.1") (embark "0.9") (consult "0.1"))
@@ -271,7 +271,7 @@ actual type."
 (dolist (bind (cdr embark-consult-search-map))
   (add-to-list 'embark-allow-edit-commands (cdr bind)))
 
-(defun embark-consult-unique-match ()
+(defun embark-consult--unique-match ()
   "If there is a unique matching candidate, accept it.
 This is intended to be used in `embark-setup-overrides' for some
 actions that are on `embark-allow-edit-commands'."
@@ -284,10 +284,10 @@ actions that are on `embark-allow-edit-commands'."
         (add-hook 'post-command-hook #'exit-minibuffer nil t)))))
 
 (dolist (cmd '(consult-outline consult-imenu consult-project-imenu))
-  (cl-pushnew #'embark-consult-unique-match
+  (cl-pushnew #'embark-consult--unique-match
               (alist-get cmd embark-setup-overrides)))
 
-(defun embark-consult-accept-tofu ()
+(defun embark-consult--accept-tofu ()
   "Accept input if it already has the unicode suffix.
 This is intended to be used in `embark-setup-overrides' for the
 `consult-line' and `consult-outline' actions."
@@ -300,10 +300,10 @@ This is intended to be used in `embark-setup-overrides' for the
       (add-hook 'post-command-hook #'exit-minibuffer nil t))))
 
 (dolist (cmd '(consult-line consult-outline))
-  (cl-pushnew #'embark-consult-accept-tofu
+  (cl-pushnew #'embark-consult--accept-tofu
               (alist-get cmd embark-setup-overrides)))
 
-(defun embark-consult-add-async-separator ()
+(defun embark-consult--add-async-separator ()
   "Add Consult's async separator at the beginning.
 This is intended to be used in `embark-setup-hook' for any action
 that is a Consult async command."
@@ -321,7 +321,7 @@ that is a Consult async command."
       (insert separator)))))
 
 (dolist (bind (cdr embark-consult-async-search-map))
-  (cl-pushnew #'embark-consult-add-async-separator
+  (cl-pushnew #'embark-consult--add-async-separator
               (alist-get (cdr bind) embark-setup-overrides)))
 
 (provide 'embark-consult)
