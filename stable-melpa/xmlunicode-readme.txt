@@ -62,6 +62,14 @@ it does define an 'xml input-mode and does support the ISO 8879 entity names.
 
 ; Changes
 
+v1.24 17 Jul 2021
+  Changed the format of the xmlunicode-character-alist so that it's
+  more useful for searching by adding the XML entity name and the
+  hex codepoint to the displayed string. The performance of
+  computing that alist is kind of bad, but I'm not sure how to
+  improve it. In the meantime, I've reworked things so that it's
+  only computed when it's first used, so you don't pay the cost at
+  startup time.
 v1.23 23 Aug 2020
   Fixed bug where xmlunicode-smart-hyphen didn't recognize the
   context "<!-" as the beginning of a comment and therefore that

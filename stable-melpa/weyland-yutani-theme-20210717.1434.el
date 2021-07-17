@@ -5,8 +5,8 @@
 ;; Author: Joe Staursky
 ;; Homepage: https://github.com/jstaursky/weyland-yutani-theme
 ;; Version: 0.1
-;; Package-Version: 20210530.1418
-;; Package-Commit: a56c56de048900409d271f91fd08a408fd9bf32e
+;; Package-Version: 20210717.1434
+;; Package-Commit: 74f92331462cd4a3d4b5b54906866cf3cf789e3d
 ;; Package-Requires: ((emacs "24.1"))
 
 ;; SPECIAL THANKS goes to emacs-theme-generator
@@ -52,7 +52,7 @@ the parenthetical noise."
 
 
 (let (
-      (fg              "#a9b7ca")
+      (fg              "#b0bcce")
       (fg-alt          "#2b2c2e")       ;#606873
       (hl              "#26282c")
 
