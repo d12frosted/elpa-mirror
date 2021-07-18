@@ -4,8 +4,8 @@
 ;;         Justin Burkett <justin@burkett.cc>
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
 ;; URL: https://github.com/tmalsburg/helm-bibtex
-;; Package-Version: 20210408.1649
-;; Package-Commit: 9f6ea920a49457d85096caa0e61f086a42b2908e
+;; Package-Version: 20210718.1044
+;; Package-Commit: a0d32ab16748b7b0c43d6421f1b497b7caf8e590
 ;; Version: 1.0.0
 ;; Package-Requires: ((parsebib "1.0") (s "1.9.0") (dash "2.6.0") (f "0.16.2") (cl-lib "0.5") (biblio "0.2") (emacs "26.1"))
 
@@ -124,7 +124,7 @@ ebib:key depending on the major mode of the current buffer.  Note
 that the functions should accept a list of keys as input.  With
 multiple marked entries one can insert multiple keys at once,
 e.g. \cite{key1,key2}.  See the functions
-`bibtex-completion-format-citation-ebib' and
+`bibtex-completion-format-citation-org-cite' and
 `bibtex-completion-format-citation-cite' as examples."
   :group 'bibtex-completion
   :type '(alist :key-type symbol :value-type function))
@@ -1048,6 +1048,12 @@ which no PDF is available are omitted."
                 for key in keys
                 for pdfs = (bibtex-completion-find-pdf key bibtex-completion-find-additional-pdfs)
                 append (with-no-warnings (--map (org-make-link-string it key) pdfs)))))
+
+(defun bibtex-completion-format-citation-org-cite (keys)
+  "Format org-links using Org mode's own cite syntax."
+  (format "[cite:%s]"
+    (s-join ";"
+            (--map (format "@%s" it) keys))))
 
 (defun bibtex-completion-format-citation-org-apa-link-to-PDF (keys)
   "Format org-links to PDF for entries in KEYS.
