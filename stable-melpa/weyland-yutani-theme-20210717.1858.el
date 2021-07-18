@@ -5,8 +5,8 @@
 ;; Author: Joe Staursky
 ;; Homepage: https://github.com/jstaursky/weyland-yutani-theme
 ;; Version: 0.1
-;; Package-Version: 20210717.1820
-;; Package-Commit: b533c8f39469a1a238e46acd7467eb23a34a7886
+;; Package-Version: 20210717.1858
+;; Package-Commit: 246410e1c03f7d8d8e76102f7c5e3cda83acb36b
 ;; Package-Requires: ((emacs "24.1"))
 
 ;; SPECIAL THANKS goes to emacs-theme-generator
@@ -721,36 +721,43 @@ the parenthetical noise."
       :foreground "#c8e5c7"
       :background "#698368")
 
-    `(ediff-odd-diff-C :foreground "#F0EDFE"
-                       :background "#3c4663")
+    `(ediff-odd-diff-C
+      :foreground "#e0ded4"
+      :background "#585648")
+    `(ediff-even-diff-C
+      :foreground "#ede6c7"
+      :background "#6c674c")
 
-    `(ediff-even-diff-C :foreground "#F0EDFE"
-                        :background "#3c4663")
 
 
+    `(ediff-current-diff-A
+      :foreground "#c7d0db"
+      :background "#553333")                                 ;
 
+    `(ediff-current-diff-B
+      :foreground "#e7ebef"
+      :background "#335533")
 
+    `(ediff-current-diff-C :bold t
+      :foreground ,vibrant-Finch
+      :background "#555432")
+
+    `(ediff-fine-diff-A
+      :foreground "#e7ebef"
+      :background "#aa2222")
 
     `(ediff-fine-diff-B
       :foreground ,bg-darker
       :background "#7daa22")
 
-    `(ediff-current-diff-A
-      :foreground "#c7d0db"
-      :background "#553333"
-      )                                 ;
-
-    `(ediff-current-diff-B
-      :foreground "#e7ebef"
-      :background "#335533"
-      )
-
     `(ediff-fine-diff-C
-      :background ,dark-Slate
-      :foreground "#d2cc2b"
-      )
+      :foreground "#c5c987"
+      :background "#555432")
 
-    `(ediff-current-diff-C :foreground "#d2cc2b" :background ,bg)
+
+
+
+
 
     `(web-mode-builtin-face
       :inherit ,font-lock-builtin-face)

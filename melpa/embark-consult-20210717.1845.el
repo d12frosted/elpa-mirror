@@ -4,8 +4,8 @@
 
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
-;; Package-Version: 20210717.1424
-;; Package-Commit: 956ee04653c1db948afa986c883f6c84b768ca1a
+;; Package-Version: 20210717.1845
+;; Package-Commit: 9d56be162badbbfee405595f2ebdfe16a5bca47d
 ;; Version: 0.1
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "25.1") (embark "0.9") (consult "0.1"))
@@ -243,6 +243,7 @@ actual type."
 
 (embark-define-keymap embark-consult-non-async-search-map
   "Keymap for Consult non-async search commands"
+  :parent nil
   ("o" consult-outline)
   ("i" consult-imenu)
   ("p" consult-project-imenu)
@@ -250,6 +251,7 @@ actual type."
 
 (embark-define-keymap embark-consult-async-search-map
   "Keymap for Consult async search commands"
+  :parent nil
   ("g" consult-grep)
   ("r" consult-ripgrep)
   ("G" consult-git-grep)
@@ -260,16 +262,17 @@ actual type."
   (keymap-canonicalize
    (make-composed-keymap embark-consult-non-async-search-map
                          embark-consult-async-search-map))
-  "Keymap for Consult async search commands.")
+  "Keymap for all Consult search commands.")
 
 (define-key embark-become-match-map "C" embark-consult-non-async-search-map)
 
-(add-to-list 'embark-become-keymaps 'embark-consult-async-search-map)
+(cl-pushnew 'embark-consult-async-search-map embark-become-keymaps)
 
 (define-key embark-general-map "C" embark-consult-search-map)
 
-(dolist (bind (cdr embark-consult-search-map))
-  (add-to-list 'embark-allow-edit-commands (cdr bind)))
+(map-keymap
+ (lambda (_key cmd) (cl-pushnew cmd embark-allow-edit-commands))
+ embark-consult-search-map)
 
 (defun embark-consult--unique-match ()
   "If there is a unique matching candidate, accept it.
@@ -320,9 +323,11 @@ that is a Consult async command."
       (goto-char (point-max))
       (insert separator)))))
 
-(dolist (bind (cdr embark-consult-async-search-map))
-  (cl-pushnew #'embark-consult--add-async-separator
-              (alist-get (cdr bind) embark-setup-overrides)))
+(map-keymap
+ (lambda (_key cmd)
+   (cl-pushnew #'embark-consult--add-async-separator
+               (alist-get cmd embark-setup-overrides)))
+ embark-consult-async-search-map)
 
 (provide 'embark-consult)
 ;;; embark-consult.el ends here

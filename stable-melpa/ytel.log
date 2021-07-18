@@ -3,7 +3,9 @@ Fetcher: github
 Source:  https://github.com/gRastello/ytel.git
 
 Updating /mnt/store/melpa/working/ytel/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/gRastello/ytel.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
+Built ytel in 3.674s, finished at 2021-07-18T01:11:54+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  10K Jul 18 01:11 packages/ytel-20200725.1056.el
+4.0K -rw-r--r-- 1 root root  331 Jul 18 01:11 packages/ytel-20200725.1056.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 18 01:11 packages/ytel-badge.svg
+4.0K -rw-r--r-- 1 root root  421 Jul 18 01:11 packages/ytel-readme.txt
