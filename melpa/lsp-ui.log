@@ -5,7 +5,7 @@ Source:  https://github.com/emacs-lsp/lsp-ui.git
 Updating /mnt/store/melpa/working/lsp-ui/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-ui/
-  to /tmp/lsp-uiYBpA9R/lsp-ui-20210718.445
+  to /tmp/lsp-uiyPiQio/lsp-ui-20210718.1626
     lsp-ui-doc.el -> lsp-ui-doc.el
     lsp-ui-flycheck.el -> lsp-ui-flycheck.el
     lsp-ui-imenu.el -> lsp-ui-imenu.el
@@ -15,22 +15,24 @@ Copying files (->) and directories (=>)
     lsp-ui.el -> lsp-ui.el
     lsp-ui-doc.html -> lsp-ui-doc.html
     resources => resources
-Created lsp-ui-20210718.445.tar containing:
-  lsp-ui-20210718.445/
-  lsp-ui-20210718.445/lsp-ui-doc.el
-  lsp-ui-20210718.445/lsp-ui-doc.html
-  lsp-ui-20210718.445/lsp-ui-flycheck.el
-  lsp-ui-20210718.445/lsp-ui-imenu.el
-  lsp-ui-20210718.445/lsp-ui-peek.el
-  lsp-ui-20210718.445/lsp-ui-pkg.el
-  lsp-ui-20210718.445/lsp-ui-sideline.el
-  lsp-ui-20210718.445/lsp-ui-util.el
-  lsp-ui-20210718.445/lsp-ui.el
-  lsp-ui-20210718.445/resources/
-  lsp-ui-20210718.445/resources/lightbulb.png
-Built lsp-ui in 3.943s, finished at 2021-07-18T13:41:55+0000
+Created lsp-ui-20210718.1626.tar containing:
+  lsp-ui-20210718.1626/
+  lsp-ui-20210718.1626/lsp-ui-doc.el
+  lsp-ui-20210718.1626/lsp-ui-doc.html
+  lsp-ui-20210718.1626/lsp-ui-flycheck.el
+  lsp-ui-20210718.1626/lsp-ui-imenu.el
+  lsp-ui-20210718.1626/lsp-ui-peek.el
+  lsp-ui-20210718.1626/lsp-ui-pkg.el
+  lsp-ui-20210718.1626/lsp-ui-sideline.el
+  lsp-ui-20210718.1626/lsp-ui-util.el
+  lsp-ui-20210718.1626/lsp-ui.el
+  lsp-ui-20210718.1626/resources/
+  lsp-ui-20210718.1626/resources/lightbulb.png
+Built lsp-ui in 4.503s, finished at 2021-07-18T16:57:52+0000
  ✓ Success:
+4.0K -rw-r--r-- 1 root root  486 Jul 18 16:57 packages/lsp-ui-20210718.1626.entry
+160K -rw-r--r-- 1 root root 160K Jul 18 16:57 packages/lsp-ui-20210718.1626.tar
 4.0K -rw-r--r-- 1 root root  485 Jul 18 13:41 packages/lsp-ui-20210718.445.entry
 160K -rw-r--r-- 1 root root 160K Jul 18 13:41 packages/lsp-ui-20210718.445.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 18 13:41 packages/lsp-ui-badge.svg
-4.0K -rw-r--r-- 1 root root  104 Jul 18 13:41 packages/lsp-ui-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Jul 18 16:57 packages/lsp-ui-badge.svg
+4.0K -rw-r--r-- 1 root root  104 Jul 18 16:57 packages/lsp-ui-readme.txt

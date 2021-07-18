@@ -4,9 +4,9 @@
 
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
-;; Version: 1.6.2
-;; Package-Version: 20210626.1956
-;; Package-Commit: 78ee2fb4eb43c970e12a91949f7efd26ca1834d5
+;; Version: 1.6.3
+;; Package-Version: 20210718.1725
+;; Package-Commit: 30ab8a1913d284df49b114d4c34be6c36e1b3c1f
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -91,6 +91,11 @@
 (defface all-the-icons-ivy-rich-icon-face
   '((t (:inherit default)))
   "Face used for the icons while `all-the-icons-ivy-rich-color-icon' is nil."
+  :group 'all-the-icons-ivy-rich)
+
+(defface all-the-icons-ivy-rich-dir-face
+  '((t (:inherit font-lock-doc-face)))
+  "Face used for the directory icon."
   :group 'all-the-icons-ivy-rich)
 
 (defface all-the-icons-ivy-rich-doc-face
@@ -803,10 +808,10 @@ Display the true name when the file is a symlink."
 
 (defun all-the-icons-ivy-rich-buffer-icon (candidate)
   "Display buffer icon from CANDIDATE in `ivy-rich'."
-  (let* ((buffer (get-buffer candidate))
-         (buffer-file-name (buffer-file-name buffer))
-         (major-mode (buffer-local-value 'major-mode buffer))
-         (icon (with-current-buffer buffer (all-the-icons-icon-for-buffer))))
+  (let ((icon (with-current-buffer (get-buffer candidate)
+                (if (eq major-mode 'dired-mode)
+                    (all-the-icons-icon-for-dir candidate :face 'all-the-icons-ivy-rich-dir-face)
+                  (all-the-icons-icon-for-buffer)))))
     (all-the-icons-ivy-rich--format-icon
      (if (or (null icon) (symbolp icon))
          (all-the-icons-faicon "file-o" :face 'all-the-icons-dsilver :height 0.9 :v-adjust 0.0)
@@ -816,7 +821,10 @@ Display the true name when the file is a symlink."
   "Display file icon from CANDIDATE in `ivy-rich'."
   (let ((icon (cond
                ((ivy--dirname-p candidate)
-                (all-the-icons-icon-for-dir candidate :height 0.9 :v-adjust 0.01))
+                (all-the-icons-icon-for-dir candidate
+                                            :height 0.9
+                                            :v-adjust 0.01
+                                            :face 'all-the-icons-ivy-rich-dir-face))
                ((not (string-empty-p candidate))
                 (all-the-icons-icon-for-file candidate :height 0.9 :v-adjust 0.0)))))
     (all-the-icons-ivy-rich--format-icon
