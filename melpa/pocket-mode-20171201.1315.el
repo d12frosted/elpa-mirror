@@ -5,6 +5,8 @@
 ;; Author: DarkSun <lujun9972@gmail.com>
 ;; Created: 2016-5-23
 ;; Version: 0.1
+;; Package-Version: 20171201.1315
+;; Package-Commit: 229de7d35b7e5605797591c46aa8200d7efc363c
 ;; Keywords: convenience, pocket
 ;; Package-Requires: ((emacs "24.4") (pocket-api "0.1"))
 

@@ -53,29 +53,26 @@ use these dabbrev settings:
 
 Here are fancy-dabbrev's own configuration options:
 
-* fancy-dabbrev-menu-height (default: 10)
-
-  How many expansion candidates to show in the menu.
-
-* fancy-dabbrev-preview-delay (default: 0.0)
-
-  How long (in seconds) to wait until displaying the preview after a
-  keystroke. Set this to e.g. 0.2 if you think that it's annoying to get a
-  preview immediately after writing some text.
-
-* fancy-dabbrev-expansion-context (default: after-symbol)
+* fancy-dabbrev-expansion-context (default: 'after-symbol)
 
   Where to try to perform expansion. If 'after-symbol, only try to expand
   after symbols (as determined by `thing-at-point'). If 'after-non-space, try
   to expand after any non-space character.
 
-* fancy-dabbrev-preview-context (default: 'at-eol)
+* fancy-dabbrev-expansion-on-preview-only (default: nil)
 
-  When to show the preview. If 'at-eol, only show the preview if no other
-  text (except whitespace) is to the right of the cursor. If
-  'before-non-word, show the preview whenever the cursor is not immediately
-  before (or inside) a word. If 'everywhere, always show the preview after
-  typing.
+  Only expand when a preview is shown or expansion ran for the last command.
+  This has the advantage that fancy-dabbrev-expand-or-indent always falls
+  back to calling fancy-dabbrev-indent-command when there is nothing to
+  expand.
+
+* fancy-dabbrev-indent-command (default: 'indent-for-tab-command)
+
+  The indentation command used for fancy-dabbrev-expand-or-indent.
+
+* fancy-dabbrev-menu-height (default: 10)
+
+  How many expansion candidates to show in the menu.
 
 * fancy-dabbrev-no-expansion-for (default: '(multiple-cursors-mode))
 
@@ -90,6 +87,28 @@ Here are fancy-dabbrev's own configuration options:
   A list of variables which, if bound and non-nil, will inactivate
   fancy-dabbrev preview. The variables typically represent major or minor
   modes.
+
+* fancy-dabbrev-sort-menu (default nil)
+
+  If nil, the popup menu will show matching candidates in the order that
+  repeated calls to dabbrev-expand would return (i.e., first candidates
+  before the cursor, then after the cursor and then from other buffers). If
+  t, the candidates (except the first one) will be sorted.
+
+* fancy-dabbrev-preview-context (default: 'at-eol)
+
+  When to show the preview. If 'at-eol, only show the preview if no other
+  text (except whitespace) is to the right of the cursor. If
+  'before-non-word, show the preview whenever the cursor is not immediately
+  before (or inside) a word. If 'everywhere, always show the preview after
+  typing.
+
+* fancy-dabbrev-preview-delay (default: 0.0)
+
+  How long (in seconds) to wait until displaying the preview after a
+  keystroke. Set this to e.g. 0.2 if you think that it's annoying to get a
+  preview immediately after writing some text.
+
 
 WHY?
 ====

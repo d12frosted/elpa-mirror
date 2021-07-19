@@ -1,13 +1,13 @@
 ;;; fancy-dabbrev.el --- Like dabbrev-expand with preview and popup menu -*- lexical-binding: t; -*-
 ;;
-;; Copyright (C) 2018-2020 Joel Rosdahl
+;; Copyright (C) 2018-2021 Joel Rosdahl
 ;;
 ;; Author: Joel Rosdahl <joel@rosdahl.net>
 ;; Version: 1.1
-;; Package-Version: 20200129.1933
-;; Package-Commit: 158e1e54055cafe5da9122a59519e8b3ed1057cf
+;; Package-Version: 20210719.1745
+;; Package-Commit: aef238dabc0efcd2ffc8053b45f972dd5bca82f1
 ;; License: BSD-3-clause
-;; Package-Requires: ((emacs "24") (popup "0.5.3"))
+;; Package-Requires: ((emacs "25.1") (popup "0.5.3"))
 ;; URL: https://github.com/jrosdahl/fancy-dabbrev
 ;;
 ;; Redistribution and use in source and binary forms, with or without
@@ -94,29 +94,26 @@
 ;;
 ;; Here are fancy-dabbrev's own configuration options:
 ;;
-;; * fancy-dabbrev-menu-height (default: 10)
-;;
-;;   How many expansion candidates to show in the menu.
-;;
-;; * fancy-dabbrev-preview-delay (default: 0.0)
-;;
-;;   How long (in seconds) to wait until displaying the preview after a
-;;   keystroke. Set this to e.g. 0.2 if you think that it's annoying to get a
-;;   preview immediately after writing some text.
-;;
-;; * fancy-dabbrev-expansion-context (default: after-symbol)
+;; * fancy-dabbrev-expansion-context (default: 'after-symbol)
 ;;
 ;;   Where to try to perform expansion. If 'after-symbol, only try to expand
 ;;   after symbols (as determined by `thing-at-point'). If 'after-non-space, try
 ;;   to expand after any non-space character.
 ;;
-;; * fancy-dabbrev-preview-context (default: 'at-eol)
+;; * fancy-dabbrev-expansion-on-preview-only (default: nil)
 ;;
-;;   When to show the preview. If 'at-eol, only show the preview if no other
-;;   text (except whitespace) is to the right of the cursor. If
-;;   'before-non-word, show the preview whenever the cursor is not immediately
-;;   before (or inside) a word. If 'everywhere, always show the preview after
-;;   typing.
+;;   Only expand when a preview is shown or expansion ran for the last command.
+;;   This has the advantage that fancy-dabbrev-expand-or-indent always falls
+;;   back to calling fancy-dabbrev-indent-command when there is nothing to
+;;   expand.
+;;
+;; * fancy-dabbrev-indent-command (default: 'indent-for-tab-command)
+;;
+;;   The indentation command used for fancy-dabbrev-expand-or-indent.
+;;
+;; * fancy-dabbrev-menu-height (default: 10)
+;;
+;;   How many expansion candidates to show in the menu.
 ;;
 ;; * fancy-dabbrev-no-expansion-for (default: '(multiple-cursors-mode))
 ;;
@@ -131,6 +128,28 @@
 ;;   A list of variables which, if bound and non-nil, will inactivate
 ;;   fancy-dabbrev preview. The variables typically represent major or minor
 ;;   modes.
+;;
+;; * fancy-dabbrev-sort-menu (default nil)
+;;
+;;   If nil, the popup menu will show matching candidates in the order that
+;;   repeated calls to dabbrev-expand would return (i.e., first candidates
+;;   before the cursor, then after the cursor and then from other buffers). If
+;;   t, the candidates (except the first one) will be sorted.
+;;
+;; * fancy-dabbrev-preview-context (default: 'at-eol)
+;;
+;;   When to show the preview. If 'at-eol, only show the preview if no other
+;;   text (except whitespace) is to the right of the cursor. If
+;;   'before-non-word, show the preview whenever the cursor is not immediately
+;;   before (or inside) a word. If 'everywhere, always show the preview after
+;;   typing.
+;;
+;; * fancy-dabbrev-preview-delay (default: 0.0)
+;;
+;;   How long (in seconds) to wait until displaying the preview after a
+;;   keystroke. Set this to e.g. 0.2 if you think that it's annoying to get a
+;;   preview immediately after writing some text.
+;;
 ;;
 ;; WHY?
 ;; ====
@@ -153,7 +172,7 @@
 (require 'popup)
 
 (defgroup fancy-dabbrev nil
-  "Fancy dabbrev"
+  "Fancy dabbrev."
   :group 'fancy-dabbrev)
 
 (defcustom fancy-dabbrev-menu-height 10
@@ -191,6 +210,12 @@ any non-space character."
                  (const :tag "After any non-space character" after-non-space))
   :group 'fancy-dabbrev)
 
+(defcustom fancy-dabbrev-indent-command
+   'indent-for-tab-command
+  "The indent command to use for `fancy-dabbrev-expand-or-indent'."
+  :type 'symbol
+  :group 'fancy-dabbrev)
+
 (defcustom fancy-dabbrev-preview-context
   'at-eol
   "When to show the preview.
@@ -204,6 +229,15 @@ preview after typing."
                  (const :tag "When cursor is not immediately before a word"
                         before-non-word)
                  (const :tag "Everywhere" everywhere))
+  :group 'fancy-dabbrev)
+
+(defcustom fancy-dabbrev-expansion-on-preview-only nil
+  "Only expand when a preview is shown or expansion ran for the last command.
+
+This has the advantage that `fancy-dabbrev-expand-or-indent'
+always falls back to calling `fancy-dabbrev-indent-command'
+when there is nothing to expand."
+  :type 'boolean
   :group 'fancy-dabbrev)
 
 (defcustom fancy-dabbrev-no-expansion-for
@@ -250,6 +284,9 @@ represent major or minor modes."
 (defvar fancy-dabbrev--preview-overlay nil
   "The state of the preview overlay.")
 
+(defvar fancy-dabbrev--preview-overlay-was-visible nil
+  "The preview overlay visibility before running a command.")
+
 (defvar fancy-dabbrev--preview-timer nil
   "The state of the preview timer.")
 
@@ -284,7 +321,7 @@ This function executes `fancy-dabbrev-expand' if the cursor is
 after an expandable prefix, otherwise `indent-for-tab-command'."
   (interactive)
   (unless (fancy-dabbrev--expand)
-    (indent-for-tab-command)))
+    (call-interactively fancy-dabbrev-indent-command)))
 
 ;;;###autoload
 (defun fancy-dabbrev-backward ()
@@ -338,8 +375,10 @@ nil."
   (let ((last-command-did-expand
          (and (fancy-dabbrev--is-fancy-dabbrev-command last-command)
               fancy-dabbrev--expansions)))
-    (if (not (or last-command-did-expand
-                 (fancy-dabbrev--looking-back-at-expandable)))
+    (if (and (not last-command-did-expand)
+             (or (not (fancy-dabbrev--looking-back-at-expandable))
+                 (and fancy-dabbrev-expansion-on-preview-only
+                      (not fancy-dabbrev--preview-overlay-was-visible))))
         (setq fancy-dabbrev--expansions nil)
       (if (fancy-dabbrev--any-bound-and-true fancy-dabbrev-no-expansion-for)
           (dabbrev-expand nil)
@@ -351,13 +390,17 @@ nil."
 
 (defun fancy-dabbrev--pre-command-hook ()
   "[internal] Function run from `pre-command-hook'."
+  (setq fancy-dabbrev--preview-overlay-was-visible nil)
   (when fancy-dabbrev--preview-overlay
-    (delete-overlay fancy-dabbrev--preview-overlay)))
+    (setq fancy-dabbrev--preview-overlay-was-visible t)
+    (delete-overlay fancy-dabbrev--preview-overlay)
+    (setq fancy-dabbrev--preview-overlay nil)))
 
 (defun fancy-dabbrev--post-command-hook ()
   "[internal] Function run from `post-command-hook'."
   (when (timerp fancy-dabbrev--preview-timer)
-    (cancel-timer fancy-dabbrev--preview-timer))
+    (cancel-timer fancy-dabbrev--preview-timer)
+    (setq fancy-dabbrev--preview-timer nil))
   (unless (fancy-dabbrev--is-fancy-dabbrev-command this-command)
     (fancy-dabbrev--on-exit))
   (when (and fancy-dabbrev-mode
@@ -507,13 +550,13 @@ That is, if `this-command' is not one of
 
 ;;;###autoload
 (define-minor-mode fancy-dabbrev-mode
-  "Toggle fancy-dabbrev-mode.
+  "Toggle `fancy-dabbrev-mode'.
 
-With a prefix argument ARG, enable fancy-dabbrev-mode if ARG is
+With a prefix argument ARG, enable `fancy-dabbrev-mode' if ARG is
 positive, and disable it otherwise. If called from Lisp, enable
 the mode if ARG is omitted or nil.
 
-When fancy-dabbrev-mode is enabled, fancy-dabbrev's preview
+When `fancy-dabbrev-mode' is enabled, fancy-dabbrev's preview
 functionality is activated."
   :lighter " FD"
   :init-value nil
@@ -522,7 +565,15 @@ functionality is activated."
         (add-hook 'pre-command-hook #'fancy-dabbrev--pre-command-hook nil t)
         (add-hook 'post-command-hook #'fancy-dabbrev--post-command-hook nil t))
     (remove-hook 'pre-command-hook #'fancy-dabbrev--pre-command-hook t)
-    (remove-hook 'post-command-hook #'fancy-dabbrev--post-command-hook t)))
+    (remove-hook 'post-command-hook #'fancy-dabbrev--post-command-hook t)
+
+    ;; Clean up runtime state.
+    (when fancy-dabbrev--preview-overlay
+      (delete-overlay fancy-dabbrev--preview-overlay)
+      (setq fancy-dabbrev--preview-overlay nil))
+    (when (timerp fancy-dabbrev--preview-timer)
+      (cancel-timer fancy-dabbrev--preview-timer)
+      (setq fancy-dabbrev--preview-timer nil))))
 
 ;;;###autoload
 (define-globalized-minor-mode global-fancy-dabbrev-mode
