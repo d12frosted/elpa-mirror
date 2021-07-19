@@ -90,10 +90,10 @@ Most commands call `evilnc-comment-or-uncomment-region-function'.
 You can modify this variable to customize the comment style,
 
   (with-eval-after-load 'evil-nerd-commenter
-    (defun my-comment-or-uncomment-region (beg end)
+    (defun my-comment-or-uncomment-region (start end)
       (let* ((comment-start "aaa")
              (comment-end "bbb"))
-        (evilnc-comment-or-uncomment-region-internal beg end)))
+        (evilnc-comment-or-uncomment-region-internal start end)))
     (setq evilnc-comment-or-uncomment-region-function
           'my-comment-or-uncomment-region))
 

@@ -1,0 +1,29 @@
+Package: docker-api
+Fetcher: github
+Source:  https://github.com/Silex/docker-api.el.git
+
+Updating /mnt/store/melpa/working/docker-api/
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/docker-api/
+  to /tmp/docker-apiokxkPL/docker-api-20160525.720
+    docker-api-connection.el -> docker-api-connection.el
+    docker-api-containers.el -> docker-api-containers.el
+    docker-api-images.el -> docker-api-images.el
+    docker-api-networks.el -> docker-api-networks.el
+    docker-api-volumes.el -> docker-api-volumes.el
+    docker-api.el -> docker-api.el
+Created docker-api-20160525.720.tar containing:
+  docker-api-20160525.720/
+  docker-api-20160525.720/docker-api-connection.el
+  docker-api-20160525.720/docker-api-containers.el
+  docker-api-20160525.720/docker-api-images.el
+  docker-api-20160525.720/docker-api-networks.el
+  docker-api-20160525.720/docker-api-pkg.el
+  docker-api-20160525.720/docker-api-volumes.el
+  docker-api-20160525.720/docker-api.el
+Built docker-api in 7.274s, finished at 2021-07-19T15:25:06+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  445 Jul 19 15:25 packages/docker-api-20160525.720.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 19 15:25 packages/docker-api-20160525.720.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 15:25 packages/docker-api-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul 19 15:25 packages/docker-api-readme.txt

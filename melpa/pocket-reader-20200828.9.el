@@ -5,8 +5,6 @@
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; Created: 2017-09-25
 ;; Version: 0.2
-;; Package-Version: 20200828.9
-;; Package-Commit: dbb7b043edb42341b7f48ce0d81ba08c3c676076
 ;; Keywords: pocket
 ;; Package-Requires: ((emacs "25.1") (dash "2.13.0") (kv "0.0.19") (pocket-lib "0.1") (s "1.10") (ov "1.0.6") (rainbow-identifiers "0.2.2") (org-web-tools "0.1") (ht "2.2"))
 ;; URL: https://github.com/alphapapa/pocket-reader.el

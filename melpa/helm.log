@@ -5,7 +5,7 @@ Source:  https://github.com/emacs-helm/helm.git
 Updating /mnt/store/melpa/working/helm/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm/
-  to /tmp/helm1XHTio/helm-20210714.1600
+  to /tmp/helmX23gYe/helm-20210714.1600
     .dir-locals.el -> .dir-locals.el
     helm-adaptive.el -> helm-adaptive.el
     helm-bookmark.el -> helm-bookmark.el
@@ -96,910 +96,910 @@ Created helm-20210714.1600.tar containing:
   helm-20210714.1600/helm-types.el
   helm-20210714.1600/helm-utils.el
   helm-20210714.1600/helm-x-files.el
-Built helm in 3.995s, finished at 2021-07-19T09:06:34+0000
+Built helm in 4.351s, finished at 2021-07-19T15:40:37+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  432 Jul 19 09:06 packages/helm-20210714.1600.entry
-1.1M -rw-r--r-- 1 root root 1.1M Jul 19 09:06 packages/helm-20210714.1600.tar
- 12K -rw-r--r-- 1 root root 9.3K Jul 19 09:06 packages/helm-R-20120820.14.el
-4.0K -rw-r--r-- 1 root root  349 Jul 19 09:06 packages/helm-R-20120820.14.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 09:06 packages/helm-R-badge.svg
-4.0K -rw-r--r-- 1 root root   88 Jul 19 09:06 packages/helm-R-readme.txt
-4.0K -rw-r--r-- 1 root root  500 Jul 19 09:06 packages/helm-R.log
-8.0K -rw-r--r-- 1 root root 7.7K Jul 19 09:06 packages/helm-ack-20141030.1226.el
-4.0K -rw-r--r-- 1 root root  367 Jul 19 09:06 packages/helm-ack-20141030.1226.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-ack-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul 19 09:06 packages/helm-ack-readme.txt
-4.0K -rw-r--r-- 1 root root  135 Jul 19 09:06 packages/helm-ack.log
-8.0K -rw-r--r-- 1 root root 4.8K Jul 19 09:06 packages/helm-ad-20151209.1015.el
-4.0K -rw-r--r-- 1 root root  351 Jul 19 09:06 packages/helm-ad-20151209.1015.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-ad-badge.svg
-4.0K -rw-r--r-- 1 root root  116 Jul 19 09:06 packages/helm-ad-readme.txt
-4.0K -rw-r--r-- 1 root root  123 Jul 19 09:06 packages/helm-ad.log
+4.0K -rw-r--r-- 1 root root  432 Jul 19 15:40 packages/helm-20210714.1600.entry
+1.1M -rw-r--r-- 1 root root 1.1M Jul 19 15:40 packages/helm-20210714.1600.tar
+ 12K -rw-r--r-- 1 root root 9.3K Jul 19 12:23 packages/helm-R-20120820.14.el
+4.0K -rw-r--r-- 1 root root  349 Jul 19 12:23 packages/helm-R-20120820.14.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-R-badge.svg
+4.0K -rw-r--r-- 1 root root   88 Jul 19 12:23 packages/helm-R-readme.txt
+4.0K -rw-r--r-- 1 root root  123 Jul 19 15:40 packages/helm-R.log
+8.0K -rw-r--r-- 1 root root 7.7K Jul 19 12:23 packages/helm-ack-20141030.1226.el
+4.0K -rw-r--r-- 1 root root  367 Jul 19 12:23 packages/helm-ack-20141030.1226.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-ack-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul 19 12:23 packages/helm-ack-readme.txt
+4.0K -rw-r--r-- 1 root root  135 Jul 19 15:40 packages/helm-ack.log
+8.0K -rw-r--r-- 1 root root 4.8K Jul 19 12:23 packages/helm-ad-20151209.1015.el
+4.0K -rw-r--r-- 1 root root  351 Jul 19 12:23 packages/helm-ad-20151209.1015.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-ad-badge.svg
+4.0K -rw-r--r-- 1 root root  116 Jul 19 12:23 packages/helm-ad-readme.txt
+4.0K -rw-r--r-- 1 root root  123 Jul 19 15:40 packages/helm-ad.log
 4.0K -rw-r--r-- 1 root root 1.2K Feb  4 22:31 packages/helm-addressbook-badge.svg
 4.0K -rw-r--r-- 1 root root   78 Feb  4 22:31 packages/helm-addressbook-readme.txt
 4.0K -rw-r--r-- 1 root root  584 Feb  4 22:31 packages/helm-addressbook.log
- 56K -rw-r--r-- 1 root root  54K Jul 19 05:46 packages/helm-ag-20210702.845.el
-4.0K -rw-r--r-- 1 root root  361 Jul 19 05:46 packages/helm-ag-20210702.845.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-ag-badge.svg
- 16K -rw-r--r-- 1 root root  14K Jul 19 05:46 packages/helm-ag-r-20131123.1531.el
-4.0K -rw-r--r-- 1 root root  396 Jul 19 05:46 packages/helm-ag-r-20131123.1531.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-ag-r-badge.svg
-4.0K -rw-r--r-- 1 root root 1017 Jul 19 05:46 packages/helm-ag-r-readme.txt
-4.0K -rw-r--r-- 1 root root  135 Jul 19 09:06 packages/helm-ag-r.log
-4.0K -rw-r--r-- 1 root root  206 Jul 19 05:46 packages/helm-ag-readme.txt
-4.0K -rw-r--r-- 1 root root  132 Jul 19 09:06 packages/helm-ag.log
- 16K -rw-r--r-- 1 root root  13K Jul 19 05:46 packages/helm-apt-20210324.1929.el
-4.0K -rw-r--r-- 1 root root  411 Jul 19 05:46 packages/helm-apt-20210324.1929.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-apt-badge.svg
-4.0K -rw-r--r-- 1 root root   39 Jul 19 05:46 packages/helm-apt-readme.txt
-   0 -rw-r--r-- 1 root root    0 Jul 19 09:06 packages/helm-apt.log
-4.0K -rw-r--r-- 1 root root 3.4K Jul 19 05:46 packages/helm-atoms-20201013.1723.el
-4.0K -rw-r--r-- 1 root root  425 Jul 19 05:46 packages/helm-atoms-20201013.1723.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-atoms-badge.svg
-4.0K -rw-r--r-- 1 root root  408 Jul 19 05:46 packages/helm-atoms-readme.txt
-   0 -rw-r--r-- 1 root root    0 Jul 19 09:06 packages/helm-atoms.log
- 12K -rw-r--r-- 1 root root 8.3K Jul 19 05:46 packages/helm-aws-20180514.1032.el
-4.0K -rw-r--r-- 1 root root  345 Jul 19 05:46 packages/helm-aws-20180514.1032.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-aws-badge.svg
-4.0K -rw-r--r-- 1 root root  306 Jul 19 05:46 packages/helm-aws-readme.txt
-   0 -rw-r--r-- 1 root root    0 Jul 19 09:06 packages/helm-aws.log
- 12K -rw-r--r-- 1 root root  11K Jul 19 05:46 packages/helm-backup-20180911.614.el
-4.0K -rw-r--r-- 1 root root  471 Jul 19 05:46 packages/helm-backup-20180911.614.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-backup-badge.svg
-4.0K -rw-r--r-- 1 root root  378 Jul 19 05:46 packages/helm-backup-readme.txt
-4.0K -rw-r--r-- 1 root root  540 Jul 19 05:46 packages/helm-backup.log
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 09:06 packages/helm-badge.svg
- 16K -rw-r--r-- 1 root root  13K Jul 19 05:46 packages/helm-bbdb-20190728.1325.el
-4.0K -rw-r--r-- 1 root root  276 Jul 19 05:46 packages/helm-bbdb-20190728.1325.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-bbdb-badge.svg
-4.0K -rw-r--r-- 1 root root   85 Jul 19 05:46 packages/helm-bbdb-readme.txt
-4.0K -rw-r--r-- 1 root root  530 Jul 19 05:46 packages/helm-bbdb.log
- 12K -rw-r--r-- 1 root root  12K Jul 19 05:46 packages/helm-bibtex-20201214.2111.el
-4.0K -rw-r--r-- 1 root root  472 Jul 19 05:46 packages/helm-bibtex-20201214.2111.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-bibtex-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Jul 19 05:46 packages/helm-bibtex-readme.txt
-4.0K -rw-r--r-- 1 root root  545 Jul 19 05:46 packages/helm-bibtex.log
-4.0K -rw-r--r-- 1 root root  373 Jul 19 05:46 packages/helm-bibtexkey-20140214.1504.entry
- 12K -rw-r--r-- 1 root root  10K Jul 19 05:46 packages/helm-bibtexkey-20140214.1504.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-bibtexkey-badge.svg
-4.0K -rw-r--r-- 1 root root  273 Jul 19 05:46 packages/helm-bibtexkey-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Jul 19 05:46 packages/helm-bibtexkey.log
-4.0K -rw-r--r-- 1 root root 2.7K Jul 19 05:46 packages/helm-bind-key-20141109.515.el
-4.0K -rw-r--r-- 1 root root  317 Jul 19 05:46 packages/helm-bind-key-20141109.515.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-bind-key-badge.svg
-4.0K -rw-r--r-- 1 root root  164 Jul 19 05:46 packages/helm-bind-key-readme.txt
-4.0K -rw-r--r-- 1 root root  558 Jul 19 05:46 packages/helm-bind-key.log
-8.0K -rw-r--r-- 1 root root 6.1K Jul 19 05:46 packages/helm-bitbucket-20190422.1102.el
-4.0K -rw-r--r-- 1 root root  399 Jul 19 05:46 packages/helm-bitbucket-20190422.1102.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-bitbucket-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jul 19 05:46 packages/helm-bitbucket-readme.txt
-4.0K -rw-r--r-- 1 root root  574 Jul 19 05:46 packages/helm-bitbucket.log
-8.0K -rw-r--r-- 1 root root 6.8K Jul 19 05:46 packages/helm-bm-20160321.1331.el
-4.0K -rw-r--r-- 1 root root  413 Jul 19 05:46 packages/helm-bm-20160321.1331.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-bm-badge.svg
-4.0K -rw-r--r-- 1 root root  170 Jul 19 05:46 packages/helm-bm-readme.txt
-4.0K -rw-r--r-- 1 root root  510 Jul 19 05:46 packages/helm-bm.log
-8.0K -rw-r--r-- 1 root root 4.6K Jul 19 05:46 packages/helm-books-20170325.631.el
-4.0K -rw-r--r-- 1 root root  370 Jul 19 05:46 packages/helm-books-20170325.631.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-books-badge.svg
-4.0K -rw-r--r-- 1 root root   35 Jul 19 05:46 packages/helm-books-readme.txt
-4.0K -rw-r--r-- 1 root root  533 Jul 19 05:46 packages/helm-books.log
-4.0K -rw-r--r-- 1 root root 3.3K Jul 19 05:46 packages/helm-bufler-20210708.2217.el
-4.0K -rw-r--r-- 1 root root  433 Jul 19 05:46 packages/helm-bufler-20210708.2217.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-bufler-badge.svg
-4.0K -rw-r--r-- 1 root root  290 Jul 19 05:46 packages/helm-bufler-readme.txt
-4.0K -rw-r--r-- 1 root root  543 Jul 19 05:46 packages/helm-bufler.log
-4.0K -rw-r--r-- 1 root root 3.9K Jul 19 05:46 packages/helm-bundle-show-20190526.1401.el
-4.0K -rw-r--r-- 1 root root  408 Jul 19 05:46 packages/helm-bundle-show-20190526.1401.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:46 packages/helm-bundle-show-badge.svg
-4.0K -rw-r--r-- 1 root root   64 Jul 19 05:46 packages/helm-bundle-show-readme.txt
-4.0K -rw-r--r-- 1 root root  590 Jul 19 05:46 packages/helm-bundle-show.log
- 32K -rw-r--r-- 1 root root  29K Jul 19 05:46 packages/helm-c-moccur-20151230.924.el
-4.0K -rw-r--r-- 1 root root  384 Jul 19 05:46 packages/helm-c-moccur-20151230.924.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-c-moccur-badge.svg
-4.0K -rw-r--r-- 1 root root   20 Jul 19 05:46 packages/helm-c-moccur-readme.txt
-4.0K -rw-r--r-- 1 root root  558 Jul 19 05:47 packages/helm-c-moccur.log
- 24K -rw-r--r-- 1 root root  21K Jul 19 05:46 packages/helm-c-yasnippet-20210330.16.el
-4.0K -rw-r--r-- 1 root root  432 Jul 19 05:46 packages/helm-c-yasnippet-20210330.16.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-c-yasnippet-badge.svg
-4.0K -rw-r--r-- 1 root root  106 Jul 19 05:46 packages/helm-c-yasnippet-readme.txt
-4.0K -rw-r--r-- 1 root root  580 Jul 19 05:47 packages/helm-c-yasnippet.log
- 36K -rw-r--r-- 1 root root  35K Jul 19 05:47 packages/helm-catkin-20190425.1520.el
-4.0K -rw-r--r-- 1 root root  492 Jul 19 05:47 packages/helm-catkin-20190425.1520.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-catkin-badge.svg
-4.0K -rw-r--r-- 1 root root 1.7K Jul 19 05:47 packages/helm-catkin-readme.txt
-4.0K -rw-r--r-- 1 root root  542 Jul 19 05:47 packages/helm-catkin.log
-8.0K -rw-r--r-- 1 root root 5.5K Jul 19 05:47 packages/helm-charinfo-20170810.1231.el
-4.0K -rw-r--r-- 1 root root  427 Jul 19 05:47 packages/helm-charinfo-20170810.1231.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-charinfo-badge.svg
-4.0K -rw-r--r-- 1 root root  479 Jul 19 05:47 packages/helm-charinfo.log
-8.0K -rw-r--r-- 1 root root 4.9K Jul 19 05:47 packages/helm-chrome-20160719.520.el
-4.0K -rw-r--r-- 1 root root  459 Jul 19 05:47 packages/helm-chrome-20160719.520.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-chrome-badge.svg
-4.0K -rw-r--r-- 1 root root  375 Jul 19 05:47 packages/helm-chrome-control-20190707.1807.entry
- 20K -rw-r--r-- 1 root root  20K Jul 19 05:47 packages/helm-chrome-control-20190707.1807.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-chrome-control-badge.svg
-4.0K -rw-r--r-- 1 root root   31 Jul 19 05:47 packages/helm-chrome-control-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Jul 19 05:47 packages/helm-chrome-control.log
-8.0K -rw-r--r-- 1 root root 5.4K Jul 19 05:47 packages/helm-chrome-history-20191031.1233.el
-4.0K -rw-r--r-- 1 root root  442 Jul 19 05:47 packages/helm-chrome-history-20191031.1233.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-chrome-history-badge.svg
-4.0K -rw-r--r-- 1 root root   33 Jul 19 05:47 packages/helm-chrome-history-readme.txt
-4.0K -rw-r--r-- 1 root root  610 Jul 19 05:47 packages/helm-chrome-history.log
-4.0K -rw-r--r-- 1 root root  580 Jul 19 05:47 packages/helm-chrome-readme.txt
-4.0K -rw-r--r-- 1 root root 1.4K Jul 19 05:47 packages/helm-chrome.log
-4.0K -rw-r--r-- 1 root root  392 Jul 19 05:47 packages/helm-chronos-20150528.2036.entry
- 52K -rw-r--r-- 1 root root  50K Jul 19 05:47 packages/helm-chronos-20150528.2036.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-chronos-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-chronos-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Jul 19 05:47 packages/helm-chronos.log
-4.0K -rw-r--r-- 1 root root  493 Jul 19 05:47 packages/helm-cider-20180307.458.entry
- 60K -rw-r--r-- 1 root root  60K Jul 19 05:47 packages/helm-cider-20180307.458.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-cider-badge.svg
-4.0K -rw-r--r-- 1 root root 1.9K Jul 19 05:47 packages/helm-cider-history-20150719.2120.el
-4.0K -rw-r--r-- 1 root root  443 Jul 19 05:47 packages/helm-cider-history-20150719.2120.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-cider-history-badge.svg
-4.0K -rw-r--r-- 1 root root   62 Jul 19 05:47 packages/helm-cider-history-readme.txt
-4.0K -rw-r--r-- 1 root root  597 Jul 19 05:47 packages/helm-cider-history.log
-4.0K -rw-r--r-- 1 root root  153 Jul 19 05:47 packages/helm-cider-readme.txt
-4.0K -rw-r--r-- 1 root root 1.7K Jul 19 05:47 packages/helm-cider.log
-8.0K -rw-r--r-- 1 root root 7.8K Jul 19 05:47 packages/helm-circe-20160207.652.el
-4.0K -rw-r--r-- 1 root root  472 Jul 19 05:47 packages/helm-circe-20160207.652.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-circe-badge.svg
-4.0K -rw-r--r-- 1 root root  270 Jul 19 05:47 packages/helm-circe-readme.txt
-4.0K -rw-r--r-- 1 root root  535 Jul 19 05:47 packages/helm-circe.log
-8.0K -rw-r--r-- 1 root root 4.8K Jul 19 05:47 packages/helm-clojuredocs-20160405.723.el
-4.0K -rw-r--r-- 1 root root  439 Jul 19 05:47 packages/helm-clojuredocs-20160405.723.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-clojuredocs-badge.svg
-4.0K -rw-r--r-- 1 root root  498 Jul 19 05:47 packages/helm-clojuredocs.log
-4.0K -rw-r--r-- 1 root root  357 Jul 19 05:47 packages/helm-cmd-t-20170125.1459.entry
- 40K -rw-r--r-- 1 root root  40K Jul 19 05:47 packages/helm-cmd-t-20170125.1459.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-cmd-t-badge.svg
-4.0K -rw-r--r-- 1 root root 1.6K Jul 19 05:47 packages/helm-cmd-t-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Jul 19 05:47 packages/helm-cmd-t.log
- 24K -rw-r--r-- 1 root root  21K Jul 19 05:47 packages/helm-codesearch-20190412.1153.el
-4.0K -rw-r--r-- 1 root root  419 Jul 19 05:47 packages/helm-codesearch-20190412.1153.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-codesearch-badge.svg
-4.0K -rw-r--r-- 1 root root   99 Jul 19 05:47 packages/helm-codesearch-readme.txt
-4.0K -rw-r--r-- 1 root root  579 Jul 19 05:47 packages/helm-codesearch.log
- 12K -rw-r--r-- 1 root root 9.3K Jul 19 05:47 packages/helm-commandlinefu-20150611.545.el
-4.0K -rw-r--r-- 1 root root  542 Jul 19 05:47 packages/helm-commandlinefu-20150611.545.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-commandlinefu-badge.svg
-4.0K -rw-r--r-- 1 root root  281 Jul 19 05:47 packages/helm-commandlinefu-readme.txt
-4.0K -rw-r--r-- 1 root root  600 Jul 19 05:47 packages/helm-commandlinefu.log
- 16K -rw-r--r-- 1 root root  13K Jul 19 05:47 packages/helm-company-20190812.1429.el
-4.0K -rw-r--r-- 1 root root  411 Jul 19 05:47 packages/helm-company-20190812.1429.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-company-badge.svg
-4.0K -rw-r--r-- 1 root root  285 Jul 19 05:47 packages/helm-company-readme.txt
-4.0K -rw-r--r-- 1 root root  564 Jul 19 05:47 packages/helm-company.log
-4.0K -rw-r--r-- 1 root root  194 Jul 19 05:47 packages/helm-core-20210716.1933.entry
-452K -rw-r--r-- 1 root root 450K Jul 19 05:47 packages/helm-core-20210716.1933.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-core-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul 19 05:47 packages/helm-core.log
- 16K -rw-r--r-- 1 root root  13K Jul 19 05:47 packages/helm-cscope-20190615.41.el
-4.0K -rw-r--r-- 1 root root  467 Jul 19 05:47 packages/helm-cscope-20190615.41.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-cscope-badge.svg
-4.0K -rw-r--r-- 1 root root   55 Jul 19 05:47 packages/helm-cscope-readme.txt
-4.0K -rw-r--r-- 1 root root  544 Jul 19 05:47 packages/helm-cscope.log
- 36K -rw-r--r-- 1 root root  34K Jul 19 05:47 packages/helm-css-scss-20191230.1549.el
-4.0K -rw-r--r-- 1 root root  445 Jul 19 05:47 packages/helm-css-scss-20191230.1549.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-css-scss-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Jul 19 05:47 packages/helm-css-scss-readme.txt
-4.0K -rw-r--r-- 1 root root  566 Jul 19 05:47 packages/helm-css-scss.log
-4.0K -rw-r--r-- 1 root root 3.6K Jul 19 05:47 packages/helm-ctest-20191031.1435.el
-4.0K -rw-r--r-- 1 root root  393 Jul 19 05:47 packages/helm-ctest-20191031.1435.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-ctest-badge.svg
-4.0K -rw-r--r-- 1 root root  461 Jul 19 05:47 packages/helm-ctest.log
-8.0K -rw-r--r-- 1 root root 5.2K Jul 19 05:47 packages/helm-dash-20190527.1118.el
-4.0K -rw-r--r-- 1 root root  591 Jul 19 05:47 packages/helm-dash-20190527.1118.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-dash-badge.svg
-4.0K -rw-r--r-- 1 root root  201 Jul 19 05:47 packages/helm-dash-readme.txt
-4.0K -rw-r--r-- 1 root root  532 Jul 19 05:47 packages/helm-dash.log
- 12K -rw-r--r-- 1 root root  12K Jul 19 05:47 packages/helm-descbinds-20190501.935.el
-4.0K -rw-r--r-- 1 root root  392 Jul 19 05:47 packages/helm-descbinds-20190501.935.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-descbinds-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jul 19 05:47 packages/helm-descbinds-readme.txt
-4.0K -rw-r--r-- 1 root root  568 Jul 19 05:47 packages/helm-descbinds.log
-8.0K -rw-r--r-- 1 root root 6.7K Jul 19 05:47 packages/helm-describe-modes-20160212.518.el
-4.0K -rw-r--r-- 1 root root  507 Jul 19 05:47 packages/helm-describe-modes-20160212.518.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-describe-modes-badge.svg
-4.0K -rw-r--r-- 1 root root  317 Jul 19 05:47 packages/helm-describe-modes-readme.txt
-4.0K -rw-r--r-- 1 root root  608 Jul 19 05:47 packages/helm-describe-modes.log
- 12K -rw-r--r-- 1 root root  12K Jul 19 05:47 packages/helm-dictionary-20201006.1511.el
-4.0K -rw-r--r-- 1 root root  440 Jul 19 05:47 packages/helm-dictionary-20201006.1511.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-dictionary-badge.svg
-4.0K -rw-r--r-- 1 root root  390 Jul 19 05:47 packages/helm-dictionary-readme.txt
-4.0K -rw-r--r-- 1 root root  578 Jul 19 05:47 packages/helm-dictionary.log
-8.0K -rw-r--r-- 1 root root 4.5K Jul 19 05:47 packages/helm-directory-20170706.402.el
-4.0K -rw-r--r-- 1 root root  343 Jul 19 05:47 packages/helm-directory-20170706.402.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-directory-badge.svg
-4.0K -rw-r--r-- 1 root root  327 Jul 19 05:47 packages/helm-directory-readme.txt
-4.0K -rw-r--r-- 1 root root  571 Jul 19 05:47 packages/helm-directory.log
-8.0K -rw-r--r-- 1 root root 5.6K Jul 19 05:47 packages/helm-dired-history-20170524.1046.el
-4.0K -rw-r--r-- 1 root root  474 Jul 19 05:47 packages/helm-dired-history-20170524.1046.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-dired-history-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jul 19 05:47 packages/helm-dired-history-readme.txt
-4.0K -rw-r--r-- 1 root root  598 Jul 19 05:47 packages/helm-dired-history.log
-4.0K -rw-r--r-- 1 root root 2.6K Jul 19 05:47 packages/helm-dired-recent-dirs-20131228.1414.el
-4.0K -rw-r--r-- 1 root root  333 Jul 19 05:47 packages/helm-dired-recent-dirs-20131228.1414.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-dired-recent-dirs-badge.svg
-4.0K -rw-r--r-- 1 root root  541 Jul 19 05:47 packages/helm-dired-recent-dirs.log
-4.0K -rw-r--r-- 1 root root 2.7K Jul 19 05:47 packages/helm-dirset-20151209.12.el
-4.0K -rw-r--r-- 1 root root  560 Jul 19 05:47 packages/helm-dirset-20151209.12.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-dirset-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul 19 05:47 packages/helm-dirset-readme.txt
-4.0K -rw-r--r-- 1 root root  537 Jul 19 05:47 packages/helm-dirset.log
+ 56K -rw-r--r-- 1 root root  54K Jul 19 12:23 packages/helm-ag-20210702.845.el
+4.0K -rw-r--r-- 1 root root  361 Jul 19 12:23 packages/helm-ag-20210702.845.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-ag-badge.svg
+ 16K -rw-r--r-- 1 root root  14K Jul 19 12:23 packages/helm-ag-r-20131123.1531.el
+4.0K -rw-r--r-- 1 root root  396 Jul 19 12:23 packages/helm-ag-r-20131123.1531.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-ag-r-badge.svg
+4.0K -rw-r--r-- 1 root root 1017 Jul 19 12:23 packages/helm-ag-r-readme.txt
+4.0K -rw-r--r-- 1 root root  135 Jul 19 15:40 packages/helm-ag-r.log
+4.0K -rw-r--r-- 1 root root  206 Jul 19 12:23 packages/helm-ag-readme.txt
+4.0K -rw-r--r-- 1 root root  132 Jul 19 15:40 packages/helm-ag.log
+ 16K -rw-r--r-- 1 root root  13K Jul 19 12:23 packages/helm-apt-20210324.1929.el
+4.0K -rw-r--r-- 1 root root  411 Jul 19 12:23 packages/helm-apt-20210324.1929.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-apt-badge.svg
+4.0K -rw-r--r-- 1 root root   39 Jul 19 12:23 packages/helm-apt-readme.txt
+4.0K -rw-r--r-- 1 root root  131 Jul 19 15:40 packages/helm-apt.log
+4.0K -rw-r--r-- 1 root root 3.4K Jul 19 12:23 packages/helm-atoms-20201013.1723.el
+4.0K -rw-r--r-- 1 root root  425 Jul 19 12:23 packages/helm-atoms-20201013.1723.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-atoms-badge.svg
+4.0K -rw-r--r-- 1 root root  408 Jul 19 12:23 packages/helm-atoms-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jul 19 15:40 packages/helm-atoms.log
+ 12K -rw-r--r-- 1 root root 8.3K Jul 19 12:23 packages/helm-aws-20180514.1032.el
+4.0K -rw-r--r-- 1 root root  345 Jul 19 12:23 packages/helm-aws-20180514.1032.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-aws-badge.svg
+4.0K -rw-r--r-- 1 root root  306 Jul 19 12:23 packages/helm-aws-readme.txt
+4.0K -rw-r--r-- 1 root root  517 Jul 19 12:23 packages/helm-aws.log
+ 12K -rw-r--r-- 1 root root  11K Jul 19 12:23 packages/helm-backup-20180911.614.el
+4.0K -rw-r--r-- 1 root root  471 Jul 19 12:23 packages/helm-backup-20180911.614.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-backup-badge.svg
+4.0K -rw-r--r-- 1 root root  378 Jul 19 12:23 packages/helm-backup-readme.txt
+4.0K -rw-r--r-- 1 root root  540 Jul 19 12:23 packages/helm-backup.log
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 15:40 packages/helm-badge.svg
+ 16K -rw-r--r-- 1 root root  13K Jul 19 12:23 packages/helm-bbdb-20190728.1325.el
+4.0K -rw-r--r-- 1 root root  276 Jul 19 12:23 packages/helm-bbdb-20190728.1325.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-bbdb-badge.svg
+4.0K -rw-r--r-- 1 root root   85 Jul 19 12:23 packages/helm-bbdb-readme.txt
+4.0K -rw-r--r-- 1 root root  530 Jul 19 12:23 packages/helm-bbdb.log
+ 12K -rw-r--r-- 1 root root  12K Jul 19 12:23 packages/helm-bibtex-20201214.2111.el
+4.0K -rw-r--r-- 1 root root  472 Jul 19 12:23 packages/helm-bibtex-20201214.2111.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-bibtex-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Jul 19 12:23 packages/helm-bibtex-readme.txt
+4.0K -rw-r--r-- 1 root root  545 Jul 19 12:23 packages/helm-bibtex.log
+4.0K -rw-r--r-- 1 root root  373 Jul 19 12:23 packages/helm-bibtexkey-20140214.1504.entry
+ 12K -rw-r--r-- 1 root root  10K Jul 19 12:23 packages/helm-bibtexkey-20140214.1504.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-bibtexkey-badge.svg
+4.0K -rw-r--r-- 1 root root  273 Jul 19 12:23 packages/helm-bibtexkey-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Jul 19 12:23 packages/helm-bibtexkey.log
+4.0K -rw-r--r-- 1 root root 2.7K Jul 19 12:23 packages/helm-bind-key-20141109.515.el
+4.0K -rw-r--r-- 1 root root  317 Jul 19 12:23 packages/helm-bind-key-20141109.515.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-bind-key-badge.svg
+4.0K -rw-r--r-- 1 root root  164 Jul 19 12:23 packages/helm-bind-key-readme.txt
+4.0K -rw-r--r-- 1 root root  558 Jul 19 12:23 packages/helm-bind-key.log
+8.0K -rw-r--r-- 1 root root 6.1K Jul 19 12:23 packages/helm-bitbucket-20190422.1102.el
+4.0K -rw-r--r-- 1 root root  399 Jul 19 12:23 packages/helm-bitbucket-20190422.1102.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-bitbucket-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Jul 19 12:23 packages/helm-bitbucket-readme.txt
+4.0K -rw-r--r-- 1 root root  574 Jul 19 12:23 packages/helm-bitbucket.log
+8.0K -rw-r--r-- 1 root root 6.8K Jul 19 12:23 packages/helm-bm-20160321.1331.el
+4.0K -rw-r--r-- 1 root root  413 Jul 19 12:23 packages/helm-bm-20160321.1331.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-bm-badge.svg
+4.0K -rw-r--r-- 1 root root  170 Jul 19 12:23 packages/helm-bm-readme.txt
+4.0K -rw-r--r-- 1 root root  510 Jul 19 12:23 packages/helm-bm.log
+8.0K -rw-r--r-- 1 root root 4.6K Jul 19 12:23 packages/helm-books-20170325.631.el
+4.0K -rw-r--r-- 1 root root  370 Jul 19 12:23 packages/helm-books-20170325.631.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-books-badge.svg
+4.0K -rw-r--r-- 1 root root   35 Jul 19 12:23 packages/helm-books-readme.txt
+4.0K -rw-r--r-- 1 root root  533 Jul 19 12:23 packages/helm-books.log
+4.0K -rw-r--r-- 1 root root 3.3K Jul 19 12:23 packages/helm-bufler-20210708.2217.el
+4.0K -rw-r--r-- 1 root root  433 Jul 19 12:23 packages/helm-bufler-20210708.2217.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-bufler-badge.svg
+4.0K -rw-r--r-- 1 root root  290 Jul 19 12:23 packages/helm-bufler-readme.txt
+4.0K -rw-r--r-- 1 root root  543 Jul 19 12:23 packages/helm-bufler.log
+4.0K -rw-r--r-- 1 root root 3.9K Jul 19 12:23 packages/helm-bundle-show-20190526.1401.el
+4.0K -rw-r--r-- 1 root root  408 Jul 19 12:23 packages/helm-bundle-show-20190526.1401.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-bundle-show-badge.svg
+4.0K -rw-r--r-- 1 root root   64 Jul 19 12:23 packages/helm-bundle-show-readme.txt
+4.0K -rw-r--r-- 1 root root  590 Jul 19 12:23 packages/helm-bundle-show.log
+ 32K -rw-r--r-- 1 root root  29K Jul 19 12:23 packages/helm-c-moccur-20151230.924.el
+4.0K -rw-r--r-- 1 root root  384 Jul 19 12:23 packages/helm-c-moccur-20151230.924.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-c-moccur-badge.svg
+4.0K -rw-r--r-- 1 root root   20 Jul 19 12:23 packages/helm-c-moccur-readme.txt
+4.0K -rw-r--r-- 1 root root  558 Jul 19 12:23 packages/helm-c-moccur.log
+ 24K -rw-r--r-- 1 root root  21K Jul 19 12:23 packages/helm-c-yasnippet-20210330.16.el
+4.0K -rw-r--r-- 1 root root  432 Jul 19 12:23 packages/helm-c-yasnippet-20210330.16.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:23 packages/helm-c-yasnippet-badge.svg
+4.0K -rw-r--r-- 1 root root  106 Jul 19 12:23 packages/helm-c-yasnippet-readme.txt
+4.0K -rw-r--r-- 1 root root  580 Jul 19 12:23 packages/helm-c-yasnippet.log
+ 36K -rw-r--r-- 1 root root  35K Jul 19 12:23 packages/helm-catkin-20190425.1520.el
+4.0K -rw-r--r-- 1 root root  492 Jul 19 12:23 packages/helm-catkin-20190425.1520.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-catkin-badge.svg
+4.0K -rw-r--r-- 1 root root 1.7K Jul 19 12:23 packages/helm-catkin-readme.txt
+4.0K -rw-r--r-- 1 root root  542 Jul 19 12:24 packages/helm-catkin.log
+8.0K -rw-r--r-- 1 root root 5.5K Jul 19 12:24 packages/helm-charinfo-20170810.1231.el
+4.0K -rw-r--r-- 1 root root  427 Jul 19 12:24 packages/helm-charinfo-20170810.1231.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-charinfo-badge.svg
+4.0K -rw-r--r-- 1 root root  479 Jul 19 12:24 packages/helm-charinfo.log
+8.0K -rw-r--r-- 1 root root 4.9K Jul 19 12:24 packages/helm-chrome-20160719.520.el
+4.0K -rw-r--r-- 1 root root  459 Jul 19 12:24 packages/helm-chrome-20160719.520.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-chrome-badge.svg
+4.0K -rw-r--r-- 1 root root  375 Jul 19 12:24 packages/helm-chrome-control-20190707.1807.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 19 12:24 packages/helm-chrome-control-20190707.1807.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-chrome-control-badge.svg
+4.0K -rw-r--r-- 1 root root   31 Jul 19 12:24 packages/helm-chrome-control-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Jul 19 12:24 packages/helm-chrome-control.log
+8.0K -rw-r--r-- 1 root root 5.4K Jul 19 12:24 packages/helm-chrome-history-20191031.1233.el
+4.0K -rw-r--r-- 1 root root  442 Jul 19 12:24 packages/helm-chrome-history-20191031.1233.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-chrome-history-badge.svg
+4.0K -rw-r--r-- 1 root root   33 Jul 19 12:24 packages/helm-chrome-history-readme.txt
+4.0K -rw-r--r-- 1 root root  610 Jul 19 12:24 packages/helm-chrome-history.log
+4.0K -rw-r--r-- 1 root root  580 Jul 19 12:24 packages/helm-chrome-readme.txt
+4.0K -rw-r--r-- 1 root root 1.4K Jul 19 12:24 packages/helm-chrome.log
+4.0K -rw-r--r-- 1 root root  392 Jul 19 12:24 packages/helm-chronos-20150528.2036.entry
+ 52K -rw-r--r-- 1 root root  50K Jul 19 12:24 packages/helm-chronos-20150528.2036.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-chronos-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-chronos-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Jul 19 12:24 packages/helm-chronos.log
+4.0K -rw-r--r-- 1 root root  493 Jul 19 12:24 packages/helm-cider-20180307.458.entry
+ 60K -rw-r--r-- 1 root root  60K Jul 19 12:24 packages/helm-cider-20180307.458.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-cider-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Jul 19 12:24 packages/helm-cider-history-20150719.2120.el
+4.0K -rw-r--r-- 1 root root  443 Jul 19 12:24 packages/helm-cider-history-20150719.2120.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-cider-history-badge.svg
+4.0K -rw-r--r-- 1 root root   62 Jul 19 12:24 packages/helm-cider-history-readme.txt
+4.0K -rw-r--r-- 1 root root  597 Jul 19 12:24 packages/helm-cider-history.log
+4.0K -rw-r--r-- 1 root root  153 Jul 19 12:24 packages/helm-cider-readme.txt
+4.0K -rw-r--r-- 1 root root 1.7K Jul 19 12:24 packages/helm-cider.log
+8.0K -rw-r--r-- 1 root root 7.8K Jul 19 12:24 packages/helm-circe-20160207.652.el
+4.0K -rw-r--r-- 1 root root  472 Jul 19 12:24 packages/helm-circe-20160207.652.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-circe-badge.svg
+4.0K -rw-r--r-- 1 root root  270 Jul 19 12:24 packages/helm-circe-readme.txt
+4.0K -rw-r--r-- 1 root root  535 Jul 19 12:24 packages/helm-circe.log
+8.0K -rw-r--r-- 1 root root 4.8K Jul 19 12:24 packages/helm-clojuredocs-20160405.723.el
+4.0K -rw-r--r-- 1 root root  439 Jul 19 12:24 packages/helm-clojuredocs-20160405.723.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-clojuredocs-badge.svg
+4.0K -rw-r--r-- 1 root root  498 Jul 19 12:24 packages/helm-clojuredocs.log
+4.0K -rw-r--r-- 1 root root  357 Jul 19 12:24 packages/helm-cmd-t-20170125.1459.entry
+ 40K -rw-r--r-- 1 root root  40K Jul 19 12:24 packages/helm-cmd-t-20170125.1459.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-cmd-t-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul 19 12:24 packages/helm-cmd-t-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Jul 19 12:24 packages/helm-cmd-t.log
+ 24K -rw-r--r-- 1 root root  21K Jul 19 12:24 packages/helm-codesearch-20190412.1153.el
+4.0K -rw-r--r-- 1 root root  419 Jul 19 12:24 packages/helm-codesearch-20190412.1153.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-codesearch-badge.svg
+4.0K -rw-r--r-- 1 root root   99 Jul 19 12:24 packages/helm-codesearch-readme.txt
+4.0K -rw-r--r-- 1 root root  579 Jul 19 12:24 packages/helm-codesearch.log
+ 12K -rw-r--r-- 1 root root 9.3K Jul 19 12:24 packages/helm-commandlinefu-20150611.545.el
+4.0K -rw-r--r-- 1 root root  542 Jul 19 12:24 packages/helm-commandlinefu-20150611.545.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-commandlinefu-badge.svg
+4.0K -rw-r--r-- 1 root root  281 Jul 19 12:24 packages/helm-commandlinefu-readme.txt
+4.0K -rw-r--r-- 1 root root  600 Jul 19 12:24 packages/helm-commandlinefu.log
+ 16K -rw-r--r-- 1 root root  13K Jul 19 12:24 packages/helm-company-20190812.1429.el
+4.0K -rw-r--r-- 1 root root  411 Jul 19 12:24 packages/helm-company-20190812.1429.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-company-badge.svg
+4.0K -rw-r--r-- 1 root root  285 Jul 19 12:24 packages/helm-company-readme.txt
+4.0K -rw-r--r-- 1 root root  564 Jul 19 12:24 packages/helm-company.log
+4.0K -rw-r--r-- 1 root root  194 Jul 19 12:24 packages/helm-core-20210716.1933.entry
+452K -rw-r--r-- 1 root root 450K Jul 19 12:24 packages/helm-core-20210716.1933.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-core-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul 19 12:24 packages/helm-core.log
+ 16K -rw-r--r-- 1 root root  13K Jul 19 12:24 packages/helm-cscope-20190615.41.el
+4.0K -rw-r--r-- 1 root root  467 Jul 19 12:24 packages/helm-cscope-20190615.41.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-cscope-badge.svg
+4.0K -rw-r--r-- 1 root root   55 Jul 19 12:24 packages/helm-cscope-readme.txt
+4.0K -rw-r--r-- 1 root root  544 Jul 19 12:24 packages/helm-cscope.log
+ 36K -rw-r--r-- 1 root root  34K Jul 19 12:24 packages/helm-css-scss-20191230.1549.el
+4.0K -rw-r--r-- 1 root root  445 Jul 19 12:24 packages/helm-css-scss-20191230.1549.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-css-scss-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Jul 19 12:24 packages/helm-css-scss-readme.txt
+4.0K -rw-r--r-- 1 root root  566 Jul 19 12:24 packages/helm-css-scss.log
+4.0K -rw-r--r-- 1 root root 3.6K Jul 19 12:24 packages/helm-ctest-20191031.1435.el
+4.0K -rw-r--r-- 1 root root  393 Jul 19 12:24 packages/helm-ctest-20191031.1435.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-ctest-badge.svg
+4.0K -rw-r--r-- 1 root root  461 Jul 19 12:24 packages/helm-ctest.log
+8.0K -rw-r--r-- 1 root root 5.2K Jul 19 12:24 packages/helm-dash-20190527.1118.el
+4.0K -rw-r--r-- 1 root root  591 Jul 19 12:24 packages/helm-dash-20190527.1118.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-dash-badge.svg
+4.0K -rw-r--r-- 1 root root  201 Jul 19 12:24 packages/helm-dash-readme.txt
+4.0K -rw-r--r-- 1 root root  532 Jul 19 12:24 packages/helm-dash.log
+ 12K -rw-r--r-- 1 root root  12K Jul 19 12:24 packages/helm-descbinds-20190501.935.el
+4.0K -rw-r--r-- 1 root root  392 Jul 19 12:24 packages/helm-descbinds-20190501.935.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-descbinds-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Jul 19 12:24 packages/helm-descbinds-readme.txt
+4.0K -rw-r--r-- 1 root root  568 Jul 19 12:24 packages/helm-descbinds.log
+8.0K -rw-r--r-- 1 root root 6.7K Jul 19 12:24 packages/helm-describe-modes-20160212.518.el
+4.0K -rw-r--r-- 1 root root  507 Jul 19 12:24 packages/helm-describe-modes-20160212.518.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-describe-modes-badge.svg
+4.0K -rw-r--r-- 1 root root  317 Jul 19 12:24 packages/helm-describe-modes-readme.txt
+4.0K -rw-r--r-- 1 root root  608 Jul 19 12:24 packages/helm-describe-modes.log
+ 12K -rw-r--r-- 1 root root  12K Jul 19 12:24 packages/helm-dictionary-20201006.1511.el
+4.0K -rw-r--r-- 1 root root  440 Jul 19 12:24 packages/helm-dictionary-20201006.1511.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-dictionary-badge.svg
+4.0K -rw-r--r-- 1 root root  390 Jul 19 12:24 packages/helm-dictionary-readme.txt
+4.0K -rw-r--r-- 1 root root  578 Jul 19 12:24 packages/helm-dictionary.log
+8.0K -rw-r--r-- 1 root root 4.5K Jul 19 12:24 packages/helm-directory-20170706.402.el
+4.0K -rw-r--r-- 1 root root  343 Jul 19 12:24 packages/helm-directory-20170706.402.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-directory-badge.svg
+4.0K -rw-r--r-- 1 root root  327 Jul 19 12:24 packages/helm-directory-readme.txt
+4.0K -rw-r--r-- 1 root root  571 Jul 19 12:24 packages/helm-directory.log
+8.0K -rw-r--r-- 1 root root 5.6K Jul 19 12:24 packages/helm-dired-history-20170524.1046.el
+4.0K -rw-r--r-- 1 root root  474 Jul 19 12:24 packages/helm-dired-history-20170524.1046.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-dired-history-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Jul 19 12:24 packages/helm-dired-history-readme.txt
+4.0K -rw-r--r-- 1 root root  598 Jul 19 12:24 packages/helm-dired-history.log
+4.0K -rw-r--r-- 1 root root 2.6K Jul 19 12:24 packages/helm-dired-recent-dirs-20131228.1414.el
+4.0K -rw-r--r-- 1 root root  333 Jul 19 12:24 packages/helm-dired-recent-dirs-20131228.1414.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-dired-recent-dirs-badge.svg
+4.0K -rw-r--r-- 1 root root  541 Jul 19 12:24 packages/helm-dired-recent-dirs.log
+4.0K -rw-r--r-- 1 root root 2.7K Jul 19 12:24 packages/helm-dirset-20151209.12.el
+4.0K -rw-r--r-- 1 root root  560 Jul 19 12:24 packages/helm-dirset-20151209.12.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-dirset-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul 19 12:24 packages/helm-dirset-readme.txt
+4.0K -rw-r--r-- 1 root root  537 Jul 19 12:24 packages/helm-dirset.log
 4.0K -rw-r--r-- 1 root root 1.2K Feb  4 22:31 packages/helm-elscreen-badge.svg
 4.0K -rw-r--r-- 1 root root   49 Feb  4 22:31 packages/helm-elscreen-readme.txt
 4.0K -rw-r--r-- 1 root root  560 Feb  4 22:31 packages/helm-elscreen.log
-8.0K -rw-r--r-- 1 root root 5.1K Jul 19 05:47 packages/helm-emmet-20160713.1231.el
-4.0K -rw-r--r-- 1 root root  444 Jul 19 05:47 packages/helm-emmet-20160713.1231.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-emmet-badge.svg
-4.0K -rw-r--r-- 1 root root   37 Jul 19 05:47 packages/helm-emmet-readme.txt
-4.0K -rw-r--r-- 1 root root  534 Jul 19 05:47 packages/helm-emmet.log
- 20K -rw-r--r-- 1 root root  19K Jul 19 05:47 packages/helm-emms-20201205.1635.el
-4.0K -rw-r--r-- 1 root root  481 Jul 19 05:47 packages/helm-emms-20201205.1635.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-emms-badge.svg
-4.0K -rw-r--r-- 1 root root  358 Jul 19 05:47 packages/helm-emms-readme.txt
-4.0K -rw-r--r-- 1 root root  530 Jul 19 05:47 packages/helm-emms.log
- 12K -rw-r--r-- 1 root root 9.9K Jul 19 05:47 packages/helm-esa-20190721.1429.el
-4.0K -rw-r--r-- 1 root root  402 Jul 19 05:47 packages/helm-esa-20190721.1429.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-esa-badge.svg
-4.0K -rw-r--r-- 1 root root   64 Jul 19 05:47 packages/helm-esa-readme.txt
-4.0K -rw-r--r-- 1 root root  526 Jul 19 05:47 packages/helm-esa.log
- 32K -rw-r--r-- 1 root root  29K Jul 19 05:47 packages/helm-etags-plus-20201003.1424.el
-4.0K -rw-r--r-- 1 root root  389 Jul 19 05:47 packages/helm-etags-plus-20201003.1424.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-etags-plus-badge.svg
-4.0K -rw-r--r-- 1 root root 2.8K Jul 19 05:47 packages/helm-etags-plus-readme.txt
-4.0K -rw-r--r-- 1 root root  574 Jul 19 05:47 packages/helm-etags-plus.log
-8.0K -rw-r--r-- 1 root root 5.4K Jul 19 05:47 packages/helm-evil-markers-20200506.715.el
-4.0K -rw-r--r-- 1 root root  412 Jul 19 05:47 packages/helm-evil-markers-20200506.715.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-evil-markers-badge.svg
-4.0K -rw-r--r-- 1 root root  119 Jul 19 05:47 packages/helm-evil-markers-readme.txt
-4.0K -rw-r--r-- 1 root root  593 Jul 19 05:47 packages/helm-evil-markers.log
- 16K -rw-r--r-- 1 root root  15K Jul 19 05:47 packages/helm-eww-20190315.907.el
-4.0K -rw-r--r-- 1 root root  423 Jul 19 05:47 packages/helm-eww-20190315.907.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-eww-badge.svg
-4.0K -rw-r--r-- 1 root root   47 Jul 19 05:47 packages/helm-eww-readme.txt
-4.0K -rw-r--r-- 1 root root  520 Jul 19 05:47 packages/helm-eww.log
-4.0K -rw-r--r-- 1 root root  331 Jul 19 05:47 packages/helm-ext-20200722.107.entry
- 40K -rw-r--r-- 1 root root  40K Jul 19 05:47 packages/helm-ext-20200722.107.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-ext-badge.svg
-4.0K -rw-r--r-- 1 root root 3.9K Jul 19 05:47 packages/helm-ext-readme.txt
-4.0K -rw-r--r-- 1 root root 1005 Jul 19 05:47 packages/helm-ext.log
- 12K -rw-r--r-- 1 root root  10K Jul 19 05:47 packages/helm-exwm-20210215.858.el
-4.0K -rw-r--r-- 1 root root  434 Jul 19 05:47 packages/helm-exwm-20210215.858.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-exwm-badge.svg
-4.0K -rw-r--r-- 1 root root  659 Jul 19 05:47 packages/helm-exwm-readme.txt
-4.0K -rw-r--r-- 1 root root  528 Jul 19 05:47 packages/helm-exwm.log
+8.0K -rw-r--r-- 1 root root 5.1K Jul 19 12:24 packages/helm-emmet-20160713.1231.el
+4.0K -rw-r--r-- 1 root root  444 Jul 19 12:24 packages/helm-emmet-20160713.1231.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-emmet-badge.svg
+4.0K -rw-r--r-- 1 root root   37 Jul 19 12:24 packages/helm-emmet-readme.txt
+4.0K -rw-r--r-- 1 root root  534 Jul 19 12:24 packages/helm-emmet.log
+ 20K -rw-r--r-- 1 root root  19K Jul 19 12:24 packages/helm-emms-20201205.1635.el
+4.0K -rw-r--r-- 1 root root  481 Jul 19 12:24 packages/helm-emms-20201205.1635.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-emms-badge.svg
+4.0K -rw-r--r-- 1 root root  358 Jul 19 12:24 packages/helm-emms-readme.txt
+4.0K -rw-r--r-- 1 root root  530 Jul 19 12:24 packages/helm-emms.log
+ 12K -rw-r--r-- 1 root root 9.9K Jul 19 12:24 packages/helm-esa-20190721.1429.el
+4.0K -rw-r--r-- 1 root root  402 Jul 19 12:24 packages/helm-esa-20190721.1429.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-esa-badge.svg
+4.0K -rw-r--r-- 1 root root   64 Jul 19 12:24 packages/helm-esa-readme.txt
+4.0K -rw-r--r-- 1 root root  526 Jul 19 12:24 packages/helm-esa.log
+ 32K -rw-r--r-- 1 root root  29K Jul 19 12:24 packages/helm-etags-plus-20201003.1424.el
+4.0K -rw-r--r-- 1 root root  389 Jul 19 12:24 packages/helm-etags-plus-20201003.1424.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-etags-plus-badge.svg
+4.0K -rw-r--r-- 1 root root 2.8K Jul 19 12:24 packages/helm-etags-plus-readme.txt
+4.0K -rw-r--r-- 1 root root  574 Jul 19 12:24 packages/helm-etags-plus.log
+8.0K -rw-r--r-- 1 root root 5.4K Jul 19 12:24 packages/helm-evil-markers-20200506.715.el
+4.0K -rw-r--r-- 1 root root  412 Jul 19 12:24 packages/helm-evil-markers-20200506.715.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-evil-markers-badge.svg
+4.0K -rw-r--r-- 1 root root  119 Jul 19 12:24 packages/helm-evil-markers-readme.txt
+4.0K -rw-r--r-- 1 root root  593 Jul 19 12:24 packages/helm-evil-markers.log
+ 16K -rw-r--r-- 1 root root  15K Jul 19 12:24 packages/helm-eww-20190315.907.el
+4.0K -rw-r--r-- 1 root root  423 Jul 19 12:24 packages/helm-eww-20190315.907.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-eww-badge.svg
+4.0K -rw-r--r-- 1 root root   47 Jul 19 12:24 packages/helm-eww-readme.txt
+4.0K -rw-r--r-- 1 root root  520 Jul 19 12:24 packages/helm-eww.log
+4.0K -rw-r--r-- 1 root root  331 Jul 19 12:24 packages/helm-ext-20200722.107.entry
+ 40K -rw-r--r-- 1 root root  40K Jul 19 12:24 packages/helm-ext-20200722.107.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-ext-badge.svg
+4.0K -rw-r--r-- 1 root root 3.9K Jul 19 12:24 packages/helm-ext-readme.txt
+4.0K -rw-r--r-- 1 root root 1005 Jul 19 12:24 packages/helm-ext.log
+ 12K -rw-r--r-- 1 root root  10K Jul 19 12:24 packages/helm-exwm-20210215.858.el
+4.0K -rw-r--r-- 1 root root  434 Jul 19 12:24 packages/helm-exwm-20210215.858.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-exwm-badge.svg
+4.0K -rw-r--r-- 1 root root  659 Jul 19 12:24 packages/helm-exwm-readme.txt
+4.0K -rw-r--r-- 1 root root  528 Jul 19 12:24 packages/helm-exwm.log
 4.0K -rw-r--r-- 1 root root 1.2K Nov  3  2020 packages/helm-fd-badge.svg
 4.0K -rw-r--r-- 1 root root  117 Nov  3  2020 packages/helm-fd-readme.txt
-8.0K -rw-r--r-- 1 root root 6.5K Jul 19 05:47 packages/helm-file-preview-20200927.528.el
-4.0K -rw-r--r-- 1 root root  418 Jul 19 05:47 packages/helm-file-preview-20200927.528.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-file-preview-badge.svg
-4.0K -rw-r--r-- 1 root root   42 Jul 19 05:47 packages/helm-file-preview-readme.txt
-4.0K -rw-r--r-- 1 root root  590 Jul 19 05:47 packages/helm-file-preview.log
-4.0K -rw-r--r-- 1 root root 2.0K Jul 19 05:47 packages/helm-filesets-20140929.1835.el
-4.0K -rw-r--r-- 1 root root  382 Jul 19 05:47 packages/helm-filesets-20140929.1835.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-filesets-badge.svg
-4.0K -rw-r--r-- 1 root root  368 Jul 19 05:47 packages/helm-filesets-readme.txt
-4.0K -rw-r--r-- 1 root root  556 Jul 19 05:47 packages/helm-filesets.log
-8.0K -rw-r--r-- 1 root root 6.4K Jul 19 05:47 packages/helm-firefox-20210331.1900.el
-4.0K -rw-r--r-- 1 root root  264 Jul 19 05:47 packages/helm-firefox-20210331.1900.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-firefox-badge.svg
-4.0K -rw-r--r-- 1 root root  475 Jul 19 05:47 packages/helm-firefox.log
-8.0K -rw-r--r-- 1 root root 7.2K Jul 19 05:47 packages/helm-fish-completion-20200908.1504.el
-4.0K -rw-r--r-- 1 root root  431 Jul 19 05:47 packages/helm-fish-completion-20200908.1504.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-fish-completion-badge.svg
-4.0K -rw-r--r-- 1 root root  402 Jul 19 05:47 packages/helm-fish-completion-readme.txt
-4.0K -rw-r--r-- 1 root root  618 Jul 19 05:47 packages/helm-fish-completion.log
- 12K -rw-r--r-- 1 root root  11K Jul 19 05:47 packages/helm-flx-20180103.516.el
-4.0K -rw-r--r-- 1 root root  446 Jul 19 05:47 packages/helm-flx-20180103.516.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-flx-badge.svg
-4.0K -rw-r--r-- 1 root root  313 Jul 19 05:47 packages/helm-flx-readme.txt
-4.0K -rw-r--r-- 1 root root  519 Jul 19 05:47 packages/helm-flx.log
-8.0K -rw-r--r-- 1 root root 7.4K Jul 19 05:47 packages/helm-flycheck-20160710.829.el
-4.0K -rw-r--r-- 1 root root  414 Jul 19 05:47 packages/helm-flycheck-20160710.829.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-flycheck-badge.svg
-4.0K -rw-r--r-- 1 root root  232 Jul 19 05:47 packages/helm-flycheck-readme.txt
-4.0K -rw-r--r-- 1 root root  556 Jul 19 05:47 packages/helm-flycheck.log
-8.0K -rw-r--r-- 1 root root 6.0K Jul 19 05:47 packages/helm-flymake-20160610.2.el
-4.0K -rw-r--r-- 1 root root  337 Jul 19 05:47 packages/helm-flymake-20160610.2.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-flymake-badge.svg
-4.0K -rw-r--r-- 1 root root  842 Jul 19 05:47 packages/helm-flymake-readme.txt
-4.0K -rw-r--r-- 1 root root  546 Jul 19 05:47 packages/helm-flymake.log
-8.0K -rw-r--r-- 1 root root 6.1K Jul 19 05:47 packages/helm-flyspell-20170210.1901.el
-4.0K -rw-r--r-- 1 root root  347 Jul 19 05:47 packages/helm-flyspell-20170210.1901.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-flyspell-badge.svg
-4.0K -rw-r--r-- 1 root root  645 Jul 19 05:47 packages/helm-flyspell-readme.txt
-4.0K -rw-r--r-- 1 root root  560 Jul 19 05:47 packages/helm-flyspell.log
-4.0K -rw-r--r-- 1 root root 4.0K Jul 19 05:47 packages/helm-frame-20180604.1005.el
-4.0K -rw-r--r-- 1 root root  336 Jul 19 05:47 packages/helm-frame-20180604.1005.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-frame-badge.svg
-4.0K -rw-r--r-- 1 root root  248 Jul 19 05:47 packages/helm-frame-readme.txt
-4.0K -rw-r--r-- 1 root root  532 Jul 19 05:47 packages/helm-frame.log
- 12K -rw-r--r-- 1 root root  12K Jul 19 05:47 packages/helm-fuz-20200812.1222.el
-4.0K -rw-r--r-- 1 root root  403 Jul 19 05:47 packages/helm-fuz-20200812.1222.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-fuz-badge.svg
-4.0K -rw-r--r-- 1 root root  113 Jul 19 05:47 packages/helm-fuz-readme.txt
-4.0K -rw-r--r-- 1 root root  523 Jul 19 05:47 packages/helm-fuz.log
- 24K -rw-r--r-- 1 root root  22K Jul 19 05:47 packages/helm-fuzzier-20160605.2145.el
-4.0K -rw-r--r-- 1 root root  378 Jul 19 05:47 packages/helm-fuzzier-20160605.2145.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-fuzzier-badge.svg
-4.0K -rw-r--r-- 1 root root 2.4K Jul 19 05:47 packages/helm-fuzzier-readme.txt
-4.0K -rw-r--r-- 1 root root  559 Jul 19 05:47 packages/helm-fuzzier.log
-8.0K -rw-r--r-- 1 root root 6.0K Jul 19 05:47 packages/helm-fuzzy-20200927.532.el
-4.0K -rw-r--r-- 1 root root  424 Jul 19 05:47 packages/helm-fuzzy-20200927.532.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-fuzzy-badge.svg
-8.0K -rw-r--r-- 1 root root 6.8K Jul 19 05:47 packages/helm-fuzzy-find-20171106.400.el
-4.0K -rw-r--r-- 1 root root  429 Jul 19 05:47 packages/helm-fuzzy-find-20171106.400.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-fuzzy-find-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Jul 19 05:47 packages/helm-fuzzy-find-readme.txt
-4.0K -rw-r--r-- 1 root root  576 Jul 19 05:47 packages/helm-fuzzy-find.log
-4.0K -rw-r--r-- 1 root root   33 Jul 19 05:47 packages/helm-fuzzy-readme.txt
-4.0K -rw-r--r-- 1 root root  949 Jul 19 05:47 packages/helm-fuzzy.log
+8.0K -rw-r--r-- 1 root root 6.5K Jul 19 12:24 packages/helm-file-preview-20200927.528.el
+4.0K -rw-r--r-- 1 root root  418 Jul 19 12:24 packages/helm-file-preview-20200927.528.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-file-preview-badge.svg
+4.0K -rw-r--r-- 1 root root   42 Jul 19 12:24 packages/helm-file-preview-readme.txt
+4.0K -rw-r--r-- 1 root root  590 Jul 19 12:24 packages/helm-file-preview.log
+4.0K -rw-r--r-- 1 root root 2.0K Jul 19 12:24 packages/helm-filesets-20140929.1835.el
+4.0K -rw-r--r-- 1 root root  382 Jul 19 12:24 packages/helm-filesets-20140929.1835.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-filesets-badge.svg
+4.0K -rw-r--r-- 1 root root  368 Jul 19 12:24 packages/helm-filesets-readme.txt
+4.0K -rw-r--r-- 1 root root  556 Jul 19 12:24 packages/helm-filesets.log
+8.0K -rw-r--r-- 1 root root 6.4K Jul 19 12:24 packages/helm-firefox-20210331.1900.el
+4.0K -rw-r--r-- 1 root root  264 Jul 19 12:24 packages/helm-firefox-20210331.1900.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-firefox-badge.svg
+4.0K -rw-r--r-- 1 root root  475 Jul 19 12:24 packages/helm-firefox.log
+8.0K -rw-r--r-- 1 root root 7.2K Jul 19 12:24 packages/helm-fish-completion-20200908.1504.el
+4.0K -rw-r--r-- 1 root root  431 Jul 19 12:24 packages/helm-fish-completion-20200908.1504.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-fish-completion-badge.svg
+4.0K -rw-r--r-- 1 root root  402 Jul 19 12:24 packages/helm-fish-completion-readme.txt
+4.0K -rw-r--r-- 1 root root  618 Jul 19 12:24 packages/helm-fish-completion.log
+ 12K -rw-r--r-- 1 root root  11K Jul 19 12:24 packages/helm-flx-20180103.516.el
+4.0K -rw-r--r-- 1 root root  446 Jul 19 12:24 packages/helm-flx-20180103.516.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-flx-badge.svg
+4.0K -rw-r--r-- 1 root root  313 Jul 19 12:24 packages/helm-flx-readme.txt
+4.0K -rw-r--r-- 1 root root  519 Jul 19 12:24 packages/helm-flx.log
+8.0K -rw-r--r-- 1 root root 7.4K Jul 19 12:24 packages/helm-flycheck-20160710.829.el
+4.0K -rw-r--r-- 1 root root  414 Jul 19 12:24 packages/helm-flycheck-20160710.829.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-flycheck-badge.svg
+4.0K -rw-r--r-- 1 root root  232 Jul 19 12:24 packages/helm-flycheck-readme.txt
+4.0K -rw-r--r-- 1 root root  556 Jul 19 12:24 packages/helm-flycheck.log
+8.0K -rw-r--r-- 1 root root 6.0K Jul 19 12:24 packages/helm-flymake-20160610.2.el
+4.0K -rw-r--r-- 1 root root  337 Jul 19 12:24 packages/helm-flymake-20160610.2.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-flymake-badge.svg
+4.0K -rw-r--r-- 1 root root  842 Jul 19 12:24 packages/helm-flymake-readme.txt
+4.0K -rw-r--r-- 1 root root  546 Jul 19 12:24 packages/helm-flymake.log
+8.0K -rw-r--r-- 1 root root 6.1K Jul 19 12:24 packages/helm-flyspell-20170210.1901.el
+4.0K -rw-r--r-- 1 root root  347 Jul 19 12:24 packages/helm-flyspell-20170210.1901.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-flyspell-badge.svg
+4.0K -rw-r--r-- 1 root root  645 Jul 19 12:24 packages/helm-flyspell-readme.txt
+4.0K -rw-r--r-- 1 root root  560 Jul 19 12:24 packages/helm-flyspell.log
+4.0K -rw-r--r-- 1 root root 4.0K Jul 19 12:24 packages/helm-frame-20180604.1005.el
+4.0K -rw-r--r-- 1 root root  336 Jul 19 12:24 packages/helm-frame-20180604.1005.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-frame-badge.svg
+4.0K -rw-r--r-- 1 root root  248 Jul 19 12:24 packages/helm-frame-readme.txt
+4.0K -rw-r--r-- 1 root root  532 Jul 19 12:24 packages/helm-frame.log
+ 12K -rw-r--r-- 1 root root  12K Jul 19 12:24 packages/helm-fuz-20200812.1222.el
+4.0K -rw-r--r-- 1 root root  403 Jul 19 12:24 packages/helm-fuz-20200812.1222.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-fuz-badge.svg
+4.0K -rw-r--r-- 1 root root  113 Jul 19 12:24 packages/helm-fuz-readme.txt
+4.0K -rw-r--r-- 1 root root  523 Jul 19 12:24 packages/helm-fuz.log
+ 24K -rw-r--r-- 1 root root  22K Jul 19 12:24 packages/helm-fuzzier-20160605.2145.el
+4.0K -rw-r--r-- 1 root root  378 Jul 19 12:24 packages/helm-fuzzier-20160605.2145.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-fuzzier-badge.svg
+4.0K -rw-r--r-- 1 root root 2.4K Jul 19 12:24 packages/helm-fuzzier-readme.txt
+4.0K -rw-r--r-- 1 root root  559 Jul 19 12:24 packages/helm-fuzzier.log
+8.0K -rw-r--r-- 1 root root 6.0K Jul 19 12:24 packages/helm-fuzzy-20200927.532.el
+4.0K -rw-r--r-- 1 root root  424 Jul 19 12:24 packages/helm-fuzzy-20200927.532.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-fuzzy-badge.svg
+8.0K -rw-r--r-- 1 root root 6.8K Jul 19 12:24 packages/helm-fuzzy-find-20171106.400.el
+4.0K -rw-r--r-- 1 root root  429 Jul 19 12:24 packages/helm-fuzzy-find-20171106.400.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-fuzzy-find-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Jul 19 12:24 packages/helm-fuzzy-find-readme.txt
+4.0K -rw-r--r-- 1 root root  576 Jul 19 12:24 packages/helm-fuzzy-find.log
+4.0K -rw-r--r-- 1 root root   33 Jul 19 12:24 packages/helm-fuzzy-readme.txt
+4.0K -rw-r--r-- 1 root root  949 Jul 19 12:24 packages/helm-fuzzy.log
 4.0K -rw-r--r-- 1 root root 1.2K Feb  4 19:41 packages/helm-ghc-badge.svg
 4.0K -rw-r--r-- 1 root root  408 Feb  4 19:41 packages/helm-ghc-readme.txt
 4.0K -rw-r--r-- 1 root root  530 Feb  4 19:41 packages/helm-ghc.log
-8.0K -rw-r--r-- 1 root root 7.5K Jul 19 05:47 packages/helm-ghq-20190526.1409.el
-4.0K -rw-r--r-- 1 root root  373 Jul 19 05:47 packages/helm-ghq-20190526.1409.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-ghq-badge.svg
-4.0K -rw-r--r-- 1 root root   48 Jul 19 05:47 packages/helm-ghq-readme.txt
-4.0K -rw-r--r-- 1 root root  526 Jul 19 05:47 packages/helm-ghq.log
-4.0K -rw-r--r-- 1 root root 2.5K Jul 19 05:47 packages/helm-ghs-20170715.541.el
-4.0K -rw-r--r-- 1 root root  340 Jul 19 05:47 packages/helm-ghs-20170715.541.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-ghs-badge.svg
-4.0K -rw-r--r-- 1 root root   30 Jul 19 05:47 packages/helm-ghs-readme.txt
-4.0K -rw-r--r-- 1 root root  520 Jul 19 05:47 packages/helm-ghs.log
-8.0K -rw-r--r-- 1 root root 4.4K Jul 19 05:47 packages/helm-git-20120630.2103.el
-4.0K -rw-r--r-- 1 root root  354 Jul 19 05:47 packages/helm-git-20120630.2103.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-git-badge.svg
- 12K -rw-r--r-- 1 root root  12K Jul 19 05:47 packages/helm-git-files-20141212.1317.el
-4.0K -rw-r--r-- 1 root root  353 Jul 19 05:47 packages/helm-git-files-20141212.1317.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-git-files-badge.svg
-4.0K -rw-r--r-- 1 root root  487 Jul 19 05:47 packages/helm-git-files.log
- 32K -rw-r--r-- 1 root root  29K Jul 19 05:47 packages/helm-git-grep-20170614.1411.el
-4.0K -rw-r--r-- 1 root root  327 Jul 19 05:47 packages/helm-git-grep-20170614.1411.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-git-grep-badge.svg
-4.0K -rw-r--r-- 1 root root  593 Jul 19 05:47 packages/helm-git-grep-readme.txt
-4.0K -rw-r--r-- 1 root root  558 Jul 19 05:47 packages/helm-git-grep.log
-4.0K -rw-r--r-- 1 root root  353 Jul 19 05:47 packages/helm-git-readme.txt
-4.0K -rw-r--r-- 1 root root 1.3K Jul 19 05:47 packages/helm-git.log
- 20K -rw-r--r-- 1 root root  17K Jul 19 05:47 packages/helm-github-stars-20190428.1047.el
-4.0K -rw-r--r-- 1 root root  484 Jul 19 05:47 packages/helm-github-stars-20190428.1047.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-github-stars-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-github-stars-readme.txt
-4.0K -rw-r--r-- 1 root root  589 Jul 19 05:47 packages/helm-github-stars.log
-4.0K -rw-r--r-- 1 root root 3.5K Jul 19 05:47 packages/helm-gitignore-20170211.8.el
-4.0K -rw-r--r-- 1 root root  441 Jul 19 05:47 packages/helm-gitignore-20170211.8.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-gitignore-badge.svg
-4.0K -rw-r--r-- 1 root root  103 Jul 19 05:47 packages/helm-gitignore-readme.txt
-4.0K -rw-r--r-- 1 root root  558 Jul 19 05:47 packages/helm-gitignore.log
-8.0K -rw-r--r-- 1 root root 5.9K Jul 19 05:47 packages/helm-gitlab-20180312.1647.el
-4.0K -rw-r--r-- 1 root root  490 Jul 19 05:47 packages/helm-gitlab-20180312.1647.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-gitlab-badge.svg
-4.0K -rw-r--r-- 1 root root   36 Jul 19 05:47 packages/helm-gitlab-readme.txt
-4.0K -rw-r--r-- 1 root root  547 Jul 19 05:47 packages/helm-gitlab.log
- 12K -rw-r--r-- 1 root root 8.3K Jul 19 05:47 packages/helm-go-package-20161103.153.el
-4.0K -rw-r--r-- 1 root root  456 Jul 19 05:47 packages/helm-go-package-20161103.153.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-go-package-badge.svg
-4.0K -rw-r--r-- 1 root root  244 Jul 19 05:47 packages/helm-go-package-readme.txt
-4.0K -rw-r--r-- 1 root root  572 Jul 19 05:47 packages/helm-go-package.log
-8.0K -rw-r--r-- 1 root root 7.7K Jul 19 05:47 packages/helm-google-20210527.900.el
-4.0K -rw-r--r-- 1 root root  393 Jul 19 05:47 packages/helm-google-20210527.900.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-google-badge.svg
-4.0K -rw-r--r-- 1 root root   47 Jul 19 05:47 packages/helm-google-readme.txt
-4.0K -rw-r--r-- 1 root root  546 Jul 19 05:47 packages/helm-google.log
- 24K -rw-r--r-- 1 root root  23K Jul 19 05:47 packages/helm-grepint-20200811.1616.el
-4.0K -rw-r--r-- 1 root root  444 Jul 19 05:47 packages/helm-grepint-20200811.1616.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-grepint-badge.svg
-8.0K -rw-r--r-- 1 root root 4.3K Jul 19 05:47 packages/helm-grepint-readme.txt
-4.0K -rw-r--r-- 1 root root  550 Jul 19 05:47 packages/helm-grepint.log
- 12K -rw-r--r-- 1 root root 8.5K Jul 19 05:47 packages/helm-growthforecast-20140120.344.el
-4.0K -rw-r--r-- 1 root root  394 Jul 19 05:47 packages/helm-growthforecast-20140120.344.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-growthforecast-badge.svg
-4.0K -rw-r--r-- 1 root root  522 Jul 19 05:47 packages/helm-growthforecast.log
- 60K -rw-r--r-- 1 root root  58K Jul 19 05:47 packages/helm-gtags-20200602.1610.el
-4.0K -rw-r--r-- 1 root root  387 Jul 19 05:47 packages/helm-gtags-20200602.1610.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-gtags-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul 19 05:47 packages/helm-gtags-readme.txt
-4.0K -rw-r--r-- 1 root root  542 Jul 19 05:47 packages/helm-gtags.log
- 12K -rw-r--r-- 1 root root  12K Jul 19 05:47 packages/helm-hatena-bookmark-20190609.1455.el
-4.0K -rw-r--r-- 1 root root  416 Jul 19 05:47 packages/helm-hatena-bookmark-20190609.1455.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-hatena-bookmark-badge.svg
-4.0K -rw-r--r-- 1 root root   71 Jul 19 05:47 packages/helm-hatena-bookmark-readme.txt
-4.0K -rw-r--r-- 1 root root  622 Jul 19 05:47 packages/helm-hatena-bookmark.log
- 12K -rw-r--r-- 1 root root 8.5K Jul 19 05:47 packages/helm-hayoo-20151014.651.el
-4.0K -rw-r--r-- 1 root root  413 Jul 19 05:47 packages/helm-hayoo-20151014.651.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-hayoo-badge.svg
-4.0K -rw-r--r-- 1 root root  221 Jul 19 05:47 packages/helm-hayoo-readme.txt
-4.0K -rw-r--r-- 1 root root  536 Jul 19 05:47 packages/helm-hayoo.log
-8.0K -rw-r--r-- 1 root root 4.1K Jul 19 05:47 packages/helm-helm-commands-20130902.1748.el
-4.0K -rw-r--r-- 1 root root  414 Jul 19 05:47 packages/helm-helm-commands-20130902.1748.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-helm-commands-badge.svg
-4.0K -rw-r--r-- 1 root root  924 Jul 19 05:47 packages/helm-helm-commands-readme.txt
-4.0K -rw-r--r-- 1 root root  599 Jul 19 05:47 packages/helm-helm-commands.log
-4.0K -rw-r--r-- 1 root root 2.9K Jul 19 05:47 packages/helm-hoogle-20161027.534.el
-4.0K -rw-r--r-- 1 root root  453 Jul 19 05:47 packages/helm-hoogle-20161027.534.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-hoogle-badge.svg
-4.0K -rw-r--r-- 1 root root   47 Jul 19 05:47 packages/helm-hoogle-readme.txt
-4.0K -rw-r--r-- 1 root root  542 Jul 19 05:47 packages/helm-hoogle.log
- 24K -rw-r--r-- 1 root root  22K Jul 19 05:47 packages/helm-hunks-20171217.1933.el
-4.0K -rw-r--r-- 1 root root  367 Jul 19 05:47 packages/helm-hunks-20171217.1933.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:47 packages/helm-hunks-badge.svg
-4.0K -rw-r--r-- 1 root root  784 Jul 19 05:47 packages/helm-hunks-readme.txt
-4.0K -rw-r--r-- 1 root root  538 Jul 19 05:47 packages/helm-hunks.log
-8.0K -rw-r--r-- 1 root root 5.9K Jul 19 05:47 packages/helm-icons-20210330.1216.el
-4.0K -rw-r--r-- 1 root root  467 Jul 19 05:47 packages/helm-icons-20210330.1216.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-icons-badge.svg
-4.0K -rw-r--r-- 1 root root   57 Jul 19 05:47 packages/helm-icons-readme.txt
-4.0K -rw-r--r-- 1 root root  535 Jul 19 05:48 packages/helm-icons.log
-8.0K -rw-r--r-- 1 root root 6.9K Jul 19 05:47 packages/helm-idris-20141202.1757.el
-4.0K -rw-r--r-- 1 root root  460 Jul 19 05:48 packages/helm-idris-20141202.1757.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-idris-badge.svg
-4.0K -rw-r--r-- 1 root root  192 Jul 19 05:48 packages/helm-idris-readme.txt
-4.0K -rw-r--r-- 1 root root  546 Jul 19 05:48 packages/helm-idris.log
-4.0K -rw-r--r-- 1 root root  375 Jul 19 05:48 packages/helm-img-20151224.2321.entry
- 20K -rw-r--r-- 1 root root  20K Jul 19 05:48 packages/helm-img-20151224.2321.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-img-badge.svg
-4.0K -rw-r--r-- 1 root root  122 Jul 19 05:48 packages/helm-img-readme.txt
-4.0K -rw-r--r-- 1 root root 2.4K Jul 19 05:48 packages/helm-img-tiqav-20151224.2322.el
-4.0K -rw-r--r-- 1 root root  334 Jul 19 05:48 packages/helm-img-tiqav-20151224.2322.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-img-tiqav-badge.svg
-4.0K -rw-r--r-- 1 root root  485 Jul 19 05:48 packages/helm-img-tiqav.log
-4.0K -rw-r--r-- 1 root root 1.3K Jul 19 05:48 packages/helm-img.log
-4.0K -rw-r--r-- 1 root root 3.0K Jul 19 05:48 packages/helm-ispell-20151231.853.el
-4.0K -rw-r--r-- 1 root root  375 Jul 19 05:48 packages/helm-ispell-20151231.853.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-ispell-badge.svg
-4.0K -rw-r--r-- 1 root root   48 Jul 19 05:48 packages/helm-ispell-readme.txt
-4.0K -rw-r--r-- 1 root root  548 Jul 19 05:48 packages/helm-ispell.log
-8.0K -rw-r--r-- 1 root root 5.2K Jul 19 05:48 packages/helm-itunes-20151013.648.el
-4.0K -rw-r--r-- 1 root root  367 Jul 19 05:48 packages/helm-itunes-20151013.648.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-itunes-badge.svg
-4.0K -rw-r--r-- 1 root root  445 Jul 19 05:48 packages/helm-itunes-readme.txt
-4.0K -rw-r--r-- 1 root root  541 Jul 19 05:48 packages/helm-itunes.log
- 12K -rw-r--r-- 1 root root 9.1K Jul 19 05:48 packages/helm-j-cheatsheet-20170217.829.el
-4.0K -rw-r--r-- 1 root root  369 Jul 19 05:48 packages/helm-j-cheatsheet-20170217.829.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-j-cheatsheet-badge.svg
-4.0K -rw-r--r-- 1 root root  206 Jul 19 05:48 packages/helm-j-cheatsheet-readme.txt
-4.0K -rw-r--r-- 1 root root  655 Jul 19 05:48 packages/helm-j-cheatsheet.log
- 12K -rw-r--r-- 1 root root 9.2K Jul 19 05:48 packages/helm-jira-20180802.815.el
-4.0K -rw-r--r-- 1 root root  492 Jul 19 05:48 packages/helm-jira-20180802.815.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-jira-badge.svg
-4.0K -rw-r--r-- 1 root root   62 Jul 19 05:48 packages/helm-jira-readme.txt
-4.0K -rw-r--r-- 1 root root  529 Jul 19 05:48 packages/helm-jira.log
-4.0K -rw-r--r-- 1 root root 2.6K Jul 19 05:48 packages/helm-js-codemod-20190921.942.el
-4.0K -rw-r--r-- 1 root root  408 Jul 19 05:48 packages/helm-js-codemod-20190921.942.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-js-codemod-badge.svg
-4.0K -rw-r--r-- 1 root root  206 Jul 19 05:48 packages/helm-js-codemod-readme.txt
-4.0K -rw-r--r-- 1 root root  576 Jul 19 05:48 packages/helm-js-codemod.log
-4.0K -rw-r--r-- 1 root root 3.2K Jul 19 05:48 packages/helm-jstack-20150603.422.el
-4.0K -rw-r--r-- 1 root root  453 Jul 19 05:48 packages/helm-jstack-20150603.422.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-jstack-badge.svg
-4.0K -rw-r--r-- 1 root root   61 Jul 19 05:48 packages/helm-jstack-readme.txt
-4.0K -rw-r--r-- 1 root root  546 Jul 19 05:48 packages/helm-jstack.log
- 32K -rw-r--r-- 1 root root  29K Jul 19 05:48 packages/helm-kythe-20170709.726.el
-4.0K -rw-r--r-- 1 root root  406 Jul 19 05:48 packages/helm-kythe-20170709.726.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-kythe-badge.svg
-4.0K -rw-r--r-- 1 root root  354 Jul 19 05:48 packages/helm-kythe-readme.txt
-4.0K -rw-r--r-- 1 root root  539 Jul 19 05:48 packages/helm-kythe.log
-8.0K -rw-r--r-- 1 root root 6.8K Jul 19 05:48 packages/helm-lastpass-20180722.806.el
-4.0K -rw-r--r-- 1 root root  371 Jul 19 05:48 packages/helm-lastpass-20180722.806.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-lastpass-badge.svg
-4.0K -rw-r--r-- 1 root root   28 Jul 19 05:48 packages/helm-lastpass-readme.txt
-4.0K -rw-r--r-- 1 root root  560 Jul 19 05:48 packages/helm-lastpass.log
-4.0K -rw-r--r-- 1 root root 2.7K Jul 19 05:48 packages/helm-lean-20210305.1705.el
-4.0K -rw-r--r-- 1 root root  637 Jul 19 05:48 packages/helm-lean-20210305.1705.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-lean-badge.svg
-4.0K -rw-r--r-- 1 root root   72 Jul 19 05:48 packages/helm-lean-readme.txt
-4.0K -rw-r--r-- 1 root root  530 Jul 19 05:48 packages/helm-lean.log
-4.0K -rw-r--r-- 1 root root 3.8K Jul 19 05:48 packages/helm-lib-babel-20180510.1324.el
-4.0K -rw-r--r-- 1 root root  439 Jul 19 05:48 packages/helm-lib-babel-20180510.1324.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-lib-babel-badge.svg
-4.0K -rw-r--r-- 1 root root  247 Jul 19 05:48 packages/helm-lib-babel-readme.txt
-4.0K -rw-r--r-- 1 root root  566 Jul 19 05:48 packages/helm-lib-babel.log
-8.0K -rw-r--r-- 1 root root 5.8K Jul 19 05:48 packages/helm-lines-20180601.2033.el
-4.0K -rw-r--r-- 1 root root  443 Jul 19 05:48 packages/helm-lines-20180601.2033.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-lines-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-lines-readme.txt
-4.0K -rw-r--r-- 1 root root  538 Jul 19 05:48 packages/helm-lines.log
-4.0K -rw-r--r-- 1 root root 3.6K Jul 19 05:48 packages/helm-lobsters-20150211.2214.el
-4.0K -rw-r--r-- 1 root root  366 Jul 19 05:48 packages/helm-lobsters-20150211.2214.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-lobsters-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul 19 05:48 packages/helm-lobsters-readme.txt
-4.0K -rw-r--r-- 1 root root  561 Jul 19 05:48 packages/helm-lobsters.log
- 32K -rw-r--r-- 1 root root  30K Jul 19 05:48 packages/helm-ls-git-20210324.1515.el
-4.0K -rw-r--r-- 1 root root  162 Jul 19 05:48 packages/helm-ls-git-20210324.1515.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-ls-git-badge.svg
-4.0K -rw-r--r-- 1 root root  468 Jul 19 05:48 packages/helm-ls-git.log
- 12K -rw-r--r-- 1 root root 9.4K Jul 19 05:48 packages/helm-ls-hg-20150909.543.el
-4.0K -rw-r--r-- 1 root root  175 Jul 19 05:48 packages/helm-ls-hg-20150909.543.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-ls-hg-badge.svg
-4.0K -rw-r--r-- 1 root root  459 Jul 19 05:48 packages/helm-ls-hg.log
- 16K -rw-r--r-- 1 root root  13K Jul 19 05:48 packages/helm-ls-svn-20190316.2203.el
-4.0K -rw-r--r-- 1 root root  496 Jul 19 05:48 packages/helm-ls-svn-20190316.2203.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-ls-svn-badge.svg
-4.0K -rw-r--r-- 1 root root  911 Jul 19 05:48 packages/helm-ls-svn-readme.txt
-4.0K -rw-r--r-- 1 root root  547 Jul 19 05:48 packages/helm-ls-svn.log
- 16K -rwxr-xr-x 1 root root  14K Jul 19 05:48 packages/helm-lsp-20210419.2014.el
-4.0K -rw-r--r-- 1 root root  447 Jul 19 05:48 packages/helm-lsp-20210419.2014.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-lsp-badge.svg
-4.0K -rw-r--r-- 1 root root   25 Jul 19 05:48 packages/helm-lsp-readme.txt
-4.0K -rw-r--r-- 1 root root  521 Jul 19 05:48 packages/helm-lsp.log
- 20K -rw-r--r-- 1 root root  20K Jul 19 05:48 packages/helm-lxc-20200323.816.el
-4.0K -rw-r--r-- 1 root root  420 Jul 19 05:48 packages/helm-lxc-20200323.816.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-lxc-badge.svg
-4.0K -rw-r--r-- 1 root root  273 Jul 19 05:48 packages/helm-lxc-readme.txt
-4.0K -rw-r--r-- 1 root root  519 Jul 19 05:48 packages/helm-lxc.log
- 20K -rw-r--r-- 1 root root  18K Jul 19 05:48 packages/helm-make-20200620.27.el
-4.0K -rw-r--r-- 1 root root  354 Jul 19 05:48 packages/helm-make-20200620.27.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-make-badge.svg
-4.0K -rw-r--r-- 1 root root  141 Jul 19 05:48 packages/helm-make-readme.txt
-4.0K -rw-r--r-- 1 root root  523 Jul 19 05:48 packages/helm-make.log
-8.0K -rw-r--r-- 1 root root 5.9K Jul 19 05:48 packages/helm-migemo-20151010.356.el
-4.0K -rw-r--r-- 1 root root  494 Jul 19 05:48 packages/helm-migemo-20151010.356.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-migemo-badge.svg
-4.0K -rw-r--r-- 1 root root  236 Jul 19 05:48 packages/helm-migemo-readme.txt
-4.0K -rw-r--r-- 1 root root  542 Jul 19 05:48 packages/helm-migemo.log
-8.0K -rw-r--r-- 1 root root 5.0K Jul 19 05:48 packages/helm-mode-manager-20210108.2330.el
-4.0K -rw-r--r-- 1 root root  330 Jul 19 05:48 packages/helm-mode-manager-20210108.2330.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-mode-manager-badge.svg
-4.0K -rw-r--r-- 1 root root  653 Jul 19 05:48 packages/helm-mode-manager-readme.txt
-4.0K -rw-r--r-- 1 root root  589 Jul 19 05:48 packages/helm-mode-manager.log
-8.0K -rw-r--r-- 1 root root 6.8K Jul 19 05:48 packages/helm-mt-20160918.452.el
-4.0K -rw-r--r-- 1 root root  438 Jul 19 05:48 packages/helm-mt-20160918.452.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-mt-badge.svg
-4.0K -rw-r--r-- 1 root root  290 Jul 19 05:48 packages/helm-mt-readme.txt
-4.0K -rw-r--r-- 1 root root  510 Jul 19 05:48 packages/helm-mt.log
- 24K -rw-r--r-- 1 root root  22K Jul 19 05:48 packages/helm-mu-20210104.1214.el
-4.0K -rw-r--r-- 1 root root  365 Jul 19 05:48 packages/helm-mu-20210104.1214.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-mu-badge.svg
-4.0K -rw-r--r-- 1 root root  726 Jul 19 05:48 packages/helm-mu-readme.txt
-4.0K -rw-r--r-- 1 root root  514 Jul 19 05:48 packages/helm-mu.log
- 12K -rw-r--r-- 1 root root 8.3K Jul 19 05:48 packages/helm-navi-20201220.1823.el
-4.0K -rw-r--r-- 1 root root  493 Jul 19 05:48 packages/helm-navi-20201220.1823.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-navi-badge.svg
-4.0K -rw-r--r-- 1 root root  646 Jul 19 05:48 packages/helm-navi-readme.txt
-4.0K -rw-r--r-- 1 root root  530 Jul 19 05:48 packages/helm-navi.log
-4.0K -rw-r--r-- 1 root root 1.8K Jul 19 05:48 packages/helm-nixos-options-20151013.2309.el
-4.0K -rw-r--r-- 1 root root  524 Jul 19 05:48 packages/helm-nixos-options-20151013.2309.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-nixos-options-badge.svg
-4.0K -rw-r--r-- 1 root root  101 Jul 19 05:48 packages/helm-nixos-options-readme.txt
-4.0K -rw-r--r-- 1 root root  598 Jul 19 05:48 packages/helm-nixos-options.log
- 12K -rw-r--r-- 1 root root 8.1K Jul 19 05:48 packages/helm-notmuch-20190320.1048.el
-4.0K -rw-r--r-- 1 root root  395 Jul 19 05:48 packages/helm-notmuch-20190320.1048.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-notmuch-badge.svg
-4.0K -rw-r--r-- 1 root root  542 Jul 19 05:48 packages/helm-notmuch-readme.txt
-4.0K -rw-r--r-- 1 root root  554 Jul 19 05:48 packages/helm-notmuch.log
- 20K -rw-r--r-- 1 root root  18K Jul 19 05:48 packages/helm-open-github-20170220.159.el
-4.0K -rw-r--r-- 1 root root  427 Jul 19 05:48 packages/helm-open-github-20170220.159.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-open-github-badge.svg
-4.0K -rw-r--r-- 1 root root  126 Jul 19 05:48 packages/helm-open-github-readme.txt
-4.0K -rw-r--r-- 1 root root  588 Jul 19 05:48 packages/helm-open-github.log
- 24K -rw-r--r-- 1 root root  22K Jul 19 05:48 packages/helm-org-20210324.1927.el
-4.0K -rw-r--r-- 1 root root  408 Jul 19 05:48 packages/helm-org-20210324.1927.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-org-badge.svg
- 24K -rw-r--r-- 1 root root  21K Jul 19 05:48 packages/helm-org-multi-wiki-20210228.1853.el
-4.0K -rw-r--r-- 1 root root  600 Jul 19 05:48 packages/helm-org-multi-wiki-20210228.1853.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-org-multi-wiki-badge.svg
-4.0K -rw-r--r-- 1 root root   58 Jul 19 05:48 packages/helm-org-multi-wiki-readme.txt
-4.0K -rw-r--r-- 1 root root  601 Jul 19 05:48 packages/helm-org-multi-wiki.log
-8.0K -rw-r--r-- 1 root root 7.7K Jul 19 05:48 packages/helm-org-ql-20210608.1556.el
-4.0K -rw-r--r-- 1 root root  448 Jul 19 05:48 packages/helm-org-ql-20210608.1556.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-org-ql-badge.svg
-4.0K -rw-r--r-- 1 root root  293 Jul 19 05:48 packages/helm-org-ql-readme.txt
-4.0K -rw-r--r-- 1 root root  540 Jul 19 05:48 packages/helm-org-ql.log
-4.0K -rw-r--r-- 1 root root   48 Jul 19 05:48 packages/helm-org-readme.txt
+8.0K -rw-r--r-- 1 root root 7.5K Jul 19 12:24 packages/helm-ghq-20190526.1409.el
+4.0K -rw-r--r-- 1 root root  373 Jul 19 12:24 packages/helm-ghq-20190526.1409.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-ghq-badge.svg
+4.0K -rw-r--r-- 1 root root   48 Jul 19 12:24 packages/helm-ghq-readme.txt
+4.0K -rw-r--r-- 1 root root  526 Jul 19 12:24 packages/helm-ghq.log
+4.0K -rw-r--r-- 1 root root 2.5K Jul 19 12:24 packages/helm-ghs-20170715.541.el
+4.0K -rw-r--r-- 1 root root  340 Jul 19 12:24 packages/helm-ghs-20170715.541.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-ghs-badge.svg
+4.0K -rw-r--r-- 1 root root   30 Jul 19 12:24 packages/helm-ghs-readme.txt
+4.0K -rw-r--r-- 1 root root  520 Jul 19 12:24 packages/helm-ghs.log
+8.0K -rw-r--r-- 1 root root 4.4K Jul 19 12:24 packages/helm-git-20120630.2103.el
+4.0K -rw-r--r-- 1 root root  354 Jul 19 12:24 packages/helm-git-20120630.2103.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-git-badge.svg
+ 12K -rw-r--r-- 1 root root  12K Jul 19 12:24 packages/helm-git-files-20141212.1317.el
+4.0K -rw-r--r-- 1 root root  353 Jul 19 12:24 packages/helm-git-files-20141212.1317.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-git-files-badge.svg
+4.0K -rw-r--r-- 1 root root  487 Jul 19 12:24 packages/helm-git-files.log
+ 32K -rw-r--r-- 1 root root  29K Jul 19 12:24 packages/helm-git-grep-20170614.1411.el
+4.0K -rw-r--r-- 1 root root  327 Jul 19 12:24 packages/helm-git-grep-20170614.1411.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-git-grep-badge.svg
+4.0K -rw-r--r-- 1 root root  593 Jul 19 12:24 packages/helm-git-grep-readme.txt
+4.0K -rw-r--r-- 1 root root  558 Jul 19 12:24 packages/helm-git-grep.log
+4.0K -rw-r--r-- 1 root root  353 Jul 19 12:24 packages/helm-git-readme.txt
+4.0K -rw-r--r-- 1 root root 1.3K Jul 19 12:24 packages/helm-git.log
+ 20K -rw-r--r-- 1 root root  17K Jul 19 12:24 packages/helm-github-stars-20190428.1047.el
+4.0K -rw-r--r-- 1 root root  484 Jul 19 12:24 packages/helm-github-stars-20190428.1047.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-github-stars-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-github-stars-readme.txt
+4.0K -rw-r--r-- 1 root root  589 Jul 19 12:24 packages/helm-github-stars.log
+4.0K -rw-r--r-- 1 root root 3.5K Jul 19 12:24 packages/helm-gitignore-20170211.8.el
+4.0K -rw-r--r-- 1 root root  441 Jul 19 12:24 packages/helm-gitignore-20170211.8.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-gitignore-badge.svg
+4.0K -rw-r--r-- 1 root root  103 Jul 19 12:24 packages/helm-gitignore-readme.txt
+4.0K -rw-r--r-- 1 root root  558 Jul 19 12:24 packages/helm-gitignore.log
+8.0K -rw-r--r-- 1 root root 5.9K Jul 19 12:24 packages/helm-gitlab-20180312.1647.el
+4.0K -rw-r--r-- 1 root root  490 Jul 19 12:24 packages/helm-gitlab-20180312.1647.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-gitlab-badge.svg
+4.0K -rw-r--r-- 1 root root   36 Jul 19 12:24 packages/helm-gitlab-readme.txt
+4.0K -rw-r--r-- 1 root root  547 Jul 19 12:24 packages/helm-gitlab.log
+ 12K -rw-r--r-- 1 root root 8.3K Jul 19 12:24 packages/helm-go-package-20161103.153.el
+4.0K -rw-r--r-- 1 root root  456 Jul 19 12:24 packages/helm-go-package-20161103.153.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-go-package-badge.svg
+4.0K -rw-r--r-- 1 root root  244 Jul 19 12:24 packages/helm-go-package-readme.txt
+4.0K -rw-r--r-- 1 root root  572 Jul 19 12:24 packages/helm-go-package.log
+8.0K -rw-r--r-- 1 root root 7.7K Jul 19 12:24 packages/helm-google-20210527.900.el
+4.0K -rw-r--r-- 1 root root  393 Jul 19 12:24 packages/helm-google-20210527.900.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-google-badge.svg
+4.0K -rw-r--r-- 1 root root   47 Jul 19 12:24 packages/helm-google-readme.txt
+4.0K -rw-r--r-- 1 root root  546 Jul 19 12:24 packages/helm-google.log
+ 24K -rw-r--r-- 1 root root  23K Jul 19 12:24 packages/helm-grepint-20200811.1616.el
+4.0K -rw-r--r-- 1 root root  444 Jul 19 12:24 packages/helm-grepint-20200811.1616.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-grepint-badge.svg
+8.0K -rw-r--r-- 1 root root 4.3K Jul 19 12:24 packages/helm-grepint-readme.txt
+4.0K -rw-r--r-- 1 root root  550 Jul 19 12:24 packages/helm-grepint.log
+ 12K -rw-r--r-- 1 root root 8.5K Jul 19 12:24 packages/helm-growthforecast-20140120.344.el
+4.0K -rw-r--r-- 1 root root  394 Jul 19 12:24 packages/helm-growthforecast-20140120.344.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-growthforecast-badge.svg
+4.0K -rw-r--r-- 1 root root  522 Jul 19 12:24 packages/helm-growthforecast.log
+ 60K -rw-r--r-- 1 root root  58K Jul 19 12:24 packages/helm-gtags-20200602.1610.el
+4.0K -rw-r--r-- 1 root root  387 Jul 19 12:24 packages/helm-gtags-20200602.1610.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-gtags-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul 19 12:24 packages/helm-gtags-readme.txt
+4.0K -rw-r--r-- 1 root root  542 Jul 19 12:24 packages/helm-gtags.log
+ 12K -rw-r--r-- 1 root root  12K Jul 19 12:24 packages/helm-hatena-bookmark-20190609.1455.el
+4.0K -rw-r--r-- 1 root root  416 Jul 19 12:24 packages/helm-hatena-bookmark-20190609.1455.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-hatena-bookmark-badge.svg
+4.0K -rw-r--r-- 1 root root   71 Jul 19 12:24 packages/helm-hatena-bookmark-readme.txt
+4.0K -rw-r--r-- 1 root root  622 Jul 19 12:24 packages/helm-hatena-bookmark.log
+ 12K -rw-r--r-- 1 root root 8.5K Jul 19 12:24 packages/helm-hayoo-20151014.651.el
+4.0K -rw-r--r-- 1 root root  413 Jul 19 12:24 packages/helm-hayoo-20151014.651.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-hayoo-badge.svg
+4.0K -rw-r--r-- 1 root root  221 Jul 19 12:24 packages/helm-hayoo-readme.txt
+4.0K -rw-r--r-- 1 root root  536 Jul 19 12:24 packages/helm-hayoo.log
+8.0K -rw-r--r-- 1 root root 4.1K Jul 19 12:24 packages/helm-helm-commands-20130902.1748.el
+4.0K -rw-r--r-- 1 root root  414 Jul 19 12:24 packages/helm-helm-commands-20130902.1748.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-helm-commands-badge.svg
+4.0K -rw-r--r-- 1 root root  924 Jul 19 12:24 packages/helm-helm-commands-readme.txt
+4.0K -rw-r--r-- 1 root root  599 Jul 19 12:24 packages/helm-helm-commands.log
+4.0K -rw-r--r-- 1 root root 2.9K Jul 19 12:24 packages/helm-hoogle-20161027.534.el
+4.0K -rw-r--r-- 1 root root  453 Jul 19 12:24 packages/helm-hoogle-20161027.534.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-hoogle-badge.svg
+4.0K -rw-r--r-- 1 root root   47 Jul 19 12:24 packages/helm-hoogle-readme.txt
+4.0K -rw-r--r-- 1 root root  542 Jul 19 12:24 packages/helm-hoogle.log
+ 24K -rw-r--r-- 1 root root  22K Jul 19 12:24 packages/helm-hunks-20171217.1933.el
+4.0K -rw-r--r-- 1 root root  367 Jul 19 12:24 packages/helm-hunks-20171217.1933.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-hunks-badge.svg
+4.0K -rw-r--r-- 1 root root  784 Jul 19 12:24 packages/helm-hunks-readme.txt
+4.0K -rw-r--r-- 1 root root  538 Jul 19 12:24 packages/helm-hunks.log
+8.0K -rw-r--r-- 1 root root 5.9K Jul 19 12:24 packages/helm-icons-20210330.1216.el
+4.0K -rw-r--r-- 1 root root  467 Jul 19 12:24 packages/helm-icons-20210330.1216.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-icons-badge.svg
+4.0K -rw-r--r-- 1 root root   57 Jul 19 12:24 packages/helm-icons-readme.txt
+4.0K -rw-r--r-- 1 root root  535 Jul 19 12:24 packages/helm-icons.log
+8.0K -rw-r--r-- 1 root root 6.9K Jul 19 12:24 packages/helm-idris-20141202.1757.el
+4.0K -rw-r--r-- 1 root root  460 Jul 19 12:24 packages/helm-idris-20141202.1757.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-idris-badge.svg
+4.0K -rw-r--r-- 1 root root  192 Jul 19 12:24 packages/helm-idris-readme.txt
+4.0K -rw-r--r-- 1 root root  546 Jul 19 12:24 packages/helm-idris.log
+4.0K -rw-r--r-- 1 root root  375 Jul 19 12:24 packages/helm-img-20151224.2321.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 19 12:24 packages/helm-img-20151224.2321.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-img-badge.svg
+4.0K -rw-r--r-- 1 root root  122 Jul 19 12:24 packages/helm-img-readme.txt
+4.0K -rw-r--r-- 1 root root 2.4K Jul 19 12:24 packages/helm-img-tiqav-20151224.2322.el
+4.0K -rw-r--r-- 1 root root  334 Jul 19 12:24 packages/helm-img-tiqav-20151224.2322.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-img-tiqav-badge.svg
+4.0K -rw-r--r-- 1 root root  485 Jul 19 12:24 packages/helm-img-tiqav.log
+4.0K -rw-r--r-- 1 root root 1.3K Jul 19 12:24 packages/helm-img.log
+4.0K -rw-r--r-- 1 root root 3.0K Jul 19 12:24 packages/helm-ispell-20151231.853.el
+4.0K -rw-r--r-- 1 root root  375 Jul 19 12:24 packages/helm-ispell-20151231.853.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-ispell-badge.svg
+4.0K -rw-r--r-- 1 root root   48 Jul 19 12:24 packages/helm-ispell-readme.txt
+4.0K -rw-r--r-- 1 root root  548 Jul 19 12:24 packages/helm-ispell.log
+8.0K -rw-r--r-- 1 root root 5.2K Jul 19 12:24 packages/helm-itunes-20151013.648.el
+4.0K -rw-r--r-- 1 root root  367 Jul 19 12:24 packages/helm-itunes-20151013.648.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-itunes-badge.svg
+4.0K -rw-r--r-- 1 root root  445 Jul 19 12:24 packages/helm-itunes-readme.txt
+4.0K -rw-r--r-- 1 root root  541 Jul 19 12:24 packages/helm-itunes.log
+ 12K -rw-r--r-- 1 root root 9.1K Jul 19 12:24 packages/helm-j-cheatsheet-20170217.829.el
+4.0K -rw-r--r-- 1 root root  369 Jul 19 12:24 packages/helm-j-cheatsheet-20170217.829.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-j-cheatsheet-badge.svg
+4.0K -rw-r--r-- 1 root root  206 Jul 19 12:24 packages/helm-j-cheatsheet-readme.txt
+4.0K -rw-r--r-- 1 root root  655 Jul 19 12:24 packages/helm-j-cheatsheet.log
+ 12K -rw-r--r-- 1 root root 9.2K Jul 19 12:24 packages/helm-jira-20180802.815.el
+4.0K -rw-r--r-- 1 root root  492 Jul 19 12:24 packages/helm-jira-20180802.815.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-jira-badge.svg
+4.0K -rw-r--r-- 1 root root   62 Jul 19 12:24 packages/helm-jira-readme.txt
+4.0K -rw-r--r-- 1 root root  529 Jul 19 12:24 packages/helm-jira.log
+4.0K -rw-r--r-- 1 root root 2.6K Jul 19 12:24 packages/helm-js-codemod-20190921.942.el
+4.0K -rw-r--r-- 1 root root  408 Jul 19 12:24 packages/helm-js-codemod-20190921.942.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-js-codemod-badge.svg
+4.0K -rw-r--r-- 1 root root  206 Jul 19 12:24 packages/helm-js-codemod-readme.txt
+4.0K -rw-r--r-- 1 root root  576 Jul 19 12:24 packages/helm-js-codemod.log
+4.0K -rw-r--r-- 1 root root 3.2K Jul 19 12:24 packages/helm-jstack-20150603.422.el
+4.0K -rw-r--r-- 1 root root  453 Jul 19 12:24 packages/helm-jstack-20150603.422.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-jstack-badge.svg
+4.0K -rw-r--r-- 1 root root   61 Jul 19 12:24 packages/helm-jstack-readme.txt
+4.0K -rw-r--r-- 1 root root  546 Jul 19 12:24 packages/helm-jstack.log
+ 32K -rw-r--r-- 1 root root  29K Jul 19 12:24 packages/helm-kythe-20170709.726.el
+4.0K -rw-r--r-- 1 root root  406 Jul 19 12:24 packages/helm-kythe-20170709.726.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-kythe-badge.svg
+4.0K -rw-r--r-- 1 root root  354 Jul 19 12:24 packages/helm-kythe-readme.txt
+4.0K -rw-r--r-- 1 root root  539 Jul 19 12:24 packages/helm-kythe.log
+8.0K -rw-r--r-- 1 root root 6.8K Jul 19 12:24 packages/helm-lastpass-20180722.806.el
+4.0K -rw-r--r-- 1 root root  371 Jul 19 12:24 packages/helm-lastpass-20180722.806.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:24 packages/helm-lastpass-badge.svg
+4.0K -rw-r--r-- 1 root root   28 Jul 19 12:24 packages/helm-lastpass-readme.txt
+4.0K -rw-r--r-- 1 root root  560 Jul 19 12:24 packages/helm-lastpass.log
+4.0K -rw-r--r-- 1 root root 2.7K Jul 19 12:24 packages/helm-lean-20210305.1705.el
+4.0K -rw-r--r-- 1 root root  637 Jul 19 12:25 packages/helm-lean-20210305.1705.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-lean-badge.svg
+4.0K -rw-r--r-- 1 root root   72 Jul 19 12:25 packages/helm-lean-readme.txt
+4.0K -rw-r--r-- 1 root root  530 Jul 19 12:25 packages/helm-lean.log
+4.0K -rw-r--r-- 1 root root 3.8K Jul 19 12:25 packages/helm-lib-babel-20180510.1324.el
+4.0K -rw-r--r-- 1 root root  439 Jul 19 12:25 packages/helm-lib-babel-20180510.1324.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-lib-babel-badge.svg
+4.0K -rw-r--r-- 1 root root  247 Jul 19 12:25 packages/helm-lib-babel-readme.txt
+4.0K -rw-r--r-- 1 root root  566 Jul 19 12:25 packages/helm-lib-babel.log
+8.0K -rw-r--r-- 1 root root 5.8K Jul 19 12:25 packages/helm-lines-20180601.2033.el
+4.0K -rw-r--r-- 1 root root  443 Jul 19 12:25 packages/helm-lines-20180601.2033.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-lines-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-lines-readme.txt
+4.0K -rw-r--r-- 1 root root  538 Jul 19 12:25 packages/helm-lines.log
+4.0K -rw-r--r-- 1 root root 3.6K Jul 19 12:25 packages/helm-lobsters-20150211.2214.el
+4.0K -rw-r--r-- 1 root root  366 Jul 19 12:25 packages/helm-lobsters-20150211.2214.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-lobsters-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul 19 12:25 packages/helm-lobsters-readme.txt
+4.0K -rw-r--r-- 1 root root  561 Jul 19 12:25 packages/helm-lobsters.log
+ 32K -rw-r--r-- 1 root root  30K Jul 19 12:25 packages/helm-ls-git-20210324.1515.el
+4.0K -rw-r--r-- 1 root root  162 Jul 19 12:25 packages/helm-ls-git-20210324.1515.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-ls-git-badge.svg
+4.0K -rw-r--r-- 1 root root  468 Jul 19 12:25 packages/helm-ls-git.log
+ 12K -rw-r--r-- 1 root root 9.4K Jul 19 12:25 packages/helm-ls-hg-20150909.543.el
+4.0K -rw-r--r-- 1 root root  175 Jul 19 12:25 packages/helm-ls-hg-20150909.543.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-ls-hg-badge.svg
+4.0K -rw-r--r-- 1 root root  459 Jul 19 12:25 packages/helm-ls-hg.log
+ 16K -rw-r--r-- 1 root root  13K Jul 19 12:25 packages/helm-ls-svn-20190316.2203.el
+4.0K -rw-r--r-- 1 root root  496 Jul 19 12:25 packages/helm-ls-svn-20190316.2203.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-ls-svn-badge.svg
+4.0K -rw-r--r-- 1 root root  911 Jul 19 12:25 packages/helm-ls-svn-readme.txt
+4.0K -rw-r--r-- 1 root root  547 Jul 19 12:25 packages/helm-ls-svn.log
+ 16K -rwxr-xr-x 1 root root  14K Jul 19 12:25 packages/helm-lsp-20210419.2014.el
+4.0K -rw-r--r-- 1 root root  447 Jul 19 12:25 packages/helm-lsp-20210419.2014.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-lsp-badge.svg
+4.0K -rw-r--r-- 1 root root   25 Jul 19 12:25 packages/helm-lsp-readme.txt
+4.0K -rw-r--r-- 1 root root  521 Jul 19 12:25 packages/helm-lsp.log
+ 20K -rw-r--r-- 1 root root  20K Jul 19 12:25 packages/helm-lxc-20200323.816.el
+4.0K -rw-r--r-- 1 root root  420 Jul 19 12:25 packages/helm-lxc-20200323.816.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-lxc-badge.svg
+4.0K -rw-r--r-- 1 root root  273 Jul 19 12:25 packages/helm-lxc-readme.txt
+4.0K -rw-r--r-- 1 root root  519 Jul 19 12:25 packages/helm-lxc.log
+ 20K -rw-r--r-- 1 root root  18K Jul 19 12:25 packages/helm-make-20200620.27.el
+4.0K -rw-r--r-- 1 root root  354 Jul 19 12:25 packages/helm-make-20200620.27.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-make-badge.svg
+4.0K -rw-r--r-- 1 root root  141 Jul 19 12:25 packages/helm-make-readme.txt
+4.0K -rw-r--r-- 1 root root  523 Jul 19 12:25 packages/helm-make.log
+8.0K -rw-r--r-- 1 root root 5.9K Jul 19 12:25 packages/helm-migemo-20151010.356.el
+4.0K -rw-r--r-- 1 root root  494 Jul 19 12:25 packages/helm-migemo-20151010.356.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-migemo-badge.svg
+4.0K -rw-r--r-- 1 root root  236 Jul 19 12:25 packages/helm-migemo-readme.txt
+4.0K -rw-r--r-- 1 root root  542 Jul 19 12:25 packages/helm-migemo.log
+8.0K -rw-r--r-- 1 root root 5.0K Jul 19 12:25 packages/helm-mode-manager-20210108.2330.el
+4.0K -rw-r--r-- 1 root root  330 Jul 19 12:25 packages/helm-mode-manager-20210108.2330.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-mode-manager-badge.svg
+4.0K -rw-r--r-- 1 root root  653 Jul 19 12:25 packages/helm-mode-manager-readme.txt
+4.0K -rw-r--r-- 1 root root  589 Jul 19 12:25 packages/helm-mode-manager.log
+8.0K -rw-r--r-- 1 root root 6.8K Jul 19 12:25 packages/helm-mt-20160918.452.el
+4.0K -rw-r--r-- 1 root root  438 Jul 19 12:25 packages/helm-mt-20160918.452.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-mt-badge.svg
+4.0K -rw-r--r-- 1 root root  290 Jul 19 12:25 packages/helm-mt-readme.txt
+4.0K -rw-r--r-- 1 root root  510 Jul 19 12:25 packages/helm-mt.log
+ 24K -rw-r--r-- 1 root root  22K Jul 19 12:25 packages/helm-mu-20210104.1214.el
+4.0K -rw-r--r-- 1 root root  365 Jul 19 12:25 packages/helm-mu-20210104.1214.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-mu-badge.svg
+4.0K -rw-r--r-- 1 root root  726 Jul 19 12:25 packages/helm-mu-readme.txt
+4.0K -rw-r--r-- 1 root root  514 Jul 19 12:25 packages/helm-mu.log
+ 12K -rw-r--r-- 1 root root 8.3K Jul 19 12:25 packages/helm-navi-20201220.1823.el
+4.0K -rw-r--r-- 1 root root  493 Jul 19 12:25 packages/helm-navi-20201220.1823.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-navi-badge.svg
+4.0K -rw-r--r-- 1 root root  646 Jul 19 12:25 packages/helm-navi-readme.txt
+4.0K -rw-r--r-- 1 root root  530 Jul 19 12:25 packages/helm-navi.log
+4.0K -rw-r--r-- 1 root root 1.8K Jul 19 12:25 packages/helm-nixos-options-20151013.2309.el
+4.0K -rw-r--r-- 1 root root  524 Jul 19 12:25 packages/helm-nixos-options-20151013.2309.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-nixos-options-badge.svg
+4.0K -rw-r--r-- 1 root root  101 Jul 19 12:25 packages/helm-nixos-options-readme.txt
+4.0K -rw-r--r-- 1 root root  598 Jul 19 12:25 packages/helm-nixos-options.log
+ 12K -rw-r--r-- 1 root root 8.1K Jul 19 12:25 packages/helm-notmuch-20190320.1048.el
+4.0K -rw-r--r-- 1 root root  395 Jul 19 12:25 packages/helm-notmuch-20190320.1048.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-notmuch-badge.svg
+4.0K -rw-r--r-- 1 root root  542 Jul 19 12:25 packages/helm-notmuch-readme.txt
+4.0K -rw-r--r-- 1 root root  554 Jul 19 12:25 packages/helm-notmuch.log
+ 20K -rw-r--r-- 1 root root  18K Jul 19 12:25 packages/helm-open-github-20170220.159.el
+4.0K -rw-r--r-- 1 root root  427 Jul 19 12:25 packages/helm-open-github-20170220.159.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-open-github-badge.svg
+4.0K -rw-r--r-- 1 root root  126 Jul 19 12:25 packages/helm-open-github-readme.txt
+4.0K -rw-r--r-- 1 root root  588 Jul 19 12:25 packages/helm-open-github.log
+ 24K -rw-r--r-- 1 root root  22K Jul 19 12:25 packages/helm-org-20210324.1927.el
+4.0K -rw-r--r-- 1 root root  408 Jul 19 12:25 packages/helm-org-20210324.1927.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-org-badge.svg
+ 24K -rw-r--r-- 1 root root  21K Jul 19 12:25 packages/helm-org-multi-wiki-20210228.1853.el
+4.0K -rw-r--r-- 1 root root  600 Jul 19 12:25 packages/helm-org-multi-wiki-20210228.1853.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-org-multi-wiki-badge.svg
+4.0K -rw-r--r-- 1 root root   58 Jul 19 12:25 packages/helm-org-multi-wiki-readme.txt
+4.0K -rw-r--r-- 1 root root  601 Jul 19 12:25 packages/helm-org-multi-wiki.log
+8.0K -rw-r--r-- 1 root root 7.7K Jul 19 12:25 packages/helm-org-ql-20210608.1556.el
+4.0K -rw-r--r-- 1 root root  448 Jul 19 12:25 packages/helm-org-ql-20210608.1556.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-org-ql-badge.svg
+4.0K -rw-r--r-- 1 root root  293 Jul 19 12:25 packages/helm-org-ql-readme.txt
+4.0K -rw-r--r-- 1 root root  540 Jul 19 12:25 packages/helm-org-ql.log
+4.0K -rw-r--r-- 1 root root   48 Jul 19 12:25 packages/helm-org-readme.txt
 8.0K -rw-r--r-- 1 root root 4.5K Jul  6 16:40 packages/helm-org-recent-headings-20201213.837.el
 4.0K -rw-r--r-- 1 root root  598 Jul  6 16:40 packages/helm-org-recent-headings-20201213.837.entry
 4.0K -rw-r--r-- 1 root root 1.2K Jul  6 16:40 packages/helm-org-recent-headings-badge.svg
 4.0K -rw-r--r-- 1 root root   73 Jul  6 16:40 packages/helm-org-recent-headings-readme.txt
-4.0K -rw-r--r-- 1 root root  284 Jul 19 05:48 packages/helm-org-recent-headings.log
- 84K -rw-r--r-- 1 root root  82K Jul 19 05:48 packages/helm-org-rifle-20200512.1943.el
-4.0K -rw-r--r-- 1 root root  468 Jul 19 05:48 packages/helm-org-rifle-20200512.1943.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-org-rifle-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul 19 05:48 packages/helm-org-rifle-readme.txt
-4.0K -rw-r--r-- 1 root root  564 Jul 19 05:48 packages/helm-org-rifle.log
-4.0K -rw-r--r-- 1 root root 2.3K Jul 19 05:48 packages/helm-org.log
-8.0K -rw-r--r-- 1 root root 4.5K Jul 19 05:48 packages/helm-orgcard-20151001.1524.el
-4.0K -rw-r--r-- 1 root root  368 Jul 19 05:48 packages/helm-orgcard-20151001.1524.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-orgcard-badge.svg
-4.0K -rw-r--r-- 1 root root  181 Jul 19 05:48 packages/helm-orgcard-readme.txt
-4.0K -rw-r--r-- 1 root root  552 Jul 19 05:48 packages/helm-orgcard.log
-4.0K -rw-r--r-- 1 root root 3.3K Jul 19 05:48 packages/helm-osx-app-20190717.958.el
-4.0K -rw-r--r-- 1 root root  320 Jul 19 05:48 packages/helm-osx-app-20190717.958.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-osx-app-badge.svg
-4.0K -rw-r--r-- 1 root root   33 Jul 19 05:48 packages/helm-osx-app-readme.txt
-4.0K -rw-r--r-- 1 root root  552 Jul 19 05:48 packages/helm-osx-app.log
-8.0K -rw-r--r-- 1 root root 6.0K Jul 19 05:48 packages/helm-pages-20161121.226.el
-4.0K -rw-r--r-- 1 root root  451 Jul 19 05:48 packages/helm-pages-20161121.226.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-pages-badge.svg
-4.0K -rw-r--r-- 1 root root   56 Jul 19 05:48 packages/helm-pages-readme.txt
-4.0K -rw-r--r-- 1 root root  544 Jul 19 05:48 packages/helm-pages.log
-8.0K -rw-r--r-- 1 root root 5.3K Jul 19 05:48 packages/helm-pass-20210221.1655.el
-4.0K -rw-r--r-- 1 root root  486 Jul 19 05:48 packages/helm-pass-20210221.1655.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-pass-badge.svg
-4.0K -rw-r--r-- 1 root root  570 Jul 19 05:48 packages/helm-pass-readme.txt
-4.0K -rw-r--r-- 1 root root  530 Jul 19 05:48 packages/helm-pass.log
-4.0K -rw-r--r-- 1 root root  393 Jul 19 05:48 packages/helm-perldoc-20200315.1716.entry
- 20K -rw-r--r-- 1 root root  20K Jul 19 05:48 packages/helm-perldoc-20200315.1716.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-perldoc-badge.svg
-4.0K -rw-r--r-- 1 root root  120 Jul 19 05:48 packages/helm-perldoc-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Jul 19 05:48 packages/helm-perldoc.log
- 12K -rw-r--r-- 1 root root 9.0K Jul 19 05:48 packages/helm-perspeen-20170228.1345.el
-4.0K -rw-r--r-- 1 root root  360 Jul 19 05:48 packages/helm-perspeen-20170228.1345.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-perspeen-badge.svg
-4.0K -rw-r--r-- 1 root root  499 Jul 19 05:48 packages/helm-perspeen-readme.txt
-4.0K -rw-r--r-- 1 root root  560 Jul 19 05:48 packages/helm-perspeen.log
-4.0K -rw-r--r-- 1 root root 1.8K Jul 19 05:48 packages/helm-phpunit-20160513.853.el
-4.0K -rw-r--r-- 1 root root  418 Jul 19 05:48 packages/helm-phpunit-20160513.853.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-phpunit-badge.svg
-4.0K -rw-r--r-- 1 root root  244 Jul 19 05:48 packages/helm-phpunit-readme.txt
-4.0K -rw-r--r-- 1 root root  553 Jul 19 05:48 packages/helm-phpunit.log
-8.0K -rw-r--r-- 1 root root 6.1K Jul 19 05:48 packages/helm-posframe-20210412.1147.el
-4.0K -rw-r--r-- 1 root root  408 Jul 19 05:48 packages/helm-posframe-20210412.1147.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-posframe-badge.svg
-4.0K -rw-r--r-- 1 root root  776 Jul 19 05:48 packages/helm-posframe-readme.txt
-4.0K -rw-r--r-- 1 root root  559 Jul 19 05:48 packages/helm-posframe.log
-4.0K -rw-r--r-- 1 root root  333 Jul 19 05:48 packages/helm-proc-20161006.305.entry
- 20K -rw-r--r-- 1 root root  20K Jul 19 05:48 packages/helm-proc-20161006.305.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-proc-badge.svg
-4.0K -rw-r--r-- 1 root root  517 Jul 19 05:48 packages/helm-proc-readme.txt
-4.0K -rw-r--r-- 1 root root  888 Jul 19 05:48 packages/helm-proc.log
-4.0K -rw-r--r-- 1 root root 2.3K Jul 19 05:48 packages/helm-project-persist-20151210.1543.el
-4.0K -rw-r--r-- 1 root root  388 Jul 19 05:48 packages/helm-project-persist-20151210.1543.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-project-persist-badge.svg
-4.0K -rw-r--r-- 1 root root  101 Jul 19 05:48 packages/helm-project-persist-readme.txt
-4.0K -rw-r--r-- 1 root root  613 Jul 19 05:48 packages/helm-project-persist.log
- 52K -rw-r--r-- 1 root root  51K Jul 19 05:48 packages/helm-projectile-20201217.908.el
-4.0K -rw-r--r-- 1 root root  410 Jul 19 05:48 packages/helm-projectile-20201217.908.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-projectile-badge.svg
-4.0K -rw-r--r-- 1 root root  356 Jul 19 05:48 packages/helm-projectile-readme.txt
-4.0K -rw-r--r-- 1 root root  573 Jul 19 05:48 packages/helm-projectile.log
-4.0K -rw-r--r-- 1 root root 3.5K Jul 19 05:48 packages/helm-prosjekt-20140129.717.el
-4.0K -rw-r--r-- 1 root root  363 Jul 19 05:48 packages/helm-prosjekt-20140129.717.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-prosjekt-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Jul 19 05:48 packages/helm-prosjekt-readme.txt
-4.0K -rw-r--r-- 1 root root  553 Jul 19 05:48 packages/helm-prosjekt.log
-4.0K -rw-r--r-- 1 root root  281 Jul 19 05:48 packages/helm-pt-20160214.2342.entry
- 20K -rw-r--r-- 1 root root  20K Jul 19 05:48 packages/helm-pt-20160214.2342.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-pt-badge.svg
-4.0K -rw-r--r-- 1 root root  203 Jul 19 05:48 packages/helm-pt-readme.txt
-4.0K -rw-r--r-- 1 root root  849 Jul 19 05:48 packages/helm-pt.log
-4.0K -rw-r--r-- 1 root root 4.0K Jul 19 05:48 packages/helm-purpose-20170114.1636.el
-4.0K -rw-r--r-- 1 root root  347 Jul 19 05:48 packages/helm-purpose-20170114.1636.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-purpose-badge.svg
-4.0K -rw-r--r-- 1 root root  835 Jul 19 05:48 packages/helm-purpose-readme.txt
-4.0K -rw-r--r-- 1 root root  548 Jul 19 05:48 packages/helm-purpose.log
-4.0K -rw-r--r-- 1 root root  388 Jul 19 05:48 packages/helm-pydoc-20160918.542.entry
- 20K -rw-r--r-- 1 root root  20K Jul 19 05:48 packages/helm-pydoc-20160918.542.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-pydoc-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul 19 05:48 packages/helm-pydoc-readme.txt
-4.0K -rw-r--r-- 1 root root  945 Jul 19 05:48 packages/helm-pydoc.log
- 12K -rw-r--r-- 1 root root  11K Jul 19 05:48 packages/helm-qiita-20190526.1359.el
-4.0K -rw-r--r-- 1 root root  401 Jul 19 05:48 packages/helm-qiita-20190526.1359.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-qiita-badge.svg
-4.0K -rw-r--r-- 1 root root   50 Jul 19 05:48 packages/helm-qiita-readme.txt
-4.0K -rw-r--r-- 1 root root  542 Jul 19 05:48 packages/helm-qiita.log
-4.0K -rw-r--r-- 1 root root  347 Jul 19 05:48 packages/helm-rage-20180118.1532.entry
-232K -rw-r--r-- 1 root root 230K Jul 19 05:48 packages/helm-rage-20180118.1532.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-rage-badge.svg
-4.0K -rw-r--r-- 1 root root   27 Jul 19 05:48 packages/helm-rage-readme.txt
-8.0K -rw-r--r-- 1 root root 4.7K Jul 19 05:48 packages/helm-rage.log
- 12K -rw-r--r-- 1 root root  11K Jul 19 05:48 packages/helm-rails-20130424.1519.el
-4.0K -rw-r--r-- 1 root root  455 Jul 19 05:48 packages/helm-rails-20130424.1519.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-rails-badge.svg
-4.0K -rw-r--r-- 1 root root  156 Jul 19 05:48 packages/helm-rails-readme.txt
-4.0K -rw-r--r-- 1 root root  532 Jul 19 05:48 packages/helm-rails.log
-4.0K -rw-r--r-- 1 root root  409 Jul 19 05:48 packages/helm-rb-20131123.1639.entry
- 12K -rw-r--r-- 1 root root  10K Jul 19 05:48 packages/helm-rb-20131123.1639.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-rb-badge.svg
-4.0K -rw-r--r-- 1 root root   14 Jul 19 05:48 packages/helm-rb-readme.txt
-4.0K -rw-r--r-- 1 root root  893 Jul 19 05:48 packages/helm-rb.log
-4.0K -rw-r--r-- 1 root root 2.7K Jul 19 05:48 packages/helm-rdefs-20161130.536.el
-4.0K -rw-r--r-- 1 root root  418 Jul 19 05:48 packages/helm-rdefs-20161130.536.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-rdefs-badge.svg
-4.0K -rw-r--r-- 1 root root   80 Jul 19 05:48 packages/helm-rdefs-readme.txt
-4.0K -rw-r--r-- 1 root root  538 Jul 19 05:48 packages/helm-rdefs.log
- 16K -rw-r--r-- 1 root root  16K Jul 19 05:48 packages/helm-recoll-20200805.1235.el
-4.0K -rw-r--r-- 1 root root  466 Jul 19 05:48 packages/helm-recoll-20200805.1235.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-recoll-badge.svg
-4.0K -rw-r--r-- 1 root root  546 Jul 19 05:48 packages/helm-recoll-readme.txt
-4.0K -rw-r--r-- 1 root root  606 Jul 19 05:48 packages/helm-recoll.log
-108K -rw-r--r-- 1 root root 107K Jul 19 05:48 packages/helm-rg-20200721.725.el
-4.0K -rw-r--r-- 1 root root  453 Jul 19 05:48 packages/helm-rg-20200721.725.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-rg-badge.svg
-8.0K -rw-r--r-- 1 root root 6.1K Jul 19 05:48 packages/helm-rg-readme.txt
-4.0K -rw-r--r-- 1 root root  516 Jul 19 05:48 packages/helm-rg.log
-8.0K -rw-r--r-- 1 root root 6.3K Jul 19 05:48 packages/helm-rhythmbox-20160524.1158.el
-4.0K -rw-r--r-- 1 root root  375 Jul 19 05:48 packages/helm-rhythmbox-20160524.1158.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-rhythmbox-badge.svg
-4.0K -rw-r--r-- 1 root root  638 Jul 19 05:48 packages/helm-rhythmbox-readme.txt
-4.0K -rw-r--r-- 1 root root  567 Jul 19 05:48 packages/helm-rhythmbox.log
-4.0K -rw-r--r-- 1 root root 1.7K Jul 19 05:48 packages/helm-robe-20151209.355.el
-4.0K -rw-r--r-- 1 root root  355 Jul 19 05:48 packages/helm-robe-20151209.355.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-robe-badge.svg
-4.0K -rw-r--r-- 1 root root  228 Jul 19 05:48 packages/helm-robe-readme.txt
-4.0K -rw-r--r-- 1 root root  532 Jul 19 05:48 packages/helm-robe.log
- 16K -rw-r--r-- 1 root root  14K Jul 19 05:48 packages/helm-ros-20160812.1752.el
-4.0K -rw-r--r-- 1 root root  438 Jul 19 05:48 packages/helm-ros-20160812.1752.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-ros-badge.svg
-4.0K -rw-r--r-- 1 root root  152 Jul 19 05:48 packages/helm-ros-readme.txt
-4.0K -rw-r--r-- 1 root root  525 Jul 19 05:48 packages/helm-ros.log
-8.0K -rw-r--r-- 1 root root 6.1K Jul 19 05:48 packages/helm-rtags-20191222.920.el
-4.0K -rw-r--r-- 1 root root  434 Jul 19 05:48 packages/helm-rtags-20191222.920.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-rtags-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul 19 05:48 packages/helm-rtags-readme.txt
-4.0K -rw-r--r-- 1 root root  533 Jul 19 05:48 packages/helm-rtags.log
-4.0K -rw-r--r-- 1 root root 3.6K Jul 19 05:48 packages/helm-rubygems-local-20130712.111.el
-4.0K -rw-r--r-- 1 root root  387 Jul 19 05:48 packages/helm-rubygems-local-20130712.111.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-rubygems-local-badge.svg
-4.0K -rw-r--r-- 1 root root  520 Jul 19 05:48 packages/helm-rubygems-local.log
- 12K -rw-r--r-- 1 root root 8.4K Jul 19 05:48 packages/helm-rubygems-org-20140826.1156.el
-4.0K -rw-r--r-- 1 root root  492 Jul 19 05:48 packages/helm-rubygems-org-20140826.1156.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-rubygems-org-badge.svg
-4.0K -rw-r--r-- 1 root root  814 Jul 19 05:48 packages/helm-rubygems-org-readme.txt
-4.0K -rw-r--r-- 1 root root  593 Jul 19 05:48 packages/helm-rubygems-org.log
-8.0K -rw-r--r-- 1 root root 4.1K Jul 19 05:48 packages/helm-safari-20160404.324.el
-4.0K -rw-r--r-- 1 root root  425 Jul 19 05:48 packages/helm-safari-20160404.324.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-safari-badge.svg
-4.0K -rw-r--r-- 1 root root  398 Jul 19 05:48 packages/helm-safari-readme.txt
-4.0K -rw-r--r-- 1 root root  544 Jul 19 05:48 packages/helm-safari.log
-8.0K -rw-r--r-- 1 root root 5.2K Jul 19 05:48 packages/helm-sage-20160514.745.el
-4.0K -rw-r--r-- 1 root root  466 Jul 19 05:48 packages/helm-sage-20160514.745.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-sage-badge.svg
-4.0K -rw-r--r-- 1 root root  317 Jul 19 05:48 packages/helm-sage-readme.txt
-4.0K -rw-r--r-- 1 root root  526 Jul 19 05:48 packages/helm-sage.log
- 16K -rw-r--r-- 1 root root  13K Jul 19 05:48 packages/helm-searcher-20210221.923.el
-4.0K -rw-r--r-- 1 root root  432 Jul 19 05:48 packages/helm-searcher-20210221.923.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-searcher-badge.svg
-4.0K -rw-r--r-- 1 root root   33 Jul 19 05:48 packages/helm-searcher-readme.txt
-4.0K -rw-r--r-- 1 root root  560 Jul 19 05:48 packages/helm-searcher.log
-4.0K -rw-r--r-- 1 root root 3.9K Jul 19 05:48 packages/helm-selected-20171223.210.el
-4.0K -rw-r--r-- 1 root root  434 Jul 19 05:48 packages/helm-selected-20171223.210.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:48 packages/helm-selected-badge.svg
-4.0K -rw-r--r-- 1 root root  124 Jul 19 05:48 packages/helm-selected-readme.txt
-4.0K -rw-r--r-- 1 root root  556 Jul 19 05:49 packages/helm-selected.log
-4.0K -rw-r--r-- 1 root root  349 Jul 19 05:49 packages/helm-selector-20210125.857.entry
- 52K -rw-r--r-- 1 root root  50K Jul 19 05:49 packages/helm-selector-20210125.857.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-selector-badge.svg
-4.0K -rw-r--r-- 1 root root 1019 Jul 19 05:49 packages/helm-selector-readme.txt
-4.0K -rw-r--r-- 1 root root 2.2K Jul 19 05:49 packages/helm-selector.log
-4.0K -rw-r--r-- 1 root root 3.2K Jul 19 05:49 packages/helm-sheet-20130630.1239.el
-4.0K -rw-r--r-- 1 root root  378 Jul 19 05:49 packages/helm-sheet-20130630.1239.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-sheet-badge.svg
-4.0K -rw-r--r-- 1 root root  162 Jul 19 05:49 packages/helm-sheet-readme.txt
-4.0K -rw-r--r-- 1 root root  534 Jul 19 05:49 packages/helm-sheet.log
-4.0K -rw-r--r-- 1 root root 3.5K Jul 19 05:49 packages/helm-shell-history-20210214.948.el
-4.0K -rw-r--r-- 1 root root  466 Jul 19 05:49 packages/helm-shell-history-20210214.948.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-shell-history-badge.svg
-4.0K -rw-r--r-- 1 root root  321 Jul 19 05:49 packages/helm-shell-history-readme.txt
-4.0K -rw-r--r-- 1 root root  600 Jul 19 05:49 packages/helm-shell-history.log
- 24K -rw-r--r-- 1 root root  22K Jul 19 05:49 packages/helm-slime-20191016.1601.el
-4.0K -rw-r--r-- 1 root root  506 Jul 19 05:49 packages/helm-slime-20191016.1601.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-slime-badge.svg
-4.0K -rw-r--r-- 1 root root  851 Jul 19 05:49 packages/helm-slime-readme.txt
-4.0K -rw-r--r-- 1 root root  538 Jul 19 05:49 packages/helm-slime.log
- 28K -rw-r--r-- 1 root root  28K Jul 19 05:49 packages/helm-sly-20210205.1424.el
-4.0K -rw-r--r-- 1 root root  480 Jul 19 05:49 packages/helm-sly-20210205.1424.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-sly-badge.svg
-4.0K -rw-r--r-- 1 root root  941 Jul 19 05:49 packages/helm-sly-readme.txt
-4.0K -rw-r--r-- 1 root root  522 Jul 19 05:49 packages/helm-sly.log
-4.0K -rw-r--r-- 1 root root 3.9K Jul 19 05:49 packages/helm-smex-20171004.2008.el
-4.0K -rw-r--r-- 1 root root  371 Jul 19 05:49 packages/helm-smex-20171004.2008.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-smex-badge.svg
-4.0K -rw-r--r-- 1 root root  219 Jul 19 05:49 packages/helm-smex-readme.txt
-4.0K -rw-r--r-- 1 root root  524 Jul 19 05:49 packages/helm-smex.log
-4.0K -rw-r--r-- 1 root root 3.6K Jul 19 05:49 packages/helm-spaces-20161001.1409.el
-4.0K -rw-r--r-- 1 root root  424 Jul 19 05:49 packages/helm-spaces-20161001.1409.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-spaces-badge.svg
-4.0K -rw-r--r-- 1 root root  179 Jul 19 05:49 packages/helm-spaces-readme.txt
-4.0K -rw-r--r-- 1 root root  542 Jul 19 05:49 packages/helm-spaces.log
-8.0K -rw-r--r-- 1 root root 4.4K Jul 19 05:49 packages/helm-spotify-20160905.2147.el
-4.0K -rw-r--r-- 1 root root  407 Jul 19 05:49 packages/helm-spotify-20160905.2147.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-spotify-badge.svg
- 20K -rw-r--r-- 1 root root  17K Jul 19 05:49 packages/helm-spotify-plus-20190913.2236.el
-4.0K -rw-r--r-- 1 root root  603 Jul 19 05:49 packages/helm-spotify-plus-20190913.2236.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-spotify-plus-badge.svg
-4.0K -rw-r--r-- 1 root root   50 Jul 19 05:49 packages/helm-spotify-plus-readme.txt
-4.0K -rw-r--r-- 1 root root  602 Jul 19 05:49 packages/helm-spotify-plus.log
-4.0K -rw-r--r-- 1 root root  158 Jul 19 05:49 packages/helm-spotify-readme.txt
-4.0K -rw-r--r-- 1 root root  983 Jul 19 05:49 packages/helm-spotify.log
-4.0K -rw-r--r-- 1 root root 1.3K Jul 19 05:49 packages/helm-sql-connect-20170319.1251.el
-4.0K -rw-r--r-- 1 root root  432 Jul 19 05:49 packages/helm-sql-connect-20170319.1251.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-sql-connect-badge.svg
-4.0K -rw-r--r-- 1 root root  136 Jul 19 05:49 packages/helm-sql-connect-readme.txt
-4.0K -rw-r--r-- 1 root root  587 Jul 19 05:49 packages/helm-sql-connect.log
- 16K -rw-r--r-- 1 root root  15K Jul 19 05:49 packages/helm-switch-shell-20210713.1440.el
-4.0K -rw-r--r-- 1 root root  523 Jul 19 05:49 packages/helm-switch-shell-20210713.1440.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-switch-shell-badge.svg
-4.0K -rw-r--r-- 1 root root 1.6K Jul 19 05:49 packages/helm-switch-shell-readme.txt
-4.0K -rw-r--r-- 1 root root  592 Jul 19 05:49 packages/helm-switch-shell.log
- 12K -rw-r--r-- 1 root root  12K Jul 19 05:49 packages/helm-switch-to-repl-20210206.844.el
-4.0K -rw-r--r-- 1 root root  422 Jul 19 05:49 packages/helm-switch-to-repl-20210206.844.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-switch-to-repl-badge.svg
-4.0K -rw-r--r-- 1 root root  467 Jul 19 05:49 packages/helm-switch-to-repl-readme.txt
-4.0K -rw-r--r-- 1 root root  608 Jul 19 05:49 packages/helm-switch-to-repl.log
- 72K -rw-r--r-- 1 root root  69K Jul 19 05:49 packages/helm-swoop-20210426.547.el
-4.0K -rw-r--r-- 1 root root  499 Jul 19 05:49 packages/helm-swoop-20210426.547.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-swoop-badge.svg
-4.0K -rw-r--r-- 1 root root 2.6K Jul 19 05:49 packages/helm-swoop-readme.txt
-4.0K -rw-r--r-- 1 root root  540 Jul 19 05:49 packages/helm-swoop.log
-4.0K -rw-r--r-- 1 root root  465 Jul 19 05:49 packages/helm-system-packages-20210628.1727.entry
-132K -rw-r--r-- 1 root root 130K Jul 19 05:49 packages/helm-system-packages-20210628.1727.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-system-packages-badge.svg
-4.0K -rw-r--r-- 1 root root   45 Jul 19 05:49 packages/helm-system-packages-readme.txt
-4.0K -rw-r--r-- 1 root root 2.0K Jul 19 05:49 packages/helm-system-packages.log
- 16K -rw-r--r-- 1 root root  14K Jul 19 05:49 packages/helm-systemd-20210105.542.el
-4.0K -rw-r--r-- 1 root root  345 Jul 19 05:49 packages/helm-systemd-20210105.542.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-systemd-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul 19 05:49 packages/helm-systemd-readme.txt
-4.0K -rw-r--r-- 1 root root  609 Jul 19 05:49 packages/helm-systemd.log
-8.0K -rw-r--r-- 1 root root 4.1K Jul 19 05:49 packages/helm-tail-20181124.439.el
-4.0K -rw-r--r-- 1 root root  433 Jul 19 05:49 packages/helm-tail-20181124.439.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-tail-badge.svg
-4.0K -rw-r--r-- 1 root root  115 Jul 19 05:49 packages/helm-tail-readme.txt
-4.0K -rw-r--r-- 1 root root  524 Jul 19 05:49 packages/helm-tail.log
- 12K -rw-r--r-- 1 root root 9.1K Jul 19 05:49 packages/helm-taskswitch-20190304.1414.el
-4.0K -rw-r--r-- 1 root root  411 Jul 19 05:49 packages/helm-taskswitch-20190304.1414.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-taskswitch-badge.svg
-4.0K -rw-r--r-- 1 root root 1.5K Jul 19 05:49 packages/helm-taskswitch-readme.txt
-4.0K -rw-r--r-- 1 root root  573 Jul 19 05:49 packages/helm-taskswitch.log
-4.0K -rw-r--r-- 1 root root 2.8K Jul 19 05:49 packages/helm-themes-20200323.712.el
-4.0K -rw-r--r-- 1 root root  399 Jul 19 05:49 packages/helm-themes-20200323.712.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-themes-badge.svg
-4.0K -rw-r--r-- 1 root root  107 Jul 19 05:49 packages/helm-themes-readme.txt
-4.0K -rw-r--r-- 1 root root  548 Jul 19 05:49 packages/helm-themes.log
- 12K -rw-r--r-- 1 root root 8.3K Jul 19 05:49 packages/helm-tramp-20190616.125.el
-4.0K -rw-r--r-- 1 root root  371 Jul 19 05:49 packages/helm-tramp-20190616.125.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-tramp-badge.svg
-4.0K -rw-r--r-- 1 root root  247 Jul 19 05:49 packages/helm-tramp-readme.txt
-4.0K -rw-r--r-- 1 root root  539 Jul 19 05:49 packages/helm-tramp.log
-4.0K -rw-r--r-- 1 root root 2.7K Jul 19 05:49 packages/helm-unicode-20180608.1407.el
-4.0K -rw-r--r-- 1 root root  209 Jul 19 05:49 packages/helm-unicode-20180608.1407.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-unicode-badge.svg
-4.0K -rw-r--r-- 1 root root   63 Jul 19 05:49 packages/helm-unicode-readme.txt
-4.0K -rw-r--r-- 1 root root  550 Jul 19 05:49 packages/helm-unicode.log
-4.0K -rw-r--r-- 1 root root  439 Jul 19 05:49 packages/helm-w32-launcher-20141223.2014.entry
- 32K -rw-r--r-- 1 root root  30K Jul 19 05:49 packages/helm-w32-launcher-20141223.2014.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-w32-launcher-badge.svg
-4.0K -rw-r--r-- 1 root root  335 Jul 19 05:49 packages/helm-w32-launcher-readme.txt
-4.0K -rw-r--r-- 1 root root 1.5K Jul 19 05:49 packages/helm-w32-launcher.log
-8.0K -rw-r--r-- 1 root root 6.3K Jul 19 05:49 packages/helm-w3m-20210315.723.el
-4.0K -rw-r--r-- 1 root root  238 Jul 19 05:49 packages/helm-w3m-20210315.723.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-w3m-badge.svg
-4.0K -rw-r--r-- 1 root root  445 Jul 19 05:49 packages/helm-w3m.log
-8.0K -rw-r--r-- 1 root root 6.9K Jul 19 05:49 packages/helm-wikipedia-20210525.717.el
-4.0K -rw-r--r-- 1 root root  239 Jul 19 05:49 packages/helm-wikipedia-20210525.717.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-wikipedia-badge.svg
-4.0K -rw-r--r-- 1 root root   41 Jul 19 05:49 packages/helm-wikipedia-readme.txt
-4.0K -rw-r--r-- 1 root root  568 Jul 19 05:49 packages/helm-wikipedia.log
-8.0K -rw-r--r-- 1 root root 4.7K Jul 19 05:49 packages/helm-wordnet-20160128.1507.el
-4.0K -rw-r--r-- 1 root root  475 Jul 19 05:49 packages/helm-wordnet-20160128.1507.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-wordnet-badge.svg
-4.0K -rw-r--r-- 1 root root  225 Jul 19 05:49 packages/helm-wordnet-readme.txt
-4.0K -rw-r--r-- 1 root root  556 Jul 19 05:49 packages/helm-wordnet.log
-8.0K -rw-r--r-- 1 root root 7.7K Jul 19 05:49 packages/helm-xcdoc-20160116.1018.el
-4.0K -rw-r--r-- 1 root root  437 Jul 19 05:49 packages/helm-xcdoc-20160116.1018.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-xcdoc-badge.svg
-4.0K -rw-r--r-- 1 root root  614 Jul 19 05:49 packages/helm-xcdoc-readme.txt
-4.0K -rw-r--r-- 1 root root  546 Jul 19 05:49 packages/helm-xcdoc.log
-8.0K -rw-r--r-- 1 root root 6.6K Jul 19 05:49 packages/helm-xref-20201004.1817.el
-4.0K -rw-r--r-- 1 root root  392 Jul 19 05:49 packages/helm-xref-20201004.1817.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-xref-badge.svg
-4.0K -rw-r--r-- 1 root root  452 Jul 19 05:49 packages/helm-xref.log
-4.0K -rw-r--r-- 1 root root 3.8K Jul 19 05:49 packages/helm-youtube-20190101.1733.el
-4.0K -rw-r--r-- 1 root root  470 Jul 19 05:49 packages/helm-youtube-20190101.1733.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-youtube-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul 19 05:49 packages/helm-youtube-readme.txt
-4.0K -rw-r--r-- 1 root root  556 Jul 19 05:49 packages/helm-youtube.log
-4.0K -rw-r--r-- 1 root root 1.9K Jul 19 05:49 packages/helm-z-20171204.325.el
-4.0K -rw-r--r-- 1 root root  308 Jul 19 05:49 packages/helm-z-20171204.325.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-z-badge.svg
-4.0K -rw-r--r-- 1 root root   46 Jul 19 05:49 packages/helm-z-readme.txt
-4.0K -rw-r--r-- 1 root root  500 Jul 19 05:49 packages/helm-z.log
-4.0K -rw-r--r-- 1 root root 3.8K Jul 19 05:49 packages/helm-zhihu-daily-20160625.1145.el
-4.0K -rw-r--r-- 1 root root  451 Jul 19 05:49 packages/helm-zhihu-daily-20160625.1145.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 19 05:49 packages/helm-zhihu-daily-badge.svg
-4.0K -rw-r--r-- 1 root root  293 Jul 19 05:49 packages/helm-zhihu-daily-readme.txt
-4.0K -rw-r--r-- 1 root root  586 Jul 19 05:49 packages/helm-zhihu-daily.log
+4.0K -rw-r--r-- 1 root root  284 Jul 19 12:25 packages/helm-org-recent-headings.log
+ 84K -rw-r--r-- 1 root root  82K Jul 19 12:25 packages/helm-org-rifle-20200512.1943.el
+4.0K -rw-r--r-- 1 root root  468 Jul 19 12:25 packages/helm-org-rifle-20200512.1943.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-org-rifle-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul 19 12:25 packages/helm-org-rifle-readme.txt
+4.0K -rw-r--r-- 1 root root  564 Jul 19 12:25 packages/helm-org-rifle.log
+4.0K -rw-r--r-- 1 root root 2.3K Jul 19 12:25 packages/helm-org.log
+8.0K -rw-r--r-- 1 root root 4.5K Jul 19 12:25 packages/helm-orgcard-20151001.1524.el
+4.0K -rw-r--r-- 1 root root  368 Jul 19 12:25 packages/helm-orgcard-20151001.1524.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-orgcard-badge.svg
+4.0K -rw-r--r-- 1 root root  181 Jul 19 12:25 packages/helm-orgcard-readme.txt
+4.0K -rw-r--r-- 1 root root  552 Jul 19 12:25 packages/helm-orgcard.log
+4.0K -rw-r--r-- 1 root root 3.3K Jul 19 12:25 packages/helm-osx-app-20190717.958.el
+4.0K -rw-r--r-- 1 root root  320 Jul 19 12:25 packages/helm-osx-app-20190717.958.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-osx-app-badge.svg
+4.0K -rw-r--r-- 1 root root   33 Jul 19 12:25 packages/helm-osx-app-readme.txt
+4.0K -rw-r--r-- 1 root root  552 Jul 19 12:25 packages/helm-osx-app.log
+8.0K -rw-r--r-- 1 root root 6.0K Jul 19 12:25 packages/helm-pages-20161121.226.el
+4.0K -rw-r--r-- 1 root root  451 Jul 19 12:25 packages/helm-pages-20161121.226.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-pages-badge.svg
+4.0K -rw-r--r-- 1 root root   56 Jul 19 12:25 packages/helm-pages-readme.txt
+4.0K -rw-r--r-- 1 root root  544 Jul 19 12:25 packages/helm-pages.log
+8.0K -rw-r--r-- 1 root root 5.3K Jul 19 12:25 packages/helm-pass-20210221.1655.el
+4.0K -rw-r--r-- 1 root root  486 Jul 19 12:25 packages/helm-pass-20210221.1655.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-pass-badge.svg
+4.0K -rw-r--r-- 1 root root  570 Jul 19 12:25 packages/helm-pass-readme.txt
+4.0K -rw-r--r-- 1 root root  530 Jul 19 12:25 packages/helm-pass.log
+4.0K -rw-r--r-- 1 root root  393 Jul 19 12:25 packages/helm-perldoc-20200315.1716.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 19 12:25 packages/helm-perldoc-20200315.1716.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-perldoc-badge.svg
+4.0K -rw-r--r-- 1 root root  120 Jul 19 12:25 packages/helm-perldoc-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Jul 19 12:25 packages/helm-perldoc.log
+ 12K -rw-r--r-- 1 root root 9.0K Jul 19 12:25 packages/helm-perspeen-20170228.1345.el
+4.0K -rw-r--r-- 1 root root  360 Jul 19 12:25 packages/helm-perspeen-20170228.1345.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-perspeen-badge.svg
+4.0K -rw-r--r-- 1 root root  499 Jul 19 12:25 packages/helm-perspeen-readme.txt
+4.0K -rw-r--r-- 1 root root  560 Jul 19 12:25 packages/helm-perspeen.log
+4.0K -rw-r--r-- 1 root root 1.8K Jul 19 12:25 packages/helm-phpunit-20160513.853.el
+4.0K -rw-r--r-- 1 root root  418 Jul 19 12:25 packages/helm-phpunit-20160513.853.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-phpunit-badge.svg
+4.0K -rw-r--r-- 1 root root  244 Jul 19 12:25 packages/helm-phpunit-readme.txt
+4.0K -rw-r--r-- 1 root root  553 Jul 19 12:25 packages/helm-phpunit.log
+8.0K -rw-r--r-- 1 root root 6.1K Jul 19 12:25 packages/helm-posframe-20210412.1147.el
+4.0K -rw-r--r-- 1 root root  408 Jul 19 12:25 packages/helm-posframe-20210412.1147.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-posframe-badge.svg
+4.0K -rw-r--r-- 1 root root  776 Jul 19 12:25 packages/helm-posframe-readme.txt
+4.0K -rw-r--r-- 1 root root  559 Jul 19 12:25 packages/helm-posframe.log
+4.0K -rw-r--r-- 1 root root  333 Jul 19 12:25 packages/helm-proc-20161006.305.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 19 12:25 packages/helm-proc-20161006.305.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-proc-badge.svg
+4.0K -rw-r--r-- 1 root root  517 Jul 19 12:25 packages/helm-proc-readme.txt
+4.0K -rw-r--r-- 1 root root  888 Jul 19 12:25 packages/helm-proc.log
+4.0K -rw-r--r-- 1 root root 2.3K Jul 19 12:25 packages/helm-project-persist-20151210.1543.el
+4.0K -rw-r--r-- 1 root root  388 Jul 19 12:25 packages/helm-project-persist-20151210.1543.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-project-persist-badge.svg
+4.0K -rw-r--r-- 1 root root  101 Jul 19 12:25 packages/helm-project-persist-readme.txt
+4.0K -rw-r--r-- 1 root root  613 Jul 19 12:25 packages/helm-project-persist.log
+ 52K -rw-r--r-- 1 root root  51K Jul 19 12:25 packages/helm-projectile-20201217.908.el
+4.0K -rw-r--r-- 1 root root  410 Jul 19 12:25 packages/helm-projectile-20201217.908.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-projectile-badge.svg
+4.0K -rw-r--r-- 1 root root  356 Jul 19 12:25 packages/helm-projectile-readme.txt
+4.0K -rw-r--r-- 1 root root  573 Jul 19 12:25 packages/helm-projectile.log
+4.0K -rw-r--r-- 1 root root 3.5K Jul 19 12:25 packages/helm-prosjekt-20140129.717.el
+4.0K -rw-r--r-- 1 root root  363 Jul 19 12:25 packages/helm-prosjekt-20140129.717.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-prosjekt-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Jul 19 12:25 packages/helm-prosjekt-readme.txt
+4.0K -rw-r--r-- 1 root root  553 Jul 19 12:25 packages/helm-prosjekt.log
+4.0K -rw-r--r-- 1 root root  281 Jul 19 12:25 packages/helm-pt-20160214.2342.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 19 12:25 packages/helm-pt-20160214.2342.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-pt-badge.svg
+4.0K -rw-r--r-- 1 root root  203 Jul 19 12:25 packages/helm-pt-readme.txt
+4.0K -rw-r--r-- 1 root root  849 Jul 19 12:25 packages/helm-pt.log
+4.0K -rw-r--r-- 1 root root 4.0K Jul 19 12:25 packages/helm-purpose-20170114.1636.el
+4.0K -rw-r--r-- 1 root root  347 Jul 19 12:25 packages/helm-purpose-20170114.1636.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-purpose-badge.svg
+4.0K -rw-r--r-- 1 root root  835 Jul 19 12:25 packages/helm-purpose-readme.txt
+4.0K -rw-r--r-- 1 root root  548 Jul 19 12:25 packages/helm-purpose.log
+4.0K -rw-r--r-- 1 root root  388 Jul 19 12:25 packages/helm-pydoc-20160918.542.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 19 12:25 packages/helm-pydoc-20160918.542.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-pydoc-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul 19 12:25 packages/helm-pydoc-readme.txt
+4.0K -rw-r--r-- 1 root root  945 Jul 19 12:25 packages/helm-pydoc.log
+ 12K -rw-r--r-- 1 root root  11K Jul 19 12:25 packages/helm-qiita-20190526.1359.el
+4.0K -rw-r--r-- 1 root root  401 Jul 19 12:25 packages/helm-qiita-20190526.1359.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-qiita-badge.svg
+4.0K -rw-r--r-- 1 root root   50 Jul 19 12:25 packages/helm-qiita-readme.txt
+4.0K -rw-r--r-- 1 root root  542 Jul 19 12:25 packages/helm-qiita.log
+4.0K -rw-r--r-- 1 root root  347 Jul 19 12:25 packages/helm-rage-20180118.1532.entry
+232K -rw-r--r-- 1 root root 230K Jul 19 12:25 packages/helm-rage-20180118.1532.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-rage-badge.svg
+4.0K -rw-r--r-- 1 root root   27 Jul 19 12:25 packages/helm-rage-readme.txt
+8.0K -rw-r--r-- 1 root root 4.7K Jul 19 12:25 packages/helm-rage.log
+ 12K -rw-r--r-- 1 root root  11K Jul 19 12:25 packages/helm-rails-20130424.1519.el
+4.0K -rw-r--r-- 1 root root  455 Jul 19 12:25 packages/helm-rails-20130424.1519.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-rails-badge.svg
+4.0K -rw-r--r-- 1 root root  156 Jul 19 12:25 packages/helm-rails-readme.txt
+4.0K -rw-r--r-- 1 root root  532 Jul 19 12:25 packages/helm-rails.log
+4.0K -rw-r--r-- 1 root root  409 Jul 19 12:25 packages/helm-rb-20131123.1639.entry
+ 12K -rw-r--r-- 1 root root  10K Jul 19 12:25 packages/helm-rb-20131123.1639.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-rb-badge.svg
+4.0K -rw-r--r-- 1 root root   14 Jul 19 12:25 packages/helm-rb-readme.txt
+4.0K -rw-r--r-- 1 root root  893 Jul 19 12:25 packages/helm-rb.log
+4.0K -rw-r--r-- 1 root root 2.7K Jul 19 12:25 packages/helm-rdefs-20161130.536.el
+4.0K -rw-r--r-- 1 root root  418 Jul 19 12:25 packages/helm-rdefs-20161130.536.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-rdefs-badge.svg
+4.0K -rw-r--r-- 1 root root   80 Jul 19 12:25 packages/helm-rdefs-readme.txt
+4.0K -rw-r--r-- 1 root root  538 Jul 19 12:25 packages/helm-rdefs.log
+ 16K -rw-r--r-- 1 root root  16K Jul 19 12:25 packages/helm-recoll-20200805.1235.el
+4.0K -rw-r--r-- 1 root root  466 Jul 19 12:25 packages/helm-recoll-20200805.1235.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-recoll-badge.svg
+4.0K -rw-r--r-- 1 root root  546 Jul 19 12:25 packages/helm-recoll-readme.txt
+4.0K -rw-r--r-- 1 root root  606 Jul 19 12:25 packages/helm-recoll.log
+108K -rw-r--r-- 1 root root 107K Jul 19 12:25 packages/helm-rg-20200721.725.el
+4.0K -rw-r--r-- 1 root root  453 Jul 19 12:25 packages/helm-rg-20200721.725.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-rg-badge.svg
+8.0K -rw-r--r-- 1 root root 6.1K Jul 19 12:25 packages/helm-rg-readme.txt
+4.0K -rw-r--r-- 1 root root  516 Jul 19 12:25 packages/helm-rg.log
+8.0K -rw-r--r-- 1 root root 6.3K Jul 19 12:25 packages/helm-rhythmbox-20160524.1158.el
+4.0K -rw-r--r-- 1 root root  375 Jul 19 12:25 packages/helm-rhythmbox-20160524.1158.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-rhythmbox-badge.svg
+4.0K -rw-r--r-- 1 root root  638 Jul 19 12:25 packages/helm-rhythmbox-readme.txt
+4.0K -rw-r--r-- 1 root root  567 Jul 19 12:25 packages/helm-rhythmbox.log
+4.0K -rw-r--r-- 1 root root 1.7K Jul 19 12:25 packages/helm-robe-20151209.355.el
+4.0K -rw-r--r-- 1 root root  355 Jul 19 12:25 packages/helm-robe-20151209.355.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-robe-badge.svg
+4.0K -rw-r--r-- 1 root root  228 Jul 19 12:25 packages/helm-robe-readme.txt
+4.0K -rw-r--r-- 1 root root  532 Jul 19 12:25 packages/helm-robe.log
+ 16K -rw-r--r-- 1 root root  14K Jul 19 12:25 packages/helm-ros-20160812.1752.el
+4.0K -rw-r--r-- 1 root root  438 Jul 19 12:25 packages/helm-ros-20160812.1752.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-ros-badge.svg
+4.0K -rw-r--r-- 1 root root  152 Jul 19 12:25 packages/helm-ros-readme.txt
+4.0K -rw-r--r-- 1 root root  525 Jul 19 12:25 packages/helm-ros.log
+8.0K -rw-r--r-- 1 root root 6.1K Jul 19 12:25 packages/helm-rtags-20191222.920.el
+4.0K -rw-r--r-- 1 root root  434 Jul 19 12:25 packages/helm-rtags-20191222.920.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-rtags-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul 19 12:25 packages/helm-rtags-readme.txt
+4.0K -rw-r--r-- 1 root root  533 Jul 19 12:25 packages/helm-rtags.log
+4.0K -rw-r--r-- 1 root root 3.6K Jul 19 12:25 packages/helm-rubygems-local-20130712.111.el
+4.0K -rw-r--r-- 1 root root  387 Jul 19 12:25 packages/helm-rubygems-local-20130712.111.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-rubygems-local-badge.svg
+4.0K -rw-r--r-- 1 root root  520 Jul 19 12:25 packages/helm-rubygems-local.log
+ 12K -rw-r--r-- 1 root root 8.4K Jul 19 12:25 packages/helm-rubygems-org-20140826.1156.el
+4.0K -rw-r--r-- 1 root root  492 Jul 19 12:25 packages/helm-rubygems-org-20140826.1156.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-rubygems-org-badge.svg
+4.0K -rw-r--r-- 1 root root  814 Jul 19 12:25 packages/helm-rubygems-org-readme.txt
+4.0K -rw-r--r-- 1 root root  593 Jul 19 12:25 packages/helm-rubygems-org.log
+8.0K -rw-r--r-- 1 root root 4.1K Jul 19 12:25 packages/helm-safari-20160404.324.el
+4.0K -rw-r--r-- 1 root root  425 Jul 19 12:25 packages/helm-safari-20160404.324.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-safari-badge.svg
+4.0K -rw-r--r-- 1 root root  398 Jul 19 12:25 packages/helm-safari-readme.txt
+4.0K -rw-r--r-- 1 root root  544 Jul 19 12:25 packages/helm-safari.log
+8.0K -rw-r--r-- 1 root root 5.2K Jul 19 12:25 packages/helm-sage-20160514.745.el
+4.0K -rw-r--r-- 1 root root  466 Jul 19 12:25 packages/helm-sage-20160514.745.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-sage-badge.svg
+4.0K -rw-r--r-- 1 root root  317 Jul 19 12:25 packages/helm-sage-readme.txt
+4.0K -rw-r--r-- 1 root root  526 Jul 19 12:25 packages/helm-sage.log
+ 16K -rw-r--r-- 1 root root  13K Jul 19 12:25 packages/helm-searcher-20210221.923.el
+4.0K -rw-r--r-- 1 root root  432 Jul 19 12:25 packages/helm-searcher-20210221.923.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-searcher-badge.svg
+4.0K -rw-r--r-- 1 root root   33 Jul 19 12:25 packages/helm-searcher-readme.txt
+4.0K -rw-r--r-- 1 root root  560 Jul 19 12:25 packages/helm-searcher.log
+4.0K -rw-r--r-- 1 root root 3.9K Jul 19 12:25 packages/helm-selected-20171223.210.el
+4.0K -rw-r--r-- 1 root root  434 Jul 19 12:25 packages/helm-selected-20171223.210.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-selected-badge.svg
+4.0K -rw-r--r-- 1 root root  124 Jul 19 12:25 packages/helm-selected-readme.txt
+4.0K -rw-r--r-- 1 root root  556 Jul 19 12:25 packages/helm-selected.log
+4.0K -rw-r--r-- 1 root root  349 Jul 19 12:25 packages/helm-selector-20210125.857.entry
+ 52K -rw-r--r-- 1 root root  50K Jul 19 12:25 packages/helm-selector-20210125.857.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-selector-badge.svg
+4.0K -rw-r--r-- 1 root root 1019 Jul 19 12:25 packages/helm-selector-readme.txt
+4.0K -rw-r--r-- 1 root root 2.2K Jul 19 12:25 packages/helm-selector.log
+4.0K -rw-r--r-- 1 root root 3.2K Jul 19 12:25 packages/helm-sheet-20130630.1239.el
+4.0K -rw-r--r-- 1 root root  378 Jul 19 12:25 packages/helm-sheet-20130630.1239.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-sheet-badge.svg
+4.0K -rw-r--r-- 1 root root  162 Jul 19 12:25 packages/helm-sheet-readme.txt
+4.0K -rw-r--r-- 1 root root  534 Jul 19 12:25 packages/helm-sheet.log
+4.0K -rw-r--r-- 1 root root 3.5K Jul 19 12:25 packages/helm-shell-history-20210214.948.el
+4.0K -rw-r--r-- 1 root root  466 Jul 19 12:25 packages/helm-shell-history-20210214.948.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-shell-history-badge.svg
+4.0K -rw-r--r-- 1 root root  321 Jul 19 12:25 packages/helm-shell-history-readme.txt
+4.0K -rw-r--r-- 1 root root  600 Jul 19 12:25 packages/helm-shell-history.log
+ 24K -rw-r--r-- 1 root root  22K Jul 19 12:25 packages/helm-slime-20191016.1601.el
+4.0K -rw-r--r-- 1 root root  506 Jul 19 12:25 packages/helm-slime-20191016.1601.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-slime-badge.svg
+4.0K -rw-r--r-- 1 root root  851 Jul 19 12:25 packages/helm-slime-readme.txt
+4.0K -rw-r--r-- 1 root root  538 Jul 19 12:25 packages/helm-slime.log
+ 28K -rw-r--r-- 1 root root  28K Jul 19 12:25 packages/helm-sly-20210205.1424.el
+4.0K -rw-r--r-- 1 root root  480 Jul 19 12:25 packages/helm-sly-20210205.1424.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-sly-badge.svg
+4.0K -rw-r--r-- 1 root root  941 Jul 19 12:25 packages/helm-sly-readme.txt
+4.0K -rw-r--r-- 1 root root  522 Jul 19 12:25 packages/helm-sly.log
+4.0K -rw-r--r-- 1 root root 3.9K Jul 19 12:25 packages/helm-smex-20171004.2008.el
+4.0K -rw-r--r-- 1 root root  371 Jul 19 12:25 packages/helm-smex-20171004.2008.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-smex-badge.svg
+4.0K -rw-r--r-- 1 root root  219 Jul 19 12:25 packages/helm-smex-readme.txt
+4.0K -rw-r--r-- 1 root root  524 Jul 19 12:25 packages/helm-smex.log
+4.0K -rw-r--r-- 1 root root 3.6K Jul 19 12:25 packages/helm-spaces-20161001.1409.el
+4.0K -rw-r--r-- 1 root root  424 Jul 19 12:25 packages/helm-spaces-20161001.1409.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-spaces-badge.svg
+4.0K -rw-r--r-- 1 root root  179 Jul 19 12:25 packages/helm-spaces-readme.txt
+4.0K -rw-r--r-- 1 root root  542 Jul 19 12:25 packages/helm-spaces.log
+8.0K -rw-r--r-- 1 root root 4.4K Jul 19 12:25 packages/helm-spotify-20160905.2147.el
+4.0K -rw-r--r-- 1 root root  407 Jul 19 12:25 packages/helm-spotify-20160905.2147.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-spotify-badge.svg
+ 20K -rw-r--r-- 1 root root  17K Jul 19 12:25 packages/helm-spotify-plus-20190913.2236.el
+4.0K -rw-r--r-- 1 root root  603 Jul 19 12:25 packages/helm-spotify-plus-20190913.2236.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-spotify-plus-badge.svg
+4.0K -rw-r--r-- 1 root root   50 Jul 19 12:25 packages/helm-spotify-plus-readme.txt
+4.0K -rw-r--r-- 1 root root  602 Jul 19 12:25 packages/helm-spotify-plus.log
+4.0K -rw-r--r-- 1 root root  158 Jul 19 12:25 packages/helm-spotify-readme.txt
+4.0K -rw-r--r-- 1 root root  983 Jul 19 12:25 packages/helm-spotify.log
+4.0K -rw-r--r-- 1 root root 1.3K Jul 19 12:25 packages/helm-sql-connect-20170319.1251.el
+4.0K -rw-r--r-- 1 root root  432 Jul 19 12:25 packages/helm-sql-connect-20170319.1251.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-sql-connect-badge.svg
+4.0K -rw-r--r-- 1 root root  136 Jul 19 12:25 packages/helm-sql-connect-readme.txt
+4.0K -rw-r--r-- 1 root root  587 Jul 19 12:25 packages/helm-sql-connect.log
+ 16K -rw-r--r-- 1 root root  15K Jul 19 12:25 packages/helm-switch-shell-20210713.1440.el
+4.0K -rw-r--r-- 1 root root  523 Jul 19 12:25 packages/helm-switch-shell-20210713.1440.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-switch-shell-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul 19 12:25 packages/helm-switch-shell-readme.txt
+4.0K -rw-r--r-- 1 root root  593 Jul 19 12:26 packages/helm-switch-shell.log
+ 12K -rw-r--r-- 1 root root  12K Jul 19 12:25 packages/helm-switch-to-repl-20210206.844.el
+4.0K -rw-r--r-- 1 root root  422 Jul 19 12:25 packages/helm-switch-to-repl-20210206.844.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:25 packages/helm-switch-to-repl-badge.svg
+4.0K -rw-r--r-- 1 root root  467 Jul 19 12:25 packages/helm-switch-to-repl-readme.txt
+4.0K -rw-r--r-- 1 root root  608 Jul 19 12:26 packages/helm-switch-to-repl.log
+ 72K -rw-r--r-- 1 root root  69K Jul 19 12:26 packages/helm-swoop-20210426.547.el
+4.0K -rw-r--r-- 1 root root  499 Jul 19 12:26 packages/helm-swoop-20210426.547.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-swoop-badge.svg
+4.0K -rw-r--r-- 1 root root 2.6K Jul 19 12:26 packages/helm-swoop-readme.txt
+4.0K -rw-r--r-- 1 root root  541 Jul 19 12:26 packages/helm-swoop.log
+4.0K -rw-r--r-- 1 root root  465 Jul 19 12:26 packages/helm-system-packages-20210628.1727.entry
+132K -rw-r--r-- 1 root root 130K Jul 19 12:26 packages/helm-system-packages-20210628.1727.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-system-packages-badge.svg
+4.0K -rw-r--r-- 1 root root   45 Jul 19 12:26 packages/helm-system-packages-readme.txt
+4.0K -rw-r--r-- 1 root root 2.0K Jul 19 12:26 packages/helm-system-packages.log
+ 16K -rw-r--r-- 1 root root  14K Jul 19 12:26 packages/helm-systemd-20210105.542.el
+4.0K -rw-r--r-- 1 root root  345 Jul 19 12:26 packages/helm-systemd-20210105.542.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-systemd-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul 19 12:26 packages/helm-systemd-readme.txt
+4.0K -rw-r--r-- 1 root root  610 Jul 19 12:26 packages/helm-systemd.log
+8.0K -rw-r--r-- 1 root root 4.1K Jul 19 12:26 packages/helm-tail-20181124.439.el
+4.0K -rw-r--r-- 1 root root  433 Jul 19 12:26 packages/helm-tail-20181124.439.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-tail-badge.svg
+4.0K -rw-r--r-- 1 root root  115 Jul 19 12:26 packages/helm-tail-readme.txt
+4.0K -rw-r--r-- 1 root root  525 Jul 19 12:26 packages/helm-tail.log
+ 12K -rw-r--r-- 1 root root 9.1K Jul 19 12:26 packages/helm-taskswitch-20190304.1414.el
+4.0K -rw-r--r-- 1 root root  411 Jul 19 12:26 packages/helm-taskswitch-20190304.1414.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-taskswitch-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Jul 19 12:26 packages/helm-taskswitch-readme.txt
+4.0K -rw-r--r-- 1 root root  574 Jul 19 12:26 packages/helm-taskswitch.log
+4.0K -rw-r--r-- 1 root root 2.8K Jul 19 12:26 packages/helm-themes-20200323.712.el
+4.0K -rw-r--r-- 1 root root  399 Jul 19 12:26 packages/helm-themes-20200323.712.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-themes-badge.svg
+4.0K -rw-r--r-- 1 root root  107 Jul 19 12:26 packages/helm-themes-readme.txt
+4.0K -rw-r--r-- 1 root root  549 Jul 19 12:26 packages/helm-themes.log
+ 12K -rw-r--r-- 1 root root 8.3K Jul 19 12:26 packages/helm-tramp-20190616.125.el
+4.0K -rw-r--r-- 1 root root  371 Jul 19 12:26 packages/helm-tramp-20190616.125.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-tramp-badge.svg
+4.0K -rw-r--r-- 1 root root  247 Jul 19 12:26 packages/helm-tramp-readme.txt
+4.0K -rw-r--r-- 1 root root  540 Jul 19 12:26 packages/helm-tramp.log
+4.0K -rw-r--r-- 1 root root 2.7K Jul 19 12:26 packages/helm-unicode-20180608.1407.el
+4.0K -rw-r--r-- 1 root root  209 Jul 19 12:26 packages/helm-unicode-20180608.1407.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-unicode-badge.svg
+4.0K -rw-r--r-- 1 root root   63 Jul 19 12:26 packages/helm-unicode-readme.txt
+4.0K -rw-r--r-- 1 root root  551 Jul 19 12:26 packages/helm-unicode.log
+4.0K -rw-r--r-- 1 root root  439 Jul 19 12:26 packages/helm-w32-launcher-20141223.2014.entry
+ 32K -rw-r--r-- 1 root root  30K Jul 19 12:26 packages/helm-w32-launcher-20141223.2014.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-w32-launcher-badge.svg
+4.0K -rw-r--r-- 1 root root  335 Jul 19 12:26 packages/helm-w32-launcher-readme.txt
+4.0K -rw-r--r-- 1 root root 1.5K Jul 19 12:26 packages/helm-w32-launcher.log
+8.0K -rw-r--r-- 1 root root 6.3K Jul 19 12:26 packages/helm-w3m-20210315.723.el
+4.0K -rw-r--r-- 1 root root  238 Jul 19 12:26 packages/helm-w3m-20210315.723.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-w3m-badge.svg
+4.0K -rw-r--r-- 1 root root  445 Jul 19 12:26 packages/helm-w3m.log
+8.0K -rw-r--r-- 1 root root 6.9K Jul 19 12:26 packages/helm-wikipedia-20210525.717.el
+4.0K -rw-r--r-- 1 root root  239 Jul 19 12:26 packages/helm-wikipedia-20210525.717.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-wikipedia-badge.svg
+4.0K -rw-r--r-- 1 root root   41 Jul 19 12:26 packages/helm-wikipedia-readme.txt
+4.0K -rw-r--r-- 1 root root  568 Jul 19 12:26 packages/helm-wikipedia.log
+8.0K -rw-r--r-- 1 root root 4.7K Jul 19 12:26 packages/helm-wordnet-20160128.1507.el
+4.0K -rw-r--r-- 1 root root  475 Jul 19 12:26 packages/helm-wordnet-20160128.1507.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-wordnet-badge.svg
+4.0K -rw-r--r-- 1 root root  225 Jul 19 12:26 packages/helm-wordnet-readme.txt
+4.0K -rw-r--r-- 1 root root  556 Jul 19 12:26 packages/helm-wordnet.log
+8.0K -rw-r--r-- 1 root root 7.7K Jul 19 12:26 packages/helm-xcdoc-20160116.1018.el
+4.0K -rw-r--r-- 1 root root  437 Jul 19 12:26 packages/helm-xcdoc-20160116.1018.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-xcdoc-badge.svg
+4.0K -rw-r--r-- 1 root root  614 Jul 19 12:26 packages/helm-xcdoc-readme.txt
+4.0K -rw-r--r-- 1 root root  546 Jul 19 12:26 packages/helm-xcdoc.log
+8.0K -rw-r--r-- 1 root root 6.6K Jul 19 12:26 packages/helm-xref-20201004.1817.el
+4.0K -rw-r--r-- 1 root root  392 Jul 19 12:26 packages/helm-xref-20201004.1817.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-xref-badge.svg
+4.0K -rw-r--r-- 1 root root  452 Jul 19 12:26 packages/helm-xref.log
+4.0K -rw-r--r-- 1 root root 3.8K Jul 19 12:26 packages/helm-youtube-20190101.1733.el
+4.0K -rw-r--r-- 1 root root  470 Jul 19 12:26 packages/helm-youtube-20190101.1733.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-youtube-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul 19 12:26 packages/helm-youtube-readme.txt
+4.0K -rw-r--r-- 1 root root  556 Jul 19 12:26 packages/helm-youtube.log
+4.0K -rw-r--r-- 1 root root 1.9K Jul 19 12:26 packages/helm-z-20171204.325.el
+4.0K -rw-r--r-- 1 root root  308 Jul 19 12:26 packages/helm-z-20171204.325.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-z-badge.svg
+4.0K -rw-r--r-- 1 root root   46 Jul 19 12:26 packages/helm-z-readme.txt
+4.0K -rw-r--r-- 1 root root  500 Jul 19 12:26 packages/helm-z.log
+4.0K -rw-r--r-- 1 root root 3.8K Jul 19 12:26 packages/helm-zhihu-daily-20160625.1145.el
+4.0K -rw-r--r-- 1 root root  451 Jul 19 12:26 packages/helm-zhihu-daily-20160625.1145.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 19 12:26 packages/helm-zhihu-daily-badge.svg
+4.0K -rw-r--r-- 1 root root  293 Jul 19 12:26 packages/helm-zhihu-daily-readme.txt
+4.0K -rw-r--r-- 1 root root  586 Jul 19 12:26 packages/helm-zhihu-daily.log
