@@ -14,6 +14,7 @@ pyim-wbdict 是 pyim 的一个五笔词库包。
    (require 'pyim-wbdict)
    (setq pyim-default-scheme 'wubi)
    ;; (pyim-wbdict-v86-enable) ;86版五笔用户使用这个命令
+   ;; (pyim-wbdict-v86-single-enable) ;86版五笔用户使用这个命令，该词库为单字词库，以尽可能不重码减少选词需要为目的
    ;; (pyim-wbdict-v98-enable) ;98版五笔用户使用这个命令
    ;; (pyim-wbdict-v98-morphe-enable) ;98版五笔（单字）用户使用这个命令，该词库为超大字符集，部分生僻字形可能需要安装支持EXT-B的字体（如HanaMinB等）才能正确显示
    #+END_EXAMPLE

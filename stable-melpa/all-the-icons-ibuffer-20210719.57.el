@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ibuffer
 ;; Version: 1.3.1
-;; Package-Version: 20210718.1726
-;; Package-Commit: 4babb5721e6aba8c4435565426d06d749235367c
+;; Package-Version: 20210719.57
+;; Package-Commit: 43e253ac09ff3ba113c7ba2243fdbfa3a1a14ad9
 ;; Package-Requires: ((emacs "24.4") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ibuffer
 
@@ -148,9 +148,7 @@ See `ibuffer-formats' for details."
              (face (if all-the-icons-ibuffer-color-icon
                        (or (plist-get props :inherit) props)
                      'all-the-icons-ibuffer-icon-face))
-             (new-face `(:inherit ,face
-                         :family ,family
-                         :height ,all-the-icons-ibuffer-icon-size)))
+             (new-face `(:inherit ,face :family ,family)))
         (propertize icon 'face new-face)))))
 
 ;; Human readable file size for ibuffer
