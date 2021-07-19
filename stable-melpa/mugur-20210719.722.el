@@ -4,8 +4,8 @@
 
 ;; Author: Mihai Olteanu <mihai_olteanu@fastmail.fm>
 ;; Version: 2.0
-;; Package-Version: 20210503.1516
-;; Package-Commit: b84752c391c5fe515960f77c80d08f313df57f33
+;; Package-Version: 20210719.722
+;; Package-Commit: 63a0377ac1ad48171621c9f0c719b62ec9395d35
 ;; Package-Requires: ((emacs "26.1") (s "1.12.0") (anaphora "1.0.4") (dash "2.18.1") (cl-lib "1.0"))
 ;; Keywords: multimedia
 ;; URL: https://github.com/mihaiolteanu/mugur
@@ -1063,7 +1063,8 @@ at the beginning of the FILE-NAME and create this region."
 
     (with-temp-buffer
       ;; Extract the regions before and after the mugur region.
-      (insert-file-contents abs-path)
+      (and (file-exists-p abs-path)
+           (insert-file-contents abs-path))
       (let* ((comment-type (pcase file-extension
                              ((or "c" "h") "//")
                              ("mk" "#")))

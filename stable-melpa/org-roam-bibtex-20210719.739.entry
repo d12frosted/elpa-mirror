@@ -1,15 +1,15 @@
 (org-roam-bibtex .
-		 [(20210602 2113)
+		 [(20210719 739)
 		  ((emacs
 		    (27 2))
 		   (org-roam
-		    (1 2 2))
+		    (2 0 0))
 		   (bibtex-completion
 		    (2 0 0))
 		   (org-ref
 		    (1 1 1)))
 		  "Org Roam meets BibTeX" tar
-		  ((:commit . "c9865196efe7cfdfcced0d47ea3e5b39bdddd162")
+		  ((:commit . "eea7469fc32eddc9d74621b7ecc1f36832b7efd3")
 		   (:authors
 		    ("Mykhailo Shevchuk" . "mail@mshevchuk.com")
 		    ("Leo Vivier" . "leo.vivier+dev@gmail.com"))

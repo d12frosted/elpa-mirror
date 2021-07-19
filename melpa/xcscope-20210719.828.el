@@ -9,9 +9,9 @@
 ;;         Dima Kogan <dima@secretsauce.net>
 ;; Maintainer: Dima Kogan <dima@secretsauce.net>
 ;; Keywords: languages c
-;; Package-Commit: 8e441efab0757778fe3594ff68c378bf90f539f9
+;; Package-Commit: d228d7593d762e457340f678d14b663ef66d7cee
 ;; Homepage: https://github.com/dkogan/xcscope.el
-;; Package-Version: 20201025.2002
+;; Package-Version: 20210719.828
 ;; Package-X-Original-Version: 1.0
 
 ;; This file is not part of GNU Emacs.
@@ -2344,7 +2344,7 @@ using the mouse."
 
             ;; This should always match.
             (if (string-match
-                 "^\\([^\t]+\\)[ \t]+\\([^ \t]+\\)[ \t]+\\([0-9]+\\)[ \t]+\\(.*\\)\n"
+                 "^\\([^ \t]+\\)[ \t]+\\([^ \t]+\\)[ \t]+\\([0-9]+\\)[ \t]+\\(.*\\)\n"
                  line)
                 (progn
                   (let (str)

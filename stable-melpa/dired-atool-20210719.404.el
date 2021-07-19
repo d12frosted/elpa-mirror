@@ -4,8 +4,8 @@
 
 ;; Author: Hiroki YAMAKAWA <s06139@gmail.com>
 ;; URL: https://github.com/HKey/dired-atool
-;; Package-Version: 20210706.1456
-;; Package-Commit: c01e0a79c952a29db17c262c9ce8a90632b04b3a
+;; Package-Version: 20210719.404
+;; Package-Commit: 01416fd5961b901c50686c91cb59b3833adc831b
 ;; Version: 1.3.0
 ;; Package-Requires: ((emacs "24"))
 ;; Keywords: files
@@ -118,7 +118,8 @@ COMMAND-LIST is a list of a command separated by spaces."
     (format "* [%d files]" (length files))))
 
 (defun dired-atool--local-file-name (file)
-  "Return local file name if file is on a remote system. Return FILE for local files."
+  "Return local file name if FILE is on a remote system.
+Otherwise return FILE as is."
   (let ((local-file (file-remote-p file 'localname)))
     (or local-file file)))
 
