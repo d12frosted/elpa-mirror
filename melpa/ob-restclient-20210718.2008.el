@@ -4,8 +4,8 @@
 
 ;; Author: Alf Lervåg
 ;; Keywords: literate programming, reproducible research
-;; Package-Version: 20200316.759
-;; Package-Commit: 0ebfc7c5ebf96d2fe1a476439831363a5a43b9b6
+;; Package-Version: 20210718.2008
+;; Package-Commit: bfbc4d8e8a348c140f9328542daf5d979f0993e2
 ;; Homepage: https://github.com/alf/ob-restclient.el
 ;; Version: 0.02
 ;; Package-Requires: ((restclient "0"))
@@ -70,8 +70,8 @@ This function is called by `org-babel-execute-src-block'"
 	(goto-char (point-min))
 	(delete-trailing-whitespace)
 	(goto-char (point-min))
-      (restclient-http-parse-current-and-do
-       'restclient-http-do (org-babel-restclient-raw-payload-p params) t))
+        (restclient-http-parse-current-and-do
+         'restclient-http-do (org-babel-restclient--raw-payload-p params) t))
 
       (while restclient-within-call
         (sleep-for 0.05))
@@ -80,19 +80,22 @@ This function is called by `org-babel-execute-src-block'"
       (when (search-forward (buffer-name) nil t)
         (error "Restclient encountered an error"))
 
-      (if (org-babel-restclient-return-pure-payload-result-p params)
-          (org-babel-restclient-pure-payload-result)
-        (org-babel-restclient-wrap-result)))))
+      (when (or (org-babel-restclient--return-pure-payload-result-p params)
+                (assq :noheaders params))
+        (org-babel-restclient--hide-headers))
 
-(defun org-babel-restclient-wrap-result ()
+      (when (not (org-babel-restclient--return-pure-payload-result-p params))
+        (org-babel-restclient--wrap-result))
+      (buffer-string))))
+
+(defun org-babel-restclient--wrap-result ()
   "Wrap the contents of the buffer in an `org-mode' src block."
   (let ((mode-name (substring (symbol-name major-mode) 0 -5)))
     (insert (format "#+BEGIN_SRC %s\n" mode-name))
     (goto-char (point-max))
-    (insert "#+END_SRC\n")
-    (buffer-string)))
+    (insert "#+END_SRC\n")))
 
-(defun org-babel-restclient-pure-payload-result ()
+(defun org-babel-restclient--hide-headers ()
   "Just return the payload."
   (let ((comments-start
          (save-excursion
@@ -102,16 +105,17 @@ This function is called by `org-babel-execute-src-block'"
            ;; Include the last line as well
            (forward-line)
            (point))))
-    (buffer-substring (point-min) comments-start)))
+    (narrow-to-region (point-min) comments-start)))
 
 
-(defun org-babel-restclient-return-pure-payload-result-p (params)
+(defun org-babel-restclient--return-pure-payload-result-p (params)
   "Return `t' if the `:results' key in PARAMS contains `value' or `table'."
   (let ((result-type (cdr (assoc :results params))))
     (when result-type
       (string-match "value\\|table" result-type))))
 
-(defun org-babel-restclient-raw-payload-p (params)
+
+(defun org-babel-restclient--raw-payload-p (params)
   "Return t if the `:results' key in PARAMS contain `file'."
   (let ((result-type (cdr (assoc :results params))))
     (when result-type

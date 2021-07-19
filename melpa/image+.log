@@ -3,9 +3,7 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/image-plus.git
 
 Updating /mnt/store/melpa/working/image+/
-Built image+ in 4.992s, finished at 2021-07-18T20:05:01+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root  20K Jul 18 20:05 packages/image+-20150707.1616.el
-4.0K -rw-r--r-- 1 root root  390 Jul 18 20:05 packages/image+-20150707.1616.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 18 20:05 packages/image+-badge.svg
-4.0K -rw-r--r-- 1 root root 1.7K Jul 18 20:05 packages/image+-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: could not read Username for 'https://github.com': No such device or address
+error: Could not fetch origin
+

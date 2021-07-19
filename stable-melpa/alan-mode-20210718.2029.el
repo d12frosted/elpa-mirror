@@ -5,8 +5,8 @@
 ;; Author: Paul van Dam <pvandam@kjerner.com>
 ;; Maintainer: Paul van Dam <pvandam@kjerner.com>
 ;; Version: 1.0.0
-;; Package-Version: 20200723.1405
-;; Package-Commit: fc1fc0312b3e7f868f95b917a66719afb96f0c9a
+;; Package-Version: 20210718.2029
+;; Package-Commit: ba6318ed425274004d8f2b943fc796f01adf15ba
 ;; Created: 13 October 2017
 ;; URL: https://github.com/Kjerner/AlanForEmacs
 ;; Homepage: https://alan-platform.com/
@@ -46,6 +46,7 @@
 (require 'xref)
 (require 's)
 (require 'seq)
+(require 'cl)
 
 ;;; Code:
 
@@ -403,6 +404,19 @@ E.g. 'views' . 'queries' . 'context' . 'candidates' . 'of'"
 		(mapconcat 'identity path-list ".")
 	  "")))
 
+(defun alan--single-block (line)
+  "Check if a line is a single block.
+A single block is a line that starts with an open paren and end
+with a closing paren on the same line. LINE steps a number of
+lines forward or backward."
+  (save-excursion
+	(forward-line line)
+	(back-to-indentation)
+	(and (looking-at "\\s(")
+		 (eq (line-number-at-pos)
+			 (progn (forward-sexp) (line-number-at-pos)))
+		 (looking-back "\\s)$" 2))))
+
 (defun alan-mode-indent-line ()
   "Indentation based on parens.
 Not suitable for white space significant languages."
@@ -430,13 +444,12 @@ Not suitable for white space significant languages."
 		 (previous-line-indentation
 		  (setq new-indent previous-line-indentation)))
 		;; check for single block and add a level of indentation.
-		(save-excursion
-		  (back-to-indentation)
-		  (if (and (looking-at "\\s(")
-				   (eq (line-number-at-pos)
-					   (progn (forward-sexp) (line-number-at-pos))))
-			  (setq new-indent (min (if previous-line-indentation (+ previous-line-indentation tab-width) tab-width )
-									(+ new-indent tab-width)))))))
+		(when (alan--single-block 0)
+		  (if (alan--single-block -1)
+			  (setq new-indent previous-line-indentation)
+			(setq new-indent (min
+							  (if previous-line-indentation (+ previous-line-indentation tab-width) tab-width )
+							  (+ new-indent tab-width)))))))
 	(when new-indent
 	  (indent-line-to new-indent))))
 
@@ -594,15 +607,29 @@ Return nil if the script can not be found."
   :language "dependencies/dev/internals/alan/language"
   :build-dir "../.."
   :pairs (("{" . "}") ("(" . ")"))
-  :keywords (("->\\s-+\\(stategroup\\|component\\|group\\|dictionary\\|command\\|densematrix\\|sparsematrix\\|reference\\|number\\|text\\)\\(\\s-+\\|$\\)" 1 font-lock-type-face)
-			 (( "component" "types" "external" "->" "plural" "numerical"
-				"integer" "natural" "root" "]" ":" "*" "?"  "~" "+" "constrain"
-				"acyclic" "ordered" "dictionary" "densematrix" "sparsematrix"
-				"$" "==" "!=" "group" "number" "reference" "stategroup" "text"
-				"."  "!"  "!&" "&" ".^" "+^" "}" ">" "*&" "?^" ">>" "forward"
-				"self" "{" "graph" "usage" "implicit" "ignore" "experimental"
-				"libraries" "using") . font-lock-builtin-face)))
+  :keywords ((":\\s-+\\(stategroup\\|component\\|group\\|dictionary\\|densematrix\\|sparsematrix\\|reference\\|integer\\|natural\\|text\\)\\(\\s-+\\|$\\)" 1 font-lock-type-face)
+			 (("deprecated") . font-lock-warning-face)
+			 (("apply" "identical-variant-switch" "key-switch" "narrowest"
+			    "narrows" "non-empty" "parity-switch" "product" "sign-switch"
+			    "struct-switch" "sum" "switch" "variant-switch" "widening"
+			    "widens" "widest"
+			   ) . font-lock-function-name-face)
+			 (("!"  "!root" "$" "$^" "&" "(" ")" "," "-" "->" "."  ".&" ":" "::"
+			   "=" "=>" ">" ">>" ">key" "?"  "?>" "@" "@usage" "@usage-ignore"
+			   "@usage-propagate" "@warn" "[" "[]" "]" "^" "acyclic-graph"
+			   "apply" "as" "combinator" "component" "component-types"
+			   "compound" "context" "defines" "deprecated" "dictionary" "even"
+			   "external" "group" "identical" "identical-variant-switch" "in"
+			   "inferred" "integer" "is" "key-switch" "libraries" "narrowest"
+			   "narrows" "negative" "non" "non-empty" "none" "odd" "on"
+			   "ordered-graph" "parametric" "parity-switch" "plural" "positive"
+			   "primitive" "product" "reference" "required" "root" "self" "set"
+			   "sibling" "sign-switch" "singular" "stategroup" "struct"
+			   "struct-switch" "sum" "switch" "text" "using" "variant"
+			   "variant-switch" "when" "where" "widening" "widens" "widest"
+			   "zero" "{" "|" "||" "}") . font-lock-builtin-face)))
 
+;; TODO do not take keywords that are in comments.
 (defun alan-grammar-update-keyword ()
   "Update the keywords section based on all used keywords in this grammar file."
   (interactive)
@@ -612,7 +639,7 @@ Return nil if the script can not be found."
 	  (goto-char (point-min))
 
 	  (let ((keyword-point (re-search-forward "^keywords$"))
-			(root-point (re-search-forward "^root$"))
+			(root-point (re-search-forward "^root {$"))
 			(root-point-start (match-beginning 0)) ;; because the last search was for root
 			(alan-keywords (list)))
 		(while (re-search-forward "\\[\\(\\s-?'[^'\n]+'\\s-?,?\\)+\\]" nil t)
@@ -626,53 +653,25 @@ Return nil if the script can not be found."
 		(insert (string-join (mapcar (lambda (k) (concat "\t" k)) (sort (delete-dups alan-keywords ) 'string<)) "\n"))
 		(insert "\n\n")))))
 
-(defun alan-grammar-mode-indent-line ()
-  "Indentation based on parens and toggle indentation to min and max indentation possible."
-  (interactive)
-  (let
-	  (new-indent)
- 	(save-mark-and-excursion
-	  (beginning-of-line)
-	  (when (bobp) (indent-line-to 0)) ;;at the beginning indent at 0
-	  (let* ((parent-position (nth 1 (syntax-ppss))) ;; take the current indentation of the enclosing expression
-			 (parent-indent (if parent-position
-								(save-excursion (goto-char parent-position) (current-indentation))
-							  0))
-			 (current-indent (current-indentation))
-			 (previous-line-indentation (and
-										 (not (bobp))
-										 (save-excursion
-										   (forward-line -1)
-										   (current-indentation))))
-			 (min-indentation (if parent-position (+ parent-indent tab-width) 0))
-			 (max-indentation (+ previous-line-indentation tab-width)))
-		(cond
-		 ((and parent-position (looking-at "\\s-*\\s)"))
-		  (setq new-indent parent-indent))
-		 ((= current-indent min-indentation)
-		  (setq new-indent max-indentation))
-		 ((< current-indent min-indentation) ;; usually after a newline.
-		  (setq new-indent (max previous-line-indentation min-indentation)))
-		 ((> current-indent max-indentation)
-		  (setq new-indent max-indentation))
-		 ((<= current-indent max-indentation)
-		  (setq new-indent (- current-indent tab-width))))))
- 	(when new-indent
- 	  (indent-line-to new-indent))))
-
 ;;;###autoload (autoload 'alan-grammar-mode "alan-mode")
 (alan-define-mode alan-grammar-mode
 	"Major mode for editing Alan grammar files."
   :language "dependencies/dev/internals/alan/language"
   :build-dir "../.."
-  :pairs (("[" . "]"))
-  :keywords ((("rules" "root" "component" "indent" "keywords" "collection" "order"
-			   "predecessors" "successors" "group" "number" "reference" "stategroup"
-			   "has" "first" "last" "predecessor" "successor" "text" "[" "]" ","
-			   ) . font-lock-builtin-face))
-  (electric-indent-local-mode -1)
-  (local-set-key (kbd "RET") 'newline-and-indent)
-  (set (make-local-variable 'indent-line-function) 'alan-grammar-mode-indent-line))
+  :pairs (("[" . "]") ("{" . "}") ("(" . ")"))
+  :keywords (
+			 ("\\s-+\\(reference\\|stategroup\\|component\\|dictionary\\|group\\|integer\\|natural\\|text\\)\\(\\s-+\\|$\\)" 1 font-lock-type-face)
+			 (( "@block" "@break" "@break?"  "@list" "@list?"  "@order:" "@pad"
+			   "@raw" "@section" "@tabular" "@trim" "@trim-left" "@trim-none"
+			   "@trim-right" ) . font-lock-keyword-face)
+			 (("(" ")" "," "."  ":" "=" "@block" "@break" "@break?"  "@list"
+			   "@list?"  "@order:" "@pad" "@raw" "@section" "@tabular" "@trim" "@trim-left"
+			   "@trim-none" "@trim-right" "[" "]" "canonical" "component" "component-rules"
+			   "dictionary" "dynamic-order" "external" "first" "grammar" "group" "indent"
+			   "integer" "keywords" "last" "no" "node" "node-switch" "nodes" "none"
+			   "predecessor" "reference" "root" "set" "stategroup" "static" "successor" "text"
+			   "{" "|" "}"
+			   ) . font-lock-builtin-face)))
 
 (defun alan-template-yank ()
   "Yank but wrap as template."
@@ -710,42 +709,46 @@ Return nil if the script can not be found."
 	"Major mode for editing Alan application model files."
   :pairs (("{" . "}"))
   :keywords (
-			 ("\\(:\\|:=\\)\\s-+\\(stategroup\\|component\\|group\\|file\\|collection\\|command\\|reference-set\\|natural\\|integer\\|text\\)\\(\\s-+\\|$\\)" 2 font-lock-type-face)
+			 ("\\(:\\|:=\\)\\s-+\\(stategroup\\|component\\|group\\|file\\|collection\\|command\\|reference-set\\|number\\|text\\)\\(\\s-+\\|$\\)" 2 font-lock-type-face)
 			 (("today" "now" "zero" "true" "false") . font-lock-constant-face)
-			 (( "@ascending:" "@breakout" "@date-time" "@date" "@default:"
-			 "@dense-map" "@descending:" "@description:" "@desired" "@dormant"
-			 "@duration:" "@factor:" "@hidden" "@identifying" "@label:"
+			 (("@ascending:" "@breakout" "@date" "@date-time" "@default:"
+			 "@descending:" "@description:" "@desired" "@dormant" "@duration:"
+			 "@factor:" "@hidden" "@icon:" "@identifying" "@label:"
 			 "@linked-node-mapping" "@max:" "@metadata" "@min:" "@multi-line"
-			 "@name" "@namespace" "@ordered:" "@small" "@sticky" "@validate:"
-			 "@verified" "@visible" )
-			  . font-lock-keyword-face)
-			 (("add" "branch" "ceil" "convert" "count" "division" "floor" "increment"
-			   "max" "min" "remainder" "subtract" "sum" "sumlist" "base" "diff"
-			   "product")
-			  . font-lock-function-name-face)
-			 (( "-" "-<" "->" "," ":" ":=" "?" "?^" "." ".^" ".self" "(" ")" "["
-			 "]" "{" "}" "@" "@^" "@ascending:" "@breakout" "@date-time" "@date"
-			 "@default:" "@dense-map" "@descending:" "@description:" "@desired"
-			 "@dormant" "@duration:" "@factor:" "@hidden" "@identifying"
-			 "@label:" "@linked-node-mapping" "@max:" "@metadata" "@min:"
-			 "@multi-line" "@name" "@namespace" "@ordered:" "@small" "@sticky"
-			 "@validate:" "@verified" "@visible" "*" "/" "&" "&#" "#" "^" "+"
-			 "+^" "<-" "<" "<=" "=" "==" "=>" ">" ">=" "|" "||" "~>" "$" "$^"
-			 "10^" "acyclic-graph" "add" "and" "anonymous" "any" "as" "base"
-			 "can-create:" "can-delete:" "can-read:" "can-update:" "ceil"
-			 "collection" "command" "component" "count" "create" "creation-time"
-			 "delete" "deprecated" "diff" "division" "do" "dynamic" "equal"
-			 "external" "false" "file" "flatten" "floor" "forward" "from"
-			 "group" "guid" "has-todo:" "hours" "ignore" "in" "increment"
-			 "integer" "interface" "interfaces" "inverse" "join" "life-time"
-			 "log" "map" "match-branch" "match" "max" "min" "minutes"
-			 "mutation-time" "natural" "now" "number" "numerical-types" "on"
-			 "one" "ontimeout" "or" "ordered-graph" "password" "product"
-			 "reference-set" "remainder" "root" "seconds" "space" "stategroup"
-			 "std" "subtract" "sum" "sumlist" "switch" "text" "timer" "today"
-			 "true" "union" "unrestricted" "unsafe" "user" "users" "where"
-			 "with" "zero")
-			  . font-lock-builtin-face)))
+			 "@name" "@ordered:" "@small" "@sticky" "@style:" "@validate:"
+			 "@verified" "@visible") . font-lock-keyword-face)
+			 (("abs" "add" "ceil" "compare" "concat" "count" "create" "delete"
+			 "diff" "division" "ensure" "execute" "flatten" "floor" "inverse"
+			 "join" "product" "remainder" "subtract" "sum" "switch" "update"
+			 "walk") . font-lock-function-name-face)
+			 (("$" "$^" "&" "(" ")" "*" "+" "," "-" "-<" "->" "." ".&" "/" ":"
+			   "<" "<=" "<>" "=" "==" "=>" ">" ">=" "?"  "@" "@^" "@ascending:"
+			   "@breakout" "@color" "@date" "@date-time" "@default:"
+			   "@descending:" "@description:" "@desired" "@dormant:"
+			   "@duration:" "@emphasis" "@hidden" "@icon:" "@identifying"
+			   "@label" "@max:" "@metadata" "@min:" "@multi-line" "@name:"
+			   "@numerical-type:" "@show:" "@small" "@style:" "@transition:"
+			   "@validate:" "@verified" "[" "[]" "]" "^" "abs" "accent" "action"
+			   "active:" "acyclic-graph" "add" "anonymous" "as" "auto-increment"
+			   "background" "bind" "branch" "brand" "can-create:" "can-delete:"
+			   "can-execute:" "can-read:" "can-update:" "ceil" "collection"
+			   "command" "compare" "component" "concat" "count" "create"
+			   "creation-time" "current" "decimals:" "delete" "diff" "division"
+			   "downstream" "dynamic:" "empty" "ensure" "error" "execute"
+			   "external" "external-authentication:" "file" "flatten" "floor"
+			   "foreground" "from" "group" "guid" "has-todo:" "hide" "hours"
+			   "identities:" "identity-initializer:" "ignore" "in" "interactive"
+			   "interface" "interfaces" "inverse" "is" "join" "key" "label:"
+			   "life-time" "link" "max" "min" "minutes" "mutation-time" "node"
+			   "nodes" "none" "now" "number" "numerical-types" "ontimeout"
+			   "ordered-graph" "pad" "parameter" "password-initializer:"
+			   "password-status:" "password:" "positive" "product"
+			   "reference-set" "remainder" "reset:" "resolvable" "root"
+			   "seconds" "self" "show" "sibling" "space" "stategroup" "std"
+			   "sticky" "subtract" "success" "sum" "switch" "text"
+			   "time-in-seconds" "timer" "to-color" "to-text" "today" "union"
+			   "update" "user" "user-initializer:" "users" "walk" "warning"
+			   "where" "with" "{" "|" "||" "}" "~>") . font-lock-builtin-face)))
 
 ;;;###autoload (autoload 'alan-widget-mode "alan-mode")
 (alan-define-mode alan-widget-mode
@@ -867,6 +870,13 @@ this to refresh the buffer for example `flycheck-buffer'."
 (alan-define-mode alan-interface-mode
 	:keywords ((":\\s-+\\(stategroup\\|group\\|collection\\|number\\|text\\|command\\|file\\)" 1 font-lock-type-face))
 	:pairs (("{" . "}")))
+
+;;;###autoload (autoload 'alan-translations-mode "alan-mode")
+(alan-define-mode alan-translations-mode
+	:file-pattern "translations/.*\\.alan\\'")
+
+;;;###autoload (autoload 'alan-phrases-mode "alan-mode")
+(alan-define-mode alan-phrases-mode)
 
 (provide 'alan-mode)
 
