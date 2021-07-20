@@ -1,0 +1,65 @@
+(1
+ (caml .
+       [(4 7 1)
+	nil "OCaml code editing commands for Emacs" tar
+	((:url . "https://github.com/ocaml/ocaml/")
+	 (:maintainer "Damien Doligez" . "damien.doligez@inria.fr")
+	 (:authors
+	  ("Jacques Garrigue" . "garrigue@kurims.kyoto-u.ac.jp")
+	  ("Ian T Zimmerman" . "itz@rahul.net"))
+	 (:keywords "ocaml"))])
+ (markdown-mode .
+		[(2 4)
+		 ((emacs
+		   (25 1)))
+		 "Major mode for Markdown-formatted text" tar
+		 ((:url . "https://jblevins.org/projects/markdown-mode/")
+		  (:maintainer "Jason R. Blevins" . "jblevins@xbeta.org")
+		  (:authors
+		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
+		  (:keywords "markdown" "github flavored markdown" "itex"))])
+ (org-contrib .
+	      [(0 1)
+	       ((emacs
+		 (25 1))
+		(org
+		 (9 4 5)))
+	       "Add-ons that are no longer distributed with Org-mode" tar
+	       ((:url . "https://git.sr.ht/~bzg/org-contrib")
+		(:maintainer "Bastien Guerry" . "bzg@gnu.org")
+		(:authors
+		 ("Bastien Guerry" . "bzg@gnu.org"))
+		(:keywords "org"))])
+ (request .
+	  [(0 3 3)
+	   ((emacs
+	     (24 4)))
+	   "Compatible layer for URL request in Emacs" tar
+	   ((:url . "https://github.com/tkf/emacs-request")
+	    (:maintainer "Takafumi Arakaki <aka.tkf at gmail.com>")
+	    (:authors
+	     ("Takafumi Arakaki <aka.tkf at gmail.com>")))])
+ (sly .
+      [(1 0 43)
+       ((emacs
+	 (24 3)))
+       "Sylvester the Cat's Common Lisp IDE" tar
+       ((:url . "https://github.com/joaotavora/sly")
+	(:keywords "languages" "lisp" "sly"))])
+ (tuareg .
+	 [(2 3 0)
+	  ((caml
+	    (3 12 0 1))
+	   (emacs
+	    (24 4)))
+	  "OCaml mode for Emacs." tar
+	  ((:url . "https://github.com/ocaml/tuareg")
+	   (:maintainer "Albert Cohen" . "Albert.Cohen@inria.fr")
+	   (:authors
+	    ("Albert Cohen" . "Albert.Cohen@inria.fr")
+	    ("Sam Steingold" . "sds@gnu.org")
+	    ("Christophe Troestler" . "Christophe.Troestler@umons.ac.be")
+	    ("Till Varoquaux" . "till@pps.jussieu.fr")
+	    ("Sean McLaughlin" . "seanmcl@gmail.com")
+	    ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
+	   (:keywords "ocaml" "languages"))]))
