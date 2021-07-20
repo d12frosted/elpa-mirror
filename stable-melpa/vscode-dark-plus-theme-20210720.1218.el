@@ -4,8 +4,8 @@
 
 ;; Author: Ian Y.E. Pan
 ;; URL: https://github.com/ianpan870102/vscode-dark-plus-emacs-theme
-;; Package-Version: 20210530.629
-;; Package-Commit: bcae11818d74aa0de8e592b8349d90e512444758
+;; Package-Version: 20210720.1218
+;; Package-Commit: aadf603bccb51addfcbd1ee4f684f720d56df56f
 ;; Version: 0.0.0
 
 ;; This program is free software: you can redistribute it and/or modify
@@ -174,7 +174,7 @@
    `(org-level-2                              ((,class (:bold nil :foreground ,ms-lightblue))))
    `(org-level-3                              ((,class (:bold nil :foreground ,ms-blue))))
    `(org-level-4                              ((,class (:bold nil :foreground ,ms-bluegreen))))
-   `(org-code                                 ((,class (:foreground ,fg2))))
+   `(org-code                                 ((,class (:foreground ,ms-orange))))
    `(org-hide                                 ((,class (:foreground ,fg4))))
    `(org-date                                 ((,class (:underline t :foreground ,var) )))
    `(org-footnote                             ((,class (:underline t :foreground ,fg4))))
@@ -197,7 +197,7 @@
    `(org-scheduled-today                      ((,class (:foreground ,func :weight normal
                                                                     ,@(when vscode-dark-plus-scale-org-faces (list :height 1.2))))))
    `(org-ellipsis                             ((,class (:foreground ,builtin))))
-   `(org-verbatim                             ((,class (:foreground ,fg4))))
+   `(org-verbatim                             ((,class (:foreground ,ms-lightorange))))
    `(org-document-title                       ((,class (:foreground ,type :bold t
                                                                     ,@(when vscode-dark-plus-scale-org-faces (list :height 1.2)))))) ; title
    `(org-document-info                        ((,class (:foreground ,ms-yellow)))) ; author, date etc.

@@ -3,19 +3,6 @@ Fetcher: github
 Source:  https://github.com/abingham/emacs-codesearch.git
 
 Updating /mnt/store/melpa/working/codesearch/
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/codesearch/
-  to /tmp/codesearcheNwMIK/codesearch-20181006.1431
-    codesearch.el -> codesearch.el
-    listing-codesearch.el -> listing-codesearch.el
-Created codesearch-20181006.1431.tar containing:
-  codesearch-20181006.1431/
-  codesearch-20181006.1431/codesearch-pkg.el
-  codesearch-20181006.1431/codesearch.el
-  codesearch-20181006.1431/listing-codesearch.el
-Built codesearch in 4.654s, finished at 2021-07-20T07:40:27+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  490 Jul 20 07:40 packages/codesearch-20181006.1431.entry
- 20K -rw-r--r-- 1 root root  20K Jul 20 07:40 packages/codesearch-20181006.1431.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 20 07:40 packages/codesearch-badge.svg
-4.0K -rw-r--r-- 1 root root  774 Jul 20 07:40 packages/codesearch-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: unable to access 'https://github.com/abingham/emacs-codesearch.git/': gnutls_handshake() failed: Error in the pull function.
+
