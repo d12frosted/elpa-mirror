@@ -5,8 +5,8 @@
 ;; Author: Alex Murray <murray.alex@gmail.com>
 ;; Maintainer: Alex Murray <murray.alex@gmail.com>
 ;; URL: https://github.com/alexmurray/erc-matterircd
-;; Package-Version: 20210701.32
-;; Package-Commit: 6e9698310f5df5193bccb334839bca29e4bbfe30
+;; Package-Version: 20210720.412
+;; Package-Commit: caafa1a62a76c2132d8b0872d57684f877608408
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -282,7 +282,8 @@ to, edit or delete a post."
               (re-search-forward (concat " \\(" erc-matterircd-context-regexp "\\)\\s-*$") nil t))
       ;; delete and propertize message with the context id
       (let ((full-id (match-string-no-properties 1))
-            (context-id (match-string-no-properties 2))
+            (context-id (or (match-string-no-properties 4)
+                            (match-string-no-properties 2)))
             (start (match-beginning 1))
             (end (match-end 1))
             (source (buffer-substring-no-properties
@@ -290,14 +291,13 @@ to, edit or delete a post."
         (when erc-matterircd-replace-context-id
           (put-text-property start end
                              'display erc-matterircd-replace-context-id))
+        ;; ensure text properties don't get filled onto the next line by
+        ;; erc-fill or erc-insert-timestamp by specifyng rear-nonticky
         (add-text-properties start end
                              (list 'erc-matterircd-context-id context-id
                                    'erc-matterircd-source source
-                                   'help-echo full-id))
-        ;; ensure text properties don't get filled onto the next line by
-        ;; adding an extra space which won't have any properties
-        (goto-char (1+ end))
-        (insert " ")))))
+                                   'help-echo full-id
+                                   'rear-nonsticky t))))))
 
 (defvar erc-matterircd--pending-requests nil)
 
@@ -334,6 +334,8 @@ to, edit or delete a post."
              (with-current-buffer (erc-get-buffer channel)
                (erc-cmd-UPDATELASTVIEWED channel t))))
          ;; respects users wish to suppress responses
+         (setq handled erc-matterircd-suppress-mattermost-responses))
+        ((rx bos "login OK" eos)
          (setq handled erc-matterircd-suppress-mattermost-responses))
         ;; ((rx bos "updatelastviewed" (zero-or-more any) eos)
         ;;  ;; is an error regarding a previous call to updatelastviewed

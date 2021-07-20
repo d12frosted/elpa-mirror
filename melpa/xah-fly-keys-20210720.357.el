@@ -3,9 +3,9 @@
 ;; Copyright © 2013-2021, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 13.20.20210716143842
-;; Package-Version: 20210716.2139
-;; Package-Commit: a90b08d98fd3684b0adf47e8d3978b9679d69991
+;; Version: 13.21.20210719205611
+;; Package-Version: 20210720.357
+;; Package-Commit: bb64e7a7e01a2d271fe50e7c3756bb3fa71c80eb
 ;; Created: 10 Sep 2013
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: convenience, emulations, vim, ergoemacs
@@ -1509,7 +1509,7 @@ Version 2017-01-11"
 If not in `dired', do nothing.
 
 URL `http://ergoemacs.org/emacs/elisp_dired_rename_space_to_underscore.html'
-Version 2020-03-03"
+Version 2016-10-04 2020-03-03"
   (interactive)
   (require 'dired-aux)
   (if (eq major-mode 'dired-mode)
@@ -1527,7 +1527,7 @@ Version 2020-03-03"
   "In dired, rename current or marked files by replacing space to hyphen -.
 If not in `dired', do nothing.
 URL `http://ergoemacs.org/emacs/elisp_dired_rename_space_to_underscore.html'
-Version 2019-11-24"
+Version 2016-10-04 2019-11-24"
   (interactive)
   (require 'dired-aux)
   (if (eq major-mode 'dired-mode)
@@ -4750,4 +4750,3 @@ URL `http://ergoemacs.org/misc/ergoemacs_vi_mode.html'"
 (provide 'xah-fly-keys)
 
 ;;; xah-fly-keys.el ends here
-

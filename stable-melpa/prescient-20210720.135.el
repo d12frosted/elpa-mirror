@@ -5,8 +5,8 @@
 ;; Author: Radon Rosborough <radon.neon@gmail.com>
 ;; Homepage: https://github.com/raxod502/prescient.el
 ;; Keywords: extensions
-;; Package-Version: 20210425.1720
-;; Package-Commit: 4a0f5405798cfcb98ea005078ef2e2d490e922c4
+;; Package-Version: 20210720.135
+;; Package-Commit: 6ba7c157b2c749e7dd337525121585aea81a1ea4
 ;; Created: 7 Aug 2017
 ;; Package-Requires: ((emacs "25.1"))
 ;; SPDX-License-Identifier: MIT
@@ -693,7 +693,7 @@ Return the sorted list. The original is modified destructively."
   (cl-incf prescient--serial-number)
   ;; Save the cache data.
   (when (and prescient-persist-mode
-	     prescient-aggressive-file-save)
+             prescient-aggressive-file-save)
     (prescient--save)))
 
 ;;;; Closing remarks

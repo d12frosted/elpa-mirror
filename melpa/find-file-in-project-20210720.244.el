@@ -4,8 +4,8 @@
 ;;   Phil Hagelberg, Doug Alcorn, Will Farrington, Chen Bin
 ;;
 ;; Version: 6.0.7
-;; Package-Version: 20210427.1205
-;; Package-Commit: 680ec93808176442a2c78b91b18bb4256d81d340
+;; Package-Version: 20210720.244
+;; Package-Commit: cde02e549512742366a91ffb70c86c354117cfde
 ;; Author: Phil Hagelberg, Doug Alcorn, and Will Farrington
 ;; Maintainer: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: https://github.com/technomancy/find-file-in-project
@@ -1172,6 +1172,7 @@ If OPEN-ANOTHER-WINDOW is not nil, the file will be opened in new window."
     map)
   "Mode map based on `diff-mode-map'.")
 
+;;;###autoload
 (define-derived-mode ffip-diff-mode diff-mode "ffip"
   "Show diff/patch."
   (setq buffer-read-only t)
