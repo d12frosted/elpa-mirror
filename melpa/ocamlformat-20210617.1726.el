@@ -2,7 +2,7 @@
 
 ;; Package-Requires: ((emacs "24.3"))
 ;; Package-Version: 20210617.1726
-;; Package-Commit: fff8d95813eb3b31457cfa7bf66c577503bff2cb
+;; Package-Commit: 77999bf5eb0b03010fe7fa551086d587e7c441c7
 ;; Version: 0.15.0
 ;; Keywords: languages, ocaml
 ;; URL: https://github.com/ocaml-ppx/ocamlformat
