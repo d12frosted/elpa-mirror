@@ -1,0 +1,11 @@
+(pcmpl-args .
+	    [(20210720 2348)
+	     ((emacs
+	       (24 3)))
+	     "Enhanced shell command completion" single
+	     ((:commit . "c162469e41655395af03ace0a5df7fcaeb7c57ed")
+	      (:authors
+	       ("Jonathan Waltman" . "jonathan.waltman@gmail.com"))
+	      (:maintainer "Jonathan Waltman" . "jonathan.waltman@gmail.com")
+	      (:keywords "abbrev" "completion" "convenience" "processes" "terminals" "unix")
+	      (:url . "https://github.com/JonWaltman/pcmpl-args.el"))])

@@ -3,6 +3,9 @@ Fetcher: github
 Source:  https://github.com/eklitzke/coin-ticker-mode.git
 
 Updating /mnt/store/melpa/working/coin-ticker/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://github.com/eklitzke/coin-ticker-mode.git/': Empty reply from server
-
+Built coin-ticker in 4.179s, finished at 2021-07-21T03:25:20+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Jul 21 03:25 packages/coin-ticker-20170611.727.el
+4.0K -rw-r--r-- 1 root root  416 Jul 21 03:25 packages/coin-ticker-20170611.727.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 21 03:25 packages/coin-ticker-badge.svg
+4.0K -rw-r--r-- 1 root root  103 Jul 21 03:25 packages/coin-ticker-readme.txt

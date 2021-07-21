@@ -3,14 +3,9 @@ Fetcher: github
 Source:  https://github.com/cfengine/core.git
 
 Updating /mnt/store/melpa/working/cfengine-code-style/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-From https://github.com/cfengine/core
-   d87317f36..e1ee86cb0  master     -> origin/master
-fatal: remote error: upload-pack: not our ref 54e12b54a0be037b8fab70433c29194debcb1c91
-fatal: remote error: upload-pack: not our ref aeb832311cf6a935be6744a017ea4edd926daab5
-Fetching submodule libntech
-fatal: remote error: upload-pack: not our ref 54e12b54a0be037b8fab70433c29194debcb1c91
-Errors during submodule fetch:
-	libntech
-error: Could not fetch origin
-
+Built cfengine-code-style in 5.924s, finished at 2021-07-21T03:23:53+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.5K Jul 21 03:23 packages/cfengine-code-style-20171115.2108.el
+4.0K -rw-r--r-- 1 root root  373 Jul 21 03:23 packages/cfengine-code-style-20171115.2108.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 21 03:23 packages/cfengine-code-style-badge.svg
+4.0K -rw-r--r-- 1 root root  392 Jul 21 03:23 packages/cfengine-code-style-readme.txt
