@@ -7,7 +7,7 @@
 ;; Homepage: https://github.com/raxod502/selectrum
 ;; Keywords: extensions
 ;; Package-Version: 20210707.1827
-;; Package-Commit: 48ea51aa5b6959ea2a134e36cd21f727047b0677
+;; Package-Commit: 97693d0aea2c548197e9d1de3bdedf8e703775a4
 ;; Package-Requires: ((emacs "26.1"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 3.1
