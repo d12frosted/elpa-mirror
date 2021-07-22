@@ -6,9 +6,10 @@
 ;; Author: Boruch Baum <boruch_baum@gmx.com>
 ;; Maintainer: Boruch Baum <boruch_baum@gmx.com>
 ;; Homepage: https://github.com/Boruch-Baum/emacs-key-assist
+;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Keywords: abbrev convenience docs help
-;; Package-Version: 20210415.227
-;; Package-Commit: fae7ce265db3bcfd1c6153eb051afd8789e61a4b
+;; Package-Version: 20210722.758
+;; Package-Commit: 8e5cd089e0b2fedec57c55eeff74cdb6121441aa
 ;; Package: key-assist
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.3"))
@@ -180,7 +181,7 @@ CMD is a symbol of an interactive command."
   (let ((doc (documentation cmd t)))
     (format "\t%s"
       (if (or (not (stringp doc))
-              (string-empty-p doc))
+              (string= doc ""))
         (concat (symbol-name cmd) " (not documented)")
        (when (string-match "\n" doc)
          (setq doc (substring doc 0 (match-beginning 0))))

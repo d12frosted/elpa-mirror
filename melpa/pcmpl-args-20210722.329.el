@@ -4,8 +4,8 @@
 
 ;; Author: Jonathan Waltman <jonathan.waltman@gmail.com>
 ;; URL: https://github.com/JonWaltman/pcmpl-args.el
-;; Package-Version: 20210721.1417
-;; Package-Commit: 43f3daada70efb09b029e86315b94af72c46a802
+;; Package-Version: 20210722.329
+;; Package-Commit: 36139ba64f43a3d3f4090ef0118bcebfef7e20c9
 ;; Keywords: abbrev completion convenience processes terminals unix
 ;; Created: 25 Jul 2012
 ;; Version: 0.1.1
@@ -100,6 +100,7 @@
 (require 'pcmpl-unix)
 (require 'pcmpl-linux)
 (require 'pcmpl-gnu)
+(require 'cl-seq)
 
 (defgroup pcmpl-args nil
   "Refined argument completion for use with pcomplete."
@@ -3402,6 +3403,153 @@ options found in its man page."
 (defalias 'pcomplete/wget 'pcmpl-args-pcomplete-on-man)
 
 
+;; Pass completion
+
+(defalias 'pcmpl-args-pass-subcommands
+  (pcmpl-args-completion-table-with-annotations
+   '(("cp" "Copy password or directory")
+     ("edit" "Insert a new password or edit an existing password")
+     ("find" "List names of passwords inside the tree that match patterns")
+     ("generate" "Generate new password")
+     ("git" "Execute git commands")
+     ("grep" "Searches inside each decrypted password file")
+     ("help" "Show usage message")
+     ("init" "Initialize new password storage")
+     ("insert" "Insert a new password into the password store")
+     ("ls" "List names of passwords")
+     ("mv" "Move password or directory")
+     ("rm" "Remove password or directory")
+     ("show" "Decrypt and print a password")
+     ("version" "Show version information"))))
+
+(defun pcmpl-args-pass-prefix ()
+  "Return password-store directory.
+It is suffixed with a slash."
+  (let ((directory (or (getenv "PASSWORD_STORE_DIR")
+                       (expand-file-name "~/.password-store"))))
+    (concat directory "/")))
+
+(defun pcmpl-args-pass-find (&rest find-args)
+  "Return a list of password-store entries.
+By default, return all directories and files in password-store.
+These can be limited by `FIND-ARGS'.
+
+`FIND-ARGS' is a list of find (GNU/findutils) arguments.  For
+example, to get only directories:
+
+\(pcmpl-args-pass-find \"-type\" \"d\")"
+  (let* ((prefix (pcmpl-args-pass-prefix))
+         (args `("find" "-L" ,prefix
+                 "(" "-name" ".git*" "-o" "-name" ".gpg-id" ")" "-prune"
+                 "-o" ,@find-args "-print"))
+         (rx (concat "^" (regexp-quote prefix) "\\(.+?\\)\\(?:\\.gpg\\)?$")))
+    (with-temp-buffer
+      (apply #'pcmpl-args-process-file args)
+      (goto-char (point-min))
+      (save-match-data
+        (while (search-forward-regexp rx nil t)
+          (replace-match "\\1")))
+      (beginning-of-line)
+      (let (lines)
+        (while (progn (push (string-trim-right (thing-at-point 'line t)) lines)
+                      (forward-line -1)
+                      (not (bobp))))
+        lines))))
+
+(defun pcmpl-args-pass-keys (args)
+  "Return a list of gpg secret keys.
+This list is filtered based on `ARGS', which is an alist with
+inserted command line argument.  If some gpg key was already
+entered, it will be removed from returned list."
+  ;; Should we use epg-list-keys to get keys?
+  (let ((rx "^\\(?:[^:]*:\\)\\{9\\}\\([^:]*\\).*?$"))
+    (with-temp-buffer
+      (pcmpl-args-process-file "gpg2" "--list-secret-keys" "--with-colons")
+      (goto-char (point-min))
+      (save-match-data
+        (while (search-forward-regexp rx nil t)
+          (replace-match "\\1")))
+      (forward-line 1)
+      (let (lines)
+        (while (progn (forward-line -1)
+                      (push (string-trim-right (thing-at-point 'line t)) lines)
+                      (not (bobp))))
+        (cl-set-difference lines (cadr (assq '* args)) :test #'string=)))))
+
+(defun pcmpl-args-pass-subcommand-specs (subcommand)
+  "Return specs for pass `SUBCOMMAND'."
+  (pcase subcommand
+    ("edit"
+     '((argument 0 (("PASSNAME" (:eval (pcmpl-args-pass-find "-type" "f")))))))
+
+    ("find"
+     '((argument * (("PATTERN" none)))))
+
+    ("generate"
+     '((option "-n, --no-symbols" :help "Use only alphanumeric characters")
+       (option "-c, --clip" :help "Copy the password to the clipboard")
+       (option "-i, --in-place" :help "Only replace the first line of the password file")
+       (option "-f, --force" :help "Don't prompt before overwriting an existing password")
+       (argument 0 (("PASSNAME" (:eval (pcmpl-args-pass-find)))))
+       (argument 1 (("PASSLENGTH" none)))))
+
+    ((or "git" "grep")
+     '((argument 0 (("CMDOPTS" none))
+                 :subparser
+                 (lambda (args specs seen)
+                   (push (plist-get (pop seen) :stub) args)
+                   (pcmpl-args-command-subparser args specs seen)))))
+
+    ("init"
+     '((option "-p, --path=SUBFOLDER" (("SUBFOLDER" (:eval (pcmpl-args-pass-find "-type" "d"))))
+               :help "GPGIDs are assigned for that specific SUBFOLDER of the store")
+       (argument * (("GPGID" (:lambda pcmpl-args-pass-keys))))))
+
+    ("insert"
+     '((option "-e, --echo" :help "Enable keyboard echo and don't confirm the password")
+       (option "-m, --multiline" :help "Read lines until EOF or Ctrl+D is reached")
+       (option "-f, --force" :help "Don't prompt before overwriting an existing password")
+       (argument 0 (("PASSNAME" (:eval (pcmpl-args-pass-find)))))))
+
+    ("ls"
+     '((argument 0 (("SUBFOLDER" (:eval (pcmpl-args-pass-find "-type" "d")))))))
+
+    ("rm"
+     '((option "-r, --recursive" :help "Delete PASSNAME recursively if it is a directory")
+       (option "-f, --force" :help "Do not interactively prompt before removal")
+       (argument 0 (("PASSNAME" (:eval (pcmpl-args-pass-find)))))))
+
+    ("show"
+     '((option "-c[LINENUMBER], --clip[=LINENUMBER]" (("LINENUMBER" none))
+               :help "Copy the first (or specified) line to the clipboard")
+       (option "-q[LINENUMBER], --qrcode[=LINENUMBER]" (("LINENUMBER" none))
+               :help "Display a QR code of the first (or specified) line")
+       (argument 0 (("PASSNAME" (:eval (pcmpl-args-pass-find "-type" "f")))))))
+
+    ((or "cp" "mv")
+     '((option "-f, --force" :help "Silently overwrite NEWPATH if it exists")
+       (argument 0 (("OLDPATH" (:eval (pcmpl-args-pass-find)))))
+       (argument 1 (("NEWPATH" (:eval (pcmpl-args-pass-find)))))))))
+
+(defun pcomplete/pass ()
+  "Pass completion."
+  (pcmpl-args-pcomplete
+   (pcmpl-args-make-argspecs
+    '((argument 0 (("OPTIONS" nil))
+                :subparser
+                (lambda (arguments argspecs seen)
+                  (let ((command (pop arguments)))
+                    (push (list :name 0
+                                :stub command
+                                :values (list command)
+                                :action '("COMMAND" pcmpl-args-pass-subcommands))
+                          seen)
+                    (when arguments
+                      (let ((specs (pcmpl-args-pass-subcommand-specs command)))
+                        (setq argspecs (pcmpl-args-make-argspecs specs)))))
+                  (list arguments argspecs seen)))))))
+
+
 ;;; Testing
 
 (defun pcmpl-args--debug-parse-help-buffer ()
@@ -3685,7 +3833,7 @@ will print completions for `ls -'."
 ;;   (insert (format "\n\n;;;###autoload (dolist (func '(%s)) (autoload func \"pcmpl-args\"))\n"
 ;;                   (mapconcat 'identity accum " "))))
 
-;;;###autoload (dolist (func '(pcomplete/chgrp pcomplete/chmod pcomplete/chown pcomplete/chroot pcomplete/cp pcomplete/date pcomplete/dd pcomplete/dir pcomplete/echo pcomplete/env pcomplete/false pcomplete/groups pcomplete/id pcomplete/ln pcomplete/ls pcomplete/mv pcomplete/nice pcomplete/nohup pcomplete/printenv pcomplete/printf pcomplete/rm pcomplete/rmdir pcomplete/sort pcomplete/stat pcomplete/test pcomplete/true pcomplete/vdir pcomplete/basename pcomplete/cat pcomplete/cksum pcomplete/comm pcomplete/csplit pcomplete/cut pcomplete/df pcomplete/dircolors pcomplete/dirname pcomplete/du pcomplete/expand pcomplete/expr pcomplete/factor pcomplete/fmt pcomplete/fold pcomplete/head pcomplete/hostid pcomplete/install pcomplete/join pcomplete/link pcomplete/logname pcomplete/md5sum pcomplete/mkdir pcomplete/mkfifo pcomplete/mknod pcomplete/mktemp pcomplete/nl pcomplete/od pcomplete/paste pcomplete/pathchk pcomplete/pinky pcomplete/pr pcomplete/ptx pcomplete/pwd pcomplete/readlink pcomplete/seq pcomplete/sha1sum pcomplete/shred pcomplete/sleep pcomplete/split pcomplete/stty pcomplete/sum pcomplete/sync pcomplete/tac pcomplete/tail pcomplete/tee pcomplete/touch pcomplete/tr pcomplete/tsort pcomplete/tty pcomplete/uname pcomplete/unexpand pcomplete/uniq pcomplete/unlink pcomplete/users pcomplete/wc pcomplete/whoami pcomplete/who pcomplete/yes pcomplete/man pcomplete/info pcomplete/find pcomplete/command pcomplete/time pcomplete/which pcomplete/coproc pcomplete/do pcomplete/elif pcomplete/else pcomplete/exec pcomplete/if pcomplete/then pcomplete/until pcomplete/whatis pcomplete/whence pcomplete/where pcomplete/whereis pcomplete/while pcomplete/gzip pcomplete/bzip2 pcomplete/xz pcomplete/tar pcomplete/perl pcomplete/python pcomplete/bzr pcomplete/hg pcomplete/git pcomplete/etags pcomplete/ctags pcomplete/ctags-exuberant pcomplete/cmp pcomplete/curl pcomplete/dict pcomplete/enscript pcomplete/gcc pcomplete/gdb pcomplete/gprof pcomplete/grep pcomplete/egrep pcomplete/fgrep pcomplete/rgrep pcomplete/make pcomplete/rsync pcomplete/sudo pcomplete/vlc pcomplete/xargs pcomplete/configure pcomplete/nosetests pcomplete/a2ps pcomplete/ack-grep pcomplete/agrep pcomplete/automake pcomplete/awk pcomplete/bash pcomplete/bc pcomplete/bison pcomplete/cal pcomplete/dc pcomplete/diff pcomplete/emacs pcomplete/gawk pcomplete/gperf pcomplete/indent pcomplete/locate pcomplete/ld pcomplete/ldd pcomplete/m4 pcomplete/ncal pcomplete/netstat pcomplete/nm pcomplete/objcopy pcomplete/objdump pcomplete/patch pcomplete/pgrep pcomplete/ps pcomplete/readelf pcomplete/sed pcomplete/shar pcomplete/strip pcomplete/texindex pcomplete/traceroute pcomplete/wget)) (autoload func "pcmpl-args"))
+;;;###autoload (dolist (func '(pcomplete/chgrp pcomplete/chmod pcomplete/chown pcomplete/chroot pcomplete/cp pcomplete/date pcomplete/dd pcomplete/dir pcomplete/echo pcomplete/env pcomplete/false pcomplete/groups pcomplete/id pcomplete/ln pcomplete/ls pcomplete/mv pcomplete/nice pcomplete/nohup pcomplete/printenv pcomplete/printf pcomplete/rm pcomplete/rmdir pcomplete/sort pcomplete/stat pcomplete/test pcomplete/true pcomplete/vdir pcomplete/basename pcomplete/cat pcomplete/cksum pcomplete/comm pcomplete/csplit pcomplete/cut pcomplete/df pcomplete/dircolors pcomplete/dirname pcomplete/du pcomplete/expand pcomplete/expr pcomplete/factor pcomplete/fmt pcomplete/fold pcomplete/head pcomplete/hostid pcomplete/install pcomplete/join pcomplete/link pcomplete/logname pcomplete/md5sum pcomplete/mkdir pcomplete/mkfifo pcomplete/mknod pcomplete/mktemp pcomplete/nl pcomplete/od pcomplete/paste pcomplete/pathchk pcomplete/pinky pcomplete/pr pcomplete/ptx pcomplete/pwd pcomplete/readlink pcomplete/seq pcomplete/sha1sum pcomplete/shred pcomplete/sleep pcomplete/split pcomplete/stty pcomplete/sum pcomplete/sync pcomplete/tac pcomplete/tail pcomplete/tee pcomplete/touch pcomplete/tr pcomplete/tsort pcomplete/tty pcomplete/uname pcomplete/unexpand pcomplete/uniq pcomplete/unlink pcomplete/users pcomplete/wc pcomplete/whoami pcomplete/who pcomplete/yes pcomplete/man pcomplete/info pcomplete/find pcomplete/command pcomplete/time pcomplete/which pcomplete/coproc pcomplete/do pcomplete/elif pcomplete/else pcomplete/exec pcomplete/if pcomplete/then pcomplete/until pcomplete/whatis pcomplete/whence pcomplete/where pcomplete/whereis pcomplete/while pcomplete/gzip pcomplete/bzip2 pcomplete/xz pcomplete/tar pcomplete/perl pcomplete/python pcomplete/bzr pcomplete/hg pcomplete/git pcomplete/etags pcomplete/ctags pcomplete/ctags-exuberant pcomplete/cmp pcomplete/curl pcomplete/dict pcomplete/enscript pcomplete/gcc pcomplete/gdb pcomplete/gprof pcomplete/grep pcomplete/egrep pcomplete/fgrep pcomplete/rgrep pcomplete/make pcomplete/rsync pcomplete/sudo pcomplete/vlc pcomplete/xargs pcomplete/configure pcomplete/nosetests pcomplete/a2ps pcomplete/ack-grep pcomplete/agrep pcomplete/automake pcomplete/awk pcomplete/bash pcomplete/bc pcomplete/bison pcomplete/cal pcomplete/dc pcomplete/diff pcomplete/emacs pcomplete/gawk pcomplete/gperf pcomplete/indent pcomplete/locate pcomplete/ld pcomplete/ldd pcomplete/m4 pcomplete/ncal pcomplete/netstat pcomplete/nm pcomplete/objcopy pcomplete/objdump pcomplete/patch pcomplete/pgrep pcomplete/ps pcomplete/readelf pcomplete/sed pcomplete/shar pcomplete/strip pcomplete/texindex pcomplete/traceroute pcomplete/wget pcomplete/pass)) (autoload func "pcmpl-args"))
 
 (provide 'pcmpl-args)
 ;;; pcmpl-args.el ends here

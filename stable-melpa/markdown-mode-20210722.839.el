@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.5-dev
-;; Package-Version: 20210722.131
-;; Package-Commit: 3713b4deb54caa496d0202169584e1c3802b3b3a
+;; Package-Version: 20210722.839
+;; Package-Commit: f3c4fd9230252503e3a9f2de6f5d469c4ac270ae
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -9612,6 +9612,9 @@ rows and columns and the column alignment."
 ;;;###autoload
 (define-derived-mode markdown-mode text-mode "Markdown"
   "Major mode for editing Markdown files."
+  (when buffer-read-only
+    (when (or (not (buffer-file-name)) (file-writable-p (buffer-file-name)))
+      (setq-local buffer-read-only nil)))
   ;; Natural Markdown tab width
   (setq tab-width 4)
   ;; Comments
