@@ -1,5 +1,5 @@
 (eglot .
-       [(20210613 2207)
+       [(20210721 2323)
 	((emacs
 	  (26 1))
 	 (jsonrpc
@@ -13,7 +13,7 @@
 	 (eldoc
 	  (1 11 0)))
 	"Client for Language Server Protocol (LSP) servers" single
-	((:commit . "ba1a6c9b39a97b25873c9e1a382a96674d449805")
+	((:commit . "194b178ef41ccd3d937983f3829d44a546bb24d6")
 	 (:authors
 	  ("João Távora" . "joaotavora@gmail.com"))
 	 (:maintainer "João Távora" . "joaotavora@gmail.com")

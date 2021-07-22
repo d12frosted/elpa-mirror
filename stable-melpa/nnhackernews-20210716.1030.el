@@ -4,11 +4,11 @@
 
 ;; Authors: dickmao <github id: dickmao>
 ;; Version: 0.1.0
-;; Package-Version: 20210219.1948
-;; Package-Commit: b5a221b63c8b311d50807fdfab4ae6b965844f06
+;; Package-Version: 20210716.1030
+;; Package-Commit: 50a6a7a58bc0316a9acc2b972380692f7438d9ed
 ;; Keywords: news
 ;; URL: https://github.com/dickmao/nnhackernews
-;; Package-Requires: ((emacs "25.2") (request "20190819") (dash "20210210") (anaphora "20180618"))
+;; Package-Requires: ((emacs "25.2") (request "0.3.3") (dash "2.18.1") (anaphora "1.0.4"))
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -76,7 +76,8 @@ Otherwise, just display link."
 (defcustom nnhackernews-localhost "127.0.0.1"
   "Some users keep their browser in a separate domain.
 
-Do not set this to \"localhost\" as a numeric IP is required for the oauth handshake."
+Do not set this to \"localhost\" as a numeric IP is required for the oauth
+handshake."
   :type 'string
   :group 'nnhackernews)
 
@@ -90,19 +91,27 @@ Do not set this to \"localhost\" as a numeric IP is required for the oauth hands
   :type 'integer
   :group 'nnhackernews)
 
+(defcustom nnhackernews-refractory-ms 2200
+  "In June 2021, hackernews started throttling responses."
+  :type 'integer
+  :group 'nnhackernews)
+
 (defcustom nnhackernews-max-render-bytes 300e3
-  "`quoted-printable-encode-region' bogs when the javascript spyware gets out of hand."
+  "`quoted-printable-encode-region' bogs when javascript spyware overdoes it."
   :type 'integer
   :group 'nnhackernews)
 
 (defvoo nnhackernews-status-string "")
 
 (defvar nnhackernews-avoid-rescoring nil
-  "Semaphore to avoid unnecessary scoring run caused by `nndraft-update-unread-articles' calling `gnus-group-get-new-news-this-group'.")
+  "This semaphore avoids unnecessary scoring.
+The unnecessary run results from `nndraft-update-unread-articles'
+calling `gnus-group-get-new-news-this-group'.")
 
-(defvar nnhackernews--mutex-display-article (when (fboundp 'make-mutex)
-                                      (make-mutex "nnhackernews--mutex-display-article"))
-  "Scoring runs via `gnus-after-getting-new-news-hook' cause 'Selecting deleted buffer'.")
+(defvar nnhackernews--mutex-display-article
+  (when (fboundp 'make-mutex)
+    (make-mutex "nnhackernews--mutex-display-article"))
+  "Scoring in `gnus-after-getting-new-news-hook' emits 'Selecting deleted buffer'.")
 
 (defvar nnhackernews--last-item nil "Keep track of where we are.")
 
@@ -235,18 +244,16 @@ Starting in emacs-src commit c1b63af, Gnus moved from obarrays to normal hashtab
   (copy-keymap nnhackernews-summary-mode-map)) ;; how does Gnus do this?
 
 (define-minor-mode nnhackernews-article-mode
-  "Minor mode for nnhackernews articles.  Disallow `gnus-article-reply-with-original'.
+  "Disallow `gnus-article-reply-with-original'.
 
-\\{gnus-article-mode-map}
-"
+\\{gnus-article-mode-map}"
   :lighter " HN"
   :keymap nnhackernews-article-mode-map)
 
 (define-minor-mode nnhackernews-summary-mode
   "Disallow \"reply\" commands in `gnus-summary-mode-map'.
 
-\\{nnhackernews-summary-mode-map}
-"
+\\{nnhackernews-summary-mode-map}"
   :lighter " HN"
   :keymap nnhackernews-summary-mode-map)
 
@@ -399,6 +406,7 @@ Remember `string-match-p' is always case-insensitive as is all elisp pattern mat
   "Store a cookie from URL with HIDDEN plist."
   (let* (result
          (auth-source-do-cache nil)
+         (auth-source-save-behavior 'ask)
          (auth-source-creation-prompts '((user . "news.ycombinator.com user: ")
                                          (secret . "Password for %u: ")))
          (found (car (auth-source-search :max 1 :host "news.ycombinator.com" :require
@@ -518,6 +526,10 @@ If GROUP classification omitted, figure it out."
        (listp (gnus-group-method group))
        (eq 'nnhackernews (car (gnus-group-method group)))))
 
+(defsubst nnhackernews--message-gate ()
+  "In `message-mode', `gnus-newsgroup-name' could be anything."
+  (nnhackernews--gate (car-safe gnus-message-group-art)))
+
 (deffoo nnhackernews-request-close ()
   (nnhackernews-close-server)
   t)
@@ -611,7 +623,7 @@ Originally written by Paul Issartel."
   (nnhackernews--sethash (plist-get e :id) (plist-get e field) hashtb))
 
 (defun nnhackernews--summary-exit (group)
-  "Call `gnus-summary-exit' for GROUP without the hackery."
+  "Call `gnus-summary-exit' for GROUP without the rescoring mess."
   (remove-function (symbol-function 'gnus-summary-exit)
                    (symbol-function 'nnhackernews--score-pending))
   (unwind-protect
@@ -641,10 +653,41 @@ Originally written by Paul Issartel."
       `(with-mutex ,mtx ,@body)
     `(progn ,@body)))
 
-(defun nnhackernews--rescore (group &optional force)
-  "Can't figure out GROUP hook that can remove itself (quine conundrum).
+(defun nnhackernews--daring-scoring (group)
+  "Dare to score GROUP without the benefit of `gnus-summary-read-group'."
+  (with-temp-buffer
+    ;; Withhold judgement of setqs, mimicking `gnus-summary-setup-buffer'
+    (setq gnus-newsgroup-name group) ;; now defvar-local, right?
+    (set-default 'gnus-newsgroup-name gnus-newsgroup-name)
+    (gnus-summary-mode)
+    (gnus-update-format-specifications 'summary 'summary-mode 'summary-dummy)
+    (gnus-update-summary-mark-positions)
+    (gnus-summary-set-local-parameters gnus-newsgroup-name)
+    (gnus-select-newsgroup group nil nil)
+    ;; Save the active value in effect when the group was entered.
+    (setq gnus-newsgroup-active
+	  (copy-tree (gnus-active gnus-newsgroup-name)))
+    (setq gnus-newsgroup-highest (cdr gnus-newsgroup-active))
+    (gnus-run-hooks 'gnus-select-group-hook)
+    (gnus-possibly-score-headers)
+    (gnus-summary-prepare) ;; this actually updates unreads... can't blame a 20yo
+    (gnus-run-hooks 'gnus-apply-kill-hook)
+    (setq gnus-newsgroup-prepared t)
+    (gnus-run-hooks 'gnus-summary-prepared-hook)
+    (gnus-group-update-group group nil t)
+    (gnus-score-adaptive)
+    (gnus-score-save)
+    (gnus-run-hooks 'gnus-exit-group-hook)
+    (gnus-summary-update-info)
+    (gnus-run-hooks 'gnus-summary-prepare-exit-hook)
+    (gnus-close-group group)
+    (gnus-run-hooks 'gnus-summary-exit-hook)
+    (gnus-kill-buffer gnus-article-buffer)
+    (gnus-kill-buffer gnus-original-article-buffer)))
 
-FORCE is generally t unless coming from `nnhackernews--score-pending'."
+(defun nnhackernews--rescore (group force)
+  "Unforced rescore of GROUP when merely `gnus-summary-exit'.
+FORCE in wake of `gnus-after-getting-new-news-hook'."
   (when (nnhackernews--gate group)
     (cl-loop repeat 5
              for ensured = (nnhackernews--ensure-score-files group)
@@ -669,14 +712,20 @@ FORCE is generally t unless coming from `nnhackernews--score-pending'."
               (if (zerop unread)
                   (gnus-message 7 "nnhackernews--rescore: skipping %s no unread"
                                 group)
+		;; Q: Why `gnus-summary-read-group'?
+		;; A: `gnus-score-headers' message-clone-locals `gnus-summary-buffer'
+                ;; Problem: Fights with main thread UI since it calls
+                ;; `gnus-configure-windows',
                 (nnhackernews--with-mutex nnhackernews--mutex-display-article
-                  (gnus-summary-read-group group nil t)
-                  (nnhackernews--summary-exit group))))))))))
+                  (if (> (gnus-continuum-version) 5.13)
+                      (nnhackernews--daring-scoring group)
+                    (gnus-summary-read-group group nil t)
+                    (nnhackernews--summary-exit group)))))))))))
 
 (defalias 'nnhackernews--score-pending
   (lambda (&rest _args)
-    (aif (gnus-group-name-at-point)
-        (nnhackernews--rescore it))))
+    (awhen (gnus-group-name-at-point)
+      (nnhackernews--rescore it nil))))
 
 (defun nnhackernews-extant-summary-buffer (group)
   "Return main thread's summary buffer for GROUP if extant."
@@ -693,16 +742,16 @@ Otherwise *Group* buffer annoyingly overrepresents unread."
   (when (or (gnus-native-method-p '(nnhackernews ""))
             (gnus-secondary-method-p '(nnhackernews "")))
     (nnhackernews--with-group group
-      (unless (or (nnhackernews-extant-summary-buffer gnus-newsgroup-name)
-		  nnhackernews-avoid-rescoring)
+      (when (and (not (nnhackernews-extant-summary-buffer gnus-newsgroup-name))
+		 (not nnhackernews-avoid-rescoring))
         (nnhackernews--rescore gnus-newsgroup-name t)))))
 
 (defun nnhackernews--mark-scored-as-read (group)
   "Reflect the scoring results now.
 
 If root article (story) is scored in GROUP, that means we've already
-read it.  This seems redundant with `nnhackernews--score-unread' but might be
-faster on startup?  See 15195cc."
+read it.  This function seems redundant with `nnhackernews--score-unread'
+but might be faster on startup?  See 15195cc."
   (nnhackernews--with-group group
     (let ((preface (format "nnhackernews--mark-scored-as-read: %s not rescoring " group))
           (extant (nnhackernews-extant-summary-buffer gnus-newsgroup-name))
@@ -728,7 +777,7 @@ faster on startup?  See 15195cc."
                  (nnhackernews--summary-exit gnus-newsgroup-name))))))))
 
 (deffoo nnhackernews-request-group-scan (group &optional server info)
-  "M-g from *Group* calls this."
+  "\\[gnus-group-get-new-news-this-group] calls this."
   (nnhackernews--normalize-server)
   (nnhackernews--with-group group
     (gnus-message 5 "nnhackernews-request-group-scan: scanning %s..." group)
@@ -934,17 +983,18 @@ Request shall contain ATTRIBUTES, one of which is PARSER of the response, if pro
 
 (defun nnhackernews--request-edit (_item _body)
   "Replace body of ITEM with BODY."
-  (let (result)
-    ;; (nnhackernews--request
-    ;;  "nnhackernews--request-edit"
-    ;;  (format "%s/delete-confirm?%s"
-    ;;          nnhackernews-hacker-news-url
-    ;;          (url-build-query-string
-    ;;           (cons `(id ,item)
-    ;;                 (when root `((goto ,(format "item?id=%s" root)))))))
-    ;;  :backend 'curl
-    ;;  :success (nnhackernews--callback result #'nnhackernews--request-delete-success))
-    result))
+  ;; (let (result)
+  ;;   (nnhackernews--request
+  ;;    "nnhackernews--request-edit"
+  ;;    (format "%s/delete-confirm?%s"
+  ;;            nnhackernews-hacker-news-url
+  ;;            (url-build-query-string
+  ;;             (cons `(id ,item)
+  ;;                   (when root `((goto ,(format "item?id=%s" root)))))))
+  ;;    :backend 'curl
+  ;;    :success (nnhackernews--callback result #'nnhackernews--request-delete-success))
+  ;;   result)
+  )
 
 (defun nnhackernews--request-delete (item &optional root)
   "Cancel ITEM at root ROOT."
@@ -1421,14 +1471,13 @@ Optionally provide STATIC-MAX-ITEM and STATIC-NEWSTORIES to prevent querying out
 ;; nnhackernews-request-post
 (deffoo nnhackernews-request-post (&optional server)
   (nnhackernews--normalize-server)
-  (-when-let* ((url (aif message-reply-headers
-                        (nnhackernews--request-post-reply-url it)
-                      (format "%s/submit" nnhackernews-hacker-news-url)))
-               (hidden (nnhackernews--request-hidden url)))
+  (let ((url (aif message-reply-headers
+                 (nnhackernews--request-post-reply-url it)
+               (format "%s/submit" nnhackernews-hacker-news-url))))
     (let ((ret t)
           (title (or (message-fetch-field "Subject") (error "No Subject field")))
           (link (message-fetch-field "Link"))
-          (reply-p (not (null message-reply-headers)))
+          (reply-p message-reply-headers)
           (edit-item (aif (message-fetch-field "Supersedes")
                          (nnhackernews--extract-unique it)))
           (cancel-item (aif (message-fetch-field "Control")
@@ -1458,27 +1507,35 @@ Optionally provide STATIC-MAX-ITEM and STATIC-NEWSTORIES to prevent querying out
                                 (string= (alist-get 'op params) "item")))
                  (unless ret (nnhackernews--set-status-string dom)))))
             (reply-p
-             (let* ((path (car (url-path-and-query (url-generic-parse-url url))))
-                    (url (replace-regexp-in-string path "/comment" url))
-                    (result (nnhackernews--request-reply url body hidden))
-                    dom)
-               (setq dom (nnhackernews--domify result))
-               (cl-destructuring-bind (tag params &rest args) dom
-                 (setq ret (and (eq tag 'html)
-                                (string= (alist-get 'op params) "item")))
-                 (unless ret (nnhackernews--set-status-string dom)))))
+             (-if-let* ((hidden (nnhackernews--request-hidden url))
+                        (path (car (url-path-and-query (url-generic-parse-url url))))
+                        (url (replace-regexp-in-string path "/comment" url))
+                        (result (progn (sleep-for 0 nnhackernews-refractory-ms)
+                                       (nnhackernews--request-reply url body hidden)))
+                        (dom (nnhackernews--domify result)))
+                 (cl-destructuring-bind (tag params &rest args) dom
+                   (setq ret (and (eq tag 'html)
+                                  (string= (alist-get 'op params) "item")))
+                   (unless ret (nnhackernews--set-status-string dom)))
+               (gnus-message 3 "nnhackernews-request-post: null reply from %s"
+                             url)))
             (link
-             (let* ((parsed-url (url-generic-parse-url link))
+             (let* ((hidden (nnhackernews--request-hidden url))
+                    (parsed-url (url-generic-parse-url link))
                     (host (url-host parsed-url))
                     (path (car (url-path-and-query (url-generic-parse-url url))))
                     (url (replace-regexp-in-string path "/r" url)))
                (if (and (stringp host) (not (zerop (length host))))
-                   (setq ret (nnhackernews--request-submit-link url title link hidden))
+                   (setq ret (progn
+                               (sleep-for 0 nnhackernews-refractory-ms)
+                               (nnhackernews--request-submit-link url title link hidden)))
                  (gnus-message 3 "nnhackernews-request-post: invalid url \"%s\"" link)
                  (setq ret nil))))
             (t
-             (let* ((path (car (url-path-and-query (url-generic-parse-url url))))
+             (let* ((hidden (nnhackernews--request-hidden url))
+                    (path (car (url-path-and-query (url-generic-parse-url url))))
                     (url (replace-regexp-in-string path "/r" url)))
+               (sleep-for 0 nnhackernews-refractory-ms)
                (setq ret (nnhackernews--request-submit-text url title body hidden)))))
       ret)))
 
@@ -1733,6 +1790,12 @@ Preserving indices so `nnhackernews-find-header' still works."
 ;; I believe I did try buffer-localizing hooks, and it wasn't sufficient
 (add-hook 'gnus-article-mode-hook #'nnhackernews-article-mode-activate)
 (add-hook 'gnus-summary-mode-hook #'nnhackernews-summary-mode-activate)
+(add-hook 'gnus-message-setup-hook
+          (lambda ()
+            (when (nnhackernews--message-gate)
+              (message-replace-header
+               "From"
+               (concat (nnhackernews--who-am-i) "@ycombinator.com")))))
 
 ;; Avoid having to select the GROUP to make the unread number go down.
 (add-hook 'gnus-after-getting-new-news-hook
@@ -1761,7 +1824,7 @@ Preserving indices so `nnhackernews-find-header' still works."
 (add-function :around (symbol-function 'gnus-summary-exit)
               (lambda (f &rest args)
                 (let ((gnus-summary-next-group-on-exit
-                       (if (nnhackernews--gate) nil
+                       (unless (nnhackernews--gate)
                          gnus-summary-next-group-on-exit)))
                   (apply f args))))
 
@@ -1781,29 +1844,30 @@ Preserving indices so `nnhackernews-find-header' still works."
 (add-function
  :around (symbol-function 'message-supersede)
  (lambda (f &rest args)
-   (cond ((nnhackernews--gate)
+   (cond ((nnhackernews--message-gate)
           (add-function :override
                         (symbol-function 'mml-insert-mml-markup)
-                        'ignore)
-          (condition-case err
+                        #'ignore)
+          (unwind-protect
               (prog1 (apply f args)
-                (remove-function (symbol-function 'mml-insert-mml-markup) 'ignore)
+                (remove-function (symbol-function 'mml-insert-mml-markup) #'ignore)
                 (save-excursion
                   (save-restriction
-                    (message-replace-header "From" (message-make-from))
+                    (message-replace-header
+                     "From"
+                     (concat (nnhackernews--who-am-i) "@ycombinator.com"))
                     (message-goto-body)
                     (narrow-to-region (point) (point-max))
                     (goto-char (point-max))
                     (mm-inline-text-html nil)
                     (delete-region (point-min) (point)))))
-            (error (remove-function (symbol-function 'mml-insert-mml-markup) 'ignore)
-                   (error (error-message-string err)))))
+            (remove-function (symbol-function 'mml-insert-mml-markup) #'ignore)))
          (t (apply f args)))))
 
 (add-function
  :around (symbol-function 'message-send-news)
  (lambda (f &rest args)
-   (cond ((nnhackernews--gate)
+   (cond ((nnhackernews--message-gate)
           (let* ((dont-ask (lambda (prompt)
                              (when (cl-search "mpty article" prompt) t)))
                  (link-p (message-fetch-field "Link"))
@@ -1839,15 +1903,9 @@ Preserving indices so `nnhackernews-find-header' still works."
 (add-function
  :filter-return (symbol-function 'message-make-fqdn)
  (lambda (val)
-   (if (and (nnhackernews--gate)
+   (if (and (nnhackernews--message-gate)
             (cl-search "--so-tickle-me" val))
        "ycombinator.com" val)))
-
-(add-function
- :before-until (symbol-function 'message-make-from)
- (lambda (&rest _args)
-   (when (nnhackernews--gate)
-     (concat (nnhackernews--who-am-i) "@ycombinator.com"))))
 
 (add-function
  :around (symbol-function 'message-is-yours-p)
@@ -1857,7 +1915,7 @@ Preserving indices so `nnhackernews-find-header' still works."
                           (if (string= (car args) "from")
                               (concat fetched "@ycombinator.com")
                             fetched)))))
-     (when (nnhackernews--gate)
+     (when (nnhackernews--message-gate)
        (add-function :around
                      (symbol-function 'message-fetch-field)
                      concat-func))

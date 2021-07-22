@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.5-dev
-;; Package-Version: 20210710.1646
-;; Package-Commit: 359347b2bb15f8d7ef819692ac79759ccfe2c85d
+;; Package-Version: 20210722.131
+;; Package-Commit: 3713b4deb54caa496d0202169584e1c3802b3b3a
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -618,6 +618,13 @@ requires Emacs to be built with ImageMagick support."
 (defcustom markdown-mouse-follow-link t
   "Non-nil means mouse on a link will follow the link.
 This variable must be set before loading markdown-mode."
+  :group 'markdown
+  :type 'bool
+  :safe 'booleanp
+  :package-version '(markdown-mode . "2.5"))
+
+(defcustom markdown-table-align-p t
+  "Non-nil means that table is aligned after table operation."
   :group 'markdown
   :type 'bool
   :safe 'booleanp
@@ -9206,7 +9213,8 @@ With optional argument UP, move it up."
          (insert "|   "))
        (forward-line)))
     (set-marker end nil)
-    (markdown-table-align)))
+    (when markdown-table-align-p
+      (markdown-table-align))))
 
 (defun markdown-table-delete-column ()
   "Delete column at point from table."
@@ -9225,7 +9233,8 @@ With optional argument UP, move it up."
        (forward-line)))
     (set-marker end nil)
     (markdown-table-goto-column (max 1 (1- col)))
-    (markdown-table-align)))
+    (when markdown-table-align-p
+      (markdown-table-align))))
 
 (defun markdown-table-move-column (&optional left)
   "Move table column at point to the right.
@@ -9251,7 +9260,8 @@ With optional argument LEFT, move it to the left."
        (forward-line)))
     (set-marker end nil)
     (markdown-table-goto-column colpos)
-    (markdown-table-align)))
+    (when markdown-table-align-p
+      (markdown-table-align))))
 
 (defun markdown-table-move-column-left ()
   "Move table column at point to the left."
@@ -9272,7 +9282,8 @@ Create new table lines if required."
   (if (or (looking-at "[ \t]*$")
           (save-excursion (skip-chars-backward " \t") (bolp)))
       (newline)
-    (markdown-table-align)
+    (when markdown-table-align-p
+      (markdown-table-align))
     (let ((col (markdown-table-get-column)))
       (beginning-of-line 2)
       (if (or (not (markdown-table-at-point-p))
@@ -9290,7 +9301,8 @@ Create new table lines if required."
   (interactive)
   (unless (markdown-table-at-point-p)
     (user-error "Not at a table"))
-  (markdown-table-align)
+  (when markdown-table-align-p
+    (markdown-table-align))
   (let ((end (markdown-table-end)))
     (when (markdown-table-hline-at-point-p) (end-of-line 1))
     (condition-case nil
@@ -9313,7 +9325,8 @@ Create new table lines if required."
   (interactive)
   (unless (markdown-table-at-point-p)
     (user-error "Not at a table"))
-  (markdown-table-align)
+  (when markdown-table-align-p
+    (markdown-table-align))
   (when (markdown-table-hline-at-point-p) (beginning-of-line 1))
   (condition-case nil
       (progn
@@ -9369,7 +9382,8 @@ Horizontal separator lines will be eliminated."
                contents "")))
     (markdown-table-goto-dline col_old)
     (markdown-table-goto-column dline_old))
-  (markdown-table-align))
+  (when markdown-table-align-p
+    (markdown-table-align)))
 
 (defun markdown-table-sort-lines (&optional sorting-type)
   "Sort table lines according to the column at point.
@@ -9508,7 +9522,8 @@ spaces, or alternatively a TAB should be used as the separator."
              (t (error "Invalid cell separator"))))
       (while (re-search-forward re end t) (replace-match "| " t t)))
     (goto-char begin)
-    (markdown-table-align)))
+    (when markdown-table-align-p
+      (markdown-table-align))))
 
 (defun markdown-insert-table (&optional rows columns align)
   "Insert an empty pipe table.
