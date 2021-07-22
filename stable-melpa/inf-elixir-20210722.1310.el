@@ -4,8 +4,8 @@
 
 ;; Author: Jonathan Arnett <jonathan.arnett@protonmail.com>
 ;; URL: https://github.com/J3RN/inf-elixir
-;; Package-Version: 20210629.40
-;; Package-Commit: ec87ecaab5a10e79034f77d553e7fefbf60b9f97
+;; Package-Version: 20210722.1310
+;; Package-Commit: 59b7126540bb848d3a38ccff71e85f3cc0cef39d
 ;; Keywords: languages, processes, tools
 ;; Version: 2.0.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -190,6 +190,7 @@ be prompted for the REPL command.  The default is provided by
               (t inf-elixir-base-command))))
     (inf-elixir-run-cmd nil cmd)))
 
+;;;###autoload
 (defun inf-elixir-project (&optional cmd)
   "Create a REPL in the context of the current project, using CMD if given.
 

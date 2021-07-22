@@ -1,11 +1,13 @@
 (kiwix .
-       [(20210719 1415)
+       [(20210722 1555)
 	((emacs
 	  (24 4))
 	 (request
-	  (0 3 0)))
+	  (0 3 0))
+	 (elquery
+	  (0 1 0)))
 	"Searching offline Wikipedia through Kiwix." tar
-	((:commit . "ca03a65f3c107ea6010aec1cd08efba3c26af069")
+	((:commit . "716f3c43ccf5c1d0ced2ff362fe2d68767c506cb")
 	 (:authors
 	  ("stardiviner" . "numbchild@gmail.com"))
 	 (:maintainer "stardiviner" . "numbchild@gmail.com")

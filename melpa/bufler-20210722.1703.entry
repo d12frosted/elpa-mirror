@@ -1,5 +1,5 @@
 (bufler .
-	[(20210721 1731)
+	[(20210722 1703)
 	 ((emacs
 	   (26 3))
 	  (dash
@@ -9,9 +9,11 @@
 	  (pretty-hydra
 	   (0 2 2))
 	  (magit-section
-	   (0 1)))
+	   (0 1))
+	  (map
+	   (2 1)))
 	 "Group buffers into workspaces with programmable rules" tar
-	 ((:commit . "301710450bfd09796a3a069c3ede183f39e27597")
+	 ((:commit . "b951e621bc4a4bb07babf8b32dc318d91ae261c9")
 	  (:authors
 	   ("Adam Porter" . "adam@alphapapa.net"))
 	  (:maintainer "Adam Porter" . "adam@alphapapa.net")
