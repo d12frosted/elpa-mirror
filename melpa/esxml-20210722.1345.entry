@@ -1,12 +1,15 @@
 (esxml .
-       [(20210323 1102)
-	((kv
+       [(20210722 1345)
+	((emacs
+	  (24 1))
+	 (kv
 	  (0 0 5))
 	 (cl-lib
 	  (0 5)))
 	"Library for working with xml via esxml and sxml" tar
-	((:commit . "cc5b9a8fef4c31acb4bbc4bae71c5feeb919da97")
+	((:commit . "701ccc285f3748d94c12f85636fecaa88858c178")
 	 (:authors
 	  ("Evan Izaksonas-Smith <izak0002 at umn dot edu>"))
 	 (:maintainer "Evan Izaksonas-Smith")
-	 (:keywords "tools" "lisp" "comm"))])
+	 (:keywords "tools" "lisp" "comm")
+	 (:url . "https://github.com/tali713/esxml"))])

@@ -6,8 +6,8 @@
 ;; Maintainer: Joe Bloggs <vapniks@yahoo.com>
 ;; Created: 2003-03-17 18:50:12 Harley Gorrell
 ;; URL: https://github.com/vapniks/syslog-mode
-;; Package-Version: 20210721.2340
-;; Package-Commit: 4662b7870c1ce62fa0cdc288ebdfc23ffc047ac7
+;; Package-Version: 20210722.1112
+;; Package-Commit: e18d74d8a12b943a3a64eb8c693981e55aea8e9a
 ;; Keywords: unix
 ;; Compatibility: GNU Emacs 24.3.1
 ;; Package-Requires:  ((hide-lines "20130623") (ov "20150311"))
@@ -1663,8 +1663,11 @@ evaluating it."
   "Create a function for viewing notes from a specific manpage.
 PAGE, INDENT & FACE are arguments for `syslog-show-note-from-manpage'.
 The function will have the form: syslog-show-PAGE-note."
-  `(defun ,(intern (format "syslog-show-%s-note" page)) (word)
-     (syslog-show-note-from-manpage ,page word ,indent ,face)))
+  `(defun ,(intern (format "syslog-show-%s-note"
+			   (replace-regexp-in-string "\\Sw" "_" page)))
+       (word)
+     (syslog-show-note-from-manpage ,(Man-translate-references page)
+				    word ,indent ,face)))
 
 ;; simple-call-tree-info: DONE
 (cl-defun syslog-function-notes-from-manpages (manpages &optional
@@ -1677,7 +1680,8 @@ FUNC is a function that is called by `syslog-show-note' to extract and display
 the appropriate note from a manpage.
 This has the advantage of creating a shorter `syslog-notes' definition, but the 
 disadvantage of making `syslog-show-note' a bit slower and creating manpage 
-buffers when it's used."
+buffers when it's used. There may also be some definitions that cannot be handled
+properly using this method (if the word to extract is a subword of another)."
   (cl-loop for (page rx1 ind exceptions) in manpages
 	   for indstr = (number-to-string (or ind indent))
 	   for rxA = (concat "^\\s-\\{" indstr "\\}" (or rx1 regex))
@@ -1687,7 +1691,7 @@ buffers when it's used."
 			      page indstr face))
 	   (insert (format "(dolist (word '%S)\n" words))
 	   (insert (format "  (push (list word nil 'syslog-show-%s-note) syslog-notes))\n"
-			   page))))
+			   (replace-regexp-in-string "\\Sw" "_" page)))))
 
 ;; simple-call-tree-info: DONE
 (defface syslog-ip
