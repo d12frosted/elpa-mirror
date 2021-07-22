@@ -4,8 +4,6 @@
 
 ;; Author: Adam Niederer <adam.niederer@gmail.com>
 ;; URL: https://github.com/AdamNiederer/s12cpuv2-mode
-;; Package-Version: 20171013.2051
-;; Package-Commit: b17d4cf848dec1e20e66458e5c7ff77a2c051a8c
 ;; Version: 0.1
 ;; Keywords: s12cpuv2 assembly languages
 ;; Package-Requires: ((emacs "24.3"))

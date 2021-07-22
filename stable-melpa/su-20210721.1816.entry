@@ -1,0 +1,11 @@
+(su .
+    [(20210721 1816)
+     ((emacs
+       (26 1)))
+     "Automatically read and write files using su or sudo" single
+     ((:commit . "1ecf7a7bbf9d88708eb2215e940753f8d6bccc92")
+      (:authors
+       ("PythonNut" . "pythonnut@pythonnut.com"))
+      (:maintainer "PythonNut" . "pythonnut@pythonnut.com")
+      (:keywords "convenience" "helm" "fuzzy" "flx")
+      (:url . "https://github.com/PythonNut/su.el"))])
