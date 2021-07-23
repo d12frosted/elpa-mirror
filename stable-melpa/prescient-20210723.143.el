@@ -5,8 +5,8 @@
 ;; Author: Radon Rosborough <radon.neon@gmail.com>
 ;; Homepage: https://github.com/raxod502/prescient.el
 ;; Keywords: extensions
-;; Package-Version: 20210720.135
-;; Package-Commit: 6ba7c157b2c749e7dd337525121585aea81a1ea4
+;; Package-Version: 20210723.143
+;; Package-Commit: 54b19cf7121d9eb679c2ba26b3c26e82c8a90df9
 ;; Created: 7 Aug 2017
 ;; Package-Requires: ((emacs "25.1"))
 ;; SPDX-License-Identifier: MIT
@@ -253,6 +253,20 @@ when `prescient--load' is called.")
 This is used to determine which set of changes to the save file
 should \"win\" when two concurrent Emacs sessions want to modify
 it.")
+
+(defun prescient-forget (candidate)
+  "Remove CANDIDATE from recency and frequency records."
+  (interactive
+   (list (completing-read "Forget candidate: "
+                          ;; Since candidates are shared, select from
+                          ;; the table with the most candidates.
+                          (if (> (hash-table-size prescient--frequency)
+                                 (hash-table-size prescient--history))
+                              prescient--frequency
+                            prescient--history)
+                          nil t)))
+  (remhash candidate prescient--history)
+  (remhash candidate prescient--frequency))
 
 ;;;; Persistence
 
