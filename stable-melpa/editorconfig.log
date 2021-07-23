@@ -5,14 +5,14 @@ Source:  https://github.com/editorconfig/editorconfig-emacs.git
 Updating /mnt/store/melpa/working/editorconfig/
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/editorconfig/
-  to /tmp/editorconfigO6jNOh/editorconfig-20210407.407
+  to /tmp/editorconfigxhuc7D/editorconfig-20210407.407
     editorconfig-conf-mode.el -> editorconfig-conf-mode.el
     editorconfig-core-handle.el -> editorconfig-core-handle.el
     editorconfig-core.el -> editorconfig-core.el
     editorconfig-fnmatch.el -> editorconfig-fnmatch.el
     editorconfig.el -> editorconfig.el
   ! doc/editorconfig.texi -> editorconfig.texi
-Created /tmp/editorconfigO6jNOh/editorconfig-20210407.407/editorconfig.info
+Created /tmp/editorconfigxhuc7D/editorconfig-20210407.407/editorconfig.info
 Created editorconfig-20210407.407.tar containing:
   editorconfig-20210407.407/
   editorconfig-20210407.407/dir
@@ -23,29 +23,29 @@ Created editorconfig-20210407.407.tar containing:
   editorconfig-20210407.407/editorconfig-pkg.el
   editorconfig-20210407.407/editorconfig.el
   editorconfig-20210407.407/editorconfig.info
-Built editorconfig in 13.693s, finished at 2021-07-23T15:17:15+0000
+Built editorconfig in 8.740s, finished at 2021-07-23T18:35:46+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  426 Jul 23 15:17 packages/editorconfig-20210407.407.entry
- 92K -rw-r--r-- 1 root root  90K Jul 23 15:17 packages/editorconfig-20210407.407.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 15:17 packages/editorconfig-badge.svg
-4.0K -rw-r--r-- 1 root root 4.0K Jul 23 15:17 packages/editorconfig-charset-extras-20180223.457.el
-4.0K -rw-r--r-- 1 root root  433 Jul 23 15:17 packages/editorconfig-charset-extras-20180223.457.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 15:17 packages/editorconfig-charset-extras-badge.svg
-4.0K -rw-r--r-- 1 root root  475 Jul 23 15:17 packages/editorconfig-charset-extras-readme.txt
-4.0K -rw-r--r-- 1 root root  669 Jul 23 15:17 packages/editorconfig-charset-extras.log
-8.0K -rw-r--r-- 1 root root 6.1K Jul 23 15:17 packages/editorconfig-custom-majormode-20180816.244.el
-4.0K -rw-r--r-- 1 root root  458 Jul 23 15:17 packages/editorconfig-custom-majormode-20180816.244.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 15:17 packages/editorconfig-custom-majormode-badge.svg
-4.0K -rw-r--r-- 1 root root  657 Jul 23 15:17 packages/editorconfig-custom-majormode-readme.txt
-4.0K -rw-r--r-- 1 root root  685 Jul 23 15:17 packages/editorconfig-custom-majormode.log
-4.0K -rw-r--r-- 1 root root 2.6K Jul 23 15:17 packages/editorconfig-domain-specific-20180505.924.el
+4.0K -rw-r--r-- 1 root root  426 Jul 23 18:35 packages/editorconfig-20210407.407.entry
+ 92K -rw-r--r-- 1 root root  90K Jul 23 18:35 packages/editorconfig-20210407.407.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 23 18:35 packages/editorconfig-badge.svg
+4.0K -rw-r--r-- 1 root root 4.0K Jul 23 18:35 packages/editorconfig-charset-extras-20180223.457.el
+4.0K -rw-r--r-- 1 root root  433 Jul 23 18:35 packages/editorconfig-charset-extras-20180223.457.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 23 18:35 packages/editorconfig-charset-extras-badge.svg
+4.0K -rw-r--r-- 1 root root  475 Jul 23 18:35 packages/editorconfig-charset-extras-readme.txt
+4.0K -rw-r--r-- 1 root root  669 Jul 23 18:35 packages/editorconfig-charset-extras.log
+8.0K -rw-r--r-- 1 root root 6.1K Jul 23 18:35 packages/editorconfig-custom-majormode-20180816.244.el
+4.0K -rw-r--r-- 1 root root  458 Jul 23 18:35 packages/editorconfig-custom-majormode-20180816.244.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 23 18:35 packages/editorconfig-custom-majormode-badge.svg
+4.0K -rw-r--r-- 1 root root  657 Jul 23 18:35 packages/editorconfig-custom-majormode-readme.txt
+4.0K -rw-r--r-- 1 root root  685 Jul 23 18:35 packages/editorconfig-custom-majormode.log
+4.0K -rw-r--r-- 1 root root 2.5K Jul 23 18:35 packages/editorconfig-domain-specific-20180505.924.el
 4.0K -rw-r--r-- 1 root root  505 Jul 23 15:17 packages/editorconfig-domain-specific-20180505.924.entry
 4.0K -rw-r--r-- 1 root root 1.2K Jul 23 15:17 packages/editorconfig-domain-specific-badge.svg
 4.0K -rw-r--r-- 1 root root  189 Jul 23 15:17 packages/editorconfig-domain-specific-readme.txt
-4.0K -rw-r--r-- 1 root root  682 Jul 23 15:17 packages/editorconfig-domain-specific.log
+4.0K -rw-r--r-- 1 root root  193 Jul 23 18:35 packages/editorconfig-domain-specific.log
  12K -rw-r--r-- 1 root root 9.4K Jul 23 15:17 packages/editorconfig-generate-20190513.433.el
 4.0K -rw-r--r-- 1 root root  360 Jul 23 15:17 packages/editorconfig-generate-20190513.433.entry
 4.0K -rw-r--r-- 1 root root 1.2K Jul 23 15:17 packages/editorconfig-generate-badge.svg
 4.0K -rw-r--r-- 1 root root  236 Jul 23 15:17 packages/editorconfig-generate-readme.txt
-4.0K -rw-r--r-- 1 root root  621 Jul 23 15:17 packages/editorconfig-generate.log
-4.0K -rw-r--r-- 1 root root  394 Jul 23 15:17 packages/editorconfig-readme.txt
+4.0K -rw-r--r-- 1 root root  167 Jul 23 18:35 packages/editorconfig-generate.log
+4.0K -rw-r--r-- 1 root root  394 Jul 23 18:35 packages/editorconfig-readme.txt

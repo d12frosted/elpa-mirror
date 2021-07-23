@@ -3,7 +3,7 @@
 ;; Author: Fox Kiester <noct@posteo.net>
 ;; URL: https://github.com/noctuid/link-hint.el
 ;; Package-Version: 20150922.451
-;; Package-Commit: 9fbf196d155016d9b8471a99318ed67a086cf257
+;; Package-Commit: 47bd0de4d624ecbadc16c114f79b7ad37d267e69
 ;; Keywords: convenience url avy link links hyperlink
 ;; Package-Requires: ((avy "0.4.0") (emacs "24.4"))
 ;; Version: 0.1
@@ -462,7 +462,7 @@ Only search the range between just after the point and BOUND."
 (link-hint-define-type 'org-link
   :next #'link-hint--next-org-link
   :at-point-p #'link-hint--org-link-at-point-p
-  :vars '(org-mode org-journal-mode org-agenda-mode org-link-minor-mode)
+  :vars '(org-mode org-journal-mode org-agenda-mode org-link-minor-mode org-roam-mode)
   :open #'link-hint--open-org-link
   :open-multiple t
   :copy #'kill-new)
