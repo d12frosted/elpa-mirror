@@ -3,8 +3,8 @@
 ;; Copyright © 2018, Free Software Foundation, Inc.
 
 ;; Version: 0.1.0
-;; Package-Version: 20210605.1057
-;; Package-Commit: c223aee30af7dc7f52fb20045226ed9f49f4ec49
+;; Package-Version: 20210723.549
+;; Package-Commit: 458464771bb220b6eb87ccfd4c985c436e57dc7e
 ;; URL: https://github.com/yqrashawn/fd-dired
 ;; Package-Requires: ((emacs "25"))
 ;; Author: Rashawn Zhang <namy.19@gmail.com>
@@ -61,24 +61,24 @@
   :group 'fd-dired)
 
 (defcustom fd-dired-pre-fd-args "-0 -c never"
-  "Fd argumens inserted before user arguments."
+  "Fd arguments inserted before user arguments."
   :type 'string
   :group 'fd-dired)
 
 (defcustom fd-grep-dired-pre-grep-args "--color never --regexp"
-  "Fd grep argumens inserted before user arguments."
+  "Fd grep arguments inserted before user arguments."
   :type 'string
   :group 'fd-dired)
 
 (defcustom fd-dired-ls-option
   (pcase system-type
-    ('gnu/linux
-     `(,(concat "| xargs -0 " insert-directory-program " -ld --quoting-style=literal | uniq") . "-ld"))
     ('darwin
      ;; NOTE: here `gls' need to `brew install coreutils'
      (if (executable-find "gls")
          `(,(concat "| xargs -0 " "gls -ld --quoting-style=literal | uniq") . "-ld")
-       (warn "macOS system default 'ls' command does not support option --quoting-style=literal.\n Please install with: brew install coreutils"))))
+       (warn "macOS system default 'ls' command does not support option --quoting-style=literal.\n Please install with: brew install coreutils")))
+    (_
+     `(,(concat "| xargs -0 " insert-directory-program " -ld --quoting-style=literal | uniq") . "-ld")))
   "A pair of options to produce and parse an `ls -l'-type list from `fd'.
 This is a cons of two strings (FD-ARGUMENTS . LS-SWITCHES).
 FD-ARGUMENTS is the option passed to `fd' to produce a file

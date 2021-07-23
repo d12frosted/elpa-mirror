@@ -26,7 +26,8 @@ or any interface provided by following packages: `flyspell-correct-ivy',
 `flyspell-correct-helm' and `flyspell-correct-popup'.
 
 In order to use `flyspell-correct-ido' interface instead of default
-`flyspell-correct-dummy', place following snippet in your 'init.el' file.
+`flyspell-correct-completing-read', place following snippet in your
+'init.el' file.
 
   (require 'flyspell-correct-ido)
 
