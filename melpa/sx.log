@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/vermiculus/sx.el.git
 
 Updating /mnt/store/melpa/working/sx/
+Checking out origin/HEAD
+Checking out e9d1093c97507a6d7b4f4710ef65200dae725e5f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sx/
-  to /tmp/sxn0xouU/sx-20191229.1746
+  to /tmp/sxk7GpTw/sx-20191229.1746
     sx-auth.el -> sx-auth.el
     sx-babel.el -> sx-babel.el
     sx-button.el -> sx-button.el
@@ -63,9 +65,9 @@ Created sx-20191229.1746.tar containing:
   sx-20191229.1746/sx-time.el
   sx-20191229.1746/sx-user.el
   sx-20191229.1746/sx.el
-Built sx in 4.113s, finished at 2021-07-23T22:49:16+0000
+Built sx in 5.192s, finished at 2021-07-24T15:38:22+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  563 Jul 23 22:49 packages/sx-20191229.1746.entry
-260K -rw-r--r-- 1 root root 260K Jul 23 22:49 packages/sx-20191229.1746.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:49 packages/sx-badge.svg
-4.0K -rw-r--r-- 1 root root   64 Jul 23 22:49 packages/sx-readme.txt
+4.0K -rw-r--r-- 1 root root  563 Jul 24 15:38 packages/sx-20191229.1746.entry
+260K -rw-r--r-- 1 root root 260K Jul 24 15:38 packages/sx-20191229.1746.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:38 packages/sx-badge.svg
+4.0K -rw-r--r-- 1 root root   64 Jul 24 15:38 packages/sx-readme.txt

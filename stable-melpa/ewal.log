@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/wurosh/ewal.git
 
 Updating /mnt/store/melpa/working/ewal/
+Checking out origin/HEAD
+Checking out e2a04f5c97b7d5e087af26e646c0b45a24522e56
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ewal/
-  to /tmp/ewalFdktn5/ewal-20200305.230
+  to /tmp/ewal6Kx4B6/ewal-20200305.230
     ewal.el -> ewal.el
     palettes => palettes
 Created ewal-20200305.230.tar containing:
@@ -271,26 +273,26 @@ Created ewal-20200305.230.tar containing:
   ewal-20200305.230/palettes/light/tempus_fugit.json
   ewal-20200305.230/palettes/light/tempus_past.json
   ewal-20200305.230/palettes/light/tempus_totus.json
-Built ewal in 6.486s, finished at 2021-07-24T01:20:06+0000
+Built ewal in 9.078s, finished at 2021-07-24T14:48:17+0000
  ✓ Success:
  16K -rw-r--r-- 1 root root  15K Jul 17  2019 packages/ewal-20190711.1458.el
-4.0K -rw-r--r-- 1 root root  292 Jul 24 01:20 packages/ewal-20200305.230.entry
-280K -rw-r--r-- 1 root root 280K Jul 24 01:20 packages/ewal-20200305.230.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:20 packages/ewal-badge.svg
-4.0K -rw-r--r-- 1 root root  382 Jul 23 22:02 packages/ewal-doom-themes-20200922.325.entry
- 32K -rw-r--r-- 1 root root  30K Jul 23 22:02 packages/ewal-doom-themes-20200922.325.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:02 packages/ewal-doom-themes-badge.svg
-4.0K -rw-r--r-- 1 root root   85 Jul 23 22:02 packages/ewal-doom-themes-readme.txt
-4.0K -rw-r--r-- 1 root root  139 Jul 24 01:20 packages/ewal-doom-themes.log
- 12K -rw-r--r-- 1 root root 8.1K Jul 24 01:20 packages/ewal-evil-cursors-20190911.1315.el
-4.0K -rw-r--r-- 1 root root  388 Jul 23 22:02 packages/ewal-evil-cursors-20190911.1315.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:03 packages/ewal-evil-cursors-badge.svg
-4.0K -rw-r--r-- 1 root root   86 Jul 23 22:02 packages/ewal-evil-cursors-readme.txt
-4.0K -rw-r--r-- 1 root root  141 Jul 24 01:20 packages/ewal-evil-cursors.log
-4.0K -rw-r--r-- 1 root root  508 Jul 24 01:20 packages/ewal-readme.txt
+4.0K -rw-r--r-- 1 root root  292 Jul 24 14:48 packages/ewal-20200305.230.entry
+280K -rw-r--r-- 1 root root 280K Jul 24 14:48 packages/ewal-20200305.230.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:48 packages/ewal-badge.svg
+4.0K -rw-r--r-- 1 root root  382 Jul 24 14:48 packages/ewal-doom-themes-20200922.325.entry
+ 32K -rw-r--r-- 1 root root  30K Jul 24 14:48 packages/ewal-doom-themes-20200922.325.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:48 packages/ewal-doom-themes-badge.svg
+4.0K -rw-r--r-- 1 root root   85 Jul 24 14:48 packages/ewal-doom-themes-readme.txt
+4.0K -rw-r--r-- 1 root root  962 Jul 24 14:48 packages/ewal-doom-themes.log
+ 12K -rw-r--r-- 1 root root 8.2K Jul 24 11:22 packages/ewal-evil-cursors-20190911.1315.el
+4.0K -rw-r--r-- 1 root root  388 Jul 24 11:22 packages/ewal-evil-cursors-20190911.1315.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:22 packages/ewal-evil-cursors-badge.svg
+4.0K -rw-r--r-- 1 root root   86 Jul 24 11:22 packages/ewal-evil-cursors-readme.txt
+4.0K -rw-r--r-- 1 root root  220 Jul 24 14:48 packages/ewal-evil-cursors.log
+4.0K -rw-r--r-- 1 root root  508 Jul 24 14:48 packages/ewal-readme.txt
 4.0K -rw-r--r-- 1 root root  967 May 14  2019 packages/ewal-spacemacs-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  369 Jul 23 22:02 packages/ewal-spacemacs-themes-20190911.1305.entry
- 20K -rw-r--r-- 1 root root  20K Jul 23 22:02 packages/ewal-spacemacs-themes-20190911.1305.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:03 packages/ewal-spacemacs-themes-badge.svg
-4.0K -rw-r--r-- 1 root root  196 Jul 23 22:02 packages/ewal-spacemacs-themes-readme.txt
-4.0K -rw-r--r-- 1 root root  149 Jul 24 01:20 packages/ewal-spacemacs-themes.log
+4.0K -rw-r--r-- 1 root root  369 Jul 24 11:22 packages/ewal-spacemacs-themes-20190911.1305.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 24 11:22 packages/ewal-spacemacs-themes-20190911.1305.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:22 packages/ewal-spacemacs-themes-badge.svg
+4.0K -rw-r--r-- 1 root root  196 Jul 24 11:22 packages/ewal-spacemacs-themes-readme.txt
+4.0K -rw-r--r-- 1 root root  174 Jul 24 14:48 packages/ewal-spacemacs-themes.log

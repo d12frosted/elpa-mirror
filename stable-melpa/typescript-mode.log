@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacs-typescript/typescript.el.git
 
 Updating /mnt/store/melpa/working/typescript-mode/
+Checking out origin/HEAD
+Checking out b369d7d2518fa11760ac3908a383405350cd51d2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/typescript-mode/
-  to /tmp/typescript-modeZ0OqIJ/typescript-mode-20201002.1109
+  to /tmp/typescript-mode7Hr7vm/typescript-mode-20201002.1109
     typescript-mode-test-utilities.el -> typescript-mode-test-utilities.el
     typescript-mode.el -> typescript-mode.el
 Created typescript-mode-20201002.1109.tar containing:
@@ -13,9 +15,9 @@ Created typescript-mode-20201002.1109.tar containing:
   typescript-mode-20201002.1109/typescript-mode-pkg.el
   typescript-mode-20201002.1109/typescript-mode-test-utilities.el
   typescript-mode-20201002.1109/typescript-mode.el
-Built typescript-mode in 3.745s, finished at 2021-07-24T02:08:36+0000
+Built typescript-mode in 4.536s, finished at 2021-07-24T15:41:45+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  278 Jul 24 02:08 packages/typescript-mode-20201002.1109.entry
-132K -rw-r--r-- 1 root root 130K Jul 24 02:08 packages/typescript-mode-20201002.1109.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 02:08 packages/typescript-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  617 Jul 24 02:08 packages/typescript-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  278 Jul 24 15:41 packages/typescript-mode-20201002.1109.entry
+132K -rw-r--r-- 1 root root 130K Jul 24 15:41 packages/typescript-mode-20201002.1109.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:41 packages/typescript-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  617 Jul 24 15:41 packages/typescript-mode-readme.txt

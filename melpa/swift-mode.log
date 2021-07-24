@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/swift-emacs/swift-mode.git
 
 Updating /mnt/store/melpa/working/swift-mode/
+Checking out origin/HEAD
+Checking out 1b47a09f1c0e15c543e0551e7f1e643f437e7711
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/swift-mode/
-  to /tmp/swift-modehAznXt/swift-mode-20210613.543
+  to /tmp/swift-modeiIHVrs/swift-mode-20210613.543
     src-autoloads.el -> src-autoloads.el
     swift-mode-beginning-of-defun.el -> swift-mode-beginning-of-defun.el
     swift-mode-font-lock.el -> swift-mode-font-lock.el
@@ -27,9 +29,9 @@ Created swift-mode-20210613.543.tar containing:
   swift-mode-20210613.543/swift-mode-repl.el
   swift-mode-20210613.543/swift-mode-standard-types.el
   swift-mode-20210613.543/swift-mode.el
-Built swift-mode in 4.314s, finished at 2021-07-23T22:49:08+0000
+Built swift-mode in 4.792s, finished at 2021-07-24T15:38:10+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  319 Jul 23 22:49 packages/swift-mode-20210613.543.entry
-440K -rw-r--r-- 1 root root 440K Jul 23 22:49 packages/swift-mode-20210613.543.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:49 packages/swift-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   51 Jul 23 22:49 packages/swift-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  319 Jul 24 15:38 packages/swift-mode-20210613.543.entry
+440K -rw-r--r-- 1 root root 440K Jul 24 15:38 packages/swift-mode-20210613.543.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:38 packages/swift-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   51 Jul 24 15:38 packages/swift-mode-readme.txt

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacs-w3m/emacs-w3m.git
 
 Updating /mnt/store/melpa/working/shimbun/
+Checking out origin/HEAD
+Checking out 635a71df74d755113f26a6c6d9ae48ccb485393d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/shimbun/
-  to /tmp/shimbunN4uPOg/shimbun-20210721.148
+  to /tmp/shimbunslLqxC/shimbun-20210721.148
   ! shimbun/mew-shimbun.el -> mew-shimbun.el
   ! shimbun/nnshimbun.el -> nnshimbun.el
   ! shimbun/sb-2ch.el -> sb-2ch.el
@@ -279,9 +281,9 @@ Created shimbun-20210721.148.tar containing:
   shimbun-20210721.148/sb-zeit-de.el
   shimbun-20210721.148/shimbun-pkg.el
   shimbun-20210721.148/shimbun.el
-Built shimbun in 5.911s, finished at 2021-07-24T02:01:27+0000
+Built shimbun in 5.835s, finished at 2021-07-24T15:34:17+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  442 Jul 24 02:01 packages/shimbun-20210721.148.entry
-1.1M -rw-r--r-- 1 root root 1.1M Jul 24 02:01 packages/shimbun-20210721.148.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 02:01 packages/shimbun-badge.svg
-4.0K -rw-r--r-- 1 root root  791 Jul 24 02:01 packages/shimbun-readme.txt
+4.0K -rw-r--r-- 1 root root  442 Jul 24 15:34 packages/shimbun-20210721.148.entry
+1.1M -rw-r--r-- 1 root root 1.1M Jul 24 15:34 packages/shimbun-20210721.148.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:34 packages/shimbun-badge.svg
+4.0K -rw-r--r-- 1 root root  791 Jul 24 15:34 packages/shimbun-readme.txt

@@ -3,14 +3,16 @@ Fetcher: github
 Source:  https://github.com/alphapapa/ts.el.git
 
 Updating /mnt/store/melpa/working/ts/
-Built ts in 4.257s, finished at 2021-07-24T02:08:22+0000
+Checking out origin/HEAD
+Checking out b6814e7e688781a586a775ef3504b9252af65b93
+Built ts in 5.036s, finished at 2021-07-24T15:41:29+0000
  ✓ Success:
- 28K -rw-r--r-- 1 root root  26K Jul 24 02:08 packages/ts-20210705.341.el
-4.0K -rw-r--r-- 1 root root  433 Jul 24 02:08 packages/ts-20210705.341.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 02:08 packages/ts-badge.svg
- 12K -rw-r--r-- 1 root root 8.2K Jul 24 02:08 packages/ts-comint-20181219.719.el
-4.0K -rw-r--r-- 1 root root  416 Jul 23 22:52 packages/ts-comint-20181219.719.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:52 packages/ts-comint-badge.svg
-4.0K -rw-r--r-- 1 root root  898 Jul 23 22:52 packages/ts-comint-readme.txt
-4.0K -rw-r--r-- 1 root root  140 Jul 24 02:08 packages/ts-comint.log
-4.0K -rw-r--r-- 1 root root  952 Jul 24 02:08 packages/ts-readme.txt
+ 28K -rw-r--r-- 1 root root  26K Jul 24 15:41 packages/ts-20210705.341.el
+4.0K -rw-r--r-- 1 root root  433 Jul 24 15:41 packages/ts-20210705.341.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:41 packages/ts-badge.svg
+ 12K -rw-r--r-- 1 root root 8.3K Jul 24 15:41 packages/ts-comint-20181219.719.el
+4.0K -rw-r--r-- 1 root root  416 Jul 24 15:41 packages/ts-comint-20181219.719.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 12:16 packages/ts-comint-badge.svg
+4.0K -rw-r--r-- 1 root root  898 Jul 24 15:41 packages/ts-comint-readme.txt
+4.0K -rw-r--r-- 1 root root  219 Jul 24 15:41 packages/ts-comint.log
+4.0K -rw-r--r-- 1 root root  952 Jul 24 15:41 packages/ts-readme.txt

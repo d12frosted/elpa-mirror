@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/dgutov/diff-hl.git
 
 Updating /mnt/store/melpa/working/diff-hl/
+Checking out origin/HEAD
+Checking out d225def4a473a16ac994124e063695ef9cef3308
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/diff-hl/
-  to /tmp/diff-hlEznjgm/diff-hl-20210615.1539
+  to /tmp/diff-hlQZkJoa/diff-hl-20210716.241
     diff-hl-amend.el -> diff-hl-amend.el
     diff-hl-dired.el -> diff-hl-dired.el
     diff-hl-flydiff.el -> diff-hl-flydiff.el
@@ -14,20 +16,20 @@ Copying files (->) and directories (=>)
     diff-hl-show-hunk-posframe.el -> diff-hl-show-hunk-posframe.el
     diff-hl-show-hunk.el -> diff-hl-show-hunk.el
     diff-hl.el -> diff-hl.el
-Created diff-hl-20210615.1539.tar containing:
-  diff-hl-20210615.1539/
-  diff-hl-20210615.1539/diff-hl-amend.el
-  diff-hl-20210615.1539/diff-hl-dired.el
-  diff-hl-20210615.1539/diff-hl-flydiff.el
-  diff-hl-20210615.1539/diff-hl-inline-popup.el
-  diff-hl-20210615.1539/diff-hl-margin.el
-  diff-hl-20210615.1539/diff-hl-pkg.el
-  diff-hl-20210615.1539/diff-hl-show-hunk-posframe.el
-  diff-hl-20210615.1539/diff-hl-show-hunk.el
-  diff-hl-20210615.1539/diff-hl.el
-Built diff-hl in 3.476s, finished at 2021-07-24T01:12:15+0000
+Created diff-hl-20210716.241.tar containing:
+  diff-hl-20210716.241/
+  diff-hl-20210716.241/diff-hl-amend.el
+  diff-hl-20210716.241/diff-hl-dired.el
+  diff-hl-20210716.241/diff-hl-flydiff.el
+  diff-hl-20210716.241/diff-hl-inline-popup.el
+  diff-hl-20210716.241/diff-hl-margin.el
+  diff-hl-20210716.241/diff-hl-pkg.el
+  diff-hl-20210716.241/diff-hl-show-hunk-posframe.el
+  diff-hl-20210716.241/diff-hl-show-hunk.el
+  diff-hl-20210716.241/diff-hl.el
+Built diff-hl in 5.285s, finished at 2021-07-24T14:39:02+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  378 Jul 24 01:12 packages/diff-hl-20210615.1539.entry
-112K -rw-r--r-- 1 root root 110K Jul 24 01:12 packages/diff-hl-20210615.1539.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:12 packages/diff-hl-badge.svg
-4.0K -rw-r--r-- 1 root root  797 Jul 24 01:12 packages/diff-hl-readme.txt
+4.0K -rw-r--r-- 1 root root  377 Jul 24 14:39 packages/diff-hl-20210716.241.entry
+112K -rw-r--r-- 1 root root 110K Jul 24 14:39 packages/diff-hl-20210716.241.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:39 packages/diff-hl-badge.svg
+4.0K -rw-r--r-- 1 root root  797 Jul 24 14:39 packages/diff-hl-readme.txt

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/rosenbrockc/fortpy-el.git
 
 Updating /mnt/store/melpa/working/fortpy/
+Checking out origin/HEAD
+Checking out c614517e9396ef7a78be3b8786fbf303879cf43b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fortpy/
-  to /tmp/fortpyXcvOtl/fortpy-20150715.2032
+  to /tmp/fortpypXeBOc/fortpy-20150715.2032
     fortpy.el -> fortpy.el
     fortpyepcserver.py -> fortpyepcserver.py
     Makefile -> Makefile
@@ -17,9 +19,9 @@ Created fortpy-20150715.2032.tar containing:
   fortpy-20150715.2032/fortpy.el
   fortpy-20150715.2032/fortpyepcserver.py
   fortpy-20150715.2032/setup.py
-Built fortpy in 3.417s, finished at 2021-07-23T22:07:36+0000
+Built fortpy in 5.362s, finished at 2021-07-24T14:53:02+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  376 Jul 23 22:07 packages/fortpy-20150715.2032.entry
- 72K -rw-r--r-- 1 root root  70K Jul 23 22:07 packages/fortpy-20150715.2032.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:07 packages/fortpy-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul 23 22:07 packages/fortpy-readme.txt
+4.0K -rw-r--r-- 1 root root  376 Jul 24 14:53 packages/fortpy-20150715.2032.entry
+ 72K -rw-r--r-- 1 root root  70K Jul 24 14:53 packages/fortpy-20150715.2032.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:53 packages/fortpy-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul 24 14:53 packages/fortpy-readme.txt

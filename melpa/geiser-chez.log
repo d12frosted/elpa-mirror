@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/emacs-geiser/chez.git
 
 Updating /mnt/store/melpa/working/geiser-chez/
+Checking out origin/HEAD
+Checking out 03da1c17253856d8713bc5a25140cb5002c9c188
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser-chez/
-  to /tmp/geiser-chezC1e2ta/geiser-chez-20210421.120
+  to /tmp/geiser-chez4YZbew/geiser-chez-20210421.120
     geiser-chez.el -> geiser-chez.el
     src/geiser => src/geiser
 Created geiser-chez-20210421.120.tar containing:
@@ -16,9 +18,9 @@ Created geiser-chez-20210421.120.tar containing:
   geiser-chez-20210421.120/src/geiser/
   geiser-chez-20210421.120/src/geiser/geiser.ss
   geiser-chez-20210421.120/src/geiser/test.ss
-Built geiser-chez in 3.688s, finished at 2021-07-23T22:08:26+0000
+Built geiser-chez in 4.234s, finished at 2021-07-24T14:54:17+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  443 Jul 23 22:08 packages/geiser-chez-20210421.120.entry
- 32K -rw-r--r-- 1 root root  30K Jul 23 22:08 packages/geiser-chez-20210421.120.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:08 packages/geiser-chez-badge.svg
-4.0K -rw-r--r-- 1 root root   57 Jul 23 22:08 packages/geiser-chez-readme.txt
+4.0K -rw-r--r-- 1 root root  443 Jul 24 14:54 packages/geiser-chez-20210421.120.entry
+ 32K -rw-r--r-- 1 root root  30K Jul 24 14:54 packages/geiser-chez-20210421.120.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:54 packages/geiser-chez-badge.svg
+4.0K -rw-r--r-- 1 root root   57 Jul 24 14:54 packages/geiser-chez-readme.txt

@@ -3,32 +3,34 @@ Fetcher: github
 Source:  https://github.com/shaneikennedy/npm.el.git
 
 Updating /mnt/store/melpa/working/npm/
+Checking out origin/HEAD
+Checking out d14d654c025d8f75f678503c98cd8682e69341cd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/npm/
-  to /tmp/npmDxsXCI/npm-20200812.1850
+  to /tmp/npmHPPGXS/npm-20210601.1122
     npm-common.el -> npm-common.el
     npm-init.el -> npm-init.el
     npm-install.el -> npm-install.el
     npm-run.el -> npm-run.el
     npm-update.el -> npm-update.el
     npm.el -> npm.el
-Created npm-20200812.1850.tar containing:
-  npm-20200812.1850/
-  npm-20200812.1850/npm-common.el
-  npm-20200812.1850/npm-init.el
-  npm-20200812.1850/npm-install.el
-  npm-20200812.1850/npm-pkg.el
-  npm-20200812.1850/npm-run.el
-  npm-20200812.1850/npm-update.el
-  npm-20200812.1850/npm.el
-Built npm in 4.301s, finished at 2021-07-23T22:30:15+0000
+Created npm-20210601.1122.tar containing:
+  npm-20210601.1122/
+  npm-20210601.1122/npm-common.el
+  npm-20210601.1122/npm-init.el
+  npm-20210601.1122/npm-install.el
+  npm-20210601.1122/npm-pkg.el
+  npm-20210601.1122/npm-run.el
+  npm-20210601.1122/npm-update.el
+  npm-20210601.1122/npm.el
+Built npm in 5.473s, finished at 2021-07-24T15:17:22+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  366 Jul 23 22:30 packages/npm-20200812.1850.entry
- 20K -rw-r--r-- 1 root root  20K Jul 23 22:30 packages/npm-20200812.1850.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:30 packages/npm-badge.svg
-8.0K -rw-r--r-- 1 root root 7.6K Jul 23 19:08 packages/npm-mode-20190616.2025.el
-4.0K -rw-r--r-- 1 root root  419 Jul 23 19:08 packages/npm-mode-20190616.2025.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 19:08 packages/npm-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul 23 19:08 packages/npm-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  129 Jul 23 22:30 packages/npm-mode.log
-4.0K -rw-r--r-- 1 root root   58 Jul 23 22:30 packages/npm-readme.txt
+4.0K -rw-r--r-- 1 root root  366 Jul 24 15:17 packages/npm-20210601.1122.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 24 15:17 packages/npm-20210601.1122.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:17 packages/npm-badge.svg
+8.0K -rw-r--r-- 1 root root 7.6K Jul 24 15:17 packages/npm-mode-20190616.2025.el
+4.0K -rw-r--r-- 1 root root  419 Jul 24 11:51 packages/npm-mode-20190616.2025.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:51 packages/npm-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul 24 11:51 packages/npm-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  208 Jul 24 15:17 packages/npm-mode.log
+4.0K -rw-r--r-- 1 root root   58 Jul 24 15:17 packages/npm-readme.txt

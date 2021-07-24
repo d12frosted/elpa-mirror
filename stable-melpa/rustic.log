@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/brotzeit/rustic.git
 
 Updating /mnt/store/melpa/working/rustic/
+Checking out origin/HEAD
+Checking out 26c2e09907135d5be9628c710bb0753c256b7242
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rustic/
-  to /tmp/rusticthP0i2/rustic-20210719.1514
+  to /tmp/rusticF7oTuC/rustic-20210719.1514
     rustic-babel.el -> rustic-babel.el
     rustic-cargo.el -> rustic-cargo.el
     rustic-compile.el -> rustic-compile.el
@@ -35,9 +37,9 @@ Created rustic-20210719.1514.tar containing:
   rustic-20210719.1514/rustic-rustfix.el
   rustic-20210719.1514/rustic-rustfmt.el
   rustic-20210719.1514/rustic.el
-Built rustic in 4.233s, finished at 2021-07-24T01:59:52+0000
+Built rustic in 4.830s, finished at 2021-07-24T15:32:07+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  451 Jul 24 01:59 packages/rustic-20210719.1514.entry
-212K -rw-r--r-- 1 root root 210K Jul 24 01:59 packages/rustic-20210719.1514.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:59 packages/rustic-badge.svg
-4.0K -rw-r--r-- 1 root root  410 Jul 24 01:59 packages/rustic-readme.txt
+4.0K -rw-r--r-- 1 root root  451 Jul 24 15:32 packages/rustic-20210719.1514.entry
+212K -rw-r--r-- 1 root root 210K Jul 24 15:32 packages/rustic-20210719.1514.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:32 packages/rustic-badge.svg
+4.0K -rw-r--r-- 1 root root  410 Jul 24 15:32 packages/rustic-readme.txt

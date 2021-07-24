@@ -3,114 +3,43 @@ Fetcher: github
 Source:  https://github.com/jcaw/elnode.git
 
 Updating /mnt/store/melpa/working/elnode/
+Checking out origin/melpa
+Checking out 29ef0f51a65a24fca7fdcdb4140d2e4556e4bb29
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elnode/
-  to /tmp/elnodeIJjqmn/elnode-20190608.1623
+  to /tmp/elnode8ZJGsq/elnode-20190702.1509
     .git => .git
-    .gitignore -> .gitignore
-    .hgignore -> .hgignore
-    .hgtags -> .hgtags
     COPYING -> COPYING
-    Dockerfile -> Dockerfile
-    Dockerfile-install.el -> Dockerfile-install.el
-    FAQ.creole -> FAQ.creole
-    Makefile -> Makefile
     README.creole -> README.creole
-    bookmark4chrome => bookmark4chrome
     default-webserver-image.png -> default-webserver-image.png
     default-webserver-test.html -> default-webserver-test.html
     default-wiki-index.creole -> default-wiki-index.creole
-    default-wiki-logo.gif -> default-wiki-logo.gif
-    elnode-bm.el -> elnode-bm.el
-    elnode-compat.el -> elnode-compat.el
-    elnode-js.el -> elnode-js.el
     elnode-lists.el -> elnode-lists.el
     elnode-log-mode.el -> elnode-log-mode.el
+    elnode-pkg.el -> elnode-pkg.el
     elnode-proxy.el -> elnode-proxy.el
     elnode-rle.el -> elnode-rle.el
-    elnode-tests.el -> elnode-tests.el
     elnode-testsupport.el -> elnode-testsupport.el
-    elnode-tools.el -> elnode-tools.el
     elnode-wiki.el -> elnode-wiki.el
     elnode.el -> elnode.el
-    elnode.org -> elnode.org
-    elnode_tutorial.creole -> elnode_tutorial.creole
-    elnode_tutorial.org -> elnode_tutorial.org
-    examples => examples
-    manual => manual
-    nodejs-tools => nodejs-tools
-    recipes => recipes
-    test_docroot => test_docroot
-Created elnode-20190608.1623.tar containing:
-  elnode-20190608.1623/
-  elnode-20190608.1623/.gitignore
-  elnode-20190608.1623/.hgignore
-  elnode-20190608.1623/.hgtags
-  elnode-20190608.1623/COPYING
-  elnode-20190608.1623/Dockerfile
-  elnode-20190608.1623/Dockerfile-install.el
-  elnode-20190608.1623/FAQ.creole
-  elnode-20190608.1623/Makefile
-  elnode-20190608.1623/README.creole
-  elnode-20190608.1623/bookmark4chrome/
-  elnode-20190608.1623/bookmark4chrome/bookmark-background.js
-  elnode-20190608.1623/bookmark4chrome/icon.png
-  elnode-20190608.1623/bookmark4chrome/manifest.json
-  elnode-20190608.1623/default-webserver-image.png
-  elnode-20190608.1623/default-webserver-test.html
-  elnode-20190608.1623/default-wiki-index.creole
-  elnode-20190608.1623/default-wiki-logo.gif
-  elnode-20190608.1623/elnode-bm.el
-  elnode-20190608.1623/elnode-compat.el
-  elnode-20190608.1623/elnode-js.el
-  elnode-20190608.1623/elnode-lists.el
-  elnode-20190608.1623/elnode-log-mode.el
-  elnode-20190608.1623/elnode-pkg.el
-  elnode-20190608.1623/elnode-proxy.el
-  elnode-20190608.1623/elnode-rle.el
-  elnode-20190608.1623/elnode-tests.el
-  elnode-20190608.1623/elnode-testsupport.el
-  elnode-20190608.1623/elnode-tools.el
-  elnode-20190608.1623/elnode-wiki.el
-  elnode-20190608.1623/elnode.el
-  elnode-20190608.1623/elnode.org
-  elnode-20190608.1623/elnode_tutorial.creole
-  elnode-20190608.1623/elnode_tutorial.org
-  elnode-20190608.1623/examples/
-  elnode-20190608.1623/examples/chat-tests.el
-  elnode-20190608.1623/examples/chat.css
-  elnode-20190608.1623/examples/chat.el
-  elnode-20190608.1623/examples/chat.html
-  elnode-20190608.1623/examples/chat.js
-  elnode-20190608.1623/examples/demo.el
-  elnode-20190608.1623/examples/elnode-ijs.el
-  elnode-20190608.1623/examples/elnode-ijs.js
-  elnode-20190608.1623/examples/elnode-org.el
-  elnode-20190608.1623/examples/elpakit-boot.el
-  elnode-20190608.1623/examples/insideout.el
-  elnode-20190608.1623/examples/styles.css
-  elnode-20190608.1623/examples/submit-test.el
-  elnode-20190608.1623/examples/upload.el
-  elnode-20190608.1623/manual/
-  elnode-20190608.1623/manual/ASYNC.creole
-  elnode-20190608.1623/manual/AUTH.creole
-  elnode-20190608.1623/manual/BOOKMARKS.creole
-  elnode-20190608.1623/manual/EXAMPLES.creole
-  elnode-20190608.1623/manual/HACKING.creole
-  elnode-20190608.1623/manual/TESTING.creole
-  elnode-20190608.1623/nodejs-tools/
-  elnode-20190608.1623/nodejs-tools/README.creole
-  elnode-20190608.1623/nodejs-tools/docker-nodejs/
-  elnode-20190608.1623/nodejs-tools/docker-nodejs/Dockerfile
-  elnode-20190608.1623/nodejs-tools/docker-nodejs/Makefile
-  elnode-20190608.1623/nodejs-tools/docker-nodejs/node-install
-  elnode-20190608.1623/recipes/
-  elnode-20190608.1623/recipes/elnode
-  elnode-20190608.1623/test_docroot/
-  elnode-20190608.1623/test_docroot/example.html
-Built elnode in 4.903s, finished at 2021-07-24T01:16:36+0000
+Created elnode-20190702.1509.tar containing:
+  elnode-20190702.1509/
+  elnode-20190702.1509/COPYING
+  elnode-20190702.1509/README.creole
+  elnode-20190702.1509/default-webserver-image.png
+  elnode-20190702.1509/default-webserver-test.html
+  elnode-20190702.1509/default-wiki-index.creole
+  elnode-20190702.1509/elnode-lists.el
+  elnode-20190702.1509/elnode-log-mode.el
+  elnode-20190702.1509/elnode-pkg.el
+  elnode-20190702.1509/elnode-proxy.el
+  elnode-20190702.1509/elnode-rle.el
+  elnode-20190702.1509/elnode-testsupport.el
+  elnode-20190702.1509/elnode-wiki.el
+  elnode-20190702.1509/elnode.el
+Built elnode in 5.039s, finished at 2021-07-24T14:44:00+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  277 Jul 24 01:16 packages/elnode-20190608.1623.entry
-512K -rw-r--r-- 1 root root 510K Jul 24 01:16 packages/elnode-20190608.1623.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:16 packages/elnode-badge.svg
-4.0K -rw-r--r-- 1 root root  380 Jul 24 01:16 packages/elnode-readme.txt
+4.0K -rw-r--r-- 1 root root  437 Jul 24 14:43 packages/elnode-20190702.1509.entry
+252K -rw-r--r-- 1 root root 250K Jul 24 14:43 packages/elnode-20190702.1509.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:44 packages/elnode-badge.svg
+4.0K -rw-r--r-- 1 root root  380 Jul 24 14:43 packages/elnode-readme.txt

@@ -13,3 +13,8 @@ For each supported language, this package provides:
    that are not aware of `tree-sitter'. A language major mode that wants to
    use `tree-sitter' for syntax highlighting should instead provide the query
    patterns on its own, using the mechanisms defined by `tree-sitter-hl'.
+
+3. Optional query patterns for other minor modes that provide high-level
+   functionalities on top of `tree-sitter', such as code folding, evil text
+   objects... As with highlighting patterns, major modes that are directly
+   aware of `tree-sitter' should provide the query patterns on their own.

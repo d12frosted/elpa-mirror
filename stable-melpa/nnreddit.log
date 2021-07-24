@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/dickmao/nnreddit.git
 
 Updating /mnt/store/melpa/working/nnreddit/
+Checking out origin/HEAD
+Checking out 60bf11fdba8ff56b6b4b21f5f0c04953834d8a14
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nnreddit/
-  to /tmp/nnredditgXzx7G/nnreddit-20210708.43
+  to /tmp/nnreddit9aTb2h/nnreddit-20210708.43
   ! lisp/nnreddit-pkg.el -> nnreddit-pkg.el
   ! lisp/nnreddit.el -> nnreddit.el
     setup.py -> setup.py
@@ -27,9 +29,9 @@ Created nnreddit-20210708.43.tar containing:
   nnreddit-20210708.43/nnreddit/templates/rtv.cfg
   nnreddit-20210708.43/requirements.txt
   nnreddit-20210708.43/setup.py
-Built nnreddit in 3.991s, finished at 2021-07-24T01:46:29+0000
+Built nnreddit in 4.572s, finished at 2021-07-24T15:16:59+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  411 Jul 24 01:46 packages/nnreddit-20210708.43.entry
-120K -rw-r--r-- 1 root root 120K Jul 24 01:46 packages/nnreddit-20210708.43.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:46 packages/nnreddit-badge.svg
-4.0K -rw-r--r-- 1 root root   27 Jul 24 01:46 packages/nnreddit-readme.txt
+4.0K -rw-r--r-- 1 root root  411 Jul 24 15:16 packages/nnreddit-20210708.43.entry
+120K -rw-r--r-- 1 root root 120K Jul 24 15:16 packages/nnreddit-20210708.43.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:16 packages/nnreddit-badge.svg
+4.0K -rw-r--r-- 1 root root   27 Jul 24 15:16 packages/nnreddit-readme.txt

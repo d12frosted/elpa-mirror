@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/mpenet/clojure-snippets.git
 
 Updating /mnt/store/melpa/working/clojure-snippets/
+Checking out origin/HEAD
+Checking out 6068dca90467a0f4ebc2cd39338a173d6f5ddc04
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/clojure-snippets/
-  to /tmp/clojure-snippetsicWlXj/clojure-snippets-20180314.1308
+  to /tmp/clojure-snippetscFJER9/clojure-snippets-20180314.1308
     clojure-snippets-pkg.el -> clojure-snippets-pkg.el
     clojure-snippets.el -> clojure-snippets.el
     snippets => snippets
@@ -54,8 +56,8 @@ Created clojure-snippets-20180314.1308.tar containing:
   clojure-snippets-20180314.1308/snippets/clojure-mode/use
   clojure-snippets-20180314.1308/snippets/clojure-mode/when
   clojure-snippets-20180314.1308/snippets/clojure-mode/whenl
-Built clojure-snippets in 4.031s, finished at 2021-07-24T01:07:28+0000
+Built clojure-snippets in 4.251s, finished at 2021-07-24T14:33:43+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  303 Jul 24 01:07 packages/clojure-snippets-20180314.1308.entry
- 52K -rw-r--r-- 1 root root  50K Jul 24 01:07 packages/clojure-snippets-20180314.1308.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:07 packages/clojure-snippets-badge.svg
+4.0K -rw-r--r-- 1 root root  303 Jul 24 14:33 packages/clojure-snippets-20180314.1308.entry
+ 52K -rw-r--r-- 1 root root  50K Jul 24 14:33 packages/clojure-snippets-20180314.1308.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:33 packages/clojure-snippets-badge.svg

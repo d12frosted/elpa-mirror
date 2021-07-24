@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/pinyin.el.git
 
 Updating /mnt/store/melpa/working/pinyin/
+Checking out origin/HEAD
+Checking out e5508e5aa1ad4cfa05a7f4d299e5a155b288ec4c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pinyin/
-  to /tmp/pinyinOZ92Og/pinyin-20180620.1241
+  to /tmp/pinyinFJBBlo/pinyin-20180620.1241
     pinyin.el -> pinyin.el
     pinyin-data/pinyin.txt -> pinyin-data/pinyin.txt
 Created pinyin-20180620.1241.tar containing:
@@ -14,14 +16,14 @@ Created pinyin-20180620.1241.tar containing:
   pinyin-20180620.1241/pinyin-data/pinyin.txt
   pinyin-20180620.1241/pinyin-pkg.el
   pinyin-20180620.1241/pinyin.el
-Built pinyin in 4.686s, finished at 2021-07-24T01:54:08+0000
+Built pinyin in 6.012s, finished at 2021-07-24T15:25:36+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  375 Jul 24 01:54 packages/pinyin-20180620.1241.entry
-912K -rw-r--r-- 1 root root 910K Jul 24 01:54 packages/pinyin-20180620.1241.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:54 packages/pinyin-badge.svg
-4.0K -rw-r--r-- 1 root root   41 Jul 24 01:54 packages/pinyin-readme.txt
-8.0K -rw-r--r-- 1 root root 5.1K Jul 24 01:54 packages/pinyin-search-20160515.358.el
-4.0K -rw-r--r-- 1 root root  380 Jul 23 22:37 packages/pinyin-search-20160515.358.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:37 packages/pinyin-search-badge.svg
-4.0K -rw-r--r-- 1 root root  417 Jul 23 22:37 packages/pinyin-search-readme.txt
-4.0K -rw-r--r-- 1 root root  149 Jul 24 01:54 packages/pinyin-search.log
+4.0K -rw-r--r-- 1 root root  375 Jul 24 15:25 packages/pinyin-20180620.1241.entry
+912K -rw-r--r-- 1 root root 910K Jul 24 15:25 packages/pinyin-20180620.1241.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:25 packages/pinyin-badge.svg
+4.0K -rw-r--r-- 1 root root   41 Jul 24 15:25 packages/pinyin-readme.txt
+8.0K -rw-r--r-- 1 root root 5.2K Jul 24 15:25 packages/pinyin-search-20160515.358.el
+4.0K -rw-r--r-- 1 root root  380 Jul 24 15:25 packages/pinyin-search-20160515.358.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:59 packages/pinyin-search-badge.svg
+4.0K -rw-r--r-- 1 root root  417 Jul 24 15:25 packages/pinyin-search-readme.txt
+4.0K -rw-r--r-- 1 root root  228 Jul 24 15:25 packages/pinyin-search.log

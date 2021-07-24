@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/tumashu/org2web.git
 
 Updating /mnt/store/melpa/working/org2web/
+Checking out origin/HEAD
+Checking out 6f5c5f0cc5c877ac3a383782bbe8751264d807b6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org2web/
-  to /tmp/org2webldFChS/org2web-20210203.324
+  to /tmp/org2webSu6tfP/org2web-20210203.324
     org2web-config.el -> org2web-config.el
     org2web-devtools.el -> org2web-devtools.el
     org2web-el2org.el -> org2web-el2org.el
@@ -73,9 +75,9 @@ Created org2web-20210203.324.tar containing:
   org2web-20210203.324/uploaders/common/git-simple.mustache
   org2web-20210203.324/uploaders/common/git.mustache
   org2web-20210203.324/uploaders/common/rclone.mustache
-Built org2web in 5.416s, finished at 2021-07-24T01:51:02+0000
+Built org2web in 11.906s, finished at 2021-07-24T15:21:55+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  666 Jul 24 01:51 packages/org2web-20210203.324.entry
-232K -rw-r--r-- 1 root root 230K Jul 24 01:51 packages/org2web-20210203.324.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:51 packages/org2web-badge.svg
-8.0K -rw-r--r-- 1 root root 5.1K Jul 24 01:51 packages/org2web-readme.txt
+4.0K -rw-r--r-- 1 root root  666 Jul 24 15:21 packages/org2web-20210203.324.entry
+232K -rw-r--r-- 1 root root 230K Jul 24 15:21 packages/org2web-20210203.324.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:21 packages/org2web-badge.svg
+8.0K -rw-r--r-- 1 root root 5.1K Jul 24 15:21 packages/org2web-readme.txt

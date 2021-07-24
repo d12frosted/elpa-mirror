@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/nlamirault/cerbere.git
 
 Updating /mnt/store/melpa/working/cerbere/
+Checking out origin/HEAD
+Checking out c667c165d9c1657f13d2d46f09ba21b61f9402cc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cerbere/
-  to /tmp/cerbereDj0lMD/cerbere-20181113.1641
+  to /tmp/cerbereaEqsXM/cerbere-20181113.1641
     cerbere-common.el -> cerbere-common.el
     cerbere-elisp-ert-runner.el -> cerbere-elisp-ert-runner.el
     cerbere-php-phpunit.el -> cerbere-php-phpunit.el
@@ -23,9 +25,9 @@ Created cerbere-20181113.1641.tar containing:
   cerbere-20181113.1641/cerbere-ruby-minitest.el
   cerbere-20181113.1641/cerbere-rust-libtest.el
   cerbere-20181113.1641/cerbere.el
-Built cerbere in 4.730s, finished at 2021-07-23T21:48:18+0000
+Built cerbere in 4.980s, finished at 2021-07-24T14:32:28+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  455 Jul 23 21:48 packages/cerbere-20181113.1641.entry
- 52K -rw-r--r-- 1 root root  50K Jul 23 21:48 packages/cerbere-20181113.1641.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 21:48 packages/cerbere-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul 23 21:48 packages/cerbere-readme.txt
+4.0K -rw-r--r-- 1 root root  455 Jul 24 14:32 packages/cerbere-20181113.1641.entry
+ 52K -rw-r--r-- 1 root root  50K Jul 24 14:32 packages/cerbere-20181113.1641.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:32 packages/cerbere-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul 24 14:32 packages/cerbere-readme.txt

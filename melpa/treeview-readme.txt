@@ -61,6 +61,9 @@ properties exist:
 
   state  The state of the node.  See below for details
 
+  selected
+         Whether the node is selected (non-nil if selected, nil if not)
+
 Node states: Each node is in exactly one of three states, which are represented by the
 following Lisp symbols:
 
@@ -78,6 +81,7 @@ expanded or folded.
 The framework is used by implementing several functions which are defined as function variables,
 thus, variables whose values are function symbols.  Here is a list of that variables:
 
+  treeview-get-root-node-function
   treeview-node-leaf-p-function
   treeview-update-node-children-function
   treeview-after-node-expanded-function
@@ -95,6 +99,8 @@ thus, variables whose values are function symbols.  Here is a list of that varia
   treeview-get-indent-face-function
   treeview-get-control-face-function
   treeview-get-control-mouse-face-function
+  treeview-get-selected-node-face-function
+  treeview-get-highlighted-node-face-function
   treeview-get-label-keymap-function
   treeview-get-label-face-function
   treeview-get-label-mouse-face-function
@@ -109,3 +115,7 @@ set the variables to particular functions in that buffer.  Then, the root node s
 created and rendered in the buffer by a call to treeview-display-node.
 
 See library "dir-treeview" for an example where this framework is used.
+
+If you upgrade from v1.0.0: Note that v1.1.0 (this version) defines another buffer-local
+function variable treeview-get-root-node-function which didn't exist in v1.0.0. It must be
+set to a function which returns the root node of the tree.

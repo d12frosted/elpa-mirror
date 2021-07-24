@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/bomgar/helm-rage.git
 
 Updating /mnt/store/melpa/working/helm-rage/
+Checking out origin/HEAD
+Checking out 5d0aefb53d859186181d4bdcfeff7d315339c7b8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm-rage/
-  to /tmp/helm-rageSCFxjI/helm-rage-20180118.1532
+  to /tmp/helm-ragemi9cUc/helm-rage-20180118.1532
     helm-rage.el -> helm-rage.el
     meme => meme
 Created helm-rage-20180118.1532.tar containing:
@@ -98,9 +100,9 @@ Created helm-rage-20180118.1532.tar containing:
   helm-rage-20180118.1532/meme/wat2.meme
   helm-rage-20180118.1532/meme/y_you_no.meme
   helm-rage-20180118.1532/meme/you_don't_say.meme
-Built helm-rage in 3.997s, finished at 2021-07-23T22:14:16+0000
+Built helm-rage in 5.105s, finished at 2021-07-24T15:00:30+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  347 Jul 23 22:14 packages/helm-rage-20180118.1532.entry
-232K -rw-r--r-- 1 root root 230K Jul 23 22:14 packages/helm-rage-20180118.1532.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:14 packages/helm-rage-badge.svg
-4.0K -rw-r--r-- 1 root root   27 Jul 23 22:14 packages/helm-rage-readme.txt
+4.0K -rw-r--r-- 1 root root  347 Jul 24 15:00 packages/helm-rage-20180118.1532.entry
+232K -rw-r--r-- 1 root root 230K Jul 24 15:00 packages/helm-rage-20180118.1532.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:00 packages/helm-rage-badge.svg
+4.0K -rw-r--r-- 1 root root   27 Jul 24 15:00 packages/helm-rage-readme.txt

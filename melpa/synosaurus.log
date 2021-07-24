@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/hpdeifel/synosaurus.git
 
 Updating /mnt/store/melpa/working/synosaurus/
+Checking out origin/HEAD
+Checking out 14d34fc92a77c3a916b4d58400424c44ae99cd81
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/synosaurus/
-  to /tmp/synosaurusTgXqiT/synosaurus-20191125.552
+  to /tmp/synosaurusx15uuK/synosaurus-20191125.552
     synosaurus-openthesaurus.el -> synosaurus-openthesaurus.el
     synosaurus-pkg.el -> synosaurus-pkg.el
     synosaurus-wordnet.el -> synosaurus-wordnet.el
@@ -16,9 +18,9 @@ Created synosaurus-20191125.552.tar containing:
   synosaurus-20191125.552/synosaurus-pkg.el
   synosaurus-20191125.552/synosaurus-wordnet.el
   synosaurus-20191125.552/synosaurus.el
-Built synosaurus in 5.099s, finished at 2021-07-23T22:49:26+0000
+Built synosaurus in 4.463s, finished at 2021-07-24T15:38:31+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  356 Jul 23 22:49 packages/synosaurus-20191125.552.entry
- 20K -rw-r--r-- 1 root root  20K Jul 23 22:49 packages/synosaurus-20191125.552.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:49 packages/synosaurus-badge.svg
-4.0K -rw-r--r-- 1 root root  353 Jul 23 22:49 packages/synosaurus-readme.txt
+4.0K -rw-r--r-- 1 root root  356 Jul 24 15:38 packages/synosaurus-20191125.552.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 24 15:38 packages/synosaurus-20191125.552.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:38 packages/synosaurus-badge.svg
+4.0K -rw-r--r-- 1 root root  353 Jul 24 15:38 packages/synosaurus-readme.txt

@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/gvol/emacs-achievements.git
 
 Updating /mnt/store/melpa/working/achievements/
+Checking out origin/HEAD
+Checking out c8275ee492d56255999d58f2988129ab29145182
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/achievements/
-  to /tmp/achievementsxidZNj/achievements-20150531.1317
+  to /tmp/achievementsbyszBk/achievements-20150531.1317
     achievements-functions.el -> achievements-functions.el
     achievements-pkg.el -> achievements-pkg.el
     achievements.el -> achievements.el
@@ -20,9 +22,9 @@ Created achievements-20150531.1317.tar containing:
   achievements-20150531.1317/advanced-achievements.el
   achievements-20150531.1317/basic-achievements.el
   achievements-20150531.1317/ideas-achievements.el
-Built achievements in 4.205s, finished at 2021-07-24T01:00:38+0000
+Built achievements in 6.207s, finished at 2021-07-24T14:26:05+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  318 Jul 24 01:00 packages/achievements-20150531.1317.entry
- 60K -rw-r--r-- 1 root root  60K Jul 24 01:00 packages/achievements-20150531.1317.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:00 packages/achievements-badge.svg
-4.0K -rw-r--r-- 1 root root  205 Jul 24 01:00 packages/achievements-readme.txt
+4.0K -rw-r--r-- 1 root root  318 Jul 24 14:26 packages/achievements-20150531.1317.entry
+ 60K -rw-r--r-- 1 root root  60K Jul 24 14:26 packages/achievements-20150531.1317.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:26 packages/achievements-badge.svg
+4.0K -rw-r--r-- 1 root root  205 Jul 24 14:26 packages/achievements-readme.txt

@@ -3,22 +3,24 @@ Fetcher: gitlab
 Source:  https://gitlab.com/egh/zotxt-emacs.git
 
 Updating /mnt/store/melpa/working/zotxt/
+Checking out origin/HEAD
+Checking out 45961801f9e0350d7457d0d84c5004f63aed9070
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/zotxt/
-  to /tmp/zotxtHKpCBK/zotxt-20210129.413
+  to /tmp/zotxt9kSCEU/zotxt-20210222.347
     org-zotxt-noter.el -> org-zotxt-noter.el
     org-zotxt.el -> org-zotxt.el
     zotxt-pkg.el -> zotxt-pkg.el
     zotxt.el -> zotxt.el
-Created zotxt-20210129.413.tar containing:
-  zotxt-20210129.413/
-  zotxt-20210129.413/org-zotxt-noter.el
-  zotxt-20210129.413/org-zotxt.el
-  zotxt-20210129.413/zotxt-pkg.el
-  zotxt-20210129.413/zotxt.el
-Built zotxt in 4.314s, finished at 2021-07-24T02:14:07+0000
+Created zotxt-20210222.347.tar containing:
+  zotxt-20210222.347/
+  zotxt-20210222.347/org-zotxt-noter.el
+  zotxt-20210222.347/org-zotxt.el
+  zotxt-20210222.347/zotxt-pkg.el
+  zotxt-20210222.347/zotxt.el
+Built zotxt in 5.981s, finished at 2021-07-24T15:48:05+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  323 Jul 24 02:14 packages/zotxt-20210129.413.entry
- 40K -rw-r--r-- 1 root root  40K Jul 24 02:14 packages/zotxt-20210129.413.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 02:14 packages/zotxt-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul 24 02:14 packages/zotxt-readme.txt
+4.0K -rw-r--r-- 1 root root  323 Jul 24 15:48 packages/zotxt-20210222.347.entry
+ 40K -rw-r--r-- 1 root root  40K Jul 24 15:48 packages/zotxt-20210222.347.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:48 packages/zotxt-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul 24 15:48 packages/zotxt-readme.txt

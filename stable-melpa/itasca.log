@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/jkfurtney/itasca-emacs.git
 
 Updating /mnt/store/melpa/working/itasca/
+Checking out origin/HEAD
+Checking out 3d15dd1b70d6db69b0f4758a3e28b8b506cc84ca
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/itasca/
-  to /tmp/itascaWjViy0/itasca-20170601.1622
+  to /tmp/itasca3oZWlI/itasca-20170601.1622
     itasca.el -> itasca.el
     ac-dict => ac-dict
     snippets => snippets
@@ -44,9 +46,9 @@ Created itasca-20170601.1622.tar containing:
   itasca-20170601.1622/snippets/itasca-pfc5-mode/.yas-parents
   itasca-20170601.1622/snippets/itasca-udec-mode/
   itasca-20170601.1622/snippets/itasca-udec-mode/.yas-parents
-Built itasca in 4.159s, finished at 2021-07-24T01:35:32+0000
+Built itasca in 8.546s, finished at 2021-07-24T15:04:45+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  420 Jul 24 01:35 packages/itasca-20170601.1622.entry
-132K -rw-r--r-- 1 root root 130K Jul 24 01:35 packages/itasca-20170601.1622.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:35 packages/itasca-badge.svg
-4.0K -rw-r--r-- 1 root root 1.5K Jul 24 01:35 packages/itasca-readme.txt
+4.0K -rw-r--r-- 1 root root  420 Jul 24 15:04 packages/itasca-20170601.1622.entry
+132K -rw-r--r-- 1 root root 130K Jul 24 15:04 packages/itasca-20170601.1622.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:04 packages/itasca-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Jul 24 15:04 packages/itasca-readme.txt

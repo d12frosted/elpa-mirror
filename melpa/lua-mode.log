@@ -3,10 +3,12 @@ Fetcher: github
 Source:  https://github.com/immerrr/lua-mode.git
 
 Updating /mnt/store/melpa/working/lua-mode/
+Checking out origin/HEAD
+Checking out 2bd9077dd0405efc9276f612e24a345698c539c4
 Note: lua-mode :files spec is equivalent to the default.
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lua-mode/
-  to /tmp/lua-modesjhkWW/lua-mode-20210619.652
+  to /tmp/lua-modeKvnsmH/lua-mode-20210619.652
     init-tryout.el -> init-tryout.el
     lua-mode.el -> lua-mode.el
 Created lua-mode-20210619.652.tar containing:
@@ -14,9 +16,9 @@ Created lua-mode-20210619.652.tar containing:
   lua-mode-20210619.652/init-tryout.el
   lua-mode-20210619.652/lua-mode-pkg.el
   lua-mode-20210619.652/lua-mode.el
-Built lua-mode in 3.976s, finished at 2021-07-23T22:24:24+0000
+Built lua-mode in 5.013s, finished at 2021-07-24T15:11:10+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  913 Jul 23 22:24 packages/lua-mode-20210619.652.entry
-100K -rw-r--r-- 1 root root 100K Jul 23 22:24 packages/lua-mode-20210619.652.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:24 packages/lua-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 2.1K Jul 23 22:24 packages/lua-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  913 Jul 24 15:11 packages/lua-mode-20210619.652.entry
+100K -rw-r--r-- 1 root root 100K Jul 24 15:11 packages/lua-mode-20210619.652.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:11 packages/lua-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 2.1K Jul 24 15:11 packages/lua-mode-readme.txt

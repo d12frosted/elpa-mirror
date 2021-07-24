@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/k1LoW/emacs-ansible.git
 
 Updating /mnt/store/melpa/working/ansible/
+Checking out origin/HEAD
+Checking out 40af0d2bbb6c5bbcf7aa9269ac9a07e22622d263
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ansible/
-  to /tmp/ansibleVBqxWP/ansible-20210103.543
+  to /tmp/ansiblerni6gf/ansible-20210103.543
     ansible.el -> ansible.el
     snippets => snippets
     dict => dict
@@ -295,19 +297,19 @@ Created ansible-20210103.543.tar containing:
   ansible-20210103.543/snippets/text-mode/ansible/windows/win_user
   ansible-20210103.543/snippets/yaml-mode/
   ansible-20210103.543/snippets/yaml-mode/.yas-parents
-Built ansible in 6.716s, finished at 2021-07-24T01:01:39+0000
+Built ansible in 8.702s, finished at 2021-07-24T14:27:17+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  423 Jul 24 01:01 packages/ansible-20210103.543.entry
-300K -rw-r--r-- 1 root root 300K Jul 24 01:01 packages/ansible-20210103.543.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:01 packages/ansible-badge.svg
- 16K -rw-r--r-- 1 root root  14K Jul 24 01:01 packages/ansible-doc-20160924.824.el
-4.0K -rw-r--r-- 1 root root  407 Jul 24 01:01 packages/ansible-doc-20160924.824.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:01 packages/ansible-doc-badge.svg
-4.0K -rw-r--r-- 1 root root  272 Jul 24 01:01 packages/ansible-doc-readme.txt
-4.0K -rw-r--r-- 1 root root  548 Jul 24 01:01 packages/ansible-doc.log
-4.0K -rw-r--r-- 1 root root   46 Jul 24 01:01 packages/ansible-readme.txt
- 16K -rw-r--r-- 1 root root  14K Jul 23 21:43 packages/ansible-vault-20200305.2240.el
-4.0K -rw-r--r-- 1 root root  362 Jul 23 21:43 packages/ansible-vault-20200305.2240.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 21:43 packages/ansible-vault-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul 23 21:43 packages/ansible-vault-readme.txt
-4.0K -rw-r--r-- 1 root root  147 Jul 24 01:01 packages/ansible-vault.log
+4.0K -rw-r--r-- 1 root root  423 Jul 24 14:27 packages/ansible-20210103.543.entry
+300K -rw-r--r-- 1 root root 300K Jul 24 14:27 packages/ansible-20210103.543.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:27 packages/ansible-badge.svg
+ 16K -rw-r--r-- 1 root root  14K Jul 24 14:27 packages/ansible-doc-20160924.824.el
+4.0K -rw-r--r-- 1 root root  407 Jul 24 14:27 packages/ansible-doc-20160924.824.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:27 packages/ansible-doc-badge.svg
+4.0K -rw-r--r-- 1 root root  272 Jul 24 14:27 packages/ansible-doc-readme.txt
+4.0K -rw-r--r-- 1 root root  627 Jul 24 14:27 packages/ansible-doc.log
+4.0K -rw-r--r-- 1 root root   46 Jul 24 14:27 packages/ansible-readme.txt
+ 16K -rw-r--r-- 1 root root  14K Jul 24 14:27 packages/ansible-vault-20200305.2240.el
+4.0K -rw-r--r-- 1 root root  362 Jul 24 14:27 packages/ansible-vault-20200305.2240.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:27 packages/ansible-vault-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul 24 14:27 packages/ansible-vault-readme.txt
+4.0K -rw-r--r-- 1 root root  642 Jul 24 14:27 packages/ansible-vault.log

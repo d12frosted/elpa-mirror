@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/nlamirault/phpunit.el.git
 
 Updating /mnt/store/melpa/working/phpunit/
+Checking out origin/HEAD
+Checking out fe6bc91c3bd8b329c6d26ad883a025f06b5121ee
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/phpunit/
-  to /tmp/phpunit5AUvfk/phpunit-20180829.1438
+  to /tmp/phpunitWk16Ra/phpunit-20180829.1438
     phpunit-mode.el -> phpunit-mode.el
     phpunit.el -> phpunit.el
 Created phpunit-20180829.1438.tar containing:
@@ -13,9 +15,9 @@ Created phpunit-20180829.1438.tar containing:
   phpunit-20180829.1438/phpunit-mode.el
   phpunit-20180829.1438/phpunit-pkg.el
   phpunit-20180829.1438/phpunit.el
-Built phpunit in 3.648s, finished at 2021-07-24T01:53:56+0000
+Built phpunit in 4.169s, finished at 2021-07-24T15:25:22+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  553 Jul 24 01:53 packages/phpunit-20180829.1438.entry
- 20K -rw-r--r-- 1 root root  20K Jul 24 01:53 packages/phpunit-20180829.1438.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:53 packages/phpunit-badge.svg
-4.0K -rw-r--r-- 1 root root  424 Jul 24 01:53 packages/phpunit-readme.txt
+4.0K -rw-r--r-- 1 root root  553 Jul 24 15:25 packages/phpunit-20180829.1438.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 24 15:25 packages/phpunit-20180829.1438.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:25 packages/phpunit-badge.svg
+4.0K -rw-r--r-- 1 root root  424 Jul 24 15:25 packages/phpunit-readme.txt

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm.git
 
 Updating /mnt/store/melpa/working/helm-core/
+Checking out origin/HEAD
+Checking out f6cf6078a745ec6ab313dbe98097e3bd5cef0a8c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm-core/
-  to /tmp/helm-coreEPjDqZ/helm-core-20210716.1933
+  to /tmp/helm-core8lk8Lb/helm-core-20210716.1933
     helm-core-pkg.el -> helm-core-pkg.el
     helm.el -> helm.el
     helm-lib.el -> helm-lib.el
@@ -18,8 +20,8 @@ Created helm-core-20210716.1933.tar containing:
   helm-core-20210716.1933/helm-multi-match.el
   helm-core-20210716.1933/helm-source.el
   helm-core-20210716.1933/helm.el
-Built helm-core in 4.109s, finished at 2021-07-23T22:12:54+0000
+Built helm-core in 5.093s, finished at 2021-07-24T14:58:40+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  194 Jul 23 22:12 packages/helm-core-20210716.1933.entry
-452K -rw-r--r-- 1 root root 450K Jul 23 22:12 packages/helm-core-20210716.1933.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:12 packages/helm-core-badge.svg
+4.0K -rw-r--r-- 1 root root  194 Jul 24 14:58 packages/helm-core-20210716.1933.entry
+452K -rw-r--r-- 1 root root 450K Jul 24 14:58 packages/helm-core-20210716.1933.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:58 packages/helm-core-badge.svg

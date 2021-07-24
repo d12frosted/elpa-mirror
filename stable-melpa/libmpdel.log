@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/mpdel/libmpdel.git
 
 Updating /mnt/store/melpa/working/libmpdel/
+Checking out origin/HEAD
+Checking out e4ae63dd002fe07835c3c8a35b20b6e8347f8e84
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/libmpdel/
-  to /tmp/libmpdeltM4vNr/libmpdel-20210627.755
+  to /tmp/libmpdele0V6Sk/libmpdel-20210627.755
     libmpdel-directory.el -> libmpdel-directory.el
     libmpdel.el -> libmpdel.el
 Created libmpdel-20210627.755.tar containing:
@@ -13,9 +15,9 @@ Created libmpdel-20210627.755.tar containing:
   libmpdel-20210627.755/libmpdel-directory.el
   libmpdel-20210627.755/libmpdel-pkg.el
   libmpdel-20210627.755/libmpdel.el
-Built libmpdel in 4.727s, finished at 2021-07-24T01:39:36+0000
+Built libmpdel in 4.823s, finished at 2021-07-24T15:09:09+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  366 Jul 24 01:39 packages/libmpdel-20210627.755.entry
- 60K -rw-r--r-- 1 root root  60K Jul 24 01:39 packages/libmpdel-20210627.755.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:39 packages/libmpdel-badge.svg
-4.0K -rw-r--r-- 1 root root  251 Jul 24 01:39 packages/libmpdel-readme.txt
+4.0K -rw-r--r-- 1 root root  366 Jul 24 15:09 packages/libmpdel-20210627.755.entry
+ 60K -rw-r--r-- 1 root root  60K Jul 24 15:09 packages/libmpdel-20210627.755.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:09 packages/libmpdel-badge.svg
+4.0K -rw-r--r-- 1 root root  251 Jul 24 15:09 packages/libmpdel-readme.txt

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/Sarcasm/irony-mode.git
 
 Updating /mnt/store/melpa/working/irony/
+Checking out origin/HEAD
+Checking out ec6dce7ee16ffaa9a735204534aa4aa074d14487
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/irony/
-  to /tmp/ironyqnFoSx/irony-20210321.1750
+  to /tmp/ironyBgJ1Th/irony-20210321.1750
     .dir-locals.el -> .dir-locals.el
     irony-cdb-clang-complete.el -> irony-cdb-clang-complete.el
     irony-cdb-json.el -> irony-cdb-json.el
@@ -73,14 +75,14 @@ Created irony-20210321.1750.tar containing:
   irony-20210321.1750/server/test/elisp/irony-iotask.el
   irony-20210321.1750/server/test/elisp/irony.el
   irony-20210321.1750/server/test/elisp/test-config.el
-Built irony in 4.207s, finished at 2021-07-24T01:35:23+0000
+Built irony in 4.992s, finished at 2021-07-24T15:04:31+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  399 Jul 24 01:35 packages/irony-20210321.1750.entry
-252K -rw-r--r-- 1 root root 250K Jul 24 01:35 packages/irony-20210321.1750.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:35 packages/irony-badge.svg
- 20K -rw-r--r-- 1 root root  19K Jul 23 22:18 packages/irony-eldoc-20200622.2214.el
-4.0K -rw-r--r-- 1 root root  467 Jul 23 22:18 packages/irony-eldoc-20200622.2214.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:18 packages/irony-eldoc-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul 23 22:18 packages/irony-eldoc-readme.txt
-4.0K -rw-r--r-- 1 root root  137 Jul 24 01:35 packages/irony-eldoc.log
-4.0K -rw-r--r-- 1 root root  631 Jul 24 01:35 packages/irony-readme.txt
+4.0K -rw-r--r-- 1 root root  399 Jul 24 15:04 packages/irony-20210321.1750.entry
+252K -rw-r--r-- 1 root root 250K Jul 24 15:04 packages/irony-20210321.1750.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:04 packages/irony-badge.svg
+ 20K -rw-r--r-- 1 root root  19K Jul 24 15:04 packages/irony-eldoc-20200622.2214.el
+4.0K -rw-r--r-- 1 root root  467 Jul 24 11:38 packages/irony-eldoc-20200622.2214.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:38 packages/irony-eldoc-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul 24 11:38 packages/irony-eldoc-readme.txt
+4.0K -rw-r--r-- 1 root root  216 Jul 24 15:04 packages/irony-eldoc.log
+4.0K -rw-r--r-- 1 root root  631 Jul 24 15:04 packages/irony-readme.txt

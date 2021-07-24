@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/knupfer/haskell-emacs.git
 
 Updating /mnt/store/melpa/working/haskell-emacs/
+Checking out origin/HEAD
+Checking out a2c6a079175904689eed7c6c200754bfa85d1ed9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/haskell-emacs/
-  to /tmp/haskell-emacsdlv5Yb/haskell-emacs-20160904.2026
+  to /tmp/haskell-emacs2If53z/haskell-emacs-20160904.2026
     haskell-emacs.el -> haskell-emacs.el
     HaskellEmacs.hs -> HaskellEmacs.hs
     README.org -> README.org
@@ -20,19 +22,19 @@ Created haskell-emacs-20160904.2026.tar containing:
   haskell-emacs-20160904.2026/README.org
   haskell-emacs-20160904.2026/haskell-emacs-pkg.el
   haskell-emacs-20160904.2026/haskell-emacs.el
-Built haskell-emacs in 9.332s, finished at 2021-07-23T22:11:48+0000
+Built haskell-emacs in 4.822s, finished at 2021-07-24T14:57:52+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  316 Jul 23 22:11 packages/haskell-emacs-20160904.2026.entry
- 60K -rw-r--r-- 1 root root  60K Jul 23 22:11 packages/haskell-emacs-20160904.2026.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:11 packages/haskell-emacs-badge.svg
-4.0K -rw-r--r-- 1 root root  402 Jul 23 22:11 packages/haskell-emacs-base-20150714.1559.entry
- 20K -rw-r--r-- 1 root root  20K Jul 23 22:11 packages/haskell-emacs-base-20150714.1559.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 18:50 packages/haskell-emacs-base-badge.svg
-4.0K -rw-r--r-- 1 root root  542 Jul 23 22:11 packages/haskell-emacs-base-readme.txt
-4.0K -rw-r--r-- 1 root root  667 Jul 23 22:11 packages/haskell-emacs-base.log
-4.0K -rw-r--r-- 1 root root  468 Jul 23 22:11 packages/haskell-emacs-readme.txt
-4.0K -rw-r--r-- 1 root root  404 Jul 23 18:50 packages/haskell-emacs-text-20150713.1416.entry
- 12K -rw-r--r-- 1 root root  10K Jul 23 18:50 packages/haskell-emacs-text-20150713.1416.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 18:50 packages/haskell-emacs-text-badge.svg
-4.0K -rw-r--r-- 1 root root  574 Jul 23 18:50 packages/haskell-emacs-text-readme.txt
-4.0K -rw-r--r-- 1 root root  153 Jul 23 22:11 packages/haskell-emacs-text.log
+4.0K -rw-r--r-- 1 root root  316 Jul 24 14:57 packages/haskell-emacs-20160904.2026.entry
+ 60K -rw-r--r-- 1 root root  60K Jul 24 14:57 packages/haskell-emacs-20160904.2026.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:57 packages/haskell-emacs-badge.svg
+4.0K -rw-r--r-- 1 root root  402 Jul 24 14:57 packages/haskell-emacs-base-20150714.1559.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 24 14:57 packages/haskell-emacs-base-20150714.1559.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:57 packages/haskell-emacs-base-badge.svg
+4.0K -rw-r--r-- 1 root root  542 Jul 24 14:57 packages/haskell-emacs-base-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:57 packages/haskell-emacs-base.log
+4.0K -rw-r--r-- 1 root root  468 Jul 24 14:57 packages/haskell-emacs-readme.txt
+4.0K -rw-r--r-- 1 root root  404 Jul 24 11:31 packages/haskell-emacs-text-20150713.1416.entry
+ 12K -rw-r--r-- 1 root root  10K Jul 24 11:31 packages/haskell-emacs-text-20150713.1416.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:31 packages/haskell-emacs-text-badge.svg
+4.0K -rw-r--r-- 1 root root  574 Jul 24 11:31 packages/haskell-emacs-text-readme.txt
+4.0K -rw-r--r-- 1 root root  153 Jul 24 14:57 packages/haskell-emacs-text.log

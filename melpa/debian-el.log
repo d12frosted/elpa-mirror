@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://salsa.debian.org/emacsen-team/debian-el.git
 
 Updating /mnt/store/melpa/working/debian-el/
+Checking out origin/HEAD
+Checking out 4fd5547a54ee931f4a16adde1d3b52bf01ce045a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/debian-el/
-  to /tmp/debian-elHNzuz2/debian-el-20201011.1543
+  to /tmp/debian-elIjgpYo/debian-el-20201011.1543
     apt-sources.el -> apt-sources.el
     apt-utils.el -> apt-utils.el
     deb-view.el -> deb-view.el
@@ -16,7 +18,7 @@ Copying files (->) and directories (=>)
     gnus-BTS.el -> gnus-BTS.el
     preseed.el -> preseed.el
     debian-el.texi -> debian-el.texi
-Created /tmp/debian-elHNzuz2/debian-el-20201011.1543/debian-el.info
+Created /tmp/debian-elIjgpYo/debian-el-20201011.1543/debian-el.info
 Created debian-el-20201011.1543.tar containing:
   debian-el-20201011.1543/
   debian-el-20201011.1543/apt-sources.el
@@ -30,9 +32,9 @@ Created debian-el-20201011.1543.tar containing:
   debian-el-20201011.1543/dir
   debian-el-20201011.1543/gnus-BTS.el
   debian-el-20201011.1543/preseed.el
-Built debian-el in 7.910s, finished at 2021-07-23T21:54:07+0000
+Built debian-el in 7.576s, finished at 2021-07-24T14:38:28+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  152 Jul 23 21:54 packages/debian-el-20201011.1543.entry
-272K -rw-r--r-- 1 root root 270K Jul 23 21:54 packages/debian-el-20201011.1543.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 21:54 packages/debian-el-badge.svg
-4.0K -rw-r--r-- 1 root root  508 Jul 23 21:54 packages/debian-el-readme.txt
+4.0K -rw-r--r-- 1 root root  152 Jul 24 14:38 packages/debian-el-20201011.1543.entry
+272K -rw-r--r-- 1 root root 270K Jul 24 14:38 packages/debian-el-20201011.1543.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:38 packages/debian-el-badge.svg
+4.0K -rw-r--r-- 1 root root  508 Jul 24 14:38 packages/debian-el-readme.txt

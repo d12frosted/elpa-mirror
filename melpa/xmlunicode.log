@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/ndw/xmlunicode.git
 
 Updating /mnt/store/melpa/working/xmlunicode/
+Checking out origin/HEAD
+Checking out 7e4c71c30f0d5214c45d4d4d48b149029ddb6b77
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/xmlunicode/
-  to /tmp/xmlunicoded70wwM/xmlunicode-20210717.1246
+  to /tmp/xmlunicodeSZbWSz/xmlunicode-20210717.1246
     xmlunicode-character-list.el -> xmlunicode-character-list.el
     xmlunicode-helm.el -> xmlunicode-helm.el
     xmlunicode.el -> xmlunicode.el
@@ -15,9 +17,9 @@ Created xmlunicode-20210717.1246.tar containing:
   xmlunicode-20210717.1246/xmlunicode-helm.el
   xmlunicode-20210717.1246/xmlunicode-pkg.el
   xmlunicode-20210717.1246/xmlunicode.el
-Built xmlunicode in 4.359s, finished at 2021-07-23T22:56:29+0000
+Built xmlunicode in 4.346s, finished at 2021-07-24T15:46:44+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  314 Jul 23 22:56 packages/xmlunicode-20210717.1246.entry
-2.2M -rw-r--r-- 1 root root 2.2M Jul 23 22:56 packages/xmlunicode-20210717.1246.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:56 packages/xmlunicode-badge.svg
-8.0K -rw-r--r-- 1 root root 6.7K Jul 23 22:56 packages/xmlunicode-readme.txt
+4.0K -rw-r--r-- 1 root root  314 Jul 24 15:46 packages/xmlunicode-20210717.1246.entry
+2.2M -rw-r--r-- 1 root root 2.2M Jul 24 15:46 packages/xmlunicode-20210717.1246.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:46 packages/xmlunicode-badge.svg
+8.0K -rw-r--r-- 1 root root 6.7K Jul 24 15:46 packages/xmlunicode-readme.txt

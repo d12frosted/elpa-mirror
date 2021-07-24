@@ -3,14 +3,16 @@ Fetcher: github
 Source:  https://github.com/emacscollective/borg.git
 
 Updating /mnt/store/melpa/working/borg/
+Checking out origin/HEAD
+Checking out 6ea061f30065493e206132ff3f7a2d8febb859d0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/borg/
-  to /tmp/borg6439Zd/borg-20210618.2112
+  to /tmp/borgtzPSF5/borg-20210618.2112
     borg-elpa.el -> borg-elpa.el
     borg.el -> borg.el
     borg.texi -> borg.texi
     borg.mk -> borg.mk
-Created /tmp/borg6439Zd/borg-20210618.2112/borg.info
+Created /tmp/borgtzPSF5/borg-20210618.2112/borg.info
 Created borg-20210618.2112.tar containing:
   borg-20210618.2112/
   borg-20210618.2112/borg-elpa.el
@@ -19,9 +21,9 @@ Created borg-20210618.2112.tar containing:
   borg-20210618.2112/borg.info
   borg-20210618.2112/borg.mk
   borg-20210618.2112/dir
-Built borg in 21.218s, finished at 2021-07-24T01:04:57+0000
+Built borg in 24.237s, finished at 2021-07-24T14:30:49+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  397 Jul 24 01:04 packages/borg-20210618.2112.entry
-112K -rw-r--r-- 1 root root 110K Jul 24 01:04 packages/borg-20210618.2112.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:04 packages/borg-badge.svg
-4.0K -rw-r--r-- 1 root root  462 Jul 24 01:04 packages/borg-readme.txt
+4.0K -rw-r--r-- 1 root root  397 Jul 24 14:30 packages/borg-20210618.2112.entry
+112K -rw-r--r-- 1 root root 110K Jul 24 14:30 packages/borg-20210618.2112.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:30 packages/borg-badge.svg
+4.0K -rw-r--r-- 1 root root  462 Jul 24 14:30 packages/borg-readme.txt

@@ -1,0 +1,12 @@
+(ack-menu .
+	  [(20150504 2022)
+	   ((mag-menu
+	     (0 1 0)))
+	   "A menu-based front-end for ack" single
+	   ((:commit . "f77be93a4697926ecf3195a355eb69580f695f4d")
+	    (:authors
+	     ("Steven Thomas")
+	     ("Nikolaj Schumacher"))
+	    (:maintainer "Steven Thomas")
+	    (:keywords "tools" "matching" "convenience")
+	    (:url . "https://github.com/chumpage/ack-menu"))])

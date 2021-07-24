@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/purescript-emacs/psc-ide-emacs.git
 
 Updating /mnt/store/melpa/working/psc-ide/
+Checking out origin/HEAD
+Checking out ce97d719458ea099b40c02f05b6609601c727e66
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/psc-ide/
-  to /tmp/psc-ideQ5ISDk/psc-ide-20210219.2247
+  to /tmp/psc-idegys4Bl/psc-ide-20210219.2247
     psc-ide-backported.el -> psc-ide-backported.el
     psc-ide-flycheck.el -> psc-ide-flycheck.el
     psc-ide-protocol.el -> psc-ide-protocol.el
@@ -17,9 +19,9 @@ Created psc-ide-20210219.2247.tar containing:
   psc-ide-20210219.2247/psc-ide-pkg.el
   psc-ide-20210219.2247/psc-ide-protocol.el
   psc-ide-20210219.2247/psc-ide.el
-Built psc-ide in 4.028s, finished at 2021-07-23T22:39:43+0000
+Built psc-ide in 4.852s, finished at 2021-07-24T15:28:09+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  658 Jul 23 22:39 packages/psc-ide-20210219.2247.entry
- 60K -rw-r--r-- 1 root root  60K Jul 23 22:39 packages/psc-ide-20210219.2247.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:39 packages/psc-ide-badge.svg
-4.0K -rw-r--r-- 1 root root   46 Jul 23 22:39 packages/psc-ide-readme.txt
+4.0K -rw-r--r-- 1 root root  658 Jul 24 15:28 packages/psc-ide-20210219.2247.entry
+ 60K -rw-r--r-- 1 root root  60K Jul 24 15:28 packages/psc-ide-20210219.2247.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:28 packages/psc-ide-badge.svg
+4.0K -rw-r--r-- 1 root root   46 Jul 24 15:28 packages/psc-ide-readme.txt

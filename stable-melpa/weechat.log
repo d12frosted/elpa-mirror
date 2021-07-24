@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/the-kenny/weechat.el.git
 
 Updating /mnt/store/melpa/working/weechat/
+Checking out origin/HEAD
+Checking out d9a13306ea8be27367f92e9202d116a88fa1f441
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/weechat/
-  to /tmp/weechat0Q2GQp/weechat-20190520.1551
+  to /tmp/weechat5DwxGj/weechat-20190520.1551
     weechat-button.el -> weechat-button.el
     weechat-cmd.el -> weechat-cmd.el
     weechat-color.el -> weechat-color.el
@@ -46,14 +48,14 @@ Created weechat-20190520.1551.tar containing:
   weechat-20190520.1551/weechat-spelling.el
   weechat-20190520.1551/weechat-tracking.el
   weechat-20190520.1551/weechat.el
-Built weechat in 5.258s, finished at 2021-07-24T02:11:09+0000
+Built weechat in 11.455s, finished at 2021-07-24T15:45:04+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  571 Jul 24 02:11 packages/weechat-20190520.1551.entry
-220K -rw-r--r-- 1 root root 220K Jul 24 02:11 packages/weechat-20190520.1551.tar
-4.0K -rw-r--r-- 1 root root 2.5K Jul 24 02:11 packages/weechat-alert-20160416.1248.el
-4.0K -rw-r--r-- 1 root root  419 Jul 24 02:11 packages/weechat-alert-20160416.1248.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 02:11 packages/weechat-alert-badge.svg
-4.0K -rw-r--r-- 1 root root  137 Jul 24 02:11 packages/weechat-alert-readme.txt
-4.0K -rw-r--r-- 1 root root  223 Jul 24 02:11 packages/weechat-alert.log
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 02:11 packages/weechat-badge.svg
-4.0K -rw-r--r-- 1 root root  116 Jul 24 02:11 packages/weechat-readme.txt
+4.0K -rw-r--r-- 1 root root  571 Jul 24 15:45 packages/weechat-20190520.1551.entry
+220K -rw-r--r-- 1 root root 220K Jul 24 15:45 packages/weechat-20190520.1551.tar
+4.0K -rw-r--r-- 1 root root 2.5K Jul 24 12:19 packages/weechat-alert-20160416.1248.el
+4.0K -rw-r--r-- 1 root root  419 Jul 24 12:19 packages/weechat-alert-20160416.1248.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 12:19 packages/weechat-alert-badge.svg
+4.0K -rw-r--r-- 1 root root  137 Jul 24 12:19 packages/weechat-alert-readme.txt
+4.0K -rw-r--r-- 1 root root  220 Jul 24 15:45 packages/weechat-alert.log
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:45 packages/weechat-badge.svg
+4.0K -rw-r--r-- 1 root root  116 Jul 24 15:45 packages/weechat-readme.txt

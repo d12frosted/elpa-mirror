@@ -3,14 +3,16 @@ Fetcher: github
 Source:  https://github.com/abrochard/kubel.git
 
 Updating /mnt/store/melpa/working/kubel/
-Built kubel in 4.639s, finished at 2021-07-23T22:21:32+0000
+Checking out origin/HEAD
+Checking out 801d4cc78cb59b3c39e9ea53d7f16ec3c9a6bb6b
+Built kubel in 5.964s, finished at 2021-07-24T15:08:05+0000
  ✓ Success:
- 44K -rw-r--r-- 1 root root  43K Jul 23 22:21 packages/kubel-20210623.1316.el
-4.0K -rw-r--r-- 1 root root  428 Jul 23 22:21 packages/kubel-20210623.1316.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:21 packages/kubel-badge.svg
-8.0K -rw-r--r-- 1 root root 4.4K Jul 23 22:21 packages/kubel-evil-20201223.1657.el
-4.0K -rw-r--r-- 1 root root  469 Jul 23 18:59 packages/kubel-evil-20201223.1657.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 18:59 packages/kubel-evil-badge.svg
-4.0K -rw-r--r-- 1 root root   61 Jul 23 22:21 packages/kubel-evil-readme.txt
-4.0K -rw-r--r-- 1 root root  131 Jul 23 22:21 packages/kubel-evil.log
-4.0K -rw-r--r-- 1 root root   69 Jul 23 22:21 packages/kubel-readme.txt
+ 44K -rw-r--r-- 1 root root  43K Jul 24 15:08 packages/kubel-20210623.1316.el
+4.0K -rw-r--r-- 1 root root  428 Jul 24 15:08 packages/kubel-20210623.1316.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:08 packages/kubel-badge.svg
+8.0K -rw-r--r-- 1 root root 4.4K Jul 24 11:42 packages/kubel-evil-20201223.1657.el
+4.0K -rw-r--r-- 1 root root  469 Jul 24 11:42 packages/kubel-evil-20201223.1657.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:42 packages/kubel-evil-badge.svg
+4.0K -rw-r--r-- 1 root root   61 Jul 24 11:42 packages/kubel-evil-readme.txt
+4.0K -rw-r--r-- 1 root root  156 Jul 24 15:08 packages/kubel-evil.log
+4.0K -rw-r--r-- 1 root root   69 Jul 24 15:08 packages/kubel-readme.txt

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/skeeto/emacs-aio.git
 
 Updating /mnt/store/melpa/working/aio/
+Checking out origin/HEAD
+Checking out da93523e235529fa97d6f251319d9e1d6fc24a41
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/aio/
-  to /tmp/aio0byete/aio-20200610.1904
+  to /tmp/aioLP5m8L/aio-20200610.1904
     aio.el -> aio.el
     README.md -> README.md
     UNLICENSE -> UNLICENSE
@@ -15,9 +17,9 @@ Created aio-20200610.1904.tar containing:
   aio-20200610.1904/UNLICENSE
   aio-20200610.1904/aio-pkg.el
   aio-20200610.1904/aio.el
-Built aio in 4.236s, finished at 2021-07-23T21:42:39+0000
+Built aio in 3.681s, finished at 2021-07-24T14:26:25+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  353 Jul 23 21:42 packages/aio-20200610.1904.entry
- 32K -rw-r--r-- 1 root root  30K Jul 23 21:42 packages/aio-20200610.1904.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 21:42 packages/aio-badge.svg
-4.0K -rw-r--r-- 1 root root  703 Jul 23 21:42 packages/aio-readme.txt
+4.0K -rw-r--r-- 1 root root  353 Jul 24 14:26 packages/aio-20200610.1904.entry
+ 32K -rw-r--r-- 1 root root  30K Jul 24 14:26 packages/aio-20200610.1904.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:26 packages/aio-badge.svg
+4.0K -rw-r--r-- 1 root root  703 Jul 24 14:26 packages/aio-readme.txt

@@ -1,0 +1,12 @@
+(helm-ghq .
+	  [(20210724 744)
+	   ((emacs
+	     (24))
+	    (helm
+	     (3 8 0)))
+	   "Ghq with helm interface" single
+	   ((:commit . "7b47ac91e42762f2ecbbceeaadc05b86c9fe5f14")
+	    (:authors
+	     ("Takashi Masuda" . "masutaka.net@gmail.com"))
+	    (:maintainer "Takashi Masuda" . "masutaka.net@gmail.com")
+	    (:url . "https://github.com/masutaka/emacs-helm-ghq"))])

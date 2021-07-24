@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/srfi-explorations/emacs-srfi.git
 
 Updating /mnt/store/melpa/working/srfi/
+Checking out origin/HEAD
+Checking out de1fdca07229e5d43c18cb3dc300397849eeab78
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/srfi/
-  to /tmp/srfiB9hpbI/srfi-20210721.125
+  to /tmp/srfi5U3Nng/srfi-20210721.125
     srfi-data.el -> srfi-data.el
     srfi.el -> srfi.el
 Created srfi-20210721.125.tar containing:
@@ -13,9 +15,9 @@ Created srfi-20210721.125.tar containing:
   srfi-20210721.125/srfi-data.el
   srfi-20210721.125/srfi-pkg.el
   srfi-20210721.125/srfi.el
-Built srfi in 3.990s, finished at 2021-07-23T22:48:09+0000
+Built srfi in 4.647s, finished at 2021-07-24T15:37:07+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  371 Jul 23 22:48 packages/srfi-20210721.125.entry
- 40K -rw-r--r-- 1 root root  40K Jul 23 22:48 packages/srfi-20210721.125.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:48 packages/srfi-badge.svg
-4.0K -rw-r--r-- 1 root root  634 Jul 23 22:48 packages/srfi-readme.txt
+4.0K -rw-r--r-- 1 root root  371 Jul 24 15:37 packages/srfi-20210721.125.entry
+ 40K -rw-r--r-- 1 root root  40K Jul 24 15:37 packages/srfi-20210721.125.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:37 packages/srfi-badge.svg
+4.0K -rw-r--r-- 1 root root  634 Jul 24 15:37 packages/srfi-readme.txt

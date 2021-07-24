@@ -3,10 +3,12 @@ Fetcher: github
 Source:  https://github.com/narendraj9/hledger-mode.git
 
 Updating /mnt/store/melpa/working/hledger-mode/
+Checking out origin/HEAD
+Checking out 9ac07ff0adbce6a402c17e789b1750f9da0d22f4
 Note: hledger-mode :files spec is equivalent to the default.
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hledger-mode/
-  to /tmp/hledger-modeTHgB0D/hledger-mode-20210706.1225
+  to /tmp/hledger-moded60btG/hledger-mode-20210706.1225
     hledger-core.el -> hledger-core.el
     hledger-defuns.el -> hledger-defuns.el
     hledger-input.el -> hledger-input.el
@@ -28,9 +30,9 @@ Created hledger-mode-20210706.1225.tar containing:
   hledger-mode-20210706.1225/hledger-reports.el
   hledger-mode-20210706.1225/hledger-suggest.el
   hledger-mode-20210706.1225/hledger-webservice.el
-Built hledger-mode in 4.286s, finished at 2021-07-23T22:15:35+0000
+Built hledger-mode in 4.585s, finished at 2021-07-24T15:01:57+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  458 Jul 23 22:15 packages/hledger-mode-20210706.1225.entry
-120K -rw-r--r-- 1 root root 120K Jul 23 22:15 packages/hledger-mode-20210706.1225.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:15 packages/hledger-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  436 Jul 23 22:15 packages/hledger-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  458 Jul 24 15:01 packages/hledger-mode-20210706.1225.entry
+120K -rw-r--r-- 1 root root 120K Jul 24 15:01 packages/hledger-mode-20210706.1225.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:01 packages/hledger-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  436 Jul 24 15:01 packages/hledger-mode-readme.txt

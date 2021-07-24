@@ -3,38 +3,40 @@ Fetcher: github
 Source:  https://github.com/merrickluo/liberime.git
 
 Updating /mnt/store/melpa/working/liberime/
+Checking out origin/HEAD
+Checking out 4a6da0f6ab9b43651f3fcc73412e3480b9403caa
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/liberime/
-  to /tmp/liberimeDAyH7g/liberime-20200915.542
+  to /tmp/liberimehWezra/liberime-20210526.623
     liberime.el -> liberime.el
     src => src
     emacs-module => emacs-module
     LICENSE -> LICENSE
     Makefile -> Makefile
     README.org -> README.org
-Created liberime-20200915.542.tar containing:
-  liberime-20200915.542/
-  liberime-20200915.542/LICENSE
-  liberime-20200915.542/Makefile
-  liberime-20200915.542/README.org
-  liberime-20200915.542/emacs-module/
-  liberime-20200915.542/emacs-module/26/
-  liberime-20200915.542/emacs-module/26/emacs-module.h
-  liberime-20200915.542/emacs-module/27/
-  liberime-20200915.542/emacs-module/27/emacs-module.h
-  liberime-20200915.542/emacs-module/28/
-  liberime-20200915.542/emacs-module/28/emacs-module.h
-  liberime-20200915.542/liberime-pkg.el
-  liberime-20200915.542/liberime.el
-  liberime-20200915.542/src/
-  liberime-20200915.542/src/init.c
-  liberime-20200915.542/src/interface.c
-  liberime-20200915.542/src/interface.h
-  liberime-20200915.542/src/liberime-core.c
-  liberime-20200915.542/src/liberime-core.h
-Built liberime in 4.105s, finished at 2021-07-23T22:22:27+0000
+Created liberime-20210526.623.tar containing:
+  liberime-20210526.623/
+  liberime-20210526.623/LICENSE
+  liberime-20210526.623/Makefile
+  liberime-20210526.623/README.org
+  liberime-20210526.623/emacs-module/
+  liberime-20210526.623/emacs-module/26/
+  liberime-20210526.623/emacs-module/26/emacs-module.h
+  liberime-20210526.623/emacs-module/27/
+  liberime-20210526.623/emacs-module/27/emacs-module.h
+  liberime-20210526.623/emacs-module/28/
+  liberime-20210526.623/emacs-module/28/emacs-module.h
+  liberime-20210526.623/liberime-pkg.el
+  liberime-20210526.623/liberime.el
+  liberime-20210526.623/src/
+  liberime-20210526.623/src/init.c
+  liberime-20210526.623/src/interface.c
+  liberime-20210526.623/src/interface.h
+  liberime-20210526.623/src/liberime-core.c
+  liberime-20210526.623/src/liberime-core.h
+Built liberime in 4.717s, finished at 2021-07-24T15:09:07+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  325 Jul 23 22:22 packages/liberime-20200915.542.entry
-160K -rw-r--r-- 1 root root 160K Jul 23 22:22 packages/liberime-20200915.542.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:22 packages/liberime-badge.svg
-4.0K -rw-r--r-- 1 root root   59 Jul 23 22:22 packages/liberime-readme.txt
+4.0K -rw-r--r-- 1 root root  325 Jul 24 15:09 packages/liberime-20210526.623.entry
+160K -rw-r--r-- 1 root root 160K Jul 24 15:09 packages/liberime-20210526.623.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:09 packages/liberime-badge.svg
+4.0K -rw-r--r-- 1 root root   59 Jul 24 15:09 packages/liberime-readme.txt

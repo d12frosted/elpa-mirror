@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/factor/factor.git
 
 Updating /mnt/store/melpa/working/fuel/
+Checking out origin/HEAD
+Checking out d9b6d549251d4a1a7cec2e83b11bda2ef7ff4ed2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fuel/
-  to /tmp/fuel7LHEPM/fuel-20210602.1531
+  to /tmp/fuelNNbgqN/fuel-20210602.1531
   ! misc/fuel/factor-mode.el -> factor-mode.el
   ! misc/fuel/factor-smie.el -> factor-smie.el
   ! misc/fuel/fuel-autodoc.el -> fuel-autodoc.el
@@ -58,8 +60,8 @@ Created fuel-20210602.1531.tar containing:
   fuel-20210602.1531/fuel-table.el
   fuel-20210602.1531/fuel-tests.el
   fuel-20210602.1531/fuel-xref.el
-Built fuel in 13.055s, finished at 2021-07-24T01:25:12+0000
+Built fuel in 24.302s, finished at 2021-07-24T14:54:01+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  202 Jul 24 01:25 packages/fuel-20210602.1531.entry
-212K -rw-r--r-- 1 root root 210K Jul 24 01:25 packages/fuel-20210602.1531.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:25 packages/fuel-badge.svg
+4.0K -rw-r--r-- 1 root root  202 Jul 24 14:54 packages/fuel-20210602.1531.entry
+212K -rw-r--r-- 1 root root 210K Jul 24 14:54 packages/fuel-20210602.1531.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:54 packages/fuel-badge.svg

@@ -3,21 +3,23 @@ Fetcher: git
 Source:  https://thelambdalab.xyz/git/elpher.git
 
 Updating /mnt/store/melpa/working/elpher/
+Checking out origin/HEAD
+Checking out 3cddc8bdcb0a05ecd308c310bcd020f7288af4de
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elpher/
-  to /tmp/elphervf0AAF/elpher-20210720.1520
+  to /tmp/elpherGNxMNR/elpher-20210720.1520
     elpher.el -> elpher.el
     elpher.texi -> elpher.texi
-Created /tmp/elphervf0AAF/elpher-20210720.1520/elpher.info
+Created /tmp/elpherGNxMNR/elpher-20210720.1520/elpher.info
 Created elpher-20210720.1520.tar containing:
   elpher-20210720.1520/
   elpher-20210720.1520/dir
   elpher-20210720.1520/elpher-pkg.el
   elpher-20210720.1520/elpher.el
   elpher-20210720.1520/elpher.info
-Built elpher in 8.039s, finished at 2021-07-23T21:59:08+0000
+Built elpher in 8.454s, finished at 2021-07-24T14:44:12+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  351 Jul 23 21:59 packages/elpher-20210720.1520.entry
-120K -rw-r--r-- 1 root root 120K Jul 23 21:59 packages/elpher-20210720.1520.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 21:59 packages/elpher-badge.svg
-4.0K -rw-r--r-- 1 root root  930 Jul 23 21:59 packages/elpher-readme.txt
+4.0K -rw-r--r-- 1 root root  351 Jul 24 14:44 packages/elpher-20210720.1520.entry
+120K -rw-r--r-- 1 root root 120K Jul 24 14:44 packages/elpher-20210720.1520.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:44 packages/elpher-badge.svg
+4.0K -rw-r--r-- 1 root root  930 Jul 24 14:44 packages/elpher-readme.txt

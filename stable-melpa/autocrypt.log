@@ -3,9 +3,11 @@ Fetcher: git
 Source:  https://git.sr.ht/~pkal/autocrypt
 
 Updating /mnt/store/melpa/working/autocrypt/
+Checking out origin/HEAD
+Checking out b2c8d431f89788d1e01d42c55e65612e6fc11b44
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/autocrypt/
-  to /tmp/autocryptW6QbPK/autocrypt-20210720.1810
+  to /tmp/autocryptw0Bv8d/autocrypt-20210720.1810
     autocrypt-gnus.el -> autocrypt-gnus.el
     autocrypt-message.el -> autocrypt-message.el
     autocrypt-mu4e.el -> autocrypt-mu4e.el
@@ -19,9 +21,9 @@ Created autocrypt-20210720.1810.tar containing:
   autocrypt-20210720.1810/autocrypt-pkg.el
   autocrypt-20210720.1810/autocrypt-rmail.el
   autocrypt-20210720.1810/autocrypt.el
-Built autocrypt in 4.209s, finished at 2021-07-24T01:02:59+0000
+Built autocrypt in 4.741s, finished at 2021-07-24T14:28:33+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  371 Jul 24 01:02 packages/autocrypt-20210720.1810.entry
- 40K -rw-r--r-- 1 root root  40K Jul 24 01:02 packages/autocrypt-20210720.1810.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:02 packages/autocrypt-badge.svg
-4.0K -rw-r--r-- 1 root root  259 Jul 24 01:02 packages/autocrypt-readme.txt
+4.0K -rw-r--r-- 1 root root  371 Jul 24 14:28 packages/autocrypt-20210720.1810.entry
+ 40K -rw-r--r-- 1 root root  40K Jul 24 14:28 packages/autocrypt-20210720.1810.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:28 packages/autocrypt-badge.svg
+4.0K -rw-r--r-- 1 root root  259 Jul 24 14:28 packages/autocrypt-readme.txt

@@ -3,32 +3,34 @@ Fetcher: github
 Source:  https://github.com/arbox/org-sync.git
 
 Updating /mnt/store/melpa/working/org-sync/
+Checking out origin/HEAD
+Checking out e34a385fa9e658c8341a0a6e6bc3472d4d536bb8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-sync/
-  to /tmp/org-syncwTrvnY/org-sync-20181203.2242
+  to /tmp/org-synczRZkEu/org-sync-20181204.23
     org-sync-bb.el -> org-sync-bb.el
     org-sync-github.el -> org-sync-github.el
     org-sync-gitlab.el -> org-sync-gitlab.el
     org-sync-redmine.el -> org-sync-redmine.el
     org-sync-rtm.el -> org-sync-rtm.el
     org-sync.el -> org-sync.el
-Created org-sync-20181203.2242.tar containing:
-  org-sync-20181203.2242/
-  org-sync-20181203.2242/org-sync-bb.el
-  org-sync-20181203.2242/org-sync-github.el
-  org-sync-20181203.2242/org-sync-gitlab.el
-  org-sync-20181203.2242/org-sync-pkg.el
-  org-sync-20181203.2242/org-sync-redmine.el
-  org-sync-20181203.2242/org-sync-rtm.el
-  org-sync-20181203.2242/org-sync.el
-Built org-sync in 3.848s, finished at 2021-07-23T22:33:55+0000
+Created org-sync-20181204.23.tar containing:
+  org-sync-20181204.23/
+  org-sync-20181204.23/org-sync-bb.el
+  org-sync-20181204.23/org-sync-github.el
+  org-sync-20181204.23/org-sync-gitlab.el
+  org-sync-20181204.23/org-sync-pkg.el
+  org-sync-20181204.23/org-sync-redmine.el
+  org-sync-20181204.23/org-sync-rtm.el
+  org-sync-20181204.23/org-sync.el
+Built org-sync in 4.401s, finished at 2021-07-24T15:21:14+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  498 Jul 23 22:33 packages/org-sync-20181203.2242.entry
- 80K -rw-r--r-- 1 root root  80K Jul 23 22:33 packages/org-sync-20181203.2242.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:33 packages/org-sync-badge.svg
-4.0K -rw-r--r-- 1 root root 1.6K Jul 23 22:33 packages/org-sync-readme.txt
-8.0K -rw-r--r-- 1 root root 7.3K Jul 23 22:33 packages/org-sync-snippets-20210111.1726.el
-4.0K -rw-r--r-- 1 root root  464 Jul 23 22:33 packages/org-sync-snippets-20210111.1726.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 19:12 packages/org-sync-snippets-badge.svg
-4.0K -rw-r--r-- 1 root root  104 Jul 23 22:33 packages/org-sync-snippets-readme.txt
-4.0K -rw-r--r-- 1 root root  157 Jul 23 22:33 packages/org-sync-snippets.log
+4.0K -rw-r--r-- 1 root root  496 Jul 24 15:21 packages/org-sync-20181204.23.entry
+ 80K -rw-r--r-- 1 root root  80K Jul 24 15:21 packages/org-sync-20181204.23.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:21 packages/org-sync-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Jul 24 15:21 packages/org-sync-readme.txt
+8.0K -rw-r--r-- 1 root root 7.3K Jul 24 15:21 packages/org-sync-snippets-20210111.1726.el
+4.0K -rw-r--r-- 1 root root  464 Jul 24 15:21 packages/org-sync-snippets-20210111.1726.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:55 packages/org-sync-snippets-badge.svg
+4.0K -rw-r--r-- 1 root root  104 Jul 24 15:21 packages/org-sync-snippets-readme.txt
+4.0K -rw-r--r-- 1 root root  236 Jul 24 15:21 packages/org-sync-snippets.log

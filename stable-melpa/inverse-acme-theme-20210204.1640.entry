@@ -1,0 +1,12 @@
+(inverse-acme-theme .
+		    [(20210204 1640)
+		     ((autothemer
+		       (0 2))
+		      (cl-lib
+		       (0 5)))
+		     "A theme that looks like an inverse of Acme's color scheme." single
+		     ((:commit . "79008920ce7923312ada6f95a3ec1f96ce513c0b")
+		      (:authors
+		       ("Dylan Johnson"))
+		      (:maintainer "Dylan Johnson")
+		      (:url . "http://github.com/dcjohnson/inverse-acme-theme"))])

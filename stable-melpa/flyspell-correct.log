@@ -3,39 +3,41 @@ Fetcher: github
 Source:  https://github.com/d12frosted/flyspell-correct.git
 
 Updating /mnt/store/melpa/working/flyspell-correct/
+Checking out origin/HEAD
+Checking out 00357953a736e21d0a1c8d76f5605820990544fe
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flyspell-correct/
-  to /tmp/flyspell-correctJg5vdd/flyspell-correct-20210723.505
+  to /tmp/flyspell-correctTz5R1g/flyspell-correct-20210724.1042
     flyspell-correct.el -> flyspell-correct.el
     flyspell-correct-ido.el -> flyspell-correct-ido.el
-Created flyspell-correct-20210723.505.tar containing:
-  flyspell-correct-20210723.505/
-  flyspell-correct-20210723.505/flyspell-correct-ido.el
-  flyspell-correct-20210723.505/flyspell-correct-pkg.el
-  flyspell-correct-20210723.505/flyspell-correct.el
-Built flyspell-correct in 4.102s, finished at 2021-07-24T01:24:13+0000
+Created flyspell-correct-20210724.1042.tar containing:
+  flyspell-correct-20210724.1042/
+  flyspell-correct-20210724.1042/flyspell-correct-ido.el
+  flyspell-correct-20210724.1042/flyspell-correct-pkg.el
+  flyspell-correct-20210724.1042/flyspell-correct.el
+Built flyspell-correct in 4.983s, finished at 2021-07-24T14:52:34+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  382 Jul 24 01:24 packages/flyspell-correct-20210723.505.entry
- 32K -rw-r--r-- 1 root root  30K Jul 24 01:24 packages/flyspell-correct-20210723.505.tar
-4.0K -rw-r--r-- 1 root root 2.8K Jul 23 22:07 packages/flyspell-correct-avy-menu-20210124.1143.el
-4.0K -rw-r--r-- 1 root root  551 Jul 23 22:07 packages/flyspell-correct-avy-menu-20210124.1143.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:07 packages/flyspell-correct-avy-menu-badge.svg
-4.0K -rw-r--r-- 1 root root  494 Jul 23 22:07 packages/flyspell-correct-avy-menu-readme.txt
-4.0K -rw-r--r-- 1 root root  173 Jul 24 01:24 packages/flyspell-correct-avy-menu.log
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:24 packages/flyspell-correct-badge.svg
-4.0K -rw-r--r-- 1 root root 3.7K Jul 23 22:07 packages/flyspell-correct-helm-20210124.1143.el
-4.0K -rw-r--r-- 1 root root  438 Jul 23 22:07 packages/flyspell-correct-helm-20210124.1143.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:07 packages/flyspell-correct-helm-badge.svg
-4.0K -rw-r--r-- 1 root root  478 Jul 23 22:07 packages/flyspell-correct-helm-readme.txt
-4.0K -rw-r--r-- 1 root root  165 Jul 24 01:24 packages/flyspell-correct-helm.log
-8.0K -rw-r--r-- 1 root root 4.1K Jul 23 22:07 packages/flyspell-correct-ivy-20210124.1143.el
-4.0K -rw-r--r-- 1 root root  445 Jul 23 22:07 packages/flyspell-correct-ivy-20210124.1143.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:07 packages/flyspell-correct-ivy-badge.svg
-4.0K -rw-r--r-- 1 root root  474 Jul 23 22:07 packages/flyspell-correct-ivy-readme.txt
-4.0K -rw-r--r-- 1 root root  163 Jul 24 01:24 packages/flyspell-correct-ivy.log
-4.0K -rw-r--r-- 1 root root 2.1K Jul 23 22:07 packages/flyspell-correct-popup-20210124.1143.el
-4.0K -rw-r--r-- 1 root root  447 Jul 23 22:07 packages/flyspell-correct-popup-20210124.1143.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:07 packages/flyspell-correct-popup-badge.svg
-4.0K -rw-r--r-- 1 root root  482 Jul 23 22:07 packages/flyspell-correct-popup-readme.txt
-   0 -rw-r--r-- 1 root root    0 Jul 24 01:24 packages/flyspell-correct-popup.log
-4.0K -rw-r--r-- 1 root root 1.7K Jul 24 01:24 packages/flyspell-correct-readme.txt
+4.0K -rw-r--r-- 1 root root  383 Jul 24 14:52 packages/flyspell-correct-20210724.1042.entry
+ 32K -rw-r--r-- 1 root root  30K Jul 24 14:52 packages/flyspell-correct-20210724.1042.tar
+4.0K -rw-r--r-- 1 root root 2.8K Jul 24 11:26 packages/flyspell-correct-avy-menu-20210124.1143.el
+4.0K -rw-r--r-- 1 root root  551 Jul 24 11:26 packages/flyspell-correct-avy-menu-20210124.1143.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:26 packages/flyspell-correct-avy-menu-badge.svg
+4.0K -rw-r--r-- 1 root root  494 Jul 24 11:26 packages/flyspell-correct-avy-menu-readme.txt
+4.0K -rw-r--r-- 1 root root  198 Jul 24 14:52 packages/flyspell-correct-avy-menu.log
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:52 packages/flyspell-correct-badge.svg
+4.0K -rw-r--r-- 1 root root 3.7K Jul 24 11:26 packages/flyspell-correct-helm-20210124.1143.el
+4.0K -rw-r--r-- 1 root root  438 Jul 24 11:26 packages/flyspell-correct-helm-20210124.1143.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:26 packages/flyspell-correct-helm-badge.svg
+4.0K -rw-r--r-- 1 root root  478 Jul 24 11:26 packages/flyspell-correct-helm-readme.txt
+4.0K -rw-r--r-- 1 root root  165 Jul 24 14:52 packages/flyspell-correct-helm.log
+8.0K -rw-r--r-- 1 root root 4.1K Jul 24 11:26 packages/flyspell-correct-ivy-20210124.1143.el
+4.0K -rw-r--r-- 1 root root  445 Jul 24 11:26 packages/flyspell-correct-ivy-20210124.1143.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:26 packages/flyspell-correct-ivy-badge.svg
+4.0K -rw-r--r-- 1 root root  474 Jul 24 11:26 packages/flyspell-correct-ivy-readme.txt
+4.0K -rw-r--r-- 1 root root  163 Jul 24 14:52 packages/flyspell-correct-ivy.log
+4.0K -rw-r--r-- 1 root root 2.1K Jul 24 11:26 packages/flyspell-correct-popup-20210124.1143.el
+4.0K -rw-r--r-- 1 root root  447 Jul 24 11:26 packages/flyspell-correct-popup-20210124.1143.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:26 packages/flyspell-correct-popup-badge.svg
+4.0K -rw-r--r-- 1 root root  482 Jul 24 11:26 packages/flyspell-correct-popup-readme.txt
+4.0K -rw-r--r-- 1 root root  167 Jul 24 14:52 packages/flyspell-correct-popup.log
+4.0K -rw-r--r-- 1 root root 1.7K Jul 24 14:52 packages/flyspell-correct-readme.txt

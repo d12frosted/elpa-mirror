@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/mattharrison/pycoverage.el.git
 
 Updating /mnt/store/melpa/working/pycoverage/
+Checking out origin/HEAD
+Checking out 3c69ed312121368f1b24cc04d54a29ce4ed4f743
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pycoverage/
-  to /tmp/pycoveragePI3M8l/pycoverage-20200513.2047
+  to /tmp/pycoverageuPF4Wp/pycoverage-20200513.2047
     pycoverage.el -> pycoverage.el
   ! cov2emacs/bin/cov2emacs -> cov2emacs
   ! cov2emacs/cov2emacslib/__init__.py -> __init__.py
@@ -17,8 +19,8 @@ Created pycoverage-20200513.2047.tar containing:
   pycoverage-20200513.2047/meta.py
   pycoverage-20200513.2047/pycoverage-pkg.el
   pycoverage-20200513.2047/pycoverage.el
-Built pycoverage in 6.651s, finished at 2021-07-23T22:40:15+0000
+Built pycoverage in 4.720s, finished at 2021-07-24T15:28:38+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  379 Jul 23 22:40 packages/pycoverage-20200513.2047.entry
- 32K -rw-r--r-- 1 root root  30K Jul 23 22:40 packages/pycoverage-20200513.2047.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:40 packages/pycoverage-badge.svg
+4.0K -rw-r--r-- 1 root root  379 Jul 24 15:28 packages/pycoverage-20200513.2047.entry
+ 32K -rw-r--r-- 1 root root  30K Jul 24 15:28 packages/pycoverage-20200513.2047.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:28 packages/pycoverage-badge.svg

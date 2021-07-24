@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/cbowdon/daemons.el.git
 
 Updating /mnt/store/melpa/working/daemons/
+Checking out origin/HEAD
+Checking out a26155d04cec399ffe25b88f71cbfa4ada784569
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/daemons/
-  to /tmp/daemonsJixOwQ/daemons-20200421.912
+  to /tmp/daemonshcCBk7/daemons-20200421.912
     daemons-brew.el -> daemons-brew.el
     daemons-openrc.el -> daemons-openrc.el
     daemons-shepherd.el -> daemons-shepherd.el
@@ -21,9 +23,9 @@ Created daemons-20200421.912.tar containing:
   daemons-20200421.912/daemons-systemd.el
   daemons-20200421.912/daemons-sysvinit.el
   daemons-20200421.912/daemons.el
-Built daemons in 3.881s, finished at 2021-07-24T01:11:06+0000
+Built daemons in 4.878s, finished at 2021-07-24T14:37:45+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  332 Jul 24 01:11 packages/daemons-20200421.912.entry
- 40K -rw-r--r-- 1 root root  40K Jul 24 01:11 packages/daemons-20200421.912.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:11 packages/daemons-badge.svg
-4.0K -rw-r--r-- 1 root root  350 Jul 24 01:11 packages/daemons-readme.txt
+4.0K -rw-r--r-- 1 root root  332 Jul 24 14:37 packages/daemons-20200421.912.entry
+ 40K -rw-r--r-- 1 root root  40K Jul 24 14:37 packages/daemons-20200421.912.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:37 packages/daemons-badge.svg
+4.0K -rw-r--r-- 1 root root  350 Jul 24 14:37 packages/daemons-readme.txt

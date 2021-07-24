@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/NixOS/nix-mode.git
 
 Updating /mnt/store/melpa/working/nix-mode/
+Checking out origin/HEAD
+Checking out 3cca5b6527a69c4701394f424726282a1462ede3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nix-mode/
-  to /tmp/nix-moded4gmOT/nix-mode-20210706.2217
+  to /tmp/nix-modegZppSd/nix-mode-20210706.2217
     nix-build.el -> nix-build.el
     nix-drv-mode.el -> nix-drv-mode.el
     nix-edit.el -> nix-edit.el
@@ -37,9 +39,9 @@ Created nix-mode-20210706.2217.tar containing:
   nix-mode-20210706.2217/nix-shell.el
   nix-mode-20210706.2217/nix-store.el
   nix-mode-20210706.2217/nix.el
-Built nix-mode in 3.995s, finished at 2021-07-24T01:46:21+0000
+Built nix-mode in 4.357s, finished at 2021-07-24T15:16:51+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  349 Jul 24 01:46 packages/nix-mode-20210706.2217.entry
-100K -rw-r--r-- 1 root root 100K Jul 24 01:46 packages/nix-mode-20210706.2217.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:46 packages/nix-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  140 Jul 24 01:46 packages/nix-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  349 Jul 24 15:16 packages/nix-mode-20210706.2217.entry
+100K -rw-r--r-- 1 root root 100K Jul 24 15:16 packages/nix-mode-20210706.2217.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:16 packages/nix-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  140 Jul 24 15:16 packages/nix-mode-readme.txt

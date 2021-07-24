@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/seagle0128/doom-modeline.git
 
 Updating /mnt/store/melpa/working/doom-modeline/
+Checking out origin/HEAD
+Checking out 8cbb0457f3f35b3a1615eef176785aacdf5afe97
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/doom-modeline/
-  to /tmp/doom-modelinecjoh5e/doom-modeline-20210721.1833
+  to /tmp/doom-modelineD49spm/doom-modeline-20210721.1833
     doom-modeline-core.el -> doom-modeline-core.el
     doom-modeline-env.el -> doom-modeline-env.el
     doom-modeline-segments.el -> doom-modeline-segments.el
@@ -17,14 +19,14 @@ Created doom-modeline-20210721.1833.tar containing:
   doom-modeline-20210721.1833/doom-modeline-pkg.el
   doom-modeline-20210721.1833/doom-modeline-segments.el
   doom-modeline-20210721.1833/doom-modeline.el
-Built doom-modeline in 4.247s, finished at 2021-07-24T01:13:43+0000
+Built doom-modeline in 5.078s, finished at 2021-07-24T14:40:40+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  460 Jul 24 01:13 packages/doom-modeline-20210721.1833.entry
-212K -rw-r--r-- 1 root root 210K Jul 24 01:13 packages/doom-modeline-20210721.1833.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 01:13 packages/doom-modeline-badge.svg
-8.0K -rw-r--r-- 1 root root 7.3K Jul 23 21:56 packages/doom-modeline-now-playing-20210202.1948.el
-4.0K -rw-r--r-- 1 root root  483 Jul 23 21:56 packages/doom-modeline-now-playing-20210202.1948.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 21:56 packages/doom-modeline-now-playing-badge.svg
-4.0K -rw-r--r-- 1 root root  279 Jul 23 21:56 packages/doom-modeline-now-playing-readme.txt
-4.0K -rw-r--r-- 1 root root  177 Jul 24 01:13 packages/doom-modeline-now-playing.log
-4.0K -rw-r--r-- 1 root root 2.0K Jul 24 01:13 packages/doom-modeline-readme.txt
+4.0K -rw-r--r-- 1 root root  460 Jul 24 14:40 packages/doom-modeline-20210721.1833.entry
+212K -rw-r--r-- 1 root root 210K Jul 24 14:40 packages/doom-modeline-20210721.1833.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:40 packages/doom-modeline-badge.svg
+8.0K -rw-r--r-- 1 root root 7.3K Jul 24 11:14 packages/doom-modeline-now-playing-20210202.1948.el
+4.0K -rw-r--r-- 1 root root  483 Jul 24 11:14 packages/doom-modeline-now-playing-20210202.1948.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:14 packages/doom-modeline-now-playing-badge.svg
+4.0K -rw-r--r-- 1 root root  279 Jul 24 11:14 packages/doom-modeline-now-playing-readme.txt
+4.0K -rw-r--r-- 1 root root  177 Jul 24 14:40 packages/doom-modeline-now-playing.log
+4.0K -rw-r--r-- 1 root root 2.0K Jul 24 14:40 packages/doom-modeline-readme.txt

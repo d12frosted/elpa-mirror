@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/tkf/emacs-python-environment.git
 
 Updating /mnt/store/melpa/working/python-environment/
+Checking out origin/HEAD
+Checking out 401006584e32864a10c69d29f14414828909362e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/python-environment/
-  to /tmp/python-environment8KHpFS/python-environment-20150310.853
+  to /tmp/python-environment1iK6p0/python-environment-20150310.853
     python-environment.el -> python-environment.el
     test-python-environment.el -> test-python-environment.el
 Created python-environment-20150310.853.tar containing:
@@ -13,9 +15,9 @@ Created python-environment-20150310.853.tar containing:
   python-environment-20150310.853/python-environment-pkg.el
   python-environment-20150310.853/python-environment.el
   python-environment-20150310.853/test-python-environment.el
-Built python-environment in 5.964s, finished at 2021-07-23T22:40:52+0000
+Built python-environment in 4.344s, finished at 2021-07-24T15:28:58+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  363 Jul 23 22:40 packages/python-environment-20150310.853.entry
- 32K -rw-r--r-- 1 root root  30K Jul 23 22:40 packages/python-environment-20150310.853.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:40 packages/python-environment-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jul 23 22:40 packages/python-environment-readme.txt
+4.0K -rw-r--r-- 1 root root  363 Jul 24 15:28 packages/python-environment-20150310.853.entry
+ 32K -rw-r--r-- 1 root root  30K Jul 24 15:28 packages/python-environment-20150310.853.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:28 packages/python-environment-badge.svg
+   0 -rw-r--r-- 1 root root    0 Jul 24 15:28 packages/python-environment-readme.txt

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/kiwanami/emacs-skype.git
 
 Updating /mnt/store/melpa/working/skype/
+Checking out origin/HEAD
+Checking out 8e3b33e620ed355522aa36434ff41e3ced080629
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/skype/
-  to /tmp/skypeMav1rr/skype-20160711.824
+  to /tmp/skype3IaLXW/skype-20160711.824
     skype.el -> skype.el
     skype-proxy.py -> skype-proxy.py
 Created skype-20160711.824.tar containing:
@@ -13,9 +15,9 @@ Created skype-20160711.824.tar containing:
   skype-20160711.824/skype-pkg.el
   skype-20160711.824/skype-proxy.py
   skype-20160711.824/skype.el
-Built skype in 3.863s, finished at 2021-07-24T02:02:18+0000
+Built skype in 4.478s, finished at 2021-07-24T15:34:53+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  283 Jul 24 02:02 packages/skype-20160711.824.entry
- 80K -rw-r--r-- 1 root root  80K Jul 24 02:02 packages/skype-20160711.824.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 02:02 packages/skype-badge.svg
-4.0K -rw-r--r-- 1 root root  409 Jul 24 02:02 packages/skype-readme.txt
+4.0K -rw-r--r-- 1 root root  283 Jul 24 15:34 packages/skype-20160711.824.entry
+ 80K -rw-r--r-- 1 root root  80K Jul 24 15:34 packages/skype-20160711.824.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:34 packages/skype-badge.svg
+4.0K -rw-r--r-- 1 root root  409 Jul 24 15:34 packages/skype-readme.txt

@@ -3,9 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/sasanidas/maxima.git
 
 Updating /mnt/store/melpa/working/maxima/
+Checking out origin/HEAD
+Checking out 74e10d5dedb16f74efc28299c98dd7db9a4392d6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/maxima/
-  to /tmp/maximaIyWrRE/maxima-20210526.1525
+  to /tmp/maximaSGA2WL/maxima-20210526.1525
     maxima.el -> maxima.el
     maxima-font-lock.el -> maxima-font-lock.el
     keywords/constants -> keywords/constants
@@ -38,9 +40,9 @@ Created maxima-20210526.1525.tar containing:
   maxima-20210526.1525/maxima-font-lock.el
   maxima-20210526.1525/maxima-pkg.el
   maxima-20210526.1525/maxima.el
-Built maxima in 4.908s, finished at 2021-07-23T22:25:54+0000
+Built maxima in 4.910s, finished at 2021-07-24T15:12:44+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  416 Jul 23 22:25 packages/maxima-20210526.1525.entry
-192K -rw-r--r-- 1 root root 190K Jul 23 22:25 packages/maxima-20210526.1525.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:25 packages/maxima-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Jul 23 22:25 packages/maxima-readme.txt
+4.0K -rw-r--r-- 1 root root  416 Jul 24 15:12 packages/maxima-20210526.1525.entry
+192K -rw-r--r-- 1 root root 190K Jul 24 15:12 packages/maxima-20210526.1525.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:12 packages/maxima-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Jul 24 15:12 packages/maxima-readme.txt

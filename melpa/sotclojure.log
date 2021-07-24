@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/Malabarba/speed-of-thought-clojure.git
 
 Updating /mnt/store/melpa/working/sotclojure/
+Checking out origin/HEAD
+Checking out a480c887b53cb007b7b099c5ffcab89b9e59d7bc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sotclojure/
-  to /tmp/sotclojurePPigw5/sotclojure-20170922.8
+  to /tmp/sotclojureNoaOEu/sotclojure-20170922.8
     sotclojure-on.el -> sotclojure-on.el
     sotclojure.el -> sotclojure.el
 Created sotclojure-20170922.8.tar containing:
@@ -13,9 +15,9 @@ Created sotclojure-20170922.8.tar containing:
   sotclojure-20170922.8/sotclojure-on.el
   sotclojure-20170922.8/sotclojure-pkg.el
   sotclojure-20170922.8/sotclojure.el
-Built sotclojure in 5.030s, finished at 2021-07-23T22:47:22+0000
+Built sotclojure in 4.954s, finished at 2021-07-24T15:36:16+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  544 Jul 23 22:47 packages/sotclojure-20170922.8.entry
- 20K -rw-r--r-- 1 root root  20K Jul 23 22:47 packages/sotclojure-20170922.8.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:47 packages/sotclojure-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Jul 23 22:47 packages/sotclojure-readme.txt
+4.0K -rw-r--r-- 1 root root  544 Jul 24 15:36 packages/sotclojure-20170922.8.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 24 15:36 packages/sotclojure-20170922.8.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:36 packages/sotclojure-badge.svg
+4.0K -rw-r--r-- 1 root root 2.0K Jul 24 15:36 packages/sotclojure-readme.txt

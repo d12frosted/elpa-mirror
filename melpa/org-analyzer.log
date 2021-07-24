@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/rksm/clj-org-analyzer.git
 
 Updating /mnt/store/melpa/working/org-analyzer/
+Checking out origin/HEAD
+Checking out 19da62aa4dcf1090be8f574f6f2d4c7e116163a8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-analyzer/
-  to /tmp/org-analyzerandTzv/org-analyzer-20191001.1717
+  to /tmp/org-analyzerMg1JOc/org-analyzer-20191001.1717
   ! org-analyzer-el/org-analyzer.jar -> org-analyzer.jar
   ! org-analyzer-el/org-analyzer-pkg.el -> org-analyzer-pkg.el
   ! org-analyzer-el/org-analyzer.el -> org-analyzer.el
@@ -14,9 +16,9 @@ Created org-analyzer-20191001.1717.tar containing:
   org-analyzer-20191001.1717/org-analyzer-pkg.el
   org-analyzer-20191001.1717/org-analyzer.el
   org-analyzer-20191001.1717/org-analyzer.jar
-Built org-analyzer in 5.357s, finished at 2021-07-23T22:32:02+0000
+Built org-analyzer in 4.884s, finished at 2021-07-24T15:19:14+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  376 Jul 23 22:32 packages/org-analyzer-20191001.1717.entry
- 14M -rw-r--r-- 1 root root  14M Jul 23 22:32 packages/org-analyzer-20191001.1717.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:32 packages/org-analyzer-badge.svg
-4.0K -rw-r--r-- 1 root root  503 Jul 23 22:32 packages/org-analyzer-readme.txt
+4.0K -rw-r--r-- 1 root root  376 Jul 24 15:19 packages/org-analyzer-20191001.1717.entry
+ 14M -rw-r--r-- 1 root root  14M Jul 24 15:19 packages/org-analyzer-20191001.1717.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:19 packages/org-analyzer-badge.svg
+4.0K -rw-r--r-- 1 root root  503 Jul 24 15:19 packages/org-analyzer-readme.txt

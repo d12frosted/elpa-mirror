@@ -3,19 +3,21 @@ Fetcher: github
 Source:  https://github.com/joaotavora/yasnippet.git
 
 Updating /mnt/store/melpa/working/yasnippet/
-Built yasnippet in 9.861s, finished at 2021-07-24T02:13:19+0000
+Checking out origin/HEAD
+Checking out 5cbdbf0d2015540c59ed8ee0fcf4788effdf75b6
+Built yasnippet in 5.787s, finished at 2021-07-24T15:47:17+0000
  ✓ Success:
-216K -rw-r--r-- 1 root root 215K Jul 24 02:13 packages/yasnippet-20200604.246.el
-4.0K -rw-r--r-- 1 root root  340 Jul 24 02:13 packages/yasnippet-20200604.246.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 02:13 packages/yasnippet-badge.svg
-4.0K -rw-r--r-- 1 root root  362 Jul 23 22:56 packages/yasnippet-lean-20200526.326.entry
- 32K -rw-r--r-- 1 root root  30K Jul 24 02:13 packages/yasnippet-lean-20200526.326.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:56 packages/yasnippet-lean-badge.svg
-4.0K -rw-r--r-- 1 root root   48 Jul 23 22:56 packages/yasnippet-lean-readme.txt
-4.0K -rw-r--r-- 1 root root  426 Jul 24 02:13 packages/yasnippet-lean.log
-4.0K -rw-r--r-- 1 root root 3.3K Jul 24 02:13 packages/yasnippet-readme.txt
-4.0K -rw-r--r-- 1 root root  440 Jul 23 22:57 packages/yasnippet-snippets-20210408.1234.entry
-2.3M -rw-r--r-- 1 root root 2.3M Jul 23 22:57 packages/yasnippet-snippets-20210408.1234.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:57 packages/yasnippet-snippets-badge.svg
-4.0K -rw-r--r-- 1 root root   55 Jul 23 22:57 packages/yasnippet-snippets-readme.txt
-4.0K -rw-r--r-- 1 root root  163 Jul 24 02:13 packages/yasnippet-snippets.log
+216K -rw-r--r-- 1 root root 215K Jul 24 15:47 packages/yasnippet-20200604.246.el
+4.0K -rw-r--r-- 1 root root  340 Jul 24 15:47 packages/yasnippet-20200604.246.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:47 packages/yasnippet-badge.svg
+4.0K -rw-r--r-- 1 root root  362 Jul 24 15:47 packages/yasnippet-lean-20200526.326.entry
+ 32K -rw-r--r-- 1 root root  30K Jul 24 15:47 packages/yasnippet-lean-20200526.326.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:47 packages/yasnippet-lean-badge.svg
+4.0K -rw-r--r-- 1 root root   48 Jul 24 15:47 packages/yasnippet-lean-readme.txt
+4.0K -rw-r--r-- 1 root root 2.3K Jul 24 15:47 packages/yasnippet-lean.log
+4.0K -rw-r--r-- 1 root root 3.3K Jul 24 15:47 packages/yasnippet-readme.txt
+4.0K -rw-r--r-- 1 root root  440 Jul 24 12:21 packages/yasnippet-snippets-20210408.1234.entry
+2.3M -rw-r--r-- 1 root root 2.3M Jul 24 12:21 packages/yasnippet-snippets-20210408.1234.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 12:21 packages/yasnippet-snippets-badge.svg
+4.0K -rw-r--r-- 1 root root   55 Jul 24 12:21 packages/yasnippet-snippets-readme.txt
+4.0K -rw-r--r-- 1 root root  478 Jul 24 15:47 packages/yasnippet-snippets.log

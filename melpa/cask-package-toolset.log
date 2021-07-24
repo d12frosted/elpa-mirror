@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/AdrieanKhisbe/cask-package-toolset.el.git
 
 Updating /mnt/store/melpa/working/cask-package-toolset/
+Checking out origin/HEAD
+Checking out 2c74cd827e88c7f8360581a841e45f0b794510e7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cask-package-toolset/
-  to /tmp/cask-package-toolsetQ4LOcu/cask-package-toolset-20170921.2256
+  to /tmp/cask-package-toolset3c9T1d/cask-package-toolset-20170921.2256
     cask-package-toolset.el -> cask-package-toolset.el
     bin => bin
     templates => templates
@@ -27,9 +29,9 @@ Created cask-package-toolset-20170921.2256.tar containing:
   cask-package-toolset-20170921.2256/templates/undercover.el
   cask-package-toolset-20170921.2256/templates/void
   cask-package-toolset-20170921.2256/templates/void-template
-Built cask-package-toolset in 4.610s, finished at 2021-07-23T21:48:01+0000
+Built cask-package-toolset in 4.526s, finished at 2021-07-24T14:32:11+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  574 Jul 23 21:48 packages/cask-package-toolset-20170921.2256.entry
- 40K -rw-r--r-- 1 root root  40K Jul 23 21:48 packages/cask-package-toolset-20170921.2256.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 21:48 packages/cask-package-toolset-badge.svg
-4.0K -rw-r--r-- 1 root root  276 Jul 23 21:48 packages/cask-package-toolset-readme.txt
+4.0K -rw-r--r-- 1 root root  574 Jul 24 14:32 packages/cask-package-toolset-20170921.2256.entry
+ 40K -rw-r--r-- 1 root root  40K Jul 24 14:32 packages/cask-package-toolset-20170921.2256.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:32 packages/cask-package-toolset-badge.svg
+4.0K -rw-r--r-- 1 root root  276 Jul 24 14:32 packages/cask-package-toolset-readme.txt

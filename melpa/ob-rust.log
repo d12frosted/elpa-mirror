@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/micanzhang/ob-rust.git
 
 Updating /mnt/store/melpa/working/ob-rust/
+Checking out origin/HEAD
+Checking out 30fe7e7181f44443d02e905dda77f83ec4944e76
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ob-rust/
-  to /tmp/ob-rust4ScFLL/ob-rust-20210204.244
+  to /tmp/ob-rustqnM6KN/ob-rust-20210204.244
     ob-rust.el -> ob-rust.el
     test-ob-rust.el -> test-ob-rust.el
 Created ob-rust-20210204.244.tar containing:
@@ -13,9 +15,9 @@ Created ob-rust-20210204.244.tar containing:
   ob-rust-20210204.244/ob-rust-pkg.el
   ob-rust-20210204.244/ob-rust.el
   ob-rust-20210204.244/test-ob-rust.el
-Built ob-rust in 3.645s, finished at 2021-07-23T22:31:07+0000
+Built ob-rust in 4.455s, finished at 2021-07-24T15:18:16+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  303 Jul 23 22:31 packages/ob-rust-20210204.244.entry
- 20K -rw-r--r-- 1 root root  20K Jul 23 22:31 packages/ob-rust-20210204.244.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:31 packages/ob-rust-badge.svg
-4.0K -rw-r--r-- 1 root root  861 Jul 23 22:31 packages/ob-rust-readme.txt
+4.0K -rw-r--r-- 1 root root  303 Jul 24 15:18 packages/ob-rust-20210204.244.entry
+ 20K -rw-r--r-- 1 root root  20K Jul 24 15:18 packages/ob-rust-20210204.244.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 15:18 packages/ob-rust-badge.svg
+4.0K -rw-r--r-- 1 root root  861 Jul 24 15:18 packages/ob-rust-readme.txt

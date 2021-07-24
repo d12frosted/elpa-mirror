@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/gabesoft/evil-mc.git
 
 Updating /mnt/store/melpa/working/evil-mc/
+Checking out origin/HEAD
+Checking out f04fb17f35f2722f2ac93c862b4450bb8e5b739a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/evil-mc/
-  to /tmp/evil-mctZtdet/evil-mc-20210206.1941
+  to /tmp/evil-mc8F4xFV/evil-mc-20210206.1941
     evil-mc-command-execute.el -> evil-mc-command-execute.el
     evil-mc-command-record.el -> evil-mc-command-record.el
     evil-mc-common.el -> evil-mc-common.el
@@ -33,14 +35,14 @@ Created evil-mc-20210206.1941.tar containing:
   evil-mc-20210206.1941/evil-mc-undo.el
   evil-mc-20210206.1941/evil-mc-vars.el
   evil-mc-20210206.1941/evil-mc.el
-Built evil-mc in 3.936s, finished at 2021-07-23T22:02:22+0000
+Built evil-mc in 4.665s, finished at 2021-07-24T14:47:16+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  485 Jul 23 22:02 packages/evil-mc-20210206.1941.entry
-140K -rw-r--r-- 1 root root 140K Jul 23 22:02 packages/evil-mc-20210206.1941.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 22:02 packages/evil-mc-badge.svg
-4.0K -rw-r--r-- 1 root root  564 Jul 23 18:40 packages/evil-mc-extras-20170202.1649.entry
- 12K -rw-r--r-- 1 root root  10K Jul 23 18:40 packages/evil-mc-extras-20170202.1649.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 23 18:40 packages/evil-mc-extras-badge.svg
-4.0K -rw-r--r-- 1 root root  282 Jul 23 18:40 packages/evil-mc-extras-readme.txt
-4.0K -rw-r--r-- 1 root root  147 Jul 23 22:02 packages/evil-mc-extras.log
-4.0K -rw-r--r-- 1 root root  244 Jul 23 22:02 packages/evil-mc-readme.txt
+4.0K -rw-r--r-- 1 root root  485 Jul 24 14:47 packages/evil-mc-20210206.1941.entry
+140K -rw-r--r-- 1 root root 140K Jul 24 14:47 packages/evil-mc-20210206.1941.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 14:47 packages/evil-mc-badge.svg
+4.0K -rw-r--r-- 1 root root  564 Jul 24 14:47 packages/evil-mc-extras-20170202.1649.entry
+ 12K -rw-r--r-- 1 root root  10K Jul 24 14:47 packages/evil-mc-extras-20170202.1649.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 24 11:21 packages/evil-mc-extras-badge.svg
+4.0K -rw-r--r-- 1 root root  282 Jul 24 14:47 packages/evil-mc-extras-readme.txt
+4.0K -rw-r--r-- 1 root root  708 Jul 24 14:47 packages/evil-mc-extras.log
+4.0K -rw-r--r-- 1 root root  244 Jul 24 14:47 packages/evil-mc-readme.txt
