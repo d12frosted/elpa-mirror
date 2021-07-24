@@ -1,0 +1,11 @@
+(package-loading-notifier .
+			  [(20210724 1700)
+			   ((emacs
+			     (25)))
+			   "Notify a package is being loaded" single
+			   ((:commit . "895ab23f970f954349ccb6c89d397ad7d86087f8")
+			    (:authors
+			     ("SeungKi Kim" . "tttuuu888@gmail.com"))
+			    (:maintainer "SeungKi Kim" . "tttuuu888@gmail.com")
+			    (:keywords "convenience" "faces" "config" "startup")
+			    (:url . "https://github.com/tttuuu888/package-loading-notifier"))])
