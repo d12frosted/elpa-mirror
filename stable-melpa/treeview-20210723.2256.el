@@ -1,12 +1,12 @@
 ;;; treeview.el --- A generic tree navigation library -*- lexical-binding: t -*-
 
-;; Copyright (C) 2018-2020 Tilman Rassy
+;; Copyright (C) 2018-2021 Tilman Rassy
 
 ;; Author: Tilman Rassy <tilman.rassy@googlemail.com>
 ;; URL: https://github.com/tilmanrassy/emacs-treeview
-;; Package-Version: 20200921.6
-;; Package-Commit: e6012303670d112596e00eb3cb505eb0e0d61d84
-;; Version: 1.0.0
+;; Package-Version: 20210723.2256
+;; Package-Commit: 09c8c1d045c7c8eace61b10b6df9d2f9079de78e
+;; Version: 1.1.0
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: lisp, tools, internal, convenience
 
@@ -88,6 +88,9 @@
 ;;
 ;;   state  The state of the node.  See below for details
 ;;
+;;   selected
+;;          Whether the node is selected (non-nil if selected, nil if not)
+;;
 ;; Node states: Each node is in exactly one of three states, which are represented by the
 ;; following Lisp symbols:
 ;;
@@ -105,6 +108,7 @@
 ;; The framework is used by implementing several functions which are defined as function variables,
 ;; thus, variables whose values are function symbols.  Here is a list of that variables:
 ;;
+;;   treeview-get-root-node-function
 ;;   treeview-node-leaf-p-function
 ;;   treeview-update-node-children-function
 ;;   treeview-after-node-expanded-function
@@ -122,6 +126,8 @@
 ;;   treeview-get-indent-face-function
 ;;   treeview-get-control-face-function
 ;;   treeview-get-control-mouse-face-function
+;;   treeview-get-selected-node-face-function
+;;   treeview-get-highlighted-node-face-function
 ;;   treeview-get-label-keymap-function
 ;;   treeview-get-label-face-function
 ;;   treeview-get-label-mouse-face-function
@@ -136,6 +142,10 @@
 ;; created and rendered in the buffer by a call to treeview-display-node.
 ;;
 ;; See library "dir-treeview" for an example where this framework is used.
+;;
+;; If you upgrade from v1.0.0: Note that v1.1.0 (this version) defines another buffer-local
+;; function variable treeview-get-root-node-function which didn't exist in v1.0.0. It must be
+;; set to a function which returns the root node of the tree.
 
 ;;; Code:
 
@@ -168,7 +178,8 @@ the entry `state' with the value `folder-unread'."
   (setcar (nthcdr 1 node) props))
 
 (defun treeview-get-node-prop (node key)
-  "Return the property KEY of NODE."
+  "Return the property KEY of NODE.
+If the property is not set, returns nil."
   (plist-get (treeview-get-node-props node) key))
 
 (defun treeview-set-node-prop (node key value)
@@ -215,6 +226,16 @@ This is the case if and only if NODES's state is `folded-unread' or `folded-read
 (defun treeview-set-node-children (node children)
   "Set the children of NODE to CHILDREN."
   (setcar (nthcdr 3 node) children))
+
+(defvar treeview-get-root-node-function nil
+  "Function that returns the root node of the tree.")
+
+(make-variable-buffer-local 'treeview-get-root-node-function)
+
+(defun treeview-get-root-node ()
+  "Return the root node of the tree.
+Calls `treeview-get-root-node-function', which must be implemented."
+  (funcall treeview-get-root-node-function))
 
 (defun treeview-get-parent-children (node)
   "Return the children of the parent of NODE.
@@ -314,15 +335,19 @@ Called with one argument, the node.  For example, if the nodes represent
 directories, this function could re-read the directory to update the children.
 The function should not redisplay the node, this is done automatically.")
 
+(make-variable-buffer-local 'treeview-update-node-children-function)
+
 (defvar treeview-after-node-expanded-function 'treeview-do-nothing
   "Function to perform additional actions after a node has been expanded.
 Called with one argument, the node.")
+
+(make-variable-buffer-local 'treeview-after-node-expanded-function)
 
 (defvar treeview-after-node-folded-function 'treeview-do-nothing
   "Function to perform additional actions after a node has been expanded.
 Called with one argument, the node.")
 
-(make-variable-buffer-local 'treeview-update-node-children-function)
+(make-variable-buffer-local 'treeview-after-node-folded-function)
 
 (defvar treeview-get-indent-function nil
   "Function to create the indentation before a node.
@@ -448,6 +473,29 @@ The default implementation is `treeview-return-nil'.")
 
 (make-variable-buffer-local 'treeview-get-control-mouse-face-function)
 
+(defvar treeview-get-selected-node-face-function 'treeview-return-nil
+  "Function to get the face of selected nodes.
+Called with one argument, the node.  The return value must be a face or nil.
+If a face, it is used to highlight selected nodes.
+
+The default implementation is `treeview-return-nil'.")
+
+(make-variable-buffer-local 'treeview-get-selected-node-face-function)
+
+(defvar treeview-highlighted-node nil
+  "The highlighted node, or nil if currently no node is highlighted.")
+
+(make-variable-buffer-local 'treeview-highlighted-node)
+
+(defvar treeview-get-highlighted-node-face-function 'treeview-return-nil
+  "Function to get the face to highlighted a node.
+Called with one argument, the node.  The return value must be a face or nil.
+If a face, it is used to highlight the node.
+
+The default implementation is `treeview-return-nil'.")
+
+(make-variable-buffer-local 'treeview-get-highlighted-node-face-function)
+
 (defvar treeview-get-label-keymap-function 'treeview-return-nil
   "Function to get the keymap of the label of a node.
 Called with one argument, the node.  The return value is passed as the KEYMAP
@@ -507,6 +555,27 @@ return value must be a face or nil.
 The default implementation is `treeview-return-nil'.")
 
 (make-variable-buffer-local 'treeview-get-icon-mouse-face-function)
+
+(defun treeview-apply-recursively (node callback)
+  "Apply CALLBACK to NODE and all its descendants.
+CALLBACK should be a function expecting a node as argument."
+  (funcall callback node)
+  (dolist (child (treeview-get-node-children node))
+    (treeview-apply-recursively child callback)))
+
+(defun treeview-for-each-node (callback)
+  "Apply CALLBACK to each node in the tree.
+CALLBACK should be a function expecting a node as argument."
+  (treeview-apply-recursively (treeview-get-root-node) callback))
+
+(defun treeview-filter-nodes (filter)
+  "Return a list of all nodes accepted by FILTER.
+FILTER must be function expecting a node as argument.  A node is said to be
+accepted by FILTER if FILTER returns a non-nil value when applied to the
+node."
+  (let ( (nodes ()) )
+    (treeview-for-each-node (lambda (node) (when (funcall filter node) (push node nodes))))
+    nodes))
 
 (defun treeview-get-node-at-pos (pos)
   "Return the node at the buffer position POS, or nil if there is no node at that position."
@@ -576,7 +645,7 @@ node exists, return nil."
 (defun treeview-make-node-component-overlay (node content &optional keymap face mouse-face)
   "Create an overlay representing a specific component of a node.
 
-This function is used to create the imdemtation, control, icon, and label
+This function is used to create the indentation, control, icon, and label
 overlays of nodes.  NODE is the node to which the overlay belongs.  The
 `treeview-node' property of the overlay is set to NODE.  CONTENT is a string.
 It is inserted as the content of the overlay.  If non-nil, KEYMAP, FACE, and
@@ -626,6 +695,58 @@ of the overlay, respectively (see overlay documentation in the Emacs Lisp refere
     (if face (overlay-put overlay 'face face))
     (if mouse-face (overlay-put overlay 'mouse-face mouse-face))
     overlay))
+
+(defun treeview-add-face (base-face face-to-add)
+  "Add FACE-TO-ADD to BASE-FACE.
+This is an auxiliary function to create face lists for overlays.
+BASE-FACE should be a face or a list of faces.  FACE-TO-ADD should be a face.
+If BASE-FACE is a single face, the return value is the list
+\(FACE-TO-ADD BASE-FACE).  If BASE-FACE is a list of faces (FACE1 FACE2 ...),
+the return value is the list (FACE-TO-ADD FACE1 FACE2 ...)."
+  (if (listp base-face)
+      (unless (memq face-to-add base-face) (setq base-face (cons face-to-add base-face)))
+    (unless (eq base-face face-to-add) (setq base-face (list face-to-add base-face))))
+  base-face)
+
+(defun treeview-remove-face (base-face face-to-remove)
+  "Remove FACE-TO-REMOVE from BASE-FACE.
+
+This is an auxiliary function to modify face (or face lists) of overlays.
+BASE-FACE should be a face or a list of faces.  FACE-TO-REMOVE should be a face.
+
+If BASE-FACE is a list of faces, it is checked if FACE-TO-REMOVE is a member.
+Check is done with `memq'.  If so, FACE-TO-REMOVE is removed from the list.
+If the remaining list has only one element, the element is returned.  Otherwise
+the remaining list (which my be empty) is returned.
+
+If BASE-FACE is a single face, and is equal to FACE-TO-REMOVE, an empty list is
+returned.  Equality is checked with `eq'.
+
+If BASE-FACE is a list not containing FACE-TO-REMOVE, or a single face other
+than FACE-TO-REMOVE, BASE-FACE is returned unchecnged."
+    (if (listp base-face)
+        (when (memq face-to-remove base-face)
+          (setq base-face (delq face-to-remove base-face))
+          (when (equal (length base-face) 1) (setq base-face (nth 0 base-face))))
+      (when (eq base-face face-to-remove)
+        (setq base-face ())))
+    base-face)
+
+(defun treeview-add-node-label-face (node face-to-add)
+  "Add FACE-TO-ADD the the face of the label of NODE.
+FACE-TO-ADD is added to the face(s) of the overlay of NODE by means of
+`'treeview-add-face."
+  (let* ( (label-overlay (treeview-get-node-prop node 'label-overlay))
+          (label-face (overlay-get label-overlay 'face)) )
+    (overlay-put label-overlay 'face (treeview-add-face label-face face-to-add))))
+
+(defun treeview-remove-node-label-face (node face-to-remove)
+  "Remove FACE-TO-REMOVE from the face of the label of NODE.
+FACE-TO-REMOVE is removed from the face(s) of the overlay of NODE by means of
+`'treeview-remove-face."
+  (let* ( (label-overlay (treeview-get-node-prop node 'label-overlay))
+          (label-face (overlay-get label-overlay 'face)) )
+    (overlay-put label-overlay 'face (treeview-remove-face label-face face-to-remove))))
 
 (defun treeview-set-node-start (node &optional pos)
   "Set the start marker of NODE to POS.
@@ -679,6 +800,8 @@ This is an auxiliary function used in `treeview-display-node'."
          (label-overlay nil)
          ;; Node line:
          (node-line-overlay nil) )
+    (when (treeview-node-selected-p node)
+      (setq label-face (treeview-add-face label-face (funcall treeview-get-selected-node-face-function node))))
     (beginning-of-line)
     (setq start (point))
     (treeview-set-node-start node start)
@@ -757,7 +880,11 @@ after this cons cell.  NODE is also displayed if the parent is not hidden."
       (let ( (buffer-read-only nil) )
         (goto-char (treeview-get-node-prop anchor-node 'end))
         (end-of-line)
+        ;; Set insertion type of end marker of anchor-node to nil, to prevent marker from moving:
+        (treeview-set-node-end anchor-node nil nil)
         (newline)
+        ;; Reset insertion type of end marker of anchor-node:
+        (treeview-set-node-end anchor-node nil t)
         (treeview-render-node node nil)
         (treeview-set-node-end-after-display node) )) ))
 
@@ -924,6 +1051,43 @@ does nothing."
   (let ( (node (treeview-get-node-at-pos (point))) )
     (when node (funcall action-function node))))
 
+(defun treeview-refresh-node (node)
+  "Update and redisplay NODE.
+
+First, NODE is updated by calling `treeview-update-node'.  Then, NODE is
+redisplayed by calling `treeview-redisplay-node'."
+  (let ( (pos (point)) )
+    (treeview-update-node node)
+    (treeview-redisplay-node node)
+    (goto-char (if (<= pos (point-max)) (if (>= pos (point-min)) pos (point-min)) (point-max))) ))
+
+(defun treeview-refresh-tree ()
+  "Update and redisplay the entire tree."
+  (interactive)
+  (treeview-refresh-node (treeview-get-root-node)))
+
+(defun treeview-refresh-node-at-point ()
+  "Update and redisplay the node at point.
+Calls `treeview-refresh-node' with the node at point.
+If there is no node at point, does nothing."
+  (interactive)
+  (treeview-call-for-node-at-point 'treeview-refresh-node))
+
+(defun treeview-refresh-subtree-at-point ()
+  "Update and redisplay the subtree point is in.
+If the node at point is expanded, calls `treeview-refresh-node' for the
+node at point.  If the node at point is not expanded and its parent is not
+nil, calls `treeview-refresh-node' for the parent.  If the node at point
+is not expanded and its parent is nil, calls `treeview-refresh-node' for
+the node at point.  If there is no node at point, does nothing."
+  (interactive)
+  (let ( (node (treeview-get-node-at-pos (point))) )
+    (when node
+      (unless (treeview-node-expanded-p node)
+        (let ( (parent (treeview-get-node-parent node)) )
+          (when parent (setq node parent))))
+      (treeview-refresh-node node))))
+
 (defvar treeview-suggest-point-pos-in-control-function 'treeview-get-overlay-center
   "Function to suggest an appropriate position for the point in a node control.
 Called with one argument, the control overlay.  Auxiliary for implementing
@@ -998,6 +1162,134 @@ has no next sibling, does nothing."
         (when parent
           (let ( (sibling (treeview-get-next-sibling parent)) )
             (when sibling (treeview-place-point-in-node sibling))))))))
+
+(defun treeview-node-selected-p (node)
+  "Return non-nil if NODE is selected, otherwise nil.
+A node is selected if its property `selected' is non-nil."
+  (treeview-get-node-prop node 'selected))
+
+(defun treeview-select-node (node)
+  "Select NODE.
+The node's property `select' is set to t, and the node's label is highlighted
+with the face returned by `treeview-get-selected-node-face-function'.  If the
+node is already selected, does nothing"
+  (unless (treeview-node-selected-p node)
+    (treeview-set-node-prop node 'selected t)
+    (treeview-add-node-label-face node (funcall treeview-get-selected-node-face-function node))))
+
+(defun treeview-unselect-node (node)
+  "Unselect NODE.
+The node's property `select' is set to nil, and the highlighting as a selected
+node is removed.  If the node isn't selected, does nothing"
+  (when (treeview-node-selected-p node)
+    (treeview-set-node-prop node 'selected nil)
+    (treeview-remove-node-label-face node (funcall treeview-get-selected-node-face-function node))))
+
+(defun treeview-get-all-selected-nodes ()
+  "Return all selected nodes as a list."
+  (treeview-filter-nodes 'treeview-node-selected-p))
+
+(defun treeview-selected-nodes-exist ()
+  "Return non-nil if at least one node is selected, otherwise nil."
+  (> (length (treeview-get-all-selected-nodes)) 0))
+
+(defun treeview-unselect-all-nodes ()
+  "Unselect all selected nodes."
+  (interactive)
+  (dolist (node (treeview-get-all-selected-nodes)) (treeview-unselect-node node)))
+
+(defun treeview-unselect-all-nodes-after-keyboard-quit ()
+  "Unselect all nodes if `this-command' is `keyboard-quit'.
+If this function is added to `post-command-hook', the selections are revoked
+when \\<global-map> \\[keyboard-quit] is pressed."
+  (when (eq this-command 'keyboard-quit) (treeview-unselect-all-nodes)))
+
+(defun treeview-toggle-select-node (node)
+  "Select NODE if it is not selected, unselect it otherwise."
+  (if (treeview-node-selected-p node) (treeview-unselect-node node) (treeview-select-node node)))
+
+(defun treeview-toggle-select-node-at-point ()
+  "Toggle selection of node at point.
+If there is no node at point, does nothing."
+  (interactive)
+  (let ( (node (treeview-get-node-at-point)) )
+    (when node (treeview-toggle-select-node node)) ))
+
+(defun treeview-toggle-select-node-at-event (event)
+  "Toggle selection of node where EVENT occurred.
+EVENT must be a mouse event.  If there is no node at EVENT, does nothing."
+  (interactive "@e")
+  (let ( (node (treeview-get-node-at-event event)) )
+    (when node (treeview-toggle-select-node node)) ))
+
+(defun treeview-select-gap-above-node (node)
+  "Select all nodes between the nearest selected node above NODE and NODE.
+NODE itself is also selected.  The search for the nearest selected node extends
+only to siblings of node.
+
+For example, if you have nodes
+
+  NODE_1 *
+  NODE_2
+  NODE_3 *
+  NODE_4
+  NODE_5
+  NODE_6
+
+which are all siblings of each other, and * denotes selection, and NODE is
+NODE_6, then the result is the following:
+
+  NODE_1 *
+  NODE_2
+  NODE_3 *
+  NODE_4 *
+  NODE_5 *
+  NODE_6 *
+
+If there is no selected sibling above nOE, does nothing."
+  (let ( (parent (treeview-get-node-parent node)) )
+    (when parent
+      (let ( (children (treeview-get-node-children parent)) (nodes-to-select nil) (candidates nil) )
+        (while (and children (not nodes-to-select))
+          (let ( (child (car children)) )
+            (if (eq child node)
+                (progn (push child candidates)
+                       (setq nodes-to-select candidates) )
+              (if (treeview-node-selected-p child)
+                  (setq candidates (list child))
+                (when candidates (push child candidates)) ))
+            (setq children (cdr children)) ))
+        (when nodes-to-select (dolist (elem nodes-to-select) (treeview-select-node elem))) )) ))
+
+(defun treeview-select-gap-above-node-at-point ()
+  "Select all nodes from the node at point to the nearest selected node above.
+The node at point is also selected.
+See `treeview-select-gap-above-node' for more information."
+  (interactive)
+  (let ( (node (treeview-get-node-at-point)) )
+    (when node (treeview-select-gap-above-node node))))
+
+(defun treeview-select-gap-above-node-at-event (event)
+  "Select all nodes from the node at EVENT to the nearest selected node above.
+The node at EVENT is also selected.  EVENT should be a mouse event.
+See `treeview-select-gap-above-node' for more information."
+  (interactive "@e")
+  (let ( (node (treeview-get-node-at-event event)) )
+    (when node (treeview-select-gap-above-node node))))
+
+(defun treeview-unhighlight-node ()
+  "Unhighlight the highlightwd node.
+If there is no highlightwd node, does nothing."
+  (when treeview-highlighted-node
+    (let ( (node treeview-highlighted-node) )
+      (treeview-remove-node-label-face node (funcall treeview-get-highlighted-node-face-function node)))
+    (setq treeview-highlighted-node nil)))
+
+(defun treeview-highlight-node (node)
+  "Highlight NODE."
+  (treeview-unhighlight-node)
+  (treeview-add-node-label-face node (funcall treeview-get-highlighted-node-face-function node))
+  (setq treeview-highlighted-node node))
 
 (defun treeview-make-keymap (key-table)
   "Create and return a keymap from KEY-TABLE.
