@@ -1,8 +1,8 @@
 ;;; php-quickhelp.el --- Quickhelp at point for php -*- lexical-binding: t; -*-
 ;; Copyright (C) 2020 Vincenzo Pupillo
-;; Version: 0.4.1
-;; Package-Version: 20210721.1945
-;; Package-Commit: f22e6d31aad504094b441e2f635869fc97939ddf
+;; Version: 0.5.4
+;; Package-Version: 20210725.1413
+;; Package-Commit: 18678b9648a4227e612df773bac9ec46fc51b75d
 ;; Author: Vincenzo Pupillo
 ;; URL: https://github.com/vpxyz/php-quickhelp
 ;; Package-Requires: ((emacs "25.1"))
@@ -14,10 +14,12 @@
 ;; Second run php-quickhelp-download-or-update.
 ;;
 ;; php-quickhelp can be used with or without company-php, company-phpactor and company-quickhelp.
-;; When used with company-php, company-phpactor and company-quickhelp, it works like a wrapper for company-php or company-phpactor.
-;; As an example, for company-phpactor,  you can do:
+;; When used with company-php, company-phpactor and company-quickhelp
+;; (and company-quickhelp-terminal if you want to use with console), it works like a wrapper for company-php or company-phpactor.
+;; As an example, for company-phpactor,  you can do (you must activate company-quickhelp-mode):
 ;; (add-hook 'php-mode-hook (lambda ()
 ;;     ;; .... other configs
+;;     (require 'company-phpactor)
 ;;     (require 'php-quickhelp)
 ;;     (set (make-local-variable 'company-backends)
 ;;     '(php-quickhelp-company-phpactor company-web-html company-dabbrev-code company-files))
@@ -59,7 +61,7 @@
 (declare-function company-doc-buffer "ext:company.el")
 (declare-function company-php "ext:company-php.el")
 (declare-function company-phpactor "ext:company-phpactor.el")
-(declare-function company-phpactor "ext:w3m.el")
+(declare-function w3m-region "ext:w3m.el")
 
 (defgroup php-quickhelp nil
   "Quickhelp for PHP and company."
@@ -148,11 +150,11 @@ have to ensure that jq support at least  -j -M  switchs."
     (goto-char (point-min))
     (while (re-search-forward " +" nil t)
       (replace-match " " nil nil))
-    (setq-local shr-use-fonts php-quickhelp-use-fonts
-                shr-cookie-policy nil
-                shr-use-colors php-quickhelp-use-colors
-                shr-width php-quickhelp-width
-                shr-inhibit-images t)
+    (setq-local shr-use-fonts php-quickhelp-use-fonts)
+    (setq-local shr-cookie-policy nil)
+    (setq-local shr-use-colors php-quickhelp-use-colors)
+    (setq-local shr-width php-quickhelp-width)
+    (setq-local shr-inhibit-images t)
     (shr-render-region (point-min) (point-max))
     ;; remove last '\n'
     (let ((s (buffer-string)))
