@@ -4,8 +4,8 @@
 ;;         Justin Burkett <justin@burkett.cc>
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
 ;; URL: https://github.com/tmalsburg/helm-bibtex
-;; Package-Version: 20210718.1044
-;; Package-Commit: a0d32ab16748b7b0c43d6421f1b497b7caf8e590
+;; Package-Version: 20210725.1459
+;; Package-Commit: 835546bf191205f2868b29ef35aee53e94f26ba3
 ;; Version: 1.0.0
 ;; Package-Requires: ((parsebib "1.0") (s "1.9.0") (dash "2.6.0") (f "0.16.2") (cl-lib "0.5") (biblio "0.2") (emacs "26.1"))
 
@@ -1546,15 +1546,24 @@ bibliography file that will open that file for editing."
 
 (defun bibtex-completion-find-local-bibliography ()
   "Return a list of BibTeX files associated with the current file.
-If the current file is a BibTeX file, return this
-file.  Otherwise, try to use `reftex' to find the associated
-BibTeX files.  If this fails, return nil."
+
+If the current file is a BibTeX file, return this file.  In LaTeX
+documents, use `reftex' to find associated BibTeX files.  In org
+files return the local or global org bibliography (see oc.el).
+If all fails, return nil."
   (or (and (buffer-file-name)
            (string= (or (f-ext (buffer-file-name)) "") "bib")
            (list (buffer-file-name)))
+      ;; LaTeX:
       (and (buffer-file-name)
+           (string= (or (f-ext (buffer-file-name)) "") "tex")
            (require 'reftex-cite nil t)
-           (ignore-errors (reftex-get-bibfile-list)))))
+           (ignore-errors (reftex-get-bibfile-list)))
+      ;; Org (with oc.el):
+      (and (buffer-file-name)
+           (string= (or (f-ext (buffer-file-name)) "") "org")
+           (fboundp 'org-cite-list-bibliography-files)
+           (org-cite-list-bibliography-files))))
 
 (defun bibtex-completion-get-key-bibtex ()
   "Return the key of the BibTeX entry at point, nil otherwise.

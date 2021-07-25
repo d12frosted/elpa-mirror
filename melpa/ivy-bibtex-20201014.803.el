@@ -4,7 +4,7 @@
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
 ;; URL: https://github.com/tmalsburg/helm-bibtex
 ;; Package-Version: 20201014.803
-;; Package-Commit: a0d32ab16748b7b0c43d6421f1b497b7caf8e590
+;; Package-Commit: 835546bf191205f2868b29ef35aee53e94f26ba3
 ;; Version: 1.0.1
 ;; Package-Requires: ((bibtex-completion "1.0.0") (swiper "0.7.0") (cl-lib "0.5"))
 

@@ -7,7 +7,6 @@ client for GNU Emacs.  It supports:
 - caching of visited sites,
 - pleasant and configurable colouring of Gopher directories,
 - direct visualisation of image files,
-- a simple bookmark management system,
 - gopher connections using TLS encryption,
 - the fledgling Gemini protocol,
 - the greybeard Finger protocol.
@@ -19,5 +18,6 @@ points for your gopher exploration.
 Full instructions can be found in the Elpher info manual.
 
 Elpher is under active development.  Any suggestions for
-improvements are welcome, and can be made on the official
-project page, gopher://thelambdalab.xyz/1/projects/elpher/.
+improvements are welcome, and can be made on the official project
+page, gopher://thelambdalab.xyz/1/projects/elpher, or via the
+project mailing list at https://lists.sr.ht/~michel-slm/elpher.

@@ -3,8 +3,8 @@
 ;; Author: Titus von der Malsburg <malsburg@posteo.de>
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
 ;; URL: https://github.com/tmalsburg/helm-bibtex
-;; Package-Version: 20201214.2111
-;; Package-Commit: a0d32ab16748b7b0c43d6421f1b497b7caf8e590
+;; Package-Version: 20210725.1510
+;; Package-Commit: 835546bf191205f2868b29ef35aee53e94f26ba3
 ;; Version: 2.0.1
 ;; Package-Requires: ((bibtex-completion "1.0.0") (helm "1.5.5") (cl-lib "0.5") (emacs "24.1"))
 
@@ -247,8 +247,9 @@ frequent searches (e.g. your own publications)."
 (defun helm-bibtex-with-local-bibliography (&optional arg)
   "Search BibTeX entries with local bibliography.
 
-With a prefix ARG the cache is invalidated and the bibliography
-reread."
+If none is found the global bibliography is used instead.  With a
+prefix ARG the cache is invalidated and the bibliography
+reloaded."
   (interactive "P")
   (let* ((local-bib (bibtex-completion-find-local-bibliography))
          (bibtex-completion-bibliography (or local-bib
