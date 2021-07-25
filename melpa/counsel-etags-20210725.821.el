@@ -4,11 +4,11 @@
 
 ;; Author: Chen Bin <chenbin dot sh AT gmail dot com>
 ;; URL: http://github.com/redguardtoo/counsel-etags
-;; Package-Version: 20210608.206
-;; Package-Commit: 2c1f2161d36f70e0034e29abecfcb8878b30b6ac
+;; Package-Version: 20210725.821
+;; Package-Commit: 84fff26b0f207131c2e6669bd7f510eac43973aa
 ;; Package-Requires: ((emacs "25.1") (counsel "0.13.4"))
 ;; Keywords: tools, convenience
-;; Version: 1.9.16
+;; Version: 1.9.17
 
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -553,7 +553,7 @@ Return nil if it's not found."
 ;;;###autoload
 (defun counsel-etags-version ()
   "Return version."
-  (message "1.9.16"))
+  (message "1.9.17"))
 
 ;;;###autoload
 (defun counsel-etags-get-hostname ()
@@ -569,7 +569,7 @@ Return nil if it's not found."
 
 (defun counsel-etags-get-tags-file-path (dir)
   "Get full path of tags file from DIR."
-  (and dir (file-truename (concat (file-name-as-directory dir)
+  (and dir (expand-file-name (concat (file-name-as-directory dir)
                                   counsel-etags-tags-file-name))))
 
 (defun counsel-etags-locate-tags-file ()
@@ -580,7 +580,7 @@ Return nil if it's not found."
 (defun counsel-etags-tags-file-directory ()
   "Directory of tags file."
   (let* ((f (counsel-etags-locate-tags-file)))
-    (if f (file-name-directory (file-truename f)))))
+    (if f (file-name-directory (expand-file-name f)))))
 
 (defun counsel-etags-locate-project ()
   "Return the root of the project."
@@ -598,11 +598,11 @@ Return nil if it's not found."
 
 (defun counsel-etags-add-tags-file-to-history (tags-file)
   "Add TAGS-FILE to the top of `counsel-etags-tags-file-history'."
-  (let* ((file (file-truename tags-file)))
+  (let* ((file (expand-file-name tags-file)))
     (setq counsel-etags-tags-file-history
           (delq nil (mapcar
                      (lambda (s)
-                       (unless (string= file (file-truename s)) s))
+                       (unless (string= file (expand-file-name s)) s))
                      counsel-etags-tags-file-history)))
     (push tags-file counsel-etags-tags-file-history)))
 
@@ -679,7 +679,7 @@ If it's Emacs etags return nil."
 (defun counsel-etags-universal-ctags-opt ()
   "Generate option for Universal ctags."
   (format "--options=\"%s\""
-          (file-truename counsel-etags-ctags-options-file)))
+          (expand-file-name counsel-etags-ctags-options-file)))
 
 (defun counsel-etags-convert-config (config program)
   "Convert CONFIG of PROGRAM into Universal Ctags format."
@@ -739,7 +739,7 @@ If it's Emacs etags return nil."
   "Specify ignore configuration file (.gitignore, for example) for Ctags."
   (let* (rlt configs filename)
     (dolist (f counsel-etags-ignore-config-files)
-      (when (file-exists-p (setq filename (file-truename f)))
+      (when (file-exists-p (setq filename (expand-file-name f)))
         (push (file-local-name filename) configs)))
     (setq rlt (mapconcat (lambda (c) (format "--exclude=\"@%s\"" c)) configs " "))
     (when counsel-etags-debug
@@ -941,8 +941,8 @@ CURRENT-FILE is used to compare with candidate path."
       ;; Emacs 27 `string-distance' is much faster than Lisp implementation.
       (sort cands
             `(lambda (item1 item2)
-               (let* ((a (counsel-etags--strip-path (file-truename (if ,is-string item1 (cadr item1))) ,strip-count))
-                      (b (counsel-etags--strip-path (file-truename (if ,is-string item2 (cadr item2))) ,strip-count)))
+               (let* ((a (counsel-etags--strip-path (expand-file-name (if ,is-string item1 (cadr item1))) ,strip-count))
+                      (b (counsel-etags--strip-path (expand-file-name (if ,is-string item2 (cadr item2))) ,strip-count)))
                  (< (string-distance a ,ref t)
                     (string-distance b ,ref t))))))
 
@@ -952,8 +952,8 @@ CURRENT-FILE is used to compare with candidate path."
       (let* ((h (make-hash-table :test 'equal)))
         (sort cands
               `(lambda (item1 item2)
-                 (let* ((a (counsel-etags--strip-path (file-truename (if ,is-string item1 (cadr item1))) ,strip-count))
-                        (b (counsel-etags--strip-path (file-truename (if ,is-string item2 (cadr item2))) ,strip-count)))
+                 (let* ((a (counsel-etags--strip-path (expand-file-name (if ,is-string item1 (cadr item1))) ,strip-count))
+                        (b (counsel-etags--strip-path (expand-file-name (if ,is-string item2 (cadr item2))) ,strip-count)))
                    (< (counsel-etags-levenshtein-distance a ,ref ,h)
                       (counsel-etags-levenshtein-distance b ,ref ,h))))))))))
 
@@ -1540,8 +1540,8 @@ The tags updating might not happen."
 
     (when (and dir
                tags-file
-               (string-match-p (file-name-directory (file-truename tags-file))
-                               (file-truename dir)))
+               (string-match-p (file-name-directory (expand-file-name tags-file))
+                               (expand-file-name dir)))
       (cond
        ((or (not counsel-etags-timer)
             (> (- (float-time (current-time)) (float-time counsel-etags-timer))
@@ -1553,7 +1553,7 @@ The tags updating might not happen."
         ;; start updating
         (if counsel-etags-debug (message "counsel-etags-virtual-update-tags actually happened."))
 
-        (let* ((dir (file-name-directory (file-truename (counsel-etags-locate-tags-file)))))
+        (let* ((dir (file-name-directory (expand-file-name (counsel-etags-locate-tags-file)))))
           (if counsel-etags-debug (message "update tags in %s" dir))
           (funcall counsel-etags-update-tags-backend dir)))
 
@@ -1682,7 +1682,7 @@ If SHOW-KEYWORD-P is t, show the keyword in the minibuffer."
   (let* ((text (if default-keyword default-keyword
                   (counsel-etags-read-keyword "Regular expression for grep: ")))
          (keyword (funcall counsel-etags-convert-grep-keyword text))
-         (default-directory (file-truename (or root
+         (default-directory (expand-file-name (or root
                                                (counsel-etags-locate-project)
                                                default-directory)))
          (time (current-time))
@@ -1747,7 +1747,7 @@ If FORCED-TAGS-FILE is nil, the updating process might now happen."
   (let* ((tags-file (or forced-tags-file
                         (counsel-etags-locate-tags-file))))
     (when tags-file
-      (counsel-etags-scan-dir (file-name-directory (file-truename tags-file)))
+      (counsel-etags-scan-dir (file-name-directory (expand-file-name tags-file)))
       (unless counsel-etags-quiet-when-updating-tags
         (message "%s is updated!" tags-file)))))
 
