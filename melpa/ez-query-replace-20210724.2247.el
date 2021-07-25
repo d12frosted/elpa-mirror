@@ -5,8 +5,8 @@
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; Created: 21 August 2013
 ;; Version: 0.5
-;; Package-Version: 20210525.2222
-;; Package-Commit: 3202cf4644ed3b6549284c3816b90bb230970a5b
+;; Package-Version: 20210724.2247
+;; Package-Commit: 2b68472f4007a73908c3b242e83ac5a7587967ff
 ;; Package-Requires: ((dash "1.2.0") (s "1.11.0"))
 
 ;;; Commentary:
@@ -111,18 +111,17 @@ to the symbol at point."
   (let* ((from-string (read-from-minibuffer "Replace what? " (ez-query-replace/dwim-at-point)))
          (to-string (read-from-minibuffer
                      (format "Replace %s with what? " from-string)))
-         (history-entry (list (format "%s -> %s"
-                                      (ez-query-replace/truncate from-string)
-                                      (ez-query-replace/truncate to-string))
+         (description (format "%s -> %s"
+                              (ez-query-replace/truncate from-string)
+                              (ez-query-replace/truncate to-string)))
+         (history-entry (list description
                               from-string to-string)))
 
     (ez-query-replace/backward from-string)
-    (ez-query-replace/remember history-entry from-string to-string)
+    (ez-query-replace/remember description from-string to-string)
 
     (deactivate-mark)
     (perform-replace from-string to-string t nil nil)))
-
-(eval-when-compile (require 'cl)) ; first, second
 
 ;;;###autoload
 (defun ez-query-replace-repeat ()
@@ -130,11 +129,11 @@ to the symbol at point."
   (interactive)
   (unless ez-query-replace/history
     (error "You haven't used `ez-query-replace yet"))
-  (let* ((choices (mapcar 'first ez-query-replace/history))
+  (let* ((choices (mapcar #'-first-item ez-query-replace/history))
          (choice (completing-read "Previous replaces: " choices))
          (from-with-to (cdr (assoc choice ez-query-replace/history)))
-         (from-string (first from-with-to))
-         (to-string (second from-with-to)))
+         (from-string (-first-item from-with-to))
+         (to-string (-second-item from-with-to)))
     (ez-query-replace/backward from-string)
     (ez-query-replace/remember choice from-string to-string)
 

@@ -4,42 +4,42 @@ Source:  https://github.com/dwcoates/pygn-mode.git
 
 Updating /mnt/store/melpa/working/pygn-mode/
 Checking out origin/HEAD
-Checking out 30cce9c134f685d7f2db81aa879e683864a23b66
+Checking out 7298c3cd798853309bece115848e9d0400a7a627
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pygn-mode/
-  to /tmp/pygn-modeEmMm7W/pygn-mode-20210721.1917
+  to /tmp/pygn-mode5oFLoM/pygn-mode-20210724.2207
     pygn-mode.el -> pygn-mode.el
     pygn_server.py -> pygn_server.py
     lib => lib
-Created pygn-mode-20210721.1917.tar containing:
-  pygn-mode-20210721.1917/
-  pygn-mode-20210721.1917/lib/
-  pygn-mode-20210721.1917/lib/python/
-  pygn-mode-20210721.1917/lib/python/site-packages/
-  pygn-mode-20210721.1917/lib/python/site-packages/chess.egg-info/
-  pygn-mode-20210721.1917/lib/python/site-packages/chess.egg-info/LICENSE.txt
-  pygn-mode-20210721.1917/lib/python/site-packages/chess.egg-info/PKG-INFO
-  pygn-mode-20210721.1917/lib/python/site-packages/chess.egg-info/SOURCES.txt
-  pygn-mode-20210721.1917/lib/python/site-packages/chess.egg-info/dependency_links.txt
-  pygn-mode-20210721.1917/lib/python/site-packages/chess.egg-info/not-zip-safe
-  pygn-mode-20210721.1917/lib/python/site-packages/chess.egg-info/top_level.txt
-  pygn-mode-20210721.1917/lib/python/site-packages/chess/
-  pygn-mode-20210721.1917/lib/python/site-packages/chess/__init__.py
-  pygn-mode-20210721.1917/lib/python/site-packages/chess/_interactive.py
-  pygn-mode-20210721.1917/lib/python/site-packages/chess/engine.py
-  pygn-mode-20210721.1917/lib/python/site-packages/chess/gaviota.py
-  pygn-mode-20210721.1917/lib/python/site-packages/chess/pgn.py
-  pygn-mode-20210721.1917/lib/python/site-packages/chess/polyglot.py
-  pygn-mode-20210721.1917/lib/python/site-packages/chess/py.typed
-  pygn-mode-20210721.1917/lib/python/site-packages/chess/svg.py
-  pygn-mode-20210721.1917/lib/python/site-packages/chess/syzygy.py
-  pygn-mode-20210721.1917/lib/python/site-packages/chess/variant.py
-  pygn-mode-20210721.1917/pygn-mode-pkg.el
-  pygn-mode-20210721.1917/pygn-mode.el
-  pygn-mode-20210721.1917/pygn_server.py
-Built pygn-mode in 4.798s, finished at 2021-07-24T18:56:52+0000
+Created pygn-mode-20210724.2207.tar containing:
+  pygn-mode-20210724.2207/
+  pygn-mode-20210724.2207/lib/
+  pygn-mode-20210724.2207/lib/python/
+  pygn-mode-20210724.2207/lib/python/site-packages/
+  pygn-mode-20210724.2207/lib/python/site-packages/chess.egg-info/
+  pygn-mode-20210724.2207/lib/python/site-packages/chess.egg-info/LICENSE.txt
+  pygn-mode-20210724.2207/lib/python/site-packages/chess.egg-info/PKG-INFO
+  pygn-mode-20210724.2207/lib/python/site-packages/chess.egg-info/SOURCES.txt
+  pygn-mode-20210724.2207/lib/python/site-packages/chess.egg-info/dependency_links.txt
+  pygn-mode-20210724.2207/lib/python/site-packages/chess.egg-info/not-zip-safe
+  pygn-mode-20210724.2207/lib/python/site-packages/chess.egg-info/top_level.txt
+  pygn-mode-20210724.2207/lib/python/site-packages/chess/
+  pygn-mode-20210724.2207/lib/python/site-packages/chess/__init__.py
+  pygn-mode-20210724.2207/lib/python/site-packages/chess/_interactive.py
+  pygn-mode-20210724.2207/lib/python/site-packages/chess/engine.py
+  pygn-mode-20210724.2207/lib/python/site-packages/chess/gaviota.py
+  pygn-mode-20210724.2207/lib/python/site-packages/chess/pgn.py
+  pygn-mode-20210724.2207/lib/python/site-packages/chess/polyglot.py
+  pygn-mode-20210724.2207/lib/python/site-packages/chess/py.typed
+  pygn-mode-20210724.2207/lib/python/site-packages/chess/svg.py
+  pygn-mode-20210724.2207/lib/python/site-packages/chess/syzygy.py
+  pygn-mode-20210724.2207/lib/python/site-packages/chess/variant.py
+  pygn-mode-20210724.2207/pygn-mode-pkg.el
+  pygn-mode-20210724.2207/pygn-mode.el
+  pygn-mode-20210724.2207/pygn_server.py
+Built pygn-mode in 4.857s, finished at 2021-07-25T01:46:40+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  489 Jul 24 18:56 packages/pygn-mode-20210721.1917.entry
-692K -rw-r--r-- 1 root root 690K Jul 24 18:56 packages/pygn-mode-20210721.1917.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 18:56 packages/pygn-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jul 24 18:56 packages/pygn-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  489 Jul 25 01:46 packages/pygn-mode-20210724.2207.entry
+692K -rw-r--r-- 1 root root 690K Jul 25 01:46 packages/pygn-mode-20210724.2207.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 25 01:46 packages/pygn-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jul 25 01:46 packages/pygn-mode-readme.txt
