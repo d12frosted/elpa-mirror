@@ -1,5 +1,5 @@
 (org-ref .
-	 [(20210510 1614)
+	 [(20210726 1533)
 	  ((dash
 	    (2 11 0))
 	   (htmlize
@@ -23,7 +23,7 @@
 	   (bibtex-completion
 	    (0)))
 	  "citations, cross-references and bibliographies in org-mode" tar
-	  ((:commit . "8aa2bb45268f660956151547533689d4ec30378d")
+	  ((:commit . "839ca73f3ae451efbf82859dcd17b63375cb8d76")
 	   (:authors
 	    ("John Kitchin" . "jkitchin@andrew.cmu.edu"))
 	   (:maintainer "John Kitchin" . "jkitchin@andrew.cmu.edu")

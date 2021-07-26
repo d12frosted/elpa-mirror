@@ -5,10 +5,10 @@
 ;; Author: Sidharth Arya <sidhartharya10@gmail.com>
 ;; Maintainer: Sidharth Arya <sidhartharya10@gmail.com>
 ;; Created: 28 May 2020
-;; Version: 0.1
-;; Package-Version: 20210629.2319
-;; Package-Commit: 222ed4aab718ebcc2944c6cca87ebc3370d5ac3c
-;; Package-Requires: ((emacs "24.3"))
+;; Version: 0.5
+;; Package-Version: 20210726.1614
+;; Package-Commit: 043907d96efff70dfaea1e721de90bd35970e8bd
+;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: startup lisp tools
 ;; URL: https://github.com/SidharthArya/modular-config.el
 
@@ -37,6 +37,15 @@
 
 ;;; Code:
 
+(require 'cl-seq)
+
+(defgroup modular-config nil
+  "modular-config.el package allows you to create custom configurations from
+.el files contained in a specific folder"
+  :group 'convenience
+  :prefix "modular-config-"
+  :link '(url-link "https://github.com/SidharthArya/modular-config.el"))
+
 (defcustom modular-config-list '((none ()))
   "List of module configs in the format: (module-config (list of modules))
 Use (add-to-list 'modular-config-list '(main (core appearance)))"
@@ -63,7 +72,7 @@ Use (add-to-list 'modular-config-list '(main (core appearance)))"
   :group 'modular-config
   :type 'symbol)
 
-(defcustom modular-config-separate-bookmarks-directory "~/.emacs.d/bookmarks.d"
+(defcustom modular-config-separate-bookmarks-directory (concat user-emacs-directory "/bookmarks.d")
   "If `modular-config-use-separate-bookmarks` is set.
 The directory to place bookmarks in"
   :group 'modular-config
@@ -79,22 +88,20 @@ The directory to place bookmarks in"
         (progn
           (setq command-line-args (delete it command-line-args))
           (setq config t))
-        (if (equal config t)
-          (progn
+        (when (equal config t)
             (setq config it)
-            (setq command-line-args (delete it command-line-args)))))
+            (setq command-line-args (delete it command-line-args))))
       (if (equal it "--modules")
         (progn
           (setq command-line-args (delete it command-line-args))
           (setq modules t))
-        (if (equal modules t)
-          (progn
+        (when (equal modules t)
             (setq modules it)
-            (setq command-line-args (delete it command-line-args))))))
-    (if (equal config nil)
+            (setq command-line-args (delete it command-line-args)))))
+    (when (equal config nil)
       (setq config (symbol-name modular-config-default)))
     (modular-config-process (intern config))
-    (if modules
+    (when modules
         (modular-config-load-modules (modular-config-string-to-list modules)))
     (when modular-config-use-separate-bookmarks
       (unless (file-directory-p modular-config-separate-bookmarks-directory)
@@ -102,16 +109,27 @@ The directory to place bookmarks in"
       (require 'bookmark)
       (setq bookmark-default-file (concat modular-config-separate-bookmarks-directory "/" config)))))
 
-(defun modular-config-process (arg)
+(defun modular-config-process (arg &rest notargs)
   "Processing various modules from the cli.
 ARG is the selected modules config."
   (let ((modules nil))
     (dolist (it modular-config-list)
-      (if (equal (car it) arg)
+      (when (equal (car it) arg)
         (setq modules (car (cdr it)))))
-    (if modules
+    (setq modules (cl-set-difference modules (car notargs)))
+    (message "notargs: %s" modules)
+    (when modules
+      (setq modules (delete 'nil (mapcar #'modular-config-process-inherit-config modules)))
       (modular-config-load-modules modules))))
 
+  (defun modular-config-process-inherit-config(module)
+    "Process inherited configs"
+    (if (listp module)
+        (progn
+          (modular-config-process (car module) (cdr module))
+          nil)
+      module))
+  
 (defun modular-config-string-to-list (module)
   "Convert provided MODULE from string to list."
   (mapcar #'intern (split-string module)))

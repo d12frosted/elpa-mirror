@@ -4,8 +4,8 @@
 
 ;; Author: Giap Tran <txgvnn@gmail.com>
 ;; URL: https://github.com/TxGVNN/github-explorer
-;; Package-Version: 20210402.1246
-;; Package-Commit: 633b7371a6a00660422e195795c4b79f16bf29ae
+;; Package-Version: 20210718.824
+;; Package-Commit: 98d759473ddfdddba0d82ff710aafc9ee6f0490b
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: comm
@@ -92,8 +92,8 @@ From URL `https://github.com/akshaybadola/emacs-util'
                          (and (eq major-mode 'package-menu-mode)
                               (github-explorer-repo-from-url (util/package-try-get-package-url)))
                          (thing-at-point 'symbol))))
-  (setq repo (read-string "Repository: " repo))
-  (url-retrieve (format "https://api.github.com/repos/%s/git/trees/HEAD:?recursive=1" repo)
+  (setq github-explorer-repository (read-string "Repository: " repo))
+  (url-retrieve (format "https://api.github.com/repos/%s/git/trees/HEAD:?recursive=1" github-explorer-repository)
                 (lambda (arg)
                   (cond
                    ((equal :error (car arg))
@@ -108,8 +108,8 @@ From URL `https://github.com/akshaybadola/emacs-util'
                              (path (completing-read "Find-file: " paths)))
                         (if (eq (length path) 0)
                             (github-explorer--tree (format "https://api.github.com/repos/%s/git/trees/%s"
-                                                           repo "HEAD") "/")
-                          (github-explorer--raw repo (format "/%s" path))))))))))
+                                                           github-explorer-repository "HEAD") "/")
+                          (github-explorer--raw github-explorer-repository (format "/%s" path))))))))))
 
 (defun github-explorer-at-point()
   "Go to path in buffer GitHub tree."

@@ -7,7 +7,7 @@
 ;; Created: 27 June 2014
 ;; Version: 0.1
 ;; Package-Version: 20210615.1208
-;; Package-Commit: cdc6969e045e8308b2f72a4130fc924a525f9f1f
+;; Package-Commit: ba8ec63cf40b8999238c4639d111ca3bdb1e34cf
 ;; Keywords: ocaml languages
 ;; Package-Requires: ((emacs "25.1") (merlin "3") (iedit "0.9"))
 ;; URL: http://github.com/ocaml/merlin
