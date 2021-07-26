@@ -6,8 +6,8 @@
 ;; Maintainer: Joe Bloggs <vapniks@yahoo.com>
 ;; Created: 2003-03-17 18:50:12 Harley Gorrell
 ;; URL: https://github.com/vapniks/syslog-mode
-;; Package-Version: 20210722.1112
-;; Package-Commit: e18d74d8a12b943a3a64eb8c693981e55aea8e9a
+;; Package-Version: 20210726.117
+;; Package-Commit: d99a8adeec4e850baeda920a4a3b2917e3d59d42
 ;; Keywords: unix
 ;; Compatibility: GNU Emacs 24.3.1
 ;; Package-Requires:  ((hide-lines "20130623") (ov "20150311"))
@@ -1517,6 +1517,7 @@ If this is none, then create new notes file, and add it to `syslog-notes-files'.
 	(insert ";; Word matches have higher precedence than line matches, but lower precedence than combined word & line matches.")
 	(insert ";; After editing save & kill this buffer, and then in the syslog-mode buffer do: M-x syslog-load-notes\n")
 	(insert ";; To always use this file add an entry to the `syslog-notes-files' user option.\n")
+	(insert ";; See also `syslog-text-notes-from-manpages' and `syslog-function-notes-from-manpages'.\n")
 	(insert "(setq-local\n syslog-notes\n '((\"EXAMPLE\" \"^.*stuff.*\" \"An example note. Delete this entry\")))"))
       (add-to-list 'syslog-notes-files (cons (regexp-opt (list bfn)) file)))))
 
@@ -1628,7 +1629,7 @@ where:
  PAGE   is a manpage name.
  REGEX  is a regexp matching text that precedes the start of each region of text 
         to be extracted (apart from the initial whitespace). If REGEX contains
-        a non-shy match group, the match to the group will be used as to returned
+        a non-shy match group, the match to the group will be used as the returned
         WORD, otherwise the entire match with leading & trailing whitespace will
         be used.
  INDENT is a number indicating the level of indentation of that text, and also 

@@ -1,12 +1,12 @@
-Main functions are three
+There are three main functions:
 
-  1. For Ruby -> string-inflection-ruby-style-cycle  (foo_bar => FOO_BAR => FooBar => foo_bar)
-  2. For Python -> string-inflection-python-style-cycle  (foo_bar => FOO_BAR => FooBar => foo_bar)
-  3. For Java -> string-inflection-java-style-cycle  (fooBar  => FOO_BAR => FooBar => fooBar)
-  4. For All  -> string-inflection-all-cycle         (foo_bar => FOO_BAR => FooBar => fooBar => foo-bar => Foo_Bar => foo_bar)
+  1. For Ruby   -> string-inflection-ruby-style-cycle   (foo_bar => FOO_BAR => FooBar => foo_bar)
+  2. For Python -> string-inflection-python-style-cycle (foo_bar => FOO_BAR => FooBar => foo_bar)
+  3. For Java   -> string-inflection-java-style-cycle   (fooBar  => FOO_BAR => FooBar => fooBar)
+  4. For All    -> string-inflection-all-cycle          (foo_bar => FOO_BAR => FooBar => fooBar => foo-bar => Foo_Bar => foo_bar)
 
 
-Setting Example 1
+Example 1:
 
   (require 'string-inflection)
   (global-unset-key (kbd "C-q"))
@@ -31,7 +31,7 @@ Setting Example 1
       (string-inflection-ruby-style-cycle))))
 
 
-Setting Example 2
+Example 2:
 
   (require 'string-inflection)
 
@@ -53,6 +53,5 @@ Setting Example 2
             '(lambda ()
                (local-set-key (kbd "C-c C-u") 'string-inflection-java-style-cycle)))
 
-You may also consider setting `string-inflection-skip-backward-when-done' to
-`t' if you don't like `string-inflect' moving your point to the end of the
-word
+You can also set `string-inflection-skip-backward-when-done' to `t' if
+you don't like `string-inflect' moving your point to the end of the word.

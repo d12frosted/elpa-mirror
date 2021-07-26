@@ -3,8 +3,8 @@
 ;; Copyright (C) 2012 ~ 2015 Thierry Volpiatto <thierry.volpiatto@gmail.com>
 
 ;; Package-Requires: ((helm "1.7.8"))
-;; Package-Version: 20210324.1515
-;; Package-Commit: 48696448e52d266f5b2cb5ee1390071dab4d16e8
+;; Package-Version: 20210726.400
+;; Package-Commit: 6aa8f0ba61e8c5a981abd0bfe74172305f0d1081
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -32,7 +32,7 @@
 (defvaralias 'helm-c-source-ls-git-status 'helm-source-ls-git-status)
 (make-obsolete-variable 'helm-c-source-ls-git-status 'helm-source-ls-git-status "1.5.1")
 
-(defvar inhibit-magit-refresh)
+(defvar magit-inhibit-refresh)
 (declare-function magit-stage-file "ext:magit-apply")
 (declare-function magit-unstage-file "ext:magit-apply")
 (declare-function magit-commit "ext:magit-commit")
@@ -609,7 +609,7 @@ See docstring of `helm-ls-git-ls-switches'.
   (require 'magit-commit nil t)
   (let ((default-directory (file-name-directory candidate)))
     (if (fboundp 'magit-commit-extend)
-        (let ((inhibit-magit-refresh t))
+        (let ((magit-inhibit-refresh t))
           (magit-commit-extend))
       (process-file "git" nil nil nil "commit" "--amend" "--no-edit"))))
 
@@ -617,7 +617,7 @@ See docstring of `helm-ls-git-ls-switches'.
   (require 'magit-commit nil t)
   (let ((default-directory (file-name-directory candidate)))
     (if (fboundp 'magit-commit-amend)
-        (let ((inhibit-magit-refresh t))
+        (let ((magit-inhibit-refresh t))
           (magit-commit-amend))
       (process-file "git" nil nil nil "commit" "--amend"))))
 
@@ -626,7 +626,7 @@ See docstring of `helm-ls-git-ls-switches'.
   (require 'magit-commit nil t)
   (let ((default-directory (file-name-directory candidate)))
     (if (fboundp 'magit-commit)
-        (let ((inhibit-magit-refresh t))
+        (let ((magit-inhibit-refresh t))
           (magit-commit))
       (helm-ls-git-commit-files))))
 

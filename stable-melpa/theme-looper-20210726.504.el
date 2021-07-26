@@ -4,8 +4,8 @@
 
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Version: 2.7
-;; Package-Version: 20210714.1807
-;; Package-Commit: bb711c4bb992d7a129dd434a41a356cdaf8c387d
+;; Package-Version: 20210726.504
+;; Package-Commit: 0744da9e589017acd6a849cc0b5d3c422eb99465
 ;; Keywords: convenience, color-themes
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2014/03/22
@@ -44,7 +44,8 @@
 ;;
 ;;     (global-set-key (kbd "C-\\") 'theme-looper-enable-random-theme)
 ;;
-;; Or you can choose from a list of themes using ivy's completion interface
+;; Or you can choose from a list of themes through a completion interface
+;; which could be either ivy or ido
 ;;
 ;;     (global-set-key (kbd "C-|") 'theme-looper-select-theme)
 ;;
@@ -285,7 +286,7 @@ Pass `*default*' to select Emacs defaults."
   (theme-looper-enable-theme (theme-looper--get-current-theme)))
 
 (defun theme-looper--start-theme-selector (themes-collection)
-  "Lets user select a theme from a list of specified themes rendered using ivy API."
+  "Lets user select a theme from a list of specified themes rendered using a completion interface."
   (cl-flet* ((preview-theme ()
                             (let* ((current-selection (ivy-state-current ivy-last))
                                    (th (intern current-selection)))
@@ -305,17 +306,19 @@ Pass `*default*' to select Emacs defaults."
                     :unwind (lambda ()
                               (when theme-looper--initial-theme
                                 (theme-looper-enable-theme theme-looper--initial-theme)))))
-      (message "theme-looper: package 'ivy' is not installed!"))))
+      (theme-looper-enable-theme (intern (ido-completing-read "theme-looper: "
+                                                              (mapcar #'symbol-name
+                                                                      themes-collection)))))))
 
 ;;;###autoload
 (defun theme-looper-select-theme ()
-  "Lets user select a theme from a list of favorite ones rendered using ivy API."
+  "Lets user select a theme from a list of favorite ones rendered using a completion interface."
   (interactive)
   (theme-looper--start-theme-selector (theme-looper--get-looped-themes)))
 
 ;;;###autoload
 (defun theme-looper-select-theme-from-all ()
-  "Lets user select a theme from a list of all available themes rendered using ivy API."
+  "Lets user select a theme from a list of all available themes rendered a completion interface."
   (interactive)
   (theme-looper--start-theme-selector (theme-looper-available-themes)))
 
