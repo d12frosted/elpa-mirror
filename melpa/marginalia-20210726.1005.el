@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.7
-;; Package-Version: 20210725.1959
-;; Package-Commit: c8c2544f9c735f564366e9dcdcce612d1b8f4a10
+;; Package-Version: 20210726.1005
+;; Package-Commit: 34c8912d04b73179b1a5a29e4e87c6413cf1107a
 ;; Package-Requires: ((emacs "26.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -259,6 +259,14 @@ determine it."
 
 ;;;; Marginalia mode
 
+(defvar-local marginalia--cache nil
+  "The cache, pair of list and hashtable.")
+
+(defvar marginalia--cache-size 100
+  "Size of the cache, set to 0 to disable the cache.
+Disabling the cache is useful on non-incremental UIs like default completion or
+for performance profiling of the annotators.")
+
 (defvar marginalia--separator "    "
   "Field separator.")
 
@@ -492,16 +500,39 @@ keybinding since CAND includes it."
     (marginalia--fields
      ((marginalia--symbol-class sym) :face 'marginalia-type)
      ((cond
-       ((not (boundp sym)) "<unbound>")
-       ((seq-find (lambda (r) (string-match-p r cand)) marginalia-censor-variables) "*****")
-       (t (let ((val (symbol-value sym))
-                (print-escape-newlines t)
-                (print-escape-control-characters t)
-                (print-escape-multibyte t)
-                (print-level 10)
-                (print-length marginalia-truncate-width))
-            (prin1-to-string val))))
-      :truncate (/ marginalia-truncate-width 2) :face 'marginalia-variable)
+       ((not (boundp sym))
+        (propertize "<unbound>" 'face 'marginalia-variable))
+       ((and marginalia-censor-variables
+             (seq-find (lambda (r) (string-match-p r cand)) marginalia-censor-variables))
+        "*****")
+       (t (pcase (symbol-value sym)
+            ('nil (propertize "nil" 'face 'font-lock-comment-face))
+            ('t (propertize "t" 'face 'font-lock-builtin-face))
+            ((pred keymapp) (propertize "<keymap>" 'face 'marginalia-variable))
+            ((pred hash-table-p) (propertize "<hash-table>" 'face 'marginalia-variable))
+            ((pred functionp) (propertize (symbol-name sym) 'face 'font-lock-function-name-face))
+            ((pred symbolp) (propertize (symbol-name sym) 'face 'font-lock-type-face))
+            ((and (pred numberp) val)
+             (propertize (number-to-string val) 'face 'font-lock-variable-name-face))
+            (val (let ((print-escape-newlines t)
+                       (print-escape-control-characters t)
+                       (print-escape-multibyte t)
+                       (print-level 10)
+                       (print-length marginalia-truncate-width))
+                   (propertize
+                    (prin1-to-string
+                     (if (stringp val)
+                         ;; Get rid of string properties to save some of the precious space
+                         (substring-no-properties
+                          val 0
+                          (min (length val) marginalia-truncate-width))
+                       val))
+                    'face
+                    (cond
+                     ((listp val) 'font-lock-constant-face)
+                     ((stringp val) 'font-lock-string-face)
+                     (t 'marginalia-variable))))))))
+      :truncate (/ marginalia-truncate-width 2))
      ((documentation-property sym 'variable-documentation)
       :truncate marginalia-truncate-width :face 'marginalia-documentation))))
 
@@ -761,9 +792,11 @@ looking for a regexp that matches the prompt."
   "Setup annotator context with completion METADATA around BODY."
   (declare (indent 1))
   (let ((w (make-symbol "w"))
+        (c (make-symbol "c"))
         (o (make-symbol "o")))
     ;; Take the window width of the current window (minibuffer window!)
     `(let ((marginalia--metadata ,metadata)
+           (,c marginalia--cache)
            (,w (window-width))
            ;; Compute marginalia-align-offset. If the right-fringe-width is
            ;; zero, use an additional offset of 1 by default! See
@@ -775,12 +808,39 @@ looking for a regexp that matches the prompt."
        ;; Otherwise it would probably suffice to only change the current buffer.
        ;; We need the `selected-window' fallback for Embark Occur.
        (with-selected-window (or (minibuffer-selected-window) (selected-window))
-         (let ((marginalia-truncate-width (min (/ ,w 2) marginalia-truncate-width))
+         (let ((marginalia--cache ,c) ;; Take the cache from the minibuffer
+               (marginalia-truncate-width (min (/ ,w 2) marginalia-truncate-width))
                (marginalia-align-offset (or marginalia-align-offset ,o))
                (marginalia--separator (if (>= ,w marginalia-separator-threshold) "    " " "))
                (marginalia--margin (when (>= ,w (+ marginalia-margin-min marginalia-margin-threshold))
                                      (make-string (- ,w marginalia-margin-threshold) 32))))
            ,@body)))))
+
+(defun marginalia--cache-reset ()
+  "Reset the cache."
+  (when marginalia--cache
+    (setq marginalia--cache (and (> marginalia--cache-size 0)
+                                 (cons nil (make-hash-table :test #'equal
+                                                            :size marginalia--cache-size))))))
+
+(defun marginalia--cached (fun key)
+  "Cached application of function FUN with KEY.
+
+The cache keeps around the last `marginalia--cache-size' computed annotations.
+The cache is mainly useful when scrolling in completion UIs like Vertico or
+Selectrum."
+  (if marginalia--cache
+      (let ((ht (cdr marginalia--cache)))
+        (or (gethash key ht)
+            (let ((val (funcall fun key)))
+              (setcar marginalia--cache (cons key (car marginalia--cache)))
+              (puthash key val ht)
+              (when (>= (hash-table-count ht) marginalia--cache-size)
+                (let ((end (last (car marginalia--cache) 2)))
+                  (remhash (cadr end) ht)
+                  (setcdr end nil)))
+              val)))
+    (funcall fun key)))
 
 (defun marginalia--completion-metadata-get (metadata prop)
   "Meant as :before-until advice for `completion-metadata-get'.
@@ -793,7 +853,7 @@ PROP is the property which is looked up."
                  (annotate (marginalia--annotator cat)))
        (lambda (cand)
          (marginalia--context metadata
-           (funcall annotate cand)))))
+           (marginalia--cached annotate cand)))))
     ('affixation-function
      ;; We do want the advice triggered for `completion-metadata-get'.
      ;; Return wrapper around `annotation-function'.
@@ -801,7 +861,7 @@ PROP is the property which is looked up."
                  (annotate (marginalia--annotator cat)))
        (lambda (cands)
          (marginalia--context metadata
-           (mapcar (lambda (x) (list x "" (or (funcall annotate x) ""))) cands)))))
+           (mapcar (lambda (x) (list x "" (or (marginalia--cached annotate x) ""))) cands)))))
     ('category
      ;; Find the completion category by trying each of our classifiers.
      ;; Store the metadata for `marginalia-classify-original-category'.
@@ -811,14 +871,18 @@ PROP is the property which is looked up."
 (defun marginalia--minibuffer-setup ()
   "Setup minibuffer for `marginalia-mode'.
 Remember `this-command' for `marginalia-classify-by-command-name'."
-  (setq marginalia--this-command this-command))
+  (setq marginalia--cache t marginalia--this-command this-command)
+  (marginalia--cache-reset))
 
 (defun marginalia--base-position (completions)
   "Record the base position of COMPLETIONS."
   ;; NOTE: As a small optimization track the base position only for file completions,
   ;; since `marginalia--full-candidate' is only used for files as of now.
   (when minibuffer-completing-file-name
-    (setq marginalia--base-position (or (cdr (last completions)) 0)))
+    (let ((base (or (cdr (last completions)) 0)))
+      (unless (= marginalia--base-position base)
+        (marginalia--cache-reset)
+        (setq marginalia--base-position base))))
   completions)
 
 ;;;###autoload
@@ -856,6 +920,7 @@ Remember `this-command' for `marginalia-classify-by-command-name'."
           (setq cat (assq cat marginalia-annotator-registry))
           (unless cat
             (user-error "Marginalia: No annotators found"))
+          (marginalia--cache-reset)
           (setcdr cat (append (cddr cat) (list (cadr cat))))
           ;; When the builtin annotator is selected and no builtin function is available, skip to
           ;; the next annotator. Note that we cannot use `completion-metadata-get' to access the
