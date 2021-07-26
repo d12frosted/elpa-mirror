@@ -4,8 +4,8 @@
 
 ;; Author: Nick Lanham
 ;; URL: https://github.com/mgyucht/jsonnet-mode
-;; Package-Commit: 404ebe3ca964fde99b7a6d89d2840ce53376d80a
-;; Package-Version: 20210627.1451
+;; Package-Commit: 63c0f44fe7b5a333173235db7102ef8c2ae0b006
+;; Package-Version: 20210726.1251
 ;; Package-X-Original-Version: 0.0.1
 ;; Keywords: languages
 ;; Package-Requires: ((emacs "24") (dash "2.17.0"))
@@ -650,15 +650,12 @@ TYPE is an opening paren-like character."
                          (lambda ()
                            (member (file-name-directory (file-truename (buffer-file-name)))
                                    directories))))
-    (when-let ((output-window (get-buffer-window output-buffer-name t)))
-      (quit-window nil output-window)
-      (redisplay))
     (let ((cmd jsonnet-command)
           (args (append jsonnet-command-options
                         (cl-loop for dir in search-dirs
-                                collect "-J"
-                                collect dir)
-                       (list file-to-eval))))
+                                 collect "-J"
+                                 collect dir)
+                        (list file-to-eval))))
       (with-current-buffer (get-buffer-create output-buffer-name)
         (setq buffer-read-only nil)
         (erase-buffer)
@@ -669,11 +666,7 @@ TYPE is an opening paren-like character."
               (view-mode))
           (compilation-mode nil))
         (goto-char (point-min))
-        (display-buffer (current-buffer)
-                        '((display-buffer-pop-up-window
-                           display-buffer-reuse-window
-                           display-buffer-at-bottom
-                           display-buffer-pop-up-frame)))))))
+        (display-buffer (current-buffer) '(nil (inhibit-same-window . t)))))))
 
 (define-key jsonnet-mode-map (kbd "C-c C-c") 'jsonnet-eval-buffer)
 
