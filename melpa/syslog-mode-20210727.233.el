@@ -6,8 +6,8 @@
 ;; Maintainer: Joe Bloggs <vapniks@yahoo.com>
 ;; Created: 2003-03-17 18:50:12 Harley Gorrell
 ;; URL: https://github.com/vapniks/syslog-mode
-;; Package-Version: 20210726.2044
-;; Package-Commit: 99f19318a74edfe0e6fc912c97ddf56856c8720a
+;; Package-Version: 20210727.233
+;; Package-Commit: 26051bd3432e979c7f4f9f48459e2716fb2e4869
 ;; Keywords: unix
 ;; Compatibility: GNU Emacs 24.3.1
 ;; Package-Requires:  ((hide-lines "20130623") (ov "20150311"))
@@ -1440,12 +1440,12 @@ The note is chosen from the current value of `syslog-notes'."
 				     (lambda (e) (string-match (car e) word))
 				     syslog-notes)))
 	       (nowrd (mapcar 'cdr (cl-remove-if 'car syslog-notes)))
+	       (nowrdrx (cl-remove-if-not 'car nowrd))	       
 	       (wrdrx (cl-remove-if-not 'car haswrd))
 	       (wrdnorx (cl-remove-if 'car haswrd))
-	       (rxnowrd (cl-remove-if-not 'car nowrd))
 	       (note (cadr (or (findmatch wrdrx)
 			       (car wrdnorx)
-			       (findmatch rxnowrd)))))
+			       (findmatch nowrdrx)))))
 	  (message (cond ((null note)
 			  (concat
 			   "No notes found for " word
@@ -1616,14 +1616,15 @@ Searching is done case sensitively."
 		       t)))
       matches)))
 
-;; simple-call-tree-info: TODO  fix to work with termios manpage
+;; simple-call-tree-info: CHECK
 (cl-defun syslog-text-notes-from-manpages (manpages &key
 						    (regex "\\(\\<[A-Z_]+\\>\\)")
+						    (transformer nil)
 						    (indent 7)
 						    (face 'Man-overstrike))
   "Extract notes from manpages, and inserts elisp code to update `syslog-notes'.
 MANPAGES should be a list, each element of which has the form:
- (PAGE REGEX INDENT EXCEPTIONS)
+ (PAGE REGEX INDENT TRANSFORMER EXCEPTIONS)
 where: 
  PAGE   is a manpage name.
  REGEX  is a regexp matching text that precedes the start of each region of text 
@@ -1634,7 +1635,14 @@ where:
  INDENT is a number indicating the level of indentation of that text, and also 
         the maximum level of indentation of text immediately following the end 
         of the region.
- EXCEPTIONS is a list of words whose descriptions will be omitted from the results. 
+ TRANSFORMER is a function for transforming the returned WORD before inserting it
+        into `syslog-notes'. Use this if the words matched in the manpage differ
+        from the corresponding words in the syslog buffer. 
+        In `syslog-function-notes-from-manpages' this should be a cons cell containing
+        a transformer function (the car) and an untransformer function (the cdr).
+        Note: trailing whitespace is removed before TRANSFORMER is applied.
+ EXCEPTIONS is a list of words (after transformation) whose descriptions will be 
+        omitted from the results. 
 
 The only mandatory entry of the previously mentioned list is PAGE. The default values 
 for REGEX & INDENT are obtained from the keyword arguments of the same name.
@@ -1646,50 +1654,71 @@ The inserted code, when evaluated, will nconc a list of (WORD nil NOTE) triples 
 the current value of `syslog-notes'. You may need to make some alterations before
 evaluating it."
   (insert "\n(setq-local\n syslog-notes\n (nconc\n syslog-notes\n '(")
-  (cl-loop for (page rx1 ind exceptions) in manpages ;;TODO: exceptions, indentation
+  (cl-loop for (page rx1 ind trans exceptions) in manpages
 	   for indstr = (number-to-string (or ind indent))
 	   for rxA = (concat "^\\s-\\{" indstr "\\}" (or rx1 regex))
 	   for rxB = (concat "^\\s-\\{," indstr "\\}\\S-")
 	   for regions = (syslog-extract-manpage-regions page rxA rxB face)
 	   do (dolist (region regions)
-		(let ((word (replace-regexp-in-string "^\\s-*\\|\\s-*$" ""
-						      (car region))))
+		(let ((word (funcall (cond
+				      ((null trans) (or transformer 'identity))
+				      ((functionp trans) trans)
+				      ((consp trans) (car trans))
+				      (t (error "Invalid transformer arg")))
+				     (replace-regexp-in-string "^\\s-*\\|\\s-*$" ""
+							       (car region)))))
 		  (unless (member word exceptions)
 		    (insert (format "(%S nil %S)\n" word (cdr region))))))
 	   finally (insert ")))")))
 
 ;; simple-call-tree-info: DONE  
-(defmacro syslog-create-manpage-notes-function (page indent face)
+(defmacro syslog-create-manpage-notes-function (page indent face &optional untransformer)
   "Create a function for viewing notes from a specific manpage.
 PAGE, INDENT & FACE are arguments for `syslog-show-note-from-manpage'.
-The function will have the form: syslog-show-PAGE-note."
+The function will have the form: syslog-show-PAGE-note.
+The UNTRANSFORMER arg can be a function to transform the word arg of the created
+function before passing it to `syslog-show-note-from-manpage'. Use this arg when
+the word in the syslog buffer differs from the corresponding word in the manpage."
   `(defun ,(intern (format "syslog-show-%s-note"
 			   (replace-regexp-in-string "\\Sw" "_" page)))
        (word)
      (syslog-show-note-from-manpage ,(Man-translate-references page)
-				    word ,indent ,face)))
+				    (funcall ',(or untransformer 'identity) word)
+				    ,indent ,face)))
 
 ;; simple-call-tree-info: DONE
 (cl-defun syslog-function-notes-from-manpages (manpages &key
 							(regex "\\(\\<[A-Z_]+\\>\\)")
+							(transformers nil)
 							(indent 7)
 							(face 'Man-overstrike))
-  "This is similar to `syslog-text-notes-from-manpages' but adds functions instead of text.
+  "Similar to `syslog-text-notes-from-manpages' but adds functions instead of text.
 The inserted code will add (WORD nil FUNC) triples to `syslog-notes', where
-FUNC is a function that is called by `syslog-show-note' to extract and display
-the appropriate note from a manpage.
-This has the advantage of creating a shorter `syslog-notes' definition, but the 
-disadvantage of making `syslog-show-note' a bit slower and creating manpage 
-buffers when it's used. There may also be some definitions that cannot be handled
-properly using this method (if the word to extract is a subword of another)."
-  (cl-loop for (page rx1 ind exceptions) in manpages
+WORD is a word in a syslog buffer whose description is required, and FUNC is a function 
+that is called by `syslog-show-note' to extract description from a manpage and display it.
+
+If the words in the syslog buffer differ from the corresponding words in the manpage, then
+a pair of transformer functions need to be provided; one for transforming words in the 
+manpage buffer to corresponding words in the syslog buffer, and one for the opposite direction.
+This pair of functions should be the car & cdr of a cons cell which can be supplied in
+either the MANPAGES arg (see `syslog-text-notes-from-manpages') or the :TRANSFORMERS 
+keyword arg.
+
+The advantage of using this function rather than `syslog-text-notes-from-manpages' is that
+it results in a shorter `syslog-notes' definition, and the manpages do not need to be
+loaded until the notes are first displayed with `syslog-show-note'. The disadvantage is
+that `syslog-show-note' will slower (since it has to extract the note each time)."
+  (cl-loop for (page rx1 ind trans exceptions) in manpages
 	   for indstr = (number-to-string (or ind indent))
 	   for rxA = (concat "^\\s-\\{" indstr "\\}" (or rx1 regex))
-	   for words = (mapcar (lambda (m) (replace-regexp-in-string "^\\s-+\\|\\s-+$" "" m))
+	   for words = (mapcar (lambda (m)
+				 (funcall
+				  (or (car (or trans transformers)) 'identity)
+				  (replace-regexp-in-string "^\\s-+\\|\\s-+$" "" m)))
 			       (syslog-extract-matches-from-manpage page rxA face))
-	   do (insert (format "\n(syslog-create-manpage-notes-function %S %s '%S)\n"
-			      page indstr face))
-	   (insert (format "(dolist (word '%S)\n" words))
+	   do (insert (format "\n(syslog-create-manpage-notes-function %S %s '%S %S)\n"
+			      page indstr face (cdr (or trans transformers))))
+	   (insert (format "(dolist (word '%S)\n" words));;TODO
 	   (insert (format "  (push (list word nil 'syslog-show-%s-note) syslog-notes))\n"
 	   		   (replace-regexp-in-string "\\Sw" "_" page)))))
 

@@ -2,8 +2,8 @@
 
 ;; Author: Fox Kiester <noct@posteo.net>
 ;; URL: https://github.com/noctuid/link-hint.el
-;; Package-Version: 20210723.1633
-;; Package-Commit: 47bd0de4d624ecbadc16c114f79b7ad37d267e69
+;; Package-Version: 20210727.130
+;; Package-Commit: 47cb5fd37e72793ac61eee2d3326bd6a8780bd57
 ;; Keywords: convenience url avy link links hyperlink
 ;; Package-Requires: ((avy "0.4.0") (emacs "24.4"))
 ;; Version: 0.1
@@ -39,7 +39,6 @@
 ;;; Code:
 (require 'cl-lib)
 (require 'avy)
-(require 'url-util)
 (require 'thingatpt)
 (require 'browse-url)
 (require 'goto-addr)
@@ -86,7 +85,6 @@
     link-hint-text-url
     link-hint-file-link)
   "Link types to check for."
-  :group 'link-hint
   :type '(repeat :tag "Types"
                  (choice
                   (const :tag "Button" link-hint-button)
@@ -126,7 +124,6 @@
     :open "Opened"
     :browse-url "Browsed")
   "Plist of action to description message pairs."
-  :group 'link-hint
   :type '(plist :options ((:copy (string :tag "Copy" :value "Copied"))
                           (:open (string :tag "Open" :value "Opened"))
                           (:browse-url (string :tag "Browse Url" :value "Browsed")))
@@ -135,7 +132,6 @@
 
 (defcustom link-hint-message #'message
   "The funtion to use to message information or nil."
-  :group 'link-hint
   :type '(choice
           (const :tag "Don't message" nil)
           (function-item :tag "Message" message)
@@ -148,20 +144,17 @@ Defaults to `goto-address-url-regxp'. Note that this is used for text urls in
 modes that don't have some mechanism for supporting urls. This won't affect
 link-hint's behavior in `org-mode' or modes that use shr.el for urls, for
 example."
-  :group 'link-hint
   :type 'regexp)
 
 (defcustom link-hint-maybe-file-regexp
   (rx (or bol blank) (zero-or-one (or "~" (seq (char alpha) ":"))) "/" (1+ not-newline))
   "Regexp used to determine what constitutes a potential file link."
-  :group 'link-hint
   :type 'regexp)
 
 (defcustom link-hint-delete-trailing-paren t
   "Whether to delete a ) at the end of a url.
 This is a workaround for Emacs libraries including unwanted parens in urls.
 See issue #15 for more information."
-  :group 'link-hint
   :type 'boolean)
 
 (defcustom link-hint-restore t
@@ -170,7 +163,6 @@ Note that the point will never be restored if the action intentionally moves the
 point within the link buffer (e.g. opening a local org heading link). Similarly,
 the window will never be restored if the action intentionally opens/selects a
 new window (e.g. opening a url in `eww')."
-  :group 'link-hint
   :type 'boolean)
 
 ;; ** Avy Settings
@@ -330,12 +322,7 @@ Only search the range between just after the point and BOUND."
 
 (defun link-hint--text-url-at-point-p ()
   "Return the text url at the point or nil."
-  ;; using both thingatpt and url-util because:
-  ;; - thing-at-point won't detect e.g. www.google.com (https needed)
-  ;; - thing-at-point can correctly handle a url surrounded by parens
-  ;; - url-util won't detect a url that has an open paren before it
-  (let ((url (or (thing-at-point 'url)
-                 (url-get-url-at-point))))
+  (let ((url (thing-at-point-url-at-point t)))
     (and url
          (string-match link-hint-url-regexp url)
          (match-string 0 url))))
@@ -911,7 +898,7 @@ Only search the range between just after the point and BOUND."
   :copy #'kill-new)
 
 ;; ** Deadgrep matches
-(declare-function deadgrep-visit-resul "ext:deadgrep")
+(declare-function deadgrep-visit-result "ext:deadgrep")
 (defun link-hint--next-deadgrep-link (&optional bound)
   "Find the next deadgrep link.
 Only search the range between just after the point and BOUND."

@@ -1,16 +1,16 @@
-;;; theme-looper.el --- Loop thru the available color-themes
+;;; theme-looper.el --- Loop through the available color-themes
 
 ;; This file is not part of Emacs
 
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Version: 2.7
-;; Package-Version: 20210726.504
-;; Package-Commit: 0744da9e589017acd6a849cc0b5d3c422eb99465
+;; Package-Version: 20210727.249
+;; Package-Commit: 32ca76dfa8100a2069ca735e28e19ae87c74f956
 ;; Keywords: convenience, color-themes
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2014/03/22
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
-;; Description: Loop thru the available color-themes with a key-binding
+;; Description: Loop through the available color-themes
 ;; URL: http://ismail.teamfluxion.com
 ;; Compatibility: Emacs24
 
@@ -35,7 +35,7 @@
 ;;
 ;;     (require 'theme-looper)
 ;;
-;; And set a key-bindings for cycling thru themes
+;; And assign a set of key-bindings for cycling through themes
 ;;
 ;;     (global-set-key (kbd "C-}") 'theme-looper-enable-next-theme)
 ;;     (global-set-key (kbd "C-{") 'theme-looper-previous-next-theme)
@@ -128,7 +128,7 @@
 
 ;;;###autoload
 (defun theme-looper-set-favorite-themes-regexp (regexp)
-  "Sets the list of color-themes to cycle thru, matching a regular expression."
+  "Sets the list of color-themes to cycle through, matching a regular expression."
   (setq theme-looper--favorite-themes
         (cl-remove-if-not (lambda (theme)
                             (string-match-p regexp
