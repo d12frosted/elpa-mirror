@@ -8,8 +8,8 @@
 ;;; Author: Philippe Ivaldi for OVYA
 ;; Source: Some pieces of code are copied from go-mode.el https://github.com/dominikh/go-mode.el
 ;; Version: 1.0Beta1
-;; Package-Version: 20201126.1538
-;; Package-Commit: c5b5d8a4986b31bade5e2a57131469bf90630db8
+;; Package-Version: 20210727.1505
+;; Package-Commit: 9e25dfbbf22fa3d2755a36d48bd4d6d1bbed5c5b
 ;; Keywords: languages php
 ;; Package-Requires: ((cl-lib "0.5"))
 ;; URL: https://github.com/OVYA/php-cs-fixer
@@ -20,7 +20,7 @@
 
 ;;; Code:
 
-(require 'cl-lib)
+(require 'cl)
 
 ;;;###autoload
 (defgroup php-cs-fixer nil
@@ -164,7 +164,7 @@ for the next calls."
       (setq php-cs-fixer-is-command-ok-var 0)
 
       (if (executable-find "php-cs-fixer")
-          (if (string-match ".+ 2.[0-9]+.*"
+          (if (string-match ".+ [2-3].[0-9]+.*"
                             (shell-command-to-string
                              (concat php-cs-fixer-command " --version")))
               (progn (setq php-cs-fixer-is-command-ok-var 1) t)
@@ -219,7 +219,8 @@ for the next calls."
 
       (php-cs-fixer--kill-error-buffer errbuf)
       (kill-buffer patchbuf)
-      (delete-file tmpfile))))
+      (delete-file tmpfile)
+      )))
 
 ;;;###autoload
 (defun php-cs-fixer-before-save ()

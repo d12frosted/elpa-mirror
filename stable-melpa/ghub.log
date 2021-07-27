@@ -4,10 +4,10 @@ Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
 Checking out origin/HEAD
-Checking out 865424d4faf66048bfb3752856ac0cf68e1c6efe
+Checking out 00a77b79c28e22db1b151c3f7857073ccbeff726
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghubCeG7aN/ghub-20210619.1405
+  to /tmp/ghubZuxxSv/ghub-20210727.1414
     buck.el -> buck.el
     ghub-graphql.el -> ghub-graphql.el
     ghub-pkg.el -> ghub-pkg.el
@@ -17,22 +17,24 @@ Copying files (->) and directories (=>)
     gsexp.el -> gsexp.el
     gtea.el -> gtea.el
     ghub.texi -> ghub.texi
-Created /tmp/ghubCeG7aN/ghub-20210619.1405/ghub.info
-Created ghub-20210619.1405.tar containing:
-  ghub-20210619.1405/
-  ghub-20210619.1405/buck.el
-  ghub-20210619.1405/dir
-  ghub-20210619.1405/ghub-graphql.el
-  ghub-20210619.1405/ghub-pkg.el
-  ghub-20210619.1405/ghub.el
-  ghub-20210619.1405/ghub.info
-  ghub-20210619.1405/glab.el
-  ghub-20210619.1405/gogs.el
-  ghub-20210619.1405/gsexp.el
-  ghub-20210619.1405/gtea.el
-Built ghub in 10.998s, finished at 2021-07-27T13:31:21+0000
+Created /tmp/ghubZuxxSv/ghub-20210727.1414/ghub.info
+Created ghub-20210727.1414.tar containing:
+  ghub-20210727.1414/
+  ghub-20210727.1414/buck.el
+  ghub-20210727.1414/dir
+  ghub-20210727.1414/ghub-graphql.el
+  ghub-20210727.1414/ghub-pkg.el
+  ghub-20210727.1414/ghub.el
+  ghub-20210727.1414/ghub.info
+  ghub-20210727.1414/glab.el
+  ghub-20210727.1414/gogs.el
+  ghub-20210727.1414/gsexp.el
+  ghub-20210727.1414/gtea.el
+Built ghub in 10.027s, finished at 2021-07-27T16:59:38+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  401 Jul 27 13:31 packages/ghub-20210619.1405.entry
 152K -rw-r--r-- 1 root root 150K Jul 27 13:31 packages/ghub-20210619.1405.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 27 13:31 packages/ghub-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jul 27 13:31 packages/ghub-readme.txt
+4.0K -rw-r--r-- 1 root root  401 Jul 27 16:59 packages/ghub-20210727.1414.entry
+152K -rw-r--r-- 1 root root 150K Jul 27 16:59 packages/ghub-20210727.1414.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 27 16:59 packages/ghub-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Jul 27 16:59 packages/ghub-readme.txt

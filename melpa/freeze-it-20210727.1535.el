@@ -4,8 +4,8 @@
 
 ;; Author: Paul W. Rankin <pwr@bydasein.com>
 ;; Keywords: wp, text
-;; Package-Version: 20210201.731
-;; Package-Commit: d5dc811fc892d78e042394bb4a1342dea2480b5c
+;; Package-Version: 20210727.1535
+;; Package-Commit: 151d264a0d0593b413b5a984b391023e905a190b
 ;; Version: 0.2.2
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/rnkn/freeze-it
@@ -194,4 +194,5 @@ note that frozen text remains read-only")))
 ;; fill-column: 80
 ;; require-final-newline: t
 ;; sentence-end-double-space: nil
+;; indent-tabs-mode: nil
 ;; End:
