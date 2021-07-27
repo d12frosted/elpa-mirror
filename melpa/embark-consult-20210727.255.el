@@ -4,8 +4,8 @@
 
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
-;; Package-Version: 20210725.1540
-;; Package-Commit: c44ae5154b8386edcf450eeafc3131873c545b97
+;; Package-Version: 20210727.255
+;; Package-Commit: bd37cd1d8892a1699922102413a193972d7a43f8
 ;; Version: 0.1
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "25.1") (embark "0.9") (consult "0.1"))
@@ -242,8 +242,9 @@ actual type."
   :parent nil
   ("o" consult-outline)
   ("i" consult-imenu)
-  ("p" consult-project-imenu)
-  ("l" consult-line))
+  ("I" consult-imenu-project)
+  ("l" consult-line)
+  ("L" consult-line-multi))
 
 (embark-define-keymap embark-consult-async-search-map
   "Keymap for Consult async search commands"
@@ -252,7 +253,7 @@ actual type."
   ("r" consult-ripgrep)
   ("G" consult-git-grep)
   ("f" consult-find)
-  ("L" consult-locate))
+  ("F" consult-locate))
 
 (defvar embark-consult-search-map
   (keymap-canonicalize

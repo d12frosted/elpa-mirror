@@ -4,8 +4,8 @@
 
 ;; Author: Manoj Kumar Manikchand <manojm321@protonmail.com>
 ;; URL: https://github.com/Manoj321/elfeed-dashboard
-;; Package-Version: 20201218.347
-;; Package-Commit: 9e8e212da9ea471bdc58bc0a1f5932833029bb38
+;; Package-Version: 20210727.603
+;; Package-Commit: b143f8453aed2053e8fc6f05cef6233797408546
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "25.1")(elfeed "3.3.0"))
 ;; Version: 0.0.0
@@ -50,6 +50,7 @@
 
 \\{elfeed-dashboard-mode-map}"
   :group 'elfeed-dashboard
+  (setq elfeed-dashboard--buf (current-buffer))
   (setq buffer-read-only t)
   (elfeed-dashboard-parse-keymap))
 
@@ -64,6 +65,7 @@
 (defun elfeed-dashboard-edit ()
   "Edit dashboard."
   (interactive)
+  (setq elfeed-dashboard-mode-map (make-sparse-keymap))
   (setq buffer-read-only nil)
   (org-mode))
 
@@ -89,6 +91,21 @@
                                   (elfeed-dashboard-update-links)
                                   (message "elfeed: Updated!")))))))
 
+(defun elfeed-dashboard--get-keymap (key)
+  "Return the right keymap depending on the number of chars in the KEY.
+
+Assumes a max KEY length of 2."
+  (if (> (length key) 2)
+      (user-error "Key exceeds a max length of 2: %s" key))
+  (if (eq (length key) 1)
+      elfeed-dashboard-mode-map
+    ;; 2 letter key
+    (let* ((prefix-key (substring key 0 1))
+           (binding (local-key-binding (kbd prefix-key))))
+      (unless binding
+        (define-key elfeed-dashboard-mode-map (kbd prefix-key) (make-sparse-keymap)))
+       (key-binding (kbd prefix-key)))))
+
 (defun elfeed-dashboard-parse-keymap ()
   "Install key binding defined as KEYMAP:VALUE.
 
@@ -107,8 +124,12 @@ to group keymaps at the same place."
       (when (string= (org-element-property :key keyword) "KEYMAP")
         (let* ((value (org-element-property :value keyword))
                (key   (string-trim (nth 0 (split-string value "|"))))
-               (call  (string-trim (nth 1 (split-string value "|")))))
-          (define-key elfeed-dashboard-mode-map (kbd key)
+               (call  (string-trim (nth 1 (split-string value "|"))))
+               (map (elfeed-dashboard--get-keymap key))
+               (suffix-key (if (eq (length key) 1)
+                               key
+                             (substring key 1 2))))
+          (define-key map (kbd suffix-key)
             (eval (car (read-from-string
                         (format "(lambda () (interactive) (%s))" call))))))))))
 
