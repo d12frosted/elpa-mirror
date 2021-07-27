@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ibuffer
 ;; Version: 1.3.1
-;; Package-Version: 20210721.651
-;; Package-Commit: a3cc2d96f619a2a6cf1cb6ad881ab6e509ac8fc3
+;; Package-Version: 20210727.808
+;; Package-Commit: c1c0606a793b71c8c1efc3c55dfcc22182214f24
 ;; Package-Requires: ((emacs "24.4") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ibuffer
 
@@ -63,6 +63,11 @@
   "Face used for the directory icon."
   :group 'all-the-icons-ibuffer)
 
+(defcustom all-the-icons-ibuffer-icon t
+  "Whether display the icons."
+  :group 'all-the-icons-ibuffer
+  :type 'boolean)
+
 (defcustom all-the-icons-ibuffer-color-icon t
   "Whether display the colorful icons.
 
@@ -89,8 +94,14 @@ It respects `all-the-icons-color-icons'."
   `((mark modified read-only ,(if (>= emacs-major-version 26) 'locked "")
           ;; Here you may adjust by replacing :right with :center or :left
           ;; According to taste, if you want the icon further from the name
-          " " ,(if (display-graphic-p) '(icon 2 2 :left :elide) "")
-          ,(if (display-graphic-p) (propertize " " 'display `(space :align-to 8)) "")
+          " " ,(if (and (display-graphic-p)
+                        all-the-icons-ibuffer-icon)
+                   '(icon 2 2 :left :elide)
+                 "")
+          ,(if (and (display-graphic-p)
+                    all-the-icons-ibuffer-icon)
+               (propertize " " 'display `(space :align-to 8))
+             "")
           (name 18 18 :left :elide)
           " " (size-h 9 -1 :right)
           " " (mode+ 16 16 :left :elide)

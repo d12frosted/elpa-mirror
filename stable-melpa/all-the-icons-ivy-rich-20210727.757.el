@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
 ;; Version: 1.6.3
-;; Package-Version: 20210721.653
-;; Package-Commit: b20df3e2c901a107441b6246b9d03fa3dc57f47f
+;; Package-Version: 20210727.757
+;; Package-Commit: 2a4baba0343d1e4dcabc29e5ccca596fd032ac90
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -164,6 +164,11 @@
 (defface all-the-icons-ivy-rich-file-owner-face
   '((t :inherit font-lock-keyword-face))
   "Face used for highlight file owners.")
+
+(defcustom all-the-icons-ivy-rich-icon t
+  "Whether display the icons."
+  :group 'all-the-icons-ivy-rich
+  :type 'boolean)
 
 (defcustom all-the-icons-ivy-rich-color-icon t
   "Whether display the colorful icons.
@@ -794,7 +799,9 @@ Display the true name when the file is a symlink."
 
 (defun all-the-icons-ivy-rich--format-icon (icon)
   "Format ICON'."
-  (when (and (display-graphic-p) icon)
+  (when (and (display-graphic-p)
+             all-the-icons-ivy-rich-icon
+             icon)
     (format " %s"
             (let* ((props (get-text-property 0 'face icon))
                    (family (plist-get props :family))
