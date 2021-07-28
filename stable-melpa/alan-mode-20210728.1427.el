@@ -5,8 +5,8 @@
 ;; Author: Paul van Dam <pvandam@kjerner.com>
 ;; Maintainer: Paul van Dam <pvandam@kjerner.com>
 ;; Version: 1.0.0
-;; Package-Version: 20210725.1315
-;; Package-Commit: 4221be8d6572851e61f3bfd6f262c1ba11453355
+;; Package-Version: 20210728.1427
+;; Package-Commit: 6e2005441af34fe54872c00ed793f6084f25c3f8
 ;; Created: 13 October 2017
 ;; URL: https://github.com/Kjerner/AlanForEmacs
 ;; Homepage: https://alan-platform.com/
@@ -71,12 +71,19 @@ resolved to an existing directory."
   :group 'alan
   :type '(string))
 
+(defcustom alan-log-level "warning"
+  "The log level used by the `alan-compiler' or the `alan-script'.
+Its value should be one of 'error' 'info' 'quiet' 'warning'."
+  :group 'alan
+  :type '(string)
+  :risky t)
+
 (defcustom alan-compiler-project-root "."
-  "The relative path from the current buffer file to the compilation root of the `alan-compiler'.
+  "The relative path from current buffer file to Alan project root.
 This sets the -C option."
   :type '(string)
-  :safe 'stringp)
-(make-variable-buffer-local 'alan-compiler-project-root)
+  :safe 'stringp
+  :local t)
 
 (defcustom alan-script "alan"
   "The alan build script file."
@@ -85,17 +92,17 @@ This sets the -C option."
 
 (defcustom alan-language-definition nil
   "The Alan language to use.
+
 Setting this will try to use the `alan-compiler' instead of the
 `alan-script'. If the path is relative it will try to resolve it
 against the `alan-project-root'."
   :group 'alan
   :type '(string)
-  :safe 'stringp)
-(make-variable-buffer-local 'alan-language-definition)
+  :safe 'stringp
+  :local t)
 
 (defcustom alan-on-phrase-added-hook nil
-  "A hook that is run after successfully adding a phrase to
-phrases.alan.
+  "A hook that is run after successfully adding a phrase to phrases.alan.
 
 Used by `alan-views-add-to-phrases'."
   :type 'hook
@@ -108,7 +115,7 @@ Used by `alan-views-add-to-phrases'."
   "A rule that can be added to `electric-layout-rules'.
 
 It can be added locally by adding it to the alan-hook:
-(set (make-variable-buffer-local 'electric-layout-rules) (list alan-add-line-in-braces-rule))")
+\(set (make-variable-buffer-local 'electric-layout-rules) (list alan-add-line-in-braces-rule))")
 
 ;;; Alan mode
 
@@ -303,8 +310,8 @@ word. E.g. '-> stategroup'."
 			 (xref-make-buffer-location buffer symbol-position)))
 
 (defun alan--projectile-project-root ()
-  "Finds the project root of a buffer if projectile is available.
-Return default-directory if the buffer is not in a project or
+  "Find the project root of a buffer if projectile is available.
+Return `default-directory' if the buffer is not in a project or
 projectile is not available."
   (if (featurep 'projectile)
 	(let ((projectile-require-project-root nil))
@@ -474,12 +481,12 @@ STATE is the result of the function `parse-partial-sexp'."
     font-lock-comment-face))
 
 (defun alan-update-header ()
-  "Sets the `header-line-format' to `alan-path'."
+  "Set the `header-line-format' to `alan-path'."
   (setq header-line-format (format " %s  " (alan-path)))
   (force-mode-line-update))
 
 (defun alan-throttle (secs function)
-  "Returns the FUNCTION throttled in SECS."
+  "Return the FUNCTION throttled in SECS."
   (lexical-let ((executing nil)
 				(buffer-to-update (current-buffer))
 				(local-secs secs)
@@ -508,12 +515,18 @@ Do not include /dev/null and only show errors for the current buffer."
 (defvar-local alan--flycheck-language-definition nil
   "The real path to the language definition if `alan-language-definition' can be resolved.")
 
+(progn
+  (when (not (getenv "ALAN_COMPILER_FORMAT"))
+	(setenv "ALAN_COMPILER_FORMAT" "emacs"))
+  (when (not (getenv "ALAN_COMPILER_LOG"))
+	(setenv "ALAN_COMPILER_LOG" alan-log-level)))
+
 (flycheck-define-checker alan
   "An Alan syntax checker."
   :command ("alan"
 			(eval (if (null alan--flycheck-language-definition)
-					  '("build" "--format" "emacs")
-					`(,alan--flycheck-language-definition "--format" "emacs" "--log" "warning" "-C" ,alan-compiler-project-root "/dev/null"))))
+					  '("build")
+					`(,alan--flycheck-language-definition "-C" ,alan-compiler-project-root "/dev/null"))))
   :error-patterns
   ((error line-start (file-name) ":" line ":" column ": error:" (zero-or-one " " (one-or-more digit) ":" (one-or-more digit))
 		  ;; Messages start with a white space after the error.
@@ -533,7 +546,9 @@ Do not include /dev/null and only show errors for the current buffer."
 (defvar-local alan-project-root nil
   "The project root set by function `alan-project-root'.")
 (defun alan-project-root ()
-  "Project root folder determined based on the presence of a project.json or versions.json file.
+  "Project root folder.
+
+Determined based on the presence of a project.json or versions.json file.
 
 If `alan-language-definition' is set prefer to use the
 project.json over versions.json."
@@ -595,8 +610,8 @@ Return nil if the script can not be found."
 	  (setq-local flycheck-alan-executable alan-project-compiler)
 	  (setq-local alan--flycheck-language-definition alan-project-language)
 	  (setq-local compile-command
-		   (concat alan-project-compiler " " alan-project-language " --format emacs --log warning -C " alan-compiler-project-root " /dev/null "))
-	  (setq alan-pretty-printer (concat alan--pretty-printer " " alan-project-language " --format emacs --log warning --allow-unresolved -C " alan-compiler-project-root
+		   (concat alan-project-compiler " " alan-project-language " -C " alan-compiler-project-root " /dev/null "))
+	  (setq alan-pretty-printer (concat alan--pretty-printer " " alan-project-language "  --allow-unresolved -C " alan-compiler-project-root
 										" --file '" (buffer-file-name) "' -- " (alan--file-path-to-relative-project-path (buffer-file-name)))))
 	 (alan-project-script
 	  (setq-local flycheck-alan-executable alan-project-script))
@@ -811,9 +826,9 @@ the project compiler."
 
 ;;;###autoload (autoload 'alan-add-to-phrases "alan-mode")
 (defun alan-add-to-phrases()
-  "Adds the identifier at point to the phrases file.
+  "Add the identifier at point to the phrases file.
 
-Runs the hook `alan-on-phrase-added-hook' on success. You can use
+Run the hook `alan-on-phrase-added-hook' on success. You can use
 this to refresh the buffer for example `flycheck-buffer'."
   (interactive)
   (when-let ((identifier (or (thing-at-point 'identifier)

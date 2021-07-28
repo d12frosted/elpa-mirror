@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 7f3d3d3545078df2f4a37094c618993145c731d2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/speechd-el/
-  to /tmp/speechd-elho0Cag/speechd-el-20210702.1954
+  to /tmp/speechd-elM1bH4g/speechd-el-20210702.1954
     braille.el -> braille.el
     brltty.el -> brltty.el
     mmanager.el -> mmanager.el
@@ -26,35 +26,35 @@ Copying files (->) and directories (=>)
     gpl.texi -> gpl.texi
     speechd-el.cs.texi -> speechd-el.cs.texi
     speechd-el.texi -> speechd-el.texi
-Created /tmp/speechd-elho0Cag/speechd-el-20210702.1954/fdl.info
-Created /tmp/speechd-elho0Cag/speechd-el-20210702.1954/gpl.info
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi -o /tmp/speechd-elho0Cag/speechd-el-20210702.1954/speechd-el.cs.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/speechd-elM1bH4g/speechd-el-20210702.1954/fdl.info
+Created /tmp/speechd-elM1bH4g/speechd-el-20210702.1954/gpl.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi -o /tmp/speechd-elM1bH4g/speechd-el-20210702.1954/speechd-el.cs.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at 7f3d3d3 Version 2.11
 HEAD is now at 7f3d3d3 Version 2.11
 /mnt/store/melpa/working/speechd-el/fdl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/speechd-elho0Cag/speechd-el-20210702.1954/fdl.info'
+install-info: warning: no info dir entry in `/tmp/speechd-elM1bH4g/speechd-el-20210702.1954/fdl.info'
 /mnt/store/melpa/working/speechd-el/gpl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/speechd-elho0Cag/speechd-el-20210702.1954/gpl.info'
+install-info: warning: no info dir entry in `/tmp/speechd-elM1bH4g/speechd-el-20210702.1954/gpl.info'
 /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced {
 /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced }
 ./fdl.texi:404: raising the section level of @appendixsubsec which is too low
 ")
-Created /tmp/speechd-elho0Cag/speechd-el-20210702.1954/speechd-el.cs.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/speechd-elho0Cag/speechd-el-20210702.1954/speechd-el.cs.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/speechd-elM1bH4g/speechd-el-20210702.1954/speechd-el.cs.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/speechd-elM1bH4g/speechd-el-20210702.1954/speechd-el.cs.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at 7f3d3d3 Version 2.11
 HEAD is now at 7f3d3d3 Version 2.11
 /mnt/store/melpa/working/speechd-el/fdl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/speechd-elho0Cag/speechd-el-20210702.1954/fdl.info'
+install-info: warning: no info dir entry in `/tmp/speechd-elM1bH4g/speechd-el-20210702.1954/fdl.info'
 /mnt/store/melpa/working/speechd-el/gpl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/speechd-elho0Cag/speechd-el-20210702.1954/gpl.info'
+install-info: warning: no info dir entry in `/tmp/speechd-elM1bH4g/speechd-el-20210702.1954/gpl.info'
 /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced {
 /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced }
 ./fdl.texi:404: raising the section level of @appendixsubsec which is too low
-install-info: No such file or directory for /tmp/speechd-elho0Cag/speechd-el-20210702.1954/speechd-el.cs.info
+install-info: No such file or directory for /tmp/speechd-elM1bH4g/speechd-el-20210702.1954/speechd-el.cs.info
 ")
-Created /tmp/speechd-elho0Cag/speechd-el-20210702.1954/speechd-el.info
+Created /tmp/speechd-elM1bH4g/speechd-el-20210702.1954/speechd-el.info
 Created speechd-el-20210702.1954.tar containing:
   speechd-el-20210702.1954/
   speechd-el-20210702.1954/braille.el
@@ -75,8 +75,8 @@ Created speechd-el-20210702.1954.tar containing:
   speechd-el-20210702.1954/speechd-ssip.el
   speechd-el-20210702.1954/speechd-version.el
   speechd-el-20210702.1954/speechd.el
-Built speechd-el in 23.555s, finished at 2021-07-28T14:01:06+0000
+Built speechd-el in 25.565s, finished at 2021-07-28T17:19:46+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  169 Jul 28 14:01 packages/speechd-el-20210702.1954.entry
-440K -rw-r--r-- 1 root root 440K Jul 28 14:01 packages/speechd-el-20210702.1954.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 28 14:01 packages/speechd-el-badge.svg
+4.0K -rw-r--r-- 1 root root  169 Jul 28 17:19 packages/speechd-el-20210702.1954.entry
+440K -rw-r--r-- 1 root root 440K Jul 28 17:19 packages/speechd-el-20210702.1954.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 28 17:19 packages/speechd-el-badge.svg

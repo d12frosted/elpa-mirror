@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/mkjunker/abc-mode.git
 
 Updating /mnt/store/melpa/working/abc-mode/
-Checking out origin/HEAD
-Checking out 80fa954787b57d14e21e19bd65e52abab1686f4a
-Built abc-mode in 4.499s, finished at 2021-07-28T12:53:00+0000
- ✓ Success:
- 56K -rwxr-xr-x 1 root root  56K Jul 28 12:53 packages/abc-mode-20210508.1552.el
-4.0K -rw-r--r-- 1 root root  314 Jul 28 12:53 packages/abc-mode-20210508.1552.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 28 12:53 packages/abc-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  290 Jul 28 12:53 packages/abc-mode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/mkjunker/abc-mode.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+

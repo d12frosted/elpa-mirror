@@ -1,9 +1,9 @@
 (daemons .
-	 [(20200421 912)
+	 [(20210728 1514)
 	  ((emacs
 	    (25 1)))
 	  "UI for managing init system daemons (services)" tar
-	  ((:commit . "a26155d04cec399ffe25b88f71cbfa4ada784569")
+	  ((:commit . "cbab674d995022c1c223bfccf13d8009c7c4e2ba")
 	   (:authors
 	    ("Chris Bowdon"))
 	   (:maintainer "Chris Bowdon")

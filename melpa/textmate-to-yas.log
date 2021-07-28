@@ -7,25 +7,25 @@ Checking out origin/HEAD
 Checking out be3a768b7ac4c2e24b9d4aa6e9ac1d916cdc5a73
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/textmate-to-yas/
-  to /tmp/textmate-to-yasfsmHvw/textmate-to-yas-20160409.1708
+  to /tmp/textmate-to-yasBs5VJN/textmate-to-yas-20160409.1708
     textmate-to-yas.el -> textmate-to-yas.el
     textmate-to-yas.texi -> textmate-to-yas.texi
     plutil.pl -> plutil.pl
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/textmate-to-yas/textmate-to-yas.texi -o /tmp/textmate-to-yasfsmHvw/textmate-to-yas-20160409.1708/textmate-to-yas.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/textmate-to-yas/textmate-to-yas.texi -o /tmp/textmate-to-yasBs5VJN/textmate-to-yas-20160409.1708/textmate-to-yas.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at be3a768 Merge pull request #4 from tarsius/patch-1
 HEAD is now at be3a768 Merge pull request #4 from tarsius/patch-1
 /mnt/store/melpa/working/textmate-to-yas/textmate-to-yas.texi:60: raising the section level of @subsubsection which is too low
 /mnt/store/melpa/working/textmate-to-yas/textmate-to-yas.texi:76: raising the section level of @subsubsection which is too low
 ")
-Created /tmp/textmate-to-yasfsmHvw/textmate-to-yas-20160409.1708/textmate-to-yas.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/textmate-to-yasfsmHvw/textmate-to-yas-20160409.1708/textmate-to-yas.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/textmate-to-yasBs5VJN/textmate-to-yas-20160409.1708/textmate-to-yas.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/textmate-to-yasBs5VJN/textmate-to-yas-20160409.1708/textmate-to-yas.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at be3a768 Merge pull request #4 from tarsius/patch-1
 HEAD is now at be3a768 Merge pull request #4 from tarsius/patch-1
 /mnt/store/melpa/working/textmate-to-yas/textmate-to-yas.texi:60: raising the section level of @subsubsection which is too low
 /mnt/store/melpa/working/textmate-to-yas/textmate-to-yas.texi:76: raising the section level of @subsubsection which is too low
-install-info: No such file or directory for /tmp/textmate-to-yasfsmHvw/textmate-to-yas-20160409.1708/textmate-to-yas.info
+install-info: No such file or directory for /tmp/textmate-to-yasBs5VJN/textmate-to-yas-20160409.1708/textmate-to-yas.info
 ")
 Created textmate-to-yas-20160409.1708.tar containing:
   textmate-to-yas-20160409.1708/
@@ -33,9 +33,9 @@ Created textmate-to-yas-20160409.1708.tar containing:
   textmate-to-yas-20160409.1708/plutil.pl
   textmate-to-yas-20160409.1708/textmate-to-yas-pkg.el
   textmate-to-yas-20160409.1708/textmate-to-yas.el
-Built textmate-to-yas in 6.351s, finished at 2021-07-28T14:03:47+0000
+Built textmate-to-yas in 7.344s, finished at 2021-07-28T17:22:45+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  348 Jul 28 14:03 packages/textmate-to-yas-20160409.1708.entry
-112K -rw-r--r-- 1 root root 110K Jul 28 14:03 packages/textmate-to-yas-20160409.1708.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 28 14:03 packages/textmate-to-yas-badge.svg
-4.0K -rw-r--r-- 1 root root 1.9K Jul 28 14:03 packages/textmate-to-yas-readme.txt
+4.0K -rw-r--r-- 1 root root  348 Jul 28 17:22 packages/textmate-to-yas-20160409.1708.entry
+112K -rw-r--r-- 1 root root 110K Jul 28 17:22 packages/textmate-to-yas-20160409.1708.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 28 17:22 packages/textmate-to-yas-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Jul 28 17:22 packages/textmate-to-yas-readme.txt
