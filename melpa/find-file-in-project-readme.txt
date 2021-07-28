@@ -116,4 +116,4 @@ the executable location by insert below code into ".emacs",
 
 This program works on Windows/Cygwin/Linux/macOS
 
-See https://github.com/technomancy/find-file-in-project for advanced tips.
+See https://github.com/redguardtoo/find-file-in-project for advanced tips.

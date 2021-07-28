@@ -4,34 +4,38 @@ Source:  https://github.com/universal-ctags/citre.git
 
 Updating /mnt/store/melpa/working/citre/
 Checking out origin/HEAD
-Checking out 036b207cc1684903a22fc1aa698ffdc04902f62a
+Checking out 5c5958e467e4da7a8578039643d5036b3395e3d6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citre/
-  to /tmp/citreWT6nJR/citre-20210723.1509
+  to /tmp/citremcj3Bv/citre-20210728.125
     citre-basic-tools.el -> citre-basic-tools.el
     citre-config.el -> citre-config.el
     citre-core-tables.el -> citre-core-tables.el
     citre-core.el -> citre-core.el
     citre-lang-c.el -> citre-lang-c.el
     citre-lang-fileref.el -> citre-lang-fileref.el
+    citre-lang-verilog.el -> citre-lang-verilog.el
     citre-peek.el -> citre-peek.el
     citre-util.el -> citre-util.el
     citre.el -> citre.el
-Created citre-20210723.1509.tar containing:
-  citre-20210723.1509/
-  citre-20210723.1509/citre-basic-tools.el
-  citre-20210723.1509/citre-config.el
-  citre-20210723.1509/citre-core-tables.el
-  citre-20210723.1509/citre-core.el
-  citre-20210723.1509/citre-lang-c.el
-  citre-20210723.1509/citre-lang-fileref.el
-  citre-20210723.1509/citre-peek.el
-  citre-20210723.1509/citre-pkg.el
-  citre-20210723.1509/citre-util.el
-  citre-20210723.1509/citre.el
-Built citre in 8.165s, finished at 2021-07-27T20:06:10+0000
+Created citre-20210728.125.tar containing:
+  citre-20210728.125/
+  citre-20210728.125/citre-basic-tools.el
+  citre-20210728.125/citre-config.el
+  citre-20210728.125/citre-core-tables.el
+  citre-20210728.125/citre-core.el
+  citre-20210728.125/citre-lang-c.el
+  citre-20210728.125/citre-lang-fileref.el
+  citre-20210728.125/citre-lang-verilog.el
+  citre-20210728.125/citre-peek.el
+  citre-20210728.125/citre-pkg.el
+  citre-20210728.125/citre-util.el
+  citre-20210728.125/citre.el
+Built citre in 12.632s, finished at 2021-07-28T03:00:17+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  346 Jul 27 20:06 packages/citre-20210723.1509.entry
-280K -rw-r--r-- 1 root root 280K Jul 27 20:06 packages/citre-20210723.1509.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 27 20:06 packages/citre-badge.svg
-4.0K -rw-r--r-- 1 root root  525 Jul 27 20:06 packages/citre-readme.txt
+4.0K -rw-r--r-- 1 root root  346 Jul 27 23:32 packages/citre-20210723.1509.entry
+280K -rw-r--r-- 1 root root 280K Jul 27 23:32 packages/citre-20210723.1509.tar
+4.0K -rw-r--r-- 1 root root  345 Jul 28 03:00 packages/citre-20210728.125.entry
+292K -rw-r--r-- 1 root root 290K Jul 28 03:00 packages/citre-20210728.125.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 28 03:00 packages/citre-badge.svg
+4.0K -rw-r--r-- 1 root root  525 Jul 28 03:00 packages/citre-readme.txt
