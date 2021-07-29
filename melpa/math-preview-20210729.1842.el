@@ -2,9 +2,9 @@
 
 ;; Author: Matsievskiy S.V.
 ;; Maintainer: Matsievskiy S.V.
-;; Version: 0.1.1
-;; Package-Version: 20210219.1431
-;; Package-Commit: 08aa7c47ffc85c9cba1c9812e1c14250cc4192e4
+;; Version: 0.2.1
+;; Package-Version: 20210729.1842
+;; Package-Commit: b6f54d7a53d2ed5c71fc9ab6d65da63103c799bc
 ;; Package-Requires: ((emacs "26.1") (dash "2.18.0") (s "1.12.0"))
 ;; Homepage: https://gitlab.com/matsievskiysv/math-preview
 ;; Keywords: convenience
@@ -54,14 +54,34 @@
   '((t :inherit highlight))
   "Face for equation processing")
 
-(defcustom math-preview-marks '(("\\begin{equation}" . "\\end{equation}")
-                                ("\\begin{equation*}" . "\\end{equation*}")
-                                ("\\[" . "\\]")
-                                ("\\(" . "\\)")
-                                ("$$" . "$$")
-                                ("$" . "$"))
+(defcustom math-preview-marks (list)
   "Strings marking beginning and end of equation."
-  :tag "Equation marks"
+  :tag "Equation marks (DEPRECATED)"
+  :type '(alist :key-type string :value-type string)
+  :safe #'math-preview--check-marks)
+
+(defcustom math-preview-tex-marks
+  '(("\\begin{equation}" . "\\end{equation}")
+    ("\\begin{equation*}" . "\\end{equation*}")
+    ("\\[" . "\\]")
+    ("$$" . "$$"))
+  "Strings marking beginning and end of TeX equation."
+  :tag "TeX equation marks"
+  :type '(alist :key-type string :value-type string)
+  :safe #'math-preview--check-marks)
+
+(defcustom math-preview-tex-inline-marks
+  '(("\\(" . "\\)")
+    ("$" . "$"))
+  "Strings marking beginning and end of TeX inline equation."
+  :tag "TeX equation inline marks"
+  :type '(alist :key-type string :value-type string)
+  :safe #'math-preview--check-marks)
+
+(defcustom math-preview-mathml-marks
+  '(("<math" . "</math>"))
+  "Strings marking beginning and end of MathML equation."
+  :tag "MathML equation marks"
   :type '(alist :key-type string :value-type string)
   :safe #'math-preview--check-marks)
 
@@ -72,7 +92,7 @@
 
 (defcustom math-preview-inline-style nil
   "Use smaller math operators so equations would take less vertical space."
-  :tag "Display in inline style."
+  :tag "Display in inline style (DEPRECATED)"
   :type 'boolean)
 
 (defcustom math-preview-raise 0.4
@@ -115,16 +135,42 @@
                     (> n 0))))
 
 (defcustom math-preview-preprocess-functions (list)
-  "Functions to call on each string.
+  "Functions to call on each matched string.
 Functions are applied in chain from left to right.
-Each function must take one string argument and return string."
+Each function must take list argument in format (original-string left-mark right-mark)
+and return list format (processed-string left-mark right-mark).
+These functions are evaluated after `math-preview-preprocess-tex-functions`
+and `math-preview-preprocess-mathml-functions` functions."
   :tag "Preprocess functions"
+  :type '(repeat function)
+  :safe (lambda (n) (and (listp n)
+                    (-all? 'identity (-map #'functionp n)))))
+
+(defcustom math-preview-preprocess-tex-functions (list)
+  "Functions to call on each TeX string.
+Functions are applied in chain from left to right.
+Each function must take list argument in format (original-string left-mark right-mark)
+and return list format (processed-string left-mark right-mark).
+These functions are evaluated before `math-preview-preprocess-functions` functions."
+  :tag "Preprocess TeX functions"
+  :type '(repeat function)
+  :safe (lambda (n) (and (listp n)
+                    (-all? 'identity (-map #'functionp n)))))
+
+(defcustom math-preview-preprocess-mathml-functions (list)
+  "Functions to call on each MathML string.
+Functions are applied in chain from left to right.
+Each function must take one string argument and return string.
+These functions are evaluated before `math-preview-preprocess-functions` functions."
+  :tag "Preprocess MathML functions"
   :type '(repeat function)
   :safe (lambda (n) (and (listp n)
                     (-all? 'identity (-map #'functionp n)))))
 ;; }}}
 
 ;; {{{ Variables
+(defvar math-preview--schema-version 2 "math-preview json schema version.")
+
 (defvar math-preview--queue nil "Job queue.")
 
 (defvar math-preview-map (let ((keymap (make-keymap)))
@@ -168,8 +214,7 @@ Each function must take one string argument and return string."
   (let ((proc (get-process "math-preview"))
         (process-connection-type nil))
     (unless proc
-      (math-preview--overlays-remove-processing)
-      (setq math-preview--queue nil)
+      (math-preview-stop-process) ; clear garbage from previous session
       (let ((p (executable-find math-preview-command)))
         (unless p
           (error "%s is not an executable" math-preview-command))
@@ -184,16 +229,19 @@ Each function must take one string argument and return string."
 (defun math-preview-stop-process ()
   "Stop math-preview process."
   (interactive)
-  (when (get-process "math-preview")
+  (let ((proc (get-process "math-preview")))
     (setq math-preview--queue nil)
     (math-preview--overlays-remove-processing)
-    (kill-process (get-process "math-preview"))))
+    (when proc
+      (kill-process proc))))
 
 (defun math-preview--process-filter (_process message)
   "Handle `MESSAGE` from math-preview `PROCESS`.
 Call `math-preview--process-input' for strings with carriage return."
-  (setq message (s-replace "" ""
-                           (s-concat math-preview--input-buffer message)))
+  (setq message
+        (s-replace "" ""
+                   (s-concat math-preview--input-buffer message))) ; ignore carriage return
+  ;; buffer incomplete input
   (let ((lines (s-lines message)))
     (setq math-preview--input-buffer (-first-item (-take-last 1 lines)))
     (->> lines
@@ -203,32 +251,35 @@ Call `math-preview--process-input' for strings with carriage return."
 (defun math-preview--process-input (message)
   "Process input MESSAGE line."
   (when math-preview--debug-json
-      (with-current-buffer (get-buffer-create "*math-preview*")
-        (insert "Incoming:")
-        (insert message)))
-    (let* ((msg (json-read-from-string message))
-           (id (cdr (assoc 'id msg)))
-           (data (cdr (assoc 'data msg)))
-           (err (cdr (assoc 'error msg))))
-      (let ((o (cdr (--first (= (car it) id) math-preview--queue))))
-        (setq math-preview--queue
-              (--remove (= (car it) id) math-preview--queue))
-        (when o (if err (progn (message "%s" (elt err 0)) (delete-overlay o))
-                  (overlay-put o 'category 'math-preview)
-                  (overlay-put o 'display
-                               (list (list 'raise math-preview-raise)
-                                     (cons 'image
-                                           (list :type 'svg
-                                                 :data data
-                                                 :scale math-preview-scale
-                                                 :pointer 'hand
-                                                 :margin math-preview-margin
-                                                 :relief math-preview-relief)))))))))
+    (with-current-buffer (get-buffer-create "*math-preview*")
+      (insert "Incoming:")
+      (insert message)
+      (insert "\n")))
+  (let* ((msg (json-read-from-string message))
+         (id (cdr (assoc 'id msg)))
+         (data (cdr (assoc 'data msg)))
+         (err (cdr (assoc 'error msg))))
+    (let ((o (cdr (--first (= (car it) id) math-preview--queue))))
+      (setq math-preview--queue
+            (--remove (= (car it) id) math-preview--queue))
+      (if o (if err (progn (message "%s" (elt err 0)) (delete-overlay o))
+                (overlay-put o 'category 'math-preview)
+                (overlay-put o 'display
+                             (list (list 'raise math-preview-raise)
+                                   (cons 'image
+                                         (list :type 'svg
+                                               :data data
+                                               :scale math-preview-scale
+                                               :pointer 'hand
+                                               :margin math-preview-margin
+                                               :relief math-preview-relief)))))
+        (when err (message "%s" err))))))
 
-(defun math-preview--submit (beg end string)
-  "Submit TeX processing job.
+(defun math-preview--submit (beg end string type)
+  "Submit equation processing job.
 `BEG` and `END` are the positions of the overlay region.
-`STRING` is a TeX equation."
+`STRING` is an equation.
+`TYPE` is `tex` or `tex-inline` or `mathml`"
   (unless (math-preview--overlays beg end)
     (let ((proc (math-preview-start-process))
           (o (make-overlay beg end))
@@ -245,9 +296,10 @@ Call `math-preview--process-input' for strings with carriage return."
                       (apply #'-compose
                              (reverse math-preview-preprocess-functions))
                       string)))
-      (let ((msg (concat (json-encode (list :id id
+      (let ((msg (concat (json-encode (list :version math-preview--schema-version
+                                            :id id
                                             :data string
-                                            :inline (if math-preview-inline-style t json-false)))
+                                            :type type))
                          "\n")))
         (when math-preview--debug-json
           (with-current-buffer (get-buffer-create "*math-preview*")
@@ -299,7 +351,7 @@ Call `math-preview--process-input' for strings with carriage return."
                                 (s-join ".+?"
                                         (list (regexp-quote (car it))
                                               (regexp-quote (cdr it))))
-                                math-preview-marks))
+                                (-map #'cdr (math-preview--create-mark-list))))
                        "\\)")))
     (->> (s-matched-positions-all
           regex
@@ -309,26 +361,64 @@ Call `math-preview--process-input' for strings with carriage return."
          (--map (cons (+ beg (car it))
                       (+ beg (cdr it)))))))
 
-(defun math-preview--strip-marks (string)
-  "Strip STRING of equation mark."
-  (->> math-preview-marks
-       (--sort (> (length (car it)) (length (car other))))
-       (--filter (s-matches-p (s-concat (regexp-quote (car it))
-                                           ".+?" (regexp-quote (cdr it)))
-                              (s-replace-all '(("\n" . " ")) string)))
-       (--map (s-chop-suffix (cdr it) (s-chop-prefix (car it) string)))
-       (-first-item)))
+(defun math-preview--create-mark-list ()
+  "Concatenate and reformat mark lists."
+  (->> `((,(if math-preview-inline-style "inline-TeX" "TeX") . math-preview-marks)
+         ("TeX" . math-preview-tex-marks)
+         ("inline-TeX" . math-preview-tex-inline-marks)
+         ("MathML" . math-preview-mathml-marks))
+       (--filter (symbol-value (cdr it)))
+       (--map (-annotate (lambda (x) (car it)) (symbol-value (cdr it))))
+       (-flatten-n 1)
+       (--sort (> (length (car (cdr it))) (length (car (cdr other)))))))
+
+(defun math-preview--extract-match (string)
+  "Extract match data from given `STRING`.
+Return list containing original string, string with stripped marks,
+type of equation, left and right marks."
+  (let* ((match (->> (math-preview--create-mark-list)
+                     (--first (s-matches-p
+                               (s-concat (regexp-quote (car (cdr it)))
+                                         ".+?" (regexp-quote (cdr (cdr it))))
+                               (s-replace-all '(("\n" . " ")) string)))))
+         (type (car match))
+         (marks (cdr match))
+         (lmark (car marks))
+         (rmark (cdr marks))
+         (stripped (s-chop-suffix rmark (s-chop-prefix lmark string))))
+    (list string stripped type lmark rmark)))
 ;; }}}
 
 ;; {{{ User interface
+(defun math-preview--submit-region (region)
+  "Submit `REGION` to processing program."
+  (let* ((beg (car region))
+         (end (cdr region))
+         (match (math-preview--extract-match
+                 (buffer-substring beg end))))
+    (math-preview--submit (car region)
+                          (cdr region)
+                          (if (string-equal (-third-item match) "MathML")
+                              (if (and (listp math-preview-preprocess-mathml-functions)
+                                       (> (length math-preview-preprocess-mathml-functions) 0))
+                                  (car (funcall (apply #'-compose
+                                                       (reverse math-preview-preprocess-mathml-functions))
+                                                (list (-first-item match) (-fourth-item match) (-fifth-item match))))
+                                (-first-item match))
+                            (if (and (listp math-preview-preprocess-tex-functions)
+                                     (> (length math-preview-preprocess-tex-functions) 0))
+                                (car (funcall (apply #'-compose
+                                                     (reverse math-preview-preprocess-tex-functions))
+                                              (list (-second-item match) (-fourth-item match) (-fifth-item match))))
+                              (-second-item match)))
+                          (-third-item match))))
+
 (defun math-preview--region (beg end)
   "Preview equations in region between `BEG` and `END`."
   (->> (math-preview--find-gaps beg end)
        (--map (math-preview--search (car it) (cdr it)))
        (-flatten)
-       (--map (math-preview--submit (car it) (cdr it)
-                                    (math-preview--strip-marks
-                                     (buffer-substring (car it) (cdr it)))))))
+       (-map #'math-preview--submit-region)))
 
 ;;;###autoload
 (defun math-preview-region (beg end)
@@ -354,9 +444,7 @@ Call `math-preview--process-input' for strings with carriage return."
      (-flatten)
      (--filter (and (>= (point) (car it))
                     (< (point) (cdr it))))
-     (--map (math-preview--submit (car it) (cdr it)
-                                    (math-preview--strip-marks
-                                     (buffer-substring (car it) (cdr it)))))))
+     (-map #'math-preview--submit-region)))
 
 (defun math-preview--clear-region (beg end)
   "Remove all preview overlays in region between `BEG` and `END`."

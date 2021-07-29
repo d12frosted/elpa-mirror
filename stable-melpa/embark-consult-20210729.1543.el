@@ -4,8 +4,8 @@
 
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
-;; Package-Version: 20210727.255
-;; Package-Commit: bdb282f8b1ce265318a5f259b8b08896af7cb1a8
+;; Package-Version: 20210729.1543
+;; Package-Commit: 4f969299a4726058fae8773bd9c4fb7c58371c86
 ;; Version: 0.1
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "25.1") (embark "0.9") (consult "0.1"))
@@ -273,7 +273,7 @@ actual type."
 
 (defun embark-consult--unique-match ()
   "If there is a unique matching candidate, accept it.
-This is intended to be used in `embark-setup-overrides' for some
+This is intended to be used in `embark-setup-hooks' for some
 actions that are on `embark-allow-edit-commands'."
   ;; I couldn't quickly get this to work for ivy, so just skip ivy
   (unless (eq mwheel-scroll-up-function 'ivy-next-line)
@@ -285,11 +285,11 @@ actions that are on `embark-allow-edit-commands'."
 
 (dolist (cmd '(consult-outline consult-imenu consult-project-imenu))
   (cl-pushnew #'embark-consult--unique-match
-              (alist-get cmd embark-setup-overrides)))
+              (alist-get cmd embark-setup-hooks)))
 
 (defun embark-consult--accept-tofu ()
   "Accept input if it already has the unicode suffix.
-This is intended to be used in `embark-setup-overrides' for the
+This is intended to be used in `embark-setup-hooks' for the
 `consult-line' and `consult-outline' actions."
   (let* ((input (minibuffer-contents))
          (len (length input)))
@@ -301,7 +301,7 @@ This is intended to be used in `embark-setup-overrides' for the
 
 (dolist (cmd '(consult-line consult-outline))
   (cl-pushnew #'embark-consult--accept-tofu
-              (alist-get cmd embark-setup-overrides)))
+              (alist-get cmd embark-setup-hooks)))
 
 (defun embark-consult--add-async-separator ()
   "Add Consult's async separator at the beginning.
@@ -323,7 +323,7 @@ that is a Consult async command."
 (map-keymap
  (lambda (_key cmd)
    (cl-pushnew #'embark-consult--add-async-separator
-               (alist-get cmd embark-setup-overrides)))
+               (alist-get cmd embark-setup-hooks)))
  embark-consult-async-search-map)
 
 (provide 'embark-consult)

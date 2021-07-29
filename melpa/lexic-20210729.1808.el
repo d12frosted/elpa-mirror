@@ -10,8 +10,8 @@
 ;;
 ;; Maintainer: TEC <tec@tecosaur.com>
 ;; Version: 0.0.1
-;; Package-Version: 20210729.1600
-;; Package-Commit: 26c7cdac16ac3042eb47438a0fb34ed4ee6fa618
+;; Package-Version: 20210729.1808
+;; Package-Commit: 25c8d839cf78332c15b5762024ccb5f7c90b7a11
 ;; Homepage: https://github.com/tecosaur/lexic
 ;; Package-Requires: ((emacs "26.3"))
 
@@ -606,9 +606,9 @@ by `lexic-format-result' in successful case, `cases-format-failure' otherwise."
   (let ((dicts? (not (string-match-p "\\`Dictionary's name +Word count[\n ]+\\'"
                                      (shell-command-to-string (concat lexic-program-path " -l"))))))
     (if dicts?
-        (message "Couldn't find anything similar to your search, sorry :(")
-      (message "No results found, but you don't seem to have any dictionaries installed! Try %s"
-               (propertize "M-x lexic-dictionary-help" 'face 'font-lock-keyword-face)))))
+        (user-error "Couldn't find anything similar to your search, sorry :(")
+      (user-error "No results found, but you don't seem to have any dictionaries installed! Try %s"
+                  (propertize "M-x lexic-dictionary-help" 'face 'font-lock-keyword-face)))))
 
 (defun lexic-parse-results (result)
   "Loop through every entry in RESULT and parse each one.
