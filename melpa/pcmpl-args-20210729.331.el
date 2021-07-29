@@ -4,11 +4,11 @@
 
 ;; Author: Jonathan Waltman <jonathan.waltman@gmail.com>
 ;; URL: https://github.com/JonWaltman/pcmpl-args.el
-;; Package-Version: 20210728.2337
-;; Package-Commit: 690360006df5019e37e3cc2e726844754d252eba
+;; Package-Version: 20210729.331
+;; Package-Commit: 7d444d5793c779a863d5834572c1dae4d87a250b
 ;; Keywords: abbrev completion convenience processes terminals unix
 ;; Created: 25 Jul 2012
-;; Version: 0.1.1
+;; Version: 0.1.2
 ;; Compatibility: GNU Emacs: 24.x
 ;; Package-Requires: ((emacs "24.3"))
 

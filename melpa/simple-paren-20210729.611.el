@@ -1,8 +1,8 @@
 ;;; simple-paren.el --- Non-electrical insert paired delimiter, wrap -*- lexical-binding: t; -*-
 
 ;; Version: 0.2
-;; Package-Version: 20210728.1039
-;; Package-Commit: b73f9da8ca59085529b529ce6558f979d98cd158
+;; Package-Version: 20210729.611
+;; Package-Commit: 9601e6b15f36d2e3a721043820a650413cbee42b
 
 ;; Copyright (C) 2016-2021  Andreas Röhler, Steve Purcell
 ;; See also http://www.unicode.org/L2/L2013/13046-BidiBrackets.txt
@@ -404,6 +404,7 @@
   (let* ((times (prefix-numeric-value arg))
 	 (beg (ignore-errors (region-beginning)))
 	 (end (and (ignore-errors (region-end)) (copy-marker (region-end))))
+     (deactivate-mark nil)
 	 ;; (face	(or (ignore-errors (eq 'region (get-char-property (1- (point)) 'face)))
 	 ;; 	    (eq 'region (get-char-property (point) 'face))))
 	 fillchar padding)

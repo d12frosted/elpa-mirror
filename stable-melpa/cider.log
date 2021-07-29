@@ -4,10 +4,10 @@ Source:  https://github.com/clojure-emacs/cider.git
 
 Updating /mnt/store/melpa/working/cider/
 Checking out origin/HEAD
-Checking out 5aaaa3a01310f5f9118465f5371a75dfea35b856
+Checking out 52ad2bc4ebadf6692d9c2d5cfcae467e149beea6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cider/
-  to /tmp/cidertXecOx/cider-20210706.1151
+  to /tmp/ciderONs0gc/cider-20210729.521
     cider-apropos.el -> cider-apropos.el
     cider-browse-ns.el -> cider-browse-ns.el
     cider-browse-spec.el -> cider-browse-spec.el
@@ -45,64 +45,66 @@ Copying files (->) and directories (=>)
     cider.el -> cider.el
     nrepl-client.el -> nrepl-client.el
     nrepl-dict.el -> nrepl-dict.el
-Created cider-20210706.1151.tar containing:
-  cider-20210706.1151/
-  cider-20210706.1151/cider-apropos.el
-  cider-20210706.1151/cider-browse-ns.el
-  cider-20210706.1151/cider-browse-spec.el
-  cider-20210706.1151/cider-cheatsheet.el
-  cider-20210706.1151/cider-classpath.el
-  cider-20210706.1151/cider-client.el
-  cider-20210706.1151/cider-clojuredocs.el
-  cider-20210706.1151/cider-common.el
-  cider-20210706.1151/cider-compat.el
-  cider-20210706.1151/cider-completion.el
-  cider-20210706.1151/cider-connection.el
-  cider-20210706.1151/cider-debug.el
-  cider-20210706.1151/cider-doc.el
-  cider-20210706.1151/cider-eldoc.el
-  cider-20210706.1151/cider-eval.el
-  cider-20210706.1151/cider-find.el
-  cider-20210706.1151/cider-format.el
-  cider-20210706.1151/cider-inspector.el
-  cider-20210706.1151/cider-macroexpansion.el
-  cider-20210706.1151/cider-mode.el
-  cider-20210706.1151/cider-ns.el
-  cider-20210706.1151/cider-overlays.el
-  cider-20210706.1151/cider-pkg.el
-  cider-20210706.1151/cider-popup.el
-  cider-20210706.1151/cider-profile.el
-  cider-20210706.1151/cider-repl-history.el
-  cider-20210706.1151/cider-repl.el
-  cider-20210706.1151/cider-resolve.el
-  cider-20210706.1151/cider-scratch.el
-  cider-20210706.1151/cider-selector.el
-  cider-20210706.1151/cider-stacktrace.el
-  cider-20210706.1151/cider-test.el
-  cider-20210706.1151/cider-tracing.el
-  cider-20210706.1151/cider-util.el
-  cider-20210706.1151/cider-xref.el
-  cider-20210706.1151/cider.el
-  cider-20210706.1151/nrepl-client.el
-  cider-20210706.1151/nrepl-dict.el
-Built cider in 4.782s, finished at 2021-07-29T02:14:17+0000
+Created cider-20210729.521.tar containing:
+  cider-20210729.521/
+  cider-20210729.521/cider-apropos.el
+  cider-20210729.521/cider-browse-ns.el
+  cider-20210729.521/cider-browse-spec.el
+  cider-20210729.521/cider-cheatsheet.el
+  cider-20210729.521/cider-classpath.el
+  cider-20210729.521/cider-client.el
+  cider-20210729.521/cider-clojuredocs.el
+  cider-20210729.521/cider-common.el
+  cider-20210729.521/cider-compat.el
+  cider-20210729.521/cider-completion.el
+  cider-20210729.521/cider-connection.el
+  cider-20210729.521/cider-debug.el
+  cider-20210729.521/cider-doc.el
+  cider-20210729.521/cider-eldoc.el
+  cider-20210729.521/cider-eval.el
+  cider-20210729.521/cider-find.el
+  cider-20210729.521/cider-format.el
+  cider-20210729.521/cider-inspector.el
+  cider-20210729.521/cider-macroexpansion.el
+  cider-20210729.521/cider-mode.el
+  cider-20210729.521/cider-ns.el
+  cider-20210729.521/cider-overlays.el
+  cider-20210729.521/cider-pkg.el
+  cider-20210729.521/cider-popup.el
+  cider-20210729.521/cider-profile.el
+  cider-20210729.521/cider-repl-history.el
+  cider-20210729.521/cider-repl.el
+  cider-20210729.521/cider-resolve.el
+  cider-20210729.521/cider-scratch.el
+  cider-20210729.521/cider-selector.el
+  cider-20210729.521/cider-stacktrace.el
+  cider-20210729.521/cider-test.el
+  cider-20210729.521/cider-tracing.el
+  cider-20210729.521/cider-util.el
+  cider-20210729.521/cider-xref.el
+  cider-20210729.521/cider.el
+  cider-20210729.521/nrepl-client.el
+  cider-20210729.521/nrepl-dict.el
+Built cider in 6.398s, finished at 2021-07-29T05:31:51+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  769 Jul 29 02:14 packages/cider-20210706.1151.entry
 852K -rw-r--r-- 1 root root 850K Jul 29 02:14 packages/cider-20210706.1151.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jul 29 02:14 packages/cider-badge.svg
-4.0K -rw-r--r-- 1 root root 3.1K Jul 29 02:14 packages/cider-decompile-20151122.537.el
-4.0K -rw-r--r-- 1 root root  398 Jul 29 02:14 packages/cider-decompile-20151122.537.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 29 02:14 packages/cider-decompile-badge.svg
-4.0K -rw-r--r-- 1 root root  350 Jul 29 02:14 packages/cider-decompile-readme.txt
-4.0K -rw-r--r-- 1 root root  658 Jul 29 02:14 packages/cider-decompile.log
-4.0K -rw-r--r-- 1 root root 2.6K Jul 28 22:58 packages/cider-eval-sexp-fu-20190311.2152.el
-4.0K -rw-r--r-- 1 root root  430 Jul 28 22:58 packages/cider-eval-sexp-fu-20190311.2152.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 28 22:58 packages/cider-eval-sexp-fu-badge.svg
-4.0K -rw-r--r-- 1 root root  132 Jul 28 22:58 packages/cider-eval-sexp-fu-readme.txt
-4.0K -rw-r--r-- 1 root root  189 Jul 29 02:14 packages/cider-eval-sexp-fu.log
-8.0K -rw-r--r-- 1 root root 7.0K Jul 28 22:58 packages/cider-hydra-20190816.1121.el
-4.0K -rw-r--r-- 1 root root  440 Jul 28 22:58 packages/cider-hydra-20190816.1121.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jul 28 22:58 packages/cider-hydra-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jul 28 22:58 packages/cider-hydra-readme.txt
-4.0K -rw-r--r-- 1 root root  143 Jul 29 02:14 packages/cider-hydra.log
-4.0K -rw-r--r-- 1 root root  568 Jul 29 02:14 packages/cider-readme.txt
+4.0K -rw-r--r-- 1 root root  768 Jul 29 05:31 packages/cider-20210729.521.entry
+852K -rw-r--r-- 1 root root 850K Jul 29 05:31 packages/cider-20210729.521.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 29 05:31 packages/cider-badge.svg
+4.0K -rw-r--r-- 1 root root 3.1K Jul 29 05:31 packages/cider-decompile-20151122.537.el
+4.0K -rw-r--r-- 1 root root  398 Jul 29 05:31 packages/cider-decompile-20151122.537.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 29 05:31 packages/cider-decompile-badge.svg
+4.0K -rw-r--r-- 1 root root  350 Jul 29 05:31 packages/cider-decompile-readme.txt
+4.0K -rw-r--r-- 1 root root  658 Jul 29 05:31 packages/cider-decompile.log
+4.0K -rw-r--r-- 1 root root 2.6K Jul 29 05:31 packages/cider-eval-sexp-fu-20190311.2152.el
+4.0K -rw-r--r-- 1 root root  430 Jul 29 05:31 packages/cider-eval-sexp-fu-20190311.2152.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 29 05:31 packages/cider-eval-sexp-fu-badge.svg
+4.0K -rw-r--r-- 1 root root  132 Jul 29 05:31 packages/cider-eval-sexp-fu-readme.txt
+4.0K -rw-r--r-- 1 root root  330 Jul 29 05:31 packages/cider-eval-sexp-fu.log
+8.0K -rw-r--r-- 1 root root 7.0K Jul 29 02:14 packages/cider-hydra-20190816.1121.el
+4.0K -rw-r--r-- 1 root root  440 Jul 29 02:14 packages/cider-hydra-20190816.1121.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jul 29 02:14 packages/cider-hydra-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Jul 29 02:14 packages/cider-hydra-readme.txt
+4.0K -rw-r--r-- 1 root root  168 Jul 29 05:31 packages/cider-hydra.log
+4.0K -rw-r--r-- 1 root root  568 Jul 29 05:31 packages/cider-readme.txt

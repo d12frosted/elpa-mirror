@@ -1,11 +1,11 @@
 (docker-tramp .
-	      [(20210526 748)
+	      [(20210729 508)
 	       ((emacs
 		 (24))
 		(cl-lib
 		 (0 5)))
 	       "TRAMP integration for docker containers" tar
-	       ((:commit . "aaee11cedf7b4c31700f24a1fd88dcef9c2a7c3d")
+	       ((:commit . "7bfbb55417e7d2aac53adf92cb0e3fd329c495c1")
 		(:authors
 		 ("Mario Rodas" . "marsam@users.noreply.github.com"))
 		(:maintainer "Mario Rodas" . "marsam@users.noreply.github.com")

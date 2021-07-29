@@ -3,8 +3,8 @@
 ;; Copyright (C) 2012 ~ 2015 Thierry Volpiatto <thierry.volpiatto@gmail.com>
 
 ;; Package-Requires: ((helm "1.7.8"))
-;; Package-Version: 20210728.1730
-;; Package-Commit: 2763042446219e96acf61da2f6be69fda1ea44af
+;; Package-Version: 20210729.416
+;; Package-Commit: 578b4c5f6f3ab53631ce1dc396f88f2e865e161b
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -295,8 +295,8 @@ See docstring of `helm-ls-git-ls-switches'.
     (helm-force-update)))
 (put 'helm-ls-git-ls-switches 'helm-only t)
 
-(defun helm-ls-git-root-dir (&optional directory)
-  (locate-dominating-file directory (or directory default-directory)) ".git")
+(cl-defun helm-ls-git-root-dir (&optional (directory default-directory))
+  (locate-dominating-file directory ".git"))
 
 (defun helm-ls-git-not-inside-git-repo ()
   (not (helm-ls-git-root-dir)))
@@ -346,7 +346,7 @@ See docstring of `helm-ls-git-ls-switches'.
           (unless (zerop ret)
             (erase-buffer)
             (call-process "git" nil t nil "rev-parse" "--short" "HEAD")))
-        (buffer-substring-no-properties ((point-min))
+        (buffer-substring-no-properties (goto-char (point-min))
                                         (line-end-position)))))
 
 (defun helm-ls-git-header-name (name)
