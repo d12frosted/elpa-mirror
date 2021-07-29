@@ -81,7 +81,8 @@ and `find-file-in-current-directory-by-selected'.
 `ffip-show-diff' execute the backend from `ffip-diff-backends'.
 The output is in Unified Diff Format and inserted into *ffip-diff* buffer.
 Press "o" or "C-c C-c" or "ENTER" or `M-x ffip-diff-find-file' in the
-buffer to open corresponding file.
+buffer to open corresponding file.  Please note some backends assume that the git cli program
+is added into environment variable PATH.
 
 `ffip-diff-find-file-before-hook' is called before `ffip-diff-find-file'.
 

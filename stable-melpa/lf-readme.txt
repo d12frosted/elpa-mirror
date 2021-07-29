@@ -1,10 +1,10 @@
 This library provides common desirable “L”anguage “F”eatures:
 
-0. A unifed interface for defining both variables and functions.  LF-DEFINE.
+0. A unifed interface for defining both variables and functions. LF-DEFINE.
 
-1. A way to define typed, constrained, variables.  LF-DEFINE.
+1. A way to define typed, constrained, variables. LF-DEFINE.
 
-2. A way to define type specifed functions.  LF-DEFINE.
+2. A way to define type specifed functions. LF-DEFINE.
 
 3. A macro to ease variable updates:  (lf-define very-long-name (f it))
                                     ≋ (setq very-long-name (f very-long-name))
