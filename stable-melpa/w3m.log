@@ -4,10 +4,10 @@ Source:  https://github.com/emacs-w3m/emacs-w3m.git
 
 Updating /mnt/store/melpa/working/w3m/
 Checking out origin/HEAD
-Checking out f0baf78897c95799a725d6f9092eef4a55a7f518
+Checking out c9d10534ce78fc863e63980a6324134e4f73c4cd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/w3m/
-  to /tmp/w3mlb19Zh/w3m-20210728.2251
+  to /tmp/w3mNzXrK9/w3m-20210729.2219
     bookmark-w3m.el -> bookmark-w3m.el
     mime-w3m.el -> mime-w3m.el
     w3m-antenna.el -> w3m-antenna.el
@@ -40,10 +40,10 @@ Copying files (->) and directories (=>)
   ! doc/emacs-w3m-ja.texi -> emacs-w3m-ja.texi
   ! doc/emacs-w3m.texi -> emacs-w3m.texi
     icons => icons
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3mlb19Zh/w3m-20210728.2251/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3mNzXrK9/w3m-20210729.2219/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
-HEAD is now at f0baf788 reindent
-HEAD is now at f0baf788 reindent
+HEAD is now at c9d10534 Fix typo 講読→購読
+HEAD is now at c9d10534 Fix typo 講読→購読
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
@@ -52,11 +52,11 @@ HEAD is now at f0baf788 reindent
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
 ")
-Created /tmp/w3mlb19Zh/w3m-20210728.2251/emacs-w3m-ja.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mlb19Zh/w3m-20210728.2251/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/w3mNzXrK9/w3m-20210729.2219/emacs-w3m-ja.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mNzXrK9/w3m-20210729.2219/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
-HEAD is now at f0baf788 reindent
-HEAD is now at f0baf788 reindent
+HEAD is now at c9d10534 Fix typo 講読→購読
+HEAD is now at c9d10534 Fix typo 講読→購読
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
@@ -64,5 +64,128 @@ HEAD is now at f0baf788 reindent
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mlb19Zh/w3m-20210728.2251/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3mNzXrK9/w3m-20210729.2219/emacs-w3m-ja.info
 ")
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3mNzXrK9/w3m-20210729.2219/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
+origin/HEAD set to master
+HEAD is now at c9d10534 Fix typo 講読→購読
+HEAD is now at c9d10534 Fix typo 講読→購読
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:65: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
+install-info: No such file or directory for /tmp/w3mNzXrK9/w3m-20210729.2219/emacs-w3m-ja.info
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:60: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
+")
+Created /tmp/w3mNzXrK9/w3m-20210729.2219/emacs-w3m.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mNzXrK9/w3m-20210729.2219/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
+origin/HEAD set to master
+HEAD is now at c9d10534 Fix typo 講読→購読
+HEAD is now at c9d10534 Fix typo 講読→購読
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:65: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
+install-info: No such file or directory for /tmp/w3mNzXrK9/w3m-20210729.2219/emacs-w3m-ja.info
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:60: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
+/mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
+install-info: No such file or directory for /tmp/w3mNzXrK9/w3m-20210729.2219/emacs-w3m.info
+")
+Created w3m-20210729.2219.tar containing:
+  w3m-20210729.2219/
+  w3m-20210729.2219/bookmark-w3m.el
+  w3m-20210729.2219/dir
+  w3m-20210729.2219/icons/
+  w3m-20210729.2219/icons/antenna-up.png
+  w3m-20210729.2219/icons/antenna-up.xpm
+  w3m-20210729.2219/icons/back-disabled.png
+  w3m-20210729.2219/icons/back-disabled.xpm
+  w3m-20210729.2219/icons/back-up.png
+  w3m-20210729.2219/icons/back-up.xpm
+  w3m-20210729.2219/icons/copy-up.png
+  w3m-20210729.2219/icons/copy-up.xpm
+  w3m-20210729.2219/icons/db-history-up.png
+  w3m-20210729.2219/icons/db-history-up.xpm
+  w3m-20210729.2219/icons/forward-disabled.png
+  w3m-20210729.2219/icons/forward-disabled.xpm
+  w3m-20210729.2219/icons/forward-up.png
+  w3m-20210729.2219/icons/forward-up.xpm
+  w3m-20210729.2219/icons/history-up.png
+  w3m-20210729.2219/icons/history-up.xpm
+  w3m-20210729.2219/icons/home-up.png
+  w3m-20210729.2219/icons/home-up.xpm
+  w3m-20210729.2219/icons/image-up.png
+  w3m-20210729.2219/icons/image-up.xpm
+  w3m-20210729.2219/icons/open-up.png
+  w3m-20210729.2219/icons/open-up.xpm
+  w3m-20210729.2219/icons/parent-disabled.png
+  w3m-20210729.2219/icons/parent-disabled.xpm
+  w3m-20210729.2219/icons/parent-up.png
+  w3m-20210729.2219/icons/parent-up.xpm
+  w3m-20210729.2219/icons/reload-up.png
+  w3m-20210729.2219/icons/reload-up.xpm
+  w3m-20210729.2219/icons/save-up.png
+  w3m-20210729.2219/icons/save-up.xpm
+  w3m-20210729.2219/icons/search-up.png
+  w3m-20210729.2219/icons/search-up.xpm
+  w3m-20210729.2219/icons/spinner.gif
+  w3m-20210729.2219/icons/state-00.png
+  w3m-20210729.2219/icons/state-00.xpm
+  w3m-20210729.2219/icons/state-01.png
+  w3m-20210729.2219/icons/state-01.xpm
+  w3m-20210729.2219/icons/state-10.png
+  w3m-20210729.2219/icons/state-10.xpm
+  w3m-20210729.2219/icons/state-11.png
+  w3m-20210729.2219/icons/state-11.xpm
+  w3m-20210729.2219/icons/weather-up.png
+  w3m-20210729.2219/icons/weather-up.xpm
+  w3m-20210729.2219/mime-w3m.el
+  w3m-20210729.2219/w3m-antenna.el
+  w3m-20210729.2219/w3m-bookmark.el
+  w3m-20210729.2219/w3m-bug.el
+  w3m-20210729.2219/w3m-cookie.el
+  w3m-20210729.2219/w3m-dtree.el
+  w3m-20210729.2219/w3m-ems.el
+  w3m-20210729.2219/w3m-favicon.el
+  w3m-20210729.2219/w3m-fb.el
+  w3m-20210729.2219/w3m-filter.el
+  w3m-20210729.2219/w3m-form.el
+  w3m-20210729.2219/w3m-hist.el
+  w3m-20210729.2219/w3m-image.el
+  w3m-20210729.2219/w3m-lnum.el
+  w3m-20210729.2219/w3m-mail.el
+  w3m-20210729.2219/w3m-namazu.el
+  w3m-20210729.2219/w3m-perldoc.el
+  w3m-20210729.2219/w3m-pkg.el
+  w3m-20210729.2219/w3m-proc.el
+  w3m-20210729.2219/w3m-rss.el
+  w3m-20210729.2219/w3m-save.el
+  w3m-20210729.2219/w3m-search.el
+  w3m-20210729.2219/w3m-session.el
+  w3m-20210729.2219/w3m-symbol.el
+  w3m-20210729.2219/w3m-tabmenu.el
+  w3m-20210729.2219/w3m-util.el
+  w3m-20210729.2219/w3m-weather.el
+  w3m-20210729.2219/w3m.el
+  w3m-20210729.2219/w3mhack.el
+Built w3m in 29.333s, finished at 2021-07-30T02:59:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  180 Jul 30 02:59 packages/w3m-20210729.2219.entry
+1.1M -rw-r--r-- 1 root root 1.1M Jul 30 02:59 packages/w3m-20210729.2219.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jul 30 02:59 packages/w3m-badge.svg
+4.0K -rw-r--r-- 1 root root  380 Jul 30 02:59 packages/w3m-readme.txt
