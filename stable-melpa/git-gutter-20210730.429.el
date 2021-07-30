@@ -8,8 +8,8 @@
 ;; Maintainer: Neil Okamoto <neil.okamoto+melpa@gmail.com>
 ;;             Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/emacsorphanage/git-gutter
-;; Package-Version: 20210703.1007
-;; Package-Commit: 35aa068bc2bd6ad8b0070d9f3948d30b76c2e939
+;; Package-Version: 20210730.429
+;; Package-Commit: 033e012372cbdeaadd2b1c46cbbf15daef0c33b6
 ;; Version: 0.91
 ;; Package-Requires: ((emacs "24.3"))
 
@@ -332,9 +332,9 @@ Argument TEST is the case before BODY execution."
   (let (args)
     (unless (string= git-gutter:diff-option "")
       (setq args (nreverse (split-string git-gutter:diff-option))))
-    (push "--" args)
     (when (git-gutter:revision-set-p)
       (push git-gutter:start-revision args))
+    (push "--" args)
     (nreverse (cons file args))))
 
 (defun git-gutter:start-git-diff-process (file proc-buf)
