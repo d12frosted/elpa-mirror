@@ -6,9 +6,9 @@
 
 ;; Author: Paul W. Rankin <pwr@bydasein.com>
 ;; Keywords: wp, text
-;; Package-Version: 20210510.100
-;; Package-Commit: 4a0719021625ece4def8f18d28f86a681bee7d28
-;; Version: 1.11.5
+;; Package-Version: 20210714.1501
+;; Package-Commit: 6c2a9cd7befa9b36b62776158541fde53996ee02
+;; Version: 2.0.0
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/rnkn/olivetti
 
@@ -44,7 +44,7 @@
 ;;  - Interactively change body width with:
 ;;    olivetti-shrink C-c { { { ...
 ;;    olivetti-expand C-c } } } ...
-;;    olivetti-set-width C-c \
+;;    olivetti-set-width C-c |
 ;;  - If olivetti-body-width is an integer, the text body width will
 ;;    scale with use of text-scale-mode, whereas if a fraction (float) then
 ;;    the text body width will remain at that fraction.
@@ -52,17 +52,13 @@
 ;;    recall its state on exit.
 
 ;; Olivetti keeps everything it does buffer-local, so you can write prose
-;; in one buffer and code in another, side-by-side in the same frame. For
-;; those looking for a hardcore distraction-free writing mode with a much
-;; larger scope, I recommend writeroom-mode:
-;; <https://github.com/joostkremers/writeroom-mode>.
+;; in one buffer and code in another, side-by-side in the same frame.
 
 
 ;; Requirements
 ;; ------------
 
 ;;  - Emacs 24.4
-;;  - seq 2.20 (part of Emacs 25 and later)
 
 
 ;; Installation
@@ -119,10 +115,17 @@
 ;; See (info "(emacs) File Variables")
 
 
+;; Alternatives
+;; ------------
+
+;; For those looking for a hardcore distraction-free writing mode with a much
+;; larger scope, I recommend writeroom-mode:
+;; <https://github.com/joostkremers/writeroom-mode>.
+
+
 ;; [1]: https://stable.melpa.org/#/olivetti
 ;; [2]: https://melpa.org/#/olivetti
 
-
 ;;; Code:
 
 (defgroup olivetti ()
@@ -131,7 +134,7 @@
   :group 'text)
 
 
-;;; Variables
+;;; Internal Variables ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (eval-when-compile
   (require 'lisp-mnt)
@@ -150,13 +153,17 @@
 (defvar-local olivetti--min-margins
   '(0 . 0)
   "Cons cell of minimum width in columns for left and right margins.
-
 The `min-margins' window parameter is set to this value, which is
 only used when splitting windows and has no effect on interactive
 operation.")
 
+(defvar-local olivetti--face-remap
+  nil
+  "Saved cookie from `face-remap-add-relative' when
+`olivetti-mode' is enabled.")
+
 
-;;; Options
+;;; Options ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defcustom olivetti-mode-on-hook
   '(visual-line-mode)
@@ -166,29 +173,31 @@ operation.")
   :safe 'hook)
 
 (defcustom olivetti-body-width
-  70
+  nil
   "Text body width to which to adjust relative margin width.
-
 If an integer, set text body width to that integer in columns; if
-a floating point between 0.0 and 1.0, set text body width to
-that fraction of the total window width.
+a floating point between 0.0 and 1.0, set text body width to that
+fraction of the total window width. If nil (the default), use the
+value of `fill-column' + 2.
 
 An integer is best if you want text body width to remain
 constant, while a floating point is best if you want text body
 width to change with window width.
 
 The floating point can anything between 0.0 and 1.0 (exclusive),
-but it's better to use a value between about 0.33 and 0.9 for
-best effect.
+but use a value between about 0.33 and 0.9 for best effect.
 
 This option does not affect file contents."
-  :type '(choice (integer 70) (float 0.5))
-  :safe 'numberp)
+  :type '(choice (const :tag "Value of fill-column + 2" nil)
+                 (integer 72)
+                 (float 0.5))
+  :safe (lambda (value)
+          (or (numberp value) (null value))))
 (make-variable-buffer-local 'olivetti-body-width)
 
-(defcustom olivetti-minimum-body-width
+(defcustom olivetti-min-body-width
   40
-  "Minimum width in columns that text body width may be set."
+  "Minimum width in columns of text body."
   :type 'integer
   :safe 'integerp)
 
@@ -198,74 +207,78 @@ This option does not affect file contents."
   :type '(choice (const :tag "No lighter" "") string)
   :safe 'stringp)
 
-(make-obsolete-variable 'olivetti-enable-visual-line-mode
-                        'olivetti-mode-on-hook "1.11.0" 'set)
-
-(defcustom olivetti-enable-visual-line-mode
-  t
-  "When non-nil, `visual-line-mode' is enabled with `olivetti-mode'.
-
-This option is obsolete; use `olivetti-mode-on-hook' instead.
-Setting this option automatically adds or removes
-`visual-line-mode' to that hook."
-  :type 'boolean
-  :set (lambda (symbol value)
-         (set-default symbol value)
-         (if value
-             (add-hook 'olivetti-mode-on-hook 'visual-line-mode)
-           (remove-hook 'olivetti-mode-on-hook 'visual-line-mode))))
-
 (defcustom olivetti-recall-visual-line-mode-entry-state
   t
   "Recall the state of `visual-line-mode' upon exiting.
-
 When non-nil, remember if `visual-line-mode' was enabled or not
 upon activating `olivetti-mode' and restore that state upon
 exiting."
   :type 'boolean
   :safe 'booleanp)
 
+(defcustom olivetti-style
+  nil
+  "Window elements used to balance the text body.
+Valid options are:
+
+    nil         use margins (default)
+    fringes     use fringes
+    t           use both fringes and margins (with fringes outside)
+
+n.b. Fringes are only available on a graphical display."
+  :type '(choice (const :tag "Margins" nil)
+                 (const :tag "Fringes" fringes)
+                 (const :tag "Fringes and Margins" t))
+  :set (lambda (symbol value)
+         (set-default symbol value)
+         (when (featurep 'olivetti)
+           (olivetti-reset-all-windows))))
+
+(defcustom olivetti-margin-width
+  12
+  "Width in columns for margins between text body and fringes.
+Only has any effect when `olivetti-style' is non-nil and not
+`fringes'."
+  :type 'integer
+  :safe 'integerp)
+
+(defface olivetti-fringe
+  '((t (:inherit fringe)))
+  "Face for the fringes when `olivetti-style' is non-nil."
+  :group 'olivetti)
+
 
-;;; Set Windows
+;;; Set Windows ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun olivetti-safe-width (width window)
-  "Parse WIDTH to a safe value for `olivetti-body-width' for WINDOW.
-
-May return a float with many digits of precision."
-  (let ((window-width (window-total-width window))
-        (fringes (window-fringes window))
-        (min-width (+ olivetti-minimum-body-width
-                      (% olivetti-minimum-body-width 2))))
-    (setq window-width
-          (- window-width
-             (/ (* (max (car fringes) (cadr fringes)) 2)
-                (float (frame-char-width (window-frame window))))
-             (% window-width 2)))
-    (cond ((integerp width)
-           (max min-width (min width (floor window-width))))
-          ((floatp width)
-           (max (/ min-width window-width) (min width 1.0)))
-          (t
-           (message "`olivetti-body-width' must be an integer or a float")
-           (eval (car (get 'olivetti-body-width 'standard-value)))))))
-
-(defun olivetti-scale-width (n)
-  "Scale N in accordance with the face height.
-
+(defun olivetti-scale-width (width)
+  "Scale WIDTH in accordance with the face height.
 For compatibility with `text-scale-mode', if
 `face-remapping-alist' includes a :height property on the default
-face, scale N by that factor if it is a fraction, by (height/100)
-if it is an integer, and otherwise scale by 1 (i.e. return N)."
+face, scale WIDTH by that factor if it is a fraction, by (height/100)
+if it is an integer, and otherwise return WIDTH."
   (let ((height (plist-get (cadr (assq 'default face-remapping-alist)) :height)))
-    (cond ((integerp height) (* n (/ height 100.0)))
-          ((floatp height)   (* n height))
-          (t                 (* n 1)))))
+    (when (integerp height)
+      (setq height (/ height 100.0)))
+    (round (* width (or height 1)))))
+
+(defun olivetti-normalize-width (width window)
+  "Parse WIDTH to a safe pixel value for `olivetti-body-width' for WINDOW."
+  (let ((char-width (frame-char-width (window-frame window)))
+        (window-width-pix (window-body-width window t))
+        width-pix min-width-pix)
+    (setq min-width-pix (* char-width
+                           (+ olivetti-min-body-width
+                              (% olivetti-min-body-width 2))))
+    (olivetti-scale-width
+     (if (floatp width)
+         (floor (max min-width-pix (* window-width-pix (min width 1.0))))
+       (max min-width-pix (min (* width char-width) window-width-pix))))))
 
 (defun olivetti-reset-window (window)
   "Remove Olivetti's parameters and margins from WINDOW."
   (when (eq (window-parameter window 'split-window) 'olivetti-split-window)
     (set-window-parameter window 'split-window nil))
-  (set-window-parameter window 'min-margins nil)
+  (set-window-fringes window fringe-mode fringe-mode)
   (set-window-margins window nil))
 
 (defun olivetti-reset-all-windows ()
@@ -286,67 +299,81 @@ Pass WINDOW unchanged."
 
 (defun olivetti-set-window (window-or-frame)
   "Balance window margins displaying current buffer.
-
 If WINDOW-OR-FRAME is a frame, cycle through windows displaying
 current buffer in that frame, otherwise only work on the selected
-window.
-
-First find the `olivetti-safe-width' to which to set
-`olivetti-body-width', then find the appropriate margin size
-relative to each window. Finally set the window margins, taking
-care that the maximum size is 0."
+window."
   (if (framep window-or-frame)
-      (mapc #'olivetti-set-window (get-buffer-window-list nil nil window-or-frame))
+      (mapc #'olivetti-set-window
+            (get-buffer-window-list nil nil window-or-frame))
     ;; WINDOW-OR-FRAME passed below *must* be a window
     (with-selected-window window-or-frame
       (olivetti-reset-window window-or-frame)
       (when olivetti-mode
-        (let ((frame        (window-frame window-or-frame))
-              (body-width   (olivetti-safe-width olivetti-body-width window-or-frame))
-              (window-width (window-total-width window-or-frame))
-              (fringes      (window-fringes window-or-frame))
-              left-fringe right-fringe margin-total left-margin right-margin)
-          (cond ((integerp body-width)
-                 (setq body-width (olivetti-scale-width body-width)))
-                ((floatp body-width)
-                 (setq body-width (* window-width body-width))))
-          (setq left-fringe  (/ (car fringes)  (float (frame-char-width frame)))
-                right-fringe (/ (cadr fringes) (float (frame-char-width frame))))
-          (setq margin-total (max (/     (- window-width body-width) 2) 0)
-                left-margin  (max (round (- margin-total left-fringe))  0)
-                right-margin (max (round (- margin-total right-fringe)) 0))
-          (set-window-margins window-or-frame left-margin right-margin))
-        (set-window-parameter window-or-frame 'split-window 'olivetti-split-window)
-        (set-window-parameter window-or-frame 'min-margins
-                              (cons (max (car olivetti--min-margins) 0)
-                                    (max (cdr olivetti--min-margins) 0)))))))
+        ;; If `olivetti-body-width' is nil, we need to calculate from
+        ;; `fill-column'
+        (when (null olivetti-body-width)
+          (setq olivetti-body-width (+ fill-column 2)))
+        (let ((frame            (window-frame window-or-frame))
+              (char-width-pix   (frame-char-width (window-frame window-or-frame)))
+              (window-width-pix (window-body-width window-or-frame t))
+              (safe-width-pix   (olivetti-normalize-width
+                                 olivetti-body-width window-or-frame)))
+          ;; Handle possible display of fringes
+          (when (and window-system olivetti-style)
+            (let ((fringe-total (- (window-pixel-width window-or-frame)
+                                   safe-width-pix))
+                  fringe)
+              ;; Account for `olivetti-margin-width'
+              (unless (eq olivetti-style 'fringes)
+                (setq fringe-total
+                      (- fringe-total
+                         (* olivetti-margin-width char-width-pix 2))))
+              (setq fringe (max (round (/ (float fringe-total) 2)) 0))
+              ;; Set the fringes
+              (set-window-fringes window-or-frame fringe fringe t)))
+          ;; Calculate margins widths as body pixel width less fringes
+            (let ((fringes (window-fringes window-or-frame))
+                  (margin-total-pix (/ (- window-width-pix safe-width-pix) 2))
+                  left-margin right-margin)
+              (unless (eq olivetti-style 'fringes)
+                ;; Convert to character cell columns
+                (setq left-margin   (max (round (/ (- margin-total-pix
+                                                      (car fringes))
+                                                   char-width-pix))
+                                         0)
+                      right-margin  (max (round (/ (- margin-total-pix
+                                                      (cadr fringes))
+                                                   char-width-pix))
+                                         0)))
+              ;; Finally set the margins
+              (set-window-margins window-or-frame left-margin right-margin)))
+        ;; Set remaining window parameters
+        (set-window-parameter window-or-frame 'split-window 'olivetti-split-window)))))
 
 (defun olivetti-set-buffer-windows ()
   "Balance window margins in all windows displaying current buffer.
-
 Cycle through all windows in all visible frames displaying the
 current buffer, and call `olivetti-set-window'."
   (mapc #'olivetti-set-window (get-buffer-window-list nil nil 'visible)))
 
 
-;;; Width Interaction
+;;; Width Interaction ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(defun olivetti-set-width (n)
-  "Set text body width to N with relative margins.
-
-N may be an integer specifying columns or a float specifying a
-fraction of the window width."
+(defun olivetti-set-width (width)
+  "Set text body width to WIDTH with relative margins.
+WIDTH may be an integer specifying columns or a float specifying
+a fraction of the window width."
   (interactive
-   (list (or current-prefix-arg
-             (read-number "Set text body width (integer or float): "
-                          olivetti-body-width))))
-  (setq olivetti-body-width n)
+   (list (if current-prefix-arg
+             (prefix-numeric-value current-prefix-arg)
+           (read-number "Set text body width (integer or float): "
+                        olivetti-body-width))))
+  (setq olivetti-body-width width)
   (olivetti-set-buffer-windows)
   (message "Text body width set to %s" olivetti-body-width))
 
 (defun olivetti-expand (&optional arg)
   "Incrementally increase the value of `olivetti-body-width'.
-
 If prefixed with ARG, incrementally decrease."
   (interactive "P")
   (let* ((p (if arg -1 1))
@@ -354,7 +381,7 @@ If prefixed with ARG, incrementally decrease."
                    (+ olivetti-body-width (* 2 p)))
                   ((floatp olivetti-body-width)
                    (+ olivetti-body-width (* 0.01 p))))))
-    (setq olivetti-body-width (olivetti-safe-width n (selected-window))))
+    (setq olivetti-body-width n))
   (olivetti-set-buffer-windows)
   (message "Text body width set to %s" olivetti-body-width)
   (unless overriding-terminal-local-map
@@ -367,23 +394,24 @@ If prefixed with ARG, incrementally decrease."
 
 (defun olivetti-shrink (&optional arg)
   "Incrementally decrease the value of `olivetti-body-width'.
-
 If prefixed with ARG, incrementally increase."
   (interactive "P")
   (let ((p (unless arg t)))
     (olivetti-expand p)))
 
 
-;;; Keymap
+;;; Keymap ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 (defvar olivetti-mode-map
   (let ((map (make-sparse-keymap)))
     (define-key map (kbd "C-c }") #'olivetti-expand)
     (define-key map (kbd "C-c {") #'olivetti-shrink)
     (define-key map (kbd "C-c |") #'olivetti-set-width)
-    (define-key map (kbd "C-c \\") #'olivetti-set-width)
-	(define-key map [left-margin mouse-1] #'mouse-set-point)
-	(define-key map [right-margin mouse-1] #'mouse-set-point)
+    (define-key map (kbd "C-c \\") #'olivetti-set-width) ;; OBSOLETE
+    (define-key map [left-margin mouse-1] #'mouse-set-point)
+    (define-key map [right-margin mouse-1] #'mouse-set-point)
+    (define-key map [left-fringe mouse-1] #'mouse-set-point)
+    (define-key map [right-fringe mouse-1] #'mouse-set-point)
     ;; This code is taken from https://github.com/joostkremers/visual-fill-column
     (when (bound-and-true-p mouse-wheel-mode)
       (define-key map (vector 'left-margin mouse-wheel-down-event) 'mwheel-scroll)
@@ -394,15 +422,11 @@ If prefixed with ARG, incrementally increase."
   "Mode map for `olivetti-mode'.")
 
 
-;;; Mode Definition
-
-(define-obsolete-function-alias 'turn-on-olivetti-mode
-  #'olivetti-mode "1.7.0")
+;;; Mode Definition ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
 ;;;###autoload
 (define-minor-mode olivetti-mode
   "Olivetti provides a nice writing environment.
-
 Window margins are set to relative widths to accomodate a text
 body width set with `olivetti-body-width'."
   :init-value nil
@@ -432,6 +456,8 @@ body width set with `olivetti-body-width'."
                 split-window-preferred-function))
         (setq-local split-window-preferred-function
                     #'olivetti-split-window-sensibly)
+        (setq olivetti--face-remap
+              (face-remap-add-relative 'fringe 'olivetti-fringe))
         (olivetti-set-buffer-windows))
     (remove-hook 'window-configuration-change-hook
                  #'olivetti-set-buffer-windows t)
@@ -440,12 +466,16 @@ body width set with `olivetti-body-width'."
     (remove-hook 'text-scale-mode-hook
                  #'olivetti-set-window t)
     (olivetti-set-buffer-windows)
+    (when olivetti--face-remap
+      (face-remap-remove-relative olivetti--face-remap))
     (when olivetti-recall-visual-line-mode-entry-state
-	  (if olivetti--visual-line-mode
-		  (when (not visual-line-mode) (visual-line-mode 1))
-		(when visual-line-mode (visual-line-mode 0))))
+      (if olivetti--visual-line-mode
+          (when (not visual-line-mode) (visual-line-mode 1))
+        (when visual-line-mode (visual-line-mode 0))))
     (mapc #'kill-local-variable '(split-window-preferred-function
+                                  olivetti-body-width
                                   olivetti--visual-line-mode
+                                  olivetti--face-remap
                                   olivetti--split-window-preferred-function
                                   olivetti--min-margins))))
 

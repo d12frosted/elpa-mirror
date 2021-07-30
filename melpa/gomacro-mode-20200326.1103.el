@@ -4,6 +4,8 @@
 
 ;; Author: Petter Storvik
 ;; URL: https://github.com/storvik/gomacro-mode
+;; Package-Version: 20200326.1103
+;; Package-Commit: 3112e56d2d5e645a3e0fd877f3e810dbccbf989f
 ;; Version: 0.1.0
 ;; Created: 2019-10-28
 ;; Package-Requires: ((emacs "24.4") (go-mode "1.5.0"))

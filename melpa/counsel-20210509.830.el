@@ -5,7 +5,7 @@
 ;; Author: Oleh Krehel <ohwoeowho@gmail.com>
 ;; URL: https://github.com/abo-abo/swiper
 ;; Package-Version: 20210509.830
-;; Package-Commit: 031d4d051da1d8fd20f0f46e8df66c426bf3174c
+;; Package-Commit: 20d78ae4fe2b128411f0ddb0aa22ba25aa5d6d3f
 ;; Version: 0.13.4
 ;; Package-Requires: ((emacs "24.5") (ivy "0.13.4") (swiper "0.13.4"))
 ;; Keywords: convenience, matching, tools
