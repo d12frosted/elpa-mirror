@@ -1,4 +1,3 @@
-
 Lets you auto-format source code in many languages using the same
 command for all languages, instead of learning a different Emacs
 package and formatting command for each language.
@@ -44,12 +43,12 @@ Supported languages:
 - Kotlin (ktlint)
 - LaTeX (latexindent, auctex)
 - Ledger (ledger-mode)
-- Lua (lua-fmt, prettier plugin-lua)
+- Lua (lua-fmt, prettier plugin)
 - Markdown (prettier)
 - Nix (nixpkgs-fmt, nixfmt)
 - OCaml (ocp-indent)
 - Perl (perltidy)
-- PHP (prettier plugin-php)
+- PHP (prettier plugin)
 - Protocol Buffers (clang-format)
 - PureScript (purty)
 - Python (black, yapf)
@@ -61,11 +60,12 @@ Supported languages:
 - Scala (scalafmt)
 - Shell script (beautysh, shfmt)
 - Snakemake (snakefmt)
-- Solidity (prettier prettier-plugin-solidity)
+- Solidity (prettier plugin)
 - SQL (pgformatter, sqlformat)
+- Svelte (prettier plugin)
 - Swift (swiftformat)
 - Terraform (terraform fmt)
-- TOML (prettier prettier-plugin-toml)
+- TOML (prettier plugin)
 - TypeScript/TSX (prettier)
 - V (v fmt)
 - Verilog (iStyle)
