@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/ahyatt/emacs-websocket
 ;; Keywords: Communication, Websocket, Server
 ;; Package-Version: 20210110.17
-;; Package-Commit: 34e11124fdd9d73e431499ba8a6b6a8023519664
+;; Package-Commit: fda4455333309545c0787a79d73c19ddbeb57980
 ;; Version: 1.13
 ;; Package-Requires: ((cl-lib "0.5"))
 ;;

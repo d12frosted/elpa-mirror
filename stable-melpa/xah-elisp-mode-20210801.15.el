@@ -3,11 +3,11 @@
 ;; Copyright © 2013-2021, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 3.11.20210626220812
-;; Package-Version: 20210627.508
-;; Package-Commit: 86ddb3ce73bb2a844a126e42386571ca8e884260
+;; Version: 3.15.20210731171103
+;; Package-Version: 20210801.15
+;; Package-Commit: 11c77ead22e790b7d4c5aabf52bbc5e2248695d8
 ;; Created: 23 Mar 2013
-;; Package-Requires: ((emacs "24.3"))
+;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: lisp, languages
 ;; License: GPL v3
 ;; Homepage: http://ergoemacs.org/emacs/xah-elisp-mode.html
@@ -2648,17 +2648,17 @@
 (defvar xah-elisp-all-symbols nil "List of all elisp symbols.")
 (setq xah-elisp-all-symbols nil)
 
-;; (setq xah-elisp-all-symbols
-;;       (append
-;;        xah-elisp-ampersand-words
-;;        xah-elisp-functions
-;;        xah-elisp-special-forms
-;;        xah-elisp-macros
-;;        xah-elisp-commands
-;;        xah-elisp-user-options
-;;        xah-elisp-variables ))
+(setq xah-elisp-all-symbols
+      (append
+       xah-elisp-ampersand-words
+       xah-elisp-functions
+       xah-elisp-special-forms
+       xah-elisp-macros
+       xah-elisp-commands
+       xah-elisp-user-options
+       xah-elisp-variables ))
 
-(mapatoms (lambda (x) (push (symbol-name x) xah-elisp-all-symbols)) obarray )
+;; (mapatoms (lambda (x) (push (symbol-name x) xah-elisp-all-symbols)) obarray )
 
 ;; (length xah-elisp-all-symbols )
 ;; 46694. on gnu emacs sans init, about 15k
@@ -3015,6 +3015,7 @@ Version 2017-01-27"
     ("sp" "start-process" xah-elisp--ahf)
     ("sr" "save-restriction" xah-elisp--ahf)
     ("ss" "split-string" xah-elisp--ahf)
+    ("ue" "user-error" xah-elisp--ahf)
     ("vc" "vconcat" xah-elisp--ahf)
     ("wg" "widget-get" xah-elisp--ahf)
     ("wr" "write-region" xah-elisp--ahf)
@@ -3660,22 +3661,16 @@ URL `http://ergoemacs.org/emacs/xah-elisp-mode.html'
       (add-hook 'completion-at-point-functions 'elisp-completion-at-point nil 'local)))
 
   (make-local-variable 'abbrev-expand-function)
-  (if (version< emacs-version "24.4")
-      (add-hook 'abbrev-expand-functions 'xah-elisp-expand-abbrev nil t)
-    (setq abbrev-expand-function 'xah-elisp-expand-abbrev))
+  (setq abbrev-expand-function 'xah-elisp-expand-abbrev)
 
   (abbrev-mode 1)
 
   (xah-elisp-display-page-break-as-line)
   (setq prettify-symbols-alist '(("lambda" . 955)))
 
-  (if (version< emacs-version "25")
-      (progn
-        (make-local-variable 'ido-separator)
-        (setq ido-separator "\n"))
-    (progn
-      (make-local-variable 'ido-decorations)
-      (setf (nth 2 ido-decorations) "\n")))
+  (progn
+    (make-local-variable 'ido-decorations)
+    (setf (nth 2 ido-decorations) "\n"))
 
   :group 'xah-elisp-mode
   )
