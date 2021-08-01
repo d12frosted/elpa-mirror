@@ -4,10 +4,10 @@ Source:  https://github.com/jcs-elpa/docstr.git
 
 Updating /mnt/store/melpa/working/docstr/
 Checking out origin/HEAD
-Checking out 5b80126a71662a4bcd3dff7cfbcf70954610092e
+Checking out aa8c20d162d5e0b3a8677f2f4f3519ce6fdbe2e5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docstr/
-  to /tmp/docstrI4JXDp/docstr-20210417.1315
+  to /tmp/docstrI4Ljv6/docstr-20210801.643
     docstr-faces.el -> docstr-faces.el
     docstr-key.el -> docstr-key.el
     docstr-util.el -> docstr-util.el
@@ -30,34 +30,36 @@ Copying files (->) and directories (=>)
   ! langs/docstr-scala.el -> docstr-scala.el
   ! langs/docstr-swift.el -> docstr-swift.el
   ! langs/docstr-typescript.el -> docstr-typescript.el
-Created docstr-20210417.1315.tar containing:
-  docstr-20210417.1315/
-  docstr-20210417.1315/docstr-actionscript.el
-  docstr-20210417.1315/docstr-c++.el
-  docstr-20210417.1315/docstr-c.el
-  docstr-20210417.1315/docstr-csharp.el
-  docstr-20210417.1315/docstr-faces.el
-  docstr-20210417.1315/docstr-go.el
-  docstr-20210417.1315/docstr-groovy.el
-  docstr-20210417.1315/docstr-java.el
-  docstr-20210417.1315/docstr-js.el
-  docstr-20210417.1315/docstr-key.el
-  docstr-20210417.1315/docstr-lua.el
-  docstr-20210417.1315/docstr-objc.el
-  docstr-20210417.1315/docstr-php.el
-  docstr-20210417.1315/docstr-pkg.el
-  docstr-20210417.1315/docstr-python.el
-  docstr-20210417.1315/docstr-ruby.el
-  docstr-20210417.1315/docstr-rust.el
-  docstr-20210417.1315/docstr-scala.el
-  docstr-20210417.1315/docstr-swift.el
-  docstr-20210417.1315/docstr-typescript.el
-  docstr-20210417.1315/docstr-util.el
-  docstr-20210417.1315/docstr-writers.el
-  docstr-20210417.1315/docstr.el
-Built docstr in 4.701s, finished at 2021-08-01T05:58:57+0000
+Created docstr-20210801.643.tar containing:
+  docstr-20210801.643/
+  docstr-20210801.643/docstr-actionscript.el
+  docstr-20210801.643/docstr-c++.el
+  docstr-20210801.643/docstr-c.el
+  docstr-20210801.643/docstr-csharp.el
+  docstr-20210801.643/docstr-faces.el
+  docstr-20210801.643/docstr-go.el
+  docstr-20210801.643/docstr-groovy.el
+  docstr-20210801.643/docstr-java.el
+  docstr-20210801.643/docstr-js.el
+  docstr-20210801.643/docstr-key.el
+  docstr-20210801.643/docstr-lua.el
+  docstr-20210801.643/docstr-objc.el
+  docstr-20210801.643/docstr-php.el
+  docstr-20210801.643/docstr-pkg.el
+  docstr-20210801.643/docstr-python.el
+  docstr-20210801.643/docstr-ruby.el
+  docstr-20210801.643/docstr-rust.el
+  docstr-20210801.643/docstr-scala.el
+  docstr-20210801.643/docstr-swift.el
+  docstr-20210801.643/docstr-typescript.el
+  docstr-20210801.643/docstr-util.el
+  docstr-20210801.643/docstr-writers.el
+  docstr-20210801.643/docstr.el
+Built docstr in 5.881s, finished at 2021-08-01T09:29:05+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  338 Aug  1 05:58 packages/docstr-20210417.1315.entry
 120K -rw-r--r-- 1 root root 120K Aug  1 05:58 packages/docstr-20210417.1315.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  1 05:58 packages/docstr-badge.svg
-4.0K -rw-r--r-- 1 root root   82 Aug  1 05:58 packages/docstr-readme.txt
+4.0K -rw-r--r-- 1 root root  337 Aug  1 09:29 packages/docstr-20210801.643.entry
+120K -rw-r--r-- 1 root root 120K Aug  1 09:29 packages/docstr-20210801.643.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  1 09:29 packages/docstr-badge.svg
+4.0K -rw-r--r-- 1 root root   82 Aug  1 09:29 packages/docstr-readme.txt

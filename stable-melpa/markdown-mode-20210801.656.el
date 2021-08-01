@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.5-dev
-;; Package-Version: 20210728.756
-;; Package-Commit: 8158bc8239c531756fbf6602f4b4dea8d52eb4cc
+;; Package-Version: 20210801.656
+;; Package-Commit: f28e263b915d48ee9757990da1cdd160b355cb8c
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -3421,7 +3421,8 @@ SEQ may be an atom or a sequence."
 
 (defun markdown-fontify-list-items (last)
   "Apply font-lock properties to list markers from point to LAST."
-  (when (markdown-match-list-items last)
+  (when (and (markdown-match-list-items last)
+             (not (markdown-code-block-at-point-p (match-beginning 2))))
     (let* ((indent (length (match-string-no-properties 1)))
            (level (/ indent markdown-list-indent-width)) ;; level = 0, 1, 2, ...
            (bullet (nth (mod level (length markdown-list-item-bullets))
