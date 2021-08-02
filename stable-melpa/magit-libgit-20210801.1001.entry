@@ -1,0 +1,15 @@
+(magit-libgit .
+	      [(20210801 1001)
+	       ((emacs
+		 (26 1))
+		(magit
+		 (3 2 0))
+		(libgit
+		 (0)))
+	       "Libgit functionality" single
+	       ((:commit . "bcfd92fcf7a91a53f48536b52c558b4264aac0c9")
+		(:authors
+		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		(:keywords "git" "tools" "vc")
+		(:url . "https://github.com/magit/magit"))])
