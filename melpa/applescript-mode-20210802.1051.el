@@ -13,8 +13,8 @@
 
 ;; Author: sakito <sakito@users.sourceforge.jp>
 ;; URL: https://github.com/emacsorphanage/applescript-mode
-;; Package-Version: 20210223.1539
-;; Package-Commit: 267a1453f58a6a6577a1d5752c876fdaa2896a6d
+;; Package-Version: 20210802.1051
+;; Package-Commit: 1637356dba0d012a6533da9c63130077fcfb6271
 ;; Keywords: languages, tools
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.3"))
@@ -346,6 +346,12 @@ contain this package.")
 
 (when (not (or (rassq 'applescript-mode auto-mode-alist)
                (push '("\\.applescript$" . applescript-mode) auto-mode-alist))))
+
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\.\\(applescript\\|scpt\\)\\'" . applescript-mode))
+
+;;;###autoload
+(add-to-list 'interpreter-mode-alist '("osascript" . applescript-mode))
 
 ;;; Subprocess commands
 

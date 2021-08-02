@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (all-the-icons "4.0.0"))
-;; Package-Version: 20210724.1406
-;; Package-Commit: e34c314b84a0c2aef50772baa7c849f54323f598
+;; Package-Version: 20210802.634
+;; Package-Commit: b70c325aa77634032ea8e60e54b9842db5c43ab8
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://github.com/stardiviner/org-link-beautify
@@ -45,7 +45,9 @@
   :safe #'listp
   :group 'org-link-beautify)
 
-(defcustom org-link-beautify-video-preview (executable-find "ffmpegthumbnailer")
+(defcustom org-link-beautify-video-preview (or (executable-find "ffmpegthumbnailer")
+                                               (executable-find "qlmanage")
+                                               (executable-find "ffmpeg"))
   "Whether enable video files thumbnail preview?"
   :type 'boolean
   :safe #'booleanp
@@ -75,7 +77,8 @@ which represent to ~/.cache/thumbnails/."
   :safe #'listp
   :group 'org-link-beautify)
 
-(defcustom org-link-beautify-audio-preview (executable-find "audiowaveform")
+(defcustom org-link-beautify-audio-preview (or (executable-find "audiowaveform")
+                                               (executable-find "qlmanage"))
   "Whether enable audio files wave form preview?"
   :type 'boolean
   :safe #'booleanp
@@ -247,7 +250,9 @@ EPUB preview."
                 ('svg "-svg"))
               "-singlefile"
               "-f" (number-to-string pdf-page-number)
-              pdf-file (file-name-sans-extension thumbnail)))
+              pdf-file (file-name-sans-extension thumbnail))
+             (unless (file-exists-p thumbnail)
+               (message "[org-link-beautify] PDF create thumbnail for\n %s \nfailed." thumbnail)))
             ('pdf2svg
              (unless (eq org-link-beautify-pdf-preview-image-format 'svg)
                (warn "The pdf2svg only supports convert PDF to SVG format.
@@ -258,7 +263,9 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
               "org-link-beautify--pdf-preview"
               " *org-link-beautify pdf-preview*"
               "pdf2svg"
-              pdf-file thumbnail (number-to-string pdf-page-number)))))
+              pdf-file thumbnail (number-to-string pdf-page-number))
+             (unless (file-exists-p thumbnail)
+               (message "[org-link-beautify] PDF create thumbnail for\n %s \nfailed." thumbnail)))))
         (org-link-beautify--add-overlay-marker start end)
         (org-link-beautify--add-keymap start end)
         ;; display thumbnail only when it exist.
@@ -296,7 +303,9 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
               ;;     "--size")
               ;; (if org-link-beautify-epub-preview-size
               ;;     (number-to-string thumbnail-size))
-              ))
+              )
+             (unless (file-exists-p thumbnail)
+               (message "[org-link-beautify] epub create thumbnail for\n %s \nfailed." thumbnail)))
             ('darwin                    ; for macOS "epub-thumbnailer" command
              ;; DEBUG
              ;; (message epub-file)
@@ -317,7 +326,9 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
                             ;; (kill-process proc)
                             ))
               :stdout " *org-link-beautify epub-preview*"
-              :stderr " *org-link-beautify epub-preview*"))
+              :stderr " *org-link-beautify epub-preview*")
+             (unless (file-exists-p thumbnail)
+               (message "[org-link-beautify] epub create thumbnail for\n %s \nfailed." thumbnail)))
             (t (user-error "This system platform currently not supported by org-link-beautify.\n Please contribute code to support"))))
         (org-link-beautify--add-overlay-marker start end)
         (org-link-beautify--add-keymap start end)
@@ -380,7 +391,9 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
     (unless (file-exists-p thumbnail)
       (cond
        ;; for macOS, use `qlmanage'
-       ((and (eq system-type 'darwin) (executable-find "qlmanage"))
+       ((and (eq system-type 'darwin) (executable-find "qlmanage")
+             ;; filter not supported video types of "qlmanage".
+             (not (member (file-name-extension video-file) '("mkv"))))
         (start-process
          "org-link-beautify--video-preview"
          " *org-link-beautify video-preview*"
@@ -391,7 +404,10 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
          video-file
          "-o" thumbnails-dir)
         ;; then rename [video.mp4.png] to [video.png]
-        (rename-file (concat thumbnails-dir (file-name-nondirectory video-file) ".png") thumbnail))
+        (let ((original-thumbnail-file (concat thumbnails-dir (file-name-nondirectory video-file) ".png")))
+          (if (file-exists-p original-thumbnail-file)
+              (rename-file original-thumbnail-file thumbnail)
+            (message "[org-link-beautify] qlmanage create thumbnail for\n %s \nfailed." original-thumbnail-file))))
        ;; use `ffmpegthumbnailer'
        ((executable-find "ffmpegthumbnailer")
         (start-process
@@ -400,7 +416,9 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
          "ffmpegthumbnailer"
          "-f" "-i" video-file
          "-s" (number-to-string thumbnail-size)
-         "-o" thumbnail))
+         "-o" thumbnail)
+        (unless (file-exists-p thumbnail)
+          (message "[org-link-beautify] 'ffmpegthumbnailer' create thumbnail for\n %s \nfailed." thumbnail)))
        ;; use `ffmpeg'
        ;; $ ffmpeg -ss 00:09:00 video.avi -vcodec png -vframes 1 -an -f rawvideo -s 119x64 out.png
        ((executable-find "ffmpeg")
@@ -413,7 +431,9 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
          "-vframes" "1"
          "-an" "-f" "rawvideo"
          "-s" (number-to-string thumbnail-size)
-         thumbnail))))
+         thumbnail)
+        (unless (file-exists-p thumbnail)
+          (message "[org-link-beautify] 'ffmpeg' create thumbnail for\n %s \nfailed." thumbnail)))))
     (org-link-beautify--add-overlay-marker start end)
     (org-link-beautify--add-keymap start end)
     (org-link-beautify--display-thumbnail thumbnail thumbnail-size start end)))
@@ -433,12 +453,31 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
     (unless (file-exists-p thumbnail)
       ;; DEBUG:
       ;; (message "%s\n%s\n" audio-file thumbnail)
-      (start-process
-       "org-link-beautify--audio-preview"
-       " *org-link-beautify audio-preview*" ; DEBUG: check out output buffer
-       "audiowaveform"
-       "-i" audio-file
-       "-o" thumbnail))
+      (cond
+       ((and (eq system-type 'darwin) (executable-find "qlmanage"))
+        (start-process
+         "org-link-beautify--audio-preview"
+         " *org-link-beautify audio preview*"
+         "qlmanage"
+         "-x"
+         "-t"
+         "-s" (number-to-string 100)
+         audio-file
+         "-o" thumbnails-dir)
+        ;; then rename [video.mp4.png] to [video.png]
+        (let ((original-thumbnail-file (concat thumbnails-dir (file-name-nondirectory audio-file) ".png")))
+          (if (file-exists-p original-thumbnail-file)
+              (rename-file original-thumbnail-file thumbnail)
+            (message "[org-link-beautify] qlmanage create thumbnail for\n %s \nfailed." original-thumbnail-file)))))
+      ((and (eq system-type 'gnu/linux) (executable-find "audiowaveform"))
+       (start-process
+        "org-link-beautify--audio-preview"
+        " *org-link-beautify audio preview*" ; DEBUG: check out output buffer
+        "audiowaveform"
+        "-i" audio-file
+        "-o" thumbnail))
+      (unless (file-exists-p thumbnail)
+        (message "[org-link-beautify] 'audiowaveform' create thumbnail for\n %s \nfailed." thumbnail)))
     (org-link-beautify--add-overlay-marker start end)
     (org-link-beautify--add-keymap start end)
     (org-link-beautify--display-thumbnail thumbnail thumbnail-size start end)))
