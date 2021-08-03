@@ -98,6 +98,7 @@ missing package or change you would like to see.
     css-mode
     csv-mode
     ctrlf
+    cursor-flash
     custom (M-x customize)
     dap-mode
     dashboard (emacs-dashboard)
