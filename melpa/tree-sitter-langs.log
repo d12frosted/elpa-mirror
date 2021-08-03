@@ -4,52 +4,52 @@ Source:  https://github.com/ubolonton/tree-sitter-langs.git
 
 Updating /mnt/store/melpa/working/tree-sitter-langs/
 Checking out origin/HEAD
-Checking out 90159a6e3df7440e95eccfffbb6653fbaae95621
+Checking out 3c169ec63b274d63cf9fa1fdd33e6dcf64f66563
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tree-sitter-langs/
-  to /tmp/tree-sitter-langsEWWh99/tree-sitter-langs-20210803.409
+  to /tmp/tree-sitter-langsetVcKh/tree-sitter-langs-20210803.924
     tree-sitter-langs-build.el -> tree-sitter-langs-build.el
     tree-sitter-langs.el -> tree-sitter-langs.el
     queries => queries
-Created tree-sitter-langs-20210803.409.tar containing:
-  tree-sitter-langs-20210803.409/
-  tree-sitter-langs-20210803.409/queries/
-  tree-sitter-langs-20210803.409/queries/c/
-  tree-sitter-langs-20210803.409/queries/c/highlights.scm
-  tree-sitter-langs-20210803.409/queries/cpp/
-  tree-sitter-langs-20210803.409/queries/cpp/highlights.scm
-  tree-sitter-langs-20210803.409/queries/css/
-  tree-sitter-langs-20210803.409/queries/css/highlights.scm
-  tree-sitter-langs-20210803.409/queries/go/
-  tree-sitter-langs-20210803.409/queries/go/highlights.scm
-  tree-sitter-langs-20210803.409/queries/html/
-  tree-sitter-langs-20210803.409/queries/html/highlights.scm
-  tree-sitter-langs-20210803.409/queries/java/
-  tree-sitter-langs-20210803.409/queries/java/highlights.scm
-  tree-sitter-langs-20210803.409/queries/javascript/
-  tree-sitter-langs-20210803.409/queries/javascript/highlights.scm
-  tree-sitter-langs-20210803.409/queries/pgn/
-  tree-sitter-langs-20210803.409/queries/pgn/highlights.scm
-  tree-sitter-langs-20210803.409/queries/php/
-  tree-sitter-langs-20210803.409/queries/php/highlights.scm
-  tree-sitter-langs-20210803.409/queries/python/
-  tree-sitter-langs-20210803.409/queries/python/highlights.scm
-  tree-sitter-langs-20210803.409/queries/ruby/
-  tree-sitter-langs-20210803.409/queries/ruby/highlights.scm
-  tree-sitter-langs-20210803.409/queries/rust/
-  tree-sitter-langs-20210803.409/queries/rust/highlights.scm
-  tree-sitter-langs-20210803.409/queries/tsx/
-  tree-sitter-langs-20210803.409/queries/tsx/highlights.scm
-  tree-sitter-langs-20210803.409/queries/typescript/
-  tree-sitter-langs-20210803.409/queries/typescript/highlights.scm
-  tree-sitter-langs-20210803.409/tree-sitter-langs-build.el
-  tree-sitter-langs-20210803.409/tree-sitter-langs-pkg.el
-  tree-sitter-langs-20210803.409/tree-sitter-langs.el
-Built tree-sitter-langs in 6.394s, finished at 2021-08-03T07:37:14+0000
+Created tree-sitter-langs-20210803.924.tar containing:
+  tree-sitter-langs-20210803.924/
+  tree-sitter-langs-20210803.924/queries/
+  tree-sitter-langs-20210803.924/queries/c/
+  tree-sitter-langs-20210803.924/queries/c/highlights.scm
+  tree-sitter-langs-20210803.924/queries/cpp/
+  tree-sitter-langs-20210803.924/queries/cpp/highlights.scm
+  tree-sitter-langs-20210803.924/queries/css/
+  tree-sitter-langs-20210803.924/queries/css/highlights.scm
+  tree-sitter-langs-20210803.924/queries/go/
+  tree-sitter-langs-20210803.924/queries/go/highlights.scm
+  tree-sitter-langs-20210803.924/queries/html/
+  tree-sitter-langs-20210803.924/queries/html/highlights.scm
+  tree-sitter-langs-20210803.924/queries/java/
+  tree-sitter-langs-20210803.924/queries/java/highlights.scm
+  tree-sitter-langs-20210803.924/queries/javascript/
+  tree-sitter-langs-20210803.924/queries/javascript/highlights.scm
+  tree-sitter-langs-20210803.924/queries/pgn/
+  tree-sitter-langs-20210803.924/queries/pgn/highlights.scm
+  tree-sitter-langs-20210803.924/queries/php/
+  tree-sitter-langs-20210803.924/queries/php/highlights.scm
+  tree-sitter-langs-20210803.924/queries/python/
+  tree-sitter-langs-20210803.924/queries/python/highlights.scm
+  tree-sitter-langs-20210803.924/queries/ruby/
+  tree-sitter-langs-20210803.924/queries/ruby/highlights.scm
+  tree-sitter-langs-20210803.924/queries/rust/
+  tree-sitter-langs-20210803.924/queries/rust/highlights.scm
+  tree-sitter-langs-20210803.924/queries/tsx/
+  tree-sitter-langs-20210803.924/queries/tsx/highlights.scm
+  tree-sitter-langs-20210803.924/queries/typescript/
+  tree-sitter-langs-20210803.924/queries/typescript/highlights.scm
+  tree-sitter-langs-20210803.924/tree-sitter-langs-build.el
+  tree-sitter-langs-20210803.924/tree-sitter-langs-pkg.el
+  tree-sitter-langs-20210803.924/tree-sitter-langs.el
+Built tree-sitter-langs in 6.737s, finished at 2021-08-03T11:05:09+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  489 Aug  3 04:07 packages/tree-sitter-langs-20210801.1301.entry
- 80K -rw-r--r-- 1 root root  80K Aug  3 04:07 packages/tree-sitter-langs-20210801.1301.tar
 4.0K -rw-r--r-- 1 root root  488 Aug  3 07:37 packages/tree-sitter-langs-20210803.409.entry
  80K -rw-r--r-- 1 root root  80K Aug  3 07:37 packages/tree-sitter-langs-20210803.409.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 07:37 packages/tree-sitter-langs-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Aug  3 07:37 packages/tree-sitter-langs-readme.txt
+4.0K -rw-r--r-- 1 root root  488 Aug  3 11:05 packages/tree-sitter-langs-20210803.924.entry
+ 80K -rw-r--r-- 1 root root  80K Aug  3 11:05 packages/tree-sitter-langs-20210803.924.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  3 11:05 packages/tree-sitter-langs-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Aug  3 11:05 packages/tree-sitter-langs-readme.txt
