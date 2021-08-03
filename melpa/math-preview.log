@@ -3,11 +3,6 @@ Fetcher: gitlab
 Source:  https://gitlab.com/matsievskiysv/math-preview.git
 
 Updating /mnt/store/melpa/working/math-preview/
-Checking out origin/HEAD
-Checking out b6f54d7a53d2ed5c71fc9ab6d65da63103c799bc
-Built math-preview in 5.374s, finished at 2021-08-02T13:46:27+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root  20K Aug  2 13:46 packages/math-preview-20210729.1842.el
-4.0K -rw-r--r-- 1 root root  384 Aug  2 13:46 packages/math-preview-20210729.1842.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  2 13:46 packages/math-preview-badge.svg
-4.0K -rw-r--r-- 1 root root  160 Aug  2 13:46 packages/math-preview-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: unable to access 'https://gitlab.com/matsievskiysv/math-preview.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+

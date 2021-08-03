@@ -1,0 +1,15 @@
+(alan-mode .
+	   [(20210802 1950)
+	    ((flycheck
+	      (32))
+	     (emacs
+	      (25 1))
+	     (s
+	      (1 12)))
+	    "Major mode for editing Alan files" single
+	    ((:commit . "9e66137860d05e9c8e1d70a087bfd9cb5ca5ec07")
+	     (:authors
+	      ("Paul van Dam" . "pvandam@kjerner.com"))
+	     (:maintainer "Paul van Dam" . "pvandam@kjerner.com")
+	     (:keywords "alan" "languages")
+	     (:url . "https://github.com/Kjerner/AlanForEmacs"))])

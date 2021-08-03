@@ -1,0 +1,13 @@
+(notmuch-addr .
+	      [(20210615 1512)
+	       ((emacs
+		 (27 1))
+		(notmuch
+		 (0 32)))
+	       "An alternative to notmuch-address.el" single
+	       ((:commit . "c447ddb94b3c2a473ec1762fc083794acd6057f0")
+		(:authors
+		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		(:keywords "mail")
+		(:url . "https://git.sr.ht/~tarsius/notmuch-addr"))])

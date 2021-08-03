@@ -4,8 +4,6 @@
 
 ;; Author: Jan Tatarik <Jan.Tatarik@gmail.com>
 ;; Keywords: vc tools
-;; Package-Version: 20170929.824
-;; Package-Commit: cc41b561ec6eea947fe9a176349fb4f771ed865b
 ;; URL: https://github.com/jtatarik/magit-gitflow
 ;; Package: magit-gitflow
 ;; Package-Requires: ((magit "2.1.0") (magit-popup "2.2.0"))
