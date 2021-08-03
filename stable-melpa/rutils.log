@@ -1,0 +1,27 @@
+Package: rutils
+Fetcher: github
+Source:  https://github.com/ShuguangSun/rutils.el.git
+
+Updating /mnt/store/melpa/working/rutils/
+Checking out origin/HEAD
+Checking out 0756047112f2d16d7ec8d9c293b1d09a8fe4eb59
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/rutils/
+  to /tmp/rutilsjXUC4a/rutils-20210726.128
+    rutils-lib.el -> rutils-lib.el
+    rutils-packrat.el -> rutils-packrat.el
+    rutils-renv.el -> rutils-renv.el
+    rutils.el -> rutils.el
+Created rutils-20210726.128.tar containing:
+  rutils-20210726.128/
+  rutils-20210726.128/rutils-lib.el
+  rutils-20210726.128/rutils-packrat.el
+  rutils-20210726.128/rutils-pkg.el
+  rutils-20210726.128/rutils-renv.el
+  rutils-20210726.128/rutils.el
+Built rutils in 9.370s, finished at 2021-08-03T07:28:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  391 Aug  3 07:28 packages/rutils-20210726.128.entry
+ 40K -rw-r--r-- 1 root root  40K Aug  3 07:28 packages/rutils-20210726.128.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  3 07:28 packages/rutils-badge.svg
+4.0K -rw-r--r-- 1 root root   28 Aug  3 07:28 packages/rutils-readme.txt

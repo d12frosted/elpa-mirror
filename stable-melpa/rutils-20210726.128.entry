@@ -1,0 +1,15 @@
+(rutils .
+	[(20210726 128)
+	 ((emacs
+	   (26 1))
+	  (ess
+	   (18 10 1))
+	  (transient
+	   (0 3 0)))
+	 "R utilities with transient" tar
+	 ((:commit . "0756047112f2d16d7ec8d9c293b1d09a8fe4eb59")
+	  (:authors
+	   ("Shuguang Sun" . "shuguang79@qq.com"))
+	  (:maintainer "Shuguang Sun" . "shuguang79@qq.com")
+	  (:keywords "convenience")
+	  (:url . "https://github.com/ShuguangSun/rutils.el"))])

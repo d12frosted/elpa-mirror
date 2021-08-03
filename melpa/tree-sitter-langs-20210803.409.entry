@@ -1,0 +1,13 @@
+(tree-sitter-langs .
+		   [(20210803 409)
+		    ((emacs
+		      (25 1))
+		     (tree-sitter
+		      (0 15 0)))
+		    "Grammar bundle for tree-sitter" tar
+		    ((:commit . "90159a6e3df7440e95eccfffbb6653fbaae95621")
+		     (:authors
+		      ("Tuấn-Anh Nguyễn" . "ubolonton@gmail.com"))
+		     (:maintainer "Tuấn-Anh Nguyễn" . "ubolonton@gmail.com")
+		     (:keywords "languages" "tools" "parsers" "tree-sitter")
+		     (:url . "https://github.com/ubolonton/tree-sitter-langs"))])
