@@ -2255,15 +2255,15 @@
 	      ("	(Stefan Monnier)" . "monnier@iro.umontreal.ca"))
 	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (so-long .
-	  [(1 0)
+	  [(1 1)
 	   ((emacs
 	     (24 4)))
-	   "Say farewell to performance problems with minified code." single
-	   ((:keywords "convenience")
+	   "Say farewell to performance problems with minified code." tar
+	   ((:url . "https://savannah.nongnu.org/projects/so-long")
+	    (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
 	    (:authors
 	     ("Phil Sainty" . "psainty@orcon.net.nz"))
-	    (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
-	    (:url . "https://savannah.nongnu.org/projects/so-long"))])
+	    (:keywords "convenience"))])
  (soap-client .
 	      [(3 2 0)
 	       ((cl-lib

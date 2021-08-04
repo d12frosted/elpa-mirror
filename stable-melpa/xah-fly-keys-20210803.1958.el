@@ -3,9 +3,9 @@
 ;; Copyright © 2013-2021, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 13.27.20210802140553
-;; Package-Version: 20210802.2109
-;; Package-Commit: 826f71faccc78133bd5530c568afb784e8829a38
+;; Version: 13.28.20210803125758
+;; Package-Version: 20210803.1958
+;; Package-Commit: 4242ee05534168cfcd9304ee711c8fe9ce25c29e
 ;; Created: 10 Sep 2013
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: convenience, emulations, vim, ergoemacs
@@ -1253,7 +1253,7 @@ Version 2021-07-05"
   "Break a long line or text block into multiple lines by ending period.
 Work on text selection if there is one, else the current text block.
 URL `http://ergoemacs.org/emacs/elisp_reformat_to_sentence_lines.html'
-Version 2020-12-02 2021-04-14 2021-08-01"
+Version 2020-12-02 2021-04-14 2021-08-03"
   (interactive)
   (let ($p1 $p2)
     (if (use-region-p)
@@ -1270,11 +1270,7 @@ Version 2020-12-02 2021-04-14 2021-08-01"
       (progn (goto-char (point-min)) (while (search-forward "\n" nil t) (replace-match " " )))
       (progn (goto-char (point-min)) (while (re-search-forward "  +" nil t) (replace-match " " )))
       (progn (goto-char (point-min)) (while (re-search-forward "\\. +\\([0-9A-Za-z]+\\)" nil t) (replace-match ".\n\\1" )))
-      (progn (goto-char (point-min)) (while (search-forward " <a " nil t) (replace-match "\n<a " )))
-      (progn (goto-char (point-min)) (while (search-forward "</a>" nil t) (replace-match "</a>\n" )))
-      (goto-char (point-max))
-      (while (eq (char-before ) 32) (delete-char -1))
-      (insert "\n\n"))))
+      (goto-char (point-max)) (while (eq (char-before ) 32) (delete-char -1)) (insert "\n\n"))))
 
 (defun xah-space-to-newline ()
   "Replace space sequence to a newline char.

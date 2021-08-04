@@ -12,26 +12,26 @@ which are many thousands of characters long, and most programming modes
 simply aren't optimised (remotely) for this scenario, so performance can
 suffer significantly.
 
-When such files are detected, the command `so-long' is automatically called,
-overriding certain minor modes and variables with performance implications
-(all configurable), in order to enhance performance in the buffer.
+When so-long detects such a file, it calls the command `so-long', which
+overrides certain minor modes and variables (you can configure the details)
+to improve performance in the buffer.
 
 The default action enables the major mode `so-long-mode' in place of the mode
 that Emacs selected.  This ensures that the original major mode cannot affect
 performance further, as well as making the so-long activity more obvious to
 the user.  These kinds of minified files are typically not intended to be
 edited, so not providing the usual editing mode in such cases will rarely be
-an issue.  However, should the user wish to do so, the original state of the
-buffer may be reinstated by calling `so-long-revert' (the key binding for
-which is advertised when the major mode change occurs).  If you prefer that
-the major mode not be changed, the `so-long-minor-mode' action can be
-configured.
+an issue; however you can restore the buffer to its original state by calling
+`so-long-revert' (the key binding of which is advertised when the major mode
+change occurs).  If you prefer that the major mode not be changed in the
+first place, there is a `so-long-minor-mode' action available, which you can
+select by customizing the `so-long-action' user option.
 
 The user options `so-long-action' and `so-long-action-alist' determine what
-will happen when `so-long' and `so-long-revert' are invoked, allowing
-alternative actions (including custom actions) to be configured.  As well as
-the major and minor mode actions provided by this library, `longlines-mode'
-is also supported by default as an alternative action.
+`so-long' and `so-long-revert' will do, enabling you to configure alternative
+actions (including custom actions).  As well as the major and minor mode
+actions provided by this library, `longlines-mode' is also supported by
+default as an alternative action.
 
 Note that while the measures taken can improve performance dramatically when
 dealing with such files, this library does not have any effect on the
@@ -124,7 +124,7 @@ a separate mode line construct when some other major mode is active.
 * Files with a file-local 'mode'
 --------------------------------
 A file-local major mode is likely to be safe even if long lines are detected
-(as the author of the file would otherwise be unlikely to have set that mode),
+(the author of the file would otherwise be unlikely to have set that mode),
 and so these files are treated as special cases.  When a file-local 'mode' is
 present, the function defined by the `so-long-file-local-mode-function' user
 option is called.  The default value will cause the `so-long-minor-mode'
@@ -362,6 +362,7 @@ versions of Emacs, and can be set to `so-long-mode' if desired.
 
 * Change Log:
 
+1.1   - ?
 1.0   - Included in Emacs 27.1, and in GNU ELPA for prior versions of Emacs.
       - New global mode `global-so-long-mode' to enable/disable the library.
       - New user option `so-long-action'.
