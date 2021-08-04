@@ -99,9 +99,9 @@ If the behaviour ever triggers when you did not want it to, you can use the
 Use M-x customize-group RET so-long RET
 (or M-x so-long-customize RET)
 
-The user options `so-long-target-modes', `so-long-threshold', and
-`so-long-max-lines' determine whether action will be taken automatically when
-visiting a file, and `so-long-action' determines what will be done.
+The user options `so-long-target-modes' and `so-long-threshold' determine
+whether action will be taken automatically when visiting a file, and
+`so-long-action' determines what will be done.
 
 * Actions and menus
 -------------------
@@ -185,6 +185,24 @@ value in the alist.  Use this to enforce values which will improve
 performance or otherwise avoid undesirable behaviours.  If `so-long-revert'
 is called, then the original values are restored.
 
+* Retaining minor modes and settings when switching to `so-long-mode'
+---------------------------------------------------------------------
+A consequence of switching to a new major mode is that many buffer-local
+minor modes and variables from the original major mode will be disabled.
+For performance purposes this is a desirable trait of `so-long-mode', but
+specified modes and variables can also be preserved across the major mode
+transition by customizing the `so-long-mode-preserved-minor-modes' and
+`so-long-mode-preserved-variables' user options.
+
+When `so-long-mode' is called, the states of any modes and variables
+configured by these options are remembered in the original major mode, and
+reinstated after switching to `so-long-mode'.  Likewise, if `so-long-revert'
+is used to switch back to the original major mode, these modes and variables
+are again set to the same states.
+
+The default values for these options ensure that if `view-mode' was active
+in the original mode, then it will also be active in `so-long-mode'.
+
 * Hooks
 -------
 `so-long-hook' runs at the end of the `so-long' command, after the configured
@@ -259,8 +277,9 @@ original major mode, and therefore major mode hooks can be used to control
 the criteria for calling `so-long' in any given mode (plus its derivatives)
 by setting buffer-local values for the variables in question.  This includes
 `so-long-predicate' itself, as well as any variables used by the predicate
-when determining the result.  By default this means `so-long-max-lines',
-`so-long-skip-leading-comments', and `so-long-threshold'.  E.g.:
+when determining the result.  By default this means `so-long-threshold' and
+possibly also `so-long-max-lines' and `so-long-skip-leading-comments' (these
+latter two are not used by default starting from Emacs 28.1).  E.g.:
 
   (add-hook 'js-mode-hook 'my-js-mode-hook)
 
@@ -362,7 +381,14 @@ versions of Emacs, and can be set to `so-long-mode' if desired.
 
 * Change Log:
 
-1.1   - ?
+1.1.1 - Identical to 1.1, but fixing an incorrect GNU ELPA release.
+1.1   - Utilise `buffer-line-statistics' in Emacs 28+, with the new
+        `so-long-predicate' function `so-long-statistics-excessive-p'.
+      - Increase `so-long-threshold' from 250 to 10,000.
+      - Increase `so-long-max-lines' from 5 to 500.
+      - Include `fundamental-mode' in `so-long-target-modes'.
+      - New user option `so-long-mode-preserved-minor-modes'.
+      - New user option `so-long-mode-preserved-variables'.
 1.0   - Included in Emacs 27.1, and in GNU ELPA for prior versions of Emacs.
       - New global mode `global-so-long-mode' to enable/disable the library.
       - New user option `so-long-action'.

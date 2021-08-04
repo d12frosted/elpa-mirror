@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
 ;; Version: 1.6.3
-;; Package-Version: 20210802.1808
-;; Package-Commit: 1f9f22233be4302f7282bae77239cdd8802e4164
+;; Package-Version: 20210804.904
+;; Package-Commit: 6bd299edc52632fb80a0434722221abd692cdeea
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -628,12 +628,9 @@ Return `default-directory' if no project was found."
 
 (defun all-the-icons-ivy-rich--file-path (candidate)
   "Get the file path of CANDIDATE."
-  (cond ((eq (ivy-state-caller ivy-last) 'counsel-fzf)
-         (expand-file-name candidate counsel--fzf-dir))
-        (ivy--directory
-         (expand-file-name candidate ivy--directory))
-        (t
-         default-directory)))
+  (if (eq (ivy-state-caller ivy-last) 'counsel-fzf)
+      (expand-file-name candidate counsel--fzf-dir)
+    (expand-file-name candidate ivy--directory)))
 
 (defun all-the-icons-ivy-rich--project-file-path (candidate)
   "Get the project file path of CANDIDATE."
