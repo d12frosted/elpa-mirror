@@ -3,8 +3,8 @@
 ;;
 ;; Author: Carsten Dominik <carsten.dominik@gmail.com>
 ;; Keywords: tex
-;; Package-Version: 20210621.654
-;; Package-Commit: 614a8d94f67cdc1eeef8371f7b6b90aef8a78158
+;; Package-Version: 20210804.452
+;; Package-Commit: f215b70c5cb02bbc43f5a7d5c8e5e3460ff82428
 ;; Version: 4.11
 ;;
 ;; This file is not part of GNU Emacs.
@@ -1470,7 +1470,7 @@ zZ
     ("gat*"      "Insert a GATHER* environment template"
      "" cdlatex-environment ("gather*") t nil)
     ("spl"       "Insert SPLIT environment template"
-     "" cdlatex-environment ("split") t nil)
+     "" cdlatex-environment ("split") nil t)
     ("fla"       "Insert a FLALIGN environment template"
      "" cdlatex-environment ("flalign") t nil)
     ("fla*"      "Insert a FLALIGN* environment template"

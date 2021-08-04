@@ -1,6 +1,8 @@
 ;;; pnpm-mode.el --- Minor mode for working with pnpm projects
 
 ;; Version: 1.0.0
+;; Package-Version: 20200527.557
+;; Package-Commit: 391207e6505948b0d0cb57b802ee4885e3292c21
 ;; Author: Rajasegar Chandran <rajasegar.c@gmail.com>
 ;; Url: https://github.com/rajasegar/pnpm-mode
 ;; Keywords: convenience, project, javascript, node, npm, pnpm

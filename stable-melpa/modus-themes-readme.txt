@@ -134,6 +134,7 @@ missing package or change you would like to see.
     eldoc-box
     elfeed
     elfeed-score
+    elpher
     embark
     emms
     enh-ruby-mode (enhanced-ruby-mode)

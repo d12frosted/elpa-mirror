@@ -5,8 +5,8 @@
 ;; Author: Alex Murray <murray.alex@gmail.com>
 ;; Maintainer: Alex Murray <murray.alex@gmail.com>
 ;; URL: https://github.com/alexmurray/erc-matterircd
-;; Package-Version: 20210720.412
-;; Package-Commit: caafa1a62a76c2132d8b0872d57684f877608408
+;; Package-Version: 20210804.504
+;; Package-Commit: e3a59267c044474f9ca066d36517e9a3d872759c
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -129,7 +129,8 @@ open url via `browse-url-buttton-open-url'."
         (set-text-properties start end
                              (list 'erc-matterircd-link-url url
                                    'help-echo url
-                                   'display name))))))
+                                   'display name
+                                   'rear-nonsticky t))))))
 
 (defun erc-matterircd-reply-to-context-id (context-id)
   "Go to erc prompt and start a reply to the post with CONTEXT-ID."
@@ -202,13 +203,17 @@ italic face instead."
     ;; whereas asterisks can be anywhere
     (while (or (re-search-forward "\\(\\*\\([^\\*]+?\\)\\*\\)" nil t)
                (re-search-forward "\\_<\\(_\\([^_]+?\\)_\\)\\_>" nil t))
-      (let ((message (match-string 2)))
+      (let ((message (match-string 2))
+            (start (match-beginning 0))
+            (end (match-end 0)))
         ;; erc-italic-face is only in very recent emacs 28 so use italic
         ;; for now
-        (put-text-property (match-beginning 0) (match-end 0)
+        (put-text-property start end
                            'display
-                           (propertize message 'face
-                                       erc-matterircd-italic-face))))))
+                           (propertize message
+                                       'face erc-matterircd-italic-face))
+        (put-text-property start end
+                           'rear-nonsticky t)))))
 
 (defun erc-matterircd-format-bolds ()
   "Format **bold** / or __bolds__ correctly.
@@ -220,10 +225,15 @@ bold face instead."
     (goto-char (point-min))
     (while (or (re-search-forward "\\(\\*\\*\\([^\\*]+?\\)\\*\\*\\)" nil t)
                (re-search-forward "\\_<\\(__\\([^_]+?\\)__\\)\\_>" nil t))
-      (let ((message (match-string 2)))
-        (put-text-property (match-beginning 0) (match-end 0)
+      (let ((message (match-string 2))
+             (start (match-beginning 0))
+             (end (match-end 0)))
+        (put-text-property start end
                            'display
-                           (propertize message 'face 'erc-bold-face))))))
+                           (propertize message
+                                       'face 'erc-bold-face))
+        (put-text-property start end
+                           'rear-nonsticky t)))))
 
 (defface erc-matterircd-strikethrough-face
   '((t (:strike-through t)))
@@ -238,10 +248,15 @@ strikethrough face attribute instead."
   (when (eq 'matterircd (erc-network))
     (goto-char (point-min))
     (while (re-search-forward "~~\\(.*?\\)~~" nil t)
-      (let ((message (match-string 1)))
-        (put-text-property (match-beginning 0) (match-end 0)
+      (let ((message (match-string 1))
+            (start (match-beginning 0))
+            (end (match-end 0)))
+        (put-text-property start end
                            'display
-                           (propertize message 'face 'erc-matterircd-strikethrough-face))))))
+                           (propertize message
+                                       'face 'erc-matterircd-strikethrough-face))
+        (put-text-property start end
+                           'rear-nonsticky t)))))
 
 (defface erc-matterircd-monospace-face
   '((t (:inherit fixed-pitch-serif)))
@@ -253,10 +268,15 @@ monospace text is sent as `monospace`."
   (when (eq 'matterircd (erc-network))
     (goto-char (point-min))
     (while (re-search-forward "`\\([^`]+?\\)`" nil t)
-      (let ((message (match-string 1)))
-        (put-text-property (match-beginning 0) (match-end 0)
+      (let ((message (match-string 1))
+            (start (match-beginning 0))
+            (end (match-end 0)))
+        (put-text-property start end
                            'display
-                           (propertize message 'face 'erc-matterircd-monospace-face))))))
+                           (propertize message
+                                       'face 'erc-matterircd-monospace-face))
+        (put-text-property start end
+                           'rear-nonsticky t)))))
 
 (defun erc-matterircd-format-reactions ()
   "Format reactions sent via matterircd."
@@ -267,7 +287,7 @@ monospace text is sent as `monospace`."
         (replace-match (concat ":" name ":") nil nil nil 1)))))
 
 (defvar erc-matterircd-context-regexp
-  "\\[\\([0-9a-f]\\{3\\}\\)\\(->\\([0-9a-f]\\{3\\}\\)\\)?\\]")
+  "\\[\\(\\(\\([0-9a-f]\\{3\\}\\)\\(->\\([0-9a-f]\\{3\\}\\)\\)?\\)\\|\\(\\(↪\\|->\\)?@@\\([a-z0-9]+\\)\\)\\)\\]")
 
 (defun erc-matterircd-format-contexts ()
   "Format [xxx] contexts as text properties.
@@ -282,15 +302,19 @@ to, edit or delete a post."
               (re-search-forward (concat " \\(" erc-matterircd-context-regexp "\\)\\s-*$") nil t))
       ;; delete and propertize message with the context id
       (let ((full-id (match-string-no-properties 1))
-            (context-id (or (match-string-no-properties 4)
-                            (match-string-no-properties 2)))
+            (context-id (or (match-string-no-properties 9)
+                            (match-string-no-properties 5)
+                            (match-string-no-properties 3)))
             (start (match-beginning 1))
             (end (match-end 1))
             (source (buffer-substring-no-properties
                      (point-min) (point-max))))
         (when erc-matterircd-replace-context-id
           (put-text-property start end
-                             'display erc-matterircd-replace-context-id))
+                             'display erc-matterircd-replace-context-id)
+          ;; ensure emojify doesn't wreak havoc
+          (put-text-property start end
+                             'emojify-inhibit t))
         ;; ensure text properties don't get filled onto the next line by
         ;; erc-fill or erc-insert-timestamp by specifyng rear-nonticky
         (add-text-properties start end
