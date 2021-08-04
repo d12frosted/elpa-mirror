@@ -2,8 +2,8 @@
 
 ;; Author: Alex McGrath <amk@amk.ie>
 ;; URL: https://git.sr.ht/~amk/subsonic.el
-;; Package-Version: 20210803.834
-;; Package-Commit: b017f0b7ca7de08dfcfb98f10844075cb382fe14
+;; Package-Version: 20210804.1112
+;; Package-Commit: 68ff526021e382b4e385b219d7de2804ae2cad6f
 ;; Version: 0.1.0
 ;; Keywords: multimedia
 ;; Package-Requires: ((emacs "27.1") (transient "0.2"))
@@ -363,7 +363,7 @@ subsonic, and ensure subsonic-host is set correctly")))
   (let* ((albums (subsonic-recursive-assoc data '("subsonic-response" "artist" "album")))
          (result (mapcar (lambda (album)
                            (list (assoc-default "id" album)
-                                 (vector (format "%d" (assoc-default "year" album))
+                                 (vector (format "%d" (or (assoc-default "year" album) 0))
                                          (assoc-default "name" album)
                                          "")))
                          albums)))
