@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (all-the-icons "4.0.0"))
-;; Package-Version: 20210803.418
-;; Package-Commit: 8b52049c120cea148300c302f6e25b6febb49abc
+;; Package-Version: 20210804.152
+;; Package-Commit: 8bde606cb14e1db1c2de2d29f4e5be96f58fbee7
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://github.com/stardiviner/org-link-beautify
@@ -393,7 +393,7 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
        ;; for macOS, use `qlmanage'
        ((and (eq system-type 'darwin) (executable-find "qlmanage")
              ;; filter not supported video types of "qlmanage".
-             (not (member (file-name-extension video-file) '("mkv" "flv"))))
+             (not (member (file-name-extension video-file) '("flv" "mkv" "webm"))))
         (start-process
          "org-link-beautify--video-preview"
          " *org-link-beautify video-preview*"

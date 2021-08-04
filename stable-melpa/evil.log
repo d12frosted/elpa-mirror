@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 5c28294d830a5a79e9b9da2c32e7675d52d76720
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/evil/
-  to /tmp/evilI158k5/evil-20210726.2220
+  to /tmp/evilgP7hnR/evil-20210726.2220
     evil-command-window.el -> evil-command-window.el
     evil-commands.el -> evil-commands.el
     evil-common.el -> evil-common.el
@@ -28,7 +28,7 @@ Copying files (->) and directories (=>)
     evil-vars.el -> evil-vars.el
     evil.el -> evil.el
   ! doc/build/texinfo/evil.texi -> evil.texi
-Created /tmp/evilI158k5/evil-20210726.2220/evil.info
+Created /tmp/evilgP7hnR/evil-20210726.2220/evil.info
 Created evil-20210726.2220.tar containing:
   evil-20210726.2220/
   evil-20210726.2220/dir
@@ -52,391 +52,391 @@ Created evil-20210726.2220.tar containing:
   evil-20210726.2220/evil-vars.el
   evil-20210726.2220/evil.el
   evil-20210726.2220/evil.info
-Built evil in 12.352s, finished at 2021-08-04T00:06:53+0000
+Built evil in 14.083s, finished at 2021-08-04T03:30:49+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  283 Aug  4 00:06 packages/evil-20210726.2220.entry
-892K -rw-r--r-- 1 root root 890K Aug  4 00:06 packages/evil-20210726.2220.tar
-4.0K -rw-r--r-- 1 root root 2.8K Aug  4 00:06 packages/evil-anzu-20200514.1902.el
-4.0K -rw-r--r-- 1 root root  420 Aug  4 00:06 packages/evil-anzu-20200514.1902.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-anzu-badge.svg
-   0 -rw-r--r-- 1 root root    0 Aug  4 00:06 packages/evil-anzu-readme.txt
-4.0K -rw-r--r-- 1 root root  613 Aug  4 00:06 packages/evil-anzu.log
- 12K -rw-r--r-- 1 root root 8.1K Aug  4 00:06 packages/evil-args-20180908.2157.el
-4.0K -rw-r--r-- 1 root root  423 Aug  4 00:06 packages/evil-args-20180908.2157.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-args-badge.svg
-4.0K -rw-r--r-- 1 root root  810 Aug  4 00:06 packages/evil-args-readme.txt
-4.0K -rw-r--r-- 1 root root  606 Aug  4 00:06 packages/evil-args.log
-8.0K -rw-r--r-- 1 root root 4.3K Aug  4 00:06 packages/evil-avy-20150908.748.el
-4.0K -rw-r--r-- 1 root root  444 Aug  4 00:06 packages/evil-avy-20150908.748.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-avy-badge.svg
-4.0K -rw-r--r-- 1 root root   64 Aug  4 00:06 packages/evil-avy-readme.txt
-4.0K -rw-r--r-- 1 root root  594 Aug  4 00:06 packages/evil-avy.log
-4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-badge.svg
-4.0K -rw-r--r-- 1 root root 3.3K Aug  4 00:06 packages/evil-better-visual-line-20200123.2045.el
-4.0K -rw-r--r-- 1 root root  395 Aug  4 00:06 packages/evil-better-visual-line-20200123.2045.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-better-visual-line-badge.svg
-4.0K -rw-r--r-- 1 root root  364 Aug  4 00:06 packages/evil-better-visual-line-readme.txt
-4.0K -rw-r--r-- 1 root root  718 Aug  4 00:06 packages/evil-better-visual-line.log
-4.0K -rw-r--r-- 1 root root  587 Aug  4 00:06 packages/evil-cleverparens-20170718.413.entry
-112K -rw-r--r-- 1 root root 110K Aug  4 00:06 packages/evil-cleverparens-20170718.413.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-cleverparens-badge.svg
-4.0K -rw-r--r-- 1 root root  256 Aug  4 00:06 packages/evil-cleverparens-readme.txt
-4.0K -rw-r--r-- 1 root root 1.4K Aug  4 00:06 packages/evil-cleverparens.log
-8.0K -rw-r--r-- 1 root root 4.9K Aug  4 00:06 packages/evil-colemak-basics-20200630.1936.el
-4.0K -rw-r--r-- 1 root root  528 Aug  4 00:06 packages/evil-colemak-basics-20200630.1936.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-colemak-basics-badge.svg
-4.0K -rw-r--r-- 1 root root  264 Aug  4 00:06 packages/evil-colemak-basics-readme.txt
-4.0K -rw-r--r-- 1 root root  693 Aug  4 00:06 packages/evil-colemak-basics.log
-8.0K -rw-r--r-- 1 root root 5.2K Aug  4 00:06 packages/evil-colemak-minimal-20171006.1317.el
-4.0K -rw-r--r-- 1 root root  445 Aug  4 00:06 packages/evil-colemak-minimal-20171006.1317.entry
+4.0K -rw-r--r-- 1 root root  283 Aug  4 03:30 packages/evil-20210726.2220.entry
+892K -rw-r--r-- 1 root root 890K Aug  4 03:30 packages/evil-20210726.2220.tar
+4.0K -rw-r--r-- 1 root root 2.8K Aug  4 03:30 packages/evil-anzu-20200514.1902.el
+4.0K -rw-r--r-- 1 root root  420 Aug  4 03:30 packages/evil-anzu-20200514.1902.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 03:30 packages/evil-anzu-badge.svg
+   0 -rw-r--r-- 1 root root    0 Aug  4 03:30 packages/evil-anzu-readme.txt
+4.0K -rw-r--r-- 1 root root  613 Aug  4 03:30 packages/evil-anzu.log
+ 12K -rw-r--r-- 1 root root 8.1K Aug  4 03:30 packages/evil-args-20180908.2157.el
+4.0K -rw-r--r-- 1 root root  423 Aug  4 03:30 packages/evil-args-20180908.2157.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 03:30 packages/evil-args-badge.svg
+4.0K -rw-r--r-- 1 root root  810 Aug  4 03:30 packages/evil-args-readme.txt
+4.0K -rw-r--r-- 1 root root  606 Aug  4 03:30 packages/evil-args.log
+8.0K -rw-r--r-- 1 root root 4.3K Aug  4 03:30 packages/evil-avy-20150908.748.el
+4.0K -rw-r--r-- 1 root root  444 Aug  4 03:30 packages/evil-avy-20150908.748.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 03:30 packages/evil-avy-badge.svg
+4.0K -rw-r--r-- 1 root root   64 Aug  4 03:30 packages/evil-avy-readme.txt
+4.0K -rw-r--r-- 1 root root  594 Aug  4 03:30 packages/evil-avy.log
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 03:30 packages/evil-badge.svg
+4.0K -rw-r--r-- 1 root root 3.3K Aug  4 03:30 packages/evil-better-visual-line-20200123.2045.el
+4.0K -rw-r--r-- 1 root root  395 Aug  4 03:30 packages/evil-better-visual-line-20200123.2045.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 03:30 packages/evil-better-visual-line-badge.svg
+4.0K -rw-r--r-- 1 root root  364 Aug  4 03:30 packages/evil-better-visual-line-readme.txt
+4.0K -rw-r--r-- 1 root root  718 Aug  4 03:30 packages/evil-better-visual-line.log
+4.0K -rw-r--r-- 1 root root  587 Aug  4 03:30 packages/evil-cleverparens-20170718.413.entry
+112K -rw-r--r-- 1 root root 110K Aug  4 03:30 packages/evil-cleverparens-20170718.413.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 03:30 packages/evil-cleverparens-badge.svg
+4.0K -rw-r--r-- 1 root root  256 Aug  4 03:30 packages/evil-cleverparens-readme.txt
+4.0K -rw-r--r-- 1 root root 1.4K Aug  4 03:30 packages/evil-cleverparens.log
+8.0K -rw-r--r-- 1 root root 4.9K Aug  4 03:30 packages/evil-colemak-basics-20200630.1936.el
+4.0K -rw-r--r-- 1 root root  528 Aug  4 03:30 packages/evil-colemak-basics-20200630.1936.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 03:30 packages/evil-colemak-basics-badge.svg
+4.0K -rw-r--r-- 1 root root  264 Aug  4 03:30 packages/evil-colemak-basics-readme.txt
+4.0K -rw-r--r-- 1 root root  693 Aug  4 03:30 packages/evil-colemak-basics.log
+8.0K -rw-r--r-- 1 root root 5.2K Aug  4 03:30 packages/evil-colemak-minimal-20171006.1317.el
+4.0K -rw-r--r-- 1 root root  445 Aug  4 03:30 packages/evil-colemak-minimal-20171006.1317.entry
 4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-colemak-minimal-badge.svg
-4.0K -rw-r--r-- 1 root root  268 Aug  4 00:06 packages/evil-colemak-minimal-readme.txt
-4.0K -rw-r--r-- 1 root root  764 Aug  4 00:06 packages/evil-colemak-minimal.log
-4.0K -rw-r--r-- 1 root root  444 Aug  3 20:42 packages/evil-collection-20210721.1454.entry
-840K -rw-r--r-- 1 root root 840K Aug  3 20:42 packages/evil-collection-20210721.1454.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-collection-badge.svg
-4.0K -rw-r--r-- 1 root root  301 Aug  3 20:42 packages/evil-collection-readme.txt
-4.0K -rw-r--r-- 1 root root  446 Aug  4 00:06 packages/evil-collection.log
-4.0K -rw-r--r-- 1 root root  435 Aug  3 20:42 packages/evil-commentary-20210210.1702.entry
- 12K -rw-r--r-- 1 root root  10K Aug  3 20:42 packages/evil-commentary-20210210.1702.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-commentary-badge.svg
-4.0K -rw-r--r-- 1 root root  133 Aug  3 20:42 packages/evil-commentary-readme.txt
-   0 -rw-r--r-- 1 root root    0 Aug  4 00:06 packages/evil-commentary.log
-4.0K -rw-r--r-- 1 root root  312 Aug  3 20:42 packages/evil-dvorak-20160416.1841.entry
- 12K -rw-r--r-- 1 root root  10K Aug  3 20:42 packages/evil-dvorak-20160416.1841.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-dvorak-badge.svg
-4.0K -rw-r--r-- 1 root root  250 Aug  3 20:42 packages/evil-dvorak-readme.txt
-   0 -rw-r--r-- 1 root root    0 Aug  4 00:06 packages/evil-dvorak.log
- 24K -rw-r--r-- 1 root root  22K Aug  3 20:42 packages/evil-easymotion-20200424.135.el
-4.0K -rw-r--r-- 1 root root  448 Aug  3 20:42 packages/evil-easymotion-20200424.135.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-easymotion-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-easymotion-readme.txt
-   0 -rw-r--r-- 1 root root    0 Aug  4 00:06 packages/evil-easymotion.log
-8.0K -rw-r--r-- 1 root root 8.0K Aug  3 20:42 packages/evil-ediff-20170724.1923.el
-4.0K -rw-r--r-- 1 root root  355 Aug  3 20:42 packages/evil-ediff-20170724.1923.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-ediff-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Aug  3 20:42 packages/evil-ediff-readme.txt
-   0 -rw-r--r-- 1 root root    0 Aug  4 00:06 packages/evil-ediff.log
- 12K -rw-r--r-- 1 root root  11K Aug  3 20:42 packages/evil-embrace-20210418.2038.el
-4.0K -rw-r--r-- 1 root root  368 Aug  3 20:42 packages/evil-embrace-20210418.2038.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-embrace-badge.svg
-4.0K -rw-r--r-- 1 root root 3.2K Aug  3 20:42 packages/evil-embrace-readme.txt
-   0 -rw-r--r-- 1 root root    0 Aug  4 00:06 packages/evil-embrace.log
- 16K -rw-r--r-- 1 root root  13K Aug  3 20:42 packages/evil-escape-20180910.1234.el
-4.0K -rw-r--r-- 1 root root  467 Aug  3 20:42 packages/evil-escape-20180910.1234.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-escape-badge.svg
-4.0K -rw-r--r-- 1 root root 1.8K Aug  3 20:42 packages/evil-escape-readme.txt
-   0 -rw-r--r-- 1 root root    0 Aug  4 00:06 packages/evil-escape.log
-4.0K -rw-r--r-- 1 root root 1.9K Aug  3 20:42 packages/evil-ex-fasd-20180903.612.el
-4.0K -rw-r--r-- 1 root root  431 Aug  3 20:42 packages/evil-ex-fasd-20180903.612.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-ex-fasd-badge.svg
-4.0K -rw-r--r-- 1 root root   48 Aug  3 20:42 packages/evil-ex-fasd-readme.txt
-4.0K -rw-r--r-- 1 root root  630 Aug  3 20:42 packages/evil-ex-fasd.log
-4.0K -rw-r--r-- 1 root root 3.2K Aug  3 20:42 packages/evil-ex-shell-command-20181226.226.el
-4.0K -rw-r--r-- 1 root root  442 Aug  3 20:42 packages/evil-ex-shell-command-20181226.226.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-ex-shell-command-badge.svg
-4.0K -rw-r--r-- 1 root root   45 Aug  3 20:42 packages/evil-ex-shell-command-readme.txt
-4.0K -rw-r--r-- 1 root root  702 Aug  3 20:42 packages/evil-ex-shell-command.log
-8.0K -rw-r--r-- 1 root root 8.0K Aug  3 20:42 packages/evil-exchange-20200118.252.el
-4.0K -rw-r--r-- 1 root root  383 Aug  3 20:42 packages/evil-exchange-20200118.252.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-exchange-badge.svg
-4.0K -rw-r--r-- 1 root root  319 Aug  3 20:42 packages/evil-exchange-readme.txt
-4.0K -rw-r--r-- 1 root root  637 Aug  3 20:42 packages/evil-exchange.log
- 16K -rw-r--r-- 1 root root  13K Aug  3 20:42 packages/evil-expat-20190521.714.el
-4.0K -rw-r--r-- 1 root root  408 Aug  3 20:42 packages/evil-expat-20190521.714.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-expat-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-expat-readme.txt
-4.0K -rw-r--r-- 1 root root  612 Aug  3 20:42 packages/evil-expat.log
- 16K -rw-r--r-- 1 root root  13K Aug  3 20:42 packages/evil-extra-operator-20210225.1239.el
-4.0K -rw-r--r-- 1 root root  452 Aug  3 20:42 packages/evil-extra-operator-20210225.1239.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-extra-operator-badge.svg
-4.0K -rw-r--r-- 1 root root  571 Aug  3 20:42 packages/evil-extra-operator-readme.txt
-4.0K -rw-r--r-- 1 root root  687 Aug  3 20:42 packages/evil-extra-operator.log
- 12K -rw-r--r-- 1 root root  11K Aug  3 20:42 packages/evil-find-char-pinyin-20160514.2041.el
-4.0K -rw-r--r-- 1 root root  380 Aug  3 20:42 packages/evil-find-char-pinyin-20160514.2041.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-find-char-pinyin-badge.svg
-4.0K -rw-r--r-- 1 root root 3.4K Aug  3 20:42 packages/evil-find-char-pinyin-readme.txt
-4.0K -rw-r--r-- 1 root root  706 Aug  3 20:42 packages/evil-find-char-pinyin.log
-4.0K -rw-r--r-- 1 root root  487 Aug  3 20:42 packages/evil-fringe-mark-20190320.453.entry
- 52K -rw-r--r-- 1 root root  50K Aug  3 20:42 packages/evil-fringe-mark-20190320.453.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-fringe-mark-badge.svg
-4.0K -rw-r--r-- 1 root root  637 Aug  3 20:42 packages/evil-fringe-mark-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-fringe-mark.log
-8.0K -rw-r--r-- 1 root root 4.6K Aug  3 20:42 packages/evil-god-state-20141117.255.el
-4.0K -rw-r--r-- 1 root root  373 Aug  3 20:42 packages/evil-god-state-20141117.255.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-god-state-badge.svg
-4.0K -rw-r--r-- 1 root root  796 Aug  3 20:42 packages/evil-god-state-readme.txt
-4.0K -rw-r--r-- 1 root root  647 Aug  3 20:42 packages/evil-god-state.log
- 28K -rw-r--r-- 1 root root  28K Aug  3 20:42 packages/evil-goggles-20200101.1935.el
-4.0K -rw-r--r-- 1 root root  410 Aug  3 20:42 packages/evil-goggles-20200101.1935.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-goggles-badge.svg
-4.0K -rw-r--r-- 1 root root  106 Aug  3 20:42 packages/evil-goggles-readme.txt
-4.0K -rw-r--r-- 1 root root  630 Aug  3 20:42 packages/evil-goggles.log
- 12K -rw-r--r-- 1 root root 9.8K Aug  3 20:42 packages/evil-iedit-state-20200830.617.el
-4.0K -rw-r--r-- 1 root root  483 Aug  3 20:42 packages/evil-iedit-state-20200830.617.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-iedit-state-badge.svg
-4.0K -rw-r--r-- 1 root root  151 Aug  3 20:42 packages/evil-iedit-state-readme.txt
-4.0K -rw-r--r-- 1 root root  661 Aug  3 20:42 packages/evil-iedit-state.log
- 12K -rw-r--r-- 1 root root 8.4K Aug  3 20:42 packages/evil-indent-plus-20151109.1906.el
-4.0K -rw-r--r-- 1 root root  423 Aug  3 20:42 packages/evil-indent-plus-20151109.1906.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-indent-plus-badge.svg
-4.0K -rw-r--r-- 1 root root  327 Aug  3 20:42 packages/evil-indent-plus-readme.txt
-4.0K -rw-r--r-- 1 root root  660 Aug  3 20:42 packages/evil-indent-plus.log
-8.0K -rw-r--r-- 1 root root 4.8K Aug  3 20:42 packages/evil-indent-textobject-20130831.2219.el
-4.0K -rw-r--r-- 1 root root  422 Aug  3 20:42 packages/evil-indent-textobject-20130831.2219.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-indent-textobject-badge.svg
-4.0K -rw-r--r-- 1 root root  517 Aug  3 20:42 packages/evil-indent-textobject-readme.txt
-4.0K -rw-r--r-- 1 root root  707 Aug  3 20:42 packages/evil-indent-textobject.log
-8.0K -rw-r--r-- 1 root root 7.9K Aug  3 20:42 packages/evil-leader-20140606.1243.el
-4.0K -rw-r--r-- 1 root root  421 Aug  3 20:42 packages/evil-leader-20140606.1243.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-leader-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Aug  3 20:42 packages/evil-leader-readme.txt
-4.0K -rw-r--r-- 1 root root  619 Aug  3 20:42 packages/evil-leader.log
-8.0K -rw-r--r-- 1 root root 5.9K Aug  3 20:42 packages/evil-ledger-20180802.1612.el
-4.0K -rw-r--r-- 1 root root  490 Aug  3 20:42 packages/evil-ledger-20180802.1612.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-ledger-badge.svg
-4.0K -rw-r--r-- 1 root root   95 Aug  3 20:42 packages/evil-ledger-readme.txt
-4.0K -rw-r--r-- 1 root root  623 Aug  3 20:42 packages/evil-ledger.log
- 12K -rw-r--r-- 1 root root 8.6K Aug  3 20:42 packages/evil-lion-20170811.614.el
-4.0K -rw-r--r-- 1 root root  415 Aug  3 20:42 packages/evil-lion-20170811.614.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-lion-badge.svg
-4.0K -rw-r--r-- 1 root root  275 Aug  3 20:42 packages/evil-lion-readme.txt
-4.0K -rw-r--r-- 1 root root  662 Aug  3 20:42 packages/evil-lion.log
- 12K -rw-r--r-- 1 root root  12K Aug  3 20:42 packages/evil-lisp-state-20160404.248.el
-4.0K -rw-r--r-- 1 root root  507 Aug  3 20:42 packages/evil-lisp-state-20160404.248.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-lisp-state-badge.svg
-4.0K -rw-r--r-- 1 root root 3.3K Aug  3 20:42 packages/evil-lisp-state-readme.txt
-4.0K -rw-r--r-- 1 root root  653 Aug  3 20:42 packages/evil-lisp-state.log
-4.0K -rw-r--r-- 1 root root  550 Aug  3 20:42 packages/evil-lispy-20190502.739.entry
- 20K -rw-r--r-- 1 root root  20K Aug  3 20:42 packages/evil-lispy-20190502.739.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-lispy-badge.svg
-4.0K -rw-r--r-- 1 root root  271 Aug  3 20:42 packages/evil-lispy-readme.txt
-4.0K -rw-r--r-- 1 root root 1.4K Aug  3 20:42 packages/evil-lispy.log
+4.0K -rw-r--r-- 1 root root  268 Aug  4 03:30 packages/evil-colemak-minimal-readme.txt
+4.0K -rw-r--r-- 1 root root  313 Aug  4 03:30 packages/evil-colemak-minimal.log
+4.0K -rw-r--r-- 1 root root  444 Aug  4 00:06 packages/evil-collection-20210721.1454.entry
+840K -rw-r--r-- 1 root root 840K Aug  4 00:06 packages/evil-collection-20210721.1454.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-collection-badge.svg
+4.0K -rw-r--r-- 1 root root  301 Aug  4 00:06 packages/evil-collection-readme.txt
+4.0K -rw-r--r-- 1 root root  152 Aug  4 03:30 packages/evil-collection.log
+4.0K -rw-r--r-- 1 root root  435 Aug  4 00:06 packages/evil-commentary-20210210.1702.entry
+ 12K -rw-r--r-- 1 root root  10K Aug  4 00:06 packages/evil-commentary-20210210.1702.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-commentary-badge.svg
+4.0K -rw-r--r-- 1 root root  133 Aug  4 00:06 packages/evil-commentary-readme.txt
+   0 -rw-r--r-- 1 root root    0 Aug  4 03:30 packages/evil-commentary.log
+4.0K -rw-r--r-- 1 root root  312 Aug  4 00:06 packages/evil-dvorak-20160416.1841.entry
+ 12K -rw-r--r-- 1 root root  10K Aug  4 00:06 packages/evil-dvorak-20160416.1841.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-dvorak-badge.svg
+4.0K -rw-r--r-- 1 root root  250 Aug  4 00:06 packages/evil-dvorak-readme.txt
+   0 -rw-r--r-- 1 root root    0 Aug  4 03:30 packages/evil-dvorak.log
+ 24K -rw-r--r-- 1 root root  22K Aug  4 00:06 packages/evil-easymotion-20200424.135.el
+4.0K -rw-r--r-- 1 root root  448 Aug  4 00:06 packages/evil-easymotion-20200424.135.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-easymotion-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-easymotion-readme.txt
+   0 -rw-r--r-- 1 root root    0 Aug  4 03:30 packages/evil-easymotion.log
+8.0K -rw-r--r-- 1 root root 8.0K Aug  4 00:06 packages/evil-ediff-20170724.1923.el
+4.0K -rw-r--r-- 1 root root  355 Aug  4 00:06 packages/evil-ediff-20170724.1923.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-ediff-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Aug  4 00:06 packages/evil-ediff-readme.txt
+   0 -rw-r--r-- 1 root root    0 Aug  4 03:30 packages/evil-ediff.log
+ 12K -rw-r--r-- 1 root root  11K Aug  4 00:06 packages/evil-embrace-20210418.2038.el
+4.0K -rw-r--r-- 1 root root  368 Aug  4 00:06 packages/evil-embrace-20210418.2038.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-embrace-badge.svg
+4.0K -rw-r--r-- 1 root root 3.2K Aug  4 00:06 packages/evil-embrace-readme.txt
+4.0K -rw-r--r-- 1 root root  637 Aug  4 00:06 packages/evil-embrace.log
+ 16K -rw-r--r-- 1 root root  13K Aug  4 00:06 packages/evil-escape-20180910.1234.el
+4.0K -rw-r--r-- 1 root root  467 Aug  4 00:06 packages/evil-escape-20180910.1234.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:06 packages/evil-escape-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Aug  4 00:06 packages/evil-escape-readme.txt
+4.0K -rw-r--r-- 1 root root  623 Aug  4 00:06 packages/evil-escape.log
+4.0K -rw-r--r-- 1 root root 1.9K Aug  4 00:07 packages/evil-ex-fasd-20180903.612.el
+4.0K -rw-r--r-- 1 root root  431 Aug  4 00:07 packages/evil-ex-fasd-20180903.612.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-ex-fasd-badge.svg
+4.0K -rw-r--r-- 1 root root   48 Aug  4 00:07 packages/evil-ex-fasd-readme.txt
+4.0K -rw-r--r-- 1 root root  630 Aug  4 00:07 packages/evil-ex-fasd.log
+4.0K -rw-r--r-- 1 root root 3.2K Aug  4 00:07 packages/evil-ex-shell-command-20181226.226.el
+4.0K -rw-r--r-- 1 root root  442 Aug  4 00:07 packages/evil-ex-shell-command-20181226.226.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-ex-shell-command-badge.svg
+4.0K -rw-r--r-- 1 root root   45 Aug  4 00:07 packages/evil-ex-shell-command-readme.txt
+4.0K -rw-r--r-- 1 root root  702 Aug  4 00:07 packages/evil-ex-shell-command.log
+8.0K -rw-r--r-- 1 root root 8.0K Aug  4 00:07 packages/evil-exchange-20200118.252.el
+4.0K -rw-r--r-- 1 root root  383 Aug  4 00:07 packages/evil-exchange-20200118.252.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-exchange-badge.svg
+4.0K -rw-r--r-- 1 root root  319 Aug  4 00:07 packages/evil-exchange-readme.txt
+4.0K -rw-r--r-- 1 root root  637 Aug  4 00:07 packages/evil-exchange.log
+ 16K -rw-r--r-- 1 root root  13K Aug  4 00:07 packages/evil-expat-20190521.714.el
+4.0K -rw-r--r-- 1 root root  408 Aug  4 00:07 packages/evil-expat-20190521.714.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-expat-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-expat-readme.txt
+4.0K -rw-r--r-- 1 root root  612 Aug  4 00:07 packages/evil-expat.log
+ 16K -rw-r--r-- 1 root root  13K Aug  4 00:07 packages/evil-extra-operator-20210225.1239.el
+4.0K -rw-r--r-- 1 root root  452 Aug  4 00:07 packages/evil-extra-operator-20210225.1239.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-extra-operator-badge.svg
+4.0K -rw-r--r-- 1 root root  571 Aug  4 00:07 packages/evil-extra-operator-readme.txt
+4.0K -rw-r--r-- 1 root root  687 Aug  4 00:07 packages/evil-extra-operator.log
+ 12K -rw-r--r-- 1 root root  11K Aug  4 00:07 packages/evil-find-char-pinyin-20160514.2041.el
+4.0K -rw-r--r-- 1 root root  380 Aug  4 00:07 packages/evil-find-char-pinyin-20160514.2041.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-find-char-pinyin-badge.svg
+4.0K -rw-r--r-- 1 root root 3.4K Aug  4 00:07 packages/evil-find-char-pinyin-readme.txt
+4.0K -rw-r--r-- 1 root root  706 Aug  4 00:07 packages/evil-find-char-pinyin.log
+4.0K -rw-r--r-- 1 root root  487 Aug  4 00:07 packages/evil-fringe-mark-20190320.453.entry
+ 52K -rw-r--r-- 1 root root  50K Aug  4 00:07 packages/evil-fringe-mark-20190320.453.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-fringe-mark-badge.svg
+4.0K -rw-r--r-- 1 root root  637 Aug  4 00:07 packages/evil-fringe-mark-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-fringe-mark.log
+8.0K -rw-r--r-- 1 root root 4.6K Aug  4 00:07 packages/evil-god-state-20141117.255.el
+4.0K -rw-r--r-- 1 root root  373 Aug  4 00:07 packages/evil-god-state-20141117.255.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-god-state-badge.svg
+4.0K -rw-r--r-- 1 root root  796 Aug  4 00:07 packages/evil-god-state-readme.txt
+4.0K -rw-r--r-- 1 root root  647 Aug  4 00:07 packages/evil-god-state.log
+ 28K -rw-r--r-- 1 root root  28K Aug  4 00:07 packages/evil-goggles-20200101.1935.el
+4.0K -rw-r--r-- 1 root root  410 Aug  4 00:07 packages/evil-goggles-20200101.1935.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-goggles-badge.svg
+4.0K -rw-r--r-- 1 root root  106 Aug  4 00:07 packages/evil-goggles-readme.txt
+4.0K -rw-r--r-- 1 root root  630 Aug  4 00:07 packages/evil-goggles.log
+ 12K -rw-r--r-- 1 root root 9.8K Aug  4 00:07 packages/evil-iedit-state-20200830.617.el
+4.0K -rw-r--r-- 1 root root  483 Aug  4 00:07 packages/evil-iedit-state-20200830.617.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-iedit-state-badge.svg
+4.0K -rw-r--r-- 1 root root  151 Aug  4 00:07 packages/evil-iedit-state-readme.txt
+4.0K -rw-r--r-- 1 root root  662 Aug  4 00:07 packages/evil-iedit-state.log
+ 12K -rw-r--r-- 1 root root 8.4K Aug  4 00:07 packages/evil-indent-plus-20151109.1906.el
+4.0K -rw-r--r-- 1 root root  423 Aug  4 00:07 packages/evil-indent-plus-20151109.1906.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-indent-plus-badge.svg
+4.0K -rw-r--r-- 1 root root  327 Aug  4 00:07 packages/evil-indent-plus-readme.txt
+4.0K -rw-r--r-- 1 root root  660 Aug  4 00:07 packages/evil-indent-plus.log
+8.0K -rw-r--r-- 1 root root 4.8K Aug  4 00:07 packages/evil-indent-textobject-20130831.2219.el
+4.0K -rw-r--r-- 1 root root  422 Aug  4 00:07 packages/evil-indent-textobject-20130831.2219.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-indent-textobject-badge.svg
+4.0K -rw-r--r-- 1 root root  517 Aug  4 00:07 packages/evil-indent-textobject-readme.txt
+4.0K -rw-r--r-- 1 root root  707 Aug  4 00:07 packages/evil-indent-textobject.log
+8.0K -rw-r--r-- 1 root root 7.9K Aug  4 00:07 packages/evil-leader-20140606.1243.el
+4.0K -rw-r--r-- 1 root root  421 Aug  4 00:07 packages/evil-leader-20140606.1243.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-leader-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Aug  4 00:07 packages/evil-leader-readme.txt
+4.0K -rw-r--r-- 1 root root  619 Aug  4 00:07 packages/evil-leader.log
+8.0K -rw-r--r-- 1 root root 5.9K Aug  4 00:07 packages/evil-ledger-20180802.1612.el
+4.0K -rw-r--r-- 1 root root  490 Aug  4 00:07 packages/evil-ledger-20180802.1612.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-ledger-badge.svg
+4.0K -rw-r--r-- 1 root root   95 Aug  4 00:07 packages/evil-ledger-readme.txt
+4.0K -rw-r--r-- 1 root root  623 Aug  4 00:07 packages/evil-ledger.log
+ 12K -rw-r--r-- 1 root root 8.6K Aug  4 00:07 packages/evil-lion-20170811.614.el
+4.0K -rw-r--r-- 1 root root  415 Aug  4 00:07 packages/evil-lion-20170811.614.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-lion-badge.svg
+4.0K -rw-r--r-- 1 root root  275 Aug  4 00:07 packages/evil-lion-readme.txt
+4.0K -rw-r--r-- 1 root root  663 Aug  4 00:07 packages/evil-lion.log
+ 12K -rw-r--r-- 1 root root  12K Aug  4 00:07 packages/evil-lisp-state-20160404.248.el
+4.0K -rw-r--r-- 1 root root  507 Aug  4 00:07 packages/evil-lisp-state-20160404.248.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-lisp-state-badge.svg
+4.0K -rw-r--r-- 1 root root 3.3K Aug  4 00:07 packages/evil-lisp-state-readme.txt
+4.0K -rw-r--r-- 1 root root  653 Aug  4 00:07 packages/evil-lisp-state.log
+4.0K -rw-r--r-- 1 root root  550 Aug  4 00:07 packages/evil-lispy-20190502.739.entry
+ 20K -rw-r--r-- 1 root root  20K Aug  4 00:07 packages/evil-lispy-20190502.739.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-lispy-badge.svg
+4.0K -rw-r--r-- 1 root root  271 Aug  4 00:07 packages/evil-lispy-readme.txt
+4.0K -rw-r--r-- 1 root root 1.4K Aug  4 00:07 packages/evil-lispy.log
 4.0K -rw-r--r-- 1 root root 1.2K Jan 24  2021 packages/evil-magit-badge.svg
 4.0K -rw-r--r-- 1 root root  816 Jan 24  2021 packages/evil-magit-readme.txt
 4.0K -rw-r--r-- 1 root root  538 Jan 24  2021 packages/evil-magit.log
-4.0K -rw-r--r-- 1 root root 3.4K Aug  3 20:42 packages/evil-mark-replace-20200630.940.el
-4.0K -rw-r--r-- 1 root root  425 Aug  3 20:42 packages/evil-mark-replace-20200630.940.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-mark-replace-badge.svg
-4.0K -rw-r--r-- 1 root root  294 Aug  3 20:42 packages/evil-mark-replace-readme.txt
-4.0K -rw-r--r-- 1 root root  672 Aug  3 20:42 packages/evil-mark-replace.log
-4.0K -rw-r--r-- 1 root root  414 Aug  3 20:42 packages/evil-matchit-20210727.1106.entry
-120K -rw-r--r-- 1 root root 120K Aug  3 20:42 packages/evil-matchit-20210727.1106.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-matchit-badge.svg
-4.0K -rw-r--r-- 1 root root  577 Aug  3 20:42 packages/evil-matchit-readme.txt
-4.0K -rw-r--r-- 1 root root 3.2K Aug  3 20:42 packages/evil-matchit.log
-4.0K -rw-r--r-- 1 root root  485 Aug  3 20:42 packages/evil-mc-20210730.1752.entry
-140K -rw-r--r-- 1 root root 140K Aug  3 20:42 packages/evil-mc-20210730.1752.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-mc-badge.svg
-4.0K -rw-r--r-- 1 root root  564 Aug  3 20:42 packages/evil-mc-extras-20170202.1649.entry
- 12K -rw-r--r-- 1 root root  10K Aug  3 20:42 packages/evil-mc-extras-20170202.1649.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-mc-extras-badge.svg
-4.0K -rw-r--r-- 1 root root  282 Aug  3 20:42 packages/evil-mc-extras-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-mc-extras.log
-4.0K -rw-r--r-- 1 root root  244 Aug  3 20:42 packages/evil-mc-readme.txt
-4.0K -rw-r--r-- 1 root root 2.3K Aug  3 20:42 packages/evil-mc.log
- 20K -rw-r--r-- 1 root root  18K Aug  3 20:42 packages/evil-mu4e-20180613.1039.el
-4.0K -rw-r--r-- 1 root root  384 Aug  3 20:42 packages/evil-mu4e-20180613.1039.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-mu4e-badge.svg
-4.0K -rw-r--r-- 1 root root 1.9K Aug  3 20:42 packages/evil-mu4e-readme.txt
-4.0K -rw-r--r-- 1 root root  605 Aug  3 20:42 packages/evil-mu4e.log
- 28K -rwxr-xr-x 1 root root  28K Aug  3 20:42 packages/evil-multiedit-20200229.528.el
-4.0K -rw-r--r-- 1 root root  471 Aug  3 20:42 packages/evil-multiedit-20200229.528.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-multiedit-badge.svg
-4.0K -rw-r--r-- 1 root root 2.4K Aug  3 20:42 packages/evil-multiedit-readme.txt
-4.0K -rw-r--r-- 1 root root  645 Aug  3 20:42 packages/evil-multiedit.log
-4.0K -rw-r--r-- 1 root root  462 Aug  3 20:42 packages/evil-nerd-commenter-20210719.1305.entry
- 60K -rw-r--r-- 1 root root  60K Aug  3 20:42 packages/evil-nerd-commenter-20210719.1305.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-nerd-commenter-badge.svg
-4.0K -rw-r--r-- 1 root root 3.9K Aug  3 20:42 packages/evil-nerd-commenter-readme.txt
-4.0K -rw-r--r-- 1 root root 1.4K Aug  3 20:42 packages/evil-nerd-commenter.log
-4.0K -rw-r--r-- 1 root root 3.1K Aug  3 20:42 packages/evil-nl-break-undo-20181125.2054.el
-4.0K -rw-r--r-- 1 root root  368 Aug  3 20:42 packages/evil-nl-break-undo-20181125.2054.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-nl-break-undo-badge.svg
-4.0K -rw-r--r-- 1 root root  156 Aug  3 20:42 packages/evil-nl-break-undo-readme.txt
-4.0K -rw-r--r-- 1 root root  679 Aug  3 20:42 packages/evil-nl-break-undo.log
- 28K -rw-r--r-- 1 root root  25K Aug  3 20:42 packages/evil-numbers-20210605.431.el
-4.0K -rw-r--r-- 1 root root  420 Aug  3 20:42 packages/evil-numbers-20210605.431.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-numbers-badge.svg
-4.0K -rw-r--r-- 1 root root  995 Aug  3 20:42 packages/evil-numbers-readme.txt
-4.0K -rw-r--r-- 1 root root  630 Aug  3 20:42 packages/evil-numbers.log
-4.0K -rw-r--r-- 1 root root  436 Aug  3 20:42 packages/evil-opener-20161207.1810.entry
- 20K -rw-r--r-- 1 root root  20K Aug  3 20:42 packages/evil-opener-20161207.1810.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-opener-badge.svg
-4.0K -rw-r--r-- 1 root root  716 Aug  3 20:42 packages/evil-opener-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-opener.log
-4.0K -rw-r--r-- 1 root root  354 Aug  3 20:42 packages/evil-org-20201222.2023.entry
- 52K -rw-r--r-- 1 root root  50K Aug  3 20:42 packages/evil-org-20201222.2023.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-org-badge.svg
-4.0K -rw-r--r-- 1 root root   67 Aug  3 20:42 packages/evil-org-readme.txt
-4.0K -rw-r--r-- 1 root root 1006 Aug  3 20:42 packages/evil-org.log
- 20K -rw-r--r-- 1 root root  18K Aug  3 20:42 packages/evil-owl-20210416.1700.el
-4.0K -rw-r--r-- 1 root root  440 Aug  3 20:42 packages/evil-owl-20210416.1700.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-owl-badge.svg
-4.0K -rw-r--r-- 1 root root  121 Aug  3 20:42 packages/evil-owl-readme.txt
-4.0K -rw-r--r-- 1 root root  600 Aug  3 20:42 packages/evil-owl.log
-8.0K -rw-r--r-- 1 root root 5.7K Aug  3 20:42 packages/evil-paredit-20150413.2048.el
-4.0K -rw-r--r-- 1 root root  414 Aug  3 20:42 packages/evil-paredit-20150413.2048.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-paredit-badge.svg
-4.0K -rw-r--r-- 1 root root  610 Aug  3 20:42 packages/evil-paredit.log
-4.0K -rw-r--r-- 1 root root  318 Aug  3 20:42 packages/evil-pinyin-20200927.849.entry
-132K -rw-r--r-- 1 root root 130K Aug  3 20:42 packages/evil-pinyin-20200927.849.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-pinyin-badge.svg
-4.0K -rw-r--r-- 1 root root  159 Aug  3 20:42 packages/evil-pinyin-readme.txt
-4.0K -rw-r--r-- 1 root root 1.7K Aug  3 20:42 packages/evil-pinyin.log
- 12K -rw-r--r-- 1 root root  11K Aug  3 20:42 packages/evil-python-movement-20180724.1420.el
-4.0K -rw-r--r-- 1 root root  497 Aug  3 20:42 packages/evil-python-movement-20180724.1420.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-python-movement-badge.svg
-4.0K -rw-r--r-- 1 root root  528 Aug  3 20:42 packages/evil-python-movement-readme.txt
-4.0K -rw-r--r-- 1 root root  696 Aug  3 20:42 packages/evil-python-movement.log
- 16K -rw-r--r-- 1 root root  14K Aug  3 20:42 packages/evil-quickscope-20160202.1924.el
-4.0K -rw-r--r-- 1 root root  420 Aug  3 20:42 packages/evil-quickscope-20160202.1924.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-quickscope-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-quickscope-readme.txt
-4.0K -rw-r--r-- 1 root root  653 Aug  3 20:42 packages/evil-quickscope.log
-8.0K -rw-r--r-- 1 root root 4.7K Aug  3 20:42 packages/evil-rails-20190512.1517.el
-4.0K -rw-r--r-- 1 root root  503 Aug  3 20:42 packages/evil-rails-20190512.1517.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-rails-badge.svg
-4.0K -rw-r--r-- 1 root root   57 Aug  3 20:42 packages/evil-rails-readme.txt
-4.0K -rw-r--r-- 1 root root  613 Aug  3 20:42 packages/evil-rails.log
-4.0K -rw-r--r-- 1 root root  883 Aug  4 00:06 packages/evil-readme.txt
-4.0K -rw-r--r-- 1 root root 2.2K Aug  3 20:42 packages/evil-replace-with-char-20180324.2206.el
-4.0K -rw-r--r-- 1 root root  409 Aug  3 20:42 packages/evil-replace-with-char-20180324.2206.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-replace-with-char-badge.svg
-4.0K -rw-r--r-- 1 root root  285 Aug  3 20:42 packages/evil-replace-with-char-readme.txt
-4.0K -rw-r--r-- 1 root root  709 Aug  3 20:42 packages/evil-replace-with-char.log
-4.0K -rw-r--r-- 1 root root 3.8K Aug  3 20:42 packages/evil-replace-with-register-20170713.925.el
-4.0K -rw-r--r-- 1 root root  440 Aug  3 20:42 packages/evil-replace-with-register-20170713.925.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:42 packages/evil-replace-with-register-badge.svg
-4.0K -rw-r--r-- 1 root root  386 Aug  3 20:42 packages/evil-replace-with-register-readme.txt
-4.0K -rw-r--r-- 1 root root  739 Aug  3 20:42 packages/evil-replace-with-register.log
-4.0K -rwxr-xr-x 1 root root 2.9K Aug  3 20:42 packages/evil-rsi-20160221.2104.el
-4.0K -rw-r--r-- 1 root root  406 Aug  3 20:43 packages/evil-rsi-20160221.2104.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-rsi-badge.svg
-4.0K -rw-r--r-- 1 root root  228 Aug  3 20:43 packages/evil-rsi-readme.txt
-4.0K -rw-r--r-- 1 root root  601 Aug  3 20:43 packages/evil-rsi.log
- 12K -rw-r--r-- 1 root root 9.1K Aug  3 20:43 packages/evil-ruby-text-objects-20200323.1552.el
-4.0K -rw-r--r-- 1 root root  418 Aug  3 20:43 packages/evil-ruby-text-objects-20200323.1552.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-ruby-text-objects-badge.svg
-4.0K -rw-r--r-- 1 root root  139 Aug  3 20:43 packages/evil-ruby-text-objects-readme.txt
-4.0K -rw-r--r-- 1 root root  709 Aug  3 20:43 packages/evil-ruby-text-objects.log
- 12K -rw-r--r-- 1 root root  10K Aug  3 20:43 packages/evil-search-highlight-persist-20170523.334.el
-4.0K -rw-r--r-- 1 root root  333 Aug  3 20:43 packages/evil-search-highlight-persist-20170523.334.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-search-highlight-persist-badge.svg
-4.0K -rw-r--r-- 1 root root  712 Aug  3 20:43 packages/evil-search-highlight-persist-readme.txt
-4.0K -rw-r--r-- 1 root root  766 Aug  3 20:43 packages/evil-search-highlight-persist.log
- 16K -rw-r--r-- 1 root root  15K Aug  3 20:43 packages/evil-smartparens-20171210.1513.el
-4.0K -rw-r--r-- 1 root root  459 Aug  3 20:43 packages/evil-smartparens-20171210.1513.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-smartparens-badge.svg
-4.0K -rw-r--r-- 1 root root   78 Aug  3 20:43 packages/evil-smartparens-readme.txt
-4.0K -rw-r--r-- 1 root root  660 Aug  3 20:43 packages/evil-smartparens.log
- 28K -rwxr-xr-x 1 root root  26K Aug  3 20:43 packages/evil-snipe-20210713.1456.el
-4.0K -rw-r--r-- 1 root root  484 Aug  3 20:43 packages/evil-snipe-20210713.1456.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-snipe-badge.svg
-4.0K -rw-r--r-- 1 root root  452 Aug  3 20:43 packages/evil-snipe-readme.txt
-4.0K -rw-r--r-- 1 root root  615 Aug  3 20:43 packages/evil-snipe.log
-8.0K -rw-r--r-- 1 root root 5.4K Aug  3 20:43 packages/evil-space-20151208.1228.el
-4.0K -rw-r--r-- 1 root root  449 Aug  3 20:43 packages/evil-space-20151208.1228.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-space-badge.svg
-4.0K -rw-r--r-- 1 root root  312 Aug  3 20:43 packages/evil-space-readme.txt
-4.0K -rw-r--r-- 1 root root  617 Aug  3 20:43 packages/evil-space.log
-4.0K -rw-r--r-- 1 root root 2.1K Aug  3 20:43 packages/evil-string-inflection-20180313.1755.el
-4.0K -rw-r--r-- 1 root root  454 Aug  3 20:43 packages/evil-string-inflection-20180313.1755.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-string-inflection-badge.svg
-4.0K -rw-r--r-- 1 root root  197 Aug  3 20:43 packages/evil-string-inflection-readme.txt
-4.0K -rw-r--r-- 1 root root  709 Aug  3 20:43 packages/evil-string-inflection.log
- 20K -rw-r--r-- 1 root root  19K Aug  3 20:43 packages/evil-surround-20210615.2119.el
-4.0K -rw-r--r-- 1 root root  382 Aug  3 20:43 packages/evil-surround-20210615.2119.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-surround-badge.svg
-4.0K -rw-r--r-- 1 root root  449 Aug  3 20:43 packages/evil-surround-readme.txt
-4.0K -rw-r--r-- 1 root root  641 Aug  3 20:43 packages/evil-surround.log
- 12K -rw-r--r-- 1 root root  11K Aug  3 20:43 packages/evil-swap-keys-20191105.1426.el
-4.0K -rw-r--r-- 1 root root  425 Aug  3 20:43 packages/evil-swap-keys-20191105.1426.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-swap-keys-badge.svg
-4.0K -rw-r--r-- 1 root root   91 Aug  3 20:43 packages/evil-swap-keys-readme.txt
-4.0K -rw-r--r-- 1 root root  647 Aug  3 20:43 packages/evil-swap-keys.log
-4.0K -rw-r--r-- 1 root root 2.8K Aug  3 20:43 packages/evil-tabs-20160217.1520.el
-4.0K -rw-r--r-- 1 root root  454 Aug  3 20:43 packages/evil-tabs-20160217.1520.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-tabs-badge.svg
-4.0K -rw-r--r-- 1 root root   49 Aug  3 20:43 packages/evil-tabs-readme.txt
-4.0K -rw-r--r-- 1 root root  611 Aug  3 20:43 packages/evil-tabs.log
- 12K -rwxr-xr-x 1 root root  11K Aug  3 20:43 packages/evil-terminal-cursor-changer-20210130.1855.el
-4.0K -rw-r--r-- 1 root root  408 Aug  3 20:43 packages/evil-terminal-cursor-changer-20210130.1855.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-terminal-cursor-changer-badge.svg
-4.0K -rw-r--r-- 1 root root 1.5K Aug  3 20:43 packages/evil-terminal-cursor-changer-readme.txt
-4.0K -rw-r--r-- 1 root root  758 Aug  3 20:43 packages/evil-terminal-cursor-changer.log
- 20K -rw-r--r-- 1 root root  18K Aug  3 20:43 packages/evil-test-helpers-20201008.1515.el
-4.0K -rw-r--r-- 1 root root  315 Aug  3 20:43 packages/evil-test-helpers-20201008.1515.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-test-helpers-badge.svg
-4.0K -rw-r--r-- 1 root root  659 Aug  3 20:43 packages/evil-test-helpers-readme.txt
-4.0K -rw-r--r-- 1 root root  660 Aug  3 20:43 packages/evil-test-helpers.log
- 48K -rw-r--r-- 1 root root  48K Aug  3 20:43 packages/evil-tex-20210731.927.el
-4.0K -rw-r--r-- 1 root root  337 Aug  3 20:43 packages/evil-tex-20210731.927.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-tex-badge.svg
-4.0K -rw-r--r-- 1 root root   49 Aug  3 20:43 packages/evil-tex-readme.txt
-4.0K -rw-r--r-- 1 root root  596 Aug  3 20:43 packages/evil-tex.log
-8.0K -rw-r--r-- 1 root root 5.3K Aug  3 20:43 packages/evil-text-object-python-20191010.1328.el
-4.0K -rw-r--r-- 1 root root  498 Aug  3 20:43 packages/evil-text-object-python-20191010.1328.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-text-object-python-badge.svg
-4.0K -rw-r--r-- 1 root root  115 Aug  3 20:43 packages/evil-text-object-python-readme.txt
-4.0K -rw-r--r-- 1 root root  719 Aug  3 20:43 packages/evil-text-object-python.log
- 12K -rw-r--r-- 1 root root  12K Aug  3 20:43 packages/evil-textobj-anyblock-20170905.1907.el
-4.0K -rw-r--r-- 1 root root  427 Aug  3 20:43 packages/evil-textobj-anyblock-20170905.1907.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-textobj-anyblock-badge.svg
-4.0K -rw-r--r-- 1 root root  905 Aug  3 20:43 packages/evil-textobj-anyblock-readme.txt
-4.0K -rw-r--r-- 1 root root  702 Aug  3 20:43 packages/evil-textobj-anyblock.log
- 12K -rw-r--r-- 1 root root  11K Aug  3 20:43 packages/evil-textobj-column-20170905.1905.el
-4.0K -rw-r--r-- 1 root root  480 Aug  3 20:43 packages/evil-textobj-column-20170905.1905.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-textobj-column-badge.svg
-4.0K -rw-r--r-- 1 root root  396 Aug  3 20:43 packages/evil-textobj-column-readme.txt
-4.0K -rw-r--r-- 1 root root  686 Aug  3 20:43 packages/evil-textobj-column.log
-4.0K -rw-r--r-- 1 root root 2.4K Aug  3 20:43 packages/evil-textobj-entire-20150422.1254.el
-4.0K -rw-r--r-- 1 root root  430 Aug  3 20:43 packages/evil-textobj-entire-20150422.1254.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-textobj-entire-badge.svg
-4.0K -rw-r--r-- 1 root root  288 Aug  3 20:43 packages/evil-textobj-entire-readme.txt
-4.0K -rw-r--r-- 1 root root  691 Aug  3 20:43 packages/evil-textobj-entire.log
-4.0K -rw-r--r-- 1 root root 2.4K Aug  3 20:43 packages/evil-textobj-line-20150729.1522.el
-4.0K -rw-r--r-- 1 root root  365 Aug  3 20:43 packages/evil-textobj-line-20150729.1522.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-textobj-line-badge.svg
-   0 -rw-r--r-- 1 root root    0 Aug  3 20:43 packages/evil-textobj-line-readme.txt
-4.0K -rw-r--r-- 1 root root  677 Aug  3 20:43 packages/evil-textobj-line.log
-8.0K -rw-r--r-- 1 root root 5.3K Aug  3 20:43 packages/evil-textobj-syntax-20181210.1213.el
-4.0K -rw-r--r-- 1 root root  367 Aug  3 20:43 packages/evil-textobj-syntax-20181210.1213.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-textobj-syntax-badge.svg
-4.0K -rw-r--r-- 1 root root  218 Aug  3 20:43 packages/evil-textobj-syntax-readme.txt
-4.0K -rw-r--r-- 1 root root  687 Aug  3 20:43 packages/evil-textobj-syntax.log
- 32K -rw-r--r-- 1 root root  30K Aug  3 20:43 packages/evil-traces-20191214.558.el
-4.0K -rw-r--r-- 1 root root  436 Aug  3 20:43 packages/evil-traces-20191214.558.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-traces-badge.svg
-4.0K -rw-r--r-- 1 root root  180 Aug  3 20:43 packages/evil-traces-readme.txt
-4.0K -rw-r--r-- 1 root root  622 Aug  3 20:43 packages/evil-traces.log
-4.0K -rw-r--r-- 1 root root  444 Aug  3 20:43 packages/evil-tutor-20150103.650.entry
- 40K -rw-r--r-- 1 root root  40K Aug  3 20:43 packages/evil-tutor-20150103.650.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-tutor-badge.svg
-4.0K -rw-r--r-- 1 root root  456 Aug  3 20:43 packages/evil-tutor-ja-20160917.132.entry
- 52K -rw-r--r-- 1 root root  50K Aug  3 20:43 packages/evil-tutor-ja-20160917.132.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-tutor-ja-badge.svg
-4.0K -rw-r--r-- 1 root root  256 Aug  3 20:43 packages/evil-tutor-ja-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Aug  3 20:43 packages/evil-tutor-ja.log
-4.0K -rw-r--r-- 1 root root  248 Aug  3 20:43 packages/evil-tutor-readme.txt
-4.0K -rw-r--r-- 1 root root 1.4K Aug  3 20:43 packages/evil-tutor.log
-8.0K -rw-r--r-- 1 root root 4.8K Aug  3 20:43 packages/evil-vimish-fold-20200122.117.el
-4.0K -rw-r--r-- 1 root root  432 Aug  3 20:43 packages/evil-vimish-fold-20200122.117.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-vimish-fold-badge.svg
-4.0K -rw-r--r-- 1 root root  258 Aug  3 20:43 packages/evil-vimish-fold-readme.txt
-4.0K -rw-r--r-- 1 root root  663 Aug  3 20:43 packages/evil-vimish-fold.log
-8.0K -rw-r--r-- 1 root root 6.7K Aug  3 20:43 packages/evil-visual-mark-mode-20190116.1557.el
-4.0K -rw-r--r-- 1 root root  351 Aug  3 20:43 packages/evil-visual-mark-mode-20190116.1557.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-visual-mark-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  346 Aug  3 20:43 packages/evil-visual-mark-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  700 Aug  3 20:43 packages/evil-visual-mark-mode.log
- 12K -rw-r--r-- 1 root root 9.7K Aug  3 20:43 packages/evil-visual-replace-20171016.613.el
-4.0K -rw-r--r-- 1 root root  452 Aug  3 20:43 packages/evil-visual-replace-20171016.613.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-visual-replace-badge.svg
-4.0K -rw-r--r-- 1 root root  553 Aug  3 20:43 packages/evil-visual-replace-readme.txt
-4.0K -rw-r--r-- 1 root root  682 Aug  3 20:43 packages/evil-visual-replace.log
-8.0K -rw-r--r-- 1 root root 4.4K Aug  3 20:43 packages/evil-visualstar-20160223.48.el
-4.0K -rw-r--r-- 1 root root  356 Aug  3 20:43 packages/evil-visualstar-20160223.48.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  3 20:43 packages/evil-visualstar-badge.svg
-4.0K -rw-r--r-- 1 root root  330 Aug  3 20:43 packages/evil-visualstar-readme.txt
-4.0K -rw-r--r-- 1 root root  648 Aug  3 20:43 packages/evil-visualstar.log
+4.0K -rw-r--r-- 1 root root 3.4K Aug  4 00:07 packages/evil-mark-replace-20200630.940.el
+4.0K -rw-r--r-- 1 root root  425 Aug  4 00:07 packages/evil-mark-replace-20200630.940.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-mark-replace-badge.svg
+4.0K -rw-r--r-- 1 root root  294 Aug  4 00:07 packages/evil-mark-replace-readme.txt
+4.0K -rw-r--r-- 1 root root  672 Aug  4 00:07 packages/evil-mark-replace.log
+4.0K -rw-r--r-- 1 root root  414 Aug  4 00:07 packages/evil-matchit-20210727.1106.entry
+120K -rw-r--r-- 1 root root 120K Aug  4 00:07 packages/evil-matchit-20210727.1106.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-matchit-badge.svg
+4.0K -rw-r--r-- 1 root root  577 Aug  4 00:07 packages/evil-matchit-readme.txt
+4.0K -rw-r--r-- 1 root root 3.2K Aug  4 00:07 packages/evil-matchit.log
+4.0K -rw-r--r-- 1 root root  485 Aug  4 00:07 packages/evil-mc-20210730.1752.entry
+140K -rw-r--r-- 1 root root 140K Aug  4 00:07 packages/evil-mc-20210730.1752.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-mc-badge.svg
+4.0K -rw-r--r-- 1 root root  564 Aug  4 00:07 packages/evil-mc-extras-20170202.1649.entry
+ 12K -rw-r--r-- 1 root root  10K Aug  4 00:07 packages/evil-mc-extras-20170202.1649.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-mc-extras-badge.svg
+4.0K -rw-r--r-- 1 root root  282 Aug  4 00:07 packages/evil-mc-extras-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-mc-extras.log
+4.0K -rw-r--r-- 1 root root  244 Aug  4 00:07 packages/evil-mc-readme.txt
+4.0K -rw-r--r-- 1 root root 2.3K Aug  4 00:07 packages/evil-mc.log
+ 20K -rw-r--r-- 1 root root  18K Aug  4 00:07 packages/evil-mu4e-20180613.1039.el
+4.0K -rw-r--r-- 1 root root  384 Aug  4 00:07 packages/evil-mu4e-20180613.1039.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-mu4e-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Aug  4 00:07 packages/evil-mu4e-readme.txt
+4.0K -rw-r--r-- 1 root root  605 Aug  4 00:07 packages/evil-mu4e.log
+ 28K -rwxr-xr-x 1 root root  28K Aug  4 00:07 packages/evil-multiedit-20200229.528.el
+4.0K -rw-r--r-- 1 root root  471 Aug  4 00:07 packages/evil-multiedit-20200229.528.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-multiedit-badge.svg
+4.0K -rw-r--r-- 1 root root 2.4K Aug  4 00:07 packages/evil-multiedit-readme.txt
+4.0K -rw-r--r-- 1 root root  645 Aug  4 00:07 packages/evil-multiedit.log
+4.0K -rw-r--r-- 1 root root  462 Aug  4 00:07 packages/evil-nerd-commenter-20210719.1305.entry
+ 60K -rw-r--r-- 1 root root  60K Aug  4 00:07 packages/evil-nerd-commenter-20210719.1305.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-nerd-commenter-badge.svg
+4.0K -rw-r--r-- 1 root root 3.9K Aug  4 00:07 packages/evil-nerd-commenter-readme.txt
+4.0K -rw-r--r-- 1 root root 1.4K Aug  4 00:07 packages/evil-nerd-commenter.log
+4.0K -rw-r--r-- 1 root root 3.1K Aug  4 00:07 packages/evil-nl-break-undo-20181125.2054.el
+4.0K -rw-r--r-- 1 root root  368 Aug  4 00:07 packages/evil-nl-break-undo-20181125.2054.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-nl-break-undo-badge.svg
+4.0K -rw-r--r-- 1 root root  156 Aug  4 00:07 packages/evil-nl-break-undo-readme.txt
+4.0K -rw-r--r-- 1 root root  680 Aug  4 00:07 packages/evil-nl-break-undo.log
+ 28K -rw-r--r-- 1 root root  25K Aug  4 00:07 packages/evil-numbers-20210605.431.el
+4.0K -rw-r--r-- 1 root root  420 Aug  4 00:07 packages/evil-numbers-20210605.431.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-numbers-badge.svg
+4.0K -rw-r--r-- 1 root root  995 Aug  4 00:07 packages/evil-numbers-readme.txt
+4.0K -rw-r--r-- 1 root root  630 Aug  4 00:07 packages/evil-numbers.log
+4.0K -rw-r--r-- 1 root root  436 Aug  4 00:07 packages/evil-opener-20161207.1810.entry
+ 20K -rw-r--r-- 1 root root  20K Aug  4 00:07 packages/evil-opener-20161207.1810.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-opener-badge.svg
+4.0K -rw-r--r-- 1 root root  716 Aug  4 00:07 packages/evil-opener-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-opener.log
+4.0K -rw-r--r-- 1 root root  354 Aug  4 00:07 packages/evil-org-20201222.2023.entry
+ 52K -rw-r--r-- 1 root root  50K Aug  4 00:07 packages/evil-org-20201222.2023.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-org-badge.svg
+4.0K -rw-r--r-- 1 root root   67 Aug  4 00:07 packages/evil-org-readme.txt
+4.0K -rw-r--r-- 1 root root 1006 Aug  4 00:07 packages/evil-org.log
+ 20K -rw-r--r-- 1 root root  18K Aug  4 00:07 packages/evil-owl-20210416.1700.el
+4.0K -rw-r--r-- 1 root root  440 Aug  4 00:07 packages/evil-owl-20210416.1700.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-owl-badge.svg
+4.0K -rw-r--r-- 1 root root  121 Aug  4 00:07 packages/evil-owl-readme.txt
+4.0K -rw-r--r-- 1 root root  600 Aug  4 00:07 packages/evil-owl.log
+8.0K -rw-r--r-- 1 root root 5.7K Aug  4 00:07 packages/evil-paredit-20150413.2048.el
+4.0K -rw-r--r-- 1 root root  414 Aug  4 00:07 packages/evil-paredit-20150413.2048.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-paredit-badge.svg
+4.0K -rw-r--r-- 1 root root  610 Aug  4 00:07 packages/evil-paredit.log
+4.0K -rw-r--r-- 1 root root  318 Aug  4 00:07 packages/evil-pinyin-20200927.849.entry
+132K -rw-r--r-- 1 root root 130K Aug  4 00:07 packages/evil-pinyin-20200927.849.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-pinyin-badge.svg
+4.0K -rw-r--r-- 1 root root  159 Aug  4 00:07 packages/evil-pinyin-readme.txt
+4.0K -rw-r--r-- 1 root root 1.7K Aug  4 00:07 packages/evil-pinyin.log
+ 12K -rw-r--r-- 1 root root  11K Aug  4 00:07 packages/evil-python-movement-20180724.1420.el
+4.0K -rw-r--r-- 1 root root  497 Aug  4 00:07 packages/evil-python-movement-20180724.1420.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-python-movement-badge.svg
+4.0K -rw-r--r-- 1 root root  528 Aug  4 00:07 packages/evil-python-movement-readme.txt
+4.0K -rw-r--r-- 1 root root  696 Aug  4 00:07 packages/evil-python-movement.log
+ 16K -rw-r--r-- 1 root root  14K Aug  4 00:07 packages/evil-quickscope-20160202.1924.el
+4.0K -rw-r--r-- 1 root root  420 Aug  4 00:07 packages/evil-quickscope-20160202.1924.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-quickscope-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-quickscope-readme.txt
+4.0K -rw-r--r-- 1 root root  653 Aug  4 00:07 packages/evil-quickscope.log
+8.0K -rw-r--r-- 1 root root 4.7K Aug  4 00:07 packages/evil-rails-20190512.1517.el
+4.0K -rw-r--r-- 1 root root  503 Aug  4 00:07 packages/evil-rails-20190512.1517.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-rails-badge.svg
+4.0K -rw-r--r-- 1 root root   57 Aug  4 00:07 packages/evil-rails-readme.txt
+4.0K -rw-r--r-- 1 root root  613 Aug  4 00:07 packages/evil-rails.log
+4.0K -rw-r--r-- 1 root root  883 Aug  4 03:30 packages/evil-readme.txt
+4.0K -rw-r--r-- 1 root root 2.2K Aug  4 00:07 packages/evil-replace-with-char-20180324.2206.el
+4.0K -rw-r--r-- 1 root root  409 Aug  4 00:07 packages/evil-replace-with-char-20180324.2206.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-replace-with-char-badge.svg
+4.0K -rw-r--r-- 1 root root  285 Aug  4 00:07 packages/evil-replace-with-char-readme.txt
+4.0K -rw-r--r-- 1 root root  709 Aug  4 00:07 packages/evil-replace-with-char.log
+4.0K -rw-r--r-- 1 root root 3.8K Aug  4 00:07 packages/evil-replace-with-register-20170713.925.el
+4.0K -rw-r--r-- 1 root root  440 Aug  4 00:07 packages/evil-replace-with-register-20170713.925.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-replace-with-register-badge.svg
+4.0K -rw-r--r-- 1 root root  386 Aug  4 00:07 packages/evil-replace-with-register-readme.txt
+4.0K -rw-r--r-- 1 root root  739 Aug  4 00:07 packages/evil-replace-with-register.log
+4.0K -rwxr-xr-x 1 root root 2.9K Aug  4 00:07 packages/evil-rsi-20160221.2104.el
+4.0K -rw-r--r-- 1 root root  406 Aug  4 00:07 packages/evil-rsi-20160221.2104.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-rsi-badge.svg
+4.0K -rw-r--r-- 1 root root  228 Aug  4 00:07 packages/evil-rsi-readme.txt
+4.0K -rw-r--r-- 1 root root  601 Aug  4 00:07 packages/evil-rsi.log
+ 12K -rw-r--r-- 1 root root 9.1K Aug  4 00:07 packages/evil-ruby-text-objects-20200323.1552.el
+4.0K -rw-r--r-- 1 root root  418 Aug  4 00:07 packages/evil-ruby-text-objects-20200323.1552.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-ruby-text-objects-badge.svg
+4.0K -rw-r--r-- 1 root root  139 Aug  4 00:07 packages/evil-ruby-text-objects-readme.txt
+4.0K -rw-r--r-- 1 root root  709 Aug  4 00:07 packages/evil-ruby-text-objects.log
+ 12K -rw-r--r-- 1 root root  10K Aug  4 00:07 packages/evil-search-highlight-persist-20170523.334.el
+4.0K -rw-r--r-- 1 root root  333 Aug  4 00:07 packages/evil-search-highlight-persist-20170523.334.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-search-highlight-persist-badge.svg
+4.0K -rw-r--r-- 1 root root  712 Aug  4 00:07 packages/evil-search-highlight-persist-readme.txt
+4.0K -rw-r--r-- 1 root root  766 Aug  4 00:07 packages/evil-search-highlight-persist.log
+ 16K -rw-r--r-- 1 root root  15K Aug  4 00:07 packages/evil-smartparens-20171210.1513.el
+4.0K -rw-r--r-- 1 root root  459 Aug  4 00:07 packages/evil-smartparens-20171210.1513.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-smartparens-badge.svg
+4.0K -rw-r--r-- 1 root root   78 Aug  4 00:07 packages/evil-smartparens-readme.txt
+4.0K -rw-r--r-- 1 root root  660 Aug  4 00:07 packages/evil-smartparens.log
+ 28K -rwxr-xr-x 1 root root  26K Aug  4 00:07 packages/evil-snipe-20210713.1456.el
+4.0K -rw-r--r-- 1 root root  484 Aug  4 00:07 packages/evil-snipe-20210713.1456.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-snipe-badge.svg
+4.0K -rw-r--r-- 1 root root  452 Aug  4 00:07 packages/evil-snipe-readme.txt
+4.0K -rw-r--r-- 1 root root  615 Aug  4 00:07 packages/evil-snipe.log
+8.0K -rw-r--r-- 1 root root 5.4K Aug  4 00:07 packages/evil-space-20151208.1228.el
+4.0K -rw-r--r-- 1 root root  449 Aug  4 00:07 packages/evil-space-20151208.1228.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-space-badge.svg
+4.0K -rw-r--r-- 1 root root  312 Aug  4 00:07 packages/evil-space-readme.txt
+4.0K -rw-r--r-- 1 root root  617 Aug  4 00:07 packages/evil-space.log
+4.0K -rw-r--r-- 1 root root 2.1K Aug  4 00:07 packages/evil-string-inflection-20180313.1755.el
+4.0K -rw-r--r-- 1 root root  454 Aug  4 00:07 packages/evil-string-inflection-20180313.1755.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:07 packages/evil-string-inflection-badge.svg
+4.0K -rw-r--r-- 1 root root  197 Aug  4 00:07 packages/evil-string-inflection-readme.txt
+4.0K -rw-r--r-- 1 root root  709 Aug  4 00:07 packages/evil-string-inflection.log
+ 20K -rw-r--r-- 1 root root  19K Aug  4 00:08 packages/evil-surround-20210615.2119.el
+4.0K -rw-r--r-- 1 root root  382 Aug  4 00:08 packages/evil-surround-20210615.2119.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-surround-badge.svg
+4.0K -rw-r--r-- 1 root root  449 Aug  4 00:08 packages/evil-surround-readme.txt
+4.0K -rw-r--r-- 1 root root  641 Aug  4 00:08 packages/evil-surround.log
+ 12K -rw-r--r-- 1 root root  11K Aug  4 00:08 packages/evil-swap-keys-20191105.1426.el
+4.0K -rw-r--r-- 1 root root  425 Aug  4 00:08 packages/evil-swap-keys-20191105.1426.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-swap-keys-badge.svg
+4.0K -rw-r--r-- 1 root root   91 Aug  4 00:08 packages/evil-swap-keys-readme.txt
+4.0K -rw-r--r-- 1 root root  647 Aug  4 00:08 packages/evil-swap-keys.log
+4.0K -rw-r--r-- 1 root root 2.8K Aug  4 00:08 packages/evil-tabs-20160217.1520.el
+4.0K -rw-r--r-- 1 root root  454 Aug  4 00:08 packages/evil-tabs-20160217.1520.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-tabs-badge.svg
+4.0K -rw-r--r-- 1 root root   49 Aug  4 00:08 packages/evil-tabs-readme.txt
+4.0K -rw-r--r-- 1 root root  611 Aug  4 00:08 packages/evil-tabs.log
+ 12K -rwxr-xr-x 1 root root  11K Aug  4 00:08 packages/evil-terminal-cursor-changer-20210130.1855.el
+4.0K -rw-r--r-- 1 root root  408 Aug  4 00:08 packages/evil-terminal-cursor-changer-20210130.1855.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-terminal-cursor-changer-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Aug  4 00:08 packages/evil-terminal-cursor-changer-readme.txt
+4.0K -rw-r--r-- 1 root root  758 Aug  4 00:08 packages/evil-terminal-cursor-changer.log
+ 20K -rw-r--r-- 1 root root  18K Aug  4 00:08 packages/evil-test-helpers-20201008.1515.el
+4.0K -rw-r--r-- 1 root root  315 Aug  4 00:08 packages/evil-test-helpers-20201008.1515.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-test-helpers-badge.svg
+4.0K -rw-r--r-- 1 root root  659 Aug  4 00:08 packages/evil-test-helpers-readme.txt
+4.0K -rw-r--r-- 1 root root  660 Aug  4 00:08 packages/evil-test-helpers.log
+ 48K -rw-r--r-- 1 root root  48K Aug  4 00:08 packages/evil-tex-20210731.927.el
+4.0K -rw-r--r-- 1 root root  337 Aug  4 00:08 packages/evil-tex-20210731.927.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-tex-badge.svg
+4.0K -rw-r--r-- 1 root root   49 Aug  4 00:08 packages/evil-tex-readme.txt
+4.0K -rw-r--r-- 1 root root  596 Aug  4 00:08 packages/evil-tex.log
+8.0K -rw-r--r-- 1 root root 5.3K Aug  4 00:08 packages/evil-text-object-python-20191010.1328.el
+4.0K -rw-r--r-- 1 root root  498 Aug  4 00:08 packages/evil-text-object-python-20191010.1328.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-text-object-python-badge.svg
+4.0K -rw-r--r-- 1 root root  115 Aug  4 00:08 packages/evil-text-object-python-readme.txt
+4.0K -rw-r--r-- 1 root root  719 Aug  4 00:08 packages/evil-text-object-python.log
+ 12K -rw-r--r-- 1 root root  12K Aug  4 00:08 packages/evil-textobj-anyblock-20170905.1907.el
+4.0K -rw-r--r-- 1 root root  427 Aug  4 00:08 packages/evil-textobj-anyblock-20170905.1907.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-textobj-anyblock-badge.svg
+4.0K -rw-r--r-- 1 root root  905 Aug  4 00:08 packages/evil-textobj-anyblock-readme.txt
+4.0K -rw-r--r-- 1 root root  702 Aug  4 00:08 packages/evil-textobj-anyblock.log
+ 12K -rw-r--r-- 1 root root  11K Aug  4 00:08 packages/evil-textobj-column-20170905.1905.el
+4.0K -rw-r--r-- 1 root root  480 Aug  4 00:08 packages/evil-textobj-column-20170905.1905.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-textobj-column-badge.svg
+4.0K -rw-r--r-- 1 root root  396 Aug  4 00:08 packages/evil-textobj-column-readme.txt
+4.0K -rw-r--r-- 1 root root  686 Aug  4 00:08 packages/evil-textobj-column.log
+4.0K -rw-r--r-- 1 root root 2.4K Aug  4 00:08 packages/evil-textobj-entire-20150422.1254.el
+4.0K -rw-r--r-- 1 root root  430 Aug  4 00:08 packages/evil-textobj-entire-20150422.1254.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-textobj-entire-badge.svg
+4.0K -rw-r--r-- 1 root root  288 Aug  4 00:08 packages/evil-textobj-entire-readme.txt
+4.0K -rw-r--r-- 1 root root  691 Aug  4 00:08 packages/evil-textobj-entire.log
+4.0K -rw-r--r-- 1 root root 2.4K Aug  4 00:08 packages/evil-textobj-line-20150729.1522.el
+4.0K -rw-r--r-- 1 root root  365 Aug  4 00:08 packages/evil-textobj-line-20150729.1522.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-textobj-line-badge.svg
+   0 -rw-r--r-- 1 root root    0 Aug  4 00:08 packages/evil-textobj-line-readme.txt
+4.0K -rw-r--r-- 1 root root  677 Aug  4 00:08 packages/evil-textobj-line.log
+8.0K -rw-r--r-- 1 root root 5.3K Aug  4 00:08 packages/evil-textobj-syntax-20181210.1213.el
+4.0K -rw-r--r-- 1 root root  367 Aug  4 00:08 packages/evil-textobj-syntax-20181210.1213.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-textobj-syntax-badge.svg
+4.0K -rw-r--r-- 1 root root  218 Aug  4 00:08 packages/evil-textobj-syntax-readme.txt
+4.0K -rw-r--r-- 1 root root  687 Aug  4 00:08 packages/evil-textobj-syntax.log
+ 32K -rw-r--r-- 1 root root  30K Aug  4 00:08 packages/evil-traces-20191214.558.el
+4.0K -rw-r--r-- 1 root root  436 Aug  4 00:08 packages/evil-traces-20191214.558.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-traces-badge.svg
+4.0K -rw-r--r-- 1 root root  180 Aug  4 00:08 packages/evil-traces-readme.txt
+4.0K -rw-r--r-- 1 root root  622 Aug  4 00:08 packages/evil-traces.log
+4.0K -rw-r--r-- 1 root root  444 Aug  4 00:08 packages/evil-tutor-20150103.650.entry
+ 40K -rw-r--r-- 1 root root  40K Aug  4 00:08 packages/evil-tutor-20150103.650.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-tutor-badge.svg
+4.0K -rw-r--r-- 1 root root  456 Aug  4 00:08 packages/evil-tutor-ja-20160917.132.entry
+ 52K -rw-r--r-- 1 root root  50K Aug  4 00:08 packages/evil-tutor-ja-20160917.132.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-tutor-ja-badge.svg
+4.0K -rw-r--r-- 1 root root  256 Aug  4 00:08 packages/evil-tutor-ja-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Aug  4 00:08 packages/evil-tutor-ja.log
+4.0K -rw-r--r-- 1 root root  248 Aug  4 00:08 packages/evil-tutor-readme.txt
+4.0K -rw-r--r-- 1 root root 1.4K Aug  4 00:08 packages/evil-tutor.log
+8.0K -rw-r--r-- 1 root root 4.8K Aug  4 00:08 packages/evil-vimish-fold-20200122.117.el
+4.0K -rw-r--r-- 1 root root  432 Aug  4 00:08 packages/evil-vimish-fold-20200122.117.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-vimish-fold-badge.svg
+4.0K -rw-r--r-- 1 root root  258 Aug  4 00:08 packages/evil-vimish-fold-readme.txt
+4.0K -rw-r--r-- 1 root root  663 Aug  4 00:08 packages/evil-vimish-fold.log
+8.0K -rw-r--r-- 1 root root 6.7K Aug  4 00:08 packages/evil-visual-mark-mode-20190116.1557.el
+4.0K -rw-r--r-- 1 root root  351 Aug  4 00:08 packages/evil-visual-mark-mode-20190116.1557.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-visual-mark-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  346 Aug  4 00:08 packages/evil-visual-mark-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  700 Aug  4 00:08 packages/evil-visual-mark-mode.log
+ 12K -rw-r--r-- 1 root root 9.7K Aug  4 00:08 packages/evil-visual-replace-20171016.613.el
+4.0K -rw-r--r-- 1 root root  452 Aug  4 00:08 packages/evil-visual-replace-20171016.613.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-visual-replace-badge.svg
+4.0K -rw-r--r-- 1 root root  553 Aug  4 00:08 packages/evil-visual-replace-readme.txt
+4.0K -rw-r--r-- 1 root root  682 Aug  4 00:08 packages/evil-visual-replace.log
+8.0K -rw-r--r-- 1 root root 4.4K Aug  4 00:08 packages/evil-visualstar-20160223.48.el
+4.0K -rw-r--r-- 1 root root  356 Aug  4 00:08 packages/evil-visualstar-20160223.48.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  4 00:08 packages/evil-visualstar-badge.svg
+4.0K -rw-r--r-- 1 root root  330 Aug  4 00:08 packages/evil-visualstar-readme.txt
+4.0K -rw-r--r-- 1 root root  648 Aug  4 00:08 packages/evil-visualstar.log

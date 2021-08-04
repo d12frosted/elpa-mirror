@@ -3,9 +3,9 @@
 ;; Copyright © 2013-2021 by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 2.15.20210731142838
-;; Package-Version: 20210731.2209
-;; Package-Commit: d62df34384a15d133721ef19c085ee4ebedf3109
+;; Version: 3.0.20210803154919
+;; Package-Version: 20210803.2323
+;; Package-Commit: f202fc18e8e2ce0f5a39af684ac9aacd886ba50b
 ;; Created: 18 April 2013
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: languages, convenience, css, color
@@ -18,28 +18,6 @@
 
 ;; Major mode for editing CSS code. Alternative to GNU emacs's builtin `css-mode'.
 
-;; Features:
-
-;; • Correct Syntax coloring ALL CSS words. Does not color typos.
-
-;; • Color coded words by semantics. Each type of CSS words are colored distinctly. e.g. HTML tag names, CSS attribute names, predefined CSS value names, CSS unit names, pseudo selector names, media keywords, etc.
-
-;; • ID selector string and class name in bold for easy identification.
-
-;; • Keyword completion with `ido-mode' interface. Press Tab ↹ after a word to complete. All CSS words are supported: {html5 tags, property names, property value keywords, units, colors, pseudo selectors, “at keywords”, …}.
-
-;; • Single Key Prettify Code Format. Press Tab ↹ before word to reformat current block of code. That is, all lines enclosed by curly brackets {}.
-
-;; • Syntax coloring of hexadecimal color format #rrggbb , #rgb , and HSL Color format hsl(0,68%,42%).
-
-;; • Call `xah-css-hex-to-hsl-color' to convert #rrggbb color format under cursor to HSL Color format.
-
-;; • Call `xah-css-compact-css-region' to minify region.
-
-;; • Call `xah-css-expand-to-multi-lines' to expand minified CSS code to multi-lines format.
-
-;; • Call `describe-function' on `xah-css-mode' for detail.
-
 ;;; INSTALL:
 
 ;; To manual install,
@@ -47,14 +25,6 @@
 ;; Then put the following in ~/.emacs.d/init.el
 ;; (add-to-list 'load-path "~/.emacs.d/lisp/")
 ;; (autoload 'xah-css-mode "xah-css-mode" "css major mode." t)
-
-;;; HISTORY
-
-;; version history no longer kept here. See git log.
-;; version 2015-01-30 fix a problem with emacs 24.3.1, Debugger entered--Lisp error: (file-error "Cannot open load file" "prog-mode")
-;; version 0.3, 2013-05-02 added xah-css-hex-color-to-hsl, and other improvements.
-;; version 0.2, 2013-04-22 added xah-css-compact-css-region
-;; version 0.1, 2013-04-18 first version
 
 
 ;;; Code:
@@ -181,39 +151,12 @@ Version 2018-02-19"
       (forward-char )
       (newline))))
 
-(defun xah-css-compact-block ()
-  "Compact current CSS code block.
-A block is surrounded by blank lines.
-This command basically replace newline char by space.
-Version 2015-06-29"
-  (interactive)
-  (let ($p1 $p2)
-    (save-excursion
-      (if (re-search-backward "\n[ \t]*\n" nil "move")
-          (progn (re-search-forward "\n[ \t]*\n")
-                 (setq $p1 (point)))
-        (setq $p1 (point)))
-      (if (re-search-forward "\n[ \t]*\n" nil "move")
-          (progn (re-search-backward "\n[ \t]*\n")
-                 (setq $p2 (point)))
-        (setq $p2 (point))))
-    (save-restriction
-      (narrow-to-region $p1 $p2)
-
-      (goto-char (point-min))
-      (while (search-forward "\n" nil t)
-        (replace-match " "))
-
-      (goto-char (point-min))
-      (while (search-forward-regexp "  +" nil t)
-        (replace-match " ")))))
-
-(defun xah-css-compact-css-region (&optional @begin @end)
-  "Remove unnecessary whitespaces of CSS source code in region.
+(defun xah-css-format-compact (&optional @begin @end)
+  "Reformat CSS source code in a compact style.
 Works on text selection or the {} block cursor is in, or the {} block before cursor.
 Note: this command only add/remove whitespaces.
 URL `http://ergoemacs.org/emacs/elisp_css_compressor.html'
-Version 2020-12-23"
+Version 2020-12-23 2021-08-03"
   (interactive)
   (let ($p1 $p2)
     (if @begin
@@ -232,19 +175,19 @@ Version 2020-12-23"
       (xah-replace-pairs-region (point-min) (point-max) '( [" ;" ";"] ["; " ";"] ))
       (xah-replace-regexp-pairs-region (point-min) (point-max) '( ["\n\n+" "\n"] ["} ?" "}\n"] )))))
 
-(defun xah-css-compact-css-buffer ()
-  "Remove unnecessary whitespaces of CSS source code in buffer.
-See `xah-css-compact-css-region'.
+(defun xah-css-format-compact-buffer ()
+  "Reformat CSS code to a compact style, in whole buffer.
+See `xah-css-format-compact'.
 URL `http://ergoemacs.org/emacs/elisp_css_compressor.html'
-Version 2020-12-18"
+Version 2020-12-18 2021-08-03"
   (interactive)
-  (xah-css-compact-css-region (point-min) (point-max)))
+  (xah-css-format-compact (point-min) (point-max)))
 
-(defun xah-css-expand-to-multi-lines (&optional @begin @end)
+(defun xah-css-format-to-multi-lines (&optional @begin @end)
   "Expand minified CSS code to multiple lines.
 Works on text selection or the {} block cursor is in, or before cursor.
 Note: this command only add/remove whitespaces.
-Version 2016-10-02 2020-12-23"
+Version 2016-10-02 2021-08-03"
   (interactive)
   (let ($p1 $p2)
     (if @begin
@@ -273,6 +216,12 @@ Version 2016-10-02 2020-12-23"
        '(
          ["\n\n+" "\n"]
          )))))
+
+(defun xah-css-format-to-multi-lines-buffer (&optional @begin @end)
+  "Expand minified CSS code to multiple lines for whole buffer.
+Version 2021-08-03"
+  (interactive)
+  (xah-css-format-to-multi-lines (point-min) (point-max)))
 
 
 (defvar xah-css-html-tag-names nil "List of HTML5 tag names.")
@@ -1100,10 +1049,11 @@ Version 2016-10-24"
   (define-key xah-css-mode-map (kbd "RET") 'xah-css-smart-newline)
   (define-key xah-css-mode-map (kbd "<f9>") xah-css-leader-map)
   (define-key xah-css-leader-map (kbd "r") 'xah-css-insert-random-color-hsl)
-  (define-key xah-css-leader-map (kbd "c") 'xah-css-hex-color-to-hsl)
-  (define-key xah-css-leader-map (kbd "p") 'xah-css-compact-css-region)
-  (define-key xah-css-leader-map (kbd ".") 'xah-css-compact-css-buffer)
-  (define-key xah-css-leader-map (kbd "e") 'xah-css-expand-to-multi-lines)
+  (define-key xah-css-leader-map (kbd "x") 'xah-css-hex-color-to-hsl)
+  (define-key xah-css-leader-map (kbd "c") 'xah-css-format-compact)
+  (define-key xah-css-leader-map (kbd "g") 'xah-css-format-compact-buffer)
+  (define-key xah-css-leader-map (kbd ".") 'xah-css-format-to-multi-lines)
+  (define-key xah-css-leader-map (kbd "p") 'xah-css-format-to-multi-lines-buffer)
   (define-key xah-css-leader-map (kbd "u") 'xah-css-complete-symbol))
 
 
@@ -1135,4 +1085,3 @@ URL `http://ergoemacs.org/emacs/xah-css-mode.html'
 (provide 'xah-css-mode)
 
 ;;; xah-css-mode.el ends here
-

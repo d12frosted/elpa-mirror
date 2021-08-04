@@ -4,8 +4,8 @@
 
 ;; Author: Musa Al-hassy <alhassy@gmail.com>
 ;; Version: 1.0
-;; Package-Version: 20210729.229
-;; Package-Commit: 54994d4db09d879c247db9aecdc0b6f27dcb7e6a
+;; Package-Version: 20210804.314
+;; Package-Commit: cfdcba95b39c9207762a976217c1a4d355c5b313
 ;; Package-Requires: ((s "1.12.0") (dash "2.16.0") (emacs "27.1"))
 ;; Keywords: convenience, programming
 ;; Repo: https://github.com/alhassy/lf.el
@@ -74,6 +74,55 @@
 (define-minor-mode lf-mode
     "A Language Features library for Emacs Lisp"
   nil nil nil)
+
+(defun lf-string (str)
+"Allows unindented muliline strings and intepolates ${(lisp expressions)}.
+
+Based on JavaScript's Template Strings, this metod permits writing
+multi-line strings that ignore indentation (even though the string
+seems to be indented), preserves whitespace/newlines, and
+allow us to evaluate arbitrary code enclosed in ${expressions}.
+
+This is useful for methods that insert large (template) strings
+into buffers, docstrings, or generally large string outputs that
+would otherwise look rather ugly (and difficult to maintain) when
+presented as a sequence of `concat' calls.
+
+For instance,
+
+   (lf-unindent
+      \"1. This is the first line, it has zero indentation.
+       2. This line indicates the indentation offset for the remaining lines.
+       3. As such, this line has no indentation.
+          4. But this one is clearly indentated (relative to line 2)\")
+
+Returns the string:
+
+   1. This is the first line, it has zero indentation.
+   2. This line indicates the indentation offset for the remaining lines.
+   3. As such, this line has no indentation.
+      4. But this one is clearly indentated (relative to line 2)
+
+Notice that the initial indentation (as determined by line 2) has been stripped uniformally
+across all lines.
+
+Similarly,
+
+   (let ((you 'Jasim))
+     (lf-string \"me and ${you} like the number ${(+ 2 3)}\"))
+
+Returns the string:
+
+   me and Jasim like the number 5
+
+Finally, ${expressions} may contain escaped literal string expressions."
+  (let* ((indentation (or (ignore-errors (length (car (s-match "\\( \\)+" (cadr (s-split "\n" str)))))) 0))
+         (unindented-str (replace-regexp-in-string (format "^ \\{%s\\}" indentation) "" str)))
+    (cl-loop for (literal string-expr) in (s-match-strings-all"${\\([^}]+\\)}" unindented-str)
+             for value = (eval (read string-expr))
+             with result = unindented-str
+             do (setq result (replace-regexp-in-string (regexp-quote literal) (format "%s" value) result))
+             finally return result)))
 
 (cl-defun lf-documentation (name &optional kind newdoc)
   "Essentially, `lf-documentation' ≈ `documentation' + `documentation-property'.
@@ -153,6 +202,58 @@ REST is the value of a &rest argument; i.e., a list."
 
     ;; Result value
     result))
+
+(cl-defmacro lf-specify (name args &key (requires t) (ensures t))
+  "Advice function NAME to perform runtime validation vis REQUIRES and ENSURES.
+
+Advice the function NAME, consuming ARGS, to have pre-condition REQUIRES and post-condition ENSURES.
+
+Both REQUIRES and ENSURES are forms that may reference any of the names within ARGS
+or may mention the special name ‘result’, which refers to the result of calling NAME on ARGS.
+
+The return value is the name of the specification advice
+function, which is itself documented using the user's REQUIRES
+and ENSURES clauses.
+
+One possible use is to enable runtime validation for prexisting functions,
+such as the built-in `identity' function:
+
+     (lf-specify identity (x) :ensures (equal x result))
+
+For your own personally defined function, there is a slicker form using `lf-define':
+
+     (progn (lf-specify name args constraints) (defun name args body))
+   ≈ (lf-define name args [constraints] body)
+
+Warning: Using this with core functions, such as `car', will result in
+Lisp nesting exceeds ‘max-lisp-eval-depth’ errors."
+  (let ((advice-name  (intern (format "lf--specify/%s" name)))
+        (docstring (format "SPECIFIES: %s %s\n REQUIRES:\n%s\n\nENSURES:\n%s" name args requires ensures)))
+    `(progn
+       (cl-defun ,advice-name (orig-fun &rest ,args)
+         ,docstring
+         (unless ,requires
+           (error "Error: Requirements for “%s” have been violated.\n\nREQUIRED:\n%s\nGIVEN:\n%s"
+                  (quote ,name)
+                  (pp-to-string (quote ,requires))
+                  (pp-to-string (--map (list it '= (eval it) ': (type-of (eval it)))
+                                       (quote ,args)))))
+
+         (let ((result (funcall orig-fun ,@args)))
+           (unless ,ensures
+             (error (concat "Panic! There is an error in the implementation of “%s”."
+                            "\n\nClaimed guarantee: %s\nActual result value: %s ---typed: %s")
+                    (quote ,name)
+                    (pp-to-string (quote ,ensures))
+                    (pp-to-string result)
+                    (type-of result)))
+
+           result))
+
+       (advice-add (function ,name) :around (quote ,advice-name))
+
+       ;; Return value is the name of the specification
+       (quote ,advice-name))))
 
 (defmacro lf-define (place newvalue &optional constraints docstring &rest more)
 "Essentially: `lf-define'  ≈  `setq' + `defvar' + `defun' + `setf'.
@@ -280,20 +381,21 @@ redefine the one, and only, constraint LF maintains.
 See: (get name :lf-constraints-func)"
 
   (when constraints
-    (message "“%s” has new constraints registered: %s" name constraints)
+    (message "“%s” has new constraints registered: %s" name `[,@constraints])
 
-    ;; Type specifier or not?
-    (if (equal :type (car constraints))
-      (setq constraints `(cl-typep it (quote (and ,@(cdr constraints)))))
-      (setq constraints (cons 'and constraints)))
+    (let (contract) ;; ≈ Lisp checkable version of user's “constraints”, conjunctive.
+      ;; Type specifier or not?
+      (if (equal :type (car constraints))
+          (setq contract `(cl-typep it (quote (and ,@(cdr constraints)))))
+        (setq contract (cons 'and constraints)))
 
     ;; Only continue if the value satisfies the constraints.  if initial
     ;; value does not satify constrains, leave name unbound.
-    (unless (eval (cl-subst value 'it `,constraints))
+    (unless (eval (cl-subst value 'it `,contract))
       (eval `(lf-undefine ,name))
       (error (concat "Error: Initial value “%s” violates declared constraint:"
                      "\n\t%s\n\nAs such, symbol “%s” is now unbound and unconstrained.")
-                 value constraints name))
+                 value `[,@constraints] name))
 
     ;; ADD-VARIABLE-WATCHER is idempotent; so no need to use REMOVE-VARIABLE-WATCHER.
     (setf (get name :lf-constraints-func)
@@ -301,12 +403,12 @@ See: (get name :lf-constraints-func)"
              "If we are doing a SET and the CONSTRAINTS fail, then error; else do nothing."
              (let ((it.old (and (boundp it.symbol) (symbol-value it.symbol))))
                (and (equal let-or-set 'set)
-                    (not ,constraints)
+                    (not ,contract)
                     (error (concat "Error: Constraints for “%s” "
                                    "have been violated.\nNewvalue "
                                    "“%s” (%s) does not satisfy: %s\n\nAs such, “%s” retains its old value “%s”.")
-                           it.symbol it (type-of it) (quote ,constraints) it.symbol it.old)))))
-    (add-variable-watcher name (get name :lf-constraints-func)))
+                           it.symbol it (type-of it) [,@constraints] it.symbol it.old)))))
+    (add-variable-watcher name (get name :lf-constraints-func))))
 
   `(progn
      (setf (documentation-property (quote ,name) 'variable-documentation)
@@ -334,27 +436,7 @@ typing.  We have a form of specification."
     `(progn
        (cl-defun ,name ,args ,docstring ,@body)
 
-       (cl-defun ,advice-name (orig-fun &rest ,args)
-
-         (unless ,requires
-           (error "Error: Requirements for “%s” have been violated.\n\nREQUIRED:\n%s\nGIVEN:\n%s"
-                  (quote ,name)
-                  (pp-to-string (quote ,requires))
-                  (pp-to-string (--map (list it '= (eval it) ': (type-of (eval it)))
-                                       (quote ,args)))))
-
-         (let ((result (funcall orig-fun ,@args)))
-           (unless ,ensures
-             (error (concat "Panic! There is an error in the implementation of “%s”."
-                            "\n\nClaimed guarantee: %s\nActual result value: %s ---typed: %s")
-                    (quote ,name)
-                    (pp-to-string (quote ,ensures))
-                    (pp-to-string result)
-                    (type-of result)))
-
-           result))
-
-       (advice-add (function ,name) :around (quote ,advice-name))
+       (lf-specify ,name ,args :requires ,requires :ensures ,ensures)
 
        ;; Return value is the name of the newly defined function, as is the case with DEFUN
        (quote ,name))))
