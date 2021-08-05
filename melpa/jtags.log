@@ -3,21 +3,7 @@ Fetcher: git
 Source:  https://git.code.sf.net/p/jtags/code
 
 Updating /mnt/store/melpa/working/jtags/
-Checking out origin/HEAD
-Checking out b50daa48510f71e74ce0ec2eb85030896a79cf96
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/jtags/
-  to /tmp/jtagsDmBtjp/jtags-20160211.2029
-  ! src/lisp/jtags-extras.el -> jtags-extras.el
-  ! src/lisp/jtags.el -> jtags.el
-Created jtags-20160211.2029.tar containing:
-  jtags-20160211.2029/
-  jtags-20160211.2029/jtags-extras.el
-  jtags-20160211.2029/jtags-pkg.el
-  jtags-20160211.2029/jtags.el
-Built jtags in 3.959s, finished at 2021-08-04T23:40:56+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  402 Aug  4 23:40 packages/jtags-20160211.2029.entry
-100K -rw-r--r-- 1 root root 100K Aug  4 23:40 packages/jtags-20160211.2029.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  4 23:40 packages/jtags-badge.svg
-8.0K -rw-r--r-- 1 root root 5.6K Aug  4 23:40 packages/jtags-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://git.code.sf.net/p/jtags/code/': Empty reply from server
+error: Could not fetch origin
+
