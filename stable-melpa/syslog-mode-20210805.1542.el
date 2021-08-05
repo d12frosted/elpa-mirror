@@ -6,8 +6,8 @@
 ;; Maintainer: Joe Bloggs <vapniks@yahoo.com>
 ;; Created: 2003-03-17 18:50:12 Harley Gorrell
 ;; URL: https://github.com/vapniks/syslog-mode
-;; Package-Version: 20210727.1827
-;; Package-Commit: 299042e1ce65bea0728bc56b0540a7ab8ab02010
+;; Package-Version: 20210805.1542
+;; Package-Commit: a87bd8cbd0ca832c2677f7677f0abbac9c26f779
 ;; Keywords: unix
 ;; Compatibility: GNU Emacs 24.3.1
 ;; Package-Requires:  ((hide-lines "20130623") (ov "20150311"))
@@ -1403,18 +1403,26 @@ The notes file should contain an s-expression setting the local value of `syslog
   :type '(alist :key-type (regexp :help-echo "Regexp for matching file visited by buffer")
 		:value-type (file :help-echo "Syslog notes file")))
 
-;; simple-call-tree-info: DONE  
+;; simple-call-tree-info: CHECK
 (defvar-local syslog-notes nil
   "List of syslog notes for current buffer.
-Each entry is a list containing 3 items in the following order:
- 1. a regexp to match the word at point
+Each item is a list containing 3 to 5 entries in the following order:
+ 1. a regexp to match the active region or word at point
  2. a regexp to match the current line
- 3. the note to be displayed: either a string, or a function of 
-    one argument (the word at point) that returns a string
-Either one of 1. & 2. may be omitted, but not both.
-Word matches have higher precedence than line matches, 
-but lower precedence than combined word & line matches.
-All matches of the highest precedence will be displayed.")
+ 3. the note to be displayed: either a string, or a function of two
+    arguments; the region/word and line matched by the regexps in entries 1. & 2.
+    If either of those regexps has a non-shy match group, the match to
+    the first such group will be used for the arg instead.
+    The function should display a note.
+ 4. an optional function for transforming the region/word match before it is
+    passed to the function in entry 3.
+ 5. an optional function for transforming the line match before it is
+    passed to the function in entry 3.
+Region/word matches have higher precedence than line matches, but lower precedence 
+than combined region/word & line matches. All matches of the highest precedence will 
+be displayed.
+An entry with nil for entries 1 & 2 may be used for the default note. If it has
+a function in entry 3 the function will be passed the region/word and line at point.")
 
 ;; simple-call-tree-info: DONE
 (defcustom syslog-manpage-wait 0.2
@@ -1422,42 +1430,62 @@ All matches of the highest precedence will be displayed.")
   :group 'syslog
   :type 'float)
 
-;; simple-call-tree-info: CHECK  
+;; simple-call-tree-info: TODO if region is active use that instead of symbol-at-point
 (defun syslog-show-notes nil
-  "In the minibuffer display notes associated with the word at point.
+  "In the minibuffer display notes associated with the region or word at point.
 The notes are chosen from the current value of `syslog-notes'.
-If there are notes which match the current word & line, then all those
-notes will be displayed, otherwise all notes matching the current word
+If there are notes which match the current region/word & line, then all those
+notes will be displayed, otherwise all notes matching the current region/word
  (but with no line regexp) will be displayed, or if there are none of
-those then all notes matching the current line (but with no word regexp)
-will be displayed."
+those then all notes matching the current line (but with no region/word regexp)
+will be displayed.
+If there are no `syslog-notes' entries matching the region/word or line at point,
+and `syslog-notes' contains a default item(s) with no region/word or line entries
+then that will be used."
   (interactive)
   (cl-flet ((findmatches (lst)
-			 (cl-remove-if-not (lambda (elem)
-					     (string-match
-					      (car elem)
-					      (buffer-substring-no-properties
-					       (line-beginning-position)
-					       (line-end-position))))
-					   lst)))
+			 (cl-remove-if-not
+			  (lambda (elem) (string-match (cadr elem) line))
+			  lst))
+	    (getmatch (regex str)
+		      (if regex
+			  (and (string-match regex str)
+			       (match-string (if (> (regexp-opt-depth regex) 0)
+						 1
+					       0)
+					     str))
+			str)))
     (if syslog-notes
-	(let* ((word (symbol-name-nearest-point))
-	       (haswrd (mapcar 'cdr (cl-remove-if-not
-				     (lambda (e) (string-match (car e) word))
-				     syslog-notes)))
-	       (nowrd (mapcar 'cdr (cl-remove-if 'car syslog-notes)))
-	       (nowrdrx (cl-remove-if-not 'car nowrd))
-	       (wrdrx (cl-remove-if-not 'car haswrd))
-	       (wrdnorx (cl-remove-if 'car haswrd))
-	       (notes (mapcar 'cdr (or (findmatches wrdrx)
-				       wrdnorx
-				       (findmatches nowrdrx))))
-	       (fullnote (mapconcat (lambda (note)
-				      (cond ((null note) "")
-					    ((functionp note) (funcall note word))
-					    ((stringp note) note)
-					    (t (error "Invalid note entry in %s"
-						      (syslog-notes-file)))))
+	(let* ((line (buffer-substring-no-properties (line-beginning-position)
+						     (line-end-position)))
+	       (word (if mark-active
+			 (buffer-substring-no-properties
+			  (region-beginning) (region-end))
+		       (current-word)))
+	       (haswd (cl-remove-if-not (lambda (e)
+					  (and (car e) (string-match (car e) word)))
+					syslog-notes))
+	       (nowd (cl-remove-if 'car syslog-notes))
+	       (lnnowd (cl-remove-if-not 'cadr nowd))
+	       (wdln (cl-remove-if-not 'cadr haswd))
+	       (wdnoln (cl-remove-if 'cadr haswd))
+	       (notes (or (findmatches wdln)
+			  wdnoln
+			  (findmatches lnnowd)))
+	       (fullnote (mapconcat (lambda (x)
+				      (let ((note (third x)))
+					(cond ((null note) "")
+					      ((functionp note)
+					       (funcall note
+							(funcall
+							 (or (fourth x) 'identity)
+							 (getmatch (car x) word))
+							(funcall
+							 (or (fifth x) 'identity)
+							 (getmatch (cadr x) line))))
+					      ((stringp note) note)
+					      (t (error "Invalid note entry in %s"
+							(syslog-notes-file))))))
 				    notes "\n")))
 	  (message (if (> (length fullnote) 0)
 		       fullnote
@@ -1518,12 +1546,8 @@ If this is none, then create new notes file, and add it to `syslog-notes-files'.
 			    (goto-char (point-min))
 			    (search-forward "syslog-notes" nil t))))
 	    (error "This is not a syslog notes file"))
-	(insert ";; This file contains notes for emacs `syslog-mode' used by the `syslog-show-notes' function.\n")
-	(insert ";; Each entry in the `syslog-notes' list defined below should contain:\n")
-	(insert ";; a regexp matching the word at point, a regexp matching the line, and the note itself\n")
-	(insert ";; (a string or a function of one argument that returns a string)\n")
-	(insert ";; Either one of the 1st or 2nd elements may be omitted, but not both.")
-	(insert ";; Word matches have higher precedence than line matches, but lower precedence than combined word & line matches.")
+	(insert ";; This file contains a definition of `syslog-notes' used by the `syslog-show-notes' function.\n")
+	(insert ";; See the `syslog-notes' documentation for info about the correct format\n")
 	(insert ";; After editing save & kill this buffer, and then in the syslog-mode buffer do: M-x syslog-load-notes\n")
 	(insert ";; To always use this file add an entry to the `syslog-notes-files' user option.\n")
 	(insert ";; See also `syslog-text-notes-from-manpages' and `syslog-function-notes-from-manpages'.\n")
@@ -1594,7 +1618,7 @@ match will be returned in the car."
      regions)))
 
 ;; simple-call-tree-info: CHANGE  
-(cl-defun syslog-show-note-from-manpage (page word &optional (indent 7) (face 'Man-overstrike))
+(cl-defun syslog-show-note-from-manpage (word page &optional (indent 7) (face 'Man-overstrike))
   "Show the description of WORD from manpage PAGE.
 The description is taken from indented text following the first appearance
 of WORD at indentation level INDENT and face FACE in the manpage.
@@ -1700,8 +1724,8 @@ the word in the syslog buffer differs from the corresponding word in the manpage
   `(defun ,(intern (format "syslog-show-%s-note"
 			   (replace-regexp-in-string "\\Sw" "_" page)))
        (word)
-     (syslog-show-note-from-manpage ,(Man-translate-references page)
-				    (funcall ',(or untransformer 'identity) word)
+     (syslog-show-note-from-manpage (funcall ',(or untransformer 'identity) word)
+				    ,(Man-translate-references page)
 				    ,indent ,face)))
 
 ;; simple-call-tree-info: DONE
