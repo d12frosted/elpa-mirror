@@ -4,12 +4,13 @@ Source:  https://github.com/lueck/standoff-mode.git
 
 Updating /mnt/store/melpa/working/standoff-mode/
 Checking out origin/HEAD
-Checking out 9db77f0acdc0fb7c3ddd8c5714eae4e88e215463
+Checking out 2f7f22349473f8d96df0d491d41cbdd2c4115847
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/standoff-mode/
-  to /tmp/standoff-modeB9EFWb/standoff-mode-20171115.1731
+  to /tmp/standoff-mode2wU0bP/standoff-mode-20210804.1639
     standoff-api.el -> standoff-api.el
     standoff-dummy.el -> standoff-dummy.el
+    standoff-dumped-json.el -> standoff-dumped-json.el
     standoff-json-file.el -> standoff-json-file.el
     standoff-json.el -> standoff-json.el
     standoff-log.el -> standoff-log.el
@@ -24,31 +25,32 @@ Copying files (->) and directories (=>)
     standoff-de.texi -> standoff-de.texi
     standoff-en.texi -> standoff-en.texi
     version.texi -> version.texi
-Created /tmp/standoff-modeB9EFWb/standoff-mode-20171115.1731/fdl.info
-Created /tmp/standoff-modeB9EFWb/standoff-mode-20171115.1731/standoff-de.info
-Created /tmp/standoff-modeB9EFWb/standoff-mode-20171115.1731/standoff-en.info
-Created /tmp/standoff-modeB9EFWb/standoff-mode-20171115.1731/version.info
-Created standoff-mode-20171115.1731.tar containing:
-  standoff-mode-20171115.1731/
-  standoff-mode-20171115.1731/dir
-  standoff-mode-20171115.1731/fdl.info
-  standoff-mode-20171115.1731/standoff-api.el
-  standoff-mode-20171115.1731/standoff-de.info
-  standoff-mode-20171115.1731/standoff-dummy.el
-  standoff-mode-20171115.1731/standoff-en.info
-  standoff-mode-20171115.1731/standoff-json-file.el
-  standoff-mode-20171115.1731/standoff-json.el
-  standoff-mode-20171115.1731/standoff-log.el
-  standoff-mode-20171115.1731/standoff-mark.el
-  standoff-mode-20171115.1731/standoff-mode-pkg.el
-  standoff-mode-20171115.1731/standoff-mode.el
-  standoff-mode-20171115.1731/standoff-relations.el
-  standoff-mode-20171115.1731/standoff-util.el
-  standoff-mode-20171115.1731/standoff-xml.el
-  standoff-mode-20171115.1731/version.info
-Built standoff-mode in 18.136s, finished at 2021-08-04T14:15:04+0000
+Created /tmp/standoff-mode2wU0bP/standoff-mode-20210804.1639/fdl.info
+Created /tmp/standoff-mode2wU0bP/standoff-mode-20210804.1639/standoff-de.info
+Created /tmp/standoff-mode2wU0bP/standoff-mode-20210804.1639/standoff-en.info
+Created /tmp/standoff-mode2wU0bP/standoff-mode-20210804.1639/version.info
+Created standoff-mode-20210804.1639.tar containing:
+  standoff-mode-20210804.1639/
+  standoff-mode-20210804.1639/dir
+  standoff-mode-20210804.1639/fdl.info
+  standoff-mode-20210804.1639/standoff-api.el
+  standoff-mode-20210804.1639/standoff-de.info
+  standoff-mode-20210804.1639/standoff-dummy.el
+  standoff-mode-20210804.1639/standoff-dumped-json.el
+  standoff-mode-20210804.1639/standoff-en.info
+  standoff-mode-20210804.1639/standoff-json-file.el
+  standoff-mode-20210804.1639/standoff-json.el
+  standoff-mode-20210804.1639/standoff-log.el
+  standoff-mode-20210804.1639/standoff-mark.el
+  standoff-mode-20210804.1639/standoff-mode-pkg.el
+  standoff-mode-20210804.1639/standoff-mode.el
+  standoff-mode-20210804.1639/standoff-relations.el
+  standoff-mode-20210804.1639/standoff-util.el
+  standoff-mode-20210804.1639/standoff-xml.el
+  standoff-mode-20210804.1639/version.info
+Built standoff-mode in 20.212s, finished at 2021-08-05T00:10:31+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  428 Aug  4 14:15 packages/standoff-mode-20171115.1731.entry
-312K -rw-r--r-- 1 root root 310K Aug  4 14:15 packages/standoff-mode-20171115.1731.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  4 14:15 packages/standoff-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Aug  4 14:15 packages/standoff-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  428 Aug  5 00:10 packages/standoff-mode-20210804.1639.entry
+320K -rw-r--r-- 1 root root 320K Aug  5 00:10 packages/standoff-mode-20210804.1639.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  5 00:10 packages/standoff-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Aug  5 00:10 packages/standoff-mode-readme.txt

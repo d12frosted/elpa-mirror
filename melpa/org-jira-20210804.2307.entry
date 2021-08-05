@@ -1,0 +1,15 @@
+(org-jira .
+	  [(20210804 2307)
+	   ((emacs
+	     (24 5))
+	    (cl-lib
+	     (0 5))
+	    (request
+	     (0 2 0))
+	    (dash
+	     (2 14 1)))
+	   "Syncing between Jira and Org-mode." tar
+	   ((:commit . "7ac5a035a0f63d00a1a66734ffe92859fd996543")
+	    (:maintainer "Matthew Carter" . "m@ahungry.com")
+	    (:keywords "ahungry" "jira" "org" "bug" "tracker")
+	    (:url . "https://github.com/ahungry/org-jira"))])
