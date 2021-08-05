@@ -1291,11 +1291,13 @@
 	   ("Ivan Kanis" . "ivan@kanis.fr"))
 	  (:maintainer "Ivan Kanis" . "ivan@kanis.fr"))])
  (kiwix .
-	[(1 0 3)
+	[(1 1 0)
 	 ((emacs
 	   (24 4))
 	  (request
-	   (0 3 0)))
+	   (0 3 0))
+	  (elquery
+	   (0 1 0)))
 	 "Searching offline Wikipedia through Kiwix." tar
 	 ((:url . "https://github.com/stardiviner/kiwix.el")
 	  (:maintainer "stardiviner" . "numbchild@gmail.com")
