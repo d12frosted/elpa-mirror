@@ -3,9 +3,9 @@
 ;; Copyright © 2013-2021 by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 3.0.20210803154919
-;; Package-Version: 20210803.2323
-;; Package-Commit: f202fc18e8e2ce0f5a39af684ac9aacd886ba50b
+;; Version: 3.0.20210804201033
+;; Package-Version: 20210805.445
+;; Package-Commit: ba2027d784d96aaec07a376c1acc5e548b013835
 ;; Created: 18 April 2013
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: languages, convenience, css, color
@@ -217,7 +217,7 @@ Version 2016-10-02 2021-08-03"
          ["\n\n+" "\n"]
          )))))
 
-(defun xah-css-format-to-multi-lines-buffer (&optional @begin @end)
+(defun xah-css-format-to-multi-lines-buffer ()
   "Expand minified CSS code to multiple lines for whole buffer.
 Version 2021-08-03"
   (interactive)

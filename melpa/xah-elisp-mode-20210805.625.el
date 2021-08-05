@@ -3,9 +3,9 @@
 ;; Copyright © 2013-2021, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 3.15.20210731171103
-;; Package-Version: 20210801.15
-;; Package-Commit: 11c77ead22e790b7d4c5aabf52bbc5e2248695d8
+;; Version: 3.18.20210804232442
+;; Package-Version: 20210805.625
+;; Package-Commit: a3e51870afd7236b14487476ad6f8fc68a84d180
 ;; Created: 23 Mar 2013
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: lisp, languages
@@ -2955,6 +2955,7 @@ Version 2017-01-27"
     ("w" "when" xah-elisp--ahf)
 
     ("ah" "add-hook" xah-elisp--ahf)
+    ("asc" "async-shell-command" xah-elisp--ahf)
     ("bc" "backward-char" xah-elisp--ahf)
     ("bs" "buffer-substring" xah-elisp--ahf)
     ("bw" "backward-word" xah-elisp--ahf)
@@ -3007,7 +3008,6 @@ Version 2017-01-27"
     ("rs" "read-string" xah-elisp--ahf)
     ("sb" "search-backward" xah-elisp--ahf)
     ("sc" "shell-command" xah-elisp--ahf)
-    ("asc" "async-shell-command" xah-elisp--ahf)
     ("sd" "setq-default" xah-elisp--ahf)
     ("se" "save-excursion" xah-elisp--ahf)
     ("sf" "search-forward" xah-elisp--ahf)
@@ -3019,6 +3019,12 @@ Version 2017-01-27"
     ("vc" "vconcat" xah-elisp--ahf)
     ("wg" "widget-get" xah-elisp--ahf)
     ("wr" "write-region" xah-elisp--ahf)
+
+    ("gt" "(> ▮)" xah-elisp--ahf)
+    ("lt" "(< ▮)" xah-elisp--ahf)
+    ("minus" "(- ▮)" xah-elisp--ahf)
+    ("add" "(+ ▮)" xah-elisp--ahf)
+    ("add1" "(1+ ▮)" xah-elisp--ahf)
 
     ("atf" "append-to-file" xah-elisp--ahf)
     ("bfn" "buffer-file-name" xah-elisp--ahf)

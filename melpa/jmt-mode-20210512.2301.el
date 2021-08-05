@@ -5,7 +5,7 @@
 ;; Author: Michael Allan <mike@reluk.ca>
 ;; Version: 0-snapshot
 ;; Package-Version: 20210512.2301
-;; Package-Commit: c3548cac4c4d2caffb750391b2d7d88c3892d139
+;; Package-Commit: c5cc024a06684b91da9bb05fecf681426596af5e
 ;; SPDX-License-Identifier: MIT
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: c, languages

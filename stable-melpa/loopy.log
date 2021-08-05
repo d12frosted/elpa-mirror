@@ -4,35 +4,41 @@ Source:  https://github.com/okamsn/loopy.git
 
 Updating /mnt/store/melpa/working/loopy/
 Checking out origin/HEAD
-Checking out 976723ed521a4c7afb14d8f5fca3fa087dff3e4c
+Checking out 0b2120d8e8752fca50d76d17d8edc7a24bbf0ff5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopyY1Vuz1/loopy-20210731.1953
+  to /tmp/loopyKeHtBA/loopy-20210805.319
     loopy-commands.el -> loopy-commands.el
     loopy-iter.el -> loopy-iter.el
+    loopy-misc.el -> loopy-misc.el
     loopy-pcase.el -> loopy-pcase.el
     loopy-seq.el -> loopy-seq.el
     loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
-Created /tmp/loopyY1Vuz1/loopy-20210731.1953/loopy.info
-Created loopy-20210731.1953.tar containing:
-  loopy-20210731.1953/
-  loopy-20210731.1953/dir
-  loopy-20210731.1953/loopy-commands.el
-  loopy-20210731.1953/loopy-iter.el
-  loopy-20210731.1953/loopy-pcase.el
-  loopy-20210731.1953/loopy-pkg.el
-  loopy-20210731.1953/loopy-seq.el
-  loopy-20210731.1953/loopy.el
-  loopy-20210731.1953/loopy.info
-Built loopy in 13.208s, finished at 2021-08-05T03:03:50+0000
+Created /tmp/loopyKeHtBA/loopy-20210805.319/loopy.info
+Created loopy-20210805.319.tar containing:
+  loopy-20210805.319/
+  loopy-20210805.319/dir
+  loopy-20210805.319/loopy-commands.el
+  loopy-20210805.319/loopy-iter.el
+  loopy-20210805.319/loopy-misc.el
+  loopy-20210805.319/loopy-pcase.el
+  loopy-20210805.319/loopy-pkg.el
+  loopy-20210805.319/loopy-seq.el
+  loopy-20210805.319/loopy.el
+  loopy-20210805.319/loopy.info
+Built loopy in 14.860s, finished at 2021-08-05T06:23:58+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  286 Aug  5 03:03 packages/loopy-20210731.1953.entry
 372K -rw-r--r-- 1 root root 370K Aug  5 03:03 packages/loopy-20210731.1953.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  5 03:03 packages/loopy-badge.svg
+4.0K -rw-r--r-- 1 root root  251 Aug  5 06:23 packages/loopy-20210805.319.entry
+400K -rw-r--r-- 1 root root 400K Aug  5 06:23 packages/loopy-20210805.319.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  5 06:23 packages/loopy-badge.svg
 8.0K -rw-r--r-- 1 root root 7.3K Aug  5 03:03 packages/loopy-dash-20210705.2006.el
 4.0K -rw-r--r-- 1 root root  392 Aug  5 03:03 packages/loopy-dash-20210705.2006.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  5 03:03 packages/loopy-dash-badge.svg
-4.0K -rw-r--r-- 1 root root  374 Aug  5 03:03 packages/loopy-dash-readme.txt
-4.0K -rw-r--r-- 1 root root  608 Aug  5 03:03 packages/loopy-dash.log
-4.0K -rw-r--r-- 1 root root 1.7K Aug  5 03:03 packages/loopy-readme.txt
+8.0K -rw-r--r-- 1 root root 7.3K Aug  5 06:23 packages/loopy-dash-20210805.109.el
+4.0K -rw-r--r-- 1 root root  391 Aug  5 06:23 packages/loopy-dash-20210805.109.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  5 06:23 packages/loopy-dash-badge.svg
+4.0K -rw-r--r-- 1 root root  374 Aug  5 06:23 packages/loopy-dash-readme.txt
+4.0K -rw-r--r-- 1 root root  775 Aug  5 06:23 packages/loopy-dash.log
+4.0K -rw-r--r-- 1 root root 1.7K Aug  5 06:23 packages/loopy-readme.txt

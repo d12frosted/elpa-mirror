@@ -4,8 +4,8 @@
 
 ;; Author: Musa Al-hassy <alhassy@gmail.com>
 ;; Version: 2.4
-;; Package-Version: 20210805.30
-;; Package-Commit: aa7ffdcb28778d5aefef86f31dc46af0a539219b
+;; Package-Version: 20210805.327
+;; Package-Commit: 4dcd5583fa42ba5e5be1f0169a92e88eff4aebc1
 ;; Package-Requires: ((s "1.12.0") (dash "2.18.0") (emacs "26.1") (org "9.1"))
 ;; Keywords: org, blocks, colors, convenience
 ;; URL: https://alhassy.github.io/org-special-block-extras
@@ -1245,7 +1245,7 @@ is coloured grey and the ‘value’ is coloured ‘color’.
                    ("here" (format "<a id=\"%s\" href=\"#%s\">%%s</a>" (s-replace "%" "%%" key) (s-replace "%" "%%" key)))
                    (""      "%s") ;; e.g., badge:key|value|color||logo
                    ('nil    "%s") ;; e.g., badge:key|value|color
-                   (t      (format "<a href=\"%s\">%%s</a>"  (s-replace "%" "%%" ,(if social-shields-name `(format ,social-url label) 'url))))
+                   (_      (format "<a href=\"%s\">%%s</a>"  (s-replace "%" "%%" ,(if social-shields-name `(format ,social-url label) 'url))))
                    )
                  ,(if social-shields-name
                      (if social-shields-url
@@ -1624,7 +1624,7 @@ COLOR is the colour of the hints."
   (cond
    ((symbolp lst) "")
    ((symbolp (car lst)) (org-special-block-extras--list-to-calc (cadr lst)))
-   (t (-let* (((conclusion₀ children) lst)
+   (_ (-let* (((conclusion₀ children) lst)
               ((expr₀ hint) (s-split "--" conclusion₀))
               ((op₀ expr₁) (cdr (s-match "^\\[\\(.*\\)\\]\\(.*\\)" expr₀)))
               (op (or op₀ rel))
