@@ -646,11 +646,9 @@
 	       ("Leo Liu" . "sdl.web@gmail.com"))
 	      (:keywords "killing" "convenience"))])
  (ebdb .
-       [(0 7)
+       [(0 7 1)
 	((emacs
 	  (25 1))
-	 (cl-lib
-	  (0 5))
 	 (seq
 	  (2 15)))
 	"Contact management package" tar
