@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/AdamNiederer/elquery.git
 
 Updating /mnt/store/melpa/working/elquery/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-error: cannot fork() for rev-list: Cannot allocate memory
-error: Could not run 'git rev-list'
-fatal: Out of memory, malloc failed (tried to allocate 57344 bytes)
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out cba7629ad886c4e51d66f8b509aad48bdfe100cc
+Built elquery in 4.281s, finished at 2021-08-06T14:21:36+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root  23K Aug  6 14:21 packages/elquery-20200628.1756.el
+4.0K -rw-r--r-- 1 root root  386 Aug  6 14:21 packages/elquery-20200628.1756.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  6 14:21 packages/elquery-badge.svg
+   0 -rw-r--r-- 1 root root    0 Aug  6 14:21 packages/elquery-readme.txt

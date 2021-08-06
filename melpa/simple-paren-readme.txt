@@ -4,6 +4,8 @@ With \\[universal-argument] and with active region,
  --i.e. transient-mark-mode-- wrap around. With numerical ARG insert the
 delimiter arg times
 
+In order to insert a pair at point call `C-<space>` i.e. `set-mark-command` first maybe.
+
 Create your own commands by just providing the delimiting
 charakters as shown below with math white square brackets:
 
