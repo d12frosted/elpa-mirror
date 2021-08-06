@@ -58,8 +58,6 @@ By default, .git dir is ignored. You can add to it by adding the following in yo
    ; more regex here. regex is matched against file full path
   ])
 
-to customize the color for matched text, call `customize-group' and then give xah-find.
-
 USE CASE
 
 To give a idea what file size, number of files, are practical, here's my typical use pattern:
@@ -76,7 +74,7 @@ Thank you.
 
 ; INSTALL
 
-To install manually, place this file in the directory 〔~/.emacs.d/lisp/〕
+To install manually, place this file in the directory [~/.emacs.d/lisp/]
 
 Then, place the following code in your emacs init file
 

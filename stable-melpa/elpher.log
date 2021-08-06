@@ -5,22 +5,10 @@ Source:  https://thelambdalab.xyz/git/elpher.git
 Updating /mnt/store/melpa/working/elpher/
 Checking out origin/HEAD
 Checking out 8e2dafcf5d63dd51078a77d6535905f2f34fee59
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/elpher/
-  to /tmp/elpher4yqB1a/elpher-20210804.1437
-    elpher-pkg.el -> elpher-pkg.el
-    elpher.el -> elpher.el
-    elpher.texi -> elpher.texi
-Created /tmp/elpher4yqB1a/elpher-20210804.1437/elpher.info
-Created elpher-20210804.1437.tar containing:
-  elpher-20210804.1437/
-  elpher-20210804.1437/dir
-  elpher-20210804.1437/elpher-pkg.el
-  elpher-20210804.1437/elpher.el
-  elpher-20210804.1437/elpher.info
-Built elpher in 16.652s, finished at 2021-08-05T16:42:20+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  352 Aug  5 16:42 packages/elpher-20210804.1437.entry
-152K -rw-r--r-- 1 root root 150K Aug  5 16:42 packages/elpher-20210804.1437.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  5 16:42 packages/elpher-badge.svg
-4.0K -rw-r--r-- 1 root root  965 Aug  5 16:42 packages/elpher-readme.txt
+Command '(env LC_ALL=C git submodule sync --recursive)' exited with non-zero status 2: Fetching origin
+origin/HEAD set to master
+HEAD is now at 8e2dafc Cleaning up.
+HEAD is now at 8e2dafc Cleaning up.
+git: error while loading shared libraries: libpcre2-8.so.0: cannot create shared object descriptor: Cannot allocate memory
+/usr/libexec/git-core/git-submodule: 333: /usr/libexec/git-core/git-sh-setup: Cannot fork
+
