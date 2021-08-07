@@ -4,6 +4,8 @@
 
 ;; Author: Anders Lindgren
 ;; Version: 0.0.5
+;; Package-Version: 20170925.1946
+;; Package-Commit: 6c92dad56a133e14e7b27831e1bcf9b3a71ff154
 ;; Created: 2013-01-21
 ;; Keywords: faces languages
 ;; URL: https://github.com/Lindydancer/faceup
