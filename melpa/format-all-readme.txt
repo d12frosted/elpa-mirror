@@ -50,7 +50,7 @@ Supported languages:
 - Perl (perltidy)
 - PHP (prettier plugin)
 - Protocol Buffers (clang-format)
-- PureScript (purty)
+- PureScript (purty, purs-tidy)
 - Python (black, yapf)
 - R (styler)
 - Reason (bsrefmt)
