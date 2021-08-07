@@ -4,15 +4,25 @@ Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/git-commit/
 Checking out origin/HEAD
-Checking out 7b46191dedba053f1c44d5f13d4283860e26cbd6
-Built git-commit in 4.915s, finished at 2021-08-06T14:32:33+0000
+Checking out f6ccde31a3d47f7da46dd3d5856aa25e48ec2b43
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/git-commit/
+  to /tmp/git-commitdDkkxO/git-commit-20210806.1607
+  ! lisp/git-commit.el -> git-commit.el
+    LICENSE -> LICENSE
+Created git-commit-20210806.1607.tar containing:
+  git-commit-20210806.1607/
+  git-commit-20210806.1607/LICENSE
+  git-commit-20210806.1607/git-commit-pkg.el
+  git-commit-20210806.1607/git-commit.el
+Built git-commit in 4.288s, finished at 2021-08-07T00:50:10+0000
  ✓ Success:
- 44K -rw-r--r-- 1 root root  42K Aug  6 14:32 packages/git-commit-20210801.1004.el
-4.0K -rw-r--r-- 1 root root  655 Aug  6 14:32 packages/git-commit-20210801.1004.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  6 14:32 packages/git-commit-badge.svg
- 16K -rw-r--r-- 1 root root  14K Aug  6 14:32 packages/git-commit-insert-issue-20210107.2018.el
-4.0K -rw-r--r-- 1 root root  517 Aug  6 14:32 packages/git-commit-insert-issue-20210107.2018.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  6 11:02 packages/git-commit-insert-issue-badge.svg
-4.0K -rw-r--r-- 1 root root  171 Aug  6 14:32 packages/git-commit-insert-issue-readme.txt
-4.0K -rw-r--r-- 1 root root  256 Aug  6 14:32 packages/git-commit-insert-issue.log
-4.0K -rw-r--r-- 1 root root 3.5K Aug  6 14:32 packages/git-commit-readme.txt
+4.0K -rw-r--r-- 1 root root  644 Aug  7 00:50 packages/git-commit-20210806.1607.entry
+ 80K -rw-r--r-- 1 root root  80K Aug  7 00:50 packages/git-commit-20210806.1607.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  7 00:50 packages/git-commit-badge.svg
+ 16K -rw-r--r-- 1 root root  14K Aug  6 21:28 packages/git-commit-insert-issue-20210107.2018.el
+4.0K -rw-r--r-- 1 root root  517 Aug  6 21:28 packages/git-commit-insert-issue-20210107.2018.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  6 21:28 packages/git-commit-insert-issue-badge.svg
+4.0K -rw-r--r-- 1 root root  171 Aug  6 21:28 packages/git-commit-insert-issue-readme.txt
+4.0K -rw-r--r-- 1 root root  256 Aug  7 00:50 packages/git-commit-insert-issue.log
+4.0K -rw-r--r-- 1 root root 3.5K Aug  7 00:50 packages/git-commit-readme.txt

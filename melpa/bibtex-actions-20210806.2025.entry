@@ -1,0 +1,12 @@
+(bibtex-actions .
+		[(20210806 2025)
+		 ((emacs
+		   (26 3))
+		  (bibtex-completion
+		   (1 0)))
+		 "Biblographic commands based on completing-read" tar
+		 ((:commit . "f6bce7c2868bde07cfd5441978a88c4f9a24e3c8")
+		  (:authors
+		   ("Bruce D'Arcus <https://github.com/bdarcus>"))
+		  (:maintainer "Bruce D'Arcus <https://github.com/bdarcus>")
+		  (:url . "https://github.com/bdarcus/bibtex-actions"))])

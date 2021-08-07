@@ -5,7 +5,7 @@
 ;; Author: Brian Taylor <el.wubo@gmail.com>
 ;; Version: 1.0.0
 ;; Package-Version: 20210707.2310
-;; Package-Commit: b6e26aef1a4e19fb4790fd1de627387e3e74d981
+;; Package-Commit: 20eb2af2c079ce1e9c9b3457c4381b60119030c9
 ;; URL: https://github.com/capnproto/capnproto
 
 ;;; Commentary:

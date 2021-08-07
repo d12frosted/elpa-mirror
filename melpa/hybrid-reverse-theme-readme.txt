@@ -15,6 +15,7 @@ Supported packages:
 - evil
 - flycheck
 - flyspell-correct
+- git-commit
 - hydra
 - ido-vertical-mode
 - linum-relative

@@ -4,7 +4,7 @@
 ;; Created: 23-Apr-2009
 ;; Version: 0.3
 ;; Package-Version: 20200619.1742
-;; Package-Commit: 51405b6b92c2070c8edea1b44c6770e00f7027be
+;; Package-Commit: ae26a81918fa9e16f64ac27b5a2fb2b110b7aa1b
 ;; Keywords: google protobuf languages
 
 ;; Redistribution and use in source and binary forms, with or without

@@ -3,11 +3,6 @@ Fetcher: gitlab
 Source:  https://gitlab.com/matsievskiysv/display-buffer-control.git
 
 Updating /mnt/store/melpa/working/dbc/
-Checking out origin/HEAD
-Checking out 6728e72f72347d098b7d75ac4c29a7d687cc9ed3
-Built dbc in 4.593s, finished at 2021-08-06T14:15:50+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root  16K Aug  6 14:15 packages/dbc-20201001.1452.el
-4.0K -rw-r--r-- 1 root root  390 Aug  6 14:15 packages/dbc-20201001.1452.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  6 14:15 packages/dbc-badge.svg
-4.0K -rw-r--r-- 1 root root 1.6K Aug  6 14:15 packages/dbc-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: unable to access 'https://gitlab.com/matsievskiysv/display-buffer-control.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+
