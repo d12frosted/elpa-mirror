@@ -8,6 +8,58 @@
 	  ("Jacques Garrigue" . "garrigue@kurims.kyoto-u.ac.jp")
 	  ("Ian T Zimmerman" . "itz@rahul.net"))
 	 (:keywords "ocaml"))])
+ (git-commit .
+	     [(3 2 1)
+	      ((emacs
+		(25 1))
+	       (dash
+		(2 18 1))
+	       (transient
+		(0 3 6))
+	       (with-editor
+		(3 0 4)))
+	      "Edit Git commit messages" tar
+	      ((:url . "https://github.com/magit/magit")
+	       (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	       (:authors
+		("Jonas Bernoulli" . "jonas@bernoul.li")
+		("Sebastian Wiesner" . "lunaryorn@gmail.com")
+		("Florian Ragwitz" . "rafl@debian.org")
+		("Marius Vollmer" . "marius.vollmer@gmail.com"))
+	       (:keywords "git" "tools" "vc"))])
+ (magit .
+	[(3 2 1)
+	 ((emacs
+	   (25 1))
+	  (dash
+	   (2 18 1))
+	  (git-commit
+	   (3 2 1))
+	  (magit-section
+	   (3 2 1))
+	  (transient
+	   (0 3 6))
+	  (with-editor
+	   (3 0 4)))
+	 "A Git porcelain inside Emacs" tar
+	 ((:url . "https://github.com/magit/magit")
+	  (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	  (:authors
+	   ("Marius Vollmer" . "marius.vollmer@gmail.com")
+	   ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	  (:keywords "git" "tools" "vc"))])
+ (magit-section .
+		[(3 2 1)
+		 ((emacs
+		   (25 1))
+		  (dash
+		   (2 18 1)))
+		 "Sections for read-only buffers" tar
+		 ((:url . "https://github.com/magit/magit")
+		  (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		  (:authors
+		   ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		  (:keywords "tools"))])
  (markdown-mode .
 		[(2 4)
 		 ((emacs
@@ -62,4 +114,14 @@
 	    ("Till Varoquaux" . "till@pps.jussieu.fr")
 	    ("Sean McLaughlin" . "seanmcl@gmail.com")
 	    ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
-	   (:keywords "ocaml" "languages"))]))
+	   (:keywords "ocaml" "languages"))])
+ (with-editor .
+	      [(3 0 4)
+	       ((emacs
+		 (24 4)))
+	       "Use the Emacsclient as $EDITOR" tar
+	       ((:url . "https://github.com/magit/with-editor")
+		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		(:authors
+		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		(:keywords "tools"))]))
