@@ -5,7 +5,7 @@
 ;; Author: Matthieu Petiteau <matt@smallwat3r.com>
 ;; URL: https://github.com/smallwat3r/tubestatus.el
 ;; Package-Version: 20210801.1522
-;; Package-Commit: b38f318a7780414c62f093f6fc5439d6f185b99c
+;; Package-Commit: eeda4c2647cfdb910de776398037183f48e3fa72
 ;; Package-Requires: ((emacs "26.1") (request "0.3.2"))
 ;; Version: 0.0.1
 

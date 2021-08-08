@@ -2,8 +2,8 @@
 
 ;; Author: Alex McGrath <amk@amk.ie>
 ;; URL: https://git.sr.ht/~amk/subsonic.el
-;; Package-Version: 20210804.1112
-;; Package-Commit: 68ff526021e382b4e385b219d7de2804ae2cad6f
+;; Package-Version: 20210808.1328
+;; Package-Commit: 42c2e0b5b81c78741c069c8cfdb9e5d494157dc8
 ;; Version: 0.1.0
 ;; Keywords: multimedia
 ;; Package-Requires: ((emacs "27.1") (transient "0.2"))
@@ -69,6 +69,11 @@ Used to find the correct authinfo entry."
 (defcustom subsonic-art-cache-path (expand-file-name "subsonic-cache" user-emacs-directory)
   "Path to store cached subsonic art."
   :type 'string
+  :group 'subsonic)
+
+(defcustom subsonic-ssl t
+  "Chooose either a https or http connection to subsonic."
+  :type 'boolean
   :group 'subsonic)
 
 (defvar subsonic-mpv--volume subsonic-default-volume)
@@ -193,7 +198,9 @@ reverted upon image load and N specifies the index"
   "Build a valid subsonic url for a given ENDPOINT.
 EXTRA-QUERY is used for any extra query parameters"
   (if subsonic-auth
-      (concat "https://"
+      (concat (if subsonic-ssl
+				  "https://"
+				"http://")
               (plist-get subsonic-auth :host)
               "/rest" endpoint
               (subsonic-alist->query (append `(("u" . ,(plist-get subsonic-auth :user))

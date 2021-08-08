@@ -7,8 +7,8 @@
 ;; Description: LSP Clients for LTEX.
 ;; Keyword: lsp languagetool checker
 ;; Version: 0.1.0
-;; Package-Version: 20210808.924
-;; Package-Commit: b0912ab7858ee8580284d91b6d41eb753338b6a3
+;; Package-Version: 20210808.1349
+;; Package-Commit: 0d9ec27b701ea83259eabafef71a1b33512e4ec3
 ;; Package-Requires: ((emacs "26.1") (lsp-mode "6.1") (f "0.20.0"))
 ;; URL: https://github.com/emacs-languagetool/lsp-ltex
 
@@ -61,12 +61,13 @@ https://github.com/valentjn/ltex-ls"
 (defcustom lsp-ltex-version "12.3.0"
   "Version of LTEX language server."
   :type 'string
-  :set (lambda (_symbol _value)
-         (setq lsp-ltex--filename (format "ltex-ls-%s" lsp-ltex-version)
+  :set (lambda (symbol value)
+         (set-default symbol value)
+         (setq lsp-ltex--filename (format "ltex-ls-%s" value)
                lsp-ltex--extension-name (format "%s.tar.gz" lsp-ltex--filename)
                lsp-ltex--server-download-url
                (format "https://github.com/%s/releases/download/%s/%s"
-                       lsp-ltex-repo-path lsp-ltex-version lsp-ltex--extension-name)))
+                       lsp-ltex-repo-path value lsp-ltex--extension-name)))
   :group 'lsp-ltex)
 
 (defcustom lsp-ltex-server-store-path
