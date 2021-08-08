@@ -8,6 +8,154 @@
 	  ("Jacques Garrigue" . "garrigue@kurims.kyoto-u.ac.jp")
 	  ("Ian T Zimmerman" . "itz@rahul.net"))
 	 (:keywords "ocaml"))])
+ (editorconfig .
+	       [(0 8 1)
+		((cl-lib
+		  (0 5))
+		 (nadvice
+		  (0 3))
+		 (emacs
+		  (24)))
+		"EditorConfig Emacs Plugin" tar
+		((:url . "https://github.com/editorconfig/editorconfig-emacs#readme")
+		 (:maintainer "EditorConfig Team" . "editorconfig@googlegroups.com")
+		 (:authors
+		  ("EditorConfig Team" . "editorconfig@googlegroups.com")))])
+ (evil .
+       [(1 14 0)
+	nil "extensible vi layer" tar
+	((:url . "https://github.com/emacs-evil/evil")
+	 (:keywords "emulation" "vim"))])
+ (geiser .
+	 [(0 16)
+	  ((emacs
+	    (24 4)))
+	  "GNU Emacs and Scheme talk to each other" tar
+	  ((:url . "https://gitlab.com/emacs-geiser/")
+	   (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
+	   (:authors
+	    ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
+	   (:keywords "languages" "scheme" "geiser"))])
+ (geiser-chez .
+	      [(0 16)
+	       ((emacs
+		 (26 1))
+		(geiser
+		 (0 16)))
+	       "Chez Scheme's implementation of the geiser protocols" tar
+	       ((:url . "https://gitlab.com/emacs-geiser/chez")
+		(:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
+		(:authors
+		 ("Peter" . "craven@gmx.net"))
+		(:keywords "languages" "chez" "scheme" "geiser"))])
+ (geiser-chibi .
+	       [(0 16)
+		((emacs
+		  (24 4))
+		 (geiser
+		  (0 16)))
+		"Chibi Scheme's implementation of the geiser protocols" tar
+		((:url . "https://gitlab.com/emacs-geiser/chibi")
+		 (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
+		 (:authors
+		  ("Peter" . "craven@gmx.net"))
+		 (:keywords "languages" "chibi" "scheme" "geiser"))])
+ (geiser-chicken .
+		 [(0 16)
+		  ((emacs
+		    (24 4))
+		   (geiser
+		    (0 16)))
+		  "Chicken's implementation of the geiser protocols" tar
+		  ((:url . "https://gitlab.com/emacs-geiser/chicken")
+		   (:maintainer "Daniel Leslie")
+		   (:authors
+		    ("Daniel Leslie"))
+		   (:keywords "languages" "chicken" "scheme" "geiser"))])
+ (geiser-gambit .
+		[(0 16)
+		 ((emacs
+		   (26 1))
+		  (geiser
+		   (0 16)))
+		 "Gambit's implementation of the geiser protocols" tar
+		 ((:url . "https://gitlab.com/emacs-geiser/gambit")
+		  (:maintainer "Daniel Leslie, Jose A Ortega Ruiz" . "jao@gnu.org")
+		  (:authors
+		   ("Daniel Leslie"))
+		  (:keywords "languages" "gambit" "scheme" "geiser"))])
+ (geiser-gauche .
+		[(0 0 2)
+		 ((emacs
+		   (26 1))
+		  (geiser
+		   (0 11 2)))
+		 "Gauche scheme support for Geiser" tar
+		 ((:url . "https://gitlab.com/emacs-geiser/gauche")
+		  (:maintainer "András Simonyi" . "andras.simonyi@gmail.com")
+		  (:authors
+		   ("András Simonyi" . "andras.simonyi@gmail.com"))
+		  (:keywords "languages" "gauche" "scheme" "geiser"))])
+ (geiser-guile .
+	       [(0 17)
+		((emacs
+		  (24 4))
+		 (geiser
+		  (0 16)))
+		"Guile's implementation of the geiser protocols" tar
+		((:url . "https://gitlab.com/emacs-geiser/guile")
+		 (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
+		 (:authors
+		  ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
+		 (:keywords "languages" "guile" "scheme" "geiser"))])
+ (geiser-kawa .
+	      [(0 0 1)
+	       ((emacs
+		 (26 1))
+		(geiser
+		 (0 16)))
+	       "Kawa scheme support for Geiser" tar
+	       ((:url . "https://gitlab.com/emacs-geiser/kawa")
+		(:maintainer "spellcard199" . "spellcard199@protonmail.com")
+		(:authors
+		 ("spellcard199" . "spellcard199@protonmail.com"))
+		(:keywords "languages" "kawa" "scheme" "geiser"))])
+ (geiser-mit .
+	     [(0 13)
+	      ((emacs
+		(24 4))
+	       (geiser
+		(0 12)))
+	      "MIT/GNU Scheme's implementation of the geiser protocols" tar
+	      ((:url . "https://gitlab.com/emacs-geiser/mit")
+	       (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
+	       (:authors
+		("Peter" . "craven@gmx.net"))
+	       (:keywords "languages" "mit" "scheme" "geiser"))])
+ (geiser-racket .
+		[(0 16)
+		 ((emacs
+		   (26 1))
+		  (geiser
+		   (0 16)))
+		 "Support for Racket in Geiser" tar
+		 ((:url . "https://gitlab.com/emacs-geiser/racket")
+		  (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
+		  (:authors
+		   ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
+		  (:keywords "languages" "racket" "scheme" "geiser"))])
+ (geiser-stklos .
+		[(1 3)
+		 ((emacs
+		   (24 4))
+		  (geiser
+		   (0 16)))
+		 "STklos Scheme implementation of the geiser protocols" tar
+		 ((:url . "https://gitlab.com/emacs-geiser/stklos")
+		  (:maintainer "Jeronimo Pellegrini" . "j_p@aleph0.info")
+		  (:authors
+		   ("Jeronimo Pellegrini" . "j_p@aleph0.info"))
+		  (:keywords "languages" "stklos" "scheme" "geiser"))])
  (git-commit .
 	     [(3 2 1)
 	      ((emacs
@@ -27,6 +175,74 @@
 		("Florian Ragwitz" . "rafl@debian.org")
 		("Marius Vollmer" . "marius.vollmer@gmail.com"))
 	       (:keywords "git" "tools" "vc"))])
+ (go-mode .
+	  [(1 5 0)
+	   nil "Major mode for the Go programming language" tar
+	   ((:url . "https://github.com/dominikh/go-mode.el")
+	    (:maintainer "The go-mode Authors")
+	    (:authors
+	     ("The go-mode Authors"))
+	    (:keywords "languages" "go"))])
+ (goto-chg .
+	   [(1 7 4)
+	    ((emacs
+	      (24 1)))
+	    "Go to last change" tar
+	    ((:url . "https://github.com/emacs-evil/goto-chg")
+	     (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de")
+	     (:authors
+	      ("David Andersson <l.david.andersson(at)sverige.nu>"))
+	     (:keywords "convenience" "matching"))])
+ (haskell-mode .
+	       [(4 7 1)
+		nil "A Haskell editing mode" tar
+		((:url . "https://github.com/haskell/haskell-mode")
+		 (:maintainer "1992      Simon Marlow")
+		 (:authors
+		  ("1992      Simon Marlow")
+		  ("1997-1998 Graeme E Moss" . "gem@cs.york.ac.uk")
+		  ("Tommy Thorn" . "thorn@irisa.fr")
+		  ("2001-2002 Reuben Thomas (>=v1.4)")
+		  ("2003      Dave Love" . "fx@gnu.org")
+		  ("2016      Arthur Fayzrakhmanov"))
+		 (:keywords "faces" "files" "haskell"))])
+ (htmlize .
+	  [(1 56)
+	   nil "Convert buffer text and decorations to HTML." tar
+	   ((:url . "https://github.com/hniksic/emacs-htmlize")
+	    (:maintainer "Hrvoje Niksic" . "hniksic@gmail.com")
+	    (:authors
+	     ("Hrvoje Niksic" . "hniksic@gmail.com"))
+	    (:keywords "hypermedia" "extensions"))])
+ (lua-mode .
+	   [(20210802)
+	    ((emacs
+	      (24 3)))
+	    "a major-mode for editing Lua scripts" tar
+	    ((:url . "http://immerrr.github.com/lua-mode")
+	     (:maintainer "2011-2013 immerrr" . "immerrr+lua@gmail.com")
+	     (:authors
+	      ("2011-2013 immerrr" . "immerrr+lua@gmail.com")
+	      ("2010-2011 Reuben Thomas" . "rrt@sc3d.org")
+	      ("2006 Juergen Hoetzel" . "juergen@hoetzel.info")
+	      ("2004 various (support for Lua 5 and byte compilation)")
+	      ("2001 Christian Vogler" . "cvogler@gradient.cis.upenn.edu")
+	      ("1997 Bret Mogilefsky" . "mogul-lua@gelatinous.com")
+	      ("tcl-mode by Gregor Schmid" . "schmid@fb3-s7.math.tu-berlin.de")
+	      ("with tons of assistance from")
+	      ("Paul Du Bois" . "pld-lua@gelatinous.com")
+	      ("Aaron Smith" . "aaron-lua@gelatinous.com"))
+	     (:keywords "languages" "processes" "tools"))])
+ (macrostep .
+	    [(0 9)
+	     ((cl-lib
+	       (0 5)))
+	     "interactive macro expander" tar
+	     ((:url . "https://github.com/joddie/macrostep")
+	      (:maintainer "joddie" . "j.j.oddie@gmail.com")
+	      (:authors
+	       ("joddie" . "j.j.oddie@gmail.com"))
+	      (:keywords "lisp" "languages" "macro" "debugging"))])
  (magit .
 	[(3 2 1)
 	 ((emacs
@@ -70,6 +286,14 @@
 		  (:authors
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
 		  (:keywords "markdown" "github flavored markdown" "itex"))])
+ (multiple-cursors .
+		   [(1 4 0)
+		    nil "Multiple cursors for emacs." tar
+		    ((:url . "https://github.com/magnars/multiple-cursors.el")
+		     (:maintainer "Magnar Sveen" . "magnars@gmail.com")
+		     (:authors
+		      ("Magnar Sveen" . "magnars@gmail.com"))
+		     (:keywords "editing" "cursors"))])
  (org-contrib .
 	      [(0 1)
 	       ((emacs
@@ -91,6 +315,25 @@
 	    (:maintainer "Takafumi Arakaki <aka.tkf at gmail.com>")
 	    (:authors
 	     ("Takafumi Arakaki <aka.tkf at gmail.com>")))])
+ (rust-mode .
+	    [(0 5 0)
+	     ((emacs
+	       (25 1)))
+	     "A major-mode for editing Rust source code" tar
+	     ((:url . "https://github.com/rust-lang/rust-mode")
+	      (:maintainer "Mozilla")
+	      (:authors
+	       ("Mozilla"))
+	      (:keywords "languages"))])
+ (slime .
+	[(2 26 1)
+	 ((cl-lib
+	   (0 5))
+	  (macrostep
+	   (0 9)))
+	 "Superior Lisp Interaction Mode for Emacs" tar
+	 ((:url . "https://github.com/slime/slime")
+	  (:keywords "languages" "lisp" "slime"))])
  (sly .
       [(1 0 43)
        ((emacs
@@ -115,6 +358,24 @@
 	    ("Sean McLaughlin" . "seanmcl@gmail.com")
 	    ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	   (:keywords "ocaml" "languages"))])
+ (web-mode .
+	   [(17 0 4)
+	    ((emacs
+	      (23 1)))
+	    "major mode for editing web templates" tar
+	    ((:url . "https://web-mode.org")
+	     (:maintainer "François-Xavier Bois")
+	     (:authors
+	      ("François-Xavier Bois <fxbois AT Google Mail Service>"))
+	     (:keywords "languages"))])
+ (wgrep .
+	[(2 3 3)
+	 nil "Writable grep buffer and apply the changes to files" tar
+	 ((:url . "http://github.com/mhayashi1120/Emacs-wgrep/raw/master/wgrep.el")
+	  (:maintainer "Masahiro Hayashi" . "mhayashi1120@gmail.com")
+	  (:authors
+	   ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
+	  (:keywords "grep" "edit" "extensions"))])
  (with-editor .
 	      [(3 0 4)
 	       ((emacs
@@ -124,4 +385,14 @@
 		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
 		(:authors
 		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
-		(:keywords "tools"))]))
+		(:keywords "tools"))])
+ (yasnippet-snippets .
+		     [(0 2)
+		      ((yasnippet
+			(0 8 0)))
+		      "Collection of yasnippet snippets" tar
+		      ((:url . "https://github.com/AndreaCrotti/yasnippet-snippets")
+		       (:maintainer "Andrea Crotti" . "andrea.crotti.0@gmail.com")
+		       (:authors
+			("Andrea Crotti" . "andrea.crotti.0@gmail.com"))
+		       (:keywords "snippets"))]))
