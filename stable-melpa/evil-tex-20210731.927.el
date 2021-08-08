@@ -8,7 +8,7 @@
 ;; Modified: August 02, 2020
 ;; Version: 1.0.2
 ;; Package-Version: 20210731.927
-;; Package-Commit: 181c643f9213b0223d8f29ca75f9daabab5780eb
+;; Package-Commit: aa0ddf8e768a24cda6d50d07f04c8e7813a2dccd
 ;; Keywords: tex, emulation, vi, evil, wp
 ;; Homepage: https://github.com/iyefrat/evil-tex
 ;; Package-Requires: ((emacs "26.1") (evil "1.0") (auctex "11.88"))
