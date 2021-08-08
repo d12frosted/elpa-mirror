@@ -8,8 +8,8 @@
 ;;               Michael Markert <markert.michael@gmail.com>
 ;;               Julia Path <julia@jpath.de>
 ;; URL: http://github.com/juliapath/evil-numbers
-;; Package-Version: 20210605.431
-;; Package-Commit: cd23a7b458d73dc49434a3cf90d3d0caceb5811d
+;; Package-Version: 20210808.1424
+;; Package-Commit: 29859e64c0f9e68f5eac5662c56d468678cbac2b
 ;; Git-Repository: git://github.com/juliapath/evil-numbers.git
 ;; Created: 2011-09-02
 ;; Version: 0.6
@@ -326,7 +326,7 @@ Each item in MATCH-CHARS is a cons pair.
             (evil-numbers--skip-chars-impl
              ch-skip ch-sep-optional dir 1 limit))
            (t
-            (error (format "Unknown type %S" ch-skip))))
+            (error (format "Unknown type %S (internal error)" ch-skip))))
 
           ;; End of the match.
           (when do-match
@@ -645,13 +645,16 @@ result in a number with a + sign."
                         (lambda (_beg end) (< point-init end))))))
                (point)))))
 
-      (if (null point-next)
-          (error "No number at point or until end of line")
-
+      (cond
+       ((null point-next)
+        ;; Point not found, note that VIM doesn't report anything in this case.
+        (message "No number at point or until end of line")
+        nil)
+       (t
         ;; Moves point one position back to conform with VIM,
         ;; see `evil-adjust-cursor' for details.
         (goto-char (1- point-next))
-        t)))))
+        t))))))
 
 ;;;###autoload (autoload 'evil-numbers/dec-at-pt "evil-numbers" nil t)
 (evil-define-operator evil-numbers/dec-at-pt

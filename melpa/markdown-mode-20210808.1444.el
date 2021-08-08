@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.5-dev
-;; Package-Version: 20210801.656
-;; Package-Commit: f28e263b915d48ee9757990da1cdd160b355cb8c
+;; Package-Version: 20210808.1444
+;; Package-Commit: 49fa5fec926b46a3c98d42d2db7faf5901f59781
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -1554,7 +1554,8 @@ MIDDLE-BEGIN is the start of the \"middle\" section of the block."
                          (cl-third fence-spec)
                          (list middle-begin close-begin))
       ;; If the block is a YAML block, propertize the declarations inside
-      (markdown-syntax-propertize-yaml-metadata middle-begin close-begin)
+      (when (< middle-begin close-begin) ;; workaround #634
+        (markdown-syntax-propertize-yaml-metadata middle-begin close-begin))
       ;; Propertize closing line of fenced block.
       (put-text-property close-begin close-end
                          (cl-cadadr fence-spec) close-data))))

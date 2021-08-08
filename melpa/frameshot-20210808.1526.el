@@ -6,8 +6,8 @@
 ;; Homepage: https://github.com/tarsius/frameshot
 
 ;; Package-Requires: ((emacs "25.3"))
-;; Package-Version: 20210728.1258
-;; Package-Commit: 63d42d913468cd0d75dcccb99e5517057fa34e25
+;; Package-Version: 20210808.1526
+;; Package-Commit: e52ab070ee6f066fbeced54548c863a52bcbf577
 
 ;; This file is not part of GNU Emacs.
 
@@ -164,9 +164,9 @@ configuration if any."
     (frameshot-imagemagick-convert
      (funcall (or .camera frameshot-camera-function)
               (expand-file-name
-               (concat (and .name (concat .name "-"))
-                       (format-time-string "%Y%m%d-%H:%M:%S")))
-              .output))))
+               (concat ( .name (concat .name "-"))
+                       (format-time-string "%Y%m%d-%H:%M:%S"))
+               .output)))))
 
 (defun frameshot-export-frame-svg (file)
   "Use `x-export-frames' to take a svg screenshot."
