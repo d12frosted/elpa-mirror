@@ -7,8 +7,8 @@
 ;; Description: LSP Clients for LTEX.
 ;; Keyword: lsp languagetool checker
 ;; Version: 0.1.0
-;; Package-Version: 20210715.942
-;; Package-Commit: b9a930757c71f7eb30a0828a502a237bfd882b43
+;; Package-Version: 20210808.924
+;; Package-Commit: b0912ab7858ee8580284d91b6d41eb753338b6a3
 ;; Package-Requires: ((emacs "26.1") (lsp-mode "6.1") (f "0.20.0"))
 ;; URL: https://github.com/emacs-languagetool/lsp-ltex
 
@@ -45,28 +45,28 @@ https://github.com/valentjn/ltex-ls"
   :group 'lsp-mode
   :link '(url-link :tag "Github" "https://github.com/emacs-languagetool/lsp-ltex"))
 
+(defconst lsp-ltex-repo-path "valentjn/ltex-ls"
+  "Path points to the repository url.")
+
 (defcustom lsp-ltex-active-modes
   '(text-mode latex-mode org-mode markdown-mode)
   "List of major mode that work with LTEX Language Server."
   :type 'list
   :group 'lsp-ltex)
 
-(defcustom lsp-ltex-version "11.0.0"
+(defvar lsp-ltex--filename nil "File base name.")
+(defvar lsp-ltex--extension-name nil "File name of the extension file from language server.")
+(defvar lsp-ltex--server-download-url nil "Automatic download url for lsp-ltex.")
+
+(defcustom lsp-ltex-version "12.3.0"
   "Version of LTEX language server."
   :type 'string
-  :group 'lsp-ltex)
-
-(defcustom lsp-ltex-extension-name
-  (format "ltex-ls-%s.tar.gz" lsp-ltex-version)
-  "File name of the extension file from language server."
-  :type 'string
-  :group 'lsp-ltex)
-
-(defcustom lsp-ltex-server-download-url
-  (format "https://github.com/valentjn/ltex-ls/releases/download/%s/%s"
-          lsp-ltex-version lsp-ltex-extension-name)
-  "Automatic download url for lsp-ltex."
-  :type 'string
+  :set (lambda (_symbol _value)
+         (setq lsp-ltex--filename (format "ltex-ls-%s" lsp-ltex-version)
+               lsp-ltex--extension-name (format "%s.tar.gz" lsp-ltex--filename)
+               lsp-ltex--server-download-url
+               (format "https://github.com/%s/releases/download/%s/%s"
+                       lsp-ltex-repo-path lsp-ltex-version lsp-ltex--extension-name)))
   :group 'lsp-ltex)
 
 (defcustom lsp-ltex-server-store-path
@@ -242,16 +242,16 @@ This must be a positive integer."
                                   (mapconcat #'shell-quote-argument args " ")))))))
 
 (defun lsp-ltex--downloaded-extension-path ()
-  "Return full path of the downloaded extension.
+  "Return full path of the downloaded extension (compressed file).
 
 This is use to unzip the language server files."
-  (f-join lsp-ltex-server-store-path lsp-ltex-extension-name))
+  (f-join lsp-ltex-server-store-path lsp-ltex--extension-name))
 
 (defun lsp-ltex--extension-root ()
   "Return the root of the extension path.
 
 This is use to active language server and check if language server's existence."
-  (f-join lsp-ltex-server-store-path (format "ltex-ls-%s" lsp-ltex-version)))
+  (f-join lsp-ltex-server-store-path "latest"))
 
 (defun lsp-ltex--server-entry ()
   "Return the server entry file.
@@ -296,7 +296,7 @@ This file is use to activate the language server."
 (lsp-dependency
  'ltex-ls
  '(:system "ltex-ls")
- `(:download :url lsp-ltex-server-download-url
+ `(:download :url lsp-ltex--server-download-url
              :store-path ,(lsp-ltex--downloaded-extension-path)))
 
 (lsp-register-client
@@ -313,9 +313,13 @@ This file is use to activate the language server."
     (lsp-package-ensure
      'ltex-ls
      (lambda ()
-       (let ((dest (f-dirname (lsp-ltex--downloaded-extension-path))))
-         (unless (lsp-ltex--execute "tar" "-xvzf" (lsp-ltex--downloaded-extension-path)
-                                    "-C" dest)
+       (let* ((tar (lsp-ltex--downloaded-extension-path))
+              (dest (f-dirname tar))
+              (output (f-join dest lsp-ltex--filename)))
+         (if (lsp-ltex--execute "tar" "-xvzf" tar "-C" dest)
+             (unless (lsp-ltex--execute (if (eq system-type 'windows-nt) "ren" "mv")
+                                        output "latest")
+               (error "Failed to rename version `%s` to latest" lsp-ltex-version))
            (error "Error during the unzip process: tar"))))
      error-callback))))
 

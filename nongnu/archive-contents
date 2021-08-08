@@ -341,6 +341,14 @@
        "Sylvester the Cat's Common Lisp IDE" tar
        ((:url . "https://github.com/joaotavora/sly")
 	(:keywords "languages" "lisp" "sly"))])
+ (smartparens .
+	      [(4 7 1)
+	       nil "Automatic insertion, wrapping and paredit-like navigation with user defined pairs." tar
+	       ((:url . "https://github.com/Fuco1/smartparens")
+		(:maintainer "Matus Goljer" . "matus.goljer@gmail.com")
+		(:authors
+		 ("Matus Goljer" . "matus.goljer@gmail.com"))
+		(:keywords "abbrev" "convenience" "editing"))])
  (tuareg .
 	 [(2 3 0)
 	  ((caml
