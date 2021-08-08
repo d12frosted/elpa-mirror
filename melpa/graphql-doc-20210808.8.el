@@ -5,8 +5,8 @@
 ;; Author: Ian Fitzpatrick
 ;; Created: April 25, 2021
 ;; Version: 0.2.1
-;; Package-Version: 20210530.221
-;; Package-Commit: a60a646413fce528ecf42be3ee111b3f92d9f95b
+;; Package-Version: 20210808.8
+;; Package-Commit: 6ba7961fc9c5c9818bd60abce6ba9dfef2dad452
 ;; Package-Requires: ((emacs "26.1") (request "0.3.2") (promise "1.1"))
 ;; URL: https://github.com/ifitzpatrick/graphql-doc.el
 ;; SPDX-License-Identifier: GPL-3.0-only
@@ -165,8 +165,7 @@ fragment TypeRef on __Type {
        (plist-get api :url)
        (append
         (plist-get api :data)
-        `(("variables" . "")
-          ("query" . ,graphql-doc--introspection-query)))
+        `(("query" . ,graphql-doc--introspection-query)))
        (plist-get api :headers))
     (then (lambda (data)
             (setq-local graphql-doc--introspection-results data)))

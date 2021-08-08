@@ -1,0 +1,12 @@
+(tubestatus .
+	    [(20210801 1522)
+	     ((emacs
+	       (26 1))
+	      (request
+	       (0 3 2)))
+	     "Get the London Tube service status" single
+	     ((:commit . "b38f318a7780414c62f093f6fc5439d6f185b99c")
+	      (:authors
+	       ("Matthieu Petiteau" . "matt@smallwat3r.com"))
+	      (:maintainer "Matthieu Petiteau" . "matt@smallwat3r.com")
+	      (:url . "https://github.com/smallwat3r/tubestatus.el"))])
