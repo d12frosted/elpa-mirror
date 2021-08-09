@@ -9,7 +9,7 @@
 ;;               Julia Path <julia@jpath.de>
 ;; URL: http://github.com/juliapath/evil-numbers
 ;; Package-Version: 20210808.1424
-;; Package-Commit: 29859e64c0f9e68f5eac5662c56d468678cbac2b
+;; Package-Commit: cb9eb99998b70eb1166f59748a8432be661439a7
 ;; Git-Repository: git://github.com/juliapath/evil-numbers.git
 ;; Created: 2011-09-02
 ;; Version: 0.6
