@@ -4,11 +4,11 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20210701.441
-;; Package-Commit: da08a9103b5ba3b38ef031a9627a19436eb318b5
+;; Package-Version: 20210809.753
+;; Package-Commit: 4eef83f2f30a245c270e4522c81fb2fa2a2c4198
 ;; Keywords: project, convenience
-;; Version: 2.4.0
-;; Package-Requires: ((emacs "25.1") (pkg-info "0.4"))
+;; Version: 2.5.0-snapshot
+;; Package-Requires: ((emacs "25.1"))
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -787,6 +787,11 @@ If the value is nil, there is no limit to the opend buffers count."
 
 ;;; Version information
 
+(defconst projectile-version
+  (eval-when-compile
+    (lm-version (or load-file-name buffer-file-name)))
+  "The current version of Projectile.")
+
 ;;;###autoload
 (defun projectile-version (&optional show-version)
   "Get the Projectile version as string.
@@ -801,12 +806,9 @@ If the version number could not be determined, signal an error,
 if called interactively, or if SHOW-VERSION is non-nil, otherwise
 just return nil."
   (interactive (list t))
-  (if (require 'pkg-info nil t)
-      (let ((version (pkg-info-version-info 'projectile)))
-        (when show-version
-          (message "Projectile %s" version))
-        version)
-    (error "Cannot determine version without package pkg-info")))
+  (if show-version
+      (message "Projectile %s" projectile-version)
+    projectile-version))
 
 ;;; Misc utility functions
 (defun projectile-difference (list1 list2)

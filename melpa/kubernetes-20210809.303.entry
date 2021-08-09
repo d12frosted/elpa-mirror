@@ -1,5 +1,5 @@
 (kubernetes .
-	    [(20210714 1307)
+	    [(20210809 303)
 	     ((emacs
 	       (25 1))
 	      (dash
@@ -7,9 +7,11 @@
 	      (magit-section
 	       (3 1 1))
 	      (magit-popup
-	       (2 13 0)))
+	       (2 13 0))
+	      (with-editor
+	       (3 0 4)))
 	     "Magit-like porcelain for Kubernetes." tar
-	     ((:commit . "ffdae05d4d0e83be5c6884326b69a8ca83f2ae2b")
+	     ((:commit . "ea2a1ab91347740d3006c9591064d0fc77180ab7")
 	      (:authors
 	       ("Chris Barrett" . "chris+emacs@walrus.cool"))
 	      (:maintainer "Chris Barrett" . "chris+emacs@walrus.cool"))])

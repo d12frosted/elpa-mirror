@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 540a8c5b9a04af0a6907e07cb070f1fed8a76f48
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sly/
-  to /tmp/sly6uKtBU/sly-20210729.1613
+  to /tmp/slyHxqVUg/sly-20210729.1613
     sly.el -> sly.el
   ! doc/contributors.texi -> contributors.texi
   ! doc/sly.texi -> sly.texi
@@ -15,8 +15,8 @@ Copying files (->) and directories (=>)
     slynk => slynk
     contrib => contrib
   ! doc/images => images
-Created /tmp/sly6uKtBU/sly-20210729.1613/contributors.info
-Created /tmp/sly6uKtBU/sly-20210729.1613/sly.info
+Created /tmp/slyHxqVUg/sly-20210729.1613/contributors.info
+Created /tmp/slyHxqVUg/sly-20210729.1613/sly.info
 Created sly-20210729.1613.tar containing:
   sly-20210729.1613/
   sly-20210729.1613/contrib/
@@ -99,38 +99,38 @@ Created sly-20210729.1613.tar containing:
   sly-20210729.1613/slynk/slynk.lisp
   sly-20210729.1613/slynk/start-slynk.lisp
   sly-20210729.1613/slynk/xref.lisp
-Built sly in 20.525s, finished at 2021-08-09T01:05:17+0000
+Built sly in 18.467s, finished at 2021-08-09T08:06:00+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  262 Aug  9 01:05 packages/sly-20210729.1613.entry
-3.0M -rw-r--r-- 1 root root 3.0M Aug  9 01:05 packages/sly-20210729.1613.tar
-4.0K -rw-r--r-- 1 root root  372 Aug  9 01:05 packages/sly-asdf-20210407.600.entry
-120K -rw-r--r-- 1 root root 120K Aug  9 01:05 packages/sly-asdf-20210407.600.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  9 01:05 packages/sly-asdf-badge.svg
-4.0K -rw-r--r-- 1 root root  237 Aug  9 01:05 packages/sly-asdf-readme.txt
-4.0K -rw-r--r-- 1 root root 1.3K Aug  9 01:05 packages/sly-asdf.log
-4.0K -rw-r--r-- 1 root root 1.2K Aug  9 01:05 packages/sly-badge.svg
-4.0K -rw-r--r-- 1 root root  397 Aug  9 01:05 packages/sly-hello-world-20200225.1755.entry
- 20K -rw-r--r-- 1 root root  20K Aug  9 01:05 packages/sly-hello-world-20200225.1755.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  9 01:05 packages/sly-hello-world-badge.svg
-4.0K -rw-r--r-- 1 root root  152 Aug  9 01:05 packages/sly-hello-world-readme.txt
-4.0K -rw-r--r-- 1 root root 1.4K Aug  9 01:05 packages/sly-hello-world.log
-4.0K -rw-r--r-- 1 root root  302 Aug  9 01:05 packages/sly-macrostep-20191211.1630.entry
- 32K -rw-r--r-- 1 root root  30K Aug  9 01:05 packages/sly-macrostep-20191211.1630.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  9 01:05 packages/sly-macrostep-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Aug  9 01:05 packages/sly-macrostep.log
-4.0K -rw-r--r-- 1 root root  438 Aug  9 01:05 packages/sly-named-readtables-20191013.2138.entry
- 20K -rw-r--r-- 1 root root  20K Aug  9 01:05 packages/sly-named-readtables-20191013.2138.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  9 01:05 packages/sly-named-readtables-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Aug  9 01:05 packages/sly-named-readtables-readme.txt
-4.0K -rw-r--r-- 1 root root 1.6K Aug  9 01:05 packages/sly-named-readtables.log
-4.0K -rw-r--r-- 1 root root  383 Aug  9 01:05 packages/sly-quicklisp-20200707.1635.entry
- 20K -rw-r--r-- 1 root root  20K Aug  9 01:05 packages/sly-quicklisp-20200707.1635.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug  9 01:05 packages/sly-quicklisp-badge.svg
-4.0K -rw-r--r-- 1 root root  165 Aug  9 01:05 packages/sly-quicklisp-readme.txt
-4.0K -rw-r--r-- 1 root root 1.3K Aug  9 01:05 packages/sly-quicklisp.log
-4.0K -rw-r--r-- 1 root root 1.4K Aug  9 01:05 packages/sly-readme.txt
-4.0K -rw-r--r-- 1 root root 2.5K Aug  9 01:05 packages/sly-repl-ansi-color-20171020.1516.el
-4.0K -rw-r--r-- 1 root root  495 Aug  9 01:05 packages/sly-repl-ansi-color-20171020.1516.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug  9 01:05 packages/sly-repl-ansi-color-badge.svg
-4.0K -rw-r--r-- 1 root root  145 Aug  9 01:05 packages/sly-repl-ansi-color-readme.txt
-4.0K -rw-r--r-- 1 root root  688 Aug  9 01:05 packages/sly-repl-ansi-color.log
+4.0K -rw-r--r-- 1 root root  262 Aug  9 08:05 packages/sly-20210729.1613.entry
+3.0M -rw-r--r-- 1 root root 3.0M Aug  9 08:05 packages/sly-20210729.1613.tar
+4.0K -rw-r--r-- 1 root root  372 Aug  9 08:05 packages/sly-asdf-20210407.600.entry
+120K -rw-r--r-- 1 root root 120K Aug  9 08:05 packages/sly-asdf-20210407.600.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  9 08:05 packages/sly-asdf-badge.svg
+4.0K -rw-r--r-- 1 root root  237 Aug  9 08:05 packages/sly-asdf-readme.txt
+4.0K -rw-r--r-- 1 root root 1.3K Aug  9 08:05 packages/sly-asdf.log
+4.0K -rw-r--r-- 1 root root 1.2K Aug  9 08:06 packages/sly-badge.svg
+4.0K -rw-r--r-- 1 root root  397 Aug  9 08:05 packages/sly-hello-world-20200225.1755.entry
+ 20K -rw-r--r-- 1 root root  20K Aug  9 08:05 packages/sly-hello-world-20200225.1755.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  9 08:05 packages/sly-hello-world-badge.svg
+4.0K -rw-r--r-- 1 root root  152 Aug  9 08:05 packages/sly-hello-world-readme.txt
+4.0K -rw-r--r-- 1 root root 1.4K Aug  9 08:05 packages/sly-hello-world.log
+4.0K -rw-r--r-- 1 root root  302 Aug  9 08:05 packages/sly-macrostep-20191211.1630.entry
+ 32K -rw-r--r-- 1 root root  30K Aug  9 08:05 packages/sly-macrostep-20191211.1630.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  9 08:05 packages/sly-macrostep-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Aug  9 08:05 packages/sly-macrostep.log
+4.0K -rw-r--r-- 1 root root  438 Aug  9 08:05 packages/sly-named-readtables-20191013.2138.entry
+ 20K -rw-r--r-- 1 root root  20K Aug  9 08:05 packages/sly-named-readtables-20191013.2138.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  9 08:05 packages/sly-named-readtables-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Aug  9 08:05 packages/sly-named-readtables-readme.txt
+4.0K -rw-r--r-- 1 root root 1.6K Aug  9 08:05 packages/sly-named-readtables.log
+4.0K -rw-r--r-- 1 root root  383 Aug  9 08:05 packages/sly-quicklisp-20200707.1635.entry
+ 20K -rw-r--r-- 1 root root  20K Aug  9 08:05 packages/sly-quicklisp-20200707.1635.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug  9 08:05 packages/sly-quicklisp-badge.svg
+4.0K -rw-r--r-- 1 root root  165 Aug  9 08:05 packages/sly-quicklisp-readme.txt
+4.0K -rw-r--r-- 1 root root 1.3K Aug  9 08:05 packages/sly-quicklisp.log
+4.0K -rw-r--r-- 1 root root 1.4K Aug  9 08:05 packages/sly-readme.txt
+4.0K -rw-r--r-- 1 root root 2.5K Aug  9 08:05 packages/sly-repl-ansi-color-20171020.1516.el
+4.0K -rw-r--r-- 1 root root  495 Aug  9 08:05 packages/sly-repl-ansi-color-20171020.1516.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  9 08:05 packages/sly-repl-ansi-color-badge.svg
+4.0K -rw-r--r-- 1 root root  145 Aug  9 08:05 packages/sly-repl-ansi-color-readme.txt
+4.0K -rw-r--r-- 1 root root  688 Aug  9 08:05 packages/sly-repl-ansi-color.log
