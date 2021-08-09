@@ -6,8 +6,6 @@
 ;; Maintainer: Matthew Fidler
 ;; Created: Fri Mar  4 14:13:50 2016 (-0600)
 ;; Version: 0.1
-;; Package-Version: 20160318.538
-;; Package-Commit: d952cc2361adf6eb4d6af60950ad4ab699c81320
 ;; Package-Requires: ((powerline "2.3") (mode-icons "0.1.0"))
 ;;
 ;;; Commentary:
