@@ -3,6 +3,11 @@ Fetcher: github
 Source:  https://github.com/jojojames/flycheck-jest.git
 
 Updating /mnt/store/melpa/working/flycheck-jest/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://github.com/jojojames/flycheck-jest.git/': gnutls_handshake() failed: Error in the pull function.
-
+Checking out origin/HEAD
+Checking out 08f27c5ed97c83c445f99fab58f0b6c826f14449
+Built flycheck-jest in 5.397s, finished at 2021-08-09T21:19:59+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.4K Aug  9 21:19 packages/flycheck-jest-20180411.328.el
+4.0K -rw-r--r-- 1 root root  337 Aug  9 21:19 packages/flycheck-jest-20180411.328.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug  9 21:19 packages/flycheck-jest-badge.svg
+4.0K -rw-r--r-- 1 root root   86 Aug  9 21:19 packages/flycheck-jest-readme.txt
