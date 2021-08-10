@@ -1,11 +1,11 @@
 ;;; flymake-proselint.el --- Flymake backend for proselint -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2020  Manuel Uberti <manuel.uberti@inventati.org>
+;; Copyright (C) 2021  Free Software Foundation, Inc.
 ;;
 ;; Author: Manuel Uberti <manuel.uberti@inventati.org>
 ;; Version: 0.2.0
-;; Package-Version: 20210621.929
-;; Package-Commit: adf1ce7daf1380cb50f365a36548165fe4a32423
+;; Package-Version: 20210810.538
+;; Package-Commit: aa650492c16e38674a0615a1e619a6f299b2ba25
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/manuel-uberti/flymake-proselint

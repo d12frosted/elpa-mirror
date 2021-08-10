@@ -3,8 +3,8 @@
 ;; Copyright (C) 2013-2020 Skye Shaw and others
 ;; Author: Skye Shaw <skye.shaw@gmail.com>
 ;; Version: 0.8.3
-;; Package-Version: 20210504.2207
-;; Package-Commit: 0d2fd02c160cf2a09ca4b5b4ffa544833df5afed
+;; Package-Version: 20210810.120
+;; Package-Commit: 52c008144c6e8eb15c2cb04b11e80ed84d2171c3
 ;; Keywords: git, vc, github, bitbucket, gitlab, sourcehut, convenience
 ;; URL: http://github.com/sshaw/git-link
 ;; Package-Requires: ((emacs "24.3"))
@@ -197,6 +197,7 @@ See its docs."
 
 (defcustom git-link-remote-alist
   '(("git.sr.ht" git-link-sourcehut)
+    ("codeberg.org" git-link-codeberg)
     ("github" git-link-github)
     ("bitbucket" git-link-bitbucket)
     ("gitorious" git-link-gitorious)
@@ -216,6 +217,7 @@ As an example, \"gitlab\" will match with both \"gitlab.com\" and
 
 (defcustom git-link-commit-remote-alist
   '(("git.sr.ht" git-link-commit-github)
+    ("codeberg.org" git-link-commit-codeberg)
     ("github" git-link-commit-github)
     ("bitbucket" git-link-commit-bitbucket)
     ("gitorious" git-link-commit-gitorious)
@@ -459,6 +461,18 @@ return (FILENAME . REVISION) otherwise nil."
   (when git-link-open-in-browser
     (browse-url link)))
 
+(defun git-link-codeberg (hostname dirname filename branch commit start end)
+    (format "https://%s/%s/src/%s/%s"
+	    hostname
+	    dirname
+	    (or branch commit)
+            (concat filename
+                    (when start
+                      (concat "#"
+                              (if end
+                                  (format "L%s-%s" start end)
+                                (format "L%s" start)))))))
+
 (defun git-link-gitlab (hostname dirname filename branch commit start end)
   (format "https://%s/%s/blob/%s/%s"
 	  hostname
@@ -518,6 +532,12 @@ return (FILENAME . REVISION) otherwise nil."
 
       ;; Azure only supports full 32 characters SHA
       (car (git-link--exec "rev-parse" commit))))
+
+(defun git-link-commit-codeberg (hostname dirname commit)
+    (format "https://%s/%s/commit/%s"
+	    hostname
+	    dirname
+	    commit))
 
 (defun git-link-gitorious (hostname dirname filename _branch commit start _end)
   (format "https://%s/%s/source/%s:%s#L%s"

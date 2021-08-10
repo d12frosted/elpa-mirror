@@ -4,8 +4,8 @@
 ;;   Phil Hagelberg, Doug Alcorn, Will Farrington, Chen Bin
 ;;
 ;; Version: 6.0.7
-;; Package-Version: 20210805.1125
-;; Package-Commit: 0cce5acc82874db30b33db3ee5e22d74cb3f3f45
+;; Package-Version: 20210810.536
+;; Package-Commit: 1def91f9c4236a55bfce98a733bd15476dc3111b
 ;; Author: Phil Hagelberg, Doug Alcorn, and Will Farrington
 ;; Maintainer: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: https://github.com/redguardtoo/find-file-in-project
@@ -229,7 +229,7 @@ The file path is passed to the hook as the first argument.")
 (defun ffip-git-diff-current-file ()
   "Run 'git diff version:current-file current-file'."
   (let* ((default-directory (locate-dominating-file default-directory ".git"))
-         (line (completing-read "diff current file: " (ffip-diff-git-versions))))
+         (line (completing-read "diff current file with version: " (ffip-diff-git-versions))))
     (shell-command-to-string (format "git --no-pager diff %s:%s %s"
                                      (replace-regexp-in-string "^ *\\*? *" "" (car (split-string line "|" t)))
                                      (file-relative-name buffer-file-name default-directory)
@@ -238,7 +238,7 @@ The file path is passed to the hook as the first argument.")
 (defun ffip-git-diff-project()
   "Run 'git diff version' in project."
   (let* ((default-directory (locate-dominating-file default-directory ".git"))
-         (line (completing-read "diff current file: " (ffip-diff-git-versions)))
+         (line (completing-read "diff with commit: " (ffip-diff-git-versions)))
          (version (replace-regexp-in-string "^ *\\*? *"
                                             ""
                                             (car (split-string line "|" t)))))

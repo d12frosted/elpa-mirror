@@ -1,7 +1,11 @@
 (loopy .
-       [(20210807 152)
-	nil "A looping macro" tar
-	((:commit . "0432fb250e7bd65f8c4a3852ebac499f173453e4")
+       [(20210810 307)
+	((emacs
+	  (27 1))
+	 (map
+	  (3 0)))
+	"A looping macro" tar
+	((:commit . "f6b541da982534c0d93e9558766655f9a243151b")
 	 (:authors
 	  ("Earl Hyatt"))
 	 (:maintainer "Earl Hyatt")
