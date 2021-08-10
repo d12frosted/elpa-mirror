@@ -4,8 +4,6 @@
 
 ;; Author: Matthew P. Hodges <MPHodges@member.fsf.org>
 ;; Version: 1.4.0
-;; Package-Version: 20120826.2039
-;; Package-Commit: 2e7536fe6d8f7faf1bad7a8ae37faba0162c3b4f
 ;; Maintainer: Nic Ferrier <nferrier@ferrier.me.uk>
 ;; Created: 26th August 2012
 ;; Keywords: files,frames

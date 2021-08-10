@@ -6,8 +6,8 @@
 ;; Maintainer: Joe Bloggs <vapniks@yahoo.com>
 ;; Created: 2003-03-17 18:50:12 Harley Gorrell
 ;; URL: https://github.com/vapniks/syslog-mode
-;; Package-Version: 20210805.1842
-;; Package-Commit: 07a385a75df86bd8088782ea0bad5003a8442f43
+;; Package-Version: 20210810.108
+;; Package-Commit: 8f56186c037f180621b4a736e1f20e0b47b1080c
 ;; Keywords: unix
 ;; Compatibility: GNU Emacs 24.3.1
 ;; Package-Requires:  ((hide-lines "20130623") (ov "20150311"))
@@ -1406,23 +1406,26 @@ The notes file should contain an s-expression setting the local value of `syslog
 ;; simple-call-tree-info: CHECK
 (defvar-local syslog-notes nil
   "List of syslog notes for current buffer.
-Each item is a list containing 3 to 5 entries in the following order:
- 1. a regexp to match the active region or word at point
- 2. a regexp to match the current line
- 3. the note to be displayed: either a string, or a function of two
-    arguments; the region/word and line matched by the regexps in entries 1. & 2.
-    If either of those regexps has a non-shy match group, the match to
-    the first such group will be used for the arg instead.
-    The function should display a note.
- 4. an optional function for transforming the region/word match before it is
-    passed to the function in entry 3.
- 5. an optional function for transforming the line match before it is
-    passed to the function in entry 3.
-Region/word matches have higher precedence than line matches, but lower precedence 
-than combined region/word & line matches. All matches of the highest precedence will 
-be displayed.
-An entry with nil for entries 1 & 2 may be used for the default note. If it has
-a function in entry 3 the function will be passed the region/word and line at point.")
+Each item is a list of the form (WORDRX LINERX NOTE . ARGS)
+where:
+ WORDRX is a regexp to match the active region or word at point. If WORDRX 
+        contains a non-shy match group the match to the first such group will 
+        be used instead of the entire match.
+ LINERX is a regexp to match the current line. Non-shy match groups are treated 
+        the same way as for WORDRX.
+ NOTE   is the note to be displayed: either a string, or a function which will
+        be called with the remaining ARGS.
+ ARGS   are arguments for the NOTES function. Any occurrence of the symbols
+        `word' or `line' among ARGS will be replaced by the matches to WORDRX & LINERX 
+        respectively. Any function among ARGS whose arglist consists of a single 
+        symbol 'word or 'line will be replaced by the results of calling that function 
+        with the match to WORDRX or LINERX respectively.
+
+WORDRX or LINERX may be nil, in which case only the non-nil regexp will be used
+for matching. WORDRX only matches have higher precedence than LINERX only matches, 
+but lower precedence than combined WORDRX & LINERX matches. 
+An entry with nil values for both WORDRX & LINERX may be used as the default.
+All matches of the highest precedence will be displayed.")
 
 ;; simple-call-tree-info: DONE
 (defcustom syslog-manpage-wait 0.2
@@ -1430,7 +1433,7 @@ a function in entry 3 the function will be passed the region/word and line at po
   :group 'syslog
   :type 'float)
 
-;; simple-call-tree-info: TODO if region is active use that instead of symbol-at-point
+;; simple-call-tree-info: TODO allow notes function to display note its own way, instead of returning a string?
 (defun syslog-show-notes nil
   "In the minibuffer display notes associated with the region or word at point.
 The notes are chosen from the current value of `syslog-notes'.
@@ -1443,18 +1446,17 @@ If there are no `syslog-notes' entries matching the region/word or line at point
 and `syslog-notes' contains a default item(s) with no region/word or line entries
 then that will be used."
   (interactive)
-  (cl-flet ((findmatches (lst)
-			 (cl-remove-if-not
-			  (lambda (elem) (string-match (cadr elem) line))
-			  lst))
-	    (getmatch (regex str)
-		      (if regex
-			  (and (string-match regex str)
-			       (match-string (if (> (regexp-opt-depth regex) 0)
-						 1
-					       0)
-					     str))
-			str)))
+  (cl-labels ((strmatch (rx1 str) (and rx1 (string-match rx1 str)))
+	      (wdmatch (elem) (strmatch (car elem) word))
+	      (lnmatch (elem) (strmatch (cadr elem) line))
+	      (getmatch (regex str)
+			(if regex
+			    (and (string-match regex str)
+				 (match-string (if (> (regexp-opt-depth regex) 0)
+						   1
+						 0)
+					       str))
+			  str)))
     (if syslog-notes
 	(let* ((line (buffer-substring-no-properties (line-beginning-position)
 						     (line-end-position)))
@@ -1462,27 +1464,35 @@ then that will be used."
 			 (buffer-substring-no-properties
 			  (region-beginning) (region-end))
 		       (current-word)))
-	       (haswd (cl-remove-if-not (lambda (e)
-					  (and (car e) (string-match (car e) word)))
-					syslog-notes))
+	       (haswd (cl-remove-if-not (function wdmatch) syslog-notes))
 	       (nowd (cl-remove-if 'car syslog-notes))
-	       (lnnowd (cl-remove-if-not 'cadr nowd))
-	       (wdln (cl-remove-if-not 'cadr haswd))
-	       (wdnoln (cl-remove-if 'cadr haswd))
-	       (notes (or (findmatches wdln)
-			  wdnoln
-			  (findmatches lnnowd)))
+	       (notes (or (cl-remove-if-not (function lnmatch) haswd)
+			  (cl-remove-if 'cadr haswd)
+			  (cl-remove-if-not (function lnmatch) nowd)
+			  (cl-remove-if 'cadr nowd)))
 	       (fullnote (mapconcat (lambda (x)
-				      (let ((note (third x)))
+				      (let* ((wd (getmatch (car x) word))
+					     (ln (getmatch (cadr x) line))
+					     (note (third x))
+					     (args (mapcar
+						    (lambda (arg)
+						      (cond
+						       ((eq arg 'word) wd)
+						       ((eq arg 'line) ln)
+						       ((and (functionp arg)
+							     (equal
+							      (help-function-arglist arg)
+							      '(word)))
+							(funcall arg wd))
+						       ((and (functionp arg)
+							     (equal
+							      (help-function-arglist arg)
+							      '(line)))
+							(funcall arg ln))
+						       (t arg)))
+						    (cdddr x))))
 					(cond ((null note) "")
-					      ((functionp note)
-					       (funcall note
-							(funcall
-							 (or (fourth x) 'identity)
-							 (getmatch (car x) word))
-							(funcall
-							 (or (fifth x) 'identity)
-							 (getmatch (cadr x) line))))
+					      ((functionp note) (apply note args))
 					      ((stringp note) note)
 					      (t (error "Invalid note entry in %s"
 							(syslog-notes-file))))))
