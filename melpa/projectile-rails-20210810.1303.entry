@@ -1,0 +1,23 @@
+(projectile-rails .
+		  [(20210810 1303)
+		   ((emacs
+		     (24 3))
+		    (projectile
+		     (0 12 0))
+		    (inflections
+		     (1 1))
+		    (inf-ruby
+		     (2 2 6))
+		    (f
+		     (0 13 0))
+		    (rake
+		     (0 3 2))
+		    (dash
+		     (2 18 1)))
+		   "Minor mode for Rails projects based on projectile-mode" single
+		   ((:commit . "30828afbfa7b0e07970e3e668e975e7916b824c4")
+		    (:authors
+		     ("Adam Sokolnicki" . "adam.sokolnicki@gmail.com"))
+		    (:maintainer "Adam Sokolnicki" . "adam.sokolnicki@gmail.com")
+		    (:keywords "rails" "projectile")
+		    (:url . "https://github.com/asok/projectile-rails"))])

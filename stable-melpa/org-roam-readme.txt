@@ -21,10 +21,10 @@ abstraction layer.
 
 -----------------------------------------------------------------------------
 
-In order for the package to correctly work it's mandatory to add somewhere to
-your configuration the next form:
+In order for the package to correctly work through your interactive session
+it's mandatory to add somewhere to your configuration the next form:
 
-    (org-roam-setup)
+    (org-roam-db-autosync-mode)
 
 The form can be called both, before or after loading the package, which is up
 to your preferences. If you call this before the package is loaded, then it

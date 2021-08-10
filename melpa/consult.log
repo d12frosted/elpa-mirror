@@ -4,10 +4,10 @@ Source:  https://github.com/minad/consult.git
 
 Updating /mnt/store/melpa/working/consult/
 Checking out origin/HEAD
-Checking out 450d0c6592756f72c024dfd2290da65b22df4217
+Checking out 7f0a8c72abf606624e5ced6070f864ed4c81723b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/consult/
-  to /tmp/consultIu99bQ/consult-20210809.2347
+  to /tmp/consult60IAu7/consult-20210810.1324
     consult-compile.el -> consult-compile.el
     consult-flymake.el -> consult-flymake.el
     consult-icomplete.el -> consult-icomplete.el
@@ -18,56 +18,58 @@ Copying files (->) and directories (=>)
     consult-vertico.el -> consult-vertico.el
     consult-xref.el -> consult-xref.el
     consult.el -> consult.el
-Created consult-20210809.2347.tar containing:
-  consult-20210809.2347/
-  consult-20210809.2347/consult-compile.el
-  consult-20210809.2347/consult-flymake.el
-  consult-20210809.2347/consult-icomplete.el
-  consult-20210809.2347/consult-imenu.el
-  consult-20210809.2347/consult-org.el
-  consult-20210809.2347/consult-pkg.el
-  consult-20210809.2347/consult-register.el
-  consult-20210809.2347/consult-selectrum.el
-  consult-20210809.2347/consult-vertico.el
-  consult-20210809.2347/consult-xref.el
-  consult-20210809.2347/consult.el
-Built consult in 4.846s, finished at 2021-08-10T07:31:11+0000
+Created consult-20210810.1324.tar containing:
+  consult-20210810.1324/
+  consult-20210810.1324/consult-compile.el
+  consult-20210810.1324/consult-flymake.el
+  consult-20210810.1324/consult-icomplete.el
+  consult-20210810.1324/consult-imenu.el
+  consult-20210810.1324/consult-org.el
+  consult-20210810.1324/consult-pkg.el
+  consult-20210810.1324/consult-register.el
+  consult-20210810.1324/consult-selectrum.el
+  consult-20210810.1324/consult-vertico.el
+  consult-20210810.1324/consult-xref.el
+  consult-20210810.1324/consult.el
+Built consult in 5.711s, finished at 2021-08-10T14:31:47+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  327 Aug 10 07:31 packages/consult-20210809.2347.entry
-240K -rw-r--r-- 1 root root 240K Aug 10 07:31 packages/consult-20210809.2347.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 10 07:31 packages/consult-badge.svg
-8.0K -rw-r--r-- 1 root root 4.7K Aug 10 04:00 packages/consult-flycheck-20210530.202.el
-4.0K -rw-r--r-- 1 root root  427 Aug 10 04:00 packages/consult-flycheck-20210530.202.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 10 04:00 packages/consult-flycheck-badge.svg
-4.0K -rw-r--r-- 1 root root  135 Aug 10 04:00 packages/consult-flycheck-readme.txt
-4.0K -rw-r--r-- 1 root root  229 Aug 10 07:31 packages/consult-flycheck.log
-4.0K -rw-r--r-- 1 root root 3.1K Aug 10 04:00 packages/consult-ghq-20210606.2047.el
-4.0K -rw-r--r-- 1 root root  467 Aug 10 04:00 packages/consult-ghq-20210606.2047.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 10 04:00 packages/consult-ghq-badge.svg
-4.0K -rw-r--r-- 1 root root  291 Aug 10 04:00 packages/consult-ghq-readme.txt
-4.0K -rw-r--r-- 1 root root  161 Aug 10 07:31 packages/consult-ghq.log
- 16K -rw-r--r-- 1 root root  13K Aug 10 04:00 packages/consult-lsp-20210630.1151.el
-4.0K -rw-r--r-- 1 root root  433 Aug 10 04:00 packages/consult-lsp-20210630.1151.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 10 04:00 packages/consult-lsp-badge.svg
-4.0K -rw-r--r-- 1 root root 1001 Aug 10 04:00 packages/consult-lsp-readme.txt
-4.0K -rw-r--r-- 1 root root  135 Aug 10 07:31 packages/consult-lsp.log
-8.0K -rw-r--r-- 1 root root 7.3K Aug 10 04:00 packages/consult-notmuch-20210807.1608.el
-4.0K -rw-r--r-- 1 root root  408 Aug 10 04:00 packages/consult-notmuch-20210807.1608.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 10 04:00 packages/consult-notmuch-badge.svg
-4.0K -rw-r--r-- 1 root root  489 Aug 10 04:00 packages/consult-notmuch-readme.txt
-4.0K -rw-r--r-- 1 root root  144 Aug 10 07:31 packages/consult-notmuch.log
-4.0K -rw-r--r-- 1 root root  854 Aug 10 07:31 packages/consult-readme.txt
-8.0K -rw-r--r-- 1 root root 4.8K Aug 10 04:00 packages/consult-recoll-20210807.1613.el
-4.0K -rw-r--r-- 1 root root  380 Aug 10 04:00 packages/consult-recoll-20210807.1613.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 10 04:00 packages/consult-recoll-badge.svg
-4.0K -rw-r--r-- 1 root root  219 Aug 10 04:00 packages/consult-recoll-readme.txt
-4.0K -rw-r--r-- 1 root root  141 Aug 10 07:31 packages/consult-recoll.log
+4.0K -rw-r--r-- 1 root root  327 Aug 10 11:02 packages/consult-20210809.2347.entry
+240K -rw-r--r-- 1 root root 240K Aug 10 11:02 packages/consult-20210809.2347.tar
+4.0K -rw-r--r-- 1 root root  327 Aug 10 14:31 packages/consult-20210810.1324.entry
+240K -rw-r--r-- 1 root root 240K Aug 10 14:31 packages/consult-20210810.1324.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 10 14:31 packages/consult-badge.svg
+8.0K -rw-r--r-- 1 root root 4.7K Aug 10 11:02 packages/consult-flycheck-20210530.202.el
+4.0K -rw-r--r-- 1 root root  427 Aug 10 11:02 packages/consult-flycheck-20210530.202.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 10 11:02 packages/consult-flycheck-badge.svg
+4.0K -rw-r--r-- 1 root root  135 Aug 10 11:02 packages/consult-flycheck-readme.txt
+4.0K -rw-r--r-- 1 root root  175 Aug 10 14:31 packages/consult-flycheck.log
+4.0K -rw-r--r-- 1 root root 3.1K Aug 10 11:02 packages/consult-ghq-20210606.2047.el
+4.0K -rw-r--r-- 1 root root  467 Aug 10 11:02 packages/consult-ghq-20210606.2047.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 10 11:02 packages/consult-ghq-badge.svg
+4.0K -rw-r--r-- 1 root root  291 Aug 10 11:02 packages/consult-ghq-readme.txt
+4.0K -rw-r--r-- 1 root root  161 Aug 10 14:31 packages/consult-ghq.log
+ 16K -rw-r--r-- 1 root root  13K Aug 10 11:02 packages/consult-lsp-20210630.1151.el
+4.0K -rw-r--r-- 1 root root  433 Aug 10 11:02 packages/consult-lsp-20210630.1151.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 10 11:02 packages/consult-lsp-badge.svg
+4.0K -rw-r--r-- 1 root root 1001 Aug 10 11:02 packages/consult-lsp-readme.txt
+4.0K -rw-r--r-- 1 root root  135 Aug 10 14:31 packages/consult-lsp.log
+8.0K -rw-r--r-- 1 root root 7.3K Aug 10 11:02 packages/consult-notmuch-20210807.1608.el
+4.0K -rw-r--r-- 1 root root  408 Aug 10 11:02 packages/consult-notmuch-20210807.1608.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 10 11:02 packages/consult-notmuch-badge.svg
+4.0K -rw-r--r-- 1 root root  489 Aug 10 11:02 packages/consult-notmuch-readme.txt
+4.0K -rw-r--r-- 1 root root  144 Aug 10 14:31 packages/consult-notmuch.log
+4.0K -rw-r--r-- 1 root root  854 Aug 10 14:31 packages/consult-readme.txt
+8.0K -rw-r--r-- 1 root root 4.8K Aug 10 11:02 packages/consult-recoll-20210807.1613.el
+4.0K -rw-r--r-- 1 root root  380 Aug 10 11:02 packages/consult-recoll-20210807.1613.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 10 11:02 packages/consult-recoll-badge.svg
+4.0K -rw-r--r-- 1 root root  219 Aug 10 11:02 packages/consult-recoll-readme.txt
+4.0K -rw-r--r-- 1 root root  141 Aug 10 14:31 packages/consult-recoll.log
 4.0K -rw-r--r-- 1 root root 3.5K Dec 24  2020 packages/consult-selectrum-20201224.1239.el
 4.0K -rw-r--r-- 1 root root 1.2K Jan 13  2021 packages/consult-selectrum-badge.svg
 4.0K -rw-r--r-- 1 root root   32 Jan 13  2021 packages/consult-selectrum-readme.txt
 4.0K -rw-r--r-- 1 root root  848 Jan 13  2021 packages/consult-selectrum.log
-8.0K -rw-r--r-- 1 root root 4.8K Aug 10 04:00 packages/consult-spotify-20210620.1953.el
-4.0K -rw-r--r-- 1 root root  408 Aug 10 04:00 packages/consult-spotify-20210620.1953.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 10 04:00 packages/consult-spotify-badge.svg
-4.0K -rw-r--r-- 1 root root  652 Aug 10 04:00 packages/consult-spotify-readme.txt
-   0 -rw-r--r-- 1 root root    0 Aug 10 07:31 packages/consult-spotify.log
+8.0K -rw-r--r-- 1 root root 4.8K Aug 10 11:02 packages/consult-spotify-20210620.1953.el
+4.0K -rw-r--r-- 1 root root  408 Aug 10 11:02 packages/consult-spotify-20210620.1953.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 10 11:02 packages/consult-spotify-badge.svg
+4.0K -rw-r--r-- 1 root root  652 Aug 10 11:02 packages/consult-spotify-readme.txt
+4.0K -rw-r--r-- 1 root root  133 Aug 10 14:31 packages/consult-spotify.log

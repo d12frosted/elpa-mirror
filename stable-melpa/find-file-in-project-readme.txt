@@ -92,6 +92,11 @@ file. The target file could be located by searching `recentf-list'.
 Except this extra feature, `ffip-diff-apply-hunk' is same as `diff-apply-hunk'.
 So `diff-apply-hunk' can be replaced by `ffip-diff-apply-hunk'.
 
+`ffip-diff-filter-hunks-by-file-name' can filter hunks by their file names.
+User input pattern "regex !exclude1 exclude1" means the hunk's file name does match "regex".
+But does not match "exclude1" or "exclude2".;
+Please note in "regex", space represents any string.
+
 If you use `evil-mode', insert below code into ~/.emacs,
   (defun ffip-diff-mode-hook-setup ()
       (evil-local-set-key 'normal "K" 'diff-hunk-prev)
