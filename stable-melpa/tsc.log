@@ -4,35 +4,37 @@ Source:  https://github.com/emacs-tree-sitter/elisp-tree-sitter.git
 
 Updating /mnt/store/melpa/working/tsc/
 Checking out origin/HEAD
-Checking out c95731dea6171f5d09b15bb7a2d0cd789ee65e71
+Checking out d7adffc074ba8057f141a4fb385f24412b5ffa6f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tsc/
-  to /tmp/tscQdSj5h/tsc-20210320.1052
+  to /tmp/tscweZlKc/tsc-20210811.318
   ! core/tsc-dyn-get.el -> tsc-dyn-get.el
   ! core/tsc-obsolete.el -> tsc-obsolete.el
   ! core/tsc.el -> tsc.el
   ! core/Cargo.toml -> Cargo.toml
   ! core/src => src
-Created tsc-20210320.1052.tar containing:
-  tsc-20210320.1052/
-  tsc-20210320.1052/Cargo.toml
-  tsc-20210320.1052/src/
-  tsc-20210320.1052/src/cursor.rs
-  tsc-20210320.1052/src/error.rs
-  tsc-20210320.1052/src/lang.rs
-  tsc-20210320.1052/src/lib.rs
-  tsc-20210320.1052/src/node.rs
-  tsc-20210320.1052/src/parser.rs
-  tsc-20210320.1052/src/query.rs
-  tsc-20210320.1052/src/tree.rs
-  tsc-20210320.1052/src/types.rs
-  tsc-20210320.1052/tsc-dyn-get.el
-  tsc-20210320.1052/tsc-obsolete.el
-  tsc-20210320.1052/tsc-pkg.el
-  tsc-20210320.1052/tsc.el
-Built tsc in 10.176s, finished at 2021-08-10T22:38:18+0000
+Created tsc-20210811.318.tar containing:
+  tsc-20210811.318/
+  tsc-20210811.318/Cargo.toml
+  tsc-20210811.318/src/
+  tsc-20210811.318/src/cursor.rs
+  tsc-20210811.318/src/error.rs
+  tsc-20210811.318/src/lang.rs
+  tsc-20210811.318/src/lib.rs
+  tsc-20210811.318/src/node.rs
+  tsc-20210811.318/src/parser.rs
+  tsc-20210811.318/src/query.rs
+  tsc-20210811.318/src/tree.rs
+  tsc-20210811.318/src/types.rs
+  tsc-20210811.318/tsc-dyn-get.el
+  tsc-20210811.318/tsc-obsolete.el
+  tsc-20210811.318/tsc-pkg.el
+  tsc-20210811.318/tsc.el
+Built tsc in 7.435s, finished at 2021-08-11T05:31:53+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  495 Aug 10 22:38 packages/tsc-20210320.1052.entry
- 92K -rw-r--r-- 1 root root  90K Aug 10 22:38 packages/tsc-20210320.1052.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 10 22:38 packages/tsc-badge.svg
-4.0K -rw-r--r-- 1 root root   91 Aug 10 22:38 packages/tsc-readme.txt
+4.0K -rw-r--r-- 1 root root  495 Aug 11 02:04 packages/tsc-20210320.1052.entry
+ 92K -rw-r--r-- 1 root root  90K Aug 11 02:04 packages/tsc-20210320.1052.tar
+4.0K -rw-r--r-- 1 root root  502 Aug 11 05:31 packages/tsc-20210811.318.entry
+ 92K -rw-r--r-- 1 root root  90K Aug 11 05:31 packages/tsc-20210811.318.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 11 05:31 packages/tsc-badge.svg
+4.0K -rw-r--r-- 1 root root   91 Aug 11 05:31 packages/tsc-readme.txt

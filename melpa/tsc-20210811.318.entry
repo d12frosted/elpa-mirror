@@ -1,0 +1,12 @@
+(tsc .
+     [(20210811 318)
+      ((emacs
+	(25 1)))
+      "Core Tree-sitter APIs" tar
+      ((:commit . "d7adffc074ba8057f141a4fb385f24412b5ffa6f")
+       (:authors
+	("Tuấn-Anh Nguyễn" . "ubolonton@gmail.com")
+	("Jorge Javier Araya Navarro" . "jorgejavieran@yahoo.com.mx"))
+       (:maintainer "Tuấn-Anh Nguyễn" . "ubolonton@gmail.com")
+       (:keywords "languages" "tools" "parsers" "dynamic-modules" "tree-sitter")
+       (:url . "https://github.com/emacs-tree-sitter/elisp-tree-sitter"))])

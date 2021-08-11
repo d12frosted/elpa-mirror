@@ -17,7 +17,6 @@ How it could be done using `loopy':
              (collect odds i))
            (finally-return odds evens))
 
-
 `loopy' supports destructuring for iteration commands like `list' and
 accumulation commands like `sum' or `collect'.
 
@@ -44,21 +43,32 @@ accumulation commands like `sum' or `collect'.
            (collect (elem1 elem2) i)
            (finally-return elem1 elem2))
 
-
 The `loopy' macro is configurable and extensible.  In addition to writing
 one's own "loop commands" (such as `list' in the example below), by using
 "flags", one can choose whether to instead use `pcase-let', `seq-let', or
 even the Dash library for destructuring.
 
-    ;; Use Seq.el to destructure an array:
-    ;; => ((1 4) ([2 3] [5 6]))
-    (loopy (flag seq)
-           (list elem '([1 2 3] [4 5 6]))
-           (collect [i &rest j] elem)
-           (finally-return i j))
+    ;; Use `pcase' to destructure array elements:
+    ;; => ((1 2 3 4) (10 12 14) (11 13 15))
+    (loopy (flag pcase)
+           (array (or `(,car . ,cdr) digit)
+                  [1 (10 . 11) 2 (12 . 13) 3 4 (14 . 15)])
+           (if digit
+               (collect digits digit)
+             (collect cars car)
+             (collect cdrs cdr))
+           (finally-return digits cars cdrs))
 
-Variables like `elem', `i', and `j' in the example above are automatically
-`let'-bound so as to not affect code outside of the loop.
+    ;; Using the default destructuring:
+    ;; => ((1 2 3 4) (10 12 14) (11 13 15))
+    (loopy (array elem [1 (10 . 11) 2 (12 . 13) 3 4 (14 . 15)])
+           (if (numberp elem)
+               (collect digits elem)
+             (collect (cars . cdrs) elem))
+           (finally-return digits cars cdrs))
+
+Variables like `cars', `cdrs', and `digits' in the example above are
+automatically `let'-bound so as to not affect code outside of the loop.
 
 `loopy' has arguments for binding (or not binding) variables, executing code
 before/after the loop, executing code only if the loop completes, and for

@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 9dca5996168c4963eb67e61c7f17fdcb8228e314
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emacsql/
-  to /tmp/emacsql3zNGyY/emacsql-20210615.1539
+  to /tmp/emacsqlspagSC/emacsql-20210615.1539
     emacsql.el -> emacsql.el
     emacsql-compiler.el -> emacsql-compiler.el
     README.md -> README.md
@@ -17,29 +17,29 @@ Created emacsql-20210615.1539.tar containing:
   emacsql-20210615.1539/emacsql-compiler.el
   emacsql-20210615.1539/emacsql-pkg.el
   emacsql-20210615.1539/emacsql.el
-Built emacsql in 5.086s, finished at 2021-08-10T21:40:36+0000
+Built emacsql in 4.733s, finished at 2021-08-11T08:02:48+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  349 Aug 10 21:40 packages/emacsql-20210615.1539.entry
- 60K -rw-r--r-- 1 root root  60K Aug 10 21:40 packages/emacsql-20210615.1539.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 10 21:40 packages/emacsql-badge.svg
-8.0K -rw-r--r-- 1 root root 6.1K Aug 10 18:11 packages/emacsql-mysql-20171219.227.el
-4.0K -rw-r--r-- 1 root root  373 Aug 10 18:11 packages/emacsql-mysql-20171219.227.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 10 18:11 packages/emacsql-mysql-badge.svg
-4.0K -rw-r--r-- 1 root root   61 Aug 10 18:11 packages/emacsql-mysql-readme.txt
-4.0K -rw-r--r-- 1 root root  215 Aug 10 21:40 packages/emacsql-mysql.log
-4.0K -rw-r--r-- 1 root root  393 Aug 10 18:11 packages/emacsql-psql-20171219.227.entry
- 20K -rw-r--r-- 1 root root  20K Aug 10 18:11 packages/emacsql-psql-20171219.227.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 10 18:11 packages/emacsql-psql-badge.svg
-4.0K -rw-r--r-- 1 root root  189 Aug 10 18:11 packages/emacsql-psql-readme.txt
-4.0K -rw-r--r-- 1 root root  159 Aug 10 21:40 packages/emacsql-psql.log
-4.0K -rw-r--r-- 1 root root 1.8K Aug 10 21:40 packages/emacsql-readme.txt
-4.0K -rw-r--r-- 1 root root  377 Aug 10 18:11 packages/emacsql-sqlite-20190727.1710.entry
-7.5M -rw-r--r-- 1 root root 7.5M Aug 10 18:11 packages/emacsql-sqlite-20190727.1710.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 10 18:11 packages/emacsql-sqlite-badge.svg
-4.0K -rw-r--r-- 1 root root  125 Aug 10 18:11 packages/emacsql-sqlite-readme.txt
-4.0K -rw-r--r-- 1 root root  163 Aug 10 21:40 packages/emacsql-sqlite.log
- 12K -rw-r--r-- 1 root root 9.9K Aug 10 18:11 packages/emacsql-sqlite3-20200914.508.el
-4.0K -rw-r--r-- 1 root root  413 Aug 10 18:11 packages/emacsql-sqlite3-20200914.508.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 10 18:11 packages/emacsql-sqlite3-badge.svg
-4.0K -rw-r--r-- 1 root root 2.1K Aug 10 18:11 packages/emacsql-sqlite3-readme.txt
-4.0K -rw-r--r-- 1 root root  147 Aug 10 21:40 packages/emacsql-sqlite3.log
+4.0K -rw-r--r-- 1 root root  349 Aug 11 08:02 packages/emacsql-20210615.1539.entry
+ 60K -rw-r--r-- 1 root root  60K Aug 11 08:02 packages/emacsql-20210615.1539.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 11 08:02 packages/emacsql-badge.svg
+8.0K -rw-r--r-- 1 root root 6.1K Aug 11 08:02 packages/emacsql-mysql-20171219.227.el
+4.0K -rw-r--r-- 1 root root  373 Aug 11 08:02 packages/emacsql-mysql-20171219.227.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 11 04:33 packages/emacsql-mysql-badge.svg
+4.0K -rw-r--r-- 1 root root   61 Aug 11 08:02 packages/emacsql-mysql-readme.txt
+4.0K -rw-r--r-- 1 root root  215 Aug 11 08:02 packages/emacsql-mysql.log
+4.0K -rw-r--r-- 1 root root  393 Aug 11 04:33 packages/emacsql-psql-20171219.227.entry
+ 20K -rw-r--r-- 1 root root  20K Aug 11 04:33 packages/emacsql-psql-20171219.227.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 11 04:33 packages/emacsql-psql-badge.svg
+4.0K -rw-r--r-- 1 root root  189 Aug 11 04:33 packages/emacsql-psql-readme.txt
+4.0K -rw-r--r-- 1 root root  213 Aug 11 08:02 packages/emacsql-psql.log
+4.0K -rw-r--r-- 1 root root 1.8K Aug 11 08:02 packages/emacsql-readme.txt
+4.0K -rw-r--r-- 1 root root  377 Aug 11 04:33 packages/emacsql-sqlite-20190727.1710.entry
+7.5M -rw-r--r-- 1 root root 7.5M Aug 11 04:33 packages/emacsql-sqlite-20190727.1710.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 11 04:33 packages/emacsql-sqlite-badge.svg
+4.0K -rw-r--r-- 1 root root  125 Aug 11 04:33 packages/emacsql-sqlite-readme.txt
+4.0K -rw-r--r-- 1 root root  163 Aug 11 08:02 packages/emacsql-sqlite.log
+ 12K -rw-r--r-- 1 root root 9.9K Aug 11 04:33 packages/emacsql-sqlite3-20200914.508.el
+4.0K -rw-r--r-- 1 root root  413 Aug 11 04:33 packages/emacsql-sqlite3-20200914.508.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 11 04:33 packages/emacsql-sqlite3-badge.svg
+4.0K -rw-r--r-- 1 root root 2.1K Aug 11 04:33 packages/emacsql-sqlite3-readme.txt
+4.0K -rw-r--r-- 1 root root  147 Aug 11 08:02 packages/emacsql-sqlite3.log
