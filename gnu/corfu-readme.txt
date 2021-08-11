@@ -34,18 +34,20 @@
 
 * Features
 
-  - Timer-based auto-completions (off by default, set ~corfu-auto~)
-  - Popup display with scrollbar indicator and arrow key navigation
-  - The popup must be summoned explicitly by pressing =TAB=
-  - The current candidate is inserted with =TAB= and selected with =RET=
-  - Candidates sorting by prefix, string length and alphabetically
-  - Completion is automatically terminated after candidate selection
+  - Timer-based auto-completions (/off/ by default, set ~corfu-auto~).
+  - Popup display with scrollbar indicator and arrow key navigation.
+  - The popup can be summoned explicitly by pressing =TAB= at any time.
+  - The current candidate is inserted with =TAB= and selected with =RET=.
+  - Candidates sorting by prefix, string length and alphabetically.
+  - The selected candidate is automatically committed on any further input by default.
+    This behavior can be configured by adjusting ~corfu-commit-predicate~.
   - Filter string can contain arbitrary characters and spaces, if
     ~corfu-quit-at-boundary~ is nil. This is needed when filtering with the
     [[https://github.com/oantolin/orderless][Orderless]] completion style.
-  - Deferred completion style highlighting for performance
-  - Jumping to location/documentation of current candidate (Company extension)
-  - Support for ~annotation-function~ and ~affixation-function~
+  - Deferred completion style highlighting for performance.
+  - Jumping to location/documentation of current candidate.
+  - Show candidate documentation/signature string in the echo area.
+  - Support for ~annotation-function~ and ~affixation-function~.
 
 * Configuration
 
@@ -61,10 +63,12 @@
     (use-package corfu
       ;; Optional customizations
       ;; :custom
-      ;; (corfu-cycle t)            ;; Enable cycling for `corfu-next/previous'
-      ;; (corfu-auto t)             ;; Enable auto completion
-      ;; (corfu-quit-at-boundary t) ;; Automatically quit at word boundary
-      ;; (corfu-quit-no-match t)    ;; Automatically quit if there is no match
+      ;; (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
+      ;; (corfu-auto t)                 ;; Enable auto completion
+      ;; (corfu-commit-predicate nil)   ;; Do not commit selected candidates on next input
+      ;; (corfu-quit-at-boundary t)     ;; Automatically quit at word boundary
+      ;; (corfu-quit-no-match t)        ;; Automatically quit if there is no match
+      ;; (corfu-echo-documentation nil) ;; Do not show documentation in the echo area
 
       ;; Optionally use TAB for cycling, default is `corfu-complete'.
       ;; :bind (:map corfu-map
@@ -143,15 +147,13 @@
 
 * Caveats
 
-  Corfu works in most scenarios. However there are a few known technical caveats.
+  Corfu works well in most scenarios. However there are a few known technical
+  caveats.
 
   - Corfu falls back to the default Completion buffer on non-graphical displays,
     since Corfu requires child frames.
   - The abort handling could be improved, for example the input could be undone.
-  - Company kind icons, docsig and match data are not supported
-    (~company-kind~, ~company-docsig~, ~company-match~).
-  - No support for multi-backends like Company. A possible multi-capf backend
-    could be implemented.
+  - Company kind icons and match data are not supported (~company-kind~, ~company-match~).
   - No sorting by history, since ~completion-at-point~ does not
     maintain a history (See branch =history= for a possible solution).
 
