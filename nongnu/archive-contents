@@ -16,6 +16,16 @@
 		((:url . "http://github.com/clojure-emacs/clojure-mode")
 		 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
 		 (:keywords "languages" "clojure" "clojurescript" "lisp"))])
+ (crux .
+       [(0 4 0)
+	((seq
+	  (1 11)))
+	"A Collection of Ridiculously Useful eXtensions" tar
+	((:url . "https://github.com/bbatsov/crux")
+	 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
+	 (:authors
+	  ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
+	 (:keywords "convenience"))])
  (editorconfig .
 	       [(0 8 1)
 		((cl-lib
@@ -201,6 +211,14 @@
 	     (:authors
 	      ("David Andersson <l.david.andersson(at)sverige.nu>"))
 	     (:keywords "convenience" "matching"))])
+ (guru-mode .
+	    [(1 0)
+	     nil "Become an Emacs guru" tar
+	     ((:url . "https://github.com/bbatsov/guru-mode")
+	      (:maintainer "Bozhidar Batsov")
+	      (:authors
+	       ("Bozhidar Batsov"))
+	      (:keywords "convenience"))])
  (haskell-mode .
 	       [(4 7 1)
 		nil "A Haskell editing mode" tar
@@ -222,6 +240,15 @@
 	    (:authors
 	     ("Hrvoje Niksic" . "hniksic@gmail.com"))
 	    (:keywords "hypermedia" "extensions"))])
+ (inf-clojure .
+	      [(3 1 0)
+	       ((emacs
+		 (25 1))
+		(clojure-mode
+		 (5 11)))
+	       "Run an external Clojure process in an Emacs buffer" tar
+	       ((:url . "http://github.com/clojure-emacs/inf-clojure")
+		(:keywords "processes" "clojure"))])
  (lua-mode .
 	   [(20210802)
 	    ((emacs
@@ -314,6 +341,16 @@
 		(:authors
 		 ("Bastien Guerry" . "bzg@gnu.org"))
 		(:keywords "org"))])
+ (projectile .
+	     [(2 5 0)
+	      ((emacs
+		(25 1)))
+	      "Manage and navigate projects in Emacs easily" tar
+	      ((:url . "https://github.com/bbatsov/projectile")
+	       (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
+	       (:authors
+		("Bozhidar Batsov" . "bozhidar@batsov.dev"))
+	       (:keywords "project" "convenience"))])
  (request .
 	  [(0 3 3)
 	   ((emacs
@@ -323,6 +360,16 @@
 	    (:maintainer "Takafumi Arakaki <aka.tkf at gmail.com>")
 	    (:authors
 	     ("Takafumi Arakaki <aka.tkf at gmail.com>")))])
+ (rubocop .
+	  [(0 6 0)
+	   ((emacs
+	     (24)))
+	   "An Emacs interface for RuboCop" tar
+	   ((:url . "https://github.com/rubocop/rubocop-emacs")
+	    (:maintainer "Bozhidar Batsov")
+	    (:authors
+	     ("Bozhidar Batsov"))
+	    (:keywords "project" "convenience"))])
  (rust-mode .
 	    [(0 5 0)
 	     ((emacs

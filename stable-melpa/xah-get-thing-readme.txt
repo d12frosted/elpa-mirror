@@ -5,6 +5,7 @@ The functions are:
 xah-get-bounds-of-thing
 xah-get-bounds-of-thing-or-region
 xah-get-thing-at-point
+xah-get-thing-or-region
 
 They are useful for writing commands that act on text selection if there's one, or current {symbol, block, …} under cursor.
 

@@ -1,0 +1,11 @@
+(fennel-mode .
+	     [(20210811 2030)
+	      ((emacs
+		(25 1)))
+	      "A major-mode for editing Fennel code" single
+	      ((:commit . "26f7a3adeec1f84c13b8dfdefd8a1f70a5ba1aaf")
+	       (:authors
+		("Phil Hagelberg"))
+	       (:maintainer "Phil Hagelberg")
+	       (:keywords "languages" "tools")
+	       (:url . "https://gitlab.com/technomancy/fennel-mode"))])
