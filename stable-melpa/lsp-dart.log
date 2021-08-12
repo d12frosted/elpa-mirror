@@ -4,10 +4,10 @@ Source:  https://github.com/emacs-lsp/lsp-dart.git
 
 Updating /mnt/store/melpa/working/lsp-dart/
 Checking out origin/HEAD
-Checking out 9954e86140d7c8e2c0091edc691f210ba6bd300d
+Checking out aba7ad561e4b05f646c56165e6d82c1c91806e16
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-dart/
-  to /tmp/lsp-dart4w8USM/lsp-dart-20210728.201
+  to /tmp/lsp-dartnJ90f5/lsp-dart-20210812.1313
     lsp-dart-closing-labels.el -> lsp-dart-closing-labels.el
     lsp-dart-code-lens.el -> lsp-dart-code-lens.el
     lsp-dart-commands.el -> lsp-dart-commands.el
@@ -24,28 +24,30 @@ Copying files (->) and directories (=>)
     lsp-dart-test-tree.el -> lsp-dart-test-tree.el
     lsp-dart-utils.el -> lsp-dart-utils.el
     lsp-dart.el -> lsp-dart.el
-Created lsp-dart-20210728.201.tar containing:
-  lsp-dart-20210728.201/
-  lsp-dart-20210728.201/lsp-dart-closing-labels.el
-  lsp-dart-20210728.201/lsp-dart-code-lens.el
-  lsp-dart-20210728.201/lsp-dart-commands.el
-  lsp-dart-20210728.201/lsp-dart-dap.el
-  lsp-dart-20210728.201/lsp-dart-devtools.el
-  lsp-dart-20210728.201/lsp-dart-flutter-colors.el
-  lsp-dart-20210728.201/lsp-dart-flutter-daemon.el
-  lsp-dart-20210728.201/lsp-dart-flutter-fringe-colors.el
-  lsp-dart-20210728.201/lsp-dart-flutter-widget-guide.el
-  lsp-dart-20210728.201/lsp-dart-outline.el
-  lsp-dart-20210728.201/lsp-dart-pkg.el
-  lsp-dart-20210728.201/lsp-dart-protocol.el
-  lsp-dart-20210728.201/lsp-dart-test-output.el
-  lsp-dart-20210728.201/lsp-dart-test-support.el
-  lsp-dart-20210728.201/lsp-dart-test-tree.el
-  lsp-dart-20210728.201/lsp-dart-utils.el
-  lsp-dart-20210728.201/lsp-dart.el
-Built lsp-dart in 5.677s, finished at 2021-08-11T22:35:01+0000
+Created lsp-dart-20210812.1313.tar containing:
+  lsp-dart-20210812.1313/
+  lsp-dart-20210812.1313/lsp-dart-closing-labels.el
+  lsp-dart-20210812.1313/lsp-dart-code-lens.el
+  lsp-dart-20210812.1313/lsp-dart-commands.el
+  lsp-dart-20210812.1313/lsp-dart-dap.el
+  lsp-dart-20210812.1313/lsp-dart-devtools.el
+  lsp-dart-20210812.1313/lsp-dart-flutter-colors.el
+  lsp-dart-20210812.1313/lsp-dart-flutter-daemon.el
+  lsp-dart-20210812.1313/lsp-dart-flutter-fringe-colors.el
+  lsp-dart-20210812.1313/lsp-dart-flutter-widget-guide.el
+  lsp-dart-20210812.1313/lsp-dart-outline.el
+  lsp-dart-20210812.1313/lsp-dart-pkg.el
+  lsp-dart-20210812.1313/lsp-dart-protocol.el
+  lsp-dart-20210812.1313/lsp-dart-test-output.el
+  lsp-dart-20210812.1313/lsp-dart-test-support.el
+  lsp-dart-20210812.1313/lsp-dart-test-tree.el
+  lsp-dart-20210812.1313/lsp-dart-utils.el
+  lsp-dart-20210812.1313/lsp-dart.el
+Built lsp-dart in 5.557s, finished at 2021-08-12T16:01:09+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  448 Aug 11 22:35 packages/lsp-dart-20210728.201.entry
-160K -rw-r--r-- 1 root root 160K Aug 11 22:35 packages/lsp-dart-20210728.201.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 11 22:35 packages/lsp-dart-badge.svg
-4.0K -rw-r--r-- 1 root root   41 Aug 11 22:35 packages/lsp-dart-readme.txt
+4.0K -rw-r--r-- 1 root root  448 Aug 12 12:28 packages/lsp-dart-20210728.201.entry
+160K -rw-r--r-- 1 root root 160K Aug 12 12:28 packages/lsp-dart-20210728.201.tar
+4.0K -rw-r--r-- 1 root root  449 Aug 12 16:01 packages/lsp-dart-20210812.1313.entry
+160K -rw-r--r-- 1 root root 160K Aug 12 16:01 packages/lsp-dart-20210812.1313.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 12 16:01 packages/lsp-dart-badge.svg
+4.0K -rw-r--r-- 1 root root   41 Aug 12 16:01 packages/lsp-dart-readme.txt
