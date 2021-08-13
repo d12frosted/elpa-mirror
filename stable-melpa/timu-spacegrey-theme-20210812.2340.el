@@ -6,8 +6,8 @@
 ;; Maintainer: Aimé Bertrand <aime.bertrand@macowners.club>
 ;; Created: 06 Jun 2021
 ;; Keywords: faces themes
-;; Package-Version: 20210809.2028
-;; Package-Commit: cf54dc9a4df3687d066c89d042321db9dc53e6db
+;; Package-Version: 20210812.2340
+;; Package-Commit: 1b537350a431ad5b127ef30e306e5165c8f93906
 ;; Version: 1.4
 ;; Package-Requires: ((emacs "25.1"))
 ;; Homepage: https://gitlab.com/aimebertrand/timu-spacegrey-theme
@@ -917,6 +917,7 @@ Possinle values: `dark' or `light'.")
      `(magit-branch-current ((,class (:foreground ,red))))
      `(magit-branch-local ((,class (:foreground ,red))))
      `(magit-branch-remote ((,class (:foreground ,green))))
+     `(magit-branch-remote-head ((,class (:foreground ,green))))
      `(magit-cherry-equivalent ((,class (:foreground ,magenta))))
      `(magit-cherry-unmatched ((,class (:foreground ,cyan))))
      `(magit-diff-added ((,class (:foreground ,bg  :background ,green :extend t))))
@@ -936,7 +937,7 @@ Possinle values: `dark' or `light'.")
      `(magit-diffstat-removed ((,class (:foreground ,red))))
      `(magit-dimmed ((,class (:foreground ,spacegrey5))))
      `(magit-hash ((,class (:foreground ,blue))))
-     `(magit-header-line ((,class (:background ,darkblue :foreground ,spacegrey8 :weight bold :box (:line-width 3 :color ,darkblue)))))
+     `(magit-header-line ((,class (:background ,bg-other :foreground ,darkcyan :weight bold :box (:line-width 3 :color ,bg-other)))))
      `(magit-log-author ((,class (:foreground ,orange))))
      `(magit-log-date ((,class (:foreground ,blue))))
      `(magit-log-graph ((,class (:foreground ,spacegrey5))))
@@ -968,6 +969,10 @@ Possinle values: `dark' or `light'.")
      `(magit-tag ((,class (:foreground ,yellow))))
      `(magit-filename ((,class (:foreground ,magenta))))
      `(magit-section-secondary-heading ((,class (:foreground ,magenta :weight bold :extend t))))
+
+;;;; forge - dark
+     `(forge-topic-closed ((,class (:foreground ,spacegrey5 :strike-through t))))
+     `(forge-topic-label ((,class (:box nil))))
 
 ;;;; marginalia-dark
      `(marginalia-documentation ((,class (:foreground ,blue))))
@@ -2352,6 +2357,7 @@ Possinle values: `dark' or `light'.")
      `(magit-branch-current ((,class (:foreground ,red))))
      `(magit-branch-local ((,class (:foreground ,red))))
      `(magit-branch-remote ((,class (:foreground ,green))))
+     `(magit-branch-remote-head ((,class (:foreground ,green))))
      `(magit-cherry-equivalent ((,class (:foreground ,magenta))))
      `(magit-cherry-unmatched ((,class (:foreground ,cyan))))
      `(magit-diff-added ((,class (:foreground ,bg  :background ,green :extend t))))
@@ -2371,7 +2377,7 @@ Possinle values: `dark' or `light'.")
      `(magit-diffstat-removed ((,class (:foreground ,red))))
      `(magit-dimmed ((,class (:foreground ,spacegrey5))))
      `(magit-hash ((,class (:foreground ,blue))))
-     `(magit-header-line ((,class (:background ,darkblue :foreground ,spacegrey8 :weight bold :box (:line-width 3 :color ,darkblue)))))
+     `(magit-header-line ((,class (:background ,bg-other :foreground ,darkcyan :weight bold :box (:line-width 3 :color ,bg-other)))))
      `(magit-log-author ((,class (:foreground ,orange))))
      `(magit-log-date ((,class (:foreground ,blue))))
      `(magit-log-graph ((,class (:foreground ,spacegrey5))))
@@ -2403,6 +2409,10 @@ Possinle values: `dark' or `light'.")
      `(magit-tag ((,class (:foreground ,yellow))))
      `(magit-filename ((,class (:foreground ,magenta))))
      `(magit-section-secondary-heading ((,class (:foreground ,magenta :weight bold :extend t))))
+
+;;;; forge - light
+     `(forge-topic-closed ((,class (:foreground ,spacegrey5 :strike-through t))))
+     `(forge-topic-label ((,class (:box nil))))
 
 ;;;; marginalia-light
      `(marginalia-documentation ((,class (:foreground ,blue))))

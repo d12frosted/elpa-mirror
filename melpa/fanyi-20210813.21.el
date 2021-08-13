@@ -4,8 +4,8 @@
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Author: Zhiwei Chen <condy0919@gmail.com>
 ;; Keywords: convenience, tools
-;; Package-Version: 20210810.1956
-;; Package-Commit: 837cb3bce5392716953e95e2c10f4fa794cf2f39
+;; Package-Version: 20210813.21
+;; Package-Commit: f44a60a07f6287fbd54845d735d9c09e73f51084
 ;; URL: https://github.com/condy0919/fanyi.el
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1") (s "1.12.0"))
@@ -42,7 +42,7 @@
 (require 'imenu)
 (require 'cl-lib)
 (require 'button)
-(require 'thingatpt)
+(require 'outline)
 
 ;; Silence compile warnings.
 (defvar url-http-end-of-headers)
@@ -201,10 +201,24 @@ It could be either British pronunciation or American pronunciation.")
 Where def could be a list of string/(string 'face face)/(string 'button data)."))
   "The etymonline service.")
 
+(defclass fanyi-ah-service (fanyi-service)
+  ((syllable :initarg :syllable
+             :type string
+             :documentation "Syllable.")
+   (sound :initarg :sound
+          :type string
+          :documentation "Sound uri.")
+   (pronunciation :initarg :pronunciation
+                  :type string
+                  :documentation "Pronunciation.")
+   )
+  "The American Heritage dictionary service.")
+
 ;; Silence unknown slots warning.
 (eieio-declare-slots :word :url :sound-url)
 (eieio-declare-slots :syllable :star :level :phonetics :paraphrases :distribution :related :origins)
 (eieio-declare-slots :definitions)
+(eieio-declare-slots :syllable :sound :pronunciation)
 
 (cl-defmethod fanyi-parse-from ((this fanyi-haici-service) dom)
   "Complete the fields of THIS from DOM tree.
@@ -305,7 +319,7 @@ before calling this method."
                     (insert "英")
                   (insert "  美"))
                 (insert (format " %s " pronunciation))
-                (insert-button "♀"
+                (insert-button "🔊"
                                'display (when (fanyi-display-glyphs-p)
                                           (find-image `((:type xpm
                                                                :data ,fanyi-speaker-xpm
@@ -317,7 +331,7 @@ before calling this method."
                                'face 'fanyi-female-speaker-face
                                'follow-link t)
                 (insert " ")
-                (insert-button "♂"
+                (insert-button "🔊"
                                'display (when (fanyi-display-glyphs-p)
                                           (find-image `((:type xpm
                                                                :data ,fanyi-speaker-xpm
@@ -381,30 +395,29 @@ expected."
   (let ((defs (dom-by-class dom "word--C9UPa")))
     (oset this :definitions
           (cl-loop for def in defs
-                   collect (progn
-                             (let ((title (dom-text (dom-by-class def "word__name--TTbAA")))
-                                   (details (dom-children (dom-by-class def "word__defination--2q7ZH"))))
-                               (list title
-                                     (seq-mapcat
-                                      (lambda (node)
-                                        (pcase node
-                                          ('(p nil) "\n\n")
-                                          (_ (cl-assert (> (length node) 2))
-                                             (seq-concatenate
-                                              'list
-                                              (when (equal (car node) 'blockquote)
-                                                '("> "))
-                                              (seq-map (lambda (arg)
-                                                         (cond ((stringp arg) arg)
-                                                               ((dom-by-class arg "foreign notranslate")
-                                                                (cond ((dom-by-tag arg 'strong)
-                                                                       (list (dom-texts arg) 'face 'bold))
-                                                                      (t
-                                                                       (list (dom-text arg) 'face 'italic))))
-                                                               ((dom-by-class arg "crossreference notranslate")
-                                                                (list (dom-text arg) 'button (dom-text arg)))))
-                                                       (cddr node))))))
-                                      details))))))))
+                   collect (let ((title (dom-text (dom-by-class def "word__name--TTbAA")))
+                                 (details (dom-children (dom-by-class def "word__defination--2q7ZH"))))
+                             (list title
+                                   (seq-mapcat
+                                    (lambda (node)
+                                      (pcase node
+                                        ('(p nil) "\n\n")
+                                        (_ (cl-assert (> (length node) 2))
+                                           (seq-concatenate
+                                            'list
+                                            (when (equal (car node) 'blockquote)
+                                              '("> "))
+                                            (seq-map (lambda (arg)
+                                                       (cond ((stringp arg) arg)
+                                                             ((dom-by-class arg "foreign notranslate")
+                                                              (cond ((dom-by-tag arg 'strong)
+                                                                     (list (dom-texts arg) 'face 'bold))
+                                                                    (t
+                                                                     (list (dom-text arg) 'face 'italic))))
+                                                             ((dom-by-class arg "crossreference notranslate")
+                                                              (list (dom-text arg) 'button (dom-text arg)))))
+                                                     (cddr node))))))
+                                    details)))))))
 
 (cl-defmethod fanyi-render ((this fanyi-etymon-service))
   "Render THIS page into a buffer named `fanyi-buffer-name'.
@@ -436,10 +449,70 @@ while the quote style is from mailing list."
                                                   'follow-link t))
                                   (s
                                    (insert s))))
-                              def)))
-        (while (equal (char-before) ?\n)
-          (delete-char -1))
-        (insert "\n\n")))))
+                              def)
+                      (while (equal (char-before) ?\n)
+                        (delete-char -1))
+                      (insert "\n\n")))))))
+
+(cl-defmethod fanyi-parse-from ((this fanyi-ah-service) dom)
+  "Complete the fields of THIS from DOM tree.
+A 'not-found exception may be thrown."
+  (setq xxx dom)
+  (let ((results (dom-by-id dom "results")))
+    ;; Nothing is found.
+    (when (string= (dom-text results) "No word definition found")
+      (throw 'not-found nil))
+    ;; Syllable, sound and pronunciation.
+    (let ((rtseg (dom-by-class results "rtseg")))
+      (oset this :syllable (dom-texts (dom-child-by-tag rtseg 'b)))
+      (oset this :sound (dom-attr (dom-child-by-tag rtseg 'a) 'href))
+      ;; The original pronunciation contains private unicodes, let's fix that.
+      (let ((pron (s-trim (s-join ""
+                                  (seq-map (lambda (arg)
+                                             (pcase arg
+                                               (`(font ,_face ,s) s)
+                                               ((pred stringp) arg)
+                                               (_ "")))
+                                           (dom-children rtseg))))))
+        (oset this :pronunciation "empty now")
+        )
+      )
+    )
+  )
+
+;;=> " (ə-kymyə-lāt′)"
+  ;; ac·cu·mu·late (ə-kymyə-lāt′)
+  ;; 
+  ;; (ə-kyo͞om′yə-lāt′)
+
+  ;; (ə-kyo͞om′yə-lāt′)
+  ;; -kyo͞om′y
+
+;;=> " (-kymy-lt)"
+
+(cl-defmethod fanyi-render ((this fanyi-ah-service))
+  "Render THIS page into a buffer named `fanyi-buffer-name'.
+It's NOT thread-safe, caller should hold `fanyi-buffer-mtx'
+before calling this method."
+  (with-current-buffer (get-buffer-create fanyi-buffer-name)
+    (save-excursion
+      ;; Go to the end of buffer.
+      (goto-char (point-max))
+      (let ((inhibit-read-only t))
+        ;; The headline about American Heritage dictionary.
+        (insert "# American Heritage\n\n")
+        ;; Syllable, sound and pronunciation.
+        (insert (oref this :syllable))
+        (insert " ")
+        (insert-button "🔊"
+                       'action #'fanyi-play-sound
+                       'button-data (format (oref this :sound-url) (oref this :sound))
+                       'face 'fanyi-male-speaker-face
+                       'follow-link t)
+        (insert " ")
+        (insert (oref this :pronunciation) "\n\n")
+        )))
+  )
 
 ;; Translation services.
 
@@ -453,8 +526,14 @@ while the quote style is from mailing list."
                         :url "https://www.etymonline.com/word/%s"
                         :sound-url "unused"))
 
+(defconst fanyi-provider-ah
+  (fanyi-ah-service :word "dummy"
+                    :url "https://ahdictionary.com/word/search.html?q=%s"
+                    :sound-url "https://ahdictionary.com/%s"))
+
 (defcustom fanyi-providers `(,fanyi-provider-haici
-                             ,fanyi-provider-etymon)
+                             ,fanyi-provider-etymon
+                             ,fanyi-provider-ah)
   "The providers used by `fanyi-dwim'."
   :type '(repeat fanyi-service)
   :group 'fanyi)
@@ -473,6 +552,9 @@ while the quote style is from mailing list."
                             ;; Something went wrong.
                             (when (or (not status) (plist-member status :error))
                               (user-error "Something went wrong.\n\n%s" (pp-to-string (plist-get status :error))))
+                            ;; Redirection is inhibited.
+                            (when (plist-member status :redirect)
+                              (user-error "Redirection is inhibited.\n\n%s" (pp-to-string (plist-get status :redirect))))
                             ;; Move point to the real http content.
                             (goto-char url-http-end-of-headers)
                             ;; Parse the html into a dom tree.
@@ -514,10 +596,24 @@ while the quote style is from mailing list."
     ("\\*\\([^\\*]+?\\)\\*" . 'bold))
   "Keywords to highlight in `fanyi-mode'.")
 
+(defun fanyi-tab ()
+  "Smart tab in `fanyi-mode'."
+  (interactive nil fanyi-mode)
+  (if (outline-on-heading-p)
+      (outline-cycle)
+    (forward-button 1 t t t)))
+
+(defun fanyi-backtab ()
+  "Smart backtab in `fanyi-mode'."
+  (interactive nil fanyi-mode)
+  (if (outline-on-heading-p)
+      (outline-cycle-buffer)
+    (backward-button 1 t t t)))
+
 (defvar fanyi-mode-map
   (let ((map (make-sparse-keymap)))
-    (define-key map [tab] #'forward-button)
-    (define-key map [backtab] #'backward-button)
+    (define-key map [tab] #'fanyi-tab)
+    (define-key map [backtab] #'fanyi-backtab)
     (define-key map "q" #'quit-window)
     (define-key map "s" #'fanyi-dwim)
     map)
@@ -528,6 +624,10 @@ while the quote style is from mailing list."
 \\{fanyi-mode-map}"
   :interactive nil
   :group 'fanyi
+
+  ;; Make it foldable.
+  (setq-local outline-regexp "^#+")
+  (setq-local outline-minor-mode t)
 
   (setq font-lock-defaults '(fanyi-mode-font-lock-keywords))
   (setq imenu-generic-expression '(("Dict" "^# \\(.*\\)" 1)))
