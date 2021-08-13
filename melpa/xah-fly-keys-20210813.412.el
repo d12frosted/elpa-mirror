@@ -3,9 +3,9 @@
 ;; Copyright © 2013-2021, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 14.4.20210811224240
-;; Package-Version: 20210812.542
-;; Package-Commit: e23d7f5c3e0e320776ae103186033c196589e465
+;; Version: 14.5.20210812205125
+;; Package-Version: 20210813.412
+;; Package-Commit: 2ccd6915e741d17d801d51125dbde0d6c1054aa7
 ;; Created: 10 Sep 2013
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: convenience, emulations, vim, ergoemacs
@@ -1197,15 +1197,15 @@ URL `http://ergoemacs.org/emacs/emacs_reformat_lines.html'
 Created 2016 or before.
 Version 2021-07-05"
   (interactive)
-  ;; This command symbol has a property “'isLong-p”, the possible values are t and nil. This property is used to easily determine whether to compact or uncompact, when this command is called again
-  (let ( isLong-p $blanksRegex $p1 $p2 )
+  ;; This command symbol has a property 'is-long-p, the possible values are t and nil. This property is used to easily determine whether to compact or uncompact, when this command is called again
+  (let ( $isLong $blanksRegex $p1 $p2 )
     (setq @width (if @width
                      @width
                    (if current-prefix-arg
                        (prefix-numeric-value current-prefix-arg) 70 )))
-    (setq isLong-p
+    (setq $isLong
           (if (eq last-command this-command)
-              (get this-command 'isLong-p)
+              (get this-command 'is-long-p)
             nil))
     (setq $blanksRegex "\n[ \t]*\n")
     (if (use-region-p)
@@ -1222,15 +1222,16 @@ Version 2021-07-05"
     (progn
       (if current-prefix-arg
           (xah-reformat-to-multi-lines $p1 $p2 @width)
-        (if isLong-p
+        (if $isLong
             (xah-reformat-to-multi-lines $p1 $p2 @width)
           (xah-reformat-whitespaces-to-one-space $p1 $p2)))
-      (put this-command 'isLong-p (not isLong-p)))))
+      (put this-command 'is-long-p (not $isLong)))))
 
 (defun xah-reformat-to-sentence-lines ()
   "Reformat current block or selection into multiple lines by ending period.
+After this command is called, press t to repeat it.
 URL `http://ergoemacs.org/emacs/elisp_reformat_to_sentence_lines.html'
-Version 2020-12-02 2021-04-14 2021-08-03"
+Version 2020-12-02 2021-04-14 2021-08-03 2021-08-12"
   (interactive)
   (let ($p1 $p2)
     (if (use-region-p)
@@ -1247,7 +1248,8 @@ Version 2020-12-02 2021-04-14 2021-08-03"
       (progn (goto-char (point-min)) (while (search-forward "\n" nil t) (replace-match " " )))
       (progn (goto-char (point-min)) (while (re-search-forward "  +" nil t) (replace-match " " )))
       (progn (goto-char (point-min)) (while (re-search-forward "\\. +\\([0-9A-Za-z]+\\)" nil t) (replace-match ".\n\\1" )))
-      (goto-char (point-max)) (while (eq (char-before ) 32) (delete-char -1)) (insert "\n\n"))))
+      (goto-char (point-max)) (while (eq (char-before ) 32) (delete-char -1)) (insert "\n\n")))
+  (set-transient-map (let (($kmap (make-sparse-keymap))) (define-key $kmap (kbd "t") 'xah-reformat-to-sentence-lines ) $kmap)))
 
 (defun xah-space-to-newline ()
   "Replace space sequence to a newline char.
@@ -1496,7 +1498,7 @@ Version 2016-10-04 2019-11-24"
 
 (defun xah-cycle-hyphen-lowline-space ( &optional @begin @end )
   "Cycle hyphen/lowline/space chars in selection or inside quote/bracket or line, in that order.
-When this command is called, pressing t will repeat it. Press other key to exit.
+After this command is called, press t to repeat it.
 The region to work on is by this order:
  1. if there is a selection, use that.
  2. If cursor is string quote or any type of bracket, and is within current line, work on that region.
