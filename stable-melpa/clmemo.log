@@ -7,13 +7,13 @@ Checking out origin/HEAD
 Checking out 846a81b984d71edf8278a4d9f9b886e44d5b8365
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/clmemo/
-  to /tmp/clmemoiMErKH/clmemo-20160326.1623
+  to /tmp/clmemo9JAjwB/clmemo-20160326.1623
     clmemo.el -> clmemo.el
   ! doc/clmemo.texi -> clmemo.texi
   ! doc/install.texi -> install.texi
   ! doc/news.texi -> news.texi
-Created /tmp/clmemoiMErKH/clmemo-20160326.1623/clmemo.info
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/clmemo/doc/install.texi -o /tmp/clmemoiMErKH/clmemo-20160326.1623/install.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/clmemo9JAjwB/clmemo-20160326.1623/clmemo.info
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/clmemo/doc/install.texi -o /tmp/clmemo9JAjwB/clmemo-20160326.1623/install.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at 846a81b Update year of copyright
 HEAD is now at 846a81b Update year of copyright
@@ -24,8 +24,8 @@ HEAD is now at 846a81b Update year of copyright
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Prev reference to nonexistent `clmemo'
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Up reference to nonexistent `clmemo'
 ")
-Created /tmp/clmemoiMErKH/clmemo-20160326.1623/install.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/clmemoiMErKH/clmemo-20160326.1623/install.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/clmemo9JAjwB/clmemo-20160326.1623/install.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/clmemo9JAjwB/clmemo-20160326.1623/install.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at 846a81b Update year of copyright
 HEAD is now at 846a81b Update year of copyright
@@ -35,9 +35,9 @@ HEAD is now at 846a81b Update year of copyright
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Next reference to nonexistent `input memo'
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Prev reference to nonexistent `clmemo'
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Up reference to nonexistent `clmemo'
-install-info: No such file or directory for /tmp/clmemoiMErKH/clmemo-20160326.1623/install.info
+install-info: No such file or directory for /tmp/clmemo9JAjwB/clmemo-20160326.1623/install.info
 ")
-Created /tmp/clmemoiMErKH/clmemo-20160326.1623/news.info
+Created /tmp/clmemo9JAjwB/clmemo-20160326.1623/news.info
 Created clmemo-20160326.1623.tar containing:
   clmemo-20160326.1623/
   clmemo-20160326.1623/clmemo-pkg.el
@@ -45,9 +45,9 @@ Created clmemo-20160326.1623.tar containing:
   clmemo-20160326.1623/clmemo.info
   clmemo-20160326.1623/dir
   clmemo-20160326.1623/news.info
-Built clmemo in 16.242s, finished at 2021-08-12T15:22:35+0000
+Built clmemo in 17.692s, finished at 2021-08-12T22:22:09+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  321 Aug 12 15:22 packages/clmemo-20160326.1623.entry
-132K -rw-r--r-- 1 root root 130K Aug 12 15:22 packages/clmemo-20160326.1623.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 12 15:22 packages/clmemo-badge.svg
-4.0K -rw-r--r-- 1 root root 2.9K Aug 12 15:22 packages/clmemo-readme.txt
+4.0K -rw-r--r-- 1 root root  321 Aug 12 22:22 packages/clmemo-20160326.1623.entry
+132K -rw-r--r-- 1 root root 130K Aug 12 22:22 packages/clmemo-20160326.1623.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 12 22:22 packages/clmemo-badge.svg
+4.0K -rw-r--r-- 1 root root 2.9K Aug 12 22:22 packages/clmemo-readme.txt
