@@ -7,7 +7,7 @@
 ;; Created: 01 Apr 2016
 ;; Keywords: http helm
 ;; Package-Version: 20170314.1554
-;; Package-Commit: 2cc1fd3496f57288de3f97c27a5f018284db2d23
+;; Package-Commit: 176d9cb6552f04d98c33e29fc673862bdf3bca03
 ;; Package-Requires: ((restclient "0") (helm "1.9.4"))
 
 ;; This file is not part of GNU Emacs.

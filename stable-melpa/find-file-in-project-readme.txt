@@ -78,6 +78,10 @@ and `find-file-in-current-directory-by-selected'.
 
 `ffip-fix-file-path-at-point' replaces path at point with correct relative/absolute path.
 
+File/directory searching actions are automatically stored into `ffip-find-files-history'.
+Use `ffip-find-files-resume' to replay any previous action.
+The maximum number of items of the history is set in `ffip-find-files-history-max-items'.
+
 `ffip-show-diff' execute the backend from `ffip-diff-backends'.
 The output is in Unified Diff Format and inserted into *ffip-diff* buffer.
 Press "o" or "C-c C-c" or "ENTER" or `M-x ffip-diff-find-file' in the

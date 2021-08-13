@@ -5,7 +5,7 @@
 ;; Author: Mihai Olteanu <mihai_olteanu@fastmail.fm>
 ;; Version: 2.0
 ;; Package-Version: 20210719.722
-;; Package-Commit: 63a0377ac1ad48171621c9f0c719b62ec9395d35
+;; Package-Commit: 267e0594790a5f34e474a5b480015f0f216a6865
 ;; Package-Requires: ((emacs "26.1") (s "1.12.0") (anaphora "1.0.4") (dash "2.18.1") (cl-lib "1.0"))
 ;; Keywords: multimedia
 ;; URL: https://github.com/mihaiolteanu/mugur

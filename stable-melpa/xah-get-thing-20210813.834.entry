@@ -1,0 +1,11 @@
+(xah-get-thing .
+	       [(20210813 834)
+		((emacs
+		  (24 1)))
+		"get thing or selection at point." single
+		((:commit . "ba818dc7fd90b49b780709be5266733ede86a556")
+		 (:authors
+		  ("Xah Lee ( http://xahlee.info/ )"))
+		 (:maintainer "Xah Lee ( http://xahlee.info/ )")
+		 (:keywords "extensions" "lisp" "tools")
+		 (:url . "http://ergoemacs.org/emacs/elisp_get-selection-or-unit.html"))])
