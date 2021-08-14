@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-spell-fu
-;; Package-Version: 20210812.412
-;; Package-Commit: 8b0e68435a42edc0f0abae60883ba5b6fdbfcfbf
+;; Package-Version: 20210814.748
+;; Package-Commit: 10823ae58f88874aff2a6a35f2da75c8503e726e
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
@@ -119,16 +119,8 @@ check this buffer.")
 ;; - don't''join <= don't connect multiple apostrophes.
 ;;   ^^^^^  ^^^^
 ;;
-(defvar-local spell-fu-word-regexp "\\b\\([[:alpha:]][[:alpha:]\-]*\\('[[:alpha:]]*\\)?\\)\\b"
+(defvar-local spell-fu-word-regexp "\\b\\([[:alpha:]][[:alpha:]]*\\('[[:alpha:]]*\\)?\\)\\b"
   "Regex used to scan for words to check (used by `spell-fu-check-range').")
-
-(defvar-local spell-fu-word-regexp-sep "-"
-  "Regex used to separate words for individual checking.
-
-used by `spell-fu-check-word', this means two correctly spelled words that are
-joined by a hyphen (for example) won't be marked as incorrect.
-
-The separator should be part of `spell-fu-word-regexp'.")
 
 (defvar-local spell-fu-faces-include nil
   "List of faces to check or nil to include all (used by `spell-fu-check-range').")
@@ -309,6 +301,14 @@ Argument POS return faces at this point."
           (when (facep face)
             (push face faces)))))
     faces))
+
+(defun spell-fu--next-faces-prop-change (pos limit)
+  "Return the next face change from POS restricted by LIMIT."
+  (next-single-property-change
+    pos
+    'read-face-name
+    nil
+    (next-single-property-change pos 'face nil limit)))
 
 (defun spell-fu--file-is-older-list (file-test file-list)
   "Return t when FILE-TEST is older than any files in FILE-LIST."
@@ -559,46 +559,16 @@ range POINT-START to POINT-END. Otherwise remove all overlays."
     (overlay-put item-ov 'evaporate t)
     item-ov))
 
-
-(defun check-word--impl (word)
-  "Run the spell checker on a WORD."
-  (or
-    (gethash (downcase word) spell-fu--cache-table nil)
-    ;; Ignore all uppercase words.
-    (equal word (upcase word))))
-
 (defun spell-fu-check-word (point-start point-end word)
   "Run the spell checker on a word.
 
 Marking the spelling as incorrect using `spell-fu-incorrect-face' on failure.
 Argument POINT-START the beginning position of WORD.
 Argument POINT-END the end position of WORD."
-  (setq word (encode-coding-string word 'utf-8))
-  (cond
-    (spell-fu-word-regexp-sep
-      (unless (check-word--impl word)
-        ;; Check each work between hyphens individually.
-        (let
-          (
-            (word-length (length word))
-            (beg 0))
-          (while (< beg word-length)
-            ;; TODO: use string-search when emacs-28 is stable.
-            (let ((end (or (string-match-p spell-fu-word-regexp-sep word beg) word-length)))
-              ;; Skip multiple '-'.
-              (unless (eq beg end)
-                (when
-                  (or
-                    ;; There was no separator, don't check the word again
-                    ;; because it's known to be wrong based on the first check.
-                    (eq (- end beg) word-length)
-                    ;; The word is a sub-string, check it again.
-                    (not (check-word--impl (substring word beg end))))
-                  (spell-fu-mark-incorrect (+ point-start beg) (+ point-start end))))
-              (setq beg (1+ end)))))))
-    (t
-      (unless (check-word--impl word)
-        (spell-fu-mark-incorrect point-start point-end)))))
+  (unless (gethash (encode-coding-string (downcase word) 'utf-8) spell-fu--cache-table nil)
+    ;; Ignore all uppercase words.
+    (unless (equal word (upcase word))
+      (spell-fu-mark-incorrect point-start point-end))))
 
 
 ;; ---------------------------------------------------------------------------
@@ -610,21 +580,18 @@ Argument POINT-END the end position of WORD."
 ;; to ensure there no chance of the points being in the middle of a word.
 ;;
 
-(defun spell-fu--check-faces-at-point (pos faces-include faces-exclude)
-  "Check if the position POS has faces that match the include/exclude arguments.
-
-Argument FACES-INCLUDE faces to check POS includes or ignored when nil.
-Argument FACES-EXCLUDE faces to check POS excludes or ignored when nil."
+(defun spell-fu--check-faces-at-point (pos)
+  "Check if the position POS has faces that match the include/exclude arguments."
   (let
     (
-      (result (null faces-include))
+      (result (null spell-fu-faces-include))
       (faces-at-pos (spell-fu--faces-at-point pos))
       (face nil))
     (while (setq face (pop faces-at-pos))
-      (when (memq face faces-exclude)
+      (when (memq face spell-fu-faces-exclude)
         (setq faces-at-pos nil)
         (setq result nil))
-      (when (and (null result) (memq face faces-include))
+      (when (and (null result) (memq face spell-fu-faces-include))
         (setq result t)))
     result))
 
@@ -632,20 +599,33 @@ Argument FACES-EXCLUDE faces to check POS excludes or ignored when nil."
   "Check spelling for POINT-START & POINT-END, checking text matching face rules."
   (spell-fu--remove-overlays point-start point-end)
   (with-syntax-table spell-fu-syntax-table
-    (save-match-data
-      (save-excursion
-        (goto-char point-start)
-        (while (re-search-forward spell-fu-word-regexp point-end t)
-          (let
-            (
-              (word-start (match-beginning 0))
-              (word-end (match-end 0)))
-            (when
-              (spell-fu--check-faces-at-point
-                word-start
-                spell-fu-faces-include
-                spell-fu-faces-exclude)
-              (spell-fu-check-word word-start word-end (match-string-no-properties 0)))))))))
+    (save-match-data ;; For regex search.
+      (save-excursion ;; For moving the point.
+        (save-restriction ;; For narrowing.
+          ;; It's possible the face changes part way through the word.
+          ;; In practice this is likely caused by escape characters, e.g.
+          ;; "test\nthe text" where "\n" may have separate highlighting.
+          (while (< point-start point-end)
+            (let ((point-end-iter (spell-fu--next-faces-prop-change point-start point-end)))
+              ;; No need to check faces of each word
+              ;; as face-changes are being stepped over.
+              (when (spell-fu--check-faces-at-point point-start)
+                ;; Use narrowing so the regex correctly handles boundaries
+                ;; that happen to fall on face changes.
+                (narrow-to-region point-start point-end-iter)
+                (goto-char point-start)
+                (while (re-search-forward spell-fu-word-regexp point-end-iter t)
+                  (let
+                    (
+                      (word-start (match-beginning 0))
+                      (word-end (match-end 0)))
+                    (spell-fu-check-word
+                      word-start
+                      word-end
+                      (buffer-substring-no-properties word-start word-end))))
+                (widen))
+
+              (setq point-start point-end-iter))))))))
 
 (defun spell-fu--check-range-without-faces (point-start point-end)
   "Check spelling for POINT-START & POINT-END, checking all text."

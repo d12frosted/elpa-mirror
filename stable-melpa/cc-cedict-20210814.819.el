@@ -6,8 +6,8 @@
 ;; Homepage: https://github.com/xuchunyang/cc-cedict.el
 ;; Created: 2018-12-03
 ;; Version: 0.1
-;; Package-Version: 20210814.145
-;; Package-Commit: 7fcc84f21a706867983e528e6194db5d1015f6ae
+;; Package-Version: 20210814.819
+;; Package-Commit: 03fbe7d1589d36f627ef9fe7b86f9fe6f623cbb3
 ;; Package-Requires: ((emacs "26.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -38,7 +38,8 @@
 ;; $ gunzip cedict_1_0_ts_utf-8_mdbg.txt.gz
 
 (defgroup cc-cedict nil
-  "Options for the cc-cedict library.")
+  "Options for the cc-cedict library."
+  :group 'tools)
 
 (defcustom cc-cedict-file (let ((file
 				 (expand-file-name

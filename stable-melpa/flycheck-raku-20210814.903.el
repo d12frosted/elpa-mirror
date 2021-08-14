@@ -9,10 +9,10 @@
 ;;      Siavash Askari Nasr <siavash.askari.nasr@gmail.com>
 ;; original URL: https://github.com/hinrik/flycheck-perl6
 ;; URL: https://github.com/Raku/flycheck-raku
-;; Package-Version: 20210316.820
-;; Package-Commit: 4163c0dcc1447bc98bb20b835eb23cb68a638ba9
+;; Package-Version: 20210814.903
+;; Package-Commit: 50ac228e658a7f86efc298ee3ebd0b9706f083d0
 ;; Keywords: tools, convenience
-;; Version: 0.5
+;; Version: 0.6
 ;; Package-Requires: ((emacs "26.3") (flycheck "0.22"))
 
 ;; This file is not part of GNU Emacs.
@@ -61,11 +61,11 @@ Relative paths are relative to the file being checked."
   "A Raku syntax checker."
   :command ("raku" "-c"
             (option-list "-I" flycheck-raku-include-path)
-            ;; Add project root lib to path
+            ;; Add project root to path
             (eval (let ((current-project (project-current)))
                     (if current-project
                         (let ((project-root (car (project-roots current-project))))
-                          (list "-I" (expand-file-name (concat project-root "lib")))))))
+                          (list "-I" (expand-file-name project-root))))))
             source)
   :error-patterns (;; Multi-line compiler errors
                    (error line-start (minimal-match (1+ anything)) " Error while compiling " (file-name) (? "\r") "\n"

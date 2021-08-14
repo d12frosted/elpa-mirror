@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.5-dev
-;; Package-Version: 20210814.205
-;; Package-Commit: ab0b5e92a264cfc1fbbb69cd94ef9da83db31d0a
+;; Package-Version: 20210814.619
+;; Package-Commit: 562cd35a2eb7b638272940bd8b8fac754a32a34c
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -5544,10 +5544,10 @@ See also `markdown-mode-map'.")
      ["Move Row Down" markdown-move-down
       :enable (markdown-table-at-point-p)
       :keys "C-c <down>"]
-     ["Move Column Left" markdown-demote
+     ["Move Column Left" markdown-promote
       :enable (markdown-table-at-point-p)
       :keys "C-c <left>"]
-     ["Move Column Right" markdown-promote
+     ["Move Column Right" markdown-demote
       :enable (markdown-table-at-point-p)
       :keys "C-c <right>"]
      ["Delete Row" markdown-table-delete-row
@@ -9554,10 +9554,18 @@ spaces, or alternatively a TAB should be used as the separator."
              ((integerp separator)
               (if (< separator 1)
                   (user-error "Cell separator must contain one or more spaces")
-                (format "^ *\\| *\t *\\| \\{%d,\\}" separator)))
+                (format "^ *\\| *\t *\\| \\{%d,\\}\\|$" separator)))
              ((stringp separator) (format "^ *\\|%s" separator))
              (t (error "Invalid cell separator"))))
-      (while (re-search-forward re end t) (replace-match "| " t t)))
+      (let (finish)
+        (while (and (not finish) (re-search-forward re end t))
+          (if (eolp)
+              (progn
+                (replace-match "|" t t)
+                (forward-line 1)
+                (when (eobp)
+                  (setq finish t)))
+            (replace-match "| " t t)))))
     (goto-char begin)
     (when markdown-table-align-p
       (markdown-table-align))))
