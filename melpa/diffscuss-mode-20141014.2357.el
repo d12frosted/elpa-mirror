@@ -4,8 +4,6 @@
 
 ;; Author: Edmund Jorgensen <edmund@hut8labs.com>
 ;; Keywords: tools
-;; Package-Version: 20141014.2357
-;; Package-Commit: 53f2d001bd3a5cb80c6ada16b4e570afd1989a09
 
 ;; The MIT License (MIT)
 
