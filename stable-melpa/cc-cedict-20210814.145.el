@@ -6,8 +6,8 @@
 ;; Homepage: https://github.com/xuchunyang/cc-cedict.el
 ;; Created: 2018-12-03
 ;; Version: 0.1
-;; Package-Version: 20200705.443
-;; Package-Commit: 6bb9481e48b889503626b4e3cb7cfec8d14cbf4b
+;; Package-Version: 20210814.145
+;; Package-Commit: 7fcc84f21a706867983e528e6194db5d1015f6ae
 ;; Package-Requires: ((emacs "26.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -36,13 +36,18 @@
 ;;
 ;; $ wget https://www.mdbg.net/chinese/export/cedict/cedict_1_0_ts_utf-8_mdbg.txt.gz
 ;; $ gunzip cedict_1_0_ts_utf-8_mdbg.txt.gz
-(defvar cc-cedict-file (let ((file
-                              (expand-file-name
-                               "cedict_1_0_ts_utf-8_mdbg.txt"
-                               (file-name-directory
-                                (or load-file-name buffer-file-name)))))
-                         (and (file-exists-p file) file))
-  "Path to the dictionary file.")
+
+(defgroup cc-cedict nil
+  "Options for the cc-cedict library.")
+
+(defcustom cc-cedict-file (let ((file
+				 (expand-file-name
+				  "cedict_1_0_ts_utf-8_mdbg.txt"
+				  (file-name-directory
+                                   (or load-file-name buffer-file-name)))))
+                            (and (file-exists-p file) file))
+  "Path to the dictionary file."
+  :type 'file)
 
 (cl-defstruct (cc-cedict-entry (:constructor cc-cedict-entry-create)
                                (:copier nil))

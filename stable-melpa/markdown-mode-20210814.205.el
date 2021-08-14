@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.5-dev
-;; Package-Version: 20210809.240
-;; Package-Commit: 536061ed01ae96414af4f2c9164bade4500210da
+;; Package-Version: 20210814.205
+;; Package-Commit: ab0b5e92a264cfc1fbbb69cd94ef9da83db31d0a
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -9448,8 +9448,12 @@ indicate that sorting should be done in reverse order."
                         (t 1))))
         (sorting-type
          (or sorting-type
-             (read-char-exclusive
-              "Sort type: [a]lpha [n]umeric (A/N means reversed): "))))
+             (progn
+               ;; workaround #641
+               ;; Emacs < 28 hides prompt message by another message. This erases it.
+               (message "")
+               (read-char-exclusive
+                "Sort type: [a]lpha [n]umeric (A/N means reversed): ")))))
     (save-restriction
       ;; Narrow buffer to appropriate sorting area
       (if (region-active-p)
