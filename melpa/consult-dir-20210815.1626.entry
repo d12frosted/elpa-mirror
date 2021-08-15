@@ -1,0 +1,15 @@
+(consult-dir .
+	     [(20210815 1626)
+	      ((emacs
+		(26 1))
+	       (consult
+		(0 9))
+	       (project
+		(0 6 0)))
+	      "Consult based directory picker" single
+	      ((:commit . "cf2cf6079c7fec46194552314fa2af01d324299a")
+	       (:authors
+		("Karthik Chikmagalur"))
+	       (:maintainer "Karthik Chikmagalur" . "karthik.chikmagalur@gmail.com")
+	       (:keywords "convenience")
+	       (:url . "https://github.com/karthink/consult-dir"))])
