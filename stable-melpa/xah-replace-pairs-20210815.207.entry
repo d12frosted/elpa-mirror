@@ -1,0 +1,11 @@
+(xah-replace-pairs .
+		   [(20210815 207)
+		    ((emacs
+		      (24 1)))
+		    "emacs lisp functions for multi-pair find/replace." single
+		    ((:commit . "b5e4f9ebc9e17916e736af9935bf4e17032edde9")
+		     (:authors
+		      ("Xah Lee ( http://xahlee.info/ )"))
+		     (:maintainer "Xah Lee ( http://xahlee.info/ )")
+		     (:keywords "lisp" "tools" "find replace")
+		     (:url . "http://ergoemacs.org/emacs/elisp_replace_string_region.html"))])

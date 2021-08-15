@@ -1,0 +1,13 @@
+(session-async .
+	       [(20210810 2012)
+		((emacs
+		  (27 1))
+		 (jsonrpc
+		  (1 0 9)))
+		"Asynchronous processing in a forked process session" single
+		((:commit . "e3336a7499007da033d876083f230ef19e3a7593")
+		 (:authors
+		  ("Felipe Lema" . "felipelema@mortemale.org"))
+		 (:maintainer "Felipe Lema" . "felipelema@mortemale.org")
+		 (:keywords "async" "comm" "data" "files" "internal" "maint" "processes" "tools")
+		 (:url . "https://codeberg.org/FelipeLema/session-async.el"))])

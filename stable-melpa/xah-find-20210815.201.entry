@@ -1,0 +1,11 @@
+(xah-find .
+	  [(20210815 201)
+	   ((emacs
+	     (24 1)))
+	   "find replace in pure emacs lisp. Purpose similar to grep/sed." single
+	   ((:commit . "88e390e1f7ccee30cd4d5ac112acdf9b4c72780d")
+	    (:authors
+	     ("Xah Lee ( http://xahlee.info/ )"))
+	    (:maintainer "Xah Lee ( http://xahlee.info/ )")
+	    (:keywords "convenience" "extensions" "files" "tools" "unix")
+	    (:url . "http://ergoemacs.org/emacs/elisp-xah-find-text.html"))])
