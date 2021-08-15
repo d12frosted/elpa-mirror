@@ -232,6 +232,16 @@
 		  ("2003      Dave Love" . "fx@gnu.org")
 		  ("2016      Arthur Fayzrakhmanov"))
 		 (:keywords "faces" "files" "haskell"))])
+ (highlight-parentheses .
+			[(2 0 3)
+			 ((emacs
+			   (24 3)))
+			 "Highlight surrounding parentheses" tar
+			 ((:url . "https://sr.ht/~tsdh/highlight-parentheses.el/")
+			  (:maintainer "Tassilo Horn" . "tsdh@gnu.org")
+			  (:authors
+			   ("Nikolaj Schumacher <bugs * nschum de>"))
+			  (:keywords "faces" "matching"))])
  (htmlize .
 	  [(1 56)
 	   nil "Convert buffer text and decorations to HTML." tar

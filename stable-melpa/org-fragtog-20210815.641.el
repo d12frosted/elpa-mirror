@@ -3,8 +3,8 @@
 ;; Copyright (C) 2020 Benjamin Levy - MIT/X11 License
 ;; Author: Benjamin Levy <blevy@protonmail.com>
 ;; Version: 0.3.3
-;; Package-Version: 20210815.309
-;; Package-Commit: 9262fbfab487fa238960c33e482b91bfaa0b1176
+;; Package-Version: 20210815.641
+;; Package-Commit: c778052e5757e12a07c6263c046e3779d17cf1a2
 ;; Description: Automatically toggle Org mode LaTeX fragment previews as the cursor enters and exits them
 ;; Homepage: https://github.com/io12/org-fragtog
 ;; Package-Requires: ((emacs "27.1"))
@@ -111,9 +111,8 @@ It handles toggling fragments depending on whether the cursor entered or exited 
       ;; Enable fragment if cursor left it after a timed disable
       ;; and the fragment still exists
       (when (and frag-at-prev-pos
-                 (not (overlays-in
-                       (car (org-fragtog--frag-pos frag-at-prev-pos))
-                       (cdr (org-fragtog--frag-pos frag-at-prev-pos)))))
+                 (not (org-fragtog--overlay-in-p
+                       (org-fragtog--frag-pos frag-at-prev-pos))))
         (org-fragtog--enable-frag frag-at-prev-pos))
       ;; Cancel and expire timer
       (when org-fragtog--timer
@@ -128,6 +127,14 @@ It handles toggling fragments depending on whether the cursor entered or exited 
                                                           cursor-frag
                                                           t))
           (org-fragtog--disable-frag cursor-frag))))))
+
+(defun org-fragtog--overlay-in-p (range)
+  "Return whether there is a fragment overlay in RANGE.
+The RANGE parameter is a cons of start and end positions."
+  (seq-find (lambda (overlay)
+              (equal (overlay-get overlay 'org-overlay-type)
+                     'org-latex-overlay))
+            (overlays-in (car range) (cdr range))))
 
 (defun org-fragtog--cursor-frag ()
   "Return the fragment currently surrounding the cursor.

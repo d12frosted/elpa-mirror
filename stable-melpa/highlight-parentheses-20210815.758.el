@@ -7,8 +7,8 @@
 ;; Author: Nikolaj Schumacher <bugs * nschum de>
 ;; Maintainer: Tassilo Horn <tsdh@gnu.org>
 ;; Version: 2.0.3
-;; Package-Version: 20210420.1924
-;; Package-Commit: 891538de31524956136e1419e1206af0c8befe02
+;; Package-Version: 20210815.758
+;; Package-Commit: c6c29b8ec40c888aeee7cccc743dac532d5c64c0
 ;; Keywords: faces, matching
 ;; URL: https://sr.ht/~tsdh/highlight-parentheses.el/
 ;; Package-Requires: ((emacs "24.3"))
@@ -18,7 +18,7 @@
 ;;
 ;; This program is free software; you can redistribute it and/or
 ;; modify it under the terms of the GNU General Public License
-;; as published by the Free Software Foundation; either version 2
+;; as published by the Free Software Foundation; either version 3
 ;; of the License, or (at your option) any later version.
 ;;
 ;; This program is distributed in the hope that it will be useful,
