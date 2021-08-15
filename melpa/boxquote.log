@@ -3,6 +3,11 @@ Fetcher: github
 Source:  https://github.com/davep/boxquote.el.git
 
 Updating /mnt/store/melpa/working/boxquote/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://github.com/davep/boxquote.el.git/': gnutls_handshake() failed: Error in the pull function.
-
+Checking out origin/HEAD
+Checking out bdc6c84b9274b228dbc383a14abf9694157e869c
+Built boxquote in 5.331s, finished at 2021-08-15T15:56:47+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  20K Aug 15 15:56 packages/boxquote-20200727.1203.el
+4.0K -rw-r--r-- 1 root root  356 Aug 15 15:56 packages/boxquote-20200727.1203.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 15 15:56 packages/boxquote-badge.svg
+4.0K -rw-r--r-- 1 root root  613 Aug 15 15:56 packages/boxquote-readme.txt

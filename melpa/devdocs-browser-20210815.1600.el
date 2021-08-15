@@ -4,8 +4,8 @@
 
 ;; Author: blahgeek <i@blahgeek.com>
 ;; URL: https://github.com/blahgeek/emacs-devdocs-browser
-;; Package-Version: 20210703.306
-;; Package-Commit: f8572f208d58b2122df63ffef87fdd5112d83233
+;; Package-Version: 20210815.1600
+;; Package-Commit: 4d81e4db165671ba3e7326dec72f950b26df4dde
 ;; Version: 20210525
 ;; Keywords: docs, help, tools
 ;; Package-Requires: ((emacs "27.1"))
@@ -733,14 +733,19 @@ When called interactively, user can choose from the list."
                   (let* ((name (plist-get entry :name))
                          (path (plist-get entry :path))
                          (type (plist-get entry :type))
-                         (title (format "%s: %s (%s)" slug name type)))
+                         (title (concat slug ": " name " "
+                                        (propertize (format "(%s)" type)
+                                                    'face "shadow"))))
                     (when (and (null def) current-word-regex)
                       (when (string-match-p current-word-regex name)
                         (setq def title
                               def-name name)))
                     (cons title (list doc path))))
                 entries)))
-          (setq rows (append new-rows rows)))))
+          (setq rows (append new-rows rows))
+          (push (cons (format "%s: INDEX PAGE" slug)
+                      (list doc "index"))
+                rows))))
     (let* ((selected-name
             (completing-read
              (concat (format "Devdocs browser [%s]" (mapconcat #'identity slugs ","))
