@@ -6,7 +6,7 @@
 ;; Created: 2013-04-27
 ;; Version: 1.0
 ;; Package-Version: 20210815.907
-;; Package-Commit: 775b1386bbb7013b5db9cf2e67573abf7f25ed35
+;; Package-Commit: 8eae719acc18592a916715e74984e9222bb6d5fa
 ;; Package-Requires: ((org "8.3"))
 ;; Keywords: outlines, hypermedia, slideshow, presentation
 

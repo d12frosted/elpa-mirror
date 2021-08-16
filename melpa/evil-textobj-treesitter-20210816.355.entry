@@ -1,0 +1,12 @@
+(evil-textobj-treesitter .
+			 [(20210816 355)
+			  ((emacs
+			    (25 1))
+			   (evil
+			    (1 0 0))
+			   (tree-sitter
+			    (0 15 0)))
+			  "Provides evil textobjects using treesitter" tar
+			  ((:commit . "f20598676f99e6fa33759d9807e94f42271c0dfb")
+			   (:keywords "evil" "tree-sitter" "text-object" "convenience")
+			   (:url . "https://github.com/meain/evil-textobj-treesitter"))])

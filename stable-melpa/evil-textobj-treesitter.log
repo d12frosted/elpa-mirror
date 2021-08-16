@@ -2,70 +2,72 @@ Package: evil-textobj-treesitter
 Fetcher: github
 Source:  https://github.com/meain/evil-textobj-treesitter.git
 
-Cloning https://github.com/meain/evil-textobj-treesitter.git to /mnt/store/melpa/working/evil-textobj-treesitter/
+Updating /mnt/store/melpa/working/evil-textobj-treesitter/
 Checking out origin/HEAD
-Checking out ae465a107f4a62551ebb5c00f18a2c1d23a7aed2
+Checking out f20598676f99e6fa33759d9807e94f42271c0dfb
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/evil-textobj-treesitter/
-  to /tmp/evil-textobj-treesitterKLOccy/evil-textobj-treesitter-20210815.708
+  to /tmp/evil-textobj-treesitteruJExgV/evil-textobj-treesitter-20210816.355
     evil-textobj-treesitter.el -> evil-textobj-treesitter.el
     queries => queries
-Created evil-textobj-treesitter-20210815.708.tar containing:
-  evil-textobj-treesitter-20210815.708/
-  evil-textobj-treesitter-20210815.708/evil-textobj-treesitter-pkg.el
-  evil-textobj-treesitter-20210815.708/evil-textobj-treesitter.el
-  evil-textobj-treesitter-20210815.708/queries/
-  evil-textobj-treesitter-20210815.708/queries/bash/
-  evil-textobj-treesitter-20210815.708/queries/bash/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/bibtex/
-  evil-textobj-treesitter-20210815.708/queries/bibtex/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/c/
-  evil-textobj-treesitter-20210815.708/queries/c/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/c_sharp/
-  evil-textobj-treesitter-20210815.708/queries/c_sharp/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/cpp/
-  evil-textobj-treesitter-20210815.708/queries/cpp/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/cuda/
-  evil-textobj-treesitter-20210815.708/queries/cuda/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/dart/
-  evil-textobj-treesitter-20210815.708/queries/dart/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/go/
-  evil-textobj-treesitter-20210815.708/queries/go/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/html/
-  evil-textobj-treesitter-20210815.708/queries/html/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/java/
-  evil-textobj-treesitter-20210815.708/queries/java/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/javascript/
-  evil-textobj-treesitter-20210815.708/queries/javascript/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/julia/
-  evil-textobj-treesitter-20210815.708/queries/julia/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/latex/
-  evil-textobj-treesitter-20210815.708/queries/latex/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/lua/
-  evil-textobj-treesitter-20210815.708/queries/lua/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/php/
-  evil-textobj-treesitter-20210815.708/queries/php/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/python/
-  evil-textobj-treesitter-20210815.708/queries/python/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/ql/
-  evil-textobj-treesitter-20210815.708/queries/ql/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/rst/
-  evil-textobj-treesitter-20210815.708/queries/rst/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/ruby/
-  evil-textobj-treesitter-20210815.708/queries/ruby/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/rust/
-  evil-textobj-treesitter-20210815.708/queries/rust/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/tsx/
-  evil-textobj-treesitter-20210815.708/queries/tsx/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/typescript/
-  evil-textobj-treesitter-20210815.708/queries/typescript/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/verilog/
-  evil-textobj-treesitter-20210815.708/queries/verilog/textobjects.scm
-  evil-textobj-treesitter-20210815.708/queries/vue/
-  evil-textobj-treesitter-20210815.708/queries/vue/textobjects.scm
-Built evil-textobj-treesitter in 5.074s, finished at 2021-08-15T19:39:04+0000
+Created evil-textobj-treesitter-20210816.355.tar containing:
+  evil-textobj-treesitter-20210816.355/
+  evil-textobj-treesitter-20210816.355/evil-textobj-treesitter-pkg.el
+  evil-textobj-treesitter-20210816.355/evil-textobj-treesitter.el
+  evil-textobj-treesitter-20210816.355/queries/
+  evil-textobj-treesitter-20210816.355/queries/bash/
+  evil-textobj-treesitter-20210816.355/queries/bash/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/bibtex/
+  evil-textobj-treesitter-20210816.355/queries/bibtex/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/c/
+  evil-textobj-treesitter-20210816.355/queries/c/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/c_sharp/
+  evil-textobj-treesitter-20210816.355/queries/c_sharp/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/cpp/
+  evil-textobj-treesitter-20210816.355/queries/cpp/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/cuda/
+  evil-textobj-treesitter-20210816.355/queries/cuda/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/dart/
+  evil-textobj-treesitter-20210816.355/queries/dart/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/go/
+  evil-textobj-treesitter-20210816.355/queries/go/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/html/
+  evil-textobj-treesitter-20210816.355/queries/html/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/java/
+  evil-textobj-treesitter-20210816.355/queries/java/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/javascript/
+  evil-textobj-treesitter-20210816.355/queries/javascript/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/julia/
+  evil-textobj-treesitter-20210816.355/queries/julia/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/latex/
+  evil-textobj-treesitter-20210816.355/queries/latex/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/lua/
+  evil-textobj-treesitter-20210816.355/queries/lua/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/php/
+  evil-textobj-treesitter-20210816.355/queries/php/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/python/
+  evil-textobj-treesitter-20210816.355/queries/python/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/ql/
+  evil-textobj-treesitter-20210816.355/queries/ql/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/rst/
+  evil-textobj-treesitter-20210816.355/queries/rst/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/ruby/
+  evil-textobj-treesitter-20210816.355/queries/ruby/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/rust/
+  evil-textobj-treesitter-20210816.355/queries/rust/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/tsx/
+  evil-textobj-treesitter-20210816.355/queries/tsx/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/typescript/
+  evil-textobj-treesitter-20210816.355/queries/typescript/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/verilog/
+  evil-textobj-treesitter-20210816.355/queries/verilog/textobjects.scm
+  evil-textobj-treesitter-20210816.355/queries/vue/
+  evil-textobj-treesitter-20210816.355/queries/vue/textobjects.scm
+Built evil-textobj-treesitter in 5.173s, finished at 2021-08-16T05:58:35+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  391 Aug 15 19:39 packages/evil-textobj-treesitter-20210815.708.entry
- 72K -rw-r--r-- 1 root root  70K Aug 15 19:39 packages/evil-textobj-treesitter-20210815.708.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 15 19:39 packages/evil-textobj-treesitter-badge.svg
-4.0K -rw-r--r-- 1 root root  831 Aug 15 19:39 packages/evil-textobj-treesitter-readme.txt
+4.0K -rw-r--r-- 1 root root  391 Aug 16 02:31 packages/evil-textobj-treesitter-20210815.708.entry
+ 72K -rw-r--r-- 1 root root  70K Aug 16 02:31 packages/evil-textobj-treesitter-20210815.708.tar
+4.0K -rw-r--r-- 1 root root  391 Aug 16 05:58 packages/evil-textobj-treesitter-20210816.355.entry
+ 72K -rw-r--r-- 1 root root  70K Aug 16 05:58 packages/evil-textobj-treesitter-20210816.355.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 16 05:58 packages/evil-textobj-treesitter-badge.svg
+4.0K -rw-r--r-- 1 root root  831 Aug 16 05:58 packages/evil-textobj-treesitter-readme.txt
