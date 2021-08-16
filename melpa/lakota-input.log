@@ -3,11 +3,7 @@ Fetcher: git
 Source:  https://git.sr.ht/~shoshin/lakota-input.git
 
 Updating /mnt/store/melpa/working/lakota-input/
-Checking out origin/HEAD
-Checking out b74b9de284a0404a120bb15340def4dd2f9a4779
-Built lakota-input in 5.361s, finished at 2021-08-16T09:47:25+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.3K Aug 16 09:47 packages/lakota-input-20200823.2146.el
-4.0K -rw-r--r-- 1 root root  361 Aug 16 09:47 packages/lakota-input-20200823.2146.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 16 09:47 packages/lakota-input-badge.svg
-4.0K -rw-r--r-- 1 root root  196 Aug 16 09:47 packages/lakota-input-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://git.sr.ht/~shoshin/lakota-input.git/': Failed to connect to git.sr.ht port 443: Connection timed out
+error: Could not fetch origin
+
