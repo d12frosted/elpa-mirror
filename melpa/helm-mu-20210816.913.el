@@ -5,8 +5,8 @@
 ;; Author: Titus von der Malsburg <malsburg@posteo.de>
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
 ;; URL: https://github.com/emacs-helm/helm-mu
-;; Package-Version: 20210104.1214
-;; Package-Commit: 392a8c11ab27b625d9f863cdde14e09893401b15
+;; Package-Version: 20210816.913
+;; Package-Commit: b85019d01815a4b58d6016c3a30fefa60d8363f2
 ;; Version: 1.0.0
 ;; Package-Requires: ((helm "1.5.5"))
 
@@ -236,10 +236,10 @@ than '~/.mu' to store your data"
   (helm-build-in-buffer-source "Search contacts with mu"
     :data #'helm-mu-contacts-init
     :filtered-candidate-transformer #'helm-mu-contacts-transformer
-    :action '(("Compose email addressed to selected contacts." . helm-mu-compose-mail)
-              ("Get the emails from/to the selected contacts." . helm-mu-action-get-contact-emails)
-              ("Insert contacts at point." . helm-mu-action-insert-contacts)
-              ("Copy contacts to clipboard." . helm-mu-action-copy-contacts-to-clipboard))))
+    :action '(("Compose email to contact(s)"      . helm-mu-compose-mail)
+              ("Search emails from/to contact(s)" . helm-mu-action-get-contact-emails)
+              ("Insert contact(s) at point"       . helm-mu-action-insert-contacts)
+              ("Copy contact(s) to clipboard"     . helm-mu-action-copy-contacts-to-clipboard))))
 
 
 
@@ -413,7 +413,9 @@ address.  The name column has a predefined width."
   (let* ((cand (split-string candidate "\t"))
          (name (cadr cand))
          (address (car cand)))
-    (concat name " <" address ">")))
+    (if (string-match "," name)
+        (format "\"%s\" <%s>" name address)
+      (format "%s <%s>" name address))))
 
 
 (defun helm-mu-open-headers-view ()
