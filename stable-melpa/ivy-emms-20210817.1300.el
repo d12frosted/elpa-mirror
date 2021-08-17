@@ -3,9 +3,9 @@
 ;; Copyright (C) 2020  Fran Burstall
 
 ;; Author: Fran Burstall <fran.burstall@gmail.com>
-;; Version: 0.1
-;; Package-Version: 20200629.801
-;; Package-Commit: 6f547f9f3dcbf0d5b88595760b3505c7195dc96b
+;; Version: 0.2
+;; Package-Version: 20210817.1300
+;; Package-Commit: dfde98c3bdad8136709eac8382ba048fafdcc6ac
 ;; Package-Requires: ((ivy "0.13.0") (emms "0.0") (emacs "24.4"))
 ;; Keywords: multimedia
 ;; URL: https://github.com/franburstall/ivy-emms
@@ -99,6 +99,14 @@ An alist whose cons cells have a search key as car and the path to the track as 
 (defvar ivy-emms-history nil
   "History for `ivy-emms'.")
 
+;;** Keymap
+(defvar ivy-emms-keymap
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "C-SPC") 'ivy-mark)
+    (define-key map (kbd "S-SPC") 'ivy-unmark)
+    map)
+  "Keymap for `ivy-emms'.")
+
 ;;* Actions
 
 ;;** Defaults
@@ -155,6 +163,7 @@ With a prefix ARG, invalidate the cache and reread the list of tracks."
 		  (hash-table-keys emms-cache-db))))
   (let ((current-prefix-arg nil))
     (ivy-read "Track: " ivy-emms-collection
+	      :keymap ivy-emms-keymap
 	      :action ivy-emms-default-action
 	      :caller 'ivy-emms
 	      :history 'ivy-emms-history
