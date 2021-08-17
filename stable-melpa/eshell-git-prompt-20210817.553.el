@@ -4,8 +4,8 @@
 
 ;; Author: Chunyang Xu <mail@xuchunyang.me>
 ;; URL: https://github.com/xuchunyang/eshell-git-prompt
-;; Package-Version: 20200109.2250
-;; Package-Commit: 48ee35774c9b8d0e2d96110e3ae84bac60f43dfd
+;; Package-Version: 20210817.553
+;; Package-Commit: f638ba32b661d15895e767305f59f41eb01197ae
 ;; Package-Requires: ((emacs "24.1") (cl-lib "0.5") (dash "2.11.0"))
 ;; Keywords: eshell git
 ;; Version: 0.1.2
@@ -75,6 +75,9 @@
     (powerline
      eshell-git-prompt-powerline
      eshell-git-prompt-powerline-regexp)
+    (multiline
+     eshell-git-prompt-multiline
+     eshell-git-prompt-multiline-regexp)
     ;; Only a single $
     (simple
      eshell-git-prompt-simple
@@ -155,6 +158,23 @@ You can add your own theme to this list, then run
 (defface eshell-git-prompt-powerline-not-clean-face
   '((t :background "indian red"))
   "Face for git branch (not clean) in eshell git prompt theme `powerline`"
+  :group 'eshell-faces)
+
+(defface eshell-git-prompt-multiline-secondary-face
+  '((((class color) (background light)) :foreground "light gray")
+    (((class color) (background  dark)) :foreground "dim gray"))
+  "Face for secondary part in eshell git prompt theme `multiline`. e.g. separator, horizontal line, date."
+  :group 'eshell-faces)
+
+(defface eshell-git-prompt-multiline-command-face
+  '((((class color) (background light)) :foreground "slate blue")
+    (((class color) (background  dark)) :foreground "gold"))
+  "Face for command user typed in eshell git prompt theme `multiline`."
+  :group 'eshell-faces)
+
+(defface eshell-git-prompt-multiline-sign-face
+  '((t :foreground "deep pink"))
+  "Face for prompt sign in eshell git prompt theme `multiline`."
   :group 'eshell-faces)
 
 
@@ -501,6 +521,35 @@ It looks like:
      (propertize "$" 'invisible t) " ")))
 
 (defconst eshell-git-prompt-powerline-regexp "^[^$\n]*\\\$ ")
+
+(defun eshell-git-prompt-multiline ()
+  "Eshell Git prompt inspired by spaceship-prompt."
+  (let (separator hr dir git git-dirty time sign command)
+    (setq separator (with-face " | " 'eshell-git-prompt-multiline-secondary-face))
+    (setq hr (with-face (concat "\n" (make-string (/ (window-total-width) 2) ?─) "\n") 'eshell-git-prompt-multiline-secondary-face))
+    (setq dir
+          (concat
+           (with-face "🗀" 'eshell-git-prompt-directory-face)
+           (concat  (abbreviate-file-name (eshell/pwd)))))
+    (setq git
+          (concat (with-face "⎇" 'eshell-git-prompt-exit-success-face)
+                  (concat (eshell-git-prompt--branch-name))))
+    (setq git-dirty
+          (when (eshell-git-prompt--branch-name)
+            (if (eshell-git-prompt--collect-status)
+                (with-face " ✎" 'eshell-git-prompt-modified-face)
+              (with-face " ✔" 'eshell-git-prompt-exit-success-face))))
+    (setq time (with-face (format-time-string "%I:%M:%S %p") 'eshell-git-prompt-multiline-secondary-face))
+    (setq sign
+          (if (= (user-uid) 0)
+              (with-face "\n#" 'eshell-git-prompt-multiline-sign-face)
+            (with-face "\nλ" 'eshell-git-prompt-multiline-sign-face)))
+    (setq command (with-face " " 'eshell-git-prompt-multiline-command-face))
+
+    ;; Build prompt
+    (concat hr dir separator git git-dirty separator time sign command)))
+
+(defconst eshell-git-prompt-multiline-regexp "^[^$\n]*λ ")
 
 (defvar eshell-git-prompt-current-theme nil)
 
