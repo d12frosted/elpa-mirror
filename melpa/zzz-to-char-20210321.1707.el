@@ -5,7 +5,7 @@
 ;; Author: Mark Karpov <markkarpov92@gmail.com>
 ;; URL: https://github.com/mrkkrp/zzz-to-char
 ;; Package-Version: 20210321.1707
-;; Package-Commit: 18d26571b91a9c56b6a7e0d2a58188e833ab5d0f
+;; Package-Commit: fa87da4ac95a1d7fe8aa9198c5568debee8d5627
 ;; Version: 0.1.3
 ;; Package-Requires: ((emacs "24.4") (cl-lib "0.5")(avy "0.3.0"))
 ;; Keywords: convenience

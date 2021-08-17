@@ -5,7 +5,7 @@
 ;; Author: overdr0ne
 ;; Version: 1.0
 ;; Package-Version: 20210812.1631
-;; Package-Commit: c1cf102ea948599dda795a217e60461cd6324edd
+;; Package-Commit: 35a4b0f45437309a10e2c72e523012c2e2eded07
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools
 ;; URL: https://github.com/Overdr0ne/gumshoe

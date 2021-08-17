@@ -4,10 +4,22 @@ Source:  https://github.com/vapniks/syslog-mode.git
 
 Updating /mnt/store/melpa/working/syslog-mode/
 Checking out origin/HEAD
-Checking out d2cfad78839a8bfda6b5ec8b1b40f4a842d0db4e
-Built syslog-mode in 6.510s, finished at 2021-08-16T13:45:31+0000
+Checking out 136025d372c8fe8b410e4a4b8c56ac08a8e652c6
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/syslog-mode/
+  to /tmp/syslog-modeKsSIGY/syslog-mode-20210817.232
+    strace_notes.el -> strace_notes.el
+    syslog-mode.el -> syslog-mode.el
+Created syslog-mode-20210817.232.tar containing:
+  syslog-mode-20210817.232/
+  syslog-mode-20210817.232/strace_notes.el
+  syslog-mode-20210817.232/syslog-mode-pkg.el
+  syslog-mode-20210817.232/syslog-mode.el
+Built syslog-mode in 5.065s, finished at 2021-08-17T03:36:00+0000
  ✓ Success:
- 84K -rw-r--r-- 1 root root  81K Aug 16 13:45 packages/syslog-mode-20210812.1155.el
-4.0K -rw-r--r-- 1 root root  417 Aug 16 13:45 packages/syslog-mode-20210812.1155.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 16 13:45 packages/syslog-mode-badge.svg
-   0 -rw-r--r-- 1 root root    0 Aug 16 13:45 packages/syslog-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  414 Aug 17 00:08 packages/syslog-mode-20210816.2111.entry
+ 92K -rw-r--r-- 1 root root  90K Aug 17 00:08 packages/syslog-mode-20210816.2111.tar
+4.0K -rw-r--r-- 1 root root  413 Aug 17 03:35 packages/syslog-mode-20210817.232.entry
+ 92K -rw-r--r-- 1 root root  90K Aug 17 03:35 packages/syslog-mode-20210817.232.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 17 03:36 packages/syslog-mode-badge.svg
+   0 -rw-r--r-- 1 root root    0 Aug 17 03:35 packages/syslog-mode-readme.txt
