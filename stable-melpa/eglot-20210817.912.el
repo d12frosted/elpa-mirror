@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2020 Free Software Foundation, Inc.
 
 ;; Version: 1.7
-;; Package-Version: 20210721.2323
-;; Package-Commit: 194b178ef41ccd3d937983f3829d44a546bb24d6
+;; Package-Version: 20210817.912
+;; Package-Commit: a697084d8dfe29783985f298d38863ea5d59c632
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -131,7 +131,10 @@ chosen (interactively or automatically)."
                              nil t nil nil (car (car available)))
                             available #'equal)))
                      ((cdr (car available)))
-                     (t (funcall err)))))
+                     (t
+                      ;; Don't error when used interactively, let the
+                      ;; Eglot prompt the user for alternative (github#719)
+                      nil))))
             (t
              (cl-loop for (p . args) in listified
                       for probe = (eglot--executable-find p t)
@@ -2091,10 +2094,13 @@ Calls REPORT-FN (or arranges for it to be called) when the server
 publishes diagnostics.  Between calls to this function, REPORT-FN
 may be called multiple times (respecting the protocol of
 `flymake-backend-functions')."
-  (setq eglot--current-flymake-report-fn report-fn)
-  ;; Report anything unreported
-  (when eglot--unreported-diagnostics
-    (eglot--report-to-flymake (cdr eglot--unreported-diagnostics))))
+  (cond (eglot--managed-mode
+         (setq eglot--current-flymake-report-fn report-fn)
+         ;; Report anything unreported
+         (when eglot--unreported-diagnostics
+           (eglot--report-to-flymake (cdr eglot--unreported-diagnostics))))
+        (t
+         (funcall report-fn nil))))
 
 (defun eglot--report-to-flymake (diags)
   "Internal helper for `eglot-flymake-backend'."

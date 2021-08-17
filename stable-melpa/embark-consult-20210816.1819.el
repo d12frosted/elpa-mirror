@@ -5,7 +5,7 @@
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
 ;; Package-Version: 20210816.1819
-;; Package-Commit: 2192ddeffcf1e8555091b62cf547dc80c110a33a
+;; Package-Commit: 7c6172cd1578fb7711591cf890c10ed2234226bd
 ;; Version: 0.1
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "25.1") (embark "0.9") (consult "0.1"))
