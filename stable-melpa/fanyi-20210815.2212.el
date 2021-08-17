@@ -5,7 +5,7 @@
 ;; Author: Zhiwei Chen <condy0919@gmail.com>
 ;; Keywords: convenience, tools
 ;; Package-Version: 20210815.2212
-;; Package-Commit: b7725b4e1ec64d428cf8378b4d5be317d13cf13a
+;; Package-Commit: 0c67a57f0dedb43676298050291190969d0f2ca7
 ;; URL: https://github.com/condy0919/fanyi.el
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "27.1") (s "1.12.0"))
