@@ -1,0 +1,11 @@
+(ox-gemini .
+	   [(20210819 437)
+	    ((emacs
+	      (26 1)))
+	    "Output gemini formatted documents from org-mode" single
+	    ((:commit . "b69e7418fdd12c6228079886d42c12fe1342727c")
+	     (:authors
+	      ("Justin Abrahms" . "justin@abrah.ms"))
+	     (:maintainer "Justin Abrahms" . "justin@abrah.ms")
+	     (:keywords "lisp" "gemini")
+	     (:url . "https://git.sr.ht/~abrahms/ox-gemini"))])
