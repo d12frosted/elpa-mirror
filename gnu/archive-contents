@@ -388,7 +388,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (consult .
-	  [(0 10)
+	  [(0 11)
 	   ((emacs
 	     (26 1)))
 	   "Consulting completing-read" tar
@@ -646,7 +646,7 @@
 	       ("Leo Liu" . "sdl.web@gmail.com"))
 	      (:keywords "killing" "convenience"))])
  (ebdb .
-       [(0 7 1)
+       [(0 8)
 	((emacs
 	  (25 1))
 	 (seq
