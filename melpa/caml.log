@@ -4,40 +4,34 @@ Source:  https://github.com/ocaml/caml-mode.git
 
 Updating /mnt/store/melpa/working/caml/
 Checking out origin/HEAD
-Checking out 38ebde12d3d529e6ef8078967997d32226e69e82
+Checking out 118fade8fac4477226f2f2db134397416afb63a2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/caml/
-  to /tmp/camlzXOoV1/caml-20190413.1205
-    caml-compat.el -> caml-compat.el
+  to /tmp/caml2i6COa/caml-20210820.759
     caml-emacs.el -> caml-emacs.el
     caml-font-old.el -> caml-font-old.el
     caml-font.el -> caml-font.el
     caml-help.el -> caml-help.el
-    caml-hilit.el -> caml-hilit.el
-    caml-mode-site-file.el -> caml-mode-site-file.el
     caml-types.el -> caml-types.el
     caml-xemacs.el -> caml-xemacs.el
     caml.el -> caml.el
     camldebug.el -> camldebug.el
     inf-caml.el -> inf-caml.el
-Created caml-20190413.1205.tar containing:
-  caml-20190413.1205/
-  caml-20190413.1205/caml-compat.el
-  caml-20190413.1205/caml-emacs.el
-  caml-20190413.1205/caml-font-old.el
-  caml-20190413.1205/caml-font.el
-  caml-20190413.1205/caml-help.el
-  caml-20190413.1205/caml-hilit.el
-  caml-20190413.1205/caml-mode-site-file.el
-  caml-20190413.1205/caml-pkg.el
-  caml-20190413.1205/caml-types.el
-  caml-20190413.1205/caml-xemacs.el
-  caml-20190413.1205/caml.el
-  caml-20190413.1205/camldebug.el
-  caml-20190413.1205/inf-caml.el
-Built caml in 3.322s, finished at 2021-08-20T01:31:59+0000
+Created caml-20210820.759.tar containing:
+  caml-20210820.759/
+  caml-20210820.759/caml-emacs.el
+  caml-20210820.759/caml-font-old.el
+  caml-20210820.759/caml-font.el
+  caml-20210820.759/caml-help.el
+  caml-20210820.759/caml-pkg.el
+  caml-20210820.759/caml-types.el
+  caml-20210820.759/caml-xemacs.el
+  caml-20210820.759/caml.el
+  caml-20210820.759/camldebug.el
+  caml-20210820.759/inf-caml.el
+Built caml in 3.237s, finished at 2021-08-20T14:38:20+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  386 Aug 20 01:31 packages/caml-20190413.1205.entry
-232K -rw-r--r-- 1 root root 230K Aug 20 01:31 packages/caml-20190413.1205.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 20 01:31 packages/caml-badge.svg
-4.0K -rw-r--r-- 1 root root  455 Aug 20 01:31 packages/caml-readme.txt
+4.0K -rw-r--r-- 1 root root  423 Aug 20 14:38 packages/caml-20210820.759.entry
+220K -rw-r--r-- 1 root root 220K Aug 20 14:38 packages/caml-20210820.759.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 20 14:38 packages/caml-badge.svg
+4.0K -rw-r--r-- 1 root root  455 Aug 20 14:38 packages/caml-readme.txt

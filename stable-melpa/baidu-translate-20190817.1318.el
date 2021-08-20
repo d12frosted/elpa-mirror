@@ -4,6 +4,8 @@
 
 ;; Author:  <LiShizhen gsu4017@gmail.com>
 ;; Version: 1.0
+;; Package-Version: 20190817.1318
+;; Package-Commit: b04a74d09ff5e3fbefd1b39b2abe79a9e272321a
 ;; URL: https://github.com/liShiZhensPi/baidu-translate
 
 ;; This file is not part of GNU Emacs

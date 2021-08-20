@@ -16,14 +16,14 @@ Purpose:
  In addition to the index table, org-index introduces the concept of
  references: These are decorated numbers (e.g. 'R237' or '--455--');
  they are well suited to be used outside of org, e.g. in folder names,
- ticket systems or on printed documents. Use of references is optional.
+ ticket systems or on printed documents.  Use of references is optional.
 
  On first invocation org-index will assist you in creating the index
- table. The index table is a normal org table, that needs to be stored
+ table.  The index table is a normal org table, that needs to be stored
  in a dedicated node anywhere within your org files.
 
  To start using your index, invoke the subcommand 'add' to create index
- entries and 'occur' to find them. The first call to 'add' will trigger
+ entries and 'occur' to find them.  The first call to 'add' will trigger
  the one-time assistant to create the index table.
 
  The set of columns within the index-table is fixed (see variable
