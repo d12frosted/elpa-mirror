@@ -1,5 +1,7 @@
 The `setup` macro simplifies repetitive configuration patterns, by
-providing context-sensitive local macros in `setup` bodies.
+providing context-sensitive local macros in `setup` bodies.  These
+macros can be mixed with regular elisp code without any issues,
+allowing for flexible and terse configurations.
 
 For example, these macros:
 
@@ -12,17 +14,20 @@ For example, these macros:
      (:also-load dired-x)
      (:option (prepend dired-guess-shell-alist-user) '("" "xdg-open")
               dired-dwim-target t)
-     (:hook auto-revert-mode))
+     (unless global-auto-revert-mode
+       (:hook auto-revert-mode)))
 
    (setup (:package paredit)
      (:hide-mode)
+     (setq paredit-override-check-parens-function (lambda (_) t))
      (:hook-into scheme-mode lisp-mode))
 
-will be replaced with the functional equivalent of
+expanded to the to the functional equivalent of
 
-   (global-set-key (kbd "C-c s") #'shell)
-   (with-eval-after-load 'shell
-     (define-key shell-mode-map (kbd "C-c s") #'bury-buffer))
+   (let ((key "C-c s"))
+     (global-set-key (kbd key) #'shell)
+     (with-eval-after-load 'shell
+       (define-key shell-mode-map (kbd key) #'bury-buffer)))
 
    (with-eval-after-load 'dired
      (require 'dired-x))
@@ -30,15 +35,20 @@ will be replaced with the functional equivalent of
                            (cons '("" "xdg-open")
                                  dired-guess-shell-alist-user))
    (customize-set-variable 'dired-dwim-target t)
-   (add-hook 'dired-mode-hook #'auto-revert-mode)
+   (unless global-auto-revert-mode
+     (add-hook 'dired-mode-hook #'auto-revert-mode))
 
    (unless (package-install-p 'paredit)
      (package-install 'paredit))
    (setq minor-mode-alist
          (delq (assq 'paredit-mode minor-mode-alist)
                minor-mode-alist))
+   (setq paredit-override-check-parens-function (lambda (_) t))
    (add-hook 'scheme-mode-hook #'paredit-mode)
    (add-hook 'lisp-mode-hook #'paredit-mode)
 
 Additional "keywords" can be defined using `setup-define'.  All
 known keywords are documented in the docstring for `setup'.
+
+More information can be found on Emacs Wiki:
+https://www.emacswiki.org/emacs/SetupEl

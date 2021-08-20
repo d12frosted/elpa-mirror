@@ -9,7 +9,7 @@ capabilities for an associated Ansys MAPDL solver process.
 
 The mode's capabilities are sophisticated but the documentation is
 targeted for Ansys users with little Emacs experience.  An online
-version of its documention can be found at
+version of its document ion can be found at
 https://dieter-wilhelm.github.io/apdl-mode/.
 
  The code is available on
