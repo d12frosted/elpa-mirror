@@ -1,1 +1,0 @@
-Automatically keep windows balanced.
