@@ -1,11 +1,9 @@
 (org-mime .
-	  [(20210309 1028)
+	  [(20210821 341)
 	   ((emacs
-	     (25 1))
-	    (cl-lib
-	     (0 5)))
+	     (25 1)))
 	   "org html export for text/html MIME emails" single
-	   ((:commit . "eb21c02ba8f97fe69c14dc657a7883b982664649")
+	   ((:commit . "21692f16ce436d9d2a546230f1e124beec0be7ee")
 	    (:authors
 	     ("Eric Schulte"))
 	    (:maintainer "Chen Bin (redguardtoo)")
