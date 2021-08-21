@@ -1,9 +1,17 @@
 
 Add the following to your .emacs file:
-(require 'highlight-parentheses)
+
+    (require 'highlight-parentheses)
 
 Enable the mode using `M-x highlight-parentheses-mode' or by adding it to a
-hook such as `prog-mode-hook'.
+hook such as `prog-mode-hook'.  You can also enable
+`global-highlight-parentheses-mode' which enables it in all buffers
+automatically.  Additionally, you can
+
+    (add-hook 'minibuffer-setup-hook #'highlight-parentheses-minibuffer-setup)
+
+in order to enable it also in the minibuffer, e.g., when input is read from
+the minibuffer.
 
 The look of the highlighted parens can be customized using these options:
 
