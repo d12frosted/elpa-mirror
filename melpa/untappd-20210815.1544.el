@@ -5,7 +5,7 @@
 ;; Author: Matthieu Petiteau <matt@smallwat3r.com>
 ;; URL: https://github.com/smallwat3r/untappd.el
 ;; Package-Version: 20210815.1544
-;; Package-Commit: 1aa872b7e9136e9c21c6fb2d08664491db53117a
+;; Package-Commit: 493d1776d6456b00bf017e71fac9b0721d8cc912
 ;; Package-Requires: ((emacs "26.1") (request "0.3.2") (emojify "1.2.1"))
 ;; Version: 0.0.1
 

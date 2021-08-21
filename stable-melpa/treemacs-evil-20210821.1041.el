@@ -4,8 +4,8 @@
 
 ;; Author: Alexander Miller <alexanderm@web.de>
 ;; Package-Requires: ((emacs "26.1") (evil "1.2.12") (treemacs "0.0"))
-;; Package-Version: 20210819.949
-;; Package-Commit: dd5ecbc8a45e2f3e3fd1e58da2ef9ab0c7bb91e0
+;; Package-Version: 20210821.1041
+;; Package-Commit: 276f4415b1decea626c1ffb14f3a66919bda907b
 ;; Version: 0
 ;; Homepage: https://github.com/Alexander-Miller/treemacs
 
@@ -78,7 +78,7 @@ Then call ORIG-FUN with its ARGS and reopen treemacs if it was open before."
 (define-key evil-treemacs-state-map (kbd "M-J") #'treemacs-next-line-other-window)
 (define-key evil-treemacs-state-map (kbd "M-K") #'treemacs-previous-line-other-window)
 (define-key evil-treemacs-state-map (kbd "th")  #'treemacs-toggle-show-dotfiles)
-(define-key evil-treemacs-state-map (kbd "ti")  #'treemacs-toggle-show-gitignored-files)
+(define-key evil-treemacs-state-map (kbd "ti")  #'treemacs-hide-gitignored-files-mode)
 (define-key evil-treemacs-state-map (kbd "tw")  #'treemacs-toggle-fixed-width)
 (define-key evil-treemacs-state-map (kbd "tv")  #'treemacs-fringe-indicator-mode)
 (define-key evil-treemacs-state-map (kbd "tf")  #'treemacs-follow-mode)

@@ -8,6 +8,8 @@
 ;;; Maintainer: Chen Bin <chenbin.sh AT gmail DOT com>
 ;;; Created: 15 Feb 2014
 ;;; Version: 1.2.0
+;; Package-Version: 20200117.615
+;; Package-Commit: 0dedaf4753fbe8cdbab14aa85f05d7673cbee8b6
 ;;; URL: https://github.com/redguardtoo/js-comint
 ;;; Package-Requires: ((emacs "24.3"))
 ;;; Keywords: javascript, node, inferior-mode, convenience
