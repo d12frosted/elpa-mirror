@@ -5,8 +5,8 @@
 ;; Author: Stephane Zermatten <szermatt@gmx.net>
 ;; Maintainer: Stephane Zermatten <szermatt@gmail.com>
 ;; Version: 3.1.0
-;; Package-Version: 20210615.1601
-;; Package-Commit: d9c97b741db389ceb127b0f0180b2087cb24d0ef
+;; Package-Version: 20210821.1941
+;; Package-Commit: c5eaeed156ab906190c662d491269230967104b1
 ;; Keywords: shell bash bash-completion
 ;; URL: http://github.com/szermatt/emacs-bash-completion
 ;; Package-Requires: ((emacs "24.3"))
@@ -1704,13 +1704,6 @@ using the current Emacs completion style."
                                               (bash-completion--unparsed-stub comp)) "" str)))
             (cond
              ((null action) (try-completion completion-string result predicate))
-             ((and (eq action t) (equal "" completion-string) predicate)
-              (delq nil (mapcar
-                         (lambda (elt)
-                           (when (funcall predicate elt) elt))
-                         result)))
-             ((and (eq action t) (equal "" completion-string))
-              result)
              ((eq action t)
               (all-completions completion-string result predicate))
              (t (test-completion str result predicate)))))))))

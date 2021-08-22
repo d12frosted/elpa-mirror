@@ -10,8 +10,8 @@
 ;;       Artur Malabarba <bruce.connor.am@gmail.com>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://github.com/clojure-emacs/clojure-mode
-;; Package-Version: 20210706.1318
-;; Package-Commit: a4c9b25eed6c5fcbc5f214f80fc885e6ba8431ab
+;; Package-Version: 20210821.2010
+;; Package-Commit: e1dc7caee76d117a366f8b8b1c2da7e6400636a8
 ;; Keywords: languages clojure clojurescript lisp
 ;; Version: 5.13.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -70,6 +70,7 @@
 (require 'cl-lib)
 (require 'imenu)
 (require 'newcomment)
+(require 'thingatpt)
 (require 'align)
 (require 'subr-x)
 (require 'lisp-mnt)
@@ -481,11 +482,21 @@ This includes #fully.qualified/my-ns[:kw val] and #::my-ns{:kw
 val} as of Clojure 1.9.")
 
 (make-obsolete-variable 'clojure--collection-tag-regexp nil "5.12.0")
-(make-obsolete #'clojure-no-space-after-tag #'clojure-space-for-delimiter-p "5.12.0")
+(make-obsolete 'clojure-no-space-after-tag 'clojure-space-for-delimiter-p "5.12.0")
 
 (declare-function paredit-open-curly "ext:paredit" t t)
 (declare-function paredit-close-curly "ext:paredit" t t)
 (declare-function paredit-convolute-sexp "ext:paredit")
+
+(defvar clojure--let-regexp
+  "\(\\(when-let\\|if-let\\|let\\)\\(\\s-*\\|\\[\\)"
+  "Regexp matching let like expressions, i.e. \"let\", \"when-let\", \"if-let\".
+
+The first match-group is the let expression.
+
+The second match-group is the whitespace or the opening square
+bracket if no whitespace between the let expression and the
+bracket.")
 
 (defun clojure--replace-let-bindings-and-indent (&rest _)
   "Replace let bindings and indent."
@@ -1124,7 +1135,7 @@ will align the values like this:
 (defconst clojure--align-separator-newline-regexp "^ *$")
 
 (defcustom clojure-align-separator clojure--align-separator-newline-regexp
-  "The separator that will be passed to `align-region' when performing vertical alignment."
+  "Separator passed to `align-region' when performing vertical alignment."
   :package-version '(clojure-mode . "5.10")
   :type `(choice (const :tag "Make blank lines prevent vertical alignment from happening."
                         ,clojure--align-separator-newline-regexp)
@@ -1556,6 +1567,53 @@ This function also returns nil meaning don't specify the indentation."
   "Instruct `clojure-indent-function' to indent the body of SYM by INDENT."
   (put sym 'clojure-indent-function indent))
 
+(defun clojure--maybe-quoted-symbol-p (x)
+  "Check that X is either a symbol or a quoted symbol like :foo or 'foo."
+  (or (symbolp x)
+      (and (listp x)
+           (= 2 (length x))
+           (eq 'quote (car x))
+           (symbolp (cadr x)))))
+
+(defun clojure--valid-unquoted-indent-spec-p (spec)
+  "Check that the indentation SPEC is valid.
+Validate it with respect to
+https://docs.cider.mx/cider/indent_spec.html e.g. (2 :form
+:form (1)))."
+  (or (integerp spec)
+      (memq spec '(:form :defn))
+      (and (listp spec)
+           (not (null spec))
+           (or (integerp (car spec))
+               (memq (car spec) '(:form :defn)))
+           (seq-every-p 'clojure--valid-unquoted-indent-spec-p (cdr spec)))))
+
+(defun clojure--valid-indent-spec-p (spec)
+  "Check that the indentation SPEC (quoted if a list) is valid.
+Validate it with respect to
+https://docs.cider.mx/cider/indent_spec.html e.g. (2 :form
+:form (1)))."
+  (or (integerp spec)
+      (and (keywordp spec) (memq spec '(:form :defn)))
+      (and (listp spec)
+           (= 2 (length spec))
+           (eq 'quote (car spec))
+           (clojure--valid-unquoted-indent-spec-p (cadr spec)))))
+
+(defun clojure--valid-put-clojure-indent-call-p (exp)
+  "Check that EXP is a valid `put-clojure-indent' expression.
+For example: (put-clojure-indent 'defrecord '(2 :form :form (1))."
+  (unless (and (listp exp)
+               (= 3 (length exp))
+               (eq 'put-clojure-indent (nth 0 exp))
+               (clojure--maybe-quoted-symbol-p (nth 1 exp))
+               (clojure--valid-indent-spec-p (nth 2 exp)))
+    (error "Unrecognized put-clojure-indent call: %s" exp))
+  t)
+
+(put 'put-clojure-indent 'safe-local-eval-function
+     'clojure--valid-put-clojure-indent-call-p)
+
 (defmacro define-clojure-indent (&rest kvs)
   "Call `put-clojure-indent' on a series, KVS."
   `(progn
@@ -1789,6 +1847,9 @@ If PATH is nil, use the path to the file backing the current buffer."
   (goto-char (point-min))
   (clojure-insert-ns-form-at-point))
 
+(defvar-local clojure-cached-ns nil
+  "A buffer ns cache used to speed up ns-related operations.")
+
 (defun clojure-update-ns ()
   "Update the namespace of the current buffer.
 Useful if a file has been renamed."
@@ -1900,9 +1961,6 @@ the cached value will be updated automatically."
   :type 'boolean
   :safe #'booleanp
   :package-version '(clojure-mode . "5.8.0"))
-
-(defvar-local clojure-cached-ns nil
-  "A buffer ns cache used to speed up ns-related operations.")
 
 (defun clojure--find-ns-in-direction (direction)
   "Return the nearest namespace in a specific DIRECTION.
@@ -2495,16 +2553,6 @@ See: https://github.com/clojure-emacs/clj-refactor.el/wiki/cljr-cycle-if"
       (insert ")"))))
 
 ;;; let related stuff
-
-(defvar clojure--let-regexp
-  "\(\\(when-let\\|if-let\\|let\\)\\(\\s-*\\|\\[\\)"
-  "Regexp matching let like expressions, i.e. \"let\", \"when-let\", \"if-let\".
-
-The first match-group is the let expression.
-
-The second match-group is the whitespace or the opening square
-bracket if no whitespace between the let expression and the
-bracket.")
 
 (defun clojure--goto-let ()
   "Go to the beginning of the nearest let form."

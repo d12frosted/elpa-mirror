@@ -1,4 +1,15 @@
-# highlight-parentheses.el: Highlights parentheses surrounding point in Emacs
+# highlight-parentheses: Highlights parentheses surrounding point in Emacs
+
+`highlight-parentheses.el` dynamically highlights the parentheses surrounding
+point based on nesting-level using configurable lists of colors, background
+colors, and other properties.
+
+## Screenshot
+
+See how parens are fontified in different shades of red based on nesting level
+if they contain point.
+
+![A screenshot showing highlight-parentheses.el in action](screenshot.png)
 
 ## Usage
 
@@ -15,11 +26,29 @@ like so:
 (add-hook 'prog-mode-hook #'highlight-parentheses-mode)
 ```
 
-## Screenshot
+There is also the global minor mode `global-highlight-parentheses-mode` which
+enables the mode in every buffer.
 
-See how parens are fontified reddish if they contain point.
+Furthermore, you can enable it also in the minibuffer using the following
+snippet:
 
-![A screenshot showing highlight-parentheses.el in action](screenshot.png)
+```elisp
+(add-hook 'minibuffer-setup-hook #'highlight-parentheses-minibuffer-setup)
+```
+
+## Installation
+
+The package is available from both [NonGNU ELPA](https://elpa.nongnu.org/), and
+[MELPA](https://melpa.org/).  With Emacs 28 (not yet released), NonGNU ELPA is
+enabled by default, so you can just do `M-x package-install RET
+highlight-parentheses RET`.
+
+If you are using `use-package`, you can use the following recipe:
+
+```elisp
+(use-package highlight-parentheses
+  :ensure t)
+```
 
 ## Questions & Patches
 
