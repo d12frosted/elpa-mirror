@@ -3,7 +3,3 @@ Fetcher: gitlab
 Source:  https://gitlab.com/edvorg/use-package-el-get.git
 
 Updating /mnt/store/melpa/working/use-package-el-get/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: could not read Username for 'https://gitlab.com': No such device or address
-error: Could not fetch origin
-
