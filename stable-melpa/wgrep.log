@@ -5,29 +5,29 @@ Source:  https://github.com/mhayashi1120/Emacs-wgrep.git
 Updating /mnt/store/melpa/working/wgrep/
 Checking out origin/HEAD
 Checking out f9687c28bbc2e84f87a479b6ce04407bb97cfb23
-Built wgrep in 3.692s, finished at 2021-08-22T09:31:11+0000
+Built wgrep in 3.823s, finished at 2021-08-22T14:48:09+0000
  ✓ Success:
- 40K -rw-r--r-- 1 root root  40K Aug 22 09:31 packages/wgrep-20210322.2207.el
-4.0K -rw-r--r-- 1 root root  402 Aug 22 09:31 packages/wgrep-20210322.2207.entry
-4.0K -rw-r--r-- 1 root root 3.5K Aug 22 09:31 packages/wgrep-ack-20200128.109.el
-4.0K -rw-r--r-- 1 root root  470 Aug 22 09:31 packages/wgrep-ack-20200128.109.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 22 09:31 packages/wgrep-ack-badge.svg
-4.0K -rw-r--r-- 1 root root   97 Aug 22 09:31 packages/wgrep-ack-readme.txt
-4.0K -rw-r--r-- 1 root root  295 Aug 22 09:31 packages/wgrep-ack.log
-8.0K -rw-r--r-- 1 root root 7.8K Aug 22 06:54 packages/wgrep-ag-20200217.1028.el
-4.0K -rw-r--r-- 1 root root  447 Aug 22 06:54 packages/wgrep-ag-20200217.1028.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 22 06:54 packages/wgrep-ag-badge.svg
-4.0K -rw-r--r-- 1 root root   84 Aug 22 06:54 packages/wgrep-ag-readme.txt
-4.0K -rw-r--r-- 1 root root  136 Aug 22 09:31 packages/wgrep-ag.log
-4.0K -rw-r--r-- 1 root root 1.2K Aug 22 09:31 packages/wgrep-badge.svg
-4.0K -rw-r--r-- 1 root root 3.7K Aug 22 06:54 packages/wgrep-helm-20210322.2148.el
-4.0K -rw-r--r-- 1 root root  483 Aug 22 06:54 packages/wgrep-helm-20210322.2148.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 22 06:54 packages/wgrep-helm-badge.svg
-4.0K -rw-r--r-- 1 root root   98 Aug 22 06:54 packages/wgrep-helm-readme.txt
-4.0K -rw-r--r-- 1 root root  140 Aug 22 09:31 packages/wgrep-helm.log
-4.0K -rw-r--r-- 1 root root 2.0K Aug 22 06:54 packages/wgrep-pt-20200128.109.el
-4.0K -rw-r--r-- 1 root root  504 Aug 22 06:54 packages/wgrep-pt-20200128.109.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 22 06:54 packages/wgrep-pt-badge.svg
-4.0K -rw-r--r-- 1 root root   84 Aug 22 06:54 packages/wgrep-pt-readme.txt
-4.0K -rw-r--r-- 1 root root  136 Aug 22 09:31 packages/wgrep-pt.log
-4.0K -rw-r--r-- 1 root root 2.5K Aug 22 09:31 packages/wgrep-readme.txt
+ 40K -rw-r--r-- 1 root root  40K Aug 22 14:48 packages/wgrep-20210322.2207.el
+4.0K -rw-r--r-- 1 root root  402 Aug 22 14:48 packages/wgrep-20210322.2207.entry
+4.0K -rw-r--r-- 1 root root 3.5K Aug 22 14:48 packages/wgrep-ack-20200128.109.el
+4.0K -rw-r--r-- 1 root root  470 Aug 22 14:48 packages/wgrep-ack-20200128.109.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 22 14:48 packages/wgrep-ack-badge.svg
+4.0K -rw-r--r-- 1 root root   97 Aug 22 14:48 packages/wgrep-ack-readme.txt
+4.0K -rw-r--r-- 1 root root  611 Aug 22 14:48 packages/wgrep-ack.log
+8.0K -rw-r--r-- 1 root root 7.8K Aug 22 12:09 packages/wgrep-ag-20200217.1028.el
+4.0K -rw-r--r-- 1 root root  447 Aug 22 12:09 packages/wgrep-ag-20200217.1028.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 22 12:09 packages/wgrep-ag-badge.svg
+4.0K -rw-r--r-- 1 root root   84 Aug 22 12:09 packages/wgrep-ag-readme.txt
+4.0K -rw-r--r-- 1 root root  161 Aug 22 14:48 packages/wgrep-ag.log
+4.0K -rw-r--r-- 1 root root 1.2K Aug 22 14:48 packages/wgrep-badge.svg
+4.0K -rw-r--r-- 1 root root 3.7K Aug 22 12:09 packages/wgrep-helm-20210322.2148.el
+4.0K -rw-r--r-- 1 root root  483 Aug 22 12:09 packages/wgrep-helm-20210322.2148.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 22 12:09 packages/wgrep-helm-badge.svg
+4.0K -rw-r--r-- 1 root root   98 Aug 22 12:09 packages/wgrep-helm-readme.txt
+4.0K -rw-r--r-- 1 root root  140 Aug 22 14:48 packages/wgrep-helm.log
+4.0K -rw-r--r-- 1 root root 2.0K Aug 22 12:09 packages/wgrep-pt-20200128.109.el
+4.0K -rw-r--r-- 1 root root  504 Aug 22 12:09 packages/wgrep-pt-20200128.109.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 22 12:09 packages/wgrep-pt-badge.svg
+4.0K -rw-r--r-- 1 root root   84 Aug 22 12:09 packages/wgrep-pt-readme.txt
+4.0K -rw-r--r-- 1 root root  136 Aug 22 14:48 packages/wgrep-pt.log
+4.0K -rw-r--r-- 1 root root 2.5K Aug 22 14:48 packages/wgrep-readme.txt
