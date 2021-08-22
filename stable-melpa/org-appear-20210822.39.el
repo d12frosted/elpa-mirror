@@ -5,8 +5,8 @@
 ;; org-appear Copyright (C) 2021 Alice Istleyeva - MIT License
 ;; Author: Alice Istleyeva <awth13@gmail.com>
 ;; Version: 0.2.4
-;; Package-Version: 20210709.949
-;; Package-Commit: 148aa124901ae598f69320e3dcada6325cdc2cf0
+;; Package-Version: 20210822.39
+;; Package-Commit: a1aa8496f2fd61305e43e03e6eeee2ff92aa9e24
 ;; Description: Toggle Org mode element visibility upon entering and leaving
 ;; Homepage: https://github.com/awth13/org-appear
 ;; Package-Requires: ((emacs "25.1") (org "9.3"))
@@ -33,8 +33,8 @@
 
 ;; This package enables automatic visibility toggling of various Org elements depending on cursor position.
 ;; It supports automatic toggling of emphasis markers, links, subscripts and
-;; superscripts, entities, and keywords. By default, toggling is instantaneous
-;; and only affects emphasis markers. If Org mode custom variables that control
+;; superscripts, entities, and keywords.  By default, toggling is instantaneous
+;; and only affects emphasis markers.  If Org mode custom variables that control
 ;; visibility of elements are configured to show hidden parts, the respective
 ;; `org-appear' settings do not have an effect.
 
@@ -45,7 +45,7 @@
 (require 'subr-x)			; Compatibility
 
 (defgroup org-appear nil
-  "Auto-toggle Org elements"
+  "Auto-toggle Org elements."
   :group 'org)
 
 (defcustom org-appear-autoemphasis t
@@ -79,7 +79,7 @@ Does not have an effect if `org-hidden-keywords' is nil."
   :group 'org-appear)
 
 (defcustom org-appear-delay 0.0
-  "Number of seconds of delay before toggling an element."
+  "Seconds of delay before toggling an element."
   :type 'number
   :group 'org-appear)
 
@@ -112,8 +112,8 @@ Does not have an effect if `org-hidden-keywords' is nil."
   "List of Org elements to toggle.")
 
 (defvar-local org-appear--prev-elem nil
-  "Previous element that surrounded the cursor or nil if the cursor was not
-on an element.")
+  "Previous element that surrounded the cursor.
+nil if the cursor was not on an element.")
 
 (defun org-appear--set-elements ()
   "Add elements to toggle to `org-appear-elements'."

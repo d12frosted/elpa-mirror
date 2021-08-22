@@ -2,9 +2,9 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-language-id
-;; Package-Version: 20210730.1122
-;; Package-Commit: 29bf4726ce0cbd82235f112fc33c22bd730b7fa7
-;; Version: 0.15.1
+;; Package-Version: 20210822.412
+;; Package-Commit: 9efcd0f699bd7f1a55db7a62c8f1b547c6aeddb6
+;; Version: 0.16
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
 ;; Keywords: languages util
 ;; SPDX-License-Identifier: ISC
@@ -37,6 +37,16 @@
   '(
 
     ;;; Definitions that need special attention to precedence order.
+
+    ;; It is not uncommon for C++ mode to be used when writing Cuda.
+    ;; In this case, the only way to correctly identify Cuda is by
+    ;; looking at the extension.
+    ("Cuda"
+     c++-mode
+     (language-id--file-name-extension ".cu"))
+    ("Cuda"
+     c++-mode
+     (language-id--file-name-extension ".cuh"))
 
     ;; json-mode is derived from javascript-mode.
     ("JSON"
@@ -109,6 +119,7 @@
     ("CSS"
      css-mode
      (web-mode (web-mode-content-type "css") (web-mode-engine "none")))
+    ("Cuda" cuda-mode)
     ("D" d-mode)
     ("Dart" dart-mode)
     ("Dhall" dhall-mode)
@@ -116,7 +127,10 @@
     ("Elixir" elixir-mode)
     ("Elm" elm-mode)
     ("Emacs Lisp" emacs-lisp-mode)
+    ("F#" fsharp-mode)
     ("Fish" fish-mode)
+    ("Fortran" fortran-mode)
+    ("Fortran Free Form" f90-mode)
     ("GLSL" glsl-mode)
     ("Go" go-mode)
     ("GraphQL" graphql-mode)

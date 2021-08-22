@@ -2,10 +2,10 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
-;; Package-Version: 20210812.1210
-;; Package-Commit: e286f1f5f53ae87290dfffa64f54063de4febb43
+;; Package-Version: 20210822.455
+;; Package-Commit: ad775fb5bf40d9abd30c1344466cf4b777249e73
 ;; Version: 0.5.0
-;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.15"))
+;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.16"))
 ;; Keywords: languages util
 ;; SPDX-License-Identifier: MIT
 
@@ -37,6 +37,7 @@
 ;; - CMake (cmake-format)
 ;; - Crystal (crystal tool format)
 ;; - CSS/Less/SCSS (prettier)
+;; - Cuda (clang-format)
 ;; - D (dfmt)
 ;; - Dart (dartfmt)
 ;; - Dhall (dhall format)
@@ -44,8 +45,9 @@
 ;; - Elixir (mix format)
 ;; - Elm (elm-format)
 ;; - Emacs Lisp (Emacs)
+;; - F# (fantomas)
 ;; - Fish Shell (fish_indent)
-;; - Fortran 90 (fprettify)
+;; - Fortran Free Form (fprettify)
 ;; - Gleam (gleam format)
 ;; - GLSL (clang-format)
 ;; - Go (gofmt, goimports)
@@ -127,6 +129,7 @@
     ("CMake" cmake-format)
     ("Crystal" crystal)
     ("CSS" prettier)
+    ("Cuda" clang-format)
     ("D" dfmt)
     ("Dart" dartfmt)
     ("Dhall" dhall)
@@ -134,7 +137,9 @@
     ("Elixir" mix-format)
     ("Elm" elm-format)
     ("Emacs Lisp" emacs-lisp)
+    ("F#" fantomas)
     ("Fish" fish-indent)
+    ("Fortran Free Form" fprettify)
     ("GLSL" clang-format)
     ("Go" gofmt)
     ("GraphQL" prettier)
@@ -183,7 +188,6 @@
 
     ("_Angular" prettier)
     ("_Flow" prettier)
-    ("_Fortran 90" fprettify)
     ("_Gleam" gleam)
     ("_Ledger" ledger-mode)
     ("_Snakemake" snakefmt))
@@ -679,7 +683,7 @@ Consult the existing formatters for examples of BODY."
   (:install
    (macos "brew install clang-format")
    (windows "scoop install llvm"))
-  (:languages "C" "C#" "C++" "GLSL" "Java" "Objective-C" "Protocol Buffer")
+  (:languages "C" "C#" "C++" "Cuda" "GLSL" "Java" "Objective-C" "Protocol Buffer")
   (:features region)
   (:format
    (format-all--buffer-easy
@@ -690,6 +694,7 @@ Consult the existing formatters for examples of BODY."
                     '(("C"               . ".c")
                       ("C#"              . ".cs")
                       ("C++"             . ".cpp")
+                      ("Cuda"            . ".cu")
                       ("GLSL"            . ".glsl")
                       ("Java"            . ".java")
                       ("Objective-C"     . ".m")
@@ -790,6 +795,13 @@ Consult the existing formatters for examples of BODY."
         (lambda () (indent-region (car region) (cdr region)))
         (lambda () (indent-region (point-min) (point-max)))))))
 
+(define-format-all-formatter fantomas
+  (:executable "fantomas")
+  (:install "dotnet tool install -g fantomas-tool")
+  (:languages "F#")
+  (:features)
+  (:format (format-all--buffer-easy executable "--stdin" "--stdout")))
+
 (define-format-all-formatter fish-indent
   (:executable "fish_indent")
   (:install (macos "brew install fish OR port install fish"))
@@ -807,7 +819,7 @@ Consult the existing formatters for examples of BODY."
 (define-format-all-formatter fprettify
   (:executable "fprettify")
   (:install "pip install fprettify")
-  (:languages "_Fortran 90")
+  (:languages "Fortran Free Form")
   (:features)
   (:format (format-all--buffer-easy executable "--silent")))
 
@@ -1204,7 +1216,6 @@ unofficial languages IDs are prefixed with \"_\"."
            (boundp 'flow-minor-mode)
            (not (null (symbol-value 'flow-minor-mode)))
            "_Flow")
-      (and (equal major-mode 'f90-mode) "_Fortran 90")
       (and (equal major-mode 'gleam-mode) "_Gleam")
       (and (equal major-mode 'ledger-mode) "_Ledger")
       (and (equal major-mode 'snakemake-mode) "_Snakemake")
