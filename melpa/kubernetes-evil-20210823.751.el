@@ -5,8 +5,8 @@
 ;; Author: Chris Barrett <chris+emacs@walrus.cool>
 
 ;; Version: 0.15.0
-;; Package-Version: 20210628.2003
-;; Package-Commit: 80ac32e1af6f877d0d79b8abd06e29a4d7052b0c
+;; Package-Version: 20210823.751
+;; Package-Commit: 11e7f3474d42050261b39159a465cc068b80ddc6
 
 ;; Package-Requires: ((kubernetes "0.15.0") (evil "1.2.12"))
 
@@ -31,6 +31,8 @@
 
 (require 'evil)
 (require 'kubernetes)
+(require 'kubernetes-logs)
+(require 'kubernetes-popups)
 
 (evil-set-initial-state 'kubernetes-mode 'motion)
 (evil-set-initial-state 'kubernetes-display-thing-mode 'motion)
@@ -70,7 +72,7 @@
   (kbd "u") #'kubernetes-unmark
   (kbd "U") #'kubernetes-unmark-all
   (kbd "x") #'kubernetes-execute-marks
-  (kbd "l") #'kubernetes-logs-popup
+  (kbd "l") #'kubernetes-logs
   (kbd "L") #'kubernetes-labels-popup)
 
 (evil-define-key 'motion kubernetes-overview-mode-map

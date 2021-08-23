@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.8
-;; Package-Version: 20210821.1955
-;; Package-Commit: c6ca58bea819c3b5e4b3295ad693c5cd0ae5db31
+;; Package-Version: 20210823.1004
+;; Package-Commit: 207eb405706f5415dd0daf490925648fd058cc42
 ;; Package-Requires: ((emacs "26.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -142,8 +142,7 @@ determine it."
   :type '(repeat (choice symbol regexp)))
 
 (defcustom marginalia-command-categories
-  '((imenu . imenu)
-    (package-delete . versioned-package))
+  '((imenu . imenu))
   "Associate commands with a completion category."
   :type '(alist :key-type symbol :value-type symbol))
 

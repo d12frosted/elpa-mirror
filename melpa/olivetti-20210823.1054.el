@@ -4,9 +4,9 @@
 
 ;; Author: Paul W. Rankin <pwr@bydasein.com>
 ;; Keywords: wp, text
-;; Package-Version: 20210816.609
-;; Package-Commit: 032b3d779f7b374bd12f62b7fc717a310ea16bee
-;; Version: 2.0.1
+;; Package-Version: 20210823.1054
+;; Package-Commit: 08611268bb19509ec087ec416f4a7f76ebae0518
+;; Version: 2.0.2
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/rnkn/olivetti
 
@@ -189,7 +189,7 @@ This option does not affect file contents."
           (or (numberp value) (null value))))
 (make-variable-buffer-local 'olivetti-body-width)
 
-(defcustom olivetti-minimun-body-width
+(defcustom olivetti-minimum-body-width
   40
   "Minimum width in columns of text body."
   :type 'integer
@@ -266,8 +266,8 @@ if it is an integer, and otherwise return WIDTH."
         (window-width-pix (window-body-width window t))
         min-width-pix)
     (setq min-width-pix (* char-width
-                           (+ olivetti-minimun-body-width
-                              (% olivetti-minimun-body-width 2))))
+                           (+ olivetti-minimum-body-width
+                              (% olivetti-minimum-body-width 2))))
     (olivetti-scale-width
      (if (floatp width)
          (floor (max min-width-pix (* window-width-pix (min width 1.0))))
