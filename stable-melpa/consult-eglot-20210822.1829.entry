@@ -1,0 +1,15 @@
+(consult-eglot .
+	       [(20210822 1829)
+		((emacs
+		  (27 1))
+		 (eglot
+		  (1 7))
+		 (consult
+		  (0 9)))
+		"A consulting-read interface for eglot" single
+		((:commit . "a6aeb6fa078cc7ea6537793868f606b55ac63088")
+		 (:authors
+		  ("mohsin kaleem" . "mohkale@kisara.moe"))
+		 (:maintainer "Mohsin Kaleem")
+		 (:keywords "tools" "completion" "lsp")
+		 (:url . "https://github.com/mohkale/consult-eglot"))])

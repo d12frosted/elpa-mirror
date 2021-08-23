@@ -4,10 +4,10 @@ Source:  https://github.com/jkitchin/org-ref.git
 
 Updating /mnt/store/melpa/working/org-ref/
 Checking out origin/HEAD
-Checking out 0d988807301bee68b0483f6b461125c31edfbc2c
+Checking out 37b64e6cc1068c1b7ffe579851a345aa57772333
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-ref/
-  to /tmp/org-refNgruBb/org-ref-20210817.1952
+  to /tmp/org-refl1kIy8/org-ref-20210823.27
     doi-utils.el -> doi-utils.el
     nist-webbook.el -> nist-webbook.el
     org-ref-arxiv.el -> org-ref-arxiv.el
@@ -38,52 +38,52 @@ Copying files (->) and directories (=>)
     org-ref.org -> org-ref.org
     org-ref.bib -> org-ref.bib
     citeproc => citeproc
-Created org-ref-20210817.1952.tar containing:
-  org-ref-20210817.1952/
-  org-ref-20210817.1952/citeproc/
-  org-ref-20210817.1952/citeproc/csl/
-  org-ref-20210817.1952/citeproc/csl/acs-nano.csl
-  org-ref-20210817.1952/citeproc/csl/author-year.el
-  org-ref-20210817.1952/citeproc/csl/unsrt-footnote.el
-  org-ref-20210817.1952/citeproc/csl/unsrt-paren.el
-  org-ref-20210817.1952/citeproc/csl/unsrt.el
-  org-ref-20210817.1952/citeproc/readme-author-year.org
-  org-ref-20210817.1952/citeproc/readme-unsrt.org
-  org-ref-20210817.1952/citeproc/readme.bib
-  org-ref-20210817.1952/citeproc/readme.org
-  org-ref-20210817.1952/doi-utils.el
-  org-ref-20210817.1952/nist-webbook.el
-  org-ref-20210817.1952/org-ref-arxiv.el
-  org-ref-20210817.1952/org-ref-bibtex.el
-  org-ref-20210817.1952/org-ref-citeproc.el
-  org-ref-20210817.1952/org-ref-core.el
-  org-ref-20210817.1952/org-ref-glossary.el
-  org-ref-20210817.1952/org-ref-helm-bibtex.el
-  org-ref-20210817.1952/org-ref-helm-cite.el
-  org-ref-20210817.1952/org-ref-helm.el
-  org-ref-20210817.1952/org-ref-isbn.el
-  org-ref-20210817.1952/org-ref-ivy-cite.el
-  org-ref-20210817.1952/org-ref-ivy.el
-  org-ref-20210817.1952/org-ref-latex.el
-  org-ref-20210817.1952/org-ref-pdf.el
-  org-ref-20210817.1952/org-ref-pgk.el
-  org-ref-20210817.1952/org-ref-pkg.el
-  org-ref-20210817.1952/org-ref-pubmed.el
-  org-ref-20210817.1952/org-ref-reftex.el
-  org-ref-20210817.1952/org-ref-sci-id.el
-  org-ref-20210817.1952/org-ref-scifinder.el
-  org-ref-20210817.1952/org-ref-scopus.el
-  org-ref-20210817.1952/org-ref-url-utils.el
-  org-ref-20210817.1952/org-ref-utils.el
-  org-ref-20210817.1952/org-ref-worldcat.el
-  org-ref-20210817.1952/org-ref-wos.el
-  org-ref-20210817.1952/org-ref.bib
-  org-ref-20210817.1952/org-ref.el
-  org-ref-20210817.1952/org-ref.org
-  org-ref-20210817.1952/x2bib.el
-Built org-ref in 7.271s, finished at 2021-08-22T14:32:10+0000
+Created org-ref-20210823.27.tar containing:
+  org-ref-20210823.27/
+  org-ref-20210823.27/citeproc/
+  org-ref-20210823.27/citeproc/csl/
+  org-ref-20210823.27/citeproc/csl/acs-nano.csl
+  org-ref-20210823.27/citeproc/csl/author-year.el
+  org-ref-20210823.27/citeproc/csl/unsrt-footnote.el
+  org-ref-20210823.27/citeproc/csl/unsrt-paren.el
+  org-ref-20210823.27/citeproc/csl/unsrt.el
+  org-ref-20210823.27/citeproc/readme-author-year.org
+  org-ref-20210823.27/citeproc/readme-unsrt.org
+  org-ref-20210823.27/citeproc/readme.bib
+  org-ref-20210823.27/citeproc/readme.org
+  org-ref-20210823.27/doi-utils.el
+  org-ref-20210823.27/nist-webbook.el
+  org-ref-20210823.27/org-ref-arxiv.el
+  org-ref-20210823.27/org-ref-bibtex.el
+  org-ref-20210823.27/org-ref-citeproc.el
+  org-ref-20210823.27/org-ref-core.el
+  org-ref-20210823.27/org-ref-glossary.el
+  org-ref-20210823.27/org-ref-helm-bibtex.el
+  org-ref-20210823.27/org-ref-helm-cite.el
+  org-ref-20210823.27/org-ref-helm.el
+  org-ref-20210823.27/org-ref-isbn.el
+  org-ref-20210823.27/org-ref-ivy-cite.el
+  org-ref-20210823.27/org-ref-ivy.el
+  org-ref-20210823.27/org-ref-latex.el
+  org-ref-20210823.27/org-ref-pdf.el
+  org-ref-20210823.27/org-ref-pgk.el
+  org-ref-20210823.27/org-ref-pkg.el
+  org-ref-20210823.27/org-ref-pubmed.el
+  org-ref-20210823.27/org-ref-reftex.el
+  org-ref-20210823.27/org-ref-sci-id.el
+  org-ref-20210823.27/org-ref-scifinder.el
+  org-ref-20210823.27/org-ref-scopus.el
+  org-ref-20210823.27/org-ref-url-utils.el
+  org-ref-20210823.27/org-ref-utils.el
+  org-ref-20210823.27/org-ref-worldcat.el
+  org-ref-20210823.27/org-ref-wos.el
+  org-ref-20210823.27/org-ref.bib
+  org-ref-20210823.27/org-ref.el
+  org-ref-20210823.27/org-ref.org
+  org-ref-20210823.27/x2bib.el
+Built org-ref in 3.520s, finished at 2021-08-23T03:41:59+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  670 Aug 22 14:32 packages/org-ref-20210817.1952.entry
-732K -rw-r--r-- 1 root root 730K Aug 22 14:32 packages/org-ref-20210817.1952.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 22 14:32 packages/org-ref-badge.svg
-4.0K -rw-r--r-- 1 root root  281 Aug 22 14:32 packages/org-ref-readme.txt
+4.0K -rw-r--r-- 1 root root  668 Aug 23 03:41 packages/org-ref-20210823.27.entry
+732K -rw-r--r-- 1 root root 730K Aug 23 03:41 packages/org-ref-20210823.27.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 23 03:41 packages/org-ref-badge.svg
+4.0K -rw-r--r-- 1 root root  281 Aug 23 03:41 packages/org-ref-readme.txt

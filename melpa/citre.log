@@ -4,36 +4,40 @@ Source:  https://github.com/universal-ctags/citre.git
 
 Updating /mnt/store/melpa/working/citre/
 Checking out origin/HEAD
-Checking out 1d6d2b6feffb70becc010e2d34117ca5f11c8def
+Checking out 19a704d6fd22613c8c7b46b0ecfd9510168c9362
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citre/
-  to /tmp/citreJopcTn/citre-20210820.1729
+  to /tmp/citreghTseb/citre-20210822.1705
     citre-basic-tools.el -> citre-basic-tools.el
+    citre-common.el -> citre-common.el
     citre-config.el -> citre-config.el
     citre-core-tables.el -> citre-core-tables.el
     citre-core.el -> citre-core.el
+    citre-ctags.el -> citre-ctags.el
     citre-lang-c.el -> citre-lang-c.el
     citre-lang-fileref.el -> citre-lang-fileref.el
     citre-lang-verilog.el -> citre-lang-verilog.el
     citre-peek.el -> citre-peek.el
     citre-util.el -> citre-util.el
     citre.el -> citre.el
-Created citre-20210820.1729.tar containing:
-  citre-20210820.1729/
-  citre-20210820.1729/citre-basic-tools.el
-  citre-20210820.1729/citre-config.el
-  citre-20210820.1729/citre-core-tables.el
-  citre-20210820.1729/citre-core.el
-  citre-20210820.1729/citre-lang-c.el
-  citre-20210820.1729/citre-lang-fileref.el
-  citre-20210820.1729/citre-lang-verilog.el
-  citre-20210820.1729/citre-peek.el
-  citre-20210820.1729/citre-pkg.el
-  citre-20210820.1729/citre-util.el
-  citre-20210820.1729/citre.el
-Built citre in 3.260s, finished at 2021-08-22T13:58:56+0000
+Created citre-20210822.1705.tar containing:
+  citre-20210822.1705/
+  citre-20210822.1705/citre-basic-tools.el
+  citre-20210822.1705/citre-common.el
+  citre-20210822.1705/citre-config.el
+  citre-20210822.1705/citre-core-tables.el
+  citre-20210822.1705/citre-core.el
+  citre-20210822.1705/citre-ctags.el
+  citre-20210822.1705/citre-lang-c.el
+  citre-20210822.1705/citre-lang-fileref.el
+  citre-20210822.1705/citre-lang-verilog.el
+  citre-20210822.1705/citre-peek.el
+  citre-20210822.1705/citre-pkg.el
+  citre-20210822.1705/citre-util.el
+  citre-20210822.1705/citre.el
+Built citre in 3.352s, finished at 2021-08-23T03:09:13+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  346 Aug 22 13:58 packages/citre-20210820.1729.entry
-300K -rw-r--r-- 1 root root 300K Aug 22 13:58 packages/citre-20210820.1729.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 22 13:58 packages/citre-badge.svg
-4.0K -rw-r--r-- 1 root root  525 Aug 22 13:58 packages/citre-readme.txt
+4.0K -rw-r--r-- 1 root root  346 Aug 23 03:09 packages/citre-20210822.1705.entry
+300K -rw-r--r-- 1 root root 300K Aug 23 03:09 packages/citre-20210822.1705.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 23 03:09 packages/citre-badge.svg
+4.0K -rw-r--r-- 1 root root  525 Aug 23 03:09 packages/citre-readme.txt
