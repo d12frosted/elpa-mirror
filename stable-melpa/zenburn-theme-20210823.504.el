@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://github.com/bbatsov/zenburn-emacs
-;; Package-Version: 20201121.1050
-;; Package-Commit: ea9b8f3aedc6640cb0d15d77f7bb5d98830abe97
+;; Package-Version: 20210823.504
+;; Package-Commit: 13266182dc51534394bd427840bc78e2a78d01bd
 ;; Version: 2.8.0-snapshot
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -201,6 +201,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(compilation-mode-line-run ((t (:foreground ,zenburn-yellow :weight bold))))
 ;;;;; completions
    `(completions-annotations ((t (:foreground ,zenburn-fg-1))))
+   `(completions-common-part ((t (:foreground ,zenburn-blue))))
+   `(completions-first-difference ((t (:foreground ,zenburn-fg+1))))
 ;;;;; customize
    `(custom-variable-tag ((t (:foreground ,zenburn-blue :weight bold))))
    `(custom-group-tag ((t (:foreground ,zenburn-blue :weight bold :height 1.2))))
@@ -791,6 +793,7 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(helm-buffer-size ((t (:foreground ,zenburn-fg-1 :background ,zenburn-bg))))
    `(helm-ff-directory ((t (:foreground ,zenburn-cyan :background ,zenburn-bg :weight bold))))
    `(helm-ff-file ((t (:foreground ,zenburn-fg :background ,zenburn-bg :weight normal))))
+   `(helm-ff-file-extension ((t (:foreground ,zenburn-fg :background ,zenburn-bg :weight normal))))
    `(helm-ff-executable ((t (:foreground ,zenburn-green+2 :background ,zenburn-bg :weight normal))))
    `(helm-ff-invalid-symlink ((t (:foreground ,zenburn-red :background ,zenburn-bg :weight bold))))
    `(helm-ff-symlink ((t (:foreground ,zenburn-yellow :background ,zenburn-bg :weight bold))))
@@ -1191,6 +1194,11 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(notmuch-tag-unread ((t (:foreground ,zenburn-red))))
    `(notmuch-tree-match-author-face ((t (:foreground ,zenburn-green+1))))
    `(notmuch-tree-match-tag-face ((t (:foreground ,zenburn-green+1))))
+;;;;; orderless
+   `(orderless-match-face-0 ((t (:foreground ,zenburn-green))))
+   `(orderless-match-face-1 ((t (:foreground ,zenburn-magenta))))
+   `(orderless-match-face-2 ((t (:foreground ,zenburn-blue))))
+   `(orderless-match-face-3 ((t (:foreground ,zenburn-orange))))
 ;;;;; org-mode
    `(org-agenda-date-today
      ((t (:foreground ,zenburn-fg+1 :slant italic :weight bold))) t)
@@ -1504,6 +1512,8 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(undo-tree-visualizer-default-face ((t (:foreground ,zenburn-fg))))
    `(undo-tree-visualizer-register-face ((t (:foreground ,zenburn-yellow))))
    `(undo-tree-visualizer-unmodified-face ((t (:foreground ,zenburn-cyan))))
+;;;;; vertico
+   `(vertico-current ((t (:foreground ,zenburn-yellow :weight bold :underline t))))
 ;;;;; visual-regexp
    `(vr/group-0 ((t (:foreground ,zenburn-bg :background ,zenburn-green :weight bold))))
    `(vr/group-1 ((t (:foreground ,zenburn-bg :background ,zenburn-orange :weight bold))))
