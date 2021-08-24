@@ -5,8 +5,8 @@
 ;; Author: Justin Burkett <justin@burkett.cc>
 ;; Maintainer: Justin Burkett <justin@burkett.cc>
 ;; URL: https://github.com/justbur/emacs-which-key
-;; Package-Version: 20210817.1735
-;; Package-Commit: 7a10ff66154c03f277a009aab8861889cbbe2618
+;; Package-Version: 20210824.11
+;; Package-Commit: 4790a14683a2f3e4f72ade197c78e4c0af1cdd4b
 ;; Version: 3.5.1
 ;; Keywords:
 ;; Package-Requires: ((emacs "24.4"))
@@ -1801,7 +1801,7 @@ non-nil, then bindings are collected recursively for all prefixes."
   (let* ((unformatted
           (cond ((keymapp keymap)
                  (which-key--get-keymap-bindings
-                  keymap prefix filter recursive))
+                  keymap nil prefix filter recursive))
                 (keymap
                  (error "%s is not a keymap" keymap))
                 (t
