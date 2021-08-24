@@ -3,9 +3,9 @@
 ;; Copyright © 2013-2021, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 3.22.20210823182115
-;; Package-Version: 20210824.121
-;; Package-Commit: 308b90972692ccf4f58c22a2e8ba1d9f58c29e4b
+;; Version: 3.22.20210824002845
+;; Package-Version: 20210824.730
+;; Package-Commit: 4bd7858dadff5c5320f169ebabde379e29bb7559
 ;; Created: 23 Mar 2013
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: lisp, languages
@@ -3019,7 +3019,6 @@ Version 2017-01-27"
     ("inc" "(1+ ▮)" xah-elisp--ahf)
     ("dec" "(1- ▮)" xah-elisp--ahf)
 
-
     ("atf" "append-to-file" xah-elisp--ahf)
     ("bfn" "buffer-file-name" xah-elisp--ahf)
     ("bmp" "buffer-modified-p" xah-elisp--ahf)
@@ -3283,7 +3282,11 @@ Version 2017-01-27"
     ("memq" "(memq ELT▮ LIST)" xah-elisp--ahf)
     ("memql" "(memql OBJECT▮ LIST)" xah-elisp--ahf)
     ("message" "(message \"%s▮\" ARGS)" xah-elisp--ahf)
-    ("narrow-to-region" "(narrow-to-region p1▮ p2)" xah-elisp--ahf)
+    ("narrow-to-region" "(save-restriction
+    (narrow-to-region p1▮ p2)
+
+    )" xah-elisp--ahf)
+
     ("next-char-property-change" "(next-char-property-change POS &optional LIMIT)" xah-elisp--ahf)
     ("next-property-change" "(next-property-change POS &optional OBJECT LIMIT)" xah-elisp--ahf)
     ("next-single-char-property-change" "(next-single-char-property-change POS PROP &optional OBJECT LIMIT)" xah-elisp--ahf)
@@ -3356,7 +3359,10 @@ Version 2017-01-27"
     ("save-buffer" "(save-buffer &optional ARG▮)" xah-elisp--ahf)
     ("save-current-buffer" "(save-current-buffer ▮)" xah-elisp--ahf)
     ("save-excursion" "(save-excursion ▮)" xah-elisp--ahf)
-    ("save-restriction" "(save-restriction ▮)" xah-elisp--ahf)
+    ("save-restriction" "(save-restriction
+    (narrow-to-region p1▮ p2)
+
+    )" xah-elisp--ahf)
     ("search-backward" "(search-backward \"▮\" &optional BOUND NOERROR COUNT)" xah-elisp--ahf)
     ("search-backward-regexp" "(search-backward-regexp \"▮\" &optional BOUND NOERROR COUNT)" xah-elisp--ahf)
     ("search-forward" "(search-forward \"▮\" &optional BOUND NOERROR COUNT)" xah-elisp--ahf)
