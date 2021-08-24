@@ -88,13 +88,6 @@ Here are fancy-dabbrev's own configuration options:
   fancy-dabbrev preview. The variables typically represent major or minor
   modes.
 
-* fancy-dabbrev-sort-menu (default nil)
-
-  If nil, the popup menu will show matching candidates in the order that
-  repeated calls to dabbrev-expand would return (i.e., first candidates
-  before the cursor, then after the cursor and then from other buffers). If
-  t, the candidates (except the first one) will be sorted.
-
 * fancy-dabbrev-preview-context (default: 'at-eol)
 
   When to show the preview. If 'at-eol, only show the preview if no other
@@ -108,6 +101,18 @@ Here are fancy-dabbrev's own configuration options:
   How long (in seconds) to wait until displaying the preview after a
   keystroke. Set this to e.g. 0.2 if you think that it's annoying to get a
   preview immediately after writing some text.
+
+* fancy-dabbrev-self-insert-commands (default (self-insert-command
+  org-self-insert-command))
+
+  A list of commands after which to show a preview.
+
+* fancy-dabbrev-sort-menu (default nil)
+
+  If nil, the popup menu will show matching candidates in the order that
+  repeated calls to dabbrev-expand would return (i.e., first candidates
+  before the cursor, then after the cursor and then from other buffers). If
+  t, the candidates (except the first one) will be sorted.
 
 
 WHY?

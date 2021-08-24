@@ -2,7 +2,7 @@
 
 ;; URL: https://github.com/bazelbuild/emacs-bazel-mode
 ;; Package-Version: 20210804.1431
-;; Package-Commit: 921ed29c9dbc3caa65cf4153d7b5bc771d9a2768
+;; Package-Commit: c4292f69c3bf4faa8393438489a3820c1d52b6ee
 ;; Keywords: build tools, languages
 ;; Package-Requires: ((emacs "26.1"))
 ;; Version: 0
