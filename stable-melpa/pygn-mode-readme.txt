@@ -37,7 +37,9 @@ Notes
 
 Compatibility and Requirements
 
-    GNU Emacs 25.1+
+    GNU Emacs 26.1+, compiled with dynamic module support
+
+    tree-sitter.el and tree-sitter-langs.el
 
     Python and the chess library are needed for numerous features such
     as SVG board images:

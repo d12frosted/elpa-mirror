@@ -1,7 +1,11 @@
 (pygn-mode .
-	   [(20210724 2207)
+	   [(20210824 1323)
 	    ((emacs
-	      (25 1))
+	      (26 1))
+	     (tree-sitter
+	      (0 15 1))
+	     (tree-sitter-langs
+	      (0 10 1))
 	     (uci-mode
 	      (0 5 4))
 	     (nav-flash
@@ -9,7 +13,7 @@
 	     (ivy
 	      (0 10 0)))
 	    "Major-mode for chess PGN files, powered by Python" tar
-	    ((:commit . "7298c3cd798853309bece115848e9d0400a7a627")
+	    ((:commit . "f3d6b5c6c8f74d7c54808759f71ff26c91c0b7e6")
 	     (:authors
 	      ("Dodge Coates and Roland Walker"))
 	     (:maintainer "Dodge Coates and Roland Walker")
