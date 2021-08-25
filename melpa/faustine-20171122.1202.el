@@ -5,8 +5,6 @@
 ;; Author: Yassin Philip <xaccrocheur@gmail.com>
 ;; Maintainer: Yassin Philip <xaccrocheur@gmail.com>
 ;; Keywords: languages, faust
-;; Package-Version: 20171122.1202
-;; Package-Commit: 07a38963111518f86123802f9d477be0d4689a3f
 ;; Version: 1.0.1
 ;; URL: https://bitbucket.org/yphil/faustine
 ;; License: GPLv3

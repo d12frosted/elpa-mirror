@@ -4,10 +4,10 @@ Source:  https://github.com/ocaml/dune.git
 
 Updating /mnt/store/melpa/working/dune/
 Checking out origin/HEAD
-Checking out c71f33619645269ed85950f4c27740d012494b99
+Checking out d6e490c24dfb4607080b6a41930bb9d378bc2a43
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dune/
-  to /tmp/dune7m1cCg/dune-20210715.548
+  to /tmp/dunewgdIVn/dune-20210715.548
   ! editor-integration/emacs/dune-flymake.el -> dune-flymake.el
   ! editor-integration/emacs/dune-watch.el -> dune-watch.el
   ! editor-integration/emacs/dune.el -> dune.el
@@ -17,14 +17,14 @@ Created dune-20210715.548.tar containing:
   dune-20210715.548/dune-pkg.el
   dune-20210715.548/dune-watch.el
   dune-20210715.548/dune.el
-Built dune in 6.207s, finished at 2021-08-25T03:49:56+0000
+Built dune in 7.248s, finished at 2021-08-25T20:01:00+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  194 Aug 25 03:49 packages/dune-20210715.548.entry
- 40K -rw-r--r-- 1 root root  40K Aug 25 03:49 packages/dune-20210715.548.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 25 03:49 packages/dune-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Aug 25 03:49 packages/dune-format-20210505.108.el
-4.0K -rw-r--r-- 1 root root  438 Aug 25 03:49 packages/dune-format-20210505.108.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 25 03:49 packages/dune-format-badge.svg
-4.0K -rw-r--r-- 1 root root  335 Aug 25 03:49 packages/dune-format-readme.txt
-4.0K -rw-r--r-- 1 root root  626 Aug 25 03:49 packages/dune-format.log
-4.0K -rw-r--r-- 1 root root  871 Aug 25 03:49 packages/dune-readme.txt
+4.0K -rw-r--r-- 1 root root  194 Aug 25 20:01 packages/dune-20210715.548.entry
+ 40K -rw-r--r-- 1 root root  40K Aug 25 20:01 packages/dune-20210715.548.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 25 20:01 packages/dune-badge.svg
+4.0K -rw-r--r-- 1 root root 2.0K Aug 25 20:00 packages/dune-format-20210505.108.el
+4.0K -rw-r--r-- 1 root root  438 Aug 25 20:00 packages/dune-format-20210505.108.entry
+4.0K -rw-r--r-- 1 root root 1.2K Aug 25 20:00 packages/dune-format-badge.svg
+4.0K -rw-r--r-- 1 root root  335 Aug 25 20:00 packages/dune-format-readme.txt
+4.0K -rw-r--r-- 1 root root  626 Aug 25 20:00 packages/dune-format.log
+4.0K -rw-r--r-- 1 root root  871 Aug 25 20:01 packages/dune-readme.txt
