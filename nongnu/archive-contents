@@ -1,12 +1,17 @@
 (1
  (caml .
-       [(4 7 1)
-	nil "OCaml code editing commands for Emacs" tar
-	((:url . "https://github.com/ocaml/ocaml/")
-	 (:maintainer "Damien Doligez" . "damien.doligez@inria.fr")
+       [(4 8)
+	((emacs
+	  (24 3))
+	 (cl-lib
+	  (0 5)))
+	"Caml mode for GNU Emacs and XEmacs" tar
+	((:url . "https://github.com/ocaml/caml-mode")
+	 (:maintainer "Christophe Troestler" . "Christophe.Troestler@umons.ac.be")
 	 (:authors
 	  ("Jacques Garrigue" . "garrigue@kurims.kyoto-u.ac.jp")
-	  ("Ian T Zimmerman" . "itz@rahul.net"))
+	  ("Ian T Zimmerman" . "itz@rahul.net")
+	  ("Damien Doligez" . "damien.doligez@inria.fr"))
 	 (:keywords "ocaml"))])
  (clojure-mode .
 	       [(5 13 0)

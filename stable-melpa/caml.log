@@ -4,10 +4,10 @@ Source:  https://github.com/ocaml/caml-mode.git
 
 Updating /mnt/store/melpa/working/caml/
 Checking out origin/HEAD
-Checking out f04c2e495c0bdb388dd7302f345235980c962ada
+Checking out a95aaca42e86473cc3aae9dc90f763251e38ab90
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/caml/
-  to /tmp/camlzLxdzh/caml-20210824.904
+  to /tmp/camljZ5oaj/caml-20210824.2115
     caml-emacs.el -> caml-emacs.el
     caml-font-old.el -> caml-font-old.el
     caml-font.el -> caml-font.el
@@ -17,21 +17,23 @@ Copying files (->) and directories (=>)
     caml.el -> caml.el
     camldebug.el -> camldebug.el
     inf-caml.el -> inf-caml.el
-Created caml-20210824.904.tar containing:
-  caml-20210824.904/
-  caml-20210824.904/caml-emacs.el
-  caml-20210824.904/caml-font-old.el
-  caml-20210824.904/caml-font.el
-  caml-20210824.904/caml-help.el
-  caml-20210824.904/caml-pkg.el
-  caml-20210824.904/caml-types.el
-  caml-20210824.904/caml-xemacs.el
-  caml-20210824.904/caml.el
-  caml-20210824.904/camldebug.el
-  caml-20210824.904/inf-caml.el
-Built caml in 3.241s, finished at 2021-08-24T14:19:23+0000
+Created caml-20210824.2115.tar containing:
+  caml-20210824.2115/
+  caml-20210824.2115/caml-emacs.el
+  caml-20210824.2115/caml-font-old.el
+  caml-20210824.2115/caml-font.el
+  caml-20210824.2115/caml-help.el
+  caml-20210824.2115/caml-pkg.el
+  caml-20210824.2115/caml-types.el
+  caml-20210824.2115/caml-xemacs.el
+  caml-20210824.2115/caml.el
+  caml-20210824.2115/camldebug.el
+  caml-20210824.2115/inf-caml.el
+Built caml in 3.544s, finished at 2021-08-24T22:21:49+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  492 Aug 24 14:19 packages/caml-20210824.904.entry
-220K -rw-r--r-- 1 root root 220K Aug 24 14:19 packages/caml-20210824.904.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 24 14:19 packages/caml-badge.svg
-4.0K -rw-r--r-- 1 root root  455 Aug 24 14:19 packages/caml-readme.txt
+4.0K -rw-r--r-- 1 root root  490 Aug 24 19:39 packages/caml-20210824.1658.entry
+220K -rw-r--r-- 1 root root 220K Aug 24 19:39 packages/caml-20210824.1658.tar
+4.0K -rw-r--r-- 1 root root  490 Aug 24 22:21 packages/caml-20210824.2115.entry
+220K -rw-r--r-- 1 root root 220K Aug 24 22:21 packages/caml-20210824.2115.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 24 22:21 packages/caml-badge.svg
+4.0K -rw-r--r-- 1 root root  455 Aug 24 22:21 packages/caml-readme.txt
