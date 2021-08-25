@@ -5,8 +5,8 @@
 ;;
 ;; Author: Sanel Zukan <sanelz@gmail.com>
 ;; URL: http://www.github.com/sanel/monroe
-;; Package-Version: 20201013.1754
-;; Package-Commit: cae86f640df5faf44690bfac591ad464981293a0
+;; Package-Version: 20210824.2348
+;; Package-Commit: d140512781bda5160b4786f591694a569639b9ad
 ;; Version: 0.4.0
 ;; Keywords: languages, clojure, nrepl, lisp
 
@@ -41,8 +41,8 @@
 ;;; Code:
 
 (require 'comint)
-(eval-when-compile
-  (require 'cl))
+(require 'cl-macs)
+(require 'subr-x)
 
 (defgroup monroe nil
   "Interaction with the nREPL Server."
@@ -132,8 +132,8 @@ to the one used on nrepl side.")
 ;; stolen from nrepl.el.
 (defmacro monroe-dbind-response (response keys &rest body)
   "Destructure an nREPL response dict."
-  `(let ,(loop for key in keys
-               collect `(,key (cdr (assoc ,(format "%s" key) ,response))))
+  `(let ,(cl-loop for key in keys
+                  collect `(,key (cdr (assoc ,(format "%s" key) ,response))))
      ,@body))
 
 ;;; Bencode
@@ -194,18 +194,14 @@ starting with 'd' and ending with 'e'."
         (setq result (cons (monroe-bdecode-buffer) result)))
       (nreverse result))))
 
-(defun monroe-write-message (process message)
-  "Send message to given process."
-  (process-send-string process message))
-
 (defun monroe-send-request (request callback)
   "Send request as elisp object and assign callback to
 be called when reply is received."
-  (let* ((id       (number-to-string (incf monroe-requests-counter)))
+  (let* ((id       (number-to-string (cl-incf monroe-requests-counter)))
          (message  (append (list "id" id) request))
          (bmessage (monroe-encode message)))
     (puthash id callback monroe-requests)
-    (monroe-write-message (monroe-connection) bmessage)))
+    (process-send-string (monroe-connection) bmessage)))
 
 (defun monroe-clear-request-table ()
   "Erases current request table."
@@ -218,7 +214,7 @@ be called when reply is received."
 
 ;;; nrepl messages we knows about
 
-(defun monroe-send-hello (proc callback)
+(defun monroe-send-hello (callback)
   "Initiate nREPL session."
   (monroe-send-request '("op" "clone") callback))
 
@@ -327,11 +323,10 @@ monroe-repl-buffer."
     ;; This 'ignore-errors' is a hard hack here since 'accept-process-output' will call filter
     ;; which will be this function causing Emacs to hit max stack size limit.
     (ignore-errors
-      (when (eq ?e (aref string (- (length string) 1)))
-        (unless (accept-process-output process 0.01)
-          (while (> (buffer-size) 1)
-            (dolist (response (monroe-net-decode))
-              (monroe-dispatch response))))))))
+        (when (eq ?e (aref string (- (length string) 1)))
+          (unless (accept-process-output process 0.01)
+            (while (> (buffer-size) 1)
+              (mapc #'monroe-dispatch (monroe-net-decode))))))))
 
 (defun monroe-new-session-handler (process)
   "Returns callback that is called when new connection is established."
@@ -361,7 +356,7 @@ monroe-repl-buffer."
 
 (defun monroe-extract-host (buff-name)
   "Take host from monroe buffers."
-  (first (last (split-string (substring buff-name 1 -1) " "))))
+  (car (last (split-string (substring buff-name 1 -1) " "))))
 
 (defun monroe-repl-buffer ()
   "Returns right monroe buffer."
@@ -387,9 +382,9 @@ monroe-repl-buffer."
 (defun monroe-connect (host-and-port)
   "Connect to remote endpoint using provided hostname and port."
   (let* ((hp   (split-string (monroe-strip-protocol host-and-port) ":"))
-         (host (monroe-valid-host-string (first hp) "localhost"))
+         (host (monroe-valid-host-string (car hp) "localhost"))
          (port (string-to-number
-                (monroe-valid-host-string (second hp) "7888")))
+                (monroe-valid-host-string (cadr hp) "7888")))
          (name (concat "*monroe-connection: " host-and-port "*")))
     (when (get-buffer name) (monroe-disconnect))
     (message "Connecting to nREPL host on '%s:%d'..." host port)
@@ -398,7 +393,7 @@ monroe-repl-buffer."
       (set-process-filter process 'monroe-net-filter)
       (set-process-sentinel process 'monroe-sentinel)
       (set-process-coding-system process 'utf-8-unix 'utf-8-unix)
-      (monroe-send-hello process (monroe-new-session-handler (process-buffer process)))
+      (monroe-send-hello (monroe-new-session-handler (process-buffer process)))
       process)))
 
 (defun monroe-disconnect ()
@@ -494,7 +489,7 @@ inside a container.")
        (when (member "done" status)
          (remhash id monroe-requests))
        (when value
-         (destructuring-bind (file line)
+         (cl-destructuring-bind (file line)
              (append (car (read-from-string value)) nil)
            (monroe-jump-find-file (funcall monroe-translate-path-function file))
            (when line

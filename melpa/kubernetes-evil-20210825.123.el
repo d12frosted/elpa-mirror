@@ -5,8 +5,8 @@
 ;; Author: Chris Barrett <chris+emacs@walrus.cool>
 
 ;; Version: 0.15.0
-;; Package-Version: 20210823.751
-;; Package-Commit: 98579bb75ce43b9cb777b7b1c86c014ceb2e23c4
+;; Package-Version: 20210825.123
+;; Package-Commit: 75fd8575366fd57d91258efff8745c0690de0cbf
 
 ;; Package-Requires: ((kubernetes "0.15.0") (evil "1.2.12"))
 
@@ -65,7 +65,7 @@
   (kbd "c") #'kubernetes-config-popup
   (kbd "g r") #'kubernetes-refresh
   (kbd "h") #'describe-mode
-  (kbd "d") #'kubernetes-describe-popup
+  (kbd "d") #'kubernetes-describe
   (kbd "D") #'kubernetes-mark-for-delete
   (kbd "e") #'kubernetes-exec-popup
   (kbd "f") #'kubernetes-file-popup
@@ -73,7 +73,7 @@
   (kbd "U") #'kubernetes-unmark-all
   (kbd "x") #'kubernetes-execute-marks
   (kbd "l") #'kubernetes-logs
-  (kbd "L") #'kubernetes-labels-popup)
+  (kbd "L") #'kubernetes-labels)
 
 (evil-define-key 'motion kubernetes-overview-mode-map
   (kbd "v") #'kubernetes-overview-set-sections)
