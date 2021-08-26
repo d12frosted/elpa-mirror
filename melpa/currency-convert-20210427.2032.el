@@ -3,8 +3,6 @@
 ;; SPDX-License-Identifier: ISC
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-currency-convert
-;; Package-Version: 20210427.2032
-;; Package-Commit: 12805ea66aa8421de5eedda39d23f709de634460
 ;; Package-Requires: ((emacs "24.4"))
 ;; Version: 0.1.0
 ;; Keywords: comm convenience i18n
