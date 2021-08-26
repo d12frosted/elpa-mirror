@@ -4,8 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/dogears.el
-;; Package-Version: 20210819.59
-;; Package-Commit: c0fa3f6318c660234e77b108f8486dfc39869071
+;; Package-Version: 20210825.2333
+;; Package-Commit: e96952bcb630c0130d55756c5337d594c2a7670c
 ;; Version: 0.1-pre
 ;; Package-Requires: ((emacs "26.3") (map "2.1"))
 ;; Keywords: convenience
@@ -177,6 +177,9 @@ you've been and helps you retrace your steps."
             ;; empty string, depending on the bookmark-make-record-function (I'm
             ;; not sure if there are defined standards for what the first element
             ;; of a bookmark record should be).
+            ((pred stringp)
+             ;; Record already has a string as its first element: do nothing.
+             nil)
             (`nil (setf (car record) ""))
             (_ (push "" record)))
           (setf (map-elt (cdr record) 'manual)
