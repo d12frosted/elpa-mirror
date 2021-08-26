@@ -4,6 +4,8 @@
 
 ;; Author: Ken Okada <keno.ss57@gmail.com>
 ;; Keywords: extensions, lisp, tools, maint
+;; Package-Version: 20140126.19
+;; Package-Commit: d817fd9ea2d3f8d2c1ace4d8af155684f3a99dc5
 ;; URL: https://github.com/kenoss/debug-print
 ;; Package-Requires: ((emacs "24"))
 
