@@ -447,6 +447,16 @@
 	  (:authors
 	   ("Gary D. Foster" . "Gary.Foster@Corp.Sun.COM"))
 	  (:maintainer "Luke Lee" . "luke.yx.lee@gmail.com"))])
+ (csharp-mode .
+	      [(1 0 0)
+	       ((emacs
+		 (26 1)))
+	       "C# mode derived mode" tar
+	       ((:url . "https://github.com/emacs-csharp/csharp-mode")
+		(:maintainer "Jostein Kjønigsen" . "jostein@gmail.com")
+		(:authors
+		 ("Theodor Thornhill" . "theo@thornhill.no"))
+		(:keywords "c#" "languages" "oop" "mode"))])
  (csv-mode .
 	   [(1 15)
 	    ((emacs
@@ -2110,7 +2120,7 @@
 	      ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (rt-liberation .
-		[(2 3)
+		[(2 4)
 		 nil "Emacs interface to RT" tar
 		 ((:url . "http://www.nongnu.org/rtliber/")
 		  (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
@@ -2187,14 +2197,14 @@
 	     ("Michael R. Mauger" . "michael@mauger.com"))
 	    (:maintainer "Michael R. Mauger" . "michael@mauger.com"))])
  (shell-command+ .
-		 [(2 2 0)
+		 [(2 2 1)
 		  ((emacs
 		    (24 1)))
 		  "An extended shell-command" tar
-		  ((:url . "https://git.sr.ht/~zge/bang")
-		   (:maintainer "Philip K." . "philipk@posteo.net")
+		  ((:url . "https://git.sr.ht/~pkal/shell-command-plus")
+		   (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
 		   (:authors
-		    ("Philip K." . "philipk@posteo.net"))
+		    ("Philip Kaludercic" . "philipk@posteo.net"))
 		   (:keywords "unix" "processes" "convenience"))])
  (shen-mode .
 	    [(0 1)
