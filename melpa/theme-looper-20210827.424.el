@@ -1,11 +1,11 @@
-;;; theme-looper.el --- Loop through the available color-themes
+;;; theme-looper.el --- A package for switching themes in Emacs interactively
 
 ;; This file is not part of Emacs
 
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Version: 2.7
-;; Package-Version: 20210727.249
-;; Package-Commit: 32ca76dfa8100a2069ca735e28e19ae87c74f956
+;; Package-Version: 20210827.424
+;; Package-Commit: e6e8efd740df0b68db89805ba72492818dba61ab
 ;; Keywords: convenience, color-themes
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2014/03/22
@@ -189,7 +189,7 @@ Pass `*default*' to select Emacs defaults."
 
 (defun theme-looper--enable-theme-with-map (theme)
   "Enables a theme with displayed map."
-  (cl-flet* ((nth-cyclic (index collection)
+  (cl-labels ((nth-cyclic (index collection)
                          (cond ((< index
                                    0) (nth-cyclic (+ index
                                                      (length collection))

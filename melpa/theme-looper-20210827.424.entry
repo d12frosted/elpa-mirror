@@ -1,11 +1,11 @@
 (theme-looper .
-	      [(20210727 249)
+	      [(20210827 424)
 	       ((emacs
 		 (24))
 		(cl-lib
 		 (0 5)))
-	       "Loop through the available color-themes" single
-	       ((:commit . "32ca76dfa8100a2069ca735e28e19ae87c74f956")
+	       "A package for switching themes in Emacs interactively" single
+	       ((:commit . "e6e8efd740df0b68db89805ba72492818dba61ab")
 		(:authors
 		 ("Mohammed Ismail Ansari" . "team.terminal@gmail.com"))
 		(:maintainer "Mohammed Ismail Ansari" . "team.terminal@gmail.com")

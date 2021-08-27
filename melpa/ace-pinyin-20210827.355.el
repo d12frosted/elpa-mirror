@@ -4,8 +4,8 @@
 
 ;; Author: Junpeng Qiu <qjpchmail@gmail.com>
 ;; URL: https://github.com/cute-jumper/ace-pinyin
-;; Package-Version: 20210806.316
-;; Package-Commit: 4dc565807a9b74ba637122f746d1614c60f92af8
+;; Package-Version: 20210827.355
+;; Package-Commit: 47662c0b05775ba353464b44c0f1a037c85e746e
 ;; Version: 0.2
 ;; Package-Requires: ((avy "0.2.0") (pinyinlib "0.1.0"))
 ;; Keywords: extensions
@@ -513,8 +513,9 @@ Without PREFIX, search both Chinese and English."
 ;;;###autoload
 (define-minor-mode ace-pinyin-mode
   "Toggle `ace-pinyin-mode'."
-  nil
-  " AcePY"
+  :init-value nil
+  :lighter " AcePY"
+  :global nil
   :group ace-pinyin
   (if ace-pinyin-mode
       (if ace-pinyin-use-avy
