@@ -4,10 +4,10 @@ Source:  https://github.com/Chobbes/org-chef.git
 
 Updating /mnt/store/melpa/working/org-chef/
 Checking out origin/HEAD
-Checking out 5ba0b3e2567c044862d87012a6441160778ed44d
+Checking out aa867d34e9824785e9786a7923ae353b066e5f73
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-chef/
-  to /tmp/org-chefJWXS1c/org-chef-20210827.301
+  to /tmp/org-cheffxd0aq/org-chef-20210827.1342
     org-chef-24kitchen.el -> org-chef-24kitchen.el
     org-chef-all-recipes.el -> org-chef-all-recipes.el
     org-chef-bbc-food.el -> org-chef-bbc-food.el
@@ -16,6 +16,7 @@ Copying files (->) and directories (=>)
     org-chef-cultures-for-health.el -> org-chef-cultures-for-health.el
     org-chef-fine-cooking.el -> org-chef-fine-cooking.el
     org-chef-genius-kitchen.el -> org-chef-genius-kitchen.el
+    org-chef-jamie-oliver.el -> org-chef-jamie-oliver.el
     org-chef-json-ld.el -> org-chef-json-ld.el
     org-chef-marmiton.el -> org-chef-marmiton.el
     org-chef-martha-stewart.el -> org-chef-martha-stewart.el
@@ -30,34 +31,37 @@ Copying files (->) and directories (=>)
     org-chef-wordpress.el -> org-chef-wordpress.el
     org-chef-xiachufang.el -> org-chef-xiachufang.el
     org-chef.el -> org-chef.el
-Created org-chef-20210827.301.tar containing:
-  org-chef-20210827.301/
-  org-chef-20210827.301/org-chef-24kitchen.el
-  org-chef-20210827.301/org-chef-all-recipes.el
-  org-chef-20210827.301/org-chef-bbc-food.el
-  org-chef-20210827.301/org-chef-bbc-good-food.el
-  org-chef-20210827.301/org-chef-chef-koch.el
-  org-chef-20210827.301/org-chef-cultures-for-health.el
-  org-chef-20210827.301/org-chef-fine-cooking.el
-  org-chef-20210827.301/org-chef-genius-kitchen.el
-  org-chef-20210827.301/org-chef-json-ld.el
-  org-chef-20210827.301/org-chef-marmiton.el
-  org-chef-20210827.301/org-chef-martha-stewart.el
-  org-chef-20210827.301/org-chef-nytimes.el
-  org-chef-20210827.301/org-chef-pkg.el
-  org-chef-20210827.301/org-chef-reluctant-gourmet.el
-  org-chef-20210827.301/org-chef-saveur.el
-  org-chef-20210827.301/org-chef-serious-eats.el
-  org-chef-20210827.301/org-chef-simply-recipes.el
-  org-chef-20210827.301/org-chef-steamy-kitchen.el
-  org-chef-20210827.301/org-chef-taste.el
-  org-chef-20210827.301/org-chef-utils.el
-  org-chef-20210827.301/org-chef-wordpress.el
-  org-chef-20210827.301/org-chef-xiachufang.el
-  org-chef-20210827.301/org-chef.el
-Built org-chef in 4.936s, finished at 2021-08-27T09:50:05+0000
+Created org-chef-20210827.1342.tar containing:
+  org-chef-20210827.1342/
+  org-chef-20210827.1342/org-chef-24kitchen.el
+  org-chef-20210827.1342/org-chef-all-recipes.el
+  org-chef-20210827.1342/org-chef-bbc-food.el
+  org-chef-20210827.1342/org-chef-bbc-good-food.el
+  org-chef-20210827.1342/org-chef-chef-koch.el
+  org-chef-20210827.1342/org-chef-cultures-for-health.el
+  org-chef-20210827.1342/org-chef-fine-cooking.el
+  org-chef-20210827.1342/org-chef-genius-kitchen.el
+  org-chef-20210827.1342/org-chef-jamie-oliver.el
+  org-chef-20210827.1342/org-chef-json-ld.el
+  org-chef-20210827.1342/org-chef-marmiton.el
+  org-chef-20210827.1342/org-chef-martha-stewart.el
+  org-chef-20210827.1342/org-chef-nytimes.el
+  org-chef-20210827.1342/org-chef-pkg.el
+  org-chef-20210827.1342/org-chef-reluctant-gourmet.el
+  org-chef-20210827.1342/org-chef-saveur.el
+  org-chef-20210827.1342/org-chef-serious-eats.el
+  org-chef-20210827.1342/org-chef-simply-recipes.el
+  org-chef-20210827.1342/org-chef-steamy-kitchen.el
+  org-chef-20210827.1342/org-chef-taste.el
+  org-chef-20210827.1342/org-chef-utils.el
+  org-chef-20210827.1342/org-chef-wordpress.el
+  org-chef-20210827.1342/org-chef-xiachufang.el
+  org-chef-20210827.1342/org-chef.el
+Built org-chef in 3.529s, finished at 2021-08-27T15:07:58+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  449 Aug 27 09:50 packages/org-chef-20210827.301.entry
-112K -rw-r--r-- 1 root root 110K Aug 27 09:50 packages/org-chef-20210827.301.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 27 09:50 packages/org-chef-badge.svg
-4.0K -rw-r--r-- 1 root root  161 Aug 27 09:50 packages/org-chef-readme.txt
+4.0K -rw-r--r-- 1 root root  450 Aug 27 15:07 packages/org-chef-20210827.1342.entry
+112K -rw-r--r-- 1 root root 110K Aug 27 15:07 packages/org-chef-20210827.1342.tar
+4.0K -rw-r--r-- 1 root root  449 Aug 27 12:28 packages/org-chef-20210827.301.entry
+112K -rw-r--r-- 1 root root 110K Aug 27 12:28 packages/org-chef-20210827.301.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 27 15:07 packages/org-chef-badge.svg
+4.0K -rw-r--r-- 1 root root  161 Aug 27 15:07 packages/org-chef-readme.txt

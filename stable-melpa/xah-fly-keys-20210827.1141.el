@@ -3,9 +3,9 @@
 ;; Copyright © 2013-2021, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 14.17.20210822193812
-;; Package-Version: 20210823.302
-;; Package-Commit: c5a510db6aa15de78c809490571a5b2e9d765202
+;; Version: 14.17.20210827044123
+;; Package-Version: 20210827.1141
+;; Package-Commit: a21f17b642742582042d37893a1b386f994b0e28
 ;; Created: 10 Sep 2013
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: convenience, emulations, vim, ergoemacs
@@ -2377,7 +2377,7 @@ Only space and tab is considered whitespace here.
 Works on whole buffer or selection, respects `narrow-to-region'.
 
 URL `http://ergoemacs.org/emacs/elisp_compact_empty_lines.html'
-Version 2017-09-22 2020-09-08"
+Version 2017-09-22 2021-08-27"
   (interactive)
   (let ($begin $end)
     (if (use-region-p)
@@ -2386,19 +2386,12 @@ Version 2017-09-22 2020-09-08"
     (save-excursion
       (save-restriction
         (narrow-to-region $begin $end)
-        (progn
-          (goto-char (point-min))
-          (while (re-search-forward "[ \t]+\n" nil 1)
-            (replace-match "\n")))
-        (progn
-          (goto-char (point-min))
-          (while (re-search-forward "\n\n\n+" nil 1)
-            (replace-match "\n\n")))
-        (progn
-          (goto-char (point-max))
-          (while (equal (char-before) 32) ; char 32 is space
-            (delete-char -1))))
-      (message "white space cleaned"))))
+        (goto-char (point-min))
+        (while (re-search-forward "[ \t]+\n" nil 1) (replace-match "\n"))
+        (goto-char (point-min))
+        (while (re-search-forward "\n\n\n+" nil 1) (replace-match "\n\n"))
+        (goto-char (point-max))
+        (while (eq (char-before) ? ) (delete-char -1))))))
 
 (defun xah-make-backup ()
   "Make a backup copy of current file or dired marked files.

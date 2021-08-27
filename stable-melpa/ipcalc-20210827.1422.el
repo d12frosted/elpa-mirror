@@ -6,8 +6,8 @@
 ;; License: BSD
 ;; Created: 2012-03-11 17:10
 ;; Version: 0.2.6
-;; Package-Version: 20200809.1444
-;; Package-Commit: 58b2b6c90af93ae46c5445b33ee4d1ef4bac1efb
+;; Package-Version: 20210827.1422
+;; Package-Commit: fd71da7e4a468e4e3f68ae118030bd8ca47c52f8
 ;; URL: http://github.com/dotemacs/ipcalc.el
 ;; Keywords: networking tools
 ;; Package-Requires: ((cl-lib "0.5"))
@@ -49,6 +49,7 @@
 (require 'cl-lib)
 
 (defconst ipcalc--cidr-default 32 "CIDR value.")
+(defconst ipcalc--output-buffer-default "*ipcalc*" "Buffer name for outputting results.")
 
 (defun ipcalc-int-to-bin-string (n &optional length)
   ;; 08 Jun 1997 Jamie Zawinski <jwz@netscape.com> comp.emacs
@@ -144,8 +145,9 @@
     (concat full-ip (car (last octets)))))
 
 ;;;###autoload
-(defun ipcalc (ip/cidr)
-  "IP calculator for given IP/CIDR."
+(defun ipcalc (ip/cidr &optional buffer)
+  "IP calculator for given IP/CIDR. Insert the output in the buffer
+BUFFER (by default, the buffer `ipcalc--output-buffer-default')."
   (interactive "sIP/CIDR: ")
   (let* ((split-input (thread-first (replace-regexp-in-string "\\\"" "" ip/cidr)
                         (split-string "/")))
@@ -165,19 +167,26 @@
          (host-min-ip (ipcalc-binary-to-ip host-min-binary))
          (broadcast-binary (ipcalc-host+1 (ipcalc-host-max net-binary cidr)))
          (broadcast-ip (ipcalc-binary-to-ip broadcast-binary))
-         (buffer "*ipcalc*"))
-    (if (get-buffer buffer)
+         (buffer (or buffer ipcalc--output-buffer-default)))
+    (if (and (string-equal buffer ipcalc--output-buffer-default) (get-buffer buffer))
         (kill-buffer buffer))
     (pop-to-buffer buffer)
     (insert
-     (format "Address:%15s%41s\n" ip ip-in-binary)
-     (format "Netmask:%16s = %2s %34s\n" netmask cidr cidr-binary)
-     (format "Wildcard:%11s%44s\n" wildcard-ip wildcard-binary)
-     (format "=>\nNetwork:%14s%42s\n" net-ip (ipcalc-network ip cidr))
-     (format "HostMin:%14s%42s\n" host-min-ip host-min-binary)
-     (format "HostMax:%16s%40s\n" host-max-ip host-max-binary)
-     (format "Broadcast:%14s%40s\n" broadcast-ip broadcast-binary)
+     (format "Address: %17s%40s\n" ip ip-in-binary)
+     (format "Netmask: %17s = %2s %34s\n" netmask cidr cidr-binary)
+     (format "Wildcard: %16s%40s\n" wildcard-ip wildcard-binary)
+     (format "=>\nNetwork: %17s%40s\n" net-ip (ipcalc-network ip cidr))
+     (format "HostMin: %17s%40s\n" host-min-ip host-min-binary)
+     (format "HostMax: %17s%40s\n" host-max-ip host-max-binary)
+     (format "Broadcast: %15s%40s\n" broadcast-ip broadcast-binary)
      (format "Hosts/Net: %d\n" (ipcalc-hosts/net cidr-int)))))
+
+;;;###autoload
+(defun ipcalc-current-buffer (ip/cidr)
+  "IP calculator for given IP/CIDR. Inserts the output in the
+current buffer."
+  (interactive "sIP/CIDR: ")
+  (ipcalc ip/cidr (buffer-name)))
 
 (provide 'ipcalc)
 

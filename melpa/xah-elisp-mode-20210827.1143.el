@@ -3,9 +3,9 @@
 ;; Copyright © 2013-2021, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 3.22.20210824002845
-;; Package-Version: 20210824.730
-;; Package-Commit: 4bd7858dadff5c5320f169ebabde379e29bb7559
+;; Version: 3.22.20210827044242
+;; Package-Version: 20210827.1143
+;; Package-Commit: 9a1a26a6ef902fab721feece1955605339a9c9d5
 ;; Created: 23 Mar 2013
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: lisp, languages
@@ -660,6 +660,8 @@
 "char-equal"
 "string-equal"
 "string-collate-equalp"
+"string-version-lessp"
+"string-distance"
 "string-prefix-p"
 "string-suffix-p"
 "string-lessp"
@@ -2941,11 +2943,21 @@ Version 2017-01-27"
     ("i" "insert" xah-elisp--ahf)
     ("l" "let" xah-elisp--ahf)
     ("m" "message" xah-elisp--ahf)
-    ("o" "&optional " xah-elisp--ahf)
     ("p" "point" xah-elisp--ahf)
     ("s" "setq" xah-elisp--ahf)
     ("w" "when" xah-elisp--ahf)
 
+    ;; special abbrev not based on function name
+    ("ls" "let*" xah-elisp--ahf) ;
+    ("gt" "(> ▮)" xah-elisp--ahf)
+    ("lt" "(< ▮)" xah-elisp--ahf)
+    ("minus" "(- ▮)" xah-elisp--ahf)
+    ("plus" "(+ ▮)" xah-elisp--ahf)
+    ("inc" "(1+ ▮)" xah-elisp--ahf)
+    ("dec" "(1- ▮)" xah-elisp--ahf)
+    ("opt" "&optional " xah-elisp--ahf)
+
+    ;;
     ("ah" "add-hook" xah-elisp--ahf)
     ("asc" "async-shell-command" xah-elisp--ahf)
     ("bc" "backward-char" xah-elisp--ahf)
@@ -2966,7 +2978,6 @@ Version 2017-01-27"
     ("dr" "delete-region" xah-elisp--ahf)
     ("dv" "defvar" xah-elisp--ahf)
     ("eb" "erase-buffer" xah-elisp--ahf)
-    ("fa" "fillarray" xah-elisp--ahf)
     ("fc" "forward-char" xah-elisp--ahf)
     ("ff" "find-file" xah-elisp--ahf)
     ("fl" "forward-line" xah-elisp--ahf)
@@ -3012,13 +3023,6 @@ Version 2017-01-27"
     ("wg" "widget-get" xah-elisp--ahf)
     ("wr" "write-region" xah-elisp--ahf)
 
-    ("gt" "(> ▮)" xah-elisp--ahf)
-    ("lt" "(< ▮)" xah-elisp--ahf)
-    ("minus" "(- ▮)" xah-elisp--ahf)
-    ("plus" "(+ ▮)" xah-elisp--ahf)
-    ("inc" "(1+ ▮)" xah-elisp--ahf)
-    ("dec" "(1- ▮)" xah-elisp--ahf)
-
     ("atf" "append-to-file" xah-elisp--ahf)
     ("bfn" "buffer-file-name" xah-elisp--ahf)
     ("bmp" "buffer-modified-p" xah-elisp--ahf)
@@ -3050,7 +3054,6 @@ Version 2017-01-27"
     ("msnp" "match-string-no-properties" xah-elisp--ahf)
     ("ntr" "narrow-to-region" xah-elisp--ahf)
     ("nts" "number-to-string" xah-elisp--ahf)
-    ("opt" "&optional " xah-elisp--ahf)
     ("ptp" "put-text-property" xah-elisp--ahf)
     ("rap" "region-active-p" xah-elisp--ahf)
     ("rdn" "read-directory-name" xah-elisp--ahf)
@@ -3132,7 +3135,7 @@ Version 2017-01-27"
     ("clear-visited-file-modtime" "(clear-visited-file-modtime)" xah-elisp--ahf)
     ("clone-indirect-buffer" "(clone-indirect-buffer NEWNAME▮ DISPLAY-FLAG &optional NORECORD)" xah-elisp--ahf)
     ("clrhash" "(clrhash ▮)" xah-elisp--ahf)
-    ("compare-strings" "(compare-strings string1▮ start1 end1 string2 start2 end2)" xah-elisp--ahf)
+    ("compare-strings" "(compare-strings ▮ start1 end1 string2 start2 end2)" xah-elisp--ahf)
     ("concat" "(concat \"▮\" \"▮\")" xah-elisp--ahf)
     ("cond" "(cond\n(CONDITION▮ BODY)\n(CONDITION BODY)\n)" xah-elisp--ahf)
     ("condition-case" "(condition-case ▮)" xah-elisp--ahf)
@@ -3347,9 +3350,9 @@ Version 2017-01-27"
     ("rename-buffer" "(rename-buffer NEWNAME▮ &optional UNIQUE)" xah-elisp--ahf)
     ("rename-file" "(rename-file FILE▮ NEWNAME &optional OK-IF-ALREADY-EXISTS)" xah-elisp--ahf)
     ("repeat" "(repeat ▮)" xah-elisp--ahf)
-    ("replace-match" "(replace-match NEWTEXT▮ &optional FIXEDCASE LITERAL \"STRING\" SUBEXP)" xah-elisp--ahf)
+    ("replace-match" "(replace-match NEWTEXT▮ &optional FIXEDCASE LITERAL STRING SUBEXP)" xah-elisp--ahf)
     ("replace-regexp" "(replace-regexp \"REGEXP▮\" TO-STRING &optional DELIMITED START END)" xah-elisp--ahf)
-    ("replace-regexp-in-string" "(replace-regexp-in-string \"REGEXP▮\" REP \"STRING\" &optional FIXEDCASE LITERAL SUBEXP START)" xah-elisp--ahf)
+    ("replace-regexp-in-string" "(replace-regexp-in-string \"REGEXP▮\" REP STRING &optional FIXEDCASE LITERAL SUBEXP START)" xah-elisp--ahf)
     ("require" "(require ▮)" xah-elisp--ahf)
     ("restore-buffer-modified-p" "(restore-buffer-modified-p FLAG▮)" xah-elisp--ahf)
     ("reverse" "(reverse ▮)" xah-elisp--ahf)
@@ -3386,20 +3389,18 @@ Version 2017-01-27"
     ("split-string" "(split-string ▮ &optional SEPARATORS OMIT-NULLS)" xah-elisp--ahf)
     ("start-process" "(start-process NAME BUFFER PROGRAM▮ &rest PROGRAM-ARGS)" xah-elisp--ahf)
     ("stc" "(string-to-char \"▮\")" xah-elisp--ahf)
-    ("string-collate-equalp" "(string-collate-equalp string1▮ string2 &optional locale)" xah-elisp--ahf)
-    ("string-collate-lessp" "(string-collate-lessp string1▮ string2 &optional locale)" xah-elisp--ahf)
-    ("string-equal" "(string-equal str1▮ str2)" xah-elisp--ahf)
-    ("string-greaterp" "(string-greaterp string1▮ string2)" xah-elisp--ahf)
-    ("string-lessp" "(string-lessp string1▮ string2)" xah-elisp--ahf)
-    ("string-match" "(string-match \"REGEXP▮\" \"STRING\" &optional START)" xah-elisp--ahf)
-    ("string-match-p" "(string-match-p \"REGEXP▮\" \"STRING\" &optional START)" xah-elisp--ahf)
-    ("string-prefix-p" "(string-prefix-p prefixstr▮ string2 &optional ignore-case)" xah-elisp--ahf)
-    ("string-prefix-p" "(string-prefix-p string1▮ string2 &optional ignore-case)" xah-elisp--ahf)
-    ("string-suffix-p" "(string-suffix-p suffix▮ string &optional ignore-case)" xah-elisp--ahf)
+    ("string-collate-equalp" "(string-collate-equalp ▮ string2 &optional locale)" xah-elisp--ahf)
+    ("string-collate-lessp" "(string-collate-lessp ▮ string2 &optional locale)" xah-elisp--ahf)
+    ("string-equal" "(string-equal ▮ str2)" xah-elisp--ahf)
+    ("string-greaterp" "(string-greaterp ▮ string2)" xah-elisp--ahf)
+    ("string-lessp" "(string-lessp ▮ string2)" xah-elisp--ahf)
+    ("string-match" "(string-match \"REGEXP\" STRING▮ &optional START)" xah-elisp--ahf)
+    ("string-match-p" "(string-match-p \"REGEXP\" ▮ &optional START)" xah-elisp--ahf)
+    ("string-prefix-p" "(string-prefix-p prefix▮ string2 &optional ignore-case)" xah-elisp--ahf)
     ("string-suffix-p" "(string-suffix-p suffix▮ string &optional ignore-case)" xah-elisp--ahf)
     ("string-to-char" "(string-to-char \"▮\")" xah-elisp--ahf)
     ("string-to-number" "(string-to-number \"▮\")" xah-elisp--ahf)
-    ("string=" "(string-equal str1▮ str2)" xah-elisp--ahf)
+    ("string=" "(string-equal ▮ str2)" xah-elisp--ahf)
     ("stringp" "(stringp ▮)" xah-elisp--ahf)
     ("substring" "(substring STRING▮ FROM &optional TO)" xah-elisp--ahf)
     ("substring-no-properties" "(substring-no-properties ▮ FROM TO)" xah-elisp--ahf)

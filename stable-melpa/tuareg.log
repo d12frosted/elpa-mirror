@@ -4,28 +4,32 @@ Source:  https://github.com/ocaml/tuareg.git
 
 Updating /mnt/store/melpa/working/tuareg/
 Checking out origin/HEAD
-Checking out d2b38f0249e3db467e9708985571f06ae191edbb
+Checking out 4c4fad3c096876939ea0a329638a1825786cfc26
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tuareg/
-  to /tmp/tuareg8FjV5U/tuareg-20210825.1946
+  to /tmp/tuareg16lPkm/tuareg-20210827.1448
     dot-emacs.el -> dot-emacs.el
     ocamldebug.el -> ocamldebug.el
+    tuareg-compat.el -> tuareg-compat.el
     tuareg-menhir.el -> tuareg-menhir.el
     tuareg-opam.el -> tuareg-opam.el
     tuareg-site-file.el -> tuareg-site-file.el
     tuareg.el -> tuareg.el
-Created tuareg-20210825.1946.tar containing:
-  tuareg-20210825.1946/
-  tuareg-20210825.1946/dot-emacs.el
-  tuareg-20210825.1946/ocamldebug.el
-  tuareg-20210825.1946/tuareg-menhir.el
-  tuareg-20210825.1946/tuareg-opam.el
-  tuareg-20210825.1946/tuareg-pkg.el
-  tuareg-20210825.1946/tuareg-site-file.el
-  tuareg-20210825.1946/tuareg.el
-Built tuareg in 3.529s, finished at 2021-08-27T10:04:56+0000
+Created tuareg-20210827.1448.tar containing:
+  tuareg-20210827.1448/
+  tuareg-20210827.1448/dot-emacs.el
+  tuareg-20210827.1448/ocamldebug.el
+  tuareg-20210827.1448/tuareg-compat.el
+  tuareg-20210827.1448/tuareg-menhir.el
+  tuareg-20210827.1448/tuareg-opam.el
+  tuareg-20210827.1448/tuareg-pkg.el
+  tuareg-20210827.1448/tuareg-site-file.el
+  tuareg-20210827.1448/tuareg.el
+Built tuareg in 3.780s, finished at 2021-08-27T15:22:38+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  616 Aug 27 10:04 packages/tuareg-20210825.1946.entry
-232K -rw-r--r-- 1 root root 230K Aug 27 10:04 packages/tuareg-20210825.1946.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 27 10:04 packages/tuareg-badge.svg
-4.0K -rw-r--r-- 1 root root  441 Aug 27 10:04 packages/tuareg-readme.txt
+4.0K -rw-r--r-- 1 root root  616 Aug 27 12:43 packages/tuareg-20210825.1946.entry
+232K -rw-r--r-- 1 root root 230K Aug 27 12:43 packages/tuareg-20210825.1946.tar
+4.0K -rw-r--r-- 1 root root  652 Aug 27 15:22 packages/tuareg-20210827.1448.entry
+240K -rw-r--r-- 1 root root 240K Aug 27 15:22 packages/tuareg-20210827.1448.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 27 15:22 packages/tuareg-badge.svg
+4.0K -rw-r--r-- 1 root root  490 Aug 27 15:22 packages/tuareg-readme.txt
