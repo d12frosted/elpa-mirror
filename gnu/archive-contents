@@ -137,7 +137,7 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:keywords "async"))])
  (auctex .
-	 [(13 0 13)
+	 [(13 0 14)
 	  ((emacs
 	    (24 3)))
 	  "Integrated environment for *TeX*" tar
@@ -488,7 +488,7 @@
 	      ("João Távora" . "joaotavora@gmail.com"))
 	     (:maintainer "João Távora" . "joaotavora@gmail.com"))])
  (dash .
-       [(2 19 0)
+       [(2 19 1)
 	((emacs
 	  (24)))
 	"A modern list library for Emacs" tar
@@ -2565,6 +2565,14 @@
 	   (:authors
 	    ("Yuan Fu" . "casouri@gmail.com"))
 	   (:keywords "convenience" "text" "table"))])
+ (vc-backup .
+	    [(1 0 0)
+	     nil "VC backend for versioned backups" tar
+	     ((:url . "https://git.sr.ht/~pkal/vc-backup")
+	      (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
+	      (:authors
+	       ("Philip Kaludercic" . "philipk@posteo.net"))
+	      (:keywords "vc"))])
  (vc-hgcmd .
 	   [(1 14)
 	    ((emacs
