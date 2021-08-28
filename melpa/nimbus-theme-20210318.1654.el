@@ -7,7 +7,7 @@
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
 ;; Version:     1.0.0
 ;; Package-Version: 20210318.1654
-;; Package-Commit: 7e9ad5a617a26641988445503e235c68fa21b611
+;; Package-Commit: 15b1185a26fa2b725d379f79e798dc3bc977028b
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/m-cat/nimbus-theme
 ;; Keywords:    faces
