@@ -1,0 +1,11 @@
+(hl-todo .
+	 [(20210828 1225)
+	  ((emacs
+	    (25)))
+	  "highlight TODO and similar keywords" single
+	  ((:commit . "d13a0892645536b970ce130a01ebe5f62e04689f")
+	   (:authors
+	    ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	   (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	   (:keywords "convenience")
+	   (:url . "https://github.com/tarsius/hl-todo"))])

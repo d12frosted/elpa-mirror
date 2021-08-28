@@ -6,7 +6,7 @@
 ;; Created: February 2021
 ;; URL: https://github.com/okamsn/loopy
 ;; Package-Version: 20210828.429
-;; Package-Commit: 24910b119b9e45a63d398caae256e46e656aca37
+;; Package-Commit: e5e0380e59d751b51ff7bc0c926caea5ec22033f
 ;; Version: 0.8.1
 ;; Package-Requires: ((emacs "25.1") (loopy "0.8.1") (dash "2"))
 ;; Keywords: extensions
