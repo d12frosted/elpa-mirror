@@ -1,0 +1,23 @@
+Package: lyrics-fetcher
+Fetcher: github
+Source:  https://github.com/SqrtMinusOne/lyrics-fetcher.el.git
+
+Updating /mnt/store/melpa/working/lyrics-fetcher/
+Checking out origin/HEAD
+Checking out 4545f5c5609166198b5f6f2e12de7309d294b629
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lyrics-fetcher/
+  to /tmp/lyrics-fetcherdvoRFk/lyrics-fetcher-20210828.813
+    lyrics-fetcher-genius.el -> lyrics-fetcher-genius.el
+    lyrics-fetcher.el -> lyrics-fetcher.el
+Created lyrics-fetcher-20210828.813.tar containing:
+  lyrics-fetcher-20210828.813/
+  lyrics-fetcher-20210828.813/lyrics-fetcher-genius.el
+  lyrics-fetcher-20210828.813/lyrics-fetcher-pkg.el
+  lyrics-fetcher-20210828.813/lyrics-fetcher.el
+Built lyrics-fetcher in 3.293s, finished at 2021-08-29T03:59:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  421 Aug 29 03:59 packages/lyrics-fetcher-20210828.813.entry
+ 40K -rw-r--r-- 1 root root  40K Aug 29 03:59 packages/lyrics-fetcher-20210828.813.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 29 03:59 packages/lyrics-fetcher-badge.svg
+4.0K -rw-r--r-- 1 root root  579 Aug 29 03:59 packages/lyrics-fetcher-readme.txt

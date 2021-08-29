@@ -1,5 +1,5 @@
 (syslog-mode .
-	     [(20210825 116)
+	     [(20210829 112)
 	      ((hide-lines
 		(20130623))
 	       (ov
@@ -7,7 +7,7 @@
 	       (hsluv
 		(20181127)))
 	      "Major-mode for viewing log files & strace output" tar
-	      ((:commit . "7773a8488db88424e5e86cf4268c9bbe0b94085a")
+	      ((:commit . "d3cd216fcf79fb86e00ae1e03fd2dc7d52ddfb34")
 	       (:authors
 		("Harley Gorrell" . "harley@panix.com"))
 	       (:maintainer "Joe Bloggs" . "vapniks@yahoo.com")
