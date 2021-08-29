@@ -1,0 +1,13 @@
+(org-alert .
+	   [(20210828 1822)
+	    ((org
+	      (9 0))
+	     (alert
+	      (1 2)))
+	    "Notify org deadlines via notify-send" single
+	    ((:commit . "67b2e241d9eafcabcbd7de48cca031044ebc8221")
+	     (:authors
+	      ("Stephen Pegoraro" . "spegoraro@tutive.com"))
+	     (:maintainer "Stephen Pegoraro" . "spegoraro@tutive.com")
+	     (:keywords "org" "org-mode" "notify" "notifications" "calendar")
+	     (:url . "https://github.com/spegoraro/org-alert"))])

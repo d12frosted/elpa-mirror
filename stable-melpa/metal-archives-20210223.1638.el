@@ -5,6 +5,8 @@
 
 ;; Author: Sébastien Le Maguer <lemagues@tcd.ie>
 ;; Package-Requires: ((emacs "26.3") (alert "1.2") (ht "2.3") (request "0.2.2"))
+;; Package-Version: 20210223.1638
+;; Package-Commit: a218d63b990365edeef6a2394f72d1f2286aeeae
 ;; Keywords: lisp, calendar
 ;; Version: 0.1
 ;; Homepage: https://github.com/seblemaguer/metal-archives.el
