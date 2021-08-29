@@ -13,7 +13,7 @@
 ;; Created: [2019-07-11]
 ;; Version: 2.0.4
 ;; Package-Version: 20210215.2206
-;; Package-Commit: 2b719baf0ccba79e28fcb3c2633c4849d976ac23
+;; Package-Commit: 7330f08dd85ee715096f3596df516877894c6c2f
 ;; Package-Requires: ((emacs "25"))
 ;; Keywords: lisp
 ;; URL: https://gitlab.com/marcowahl/lisp-butt-mode
