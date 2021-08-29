@@ -1,0 +1,853 @@
+#+TITLE: taxy.el
+
+#+PROPERTY: LOGGING nil
+
+# Note: This readme works with the org-make-toc <https://github.com/alphapapa/org-make-toc> package, which automatically updates the table of contents.
+
+#+HTML: <img src="images/mascot.png" align="right">
+
+# [[https://melpa.org/#/package-name][file:https://melpa.org/packages/taxy-badge.svg]] [[https://stable.melpa.org/#/package-name][file:https://stable.melpa.org/packages/taxy-badge.svg]]
+
+/Now, where did I put that.../
+
+This library provides a programmable way to classify arbitrary objects into a hierarchical taxonomy.  (That's a lot of fancy words to say that this lets you put things in nested groups.)
+
+Helpful features include:
+
++  Dynamic taxonomies :: Objects may be classified into hierarchies automatically defined at runtime based on their attributes.
++  Reusable taxonomies :: Taxonomy definitions may be stored in variables and reused in other taxonomies' descendant groups.
+
+* Contents                                                         :noexport:
+:PROPERTIES:
+:TOC:      :include siblings
+:END:
+:CONTENTS:
+- [[#examples][Examples]]
+  - [[#numbery-starting-basically][Numbery (starting basically)]]
+  - [[#lettery-filling-incrementally][Lettery (filling incrementally)]]
+  - [[#sporty-understanding-completely][Sporty (understanding completely)]]
+  - [[#applications][Applications]]
+- [[#installation][Installation]]
+- [[#usage][Usage]]
+  - [[#dynamic-taxys][Dynamic taxys]]
+  - [[#reusable-taxys][Reusable taxys]]
+  - [[#threading-macros][Threading macros]]
+  - [[#modifying-filled-taxys][Modifying filled taxys]]
+  - [[#magit-section][Magit section]]
+- [[#changelog][Changelog]]
+- [[#development][Development]]
+  - [[#copyright-assignment][Copyright assignment]]
+- [[#credits][Credits]]
+:END:
+
+* Examples
+:PROPERTIES:
+:TOC:      :include descendants :depth 1
+:END:
+:CONTENTS:
+- [[#numbery-starting-basically][Numbery (starting basically)]]
+- [[#lettery-filling-incrementally][Lettery (filling incrementally)]]
+- [[#sporty-understanding-completely][Sporty (understanding completely)]]
+- [[#applications][Applications]]
+:END:
+
+May these examples help you classify your understanding.
+
+** Numbery (starting basically)
+
+Let's imagine a silly taxonomy of numbers below 100:
+
+#+BEGIN_SRC elisp
+  ("Numbery" "A silly taxonomy of numbers."
+   (("< 10" "Numbers below 10"
+     ;; These numbers are leftovers from the sub-taxys below.
+     (0 2 4 6 8)
+     ;; These sub-taxys further classify the numbers below 10 into odd
+     ;; and even.  The odd taxy "consumes" numbers, while the even one
+     ;; doesn't, leaving them to reappear in the parent taxy's objects.
+     (("Odd" "(consuming)"
+       (1 3 5 7 9))
+      ("Even" "(non-consuming)"
+       (0 2 4 6 8))))
+    (">= 10" "Numbers above 9"
+     ;; Like in the "< 10" taxy, these numbers are leftovers from this
+     ;; taxy's sub-taxys, three of which are non-consuming.
+     (10 11 13 14 17 19 22 23 25 26 29 31 34 35 37 38 41 43 46 47 49 50 53 55 58
+         59 61 62 65 67 70 71 73 74 77 79 82 83 85 86 89 91 94 95 97 98)
+     (("Divisible by 3" "(non-consuming)"
+       (12 15 18 21 24 27 30 33 36 39 42 45 48 51 54 57 60 63 66 69 72 75 78 81 84
+           87 90 93 96 99))
+      ("Divisible by 4" "(non-consuming)"
+       (12 16 20 24 28 32 36 40 44 48 52 56 60 64 68 72 76 80 84 88 92 96))
+      ("Divisible by 3 or 4" "(consuming)"
+       ;; This taxy consumes numbers it takes in, but since these
+       ;; numbers have already been taken in (without being consumed) by
+       ;; the previous two sibling taxys, they may also appear in them.
+       (12 15 16 18 20 21 24 27 28 30 32 33 36 39 40 42 44 45 48 51 52 54 56 57 60
+           63 64 66 68 69 72 75 76 78 80 81 84 87 88 90 92 93 96 99))
+      ("Divisible by 5" "(non-consuming)"
+       (10 25 35 50 55 65 70 85 95))))))
+#+END_SRC
+
+You might think about how to produce that by writing some imperative code, but =taxy= allows you to do so in a more declarative and functional manner:
+
+#+BEGIN_SRC elisp :exports code
+  (require 'taxy)
+
+  (defvar numbery
+    (make-taxy
+     :name "Numbery"
+     :description "A silly taxonomy of numbers."
+     :taxys (list (make-taxy
+                   :name "< 10"
+                   :description "Numbers below 10 (consuming)"
+                   :predicate (lambda (n) (< n 10))
+                   :taxys (list
+                           ;; These sub-taxys further classify the numbers below 10 into odd
+                           ;; and even.  The odd taxy "consumes" numbers, while the even one
+                           ;; doesn't, leaving them to reappear in the parent taxy's objects.
+                           (make-taxy :name "Odd"
+                                      :description "(consuming)"
+                                      :predicate #'oddp)
+                           (make-taxy :name "Even"
+                                      :description "(non-consuming)"
+                                      :predicate #'evenp
+                                      :then #'identity)))
+                  (make-taxy
+                   :name ">= 10"
+                   :description "Numbers above 9 (consuming)"
+                   :predicate (lambda (n) (>= n 10))
+                   :taxys (list
+                           ;; Like in the "< 10" taxy, these sub-taxys further classify
+                           ;; the numbers, but only one of them consumes numbers it
+                           ;; takes in, leaving the rest to reappear in the parent taxy.
+                           (make-taxy :name "Divisible by 3"
+                                      :description "(non-consuming)"
+                                      :predicate (lambda (n) (zerop (mod n 3)))
+                                      :then #'identity)
+                           (make-taxy :name "Divisible by 4"
+                                      :description "(non-consuming)"
+                                      :predicate (lambda (n) (zerop (mod n 4)))
+                                      :then #'identity)
+                           (make-taxy :name "Divisible by 3 or 4"
+                                      :description "(consuming)"
+                                      ;; Since this taxy's `:then' function is unset,
+                                      ;; it defaults to `ignore', which causes it to
+                                      ;; consume numbers it takes in.  Since these
+                                      ;; numbers have already been taken in (without
+                                      ;; being consumed) by the previous two sibling
+                                      ;; taxys, they also appear in them.
+                                      :predicate (lambda (n) (or (zerop (mod n 3))
+                                                                 (zerop (mod n 4)))))
+                           (make-taxy :name "Divisible by 5"
+                                      :description "(non-consuming)"
+                                      :predicate (lambda (n) (zerop (mod n 5)))
+                                      :then #'identity))))))
+
+  (let ((numbers (cl-loop for i below 100 collect i))
+        ;; Since `numbery' is stored in a variable, we use an emptied
+        ;; copy of it to avoid mutating the original taxy.
+        (taxy (taxy-emptied numbery)))
+    (taxy-plain (taxy-fill (reverse numbers) taxy)))
+#+END_SRC
+
+The ~taxy-fill~ function applies the numbers in a "cascade" down the hierarchy of "taxys", and the ~taxy-plain~ function returns a meaningful subset of the taxys' slots, suitable for display.
+
+** Lettery (filling incrementally)
+
+You can also add more objects after the hierarchy has been filled:
+
+#+BEGIN_SRC elisp
+  (defvar lettery
+    (make-taxy :name "Lettery"
+               :description "A comprehensive taxonomy of letters."
+               :taxys (list (make-taxy :name "Vowels"
+                                       :description "You know what those are."
+                                       :predicate (lambda (l)
+                                                    (member-ignore-case l '("a" "e" "i" "o" "u"))))
+                            (make-taxy :name "Consonants"
+                                       :description "Well, if they aren't a vowel..."))))
+
+  (taxy-plain
+   (taxy-fill (reverse
+               (cl-loop for l from ?a to ?n
+                        collect (upcase (char-to-string l))))
+              lettery))
+#+END_SRC
+
+#+BEGIN_SRC elisp
+  ("Lettery" "A comprehensive taxonomy of letters."
+   (("Vowels" "You know what those are."
+     ("A" "E" "I"))
+    ("Consonants" "Well, if they aren't a vowel..."
+     ("B" "C" "D" "F" "G" "H" "J" "K" "L" "M" "N"))))
+#+END_SRC
+
+Oops, we forgot the letters after N!  Let's add them, too:
+
+#+BEGIN_SRC elisp
+  (taxy-plain
+   (taxy-fill (reverse
+               (cl-loop for l from ?n to ?z
+                        collect (upcase (char-to-string l))))
+              lettery))
+#+END_SRC
+
+#+BEGIN_SRC elisp
+  ("Lettery" "A comprehensive taxonomy of letters."
+   (("Vowels" "You know what those are."
+     ("O" "U" "A" "E" "I"))
+    ("Consonants" "Well, if they aren't a vowel..."
+     ("N" "P" "Q" "R" "S" "T" "V" "W" "X" "Y" "Z" "B" "C" "D" "F" "G" "H" "J" "K" "L" "M" "N"))))
+#+END_SRC
+
+Oh, they're out of order, now.  That won't do.  Let's fix that:
+
+#+BEGIN_SRC elisp
+  (cl-loop for taxy in-ref (taxy-taxys lettery)
+           do (setf (taxy-objects taxy) (cl-sort (taxy-objects taxy) #'<
+                                                 :key #'string-to-char)))
+
+  (taxy-plain lettery)
+#+END_SRC
+
+That's better:
+
+#+BEGIN_SRC elisp
+  ("Lettery" "A comprehensive taxonomy of letters."
+   (("Vowels" "You know what those are."
+     ("A" "E" "I" "O" "U"))
+    ("Consonants" "Well, if they aren't a vowel..."
+     ("B" "C" "D" "F" "G" "H" "J" "K" "L" "M" "N" "N" "P" "Q" "R" "S" "T" "V" "W" "X" "Y" "Z"))))
+#+END_SRC
+
+** Sporty (understanding completely)
+
+Let's try to understand a few things about sports.  First we'll define a struct to make them easier to grasp:
+
+#+BEGIN_SRC elisp :exports code :results silent
+  (cl-defstruct sport
+    name uses venue fun)
+#+END_SRC
+
+Now we'll make a list of sports:
+
+#+BEGIN_SRC elisp :exports code :results silent
+  (defvar sports
+    (list (make-sport :name "Baseball"
+                      :uses '(bat ball glove)
+                      :venue 'outdoor
+                      :fun t)
+          (make-sport :name "Football"
+                      :uses '(ball)
+                      :venue 'outdoor
+                      :fun t)
+          (make-sport :name "Basketball"
+                      :uses '(ball hoop)
+                      :venue 'indoor
+                      :fun t)
+          (make-sport :name "Tennis"
+                      :uses '(ball racket)
+                      :venue 'outdoor
+                      :fun t)
+          (make-sport :name "Racquetball"
+                      :uses '(ball racket)
+                      :venue 'indoor
+                      :fun t)
+          (make-sport :name "Handball"
+                      :uses '(ball glove)
+                      :venue 'indoor
+                      :fun t)
+          (make-sport :name "Soccer"
+                      :uses '(ball)
+                      :venue 'outdoor
+                      :fun nil)
+          (make-sport :name "Disc golf"
+                      :uses '(disc basket)
+                      :venue 'outdoor
+                      :fun t)
+          (make-sport :name "Ultimate"
+                      :uses '(disc)
+                      :venue 'outdoor
+                      :fun t)
+          (make-sport :name "Volleyball"
+                      :uses '(ball)
+                      :venue 'indoor
+                      :fun t)))
+#+END_SRC
+
+And finally we'll define a taxy to organize them.  In this, we use a helper macro to make the ~member~ function easier to use in the list of key functions:
+
+#+BEGIN_SRC elisp :exports code :results silent :lexical t
+  (defvar sporty
+    (cl-macrolet ((in (needle haystack)
+                      `(lambda (object)
+                         (when (member ,needle (funcall ,haystack object))
+                           ,needle))))
+      (make-taxy
+       :taxys (list (make-taxy
+                     :name "Sporty"
+                     :take (lambda (object taxy)
+                             (taxy-take-keyed
+                              (list #'sport-venue
+                                    (in 'ball 'sport-uses)
+                                    (in 'disc 'sport-uses)
+                                    (in 'glove 'sport-uses)
+                                    (in 'racket 'sport-uses))
+                              object taxy
+                              ;; We set the `:then' function of the taxys
+                              ;; created by `taxy-take-keyed' to `identity'
+                              ;; so they will not consume their objects.
+                              :then #'identity)))))))
+#+END_SRC
+
+Now let's fill the taxy with the sports and format it:
+
+#+BEGIN_SRC elisp :exports code
+  (thread-last sporty
+    taxy-emptied
+    (taxy-fill sports)
+    (taxy-mapcar #'sport-name)
+    taxy-plain)
+#+END_SRC
+
+#+BEGIN_SRC elisp :exports code
+((("Sporty"
+   ((disc
+     ((outdoor
+       ("Ultimate" "Disc golf"))))
+    (ball
+     ((racket
+       ((indoor
+         ("Racquetball"))
+        (outdoor
+         ("Tennis"))))
+      (indoor
+       ("Volleyball" "Basketball"))
+      (outdoor
+       ("Soccer" "Football"))
+      (glove
+       ((indoor
+         ("Handball"))
+        (outdoor
+         ("Baseball"))))))))))
+#+END_SRC
+
+That's pretty sporty.  But classifying them by venue first makes the racket and glove sports not be listed together.  Let's swap that around:
+
+#+BEGIN_SRC elisp :exports code :results silent
+  (defvar sporty
+    (cl-macrolet ((in (needle haystack)
+                      `(lambda (object)
+                         (when (member ,needle (funcall ,haystack object))
+                           ,needle))))
+      (make-taxy
+       :taxys (list (make-taxy
+                     :name "Sporty"
+                     :take (lambda (object taxy)
+                             (taxy-take-keyed
+                              (list (in 'ball 'sport-uses)
+                                    (in 'disc 'sport-uses)
+                                    (in 'glove 'sport-uses)
+                                    (in 'racket 'sport-uses)
+                                    #'sport-venue)
+                              object taxy
+                              :then #'identity)))))))
+
+  (thread-last sporty
+    taxy-emptied
+    (taxy-fill sports)
+    (taxy-mapcar #'sport-name)
+    taxy-plain)
+#+END_SRC
+
+#+BEGIN_SRC elisp :exports code
+((("Sporty"
+   ((disc
+     ((outdoor
+       ("Ultimate" "Disc golf"))))
+    (ball
+     ((racket
+       ((indoor
+         ("Racquetball"))
+        (outdoor
+         ("Tennis"))))
+      (indoor
+       ("Volleyball" "Basketball"))
+      (outdoor
+       ("Soccer" "Football"))
+      (glove
+       ((indoor
+         ("Handball"))
+        (outdoor
+         ("Baseball"))))))))))
+#+END_SRC
+
+That's better.  But I'd also like to see a very simple classification to help me decide what to play:
+
+#+BEGIN_SRC elisp :exports code
+  (thread-last
+      (make-taxy
+       :taxys (list
+               (make-taxy
+                :name "Funny"
+                :take (lambda (object taxy)
+                        (taxy-take-keyed
+                         (list (lambda (sport)
+                                 (if (sport-fun sport)
+                                     'fun 'boring))
+                               #'sport-venue)
+                         object taxy)))))
+    taxy-emptied
+    (taxy-fill sports)
+    (taxy-mapcar #'sport-name)
+    taxy-plain)
+#+END_SRC
+
+#+BEGIN_SRC elisp :exports code
+((("Funny"
+   ((boring
+     ((outdoor
+       ("Soccer"))))
+    (fun
+     ((indoor
+       ("Volleyball" "Handball" "Racquetball" "Basketball"))
+      (outdoor
+       ("Ultimate" "Disc golf" "Tennis" "Football" "Baseball"))))))))
+#+END_SRC
+
+Ah, now I understand.
+
+** Applications
+
+Some example applications may be found in the [[file:examples/README.org][examples directory]]:
+
++  Diredy rearranges a Dired buffer into groups by file size and type:
+   [[images/diredy.png]]
++  Musicy shows a music library with tracks categorized by genre, artist, year, album, etc:
+   [[images/musicy.png]]
+
+* Installation
+
+=taxy= is distributed in [[https://elpa.gnu.org/][GNU ELPA]], which is available in Emacs by default.  Use =M-x package-install RET taxy RET=, then ~(require 'taxy)~ in your Elisp project.
+
+* Usage
+:PROPERTIES:
+:TOC:      :include descendants :depth 1
+:END:
+:CONTENTS:
+- [[#dynamic-taxys][Dynamic taxys]]
+- [[#reusable-taxys][Reusable taxys]]
+- [[#threading-macros][Threading macros]]
+- [[#modifying-filled-taxys][Modifying filled taxys]]
+- [[#magit-section][Magit section]]
+:END:
+
+A taxy is defined with the ~make-taxy~ constructor, like:
+
+#+BEGIN_SRC elisp
+  (make-taxy :name "Numbery"
+             :description "A silly taxonomy of numbers."
+             :predicate #'numberp
+             :then #'ignore
+             :taxys (list ...))
+#+END_SRC
+
+The ~:predicate~ function determines whether an object fits into that taxy.  If it does, ~taxy-fill~ adds the object to that taxy's descendant ~:taxys~, if present, or to its own ~:objects~.  The function defaults to ~identity~, so a taxy "takes in" any object by default (i.e. if you only apply objects you want to classify, there's no need to test them at the top-level taxy).
+
+The ~:then~ function determines what happens to an object after being taken in: if the function, called with the object, returns a non-nil value, that value is applied to other taxys at the same level until one of their ~:then~ functions returns nil or no more taxys remain.  The function defaults to ~ignore~, which makes a taxy "consume" its objects by default.  Setting the function to, e.g. ~identity~, makes it not consume them, leaving them eligible to also be taken into subsequent taxys, or to appear in the parent taxy's objects.
+
+After defining a taxy, call ~taxy-fill~ with it and a list of objects to fill the taxy's hierarchy.  *Note:* ~taxy-fill~ modifies the taxy given to it (filling its ~:objects~ and those of its ~:taxys~), so when using a statically defined taxy (e.g. one defined with ~defvar~), you should pass ~taxy-fill~ a taxy copied with ~taxy-emptied~, which recursively copies a taxy without ~:objects~.
+
+To return a taxy in a more human-readable format (with only relevant fields included), use ~taxy-plain~.  You may also use ~taxy-mapcar~ to replace objects in a taxy with, e.g. a more useful representation.
+
+** Dynamic taxys
+:PROPERTIES:
+:TOC:      :include descendants
+:END:
+:CONTENTS:
+- [[#multi-level-dynamic-taxys][Multi-level dynamic taxys]]
+- [[#chains-of-independent-multi-level-dynamic-taxys]["Chains" of independent, multi-level dynamic taxys]]
+:END:
+
+You may not always know in advance what taxonomy a set of objects fits into, so =taxy= lets you add taxys dynamically by using the ~:take~ function to add a taxy when an object is "taken into" a parent taxy.  For example, you could dynamically classify buffers by their major mode like so:
+
+#+BEGIN_SRC elisp :exports code
+  (defun buffery-major-mode (buffer)
+    (buffer-local-value 'major-mode buffer))
+
+  (defvar buffery
+    (make-taxy
+     :name "Buffers"
+     :taxys (list
+             (make-taxy
+              :name "Modes"
+              :take (apply-partially #'taxy-take-keyed (list #'buffery-major-mode))))))
+
+  ;; Note the use of `taxy-emptied' to avoid mutating the original taxy definition.
+  (taxy-plain
+   (taxy-fill (buffer-list)
+              (taxy-emptied buffery)))
+#+END_SRC
+
+The taxy's ~:take~ function is set to the ~taxy-take-keyed~ function, partially applied with the ~buffery-major-mode~ function as its list of ~key-fns~ (~taxy-fill~ supplies the buffer and the taxy as arguments), and it produces this taxonomy of buffers:
+
+#+BEGIN_SRC elisp
+  ("Buffers"
+   (("Modes"
+     ((magit-process-mode
+       (#<buffer magit-process: taxy.el> #<buffer magit-process: > #<buffer magit-process: notes>))
+      (messages-buffer-mode
+       (#<buffer *Messages*>))
+      (special-mode
+       (#<buffer *Warnings*> #<buffer *elfeed-log*>))
+      (dired-mode
+       (#<buffer ement.el<emacs>>))
+      (Custom-mode
+       (#<buffer *Customize Apropos*>))
+      (fundamental-mode
+       (#<buffer  *helm candidates:Bookmarks*> #<buffer *Backtrace*>))
+      (magit-diff-mode
+       (#<buffer magit-diff: taxy.el> #<buffer magit-diff: notes> #<buffer magit-diff: ement.el>))
+      (compilation-mode
+       (#<buffer *compilation*> #<buffer *Compile-Log*>))
+      (Info-mode
+       (#<buffer  *helm info temp buffer*> #<buffer *info*>))
+      (help-mode
+       (#<buffer *Help*>))
+      (emacs-lisp-mode
+       (#<buffer ement.el<ement.el>> #<buffer ement-room-list.el> #<buffer *scratch*>
+                 #<buffer ement-room.el> #<buffer init.el> #<buffer bufler.el>
+                 #<buffer dash.el> #<buffer *Pp Eval Output*> #<buffer taxy.el> #<buffer scratch.el>))))))
+#+END_SRC
+
+*** Multi-level dynamic taxys
+
+Of course, the point of taxonomies is that they aren't restricted to a single level of depth, so you may also use the function ~taxy-take-keyed~ to dynamically make multi-level taxys.
+
+Expanding on the previous example, we use ~cl-labels~ to define functions which are used in the taxy's definition, which are used in the ~:take~ function, which calls ~taxy-take-keyed~ (rather than using ~apply-partially~ like in the previous example, we use a lambda function, which performs better than partially applied functions).  Then when the taxy is filled, a multi-level hierarchy is created dynamically, organizing buffers first by their directory, and then by mode in each directory.
+
+# MAYBE: A macro to define :take functions more concisely.
+
+#+BEGIN_SRC elisp :exports code
+  (defvar buffery
+    (cl-labels ((buffer-mode (buffer) (buffer-local-value 'major-mode buffer))
+                (buffer-directory (buffer) (buffer-local-value 'default-directory buffer)))
+      (make-taxy
+       :name "Buffers"
+       :taxys (list
+               (make-taxy
+                :name "Directories"
+                :take (lambda (object taxy)
+                        (taxy-take-keyed (list #'buffer-directory #'buffer-mode) object taxy)))))))
+
+  (taxy-plain
+   (taxy-fill (buffer-list)
+              (taxy-emptied buffery)))
+#+END_SRC
+
+That produces a list like:
+
+#+BEGIN_SRC elisp
+  ("Buffers"
+   (("Directories"
+     (("~/src/emacs/ement.el/"
+       ((dired-mode
+         (#<buffer ement.el<emacs>))
+        (emacs-lisp-mode
+         (#<buffer ement.el<ement.el> #<buffer ement-room-list.el> #<buffer ement-room.el>))
+        (magit-diff-mode
+         (#<buffer magit-diff: ement.el>))))
+      ("~/src/emacs/taxy.el/"
+       ((dired-mode
+         (#<buffer taxy.el<emacs>))
+        (Info-mode
+         (#<buffer *info*>))
+        (magit-status-mode
+         (#<buffer magit: taxy.el>))
+        (emacs-lisp-mode
+         (#<buffer taxy-magit-section.el> #<buffer taxy.el<taxy.el> #<buffer scratch.el>))))))))
+#+END_SRC
+
+*** "Chains" of independent, multi-level dynamic taxys
+:PROPERTIES:
+:ID:       8aec3671-ee22-44a0-968c-81443f4dcd74
+:END:
+
+/Naming things is hard./
+
+Going a step further, each element in the ~taxy-take-keyed~ function's ~KEY-FNS~ argument may be a list of functions (or a list of lists of functions, etc.), which creates a "chain" of "independent" dynamic taxys.  Each such chain may be said to "short-circuit" the filling process in that, when an object is "taken" by the first key function in a chain, the object is not "offered" to other functions outside that chain.  This allows each dynamic sub-taxy to have its own set of sub-taxys, rather than sharing the same "global" set.  In effect, this creates multiple, unique taxonomies that share a single root taxy.
+
+Building on the ~sporty~ example, let's define a taxy in which outdoor sports are classified only by whether they involve a disc, but indoor sports are additionally classified by whatever equipment they may use:
+
+#+BEGIN_SRC elisp :exports code :results silent :lexical t
+  (defvar sporty-dynamic
+    (cl-macrolet ((in (needle haystack)
+                      `(lambda (object)
+                         (when (member ,needle (funcall ,haystack object))
+                           ,needle))))
+      (cl-labels ((outdoor-p
+                   (sport) (when (eq 'outdoor (sport-venue sport))
+                             "Outdoor"))
+                  (indoor-p
+                   (sport) (when (eq 'indoor (sport-venue sport))
+                             "Indoor"))
+                  (disc-p
+                   (sport) (if (funcall (in 'disc 'sport-uses) sport)
+                               'disc
+                             'non-disc)))
+        (make-taxy
+         :name "Sporty (dynamic)"
+         :take (lambda (object taxy)
+                 (taxy-take-keyed
+                   (list (list #'outdoor-p #'disc-p)
+                         (list #'indoor-p
+                               (in 'ball 'sport-uses)
+                               (in 'disc 'sport-uses)
+                               (in 'glove 'sport-uses)
+                               (in 'racket 'sport-uses)))
+                   object taxy))))))
+#+END_SRC
+
+Now let's fill the taxy with the sports and format it:
+
+#+BEGIN_SRC elisp :exports code :results code
+  (thread-last sporty-dynamic
+    taxy-emptied
+    (taxy-fill sports)
+    (taxy-mapcar #'sport-name)
+    taxy-plain)
+#+END_SRC
+
+#+BEGIN_SRC elisp :exports code
+  ("Sporty (dynamic)"
+   (("Indoor"
+     ((ball
+       ("Volleyball" "Basketball")
+       ((glove
+         ("Handball"))
+        (racket
+         ("Racquetball"))))))
+    ("Outdoor"
+     ((disc
+       ("Ultimate" "Disc golf"))
+      (non-disc
+       ("Soccer" "Tennis" "Football" "Baseball"))))))
+#+END_SRC
+
+** Reusable taxys
+
+Since taxys are structs, they may be stored in variables and used in other structs (being sure to copy the root taxy with ~taxy-emptied~ before filling).  For example, this shows using =taxy= to classify Matrix rooms in [[https://github.com/alphapapa/ement.el][Ement.el]]:
+
+#+BEGIN_SRC elisp
+  (defun ement-roomy-buffer (room)
+    (alist-get 'buffer (ement-room-local room)))
+
+  (defvar ement-roomy-unread
+    (make-taxy :name "Unread"
+               :predicate (lambda (room)
+                            (buffer-modified-p (ement-roomy-buffer room)))))
+
+  (defvar ement-roomy-opened
+    (make-taxy :name "Opened"
+               :description "Rooms with buffers"
+               :predicate #'ement-roomy-buffer
+               :taxys (list ement-roomy-unread
+                            (make-taxy))))
+
+  (defvar ement-roomy-closed
+    (make-taxy :name "Closed"
+               :description "Rooms without buffers"
+               :predicate (lambda (room)
+                            (not (ement-roomy-buffer room)))))
+
+  (defvar ement-roomy
+    (make-taxy
+     :name "Ement Rooms"
+     :taxys (list (make-taxy
+                   :name "Direct"
+                   :description "Direct messaging rooms"
+                   :predicate (lambda (room)
+                                (ement-room--direct-p room ement-session))
+                   :taxys (list ement-roomy-opened
+                                ement-roomy-closed))
+                  (make-taxy
+                   :name "Non-direct"
+                   :description "Group chat rooms"
+                   :taxys (list ement-roomy-opened
+                                ement-roomy-closed)))))
+#+END_SRC
+
+Note how the taxys defined in the first three variables are used in subsequent taxys.  As well, the ~ement-roomy-opened~ taxy has an "anonymous" taxy, which collects any rooms that aren't collected by its sibling taxy (otherwise those objects would be collected into the parent, "Opened" taxy, which may not always be the most useful way to present the objects).
+
+Using those defined taxys, we then fill the ~ement-roomy~ taxy with all of the rooms in the user's session, and then use ~taxy-mapcar~ to replace the room structs with useful representations for display:
+
+#+BEGIN_SRC elisp
+  (taxy-plain
+   (taxy-mapcar (lambda (room)
+                  (list (ement-room--room-display-name room)
+                        (ement-room-id room)))
+     (taxy-fill (ement-session-rooms ement-session)
+                (taxy-emptied ement-roomy))))
+#+END_SRC
+
+This produces:
+
+#+BEGIN_SRC elisp
+  ("Ement Rooms"
+   (("Direct" "Direct messaging rooms"
+     (("Opened" "Rooms with buffers"
+       (("Unread"
+         (("Lars Ingebrigtsen" "!nope:gnus.org")))))
+      ("Closed" "Rooms without buffers"
+       (("John Wiegley" "!not-really:newartisans.com")
+        ("Eli Zaretskii" "!im-afraid-not:gnu.org")))))
+    ("Non-direct" "Group chat rooms"
+     (("Opened" "Rooms with buffers"
+       (("Unread"
+         (("Emacs" "!WfZsmtnxbxTdoYPkaT:greyface.org")
+          ("#emacs" "!KuaCUVGoCiunYyKEpm:libera.chat")))
+        ;; The non-unread buffers in the "anonymous" taxy.
+        ((("magit/magit" "!HZYimOcmEAsAxOcgpE:gitter.im")
+          ("Ement.el" "!NicAJNwJawmHrEhqZs:matrix.org")
+          ("#emacsconf" "!UjTTDnYmSAslLTtMCF:libera.chat")
+          ("Emacs Matrix Client" "!ZrZoyXEyFrzcBZKNis:matrix.org")
+          ("org-mode" "!rUhEinythPhVTdddsb:matrix.org")
+          ("This Week in Matrix (TWIM)" "!xYvNcQPhnkrdUmYczI:matrix.org")))))
+      ("Closed" "Rooms without buffers"
+       (("#matrix-spec" "!NasysSDfxKxZBzJJoE:matrix.org")
+        ("#commonlisp" "!IiGsrmKRHzpupHRaKS:libera.chat")
+        ("Matrix HQ" "!OGEhHVWSdvArJzumhm:matrix.org")
+        ("#lisp" "!czLxhhEegTEGNKUBgo:libera.chat")
+        ("Emacs" "!gLamGIXTWBaDFfhEeO:matrix.org")
+        ("#matrix-dev:matrix.org" "!jxlRxnrZCsjpjDubDX:matrix.org")))))))
+#+END_SRC
+
+** Threading macros
+
+If you happen to like macros, ~taxy~ works well with threading (i.e. ~thread-last~ or ~->>~):
+
+#+BEGIN_SRC elisp
+  (thread-last ement-roomy
+    taxy-emptied
+    (taxy-fill (ement-session-rooms ement-session))
+    (taxy-mapcar (lambda (room)
+                   (list (ement-room--room-display-name room)
+                         (ement-room-id room))))
+    taxy-plain)
+#+END_SRC
+
+** Modifying filled taxys
+
+Sometimes it's necessary to modify a taxy after filling it with objects, e.g. to sort the objects and/or the sub-taxys.  For this, use the function ~taxy-mapc-taxys~ (a.k.a. ~taxy-mapc*~).  For example, in the sample application [[file:examples/musicy.el][musicy.el]], the taxys and their objects are sorted after filling, like so:
+
+#+BEGIN_SRC elisp
+  (defun musicy-files (files)
+    (thread-last musicy-taxy
+      taxy-emptied
+      (taxy-fill files)
+      (taxy-mapc* (lambda (taxy)
+                    ;; Sort sub-taxys by their name.
+                    (setf (taxy-taxys taxy)
+                          (cl-sort (taxy-taxys taxy) #'string<
+                                   :key #'taxy-name))
+                    ;; Sort sub-taxys' objects by name.
+                    (setf (taxy-objects taxy)
+                          (cl-sort (taxy-objects taxy) #'string<))))
+      taxy-magit-section-pp))
+#+END_SRC
+
+** Magit section
+
+Showing a =taxy= with =magit-section= is very easy:
+
+#+BEGIN_SRC elisp
+  (require 'taxy-magit-section)
+
+  ;; Using the `numbery' taxy defined in earlier examples:
+  (thread-last numbery
+    taxy-emptied ;; Get an empty copy of the taxy, since it's defined in a variable.
+    (taxy-fill (reverse (cl-loop for i below 30 collect i)))
+    taxy-magit-section-pp)
+#+END_SRC
+
+That shows a buffer like this:
+
+[[images/magit-section-numbery.png]]
+
+Note that =taxy-magit-section.el= is not installed with the =taxy= package by default.
+
+* Changelog
+:PROPERTIES:
+:TOC:      :depth 0
+:END:
+
+** 0.2
+
+*** Changes
+
++  Function ~taxy-take-keyed*~ is renamed to ~taxy-take-keyed~, replacing the old function: it's more powerful, and there's little reason to maintain two versions.
+
+*** Additions
+
++  Struct ~taxy~ now has a ~:make~ slot, a function called to make new sub-taxys by ~take-take-keyed~ (defaulting to ~make-taxy~).  This is useful when defining structs specialized on ~taxy~.
++  Struct ~taxy-magit-section~ now has an ~:indent~ slot, a number of characters by which to indent each level of sub-taxy, applied automatically by function ~taxy-magit-section-insert~.
++  Each element of the new ~taxy-take-keyed~'s ~KEY-FNS~ argument may now be a function or a list of functions (or a list of a list of functions, etc.).  Lists of functions create "chains" of independent, dynamic taxys descending from a single root taxy.  See [[id:8aec3671-ee22-44a0-968c-81443f4dcd74][example]].
+
+*** Fixes
+
++  ~taxy-magit-section~'s ~insert-object~ function.
++  ~taxy-fill~ now applies objects to the root taxy if no sub-taxys take them.
+
+** 0.1
+
+First tagged version.
+
+* Development
+
+Bug reports, feature requests, suggestions — /oh my/!
+
+** Copyright assignment
+
+This package is part of [[https://www.gnu.org/software/emacs/][GNU Emacs]], being distributed in [[https://elpa.gnu.org/][GNU ELPA]].  Contributions to this project must follow GNU guidelines, which means that, as with other parts of Emacs, patches of more than a few lines must be accompanied by having assigned copyright for the contribution to the FSF.  Contributors who wish to do so may contact [[mailto:emacs-devel@lists.gnu.org][emacs-devel@lists.gnu.org]] to request the assignment form.
+
+* Credits
+
++  Thanks to Stefan Monnier for his feedback, and for maintaining GNU ELPA.
+
+* License
+:PROPERTIES:
+:TOC:      :ignore (this)
+:END:
+
+GPLv3
+
+* COMMENT Export setup                                             :noexport:
+:PROPERTIES:
+:TOC:      :ignore (this descendants)
+:END:
+
+# Copied from org-super-agenda's readme, in which much was borrowed from Org's =org-manual.org=.
+
+#+OPTIONS: broken-links:t *:t
+
+** Info export options
+
+#+TEXINFO_DIR_CATEGORY: Emacs
+#+TEXINFO_DIR_TITLE: Taxy: (taxy)
+#+TEXINFO_DIR_DESC: Programmable taxonomical grouping for arbitrary objects
+
+# NOTE: We could use these, but that causes a pointless error, "org-compile-file: File "..README.info" wasn't produced...", so we just rename the files in the after-save-hook instead.
+# #+TEXINFO_FILENAME: taxy.info
+# #+EXPORT_FILE_NAME: taxy.texi
+
+** File-local variables
+
+# NOTE: Setting org-comment-string buffer-locally is a nasty hack to work around GitHub's org-ruby's HTML rendering, which does not respect noexport tags.  The only way to hide this tree from its output is to use the COMMENT keyword, but that prevents Org from processing the export options declared in it.  So since these file-local variables don't affect org-ruby, wet set org-comment-string to an unused keyword, which prevents Org from deleting this tree from the export buffer, which allows it to find the export options in it.  And since org-export does respect the noexport tag, the tree is excluded from the info page.
+
+# Local Variables:
+# before-save-hook: org-make-toc
+# after-save-hook: (lambda nil (when (and (require 'ox-texinfo nil t) (org-texinfo-export-to-info)) (delete-file "README.texi") (rename-file "README.info" "taxy.info" t)))
+# org-export-initial-scope: buffer
+# org-comment-string: "NOTCOMMENT"
+# End:
