@@ -1,0 +1,33 @@
+Package: finito
+Fetcher: github
+Source:  https://github.com/LaurenceWarne/finito.el.git
+
+Cloning https://github.com/LaurenceWarne/finito.el.git to /mnt/store/melpa/working/finito/
+Checking out origin/HEAD
+Checking out 6cb6597ced383809948bc4d4c25ed149fadd84bc
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/finito/
+  to /tmp/finitofqn1KY/finito-20210828.1053
+    finito-buffer.el -> finito-buffer.el
+    finito-core.el -> finito-core.el
+    finito-graphql.el -> finito-graphql.el
+    finito-request.el -> finito-request.el
+    finito-server.el -> finito-server.el
+    finito-view.el -> finito-view.el
+    finito.el -> finito.el
+Created finito-20210828.1053.tar containing:
+  finito-20210828.1053/
+  finito-20210828.1053/finito-buffer.el
+  finito-20210828.1053/finito-core.el
+  finito-20210828.1053/finito-graphql.el
+  finito-20210828.1053/finito-pkg.el
+  finito-20210828.1053/finito-request.el
+  finito-20210828.1053/finito-server.el
+  finito-20210828.1053/finito-view.el
+  finito-20210828.1053/finito.el
+Built finito in 4.733s, finished at 2021-08-29T22:14:11+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  462 Aug 29 22:14 packages/finito-20210828.1053.entry
+ 80K -rw-r--r-- 1 root root  80K Aug 29 22:14 packages/finito-20210828.1053.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 29 22:14 packages/finito-badge.svg
+4.0K -rw-r--r-- 1 root root  425 Aug 29 22:14 packages/finito-readme.txt

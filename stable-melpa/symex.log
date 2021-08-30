@@ -4,10 +4,10 @@ Source:  https://github.com/countvajhula/symex.el.git
 
 Updating /mnt/store/melpa/working/symex/
 Checking out origin/HEAD
-Checking out 4561214b453e551253e9a273ef57c84c12c7cd8b
+Checking out cd80cfbff832b64de65fc4ecb50a53956dac760f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/symex/
-  to /tmp/symexpCaJQJ/symex-20210820.2202
+  to /tmp/symexL9jFfi/symex-20210829.2036
     symex-computations.el -> symex-computations.el
     symex-custom.el -> symex-custom.el
     symex-data.el -> symex-data.el
@@ -30,34 +30,36 @@ Copying files (->) and directories (=>)
     symex-ui.el -> symex-ui.el
     symex-utils.el -> symex-utils.el
     symex.el -> symex.el
-Created symex-20210820.2202.tar containing:
-  symex-20210820.2202/
-  symex-20210820.2202/symex-computations.el
-  symex-20210820.2202/symex-custom.el
-  symex-20210820.2202/symex-data.el
-  symex-20210820.2202/symex-dsl.el
-  symex-20210820.2202/symex-evaluator.el
-  symex-20210820.2202/symex-evil-support.el
-  symex-20210820.2202/symex-evil.el
-  symex-20210820.2202/symex-hydra.el
-  symex-20210820.2202/symex-interface-arc.el
-  symex-20210820.2202/symex-interface-clojure.el
-  symex-20210820.2202/symex-interface-common-lisp.el
-  symex-20210820.2202/symex-interface-elisp.el
-  symex-20210820.2202/symex-interface-racket.el
-  symex-20210820.2202/symex-interface-scheme.el
-  symex-20210820.2202/symex-interop.el
-  symex-20210820.2202/symex-misc.el
-  symex-20210820.2202/symex-pkg.el
-  symex-20210820.2202/symex-primitives.el
-  symex-20210820.2202/symex-transformations.el
-  symex-20210820.2202/symex-traversals.el
-  symex-20210820.2202/symex-ui.el
-  symex-20210820.2202/symex-utils.el
-  symex-20210820.2202/symex.el
-Built symex in 5.300s, finished at 2021-08-29T16:04:58+0000
+Created symex-20210829.2036.tar containing:
+  symex-20210829.2036/
+  symex-20210829.2036/symex-computations.el
+  symex-20210829.2036/symex-custom.el
+  symex-20210829.2036/symex-data.el
+  symex-20210829.2036/symex-dsl.el
+  symex-20210829.2036/symex-evaluator.el
+  symex-20210829.2036/symex-evil-support.el
+  symex-20210829.2036/symex-evil.el
+  symex-20210829.2036/symex-hydra.el
+  symex-20210829.2036/symex-interface-arc.el
+  symex-20210829.2036/symex-interface-clojure.el
+  symex-20210829.2036/symex-interface-common-lisp.el
+  symex-20210829.2036/symex-interface-elisp.el
+  symex-20210829.2036/symex-interface-racket.el
+  symex-20210829.2036/symex-interface-scheme.el
+  symex-20210829.2036/symex-interop.el
+  symex-20210829.2036/symex-misc.el
+  symex-20210829.2036/symex-pkg.el
+  symex-20210829.2036/symex-primitives.el
+  symex-20210829.2036/symex-transformations.el
+  symex-20210829.2036/symex-traversals.el
+  symex-20210829.2036/symex-ui.el
+  symex-20210829.2036/symex-utils.el
+  symex-20210829.2036/symex.el
+Built symex in 5.571s, finished at 2021-08-29T23:05:11+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  608 Aug 29 16:04 packages/symex-20210820.2202.entry
-192K -rw-r--r-- 1 root root 190K Aug 29 16:04 packages/symex-20210820.2202.tar
-4.0K -rw-r--r-- 1 root root 1.2K Aug 29 16:04 packages/symex-badge.svg
-4.0K -rw-r--r-- 1 root root  767 Aug 29 16:04 packages/symex-readme.txt
+4.0K -rw-r--r-- 1 root root  608 Aug 29 19:34 packages/symex-20210820.2202.entry
+192K -rw-r--r-- 1 root root 190K Aug 29 19:34 packages/symex-20210820.2202.tar
+4.0K -rw-r--r-- 1 root root  608 Aug 29 23:05 packages/symex-20210829.2036.entry
+192K -rw-r--r-- 1 root root 190K Aug 29 23:05 packages/symex-20210829.2036.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 29 23:05 packages/symex-badge.svg
+4.0K -rw-r--r-- 1 root root  767 Aug 29 23:05 packages/symex-readme.txt

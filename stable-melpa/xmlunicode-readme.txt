@@ -62,6 +62,10 @@ it does define an 'xml input-mode and does support the ISO 8879 entity names.
 
 ; Changes
 
+v1.25 29 Aug 2021
+  Added a progress message when loading the xmlunicode-character-alist.
+  Fixed a few docstrings.
+  Updated to Unicode 14.0.0d13.
 v1.24 17 Jul 2021
   Changed the format of the xmlunicode-character-alist so that it's
   more useful for searching by adding the XML entity name and the

@@ -1,4 +1,30 @@
 (1
+ (apache-mode .
+	      [(2 2 0)
+	       nil "Major mode for editing Apache httpd configuration files" tar
+	       ((:url . "https://github.com/emacs-php/apache-mode")
+		(:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+		(:authors
+		 ("Karl Chen" . "quarl@nospam.quarl.org"))
+		(:keywords "languages" "faces"))])
+ (arduino-mode .
+	       [(1 3 0)
+		((emacs
+		  (25 1))
+		 (spinner
+		  (1 7 3)))
+		"Major mode for editing Arduino code" tar
+		((:url . "https://github.com/stardiviner/arduino-mode")
+		 (:maintainer "stardiviner" . "numbchild@gmail.com")
+		 (:keywords "languages" "arduino"))])
+ (bison-mode .
+	     [(0 4)
+	      nil "Major mode for editing bison, yacc and lex files." tar
+	      ((:maintainer "Eric Beuscher" . "beuscher@eecs.tulane.edu")
+	       (:authors
+		("Eric Beuscher" . "beuscher@eecs.tulane.edu"))
+	       (:keywords "bison-mode" "yacc-mode")
+	       (:url . "https://elpa.nongnu.org/nongnu/bison-mode.html"))])
  (caml .
        [(4 8)
 	((emacs
@@ -31,6 +57,26 @@
 	 (:authors
 	  ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
 	 (:keywords "convenience"))])
+ (d-mode .
+	 [(202003130913)
+	  ((emacs
+	    (25 1)))
+	  "D Programming Language major mode for (X)Emacs" tar
+	  ((:maintainer "Russel Winder" . "russel@winder.org.uk")
+	   (:authors
+	    ("William Baxter"))
+	   (:keywords "d" "programming" "language" "emacs" "cc-mode")
+	   (:url . "https://elpa.nongnu.org/nongnu/d-mode.html"))])
+ (dart-mode .
+	    [(1 0 4)
+	     ((emacs
+	       (24 3)))
+	     "Major mode for editing Dart files" tar
+	     ((:url . "https://github.com/bradyt/dart-mode")
+	      (:maintainer "Brady Trainor" . "mail@bradyt.net")
+	      (:authors
+	       ("Brady Trainor" . "mail@bradyt.net"))
+	      (:keywords "languages"))])
  (editorconfig .
 	       [(0 8 2)
 		((cl-lib
@@ -198,6 +244,18 @@
 		("Florian Ragwitz" . "rafl@debian.org")
 		("Marius Vollmer" . "marius.vollmer@gmail.com"))
 	       (:keywords "git" "tools" "vc"))])
+ (gnuplot .
+	  [(0 8 0)
+	   ((emacs
+	     (24 3)))
+	   "Major-mode and interactive frontend for gnuplot" tar
+	   ((:url . "https://github.com/emacsorphanage/gnuplot")
+	    (:maintainer "Bruce Ravel" . "bruceravel1@gmail.com")
+	    (:authors
+	     ("Jon Oddie")
+	     ("Bruce Ravel")
+	     ("Phil Type"))
+	    (:keywords "data" "gnuplot" "plotting"))])
  (go-mode .
 	  [(1 5 0)
 	   nil "Major mode for the Go programming language" tar
@@ -255,6 +313,17 @@
 	    (:authors
 	     ("Hrvoje Niksic" . "hniksic@gmail.com"))
 	    (:keywords "hypermedia" "extensions"))])
+ (idris-mode .
+	     [(0 9 18)
+	      ((emacs
+		(24))
+	       (prop-menu
+		(0 1))
+	       (cl-lib
+		(0 5)))
+	      "Major mode for editing Idris code" tar
+	      ((:url . "https://github.com/idris-hackers/idris-mode")
+	       (:keywords "languages"))])
  (inf-clojure .
 	      [(3 1 0)
 	       ((emacs
@@ -264,6 +333,18 @@
 	       "Run an external Clojure process in an Emacs buffer" tar
 	       ((:url . "http://github.com/clojure-emacs/inf-clojure")
 		(:keywords "processes" "clojure"))])
+ (j-mode .
+	 [(1 1 1)
+	  nil "Major mode for editing J programs" tar
+	  ((:url . "http://github.com/zellio/j-mode")
+	   (:keywords "j" "languages"))])
+ (julia-mode .
+	     [(0 4)
+	      ((emacs
+		(24 3)))
+	      "Major mode for editing Julia source code" tar
+	      ((:url . "https://github.com/JuliaEditorSupport/julia-emacs")
+	       (:keywords "languages"))])
  (lua-mode .
 	   [(20210802)
 	    ((emacs
@@ -344,6 +425,23 @@
 		     (:authors
 		      ("Magnar Sveen" . "magnars@gmail.com"))
 		     (:keywords "editing" "cursors"))])
+ (nasm-mode .
+	    [(1 1 1)
+	     ((emacs
+	       (24 3)))
+	     "NASM x86 assembly major mode" tar
+	     ((:url . "https://github.com/skeeto/nasm-mode")
+	      (:maintainer "Christopher Wellons" . "wellons@nullprogram.com")
+	      (:authors
+	       ("Christopher Wellons" . "wellons@nullprogram.com")))])
+ (nginx-mode .
+	     [(1 1 9)
+	      nil "major mode for editing nginx config files" tar
+	      ((:maintainer "Andrew J Cosgriff" . "andrew@cosgriff.name")
+	       (:authors
+		("Andrew J Cosgriff" . "andrew@cosgriff.name"))
+	       (:keywords "languages" "nginx")
+	       (:url . "https://elpa.nongnu.org/nongnu/nginx-mode.html"))])
  (org-contrib .
 	      [(0 1)
 	       ((emacs
@@ -356,6 +454,16 @@
 		(:authors
 		 ("Bastien Guerry" . "bzg@gnu.org"))
 		(:keywords "org"))])
+ (php-mode .
+	   [(1 24 0)
+	    ((emacs
+	      (25 2)))
+	    "Major mode for editing PHP code" tar
+	    ((:url . "https://github.com/emacs-php/php-mode")
+	     (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+	     (:authors
+	      ("Eric James Michael Ritz"))
+	     (:keywords "languages" "php"))])
  (projectile .
 	     [(2 5 0)
 	      ((emacs
@@ -366,6 +474,18 @@
 	       (:authors
 		("Bozhidar Batsov" . "bozhidar@batsov.dev"))
 	       (:keywords "project" "convenience"))])
+ (prop-menu .
+	    [(0 1 2)
+	     ((emacs
+	       (24 3))
+	      (cl-lib
+	       (0 5)))
+	     "Create and display a context menu based on text and overlay properties" tar
+	     ((:url . "https://github.com/david-christiansen/prop-menu-el")
+	      (:maintainer "David Christiansen" . "david@davidchristiansen.dk")
+	      (:authors
+	       ("David Christiansen" . "david@davidchristiansen.dk"))
+	      (:keywords "convenience"))])
  (request .
 	  [(0 3 3)
 	   ((emacs
@@ -395,6 +515,23 @@
 	      (:authors
 	       ("Mozilla"))
 	      (:keywords "languages"))])
+ (sass-mode .
+	    [(3 0 16)
+	     ((haml-mode
+	       (3 0 15))
+	      (cl-lib
+	       (0 5)))
+	     "Major mode for editing Sass files" tar
+	     ((:url . "http://github.com/nex3/haml/tree/master")
+	      (:maintainer "Natalie Weizenbaum")
+	      (:authors
+	       ("Natalie Weizenbaum"))
+	      (:keywords "markup" "language" "css"))])
+ (scala-mode .
+	     [(0 23)
+	      nil "Major mode for editing Scala" tar
+	      ((:url . "https://github.com/hvesalai/emacs-scala-mode")
+	       (:keywords "languages"))])
  (slime .
 	[(2 26 1)
 	 ((cl-lib
@@ -419,6 +556,25 @@
 		(:authors
 		 ("Matus Goljer" . "matus.goljer@gmail.com"))
 		(:keywords "abbrev" "convenience" "editing"))])
+ (swift-mode .
+	     [(8 3 0)
+	      ((emacs
+		(24 4))
+	       (seq
+		(2 3)))
+	      "Major-mode for Apple's Swift programming language" tar
+	      ((:url . "https://github.com/swift-emacs/swift-mode")
+	       (:keywords "languages" "swift"))])
+ (systemd .
+	  [(1 6)
+	   ((emacs
+	     (24 4)))
+	   "Major mode for editing systemd units" tar
+	   ((:maintainer "Mark Oteiza" . "mvoteiza@udel.edu")
+	    (:authors
+	     ("Mark Oteiza" . "mvoteiza@udel.edu"))
+	    (:keywords "tools" "unix")
+	    (:url . "https://elpa.nongnu.org/nongnu/systemd.html"))])
  (tuareg .
 	 [(2 3 0)
 	  ((caml
@@ -464,6 +620,17 @@
 		(:authors
 		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
 		(:keywords "tools"))])
+ (yaml-mode .
+	    [(0 0 15)
+	     ((emacs
+	       (24 1)))
+	     "Major mode for editing YAML files" tar
+	     ((:url . "https://github.com/yoshiki/yaml-mode")
+	      (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de")
+	      (:authors
+	       ("Yoshiki Kurihara" . "clouder@gmail.com")
+	       ("Marshall T. Vandegrift" . "llasram@gmail.com"))
+	      (:keywords "data" "yaml"))])
  (yasnippet-snippets .
 		     [(0 2)
 		      ((yasnippet
@@ -473,4 +640,14 @@
 		       (:maintainer "Andrea Crotti" . "andrea.crotti.0@gmail.com")
 		       (:authors
 			("Andrea Crotti" . "andrea.crotti.0@gmail.com"))
-		       (:keywords "snippets"))]))
+		       (:keywords "snippets"))])
+ (zig-mode .
+	   [(0 0 8)
+	    ((emacs
+	      (24 3)))
+	    "A major mode for the Zig programming language" tar
+	    ((:url . "https://github.com/zig-lang/zig-mode")
+	     (:maintainer "Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley" . "superjoe30@gmail.com")
+	     (:authors
+	      ("Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley" . "superjoe30@gmail.com"))
+	     (:keywords "zig" "languages"))]))
