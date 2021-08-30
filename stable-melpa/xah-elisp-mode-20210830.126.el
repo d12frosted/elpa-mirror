@@ -3,9 +3,9 @@
 ;; Copyright © 2013-2021, by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 3.22.20210828120240
-;; Package-Version: 20210828.1915
-;; Package-Commit: 625be9c494ceb513e8a2f30d1e851b43c8ff382d
+;; Version: 3.22.20210829182609
+;; Package-Version: 20210830.126
+;; Package-Commit: d126937ab11546e082a5361fabfb5b40177ffae4
 ;; Created: 23 Mar 2013
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: lisp, languages
@@ -2950,7 +2950,9 @@ Version 2017-01-27"
     ;; special abbrev not based on function name
     ("ls" "let*" xah-elisp--ahf) ;
     ("gt" "(> ▮)" xah-elisp--ahf)
+    ("gte" "(>= ▮)" xah-elisp--ahf)
     ("lt" "(< ▮)" xah-elisp--ahf)
+    ("lte" "(<= ▮)" xah-elisp--ahf)
     ("minus" "(- ▮)" xah-elisp--ahf)
     ("plus" "(+ ▮)" xah-elisp--ahf)
     ("inc" "(1+ ▮)" xah-elisp--ahf)
@@ -2961,6 +2963,7 @@ Version 2017-01-27"
     ("ah" "add-hook" xah-elisp--ahf)
     ("asc" "async-shell-command" xah-elisp--ahf)
     ("bc" "backward-char" xah-elisp--ahf)
+    ("bn" "buffer-name" xah-elisp--ahf)
     ("bs" "buffer-substring" xah-elisp--ahf)
     ("bw" "backward-word" xah-elisp--ahf)
     ("ca" "char-after" xah-elisp--ahf)
@@ -3114,7 +3117,7 @@ Version 2017-01-27"
     ("buffer-modified-p" "(buffer-modified-p BUFFER▮)" xah-elisp--ahf)
     ("buffer-modified-p" "(buffer-modified-p ▮)" xah-elisp--ahf)
     ("buffer-modified-tick" "(buffer-modified-tick &optional BUFFER▮)" xah-elisp--ahf)
-    ("buffer-name" "(buffer-name BUFFER▮)" xah-elisp--ahf)
+    ("buffer-name" "(buffer-name &opt▮)" xah-elisp--ahf)
     ("buffer-substring" "(buffer-substring p1▮ p2)" xah-elisp--ahf)
     ("buffer-substring-no-properties" "(buffer-substring-no-properties p1▮ p2)" xah-elisp--ahf)
     ("buffer-swap-text" "(buffer-swap-text BUFFER▮)" xah-elisp--ahf)

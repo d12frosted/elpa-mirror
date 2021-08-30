@@ -1,12 +1,12 @@
-;;; sidecar-locals.el --- A flexible alternative built-in dir-locals -*- lexical-binding: t -*-
+;;; sidecar-locals.el --- A flexible alternative to built-in dir-locals -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2021  Campbell Barton
 
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-sidecar-locals
-;; Package-Version: 20210818.317
-;; Package-Commit: 2047fba485d1c4bc2fca7fad96f57b0f13872323
+;; Package-Version: 20210829.2323
+;; Package-Commit: a528bc88329cb700c18cbe7ff266fbb3d48629de
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
@@ -207,8 +207,7 @@ Returns: 1 to trust, -1 is untrusted, nil is untrusted and not configured."
           (message
             (concat
               "sidecar-locals: un-trusted path %S, "
-              "add to `sidecar-locals-paths-allow' or `sidecar-locals-paths-deny' "
-              "to determine the trust setting silence this message.")
+              "add to `sidecar-locals-paths-allow' or `sidecar-locals-paths-deny' to silence this message.")
             dir)
           nil)))))
 
@@ -290,7 +289,6 @@ When NO-TEST is non-nil checking for existing paths is disabled."
   (when (sidecar-locals-predicate)
     (sidecar-locals--apply
       (file-name-directory (buffer-file-name)) major-mode
-      #'
       (lambda (filepath)
         ;; Errors here cause the file not to open,
         ;; report them as messages instead.
@@ -328,7 +326,6 @@ When NO-TEST is non-nil checking for existing paths is disabled."
   (message "Finding candidates for locals files:")
   (sidecar-locals--apply
     (file-name-directory (buffer-file-name)) major-mode
-    #'
     (lambda (filepath)
       (message
         "- %S%s" filepath
