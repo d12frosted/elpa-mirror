@@ -5,8 +5,8 @@
 ;; Author: Chris Barrett <chris+emacs@walrus.cool>
 
 ;; Version: 0.16.0
-;; Package-Version: 20210829.1412
-;; Package-Commit: fa5143af281dcd47366f2448a832ff6b97d60e7c
+;; Package-Version: 20210830.304
+;; Package-Commit: c0bb205d67896c2cffe5de4764062571e9c56ec6
 
 ;; Package-Requires: ((kubernetes "0.16.0") (evil "1.2.12"))
 
@@ -68,7 +68,7 @@
   (kbd "d") #'kubernetes-describe
   (kbd "D") #'kubernetes-mark-for-delete
   (kbd "e") #'kubernetes-exec
-  (kbd "f") #'kubernetes-file-popup
+  (kbd "f") #'kubernetes-file
   (kbd "u") #'kubernetes-unmark
   (kbd "U") #'kubernetes-unmark-all
   (kbd "x") #'kubernetes-execute-marks

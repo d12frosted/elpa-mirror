@@ -4,8 +4,8 @@
 
 ;; Author: Paul W. Rankin <pwr@bydasein.com>
 ;; Keywords: wp, text
-;; Package-Version: 20210823.1054
-;; Package-Commit: 08611268bb19509ec087ec416f4a7f76ebae0518
+;; Package-Version: 20210830.320
+;; Package-Commit: 7d4a195bb224e714773201f3c3c07b05bf58886c
 ;; Version: 2.0.2
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/rnkn/olivetti
@@ -128,6 +128,8 @@
 ;; [2]: https://melpa.org/#/olivetti
 
 ;;; Code:
+
+(require 'fringe)
 
 (defgroup olivetti ()
   "Minor mode for a nice writing environment"
