@@ -4,10 +4,20 @@ Source:  https://github.com/dash-docs-el/dash-docs.git
 
 Updating /mnt/store/melpa/working/dash-docs/
 Checking out origin/HEAD
-Checking out dafc8fc9f1ddb2e4e39e0b8d066c42d5d7ce8d06
-Built dash-docs in 5.158s, finished at 2021-08-30T05:04:46+0000
+Checking out 29848b6b347ac520f7646c200ed2ec36cea3feda
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dash-docs/
+  to /tmp/dash-docsGhrpW5/dash-docs-20210830.926
+    dash-docs.el -> dash-docs.el
+    use-package-dash-docs.el -> use-package-dash-docs.el
+Created dash-docs-20210830.926.tar containing:
+  dash-docs-20210830.926/
+  dash-docs-20210830.926/dash-docs-pkg.el
+  dash-docs-20210830.926/dash-docs.el
+  dash-docs-20210830.926/use-package-dash-docs.el
+Built dash-docs in 5.596s, finished at 2021-08-30T19:26:05+0000
  ✓ Success:
- 28K -rw-r--r-- 1 root root  26K Aug 30 05:04 packages/dash-docs-20200516.1943.el
-4.0K -rw-r--r-- 1 root root  538 Aug 30 05:04 packages/dash-docs-20200516.1943.entry
-4.0K -rw-r--r-- 1 root root 1.2K Aug 30 05:04 packages/dash-docs-badge.svg
-4.0K -rw-r--r-- 1 root root  143 Aug 30 05:04 packages/dash-docs-readme.txt
+4.0K -rw-r--r-- 1 root root  534 Aug 30 19:26 packages/dash-docs-20210830.926.entry
+ 40K -rw-r--r-- 1 root root  40K Aug 30 19:26 packages/dash-docs-20210830.926.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 30 19:26 packages/dash-docs-badge.svg
+4.0K -rw-r--r-- 1 root root  143 Aug 30 19:26 packages/dash-docs-readme.txt

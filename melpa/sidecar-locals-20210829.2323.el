@@ -6,7 +6,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-sidecar-locals
 ;; Package-Version: 20210829.2323
-;; Package-Commit: a528bc88329cb700c18cbe7ff266fbb3d48629de
+;; Package-Commit: bc41cab4b1765e48096006465c95f62f66fcaf2b
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
