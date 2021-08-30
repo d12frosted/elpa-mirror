@@ -68,14 +68,14 @@
 	   (:keywords "d" "programming" "language" "emacs" "cc-mode")
 	   (:url . "https://elpa.nongnu.org/nongnu/d-mode.html"))])
  (dart-mode .
-	    [(1 0 4)
+	    [(1 0 6)
 	     ((emacs
 	       (24 3)))
 	     "Major mode for editing Dart files" tar
 	     ((:url . "https://github.com/bradyt/dart-mode")
-	      (:maintainer "Brady Trainor" . "mail@bradyt.net")
+	      (:maintainer "Brady Trainor" . "dart-mode_maintainer@tangential.info")
 	      (:authors
-	       ("Brady Trainor" . "mail@bradyt.net"))
+	       ("Brady Trainor" . "dart-mode_maintainer@tangential.info"))
 	      (:keywords "languages"))])
  (editorconfig .
 	       [(0 8 2)

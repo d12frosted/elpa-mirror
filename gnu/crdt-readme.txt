@@ -13,8 +13,7 @@ Highlights:
 
 ** Installation
 
-Just =M-x load-file= =crdt.el=, or =M-x eval-buffer= in =crdt.el=,
-or =(require 'crdt)=. Or whatever package management tool you use.
+~crdt.el~ is now on GNU ELPA! Just =M-x package-install crdt=.
 
 ** Start a shared session
 
