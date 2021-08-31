@@ -6,7 +6,7 @@
 ;; Created: 30 Aug 2020
 ;; Version: 0.6.4
 ;; Package-Version: 20210825.1323
-;; Package-Commit: 9127dd0876567c8db306793e9c5e8151b9ab392c
+;; Package-Commit: 71f0b40cdcffdbae84214d3d82c0a8aae154a69f
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))

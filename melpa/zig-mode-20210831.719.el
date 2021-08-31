@@ -1,8 +1,8 @@
 ;;; zig-mode.el --- A major mode for the Zig programming language -*- lexical-binding: t -*-
 
 ;; Version: 0.0.8
-;; Package-Version: 20210605.513
-;; Package-Commit: acf3ee8bbf6b7e49dbfaa8bc82a4c1b9b1f2b531
+;; Package-Version: 20210831.719
+;; Package-Commit: aba01b6199b7697692e5e9217f602477dd5ebd9b
 ;; Author: Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley <superjoe30@gmail.com>
 ;; Keywords: zig, languages
 ;; Package-Requires: ((emacs "24.3"))
@@ -42,6 +42,12 @@
 
 (defcustom zig-format-on-save t
   "Format buffers before saving using zig fmt."
+  :type 'boolean
+  :safe #'booleanp
+  :group 'zig-mode)
+
+(defcustom zig-format-show-buffer t
+  "Show a *zig-fmt* buffer after zig fmt completes with errors"
   :type 'boolean
   :safe #'booleanp
   :group 'zig-mode)
@@ -143,11 +149,12 @@ If given a SOURCE, execute the CMD on it."
                       (buffer-file-name))
        (lambda (process _e)
          (if (> (process-exit-status process) 0)
-             (progn
-               (pop-to-buffer fmt-buffer)
-               (compilation-mode)
-               (when zig-return-to-buffer-after-format
-                 (pop-to-buffer file-buffer)))
+             (when zig-format-show-buffer
+               (progn
+                 (pop-to-buffer fmt-buffer)
+                 (compilation-mode)
+                 (when zig-return-to-buffer-after-format
+                   (pop-to-buffer file-buffer))))
            (revert-buffer :ignore-auto :noconfirm)))))))
 
 (defun zig-re-word (inner)

@@ -4,10 +4,10 @@
 
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: convenience, tools
-;; Package-Commit: e02a9ea94287f4195edeeab3033e017a56872f5b
+;; Package-Commit: b57f5d480003ab7b0880e0059dcc51747fb2e088
 ;; Homepage: https://github.com/purcell/emacs-reformatter
 ;; Package-Requires: ((emacs "24.3"))
-;; Package-Version: 20210510.522
+;; Package-Version: 20210831.1405
 ;; Package-X-Original-Version: 0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -104,17 +104,21 @@ the `reformatter-define' macro."
           (write-region beg end input-file nil :quiet)
           (let* ((error-buffer (get-buffer-create (format "*%s errors*" name)))
                  (retcode
-                  (apply 'call-process program
-                         (when stdin input-file)
-                         (list (list :file stdout-file) stderr-file)
-                         nil
-                         args)))
+                  (condition-case e
+                      (apply 'call-process program
+                                  (when stdin input-file)
+                                  (list (list :file stdout-file) stderr-file)
+                                  nil
+                                  args)
+                    (error e))))
             (with-current-buffer error-buffer
               (let ((inhibit-read-only t))
                 (insert-file-contents stderr-file nil nil nil t)
+                (unless (integerp retcode)
+                  (insert (error-message-string retcode)))
                 (ansi-color-apply-on-region (point-min) (point-max)))
               (special-mode))
-            (if (funcall exit-code-success-p retcode)
+            (if (and (integerp retcode) (funcall exit-code-success-p retcode))
                 (progn
                   (save-restriction
                     ;; This replacement method minimises
