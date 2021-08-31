@@ -1,0 +1,15 @@
+(org-zettelkasten .
+		  [(20210830 1025)
+		   ((emacs
+		     (24 3))
+		    (org
+		     (9 0))
+		    (counsel
+		     (0 12 0)))
+		   "Helper functions to use Zettelkasten in org-mode" single
+		   ((:commit . "e60617ebf20a8a81b342ca7af095000329e9336e")
+		    (:authors
+		     ("Yann Herklotz" . "yann@ymhg.org"))
+		    (:maintainer "Yann Herklotz" . "yann@ymhg.org")
+		    (:keywords "files" "hypermedia" "org" "notes")
+		    (:url . "https://github.com/ymherklotz/emacs-zettelkasten"))])
