@@ -6,11 +6,11 @@
 
 #+HTML: <img src="images/mascot.png" align="right">
 
-# [[https://melpa.org/#/package-name][file:https://melpa.org/packages/taxy-badge.svg]] [[https://stable.melpa.org/#/package-name][file:https://stable.melpa.org/packages/taxy-badge.svg]]
+[[https://elpa.gnu.org/packages/taxy.html][https://elpa.gnu.org/packages/taxy.svg]]
 
 /Now, where did I put that.../
 
-This library provides a programmable way to classify arbitrary objects into a hierarchical taxonomy.  (That's a lot of fancy words to say that this lets you put things in nested groups.)
+This library provides a programmable way to classify arbitrary objects into a hierarchical taxonomy.  (That's a lot of fancy words to say that this lets you automatically put things in nested groups.)
 
 Helpful features include:
 
@@ -23,26 +23,16 @@ Helpful features include:
 :END:
 :CONTENTS:
 - [[#examples][Examples]]
-  - [[#numbery-starting-basically][Numbery (starting basically)]]
-  - [[#lettery-filling-incrementally][Lettery (filling incrementally)]]
-  - [[#sporty-understanding-completely][Sporty (understanding completely)]]
-  - [[#applications][Applications]]
 - [[#installation][Installation]]
 - [[#usage][Usage]]
-  - [[#dynamic-taxys][Dynamic taxys]]
-  - [[#reusable-taxys][Reusable taxys]]
-  - [[#threading-macros][Threading macros]]
-  - [[#modifying-filled-taxys][Modifying filled taxys]]
-  - [[#magit-section][Magit section]]
 - [[#changelog][Changelog]]
 - [[#development][Development]]
-  - [[#copyright-assignment][Copyright assignment]]
 - [[#credits][Credits]]
 :END:
 
 * Examples
 :PROPERTIES:
-:TOC:      :include descendants :depth 1
+:TOC:      :include descendants :depth 1 :ignore (descendants)
 :END:
 :CONTENTS:
 - [[#numbery-starting-basically][Numbery (starting basically)]]
@@ -64,7 +54,7 @@ Let's imagine a silly taxonomy of numbers below 100:
      (0 2 4 6 8)
      ;; These sub-taxys further classify the numbers below 10 into odd
      ;; and even.  The odd taxy "consumes" numbers, while the even one
-     ;; doesn't, leaving them to reappear in the parent taxy's objects.
+     ;; doesn't, leaving them to reappear in the parent taxy's items.
      (("Odd" "(consuming)"
        (1 3 5 7 9))
       ("Even" "(non-consuming)"
@@ -105,7 +95,7 @@ You might think about how to produce that by writing some imperative code, but =
                    :taxys (list
                            ;; These sub-taxys further classify the numbers below 10 into odd
                            ;; and even.  The odd taxy "consumes" numbers, while the even one
-                           ;; doesn't, leaving them to reappear in the parent taxy's objects.
+                           ;; doesn't, leaving them to reappear in the parent taxy's items.
                            (make-taxy :name "Odd"
                                       :description "(consuming)"
                                       :predicate #'oddp)
@@ -155,18 +145,21 @@ The ~taxy-fill~ function applies the numbers in a "cascade" down the hierarchy o
 
 ** Lettery (filling incrementally)
 
-You can also add more objects after the hierarchy has been filled:
+You can also add more items after the hierarchy has been filled.  In this example we'll make a comprehensive taxonomy of letters.  The first sub-taxy collects vowels, and the second, by leaving its predicate at the default value, ~identity~, collects all letters not collected by the first taxy, i.e. non-vowels.
 
 #+BEGIN_SRC elisp
   (defvar lettery
-    (make-taxy :name "Lettery"
-               :description "A comprehensive taxonomy of letters."
-               :taxys (list (make-taxy :name "Vowels"
-                                       :description "You know what those are."
-                                       :predicate (lambda (l)
-                                                    (member-ignore-case l '("a" "e" "i" "o" "u"))))
-                            (make-taxy :name "Consonants"
-                                       :description "Well, if they aren't a vowel..."))))
+    (make-taxy
+     :name "Lettery"
+     :description "A comprehensive taxonomy of letters."
+     :taxys (list (make-taxy
+                   :name "Vowels"
+                   :description "You know what those are."
+                   :predicate (lambda (l)
+                                (member-ignore-case l '("a" "e" "i" "o" "u"))))
+                  (make-taxy
+                   :name "Consonants"
+                   :description "Well, if they aren't vowels..."))))
 
   (taxy-plain
    (taxy-fill (reverse
@@ -174,6 +167,8 @@ You can also add more objects after the hierarchy has been filled:
                         collect (upcase (char-to-string l))))
               lettery))
 #+END_SRC
+
+That produces:
 
 #+BEGIN_SRC elisp
   ("Lettery" "A comprehensive taxonomy of letters."
@@ -193,6 +188,8 @@ Oops, we forgot the letters after N!  Let's add them, too:
               lettery))
 #+END_SRC
 
+Which gives us:
+
 #+BEGIN_SRC elisp
   ("Lettery" "A comprehensive taxonomy of letters."
    (("Vowels" "You know what those are."
@@ -203,12 +200,13 @@ Oops, we forgot the letters after N!  Let's add them, too:
 
 Oh, they're out of order, now.  That won't do.  Let's fix that:
 
-#+BEGIN_SRC elisp
-  (cl-loop for taxy in-ref (taxy-taxys lettery)
-           do (setf (taxy-objects taxy) (cl-sort (taxy-objects taxy) #'<
-                                                 :key #'string-to-char)))
-
-  (taxy-plain lettery)
+#+BEGIN_SRC elisp :exports code :results code
+  (taxy-plain
+   (taxy-mapc* (lambda (taxy)
+                 (setf (taxy-items taxy)
+                       (cl-sort (taxy-items taxy) #'<
+                                :key #'string-to-char)))
+     lettery))
 #+END_SRC
 
 That's better:
@@ -281,24 +279,23 @@ And finally we'll define a taxy to organize them.  In this, we use a helper macr
 #+BEGIN_SRC elisp :exports code :results silent :lexical t
   (defvar sporty
     (cl-macrolet ((in (needle haystack)
-                      `(lambda (object)
-                         (when (member ,needle (funcall ,haystack object))
+                      `(lambda (item)
+                         (when (member ,needle (funcall ,haystack item))
                            ,needle))))
       (make-taxy
-       :taxys (list (make-taxy
-                     :name "Sporty"
-                     :take (lambda (object taxy)
-                             (taxy-take-keyed
-                              (list #'sport-venue
-                                    (in 'ball 'sport-uses)
-                                    (in 'disc 'sport-uses)
-                                    (in 'glove 'sport-uses)
-                                    (in 'racket 'sport-uses))
-                              object taxy
-                              ;; We set the `:then' function of the taxys
-                              ;; created by `taxy-take-keyed' to `identity'
-                              ;; so they will not consume their objects.
-                              :then #'identity)))))))
+       :name "Sporty"
+       :take (lambda (item taxy)
+               (taxy-take-keyed
+                 (list #'sport-venue
+                       (in 'ball 'sport-uses)
+                       (in 'disc 'sport-uses)
+                       (in 'glove 'sport-uses)
+                       (in 'racket 'sport-uses))
+                 item taxy
+                 ;; We set the `:then' function of the taxys
+                 ;; created by `taxy-take-keyed' to `identity'
+                 ;; so they will not consume their items.
+                 :then #'identity)))))
 #+END_SRC
 
 Now let's fill the taxy with the sports and format it:
@@ -312,47 +309,44 @@ Now let's fill the taxy with the sports and format it:
 #+END_SRC
 
 #+BEGIN_SRC elisp :exports code
-((("Sporty"
-   ((disc
-     ((outdoor
-       ("Ultimate" "Disc golf"))))
-    (ball
-     ((racket
-       ((indoor
-         ("Racquetball"))
-        (outdoor
-         ("Tennis"))))
-      (indoor
-       ("Volleyball" "Basketball"))
+  ((("Sporty"
+     ((indoor
+       ((ball
+         ("Volleyball" "Basketball")
+         ((glove
+           ("Handball"))
+          (racket
+           ("Racquetball"))))))
       (outdoor
-       ("Soccer" "Football"))
-      (glove
-       ((indoor
-         ("Handball"))
-        (outdoor
-         ("Baseball"))))))))))
+       ((disc
+         ("Ultimate" "Disc golf"))
+        (ball
+         ("Soccer" "Football")
+         ((racket
+           ("Tennis"))
+          (glove
+           ("Baseball"))))))))))
 #+END_SRC
 
-That's pretty sporty.  But classifying them by venue first makes the racket and glove sports not be listed together.  Let's swap that around:
+That's pretty sporty.  But classifying them by venue first makes the racket and glove sports not be listed together.  Let's swap the key functions around so the venue is classified at the deepest level of the hierarchy:
 
 #+BEGIN_SRC elisp :exports code :results silent
   (defvar sporty
     (cl-macrolet ((in (needle haystack)
-                      `(lambda (object)
-                         (when (member ,needle (funcall ,haystack object))
+                      `(lambda (item)
+                         (when (member ,needle (funcall ,haystack item))
                            ,needle))))
       (make-taxy
-       :taxys (list (make-taxy
-                     :name "Sporty"
-                     :take (lambda (object taxy)
-                             (taxy-take-keyed
-                              (list (in 'ball 'sport-uses)
-                                    (in 'disc 'sport-uses)
-                                    (in 'glove 'sport-uses)
-                                    (in 'racket 'sport-uses)
-                                    #'sport-venue)
-                              object taxy
-                              :then #'identity)))))))
+       :name "Sporty"
+       :take (lambda (item taxy)
+               (taxy-take-keyed
+                 (list (in 'ball 'sport-uses)
+                       (in 'disc 'sport-uses)
+                       (in 'glove 'sport-uses)
+                       (in 'racket 'sport-uses)
+                       #'sport-venue)
+                 item taxy
+                 :then #'identity)))))
 
   (thread-last sporty
     taxy-emptied
@@ -362,25 +356,25 @@ That's pretty sporty.  But classifying them by venue first makes the racket and 
 #+END_SRC
 
 #+BEGIN_SRC elisp :exports code
-((("Sporty"
-   ((disc
-     ((outdoor
-       ("Ultimate" "Disc golf"))))
-    (ball
-     ((racket
-       ((indoor
-         ("Racquetball"))
+  ((("Sporty"
+     ((disc
+       ((outdoor
+         ("Ultimate" "Disc golf"))))
+      (ball
+       ((racket
+         ((indoor
+           ("Racquetball"))
+          (outdoor
+           ("Tennis"))))
+        (indoor
+         ("Volleyball" "Basketball"))
         (outdoor
-         ("Tennis"))))
-      (indoor
-       ("Volleyball" "Basketball"))
-      (outdoor
-       ("Soccer" "Football"))
-      (glove
-       ((indoor
-         ("Handball"))
-        (outdoor
-         ("Baseball"))))))))))
+         ("Soccer" "Football"))
+        (glove
+         ((indoor
+           ("Handball"))
+          (outdoor
+           ("Baseball"))))))))))
 #+END_SRC
 
 That's better.  But I'd also like to see a very simple classification to help me decide what to play:
@@ -388,16 +382,14 @@ That's better.  But I'd also like to see a very simple classification to help me
 #+BEGIN_SRC elisp :exports code
   (thread-last
       (make-taxy
-       :taxys (list
-               (make-taxy
-                :name "Funny"
-                :take (lambda (object taxy)
-                        (taxy-take-keyed
-                         (list (lambda (sport)
-                                 (if (sport-fun sport)
-                                     'fun 'boring))
-                               #'sport-venue)
-                         object taxy)))))
+       :name "Funny"
+       :take (lambda (item taxy)
+               (taxy-take-keyed
+                 (list (lambda (sport)
+                         (if (sport-fun sport)
+                             'fun 'boring))
+                       #'sport-venue)
+                 item taxy)))
     taxy-emptied
     (taxy-fill sports)
     (taxy-mapcar #'sport-name)
@@ -433,7 +425,7 @@ Some example applications may be found in the [[file:examples/README.org][exampl
 
 * Usage
 :PROPERTIES:
-:TOC:      :include descendants :depth 1
+:TOC:      :include descendants :depth 1 :ignore (descendants)
 :END:
 :CONTENTS:
 - [[#dynamic-taxys][Dynamic taxys]]
@@ -453,13 +445,13 @@ A taxy is defined with the ~make-taxy~ constructor, like:
              :taxys (list ...))
 #+END_SRC
 
-The ~:predicate~ function determines whether an object fits into that taxy.  If it does, ~taxy-fill~ adds the object to that taxy's descendant ~:taxys~, if present, or to its own ~:objects~.  The function defaults to ~identity~, so a taxy "takes in" any object by default (i.e. if you only apply objects you want to classify, there's no need to test them at the top-level taxy).
+The ~:predicate~ function determines whether an object fits into that taxy.  If it does, ~taxy-fill~ adds the object to that taxy's descendant ~:taxys~, if present, or to its own ~:items~.  The function defaults to ~identity~, so a taxy "takes in" any object by default (i.e. if you only apply objects you want to classify, there's no need to test them at the top-level taxy).
 
-The ~:then~ function determines what happens to an object after being taken in: if the function, called with the object, returns a non-nil value, that value is applied to other taxys at the same level until one of their ~:then~ functions returns nil or no more taxys remain.  The function defaults to ~ignore~, which makes a taxy "consume" its objects by default.  Setting the function to, e.g. ~identity~, makes it not consume them, leaving them eligible to also be taken into subsequent taxys, or to appear in the parent taxy's objects.
+The ~:then~ function determines what happens to an object after being taken in to the taxy's ~:items~: if the function, called with the object, returns a non-nil value, that value is applied to other taxys at the same level until one of their ~:then~ functions returns nil or no more taxys remain.  The function defaults to ~ignore~, which makes a taxy "consume" its items by default.  Setting the function to, e.g. ~identity~, makes it not consume them, leaving them eligible to also be taken into subsequent taxys, or to appear in the parent taxy's items.
 
-After defining a taxy, call ~taxy-fill~ with it and a list of objects to fill the taxy's hierarchy.  *Note:* ~taxy-fill~ modifies the taxy given to it (filling its ~:objects~ and those of its ~:taxys~), so when using a statically defined taxy (e.g. one defined with ~defvar~), you should pass ~taxy-fill~ a taxy copied with ~taxy-emptied~, which recursively copies a taxy without ~:objects~.
+After defining a taxy, call ~taxy-fill~ with it and a list of objects to fill the taxy's hierarchy.  *Note:* ~taxy-fill~ modifies the taxy given to it (filling its ~:items~ and those of its ~:taxys~), so when using a statically defined taxy (e.g. one defined with ~defvar~), you should pass ~taxy-fill~ a taxy copied with ~taxy-emptied~, which recursively copies a taxy without ~:items~.
 
-To return a taxy in a more human-readable format (with only relevant fields included), use ~taxy-plain~.  You may also use ~taxy-mapcar~ to replace objects in a taxy with, e.g. a more useful representation.
+To return a taxy in a more human-readable format (with only relevant fields included), use ~taxy-plain~.  You may also use ~taxy-mapcar~ to replace items in a taxy with, e.g. a more useful representation.
 
 ** Dynamic taxys
 :PROPERTIES:
@@ -470,7 +462,7 @@ To return a taxy in a more human-readable format (with only relevant fields incl
 - [[#chains-of-independent-multi-level-dynamic-taxys]["Chains" of independent, multi-level dynamic taxys]]
 :END:
 
-You may not always know in advance what taxonomy a set of objects fits into, so =taxy= lets you add taxys dynamically by using the ~:take~ function to add a taxy when an object is "taken into" a parent taxy.  For example, you could dynamically classify buffers by their major mode like so:
+You may not always know in advance what taxonomy a set of objects fits into, so =taxy= lets you add taxys dynamically by using the ~:take~ function to add a taxy when an object is "taken into" a parent taxy's items.  For example, you could dynamically classify buffers by their major mode like so:
 
 #+BEGIN_SRC elisp :exports code
   (defun buffery-major-mode (buffer)
@@ -538,8 +530,8 @@ Expanding on the previous example, we use ~cl-labels~ to define functions which 
        :taxys (list
                (make-taxy
                 :name "Directories"
-                :take (lambda (object taxy)
-                        (taxy-take-keyed (list #'buffer-directory #'buffer-mode) object taxy)))))))
+                :take (lambda (item taxy)
+                        (taxy-take-keyed (list #'buffer-directory #'buffer-mode) item taxy)))))))
 
   (taxy-plain
    (taxy-fill (buffer-list)
@@ -583,8 +575,8 @@ Building on the ~sporty~ example, let's define a taxy in which outdoor sports ar
 #+BEGIN_SRC elisp :exports code :results silent :lexical t
   (defvar sporty-dynamic
     (cl-macrolet ((in (needle haystack)
-                      `(lambda (object)
-                         (when (member ,needle (funcall ,haystack object))
+                      `(lambda (item)
+                         (when (member ,needle (funcall ,haystack item))
                            ,needle))))
       (cl-labels ((outdoor-p
                    (sport) (when (eq 'outdoor (sport-venue sport))
@@ -598,7 +590,7 @@ Building on the ~sporty~ example, let's define a taxy in which outdoor sports ar
                              'non-disc)))
         (make-taxy
          :name "Sporty (dynamic)"
-         :take (lambda (object taxy)
+         :take (lambda (item taxy)
                  (taxy-take-keyed
                    (list (list #'outdoor-p #'disc-p)
                          (list #'indoor-p
@@ -606,7 +598,7 @@ Building on the ~sporty~ example, let's define a taxy in which outdoor sports ar
                                (in 'disc 'sport-uses)
                                (in 'glove 'sport-uses)
                                (in 'racket 'sport-uses)))
-                   object taxy))))))
+                   item taxy))))))
 #+END_SRC
 
 Now let's fill the taxy with the sports and format it:
@@ -739,7 +731,7 @@ If you happen to like macros, ~taxy~ works well with threading (i.e. ~thread-las
 
 ** Modifying filled taxys
 
-Sometimes it's necessary to modify a taxy after filling it with objects, e.g. to sort the objects and/or the sub-taxys.  For this, use the function ~taxy-mapc-taxys~ (a.k.a. ~taxy-mapc*~).  For example, in the sample application [[file:examples/musicy.el][musicy.el]], the taxys and their objects are sorted after filling, like so:
+Sometimes it's necessary to modify a taxy after filling it with objects, e.g. to sort the items and/or the sub-taxys.  For this, use the function ~taxy-mapc-taxys~ (a.k.a. ~taxy-mapc*~).  For example, in the sample application [[file:examples/musicy.el][musicy.el]], the taxys and their items are sorted after filling, like so:
 
 #+BEGIN_SRC elisp
   (defun musicy-files (files)
@@ -751,9 +743,9 @@ Sometimes it's necessary to modify a taxy after filling it with objects, e.g. to
                     (setf (taxy-taxys taxy)
                           (cl-sort (taxy-taxys taxy) #'string<
                                    :key #'taxy-name))
-                    ;; Sort sub-taxys' objects by name.
-                    (setf (taxy-objects taxy)
-                          (cl-sort (taxy-objects taxy) #'string<))))
+                    ;; Sort sub-taxys' items by name.
+                    (setf (taxy-items taxy)
+                          (cl-sort (taxy-items taxy) #'string<))))
       taxy-magit-section-pp))
 #+END_SRC
 
@@ -775,12 +767,27 @@ That shows a buffer like this:
 
 [[images/magit-section-numbery.png]]
 
-Note that =taxy-magit-section.el= is not installed with the =taxy= package by default.
+Note that while =taxy-magit-section.el= is installed with the =taxy= package, the =magit-section= package is not automatically installed with it.
 
 * Changelog
 :PROPERTIES:
 :TOC:      :depth 0
 :END:
+
+** 0.4
+
++  Incremented version to cause a new ELPA release (since removing a file that wasn't intended to be distributed on ELPA).
+
+** 0.3
+
+*** Changes
+
++  Within the ~taxy~ struct and related functions, the term =objects= is renamed to =items=, which is shorter and has the same meaning.  This makes code a bit more concise (e.g. ~(taxy-objects taxy)~ becomes ~(taxy-items taxy)~).
+
+*** Fixes
+
++  Function ~taxy-fill~ always calls a taxy's ~:take~ function if defined.  (Fixing "chains" of dynamic taxys.)
++  Function ~taxy-magit-section-insert~ applies text properties from the inserted string to the indentation string (so commands that rely on text properties at the beginning of a line will work).
 
 ** 0.2
 
@@ -804,12 +811,15 @@ Note that =taxy-magit-section.el= is not installed with the =taxy= package by de
 First tagged version.
 
 * Development
+:PROPERTIES:
+:TOC:      :ignore (descendants)
+:END:
 
 Bug reports, feature requests, suggestions — /oh my/!
 
 ** Copyright assignment
 
-This package is part of [[https://www.gnu.org/software/emacs/][GNU Emacs]], being distributed in [[https://elpa.gnu.org/][GNU ELPA]].  Contributions to this project must follow GNU guidelines, which means that, as with other parts of Emacs, patches of more than a few lines must be accompanied by having assigned copyright for the contribution to the FSF.  Contributors who wish to do so may contact [[mailto:emacs-devel@lists.gnu.org][emacs-devel@lists.gnu.org]] to request the assignment form.
+This package is part of [[https://www.gnu.org/software/emacs/][GNU Emacs]], being distributed in [[https://elpa.gnu.org/][GNU ELPA]].  Contributions to this project must follow GNU guidelines, which means that, as with other parts of Emacs, patches of more than a few lines must be accompanied by having assigned copyright for the contribution to the FSF.  Contributors who wish to do so may contact [[mailto:emacs-devel@gnu.org][emacs-devel@gnu.org]] to request the assignment form.
 
 * Credits
 
