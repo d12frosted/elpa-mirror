@@ -5,3 +5,43 @@ Source:  https://github.com/NixOS/nix-mode.git
 Updating /mnt/store/melpa/working/nix-mode/
 Checking out origin/HEAD
 Checking out 8e20de5ba7061d810b08df5557b1fdb60c94b639
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/nix-mode/
+  to /tmp/nix-modeCFvgh2/nix-mode-20210830.1610
+    nix-build.el -> nix-build.el
+    nix-drv-mode.el -> nix-drv-mode.el
+    nix-edit.el -> nix-edit.el
+    nix-format.el -> nix-format.el
+    nix-instantiate.el -> nix-instantiate.el
+    nix-log.el -> nix-log.el
+    nix-mode.el -> nix-mode.el
+    nix-prettify-mode.el -> nix-prettify-mode.el
+    nix-repl.el -> nix-repl.el
+    nix-search.el -> nix-search.el
+    nix-shebang.el -> nix-shebang.el
+    nix-shell.el -> nix-shell.el
+    nix-store.el -> nix-store.el
+    nix.el -> nix.el
+Created nix-mode-20210830.1610.tar containing:
+  nix-mode-20210830.1610/
+  nix-mode-20210830.1610/nix-build.el
+  nix-mode-20210830.1610/nix-drv-mode.el
+  nix-mode-20210830.1610/nix-edit.el
+  nix-mode-20210830.1610/nix-format.el
+  nix-mode-20210830.1610/nix-instantiate.el
+  nix-mode-20210830.1610/nix-log.el
+  nix-mode-20210830.1610/nix-mode-pkg.el
+  nix-mode-20210830.1610/nix-mode.el
+  nix-mode-20210830.1610/nix-prettify-mode.el
+  nix-mode-20210830.1610/nix-repl.el
+  nix-mode-20210830.1610/nix-search.el
+  nix-mode-20210830.1610/nix-shebang.el
+  nix-mode-20210830.1610/nix-shell.el
+  nix-mode-20210830.1610/nix-store.el
+  nix-mode-20210830.1610/nix.el
+Built nix-mode in 5.177s, finished at 2021-08-31T03:13:01+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  356 Aug 31 03:13 packages/nix-mode-20210830.1610.entry
+112K -rw-r--r-- 1 root root 110K Aug 31 03:13 packages/nix-mode-20210830.1610.tar
+4.0K -rw-r--r-- 1 root root 1.2K Aug 31 03:13 packages/nix-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  140 Aug 31 03:13 packages/nix-mode-readme.txt

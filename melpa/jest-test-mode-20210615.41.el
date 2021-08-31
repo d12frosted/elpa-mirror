@@ -6,7 +6,7 @@
 ;; Maintainer: Raymond Huang <rymndhng@gmail.com>
 ;; URL: https://github.com/rymndhng/jest-test-mode.el
 ;; Package-Version: 20210615.41
-;; Package-Commit: d7660096e7d49f9b2ebc8924c0f5b39c5ffa8c86
+;; Package-Commit: 73aebe62e8adf8e737c9a94361cce45063d05ae4
 ;; Version: 0
 ;; Package-Requires: ((emacs "25.1"))
 
