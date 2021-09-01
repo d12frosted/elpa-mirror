@@ -8,7 +8,7 @@
 ;; Modified: August 29, 2021
 ;; Version: 2.0.0
 ;; Package-Version: 20210831.1609
-;; Package-Commit: bcc2ac219c5840f850ffda75a86a456d2f146eef
+;; Package-Commit: 2897be2075d14983142a6a1ba330f4f5ecd88d27
 ;; Keywords: calendar
 ;; Homepage: https://github.com/fosskers/streak
 ;; Package-Requires: ((emacs "27.1"))
