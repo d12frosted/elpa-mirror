@@ -5,8 +5,8 @@
 ;; Author: Jason McBrayer <jmcbray@carcosa.net>, tastytea <tastytea@tastytea.de>, Étienne Deparis <etienne@depar.is>
 ;; Created: 20 May 2020
 ;; Version: 1.0.0
-;; Package-Version: 20210611.1833
-;; Package-Commit: 97e096ab2400bbe3c0f6d19fb49bd952f2f14e03
+;; Package-Version: 20210901.1406
+;; Package-Commit: 0a02e97cc2ce2ddd97c7624187c7e7b6ab2e9fe7
 ;; Keywords: languages
 ;; Homepage: https://git.carcosa.net/jmcbray/gemini.el
 ;; Package-Requires: ((emacs "24.4"))
@@ -33,6 +33,7 @@
 
 ;;; Code:
 (require 'cl-lib)
+(require 'time-stamp)
 
 (eval-when-compile
   (defvar font-lock-beg)

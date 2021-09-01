@@ -4,10 +4,10 @@ Source:  https://github.com/org-roam/org-roam.git
 
 Updating /mnt/store/melpa/working/org-roam/
 Checking out origin/HEAD
-Checking out a8a36a420bfb4e19d76345f98bc33d8cfb2a03fe
+Checking out 1795039ab93ef19611dbb3fca21c4211c4e655a9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-roam/
-  to /tmp/org-roam6SYH0m/org-roam-20210829.2330
+  to /tmp/org-roam3ycwbO/org-roam-20210901.1143
     org-roam-capture.el -> org-roam-capture.el
     org-roam-compat.el -> org-roam-compat.el
     org-roam-db.el -> org-roam-db.el
@@ -21,35 +21,37 @@ Copying files (->) and directories (=>)
   ! extensions/org-roam-graph.el -> org-roam-graph.el
   ! extensions/org-roam-overlay.el -> org-roam-overlay.el
   ! extensions/org-roam-protocol.el -> org-roam-protocol.el
-Created /tmp/org-roam6SYH0m/org-roam-20210829.2330/org-roam.info
-Created org-roam-20210829.2330.tar containing:
-  org-roam-20210829.2330/
-  org-roam-20210829.2330/dir
-  org-roam-20210829.2330/org-roam-capture.el
-  org-roam-20210829.2330/org-roam-compat.el
-  org-roam-20210829.2330/org-roam-dailies.el
-  org-roam-20210829.2330/org-roam-db.el
-  org-roam-20210829.2330/org-roam-graph.el
-  org-roam-20210829.2330/org-roam-migrate.el
-  org-roam-20210829.2330/org-roam-mode.el
-  org-roam-20210829.2330/org-roam-node.el
-  org-roam-20210829.2330/org-roam-overlay.el
-  org-roam-20210829.2330/org-roam-pkg.el
-  org-roam-20210829.2330/org-roam-protocol.el
-  org-roam-20210829.2330/org-roam-utils.el
-  org-roam-20210829.2330/org-roam.el
-  org-roam-20210829.2330/org-roam.info
-Built org-roam in 12.941s, finished at 2021-09-01T11:17:56+0000
+Created /tmp/org-roam3ycwbO/org-roam-20210901.1143/org-roam.info
+Created org-roam-20210901.1143.tar containing:
+  org-roam-20210901.1143/
+  org-roam-20210901.1143/dir
+  org-roam-20210901.1143/org-roam-capture.el
+  org-roam-20210901.1143/org-roam-compat.el
+  org-roam-20210901.1143/org-roam-dailies.el
+  org-roam-20210901.1143/org-roam-db.el
+  org-roam-20210901.1143/org-roam-graph.el
+  org-roam-20210901.1143/org-roam-migrate.el
+  org-roam-20210901.1143/org-roam-mode.el
+  org-roam-20210901.1143/org-roam-node.el
+  org-roam-20210901.1143/org-roam-overlay.el
+  org-roam-20210901.1143/org-roam-pkg.el
+  org-roam-20210901.1143/org-roam-protocol.el
+  org-roam-20210901.1143/org-roam-utils.el
+  org-roam-20210901.1143/org-roam.el
+  org-roam-20210901.1143/org-roam.info
+Built org-roam in 14.418s, finished at 2021-09-01T14:53:55+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  573 Sep  1 11:17 packages/org-roam-20210829.2330.entry
 320K -rw-r--r-- 1 root root 320K Sep  1 11:17 packages/org-roam-20210829.2330.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep  1 11:17 packages/org-roam-badge.svg
-4.0K -rw-r--r-- 1 root root  550 Sep  1 11:17 packages/org-roam-bibtex-20210810.1626.entry
-180K -rw-r--r-- 1 root root 180K Sep  1 11:17 packages/org-roam-bibtex-20210810.1626.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep  1 11:17 packages/org-roam-bibtex-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Sep  1 11:17 packages/org-roam-bibtex-readme.txt
-4.0K -rw-r--r-- 1 root root 1.6K Sep  1 11:17 packages/org-roam-bibtex.log
-4.0K -rw-r--r-- 1 root root 2.1K Sep  1 11:17 packages/org-roam-readme.txt
+4.0K -rw-r--r-- 1 root root  573 Sep  1 14:53 packages/org-roam-20210901.1143.entry
+320K -rw-r--r-- 1 root root 320K Sep  1 14:53 packages/org-roam-20210901.1143.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep  1 14:53 packages/org-roam-badge.svg
+4.0K -rw-r--r-- 1 root root  550 Sep  1 14:53 packages/org-roam-bibtex-20210810.1626.entry
+180K -rw-r--r-- 1 root root 180K Sep  1 14:53 packages/org-roam-bibtex-20210810.1626.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep  1 14:53 packages/org-roam-bibtex-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Sep  1 14:53 packages/org-roam-bibtex-readme.txt
+4.0K -rw-r--r-- 1 root root 1.6K Sep  1 14:53 packages/org-roam-bibtex.log
+4.0K -rw-r--r-- 1 root root 2.1K Sep  1 14:53 packages/org-roam-readme.txt
 4.0K -rw-r--r-- 1 root root 1.2K Aug 23 11:40 packages/org-roam-server-badge.svg
 4.0K -rw-r--r-- 1 root root  166 Aug 23 11:40 packages/org-roam-server-readme.txt
 4.0K -rw-r--r-- 1 root root 1.7K Aug 23 11:40 packages/org-roam-server.log
