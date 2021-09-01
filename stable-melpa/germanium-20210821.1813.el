@@ -3,7 +3,7 @@
 ;; Author: Masaya Watanabe
 ;; Version: 0.1.0
 ;; Package-Version: 20210821.1813
-;; Package-Commit: 7007bfd58bdb43037155d63b2ce75acbd53a6d2b
+;; Package-Commit: 88a14826695b60ac218c2b3beadba0dbd89bcd60
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/matsuyoshi30/germanium-el
