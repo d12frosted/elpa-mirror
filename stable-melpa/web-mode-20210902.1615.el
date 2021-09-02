@@ -4,8 +4,8 @@
 ;; Copyright 2011-2021 François-Xavier Bois
 
 ;; Version: 17.0.4
-;; Package-Version: 20210829.1552
-;; Package-Commit: 950ac58bd9e7d14a63761c7c8c245d0fc04595c5
+;; Package-Version: 20210902.1615
+;; Package-Commit: 61f057a6baeba6b3595e412ba79b3080dca17dcc
 ;; Author: François-Xavier Bois <fxbois AT Google Mail Service>
 ;; Maintainer: François-Xavier Bois
 ;; Package-Requires: ((emacs "23.1"))
@@ -1423,7 +1423,7 @@ shouldn't be moved back.)")
   (regexp-opt
    (append
     (cdr (assoc "elixir" web-mode-extra-keywords))
-    '("do" "end" "case" "bc" "lc" "for" "if" "cond" "with" "unless" "try" "receive" "fn" "defmodule" "defprotocol" "defimpl" "defrecord" "defrecordp" "defstruct" "defdelegate" "defcallback" "defexception" "defoverridable" "defguard" "defgaurdp" "exit" "after" "rescue" "catch" "else" "raise" "throw" "quote" "unquote" "super" "when" "and" "or" "not" "in"))))
+    '("after" "and" "bc" "case" "catch" "cond" "defcallback" "defdelegate" "defexception" "defgaurdp" "defguard" "defimpl" "defmodule" "defoverridable" "defprotocol" "defrecord" "defrecordp" "defstruct" "do" "else" "end" "exit" "fn" "for" "form_for" "if" "in" "lc" "not" "or" "quote" "raise" "receive" "rescue" "super" "throw" "try" "unless" "unquote" "when" "with"))))
 
 
 (defvar web-mode-elixir-constants
