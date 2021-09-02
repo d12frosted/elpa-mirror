@@ -4,8 +4,8 @@
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
 ;; Version: 3.6.20210901151112
-;; Package-Version: 20210901.2211
-;; Package-Commit: c6f07d5b067b7fd327ae23f14690b6f2c602f725
+;; Package-Version: 20210902.519
+;; Package-Commit: a8ef9b5597ab176015c185a9da435b2d5e5d5b71
 ;; Created: 14 Nov 2011
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: help, docs, convenience
@@ -120,7 +120,7 @@ Version 2014-10-20"
       (mapc
        (lambda ($pair)
          (goto-char (point-min))
-         (while (search-forward-regexp (elt $pair 0) (point-max) t)
+         (while (re-search-forward (elt $pair 0) (point-max) t)
            (replace-match (elt $pair 1))))
        [
         ["á\\|à\\|â\\|ä\\|ã\\|å" "a"]

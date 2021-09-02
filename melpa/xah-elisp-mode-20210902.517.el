@@ -4,8 +4,8 @@
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
 ;; Version: 3.22.20210901152259
-;; Package-Version: 20210901.2315
-;; Package-Commit: 944b1f7413d2838f510e9f93aa2668fe98aac759
+;; Package-Version: 20210902.517
+;; Package-Commit: b8a1428b5ac6ad3a02c7fa805659427ff951ae57
 ;; Created: 23 Mar 2013
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: lisp, languages
@@ -2754,8 +2754,8 @@ Call `exchange-point-and-mark' \\[exchange-point-and-mark] to highlight them."
   "Return t if not in string or comment. Else nil.
 This is for abbrev table property `:enable-function'.
 Version 2016-10-24"
-  (let (($syntax-state (syntax-ppss)))
-    (not (or (nth 3 $syntax-state) (nth 4 $syntax-state)))))
+  (let (($syntaxState (syntax-ppss)))
+    (not (or (nth 3 $syntaxState) (nth 4 $syntaxState)))))
 
 (defun xah-elisp-expand-abbrev ()
   "Expand the symbol before cursor,
@@ -2813,32 +2813,48 @@ Version 2016-10-24"
 
 ;; indent/reformat related
 
-(defun xah-elisp-complete-or-indent ()
-  "Do keyword completion or indent/prettify-format.
-
-If char before point is letters and char after point is whitespace or punctuation, then do completion, except when in string or comment. In these cases, do `xah-elisp-prettify-root-sexp'."
+(defun xah-elisp-goto-outmost-bracket (&optional Pos)
+  "Move cursor to the beginning of outer-most bracket, with respect to Pos.
+Returns true if point is moved, else false.
+Version 2021-09-01"
   (interactive)
-  ;; consider the char to the left or right of cursor. Each side is either empty or char.
-  ;; there are 4 cases:
-  ;; space▮space → do indent
-  ;; space▮char → do indent
-  ;; char▮space → do completion
-  ;; char ▮char → do indent
-  (let ( ($syntax-state (syntax-ppss)))
-    (if (or (nth 3 $syntax-state) (nth 4 $syntax-state))
-        (progn
-          (xah-elisp-prettify-root-sexp))
-      (progn (if
-                 (and (looking-back "[-_a-zA-Z]" 1)
-                      (or (eobp) (looking-at "[\n[:blank:][:punct:]]")))
-                 (xah-elisp-complete-symbol)
-               (xah-elisp-prettify-root-sexp))))))
+  (let (($i 0)
+        ($p0 (if (number-or-marker-p Pos) Pos (point))))
+    (goto-char $p0)
+    (while
+        (and (< (setq $i (1+ $i)) 20)
+             (not (eq (nth 0 (syntax-ppss (point))) 0)))
+      (xah-elisp-up-list -1 "ESCAPE-STRINGS" "NO-SYNTAX-CROSSING"))
+    (if (eq $p0 (point)) nil t )))
+
+(defun xah-elisp-compact-parens-region (Begin End)
+  "Remove whitespaces that occure between left/right parenthesises, in region.
+Version 2021-09-01"
+  (interactive "r")
+  (let ($syntaxState)
+    (save-restriction
+      (narrow-to-region Begin End)
+      (goto-char (point-min))
+
+      (while (re-search-forward ")[ \t\n]+)" nil t)
+        (setq $syntaxState (syntax-ppss (match-beginning 0)))
+        (if (or (nth 3 $syntaxState ) (nth 4 $syntaxState))
+            (search-forward ")")
+          (progn (replace-match "))")
+                 (search-backward ")"))))
+
+      (goto-char (point-min))
+      (while (re-search-forward "([ \t\n]+(" nil t)
+        (setq $syntaxState (syntax-ppss (match-beginning 0)))
+        (if (or (nth 3 $syntaxState ) (nth 4 $syntaxState))
+            (search-forward "(")
+          (progn (replace-match "((")
+                 (search-backward "(")))))))
 
 (defun xah-elisp-prettify-root-sexp ()
   "Prettify format current root sexp group.
 Root sexp group is the outmost sexp unit.
-
-Version 2016-10-13"
+Version 2016-10-13 2021-09-01"
   (interactive)
   (save-excursion
     (let ($p1 $p2)
@@ -2849,11 +2865,32 @@ Version 2016-10-13"
         (save-restriction
           (narrow-to-region $p1 $p2)
           (progn
+            (xah-elisp-compact-parens-region (point-min) (point-max))
             (goto-char (point-min))
             (indent-sexp)
-            (xah-elisp-compact-parens-region (point-min) (point-max))
             (xah-elisp-compact-blank-lines (point-min) (point-max))
             (delete-trailing-whitespace (point-min) (point-max))))))))
+
+(defun xah-elisp-complete-or-indent ()
+  "Do keyword completion or indent/prettify-format.
+
+If char before point is letters and char after point is whitespace or punctuation, then do completion, except when in string or comment. In these cases, do `xah-elisp-prettify-root-sexp'.
+Version 2021-09-01"
+  (interactive)
+  ;; consider the char to the left or right of cursor. Each side is either empty or char.
+  ;; there are 4 cases:
+  ;; space▮space → do indent
+  ;; space▮char → do indent
+  ;; char▮space → do completion
+  ;; char ▮char → do indent
+  (let ( ($syntaxState (syntax-ppss)))
+    (if (or (nth 3 $syntaxState) (nth 4 $syntaxState))
+        (xah-elisp-prettify-root-sexp)
+      (progn (if
+                 (and (looking-back "[-_a-zA-Z]" 1)
+                      (or (eobp) (looking-at "[\n[:blank:][:punct:]]")))
+                 (xah-elisp-complete-symbol)
+               (xah-elisp-prettify-root-sexp))))))
 
 (defun xah-elisp-compact-blank-lines (&optional Begin End N)
   "Replace repeated blank lines to just 1.
@@ -2875,26 +2912,8 @@ Version 2017-01-27 2021-08-08"
       (narrow-to-region Begin End)
       (progn
         (goto-char (point-min))
-        (while (search-forward-regexp "\n\n\n+" nil t)
+        (while (re-search-forward "\n\n\n+" nil t)
           (replace-match (make-string (if N N 2) 10)))))))
-
-(defun xah-elisp-goto-outmost-bracket (&optional Pos)
-  "Move cursor to the beginning of outer-most bracket, with respect to Pos.
-Returns true if point is moved, else false."
-  (interactive)
-  (let (($i 0)
-        ($p0 (if (number-or-marker-p Pos)
-                 Pos
-               (point))))
-    (goto-char $p0)
-    (while
-        (and (< (setq $i (1+ $i)) 20)
-             (not (eq (nth 0 (syntax-ppss (point))) 0)))
-      (xah-elisp-up-list -1 "ESCAPE-STRINGS" "NO-SYNTAX-CROSSING"))
-    (if (equal $p0 (point))
-        nil
-      t
-      )))
 
 (defun xah-elisp-compact-parens (&optional Begin End)
   "Remove whitespaces in ending repetition of parenthesises.
@@ -2913,20 +2932,6 @@ Version 2017-01-27"
         (setq $p1 (point))
         (setq $p2 (scan-sexps (point) 1))))
     (xah-elisp-compact-parens-region $p1 $p2)))
-
-(defun xah-elisp-compact-parens-region (Begin End)
-  "Remove whitespaces in ending repetition of parenthesises in region."
-  (interactive "r")
-  (let ($syntax-state)
-    (save-restriction
-      (narrow-to-region Begin End)
-      (goto-char (point-min))
-      (while (search-forward-regexp ")[ \t\n]+)" nil t)
-        (setq $syntax-state (syntax-ppss (match-beginning 0)))
-        (if (or (nth 3 $syntax-state ) (nth 4 $syntax-state))
-            (progn (search-forward ")"))
-          (progn (replace-match "))")
-                 (search-backward ")")))))))
 
 
 ;; abbrev
@@ -3069,7 +3074,7 @@ Version 2017-01-27"
     ("scb" "skip-chars-backward" xah-elisp--ahf)
     ("scf" "skip-chars-forward" xah-elisp--ahf)
     ("sfm" "set-file-modes" xah-elisp--ahf)
-    ("sfr" "search-forward-regexp" xah-elisp--ahf)
+    ("sfr" "re-search-forward" xah-elisp--ahf)
     ("snp" "substring-no-properties" xah-elisp--ahf)
     ("sqa" "shell-quote-argument" xah-elisp--ahf)
     ("ssnp" "substring-no-properties" xah-elisp--ahf)
@@ -3372,9 +3377,9 @@ Version 2017-01-27"
 
     )" xah-elisp--ahf)
     ("search-backward" "(search-backward \"▮\" &optional BOUND NOERROR COUNT)" xah-elisp--ahf)
-    ("search-backward-regexp" "(search-backward-regexp \"▮\" &optional BOUND NOERROR COUNT)" xah-elisp--ahf)
+    ("search-backward-regexp" "(re-search-backward \"▮\" &optional BOUND NOERROR COUNT)" xah-elisp--ahf)
     ("search-forward" "(search-forward \"▮\" &optional BOUND NOERROR COUNT)" xah-elisp--ahf)
-    ("search-forward-regexp" "(search-forward-regexp \"▮\" &optional BOUND NOERROR COUNT)" xah-elisp--ahf)
+    ("search-forward-regexp" "(re-search-forward \"▮\" &optional BOUND NOERROR COUNT)" xah-elisp--ahf)
     ("set-buffer" "(set-buffer ▮)" xah-elisp--ahf)
     ("set-buffer-modified-p" "(set-buffer-modified-p FLAG▮)" xah-elisp--ahf)
     ("set-file-modes" "(set-file-modes ▮ MODE)" xah-elisp--ahf)

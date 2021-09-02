@@ -2,8 +2,8 @@
 ;;
 ;; Author: Lincoln Clarete <lincoln@clarete.li>
 ;; URL: https://clarete.li/templatel
-;; Package-Version: 20210802.249
-;; Package-Commit: 23c9bce8c1e3866e7cdbe9a69777648e13707357
+;; Package-Version: 20210902.228
+;; Package-Commit: e1ccb88cdc4b482b078276960f810b82ba3b7847
 ;; Version: 0.1.6
 ;; Package-Requires: ((emacs "25.1"))
 ;;
@@ -1847,7 +1847,9 @@ Otherwise its HTML entities are escaped."
 
 (defun templatel-filters-default (value default)
   "Return DEFAULT if VALUE is nil or return VALUE."
-  (or value default))
+  (if (templatel--truthy value)
+      value
+    default))
 
 (defun templatel-filters-escape (s)
   "Convert special chars in S to their respective HTML entities."
