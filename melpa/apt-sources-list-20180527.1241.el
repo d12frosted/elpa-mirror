@@ -7,10 +7,8 @@
 ;; Author: Dr. Rafael Sepúlveda <drs@gnulinux.org.mx>
 ;; Maintainer: Joe Wreschnig <joe.wreschnig@gmail.com>
 ;; URL: https://git.korewanetadesu.com/apt-sources-list.git
-;; Package-Commit: 5289443ceff230dfc8a2c1c6b524c90560eb08a5
 ;; Package-Requires: ((emacs "24.4"))
-;; Package-Version: 20180527.1241
-;; Package-X-Original-Version: 0
+;; Package-Version: 0
 ;;
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

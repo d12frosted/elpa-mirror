@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/pythonic-emacs/pythonic.git
 
 Updating /mnt/store/melpa/working/pythonic/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/pythonic-emacs/pythonic.git/': Empty reply from server
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out fe75bc17baae314bf8f5e0b12aad3fccfc6c5397
+Built pythonic in 4.753s, finished at 2021-09-02T01:38:40+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Sep  2 01:38 packages/pythonic-20210122.1247.el
+4.0K -rw-r--r-- 1 root root  416 Sep  2 01:38 packages/pythonic-20210122.1247.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep  2 01:38 packages/pythonic-badge.svg
+4.0K -rw-r--r-- 1 root root   33 Sep  2 01:38 packages/pythonic-readme.txt
