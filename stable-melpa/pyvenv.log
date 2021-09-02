@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/jorgenschaefer/pyvenv.git
 
 Updating /mnt/store/melpa/working/pyvenv/
-Checking out origin/HEAD
-Checking out 045ff9476dac26086a04538d9b7ba186aa8f0fd1
-Built pyvenv in 5.457s, finished at 2021-09-01T15:02:16+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root  25K Sep  1 15:02 packages/pyvenv-20210527.829.el
-4.0K -rw-r--r-- 1 root root  372 Sep  1 15:02 packages/pyvenv-20210527.829.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep  1 15:02 packages/pyvenv-badge.svg
-4.0K -rw-r--r-- 1 root root  513 Sep  1 15:02 packages/pyvenv-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/jorgenschaefer/pyvenv.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+

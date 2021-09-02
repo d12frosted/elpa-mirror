@@ -3,11 +3,6 @@ Fetcher: github
 Source:  https://github.com/abo-abo/plain-org-wiki.git
 
 Updating /mnt/store/melpa/working/plain-org-wiki/
-Checking out origin/HEAD
-Checking out faeeb54ca808bbf0f4380a938e75805b7a78dbf7
-Built plain-org-wiki in 4.846s, finished at 2021-09-01T14:58:42+0000
- ✓ Success:
-8.0K -rwxr-xr-x 1 root root 4.5K Sep  1 14:58 packages/plain-org-wiki-20201217.1027.el
-4.0K -rw-r--r-- 1 root root  411 Sep  1 14:58 packages/plain-org-wiki-20201217.1027.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep  1 14:58 packages/plain-org-wiki-badge.svg
-4.0K -rw-r--r-- 1 root root   74 Sep  1 14:58 packages/plain-org-wiki-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: unable to access 'https://github.com/abo-abo/plain-org-wiki.git/': gnutls_handshake() failed: Error in the pull function.
+
