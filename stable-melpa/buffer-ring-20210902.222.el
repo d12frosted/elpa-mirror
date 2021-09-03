@@ -4,8 +4,8 @@
 ;;         Sid Kasivajhula <sid@countvajhula.com>
 ;; Maintainer: Sid Kasivajhula <sid@countvajhula.com>
 ;; URL: https://github.com/countvajhula/buffer-ring
-;; Package-Version: 20210901.413
-;; Package-Commit: b221e56bba61a9f302888a12e455b29dc6b019fb
+;; Package-Version: 20210902.222
+;; Package-Commit: 2afc5baee4c3c3b0fc2e22bc33f19783df3b5e5f
 ;; Created: 2009-4-16
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "25.1") (dynaring "0.2.0") (s "1.12.0") (ht "2.0"))
@@ -314,13 +314,6 @@ _ARGS are the arguments that the advised function was invoked with."
         ;; if it isn't part of any rings, we don't need
         ;; to do anything
         (when bfr-rings
-          ;; the head buffer of the ring is already going to be surfaced
-          ;; when we switch to the ring, but since we are arriving
-          ;; here "out of band," the current head may not a priori be
-          ;; the current buffer. We surface the buffer here _before_ invoking
-          ;; the ring mechanisms to ensure that the synchronization
-          ;; happens with respect to the current buffer.
-          (buffer-ring-surface-buffer buffer)
           (let ((most-recent-ring (car bfr-rings)))
             ;; switch to the most recent ring containing the buffer
             (buffer-ring-torus-switch-to-ring
@@ -435,13 +428,24 @@ At the moment, this switches to the head buffer in BFR-RING
 (the new ring), and surfaces that ring in all of its member
 buffers."
   ;; Switch to the head buffer in the new ring.
-  ;; Note that if the original buffer is in the new ring,
-  ;; it should already be at the head due to buffer ↔ ring
-  ;; synchrony and this would have no effect.
   (let ((head-buffer (buffer-ring-current-buffer bfr-ring)))
     (when head-buffer
-      ;; if the new ring is empty, don't switch buffer
-      (buffer-ring-switch-to-buffer head-buffer)))
+      ;; If the new ring is empty, don't switch buffer.
+      ;; Note that if the original buffer is in the new ring,
+      ;; it would typically already be at the head due to buffer ↔ ring
+      ;; synchrony and this would have no effect. But in the case
+      ;; where (a) we visit a buffer "out of band," i.e. not via a
+      ;; buffer ring interface, or (b) when the buffer ring is first
+      ;; created, the rings may not already be synchronized with the
+      ;; actual buffer state, i.e. the current buffer may not be at
+      ;; head position in its rings. In such cases, we reorient around
+      ;; the actual current buffer rather than switch to the ring's
+      ;; current head buffer.
+      (if (and (dynaring-contains-p (buffer-ring-ring-ring bfr-ring)
+                                    (current-buffer))
+               (not (eq (current-buffer) head-buffer)))
+          (buffer-ring-surface-buffer)
+        (buffer-ring-switch-to-buffer head-buffer))))
   ;; surface the ring in all of its member buffers
   ;; so it reflects as most recent
   (buffer-ring-surface-ring bfr-ring))

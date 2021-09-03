@@ -5,7 +5,7 @@
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: https://github.com/alphapapa/dogears.el
 ;; Package-Version: 20210822.2106
-;; Package-Commit: e96952bcb630c0130d55756c5337d594c2a7670c
+;; Package-Commit: 00dd88cc53d3a7d6ddeb3c6eea2c2a37d9b610d6
 ;; Version: 0.1-pre
 ;; Package-Requires: ((emacs "26.3") (dogears "0.1-pre") (helm "3.6"))
 ;; Keywords: convenience
