@@ -1,0 +1,15 @@
+(syslog-mode .
+	     [(20210903 210)
+	      ((hide-lines
+		(20130623))
+	       (ov
+		(20150311))
+	       (hsluv
+		(20181127)))
+	      "Major-mode for viewing log files & strace output" tar
+	      ((:commit . "d0754449d25c49289a58f83a811236e82013f5b3")
+	       (:authors
+		("Harley Gorrell" . "harley@panix.com"))
+	       (:maintainer "Joe Bloggs" . "vapniks@yahoo.com")
+	       (:keywords "unix")
+	       (:url . "https://github.com/vapniks/syslog-mode"))])
