@@ -3,8 +3,8 @@
 ;; Copyright (C) 2012 ~ 2015 Thierry Volpiatto <thierry.volpiatto@gmail.com>
 
 ;; Package-Requires: ((helm "1.7.8"))
-;; Package-Version: 20210901.905
-;; Package-Commit: 5657d72100b5af8cf12a1774f36b900b0093577d
+;; Package-Version: 20210903.1332
+;; Package-Commit: 85e640dc22ac245650abe5e4132fbcea23d4ed16
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -469,7 +469,7 @@ See docstring of `helm-ls-git-ls-switches'.
   (let ((switches `("log" "--color"
                     "--date=local"
                     "--pretty=format:%C(yellow)%h%Creset \
- %C(green)%ad%Creset %<(60,trunc)%s %Cred%an%Creset %d"
+ %C(green)%ad%Creset %<(60,trunc)%s %Cred%an%Creset %C(auto)%d%Creset"
                     "-n" "500"
                     ,(or branch ""))))
 
@@ -486,6 +486,7 @@ See docstring of `helm-ls-git-ls-switches'.
     (helm :sources (helm-build-in-buffer-source (format "Git log (%s)" name)
                      :data str
                      :get-line 'buffer-substring
+                     :marked-with-props 'withprop
                      :action '(("Show commit" . helm-ls-git-log-show-commit)
                                ("Kill rev as sha-1" .
                                 (lambda (candidate)
@@ -495,7 +496,10 @@ See docstring of `helm-ls-git-ls-switches'.
                                   (helm-aif (get-text-property
                                              2 'rev
                                              (helm-get-selection nil 'withprop))
-                                      (kill-new it)))))
+                                      (kill-new it))))
+                               ("Format patches" . helm-ls-git-log-format-patch)
+                               ("Git am" . helm-ls-git-log-am)
+                               ("Reset" . helm-ls-git-log-reset))
                      :candidate-transformer
                      (lambda (candidates)
                        (cl-loop for c in candidates
@@ -521,6 +525,46 @@ See docstring of `helm-ls-git-ls-switches'.
                        "show" "-p" sha)))))
         (diff-mode))
       (display-buffer (current-buffer)))))
+
+(defun helm-ls-git-log-format-patch (_candidate)
+  (helm-ls-git-log-format-patch-1))
+
+(defun helm-ls-git-log-am (_candidate)
+  (helm-ls-git-log-format-patch-1 'am))
+
+(defun helm-ls-git-log-format-patch-1 (&optional am)
+  (let ((commits (cl-loop for c in (helm-marked-candidates)
+                          collect (get-text-property 1 'rev c)))
+        range switches)
+    (cond ((= 2 (length commits))
+           (setq range (mapconcat 'identity (sort commits #'string-lessp) "...")
+                 switches `("format-patch" ,range)))
+          ((not (cdr commits))
+           (setq range (car commits)
+                 switches `("format-patch" "-1" ,range)))
+          ((> (length commits) 2)
+           (error "Specify either a single commit or a range with only two marked commits")))
+    (with-helm-default-directory (helm-ls-git-root-dir
+                                  (helm-default-directory))
+      (if am
+          (with-current-buffer-window "*git am*" '(display-buffer-below-selected
+                                                   (window-height . fit-window-to-buffer)
+                                                   (preserve-size . (nil . t)))
+                                      nil
+            (process-file-shell-command
+             (format "git %s | git am -3 -k"
+                     (mapconcat 'identity (helm-append-at-nth switches '("-k --stdout") 1) " "))
+             nil t t))
+        (apply #'process-file "git" nil "*git format-patch*" nil switches)))))
+
+(defun helm-ls-git-log-reset (_candidate)
+  (let ((rev (get-text-property 1 'rev (helm-get-selection nil 'withprop))))
+    (with-helm-default-directory (helm-ls-git-root-dir
+                                  (helm-default-directory))
+      (when (y-or-n-p (format "Hard reset to <%s>?" rev))
+        (if (= (process-file "git" nil nil nil "reset" "--hard" rev) 0)
+            (message "Now at `%s'" (helm-ls-git-oneline-log
+                                    (helm-ls-git--branch))))))))
 
 (defun helm-ls-git-log-show-commit (candidate)
   (if (and (eq last-command 'helm-execute-persistent-action)
@@ -596,7 +640,7 @@ See docstring of `helm-ls-git-ls-switches'.
     (let ((branch (replace-regexp-in-string "[ ]" "" candidate)))
       (cl-assert (not (string-match "\\`[*]" candidate)) nil "Can't delete current branch")
       (when (y-or-n-p (format "Really delete branch %s?" branch))
-        (if (= (process-file "git" nil nil nil "branch" "-d" branch) 0)
+        (if (= (process-file "git" nil nil nil "branch" "-D" branch) 0)
             (message "Branch %s deleted successfully" branch)
           (message "failed to delete branch %s" branch))))))
 

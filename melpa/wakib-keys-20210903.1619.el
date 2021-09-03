@@ -2,8 +2,8 @@
 
 ;; Author: Abdulla Bubshait
 ;; URL: https://github.com/darkstego/wakib-keys/
-;; Package-Version: 20201001.1448
-;; Package-Commit: b803fcaef31539e070a08202b9039bbeb29e8f66
+;; Package-Version: 20210903.1619
+;; Package-Commit: 8fa54f3cf7921e961e46d20e1afc51eec8286003
 ;; Created: 6 April 2018
 ;; Keywords: convenience, keybindings, keys
 ;; License: GPL v3
@@ -99,13 +99,17 @@ KEY"
   ;; Put replacements in hash first because doing key lookup during
   ;; replace-regexp-in-string resets the match and causes the replace
   ;; step to work incorrectly
+
+  ;; Parts of emacs (e.g. Customize) calls with nil args
+  (if (stringp (car args))
   (let* ((hash (wakib--get-command-keys (make-hash-table) (car args) 0))
 	(str (replace-regexp-in-string "\\\\\\[\\([^\]]*\\)\\]"
 				       (lambda (match)
 					 (let ((key (gethash (intern (substring match 2 -1)) hash)))
 					   (if key key match)))
 				       (car args) t t)))
-    (apply orig-fun (list str))))
+    (apply orig-fun (list str)))
+  (apply orig-fun args)))
 
 
 (defun wakib-update-major-mode-map ()
