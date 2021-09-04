@@ -4,6 +4,8 @@
 
 ;; Author: Andreas Müller
 ;; Keywords: tools, comm, org-mode, UART, literate programming, reproducible development
+;; Package-Version: 20170521.858
+;; Package-Commit: 90daeac90a9e75c20cdcf71234c67b812110c50e
 ;; Homepage: https://www.0x7.ch
 ;; Version: 0.0.1
 

@@ -4,10 +4,10 @@ Source:  https://github.com/clojure-emacs/cider.git
 
 Updating /mnt/store/melpa/working/cider/
 Checking out origin/HEAD
-Checking out 2609fd5f44a2f3cfdf26c838f8aa998e196d5158
+Checking out 76dea32c7757949a708d27d1f8707782edad5650
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/cider/
-  to /tmp/ciderGjKsoq/cider-20210902.1412
+  to /tmp/ciderlCrMGk/cider-20210902.1412
     cider-apropos.el -> cider-apropos.el
     cider-browse-ns.el -> cider-browse-ns.el
     cider-browse-spec.el -> cider-browse-spec.el
@@ -85,24 +85,24 @@ Created cider-20210902.1412.tar containing:
   cider-20210902.1412/cider.el
   cider-20210902.1412/nrepl-client.el
   cider-20210902.1412/nrepl-dict.el
-Built cider in 6.040s, finished at 2021-09-03T19:18:05+0000
+Built cider in 5.713s, finished at 2021-09-04T02:19:53+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  769 Sep  3 19:18 packages/cider-20210902.1412.entry
-852K -rw-r--r-- 1 root root 850K Sep  3 19:18 packages/cider-20210902.1412.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep  3 19:18 packages/cider-badge.svg
-4.0K -rw-r--r-- 1 root root 3.1K Sep  3 19:18 packages/cider-decompile-20151122.537.el
-4.0K -rw-r--r-- 1 root root  398 Sep  3 19:18 packages/cider-decompile-20151122.537.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep  3 19:18 packages/cider-decompile-badge.svg
-4.0K -rw-r--r-- 1 root root  350 Sep  3 19:18 packages/cider-decompile-readme.txt
-4.0K -rw-r--r-- 1 root root  318 Sep  3 19:18 packages/cider-decompile.log
-4.0K -rw-r--r-- 1 root root 2.6K Sep  3 19:18 packages/cider-eval-sexp-fu-20190311.2152.el
-4.0K -rw-r--r-- 1 root root  430 Sep  3 19:18 packages/cider-eval-sexp-fu-20190311.2152.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep  3 15:44 packages/cider-eval-sexp-fu-badge.svg
-4.0K -rw-r--r-- 1 root root  132 Sep  3 19:18 packages/cider-eval-sexp-fu-readme.txt
-4.0K -rw-r--r-- 1 root root  243 Sep  3 19:18 packages/cider-eval-sexp-fu.log
-8.0K -rw-r--r-- 1 root root 7.0K Sep  3 15:44 packages/cider-hydra-20190816.1121.el
-4.0K -rw-r--r-- 1 root root  440 Sep  3 15:44 packages/cider-hydra-20190816.1121.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep  3 15:44 packages/cider-hydra-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Sep  3 15:44 packages/cider-hydra-readme.txt
-4.0K -rw-r--r-- 1 root root  143 Sep  3 19:18 packages/cider-hydra.log
-4.0K -rw-r--r-- 1 root root  568 Sep  3 19:18 packages/cider-readme.txt
+4.0K -rw-r--r-- 1 root root  769 Sep  4 02:19 packages/cider-20210902.1412.entry
+852K -rw-r--r-- 1 root root 850K Sep  4 02:19 packages/cider-20210902.1412.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep  4 02:19 packages/cider-badge.svg
+4.0K -rw-r--r-- 1 root root 3.1K Sep  4 02:19 packages/cider-decompile-20151122.537.el
+4.0K -rw-r--r-- 1 root root  398 Sep  4 02:19 packages/cider-decompile-20151122.537.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep  3 22:51 packages/cider-decompile-badge.svg
+4.0K -rw-r--r-- 1 root root  350 Sep  4 02:19 packages/cider-decompile-readme.txt
+4.0K -rw-r--r-- 1 root root  234 Sep  4 02:19 packages/cider-decompile.log
+4.0K -rw-r--r-- 1 root root 2.6K Sep  4 02:19 packages/cider-eval-sexp-fu-20190311.2152.el
+4.0K -rw-r--r-- 1 root root  430 Sep  3 22:51 packages/cider-eval-sexp-fu-20190311.2152.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep  3 22:51 packages/cider-eval-sexp-fu-badge.svg
+4.0K -rw-r--r-- 1 root root  132 Sep  3 22:51 packages/cider-eval-sexp-fu-readme.txt
+4.0K -rw-r--r-- 1 root root  243 Sep  4 02:19 packages/cider-eval-sexp-fu.log
+8.0K -rw-r--r-- 1 root root 7.0K Sep  3 22:51 packages/cider-hydra-20190816.1121.el
+4.0K -rw-r--r-- 1 root root  440 Sep  3 22:51 packages/cider-hydra-20190816.1121.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep  3 22:51 packages/cider-hydra-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Sep  3 22:51 packages/cider-hydra-readme.txt
+4.0K -rw-r--r-- 1 root root  222 Sep  4 02:19 packages/cider-hydra.log
+4.0K -rw-r--r-- 1 root root  568 Sep  4 02:19 packages/cider-readme.txt
