@@ -4,12 +4,12 @@
 
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Version: 1.3
-;; Package-Version: 20190426.421
-;; Package-Commit: 733cdd7ab4f172b6dca09720fc5ae7dbc248c822
+;; Package-Version: 20210904.516
+;; Package-Commit: c635868e13ee898ec77925d98b36421640e22aa4
 ;; Keywords: convenience, shortcuts
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2015/04/17
-;; Package-Requires: ((emacs "24"))
+;; Package-Requires: ((emacs "24") (cl-lib "0.5"))
 ;; Description: Quick toggle controls at a key-stroke
 ;; URL: http://ismail.teamfluxion.com
 ;; Compatibility: Emacs24
@@ -73,6 +73,8 @@
 
 ;;; Code:
 
+(require 'cl-lib)
+
 (defvar myterminal-controls--controls-data
   nil)
 
@@ -81,7 +83,7 @@
 
 ;;;###autoload
 (defun myterminal-controls-set-controls-data (data)
-  "Sets details of controls required in the controls window"
+  "Sets details of controls required in the controls window."
   (setq myterminal-controls--controls-data
         data)
   (add-to-list 'myterminal-controls--controls-data
@@ -92,66 +94,58 @@
 
 ;;;###autoload
 (defun myterminal-controls-open-controls ()
-  "Opens the controls window"
+  "Opens the controls window."
   (interactive)
-  (let ((my-buffer (get-buffer-create myterminal-controls--buffer-name))
-        (my-window (split-window-vertically (- (myterminal-controls--get-required-window-height)))))
+  (cl-flet* ((get-required-window-height ()
+                                        (let ((half-window-height (/ (window-height)
+                                                                     2))
+                                              (padded-controls-data-length (+ (length myterminal-controls--controls-data)
+                                                                              4)))
+                                          (cond ((< half-window-height
+                                                    padded-controls-data-length) half-window-height)
+                                                (t padded-controls-data-length))))
+             (display-controls-bindings (pair)
+                                        (princ (concat "["
+                                                       (nth 0
+                                                            pair)
+                                                       "] - "
+                                                       (nth 1
+                                                            pair)
+                                                       "\n")
+                                               (get-buffer-create myterminal-controls--buffer-name)))
+             (apply-keyboard-bindings (pair)
+                                      (let ((func (nth 2 pair)))
+                                        (local-set-key (kbd (car pair))
+                                                       (lambda ()
+                                                         (interactive)
+                                                         (other-window -1)
+                                                         (funcall func)
+                                                         (other-window 1)
+                                                         (if (nth 3
+                                                                  pair)
+                                                             (myterminal-controls-close-controls))))))
+             (prepare-controls (pairs)
+                               (mapc #'display-controls-bindings
+                                     pairs)
+                               (myterminal-controls-mode)
+                               (mapc #'apply-keyboard-bindings
+                                     pairs)))
+    (let ((my-buffer (get-buffer-create myterminal-controls--buffer-name))
+        (my-window (split-window-vertically (- (get-required-window-height)))))
     (set-window-buffer my-window
                        my-buffer)
     (other-window 1)
-    (myterminal-controls--prepare-controls myterminal-controls--controls-data)))
+    (prepare-controls myterminal-controls--controls-data))))
 
 ;;;###autoload
 (defun myterminal-controls-close-controls ()
-  "Closes the controls window"
+  "Closes the controls window."
   (interactive)
   (let ((my-window (get-buffer-window (get-buffer-create myterminal-controls--buffer-name))))
     (cond ((windowp my-window) (progn
                                  (delete-window my-window)
                                  (kill-buffer (get-buffer-create myterminal-controls--buffer-name))
                                  (other-window -1))))))
-
-(defun myterminal-controls--get-required-window-height ()
-  "Gets the approproate window height for controls"
-  (let ((half-window-height (/ (window-height)
-                               2))
-        (padded-controls-data-length (+ (length myterminal-controls--controls-data)
-                                        4)))
-    (cond ((< half-window-height
-              padded-controls-data-length) half-window-height)
-          (t padded-controls-data-length))))
-
-(defun myterminal-controls--prepare-controls (pairs)
-  "Sets up the controls window"
-  (mapc 'myterminal-controls--display-controls-bindings
-        pairs)
-  (myterminal-controls-mode)
-  (mapc 'myterminal-controls--apply-keyboard-bindings
-        pairs))
-
-(defun myterminal-controls--apply-keyboard-bindings (pair)
-  "Applies key-bindings with a wrapper"
-  (let ((func (nth 2 pair)))
-    (local-set-key (kbd (car pair))
-                   (lambda ()
-                     (interactive)
-                     (other-window -1)
-                     (funcall func)
-                     (other-window 1)
-                     (if (nth 3
-                              pair)
-                         (myterminal-controls-close-controls))))))
-
-(defun myterminal-controls--display-controls-bindings (pair)
-  "Display controls in the controls window"
-  (princ (concat "["
-                 (nth 0
-                      pair)
-                 "] - "
-                 (nth 1
-                      pair)
-                 "\n")
-         (get-buffer-create myterminal-controls--buffer-name)))
 
 (define-derived-mode myterminal-controls-mode
   special-mode
