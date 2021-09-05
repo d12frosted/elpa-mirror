@@ -5,7 +5,7 @@
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
 ;; Version: 0.1.2
 ;; Package-Version: 20210730.1037
-;; Package-Commit: 07f0846fcc92b6c2fdd61db8aa959effd0e23d9d
+;; Package-Commit: 2047f00e1f58dea717ff4f656a548085c9ae7924
 ;; Package-Requires: ((emacs "25.1") (dash "2.10") (hydra "0.14") (f "0.20"))
 ;; Keywords: git vc convenience
 ;; URL: https://github.com/akirak/git-identity.el
