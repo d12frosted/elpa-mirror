@@ -1,0 +1,15 @@
+(polybar-sesman .
+		[(20210901 1336)
+		 ((emacs
+		   (25 1))
+		  (dash
+		   (2 19 1))
+		  (sesman
+		   (0 3 0)))
+		 "Display active sesman connections in polybar" single
+		 ((:commit . "5175b8d641aad9576519717f69f858621892d5c7")
+		  (:authors
+		   ("Mark Dawson" . "markgdawson@gmail.com"))
+		  (:maintainer "Mark Dawson" . "markgdawson@gmail.com")
+		  (:keywords "project" "convenience")
+		  (:url . "https://github.com/markgdawson/polybar-sesman.el"))])

@@ -1,0 +1,13 @@
+(smartparens .
+	     [(20210904 1621)
+	      ((dash
+		(2 13 0))
+	       (cl-lib
+		(0 3)))
+	      "Automatic insertion, wrapping and paredit-like navigation with user defined pairs." tar
+	      ((:commit . "2834c66c4f09778d0c57e99886c329188eed591a")
+	       (:authors
+		("Matus Goljer" . "matus.goljer@gmail.com"))
+	       (:maintainer "Matus Goljer" . "matus.goljer@gmail.com")
+	       (:keywords "abbrev" "convenience" "editing")
+	       (:url . "https://github.com/Fuco1/smartparens"))])

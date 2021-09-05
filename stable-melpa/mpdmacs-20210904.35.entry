@@ -1,0 +1,13 @@
+(mpdmacs .
+	 [(20210904 35)
+	  ((emacs
+	    (25 1))
+	   (elmpd
+	    (0 1)))
+	  "A lightweight MPD client" single
+	  ((:commit . "334b066dc5bb82d9ccb6cc30d63afed0f7610fe8")
+	   (:authors
+	    ("Michael Herstine" . "sp1ff@pobox.com"))
+	   (:maintainer "Michael Herstine" . "sp1ff@pobox.com")
+	   (:keywords "comm")
+	   (:url . "https://github.com/sp1ff/mpdmacs"))])

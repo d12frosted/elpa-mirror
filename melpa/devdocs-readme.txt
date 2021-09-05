@@ -1,4 +1,4 @@
-devdocs is a documentation viewer similar to Emacs's built-in Info
+devdocs.el is a documentation viewer similar to the built-in Info
 browser, but geared towards documentation obtained from
 https://devdocs.io.
 
