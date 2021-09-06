@@ -795,6 +795,16 @@
 	 (:authors
 	  ("Jorgen Schäfer" . "forcer@forcix.cx"))
 	 (:keywords "emms" "mp3" "ogg" "flac" "music" "mpeg" "video" "multimedia"))])
+ (engrave-faces .
+		[(0 2 0)
+		 ((emacs
+		   (27 1)))
+		 "Convert font-lock faces to other formats" tar
+		 ((:url . "https://github.com/tecosaur/engrave-faces")
+		  (:maintainer "TEC" . "tec@tecosaur.com")
+		  (:authors
+		   ("TEC <https://github/tecosaur>"))
+		  (:keywords "faces"))])
  (enwc .
        [(2 0)
 	((emacs
@@ -2828,7 +2838,7 @@
 	("Mattias Engdegård" . "mattiase@acm.org"))
        (:keywords "lisp" "regexps"))])
  (xref .
-       [(1 2 1)
+       [(1 2 2)
 	((emacs
 	  (26 1)))
 	"Cross-referencing commands" tar
