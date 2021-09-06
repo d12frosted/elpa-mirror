@@ -4,10 +4,10 @@ Source:  https://github.com/akermu/emacs-libvterm.git
 
 Updating /mnt/store/melpa/working/vterm/
 Checking out origin/HEAD
-Checking out fb299a8bf8c10e5fffeb06bc07341c103a7c5050
+Checking out db9f47f62391e9ac02fff6f0c63528bd8e5658de
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/vterm/
-  to /tmp/vtermvDu4UJ/vterm-20210902.816
+  to /tmp/vtermPH5gvW/vterm-20210905.903
     .git => .git
     .gitmodules -> .gitmodules
     CMakeLists.txt -> CMakeLists.txt
@@ -22,33 +22,33 @@ Copying files (->) and directories (=>)
     vterm-module.c -> vterm-module.c
     vterm-module.h -> vterm-module.h
     vterm.el -> vterm.el
-Created vterm-20210902.816.tar containing:
-  vterm-20210902.816/
-  vterm-20210902.816/.gitmodules
-  vterm-20210902.816/CMakeLists.txt
-  vterm-20210902.816/LICENSE
-  vterm-20210902.816/README.md
-  vterm-20210902.816/elisp.c
-  vterm-20210902.816/elisp.h
-  vterm-20210902.816/emacs-module.h
-  vterm-20210902.816/etc/
-  vterm-20210902.816/etc/emacs-vterm-bash.sh
-  vterm-20210902.816/etc/emacs-vterm-zsh.sh
-  vterm-20210902.816/etc/emacs-vterm.fish
-  vterm-20210902.816/utf8.c
-  vterm-20210902.816/utf8.h
-  vterm-20210902.816/vterm-module.c
-  vterm-20210902.816/vterm-module.h
-  vterm-20210902.816/vterm-pkg.el
-  vterm-20210902.816/vterm.el
-Built vterm in 6.751s, finished at 2021-09-05T06:27:25+0000
+Created vterm-20210905.903.tar containing:
+  vterm-20210905.903/
+  vterm-20210905.903/.gitmodules
+  vterm-20210905.903/CMakeLists.txt
+  vterm-20210905.903/LICENSE
+  vterm-20210905.903/README.md
+  vterm-20210905.903/elisp.c
+  vterm-20210905.903/elisp.h
+  vterm-20210905.903/emacs-module.h
+  vterm-20210905.903/etc/
+  vterm-20210905.903/etc/emacs-vterm-bash.sh
+  vterm-20210905.903/etc/emacs-vterm-zsh.sh
+  vterm-20210905.903/etc/emacs-vterm.fish
+  vterm-20210905.903/utf8.c
+  vterm-20210905.903/utf8.h
+  vterm-20210905.903/vterm-module.c
+  vterm-20210905.903/vterm-module.h
+  vterm-20210905.903/vterm-pkg.el
+  vterm-20210905.903/vterm.el
+Built vterm in 6.775s, finished at 2021-09-06T02:54:22+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  351 Sep  5 06:27 packages/vterm-20210902.816.entry
-232K -rw-r--r-- 1 root root 230K Sep  5 06:27 packages/vterm-20210902.816.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep  5 06:27 packages/vterm-badge.svg
-4.0K -rw-r--r-- 1 root root  977 Sep  5 06:27 packages/vterm-readme.txt
- 20K -rw-r--r-- 1 root root  18K Sep  5 06:27 packages/vterm-toggle-20210902.828.el
-4.0K -rw-r--r-- 1 root root  404 Sep  5 06:27 packages/vterm-toggle-20210902.828.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep  5 06:27 packages/vterm-toggle-badge.svg
-4.0K -rw-r--r-- 1 root root  582 Sep  5 06:27 packages/vterm-toggle-readme.txt
-4.0K -rw-r--r-- 1 root root  627 Sep  5 06:27 packages/vterm-toggle.log
+4.0K -rw-r--r-- 1 root root  351 Sep  6 02:54 packages/vterm-20210905.903.entry
+232K -rw-r--r-- 1 root root 230K Sep  6 02:54 packages/vterm-20210905.903.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep  6 02:54 packages/vterm-badge.svg
+4.0K -rw-r--r-- 1 root root  977 Sep  6 02:54 packages/vterm-readme.txt
+ 20K -rw-r--r-- 1 root root  18K Sep  6 02:54 packages/vterm-toggle-20210902.828.el
+4.0K -rw-r--r-- 1 root root  404 Sep  6 02:54 packages/vterm-toggle-20210902.828.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep  6 02:54 packages/vterm-toggle-badge.svg
+4.0K -rw-r--r-- 1 root root  582 Sep  6 02:54 packages/vterm-toggle-readme.txt
+4.0K -rw-r--r-- 1 root root  627 Sep  6 02:54 packages/vterm-toggle.log

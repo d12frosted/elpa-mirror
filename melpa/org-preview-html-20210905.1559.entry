@@ -1,0 +1,13 @@
+(org-preview-html .
+		  [(20210905 1559)
+		   ((emacs
+		     (27 1))
+		    (org
+		     (8 0)))
+		   "Automatically preview org-exported HTML files within Emacs" single
+		   ((:commit . "04487392d977258351d06ff693a591d8e77617b7")
+		    (:authors
+		     ("Jake B <jakebox.github.io>"))
+		    (:maintainer "Jake B <jakebox.github.io>")
+		    (:keywords "org" "convenience" "outlines")
+		    (:url . "https://github.com/jakebox/org-preview-html"))])
