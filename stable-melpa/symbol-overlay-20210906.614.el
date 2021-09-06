@@ -4,8 +4,8 @@
 
 ;; Author: wolray <wolray@foxmail.com>
 ;; Version: 4.1
-;; Package-Version: 20210422.2110
-;; Package-Commit: 4231a36e39b7393d639e9cdef19f311d780deeab
+;; Package-Version: 20210906.614
+;; Package-Commit: 8629a4ddbe95d42c39ce817d724877deb1984ba1
 ;; URL: https://github.com/wolray/symbol-overlay/
 ;; Keywords: faces, matching
 ;; Package-Requires: ((emacs "24.3") (seq "2.2"))
@@ -229,6 +229,7 @@ You can re-bind the commands to any keys you prefer.")
   (if symbol-overlay-mode
       (progn
         (add-hook 'post-command-hook 'symbol-overlay-post-command nil t)
+        (add-hook 'kill-buffer-hook 'symbol-overlay-cancel-timer)
         (symbol-overlay-update-timer symbol-overlay-idle-time))
     (remove-hook 'post-command-hook 'symbol-overlay-post-command t)
     (symbol-overlay-cancel-timer)

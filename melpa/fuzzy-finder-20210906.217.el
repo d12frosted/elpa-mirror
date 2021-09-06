@@ -8,8 +8,8 @@
 ;; Author: Bailey Ling
 ;; Maintainer: 10sr <8.slashes@gmail.com>
 ;; Keywords: matching
-;; Package-Version: 20200909.907
-;; Package-Commit: c19235a35db076eebb5ad31fb42daf6520620f6d
+;; Package-Version: 20210906.217
+;; Package-Commit: 915a281fc8e50df84dcc205f9357e8314d60fa54
 ;; URL: https://github.com/10sr/fuzzy-finder-el
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4"))
@@ -202,7 +202,7 @@ After the process exits successfully call ACTION function with selected items.
 
 All arguments are optional keyword arguments.
 There is a variable that defines default value for each argument except for
-DIRECTORY. For example, `fuzzy-finder-default-arguments' for the ARGUMENTS key.
+DIRECTORY.  For example, `fuzzy-finder-default-arguments' for the ARGUMENTS key.
 
 `:directory DIRECTORY'
     Set the directory to start fuzzy-finder application from.
@@ -213,9 +213,10 @@ DIRECTORY. For example, `fuzzy-finder-default-arguments' for the ARGUMENTS key.
 
 `:input-command INPUT-COMMAND'
     When non-empty string is given for INPUT-COMMAND, the stdout of this
-    command result will be piped (\"|\") into COMMAND.
-    Otherwise, COMMAND will be invoked without any input, thus the application
-    default might be used (\"FZF_DEFAULT_COMMAND\" for example).
+    command result will be piped (\"|\") into the the fuzzy-finder process.
+    Otherwise, fuzzy-finder process will be invoked without any input, thus
+    the application default might be used (\"$FZF_DEFAULT_COMMAND\" for
+    example).
 
 `:action ACTION'
     Callback function that results of fuzzy-finder selection will be passed to.
