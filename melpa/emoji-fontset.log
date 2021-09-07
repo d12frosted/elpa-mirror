@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/zonuexe/emoji-fontset.el.git
 
 Updating /mnt/store/melpa/working/emoji-fontset/
-Checking out origin/HEAD
-Checking out 8f159e8073b9b57a07a54b549df687424eeb98ee
-Built emoji-fontset in 4.965s, finished at 2021-09-07T06:14:59+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 4.0K Sep  7 06:14 packages/emoji-fontset-20160726.1924.el
-4.0K -rw-r--r-- 1 root root  285 Sep  7 06:14 packages/emoji-fontset-20160726.1924.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep  7 06:14 packages/emoji-fontset-badge.svg
-4.0K -rw-r--r-- 1 root root  230 Sep  7 06:14 packages/emoji-fontset-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: unable to access 'https://github.com/zonuexe/emoji-fontset.el.git/': getaddrinfo() thread failed to start
+
+
