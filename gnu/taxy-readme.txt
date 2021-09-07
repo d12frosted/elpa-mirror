@@ -774,6 +774,20 @@ Note that while =taxy-magit-section.el= is installed with the =taxy= package, th
 :TOC:      :depth 0
 :END:
 
+** 0.5
+
+*** Additions
+
++  Function ~taxy-magit-section-insert~ takes new arguments:
+     -  ~:initial-depth~ sets the level at which the first level of hierarchy is considered to be at, for purposes of indentation.  Setting it to a negative number prevents indentation of so many levels (i.e. setting it to -1 causes the first two levels to be unindented, since the first level will be considered to be at depth -1, and the second at depth 0).
+     -  ~:blank-between-depth~ sets the level up to which blank lines are inserted between sections (i.e. setting it to 1 causes blank lines to be inserted between sections up to depth 1, but not between sections deeper than that).
++  Struct ~taxy-magit-section~ has a new ~heading-face~ slot, a function which takes a depth level argument and returns the face with which to propertize that section's heading.
++  New example ~taxy-package-report~.
+
+*** Fixes
+
++  Example ~diredy~ referred to an old function name.
+
 ** 0.4
 
 +  Incremented version to cause a new ELPA release (since removing a file that wasn't intended to be distributed on ELPA).

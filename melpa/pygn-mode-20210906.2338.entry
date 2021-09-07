@@ -1,0 +1,21 @@
+(pygn-mode .
+	   [(20210906 2338)
+	    ((emacs
+	      (26 1))
+	     (tree-sitter
+	      (0 15 1))
+	     (tree-sitter-langs
+	      (0 10 1))
+	     (uci-mode
+	      (0 5 4))
+	     (nav-flash
+	      (1 0 0))
+	     (ivy
+	      (0 10 0)))
+	    "Major-mode for chess PGN files, powered by Python" tar
+	    ((:commit . "b38ab1c591f615e319f66ad34059d1681c7d535b")
+	     (:authors
+	      ("Dodge Coates and Roland Walker"))
+	     (:maintainer "Dodge Coates and Roland Walker")
+	     (:keywords "data" "games" "chess")
+	     (:url . "https://github.com/dwcoates/pygn-mode"))])

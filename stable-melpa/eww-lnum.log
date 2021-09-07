@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/m00natic/eww-lnum.git
 
 Updating /mnt/store/melpa/working/eww-lnum/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/m00natic/eww-lnum.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 4b0ecec769919ecb05ca4fb15ec51911ba589929
+Built eww-lnum in 4.962s, finished at 2021-09-06T23:13:24+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root  33K Sep  6 23:13 packages/eww-lnum-20150102.1512.el
+4.0K -rw-r--r-- 1 root root  375 Sep  6 23:13 packages/eww-lnum-20150102.1512.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep  6 23:13 packages/eww-lnum-badge.svg
+4.0K -rw-r--r-- 1 root root  219 Sep  6 23:13 packages/eww-lnum-readme.txt
