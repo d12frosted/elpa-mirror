@@ -4,8 +4,8 @@
 ;;
 ;; Author: Joel Rosdahl <joel@rosdahl.net>
 ;; Version: 1.5
-;; Package-Version: 20210515.829
-;; Package-Commit: 94f12bb6d2e03690562647b5fbb7b6672ac83e37
+;; Package-Version: 20210907.1717
+;; Package-Commit: 2854e73cebb463007b686a784b66242999c3366b
 ;; License: BSD-3-clause
 ;; URL: https://github.com/jrosdahl/iflipb
 ;;
@@ -320,6 +320,7 @@ This is the original order of buffers to the left of
 (defun iflipb-ido-buffer-list ()
   "Ido buffer list for iflipb."
   (require 'ido)
+  (declare-function ido-make-buffer-list "ido")
   (let* ((ido-process-ignore-lists t)
          ido-ignored-list
          ido-ignore-buffers
