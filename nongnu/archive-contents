@@ -26,12 +26,10 @@
 	       (:keywords "bison-mode" "yacc-mode")
 	       (:url . "https://elpa.nongnu.org/nongnu/bison-mode.html"))])
  (caml .
-       [(4 8)
+       [(4 9)
 	((emacs
-	  (24 3))
-	 (cl-lib
-	  (0 5)))
-	"Caml mode for GNU Emacs and XEmacs" tar
+	  (24 3)))
+	"Caml mode for GNU Emacs" tar
 	((:url . "https://github.com/ocaml/caml-mode")
 	 (:maintainer "Christophe Troestler" . "Christophe.Troestler@umons.ac.be")
 	 (:authors
