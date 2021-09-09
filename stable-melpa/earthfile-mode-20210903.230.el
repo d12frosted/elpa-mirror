@@ -3,7 +3,7 @@
 ;; Author: Thanabodee Charoenpiriyakij <wingyminus@gmail.com>
 ;; URL: https://github.com/earthly/earthly-mode
 ;; Package-Version: 20210903.230
-;; Package-Commit: 16f262dbeec1e0b9f7f3a6a7cbafbed76e39d8d8
+;; Package-Commit: 7f382056bb0620aa5838c99f5baea0a1f40d85ce
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MPL-2.0

@@ -1,0 +1,12 @@
+(fancy-dabbrev .
+	       [(20210909 752)
+		((emacs
+		  (25 1))
+		 (popup
+		  (0 5 3)))
+		"Like dabbrev-expand with preview and popup menu" single
+		((:commit . "9435ad63c1c4756f574ae98d2d63ecf1189ec832")
+		 (:authors
+		  ("Joel Rosdahl" . "joel@rosdahl.net"))
+		 (:maintainer "Joel Rosdahl" . "joel@rosdahl.net")
+		 (:url . "https://github.com/jrosdahl/fancy-dabbrev"))])

@@ -4,10 +4,10 @@ Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/git-commit/
 Checking out origin/HEAD
-Checking out d173de73e96e207d4ba3821e1d720c8d81f6bafb
+Checking out 98660490c24e878dd1a3f81b6f4dfcf8a201917e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/git-commit/
-  to /tmp/git-commitWZuQwe/git-commit-20210806.1607
+  to /tmp/git-commitHrpXju/git-commit-20210806.1607
   ! lisp/git-commit.el -> git-commit.el
     LICENSE -> LICENSE
 Created git-commit-20210806.1607.tar containing:
@@ -15,14 +15,14 @@ Created git-commit-20210806.1607.tar containing:
   git-commit-20210806.1607/LICENSE
   git-commit-20210806.1607/git-commit-pkg.el
   git-commit-20210806.1607/git-commit.el
-Built git-commit in 5.049s, finished at 2021-09-07T17:12:28+0000
+Built git-commit in 4.978s, finished at 2021-09-09T09:42:33+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  644 Sep  7 17:12 packages/git-commit-20210806.1607.entry
- 80K -rw-r--r-- 1 root root  80K Sep  7 17:12 packages/git-commit-20210806.1607.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep  7 17:12 packages/git-commit-badge.svg
- 16K -rw-r--r-- 1 root root  14K Sep  7 17:12 packages/git-commit-insert-issue-20210107.2018.el
-4.0K -rw-r--r-- 1 root root  517 Sep  7 13:40 packages/git-commit-insert-issue-20210107.2018.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep  7 13:40 packages/git-commit-insert-issue-badge.svg
-4.0K -rw-r--r-- 1 root root  171 Sep  7 13:40 packages/git-commit-insert-issue-readme.txt
-4.0K -rw-r--r-- 1 root root  256 Sep  7 17:12 packages/git-commit-insert-issue.log
-4.0K -rw-r--r-- 1 root root 3.5K Sep  7 17:12 packages/git-commit-readme.txt
+4.0K -rw-r--r-- 1 root root  644 Sep  9 09:42 packages/git-commit-20210806.1607.entry
+ 80K -rw-r--r-- 1 root root  80K Sep  9 09:42 packages/git-commit-20210806.1607.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep  9 09:42 packages/git-commit-badge.svg
+ 16K -rw-r--r-- 1 root root  14K Sep  9 05:44 packages/git-commit-insert-issue-20210107.2018.el
+4.0K -rw-r--r-- 1 root root  517 Sep  9 05:44 packages/git-commit-insert-issue-20210107.2018.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep  9 05:44 packages/git-commit-insert-issue-badge.svg
+4.0K -rw-r--r-- 1 root root  171 Sep  9 05:44 packages/git-commit-insert-issue-readme.txt
+4.0K -rw-r--r-- 1 root root  177 Sep  9 09:42 packages/git-commit-insert-issue.log
+4.0K -rw-r--r-- 1 root root 3.5K Sep  9 09:42 packages/git-commit-readme.txt
