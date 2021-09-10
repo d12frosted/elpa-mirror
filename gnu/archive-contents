@@ -440,7 +440,7 @@
 	      (:keywords "files")
 	      (:url . "http://elpa.gnu.org/packages/cpio-mode.html"))])
  (crdt .
-       [(0 1 4)
+       [(0 2 0)
 	nil "Collaborative editing using Conflict-free Replicated Data Types" tar
 	((:url . "https://code.librehq.com/qhong/crdt.el")
 	 (:maintainer "Qiantan Hong" . "qhong@alum.mit.edu")
@@ -516,7 +516,7 @@
 		  ("Daiki Ueno" . "ueno@gnu.org"))
 		 (:maintainer nil . "emacs-devel@gnu.org"))])
  (debbugs .
-	  [(0 28)
+	  [(0 29)
 	   ((emacs
 	     (25 1))
 	    (soap-client
@@ -2601,6 +2601,17 @@
 	      (:authors
 	       ("Philip Kaludercic" . "philipk@posteo.net"))
 	      (:keywords "vc"))])
+ (vc-got .
+	 [(1 0)
+	  ((emacs
+	    (25 1)))
+	  "VC backend for Game of Trees VCS" tar
+	  ((:url . "https://git.omarpolo.com/vc-got/")
+	   (:maintainer "Omar Polo" . "op@omarpolo.com")
+	   (:authors
+	    ("Omar Polo" . "op@omarpolo.com")
+	    ("Timo Myyrä" . "timo.myyra@bittivirhe.fi"))
+	   (:keywords "vc" "tools"))])
  (vc-hgcmd .
 	   [(1 14)
 	    ((emacs
