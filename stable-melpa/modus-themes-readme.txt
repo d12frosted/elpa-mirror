@@ -42,6 +42,11 @@ well---remember, no scaling takes place by default):
     modus-themes-scale-4                        1.2
     modus-themes-scale-title                    1.3
 
+There is another scaling-related option, which however is reserved
+for special cases and is not used for headings:
+
+    modus-themes-scale-small                    0.9
+
 There also exist two unique customization variables for overriding
 color palette values.  The specifics are documented in the manual.
 The symbols are:
