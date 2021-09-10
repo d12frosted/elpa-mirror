@@ -4,10 +4,10 @@ Source:  https://github.com/redguardtoo/evil-matchit.git
 
 Updating /mnt/store/melpa/working/evil-matchit/
 Checking out origin/HEAD
-Checking out 24a95751f48fb64246de15278734e0179c9f622f
+Checking out 69807cf82969f5087758acf6fcaa4a44049b802a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/evil-matchit/
-  to /tmp/evil-matchit2oDYiZ/evil-matchit-20210819.5
+  to /tmp/evil-matchitjlr6uh/evil-matchit-20210910.1348
     evil-matchit-c.el -> evil-matchit-c.el
     evil-matchit-cmake.el -> evil-matchit-cmake.el
     evil-matchit-diff.el -> evil-matchit-diff.el
@@ -20,6 +20,7 @@ Copying files (->) and directories (=>)
     evil-matchit-ocaml.el -> evil-matchit-ocaml.el
     evil-matchit-octave.el -> evil-matchit-octave.el
     evil-matchit-org.el -> evil-matchit-org.el
+    evil-matchit-prog.el -> evil-matchit-prog.el
     evil-matchit-python.el -> evil-matchit-python.el
     evil-matchit-ruby.el -> evil-matchit-ruby.el
     evil-matchit-script.el -> evil-matchit-script.el
@@ -31,35 +32,36 @@ Copying files (->) and directories (=>)
     evil-matchit-terminal.el -> evil-matchit-terminal.el
     evil-matchit-verilog.el -> evil-matchit-verilog.el
     evil-matchit.el -> evil-matchit.el
-Created evil-matchit-20210819.5.tar containing:
-  evil-matchit-20210819.5/
-  evil-matchit-20210819.5/evil-matchit-c.el
-  evil-matchit-20210819.5/evil-matchit-cmake.el
-  evil-matchit-20210819.5/evil-matchit-diff.el
-  evil-matchit-20210819.5/evil-matchit-elixir.el
-  evil-matchit-20210819.5/evil-matchit-fortran.el
-  evil-matchit-20210819.5/evil-matchit-html.el
-  evil-matchit-20210819.5/evil-matchit-javascript.el
-  evil-matchit-20210819.5/evil-matchit-latex.el
-  evil-matchit-20210819.5/evil-matchit-markdown.el
-  evil-matchit-20210819.5/evil-matchit-ocaml.el
-  evil-matchit-20210819.5/evil-matchit-octave.el
-  evil-matchit-20210819.5/evil-matchit-org.el
-  evil-matchit-20210819.5/evil-matchit-pkg.el
-  evil-matchit-20210819.5/evil-matchit-python.el
-  evil-matchit-20210819.5/evil-matchit-ruby.el
-  evil-matchit-20210819.5/evil-matchit-script.el
-  evil-matchit-20210819.5/evil-matchit-sdk.el
-  evil-matchit-20210819.5/evil-matchit-sh.el
-  evil-matchit-20210819.5/evil-matchit-simple.el
-  evil-matchit-20210819.5/evil-matchit-sql.el
-  evil-matchit-20210819.5/evil-matchit-template.el
-  evil-matchit-20210819.5/evil-matchit-terminal.el
-  evil-matchit-20210819.5/evil-matchit-verilog.el
-  evil-matchit-20210819.5/evil-matchit.el
-Built evil-matchit in 5.117s, finished at 2021-09-10T11:52:46+0000
+Created evil-matchit-20210910.1348.tar containing:
+  evil-matchit-20210910.1348/
+  evil-matchit-20210910.1348/evil-matchit-c.el
+  evil-matchit-20210910.1348/evil-matchit-cmake.el
+  evil-matchit-20210910.1348/evil-matchit-diff.el
+  evil-matchit-20210910.1348/evil-matchit-elixir.el
+  evil-matchit-20210910.1348/evil-matchit-fortran.el
+  evil-matchit-20210910.1348/evil-matchit-html.el
+  evil-matchit-20210910.1348/evil-matchit-javascript.el
+  evil-matchit-20210910.1348/evil-matchit-latex.el
+  evil-matchit-20210910.1348/evil-matchit-markdown.el
+  evil-matchit-20210910.1348/evil-matchit-ocaml.el
+  evil-matchit-20210910.1348/evil-matchit-octave.el
+  evil-matchit-20210910.1348/evil-matchit-org.el
+  evil-matchit-20210910.1348/evil-matchit-pkg.el
+  evil-matchit-20210910.1348/evil-matchit-prog.el
+  evil-matchit-20210910.1348/evil-matchit-python.el
+  evil-matchit-20210910.1348/evil-matchit-ruby.el
+  evil-matchit-20210910.1348/evil-matchit-script.el
+  evil-matchit-20210910.1348/evil-matchit-sdk.el
+  evil-matchit-20210910.1348/evil-matchit-sh.el
+  evil-matchit-20210910.1348/evil-matchit-simple.el
+  evil-matchit-20210910.1348/evil-matchit-sql.el
+  evil-matchit-20210910.1348/evil-matchit-template.el
+  evil-matchit-20210910.1348/evil-matchit-terminal.el
+  evil-matchit-20210910.1348/evil-matchit-verilog.el
+  evil-matchit-20210910.1348/evil-matchit.el
+Built evil-matchit in 5.131s, finished at 2021-09-10T19:16:36+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  411 Sep 10 11:52 packages/evil-matchit-20210819.5.entry
-120K -rw-r--r-- 1 root root 120K Sep 10 11:52 packages/evil-matchit-20210819.5.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 10 11:52 packages/evil-matchit-badge.svg
-4.0K -rw-r--r-- 1 root root  577 Sep 10 11:52 packages/evil-matchit-readme.txt
+4.0K -rw-r--r-- 1 root root  414 Sep 10 19:16 packages/evil-matchit-20210910.1348.entry
+132K -rw-r--r-- 1 root root 130K Sep 10 19:16 packages/evil-matchit-20210910.1348.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 10 19:16 packages/evil-matchit-badge.svg
+4.0K -rw-r--r-- 1 root root  577 Sep 10 19:16 packages/evil-matchit-readme.txt

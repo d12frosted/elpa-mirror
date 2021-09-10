@@ -6,54 +6,54 @@ Updating /mnt/store/melpa/working/projectile/
 Checking out origin/HEAD
 Checking out 6516a9ce574a9cd8903d0148fe06fa49f954972d
 Note: projectile :files spec is equivalent to the default.
-Built projectile in 6.669s, finished at 2021-09-10T08:57:06+0000
+Built projectile in 6.688s, finished at 2021-09-10T20:00:30+0000
  ✓ Success:
-240K -rw-r--r-- 1 root root 237K Sep 10 08:57 packages/projectile-20210905.629.el
-4.0K -rw-r--r-- 1 root root  423 Sep 10 08:57 packages/projectile-20210905.629.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 10 08:57 packages/projectile-badge.svg
-4.0K -rw-r--r-- 1 root root 2.8K Sep 10 08:57 packages/projectile-codesearch-20180508.1522.el
-4.0K -rw-r--r-- 1 root root  481 Sep 10 08:57 packages/projectile-codesearch-20180508.1522.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 10 08:57 packages/projectile-codesearch-badge.svg
-4.0K -rw-r--r-- 1 root root  613 Sep 10 08:57 packages/projectile-codesearch-readme.txt
-4.0K -rw-r--r-- 1 root root  698 Sep 10 08:57 packages/projectile-codesearch.log
+240K -rw-r--r-- 1 root root 237K Sep 10 20:00 packages/projectile-20210905.629.el
+4.0K -rw-r--r-- 1 root root  423 Sep 10 20:00 packages/projectile-20210905.629.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 10 20:00 packages/projectile-badge.svg
+4.0K -rw-r--r-- 1 root root 2.8K Sep 10 20:00 packages/projectile-codesearch-20180508.1522.el
+4.0K -rw-r--r-- 1 root root  481 Sep 10 20:00 packages/projectile-codesearch-20180508.1522.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 10 20:00 packages/projectile-codesearch-badge.svg
+4.0K -rw-r--r-- 1 root root  613 Sep 10 20:00 packages/projectile-codesearch-readme.txt
+4.0K -rw-r--r-- 1 root root  332 Sep 10 20:00 packages/projectile-codesearch.log
 4.0K -rw-r--r-- 1 root root 1.2K Feb  4  2021 packages/projectile-direnv-badge.svg
 4.0K -rw-r--r-- 1 root root  196 Feb  4  2021 packages/projectile-direnv-readme.txt
 4.0K -rw-r--r-- 1 root root  597 Feb  4  2021 packages/projectile-direnv.log
- 12K -rw-r--r-- 1 root root 8.3K Sep 10 05:15 packages/projectile-git-autofetch-20200820.2028.el
-4.0K -rw-r--r-- 1 root root  455 Sep 10 05:15 packages/projectile-git-autofetch-20200820.2028.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 10 05:15 packages/projectile-git-autofetch-badge.svg
-4.0K -rw-r--r-- 1 root root  250 Sep 10 05:15 packages/projectile-git-autofetch-readme.txt
-4.0K -rw-r--r-- 1 root root  256 Sep 10 08:57 packages/projectile-git-autofetch.log
+ 12K -rw-r--r-- 1 root root 8.3K Sep 10 20:00 packages/projectile-git-autofetch-20200820.2028.el
+4.0K -rw-r--r-- 1 root root  455 Sep 10 20:00 packages/projectile-git-autofetch-20200820.2028.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 10 16:21 packages/projectile-git-autofetch-badge.svg
+4.0K -rw-r--r-- 1 root root  250 Sep 10 20:00 packages/projectile-git-autofetch-readme.txt
+4.0K -rw-r--r-- 1 root root  256 Sep 10 20:00 packages/projectile-git-autofetch.log
 4.0K -rw-r--r-- 1 root root 1023 Jun  1  2020 packages/projectile-hanami-badge.svg
 4.0K -rw-r--r-- 1 root root  404 Jun  1  2020 packages/projectile-hanami-readme.txt
- 84K -rw-r--r-- 1 root root  81K Sep 10 05:15 packages/projectile-rails-20210810.1303.el
-4.0K -rw-r--r-- 1 root root  625 Sep 10 05:15 packages/projectile-rails-20210810.1303.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 10 05:15 packages/projectile-rails-badge.svg
-4.0K -rw-r--r-- 1 root root   72 Sep 10 05:15 packages/projectile-rails-readme.txt
-4.0K -rw-r--r-- 1 root root  228 Sep 10 08:57 packages/projectile-rails.log
-4.0K -rw-r--r-- 1 root root  356 Sep 10 08:57 packages/projectile-readme.txt
-4.0K -rw-r--r-- 1 root root 2.6K Sep 10 05:15 packages/projectile-ripgrep-20180914.1500.el
-4.0K -rw-r--r-- 1 root root  489 Sep 10 05:15 packages/projectile-ripgrep-20180914.1500.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 10 05:15 packages/projectile-ripgrep-badge.svg
-4.0K -rw-r--r-- 1 root root  102 Sep 10 05:15 packages/projectile-ripgrep-readme.txt
-4.0K -rw-r--r-- 1 root root  232 Sep 10 08:57 packages/projectile-ripgrep.log
-4.0K -rw-r--r-- 1 root root 2.1K Sep 10 05:15 packages/projectile-sift-20160107.1015.el
-4.0K -rw-r--r-- 1 root root  440 Sep 10 05:15 packages/projectile-sift-20160107.1015.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 10 05:15 packages/projectile-sift-badge.svg
-4.0K -rw-r--r-- 1 root root   99 Sep 10 05:15 packages/projectile-sift-readme.txt
-4.0K -rw-r--r-- 1 root root  144 Sep 10 08:57 packages/projectile-sift.log
-8.0K -rw-r--r-- 1 root root 5.7K Sep 10 05:15 packages/projectile-speedbar-20190807.2010.el
-4.0K -rw-r--r-- 1 root root  508 Sep 10 05:15 packages/projectile-speedbar-20190807.2010.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 10 05:15 packages/projectile-speedbar-badge.svg
-4.0K -rw-r--r-- 1 root root  622 Sep 10 05:15 packages/projectile-speedbar-readme.txt
-4.0K -rw-r--r-- 1 root root  165 Sep 10 08:57 packages/projectile-speedbar.log
-8.0K -rw-r--r-- 1 root root 4.2K Sep 10 05:15 packages/projectile-trailblazer-20170928.1624.el
-4.0K -rw-r--r-- 1 root root  602 Sep 10 05:15 packages/projectile-trailblazer-20170928.1624.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 10 05:15 packages/projectile-trailblazer-badge.svg
-4.0K -rw-r--r-- 1 root root   78 Sep 10 05:15 packages/projectile-trailblazer-readme.txt
-   0 -rw-r--r-- 1 root root    0 Sep 10 08:57 packages/projectile-trailblazer.log
-8.0K -rw-r--r-- 1 root root 4.2K Sep 10 05:15 packages/projectile-variable-20170208.1718.el
-4.0K -rw-r--r-- 1 root root  441 Sep 10 05:15 packages/projectile-variable-20170208.1718.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 10 05:15 packages/projectile-variable-badge.svg
-4.0K -rw-r--r-- 1 root root  789 Sep 10 05:15 packages/projectile-variable-readme.txt
-   0 -rw-r--r-- 1 root root    0 Sep 10 08:57 packages/projectile-variable.log
+ 84K -rw-r--r-- 1 root root  81K Sep 10 16:21 packages/projectile-rails-20210810.1303.el
+4.0K -rw-r--r-- 1 root root  625 Sep 10 16:21 packages/projectile-rails-20210810.1303.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 10 16:21 packages/projectile-rails-badge.svg
+4.0K -rw-r--r-- 1 root root   72 Sep 10 16:21 packages/projectile-rails-readme.txt
+4.0K -rw-r--r-- 1 root root  149 Sep 10 20:00 packages/projectile-rails.log
+4.0K -rw-r--r-- 1 root root  356 Sep 10 20:00 packages/projectile-readme.txt
+4.0K -rw-r--r-- 1 root root 2.6K Sep 10 16:21 packages/projectile-ripgrep-20180914.1500.el
+4.0K -rw-r--r-- 1 root root  489 Sep 10 16:21 packages/projectile-ripgrep-20180914.1500.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 10 16:21 packages/projectile-ripgrep-badge.svg
+4.0K -rw-r--r-- 1 root root  102 Sep 10 16:21 packages/projectile-ripgrep-readme.txt
+4.0K -rw-r--r-- 1 root root  153 Sep 10 20:00 packages/projectile-ripgrep.log
+4.0K -rw-r--r-- 1 root root 2.1K Sep 10 16:21 packages/projectile-sift-20160107.1015.el
+4.0K -rw-r--r-- 1 root root  440 Sep 10 16:21 packages/projectile-sift-20160107.1015.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 10 16:21 packages/projectile-sift-badge.svg
+4.0K -rw-r--r-- 1 root root   99 Sep 10 16:21 packages/projectile-sift-readme.txt
+   0 -rw-r--r-- 1 root root    0 Sep 10 20:00 packages/projectile-sift.log
+8.0K -rw-r--r-- 1 root root 5.7K Sep 10 16:21 packages/projectile-speedbar-20190807.2010.el
+4.0K -rw-r--r-- 1 root root  508 Sep 10 16:21 packages/projectile-speedbar-20190807.2010.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 10 16:21 packages/projectile-speedbar-badge.svg
+4.0K -rw-r--r-- 1 root root  622 Sep 10 16:21 packages/projectile-speedbar-readme.txt
+   0 -rw-r--r-- 1 root root    0 Sep 10 20:00 packages/projectile-speedbar.log
+8.0K -rw-r--r-- 1 root root 4.2K Sep 10 16:21 packages/projectile-trailblazer-20170928.1624.el
+4.0K -rw-r--r-- 1 root root  602 Sep 10 16:21 packages/projectile-trailblazer-20170928.1624.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 10 16:21 packages/projectile-trailblazer-badge.svg
+4.0K -rw-r--r-- 1 root root   78 Sep 10 16:21 packages/projectile-trailblazer-readme.txt
+   0 -rw-r--r-- 1 root root    0 Sep 10 20:00 packages/projectile-trailblazer.log
+8.0K -rw-r--r-- 1 root root 4.2K Sep 10 16:21 packages/projectile-variable-20170208.1718.el
+4.0K -rw-r--r-- 1 root root  441 Sep 10 16:21 packages/projectile-variable-20170208.1718.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 10 16:21 packages/projectile-variable-badge.svg
+4.0K -rw-r--r-- 1 root root  789 Sep 10 16:21 packages/projectile-variable-readme.txt
+4.0K -rw-r--r-- 1 root root  688 Sep 10 16:21 packages/projectile-variable.log

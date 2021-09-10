@@ -4,10 +4,10 @@ Source:  https://github.com/ProofGeneral/PG.git
 
 Updating /mnt/store/melpa/working/proof-general/
 Checking out origin/master
-Checking out 51696277a4dc30acd61e9ebb400d99934955e450
+Checking out 32b15ff26be8722950e5f67a087e6fd9d67197bd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/proof-general/
-  to /tmp/proof-generalJaQk3s/proof-general-20210820.2321
+  to /tmp/proof-generalozJ02e/proof-general-20210910.1656
     proof-general-pkg.el -> proof-general-pkg.el
     proof-general.el -> proof-general.el
   ! doc/dir -> dir
@@ -39,143 +39,145 @@ Copying files (->) and directories (=>)
     pghaskell => pghaskell
     pgocaml => pgocaml
     pgshell => pgshell
-Created /tmp/proof-generalJaQk3s/proof-general-20210820.2321/PG-adapting.info
-Created /tmp/proof-generalJaQk3s/proof-general-20210820.2321/ProofGeneral.info
-Created proof-general-20210820.2321.tar containing:
-  proof-general-20210820.2321/
-  proof-general-20210820.2321/AUTHORS
-  proof-general-20210820.2321/CHANGES
-  proof-general-20210820.2321/COPYING
-  proof-general-20210820.2321/PG-adapting.info
-  proof-general-20210820.2321/ProofGeneral.info
-  proof-general-20210820.2321/coq/
-  proof-general-20210820.2321/coq/coq-abbrev.el
-  proof-general-20210820.2321/coq/coq-autotest.el
-  proof-general-20210820.2321/coq/coq-compile-common.el
-  proof-general-20210820.2321/coq/coq-db.el
-  proof-general-20210820.2321/coq/coq-diffs.el
-  proof-general-20210820.2321/coq/coq-indent.el
-  proof-general-20210820.2321/coq/coq-local-vars.el
-  proof-general-20210820.2321/coq/coq-mode.el
-  proof-general-20210820.2321/coq/coq-par-compile.el
-  proof-general-20210820.2321/coq/coq-seq-compile.el
-  proof-general-20210820.2321/coq/coq-smie.el
-  proof-general-20210820.2321/coq/coq-syntax.el
-  proof-general-20210820.2321/coq/coq-system.el
-  proof-general-20210820.2321/coq/coq-unicode-tokens.el
-  proof-general-20210820.2321/coq/coq.el
-  proof-general-20210820.2321/dir
-  proof-general-20210820.2321/easycrypt/
-  proof-general-20210820.2321/easycrypt/easycrypt-abbrev.el
-  proof-general-20210820.2321/easycrypt/easycrypt-hooks.el
-  proof-general-20210820.2321/easycrypt/easycrypt-keywords.el
-  proof-general-20210820.2321/easycrypt/easycrypt-syntax.el
-  proof-general-20210820.2321/easycrypt/easycrypt.el
-  proof-general-20210820.2321/generic/
-  proof-general-20210820.2321/generic/README
-  proof-general-20210820.2321/generic/pg-assoc.el
-  proof-general-20210820.2321/generic/pg-autotest.el
-  proof-general-20210820.2321/generic/pg-custom.el
-  proof-general-20210820.2321/generic/pg-goals.el
-  proof-general-20210820.2321/generic/pg-movie.el
-  proof-general-20210820.2321/generic/pg-pamacs.el
-  proof-general-20210820.2321/generic/pg-pbrpm.el
-  proof-general-20210820.2321/generic/pg-pgip.el
-  proof-general-20210820.2321/generic/pg-response.el
-  proof-general-20210820.2321/generic/pg-user.el
-  proof-general-20210820.2321/generic/pg-vars.el
-  proof-general-20210820.2321/generic/pg-xml.el
-  proof-general-20210820.2321/generic/proof-autoloads.el
-  proof-general-20210820.2321/generic/proof-auxmodes.el
-  proof-general-20210820.2321/generic/proof-config.el
-  proof-general-20210820.2321/generic/proof-depends.el
-  proof-general-20210820.2321/generic/proof-easy-config.el
-  proof-general-20210820.2321/generic/proof-faces.el
-  proof-general-20210820.2321/generic/proof-indent.el
-  proof-general-20210820.2321/generic/proof-maths-menu.el
-  proof-general-20210820.2321/generic/proof-menu.el
-  proof-general-20210820.2321/generic/proof-script.el
-  proof-general-20210820.2321/generic/proof-shell.el
-  proof-general-20210820.2321/generic/proof-site.el
-  proof-general-20210820.2321/generic/proof-splash.el
-  proof-general-20210820.2321/generic/proof-syntax.el
-  proof-general-20210820.2321/generic/proof-toolbar.el
-  proof-general-20210820.2321/generic/proof-tree.el
-  proof-general-20210820.2321/generic/proof-unicode-tokens.el
-  proof-general-20210820.2321/generic/proof-useropts.el
-  proof-general-20210820.2321/generic/proof-utils.el
-  proof-general-20210820.2321/generic/proof.el
-  proof-general-20210820.2321/images/
-  proof-general-20210820.2321/images/ProofGeneral-splash.png
-  proof-general-20210820.2321/images/ProofGeneral.png
-  proof-general-20210820.2321/images/README
-  proof-general-20210820.2321/images/epg-abort.png
-  proof-general-20210820.2321/images/epg-abort.xpm
-  proof-general-20210820.2321/images/epg-command.png
-  proof-general-20210820.2321/images/epg-command.xpm
-  proof-general-20210820.2321/images/epg-context.png
-  proof-general-20210820.2321/images/epg-context.xpm
-  proof-general-20210820.2321/images/epg-find.png
-  proof-general-20210820.2321/images/epg-find.xpm
-  proof-general-20210820.2321/images/epg-goal.png
-  proof-general-20210820.2321/images/epg-goal.xpm
-  proof-general-20210820.2321/images/epg-goto.png
-  proof-general-20210820.2321/images/epg-goto.xpm
-  proof-general-20210820.2321/images/epg-help.png
-  proof-general-20210820.2321/images/epg-help.xpm
-  proof-general-20210820.2321/images/epg-home.png
-  proof-general-20210820.2321/images/epg-home.xpm
-  proof-general-20210820.2321/images/epg-info.png
-  proof-general-20210820.2321/images/epg-info.xpm
-  proof-general-20210820.2321/images/epg-interrupt.png
-  proof-general-20210820.2321/images/epg-interrupt.xpm
-  proof-general-20210820.2321/images/epg-next.png
-  proof-general-20210820.2321/images/epg-next.xpm
-  proof-general-20210820.2321/images/epg-prooftree.png
-  proof-general-20210820.2321/images/epg-prooftree.xpm
-  proof-general-20210820.2321/images/epg-qed.png
-  proof-general-20210820.2321/images/epg-qed.xpm
-  proof-general-20210820.2321/images/epg-restart.png
-  proof-general-20210820.2321/images/epg-restart.xpm
-  proof-general-20210820.2321/images/epg-retract.png
-  proof-general-20210820.2321/images/epg-retract.xpm
-  proof-general-20210820.2321/images/epg-state.png
-  proof-general-20210820.2321/images/epg-state.xpm
-  proof-general-20210820.2321/images/epg-undo.png
-  proof-general-20210820.2321/images/epg-undo.xpm
-  proof-general-20210820.2321/images/epg-use.png
-  proof-general-20210820.2321/images/epg-use.xpm
-  proof-general-20210820.2321/images/hiddenproof.xpm
-  proof-general-20210820.2321/lib/
-  proof-general-20210820.2321/lib/README
-  proof-general-20210820.2321/lib/bufhist.el
-  proof-general-20210820.2321/lib/holes.el
-  proof-general-20210820.2321/lib/local-vars-list.el
-  proof-general-20210820.2321/lib/maths-menu.el
-  proof-general-20210820.2321/lib/pg-dev.el
-  proof-general-20210820.2321/lib/pg-fontsets.el
-  proof-general-20210820.2321/lib/proof-compat.el
-  proof-general-20210820.2321/lib/scomint.el
-  proof-general-20210820.2321/lib/span.el
-  proof-general-20210820.2321/lib/texi-docstring-magic.el
-  proof-general-20210820.2321/lib/unicode-chars.el
-  proof-general-20210820.2321/lib/unicode-tokens.el
-  proof-general-20210820.2321/pghaskell/
-  proof-general-20210820.2321/pghaskell/pghaskell.el
-  proof-general-20210820.2321/pgocaml/
-  proof-general-20210820.2321/pgocaml/pgocaml.el
-  proof-general-20210820.2321/pgshell/
-  proof-general-20210820.2321/pgshell/README
-  proof-general-20210820.2321/pgshell/example.pgsh
-  proof-general-20210820.2321/pgshell/pgshell.el
-  proof-general-20210820.2321/phox/
-  proof-general-20210820.2321/phox/phox.el
-  proof-general-20210820.2321/phox/sqrt2.phx
-  proof-general-20210820.2321/proof-general-pkg.el
-  proof-general-20210820.2321/proof-general.el
-Built proof-general in 44.021s, finished at 2021-09-10T08:57:59+0000
+Created /tmp/proof-generalozJ02e/proof-general-20210910.1656/PG-adapting.info
+Created /tmp/proof-generalozJ02e/proof-general-20210910.1656/ProofGeneral.info
+Created proof-general-20210910.1656.tar containing:
+  proof-general-20210910.1656/
+  proof-general-20210910.1656/AUTHORS
+  proof-general-20210910.1656/CHANGES
+  proof-general-20210910.1656/COPYING
+  proof-general-20210910.1656/PG-adapting.info
+  proof-general-20210910.1656/ProofGeneral.info
+  proof-general-20210910.1656/coq/
+  proof-general-20210910.1656/coq/coq-abbrev.el
+  proof-general-20210910.1656/coq/coq-autotest.el
+  proof-general-20210910.1656/coq/coq-compile-common.el
+  proof-general-20210910.1656/coq/coq-db.el
+  proof-general-20210910.1656/coq/coq-diffs.el
+  proof-general-20210910.1656/coq/coq-indent.el
+  proof-general-20210910.1656/coq/coq-local-vars.el
+  proof-general-20210910.1656/coq/coq-mode.el
+  proof-general-20210910.1656/coq/coq-par-compile.el
+  proof-general-20210910.1656/coq/coq-seq-compile.el
+  proof-general-20210910.1656/coq/coq-smie.el
+  proof-general-20210910.1656/coq/coq-syntax.el
+  proof-general-20210910.1656/coq/coq-system.el
+  proof-general-20210910.1656/coq/coq-unicode-tokens.el
+  proof-general-20210910.1656/coq/coq.el
+  proof-general-20210910.1656/dir
+  proof-general-20210910.1656/easycrypt/
+  proof-general-20210910.1656/easycrypt/easycrypt-abbrev.el
+  proof-general-20210910.1656/easycrypt/easycrypt-hooks.el
+  proof-general-20210910.1656/easycrypt/easycrypt-keywords.el
+  proof-general-20210910.1656/easycrypt/easycrypt-syntax.el
+  proof-general-20210910.1656/easycrypt/easycrypt.el
+  proof-general-20210910.1656/generic/
+  proof-general-20210910.1656/generic/README
+  proof-general-20210910.1656/generic/pg-assoc.el
+  proof-general-20210910.1656/generic/pg-autotest.el
+  proof-general-20210910.1656/generic/pg-custom.el
+  proof-general-20210910.1656/generic/pg-goals.el
+  proof-general-20210910.1656/generic/pg-movie.el
+  proof-general-20210910.1656/generic/pg-pamacs.el
+  proof-general-20210910.1656/generic/pg-pbrpm.el
+  proof-general-20210910.1656/generic/pg-pgip.el
+  proof-general-20210910.1656/generic/pg-response.el
+  proof-general-20210910.1656/generic/pg-user.el
+  proof-general-20210910.1656/generic/pg-vars.el
+  proof-general-20210910.1656/generic/pg-xml.el
+  proof-general-20210910.1656/generic/proof-autoloads.el
+  proof-general-20210910.1656/generic/proof-auxmodes.el
+  proof-general-20210910.1656/generic/proof-config.el
+  proof-general-20210910.1656/generic/proof-depends.el
+  proof-general-20210910.1656/generic/proof-easy-config.el
+  proof-general-20210910.1656/generic/proof-faces.el
+  proof-general-20210910.1656/generic/proof-indent.el
+  proof-general-20210910.1656/generic/proof-maths-menu.el
+  proof-general-20210910.1656/generic/proof-menu.el
+  proof-general-20210910.1656/generic/proof-script.el
+  proof-general-20210910.1656/generic/proof-shell.el
+  proof-general-20210910.1656/generic/proof-site.el
+  proof-general-20210910.1656/generic/proof-splash.el
+  proof-general-20210910.1656/generic/proof-syntax.el
+  proof-general-20210910.1656/generic/proof-toolbar.el
+  proof-general-20210910.1656/generic/proof-tree.el
+  proof-general-20210910.1656/generic/proof-unicode-tokens.el
+  proof-general-20210910.1656/generic/proof-useropts.el
+  proof-general-20210910.1656/generic/proof-utils.el
+  proof-general-20210910.1656/generic/proof.el
+  proof-general-20210910.1656/images/
+  proof-general-20210910.1656/images/ProofGeneral-splash.png
+  proof-general-20210910.1656/images/ProofGeneral.png
+  proof-general-20210910.1656/images/README
+  proof-general-20210910.1656/images/epg-abort.png
+  proof-general-20210910.1656/images/epg-abort.xpm
+  proof-general-20210910.1656/images/epg-command.png
+  proof-general-20210910.1656/images/epg-command.xpm
+  proof-general-20210910.1656/images/epg-context.png
+  proof-general-20210910.1656/images/epg-context.xpm
+  proof-general-20210910.1656/images/epg-find.png
+  proof-general-20210910.1656/images/epg-find.xpm
+  proof-general-20210910.1656/images/epg-goal.png
+  proof-general-20210910.1656/images/epg-goal.xpm
+  proof-general-20210910.1656/images/epg-goto.png
+  proof-general-20210910.1656/images/epg-goto.xpm
+  proof-general-20210910.1656/images/epg-help.png
+  proof-general-20210910.1656/images/epg-help.xpm
+  proof-general-20210910.1656/images/epg-home.png
+  proof-general-20210910.1656/images/epg-home.xpm
+  proof-general-20210910.1656/images/epg-info.png
+  proof-general-20210910.1656/images/epg-info.xpm
+  proof-general-20210910.1656/images/epg-interrupt.png
+  proof-general-20210910.1656/images/epg-interrupt.xpm
+  proof-general-20210910.1656/images/epg-next.png
+  proof-general-20210910.1656/images/epg-next.xpm
+  proof-general-20210910.1656/images/epg-prooftree.png
+  proof-general-20210910.1656/images/epg-prooftree.xpm
+  proof-general-20210910.1656/images/epg-qed.png
+  proof-general-20210910.1656/images/epg-qed.xpm
+  proof-general-20210910.1656/images/epg-restart.png
+  proof-general-20210910.1656/images/epg-restart.xpm
+  proof-general-20210910.1656/images/epg-retract.png
+  proof-general-20210910.1656/images/epg-retract.xpm
+  proof-general-20210910.1656/images/epg-state.png
+  proof-general-20210910.1656/images/epg-state.xpm
+  proof-general-20210910.1656/images/epg-undo.png
+  proof-general-20210910.1656/images/epg-undo.xpm
+  proof-general-20210910.1656/images/epg-use.png
+  proof-general-20210910.1656/images/epg-use.xpm
+  proof-general-20210910.1656/images/hiddenproof.xpm
+  proof-general-20210910.1656/lib/
+  proof-general-20210910.1656/lib/README
+  proof-general-20210910.1656/lib/bufhist.el
+  proof-general-20210910.1656/lib/holes.el
+  proof-general-20210910.1656/lib/local-vars-list.el
+  proof-general-20210910.1656/lib/maths-menu.el
+  proof-general-20210910.1656/lib/pg-dev.el
+  proof-general-20210910.1656/lib/pg-fontsets.el
+  proof-general-20210910.1656/lib/proof-compat.el
+  proof-general-20210910.1656/lib/scomint.el
+  proof-general-20210910.1656/lib/span.el
+  proof-general-20210910.1656/lib/texi-docstring-magic.el
+  proof-general-20210910.1656/lib/unicode-chars.el
+  proof-general-20210910.1656/lib/unicode-tokens.el
+  proof-general-20210910.1656/pghaskell/
+  proof-general-20210910.1656/pghaskell/pghaskell.el
+  proof-general-20210910.1656/pgocaml/
+  proof-general-20210910.1656/pgocaml/pgocaml.el
+  proof-general-20210910.1656/pgshell/
+  proof-general-20210910.1656/pgshell/README
+  proof-general-20210910.1656/pgshell/example.pgsh
+  proof-general-20210910.1656/pgshell/pgshell.el
+  proof-general-20210910.1656/phox/
+  proof-general-20210910.1656/phox/phox.el
+  proof-general-20210910.1656/phox/sqrt2.phx
+  proof-general-20210910.1656/proof-general-pkg.el
+  proof-general-20210910.1656/proof-general.el
+Built proof-general in 76.591s, finished at 2021-09-10T20:01:58+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  251 Sep 10 08:57 packages/proof-general-20210820.2321.entry
-2.6M -rw-r--r-- 1 root root 2.6M Sep 10 08:57 packages/proof-general-20210820.2321.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 10 08:57 packages/proof-general-badge.svg
-4.0K -rw-r--r-- 1 root root  491 Sep 10 08:57 packages/proof-general-readme.txt
+4.0K -rw-r--r-- 1 root root  251 Sep 10 16:21 packages/proof-general-20210820.2321.entry
+2.6M -rw-r--r-- 1 root root 2.6M Sep 10 16:21 packages/proof-general-20210820.2321.tar
+4.0K -rw-r--r-- 1 root root  251 Sep 10 20:01 packages/proof-general-20210910.1656.entry
+2.6M -rw-r--r-- 1 root root 2.6M Sep 10 20:01 packages/proof-general-20210910.1656.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 10 20:01 packages/proof-general-badge.svg
+4.0K -rw-r--r-- 1 root root  491 Sep 10 20:01 packages/proof-general-readme.txt
