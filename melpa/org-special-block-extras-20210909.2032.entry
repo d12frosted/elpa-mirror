@@ -1,15 +1,17 @@
 (org-special-block-extras .
-			  [(20210806 154)
+			  [(20210909 2032)
 			   ((s
 			     (1 12 0))
 			    (dash
-			     (2 18 0))
+			     (2 18 1))
 			    (emacs
 			     (26 1))
 			    (org
-			     (9 1)))
+			     (9 1))
+			    (lf
+			     (1 0)))
 			   "30 new custom blocks & 34 link types for Org-mode" single
-			   ((:commit . "8b7bbcb239cb08ca96a950cf59bb5e9617bee2cc")
+			   ((:commit . "1e9731dfd79b0605ee88c8cc891d4b5106c9e0f4")
 			    (:authors
 			     ("Musa Al-hassy" . "alhassy@gmail.com"))
 			    (:maintainer "Musa Al-hassy" . "alhassy@gmail.com")

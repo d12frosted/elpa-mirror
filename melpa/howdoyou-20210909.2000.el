@@ -4,10 +4,10 @@
 
 ;; Author: Thanh Vuong <thanhvg@gmail.com>
 ;; URL: https://github.com/thanhvg/howdoyou/
-;; Package-Version: 20210903.201
-;; Package-Commit: 61489045a1b1982d9bcd307fcc5bbd9195133c06
-;; Package-Requires: ((emacs "25.1") (promise "1.1") (request "0.3.0") (org "9.2"))
-;; Version: 0.2.2
+;; Package-Version: 20210909.2000
+;; Package-Commit: a01971a7279c8a031de78513c004d7a09d293712
+;; Package-Requires: ((emacs "25.1") (promise "1.1") (request "0.3.3") (org "9.2"))
+;; Version: 0.2.3
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -53,6 +53,8 @@
 ;; howdoyou-switch-to-answer-buffer: switch to answer buffer if non nil, default is nil
 
 ;;; Changelog
+;; 2021-09-09:
+;; - back to use curl if possible
 ;; 2021-09-02:
 ;; - use url-retrieve as default instead of request
 ;; 2021-07-06:
@@ -86,10 +88,9 @@
   :version "25.1"
   :link '(emacs-commentary-link "howdoyou.el"))
 
-;; (defcustom howdoyou-use-curl (if (executable-find request-curl)
-;;                                  t
-;;                                nil)
-(defcustom howdoyou-use-curl nil
+(defcustom howdoyou-use-curl (if (executable-find request-curl)
+                                 t
+                               nil)
   "Use curl instead of buggy `url-retrieve'."
   :type 'boolean
   :group 'howdoyou)
@@ -169,7 +170,7 @@ DOM is a dom object of the google search, returns a list of links"
   (promise-new
    (lambda (resolve reject)
      ;; shadow reject-curl-options to have user agent
-     (let ((request-curl-options `(,(format "-A %s" (howdoyou--get-user-agent)))))
+     (let ((request-curl-options `(,(format "-A \"%s\"" (howdoyou--get-user-agent)))))
        (request url
          :parser (lambda () (progn (decode-coding-region (point-min) (point-max) 'utf-8)
                                    (libxml-parse-html-region (point-min) (point-max))))
