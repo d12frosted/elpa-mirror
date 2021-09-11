@@ -1,11 +1,11 @@
 (flycheck-objc-clang .
-		     [(20201003 1053)
+		     [(20210911 1023)
 		      ((emacs
 			(24 4))
 		       (flycheck
 			(26)))
 		      "Flycheck: Objective-C support using Clang" single
-		      ((:commit . "5e74a5a796e73fca7f3fd15986fefa56529b8e98")
+		      ((:commit . "5a441a31e58de17da94f933277150be39198d98c")
 		       (:authors
 			("Goichi Hirakawa" . "gooichi@gyazsquare.com"))
 		       (:maintainer "Goichi Hirakawa" . "gooichi@gyazsquare.com")

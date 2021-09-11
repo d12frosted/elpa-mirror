@@ -3,9 +3,9 @@
 ;; Copyright © 2013-2021 by Xah Lee
 
 ;; Author: Xah Lee ( http://xahlee.info/ )
-;; Version: 3.5.20210908091017
-;; Package-Version: 20210908.1610
-;; Package-Commit: 9e59d287d2435296ad06d5988bf2b5c3a5902724
+;; Version: 3.6.20210911062050
+;; Package-Version: 20210911.1321
+;; Package-Commit: bdf98a54f1a149e813d3540e5258bc3f296f4321
 ;; Created: 18 April 2013
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: languages, convenience, css, color
@@ -1144,20 +1144,23 @@ Version 2016-10-24"
     ("background-position-x" "background-position-x:9px;" xah-css--ahf)
     ("background-position-y" "background-position-y:9px;" xah-css--ahf)
     ("background-size" "background-size:500px;" xah-css--ahf)
-    ("border" "border:solid thin gray;" xah-css--ahf)
-    ("border-bottom" "border-bottom:solid thin red;" xah-css--ahf)
-    ("border-left" "border-left:solid thin blue;" xah-css--ahf)
-    ("outline" "outline:solid thin gray;" xah-css--ahf)
+    ("border" "border:solid 1px gray;" xah-css--ahf)
+    ("border-bottom" "border-bottom: solid 1px grey;" xah-css--ahf)
+    ("border-bottom" "border-bottom:solid 1px red;" xah-css--ahf)
     ("border-bottom-color" "border-bottom-color:blue;" xah-css--ahf)
     ("border-bottom-style" "border-bottom-style:none hidden dotted dashed solid double groove ridge inset outset inherit initial unset;" xah-css--ahf)
     ("border-bottom-width" "border-bottom-width:2px;" xah-css--ahf)
+    ("border-left" "border-left: solid 3px grey;" xah-css--ahf)
+    ("border-left" "border-left:solid 1px blue;" xah-css--ahf)
     ("border-left-color" "border-left-color:red;" xah-css--ahf)
     ("border-left-style" "border-left-style:none hidden dotted dashed solid double groove ridge inset outset inherit initial unset;" xah-css--ahf)
     ("border-left-width" "border-left-width:3px;" xah-css--ahf)
     ("border-radius" "border-radius:16px;" xah-css--ahf)
+    ("border-right" "border-right: solid 3px grey;" xah-css--ahf)
     ("border-right-color" "border-right-color:red;" xah-css--ahf)
     ("border-right-style" "border-right-style:3px;" xah-css--ahf)
     ("border-right-width" "border-right-width:3px;" xah-css--ahf)
+    ("border-top" "border-top: solid 1px grey;" xah-css--ahf)
     ("border-top-color" "border-top-color:red;" xah-css--ahf)
     ("border-top-style" "border-top-style:none hidden dotted dashed solid double groove ridge inset outset inherit initial unset;" xah-css--ahf)
     ("border-top-width" "border-top-width:3px;" xah-css--ahf)
@@ -1172,6 +1175,7 @@ Version 2016-10-24"
     ("font-size" "font-size:30px;" xah-css--ahf)
     ("font-weight" "font-weight:bold;" xah-css--ahf)
     ("height" "height:200px;" xah-css--ahf)
+    ("hsl" "hsl(0,0%,72%);" xah-css--ahf)
     ("left" "left:99px;" xah-css--ahf)
     ("line-height" "line-height:1.5;" xah-css--ahf)
     ("list-style-type" "list-style-type:disc square circle decimal lower-roman upper-roman lower-alpha upper-alpha;" xah-css--ahf)
@@ -1183,6 +1187,7 @@ Version 2016-10-24"
     ("max-height" "max-height:500px;" xah-css--ahf)
     ("max-width" "max-width:500px;" xah-css--ahf)
     ("opacity" "opacity:1;" xah-css--ahf)
+    ("outline" "outline:solid 1px gray;" xah-css--ahf)
     ("padding" "padding:8px;" xah-css--ahf)
     ("padding-bottom" "padding-bottom:16px;" xah-css--ahf)
     ("padding-left" "padding-left:16px;" xah-css--ahf)
