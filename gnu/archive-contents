@@ -466,16 +466,16 @@
 		 ("Theodor Thornhill" . "theo@thornhill.no"))
 		(:keywords "c#" "languages" "oop" "mode"))])
  (csv-mode .
-	   [(1 15)
+	   [(1 16)
 	    ((emacs
 	      (24 1))
 	     (cl-lib
 	      (0 5)))
 	    "Major mode for editing comma/char separated values" tar
-	    ((:maintainer nil . "emacs-devel@gnu.org")
+	    ((:keywords "convenience")
+	     (:maintainer nil . "emacs-devel@gnu.org")
 	     (:authors
 	      ("\"Francis J. Wright\"" . "F.J.Wright@qmul.ac.uk"))
-	     (:keywords "convenience")
 	     (:url . "https://elpa.gnu.org/packages/csv-mode.html"))])
  (cycle-quotes .
 	       [(0 1)
