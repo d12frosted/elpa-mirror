@@ -5,8 +5,8 @@
 ;; Author: Debanjum Singh Solanky <debanjum AT gmail DOT com>
 ;; Description: Fuzzy auto-completion for ledger & friends
 ;; Keywords: abbrev, matching, auto-complete, beancount, ledger, company
-;; Package-Version: 20200726.1825
-;; Package-Commit: 9fe9e3b809d6d2bc13c601953f696f43b09ea296
+;; Package-Version: 20210910.250
+;; Package-Commit: c6911b7e39b29c0d5f2541392ff485b0f53fd366
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.3") (company "0.8.0"))
 ;; URL: https://github.com/debanjum/company-ledger
@@ -62,6 +62,12 @@
 (require 'cl-lib)
 (require 'company)
 
+(defconst company-ledger-date-regexp "^[0-9]\\{4\\}[-/][0-9]\\{2\\}[-/][0-9]\\{2\\}"
+  "A regular expression to match lines beginning with dates.")
+
+(defconst company-ledger-empty-line-regexp "^[ \t]*$"
+  "A regular expression to match empty lines.")
+
 (defun company-ledger--regexp-filter (regexp list)
   "Use REGEXP to filter LIST of strings."
   (let (new)
@@ -71,11 +77,11 @@
     new))
 
 (defun company-ledger--get-all-postings ()
-  "Get all paragraphs in buffer containing YYYY[-/]MM[-/]DD in them."
+  "Get all paragraphs in buffer starting with dates."
   (company-ledger--regexp-filter
-   "[0-9][0-9][0-9][0-9][-/][0-9][0-9][-/][0-9][0-9]"
+   company-ledger-date-regexp
    (mapcar (lambda (s) (substring s 1))
-           (split-string (buffer-string) "^$" t))))
+           (split-string (buffer-string) company-ledger-empty-line-regexp t))))
 
 (defun company-ledger--fuzzy-word-match (prefix candidate)
   "Return non-nil if each (partial) word in PREFIX is also in CANDIDATE."
@@ -90,7 +96,7 @@
   (save-excursion
     (beginning-of-line)
     (forward-line 1)
-    (or (looking-at "[[:space:]]*$")
+    (or (looking-at company-ledger-empty-line-regexp)
         (eolp)
         (eobp))))
 
@@ -99,19 +105,20 @@
   "Fuzzy company back-end for ledger, beancount and other ledger-like modes.
 Provide completion info based on COMMAND and ARG.  IGNORED, not used."
   (interactive (list 'interactive))
-  (cl-case command
-    (interactive (company-begin-backend 'company-ledger))
+  (pcase command
+    (`interactive (company-begin-backend 'company-ledger))
 
-    (prefix (and (or (bound-and-true-p beancount-mode)
+    (`prefix (and (or (eq major-mode 'beancount-mode)
                      (derived-mode-p 'ledger-mode))
                  (company-ledger--next-line-empty-p)
                 (thing-at-point 'line t)))
 
-    (candidates
+    (`candidates
      (cl-remove-if-not
       (lambda (c) (company-ledger--fuzzy-word-match arg c))
       (company-ledger--get-all-postings)))
-    (sorted t)))
+
+    (`sorted t)))
 
 (provide 'company-ledger)
 ;;; company-ledger.el ends here

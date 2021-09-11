@@ -4,7 +4,7 @@
 
 ;; Keywords: mule, multilingual, input method
 ;; Package-Version: 20210306.1053
-;; Package-Commit: 7e8beed3ddad4f8d1065cbab52f24c16d31f5898
+;; Package-Commit: 1bed73e1090f01f8f93253b302c6284bf7dc89a0
 
 ;; Redistribution and use in source and binary forms, with or without
 ;; modification, are permitted provided that the following conditions are
