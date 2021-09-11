@@ -1,12 +1,12 @@
 ;;; org-preview-html.el --- Automatically preview org-exported HTML files within Emacs -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2021 Jake B <jakebox.github.io>
+;; Copyright (C) 2021 Jake B <jakebox0@protonmail.com>
 
-;; Author: Jake B <jakebox.github.io>
+;; Author: Jake B <jakebox0@protonmail.com>
 ;; Original author of org-preview-html (until 2021-09): DarkSun <lujun9972@gmail.com>
 ;; Url: https://github.com/jakebox/org-preview-html
-;; Package-Version: 20210907.2000
-;; Package-Commit: d2212dd102e8d50a3cfc720341d8249008854ee7
+;; Package-Version: 20210911.1528
+;; Package-Commit: 5f7345e75d0fe71afb19fd30c841dff5bdd6d1ab
 ;; Keywords: Org, convenience, outlines
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "27.1") (org "8.0"))
