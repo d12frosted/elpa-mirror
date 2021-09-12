@@ -7,7 +7,7 @@
 ;; Created: 08 Aug 2021
 ;; Keywords: convenience, lisp, tools
 ;; Package-Version: 20210908.1824
-;; Package-Commit: c39a4d9cc70b90a7e569f32cf42b114d8239c550
+;; Package-Commit: 52e57cc4187fc23c60326cc269c93685623df4da
 ;; Homepage: https://github.com/AmaiKinono/puni
 ;; Version: 0
 ;; Package-Requires: ((emacs "26.1"))

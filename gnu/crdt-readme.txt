@@ -6,8 +6,9 @@ Highlights:
 - [[https://en.wikipedia.org/wiki/Conflict-free_replicated_data_type][CRDT]], darling child of collaborative editing researches...
 - Share multiple buffer in one session
 - See other users' cursor and region
-- (experimental) synchronize Org mode folding status
-- Should work with all of Org mode. (If not please submit an issue)
+- Synchronize Org mode folding status
+- Org mode integration
+- Comint derivatives integration (experimental)
 
 * Usage
 
@@ -81,6 +82,7 @@ GatewayPorts yes
 In a CRDT shared buffer (either server or client), =M-x crdt-list-users=.
 
 In the displayed user list, press ~RET~ on an entry to goto that user's cursor position.
+Press ~f~ to follow that user, and press ~f~ again or =M-x crdt-stop-follow= to stop following.
 
 ** List all sessions, and buffer in current session
 
@@ -116,3 +118,10 @@ based on which user authored it.
 
 Turn on =crdt-org-sync-overlay-mode=. All peers that have this enabled have their
 folding status synchronized. Peers without enabling this minor mode are unaffected.
+
+** Comint integration
+
+Just go ahead and share you comint REPL buffer! Tested: ~shell~ and ~cmuscheme~.
+By default, when sharing a comint buffer, ~crdt.el~ temporarily reset input history (as in =M-n= =M-p=)
+so others don't spy into your =.bash_history= and alike.
+You can customize this behavior using variable =crdt-comint-share-input-history=.
