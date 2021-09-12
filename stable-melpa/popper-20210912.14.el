@@ -4,8 +4,8 @@
 
 ;; Author: Karthik Chikmagalur <karthik.chikmagalur@gmail.com>
 ;; Version: 0.30
-;; Package-Version: 20210911.55
-;; Package-Commit: b9673ae612a1d58b1b2dba2ff7932ea688d415f3
+;; Package-Version: 20210912.14
+;; Package-Commit: cc7336c4e30fc9fef129ad82e59fcdef24f0b73d
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: convenience
 ;; URL: https://github.com/karthink/popper
@@ -108,8 +108,7 @@ Output*, and all help and compilation buffers.
 
 will match against the Messages buffer, all help buffers and any
 buffer with major-mode derived from fundamental mode that has
-fewer than 10 lines at time of creation.
-"
+fewer than 10 lines at time of creation."
   :type '(restricted-sexp :match-alternatives (stringp symbolp functionp consp))
   :group 'popper)
 
@@ -595,8 +594,7 @@ If BUFFER is not specified act on the current buffer instead."
 (declare-function popper--insert-type "popper")
 
 (defun popper--set-reference-vars ()
-  "Unpack `popper-reference-buffers' to`set the values of various
-  popper--reference- variables."
+  "Unpack `popper-reference-buffers' to set popper--reference- variables."
   (defun popper--classify-type (elm)
     (pcase elm
       ((pred stringp) 'name)
