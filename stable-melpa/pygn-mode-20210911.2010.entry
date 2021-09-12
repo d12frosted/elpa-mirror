@@ -1,5 +1,5 @@
 (pygn-mode .
-	   [(20210911 1414)
+	   [(20210911 2010)
 	    ((emacs
 	      (26 1))
 	     (tree-sitter
@@ -13,7 +13,7 @@
 	     (ivy
 	      (0 10 0)))
 	    "Major-mode for chess PGN files, powered by Python" tar
-	    ((:commit . "fa913c432986bac720b71f4372f9a737a0de599d")
+	    ((:commit . "c7212947369a6d6e606c17e9bfa35885a61dc833")
 	     (:authors
 	      ("Dodge Coates and Roland Walker"))
 	     (:maintainer "Dodge Coates and Roland Walker")

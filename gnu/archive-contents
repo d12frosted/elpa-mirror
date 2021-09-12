@@ -782,7 +782,7 @@
 		     (:keywords "languages" "lisp")
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html"))])
  (emms .
-       [(7 6)
+       [(7 7)
 	((cl-lib
 	  (0 5))
 	 (nadvice
@@ -791,10 +791,10 @@
 	  (0)))
 	"The Emacs Multimedia System" tar
 	((:url . "https://www.gnu.org/software/emms/")
+	 (:keywords "emms" "mp3" "ogg" "flac" "music" "mpeg" "video" "multimedia")
 	 (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
 	 (:authors
-	  ("Jorgen Schäfer" . "forcer@forcix.cx"))
-	 (:keywords "emms" "mp3" "ogg" "flac" "music" "mpeg" "video" "multimedia"))])
+	  ("Jorgen Schäfer" . "forcer@forcix.cx")))])
  (engrave-faces .
 		[(0 2 0)
 		 ((emacs
