@@ -1,0 +1,21 @@
+(org-sidebar .
+	     [(20210912 1321)
+	      ((emacs
+		(26 1))
+	       (s
+		(1 10 0))
+	       (dash
+		(2 18))
+	       (org
+		(9 0))
+	       (org-ql
+		(0 2))
+	       (org-super-agenda
+		(1 0)))
+	      "Helpful sidebar for Org buffers" single
+	      ((:commit . "288703b897449f5110c9c76e78eb9a928ffc0dcd")
+	       (:authors
+		("Adam Porter" . "adam@alphapapa.net"))
+	       (:maintainer "Adam Porter" . "adam@alphapapa.net")
+	       (:keywords "hypermedia" "outlines" "org" "agenda")
+	       (:url . "https://github.com/alphapapa/org-sidebar"))])
