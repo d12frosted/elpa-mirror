@@ -4,6 +4,8 @@
 
 ;; Author: Peter Stiernström <peter@stiernstrom.se>
 ;; Version: 4.12
+;; Package-Version: 20210528.908
+;; Package-Commit: 3381797bcbf906b18dff654a2361032d2d01b4a3
 ;; URL: https://gitlab.com/pidu/git-timemachine
 ;; Keywords: vc
 ;; Package-Requires: ((emacs "24.3") (transient "0.1.0"))
