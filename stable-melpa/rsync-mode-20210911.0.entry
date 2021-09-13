@@ -1,0 +1,13 @@
+(rsync-mode .
+	    [(20210911 0)
+	     ((emacs
+	       (27 1))
+	      (spinner
+	       (1 7 1)))
+	     "Rsync projects to remote machines" single
+	     ((:commit . "2bc76aa8c2d82bb08ef70e23813a653d66bf3195")
+	      (:authors
+	       ("Ryan Pilgrim" . "ryan.z.pilgrim@gmail.com"))
+	      (:maintainer "Ryan Pilgrim" . "ryan.z.pilgrim@gmail.com")
+	      (:keywords "comm")
+	      (:url . "https://github.com/r-zip/rsync-mode.el"))])

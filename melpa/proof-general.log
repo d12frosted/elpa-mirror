@@ -4,10 +4,10 @@ Source:  https://github.com/ProofGeneral/PG.git
 
 Updating /mnt/store/melpa/working/proof-general/
 Checking out origin/master
-Checking out 32b15ff26be8722950e5f67a087e6fd9d67197bd
+Checking out eb978573c372913a7465817ce00a9fdf2871648f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/proof-general/
-  to /tmp/proof-generalRXNTld/proof-general-20210910.1656
+  to /tmp/proof-generalG0X4TA/proof-general-20210910.1656
     proof-general-pkg.el -> proof-general-pkg.el
     proof-general.el -> proof-general.el
   ! doc/dir -> dir
@@ -39,8 +39,8 @@ Copying files (->) and directories (=>)
     pghaskell => pghaskell
     pgocaml => pgocaml
     pgshell => pgshell
-Created /tmp/proof-generalRXNTld/proof-general-20210910.1656/PG-adapting.info
-Created /tmp/proof-generalRXNTld/proof-general-20210910.1656/ProofGeneral.info
+Created /tmp/proof-generalG0X4TA/proof-general-20210910.1656/PG-adapting.info
+Created /tmp/proof-generalG0X4TA/proof-general-20210910.1656/ProofGeneral.info
 Created proof-general-20210910.1656.tar containing:
   proof-general-20210910.1656/
   proof-general-20210910.1656/AUTHORS
@@ -173,9 +173,9 @@ Created proof-general-20210910.1656.tar containing:
   proof-general-20210910.1656/phox/sqrt2.phx
   proof-general-20210910.1656/proof-general-pkg.el
   proof-general-20210910.1656/proof-general.el
-Built proof-general in 66.954s, finished at 2021-09-12T18:37:05+0000
+Built proof-general in 37.139s, finished at 2021-09-13T01:36:54+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  251 Sep 12 18:37 packages/proof-general-20210910.1656.entry
-2.6M -rw-r--r-- 1 root root 2.6M Sep 12 18:37 packages/proof-general-20210910.1656.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 12 18:37 packages/proof-general-badge.svg
-4.0K -rw-r--r-- 1 root root  491 Sep 12 18:37 packages/proof-general-readme.txt
+4.0K -rw-r--r-- 1 root root  251 Sep 13 01:36 packages/proof-general-20210910.1656.entry
+2.6M -rw-r--r-- 1 root root 2.6M Sep 13 01:36 packages/proof-general-20210910.1656.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 13 01:36 packages/proof-general-badge.svg
+4.0K -rw-r--r-- 1 root root  491 Sep 13 01:36 packages/proof-general-readme.txt

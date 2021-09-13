@@ -1,0 +1,11 @@
+(declutter .
+	   [(20210904 2039)
+	    ((emacs
+	      (25 1)))
+	    "Read html content and (some) paywall sites without clutter" single
+	    ((:commit . "e08195e2f5691ad0ec9090d7edf550608e13fcfa")
+	     (:authors
+	      ("Sanel Zukan" . "sanelz@gmail.com"))
+	     (:maintainer "Sanel Zukan" . "sanelz@gmail.com")
+	     (:keywords "html" "hypermedia" "terminals")
+	     (:url . "http://www.github.com/sanel/declutter"))])
