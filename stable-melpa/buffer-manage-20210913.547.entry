@@ -1,5 +1,5 @@
 (buffer-manage .
-	       [(20201221 122)
+	       [(20210913 547)
 		((emacs
 		  (26 1))
 		 (choice-program
@@ -7,7 +7,7 @@
 		 (dash
 		  (2 17 0)))
 		"Manage buffers" tar
-		((:commit . "800f22e024a2f364ac69d9efddd25ea0ac7c49c0")
+		((:commit . "23e708f0cf30f1c8c2a54c3c791bbe94cf25542f")
 		 (:authors
 		  ("Paul Landes"))
 		 (:maintainer "Paul Landes")

@@ -4,9 +4,9 @@
 
 ;; Author: Carl Steib
 ;; URL: https://github.com/cstby/solo-jazz-emacs-theme
-;; Package-Version: 20210913.105
-;; Package-Commit: 9d073fa591f353d956869a9bae3a77021c00c30c
-;; Version: 0.6.0
+;; Package-Version: 20210913.148
+;; Package-Commit: 82e9ab129d9c2949a4d91b81c2235295a8d83cd9
+;; Version: 0.7.0
 ;; Package-Requires: ((emacs "24.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -192,6 +192,10 @@ Also bind `class' to ((class color) (min-colors 89))."
    `(doom-modeline-buffer-file               ((t (:foreground ,solo-jazz-pink))))
    `(doom-modeline-buffer-major-mode         ((t (:foreground ,solo-jazz-purple))))
    `(doom-modeline-info                      ((t (:foreground ,solo-jazz-teal))))
+
+   ;; eval-sexp-fu
+   `(eval-sexp-fu-flash                      ((t (:background ,solo-jazz-blue :foreground ,solo-jazz-white))))
+   `(eval-sexp-fu-flash-error                ((t (:inherit error))))
 
    ;; hl-line
    `(hl-line-face                            ((,class (:background ,solo-jazz-azure)) (t :weight bold)))

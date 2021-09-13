@@ -4,9 +4,9 @@
 
 ;; Author: akicho8 <akicho8@gmail.com>
 ;; Keywords: elisp
-;; Package-Version: 20210729.658
-;; Package-Commit: ae837525f8792ff9293eca5a67e2dc28654ac27e
-;; Version: 1.0.14
+;; Package-Version: 20210913.502
+;; Package-Commit: 58edb455d229d3dd7c7602c8819a3235065a4292
+;; Version: 1.0.15
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -215,10 +215,15 @@ the beginning."
                   (point))))
          (str (buffer-substring start end)))
     (prog1
-        (if (use-region-p)
+        (progn
+          (when (use-region-p)
             ;; https://github.com/akicho8/string-inflection/issues/31
             ;; Multiple lines will be one line because [:space:] are included to line breaks
-            (replace-regexp-in-string "[.:/]+" "_" str) ; 'aa::bb.cc dd/ee' => 'aa_bb_cc dd_ee'
+            (setq str (replace-regexp-in-string "[.:/]+" "_" str)) ; 'aa::bb.cc dd/ee' => 'aa_bb_cc dd_ee'
+
+            ;; https://github.com/akicho8/string-inflection/issues/34
+            ;; kebabing a region can insert an unexpected hyphen
+            (setq str (replace-regexp-in-string "^_*\\(.*?\\)_*$" "\\1" str))) ; _foo_ => foo
           str)
       (delete-region start end))))
 

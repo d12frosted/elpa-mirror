@@ -16,10 +16,10 @@
 ;; Author: Benjamin Slade <slade@lambda-y.net>
 ;; Maintainer: Benjamin Slade <slade@lambda-y.net>
 ;; URL: https://gitlab.com/emacsomancer/equake
-;; Package-Commit: f9d741baf42232125663c1d27e01ec04ab0ca85f
-;; Package-Version: 20210731.2016
-;; Package-X-Original-Version: 0.98
-;; Version: 0.98
+;; Package-Commit: 4d6ef75a4d91ded22caad220909518ccb67b7b87
+;; Package-Version: 20210913.145
+;; Package-X-Original-Version: 0.985
+;; Version: 0.985
 ;; Package-Requires: ((emacs "26.1") (dash "2.14.1"))
 ;; Created: 2018-12-12
 ;; Keywords: convenience, frames, terminals, tools, window-system
@@ -230,6 +230,11 @@
 
 (defcustom equake-hide-from-taskbar-choice t
   "Whether or not to hide Equake from taskbar (may not work in all DEs or WMs)."
+  :group 'equake
+  :type 'boolean)
+
+(defcustom equake-open-non-terminal-in-new-frame nil
+  "If non-nil, then redirect non-terminal buffers to new frame."
   :group 'equake
   :type 'boolean)
 
@@ -444,6 +449,16 @@ Intended as `:before-while' advice for
       (equake-ask-before-closing-equake)
     (save-buffers-kill-terminal)))
 
+(defun equake--open-in-new-frame (buffer alist)
+  (and (symbolp 'equake-mode)
+       (symbol-value 'equake-mode)
+       equake-open-non-terminal-in-new-frame))
+
+(setq display-buffer-alist
+      (append display-buffer-alist
+      '((equake--open-in-new-frame . ((display-buffer-reuse-window display-buffer-pop-up-frame) . ((reusable-frames . 0)))
+))))
+
 (defun equake-invoke ()
   "Toggle Equake frames.
 Run with \"emacsclient -n -e '(equake-invoke)'\"."
@@ -479,7 +494,8 @@ Needed to assign a new name for a new tab (e.g. its number)")
 (defun equake-new-tab (&optional override)
   "Open a new shell tab on monitor, optionally OVERRIDE default shell."
   (interactive)
-  (let ((launchshell (or override equake-default-shell)))
+  (let ((launchshell (or override equake-default-shell))
+        (equake-open-non-terminal-in-new-frame nil))
     (if (not (equake--launch-shell launchshell))
         (let ((inhibit-message t))
           (message "No such shell or relevant shell not installed."))
@@ -518,7 +534,8 @@ Needed to assign a new name for a new tab (e.g. its number)")
   "Switch to the next tab."
   (interactive)
   (-let* ((monitor (equake--get-tab-property 'monitor))
-          (next-tab (equake--find-next-tab monitor (current-buffer))))
+          (next-tab (equake--find-next-tab monitor (current-buffer)))
+          (equake-open-non-terminal-in-new-frame nil))
     (if (eq next-tab (current-buffer))
         (print "No other tab to switch to.")
       (switch-to-buffer next-tab))))
@@ -527,7 +544,8 @@ Needed to assign a new name for a new tab (e.g. its number)")
   "Switch to the previous tab."
   (interactive)
   (-let* ((monitor (equake--get-tab-property 'monitor))
-          (prev-tab (equake--find-next-tab monitor (current-buffer) -1)))
+          (prev-tab (equake--find-next-tab monitor (current-buffer) -1))
+          (equake-open-non-terminal-in-new-frame nil))
     (if (eq prev-tab (current-buffer))
         (print "No other tab to switch to.")
       (switch-to-buffer prev-tab))))
@@ -788,7 +806,8 @@ suitable for `make-frame' or `modify-frame-parameters'"
 
           (cons 'auto-raise t)
           (cons 'skip-taskbar equake-hide-from-taskbar-choice)
-          (cons 'undecorated t))))
+          (cons 'undecorated t)
+          (cons 'fullscreen nil))))
 
 ;;; DISPLAY guessing
 
