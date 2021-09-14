@@ -4,6 +4,8 @@
 
 ;; Author:  Jörg Volbers <joerg@joergvolbers.de>
 ;; version: 0.1
+;; Package-Version: 20200322.1925
+;; Package-Commit: ec8edfdbd1ac475530591d73a570ded5c18ed86a
 ;; Keywords: mail
 ;; Package-Requires: ((seq "2.20") (emacs "26.1") (notmuch "0.29.3"))
 ;; URL: https://github.com/publicimageltd/notmuch-bookmarks

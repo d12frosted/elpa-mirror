@@ -3,7 +3,11 @@ Fetcher: git
 Source:  https://git.code.sf.net/p/log4j-mode/code
 
 Updating /mnt/store/melpa/working/log4j-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://git.code.sf.net/p/log4j-mode/code/': Empty reply from server
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 26171b1e723502055e085393b0ecdcb6db406010
+Built log4j-mode in 4.587s, finished at 2021-09-14T02:10:52+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root  34K Sep 14 02:10 packages/log4j-mode-20160108.1918.el
+4.0K -rw-r--r-- 1 root root  365 Sep 14 02:10 packages/log4j-mode-20160108.1918.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 14 02:10 packages/log4j-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 3.5K Sep 14 02:10 packages/log4j-mode-readme.txt

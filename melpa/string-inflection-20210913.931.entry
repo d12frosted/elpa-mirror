@@ -1,0 +1,8 @@
+(string-inflection .
+		   [(20210913 931)
+		    nil "underscore -> UPCASE -> CamelCase -> lowerCamelCase conversion of names" single
+		    ((:commit . "887c9319b37d31c60be96d00a6ce3bc82bdf3f10")
+		     (:authors
+		      ("akicho8" . "akicho8@gmail.com"))
+		     (:maintainer "akicho8" . "akicho8@gmail.com")
+		     (:keywords "elisp"))])

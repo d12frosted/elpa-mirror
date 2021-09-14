@@ -8,7 +8,7 @@
 ;; Maintainer: Joost Kremers <joostkremers@fastmail.fm>
 ;; URL: https://github.com/joostkremers/visual-fill-column
 ;; Package-Version: 20210419.857
-;; Package-Commit: 6fa9e7912af412533aec0da8b8f62c227f9f3f54
+;; Package-Commit: bd78372bd3d8f3e90508e1eb0c9d1a53948dcc2b
 ;; Created: 2015
 ;; Version: 2.4
 ;; Package-Requires: ((emacs "25.1"))
