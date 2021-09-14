@@ -1,0 +1,8 @@
+(yapfify .
+	 [(20210914 634)
+	  nil "(automatically) format python buffers using YAPF." single
+	  ((:commit . "c9347e3b1dec5fc8d34883e206fcdc8500d22368")
+	   (:authors
+	    ("Joris Engbers" . "info@jorisengbers.nl"))
+	   (:maintainer "Joris Engbers" . "info@jorisengbers.nl")
+	   (:url . "https://github.com/JorisE/yapfify"))])

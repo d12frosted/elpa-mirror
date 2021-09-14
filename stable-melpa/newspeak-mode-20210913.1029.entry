@@ -1,0 +1,10 @@
+(newspeak-mode .
+	       [(20210913 1029)
+		((emacs
+		  (24 3)))
+		"Major mode for the Newspeak programming language" single
+		((:commit . "5a04dc233f76637fb6cff141fb78064dc4383185")
+		 (:authors
+		  ("Daniel Szmulewicz"))
+		 (:maintainer "Daniel Szmulewicz" . "daniel.szmulewicz@gmail.com")
+		 (:url . "https://github.com/danielsz/newspeak-mode"))])
