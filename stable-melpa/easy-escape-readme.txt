@@ -12,8 +12,9 @@ into this (`^' indicates a different color):
 
 The default is to use a single \ character instead of two, and to hide
 backslashes preceding parentheses or `|'.  The escape character and its color
-can be customized using `easy-escape-face' and `easy-escape-character' (which see), and backslashes
-before ()| can be shown by disabling `easy-escape-hide-escapes-before-delimiters'.
+can be customized using `easy-escape-face' and `easy-escape-character' (which
+see), and backslashes before ()| can be shown by disabling
+`easy-escape-hide-escapes-before-delimiters'.
 
 Suggested setup:
   (add-hook 'lisp-mode-hook 'easy-escape-minor-mode)

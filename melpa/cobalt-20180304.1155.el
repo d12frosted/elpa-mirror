@@ -5,7 +5,7 @@
 ;; Author: Juan Karlo Licudine <accidentalrebel@gmail.com>
 ;; URL: https://github.com/cobalt-org/cobalt.el
 ;; Package-Version: 20180304.1155
-;; Package-Commit: 634ace275697e188746ca22a30ff94380ec756be
+;; Package-Commit: 88ef936373a5493183d49ec69ca541bcc749a109
 ;; Version: 1.0.0
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "24"))

@@ -4,7 +4,7 @@
 ;; Maintainer: Daniel Szmulewicz <daniel.szmulewicz@gmail.com>
 ;; Version: 1.0
 ;; Package-Version: 20210913.1029
-;; Package-Commit: 5a04dc233f76637fb6cff141fb78064dc4383185
+;; Package-Commit: 4bfef8f834b021d65cf6f920b02c082a719a302f
 ;; © 2021 Daniel Szmulewicz
 ;; Package-Requires: ((emacs "24.3"))
 

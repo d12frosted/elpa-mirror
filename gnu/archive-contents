@@ -905,16 +905,18 @@
 	     ("Barry O'Reilly" . "gundaetiapo@gmail.com"))
 	    (:maintainer "Barry O'Reilly" . "gundaetiapo@gmail.com"))])
  (flymake .
-	  [(1 1 1)
+	  [(1 2 1)
 	   ((emacs
 	     (26 1))
 	    (eldoc
-	     (1 1 0)))
+	     (1 1 0))
+	    (project
+	     (0 7 1)))
 	   "A universal on-the-fly syntax checker" tar
-	   ((:maintainer "João Távora" . "joaotavora@gmail.com")
+	   ((:keywords "c" "languages" "tools")
+	    (:maintainer "João Távora" . "joaotavora@gmail.com")
 	    (:authors
 	     ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
-	    (:keywords "c" "languages" "tools")
 	    (:url . "https://elpa.gnu.org/packages/flymake.html"))])
  (flymake-proselint .
 		    [(0 2 1)
@@ -1868,7 +1870,7 @@
 	      ("Feng Shu" . "tumashu@163.com"))
 	     (:keywords "convenience" "tooltip"))])
  (project .
-	  [(0 6 1)
+	  [(0 7 1)
 	   ((emacs
 	     (26 1))
 	    (xref
