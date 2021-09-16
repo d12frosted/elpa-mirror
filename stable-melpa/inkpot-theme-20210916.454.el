@@ -3,8 +3,8 @@
 ;; Author: Sarah Iovan <sarah@hwaetageek.com>
 ;;         Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://gitlab.com/ideasman42/emacs-inkpot-theme
-;; Package-Version: 20210716.58
-;; Package-Commit: c3683aa99c738eb46cf310ba23162dbb315a5ac5
+;; Package-Version: 20210916.454
+;; Package-Commit: 3c66d4a09a0dfa7275eae125dd00a5677f2fba5b
 ;; Version: 0.1
 ;; Keywords: color, theme
 
@@ -403,6 +403,12 @@
 
    ;; highlight-operators (melpa).
    `(highlight-operators-face ((t (:foreground ,ip-blue-bright))))
+
+   ;; highlight-symbol (melpa).
+   ;; Color selected because it's visible without being overly distracting.
+   `(highlight-symbol-face ((t (:background ,ip-slate-dark+15.7))))
+   ;; idle-highlight-mode (melpa).
+   `(idle-highlight ((t (:background ,ip-slate-dark+15.7))))
 
    ;; visual-indentation-mode (stand alone package).
    `(visual-indentation-light-face ((t (:background ,ip-slate-dark+15.7))))

@@ -1,13 +1,22 @@
+<!-- markdown-link-check-disable -->
 [![MELPA](http://melpa.org/packages/mb-url-badge.svg)](http://melpa.org/#/mb-url)
 [![MELPA Stable](http://stable.melpa.org/packages/mb-url-badge.svg)](http://stable.melpa.org/#/mb-url)
+[![CI](https://github.com/dochang/mb-url/actions/workflows/ci.yml/badge.svg)](https://github.com/dochang/mb-url/actions/workflows/ci.yml)
 [![Build Status](https://cloud.drone.io/api/badges/dochang/mb-url/status.svg)](https://cloud.drone.io/dochang/mb-url)
 [![Build Status](https://travis-ci.org/dochang/mb-url.svg?branch=master)](https://travis-ci.org/dochang/mb-url)
 [![Average time to resolve an issue](http://isitmaintained.com/badge/resolution/dochang/mb-url.svg)](http://isitmaintained.com/project/dochang/mb-url "Average time to resolve an issue")
 [![Percentage of issues still open](http://isitmaintained.com/badge/open/dochang/mb-url.svg)](http://isitmaintained.com/project/dochang/mb-url "Percentage of issues still open")
-[![](https://img.shields.io/github/issues/dochang/mb-url.svg)](https://github.com/dochang/mb-url)
-[![](https://img.shields.io/github/issues-pr/dochang/mb-url.svg)](https://github.com/dochang/mb-url)
+[![Issues](https://img.shields.io/github/issues/dochang/mb-url.svg)](https://github.com/dochang/mb-url)
+[![Pull Requests](https://img.shields.io/github/issues-pr/dochang/mb-url.svg)](https://github.com/dochang/mb-url)
 [![GitHub](https://img.shields.io/github/license/dochang/mb-url)](https://github.com/dochang/mb-url/blob/master/LICENSE)
 [![Say Thanks!](https://img.shields.io/badge/say-thanks-green)](https://saythanks.io/to/dochang)
+<!--
+See the following issues for details.
+
+<https://github.com/BlitzKraft/saythanks.io/issues/60>
+<https://github.com/BlitzKraft/saythanks.io/issues/103>
+-->
+<!-- markdown-link-check-enable -->
 
 Multiple Backends for URL package.
 
@@ -107,4 +116,4 @@ GPLv3
 
 Acknowledgements:
 
-https://github.com/nicferrier/curl-url-retrieve
+<https://github.com/nicferrier/curl-url-retrieve>
