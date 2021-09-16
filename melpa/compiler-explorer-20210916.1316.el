@@ -4,8 +4,8 @@
 
 ;; Author: Michał Krzywkowski <k.michal@zoho.com>
 ;; Keywords: c, tools
-;; Package-Version: 20210513.409
-;; Package-Commit: 70cae42f0d624b6ce03b55c35ba9a6c2318a827d
+;; Package-Version: 20210916.1316
+;; Package-Commit: 9ea0cc78ac40f667dfaf9277758a22b9058ca434
 ;; Version: 0.1.0
 ;; Homepage: https://github.com/mkcms/compiler-explorer.el
 ;; Package-Requires: ((emacs "26.1") (request "0.3.0"))
@@ -354,7 +354,8 @@ This calls `compiler-explorer--handle-compilation-response' and
           (insert (mapconcat (lambda (line) (plist-get line :text))
                              stderr "\n")
                   "\n")
-          (insert (format "Program exited with code %s" code)))))))
+          (insert (format "Program exited with code %s" code))
+          (ansi-color-apply-on-region (point-min) (point-max)))))))
 
 (defun compiler-explorer--mode-line-format ()
   "Get the mode line format used in compiler explorer mode."

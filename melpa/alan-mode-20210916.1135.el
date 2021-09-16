@@ -5,8 +5,8 @@
 ;; Author: Paul van Dam <pvandam@kjerner.com>
 ;; Maintainer: Paul van Dam <pvandam@kjerner.com>
 ;; Version: 1.0.0
-;; Package-Version: 20210802.1950
-;; Package-Commit: 9e66137860d05e9c8e1d70a087bfd9cb5ca5ec07
+;; Package-Version: 20210916.1135
+;; Package-Commit: 217ffe99e3acf7d545827605ec95434e392a9f5f
 ;; Created: 13 October 2017
 ;; URL: https://github.com/Kjerner/AlanForEmacs
 ;; Homepage: https://alan-platform.com/
@@ -594,7 +594,7 @@ Return nil if the script can not be found."
   (let ((alan-project-script (or (alan-find-alan-script)
 								 (executable-find alan-script)))
 		(alan-project-compiler (cond ((alan-file-executable (concat (alan-project-root) "dependencies/dev/internals/alan/tools/compiler-project")))
-									 ((alan-file-executable (concat (alan-project-root) ".alan/devenv/platform/project-build-environment/tools/compiler-project")))))
+									 ((alan-file-executable (concat (alan-project-root) ".alan/dataenv/platform/project-compiler/tools/compiler-project")))))
 		(alan--pretty-printer (cond ((alan-file-executable (concat (alan-project-root) "dependencies/dev/internals/alan/tools/pretty-printer")))
 									((alan-file-executable (concat (alan-project-root) ".alan/dataenv/platform/project-compiler/tools/pretty-printer")))))
 		(alan-project-language (when alan-language-definition
