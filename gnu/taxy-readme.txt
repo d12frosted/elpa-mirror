@@ -174,7 +174,7 @@ That produces:
   ("Lettery" "A comprehensive taxonomy of letters."
    (("Vowels" "You know what those are."
      ("A" "E" "I"))
-    ("Consonants" "Well, if they aren't a vowel..."
+    ("Consonants" "Well, if they aren't vowels..."
      ("B" "C" "D" "F" "G" "H" "J" "K" "L" "M" "N"))))
 #+END_SRC
 
@@ -194,7 +194,7 @@ Which gives us:
   ("Lettery" "A comprehensive taxonomy of letters."
    (("Vowels" "You know what those are."
      ("O" "U" "A" "E" "I"))
-    ("Consonants" "Well, if they aren't a vowel..."
+    ("Consonants" "Well, if they aren't vowels..."
      ("N" "P" "Q" "R" "S" "T" "V" "W" "X" "Y" "Z" "B" "C" "D" "F" "G" "H" "J" "K" "L" "M" "N"))))
 #+END_SRC
 
@@ -202,11 +202,7 @@ Oh, they're out of order, now.  That won't do.  Let's fix that:
 
 #+BEGIN_SRC elisp :exports code :results code
   (taxy-plain
-   (taxy-mapc* (lambda (taxy)
-                 (setf (taxy-items taxy)
-                       (cl-sort (taxy-items taxy) #'<
-                                :key #'string-to-char)))
-     lettery))
+   (taxy-sort #'string< #'identity lettery))
 #+END_SRC
 
 That's better:
@@ -215,7 +211,7 @@ That's better:
   ("Lettery" "A comprehensive taxonomy of letters."
    (("Vowels" "You know what those are."
      ("A" "E" "I" "O" "U"))
-    ("Consonants" "Well, if they aren't a vowel..."
+    ("Consonants" "Well, if they aren't vowels..."
      ("B" "C" "D" "F" "G" "H" "J" "K" "L" "M" "N" "N" "P" "Q" "R" "S" "T" "V" "W" "X" "Y" "Z"))))
 #+END_SRC
 
@@ -428,10 +424,10 @@ Some example applications may be found in the [[file:examples/README.org][exampl
 :TOC:      :include descendants :depth 1 :ignore (descendants)
 :END:
 :CONTENTS:
-- [[#dynamic-taxys][Dynamic taxys]]
 - [[#reusable-taxys][Reusable taxys]]
 - [[#threading-macros][Threading macros]]
 - [[#modifying-filled-taxys][Modifying filled taxys]]
+- [[#dynamic-taxys][Dynamic taxys]]
 - [[#magit-section][Magit section]]
 :END:
 
@@ -453,6 +449,124 @@ After defining a taxy, call ~taxy-fill~ with it and a list of objects to fill th
 
 To return a taxy in a more human-readable format (with only relevant fields included), use ~taxy-plain~.  You may also use ~taxy-mapcar~ to replace items in a taxy with, e.g. a more useful representation.
 
+** Reusable taxys
+
+Since taxys are structs, they may be stored in variables and used in other structs (being sure to copy the root taxy with ~taxy-emptied~ before filling).  For example, this shows using =taxy= to classify Matrix rooms in [[https://github.com/alphapapa/ement.el][Ement.el]]:
+
+#+BEGIN_SRC elisp
+  (defun ement-roomy-buffer (room)
+    (alist-get 'buffer (ement-room-local room)))
+
+  (defvar ement-roomy-unread
+    (make-taxy :name "Unread"
+               :predicate (lambda (room)
+                            (buffer-modified-p (ement-roomy-buffer room)))))
+
+  (defvar ement-roomy-opened
+    (make-taxy :name "Opened"
+               :description "Rooms with buffers"
+               :predicate #'ement-roomy-buffer
+               :taxys (list ement-roomy-unread
+                            (make-taxy))))
+
+  (defvar ement-roomy-closed
+    (make-taxy :name "Closed"
+               :description "Rooms without buffers"
+               :predicate (lambda (room)
+                            (not (ement-roomy-buffer room)))))
+
+  (defvar ement-roomy
+    (make-taxy
+     :name "Ement Rooms"
+     :taxys (list (make-taxy
+                   :name "Direct"
+                   :description "Direct messaging rooms"
+                   :predicate (lambda (room)
+                                (ement-room--direct-p room ement-session))
+                   :taxys (list ement-roomy-opened
+                                ement-roomy-closed))
+                  (make-taxy
+                   :name "Non-direct"
+                   :description "Group chat rooms"
+                   :taxys (list ement-roomy-opened
+                                ement-roomy-closed)))))
+#+END_SRC
+
+Note how the taxys defined in the first three variables are used in subsequent taxys.  As well, the ~ement-roomy-opened~ taxy has an "anonymous" taxy, which collects any rooms that aren't collected by its sibling taxy (otherwise those objects would be collected into the parent, "Opened" taxy, which may not always be the most useful way to present the objects).
+
+Using those defined taxys, we then fill the ~ement-roomy~ taxy with all of the rooms in the user's session, and then use ~taxy-mapcar~ to replace the room structs with useful representations for display:
+
+#+BEGIN_SRC elisp
+  (taxy-plain
+   (taxy-mapcar (lambda (room)
+                  (list (ement-room--room-display-name room)
+                        (ement-room-id room)))
+     (taxy-fill (ement-session-rooms ement-session)
+                (taxy-emptied ement-roomy))))
+#+END_SRC
+
+This produces:
+
+#+BEGIN_SRC elisp
+  ("Ement Rooms"
+   (("Direct" "Direct messaging rooms"
+     (("Opened" "Rooms with buffers"
+       (("Unread"
+         (("Lars Ingebrigtsen" "!nope:gnus.org")))))
+      ("Closed" "Rooms without buffers"
+       (("John Wiegley" "!not-really:newartisans.com")
+        ("Eli Zaretskii" "!im-afraid-not:gnu.org")))))
+    ("Non-direct" "Group chat rooms"
+     (("Opened" "Rooms with buffers"
+       (("Unread"
+         (("Emacs" "!WfZsmtnxbxTdoYPkaT:greyface.org")
+          ("#emacs" "!KuaCUVGoCiunYyKEpm:libera.chat")))
+        ;; The non-unread buffers in the "anonymous" taxy.
+        ((("magit/magit" "!HZYimOcmEAsAxOcgpE:gitter.im")
+          ("Ement.el" "!NicAJNwJawmHrEhqZs:matrix.org")
+          ("#emacsconf" "!UjTTDnYmSAslLTtMCF:libera.chat")
+          ("Emacs Matrix Client" "!ZrZoyXEyFrzcBZKNis:matrix.org")
+          ("org-mode" "!rUhEinythPhVTdddsb:matrix.org")
+          ("This Week in Matrix (TWIM)" "!xYvNcQPhnkrdUmYczI:matrix.org")))))
+      ("Closed" "Rooms without buffers"
+       (("#matrix-spec" "!NasysSDfxKxZBzJJoE:matrix.org")
+        ("#commonlisp" "!IiGsrmKRHzpupHRaKS:libera.chat")
+        ("Matrix HQ" "!OGEhHVWSdvArJzumhm:matrix.org")
+        ("#lisp" "!czLxhhEegTEGNKUBgo:libera.chat")
+        ("Emacs" "!gLamGIXTWBaDFfhEeO:matrix.org")
+        ("#matrix-dev:matrix.org" "!jxlRxnrZCsjpjDubDX:matrix.org")))))))
+#+END_SRC
+
+** Threading macros
+
+If you happen to like macros, ~taxy~ works well with threading (i.e. ~thread-last~ or ~->>~):
+
+#+BEGIN_SRC elisp
+  (thread-last ement-roomy
+    taxy-emptied
+    (taxy-fill (ement-session-rooms ement-session))
+    (taxy-mapcar (lambda (room)
+                   (list (ement-room--room-display-name room)
+                         (ement-room-id room))))
+    taxy-plain)
+#+END_SRC
+
+** Modifying filled taxys
+
+Sometimes it's necessary to modify a taxy after filling it with objects, e.g. to sort the items and/or the sub-taxys.  For this, use the function ~taxy-mapc-taxys~ (a.k.a. ~taxy-mapc*~).  For example, in the sample application [[file:examples/musicy.el][musicy.el]], the taxys and their items are sorted after filling, like so:
+
+#+BEGIN_SRC elisp
+  (defun musicy-files (files)
+    (thread-last musicy-taxy
+      taxy-emptied
+      (taxy-fill files)
+      ;; Sort sub-taxys by their name.
+      (taxy-sort* #'string< #'taxy-name)
+      ;; Sort sub-taxys' items by name.
+      (taxy-sort #'string< #'identity)
+      taxy-magit-section-pp))
+#+END_SRC
+
 ** Dynamic taxys
 :PROPERTIES:
 :TOC:      :include descendants
@@ -460,6 +574,7 @@ To return a taxy in a more human-readable format (with only relevant fields incl
 :CONTENTS:
 - [[#multi-level-dynamic-taxys][Multi-level dynamic taxys]]
 - [[#chains-of-independent-multi-level-dynamic-taxys]["Chains" of independent, multi-level dynamic taxys]]
+- [[#defining-a-classification-domain-specific-language][Defining a classification domain-specific language]]
 :END:
 
 You may not always know in advance what taxonomy a set of objects fits into, so =taxy= lets you add taxys dynamically by using the ~:take~ function to add a taxy when an object is "taken into" a parent taxy's items.  For example, you could dynamically classify buffers by their major mode like so:
@@ -627,127 +742,117 @@ Now let's fill the taxy with the sports and format it:
        ("Soccer" "Tennis" "Football" "Baseball"))))))
 #+END_SRC
 
-** Reusable taxys
+*** Defining a classification domain-specific language
 
-Since taxys are structs, they may be stored in variables and used in other structs (being sure to copy the root taxy with ~taxy-emptied~ before filling).  For example, this shows using =taxy= to classify Matrix rooms in [[https://github.com/alphapapa/ement.el][Ement.el]]:
+When writing a larger Taxy-based application, it may be necessary to define a number of key functions that would be unwieldy to manage in a ~cl-labels~ form.  For this case, Taxy provides the macro ~taxy-define-key-definer~ to easily define Taxy key functions in an application library.  Those functions are then passed to the function ~taxy-make-take-function~ at runtime, along with a list of keys being used to classify items.  Using these allows key functions to be defined in top-level forms, and it allows an application to be extended by users by defining additional key functions in their configurations.
 
-#+BEGIN_SRC elisp
-  (defun ement-roomy-buffer (room)
-    (alist-get 'buffer (ement-room-local room)))
+Extending the previous ~sporty~ example, let's redefine its key functions using ~taxy-define-key-definer~:
 
-  (defvar ement-roomy-unread
-    (make-taxy :name "Unread"
-               :predicate (lambda (room)
-                            (buffer-modified-p (ement-roomy-buffer room)))))
+#+begin_src elisp :exports code :results silent :lexical t
+  (taxy-define-key-definer sporty-define-key
+    sporty-keys "sporty"
+    "Define a `sporty' key function.")
 
-  (defvar ement-roomy-opened
-    (make-taxy :name "Opened"
-               :description "Rooms with buffers"
-               :predicate #'ement-roomy-buffer
-               :taxys (list ement-roomy-unread
-                            (make-taxy))))
+  (sporty-define-key disc-based ()
+    (if (member 'disc (sport-uses item))
+        "Disc-based"
+      "Non-disc-based"))
 
-  (defvar ement-roomy-closed
-    (make-taxy :name "Closed"
-               :description "Rooms without buffers"
-               :predicate (lambda (room)
-                            (not (ement-roomy-buffer room)))))
+  (sporty-define-key uses (&optional thing)
+    (pcase thing
+      (`nil (sport-uses item))
+      (_ (when (cl-typecase (sport-uses item)
+                 (symbol (equal thing (sport-uses item)))
+                 (list (member thing (sport-uses item))))
+           thing))))
 
-  (defvar ement-roomy
-    (make-taxy
-     :name "Ement Rooms"
-     :taxys (list (make-taxy
-                   :name "Direct"
-                   :description "Direct messaging rooms"
-                   :predicate (lambda (room)
-                                (ement-room--direct-p room ement-session))
-                   :taxys (list ement-roomy-opened
-                                ement-roomy-closed))
-                  (make-taxy
-                   :name "Non-direct"
-                   :description "Group chat rooms"
-                   :taxys (list ement-roomy-opened
-                                ement-roomy-closed)))))
-#+END_SRC
+  (sporty-define-key venue (&optional place)
+    (pcase place
+      (`nil (sport-venue item))
+      (_ (when (equal place (sport-venue item))
+           (sport-venue item)))))
+#+end_src
 
-Note how the taxys defined in the first three variables are used in subsequent taxys.  As well, the ~ement-roomy-opened~ taxy has an "anonymous" taxy, which collects any rooms that aren't collected by its sibling taxy (otherwise those objects would be collected into the parent, "Opened" taxy, which may not always be the most useful way to present the objects).
+Now we'll define the default keys to use when classifying items.  This list is equivalent to the one passed to ~taxy-take-keyed~ in the previous, "Chains" example.
 
-Using those defined taxys, we then fill the ~ement-roomy~ taxy with all of the rooms in the user's session, and then use ~taxy-mapcar~ to replace the room structs with useful representations for display:
+#+begin_src elisp :exports code :results silent :lexical t
+  (defvar sporty-default-keys
+    '(
+      ((venue 'outdoor)
+       disc-based)
 
-#+BEGIN_SRC elisp
-  (taxy-plain
-   (taxy-mapcar (lambda (room)
-                  (list (ement-room--room-display-name room)
-                        (ement-room-id room)))
-     (taxy-fill (ement-session-rooms ement-session)
-                (taxy-emptied ement-roomy))))
-#+END_SRC
+      ((venue 'indoor)
+       (uses 'ball)
+       (uses 'disc)
+       (uses 'glove)
+       (uses 'racket))))
+#+end_src
 
-This produces:
+Finally, rather than using a pre-made taxy struct, we make one at runtime, making the ~:take~ function with ~taxy-make-take-function~.
 
-#+BEGIN_SRC elisp
-  ("Ement Rooms"
-   (("Direct" "Direct messaging rooms"
-     (("Opened" "Rooms with buffers"
-       (("Unread"
-         (("Lars Ingebrigtsen" "!nope:gnus.org")))))
-      ("Closed" "Rooms without buffers"
-       (("John Wiegley" "!not-really:newartisans.com")
-        ("Eli Zaretskii" "!im-afraid-not:gnu.org")))))
-    ("Non-direct" "Group chat rooms"
-     (("Opened" "Rooms with buffers"
-       (("Unread"
-         (("Emacs" "!WfZsmtnxbxTdoYPkaT:greyface.org")
-          ("#emacs" "!KuaCUVGoCiunYyKEpm:libera.chat")))
-        ;; The non-unread buffers in the "anonymous" taxy.
-        ((("magit/magit" "!HZYimOcmEAsAxOcgpE:gitter.im")
-          ("Ement.el" "!NicAJNwJawmHrEhqZs:matrix.org")
-          ("#emacsconf" "!UjTTDnYmSAslLTtMCF:libera.chat")
-          ("Emacs Matrix Client" "!ZrZoyXEyFrzcBZKNis:matrix.org")
-          ("org-mode" "!rUhEinythPhVTdddsb:matrix.org")
-          ("This Week in Matrix (TWIM)" "!xYvNcQPhnkrdUmYczI:matrix.org")))))
-      ("Closed" "Rooms without buffers"
-       (("#matrix-spec" "!NasysSDfxKxZBzJJoE:matrix.org")
-        ("#commonlisp" "!IiGsrmKRHzpupHRaKS:libera.chat")
-        ("Matrix HQ" "!OGEhHVWSdvArJzumhm:matrix.org")
-        ("#lisp" "!czLxhhEegTEGNKUBgo:libera.chat")
-        ("Emacs" "!gLamGIXTWBaDFfhEeO:matrix.org")
-        ("#matrix-dev:matrix.org" "!jxlRxnrZCsjpjDubDX:matrix.org")))))))
-#+END_SRC
+#+begin_src elisp :exports both :results code :lexical t
+  (let ((taxy (make-taxy
+               :name "Sporty (DSL)"
+               :take (taxy-make-take-function sporty-default-keys
+                                              sporty-keys))))
+    (thread-last taxy
+      (taxy-fill sports)
+      (taxy-mapcar #'sport-name)
+      taxy-plain))
+#+end_src
 
-** Threading macros
+Which gives us:
 
-If you happen to like macros, ~taxy~ works well with threading (i.e. ~thread-last~ or ~->>~):
+#+RESULTS:
+#+begin_src elisp
+  ("Sporty (DSL)"
+   ((indoor
+     ((ball
+       ("Volleyball" "Basketball")
+       ((glove
+         ("Handball"))
+        (racket
+         ("Racquetball"))))))
+    (outdoor
+     (("Disc-based"
+       ("Ultimate" "Disc golf"))
+      ("Non-disc-based"
+       ("Soccer" "Tennis" "Football" "Baseball"))))))
+#+end_src
 
-#+BEGIN_SRC elisp
-  (thread-last ement-roomy
-    taxy-emptied
-    (taxy-fill (ement-session-rooms ement-session))
-    (taxy-mapcar (lambda (room)
-                   (list (ement-room--room-display-name room)
-                         (ement-room-id room))))
-    taxy-plain)
-#+END_SRC
+As you can see, the result is the same as that in the previous example, but we've defined a kind of DSL for grouping sports in a modular, extendable way.
 
-** Modifying filled taxys
+This also allows the grouping keys to be easily changed at runtime, producing a different result.  For example, we could group sports by, first, whether they use a ball, and then by venue.  Let's do this in a function so that users can pass their own list of keys:
 
-Sometimes it's necessary to modify a taxy after filling it with objects, e.g. to sort the items and/or the sub-taxys.  For this, use the function ~taxy-mapc-taxys~ (a.k.a. ~taxy-mapc*~).  For example, in the sample application [[file:examples/musicy.el][musicy.el]], the taxys and their items are sorted after filling, like so:
+#+begin_src elisp :exports both :results code :lexical t
+  (cl-defun sporty-classify (sports &key (keys sporty-default-keys))
+    (declare (indent defun))
+    (let* ((taxy (make-taxy
+                  :name "Sporty (DSL)"
+                  :take (taxy-make-take-function keys
+                                                 sporty-keys))))
+      (thread-last taxy
+        (taxy-fill sports)
+        (taxy-mapcar #'sport-name)
+        taxy-plain)))
 
-#+BEGIN_SRC elisp
-  (defun musicy-files (files)
-    (thread-last musicy-taxy
-      taxy-emptied
-      (taxy-fill files)
-      (taxy-mapc* (lambda (taxy)
-                    ;; Sort sub-taxys by their name.
-                    (setf (taxy-taxys taxy)
-                          (cl-sort (taxy-taxys taxy) #'string<
-                                   :key #'taxy-name))
-                    ;; Sort sub-taxys' items by name.
-                    (setf (taxy-items taxy)
-                          (cl-sort (taxy-items taxy) #'string<))))
-      taxy-magit-section-pp))
-#+END_SRC
+  (sporty-classify sports
+    :keys '((uses 'ball) venue))
+#+end_src
+
+And this produces:
+
+#+RESULTS:
+#+begin_src elisp
+  ("Sporty (DSL)"
+   ((outdoor
+     ("Ultimate" "Disc golf"))
+    (ball
+     ((indoor
+       ("Volleyball" "Handball" "Racquetball" "Basketball"))
+      (outdoor
+       ("Soccer" "Tennis" "Football" "Baseball"))))))
+#+end_src
 
 ** Magit section
 
@@ -773,6 +878,21 @@ Note that while =taxy-magit-section.el= is installed with the =taxy= package, th
 :PROPERTIES:
 :TOC:      :depth 0
 :END:
+
+** 0.6
+
+*** Additions
+
++ Sorting functions:
+  + ~taxy-sort-items~ (alias: ~taxy-sort~) sorts the items in a taxy and its sub-taxys.
+  + ~taxy-sort-taxys~ (alias: ~taxy-sort*~) sorts a taxy's sub-taxys.
++ Defining classification domain-specific languages:
+  + Macro ~taxy-define-key-definer~ defines a key-function-defining macro.
+  + Function ~taxy-make-take-function~ makes a ~:take~ function using a list of key functions and a set of classification keys.
++ Table-like, column-based formatting system for ~taxy-magit-section~:
+  + Function ~taxy-magit-section-format-items~, which formats items by columns.
+  + Variable ~taxy-magit-section-insert-indent-items~, which controls whether ~taxy-magit-section-insert~ applies indentation to each item.  (Used to disable that behavior when items are pre-indented strings, e.g. as formatted by ~taxy-magit-section-format-items~.)
++ Example application =deffy=, which shows an overview of top-level definitions and forms in an Elisp project or file.  (Likely to be published as a separate package later.)
 
 ** 0.5
 

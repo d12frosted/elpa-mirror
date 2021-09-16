@@ -440,7 +440,7 @@
 	      (:keywords "files")
 	      (:url . "http://elpa.gnu.org/packages/cpio-mode.html"))])
  (crdt .
-       [(0 2 2)
+       [(0 2 3)
 	nil "Collaborative editing using Conflict-free Replicated Data Types" tar
 	((:url . "https://code.librehq.com/qhong/crdt.el")
 	 (:keywords "collaboration" "crdt")
@@ -2439,15 +2439,15 @@
 	 (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 	 (:url . "http://www.dr-qubit.org/emacs.php"))])
  (taxy .
-       [(0 5)
+       [(0 6)
 	((emacs
 	  (26 3)))
 	"Programmable taxonomical grouping for arbitrary objects" tar
 	((:url . "https://github.com/alphapapa/taxy.el")
+	 (:keywords "lisp")
 	 (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	 (:authors
-	  ("Adam Porter" . "adam@alphapapa.net"))
-	 (:keywords "lisp"))])
+	  ("Adam Porter" . "adam@alphapapa.net")))])
  (temp-buffer-browse .
 		     [(1 5)
 		      ((emacs
