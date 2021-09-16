@@ -2,8 +2,6 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (all-the-icons "4.0.0"))
-;; Package-Version: 20210913.1134
-;; Package-Commit: cea63752b23c55b3a37ae56cf9938a166b056a3c
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://github.com/stardiviner/org-link-beautify

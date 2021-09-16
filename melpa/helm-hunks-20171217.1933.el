@@ -4,6 +4,8 @@
 
 ;; Author: @torgeir
 ;; Version: 1.6.3
+;; Package-Version: 20171217.1933
+;; Package-Commit: 6392bf716f618eac23ce81140aceb0dfacb9c6d0
 ;; Keywords: helm git hunks vc
 ;; Package-Requires: ((emacs "24.4") (helm "1.9.8"))
 

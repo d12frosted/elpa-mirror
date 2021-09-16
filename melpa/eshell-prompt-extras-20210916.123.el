@@ -6,8 +6,8 @@
 ;; Contributors: Lee Hinman
 ;; Maintainer: Chunyang Xu <mail@xuchunyang.me>
 ;; URL: https://github.com/zwild/eshell-prompt-extras
-;; Package-Version: 20201115.440
-;; Package-Commit: d7d874ce3da3ae55a42f669aca723a8774c8292c
+;; Package-Version: 20210916.123
+;; Package-Commit: 4884de4e372bb4553ac6876f24405c432ddfac78
 ;; Version: 1.0
 ;; Created: 2014-08-16
 ;; Keywords: eshell, prompt
@@ -124,6 +124,11 @@
   "Default maximum length for path in `epe-fish-path'."
   :group 'epe
   :type 'number)
+
+(defcustom epe-pipeline-show-time t
+  "A flag which indicates whether epe-pipeline should show the time."
+  :group 'epe
+  :type 'boolean)
 
 (defface epe-remote-face
   '((t (:inherit font-lock-comment-face)))
@@ -537,8 +542,11 @@ uncommitted changes, nil otherwise."
 	    (epe-colorize-with-face (system-name) 'epe-pipeline-host-face))))
    (concat
     (epe-colorize-with-face "]──[" 'epe-pipeline-delimiter-face)
-    (epe-colorize-with-face (format-time-string "%H:%M" (current-time)) 'epe-pipeline-time-face)
-    (epe-colorize-with-face "]──[" 'epe-pipeline-delimiter-face)
+    (when epe-pipeline-show-time
+      (concat
+       (epe-colorize-with-face
+        (format-time-string "%H:%M" (current-time)) 'epe-pipeline-time-face)
+       (epe-colorize-with-face "]──[" 'epe-pipeline-delimiter-face)))
     (epe-colorize-with-face (concat (eshell/pwd)) 'epe-dir-face)
     (epe-colorize-with-face  "]\n" 'epe-pipeline-delimiter-face)
     (epe-colorize-with-face "└─>" 'epe-pipeline-delimiter-face))
