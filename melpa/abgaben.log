@@ -3,7 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/akoehn/abgaben.git
 
 Updating /mnt/store/melpa/working/abgaben/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-error: RPC failed; HTTP 524 curl 22 The requested URL returned error: 524
-fatal: expected flush after ref listing
-
+Checking out origin/HEAD
+Checking out 20d14830f07d66e2a04bcad1498a4a6fbf4b4451
+Built abgaben in 7.263s, finished at 2021-09-16T10:17:40+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Sep 16 10:17 packages/abgaben-20171119.646.el
+4.0K -rw-r--r-- 1 root root  411 Sep 16 10:17 packages/abgaben-20171119.646.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 16 10:17 packages/abgaben-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Sep 16 10:17 packages/abgaben-readme.txt

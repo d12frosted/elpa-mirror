@@ -4,8 +4,8 @@
 
 ;; Authors: Damon Kwok <damon-kwok@outlook.com>
 ;; Version: 0.0.1
-;; Package-Version: 20210915.1135
-;; Package-Commit: d8ab88be68bb42368d10cf1812bb955dfd12ec5b
+;; Package-Version: 20210916.810
+;; Package-Commit: 4468d89ff8977bfd979fa7032e473c22211f84bb
 ;; URL: https://github.com/damon-kwok/modern-sh
 ;; Keywords: languages programming
 ;; Package-Requires: ((emacs "25.1") (hydra "0.15.0") (eval-in-repl "0.9.7"))
@@ -75,10 +75,17 @@
 
 (defconst modern-sh-builtin-keywords
   '("chroot" "passwd" "chmod" "sleep" "read" ;
-     "su" "sudo" "exit" "rm"                 ;
+     "su" "sudo" "exit" "rm" "pushd" "popd"  ;
      "kill" "pkill" "skill" "killall"        ;
-     "pushd" "popd" "install" "groupinstall")
-  "Modern shell language keywords.")
+     "emerge" "ego" "cave" "freebsd-update"  ;
+     "pkg" "apk" "setenv" "pkg_add" "env"    ;
+     "apt" "pat-get" "yum" "dnf" "zypper"    ;
+     "install" "groupinstall" "resolve" "sync")
+  "Modern shell builtin keywords.")
+
+(defconst modern-sh-builtin-params-keywords
+  '("install" "groupinstall" "resolve" "sync")
+  "Modern shell params keywords.")
 
 (defconst modern-sh-constants '("true" "false" "test" "command")
   "Common constants.")
@@ -106,6 +113,10 @@
   (regexp-opt modern-sh-builtin-keywords 'words)
   "Regular expression for matching builtin type.")
 
+(defconst modern-sh-builtin-params-keywords-regexp
+  (regexp-opt modern-sh-builtin-params-keywords 'words)
+  "Regular expression for matching builtin params.")
+
 (defconst modern-sh-constant-regexp (regexp-opt modern-sh-constants 'words)
   "Regular expression for matching constants.")
 
@@ -117,7 +128,8 @@
   `(
      ;; ipv4 & ipv6
      ("\\([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\\)" 1 'font-lock-constant-face)
-     ("\\([A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+\\)" 1 'font-lock-constant-face)
+     ("\\([A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+\\)"
+       1 'font-lock-constant-face)
 
      ;; source
      ("^[ \t]*\\(\\.\\)[ \t\n]" 1 'font-lock-warning-face)
@@ -162,10 +174,12 @@
 
      ;; variable define
      ("\\(:-\\|:\\+\\)" 1 'font-lock-builtin-face)
-     ("\\(:-\\|:\\+\\)\\([A-Za-z_][A-Za-z0-9_]*\\)" 2 'font-lock-variable-name-face)
+     ("\\(:-\\|:\\+\\)\\([A-Za-z_][A-Za-z0-9_]*\\)" 2
+       'font-lock-variable-name-face)
      ("\\([A-Za-z_][A-Za-z0-9_]*\\)[ \t]*[=[]" 1 'font-lock-variable-name-face)
 
      ;; builtin
+     (,modern-sh-builtin-params-keywords-regexp . font-lock-constant-face)
      (,modern-sh-builtin-keywords-regexp . font-lock-warning-face)
 
      ;; declaration
@@ -269,7 +283,7 @@ Optional argument PATH: project path."
           (string= parent curdir)
           (string= parent (file-name-as-directory (getenv "HOME")))
           (and (>= (length parent-basename) 10)
-                 (string= (substring parent-basename 0 10) "smb-share:"))
+            (string= (substring parent-basename 0 10) "smb-share:"))
           (modern-sh-project-root-p curdir)) ;
       curdir                                 ;
       (modern-sh-project-root parent))))

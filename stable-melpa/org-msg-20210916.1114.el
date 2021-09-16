@@ -5,9 +5,9 @@
 ;; Author: Jérémy Compostella <jeremy.compostella@gmail.com>
 ;; Created: January 2018
 ;; Keywords: extensions mail
-;; Package-Commit: 599e8b056c30e84d584aa54dd7c85339cdb9dc43
+;; Package-Commit: 77f5911b7d390a069104db20be86293506ffbff2
 ;; Homepage: https://github.com/jeremy-compostella/org-msg
-;; Package-Version: 20210901.1630
+;; Package-Version: 20210916.1114
 ;; Package-X-Original-Version: 3.9
 ;; Package-Requires: ((emacs "24.4") (htmlize "1.54"))
 
@@ -1256,6 +1256,7 @@ MML tags."
   (unless (org-msg-message-fetch-field "subject")
     (org-msg-post-setup args)))
 
+(defalias 'org-msg-send-notmuch 'notmuch-mua-send)
 (defalias 'org-msg-send-and-exit-notmuch 'notmuch-mua-send-and-exit)
 
 (defun org-msg-sanity-check ()
@@ -1276,10 +1277,13 @@ to proceed?")
 (defun org-msg-ctrl-c-ctrl-c ()
   "Send message like `message-send-and-exit'.
 If the current buffer is OrgMsg buffer and OrgMsg is enabled (see
-`org-msg-toggle'), it calls `message-send-and-exit'."
+`org-msg-toggle'), it calls `message-send-and-exit'. With the
+universal prefix argument, it calls `message-send'."
   (when (eq major-mode 'org-msg-edit-mode)
     (org-msg-sanity-check)
-    (org-msg-mua-call 'send-and-exit 'message-send-and-exit)))
+    (if current-prefix-arg
+	(org-msg-mua-call 'send 'message-send)
+      (org-msg-mua-call 'send-and-exit 'message-send-and-exit))))
 
 (defun org-msg-tab ()
   "Complete names or Org mode visibility cycle.
