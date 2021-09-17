@@ -4,8 +4,8 @@
 ;; Maintainer: Karthik Chikmagalur <karthik.chikmagalur@gmail.com>
 ;; Created: 2021
 ;; Version: 0.1
-;; Package-Version: 20210820.339
-;; Package-Commit: 45a9d51457e9e532293f60a59c84409bd30f840b
+;; Package-Version: 20210917.435
+;; Package-Commit: d3bb96abb5ccca29f4b04c6f623818386167a2b2
 ;; Package-Requires: ((emacs "26.1") (consult "0.9") (project "0.6.0"))
 ;; Keywords: convenience
 ;; Homepage: https://github.com/karthink/consult-dir
@@ -140,10 +140,13 @@ arguments and return a list of directories."
   (bookmark-maybe-load-default-file)
   (let ((file-narrow ?f))
     (thread-last bookmark-alist
+      (cl-remove-if     (lambda (cand) (bookmark-get-handler cand)))
       (cl-remove-if-not (lambda (cand)
                           (let ((bm (bookmark-get-bookmark-record cand)))
                             (when-let ((file (alist-get 'filename bm)))
-                              (string-suffix-p "/" file)))))
+                              (if (file-remote-p file)
+                                  (string-suffix-p "/" file)
+                                (file-directory-p file))))))
       (mapcar (lambda (cand) (propertize (car cand) 'consult--type file-narrow))))))
 
 (defun consult-dir-project-dirs ()

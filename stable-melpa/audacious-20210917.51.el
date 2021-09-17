@@ -4,8 +4,8 @@
 
 ;; Author: Hitoshi Uchida <hitoshi.uchida@gmail.com>
 ;; Version: 1.0
-;; Package-Version: 20210911.729
-;; Package-Commit: 2b2e675642984dbb15acc4c17ab0a87a5a61e831
+;; Package-Version: 20210917.51
+;; Package-Commit: 65c37f12a5c774a0ae434beee27ff7737006dd2f
 ;; Package-Requires: ((helm "3.6.2") (emacs "24.4"))
 ;; URL: https://github.com/shishimaru/audacious.el
 
@@ -65,13 +65,13 @@
   "Increase the volume by 10%."
   (interactive)
   (call-process audacious-command nil nil nil "--set-volume" "+10%")
-  (message "%s" (audacious-delete-newline (shell-command-to-string "audtool --get-volume"))))
+  (message "%s" (string-trim (shell-command-to-string "audtool --get-volume"))))
 
 (defun audacious-volume-down ()
   "Decrease the volume by 10%."
   (interactive)
   (call-process audacious-command nil nil nil "--set-volume" "-10%")
-  (message "%s" (audacious-delete-newline (shell-command-to-string "audtool --get-volume"))))
+  (message "%s" (string-trim (shell-command-to-string "audtool --get-volume"))))
 
 (defun audacious-play ()
   "Start to play."
@@ -96,7 +96,7 @@
 (defun audacious-status ()
   "Show the current status of audacious."
   (interactive)
-  (message "%s" (audacious-delete-newline (shell-command-to-string "audtool --playback-status"))))
+  (message "%s" (string-trim (shell-command-to-string "audtool --playback-status"))))
 
 (defun audacious-song-next ()
   "Play the next song in the current playlist."
@@ -117,7 +117,7 @@
   (interactive)
   (dolist (line (split-string (shell-command-to-string "audtool --playlist-display") "\n"))
     (if (string-match-p (regexp-quote "|") line)
-        (setq audacious-msg (concat audacious-msg (concat line "\n")))))
+        (setq audacious-msg (concat audacious-msg line "\n"))))
   (setq audacious-song-position (read-string (concat audacious-msg "Song No.: ")))
   (if (audacious-string-integer-p audacious-song-position)
     (progn
@@ -160,11 +160,11 @@
 (defun audacious-song-show-current-info ()
   "Show information of the current song."
   (interactive)
-  (setq audacious-playlist-position (audacious-delete-newline (shell-command-to-string "audtool --playlist-position")))
-  (setq audacious-playlist-length (audacious-delete-newline (shell-command-to-string "audtool --playlist-length")))
-  (setq audacious-song-title (audacious-delete-newline (shell-command-to-string "audtool --current-song")))
-  (setq audacious-song-position (audacious-delete-newline (shell-command-to-string "audtool --current-song-output-length")))
-  (setq audacious-song-length (audacious-delete-newline (shell-command-to-string "audtool --current-song-length")))
+  (setq audacious-playlist-position (string-trim (shell-command-to-string "audtool --playlist-position")))
+  (setq audacious-playlist-length (string-trim (shell-command-to-string "audtool --playlist-length")))
+  (setq audacious-song-title (string-trim (shell-command-to-string "audtool --current-song")))
+  (setq audacious-song-position (string-trim (shell-command-to-string "audtool --current-song-output-length")))
+  (setq audacious-song-length (string-trim (shell-command-to-string "audtool --current-song-length")))
   (message "[%s/%s]: %s [%s / %s]" audacious-playlist-position audacious-playlist-length audacious-song-title audacious-song-position audacious-song-length))
 
 (defun audacious-random-toggle ()
@@ -189,15 +189,15 @@
   (setq audacious-msg "")
   (dolist (line (split-string (shell-command-to-string "audtool --playlist-display") "\n"))
     (if (string-match-p (regexp-quote "|") line)
-        (setq audacious-msg (concat audacious-msg (concat line "\n")))))
+        (setq audacious-msg (concat audacious-msg line "\n"))))
   (message "%s" audacious-msg))
 
 (defun audacious-playlist-show-current-info ()
   "Show the name of the current playlist."
   (interactive)
-  (setq audacious-playlist-name (audacious-delete-newline (shell-command-to-string "audtool --current-playlist-name")))
-  (setq audacious-playlist-position (audacious-delete-newline (shell-command-to-string "audtool --current-playlist")))
-  (setq audacious-playlist-length (audacious-delete-newline (shell-command-to-string "audtool --number-of-playlists")))
+  (setq audacious-playlist-name (string-trim (shell-command-to-string "audtool --current-playlist-name")))
+  (setq audacious-playlist-position (string-trim (shell-command-to-string "audtool --current-playlist")))
+  (setq audacious-playlist-length (string-trim (shell-command-to-string "audtool --number-of-playlists")))
   (message "[%s/%s] \"%s\"" audacious-playlist-position audacious-playlist-length audacious-playlist-name))
 
 (defun audacious-playlist--goto (num)
@@ -210,50 +210,43 @@
 (defun audacious-playlist-goto ()
   "Select a playlist with an inputted number."
   (interactive)
-  (setq audacious-playlist-length (audacious-delete-newline (shell-command-to-string "audtool --number-of-playlists")))
+  (setq audacious-playlist-length (string-trim (shell-command-to-string "audtool --number-of-playlists")))
   (setq audacious-playlist-position (read-string (format "Playlist No. [1 - %s]: " audacious-playlist-length)))
-  (if (audacious-string-integer-p audacious-playlist-position)
-    (progn
-      (call-process audacious-command nil nil nil "--set-current-playlist" audacious-playlist-position)
-      (sleep-for 0 20)
-      (call-process audacious-command nil nil nil "--play-current-playlist")
-      (audacious-playlist-show-current-info))
-    (message "\"%s\" is not number." audacious-playlist-position)))
+  (if (not (audacious-string-integer-p audacious-playlist-position))
+      (message "\"%s\" is not number." audacious-playlist-position)
+    (call-process audacious-command nil nil nil "--set-current-playlist" audacious-playlist-position)
+    (sleep-for 0 20)
+    (call-process audacious-command nil nil nil "--play-current-playlist")
+    (audacious-playlist-show-current-info)))
 
 (defun audacious-playlist-next ()
   "Select a next playlist."
   (interactive)
-  (setq audacious-playlist-name (audacious-delete-newline (shell-command-to-string "audtool --current-playlist-name")))
-  (setq audacious-playlist-position (string-to-number (audacious-delete-newline (shell-command-to-string "audtool --current-playlist"))))
-  (setq audacious-playlist-length (string-to-number (audacious-delete-newline (shell-command-to-string "audtool --number-of-playlists"))))
+  (setq audacious-playlist-name (string-trim (shell-command-to-string "audtool --current-playlist-name")))
+  (setq audacious-playlist-position (string-to-number (string-trim (shell-command-to-string "audtool --current-playlist"))))
+  (setq audacious-playlist-length (string-to-number (string-trim (shell-command-to-string "audtool --number-of-playlists"))))
 
   (let ((next-playlist-position (+ audacious-playlist-position 1)))
-    (if (<= next-playlist-position audacious-playlist-length)
-        (progn
-          (audacious-playlist--goto (number-to-string next-playlist-position))
-          (message "[%s/%s] \"%s\"" audacious-playlist-position audacious-playlist-length audacious-playlist-name)
-          (sit-for 2)
-          (audacious-song-show-current-info))
-      (message "Last playlist"))))
+    (if (> next-playlist-position audacious-playlist-length)
+        (message "Last playlist")
+      (audacious-playlist--goto (number-to-string next-playlist-position))
+      (message "[%s/%s] \"%s\"" audacious-playlist-position audacious-playlist-length audacious-playlist-name)
+      (sit-for 2)
+      (audacious-song-show-current-info))))
 
 (defun audacious-playlist-prev ()
   "Select a previous playlist."
   (interactive)
-  (setq audacious-playlist-name (audacious-delete-newline (shell-command-to-string "audtool --current-playlist-name")))
-  (setq audacious-playlist-position (string-to-number (audacious-delete-newline (shell-command-to-string "audtool --current-playlist"))))
-  (setq audacious-playlist-length (string-to-number (audacious-delete-newline (shell-command-to-string "audtool --number-of-playlists"))))
+  (setq audacious-playlist-name (string-trim (shell-command-to-string "audtool --current-playlist-name")))
+  (setq audacious-playlist-position (string-to-number (string-trim (shell-command-to-string "audtool --current-playlist"))))
+  (setq audacious-playlist-length (string-to-number (string-trim (shell-command-to-string "audtool --number-of-playlists"))))
   (let ((next-playlist-position (- audacious-playlist-position 1)))
-    (if (>= next-playlist-position 1)
-        (progn
-          (audacious-playlist--goto (number-to-string next-playlist-position))
-          (message "[%s/%s] \"%s\"" next-playlist-position audacious-playlist-length audacious-playlist-name)
-          (sit-for 2)
-          (audacious-song-show-current-info))
-      (message "First playlist"))))
-
-(defun audacious-delete-newline (str)
-  "Delete the trailing line break from the STR."
-  (replace-regexp-in-string "\n$" "" str))
+    (if (< next-playlist-position 1)
+        (message "First playlist")
+      (audacious-playlist--goto (number-to-string next-playlist-position))
+      (message "[%s/%s] \"%s\"" next-playlist-position audacious-playlist-length audacious-playlist-name)
+      (sit-for 2)
+      (audacious-song-show-current-info))))
 
 (defun audacious-string-integer-p (string)
   "Test the STRING is number or not."
