@@ -4,8 +4,8 @@
 
 ;; Authors: Damon Kwok <damon-kwok@outlook.com>
 ;; Version: 0.0.1
-;; Package-Version: 20210916.810
-;; Package-Commit: 4468d89ff8977bfd979fa7032e473c22211f84bb
+;; Package-Version: 20210917.748
+;; Package-Commit: 1905cc0c5fe7a306abb4e862c36f00471ce9d0cf
 ;; URL: https://github.com/damon-kwok/modern-sh
 ;; Keywords: languages programming
 ;; Package-Requires: ((emacs "25.1") (hydra "0.15.0") (eval-in-repl "0.9.7"))
@@ -63,14 +63,14 @@
   "Modern shell declaration keywords.")
 
 (defconst modern-sh-preprocessor-keywords
-  '("source" "eval"                      ;
-     "emacs" "em" "vi" "vim" "nano" "ed" ;
+  '("emacs" "em" "vi" "vim" "nano" "ed" ;
      "sh" "bash" "zsh" "csh" "ksh" "fish" "pwsh")
   "Modern shell preprocessor keywords.")
 
 (defconst modern-sh-careful-keywords
   '("return" "break" "continue"         ;
-     "export" "readonly" "alias" "unset" "shift")
+     "source" "eval" "export"           ;
+     "readonly" "alias" "unset" "shift")
   "Modern shell language careful keywords.")
 
 (defconst modern-sh-builtin-keywords

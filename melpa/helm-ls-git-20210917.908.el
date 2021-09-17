@@ -3,8 +3,8 @@
 ;; Copyright (C) 2012 ~ 2015 Thierry Volpiatto <thierry.volpiatto@gmail.com>
 
 ;; Package-Requires: ((helm "1.7.8"))
-;; Package-Version: 20210916.1940
-;; Package-Commit: 5ba751faf0fc529f4a561bb13d84849cee6092db
+;; Package-Version: 20210917.908
+;; Package-Commit: b21fa9d5f7b4ed1d2bf754db8fa749c4fad1072b
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -320,7 +320,7 @@ See docstring of `helm-ls-git-ls-switches'.
               (remove "-o" helm-ls-git-ls-switches)
               (helm-append-at-nth helm-ls-git-ls-switches "-o" 1)))
     (helm-force-update)))
-(put 'helm-ls-git-ls-switches 'helm-only t)
+(put 'helm-ls-git-ls-files-show-others 'no-helm-mx t)
 
 (cl-defun helm-ls-git-root-dir (&optional (directory default-directory))
   (locate-dominating-file directory ".git"))
@@ -435,7 +435,31 @@ See docstring of `helm-ls-git-ls-switches'.
                            (funcall helm-ls-git-status-command
                                     (helm-default-directory)))))))
 
+(defun helm-ls-git-revert-buffers-in-project ()
+  (cl-loop for buf in (helm-browse-project-get-buffers (helm-ls-git-root-dir))
+           when (buffer-file-name (get-buffer buf))
+           do (with-current-buffer buf (revert-buffer nil t))))
+
+(defun helm-ls-git-diff (candidate)
+  (let ((default-directory
+         (expand-file-name (file-name-directory candidate)))
+        (win (get-buffer-window "*vc-diff*" 'visible)))
+    (if (and win
+             (eq last-command 'helm-execute-persistent-action))
+        (with-helm-window
+          (kill-buffer "*vc-diff*")
+          (if (and helm-persistent-action-display-window
+                   (window-dedicated-p (next-window win 1)))
+              (delete-window helm-persistent-action-display-window)
+            (set-window-buffer win helm-current-buffer)))
+      (when (buffer-live-p (get-buffer "*vc-diff*"))
+        (kill-buffer "*vc-diff*"))
+      (vc-git-diff (helm-marked-candidates))
+      (pop-to-buffer "*vc-diff*")
+      (diff-mode))))
 
+;;; Git grep
+;;
 (defun helm-ls-git-grep (_candidate)
   (let* ((helm-grep-default-command helm-ls-git-grep-command)
          helm-grep-default-recurse-command
@@ -456,8 +480,9 @@ See docstring of `helm-ls-git-ls-switches'.
   (with-helm-alive-p
     (helm-exit-and-execute-action 'helm-ls-git-grep)))
 (put 'helm-ls-git-run-grep 'no-helm-mx t)
-
 
+;;; Git log
+;;
 (defun helm-ls-git-search-log (_candidate)
   (let* ((query (helm-read-string "Search log: "))
          (coms (if helm-current-prefix-arg
@@ -471,9 +496,6 @@ See docstring of `helm-ls-git-ls-switches'.
   (goto-char (point-min))
   (diff-mode))
 
-
-;;; Git log
-;;
 (defun helm-ls-git-log (&optional branch num)
   (let* ((commits-number (if num
                              (number-to-string num)
@@ -611,7 +633,7 @@ See docstring of `helm-ls-git-ls-switches'.
   (interactive)
   (with-helm-alive-p
     (helm-exit-and-execute-action #'helm-ls-git-show-log)))
-(put 'helm-ls-git-log-show-commit 'no-helm-mx t)
+(put 'helm-ls-git-run-show-log 'no-helm-mx t)
 
 
 ;;; Git branch basic management
@@ -646,7 +668,7 @@ See docstring of `helm-ls-git-ls-switches'.
 (defun helm-ls-git-checkout (candidate)
   (let ((default-directory (helm-default-directory)))
     (if (and helm-ls-git-auto-checkout
-             (helm-ls-git-modified-p))
+             (helm-ls-git-modified-p t))
         (helm-ls-git-stash-1 "")
       (cl-assert (not (helm-ls-git-modified-p t))
                  nil "Please commit or stash your changes before proceeding"))
@@ -663,7 +685,8 @@ See docstring of `helm-ls-git-ls-switches'.
                                 nil nil nil
                                 switches)))
             (if (= status 0)
-                (message "Switched to %s branch" real)
+                (progn (message "Switched to %s branch" real)
+                       (helm-ls-git-revert-buffers-in-project))
               (error "Process exit with non zero status"))))))))
 
 (defun helm-ls-git-branches-create (candidate)
@@ -689,7 +712,8 @@ See docstring of `helm-ls-git-ls-switches'.
           (current (helm-ls-git--branch)))
       (when (y-or-n-p (format "Merge branch %s into %s?" branch current))
         (if (= (process-file "git" nil nil nil "merge" branch) 0)
-            (message "Branch %s merged successfully into %s" branch current)
+            (progn (message "Branch %s merged successfully into %s" branch current)
+                   (helm-ls-git-revert-buffers-in-project))
           (message "failed to merge branch %s" branch))))))
 
 (defvar helm-ls-git-create-branch-source
@@ -724,7 +748,7 @@ See docstring of `helm-ls-git-ls-switches'.
                                   (make-string (- maxlen (length c)) ? )
                                   log)
                         (format "%s: %s%s"
-                                (propertize c 'face '((:foreground "red")))
+                                (propertize c 'face 'helm-ls-git-branches-name)
                                 (make-string (- maxlen (length c)) ? )
                                 log))
            collect (cons disp c)))
@@ -775,11 +799,6 @@ See docstring of `helm-ls-git-ls-switches'.
 (defun helm-ls-git-get-stash-name (candidate)
   (when (string-match "stash@[{][0-9]+[}]" candidate)
     (match-string 0 candidate)))
-
-(defun helm-ls-git-revert-buffers-in-project ()
-  (cl-loop for buf in (helm-browse-project-get-buffers (helm-ls-git-root-dir))
-           when (buffer-file-name (get-buffer buf))
-           do (with-current-buffer buf (revert-buffer nil t))))
 
 (defun helm-ls-git-stash-show (candidate)
   (if (and (eq last-command 'helm-execute-persistent-action)
@@ -853,6 +872,7 @@ See docstring of `helm-ls-git-ls-switches'.
               ("Pop" . helm-ls-git-stash-pop)
               ("Drop" . helm-ls-git-stash-drop-marked))))
 
+;;; Git status
 (defun helm-ls-git-status (&optional ignore-untracked)
   (when (and helm-ls-git-log-file
              (file-exists-p helm-ls-git-log-file))
@@ -998,6 +1018,9 @@ See docstring of `helm-ls-git-ls-switches'.
                                    . helm-ls-git-stage-marked-and-commit))))
           (t actions))))
 
+
+;;; Stage and commit
+;;
 (defun helm-ls-git-stage-files (_candidate)
   "Stage marked files."
   (require 'magit-apply nil t)
@@ -1038,60 +1061,6 @@ See docstring of `helm-ls-git-ls-switches'.
           (magit-commit-extend))
       (process-file "git" nil nil nil "commit" "--amend" "--no-edit"))))
 
-(defun helm-ls-git-with-editor (&rest args)
-  "Binds GIT_EDITOR env var to emacsclient and run git with ARGS."
-  (require 'server)
-  (let ((old-editor (getenv "GIT_EDITOR"))
-        (default-directory (expand-file-name
-                            (helm-ls-git-root-dir
-                             (helm-default-directory)))))
-    (setenv "GIT_EDITOR" "emacsclient $@")
-    (unless (server-running-p)
-      (server-start))
-    (unwind-protect
-        (progn
-          (add-hook 'find-file-hook 'helm-ls-git-with-editor-setup)
-          (add-hook 'server-done-hook 'helm-ls-git-with-editor-done)
-          (apply #'start-file-process "git" "*helm-ls-git log*" "git" args)
-      (setenv "GIT_EDITOR" old-editor)))))
-
-(defun helm-ls-git-with-editor-done ()
-  (remove-hook 'find-file-hook 'helm-ls-git-with-editor-setup))
-
-(defun helm-ls-git-server-edit ()
-  (interactive)
-  ;; Prevent server asking to save file when done.
-  (helm-aif buffer-file-name
-      (save-buffer it))
-  (server-edit))
-
-;; Same as `server-edit-abort' from emacs-28 but kill edit buffer as well.
-(defun helm-ls-git-server-edit-abort ()
-  "Abort editing the current client buffer."
-  (interactive)
-  (if server-clients
-      (progn
-        (mapc (lambda (proc)
-                (server-send-string
-                 proc (concat "-error "
-                              (server-quote-arg "Aborted by the user"))))
-              server-clients)
-        (kill-buffer))
-    (message "This buffer has no clients")))
-
-(defun helm-ls-git-with-editor-setup ()
-  (let ((diff-default-read-only nil))
-    (diff-mode))
-  (local-set-key (kbd "C-c C-c") 'helm-ls-git-server-edit)
-  (local-set-key (kbd "C-c C-k") 'helm-ls-git-server-edit-abort)
-  (setq fill-column 70)
-  (auto-fill-mode 1)
-  (run-at-time
-   0.1 nil
-   (lambda ()
-     (message
-      "When done with a buffer, type `C-c C-c', to abort type `C-c C-k'"))))
-
 (defun helm-ls-git-amend-commit (_candidate)
   (require 'magit-commit nil t)
   (let ((default-directory (expand-file-name
@@ -1125,24 +1094,67 @@ See docstring of `helm-ls-git-ls-switches'.
   (cl-loop for f in files
            do (magit-unstage-file f)))
 
-(defun helm-ls-git-diff (candidate)
-  (let ((default-directory
-         (expand-file-name (file-name-directory candidate)))
-        (win (get-buffer-window "*vc-diff*" 'visible)))
-    (if (and win
-             (eq last-command 'helm-execute-persistent-action))
-        (with-helm-window
-          (kill-buffer "*vc-diff*")
-          (if (and helm-persistent-action-display-window
-                   (window-dedicated-p (next-window win 1)))
-              (delete-window helm-persistent-action-display-window)
-            (set-window-buffer win helm-current-buffer)))
-      (when (buffer-live-p (get-buffer "*vc-diff*"))
-        (kill-buffer "*vc-diff*"))
-      (vc-git-diff (helm-marked-candidates))
-      (pop-to-buffer "*vc-diff*")
-      (diff-mode))))
+
+;;; Emacsclient as git editor
+;;
+(defun helm-ls-git-with-editor (&rest args)
+  "Binds GIT_EDITOR env var to emacsclient and run git with ARGS."
+  (require 'server)
+  (let ((old-editor (getenv "GIT_EDITOR"))
+        (default-directory (expand-file-name
+                            (helm-ls-git-root-dir
+                             (helm-default-directory)))))
+    (setenv "GIT_EDITOR" "emacsclient $@")
+    (unless (server-running-p)
+      (server-start))
+    (unwind-protect
+        (progn
+          (add-hook 'find-file-hook 'helm-ls-git-with-editor-setup)
+          (add-hook 'server-done-hook 'helm-ls-git-with-editor-done)
+          (apply #'start-file-process "git" "*helm-ls-git log*" "git" args)
+      (setenv "GIT_EDITOR" old-editor)))))
 
+(defun helm-ls-git-with-editor-done ()
+  (remove-hook 'find-file-hook 'helm-ls-git-with-editor-setup))
+
+(defun helm-ls-git-server-edit ()
+  (interactive)
+  (cl-assert server-clients nil "No server editing buffers exist")
+  ;; Prevent server asking to save file when done.
+  (helm-aif buffer-file-name
+      (save-buffer it))
+  (server-edit))
+
+;; Same as `server-edit-abort' from emacs-28 but kill edit buffer as well.
+(defun helm-ls-git-server-edit-abort ()
+  "Abort editing the current client buffer."
+  (interactive)
+  (if server-clients
+      (progn
+        (mapc (lambda (proc)
+                (server-send-string
+                 proc (concat "-error "
+                              (server-quote-arg "Aborted by the user"))))
+              server-clients)
+        (kill-buffer))
+    (message "This buffer has no clients")))
+
+(defun helm-ls-git-with-editor-setup ()
+  (let ((diff-default-read-only nil))
+    (diff-mode))
+  (local-set-key (kbd "C-c C-c") 'helm-ls-git-server-edit)
+  (local-set-key (kbd "C-c C-k") 'helm-ls-git-server-edit-abort)
+  (setq fill-column 70)
+  (auto-fill-mode 1)
+  (run-at-time
+   0.1 nil
+   (lambda ()
+     (message
+      "When done with a buffer, type `C-c C-c', to abort type `C-c C-k'"))))
+
+
+;;; Build sources
+;;
 ;; Overhide the actions of helm-type-buffer.
 (cl-defmethod helm--setup-source :after ((source helm-source-buffers))
   (let ((name (slot-value source 'name)))
@@ -1190,7 +1202,7 @@ Do nothing when `helm-source-ls-git-buffers' is not member of
 
 
 ;;;###autoload
-(defun helm-ls-git-ls (&optional arg)
+(defun helm-ls-git (&optional arg)
   (interactive "p")
   (let ((helm-ff-default-directory
          (or helm-ff-default-directory
@@ -1210,6 +1222,10 @@ Do nothing when `helm-source-ls-git-buffers' is not member of
           :ff-transformer-show-only-basename nil
           :truncate-lines helm-buffers-truncate-lines
           :buffer "*helm lsgit*")))
+
+(defalias 'helm-ls-git-ls 'helm-ls-git)
+(make-obsolete 'helm-ls-git-ls 'helm-ls-git "1.9.2")
+(put 'helm-ls-git-ls 'no-helm-mx t)
 
 
 (provide 'helm-ls-git)

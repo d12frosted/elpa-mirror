@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
-;; Package-Version: 20210824.1659
-;; Package-Commit: 06d4d9ee6dd79941d26798cc9754b9c9be87e932
+;; Package-Version: 20210917.651
+;; Package-Commit: dfaf3e4a80d064f2a138b0a4b6a7e85263168fbf
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.16"))
 ;; Keywords: languages util
@@ -1140,6 +1140,7 @@ Consult the existing formatters for examples of BODY."
    (format-all--buffer-hard-ruby
     "standard" '(0 1) nil nil
     executable
+    "--stderr"
     "--fix"
     "--stdin" (or (buffer-file-name) (buffer-name)))))
 

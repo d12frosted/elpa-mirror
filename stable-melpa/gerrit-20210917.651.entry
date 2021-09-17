@@ -1,5 +1,5 @@
 (gerrit .
-	[(20210916 2108)
+	[(20210917 651)
 	 ((emacs
 	   (25 1))
 	  (hydra
@@ -11,7 +11,7 @@
 	  (dash
 	   (0 2 15)))
 	 "Gerrit client" tar
-	 ((:commit . "396f6a2595ec88d10bdb33856eb1d2d071ef5290")
+	 ((:commit . "5288c5cf88d6a37707bc0e5bf97546b9cce3d84b")
 	  (:authors
 	   ("Thomas Hisch" . "t.hisch@gmail.com"))
 	  (:maintainer "Thomas Hisch" . "t.hisch@gmail.com")
