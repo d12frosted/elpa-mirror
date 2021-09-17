@@ -12,6 +12,8 @@ Variables
 - `org-ssh-header' An optional header that will be added to the
   beginning of the export. This can be used for comments or rules
   that apply to all hosts.
+- `org-ssh-export-suffix' The suffix that will be added to exported file.
+  Defaults to ".ssh_config".
 
 Usage
 Export headings with specific properties as entries in an SSH

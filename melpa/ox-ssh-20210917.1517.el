@@ -4,8 +4,8 @@
 
 ;; Author: Dante Catalfamo
 ;; Version: 2.0
-;; Package-Version: 20201217.317
-;; Package-Commit: 1b39849e3a315de95543eb3cf69c42fa33a8f5cd
+;; Package-Version: 20210917.1517
+;; Package-Commit: be3b39160da6ae37b1f1cd175ed854ac41d1cb63
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: outlines, org, ssh
 ;; Homepage: https://github.com/dantecatalfamo/ox-ssh
@@ -41,6 +41,8 @@
 ;; - `org-ssh-header' An optional header that will be added to the
 ;;   beginning of the export. This can be used for comments or rules
 ;;   that apply to all hosts.
+;; - `org-ssh-export-suffix' The suffix that will be added to exported file.
+;;   Defaults to ".ssh_config".
 ;;
 ;; Usage
 ;; Export headings with specific properties as entries in an SSH
@@ -156,6 +158,11 @@
   :type 'text
   :group 'org-export-ssh)
 
+(defcustom org-ssh-export-suffix ".ssh_config"
+  "Suffix added to exported file."
+  :type 'text
+  :group 'org-export-ssh)
+
 (defun org-ssh--user-config ()
   "Return the location of the user's SSH config."
   (expand-file-name (concat (file-name-as-directory ".ssh")
@@ -178,7 +185,7 @@
   "Transform HEADLINE and CONTENTS into SSH config host."
   (let* ((hostname (org-element-property :HOSTNAME headline))
          (ip (org-element-property :IP headline))
-         (host (org-element-property :raw-value headline))
+         (host (or (org-element-property :HOST_OVERRIDE headline) (org-element-property :raw-value headline)))
          (addr (or ip hostname)))
     (if addr
         (let ((ssh-add-keys-to-agent (org-element-property :SSH_ADD_KEYS_TO_AGENT headline))
@@ -516,7 +523,7 @@ still inferior to file-local settings.
 
 Return output file's name."
   (interactive)
-  (let ((outfile (org-export-output-file-name ".ssh_config" subtreep)))
+  (let ((outfile (org-export-output-file-name org-ssh-export-suffix subtreep)))
     (org-export-to-file 'ssh outfile async subtreep visible-only body-only ext-plist)))
 
 ;;;###autoload
