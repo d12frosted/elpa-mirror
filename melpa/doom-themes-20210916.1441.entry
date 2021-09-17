@@ -1,0 +1,13 @@
+(doom-themes .
+	     [(20210916 1441)
+	      ((emacs
+		(25 1))
+	       (cl-lib
+		(0 5)))
+	      "an opinionated pack of modern color-themes" tar
+	      ((:commit . "3666dc9d8a9c409aa57617dfea08315c740a7005")
+	       (:authors
+		("Henrik Lissner <https://github.com/hlissner>"))
+	       (:maintainer "Henrik Lissner" . "henrik@lissner.net")
+	       (:keywords "custom themes" "faces")
+	       (:url . "https://github.com/hlissner/emacs-doom-themes"))])

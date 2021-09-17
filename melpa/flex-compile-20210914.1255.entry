@@ -1,0 +1,15 @@
+(flex-compile .
+	      [(20210914 1255)
+	       ((emacs
+		 (26 1))
+		(dash
+		 (2 17 0))
+		(buffer-manage
+		 (1 0)))
+	       "Run, evaluate and compile across many languages" tar
+	       ((:commit . "64f61ba1c113be38e4eae2a1fcee5596223c5d85")
+		(:authors
+		 ("Paul Landes"))
+		(:maintainer "Paul Landes")
+		(:keywords "compilation" "integration" "processes")
+		(:url . "https://github.com/plandes/flex-compile"))])
