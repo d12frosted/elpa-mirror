@@ -4,10 +4,10 @@ Source:  https://github.com/emacs-w3m/emacs-w3m.git
 
 Updating /mnt/store/melpa/working/w3m/
 Checking out origin/HEAD
-Checking out ef34cf7f806a726a53fcffa183280a325defbc54
+Checking out 3925d1c98338bdca35bbc489239a89ad1eee3d90
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/w3m/
-  to /tmp/w3mZYc1hf/w3m-20210906.347
+  to /tmp/w3myxI666/w3m-20210917.3
     bookmark-w3m.el -> bookmark-w3m.el
     mime-w3m.el -> mime-w3m.el
     w3m-antenna.el -> w3m-antenna.el
@@ -40,10 +40,12 @@ Copying files (->) and directories (=>)
   ! doc/emacs-w3m-ja.texi -> emacs-w3m-ja.texi
   ! doc/emacs-w3m.texi -> emacs-w3m.texi
     icons => icons
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3mZYc1hf/w3m-20210906.347/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3myxI666/w3m-20210917.3/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
+From https://github.com/emacs-w3m/emacs-w3m
+   ef34cf7f..3925d1c9  master     -> origin/master
 origin/HEAD set to master
-HEAD is now at ef34cf7f user-agents: bugfix, update, improve friendliness (PR#106)
-HEAD is now at ef34cf7f user-agents: bugfix, update, improve friendliness (PR#106)
+HEAD is now at 3925d1c9 Treat application/emacs-lisp as text/plain ([emacs-w3m:13845])
+HEAD is now at 3925d1c9 Treat application/emacs-lisp as text/plain ([emacs-w3m:13845])
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
@@ -52,11 +54,13 @@ HEAD is now at ef34cf7f user-agents: bugfix, update, improve friendliness (PR#10
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
 ")
-Created /tmp/w3mZYc1hf/w3m-20210906.347/emacs-w3m-ja.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mZYc1hf/w3m-20210906.347/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/w3myxI666/w3m-20210917.3/emacs-w3m-ja.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3myxI666/w3m-20210917.3/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
+From https://github.com/emacs-w3m/emacs-w3m
+   ef34cf7f..3925d1c9  master     -> origin/master
 origin/HEAD set to master
-HEAD is now at ef34cf7f user-agents: bugfix, update, improve friendliness (PR#106)
-HEAD is now at ef34cf7f user-agents: bugfix, update, improve friendliness (PR#106)
+HEAD is now at 3925d1c9 Treat application/emacs-lisp as text/plain ([emacs-w3m:13845])
+HEAD is now at 3925d1c9 Treat application/emacs-lisp as text/plain ([emacs-w3m:13845])
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
@@ -64,12 +68,14 @@ HEAD is now at ef34cf7f user-agents: bugfix, update, improve friendliness (PR#10
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mZYc1hf/w3m-20210906.347/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3myxI666/w3m-20210917.3/emacs-w3m-ja.info
 ")
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3mZYc1hf/w3m-20210906.347/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3myxI666/w3m-20210917.3/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
+From https://github.com/emacs-w3m/emacs-w3m
+   ef34cf7f..3925d1c9  master     -> origin/master
 origin/HEAD set to master
-HEAD is now at ef34cf7f user-agents: bugfix, update, improve friendliness (PR#106)
-HEAD is now at ef34cf7f user-agents: bugfix, update, improve friendliness (PR#106)
+HEAD is now at 3925d1c9 Treat application/emacs-lisp as text/plain ([emacs-w3m:13845])
+HEAD is now at 3925d1c9 Treat application/emacs-lisp as text/plain ([emacs-w3m:13845])
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
@@ -77,7 +83,7 @@ HEAD is now at ef34cf7f user-agents: bugfix, update, improve friendliness (PR#10
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mZYc1hf/w3m-20210906.347/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3myxI666/w3m-20210917.3/emacs-w3m-ja.info
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
@@ -85,11 +91,13 @@ install-info: No such file or directory for /tmp/w3mZYc1hf/w3m-20210906.347/emac
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
 ")
-Created /tmp/w3mZYc1hf/w3m-20210906.347/emacs-w3m.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mZYc1hf/w3m-20210906.347/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/w3myxI666/w3m-20210917.3/emacs-w3m.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3myxI666/w3m-20210917.3/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
+From https://github.com/emacs-w3m/emacs-w3m
+   ef34cf7f..3925d1c9  master     -> origin/master
 origin/HEAD set to master
-HEAD is now at ef34cf7f user-agents: bugfix, update, improve friendliness (PR#106)
-HEAD is now at ef34cf7f user-agents: bugfix, update, improve friendliness (PR#106)
+HEAD is now at 3925d1c9 Treat application/emacs-lisp as text/plain ([emacs-w3m:13845])
+HEAD is now at 3925d1c9 Treat application/emacs-lisp as text/plain ([emacs-w3m:13845])
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:8: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:57: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:59: warning: undefined flag: VERSION
@@ -97,95 +105,97 @@ HEAD is now at ef34cf7f user-agents: bugfix, update, improve friendliness (PR#10
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mZYc1hf/w3m-20210906.347/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3myxI666/w3m-20210917.3/emacs-w3m-ja.info
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:60: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mZYc1hf/w3m-20210906.347/emacs-w3m.info
+install-info: No such file or directory for /tmp/w3myxI666/w3m-20210917.3/emacs-w3m.info
 ")
-Created w3m-20210906.347.tar containing:
-  w3m-20210906.347/
-  w3m-20210906.347/bookmark-w3m.el
-  w3m-20210906.347/dir
-  w3m-20210906.347/icons/
-  w3m-20210906.347/icons/antenna-up.png
-  w3m-20210906.347/icons/antenna-up.xpm
-  w3m-20210906.347/icons/back-disabled.png
-  w3m-20210906.347/icons/back-disabled.xpm
-  w3m-20210906.347/icons/back-up.png
-  w3m-20210906.347/icons/back-up.xpm
-  w3m-20210906.347/icons/copy-up.png
-  w3m-20210906.347/icons/copy-up.xpm
-  w3m-20210906.347/icons/db-history-up.png
-  w3m-20210906.347/icons/db-history-up.xpm
-  w3m-20210906.347/icons/forward-disabled.png
-  w3m-20210906.347/icons/forward-disabled.xpm
-  w3m-20210906.347/icons/forward-up.png
-  w3m-20210906.347/icons/forward-up.xpm
-  w3m-20210906.347/icons/history-up.png
-  w3m-20210906.347/icons/history-up.xpm
-  w3m-20210906.347/icons/home-up.png
-  w3m-20210906.347/icons/home-up.xpm
-  w3m-20210906.347/icons/image-up.png
-  w3m-20210906.347/icons/image-up.xpm
-  w3m-20210906.347/icons/open-up.png
-  w3m-20210906.347/icons/open-up.xpm
-  w3m-20210906.347/icons/parent-disabled.png
-  w3m-20210906.347/icons/parent-disabled.xpm
-  w3m-20210906.347/icons/parent-up.png
-  w3m-20210906.347/icons/parent-up.xpm
-  w3m-20210906.347/icons/reload-up.png
-  w3m-20210906.347/icons/reload-up.xpm
-  w3m-20210906.347/icons/save-up.png
-  w3m-20210906.347/icons/save-up.xpm
-  w3m-20210906.347/icons/search-up.png
-  w3m-20210906.347/icons/search-up.xpm
-  w3m-20210906.347/icons/spinner.gif
-  w3m-20210906.347/icons/state-00.png
-  w3m-20210906.347/icons/state-00.xpm
-  w3m-20210906.347/icons/state-01.png
-  w3m-20210906.347/icons/state-01.xpm
-  w3m-20210906.347/icons/state-10.png
-  w3m-20210906.347/icons/state-10.xpm
-  w3m-20210906.347/icons/state-11.png
-  w3m-20210906.347/icons/state-11.xpm
-  w3m-20210906.347/icons/weather-up.png
-  w3m-20210906.347/icons/weather-up.xpm
-  w3m-20210906.347/mime-w3m.el
-  w3m-20210906.347/w3m-antenna.el
-  w3m-20210906.347/w3m-bookmark.el
-  w3m-20210906.347/w3m-bug.el
-  w3m-20210906.347/w3m-cookie.el
-  w3m-20210906.347/w3m-dtree.el
-  w3m-20210906.347/w3m-ems.el
-  w3m-20210906.347/w3m-favicon.el
-  w3m-20210906.347/w3m-fb.el
-  w3m-20210906.347/w3m-filter.el
-  w3m-20210906.347/w3m-form.el
-  w3m-20210906.347/w3m-hist.el
-  w3m-20210906.347/w3m-image.el
-  w3m-20210906.347/w3m-lnum.el
-  w3m-20210906.347/w3m-mail.el
-  w3m-20210906.347/w3m-namazu.el
-  w3m-20210906.347/w3m-perldoc.el
-  w3m-20210906.347/w3m-pkg.el
-  w3m-20210906.347/w3m-proc.el
-  w3m-20210906.347/w3m-rss.el
-  w3m-20210906.347/w3m-save.el
-  w3m-20210906.347/w3m-search.el
-  w3m-20210906.347/w3m-session.el
-  w3m-20210906.347/w3m-symbol.el
-  w3m-20210906.347/w3m-tabmenu.el
-  w3m-20210906.347/w3m-util.el
-  w3m-20210906.347/w3m-weather.el
-  w3m-20210906.347/w3m.el
-  w3m-20210906.347/w3mhack.el
-Built w3m in 49.879s, finished at 2021-09-16T22:24:27+0000
+Created w3m-20210917.3.tar containing:
+  w3m-20210917.3/
+  w3m-20210917.3/bookmark-w3m.el
+  w3m-20210917.3/dir
+  w3m-20210917.3/icons/
+  w3m-20210917.3/icons/antenna-up.png
+  w3m-20210917.3/icons/antenna-up.xpm
+  w3m-20210917.3/icons/back-disabled.png
+  w3m-20210917.3/icons/back-disabled.xpm
+  w3m-20210917.3/icons/back-up.png
+  w3m-20210917.3/icons/back-up.xpm
+  w3m-20210917.3/icons/copy-up.png
+  w3m-20210917.3/icons/copy-up.xpm
+  w3m-20210917.3/icons/db-history-up.png
+  w3m-20210917.3/icons/db-history-up.xpm
+  w3m-20210917.3/icons/forward-disabled.png
+  w3m-20210917.3/icons/forward-disabled.xpm
+  w3m-20210917.3/icons/forward-up.png
+  w3m-20210917.3/icons/forward-up.xpm
+  w3m-20210917.3/icons/history-up.png
+  w3m-20210917.3/icons/history-up.xpm
+  w3m-20210917.3/icons/home-up.png
+  w3m-20210917.3/icons/home-up.xpm
+  w3m-20210917.3/icons/image-up.png
+  w3m-20210917.3/icons/image-up.xpm
+  w3m-20210917.3/icons/open-up.png
+  w3m-20210917.3/icons/open-up.xpm
+  w3m-20210917.3/icons/parent-disabled.png
+  w3m-20210917.3/icons/parent-disabled.xpm
+  w3m-20210917.3/icons/parent-up.png
+  w3m-20210917.3/icons/parent-up.xpm
+  w3m-20210917.3/icons/reload-up.png
+  w3m-20210917.3/icons/reload-up.xpm
+  w3m-20210917.3/icons/save-up.png
+  w3m-20210917.3/icons/save-up.xpm
+  w3m-20210917.3/icons/search-up.png
+  w3m-20210917.3/icons/search-up.xpm
+  w3m-20210917.3/icons/spinner.gif
+  w3m-20210917.3/icons/state-00.png
+  w3m-20210917.3/icons/state-00.xpm
+  w3m-20210917.3/icons/state-01.png
+  w3m-20210917.3/icons/state-01.xpm
+  w3m-20210917.3/icons/state-10.png
+  w3m-20210917.3/icons/state-10.xpm
+  w3m-20210917.3/icons/state-11.png
+  w3m-20210917.3/icons/state-11.xpm
+  w3m-20210917.3/icons/weather-up.png
+  w3m-20210917.3/icons/weather-up.xpm
+  w3m-20210917.3/mime-w3m.el
+  w3m-20210917.3/w3m-antenna.el
+  w3m-20210917.3/w3m-bookmark.el
+  w3m-20210917.3/w3m-bug.el
+  w3m-20210917.3/w3m-cookie.el
+  w3m-20210917.3/w3m-dtree.el
+  w3m-20210917.3/w3m-ems.el
+  w3m-20210917.3/w3m-favicon.el
+  w3m-20210917.3/w3m-fb.el
+  w3m-20210917.3/w3m-filter.el
+  w3m-20210917.3/w3m-form.el
+  w3m-20210917.3/w3m-hist.el
+  w3m-20210917.3/w3m-image.el
+  w3m-20210917.3/w3m-lnum.el
+  w3m-20210917.3/w3m-mail.el
+  w3m-20210917.3/w3m-namazu.el
+  w3m-20210917.3/w3m-perldoc.el
+  w3m-20210917.3/w3m-pkg.el
+  w3m-20210917.3/w3m-proc.el
+  w3m-20210917.3/w3m-rss.el
+  w3m-20210917.3/w3m-save.el
+  w3m-20210917.3/w3m-search.el
+  w3m-20210917.3/w3m-session.el
+  w3m-20210917.3/w3m-symbol.el
+  w3m-20210917.3/w3m-tabmenu.el
+  w3m-20210917.3/w3m-util.el
+  w3m-20210917.3/w3m-weather.el
+  w3m-20210917.3/w3m.el
+  w3m-20210917.3/w3mhack.el
+Built w3m in 58.197s, finished at 2021-09-17T01:57:32+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  179 Sep 16 22:24 packages/w3m-20210906.347.entry
 1.1M -rw-r--r-- 1 root root 1.1M Sep 16 22:24 packages/w3m-20210906.347.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 16 22:24 packages/w3m-badge.svg
-4.0K -rw-r--r-- 1 root root  380 Sep 16 22:24 packages/w3m-readme.txt
+4.0K -rw-r--r-- 1 root root  177 Sep 17 01:57 packages/w3m-20210917.3.entry
+1.1M -rw-r--r-- 1 root root 1.1M Sep 17 01:57 packages/w3m-20210917.3.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 17 01:57 packages/w3m-badge.svg
+4.0K -rw-r--r-- 1 root root  380 Sep 17 01:57 packages/w3m-readme.txt

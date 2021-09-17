@@ -2,9 +2,9 @@
 
 ;; Copyright (C) 2015, 2016, 2021 Free Software Foundation, Inc.
 ;; Author: Clément Pit-Claudel <clement.pitclaudel@live.com>
-;; Version: 0.1
-;; Package-Version: 20210914.2118
-;; Package-Commit: e09cc69fdd3064a9e49de193d04b37975e4476ce
+;; Version: 0.2
+;; Package-Version: 20210916.2303
+;; Package-Commit: c86fd0da1da197ea8fc2c99083e9702b444b5dfb
 ;; Keywords: convenience, lisp, tools
 ;; URL: https://github.com/cpitclaudel/easy-escape
 

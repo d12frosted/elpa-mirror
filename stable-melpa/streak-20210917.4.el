@@ -7,8 +7,8 @@
 ;; Created: June 18, 2021
 ;; Modified: September 9, 2021
 ;; Version: 2.1.0
-;; Package-Version: 20210910.54
-;; Package-Commit: 7f80f9759e8bdfdaff94bfae3c3740ad5a3665aa
+;; Package-Version: 20210917.4
+;; Package-Commit: 70e31b43cf7d1e1e390dc718702591cfc9ef5431
 ;; Keywords: calendar
 ;; Homepage: https://github.com/fosskers/streak
 ;; Package-Requires: ((emacs "27.1"))
@@ -29,6 +29,7 @@
 ;;; Code:
 
 (require 'xdg)
+(eval-when-compile (require 'subr-x))
 
 (defvar streak--streak-message nil
   "String representation of the current streak.")
