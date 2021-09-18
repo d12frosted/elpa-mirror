@@ -3,8 +3,8 @@
 ;; Copyright (C) 2012 ~ 2015 Thierry Volpiatto <thierry.volpiatto@gmail.com>
 
 ;; Package-Requires: ((helm "1.7.8"))
-;; Package-Version: 20210917.908
-;; Package-Commit: b21fa9d5f7b4ed1d2bf754db8fa749c4fad1072b
+;; Package-Version: 20210918.649
+;; Package-Commit: 2c2dbd23ab3dfe16513a81613473fbcc326cef72
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -853,7 +853,16 @@ See docstring of `helm-ls-git-ls-switches'.
 
 (defun helm-ls-git-stash-drop-marked (_candidate)
   (let ((mkd (helm-marked-candidates)))
-    (cl-loop for c in mkd do (helm-ls-git-stash-drop c))))
+    (cl-loop with sorted =
+             (sort mkd (lambda (s1 s2)
+                         (let ((n1 (and (string-match
+                                         "^stash@[{]\\([0-9]+\\)[}]" s1)
+                                        (match-string 1 s1)))
+                               (n2 (and (string-match
+                                         "^stash@[{]\\([0-9]+\\)[}]" s2)
+                                        (match-string 1 s2))))
+                           (string-greaterp n1 n2))))
+             for c in sorted do (helm-ls-git-stash-drop c))))
 
 (defun helm-ls-git-apply-patch (_candidate)
   (with-helm-default-directory (helm-default-directory)

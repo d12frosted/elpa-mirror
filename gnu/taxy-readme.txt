@@ -16,6 +16,8 @@ Helpful features include:
 
 +  Dynamic taxonomies :: Objects may be classified into hierarchies automatically defined at runtime based on their attributes.
 +  Reusable taxonomies :: Taxonomy definitions may be stored in variables and reused in other taxonomies' descendant groups.
++  Classification domain-specific language :: Easily define a custom DSL used to classify items dynamically (which can be extended by users).
++  Flexible table view :: Based on =magit-section=, with easily defined columns (also extendable by users).
 
 * Contents                                                         :noexport:
 :PROPERTIES:
@@ -408,8 +410,10 @@ Ah, now I understand.
 
 ** Applications
 
-Some example applications may be found in the [[file:examples/README.org][examples directory]]:
+Some example applications may be found in the [[file:examples/][examples directory]]:
 
++  Deffy shows top-level definitions and forms in an Elisp project or file:
+   [[images/deffy.png]]
 +  Diredy rearranges a Dired buffer into groups by file size and type:
    [[images/diredy.png]]
 +  Musicy shows a music library with tracks categorized by genre, artist, year, album, etc:
@@ -429,6 +433,7 @@ Some example applications may be found in the [[file:examples/README.org][exampl
 - [[#modifying-filled-taxys][Modifying filled taxys]]
 - [[#dynamic-taxys][Dynamic taxys]]
 - [[#magit-section][Magit section]]
+- [[#reference][Reference]]
 :END:
 
 A taxy is defined with the ~make-taxy~ constructor, like:
@@ -874,10 +879,65 @@ That shows a buffer like this:
 
 Note that while =taxy-magit-section.el= is installed with the =taxy= package, the =magit-section= package is not automatically installed with it.
 
+** Reference
+
+*** Functions
+
+- taxy-flatten (taxy) ::
+  Return a list of items in =taxy= and its sub-taxys.
+
+- taxy-emptied (taxy) ::
+  Return a copy of =taxy= without items.  Omits =taxy=’s items and those of its descendant taxys.  Useful when reusing taxy definitions.
+
+- taxy-fill (items taxy) ::
+  Fill =taxy= with =items= according to its definition.
+
+- taxy-make-take-function (keys aliases) ::
+  Return a taxy "take" function for =keys=.  Each of =keys= should be a function alias defined in =aliases=, or a list of such =key-fns= (recursively, ad infinitum, approximately).  =aliases= should be an alist mapping aliases to functions (such as defined with a definer defined by ~taxy-define-key-definer~).
+
+- taxy-mapc-taxys (fn taxy) ::
+  *Alias:* ~taxy-mapc*~
+
+  Return =taxy= having applied =fn= to it and its descendants.  Does not copy =taxy=.  Destructively modifies =taxy=, if =fn= does.
+
+- taxy-mapcar-items (fn taxy) ::
+  *Alias:* ~taxy-mapcar~
+
+  Return copy of =taxy=, having replaced its items with the value of =fn= on each.  Replaces every item in =taxy= and its descendants.  Useful to replace items with a more useful form after classification.
+
+- taxy-plain (taxy) ::
+  Return a list of the human-readable parts of =taxy=.
+
+- taxy-size (taxy) ::
+  Return the number of items =taxy= holds.  Includes items in =taxy= ’s sub-taxys.
+
+- taxy-sort-items (pred key taxy) ::
+  *Alias:* ~taxy-sort~
+
+  Sort =taxy= ’s items by =pred= and =key=.  Sorts items in =taxy= and its sub-taxys.  =key= is passed to ~cl-sort~, which see.
+
+- taxy-sort-taxys (pred key taxy) ::
+  *Alias:* ~taxy-sort*~
+
+  Sort =taxy= ’s sub-taxys by =pred= and =key=.  =key= is passed to ~cl-sort~, which see.
+
+*** Macros
+
+- taxy-define-key-definer (name variable prefix docstring) ::
+  Define a macro =name= that defines a key-function-defining macro.  The defined macro, having string =docstring=, associates the defined key functions with their aliases in an alist stored in symbol =variable=.  The defined key functions are named having string =prefix=, which will have a hyphen appended to it.  The key functions take one or more arguments, the first of which is the item being tested, bound within the function to ~item~.
+
 * Changelog
 :PROPERTIES:
 :TOC:      :depth 0
 :END:
+
+** 0.7
+
+*** Additions
+
++  Function ~taxy-flatten~ returns a list of the items in a taxy and its sub-taxys.
++  Function/macro reference documentation.
++  Example application =bookmarky= lists Emacs bookmarks grouped with Taxy.
 
 ** 0.6
 

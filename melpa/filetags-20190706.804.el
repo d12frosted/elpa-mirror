@@ -4,8 +4,6 @@
 
 ;; Author: Max Beutelspacher
 ;; URL: https://github.com/DerBeutlin/filetags.el
-;; Package-Version: 20190706.804
-;; Package-Commit: 01e6a919507a832ee001a2a0fc257657f8b04b72
 ;; Keywords: convenience, files
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4"))
