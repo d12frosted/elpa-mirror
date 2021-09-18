@@ -1,11 +1,11 @@
 ;;; doct.el --- DOCT: Declarative Org capture templates -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019-2020 Nicholas Vollmer
+;; Copyright (C) 2019-2021 Nicholas Vollmer
 
 ;; Author: Nicholas Vollmer <progfolio@protonmail.com>
 ;; URL: https://github.com/progfolio/doct
-;; Package-Version: 20210825.453
-;; Package-Commit: c7c8687ae8a7f1230732eaebc89ea668b4f7a37d
+;; Package-Version: 20210917.2228
+;; Package-Commit: bf8ba74cf29c876958e8c7249e044d7800145f9d
 ;; Created: December 10, 2019
 ;; Keywords: org, convenience
 ;; Package-Requires: ((emacs "25.1"))
