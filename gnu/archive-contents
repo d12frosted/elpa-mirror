@@ -440,7 +440,7 @@
 	      (:keywords "files")
 	      (:url . "http://elpa.gnu.org/packages/cpio-mode.html"))])
  (crdt .
-       [(0 2 3)
+       [(0 2 4)
 	nil "Collaborative editing using Conflict-free Replicated Data Types" tar
 	((:url . "https://code.librehq.com/qhong/crdt.el")
 	 (:keywords "collaboration" "crdt")
@@ -651,6 +651,14 @@
 	      ("Ben Gamari" . "ben@smart-cactus.org"))
 	     (:keywords "languages")
 	     (:url . "https://elpa.gnu.org/packages/dts-mode.html"))])
+ (easy-escape .
+	      [(0 2 1)
+	       nil "Improve readability of escape characters in regular expressions" tar
+	       ((:url . "https://github.com/cpitclaudel/easy-escape")
+		(:keywords "convenience" "lisp" "tools")
+		(:maintainer "Clément Pit-Claudel" . "clement.pitclaudel@live.com")
+		(:authors
+		 ("Clément Pit-Claudel" . "clement.pitclaudel@live.com")))])
  (easy-kill .
 	    [(0 9 4)
 	     ((emacs

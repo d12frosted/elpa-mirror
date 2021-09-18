@@ -4,8 +4,8 @@
 
 ;; Author: Augusto Stoffel <arstoffel@gmail.com>
 ;; Keywords: convenience, outlines
-;; Package-Version: 20210907.1839
-;; Package-Commit: 185c33b8b680482537a205bbfbbf9198b94a0d7e
+;; Package-Version: 20210917.1711
+;; Package-Commit: 67e1479a7518cf1ea82ec6e4d1147c786db49993
 ;; URL: https://github.com/astoff/code-cells.el
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 0.1
@@ -283,6 +283,15 @@ level."
                 outline-heading-end-regexp (nth 2 code-cells--saved-vars))
     (font-lock-remove-keywords nil (code-cells--font-lock-keywords)))
   (font-lock-flush))
+
+;;;###autoload
+(defun code-cells-mode-maybe ()
+  "Turn on `code-cells-mode' if the buffer appears to contain cells.
+This function is useful when added to a major mode hook."
+    (when (save-excursion
+            (goto-char (point-min))
+            (re-search-forward (code-cells-boundary-regexp) 5000 t))
+      (code-cells-mode)))
 
 (let ((map (make-sparse-keymap)))
   (define-key code-cells-mode-map "\C-c%" map)
