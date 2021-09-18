@@ -3,8 +3,8 @@
 ;; Copyright (C) 2012 ~ 2015 Thierry Volpiatto <thierry.volpiatto@gmail.com>
 
 ;; Package-Requires: ((helm "1.7.8"))
-;; Package-Version: 20210918.649
-;; Package-Commit: 2c2dbd23ab3dfe16513a81613473fbcc326cef72
+;; Package-Version: 20210918.1133
+;; Package-Commit: 1f0e85baee4e963b275f82fab506d220cc3fef99
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -206,16 +206,39 @@ See Issue #52."
 
 *** Start helm-ls-git
 
-You can start with `helm-ls-git-ls' but you can also use the generic
-`helm-browse-project' which will use `helm-ls-git' if you are in a git
-project (actually supported backends are git, hg and svn).
+You can start with `helm-ls-git' but you can also use the generic
+`helm-browse-project' which will use `helm-ls-git' if you are in
+a git project (actually supported backends are git and hg though
+helm-ls-hg is no more maintained).
 
 *** You may want to use magit as git status command
 
 By default helm-ls-git is using emacs `vc-dir' as `helm-ls-git-status-command',
 perhaps you want to use something better like `magit-status' ?
-If it's the case use `magit-status-internal' as value for `helm-ls-git-status-command'
-as `magit-status' is working only interactively (it will not work from helm-ls-git).
+
+*** Git log
+
+From branches source, you can launch git log.  With a numeric
+prefix arg specify the number of commits to show.  Once you are
+in Git log you can specify with 2 marked candidates range of
+commits, specifying more than two marked candidate for actions
+accepting ranges will fail.  When specifying a range of commits,
+the top commit will be included in range whereas the bottom
+commit will not be included, e.g. if you mark commit-2 and
+commit-5, and use the format-patch action, git will make
+01-commit-4.patch, 02-commit-3.patch, and 03-commit-2.patch files
+taking care of naming files in the reverse order for applying
+patches later, commit-5 beeing excluded.
+
+Persistent action in git log is to show diff of commits, if you
+want to always show diff while moving from one commit to the
+other use follow-mode (C-c C-f).
+
+*** Git commit
+
+If magit is installed commits will be done with magit, otherwise
+they will be done using emacsclient as GIT_EDITOR, you can use
+there C-c C-c to commit or C-c C-k to abort commit.
 
 *** Git grep usage
 
@@ -235,17 +258,6 @@ extensions to grep, this is non sense because we have here the
 whole list of files (recursive) of current repo and not only the
 file under current directory, so we have better time
 selectionning the files we want to grep.
-
-**** With no prefix arg.
-
-Git grep all files in current repository.
-
-**** With one prefix arg.
-
-Git grep all files in current directory i.e. `default-directory'.
-It may be the `default-directory' from the buffer you started
-from or the directory from where you launched `helm-ls-git' from
-`helm-find-files'.
 
 **** Grep a subdirectory of current repository.
 
@@ -427,6 +439,7 @@ See docstring of `helm-ls-git-ls-switches'.
    (filtered-candidate-transformer :initform 'helm-ls-git-status-transformer)
    (persistent-action :initform 'helm-ls-git-diff)
    (persistent-help :initform "Diff")
+   (help-message :initform helm-ls-git-help-message)
    (action-transformer :initform 'helm-ls-git-status-action-transformer)
    (action :initform
            (helm-make-actions
@@ -533,6 +546,7 @@ See docstring of `helm-ls-git-ls-switches'.
                                              2 'rev
                                              (helm-get-selection nil 'withprop))
                                       (kill-new it))))
+                               ("Cherry-pick" . helm-ls-git-log-cherry-pick)
                                ("Format patches" . helm-ls-git-log-format-patch)
                                ("Git am" . helm-ls-git-log-am)
                                ("Reset" . helm-ls-git-log-reset))
@@ -574,6 +588,12 @@ See docstring of `helm-ls-git-ls-switches'.
                           collect (get-text-property 1 'rev c)))
         range switches)
     (cond ((= 2 (length commits))
+           ;; Using "..." makes a range from top marked (included) to
+           ;; bottom marked (not included) e.g. when we have commit-2
+           ;; marked and commit-5 marked the serie of patches will be
+           ;; 01-commit-4.patch, 02-commit-3.patch, 03-commit-2.patch,
+           ;; git taking care of numering the patch in reversed order
+           ;; for further apply.
            (setq range (mapconcat 'identity (sort commits #'string-lessp) "...")
                  switches `("format-patch" ,range)))
           ((not (cdr commits))
@@ -628,6 +648,18 @@ See docstring of `helm-ls-git-ls-switches'.
               (save-buffer))
             (find-file path))
         (error "No such file %s at %s" file rev)))))
+
+(defun helm-ls-git-log-cherry-pick (_candidate)
+  (let* ((commits (cl-loop for c in (helm-marked-candidates)
+                           collect (get-text-property 1 'rev c) into revs
+                           finally return (sort revs #'string-greaterp))))
+    (with-helm-default-directory (helm-ls-git-root-dir
+                                  (helm-default-directory))
+      (with-current-buffer-window "*git cherry-pick*" '(display-buffer-below-selected
+                                                        (window-height . fit-window-to-buffer)
+                                                        (preserve-size . (nil . t)))
+                                  nil
+        (apply #'process-file "git" nil "*git cherry-pick*" nil "cherry-pick" commits)))))
 
 (defun helm-ls-git-run-show-log ()
   (interactive)
@@ -772,6 +804,7 @@ See docstring of `helm-ls-git-ls-switches'.
                              actions
                              '(("Git amend" . helm-ls-git-amend-commit))
                              2)))
+    :help-message 'helm-ls-git-help-message
     :cleanup (lambda () (setq helm-ls-git-branches-show-all nil))
     :persistent-help "Checkout"
     :persistent-action (lambda (candidate)

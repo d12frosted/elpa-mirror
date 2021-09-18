@@ -4,8 +4,8 @@
 
 ;; Authors: (see the AUTHORS file distributed along the sources)
 ;; URL: https://github.com/pfitaxel/learn-ocaml.el
-;; Package-Version: 20210831.1906
-;; Package-Commit: db13769ffc821dbcf6daa37f9add46de21ed1a3f
+;; Package-Version: 20210918.1346
+;; Package-Commit: c368480d6b5d5b80d204e160cd1a5f0a98b3404f
 ;; Package-Requires: ((emacs "25.1"))
 ;; Version: 1.0.0-git
 
@@ -1109,7 +1109,7 @@ If TOKEN is \"\", interactively ask a token."
                                                   :callback
                                                   (lambda(_)
           (if (version-list-<=
-               (version-to-list (learn-ocaml-client-version)) (version-to-list "0.13"))
+              (version-to-list "0.13") (version-to-list (learn-ocaml-client-version)))
               (progn (learn-ocaml-server-config (learn-ocaml-client-config-cmd))
                      (if learn-ocaml-use-passwd
                          (learn-ocaml-login-possibly-with-passwd new-server-value callback)

@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-spell-fu
-;; Package-Version: 20210918.917
-;; Package-Commit: 6ee7da0cbce6bc29ab8fb889f6843870778487c7
+;; Package-Version: 20210918.1123
+;; Package-Commit: 2583b1afe0503e9d2fd63152c01da5d60fec92f8
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
@@ -85,14 +85,6 @@ Set to 0.0 to highlight immediately (as part of syntax highlighting)."
 (defcustom spell-fu-ignore-modes nil
   "List of major-modes to exclude when `spell-fu' has been enabled globally."
   :type '(repeat symbol)
-  :group 'spell-fu)
-
-(defcustom spell-fu-delimit-by-face nil
-  "Change to faces act as word delimiters.
-
-Can cause issues for white-space highlighting for text that exceeds a margin,
-or any other highlighting that may change mid-word."
-  :type 'boolean
   :group 'spell-fu)
 
 (defvar-local global-spell-fu-ignore-buffer nil
@@ -628,21 +620,22 @@ Argument POINT-END the end position of WORD."
                 ;; as face-changes are being stepped over.
                 (when ok-start
 
-                  ;; Optionally split word bounds by *any* changes to faces.
-                  (unless spell-fu-delimit-by-face
-                    ;; Extend `point-end-iter' out for as long as the face isn't being ignored,
-                    ;; needed when `whitespace-mode' sets a margin,
-                    ;; splitting words in this case isn't desirable, see: #16.
-                    ;;
-                    ;; This may also have some advantage
-                    ;; in reducing the number of narrowing calls.
-                    (while ok-end-iter
-                      (setq point-end-iter
-                        (spell-fu--next-faces-prop-change point-end-iter point-end))
-                      (setq ok-end-iter
-                        (and
-                          (< point-end-iter point-end)
-                          (spell-fu--check-faces-at-point point-end-iter)))))
+                  ;; Extend `point-end-iter' out for as long as the face isn't being ignored,
+                  ;; needed when `whitespace-mode' sets a margin,
+                  ;; splitting words in this case isn't desirable, see: #16.
+                  ;;
+                  ;; This may also have some advantage
+                  ;; in reducing the number of narrowing calls.
+                  ;;
+                  ;; NOTE: this could be made into an option.
+                  ;; Currently there doesn't seem much need for this at the moment.
+                  (while ok-end-iter
+                    (setq point-end-iter
+                      (spell-fu--next-faces-prop-change point-end-iter point-end))
+                    (setq ok-end-iter
+                      (and
+                        (< point-end-iter point-end)
+                        (spell-fu--check-faces-at-point point-end-iter))))
 
                   ;; Use narrowing so the regex correctly handles boundaries
                   ;; that happen to fall on face changes.

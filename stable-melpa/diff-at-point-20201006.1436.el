@@ -6,7 +6,7 @@
 
 ;; URL: https://gitlab.com/ideasman42/emacs-diff-at-point
 ;; Package-Version: 20201006.1436
-;; Package-Commit: 3fcf861f1f8b91d97000bda32345bc92df8e2d37
+;; Package-Commit: 8d278b3ae76b7998196f1cab67868fa30e824eec
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
