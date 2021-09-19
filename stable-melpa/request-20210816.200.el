@@ -7,7 +7,7 @@
 ;; Author: Takafumi Arakaki <aka.tkf at gmail.com>
 ;; URL: https://github.com/tkf/emacs-request
 ;; Package-Version: 20210816.200
-;; Package-Commit: 2b68b3ca543f1dfbebb43a44f20601c3947bd729
+;; Package-Commit: 68003b3f859724de621d0e5a8b0aae51ce708d1e
 ;; Package-Requires: ((emacs "24.4"))
 ;; Version: 0.3.3
 
