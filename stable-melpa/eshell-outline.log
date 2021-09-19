@@ -3,7 +3,11 @@ Fetcher: git
 Source:  https://git.jamzattack.xyz/eshell-outline
 
 Updating /mnt/store/melpa/working/eshell-outline/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://git.jamzattack.xyz/eshell-outline/': Could not resolve host: git.jamzattack.xyz
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 6f917afa5b3d36764d76d7864589094647d8c3b4
+Built eshell-outline in 7.488s, finished at 2021-09-18T22:46:15+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.4K Sep 18 22:46 packages/eshell-outline-20201121.620.el
+4.0K -rw-r--r-- 1 root root  403 Sep 18 22:46 packages/eshell-outline-20201121.620.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 18 22:46 packages/eshell-outline-badge.svg
+4.0K -rw-r--r-- 1 root root  946 Sep 18 22:46 packages/eshell-outline-readme.txt

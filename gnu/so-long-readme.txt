@@ -381,6 +381,7 @@ versions of Emacs, and can be set to `so-long-mode' if desired.
 
 * Change Log:
 
+1.1.2 - Use `so-long-mode-line-active' face on `mode-name' in `so-long-mode'.
 1.1.1 - Identical to 1.1, but fixing an incorrect GNU ELPA release.
 1.1   - Utilise `buffer-line-statistics' in Emacs 28+, with the new
         `so-long-predicate' function `so-long-statistics-excessive-p'.
@@ -418,7 +419,7 @@ versions of Emacs, and can be set to `so-long-mode' if desired.
 0.7.5 - Documentation.
       - Added sgml-mode and nxml-mode to `so-long-target-modes'.
 0.7.4 - Refactored the handling of `whitespace-mode'.
-0.7.3 - Added customize group `so-long' with user options.
+0.7.3 - Added customization group `so-long' with user options.
       - Added `so-long-original-values' to generalise the storage and
         restoration of values from the original mode upon `so-long-revert'.
       - Added `so-long-revert-hook'.

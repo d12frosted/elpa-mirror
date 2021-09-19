@@ -3,3 +3,22 @@ Fetcher: github
 Source:  https://github.com/immerrr/lua-mode.git
 
 Updating /mnt/store/melpa/working/lua-mode/
+Checking out origin/HEAD
+Checking out 5a9bee8d5fc978dc64fcb677167417010321ba65
+Note: lua-mode :files spec is equivalent to the default.
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lua-mode/
+  to /tmp/lua-modewKtJ70/lua-mode-20210809.1320
+    init-tryout.el -> init-tryout.el
+    lua-mode.el -> lua-mode.el
+Created lua-mode-20210809.1320.tar containing:
+  lua-mode-20210809.1320/
+  lua-mode-20210809.1320/init-tryout.el
+  lua-mode-20210809.1320/lua-mode-pkg.el
+  lua-mode-20210809.1320/lua-mode.el
+Built lua-mode in 4.607s, finished at 2021-09-18T23:11:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  914 Sep 18 23:11 packages/lua-mode-20210809.1320.entry
+100K -rw-r--r-- 1 root root 100K Sep 18 23:11 packages/lua-mode-20210809.1320.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 18 23:11 packages/lua-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 2.1K Sep 18 23:11 packages/lua-mode-readme.txt
