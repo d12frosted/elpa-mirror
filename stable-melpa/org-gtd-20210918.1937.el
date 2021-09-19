@@ -4,8 +4,8 @@
 
 ;; Author: Aldric Giacomoni <trevoke@gmail.com>
 ;; Version: 1.0.2
-;; Package-Version: 20210917.2157
-;; Package-Commit: 0a643c086d432abb51b775e7f2d669bcc3b58306
+;; Package-Version: 20210918.1937
+;; Package-Commit: 5b39d1466c6fa4b4708bc120a2a41bd6be240b15
 ;; Homepage: https://github.com/Trevoke/org-gtd.el
 ;; Package-Requires: ((emacs "26.1") (org-edna "1.0.2") (f "0.20.0") (org "9.3.1") (org-agenda-property "1.3.1"))
 
@@ -125,6 +125,8 @@ as you feel the need: every two months? Every six months? Every year?
 It's suggested that you categorize the items in here somehow, such as:
 \"to read\", \"to buy\", \"to eat\", etc - whatever works best for your mind!
 #+end_comment
+
+* Auto-generated incubate headline
 "
   "Template for the GTD someday/maybe list.")
 

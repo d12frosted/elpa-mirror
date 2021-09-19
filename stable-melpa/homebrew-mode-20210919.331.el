@@ -4,8 +4,8 @@
 
 ;; Author: Alex Dunn <dunn.alex@gmail.com>
 ;; URL: https://github.com/dunn/homebrew-mode
-;; Package-Version: 20210820.1735
-;; Package-Commit: 78e20613674247a65483f89a7912111e3ce4b9b0
+;; Package-Version: 20210919.331
+;; Package-Commit: 8c630c6f768b942a86a10750f720abc64a817cd0
 ;; Version: 2.0.0
 ;; Package-Requires: ((emacs "24.4") (inf-ruby "2.4.0") (dash "1.2.0"))
 ;; Keywords: homebrew brew ruby
@@ -262,15 +262,21 @@ Otherwise return nil."
     (let ((root (homebrew--get-taps-dir))
           (taps '())
           (case-fold-search nil))
-      (dolist (user (directory-files root nil "^[^.]") taps)
-        (dolist (repo (directory-files (concat root user) nil "^[^.]"))
-          (let ((dot-git (concat root user "/" repo "/" ".git")))
-            (when (file-exists-p dot-git)
-              (let ((tap (concat user "/"
-                                 (if (string-match "^homebrew-\\(.*\\)" repo)
-                                     (match-string 1 repo)
-                                     repo))))
-                (push tap taps)))))))))
+      (dolist (user (directory-files root) taps)
+        (unless (member user '("." ".."))
+          (let ((root-user (concat root (file-name-as-directory user))))
+            (when (file-directory-p root-user)
+              (dolist (repo (directory-files root-user))
+                (unless (member repo '("." ".."))
+                  (let ((root-user-repo
+                         (concat root-user (file-name-as-directory repo))))
+                    (when (file-directory-p root-user-repo)
+                      (let ((tap (concat
+                                  user "/"
+                                  (if (string-match "^homebrew-\\(.*\\)" repo)
+                                      (match-string 1 repo)
+                                    repo))))
+                        (push tap taps)))))))))))))
 
 (defun homebrew--get-tap-dir (tap)
   "Return the full directory pathname of a Homebrew TAP, or nil."
