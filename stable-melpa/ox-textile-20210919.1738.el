@@ -4,8 +4,8 @@
 
 ;; Author: Yasushi SHOJI <yasushi.shoji@gmail.com>
 ;; URL: https://github.com/yashi/org-textile
-;; Package-Version: 20210918.1656
-;; Package-Commit: 31249baa9a090b0c5a176d108c25b753a6064eda
+;; Package-Version: 20210919.1738
+;; Package-Commit: 5f2f61f572c24d702e922845c11a4c3da38ab261
 ;; Package-Requires: ((org "8.1"))
 ;; Keywords: org, textile
 
@@ -34,6 +34,7 @@
 
 ;;; Code:
 (require 'ox)
+(require 'ox-publish)
 
 (defgroup org-export-textile nil
   "Options for exporting Org mode files to Textile."
@@ -352,6 +353,17 @@ Return output file name."
   (interactive)
   (let ((outfile (org-export-output-file-name org-textile-extension subtreep)))
     (org-export-to-file 'textile outfile async subtreep visible-only)))
+
+;;;###autoload
+(defun org-textile-publish-to-textile (plist filename pub-dir)
+  "Publish an org file to Textile.
+
+FILENAME is the filename of the Org file to be published.  PLIST
+is the property list for the given project.  PUB-DIR is the
+publishing directory.
+
+Return output file name."
+  (org-publish-org-to 'textile filename org-textile-extension plist pub-dir))
 
 (provide 'ox-textile)
 

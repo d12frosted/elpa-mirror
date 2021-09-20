@@ -4,8 +4,8 @@
 
 ;; Author: Yasushi SHOJI <yasushi.shoji@gmail.com>
 ;; URL: https://github.com/yashi/org-asciidoc
-;; Package-Version: 20181230.620
-;; Package-Commit: efb74df1179702e19ce531f84993ac5b5039075f
+;; Package-Version: 20210919.1844
+;; Package-Commit: c2b794aae26133189499424569d0f88b41c7e4c6
 ;; Package-Requires: ((org "8.1"))
 ;; Keywords: org, asciidoc
 
@@ -36,6 +36,7 @@
 (require 'ox)
 (require 'cl-lib)
 (require 'ox-html)
+(require 'ox-publish)
 
 (defgroup org-export-asciidoc nil
   "Options for exporting Org mode files to Asciidoc."
@@ -128,7 +129,7 @@ CONTENTS is its contents, as a string or nil.  INFO is ignored."
   (concat "`" (org-asciidoc-encode-plain-text (org-element-property :value code)) "`"))
 
 (defun org-asciidoc-italic (italic contents info)
-  (concat "'" contents "'"))
+  (concat "_" contents "_"))
 
 (defun org-asciidoc-strike-through (strike-through contents info)
   (concat "[line-through]#" contents "#"))
@@ -472,6 +473,17 @@ Return output file name."
   (interactive)
   (let ((outfile (org-export-output-file-name ".txt" subtreep)))
     (org-export-to-file 'asciidoc outfile async subtreep visible-only)))
+
+;;;###autoload
+(defun org-asciidoc-publish-to-asciidoc (plist filename pub-dir)
+  "Publish an org file to Asciidoc.
+
+FILENAME is the filename of the Org file to be published.  PLIST
+is the property list for the given project.  PUB-DIR is the
+publishing directory.
+
+Return output file name."
+  (org-publish-org-to 'asciidoc filename ".txt" plist pub-dir))
 
 (provide 'ox-asciidoc)
 
