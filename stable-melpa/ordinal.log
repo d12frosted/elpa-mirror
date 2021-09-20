@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/zonuexe/ordinal.el.git
 
 Updating /mnt/store/melpa/working/ordinal/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/zonuexe/ordinal.el.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out a7f378306290b6807fb6b87cee3ef79b31cec711
+Built ordinal in 5.704s, finished at 2021-09-20T19:03:00+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.6K Sep 20 19:02 packages/ordinal-20210519.1442.el
+4.0K -rw-r--r-- 1 root root  353 Sep 20 19:03 packages/ordinal-20210519.1442.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 20 19:03 packages/ordinal-badge.svg
+4.0K -rw-r--r-- 1 root root  539 Sep 20 19:03 packages/ordinal-readme.txt
