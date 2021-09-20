@@ -4,10 +4,24 @@ Source:  https://github.com/Overdr0ne/gumshoe.git
 
 Updating /mnt/store/melpa/working/gumshoe/
 Checking out origin/HEAD
-Checking out fbcecca1967c680d91152d651bfaf91cedc56b3a
-Built gumshoe in 5.934s, finished at 2021-09-20T11:40:00+0000
+Checking out be4dd10bc02be402498ceefe8df72dbe5dbc8ac5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/gumshoe/
+  to /tmp/gumshoe2tf3pF/gumshoe-20210920.1523
+    gumshoe-core.el -> gumshoe-core.el
+    gumshoe-persp.el -> gumshoe-persp.el
+    gumshoe.el -> gumshoe.el
+Created gumshoe-20210920.1523.tar containing:
+  gumshoe-20210920.1523/
+  gumshoe-20210920.1523/gumshoe-core.el
+  gumshoe-20210920.1523/gumshoe-persp.el
+  gumshoe-20210920.1523/gumshoe-pkg.el
+  gumshoe-20210920.1523/gumshoe.el
+Built gumshoe in 7.328s, finished at 2021-09-20T15:31:27+0000
  ✓ Success:
  16K -rw-r--r-- 1 root root  13K Sep 20 11:39 packages/gumshoe-20210812.1631.el
 4.0K -rw-r--r-- 1 root root  321 Sep 20 11:39 packages/gumshoe-20210812.1631.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 20 11:40 packages/gumshoe-badge.svg
-4.0K -rw-r--r-- 1 root root  406 Sep 20 11:39 packages/gumshoe-readme.txt
+4.0K -rw-r--r-- 1 root root  318 Sep 20 15:31 packages/gumshoe-20210920.1523.entry
+ 32K -rw-r--r-- 1 root root  30K Sep 20 15:31 packages/gumshoe-20210920.1523.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 20 15:31 packages/gumshoe-badge.svg
+4.0K -rw-r--r-- 1 root root  347 Sep 20 15:31 packages/gumshoe-readme.txt

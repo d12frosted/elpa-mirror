@@ -3,11 +3,6 @@ Fetcher: github
 Source:  https://github.com/knu/operate-on-number.el.git
 
 Updating /mnt/store/melpa/working/operate-on-number/
-Checking out origin/HEAD
-Checking out ceb3be565a29326c1098244fac0c50606723a56e
-Built operate-on-number in 5.439s, finished at 2021-09-20T12:06:16+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root  16K Sep 20 12:06 packages/operate-on-number-20150707.623.el
-4.0K -rw-r--r-- 1 root root  393 Sep 20 12:06 packages/operate-on-number-20150707.623.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 20 12:06 packages/operate-on-number-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Sep 20 12:06 packages/operate-on-number-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: unable to access 'https://github.com/knu/operate-on-number.el.git/': gnutls_handshake() failed: Error in the pull function.
+
