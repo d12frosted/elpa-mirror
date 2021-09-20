@@ -7,7 +7,7 @@ readable format, e.g.:
   [[cite:CoxeterPG2ed][53]]          ->  Coxeter, 1987, p. 53
   [[citetitle:CoxeterPG2ed]]         ->  Projective Geometry
   citeauthor:CoxeterPG2ed            ->  Coxeter
-  [[parencite:CoxeterPG2ed][36-44]]  ->  (Coxeter, 1987, pp.  36-44)
+  [[parencite:CoxeterPG2ed][36-44]]  ->  (Coxeter, 1987, pp. 36-44)
 
 The citation links themselves are not changed, they are just
 displayed differently.  You can disable the mode by running "M-x

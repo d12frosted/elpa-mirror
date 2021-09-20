@@ -7,7 +7,7 @@
 ;; Maintainer: Steve Purcell <steve@sanityinc.com>
 ;; URL: https://github.com/purcell/emacs-hcl-mode
 ;; Package-Version: 20200315.2129
-;; Package-Commit: e12b1df2ca28d2b06c471cd709c038a2dc0bcdbd
+;; Package-Commit: e4d9eef631e8a386341ae8f94f7c2579586e65b5
 ;; Version: 0.03
 ;; Package-Requires: ((emacs "24.3"))
 

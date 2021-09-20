@@ -1,0 +1,16 @@
+(org-ref-prettify .
+		  [(20210920 634)
+		   ((emacs
+		     (24 3))
+		    (org-ref
+		     (1 1 0))
+		    (bibtex-completion
+		     (1 0 0)))
+		   "Prettify org-ref citation links" single
+		   ((:commit . "29e05416f102ceca50ac8b118a19a16f9fe7eb2f")
+		    (:authors
+		     ("Alex Kost" . "alezost@gmail.com")
+		     ("Vitus Schäfftlein" . "vitusschaefftlein@live.de"))
+		    (:maintainer "Alex Kost" . "alezost@gmail.com")
+		    (:keywords "convenience")
+		    (:url . "https://github.com/alezost/org-ref-prettify.el"))])
