@@ -1,0 +1,11 @@
+(qrencode .
+	  [(20210919 1441)
+	   ((emacs
+	     (25 1)))
+	   "QRCode encoder" single
+	   ((:commit . "d1788e43a4f97d9f3974488459262af0e53405e2")
+	    (:authors
+	     ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net"))
+	    (:maintainer "Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
+	    (:keywords "qrcode" "comm")
+	    (:url . "https://github.com/ruediger/qrencode-el"))])
