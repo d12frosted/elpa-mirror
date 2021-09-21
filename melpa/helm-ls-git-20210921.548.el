@@ -3,8 +3,8 @@
 ;; Copyright (C) 2012 ~ 2015 Thierry Volpiatto <thierry.volpiatto@gmail.com>
 
 ;; Package-Requires: ((helm "1.7.8"))
-;; Package-Version: 20210920.1653
-;; Package-Commit: 66e662bd72f26ae1f3a94ef083bcec4d5a4b58ef
+;; Package-Version: 20210921.548
+;; Package-Commit: 5482a4bc8be11e68b9714ece88f630b43f3b9f20
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -1215,8 +1215,8 @@ See docstring of `helm-ls-git-ls-switches'.
         (progn
           (add-hook 'find-file-hook 'helm-ls-git-with-editor-setup)
           (add-hook 'server-done-hook 'helm-ls-git-with-editor-done)
-          (apply #'start-file-process "git" "*helm-ls-git commit*" "git" args)
-          (setenv "GIT_EDITOR" old-editor)))))
+          (apply #'start-file-process "git" "*helm-ls-git commit*" "git" args))
+      (setenv "GIT_EDITOR" old-editor))))
 
 (defun helm-ls-git-with-editor-done ()
   (remove-hook 'find-file-hook 'helm-ls-git-with-editor-setup))

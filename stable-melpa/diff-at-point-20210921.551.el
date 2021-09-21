@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-diff-at-point
-;; Package-Version: 20201006.1436
-;; Package-Commit: 8d278b3ae76b7998196f1cab67868fa30e824eec
+;; Package-Version: 20210921.551
+;; Package-Commit: 3490e19087af9ca1730678393045fda56f5104e5
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -219,53 +219,57 @@ Jumping to the file & line.
 When SCROLL-RESET is not nil the view re-centers,
 otherwise the offset from the window is kept."
   (interactive)
-  (let*
-    (
-      (current-filename (buffer-file-name))
-      (current-line (line-number-at-pos))
-      (current-column (- (point) (line-beginning-position)))
+  ;; Any narrowing causes the offset calculations to fail.
+  (save-restriction
+    (widen)
 
-      (init-buffer (current-buffer))
-      (init-window (selected-window))
-      (lines-from-top
-        (if scroll-reset
-          nil
-          (count-lines
-            (window-start init-window)
-            (save-excursion
-              (move-beginning-of-line nil)
-              (point)))))
+    (let*
+      (
+        (current-filename (buffer-file-name))
+        (current-line (line-number-at-pos))
+        (current-column (- (point) (line-beginning-position)))
 
-      ;; Replace the current window.
-      (pop-up-windows nil))
+        (init-buffer (current-buffer))
+        (init-window (selected-window))
+        (lines-from-top
+          (if scroll-reset
+            nil
+            (count-lines
+              (window-start init-window)
+              (save-excursion
+                (move-beginning-of-line nil)
+                (point)))))
 
-    (when (funcall diff-at-point-diff-command)
-      (if (eq init-buffer (current-buffer))
-        (message
-          (concat
-            "While 'diff-at-point-diff-command' succeeded, "
-            "no diff buffer was created by 'diff-at-point-diff-command'"))
-        (when current-filename
-          (let*
-            (
-              (current-filename-relative (file-relative-name current-filename default-directory))
-              (point-found
-                (diff-at-point-file-line-to-point
-                  current-filename-relative
-                  current-line
-                  current-column)))
-            ;; Go to the file in the diff which we were previously viewing.
-            (when point-found
-              (goto-char point-found)
+        ;; Replace the current window.
+        (pop-up-windows nil))
 
-              (if scroll-reset
-                (recenter)
-                (set-window-start
-                  init-window
-                  (save-excursion
-                    (forward-line (- lines-from-top))
-                    (point))
-                  t)))))))))
+      (when (funcall diff-at-point-diff-command)
+        (if (eq init-buffer (current-buffer))
+          (message
+            (concat
+              "While 'diff-at-point-diff-command' succeeded, "
+              "no diff buffer was created by 'diff-at-point-diff-command'"))
+          (when current-filename
+            (let*
+              (
+                (current-filename-relative (file-relative-name current-filename default-directory))
+                (point-found
+                  (diff-at-point-file-line-to-point
+                    current-filename-relative
+                    current-line
+                    current-column)))
+              ;; Go to the file in the diff which we were previously viewing.
+              (when point-found
+                (goto-char point-found)
+
+                (if scroll-reset
+                  (recenter)
+                  (set-window-start
+                    init-window
+                    (save-excursion
+                      (forward-line (- lines-from-top))
+                      (point))
+                    t))))))))))
 
 ;;;###autoload
 (defun diff-at-point-goto-source-and-close (&optional scroll-reset)
