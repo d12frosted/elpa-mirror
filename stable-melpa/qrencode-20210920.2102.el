@@ -4,8 +4,8 @@
 
 ;; Author: Rüdiger Sonderfeld <ruediger@c-plusplus.net>
 ;; Keywords: qrcode comm
-;; Package-Version: 20210919.1441
-;; Package-Commit: d1788e43a4f97d9f3974488459262af0e53405e2
+;; Package-Version: 20210920.2102
+;; Package-Commit: dce5465976be17a465f7a96102e3eb2e1b4abc29
 ;; Version: 1.0-beta2
 ;; Package-Requires: ((emacs "25.1"))
 ;; Package: qrencode
@@ -830,7 +830,7 @@ version."
                       (cl-loop for e in '(H Q M L) ; Go from highest err corr level to lowest
                                do (when (>= (- num-codewords (cadr (assq e errlevels))) m)
                                     (cl-return-from outer-loop (cons version e)))))))
-      (error "No version found supporting %d in mode %s with error correction level %s" n mode errcorr)))
+      (user-error "No version found supporting %d in mode %s with error correction level %s" n mode errcorr)))
 
 ;;; Structuring
 (defun qrencode--get-subseq (blocks n &optional off)
