@@ -1,12 +1,12 @@
 ;;; hl-block-mode.el --- highlighting nested blocks -*- lexical-binding: t -*-
 
-;; Copyright (C) 2019  Campbell Barton
+;; Copyright (C) 2019-2021  Campbell Barton
 
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-hl-block-mode
-;; Package-Version: 20210617.1324
-;; Package-Commit: 0ea43d320219ba4e6b7b1be36a5c1533ac3edb42
+;; Package-Version: 20210921.120
+;; Package-Commit: a0166a80991572e086bde7d9c93cac92210b156a
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.0"))
 
@@ -39,6 +39,10 @@
 
 (require 'seq)
 
+
+;; ---------------------------------------------------------------------------
+;; Custom Variables
+
 (defcustom hl-block-bracket ?{
   "Character to use as a starting bracket (defaults to '{').
 Set to nil to use all brackets."
@@ -56,9 +60,22 @@ Set to nil to use all brackets."
   :type 'float)
 
 (defcustom hl-block-mode-lighter ""
-  "Lighter for hl-block-mode."
+  "Lighter for `hl-block-mode'."
   :group 'hl-block-mode
   :type 'string)
+
+
+;; ---------------------------------------------------------------------------
+;; Internal Variables
+
+(defvar-local hl-block-overlay nil)
+
+;; Global timer.
+(defvar hl-block--delay-timer nil)
+
+
+;; ---------------------------------------------------------------------------
+;; Internal Functions/Macros
 
 (defun hl-block--syntax-prev-bracket (pt)
   "A version of `syntax-ppss' to match curly braces.
@@ -93,8 +110,6 @@ PT is typically the '(point)'."
   "Build a color from R G B.
 Inverse of `color-values'."
   (format "#%02x%02x%02x" (ash r -8) (ash g -8) (ash b -8)))
-
-(defvar-local hl-block-overlay nil)
 
 (defun hl-block--overlay-clear ()
   "Clear all overlays."
@@ -141,37 +156,76 @@ Inverse of `color-values'."
               (setq end-prev end)))
           (cdr block-list))))))
 
-;; Timer
-(defvar hl-block--delay-timer nil)
 
-(defun hl-block--overlay-refresh-from-timer ()
+;; ---------------------------------------------------------------------------
+;; Internal Timer Management
+;;
+;; This works as follows:
+;;
+;; - The timer is kept active as long as the local mode is enabled.
+;; - Entering a buffer runs the buffer local `window-state-change-hook' immediately
+;;   which checks if the mode is enabled, set up the global timer if it is.
+;; - Switching any other buffer wont run this hook,
+;;   rely on the idle timer it's self running, which detects the active mode,
+;;   canceling it's self if the mode isn't active.
+;;
+;; This is a reliable way of using a global,
+;; repeating idle timer that is effectively buffer local.
+;;
+
+(defun hl-block--time-ensure-on ()
+  "Ensure the timer is on."
+  (unless hl-block--delay-timer
+    (setq hl-block--delay-timer
+      (run-with-idle-timer
+        hl-block-delay
+        :repeat 'hl-block--overlay-refresh-from-timer-or-disable))))
+
+(defun hl-block--time-ensure-off ()
+  "Ensure the timer is off."
+  (when hl-block--delay-timer
+    (cancel-timer hl-block--delay-timer)
+    (setq hl-block--delay-timer nil)))
+
+(defun hl-block--time-reset ()
+  "Run this when the buffer changes."
+  (if (bound-and-true-p hl-block-mode)
+    (hl-block--time-ensure-on)
+    (hl-block--time-ensure-off)))
+
+(defun hl-block--overlay-refresh-from-timer-or-disable ()
   "Ensure this mode has not been disabled before highlighting.
 This can happen when switching buffers."
-  (when hl-block-mode
-    (hl-block--overlay-refresh)))
+  (cond
+    ;; Check the mode is enabled.
+    ((bound-and-true-p hl-block-mode)
+      (hl-block--overlay-refresh))
+    ;; The global idle timer has run in a new buffer,
+    ;; disable the idle timer.
+    (t
+      (hl-block--time-ensure-off))))
 
-(defun hl-block--overlay-delay ()
-  "Recalculate overlays using a delay (to avoid slow-down)."
-  (when (timerp hl-block--delay-timer)
-    (cancel-timer hl-block--delay-timer))
-  (setq hl-block--delay-timer
-    (run-with-idle-timer hl-block-delay t 'hl-block--overlay-refresh-from-timer)))
+;; ---------------------------------------------------------------------------
+;; Internal Mode Management
 
 (defun hl-block-mode-enable ()
   "Turn on 'hl-block-mode' for the current buffer."
-  (add-hook 'post-command-hook #'hl-block--overlay-delay nil t))
+  (hl-block--time-ensure-on)
+  (add-hook 'window-state-change-hook #'hl-block--time-reset nil t))
 
 (defun hl-block-mode-disable ()
   "Turn off 'hl-block-mode' for the current buffer."
   (hl-block--overlay-clear)
-  (when (timerp hl-block--delay-timer)
-    (cancel-timer hl-block--delay-timer))
-  (remove-hook 'post-command-hook #'hl-block--overlay-delay t))
+  (hl-block--time-ensure-off)
+  (remove-hook 'window-state-change-hook #'hl-block--time-reset t))
 
 (defun hl-block-mode-turn-on ()
   "Enable command `hl-block-mode'."
-  (when (and (not (minibufferp)) (not hl-block-mode))
+  (when (and (not (minibufferp)) (not (bound-and-true-p hl-block-mode)))
     (hl-block-mode 1)))
+
+;; ---------------------------------------------------------------------------
+;; Public API
 
 ;;;###autoload
 (define-minor-mode hl-block-mode
