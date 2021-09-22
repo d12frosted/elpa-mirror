@@ -1263,7 +1263,7 @@
 	       ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	      (:keywords "convenience"))])
  (ivy-posframe .
-	       [(0 6 1)
+	       [(0 6 2)
 		((emacs
 		  (26 0))
 		 (posframe
@@ -1272,11 +1272,11 @@
 		  (0 13 0)))
 		"Using posframe to show Ivy" tar
 		((:url . "https://github.com/tumashu/ivy-posframe")
+		 (:keywords "abbrev" "convenience" "matching" "ivy")
 		 (:maintainer "Feng Shu" . "tumashu@163.com")
 		 (:authors
 		  ("Feng Shu" . "tumashu@163.com")
-		  ("Naoya Yamashita" . "conao3@gmail.com"))
-		 (:keywords "abbrev" "convenience" "matching" "ivy"))])
+		  ("Naoya Yamashita" . "conao3@gmail.com")))])
  (javaimp .
 	  [(0 7 1)
 	   nil "Add and reorder Java import statements in Maven/Gradle projects" tar
