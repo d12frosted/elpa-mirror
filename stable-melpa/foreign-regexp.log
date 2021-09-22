@@ -2,12 +2,12 @@ Package: foreign-regexp
 Fetcher: github
 Source:  https://github.com/k-talo/foreign-regexp.el.git
 
-Cloning https://github.com/k-talo/foreign-regexp.el.git to /mnt/store/melpa/working/foreign-regexp/
+Updating /mnt/store/melpa/working/foreign-regexp/
 Checking out origin/HEAD
 Checking out e2dd47f2160cadc194eb156e7c76c3c869e6706e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/foreign-regexp/
-  to /tmp/foreign-regexp5eubJf/foreign-regexp-20200325.50
+  to /tmp/foreign-regexpn50j1l/foreign-regexp-20200325.50
     foreign-regexp.el -> foreign-regexp.el
     bin/foreign-regexp-quote-meta-aux.pl -> bin/foreign-regexp-quote-meta-aux.pl
     bin/foreign-regexp-replace-aux.pl -> bin/foreign-regexp-replace-aux.pl
@@ -22,9 +22,9 @@ Created foreign-regexp-20200325.50.tar containing:
   foreign-regexp-20200325.50/bin/foreign-regexp-replace-aux.rb
   foreign-regexp-20200325.50/foreign-regexp-pkg.el
   foreign-regexp-20200325.50/foreign-regexp.el
-Built foreign-regexp in 9.615s, finished at 2021-09-22T03:25:38+0000
+Built foreign-regexp in 5.521s, finished at 2021-09-22T07:40:26+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  378 Sep 22 03:25 packages/foreign-regexp-20200325.50.entry
-260K -rw-r--r-- 1 root root 260K Sep 22 03:25 packages/foreign-regexp-20200325.50.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:25 packages/foreign-regexp-badge.svg
- 20K -rw-r--r-- 1 root root  17K Sep 22 03:25 packages/foreign-regexp-readme.txt
+4.0K -rw-r--r-- 1 root root  378 Sep 22 07:40 packages/foreign-regexp-20200325.50.entry
+260K -rw-r--r-- 1 root root 260K Sep 22 07:40 packages/foreign-regexp-20200325.50.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 07:40 packages/foreign-regexp-badge.svg
+ 20K -rw-r--r-- 1 root root  17K Sep 22 07:40 packages/foreign-regexp-readme.txt

@@ -2,12 +2,12 @@ Package: eide
 Fetcher: git
 Source:  https://forge.tedomum.net/hjuvi/eide.git
 
-Cloning https://forge.tedomum.net/hjuvi/eide.git to /mnt/store/melpa/working/eide/
+Updating /mnt/store/melpa/working/eide/
 Checking out origin/HEAD
 Checking out b1dfdaf06b00409250135cb1000beac60c7f659b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eide/
-  to /tmp/eidePugjQp/eide-20200702.2009
+  to /tmp/eideRjObiz/eide-20200702.2009
   ! src/eide-compare.el -> eide-compare.el
   ! src/eide-config.el -> eide-config.el
   ! src/eide-display.el -> eide-display.el
@@ -48,9 +48,9 @@ Created eide-20200702.2009.tar containing:
   eide-20200702.2009/eide-vc.el
   eide-20200702.2009/eide-windows.el
   eide-20200702.2009/eide.el
-Built eide in 8.409s, finished at 2021-09-22T03:08:55+0000
+Built eide in 8.818s, finished at 2021-09-22T07:28:00+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  287 Sep 22 03:08 packages/eide-20200702.2009.entry
-340K -rw-r--r-- 1 root root 340K Sep 22 03:08 packages/eide-20200702.2009.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:08 packages/eide-badge.svg
-4.0K -rw-r--r-- 1 root root  548 Sep 22 03:08 packages/eide-readme.txt
+4.0K -rw-r--r-- 1 root root  287 Sep 22 07:27 packages/eide-20200702.2009.entry
+340K -rw-r--r-- 1 root root 340K Sep 22 07:27 packages/eide-20200702.2009.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 07:27 packages/eide-badge.svg
+4.0K -rw-r--r-- 1 root root  548 Sep 22 07:27 packages/eide-readme.txt

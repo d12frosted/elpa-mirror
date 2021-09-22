@@ -2,12 +2,12 @@ Package: google-maps
 Fetcher: github
 Source:  https://github.com/jd/google-maps.el.git
 
-Cloning https://github.com/jd/google-maps.el.git to /mnt/store/melpa/working/google-maps/
+Updating /mnt/store/melpa/working/google-maps/
 Checking out origin/HEAD
 Checking out 2eb16ff609f5a9f8d02c15238a111fbb7db6c146
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/google-maps/
-  to /tmp/google-mapsSq3HGE/google-maps-20181121.1532
+  to /tmp/google-mapsYcoVRv/google-maps-20181121.1532
     google-maps-base.el -> google-maps-base.el
     google-maps-geocode.el -> google-maps-geocode.el
     google-maps-static.el -> google-maps-static.el
@@ -21,9 +21,9 @@ Created google-maps-20181121.1532.tar containing:
   google-maps-20181121.1532/google-maps-static.el
   google-maps-20181121.1532/google-maps.el
   google-maps-20181121.1532/org-location-google-maps.el
-Built google-maps in 5.414s, finished at 2021-09-22T03:31:05+0000
+Built google-maps in 10.433s, finished at 2021-09-22T07:44:42+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  405 Sep 22 03:31 packages/google-maps-20181121.1532.entry
- 52K -rw-r--r-- 1 root root  50K Sep 22 03:31 packages/google-maps-20181121.1532.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:31 packages/google-maps-badge.svg
-4.0K -rw-r--r-- 1 root root   43 Sep 22 03:31 packages/google-maps-readme.txt
+4.0K -rw-r--r-- 1 root root  405 Sep 22 07:44 packages/google-maps-20181121.1532.entry
+ 52K -rw-r--r-- 1 root root  50K Sep 22 07:44 packages/google-maps-20181121.1532.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 07:44 packages/google-maps-badge.svg
+4.0K -rw-r--r-- 1 root root   43 Sep 22 07:44 packages/google-maps-readme.txt

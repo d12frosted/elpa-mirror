@@ -2,12 +2,12 @@ Package: lsp-metals
 Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-metals.git
 
-Cloning https://github.com/emacs-lsp/lsp-metals.git to /mnt/store/melpa/working/lsp-metals/
+Updating /mnt/store/melpa/working/lsp-metals/
 Checking out origin/HEAD
 Checking out 695291761b2a3db734c3f53bb7fc4acfe0a5eb94
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-metals/
-  to /tmp/lsp-metalsu7nebj/lsp-metals-20210914.1821
+  to /tmp/lsp-metalsW6Crwl/lsp-metals-20210914.1821
     lsp-metals-protocol.el -> lsp-metals-protocol.el
     lsp-metals-treeview.el -> lsp-metals-treeview.el
     lsp-metals.el -> lsp-metals.el
@@ -43,9 +43,9 @@ Created lsp-metals-20210914.1821.tar containing:
   lsp-metals-20210914.1821/lsp-metals-protocol.el
   lsp-metals-20210914.1821/lsp-metals-treeview.el
   lsp-metals-20210914.1821/lsp-metals.el
-Built lsp-metals in 6.976s, finished at 2021-09-22T03:50:24+0000
+Built lsp-metals in 5.809s, finished at 2021-09-22T08:02:09+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  701 Sep 22 03:50 packages/lsp-metals-20210914.1821.entry
-112K -rw-r--r-- 1 root root 110K Sep 22 03:50 packages/lsp-metals-20210914.1821.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:50 packages/lsp-metals-badge.svg
-4.0K -rw-r--r-- 1 root root   18 Sep 22 03:50 packages/lsp-metals-readme.txt
+4.0K -rw-r--r-- 1 root root  701 Sep 22 08:02 packages/lsp-metals-20210914.1821.entry
+112K -rw-r--r-- 1 root root 110K Sep 22 08:02 packages/lsp-metals-20210914.1821.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 08:02 packages/lsp-metals-badge.svg
+4.0K -rw-r--r-- 1 root root   18 Sep 22 08:02 packages/lsp-metals-readme.txt

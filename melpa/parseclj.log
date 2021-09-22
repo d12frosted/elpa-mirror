@@ -2,12 +2,12 @@ Package: parseclj
 Fetcher: github
 Source:  https://github.com/clojure-emacs/parseclj.git
 
-Updating /mnt/store/melpa/working/parseclj/
+Cloning https://github.com/clojure-emacs/parseclj.git to /mnt/store/melpa/working/parseclj/
 Checking out origin/HEAD
 Checking out 1bb3800f8f2417b0b881f57448ccb4acd1fe5b8d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/parseclj/
-  to /tmp/parsecljDOWdEk/parseclj-20201012.712
+  to /tmp/parsecljRnYZky/parseclj-20201012.712
     parseclj-ast.el -> parseclj-ast.el
     parseclj-lex.el -> parseclj-lex.el
     parseclj-parser.el -> parseclj-parser.el
@@ -19,9 +19,9 @@ Created parseclj-20201012.712.tar containing:
   parseclj-20201012.712/parseclj-parser.el
   parseclj-20201012.712/parseclj-pkg.el
   parseclj-20201012.712/parseclj.el
-Built parseclj in 6.868s, finished at 2021-09-22T01:49:25+0000
+Built parseclj in 4.352s, finished at 2021-09-22T04:13:20+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  352 Sep 22 01:49 packages/parseclj-20201012.712.entry
- 52K -rw-r--r-- 1 root root  50K Sep 22 01:49 packages/parseclj-20201012.712.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 01:49 packages/parseclj-badge.svg
-4.0K -rw-r--r-- 1 root root   38 Sep 22 01:49 packages/parseclj-readme.txt
+4.0K -rw-r--r-- 1 root root  352 Sep 22 04:13 packages/parseclj-20201012.712.entry
+ 52K -rw-r--r-- 1 root root  50K Sep 22 04:13 packages/parseclj-20201012.712.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:13 packages/parseclj-badge.svg
+4.0K -rw-r--r-- 1 root root   38 Sep 22 04:13 packages/parseclj-readme.txt

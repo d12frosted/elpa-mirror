@@ -2,4 +2,37 @@ Package: erlang
 Fetcher: github
 Source:  https://github.com/erlang/otp.git
 
-Cloning https://github.com/erlang/otp.git to /mnt/store/melpa/working/erlang/
+Updating /mnt/store/melpa/working/erlang/
+Checking out origin/HEAD
+Checking out 896510977b6cf1f2f4ac817394f3d5c9061f92cf
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/erlang/
+  to /tmp/erlangvRvBgd/erlang-20210315.1640
+  ! lib/tools/emacs/erlang-edoc.el -> erlang-edoc.el
+  ! lib/tools/emacs/erlang-eunit.el -> erlang-eunit.el
+  ! lib/tools/emacs/erlang-flymake.el -> erlang-flymake.el
+  ! lib/tools/emacs/erlang-pkg.el -> erlang-pkg.el
+  ! lib/tools/emacs/erlang-skels-old.el -> erlang-skels-old.el
+  ! lib/tools/emacs/erlang-skels.el -> erlang-skels.el
+  ! lib/tools/emacs/erlang-start.el -> erlang-start.el
+  ! lib/tools/emacs/erlang-test.el -> erlang-test.el
+  ! lib/tools/emacs/erlang.el -> erlang.el
+  ! lib/tools/emacs/erldoc.el -> erldoc.el
+Created erlang-20210315.1640.tar containing:
+  erlang-20210315.1640/
+  erlang-20210315.1640/erlang-edoc.el
+  erlang-20210315.1640/erlang-eunit.el
+  erlang-20210315.1640/erlang-flymake.el
+  erlang-20210315.1640/erlang-pkg.el
+  erlang-20210315.1640/erlang-skels-old.el
+  erlang-20210315.1640/erlang-skels.el
+  erlang-20210315.1640/erlang-start.el
+  erlang-20210315.1640/erlang-test.el
+  erlang-20210315.1640/erlang.el
+  erlang-20210315.1640/erldoc.el
+Built erlang in 18.927s, finished at 2021-09-22T07:31:25+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  259 Sep 22 07:31 packages/erlang-20210315.1640.entry
+432K -rw-r--r-- 1 root root 430K Sep 22 07:31 packages/erlang-20210315.1640.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 07:31 packages/erlang-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Sep 22 07:31 packages/erlang-readme.txt

@@ -2,12 +2,12 @@ Package: weblorg
 Fetcher: github
 Source:  https://github.com/emacs-love/weblorg.git
 
-Updating /mnt/store/melpa/working/weblorg/
+Cloning https://github.com/emacs-love/weblorg.git to /mnt/store/melpa/working/weblorg/
 Checking out origin/HEAD
 Checking out 0f8ec7e9065b2962c93209ee30b46f91843e2815
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/weblorg/
-  to /tmp/weblorgIcwcCQ/weblorg-20210919.1547
+  to /tmp/weblorg6gXe7h/weblorg-20210919.1547
     weblorg.el -> weblorg.el
     themes => themes
 Created weblorg-20210919.1547.tar containing:
@@ -33,9 +33,9 @@ Created weblorg-20210919.1547.tar containing:
   weblorg-20210919.1547/themes/default/templates/post.html
   weblorg-20210919.1547/weblorg-pkg.el
   weblorg-20210919.1547/weblorg.el
-Built weblorg in 5.340s, finished at 2021-09-22T02:12:46+0000
+Built weblorg in 6.114s, finished at 2021-09-22T04:42:25+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  354 Sep 22 02:12 packages/weblorg-20210919.1547.entry
-100K -rw-r--r-- 1 root root 100K Sep 22 02:12 packages/weblorg-20210919.1547.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 02:12 packages/weblorg-badge.svg
-4.0K -rw-r--r-- 1 root root 1.8K Sep 22 02:12 packages/weblorg-readme.txt
+4.0K -rw-r--r-- 1 root root  354 Sep 22 04:42 packages/weblorg-20210919.1547.entry
+100K -rw-r--r-- 1 root root 100K Sep 22 04:42 packages/weblorg-20210919.1547.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:42 packages/weblorg-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Sep 22 04:42 packages/weblorg-readme.txt

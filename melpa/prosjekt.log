@@ -2,12 +2,12 @@ Package: prosjekt
 Fetcher: github
 Source:  https://github.com/abingham/prosjekt.git
 
-Updating /mnt/store/melpa/working/prosjekt/
+Cloning https://github.com/abingham/prosjekt.git to /mnt/store/melpa/working/prosjekt/
 Checking out origin/HEAD
 Checking out a864a8be5842223043702395f311e3350c28e9db
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/prosjekt/
-  to /tmp/prosjektsFvtqw/prosjekt-20151127.1416
+  to /tmp/prosjektDUPWXZ/prosjekt-20151127.1416
   ! prosjekt/prosjekt.el -> prosjekt.el
   ! prosjekt/ext/async-shell-command-prosjekt.el -> async-shell-command-prosjekt.el
   ! prosjekt/ext/find-project-file-prosjekt.el -> find-project-file-prosjekt.el
@@ -17,9 +17,9 @@ Created prosjekt-20151127.1416.tar containing:
   prosjekt-20151127.1416/find-project-file-prosjekt.el
   prosjekt-20151127.1416/prosjekt-pkg.el
   prosjekt-20151127.1416/prosjekt.el
-Built prosjekt in 10.450s, finished at 2021-09-22T01:53:48+0000
+Built prosjekt in 4.751s, finished at 2021-09-22T04:17:52+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  354 Sep 22 01:53 packages/prosjekt-20151127.1416.entry
- 32K -rw-r--r-- 1 root root  30K Sep 22 01:53 packages/prosjekt-20151127.1416.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 01:53 packages/prosjekt-badge.svg
-4.0K -rw-r--r-- 1 root root 1.5K Sep 22 01:53 packages/prosjekt-readme.txt
+4.0K -rw-r--r-- 1 root root  354 Sep 22 04:17 packages/prosjekt-20151127.1416.entry
+ 32K -rw-r--r-- 1 root root  30K Sep 22 04:17 packages/prosjekt-20151127.1416.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:17 packages/prosjekt-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Sep 22 04:17 packages/prosjekt-readme.txt

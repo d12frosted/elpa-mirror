@@ -2,12 +2,12 @@ Package: flim
 Fetcher: github
 Source:  https://github.com/wanderlust/flim.git
 
-Cloning https://github.com/wanderlust/flim.git to /mnt/store/melpa/working/flim/
+Updating /mnt/store/melpa/working/flim/
 Checking out origin/HEAD
 Checking out 02735dede6603987e8309a76d0bc7a9ff9a5a227
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flim/
-  to /tmp/flimRzEvZY/flim-20210529.1253
+  to /tmp/flimDGtvjc/flim-20210529.1253
     mime-en.texi -> mime-en.texi
     mime-ja.texi -> mime-ja.texi
     sasl.texi -> sasl.texi
@@ -38,9 +38,9 @@ Copying files (->) and directories (=>)
     sha1.el -> sha1.el
     smtp.el -> smtp.el
     std11.el -> std11.el
-Created /tmp/flimRzEvZY/flim-20210529.1253/mime-en.info
-Created /tmp/flimRzEvZY/flim-20210529.1253/mime-ja.info
-Created /tmp/flimRzEvZY/flim-20210529.1253/sasl.info
+Created /tmp/flimDGtvjc/flim-20210529.1253/mime-en.info
+Created /tmp/flimDGtvjc/flim-20210529.1253/mime-ja.info
+Created /tmp/flimDGtvjc/flim-20210529.1253/sasl.info
 Created flim-20210529.1253.tar containing:
   flim-20210529.1253/
   flim-20210529.1253/dir
@@ -74,8 +74,8 @@ Created flim-20210529.1253.tar containing:
   flim-20210529.1253/sha1.el
   flim-20210529.1253/smtp.el
   flim-20210529.1253/std11.el
-Built flim in 39.234s, finished at 2021-09-22T03:20:51+0000
+Built flim in 26.969s, finished at 2021-09-22T07:37:05+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  250 Sep 22 03:20 packages/flim-20210529.1253.entry
-472K -rw-r--r-- 1 root root 470K Sep 22 03:20 packages/flim-20210529.1253.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:20 packages/flim-badge.svg
+4.0K -rw-r--r-- 1 root root  250 Sep 22 07:37 packages/flim-20210529.1253.entry
+472K -rw-r--r-- 1 root root 470K Sep 22 07:37 packages/flim-20210529.1253.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 07:37 packages/flim-badge.svg

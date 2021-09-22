@@ -2,12 +2,12 @@ Package: lsp-mode
 Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-mode.git
 
-Cloning https://github.com/emacs-lsp/lsp-mode.git to /mnt/store/melpa/working/lsp-mode/
+Updating /mnt/store/melpa/working/lsp-mode/
 Checking out origin/HEAD
 Checking out a15a35dc3550816babf594cdcfefc9a4565c178b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-mode/
-  to /tmp/lsp-modeOXgElY/lsp-mode-20210921.2018
+  to /tmp/lsp-mode4wjvty/lsp-mode-20210921.2018
     lsp-completion.el -> lsp-completion.el
     lsp-diagnostics.el -> lsp-diagnostics.el
     lsp-dired.el -> lsp-dired.el
@@ -161,9 +161,9 @@ Created lsp-mode-20210921.2018.tar containing:
   lsp-mode-20210921.2018/lsp-yaml.el
   lsp-mode-20210921.2018/lsp-zig.el
   lsp-mode-20210921.2018/lsp.el
-Built lsp-mode in 291.921s, finished at 2021-09-22T03:55:09+0000
+Built lsp-mode in 5.753s, finished at 2021-09-22T08:02:10+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  512 Sep 22 03:55 packages/lsp-mode-20210921.2018.entry
-1.1M -rw-r--r-- 1 root root 1.1M Sep 22 03:55 packages/lsp-mode-20210921.2018.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:55 packages/lsp-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   54 Sep 22 03:55 packages/lsp-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  512 Sep 22 08:02 packages/lsp-mode-20210921.2018.entry
+1.1M -rw-r--r-- 1 root root 1.1M Sep 22 08:02 packages/lsp-mode-20210921.2018.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 08:02 packages/lsp-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   54 Sep 22 08:02 packages/lsp-mode-readme.txt

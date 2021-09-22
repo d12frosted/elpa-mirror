@@ -2,12 +2,12 @@ Package: flex-compile
 Fetcher: github
 Source:  https://github.com/plandes/flex-compile.git
 
-Cloning https://github.com/plandes/flex-compile.git to /mnt/store/melpa/working/flex-compile/
+Updating /mnt/store/melpa/working/flex-compile/
 Checking out origin/HEAD
 Checking out 64f61ba1c113be38e4eae2a1fcee5596223c5d85
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flex-compile/
-  to /tmp/flex-compilekdP0mX/flex-compile-20210914.1255
+  to /tmp/flex-compilecl5E2m/flex-compile-20210914.1255
     flex-compile-base.el -> flex-compile-base.el
     flex-compile-choice-program.el -> flex-compile-choice-program.el
     flex-compile-cli.el -> flex-compile-cli.el
@@ -47,9 +47,9 @@ Created flex-compile-20210914.1255.tar containing:
   flex-compile-20210914.1255/flex-compile-xml-validate.el
   flex-compile-20210914.1255/flex-compile.el
   flex-compile-20210914.1255/flex-compiler.el
-Built flex-compile in 8.418s, finished at 2021-09-22T03:20:16+0000
+Built flex-compile in 5.825s, finished at 2021-09-22T07:36:42+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  414 Sep 22 03:20 packages/flex-compile-20210914.1255.entry
-140K -rw-r--r-- 1 root root 140K Sep 22 03:20 packages/flex-compile-20210914.1255.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:20 packages/flex-compile-badge.svg
-4.0K -rw-r--r-- 1 root root  418 Sep 22 03:20 packages/flex-compile-readme.txt
+4.0K -rw-r--r-- 1 root root  414 Sep 22 07:36 packages/flex-compile-20210914.1255.entry
+140K -rw-r--r-- 1 root root 140K Sep 22 07:36 packages/flex-compile-20210914.1255.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 07:36 packages/flex-compile-badge.svg
+4.0K -rw-r--r-- 1 root root  418 Sep 22 07:36 packages/flex-compile-readme.txt

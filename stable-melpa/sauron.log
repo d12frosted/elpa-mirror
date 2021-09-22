@@ -2,12 +2,12 @@ Package: sauron
 Fetcher: github
 Source:  https://github.com/djcb/sauron.git
 
-Updating /mnt/store/melpa/working/sauron/
+Cloning https://github.com/djcb/sauron.git to /mnt/store/melpa/working/sauron/
 Checking out origin/HEAD
 Checking out 5daade4836da5b1b2ab26d84128d6c38328a5d52
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sauron/
-  to /tmp/sauronICUpoL/sauron-20201015.836
+  to /tmp/saurons5DcWd/sauron-20201015.836
     sauron-ams-org.el -> sauron-ams-org.el
     sauron-appt.el -> sauron-appt.el
     sauron-compilation.el -> sauron-compilation.el
@@ -42,9 +42,9 @@ Created sauron-20201015.836.tar containing:
   sauron-20201015.836/sauron-twittering.el
   sauron-20201015.836/sauron-zeroconf.el
   sauron-20201015.836/sauron.el
-Built sauron in 5.158s, finished at 2021-09-22T01:58:39+0000
+Built sauron in 4.499s, finished at 2021-09-22T04:24:32+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  313 Sep 22 01:58 packages/sauron-20201015.836.entry
-112K -rw-r--r-- 1 root root 110K Sep 22 01:58 packages/sauron-20201015.836.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 01:58 packages/sauron-badge.svg
-4.0K -rw-r--r-- 1 root root  192 Sep 22 01:58 packages/sauron-readme.txt
+4.0K -rw-r--r-- 1 root root  313 Sep 22 04:24 packages/sauron-20201015.836.entry
+112K -rw-r--r-- 1 root root 110K Sep 22 04:24 packages/sauron-20201015.836.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:24 packages/sauron-badge.svg
+4.0K -rw-r--r-- 1 root root  192 Sep 22 04:24 packages/sauron-readme.txt

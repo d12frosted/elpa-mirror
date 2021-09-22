@@ -2,12 +2,12 @@ Package: lfe-mode
 Fetcher: github
 Source:  https://github.com/rvirding/lfe.git
 
-Cloning https://github.com/rvirding/lfe.git to /mnt/store/melpa/working/lfe-mode/
+Updating /mnt/store/melpa/working/lfe-mode/
 Checking out origin/HEAD
 Checking out f39ec6a9b93f09e1a49ee84405d1e03e04adc7cf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lfe-mode/
-  to /tmp/lfe-modewEz4Qc/lfe-mode-20210603.1241
+  to /tmp/lfe-modews7nJX/lfe-mode-20210603.1241
   ! emacs/inferior-lfe.el -> inferior-lfe.el
   ! emacs/lfe-mode.el -> lfe-mode.el
   ! emacs/lfe-indent.el -> lfe-indent.el
@@ -17,9 +17,9 @@ Created lfe-mode-20210603.1241.tar containing:
   lfe-mode-20210603.1241/lfe-indent.el
   lfe-mode-20210603.1241/lfe-mode-pkg.el
   lfe-mode-20210603.1241/lfe-mode.el
-Built lfe-mode in 10.973s, finished at 2021-09-22T03:47:52+0000
+Built lfe-mode in 5.627s, finished at 2021-09-22T07:59:31+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  136 Sep 22 03:47 packages/lfe-mode-20210603.1241.entry
- 32K -rw-r--r-- 1 root root  30K Sep 22 03:47 packages/lfe-mode-20210603.1241.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:47 packages/lfe-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   46 Sep 22 03:47 packages/lfe-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  136 Sep 22 07:59 packages/lfe-mode-20210603.1241.entry
+ 32K -rw-r--r-- 1 root root  30K Sep 22 07:59 packages/lfe-mode-20210603.1241.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 07:59 packages/lfe-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   46 Sep 22 07:59 packages/lfe-mode-readme.txt

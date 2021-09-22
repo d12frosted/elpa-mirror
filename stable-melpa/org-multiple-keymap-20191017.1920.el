@@ -2,6 +2,8 @@
 
 ;; Author: myuhe <yuhei.maeda_at_gmail.com>
 ;; URL: https://github.com/myuhe/org-multiple-keymap.el
+;; Package-Version: 20191017.1920
+;; Package-Commit: 4eb8aa0aada012b2346cc7f0c55e07783141a2c3
 ;; Version: 0.2
 ;; Maintainer: myuhe
 ;; Copyright (C) :2015 myuhe all rights reserved.

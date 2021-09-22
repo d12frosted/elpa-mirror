@@ -2,12 +2,12 @@ Package: requirejs
 Fetcher: github
 Source:  https://github.com/joeheyming/requirejs-emacs.git
 
-Updating /mnt/store/melpa/working/requirejs/
+Cloning https://github.com/joeheyming/requirejs-emacs.git to /mnt/store/melpa/working/requirejs/
 Checking out origin/HEAD
 Checking out 4ea2a5fcbc76e4cbb6a7461e6f05f019b75865b1
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/requirejs/
-  to /tmp/requirejs2eGo3m/requirejs-20151204.719
+  to /tmp/requirejsFvnUOO/requirejs-20151204.719
     requirejs.el -> requirejs.el
     snippets => snippets
 Created requirejs-20151204.719.tar containing:
@@ -19,14 +19,14 @@ Created requirejs-20151204.719.tar containing:
   requirejs-20151204.719/snippets/js-mode/def
   requirejs-20151204.719/snippets/js2-mode/
   requirejs-20151204.719/snippets/js2-mode/.yas-parents
-Built requirejs in 5.165s, finished at 2021-09-22T01:57:08+0000
+Built requirejs in 15.877s, finished at 2021-09-22T04:22:51+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  549 Sep 22 01:57 packages/requirejs-20151204.719.entry
- 40K -rw-r--r-- 1 root root  40K Sep 22 01:57 packages/requirejs-20151204.719.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 01:57 packages/requirejs-badge.svg
-8.0K -rw-r--r-- 1 root root 5.6K Sep 22 01:57 packages/requirejs-mode-20130215.2104.el
-4.0K -rw-r--r-- 1 root root  331 Sep 21 22:14 packages/requirejs-mode-20130215.2104.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 22:14 packages/requirejs-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  139 Sep 21 22:14 packages/requirejs-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  226 Sep 22 01:57 packages/requirejs-mode.log
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 01:57 packages/requirejs-readme.txt
+4.0K -rw-r--r-- 1 root root  549 Sep 22 04:22 packages/requirejs-20151204.719.entry
+ 40K -rw-r--r-- 1 root root  40K Sep 22 04:22 packages/requirejs-20151204.719.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:22 packages/requirejs-badge.svg
+8.0K -rw-r--r-- 1 root root 5.6K Sep 22 04:22 packages/requirejs-mode-20130215.2104.el
+4.0K -rw-r--r-- 1 root root  331 Sep 22 04:22 packages/requirejs-mode-20130215.2104.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:22 packages/requirejs-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  139 Sep 22 04:22 packages/requirejs-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  696 Sep 22 04:22 packages/requirejs-mode.log
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:22 packages/requirejs-readme.txt

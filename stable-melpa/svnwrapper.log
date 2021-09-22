@@ -2,12 +2,12 @@ Package: svnwrapper
 Fetcher: github
 Source:  https://github.com/Lindydancer/svnwrapper.git
 
-Updating /mnt/store/melpa/working/svnwrapper/
+Cloning https://github.com/Lindydancer/svnwrapper.git to /mnt/store/melpa/working/svnwrapper/
 Checking out origin/HEAD
 Checking out de5069f5784e5d9e87a0af0159ba5f28a3716583
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/svnwrapper/
-  to /tmp/svnwrapperWaFXLP/svnwrapper-20180414.1843
+  to /tmp/svnwrapperE2E7If/svnwrapper-20180414.1843
     svnwrapper.el -> svnwrapper.el
     bin => bin
 Created svnwrapper-20180414.1843.tar containing:
@@ -16,9 +16,9 @@ Created svnwrapper-20180414.1843.tar containing:
   svnwrapper-20180414.1843/bin/svnwrapper.rb
   svnwrapper-20180414.1843/svnwrapper-pkg.el
   svnwrapper-20180414.1843/svnwrapper.el
-Built svnwrapper in 8.369s, finished at 2021-09-22T02:05:30+0000
+Built svnwrapper in 4.778s, finished at 2021-09-22T04:33:39+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  366 Sep 22 02:05 packages/svnwrapper-20180414.1843.entry
- 20K -rw-r--r-- 1 root root  20K Sep 22 02:05 packages/svnwrapper-20180414.1843.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 02:05 packages/svnwrapper-badge.svg
-4.0K -rw-r--r-- 1 root root 3.2K Sep 22 02:05 packages/svnwrapper-readme.txt
+4.0K -rw-r--r-- 1 root root  366 Sep 22 04:33 packages/svnwrapper-20180414.1843.entry
+ 20K -rw-r--r-- 1 root root  20K Sep 22 04:33 packages/svnwrapper-20180414.1843.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:33 packages/svnwrapper-badge.svg
+4.0K -rw-r--r-- 1 root root 3.2K Sep 22 04:33 packages/svnwrapper-readme.txt

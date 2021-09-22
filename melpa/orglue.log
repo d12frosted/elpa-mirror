@@ -2,12 +2,12 @@ Package: orglue
 Fetcher: github
 Source:  https://github.com/yoshinari-nomura/orglue.git
 
-Updating /mnt/store/melpa/working/orglue/
+Cloning https://github.com/yoshinari-nomura/orglue.git to /mnt/store/melpa/working/orglue/
 Checking out origin/HEAD
 Checking out 9d5a8e24be9acb8c55bb4d6aa8b98e30e2677401
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/orglue/
-  to /tmp/orglue3fsWAZ/orglue-20200411.311
+  to /tmp/orglueG45yUt/orglue-20200411.311
     orglue-publish.el -> orglue-publish.el
     orglue.el -> orglue.el
 Created orglue-20200411.311.tar containing:
@@ -15,9 +15,9 @@ Created orglue-20200411.311.tar containing:
   orglue-20200411.311/orglue-pkg.el
   orglue-20200411.311/orglue-publish.el
   orglue-20200411.311/orglue.el
-Built orglue in 4.998s, finished at 2021-09-22T01:46:51+0000
+Built orglue in 4.882s, finished at 2021-09-22T04:11:06+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  308 Sep 22 01:46 packages/orglue-20200411.311.entry
- 32K -rw-r--r-- 1 root root  30K Sep 22 01:46 packages/orglue-20200411.311.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 01:46 packages/orglue-badge.svg
-   0 -rw-r--r-- 1 root root    0 Sep 22 01:46 packages/orglue-readme.txt
+4.0K -rw-r--r-- 1 root root  308 Sep 22 04:11 packages/orglue-20200411.311.entry
+ 32K -rw-r--r-- 1 root root  30K Sep 22 04:11 packages/orglue-20200411.311.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:11 packages/orglue-badge.svg
+   0 -rw-r--r-- 1 root root    0 Sep 22 04:11 packages/orglue-readme.txt

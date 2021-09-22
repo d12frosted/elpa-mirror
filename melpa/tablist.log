@@ -2,12 +2,12 @@ Package: tablist
 Fetcher: github
 Source:  https://github.com/politza/tablist.git
 
-Updating /mnt/store/melpa/working/tablist/
+Cloning https://github.com/politza/tablist.git to /mnt/store/melpa/working/tablist/
 Checking out origin/HEAD
 Checking out faab7a035ef2258cc4ea2182f67e3aedab7e2af9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tablist/
-  to /tmp/tablistEc5AH2/tablist-20200427.2205
+  to /tmp/tablistGxp0Ka/tablist-20200427.2205
     tablist-filter.el -> tablist-filter.el
     tablist.el -> tablist.el
 Created tablist-20200427.2205.tar containing:
@@ -15,9 +15,9 @@ Created tablist-20200427.2205.tar containing:
   tablist-20200427.2205/tablist-filter.el
   tablist-20200427.2205/tablist-pkg.el
   tablist-20200427.2205/tablist.el
-Built tablist in 4.807s, finished at 2021-09-22T02:06:21+0000
+Built tablist in 4.434s, finished at 2021-09-22T04:34:59+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  313 Sep 22 02:06 packages/tablist-20200427.2205.entry
- 92K -rw-r--r-- 1 root root  90K Sep 22 02:06 packages/tablist-20200427.2205.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 02:06 packages/tablist-badge.svg
-4.0K -rw-r--r-- 1 root root  252 Sep 22 02:06 packages/tablist-readme.txt
+4.0K -rw-r--r-- 1 root root  313 Sep 22 04:34 packages/tablist-20200427.2205.entry
+ 92K -rw-r--r-- 1 root root  90K Sep 22 04:34 packages/tablist-20200427.2205.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:34 packages/tablist-badge.svg
+4.0K -rw-r--r-- 1 root root  252 Sep 22 04:34 packages/tablist-readme.txt

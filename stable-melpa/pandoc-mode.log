@@ -2,12 +2,12 @@ Package: pandoc-mode
 Fetcher: github
 Source:  https://github.com/joostkremers/pandoc-mode.git
 
-Updating /mnt/store/melpa/working/pandoc-mode/
+Cloning https://github.com/joostkremers/pandoc-mode.git to /mnt/store/melpa/working/pandoc-mode/
 Checking out origin/HEAD
 Checking out bf01a14e99304653ae722226ea064c7d4b641774
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pandoc-mode/
-  to /tmp/pandoc-modeGblJmc/pandoc-mode-20210910.2043
+  to /tmp/pandoc-modeRoQf78/pandoc-mode-20210910.2043
     pandoc-mode-utils.el -> pandoc-mode-utils.el
     pandoc-mode.el -> pandoc-mode.el
     pandoc-mode.info -> pandoc-mode.info
@@ -18,9 +18,9 @@ Created pandoc-mode-20210910.2043.tar containing:
   pandoc-mode-20210910.2043/pandoc-mode-utils.el
   pandoc-mode-20210910.2043/pandoc-mode.el
   pandoc-mode-20210910.2043/pandoc-mode.info
-Built pandoc-mode in 6.315s, finished at 2021-09-22T01:49:06+0000
+Built pandoc-mode in 7.197s, finished at 2021-09-22T04:13:01+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  443 Sep 22 01:49 packages/pandoc-mode-20210910.2043.entry
-192K -rw-r--r-- 1 root root 190K Sep 22 01:49 packages/pandoc-mode-20210910.2043.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 01:49 packages/pandoc-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  197 Sep 22 01:49 packages/pandoc-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  443 Sep 22 04:13 packages/pandoc-mode-20210910.2043.entry
+192K -rw-r--r-- 1 root root 190K Sep 22 04:13 packages/pandoc-mode-20210910.2043.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:13 packages/pandoc-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  197 Sep 22 04:13 packages/pandoc-mode-readme.txt

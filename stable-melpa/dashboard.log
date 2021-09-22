@@ -2,12 +2,12 @@ Package: dashboard
 Fetcher: github
 Source:  https://github.com/emacs-dashboard/emacs-dashboard.git
 
-Cloning https://github.com/emacs-dashboard/emacs-dashboard.git to /mnt/store/melpa/working/dashboard/
+Updating /mnt/store/melpa/working/dashboard/
 Checking out origin/HEAD
 Checking out f7287f026103a44cf290fe737b6b9d841eddcaca
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dashboard/
-  to /tmp/dashboardE1N1PT/dashboard-20210827.239
+  to /tmp/dashboardOcVKCj/dashboard-20210827.239
     dashboard-widgets.el -> dashboard-widgets.el
     dashboard.el -> dashboard.el
     banners => banners
@@ -22,24 +22,24 @@ Created dashboard-20210827.239.tar containing:
   dashboard-20210827.239/dashboard-pkg.el
   dashboard-20210827.239/dashboard-widgets.el
   dashboard-20210827.239/dashboard.el
-Built dashboard in 5.810s, finished at 2021-09-22T03:02:05+0000
+Built dashboard in 5.373s, finished at 2021-09-22T07:22:34+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  386 Sep 22 03:02 packages/dashboard-20210827.239.entry
-140K -rw-r--r-- 1 root root 140K Sep 22 03:02 packages/dashboard-20210827.239.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:02 packages/dashboard-badge.svg
-4.0K -rw-r--r-- 1 root root 3.8K Sep 22 00:56 packages/dashboard-hackernews-20190109.205.el
-4.0K -rw-r--r-- 1 root root  432 Sep 22 00:56 packages/dashboard-hackernews-20190109.205.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 00:56 packages/dashboard-hackernews-badge.svg
-4.0K -rw-r--r-- 1 root root   34 Sep 22 00:56 packages/dashboard-hackernews-readme.txt
-4.0K -rw-r--r-- 1 root root  305 Sep 22 03:02 packages/dashboard-hackernews.log
-4.0K -rw-r--r-- 1 root root 3.4K Sep 22 00:56 packages/dashboard-ls-20210108.1857.el
-4.0K -rw-r--r-- 1 root root  452 Sep 22 00:56 packages/dashboard-ls-20210108.1857.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 00:56 packages/dashboard-ls-badge.svg
-4.0K -rw-r--r-- 1 root root   62 Sep 22 00:56 packages/dashboard-ls-readme.txt
-   0 -rw-r--r-- 1 root root    0 Sep 22 03:02 packages/dashboard-ls.log
-4.0K -rw-r--r-- 1 root root 3.9K Sep 22 00:56 packages/dashboard-project-status-20190202.1354.el
-4.0K -rw-r--r-- 1 root root  483 Sep 22 00:56 packages/dashboard-project-status-20190202.1354.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 00:56 packages/dashboard-project-status-badge.svg
-4.0K -rw-r--r-- 1 root root   96 Sep 22 00:56 packages/dashboard-project-status-readme.txt
-4.0K -rw-r--r-- 1 root root  741 Sep 22 00:56 packages/dashboard-project-status.log
-4.0K -rw-r--r-- 1 root root  118 Sep 22 03:02 packages/dashboard-readme.txt
+4.0K -rw-r--r-- 1 root root  386 Sep 22 07:22 packages/dashboard-20210827.239.entry
+140K -rw-r--r-- 1 root root 140K Sep 22 07:22 packages/dashboard-20210827.239.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 07:22 packages/dashboard-badge.svg
+4.0K -rw-r--r-- 1 root root 3.8K Sep 22 03:02 packages/dashboard-hackernews-20190109.205.el
+4.0K -rw-r--r-- 1 root root  432 Sep 22 03:02 packages/dashboard-hackernews-20190109.205.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:02 packages/dashboard-hackernews-badge.svg
+4.0K -rw-r--r-- 1 root root   34 Sep 22 03:02 packages/dashboard-hackernews-readme.txt
+4.0K -rw-r--r-- 1 root root  193 Sep 22 07:22 packages/dashboard-hackernews.log
+4.0K -rw-r--r-- 1 root root 3.4K Sep 22 03:02 packages/dashboard-ls-20210108.1857.el
+4.0K -rw-r--r-- 1 root root  452 Sep 22 03:02 packages/dashboard-ls-20210108.1857.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:02 packages/dashboard-ls-badge.svg
+4.0K -rw-r--r-- 1 root root   62 Sep 22 03:02 packages/dashboard-ls-readme.txt
+4.0K -rw-r--r-- 1 root root  148 Sep 22 07:22 packages/dashboard-ls.log
+4.0K -rw-r--r-- 1 root root 3.9K Sep 22 03:02 packages/dashboard-project-status-20190202.1354.el
+4.0K -rw-r--r-- 1 root root  483 Sep 22 03:02 packages/dashboard-project-status-20190202.1354.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:02 packages/dashboard-project-status-badge.svg
+4.0K -rw-r--r-- 1 root root   96 Sep 22 03:02 packages/dashboard-project-status-readme.txt
+4.0K -rw-r--r-- 1 root root  191 Sep 22 07:22 packages/dashboard-project-status.log
+4.0K -rw-r--r-- 1 root root  118 Sep 22 07:22 packages/dashboard-readme.txt

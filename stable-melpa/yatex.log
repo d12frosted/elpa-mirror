@@ -2,11 +2,11 @@ Package: yatex
 Fetcher: hg
 Source:  https://www.yatex.org/hgrepos/yatex
 
-Updating /mnt/store/melpa/working/yatex/
+Cloning https://www.yatex.org/hgrepos/yatex to /mnt/store/melpa/working/yatex/
 Checking out d4831b3672f87affbb0f7f69135e7824d0bd325b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/yatex/
-  to /tmp/yatexnjhVlc/yatex-20210630.2200
+  to /tmp/yatexFrkAKY/yatex-20210630.2200
     yahtml.el -> yahtml.el
     yatex.el -> yatex.el
     yatex19.el -> yatex19.el
@@ -48,8 +48,8 @@ Created yatex-20210630.2200.tar containing:
   yatex-20210630.2200/yatexpkg.el
   yatex-20210630.2200/yatexprc.el
   yatex-20210630.2200/yatexsec.el
-Built yatex in 24.802s, finished at 2021-09-22T02:15:45+0000
+Built yatex in 35.135s, finished at 2021-09-22T04:46:29+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  146 Sep 22 02:15 packages/yatex-20210630.2200.entry
-632K -rw-r--r-- 1 root root 630K Sep 22 02:15 packages/yatex-20210630.2200.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 02:15 packages/yatex-badge.svg
+4.0K -rw-r--r-- 1 root root  146 Sep 22 04:46 packages/yatex-20210630.2200.entry
+632K -rw-r--r-- 1 root root 630K Sep 22 04:46 packages/yatex-20210630.2200.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:46 packages/yatex-badge.svg

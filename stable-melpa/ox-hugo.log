@@ -2,12 +2,12 @@ Package: ox-hugo
 Fetcher: github
 Source:  https://github.com/kaushalmodi/ox-hugo.git
 
-Updating /mnt/store/melpa/working/ox-hugo/
+Cloning https://github.com/kaushalmodi/ox-hugo.git to /mnt/store/melpa/working/ox-hugo/
 Checking out origin/HEAD
 Checking out f0357fa7449cc8baecee588dab7dcf9ea243f3b4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ox-hugo/
-  to /tmp/ox-hugoVzw2RN/ox-hugo-20210916.1332
+  to /tmp/ox-hugoICb8z6/ox-hugo-20210916.1332
     org-hugo-auto-export-mode.el -> org-hugo-auto-export-mode.el
     ox-blackfriday.el -> ox-blackfriday.el
     ox-hugo-pandoc-cite.el -> ox-hugo-pandoc-cite.el
@@ -19,9 +19,9 @@ Created ox-hugo-20210916.1332.tar containing:
   ox-hugo-20210916.1332/ox-hugo-pandoc-cite.el
   ox-hugo-20210916.1332/ox-hugo-pkg.el
   ox-hugo-20210916.1332/ox-hugo.el
-Built ox-hugo in 22.074s, finished at 2021-09-22T01:48:00+0000
+Built ox-hugo in 43.518s, finished at 2021-09-22T04:12:34+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  275 Sep 22 01:48 packages/ox-hugo-20210916.1332.entry
-292K -rw-r--r-- 1 root root 290K Sep 22 01:47 packages/ox-hugo-20210916.1332.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 01:48 packages/ox-hugo-badge.svg
-4.0K -rw-r--r-- 1 root root 2.4K Sep 22 01:47 packages/ox-hugo-readme.txt
+4.0K -rw-r--r-- 1 root root  275 Sep 22 04:12 packages/ox-hugo-20210916.1332.entry
+292K -rw-r--r-- 1 root root 290K Sep 22 04:12 packages/ox-hugo-20210916.1332.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:12 packages/ox-hugo-badge.svg
+4.0K -rw-r--r-- 1 root root 2.4K Sep 22 04:12 packages/ox-hugo-readme.txt
