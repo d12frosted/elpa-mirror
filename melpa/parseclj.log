@@ -2,26 +2,26 @@ Package: parseclj
 Fetcher: github
 Source:  https://github.com/clojure-emacs/parseclj.git
 
-Cloning https://github.com/clojure-emacs/parseclj.git to /mnt/store/melpa/working/parseclj/
+Updating /mnt/store/melpa/working/parseclj/
 Checking out origin/HEAD
-Checking out 1bb3800f8f2417b0b881f57448ccb4acd1fe5b8d
+Checking out 61513d2c9939e3b423b2270c9652d0c6dae45c29
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/parseclj/
-  to /tmp/parsecljRnYZky/parseclj-20201012.712
+  to /tmp/parsecljsScPIF/parseclj-20210922.642
     parseclj-ast.el -> parseclj-ast.el
     parseclj-lex.el -> parseclj-lex.el
     parseclj-parser.el -> parseclj-parser.el
     parseclj.el -> parseclj.el
-Created parseclj-20201012.712.tar containing:
-  parseclj-20201012.712/
-  parseclj-20201012.712/parseclj-ast.el
-  parseclj-20201012.712/parseclj-lex.el
-  parseclj-20201012.712/parseclj-parser.el
-  parseclj-20201012.712/parseclj-pkg.el
-  parseclj-20201012.712/parseclj.el
-Built parseclj in 4.352s, finished at 2021-09-22T04:13:20+0000
+Created parseclj-20210922.642.tar containing:
+  parseclj-20210922.642/
+  parseclj-20210922.642/parseclj-ast.el
+  parseclj-20210922.642/parseclj-lex.el
+  parseclj-20210922.642/parseclj-parser.el
+  parseclj-20210922.642/parseclj-pkg.el
+  parseclj-20210922.642/parseclj.el
+Built parseclj in 5.068s, finished at 2021-09-22T20:01:21+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  352 Sep 22 04:13 packages/parseclj-20201012.712.entry
- 52K -rw-r--r-- 1 root root  50K Sep 22 04:13 packages/parseclj-20201012.712.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:13 packages/parseclj-badge.svg
-4.0K -rw-r--r-- 1 root root   38 Sep 22 04:13 packages/parseclj-readme.txt
+4.0K -rw-r--r-- 1 root root  352 Sep 22 20:01 packages/parseclj-20210922.642.entry
+ 52K -rw-r--r-- 1 root root  50K Sep 22 20:01 packages/parseclj-20210922.642.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 20:01 packages/parseclj-badge.svg
+4.0K -rw-r--r-- 1 root root   38 Sep 22 20:01 packages/parseclj-readme.txt

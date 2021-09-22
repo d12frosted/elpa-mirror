@@ -2,12 +2,12 @@ Package: ob-go
 Fetcher: github
 Source:  https://github.com/pope/ob-go.git
 
-Cloning https://github.com/pope/ob-go.git to /mnt/store/melpa/working/ob-go/
+Updating /mnt/store/melpa/working/ob-go/
 Checking out origin/HEAD
 Checking out 2067ed55f4c1d33a43cb3f6948609d240a8915f5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ob-go/
-  to /tmp/ob-goVeExGd/ob-go-20190201.2040
+  to /tmp/ob-go2Wa8Ox/ob-go-20190201.2040
     ob-go.el -> ob-go.el
     test-ob-go.el -> test-ob-go.el
 Created ob-go-20190201.2040.tar containing:
@@ -15,9 +15,9 @@ Created ob-go-20190201.2040.tar containing:
   ob-go-20190201.2040/ob-go-pkg.el
   ob-go-20190201.2040/ob-go.el
   ob-go-20190201.2040/test-ob-go.el
-Built ob-go in 4.411s, finished at 2021-09-22T04:04:14+0000
+Built ob-go in 5.766s, finished at 2021-09-22T19:54:03+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  327 Sep 22 04:04 packages/ob-go-20190201.2040.entry
- 20K -rw-r--r-- 1 root root  20K Sep 22 04:04 packages/ob-go-20190201.2040.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:04 packages/ob-go-badge.svg
-4.0K -rw-r--r-- 1 root root  965 Sep 22 04:04 packages/ob-go-readme.txt
+4.0K -rw-r--r-- 1 root root  327 Sep 22 19:54 packages/ob-go-20190201.2040.entry
+ 20K -rw-r--r-- 1 root root  20K Sep 22 19:54 packages/ob-go-20190201.2040.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 19:54 packages/ob-go-badge.svg
+4.0K -rw-r--r-- 1 root root  965 Sep 22 19:54 packages/ob-go-readme.txt

@@ -2,12 +2,12 @@ Package: phpactor
 Fetcher: github
 Source:  https://github.com/emacs-php/phpactor.el.git
 
-Cloning https://github.com/emacs-php/phpactor.el.git to /mnt/store/melpa/working/phpactor/
+Updating /mnt/store/melpa/working/phpactor/
 Checking out origin/HEAD
 Checking out 272217fbb6b7e7f70615fc518d77c6d75f33a44f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/phpactor/
-  to /tmp/phpactorS7tUS7/phpactor-20210619.1706
+  to /tmp/phpactorx6y9bA/phpactor-20210619.1706
     phpactor.el -> phpactor.el
     composer.json -> composer.json
     composer.lock -> composer.lock
@@ -17,9 +17,9 @@ Created phpactor-20210619.1706.tar containing:
   phpactor-20210619.1706/composer.lock
   phpactor-20210619.1706/phpactor-pkg.el
   phpactor-20210619.1706/phpactor.el
-Built phpactor in 12.183s, finished at 2021-09-22T04:15:11+0000
+Built phpactor in 5.539s, finished at 2021-09-22T20:02:52+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  510 Sep 22 04:15 packages/phpactor-20210619.1706.entry
-280K -rw-r--r-- 1 root root 280K Sep 22 04:15 packages/phpactor-20210619.1706.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:15 packages/phpactor-badge.svg
-4.0K -rw-r--r-- 1 root root  543 Sep 22 04:15 packages/phpactor-readme.txt
+4.0K -rw-r--r-- 1 root root  510 Sep 22 20:02 packages/phpactor-20210619.1706.entry
+280K -rw-r--r-- 1 root root 280K Sep 22 20:02 packages/phpactor-20210619.1706.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 20:02 packages/phpactor-badge.svg
+4.0K -rw-r--r-- 1 root root  543 Sep 22 20:02 packages/phpactor-readme.txt

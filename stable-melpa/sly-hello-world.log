@@ -2,12 +2,12 @@ Package: sly-hello-world
 Fetcher: github
 Source:  https://github.com/joaotavora/sly-hello-world.git
 
-Cloning https://github.com/joaotavora/sly-hello-world.git to /mnt/store/melpa/working/sly-hello-world/
+Updating /mnt/store/melpa/working/sly-hello-world/
 Checking out origin/HEAD
 Checking out d25acc1220a3ce066bd9908251c2f0f88b1781e9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sly-hello-world/
-  to /tmp/sly-hello-worldwqcQ5f/sly-hello-world-20200225.1755
+  to /tmp/sly-hello-world2BxP0f/sly-hello-world-20200225.1755
     sly-hello-world-autoloads.el -> sly-hello-world-autoloads.el
     sly-hello-world.el -> sly-hello-world.el
     slynk-hello-world.lisp -> slynk-hello-world.lisp
@@ -19,9 +19,9 @@ Created sly-hello-world-20200225.1755.tar containing:
   sly-hello-world-20200225.1755/sly-hello-world.el
   sly-hello-world-20200225.1755/slynk-hello-world.asd
   sly-hello-world-20200225.1755/slynk-hello-world.lisp
-Built sly-hello-world in 5.204s, finished at 2021-09-22T04:28:27+0000
+Built sly-hello-world in 8.180s, finished at 2021-09-22T16:14:58+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  397 Sep 22 04:28 packages/sly-hello-world-20200225.1755.entry
- 20K -rw-r--r-- 1 root root  20K Sep 22 04:28 packages/sly-hello-world-20200225.1755.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:28 packages/sly-hello-world-badge.svg
-4.0K -rw-r--r-- 1 root root  152 Sep 22 04:28 packages/sly-hello-world-readme.txt
+4.0K -rw-r--r-- 1 root root  397 Sep 22 16:14 packages/sly-hello-world-20200225.1755.entry
+ 20K -rw-r--r-- 1 root root  20K Sep 22 16:14 packages/sly-hello-world-20200225.1755.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 16:14 packages/sly-hello-world-badge.svg
+4.0K -rw-r--r-- 1 root root  152 Sep 22 16:14 packages/sly-hello-world-readme.txt

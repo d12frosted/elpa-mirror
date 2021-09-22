@@ -2,12 +2,12 @@ Package: pacmacs
 Fetcher: github
 Source:  https://github.com/codingteam/pacmacs.el.git
 
-Cloning https://github.com/codingteam/pacmacs.el.git to /mnt/store/melpa/working/pacmacs/
+Updating /mnt/store/melpa/working/pacmacs/
 Checking out origin/HEAD
 Checking out 5e0bcba1eeb10a4218087ff9cd6217d662fb775b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pacmacs/
-  to /tmp/pacmacscWya4C/pacmacs-20210225.1255
+  to /tmp/pacmacsnOJM6b/pacmacs-20210225.1255
     pacmacs-anim.el -> pacmacs-anim.el
     pacmacs-board.el -> pacmacs-board.el
     pacmacs-render.el -> pacmacs-render.el
@@ -101,9 +101,9 @@ Created pacmacs-20210225.1255.tar containing:
   pacmacs-20210225.1255/sprites/Red-Ghost-Win.xpm
   pacmacs-20210225.1255/sprites/Terrified-Ghost.json
   pacmacs-20210225.1255/sprites/Terrified-Ghost.xpm
-Built pacmacs in 5.929s, finished at 2021-09-22T04:12:48+0000
+Built pacmacs in 5.825s, finished at 2021-09-22T20:00:48+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  398 Sep 22 04:12 packages/pacmacs-20210225.1255.entry
-200K -rw-r--r-- 1 root root 200K Sep 22 04:12 packages/pacmacs-20210225.1255.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:12 packages/pacmacs-badge.svg
-4.0K -rw-r--r-- 1 root root   59 Sep 22 04:12 packages/pacmacs-readme.txt
+4.0K -rw-r--r-- 1 root root  398 Sep 22 20:00 packages/pacmacs-20210225.1255.entry
+200K -rw-r--r-- 1 root root 200K Sep 22 20:00 packages/pacmacs-20210225.1255.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 20:00 packages/pacmacs-badge.svg
+4.0K -rw-r--r-- 1 root root   59 Sep 22 20:00 packages/pacmacs-readme.txt

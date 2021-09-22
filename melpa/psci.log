@@ -2,12 +2,12 @@ Package: psci
 Fetcher: github
 Source:  https://github.com/purescript-emacs/emacs-psci.git
 
-Cloning https://github.com/purescript-emacs/emacs-psci.git to /mnt/store/melpa/working/psci/
+Updating /mnt/store/melpa/working/psci/
 Checking out origin/HEAD
 Checking out 95fb5d14033add8fe9c8c6b4379758beb88af1d0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/psci/
-  to /tmp/pscik6kWqq/psci-20191025.830
+  to /tmp/psciaZbAip/psci-20191025.830
     psci-dev.el -> psci-dev.el
     psci.el -> psci.el
 Created psci-20191025.830.tar containing:
@@ -15,9 +15,9 @@ Created psci-20191025.830.tar containing:
   psci-20191025.830/psci-dev.el
   psci-20191025.830/psci-pkg.el
   psci-20191025.830/psci.el
-Built psci in 4.571s, finished at 2021-09-22T04:17:59+0000
+Built psci in 4.926s, finished at 2021-09-22T20:06:27+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  450 Sep 22 04:17 packages/psci-20191025.830.entry
- 20K -rw-r--r-- 1 root root  20K Sep 22 04:17 packages/psci-20191025.830.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:17 packages/psci-badge.svg
-4.0K -rw-r--r-- 1 root root  637 Sep 22 04:17 packages/psci-readme.txt
+4.0K -rw-r--r-- 1 root root  450 Sep 22 20:06 packages/psci-20191025.830.entry
+ 20K -rw-r--r-- 1 root root  20K Sep 22 20:06 packages/psci-20191025.830.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 20:06 packages/psci-badge.svg
+4.0K -rw-r--r-- 1 root root  637 Sep 22 20:06 packages/psci-readme.txt

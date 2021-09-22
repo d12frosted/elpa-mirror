@@ -2,12 +2,12 @@ Package: pinyin
 Fetcher: github
 Source:  https://github.com/xuchunyang/pinyin.el.git
 
-Cloning https://github.com/xuchunyang/pinyin.el.git to /mnt/store/melpa/working/pinyin/
+Updating /mnt/store/melpa/working/pinyin/
 Checking out origin/HEAD
 Checking out e5508e5aa1ad4cfa05a7f4d299e5a155b288ec4c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pinyin/
-  to /tmp/pinyin8RK4TW/pinyin-20180620.1241
+  to /tmp/pinyinb5hjyE/pinyin-20180620.1241
     pinyin.el -> pinyin.el
     pinyin-data/pinyin.txt -> pinyin-data/pinyin.txt
 Created pinyin-20180620.1241.tar containing:
@@ -16,14 +16,14 @@ Created pinyin-20180620.1241.tar containing:
   pinyin-20180620.1241/pinyin-data/pinyin.txt
   pinyin-20180620.1241/pinyin-pkg.el
   pinyin-20180620.1241/pinyin.el
-Built pinyin in 13.043s, finished at 2021-09-22T04:15:45+0000
+Built pinyin in 6.419s, finished at 2021-09-22T20:03:11+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  375 Sep 22 04:15 packages/pinyin-20180620.1241.entry
-912K -rw-r--r-- 1 root root 910K Sep 22 04:15 packages/pinyin-20180620.1241.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:15 packages/pinyin-badge.svg
-4.0K -rw-r--r-- 1 root root   41 Sep 22 04:15 packages/pinyin-readme.txt
-8.0K -rw-r--r-- 1 root root 5.2K Sep 22 04:15 packages/pinyin-search-20160515.358.el
-4.0K -rw-r--r-- 1 root root  380 Sep 22 04:15 packages/pinyin-search-20160515.358.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:15 packages/pinyin-search-badge.svg
-4.0K -rw-r--r-- 1 root root  417 Sep 22 04:15 packages/pinyin-search-readme.txt
-4.0K -rw-r--r-- 1 root root  695 Sep 22 04:15 packages/pinyin-search.log
+4.0K -rw-r--r-- 1 root root  375 Sep 22 20:03 packages/pinyin-20180620.1241.entry
+912K -rw-r--r-- 1 root root 910K Sep 22 20:03 packages/pinyin-20180620.1241.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 20:03 packages/pinyin-badge.svg
+4.0K -rw-r--r-- 1 root root   41 Sep 22 20:03 packages/pinyin-readme.txt
+8.0K -rw-r--r-- 1 root root 5.2K Sep 22 20:03 packages/pinyin-search-20160515.358.el
+4.0K -rw-r--r-- 1 root root  380 Sep 22 20:03 packages/pinyin-search-20160515.358.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 16:02 packages/pinyin-search-badge.svg
+4.0K -rw-r--r-- 1 root root  417 Sep 22 20:03 packages/pinyin-search-readme.txt
+4.0K -rw-r--r-- 1 root root  228 Sep 22 20:03 packages/pinyin-search.log

@@ -2,12 +2,12 @@ Package: scala-mode
 Fetcher: github
 Source:  https://github.com/hvesalai/emacs-scala-mode.git
 
-Cloning https://github.com/hvesalai/emacs-scala-mode.git to /mnt/store/melpa/working/scala-mode/
+Updating /mnt/store/melpa/working/scala-mode/
 Checking out origin/HEAD
 Checking out 598cb680f321d9609295aa9b4679040cc703b602
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/scala-mode/
-  to /tmp/scala-modeWl8uzX/scala-mode-20210414.1126
+  to /tmp/scala-mode2ELLLe/scala-mode-20210414.1126
     scala-compile.el -> scala-compile.el
     scala-mode-fontlock.el -> scala-mode-fontlock.el
     scala-mode-imenu.el -> scala-mode-imenu.el
@@ -31,9 +31,9 @@ Created scala-mode-20210414.1126.tar containing:
   scala-mode-20210414.1126/scala-mode-prettify-symbols.el
   scala-mode-20210414.1126/scala-mode-syntax.el
   scala-mode-20210414.1126/scala-mode.el
-Built scala-mode in 5.148s, finished at 2021-09-22T04:24:43+0000
+Built scala-mode in 12.432s, finished at 2021-09-22T16:11:48+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  240 Sep 22 04:24 packages/scala-mode-20210414.1126.entry
-140K -rw-r--r-- 1 root root 140K Sep 22 04:24 packages/scala-mode-20210414.1126.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:24 packages/scala-mode-badge.svg
-   0 -rw-r--r-- 1 root root    0 Sep 22 04:24 packages/scala-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  240 Sep 22 16:11 packages/scala-mode-20210414.1126.entry
+140K -rw-r--r-- 1 root root 140K Sep 22 16:11 packages/scala-mode-20210414.1126.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 16:11 packages/scala-mode-badge.svg
+   0 -rw-r--r-- 1 root root    0 Sep 22 16:11 packages/scala-mode-readme.txt

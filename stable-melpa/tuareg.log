@@ -2,12 +2,12 @@ Package: tuareg
 Fetcher: github
 Source:  https://github.com/ocaml/tuareg.git
 
-Cloning https://github.com/ocaml/tuareg.git to /mnt/store/melpa/working/tuareg/
+Updating /mnt/store/melpa/working/tuareg/
 Checking out origin/HEAD
 Checking out 00faf47a7c65e4cdcf040f38add1c6a08cd2ee2f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tuareg/
-  to /tmp/tuaregnsrmkQ/tuareg-20210913.1031
+  to /tmp/tuaregHFT59H/tuareg-20210913.1031
     dot-emacs.el -> dot-emacs.el
     ocamldebug.el -> ocamldebug.el
     tuareg-compat.el -> tuareg-compat.el
@@ -23,9 +23,9 @@ Created tuareg-20210913.1031.tar containing:
   tuareg-20210913.1031/tuareg-opam.el
   tuareg-20210913.1031/tuareg-pkg.el
   tuareg-20210913.1031/tuareg.el
-Built tuareg in 12.054s, finished at 2021-09-22T04:38:58+0000
+Built tuareg in 6.342s, finished at 2021-09-22T16:23:50+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  619 Sep 22 04:38 packages/tuareg-20210913.1031.entry
-252K -rw-r--r-- 1 root root 250K Sep 22 04:38 packages/tuareg-20210913.1031.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:38 packages/tuareg-badge.svg
-4.0K -rw-r--r-- 1 root root  490 Sep 22 04:38 packages/tuareg-readme.txt
+4.0K -rw-r--r-- 1 root root  619 Sep 22 16:23 packages/tuareg-20210913.1031.entry
+252K -rw-r--r-- 1 root root 250K Sep 22 16:23 packages/tuareg-20210913.1031.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 16:23 packages/tuareg-badge.svg
+4.0K -rw-r--r-- 1 root root  490 Sep 22 16:23 packages/tuareg-readme.txt

@@ -2,12 +2,12 @@ Package: systemd
 Fetcher: github
 Source:  https://github.com/holomorph/systemd-mode.git
 
-Cloning https://github.com/holomorph/systemd-mode.git to /mnt/store/melpa/working/systemd/
+Updating /mnt/store/melpa/working/systemd/
 Checking out origin/HEAD
 Checking out b6ae63a236605b1c5e1069f7d3afe06ae32a7bae
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/systemd/
-  to /tmp/systemdXWcHNj/systemd-20210209.2052
+  to /tmp/systemdPwcLDA/systemd-20210209.2052
     systemd.el -> systemd.el
     network-directives.txt -> network-directives.txt
     nspawn-directives.txt -> nspawn-directives.txt
@@ -19,9 +19,9 @@ Created systemd-20210209.2052.tar containing:
   systemd-20210209.2052/systemd-pkg.el
   systemd-20210209.2052/systemd.el
   systemd-20210209.2052/unit-directives.txt
-Built systemd in 3.823s, finished at 2021-09-22T04:34:46+0000
+Built systemd in 6.253s, finished at 2021-09-22T16:19:58+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  306 Sep 22 04:34 packages/systemd-20210209.2052.entry
- 40K -rw-r--r-- 1 root root  40K Sep 22 04:34 packages/systemd-20210209.2052.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:34 packages/systemd-badge.svg
-4.0K -rw-r--r-- 1 root root  544 Sep 22 04:34 packages/systemd-readme.txt
+4.0K -rw-r--r-- 1 root root  306 Sep 22 16:19 packages/systemd-20210209.2052.entry
+ 40K -rw-r--r-- 1 root root  40K Sep 22 16:19 packages/systemd-20210209.2052.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 16:19 packages/systemd-badge.svg
+4.0K -rw-r--r-- 1 root root  544 Sep 22 16:19 packages/systemd-readme.txt

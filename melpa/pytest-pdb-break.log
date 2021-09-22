@@ -2,12 +2,12 @@ Package: pytest-pdb-break
 Fetcher: github
 Source:  https://github.com/poppyschmo/pytest-pdb-break.git
 
-Cloning https://github.com/poppyschmo/pytest-pdb-break.git to /mnt/store/melpa/working/pytest-pdb-break/
+Updating /mnt/store/melpa/working/pytest-pdb-break/
 Checking out origin/HEAD
 Checking out fe4a43299a926223634c3b104b751397bb818019
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pytest-pdb-break/
-  to /tmp/pytest-pdb-breaka0vEiw/pytest-pdb-break-20200804.848
+  to /tmp/pytest-pdb-breaklycjFA/pytest-pdb-break-20200804.848
   ! emacs/pytest-pdb-break-extra.el -> pytest-pdb-break-extra.el
   ! emacs/pytest-pdb-break.el -> pytest-pdb-break.el
   ! pytest_pdb_break.py -> lib/pytest_pdb_break.py
@@ -31,9 +31,9 @@ Created pytest-pdb-break-20200804.848.tar containing:
   pytest-pdb-break-20200804.848/pytest-pdb-break-extra.el
   pytest-pdb-break-20200804.848/pytest-pdb-break-pkg.el
   pytest-pdb-break-20200804.848/pytest-pdb-break.el
-Built pytest-pdb-break in 6.656s, finished at 2021-09-22T04:19:14+0000
+Built pytest-pdb-break in 6.633s, finished at 2021-09-22T16:06:53+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  396 Sep 22 04:19 packages/pytest-pdb-break-20200804.848.entry
-100K -rw-r--r-- 1 root root 100K Sep 22 04:19 packages/pytest-pdb-break-20200804.848.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:19 packages/pytest-pdb-break-badge.svg
-4.0K -rw-r--r-- 1 root root  650 Sep 22 04:19 packages/pytest-pdb-break-readme.txt
+4.0K -rw-r--r-- 1 root root  396 Sep 22 16:06 packages/pytest-pdb-break-20200804.848.entry
+100K -rw-r--r-- 1 root root 100K Sep 22 16:06 packages/pytest-pdb-break-20200804.848.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 16:06 packages/pytest-pdb-break-badge.svg
+4.0K -rw-r--r-- 1 root root  650 Sep 22 16:06 packages/pytest-pdb-break-readme.txt
