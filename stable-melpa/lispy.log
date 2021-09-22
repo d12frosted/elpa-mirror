@@ -2,12 +2,12 @@ Package: lispy
 Fetcher: github
 Source:  https://github.com/abo-abo/lispy.git
 
-Updating /mnt/store/melpa/working/lispy/
+Cloning https://github.com/abo-abo/lispy.git to /mnt/store/melpa/working/lispy/
 Checking out origin/HEAD
 Checking out 9568ee1aa5ac12e0ed03b9904b77c7a5bc4bb2e2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lispy/
-  to /tmp/lispyKXqlSi/lispy-20210914.1209
+  to /tmp/lispyqifiwc/lispy-20210914.1209
     elpa.el -> elpa.el
     le-clojure.el -> le-clojure.el
     le-hy.el -> le-hy.el
@@ -40,9 +40,9 @@ Created lispy-20210914.1209.tar containing:
   lispy-20210914.1209/lispy-python.py
   lispy-20210914.1209/lispy-tags.el
   lispy-20210914.1209/lispy.el
-Built lispy in 5.979s, finished at 2021-09-21T18:01:31+0000
+Built lispy in 35.774s, finished at 2021-09-22T03:49:05+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  431 Sep 21 18:01 packages/lispy-20210914.1209.entry
-492K -rw-r--r-- 1 root root 490K Sep 21 18:01 packages/lispy-20210914.1209.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 18:01 packages/lispy-badge.svg
-8.0K -rw-r--r-- 1 root root 4.9K Sep 21 18:01 packages/lispy-readme.txt
+4.0K -rw-r--r-- 1 root root  431 Sep 22 03:49 packages/lispy-20210914.1209.entry
+492K -rw-r--r-- 1 root root 490K Sep 22 03:49 packages/lispy-20210914.1209.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:49 packages/lispy-badge.svg
+8.0K -rw-r--r-- 1 root root 4.9K Sep 22 03:49 packages/lispy-readme.txt

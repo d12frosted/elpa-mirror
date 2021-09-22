@@ -1,0 +1,17 @@
+(todoist .
+	 [(20210921 2327)
+	  ((dash
+	    (2 15 0))
+	   (transient
+	    (0 1 0))
+	   (org
+	    (8 3 5))
+	   (emacs
+	    (25 3)))
+	  "Extension for interacting and managing todoist tasks" single
+	  ((:commit . "3286a924fb16921fa06d820ef60c4722519ac34d")
+	   (:authors
+	    ("Adrien Brochard"))
+	   (:maintainer "Adrien Brochard")
+	   (:keywords "todoist" "task" "todo" "comm")
+	   (:url . "https://github.com/abrochard/emacs-todoist"))])

@@ -2,12 +2,12 @@ Package: mandoku
 Fetcher: github
 Source:  https://github.com/mandoku/mandoku.git
 
-Updating /mnt/store/melpa/working/mandoku/
+Cloning https://github.com/mandoku/mandoku.git to /mnt/store/melpa/working/mandoku/
 Checking out origin/HEAD
 Checking out d65dbaa329ecf931f4142be72862972ea6a24e63
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mandoku/
-  to /tmp/mandokugkZyn0/mandoku-20180403.1106
+  to /tmp/mandokueu4qFy/mandoku-20180403.1106
   ! lisp/mandoku-annot.el -> mandoku-annot.el
   ! lisp/mandoku-cbeta.el -> mandoku-cbeta.el
   ! lisp/mandoku-dict.el -> mandoku-dict.el
@@ -37,14 +37,14 @@ Created mandoku-20180403.1106.tar containing:
   mandoku-20180403.1106/mandoku-two-columns.el
   mandoku-20180403.1106/mandoku.el
   mandoku-20180403.1106/w32-registry.el
-Built mandoku in 5.317s, finished at 2021-09-21T18:04:40+0000
+Built mandoku in 12.745s, finished at 2021-09-22T03:53:08+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  412 Sep 21 18:04 packages/mandoku-20180403.1106.entry
-880K -rw-r--r-- 1 root root 880K Sep 21 18:04 packages/mandoku-20180403.1106.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 18:04 packages/mandoku-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 18:04 packages/mandoku-readme.txt
- 72K -rw-r--r-- 1 root root  72K Sep 21 18:04 packages/mandoku-tls-20171118.240.el
-4.0K -rw-r--r-- 1 root root  575 Sep 21 14:16 packages/mandoku-tls-20171118.240.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 14:16 packages/mandoku-tls-badge.svg
-   0 -rw-r--r-- 1 root root    0 Sep 21 14:16 packages/mandoku-tls-readme.txt
-4.0K -rw-r--r-- 1 root root  216 Sep 21 18:04 packages/mandoku-tls.log
+4.0K -rw-r--r-- 1 root root  412 Sep 22 03:53 packages/mandoku-20180403.1106.entry
+880K -rw-r--r-- 1 root root 880K Sep 22 03:53 packages/mandoku-20180403.1106.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:53 packages/mandoku-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:53 packages/mandoku-readme.txt
+ 76K -rw-r--r-- 1 root root  73K Sep 22 03:53 packages/mandoku-tls-20171118.240.el
+4.0K -rw-r--r-- 1 root root  575 Sep 22 03:53 packages/mandoku-tls-20171118.240.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:53 packages/mandoku-tls-badge.svg
+   0 -rw-r--r-- 1 root root    0 Sep 22 03:53 packages/mandoku-tls-readme.txt
+4.0K -rw-r--r-- 1 root root  665 Sep 22 03:53 packages/mandoku-tls.log

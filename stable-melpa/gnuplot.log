@@ -2,12 +2,12 @@ Package: gnuplot
 Fetcher: github
 Source:  https://github.com/emacsorphanage/gnuplot.git
 
-Updating /mnt/store/melpa/working/gnuplot/
+Cloning https://github.com/emacsorphanage/gnuplot.git to /mnt/store/melpa/working/gnuplot/
 Checking out origin/HEAD
 Checking out 7138b139d2dca9683f1a81325c643b2744aa1ea3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gnuplot/
-  to /tmp/gnuplotfDm4qE/gnuplot-20210609.834
+  to /tmp/gnuplothrWLpe/gnuplot-20210609.834
     gnuplot.el -> gnuplot.el
     gnuplot-gui.el -> gnuplot-gui.el
     gnuplot-context.el -> gnuplot-context.el
@@ -17,14 +17,14 @@ Created gnuplot-20210609.834.tar containing:
   gnuplot-20210609.834/gnuplot-gui.el
   gnuplot-20210609.834/gnuplot-pkg.el
   gnuplot-20210609.834/gnuplot.el
-Built gnuplot in 5.343s, finished at 2021-09-21T17:45:47+0000
+Built gnuplot in 6.451s, finished at 2021-09-22T03:29:53+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  406 Sep 21 17:45 packages/gnuplot-20210609.834.entry
-260K -rw-r--r-- 1 root root 260K Sep 21 17:45 packages/gnuplot-20210609.834.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 17:45 packages/gnuplot-badge.svg
- 16K -rw-r--r-- 1 root root  16K Sep 21 13:57 packages/gnuplot-mode-20171013.1616.el
-4.0K -rw-r--r-- 1 root root  253 Sep 21 13:57 packages/gnuplot-mode-20171013.1616.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 13:57 packages/gnuplot-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 2.2K Sep 21 13:57 packages/gnuplot-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  217 Sep 21 17:45 packages/gnuplot-mode.log
-4.0K -rw-r--r-- 1 root root 2.3K Sep 21 17:45 packages/gnuplot-readme.txt
+4.0K -rw-r--r-- 1 root root  406 Sep 22 03:29 packages/gnuplot-20210609.834.entry
+260K -rw-r--r-- 1 root root 260K Sep 22 03:29 packages/gnuplot-20210609.834.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:29 packages/gnuplot-badge.svg
+ 16K -rw-r--r-- 1 root root  16K Sep 22 03:29 packages/gnuplot-mode-20171013.1616.el
+4.0K -rw-r--r-- 1 root root  253 Sep 22 01:16 packages/gnuplot-mode-20171013.1616.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 01:16 packages/gnuplot-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 2.2K Sep 22 01:16 packages/gnuplot-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  261 Sep 22 03:29 packages/gnuplot-mode.log
+4.0K -rw-r--r-- 1 root root 2.3K Sep 22 03:29 packages/gnuplot-readme.txt

@@ -2,12 +2,12 @@ Package: go-imports
 Fetcher: github
 Source:  https://github.com/yasushi-saito/go-imports.git
 
-Updating /mnt/store/melpa/working/go-imports/
+Cloning https://github.com/yasushi-saito/go-imports.git to /mnt/store/melpa/working/go-imports/
 Checking out origin/HEAD
 Checking out 55681e815da93b6f927213c4aa352ae33db97c37
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/go-imports/
-  to /tmp/go-importsx2jVYP/go-imports-20190715.1647
+  to /tmp/go-importsgrP0gP/go-imports-20190715.1647
     go-imports.el -> go-imports.el
     find-packages.pl -> find-packages.pl
 Created go-imports-20190715.1647.tar containing:
@@ -15,9 +15,9 @@ Created go-imports-20190715.1647.tar containing:
   go-imports-20190715.1647/find-packages.pl
   go-imports-20190715.1647/go-imports-pkg.el
   go-imports-20190715.1647/go-imports.el
-Built go-imports in 5.367s, finished at 2021-09-21T17:46:14+0000
+Built go-imports in 4.662s, finished at 2021-09-22T03:30:28+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  339 Sep 21 17:46 packages/go-imports-20190715.1647.entry
- 20K -rw-r--r-- 1 root root  20K Sep 21 17:46 packages/go-imports-20190715.1647.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 17:46 packages/go-imports-badge.svg
-4.0K -rw-r--r-- 1 root root  929 Sep 21 17:46 packages/go-imports-readme.txt
+4.0K -rw-r--r-- 1 root root  339 Sep 22 03:30 packages/go-imports-20190715.1647.entry
+ 20K -rw-r--r-- 1 root root  20K Sep 22 03:30 packages/go-imports-20190715.1647.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:30 packages/go-imports-badge.svg
+4.0K -rw-r--r-- 1 root root  929 Sep 22 03:30 packages/go-imports-readme.txt

@@ -2,12 +2,12 @@ Package: mpdel
 Fetcher: github
 Source:  https://github.com/mpdel/mpdel.git
 
-Updating /mnt/store/melpa/working/mpdel/
+Cloning https://github.com/mpdel/mpdel.git to /mnt/store/melpa/working/mpdel/
 Checking out origin/HEAD
 Checking out 6682446c6263a79e79c55cf32c0efb066245feec
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mpdel/
-  to /tmp/mpdelSG8m8c/mpdel-20210107.1303
+  to /tmp/mpdelpkSrRc/mpdel-20210107.1303
     mpdel-browser.el -> mpdel-browser.el
     mpdel-core.el -> mpdel-core.el
     mpdel-playlist.el -> mpdel-playlist.el
@@ -23,9 +23,9 @@ Created mpdel-20210107.1303.tar containing:
   mpdel-20210107.1303/mpdel-song.el
   mpdel-20210107.1303/mpdel-tablist.el
   mpdel-20210107.1303/mpdel.el
-Built mpdel in 10.520s, finished at 2021-09-21T18:07:39+0000
+Built mpdel in 10.187s, finished at 2021-09-22T03:57:47+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  384 Sep 21 18:07 packages/mpdel-20210107.1303.entry
- 52K -rw-r--r-- 1 root root  50K Sep 21 18:07 packages/mpdel-20210107.1303.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 18:07 packages/mpdel-badge.svg
-4.0K -rw-r--r-- 1 root root  286 Sep 21 18:07 packages/mpdel-readme.txt
+4.0K -rw-r--r-- 1 root root  384 Sep 22 03:57 packages/mpdel-20210107.1303.entry
+ 52K -rw-r--r-- 1 root root  50K Sep 22 03:57 packages/mpdel-20210107.1303.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:57 packages/mpdel-badge.svg
+4.0K -rw-r--r-- 1 root root  286 Sep 22 03:57 packages/mpdel-readme.txt

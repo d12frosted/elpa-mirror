@@ -2,24 +2,24 @@ Package: magit-section
 Fetcher: github
 Source:  https://github.com/magit/magit.git
 
-Updating /mnt/store/melpa/working/magit-section/
+Cloning https://github.com/magit/magit.git to /mnt/store/melpa/working/magit-section/
 Checking out origin/HEAD
 Checking out f805f6a7720aeb894e9a58f0b36769ebdb53dd7c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magit-section/
-  to /tmp/magit-sectionEvEycg/magit-section-20210829.1849
+  to /tmp/magit-section9v0WIn/magit-section-20210829.1849
   ! lisp/magit-section.el -> magit-section.el
   ! Documentation/magit-section.texi -> magit-section.texi
-Created /tmp/magit-sectionEvEycg/magit-section-20210829.1849/magit-section.info
+Created /tmp/magit-section9v0WIn/magit-section-20210829.1849/magit-section.info
 Created magit-section-20210829.1849.tar containing:
   magit-section-20210829.1849/
   magit-section-20210829.1849/dir
   magit-section-20210829.1849/magit-section-pkg.el
   magit-section-20210829.1849/magit-section.el
   magit-section-20210829.1849/magit-section.info
-Built magit-section in 10.224s, finished at 2021-09-21T18:04:13+0000
+Built magit-section in 151.160s, finished at 2021-09-22T03:54:06+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  371 Sep 21 18:04 packages/magit-section-20210829.1849.entry
-100K -rw-r--r-- 1 root root 100K Sep 21 18:04 packages/magit-section-20210829.1849.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 18:04 packages/magit-section-badge.svg
-4.0K -rw-r--r-- 1 root root  255 Sep 21 18:04 packages/magit-section-readme.txt
+4.0K -rw-r--r-- 1 root root  371 Sep 22 03:54 packages/magit-section-20210829.1849.entry
+100K -rw-r--r-- 1 root root 100K Sep 22 03:54 packages/magit-section-20210829.1849.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:54 packages/magit-section-badge.svg
+4.0K -rw-r--r-- 1 root root  255 Sep 22 03:54 packages/magit-section-readme.txt

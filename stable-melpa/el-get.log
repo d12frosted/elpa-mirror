@@ -2,12 +2,12 @@ Package: el-get
 Fetcher: github
 Source:  https://github.com/dimitri/el-get.git
 
-Updating /mnt/store/melpa/working/el-get/
+Cloning https://github.com/dimitri/el-get.git to /mnt/store/melpa/working/el-get/
 Checking out origin/HEAD
 Checking out b5a5a405d04f61ec9c5fcb19357a50a4b9e36a25
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/el-get/
-  to /tmp/el-getubWfYM/el-get-20210613.1418
+  to /tmp/el-getVQA6Th/el-get-20210613.1418
     .dir-locals.el -> .dir-locals.el
     el-get-autoloading.el -> el-get-autoloading.el
     el-get-build.el -> el-get-build.el
@@ -71,9 +71,9 @@ Created el-get-20210613.1418.tar containing:
   el-get-20210613.1418/methods/el-get-svn.el
   el-get-20210613.1418/recipes/
   el-get-20210613.1418/recipes/el-get.rcp
-Built el-get in 7.493s, finished at 2021-09-21T17:31:19+0000
+Built el-get in 24.783s, finished at 2021-09-22T03:09:23+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  487 Sep 21 17:31 packages/el-get-20210613.1418.entry
-340K -rw-r--r-- 1 root root 340K Sep 21 17:31 packages/el-get-20210613.1418.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 17:31 packages/el-get-badge.svg
-4.0K -rw-r--r-- 1 root root  689 Sep 21 17:31 packages/el-get-readme.txt
+4.0K -rw-r--r-- 1 root root  487 Sep 22 03:09 packages/el-get-20210613.1418.entry
+340K -rw-r--r-- 1 root root 340K Sep 22 03:09 packages/el-get-20210613.1418.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:09 packages/el-get-badge.svg
+4.0K -rw-r--r-- 1 root root  689 Sep 22 03:09 packages/el-get-readme.txt

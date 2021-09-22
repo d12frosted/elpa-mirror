@@ -2,12 +2,12 @@ Package: javadoc-lookup
 Fetcher: github
 Source:  https://github.com/skeeto/javadoc-lookup.git
 
-Updating /mnt/store/melpa/working/javadoc-lookup/
+Cloning https://github.com/skeeto/javadoc-lookup.git to /mnt/store/melpa/working/javadoc-lookup/
 Checking out origin/HEAD
 Checking out 507a2dd443d60b537b8f779c1847e2cd0ccd1382
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/javadoc-lookup/
-  to /tmp/javadoc-lookupSbdqFe/javadoc-lookup-20160214.31
+  to /tmp/javadoc-lookupBYo4pQ/javadoc-lookup-20160214.31
     javadoc-import.el -> javadoc-import.el
     javadoc-lookup.el -> javadoc-lookup.el
     maven-fetch.el -> maven-fetch.el
@@ -20,9 +20,9 @@ Created javadoc-lookup-20160214.31.tar containing:
   javadoc-lookup-20160214.31/maven-fetch.el
   javadoc-lookup-20160214.31/webcache/
   javadoc-lookup-20160214.31/webcache/http+++docs.oracle.com+javase+8+docs+api+.v4
-Built javadoc-lookup in 5.184s, finished at 2021-09-21T17:57:12+0000
+Built javadoc-lookup in 4.124s, finished at 2021-09-22T03:42:57+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  364 Sep 21 17:57 packages/javadoc-lookup-20160214.31.entry
-412K -rw-r--r-- 1 root root 410K Sep 21 17:57 packages/javadoc-lookup-20160214.31.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 17:57 packages/javadoc-lookup-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Sep 21 17:57 packages/javadoc-lookup-readme.txt
+4.0K -rw-r--r-- 1 root root  364 Sep 22 03:42 packages/javadoc-lookup-20160214.31.entry
+412K -rw-r--r-- 1 root root 410K Sep 22 03:42 packages/javadoc-lookup-20160214.31.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:42 packages/javadoc-lookup-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Sep 22 03:42 packages/javadoc-lookup-readme.txt

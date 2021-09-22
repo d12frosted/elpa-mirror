@@ -2,12 +2,12 @@ Package: elfeed-score
 Fetcher: github
 Source:  https://github.com/sp1ff/elfeed-score.git
 
-Updating /mnt/store/melpa/working/elfeed-score/
+Cloning https://github.com/sp1ff/elfeed-score.git to /mnt/store/melpa/working/elfeed-score/
 Checking out origin/HEAD
 Checking out 429bc9a5681382ade406e09dfbc4268c08e5828b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elfeed-score/
-  to /tmp/elfeed-scoreyOxngk/elfeed-score-20210916.137
+  to /tmp/elfeed-score1eWgUs/elfeed-score-20210916.137
     elfeed-score-log.el -> elfeed-score-log.el
     elfeed-score-maint.el -> elfeed-score-maint.el
     elfeed-score-pkg.el -> elfeed-score-pkg.el
@@ -18,8 +18,8 @@ Copying files (->) and directories (=>)
     elfeed-score.el -> elfeed-score.el
   ! doc/elfeed-score.texi -> elfeed-score.texi
   ! doc/version.texi -> version.texi
-Created /tmp/elfeed-scoreyOxngk/elfeed-score-20210916.137/elfeed-score.info
-Created /tmp/elfeed-scoreyOxngk/elfeed-score-20210916.137/version.info
+Created /tmp/elfeed-score1eWgUs/elfeed-score-20210916.137/elfeed-score.info
+Created /tmp/elfeed-score1eWgUs/elfeed-score-20210916.137/version.info
 Created elfeed-score-20210916.137.tar containing:
   elfeed-score-20210916.137/
   elfeed-score-20210916.137/dir
@@ -33,9 +33,9 @@ Created elfeed-score-20210916.137.tar containing:
   elfeed-score-20210916.137/elfeed-score.el
   elfeed-score-20210916.137/elfeed-score.info
   elfeed-score-20210916.137/version.info
-Built elfeed-score in 13.669s, finished at 2021-09-21T17:31:59+0000
+Built elfeed-score in 16.199s, finished at 2021-09-22T03:09:58+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  384 Sep 21 17:31 packages/elfeed-score-20210916.137.entry
-240K -rw-r--r-- 1 root root 240K Sep 21 17:31 packages/elfeed-score-20210916.137.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 17:31 packages/elfeed-score-badge.svg
-4.0K -rw-r--r-- 1 root root  629 Sep 21 17:31 packages/elfeed-score-readme.txt
+4.0K -rw-r--r-- 1 root root  384 Sep 22 03:09 packages/elfeed-score-20210916.137.entry
+240K -rw-r--r-- 1 root root 240K Sep 22 03:09 packages/elfeed-score-20210916.137.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:09 packages/elfeed-score-badge.svg
+4.0K -rw-r--r-- 1 root root  629 Sep 22 03:09 packages/elfeed-score-readme.txt

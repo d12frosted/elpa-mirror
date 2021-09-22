@@ -2,12 +2,12 @@ Package: flycheck-haskell
 Fetcher: github
 Source:  https://github.com/flycheck/flycheck-haskell.git
 
-Updating /mnt/store/melpa/working/flycheck-haskell/
+Cloning https://github.com/flycheck/flycheck-haskell.git to /mnt/store/melpa/working/flycheck-haskell/
 Checking out origin/HEAD
 Checking out 16b748c033e30216259fa8c9c23616db36750a58
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flycheck-haskell/
-  to /tmp/flycheck-haskellkfmugl/flycheck-haskell-20210829.1143
+  to /tmp/flycheck-haskell1sSMmF/flycheck-haskell-20210829.1143
     flycheck-haskell.el -> flycheck-haskell.el
     get-cabal-configuration.hs -> get-cabal-configuration.hs
 Created flycheck-haskell-20210829.1143.tar containing:
@@ -15,9 +15,9 @@ Created flycheck-haskell-20210829.1143.tar containing:
   flycheck-haskell-20210829.1143/flycheck-haskell-pkg.el
   flycheck-haskell-20210829.1143/flycheck-haskell.el
   flycheck-haskell-20210829.1143/get-cabal-configuration.hs
-Built flycheck-haskell in 5.219s, finished at 2021-09-21T17:40:15+0000
+Built flycheck-haskell in 4.325s, finished at 2021-09-22T03:21:59+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  578 Sep 21 17:40 packages/flycheck-haskell-20210829.1143.entry
- 60K -rw-r--r-- 1 root root  60K Sep 21 17:40 packages/flycheck-haskell-20210829.1143.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 17:40 packages/flycheck-haskell-badge.svg
-4.0K -rw-r--r-- 1 root root  578 Sep 21 17:40 packages/flycheck-haskell-readme.txt
+4.0K -rw-r--r-- 1 root root  578 Sep 22 03:21 packages/flycheck-haskell-20210829.1143.entry
+ 60K -rw-r--r-- 1 root root  60K Sep 22 03:21 packages/flycheck-haskell-20210829.1143.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:21 packages/flycheck-haskell-badge.svg
+4.0K -rw-r--r-- 1 root root  578 Sep 22 03:21 packages/flycheck-haskell-readme.txt

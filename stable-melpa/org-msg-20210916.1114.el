@@ -5,10 +5,8 @@
 ;; Author: Jérémy Compostella <jeremy.compostella@gmail.com>
 ;; Created: January 2018
 ;; Keywords: extensions mail
-;; Package-Commit: 77f5911b7d390a069104db20be86293506ffbff2
 ;; Homepage: https://github.com/jeremy-compostella/org-msg
-;; Package-Version: 20210916.1114
-;; Package-X-Original-Version: 3.9
+;; Package-Version: 3.9
 ;; Package-Requires: ((emacs "24.4") (htmlize "1.54"))
 
 ;; This program is free software; you can redistribute it and/or modify

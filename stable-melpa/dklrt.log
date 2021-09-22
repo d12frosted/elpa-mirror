@@ -2,19 +2,19 @@ Package: dklrt
 Fetcher: github
 Source:  https://github.com/davidkeegan/dklrt.git
 
-Updating /mnt/store/melpa/working/dklrt/
+Cloning https://github.com/davidkeegan/dklrt.git to /mnt/store/melpa/working/dklrt/
 Checking out origin/HEAD
 Checking out 5d6c99f8018335256ab934b4c1049708ae2d48ba
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dklrt/
-  to /tmp/dklrtkfhONd/dklrt-20131110.1341
+  to /tmp/dklrtPy849z/dklrt-20131110.1341
     dklrt-pkg.el -> dklrt-pkg.el
     dklrt.el -> dklrt.el
     dklrt.texi -> dklrt.texi
     Misc.py -> Misc.py
     Recurring.py -> Recurring.py
     Time.py -> Time.py
-Created /tmp/dklrtkfhONd/dklrt-20131110.1341/dklrt.info
+Created /tmp/dklrtPy849z/dklrt-20131110.1341/dklrt.info
 Created dklrt-20131110.1341.tar containing:
   dklrt-20131110.1341/
   dklrt-20131110.1341/Misc.py
@@ -24,9 +24,9 @@ Created dklrt-20131110.1341.tar containing:
   dklrt-20131110.1341/dklrt-pkg.el
   dklrt-20131110.1341/dklrt.el
   dklrt-20131110.1341/dklrt.info
-Built dklrt in 10.444s, finished at 2021-09-21T17:28:27+0000
+Built dklrt in 14.620s, finished at 2021-09-22T03:05:28+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  433 Sep 21 17:28 packages/dklrt-20131110.1341.entry
- 40K -rw-r--r-- 1 root root  40K Sep 21 17:28 packages/dklrt-20131110.1341.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 17:28 packages/dklrt-badge.svg
-4.0K -rw-r--r-- 1 root root  271 Sep 21 17:28 packages/dklrt-readme.txt
+4.0K -rw-r--r-- 1 root root  433 Sep 22 03:05 packages/dklrt-20131110.1341.entry
+ 40K -rw-r--r-- 1 root root  40K Sep 22 03:05 packages/dklrt-20131110.1341.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:05 packages/dklrt-badge.svg
+4.0K -rw-r--r-- 1 root root  271 Sep 22 03:05 packages/dklrt-readme.txt

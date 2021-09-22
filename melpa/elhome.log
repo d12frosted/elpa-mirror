@@ -2,12 +2,12 @@ Package: elhome
 Fetcher: github
 Source:  https://github.com/demyanrogozhin/elhome.git
 
-Updating /mnt/store/melpa/working/elhome/
+Cloning https://github.com/demyanrogozhin/elhome.git to /mnt/store/melpa/working/elhome/
 Checking out origin/HEAD
 Checking out e789e806469af3e9705f72298683c21f6c3a516d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elhome/
-  to /tmp/elhomekRCAcM/elhome-20161025.2042
+  to /tmp/elhomeA2HFJg/elhome-20161025.2042
     elhome.el -> elhome.el
     startup => startup
 Created elhome-20161025.2042.tar containing:
@@ -20,9 +20,9 @@ Created elhome-20161025.2042.tar containing:
   elhome-20161025.2042/startup/20-initsplit.el
   elhome-20161025.2042/startup/30-elhome-settings.el
   elhome-20161025.2042/startup/README
-Built elhome in 4.832s, finished at 2021-09-21T17:31:54+0000
+Built elhome in 5.050s, finished at 2021-09-22T03:09:52+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  374 Sep 21 17:31 packages/elhome-20161025.2042.entry
- 32K -rw-r--r-- 1 root root  30K Sep 21 17:31 packages/elhome-20161025.2042.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 17:31 packages/elhome-badge.svg
-4.0K -rw-r--r-- 1 root root  434 Sep 21 17:31 packages/elhome-readme.txt
+4.0K -rw-r--r-- 1 root root  374 Sep 22 03:09 packages/elhome-20161025.2042.entry
+ 32K -rw-r--r-- 1 root root  30K Sep 22 03:09 packages/elhome-20161025.2042.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:09 packages/elhome-badge.svg
+4.0K -rw-r--r-- 1 root root  434 Sep 22 03:09 packages/elhome-readme.txt

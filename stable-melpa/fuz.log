@@ -2,12 +2,12 @@ Package: fuz
 Fetcher: github
 Source:  https://github.com/rustify-emacs/fuz.el.git
 
-Updating /mnt/store/melpa/working/fuz/
+Cloning https://github.com/rustify-emacs/fuz.el.git to /mnt/store/melpa/working/fuz/
 Checking out origin/HEAD
 Checking out fee874aa35d2ee6b12b836290b5c8eaa44175a28
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fuz/
-  to /tmp/fuzHLGK0g/fuz-20200104.524
+  to /tmp/fuzSSyK2D/fuz-20200104.524
     fuz-extra.el -> fuz-extra.el
     fuz.el -> fuz.el
     Cargo.toml -> Cargo.toml
@@ -23,9 +23,9 @@ Created fuz-20200104.524.tar containing:
   fuz-20200104.524/src/
   fuz-20200104.524/src/dynmod.rs
   fuz-20200104.524/src/lib.rs
-Built fuz in 5.083s, finished at 2021-09-21T17:43:14+0000
+Built fuz in 4.831s, finished at 2021-09-22T03:26:34+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  367 Sep 21 17:43 packages/fuz-20200104.524.entry
- 52K -rw-r--r-- 1 root root  50K Sep 21 17:43 packages/fuz-20200104.524.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 17:43 packages/fuz-badge.svg
-4.0K -rw-r--r-- 1 root root  331 Sep 21 17:43 packages/fuz-readme.txt
+4.0K -rw-r--r-- 1 root root  367 Sep 22 03:26 packages/fuz-20200104.524.entry
+ 52K -rw-r--r-- 1 root root  50K Sep 22 03:26 packages/fuz-20200104.524.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:26 packages/fuz-badge.svg
+4.0K -rw-r--r-- 1 root root  331 Sep 22 03:26 packages/fuz-readme.txt

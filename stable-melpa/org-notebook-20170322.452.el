@@ -4,8 +4,6 @@
 
 ;; Author: Paul Elder <paul.elder@amanokami.net>
 ;; Keywords: convenience, tools
-;; Package-Version: 20170322.452
-;; Package-Commit: 86042d866bf441e2c9bb51f995e5994141b78517
 ;; Version: 1.1
 ;; Package-Requires: ((emacs "24") (org "8") (cl-lib "0.5"))
 

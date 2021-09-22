@@ -2,12 +2,12 @@ Package: ob-browser
 Fetcher: github
 Source:  https://github.com/krisajenkins/ob-browser.git
 
-Updating /mnt/store/melpa/working/ob-browser/
+Cloning https://github.com/krisajenkins/ob-browser.git to /mnt/store/melpa/working/ob-browser/
 Checking out origin/HEAD
 Checking out a347d9df1c87b7eb660be8723982c7ad2563631a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ob-browser/
-  to /tmp/ob-browser00uBim/ob-browser-20170720.1918
+  to /tmp/ob-browsersVTks2/ob-browser-20170720.1918
     ob-browser.js -> ob-browser.js
     ob-browser.el -> ob-browser.el
 Created ob-browser-20170720.1918.tar containing:
@@ -15,9 +15,9 @@ Created ob-browser-20170720.1918.tar containing:
   ob-browser-20170720.1918/ob-browser-pkg.el
   ob-browser-20170720.1918/ob-browser.el
   ob-browser-20170720.1918/ob-browser.js
-Built ob-browser in 4.859s, finished at 2021-09-21T18:10:53+0000
+Built ob-browser in 9.922s, finished at 2021-09-22T04:03:23+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  420 Sep 21 18:10 packages/ob-browser-20170720.1918.entry
- 12K -rw-r--r-- 1 root root  10K Sep 21 18:10 packages/ob-browser-20170720.1918.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 18:10 packages/ob-browser-badge.svg
-4.0K -rw-r--r-- 1 root root   33 Sep 21 18:10 packages/ob-browser-readme.txt
+4.0K -rw-r--r-- 1 root root  420 Sep 22 04:03 packages/ob-browser-20170720.1918.entry
+ 12K -rw-r--r-- 1 root root  10K Sep 22 04:03 packages/ob-browser-20170720.1918.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:03 packages/ob-browser-badge.svg
+4.0K -rw-r--r-- 1 root root   33 Sep 22 04:03 packages/ob-browser-readme.txt

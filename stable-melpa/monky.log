@@ -2,12 +2,12 @@ Package: monky
 Fetcher: github
 Source:  https://github.com/ananthakumaran/monky.git
 
-Updating /mnt/store/melpa/working/monky/
+Cloning https://github.com/ananthakumaran/monky.git to /mnt/store/melpa/working/monky/
 Checking out origin/HEAD
 Checking out 72c7cd21b7b995c476e938fd0b92a494aa25c3a7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/monky/
-  to /tmp/monkysz03dy/monky-20210417.12
+  to /tmp/monkyssK1zc/monky-20210417.12
     monky.el -> monky.el
     monky.info -> monky.info
     style => style
@@ -22,9 +22,9 @@ Created monky-20210417.12.tar containing:
   monky-20210417.12/style/files-status
   monky-20210417.12/style/log-graph
   monky-20210417.12/style/tags
-Built monky in 6.975s, finished at 2021-09-21T18:07:02+0000
+Built monky in 5.853s, finished at 2021-09-22T03:56:55+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  327 Sep 21 18:07 packages/monky-20210417.12.entry
-132K -rw-r--r-- 1 root root 130K Sep 21 18:07 packages/monky-20210417.12.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 18:07 packages/monky-badge.svg
-   0 -rw-r--r-- 1 root root    0 Sep 21 18:07 packages/monky-readme.txt
+4.0K -rw-r--r-- 1 root root  327 Sep 22 03:56 packages/monky-20210417.12.entry
+132K -rw-r--r-- 1 root root 130K Sep 22 03:56 packages/monky-20210417.12.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 03:56 packages/monky-badge.svg
+   0 -rw-r--r-- 1 root root    0 Sep 22 03:56 packages/monky-readme.txt

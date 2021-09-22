@@ -2,12 +2,12 @@ Package: nntwitter
 Fetcher: github
 Source:  https://github.com/dickmao/nntwitter.git
 
-Updating /mnt/store/melpa/working/nntwitter/
+Cloning https://github.com/dickmao/nntwitter.git to /mnt/store/melpa/working/nntwitter/
 Checking out origin/HEAD
 Checking out a802ef9b589dda41bcb5d6cfce2faf8948c20c8c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nntwitter/
-  to /tmp/nntwitterVRRxQ1/nntwitter-20210911.1751
+  to /tmp/nntwitterKf9p7n/nntwitter-20210911.1751
   ! lisp/nntwitter-api.el -> nntwitter-api.el
   ! lisp/nntwitter-pkg.el -> nntwitter-pkg.el
   ! lisp/nntwitter.el -> nntwitter.el
@@ -16,9 +16,9 @@ Created nntwitter-20210911.1751.tar containing:
   nntwitter-20210911.1751/nntwitter-api.el
   nntwitter-20210911.1751/nntwitter-pkg.el
   nntwitter-20210911.1751/nntwitter.el
-Built nntwitter in 5.822s, finished at 2021-09-21T18:10:04+0000
+Built nntwitter in 5.997s, finished at 2021-09-22T04:01:20+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  342 Sep 21 18:10 packages/nntwitter-20210911.1751.entry
- 80K -rw-r--r-- 1 root root  80K Sep 21 18:10 packages/nntwitter-20210911.1751.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 21 18:10 packages/nntwitter-badge.svg
-4.0K -rw-r--r-- 1 root root   28 Sep 21 18:10 packages/nntwitter-readme.txt
+4.0K -rw-r--r-- 1 root root  342 Sep 22 04:01 packages/nntwitter-20210911.1751.entry
+ 80K -rw-r--r-- 1 root root  80K Sep 22 04:01 packages/nntwitter-20210911.1751.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 22 04:01 packages/nntwitter-badge.svg
+4.0K -rw-r--r-- 1 root root   28 Sep 22 04:01 packages/nntwitter-readme.txt
