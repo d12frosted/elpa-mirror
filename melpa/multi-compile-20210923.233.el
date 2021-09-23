@@ -5,8 +5,8 @@
 ;; Author: Kvashnin Vladimir <reangd@gmail.com>
 ;; Created: 2015-10-01
 ;; Version: 0.6.0
-;; Package-Commit: 65699ac6a2f787a07908466e1cbfe3333ace7532
-;; Package-Version: 20210620.48
+;; Package-Commit: 03ae81739e44b70903dcdaae86a5ccaecc73eb9b
+;; Package-Version: 20210923.233
 ;; Package-X-Original-Version: 20160215.1219
 ;; Keywords: tools compile build
 ;; URL: https://github.com/ReanGD/emacs-multi-compile
@@ -124,6 +124,11 @@
                                  (string :tag "Command")
                                  (sexp :tag "Expression returns a compilation root"))
                            ))))
+  :group 'multi-compile)
+
+(defcustom multi-compile-default-directory-function #'ignore
+  "A function whose result can set the default-directory for a compile target."
+  :type 'function
   :group 'multi-compile)
 
 (defcustom multi-compile-template
@@ -341,10 +346,12 @@
          ;; The command may be either a string or a list of strings to be joined by a space.
          ;; The canonical form is just a string where any joining has already been performed.
          (canonical-command (string-join (flatten-list (list command)) " "))
-         (default-directory (if (and (listp template)
-                                     (> (length template) 1))
-                                (eval-expression (cadr template))
-                              default-directory)))
+         (default-directory (or (and (listp template)
+                                     (> (length template) 1)
+                                     (eval-expression (cadr template)))
+                                (and multi-compile-default-directory-function
+                                     (funcall multi-compile-default-directory-function))
+                                default-directory)))
     (compile
      (multi-compile--fill-template canonical-command))))
 

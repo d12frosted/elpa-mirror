@@ -22,8 +22,8 @@
 ;; USA
 
 ;; Version: 1.0
-;; Package-Version: 20210916.2039
-;; Package-Commit: 5fc393d6c54abd3c9cff1a1f60265dc7a4aea6d0
+;; Package-Version: 20210922.2325
+;; Package-Commit: b8ca2cb0efef11cd7168bc8bde01c6d45393f9e7
 ;; Author: Adrien Brochard
 ;; Keywords: kubernetes k8s tools processes
 ;; URL: https://github.com/abrochard/kubel
@@ -79,6 +79,7 @@
 ;; l => log popup
 ;; e => exec popup
 ;; j => jab deployment to force rolling update
+;; S => scale replicas
 ;; C => set context
 ;; n => set namespace
 ;; R => set resource
@@ -557,6 +558,13 @@ TYPENAME is the resource type/name."
   "Return non-nil if this is the pod view."
   (-contains? '("Deployments" "deployments" "deployments.apps") kubel-resource))
 
+(defun kubel--is-scalable ()
+  "Return non-nil if the resource can be scaled."
+  (or
+   (kubel--is-deployment-view)
+   (-contains? '("ReplicaSets" "replicasets" "replicasets.apps") kubel-resource)
+   (-contains? '("StatefulSets" "statefulsets" "statefulsets.apps") kubel-resource)))
+
 (defun kubel--save-line ()
   "Save the current line number if the view is unchanged."
   (if (equal (buffer-name (current-buffer))
@@ -942,6 +950,18 @@ See https://github.com/kubernetes/kubernetes/issues/27081"
 				                      (format "{\"spec\":{\"template\":{\"metadata\":{\"labels\":{\"date\":\"%s\"}}}}}"
 					                          (round (time-to-seconds))))))))
 
+(defun kubel-scale-replicas (replicas)
+  "Scale resource replicas.
+
+REPLICAS is the number of desired replicas."
+  (interactive (list (read-number "Replicas: ")))
+  (if (kubel--is-scalable)
+      (let ((resource (kubel--get-resource-under-cursor)))
+        (kubel--exec (list "scale" kubel-resource resource "--replicas" (number-to-string replicas))))
+    (message
+     "[%s] cannot be scaled.\nOnly these resources can be scaled: [deployment, replica set, replication controller, and stateful set]."
+     kubel-resource)))
+
 (defun kubel-set-filter (filter)
   "Set the pod filter.
 
@@ -1093,7 +1113,8 @@ RESET is to be called if the search is nil after the first attempt."
     ("p" "Port forward" kubel-port-forward-pod)
     ("l" "Logs" kubel-log-popup)
     ("e" "Exec" kubel-exec-popup)
-    ("j" "Jab" kubel-jab-deployment)]
+    ("j" "Jab" kubel-jab-deployment)
+    ("S" "Scale replicas" kubel-scale-replicas)]
    ["Settings"
     ("C" "Set context" kubel-set-context)
     ("n" "Set namespace" kubel-set-namespace)
@@ -1137,6 +1158,7 @@ RESET is to be called if the search is nil after the first attempt."
     (define-key map (kbd "s") 'kubel-set-label-selector)
     ;; based on view
     (define-key map (kbd "p") 'kubel-port-forward-pod)
+    (define-key map (kbd "S") 'kubel-scale-replicas)
     (define-key map (kbd "l") 'kubel-log-popup)
     (define-key map (kbd "c") 'kubel-copy-popup)
     (define-key map (kbd "e") 'kubel-exec-popup)

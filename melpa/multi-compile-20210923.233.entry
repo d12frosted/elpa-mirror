@@ -1,11 +1,11 @@
 (multi-compile .
-	       [(20210620 48)
+	       [(20210923 233)
 		((emacs
 		  (24))
 		 (dash
 		  (2 12 1)))
 		"Multi target interface to compile." single
-		((:commit . "65699ac6a2f787a07908466e1cbfe3333ace7532")
+		((:commit . "03ae81739e44b70903dcdaae86a5ccaecc73eb9b")
 		 (:authors
 		  ("Kvashnin Vladimir" . "reangd@gmail.com"))
 		 (:maintainer "Kvashnin Vladimir" . "reangd@gmail.com")

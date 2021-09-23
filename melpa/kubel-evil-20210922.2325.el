@@ -20,8 +20,8 @@
 ;; USA
 
 ;; Version: 1.0
-;; Package-Version: 20201223.1657
-;; Package-Commit: 5fc393d6c54abd3c9cff1a1f60265dc7a4aea6d0
+;; Package-Version: 20210922.2325
+;; Package-Commit: b8ca2cb0efef11cd7168bc8bde01c6d45393f9e7
 ;; Author: Marcel Patzwahl
 ;; Keywords: kubernetes k8s tools processes evil keybindings
 ;; URL: https://github.com/abrochard/kubel
@@ -50,6 +50,7 @@
 ;; c => copy popup
 ;; d => delete pod
 ;; a => jab deployment to force rolling update
+;; S => scale replicas
 ;;
 
 ;;; Customize:
@@ -85,7 +86,8 @@
     ("p" "Port forward" kubel-port-forward-pod)
     ("l" "Logs" kubel-log-popup)
     ("e" "Exec" kubel-exec-popup)
-    ("a" "Jab" kubel-jab-deployment)] ;; can't use j here
+    ("a" "Jab" kubel-jab-deployment) ;; can't use j here
+    ("S" "Scale replicas" kubel-scale-replicas)]
    ["Settings"
     ("C" "Set context" kubel-set-context)
     ("n" "Set namespace" kubel-set-namespace)
@@ -129,6 +131,7 @@
   (kbd "c") #'kubel-copy-popup
   (kbd "e") #'kubel-exec-popup
   (kbd "a") #'kubel-jab-deployment
+  (kbd "S") #'kubel-scale-replicas
   (kbd "u") #'kubel-unmark-item
   (kbd "M") #'kubel-mark-all
   (kbd "U") #'kubel-unmark-all)
