@@ -13,8 +13,6 @@
 ;; limitations under the License.
 
 ;; Version: 2.8.0
-;; Package-Version: 20200405.1220
-;; Package-Commit: 729da9f4b99acb744ee6974ed7f3d4e252fd19da
 ;; URL: https://gitlab.emacsos.com/sylecn/zero-el
 ;; Package-Requires: ((emacs "24.3") (s "1.2.0"))
 

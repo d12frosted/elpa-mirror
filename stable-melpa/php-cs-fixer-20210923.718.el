@@ -8,8 +8,8 @@
 ;;; Author: Philippe Ivaldi for OVYA
 ;; Source: Some pieces of code are copied from go-mode.el https://github.com/dominikh/go-mode.el
 ;; Version: 1.0
-;; Package-Version: 20210729.1022
-;; Package-Commit: cc9a3624dcdc72d748d91e3d7cdb8544a1d85a51
+;; Package-Version: 20210923.718
+;; Package-Commit: 7e12a1af5d65cd8a801eeb5564c6268a4e190c0c
 ;; Keywords: languages php
 ;; Package-Requires: ((cl-lib "0.5"))
 ;; URL: https://github.com/OVYA/php-cs-fixer
@@ -163,7 +163,7 @@ for the next calls."
       (message "Testing php-cs-fixer existence and version...")
       (setq php-cs-fixer-is-command-ok-var 0)
 
-      (if (executable-find "php-cs-fixer")
+      (if (executable-find php-cs-fixer-command)
           (if (string-match ".+ [2-3].[0-9]+.*"
                             (shell-command-to-string
                              (concat php-cs-fixer-command " --version")))
