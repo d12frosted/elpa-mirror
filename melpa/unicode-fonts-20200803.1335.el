@@ -6,7 +6,7 @@
 ;; Homepage: http://github.com/rolandwalker/unicode-fonts
 ;; URL: http://raw.githubusercontent.com/rolandwalker/unicode-fonts/master/unicode-fonts.el
 ;; Package-Version: 20200803.1335
-;; Package-Commit: e3942fe40b418bfb2dc4e73633e09195437fef01
+;; Package-Commit: 47f2397ade28eba621baa865fd69e4efb71407a5
 ;; Version: 0.4.10
 ;; Last-Updated:  1 Oct 2018
 ;; EmacsWiki: UnicodeFonts
