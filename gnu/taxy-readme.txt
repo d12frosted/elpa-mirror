@@ -795,7 +795,7 @@ Now we'll define the default keys to use when classifying items.  This list is e
 
 Finally, rather than using a pre-made taxy struct, we make one at runtime, making the ~:take~ function with ~taxy-make-take-function~.
 
-#+begin_src elisp :exports both :results code :lexical t
+#+begin_src elisp :exports code :results code :lexical t
   (let ((taxy (make-taxy
                :name "Sporty (DSL)"
                :take (taxy-make-take-function sporty-default-keys
@@ -829,7 +829,7 @@ As you can see, the result is the same as that in the previous example, but we'v
 
 This also allows the grouping keys to be easily changed at runtime, producing a different result.  For example, we could group sports by, first, whether they use a ball, and then by venue.  Let's do this in a function so that users can pass their own list of keys:
 
-#+begin_src elisp :exports both :results code :lexical t
+#+begin_src elisp :exports code :results code :lexical t
   (cl-defun sporty-classify (sports &key (keys sporty-default-keys))
     (declare (indent defun))
     (let* ((taxy (make-taxy
@@ -848,7 +848,7 @@ This also allows the grouping keys to be easily changed at runtime, producing a 
 And this produces:
 
 #+RESULTS:
-#+begin_src elisp
+#+begin_src elisp :exports code
   ("Sporty (DSL)"
    ((outdoor
      ("Ultimate" "Disc golf"))
@@ -863,7 +863,7 @@ And this produces:
 
 Showing a =taxy= with =magit-section= is very easy:
 
-#+BEGIN_SRC elisp
+#+BEGIN_SRC elisp :exports code
   (require 'taxy-magit-section)
 
   ;; Using the `numbery' taxy defined in earlier examples:
@@ -880,6 +880,8 @@ That shows a buffer like this:
 Note that while =taxy-magit-section.el= is installed with the =taxy= package, the =magit-section= package is not automatically installed with it.
 
 ** Reference
+
+In Emacs 28+, see also =M-x shortdoc-display-group RET taxy RET=.
 
 *** Functions
 
@@ -930,6 +932,16 @@ Note that while =taxy-magit-section.el= is installed with the =taxy= package, th
 :PROPERTIES:
 :TOC:      :depth 0
 :END:
+
+** 0.8
+
+*** Additions
+
++  Short documentation group for Emacs 28+.
+
+*** Fixes
+
++  Require =map= for ~pcase~ pattern.
 
 ** 0.7
 
