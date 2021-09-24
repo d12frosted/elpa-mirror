@@ -1,6 +1,6 @@
-Approximate string matching completion style with a scoring
-algorithm that factors in substring matches and word/path
-component/camelCase boundaries.
+This is a fuzzy Emacs completion style similar to the built-in
+`flex' style, but with a better scoring algorithm. Specifically, it
+is non-greedy and ranks completions that match at word; path
+component; or camelCase boundaries higher.
 
-See: Myers, Eugene W., and Webb Miller. "Optimal alignments in
-     linear space." Bioinformatics 4.1 (1988): 11-17.
+To use this style, prepend `hotfuzz' to `completion-styles'.

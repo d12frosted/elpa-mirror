@@ -88,7 +88,9 @@ Press "o" or "C-c C-c" or "ENTER" or `M-x ffip-diff-find-file' in the
 buffer to open corresponding file.  Please note some backends assume that the git cli program
 is added into environment variable PATH.
 
-`ffip-diff-find-file-before-hook' is called before `ffip-diff-find-file'.
+`ffip-diff-find-file-before-hook' is called in `ffip-diff-find-file'.
+Two file names are passed to it as parameters.  One name is returned by the hook
+as the file searching keyword.
 
 `ffip-diff-apply-hunk' applies current hunk in `diff-mode' (please note
 `ffip-diff-mode' inherits from `diff-mode') to the target.

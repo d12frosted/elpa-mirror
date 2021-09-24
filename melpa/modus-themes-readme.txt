@@ -64,6 +64,7 @@ missing package or change you would like to see.
     alert
     all-the-icons
     annotate
+    ansi-color
     anzu
     apropos
     apt-sources-list
