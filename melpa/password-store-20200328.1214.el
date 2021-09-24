@@ -6,7 +6,7 @@
 ;; Maintainer: Tino Calancha <tino.calancha@gmail.com>
 ;; Version: 2.1.4
 ;; Package-Version: 20200328.1214
-;; Package-Commit: 3dd14690c7c81ac80e32e942cf5976732faf0fb3
+;; Package-Commit: 04cd3023f48cd203f6c0193e57a427226e8b431c
 ;; URL: https://www.passwordstore.org/
 ;; Package-Requires: ((emacs "25") (s "1.9.0") (with-editor "2.5.11") (auth-source-pass "5.0.0"))
 ;; Keywords: tools pass password password-store
