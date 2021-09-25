@@ -6,8 +6,8 @@
 ;; Contributors: Lee Hinman
 ;; Maintainer: Chunyang Xu <mail@xuchunyang.me>
 ;; URL: https://github.com/zwild/eshell-prompt-extras
-;; Package-Version: 20210916.123
-;; Package-Commit: 4884de4e372bb4553ac6876f24405c432ddfac78
+;; Package-Version: 20210925.110
+;; Package-Commit: c2078093323206b91a1b1f5786d79faa00b76be7
 ;; Version: 1.0
 ;; Created: 2014-08-16
 ;; Keywords: eshell, prompt
@@ -165,7 +165,9 @@
   :group 'epe)
 
 (defface epe-sudo-symbol-face
-  '((t (:inherit eshell-ls-unreadable-face)))
+  `((t (:inherit ,(if (facep 'eshell-ls-unreadable)
+                      'eshell-ls-unreadable
+                    'eshell-ls-unreadable-face))))
   "Face of your sudo symbol in prompt."
   :group 'epe)
 

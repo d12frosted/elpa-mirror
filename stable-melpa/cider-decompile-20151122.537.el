@@ -4,6 +4,8 @@
 ;;
 ;; Author: Dmitry Bushenko
 ;; URL: http://www.github.com/clojure-emacs/cider-decompile
+;; Package-Version: 20151122.537
+;; Package-Commit: 5d87035f3c3c14025e8f01c0c53d0ce2c8f56651
 ;; Version: 0.0.2
 ;; X-Original-Version: 0.0.1
 ;; Keywords: languages, clojure, cider
