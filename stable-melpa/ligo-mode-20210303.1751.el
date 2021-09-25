@@ -2,7 +2,7 @@
 
 ;; Version: 0.1.0
 ;; Package-Version: 20210303.1751
-;; Package-Commit: 7f033e0f1012d7bdf8cf9cd88be1411de214856e
+;; Package-Commit: 6b6637b7164253654729dfd15b3f28903ce3d0fb
 ;; Author: LigoLang SASU
 ;; Url: https://gitlab.com/ligolang/ligo/-/tree/dev/tools/emacs
 ;; Keywords: languages
