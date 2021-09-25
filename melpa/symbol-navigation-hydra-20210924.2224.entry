@@ -1,5 +1,5 @@
 (symbol-navigation-hydra .
-			 [(20201223 2054)
+			 [(20210924 2224)
 			  ((auto-highlight-symbol
 			    (1 53))
 			   (hydra
@@ -9,7 +9,7 @@
 			   (multiple-cursors
 			    (1 4 0)))
 			  "A symbol-aware, range-aware hydra" single
-			  ((:commit . "ed65cd9c22550e59f723d7fc36ecc313aedc83da")
+			  ((:commit . "3dbc0b6f36ee13dae7aaad9b867ad449a377d5d4")
 			   (:authors
 			    ("Brett Wines" . "bgwines@cs.stanford.edu"))
 			   (:maintainer "Brett Wines" . "bgwines@cs.stanford.edu")
