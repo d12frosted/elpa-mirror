@@ -1,0 +1,27 @@
+Package: lacquer
+Fetcher: github
+Source:  https://github.com/dingansichKum0/lacquer.git
+
+Updating /mnt/store/melpa/working/lacquer/
+Checking out origin/HEAD
+Checking out b9a56e22920a90318ee0f66a1d6edffbb85f6f6c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lacquer/
+  to /tmp/lacquerIJgeZq/lacquer-20210922.848
+    lacquer-automation.el -> lacquer-automation.el
+    lacquer-setting.el -> lacquer-setting.el
+    lacquer-utils.el -> lacquer-utils.el
+    lacquer.el -> lacquer.el
+Created lacquer-20210922.848.tar containing:
+  lacquer-20210922.848/
+  lacquer-20210922.848/lacquer-automation.el
+  lacquer-20210922.848/lacquer-pkg.el
+  lacquer-20210922.848/lacquer-setting.el
+  lacquer-20210922.848/lacquer-utils.el
+  lacquer-20210922.848/lacquer.el
+Built lacquer in 5.407s, finished at 2021-09-26T13:49:42+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  404 Sep 26 13:49 packages/lacquer-20210922.848.entry
+ 40K -rw-r--r-- 1 root root  40K Sep 26 13:49 packages/lacquer-20210922.848.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 26 13:49 packages/lacquer-badge.svg
+4.0K -rw-r--r-- 1 root root  357 Sep 26 13:49 packages/lacquer-readme.txt

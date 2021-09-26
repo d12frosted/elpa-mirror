@@ -440,7 +440,7 @@
 	      (:keywords "files")
 	      (:url . "http://elpa.gnu.org/packages/cpio-mode.html"))])
  (crdt .
-       [(0 2 4)
+       [(0 2 5)
 	nil "Collaborative editing using Conflict-free Replicated Data Types" tar
 	((:url . "https://code.librehq.com/qhong/crdt.el")
 	 (:keywords "collaboration" "crdt")
@@ -714,7 +714,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20210913)
+      [(20210925)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -2199,23 +2199,23 @@
 	      ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (seq .
-      [(2 22)
+      [(2 23)
        nil "Sequence manipulation functions" tar
-       ((:maintainer nil . "emacs-devel@gnu.org")
+       ((:keywords "sequences")
+	(:maintainer nil . "emacs-devel@gnu.org")
 	(:authors
 	 ("Nicolas Petton" . "nicolas@petton.fr"))
-	(:keywords "sequences")
-	(:url . "http://elpa.gnu.org/packages/seq.html"))])
+	(:url . "https://elpa.gnu.org/packages/seq.html"))])
  (setup .
-	[(1 0 0)
+	[(1 0 1)
 	 ((emacs
 	   (26 1)))
 	 "Helpful Configuration Macro" tar
 	 ((:url . "https://git.sr.ht/~pkal/setup")
+	  (:keywords "lisp" "local")
 	  (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
 	  (:authors
-	   ("Philip Kaludercic" . "philipk@posteo.net"))
-	  (:keywords "lisp" "local"))])
+	   ("Philip Kaludercic" . "philipk@posteo.net")))])
  (shelisp .
 	  [(0 9 1)
 	   nil "execute elisp in shell" single

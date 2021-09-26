@@ -92,3 +92,5 @@ version 1.0, 2012-04-02 First version.
 
 ; CONTRIBUTOR
 2015-12-09 Peter Buckley (dx-pbuckley). defcustom for result highlight color.
+
+HHH___________________________________________________________________

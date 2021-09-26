@@ -17,10 +17,10 @@ For example, these macros:
      (unless global-auto-revert-mode
        (:hook auto-revert-mode)))
 
-   (setup (:package paredit)
-     (:hide-mode)
-     (setq paredit-override-check-parens-function (lambda (_) t))
-     (:hook-into scheme-mode lisp-mode))
+   (setup (:package company)
+     (:bind "M-TAB" company-complete)
+     (:hook-into prog-mode conf-mode))
+
 
 expanded to the to the functional equivalent of
 
@@ -38,14 +38,12 @@ expanded to the to the functional equivalent of
    (unless global-auto-revert-mode
      (add-hook 'dired-mode-hook #'auto-revert-mode))
 
-   (unless (package-install-p 'paredit)
-     (package-install 'paredit))
-   (setq minor-mode-alist
-         (delq (assq 'paredit-mode minor-mode-alist)
-               minor-mode-alist))
-   (setq paredit-override-check-parens-function (lambda (_) t))
-   (add-hook 'scheme-mode-hook #'paredit-mode)
-   (add-hook 'lisp-mode-hook #'paredit-mode)
+   (unless (package-install-p 'company)
+     (package-install 'company))
+   (with-eval-after-load 'company
+     (define-key company-mode-map (kbd "M-TAB") #'company-complete))
+   (add-hook 'prog-mode-hook #'company-mode)
+   (add-hook 'conf-mode-hook #'company-mode)
 
 Additional "keywords" can be defined using `setup-define'.  All
 known keywords are documented in the docstring for `setup'.
