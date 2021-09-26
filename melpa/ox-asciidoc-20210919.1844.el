@@ -5,7 +5,7 @@
 ;; Author: Yasushi SHOJI <yasushi.shoji@gmail.com>
 ;; URL: https://github.com/yashi/org-asciidoc
 ;; Package-Version: 20210919.1844
-;; Package-Commit: c2b794aae26133189499424569d0f88b41c7e4c6
+;; Package-Commit: d60ac439278cec214882f92c47bc16e0f43ae98e
 ;; Package-Requires: ((org "8.1"))
 ;; Keywords: org, asciidoc
 
