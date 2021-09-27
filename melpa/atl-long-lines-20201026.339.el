@@ -8,7 +8,7 @@
 ;; Keyword: truncate lines auto long
 ;; Version: 0.2.0
 ;; Package-Version: 20201026.339
-;; Package-Commit: 375488bed4f279cf56a5c60ff236b320d3bfa169
+;; Package-Commit: 781e07c6972591e4147edf81f6314f297cc4c0df
 ;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/jcs-elpa/atl-long-lines
 

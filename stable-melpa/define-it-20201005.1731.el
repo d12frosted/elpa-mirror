@@ -8,7 +8,7 @@
 ;; Keyword: dictionary explanation search wiki
 ;; Version: 0.2.4
 ;; Package-Version: 20201005.1731
-;; Package-Commit: 1861c57e67315bcb1ff88f37184cf7e2d6167642
+;; Package-Commit: 57a9c601e732c85b0b45550434b04d996c1b92a3
 ;; Package-Requires: ((emacs "25.1") (s "1.12.0") (request "0.3.0") (popup "0.5.3") (pos-tip "0.4.6") (google-translate "0.11.18") (wiki-summary "0.1"))
 ;; URL: https://github.com/jcs-elpa/define-it
 

@@ -8,7 +8,7 @@
 ;; Keyword: control indent tab generic level
 ;; Version: 0.3.4
 ;; Package-Version: 20210508.309
-;; Package-Commit: bfacd60a4be68a89d150f0bf2a9fb8714591f6f5
+;; Package-Commit: ed99e867f81ef69854182b519db1b9141fcdb2a2
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/jcs-elpa/indent-control
 

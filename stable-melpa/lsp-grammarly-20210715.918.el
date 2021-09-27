@@ -8,7 +8,7 @@
 ;; Keyword: lsp grammarly checker
 ;; Version: 0.2.2
 ;; Package-Version: 20210715.918
-;; Package-Commit: bb7fe5d70a3d21813858d93f70fe807beba99688
+;; Package-Commit: 0a8d9468aeb414bc698566534389031837ba354d
 ;; Package-Requires: ((emacs "27.1") (lsp-mode "6.1") (grammarly "0.3.0") (request "0.3.0") (s "1.12.0") (ht "2.3"))
 ;; URL: https://github.com/emacs-grammarly/lsp-grammarly
 

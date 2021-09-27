@@ -8,7 +8,7 @@
 ;; Keyword: auto auto-complete complete fuzzy matching
 ;; Version: 1.2.1
 ;; Package-Version: 20210924.1159
-;; Package-Commit: 1b6c512fb21bd62b853bec60b040c46624e55a2f
+;; Package-Commit: 371d32ae7b488f76905fe98f3063ae30a72010fd
 ;; Package-Requires: ((emacs "24.4") (company "0.8.12") (s "1.12.0") (ht "2.0"))
 ;; URL: https://github.com/jcs-elpa/company-fuzzy
 

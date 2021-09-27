@@ -1,0 +1,13 @@
+(teletext-yle .
+	      [(20210927 825)
+	       ((emacs
+		 (24 3))
+		(teletext
+		 (0 1)))
+	       "Teletext provider for Finnish national network YLE" single
+	       ((:commit . "9c8f4b503923c4ec688e2dcc9dff62d71bc55933")
+		(:authors
+		 ("Lassi Kortela" . "lassi@lassi.io"))
+		(:maintainer "Lassi Kortela" . "lassi@lassi.io")
+		(:keywords "comm" "help" "hypermedia")
+		(:url . "https://github.com/lassik/emacs-teletext-yle"))])

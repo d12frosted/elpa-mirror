@@ -8,7 +8,7 @@
 ;; Keyword: ivy interface searcher search replace grep ag rg
 ;; Version: 0.3.10
 ;; Package-Version: 20210221.923
-;; Package-Commit: 84faba3cd87374f54d5e27344d4812737375fbaa
+;; Package-Commit: 0e8280ef40814eab1065d442146fe81ab1fc6149
 ;; Package-Requires: ((emacs "25.1") (ivy "0.8.0") (searcher "0.1.8") (s "1.12.0") (f "0.20.0"))
 ;; URL: https://github.com/jcs-elpa/ivy-searcher
 
