@@ -1,13 +1,15 @@
 Package: idle-highlight-mode
-Fetcher: github
-Source:  https://github.com/nonsequitur/idle-highlight-mode.git
+Fetcher: gitlab
+Source:  https://gitlab.com/ideasman42/emacs-idle-highlight-mode.git
 
-Updating /mnt/store/melpa/working/idle-highlight-mode/
+Cloning https://gitlab.com/ideasman42/emacs-idle-highlight-mode.git to /mnt/store/melpa/working/idle-highlight-mode/
 Checking out origin/HEAD
-Checking out c466f2a9e291f9da1167dc879577b2e1a7880482
-Built idle-highlight-mode in 5.552s, finished at 2021-09-27T00:34:25+0000
+Checking out aeb8165f2d29364334030af6cbb69fad4e7773c3
+Built idle-highlight-mode in 4.986s, finished at 2021-09-27T04:23:35+0000
  ✓ Success:
 4.0K -rwxr-xr-x 1 root root 3.9K Sep 27 00:34 packages/idle-highlight-mode-20120920.1648.el
 4.0K -rw-r--r-- 1 root root  391 Sep 27 00:34 packages/idle-highlight-mode-20120920.1648.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 27 00:34 packages/idle-highlight-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  594 Sep 27 00:34 packages/idle-highlight-mode-readme.txt
+ 16K -rwxr-xr-x 1 root root  13K Sep 27 04:23 packages/idle-highlight-mode-20210927.421.el
+4.0K -rw-r--r-- 1 root root  448 Sep 27 04:23 packages/idle-highlight-mode-20210927.421.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 27 04:23 packages/idle-highlight-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  527 Sep 27 04:23 packages/idle-highlight-mode-readme.txt
