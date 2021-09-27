@@ -4,8 +4,6 @@
 
 ;; Author: Chunyang Xu <xuchunyang56@gmail.com>
 ;; URL: https://github.com/xuchunyang/pinyin-search.el
-;; Package-Version: 20160515.358
-;; Package-Commit: 2e877a76851009d41bde66eb33182a03a7f04262
 ;; Version: 1.0.0
 ;; Package-Requires: ((pinyinlib "0.1.0"))
 ;; Created: 30 Jan 2015
