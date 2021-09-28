@@ -29,6 +29,10 @@ Vanilla
 - virtual-comment-show: show all comments of current project in a derived mode
 from outline-mode, press enter on a comment will call virtual-comment-go to go
 to the location of comment.
+Commands to link to other location (reference):
+- virtual-comment-remember-current-location store the current location
+- virtual-comment-add-ref add the stored location (reference) as comment
+- virtual-comment-goto-location go to location
 
 There are no default bindings at all for these commands.
 
@@ -43,3 +47,6 @@ cask exec ert-runner
 * Other similar packages and inspirations
 https://github.com/blue0513/phantom-inline-comment
 https://www.emacswiki.org/emacs/InPlaceAnnotations
+
+Change log
+20210-09-27: 0.02 add location/reference

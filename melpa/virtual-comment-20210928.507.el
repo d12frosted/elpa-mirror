@@ -2,10 +2,10 @@
 
 ;; Author: Thanh Vuong <thanhvg@gmail.com>
 ;; URL: https://github.com/thanhvg/emacs-virtual-comment
-;; Package-Version: 20210210.255
-;; Package-Commit: dadf36158c7ff89291bea4695999860cca2d094e
+;; Package-Version: 20210928.507
+;; Package-Commit: 34196793be5d654f166700636183a44a7841d28a
 ;; Package-Requires: ((emacs "26.1"))
-;; Version: 0.0.1
+;; Version: 0.0.2
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -52,6 +52,10 @@
 ;; - virtual-comment-show: show all comments of current project in a derived mode
 ;; from outline-mode, press enter on a comment will call virtual-comment-go to go
 ;; to the location of comment.
+;; Commands to link to other location (reference):
+;; - virtual-comment-remember-current-location store the current location
+;; - virtual-comment-add-ref add the stored location (reference) as comment
+;; - virtual-comment-goto-location go to location
 ;;
 ;; There are no default bindings at all for these commands.
 ;;
@@ -66,6 +70,9 @@
 ;; * Other similar packages and inspirations
 ;; https://github.com/blue0513/phantom-inline-comment
 ;; https://www.emacswiki.org/emacs/InPlaceAnnotations
+;;
+;; Change log
+;; 20210-09-27: 0.02 add location/reference
 
 ;;; Code:
 (require 'cl-lib)
@@ -74,6 +81,7 @@
 (require 'outline)
 (require 'simple)
 (require 'thingatpt)
+(require 'seq)
 
 (defvar-local virtual-comment--buffer-data nil
   "Buffer comment data.")
@@ -91,7 +99,10 @@
 When this value is non-nil then there is a timer for
 `virtual-comment--update-data' to run in future.")
 
-(defcustom virtual-comment-idle-time 3
+(defvar virtual-comment--current-location nil
+  "A string of stored location")
+
+(defcustom virtual-comment-idle-time 1
   "Number of seconds after Emacs is idle to run a scheduled update."
   :type 'number
   :group 'virtual-comment)
@@ -107,7 +118,7 @@ When this value is non-nil then there is a timer for
   :group 'virtual-comment)
 
 (defvar virtual-comment-deleted-overlay nil
-  "Ref of the overlay deleted.")
+  "Reference to the overlay deleted.")
 
 (cl-defstruct (virtual-comment-unit
                (:constructor virtual-comment-unit-create)
@@ -350,7 +361,6 @@ prompt"
   "Return the overlay comment of this POINT."
   (seq-find #'virtual-comment--overlayp
             (overlays-in point (1+ point))))
-            ;; (overlays-at point)))
 
 (defun virtual-comment--get-buffer-overlays (&optional should-sort)
   "Get all overlay comment.
@@ -478,7 +488,7 @@ Decrease counter, check if should persist data."
       (remhash
        (virtual-comment--get-buffer-file-name)
        (virtual-comment-project-files data)))
-    ;; decrease ref count
+    ;; decrease reference count
     (cl-decf (virtual-comment-project-count data))
     ;; persistence maybe
     (when (= 0 (virtual-comment-project-count data))
@@ -534,6 +544,19 @@ Clear all overlays and act like buffer about to close."
            (concat "\n" (make-string indent ?\s)))
           "\n"))
 
+(defun virtual-comment--ov-ensure (ov comment target indent)
+  "Ensure overlay OV has all the necessary props from COMMENT, TARGET and INDENT."
+  (overlay-put ov 'virtual-comment comment)
+  (overlay-put ov 'virtual-comment-target target)
+  (overlay-put ov
+               'before-string
+               (virtual-comment--make-comment-for-display
+                comment
+                indent))
+  (overlay-put ov
+               'modification-hooks
+               '(virtual-comment--insert-hook-handler)))
+
 (defun virtual-comment--make (unit)
   "Make a comment from a comment UNIT."
   (let ((point (virtual-comment-unit-point unit))
@@ -545,16 +568,55 @@ Clear all overlays and act like buffer about to close."
              (org-comment (virtual-comment--get-comment-at point))
              (ov (if org-comment (virtual-comment--get-overlay-at point)
                    (make-overlay point (point-at-eol) nil t nil))))
-        (overlay-put ov 'virtual-comment comment)
-        (overlay-put ov 'virtual-comment-target target)
-        (overlay-put ov
-                     'before-string
-                     (virtual-comment--make-comment-for-display
-                      comment
-                      indent))
-        (overlay-put ov
-                     'modification-hooks
-                     '(virtual-comment--insert-hook-handler))))))
+        (virtual-comment--ov-ensure ov comment target indent)))))
+
+(defun virtual-comment--append (str)
+  "Append SRT to comment.
+Won't prepend new line if comment is nil"
+  (let* ((point (point-at-bol))
+         (indent (current-indentation))
+         (target (thing-at-point 'line t))
+         (org-comment (virtual-comment--get-comment-at point))
+         (comment (if org-comment
+                      (concat org-comment "\n" str)
+                    str))
+         ;; must get existing overlay when comment is non-nil
+         (ov (if org-comment (virtual-comment--get-overlay-at point)
+               (make-overlay point (point-at-eol) nil t nil))))
+    (virtual-comment--ov-ensure ov comment target indent)
+    (virtual-comment--update-data-async-maybe)))
+
+;;;###autoload
+(defun virtual-comment-add-location ()
+  "Append `virtual-comment--current-location' to current line as comment."
+  (interactive)
+  (when virtual-comment--current-location
+    (virtual-comment--append virtual-comment--current-location)))
+
+(defun virtual-comment--get-locations (str)
+  "Get locations from string STR."
+  (seq-filter (lambda (x) (string-match-p ".*? | .*?:[0-9]+$" x)) (split-string str "\n")))
+
+(defun virtual-comment--goto-location (str)
+  "STR is 'symbol | filepath:number'."
+  (when (string-match "\\`.*? | \\(.*?\\):\\([0-9]+\\)\\'" str)
+    (let ((file-name (match-string-no-properties 1 str))
+          (line-number (match-string-no-properties 2 str)))
+      (find-file-other-window (if (file-name-absolute-p file-name)
+                                  file-name
+                                (expand-file-name file-name (cdr (project-current)))))
+      (goto-char (point-min))
+      (forward-line (1- (string-to-number line-number))))))
+
+;;;###autoload
+(defun virtual-comment-goto-location ()
+  "Open location in other window."
+  (interactive)
+  (when-let* ((cmt (virtual-comment--get-comment-at (point-at-bol)))
+              (candidates (virtual-comment--get-locations cmt)))
+    (if (= (length candidates) 1)
+        (virtual-comment--goto-location (car candidates))
+      (virtual-comment--goto-location (completing-read "Select:" candidates)))))
 
 ;;;###autoload
 (defun virtual-comment-make ()
@@ -570,17 +632,23 @@ Clear all overlays and act like buffer about to close."
          ;; must get existing overlay when comment is non-nil
          (ov (if org-comment (virtual-comment--get-overlay-at point)
                (make-overlay point (point-at-eol) nil t nil))))
-    (overlay-put ov 'virtual-comment comment)
-    (overlay-put ov 'virtual-comment-target target)
-    (overlay-put ov
-                 'before-string
-                 (virtual-comment--make-comment-for-display comment indent))
-
-    ;; (unless org-comment
-    ;;   (overlay-put ov 'insert-in-front-hooks '(virtual-comment--insert-hook-handler))
-    ;; (overlay-put ov 'insert-behind-hooks '(virtual-comment--insert-hook-handler))
-    (overlay-put ov 'modification-hooks '(virtual-comment--insert-hook-handler))
+    (virtual-comment--ov-ensure ov comment target indent)
     (virtual-comment--update-data-async-maybe)))
+
+(defun virtual-comment--get-location-at-point (&optional want-full-path)
+  "Get symbol at point and its project path or full path plus line number."
+  (format "%s | %s:%s"
+          (thing-at-point 'symbol t)
+          (if want-full-path
+              (file-truename (buffer-file-name))
+            (file-relative-name (file-truename (buffer-file-name)) (cdr (project-current))))
+          (line-number-at-pos)))
+
+;;;###autoload
+(defun virtual-comment-remember-current-location (prefix)
+  "Save current location to `virtual-comment--current-location'."
+  (interactive "p")
+  (setq virtual-comment--current-location (virtual-comment--get-location-at-point (= 4 prefix))))
 
 (defun virtual-comment--delete-comment-at (point)
   "Delete the comment at point POINT.

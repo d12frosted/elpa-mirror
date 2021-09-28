@@ -1,5 +1,5 @@
 (butler .
-	[(20210928 146)
+	[(20210928 230)
 	 ((deferred
 	    (0 3 2))
 	  (json
@@ -7,7 +7,7 @@
 	  (emacs
 	   (24)))
 	 "Emacs client for Jenkins" tar
-	 ((:commit . "454cb9d3980b9ac555f3f77e4e48056de07f051b")
+	 ((:commit . "10943ccdf2030187b2f7bd97337d78acb7fd31c9")
 	  (:authors
 	   ("Ashton Kemerling" . "ashtonkemerling@gmail.com"))
 	  (:maintainer "Ashton Kemerling" . "ashtonkemerling@gmail.com")

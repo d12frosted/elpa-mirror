@@ -4,8 +4,8 @@
 
 ;; Author: Jared Lumpe <mjlumpe@gmail.com>
 ;; Version: 0.3.0
-;; Package-Version: 20210927.1147
-;; Package-Commit: e47f185e307fb551cce41848e87810faa7653f2c
+;; Package-Version: 20210928.347
+;; Package-Commit: 4d2e0aa7f92d07e16cea2dd5e1d250a3f243c3cf
 ;; Keywords: outlines
 ;; Homepage: https://github.com/jlumpe/ox-json
 
@@ -502,7 +502,12 @@ ARGS are objects to insert into MSG using `format'."
     (ox-json--make-error-obj info msg args)))
 
 (cl-defun ox-json--type-error (type value info &optional (maxlen 200))
-  "Encode or signal an error when asked to encode a value that is not of the expected type."
+  "Encode or signal an error when asked to encode a value to an incompatible type.
+
+TYPE is the argument to `ox-json-encode-with-type'.
+VALUE is the value to be encoded.
+INFO is the plist of export options.
+MAXLEN is the number of characters to truncate the representation of VALUE at."
   (cl-assert (stringp type))
   (let ((value-str (format "%S" value)))
     (when (> (length value-str) maxlen)
@@ -632,7 +637,7 @@ INFO is the plist of export options."
 (defun ox-json-encode-with-type (type value info)
   "Encode a VALUE to JSON given its type.
 
-TYPE is a key in the plist under the :json-exporters option. It may also be list
+TYPE is a key in the plist under the :json-exporters option. It may also be a list
 containing the key followed by additional arguments to pass to the encoder
 function.
 INFO is the plist of export options."
@@ -878,13 +883,14 @@ JSON-encoded values."
       if property-type
         collect (cons key (ox-json-encode-with-type property-type value info)))))
 
-(cl-defun ox-json-export-node-base (node info &key
-                                     property-types
-                                     (ref (org-export-get-reference node info))
-                                     (properties (ox-json-export-properties node info property-types))
-                                     extra-properties
-                                     extra
-                                     (contents (ox-json-export-contents node info)))
+(cl-defun ox-json-export-node-base
+  (node info &key
+    property-types
+    (ref (org-export-get-reference node info))
+    (properties (ox-json-export-properties node info property-types))
+    extra-properties
+    extra
+    (contents (ox-json-export-contents node info)))
   "Base export function for a generic org element/object.
 
 NODE is an org element or object and INFO is the export environment plist.
