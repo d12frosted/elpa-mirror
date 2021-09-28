@@ -4,6 +4,8 @@
 
 ;; Author: Junpeng Qiu <qjpchmail@gmail.com>
 ;; Keywords: extensions
+;; Package-Version: 20200911.1723
+;; Package-Commit: 1772c79b6f319b26b6a394a8dda065be3ea4498d
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

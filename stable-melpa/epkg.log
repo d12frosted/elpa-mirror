@@ -4,10 +4,10 @@ Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
 Checking out origin/HEAD
-Checking out cb12a3fed77d574e5c30eafd4f950dae02022b67
+Checking out 366b48e05d4e18eebd6c9d5285d0b0696a5a66bf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkghDCqhJ/epkg-20210907.1806
+  to /tmp/epkg1eA6XN/epkg-20210927.2133
     epkg-desc.el -> epkg-desc.el
     epkg-gelpa.el -> epkg-gelpa.el
     epkg-list.el -> epkg-list.el
@@ -17,28 +17,30 @@ Copying files (->) and directories (=>)
     epkg-utils.el -> epkg-utils.el
     epkg.el -> epkg.el
     epkg.texi -> epkg.texi
-Created /tmp/epkghDCqhJ/epkg-20210907.1806/epkg.info
-Created epkg-20210907.1806.tar containing:
-  epkg-20210907.1806/
-  epkg-20210907.1806/dir
-  epkg-20210907.1806/epkg-desc.el
-  epkg-20210907.1806/epkg-gelpa.el
-  epkg-20210907.1806/epkg-list.el
-  epkg-20210907.1806/epkg-melpa.el
-  epkg-20210907.1806/epkg-org.el
-  epkg-20210907.1806/epkg-pkg.el
-  epkg-20210907.1806/epkg-schemata.el
-  epkg-20210907.1806/epkg-utils.el
-  epkg-20210907.1806/epkg.el
-  epkg-20210907.1806/epkg.info
-Built epkg in 9.918s, finished at 2021-09-27T15:19:16+0000
+Created /tmp/epkg1eA6XN/epkg-20210927.2133/epkg.info
+Created epkg-20210927.2133.tar containing:
+  epkg-20210927.2133/
+  epkg-20210927.2133/dir
+  epkg-20210927.2133/epkg-desc.el
+  epkg-20210927.2133/epkg-gelpa.el
+  epkg-20210927.2133/epkg-list.el
+  epkg-20210927.2133/epkg-melpa.el
+  epkg-20210927.2133/epkg-org.el
+  epkg-20210927.2133/epkg-pkg.el
+  epkg-20210927.2133/epkg-schemata.el
+  epkg-20210927.2133/epkg-utils.el
+  epkg-20210927.2133/epkg.el
+  epkg-20210927.2133/epkg.info
+Built epkg in 10.049s, finished at 2021-09-27T22:43:40+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  378 Sep 27 15:19 packages/epkg-20210907.1806.entry
-112K -rw-r--r-- 1 root root 110K Sep 27 15:19 packages/epkg-20210907.1806.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 27 15:19 packages/epkg-badge.svg
-4.0K -rw-r--r-- 1 root root 3.7K Sep 27 15:19 packages/epkg-marginalia-20210802.1740.el
-4.0K -rw-r--r-- 1 root root  427 Sep 27 15:19 packages/epkg-marginalia-20210802.1740.entry
-4.0K -rw-r--r-- 1 root root 1.2K Sep 27 15:19 packages/epkg-marginalia-badge.svg
-4.0K -rw-r--r-- 1 root root  425 Sep 27 15:19 packages/epkg-marginalia-readme.txt
-4.0K -rw-r--r-- 1 root root  662 Sep 27 15:19 packages/epkg-marginalia.log
-4.0K -rw-r--r-- 1 root root  341 Sep 27 15:19 packages/epkg-readme.txt
+4.0K -rw-r--r-- 1 root root  378 Sep 27 19:04 packages/epkg-20210907.1806.entry
+112K -rw-r--r-- 1 root root 110K Sep 27 19:04 packages/epkg-20210907.1806.tar
+4.0K -rw-r--r-- 1 root root  381 Sep 27 22:43 packages/epkg-20210927.2133.entry
+112K -rw-r--r-- 1 root root 110K Sep 27 22:43 packages/epkg-20210927.2133.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 27 22:43 packages/epkg-badge.svg
+4.0K -rw-r--r-- 1 root root 3.7K Sep 27 22:43 packages/epkg-marginalia-20210802.1740.el
+4.0K -rw-r--r-- 1 root root  427 Sep 27 22:43 packages/epkg-marginalia-20210802.1740.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 27 22:43 packages/epkg-marginalia-badge.svg
+4.0K -rw-r--r-- 1 root root  425 Sep 27 22:43 packages/epkg-marginalia-readme.txt
+4.0K -rw-r--r-- 1 root root  662 Sep 27 22:43 packages/epkg-marginalia.log
+4.0K -rw-r--r-- 1 root root  341 Sep 27 22:43 packages/epkg-readme.txt

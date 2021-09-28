@@ -1,0 +1,19 @@
+(pubmed .
+	[(20210927 1933)
+	 ((emacs
+	   (25 1))
+	  (deferred
+	    (0 5 1))
+	  (esxml
+	   (0 3 4))
+	  (s
+	   (1 12 0))
+	  (unidecode
+	   (0 2)))
+	 "Interface to PubMed" tar
+	 ((:commit . "e1ac5433daf966cf7c5e9178b037191e1eb3e4bd")
+	  (:authors
+	   ("Folkert van der Beek" . "folkertvanderbeek@gmail.com"))
+	  (:maintainer "Folkert van der Beek" . "folkertvanderbeek@gmail.com")
+	  (:keywords "pubmed" "hypermedia")
+	  (:url . "https://gitlab.com/fvdbeek/emacs-pubmed"))])
