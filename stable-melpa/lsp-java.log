@@ -4,38 +4,40 @@ Source:  https://github.com/emacs-lsp/lsp-java.git
 
 Updating /mnt/store/melpa/working/lsp-java/
 Checking out origin/HEAD
-Checking out 2a7d27e899edf7ad221a546ed67711ef5487f3ec
+Checking out b3f2081158284c77665a0dd5e9f815535ff080b3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-java/
-  to /tmp/lsp-javaAi77Bg/lsp-java-20210806.1842
+  to /tmp/lsp-javaW9K9Qj/lsp-java-20210928.1353
     dap-java.el -> dap-java.el
     lsp-java-boot.el -> lsp-java-boot.el
     lsp-java.el -> lsp-java.el
     lsp-jt.el -> lsp-jt.el
     icons => icons
-Created lsp-java-20210806.1842.tar containing:
-  lsp-java-20210806.1842/
-  lsp-java-20210806.1842/dap-java.el
-  lsp-java-20210806.1842/icons/
-  lsp-java-20210806.1842/icons/vscode/
-  lsp-java-20210806.1842/icons/vscode/class.png
-  lsp-java-20210806.1842/icons/vscode/debug.png
-  lsp-java-20210806.1842/icons/vscode/history.png
-  lsp-java-20210806.1842/icons/vscode/method.png
-  lsp-java-20210806.1842/icons/vscode/package.png
-  lsp-java-20210806.1842/icons/vscode/pass.png
-  lsp-java-20210806.1842/icons/vscode/placeholder.png
-  lsp-java-20210806.1842/icons/vscode/refresh.png
-  lsp-java-20210806.1842/icons/vscode/run.png
-  lsp-java-20210806.1842/icons/vscode/running.png
-  lsp-java-20210806.1842/icons/vscode/test-error.png
-  lsp-java-20210806.1842/lsp-java-boot.el
-  lsp-java-20210806.1842/lsp-java-pkg.el
-  lsp-java-20210806.1842/lsp-java.el
-  lsp-java-20210806.1842/lsp-jt.el
-Built lsp-java in 5.210s, finished at 2021-09-28T06:49:14+0000
+Created lsp-java-20210928.1353.tar containing:
+  lsp-java-20210928.1353/
+  lsp-java-20210928.1353/dap-java.el
+  lsp-java-20210928.1353/icons/
+  lsp-java-20210928.1353/icons/vscode/
+  lsp-java-20210928.1353/icons/vscode/class.png
+  lsp-java-20210928.1353/icons/vscode/debug.png
+  lsp-java-20210928.1353/icons/vscode/history.png
+  lsp-java-20210928.1353/icons/vscode/method.png
+  lsp-java-20210928.1353/icons/vscode/package.png
+  lsp-java-20210928.1353/icons/vscode/pass.png
+  lsp-java-20210928.1353/icons/vscode/placeholder.png
+  lsp-java-20210928.1353/icons/vscode/refresh.png
+  lsp-java-20210928.1353/icons/vscode/run.png
+  lsp-java-20210928.1353/icons/vscode/running.png
+  lsp-java-20210928.1353/icons/vscode/test-error.png
+  lsp-java-20210928.1353/lsp-java-boot.el
+  lsp-java-20210928.1353/lsp-java-pkg.el
+  lsp-java-20210928.1353/lsp-java.el
+  lsp-java-20210928.1353/lsp-jt.el
+Built lsp-java in 6.653s, finished at 2021-09-28T14:23:03+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  468 Sep 28 06:49 packages/lsp-java-20210806.1842.entry
-180K -rw-r--r-- 1 root root 180K Sep 28 06:49 packages/lsp-java-20210806.1842.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 28 06:49 packages/lsp-java-badge.svg
-4.0K -rw-r--r-- 1 root root   35 Sep 28 06:49 packages/lsp-java-readme.txt
+4.0K -rw-r--r-- 1 root root  468 Sep 28 10:39 packages/lsp-java-20210806.1842.entry
+180K -rw-r--r-- 1 root root 180K Sep 28 10:39 packages/lsp-java-20210806.1842.tar
+4.0K -rw-r--r-- 1 root root  468 Sep 28 14:23 packages/lsp-java-20210928.1353.entry
+180K -rw-r--r-- 1 root root 180K Sep 28 14:23 packages/lsp-java-20210928.1353.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 28 14:23 packages/lsp-java-badge.svg
+4.0K -rw-r--r-- 1 root root   35 Sep 28 14:23 packages/lsp-java-readme.txt

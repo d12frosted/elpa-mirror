@@ -4,45 +4,45 @@ Source:  https://gitlab.com/unrealemacs/ue.el.git
 
 Updating /mnt/store/melpa/working/ue/
 Checking out origin/HEAD
-Checking out 74ad5847bc933e08422f3c590130e1e9b2a44fda
+Checking out c34ffb97e2c082b4608d387f3e51e85a716a00dc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ue/
-  to /tmp/ueeaReDe/ue-20210928.703
+  to /tmp/ueEYskoO/ue-20210928.1227
     ue.el -> ue.el
     snippets => snippets
-Created ue-20210928.703.tar containing:
-  ue-20210928.703/
-  ue-20210928.703/snippets/
-  ue-20210928.703/snippets/ue-mode/
-  ue-20210928.703/snippets/ue-mode/.yas-make-groups
-  ue-20210928.703/snippets/ue-mode/.yas-setup.el
-  ue-20210928.703/snippets/ue-mode/UE/
-  ue-20210928.703/snippets/ue-mode/UE/Event/
-  ue-20210928.703/snippets/ue-mode/UE/Event/udoncomponentbeginoverlap
-  ue-20210928.703/snippets/ue-mode/UE/Event/uioncomponentbeginoverlap
-  ue-20210928.703/snippets/ue-mode/UE/Event/usoncomponentbeginoverlap
-  ue-20210928.703/snippets/ue-mode/UE/Logging/
-  ue-20210928.703/snippets/ue-mode/UE/Logging/uld
-  ue-20210928.703/snippets/ue-mode/UE/Logging/uli
-  ue-20210928.703/snippets/ue-mode/UE/Logging/ull
-  ue-20210928.703/snippets/ue-mode/UE/Misc/
-  ue-20210928.703/snippets/ue-mode/UE/Misc/ucds
-  ue-20210928.703/snippets/ue-mode/UE/Misc/utext
-  ue-20210928.703/snippets/ue-mode/UE/UFUNCTION/
-  ue-20210928.703/snippets/ue-mode/UE/UFUNCTION/uff
-  ue-20210928.703/snippets/ue-mode/UE/UFUNCTION/ufp
-  ue-20210928.703/snippets/ue-mode/UE/UPROPERTY/
-  ue-20210928.703/snippets/ue-mode/UE/UPROPERTY/upc
-  ue-20210928.703/snippets/ue-mode/UE/UPROPERTY/upe
-  ue-20210928.703/snippets/ue-mode/UE/UPROPERTY/ups
-  ue-20210928.703/snippets/ue-mode/UE/UPROPERTY/upv
-  ue-20210928.703/ue-pkg.el
-  ue-20210928.703/ue.el
-Built ue in 5.930s, finished at 2021-09-28T07:26:02+0000
+Created ue-20210928.1227.tar containing:
+  ue-20210928.1227/
+  ue-20210928.1227/snippets/
+  ue-20210928.1227/snippets/ue-mode/
+  ue-20210928.1227/snippets/ue-mode/.yas-make-groups
+  ue-20210928.1227/snippets/ue-mode/.yas-setup.el
+  ue-20210928.1227/snippets/ue-mode/UE/
+  ue-20210928.1227/snippets/ue-mode/UE/Event/
+  ue-20210928.1227/snippets/ue-mode/UE/Event/udoncomponentbeginoverlap
+  ue-20210928.1227/snippets/ue-mode/UE/Event/uioncomponentbeginoverlap
+  ue-20210928.1227/snippets/ue-mode/UE/Event/usoncomponentbeginoverlap
+  ue-20210928.1227/snippets/ue-mode/UE/Logging/
+  ue-20210928.1227/snippets/ue-mode/UE/Logging/uld
+  ue-20210928.1227/snippets/ue-mode/UE/Logging/uli
+  ue-20210928.1227/snippets/ue-mode/UE/Logging/ull
+  ue-20210928.1227/snippets/ue-mode/UE/Misc/
+  ue-20210928.1227/snippets/ue-mode/UE/Misc/ucds
+  ue-20210928.1227/snippets/ue-mode/UE/Misc/utext
+  ue-20210928.1227/snippets/ue-mode/UE/UFUNCTION/
+  ue-20210928.1227/snippets/ue-mode/UE/UFUNCTION/uff
+  ue-20210928.1227/snippets/ue-mode/UE/UFUNCTION/ufp
+  ue-20210928.1227/snippets/ue-mode/UE/UPROPERTY/
+  ue-20210928.1227/snippets/ue-mode/UE/UPROPERTY/upc
+  ue-20210928.1227/snippets/ue-mode/UE/UPROPERTY/upe
+  ue-20210928.1227/snippets/ue-mode/UE/UPROPERTY/ups
+  ue-20210928.1227/snippets/ue-mode/UE/UPROPERTY/upv
+  ue-20210928.1227/ue-pkg.el
+  ue-20210928.1227/ue.el
+Built ue in 5.315s, finished at 2021-09-28T14:58:30+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  463 Sep 28 03:33 packages/ue-20210927.2116.entry
- 60K -rw-r--r-- 1 root root  60K Sep 28 03:33 packages/ue-20210927.2116.tar
-4.0K -rw-r--r-- 1 root root  462 Sep 28 07:26 packages/ue-20210928.703.entry
- 60K -rw-r--r-- 1 root root  60K Sep 28 07:26 packages/ue-20210928.703.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 28 07:26 packages/ue-badge.svg
-4.0K -rw-r--r-- 1 root root   60 Sep 28 07:26 packages/ue-readme.txt
+4.0K -rw-r--r-- 1 root root  463 Sep 28 14:58 packages/ue-20210928.1227.entry
+ 72K -rw-r--r-- 1 root root  70K Sep 28 14:58 packages/ue-20210928.1227.tar
+4.0K -rw-r--r-- 1 root root  462 Sep 28 11:14 packages/ue-20210928.703.entry
+ 60K -rw-r--r-- 1 root root  60K Sep 28 11:14 packages/ue-20210928.703.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 28 14:58 packages/ue-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Sep 28 14:58 packages/ue-readme.txt

@@ -3,7 +3,11 @@ Fetcher: git
 Source:  https://git.systemreboot.net/exiftool.el/
 
 Updating /mnt/store/melpa/working/exiftool/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://git.systemreboot.net/exiftool.el/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out fc6713e753380f3034d8df55b7af3a737ea52ab4
+Built exiftool in 8.348s, finished at 2021-09-28T13:56:30+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.8K Sep 28 13:56 packages/exiftool-20190520.1106.el
+4.0K -rw-r--r-- 1 root root  367 Sep 28 13:56 packages/exiftool-20190520.1106.entry
+4.0K -rw-r--r-- 1 root root 1.2K Sep 28 13:56 packages/exiftool-badge.svg
+4.0K -rw-r--r-- 1 root root  438 Sep 28 13:56 packages/exiftool-readme.txt

@@ -1,0 +1,10 @@
+(parseclj .
+	  [(20210928 730)
+	   ((emacs
+	     (25)))
+	   "Clojure/EDN parser" tar
+	   ((:commit . "1c8f833b4c3b3487f5853321902b276ff3e84590")
+	    (:authors
+	     ("Arne Brasseur" . "arne@arnebrasseur.net"))
+	    (:maintainer "Arne Brasseur" . "arne@arnebrasseur.net")
+	    (:keywords "lisp" "clojure" "edn" "parser"))])
