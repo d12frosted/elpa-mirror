@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/closql
 ;; Keywords: extensions
-;; Package-Version: 20210927.2127
-;; Package-Commit: cd7c23933445faff861bdcaa662cae34aa7a050b
+;; Package-Version: 20210927.2245
+;; Package-Commit: 15f906c393db1a0fb6577afc3cf59466531eafef
 ;; Package-Requires: ((emacs "25.1") (emacsql-sqlite "3.0.0"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -352,7 +352,7 @@
                   (eieio-object-class obj))
       (error "Cannot reload object")))
 
-(cl-defmethod closql-get ((db closql-database) ident &optional class)
+(cl-defmethod closql-get ((db closql-database) ident &optional class resolve)
   (unless class
     (setq class (oref-default db object-class)))
   (when-let ((row (car (emacsql db [:select * :from $i1
@@ -360,7 +360,7 @@
                                 (oref-default class closql-table)
                                 (oref-default class closql-primary-key)
                                 ident))))
-    (closql--remake-instance class db row t)))
+    (closql--remake-instance class db row resolve)))
 
 (cl-defmethod closql-query ((db closql-database) &optional select pred class)
   (if select

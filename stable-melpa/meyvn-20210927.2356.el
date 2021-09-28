@@ -5,8 +5,8 @@
 ;; Author: Daniel Szmulewicz <daniel.szmulewicz@gmail.com>
 ;; Created: 2020-02-11
 ;; URL: https://github.com/danielsz/meyvn-el
-;; Package-Version: 20210606.1501
-;; Package-Commit: ddba1d60d6729bbeeefd0f76dac4e6c20e848f67
+;; Package-Version: 20210927.2356
+;; Package-Commit: 8573bd3d2a755cf1ac055036ecf5553f9bdb7444
 ;; Version: 1.1
 ;; Package-Requires: ((emacs "25.1") (cider "0.23") (projectile "2.1") (s "1.12") (dash "2.17") (parseedn "0.1.0") (geiser "0.12"))
 
@@ -218,6 +218,14 @@
   (cider-ensure-connected)
   (cider-ensure-op-supported "meyvn-portal")
   (let ((resp (nrepl-send-sync-request '("op" "meyvn-portal") (cider-current-connection))))
+    (s-split "\n" (nrepl-dict-get resp "value"))))
+
+(defun meyvn-kawa ()
+  "Start a Kawa REPL."
+  (interactive)
+  (cider-ensure-connected)
+  (cider-ensure-op-supported "meyvn-kawa")
+  (let ((resp (nrepl-send-sync-request '("op" "meyvn-kawa") (cider-current-connection))))
     (s-split "\n" (nrepl-dict-get resp "value"))))
 
 (defun meyvn-versions (artifact)
