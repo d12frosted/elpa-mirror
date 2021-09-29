@@ -4,8 +4,8 @@
 
 ;; Author: Brett Wines <bgwines@cs.stanford.edu>
 ;; Keywords: highlight face match convenience hydra symbol
-;; Package-Version: 20210928.2045
-;; Package-Commit: e534f5d7f61bbf2780e907622b79a47d00b5cd11
+;; Package-Version: 20210928.2346
+;; Package-Commit: ffffb0a73e85a3619bef01fc3fcacd144c031118
 ;; Package-Requires: ((auto-highlight-symbol "1.53") (hydra "0.15.0") (emacs "24.4") (multiple-cursors "1.4.0"))
 ;; URL: https://github.com/bgwines/symbol-navigation-hydra
 ;; Version: 0.0.5
@@ -106,14 +106,35 @@
 
 ;;;###autoload (autoload 'sn-hydra/body "symbol-navigation-hydra.el" nil nil)
 (defhydra sn-hydra (:hint nil :color amaranth)
-  "
-%s(symbol-navigation-hydra-header)     *accepts C-u
-^ ^      Navigation         ^^^^^^^^^^| ^ ^            Multi %s(symbol-navigation-hydra-get-formatted-mc-count)%s(symbol-navigation-hydra-get-col-2-spaces)|    Search
-^^^^^^^^^^^^--------------------------|--------------------------------|-------------%s(symbol-navigation-hydra-header-extra--s)
-_n_^^^^: next*    _z_/_l_: recenter ^^^^| _f_: mark & next*  _u_: %s(symbol-navigation-hydra-unmark-header)     | _d_: %s(symbol-navigation-hydra-folder-header)
-_N_/_p_: prev*^^  _r_: range      ^^^^| _b_: mark & prev*  _e_: %s(symbol-navigation-hydra-edit-marks-header) | _g_: %s(symbol-navigation-hydra-project-header)
-_R_^^^^: %s(symbol-navigation-hydra-reset-header)    _i_,_1_: ith,1st  | _a_: mark all      _s_: %s(symbol-navigation-hydra-swoop-header)  | _q_/C-g: quit
-%s(symbol-navigation-hydra-footer)"
+  ;;         Column 0
+  (concat "%s(symbol-navigation-hydra-header)          *accepts C-u\n"
+
+          (concat "%s(symbol-navigation-hydra-A0)"
+                  " | %s(symbol-navigation-hydra-B0)"
+                  " | %s(symbol-navigation-hydra-C0)\n")
+
+          ;; Column 1
+          (concat (concat "_n_^^^^: next*    "
+                          "_z_/_l_: recenter | ")
+                  (concat "_f_: mark & next*  "
+                          "_u_: %s(symbol-navigation-hydra-unmark-header)     | ")
+                  "_d_: %s(symbol-navigation-hydra-folder-header)\n")
+
+          ;; Column 2
+          (concat (concat "_N_/_p_: prev*  "
+                          "_r_: range      | ")
+                  (concat "_b_: mark & prev*  "
+                          "_e_: %s(symbol-navigation-hydra-edit-marks-header) | ")
+                  "_g_: %s(symbol-navigation-hydra-project-header)\n")
+
+          ;; Column 3
+          (concat (concat "_R_: %s(symbol-navigation-hydra-reset-header)    "
+                          "_i_,_1_: ith,1st  | ")
+                  (concat "_a_: mark all      "
+                          "_s_: %s(symbol-navigation-hydra-swoop-header)  | ")
+                  "_q_/C-g: quit")
+
+          "%s(symbol-navigation-hydra-footer)")
   ("n" symbol-navigation-hydra-move-point-one-symbol-forward)
   ("N" symbol-navigation-hydra-move-point-one-symbol-backward)
   ("p" symbol-navigation-hydra-move-point-one-symbol-backward)
@@ -204,12 +225,23 @@ string or a string indicating that `NAME' is disabled."
             (propertize name 'face symbol-navigation-hydra-disabled-head-face)
             suffix)))
 
-(defun symbol-navigation-hydra-header-extra--s ()
-  "Return a string with 0 or more '-' characters."
-  (let ((col-3 (max
-                (length (symbol-navigation-hydra-directory-suffix))
-                (length (symbol-navigation-hydra-project-suffix)))))
-    (make-string col-3 ?-)))
+(defun symbol-navigation-hydra-A0 ()
+  "In the hydra display, the first column."
+  (propertize "       Navigation        " 'face `(:weight bold :underline t)))
+
+(defun symbol-navigation-hydra-B0 ()
+  "In the hydra display, the second column."
+  (concat
+   (propertize "             Multi " 'face `(:weight bold :underline t))
+   (symbol-navigation-hydra-get-formatted-mc-count)
+   (propertize (symbol-navigation-hydra-get-col-2-spaces) 'face `(:weight bold :underline t))))
+
+(defun symbol-navigation-hydra-C0 ()
+  "In the hydra display, the third column."
+  (propertize (concat "    Search  "
+                      (make-string
+                       (length (symbol-navigation-hydra-directory-suffix)) ? ))
+              'face `(:weight bold :underline t)))
 
 (defun symbol-navigation-hydra-swoop ()
   "Perform `helm-swoop' on the current symbol."
@@ -317,7 +349,7 @@ for the current plugin."
 
 (defun symbol-navigation-hydra-get-col-2-spaces ()
   "Compute the spaces to go after the \"Multi\" string."
-  (make-string (- 12 (length (symbol-navigation-hydra-get-formatted-mc-count))) ? ))
+  (make-string (- 11 (length (symbol-navigation-hydra-get-formatted-mc-count))) ? ))
 
 (defun symbol-navigation-hydra-are-multiple-cursors-active ()
   "Fewer than 2 cursors is not \"multiple\" cursors."
