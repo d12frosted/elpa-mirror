@@ -4,8 +4,8 @@
 
 ;; Author: Chen Bin <chenbin dot sh AT gmail dot com>
 ;; URL: http://github.com/redguardtoo/counsel-etags
-;; Package-Version: 20210725.821
-;; Package-Commit: 84fff26b0f207131c2e6669bd7f510eac43973aa
+;; Package-Version: 20210929.836
+;; Package-Commit: eb6a1319f6dccc252e11ed9c79c064b970c52274
 ;; Package-Requires: ((emacs "25.1") (counsel "0.13.4"))
 ;; Keywords: tools, convenience
 ;; Version: 1.9.17
@@ -958,6 +958,10 @@ CURRENT-FILE is used to compare with candidate path."
                       (counsel-etags-levenshtein-distance b ,ref ,h))))))))))
 
 
+(defun counsel-etags-cache-invalidate (tags-file)
+  "Invalidate the cache of TAGS-FILE."
+  (plist-put counsel-etags-cache (intern tags-file) nil))
+
 (defun counsel-etags-cache-content (tags-file)
   "Read cache using TAGS-FILE as key."
   (let* ((info (plist-get counsel-etags-cache (intern tags-file))))
@@ -1747,6 +1751,10 @@ If FORCED-TAGS-FILE is nil, the updating process might now happen."
   (let* ((tags-file (or forced-tags-file
                         (counsel-etags-locate-tags-file))))
     (when tags-file
+      ;; @see https://github.com/redguardtoo/counsel-etags/issues/82
+      ;; If code file is moved and TAGS is updated, invalidate the cache.
+      (counsel-etags-cache-invalidate tags-file)
+      ;; scan the code now
       (counsel-etags-scan-dir (file-name-directory (expand-file-name tags-file)))
       (unless counsel-etags-quiet-when-updating-tags
         (message "%s is updated!" tags-file)))))

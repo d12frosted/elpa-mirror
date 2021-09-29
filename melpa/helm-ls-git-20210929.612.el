@@ -3,8 +3,8 @@
 ;; Copyright (C) 2012 ~ 2015 Thierry Volpiatto <thierry.volpiatto@gmail.com>
 
 ;; Package-Requires: ((helm "1.7.8"))
-;; Package-Version: 20210927.710
-;; Package-Commit: 139f06f2cd03983da9ad509af5022b2fba0eff27
+;; Package-Version: 20210929.612
+;; Package-Commit: 3af58e0d4563b881294d2e8dcf58a943c8d70ca3
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -32,12 +32,8 @@
 (defvaralias 'helm-c-source-ls-git-status 'helm-source-ls-git-status)
 (make-obsolete-variable 'helm-c-source-ls-git-status 'helm-source-ls-git-status "1.5.1")
 
-(defvar magit-inhibit-refresh)
 (defvar server-clients)
 (declare-function helm-comp-read "ext:helm-mode.el")
-(declare-function magit-stage-file "ext:magit-apply")
-(declare-function magit-unstage-file "ext:magit-apply")
-(declare-function magit-commit-create "ext:magit-commit")
 (declare-function server-running-p "server.el")
 (declare-function server-edit        "server.el")
 (declare-function server-send-string "server.el")
@@ -263,8 +259,7 @@ other use follow-mode (C-c C-f).
 
 *** Git commit
 
-If magit is installed commits will be done with magit, otherwise
-they will be done using emacsclient as GIT_EDITOR, with
+Commits will be done using emacsclient as GIT_EDITOR, with
 major-mode `helm-ls-git-commmit-mode' which provide following commands:
 
 \\<helm-ls-git-commit-mode-map>
@@ -703,7 +698,7 @@ See docstring of `helm-ls-git-ls-switches'.
           (with-current-buffer-window "*git am*" '(display-buffer-below-selected
                                                    (window-height . fit-window-to-buffer)
                                                    (preserve-size . (nil . t)))
-                                      nil
+              nil
             (process-file-shell-command
              (format "git %s | git am -3 -k"
                      (mapconcat 'identity (helm-append-at-nth switches '("-k --stdout") 1) " "))
@@ -754,7 +749,7 @@ See docstring of `helm-ls-git-ls-switches'.
       (with-current-buffer-window "*git cherry-pick*" '(display-buffer-below-selected
                                                         (window-height . fit-window-to-buffer)
                                                         (preserve-size . (nil . t)))
-                                  nil
+          nil
         (apply #'process-file "git" nil "*git cherry-pick*" nil "cherry-pick" commits)))))
 
 (defun helm-ls-git-cherry-pick-abort (_candidate)
@@ -964,7 +959,8 @@ object will be passed git rebase i.e. git rebase -i <hash>."
 (defun helm-ls-git-run-push ()
   (interactive)
   (with-helm-alive-p
-    (helm-exit-and-execute-action #'helm-ls-git-push)))
+    (when (y-or-n-p "Push on remote ?")
+      (helm-exit-and-execute-action #'helm-ls-git-push))))
 (put 'helm-ls-git-run-push 'no-helm-mx t)
 
 (defun helm-ls-git-remotes ()
@@ -1153,7 +1149,7 @@ object will be passed git rebase i.e. git rebase -i <hash>."
       (with-current-buffer-window "*git apply*" '(display-buffer-below-selected
                                                   (window-height . fit-window-to-buffer)
                                                   (preserve-size . (nil . t)))
-                                  nil
+          nil
         (apply #'process-file "git" nil t t "apply" patchs)))))
 
 (defvar helm-ls-git-stashes-source
@@ -1330,8 +1326,8 @@ object will be passed git rebase i.e. git rebase -i <hash>."
                         for ext = (file-name-extension f)
                         always (and ext (string= ext "patch"))))
     (with-current-buffer-window "*git am*" '(display-buffer-below-selected
-                                                   (window-height . fit-window-to-buffer)
-                                                   (preserve-size . (nil . t)))
+                                             (window-height . fit-window-to-buffer)
+                                             (preserve-size . (nil . t)))
         nil
       (apply #'process-file "git" nil t nil "am" files))))
 
@@ -1343,13 +1339,10 @@ object will be passed git rebase i.e. git rebase -i <hash>."
 ;;
 (defun helm-ls-git-stage-files (_candidate)
   "Stage marked files."
-  (require 'magit-apply nil t)
   (let* ((files (helm-marked-candidates))
          (default-directory
            (file-name-directory (car files))))
-    (if (fboundp 'magit-stage-file)
-        (helm-ls-git-magit-stage-files files)
-      (apply #'process-file "git" nil nil nil "stage" files))))
+    (apply #'process-file "git" nil nil nil "stage" files)))
 
 (defun helm-ls-git-run-stage-files (arg)
   (interactive "P")
@@ -1361,12 +1354,9 @@ object will be passed git rebase i.e. git rebase -i <hash>."
 
 (defun helm-ls-git-unstage-files (_candidate)
   "Unstage marked files."
-  (require 'magit-apply nil t)
   (let* ((files (helm-marked-candidates))
          (default-directory (file-name-directory (car files))))
-    (if (fboundp 'magit-unstage-file)
-        (helm-ls-git-magit-unstage-files files)
-      (apply #'process-file "git" nil nil nil "reset" "HEAD" "--" files))))
+    (apply #'process-file "git" nil nil nil "reset" "HEAD" "--" files)))
 
 (defun helm-ls-git-stage-marked-and-commit (_candidate)
   "Stage marked files and commit."
@@ -1402,41 +1392,21 @@ object will be passed git rebase i.e. git rebase -i <hash>."
 (put 'helm-ls-git-run-stage-marked-and-amend-commit 'no-helm-mx t)
 
 (defun helm-ls-git-extend-commit (candidate)
-  (require 'magit-commit nil t)
   (let ((default-directory (file-name-directory candidate)))
-    (if (fboundp 'magit-commit-extend)
-        (let ((magit-inhibit-refresh t))
-          (magit-commit-extend))
-      (process-file "git" nil nil nil "commit" "--amend" "--no-edit"))))
+    (process-file "git" nil nil nil "commit" "--amend" "--no-edit")))
 
 (defun helm-ls-git-amend-commit (_candidate)
   "Amend last commit."
-  (require 'magit-commit nil t)
   (let ((default-directory (expand-file-name
                             (helm-ls-git-root-dir
                              (helm-default-directory)))))
-    (if (fboundp 'magit-commit-amend)
-        (let ((magit-inhibit-refresh t))
-          (magit-commit-amend))
-      ;; An async process is needed for commands invoking $EDITOR.
-      (helm-ls-git-with-editor "commit" "-v" "--amend"))))
+    ;; An async process is needed for commands invoking $EDITOR.
+    (helm-ls-git-with-editor "commit" "-v" "--amend")))
 
 (defun helm-ls-git-commit (candidate)
   "Commit already staged files."
-  (require 'magit-commit nil t)
   (let ((default-directory (file-name-directory candidate)))
-    (if (fboundp 'magit-commit)
-        (let ((magit-inhibit-refresh t))
-          (magit-commit-create))
-      (helm-ls-git-with-editor "commit" "-v"))))
-
-(defun helm-ls-git-magit-stage-files (files)
-  (cl-loop for f in files
-           do (magit-stage-file f)))
-
-(defun helm-ls-git-magit-unstage-files (files)
-  (cl-loop for f in files
-           do (magit-unstage-file f)))
+    (helm-ls-git-with-editor "commit" "-v")))
 
 
 ;;; Emacsclient as git editor
@@ -1486,6 +1456,7 @@ object will be passed git rebase i.e. git rebase -i <hash>."
     (define-key map (kbd "C-c C-k") 'helm-ls-git-server-edit-abort)
     map))
 
+;;;###autoload
 (define-derived-mode helm-ls-git-commit-mode diff-mode "helm-ls-git-commit"
   "Mode to edit COMMIT_EDITMSG files.
 

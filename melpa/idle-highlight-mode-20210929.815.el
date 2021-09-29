@@ -4,8 +4,8 @@
 
 ;; Author: Phil Hagelberg, Cornelius Mika, Campbell Barton
 ;; URL: http://www.emacswiki.org/cgi-bin/wiki/IdleHighlight
-;; Package-Version: 20210928.2305
-;; Package-Commit: 3d785f0f1d5a41ec70453c3000ba3a3e5f0f7dbb
+;; Package-Version: 20210929.815
+;; Package-Commit: 53b4e3c855608104fc5df385dfef99114f91337e
 ;; Version: 1.1.3
 ;; Created: 2008-05-13
 ;; Keywords: convenience
@@ -88,6 +88,13 @@
     (repeat :tag "A list of face symbols that will be ignored." symbol)
     (function :tag "A function that takes a list of faces, non-nil result excludes.")))
 
+(defcustom idle-highlight-exceptions-syntax "^w_"
+  "Syntax table to to skip.
+
+See documentation for `skip-syntax-forward', nil to ignore."
+  :group 'idle-highlight
+  :type '(choice (const nil) string))
+
 (defcustom idle-highlight-exclude-point nil
   "Exclude the current symbol from highlighting."
   :group 'idle-highlight
@@ -134,6 +141,18 @@ Argument POS return faces at this point."
             (push face faces)))))
     faces))
 
+
+;; ---------------------------------------------------------------------------
+;; Internal Context Checking Functions
+
+(defun idle-highlight--check-symbol-at-point (pos)
+  "Return non-nil if the symbol at POS can be used."
+  (cond
+    (idle-highlight-exceptions-syntax
+      (save-excursion (zerop (skip-syntax-forward idle-highlight-exceptions-syntax (1+ pos)))))
+    (t
+      t)))
+
 (defun idle-highlight--check-faces-at-point (pos)
   "Check if the position POS has faces that match the exclude argument."
   (cond
@@ -155,6 +174,19 @@ Argument POS return faces at this point."
         result))
     (t ;; Default to true, if there are no exceptions.
       t)))
+
+(defun idle-highlight--check-word (target)
+  "Return non-nil when TARGET should not be excluded."
+  (not
+    (cond
+      ((functionp idle-highlight-exceptions)
+        (funcall idle-highlight-exceptions target))
+      (t
+        (member target idle-highlight-exceptions)))))
+
+
+;; ---------------------------------------------------------------------------
+;; Internal Highlight Functions
 
 (defun idle-highlight--unhighlight ()
   "Clear current highlight."
@@ -196,21 +228,13 @@ Argument POS return faces at this point."
 (defun idle-highlight--word-at-point ()
   "Highlight the word under the point."
   (idle-highlight--unhighlight)
-  (let ((target-range (bounds-of-thing-at-point 'symbol)))
-    (when
-      (and
-        target-range (idle-highlight--check-faces-at-point (point))
-        ;; Symbol characters.
-        (looking-at-p "\\s_\\|\\sw"))
-      (pcase-let* ((`(,beg . ,end) target-range))
-        (let ((target (buffer-substring-no-properties beg end)))
-          (unless
-            (cond
-              ((functionp idle-highlight-exceptions)
-                (funcall idle-highlight-exceptions target))
-              (t
-                (member target idle-highlight-exceptions)))
-            (idle-highlight--highlight target beg end)))))))
+  (when (idle-highlight--check-symbol-at-point (point))
+    (let ((target-range (bounds-of-thing-at-point 'symbol)))
+      (when (and target-range (idle-highlight--check-faces-at-point (point)))
+        (pcase-let* ((`(,beg . ,end) target-range))
+          (let ((target (buffer-substring-no-properties beg end)))
+            (when (idle-highlight--check-word target)
+              (idle-highlight--highlight target beg end))))))))
 
 
 ;; ---------------------------------------------------------------------------
