@@ -4,8 +4,8 @@
 ;; Maintainer: Vitalie Spinu
 ;; Copyright (C) 2013-2018 Vitalie Spinu
 ;; Version: 0.2.2
-;; Package-Version: 20210210.1053
-;; Package-Commit: c42ff3a4d0da96ccb7f826dca5c6b2eb558a2ab5
+;; Package-Version: 20210929.1113
+;; Package-Commit: 8b02b32ef39d2de2097a54d55be1470ec4d03ec2
 ;; Package-Requires: ((emacs "25") (polymode "0.2.2") (poly-markdown "0.2.2") (poly-noweb "0.2.2"))
 ;; URL: https://github.com/polymode/poly-R
 ;; Keywords: languages, multi-modes
@@ -50,7 +50,7 @@
                :hostmode 'pm-host/R
                :innermodes '(pm-inner/fundamental))
   "Root polymode with R host intended to be inherited from."
-  :group 'polymodes
+  :group 'poly-R
   :type 'object)
 
 
@@ -97,6 +97,10 @@ templates."
 ;;;###autoload (autoload 'poly-markdown+r-mode "poly-R")
 (define-polymode poly-markdown+r-mode poly-markdown-mode :lighter " PM-Rmd"
   :innermodes '(:inherit poly-r-markdown-inline-code-innermode))
+;;;###autoload (autoload 'poly-gfm+r-mode "poly-R")
+(define-polymode poly-gfm+r-mode poly-markdown+r-mode 
+  :lighter " PM-Rmd(gfm)"
+  :hostmode 'poly-gfm-hostmode)
 
 (defvar poly-r--rmarkdown-template-command
   "
