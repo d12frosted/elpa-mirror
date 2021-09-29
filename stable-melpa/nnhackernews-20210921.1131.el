@@ -4,8 +4,8 @@
 
 ;; Authors: dickmao <github id: dickmao>
 ;; Version: 0.1.0
-;; Package-Version: 20210729.953
-;; Package-Commit: 3a2fc7da6c6cfaba15fabcf1f3c9cf57b016c362
+;; Package-Version: 20210921.1131
+;; Package-Commit: 4e584d4da81c400de145dbb7a58e63819cbaf340
 ;; Keywords: news
 ;; URL: https://github.com/dickmao/nnhackernews
 ;; Package-Requires: ((emacs "25.2") (request "0.3.3") (dash "2.18.1") (anaphora "1.0.4"))
@@ -485,7 +485,8 @@ If GROUP classification omitted, figure it out."
     (nnhackernews--sethash id
                            (cons group (length (nnhackernews-get-headers group)))
                            nnhackernews-location-hashtb)
-    (setf (nnhackernews-alist-get group nnhackernews-headers-alist nil nil #'equal) (list (nconc (nnhackernews-get-headers group) (list plst))))
+    (setf (nnhackernews-alist-get group nnhackernews-headers-alist nil nil #'equal)
+          (list (nconc (nnhackernews-get-headers group) (list plst))))
     plst))
 
 (nnoo-define-basics nnhackernews)
@@ -656,14 +657,16 @@ Originally written by Paul Issartel."
 (defun nnhackernews--daring-scoring (group)
   "Dare to score GROUP without the benefit of `gnus-summary-read-group'."
   (with-temp-buffer
-    ;; Withhold judgement of setqs, mimicking `gnus-summary-setup-buffer'
+    ;; Withhold judgment of setqs, mimicking `gnus-summary-setup-buffer'
     (setq gnus-newsgroup-name group) ;; now defvar-local, right?
     (set-default 'gnus-newsgroup-name gnus-newsgroup-name)
     (gnus-summary-mode)
     (gnus-update-format-specifications 'summary 'summary-mode 'summary-dummy)
     (gnus-update-summary-mark-positions)
     (gnus-summary-set-local-parameters gnus-newsgroup-name)
-    (gnus-select-newsgroup group nil nil)
+    (let ((gnus-single-article-buffer t))
+      ;; employ a hack that messes with *Article*, not an article I'm reading
+      (gnus-select-newsgroup group nil nil))
     ;; Save the active value in effect when the group was entered.
     (setq gnus-newsgroup-active
 	  (copy-tree (gnus-active gnus-newsgroup-name)))
@@ -682,8 +685,10 @@ Originally written by Paul Issartel."
     (gnus-run-hooks 'gnus-summary-prepare-exit-hook)
     (gnus-close-group group)
     (gnus-run-hooks 'gnus-summary-exit-hook)
-    (gnus-kill-buffer gnus-article-buffer)
-    (gnus-kill-buffer gnus-original-article-buffer)))
+    (when (equal gnus-article-buffer (default-value 'gnus-article-buffer))
+      ;; can't be killing an article I was reading!
+      (gnus-kill-buffer gnus-article-buffer)
+      (gnus-kill-buffer gnus-original-article-buffer))))
 
 (defun nnhackernews--rescore (group force)
   "Unforced rescore of GROUP when merely `gnus-summary-exit'.
@@ -888,7 +893,8 @@ The two hashtables being reconciled are `nnhackernews-location-hashtb' and
     stories))
 
 (cl-defun nnhackernews--request (caller url
-                                 &rest attributes &key parser (backend 'url-retrieve)
+                                 &rest attributes
+                                 &key parser (backend 'url-retrieve) (timeout 10)
                                  &allow-other-keys)
   "Prefix errors with CALLER executing synchronous request to URL.
 
@@ -902,6 +908,7 @@ Request shall contain ATTRIBUTES, one of which is PARSER of the response, if pro
   (let ((request-backend backend))
     (apply #'request url
            :sync t
+           :timeout timeout
            :error (apply-partially #'nnhackernews--request-error caller)
            attributes)))
 
@@ -1187,7 +1194,8 @@ Optionally provide STATIC-MAX-ITEM and STATIC-NEWSTORIES to prevent querying out
             (setq plst (plist-put plst :link_title
                                   (or (plist-get
                                        (nnhackernews--retrieve-root plst)
-                                       :title) "")))
+                                       :title)
+                                      "")))
             (cl-case (intern type)
               (job (nnhackernews--append-header plst nnhackernews--group-job))
               ((story comment) (nnhackernews--append-header plst))
@@ -1944,22 +1952,36 @@ Preserving indices so `nnhackernews-find-header' still works."
  :around (symbol-function 'gnus-summary-score-entry)
  (lambda (f header match &rest args)
    (cond ((nnhackernews--gate)
-          (let* ((new-touched
-                  (let ((gnus-score-alist (copy-alist '((touched nil)))))
-                    (cons (apply f header match args)
-                          (cl-some #'identity (gnus-score-get 'touched)))))
-                 (new (car new-touched))
-                 (touched (cdr new-touched)))
-            (when (and touched new)
-              (-if-let* ((old (gnus-score-get header))
-                         (elem (assoc match old))
-                         (match-type (eq (nth 3 elem) (nth 3 new)))
-                         (match-date (or (and (numberp (nth 2 elem)) (numberp (nth 2 new)))
-                                         (and (not (nth 2 elem)) (not (nth 2 new))))))
-                  (setcar (cdr elem) (nth 1 new))
-                (gnus-score-set header (cons new old) nil t))
-              (gnus-score-set 'touched '(t)))
-            new))
+          (cl-flet ((my-delete-all ;; assoc-delete-all for emacs-25
+                     (key alist)
+                     (progn
+                       (while (and (consp (car alist))
+	                           (equal (caar alist) key))
+                         (setq alist (cdr alist)))
+                       (let ((tail alist) tail-cdr)
+                         (while (setq tail-cdr (cdr tail))
+                           (if (and (consp (car tail-cdr))
+	                            (equal (caar tail-cdr) key))
+	                       (setcdr tail (cdr tail-cdr))
+	                     (setq tail tail-cdr))))
+                       alist)))
+            (let* ((match (downcase match))
+                   (new-touched
+                    (let ((gnus-score-alist (copy-alist '((touched nil)))))
+                      ;; gnus-summary-score-entry modifies gnus-score-alist
+                      (cons (apply f header match args)
+                            (cl-some #'identity (gnus-score-get 'touched)))))
+                   (new (car new-touched))
+                   (touched (cdr new-touched)))
+              (when (and touched new)
+                (let ((old (gnus-score-get header)))
+                  (mapc (lambda (what) (setq old (my-delete-all what old)))
+                        (list match
+                              (gnus-simplify-subject-re match)
+                              (gnus-simplify-subject-fuzzy match)))
+                  (gnus-score-set header (cons new old) nil t)
+                  (gnus-score-set 'touched '(t))))
+              new)))
          (t (apply f header match args)))))
 
 ;; the let'ing to nil of `gnus-summary-display-article-function'

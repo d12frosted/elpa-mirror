@@ -4,8 +4,8 @@
 
 ;; Author: Brett Wines <bgwines@cs.stanford.edu>
 ;; Keywords: highlight face match convenience hydra symbol
-;; Package-Version: 20210924.2224
-;; Package-Commit: 3dbc0b6f36ee13dae7aaad9b867ad449a377d5d4
+;; Package-Version: 20210928.2045
+;; Package-Commit: e534f5d7f61bbf2780e907622b79a47d00b5cd11
 ;; Package-Requires: ((auto-highlight-symbol "1.53") (hydra "0.15.0") (emacs "24.4") (multiple-cursors "1.4.0"))
 ;; URL: https://github.com/bgwines/symbol-navigation-hydra
 ;; Version: 0.0.5
@@ -608,7 +608,6 @@ i is 1-indexed because that's consistent with the overlay counts.
 If present, `DEFAULT-I' is used. Otherwise, we the user is prompted."
   (interactive)
   (ahs-highlight-now)
-  (message (format "(thing-at-point 'symbol): %s" (thing-at-point 'symbol)))
   (let* ((overlay-count (length ahs-overlay-list))
          (current-overlay (format "%s" ahs-current-overlay))
          (xy (symbol-navigation-hydra-get-active-xy current-overlay
