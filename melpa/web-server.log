@@ -7,10 +7,27 @@ Checking out origin/HEAD
 Checking out 6357a1c2d1718778503f7ee0909585094117525b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/web-server/
-  to /tmp/web-serverxfhbHQ/web-server-20210708.2242
+  to /tmp/web-serverBvyLMm/web-server-20210708.2242
     web-server-status-codes.el -> web-server-status-codes.el
     web-server.el -> web-server.el
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/gpl.texi -> gpl.texi
   ! doc/web-server.texi -> web-server.texi
-Created /tmp/web-serverxfhbHQ/web-server-20210708.2242/doclicense.info
+Created /tmp/web-serverBvyLMm/web-server-20210708.2242/doclicense.info
+Created /tmp/web-serverBvyLMm/web-server-20210708.2242/gpl.info
+Created /tmp/web-serverBvyLMm/web-server-20210708.2242/web-server.info
+Created web-server-20210708.2242.tar containing:
+  web-server-20210708.2242/
+  web-server-20210708.2242/dir
+  web-server-20210708.2242/doclicense.info
+  web-server-20210708.2242/gpl.info
+  web-server-20210708.2242/web-server-pkg.el
+  web-server-20210708.2242/web-server-status-codes.el
+  web-server-20210708.2242/web-server.el
+  web-server-20210708.2242/web-server.info
+Built web-server in 19.011s, finished at 2021-09-30T16:04:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  432 Sep 30 16:04 packages/web-server-20210708.2242.entry
+212K -rw-r--r-- 1 root root 210K Sep 30 16:04 packages/web-server-20210708.2242.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 30 16:04 packages/web-server-badge.svg
+4.0K -rw-r--r-- 1 root root  680 Sep 30 16:04 packages/web-server-readme.txt
