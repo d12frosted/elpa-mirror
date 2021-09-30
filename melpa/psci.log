@@ -3,3 +3,21 @@ Fetcher: github
 Source:  https://github.com/purescript-emacs/emacs-psci.git
 
 Updating /mnt/store/melpa/working/psci/
+Checking out origin/HEAD
+Checking out 95fb5d14033add8fe9c8c6b4379758beb88af1d0
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/psci/
+  to /tmp/psciwFGbSR/psci-20191025.830
+    psci-dev.el -> psci-dev.el
+    psci.el -> psci.el
+Created psci-20191025.830.tar containing:
+  psci-20191025.830/
+  psci-20191025.830/psci-dev.el
+  psci-20191025.830/psci-pkg.el
+  psci-20191025.830/psci.el
+Built psci in 7.149s, finished at 2021-09-30T11:53:17+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  450 Sep 30 11:53 packages/psci-20191025.830.entry
+ 20K -rw-r--r-- 1 root root  20K Sep 30 11:53 packages/psci-20191025.830.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 30 11:53 packages/psci-badge.svg
+4.0K -rw-r--r-- 1 root root  637 Sep 30 11:53 packages/psci-readme.txt

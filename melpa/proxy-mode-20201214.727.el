@@ -2,7 +2,9 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25"))
-;; Package-Version: 0.1
+;; Package-Commit: dbf163413e9e404c652cc0ea7185c623016a38e1
+;; Package-Version: 20201214.727
+;; Package-X-Original-Version: 0.1
 ;; Keywords: comm proxy
 ;; homepage: https://github.com/stardiviner/proxy-mode
 
