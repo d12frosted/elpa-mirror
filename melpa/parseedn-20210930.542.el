@@ -4,10 +4,10 @@
 
 ;; Author: Arne Brasseur <arne@arnebrasseur.net>
 ;; Keywords: lisp clojure edn parser
-;; Package-Version: 20210929.1517
-;; Package-Commit: edfee3ae28b2ae82faa75f1eef0f4002ed532bf3
-;; Package-Requires: ((emacs "25") (parseclj "1.0.3") (map "2"))
-;; Version: 1.0.3
+;; Package-Version: 20210930.542
+;; Package-Commit: 3b1bea14257fe2acd067b6644e0d916cfaa806ba
+;; Package-Requires: ((emacs "25") (parseclj "1.0.4") (map "2"))
+;; Version: 1.0.4
 
 ;; This file is not part of GNU Emacs.
 
@@ -86,7 +86,7 @@ CHILDREN is a collection elisp values to be reduced into an elisp
 sequence.
 OPTIONS is an association list.  See `parseclj-parse' for more information
 on available options."
-  (let ((tag-readers (map-merge 'alist parseedn-default-tag-readers (alist-get :tag-readers options)))
+  (let ((tag-readers (parseclj-alist-merge parseedn-default-tag-readers (alist-get :tag-readers options)))
         (token-type (parseclj-lex-token-type opening-token)))
     (if (eq token-type :discard)
         stack

@@ -4,8 +4,8 @@
 
 ;; Author: Phil Hagelberg, Cornelius Mika, Campbell Barton
 ;; URL: http://www.emacswiki.org/cgi-bin/wiki/IdleHighlight
-;; Package-Version: 20210930.324
-;; Package-Commit: 16c080f93f06254b252960b4069323c694d46b55
+;; Package-Version: 20210930.607
+;; Package-Commit: 2c41593857c97b048db1c5edcf6ad0f26ce68d4a
 ;; Version: 1.1.3
 ;; Created: 2008-05-13
 ;; Keywords: convenience
@@ -144,15 +144,14 @@ Argument POS return faces at this point."
 (defun idle-highlight--merge-overlapping-ranges (ranges)
   "Destructively modify and return RANGES with overlapping values removed.
 
-Where RANGES is an unordered list of (min . max) cons cells
-."
+Where RANGES is an unordered list of (min . max) cons cells."
   (cond
     ((cdr ranges)
       ;; Simple < sorting of cons cells.
       (setq ranges
         (sort
           ranges
-          (lambda (x y) (or (< (car x) (car y)) (and (= (car x) (car y))) (< (cdr x) (cdr y))))))
+          (lambda (x y) (or (< (car x) (car y)) (and (= (car x) (car y)) (< (cdr x) (cdr y)))))))
       ;; Step over `ranges', de-duplicating & adjusting elements as needed.
       (let
         (
@@ -166,10 +165,11 @@ Where RANGES is an unordered list of (min . max) cons cells
             (cond
               ((>= (cdr head) (car next))
                 (setcdr head (cdr next))
-                (setcdr ranges-iter (cdr ranges-next)))
+                (setq ranges-next (cdr ranges-next))
+                (setcdr ranges-iter ranges-next))
               (t ;; Step onto a new range.
-                (setq ranges-iter ranges-next))))
-          (setq ranges-next (cdr ranges-next)))
+                (setq ranges-iter ranges-next)
+                (setq ranges-next (cdr ranges-next))))))
         ranges))
 
     (t ;; No need for complex logic single/empty lists.

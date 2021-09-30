@@ -2,8 +2,8 @@
 
 ;; Author: 10sr <8.slashes [at] gmail [dot] com>
 ;; URL: https://github.com/10sr/recently-el
-;; Package-Version: 20200120.1432
-;; Package-Commit: fa8b52fe891a0adaabe0456f6f5a56a2600a831f
+;; Package-Version: 20210930.159
+;; Package-Commit: 94b31f6bf1dab6af942948fec975e37424938a62
 ;; Version: 0.1
 ;; Keywords: utility files
 ;; Package-Requires: ((cl-lib "0.5") (emacs "24"))
@@ -175,6 +175,9 @@ view list and visit again via `recently-show' command."
              'recently-hook-buffer-file-name)
     (funcall f
              'write-file-functions
+             'recently-hook-buffer-file-name)
+    (funcall f
+             'after-set-visited-file-name-hook
              'recently-hook-buffer-file-name)
     (funcall f
              'dired-mode-hook

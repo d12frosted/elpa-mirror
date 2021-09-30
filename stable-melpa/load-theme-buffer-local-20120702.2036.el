@@ -1,5 +1,7 @@
 ;;; load-theme-buffer-local.el --- Install emacs24 color themes by buffer.
 ;;; Version: 0.0.2
+;; Package-Version: 20120702.2036
+;; Package-Commit: e606dec66f16a06140b9aad625a4fd52bca4f936
 ;;; Author: Victor Borja <vic.borja@gmail.com>
 ;;; URL: http://github.com/vic/color-theme-buffer-local
 ;;; Description: Set color-theme by buffer.
