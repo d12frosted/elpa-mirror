@@ -441,17 +441,17 @@
 	       (:keywords "languages" "nginx")
 	       (:url . "https://elpa.nongnu.org/nongnu/nginx-mode.html"))])
  (org-contrib .
-	      [(0 1)
+	      [(0 2)
 	       ((emacs
 		 (25 1))
 		(org
 		 (9 4 5)))
-	       "Add-ons that are no longer distributed with Org-mode" tar
+	       "Unmaintained add-ons for Org-mode" tar
 	       ((:url . "https://git.sr.ht/~bzg/org-contrib")
+		(:keywords "org")
 		(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 		(:authors
-		 ("Bastien Guerry" . "bzg@gnu.org"))
-		(:keywords "org"))])
+		 ("Bastien Guerry" . "bzg@gnu.org")))])
  (php-mode .
 	   [(1 24 0)
 	    ((emacs
@@ -590,6 +590,13 @@
 	    ("Sean McLaughlin" . "seanmcl@gmail.com")
 	    ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	   (:keywords "ocaml" "languages"))])
+ (vc-fossil .
+	    [(20210928)
+	     nil "VC backend for the fossil sofware configuraiton management system" tar
+	     ((:maintainer "Alfred M. Szmidt" . "ams@gnu.org")
+	      (:authors
+	       ("Venkat Iyer" . "venkat@comit.com"))
+	      (:url . "https://elpa.nongnu.org/nongnu/vc-fossil.html"))])
  (web-mode .
 	   [(17 0 4)
 	    ((emacs

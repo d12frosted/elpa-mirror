@@ -4,24 +4,26 @@ Source:  https://github.com/clojure-emacs/parseclj.git
 
 Updating /mnt/store/melpa/working/parseclj/
 Checking out origin/HEAD
-Checking out 1c8f833b4c3b3487f5853321902b276ff3e84590
+Checking out ece96481286d3284a309e688ce2d98dadbf1fbfc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/parseclj/
-  to /tmp/parsecljeHlwHA/parseclj-20210928.730
+  to /tmp/parsecljZul1yO/parseclj-20210929.1514
+    parseclj-alist.el -> parseclj-alist.el
     parseclj-ast.el -> parseclj-ast.el
     parseclj-lex.el -> parseclj-lex.el
     parseclj-parser.el -> parseclj-parser.el
     parseclj.el -> parseclj.el
-Created parseclj-20210928.730.tar containing:
-  parseclj-20210928.730/
-  parseclj-20210928.730/parseclj-ast.el
-  parseclj-20210928.730/parseclj-lex.el
-  parseclj-20210928.730/parseclj-parser.el
-  parseclj-20210928.730/parseclj-pkg.el
-  parseclj-20210928.730/parseclj.el
-Built parseclj in 5.088s, finished at 2021-09-29T09:42:57+0000
+Created parseclj-20210929.1514.tar containing:
+  parseclj-20210929.1514/
+  parseclj-20210929.1514/parseclj-alist.el
+  parseclj-20210929.1514/parseclj-ast.el
+  parseclj-20210929.1514/parseclj-lex.el
+  parseclj-20210929.1514/parseclj-parser.el
+  parseclj-20210929.1514/parseclj-pkg.el
+  parseclj-20210929.1514/parseclj.el
+Built parseclj in 5.880s, finished at 2021-09-29T20:59:01+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  324 Sep 29 09:42 packages/parseclj-20210928.730.entry
- 52K -rw-r--r-- 1 root root  50K Sep 29 09:42 packages/parseclj-20210928.730.tar
-4.0K -rw-r--r-- 1 root root 1.2K Sep 29 09:42 packages/parseclj-badge.svg
-4.0K -rw-r--r-- 1 root root   38 Sep 29 09:42 packages/parseclj-readme.txt
+4.0K -rw-r--r-- 1 root root  325 Sep 29 20:59 packages/parseclj-20210929.1514.entry
+ 60K -rw-r--r-- 1 root root  60K Sep 29 20:59 packages/parseclj-20210929.1514.tar
+4.0K -rw-r--r-- 1 root root 1.2K Sep 29 20:59 packages/parseclj-badge.svg
+4.0K -rw-r--r-- 1 root root   38 Sep 29 20:59 packages/parseclj-readme.txt

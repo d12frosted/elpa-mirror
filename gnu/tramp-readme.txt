@@ -15,7 +15,20 @@ Most of the parts are optional, read the manual for details.
 Tramp must be compiled for the Emacs version you are running.  If you
 experience compatibility error messages for the Tramp package, or if
 you use another major Emacs version than the version Tramp has been
-installed with, you must recompile the package.  Run the command
+installed with, you must recompile the package (<version> is the
+version of the Tramp package):
+
+1. Remove all byte-compiled Tramp files
+
+  # rm -f ~/.emacs.d/elpa/tramp-<version>/tramp*.elc
+
+2. Start Emacs with Tramp's source files
+
+  # emacs -L ~/.emacs.d/elpa/tramp-<version> -l tramp
+
+This should not give you the error.
+
+3. Recompile the Tramp package *with this running Emacs instance*
 
   M-x tramp-recompile-elpa
 

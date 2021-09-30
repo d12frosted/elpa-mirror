@@ -1550,15 +1550,15 @@
 			  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 			 (:keywords "faces" "theme" "accessibility"))])
  (modus-themes .
-	       [(1 5 0)
+	       [(1 6 0)
 		((emacs
-		  (26 1)))
+		  (27 1)))
 		"Highly accessible themes (WCAG AAA)" tar
 		((:url . "https://gitlab.com/protesilaos/modus-themes")
+		 (:keywords "faces" "theme" "accessibility")
 		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		 (:authors
-		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:keywords "faces" "theme" "accessibility"))])
+		  ("Protesilaos Stavrou" . "info@protesilaos.com")))])
  (modus-vivendi-theme .
 		      [(0 13 2)
 		       ((emacs
@@ -1630,6 +1630,14 @@
 	  (:authors
 	   ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	  (:keywords "extensions" "lisp"))])
+ (nano-theme .
+	     [(0 1)
+	      ((emacs
+		(27 1)))
+	      "N Λ N O theme" tar
+	      ((:url . "https://github.com/rougier/nano-theme")
+	       (:keywords "theme" "dark" "light")
+	       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
  (nhexl-mode .
 	     [(1 5)
 	      ((emacs
@@ -1723,15 +1731,15 @@
 	      (:maintainer "Michael Heerdegen" . "michael_heerdegen@web.de")
 	      (:url . "https://github.com/michael-heerdegen/on-screen.el"))])
  (org .
-      [(9 4 6)
+      [(9 5)
        ((emacs
-	 (24 3)))
+	 (25 1)))
        "Outline-based notes management and organizer" tar
        ((:url . "https://orgmode.org")
+	(:keywords "outlines" "hypermedia" "calendar" "wp")
 	(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 	(:authors
-	 ("Carsten Dominik" . "carsten.dominik@gmail.com"))
-	(:keywords "outlines" "hypermedia" "calendar" "wp"))])
+	 ("Carsten Dominik" . "carsten.dominik@gmail.com")))])
  (org-edna .
 	   [(1 1 2)
 	    ((emacs
@@ -2415,6 +2423,14 @@
 	      (:authors
 	       ("Ulf Jasper" . "ulf.jasper@web.de"))
 	      (:maintainer "Ulf Jasper" . "ulf.jasper@web.de"))])
+ (svg-lib .
+	  [(0 2)
+	   ((emacs
+	     (27 1)))
+	   "SVG tags, progress bars & icons" tar
+	   ((:url . "https://github.com/rougier/svg-lib")
+	    (:keywords "svg" "icons" "tags" "convenience")
+	    (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
  (swiper .
 	 [(0 13 4)
 	  ((emacs
@@ -2496,15 +2512,15 @@
 	  ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	 (:keywords "convenience"))])
  (tramp .
-	[(2 5 1 2)
+	[(2 5 1 3)
 	 ((emacs
 	   (25 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
 	 ((:url . "https://www.gnu.org/software/tramp/")
+	  (:keywords "comm" "processes")
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
-	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:keywords "comm" "processes"))])
+	   ("Kai Großjohann" . "kai.grossjohann@gmx.net")))])
  (tramp-theme .
 	      [(0 2)
 	       ((emacs

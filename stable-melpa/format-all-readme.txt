@@ -24,7 +24,7 @@ Supported languages:
 - CSS/Less/SCSS (prettier)
 - Cuda (clang-format)
 - D (dfmt)
-- Dart (dartfmt)
+- Dart (dartfmt, dart-format)
 - Dhall (dhall format)
 - Dockerfile (dockfmt)
 - Elixir (mix format)
