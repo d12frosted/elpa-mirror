@@ -6,8 +6,8 @@
 ;;              See README.md for full list of contributors.
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
 ;; Version:     1.0.0
-;; Package-Version: 20210929.1648
-;; Package-Commit: 6fea465a27a3a576597b84188d3584374201031b
+;; Package-Version: 20210929.2219
+;; Package-Commit: e5d12e26bc98f99b3b1e4b5af452f3079a98e0ff
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/m-cat/nimbus-theme
 ;; Keywords:    faces
@@ -898,6 +898,7 @@
    `(org-done ((t (:foreground ,dark-green))))
    `(org-drawer ((t (:foreground ,special))))
    `(org-ellipsis ((t (:foreground ,light-gray))))
+   `(org-headline-done ((t (:foreground ,light-gray :strike-through t))))
    `(org-hide ((t (:foreground ,bg))))
    `(org-level-1 ((t (:foreground ,rainbow-1))))
    `(org-level-2 ((t (:foreground ,rainbow-2))))
