@@ -4,8 +4,8 @@
 
 ;; Author: Karthik Chikmagalur <karthik.chikmagalur@gmail.com>
 ;; Version: 0.30
-;; Package-Version: 20210917.302
-;; Package-Commit: 9b1cff1b571e90ad92f29f1c412afa91923535a7
+;; Package-Version: 20211001.442
+;; Package-Commit: 8c50bb3254b3ac42a0abb05ea44eb636602a330c
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: convenience
 ;; URL: https://github.com/karthink/popper
@@ -436,9 +436,12 @@ a popup buffer to open."
   "Delete popup window WIN in a manner appropriate to its type."
   (when (window-valid-p win)
     (cond
-     ((window-parent win) (if (window-parameter win 'window-side)
-			      (delete-window win)
-			    (quit-window nil win)))
+     ((window-parent win)
+      ;; Kludge. Side windows and regular windows are handled differently. The
+      ;; latter is still somewhat broken. This is a bad idea.
+      (if (window-parameter win 'window-side)
+	  (delete-window win)
+	(quit-window nil win)))
      ((frame-parent) (delete-frame))
      (t (quit-window nil win)))))
 

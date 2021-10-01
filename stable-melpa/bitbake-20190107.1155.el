@@ -3,7 +3,7 @@
 ;; Author: Damien Merenne
 ;; URL: https://github.com/canatella/bitbake-el
 ;; Package-Version: 20190107.1155
-;; Package-Commit: 4896ff48712a6be37009605ba697a7104462e2fd
+;; Package-Commit: ba58bd051457ba0abd2fbc955ea0e75e78ff2c64
 ;; Created: 2014-02-11
 ;; Keywords: convenience
 ;; Version: 0.1

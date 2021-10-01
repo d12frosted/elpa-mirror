@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-recomplete
-;; Package-Version: 20210418.925
-;; Package-Commit: ef800da3ff3112baa71ad20e84c752f7a56c90b9
+;; Package-Version: 20211001.657
+;; Package-Commit: 80361184ad8f7f549d0158010f1d56a48bd28890
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -84,7 +84,9 @@
 ;; Generic Functions/Macros
 
 (defmacro recomplete--with-advice (fn-orig where fn-advice &rest body)
-  "Execute BODY with advice added WHERE using FN-ADVICE temporarily added to FN-ORIG."
+  "Execute BODY with advice added.
+
+WHERE using FN-ADVICE temporarily added to FN-ORIG."
   `
   (let ((fn-advice-var ,fn-advice))
     (unwind-protect
@@ -347,7 +349,9 @@ Argument FN-CACHE stores the result for reuse."
 ;;;###autoload
 (defun recomplete-with-callback (fn-symbol cycle-offset)
   "Run FN-SYMBOL, chaining executions for any function in FN-GROUP.
-Argument CYCLE-OFFSET The offset for cycling words, 1 or -1 for forward/backward."
+
+Argument CYCLE-OFFSET The offset for cycling words,
+1 or -1 for forward/backward."
 
   ;; Default to 1 (one step forward).
   (setq cycle-offset (or cycle-offset 1))
