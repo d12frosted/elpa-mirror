@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/emacscollective/emacsql-libsqlite3
 ;; Keywords: mail
 ;; Package-Version: 20210927.2137
-;; Package-Commit: d0fac65db8bd10abd845fa18c275d581219086d3
+;; Package-Commit: ce95d8a373321bdeafa13e81dac18495c055fd95
 ;; Package-Requires: ((emacs "25.1") (emacsql "3.0.0") (emacsql-sqlite "3.0.0") (sqlite "0"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 

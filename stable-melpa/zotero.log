@@ -1,0 +1,106 @@
+Package: zotero
+Fetcher: gitlab
+Source:  https://gitlab.com/fvdbeek/emacs-zotero.git
+
+Updating /mnt/store/melpa/working/zotero/
+Checking out origin/HEAD
+Checking out 15eb7a8d099c93440f0a8920499633103f00fc83
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/zotero/
+  to /tmp/zoteroICZJZc/zotero-20210512.820
+    zotero-arxiv.el -> zotero-arxiv.el
+    zotero-auth.el -> zotero-auth.el
+    zotero-browser.el -> zotero-browser.el
+    zotero-cache.el -> zotero-cache.el
+    zotero-crossref.el -> zotero-crossref.el
+    zotero-diff.el -> zotero-diff.el
+    zotero-edit.el -> zotero-edit.el
+    zotero-fulltext.el -> zotero-fulltext.el
+    zotero-json.el -> zotero-json.el
+    zotero-lib.el -> zotero-lib.el
+    zotero-openlibrary.el -> zotero-openlibrary.el
+    zotero-pmid.el -> zotero-pmid.el
+    zotero-recognize.el -> zotero-recognize.el
+    zotero-sync.el -> zotero-sync.el
+    zotero.el -> zotero.el
+    img => img
+Created zotero-20210512.820.tar containing:
+  zotero-20210512.820/
+  zotero-20210512.820/img/
+  zotero-20210512.820/img/treeitem-artwork.png
+  zotero-20210512.820/img/treeitem-attachment-link.png
+  zotero-20210512.820/img/treeitem-attachment-pdf-link.png
+  zotero-20210512.820/img/treeitem-attachment-pdf.png
+  zotero-20210512.820/img/treeitem-attachment-snapshot.png
+  zotero-20210512.820/img/treeitem-attachment-web-link.png
+  zotero-20210512.820/img/treeitem-audioRecording.png
+  zotero-20210512.820/img/treeitem-bill.png
+  zotero-20210512.820/img/treeitem-blogPost.png
+  zotero-20210512.820/img/treeitem-book.png
+  zotero-20210512.820/img/treeitem-bookSection.png
+  zotero-20210512.820/img/treeitem-case.png
+  zotero-20210512.820/img/treeitem-computerProgram.png
+  zotero-20210512.820/img/treeitem-conferencePaper.png
+  zotero-20210512.820/img/treeitem-dictionaryEntry.png
+  zotero-20210512.820/img/treeitem-email.png
+  zotero-20210512.820/img/treeitem-encyclopediaArticle.png
+  zotero-20210512.820/img/treeitem-film.png
+  zotero-20210512.820/img/treeitem-forumPost.png
+  zotero-20210512.820/img/treeitem-hearing.png
+  zotero-20210512.820/img/treeitem-instantMessage.png
+  zotero-20210512.820/img/treeitem-interview.png
+  zotero-20210512.820/img/treeitem-journalArticle.png
+  zotero-20210512.820/img/treeitem-letter.png
+  zotero-20210512.820/img/treeitem-magazineArticle.png
+  zotero-20210512.820/img/treeitem-manuscript.png
+  zotero-20210512.820/img/treeitem-map.png
+  zotero-20210512.820/img/treeitem-newspaperArticle.png
+  zotero-20210512.820/img/treeitem-note.png
+  zotero-20210512.820/img/treeitem-patent.png
+  zotero-20210512.820/img/treeitem-podcast.png
+  zotero-20210512.820/img/treeitem-presentation.png
+  zotero-20210512.820/img/treeitem-radioBroadcast.png
+  zotero-20210512.820/img/treeitem-report.png
+  zotero-20210512.820/img/treeitem-statute.png
+  zotero-20210512.820/img/treeitem-thesis.png
+  zotero-20210512.820/img/treeitem-tvBroadcast.png
+  zotero-20210512.820/img/treeitem-videoRecording.png
+  zotero-20210512.820/img/treeitem-webpage.png
+  zotero-20210512.820/img/treeitem.png
+  zotero-20210512.820/img/treesource-bucket.png
+  zotero-20210512.820/img/treesource-collection.png
+  zotero-20210512.820/img/treesource-commons.png
+  zotero-20210512.820/img/treesource-duplicates.png
+  zotero-20210512.820/img/treesource-feed-error.png
+  zotero-20210512.820/img/treesource-feed-updating.png
+  zotero-20210512.820/img/treesource-feed.png
+  zotero-20210512.820/img/treesource-feedLibrary.png
+  zotero-20210512.820/img/treesource-groups.png
+  zotero-20210512.820/img/treesource-library.png
+  zotero-20210512.820/img/treesource-search.png
+  zotero-20210512.820/img/treesource-share.png
+  zotero-20210512.820/img/treesource-trash-full.png
+  zotero-20210512.820/img/treesource-trash.png
+  zotero-20210512.820/img/treesource-unfiled.png
+  zotero-20210512.820/zotero-arxiv.el
+  zotero-20210512.820/zotero-auth.el
+  zotero-20210512.820/zotero-browser.el
+  zotero-20210512.820/zotero-cache.el
+  zotero-20210512.820/zotero-crossref.el
+  zotero-20210512.820/zotero-diff.el
+  zotero-20210512.820/zotero-edit.el
+  zotero-20210512.820/zotero-fulltext.el
+  zotero-20210512.820/zotero-json.el
+  zotero-20210512.820/zotero-lib.el
+  zotero-20210512.820/zotero-openlibrary.el
+  zotero-20210512.820/zotero-pkg.el
+  zotero-20210512.820/zotero-pmid.el
+  zotero-20210512.820/zotero-recognize.el
+  zotero-20210512.820/zotero-sync.el
+  zotero-20210512.820/zotero.el
+Built zotero in 5.145s, finished at 2021-10-01T03:20:46+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  445 Oct  1 03:20 packages/zotero-20210512.820.entry
+532K -rw-r--r-- 1 root root 530K Oct  1 03:20 packages/zotero-20210512.820.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct  1 03:20 packages/zotero-badge.svg
+4.0K -rw-r--r-- 1 root root  118 Oct  1 03:20 packages/zotero-readme.txt
