@@ -47,6 +47,9 @@ In the `*Ebuku*' buffer, the following bindings are available:
   bookmark, edit that bookmark; otherwise, ask for the index of the
   bookmark to edit.
 
+* `C' - Copy the URL of the bookmark at point to the kill ring
+  (`ebuku-copy-url').
+
 * `q' - Quit Ebuku.
 
 Bindings for Evil are available via the
