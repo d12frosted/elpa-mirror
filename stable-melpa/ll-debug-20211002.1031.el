@@ -8,8 +8,8 @@
 ;; or http://www.cbrunzema.de/software.html#ll-debug
 
 ;; Version: 2.0.4
-;; Package-Version: 20201211.2010
-;; Package-Commit: f551a7e1d5ecd64608db744d0f0e24aa0b8645fe
+;; Package-Version: 20211002.1031
+;; Package-Commit: a2cfeab46e5100c348b35987fae34f9ea76d7c0b
 ;; License: GPL-2.0 License
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: abbrev, convenience, tools, c, lisp
@@ -203,6 +203,8 @@
 
 
 ;; History:
+;; 2021-03-27  alstjr7375
+;;         * Add support for rust
 ;; 2020-11-28  Claus Brunzema
 ;;         * Prepare/cleanup for Melpa
 ;;         * Version 2.0.3
@@ -644,6 +646,13 @@ Uses `query-replace-regexp' internally."
                         "puts " ""
                         '(nil "\"" (ll-debug-create-next-debug-string) "\""))
 
+(ll-debug-register-mode '(rust-mode rustic-mode)
+                        "println!(" ");"
+                        '(nil "\"" (ll-debug-create-next-debug-string) "\"")
+                        '(nil "\"" (ll-debug-create-next-debug-string) "\""
+                              ("Variable name: "
+                               ",\"  " str ":\"," str)))
+
 (ll-debug-register-mode 'sh-mode
                         "echo " ""
                         '(nil (ll-debug-create-next-debug-string)))
@@ -652,7 +661,7 @@ Uses `query-replace-regexp' internally."
                         "disp(" ");"
                         '(nil "'" (ll-debug-create-next-debug-string) "'"))
 
-(ll-debug-register-mode '(js-mode typescript-mode)
+(ll-debug-register-mode '(js-mode js2-mode typescript-mode)
                         "console.log(" ");"
                         '(nil "\"" (ll-debug-create-next-debug-string) "\"")
                         '(nil "\"" (ll-debug-create-next-debug-string) "\""

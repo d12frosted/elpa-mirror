@@ -6,8 +6,8 @@
 
 ;; Compatibility: GNU Emacs 24.1+
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5") (async "1.9.3"))
-;; Package-Version: 20210921.1158
-;; Package-Commit: ae7ce9de253d1b3a8dba5fa4df2c42f8f5db5757
+;; Package-Version: 20211002.939
+;; Package-Commit: 76da05f5fb798572a911c398d2dd6f5f30a74746
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -145,6 +145,8 @@ That may not work with Emacs versions <=23.1 for hash tables."
 ;;
 (defun psession--dump-object-to-file-save-alist (&optional skip-props)
   (when psession-object-to-save-alist
+    ;; Ensure `psession-elisp-objects-default-directory' is clean.
+    (psession-cleanup-dir)
     (cl-loop for (o . f) in psession-object-to-save-alist
              for abs = (expand-file-name f psession-elisp-objects-default-directory)
              for compfile = (concat abs "c")
@@ -160,6 +162,16 @@ That may not work with Emacs versions <=23.1 for hash tables."
                     (delete-file compfile))
                    ((and (boundp o) (symbol-value o))
                     (psession--dump-object-no-properties o abs skip-props))))))
+
+(defun psession-cleanup-dir ()
+  (let ((files (directory-files psession-elisp-objects-default-directory t "\\.el$")))
+    (when files
+      (if (y-or-n-p (format "%s is not clean, cleanup ? "
+                            psession-elisp-objects-default-directory))
+          (cl-loop for f in files
+                   do (delete-file f))
+        (error "Psession aborted, *.el files found in '%s' please remove them"
+               psession-elisp-objects-default-directory)))))
 
 (cl-defun psession--restore-objects-from-directory
     (&optional (dir psession-elisp-objects-default-directory))

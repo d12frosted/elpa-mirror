@@ -169,6 +169,8 @@ If you want to teach ll-debug new modes, see
 
 
 History:
+2021-03-27  alstjr7375
+        * Add support for rust
 2020-11-28  Claus Brunzema
         * Prepare/cleanup for Melpa
         * Version 2.0.3

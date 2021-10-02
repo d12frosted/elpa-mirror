@@ -1,13 +1,11 @@
 (org-zettelkasten .
-		  [(20210830 1025)
+		  [(20211002 1132)
 		   ((emacs
 		     (24 3))
 		    (org
-		     (9 0))
-		    (counsel
-		     (0 12 0)))
+		     (9 0)))
 		   "Helper functions to use Zettelkasten in org-mode" single
-		   ((:commit . "a4c0379f604690f9249842eec44ff3219eb0ff06")
+		   ((:commit . "4048bf9e1be7ab759696a9541eec8f435359bcf3")
 		    (:authors
 		     ("Yann Herklotz" . "yann@ymhg.org"))
 		    (:maintainer "Yann Herklotz" . "yann@ymhg.org")
