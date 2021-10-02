@@ -12,7 +12,7 @@ NOTE: it will make a copy of the data and then does the following action
 ess-view-data-print: the main function to view data
 
 Example: In a ess-r buffer or a Rscript buffer, `M-x ess-view-data-print`
-and input `mtcars`,
+and input `mtcars`.
 
 ess-view-data-set-backend: change backend
 ess-view-data-toggle-maxprint: toggle limitation of lines per page to print
@@ -25,7 +25,7 @@ to do with.
 ess-view-data-filter
 
 Example: In the ESS-V buffer, `M-x ess-view-data-filter`, `cyl <RET> mpg` to
-select columns and <C-j> to finish input. An indirect buffer pops up and
+select columns and <C-j> to finish input.  An indirect buffer pops up and
 'data-masking' Expressions can be edited.
 
 ess-view-data-select / ess-view-data-unselect
@@ -48,7 +48,7 @@ ess-view-data-unique
 ess-view-data-count
 
 Example: In the ESS-V buffer, `M-x ess-view-data-count`, `cyl <RET> mpg` to
-select columns and <C-j> to finish input. In the updated buffer with count
+select columns and <C-j> to finish input.  In the updated buffer with count
 information, `M-x ess-view-data-print` to go back.
 
 ess-view-data-summarise
