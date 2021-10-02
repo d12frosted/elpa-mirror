@@ -16,6 +16,13 @@ Highlights:
 
 ~crdt.el~ is now on GNU ELPA! Just =M-x package-install crdt=.
 
+*Caution!!!* Please make sure that you and your peers are on the same ~crdt.el~ version!
+It turns out to be one of the most common causes of ~crdt.el~ not working.
+Because currently the network protocol is not stablized, behavior when using mismatched versions is unexpectable.
+- Strictly speaking, it should works when =crdt-protocol-version= are defined and the same on all peers.
+  But why not save some hassle and keep everyone on the latest version.
+- To upgrade, just =M-x package-reinstall crdt=, then preferably restart Emacs.
+
 ** Start a shared session
 
 A shared session is a place that can contains multiple buffers (or files),
@@ -33,49 +40,6 @@ optional password and your display name (default to your current =(user-full-nam
 ** Join a session
 
 =M-x crdt-connect=, then enter address, port, and your display name.
-
-** What if we don't have a public IP?
-
-There're various workaround.
-
-- You can use [[https://gitlab.com/gjedeer/tuntox][tuntox]] to proxy your connection over the [[https://tox.chat][Tox]] protocol.
-  =crdt.el= has experimental built-in integration for =tuntox=.
-  To enable it, you need to install =tuntox=,
-  set up the custom variable =crdt-tuntox-executable= accordingly (the path to your =tuntox= binary),
-  and set the custom variable =crdt-use-tuntox=. 
-  Setting it to =t= make =crdt.el= always create =tuntox= proxy for new server sessions, 
-  and setting it to ='confirm= make =crdt.el= ask you every time when creating new sessions.
-  After starting a session with =tuntox= proxy,
-  you can =M-x crdt-copy-url= to copy a URL recognizable by =M-x crdt-connect= and share it to your friends.
-  Be aware that according to my experience, =tuntox= takes significant time to establish a connection (sometimes up to half a minute),
-  however it gets much faster after the connection is established.
-
-- You can use Teredo to get a public routable IPv6 address. 
-  One free software implementation is Miredo. Get it from your
-  favorite package manager or from [[https://www.remlab.net/miredo/][their website]].
-  A typical usage is (run as root)
-  #+BEGIN_SRC
-# /usr/local/sbin/miredo
-# ifconfig teredo
-  #+END_SRC
-  The =ifconfig= command should print the information of your IPv6 address.
-  Now your traffic go through IPv6, and once you start a =crdt.el= session,
-  your friends should be able to join using the IPv6 address.
-  For more information, see the user guide on the Miredo website.
-
-- You can use SSH port forwarding if you have a VPS with public IP.
-  Example usage:
-  #+BEGIN_SRC 
-$ ssh -R EXAMPLE.COM:6530:127.0.0.1:6530 EXAMPLE.COM
-  #+END_SRC
-  This make your =crdt.el= session on local port =6530= accessible from
-  =EXAMPLE.COM:6530=.
-  
-  Note that you need to set the following =/etc/ssh/sshd_config= option on 
-  your VPS
-  #+BEGIN_SRC 
-GatewayPorts yes
-  #+END_SRC
   
 ** List active users
 
@@ -125,3 +89,46 @@ Just go ahead and share you comint REPL buffer! Tested: ~shell~ and ~cmuscheme~.
 By default, when sharing a comint buffer, ~crdt.el~ temporarily reset input history (as in =M-n= =M-p=)
 so others don't spy into your =.bash_history= and alike.
 You can customize this behavior using variable =crdt-comint-share-input-history=.
+
+** What if we don't have a public IP?
+
+There're various workaround.
+
+- You can use [[https://gitlab.com/gjedeer/tuntox][tuntox]] to proxy your connection over the [[https://tox.chat][Tox]] protocol.
+  =crdt.el= has experimental built-in integration for =tuntox=.
+  To enable it, you need to install =tuntox=,
+  set up the custom variable =crdt-tuntox-executable= accordingly (the path to your =tuntox= binary),
+  and set the custom variable =crdt-use-tuntox=. 
+  Setting it to =t= make =crdt.el= always create =tuntox= proxy for new server sessions, 
+  and setting it to ='confirm= make =crdt.el= ask you every time when creating new sessions.
+  After starting a session with =tuntox= proxy,
+  you can =M-x crdt-copy-url= to copy a URL recognizable by =M-x crdt-connect= and share it to your friends.
+  Be aware that according to my experience, =tuntox= takes significant time to establish a connection (sometimes up to half a minute),
+  however it gets much faster after the connection is established.
+
+- You can use Teredo to get a public routable IPv6 address. 
+  One free software implementation is Miredo. Get it from your
+  favorite package manager or from [[https://www.remlab.net/miredo/][their website]].
+  A typical usage is (run as root)
+  #+BEGIN_SRC
+# /usr/local/sbin/miredo
+# ifconfig teredo
+  #+END_SRC
+  The =ifconfig= command should print the information of your IPv6 address.
+  Now your traffic go through IPv6, and once you start a =crdt.el= session,
+  your friends should be able to join using the IPv6 address.
+  For more information, see the user guide on the Miredo website.
+
+- You can use SSH port forwarding if you have a VPS with public IP.
+  Example usage:
+  #+BEGIN_SRC 
+$ ssh -R EXAMPLE.COM:6530:127.0.0.1:6530 EXAMPLE.COM
+  #+END_SRC
+  This make your =crdt.el= session on local port =6530= accessible from
+  =EXAMPLE.COM:6530=.
+  
+  Note that you need to set the following =/etc/ssh/sshd_config= option on 
+  your VPS
+  #+BEGIN_SRC 
+GatewayPorts yes
+  #+END_SRC

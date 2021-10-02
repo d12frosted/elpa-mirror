@@ -13,7 +13,7 @@ The themes share the following customization variables:
     modus-themes-bold-constructs                (boolean)
     modus-themes-inhibit-reload                 (boolean)
     modus-themes-italic-constructs              (boolean)
-    modus-themes-no-mixed-fonts                 (boolean)
+    modus-themes-mixed-fonts                    (boolean)
     modus-themes-scale-headings                 (boolean)
     modus-themes-subtle-line-numbers            (boolean)
     modus-themes-success-deuteranopia           (boolean)

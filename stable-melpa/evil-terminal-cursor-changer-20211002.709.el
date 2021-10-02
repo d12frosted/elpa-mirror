@@ -6,8 +6,8 @@
 ;; Maintainer: 7696122
 ;; Created: Sat Nov  2 12:17:13 2013 (+0900)
 ;; Version: 0.0.4
-;; Package-Commit: a88c680c631676ff8f6c5156b529f86d6b9f0841
-;; Package-Version: 20210130.1855
+;; Package-Commit: 5b2d76fd26bf33022bbad0198acd9b83c9759750
+;; Package-Version: 20211002.709
 ;; Package-X-Original-Version: 20150819.907
 ;; Package-Requires: ((evil "1.0.8"))
 ;; Last-Updated: Wed Aug 26 23:21:36 2015 (+0900)
@@ -250,9 +250,10 @@ echo -n $TERM_PROFILE"))
 
 (defun etcc--apply-to-terminal (seq)
   "Send to escape sequence to terminal."
-  (if (and seq
-           (stringp seq))
-      (send-string-to-terminal seq)))
+  (when (and seq
+             (stringp seq)
+             (not (display-graphic-p)))
+    (send-string-to-terminal seq)))
 
 (defun etcc--evil-set-cursor-color (color &rest _)
   "Set cursor color."

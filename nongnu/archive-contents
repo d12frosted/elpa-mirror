@@ -616,15 +616,15 @@
 	   ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
 	  (:keywords "grep" "edit" "extensions"))])
  (with-editor .
-	      [(3 0 4)
+	      [(3 0 5)
 	       ((emacs
 		 (24 4)))
 	       "Use the Emacsclient as $EDITOR" tar
 	       ((:url . "https://github.com/magit/with-editor")
+		(:keywords "tools")
 		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
 		(:authors
-		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
-		(:keywords "tools"))])
+		 ("Jonas Bernoulli" . "jonas@bernoul.li")))])
  (yaml-mode .
 	    [(0 0 15)
 	     ((emacs

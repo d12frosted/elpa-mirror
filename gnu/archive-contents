@@ -440,7 +440,7 @@
 	      (:keywords "files")
 	      (:url . "http://elpa.gnu.org/packages/cpio-mode.html"))])
  (crdt .
-       [(0 2 6)
+       [(0 2 7)
 	nil "Collaborative editing using Conflict-free Replicated Data Types" tar
 	((:url . "https://code.librehq.com/qhong/crdt.el")
 	 (:keywords "collaboration" "crdt")
@@ -714,7 +714,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20210925)
+      [(20211002)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1571,6 +1571,14 @@
 			(:authors
 			 ("Protesilaos Stavrou" . "info@protesilaos.com"))
 			(:keywords "faces" "theme" "accessibility"))])
+ (multi-mode .
+	     [(1 14)
+	      nil "support for multiple major modes" tar
+	      ((:url . "http://www.loveshack.ukfsn.org/emacs")
+	       (:keywords "languages" "extensions" "files")
+	       (:maintainer "Dave Love" . "fx@gnu.org")
+	       (:authors
+		("Dave Love" . "fx@gnu.org")))])
  (multishell .
 	     [(1 1 9)
 	      ((cl-lib
