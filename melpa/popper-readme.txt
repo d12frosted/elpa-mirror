@@ -11,6 +11,7 @@ https://www.youtube.com/watch?v=E-xUNlZi3rI
 
 COMMANDS:
 
+popper-mode          : Turn on popup management
 popper-toggle-latest : Toggle latest popup
 popper-cycle         : Cycle through all popups, or close all open popups
 popper-toggle-type   : Turn a regular window into a popup or vice-versa
@@ -37,3 +38,7 @@ it will display your popups in a non-obtrusive way. If you want
 Popper to display popups according to window rules you specify in
 `display-buffer-alist' (or through a package like Shackle), set this
 variable to nil.
+
+There are other customization options, such as the ability to suppress
+certain popups and keep them from showing. Please customize the popper group
+for details.

@@ -18,6 +18,8 @@
 
 ;; Author: zk_phi
 ;; URL: http://hins11.yu-yake.com/
+;; Package-Version: 20170618.921
+;; Package-Commit: 308909ebfc8003d16673f97ca9eb26a667b72969
 ;; Version: 1.1.0
 ;; Package-Requires: ((phi-search "2.2.0") (migemo "1.9.1"))
 

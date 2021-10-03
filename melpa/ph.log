@@ -3,3 +3,33 @@ Fetcher: github
 Source:  https://github.com/gromnitsky/ph.git
 
 Updating /mnt/store/melpa/working/ph/
+Checking out origin/HEAD
+Checking out ed80dad9211583ed0db633448b3624c99b7fac23
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ph/
+  to /tmp/ph35QGHk/ph-20161029.1522
+    ph-metadata.el -> ph-metadata.el
+    ph-pkg.el -> ph-pkg.el
+    ph-u.el -> ph-u.el
+    ph-venture.el -> ph-venture.el
+    ph.el -> ph.el
+    meta.json -> meta.json
+    README -> README
+    bin/ph-project-new -> bin/ph-project-new
+Created ph-20161029.1522.tar containing:
+  ph-20161029.1522/
+  ph-20161029.1522/README
+  ph-20161029.1522/bin/
+  ph-20161029.1522/bin/ph-project-new
+  ph-20161029.1522/meta.json
+  ph-20161029.1522/ph-metadata.el
+  ph-20161029.1522/ph-pkg.el
+  ph-20161029.1522/ph-u.el
+  ph-20161029.1522/ph-venture.el
+  ph-20161029.1522/ph.el
+Built ph in 4.906s, finished at 2021-10-03T15:39:11+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  345 Oct  3 15:39 packages/ph-20161029.1522.entry
+ 40K -rw-r--r-- 1 root root  40K Oct  3 15:39 packages/ph-20161029.1522.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct  3 15:39 packages/ph-badge.svg
+4.0K -rw-r--r-- 1 root root  670 Oct  3 15:39 packages/ph-readme.txt

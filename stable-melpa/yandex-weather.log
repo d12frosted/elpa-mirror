@@ -3,21 +3,7 @@ Fetcher: github
 Source:  https://github.com/acme4j/yandex-weather.el.git
 
 Updating /mnt/store/melpa/working/yandex-weather/
-Checking out origin/HEAD
-Checking out 6f823fd9e04ff9efb2aa65f333079e9f7e6e5b28
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/yandex-weather/
-  to /tmp/yandex-weatherAZBShO/yandex-weather-20160311.2037
-    org-yandex-weather.el -> org-yandex-weather.el
-    yandex-weather.el -> yandex-weather.el
-Created yandex-weather-20160311.2037.tar containing:
-  yandex-weather-20160311.2037/
-  yandex-weather-20160311.2037/org-yandex-weather.el
-  yandex-weather-20160311.2037/yandex-weather-pkg.el
-  yandex-weather-20160311.2037/yandex-weather.el
-Built yandex-weather in 4.886s, finished at 2021-10-03T04:45:54+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  144 Oct  3 04:45 packages/yandex-weather-20160311.2037.entry
- 20K -rw-r--r-- 1 root root  20K Oct  3 04:45 packages/yandex-weather-20160311.2037.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct  3 04:45 packages/yandex-weather-badge.svg
-4.0K -rw-r--r-- 1 root root  529 Oct  3 04:45 packages/yandex-weather-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: could not read Username for 'https://github.com': No such device or address
+error: Could not fetch origin
+

@@ -5,7 +5,7 @@
 ;; Author: Dionisios Spiliopoulos <dennisspiliopoylos@gmail.com>
 ;; Keywords: lisp
 ;; Package-Version: 20211001.830
-;; Package-Commit: 9cb50281654b1c9ae4e4e14b34646f05ef26feec
+;; Package-Commit: f73b0e63072463c91a75a292fa21d39a9f06b81c
 ;; Version: 0.0.1
 ;; URL: https://github.com/Dspil/text-categories
 ;; Package-Requires: ((emacs "26.2"))

@@ -4,22 +4,24 @@ Source:  https://github.com/clojure-emacs/clj-refactor.el.git
 
 Updating /mnt/store/melpa/working/clj-refactor/
 Checking out origin/HEAD
-Checking out ff8877ac80efe843fae116ae1e393a5145dd11ac
+Checking out cb6969e650bce115a5017d1643bd6b1240aae86b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/clj-refactor/
-  to /tmp/clj-refactors8w1SJ/clj-refactor-20210930.1356
+  to /tmp/clj-refactort6BXBF/clj-refactor-20211003.1110
     clj-refactor-compat.el -> clj-refactor-compat.el
     clj-refactor.el -> clj-refactor.el
     CHANGELOG.md -> CHANGELOG.md
-Created clj-refactor-20210930.1356.tar containing:
-  clj-refactor-20210930.1356/
-  clj-refactor-20210930.1356/CHANGELOG.md
-  clj-refactor-20210930.1356/clj-refactor-compat.el
-  clj-refactor-20210930.1356/clj-refactor-pkg.el
-  clj-refactor-20210930.1356/clj-refactor.el
-Built clj-refactor in 5.372s, finished at 2021-10-03T07:06:00+0000
+Created clj-refactor-20211003.1110.tar containing:
+  clj-refactor-20211003.1110/
+  clj-refactor-20211003.1110/CHANGELOG.md
+  clj-refactor-20211003.1110/clj-refactor-compat.el
+  clj-refactor-20211003.1110/clj-refactor-pkg.el
+  clj-refactor-20211003.1110/clj-refactor.el
+Built clj-refactor in 6.555s, finished at 2021-10-03T14:40:36+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  709 Oct  3 07:05 packages/clj-refactor-20210930.1356.entry
-192K -rw-r--r-- 1 root root 190K Oct  3 07:05 packages/clj-refactor-20210930.1356.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct  3 07:06 packages/clj-refactor-badge.svg
-4.0K -rw-r--r-- 1 root root   66 Oct  3 07:05 packages/clj-refactor-readme.txt
+4.0K -rw-r--r-- 1 root root  709 Oct  3 10:55 packages/clj-refactor-20210930.1356.entry
+192K -rw-r--r-- 1 root root 190K Oct  3 10:55 packages/clj-refactor-20210930.1356.tar
+4.0K -rw-r--r-- 1 root root  709 Oct  3 14:40 packages/clj-refactor-20211003.1110.entry
+192K -rw-r--r-- 1 root root 190K Oct  3 14:40 packages/clj-refactor-20211003.1110.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct  3 14:40 packages/clj-refactor-badge.svg
+4.0K -rw-r--r-- 1 root root   66 Oct  3 14:40 packages/clj-refactor-readme.txt
