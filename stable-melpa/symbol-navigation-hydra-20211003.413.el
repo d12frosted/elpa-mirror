@@ -4,11 +4,11 @@
 
 ;; Author: Brett Wines <bgwines@cs.stanford.edu>
 ;; Keywords: highlight face match convenience hydra symbol
-;; Package-Version: 20210928.2346
-;; Package-Commit: ffffb0a73e85a3619bef01fc3fcacd144c031118
-;; Package-Requires: ((auto-highlight-symbol "1.53") (hydra "0.15.0") (emacs "24.4") (multiple-cursors "1.4.0"))
+;; Package-Version: 20211003.413
+;; Package-Commit: 85ea0c69129b006de2a127e2dc47bd3c1842370d
+;; Package-Requires: ((auto-highlight-symbol "1.61") (hydra "0.15.0") (emacs "24.4") (multiple-cursors "1.4.0"))
 ;; URL: https://github.com/bgwines/symbol-navigation-hydra
-;; Version: 0.0.5
+;; Version: 0.0.6
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -140,10 +140,10 @@
   ("p" symbol-navigation-hydra-move-point-one-symbol-backward)
   ("i" symbol-navigation-hydra-move-point-to-ith)
   ("1" symbol-navigation-hydra-move-point-to-first)
-  ("r" ahs-change-range)
+  ("r" symbol-navigation-hydra-change-range)
   ("R" symbol-navigation-hydra-back-to-start)
-  ("z" (progn (recenter-top-bottom) (ahs-highlight-now) (sn-hydra/body)))
-  ("l" (progn (recenter-top-bottom) (ahs-highlight-now) (sn-hydra/body)))
+  ("z" (progn (recenter-top-bottom) (symbol-navigation-hydra-highlight-current-window) (sn-hydra/body)))
+  ("l" (progn (recenter-top-bottom) (symbol-navigation-hydra-highlight-current-window) (sn-hydra/body)))
   ("b" symbol-navigation-hydra-mark-and-move-to-prev)
   ("f" symbol-navigation-hydra-mark-and-move-to-next)
   ("a" symbol-navigation-hydra-mark-all)
@@ -165,6 +165,7 @@
 
 (defun symbol-navigation-hydra-search-project (symbol)
   "Search the current project for `SYMBOL'."
+  (ahs-unhighlight-all)
   (if (eq nil symbol-navigation-hydra-project-search-fn)
       (symbol-navigation-hydra-projectile-helm-ag nil symbol)
     (funcall symbol-navigation-hydra-project-search-fn symbol)))
@@ -249,6 +250,7 @@ string or a string indicating that `NAME' is disabled."
   ;; These are the same thing, but we need the inlined `fboundp' to satisfy
   ;; flycheck
   (mc/keyboard-quit)
+  (ahs-unhighlight-all)
   (if (and (symbol-navigation-hydra-is-swoop-enabled) (fboundp 'helm-swoop))
       (call-interactively #'helm-swoop)
     (symbol-navigation-hydra-error-not-installed "helm-swoop")))
@@ -307,7 +309,7 @@ behavior in the UI."
   "Retrieve the corresponding face for an inactive plugin.
 
 `FACE' should be one of the three defined AHS plugin faces."
-  (cond ((eq face ahs-plugin-defalt-face)
+  (cond ((eq face ahs-plugin-default-face)
          'symbol-navigation-hydra-ahs-plugin-display-face-dim)
         ((eq face ahs-plugin-whole-buffer-face)
          'symbol-navigation-hydra-ahs-plugin-whole-buffer-face-dim)
@@ -324,12 +326,13 @@ behavior in the UI."
 (defun symbol-navigation-hydra-get-active-xy (current-overlay overlay-count)
   "Compute the overlay counts for the currently active plugin.
 
-`CURRENT-OVERLAY' should be `ahs-current-overlay', as a string.
+`CURRENT-OVERLAY' should be `(ahs-current-overlay-window)', as a string.
 `OVERLAY-COUNT' should be the number of matches for the current symbol
 for the current plugin."
   (let ((overlay (format "%s" (nth 0 ahs-overlay-list)))
         (i 0))
-    (while (not (string= overlay current-overlay))
+    (while (and (< i (length ahs-overlay-list))
+                (not (string= overlay current-overlay)))
       (setq i (1+ i))
       (setq overlay (format "%s" (nth i ahs-overlay-list))))
     (format "[%s/%s]" (- overlay-count i) overlay-count)))
@@ -340,7 +343,7 @@ for the current plugin."
                             plugin)
                            'face (symbol-navigation-hydra-plugin-color plugin)))
          (overlay-count (length ahs-overlay-list))
-         (current-overlay (format "%s" ahs-current-overlay))
+         (current-overlay (format "%s" (ahs-current-overlay-window)))
          (xy (if (symbol-navigation-hydra-is-active plugin)
                  (symbol-navigation-hydra-get-active-xy current-overlay
                                                         overlay-count)
@@ -474,11 +477,11 @@ symbol. It should be a list of pairs of integers. The integers should be
 indexes of characters, as in
 https://www.gnu.org/software/emacs/manual/html_node/elisp/Regexp-Search.html"
   (let* ((i 0)
-         (current-overlay (if ahs-current-overlay
+         (current-overlay (if (ahs-current-overlay-window)
                               (format "%s"
                                       (list
-                                       (overlay-start ahs-current-overlay)
-                                       (overlay-end ahs-current-overlay)))
+                                       (overlay-start (ahs-current-overlay-window))
+                                       (overlay-end (ahs-current-overlay-window))))
                             nil))
          (overlay (format "%s" (nth i occurrences))))
     (while (and (< i (length occurrences))
@@ -499,11 +502,21 @@ https://www.gnu.org/software/emacs/manual/html_node/elisp/Regexp-Search.html"
       'ahs-range-whole-buffer
       'ahs-range-display"
   (let* ((occurrences (symbol-navigation-hydra-get-occurrences plugin))
+         (n-occurrences (length occurrences))
          (occurrence-index
           (if occurrences
               (+ 1 (symbol-navigation-hydra-get-occurrence-index occurrences))
             0))) ;; if 0 occurrences, don't increment 0
-    (format "[%s/%s]" occurrence-index (length occurrences))))
+    (format "[%s/%s]"
+            ;; e.g. this can happen when processing `ahs-range-display' after
+            ;; using the 'n' / 'p' / 'f' / 'b' hydra heads. The window has not
+            ;; redrawn yet, so `occurrences' is still a function of the "old"
+            ;; window boundaries, even though `thing-at-point' has moved to an
+            ;; entirely different section of the buffer. In these cases, we're
+            ;; not able to find the symbol at Point in `occurrences', so we
+            ;; reach the end of the list.
+            (if (<= occurrence-index n-occurrences) occurrence-index "?")
+            n-occurrences)))
 
 (defun symbol-navigation-hydra-footer ()
   "This is the string to be (optionally) displayed at the bottom of the hydra."
@@ -516,6 +529,10 @@ https://www.gnu.org/software/emacs/manual/html_node/elisp/Regexp-Search.html"
         guide)
     ""))
 
+(defun symbol-navigation-hydra-highlight-current-window ()
+  "Invoke `ahs-highlight-now' for the current window only."
+  (ahs--do-hl))
+
 ;;;###autoload
 (defun symbol-navigation-hydra-engage-hydra ()
   "Trigger the hydra."
@@ -525,7 +542,7 @@ https://www.gnu.org/software/emacs/manual/html_node/elisp/Regexp-Search.html"
   (setq symbol-navigation-hydra-allow-edit-all-head-execution t)
   (unless (bound-and-true-p ahs-mode-line)
     (auto-highlight-symbol-mode))
-  (ahs-highlight-now)
+  (symbol-navigation-hydra-highlight-current-window)
   (sn-hydra/body))
 
 ;;;;;;;;;;;
@@ -536,7 +553,8 @@ https://www.gnu.org/software/emacs/manual/html_node/elisp/Regexp-Search.html"
   "Clean up any state that needs to be cleaned up."
   (interactive)
   ;; maybe should this use `(multiple-cursors-mode 0)' directly?
-  (mc/keyboard-quit))
+  (mc/keyboard-quit)
+  (ahs-unhighlight-all))
 
 (defun symbol-navigation-hydra-mc-edit ()
   "Exit the hydra, so the user can start using the multiple cursors."
@@ -550,6 +568,7 @@ https://www.gnu.org/software/emacs/manual/html_node/elisp/Regexp-Search.html"
     ;; inputs at `point'
     (symbol-navigation-hydra-remove-fake-cursors-at-point t)
     (mc/maybe-multiple-cursors-mode)
+    (ahs-unhighlight-all)
     (setq symbol-navigation-hydra-allow-edit-all-head-execution nil)))
 
 (defun symbol-navigation-hydra-get-n-fake-cursors-at-point ()
@@ -576,7 +595,7 @@ hydra definition."
        (when (and is-point-min is-point-max)
          (mc/remove-fake-cursor cursor))))
   (unless skip-reload-hydra
-    (ahs-highlight-now)
+    (symbol-navigation-hydra-highlight-current-window)
     (sn-hydra/body)))
 
 (defun symbol-navigation-hydra-mark-and-move-to-prev (&optional n)
@@ -610,12 +629,18 @@ hydra definition."
         (symbol-navigation-hydra-mark-and-move-to-next))
       (set-window-start (selected-window) original-window-start))))
 
+(defun symbol-navigation-hydra-change-range ()
+  "Switch between BUFFER, DISPLAY, and FUNCTION."
+  (interactive)
+  (ahs-change-range)
+  (symbol-navigation-hydra-highlight-current-window))
+
 (defun symbol-navigation-hydra-back-to-start ()
   "Move `point' to the location it was upon user-initiated hydra invocation."
   (interactive)
   (goto-char symbol-navigation-hydra-point-at-invocation)
   (set-window-start (selected-window) symbol-navigation-hydra-window-start-at-invocation)
-  (ahs-highlight-now)
+  (symbol-navigation-hydra-highlight-current-window)
   (sn-hydra/body))
 
 (defun symbol-navigation-hydra-move-point-one-symbol-forward (&optional n)
@@ -639,9 +664,9 @@ i is 1-indexed because that's consistent with the overlay counts.
 
 If present, `DEFAULT-I' is used. Otherwise, we the user is prompted."
   (interactive)
-  (ahs-highlight-now)
+  (symbol-navigation-hydra-highlight-current-window)
   (let* ((overlay-count (length ahs-overlay-list))
-         (current-overlay (format "%s" ahs-current-overlay))
+         (current-overlay (format "%s" (ahs-current-overlay-window)))
          (xy (symbol-navigation-hydra-get-active-xy current-overlay
                                                     overlay-count))
          (x (string-to-number (car (split-string (substring xy 1) "/"))))
@@ -661,18 +686,20 @@ prefix argument."
 (defun symbol-navigation-hydra-move-point-one-symbol (forward)
   "Move to the previous or next occurrence of the symbol under point.
 
-If `FORWARD' is non-nil, move forwards, otherwise, move backwards."
-  (progn
-    (ahs-highlight-now)
-    (sn-hydra/body)
-    (if forward (ahs-forward) (ahs-backward))))
+If `FORWARD' is non-nil, move forwards, otherwise, move backwards.
+
+Could be optimized for the move-N case, but performance is good enough for now"
+    (if forward (ahs-forward) (ahs-backward))
+    (symbol-navigation-hydra-highlight-current-window)
+    (sn-hydra/body))
 
 (defun symbol-navigation-hydra-projectile-helm-ag (arg query)
   "Run `helm-do-ag' relative to the project root, searching for `QUERY'.
 
 Or, with prefix arg `ARG', search relative to the current directory."
   (interactive "P")
-  (mc/keyboard-quit)
+  (mc/keyboard-quit)  ;; TODO: share exit-prep code
+  (ahs-unhighlight-all)
   (if (symbol-navigation-hydra-is-helm-ag-enabled)
       (if arg
           (progn

@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out b1d299c96e73dc892b0065c1617205dd4b9f8ab8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ess/
-  to /tmp/essmHJ9ah/ess-20210924.1606
+  to /tmp/esstpYQlf/ess-20210924.1606
     .dir-locals.el -> .dir-locals.el
   ! lisp/ess-bugs-d.el -> ess-bugs-d.el
   ! lisp/ess-bugs-l.el -> ess-bugs-l.el
@@ -52,7 +52,7 @@ Copying files (->) and directories (=>)
   ! lisp/obsolete/ess-r-a.el -> obsolete/ess-r-a.el
   ! lisp/obsolete/mouseme.el -> obsolete/mouseme.el
   ! lisp/obsolete/msdos.el -> obsolete/msdos.el
-Created /tmp/essmHJ9ah/ess-20210924.1606/ess.info
+Created /tmp/esstpYQlf/ess-20210924.1606/ess.info
 Created ess-20210924.1606.tar containing:
   ess-20210924.1606/
   ess-20210924.1606/.dir-locals.el
@@ -128,39 +128,39 @@ Created ess-20210924.1606.tar containing:
   ess-20210924.1606/obsolete/ess-r-a.el
   ess-20210924.1606/obsolete/mouseme.el
   ess-20210924.1606/obsolete/msdos.el
-Built ess in 25.073s, finished at 2021-10-03T03:37:58+0000
+Built ess in 27.407s, finished at 2021-10-03T07:21:22+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  840 Oct  3 03:37 packages/ess-20210924.1606.entry
-1.5M -rw-r--r-- 1 root root 1.5M Oct  3 03:37 packages/ess-20210924.1606.tar
-8.0K -rw-r--r-- 1 root root 5.0K Oct  3 03:37 packages/ess-R-data-view-20130509.1158.el
-4.0K -rw-r--r-- 1 root root  419 Oct  3 03:37 packages/ess-R-data-view-20130509.1158.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct  3 03:37 packages/ess-R-data-view-badge.svg
-4.0K -rw-r--r-- 1 root root  328 Oct  3 03:37 packages/ess-R-data-view-readme.txt
-4.0K -rw-r--r-- 1 root root  655 Oct  3 03:37 packages/ess-R-data-view.log
-4.0K -rw-r--r-- 1 root root 1.2K Oct  3 03:37 packages/ess-badge.svg
- 20K -rw-r--r-- 1 root root  19K Oct  3 03:37 packages/ess-r-insert-obj-20200916.843.el
-4.0K -rw-r--r-- 1 root root  411 Oct  3 03:37 packages/ess-r-insert-obj-20200916.843.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct  3 03:37 packages/ess-r-insert-obj-badge.svg
-4.0K -rw-r--r-- 1 root root  771 Oct  3 03:37 packages/ess-r-insert-obj-readme.txt
-4.0K -rw-r--r-- 1 root root  664 Oct  3 03:37 packages/ess-r-insert-obj.log
-4.0K -rw-r--r-- 1 root root  265 Oct  3 03:37 packages/ess-readme.txt
- 72K -rw-r--r-- 1 root root  72K Oct  3 03:37 packages/ess-smart-equals-20210411.1333.el
-4.0K -rw-r--r-- 1 root root  474 Oct  3 03:37 packages/ess-smart-equals-20210411.1333.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct  3 03:37 packages/ess-smart-equals-badge.svg
-8.0K -rw-r--r-- 1 root root 7.1K Oct  3 03:37 packages/ess-smart-equals-readme.txt
-4.0K -rw-r--r-- 1 root root  663 Oct  3 03:37 packages/ess-smart-equals.log
-4.0K -rw-r--r-- 1 root root  350 Oct  3 03:37 packages/ess-smart-underscore-20190309.101.entry
- 32K -rw-r--r-- 1 root root  30K Oct  3 03:37 packages/ess-smart-underscore-20190309.101.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct  3 03:37 packages/ess-smart-underscore-badge.svg
-4.0K -rw-r--r-- 1 root root 1.8K Oct  3 03:37 packages/ess-smart-underscore-readme.txt
-4.0K -rw-r--r-- 1 root root 1.4K Oct  3 03:37 packages/ess-smart-underscore.log
- 12K -rw-r--r-- 1 root root  12K Oct  3 03:37 packages/ess-view-20181001.1730.el
-4.0K -rw-r--r-- 1 root root  437 Oct  3 03:37 packages/ess-view-20181001.1730.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct  3 03:37 packages/ess-view-badge.svg
- 88K -rw-r--r-- 1 root root  88K Oct  3 03:37 packages/ess-view-data-20211001.1717.el
-4.0K -rw-r--r-- 1 root root  388 Oct  3 03:37 packages/ess-view-data-20211001.1717.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct  3 03:37 packages/ess-view-data-badge.svg
-4.0K -rw-r--r-- 1 root root 2.1K Oct  3 03:37 packages/ess-view-data-readme.txt
-4.0K -rw-r--r-- 1 root root  642 Oct  3 03:37 packages/ess-view-data.log
-4.0K -rw-r--r-- 1 root root 1.2K Oct  3 03:37 packages/ess-view-readme.txt
-4.0K -rw-r--r-- 1 root root 1003 Oct  3 03:37 packages/ess-view.log
+4.0K -rw-r--r-- 1 root root  840 Oct  3 07:21 packages/ess-20210924.1606.entry
+1.5M -rw-r--r-- 1 root root 1.5M Oct  3 07:21 packages/ess-20210924.1606.tar
+8.0K -rw-r--r-- 1 root root 5.0K Oct  3 07:21 packages/ess-R-data-view-20130509.1158.el
+4.0K -rw-r--r-- 1 root root  419 Oct  3 07:21 packages/ess-R-data-view-20130509.1158.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct  3 07:21 packages/ess-R-data-view-badge.svg
+4.0K -rw-r--r-- 1 root root  328 Oct  3 07:21 packages/ess-R-data-view-readme.txt
+4.0K -rw-r--r-- 1 root root  655 Oct  3 07:21 packages/ess-R-data-view.log
+4.0K -rw-r--r-- 1 root root 1.2K Oct  3 07:21 packages/ess-badge.svg
+ 20K -rw-r--r-- 1 root root  19K Oct  3 07:21 packages/ess-r-insert-obj-20200916.843.el
+4.0K -rw-r--r-- 1 root root  411 Oct  3 07:21 packages/ess-r-insert-obj-20200916.843.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct  3 07:21 packages/ess-r-insert-obj-badge.svg
+4.0K -rw-r--r-- 1 root root  771 Oct  3 07:21 packages/ess-r-insert-obj-readme.txt
+4.0K -rw-r--r-- 1 root root  664 Oct  3 07:21 packages/ess-r-insert-obj.log
+4.0K -rw-r--r-- 1 root root  265 Oct  3 07:21 packages/ess-readme.txt
+ 72K -rw-r--r-- 1 root root  72K Oct  3 07:21 packages/ess-smart-equals-20210411.1333.el
+4.0K -rw-r--r-- 1 root root  474 Oct  3 07:21 packages/ess-smart-equals-20210411.1333.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct  3 07:21 packages/ess-smart-equals-badge.svg
+8.0K -rw-r--r-- 1 root root 7.1K Oct  3 07:21 packages/ess-smart-equals-readme.txt
+4.0K -rw-r--r-- 1 root root  663 Oct  3 07:21 packages/ess-smart-equals.log
+4.0K -rw-r--r-- 1 root root  350 Oct  3 07:21 packages/ess-smart-underscore-20190309.101.entry
+ 32K -rw-r--r-- 1 root root  30K Oct  3 07:21 packages/ess-smart-underscore-20190309.101.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct  3 07:21 packages/ess-smart-underscore-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Oct  3 07:21 packages/ess-smart-underscore-readme.txt
+4.0K -rw-r--r-- 1 root root 1.4K Oct  3 07:21 packages/ess-smart-underscore.log
+ 12K -rw-r--r-- 1 root root  12K Oct  3 07:21 packages/ess-view-20181001.1730.el
+4.0K -rw-r--r-- 1 root root  437 Oct  3 07:21 packages/ess-view-20181001.1730.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct  3 07:21 packages/ess-view-badge.svg
+ 88K -rw-r--r-- 1 root root  88K Oct  3 07:21 packages/ess-view-data-20211001.1717.el
+4.0K -rw-r--r-- 1 root root  388 Oct  3 07:21 packages/ess-view-data-20211001.1717.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct  3 07:21 packages/ess-view-data-badge.svg
+4.0K -rw-r--r-- 1 root root 2.1K Oct  3 07:21 packages/ess-view-data-readme.txt
+4.0K -rw-r--r-- 1 root root  642 Oct  3 07:21 packages/ess-view-data.log
+4.0K -rw-r--r-- 1 root root 1.2K Oct  3 07:21 packages/ess-view-readme.txt
+4.0K -rw-r--r-- 1 root root 1003 Oct  3 07:21 packages/ess-view.log

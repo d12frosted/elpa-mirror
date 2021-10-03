@@ -8,8 +8,8 @@
 ;; Author: Mitsuo Saito <arch320@NOSPAM.gmail.com>
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Version: 1.61
-;; Package-Version: 20210715.1416
-;; Package-Commit: 9fb8243a1357afc118f67d3b7d5a6c2a441260ba
+;; Package-Version: 20211003.443
+;; Package-Commit: 69a1d6a1e0caf68bc3eb5f677a16bdd03a30f752
 ;; Keywords: highlight face match convenience
 ;; URL: http://github.com/jcs-elpa/auto-highlight-symbol
 ;; Package-Requires: ((emacs "26.1") (ht "2.3"))
@@ -1241,11 +1241,11 @@ You can do these operations at One Key!
 
 (defun ahs-highlight-current-symbol (current beg end)
   "Highlight current symbol."
-  (let* ((overlay (make-overlay beg end nil nil t)))
-
+  (let* ((overlay (make-overlay beg end nil nil t))
+         (face (ahs-current-plugin-prop 'face)))
     (overlay-put overlay 'ahs-symbol 'current)
     (overlay-put overlay 'priority ahs-overlay-priority)
-    (overlay-put overlay 'face (if current ahs-plugin-default-face ahs-plugin-default-face-unfocused))
+    (overlay-put overlay 'face face)
     (overlay-put overlay 'help-echo '(ahs-stat-string))
     (overlay-put overlay 'window (selected-window))
 

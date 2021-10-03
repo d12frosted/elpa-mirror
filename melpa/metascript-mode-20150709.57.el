@@ -4,6 +4,8 @@
 ;;
 ;; Authors: Rodrigo B. de Oliveira <rbo@acm.org>
 ;; URL: http://github.com/metascript/metascript-mode
+;; Package-Version: 20150709.57
+;; Package-Commit: edb361c7b0e5de231e5334a17b90652fb1df78f9
 ;; Keywords: languages metascript mjs
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.3"))
