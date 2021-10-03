@@ -4,10 +4,10 @@ Source:  https://github.com/dieter-wilhelm/apdl-mode.git
 
 Updating /mnt/store/melpa/working/apdl-mode/
 Checking out origin/HEAD
-Checking out e82c69cfdfe806172d6295ec5a6d97d78d6fd235
+Checking out 3a4c6b3650a106f5e4d5118145999ef4ad09df0d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/apdl-mode/
-  to /tmp/apdl-modeBDI9O2/apdl-mode-20211001.2103
+  to /tmp/apdl-modet3v7li/apdl-mode-20211002.2000
     apdl-initialise.el -> apdl-initialise.el
     apdl-keyword.el -> apdl-keyword.el
     apdl-mode-pkg.el -> apdl-mode-pkg.el
@@ -19,61 +19,61 @@ Copying files (->) and directories (=>)
     apdl-mode.info -> apdl-mode.info
     matlib => matlib
     template => template
-Created apdl-mode-20211001.2103.tar containing:
-  apdl-mode-20211001.2103/
-  apdl-mode-20211001.2103/apdl-initialise.el
-  apdl-mode-20211001.2103/apdl-keyword.el
-  apdl-mode-20211001.2103/apdl-mode-pkg.el
-  apdl-mode-20211001.2103/apdl-mode.el
-  apdl-mode-20211001.2103/apdl-mode.info
-  apdl-mode-20211001.2103/apdl-process.el
-  apdl-mode-20211001.2103/apdl-template.el
-  apdl-mode-20211001.2103/apdl-wb-template.el
-  apdl-mode-20211001.2103/dir
-  apdl-mode-20211001.2103/matlib/
-  apdl-mode-20211001.2103/matlib/42CrMo4_biso_Rp850.MPA_MPL
-  apdl-mode-20211001.2103/matlib/AlSi9Cu3_biso.MPA_MPL
-  apdl-mode-20211001.2103/matlib/Al_a2024-T3.SI_MPL
-  apdl-mode-20211001.2103/matlib/Al_a6061-T6.SI_MPL
-  apdl-mode-20211001.2103/matlib/Al_a7079-T6.SI_MPL
-  apdl-mode-20211001.2103/matlib/C75s_hardened_kinh.MPA_MPL
-  apdl-mode-20211001.2103/matlib/Cu_pure.SI_MPL
-  apdl-mode-20211001.2103/matlib/M250-35A_aniso.MPA_MPL
-  apdl-mode-20211001.2103/matlib/M250-35A_biso.MPA_MPL
-  apdl-mode-20211001.2103/matlib/M250-35A_orthotropic_elastic.MPA_MPL
-  apdl-mode-20211001.2103/matlib/M800-65A_biso.MPA_MPL
-  apdl-mode-20211001.2103/matlib/Mg_AZ31B-H24.SI_MPL
-  apdl-mode-20211001.2103/matlib/Mg_HK31A-H24.SI_MPL
-  apdl-mode-20211001.2103/matlib/NdFeB_magnet.MPA_MPL
-  apdl-mode-20211001.2103/matlib/Ni_pure.SI_MPL
-  apdl-mode-20211001.2103/matlib/PPS.MPA_MPL
-  apdl-mode-20211001.2103/matlib/PPS_Fortron1140L4_70degC_kinh.MPA_MPL
-  apdl-mode-20211001.2103/matlib/README.org
-  apdl-mode-20211001.2103/matlib/St37.MPA_MPL
-  apdl-mode-20211001.2103/matlib/St37_elastic.MPA_MPL
-  apdl-mode-20211001.2103/matlib/St70_biso.MPA_MPL
-  apdl-mode-20211001.2103/matlib/Stl_AISI-304.SI_MPL
-  apdl-mode-20211001.2103/matlib/Stl_AISI-C1020.SI_MPL
-  apdl-mode-20211001.2103/matlib/Ti_B-120VCA.SI_MPL
-  apdl-mode-20211001.2103/matlib/X46Cr13.MPA_MPL
-  apdl-mode-20211001.2103/matlib/construction_steel.MPA_MPL
-  apdl-mode-20211001.2103/matlib/copper.MPA_MPL
-  apdl-mode-20211001.2103/matlib/creep_curves_PPS_Fortron1140l4_120degC.csv
-  apdl-mode-20211001.2103/matlib/emagCopper.SI_MPL
-  apdl-mode-20211001.2103/matlib/emagM3.SI_MPL
-  apdl-mode-20211001.2103/matlib/emagM54.SI_MPL
-  apdl-mode-20211001.2103/matlib/emagSa1010.SI_MPL
-  apdl-mode-20211001.2103/matlib/emagSilicon.SI_MPL
-  apdl-mode-20211001.2103/matlib/emagVanad.SI_MPL
-  apdl-mode-20211001.2103/template/
-  apdl-mode-20211001.2103/template/3d_press-fit_torque_calculations.mac
-  apdl-mode-20211001.2103/template/harmonic_acceleration_results.mac
-  apdl-mode-20211001.2103/template/plane-stress_structural_example.mac
-  apdl-mode-20211001.2103/template/plane_stress_press-fit_torque_calculations.mac
-  apdl-mode-20211001.2103/template/post26_output.mac
-Built apdl-mode in 8.013s, finished at 2021-10-02T15:58:08+0000
+Created apdl-mode-20211002.2000.tar containing:
+  apdl-mode-20211002.2000/
+  apdl-mode-20211002.2000/apdl-initialise.el
+  apdl-mode-20211002.2000/apdl-keyword.el
+  apdl-mode-20211002.2000/apdl-mode-pkg.el
+  apdl-mode-20211002.2000/apdl-mode.el
+  apdl-mode-20211002.2000/apdl-mode.info
+  apdl-mode-20211002.2000/apdl-process.el
+  apdl-mode-20211002.2000/apdl-template.el
+  apdl-mode-20211002.2000/apdl-wb-template.el
+  apdl-mode-20211002.2000/dir
+  apdl-mode-20211002.2000/matlib/
+  apdl-mode-20211002.2000/matlib/42CrMo4_biso_Rp850.MPA_MPL
+  apdl-mode-20211002.2000/matlib/AlSi9Cu3_biso.MPA_MPL
+  apdl-mode-20211002.2000/matlib/Al_a2024-T3.SI_MPL
+  apdl-mode-20211002.2000/matlib/Al_a6061-T6.SI_MPL
+  apdl-mode-20211002.2000/matlib/Al_a7079-T6.SI_MPL
+  apdl-mode-20211002.2000/matlib/C75s_hardened_kinh.MPA_MPL
+  apdl-mode-20211002.2000/matlib/Cu_pure.SI_MPL
+  apdl-mode-20211002.2000/matlib/M250-35A_aniso.MPA_MPL
+  apdl-mode-20211002.2000/matlib/M250-35A_biso.MPA_MPL
+  apdl-mode-20211002.2000/matlib/M250-35A_orthotropic_elastic.MPA_MPL
+  apdl-mode-20211002.2000/matlib/M800-65A_biso.MPA_MPL
+  apdl-mode-20211002.2000/matlib/Mg_AZ31B-H24.SI_MPL
+  apdl-mode-20211002.2000/matlib/Mg_HK31A-H24.SI_MPL
+  apdl-mode-20211002.2000/matlib/NdFeB_magnet.MPA_MPL
+  apdl-mode-20211002.2000/matlib/Ni_pure.SI_MPL
+  apdl-mode-20211002.2000/matlib/PPS.MPA_MPL
+  apdl-mode-20211002.2000/matlib/PPS_Fortron1140L4_70degC_kinh.MPA_MPL
+  apdl-mode-20211002.2000/matlib/README.org
+  apdl-mode-20211002.2000/matlib/St37.MPA_MPL
+  apdl-mode-20211002.2000/matlib/St37_elastic.MPA_MPL
+  apdl-mode-20211002.2000/matlib/St70_biso.MPA_MPL
+  apdl-mode-20211002.2000/matlib/Stl_AISI-304.SI_MPL
+  apdl-mode-20211002.2000/matlib/Stl_AISI-C1020.SI_MPL
+  apdl-mode-20211002.2000/matlib/Ti_B-120VCA.SI_MPL
+  apdl-mode-20211002.2000/matlib/X46Cr13.MPA_MPL
+  apdl-mode-20211002.2000/matlib/construction_steel.MPA_MPL
+  apdl-mode-20211002.2000/matlib/copper.MPA_MPL
+  apdl-mode-20211002.2000/matlib/creep_curves_PPS_Fortron1140l4_120degC.csv
+  apdl-mode-20211002.2000/matlib/emagCopper.SI_MPL
+  apdl-mode-20211002.2000/matlib/emagM3.SI_MPL
+  apdl-mode-20211002.2000/matlib/emagM54.SI_MPL
+  apdl-mode-20211002.2000/matlib/emagSa1010.SI_MPL
+  apdl-mode-20211002.2000/matlib/emagSilicon.SI_MPL
+  apdl-mode-20211002.2000/matlib/emagVanad.SI_MPL
+  apdl-mode-20211002.2000/template/
+  apdl-mode-20211002.2000/template/3d_press-fit_torque_calculations.mac
+  apdl-mode-20211002.2000/template/harmonic_acceleration_results.mac
+  apdl-mode-20211002.2000/template/plane-stress_structural_example.mac
+  apdl-mode-20211002.2000/template/plane_stress_press-fit_torque_calculations.mac
+  apdl-mode-20211002.2000/template/post26_output.mac
+Built apdl-mode in 5.792s, finished at 2021-10-03T03:16:29+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  430 Oct  2 15:58 packages/apdl-mode-20211001.2103.entry
-932K -rw-r--r-- 1 root root 930K Oct  2 15:58 packages/apdl-mode-20211001.2103.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct  2 15:58 packages/apdl-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  831 Oct  2 15:58 packages/apdl-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  430 Oct  3 03:16 packages/apdl-mode-20211002.2000.entry
+932K -rw-r--r-- 1 root root 930K Oct  3 03:16 packages/apdl-mode-20211002.2000.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct  3 03:16 packages/apdl-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  831 Oct  3 03:16 packages/apdl-mode-readme.txt

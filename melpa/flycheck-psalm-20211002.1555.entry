@@ -1,0 +1,15 @@
+(flycheck-psalm .
+		[(20211002 1555)
+		 ((emacs
+		   (24 3))
+		  (flycheck
+		   (26))
+		  (psalm
+		   (0 6 0)))
+		 "Flycheck integration for Psalm" single
+		 ((:commit . "28d546a79cb865a78b94cd7e929d66d720505faa")
+		  (:authors
+		   ("USAMI Kenta" . "tadsan@zonu.me"))
+		  (:maintainer "USAMI Kenta" . "tadsan@zonu.me")
+		  (:keywords "tools" "php")
+		  (:url . "https://github.com/emacs-php/psalm.el"))])

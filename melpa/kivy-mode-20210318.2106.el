@@ -3,7 +3,7 @@
 ;; Author: Dean Serenevy <dean@serenevy.net>
 ;; Version: 0.1.0
 ;; Package-Version: 20210318.2106
-;; Package-Commit: d526ade135ad19546c3870cae18873deb9be0039
+;; Package-Commit: 6a20b0dd352fde77518062d7ba3c4bfb197d63cd
 ;;
 ;; This document borrowed heavily from yaml-mode.el by Yoshiki Kurihara and
 ;; Marshall Vandegrift.
