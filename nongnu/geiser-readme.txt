@@ -31,7 +31,7 @@
     of the supported scheme implementations.
 
     The following schemes are supported via an independent package,
-    installable from MELPA:
+    installable from either NonGNU ELPA or MELPA:
 
       - Chez 9.4 or better, via [[https://gitlab.com/emacs-geiser/chez][geiser-chez]]
       - Chibi 0.7.3 or better, via [[https://gitlab.com/emacs-geiser/chibi][geiser-chibi]]
@@ -46,9 +46,12 @@
 
 * Installation
 
-*** Using MELPA
+*** Using ELPA
 
-    The easiest way is to use MELPA, and just type
+    Geiser is available in the ELPA repositories [[https://elpa.nongnu.org/nongnu/geiser.html][NonGNU ELPA]]
+    (pre-configured by default as a source starting in Emacs 28) and
+    MELPA. So the easiest way is to use the ELPA package, and just
+    type
 
     =M-x package-install RET geiser-<implementation>=
 
