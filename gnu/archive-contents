@@ -672,17 +672,17 @@
 	       ("Leo Liu" . "sdl.web@gmail.com"))
 	      (:keywords "killing" "convenience"))])
  (ebdb .
-       [(0 8 4)
+       [(0 8 5)
 	((emacs
 	  (25 1))
 	 (seq
 	  (2 15)))
 	"Contact management package" tar
 	((:url . "https://github.com/girzel/ebdb")
+	 (:keywords "convenience" "mail")
 	 (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
 	 (:authors
-	  ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
-	 (:keywords "convenience" "mail"))])
+	  ("Eric Abrahamsen" . "eric@ericabrahamsen.net")))])
  (ebdb-gnorb .
 	     [(1 0 2)
 	      ((gnorb
