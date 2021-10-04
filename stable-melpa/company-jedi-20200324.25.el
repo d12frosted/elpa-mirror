@@ -6,7 +6,7 @@
 ;; Maintainer: Neil Okamoto <neil.okamoto+melpa@gmail.com>
 ;; URL: https://github.com/emacsorphanage/company-jedi
 ;; Package-Version: 20200324.25
-;; Package-Commit: 4775b659564f1d57bc68c88c9faabf44c9fe4e4d
+;; Package-Commit: ea22b1f7a980c49aaf2c5e840e4536577f6602f6
 ;; Version: 0.04
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5") (company "0.8.11") (jedi-core "0.2.7"))
 
