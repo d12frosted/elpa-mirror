@@ -1,0 +1,10 @@
+(revert-buffer-all .
+		   [(20211004 1321)
+		    ((emacs
+		      (24 3)))
+		    "Revert all open buffers" single
+		    ((:commit . "947f2471acaf1b9d5162f8a886aed6a211dd8fca")
+		     (:authors
+		      ("Campbell Barton" . "ideasman42@gmail.com"))
+		     (:maintainer "Campbell Barton" . "ideasman42@gmail.com")
+		     (:url . "https://gitlab.com/ideasman42/emacs-buffer-revert-all"))])

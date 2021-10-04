@@ -12,6 +12,7 @@ The themes share the following customization variables:
     modus-themes-org-agenda                     (alist)
     modus-themes-bold-constructs                (boolean)
     modus-themes-inhibit-reload                 (boolean)
+    modus-themes-intense-markup                 (boolean)
     modus-themes-italic-constructs              (boolean)
     modus-themes-mixed-fonts                    (boolean)
     modus-themes-scale-headings                 (boolean)

@@ -4,10 +4,28 @@ Source:  https://github.com/lorniu/go-translate.git
 
 Updating /mnt/store/melpa/working/go-translate/
 Checking out origin/HEAD
-Checking out 7a9b7978057bf747ed06fa6c9d2f30047714aa05
-Built go-translate in 5.263s, finished at 2021-10-04T05:46:11+0000
+Checking out cb39628ba2570fbe89f23b072a332c3c4abc50a3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/go-translate/
+  to /tmp/go-translatet1LYea/go-translate-20211004.920
+    go-translate.el -> go-translate.el
+    gts-core.el -> gts-core.el
+    gts-google-tk.el -> gts-google-tk.el
+    gts-google.el -> gts-google.el
+    gts-implements.el -> gts-implements.el
+    gts.el -> gts.el
+Created go-translate-20211004.920.tar containing:
+  go-translate-20211004.920/
+  go-translate-20211004.920/go-translate-pkg.el
+  go-translate-20211004.920/go-translate.el
+  go-translate-20211004.920/gts-core.el
+  go-translate-20211004.920/gts-google-tk.el
+  go-translate-20211004.920/gts-google.el
+  go-translate-20211004.920/gts-implements.el
+  go-translate-20211004.920/gts.el
+Built go-translate in 4.787s, finished at 2021-10-04T13:07:01+0000
  ✓ Success:
- 52K -rw-r--r-- 1 root root  50K Oct  4 05:46 packages/go-translate-20210527.1257.el
-4.0K -rw-r--r-- 1 root root  343 Oct  4 05:46 packages/go-translate-20210527.1257.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct  4 05:46 packages/go-translate-badge.svg
-4.0K -rw-r--r-- 1 root root  884 Oct  4 05:46 packages/go-translate-readme.txt
+4.0K -rw-r--r-- 1 root root  339 Oct  4 13:07 packages/go-translate-20211004.920.entry
+112K -rw-r--r-- 1 root root 110K Oct  4 13:07 packages/go-translate-20211004.920.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct  4 13:07 packages/go-translate-badge.svg
+4.0K -rw-r--r-- 1 root root  884 Oct  4 13:07 packages/go-translate-readme.txt

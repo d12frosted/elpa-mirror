@@ -6,7 +6,7 @@
 
 ;; Keywords: languages python
 ;; Package-Version: 20210411.1931
-;; Package-Commit: 86c073e49fc099d8111da96cfbb2f30ccd659338
+;; Package-Commit: 51bbfb8f3721c9eb93272240bf2525b18a47e44f
 ;; Version: 1.02
 
 ;; pylint.el is free software; you can redistribute it and/or modify it
