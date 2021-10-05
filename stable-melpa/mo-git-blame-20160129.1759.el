@@ -6,8 +6,6 @@
 ;; Author: Moritz Bunkus <moritz@bunkus.org>
 ;; Maintainer: Moritz Bunkus <moritz@bunkus.org>
 ;; Version: 0.1.0
-;; Package-Version: 20160129.1759
-;; Package-Commit: 254a675eb794cdbbdef9fa2b4b7bb510b70089c0
 ;; Keywords: tools
 
 ;; mo-git-blame is free software; you can redistribute it and/or
