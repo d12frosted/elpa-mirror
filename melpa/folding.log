@@ -3,23 +3,7 @@ Fetcher: github
 Source:  https://github.com/jaalto/project-emacs--folding-mode.git
 
 Updating /mnt/store/melpa/working/folding/
-Checking out origin/HEAD
-Checking out 8110b4137198aee816a6323d873b547864893da6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/folding/
-  to /tmp/foldingGdUEOa/folding-20200901.953
-    folding.el -> folding.el
-    folding.texi -> folding.texi
-Created /tmp/foldingGdUEOa/folding-20200901.953/folding.info
-Created folding-20200901.953.tar containing:
-  folding-20200901.953/
-  folding-20200901.953/dir
-  folding-20200901.953/folding-pkg.el
-  folding-20200901.953/folding.el
-  folding-20200901.953/folding.info
-Built folding in 9.694s, finished at 2021-10-05T03:44:03+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  223 Oct  5 03:44 packages/folding-20200901.953.entry
-240K -rw-r--r-- 1 root root 240K Oct  5 03:44 packages/folding-20200901.953.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct  5 03:44 packages/folding-badge.svg
- 24K -rw-r--r-- 1 root root  22K Oct  5 03:44 packages/folding-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/jaalto/project-emacs--folding-mode.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+

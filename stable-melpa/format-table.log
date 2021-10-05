@@ -3,11 +3,6 @@ Fetcher: github
 Source:  https://github.com/functionreturnfunction/format-table.git
 
 Updating /mnt/store/melpa/working/format-table/
-Checking out origin/HEAD
-Checking out dfcae3a867e574577fc09a43b045889ff155b58f
-Built format-table in 5.155s, finished at 2021-10-05T03:44:15+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root  13K Oct  5 03:44 packages/format-table-20181223.1616.el
-4.0K -rw-r--r-- 1 root root  401 Oct  5 03:44 packages/format-table-20181223.1616.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct  5 03:44 packages/format-table-badge.svg
-4.0K -rw-r--r-- 1 root root   33 Oct  5 03:44 packages/format-table-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: unable to access 'https://github.com/functionreturnfunction/format-table.git/': Failed to connect to github.com port 443: Connection timed out
+
