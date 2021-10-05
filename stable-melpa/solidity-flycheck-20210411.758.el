@@ -5,7 +5,7 @@
 ;; Author: Lefteris Karapetsas  <lefteris@refu.co>
 ;; Keywords: languages, solidity, flycheck
 ;; Package-Version: 20210411.758
-;; Package-Commit: 6f7bd1641e5282ec5163188d8b8c2f6dfddc2e36
+;; Package-Commit: 9c77b390eab999e5e54dc5c1068f57201e6628bf
 ;; Version: 0.1.11
 ;; Package-Requires: ((flycheck "32-cvs") (solidity-mode "0.1.9") (dash "2.17.0"))
 

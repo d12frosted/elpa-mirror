@@ -2,8 +2,6 @@
 
 ;; Author: myuhe <yuhei.maeda_at_gmail.com>
 ;; URL: https://github.com/myuhe/ido-migemo.el
-;; Package-Version: 20191017.1919
-;; Package-Commit: 09a2cc175b500cab7655a25ffc982e78d46ca669
 ;; Version: 0.1
 ;; Maintainer: myuhe
 ;; Copyright (C) :2015 myuhe all rights reserved.
