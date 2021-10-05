@@ -1,14 +1,14 @@
-;;; leetcode.el --- An leetcode client.          -*- lexical-binding: t; no-byte-compile: t -*-
+;;; leetcode.el --- An leetcode client           -*- lexical-binding: t; no-byte-compile: t -*-
 
 ;; Copyright (C) 2019  Wang Kai
 
 ;; Author: Wang Kai <kaiwkx@gmail.com>
 ;; Keywords: extensions, tools
-;; Package-Version: 20210620.706
-;; Package-Commit: 7ef1dffd44be9bba6450953d25ff787e122afc69
+;; Package-Version: 20211005.1331
+;; Package-Commit: e278b099173dced55e6e39f9924e90899542ebf1
 ;; URL: https://github.com/kaiwk/leetcode.el
 ;; Package-Requires: ((emacs "26") (dash "2.16.0") (graphql "0.1.1") (spinner "1.7.3") (aio "1.0") (log4e "0.3.3"))
-;; Version: 0.1.22
+;; Version: 0.1.23
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -1052,7 +1052,7 @@ Call `leetcode-solve-problem' on the current problem id."
 
 (defvar leetcode-prefer-language "python3"
   "LeetCode programming language.
-c, cpp, csharp, golang, java, javascript, kotlin, php, python,
+c, cpp, csharp, golang, java, javascript, typescript, kotlin, php, python,
 python3, ruby, rust, scala, swift.")
 
 (defvar leetcode-prefer-sql "mysql"
@@ -1072,12 +1072,12 @@ Default is programming language.")
 (defconst leetcode--lang-suffixes
   '(("c" . ".c") ("cpp" . ".cpp") ("csharp" . ".cs")
     ("golang" . ".go") ("java" . ".java") ("javascript" . ".js")
-    ("kotlin" . ".kt") ("php" . ".php") ("python" . ".py")
-    ("python3" . ".py") ("ruby" . ".rb") ("rust" . ".rs")
-    ("scala" . ".scala") ("swift" . ".swift")
+    ("typescript" . ".ts") ("kotlin" . ".kt") ("php" . ".php")
+    ("python" . ".py") ("python3" . ".py") ("ruby" . ".rb")
+    ("rust" . ".rs") ("scala" . ".scala") ("swift" . ".swift")
     ("mysql" . ".sql") ("mssql" . ".sql") ("oraclesql" . ".sql"))
   "LeetCode programming language suffixes.
-c, cpp, csharp, golang, java, javascript, kotlin, php, python,
+c, cpp, csharp, golang, java, javascript, typescript, kotlin, php, python,
 python3, ruby, rust, scala, swift, mysql, mssql, oraclesql.")
 
 (defun leetcode--set-lang (snippets)
