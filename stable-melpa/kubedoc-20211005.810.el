@@ -5,8 +5,8 @@
 ;; Author: Dean Lindqvist Todevski <https://github.com/r0bobo>
 ;; Maintainer: Dean Lindqvist Todevski
 ;; Keywords: docs help k8s kubernetes tools
-;; Package-Version: 20211004.918
-;; Package-Commit: 8f49d3e581964cdeaeba680c33197fe304555e70
+;; Package-Version: 20211005.810
+;; Package-Commit: 20692189359ce0517726a945c8ab798bb91a8624
 ;; Version: 1.0
 ;; Homepage: https://github.com/r0bobo/kubedoc.el/
 ;; Package-Requires: ((emacs "27.1"))
@@ -295,7 +295,8 @@ Paths are suffixed with a `/' if they contain any child fields."
 (defun kubedoc-invalidate-cache ()
   "Invalidate kubedoc completion cache."
   (interactive)
-  (setq kubedoc--field-completion-table-cache nil))
+  (setq kubedoc--field-completion-table-cache nil)
+  (setq kubedoc--resource-completion-table-cache nil))
 
 
 ;;;; Mode

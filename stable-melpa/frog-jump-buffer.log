@@ -3,6 +3,11 @@ Fetcher: github
 Source:  https://github.com/waymondo/frog-jump-buffer.git
 
 Updating /mnt/store/melpa/working/frog-jump-buffer/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://github.com/waymondo/frog-jump-buffer.git/': Failed to connect to github.com port 443: Connection timed out
-
+Checking out origin/HEAD
+Checking out 387fa2a61a9e4b50701aece19dd798361f51d366
+Built frog-jump-buffer in 5.531s, finished at 2021-10-05T11:13:10+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  14K Oct  5 11:13 packages/frog-jump-buffer-20210906.1634.el
+4.0K -rw-r--r-- 1 root root  470 Oct  5 11:13 packages/frog-jump-buffer-20210906.1634.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct  5 11:13 packages/frog-jump-buffer-badge.svg
+4.0K -rw-r--r-- 1 root root  493 Oct  5 11:13 packages/frog-jump-buffer-readme.txt

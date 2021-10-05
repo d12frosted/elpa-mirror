@@ -3,6 +3,11 @@ Fetcher: github
 Source:  https://github.com/Lindydancer/font-lock-studio.git
 
 Updating /mnt/store/melpa/working/font-lock-studio/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://github.com/Lindydancer/font-lock-studio.git/': Failed to connect to github.com port 443: Connection timed out
-
+Checking out origin/HEAD
+Checking out 12c35967b31233e06946c70627aa3152dacfe261
+Built font-lock-studio in 5.780s, finished at 2021-10-05T11:12:08+0000
+ ✓ Success:
+116K -rw-r--r-- 1 root root 116K Oct  5 11:12 packages/font-lock-studio-20170127.2051.el
+4.0K -rw-r--r-- 1 root root  374 Oct  5 11:12 packages/font-lock-studio-20170127.2051.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct  5 11:12 packages/font-lock-studio-badge.svg
+ 12K -rw-r--r-- 1 root root  11K Oct  5 11:12 packages/font-lock-studio-readme.txt

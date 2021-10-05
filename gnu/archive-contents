@@ -226,6 +226,28 @@
 	     (:authors
 	      ("Serghei Iakovlev" . "egrep@protonmail.ch"))
 	     (:keywords "languages"))])
+ (boxy .
+       [(1 0 0)
+	((emacs
+	  (26 1)))
+	"A boxy layout framework" tar
+	((:url . "https://gitlab.com/tygrdev/boxy.el")
+	 (:keywords "tools")
+	 (:maintainer "Tyler Grinn" . "tylergrinn@gmail.com")
+	 (:authors
+	  ("Tyler Grinn" . "tylergrinn@gmail.com")))])
+ (boxy-headlines .
+		 [(1 0 0)
+		  ((emacs
+		    (26 1))
+		   (boxy
+		    (1 0)))
+		  "View org files in a boxy diagram" tar
+		  ((:url . "https://gitlab.com/tygrdev/boxy-headlines")
+		   (:keywords "tools")
+		   (:maintainer "Tyler Grinn" . "tylergrinn@gmail.com")
+		   (:authors
+		    ("Tyler Grinn" . "tylergrinn@gmail.com")))])
  (brief .
 	[(5 87)
 	 nil "Brief Editor Emulator (Brief Mode)" tar
@@ -714,7 +736,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20211002)
+      [(20211005)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
