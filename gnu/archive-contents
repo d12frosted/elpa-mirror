@@ -227,7 +227,7 @@
 	      ("Serghei Iakovlev" . "egrep@protonmail.ch"))
 	     (:keywords "languages"))])
  (boxy .
-       [(1 0 0)
+       [(1 0 2)
 	((emacs
 	  (26 1)))
 	"A boxy layout framework" tar
@@ -237,7 +237,7 @@
 	 (:authors
 	  ("Tyler Grinn" . "tylergrinn@gmail.com")))])
  (boxy-headlines .
-		 [(1 0 0)
+		 [(1 0 2)
 		  ((emacs
 		    (26 1))
 		   (boxy
@@ -1661,7 +1661,7 @@
 	   ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	  (:keywords "extensions" "lisp"))])
  (nano-theme .
-	     [(0 1)
+	     [(0 2)
 	      ((emacs
 		(27 1)))
 	      "N Λ N O theme" tar
