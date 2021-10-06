@@ -8,8 +8,8 @@
 ;; Author: Mitsuo Saito <arch320@NOSPAM.gmail.com>
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Version: 1.61
-;; Package-Version: 20211003.1449
-;; Package-Commit: 26a578f81a6e74438598064f9f285d275d77e8bc
+;; Package-Version: 20211006.603
+;; Package-Commit: 1a54a61fda6206c5e0fa843d16635133241292ba
 ;; Keywords: highlight face match convenience
 ;; URL: http://github.com/jcs-elpa/auto-highlight-symbol
 ;; Package-Requires: ((emacs "26.1") (ht "2.3"))
@@ -157,6 +157,8 @@
 ;;    Number of seconds to wait before highlighting symbol.
 ;;  `ahs-case-fold-search'
 ;;    *Non-nil means symbol search ignores case.
+;;  `ahs-highlight-upon-window-switch'
+;;    *Non-nil means rehighlighting is triggered upon window switch.
 ;;  `ahs-include'
 ;;    Variable for start highlighting.
 ;;  `ahs-exclude'
@@ -183,77 +185,6 @@
 ;;   $LastModified: Sun, 21 Nov 2010 14:42:11 +0900 $
 ;;
 ;;   $Lastlog: font lock again $
-;;
-
-;;; (@* "Changelog" )
-;;
-;; v1.61
-;;   prevent unhighlight even window isn't the selected one
-;;   add disabled commands/minor-modes/flags
-;;   remove flag `ahs-higlighted', no longer useful
-;;   fix interactive commands to newer version
-;;   drop support for Emacs 26.1 or lower
-;;
-;; v1.60
-;;   allow mouse movement and still be highlighted
-;;   don't remove highlight if symbol are the same as last one
-;;
-;; v1.59
-;;   fix copyright information
-;;
-;; v1.58
-;;   fix sharp quotes for function names
-;;   fix `cl' deprecated issue
-;;
-;; v1.57
-;;   remove annoying `underline' property from `ahs-definition-face'
-;;   minor docstring changes
-;;
-;; v1.56
-;;   Adapted by Shen, Jen-Chieh <jcs090218@gmail.com>
-;;
-;; v1.55
-;;   Adapted by Gennadiy Zlobin <gennad.zlobin@NOSPAM.gmail.com>
-;;
-;; v1.54 beta
-;;   Bug fix release
-;;   ** fix overlay violation problem in edit mode(backward) - !incomplete!
-;;   fix font-lock problem
-;;   fix built-in plugin
-;;   add onekey edit
-;;   remove ahs-invisible-face-list
-;;   remove obsoleted alias
-;;   minor bug fix
-;;
-;; v1.53 2010-11-03 22:17 +0900
-;;   improve invisible overlay's handling
-;;   new plugin property `face' available
-;;   add ahs-back-to-start
-;;   minor bug fix
-;;
-;; v1.52 2010-10-31 14:46 +0900
-;;   skip folding(select function only)
-;;
-;; v1.51 2010-10-30 09:17 +0900
-;;   plugin minor change
-;;
-;; v1.5  2010-10-30 02:31 +0900
-;;   add range plugin
-;;    ahs-whole-of-buffer is not working.
-;;    use ahs-default-range instead.
-;;    ahs-mode-lighter , ahs-wmode-lighter is not be used
-;;
-;; v1.03 2010-10-28 07:00 +0900
-;;   bug fix
-;;
-;; v1.02 2010-10-26 23:39 +0900
-;;   minor fix
-;;
-;; v1.01 2010-10-26 20:50 +0900
-;;   add edit mode hook for protect overlay
-;;
-;; v1.0  2010-10-26 16:33 +0900
-;;   first release
 ;;
 
 ;;; (@* "TODO" )
@@ -485,6 +416,18 @@ Affects only overlay(hidden text) has a property `isearch-open-invisible'."
 ;;
 ;; (@* "Highlight Rules" )
 ;;
+
+(defcustom ahs-highlight-all-windows t
+  "*Non-nil means symbols in all windows candidates for highlighting.
+
+Otherwise, the only window that is considered is the current one."
+  :group 'auto-highlight-symbol
+  :type 'boolean)
+
+(defcustom ahs-highlight-upon-window-switch t
+  "*Non-nil means rehighlighting is triggered upon window switch."
+  :group 'auto-highlight-symbol
+  :type 'boolean)
 
 (defcustom ahs-case-fold-search t
   "*Non-nil means symbol search ignores case."
@@ -1006,8 +949,11 @@ You can do these operations at One Key!
     (when (timerp ahs-idle-timer) (cancel-timer ahs-idle-timer))
     (setq ahs-idle-timer
           (run-with-timer
-           ;; if switch window, immediately change focus/unfocus
-           (if (eq ahs-selected-window (selected-window)) ahs-idle-interval 0)
+           ;; if switch window, immediately change focus/unfocus unless the user
+           ;; doesn't want us to
+           (if (or (eq ahs-selected-window (selected-window))
+                   (not ahs-highlight-upon-window-switch))
+               ahs-idle-interval 0)
            nil #'ahs-idle-function))))
 
 ;;
@@ -1017,7 +963,9 @@ You can do these operations at One Key!
 (defun ahs-idle-function ()
   "Idle function. Called by `ahs-idle-timer'."
   (setq ahs-selected-window (selected-window))
-  (walk-windows (lambda (win) (with-selected-window win (ahs--do-hl)))))
+  (if ahs-highlight-all-windows
+      (walk-windows (lambda (win) (with-selected-window win (ahs--do-hl))))
+    (ahs--do-hl)))
 
 (defun ahs--do-hl ()
   "Do the highlighting."
@@ -1709,8 +1657,8 @@ That's all."
 (defun ahs-unfocus-all ()
   "Unfocus all windows."
   (interactive)
-  (setq ahs-selected-window nil)
-  (walk-windows (lambda (win) (with-selected-window win (ahs--do-hl)))))
+  (ahs-idle-function)
+  (setq ahs-selected-window nil))
 
 (defun ahs-goto-web ()
   "Go to official? web site."

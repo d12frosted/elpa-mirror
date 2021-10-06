@@ -4,8 +4,6 @@
 ;;
 ;; Author: Nicolás Salas V. <nikosalas@gmail.com>
 ;; URL: https://github.com/anachronic/yarn-mode
-;; Package-Version: 20200208.2332
-;; Package-Commit: 8239d4dc7d8a52fa1e3fa81bd32c904a359fcfc1
 ;; Keywords: convenience
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.3"))
