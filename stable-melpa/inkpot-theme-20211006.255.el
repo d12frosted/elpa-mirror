@@ -3,8 +3,8 @@
 ;; Author: Sarah Iovan <sarah@hwaetageek.com>
 ;;         Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://gitlab.com/ideasman42/emacs-inkpot-theme
-;; Package-Version: 20211005.429
-;; Package-Commit: 13346f31cb367e3f8f680be1c3a767a59df4c853
+;; Package-Version: 20211006.255
+;; Package-Commit: c71fb093e4daeaadf08ca4bd3c2c446ced6d1cdb
 ;; Version: 0.1
 ;; Keywords: color, theme
 
@@ -219,6 +219,8 @@
    ;; Headers:
    ;; These are displayed grouped.
    `(diff-header ((t (:foreground ,ip-brown-light+30.9 :background ,ip-grey+18))))
+   ;; Use the same colors, too many tones here makes diff headers overly busy.
+   `(diff-index ((t (:foreground ,ip-brown-light+30.9 :background ,ip-grey+25))))
    `(diff-file-header ((t (:foreground ,ip-brown-light+30.9 :background ,ip-grey+25))))
    ;; These are displayed side-by-side, a rare exception where a black
    ;; background is useful to visually separate content.
