@@ -293,6 +293,15 @@
 		  ("2003      Dave Love" . "fx@gnu.org")
 		  ("2016      Arthur Fayzrakhmanov"))
 		 (:keywords "faces" "files" "haskell"))])
+ (haskell-tng-mode .
+		   [(0 0 1)
+		    ((emacs
+		      (27 1))
+		     (popup
+		      (0 5 3)))
+		    "Major mode for editing Haskell" tar
+		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
+		     (:keywords "languages"))])
  (highlight-parentheses .
 			[(2 1 0)
 			 ((emacs
@@ -462,6 +471,16 @@
 	     (:authors
 	      ("Eric James Michael Ritz"))
 	     (:keywords "languages" "php"))])
+ (popup .
+	[(0 5 8)
+	 ((emacs
+	   (24 3)))
+	 "Visual Popup User Interface" tar
+	 ((:url . "https://github.com/auto-complete/popup-el")
+	  (:keywords "lisp")
+	  (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+	  (:authors
+	   ("Tomohiro Matsuyama" . "m2ym.pub@gmail.com")))])
  (projectile .
 	     [(2 5 0)
 	      ((emacs
