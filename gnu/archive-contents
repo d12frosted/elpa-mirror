@@ -1660,6 +1660,14 @@
 	  (:authors
 	   ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	  (:keywords "extensions" "lisp"))])
+ (nano-modeline .
+		[(0 1)
+		 ((emacs
+		   (27 1)))
+		 "N Λ N O modeline" tar
+		 ((:url . "https://github.com/rougier/nano-modeline")
+		  (:keywords "convenience" "mode-line" "header-line")
+		  (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
  (nano-theme .
 	     [(0 2)
 	      ((emacs
