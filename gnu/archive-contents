@@ -248,18 +248,6 @@
 		  (:maintainer "Tyler Grinn" . "tylergrinn@gmail.com")
 		  (:authors
 		   ("Tyler Grinn" . "tylergrinn@gmail.com")))])
- (boxy-headlines .
-		 [(1 0 2)
-		  ((emacs
-		    (26 1))
-		   (boxy
-		    (1 0)))
-		  "View org files in a boxy diagram" tar
-		  ((:url . "https://gitlab.com/tygrdev/boxy-headlines")
-		   (:keywords "tools")
-		   (:maintainer "Tyler Grinn" . "tylergrinn@gmail.com")
-		   (:authors
-		    ("Tyler Grinn" . "tylergrinn@gmail.com")))])
  (brief .
 	[(5 87)
 	 nil "Brief Editor Emulator (Brief Mode)" tar
