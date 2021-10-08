@@ -3,8 +3,6 @@
 ;; Copyright (C) 2012-2016 Sho Takemori.
 ;; Author: Sho Takemori <stakemorii@gmail.com>
 ;; URL: https://github.com/stakemori/helm-sage
-;; Package-Version: 20160514.745
-;; Package-Commit: f14e9281d8f2162df7d8f9c2ad9ad1248a24803b
 ;; Keywords: Sage, math, helm
 ;; Version: 0.0.4
 ;; Package-Requires: ((cl-lib "0.5") (helm "1.5.6") (sage-shell-mode "0.1.0"))

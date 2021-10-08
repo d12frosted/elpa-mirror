@@ -252,6 +252,7 @@ missing package or change you would like to see.
     mu4e
     mu4e-conversation
     multiple-cursors
+    nano-modeline
     neotree
     no-emoji
     notmuch

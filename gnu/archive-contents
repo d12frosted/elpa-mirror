@@ -236,6 +236,18 @@
 	 (:maintainer "Tyler Grinn" . "tylergrinn@gmail.com")
 	 (:authors
 	  ("Tyler Grinn" . "tylergrinn@gmail.com")))])
+ (boxy-headings .
+		[(2 0 0)
+		 ((emacs
+		   (26 1))
+		  (boxy
+		   (1 0)))
+		 "View org files in a boxy diagram" tar
+		 ((:url . "https://gitlab.com/tygrdev/boxy-headings")
+		  (:keywords "tools")
+		  (:maintainer "Tyler Grinn" . "tylergrinn@gmail.com")
+		  (:authors
+		   ("Tyler Grinn" . "tylergrinn@gmail.com")))])
  (boxy-headlines .
 		 [(1 0 2)
 		  ((emacs
