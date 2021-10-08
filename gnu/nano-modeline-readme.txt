@@ -1,7 +1,7 @@
-Nano modeline is a custome modeline rendered as:
+Nano modeline is a minor mode that modify the modeline as:
 [ status | name (primary)                               secondary ]
 
-It can be displayed on bottom (mode-line) or top (header-line)
+It can be displayed at the bottom (mode-line) or at the top (header-line)
 depending on nano-modeline-position custom setting.
 
 There are two sets of faces (for active and inactive modelines) that
@@ -16,4 +16,4 @@ can be customized (M-x: customize-group + nano-modeline)
 
 Usage example:
 
-M-x: nano-modeline
+M-x: nano-modeline-mode

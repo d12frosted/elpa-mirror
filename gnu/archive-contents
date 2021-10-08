@@ -736,7 +736,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20211006)
+      [(20211007)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1661,7 +1661,7 @@
 	   ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	  (:keywords "extensions" "lisp"))])
  (nano-modeline .
-		[(0 1)
+		[(0 2)
 		 ((emacs
 		   (27 1)))
 		 "N Λ N O modeline" tar
@@ -1669,7 +1669,7 @@
 		  (:keywords "convenience" "mode-line" "header-line")
 		  (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
  (nano-theme .
-	     [(0 2)
+	     [(0 2 1)
 	      ((emacs
 		(27 1)))
 	      "N Λ N O theme" tar
