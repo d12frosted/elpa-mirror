@@ -4,8 +4,8 @@
 
 ;; Author: Leo Liu <sdl.web@gmail.com>
 ;; Version: 0.9.0
-;; Package-Version: 20190320.2208
-;; Package-Commit: 1c43705753e639b34b58c9bf961a80b6610a7109
+;; Package-Version: 20211008.528
+;; Package-Commit: 1442ab8c7f02d246f14150207534fba4a42201ba
 ;; Keywords: tools, convenience
 ;; Created: 2013-01-29
 ;; URL: https://github.com/leoliu/ggtags
@@ -2371,12 +2371,12 @@ Function `ggtags-eldoc-function' disabled for eldoc in current buffer: %S" err))
 
 (defconst ggtags--xref-limit 1000)
 
-(defclass ggtags-xref-location (xref-file-location)
-  ((project-root :type string :initarg :project-root)))
+(cl-defstruct (ggtags-xref-location
+               (:constructor ggtags-make-xref-location (file line column project-root)))
+  file project-root)
 
 (cl-defmethod xref-location-group ((l ggtags-xref-location))
-  (with-slots (file project-root) l
-    (file-relative-name file project-root)))
+  (file-relative-name (ggtags-xref-location-file l) (ggtags-xref-location-project-root l)))
 
 (defun ggtags--xref-backend ()
   (and (ggtags-find-project)
@@ -2417,12 +2417,11 @@ properties in the summary text of each xref."
    and when column
    collect (xref-make
             summary
-            (make-instance
-             'ggtags-xref-location
-             :file file
-             :line line
-             :column column
-             :project-root root))))
+            (ggtags-make-xref-location
+             file
+             line
+             column
+             root))))
 
 (defun ggtags--xref-find-tags (tag cmd)
   "Find xrefs of TAG using Global CMD.

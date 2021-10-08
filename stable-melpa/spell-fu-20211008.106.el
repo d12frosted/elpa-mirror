@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-spell-fu
-;; Package-Version: 20211007.305
-;; Package-Commit: 4e7ad5c5efadee670e29fa009c9026222a5bd3e3
+;; Package-Version: 20211008.106
+;; Package-Commit: f38bebefea9d23c2bd4293ecf7100211c1410cd4
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
@@ -381,9 +381,11 @@ Argument WORDS-FILE the file to write the word list into."
                     (zerop
                       (shell-command-on-region
                         (point-min) (point-max)
-                        (if lang
-                          (format "%s -l %s expand" aspell-bin lang)
-                          (format "%s expand" aspell-bin))
+                        (cond
+                          (lang
+                            (format "%s -l %s expand" aspell-bin lang))
+                          (t
+                            (format "%s expand" aspell-bin)))
                         t t
                         ;; Output any errors into the message buffer instead of the word-list.
                         "*spell-fu word generation errors*"))
@@ -671,9 +673,11 @@ This only checks the text matching face rules."
 
 (defun spell-fu-check-range-default (point-start point-end)
   "Check spelling POINT-START & POINT-END, checking comments and strings."
-  (if (or spell-fu-faces-include spell-fu-faces-exclude)
-    (spell-fu--check-range-with-faces point-start point-end)
-    (spell-fu--check-range-without-faces point-start point-end)))
+  (cond
+    ((or spell-fu-faces-include spell-fu-faces-exclude)
+      (spell-fu--check-range-with-faces point-start point-end))
+    (t
+      (spell-fu--check-range-without-faces point-start point-end))))
 
 
 ;; ---------------------------------------------------------------------------
@@ -925,6 +929,7 @@ The VERBOSE argument reports the findings."
           (setq count (1+ count))))
       (message "Spell-fu: %d misspelled word(s) found!" count))))
 
+
 (defun spell-fu-buffer ()
   "Spell check the whole buffer."
   (interactive)
@@ -963,9 +968,11 @@ Return t when found, otherwise nil."
                   (item-start (overlay-start item-ov))
                   (item-end (overlay-end item-ov)))
                 (when
-                  (if (< dir 0)
-                    (< item-end point-init)
-                    (> item-start point-init))
+                  (cond
+                    ((< dir 0)
+                      (< item-end point-init))
+                    (t
+                      (> item-start point-init)))
                   (let ((test-delta (abs (- point-init item-start))))
                     (when (< test-delta point-found-delta)
                       (setq point-found item-start)
@@ -973,16 +980,19 @@ Return t when found, otherwise nil."
         (setq point-prev (point))
         (forward-line dir)))
 
-    (if point-found
-      (progn
+    (cond
+      (point-found
         (goto-char point-found)
         t)
-      (message
-        "Spell-fu: no %s spelling error found"
-        (if (< dir 0)
-          "previous"
-          "next"))
-      nil)))
+      (t
+        (message
+          "Spell-fu: no %s spelling error found"
+          (cond
+            ((< dir 0)
+              "previous")
+            (t
+              "next")))
+        nil))))
 
 (defun spell-fu-goto-next-error ()
   "Jump to the next error, return t when found, otherwise nil."
@@ -1229,9 +1239,11 @@ Return t when the word is removed."
       ;; Optionally check if a function is used.
       (or
         (null global-spell-fu-ignore-buffer)
-        (if (functionp global-spell-fu-ignore-buffer)
-          (not (funcall global-spell-fu-ignore-buffer (current-buffer)))
-          nil)))
+        (cond
+          ((functionp global-spell-fu-ignore-buffer)
+            (not (funcall global-spell-fu-ignore-buffer (current-buffer))))
+          (t
+            nil))))
     (spell-fu-mode 1)))
 
 ;;;###autoload

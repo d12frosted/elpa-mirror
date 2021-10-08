@@ -3,6 +3,8 @@
 ;; Copyright (C) 2018 - 2021 Paul Landes
 
 ;; Version: 0.4
+;; Package-Version: 20210612.1340
+;; Package-Commit: 4521e9d2debef7687bfd26a664479f0c46688a36
 ;; Author: Paul Landes
 ;; Maintainer: Paul Landes
 ;; Keywords: isql sql rdbms data

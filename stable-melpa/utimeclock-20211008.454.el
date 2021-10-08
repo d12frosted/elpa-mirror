@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-utimeclock
-;; Package-Version: 20211006.1337
-;; Package-Commit: b55e265735cb89f384ae51d903a59cda3e52509a
+;; Package-Version: 20211008.454
+;; Package-Commit: e6e3dd50fb7e3b20e38db555950b2f417a12c993
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.4"))
 
@@ -311,7 +311,7 @@ PREFIX will be added to the beginning of the new line."
 
 Return the time immediately after clocking off for time starting at TIME-POS."
   (or
-    (with-demoted-errors
+    (with-demoted-errors "utimeclock: %S"
       (let*
         (
           (prefix (utimeclock-time-point-previous-prefix time-pos))
@@ -327,7 +327,7 @@ Return the time immediately after clocking off for time starting at TIME-POS."
 
 Return the time immediately after clocking on for time starting at TIME-POS."
   (or
-    (with-demoted-errors
+    (with-demoted-errors "utimeclock: %S"
       (let*
         (
           (prefix (utimeclock-time-point-previous-prefix time-pos))

@@ -4,8 +4,8 @@
 ;;
 ;; Author: Ketan Patel <knpatel401@gmail.com>
 ;; URL: https://github.com/knpatel401/filetree
-;; Package-Version: 20211006.2239
-;; Package-Commit: 65ec7d5c10115f3670b7488825922494e749d34a
+;; Package-Version: 20211008.559
+;; Package-Commit: a702d21acce19e10814517b787e65a0d2252b950
 ;; Package-Requires: ((emacs "27.1") (dash "2.12.0") (helm "3.7.0"))
 ;; Version: 1.0.1
 
@@ -59,6 +59,7 @@
 (require 'helm)
 (require 'seq)
 (require 'vc)
+(require 'dired-aux)
 ;;(require 'cl-lib)
 
 ;; External functions/variables
@@ -255,6 +256,8 @@ This is populated using `filetree-add-filetype', for example see
     (define-key map "-" 'filetree-diff-with-file-list-stack)
     (define-key map "+" 'filetree-union-with-file-list-stack)
     (define-key map "g" 'filetree-grep-marked-files)
+    (define-key map "C" 'filetree-copy-marked-files-only)
+    (define-key map "R" 'filetree-move-marked-files-only)
     (define-key map "d" 'filetree-run-dired)
     (define-key map "e" 'filetree-expand-dir)
     (define-key map "E" 'filetree-expand-dir-recursively)
@@ -264,6 +267,7 @@ This is populated using `filetree-add-filetype', for example see
     (define-key map "m" 'filetree-mark-item)
     (define-key map "A" 'filetree-mark-all)
     (define-key map "M" 'filetree-select-marked-items)
+    (define-key map "!" 'filetree-do-shell-command-on-marked-files-only)
     (define-key map "c" 'filetree-clear-marks)
     (define-key map "L" 'filetree-select-file-list)
     (define-key map "S" 'filetree-save-list)
@@ -277,18 +281,8 @@ This is populated using `filetree-add-filetype', for example see
                           (filetree-toggle-info-buffer t)))
     (define-key map "s" 'filetree-helm-filter)
     (define-key map ";" 'filetree-toggle-use-all-icons)
-    (define-key map "]" (lambda ()
-                          "Cycle through info views"
-                          (interactive)
-                          (setq filetree-current-info-cycle (mod (+ 1 filetree-current-info-cycle)
-                                                                 (length filetree-info-cycle-list)))
-                          (filetree-update-buffer t)))
-    (define-key map "[" (lambda ()
-                          "Cycle through info views"
-                          (interactive)
-                          (setq filetree-current-info-cycle (mod (- filetree-current-info-cycle 1)
-                                                                 (length filetree-info-cycle-list)))
-                          (filetree-update-buffer t)))
+    (define-key map "]" 'filetree-increment-current-info-cycle)
+    (define-key map "[" 'filetree-decrement-current-info-cycle)
     map)
   "Keymap for filetree.")
 
@@ -485,11 +479,12 @@ Confirms with user before deleting."
                                                  filetree-current-file-list))))
   (filetree-update-buffer))
 
+
 (defun filetree-move-marked-files-only ()
   "Move files in `filetree-marked-file-list'.
 User is prompted with directory to move files to.  The starting dir that is 
 shown to the user at the prompt is determined from the directory at point 
-in the filetree.  The move is confirmed with the user before moving."
+in the filetree."
   (interactive)
   (if (y-or-n-p (concat "Are you sure you want to move "
                         (number-to-string (length filetree-marked-file-list))
@@ -504,6 +499,39 @@ in the filetree.  The move is confirmed with the user before moving."
           (setq filetree-marked-file-list (cdr filetree-marked-file-list))
           (setq new-file (concat dest-dir (file-name-nondirectory orig-file)))
           (rename-file orig-file new-file)
+          (setq filetree-current-file-list (delete orig-file
+                                                   filetree-current-file-list))
+          (add-to-list 'filetree-current-file-list new-file))
+        (filetree-update-buffer))))
+
+(defun filetree-do-shell-command-on-marked-files-only ()
+  "Use dired-aux functions to run shell command on marked files.
+Output appears in *Shell Command Output*"
+  (interactive)
+  (dired-do-shell-command (dired-read-shell-command
+                           "! on %s: " current-prefix-arg
+                           filetree-marked-file-list)
+                          nil filetree-marked-file-list))
+
+(defun filetree-copy-marked-files-only ()
+  "Copy files in `filetree-marked-file-list'.
+User is prompted with directory to move files to.  The starting dir that is 
+shown to the user at the prompt is determined from the directory at point 
+in the filetree."
+  (interactive)
+  (if (y-or-n-p (concat "Are you sure you want to copy "
+                        (number-to-string (length filetree-marked-file-list))
+                        " files?"))
+      (let ((dest-dir (read-directory-name
+                       "Directory to copy files to: "
+                       (file-name-directory (filetree-get-name))))
+            (new-file nil)
+            (orig-file nil))
+        (while filetree-marked-file-list
+          (setq orig-file (car filetree-marked-file-list))
+          (setq filetree-marked-file-list (cdr filetree-marked-file-list))
+          (setq new-file (concat dest-dir (file-name-nondirectory orig-file)))
+          (copy-file orig-file new-file)
           (setq filetree-current-file-list (delete orig-file
                                                    filetree-current-file-list))
           (add-to-list 'filetree-current-file-list new-file))
@@ -1018,7 +1046,21 @@ TODO: Break into smaller functions and clean-up."
                                      (make-string (- field-size
                                                      (length entry)) ? )))))))
                    extra-info))))
-        
+
+(defun filetree-increment-current-info-cycle ()
+  "Cycle to next info view"
+  (interactive)
+  (setq filetree-current-info-cycle (mod (+ 1 filetree-current-info-cycle)
+                                         (length filetree-info-cycle-list)))
+  (filetree-update-buffer t))
+
+(defun filetree-decrement-current-info-cycle ()
+  "Cycle to previous info view"
+  (interactive)
+  (setq filetree-current-info-cycle (mod (- filetree-current-info-cycle 1)
+                                         (length filetree-info-cycle-list)))
+  (filetree-update-buffer t))
+
 (defun filetree-print-header ()
   "Print header at top of window."
   (let ((extra-info (nth filetree-current-info-cycle filetree-info-cycle-list))
