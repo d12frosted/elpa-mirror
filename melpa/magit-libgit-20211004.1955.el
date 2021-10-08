@@ -9,7 +9,7 @@
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
 
 ;; Keywords: git tools vc
-;; Package-Commit: d122f15edd5147d4c890161819b9589b9ed9ad99
+;; Package-Commit: ce7d1cf417bdaee776c2729cd7d5025cf93dcee5
 ;; Homepage: https://github.com/magit/magit
 ;; Package-Requires: ((emacs "26.1") (libgit "0") (magit "3.3.0"))
 ;; Package-Version: 20211004.1955

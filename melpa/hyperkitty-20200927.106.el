@@ -4,8 +4,6 @@
 ;;
 ;; Author: Abhilash Raj <maxking@asynchronous.in>
 ;; URL: https://github.com/maxking/hyperkitty.el
-;; Package-Version: 20200927.106
-;; Package-Commit: ad65766fee2675bf123491544707b056b89b52ce
 ;; Version: 0.0.1
 ;; Keywords: mail hyperkitty mailman
 ;; Package-Requires: ((request "0.3.2") (emacs "25.1"))

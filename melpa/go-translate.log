@@ -4,36 +4,34 @@ Source:  https://github.com/lorniu/go-translate.git
 
 Updating /mnt/store/melpa/working/go-translate/
 Checking out origin/HEAD
-Checking out 9fa4bc5669f77503af2f56bbc97ccb78a5c4bf17
+Checking out 2ab59c121ca8648edddf4ec14c1fa1d40512353c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/go-translate/
-  to /tmp/go-translatenKGVM3/go-translate-20211007.906
+  to /tmp/go-translateLqoI9S/go-translate-20211007.1559
+    go-translate-v1.el -> go-translate-v1.el
     go-translate.el -> go-translate.el
-    gts-bing-cn.el -> gts-bing-cn.el
     gts-core.el -> gts-core.el
-    gts-deepl.el -> gts-deepl.el
+    gts-engine-bing.el -> gts-engine-bing.el
+    gts-engine-deepl.el -> gts-engine-deepl.el
+    gts-engine-google-rpc.el -> gts-engine-google-rpc.el
+    gts-engine-google.el -> gts-engine-google.el
     gts-faces.el -> gts-faces.el
-    gts-google-rpc.el -> gts-google-rpc.el
-    gts-google.el -> gts-google.el
     gts-implements.el -> gts-implements.el
-    gts.el -> gts.el
-Created go-translate-20211007.906.tar containing:
-  go-translate-20211007.906/
-  go-translate-20211007.906/go-translate-pkg.el
-  go-translate-20211007.906/go-translate.el
-  go-translate-20211007.906/gts-bing-cn.el
-  go-translate-20211007.906/gts-core.el
-  go-translate-20211007.906/gts-deepl.el
-  go-translate-20211007.906/gts-faces.el
-  go-translate-20211007.906/gts-google-rpc.el
-  go-translate-20211007.906/gts-google.el
-  go-translate-20211007.906/gts-implements.el
-  go-translate-20211007.906/gts.el
-Built go-translate in 5.673s, finished at 2021-10-07T11:01:37+0000
+Created go-translate-20211007.1559.tar containing:
+  go-translate-20211007.1559/
+  go-translate-20211007.1559/go-translate-pkg.el
+  go-translate-20211007.1559/go-translate-v1.el
+  go-translate-20211007.1559/go-translate.el
+  go-translate-20211007.1559/gts-core.el
+  go-translate-20211007.1559/gts-engine-bing.el
+  go-translate-20211007.1559/gts-engine-deepl.el
+  go-translate-20211007.1559/gts-engine-google-rpc.el
+  go-translate-20211007.1559/gts-engine-google.el
+  go-translate-20211007.1559/gts-faces.el
+  go-translate-20211007.1559/gts-implements.el
+Built go-translate in 5.773s, finished at 2021-10-08T03:58:44+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  339 Oct  7 07:00 packages/go-translate-20211007.640.entry
-140K -rw-r--r-- 1 root root 140K Oct  7 07:00 packages/go-translate-20211007.640.tar
-4.0K -rw-r--r-- 1 root root  339 Oct  7 11:01 packages/go-translate-20211007.906.entry
-140K -rw-r--r-- 1 root root 140K Oct  7 11:01 packages/go-translate-20211007.906.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct  7 11:01 packages/go-translate-badge.svg
-4.0K -rw-r--r-- 1 root root  884 Oct  7 11:01 packages/go-translate-readme.txt
+4.0K -rw-r--r-- 1 root root  335 Oct  8 03:58 packages/go-translate-20211007.1559.entry
+140K -rw-r--r-- 1 root root 140K Oct  8 03:58 packages/go-translate-20211007.1559.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct  8 03:58 packages/go-translate-badge.svg
+4.0K -rw-r--r-- 1 root root  461 Oct  8 03:58 packages/go-translate-readme.txt

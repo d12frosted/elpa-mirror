@@ -5,7 +5,7 @@
 ;; Author: mohsin kaleem <mohkale@kisara.moe>
 ;; Package-Requires: ((emacs "27.1") (company "0.9") (consult "0.9"))
 ;; Package-Version: 20211003.1325
-;; Package-Commit: 9cd7987ebbcc7411404799639a88f24b690d8e16
+;; Package-Commit: 914c51c7d983e36869dd27bf21c80a8cac96a41f
 ;; Version: 0.1
 ;; URL: https://github.com/mohkale/consult-company
 

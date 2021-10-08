@@ -3,7 +3,7 @@
 ;; Licence: MIT
 ;; Keywords: tools, completion, lsp
 ;; Package-Version: 20210905.1830
-;; Package-Commit: 28a09cc839a9010df1a00a55528697ab34e1b259
+;; Package-Commit: f93c571dc392a8b11d35541bffde30bd9f411d30
 ;; Author: mohsin kaleem <mohkale@kisara.moe>
 ;; Maintainer: Mohsin Kaleem
 ;; Version: 0.1
