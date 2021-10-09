@@ -1,0 +1,13 @@
+(keg .
+     [(20211008 1702)
+      ((emacs
+	(24 1))
+       (cl-lib
+	(0 6)))
+      "Modern Elisp package development system" tar
+      ((:commit . "3436d0634080f6bcbcde68dc804e6128f632a4f8")
+       (:authors
+	("Naoya Yamashita" . "conao3@gmail.com"))
+       (:maintainer "Naoya Yamashita" . "conao3@gmail.com")
+       (:keywords "convenience")
+       (:url . "https://github.com/conao3/keg.el"))])
