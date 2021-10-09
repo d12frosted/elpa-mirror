@@ -1,0 +1,28 @@
+Package: git-commit
+Fetcher: github
+Source:  https://github.com/magit/magit.git
+
+Updating /mnt/store/melpa/working/git-commit/
+Checking out origin/HEAD
+Checking out ac1b581fc43798051030f28ae25737249d661472
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/git-commit/
+  to /tmp/git-commitBUCxhz/git-commit-20211008.112
+  ! lisp/git-commit.el -> git-commit.el
+    LICENSE -> LICENSE
+Created git-commit-20211008.112.tar containing:
+  git-commit-20211008.112/
+  git-commit-20211008.112/LICENSE
+  git-commit-20211008.112/git-commit-pkg.el
+  git-commit-20211008.112/git-commit.el
+Built git-commit in 13.681s, finished at 2021-10-09T12:09:08+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  643 Oct  9 12:09 packages/git-commit-20211008.112.entry
+ 92K -rw-r--r-- 1 root root  90K Oct  9 12:09 packages/git-commit-20211008.112.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct  9 12:09 packages/git-commit-badge.svg
+ 16K -rw-r--r-- 1 root root  14K Oct  9 08:06 packages/git-commit-insert-issue-20210107.2018.el
+4.0K -rw-r--r-- 1 root root  517 Oct  9 08:06 packages/git-commit-insert-issue-20210107.2018.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct  9 08:06 packages/git-commit-insert-issue-badge.svg
+4.0K -rw-r--r-- 1 root root  171 Oct  9 08:06 packages/git-commit-insert-issue-readme.txt
+4.0K -rw-r--r-- 1 root root  256 Oct  9 12:09 packages/git-commit-insert-issue.log
+4.0K -rw-r--r-- 1 root root 3.5K Oct  9 12:09 packages/git-commit-readme.txt

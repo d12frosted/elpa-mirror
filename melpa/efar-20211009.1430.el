@@ -4,9 +4,9 @@
 
 ;; Author: "Vladimir Suntsov" <vladimir@suntsov.online>
 ;; Maintainer: vladimir@suntsov.online
-;; Version: 1.22
-;; Package-Version: 20211009.1100
-;; Package-Commit: 54f940d8b98686b5bf21142289fa768a0d16224c
+;; Version: 1.23
+;; Package-Version: 20211009.1430
+;; Package-Commit: 1dc32015be7fea3073826ec692e73d6532ed030d
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: files
 ;; URL: https://github.com/suntsov/efar
@@ -46,7 +46,7 @@
 (require 'esh-mode)
 (require 'em-dirs)
 
-(defconst efar-version 1.22 "Current eFar version number.")
+(defconst efar-version 1.23 "Current eFar version number.")
 
 (defvar efar-state nil)
 (defvar efar-mouse-down-p nil)
@@ -2428,48 +2428,45 @@ Execute it unless DONT-RUN? is t."
 
 (defun efar-calculate-window-size ()
   "Calculate and set windows sizes."
-  (efar-set (- (window-width) 1) :window-width)
-  (efar-set (window-height) :window-height)
-  (efar-set (- (window-height) 6) :panel-height))
+  ;; fix for the issue https://github.com/suntsov/efar/issues/17
+  ;; request window-width and window-height of eFar buffer window explicitelly
+  (let ((efar-window (get-buffer-window efar-buffer-name)))
+    (efar-set (- (window-width efar-window) 1) :window-width)
+    (efar-set (window-height efar-window) :window-height)
+    (efar-set (- (window-height efar-window) 6) :panel-height)))
 
 (defun efar-redraw (&optional reread-files?)
   "The main function to output content of eFar buffer.
 When REREAD-FILES? is t then reread file list for both panels."
   (interactive)
-  
-  ;; fix for the issue https://github.com/suntsov/efar/issues/17
-  ;; don't redraw when focus in minibuffer
-  (unless (minibuffer-prompt)
-  ;; end fix
+  (with-current-buffer efar-buffer-name
+    (efar-calculate-window-size)
+    (erase-buffer)
     
-    (with-current-buffer efar-buffer-name
-      (efar-calculate-window-size)
-      (erase-buffer)
-      
-      (if (< (efar-get :window-width) 30)
-	  (insert "eFar buffer is too narrow")
-	;; draw all border lines
-	(efar-draw-border )
-	;; apply default face
-	(put-text-property (point-min) (point-max) 'face 'efar-border-line-face)
-	;; output directory names above each panel
-	(efar-output-dir-names :left)
-	(efar-output-dir-names :right)
-	;; output panel headers with panel controls
-	(efar-output-controls :left)
-	(efar-output-controls :right)
-	;; output file lists
-	(when reread-files?
-	  (efar-get-file-list :left)
-	  (efar-get-file-list :right))
-	(efar-output-files :left)
-	(efar-output-files :right)
-	;; output details about files under cursor
-	(efar-output-file-details :left)
-	(efar-output-file-details :right)
-	;; during drag we show hand pointer
-	(when efar-mouse-down-p
-	  (put-text-property (point-min) (point-max) 'pointer 'hand))))))
+    (if (< (efar-get :window-width) 30)
+	(insert "eFar buffer is too narrow")
+      ;; draw all border lines
+      (efar-draw-border )
+      ;; apply default face
+      (put-text-property (point-min) (point-max) 'face 'efar-border-line-face)
+      ;; output directory names above each panel
+      (efar-output-dir-names :left)
+      (efar-output-dir-names :right)
+      ;; output panel headers with panel controls
+      (efar-output-controls :left)
+      (efar-output-controls :right)
+      ;; output file lists
+      (when reread-files?
+	(efar-get-file-list :left)
+	(efar-get-file-list :right))
+      (efar-output-files :left)
+      (efar-output-files :right)
+      ;; output details about files under cursor
+      (efar-output-file-details :left)
+      (efar-output-file-details :right)
+      ;; during drag we show hand pointer
+      (when efar-mouse-down-p
+	(put-text-property (point-min) (point-max) 'pointer 'hand)))))
 
 (defun efar-reinit ()
   "Reinitialize eFar state."
@@ -3582,17 +3579,20 @@ When optional LINE-NUMBER is given then do replacement on corresponding line onl
   (let ((side (or side (efar-get :current-panel)))
 	(mode-name (cdr (assoc mode efar-panel-modes))))
     (efar-quit-fast-search 'no-refresh)
-    ;;    (efar-abort)
-     (efar-set mode :panels side :mode)
+    
+    (efar-set mode :panels side :mode)
     (efar-get-file-list side)
     
     (cond
      ((equal mode :search)
+      (efar-set 0 :panels side :current-pos)
       (efar-show-search-results side))
      
      ((equal mode :dir-diff)
       (efar-set mode :panels (efar-other-side side) :mode)
       (efar-get-file-list (efar-other-side side))
+      (efar-set 0 :panels side :current-pos)
+      (efar-set 0 :panels (efar-other-side side) :current-pos)
       (efar-dir-diff-show-results))
      
      (t

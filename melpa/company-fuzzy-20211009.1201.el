@@ -6,9 +6,9 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Fuzzy matching for `company-mode'.
 ;; Keyword: auto auto-complete complete fuzzy matching
-;; Version: 1.2.1
-;; Package-Version: 20210924.1159
-;; Package-Commit: 371d32ae7b488f76905fe98f3063ae30a72010fd
+;; Version: 1.2.2
+;; Package-Version: 20211009.1201
+;; Package-Commit: 418684332194c9d3baf367bf1fc96da0cd7c9a27
 ;; Package-Requires: ((emacs "24.4") (company "0.8.12") (s "1.12.0") (ht "2.0"))
 ;; URL: https://github.com/jcs-elpa/company-fuzzy
 
@@ -595,7 +595,7 @@ Insert .* between each char."
     (annotation (company-fuzzy--extract-annotation arg))
     (candidates (company-fuzzy-all-candidates))
     (pre-render (company-fuzzy--pre-render arg (nth 0 ignored)))
-    ((or doc-buffer kind) (company-fuzzy--backend-command arg command))))
+    (t (company-fuzzy--backend-command arg command))))
 
 (provide 'company-fuzzy)
 ;;; company-fuzzy.el ends here

@@ -4,8 +4,8 @@
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; Version: 1.4
-;; Package-Version: 20210615.1624
-;; Package-Commit: fdde21e34b1272783d566d8230b5ed2dc4749048
+;; Package-Version: 20211009.1531
+;; Package-Commit: c06aec4486c034d0d4efae98cb7054749f9cc0ec
 ;; Keywords: lisp
 ;; Package-Requires: ((dash "2.12.0") (s "1.11.0"))
 
@@ -621,8 +621,8 @@ MATCH-FN should return a list where each element takes the form:
       forms-and-bufs)))
 
 (defun elisp-refs--search (symbol description match-fn &optional path-prefix)
-  "Search for references to SYMBOL in all loaded files, by calling MATCH-FN on each buffer.
-If PATH-PREFIX is given, limit to loaded files whose path starts with that prefix.
+  "Find references to SYMBOL in all loaded files; call MATCH-FN on each buffer.
+When PATH-PREFIX, limit to loaded files whose path starts with that prefix.
 
 Display the results in a hyperlinked buffer.
 

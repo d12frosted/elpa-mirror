@@ -4,8 +4,6 @@
 ;;
 ;; Author: Boris Buliga <boris@d12frosted.io>
 ;; URL: https://github.com/d12frosted/flyspell-correct
-;; Package-Version: 20210124.1143
-;; Package-Commit: 00357953a736e21d0a1c8d76f5605820990544fe
 ;; Version: 0.6.1
 ;; Package-Requires: ((flyspell-correct "0.6.1") (helm "1.9.0") (emacs "24"))
 ;;
