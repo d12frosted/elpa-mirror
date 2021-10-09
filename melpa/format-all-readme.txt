@@ -55,6 +55,7 @@ Supported languages:
 - PureScript (purty, purs-tidy)
 - Python (black, yapf)
 - R (styler)
+- Racket (raco-fmt)
 - Reason (bsrefmt)
 - ReScript (rescript)
 - Ruby (rubocop, rufo, standardrb)

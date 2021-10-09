@@ -5,8 +5,8 @@
 ;; Author: "Vladimir Suntsov" <vladimir@suntsov.online>
 ;; Maintainer: vladimir@suntsov.online
 ;; Version: 1.22
-;; Package-Version: 20211008.2051
-;; Package-Commit: 7dc624f409b6558842ac40a6ef41448e93cc5540
+;; Package-Version: 20211009.603
+;; Package-Commit: c7cdbafb6d3d2d5f422ecabd749c3e4364fbee4a
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: files
 ;; URL: https://github.com/suntsov/efar
@@ -4602,8 +4602,8 @@ Directories and comparision parameters are passed in PARAMS."
   "Update all parent directories as updated if item with KEY has differences."
   ;;if differences detected
   ;;mark parent directories as :children-changed
-  (when (cl-intersection efar-dir-diff-actual-comp-params
-		      (gethash key efar-dir-diff-results))
+  (when (cl-intersection (append efar-dir-diff-actual-comp-params '(:left :right))
+			 (gethash key efar-dir-diff-results))
     (let ((parent-key (efar-get-parent-dir key)))
       (catch :exit
 	(while parent-key

@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
-;; Package-Version: 20210929.2019
-;; Package-Commit: 772beb9acc3152cce10767ebba545c7af52b76e4
+;; Package-Version: 20211009.541
+;; Package-Commit: 63a79f9721b6c5b7337ccebbc652803c78aaa157
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.16"))
 ;; Keywords: languages util
@@ -70,6 +70,7 @@
 ;; - PureScript (purty, purs-tidy)
 ;; - Python (black, yapf)
 ;; - R (styler)
+;; - Racket (raco-fmt)
 ;; - Reason (bsrefmt)
 ;; - ReScript (rescript)
 ;; - Ruby (rubocop, rufo, standardrb)
@@ -1026,6 +1027,13 @@ Consult the existing formatters for examples of BODY."
   (:languages "PureScript")
   (:features)
   (:format (format-all--buffer-easy executable "-")))
+
+(define-format-all-formatter raco-fmt
+  (:executable "raco")
+  (:install "raco pkg install fmt")
+  (:languages "Racket")
+  (:features)
+  (:format (format-all--buffer-easy executable "fmt")))
 
 (define-format-all-formatter rescript
   (:executable "rescript")
