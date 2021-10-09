@@ -93,6 +93,15 @@
 	nil "extensible vi layer" tar
 	((:url . "https://github.com/emacs-evil/evil")
 	 (:keywords "emulation" "vim"))])
+ (flymake-kondor .
+		 [(0 1 0)
+		  ((emacs
+		    (26 1)))
+		  "Linter with clj-kondo" tar
+		  ((:url . "https://github.com/turbo-cafe/flymake-kondor")
+		   (:maintainer "https://turbocafe.keybase.pub")
+		   (:authors
+		    ("https://turbocafe.keybase.pub")))])
  (geiser .
 	 [(0 18)
 	  ((emacs
