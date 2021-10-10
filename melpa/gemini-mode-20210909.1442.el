@@ -5,6 +5,8 @@
 ;; Author: Jason McBrayer <jmcbray@carcosa.net>, tastytea <tastytea@tastytea.de>, Étienne Deparis <etienne@depar.is>
 ;; Created: 20 May 2020
 ;; Version: 1.1.2
+;; Package-Version: 20210909.1442
+;; Package-Commit: 60bd07b3a1e532c950c132673777ceb635c9960d
 ;; Keywords: languages
 ;; Homepage: https://git.carcosa.net/jmcbray/gemini.el
 ;; Package-Requires: ((emacs "24.4"))

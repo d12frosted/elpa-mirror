@@ -1,0 +1,15 @@
+(gemini-write .
+	      [(20211009 2110)
+	       ((emacs
+		 (26))
+		(elpher
+		 (2 8 0))
+		(gemini-mode
+		 (1 0 0)))
+	       "Elpher for Titan" single
+	       ((:commit . "7e1fe7d4f2c65c0854eb571edc78e5a45d7078de")
+		(:authors
+		 ("Alex Schroeder" . "alex@gnu.org"))
+		(:maintainer "Alex Schroeder" . "alex@gnu.org")
+		(:keywords "comm" "gemini")
+		(:url . "https://alexschroeder.ch/cgit/gemini-write"))])
