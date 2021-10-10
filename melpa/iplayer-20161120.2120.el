@@ -4,6 +4,8 @@
 
 ;; Author: Christophe Rhodes <csr21@cantab.net>
 ;; URL: https://github.com/csrhodes/iplayer-el
+;; Package-Version: 20161120.2120
+;; Package-Commit: b788fffa4b36bbd558047ffa6be51b1f0f462f23
 ;; Version: 0.1
 ;; Keywords: multimedia, bbc
 
