@@ -7,6 +7,8 @@
 ;; Author: Feng Shu <tumashu@163.com>
 ;; Homepage: https://github.com/tumashu/gitpatch
 ;; Keywords: convenience
+;; Package-Version: 20170722.410
+;; Package-Commit: 577d5adf65c8133caa325c10e89e1e2fc323c907
 ;; Package-Requires: ((emacs "24.3"))
 ;; Version: 0.10
 

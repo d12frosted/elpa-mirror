@@ -4,8 +4,6 @@
 
 ;; Author: Magnar Sveen <magnars@gmail.com>
 ;; Version: 0.4.4
-;; Package-Version: 20191107.1816
-;; Package-Commit: c3912c738cf0515f65162479c55999e2992afce5
 ;; Keywords: convenience
 ;; Homepage: https://github.com/magnars/fold-this.el
 

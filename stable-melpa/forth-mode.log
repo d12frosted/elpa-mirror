@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 38d5152011ee67e0cff9d4a5ddfb1f908e5be013
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/forth-mode/
-  to /tmp/forth-modekb9Hyr/forth-mode-20210829.1824
+  to /tmp/forth-modeufysBg/forth-mode-20210829.1824
     forth-block-mode.el -> forth-block-mode.el
     forth-interaction-mode.el -> forth-interaction-mode.el
     forth-mode.el -> forth-mode.el
@@ -17,30 +17,3 @@ Copying files (->) and directories (=>)
     forth-syntax.el -> forth-syntax.el
     forth-mode.texi -> forth-mode.texi
     backend => backend
-Created /tmp/forth-modekb9Hyr/forth-mode-20210829.1824/forth-mode.info
-Created forth-mode-20210829.1824.tar containing:
-  forth-mode-20210829.1824/
-  forth-mode-20210829.1824/backend/
-  forth-mode-20210829.1824/backend/gforth.el
-  forth-mode-20210829.1824/backend/lbforth.el
-  forth-mode-20210829.1824/backend/pforth.el
-  forth-mode-20210829.1824/backend/spforth.el
-  forth-mode-20210829.1824/backend/swiftforth.el
-  forth-mode-20210829.1824/backend/swiftforth.fth
-  forth-mode-20210829.1824/backend/vfxforth.el
-  forth-mode-20210829.1824/dir
-  forth-mode-20210829.1824/forth-block-mode.el
-  forth-mode-20210829.1824/forth-interaction-mode.el
-  forth-mode-20210829.1824/forth-mode-pkg.el
-  forth-mode-20210829.1824/forth-mode.el
-  forth-mode-20210829.1824/forth-mode.info
-  forth-mode-20210829.1824/forth-parse.el
-  forth-mode-20210829.1824/forth-smie.el
-  forth-mode-20210829.1824/forth-spec.el
-  forth-mode-20210829.1824/forth-syntax.el
-Built forth-mode in 9.334s, finished at 2021-10-10T04:03:54+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  376 Oct 10 04:03 packages/forth-mode-20210829.1824.entry
- 60K -rw-r--r-- 1 root root  60K Oct 10 04:03 packages/forth-mode-20210829.1824.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 10 04:03 packages/forth-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   36 Oct 10 04:03 packages/forth-mode-readme.txt
