@@ -1,15 +1,15 @@
 (git-commit .
-	    [(20211008 112)
+	    [(20211010 1635)
 	     ((emacs
 	       (25 1))
 	      (dash
-	       (2 19 1))
+	       (20210826))
 	      (transient
-	       (0 3 6))
+	       (20210920))
 	      (with-editor
-	       (3 0 5)))
-	     "Edit Git commit messages" tar
-	     ((:commit . "ac1b581fc43798051030f28ae25737249d661472")
+	       (20211001)))
+	     "Edit Git commit messages." tar
+	     ((:commit . "bb7b7a402025e26aabc0aee6e97c2ee852a806a9")
 	      (:authors
 	       ("Jonas Bernoulli" . "jonas@bernoul.li")
 	       ("Sebastian Wiesner" . "lunaryorn@gmail.com")

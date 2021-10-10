@@ -6,10 +6,10 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/tarsius/orglink
 ;; Keywords: hypertext
-;; Package-Version: 20211007.2234
-;; Package-Commit: 071f9a64c9479a423c78dee85539680e3c1aa875
+;; Package-Version: 20211010.1658
+;; Package-Commit: 1af3ddf5176f65d921da0bd047a5a7265b0db8ab
 
-;; Package-Requires: ((emacs "24.3") (org "9.3") (seq "2.20"))
+;; Package-Requires: ((emacs "24.3") (org "9.5") (seq "2.20"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
 ;; This file is not part of Org Mode.
@@ -52,14 +52,19 @@
 (require 'seq)
 
 (defvar hl-todo-keyword-faces)
+(defvar org-element-paragraph-separate)
 (defvar outline-minor-mode)
+
+(declare-function org-element-link-parser "org-element" ())
+(declare-function org-element-property "org-element" (property element))
 
 (defgroup orglink nil
   "Use Org Mode links in other modes."
   :prefix "orglink-"
   :group 'font-lock-extra-types)
 
-(defcustom orglink-activate-links '(bracket angle plain)
+(defvaralias 'orglink-activate-links 'orglink-highlight-links)
+(defcustom orglink-highlight-links '(bracket angle plain)
   "Types of links that should be activated by `orglink-mode'.
 This is a list of symbols, each leading to the activation of a
 certain link type.
@@ -122,12 +127,13 @@ On the links the following commands are available:
 \\{orglink-mouse-map}"
   :lighter orglink-mode-lighter
   (when (derived-mode-p 'org-mode)
+    (setq orglink-mode nil)
     (error "Orglink Mode doesn't make sense in Org Mode"))
   (cond (orglink-mode
          (org-load-modules-maybe)
          (add-hook 'org-open-link-functions
                    'orglink-heading-link-search nil t)
-         (font-lock-add-keywords nil (orglink-font-lock-keywords) t)
+         (font-lock-add-keywords nil '((orglink-activate-links)) t)
          (setq-local org-link-descriptive org-link-descriptive)
          (when org-link-descriptive
            (add-to-invisibility-spec '(org-link)))
@@ -137,7 +143,7 @@ On the links the following commands are available:
         (t
          (remove-hook 'org-open-link-functions
                       'orglink-heading-link-search t)
-         (font-lock-remove-keywords nil (orglink-font-lock-keywords t))
+         (font-lock-remove-keywords nil '((orglink-activate-links)))
          (remove-from-invisibility-spec '(org-link))
          (kill-local-variable 'org-link-descriptive)
          (kill-local-variable 'font-lock-unfontify-region-function)
@@ -158,7 +164,11 @@ On the links the following commands are available:
 
 (defun turn-on-orglink-mode-if-desired ()
   (cond ((derived-mode-p 'org-mode)
-         (message "Refusing to turn on `orglink-mode' in `org-mode'"))
+         ;; `org-mode' derives from `outline-mode', which derives
+         ;; from `text-mode'.  Only warn if `org-mode' itself is
+         ;; a member of `orglink-activate-in-modes'.
+         (when (memq 'org-mode orglink-activate-in-modes)
+           (message "Refusing to turn on `orglink-mode' in `org-mode'")))
         ((apply 'derived-mode-p orglink-activate-in-modes)
          (orglink-mode 1))))
 
@@ -168,79 +178,82 @@ On the links the following commands are available:
   ;; TODO Should it? Should we? Ask on mailing-list.
   (remove-text-properties beg end '(help-echo t rear-nonsticky t)))
 
-(defun orglink-font-lock-keywords (&optional all)
-  `(,@(and (or all (memq 'bracket orglink-activate-links))
-           '((orglink-activate-bracket-links (0 'org-link t))))
-    ,@(and (or all (memq 'angle orglink-activate-links))
-           '((orglink-activate-angle-links (0 'org-link t))))
-    ,@(and (or all (memq 'plain orglink-activate-links))
-           '((orglink-activate-plain-links (0 'org-link t))))))
-
-(defun orglink-activate-bracket-links (limit)
-  "Add text properties for bracketed links."
-  (when (orglink-match org-link-bracket-re limit)
-    (let* ((hl (match-string-no-properties 1))
-           (help (concat "LINK: " (save-match-data (org-link-unescape hl))))
-           (ip (list 'invisible 'org-link
-                     'keymap org-mouse-map 'mouse-face 'highlight
-                     'font-lock-multiline t 'help-echo help
-                     'htmlize-link `(:uri ,hl)))
-           (vp (list 'keymap org-mouse-map 'mouse-face 'highlight
-                     'font-lock-multiline t 'help-echo help
-                     'htmlize-link `(:uri ,hl))))
-      ;; We need to remove the invisible property here.  Table narrowing
-      ;; may have made some of this invisible.
-      (org-remove-flyspell-overlays-in (match-beginning 0) (match-end 0))
-      (remove-text-properties (match-beginning 0) (match-end 0)
-                              '(invisible nil))
-      (if (match-end 2)
-          (progn
-            (add-text-properties (match-beginning 0) (match-beginning 2) ip)
-            (org-rear-nonsticky-at (match-beginning 2))
-            (add-text-properties (match-beginning 2) (match-end 2) vp)
-            (org-rear-nonsticky-at (match-end 2))
-            (add-text-properties (match-end 2) (match-end 0) ip)
-            (org-rear-nonsticky-at (match-end 0)))
-        (add-text-properties (match-beginning 0) (match-beginning 1) ip)
-        (org-rear-nonsticky-at (match-beginning 1))
-        (add-text-properties (match-beginning 1) (match-end 1) vp)
-        (org-rear-nonsticky-at (match-end 1))
-        (add-text-properties (match-end 1) (match-end 0) ip)
-        (org-rear-nonsticky-at (match-end 0)))
-      t)))
-
-(defun orglink-activate-angle-links (limit)
-  "Add text properties for angle links."
-  (when (orglink-match org-link-angle-re limit)
-    (org-remove-flyspell-overlays-in (match-beginning 0) (match-end 0))
-    (add-text-properties (match-beginning 0) (match-end 0)
-                         (list 'mouse-face 'highlight
-                               'keymap org-mouse-map
-                               'font-lock-multiline t))
-    (org-rear-nonsticky-at (match-end 0))
-    t))
-
-(defun orglink-activate-plain-links (limit)
-  "Add link properties for plain links."
-  (when (orglink-match org-link-plain-re limit)
-    (let ((face (get-text-property (max (1- (match-beginning 0)) (point-min))
-                                   'face))
-          (link (match-string-no-properties 0)))
-      (unless (if (consp face) (memq 'org-tag face) (eq 'org-tag face))
-        (org-remove-flyspell-overlays-in (match-beginning 0) (match-end 0))
-        (add-text-properties (match-beginning 0) (match-end 0)
-                             (list 'mouse-face 'highlight
-                                   'face 'org-link
-                                   'htmlize-link `(:uri ,link)
-                                   'keymap org-mouse-map))
-        (org-rear-nonsticky-at (match-end 0))
-        t))))
-
-(defun orglink-match (regexp limit)
-  (and (re-search-forward regexp limit t)
-       (or orglink-match-anywhere
-           (orglink-inside-comment-or-docstring-p))
-       (not (org-in-src-block-p))))
+;; Modified copy of `org-activate-links'.
+;; The modified part is clearly marked.
+(defun orglink-activate-links (limit)
+  (catch :exit
+    (while (re-search-forward org-link-any-re limit t)
+      (let* ((start (match-beginning 0))
+             (end (match-end 0))
+             (visible-start (or (match-beginning 3) (match-beginning 2)))
+             (visible-end (or (match-end 3) (match-end 2)))
+             (style (cond ((eq ?< (char-after start)) 'angle)
+                          ((eq ?\[ (char-after (1+ start))) 'bracket)
+                          (t 'plain))))
+        ;;; BEGIN Modified part:
+        (when (and (memq style orglink-highlight-links) ; Different variable.
+                   ;; Additional condition:
+                   (or orglink-match-anywhere
+                       (orglink-inside-comment-or-docstring-p))
+        ;;; END Modified part.
+                   ;; Do not span over paragraph boundaries.
+                   (not (string-match-p org-element-paragraph-separate
+                                        (match-string 0)))
+                   ;; Do not confuse plain links with tags.
+                   (not (and (eq style 'plain)
+                             (let ((face (get-text-property
+                                          (max (1- start) (point-min)) 'face)))
+                               (if (consp face) (memq 'org-tag face)
+                                 (eq 'org-tag face))))))
+          (let* ((link-object (save-excursion
+                                (goto-char start)
+                                (save-match-data (org-element-link-parser))))
+                 (link (org-element-property :raw-link link-object))
+                 (type (org-element-property :type link-object))
+                 (path (org-element-property :path link-object))
+                 (face-property (pcase (org-link-get-parameter type :face)
+                                  ((and (pred functionp) face) (funcall face path))
+                                  ((and (pred facep) face) face)
+                                  ((and (pred consp) face) face) ;anonymous
+                                  (_ 'org-link)))
+                 (properties            ;for link's visible part
+                  (list 'mouse-face (or (org-link-get-parameter type :mouse-face)
+                                        'highlight)
+                        'keymap (or (org-link-get-parameter type :keymap)
+                                    org-mouse-map)
+                        'help-echo (pcase (org-link-get-parameter type :help-echo)
+                                     ((and (pred stringp) echo) echo)
+                                     ((and (pred functionp) echo) echo)
+                                     (_ (concat "LINK: " link)))
+                        'htmlize-link (pcase (org-link-get-parameter type
+                                                                     :htmlize-link)
+                                        ((and (pred functionp) f) (funcall f))
+                                        (_ `(:uri ,link)))
+                        'font-lock-multiline t)))
+            (org-remove-flyspell-overlays-in start end)
+            (org-rear-nonsticky-at end)
+            (if (not (eq 'bracket style))
+                (progn
+                  (add-face-text-property start end face-property)
+                  (add-text-properties start end properties))
+              ;; Handle invisible parts in bracket links.
+              (remove-text-properties start end '(invisible nil))
+              (let ((hidden
+                     (append `(invisible
+                               ,(or (org-link-get-parameter type :display)
+                                    'org-link))
+                             properties)))
+                (add-text-properties start visible-start hidden)
+                (add-face-text-property start end face-property)
+                (add-text-properties visible-start visible-end properties)
+                (add-text-properties visible-end end hidden)
+                (org-rear-nonsticky-at visible-start)
+                (org-rear-nonsticky-at visible-end)))
+            (let ((f (org-link-get-parameter type :activate-func)))
+              (when (functionp f)
+                (funcall f start end path (eq style 'bracket))))
+            (throw :exit t)))))         ;signal success
+    nil))
 
 (defun orglink-inside-comment-or-docstring-p ()
   (and (nth 8 (syntax-ppss))

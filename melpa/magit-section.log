@@ -4,22 +4,25 @@ Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/magit-section/
 Checking out origin/HEAD
-Checking out ac1b581fc43798051030f28ae25737249d661472
+Checking out bb7b7a402025e26aabc0aee6e97c2ee852a806a9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magit-section/
-  to /tmp/magit-section7MhkY5/magit-section-20211004.1955
+  to /tmp/magit-sectionWPtdkF/magit-section-20211004.1956
   ! lisp/magit-section.el -> magit-section.el
+  ! lisp/magit-section-pkg.el -> magit-section-pkg.el
   ! Documentation/magit-section.texi -> magit-section.texi
-Created /tmp/magit-section7MhkY5/magit-section-20211004.1955/magit-section.info
-Created magit-section-20211004.1955.tar containing:
-  magit-section-20211004.1955/
-  magit-section-20211004.1955/dir
-  magit-section-20211004.1955/magit-section-pkg.el
-  magit-section-20211004.1955/magit-section.el
-  magit-section-20211004.1955/magit-section.info
-Built magit-section in 9.165s, finished at 2021-10-10T12:19:28+0000
+Created /tmp/magit-sectionWPtdkF/magit-section-20211004.1956/magit-section.info
+Created magit-section-20211004.1956.tar containing:
+  magit-section-20211004.1956/
+  magit-section-20211004.1956/dir
+  magit-section-20211004.1956/magit-section-pkg.el
+  magit-section-20211004.1956/magit-section.el
+  magit-section-20211004.1956/magit-section.info
+Built magit-section in 9.051s, finished at 2021-10-10T19:47:50+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  371 Oct 10 12:19 packages/magit-section-20211004.1955.entry
-100K -rw-r--r-- 1 root root 100K Oct 10 12:19 packages/magit-section-20211004.1955.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 10 12:19 packages/magit-section-badge.svg
-4.0K -rw-r--r-- 1 root root  255 Oct 10 12:19 packages/magit-section-readme.txt
+4.0K -rw-r--r-- 1 root root  371 Oct 10 16:07 packages/magit-section-20211004.1955.entry
+100K -rw-r--r-- 1 root root 100K Oct 10 16:07 packages/magit-section-20211004.1955.tar
+4.0K -rw-r--r-- 1 root root  373 Oct 10 19:47 packages/magit-section-20211004.1956.entry
+100K -rw-r--r-- 1 root root 100K Oct 10 19:47 packages/magit-section-20211004.1956.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 10 19:47 packages/magit-section-badge.svg
+4.0K -rw-r--r-- 1 root root  255 Oct 10 19:47 packages/magit-section-readme.txt

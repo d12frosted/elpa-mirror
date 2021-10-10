@@ -4,10 +4,21 @@ Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/magit-libgit/
 Checking out origin/HEAD
-Checking out ac1b581fc43798051030f28ae25737249d661472
-Built magit-libgit in 11.653s, finished at 2021-10-10T16:07:25+0000
+Checking out bb7b7a402025e26aabc0aee6e97c2ee852a806a9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/magit-libgit/
+  to /tmp/magit-libgitobwmeR/magit-libgit-20211004.1956
+  ! lisp/magit-libgit.el -> magit-libgit.el
+  ! lisp/magit-libgit-pkg.el -> magit-libgit-pkg.el
+Created magit-libgit-20211004.1956.tar containing:
+  magit-libgit-20211004.1956/
+  magit-libgit-20211004.1956/magit-libgit-pkg.el
+  magit-libgit-20211004.1956/magit-libgit.el
+Built magit-libgit in 5.228s, finished at 2021-10-10T19:47:40+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root 2.8K Oct 10 16:07 packages/magit-libgit-20211004.1955.el
 4.0K -rw-r--r-- 1 root root  401 Oct 10 16:07 packages/magit-libgit-20211004.1955.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 10 16:07 packages/magit-libgit-badge.svg
-4.0K -rw-r--r-- 1 root root  493 Oct 10 16:07 packages/magit-libgit-readme.txt
+4.0K -rw-r--r-- 1 root root  382 Oct 10 19:47 packages/magit-libgit-20211004.1956.entry
+ 12K -rw-r--r-- 1 root root  10K Oct 10 19:47 packages/magit-libgit-20211004.1956.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 10 19:47 packages/magit-libgit-badge.svg
+4.0K -rw-r--r-- 1 root root  493 Oct 10 19:47 packages/magit-libgit-readme.txt

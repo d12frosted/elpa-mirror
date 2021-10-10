@@ -1,13 +1,13 @@
 (magit-libgit .
-	      [(20211004 1955)
+	      [(20211004 1956)
 	       ((emacs
-		 (26 1))
+		 (25 1))
 		(libgit
 		 (0))
 		(magit
-		 (3 3 0)))
-	       "Libgit functionality" single
-	       ((:commit . "ac1b581fc43798051030f28ae25737249d661472")
+		 (20211004)))
+	       "." tar
+	       ((:commit . "bb7b7a402025e26aabc0aee6e97c2ee852a806a9")
 		(:authors
 		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
 		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
