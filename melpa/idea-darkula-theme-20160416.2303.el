@@ -4,6 +4,8 @@
 
 ;; Author: Alexey Veretennikov <alexey dot veretennikov at gmail dot com>
 ;; Keywords: themes
+;; Package-Version: 20160416.2303
+;; Package-Commit: 52602d9b91883e1f297d000951aeed48bf60176e
 ;; URL: http://github.com/fourier/idea-darkula-theme
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))

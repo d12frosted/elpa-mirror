@@ -1,0 +1,13 @@
+(org-auto-tangle .
+		 [(20211010 958)
+		  ((emacs
+		    (24 1))
+		   (async
+		    (1 9 3)))
+		  "Automatically and Asynchronously tangles org files on save" single
+		  ((:commit . "50292af50d275846baa28e52d94eb8ef69c8d00b")
+		   (:authors
+		    ("Yilkal Argaw"))
+		   (:maintainer "Yilkal Argaw")
+		   (:keywords "outlines")
+		   (:url . "https://github.com/yilkalargaw/org-auto-tangle"))])
