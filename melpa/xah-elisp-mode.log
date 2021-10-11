@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/xahlee/xah-elisp-mode.git
 
 Updating /mnt/store/melpa/working/xah-elisp-mode/
-Checking out origin/HEAD
-Checking out de43714d9d4993b744afc4829d2f29ad1e806342
-Built xah-elisp-mode in 5.717s, finished at 2021-10-10T16:45:47+0000
- ✓ Success:
-108K -rwxr-xr-x 1 root root 108K Oct 10 16:45 packages/xah-elisp-mode-20211008.717.el
-4.0K -rw-r--r-- 1 root root  375 Oct 10 16:45 packages/xah-elisp-mode-20211008.717.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 10 16:45 packages/xah-elisp-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 2.1K Oct 10 16:45 packages/xah-elisp-mode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: could not read Username for 'https://github.com': No such device or address
+error: Could not fetch origin
+

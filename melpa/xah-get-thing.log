@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/xahlee/xah-get-thing-or-selection.git
 
 Updating /mnt/store/melpa/working/xah-get-thing/
-Checking out origin/HEAD
-Checking out 9610142c9edbeb312f3c510af9e3ccfa85fb0014
-Built xah-get-thing in 6.047s, finished at 2021-10-10T16:45:51+0000
- ✓ Success:
-8.0K -rwxr-xr-x 1 root root 7.7K Oct 10 16:45 packages/xah-get-thing-20210909.1528.el
-4.0K -rw-r--r-- 1 root root  392 Oct 10 16:45 packages/xah-get-thing-20210909.1528.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 10 16:45 packages/xah-get-thing-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Oct 10 16:45 packages/xah-get-thing-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: could not read Username for 'https://github.com': No such device or address
+error: Could not fetch origin
+
