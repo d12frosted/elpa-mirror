@@ -1,171 +1,235 @@
-#+title: marginalia.el - Marginalia in the minibuffer
-#+author: Omar Antolín Camarena, Daniel Mendler
-#+language: en
-#+export_file_name: marginalia.texi
-#+texinfo_dir_category: Emacs
-#+texinfo_dir_title: Marginalia: (marginalia).
-#+texinfo_dir_desc: Marginalia in the minibuffer
+	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+	      MARGINALIA.EL - MARGINALIA IN THE MINIBUFFER
+	     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-#+html: <a href="http://elpa.gnu.org/packages/marginalia.html"><img alt="GNU ELPA" src="https://elpa.gnu.org/packages/marginalia.svg"/></a>
-#+html: <a href="http://elpa.gnu.org/devel/marginalia.html"><img alt="GNU-devel ELPA" src="https://elpa.gnu.org/devel/marginalia.svg"/></a>
-#+html: <a href="https://melpa.org/#/marginalia"><img alt="MELPA" src="https://melpa.org/packages/marginalia-badge.svg"/></a>
-#+html: <a href="https://stable.melpa.org/#/marginalia"><img alt="MELPA Stable" src="https://stable.melpa.org/packages/marginalia-badge.svg"/></a>
 
-* Introduction
+Table of Contents
+─────────────────
 
-#+html: <img src="https://upload.wikimedia.org/wikipedia/commons/4/4f/Marginalia_%285095211566%29.jpg" align="right" width="30%">
+1. Introduction
+2. Configuration
+3. Information shown by the annotators
+4. Adding custom annotators or classifiers
+5. Disabling annotators, builtin or lightweight annotators
+6. Contributions
 
-This package provides =marginalia-mode= which adds marginalia to the
-minibuffer completions.
-[[https://en.wikipedia.org/wiki/Marginalia][Marginalia]] are marks or
-annotations placed at the margin of the page of a book or in this case
-helpful colorful annotations placed at the margin of the minibuffer for
-your completion candidates. Marginalia can only add annotations to be
-displayed with the completion candidates. It cannot modify the
-appearance of the candidates themselves, which are shown as supplied by
-the original commands.
 
-The annotations are added based on the completion category. For example
-=find-file= reports the =file= category and =M-x= reports the =command= category. You
-can cycle between more or less detailed annotators or even disable the annotator
-with command =marginalia-cycle=.
 
-#+html: <img src="https://github.com/minad/marginalia/blob/main/marginalia-mode.png?raw=true">
 
-* Configuration
 
-It is recommended to use Marginalia together with either the [[https://github.com/raxod502/selectrum][Selectrum]], [[https://github.com/minad/vertico][Vertico]]
-or the [[https://github.com/oantolin/icomplete-vertical][Icomplete-vertical]] completion system. Furthermore Marginalia can be
-combined with [[https://github.com/oantolin/embark][Embark]] for action support and [[https://github.com/minad/consult][Consult]], which provides many useful
-commands.
+1 Introduction
+══════════════
 
-#+begin_src emacs-lisp
-;; Enable richer annotations using the Marginalia package
-(use-package marginalia
-  ;; Either bind `marginalia-cycle` globally or only in the minibuffer
-  :bind (("M-A" . marginalia-cycle)
-         :map minibuffer-local-map
-         ("M-A" . marginalia-cycle))
+  This package provides `marginalia-mode' which adds marginalia to the
+  minibuffer completions.  [Marginalia] are marks or annotations placed
+  at the margin of the page of a book or in this case helpful colorful
+  annotations placed at the margin of the minibuffer for your completion
+  candidates. Marginalia can only add annotations to be displayed with
+  the completion candidates. It cannot modify the appearance of the
+  candidates themselves, which are shown as supplied by the original
+  commands.
 
-  ;; The :init configuration is always executed (Not lazy!)
-  :init
+  The annotations are added based on the completion category. For
+  example `find-file' reports the `file' category and `M-x' reports the
+  `command' category. You can cycle between more or less detailed
+  annotators or even disable the annotator with command
+  `marginalia-cycle'.
 
-  ;; Must be in the :init section of use-package such that the mode gets
-  ;; enabled right away. Note that this forces loading the package.
-  (marginalia-mode))
-#+end_src
 
-* Adding custom annotators or classifiers
+[Marginalia] <https://en.wikipedia.org/wiki/Marginalia>
 
-Minibuffer completion commands can specify the type of the candidates which are
-being completed, called the *completion category*. For example the =M-x= command
-(=execute-extended-command=) specifies the category =command=. However many
-commands do not specify a completion category, this includes many of the Emacs
-built-in completion commands.
 
-In order to repair existing commands, Marginalia provides heuristic classifiers,
-which try to determine the completion category based on the prompt string or
-based on other properties of the completion candidates. You can for example
-define that commands with a prompt containing "face", have the associated =face=
-completion category.
+2 Configuration
+═══════════════
 
-#+begin_src emacs-lisp
-  (add-to-list 'marginalia-prompt-categories '("face" . face))
-#+end_src
+  It is recommended to use Marginalia together with either the
+  [Selectrum], [Vertico] or the [Icomplete-vertical] completion
+  system. Furthermore Marginalia can be combined with [Embark] for
+  action support and [Consult], which provides many useful commands.
 
-Another useful classifier uses the =marginalia-command-categories= variable,
-which allows do define the completion category per command name. This is
-particularily useful if for example the prompt classifier yields a false
-positive. The list of all available classifiers is specified by the variable
-=marginalia-classifiers=. The completion categories are also important for
-[[https://github.com/oantolin/embark][Embark]], which associates its minibuffer actions depending on the completion
-commands.
+  ┌────
+  │ ;; Enable richer annotations using the Marginalia package
+  │ (use-package marginalia
+  │   ;; Either bind `marginalia-cycle` globally or only in the minibuffer
+  │   :bind (("M-A" . marginalia-cycle)
+  │ 	 :map minibuffer-local-map
+  │ 	 ("M-A" . marginalia-cycle))
+  │ 
+  │   ;; The :init configuration is always executed (Not lazy!)
+  │   :init
+  │ 
+  │   ;; Must be in the :init section of use-package such that the mode gets
+  │   ;; enabled right away. Note that this forces loading the package.
+  │   (marginalia-mode))
+  └────
 
-Marginalia uses the annotators depending on the completion category of the
-current command as registered in =marginalia-annotator-registry=. It is possible
-to specify multiple annotators per completion category (for example with more or
-less information). You can cycle between the different annotators by invoking
-the =marginalia-cycle= command during the current completion.
 
-An annotation function is a function taken a completion candidate string as
-argument and returns the annotation string. For example a basic face annotator
-can be written as follows:
+[Selectrum] <https://github.com/raxod502/selectrum>
 
-#+begin_src emacs-lisp
-  (defun my-face-annotator (cand)
-    (when-let (sym (intern-soft cand))
-      (concat (propertize " " 'display '(space :align-to center))
-              (propertize "The quick brown fox jumps over the lazy dog" 'face sym))))
-#+end_src
+[Vertico] <https://github.com/minad/vertico>
 
-There are a few helper functions available internally which can be used to write
-the annotation functions more conveniently, in particular =marginalia--fields=.
-After defining the annotator, it must be added to the annotator registry.
+[Icomplete-vertical] <https://github.com/oantolin/icomplete-vertical>
 
-#+begin_src emacs-lisp
-  (add-to-list 'marginalia-annotator-registry
-               '(face my-face-annotator marginalia-annotate-face builtin none))
-#+end_src
+[Embark] <https://github.com/oantolin/embark>
 
-We also add the annotator provided by Marginalia (=marginalia-annotate-face=),
-the =builtin= annotator as defined by Emacs and the =none= annotator, which
-disables the annotations. You can cycle between all of those annotators using
-=marginalia-cycle= after invoking =M-x describe-face RET=.
+[Consult] <https://github.com/minad/consult>
 
-* Disabling annotators, builtin or lightweight annotators
 
-Marginalia activates rich annotators by default. Depending on your preference
-you may want to use the builtin annotators or even no annotators by default and
-only activate the annotators on demand by invoking ~marginalia-cycle~.
+3 Information shown by the annotators
+═════════════════════════════════════
 
-In order to use the builtin annotators by default, you can use the following
-command. Replace =builtin= by =none= to disable annotators by default.
+  In general, to learn more about what different annotations mean, a
+  good starting point is to look at `marginalia-annotator-registry', and
+  follow up to the annotation function of the category you are
+  interested in.
 
-#+begin_src emacs-lisp
-  (defun marginalia-use-builtin ()
-    (interactive)
-    (mapc
-     (lambda (x)
-       (setcdr x (cons 'builtin (remq 'builtin (cdr x)))))
-     marginalia-annotator-registry))
-#+end_src
+  For example the annotations for elisp symbols include their symbol
+  class - v for variable, f for function, c for command, etc. For more
+  information on what the different classifications mean, see the
+  docstring of `marginalia--symbol-class'.
 
-If a completion category supports two annotators, you can toggle between
-those using this command.
 
-#+begin_src emacs-lisp
-  (defun marginalia-toggle ()
-    (interactive)
-    (mapc
-     (lambda (x)
-       (setcdr x (append (reverse (remq 'none
-                                        (remq 'builtin (cdr x))))
-                         '(builtin none))))
-     marginalia-annotator-registry))
-#+end_src
+4 Adding custom annotators or classifiers
+═════════════════════════════════════════
 
-After cycling the annotators you may want to automatically save the
-configuration. This can be achieved using an advice which calls
-~customize-save-variable~.
+  Commands that support minibuffer completion use a completion table of
+  all the available candidates. Candidates are associated with a
+  *category* such as `command', `file', `face', or `variable' depending
+  on what the candidates are. Based on the category of the candidates,
+  Marginalia selects an *annotator* to generate annotations for display
+  for each candidate.
 
-#+begin_src emacs-lisp
-  (advice-add #'marginalia-cycle :after
-              (lambda ()
-                (let ((inhibit-message t))
-                  (customize-save-variable 'marginalia-annotator-registry
-                                           marginalia-annotator-registry))))
-#+end_src
+  Unfortunately, not all commands (including Emacs' builtin ones)
+  specify the category of their candidates. To compensate for this
+  shortcoming, Marginalia hooks into the emacs completion framework and
+  runs the *classifiers* listed in the variable
+  `marginalia-classifiers', which use the command's prompt or other
+  properties of the candidates to specify the completion category.
 
-In order to disable an annotator permanently, the ~marginalia-annotator-registry~
-can be modified. For example if you prefer to never see file annotations, you
-can delete all file annotators from the registry.
+  For example, the `marginalia-classify-by-prompt' classifier checks the
+  minibuffer prompt against regexps listed in the
+  `marginalia-prompt-categories' alist to determine a category. The
+  following is already included but would be a way to assign the
+  category `face' to all candidates from commands with prompts that
+  include the word "face".
 
-#+begin_src emacs-lisp
-  (setq marginalia-annotator-registry
-        (assq-delete-all 'file marginalia-annotator-registry))
-#+end_src
+  ┌────
+  │ (add-to-list 'marginalia-prompt-categories '("\\<face\\>" . face))
+  └────
 
-* Contributions
+  The `marginalia-classify-by-command-name' classifier uses the alist
+  `marginalia-command-categories' to specify the completion category
+  based on the command name. This is particularily useful if the prompt
+  classifier yields a false positive.
 
-Since this package is part of [[http://elpa.gnu.org/packages/marginalia.html][GNU ELPA]] contributions require a copyright
-assignment to the FSF.
+  Completion categories are also important for [Embark], which
+  associates actions based on the completion category and benefits from
+  Marginalia's classifiers.
+
+  Once the category of the candidates is known, Marginalia looks in the
+  `marginalia-annotator-registry' to find the associated annotator to
+  use. An annotator is a function that takes a completion candidate
+  string as an argument and returns an annotation string to be displayed
+  after the candidate in the minibuffer. More than one annotator can be
+  assigned to each each category, displaying more, less or different
+  information. Use the `marginalia-cycle' command to cycle between the
+  annotations of different annotators defined for the current category.
+
+  Here's an example of a basic face annotator:
+
+  ┌────
+  │ (defun my-face-annotator (cand)
+  │   (when-let (sym (intern-soft cand))
+  │     (concat (propertize " " 'display '(space :align-to center))
+  │ 	    (propertize "The quick brown fox jumps over the lazy dog" 'face sym))))
+  └────
+
+  Look at Marginalia's various annotators for examples of formating
+  annotations.  In particular, the helper function `marginalia--fields'
+  can be used to format information into columns.
+
+  After defining a new annotator, associate it with a category in the
+  annotator registry as follows:
+
+  ┌────
+  │ (add-to-list 'marginalia-annotator-registry
+  │ 	     '(face my-face-annotator marginalia-annotate-face builtin none))
+  └────
+
+  This makes the `my-face-annotator' the first of four annotators for
+  the face category. The others are the annotator provided by Marginalia
+  (`marginalia-annotate-face'), the `builtin' annotator as defined by
+  Emacs and the `none' annotator, which disables the annotations. With
+  this setting, after invoking `M-x describe-face RET' you can cycle
+  between all of these annotators using `marginalia-cycle'.
+
+
+[Embark] <https://github.com/oantolin/embark>
+
+
+5 Disabling annotators, builtin or lightweight annotators
+═════════════════════════════════════════════════════════
+
+  Marginalia activates rich annotators by default. Depending on your
+  preference you may want to use the builtin annotators or even no
+  annotators by default and only activate the annotators on demand by
+  invoking `marginalia-cycle'.
+
+  In order to use the builtin annotators by default, you can use the
+  following command. Replace `builtin' by `none' to disable annotators
+  by default.
+
+  ┌────
+  │ (defun marginalia-use-builtin ()
+  │   (interactive)
+  │   (mapc
+  │    (lambda (x)
+  │      (setcdr x (cons 'builtin (remq 'builtin (cdr x)))))
+  │    marginalia-annotator-registry))
+  └────
+
+  If a completion category supports two annotators, you can toggle
+  between those using this command.
+
+  ┌────
+  │ (defun marginalia-toggle ()
+  │   (interactive)
+  │   (mapc
+  │    (lambda (x)
+  │      (setcdr x (append (reverse (remq 'none
+  │ 				      (remq 'builtin (cdr x))))
+  │ 		       '(builtin none))))
+  │    marginalia-annotator-registry))
+  └────
+
+  After cycling the annotators you may want to automatically save the
+  configuration. This can be achieved using an advice which calls
+  `customize-save-variable'.
+
+  ┌────
+  │ (advice-add #'marginalia-cycle :after
+  │ 	    (lambda ()
+  │ 	      (let ((inhibit-message t))
+  │ 		(customize-save-variable 'marginalia-annotator-registry
+  │ 					 marginalia-annotator-registry))))
+  └────
+
+  In order to disable an annotator permanently, the
+  `marginalia-annotator-registry' can be modified. For example if you
+  prefer to never see file annotations, you can delete all file
+  annotators from the registry.
+
+  ┌────
+  │ (setq marginalia-annotator-registry
+  │       (assq-delete-all 'file marginalia-annotator-registry))
+  └────
+
+
+6 Contributions
+═══════════════
+
+  Since this package is part of [GNU ELPA] contributions require a
+  copyright assignment to the FSF.
+
+
+[GNU ELPA] <http://elpa.gnu.org/packages/marginalia.html>

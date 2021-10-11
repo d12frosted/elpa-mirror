@@ -32,17 +32,20 @@ After installing this package from ELPA, you must add the following
 to your Emacs initialization script:
 
   (add-hook 'shell-mode-hook #'shelisp-mode)
+  (add-hook 'term-mode-hook #'shelisp-mode)
+
+  ;; iff `vterm' package was installed
+  (add-hook 'vterm-mode-hook #'shelisp-mode)
 
 TO DOs:
 
 * Provide a security feature that prompts the Emacs user to approve
-* the execution of any elisp expressions submitted thru the shelisp
-* escape sequence.
+  the execution of any elisp expressions submitted thru the shelisp
+  escape sequence.
 
-* Support `term-mode' like `shell-mode'
-
-* Provide support for creation of shell commands for command shells
-  other than bash -- csh, tcsh, zsh, ksh, ash, dash, fish, mosh, sh.
+* Support for bash, ksh, and fish is provided (thank you for your
+  motivation and effort, Eduardo Ochs <eduardoochs@gmail.com>);
+  support for csh, tcsh, ksh, ash, dash, mosh, and sh is welcomed.
 
   Support for non-Linux shells is left as an exercise for a
   masochistic hacker.

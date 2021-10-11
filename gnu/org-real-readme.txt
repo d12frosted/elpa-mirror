@@ -1,128 +1,197 @@
-#+TITLE: Org Real
+			       ━━━━━━━━━━
+				ORG REAL
+			       ━━━━━━━━━━
+
+
+Table of Contents
+─────────────────
+
+1. Usage
+.. 1. Inserting a link
+.. 2. Inserting a link with completion
+.. 3. Rearranging things
+.. 4. Opening links
+.. 5. `org-real-world'
+.. 6. Boxy mode
+2. License
+3. Development
+.. 1. Setup
+.. 2. Commands:
+..... 1. `eldev lint'
+..... 2. `eldev compile'
+..... 3. `eldev test'
+..... 4. `eldev package'
+..... 5. `eldev md5'
+
 
 Keep track of real things as org-mode links.
 
-=package-install RET org-real RET=
+`package-install RET org-real RET'
 
-* Usage
-** Inserting a link
-   To create a real link in org-mode, use =C-c C-l real RET=.
 
-   Real links are created inside-out, starting with the most specific
-   item and working to the most general.
+1 Usage
+═══════
 
-   #+begin_example
+1.1 Inserting a link
+────────────────────
 
-       ┌──────────────────────────────┐
-       │                              │
-       │           outside            │
-       │              ↑               │
-       │  ┌────────── ↑ ───────────┐  │
-       │  │           ↑            │  │
-       │  │           ↑            │  │
-       │  │           ↑            │  │
-       │  │  ┌─────── ↑ ────────┐  │  │
-       │  │  │        ↑         │  │  │
-       │  │  │      inside      │  │  │
-       │  │  │                  │  │  │
-       │  │  └──────────────────┘  │  │
-       │  │                        │  │
-       │  └────────────────────────┘  │
-       │                              │
-       └──────────────────────────────┘
+  To create a real link in org-mode, use `C-c C-l real RET'.
 
-   #+end_example
+  Real links are created inside-out, starting with the most specific
+  item and working to the most general.
 
-   The first prompt will be for the thing which is trying to be linked
-   to, called the "primary thing". Then, the prompt will continue to
-   ask if more context should be added by pressing =+= until the user
-   confirms the link with =RET=.
+  ┌────
+  │ 
+  │ ┌──────────────────────────────┐
+  │ │                              │
+  │ │           outside            │
+  │ │              ↑               │
+  │ │  ┌────────── ↑ ───────────┐  │
+  │ │  │           ↑            │  │
+  │ │  │           ↑            │  │
+  │ │  │           ↑            │  │
+  │ │  │  ┌─────── ↑ ────────┐  │  │
+  │ │  │  │        ↑         │  │  │
+  │ │  │  │      inside      │  │  │
+  │ │  │  │                  │  │  │
+  │ │  │  └──────────────────┘  │  │
+  │ │  │                        │  │
+  │ │  └────────────────────────┘  │
+  │ │                              │
+  │ └──────────────────────────────┘
+  │ 
+  └────
 
-   [[file:demo/insert-link.gif]]
+  The first prompt will be for the thing which is trying to be linked
+  to, called the "primary thing". Then, the prompt will continue to ask
+  if more context should be added by pressing `+' until the user
+  confirms the link with `RET'.
 
-** Inserting a link with completion
+  <file:demo/insert-link.gif>
 
-   Org real will help create links by parsing all existing links in
-   the current buffer. When choosing an existing thing, all of the
-   context for that thing is automatically added to the current
-   completion.
 
-   This is only possible because of the unique inside-out completion
-   style for inserting a link and makes it very easy to add new things
-   to an existing container.
+1.2 Inserting a link with completion
+────────────────────────────────────
 
-   [[file:demo/insert-link-with-completion.gif]]
+  Org real will help create links by parsing all existing links in the
+  current buffer. When choosing an existing thing, all of the context
+  for that thing is automatically added to the current completion.
 
-** Rearranging things
+  This is only possible because of the unique inside-out completion
+  style for inserting a link and makes it very easy to add new things to
+  an existing container.
 
-   In order to edit a real link, place the cursor on the link and
-   press =C-c C-l=. Narrow the link down beyond the context you wish
-   to change by pressing =BACKSPACE= repeatedly, then =+= to add the
-   new context.
+  <file:demo/insert-link-with-completion.gif>
 
-   [[file:demo/edit-link.gif]]
 
-   If any container in the new link does not match an existing
-   container in the buffer, org-real will prompt you to replace all
-   occurences of that thing with the new context and relationships.
+1.3 Rearranging things
+──────────────────────
 
-   This makes it easy to keep things in sync. If any one link changes
-   location, all links in the currnet buffer are updated accordingly.
+  In order to edit a real link, place the cursor on the link and press
+  `C-c C-l'. Narrow the link down beyond the context you wish to change
+  by pressing `BACKSPACE' repeatedly, then `+' to add the new context.
 
-   [[file:demo/apply-changes.gif]]
+  <file:demo/edit-link.gif>
 
-   If a link is changed manually, use the interactive function
-   =org-real-apply= with the cursor on top of the new link to apply
-   changes from that link to the buffer.
+  If any container in the new link does not match an existing container
+  in the buffer, org-real will prompt you to replace all occurences of
+  that thing with the new context and relationships.
 
-** Opening links
-   To open a real link, place the cursor within the link and press
-   =C-c C-o=. This will display a popup buffer in Org Real mode
-   showing the location of the link.
+  This makes it easy to keep things in sync. If any one link changes
+  location, all links in the currnet buffer are updated accordingly.
 
-** =org-real-world=
+  <file:demo/apply-changes.gif>
 
-   To view all real links in the current buffer in a combined diagram,
-   use the interactive function =org-real-world=
+  If a link is changed manually, use the interactive function
+  `org-real-apply' with the cursor on top of the new link to apply
+  changes from that link to the buffer.
 
-   Suggested keybinding:
-   #+begin_src emacs-lisp
-     (define-key org-mode-map (kbd "C-c r w") 'org-real-world)
-   #+end_src
 
-** Boxy mode
+1.4 Opening links
+─────────────────
 
-   Once in boxy mode, you can cycle the visibility level of all
-   children with =S-TAB= or use =TAB= to toggle the visibility of
-   children for a single box.
+  To open a real link, place the cursor within the link and press `C-c
+  C-o'. This will display a popup buffer in Org Real mode showing the
+  location of the link.
 
-   Emacs movement keys will navigate by boxes rather than
-   characters. Each box in the diagram has these keybindings:
 
-   - =RET / mouse-1= Jump to first occurrence of link
-   - =o= Cycle occurrences of links in other window
-   - =M-RET= Open all occurences of links by splitting the current window
-   - =r= Jump to the box directly related to the current box
-   - =TAB= expand/collapse children boxes
+1.5 `org-real-world'
+────────────────────
 
-   [[file:demo/boxy-mode.gif]]
+  To view all real links in the current buffer in a combined diagram,
+  use the interactive function `org-real-world'
 
-* License
+  Suggested keybinding:
+  ┌────
+  │ (define-key org-mode-map (kbd "C-c r w") 'org-real-world)
+  └────
+
+
+1.6 Boxy mode
+─────────────
+
+  Once in boxy mode, you can cycle the visibility level of all children
+  with `S-TAB' or use `TAB' to toggle the visibility of children for a
+  single box.
+
+  Emacs movement keys will navigate by boxes rather than
+  characters. Each box in the diagram has these keybindings:
+
+  • `RET / mouse-1' Jump to first occurrence of link
+  • `o' Cycle occurrences of links in other window
+  • `M-RET' Open all occurences of links by splitting the current window
+  • `r' Jump to the box directly related to the current box
+  • `TAB' expand/collapse children boxes
+
+  <file:demo/boxy-mode.gif>
+
+
+2 License
+═════════
+
   GPLv3
-* Development
 
-** Setup
 
-   Install [[https://github.com/doublep/eldev#installation][eldev]]
+3 Development
+═════════════
 
-** Commands:
-*** =eldev lint=
-    Lint the =org-real.el= file
-*** =eldev compile=
-    Test whether ELC has any complaints
-*** =eldev test=
-    Run all test files in =tests/=
-*** =eldev package=
-    Creates a dist folder with =org-real-<version>.el=
-*** =eldev md5=
-    Creates an md5 checksum against all files in the dist folder.
+3.1 Setup
+─────────
+
+  Install [eldev]
+
+
+[eldev] <https://github.com/doublep/eldev#installation>
+
+
+3.2 Commands:
+─────────────
+
+3.2.1 `eldev lint'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Lint the `org-real.el' file
+
+
+3.2.2 `eldev compile'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Test whether ELC has any complaints
+
+
+3.2.3 `eldev test'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Run all test files in `tests/'
+
+
+3.2.4 `eldev package'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Creates a dist folder with `org-real-<version>.el'
+
+
+3.2.5 `eldev md5'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Creates an md5 checksum against all files in the dist folder.

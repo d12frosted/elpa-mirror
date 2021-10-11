@@ -410,7 +410,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (consult .
-	  [(0 11)
+	  [(0 12)
 	   ((emacs
 	     (26 1)))
 	   "Consulting completing-read" tar
@@ -429,7 +429,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 11)
+	[(0 12)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -736,7 +736,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20211008)
+      [(20211011)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1472,7 +1472,7 @@
 	 ("Nicolas Petton" . "nicolas@petton.fr"))
 	(:url . "https://elpa.gnu.org/packages/map.html"))])
  (marginalia .
-	     [(0 8)
+	     [(0 9)
 	      ((emacs
 		(26 1)))
 	      "Enrich existing commands with completion annotations" tar
@@ -1793,7 +1793,7 @@
 	      ("Ian Dunn" . "dunni@gnu.org"))
 	     (:keywords "convenience" "text" "org"))])
  (org-real .
-	   [(1 0 1)
+	   [(1 0 2)
 	    ((emacs
 	      (26 1))
 	     (boxy
@@ -2275,13 +2275,13 @@
 	  (:authors
 	   ("Philip Kaludercic" . "philipk@posteo.net")))])
  (shelisp .
-	  [(0 9 1)
-	   nil "execute elisp in shell" single
-	   ((:url . "http://elpa.gnu.org/packages/shelisp.html")
-	    (:keywords "terminals" "lisp" "processes")
+	  [(1 0 0)
+	   nil "execute elisp in shell" tar
+	   ((:keywords "terminals" "lisp" "processes")
+	    (:maintainer "Michael R. Mauger" . "michael@mauger.com")
 	    (:authors
 	     ("Michael R. Mauger" . "michael@mauger.com"))
-	    (:maintainer "Michael R. Mauger" . "michael@mauger.com"))])
+	    (:url . "https://elpa.gnu.org/packages/shelisp.html"))])
  (shell-command+ .
 		 [(2 2 1)
 		  ((emacs
