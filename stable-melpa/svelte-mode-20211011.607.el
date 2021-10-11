@@ -4,8 +4,8 @@
 ;; Author: Leaf <leafvocation@gmail.com>
 ;; Created: 21 Jan 2020
 ;; Keywords: wp languages
-;; Package-Version: 20210222.1037
-;; Package-Commit: 839f579fa881467149e77d0e096a4a4a6c5d9878
+;; Package-Version: 20211011.607
+;; Package-Commit: b0161e30b9ebdefe4898e47427db39c37f17353a
 ;; Homepage: https://github.com/leafOfTree/svelte-mode
 ;; Version: 1.0.5
 ;; Package-Requires: ((emacs "26.1"))
@@ -47,6 +47,9 @@
 (defvar svelte--coffee-submode)
 (defvar coffee-mode-syntax-table)
 (defvar coffee-mode-map)
+(defvar svelte--sass-submode)
+(defvar sass-mode-syntax-table)
+(defvar sass-mode-map)
 (defvar svelte--typescript-submode)
 (defvar typescript-mode-syntax-table)
 (defvar typescript-mode-map)
@@ -96,6 +99,15 @@
 	    (svelte--load-coffee-submode))
 	  (when (boundp 'svelte--coffee-submode)
 	    (svelte--syntax-propertize-submode svelte--coffee-submode end))))))
+   ("<style.*sass.*>"
+    (0 (ignore
+        (goto-char (match-end 0))
+        ;; Don't apply in a comment.
+        (unless (syntax-ppss-context (syntax-ppss))
+          (unless (boundp 'svelte--sass-submode)
+            (svelte--load-sass-submode))
+          (when (boundp 'svelte--sass-submode)
+            (svelte--syntax-propertize-submode svelte--sass-submode end))))))
    ("<script.*ts.*>"
     (0 (ignore
         (goto-char (match-end 0))
@@ -295,6 +307,19 @@ Ignore ORIG-FUN and ARGS."
 				 :end-tag "</script>"
 				 :syntax-table coffee-mode-syntax-table
 				 :keymap coffee-mode-map))))
+
+;;; Sass mode
+(defun svelte--load-sass-submode ()
+  "Load `sass-mode' and patch it."
+  (when (require 'sass-mode nil t)
+    (customize-set-variable 'sass-tab-width svelte-basic-offset)
+    (defconst svelte--sass-submode
+      (svelte--construct-submode 'sass-mode
+				 :name "Sass"
+				 :end-tag "</style>"
+				 :syntax-table sass-mode-syntax-table
+				 :excluded-locals '(font-lock-extend-region-functions)
+				 :keymap sass-mode-map))))
 
 ;;; TypeScript mode
 (defun svelte--load-typescript-submode ()

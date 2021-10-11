@@ -5,7 +5,7 @@
 ;; Created: 2021
 ;; Version: 0.1
 ;; Package-Version: 20211007.2352
-;; Package-Commit: a5cd4568655da51b84e6812aecdd7bd3083b0b02
+;; Package-Commit: 08f543ae6acbfc1ffe579ba1d00a5414012d5c0b
 ;; Package-Requires: ((emacs "26.1") (consult "0.9") (project "0.6.0"))
 ;; Keywords: convenience
 ;; Homepage: https://github.com/karthink/consult-dir

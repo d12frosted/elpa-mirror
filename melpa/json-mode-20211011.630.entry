@@ -1,11 +1,11 @@
 (json-mode .
-	   [(20190123 422)
-	    ((json-reformat
-	      (0 0 5))
-	     (json-snatcher
-	      (1 0 0)))
+	   [(20211011 630)
+	    ((json-snatcher
+	      (1 0 0))
+	     (emacs
+	      (24 4)))
 	    "Major mode for editing JSON files." single
-	    ((:commit . "0e819e519ae17a2686e0881c4ca51fa873fa9b83")
+	    ((:commit . "eedb4560034f795a7950fa07016bd4347c368873")
 	     (:authors
 	      ("Josh Johnston"))
 	     (:maintainer "Josh Johnston")

@@ -4,8 +4,8 @@
 
 ;; Author: Phil Hagelberg, Cornelius Mika, Campbell Barton
 ;; URL: http://www.emacswiki.org/cgi-bin/wiki/IdleHighlight
-;; Package-Version: 20211007.308
-;; Package-Commit: ca48999554e720d20be46f194f69919fb2894a82
+;; Package-Version: 20211011.557
+;; Package-Commit: 0916be7075e792773440c3bdb5cf9c153691846b
 ;; Version: 1.1.3
 ;; Created: 2008-05-13
 ;; Keywords: convenience
@@ -38,7 +38,7 @@
 ;; M-x idle-highlight-mode sets an idle timer that highlights all
 ;; occurrences in the buffer of the word under the point.
 
-;; Enabling it in a hook is recommended. But you don't want it enabled
+;; Enabling it in a hook is recommended if you don't want it enabled
 ;; for all buffers, just programming ones.
 ;;
 ;; Example:

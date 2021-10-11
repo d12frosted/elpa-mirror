@@ -1,5 +1,5 @@
 (docker .
-	[(20210930 556)
+	[(20211011 610)
 	 ((dash
 	   (2 14 1))
 	  (docker-tramp
@@ -15,7 +15,7 @@
 	  (transient
 	   (0 2 0)))
 	 "Emacs interface to Docker" tar
-	 ((:commit . "e1c0c99047a9835b8751b1d9f544ef0bc16c77a9")
+	 ((:commit . "0bc8d08fd322e1f7c733a5b7bd1dc79f259cdcc9")
 	  (:authors
 	   ("Philippe Vaucher" . "philippe.vaucher@gmail.com"))
 	  (:maintainer "Philippe Vaucher" . "philippe.vaucher@gmail.com")

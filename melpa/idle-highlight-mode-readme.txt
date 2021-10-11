@@ -3,7 +3,7 @@ Based on some snippets by fledermaus from the Emacs channel.
 M-x idle-highlight-mode sets an idle timer that highlights all
 occurrences in the buffer of the word under the point.
 
-Enabling it in a hook is recommended. But you don't want it enabled
+Enabling it in a hook is recommended if you don't want it enabled
 for all buffers, just programming ones.
 
 Example:
