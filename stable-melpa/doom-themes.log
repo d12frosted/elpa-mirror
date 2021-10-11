@@ -4,10 +4,10 @@ Source:  https://github.com/hlissner/emacs-doom-themes.git
 
 Updating /mnt/store/melpa/working/doom-themes/
 Checking out origin/HEAD
-Checking out e716ddbb882a3a06744faa74decb2fea1569c921
+Checking out 3e6f5d9ce129ac6fc0f466eb6f5518593625578f
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/doom-themes/
-  to /tmp/doom-themesjOBp3a/doom-themes-20210916.2120
+  to /tmp/doom-themesumqDWG/doom-themes-20211011.1314
     doom-themes-base.el -> doom-themes-base.el
     doom-themes-ext-neotree.el -> doom-themes-ext-neotree.el
     doom-themes-ext-org.el -> doom-themes-ext-org.el
@@ -75,79 +75,81 @@ Copying files (->) and directories (=>)
   ! themes/doom-wilmersdorf-theme.el -> doom-wilmersdorf-theme.el
   ! themes/doom-xcode-theme.el -> doom-xcode-theme.el
   ! themes/doom-zenburn-theme.el -> doom-zenburn-theme.el
-Created doom-themes-20210916.2120.tar containing:
-  doom-themes-20210916.2120/
-  doom-themes-20210916.2120/doom-1337-theme.el
-  doom-themes-20210916.2120/doom-Iosvkem-theme.el
-  doom-themes-20210916.2120/doom-acario-dark-theme.el
-  doom-themes-20210916.2120/doom-acario-light-theme.el
-  doom-themes-20210916.2120/doom-ayu-light-theme.el
-  doom-themes-20210916.2120/doom-ayu-mirage-theme.el
-  doom-themes-20210916.2120/doom-badger-theme.el
-  doom-themes-20210916.2120/doom-challenger-deep-theme.el
-  doom-themes-20210916.2120/doom-city-lights-theme.el
-  doom-themes-20210916.2120/doom-dark+-theme.el
-  doom-themes-20210916.2120/doom-dracula-theme.el
-  doom-themes-20210916.2120/doom-ephemeral-theme.el
-  doom-themes-20210916.2120/doom-fairy-floss-theme.el
-  doom-themes-20210916.2120/doom-flatwhite-theme.el
-  doom-themes-20210916.2120/doom-gruvbox-light-theme.el
-  doom-themes-20210916.2120/doom-gruvbox-theme.el
-  doom-themes-20210916.2120/doom-henna-theme.el
-  doom-themes-20210916.2120/doom-homage-black-theme.el
-  doom-themes-20210916.2120/doom-homage-white-theme.el
-  doom-themes-20210916.2120/doom-horizon-theme.el
-  doom-themes-20210916.2120/doom-ir-black-theme.el
-  doom-themes-20210916.2120/doom-laserwave-theme.el
-  doom-themes-20210916.2120/doom-manegarm-theme.el
-  doom-themes-20210916.2120/doom-material-theme.el
-  doom-themes-20210916.2120/doom-miramare-theme.el
-  doom-themes-20210916.2120/doom-molokai-theme.el
-  doom-themes-20210916.2120/doom-monokai-classic-theme.el
-  doom-themes-20210916.2120/doom-monokai-machine-theme.el
-  doom-themes-20210916.2120/doom-monokai-octagon-theme.el
-  doom-themes-20210916.2120/doom-monokai-pro-theme.el
-  doom-themes-20210916.2120/doom-monokai-ristretto-theme.el
-  doom-themes-20210916.2120/doom-monokai-spectrum-theme.el
-  doom-themes-20210916.2120/doom-moonlight-theme.el
-  doom-themes-20210916.2120/doom-nord-light-theme.el
-  doom-themes-20210916.2120/doom-nord-theme.el
-  doom-themes-20210916.2120/doom-nova-theme.el
-  doom-themes-20210916.2120/doom-oceanic-next-theme.el
-  doom-themes-20210916.2120/doom-old-hope-theme.el
-  doom-themes-20210916.2120/doom-one-light-theme.el
-  doom-themes-20210916.2120/doom-one-theme.el
-  doom-themes-20210916.2120/doom-opera-light-theme.el
-  doom-themes-20210916.2120/doom-opera-theme.el
-  doom-themes-20210916.2120/doom-outrun-electric-theme.el
-  doom-themes-20210916.2120/doom-palenight-theme.el
-  doom-themes-20210916.2120/doom-peacock-theme.el
-  doom-themes-20210916.2120/doom-plain-dark-theme.el
-  doom-themes-20210916.2120/doom-plain-theme.el
-  doom-themes-20210916.2120/doom-rouge-theme.el
-  doom-themes-20210916.2120/doom-shades-of-purple-theme.el
-  doom-themes-20210916.2120/doom-snazzy-theme.el
-  doom-themes-20210916.2120/doom-solarized-dark-high-contrast-theme.el
-  doom-themes-20210916.2120/doom-solarized-dark-theme.el
-  doom-themes-20210916.2120/doom-solarized-light-theme.el
-  doom-themes-20210916.2120/doom-sourcerer-theme.el
-  doom-themes-20210916.2120/doom-spacegrey-theme.el
-  doom-themes-20210916.2120/doom-themes-base.el
-  doom-themes-20210916.2120/doom-themes-ext-neotree.el
-  doom-themes-20210916.2120/doom-themes-ext-org.el
-  doom-themes-20210916.2120/doom-themes-ext-treemacs.el
-  doom-themes-20210916.2120/doom-themes-ext-visual-bell.el
-  doom-themes-20210916.2120/doom-themes-pkg.el
-  doom-themes-20210916.2120/doom-themes.el
-  doom-themes-20210916.2120/doom-tomorrow-day-theme.el
-  doom-themes-20210916.2120/doom-tomorrow-night-theme.el
-  doom-themes-20210916.2120/doom-vibrant-theme.el
-  doom-themes-20210916.2120/doom-wilmersdorf-theme.el
-  doom-themes-20210916.2120/doom-xcode-theme.el
-  doom-themes-20210916.2120/doom-zenburn-theme.el
-Built doom-themes in 5.562s, finished at 2021-10-11T06:26:10+0000
+Created doom-themes-20211011.1314.tar containing:
+  doom-themes-20211011.1314/
+  doom-themes-20211011.1314/doom-1337-theme.el
+  doom-themes-20211011.1314/doom-Iosvkem-theme.el
+  doom-themes-20211011.1314/doom-acario-dark-theme.el
+  doom-themes-20211011.1314/doom-acario-light-theme.el
+  doom-themes-20211011.1314/doom-ayu-light-theme.el
+  doom-themes-20211011.1314/doom-ayu-mirage-theme.el
+  doom-themes-20211011.1314/doom-badger-theme.el
+  doom-themes-20211011.1314/doom-challenger-deep-theme.el
+  doom-themes-20211011.1314/doom-city-lights-theme.el
+  doom-themes-20211011.1314/doom-dark+-theme.el
+  doom-themes-20211011.1314/doom-dracula-theme.el
+  doom-themes-20211011.1314/doom-ephemeral-theme.el
+  doom-themes-20211011.1314/doom-fairy-floss-theme.el
+  doom-themes-20211011.1314/doom-flatwhite-theme.el
+  doom-themes-20211011.1314/doom-gruvbox-light-theme.el
+  doom-themes-20211011.1314/doom-gruvbox-theme.el
+  doom-themes-20211011.1314/doom-henna-theme.el
+  doom-themes-20211011.1314/doom-homage-black-theme.el
+  doom-themes-20211011.1314/doom-homage-white-theme.el
+  doom-themes-20211011.1314/doom-horizon-theme.el
+  doom-themes-20211011.1314/doom-ir-black-theme.el
+  doom-themes-20211011.1314/doom-laserwave-theme.el
+  doom-themes-20211011.1314/doom-manegarm-theme.el
+  doom-themes-20211011.1314/doom-material-theme.el
+  doom-themes-20211011.1314/doom-miramare-theme.el
+  doom-themes-20211011.1314/doom-molokai-theme.el
+  doom-themes-20211011.1314/doom-monokai-classic-theme.el
+  doom-themes-20211011.1314/doom-monokai-machine-theme.el
+  doom-themes-20211011.1314/doom-monokai-octagon-theme.el
+  doom-themes-20211011.1314/doom-monokai-pro-theme.el
+  doom-themes-20211011.1314/doom-monokai-ristretto-theme.el
+  doom-themes-20211011.1314/doom-monokai-spectrum-theme.el
+  doom-themes-20211011.1314/doom-moonlight-theme.el
+  doom-themes-20211011.1314/doom-nord-light-theme.el
+  doom-themes-20211011.1314/doom-nord-theme.el
+  doom-themes-20211011.1314/doom-nova-theme.el
+  doom-themes-20211011.1314/doom-oceanic-next-theme.el
+  doom-themes-20211011.1314/doom-old-hope-theme.el
+  doom-themes-20211011.1314/doom-one-light-theme.el
+  doom-themes-20211011.1314/doom-one-theme.el
+  doom-themes-20211011.1314/doom-opera-light-theme.el
+  doom-themes-20211011.1314/doom-opera-theme.el
+  doom-themes-20211011.1314/doom-outrun-electric-theme.el
+  doom-themes-20211011.1314/doom-palenight-theme.el
+  doom-themes-20211011.1314/doom-peacock-theme.el
+  doom-themes-20211011.1314/doom-plain-dark-theme.el
+  doom-themes-20211011.1314/doom-plain-theme.el
+  doom-themes-20211011.1314/doom-rouge-theme.el
+  doom-themes-20211011.1314/doom-shades-of-purple-theme.el
+  doom-themes-20211011.1314/doom-snazzy-theme.el
+  doom-themes-20211011.1314/doom-solarized-dark-high-contrast-theme.el
+  doom-themes-20211011.1314/doom-solarized-dark-theme.el
+  doom-themes-20211011.1314/doom-solarized-light-theme.el
+  doom-themes-20211011.1314/doom-sourcerer-theme.el
+  doom-themes-20211011.1314/doom-spacegrey-theme.el
+  doom-themes-20211011.1314/doom-themes-base.el
+  doom-themes-20211011.1314/doom-themes-ext-neotree.el
+  doom-themes-20211011.1314/doom-themes-ext-org.el
+  doom-themes-20211011.1314/doom-themes-ext-treemacs.el
+  doom-themes-20211011.1314/doom-themes-ext-visual-bell.el
+  doom-themes-20211011.1314/doom-themes-pkg.el
+  doom-themes-20211011.1314/doom-themes.el
+  doom-themes-20211011.1314/doom-tomorrow-day-theme.el
+  doom-themes-20211011.1314/doom-tomorrow-night-theme.el
+  doom-themes-20211011.1314/doom-vibrant-theme.el
+  doom-themes-20211011.1314/doom-wilmersdorf-theme.el
+  doom-themes-20211011.1314/doom-xcode-theme.el
+  doom-themes-20211011.1314/doom-zenburn-theme.el
+Built doom-themes in 7.008s, finished at 2021-10-11T14:13:20+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  452 Oct 11 06:26 packages/doom-themes-20210916.2120.entry
-740K -rw-r--r-- 1 root root 740K Oct 11 06:26 packages/doom-themes-20210916.2120.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 11 06:26 packages/doom-themes-badge.svg
-4.0K -rw-r--r-- 1 root root 3.1K Oct 11 06:26 packages/doom-themes-readme.txt
+4.0K -rw-r--r-- 1 root root  452 Oct 11 10:19 packages/doom-themes-20210916.2120.entry
+740K -rw-r--r-- 1 root root 740K Oct 11 10:19 packages/doom-themes-20210916.2120.tar
+4.0K -rw-r--r-- 1 root root  452 Oct 11 14:13 packages/doom-themes-20211011.1314.entry
+740K -rw-r--r-- 1 root root 740K Oct 11 14:13 packages/doom-themes-20211011.1314.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 11 14:13 packages/doom-themes-badge.svg
+4.0K -rw-r--r-- 1 root root 3.1K Oct 11 14:13 packages/doom-themes-readme.txt
