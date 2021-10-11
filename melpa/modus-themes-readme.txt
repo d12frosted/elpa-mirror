@@ -33,6 +33,7 @@ The themes share the following customization variables:
     modus-themes-prompts                        (choice)
     modus-themes-region                         (choice)
     modus-themes-syntax                         (choice)
+    modus-themes-mode-line-padding              (natnum)
 
 The default scale for headings is as follows (it can be customized as
 well---remember, no scaling takes place by default):

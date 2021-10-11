@@ -1,4 +1,5 @@
 
 A multi dictionaries interface for Emacs.
 
-There is only one public command to users: `fanyi-dwim'.
+Invoke `fanyi-dwim', `fanyi-dwim2' or `fanyi-from-history' to see the
+results.
