@@ -5,8 +5,8 @@
 ;; Author: liuyinz <liuyinz@gmail.com>
 ;; Created: 2021-09-18 23:45:09
 ;; Version: 1.1.0
-;; Package-Version: 20211012.709
-;; Package-Commit: 6738d62795a02fe8f4620bd9852598db9a8dbc8f
+;; Package-Version: 20211012.1322
+;; Package-Commit: ba6285674d12d1eab6624ebf7a3bae7e72d56f99
 ;; Keywords: tools
 ;; Package-Requires: ((emacs "27") (transient "0.3.6"))
 ;; Homepage: https://github.com/liuyinz/emacs-conventional-changelog
@@ -147,6 +147,7 @@ default filemode."
 
 (transient-define-prefix conventional-changelog-menu ()
   "Invoke commands for `standard-version'."
+  :value '("--preset=angular" "--tag-prefix=v")
   [:description conventional-changelog--menu-header
    :class transient-subgroups
    ["Preset"
@@ -155,6 +156,7 @@ default filemode."
     ("-F" "Release message" "--releaseCommitMessageFormat=")]
    ["Option"
     ("-k" "Select preset" "--preset="
+     :always-read t
      :choices ("angular" "atom" "codemirror" "ember"
                "eslint" "express" "jquery" "jscs" "jshint"))
     ("-r" "Specify release type manually" "--release-as="
@@ -162,7 +164,7 @@ default filemode."
     ("-p" "Make pre-release with tag id" "--prerelease="
      :reader conventional-changelog--get-release-preset)
     ("-i" "Read CHANGELOG from" "--infile=")
-    ("-t" "Specify tag prefix" "--tag-prefix=")
+    ("-t" "Specify tag prefix" "--tag-prefix=" :always-read t)
     ("-P" "Populate commits under path only" "--path=")
     ("-f" "First release" "--first-release")
     ("-s" "Sign" "--sign")

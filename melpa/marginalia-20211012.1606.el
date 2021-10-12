@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.9
-;; Package-Version: 20211012.1245
-;; Package-Commit: 1aa1be0515a84da3f450e45322b5b8a88ec6a956
+;; Package-Version: 20211012.1606
+;; Package-Commit: 9cd762b6c3f2714375f47993e9a6384d3bc16ebf
 ;; Package-Requires: ((emacs "26.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -147,10 +147,12 @@ determine it."
   :type '(alist :key-type symbol :value-type symbol))
 
 (defcustom marginalia-bookmark-type-transformers
-  `(("\\`bookmark-\\(.*?\\)-handler\\'" . "\\1")
-    ("default" . "File")
-    ("\\`\\(.*?\\)-+bookmark-jump\\(?:-handler\\)?\\'" . "\\1")
-    (".*" . ,#'capitalize))
+  (let ((words (regexp-opt '("handle" "handler" "jump" "bookmark"))))
+    `((,(format "-+%s-+" words) . "-")
+      (,(format "\\`%s-+" words) . "")
+      (,(format "-%s\\'" words) . "")
+      ("\\`default\\'" . "File")
+      (".*" . ,#'capitalize)))
   "List of bookmark type transformers."
   :type '(alist :key-type regexp :value-type (choice string function)))
 

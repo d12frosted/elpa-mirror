@@ -4,8 +4,8 @@
 
 ;; Author: Augusto Stoffel <arstoffel@gmail.com>
 ;; Keywords: convenience, outlines
-;; Package-Version: 20210925.1531
-;; Package-Commit: 031f726941994d4a98649631eceeebb44b515b1b
+;; Package-Version: 20211012.1832
+;; Package-Commit: 84cc996bff5ebcd9456b73a87670e8b5d3899ce9
 ;; URL: https://github.com/astoff/code-cells.el
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 0.1
@@ -57,7 +57,9 @@
 (require 'json)
 (require 'pulse)
 (require 'subr-x)
-(eval-when-compile (require 'rx))
+(eval-when-compile
+  (require 'cl-macs)
+  (require 'rx))
 
 (defgroup code-cells nil
   "Utilities for code split into cells."
