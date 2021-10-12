@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.9
-;; Package-Version: 20211011.719
-;; Package-Commit: 37e24b798afca98da0d0364dde3fa63a42c5853e
+;; Package-Version: 20211012.1003
+;; Package-Commit: 7ac023301670802a1462d649ff703da04a2070fa
 ;; Package-Requires: ((emacs "26.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -573,13 +573,17 @@ keybinding since CAND includes it."
         (pcase (symbol-value sym)
           ('nil (propertize "nil" 'face 'marginalia-null))
           ('t (propertize "t" 'face 'marginalia-true))
-          ((pred keymapp) (propertize "<keymap>" 'face 'marginalia-value))
-          ((pred hash-table-p) (propertize "<hash-table>" 'face 'marginalia-value))
+          ((pred keymapp) (propertize "#<keymap>" 'face 'marginalia-value))
+          ((pred hash-table-p) (propertize "#<hash-table>" 'face 'marginalia-value))
+          ((pred syntax-table-p) (propertize "#<syntax-table>" 'face 'marginalia-value))
+          ((pred char-table-p) (propertize "#<char-table>" 'face 'marginalia-value))
+          ((pred byte-code-function-p) (propertize "#<byte-code-function>" 'face 'marginalia-function))
           ((and (pred functionp) (pred symbolp))
            ;; NOTE: We are not consistent here, values are generally printed unquoted. But we
            ;; make an exception for function symbols to visually distinguish them from symbols.
            ;; I am not entirely happy with this, but we should not add quotation to every type.
            (propertize (format "#'%s" val) 'face 'marginalia-function))
+          ((pred recordp) (propertize (format "#<record %s>" (type-of val)) 'face 'marginalia-value))
           ((pred symbolp) (propertize (symbol-name val) 'face 'marginalia-symbol))
           ((pred numberp) (propertize (number-to-string val) 'face 'marginalia-number))
           (_ (let ((print-escape-newlines t)
