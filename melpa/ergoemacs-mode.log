@@ -4,10 +4,10 @@ Source:  https://github.com/ergoemacs/ergoemacs-mode.git
 
 Updating /mnt/store/melpa/working/ergoemacs-mode/
 Checking out origin/HEAD
-Checking out 349d05a0b4fefea4f6ff4dad0df6e716328b5f74
+Checking out 3f961db491f572b7f0637e09fd113c43a1061617
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ergoemacs-mode/
-  to /tmp/ergoemacs-modePk0EP5/ergoemacs-mode-20211011.1305
+  to /tmp/ergoemacs-modeJIAJen/ergoemacs-mode-20211012.142
     ergoemacs-advice.el -> ergoemacs-advice.el
     ergoemacs-calculate-bindings.el -> ergoemacs-calculate-bindings.el
     ergoemacs-command-loop.el -> ergoemacs-command-loop.el
@@ -32,36 +32,38 @@ Copying files (->) and directories (=>)
     ergoemacs-mode.info -> ergoemacs-mode.info
     dir -> dir
     os_x_qwerty.dict.txt -> os_x_qwerty.dict.txt
-Created ergoemacs-mode-20211011.1305.tar containing:
-  ergoemacs-mode-20211011.1305/
-  ergoemacs-mode-20211011.1305/ahk-us.ahk
-  ergoemacs-mode-20211011.1305/dir
-  ergoemacs-mode-20211011.1305/ergoemacs-advice.el
-  ergoemacs-mode-20211011.1305/ergoemacs-calculate-bindings.el
-  ergoemacs-mode-20211011.1305/ergoemacs-command-loop.el
-  ergoemacs-mode-20211011.1305/ergoemacs-cua.el
-  ergoemacs-mode-20211011.1305/ergoemacs-debug.el
-  ergoemacs-mode-20211011.1305/ergoemacs-functions.el
-  ergoemacs-mode-20211011.1305/ergoemacs-key-description.el
-  ergoemacs-mode-20211011.1305/ergoemacs-layouts.el
-  ergoemacs-mode-20211011.1305/ergoemacs-lib.el
-  ergoemacs-mode-20211011.1305/ergoemacs-macros.el
-  ergoemacs-mode-20211011.1305/ergoemacs-map-properties.el
-  ergoemacs-mode-20211011.1305/ergoemacs-map.el
-  ergoemacs-mode-20211011.1305/ergoemacs-mapkeymap.el
-  ergoemacs-mode-20211011.1305/ergoemacs-mode-pkg.el
-  ergoemacs-mode-20211011.1305/ergoemacs-mode.el
-  ergoemacs-mode-20211011.1305/ergoemacs-mode.info
-  ergoemacs-mode-20211011.1305/ergoemacs-test.el
-  ergoemacs-mode-20211011.1305/ergoemacs-theme-engine.el
-  ergoemacs-mode-20211011.1305/ergoemacs-themes.el
-  ergoemacs-mode-20211011.1305/ergoemacs-translate.el
-  ergoemacs-mode-20211011.1305/kbd-ergo.svg
-  ergoemacs-mode-20211011.1305/kbd.svg
-  ergoemacs-mode-20211011.1305/os_x_qwerty.dict.txt
-Built ergoemacs-mode in 13.874s, finished at 2021-10-11T18:24:29+0000
+Created ergoemacs-mode-20211012.142.tar containing:
+  ergoemacs-mode-20211012.142/
+  ergoemacs-mode-20211012.142/ahk-us.ahk
+  ergoemacs-mode-20211012.142/dir
+  ergoemacs-mode-20211012.142/ergoemacs-advice.el
+  ergoemacs-mode-20211012.142/ergoemacs-calculate-bindings.el
+  ergoemacs-mode-20211012.142/ergoemacs-command-loop.el
+  ergoemacs-mode-20211012.142/ergoemacs-cua.el
+  ergoemacs-mode-20211012.142/ergoemacs-debug.el
+  ergoemacs-mode-20211012.142/ergoemacs-functions.el
+  ergoemacs-mode-20211012.142/ergoemacs-key-description.el
+  ergoemacs-mode-20211012.142/ergoemacs-layouts.el
+  ergoemacs-mode-20211012.142/ergoemacs-lib.el
+  ergoemacs-mode-20211012.142/ergoemacs-macros.el
+  ergoemacs-mode-20211012.142/ergoemacs-map-properties.el
+  ergoemacs-mode-20211012.142/ergoemacs-map.el
+  ergoemacs-mode-20211012.142/ergoemacs-mapkeymap.el
+  ergoemacs-mode-20211012.142/ergoemacs-mode-pkg.el
+  ergoemacs-mode-20211012.142/ergoemacs-mode.el
+  ergoemacs-mode-20211012.142/ergoemacs-mode.info
+  ergoemacs-mode-20211012.142/ergoemacs-test.el
+  ergoemacs-mode-20211012.142/ergoemacs-theme-engine.el
+  ergoemacs-mode-20211012.142/ergoemacs-themes.el
+  ergoemacs-mode-20211012.142/ergoemacs-translate.el
+  ergoemacs-mode-20211012.142/kbd-ergo.svg
+  ergoemacs-mode-20211012.142/kbd.svg
+  ergoemacs-mode-20211012.142/os_x_qwerty.dict.txt
+Built ergoemacs-mode in 6.797s, finished at 2021-10-12T02:36:43+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  569 Oct 11 18:24 packages/ergoemacs-mode-20211011.1305.entry
-1.1M -rw-r--r-- 1 root root 1.1M Oct 11 18:24 packages/ergoemacs-mode-20211011.1305.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 11 18:24 packages/ergoemacs-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  159 Oct 11 18:24 packages/ergoemacs-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  569 Oct 11 22:36 packages/ergoemacs-mode-20211011.1953.entry
+1.1M -rw-r--r-- 1 root root 1.1M Oct 11 22:36 packages/ergoemacs-mode-20211011.1953.tar
+4.0K -rw-r--r-- 1 root root  568 Oct 12 02:36 packages/ergoemacs-mode-20211012.142.entry
+1.1M -rw-r--r-- 1 root root 1.1M Oct 12 02:36 packages/ergoemacs-mode-20211012.142.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 12 02:36 packages/ergoemacs-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  159 Oct 12 02:36 packages/ergoemacs-mode-readme.txt

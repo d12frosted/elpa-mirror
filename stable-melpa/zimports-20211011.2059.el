@@ -1,8 +1,8 @@
 ;;; zimports.el --- Reformat python imports with zimports -*- lexical-binding: t -*-
 
 ;; URL: https://github.com/schmir/zimports.el
-;; Package-Version: 20211010.2049
-;; Package-Commit: 94437630174e0486a01e3974bd3ea09e5890857e
+;; Package-Version: 20211011.2059
+;; Package-Commit: 76cf76bdc871cb0454a6fc555aeb1aa94f1b6e57
 ;; Version: 0
 ;; Package-Requires: ((emacs "26.1") (projectile "2.1.0"))
 
@@ -38,7 +38,7 @@
 
 (defcustom zimports-args
   nil
-  "Additional command line arguments to pass to zimports"
+  "Additional command line arguments to pass to zimports."
   :type '(repeat string))
 
 (defun zimports--call-bin (input-buffer output-buffer error-buffer)
