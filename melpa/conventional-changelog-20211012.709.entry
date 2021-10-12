@@ -1,0 +1,13 @@
+(conventional-changelog .
+			[(20211012 709)
+			 ((emacs
+			   (27))
+			  (transient
+			   (0 3 6)))
+			 "Conventional Changelog Generator" single
+			 ((:commit . "6738d62795a02fe8f4620bd9852598db9a8dbc8f")
+			  (:authors
+			   ("liuyinz" . "liuyinz@gmail.com"))
+			  (:maintainer "liuyinz" . "liuyinz@gmail.com")
+			  (:keywords "tools")
+			  (:url . "https://github.com/liuyinz/emacs-conventional-changelog"))])
