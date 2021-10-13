@@ -1660,6 +1660,14 @@
 	  (:authors
 	   ("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	  (:keywords "extensions" "lisp"))])
+ (nano-agenda .
+	      [(0 1)
+	       ((emacs
+		 (27 1)))
+	       "N Λ N O agenda" tar
+	       ((:url . "https://github.com/rougier/nano-agenda")
+		(:keywords "convenience" "org-mode" "org-agenda")
+		(:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
  (nano-modeline .
 		[(0 2)
 		 ((emacs
