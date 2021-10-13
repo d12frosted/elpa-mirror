@@ -4,10 +4,10 @@
 
 ;; Author: Arne Brasseur <arne@arnebrasseur.net>
 ;; Keywords: lisp clojure edn parser
-;; Package-Version: 20210930.1615
-;; Package-Commit: b00eb42a1c10f19ba0f6ff5f8cb9e3ac05285dbf
-;; Package-Requires: ((emacs "26") (parseclj "1.0.4") (map "2"))
-;; Version: 1.0.4
+;; Package-Version: 20211013.452
+;; Package-Commit: e5ba280d1fb7b408d54062d4eac545326e850172
+;; Package-Requires: ((emacs "26") (parseclj "1.0.6") (map "2"))
+;; Version: 1.0.6
 
 ;; This file is not part of GNU Emacs.
 
@@ -91,22 +91,22 @@ on available options."
     (if (eq token-type :discard)
         stack
       (cons
-       (cl-case token-type
-         (:root children)
-         (:lparen children)
-         (:lbracket (apply #'vector children))
-         (:set (list 'edn-set children))
-         (:lbrace (let* ((kvs (seq-partition children 2))
-                         (hash-map (make-hash-table :test 'equal :size (length kvs))))
-                    (seq-do (lambda (pair)
-                              (puthash (car pair) (cadr pair) hash-map))
-                            kvs)
-                    hash-map))
-         (:tag (let* ((tag (intern (substring (alist-get :form opening-token) 1)))
-                      (reader (alist-get tag tag-readers :missing)))
-                 (when (eq :missing reader)
-                   (user-error "No reader for tag #%S in %S" tag (map-keys tag-readers)))
-                 (funcall reader (car children)))))
+       (cond
+        ((eq :root token-type) children)
+        ((eq :lparen token-type) children)
+        ((eq :lbracket token-type) (apply #'vector children))
+        ((eq :set token-type) (list 'edn-set children))
+        ((eq :lbrace token-type) (let* ((kvs (seq-partition children 2))
+                                        (hash-map (make-hash-table :test 'equal :size (length kvs))))
+                                   (seq-do (lambda (pair)
+                                             (puthash (car pair) (cadr pair) hash-map))
+                                           kvs)
+                                   hash-map))
+        ((eq :tag token-type) (let* ((tag (intern (substring (alist-get :form opening-token) 1)))
+                                     (reader (alist-get tag tag-readers :missing)))
+                                (when (eq :missing reader)
+                                  (user-error "No reader for tag #%S in %S" tag (map-keys tag-readers)))
+                                (funcall reader (car children)))))
        stack))))
 
 (defun parseedn-read (&optional tag-readers)
@@ -200,14 +200,14 @@ DATUM can be any Emacs Lisp value."
    ((stringp datum)
     (insert "\"")
     (seq-doseq (char datum)
-      (insert (cl-case char
-                (?\t "\\t")
-                (?\f "\\f")
-                (?\" "\\\"")
-                (?\r "\\r")
-                (?\n"foo\t" "\\n")
-                (?\\ "\\\\")
-                (t (char-to-string char)))))
+      (insert (cond
+               ((eq ?\t char) "\\t")
+               ((eq ?\f char) "\\f")
+               ((eq ?\" char) "\\\"")
+               ((eq ?\r char) "\\r")
+               ((eq ?\n char) "\\n")
+               ((eq ?\\ char) "\\\\")
+               (t (char-to-string char)))))
     (insert "\""))
 
    ((eq t datum)

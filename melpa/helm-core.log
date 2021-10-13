@@ -4,24 +4,26 @@ Source:  https://github.com/emacs-helm/helm.git
 
 Updating /mnt/store/melpa/working/helm-core/
 Checking out origin/HEAD
-Checking out b2bd8a2a938030c70e7da84bd49cadcc095ec2b9
+Checking out fddbef6ebcd1e63edf3db1646edd5083790f11f9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm-core/
-  to /tmp/helm-coreg6VSmb/helm-core-20211012.1257
+  to /tmp/helm-coremQHB7U/helm-core-20211013.445
     helm-core-pkg.el -> helm-core-pkg.el
     helm.el -> helm.el
     helm-lib.el -> helm-lib.el
     helm-source.el -> helm-source.el
     helm-multi-match.el -> helm-multi-match.el
-Created helm-core-20211012.1257.tar containing:
-  helm-core-20211012.1257/
-  helm-core-20211012.1257/helm-core-pkg.el
-  helm-core-20211012.1257/helm-lib.el
-  helm-core-20211012.1257/helm-multi-match.el
-  helm-core-20211012.1257/helm-source.el
-  helm-core-20211012.1257/helm.el
-Built helm-core in 4.880s, finished at 2021-10-13T03:02:59+0000
+Created helm-core-20211013.445.tar containing:
+  helm-core-20211013.445/
+  helm-core-20211013.445/helm-core-pkg.el
+  helm-core-20211013.445/helm-lib.el
+  helm-core-20211013.445/helm-multi-match.el
+  helm-core-20211013.445/helm-source.el
+  helm-core-20211013.445/helm.el
+Built helm-core in 5.592s, finished at 2021-10-13T06:25:54+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  194 Oct 13 03:02 packages/helm-core-20211012.1257.entry
 460K -rw-r--r-- 1 root root 460K Oct 13 03:02 packages/helm-core-20211012.1257.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 13 03:02 packages/helm-core-badge.svg
+4.0K -rw-r--r-- 1 root root  193 Oct 13 06:25 packages/helm-core-20211013.445.entry
+460K -rw-r--r-- 1 root root 460K Oct 13 06:25 packages/helm-core-20211013.445.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 13 06:25 packages/helm-core-badge.svg
