@@ -4,8 +4,8 @@
 
 ;; Author: Jorgen Schaefer <contact@jorgenschaefer.de>
 ;; URL: http://github.com/jorgenschaefer/pyvenv
-;; Package-Version: 20210527.829
-;; Package-Commit: 045ff9476dac26086a04538d9b7ba186aa8f0fd1
+;; Package-Version: 20211014.707
+;; Package-Commit: 31ea715f2164dd611e7fc77b26390ef3ca93509b
 ;; Version: 1.21
 ;; Keywords: Python, Virtualenv, Tools
 
@@ -545,7 +545,10 @@ Right now, this just checks if WORKON_HOME is set."
   (getenv "WORKON_HOME"))
 
 (defun pyvenv--virtual-env-bin-dirs (virtual-env)
-  (let ((virtual-env (directory-file-name virtual-env)))
+  (let ((virtual-env
+	 (if (string= "/" (directory-file-name virtual-env))
+	     ""
+	   (directory-file-name virtual-env))))
    (append
     ;; Unix
     (when (file-exists-p (format "%s/bin" virtual-env))

@@ -7,8 +7,8 @@
 ;; Description: Line annotation for changed and saved lines.
 ;; Keyword: annotation line number linum reminder highlight display
 ;; Version: 0.5.0
-;; Package-Version: 20210715.839
-;; Package-Commit: 97494f705c0208ccc8dd51d8c0366cb2bd5f228e
+;; Package-Version: 20211014.708
+;; Package-Commit: 28db5bfb53111f89a2873446af8b108246fbcbef
 ;; Package-Requires: ((emacs "24.4") (indicators "0.0.4") (fringe-helper "1.0.1"))
 ;; URL: https://github.com/emacs-vs/line-reminder
 
@@ -131,6 +131,9 @@
 (defvar-local line-reminder--before-max-pt -1
   "Record down the point max for out of range calculation.")
 
+(defvar-local line-reminder--cache-max-line nil
+  "Cache prevent counting max line twice.")
+
 (defvar-local line-reminder--before-begin-pt -1
   "Record down the before begin point.")
 
@@ -175,10 +178,6 @@
   "Return line number at POS with absolute as default."
   (line-number-at-pos pos t))
 
-(defun line-reminder--total-line ()
-  "Return current buffer's maxinum line."
-  (line-reminder--line-number-at-pos line-reminder--before-max-pt))
-
 (defun line-reminder--contain-list-string-regexp (in-list in-str)
   "Return non-nil if IN-STR is listed in IN-LIST.
 
@@ -189,18 +188,19 @@ This function uses `string-match-p'."
   "Return non-nil if IN-INT is listed in IN-LIST."
   (cl-some (lambda (elm) (= elm in-int)) in-list))
 
-(defun line-reminder--mark-line-by-linum (ln fc)
-  "Mark the line LN by using face name FC."
+(defun line-reminder--get-priority (face)
+  "Return priority by FACE."
+  (cl-case face
+    (`line-reminder-modified-sign-face line-reminder-modified-sign-priority)
+    (`line-reminder-saved-sign-face line-reminder-saved-sign-priority)))
+
+(defun line-reminder--mark-line-by-linum (line face)
+  "Mark the LINE by using FACE name."
   (let ((inhibit-message t) (message-log-max nil))
     (ind-create-indicator-at-line
-     ln :managed t :dynamic t :relative nil :fringe line-reminder-fringe-placed
-     :bitmap line-reminder-fringe :face fc
-     :priority
-     (cl-case fc
-       (line-reminder-modified-sign-face
-        line-reminder-modified-sign-priority)
-       (line-reminder-saved-sign-face
-        line-reminder-saved-sign-priority)))))
+     line :managed t :dynamic t :relative nil :fringe line-reminder-fringe-placed
+     :bitmap line-reminder-fringe :face face
+     :priority (line-reminder--get-priority face))))
 
 (defun line-reminder--ind-remove-indicator-at-line (line)
   "Remove the indicator on LINE."
@@ -212,10 +212,10 @@ This function uses `string-match-p'."
 (defun line-reminder--ind-delete-dups ()
   "Remove duplicates for indicators overlay once."
   (when (line-reminder--use-indicators-p)
-    (let ((record-lst '()) (new-lst '()) (mkr nil) (mkr-pos -1))
+    (let (record-lst new-lst mkr (mkr-pos -1))
       (dolist (ind ind-managed-absolute-indicators)
-        (setq mkr (car ind))
-        (setq mkr-pos (marker-position mkr))
+        (setq mkr (car ind)
+              mkr-pos (marker-position mkr))
         (if (line-reminder--contain-list-integer record-lst mkr-pos)
             (remove-overlays mkr-pos mkr-pos 'ind-indicator-absolute t)
           (push mkr-pos record-lst)
@@ -227,7 +227,7 @@ This function uses `string-match-p'."
   (save-excursion
     (goto-char pos)
     (let ((start-pt (1+ (line-beginning-position))) (end-pt (line-end-position))
-          (remove-inds '()))
+          remove-inds)
       (dolist (ind ind-managed-absolute-indicators)
         (let* ((mkr (car ind)) (mkr-pos (marker-position mkr)))
           (when (and (>= mkr-pos start-pt) (<= mkr-pos end-pt))
@@ -236,69 +236,67 @@ This function uses `string-match-p'."
         (setq ind-managed-absolute-indicators (remove ind ind-managed-absolute-indicators)))
       (remove-overlays start-pt end-pt 'ind-indicator-absolute t))))
 
-(defun line-reminder--add-line-to-change-line (ln)
-  "Add LN to change line list variable."
-  (push ln line-reminder--change-lines)
+(defun line-reminder--add-line-to-change-line (line)
+  "Add LINE to change line list variable."
+  (push line line-reminder--change-lines)
   (when (line-reminder--use-indicators-p)
-    (line-reminder--mark-line-by-linum ln 'line-reminder-modified-sign-face)))
+    (line-reminder--mark-line-by-linum line 'line-reminder-modified-sign-face)))
 
-(defun line-reminder--remove-line-from-change-line (ln)
-  "Remove LN from all line lists variable."
-  (setq line-reminder--change-lines (remove ln line-reminder--change-lines))
-  (setq line-reminder--saved-lines (remove ln line-reminder--saved-lines))
+(defun line-reminder--remove-line-from-change-line (line)
+  "Remove LINE from all line lists variable."
+  (setq line-reminder--change-lines (remove line line-reminder--change-lines)
+        line-reminder--saved-lines (remove line line-reminder--saved-lines))
   (when (line-reminder--use-indicators-p)
-    (line-reminder--ind-remove-indicator-at-line ln)))
+    (line-reminder--ind-remove-indicator-at-line line)))
 
 (defsubst line-reminder--linum-format-string-align-right ()
   "Return format string align on the right."
   (let ((w (length (number-to-string (count-lines (point-min) (point-max))))))
     (format "%%%dd" w)))
 
-(defsubst line-reminder--get-propertized-normal-sign (ln)
+(defsubst line-reminder--get-propertized-normal-sign (line)
   "Return a default propertized normal sign.
-LN : pass in by `linum-format' variable."
+LINE : pass in by `linum-format' variable."
   (propertize (format (format line-reminder-linum-format
                               (line-reminder--linum-format-string-align-right))
-                      ln)
+                      line)
               'face 'linum))
 
 (defsubst line-reminder--get-propertized-modified-sign ()
-  "Return a propertized modifoied sign."
+  "Return a propertized modified sign."
   (propertize line-reminder-modified-sign 'face 'line-reminder-modified-sign-face))
 
 (defsubst line-reminder--get-propertized-saved-sign ()
   "Return a propertized saved sign."
   (propertize line-reminder-saved-sign 'face 'line-reminder-saved-sign-face))
 
-(defun line-reminder--propertized-sign-by-type (type &optional ln)
+(defun line-reminder--propertized-sign-by-type (type &optional line)
   "Return a propertized sign string by type.
 TYPE : type of the propertize sign you want.
-LN : Pass is line number for normal sign."
+LINE : Pass is line number for normal sign."
   (cl-case type
-    (normal (if (not ln)
+    (normal (if (not line)
                 (error "Normal line but with no line number pass in")
               ;; Just return normal linum format.
-              (line-reminder--get-propertized-normal-sign ln)))
+              (line-reminder--get-propertized-normal-sign line)))
     (modified (line-reminder--get-propertized-modified-sign))
     (saved (line-reminder--get-propertized-saved-sign))))
 
-(defun line-reminder--linum-format (ln)
+(defun line-reminder--linum-format (line)
   "Core line reminder format string logic here.
-LN : pass in by `linum-format' variable."
+LINE : pass in by `linum-format' variable."
   (let ((reminder-sign "") (result-sign "")
-        (normal-sign (line-reminder--propertized-sign-by-type 'normal ln))
-        (is-sign-exists nil))
+        (normal-sign (line-reminder--propertized-sign-by-type 'normal line))
+        is-sign-exists)
     (cond
      ;; NOTE: Check if change lines list.
-     ((line-reminder--contain-list-integer line-reminder--change-lines ln)
-      (progn
-        (setq reminder-sign (line-reminder--propertized-sign-by-type 'modified))
-        (setq is-sign-exists t)))
+     ((line-reminder--contain-list-integer line-reminder--change-lines line)
+      (setq reminder-sign (line-reminder--propertized-sign-by-type 'modified)
+            is-sign-exists t))
      ;; NOTE: Check if saved lines list.
-     ((line-reminder--contain-list-integer line-reminder--saved-lines ln)
-      (progn
-        (setq reminder-sign (line-reminder--propertized-sign-by-type 'saved))
-        (setq is-sign-exists t))))
+     ((line-reminder--contain-list-integer line-reminder--saved-lines line)
+      (setq reminder-sign (line-reminder--propertized-sign-by-type 'saved)
+            is-sign-exists t)))
 
     ;; If the sign exist, then remove the last character from the normal sign.
     ;; So we can keep our the margin/padding the same without modifing the
@@ -325,7 +323,9 @@ LN : pass in by `linum-format' variable."
   (add-hook 'before-change-functions #'line-reminder--before-change-functions nil t)
   (add-hook 'after-change-functions #'line-reminder--after-change-functions nil t)
   (add-hook 'post-command-hook #'line-reminder--post-command nil t)
-  (advice-add 'save-buffer :after #'line-reminder--save-buffer))
+  (advice-add 'save-buffer :after #'line-reminder--save-buffer)
+  (add-hook 'window-scroll-functions 'line-reminder--scroll nil t)
+  (add-hook 'window-configuration-change-hook 'line-reminder--show-thumb nil t))
 
 (defun line-reminder--disable ()
   "Disable `line-reminder' in current buffer."
@@ -333,7 +333,9 @@ LN : pass in by `linum-format' variable."
   (remove-hook 'after-change-functions #'line-reminder--after-change-functions t)
   (remove-hook 'post-command-hook #'line-reminder--post-command t)
   (advice-remove 'save-buffer #'line-reminder--save-buffer)
-  (line-reminder-clear-reminder-lines-sign))
+  (line-reminder-clear-reminder-lines-sign)
+  (remove-hook 'window-scroll-functions 'line-reminder--scroll t)
+  (remove-hook 'window-configuration-change-hook 'line-reminder--show-thumb t))
 
 ;;;###autoload
 (define-minor-mode line-reminder-mode
@@ -359,9 +361,10 @@ LN : pass in by `linum-format' variable."
 (defun line-reminder-clear-reminder-lines-sign ()
   "Clear all the reminder lines' sign."
   (interactive)
-  (setq line-reminder--change-lines '())
-  (setq line-reminder--saved-lines '())
-  (line-reminder--ind-clear-indicators-absolute))
+  (setq line-reminder--change-lines nil
+        line-reminder--saved-lines nil)
+  (line-reminder--ind-clear-indicators-absolute)
+  (line-reminder--delete-thumb-overlays))
 
 (defun line-reminder--is-valid-line-reminder-situation (&optional beg end)
   "Return non-nil, if the conditions are matched.
@@ -396,7 +399,7 @@ Arguments BEG and END are passed in by before/after change functions."
 (defun line-reminder--remove-lines-out-range ()
   "Remove all the line in the list that are above the last/maxinum line \
 or less than zero line in current buffer."
-  (let ((last-line-in-buffer (line-reminder--total-line))
+  (let ((last-line-in-buffer line-reminder--cache-max-line)
         (check-lst (append line-reminder--change-lines line-reminder--saved-lines)))
     (dolist (line check-lst)
       ;; If is larger than last/max line in buffer.
@@ -429,7 +432,7 @@ or less than zero line in current buffer."
   (setq line-reminder--saved-lines
         (append line-reminder--saved-lines line-reminder--change-lines))
   ;; Clear the change lines.
-  (setq line-reminder--change-lines '())
+  (setq line-reminder--change-lines nil)
 
   (delete-dups line-reminder--saved-lines)  ; Removed save duplicates
   (line-reminder--remove-lines-out-range)  ; Remove out range.
@@ -445,10 +448,11 @@ or less than zero line in current buffer."
   (when (line-reminder--use-indicators-p)
     (save-excursion
       (line-reminder--ind-clear-indicators-absolute)
-      (dolist (ln line-reminder--change-lines)
-        (line-reminder--mark-line-by-linum ln 'line-reminder-modified-sign-face))
-      (dolist (ln line-reminder--saved-lines)
-        (line-reminder--mark-line-by-linum ln 'line-reminder-saved-sign-face)))))
+      (dolist (line line-reminder--change-lines)
+        (line-reminder--mark-line-by-linum line 'line-reminder-modified-sign-face))
+      (dolist (line line-reminder--saved-lines)
+        (line-reminder--mark-line-by-linum line 'line-reminder-saved-sign-face))
+      (line-reminder--show-thumb))))
 
 (defun line-reminder--before-change-functions (beg end)
   "Do stuff before buffer is changed with BEG and END."
@@ -472,7 +476,6 @@ or less than zero line in current buffer."
       ;; happening in the current buffer.
       (let ((begin-linum -1) (end-linum -1) (delta-lines 0)
             (starting-line -1)  ; Starting line for shift
-            (max-ln -1)
             (adding-p (< (+ beg len) end))
             ;; Flag to check if currently commenting or uncommenting.
             (comm-or-uncomm-p (and (not (= len 0)) (not (= beg end)))))
@@ -480,7 +483,8 @@ or less than zero line in current buffer."
             (setq line-reminder--before-max-pt (+ line-reminder--before-max-pt (- end beg)))
           (setq line-reminder--before-max-pt (- line-reminder--before-max-pt len)))
 
-        (setq max-ln (line-reminder--line-number-at-pos line-reminder--before-max-pt))
+        (setq line-reminder--cache-max-line
+              (line-reminder--line-number-at-pos line-reminder--before-max-pt))
 
         (if adding-p
             (setq end-linum (line-reminder--line-number-at-pos end)
@@ -493,7 +497,7 @@ or less than zero line in current buffer."
         (goto-char beg)
 
         (if comm-or-uncomm-p
-            (setq delta-lines (- max-ln line-reminder--before-max-linum))
+            (setq delta-lines (- line-reminder--cache-max-line line-reminder--before-max-linum))
           (setq delta-lines (- end-linum begin-linum))
           (unless adding-p (setq delta-lines (- 0 delta-lines))))
 
@@ -520,7 +524,10 @@ or less than zero line in current buffer."
         (delete-dups line-reminder--saved-lines)
 
         ;; Remove out range.
-        (line-reminder--remove-lines-out-range)))))
+        (line-reminder--remove-lines-out-range)
+
+        ;; Show thumbnail
+        (line-reminder--show-thumb)))))
 
 ;;
 ;; (@* "Save" )
@@ -549,9 +556,90 @@ or less than zero line in current buffer."
 (defun line-reminder--post-command ()
   "Post command for undo cancelling."
   (when (and line-reminder--undo-cancel-p (line-reminder--undo-root-p))
-    (setq line-reminder--change-lines '()
-          line-reminder--saved-lines '())
+    (setq line-reminder--change-lines nil
+          line-reminder--saved-lines nil)
     (line-reminder--ind-clear-indicators-absolute)))
+
+;;
+;; (@* "Minimap" )
+;;
+
+(defcustom line-reminder-thumbnail nil
+  "Show thumbnail in the opposite fringe from `line-reminder-fringe-placed'."
+  :type 'boolean
+  :group 'line-reminder)
+
+(fringe-helper-define 'line-reminder-thumbnail-bitmap nil
+  "xxx...." "xxx...." "xxx...." "xxx...." "xxx...." "xxx...." "xxx...."
+  "xxx...." "xxx...." "xxx...." "xxx...." "xxx...." "xxx...." "xxx...."
+  "xxx...." "xxx...." "xxx...." "xxx...." "xxx...." "xxx...." "xxx...."
+  "xxx...." "xxx....")
+
+(defvar-local line-reminder--thumbnail-overlays nil
+  "Overlays indicate thumbnail.")
+
+(defun line-reminder--oppose-fringe (fringe)
+  "Return opposite FRINGE type."
+  (cl-case fringe
+    (`left-fringe 'right-fringe)
+    (`right-fringe 'left-fringe)))
+
+(defun line-reminder--window-height ()
+  "`line-spacing'-aware calculation of `window-height'."
+  (if (and (fboundp 'window-pixel-height)
+           (fboundp 'line-pixel-height)
+           (display-graphic-p))
+      (/ (window-pixel-height) (line-pixel-height))
+    (window-height)))
+
+(defun line-reminder--create-thumb-overlay (face)
+  "Create single thumbnail overlay with FACE."
+  (let* ((left-or-right (line-reminder--oppose-fringe line-reminder-fringe-placed))
+         (pos (point))
+         ;; If `pos' is at the beginning of line, overlay of the
+         ;; fringe will be on the previous visual line.
+         (pos (if (= (line-end-position) pos) pos (1+ pos)))
+         (display-string `(,left-or-right line-reminder-thumbnail-bitmap ,face))
+         (after-string (propertize "." 'display display-string))
+         (overlay (make-overlay pos pos)))
+    (overlay-put overlay 'after-string after-string)
+    (overlay-put overlay 'fringe-helper t)
+    (overlay-put overlay 'window (selected-window))
+    (overlay-put overlay 'priority (line-reminder--get-priority face))
+    (push overlay line-reminder--thumbnail-overlays)
+    overlay))
+
+(defun line-reminder--make-thumb-overlays (list face)
+  "Make thumbnail overlays with LIST and FACE."
+  (when list
+    (let ((window-lines (float (line-reminder--window-height)))
+          (buffer-lines (float line-reminder--cache-max-line))
+          percent-line)
+      (when (< window-lines buffer-lines)
+        (save-excursion
+          (dolist (line list)
+            (setq percent-line (* (/ line buffer-lines) window-lines)
+                  percent-line (truncate percent-line))
+            (move-to-window-line 0)
+            (vertical-motion percent-line)
+            (line-reminder--create-thumb-overlay face)))))))
+
+(defun line-reminder--show-thumb (&rest _)
+  "Show thumbnail using overlays."
+  (when line-reminder-thumbnail
+    (line-reminder--delete-thumb-overlays)
+    (line-reminder--make-thumb-overlays line-reminder--change-lines 'line-reminder-modified-sign-face)
+    (line-reminder--make-thumb-overlays line-reminder--saved-lines 'line-reminder-saved-sign-face)))
+
+(defun line-reminder--delete-thumb-overlays ()
+  "Delete overlays of thumbnail."
+  (when line-reminder--thumbnail-overlays
+    (mapc 'delete-overlay line-reminder--thumbnail-overlays)
+    (setq line-reminder--thumbnail-overlays nil)))
+
+(defun line-reminder--scroll (window &rest _)
+  "Scroll WINDOW hook."
+  (with-selected-window window (line-reminder--show-thumb)))
 
 (provide 'line-reminder)
 ;;; line-reminder.el ends here

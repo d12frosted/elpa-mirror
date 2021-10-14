@@ -5,6 +5,8 @@
 ;; Author: Chris Perkins <chrisperkins99@gmail.com>
 ;; Created: 01 July, 2011
 ;; URL: http://github.com/grammati/windsize
+;; Package-Version: 20181029.2257
+;; Package-Commit: 62c2846bbe95b0a73e996c75e4a644d05f57aaaa
 ;; Version: 0.1
 ;; Keywords: window, resizing, convenience
 
