@@ -1,447 +1,535 @@
-<a href="https://melpa.org/#/kiwix"><img alt="MELPA"
-src="https://melpa.org/packages/kiwix-badge.svg"></a>
+Table of Contents
+─────────────────
 
-<a href="https://www.gnu.org/licenses/gpl-3.0"><img
-src="https://img.shields.io/badge/License-GPLv3-blue.svg" alt="License: GPL v3" /></a>
+1. Intro
+2. License & Contribution
+3. Install
+.. 1. Install Kiwix
+..... 1. Docker
+..... 2. Flatpak
+..... 3. Download
+..... 4. Linux
+..... 5. Web Browser
+.. 2. GNU ELPA & MELPA
+4. Setup kiwix-serve
+.. 1. Dockerize kiwix-tools (kiwix-serve, etc)
+..... 1. create a systemd unit for kiwix-serve Docker service
+5. Config
+.. 1. use-package
+..... 1. for local kiwix-serve server
+..... 2. for local Docker server
+..... 3. for remote Docker server
+6. Usage
+.. 1. Use in Emacs
+.. 2. Org Mode integration
+.. 3. EWW integration
+.. 4. Async search completion keywords candidates
+7. Changelog
+.. 1. DONE implemented async instantly input suggestion completion in Ivy
+8. Test
+9. How does this extension work?
+.. 1. integrate with Emacs
+..... 1. core
+..... 2. steps
+..... 3. auto start kiwix HTTP server
+..... 4. search
+..... 5. more advanced?
 
-<a href="https://cla-assistant.io/stardiviner/kiwix.el"><img
-src="https://cla-assistant.io/readme/badge/stardiviner/kiwix.el" alt="CLA
-assistant" /></a>
+
+<a href="<https://melpa.org/#/kiwix>"><img alt="MELPA"
+src="<https://melpa.org/packages/kiwix-badge.svg>"></a>
 
-* Intro
+<a href="<https://www.gnu.org/licenses/gpl-3.0>"><img
+src="<https://img.shields.io/badge/License-GPLv3-blue.svg>"
+alt="License: GPL v3" /></a>
 
-Searching offline Wikipedia through Kiwix.
+<a href="<https://cla-assistant.io/stardiviner/kiwix.el>"><img
+src="<https://cla-assistant.io/readme/badge/stardiviner/kiwix.el>"
+alt="CLA assistant" /></a>
 
-[[kiwix.el Ivy async completion.png]]
 
-[[kiwix.el with EWW.png]]
+1 Intro
+═══════
 
-This =kiwix.el= supports query =kiwix-tools='s =kiwix-serve= server through URL API.
+  Searching offline Wikipedia through Kiwix.
 
-The =kiwix-serve= server can be started from command-line if you have =kiwix-tools=
-installed, or from Docker container [fn:1].
 
-* License & Contribution
 
-This kiwix.el is under GPLv3 license. If you want to contribute or Pull Request,
-you need to have signed FSF copyright paper. Here is the start
 
-https://www.gnu.org/prep/maintain/maintain.html#Copyright-Papers
 
-* Install
+  This `kiwix.el' supports query `kiwix-tools''s `kiwix-serve' server
+  through URL API.
 
-** Install Kiwix
+  The `kiwix-serve' server can be started from command-line if you have
+  `kiwix-tools' installed, or from Docker container [1].
 
-*** Docker
 
-Reference this issue as background info: https://github.com/kiwix/kiwix-tools/issues/257
+2 License & Contribution
+════════════════════════
 
-#+begin_src sh :eval no
-docker pull kiwix/kiwix-serve
-#+end_src
+  This kiwix.el is under GPLv3 license. If you want to contribute or
+  Pull Request, you need to have signed FSF copyright paper. Here is the
+  start
 
-*** Flatpak
-    :PROPERTIES:
-    :URL:      https://wiki.kiwix.org/wiki/Flatpak
-    :END:
+  <https://www.gnu.org/prep/maintain/maintain.html#Copyright-Papers>
 
-#+begin_src org
-,#+begin_src sh :dir /sudo::/tmp
-# Install Flatpak (on Debian/Ubuntu)
-sudo pacman -S flatpak
 
-# Install Flathub (for the dependencies)
-flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+3 Install
+═════════
 
-# Download the Kiwix Desktop Flatpak
-wget https://download.kiwix.org/release/kiwix-desktop/org.kiwix.desktop.2.0-beta2.flatpak
-,#+end_src
+3.1 Install Kiwix
+─────────────────
 
-,#+begin_src sh :dir /tmp :eval no
-# Install Kiwix Desktop
-flatpak install org.kiwix.desktop.2.0-beta2.flatpak
-,#+end_src
+3.1.1 Docker
+╌╌╌╌╌╌╌╌╌╌╌╌
 
-,#+begin_src sh :eval no
-# Run Kiwix Desktop (but Kiwix should be available through your app launcher anyway)
-flatpak run org.kiwix.desktop
-,#+end_src
-#+end_src
+  Reference this issue as background info:
+  <https://github.com/kiwix/kiwix-tools/issues/257>
 
-*** Download
+  ┌────
+  │ docker pull kiwix/kiwix-serve
+  └────
 
-- https://sourceforge.net/projects/kiwix
-- http://www.kiwix.org/wiki/Software
 
-*** Linux
+3.1.2 Flatpak
+╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-**** Arch
+  ┌────
+  │ #+begin_src sh :dir /sudo::/tmp
+  │ # Install Flatpak (on Debian/Ubuntu)
+  │ sudo pacman -S flatpak
+  │ 
+  │ # Install Flathub (for the dependencies)
+  │ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+  │ 
+  │ # Download the Kiwix Desktop Flatpak
+  │ wget https://download.kiwix.org/release/kiwix-desktop/org.kiwix.desktop.2.0-beta2.flatpak
+  │ #+end_src
+  │ 
+  │ #+begin_src sh :dir /tmp :eval no
+  │ # Install Kiwix Desktop
+  │ flatpak install org.kiwix.desktop.2.0-beta2.flatpak
+  │ #+end_src
+  │ 
+  │ #+begin_src sh :eval no
+  │ # Run Kiwix Desktop (but Kiwix should be available through your app launcher anyway)
+  │ flatpak run org.kiwix.desktop
+  │ #+end_src
+  └────
 
-#+begin_src org
-,#+begin_src sh :dir /sudo:: :results none
-aurman -S --noconfirm kiwix-bin
-,#+end_src
-#+end_src
 
-*** Web Browser
+3.1.3 Download
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • <https://sourceforge.net/projects/kiwix>
+  • <http://www.kiwix.org/wiki/Software>
+
+
+3.1.4 Linux
+╌╌╌╌╌╌╌╌╌╌╌
+
+◊ 3.1.4.1 Arch
+
+  ┌────
+  │ #+begin_src sh :dir /sudo:: :results none
+  │ aurman -S --noconfirm kiwix-bin
+  │ #+end_src
+  └────
+
+
+3.1.5 Web Browser
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+◊ 3.1.5.1 Firefox
+
+  <https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline/>
+
+
+◊ 3.1.5.2 Chrome
+
+  <https://chrome.google.com/webstore/detail/kiwix/donaljnlmapmngakoipdmehbfcioahhk>
+
+
+3.2 GNU ELPA & MELPA
+────────────────────
+
+  kiwix.el now is available on GNU ELPA & MELPA.
+
+  • <https://elpa.gnu.org/packages/kiwix.html>
+  • <https://melpa.org/#/kiwix>
+
+  ┌────
+  │ (use-package kiwix
+  │   :ensure t
+  │   :after org
+  │   :commands (kiwix-launch-server kiwix-at-point)
+  │   :custom ((kiwix-server-use-docker t)
+  │ 	   (kiwix-server-port 8089)
+  │ 	   (kiwix-default-library "wikipedia_en_all_2016-02.zim"))
+  │   :hook (org-load . org-kiwix-setup-link))
+  └────
+
+
+4 Setup kiwix-serve
+═══════════════════
+
+  If you use kiwix-serve Docker container, you can create an Systemd
+  unit service to auto start Docker container. Here is the systemd unit
+  config file:
+
+
+4.1 Dockerize kiwix-tools (kiwix-serve, etc)
+────────────────────────────────────────────
+
+  ┌────
+  │ docker pull kiwix/kiwix-serve
+  └────
+
+  <https://github.com/kiwix/kiwix-tools/blob/master/docker/server/Dockerfile>
+
+  ┌────
+  │ #+begin_src dockerfile
+  │ FROM alpine:latest
+  │ LABEL maintainer Emmanuel Engelhart <kelson@kiwix.org>
+  │ 
+  │ # Install kiwix-serve
+  │ WORKDIR /
+  │ RUN apk add --no-cache curl bzip2
+  │ RUN curl -kL https://download.kiwix.org/release/kiwix-tools/kiwix-tools_linux-x86_64-1.1.0.tar.gz | tar -xz && \
+  │     mv kiwix-tools*/kiwix-serve /usr/local/bin && \
+  │     rm -r kiwix-tools*
+  │ 
+  │ # Configure kiwix-serve
+  │ VOLUME /data
+  │ ENV PORT 80
+  │ EXPOSE $PORT
+  │ 
+  │ # Run kiwix-serve
+  │ WORKDIR /data
+  │ ENTRYPOINT ["/usr/local/bin/kiwix-serve", "--port", "$PORT"]
+  │ #+end_src
+  └────
+
+  How to run?
+
+  Given `wikipedia.zim' () resides in `/tmp/zim/', execute the following
+  command:
+
+  ┌────
+  │ # if you don't have libraries index file "library.xml"
+  │ docker container run -d --name kiwix-serve -v /tmp/zim:/data -p 8080:80 kiwix/kiwix-serve wikipedia.zim
+  │ # if you have libraries index file "library.xml"
+  │ docker container run -d --name kiwix-serve -v /tmp/zim:/data -p 8080:80 kiwix/kiwix-serve --library library.xml
+  └────
+
+  *NOTE*: You can generate the libraries index file "library.xml" with
+   following command:
+
+  ┌────
+  │ cd ~/.www.kiwix.org/kiwix/nsz6b6tr.default/data/library/
+  │ 
+  │ for zim in $(ls *.zim); do
+  │   kiwix-manage library.xml add $zim
+  │ done
+  └────
+
+  *NOTE*: Using the libraries index file method, you can have all
+  libraries served in Docker container instead of just one library.
+
+  If you put ZIM files in other places not `/tmp/zim/', you can use
+  follow my command:
+
+  ┌────
+  │ docker container run -d \
+  │        --name kiwix-serve \
+  │        -v ~/.www.kiwix.org/kiwix/nsz6b6tr.default/data/library:/data \
+  │        -p 8089:80 \
+  │        kiwix/kiwix-serve wikipedia_zh_all_2015-11.zim
+  └────
+
+  Visit <http://localhost:8080> or <http://localhost:8089> (if you
+  exposed different port).
+
+  For easy launch the docker run command, you can add command alias in
+  shell profile:
+
+  ┌────
+  │ alias kiwix-docker-wikipedia_zh_all="docker container run --name kiwix-serve -d -v ~/.www.kiwix.org/kiwix/nsz6b6tr.default/data/library:/data -p 8089:80 kiwix/kiwix-serve wikipedia_zh_all_2015-11.zim"
+  │ alias kiwix-docker-wikipedia="docker container run --name kiwix-serve -d -v ~/.www.kiwix.org/kiwix/nsz6b6tr.default/data/library:/data -p 8089:80 kiwix/kiwix-serve wikipedia.zim"
+  └────
+
+
+4.1.1 create a systemd unit for kiwix-serve Docker service
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ┌────
+  │ #+begin_src systemd :tangle "~/.config/systemd/user/kiwix-serve.timer"
+  │ [Unit]
+  │ Description=Start kiwx-serve Docker container server at system startup after 5 minutes
+  │ 
+  │ [Timer]
+  │ OnBootSec=2min
+  │ Unit=kiwix-serve.service
+  │ 
+  │ [Install]
+  │ WantedBy=default.target
+  │ #+end_src
+  │ 
+  │ #+begin_src systemd :tangle "~/.config/systemd/user/kiwix-serve.service"
+  │ [Unit]
+  │ Description=kiwix-serve Docker server
+  │ After=docker.service
+  │ 
+  │ [Service]
+  │ Type=simple
+  │ ExecStart=/usr/bin/docker container start -i kiwix-serve
+  │ ExecStop=/usr/bin/docker container stop kiwix-serve
+  │ 
+  │ [Install]
+  │ WantedBy=default.target
+  │ #+end_src
+  └────
+
+  *NOTE*: You need to use option `-i' for `docker container start'
+  command to avoid systemd auto exit and stop `kiwix-serve' container.
+
+  ┌────
+  │ systemctl --user enable kiwix-serve.timer
+  │ systemctl --user status kiwix-serve.timer | cat
+  └────
+
+  ┌────
+  │ systemctl --user start kiwix-serve.service
+  └────
+
+  ┌────
+  │ systemctl --user status kiwix-serve.service | cat
+  └────
+
+  *NOTE*: Because `kiwix-serve.service' use command `docker container
+  start kiwix-serve', so that the container `kiwix-serve' must already
+  been created by [this command], you can check whether the container is
+  created:
+
+  ┌────
+  │ docker container ls | head -n 1
+  │ docker container ls --all | grep "kiwix-serve" | cat
+  └────
+
+
+[this command] See listing 1
+
+
+5 Config
+════════
+
+5.1 use-package
+───────────────
+
+5.1.1 for local kiwix-serve server
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ┌────
+  │ (use-package kiwix
+  │   :ensure t
+  │   :after org
+  │   :commands (kiwix-launch-server kiwix-at-point)
+  │   :bind (:map document-prefix ("w" . kiwix-at-point))
+  │   :custom ((kiwix-server-type 'kiwix-serve-local)
+  │ 	   (kiwix-server-url "http://127.0.0.1")
+  │ 	   (kiwix-server-port 8089)
+  │ 	   (kiwix-zim-dir (expand-file-name "/path/to/kiwix_zim_libraries")))
+  │   :hook (org-load . org-kiwix-setup-link)
+  │   :init (require 'org-kiwix)
+  │   :config (add-hook 'org-load-hook #'org-kiwix-setup-link))
+  └────
 
-**** Firefox
 
-https://addons.mozilla.org/en-US/firefox/addon/kiwix-offline/
+5.1.2 for local Docker server
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-**** Chrome
+  ┌────
+  │ (use-package kiwix
+  │   :ensure t
+  │   :after org
+  │   :commands (kiwix-launch-server kiwix-at-point)
+  │   :bind (:map document-prefix ("w" . kiwix-at-point))
+  │   :custom ((kiwix-server-type 'docker-local)
+  │ 	   (kiwix-server-url "http://127.0.0.1")
+  │ 	   (kiwix-server-port 8089)
+  │ 	   (kiwix-zim-dir (expand-file-name "/path/to/kiwix_zim_libraries")))
+  │   :hook (org-load . org-kiwix-setup-link)
+  │   :init (require 'org-kiwix)
+  │   :config (add-hook 'org-load-hook #'org-kiwix-setup-link))
+  └────
 
-https://chrome.google.com/webstore/detail/kiwix/donaljnlmapmngakoipdmehbfcioahhk
 
-** GNU ELPA & MELPA
+5.1.3 for remote Docker server
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-kiwix.el now is available on GNU ELPA & MELPA.
+  ┌────
+  │ (use-package kiwix
+  │   :ensure t
+  │   :after org
+  │   :commands (kiwix-launch-server kiwix-at-point)
+  │   :bind (:map document-prefix ("w" . kiwix-at-point))
+  │   :custom ((kiwix-server-type 'docker-remote)
+  │ 	   (kiwix-server-url "http://192.168.31.251")
+  │ 	   (kiwix-server-port 8089))
+  │   :hook (org-load . org-kiwix-setup-link)
+  │   :init (require 'org-kiwix)
+  │   :config (add-hook 'org-load-hook #'org-kiwix-setup-link))
+  └────
 
-- https://elpa.gnu.org/packages/kiwix.html
-- https://melpa.org/#/kiwix
-
-#+begin_src emacs-lisp :eval no
-(use-package kiwix
-  :ensure t
-  :after org
-  :commands (kiwix-launch-server kiwix-at-point)
-  :custom ((kiwix-server-use-docker t)
-           (kiwix-server-port 8089)
-           (kiwix-default-library "wikipedia_en_all_2016-02.zim"))
-  :hook (org-load . org-kiwix-setup-link))
-#+end_src
-
-* Setup kiwix-serve
-
-If you use kiwix-serve Docker container, you can create an Systemd unit service
-to auto start Docker container. Here is the systemd unit config file:
-
-** Dockerize kiwix-tools (kiwix-serve, etc)
-   :PROPERTIES:
-   :URL:      https://hub.docker.com/r/kiwix/kiwix-serve
-   :ISSUE:    https://github.com/kiwix/kiwix-tools/issues/257
-   :Pull-Request: https://github.com/kiwix/kiwix-tools/pull/268
-   :Attachments: screenshot_1.png screenshot_2.png
-   :ID:       e82e194f-2cc8-45eb-a378-f8bd6d7c6b1a
-   :END:
-
-#+begin_src sh :async
-docker pull kiwix/kiwix-serve
-#+end_src
-
-#+RESULTS[<2019-03-24 08:33:29> ace542940af6e465f90f0a3a8515e876fd267ad5]:
-#+begin_example
-Using default tag: latest
-latest: Pulling from kiwix/kiwix-serve
-8e402f1a9c57: Pulling fs layer
-7024865ce0e2: Pulling fs layer
-ad4c9cfc45dc: Pulling fs layer
-c4d62acdb073: Pulling fs layer
-c4d62acdb073: Waiting
-8e402f1a9c57: Verifying Checksum
-8e402f1a9c57: Download complete
-7024865ce0e2: Verifying Checksum
-7024865ce0e2: Download complete
-8e402f1a9c57: Pull complete
-7024865ce0e2: Pull complete
-c4d62acdb073: Verifying Checksum
-c4d62acdb073: Download complete
-ad4c9cfc45dc: Verifying Checksum
-ad4c9cfc45dc: Download complete
-ad4c9cfc45dc: Pull complete
-c4d62acdb073: Pull complete
-Digest: sha256:8837effa1a4fce750dc373d58b47063b368228331ccacb267c6ae7d3e311e66c
-Status: Downloaded newer image for kiwix/kiwix-serve:latest
-#+end_example
-
-https://github.com/kiwix/kiwix-tools/blob/master/docker/server/Dockerfile
-
-#+begin_src org
-,#+begin_src dockerfile
-FROM alpine:latest
-LABEL maintainer Emmanuel Engelhart <kelson@kiwix.org>
-
-# Install kiwix-serve
-WORKDIR /
-RUN apk add --no-cache curl bzip2
-RUN curl -kL https://download.kiwix.org/release/kiwix-tools/kiwix-tools_linux-x86_64-1.1.0.tar.gz | tar -xz && \
-    mv kiwix-tools*/kiwix-serve /usr/local/bin && \
-    rm -r kiwix-tools*
-
-# Configure kiwix-serve
-VOLUME /data
-ENV PORT 80
-EXPOSE $PORT
-
-# Run kiwix-serve
-WORKDIR /data
-ENTRYPOINT ["/usr/local/bin/kiwix-serve", "--port", "$PORT"]
-,#+end_src
-#+end_src
-
-How to run?
-
-Given =wikipedia.zim= ([[#ZIM][Zim database files]]) resides in =/tmp/zim/=, execute the
-following command:
-
-#+begin_src sh :eval no
-# if you don't have libraries index file "library.xml"
-docker container run -d --name kiwix-serve -v /tmp/zim:/data -p 8080:80 kiwix/kiwix-serve wikipedia.zim
-# if you have libraries index file "library.xml"
-docker container run -d --name kiwix-serve -v /tmp/zim:/data -p 8080:80 kiwix/kiwix-serve --library library.xml
-#+end_src
-
-*NOTE*: You can generate the libraries index file "library.xml" with following command:
-
-#+begin_src sh
-cd ~/.www.kiwix.org/kiwix/nsz6b6tr.default/data/library/
-
-for zim in $(ls *.zim); do
-  kiwix-manage library.xml add $zim
-done
-#+end_src
-
-*NOTE*: Using the libraries index file method, you can have all libraries served
-in Docker container instead of just one library.
-
-If you put ZIM files in other places not =/tmp/zim/=, you can use follow my command:
-
-#+NAME: create kiwix-serve container with custom port
-#+begin_src sh :session "*kiwix-serve*"
-docker container run -d \
-       --name kiwix-serve \
-       -v ~/.www.kiwix.org/kiwix/nsz6b6tr.default/data/library:/data \
-       -p 8089:80 \
-       kiwix/kiwix-serve wikipedia_zh_all_2015-11.zim
-#+end_src
-
-Visit http://localhost:8080 or http://localhost:8089 (if you exposed different
-port).
-
-For easy launch the docker run command, you can add command alias in shell profile:
-
-#+begin_src shell :eval no
-alias kiwix-docker-wikipedia_zh_all="docker container run --name kiwix-serve -d -v ~/.www.kiwix.org/kiwix/nsz6b6tr.default/data/library:/data -p 8089:80 kiwix/kiwix-serve wikipedia_zh_all_2015-11.zim"
-alias kiwix-docker-wikipedia="docker container run --name kiwix-serve -d -v ~/.www.kiwix.org/kiwix/nsz6b6tr.default/data/library:/data -p 8089:80 kiwix/kiwix-serve wikipedia.zim"
-#+end_src
-
-*** create a systemd unit for kiwix-serve Docker service
-
-#+begin_src org
-,#+begin_src systemd :tangle "~/.config/systemd/user/kiwix-serve.timer"
-[Unit]
-Description=Start kiwx-serve Docker container server at system startup after 5 minutes
-
-[Timer]
-OnBootSec=2min
-Unit=kiwix-serve.service
-
-[Install]
-WantedBy=default.target
-,#+end_src
-
-,#+begin_src systemd :tangle "~/.config/systemd/user/kiwix-serve.service"
-[Unit]
-Description=kiwix-serve Docker server
-After=docker.service
-
-[Service]
-Type=simple
-ExecStart=/usr/bin/docker container start -i kiwix-serve
-ExecStop=/usr/bin/docker container stop kiwix-serve
-
-[Install]
-WantedBy=default.target
-,#+end_src
-#+end_src
-
-*NOTE*: You need to use option =-i= for =docker container start= command to avoid
-systemd auto exit and stop =kiwix-serve= container.
-
-#+begin_src sh :results output
-systemctl --user enable kiwix-serve.timer
-systemctl --user status kiwix-serve.timer | cat
-#+end_src
-
-#+RESULTS[<2019-03-24 11:45:40> 6470584177f091e79067f9fd96a97c340e00a41f]:
-: ● kiwix-serve.timer - Start kiwx-serve Docker container server at system startup after 5 minutes
-:    Loaded: loaded (/home/stardiviner/.config/systemd/user/kiwix-serve.timer; enabled; vendor preset: enabled)
-:    Active: inactive (dead)
-:   Trigger: n/a
-
-#+begin_src sh
-systemctl --user start kiwix-serve.service
-#+end_src
-
-#+begin_src sh
-systemctl --user status kiwix-serve.service | cat
-#+end_src
-
-#+RESULTS[<2019-03-24 12:00:49> 10a33f8521fa2c72e8c1107559e1fb18b58d7da2]:
-: ● kiwix-serve.service - kiwix-serve Docker server
-:    Loaded: loaded (/home/stardiviner/.config/systemd/user/kiwix-serve.service; disabled; vendor preset: enabled)
-:    Active: active (running) since Sun 2019-03-24 12:00:14 CST; 34s ago
-:  Main PID: 2587 (docker)
-:    CGroup: /user.slice/user-1000.slice/user@1000.service/kiwix-serve.service
-:            └─2587 /usr/bin/docker container start -i kiwix-serve
-: 
-: Mar 24 12:00:14 dark systemd[694]: Started kiwix-serve Docker server.
-
-*NOTE*: Because =kiwix-serve.service= use command =docker container start
-kiwix-serve=, so that the container =kiwix-serve= must already been created by
-[[create kiwix-serve container with custom port][this command]], you can check whether the container is created:
-
-#+begin_src sh :results output
-docker container ls | head -n 1
-docker container ls --all | grep "kiwix-serve" | cat
-#+end_src
-
-#+RESULTS[<2019-03-24 11:50:36> e28015e8e78015623bd53ae596015949dc80c549]:
-: CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS               NAMES
-: b47533ecd7f6        kiwix/kiwix-serve               "/usr/local/bin/kiwi…"   3 hours ago         Exited (137) 2 minutes ago                                      kiwix-serve
-: e2f201e655ac        kiwix/kiwix-serve               "/usr/local/bin/kiwi…"   3 hours ago         Created                                                         distracted_hofstadter
-
-* Config
-
-** use-package
-
-#+begin_src emacs-lisp
-(use-package kiwix
-  :ensure t
-  :after org
-  :custom ((kiwix-server-use-docker t)
-           (kiwix-server-port 8089)
-           (kiwix-default-library "wikipedia_en_all_2016-02.zim") ; "wikipedia_zh_all_2015-11.zim"
-           (kiwix-default-browser-function 'eww))
-  :commands (kiwix-launch-server kiwix-at-point)
-  :init (require 'org-kiwix)
-  :config (add-hook 'org-load-hook #'org-kiwix-setup-link))
-#+end_src
-
-* Usage
-
-** Use in Emacs
-
-=[M-x kiwix-at-point]=
-
-** Org Mode integration
-
-#+begin_src emacs-lisp
-(require 'org-kiwix)
-#+end_src
-
-=[C-c C-l]= to insert link.
-
-The link format is like this:
-
-#+BEGIN_EXAMPLE
-[[wikipedia:(library):search][description]]
-#+END_EXAMPLE
-
-The =(library)= can be =wikipedia_en=, =wikipedia_zh=, =wiktionary_en=, or =en=, =zh= etc.
-
-** EWW integration
-
-Set following option in your config to use EWW in Emacs as your default _for
-Kiwix only_.
-
-#+begin_src emacs-lisp
-(setq kiwix-default-browser-function 'eww-browse-url)
-#+end_src
-
-#+RESULTS[<2019-10-15 18:32:09> 3b9749599d792fb0ea5cd3566095ae16f1fc7f30]:
-: eww-browse-url
-
-[[kiwix.el with EWW.png]]
-
-** Async search completion keywords candidates
-
-[[kiwix.el Ivy async completion.png]]
-
-* Changelog
-
-** DONE implemented async instantly input suggestion completion in Ivy
-   CLOSED: [2019-10-08 Tue 22:07]
-   :LOGBOOK:
-   - State "DONE"       from              [2019-10-08 Tue 22:07]
-   :END:
-
-This feature is very subtle :)
-
-* Test
-
-- [[wikipedia:Operations%20Research][Operations Research]] :: query contains space.
-- [[wikipedia:Operations%20research][Operations research]] :: the second word is not capitalized.
-- [[wikipedia:%E4%B8%AD%E5%9B%BD][中国]] :: non-english query
-- [[wikipedia:meta-circular%20interpreter][meta-circular interpreter]] :: only capitalize the first word.
-
-* How does this extension work?
-
-** integrate with Emacs
-
-*** core
-
-I found Kiwix will return a URL like this:
-
-#+BEGIN_EXAMPLE
-http://127.0.0.1:8000/wikinews_en_all_2015-11/A/Big_Linux_Beta_3_released.html
-____________________  _____________________  __  _____________________________
-
-< server address >    < library >                <one of the returned results>
-#+END_EXAMPLE
-
-*** steps
-
-1. auto start ~kiwix-serve~ HTTP server.
-2. query/search on kiwix server.
-   1. open kiwix server index page to input to search. (But this is slow, waste time)
-   2. use http language binding library to query on kiwix HTTP server.
-      1. select library in library list page.
-      2. after load a library, simulate type query string in the search input
-         box, the submit to search.
-      3. return the result page HTML or page URL.
-      4. view the result with page URL or page HTML with Emacs browser.
-
-*** auto start kiwix HTTP server
-
-Here is a simple script, you can put it in Linux "*auto-start*".
-
-#+begin_src org
-,#+BEGIN_SRC sh :tangle "~/scripts/kiwix-server.sh"
-#!/usr/bin/env sh
-
-/usr/lib/kiwix/bin/kiwix-serve --library --port=8000 --daemon ~/.www.kiwix.org/kiwix/8ip89lik.default/data/library/library.xml
-,#+END_SRC
-#+end_src
-
-*** search
-
-1. kiwix-search command -> return a list of results.
-
-   #+begin_src org
-   ,#+BEGIN_SRC sh
-   /usr/lib/kiwix/bin/kiwix-search ~/.www.kiwix.org/kiwix/8ip89lik.default/data/index/wikinews_en_all_2015-11.zim.idx linux
-   ,#+END_SRC
-   #+end_src
-
-2. use one element of list as part of the URL.
-
-   http://127.0.0.1:8000/wikinews_en_all_2015-11/A/Big_Linux_Beta_3_released.html
-
-   #+begin_src org
-   ,#+BEGIN_SRC emacs-lisp
-   (browse-url (concat "http://127.0.0.1:8000/" "LIBRARY" "/A/" "RESULT"))
-   ,#+END_SRC
-   #+end_src
-
-*** more advanced?
-
-If you want more advanced functions, you can use communicate kiwix HTTP server
-with RESTful API.
-
-- I don't know what Emacs library to use.
-- Or you can use other language to do this, like Ruby or Python etc.
-
-* Footnotes
-
-[fn:1] https://github.com/kiwix/kiwix-tools/issues/257
+
+6 Usage
+═══════
+
+6.1 Use in Emacs
+────────────────
+
+  `[M-x kiwix-at-point]'
+
+
+6.2 Org Mode integration
+────────────────────────
+
+  ┌────
+  │ (require 'org-kiwix)
+  └────
+
+  `[C-c C-l]' to insert link.
+
+  The link format is like this:
+
+  ┌────
+  │ [[wikipedia:(library):search][description]]
+  └────
+
+  The `(library)' can be `wikipedia_en', `wikipedia_zh',
+  `wiktionary_en', or `en', `zh' etc.
+
+
+6.3 EWW integration
+───────────────────
+
+  Set following option in your config to use EWW in Emacs as your
+  default _for Kiwix only_.
+
+  ┌────
+  │ (setq kiwix-default-browser-function 'eww-browse-url)
+  └────
+
+
+6.4 Async search completion keywords candidates
+───────────────────────────────────────────────
+
+
+7 Changelog
+═══════════
+
+7.1 DONE implemented async instantly input suggestion completion in Ivy
+───────────────────────────────────────────────────────────────────────
+
+  This feature is very subtle :)
+
+
+8 Test
+══════
+
+
+        query contains space.
+
+        the second word is not capitalized.
+
+        non-english query
+
+        only capitalize the first word.
+
+
+9 How does this extension work?
+═══════════════════════════════
+
+9.1 integrate with Emacs
+────────────────────────
+
+9.1.1 core
+╌╌╌╌╌╌╌╌╌╌
+
+  I found Kiwix will return a URL like this:
+
+  ┌────
+  │ http://127.0.0.1:8000/wikinews_en_all_2015-11/A/Big_Linux_Beta_3_released.html
+  │ ____________________  _____________________  __  _____________________________
+  │ 
+  │ < server address >    < library >                <one of the returned results>
+  └────
+
+
+9.1.2 steps
+╌╌╌╌╌╌╌╌╌╌╌
+
+  1. auto start `kiwix-serve' HTTP server.
+  2. query/search on kiwix server.
+     1. open kiwix server index page to input to search. (But this is
+        slow, waste time)
+     2. use http language binding library to query on kiwix HTTP server.
+        1. select library in library list page.
+        2. after load a library, simulate type query string in the
+           search input box, the submit to search.
+        3. return the result page HTML or page URL.
+        4. view the result with page URL or page HTML with Emacs
+           browser.
+
+
+9.1.3 auto start kiwix HTTP server
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Here is a simple script, you can put it in Linux "*auto-start*".
+
+  ┌────
+  │ #+BEGIN_SRC sh :tangle "~/scripts/kiwix-server.sh"
+  │ #!/usr/bin/env sh
+  │ 
+  │ /usr/lib/kiwix/bin/kiwix-serve --library --port=8000 --daemon ~/.www.kiwix.org/kiwix/8ip89lik.default/data/library/library.xml
+  │ #+END_SRC
+  └────
+
+
+9.1.4 search
+╌╌╌╌╌╌╌╌╌╌╌╌
+
+  1. kiwix-search command -> return a list of results.
+
+     ┌────
+     │ #+BEGIN_SRC sh
+     │ /usr/lib/kiwix/bin/kiwix-search ~/.www.kiwix.org/kiwix/8ip89lik.default/data/index/wikinews_en_all_2015-11.zim.idx linux
+     │ #+END_SRC
+     └────
+
+  2. use one element of list as part of the URL.
+
+     <http://127.0.0.1:8000/wikinews_en_all_2015-11/A/Big_Linux_Beta_3_released.html>
+
+     ┌────
+     │ #+BEGIN_SRC emacs-lisp
+     │ (browse-url (concat "http://127.0.0.1:8000/" "LIBRARY" "/A/" "RESULT"))
+     │ #+END_SRC
+     └────
+
+
+9.1.5 more advanced?
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  If you want more advanced functions, you can use communicate kiwix
+  HTTP server with RESTful API.
+
+  • I don't know what Emacs library to use.
+  • Or you can use other language to do this, like Ruby or Python etc.
+
+
+
+Footnotes
+─────────
+
+[1] <https://github.com/kiwix/kiwix-tools/issues/257>

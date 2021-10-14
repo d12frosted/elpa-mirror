@@ -227,7 +227,7 @@
 	      ("Serghei Iakovlev" . "egrep@protonmail.ch"))
 	     (:keywords "languages"))])
  (boxy .
-       [(1 0 2)
+       [(1 0 3)
 	((emacs
 	  (26 1)))
 	"A boxy layout framework" tar
@@ -1359,19 +1359,17 @@
 	   ("Ivan Kanis" . "ivan@kanis.fr"))
 	  (:maintainer "Ivan Kanis" . "ivan@kanis.fr"))])
  (kiwix .
-	[(1 1 0)
+	[(1 1 4)
 	 ((emacs
-	   (24 4))
+	   (25 1))
 	  (request
-	   (0 3 0))
-	  (elquery
-	   (0 1 0)))
+	   (0 3 0)))
 	 "Searching offline Wikipedia through Kiwix." tar
 	 ((:url . "https://github.com/stardiviner/kiwix.el")
+	  (:keywords "kiwix" "wikipedia")
 	  (:maintainer "stardiviner" . "numbchild@gmail.com")
 	  (:authors
-	   ("stardiviner" . "numbchild@gmail.com"))
-	  (:keywords "kiwix" "wikipedia"))])
+	   ("stardiviner" . "numbchild@gmail.com")))])
  (kmb .
       [(0 1)
        ((emacs
@@ -1801,11 +1799,13 @@
 	      ("Ian Dunn" . "dunni@gnu.org"))
 	     (:keywords "convenience" "text" "org"))])
  (org-real .
-	   [(1 0 2)
+	   [(1 0 3)
 	    ((emacs
 	      (26 1))
 	     (boxy
-	      (1 0)))
+	      (1 0))
+	     (org
+	      (9 3)))
 	    "Keep track of real things as org-mode links" tar
 	    ((:url . "https://gitlab.com/tygrdev/org-real")
 	     (:keywords "tools")
