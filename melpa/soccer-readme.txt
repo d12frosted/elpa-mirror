@@ -4,7 +4,7 @@ Currently it works for
 
 1. Premier League (England)
 2. La Liga (Spain)
-3. League 1 (France)
+3. Ligue 1 (France)
 
 Other leagues could be easily included and would be in future.
 
@@ -25,6 +25,7 @@ soccer-fixtures-full-in-org	Full fixtures saved in org file
 soccer-results-last	        Result of the last match
 soccer-results-last-5	Results of the last 5 matches
 soccer-results-full-in-org	Full list of results in org file
-soccer-table                Full Ranking table
-soccer-table-top-4          Ranking table with top 4 teams
-soccer-table-bottom-4       Ranking table with bottom 4 teams
+soccer-table                 Full Ranking table
+soccer-table-top-4           Ranking table with top 4 teams
+soccer-table-bottom-4        Ranking table with bottom 4 teams
+soccer-scorecard             Scorecard of a match
