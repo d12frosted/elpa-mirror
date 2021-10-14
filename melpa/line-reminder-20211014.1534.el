@@ -7,8 +7,8 @@
 ;; Description: Line annotation for changed and saved lines.
 ;; Keyword: annotation line number linum reminder highlight display
 ;; Version: 0.5.0
-;; Package-Version: 20211014.947
-;; Package-Commit: 37514f0f86198cbc79df83ccd0fa47ce5e9c2b16
+;; Package-Version: 20211014.1534
+;; Package-Commit: f3d690c0f3bfa1c9093d0b9cacd33166d84b1443
 ;; Package-Requires: ((emacs "24.4") (indicators "0.0.4") (fringe-helper "1.0.1"))
 ;; URL: https://github.com/emacs-vs/line-reminder
 
@@ -59,13 +59,23 @@
   "Modifed sign face."
   :group 'line-reminder)
 
-(defcustom line-reminder-modified-sign-priority 10
-  "Display priority for modified sign."
+(defcustom line-reminder-modified-sign-priority 20
+  "Priority for modified lines overlays."
   :type 'integer
   :group 'line-reminder)
 
-(defcustom line-reminder-saved-sign-priority 1
-  "Display priority for saved sign."
+(defcustom line-reminder-saved-sign-priority 10
+  "Priority for saved lines overlays."
+  :type 'integer
+  :group 'line-reminder)
+
+(defcustom line-reminder-modified-sign-thumb-priority 20
+  "Priority for modified lines thumbnail overlays."
+  :type 'integer
+  :group 'line-reminder)
+
+(defcustom line-reminder-saved-sign-thumb-priority 10
+  "Priority for saved lines thumbnail overlays."
   :type 'integer
   :group 'line-reminder)
 
@@ -81,6 +91,16 @@
 
 (defcustom line-reminder-saved-sign "▐"
   "Saved sign."
+  :type 'string
+  :group 'line-reminder)
+
+(defcustom line-reminder-modified-sign-thumb "▐"
+  "String to display modified line thumbnail."
+  :type 'string
+  :group 'line-reminder)
+
+(defcustom line-reminder-saved-sign-thumb "▐"
+  "String to display saved line thumbnail."
   :type 'string
   :group 'line-reminder)
 
@@ -185,15 +205,21 @@
 This function uses `string-match-p'."
   (cl-some (lambda (elm) (string-match-p elm in-str)) in-list))
 
-(defun line-reminder--contain-list-integer (in-list in-int)
-  "Return non-nil if IN-INT is listed in IN-LIST."
-  (cl-some (lambda (elm) (= elm in-int)) in-list))
+(defun line-reminder--get-sign (face)
+  "Return string sign priority by FACE."
+  (cl-case face
+    (`line-reminder-modified-sign-face line-reminder-modified-sign)
+    (`line-reminder-saved-sign-face line-reminder-saved-sign)
+    (`line-reminder-modified-sign-thumb-face line-reminder-modified-sign-thumb)
+    (`line-reminder-saved-sign-thumb-face line-reminder-saved-sign-thumb)))
 
 (defun line-reminder--get-priority (face)
-  "Return priority by FACE."
+  "Return overlay priority by FACE."
   (cl-case face
     (`line-reminder-modified-sign-face line-reminder-modified-sign-priority)
-    (`line-reminder-saved-sign-face line-reminder-saved-sign-priority)))
+    (`line-reminder-saved-sign-face line-reminder-saved-sign-priority)
+    (`line-reminder-modified-sign-thumb-face line-reminder-modified-sign-thumb-priority)
+    (`line-reminder-saved-sign-thumb-face line-reminder-saved-sign-thumb-priority)))
 
 (defun line-reminder--mark-line-by-linum (line face)
   "Mark the LINE by using FACE name."
@@ -203,11 +229,15 @@ This function uses `string-match-p'."
      :bitmap line-reminder-bitmap :face face
      :priority (line-reminder--get-priority face))))
 
+(defun line-reminder--goto-line (line)
+  "Jump to LINE."
+  (goto-char (point-min))
+  (forward-line (1- line)))
+
 (defun line-reminder--ind-remove-indicator-at-line (line)
   "Remove the indicator on LINE."
   (save-excursion
-    (goto-char (point-min))
-    (forward-line (1- line))
+    (line-reminder--goto-line line)
     (line-reminder--ind-remove-indicator (point))))
 
 (defun line-reminder--ind-delete-dups ()
@@ -217,7 +247,7 @@ This function uses `string-match-p'."
       (dolist (ind ind-managed-absolute-indicators)
         (setq mkr (car ind)
               mkr-pos (marker-position mkr))
-        (if (line-reminder--contain-list-integer record-lst mkr-pos)
+        (if (memq mkr-pos record-lst)
             (remove-overlays mkr-pos mkr-pos 'ind-indicator-absolute t)
           (push mkr-pos record-lst)
           (push ind new-lst)))
@@ -240,6 +270,7 @@ This function uses `string-match-p'."
 (defun line-reminder--add-line-to-change-line (line)
   "Add LINE to change line list variable."
   (push line line-reminder--change-lines)
+  (setq line-reminder--saved-lines (remove line line-reminder--saved-lines))
   (when (line-reminder--use-indicators-p)
     (line-reminder--mark-line-by-linum line 'line-reminder-modified-sign-face)))
 
@@ -291,11 +322,11 @@ LINE : pass in by `linum-format' variable."
         is-sign-exists)
     (cond
      ;; NOTE: Check if change lines list.
-     ((line-reminder--contain-list-integer line-reminder--change-lines line)
+     ((memq line line-reminder--change-lines)
       (setq reminder-sign (line-reminder--propertized-sign-by-type 'modified)
             is-sign-exists t))
      ;; NOTE: Check if saved lines list.
-     ((line-reminder--contain-list-integer line-reminder--saved-lines line)
+     ((memq line line-reminder--saved-lines)
       (setq reminder-sign (line-reminder--propertized-sign-by-type 'saved)
             is-sign-exists t)))
 
@@ -389,13 +420,9 @@ Arguments BEG and END are passed in by before/after change functions."
 (defun line-reminder--shift-all-lines (start delta)
   "Shift all `change` and `saved` lines by from START line with DELTA lines value."
   (setq line-reminder--change-lines
-        (line-reminder--shift-all-lines-list line-reminder--change-lines
-                                             start
-                                             delta))
+        (line-reminder--shift-all-lines-list line-reminder--change-lines start delta))
   (setq line-reminder--saved-lines
-        (line-reminder--shift-all-lines-list line-reminder--saved-lines
-                                             start
-                                             delta)))
+        (line-reminder--shift-all-lines-list line-reminder--saved-lines start delta)))
 
 (defun line-reminder--remove-lines-out-range ()
   "Remove all the line in the list that are above the last/maxinum line \
@@ -525,7 +552,10 @@ or less than zero line in current buffer."
         (delete-dups line-reminder--saved-lines)
 
         ;; Remove out range.
-        (line-reminder--remove-lines-out-range)))))
+        (line-reminder--remove-lines-out-range)
+
+        ;; Display thumbnail
+        (line-reminder--start-show-thumb)))))
 
 ;;
 ;; (@* "Save" )
@@ -559,7 +589,7 @@ or less than zero line in current buffer."
     (line-reminder--ind-clear-indicators-absolute)))
 
 ;;
-;; (@* "Minimap" )
+;; (@* "Thumbnail" )
 ;;
 
 (defcustom line-reminder-thumbnail nil
@@ -573,14 +603,24 @@ or less than zero line in current buffer."
   :group 'line-reminder)
 
 (fringe-helper-define 'line-reminder--default-thumbnail-bitmap nil
-  "xxx...." "xxx...." "xxx...." "xxx...." "xxx...." "xxx...." "xxx...."
-  "xxx...." "xxx...." "xxx...." "xxx...." "xxx...." "xxx...." "xxx...."
-  "xxx...." "xxx...." "xxx...." "xxx...." "xxx...." "xxx...." "xxx...."
-  "xxx...." "xxx....")
+  "xx...." "xx...." "xx...." "xx...." "xx...." "xx...." "xx...."
+  "xx...." "xx...." "xx...." "xx...." "xx...." "xx...." "xx...."
+  "xx...." "xx...." "xx...." "xx...." "xx...." "xx...." "xx...."
+  "xx...." "xx....")
 
 (defcustom line-reminder-thumbnail-bitmap 'line-reminder--default-thumbnail-bitmap
   "Bitmap for thumbnail."
   :type 'symbol
+  :group 'line-reminder)
+
+(defface line-reminder-modified-sign-thumb-face
+  `((t :foreground "#EFF284"))
+  "Modifed sign face."
+  :group 'line-reminder)
+
+(defface line-reminder-saved-sign-thumb-face
+  `((t :foreground "#577430"))
+  "Modifed sign face."
   :group 'line-reminder)
 
 (defvar-local line-reminder--thumbnail-overlays nil
@@ -600,8 +640,24 @@ or less than zero line in current buffer."
       (/ (window-pixel-height) (line-pixel-height))
     (window-height)))
 
-(defun line-reminder--create-thumb-overlay (face)
-  "Create single thumbnail overlay with FACE."
+(defun line-reminder--create-thumb-tty-overlay (face)
+  "Create single tty thumbnail overlay with FACE."
+  (let* ((left-or-right (line-reminder--oppose-fringe line-reminder-fringe-placed))
+         (msg (line-reminder--get-sign face))
+         (len (length msg))
+         (msg (progn (add-face-text-property 0 len face nil msg) msg))
+         (display-string `(space :align-to (- ,left-or-right 2)))
+         (after-string (concat (propertize "." 'display display-string) msg))
+         (overlay (make-overlay (line-beginning-position) (line-end-position))))
+    (put-text-property 0 1 'cursor t after-string)
+    (overlay-put overlay 'after-string after-string)
+    (overlay-put overlay 'window (selected-window))
+    (overlay-put overlay 'priority (line-reminder--get-priority face))
+    (push overlay line-reminder--thumbnail-overlays)
+    overlay))
+
+(defun line-reminder--create-thumb-fringe-overlay (face)
+  "Create single fringe thumbnail overlay with FACE."
   (let* ((left-or-right (line-reminder--oppose-fringe line-reminder-fringe-placed))
          (pos (point))
          ;; If `pos' is at the beginning of line, overlay of the
@@ -617,6 +673,11 @@ or less than zero line in current buffer."
     (push overlay line-reminder--thumbnail-overlays)
     overlay))
 
+(defun line-reminder--create-thumb-overlay (face)
+  "Create single thumbnail overlay with FACE."
+  (if (display-graphic-p) (line-reminder--create-thumb-fringe-overlay face)
+    (line-reminder--create-thumb-tty-overlay face)))
+
 (defun line-reminder--make-thumb-overlays (list face)
   "Make thumbnail overlays with LIST and FACE."
   (when list
@@ -627,7 +688,7 @@ or less than zero line in current buffer."
         (save-excursion
           (dolist (line list)
             (setq percent-line (* (/ line buffer-lines) window-lines)
-                  percent-line (truncate percent-line))
+                  percent-line (floor percent-line))
             (move-to-window-line 0)
             (when (= (vertical-motion percent-line) percent-line)
               (line-reminder--create-thumb-overlay face))))))))
@@ -635,8 +696,8 @@ or less than zero line in current buffer."
 (defun line-reminder--show-thumb (window &rest _)
   "Show thumbnail using overlays inside WINDOW."
   (with-selected-window window
-    (line-reminder--make-thumb-overlays line-reminder--saved-lines 'line-reminder-saved-sign-face)
-    (line-reminder--make-thumb-overlays line-reminder--change-lines 'line-reminder-modified-sign-face)))
+    (line-reminder--make-thumb-overlays line-reminder--saved-lines 'line-reminder-saved-sign-thumb-face)
+    (line-reminder--make-thumb-overlays line-reminder--change-lines 'line-reminder-modified-sign-thumb-face)))
 
 (defvar-local line-reminder--thumbnail-timer nil
   "Timer to show thumbnail.")

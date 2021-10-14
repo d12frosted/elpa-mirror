@@ -5,8 +5,8 @@
 
 ;; Author: Kijima Daigo <norimaking777@gmail.com>
 ;; Version: 1.0.0
-;; Package-Version: 20210601.1327
-;; Package-Commit: b2c24f42f2fae63433787150f77b397d69ce0e5b
+;; Package-Version: 20211014.1617
+;; Package-Commit: e765b1067ced891a90ba0478af7fe675cff9b713
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: link format browser convenience
 ;; URL: https://github.com/kijimaD/create-link
@@ -41,6 +41,10 @@
 
 (defvar w3m-current-url)
 (declare-function w3m-current-title "ext:w3m-util")
+(declare-function forge-current-issue "ext:forge-issue")
+(declare-function forge-current-pullreq "ext:forge-pullreq")
+(declare-function forge-get-url "ext:forge-repo")
+(eval-when-compile (cl-pushnew 'title eieio--known-slot-names))
 
 (defgroup create-link nil
   "Generate a formatted current page link."
@@ -222,6 +226,12 @@ If point is on URL, fill title with scraped one."
         ((eq major-mode 'w3m-mode)
          `((title . ,(w3m-current-title))
            (url . ,w3m-current-url)))
+        ((and (eq major-mode 'magit-status-mode) (forge-current-issue))
+         `((url . ,(forge-get-url (forge-current-issue)))
+           (title . ,(concat (oref (forge-current-issue) title)))))
+        ((and (eq major-mode 'magit-status-mode) (forge-current-pullreq))
+         `((url . ,(forge-get-url (forge-current-pullreq)))
+           (title . ,(concat (oref (forge-current-pullreq) title)))))
         ((buffer-file-name)
          `((title . ,(buffer-name))
            (url . ,(buffer-file-name))))

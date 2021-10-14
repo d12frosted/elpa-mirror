@@ -6,8 +6,8 @@
 ;;              See README.md for full list of contributors.
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
 ;; Version:     1.0.0
-;; Package-Version: 20210929.2219
-;; Package-Commit: e5d12e26bc98f99b3b1e4b5af452f3079a98e0ff
+;; Package-Version: 20211014.1848
+;; Package-Commit: b9e383b4fcc7a3232f9943aed29586a760602a1d
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/m-cat/nimbus-theme
 ;; Keywords:    faces
@@ -187,6 +187,7 @@
 
    ;;; Built-in
 
+   `(bookmark-face ((t (:foreground nil :background ,selection))))
    `(button ((t (:foreground ,blue :underline t))))
    `(header-line ((t (:background ,light-purple-bg :foreground ,fg))))
    `(help-key-binding ((t (:foreground ,key))))
@@ -261,7 +262,7 @@
    `(bm-face ((t (:foreground nil :background ,teal-bg))))
    `(bm-fringe-face ((t (:inherit bm-face))))
    `(bm-fringe-persistent-face ((t (:inherit bm-persistent-face))))
-   `(bm-persistent-face ((t (:foreground nil :background ,purple-bg))))
+   `(bm-persistent-face ((t (:inherit bookmark-face))))
 
    ;; calendar
    `(calendar-today ((t (:foreground ,current))))
@@ -890,7 +891,8 @@
    `(org-agenda-structure ((t (:foreground ,heading))))
    `(org-block-begin-line ((t (:inherit org-meta-line :underline ,indent))))
    `(org-block-end-line ((t (:inherit org-meta-line :overline ,indent))))
-   `(org-checkbox ((t (:foreground ,dark-tan))))
+   `(org-checkbox ((t (:foreground ,dark-tan :bold t))))
+   ;; `(org-checkbox-statistics-todo ((t (:inherit org-todo))))
    `(org-date ((t (:inherit link))))
    `(org-date-selected ((t (:inherit highlight :foreground ,current))))
    `(org-document-info ((t (:foreground ,lighter-green))))
