@@ -6,7 +6,7 @@
 ;; Maintainer: vladimir@suntsov.online
 ;; Version: 1.24
 ;; Package-Version: 20211011.1518
-;; Package-Commit: 51077a400ac30fa93d9d07f71b6955ae7812c165
+;; Package-Commit: 4eb931dc8aa9a190fd12e2acfce5ac2259b03638
 ;; Package-Requires: ((emacs "26.1"))
 ;; Keywords: files
 ;; URL: https://github.com/suntsov/efar
