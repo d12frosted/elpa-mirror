@@ -5,8 +5,8 @@
 ;; Author: Alex Murray <murray.alex@gmail.com>
 ;; Maintainer: Alex Murray <murray.alex@gmail.com>
 ;; URL: https://github.com/alexmurray/apparmor-mode
-;; Package-Version: 20201213.1118
-;; Package-Commit: 8c0c20b6896bba65c7f6cfe0a21e22b21a12c5f9
+;; Package-Version: 20211014.2319
+;; Package-Commit: 9d1937af52cd8ecfeec27185644ea8cbf0dc1c08
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.4"))
 
@@ -308,8 +308,13 @@
                   "-K" ;; skip cache
                   "-T" ;; skip read cache
                   source)
-        :error-patterns '((error line-start "AppArmor parser error for " (file-name)
-                                " in " (file-name) " at line " line ": " (message)
+        :error-patterns '((error line-start "AppArmor parser error at line "
+                                 line ": " (message)
+                                line-end)
+                          (error line-start "AppArmor parser error for "
+                                 (one-or-more not-newline)
+                                 " in profile " (file-name)
+                                 " at line " line ": " (message)
                                 line-end))
         :modes '(apparmor-mode)))
     (add-to-list 'flycheck-checkers 'apparmor t)))

@@ -4,8 +4,8 @@
 
 ;; Authors: Damon Kwok <damon-kwok@outlook.com>
 ;; Version: 0.0.1
-;; Package-Version: 20210608.629
-;; Package-Commit: 3afbd72180417ada6aeeec861081495aca962124
+;; Package-Version: 20211015.309
+;; Package-Commit: a5f39031a3391d0044c716425eb28645af51c79c
 ;; URL: https://github.com/damon-kwok/v-mode
 ;; Keywords: languages programming
 ;; Package-Requires: ((emacs "25.1") (dash "2.17.0") (hydra "0.15.0"))
@@ -84,9 +84,20 @@
     ;; Don't treat underscores as whitespace
     (modify-syntax-entry ?_ "w" table) table))
 
+(defun v-comment-or-uncomment-region-or-line ()
+  "Comments or uncomments the region or the current line if there's no active region."
+  (interactive)
+  (let (beg end)
+    (if (region-active-p)
+      (setq beg (region-beginning) end (region-end))
+      (setq beg (line-beginning-position) end (line-end-position)))
+    (comment-or-uncomment-region beg end)
+    (next-line)))
+
 (defvar v-mode-map
   (let ((map (make-keymap)))
     (define-key map "\C-j" 'newline-and-indent)
+    (define-key map "\M-;" 'v-comment-or-uncomment-region-or-line)
     ;; (define-key map (kbd "<C-return>") 'yafolding-toggle-element) ;
     map)
   "Keymap for V major mode.")
@@ -137,7 +148,7 @@
   :type '(repeat string)
   :group 'v-mode)
 
-(defcustom v-constants                   ;
+(defcustom v-constants                  ;
   '("false" "true" "none")
   "Common constants."
   :type '(repeat string)
@@ -424,13 +435,14 @@ Optional argument PATH ."
           (packages-path                ;
             (concat (file-name-directory v-executable) "vlib"))
           (ctags-params                 ;
-            (concat  "ctags --languages=-v --langdef=v --langmap=v:.v "
+            (concat  "ctags --langdef=v --langmap=v:.v "
               "--regex-v='/[ \\t]*fn[ \\t]+(.*)[ \\t]+(.*)/\\2/f,function/' "
               "--regex-v='/[ \\t]*struct[ \\t]+([a-zA-Z0-9_]+)/\\1/s,struct/' "
               "--regex-v='/[ \\t]*interface[ \\t]+([a-zA-Z0-9_]+)/\\1/i,interface/' "
               "--regex-v='/[ \\t]*type[ \\t]+([a-zA-Z0-9_]+)/\\1/t,type/' "
               "--regex-v='/[ \\t]*enum[ \\t]+([a-zA-Z0-9_]+)/\\1/e,enum/' "
-              "--regex-v='/[ \\t]*module[ \\t]+([a-zA-Z0-9_]+)/\\1/m,module/' " ;
+              "--regex-v='/[ \\t]*module[ \\t]+([a-zA-Z0-9_]+)/\\1/m,module/' "
+                                        ;
               "-e -R . " packages-path)))
     (when (file-exists-p packages-path)
       (let ((oldir default-directory))

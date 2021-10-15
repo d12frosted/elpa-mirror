@@ -2,8 +2,8 @@
 ;;
 ;; Authors: Sean T Allen <sean@monkeysnatchbanana.com>
 ;; Version: 0.6.0
-;; Package-Version: 20210118.1325
-;; Package-Commit: d3b108338219ff275e4ed2c67a2c5f2ce334bb94
+;; Package-Version: 20211015.331
+;; Package-Commit: 1abf04bc8f4f09a6add4b587c7cf5ca23735e7c0
 ;; URL: https://github.com/ponylang/ponylang-mode
 ;; Keywords: languages programming
 ;; Package-Requires: ((emacs "25.1") (dash "2.17.0") (hydra "0.15.0") (hl-todo "3.1.2") (yafolding "0.4.1") (yasnippet "0.14.0") (company-ctags "0.0.4") (rainbow-delimiters "2.1.4") (fill-column-indicator "1.90"))
@@ -144,10 +144,21 @@ should return a face.  This is normally set via `font-lock-defaults'."
         'font-lock-string-face))        ;
     'font-lock-comment-face))
 
+(defun ponylang-comment-or-uncomment-region-or-line ()
+  "Comments or uncomments the region or the current line if there's no active region."
+  (interactive)
+  (let (beg end)
+    (if (region-active-p)
+      (setq beg (region-beginning) end (region-end))
+      (setq beg (line-beginning-position) end (line-end-position)))
+    (comment-or-uncomment-region beg end)
+    (next-line)))
+
 (defvar ponylang-mode-map
   (let ((map (make-keymap)))
     (define-key map "\C-j" #'newline-and-indent)
     (define-key map (kbd "<C-return>") #'yafolding-toggle-element)
+    (define-key map "\M-;" #'ponylang-comment-or-uncomment-region-or-line)
     (define-key map (kbd "C-c C-f") #'ponylang-format-buffer) ;
     map)
   "Keymap for Pony major mode.")
