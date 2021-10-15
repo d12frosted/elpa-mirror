@@ -354,6 +354,7 @@ missing package or change you would like to see.
     vc-annotate (C-x v g)
     vdiff
     vertico
+    vertico-quick
     vimish-fold
     visible-mark
     visual-regexp

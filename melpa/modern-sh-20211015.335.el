@@ -4,8 +4,8 @@
 
 ;; Authors: Damon Kwok <damon-kwok@outlook.com>
 ;; Version: 0.0.1
-;; Package-Version: 20210917.748
-;; Package-Commit: 1905cc0c5fe7a306abb4e862c36f00471ce9d0cf
+;; Package-Version: 20211015.335
+;; Package-Commit: e88d83958ab43e17b9763b3220e0dde862b49a83
 ;; URL: https://github.com/damon-kwok/modern-sh
 ;; Keywords: languages programming
 ;; Package-Requires: ((emacs "25.1") (hydra "0.15.0") (eval-in-repl "0.9.7"))
@@ -126,11 +126,6 @@
 
 (defconst modern-sh-font-lock-keywords
   `(
-     ;; ipv4 & ipv6
-     ("\\([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\\)" 1 'font-lock-constant-face)
-     ("\\([A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+\\)"
-       1 'font-lock-constant-face)
-
      ;; source
      ("^[ \t]*\\(\\.\\)[ \t\n]" 1 'font-lock-warning-face)
 
@@ -169,6 +164,10 @@
      ("[:]*/\\([A-Za-z0-9_.-]*\\)" 1 'font-lock-negation-char-face)
      ("\\([A-Za-z0-9_.-]*\\)[:]*/" 1 'font-lock-negation-char-face)
 
+     ;; ipv4 & ipv6
+     ("\\([0-9]+\.[0-9]+\.[0-9]+\.[0-9]+\\)" 1 'font-lock-constant-face)
+     ("\\([A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+:[A-Za-z0-9]+\\)"
+       1 'font-lock-constant-face)
      ;; keyword
      (,modern-sh-keywords-regexp . font-lock-keyword-face)
 
