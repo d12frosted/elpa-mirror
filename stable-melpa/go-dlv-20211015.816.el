@@ -4,9 +4,9 @@
 
 ;; Author: Marko Bencun <mbencun@gmail.com>
 ;; URL: https://github.com/benma/go-dlv.el/
-;; Package-Version: 20200713.1202
-;; Package-Commit: 69b86c1bdb73d78fb3404f2f1eefbc9a93b1aba6
-;; Version: 0.4
+;; Package-Version: 20211015.816
+;; Package-Commit: 8811c0aa79fcbc0d495ed8c68f49a3c42d1a0d4b
+;; Version: 0.5
 ;; Package-Requires: ((go-mode "1.3.1"))
 ;; Keywords: Go, debug, debugger, delve, interactive, gud
 
@@ -136,7 +136,9 @@ and source-file directory for your debugger."
   (gud-def gud-finish "stepout"          "\C-f" "Finish executing current function.")
   (gud-def gud-next   "next"             "\C-n" "Step one line (skip functions).")
   (gud-def gud-cont   "continue"         "\C-r" "Continue running program.")
+  (gud-def gud-until  "continue %d%f:%l" "\C-u" "Continue to current line.")
   (gud-def gud-print  "print %e"         "\C-p" "Evaluate Go expression at point.")
+  (gud-def gud-watch  "display -a %e"    "\C-w" "Print expression at point on every step.")
   (gud-def gud-up     "up %p"            "<"    "Up N stack frames (numeric arg).")
   (gud-def gud-down   "down %p"          ">"    "Down N stack frames (numeric arg).")
 

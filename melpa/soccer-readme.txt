@@ -22,9 +22,11 @@ Functions	                Actions
 soccer-fixtures-next	Fixture for the Next match
 soccer-fixtures-next-5	Fixtures of the Next 5 matches
 soccer-fixtures-full-in-org	Full fixtures saved in org file
+soccer-fixtures-all-clubs    Fixtures for all clubs in a league
 soccer-results-last	        Result of the last match
 soccer-results-last-5	Results of the last 5 matches
 soccer-results-full-in-org	Full list of results in org file
+soccer-results-all-clubs     Results for all clubs in a league
 soccer-table                 Full Ranking table
 soccer-table-top-4           Ranking table with top 4 teams
 soccer-table-bottom-4        Ranking table with bottom 4 teams

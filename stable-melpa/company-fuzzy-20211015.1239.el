@@ -7,8 +7,8 @@
 ;; Description: Fuzzy matching for `company-mode'.
 ;; Keyword: auto auto-complete complete fuzzy matching
 ;; Version: 1.2.2
-;; Package-Version: 20211013.1210
-;; Package-Commit: 4701098ad930d6d451d1b3fce3b6c42b2f963cc6
+;; Package-Version: 20211015.1239
+;; Package-Commit: 493fe05fa81ba680fd44c5d05256a2ae788dabbe
 ;; Package-Requires: ((emacs "24.4") (company "0.8.12") (s "1.12.0") (ht "2.0"))
 ;; URL: https://github.com/jcs-elpa/company-fuzzy
 
@@ -55,7 +55,8 @@
                  (const :tag "flx" flx)
                  (const :tag "fuz-skim" fuz-skim)
                  (const :tag "fuz-clangd" fuz-clangd)
-                 (const :tag "liquidmetal" liquidmetal))
+                 (const :tag "liquidmetal" liquidmetal)
+                 (const :tag "sublime-fuzzy" sublime-fuzzy))
   :group 'company-fuzzy)
 
 (defcustom company-fuzzy-prefix-on-top t
@@ -139,6 +140,8 @@
 (declare-function fuz-calc-score-skim "ext:fuz.el")
 (declare-function fuz-calc-score-clangd "ext:fuz.el")
 (declare-function liquidmetal-score "ext:liquidmetal.el")
+(declare-function sublime-fuzzy-score "ext:sublime-fuzzy.el")
+(declare-function sublime-fuzzy-load-dyn "ext:sublime-fuzzy.el")
 
 ;;
 ;; (@* "Mode" )
@@ -327,8 +330,8 @@ See function `string-prefix-p' for arguments PREFIX, STRING and IGNORE-CASE."
       (when (company-fuzzy--string-prefix-p prefix cand)
         (push cand prefix-matches)
         (setq candidates (remove cand candidates))))
-    (setq prefix-matches (sort prefix-matches #'string-lessp))
-    (setq candidates (append prefix-matches candidates)))
+    (setq prefix-matches (sort prefix-matches #'string-lessp)
+          candidates (append prefix-matches candidates)))
   candidates)
 
 (defun company-fuzzy--sort-candidates-by-function (candidates fnc)
@@ -336,14 +339,14 @@ See function `string-prefix-p' for arguments PREFIX, STRING and IGNORE-CASE."
   (let ((scoring-table (ht-create)) scoring-keys prefix scoring score)
     (dolist (cand candidates)
       (setq prefix (company-fuzzy--backend-prefix-candidate cand 'match)
-            scoring (funcall fnc cand prefix)
+            scoring (ignore-errors (funcall fnc cand prefix))
             score (cond ((listp scoring) (nth 0 scoring))
                         ((numberp scoring) scoring)
                         (t 0)))
       (when score
         (ht-set scoring-table score (push cand (ht-get scoring-table score)))))
     ;; Get all keys, and turn into a list.
-    (maphash (lambda (score-key _cands) (push score-key scoring-keys)) scoring-table)
+    (ht-map (lambda (score-key _cands) (push score-key scoring-keys)) scoring-table)
     (setq scoring-keys (sort scoring-keys #'>)  ; Sort keys in order.
           candidates nil)  ; Clean up, and ready for final output.
     (dolist (key scoring-keys)
@@ -361,13 +364,13 @@ See function `string-prefix-p' for arguments PREFIX, STRING and IGNORE-CASE."
   (setq candidates (company-fuzzy--ht-all-candidates))
   (unless company-fuzzy--is-trigger-prefix-p
     (cl-case company-fuzzy-sorting-backend
-      (none candidates)
-      (alphabetic (setq candidates (sort candidates #'string-lessp)))
-      (flex
+      (`none candidates)
+      (`alphabetic (setq candidates (sort candidates #'string-lessp)))
+      (`flex
        (require 'flex)
        (setq candidates
              (company-fuzzy--sort-candidates-by-function candidates #'flex-score)))
-      (flx
+      (`flx
        (require 'flx)
        (setq candidates
              (company-fuzzy--sort-candidates-by-function candidates #'flx-score)))
@@ -380,10 +383,17 @@ See function `string-prefix-p' for arguments PREFIX, STRING and IGNORE-CASE."
                (company-fuzzy--sort-candidates-by-function candidates
                                                            (lambda (str pattern)
                                                              (funcall func pattern str))))))
-      (liquidmetal
+      (`liquidmetal
        (require 'liquidmetal)
        (setq candidates
-             (company-fuzzy--sort-candidates-by-function candidates #'liquidmetal-score))))
+             (company-fuzzy--sort-candidates-by-function candidates #'liquidmetal-score)))
+      (`sublime-fuzzy
+       (require 'sublime-fuzzy)
+       (sublime-fuzzy-load-dyn)
+       (setq candidates
+             (company-fuzzy--sort-candidates-by-function candidates
+                                                         (lambda (str pattern)
+                                                           (sublime-fuzzy-score pattern str))))))
     (when company-fuzzy-prefix-on-top
       (setq candidates (company-fuzzy--sort-prefix-on-top candidates)))
     (when (functionp company-fuzzy-sorting-function)
@@ -413,7 +423,7 @@ This function is use when function `company-fuzzy--insert-candidate' is
 called.  It returns the current selection prefix to prevent completion
 completes in an odd way."
   (cl-case backend
-    (company-files (company-files 'prefix))
+    (`company-files (company-files 'prefix))
     (t (company-fuzzy--backend-prefix backend 'match))))
 
 (defun company-fuzzy--backend-prefix-match (backend)
@@ -426,8 +436,8 @@ For instance, if there is a candidate function `buffer-file-name' and with
 current prefix `bfn'.  It will just return `bfn' because the current prefix
 does best describe the for this candidate."
   (cl-case backend
-    (company-capf (thing-at-point 'symbol))
-    (company-files
+    (`company-capf (thing-at-point 'symbol))
+    (`company-files
      ;; NOTE: For `company-files', we will return the last section of the path
      ;; for the best match.
      ;;
@@ -438,7 +448,7 @@ does best describe the for this candidate."
                 (len-splitted (length splitted))
                 (last (nth (1- len-splitted) splitted)))
            last))))
-    (company-yasnippet (thing-at-point 'symbol))
+    (`company-yasnippet (thing-at-point 'symbol))
     (t company-fuzzy--prefix)))
 
 (defun company-fuzzy--backend-prefix-get (backend)
@@ -454,7 +464,7 @@ that may be relavent to the first character `b'.
 
 P.S. Not all backend work this way."
   (cl-case backend
-    (company-files
+    (`company-files
      (let ((prefix (company-files 'prefix)))
        (when prefix
          (let* ((splitted (split-string prefix "/" t))
@@ -465,23 +475,23 @@ P.S. Not all backend work this way."
              (setq new-prefix
                    (substring prefix 0 (- (length prefix) (length last)))))
            new-prefix))))
-    (company-yasnippet "")
+    (`company-yasnippet "")
     (t (ignore-errors (substring company-fuzzy--prefix 0 1)))))
 
 (defun company-fuzzy--backend-prefix (backend type)
   "Get the BACKEND prefix by TYPE."
   (cl-case type
-    (complete (company-fuzzy--backend-prefix-complete backend))
-    (match (company-fuzzy--backend-prefix-match backend))
-    (get (company-fuzzy--backend-prefix-get backend))))
+    (`complete (company-fuzzy--backend-prefix-complete backend))
+    (`match (company-fuzzy--backend-prefix-match backend))
+    (`get (company-fuzzy--backend-prefix-get backend))))
 
 (defun company-fuzzy--backend-prefix-candidate (cand type)
   "Get the backend prefix by CAND and TYPE."
   (let ((backend (company-fuzzy--get-backend-by-candidate cand)))
     (cl-case type
-      (complete (company-fuzzy--backend-prefix-complete backend))
-      (match (company-fuzzy--backend-prefix-match backend))
-      (get (company-fuzzy--backend-prefix-get backend)))))
+      (`complete (company-fuzzy--backend-prefix-complete backend))
+      (`match (company-fuzzy--backend-prefix-match backend))
+      (`get (company-fuzzy--backend-prefix-get backend)))))
 
 ;;
 ;; (@* "Fuzzy Matching" )
@@ -525,9 +535,9 @@ Insert .* between each char."
 (defun company-fuzzy--ht-all-candidates ()
   "Return all candidates from the data."
   (let (all-candidates)
-    (maphash (lambda (_backend cands)
-               (setq all-candidates (append all-candidates cands)))
-             company-fuzzy--ht-backends-candidates)
+    (ht-map (lambda (_backend cands)
+              (setq all-candidates (append all-candidates cands)))
+            company-fuzzy--ht-backends-candidates)
     (delete-dups all-candidates)))
 
 (defun company-fuzzy-all-candidates ()
@@ -603,11 +613,11 @@ Insert .* between each char."
   "Backend source for all other backend except this backend, COMMAND, ARG, IGNORED."
   (interactive (list 'interactive))
   (cl-case command
-    (interactive (company-begin-backend 'company-fuzzy-all-other-backends))
-    (prefix (company-fuzzy--get-prefix))
-    (annotation (company-fuzzy--extract-annotation arg))
-    (candidates (company-fuzzy-all-candidates))
-    (pre-render (company-fuzzy--pre-render arg (nth 0 ignored)))
+    (`interactive (company-begin-backend 'company-fuzzy-all-other-backends))
+    (`prefix (company-fuzzy--get-prefix))
+    (`annotation (company-fuzzy--extract-annotation arg))
+    (`candidates (company-fuzzy-all-candidates))
+    (`pre-render (company-fuzzy--pre-render arg (nth 0 ignored)))
     (t (company-fuzzy--backend-command arg command))))
 
 (provide 'company-fuzzy)
