@@ -4,8 +4,8 @@
 ;; Author: Leaf <leafvocation@gmail.com>
 ;; Created: 21 Jan 2020
 ;; Keywords: wp languages
-;; Package-Version: 20211011.607
-;; Package-Commit: 282acf8c01c37899955afe3dc32d9cbfb18065e2
+;; Package-Version: 20211016.652
+;; Package-Commit: 6a1d4274af7f4c0f271f77bd96678c3dd1fa68e1
 ;; Homepage: https://github.com/leafOfTree/svelte-mode
 ;; Version: 1.0.5
 ;; Package-Requires: ((emacs "26.1"))
@@ -192,14 +192,22 @@ code();
    () :documentation "Local variables that are not to be captured."))
 
 (defconst svelte--crucial-variable-prefix
-  (regexp-opt '("comment-" "uncomment-" "electric-indent-"
-                "smie-" "forward-sexp-function" "completion-" "major-mode"))
+  (regexp-opt '("comment-"
+                "uncomment-"
+                "electric-indent-"
+                "smie-"
+                "forward-sexp-function"
+                "completion-"
+                "major-mode"
+                ))
   "Regexp matching the prefix of \"crucial\" buffer-locals we want to capture.")
 
 (defconst svelte--variable-prefix
   (regexp-opt '("font-lock-"
                 "indent-line-function"
-                "typescript--"))
+                "typescript--"
+                "haml-"
+                ))
   "Regexp matching the prefix of buffer-locals we want to capture.")
 
 (defun svelte--construct-submode (mode &rest args)
