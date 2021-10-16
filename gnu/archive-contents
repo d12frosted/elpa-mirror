@@ -439,6 +439,16 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de")))])
+ (coterm .
+	 [(1 1)
+	  ((emacs
+	    (26 1)))
+	  "Terminal emulation for comint" tar
+	  ((:url . "https://repo.or.cz/emacs-coterm.git")
+	   (:keywords "processes")
+	   (:maintainer "jakanakaevangeli" . "jakanakaevangeli@chiru.no")
+	   (:authors
+	    ("jakanakaevangeli" . "jakanakaevangeli@chiru.no")))])
  (counsel .
 	  [(0 13 4)
 	   ((emacs
@@ -2748,7 +2758,7 @@
 	   ("Justin Burkett" . "justin@burkett.cc"))
 	  (:keywords "diff"))])
  (verilog-mode .
-	       [(2021 9 23 89128420)
+	       [(2021 10 14 127365406)
 		nil "major mode for editing verilog source in Emacs" tar
 		((:url . "https://www.veripool.org")
 		 (:keywords "languages")
