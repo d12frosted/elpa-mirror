@@ -4,10 +4,10 @@ Source:  https://github.com/countvajhula/symex.el.git
 
 Updating /mnt/store/melpa/working/symex/
 Checking out origin/HEAD
-Checking out 71b9ecd2802521f3d48808892ea3f6b5354f8151
+Checking out 6dab41cf72fb5f25e0de30fde64fee960944a604
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/symex/
-  to /tmp/symexEoyP4e/symex-20211006.427
+  to /tmp/symexxJFUa2/symex-20211016.51
     symex-computations.el -> symex-computations.el
     symex-custom.el -> symex-custom.el
     symex-data.el -> symex-data.el
@@ -30,34 +30,36 @@ Copying files (->) and directories (=>)
     symex-ui.el -> symex-ui.el
     symex-utils.el -> symex-utils.el
     symex.el -> symex.el
-Created symex-20211006.427.tar containing:
-  symex-20211006.427/
-  symex-20211006.427/symex-computations.el
-  symex-20211006.427/symex-custom.el
-  symex-20211006.427/symex-data.el
-  symex-20211006.427/symex-dsl.el
-  symex-20211006.427/symex-evaluator.el
-  symex-20211006.427/symex-evil-support.el
-  symex-20211006.427/symex-evil.el
-  symex-20211006.427/symex-hydra.el
-  symex-20211006.427/symex-interface-arc.el
-  symex-20211006.427/symex-interface-clojure.el
-  symex-20211006.427/symex-interface-common-lisp.el
-  symex-20211006.427/symex-interface-elisp.el
-  symex-20211006.427/symex-interface-racket.el
-  symex-20211006.427/symex-interface-scheme.el
-  symex-20211006.427/symex-interop.el
-  symex-20211006.427/symex-misc.el
-  symex-20211006.427/symex-pkg.el
-  symex-20211006.427/symex-primitives.el
-  symex-20211006.427/symex-transformations.el
-  symex-20211006.427/symex-traversals.el
-  symex-20211006.427/symex-ui.el
-  symex-20211006.427/symex-utils.el
-  symex-20211006.427/symex.el
-Built symex in 5.327s, finished at 2021-10-15T23:28:26+0000
+Created symex-20211016.51.tar containing:
+  symex-20211016.51/
+  symex-20211016.51/symex-computations.el
+  symex-20211016.51/symex-custom.el
+  symex-20211016.51/symex-data.el
+  symex-20211016.51/symex-dsl.el
+  symex-20211016.51/symex-evaluator.el
+  symex-20211016.51/symex-evil-support.el
+  symex-20211016.51/symex-evil.el
+  symex-20211016.51/symex-hydra.el
+  symex-20211016.51/symex-interface-arc.el
+  symex-20211016.51/symex-interface-clojure.el
+  symex-20211016.51/symex-interface-common-lisp.el
+  symex-20211016.51/symex-interface-elisp.el
+  symex-20211016.51/symex-interface-racket.el
+  symex-20211016.51/symex-interface-scheme.el
+  symex-20211016.51/symex-interop.el
+  symex-20211016.51/symex-misc.el
+  symex-20211016.51/symex-pkg.el
+  symex-20211016.51/symex-primitives.el
+  symex-20211016.51/symex-transformations.el
+  symex-20211016.51/symex-traversals.el
+  symex-20211016.51/symex-ui.el
+  symex-20211016.51/symex-utils.el
+  symex-20211016.51/symex.el
+Built symex in 5.593s, finished at 2021-10-16T03:21:42+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  607 Oct 15 23:28 packages/symex-20211006.427.entry
 192K -rw-r--r-- 1 root root 190K Oct 15 23:28 packages/symex-20211006.427.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 15 23:28 packages/symex-badge.svg
-4.0K -rw-r--r-- 1 root root  767 Oct 15 23:28 packages/symex-readme.txt
+4.0K -rw-r--r-- 1 root root  606 Oct 16 03:21 packages/symex-20211016.51.entry
+192K -rw-r--r-- 1 root root 190K Oct 16 03:21 packages/symex-20211016.51.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 16 03:21 packages/symex-badge.svg
+4.0K -rw-r--r-- 1 root root  767 Oct 16 03:21 packages/symex-readme.txt

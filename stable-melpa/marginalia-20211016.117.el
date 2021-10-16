@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.9
-;; Package-Version: 20211012.1606
-;; Package-Commit: 9cd762b6c3f2714375f47993e9a6384d3bc16ebf
+;; Package-Version: 20211016.117
+;; Package-Commit: 86ac625169041cdc706c5e39cae0bf314c042473
 ;; Package-Requires: ((emacs "26.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -935,7 +935,10 @@ These annotations are skipped for remote paths."
   "Return original category reported by completion metadata."
   ;; NOTE: Use `alist-get' instead of `completion-metadata-get' to bypass our
   ;; `marginalia--completion-metadata-get' advice!
-  (alist-get 'category marginalia--metadata))
+  (when-let (cat (alist-get 'category marginalia--metadata))
+    ;; Ignore Emacs 28 symbol-help category in order to ensure that the
+    ;; categories are refined to our categories function and variable.
+    (and (not (eq cat 'symbol-help)) cat)))
 
 (defun marginalia-classify-symbol ()
   "Determine if currently completing symbols."
