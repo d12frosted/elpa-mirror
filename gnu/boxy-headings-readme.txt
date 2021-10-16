@@ -1,48 +1,98 @@
-#+TITLE: Boxy Headings
+			    ━━━━━━━━━━━━━━━
+			     BOXY HEADINGS
+			    ━━━━━━━━━━━━━━━
+
+
+Table of Contents
+─────────────────
+
+1. Usage
+.. 1. `boxy-headings'
+2. License
+3. Development
+.. 1. Setup
+.. 2. Commands
+..... 1. `eldev lint'
+..... 2. `eldev compile'
+..... 3. `eldev package'
+..... 4. `eldev md5'
+
 
 View org files as a boxy diagram.
 
-=package-install RET boxy-headings RET=
+`package-install RET boxy-headings RET'
 
-* Usage
-** =boxy-headings=
 
-   To view all headings in an org-mode file as a boxy diagram, use
-   the interactive function =boxy-headings=
+1 Usage
+═══════
 
-   Suggested keybinding:
-   #+begin_src emacs-lisp
-     (define-key org-mode-map (kbd "C-c r o") 'boxy-headings)
-   #+end_src
+1.1 `boxy-headings'
+───────────────────
 
-   To modify the relationship between a headline and its parent, add
-   the property REL to the child headline. Valid values are:
-   - on top of
-   - in front of
-   - behind
-   - above
-   - below
-   - to the right of
-   - to the left of
+  To view all headings in an org-mode file as a boxy diagram, use the
+  interactive function `boxy-headings'
 
-   The tooltip for each headline shows the values that would be
-   displayed if the org file was in org columns view.
+  Suggested keybinding:
+  ┌────
+  │ (define-key org-mode-map (kbd "C-c r o") 'boxy-headings)
+  └────
 
-   [[file:demo/headings.gif]]
-* License
+  To modify the relationship between a headline and its parent, add the
+  property REL to the child headline. Valid values are:
+  • on-top
+  • in-front
+  • behind
+  • above
+  • below
+  • right
+  • left
+
+  The tooltip for each headline shows the values that would be displayed
+  if the org file was in org columns view.
+
+  <file:demo/headings.gif>
+
+
+2 License
+═════════
+
   GPLv3
-* Development
 
-** Setup
 
-   Install [[https://github.com/doublep/eldev#installation][eldev]]
+3 Development
+═════════════
 
-** Commands:
-*** =eldev lint=
-    Lint the =boxy-headings.el= file
-*** =eldev compile=
-    Test whether ELC has any complaints
-*** =eldev package=
-    Creates a dist folder with =boxy-headings-<version>.el=
-*** =eldev md5=
-    Creates an md5 checksum against all files in the dist folder.
+3.1 Setup
+─────────
+
+  Install [eldev]
+
+
+[eldev] <https://github.com/doublep/eldev#installation>
+
+
+3.2 Commands
+────────────
+
+3.2.1 `eldev lint'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Lint the `boxy-headings.el' file
+
+
+3.2.2 `eldev compile'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Test whether ELC has any complaints
+
+
+3.2.3 `eldev package'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Creates a dist folder with `boxy-headings-<version>.el'
+
+
+3.2.4 `eldev md5'
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Creates an md5 checksum against all files in the dist folder.

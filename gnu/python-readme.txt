@@ -25,14 +25,7 @@ Extra functions `python-nav-forward-statement',
 `python-nav-backward-statement',
 `python-nav-beginning-of-statement', `python-nav-end-of-statement',
 `python-nav-beginning-of-block', `python-nav-end-of-block' and
-`python-nav-if-name-main' are included but no bound to any key.  At
-last but not least the specialized `python-nav-forward-sexp' allows
-easy navigation between code blocks.  If you prefer `cc-mode'-like
-`forward-sexp' movement, setting `forward-sexp-function' to nil is
-enough, You can do that using the `python-mode-hook':
-
-(add-hook 'python-mode-hook
-          (lambda () (setq forward-sexp-function nil)))
+`python-nav-if-name-main' are included but no bound to any key.
 
 Shell interaction: is provided and allows opening Python shells
 inside Emacs and executing any block of code of your current buffer
@@ -212,8 +205,8 @@ options:
 2) Add the following hook in your .emacs:
 
 (add-hook 'python-mode-hook
-  #'(lambda ()
-      (define-key python-mode-map "\C-m" 'newline-and-indent)))
+  (lambda ()
+    (define-key python-mode-map "\C-m" 'newline-and-indent)))
 
 I'd recommend the first one since you'll get the same behavior for
 all modes out-of-the-box.
