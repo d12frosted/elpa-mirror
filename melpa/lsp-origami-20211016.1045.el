@@ -4,8 +4,8 @@
 
 ;; Author: Vibhav Pant
 ;; Version: 1.0.0
-;; Package-Version: 20210126.843
-;; Package-Commit: bedea3d25552d6969e917a15a0acc3d333ddc742
+;; Package-Version: 20211016.1045
+;; Package-Commit: 5b88ab77dc2696c93fa5dd9debe183821c533b71
 ;; Keywords: languages lsp-mode
 ;; Package-Requires: ((origami "1.0") (lsp-mode "6.1"))
 ;; URL: https://github.com/emacs-lsp/lsp-origami
@@ -66,7 +66,7 @@
   "Turn on `origami-mode' locally and try to enable `lsp-origami-mode'."
   (interactive)
   (origami-mode 1)
-  (cond ((lsp--capability "foldingRangeProvider")
+  (cond ((lsp-feature? "textDocument/foldingRange")
          (lsp-origami-mode 1))
         ((called-interactively-p 'any)
          (signal 'lsp-capability-not-supported (list "foldingRangeProvider")))

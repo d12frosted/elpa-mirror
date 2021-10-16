@@ -1,8 +1,8 @@
 ;;; sis.el --- Less manual switch for native or OS input source (input method). -*- lexical-binding: t; -*-
 
 ;; URL: https://github.com/laishulu/emacs-smart-input-source
-;; Package-Version: 20201223.547
-;; Package-Commit: f2d4031711714b100ec81aac321917c40cf20dc9
+;; Package-Version: 20211016.1144
+;; Package-Commit: 237fb7029fde7c16a24d2231754d95190c1f03cd
 ;; Created: March 27th, 2020
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "25.1") (terminal-focus-reporting "0.0"))
@@ -509,7 +509,12 @@ TYPE: TYPE can be 'native, 'emp, 'macism, 'im-select, 'fcitx, 'fcitx5, 'ibus.
                          (toggle-input-method)))))
    (; for builtin supoort, use the default do-get and do-set
     (memq ism-type (list nil 'emp 'macism 'im-select))
-    t)
+    ; for WSL/Windows Subsystem for Linux, use the default do-get, set do-set
+    (if (eq system-type 'gnu/linux)
+        (setq sis-do-set (lambda(source)
+            (sis--ensure-dir
+              (make-process :name "set-input-source" :command (list sis--ism source) :connection-type 'pipe ))))
+    t))
    (; fcitx and fcitx5, use the default do-get, set do-set
     (memq ism-type (list 'fcitx 'fcitx5))
     (unless sis-english-source
