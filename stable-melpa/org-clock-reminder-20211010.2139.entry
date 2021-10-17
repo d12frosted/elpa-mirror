@@ -1,0 +1,11 @@
+(org-clock-reminder .
+		    [(20211010 2139)
+		     ((emacs
+		       (26 1)))
+		     "Notifications that remind you about clocked-in tasks" tar
+		     ((:commit . "9f9b88348ffbc6628f2286dcb4c064b520d0a638")
+		      (:authors
+		       ("Nikolay Brovko" . "i@nickey.ru"))
+		      (:maintainer "Nikolay Brovko" . "i@nickey.ru")
+		      (:keywords "calendar" "convenience")
+		      (:url . "https://github.com/inickey/org-clock-reminder"))])

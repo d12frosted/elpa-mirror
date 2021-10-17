@@ -1,6 +1,4 @@
-This package is a fork of rust-mode.
-
-Differences with rust-mode:
+This package is based on rust-mode and provides additional features:
 
 - rust-analyzer configuration
 - flycheck integration
