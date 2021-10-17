@@ -4,8 +4,8 @@
 
 ;; Author: Phil Hagelberg
 ;; URL: https://gitlab.com/technomancy/fennel-mode
-;; Package-Version: 20210926.753
-;; Package-Commit: 81a3be351ce35d57c648d7b1cf83fbf70600cfba
+;; Package-Version: 20211017.559
+;; Package-Commit: 02a26cd635bf1d0a1f3b698640317ff38e149e99
 ;; Version: 0.3.1
 ;; Created: 2018-02-18
 ;; Package-Requires: ((emacs "25.1"))
@@ -482,7 +482,7 @@ can be resolved.  It also requires line number correlation."
   (interactive (list (let ((prompt (if (symbol-at-point)
                                        (format "Find definition (default %s): "
                                                (symbol-at-point)))))
-                       (read-string prompt nil nil sym))))
+                       (read-string prompt nil nil (symbol-at-point)))))
   (xref-push-marker-stack (point-marker))
   (fennel-find-definition-go (fennel-find-definition-for identifier)))
 
