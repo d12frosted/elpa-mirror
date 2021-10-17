@@ -5,7 +5,7 @@
 ;; Author: mohsin kaleem <mohkale@kisara.moe>
 ;; Package-Requires: ((emacs "27.1") (yasnippet "0.14") (consult "0.9"))
 ;; Package-Version: 20211002.1849
-;; Package-Commit: bf6b496e00cecfd6475ebaa374a0c7c407963a8a
+;; Package-Commit: 5a053c0867a80832de04ef58a084b231aced78cf
 ;; Version: 0.1
 ;; URL: https://github.com/mohkale/consult-yasnippet
 

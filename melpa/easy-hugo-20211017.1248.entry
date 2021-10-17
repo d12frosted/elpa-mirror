@@ -1,0 +1,16 @@
+(easy-hugo .
+	   [(20211017 1248)
+	    ((emacs
+	      (25 1))
+	     (popup
+	      (0 5 3))
+	     (request
+	      (0 3 0))
+	     (transient
+	      (0 3 6)))
+	    "Write blogs made with hugo by markdown or org-mode" tar
+	    ((:commit . "baead14d7f2fa86e108269932a94bf376de9c2e5")
+	     (:authors
+	      ("Masashi Miyaura"))
+	     (:maintainer "Masashi Miyaura")
+	     (:url . "https://github.com/masasam/emacs-easy-hugo"))])
