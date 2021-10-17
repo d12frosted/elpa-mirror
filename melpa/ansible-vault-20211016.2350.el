@@ -5,10 +5,10 @@
 ;; Authors: Zachary Elliott <contact@zell.io>
 ;; Maintainer: Zachary Elliott <contact@zell.io>
 ;; URL: http://github.com/zellio/ansible-vault-mode
-;; Package-Version: 20200305.2240
-;; Package-Commit: c4fe4b0af2ac7f9d32acee234716ab31fa824cef
+;; Package-Version: 20211016.2350
+;; Package-Commit: 71c783384de8f2db05453db0dd3ff0cd256d6ea9
 ;; Created: 2016-09-25
-;; Version: 0.4.1
+;; Version: 0.4.2
 ;; Keywords: ansible, ansible-vault, tools
 ;; Package-Requires: ((emacs "24.3") (seq "2.20"))
 
@@ -39,7 +39,7 @@
 
 (require 'seq)
 
-(defconst ansible-vault-version "0.4.1"
+(defconst ansible-vault-version "0.4.2"
   "`ansible-vault' version.")
 
 (defgroup ansible-vault nil
@@ -67,12 +67,12 @@ you for a password."
   :type 'string
   :group 'ansible-vault)
 
-;;TODO: Make this more robust to version changes
-(defvar ansible-vault--file-header "$ANSIBLE_VAULT;1.1;AES256"
-  "`ansible-vault' file header for identification of encrypted buffers.
-
-This will probably change at some point in the future and break
-everything and that will be sad.")
+(defvar ansible-vault--file-header-regex
+  (rx line-start
+      "$ANSIBLE_VAULT;1." (in (?0 . ?2)) ";AES" (optional "256")
+      (optional ";" (one-or-more any))
+      line-end)
+  "Regex for `ansible-vault' header for identifying of encrypted buffers.")
 
 (defvar ansible-vault--point 0
   "Internal variable for `ansible-vault-mode'.
@@ -103,11 +103,11 @@ don't have to keep asking the user for it.")
   "Identifies if the current buffer is an encrypted `ansible-vault' file.
 
 This function just looks to see if the first line of the buffer
-is `ansible-vault--file-header'."
-  (let ((header-length (+ 1 (length ansible-vault--file-header))))
-    (and (> (point-max) header-length)
-         (string= ansible-vault--file-header
-                  (buffer-substring-no-properties (point-min) header-length)))
+is matched by `ansible-vault--file-header-regex'."
+  (save-excursion
+    (goto-char (point-min))
+    (let ((file-header (thing-at-point 'line t)))
+      (zerop (string-match ansible-vault--file-header-regex file-header)))
     ))
 
 (defun ansible-vault--error-buffer ()
