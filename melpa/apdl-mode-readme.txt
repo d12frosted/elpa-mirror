@@ -1,18 +1,26 @@
-Editor support for working with APDL code and Ansys FEA.
+The GNU-Emacs major mode for the programming language APDL
 
-The APDL-Mode package provides support for the FEA (Finite Element
-Analysis) program Ansys (https://www.ansys.com) under Windows and
-GNU-Linux systems.  It defines 'APDL-Mode', a major mode for
-viewing, writing and navigating in APDL (Ansys Parametric Design
-Language) files as well as providing managing and communication
-capabilities for an associated Ansys MAPDL solver process.
+APDL (Ansys Parametric Design Language) is the solver scripting
+language of the FEA (Finite Element Analysis) suite Ansys (ANalysis
+SYStem, registered TM https://www.ansys.com).
 
-The mode's capabilities are sophisticated but the documentation is
-targeted for Ansys users with little Emacs experience.  An online
-version of its document ion can be found at
-https://dieter-wilhelm.github.io/apdl-mode/.
+APDL-Mode (formerly ANSYS-Mode) represents, in conjunction with the
+GNU-Emacs editor, an advanced APDL environment with features like
+keyword completion, code templates, solver communication (GNU-Linux
+only), license reporting, dedicated keybindings, etc.
 
- The code is available on
- https://github.com/dieter-wilhelm/apdl-mode/.  Regarding
- installation and further information please consult the
- accompanying README.org.
+Nowadays - with the advent of modern GUIs - I find APDL-Mode also
+useful for studying solver (.dat) files which were created by
+WorkBench.  Likewise for writing WorkBench `Command' snippets and
+inspecting longer snippets from other sources.  Accessing swiftly the
+Ansys APDL reference documentation alone is worth using APDL-Mode!
+
+------------------------------
+First usage:
+
+Please type `M-x apdl' to open a buffer under APDL-Mode.  From this
+buffer you can investigate the menu entries `APDL' and `Ansys' and
+testing some APDL code.
+
+The APDL-Mode help you'll find with typing `C-c C-h' together with a
+brief tutorial.
