@@ -5,7 +5,7 @@
 ;; Author: Alex Kreisher <akreisher18@gmail.com>
 ;; Version: 0.3
 ;; Package-Version: 20210429.413
-;; Package-Commit: 32d2568ebeb42553a30dda77e03c0e2ec8854199
+;; Package-Commit: 8e3a685fc6d97af79e1046e5b24385786d8e92f6
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: convenience
 ;; URL: https://github.com/akreisher/eshell-syntax-highlighting
