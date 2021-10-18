@@ -1,8 +1,13 @@
 Package: use-package-el-get
-Fetcher: gitlab
-Source:  https://gitlab.com/edvorg/use-package-el-get.git
+Fetcher: github
+Source:  https://github.com/edvorg/use-package-el-get.git
 
-Cloning https://gitlab.com/edvorg/use-package-el-get.git to /mnt/store/melpa/working/use-package-el-get/
-Command '(env LC_ALL=C git clone https://gitlab.com/edvorg/use-package-el-get.git /mnt/store/melpa/working/use-package-el-get/)' exited with non-zero status 128: Cloning into '/mnt/store/melpa/working/use-package-el-get'...
-fatal: could not read Username for 'https://gitlab.com': No such device or address
-
+Cloning https://github.com/edvorg/use-package-el-get.git to /mnt/store/melpa/working/use-package-el-get/
+Checking out origin/HEAD
+Checking out cba87c4e9a3a66b7c10962e3aefdf11c83d737bc
+Built use-package-el-get in 4.358s, finished at 2021-10-18T02:05:44+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.5K Oct 18 02:05 packages/use-package-el-get-20180131.505.el
+4.0K -rw-r--r-- 1 root root  463 Oct 18 02:05 packages/use-package-el-get-20180131.505.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 18 02:05 packages/use-package-el-get-badge.svg
+4.0K -rw-r--r-- 1 root root  152 Oct 18 02:05 packages/use-package-el-get-readme.txt

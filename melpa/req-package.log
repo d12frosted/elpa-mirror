@@ -1,8 +1,29 @@
 Package: req-package
-Fetcher: gitlab
-Source:  https://gitlab.com/edvorg/req-package.git
+Fetcher: github
+Source:  https://github.com/edvorg/req-package.git
 
-Cloning https://gitlab.com/edvorg/req-package.git to /mnt/store/melpa/working/req-package/
-Command '(env LC_ALL=C git clone https://gitlab.com/edvorg/req-package.git /mnt/store/melpa/working/req-package/)' exited with non-zero status 128: Cloning into '/mnt/store/melpa/working/req-package'...
-fatal: could not read Username for 'https://gitlab.com': No such device or address
-
+Cloning https://github.com/edvorg/req-package.git to /mnt/store/melpa/working/req-package/
+Checking out origin/HEAD
+Checking out a77da72931914ac5f3f64dc61fe9dc3522b2817e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/req-package/
+  to /tmp/req-packageivve6L/req-package-20180605.1141
+    req-package-args.el -> req-package-args.el
+    req-package-cycles.el -> req-package-cycles.el
+    req-package-hooks.el -> req-package-hooks.el
+    req-package.el -> req-package.el
+Created req-package-20180605.1141.tar containing:
+  req-package-20180605.1141/
+  req-package-20180605.1141/req-package-args.el
+  req-package-20180605.1141/req-package-cycles.el
+  req-package-20180605.1141/req-package-hooks.el
+  req-package-20180605.1141/req-package-pkg.el
+  req-package-20180605.1141/req-package.el
+Built req-package in 4.923s, finished at 2021-10-18T01:51:42+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  529 Aug  3 10:54 packages/req-package-20180122.500.entry
+ 32K -rw-r--r-- 1 root root  30K Aug  3 10:54 packages/req-package-20180122.500.tar
+4.0K -rw-r--r-- 1 root root  530 Oct 18 01:51 packages/req-package-20180605.1141.entry
+ 32K -rw-r--r-- 1 root root  30K Oct 18 01:51 packages/req-package-20180605.1141.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 18 01:51 packages/req-package-badge.svg
+8.0K -rw-r--r-- 1 root root 7.5K Oct 18 01:51 packages/req-package-readme.txt

@@ -1,5 +1,5 @@
 (req-package .
-	     [(20180122 500)
+	     [(20180605 1141)
 	      ((use-package
 		(1 0))
 	       (dash
@@ -9,7 +9,7 @@
 	       (ht
 		(0)))
 	      "A use-package wrapper for package runtime dependencies management" tar
-	      ((:commit . "0c0ac7451149dac6bfda2adfe959d1df1c273de6")
+	      ((:commit . "a77da72931914ac5f3f64dc61fe9dc3522b2817e")
 	       (:authors
 		("Edward Knyshov" . "edvorg@gmail.com"))
 	       (:maintainer "Edward Knyshov" . "edvorg@gmail.com")
