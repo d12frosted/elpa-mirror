@@ -6,8 +6,8 @@
 ;; Author: Nikolaj Schumacher <bugs * nschum de>,
 ;; Maintainer: Neil Okamoto <neil.okamoto+melpa@gmail.com>
 ;; Version: 0.5.0-SNAPSHOT
-;; Package-Version: 20200324.2217
-;; Package-Commit: a4de033c260389c0d483f93e715fd3395c6e4145
+;; Package-Version: 20211018.212
+;; Package-Commit: a5ae046c35a898a88eff05137fe9e5159ae610d8
 ;; Keywords: lisp, maint, tools
 ;; Package-Requires: ((emacs "24.4") (dash "2.15.0") (package-lint "0.11"))
 ;; URL: http://github.com/gonewest818/elisp-lint/
@@ -156,7 +156,8 @@ e.g. for this package it will be \"elisp-lint-autoloads.el\"."
   (let* ((dir (directory-file-name default-directory))
          (prefix (file-name-nondirectory dir))
          (pkg (intern prefix))
-         (load-prefer-newer t))
+         (load-prefer-newer t)
+         (inhibit-message t))
     (package-generate-autoloads pkg dir)
     (setq elisp-lint--autoloads-filename (format "%s-autoloads.el" prefix))))
 
@@ -169,10 +170,13 @@ Return a list of errors, or nil if none found."
         (file (file-name-nondirectory path-to-file)))
     (unless elisp-lint--autoloads-filename
       (elisp-lint--generate-autoloads))
-    (load-file elisp-lint--autoloads-filename)
+    (let ((inhibit-message t))
+      (load-file elisp-lint--autoloads-filename))
     (when (get-buffer comp-log) (kill-buffer comp-log))
     (byte-compile-file path-to-file)
-    (with-current-buffer comp-log
+    ;; Using `get-buffer-create' to avoid a message if compilation hasn't
+    ;; produced any warnings and thus created the buffer.
+    (with-current-buffer (get-buffer-create comp-log)
       (goto-char (point-min))
       (while (not (eobp))
         (if (looking-at file)
@@ -315,7 +319,8 @@ and each entry contains: (LINE COLUMN TYPE MESSAGE)"
     (put (car s) 'lisp-indent-function (cdr s)))
   (let ((tick (buffer-modified-tick))
         (errlist nil))
-    (indent-region (point-min) (point-max))
+    (let ((inhibit-message t))
+      (indent-region (point-min) (point-max)))
     (unless (equal tick (buffer-modified-tick))
       (let ((diff-switches "-C 0")) (diff-buffer-with-file))
       (revert-buffer t t)               ; revert indent changes
@@ -431,12 +436,23 @@ Allow `page-delimiter' if it is alone on a line."
     (white   . 37))
   "ANSI color escape codes.")
 
+(defconst elisp-lint--no-color
+  (let ((term (getenv-internal "TERM"))
+        (no-color (getenv-internal "NO_COLOR")))
+    (or (and (stringp term) (string= term "dumb"))
+        (and (stringp no-color) (> (length no-color) 0))))
+  "Disable colored text via the environment: NO_COLOR non-empty OR TERM=dumb.")
+
 (defun elisp-lint--print (color fmt &rest args)
   "Print output text in COLOR, formatted according to FMT and ARGS."
-  (let ((ansi-val (cdr (assoc color elisp-lint--ansi-colors)))
-        (cfmt (concat "\u001b[%sm" fmt  "\u001b[0m")))
-    (princ (apply #'format cfmt ansi-val args))
-    (terpri)))
+  (if elisp-lint--no-color
+      (progn
+        (princ (apply #'format fmt args))
+        (terpri))
+    (let ((ansi-val (cdr (assoc color elisp-lint--ansi-colors)))
+          (cfmt (concat "\u001b[%sm" fmt  "\u001b[0m")))
+      (princ (apply #'format cfmt ansi-val args))
+      (terpri))))
 
 ;;; Linting
 

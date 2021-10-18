@@ -1,5 +1,5 @@
 (elisp-lint .
-	    [(20200324 2217)
+	    [(20211018 212)
 	     ((emacs
 	       (24 4))
 	      (dash
@@ -7,7 +7,7 @@
 	      (package-lint
 	       (0 11)))
 	     "Basic linting for Emacs Lisp" single
-	     ((:commit . "a4de033c260389c0d483f93e715fd3395c6e4145")
+	     ((:commit . "a5ae046c35a898a88eff05137fe9e5159ae610d8")
 	      (:authors
 	       ("Nikolaj Schumacher <bugs * nschum de>,"))
 	      (:maintainer "Neil Okamoto" . "neil.okamoto+melpa@gmail.com")

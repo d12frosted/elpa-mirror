@@ -2,12 +2,12 @@ Package: helm-img
 Fetcher: github
 Source:  https://github.com/mtmtcode/helm-img.git
 
-Cloning https://github.com/mtmtcode/helm-img.git to /mnt/store/melpa/working/helm-img/
+Updating /mnt/store/melpa/working/helm-img/
 Checking out origin/HEAD
 Checking out aa3f8a5dce8d0413bf07584f07153a39015c2bfc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/helm-img/
-  to /tmp/helm-imgcrA5KD/helm-img-20151224.2321
+  to /tmp/helm-imgH1LsiX/helm-img-20151224.2321
     helm-img-bing.el -> helm-img-bing.el
     helm-img-dir.el -> helm-img-dir.el
     helm-img.el -> helm-img.el
@@ -17,13 +17,13 @@ Created helm-img-20151224.2321.tar containing:
   helm-img-20151224.2321/helm-img-dir.el
   helm-img-20151224.2321/helm-img-pkg.el
   helm-img-20151224.2321/helm-img.el
-Built helm-img in 4.401s, finished at 2021-10-18T01:13:41+0000
+Built helm-img in 5.097s, finished at 2021-10-18T05:05:21+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  375 Oct 18 01:13 packages/helm-img-20151224.2321.entry
- 20K -rw-r--r-- 1 root root  20K Oct 18 01:13 packages/helm-img-20151224.2321.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 18 01:13 packages/helm-img-badge.svg
-4.0K -rw-r--r-- 1 root root  122 Oct 18 01:13 packages/helm-img-readme.txt
-4.0K -rw-r--r-- 1 root root 2.4K Oct 18 01:13 packages/helm-img-tiqav-20151224.2322.el
-4.0K -rw-r--r-- 1 root root  334 Oct 17 21:15 packages/helm-img-tiqav-20151224.2322.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 17 21:15 packages/helm-img-tiqav-badge.svg
-4.0K -rw-r--r-- 1 root root  275 Oct 18 01:13 packages/helm-img-tiqav.log
+4.0K -rw-r--r-- 1 root root  375 Oct 18 05:05 packages/helm-img-20151224.2321.entry
+ 20K -rw-r--r-- 1 root root  20K Oct 18 05:05 packages/helm-img-20151224.2321.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 18 05:05 packages/helm-img-badge.svg
+4.0K -rw-r--r-- 1 root root  122 Oct 18 05:05 packages/helm-img-readme.txt
+4.0K -rw-r--r-- 1 root root 2.4K Oct 18 05:05 packages/helm-img-tiqav-20151224.2322.el
+4.0K -rw-r--r-- 1 root root  334 Oct 18 05:05 packages/helm-img-tiqav-20151224.2322.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 18 01:13 packages/helm-img-tiqav-badge.svg
+4.0K -rw-r--r-- 1 root root  226 Oct 18 05:05 packages/helm-img-tiqav.log
