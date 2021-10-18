@@ -1,0 +1,11 @@
+(totp .
+      [(20211018 1743)
+       ((emacs
+	 (27 1)))
+       "Time-based One-time Password (TOTP)" tar
+       ((:commit . "680b2c969823b91e0b35afbe2a35a610cb2fa26a")
+	(:authors
+	 ("Jürgen Hötzel" . "juergen@hoetzel.info"))
+	(:maintainer "Jürgen Hötzel" . "juergen@hoetzel.info")
+	(:keywords "tools" "pass" "password")
+	(:url . "https://github.com/juergenhoetzel/emacs-totp"))])

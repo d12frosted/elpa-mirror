@@ -1,5 +1,5 @@
 
-  Soft requirement: jq (URL `https://stedolan.github.io/jq/').
+  Soft requirement: jq (URL <https://stedolan.github.io/jq/>).
   Counsel-chrome-bm will work without jq, but it will be slow when you have
   a lot of bookmarks.
 

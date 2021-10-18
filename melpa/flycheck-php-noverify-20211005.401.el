@@ -2,7 +2,7 @@
 
 ;; Version: 0.1.0
 ;; Package-Version: 20211005.401
-;; Package-Commit: f66ee8cee3198622481d780716d9a868c535b9d0
+;; Package-Commit: 3c5cfa5b790bb7f0a8da7f3caee8e4782b67f8ac
 ;; URL: https://github.com/Junker/flycheck-php-noverify
 ;; Package-Requires: ((flycheck "0.22"))
 
