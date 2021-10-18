@@ -4,10 +4,10 @@ Source:  https://github.com/ThibautVerron/magma-mode.git
 
 Updating /mnt/store/melpa/working/magma-mode/
 Checking out origin/HEAD
-Checking out 0d810239be625b3f8a82f4e27ffd311fc2e1841e
+Checking out dd784445bc8cddf4a3ebe0f60009bed1f722f597
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magma-mode/
-  to /tmp/magma-mode1Jeaja/magma-mode-20200312.1306
+  to /tmp/magma-modedltlOe/magma-mode-20211018.917
     magma-completion.el -> magma-completion.el
     magma-extra.el -> magma-extra.el
     magma-font-lock.el -> magma-font-lock.el
@@ -21,35 +21,37 @@ Copying files (->) and directories (=>)
     snippets => snippets
     data/magma_symbols.txt -> data/magma_symbols.txt
     bin/build_completion_table.sh -> bin/build_completion_table.sh
-Created magma-mode-20200312.1306.tar containing:
-  magma-mode-20200312.1306/
-  magma-mode-20200312.1306/bin/
-  magma-mode-20200312.1306/bin/build_completion_table.sh
-  magma-mode-20200312.1306/data/
-  magma-mode-20200312.1306/data/magma_symbols.txt
-  magma-mode-20200312.1306/magma-completion.el
-  magma-mode-20200312.1306/magma-extra.el
-  magma-mode-20200312.1306/magma-font-lock.el
-  magma-mode-20200312.1306/magma-interactive.el
-  magma-mode-20200312.1306/magma-mode-pkg.el
-  magma-mode-20200312.1306/magma-mode.el
-  magma-mode-20200312.1306/magma-q.el
-  magma-mode-20200312.1306/magma-scan.el
-  magma-mode-20200312.1306/magma-smie.el
-  magma-mode-20200312.1306/magma-snippets.el
-  magma-mode-20200312.1306/magma-vars.el
-  magma-mode-20200312.1306/snippets/
-  magma-mode-20200312.1306/snippets/magma-mode/
-  magma-mode-20200312.1306/snippets/magma-mode/for.yasnippet
-  magma-mode-20200312.1306/snippets/magma-mode/function.yasnippet
-  magma-mode-20200312.1306/snippets/magma-mode/if.yasnippet
-  magma-mode-20200312.1306/snippets/magma-mode/load.yasnippet
-  magma-mode-20200312.1306/snippets/magma-mode/proc.yasnippet
-  magma-mode-20200312.1306/snippets/magma-mode/try.yasnippet
-  magma-mode-20200312.1306/snippets/magma-mode/while.yasnippet
-Built magma-mode in 5.537s, finished at 2021-10-18T09:21:26+0000
+Created magma-mode-20211018.917.tar containing:
+  magma-mode-20211018.917/
+  magma-mode-20211018.917/bin/
+  magma-mode-20211018.917/bin/build_completion_table.sh
+  magma-mode-20211018.917/data/
+  magma-mode-20211018.917/data/magma_symbols.txt
+  magma-mode-20211018.917/magma-completion.el
+  magma-mode-20211018.917/magma-extra.el
+  magma-mode-20211018.917/magma-font-lock.el
+  magma-mode-20211018.917/magma-interactive.el
+  magma-mode-20211018.917/magma-mode-pkg.el
+  magma-mode-20211018.917/magma-mode.el
+  magma-mode-20211018.917/magma-q.el
+  magma-mode-20211018.917/magma-scan.el
+  magma-mode-20211018.917/magma-smie.el
+  magma-mode-20211018.917/magma-snippets.el
+  magma-mode-20211018.917/magma-vars.el
+  magma-mode-20211018.917/snippets/
+  magma-mode-20211018.917/snippets/magma-mode/
+  magma-mode-20211018.917/snippets/magma-mode/for.yasnippet
+  magma-mode-20211018.917/snippets/magma-mode/function.yasnippet
+  magma-mode-20211018.917/snippets/magma-mode/if.yasnippet
+  magma-mode-20211018.917/snippets/magma-mode/load.yasnippet
+  magma-mode-20211018.917/snippets/magma-mode/proc.yasnippet
+  magma-mode-20211018.917/snippets/magma-mode/try.yasnippet
+  magma-mode-20211018.917/snippets/magma-mode/while.yasnippet
+Built magma-mode in 7.347s, finished at 2021-10-18T13:17:41+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  329 Oct 18 09:21 packages/magma-mode-20200312.1306.entry
 232K -rw-r--r-- 1 root root 230K Oct 18 09:21 packages/magma-mode-20200312.1306.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 18 09:21 packages/magma-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Oct 18 09:21 packages/magma-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  328 Oct 18 13:17 packages/magma-mode-20211018.917.entry
+240K -rw-r--r-- 1 root root 240K Oct 18 13:17 packages/magma-mode-20211018.917.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 18 13:17 packages/magma-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Oct 18 13:17 packages/magma-mode-readme.txt

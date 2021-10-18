@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.5-dev
-;; Package-Version: 20211017.1140
-;; Package-Commit: a18ba9731412fecafd1849fa1fdf0de5ea2f36ce
+;; Package-Version: 20211018.1040
+;; Package-Commit: 7360efc6bcfd4eb01aa5a8330f8073fa7e64805a
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -2658,7 +2658,8 @@ intact additional processing."
                          (match-beginning 5) (match-end 5)))))))))
 
 (defun markdown-get-defined-references ()
-  "Return all defined reference labels and their line numbers (not including square brackets)."
+  "Return all defined reference labels and their line numbers.
+They does not include square brackets)."
   (save-excursion
     (goto-char (point-min))
     (let (refs)
@@ -3918,7 +3919,7 @@ This is an internal function called by
         (markdown-insert-uri uri))))))
 
 (defun markdown-insert-link ()
-  "Insert new or update an existing link, with interactive prompts.
+  "Insert new or update an existing link, with interactive prompt.
 If the point is at an existing link or URL, update the link text,
 URL, reference label, and/or title.  Otherwise, insert a new link.
 The type of link inserted (inline, reference, or plain URL)
@@ -3953,7 +3954,7 @@ selectively adding or removing information via the prompts."
   (markdown--insert-link-or-image nil))
 
 (defun markdown-insert-image ()
-  "Insert new or update an existing image, with interactive prompts.
+  "Insert new or update an existing image, with interactive prompt.
 If the point is at an existing image, update the alt text, URL,
 reference label, and/or title. Otherwise, insert a new image.
 The type of image inserted (inline or reference) depends on which

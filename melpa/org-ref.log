@@ -4,28 +4,31 @@ Source:  https://github.com/jkitchin/org-ref.git
 
 Updating /mnt/store/melpa/working/org-ref/
 Checking out origin/HEAD
-Checking out 9556a6c9639f6b32124ec2b8059975b0538625c2
+Checking out cc8c9852cac5335123aa2cbb44d970a23ada38fb
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-ref/
-  to /tmp/org-refn22Apq/org-ref-20211008.1334
+  to /tmp/org-refF9tVmu/org-ref-20211018.1239
     doi-utils.el -> doi-utils.el
     nist-webbook.el -> nist-webbook.el
     org-ref-arxiv.el -> org-ref-arxiv.el
+    org-ref-bibliography-links.el -> org-ref-bibliography-links.el
     org-ref-bibtex.el -> org-ref-bibtex.el
-    org-ref-citeproc.el -> org-ref-citeproc.el
+    org-ref-citation-links.el -> org-ref-citation-links.el
     org-ref-core.el -> org-ref-core.el
+    org-ref-export.el -> org-ref-export.el
     org-ref-glossary.el -> org-ref-glossary.el
-    org-ref-helm-bibtex.el -> org-ref-helm-bibtex.el
-    org-ref-helm-cite.el -> org-ref-helm-cite.el
     org-ref-helm.el -> org-ref-helm.el
     org-ref-isbn.el -> org-ref-isbn.el
-    org-ref-ivy-cite.el -> org-ref-ivy-cite.el
     org-ref-ivy.el -> org-ref-ivy.el
+    org-ref-label-link.el -> org-ref-label-link.el
     org-ref-latex.el -> org-ref-latex.el
+    org-ref-misc-links.el -> org-ref-misc-links.el
+    org-ref-natbib-bbl-citeproc.el -> org-ref-natbib-bbl-citeproc.el
     org-ref-pdf.el -> org-ref-pdf.el
     org-ref-pgk.el -> org-ref-pgk.el
     org-ref-pubmed.el -> org-ref-pubmed.el
-    org-ref-reftex.el -> org-ref-reftex.el
+    org-ref-ref-links.el -> org-ref-ref-links.el
+    org-ref-refproc.el -> org-ref-refproc.el
     org-ref-sci-id.el -> org-ref-sci-id.el
     org-ref-scifinder.el -> org-ref-scifinder.el
     org-ref-scopus.el -> org-ref-scopus.el
@@ -37,58 +40,51 @@ Copying files (->) and directories (=>)
     x2bib.el -> x2bib.el
     org-ref.org -> org-ref.org
     org-ref.bib -> org-ref.bib
-    citeproc => citeproc
-Created org-ref-20211008.1334.tar containing:
-  org-ref-20211008.1334/
-  org-ref-20211008.1334/citeproc/
-  org-ref-20211008.1334/citeproc/csl/
-  org-ref-20211008.1334/citeproc/csl/acs-nano.csl
-  org-ref-20211008.1334/citeproc/csl/author-year.el
-  org-ref-20211008.1334/citeproc/csl/unsrt-footnote.el
-  org-ref-20211008.1334/citeproc/csl/unsrt-paren.el
-  org-ref-20211008.1334/citeproc/csl/unsrt.el
-  org-ref-20211008.1334/citeproc/readme-author-year.org
-  org-ref-20211008.1334/citeproc/readme-unsrt.org
-  org-ref-20211008.1334/citeproc/readme.bib
-  org-ref-20211008.1334/citeproc/readme.org
-  org-ref-20211008.1334/doi-utils.el
-  org-ref-20211008.1334/nist-webbook.el
-  org-ref-20211008.1334/org-ref-arxiv.el
-  org-ref-20211008.1334/org-ref-bibtex.el
-  org-ref-20211008.1334/org-ref-citeproc.el
-  org-ref-20211008.1334/org-ref-core.el
-  org-ref-20211008.1334/org-ref-glossary.el
-  org-ref-20211008.1334/org-ref-helm-bibtex.el
-  org-ref-20211008.1334/org-ref-helm-cite.el
-  org-ref-20211008.1334/org-ref-helm.el
-  org-ref-20211008.1334/org-ref-isbn.el
-  org-ref-20211008.1334/org-ref-ivy-cite.el
-  org-ref-20211008.1334/org-ref-ivy.el
-  org-ref-20211008.1334/org-ref-latex.el
-  org-ref-20211008.1334/org-ref-pdf.el
-  org-ref-20211008.1334/org-ref-pgk.el
-  org-ref-20211008.1334/org-ref-pkg.el
-  org-ref-20211008.1334/org-ref-pubmed.el
-  org-ref-20211008.1334/org-ref-reftex.el
-  org-ref-20211008.1334/org-ref-sci-id.el
-  org-ref-20211008.1334/org-ref-scifinder.el
-  org-ref-20211008.1334/org-ref-scopus.el
-  org-ref-20211008.1334/org-ref-url-utils.el
-  org-ref-20211008.1334/org-ref-utils.el
-  org-ref-20211008.1334/org-ref-worldcat.el
-  org-ref-20211008.1334/org-ref-wos.el
-  org-ref-20211008.1334/org-ref.bib
-  org-ref-20211008.1334/org-ref.el
-  org-ref-20211008.1334/org-ref.org
-  org-ref-20211008.1334/x2bib.el
-Built org-ref in 5.783s, finished at 2021-10-18T09:32:34+0000
+Created org-ref-20211018.1239.tar containing:
+  org-ref-20211018.1239/
+  org-ref-20211018.1239/doi-utils.el
+  org-ref-20211018.1239/nist-webbook.el
+  org-ref-20211018.1239/org-ref-arxiv.el
+  org-ref-20211018.1239/org-ref-bibliography-links.el
+  org-ref-20211018.1239/org-ref-bibtex.el
+  org-ref-20211018.1239/org-ref-citation-links.el
+  org-ref-20211018.1239/org-ref-core.el
+  org-ref-20211018.1239/org-ref-export.el
+  org-ref-20211018.1239/org-ref-glossary.el
+  org-ref-20211018.1239/org-ref-helm.el
+  org-ref-20211018.1239/org-ref-isbn.el
+  org-ref-20211018.1239/org-ref-ivy.el
+  org-ref-20211018.1239/org-ref-label-link.el
+  org-ref-20211018.1239/org-ref-latex.el
+  org-ref-20211018.1239/org-ref-misc-links.el
+  org-ref-20211018.1239/org-ref-natbib-bbl-citeproc.el
+  org-ref-20211018.1239/org-ref-pdf.el
+  org-ref-20211018.1239/org-ref-pgk.el
+  org-ref-20211018.1239/org-ref-pkg.el
+  org-ref-20211018.1239/org-ref-pubmed.el
+  org-ref-20211018.1239/org-ref-ref-links.el
+  org-ref-20211018.1239/org-ref-refproc.el
+  org-ref-20211018.1239/org-ref-sci-id.el
+  org-ref-20211018.1239/org-ref-scifinder.el
+  org-ref-20211018.1239/org-ref-scopus.el
+  org-ref-20211018.1239/org-ref-url-utils.el
+  org-ref-20211018.1239/org-ref-utils.el
+  org-ref-20211018.1239/org-ref-worldcat.el
+  org-ref-20211018.1239/org-ref-wos.el
+  org-ref-20211018.1239/org-ref.bib
+  org-ref-20211018.1239/org-ref.el
+  org-ref-20211018.1239/org-ref.org
+  org-ref-20211018.1239/x2bib.el
+Built org-ref in 9.331s, finished at 2021-10-18T13:30:13+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  670 Oct 18 09:32 packages/org-ref-20211008.1334.entry
 732K -rw-r--r-- 1 root root 730K Oct 18 09:32 packages/org-ref-20211008.1334.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 18 09:32 packages/org-ref-badge.svg
- 16K -rw-r--r-- 1 root root  16K Oct 18 09:32 packages/org-ref-prettify-20210920.634.el
-4.0K -rw-r--r-- 1 root root  521 Oct 18 09:32 packages/org-ref-prettify-20210920.634.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 18 05:30 packages/org-ref-prettify-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Oct 18 09:32 packages/org-ref-prettify-readme.txt
-4.0K -rw-r--r-- 1 root root  234 Oct 18 09:32 packages/org-ref-prettify.log
-4.0K -rw-r--r-- 1 root root  281 Oct 18 09:32 packages/org-ref-readme.txt
+4.0K -rw-r--r-- 1 root root  541 Oct 18 13:30 packages/org-ref-20211018.1239.entry
+480K -rw-r--r-- 1 root root 480K Oct 18 13:30 packages/org-ref-20211018.1239.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 18 13:30 packages/org-ref-badge.svg
+ 16K -rw-r--r-- 1 root root  16K Oct 18 13:30 packages/org-ref-prettify-20210920.634.el
+4.0K -rw-r--r-- 1 root root  521 Oct 18 13:30 packages/org-ref-prettify-20210920.634.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 18 13:30 packages/org-ref-prettify-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Oct 18 13:30 packages/org-ref-prettify-readme.txt
+4.0K -rw-r--r-- 1 root root  663 Oct 18 13:30 packages/org-ref-prettify.log
+4.0K -rw-r--r-- 1 root root  310 Oct 18 13:30 packages/org-ref-readme.txt
