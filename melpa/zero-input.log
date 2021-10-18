@@ -3,7 +3,11 @@ Fetcher: git
 Source:  https://gitlab.emacsos.com/sylecn/zero-el
 
 Updating /mnt/store/melpa/working/zero-input/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://gitlab.emacsos.com/sylecn/zero-el/': Operation timed out after 300023 milliseconds with 0 out of 0 bytes received
-error: Could not fetch origin
-
+Checking out origin/pkg
+Checking out 729da9f4b99acb744ee6974ed7f3d4e252fd19da
+Built zero-input in 9.009s, finished at 2021-10-17T22:14:48+0000
+ ✓ Success:
+ 64K -rw-r--r-- 1 root root  63K Oct 17 22:14 packages/zero-input-20200405.1220.el
+4.0K -rw-r--r-- 1 root root  270 Oct 17 22:14 packages/zero-input-20200405.1220.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 17 22:14 packages/zero-input-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Oct 17 22:14 packages/zero-input-readme.txt

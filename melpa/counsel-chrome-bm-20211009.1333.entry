@@ -1,0 +1,13 @@
+(counsel-chrome-bm .
+		   [(20211009 1333)
+		    ((emacs
+		      (25 1))
+		     (counsel
+		      (0 13 0)))
+		    "Browse your Chrom(e/ium) bookmarks with Ivy" single
+		    ((:commit . "5ed194654766b711002efb81e2c0345bb3d081c8")
+		     (:authors
+		      ("BlueBoxWare" . "BlueBoxWare@users.noreply.github.com"))
+		     (:maintainer "BlueBoxWare" . "BlueBoxWare@users.noreply.github.com")
+		     (:keywords "hypermedia")
+		     (:url . "https://github.com/BlueBoxWare/counsel-chrome-bm"))])
