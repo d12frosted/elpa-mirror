@@ -4,7 +4,7 @@
 
 ;; Package-Requires: ((helm "1.7.8"))
 ;; Package-Version: 20211016.1433
-;; Package-Commit: d9369e37ab715793be0ffefbb88109bd53086c59
+;; Package-Commit: 3eadeb2bc5d609e68bdaa184c2a50407c974c2a8
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

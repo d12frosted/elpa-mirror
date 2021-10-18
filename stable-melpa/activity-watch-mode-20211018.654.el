@@ -7,8 +7,8 @@
 ;; Website: https://activitywatch.net
 ;; Homepage: https://github.com/pauldub/activity-watch-mode
 ;; Keywords: calendar, comm
-;; Package-Version: 20200416.637
-;; Package-Commit: 9d591c5ec9a2b2c7b55a754dd37c7434b2ef9fdc
+;; Package-Version: 20211018.654
+;; Package-Commit: 89902927023781e23f09d033a780fbed546c53e1
 ;; Package-Requires: ((emacs "25") (request "0") (json "0") (cl-lib "0"))
 ;; Version: 1.0.2
 
@@ -216,13 +216,14 @@ specified in `activity-watch-project-name-resolvers'."
   "Create heartbeart to sent to the activity watch server.
 Argument TIME time at which the heartbeat was computed."
   (let ((project-name (activity-watch--get-project))
-        (file-name (buffer-file-name (current-buffer))))
+        (file-name (buffer-file-name (current-buffer)))
+        (git-branch (when (fboundp 'magit-get-current-branch) (magit-get-current-branch))))
     `((timestamp . ,(ert--format-time-iso8601 time))
       (duration . 0)
       (data . ((language . ,(if (activity-watch--s-blank (symbol-name major-mode)) "unknown" major-mode))
                (project . ,project-name)
-               (file . ,(if (activity-watch--s-blank file-name) "unknown" file-name)))))))
-
+               (file . ,(if (activity-watch--s-blank file-name) "unknown" file-name))
+               (branch . ,(or git-branch "unknown")))))))
 
 (defun activity-watch--send-heartbeat (heartbeat)
   "Send HEARTBEAT to activity watch server."

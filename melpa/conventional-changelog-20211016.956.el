@@ -5,8 +5,8 @@
 ;; Author: liuyinz <liuyinz@gmail.com>
 ;; Created: 2021-09-18 23:45:09
 ;; Version: 1.1.0
-;; Package-Version: 20211012.1322
-;; Package-Commit: ba6285674d12d1eab6624ebf7a3bae7e72d56f99
+;; Package-Version: 20211016.956
+;; Package-Commit: a97ab5584d800ad80230a82dc21cb3dd33d7f965
 ;; Keywords: tools
 ;; Package-Requires: ((emacs "27") (transient "0.3.6"))
 ;; Homepage: https://github.com/liuyinz/emacs-conventional-changelog
@@ -145,6 +145,7 @@ default filemode."
   (let ((lst (cdr (assoc (substring prompt 0 -1) conventional-changelog-release-preset))))
     (completing-read prompt lst nil nil nil history (or default (car lst)))))
 
+;;;###autoload (autoload 'conventional-changelog-menu "conventional-changelog" nil t)
 (transient-define-prefix conventional-changelog-menu ()
   "Invoke commands for `standard-version'."
   :value '("--preset=angular" "--tag-prefix=v")
