@@ -8,7 +8,7 @@ This package is based on rust-mode and provides additional features:
 - async org babel
 - custom compilation process
 - rustfmt errors in a rust compilation mode
-- automatic RLS configuration with eglot or lsp-mode
+- automatic rust-analyzer configuration with eglot or lsp-mode
 - cask for testing
 - requires emacs 26
-- etc.
+- and more

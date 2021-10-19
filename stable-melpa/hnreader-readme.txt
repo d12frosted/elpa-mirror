@@ -20,3 +20,6 @@ hnreader-comment: read an HN item url such as https://news.ycombinator.com/item?
 hnreader-history-max: max number history items to remember.
 hnreader-view-comments-in-same-window: if nil then will not create new window
 when viewing comments
+
+; Changelog
+0.2.1 2021-10-18 update css class grab for entry title

@@ -1,0 +1,8 @@
+(slovak-holidays .
+		 [(20211018 1754)
+		  nil "Adds a list of slovak holidays to Emacs calendar" single
+		  ((:commit . "bedd26dd45ca497c0028a11e94a905560fcdb2f1")
+		   (:authors
+		    ("Matúš Goljer" . "matus.goljer@gmail.com"))
+		   (:maintainer "Matúš Goljer" . "matus.goljer@gmail.com")
+		   (:keywords "calendar"))])
