@@ -4,6 +4,8 @@
 ;; Maintainer: Illia Ostapyshyn <ilya.ostapyshyn@gmail.com>
 ;; Created: 2021-06-29
 ;; Version: 0.1
+;; Package-Version: 20211011.1633
+;; Package-Commit: 5d2728e68bee1e1946ae6a68b0ff27bb5fddcbf5
 ;; Package-Requires: ((emacs "27.1") (vterm "0.0.1"))
 ;; Keywords: eshell, vterm, terminals, shell, visual, tools, processes
 ;; URL: https://github.com/iostapyshyn/eshell-vterm

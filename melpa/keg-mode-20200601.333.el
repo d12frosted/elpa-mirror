@@ -5,7 +5,7 @@
 ;; Author: Naoya Yamashita <conao3@gmail.com>
 ;; Keywords: convenience
 ;; Package-Version: 20200601.333
-;; Package-Commit: 6929ed8f8f673b27674be5ea5acdf2c9eec0ea3f
+;; Package-Commit: de9011babac9dadd7aeff9700fa6e21ca093aa30
 ;; URL: https://github.com/conao3/keg.el
 ;; Package-Requires: ((emacs "24.4"))
 ;; Version: 0.0.1

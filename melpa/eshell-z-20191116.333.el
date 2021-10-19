@@ -4,6 +4,8 @@
 
 ;; Author: Chunyang Xu <mail@xuchunyang.me>
 ;; Package-Requires: ((cl-lib "0.5"))
+;; Package-Version: 20191116.333
+;; Package-Commit: 337cb241e17bd472bd3677ff166a0800f684213c
 ;; Keywords: convenience
 ;; Version: 0.4
 ;; Homepage: https://github.com/xuchunyang/eshell-z

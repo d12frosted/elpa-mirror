@@ -4,27 +4,29 @@ Source:  https://github.com/conao3/keg.el.git
 
 Updating /mnt/store/melpa/working/keg/
 Checking out origin/HEAD
-Checking out 6929ed8f8f673b27674be5ea5acdf2c9eec0ea3f
+Checking out de9011babac9dadd7aeff9700fa6e21ca093aa30
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/keg/
-  to /tmp/kegUIa6XC/keg-20211016.1636
+  to /tmp/kegzijwox/keg-20211019.719
     keg-ansi.el -> keg-ansi.el
     keg-command.el -> keg-command.el
+    keg-lint.el -> keg-lint.el
     keg.el -> keg.el
-Created keg-20211016.1636.tar containing:
-  keg-20211016.1636/
-  keg-20211016.1636/keg-ansi.el
-  keg-20211016.1636/keg-command.el
-  keg-20211016.1636/keg-pkg.el
-  keg-20211016.1636/keg.el
-Built keg in 5.368s, finished at 2021-10-19T04:48:23+0000
+Created keg-20211019.719.tar containing:
+  keg-20211019.719/
+  keg-20211019.719/keg-ansi.el
+  keg-20211019.719/keg-command.el
+  keg-20211019.719/keg-lint.el
+  keg-20211019.719/keg-pkg.el
+  keg-20211019.719/keg.el
+Built keg in 5.622s, finished at 2021-10-19T12:16:24+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  397 Oct 19 04:48 packages/keg-20211016.1636.entry
- 52K -rw-r--r-- 1 root root  50K Oct 19 04:48 packages/keg-20211016.1636.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 19 04:48 packages/keg-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Oct 19 01:02 packages/keg-mode-20200601.333.el
-4.0K -rw-r--r-- 1 root root  368 Oct 19 01:02 packages/keg-mode-20200601.333.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 19 01:02 packages/keg-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   34 Oct 19 01:02 packages/keg-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  125 Oct 19 04:48 packages/keg-mode.log
-4.0K -rw-r--r-- 1 root root   40 Oct 19 04:48 packages/keg-readme.txt
+4.0K -rw-r--r-- 1 root root  396 Oct 19 12:16 packages/keg-20211019.719.entry
+ 52K -rw-r--r-- 1 root root  50K Oct 19 12:16 packages/keg-20211019.719.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 19 12:16 packages/keg-badge.svg
+4.0K -rw-r--r-- 1 root root 2.0K Oct 19 08:32 packages/keg-mode-20200601.333.el
+4.0K -rw-r--r-- 1 root root  368 Oct 19 08:32 packages/keg-mode-20200601.333.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 19 08:32 packages/keg-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   34 Oct 19 08:32 packages/keg-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  204 Oct 19 12:16 packages/keg-mode.log
+4.0K -rw-r--r-- 1 root root   40 Oct 19 12:16 packages/keg-readme.txt
