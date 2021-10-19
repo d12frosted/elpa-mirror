@@ -6,8 +6,8 @@
 ;; Created: 23 Dec 2019
 ;; Homepage: https://github.com/raxod502/ctrlf
 ;; Keywords: extensions
-;; Package-Version: 20210912.1913
-;; Package-Commit: b8a7899faf9d37f1990dfefd9c6b2998c40d7fcc
+;; Package-Version: 20211019.244
+;; Package-Commit: e915c5920cd3e39f481a6ce024073dd28cc9f743
 ;; Package-Requires: ((emacs "25.1"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 1.3
@@ -711,7 +711,7 @@ Assume that S2 has the same properties throughout."
   (while ctrlf--opened-overlays
     (let ((ol (pop ctrlf--opened-overlays)))
       (if-let ((func (overlay-get ol 'isearch-open-invisible-temporary)))
-          (funcall func t)
+          (funcall func ol t)
         (overlay-put ol 'invisible (overlay-get ol 'ctrlf-orig-invisible))
         ;; I don't see a function for removing an overlay property, and
         ;; Isearch does it by setting the property to nil, so I assume
@@ -735,7 +735,7 @@ later (this should be used at the end of the search)."
             (funcall (overlay-get ol 'isearch-open-invisible) ol)
           (push ol ctrlf--opened-overlays)
           (if-let ((func (overlay-get ol 'isearch-open-invisible-temporary)))
-              (funcall func nil)
+              (funcall func ol nil)
             (overlay-put ol 'ctrlf-orig-invisible (overlay-get ol 'invisible))
             (overlay-put ol 'invisible nil)))))))
 
@@ -1505,8 +1505,20 @@ search, change back to fuzzy-regexp search."
                        #'ctrlf--minibuffer-message-condense)))))
 
 ;;;###autoload
+(defvar ctrlf--fake-mode-map (make-sparse-keymap)
+  "Empty keymap used to hack around an Emacs limitation.
+See https://github.com/raxod502/ctrlf/issues/103. Apparently,
+when you define a globalized minor mode, it forces you to
+associate a keymap with it, and for CTRLF the default name of
+this keymap is actually the keymap we are using for the local
+map, which has the consequence of the local keymap taking effect
+globally. The only workaround I could think of was to point the
+global mode with a fake empty keymap.")
+
+;;;###autoload
 (progn
-  (define-globalized-minor-mode ctrlf-mode ctrlf-local-mode ctrlf-local-mode))
+  (define-globalized-minor-mode ctrlf-mode ctrlf-local-mode ctrlf-local-mode
+    :keymap ctrlf--fake-mode-map))
 
 ;;;; Closing remarks
 

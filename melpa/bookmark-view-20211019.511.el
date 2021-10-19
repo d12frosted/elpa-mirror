@@ -3,9 +3,9 @@
 ;; Author: Daniel Mendler
 ;; Created: 2020
 ;; License: GPL-3.0-or-later
-;; Version: 0.1
-;; Package-Version: 20211012.1324
-;; Package-Commit: b5270c7991fdf5c2a51c4c71522eef958c1b1f91
+;; Version: 0.2
+;; Package-Version: 20211019.511
+;; Package-Commit: 06e41de8ed7050e70627203c93b6132fec7e88d8
 ;; Package-Requires: ((emacs "26"))
 ;; Homepage: https://github.com/minad/bookmark-view
 

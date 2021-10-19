@@ -1,0 +1,35 @@
+Package: bui
+Fetcher: github
+Source:  https://github.com/alezost/bui.el.git
+
+Updating /mnt/store/melpa/working/bui/
+Checking out origin/HEAD
+Checking out f3a137628e112a91910fd33c0cff0948fa58d470
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bui/
+  to /tmp/bui5c1Pra/bui-20210108.1141
+    bui-button.el -> bui-button.el
+    bui-core.el -> bui-core.el
+    bui-entry.el -> bui-entry.el
+    bui-history.el -> bui-history.el
+    bui-info.el -> bui-info.el
+    bui-list.el -> bui-list.el
+    bui-utils.el -> bui-utils.el
+    bui.el -> bui.el
+Created bui-20210108.1141.tar containing:
+  bui-20210108.1141/
+  bui-20210108.1141/bui-button.el
+  bui-20210108.1141/bui-core.el
+  bui-20210108.1141/bui-entry.el
+  bui-20210108.1141/bui-history.el
+  bui-20210108.1141/bui-info.el
+  bui-20210108.1141/bui-list.el
+  bui-20210108.1141/bui-pkg.el
+  bui-20210108.1141/bui-utils.el
+  bui-20210108.1141/bui.el
+Built bui in 5.481s, finished at 2021-10-19T07:49:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  368 Oct 19 07:49 packages/bui-20210108.1141.entry
+112K -rw-r--r-- 1 root root 110K Oct 19 07:49 packages/bui-20210108.1141.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 19 07:49 packages/bui-badge.svg
+4.0K -rw-r--r-- 1 root root  584 Oct 19 07:49 packages/bui-readme.txt
