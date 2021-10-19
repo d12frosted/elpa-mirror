@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/purcell/exec-path-from-shell.git
 
 Updating /mnt/store/melpa/working/exec-path-from-shell/
-Checking out origin/HEAD
-Checking out 0a07f5489c66f76249e6207362614b595b80c230
-Built exec-path-from-shell in 6.358s, finished at 2021-10-19T15:43:49+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root  11K Oct 19 15:43 packages/exec-path-from-shell-20210914.1247.el
-4.0K -rw-r--r-- 1 root root  457 Oct 19 15:43 packages/exec-path-from-shell-20210914.1247.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 19 15:43 packages/exec-path-from-shell-badge.svg
-4.0K -rw-r--r-- 1 root root 1.6K Oct 19 15:43 packages/exec-path-from-shell-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: remote error: access denied or repository not exported: /e/nw/e6/e9/90/5792594/5792594.git
+error: Could not fetch origin
+

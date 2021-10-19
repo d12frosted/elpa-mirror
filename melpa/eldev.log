@@ -4,10 +4,10 @@ Source:  https://github.com/doublep/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
 Checking out origin/HEAD
-Checking out b7b5c6d7a9cf9f3fcbe57d4c2f91471b1139cc9f
+Checking out 2209694a758e27519cc3f03df14232bb7dbb0ce8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldevdcynkq/eldev-20210711.1204
+  to /tmp/eldev4ib8ok/eldev-20211019.1920
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-ert.el -> eldev-ert.el
     eldev-plugins.el -> eldev-plugins.el
@@ -17,22 +17,24 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20210711.1204.tar containing:
-  eldev-20210711.1204/
-  eldev-20210711.1204/bin/
-  eldev-20210711.1204/bin/eldev
-  eldev-20210711.1204/bin/eldev.bat
-  eldev-20210711.1204/bin/eldev.ps1
-  eldev-20210711.1204/eldev-buttercup.el
-  eldev-20210711.1204/eldev-ert.el
-  eldev-20210711.1204/eldev-pkg.el
-  eldev-20210711.1204/eldev-plugins.el
-  eldev-20210711.1204/eldev-util.el
-  eldev-20210711.1204/eldev-vc.el
-  eldev-20210711.1204/eldev.el
-Built eldev in 5.511s, finished at 2021-10-19T15:37:37+0000
+Created eldev-20211019.1920.tar containing:
+  eldev-20211019.1920/
+  eldev-20211019.1920/bin/
+  eldev-20211019.1920/bin/eldev
+  eldev-20211019.1920/bin/eldev.bat
+  eldev-20211019.1920/bin/eldev.ps1
+  eldev-20211019.1920/eldev-buttercup.el
+  eldev-20211019.1920/eldev-ert.el
+  eldev-20211019.1920/eldev-pkg.el
+  eldev-20211019.1920/eldev-plugins.el
+  eldev-20211019.1920/eldev-util.el
+  eldev-20211019.1920/eldev-vc.el
+  eldev-20211019.1920/eldev.el
+Built eldev in 5.770s, finished at 2021-10-19T19:28:45+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  340 Oct 19 15:37 packages/eldev-20210711.1204.entry
 412K -rw-r--r-- 1 root root 410K Oct 19 15:37 packages/eldev-20210711.1204.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 19 15:37 packages/eldev-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Oct 19 15:37 packages/eldev-readme.txt
+4.0K -rw-r--r-- 1 root root  340 Oct 19 19:28 packages/eldev-20211019.1920.entry
+412K -rw-r--r-- 1 root root 410K Oct 19 19:28 packages/eldev-20211019.1920.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 19 19:28 packages/eldev-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Oct 19 19:28 packages/eldev-readme.txt
