@@ -2,7 +2,7 @@
 
 ;; Package-Requires: ((emacs "25.1") (request "0.3.3"))
 ;; Package-Version: 20210913.2051
-;; Package-Commit: 1a9d6dd6ce52938a5e5aa34d737ea5eab8f4c193
+;; Package-Commit: f7a24c34631aa09fb7bc5bd13e8e4037e256730a
 ;; Version: 1.2.1
 ;; Author: Ben Whitley
 ;; SPDX-License-Identifier: MIT

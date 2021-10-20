@@ -5,8 +5,8 @@
 ;; Author: Naoya Yamashita <conao3@gmail.com>
 ;; Maintainer: Naoya Yamashita <conao3@gmail.com>
 ;; Keywords: test lisp
-;; Package-Version: 20200904.609
-;; Package-Commit: 98532580e0425ac96f45f73ef7cebf80cb4101e2
+;; Package-Version: 20211020.18
+;; Package-Commit: 3f64a7b03a4c5b768ec21fd5987acd0d62d16c7b
 ;; Version: 7.2.0
 ;; URL: https://github.com/conao3/cort.el
 ;; Package-Requires: ((emacs "24.1") (ansi "0.4") (cl-lib "0.6"))
@@ -330,11 +330,13 @@ Return list of (testc failc errorc)"
              (format "%s\n%s\n" (yellow "Expected:") (cort-pp expect))
              (when (and (not err) (executable-find "diff"))
                (let ((retfile (make-temp-file
-                               "cort-returned-" nil nil
-                               (format "%s\n" (cort-pp ret))))
+                               "cort-returned-" nil nil))
                      (expfile (make-temp-file
-                               "cort-expected-" nil nil
-                               (format "%s\n" (cort-pp exp)))))
+                               "cort-expected-" nil nil)))
+                 (with-temp-file retfile
+                   (insert (format "%s\n" (cort-pp ret))))
+                 (with-temp-file expfile
+                   (insert (format "%s\n" (cort-pp exp))))
                  (unwind-protect
                      (format "%s\n%s"
                              (yellow "Diff:")

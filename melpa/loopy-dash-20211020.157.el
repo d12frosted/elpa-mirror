@@ -5,10 +5,10 @@
 ;; Author: Earl Hyatt
 ;; Created: February 2021
 ;; URL: https://github.com/okamsn/loopy
-;; Package-Version: 20210906.1539
-;; Package-Commit: f53a5911245e58a42fb0ac88adfe7e77c314db1c
+;; Package-Version: 20211020.157
+;; Package-Commit: 1c417e22b47e5b59675160c94fba4ba2d4abfce8
 ;; Version: 0.9.1
-;; Package-Requires: ((emacs "25.1") (loopy "0.9.1") (dash "2"))
+;; Package-Requires: ((emacs "25.1") (loopy "0.9.1") (dash "2.19"))
 ;; Keywords: extensions
 ;; LocalWords:  Loopy's emacs
 
@@ -112,82 +112,38 @@ Returns a list.  The elements are:
           ;;       variables.
           (mapcar #'car bindings))))
 
-(defvar loopy-dash--accumulation-destructured-symbols nil
-  "The names of copies of variable names that Dash will destructure.
-
-Each element is `(old-name . new-name)', where new-name is based
-on old name.  For example, `(i . loopy--copy-i-378)', where `i'
-is the name explicitly given by the user and the copy is what
-Dash assigns to when destructuring.
-
-See `loopy-dash--transform-var-list'.")
-
-(defun loopy-dash--transform-var-list (var-list)
-  "Get a new VAR-LIST same structure but different variable names.
-
-This function will push transformations to
-`loopy-dash--accumulation-destructured-symbols'.
-
-For accumulation, we don't want Dash to assign to the named
-  variables, so we pass it this instead."
-  (cl-typecase var-list
-    (symbol
-     ;; Don't create copies for symbols like "&as", ":foo", or "_".
-     (if (string-match-p (rx (or "&" "|" (seq string-start "_" string-end)))
-                         (symbol-name var-list))
-         var-list
-       (let ((dash-copy (gensym (format "loopy--copy-%s-" var-list))))
-         (push (cons var-list dash-copy)
-               loopy-dash--accumulation-destructured-symbols)
-         dash-copy)))
-    (list
-     (let ((copied-var-list))
-       (while (car-safe var-list)
-         (push (loopy-dash--transform-var-list (pop var-list))
-               copied-var-list))
-       (let ((correct-order (reverse copied-var-list)))
-         ;; If it was a dotted list, then `var-list' is still non-nil.
-         (when var-list
-           (setcdr (last correct-order)
-                   (loopy-dash--transform-var-list var-list)))
-         correct-order)))
-    (array
-     (cl-map 'vector #'loopy-dash--transform-var-list var-list))))
-
 (cl-defun loopy-dash--parse-destructuring-accumulation-command
     ((name var val &rest args))
   "Parse the accumulation loop commands, like `collect', `append', etc.
 
 NAME is the name of the command.  VAR is a variable name.
 VAL is a value."
-  (let* (;; An alist of (given-name . dash-copy).  We let Dash produce the
-         ;; bindings it needs, then copy those values into the explicitly
-         ;; given variables.
-         (loopy-dash--accumulation-destructured-symbols nil)
-         ;; The new variable list that Dash will destructure:
-         (copied-var-list (loopy-dash--transform-var-list var))
-         ;; The bindings produced by Dash's destructuring on those
-         ;; new variable names:
-         (destructurings (dash--match copied-var-list val)))
-
-    ;; Make sure variables are in order of appearance for the loop body.
-    (setq loopy-dash--accumulation-destructured-symbols
-          (reverse loopy-dash--accumulation-destructured-symbols))
-
-    `(;; Bind the variables that Dash uses for destructuring to nil.
-      ,@(--map `(loopy--accumulation-vars (,(car it) nil))
-               destructurings)
-      ;; Let Dash perform the destructuring on the copied variable names.
-      (loopy--main-body (setq ,@(-flatten-n 1 destructurings)))
-      ;; Accumulate the values of those copied variable names into the
-      ;; explicitly given variables.
-      ;;
-      ;; This gives instructions for the main body, the implicit result,
-      ;; and the explicitly named accumulation vars.
-      ,@(mapcan (-lambda ((given-var . dash-copy))
+  (let ((old-destructuring (dash--match var val))
+        (new-destructuring)
+        (old-new-map))
+    ;; We previously tried to swap out variables in the argument list, but Dash
+    ;; uses look-ahead to derive meaning.  This caused problems.  Therefore, it
+    ;; is probably better to rely on the regular naming scheme produced by
+    ;; `dash--match-make-source-symbol'.
+    (dolist (binding old-destructuring)
+      (let ((var (car binding))
+            (val (car (cdr-safe binding))))
+        (if (string-match-p (rx "--dash-source-" (1+ digit) "--")
+                            (symbol-name var))
+            (push binding new-destructuring)
+          (let ((new-var (gensym (format "loopy-copy-%s" var))))
+            (push (list new-var val) new-destructuring)
+            (push (cons var new-var) old-new-map)))))
+    ;; Correct the order.
+    (setq new-destructuring (reverse new-destructuring))
+    `(,@(mapcar (lambda (x) `(loopy--accumulation-vars (,x nil)))
+                (cl-union (mapcar #'car old-destructuring)
+                          (mapcar #'car new-destructuring)))
+      (loopy--main-body (setq ,@(apply #'append new-destructuring)))
+      ,@(mapcan (pcase-lambda (`(,old-name . ,new-name))
                   (loopy--parse-loop-command
-                   `(,name ,given-var ,dash-copy ,@args)))
-                loopy-dash--accumulation-destructured-symbols))))
+                   `(,name ,old-name ,new-name ,@args)))
+                old-new-map))))
 
 (provide 'loopy-dash)
 ;;; loopy-dash.el ends here

@@ -4,8 +4,8 @@
 
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
-;; Package-Version: 20210125.2115
-;; Package-Commit: 4e91cce0b6f17ebe8b26f66dcb88664b4cd62af5
+;; Package-Version: 20211020.111
+;; Package-Commit: 9a8bb2915aa57ed2151daf31b90c9c135c2f4989
 ;; Version: 0.3
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "25.1") (embark "0.9") (avy "0.5"))
@@ -28,6 +28,9 @@
 ;; This packages provides two commands, `avy-embark-collect-choose' and
 ;; `avy-embark-collect-act', that use avy to jump to an Embark Collect
 ;; entry and choose it or act on it, respectively.
+
+;; I no longer recommend using this package, and suggest users migrate
+;; to the excellent link-hint package by Fox Kiester.
 
 ;;; Code:
 
