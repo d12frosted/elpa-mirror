@@ -20,9 +20,9 @@ The last three methods operate with "xref" and "location" values.
 
 One would usually call `make-xref' and `xref-make-file-location',
 `xref-make-buffer-location' or `xref-make-bogus-location' to create
-them.  More generally, a location must be an instance of an EIEIO
-class inheriting from `xref-location' and implementing
-`xref-location-group' and `xref-location-marker'.
+them.  More generally, a location must be an instance of a type for
+which methods `xref-location-group' and `xref-location-marker' are
+implemented.
 
 There's a special kind of xrefs we call "match xrefs", which
 correspond to search results.  For these values,
@@ -35,5 +35,9 @@ identifier, but they should keep in mind that values returned from
 `xref-backend-identifier-completion-table' should still be
 distinct, because the user can't see the properties when making the
 choice.
+
+Older versions of Xref used EIEIO for implementation of the
+built-in types, and included a class called `xref-location' which
+was supposed to be inherited from.  Neither is true anymore.
 
 See the etags and elisp-mode implementations for full examples.
