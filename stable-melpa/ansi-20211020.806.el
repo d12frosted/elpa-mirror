@@ -5,11 +5,11 @@
 ;; Author: Johan Andersson <johan.rejeep@gmail.com>
 ;; Maintainer: Johan Andersson <johan.rejeep@gmail.com>
 ;; Version: 0.4.1
-;; Package-Version: 20211020.538
-;; Package-Commit: 61d1ad85d29c6e5fc1c148d0cfaf70a3cdeb7a11
+;; Package-Version: 20211020.806
+;; Package-Commit: e48e22494aece64fb0a743f45fa63beadf507703
 ;; Keywords: terminals color ansi
 ;; URL: http://github.com/rejeep/ansi
-;; Package-Requires: ((emacs "24.1") (cl-lib "0.6") (s "1.6.1"))
+;; Package-Requires: ((emacs "24.1") (cl-lib "0.6"))
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -40,8 +40,6 @@
 
 ;;; Code:
 
-(require 'dash)
-(require 's)
 (require 'cl-lib)
 
 (defgroup ansi nil
@@ -103,7 +101,7 @@ This variable affects `with-ansi', `with-ansi-princ'."
 
 (defun ansi--concat (&rest sequences)
   "Concat string elements in SEQUENCES."
-  (apply 's-concat (cl-remove-if-not 'stringp sequences)))
+  (apply #'concat (cl-remove-if-not 'stringp sequences)))
 
 (defun ansi--code (effect)
   "Return code for EFFECT."

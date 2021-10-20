@@ -1,13 +1,11 @@
 (ansi .
-      [(20211020 538)
+      [(20211020 806)
        ((emacs
 	 (24 1))
 	(cl-lib
-	 (0 6))
-	(s
-	 (1 6 1)))
+	 (0 6)))
        "Turn string into ansi strings" single
-       ((:commit . "61d1ad85d29c6e5fc1c148d0cfaf70a3cdeb7a11")
+       ((:commit . "e48e22494aece64fb0a743f45fa63beadf507703")
 	(:authors
 	 ("Johan Andersson" . "johan.rejeep@gmail.com"))
 	(:maintainer "Johan Andersson" . "johan.rejeep@gmail.com")
