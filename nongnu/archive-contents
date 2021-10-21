@@ -251,6 +251,18 @@
 		("Sebastian Wiesner" . "lunaryorn@gmail.com")
 		("Florian Ragwitz" . "rafl@debian.org")
 		("Marius Vollmer" . "marius.vollmer@gmail.com")))])
+ (git-modes .
+	    [(1 4 0)
+	     ((emacs
+	       (24 3)))
+	     "Major modes for editing Git configuration files" tar
+	     ((:url . "https://github.com/magit/git-modes")
+	      (:keywords "convenience" "vc" "git")
+	      (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	      (:authors
+	       ("Sebastian Wiesner" . "lunaryorn@gmail.com")
+	       ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
+	       ("Jonas Bernoulli" . "jonas@bernoul.li")))])
  (gnuplot .
 	  [(0 8 0)
 	   ((emacs
