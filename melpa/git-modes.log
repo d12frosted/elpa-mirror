@@ -1,0 +1,27 @@
+Package: git-modes
+Fetcher: github
+Source:  https://github.com/magit/git-modes.git
+
+Cloning https://github.com/magit/git-modes.git to /mnt/store/melpa/working/git-modes/
+Checking out origin/HEAD
+Checking out 62fbf2e5b84ca789e7bc2f87939386023b5ba3df
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/git-modes/
+  to /tmp/git-modesElYl9r/git-modes-20211020.2306
+    git-modes.el -> git-modes.el
+    gitattributes-mode.el -> gitattributes-mode.el
+    gitconfig-mode.el -> gitconfig-mode.el
+    gitignore-mode.el -> gitignore-mode.el
+Created git-modes-20211020.2306.tar containing:
+  git-modes-20211020.2306/
+  git-modes-20211020.2306/git-modes-pkg.el
+  git-modes-20211020.2306/git-modes.el
+  git-modes-20211020.2306/gitattributes-mode.el
+  git-modes-20211020.2306/gitconfig-mode.el
+  git-modes-20211020.2306/gitignore-mode.el
+Built git-modes in 6.358s, finished at 2021-10-21T01:58:08+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  517 Oct 21 01:58 packages/git-modes-20211020.2306.entry
+ 32K -rw-r--r-- 1 root root  30K Oct 21 01:58 packages/git-modes-20211020.2306.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 21 01:58 packages/git-modes-badge.svg
+4.0K -rw-r--r-- 1 root root  344 Oct 21 01:58 packages/git-modes-readme.txt
