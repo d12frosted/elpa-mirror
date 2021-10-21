@@ -3,8 +3,8 @@
 ;; Author: Vasiliy Yorkin <vasiliy.yorkin@gmail.com>
 ;; Maintainer: Vasiliy Yorkin
 ;; Version: 0.2.0-snapshot
-;; Package-Version: 20200930.1406
-;; Package-Commit: c40264fb34affeedd260f5da2f7737baee90a780
+;; Package-Version: 20211020.2229
+;; Package-Commit: 1941a8ce48027b5670d226bacc2fa10b00774b3a
 ;; URL: https://github.com/vyorkin/ormolu.el
 ;; Keywords: files, tools
 ;; Package-Requires: ((emacs "24") (reformatter "0.4"))
@@ -50,6 +50,12 @@
   :type 'sexp
   :safe #'listp)
 
+(defcustom ormolu-cabal-default-extensions nil
+  "Whether to use the --cabal-default-extensions flag."
+  :group 'ormolu
+  :type 'boolean
+  :safe #'booleanp)
+
 (defvar ormolu-mode-map (make-sparse-keymap)
   "Local keymap used for `ormolu-format-on-save-mode`.")
 
@@ -58,7 +64,9 @@
 ;;;###autoload (autoload 'ormolu-format-on-save-mode "ormolu" nil t)
 (reformatter-define ormolu-format
   :program ormolu-process-path
-  :args ormolu-extra-args
+  :args (append (if (and ormolu-cabal-default-extensions buffer-file-name)
+                    `("--cabal-default-extensions" "--stdin-input-file" ,buffer-file-name)
+                  '()) ormolu-extra-args)
   :group 'ormolu
   :lighter " Or"
   :keymap ormolu-mode-map)

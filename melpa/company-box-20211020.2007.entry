@@ -1,17 +1,15 @@
 (company-box .
-	     [(20210712 843)
+	     [(20211020 2007)
 	      ((emacs
 		(26 0 91))
 	       (dash
-		(2 13))
-	       (dash-functional
-		(1 2 0))
+		(2 19 0))
 	       (company
 		(0 9 6))
 	       (frame-local
 		(0 0 1)))
 	      "Company front-end with icons" tar
-	      ((:commit . "156f65cfbf690ed84e0e84f90277d665d873ff24")
+	      ((:commit . "f9cbbc7df8efbb56a8d31a5b422d158660d9109e")
 	       (:authors
 		("Sebastien Chapuis" . "sebastien@chapu.is"))
 	       (:maintainer "Sebastien Chapuis" . "sebastien@chapu.is")

@@ -4,8 +4,8 @@
 
 ;; Author: Phil Hagelberg
 ;; URL: https://gitlab.com/technomancy/fennel-mode
-;; Package-Version: 20211018.1918
-;; Package-Commit: 4276eaa193ff0a9addd57129df5e8b1febd27a44
+;; Package-Version: 20211020.1858
+;; Package-Commit: 110c504a60c46bc1d2574a0facea5dad44426a28
 ;; Version: 0.3.1
 ;; Created: 2018-02-18
 ;; Package-Requires: ((emacs "25.1"))
@@ -139,6 +139,7 @@ lookup that Fennel does in the REPL."
 
 
 (define-key fennel-repl-mode-map (kbd "TAB") 'completion-at-point)
+(define-key fennel-repl-mode-map (kbd "C-c C-z") 'fennel-repl)
 (define-key fennel-repl-mode-map (kbd "C-c C-f") 'fennel-show-documentation)
 (define-key fennel-repl-mode-map (kbd "C-c C-d") 'fennel-show-documentation)
 (define-key fennel-repl-mode-map (kbd "C-c C-v") 'fennel-show-variable-documentation)
@@ -161,6 +162,7 @@ the prompt."
              (cmdlist (split-string cmd)))
         (set-buffer (apply #'make-comint "Fennel REPL" (car cmdlist) nil (cdr cmdlist)))
         (fennel-repl-mode)
+        (set (make-variable-buffer-local 'fennel-program) cmd)
         (setq inferior-lisp-buffer fennel-repl--buffer)))
   (get-buffer fennel-repl--buffer))
 
@@ -548,9 +550,17 @@ can be resolved.  It also requires line number correlation."
 (defun fennel-repl (ask-for-command? &optional buffer)
   "Switch to the fennel repl BUFFER, or start a new one if needed.
 
+If there was a REPL buffer but its REPL process is dead,
+a new one is started in the same buffer.
+
 If ASK-FOR-COMMAND? was supplied, asks for command to start the
 REPL.  If optional BUFFER is supplied it is used as the last
 buffer before starting the REPL.
+
+The command is persisted as a buffer-local variable, the REPL buffer
+remembers the command that was used to start it.  Reseting the command
+to another value can be done by invoking setting ASK-FOR-COMMAND? to non-nil, i.e.
+by using a prefix argument.
 
 Return this buffer."
   (interactive "P")
@@ -562,7 +572,9 @@ Return this buffer."
                         (fennel-repl--start ask-for-command?))))
       (with-current-buffer repl-buf
         (setq fennel-repl--last-fennel-buffer last-buf))
-      (pop-to-buffer repl-buf))))
+      (pop-to-buffer repl-buf)
+      (unless (comint-check-proc fennel-repl--buffer)
+        (fennel-repl--start ask-for-command?)))))
 
 (defun fennel-format ()
   "Run fnlfmt on the current buffer."
