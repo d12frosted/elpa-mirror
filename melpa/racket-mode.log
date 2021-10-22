@@ -4,10 +4,10 @@ Source:  https://github.com/greghendershott/racket-mode.git
 
 Updating /mnt/store/melpa/working/racket-mode/
 Checking out origin/HEAD
-Checking out 6da1b8e42c17461260e1f2b6227c30542a85089c
+Checking out 0509b9194c1c4670644a7180127163845b8d4cce
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/racket-mode/
-  to /tmp/racket-mode5sSum3/racket-mode-20211021.1215
+  to /tmp/racket-modeI9m1oT/racket-mode-20211021.1215
     racket-browse-url.el -> racket-browse-url.el
     racket-bug-report.el -> racket-bug-report.el
     racket-cmd.el -> racket-cmd.el
@@ -68,7 +68,7 @@ Copying files (->) and directories (=>)
     racket/stack-checkpoint.rkt -> racket/stack-checkpoint.rkt
     racket/syntax.rkt -> racket/syntax.rkt
     racket/util.rkt -> racket/util.rkt
-Created /tmp/racket-mode5sSum3/racket-mode-20211021.1215/racket-mode.info
+Created /tmp/racket-modeI9m1oT/racket-mode-20211021.1215/racket-mode.info
 Created racket-mode-20211021.1215.tar containing:
   racket-mode-20211021.1215/
   racket-mode-20211021.1215/dir
@@ -141,11 +141,9 @@ Created racket-mode-20211021.1215.tar containing:
   racket-mode-20211021.1215/racket/stack-checkpoint.rkt
   racket-mode-20211021.1215/racket/syntax.rkt
   racket-mode-20211021.1215/racket/util.rkt
-Built racket-mode in 28.116s, finished at 2021-10-21T13:48:25+0000
+Built racket-mode in 15.879s, finished at 2021-10-21T21:27:45+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  305 Oct 21 10:03 packages/racket-mode-20211020.1440.entry
-820K -rw-r--r-- 1 root root 820K Oct 21 10:03 packages/racket-mode-20211020.1440.tar
-4.0K -rw-r--r-- 1 root root  305 Oct 21 13:48 packages/racket-mode-20211021.1215.entry
-820K -rw-r--r-- 1 root root 820K Oct 21 13:48 packages/racket-mode-20211021.1215.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 21 13:48 packages/racket-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  213 Oct 21 13:48 packages/racket-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  305 Oct 21 21:27 packages/racket-mode-20211021.1215.entry
+820K -rw-r--r-- 1 root root 820K Oct 21 21:27 packages/racket-mode-20211021.1215.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 21 21:27 packages/racket-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  213 Oct 21 21:27 packages/racket-mode-readme.txt

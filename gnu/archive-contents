@@ -2339,7 +2339,7 @@
 	      (:maintainer "Ralph Amissah" . "ralph.amissah@gmail.com")
 	      (:url . "http://www.sisudoc.org/"))])
  (sketch-mode .
-	      [(1 0)
+	      [(1 0 2)
 	       nil "Quickly create svg sketches using keyboard and mouse" tar
 	       ((:url . "https://github.com/dalanicolai/sketch-mode")
 		(:keywords "multimedia")
@@ -2727,15 +2727,15 @@
 	    ("Timo Myyrä" . "timo.myyra@bittivirhe.fi"))
 	   (:keywords "vc" "tools"))])
  (vc-hgcmd .
-	   [(1 14)
+	   [(1 14 1)
 	    ((emacs
 	      (25 1)))
 	    "VC mercurial backend that uses hg command server" tar
 	    ((:url . "https://github.com/muffinmad/emacs-vc-hgcmd")
+	     (:keywords "vc")
 	     (:maintainer "Andrii Kolomoiets" . "andreyk.mad@gmail.com")
 	     (:authors
-	      ("Andrii Kolomoiets" . "andreyk.mad@gmail.com"))
-	     (:keywords "vc"))])
+	      ("Andrii Kolomoiets" . "andreyk.mad@gmail.com")))])
  (vcard .
 	[(0 2 1)
 	 ((emacs

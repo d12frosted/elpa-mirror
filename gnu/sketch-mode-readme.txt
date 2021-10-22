@@ -12,15 +12,20 @@ Table of Contents
 .. 2. Incomplete features (merged into main)
 .. 3. Delicious low hanging fruit
 .. 4. Less low hanging fruit
-3. Installation
+3. Requirements
+4. Installation
 .. 1. Spacemacs
-4. Usage
-5. Bugs
-6. Alternatives
-7. Sponsor the project
+5. Usage
+6. Bugs
+7. Alternatives
+8. Sponsor the project
 
 
+*Please read the [requirements] section below before trying this
+ package*
 
+
+[requirements] See section 3
 
 
 1 Prepreliminary comment
@@ -29,12 +34,12 @@ Table of Contents
   The initial version with the transient can be found in the
   'transient-version' branch. This version introduced a toolbar which
   made the transient unnecessary. Also removing the transient frees up
-  drawing space. It has been replaced by a hydra which can
+  drawing space. It has been replaced by a hydra which is
   togglable. Also an earlier version showed the mouse coordinate
   position in the mode-line. However, this functionality hinders the
-  'interactive' drawing (which might could be considered an emacs
-  bug). Anyway, you can toggle showing the coordinates by pressing `t c'
-  (maybe it works more fluently on your system).
+  'interactive' drawing (which might be due to an emacs 'bug').  Anyway,
+  you can toggle showing the coordinates by pressing `t c' (maybe it
+  works more fluently on your system).
 
 
 2 Preliminary comment
@@ -72,22 +77,16 @@ Table of Contents
 ─────────────────────
 
   • mnemonic shortcuts + hydra and (alternatively) a toolbar
-  • quickly insert image definition into new type (image) org-block (no
-    external file required)
+  • quickly insert image definition into new type (image) org-block with
+    the image rendered as overlay (no external file required)
   • snap to grid (on minor-grid, however major and minor grid are fully
     configurable)
   • draw text
-  • crop finale image
+  • crop final image
   • set stroke, fill, width etc.
   • show dom (lisp) in other window
   • draw angle arcs (between lines, available soon, I hope. See
     `implement-angle-arc' branch)
-  • save drawing presets using [transient's saving values feature]
-    (documentation contribution welcome)
-
-
-[transient's saving values feature]
-<https://magit.vc/manual/transient.html#Saving-Values>
 
 
 2.2 Incomplete features (merged into main)
@@ -123,19 +122,37 @@ Table of Contents
   The `sketch-mode.el' file starts with listing TODO items describing
   features that are missing from the package.
 
-  <file:./happy-sketching.gif>
+  <file:./happy-sketching.gif> *THIS SCREENCAST STILL SHOWS THE
+  SKETCH-MODE TRANSIENT VERSION. AN UPDATED SCREENSHOT WILL HOPEFULLY
+  ARRIVE TOMORROW*
 
 
-3 Installation
+3 Requirements
 ══════════════
 
-  When installing the package it probably still shows some warnings, you
-  can safely ignore them.
+  This package requires Emacs to have been build with SVG support (I
+  guess that, in other words, this means it must have been build with
+  cairo support, but I still have to find out)
+
+  Also the hydra package is recommended for informing/reminding about
+  the keybindings.
+
+
+4 Installation
+══════════════
+
+  The package is available from [GNU ELPA], so it can simply get
+  installed as usual. However, the publishing 'cycle' on ELPA is
+  somewhat slow, while development on this package is 'less slow'. So
+  you might prefer to install from github directly as follows:
 
   Either `git clone' the package and load `sketch-mode.el' using `load
   file' either manually or from `.emacs.d'.
 
-  Alternatively you could use a with the following recipe:
+  When installing the package it probably still shows some warnings, you
+  can safely ignore them.
+
+  Alternatively you could use with the following recipe:
   ┌────
   │ (quelpa '(sketch-mode :repo "dalanicolai/sketch-mode" :fetcher github))
   └────
@@ -146,10 +163,16 @@ Table of Contents
   └────
 
 
-3.1 Spacemacs
+[GNU ELPA] <https://elpa.gnu.org/packages/sketch-mode.html>
+
+4.1 Spacemacs
 ─────────────
 
-  Add the following lines to `dotspacemacs-additional-packages'
+  The package is available from [GNU ELPA], so it can simply get
+  installed by simply adding `sketch-mode' to
+  `dotspacemacs-additional-packages'. However, the publishing 'cycle' on
+  ELPA is somewhat slow, while development on this package is 'less
+  slow'. So you might prefer to install from github directly as follows:
 
   ┌────
   │ (sketch-mode :location (recipe
@@ -167,12 +190,15 @@ Table of Contents
   └────
 
 
-4 Usage
+[GNU ELPA] <https://elpa.gnu.org/packages/sketch-mode.html>
+
+
+5 Usage
 ═══════
 
   Start a sketch with `M-x sketch' and enter values at the prompts (or
   prefix with `C-u' to use default values). Although, thanks to the
-  `transient' package, the usage is more or less self explanatory, it is
+  `hydra' package, the usage is more or less self explanatory, it is
   wise to take note of the following comments:
 
   • use `C-c C-c' to quickly insert the xml-definition into the
@@ -195,12 +221,12 @@ Table of Contents
     then the label of the object you want removed.
   • You can also modify the drawing by changing the object definition
     (i.e.  elisp). For that press `d' to open the definition in a
-    side-window, then press `q' to hide (deactivate the) transient
+    side-window, then press `.' to hide (deactivate the) hydra
     (keymap). Now modify the code and press `C-c C=c', to load it and
     update the `\*sketch\*' buffer.
 
 
-5 Bugs
+6 Bugs
 ══════
 
   Currently when undoing all (drawing of) objects, sketch-mode gets
@@ -209,7 +235,7 @@ Table of Contents
   priority yet.
 
 
-6 Alternatives
+7 Alternatives
 ══════════════
 
   [canvas-mode]: An even newer package is being created which provides
@@ -223,7 +249,7 @@ Table of Contents
 <https://lifeofpenguin.blogspot.com/2021/08/scribble-notes-in-gnu-emacs.html>
 
 
-7 Sponsor the project
+8 Sponsor the project
 ═════════════════════
 
   It takes me a lot of time to develop (this) package(s), while, as we
@@ -234,7 +260,7 @@ Table of Contents
   happy with any donation (of course that would also enable me to work
   on your feature requests). As soon as I have the
   opportunity/possibility to find a stable job, I will happily suggest
-  you to transfer or donate to other projects/charity.
+  you to transfer or donate to other projects/charity instead.
 
   If you would like to `boost' development of any of my projects, then
   contribute (code or documentation), or consider more sustainable

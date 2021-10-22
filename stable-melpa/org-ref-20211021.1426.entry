@@ -1,0 +1,25 @@
+(org-ref .
+	 [(20211021 1426)
+	  ((dash
+	    (0))
+	   (s
+	    (0))
+	   (f
+	    (0))
+	   (htmlize
+	    (0))
+	   (hydra
+	    (0))
+	   (parsebib
+	    (0))
+	   (bibtex-completion
+	    (0))
+	   (citeproc
+	    (0)))
+	  "citations, cross-references and bibliographies in org-mode" tar
+	  ((:commit . "4c09ec02d2306d7f5e87c010b8c76bec9ee23f81")
+	   (:authors
+	    ("John Kitchin" . "jkitchin@andrew.cmu.edu"))
+	   (:maintainer "John Kitchin" . "jkitchin@andrew.cmu.edu")
+	   (:keywords "org-mode" "cite" "ref" "label")
+	   (:url . "https://github.com/jkitchin/org-ref"))])
