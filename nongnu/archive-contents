@@ -1,4 +1,39 @@
 (1
+ (afternoon-theme .
+		  [(0 1)
+		   ((emacs
+		     (24 1)))
+		   "Dark color theme with a deep blue background" tar
+		   ((:url . "http://github.com/osener/emacs-afternoon-theme")
+		    (:keywords "themes")
+		    (:maintainer "Ozan Sener" . "ozan@ozansener.com")
+		    (:authors
+		     ("Ozan Sener" . "ozan@ozansener.com")))])
+ (alect-themes .
+	       [(0 9)
+		((emacs
+		  (24 0)))
+		"Configurable light, dark and black themes for Emacs 24 or later" tar
+		((:url . "https://github.com/alezost/alect-themes")
+		 (:keywords "color" "theme")
+		 (:maintainer "Alex Kost" . "alezost@gmail.com")
+		 (:authors
+		  ("Alex Kost" . "alezost@gmail.com")))])
+ (ample-theme .
+	      [(0 3 0)
+	       nil "Calm Dark Theme for Emacs" tar
+	       ((:url . "https://github.com/jordonbiondo/ample-theme")
+		(:keywords "theme" "dark")
+		(:maintainer "Jordon Biondo" . "jordonbiondo@gmail.com")
+		(:authors
+		 ("Jordon Biondo" . "jordonbiondo@gmail.com")))])
+ (anti-zenburn-theme .
+		     [(2 5 1)
+		      nil "Low-contrast Zenburn-inverted theme" tar
+		      ((:url . "https://github.com/m00natic/anti-zenburn-theme")
+		       (:maintainer "Andrey Kotlarski" . "m00naticus@gmail.com")
+		       (:authors
+			("Andrey Kotlarski" . "m00naticus@gmail.com")))])
  (apache-mode .
 	      [(2 2 0)
 	       nil "Major mode for editing Apache httpd configuration files" tar
@@ -7,6 +42,13 @@
 		(:authors
 		 ("Karl Chen" . "quarl@nospam.quarl.org"))
 		(:keywords "languages" "faces"))])
+ (apropospriate-theme .
+		      [(0 1 1)
+		       nil "A light & dark theme set for Emacs." tar
+		       ((:url . "http://github.com/waymondo/apropospriate-theme")
+			(:maintainer "Justin Talbott" . "justin@waymondo.com")
+			(:authors
+			 ("Justin Talbott" . "justin@waymondo.com")))])
  (arduino-mode .
 	       [(1 3 0)
 		((emacs
@@ -45,6 +87,16 @@
 		((:url . "http://github.com/clojure-emacs/clojure-mode")
 		 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
 		 (:keywords "languages" "clojure" "clojurescript" "lisp"))])
+ (color-theme-tangotango .
+			 [(0 0 6)
+			  ((color-theme
+			    (6 6 1)))
+			  "Tango Palette color theme for Emacs." tar
+			  ((:url . "https://github.com/juba/color-theme-tangotango")
+			   (:keywords "tango" "palette" "color" "theme" "emacs")
+			   (:maintainer "Julien Barnier")
+			   (:authors
+			    ("Julien Barnier")))])
  (crux .
        [(0 4 0)
 	((seq
@@ -55,6 +107,14 @@
 	 (:authors
 	  ("Bozhidar Batsov" . "bozhidar@batsov.dev"))
 	 (:keywords "convenience"))])
+ (cyberpunk-theme .
+		  [(1 22)
+		   nil "Cyberpunk Color Theme" tar
+		   ((:url . "https://github.com/n3mo/cyberpunk-theme.el")
+		    (:keywords "color" "theme" "cyberpunk")
+		    (:maintainer "Nicholas M. Van Horn" . "nvanhorn@protonmail.com")
+		    (:authors
+		     ("Nicholas M. Van Horn" . "nvanhorn@protonmail.com")))])
  (d-mode .
 	 [(202003130913)
 	  ((emacs
@@ -75,6 +135,15 @@
 	      (:authors
 	       ("https://github.com/bradyt/dart-mode/issues"))
 	      (:keywords "languages"))])
+ (dracula-theme .
+		[(1 7 0)
+		 ((emacs
+		   (24 3)))
+		 "Dracula Theme" tar
+		 ((:url . "https://github.com/dracula/emacs")
+		  (:maintainer "Étienne Deparis" . "etienne@depar.is")
+		  (:authors
+		   ("film42")))])
  (editorconfig .
 	       [(0 8 2)
 		((cl-lib
@@ -445,6 +514,23 @@
 		  (:authors
 		   ("Jason R. Blevins" . "jblevins@xbeta.org"))
 		  (:keywords "markdown" "github flavored markdown" "itex"))])
+ (material-theme .
+		 [(2015)
+		  ((emacs
+		    (24 1)))
+		  "A Theme based on the colors of the Google Material Design" tar
+		  ((:url . "http://github.com/cpaulik/emacs-material-theme")
+		   (:keywords "themes")
+		   (:maintainer "Christoph Paulik" . "cpaulik@gmail.com")
+		   (:authors
+		    ("Christoph Paulik" . "cpaulik@gmail.com")))])
+ (monokai-theme .
+		[(3 5 3)
+		 nil "A fruity color theme for Emacs." tar
+		 ((:url . "http://github.com/oneKelvinSmith/monokai-emacs")
+		  (:maintainer "Kelvin Smith" . "oneKelvinSmith@gmail.com")
+		  (:authors
+		   ("Kelvin Smith" . "oneKelvinSmith@gmail.com")))])
  (multiple-cursors .
 		   [(1 4 0)
 		    nil "Multiple cursors for emacs." tar
@@ -594,6 +680,24 @@
 		(:authors
 		 ("Matus Goljer" . "matus.goljer@gmail.com"))
 		(:keywords "abbrev" "convenience" "editing"))])
+ (solarized-theme .
+		  [(1 3 0)
+		   ((emacs
+		     (24 1)))
+		   "The Solarized color theme" tar
+		   ((:url . "http://github.com/bbatsov/solarized-emacs")
+		    (:keywords "convenience" "themes" "solarized")
+		    (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
+		    (:authors
+		     ("Bozhidar Batsov" . "bozhidar@batsov.dev")))])
+ (subatomic-theme .
+		  [(1 8 1)
+		   nil "Low contrast bluish color theme" tar
+		   ((:url . "https://github.com/cryon/subatomic")
+		    (:keywords "color-theme" "blue" "low contrast")
+		    (:maintainer "John Olsson" . "john@cryon.se")
+		    (:authors
+		     ("John Olsson" . "john@cryon.se")))])
  (swift-mode .
 	     [(8 4 1)
 	      ((emacs
@@ -630,6 +734,13 @@
 	    ("Sean McLaughlin" . "seanmcl@gmail.com")
 	    ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	   (:keywords "ocaml" "languages"))])
+ (ujelly-theme .
+	       [(1 2 9)
+		nil "Ujelly theme for GNU Emacs 24 (deftheme)" tar
+		((:url . "http://github.com/marktran/color-theme-ujelly")
+		 (:maintainer "Mark Tran" . "mark.tran@gmail.com")
+		 (:authors
+		  ("Mark Tran" . "mark.tran@gmail.com")))])
  (vc-fossil .
 	    [(20210928)
 	     nil "VC backend for the fossil sofware configuraiton management system" tar
@@ -686,6 +797,13 @@
 		       (:authors
 			("Andrea Crotti" . "andrea.crotti.0@gmail.com"))
 		       (:keywords "snippets"))])
+ (zenburn-theme .
+		[(2 7 0)
+		 nil "A low contrast color theme for Emacs." tar
+		 ((:url . "http://github.com/bbatsov/zenburn-emacs")
+		  (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
+		  (:authors
+		   ("Bozhidar Batsov" . "bozhidar@batsov.com")))])
  (zig-mode .
 	   [(0 0 8)
 	    ((emacs
