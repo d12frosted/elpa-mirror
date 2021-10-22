@@ -2,8 +2,8 @@
 
 ;; Author: Wouter Bolsterlee <wouter@bolsterl.ee>
 ;; Version: 2.2.1
-;; Package-Version: 20211011.1752
-;; Package-Commit: 05c023740f3d95805533081894bfd87f06401af5
+;; Package-Version: 20211022.1248
+;; Package-Commit: f9fbb49c48b3347d97fd2e19d7499bfee0ac5ad9
 ;; Package-Requires: ((emacs "24.3") (evil "1.2.12") (evil-snipe "2.0.3"))
 ;; Keywords: convenience emulations colemak evil
 ;; URL: https://github.com/wbolster/evil-colemak-basics
@@ -94,11 +94,15 @@ rotated; see evil-colemak-basics-rotate-t-f-j."
       "gK" 'evil-previous-match)
     (evil-define-key '(normal visual) keymap
       "N" 'evil-join
-      "gN" 'evil-join-whitespace)
+      "gN" 'evil-join-whitespace
+      "gl" 'evil-downcase
+      "gL" 'evil-upcase)
     (evil-define-key 'normal keymap
       "l" 'evil-undo
       "u" 'evil-insert
-      "U" 'evil-insert-line)
+      "U" 'evil-insert-line
+      "gu" 'evil-insert-resume
+      "gU" 'evil-insert-0-line)
     (evil-define-key 'visual keymap
       "l" 'evil-downcase
       "L" 'evil-upcase

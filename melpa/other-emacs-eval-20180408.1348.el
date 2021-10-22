@@ -5,8 +5,6 @@
 ;; Author: Xu Chunyang <mail@xuchunyang.me>
 ;; Homepage: https://github.com/xuchunyang/other-emacs-eval
 ;; Package-Requires: ((emacs "25.1") (async "1.9.2"))
-;; Package-Version: 20180408.1348
-;; Package-Commit: 8ace5acafef65daabf0c6619eff60733d7f5d792
 ;; Keywords: tools
 ;; Created: Thu, 29 Mar 2018 17:28:30 +0800
 
