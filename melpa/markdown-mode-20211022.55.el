@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.5-dev
-;; Package-Version: 20211018.1040
-;; Package-Commit: 7360efc6bcfd4eb01aa5a8330f8073fa7e64805a
+;; Package-Version: 20211022.55
+;; Package-Commit: c3c2f0d473a3f8ca8c4ffb2ecc094d5c3541769f
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -8236,6 +8236,9 @@ markers and footnote text."
    ;; Reference definition
    ((thing-at-point-looking-at markdown-regex-reference-definition)
     (markdown-reference-goto-link (match-string-no-properties 2)))
+   ;; Link
+   ((or (markdown-link-p) (markdown-wiki-link-p))
+    (markdown-follow-thing-at-point nil))
    ;; GFM task list item
    ((markdown-gfm-task-list-item-at-point)
     (markdown-toggle-gfm-checkbox))

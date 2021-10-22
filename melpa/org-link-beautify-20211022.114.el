@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (all-the-icons "4.0.0"))
-;; Package-Version: 20211018.1009
-;; Package-Commit: 43ede3ef04a050566b12604bd7a88f925d401c19
+;; Package-Version: 20211022.114
+;; Package-Commit: 7a9a5910cf7037c044af9b3be1b8c2f42488b1c1
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://github.com/stardiviner/org-link-beautify
@@ -426,7 +426,8 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
         (let ((original-thumbnail-file (concat thumbnails-dir (file-name-nondirectory video-file) ".png")))
           (if (and (not org-link-beautify-enable-debug-p) (file-exists-p original-thumbnail-file))
               (rename-file original-thumbnail-file thumbnail)
-            (message "[org-link-beautify] qlmanage create thumbnail for\n %s \nfailed." original-thumbnail-file))))
+            (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail)))
+              (message "[org-link-beautify] qlmanage create thumbnail for\n %s \nfailed." thumbnail)))))
        ;; use `ffmpegthumbnailer'
        ((executable-find "ffmpegthumbnailer")
         (start-process
@@ -487,7 +488,8 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
         (let ((original-thumbnail-file (concat thumbnails-dir (file-name-nondirectory audio-file) ".png")))
           (if (and (not org-link-beautify-enable-debug-p) (file-exists-p original-thumbnail-file))
               (rename-file original-thumbnail-file thumbnail)
-            (message "[org-link-beautify] qlmanage create thumbnail for\n %s \nfailed." original-thumbnail-file))))
+            (when (and org-link-beautify-enable-debug-p (not (file-exists-p thumbnail)))
+              (message "[org-link-beautify] qlmanage create thumbnail for\n %s \nfailed." thumbnail)))))
        ((and (eq system-type 'gnu/linux) (executable-find "audiowaveform"))
         (start-process
          "org-link-beautify--audio-preview"
