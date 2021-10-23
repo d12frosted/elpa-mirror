@@ -3,7 +3,11 @@ Fetcher: git
 Source:  https://codeberg.org/FelipeLema/session-async.el.git
 
 Updating /mnt/store/melpa/working/session-async/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://codeberg.org/FelipeLema/session-async.el.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 32a36841fbb3c864776a3a1ac08bb94d44ca10b3
+Built session-async in 6.813s, finished at 2021-10-23T07:29:40+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Oct 23 07:29 packages/session-async-20210902.1533.el
+4.0K -rw-r--r-- 1 root root  484 Oct 23 07:29 packages/session-async-20210902.1533.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 23 07:29 packages/session-async-badge.svg
+4.0K -rw-r--r-- 1 root root  194 Oct 23 07:29 packages/session-async-readme.txt

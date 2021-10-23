@@ -5,8 +5,8 @@
 ;; Author: Johan Andersson <johan.rejeep@gmail.com>
 ;; Maintainer: Johan Andersson <johan.rejeep@gmail.com>
 ;; Version: 0.4.1
-;; Package-Version: 20211020.806
-;; Package-Commit: e48e22494aece64fb0a743f45fa63beadf507703
+;; Package-Version: 20211023.529
+;; Package-Commit: 6e5455af7fa5d7b21bdb383e36190cb9d996ec35
 ;; Keywords: terminals color ansi
 ;; URL: http://github.com/rejeep/ansi
 ;; Package-Requires: ((emacs "24.1") (cl-lib "0.6"))
@@ -125,7 +125,7 @@ This variable affects `with-ansi', `with-ansi-princ'."
   "Shortcut names (without ansi- prefix) can be used in this BODY."
   (if ansi-inhibit-ansi
       `(ansi--concat ,@body)
-    `(cl-flet
+    `(cl-labels
          ,(mapcar
            (lambda (alias)
              (let ((fn (intern (format "ansi-%s" (symbol-name alias)))))
