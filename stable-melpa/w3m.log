@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out c088fe627f12597726dfc2062454e2e7bd99798a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/w3m/
-  to /tmp/w3mnVi1aS/w3m-20211009.252
+  to /tmp/w3maLNibk/w3m-20211009.252
     bookmark-w3m.el -> bookmark-w3m.el
     mime-w3m.el -> mime-w3m.el
     w3m-antenna.el -> w3m-antenna.el
@@ -40,7 +40,7 @@ Copying files (->) and directories (=>)
   ! doc/emacs-w3m-ja.texi -> emacs-w3m-ja.texi
   ! doc/emacs-w3m.texi -> emacs-w3m.texi
     icons => icons
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3mnVi1aS/w3m-20211009.252/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3maLNibk/w3m-20211009.252/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at c088fe62 * w3m-lnum.el (w3m-lnum-get-match-info, w3m-lnum-get-action): Rearrange docstrings so to be in 80-column
 HEAD is now at c088fe62 * w3m-lnum.el (w3m-lnum-get-match-info, w3m-lnum-get-action): Rearrange docstrings so to be in 80-column
@@ -52,8 +52,8 @@ HEAD is now at c088fe62 * w3m-lnum.el (w3m-lnum-get-match-info, w3m-lnum-get-act
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
 ")
-Created /tmp/w3mnVi1aS/w3m-20211009.252/emacs-w3m-ja.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mnVi1aS/w3m-20211009.252/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/w3maLNibk/w3m-20211009.252/emacs-w3m-ja.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3maLNibk/w3m-20211009.252/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at c088fe62 * w3m-lnum.el (w3m-lnum-get-match-info, w3m-lnum-get-action): Rearrange docstrings so to be in 80-column
 HEAD is now at c088fe62 * w3m-lnum.el (w3m-lnum-get-match-info, w3m-lnum-get-action): Rearrange docstrings so to be in 80-column
@@ -64,9 +64,9 @@ HEAD is now at c088fe62 * w3m-lnum.el (w3m-lnum-get-match-info, w3m-lnum-get-act
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mnVi1aS/w3m-20211009.252/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3maLNibk/w3m-20211009.252/emacs-w3m-ja.info
 ")
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3mnVi1aS/w3m-20211009.252/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3maLNibk/w3m-20211009.252/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at c088fe62 * w3m-lnum.el (w3m-lnum-get-match-info, w3m-lnum-get-action): Rearrange docstrings so to be in 80-column
 HEAD is now at c088fe62 * w3m-lnum.el (w3m-lnum-get-match-info, w3m-lnum-get-action): Rearrange docstrings so to be in 80-column
@@ -77,7 +77,7 @@ HEAD is now at c088fe62 * w3m-lnum.el (w3m-lnum-get-match-info, w3m-lnum-get-act
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mnVi1aS/w3m-20211009.252/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3maLNibk/w3m-20211009.252/emacs-w3m-ja.info
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
@@ -85,8 +85,8 @@ install-info: No such file or directory for /tmp/w3mnVi1aS/w3m-20211009.252/emac
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
 ")
-Created /tmp/w3mnVi1aS/w3m-20211009.252/emacs-w3m.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mnVi1aS/w3m-20211009.252/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/w3maLNibk/w3m-20211009.252/emacs-w3m.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3maLNibk/w3m-20211009.252/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at c088fe62 * w3m-lnum.el (w3m-lnum-get-match-info, w3m-lnum-get-action): Rearrange docstrings so to be in 80-column
 HEAD is now at c088fe62 * w3m-lnum.el (w3m-lnum-get-match-info, w3m-lnum-get-action): Rearrange docstrings so to be in 80-column
@@ -97,14 +97,14 @@ HEAD is now at c088fe62 * w3m-lnum.el (w3m-lnum-get-match-info, w3m-lnum-get-act
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mnVi1aS/w3m-20211009.252/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3maLNibk/w3m-20211009.252/emacs-w3m-ja.info
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:60: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mnVi1aS/w3m-20211009.252/emacs-w3m.info
+install-info: No such file or directory for /tmp/w3maLNibk/w3m-20211009.252/emacs-w3m.info
 ")
 Created w3m-20211009.252.tar containing:
   w3m-20211009.252/
@@ -183,9 +183,9 @@ Created w3m-20211009.252.tar containing:
   w3m-20211009.252/w3m-weather.el
   w3m-20211009.252/w3m.el
   w3m-20211009.252/w3mhack.el
-Built w3m in 31.040s, finished at 2021-10-23T11:21:37+0000
+Built w3m in 32.767s, finished at 2021-10-23T15:00:53+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  179 Oct 23 11:21 packages/w3m-20211009.252.entry
-1.1M -rw-r--r-- 1 root root 1.1M Oct 23 11:21 packages/w3m-20211009.252.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 23 11:21 packages/w3m-badge.svg
-4.0K -rw-r--r-- 1 root root  380 Oct 23 11:21 packages/w3m-readme.txt
+4.0K -rw-r--r-- 1 root root  179 Oct 23 15:00 packages/w3m-20211009.252.entry
+1.1M -rw-r--r-- 1 root root 1.1M Oct 23 15:00 packages/w3m-20211009.252.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 23 15:00 packages/w3m-badge.svg
+4.0K -rw-r--r-- 1 root root  380 Oct 23 15:00 packages/w3m-readme.txt
