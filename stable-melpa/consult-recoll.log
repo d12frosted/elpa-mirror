@@ -3,11 +3,7 @@ Fetcher: git
 Source:  https://codeberg.org/jao/consult-recoll.git
 
 Updating /mnt/store/melpa/working/consult-recoll/
-Checking out origin/HEAD
-Checking out fe7a09b99d1497a30e11a2f86b6415adde00788a
-Built consult-recoll in 6.105s, finished at 2021-10-22T22:55:36+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.8K Oct 22 22:55 packages/consult-recoll-20210807.1613.el
-4.0K -rw-r--r-- 1 root root  380 Oct 22 22:55 packages/consult-recoll-20210807.1613.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 22 22:55 packages/consult-recoll-badge.svg
-4.0K -rw-r--r-- 1 root root  219 Oct 22 22:55 packages/consult-recoll-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://codeberg.org/jao/consult-recoll.git/': The requested URL returned error: 502
+error: Could not fetch origin
+

@@ -3,11 +3,7 @@ Fetcher: git
 Source:  https://codeberg.org/FelipeLema/tree-sitter-indent.el.git
 
 Updating /mnt/store/melpa/working/tree-sitter-indent/
-Checking out origin/HEAD
-Checking out 18d263720c5a8f7fde0db368c7c36ea70437fc0b
-Built tree-sitter-indent in 7.257s, finished at 2021-10-23T00:09:59+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root  23K Oct 23 00:09 packages/tree-sitter-indent-20210322.2033.el
-4.0K -rw-r--r-- 1 root root  533 Oct 23 00:09 packages/tree-sitter-indent-20210322.2033.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 23 00:09 packages/tree-sitter-indent-badge.svg
-4.0K -rw-r--r-- 1 root root  532 Oct 23 00:09 packages/tree-sitter-indent-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://codeberg.org/FelipeLema/tree-sitter-indent.el.git/': The requested URL returned error: 502
+error: Could not fetch origin
+

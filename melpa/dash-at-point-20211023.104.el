@@ -4,8 +4,8 @@
 ;; Author:  Shinji Tanaka <shinji.tanaka@gmail.com>
 ;; Created: 17 Feb 2013
 ;; Version: 0.0.5
-;; Package-Version: 20180710.1356
-;; Package-Commit: 4d795a23a8428c421d5107f1b005c9d8e0d1816c
+;; Package-Version: 20211023.104
+;; Package-Commit: fba1a6f42ea51d05110e12c62bdced664059eb55
 ;; URL: https://github.com/stanaka/dash-at-point
 ;;
 ;; This file is NOT part of GNU Emacs.
@@ -217,7 +217,7 @@ the combined docset.")
 
 (defun dash-at-point-run-search (search-string &optional docset)
   "Directly execute search for SEARCH-STRING in Dash."
-  (start-process "Dash" nil "open"
+  (start-process "Dash" nil "open" "-g"
 		 (if dash-at-point-legacy-mode
 		     (concat "dash://"
 			     (when docset
