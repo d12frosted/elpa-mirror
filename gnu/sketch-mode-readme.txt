@@ -32,14 +32,19 @@ Table of Contents
 ════════════════════════
 
   The initial version with the transient can be found in the
-  'transient-version' branch. This version introduced a toolbar which
-  made the transient unnecessary. Also removing the transient frees up
-  drawing space. It has been replaced by a hydra which is
-  togglable. Also an earlier version showed the mouse coordinate
-  position in the mode-line. However, this functionality hinders the
-  'interactive' drawing (which might be due to an emacs 'bug').  Anyway,
-  you can toggle showing the coordinates by pressing `t c' (maybe it
-  works more fluently on your system).
+  'transient-version' branch. A second version using a hydra can be
+  found in the 'hydra version'.  This version has a toolbar which made
+  the transient unnecessary. Which makes the transient unnecessary,
+  while removing the transient frees up drawing space. Initially this
+  version used a hydra. But using a hydra just complicates things if its
+  purpose is to show keybindings only. So finally this version simply
+  uses a side buffer to show keybindings.
+
+  Also an earlier version showed the mouse coordinates in the mode-line.
+  However, this functionality hinders the 'interactive' drawing (which
+  might be due to an emacs 'bug'). Anyway, you can toggle showing the
+  coordinates by pressing `t c' (maybe it works more fluently on your
+  system).
 
 
 2 Preliminary comment
@@ -76,7 +81,8 @@ Table of Contents
 2.1 Included features
 ─────────────────────
 
-  • mnemonic shortcuts + hydra and (alternatively) a toolbar
+  • mnemonic shortcuts
+  • toolbar
   • quickly insert image definition into new type (image) org-block with
     the image rendered as overlay (no external file required)
   • snap to grid (on minor-grid, however major and minor grid are fully
@@ -133,9 +139,6 @@ Table of Contents
   This package requires Emacs to have been build with SVG support (I
   guess that, in other words, this means it must have been build with
   cairo support, but I still have to find out)
-
-  Also the hydra package is recommended for informing/reminding about
-  the keybindings.
 
 
 4 Installation
@@ -197,9 +200,9 @@ Table of Contents
 ═══════
 
   Start a sketch with `M-x sketch' and enter values at the prompts (or
-  prefix with `C-u' to use default values). Although, thanks to the
-  `hydra' package, the usage is more or less self explanatory, it is
-  wise to take note of the following comments:
+  prefix with `C-u' to use default values). Although, thanks to the key
+  help buffer, the usage is more or less self explanatory, it is wise to
+  take note of the following comments:
 
   • use `C-c C-c' to quickly insert the xml-definition into the
     (org-mode) buffer from which sketch-mode was called and create the
@@ -220,10 +223,10 @@ Table of Contents
   • to remove an object (without using undo), you should press `d', and
     then the label of the object you want removed.
   • You can also modify the drawing by changing the object definition
-    (i.e.  elisp). For that press `d' to open the definition in a
-    side-window, then press `.' to hide (deactivate the) hydra
-    (keymap). Now modify the code and press `C-c C=c', to load it and
-    update the `\*sketch\*' buffer.
+    (i.e.  elisp). For that press `D' to open the definition in a
+    side-window, then press `.' to toggle the key help buffer. Now
+    modify the code and press `C-c C=c', to load it and update the
+    `\*sketch\*' buffer.
 
 
 6 Bugs
