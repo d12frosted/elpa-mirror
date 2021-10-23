@@ -1,0 +1,9 @@
+Package: prettify-math
+Fetcher: git
+Source:  https://gitee.com/shaqxu/prettify-math.git
+
+Cloning https://gitee.com/shaqxu/prettify-math.git to /mnt/store/melpa/working/prettify-math/
+Command '(env LC_ALL=C git clone https://gitee.com/shaqxu/prettify-math.git /mnt/store/melpa/working/prettify-math/)' exited with non-zero status 128: Cloning into '/mnt/store/melpa/working/prettify-math'...
+error: RPC failed; HTTP 502 curl 22 The requested URL returned error: 502
+fatal: expected flush after ref listing
+
