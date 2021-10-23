@@ -3,7 +3,11 @@ Fetcher: git
 Source:  https://codeberg.org/jao/consult-notmuch.git
 
 Updating /mnt/store/melpa/working/consult-notmuch/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://codeberg.org/jao/consult-notmuch.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 015642e88a48b1e3b4791a5badd8dbdfe6a6037e
+Built consult-notmuch in 6.150s, finished at 2021-10-23T10:06:20+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.7K Oct 23 10:06 packages/consult-notmuch-20210909.101.el
+4.0K -rw-r--r-- 1 root root  407 Oct 23 10:06 packages/consult-notmuch-20210909.101.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 23 10:06 packages/consult-notmuch-badge.svg
+4.0K -rw-r--r-- 1 root root  489 Oct 23 10:06 packages/consult-notmuch-readme.txt

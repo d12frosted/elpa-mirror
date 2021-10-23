@@ -971,15 +971,15 @@
 	     ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
 	    (:url . "https://elpa.gnu.org/packages/flymake.html"))])
  (flymake-proselint .
-		    [(0 2 1)
+		    [(0 2 2)
 		     ((emacs
 		       (26 1)))
 		     "Flymake backend for proselint" tar
 		     ((:url . "https://github.com/manuel-uberti/flymake-proselint")
+		      (:keywords "convenience")
 		      (:maintainer "Manuel Uberti" . "manuel.uberti@inventati.org")
 		      (:authors
-		       ("Manuel Uberti" . "manuel.uberti@inventati.org"))
-		      (:keywords "convenience"))])
+		       ("Manuel Uberti" . "manuel.uberti@inventati.org")))])
  (frame-tabs .
 	     [(1 1)
 	      nil "show buffer tabs in side window" single

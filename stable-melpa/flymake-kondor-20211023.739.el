@@ -4,9 +4,9 @@
 ;;
 ;; Author: https://turbocafe.keybase.pub
 ;; Created: 3 November 2019
-;; Version: 0.1.0
-;; Package-Version: 20210814.1303
-;; Package-Commit: 0058ef5167142a521825e824aced6229e4898ae9
+;; Version: 0.1.2
+;; Package-Version: 20211023.739
+;; Package-Commit: 470228acfaed703198bbb04198461ef9a44821b0
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/turbo-cafe/flymake-kondor
 ;;; Commentary:
@@ -61,31 +61,32 @@
         :command `("clj-kondo" "--lint" "-" "--lang" ,lang)
         :sentinel
         (lambda (proc _event)
-          (when (eq 'exit (process-status proc))
-            (unwind-protect
-                (if (with-current-buffer source (eq proc flymake-kondor--flymake-proc))
-                    (with-current-buffer (process-buffer proc)
-                      (goto-char (point-min))
-                      (cl-loop
-                       while (search-forward-regexp
-                              "^.+:\\([[:digit:]]+\\):\\([[:digit:]]+\\): \\([[:alpha:]]+\\): \\(.+\\)$"
-                              nil t)
-                       for lnum = (string-to-number (match-string 1))
-                       for lcol = (string-to-number (match-string 2))
-                       for type = (let ((severity (match-string 3)))
-                                    (cond
-                                     ((string= severity "error") :error)
-                                     ((string= severity "warning") :warning)
-                                     ((string= severity "info") :note)
-                                     (t :note)))
-                       for msg = (match-string 4)
-                       for (beg . end) = (flymake-diag-region source lnum lcol)
-                       collect (flymake-make-diagnostic source beg end type msg)
-                       into diags
-                       finally (funcall report-fn diags)))
-                  (flymake-log :warning "Canceling obsolete check %s"
-                               proc))
-              (kill-buffer (process-buffer proc)))))))
+          (let ((status (process-status proc)))
+            (when (or (eq status 'exit) (eq status 'signal))
+              (unwind-protect
+                  (if (with-current-buffer source (eq proc flymake-kondor--flymake-proc))
+                      (with-current-buffer (process-buffer proc)
+                        (goto-char (point-min))
+                        (cl-loop
+                         while (search-forward-regexp
+                                "^.+:\\([[:digit:]]+\\):\\([[:digit:]]+\\): \\([[:alpha:]]+\\): \\(.+\\)$"
+                                nil t)
+                         for lnum = (string-to-number (match-string 1))
+                         for lcol = (string-to-number (match-string 2))
+                         for type = (let ((severity (match-string 3)))
+                                      (cond
+                                       ((string= severity "error") :error)
+                                       ((string= severity "warning") :warning)
+                                       ((string= severity "info") :note)
+                                       (t :note)))
+                         for msg = (match-string 4)
+                         for (beg . end) = (flymake-diag-region source lnum lcol)
+                         collect (flymake-make-diagnostic source beg end type msg)
+                         into diags
+                         finally (funcall report-fn diags)))
+                    (flymake-log :warning "Canceling obsolete check %s"
+                                 proc))
+                (kill-buffer (process-buffer proc))))))))
       (process-send-region flymake-kondor--flymake-proc (point-min) (point-max))
       (process-send-eof flymake-kondor--flymake-proc))))
 
