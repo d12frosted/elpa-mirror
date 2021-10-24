@@ -2,6 +2,8 @@
 
 ;; Author: Sebastian Wålinder <s.walinder@gmail.com>
 ;; URL: https://github.com/walseb/blimp
+;; Package-Version: 20180903.2240
+;; Package-Commit: 39562f02acc1113595cb253a85bb3b9da743ddd2
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "25") (eimp "1.4.0"))
 ;; Keywords: multimedia, unix
