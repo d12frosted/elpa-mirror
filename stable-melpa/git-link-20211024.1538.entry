@@ -1,0 +1,11 @@
+(git-link .
+	  [(20211024 1538)
+	   ((emacs
+	     (24 3)))
+	   "Get the GitHub/Bitbucket/GitLab URL for a buffer location" single
+	   ((:commit . "b2d803ad8764b896f5dd7f7e139ceb4903f7d8b6")
+	    (:authors
+	     ("Skye Shaw" . "skye.shaw@gmail.com"))
+	    (:maintainer "Skye Shaw" . "skye.shaw@gmail.com")
+	    (:keywords "git" "vc" "github" "bitbucket" "gitlab" "sourcehut" "convenience")
+	    (:url . "http://github.com/sshaw/git-link"))])
