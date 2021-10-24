@@ -4,7 +4,7 @@ accessibility between background and foreground values (WCAG AAA).
 This file contains all customization variables, helper functions,
 interactive commands, and face specifications.  Please refer to the
 official Info manual for further documentation (distributed with the
-themes, or available at: <https://protesilaos.com/modus-themes>).
+themes, or available at: <https://protesilaos.com/emacs/modus-themes>).
 
 The themes share the following customization variables:
 
