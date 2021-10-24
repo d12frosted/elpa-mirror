@@ -5,8 +5,8 @@
 ;; Author: Daniel Szmulewicz <daniel.szmulewicz@gmail.com>
 ;; Created: 2020-02-11
 ;; URL: https://github.com/danielsz/meyvn-el
-;; Package-Version: 20210927.2356
-;; Package-Commit: 8573bd3d2a755cf1ac055036ecf5553f9bdb7444
+;; Package-Version: 20211024.437
+;; Package-Commit: f601e6fa23e08cb582cb8ab177e7a8e4097ee09f
 ;; Version: 1.1
 ;; Package-Requires: ((emacs "25.1") (cider "0.23") (projectile "2.1") (s "1.12") (dash "2.17") (parseedn "0.1.0") (geiser "0.12"))
 
@@ -43,37 +43,35 @@
 (require 'parseedn)
 (require 'geiser)
 
-(defun meyvn-get-repl-port ()
+(defun meyvn-get-repl-port (dir)
   "Find repl port."
-  (let* ((file (expand-file-name ".nrepl-port" (projectile-project-root))))
+  (let ((file (expand-file-name ".nrepl-port" dir)))
     (with-temp-buffer
       (insert-file-contents file)
       (buffer-string))))
 
-(defun meyvn-read-repl-port ()
+(defun meyvn-read-repl-port (dir)
   "Get repl port from meyvn config."
-  (let ((conf (meyvn-read-conf (expand-file-name "meyvn.edn" (projectile-project-root)))))
+  (let ((conf (meyvn-read-conf (expand-file-name "meyvn.edn" dir))))
     (ignore-errors
       (thread-last conf
 	(gethash :interactive)
 	(gethash :repl-port)))))
 
-(defun meyvn-kawa-repl-enabled-p ()
-  "Check if we autostart a Kawa repl."
-  (let ((conf (meyvn-read-conf (expand-file-name "meyvn.edn" (projectile-project-root)))))
-    (ignore-errors
-      (thread-last conf
-	(gethash :interactive)
-	(gethash :kawa)
-	(gethash :enabled)))))
-
 ;;;###autoload
-(defun meyvn-connect ()
-  "Connect to nREPL."
-  (interactive)
-  (let ((port (if (eq :auto (meyvn-read-repl-port))
-		  (meyvn-get-repl-port)
-		(meyvn-read-repl-port))))
+(defun meyvn-connect (arg)
+  "Connect to nREPL.
+
+EDN configuration will be read from project root or in the
+directory of the current buffer if ARG (command prefix) is
+supplied."
+  (interactive "p")
+  (let* ((dir (if (= arg 4)
+		 default-directory
+	       (projectile-project-root)))
+	(port (if (eq :auto (meyvn-read-repl-port dir))
+		  (meyvn-get-repl-port dir)
+		(meyvn-read-repl-port dir))))
     (cider-connect-clj `(:host "localhost" :port ,port))
     (cider-ensure-op-supported "meyvn-init")
     (meyvn-nrepl-session-init)))
@@ -130,27 +128,26 @@
 	 (count (nrepl-dict-get report "count")))
     (message "Found %d %s" count "properties in the environment.")))
 
-(defun meyvn-kawa-repl ()
-  "Will start a Kawa repl if needed."
-  (let* ((port (if (eq :auto (meyvn-read-repl-port))
-		  (meyvn-get-repl-port)
-		(meyvn-read-repl-port)))
+(defun meyvn-geiser ()
+  "Connect to a Kawa repl with geiser."
+  (let* ((dir (projectile-project-root))
+	 (port (if (eq :auto (meyvn-read-repl-port dir))
+		  (meyvn-get-repl-port dir)
+		(meyvn-read-repl-port dir)))
 	 (kawa-port (number-to-string (1+ (string-to-number port))))
 	 (count 0))
-    (when (meyvn-kawa-repl-enabled-p)
-      (while (and (< count 10)
-		 (not (zerop (call-process "lsof" nil nil nil (concat "-i:" kawa-port)))))
-	(sleep-for 0.1)
-	(setq count (1+ count)))
-      (geiser-connect 'kawa "localhost" kawa-port))))
+    (while (and (< count 10)
+		(not (zerop (call-process "lsof" nil nil nil (concat "-i:" kawa-port)))))
+      (sleep-for 0.1)
+      (setq count (1+ count)))
+    (geiser-connect 'kawa "localhost" kawa-port)))
 
 (defun meyvn-nrepl-session-init ()
   "Will notify the Meyvn nREPL middleware that we're ready to go."
   (interactive)
   (cider-ensure-connected)
   (let ((resp (nrepl-send-sync-request '("op" "meyvn-init") (cider-current-connection))))
-    (message (nrepl-dict-get resp "value"))
-    (meyvn-kawa-repl)))
+    (message (nrepl-dict-get resp "value"))))
 
 ;; Reload system on file change
 
@@ -221,12 +218,13 @@
     (s-split "\n" (nrepl-dict-get resp "value"))))
 
 (defun meyvn-kawa ()
-  "Start a Kawa REPL."
+  "Start a Kawa REPL.  ARG determines root directory."
   (interactive)
   (cider-ensure-connected)
   (cider-ensure-op-supported "meyvn-kawa")
   (let ((resp (nrepl-send-sync-request '("op" "meyvn-kawa") (cider-current-connection))))
-    (s-split "\n" (nrepl-dict-get resp "value"))))
+    (when (string= "OK" (car (s-split "\n" (nrepl-dict-get resp "value"))))
+      (meyvn-geiser))))
 
 (defun meyvn-versions (artifact)
   "Get available versions of ARTIFACT in repositories."
