@@ -7,8 +7,8 @@
 ;; Description: LSP Clients for LTEX.
 ;; Keyword: lsp languagetool checker
 ;; Version: 0.2.1
-;; Package-Version: 20211020.531
-;; Package-Commit: e546ad686ac3d92752ae2841b3da5b4b92ef06c8
+;; Package-Version: 20211024.809
+;; Package-Commit: f600d5f1d65c6209fa73a7bb916f6de2b60e5fc5
 ;; Package-Requires: ((emacs "26.1") (lsp-mode "6.1") (f "0.20.0") (s "1.12.0"))
 ;; URL: https://github.com/emacs-languagetool/lsp-ltex
 
@@ -272,8 +272,7 @@ This is use to active language server and check if language server's existence."
 
 (defun lsp-ltex--latest-version ()
   "Return the latest version from remote repository."
-  (when (featurep 'github-tags)
-    (github-tags lsp-ltex-repo-path)
+  (when (and (featurep 'github-tags) (ignore-errors (github-tags lsp-ltex-repo-path)))
     (let ((index 0) version ver)
       ;; Loop through tag name and fine the stable version
       (while (and (not version) (< index (length github-tags-names)))

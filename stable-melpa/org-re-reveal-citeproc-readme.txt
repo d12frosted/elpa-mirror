@@ -28,7 +28,8 @@ supports the new Org mode syntax introduced in in Org mode 9.5.
 2. Load an Org file and export it to HTML.
    (a) Make sure that reveal.js is available in your current directory
        (e.g., as sub-directory or symbolic link).
-   (b) Load "README.org" (coming with org-re-reveal-citeproc).
+   (b) Load "README.org", coming with org-re-reveal-citeproc:
+       https://gitlab.com/oer/org-re-reveal-citeproc/-/blob/master/README.org
    (c) Export to HTML: Key bindings depend upon version of org-re-reveal.
        Starting with version 1.0.0, press "C-c C-e v v" (write HTML file)
        or "C-c C-e v b" (write HTML file and open in browser)

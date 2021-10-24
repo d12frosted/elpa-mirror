@@ -370,6 +370,18 @@
 	      (:authors
 	       ("Bozhidar Batsov"))
 	      (:keywords "convenience"))])
+ (haml-mode .
+	    [(3 1 10)
+	     ((emacs
+	       (24))
+	      (cl-lib
+	       (0 5)))
+	     "Major mode for editing Haml files" tar
+	     ((:url . "https://github.com/nex3/haml-mode")
+	      (:keywords "markup" "languages" "html")
+	      (:maintainer "Natalie Weizenbaum")
+	      (:authors
+	       ("Natalie Weizenbaum")))])
  (haskell-mode .
 	       [(4 7 1)
 		nil "A Haskell editing mode" tar
