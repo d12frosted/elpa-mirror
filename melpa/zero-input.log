@@ -4,6 +4,6 @@ Source:  https://gitlab.emacsos.com/sylecn/zero-el
 
 Updating /mnt/store/melpa/working/zero-input/
 Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://gitlab.emacsos.com/sylecn/zero-el/': gnutls_handshake() failed: Error in the pull function.
+fatal: unable to access 'https://gitlab.emacsos.com/sylecn/zero-el/': The requested URL returned error: 502
 error: Could not fetch origin
 
