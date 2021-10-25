@@ -5,8 +5,6 @@
 ;; Author: Roland Walker <walker@pobox.com>
 ;; Homepage: http://github.com/rolandwalker/unicode-enbox
 ;; URL: http://raw.githubusercontent.com/rolandwalker/unicode-enbox/master/unicode-enbox.el
-;; Package-Version: 20140508.2041
-;; Package-Commit: 77074fac1994a4236f111d6a1d0cf79ea3fca151
 ;; Version: 0.1.4
 ;; Last-Updated:  6 Nov 2013
 ;; EmacsWiki: UnicodeEnbox
