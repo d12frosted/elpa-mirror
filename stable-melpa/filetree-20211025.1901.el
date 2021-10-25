@@ -4,8 +4,8 @@
 ;;
 ;; Author: Ketan Patel <knpatel401@gmail.com>
 ;; URL: https://github.com/knpatel401/filetree
-;; Package-Version: 20211008.2353
-;; Package-Commit: 1f0bcf009bf124c213d64dd2726061db6af981b5
+;; Package-Version: 20211025.1901
+;; Package-Commit: ccbeae9aa14b7493f304acaf45551c4aa68be8a0
 ;; Package-Requires: ((emacs "27.1") (dash "2.12.0") (helm "3.7.0"))
 ;; Version: 1.0.1
 
@@ -60,6 +60,7 @@
 (require 'seq)
 (require 'vc)
 (require 'dired-aux)
+(require 'face-remap)
 ;;(require 'cl-lib)
 
 ;; External functions/variables
@@ -452,7 +453,7 @@ If `filetree-marked-file-list' is empty, then use `filetree-current-file-list'."
 
 (defun filetree-open-marked-files ()
   "Open buffer for each file in `filetree-marked-file-list'.
-If buffer already exists, new buffer is not opened.  If 
+If buffer already exists, new buffer is not opened.  If
 `filetree-marked-file-list' is empty use `filetree-current-file-list'"
   (interactive)
   ; if no marked files treat all files as marked
@@ -474,12 +475,13 @@ Confirms with user before deleting."
   (if (y-or-n-p (concat "Are you sure you want to delete "
                         (number-to-string (length filetree-marked-file-list))
                         " files?"))
-      (while filetree-marked-file-list
-        (setq my-file (car filetree-marked-file-list))
-        (setq filetree-marked-file-list (cdr filetree-marked-file-list))
-        (delete-file my-file)
-        (setq filetree-current-file-list (delete my-file
-                                                 filetree-current-file-list))))
+      (let ((my-file nil))
+        (while filetree-marked-file-list
+          (setq my-file (car filetree-marked-file-list))
+          (setq filetree-marked-file-list (cdr filetree-marked-file-list))
+          (delete-file my-file)
+          (setq filetree-current-file-list (delete my-file
+                                                   filetree-current-file-list)))))
   (filetree-update-buffer))
 
 
@@ -494,8 +496,8 @@ Output appears in *Shell Command Output*"
 
 (defun filetree-move-marked-files-only ()
   "Move files in `filetree-marked-file-list'.
-User is prompted with directory to move files to.  The starting dir that is 
-shown to the user at the prompt is determined from the directory at point 
+User is prompted with directory to move files to.  The starting dir that is
+shown to the user at the prompt is determined from the directory at point
 in the filetree."
   (interactive)
   (if (y-or-n-p (concat "Are you sure you want to move "
@@ -518,8 +520,8 @@ in the filetree."
 
 (defun filetree-copy-marked-files-only ()
   "Copy files in `filetree-marked-file-list'.
-User is prompted with directory to move files to.  The starting dir that is 
-shown to the user at the prompt is determined from the directory at point 
+User is prompted with directory to move files to.  The starting dir that is
+shown to the user at the prompt is determined from the directory at point
 in the filetree."
   (interactive)
   (if (y-or-n-p (concat "Are you sure you want to copy "
@@ -572,7 +574,7 @@ If file-or-dir not specified, use file or dir at point."
         (filetree-next-line)))))
 
 (defun filetree-mark-all ()
-  "Add all files in `filetree-current-file-list' to marked files"
+  "Add all files in `filetree-current-file-list' to marked files."
   (interactive)
   (setq filetree-marked-file-list (-union filetree-current-file-list
                                           filetree-marked-file-list))
@@ -1051,14 +1053,14 @@ TODO: Break into smaller functions and clean-up."
                    extra-info))))
 
 (defun filetree-increment-current-info-cycle ()
-  "Cycle to next info view"
+  "Cycle to next info view."
   (interactive)
   (setq filetree-current-info-cycle (mod (+ 1 filetree-current-info-cycle)
                                          (length filetree-info-cycle-list)))
   (filetree-update-buffer t))
 
 (defun filetree-decrement-current-info-cycle ()
-  "Cycle to previous info view"
+  "Cycle to previous info view."
   (interactive)
   (setq filetree-current-info-cycle (mod (- filetree-current-info-cycle 1)
                                          (length filetree-info-cycle-list)))
@@ -1291,8 +1293,7 @@ for remote files."
                                            (file-remote-p x))
                                       (file-exists-p x))
                                   x nil))
-                            filetree-current-file-list
-                            ))))
+                            filetree-current-file-list))))
   
 (defun filetree-update-buffer (&optional skip-update-stack)
   "Update the display buffer (following some change).
@@ -1382,7 +1383,7 @@ Info determined from 'filetree-filetype-list' and 'filetree-default-file-face'."
 
 (defun filetree-grep-marked-files ()
   "Run grep on files in `filetree-marked-file-list'.
-Takes input from user for grep pattern. If `filetree-marked-file-list'
+Takes input from user for grep pattern.  If `filetree-marked-file-list'
 is empty use `filetree-current-file-list'"
   (interactive)
   (if (version< emacs-version "27.1")

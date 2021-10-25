@@ -4,8 +4,6 @@
 
 ;; Author: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Version: 1.3
-;; Package-Version: 20200425.1601
-;; Package-Commit: e02b835a08919ead079d7221d513348ac02ba92e
 ;; Keywords: theme
 ;; Maintainer: Mohammed Ismail Ansari <team.terminal@gmail.com>
 ;; Created: 2018/02/15
