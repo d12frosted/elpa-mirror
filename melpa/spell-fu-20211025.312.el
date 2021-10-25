@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-spell-fu
-;; Package-Version: 20211008.106
-;; Package-Commit: f38bebefea9d23c2bd4293ecf7100211c1410cd4
+;; Package-Version: 20211025.312
+;; Package-Commit: 74079bfbc37cddbd4161f883503bb190d885ae1e
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
@@ -772,7 +772,11 @@ when checking the entire buffer for example."
     ;; Handy for debugging pending regions to be checked.
     ;; (overlay-put item-ov 'face '(:background "#000000" :extend t))
     (overlay-put item-ov 'spell-fu-pending t)
-    (overlay-put item-ov 'evaporate 't)))
+    (overlay-put item-ov 'evaporate 't))
+
+  ;; Tell font-logic that nothing needs to be updated,
+  ;; overlays are only to track pending spell checking.
+  (cons 'jit-lock-bounds (cons 0 0)))
 
 ;; ---------------------------------------------------------------------------
 ;; Internal Timer Management
