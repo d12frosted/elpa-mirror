@@ -1,6 +1,6 @@
-		      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
-		       FLYMAKE BACKEND CLJ-KONDO
-		      ━━━━━━━━━━━━━━━━━━━━━━━━━━━
+			    ━━━━━━━━━━━━━━━━
+			     FLYMAKE-KONDOR
+			    ━━━━━━━━━━━━━━━━
 
 
 Table of Contents
@@ -12,9 +12,9 @@ Table of Contents
 4. Note about Flymake
 
 
-This package integrates clj-kondo a Clojure linter into Emacs' Flymake;
-to use it get clj-kondo following [installation instructions]; then
-proceed with your preferred way of adding packages.
+This package integrates clj-kondo a Clojure linter into Emacs'
+Flymake. To use it get clj-kondo following [installation instructions];
+then proceed with your preferred way of adding packages.
 
 
 [installation instructions]
