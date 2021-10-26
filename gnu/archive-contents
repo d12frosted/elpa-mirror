@@ -2627,15 +2627,15 @@
 		("David Gonzalez Gandara" . "dggandara@member.fsf.org"))
 	       (:maintainer "David Gonzalez Gandara" . "dggandara@member.fsf.org"))])
  (transient .
-	    [(0 3 6)
+	    [(0 3 7)
 	     ((emacs
 	       (25 1)))
 	     "Transient commands" tar
 	     ((:url . "https://github.com/magit/transient")
+	      (:keywords "bindings")
 	      (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
 	      (:authors
-	       ("Jonas Bernoulli" . "jonas@bernoul.li"))
-	      (:keywords "bindings"))])
+	       ("Jonas Bernoulli" . "jonas@bernoul.li")))])
  (trie .
        [(0 5)
 	((tNFA
