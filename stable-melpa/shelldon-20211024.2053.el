@@ -5,7 +5,7 @@
 ;; Author: overdr0ne <scmorris.dev@gmail.com>
 ;; Version: 1.0
 ;; Package-Version: 20211024.2053
-;; Package-Commit: 18875b02c43cf88738d25d9fa114aa7c3d905ed3
+;; Package-Commit: 232a52eb5d7a9c3ca9f5983140578ddd86ba33a1
 ;; URL: https://github.com/Overdr0ne/shelldon
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: tools, convenience

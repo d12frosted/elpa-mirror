@@ -1,4 +1,4 @@
-Used Doom themes for boilerplate for modes & packages.
+Sourced other themes to get information about font faces for packages.
 
 I. Installation
   A. Manual installation
