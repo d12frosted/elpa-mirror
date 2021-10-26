@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/muffinmad/emacs-ctrlxo.git
 
 Updating /mnt/store/melpa/working/ctrlxo/
-Checking out origin/HEAD
-Checking out 8ad95a81bd1ece06ebe40e2a83490775db64b419
-Built ctrlxo in 7.928s, finished at 2021-10-26T12:16:23+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.9K Oct 26 12:16 packages/ctrlxo-20201021.701.el
-4.0K -rw-r--r-- 1 root root  371 Oct 26 12:16 packages/ctrlxo-20201021.701.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 26 12:16 packages/ctrlxo-badge.svg
-4.0K -rw-r--r-- 1 root root  854 Oct 26 12:16 packages/ctrlxo-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/muffinmad/emacs-ctrlxo.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+

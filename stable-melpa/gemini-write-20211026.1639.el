@@ -6,8 +6,8 @@
 
 ;; Author: Alex Schroeder <alex@gnu.org>
 ;; Version: 1.0.0
-;; Package-Version: 20211009.2110
-;; Package-Commit: 7e1fe7d4f2c65c0854eb571edc78e5a45d7078de
+;; Package-Version: 20211026.1639
+;; Package-Commit: 169333a5c251c14a84286dea02a63d1a5e93cf54
 ;; Keywords: comm gemini
 ;; Homepage: https://alexschroeder.ch/cgit/gemini-write
 ;; Package-Requires: ((emacs "26") (elpher "2.8.0") (gemini-mode "1.0.0"))
@@ -132,7 +132,7 @@ POINT is an approximate position in that buffer."
   (let ((address (elpher-page-address elpher-current-page)))
     (when elpher-use-header
       (setq header-line-format (url-unhex-string (elpher-address-to-url address)))))
-  (message "Use C-c C-c to save"))
+  (message (substitute-command-keys "Use `\\[gemini-write]' to save")))
 
 (defcustom gemini-write-tokens
   '(("alexschroeder.ch" . "hello")

@@ -9,8 +9,8 @@
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Package-Requires: ((cl-lib "0.3"))
-;; Package-Version: 20211025.2302
-;; Package-Commit: 40836284e8bd234e9894e8abb092d006011a3ed2
+;; Package-Version: 20211026.1512
+;; Package-Commit: 5bde77c115f5aa44388e7075a00f58bb77ed8524
 ;; Homepage: https://github.com/tarsius/keymap-utils
 ;; Keywords: convenience, extensions
 
@@ -416,14 +416,16 @@ being undefined is being bound to nil like B above."
                            (list k)))
                        key))
   (if (= (length key) 1)
-      (cl-delete key keymap :count 1 :test #'equal)
+      (unless (kmu-full-keymap-p keymap)
+        (cl-delete key keymap :count 1 :test #'equal))
     (let* ((prefix (vconcat (butlast key)))
            (submap (lookup-key keymap prefix)))
       (if (not (keymapp submap))
           (error "Cannot remove %; %s is not bound to a keymap" key prefix)
         (when (symbolp submap)
           (setq submap (symbol-function submap)))
-        (delete (last key) submap)
+        (unless (kmu-full-keymap-p keymap)
+          (cl-delete (last key) submap :count 1 :test #'equal))
         (when (= (length submap) 1)
           (kmu-remove-key keymap prefix))))))
 
