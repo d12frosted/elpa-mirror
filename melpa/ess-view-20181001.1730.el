@@ -5,8 +5,6 @@
 ;; Author: Bocci Gionata <boccigionata@gmail.com>
 ;; Maintainer: Bocci Gionata <boccigionata@gmail.com>
 ;; URL: https://github.com/GioBo/ess-view
-;; Package-Version: 20181001.1730
-;; Package-Commit: 925cafd876e2cc37bc756bb7fcf3f34534b457e2
 ;; Created: 2016-02-10
 ;; Version: 0.1
 ;; Package-Requires: ((ess "15")  (s "1.8.0") (f "0.16.0"))

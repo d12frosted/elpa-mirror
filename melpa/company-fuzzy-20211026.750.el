@@ -7,8 +7,8 @@
 ;; Description: Fuzzy matching for `company-mode'.
 ;; Keyword: auto auto-complete complete fuzzy matching
 ;; Version: 1.2.2
-;; Package-Version: 20211017.1548
-;; Package-Commit: 80c84e3071e1aca9c058c4b5061b72fb9536a697
+;; Package-Version: 20211026.750
+;; Package-Commit: 3d403532c02183189ce40c33f5b4a9c4d13f622a
 ;; Package-Requires: ((emacs "24.4") (company "0.8.12") (s "1.12.0") (ht "2.0"))
 ;; URL: https://github.com/jcs-elpa/company-fuzzy
 
@@ -587,9 +587,10 @@ Insert .* between each char."
 
 (defun company-fuzzy--candidates-from-passthrough-backend (backend)
   "Use candidates of already fuzzy BACKEND as is."
-  (let (temp-candidates)
-    (when company-fuzzy--prefix
-      (setq temp-candidates (company-fuzzy--call-backend backend 'candidates company-fuzzy--prefix)))
+  (let ((prefix-get (company-fuzzy--backend-prefix backend 'get))
+        temp-candidates)
+    (when prefix-get
+      (setq temp-candidates (company-fuzzy--call-backend backend 'candidates prefix-get)))
     (when (company-fuzzy--valid-candidates-p temp-candidates)
       (delete-dups temp-candidates)
       (ht-set company-fuzzy--ht-backends-candidates backend (copy-sequence temp-candidates)))))
@@ -605,7 +606,7 @@ Insert .* between each char."
     ;;
     ;; The function `company-fuzzy--match-string' does the very first
     ;; basic filtering in order to lower the performance before sending
-    ;; to function `flx-score'.
+    ;; to function scoring engine.
     (when (and (not company-fuzzy--is-trigger-prefix-p)
                (company-fuzzy--valid-candidates-p temp-candidates)
                prefix-com)

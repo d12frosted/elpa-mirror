@@ -1,9 +1,9 @@
 (posframe .
-	  [(20211025 1411)
+	  [(20211026 31)
 	   ((emacs
-	     (26)))
+	     (26 1)))
 	   "Pop a posframe (just a frame) at point" tar
-	   ((:commit . "70ba4e77c114d980c0d87ed1f6b201188a3f8954")
+	   ((:commit . "81399de802675f963bec9a4355cf69e707cd30f9")
 	    (:authors
 	     ("Feng Shu" . "tumashu@163.com"))
 	    (:maintainer "Feng Shu" . "tumashu@163.com")
