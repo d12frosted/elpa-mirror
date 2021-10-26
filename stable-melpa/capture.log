@@ -5,3 +5,27 @@ Source:  https://github.com/pashinin/capture.el.git
 Updating /mnt/store/melpa/working/capture/
 Checking out origin/HEAD
 Checking out 1bb26060311da76767f70096218313fc93b0c806
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/capture/
+  to /tmp/captureunI7DR/capture-20130828.1644
+  ! src/capture-functions.el -> capture-functions.el
+  ! src/capture-helpers.el -> capture-helpers.el
+  ! src/capture-keys.el -> capture-keys.el
+  ! src/capture-ui.el -> capture-ui.el
+  ! src/capture-vars.el -> capture-vars.el
+  ! src/capture.el -> capture.el
+Created capture-20130828.1644.tar containing:
+  capture-20130828.1644/
+  capture-20130828.1644/capture-functions.el
+  capture-20130828.1644/capture-helpers.el
+  capture-20130828.1644/capture-keys.el
+  capture-20130828.1644/capture-pkg.el
+  capture-20130828.1644/capture-ui.el
+  capture-20130828.1644/capture-vars.el
+  capture-20130828.1644/capture.el
+Built capture in 13.079s, finished at 2021-10-26T12:08:17+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  283 Oct 26 12:08 packages/capture-20130828.1644.entry
+ 40K -rw-r--r-- 1 root root  40K Oct 26 12:08 packages/capture-20130828.1644.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 26 12:08 packages/capture-badge.svg
+4.0K -rw-r--r-- 1 root root  649 Oct 26 12:08 packages/capture-readme.txt

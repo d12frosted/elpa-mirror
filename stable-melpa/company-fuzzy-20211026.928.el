@@ -7,8 +7,8 @@
 ;; Description: Fuzzy matching for `company-mode'.
 ;; Keyword: auto auto-complete complete fuzzy matching
 ;; Version: 1.2.2
-;; Package-Version: 20211026.750
-;; Package-Commit: 3d403532c02183189ce40c33f5b4a9c4d13f622a
+;; Package-Version: 20211026.928
+;; Package-Commit: b7fba22cf51cbbbbff1eb070829e928782338b08
 ;; Package-Requires: ((emacs "24.4") (company "0.8.12") (s "1.12.0") (ht "2.0"))
 ;; URL: https://github.com/jcs-elpa/company-fuzzy
 
@@ -205,6 +205,11 @@
   "Return non-nil if CANDIDATES is list of valid candidates."
   (ignore-errors (stringp (nth 0 candidates))))
 
+(defun company-fuzzy--async-candidates-p (candidates)
+  "Return non-nil if CANDIDATES is in async format."
+  (when (consp candidates)
+    (and (eq (car candidates) :async) (functionp (cdr candidates)))))
+
 (defun company-fuzzy--symbol-start ()
   "Return symbol start point from current cursor position."
   (ignore-errors
@@ -350,7 +355,9 @@ See function `string-prefix-p' for arguments PREFIX, STRING and IGNORE-CASE."
   candidates)
 
 (defun company-fuzzy--sort-candidates-by-function (candidates fnc &optional flip)
-  "Sort CANDIDATES with function call FNC."
+  "Sort CANDIDATES with function call FNC.
+
+If optional argument FLIP is non-nil, reverse query and pattern order."
   (let ((scoring-table (ht-create)) scoring-keys prefix scoring score)
     (dolist (cand candidates)
       (setq prefix (company-fuzzy--backend-prefix-candidate cand 'match)
@@ -591,9 +598,7 @@ Insert .* between each char."
         temp-candidates)
     (when prefix-get
       (setq temp-candidates (company-fuzzy--call-backend backend 'candidates prefix-get)))
-    (when (company-fuzzy--valid-candidates-p temp-candidates)
-      (delete-dups temp-candidates)
-      (ht-set company-fuzzy--ht-backends-candidates backend (copy-sequence temp-candidates)))))
+    (company-fuzzy--collect-candidates backend temp-candidates)))
 
 (defun company-fuzzy--candidates-from-backend (backend)
   "Do fuzzy matching for current BACKEND."
@@ -621,15 +626,31 @@ Insert .* between each char."
         (delete-dups temp-candidates)
         (ht-set company-fuzzy--ht-history backend temp-candidates)))
     ;; NOTE: Made the final completion.
-    ;;
-    ;; This is the final ensure step before processing it to scoring phase.
-    ;; We confirm candidates by adding it to `company-fuzzy--ht-backends-candidates'.
-    ;; The function `company-fuzzy--valid-candidates-p' is use to ensure the
-    ;; candidates returns a list of strings, which this is the current only valid
-    ;; type to this package.
-    (when (company-fuzzy--valid-candidates-p temp-candidates)
-      (delete-dups temp-candidates)
-      (ht-set company-fuzzy--ht-backends-candidates backend (copy-sequence temp-candidates)))))
+    (company-fuzzy--collect-candidates backend temp-candidates)))
+
+(defun company-fuzzy--register-candidates (backend candidates)
+  "Register CANDIDATES with BACKEND id."
+  (delete-dups candidates)
+  (ht-set company-fuzzy--ht-backends-candidates backend (copy-sequence candidates)))
+
+(defun company-fuzzy--collect-candidates (backend candidates)
+  "Collect BACKEND's CANDIDATES by it's type."
+  (cond
+   ;; NOTE: Asynchronous
+   ((company-fuzzy--async-candidates-p candidates)
+    (ignore-errors
+      (funcall (cdr candidates)
+               (lambda (async-candidates)
+                 (company-fuzzy--register-candidates backend async-candidates)))))
+   ;; NOTE: Synchronous
+   ;;
+   ;; This is the final ensure step before processing it to scoring phase.
+   ;; We confirm candidates by adding it to `company-fuzzy--ht-backends-candidates'.
+   ;; The function `company-fuzzy--valid-candidates-p' is use to ensure the
+   ;; candidates returns a list of strings, which this is the current only valid
+   ;; type to this package.
+   ((company-fuzzy--valid-candidates-p candidates)
+    (company-fuzzy--register-candidates backend candidates))))
 
 (defun company-fuzzy--get-prefix ()
   "Set the prefix just right before completion."

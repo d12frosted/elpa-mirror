@@ -2,8 +2,8 @@
 ;;
 ;; Author: Maor Kadosh <git@avocadosh.xyz>
 ;; URL: https://github.com/it-is-wednesday/eldoc-toml
-;; Package-Version: 20211025.2303
-;; Package-Commit: b61ff1fc0d62fa11792b1de078b52e14d9383cc2
+;; Package-Version: 20211026.1122
+;; Package-Commit: 61106be3c3f3a5b293c3f285eec8c6f400142b6d
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.4"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
@@ -109,8 +109,8 @@ Add this to `eldoc-documentation-functions'."
   "Indicate table and variable name at point in a TOML document."
   :lighter "eldoc-toml"
   (if eldoc-toml-mode
-      (remove-hook 'eldoc-documentation-functions #'eldoc-toml--callback 'local)
-    (add-hook 'eldoc-documentation-functions #'eldoc-toml--callback nil 'local)))
+      (add-hook 'eldoc-documentation-functions #'eldoc-toml--callback nil 'local)
+    (remove-hook 'eldoc-documentation-functions #'eldoc-toml--callback 'local)))
 
 (provide 'eldoc-toml)
 ;;; eldoc-toml.el ends here
