@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 71127f7b1c554d3ad94555eef5a3ce681315e04b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docker/
-  to /tmp/dockerbrK50c/docker-20211026.950
+  to /tmp/docker9XrOUc/docker-20211026.950
     docker-compose.el -> docker-compose.el
     docker-container.el -> docker-container.el
     docker-core.el -> docker-core.el
@@ -29,29 +29,29 @@ Created docker-20211026.950.tar containing:
   docker-20211026.950/docker-utils.el
   docker-20211026.950/docker-volume.el
   docker-20211026.950/docker.el
-Built docker in 5.794s, finished at 2021-10-27T05:27:35+0000
+Built docker in 5.010s, finished at 2021-10-27T09:24:36+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  520 Oct 27 05:27 packages/docker-20211026.950.entry
- 92K -rw-r--r-- 1 root root  90K Oct 27 05:27 packages/docker-20211026.950.tar
+4.0K -rw-r--r-- 1 root root  520 Oct 27 09:24 packages/docker-20211026.950.entry
+ 92K -rw-r--r-- 1 root root  90K Oct 27 09:24 packages/docker-20211026.950.tar
 4.0K -rw-r--r-- 1 root root  445 Oct 27 05:27 packages/docker-api-20160525.720.entry
  20K -rw-r--r-- 1 root root  20K Oct 27 05:27 packages/docker-api-20160525.720.tar
 4.0K -rw-r--r-- 1 root root 1.2K Oct 27 05:27 packages/docker-api-badge.svg
    0 -rw-r--r-- 1 root root    0 Oct 27 05:27 packages/docker-api-readme.txt
-4.0K -rw-r--r-- 1 root root 1.5K Oct 27 05:27 packages/docker-api.log
-4.0K -rw-r--r-- 1 root root 1.2K Oct 27 05:27 packages/docker-badge.svg
- 12K -rw-r--r-- 1 root root 8.6K Oct 27 01:23 packages/docker-cli-20190524.1624.el
-4.0K -rw-r--r-- 1 root root  406 Oct 27 01:23 packages/docker-cli-20190524.1624.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 27 01:23 packages/docker-cli-badge.svg
-4.0K -rw-r--r-- 1 root root  461 Oct 27 01:23 packages/docker-cli-readme.txt
-4.0K -rw-r--r-- 1 root root  211 Oct 27 05:27 packages/docker-cli.log
- 28K -rw-r--r-- 1 root root  26K Oct 27 01:23 packages/docker-compose-mode-20200830.1336.el
-4.0K -rw-r--r-- 1 root root  448 Oct 27 01:23 packages/docker-compose-mode-20200830.1336.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 27 01:23 packages/docker-compose-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  476 Oct 27 01:23 packages/docker-compose-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  238 Oct 27 05:27 packages/docker-compose-mode.log
-4.0K -rw-r--r-- 1 root root   83 Oct 27 05:27 packages/docker-readme.txt
-4.0K -rw-r--r-- 1 root root  434 Oct 27 01:23 packages/docker-tramp-20210729.508.entry
- 20K -rw-r--r-- 1 root root  20K Oct 27 01:23 packages/docker-tramp-20210729.508.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 27 01:23 packages/docker-tramp-badge.svg
-4.0K -rw-r--r-- 1 root root 1.9K Oct 27 01:23 packages/docker-tramp-readme.txt
-4.0K -rw-r--r-- 1 root root  169 Oct 27 05:27 packages/docker-tramp.log
+4.0K -rw-r--r-- 1 root root  214 Oct 27 09:24 packages/docker-api.log
+4.0K -rw-r--r-- 1 root root 1.2K Oct 27 09:24 packages/docker-badge.svg
+ 12K -rw-r--r-- 1 root root 8.6K Oct 27 05:27 packages/docker-cli-20190524.1624.el
+4.0K -rw-r--r-- 1 root root  406 Oct 27 05:27 packages/docker-cli-20190524.1624.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 27 05:27 packages/docker-cli-badge.svg
+4.0K -rw-r--r-- 1 root root  461 Oct 27 05:27 packages/docker-cli-readme.txt
+4.0K -rw-r--r-- 1 root root  157 Oct 27 09:24 packages/docker-cli.log
+ 28K -rw-r--r-- 1 root root  26K Oct 27 05:27 packages/docker-compose-mode-20200830.1336.el
+4.0K -rw-r--r-- 1 root root  448 Oct 27 05:27 packages/docker-compose-mode-20200830.1336.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 27 05:27 packages/docker-compose-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  476 Oct 27 05:27 packages/docker-compose-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  184 Oct 27 09:24 packages/docker-compose-mode.log
+4.0K -rw-r--r-- 1 root root   83 Oct 27 09:24 packages/docker-readme.txt
+4.0K -rw-r--r-- 1 root root  434 Oct 27 05:27 packages/docker-tramp-20210729.508.entry
+ 20K -rw-r--r-- 1 root root  20K Oct 27 05:27 packages/docker-tramp-20210729.508.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 27 05:27 packages/docker-tramp-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Oct 27 05:27 packages/docker-tramp-readme.txt
+4.0K -rw-r--r-- 1 root root  169 Oct 27 09:24 packages/docker-tramp.log
