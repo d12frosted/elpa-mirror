@@ -6,7 +6,7 @@
 ;; Homepage: http://stacked-git.github.io
 ;; Version: 0.17.1
 ;; Package-Version: 20200606.1308
-;; Package-Commit: 7a2b6d367d64b6e6cdf9b6680ac7211ee8966813
+;; Package-Commit: 262b2fc5b533f6f609c43a6f543c9d0d185b8f55
 ;;
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
