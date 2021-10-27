@@ -4,10 +4,10 @@ Source:  https://github.com/ocaml/dune.git
 
 Updating /mnt/store/melpa/working/dune/
 Checking out origin/HEAD
-Checking out a6b1dc37e9e7286f88dbcfe5725ea93908798801
+Checking out 02292950515d0b0846156b91b7b0ce0c2453c519
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dune/
-  to /tmp/dunenOJzn4/dune-20210909.1010
+  to /tmp/dune5KXbxl/dune-20210909.1010
   ! editor-integration/emacs/dune-flymake.el -> dune-flymake.el
   ! editor-integration/emacs/dune-watch.el -> dune-watch.el
   ! editor-integration/emacs/dune.el -> dune.el
@@ -17,14 +17,14 @@ Created dune-20210909.1010.tar containing:
   dune-20210909.1010/dune-pkg.el
   dune-20210909.1010/dune-watch.el
   dune-20210909.1010/dune.el
-Built dune in 11.535s, finished at 2021-10-26T16:52:43+0000
+Built dune in 12.562s, finished at 2021-10-26T21:07:54+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  195 Oct 26 16:52 packages/dune-20210909.1010.entry
- 40K -rw-r--r-- 1 root root  40K Oct 26 16:52 packages/dune-20210909.1010.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 26 16:52 packages/dune-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Oct 26 16:52 packages/dune-format-20210505.108.el
-4.0K -rw-r--r-- 1 root root  438 Oct 26 16:52 packages/dune-format-20210505.108.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 26 16:52 packages/dune-format-badge.svg
-4.0K -rw-r--r-- 1 root root  335 Oct 26 16:52 packages/dune-format-readme.txt
-4.0K -rw-r--r-- 1 root root  626 Oct 26 16:52 packages/dune-format.log
-4.0K -rw-r--r-- 1 root root  871 Oct 26 16:52 packages/dune-readme.txt
+4.0K -rw-r--r-- 1 root root  195 Oct 26 21:07 packages/dune-20210909.1010.entry
+ 40K -rw-r--r-- 1 root root  40K Oct 26 21:07 packages/dune-20210909.1010.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 26 21:07 packages/dune-badge.svg
+4.0K -rw-r--r-- 1 root root 2.0K Oct 26 21:07 packages/dune-format-20210505.108.el
+4.0K -rw-r--r-- 1 root root  438 Oct 26 21:07 packages/dune-format-20210505.108.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 26 21:07 packages/dune-format-badge.svg
+4.0K -rw-r--r-- 1 root root  335 Oct 26 21:07 packages/dune-format-readme.txt
+4.0K -rw-r--r-- 1 root root  626 Oct 26 21:07 packages/dune-format.log
+4.0K -rw-r--r-- 1 root root  871 Oct 26 21:07 packages/dune-readme.txt

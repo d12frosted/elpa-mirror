@@ -4,11 +4,11 @@
 
 ;; Author: Phil Hagelberg
 ;; URL: https://gitlab.com/technomancy/fennel-mode
-;; Package-Version: 20211021.1908
-;; Package-Commit: 8c0b2904a9d1bb93552eb4dbc83539bd1f0300ae
-;; Version: 0.3.1
+;; Package-Version: 20211026.2040
+;; Package-Commit: 815f4c9433fa389bf10ddcf1da6f280e512912ff
+;; Version: 0.4.0
 ;; Created: 2018-02-18
-;; Package-Requires: ((emacs "25.1"))
+;; Package-Requires: ((emacs "26.1"))
 ;;
 ;; Keywords: languages, tools
 
@@ -34,7 +34,9 @@
 ;; Boston, MA 02110-1301, USA.
 
 ;;; Code:
+
 (require 'lisp-mode)
+(require 'prog-mode)
 (require 'inf-lisp)
 (require 'thingatpt)
 (require 'xref)
@@ -64,8 +66,8 @@
   :type 'boolean
   :package-version '(fennel-mode "0.10.0"))
 
-(make-variable-buffer-local
- (defvar fennel-repl--last-fennel-buffer nil))
+(defvar-local fennel-repl--last-fennel-buffer nil
+  "Variable that holds last fennel buffer for switching from the REPL.")
 
 (defun fennel-show-documentation (symbol)
   "Show SYMBOL documentation in the REPL."
@@ -116,13 +118,48 @@ lookup that Fennel does in the REPL."
                          print))))))
 
 (defvar fennel-mode-syntax-table
-  (let ((table (copy-syntax-table lisp-mode-syntax-table)))
-    (modify-syntax-entry ?\{ "(}" table)
-    (modify-syntax-entry ?\} "){" table)
+  (let ((table (make-syntax-table)))
+    ;; Initialize ASCII charset as symbol syntax
+    (modify-syntax-entry '(0 . 127) "_" table)
+
+    ;; Word syntax
+    (modify-syntax-entry '(?0 . ?9) "w" table)
+    (modify-syntax-entry '(?a . ?z) "w" table)
+    (modify-syntax-entry '(?A . ?Z) "w" table)
+
+    ;; Whitespace
+    (modify-syntax-entry ?\s " " table)
+    (modify-syntax-entry ?\xa0 " " table) ; non-breaking space
+    (modify-syntax-entry ?\t " " table)
+    (modify-syntax-entry ?\f " " table)
+    ;; Setting commas as whitespace makes functions like `delete-trailing-whitespace' behave unexpectedly (#561)
+    (modify-syntax-entry ?, "." table)
+
+    ;; Delimiters
+    (modify-syntax-entry ?\( "()" table)
+    (modify-syntax-entry ?\) ")(" table)
     (modify-syntax-entry ?\[ "(]" table)
     (modify-syntax-entry ?\] ")[" table)
-    (modify-syntax-entry ?# "w" table)
-    table))
+    (modify-syntax-entry ?\{ "(}" table)
+    (modify-syntax-entry ?\} "){" table)
+
+    ;; Prefix chars
+    (modify-syntax-entry ?` "'" table)
+    (modify-syntax-entry ?~ "'" table)
+    (modify-syntax-entry ?^ "'" table)
+    (modify-syntax-entry ?@ "'" table)
+    (modify-syntax-entry ?? "_ p" table) ; ? is a prefix outside symbols
+    (modify-syntax-entry ?# "_ p" table) ; # is allowed inside keywords (#399)
+    (modify-syntax-entry ?' "_ p" table) ; ' is allowed anywhere but the start of symbols
+
+    ;; Others
+    (modify-syntax-entry ?\; "<" table)  ; comment start
+    (modify-syntax-entry ?\n ">" table)  ; comment end
+    (modify-syntax-entry ?\" "\"" table) ; string
+    (modify-syntax-entry ?\\ "\\" table) ; escape
+
+    table)
+  "Syntax table for Fennel mode.")
 
 ;;;###autoload
 (define-derived-mode fennel-repl-mode inferior-lisp-mode "Fennel REPL"
@@ -148,6 +185,7 @@ lookup that Fennel does in the REPL."
 (define-key fennel-repl-mode-map (kbd "<return>") 'fennel-repl-send-input)
 (define-key fennel-repl-mode-map (kbd "C-j") 'newline-and-indent)
 (define-key fennel-repl-mode-map (kbd "RET") 'fennel-repl-send-input)
+(define-key fennel-repl-mode-map (kbd "C-c C-q") 'fennel-repl-quit)
 
 (defvar fennel-repl--buffer "*Fennel REPL*")
 
@@ -162,9 +200,16 @@ the prompt."
              (cmdlist (split-string cmd)))
         (set-buffer (apply #'make-comint "Fennel REPL" (car cmdlist) nil (cdr cmdlist)))
         (fennel-repl-mode)
-        (set (make-variable-buffer-local 'fennel-program) cmd)
+        (setq-local fennel-program cmd)
         (setq inferior-lisp-buffer fennel-repl--buffer)))
   (get-buffer fennel-repl--buffer))
+
+(defun fennel-repl-quit ()
+  "Kill the Fennel REPL buffer."
+  (interactive)
+  (let ((kill-buffer-query-functions
+         (delq 'process-kill-buffer-query-function kill-buffer-query-functions)))
+    (kill-buffer fennel-repl--buffer)))
 
 (defun fennel-repl--current-input-balanced-p ()
   "Get current input from the REPL and check if it is balanced."
@@ -260,10 +305,59 @@ Passes NO-NEWLINE and ARTIFICIAL to `comint-send-input' function."
     (,(rx (group letter (0+ word) "." (1+ word))) 0 font-lock-type-face)
     (,(rx bow "&" (optional "as") eow) . font-lock-keyword-face)))
 
+(defvar fennel-doc-string-elt-property 'doc-string-elt
+  "The symbol property that holds the docstring position info.")
+
+(defun fennel-string-in-doc-position-p (listbeg startpos)
+  "Return non-nil if a doc string may occur at STARTPOS inside a list.
+LISTBEG is the position of the start of the innermost list
+containing STARTPOS."
+  (let* ((firstsym (and listbeg
+                        (save-excursion
+                          (goto-char listbeg)
+                          (and (looking-at "([ \t\n]*\\(\\(?:\\sw\\|\\s_\\|\\\\.\\)+\\)")
+                               (match-string 1)))))
+         (docelt (and firstsym
+                      (function-get (intern-soft firstsym)
+                                    lisp-doc-string-elt-property))))
+    (and docelt
+         (save-excursion
+           (when (functionp docelt)
+             (goto-char (match-end 1))
+             (setq docelt (funcall docelt)))
+           (goto-char listbeg)
+           (forward-char 1)
+           (condition-case nil
+               (while (and (> docelt 0) (< (point) startpos)
+                           (progn (forward-sexp 1) t))
+                 (setq docelt (1- docelt)))
+             (error nil))
+           (and (zerop docelt) (<= (point) startpos)
+                (progn (forward-comment (point-max)) t)
+                (= (point) startpos))))))
+
+(defun fennel-font-lock-syntactic-face-function (state)
+  "Return syntactic face function for the position represented by STATE.
+STATE is a `parse-partial-sexp' state, and the returned function is the
+Lisp font lock syntactic face function."
+  (if (nth 3 state)
+      (let ((startpos (nth 8 state)))
+        (let ((listbeg (nth 1 state)))
+          (if (fennel-string-in-doc-position-p listbeg startpos)
+              font-lock-doc-face
+            font-lock-string-face)))
+    font-lock-comment-face))
+
 (defun fennel-font-lock-setup ()
   "Setup font lock for keywords."
   (setq font-lock-defaults
-        '(fennel-font-lock-keywords nil nil (("+-*/.<>=!?$%_&:" . "w")))))
+        '(fennel-font-lock-keywords
+          nil nil
+          (("+-*/.<>=!?$%_&:" . "w"))
+          nil
+          (font-lock-mark-block-function . mark-defun)
+          (font-lock-syntactic-face-function
+           . fennel-font-lock-syntactic-face-function))))
 
 (defvar calculate-lisp-indent-last-sexp)
 
@@ -304,17 +398,38 @@ ENDP and DELIM."
        (not (looking-back "\\_<#" (point-at-bol)))))
 
 ;;;###autoload
-(define-derived-mode fennel-mode lisp-mode "Fennel"
+(define-derived-mode fennel-mode prog-mode "Fennel"
   "Major mode for editing Fennel code.
 
 \\{fennel-mode-map}"
   (add-to-list 'imenu-generic-expression `(nil ,fennel-local-fn-pattern 1))
   (make-local-variable 'fennel-module-name)
-  (set (make-local-variable 'indent-tabs-mode) nil)
   (set (make-local-variable 'inferior-lisp-program) fennel-program)
-  (set (make-local-variable 'lisp-indent-function) 'fennel-indent-function)
-  (set (make-local-variable 'lisp-doc-string-elt-property) 'fennel-doc-string-elt)
   (set (make-local-variable 'comment-end) "")
+  (add-to-list 'imenu-generic-expression `(nil ,fennel-local-fn-pattern 1))
+  (set (make-local-variable 'indent-tabs-mode) nil)
+  (set (make-local-variable 'paragraph-ignore-fill-prefix) t)
+  (set (make-local-variable 'outline-regexp) ";;;;* ")
+  (set (make-local-variable 'outline-level) 'lisp-outline-level)
+  (set (make-local-variable 'comment-start) ";")
+  (set (make-local-variable 'comment-start-skip) ";+ *")
+  (set (make-local-variable 'comment-add) 1) ; default to `;;' in comment-region
+  (set (make-local-variable 'comment-column) 40)
+  (set (make-local-variable 'comment-use-syntax) t)
+  (set (make-local-variable 'multibyte-syntax-as-symbol) t)
+  (set (make-local-variable 'electric-pair-skip-whitespace) 'chomp)
+  (set (make-local-variable 'electric-pair-open-newline-between-pairs) nil)
+  (set (make-local-variable 'fill-paragraph-function) #'lisp-fill-paragraph)
+  (when (version<= "26.1" emacs-version)
+    (set (make-local-variable 'adaptive-fill-function) #'lisp-adaptive-fill))
+  (set (make-local-variable 'normal-auto-fill-function) #'do-auto-fill)
+  (set (make-local-variable 'comment-start-skip)
+       "\\(\\(^\\|[^\\\\\n]\\)\\(\\\\\\\\\\)*\\)\\(;+\\|#|\\) *")
+  (set (make-local-variable 'indent-line-function) #'lisp-indent-line)
+  (set (make-local-variable 'lisp-indent-function) #'fennel-indent-function)
+  (set (make-local-variable 'lisp-doc-string-elt-property) 'fennel-doc-string-elt)
+  (set (make-local-variable 'parse-sexp-ignore-comments) t)
+  (set (make-local-variable 'open-paren-in-column-0-is-defun-start) nil)
   (set (make-local-variable 'inferior-lisp-load-command)
        ;; won't work if the fennel module name has changed but beats nothing
        "((. (require :fennel) :dofile) %s)")
@@ -323,9 +438,11 @@ ENDP and DELIM."
   (set-syntax-table fennel-mode-syntax-table)
   (fennel-font-lock-setup)
   ;; work around slime bug: https://gitlab.com/technomancy/fennel-mode/issues/3
-  (when (fboundp 'slime-mode)
-    (slime-mode -1))
   (add-hook 'paredit-mode-hook #'fennel-paredit-setup nil t))
+
+(put 'fn 'fennel-doc-string-elt 3)
+(put 'lambda 'fennel-doc-string-elt 3)
+(put 'λ 'fennel-doc-string-elt 3)
 
 (defun fennel--paredit-setup (mode-map)
   "Setup paredit keys for given MODE-MAP."
@@ -563,10 +680,11 @@ If ASK-FOR-COMMAND? was supplied, asks for command to start the
 REPL.  If optional BUFFER is supplied it is used as the last
 buffer before starting the REPL.
 
-The command is persisted as a buffer-local variable, the REPL buffer
-remembers the command that was used to start it.  Reseting the command
-to another value can be done by invoking setting ASK-FOR-COMMAND? to non-nil, i.e.
-by using a prefix argument.
+The command is persisted as a buffer-local variable, the REPL
+buffer remembers the command that was used to start it.
+Resetting the command to another value can be done by invoking
+setting ASK-FOR-COMMAND? to non-nil, i.e.  by using a prefix
+argument.
 
 Return this buffer."
   (interactive "P")
@@ -585,7 +703,9 @@ Return this buffer."
 (defun fennel-format ()
   "Run fnlfmt on the current buffer."
   (interactive)
-  (shell-command-on-region (point-min) (point-max) "fnlfmt -" nil t))
+  (if (executable-find "fnlfmt")
+      (shell-command-on-region (point-min) (point-max) "fnlfmt -" nil t)
+    (message "fnlfmt not found")))
 
 (define-key fennel-mode-map (kbd "M-.") 'fennel-find-definition)
 (define-key fennel-mode-map (kbd "M-,") 'fennel-find-definition-pop)
@@ -598,6 +718,13 @@ Return this buffer."
 (define-key fennel-mode-map (kbd "C-c C-d") 'fennel-show-documentation)
 (define-key fennel-mode-map (kbd "C-c C-v") 'fennel-show-variable-documentation)
 (define-key fennel-mode-map (kbd "C-c C-a") 'fennel-show-arglist)
+;; lisp-mode functions
+(define-key fennel-mode-map (kbd "C-x C-e") 'lisp-eval-last-sexp)
+(define-key fennel-mode-map (kbd "C-c C-e") 'lisp-eval-defun)
+(define-key fennel-mode-map (kbd "C-M-x") 'lisp-eval-defun)
+(define-key fennel-mode-map (kbd "C-c C-n") 'lisp-eval-form-and-next)
+(define-key fennel-mode-map (kbd "C-c C-p") 'lisp-eval-paragraph)
+(define-key fennel-mode-map (kbd "C-c C-r") 'lisp-eval-region)
 
 (put 'lambda 'fennel-indent-function 'defun)
 (put 'λ 'fennel-indent-function 'defun)
