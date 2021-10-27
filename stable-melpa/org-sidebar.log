@@ -3,11 +3,6 @@ Fetcher: github
 Source:  https://github.com/alphapapa/org-sidebar.git
 
 Updating /mnt/store/melpa/working/org-sidebar/
-Checking out origin/HEAD
-Checking out 288703b897449f5110c9c76e78eb9a928ffc0dcd
-Built org-sidebar in 6.438s, finished at 2021-10-27T14:08:46+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root  30K Oct 27 14:08 packages/org-sidebar-20210912.1321.el
-4.0K -rw-r--r-- 1 root root  545 Oct 27 14:08 packages/org-sidebar-20210912.1321.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 27 14:08 packages/org-sidebar-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Oct 27 14:08 packages/org-sidebar-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: unable to access 'https://github.com/alphapapa/org-sidebar.git/': gnutls_handshake() failed: Error in the pull function.
+
