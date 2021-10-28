@@ -3,6 +3,22 @@ Fetcher: gitlab
 Source:  https://gitlab.com/perweij/org-linkotron.git
 
 Updating /mnt/store/melpa/working/org-linkotron/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://gitlab.com/perweij/org-linkotron.git/': gnutls_handshake() failed: Error in the pull function.
-
+Checking out origin/HEAD
+Checking out d0adc5247b205bc73d2f1a83d4a512d2be541eb5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-linkotron/
+  to /tmp/org-linkotronPmWPnA/org-linkotron-20200112.2235
+    org-linkotron.el -> org-linkotron.el
+    org-linkotron.info -> org-linkotron.info
+Created org-linkotron-20200112.2235.tar containing:
+  org-linkotron-20200112.2235/
+  org-linkotron-20200112.2235/dir
+  org-linkotron-20200112.2235/org-linkotron-pkg.el
+  org-linkotron-20200112.2235/org-linkotron.el
+  org-linkotron-20200112.2235/org-linkotron.info
+Built org-linkotron in 13.648s, finished at 2021-10-28T03:01:34+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  386 Oct 28 03:01 packages/org-linkotron-20200112.2235.entry
+ 20K -rw-r--r-- 1 root root  20K Oct 28 03:01 packages/org-linkotron-20200112.2235.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 28 03:01 packages/org-linkotron-badge.svg
+4.0K -rw-r--r-- 1 root root  707 Oct 28 03:01 packages/org-linkotron-readme.txt
