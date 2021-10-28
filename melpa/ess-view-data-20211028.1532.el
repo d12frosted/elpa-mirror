@@ -5,8 +5,8 @@
 ;; Author: Shuguang Sun <shuguang79@qq.com>
 ;; Created: 2019/04/06
 ;; Version: 1.3
-;; Package-Version: 20211009.55
-;; Package-Commit: 6fd97a89c73815672de7df21d1ecd362a66126b5
+;; Package-Version: 20211028.1532
+;; Package-Commit: fddf070b51dbcbf7fa060a9998e676e8d0c15e1d
 ;; URL: https://github.com/ShuguangSun/ess-view-data
 ;; Package-Requires: ((emacs "26.1") (ess "18.10.1") (csv-mode "1.12"))
 ;; Keywords: tools
@@ -132,12 +132,19 @@
 
 (defcustom ess-view-data-show-code t
   "Show code on top of the view data buffer."
-  :type 'bool
+  :type 'boolean
   :group 'ess-view-data)
 
 (defcustom ess-view-data-write-dribble t
   "Write to dribble for tracking."
-  :type 'bool
+  :type 'boolean
+  :group 'ess-view-data)
+
+(defcustom ess-view-data-tibble-crayon-enabled-p t
+  "Whether to enable crayon for tibble.
+
+If enabled, `ansi-color-for-comint-mode-on' should be turn on."
+  :type 'boolean
   :group 'ess-view-data)
 
 
@@ -264,6 +271,30 @@
   "The candidate for completion.")
 
 
+
+
+(defvar ess-view-data-mode-map
+  (let ((keymap (make-sparse-keymap)))
+    (define-key keymap (kbd "C-c C-p") #'ess-view-data-print-ex)
+    (define-key keymap (kbd "C-c C-t") #'ess-view-data-toggle-maxprint)
+    (define-key keymap (kbd "C-c C-s") #'ess-view-data-select)
+    (define-key keymap (kbd "C-c C-u") #'ess-view-data-unselect)
+    (define-key keymap (kbd "C-c C-f") #'ess-view-data-filter)
+    (define-key keymap (kbd "C-c C-o") #'ess-view-data-sort)
+    ;; (define-key keymap (kbd "C-c C-g") #'ess-view-data-group)
+    ;; (define-key keymap (kbd "C-c C-G") #'ess-view-data-ungroup)
+    (define-key keymap (kbd "C-c C-i") #'ess-view-data-slice)
+    (define-key keymap (kbd "C-c C-l") #'ess-view-data-unique)
+    (define-key keymap (kbd "C-c C-v") #'ess-view-data-summarise)
+    (define-key keymap (kbd "C-c C-r") #'ess-view-data-reset)
+    (define-key keymap (kbd "C-c C-w") #'ess-view-data-save)
+    (define-key keymap (kbd "M-g p") #'ess-view-data-goto-previous-page)
+    (define-key keymap (kbd "M-g n") #'ess-view-data-goto-next-page)
+    (define-key keymap (kbd "M-g f") #'ess-view-data-goto-first-page)
+    (define-key keymap (kbd "M-g l") #'ess-view-data-goto-last-page)
+    keymap)
+  "Keymap for function `ess-view-data-mode'.")
+
 ;;; Indirect Buffers Minor Mode
 (defvar ess-view-data-edit-mode-map
   (let ((map (make-sparse-keymap)))
@@ -369,9 +400,22 @@ Argument STR R script to run.")
    "options(op.tmp)")
   "Format string for print.")
 
+(defvar ess-view-data--print-format-with-crayon
+  (concat
+   (format
+    (concat
+     "op.tmp <- options(\"width\", \"tibble.width\", \"crayon.enabled\");"
+     "options(tibble.width = Inf, width = %d, crayon.enabled = TRUE);")
+    ess-view-data-options-width)
+   "print(%s, n = nrow(%s));"
+   "options(op.tmp)")
+  "Format string for print, with crayon.enabled for tibble.")
+
 (cl-defmethod ess-view-data--do-print ((_backend (eql print)))
   "Do print using print."
-  ess-view-data--print-format)
+  (if ess-view-data-tibble-crayon-enabled-p
+      ess-view-data--print-format-with-crayon
+    ess-view-data--print-format))
 
 ;;; * kable-backend: kable
 (defvar ess-view-data--kable-format
@@ -440,8 +484,9 @@ Optional argument PROC The assciated ESS process."
   ;; (if (looking-at "# A tibble:")
   ;;     (delete-region (point-min) (1+ (line-end-position))))
   (let ((lin 1))
+    (print (buffer-string))
     (while ;; (looking-at-p "^\\(+\\|#\\)")
-        (search-forward-regexp "^\\([+]\\|#\\)" nil t)
+        (search-forward-regexp "^\\([+]\\|#\\|[[].+?#\\)" nil t)
       (forward-line)
       (setq lin (1+ lin)))
     (unless (fboundp 'csv-header-line) (require 'csv-mode nil t))
@@ -1986,6 +2031,30 @@ Optional argument PNUMBER The page number to go to."
 
 
 ;; utilities
+(defun ess-view-data-quit ()
+  "Quit from ess-view-data."
+  (interactive)
+  (kill-buffer))
+
+(defun ess-view-data-kill-buffer-hook ()
+  "Hook for `kill-buffer' to clean environment."
+  (let* ((proc-name (buffer-local-value 'ess-local-process-name (current-buffer)))
+         (proc (get-process proc-name)))
+    (ess-view-data-do-kill-buffer-hook ess-view-data-current-backend proc-name proc)))
+
+
+(define-minor-mode ess-view-data-mode
+  "ess-view-data"
+  :global nil
+  :group 'ess-view-data
+  :keymap ess-view-data-mode-map
+  :lighter " ESS-V"
+  (if ess-view-data-mode
+      (progn
+        (require 'ansi-color)
+        (ansi-color-apply-on-region (point-min) (point-max))
+        (setq buffer-read-only t)
+        (add-hook 'kill-buffer-hook #'ess-view-data-kill-buffer-hook nil t))))
 
 (defun ess-view-data-print-ex (&optional obj proc-name maxprint)
   "Do print.
@@ -2035,52 +2104,6 @@ Optional argument MAXPRINT if non-nil, 100 rows/lines per page; if t, shwo all."
       buf)))
 
 
-(defun ess-view-data-quit ()
-  "Quit from ess-view-data."
-  (interactive)
-  (kill-buffer))
-
-(defun ess-view-data-kill-buffer-hook ()
-  "Hook for `kill-buffer' to clean environment."
-  (let* ((proc-name (buffer-local-value 'ess-local-process-name (current-buffer)))
-         (proc (get-process proc-name)))
-    (ess-view-data-do-kill-buffer-hook ess-view-data-current-backend proc-name proc)))
-
-
-
-(defvar ess-view-data-mode-map
-  (let ((keymap (make-sparse-keymap)))
-    (define-key keymap (kbd "C-c C-p") #'ess-view-data-print-ex)
-    (define-key keymap (kbd "C-c C-t") #'ess-view-data-toggle-maxprint)
-    (define-key keymap (kbd "C-c C-s") #'ess-view-data-select)
-    (define-key keymap (kbd "C-c C-u") #'ess-view-data-unselect)
-    (define-key keymap (kbd "C-c C-f") #'ess-view-data-filter)
-    (define-key keymap (kbd "C-c C-o") #'ess-view-data-sort)
-    ;; (define-key keymap (kbd "C-c C-g") #'ess-view-data-group)
-    ;; (define-key keymap (kbd "C-c C-G") #'ess-view-data-ungroup)
-    (define-key keymap (kbd "C-c C-i") #'ess-view-data-slice)
-    (define-key keymap (kbd "C-c C-l") #'ess-view-data-unique)
-    (define-key keymap (kbd "C-c C-v") #'ess-view-data-summarise)
-    (define-key keymap (kbd "C-c C-r") #'ess-view-data-reset)
-    (define-key keymap (kbd "C-c C-w") #'ess-view-data-save)
-    (define-key keymap (kbd "M-g p") #'ess-view-data-goto-previous-page)
-    (define-key keymap (kbd "M-g n") #'ess-view-data-goto-next-page)
-    (define-key keymap (kbd "M-g f") #'ess-view-data-goto-first-page)
-    (define-key keymap (kbd "M-g l") #'ess-view-data-goto-last-page)
-    keymap)
-  "Keymap for function `ess-view-data-mode'.")
-
-
-(define-minor-mode ess-view-data-mode
-  "ess-view-data"
-  :global nil
-  :group 'ess-view-data
-  :keymap ess-view-data-mode-map
-  :lighter " ESS-V"
-  (if ess-view-data-mode
-    (progn
-      (setq buffer-read-only t)
-      (add-hook 'kill-buffer-hook #'ess-view-data-kill-buffer-hook nil t))))
 
 ;;;###autoload
 (defun ess-view-data-print (&optional maxprint)
