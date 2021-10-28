@@ -12,3 +12,5 @@ under subdirectory "examples".
 
 Package *oer-reveal* is really meant to be used as part of
 emacs-reveal (https://gitlab.com/oer/emacs-reveal).
+
+Note that you should require oer-reveal-publish, not oer-reveal.
