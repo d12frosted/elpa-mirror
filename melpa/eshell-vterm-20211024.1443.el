@@ -5,7 +5,7 @@
 ;; Created: 2021-06-29
 ;; Version: 0.1
 ;; Package-Version: 20211024.1443
-;; Package-Commit: a33073e9e8a56632c76cdd227574107185ae2cf7
+;; Package-Commit: f2212dbfa51aa4b67efda55304b2b3811e8e0625
 ;; Package-Requires: ((emacs "27.1") (vterm "0.0.1"))
 ;; Keywords: eshell, vterm, terminals, shell, visual, tools, processes
 ;; URL: https://github.com/iostapyshyn/eshell-vterm

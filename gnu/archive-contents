@@ -282,6 +282,15 @@
 	       (:authors
 		("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	       (:keywords "lisp"))])
+ (capf-autosuggest .
+		   [(0 1)
+		    ((emacs
+		      (25 1)))
+		    "History autosuggestions for comint and eshell" tar
+		    ((:url . "https://repo.or.cz/emacs-capf-autosuggest.git")
+		     (:maintainer "jakanakaevangeli" . "jakanakaevangeli@chiru.no")
+		     (:authors
+		      ("jakanakaevangeli" . "jakanakaevangeli@chiru.no")))])
  (caps-lock .
 	    [(1 0)
 	     nil "Caps-lock as a minor mode" single
@@ -2783,6 +2792,20 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de")))])
+ (vertico-posframe .
+		   [(0 2 0)
+		    ((emacs
+		      (26 0))
+		     (posframe
+		      (1 0 0))
+		     (vertico
+		      (0 13 0)))
+		    "Using posframe to show Vertico" tar
+		    ((:url . "https://github.com/tumashu/vertico-posframe")
+		     (:keywords "abbrev" "convenience" "matching" "vertico")
+		     (:maintainer "Feng Shu" . "tumashu@163.com")
+		     (:authors
+		      ("Feng Shu" . "tumashu@163.com")))])
  (vigenere .
 	   [(1 0)
 	    ((emacs

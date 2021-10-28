@@ -41,6 +41,8 @@ Or add a pattern for all files:
     ("\\.*" . (("any-file-command" . "echo %file-name")))))
 
 You can use different backends for the menu:
+(setq multi-compile-completion-system 'auto)
+or
 (setq multi-compile-completion-system 'ido)
 or
 (setq multi-compile-completion-system 'helm)
