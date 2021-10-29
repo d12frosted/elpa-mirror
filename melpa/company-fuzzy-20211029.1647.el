@@ -7,8 +7,8 @@
 ;; Description: Fuzzy matching for `company-mode'.
 ;; Keyword: auto auto-complete complete fuzzy matching
 ;; Version: 1.2.2
-;; Package-Version: 20211026.928
-;; Package-Commit: b7fba22cf51cbbbbff1eb070829e928782338b08
+;; Package-Version: 20211029.1647
+;; Package-Commit: 432abf918d9839273e65f34dfc7cc420870e8f17
 ;; Package-Requires: ((emacs "24.4") (company "0.8.12") (s "1.12.0") (ht "2.0"))
 ;; URL: https://github.com/jcs-elpa/company-fuzzy
 
@@ -54,6 +54,7 @@
                  (const :tag "alphabetic" alphabetic)
                  (const :tag "flex" flex)
                  (const :tag "flx" flx)
+                 (const :tag "flx-rs" flx-rs)
                  (const :tag "flxy" flxy)
                  (const :tag "fuz-skim" fuz-skim)
                  (const :tag "fuz-clangd" fuz-clangd)
@@ -141,6 +142,8 @@
 
 (declare-function flex-score "ext:flex.el")
 (declare-function flx-score "ext:flx.el")
+(declare-function flx-rs-score "ext:flx-rs.el")
+(declare-function flx-rs-load-dyn "ext:flx-rs.el")
 
 (declare-function flxy-score "ext:flxy.el")
 (declare-function flxy-load-dyn "ext:flxy.el")
@@ -365,6 +368,7 @@ If optional argument FLIP is non-nil, reverse query and pattern order."
                       (if flip (funcall fnc prefix cand)
                         (funcall fnc cand prefix)))
             score (cond ((listp scoring) (nth 0 scoring))
+                        ((vectorp scoring) (aref scoring 0))
                         ((numberp scoring) scoring)
                         (t 0)))
       (when score
@@ -398,6 +402,11 @@ If optional argument FLIP is non-nil, reverse query and pattern order."
        (require 'flx)
        (setq candidates
              (company-fuzzy--sort-candidates-by-function candidates #'flx-score)))
+      (`flx-rs
+       (require 'flx-rs)
+       (flx-rs-load-dyn)
+       (setq candidates
+             (company-fuzzy--sort-candidates-by-function candidates #'flx-rs-score)))
       (`flxy
        (require 'flxy)
        (flxy-load-dyn)

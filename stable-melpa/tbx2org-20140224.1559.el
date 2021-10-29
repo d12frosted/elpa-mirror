@@ -4,6 +4,8 @@
 
 ;; Author: istib
 ;; URL: https://github.com/istib/tbx2org
+;; Package-Version: 20140224.1559
+;; Package-Commit: 08e9816ba6066f56936050b58d07ceb2187ae6f7
 ;; Version: 0.1
 ;; Package-Requires: ((dash "2.5.0") (s "1.8.0") (cl-lib "0.4"))
 ;; Keywords: org-mode

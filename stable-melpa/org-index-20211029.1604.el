@@ -4,8 +4,8 @@
 
 ;; Author: Marc Ihm <1@2484.de>
 ;; URL: https://github.com/marcIhm/org-index
-;; Package-Version: 20210820.519
-;; Package-Commit: 7bc78ebf7c1c334e8cc73af44793a7eaffb66a99
+;; Package-Version: 20211029.1604
+;; Package-Commit: 450dbacacfc0828e40a76a48a5933db60ec7d197
 ;; Version: 7.4.2
 ;; Package-Requires: ((org "9.3") (dash "2.12") (s "1.12") (emacs "26.3"))
 
@@ -232,8 +232,8 @@
 (defvar oidx--within-index-node nil "Non-nil, if we are within node of the index table.")
 (defvar oidx--within-occur nil "Non-nil, if we are within the occur-buffer.")
 (defvar oidx--recording-screencast nil "Set Non-nil, if screencast is beeing recorded to trigger some minor tweaks.")
-(defvar oidx--aligned-and-sorted nil "For this Emacs session: remember if aligned and sorted.")
-(defvar oidx--last-count-check nil "Last time we checked for line count.")
+(defvar oidx--last-align-and-sort nil "Last time we aligned and sorted; see `oidx--align-and-sort-interval'.")
+(defvar oidx--last-count-check nil "Last time we checked for line count; see `oidx--check-count-interval'.")
 (defvar oidx--edit-widgets nil "List of widgets used to edit.")
 (defvar oidx--edit-where-from-index nil "Position and line used for index in edit buffer.")
 (defvar oidx--edit-where-from-occur nil "Position and line used for occur in edit buffer.")
@@ -252,7 +252,8 @@
 (defvar oidx--short-help-text nil "Cache for result of `oidx--get-short-help-text.")
 (defvar oidx--shortcut-chars nil "Cache for result of `oidx--get-shortcut-chars.")
 (defconst oidx--yank-help "three special cases: a string starting with 'http' will be opened in browser; the letter 'l' will browse first url from associated node (if any); the letter 'q' will copy the first quote" "Help text for column yank.")
-(defvar oidx--check-count-interval 86400 "Number of seconds between checks for linecount in index.")
+(defvar oidx--align-and-sort-interval 86400 "Number of seconds between sorting of index; see `oidx--last-align-and-sort'.")
+(defvar oidx--check-count-interval 86400 "Number of seconds between checks for linecount in index; see `oidx--last-count-check'.")
 
 ;; Version of this package
 (defvar org-index-version "7.4.2" "Version of `org-index', format is major.minor.bugfix, where \"major\" are incompatible changes and \"minor\" are new features.")
@@ -839,7 +840,8 @@ Invoke assistant if not (and skip this if SILENT)."
 
       ;; check if count of lines has gone down too much
       (when (or (not oidx--last-count-check)
-                (> (float-time (time-subtract (current-time) oidx--last-count-check)) oidx--check-count-interval))
+                (> (float-time (time-subtract (current-time) oidx--last-count-check))
+                   oidx--check-count-interval))
         (message "Counting number of index lines ...")
         (let ((ok-cnt-txt (oidx--count-lines-with-opinion)))
           (if (cl-first ok-cnt-txt)
@@ -867,13 +869,15 @@ Invoke assistant if not (and skip this if SILENT)."
       (goto-char (org-table-begin))
       (oidx--parse-headings)
 
-      (unless oidx--aligned-and-sorted
+      (when (or (not oidx--last-align-and-sort)
+                (> (float-time (time-subtract (current-time) oidx--last-align-and-sort))
+                   oidx--align-and-sort-interval))
         (let (before-sort before-align before-fontify at-end)
           (setq before-sort (current-time))
           (oidx--sort-index)
           (goto-char oidx--below-hline)
 
-          (message "Align, fontify and sort index table (once per emacs session)...")
+          (message "Align, fontify and sort index table (once per emacs session or every %d secs; see oidx--align-and-sort-interval)..." oidx--align-and-sort-interval)
           (setq before-align (current-time))
           (org-table-align)
           (setq before-fontify (current-time))
@@ -889,7 +893,7 @@ Invoke assistant if not (and skip this if SILENT)."
             (redisplay)
             (sit-for 2))
 
-          (setq oidx--aligned-and-sorted t))
+          (setq oidx--last-align-and-sort (current-time)))
         (goto-char oidx--below-hline)
 
         (message "Done."))
@@ -1293,7 +1297,7 @@ Do not ask if SILENT, use CATEGORY, if given."
         
         ;; Shift ref and timestamp ?
         (if org-index-strip-ref-and-date-from-heading
-            (dotimes (_i 2)
+            (dotimes (_ 2)
               (if (or (string-match (concat "^\\s-*" oidx--ref-regex) content)
                       (string-match (concat "^\\s-*" org-ts-regexp-both) content))
                   (setq content (substring content (match-end 0)))))))
@@ -2912,8 +2916,7 @@ Returns nil or plist with result"
                lbp2 (line-beginning-position 2)
                line (oidx--o-test-words-and-fontify words (buffer-substring lbp lbp2)))
           (push line lines)
-          (push (propertize (oidx--o-flag-for-currrent-line) 'face 'org-agenda-dimmed-todo-face)
-                flags)
+          (push (oidx--o-flag-for-currrent-line) flags)
           (push lbp lbps)
           (cl-incf found))
         (forward-line)))
@@ -2923,9 +2926,10 @@ Returns nil or plist with result"
 
 (defun oidx--o-flag-for-currrent-line ()
   "Compute flag for current line."
-  (let ((yank (oidx--get-or-set-field 'yank))
-        (id (oidx--get-or-set-field 'id)))
-    (cond ((and id yank) "2") (id "n") (yank "y") (t " "))))
+  (let* ((yank (oidx--get-or-set-field 'yank))
+        (id (oidx--get-or-set-field 'id))
+        (ff (cond ((and id yank) (cons "2" 'mode-line-hightlight)) (id (cons "n" nil)) (yank (cons "y" nil)) (t (cons " " nil)))))
+    (propertize (car ff) 'face (or (cdr ff) 'org-agenda-dimmed-todo-face))))
 
 
 (defun oidx--o-test-words-and-fontify (words line)
@@ -2980,7 +2984,7 @@ Argument FRAME gives match-frame to show, LINES-WANTED number."
   "Make permanent copy of current view into index.
 Argument LINES-WANTED specifies number of lines to display of match-frame FRAME."
 
-  (let (line lines lines-collected flag flags header-lines lbp (spc " "))
+  (let (line lines lines-collected flag flags header-lines (spc " "))
 
     (with-current-buffer oidx--o-buffer-name
       (erase-buffer)
@@ -2994,7 +2998,7 @@ Argument LINES-WANTED specifies number of lines to display of match-frame FRAME.
         (cl-mapc (lambda (p f)
                 (goto-char p)
                 (setq line (buffer-substring (line-beginning-position) (line-end-position)))
-                (setq flag (propertize (oidx--o-flag-for-currrent-line) 'face 'org-agenda-dimmed-todo-face))
+                (setq flag (oidx--o-flag-for-currrent-line))
                 (put-text-property 0 (length line) 'org-index-lbp p line)
                 (put-text-property 0 (length line) 'org-index-flag flag line)
                 (push f flags)
@@ -3003,12 +3007,16 @@ Argument LINES-WANTED specifies number of lines to display of match-frame FRAME.
 
     ;; insert flags and lines
     (cl-mapc (lambda (f l)
-               (add-text-properties 0 1 (text-properties-at 0 l) spc)
-               (insert spc)
-               (insert l)
-               (setq lbp (line-beginning-position))
-               (overlay-put (make-overlay lbp (1+ lbp)) 'display f)
-               (insert "\n"))
+               (let (fc lbp ovr)
+                 (add-text-properties 0 1 (text-properties-at 0 l) spc)
+                 (insert spc)
+                 (insert l)
+                 (setq lbp (line-beginning-position))
+                 (setq fc (get-text-property 0 'face f))
+                 (setq ovr (make-overlay lbp (1+ lbp)))
+                 (overlay-put ovr 'display f)
+                 (overlay-put ovr 'face fc)
+                 (insert "\n")))
              (reverse flags)
              (reverse lines))
     
