@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 4353d3394c77a49f8f0291c239858c8c5e877549
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/e2wm/
-  to /tmp/e2wm5IR6rf/e2wm-20170215.36
+  to /tmp/e2wmIj20Dg/e2wm-20170215.36
     e2wm.el -> e2wm.el
     e2wm-vcs.el -> e2wm-vcs.el
 Created e2wm-20170215.36.tar containing:
@@ -15,44 +15,44 @@ Created e2wm-20170215.36.tar containing:
   e2wm-20170215.36/e2wm-pkg.el
   e2wm-20170215.36/e2wm-vcs.el
   e2wm-20170215.36/e2wm.el
-Built e2wm in 12.849s, finished at 2021-10-28T18:38:23+0000
+Built e2wm in 6.918s, finished at 2021-10-29T02:50:06+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  342 Oct 28 18:38 packages/e2wm-20170215.36.entry
-172K -rw-r--r-- 1 root root 170K Oct 28 18:38 packages/e2wm-20170215.36.tar
- 40K -rw-r--r-- 1 root root  38K Oct 28 14:15 packages/e2wm-R-20151230.926.el
-4.0K -rw-r--r-- 1 root root  371 Oct 28 14:16 packages/e2wm-R-20151230.926.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 28 14:16 packages/e2wm-R-badge.svg
-4.0K -rw-r--r-- 1 root root  148 Oct 28 14:16 packages/e2wm-R-readme.txt
-4.0K -rw-r--r-- 1 root root  150 Oct 28 18:38 packages/e2wm-R.log
-4.0K -rw-r--r-- 1 root root 1.2K Oct 28 18:38 packages/e2wm-badge.svg
- 12K -rw-r--r-- 1 root root  12K Oct 28 14:15 packages/e2wm-bookmark-20151123.521.el
-4.0K -rw-r--r-- 1 root root  310 Oct 28 14:16 packages/e2wm-bookmark-20151123.521.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 28 14:16 packages/e2wm-bookmark-badge.svg
-4.0K -rw-r--r-- 1 root root  199 Oct 28 14:16 packages/e2wm-bookmark-readme.txt
-4.0K -rw-r--r-- 1 root root  144 Oct 28 18:38 packages/e2wm-bookmark.log
-8.0K -rw-r--r-- 1 root root 5.3K Oct 28 14:15 packages/e2wm-direx-20200805.1414.el
-4.0K -rw-r--r-- 1 root root  453 Oct 28 14:16 packages/e2wm-direx-20200805.1414.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 28 14:16 packages/e2wm-direx-badge.svg
-4.0K -rw-r--r-- 1 root root   65 Oct 28 14:15 packages/e2wm-direx-readme.txt
-4.0K -rw-r--r-- 1 root root  132 Oct 28 18:38 packages/e2wm-direx.log
- 12K -rw-r--r-- 1 root root 9.2K Oct 28 14:16 packages/e2wm-pkgex4pl-20140525.1047.el
-4.0K -rw-r--r-- 1 root root  434 Oct 28 14:16 packages/e2wm-pkgex4pl-20140525.1047.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 28 14:16 packages/e2wm-pkgex4pl-badge.svg
-4.0K -rw-r--r-- 1 root root   68 Oct 28 14:16 packages/e2wm-pkgex4pl-readme.txt
-4.0K -rw-r--r-- 1 root root  141 Oct 28 18:38 packages/e2wm-pkgex4pl.log
-4.0K -rw-r--r-- 1 root root 4.0K Oct 28 18:38 packages/e2wm-readme.txt
-4.0K -rw-r--r-- 1 root root 2.1K Oct 28 14:16 packages/e2wm-svg-clock-20150106.1306.el
-4.0K -rw-r--r-- 1 root root  387 Oct 28 14:16 packages/e2wm-svg-clock-20150106.1306.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 28 14:16 packages/e2wm-svg-clock-badge.svg
-4.0K -rw-r--r-- 1 root root   28 Oct 28 14:16 packages/e2wm-svg-clock-readme.txt
-   0 -rw-r--r-- 1 root root    0 Oct 28 18:38 packages/e2wm-svg-clock.log
- 16K -rw-r--r-- 1 root root  14K Oct 28 14:16 packages/e2wm-sww-20200805.1339.el
-4.0K -rw-r--r-- 1 root root  395 Oct 28 14:16 packages/e2wm-sww-20200805.1339.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 28 14:16 packages/e2wm-sww-badge.svg
-4.0K -rw-r--r-- 1 root root   63 Oct 28 14:16 packages/e2wm-sww-readme.txt
-   0 -rw-r--r-- 1 root root    0 Oct 28 18:38 packages/e2wm-sww.log
- 60K -rw-r--r-- 1 root root  60K Oct 28 14:16 packages/e2wm-term-20200322.729.el
-4.0K -rw-r--r-- 1 root root  470 Oct 28 14:16 packages/e2wm-term-20200322.729.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 28 14:16 packages/e2wm-term-badge.svg
-4.0K -rw-r--r-- 1 root root  617 Oct 28 14:16 packages/e2wm-term-readme.txt
-   0 -rw-r--r-- 1 root root    0 Oct 28 18:38 packages/e2wm-term.log
+4.0K -rw-r--r-- 1 root root  342 Oct 29 02:50 packages/e2wm-20170215.36.entry
+172K -rw-r--r-- 1 root root 170K Oct 29 02:50 packages/e2wm-20170215.36.tar
+ 40K -rw-r--r-- 1 root root  38K Oct 28 22:50 packages/e2wm-R-20151230.926.el
+4.0K -rw-r--r-- 1 root root  371 Oct 28 22:50 packages/e2wm-R-20151230.926.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 28 22:50 packages/e2wm-R-badge.svg
+4.0K -rw-r--r-- 1 root root  148 Oct 28 22:50 packages/e2wm-R-readme.txt
+4.0K -rw-r--r-- 1 root root  204 Oct 29 02:50 packages/e2wm-R.log
+4.0K -rw-r--r-- 1 root root 1.2K Oct 29 02:50 packages/e2wm-badge.svg
+ 12K -rw-r--r-- 1 root root  12K Oct 28 22:50 packages/e2wm-bookmark-20151123.521.el
+4.0K -rw-r--r-- 1 root root  310 Oct 28 22:50 packages/e2wm-bookmark-20151123.521.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 28 22:50 packages/e2wm-bookmark-badge.svg
+4.0K -rw-r--r-- 1 root root  199 Oct 28 22:50 packages/e2wm-bookmark-readme.txt
+4.0K -rw-r--r-- 1 root root  169 Oct 29 02:50 packages/e2wm-bookmark.log
+8.0K -rw-r--r-- 1 root root 5.3K Oct 28 22:50 packages/e2wm-direx-20200805.1414.el
+4.0K -rw-r--r-- 1 root root  453 Oct 28 22:50 packages/e2wm-direx-20200805.1414.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 28 22:50 packages/e2wm-direx-badge.svg
+4.0K -rw-r--r-- 1 root root   65 Oct 28 22:50 packages/e2wm-direx-readme.txt
+4.0K -rw-r--r-- 1 root root  157 Oct 29 02:50 packages/e2wm-direx.log
+ 12K -rw-r--r-- 1 root root 9.2K Oct 28 22:50 packages/e2wm-pkgex4pl-20140525.1047.el
+4.0K -rw-r--r-- 1 root root  434 Oct 28 22:50 packages/e2wm-pkgex4pl-20140525.1047.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 28 22:50 packages/e2wm-pkgex4pl-badge.svg
+4.0K -rw-r--r-- 1 root root   68 Oct 28 22:50 packages/e2wm-pkgex4pl-readme.txt
+4.0K -rw-r--r-- 1 root root  141 Oct 29 02:50 packages/e2wm-pkgex4pl.log
+4.0K -rw-r--r-- 1 root root 4.0K Oct 29 02:50 packages/e2wm-readme.txt
+4.0K -rw-r--r-- 1 root root 2.1K Oct 28 22:50 packages/e2wm-svg-clock-20150106.1306.el
+4.0K -rw-r--r-- 1 root root  387 Oct 28 22:50 packages/e2wm-svg-clock-20150106.1306.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 28 22:50 packages/e2wm-svg-clock-badge.svg
+4.0K -rw-r--r-- 1 root root   28 Oct 28 22:50 packages/e2wm-svg-clock-readme.txt
+   0 -rw-r--r-- 1 root root    0 Oct 29 02:50 packages/e2wm-svg-clock.log
+ 16K -rw-r--r-- 1 root root  14K Oct 28 22:50 packages/e2wm-sww-20200805.1339.el
+4.0K -rw-r--r-- 1 root root  395 Oct 28 22:50 packages/e2wm-sww-20200805.1339.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 28 22:50 packages/e2wm-sww-badge.svg
+4.0K -rw-r--r-- 1 root root   63 Oct 28 22:50 packages/e2wm-sww-readme.txt
+   0 -rw-r--r-- 1 root root    0 Oct 29 02:50 packages/e2wm-sww.log
+ 60K -rw-r--r-- 1 root root  60K Oct 28 22:50 packages/e2wm-term-20200322.729.el
+4.0K -rw-r--r-- 1 root root  470 Oct 28 22:50 packages/e2wm-term-20200322.729.entry
+4.0K -rw-r--r-- 1 root root 1.2K Oct 28 22:50 packages/e2wm-term-badge.svg
+4.0K -rw-r--r-- 1 root root  617 Oct 28 22:50 packages/e2wm-term-readme.txt
+4.0K -rw-r--r-- 1 root root  602 Oct 28 22:50 packages/e2wm-term.log
