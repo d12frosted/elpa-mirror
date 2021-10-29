@@ -5,6 +5,10 @@ bibliography slide upon export by `org-re-reveal'.  Also, export to
 PDF via LaTeX and export to HTML with Org's usual export
 functionality work.
 
+If you are interested in the citation syntax introduced by Org mode 9.5,
+use package `org-re-reveal-citeproc' instead:
+https://gitlab.com/oer/org-re-reveal-citeproc
+
 * Install
 0. Install reveal.js: https://revealjs.com/
 1. Install org-re-reveal and org-re-reveal-ref, either from MELPA

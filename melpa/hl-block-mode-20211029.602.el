@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-hl-block-mode
-;; Package-Version: 20211007.309
-;; Package-Commit: 2c6a47cc37b0dfcd8489e4fe36c379f0a47d451d
+;; Package-Version: 20211029.602
+;; Package-Commit: 0593a1a77db28503025d5c1850e6a99551c3bcbd
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -70,7 +70,7 @@ Useful for languages that use S-expressions to avoid overly nested highlighting.
   :type 'color)
 
 ;; For `bracket' draw style.
-(defcustom hl-block-bracket-face '(t (:inverse-video t))
+(defcustom hl-block-bracket-face '(:inverse-video t)
   "Face used when `hl-block-style' is set to `bracket'."
   :type 'face)
 

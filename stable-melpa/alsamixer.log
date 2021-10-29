@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/remvee/alsamixer-el.git
 
 Updating /mnt/store/melpa/working/alsamixer/
-Checking out origin/HEAD
-Checking out 1bdb99e433acd38685f05408562746cfbf2bc820
-Built alsamixer in 5.588s, finished at 2021-10-29T02:31:22+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 4.0K Oct 29 02:31 packages/alsamixer-20191002.1133.el
-4.0K -rw-r--r-- 1 root root  321 Oct 29 02:31 packages/alsamixer-20191002.1133.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 29 02:31 packages/alsamixer-badge.svg
-4.0K -rw-r--r-- 1 root root  281 Oct 29 02:31 packages/alsamixer-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/remvee/alsamixer-el.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
