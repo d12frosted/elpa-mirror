@@ -3,9 +3,9 @@
 ;; Copyright (C) 2016--2021 Kevin Brubeck Unhammer
 
 ;; Author: Kevin Brubeck Unhammer <unhammer@fsfe.org>
-;; Version: 0.6.0
-;; Package-Version: 20210408.1259
-;; Package-Commit: 229461b92ff89fd96cd7730df9fd589a8b0ef949
+;; Version: 0.6.1
+;; Package-Version: 20211029.1147
+;; Package-Commit: 454d317bf772a616cb76cf2212f111c7977016a2
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/unhammer/org-mru-clock
 ;; Keywords: convenience, calendar
@@ -436,21 +436,34 @@ string."
                       ("SPC" org-mru-clock-show-narrowed "show")
                       ("l" org-mru-clock-add-backlink "link"))))
 
-(defvar org-mru-clock--actions
+(defun org-mru-clock--actions-map (parent)
+  "Add `org-mru-clock'-related keybindings to PARENT keymap.
+For use with embark and similar."
   (let ((map (make-sparse-keymap)))
+    (set-keymap-parent map parent)
     (define-key map "g" #'org-mru-clock-goto)
     (define-key map "z" #'org-mru-clock-add-note)
     (define-key map " " #'org-mru-clock-show-narrowed)
     (define-key map "l" #'org-mru-clock-add-backlink)
     map))
 
+(defvar org-mru-clock--embark-map nil)
+
 (defun org-mru-clock-embark-minibuffer-hook ()
   "Add to `minibuffer-setup-hook' if using Embark."
+  ;; TODO: Would it be better to define an "action type" for org-entries?
   (when (eq this-command 'org-mru-clock-in)
-    (setq-local embark-overriding-keymap org-mru-clock--actions)))
+    (unless org-mru-clock--embark-map
+      (setq org-mru-clock--embark-map
+            (org-mru-clock--actions-map embark-general-map)))
+    (setq-local embark-keymap-alist
+                (cons '(t . org-mru-clock--embark-map)
+                      (cl-remove-if (lambda (p) (eq (car p) t))
+                                    embark-keymap-alist)))))
 
 (eval-when-compile
   ;; Ensure we can dynamically let-bind this even when compiled with lexical-let
+  (defvar selectrum-should-sort)
   (defvar selectrum-should-sort-p))
 
 (defun org-mru-clock--completing-read ()
@@ -460,6 +473,7 @@ string."
   (let ((require-match (not org-mru-clock-capture-if-no-match))
         (collection (org-mru-clock--collection))
         ;; Ensure we keep our mru sort order:
+        (selectrum-should-sort nil)
         (selectrum-should-sort-p nil))
     (when-let ((choice (funcall org-mru-clock-completing-read
                                "Recent clocks: "
