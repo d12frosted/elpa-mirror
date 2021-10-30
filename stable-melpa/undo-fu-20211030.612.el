@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-undo-fu
-;; Package-Version: 20211007.306
-;; Package-Commit: 71c474e29f6ad726386604a5058761892951782e
+;; Package-Version: 20211030.612
+;; Package-Commit: ab8bc10e424bccc847800c31ab41888db789d55d
 ;; Version: 0.4
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -55,13 +55,13 @@
 (defgroup undo-fu nil "Configure default behavior for undo-fu wrapper." :group 'undo)
 
 (defcustom undo-fu-allow-undo-in-region nil
-  "When t, use `undo-in-region' when a selection is present.
+  "When non-nil, use `undo-in-region' when a selection is present.
 Otherwise `undo-in-region' is never used, since it doesn't support `undo-only',
 causing undo-fu to work with reduced functionality when a selection exists."
   :type 'boolean)
 
 (defcustom undo-fu-ignore-keyboard-quit nil
-  "When t, don't use `keyboard-quit' to disable linear undo/redo behavior.
+  "When non-nil, don't use `keyboard-quit' to disable linear undo/redo behavior.
 
 Instead, explicitly call `undo-fu-disable-checkpoint'."
   :type 'boolean)
@@ -422,5 +422,4 @@ Optional argument ARG the number of steps to undo."
   '(nconc aggressive-indent-protected-commands undo-fu--commands))
 
 (provide 'undo-fu)
-
 ;;; undo-fu.el ends here

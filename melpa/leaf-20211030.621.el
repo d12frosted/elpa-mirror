@@ -5,8 +5,8 @@
 ;; Author: Naoya Yamashita <conao3@gmail.com>
 ;; Maintainer: Naoya Yamashita <conao3@gmail.com>
 ;; Keywords: lisp settings
-;; Package-Version: 20210611.1550
-;; Package-Commit: 0ccc52bb85592d09499a09768a61ecfeccbfdf1e
+;; Package-Version: 20211030.621
+;; Package-Commit: 61365188be30c34c0e8b6f2004488e60a83dfcd6
 ;; Version: 4.5.2
 ;; URL: https://github.com/conao3/leaf.el
 ;; Package-Requires: ((emacs "24.1"))
@@ -1076,8 +1076,10 @@ FN also accept list of FN."
       (add-to-list 'leaf--paths (cons ',name file)))))
 
 (defmacro leaf-handler-package (name pkg _pin)
-  "Handler ensure PKG via PIN in NAME leaf block."
-  `(unless (package-installed-p ',pkg)
+  "Handler for ensuring the installation of PKG with package.el
+via PIN in the leaf block NAME."
+  `(if (package-installed-p ',pkg)
+       (package--update-selected-packages '(,pkg) nil)
      (unless (assoc ',pkg package-archive-contents)
        (package-refresh-contents))
      (condition-case _err
