@@ -1,0 +1,11 @@
+(keepass-mode .
+	      [(20211030 948)
+	       ((emacs
+		 (27)))
+	       "Mode to open Keepass DB" single
+	       ((:commit . "be190a86fd82337fe5280c1833f92d1f9997bced")
+		(:authors
+		 ("Ignasi Fosch" . "natx@y10k.ws"))
+		(:maintainer "Ignasi Fosch" . "natx@y10k.ws")
+		(:keywords "data" "files" "tools")
+		(:url . "https://github.com/ifosch/keepass-mode"))])
