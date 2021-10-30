@@ -5,3 +5,27 @@ Source:  https://github.com/ocaml/tuareg.git
 Updating /mnt/store/melpa/working/tuareg/
 Checking out origin/HEAD
 Checking out 00faf47a7c65e4cdcf040f38add1c6a08cd2ee2f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/tuareg/
+  to /tmp/tuaregmq0nlD/tuareg-20210913.1031
+    dot-emacs.el -> dot-emacs.el
+    ocamldebug.el -> ocamldebug.el
+    tuareg-compat.el -> tuareg-compat.el
+    tuareg-menhir.el -> tuareg-menhir.el
+    tuareg-opam.el -> tuareg-opam.el
+    tuareg.el -> tuareg.el
+Created tuareg-20210913.1031.tar containing:
+  tuareg-20210913.1031/
+  tuareg-20210913.1031/dot-emacs.el
+  tuareg-20210913.1031/ocamldebug.el
+  tuareg-20210913.1031/tuareg-compat.el
+  tuareg-20210913.1031/tuareg-menhir.el
+  tuareg-20210913.1031/tuareg-opam.el
+  tuareg-20210913.1031/tuareg-pkg.el
+  tuareg-20210913.1031/tuareg.el
+Built tuareg in 5.686s, finished at 2021-10-30T04:02:01+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  619 Oct 30 04:02 packages/tuareg-20210913.1031.entry
+252K -rw-r--r-- 1 root root 250K Oct 30 04:02 packages/tuareg-20210913.1031.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 30 04:02 packages/tuareg-badge.svg
+4.0K -rw-r--r-- 1 root root  490 Oct 30 04:02 packages/tuareg-readme.txt
