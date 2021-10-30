@@ -5,7 +5,7 @@
 ;; Author: BlueBoxWare (BlueBoxWare@users.noreply.github.com)
 ;; Url: https://github.com/BlueBoxWare/counsel-chrome-bm
 ;; Package-Version: 20211022.1427
-;; Package-Commit: 3321bf78231e443cb98520dbb30a6c49e004c6a7
+;; Package-Commit: 72b31889581f20f4037c0361f5259ff3633bc128
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "25.1") (counsel "0.13.0"))
 ;; Keywords: hypermedia

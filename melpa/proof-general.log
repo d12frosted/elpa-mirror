@@ -7,7 +7,7 @@ Checking out origin/master
 Checking out fd04605af1b07684da522c32d83ac346050926bb
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/proof-general/
-  to /tmp/proof-generalpi2MMl/proof-general-20211013.1911
+  to /tmp/proof-generalm4mLJu/proof-general-20211013.1911
     proof-general-pkg.el -> proof-general-pkg.el
     proof-general.el -> proof-general.el
   ! doc/dir -> dir
@@ -39,8 +39,8 @@ Copying files (->) and directories (=>)
     pghaskell => pghaskell
     pgocaml => pgocaml
     pgshell => pgshell
-Created /tmp/proof-generalpi2MMl/proof-general-20211013.1911/PG-adapting.info
-Created /tmp/proof-generalpi2MMl/proof-general-20211013.1911/ProofGeneral.info
+Created /tmp/proof-generalm4mLJu/proof-general-20211013.1911/PG-adapting.info
+Created /tmp/proof-generalm4mLJu/proof-general-20211013.1911/ProofGeneral.info
 Created proof-general-20211013.1911.tar containing:
   proof-general-20211013.1911/
   proof-general-20211013.1911/AUTHORS
@@ -173,9 +173,9 @@ Created proof-general-20211013.1911.tar containing:
   proof-general-20211013.1911/phox/sqrt2.phx
   proof-general-20211013.1911/proof-general-pkg.el
   proof-general-20211013.1911/proof-general.el
-Built proof-general in 46.741s, finished at 2021-10-30T11:24:30+0000
+Built proof-general in 50.164s, finished at 2021-10-30T15:34:52+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  251 Oct 30 11:24 packages/proof-general-20211013.1911.entry
-2.6M -rw-r--r-- 1 root root 2.6M Oct 30 11:24 packages/proof-general-20211013.1911.tar
-4.0K -rw-r--r-- 1 root root 1.2K Oct 30 11:24 packages/proof-general-badge.svg
-4.0K -rw-r--r-- 1 root root  491 Oct 30 11:24 packages/proof-general-readme.txt
+4.0K -rw-r--r-- 1 root root  251 Oct 30 15:34 packages/proof-general-20211013.1911.entry
+2.6M -rw-r--r-- 1 root root 2.6M Oct 30 15:34 packages/proof-general-20211013.1911.tar
+4.0K -rw-r--r-- 1 root root 1.2K Oct 30 15:34 packages/proof-general-badge.svg
+4.0K -rw-r--r-- 1 root root  491 Oct 30 15:34 packages/proof-general-readme.txt
