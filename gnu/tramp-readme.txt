@@ -1,35 +1,37 @@
-Tramp stands for `Transparent Remote (file) Access, Multiple
-Protocol'.  This package provides remote file editing, similar to
-Ange-FTP.
+Installing TRAMP via GNU ELPA
+*****************************
+
+Tramp stands for "Transparent Remote (file) Access, Multiple Protocol".
+This package provides remote file editing, similar to Ange-FTP.
 
 The difference is that Ange-FTP uses FTP to transfer files between the
-local and the remote host, whereas Tramp uses a combination of `rsh'
-and `rcp' or other work-alike programs, such as `ssh'/`scp'.
+local and the remote host, whereas Tramp uses a combination of 'rsh' and
+'rcp' or other work-alike programs, such as 'ssh'/'scp'.
 
 A remote file name has always the syntax
 
-  /method:user%domain@host#port:/path/to/file
+     /method:user%domain@host#port:/path/to/file
 
-Most of the parts are optional, read the manual for details.
+Most of the parts are optional, read the manual
+<https://www.gnu.org/software/tramp/> for details.
 
 Tramp must be compiled for the Emacs version you are running.  If you
-experience compatibility error messages for the Tramp package, or if
-you use another major Emacs version than the version Tramp has been
-installed with, you must recompile the package (<version> is the
-version of the Tramp package):
+experience compatibility error messages for the Tramp package, or if you
+use another major Emacs version than the version Tramp has been
+installed with, you must recompile the package:
 
-1. Remove all byte-compiled Tramp files
+   * Remove all byte-compiled Tramp files
 
-  # rm -f ~/.emacs.d/elpa/tramp-<version>/tramp*.elc
+          $ rm -f ~/.emacs.d/elpa/tramp-2.5.1.4/tramp*.elc
 
-2. Start Emacs with Tramp's source files
+   * Start Emacs with Tramp's source files
 
-  # emacs -L ~/.emacs.d/elpa/tramp-<version> -l tramp
+          $ emacs -L ~/.emacs.d/elpa/tramp-2.5.1.4 -l tramp
 
-This should not give you the error.
+     This should not give you the error.
 
-3. Recompile the Tramp package *with this running Emacs instance*
+   * Recompile the Tramp package *with this running Emacs instance*
 
-  M-x tramp-recompile-elpa
+          M-x tramp-recompile-elpa
 
-Afterwards, you must restart Emacs.
+     Afterwards, you must restart Emacs.

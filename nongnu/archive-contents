@@ -242,17 +242,17 @@
 		   ("András Simonyi" . "andras.simonyi@gmail.com"))
 		  (:keywords "languages" "gauche" "scheme" "geiser"))])
  (geiser-guile .
-	       [(0 17)
+	       [(0 18)
 		((emacs
 		  (24 4))
 		 (geiser
 		  (0 16)))
 		"Guile's implementation of the geiser protocols" tar
 		((:url . "https://gitlab.com/emacs-geiser/guile")
+		 (:keywords "languages" "guile" "scheme" "geiser")
 		 (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 		 (:authors
-		  ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-		 (:keywords "languages" "guile" "scheme" "geiser"))])
+		  ("Jose Antonio Ortega Ruiz" . "jao@gnu.org")))])
  (geiser-kawa .
 	      [(0 0 1)
 	       ((emacs
@@ -642,7 +642,7 @@
 	     ("Bozhidar Batsov"))
 	    (:keywords "project" "convenience"))])
  (rust-mode .
-	    [(1 0 0)
+	    [(1 0 1)
 	     ((emacs
 	       (25 1)))
 	     "A major-mode for editing Rust source code" tar

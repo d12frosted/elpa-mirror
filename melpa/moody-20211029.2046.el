@@ -6,8 +6,8 @@
 ;; Homepage: https://github.com/tarsius/moody
 
 ;; Package-Requires: ((emacs "25.3"))
-;; Package-Version: 20211024.2312
-;; Package-Commit: 78dd308a079115267e9e31f3d5e774d1f3d6399f
+;; Package-Version: 20211029.2046
+;; Package-Commit: 0379b2b31ab8c58bda84b96818ec4e5083f789ac
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -91,8 +91,18 @@
   (let ((font (face-font 'mode-line)))
     (if font (* 2 (aref (font-info font) 2)) 30))
   "When using `moody', height of the mode line in pixels.
-This should be an even number."
-  :type 'integer
+
+This should be an even number or nil to leave this unspecified,
+in which case the value of `window-mode-line-height' is used.
+
+Increasing the height of the mode-line triggers a bug in Emacs
+releases before version 29.1, causing only parts of the buffer
+to be displayed in the window even though it would fix exactly.
+Moody provides a workaround but that in turn can result in some
+flickering.  If you notice such flickering and it bothers you,
+then either update to the development version of Emacs or do
+not increase the height of the mode-line."
+  :type '(choice (const :tag "unspecified" nil) integer)
   :group 'mode-line)
 
 (defcustom moody-slant-function 'moody-slant
@@ -217,7 +227,7 @@ not specified, then faces based on `default', `mode-line' and
 
 (defun moody-slant (direction c1 c2 c3 &optional height)
   (unless height
-    (setq height moody-mode-line-height))
+    (setq height (or moody-mode-line-height (window-mode-line-height))))
   (unless (cl-evenp height)
     (cl-incf height))
   (let ((key (list direction c1 c2 c3 height)))
@@ -417,8 +427,6 @@ to the command loop."
 
 ;;; Kludges
 
-(defvar-local moody--size-hacked-p nil)
-
 (defun moody-redisplay (&optional _force &rest _ignored)
   "Call `redisplay' to trigger mode-line height calculations.
 
@@ -432,16 +440,17 @@ These calculations can be triggered by calling `redisplay'
 explicitly at the appropriate time and this functions purpose
 is to make it easier to do so.
 
-This function is like `redisplay' with non-nil FORCE argument.
-It accepts an arbitrary number of arguments making it suitable
-as a `:before' advice for any function.  If the current buffer
-has no mode-line or this function has already been called in
-it, then this function does nothing."
-  (when (and mode-line-format (not moody--size-hacked-p))
-    (setq moody--size-hacked-p t)
+This function is like `redisplay' with non-nil FORCE argument,
+except that it only triggers redisplay when there is a non-nil
+`mode-line-format' and the height of the mode-line is different
+from that of the `default' face.  This function is intended to
+be used as an advice to window creation functions."
+  (when (and mode-line-format
+             (/= (frame-char-height) (window-mode-line-height)))
     (redisplay t)))
 
-(advice-add 'fit-window-to-buffer :before #'moody-redisplay)
+(unless (>= emacs-major-version 29)
+  (advice-remove 'split-window #'moody-redisplay))
 
 (declare-function color-srgb-to-xyz "color" (red green blue))
 (declare-function color-rgb-to-hex "color" (red green blue &optional

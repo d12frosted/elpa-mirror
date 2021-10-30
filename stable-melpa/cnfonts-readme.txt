@@ -3,7 +3,7 @@
 ** 简介
 注意：cnfonts 原来叫： chinese-fonts-setup, 一开始使用三个词的首字
 母组成的字符串 "cfs-" 做为包的前缀，但不幸和 gnu 的项目 cfs.el 冲突，
-所以将包的前缀更改为 "cnfonts". chinese-fonts-setup 将做为 cnfonts
+所以将包的前缀更改为 "cnfonts".  chinese-fonts-setup 将做为 cnfonts
 的别名使用。
 
 cnfonts 是一个 Emacs 中英文字体配置工具。可以比较方便地实
