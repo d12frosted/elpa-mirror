@@ -711,14 +711,20 @@
 		    (:authors
 		     ("John Olsson" . "john@cryon.se")))])
  (swift-mode .
-	     [(8 4 1)
+	     [(8 4 2)
 	      ((emacs
 		(24 4))
 	       (seq
 		(2 3)))
 	      "Major-mode for Apple's Swift programming language" tar
 	      ((:url . "https://github.com/swift-emacs/swift-mode")
-	       (:keywords "languages" "swift"))])
+	       (:keywords "languages" "swift")
+	       (:maintainer "taku0 (http://github.com/taku0)")
+	       (:authors
+		("taku0 (http://github.com/taku0)")
+		("Chris Barrett" . "chris.d.barrett@me.com")
+		("Bozhidar Batsov" . "bozhidar@batsov.com")
+		("Arthur Evstifeev" . "lod@pisem.net")))])
  (systemd .
 	  [(1 6)
 	   ((emacs

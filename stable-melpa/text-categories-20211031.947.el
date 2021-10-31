@@ -4,8 +4,8 @@
 
 ;; Author: Dionisios Spiliopoulos <dennisspiliopoylos@gmail.com>
 ;; Keywords: lisp
-;; Package-Version: 20211001.830
-;; Package-Commit: f73b0e63072463c91a75a292fa21d39a9f06b81c
+;; Package-Version: 20211031.947
+;; Package-Commit: d400c2692373c14d7cf773e7ae587cbe9c7d1e13
 ;; Version: 0.0.1
 ;; URL: https://github.com/Dspil/text-categories
 ;; Package-Requires: ((emacs "26.2"))
@@ -235,11 +235,14 @@
 	(let* ((name (buffer-name))
 	       (found (sort (text-categories-list) 'string-lessp))
 	       (stored (sort (text-categories-list-stored) 'string-lessp))
-	       (cmap (text-categories-color-map (sort (cl-concatenate 'list stored found) 'string-lessp))))
+	       (cmap (text-categories-color-map (sort (cl-concatenate 'list stored found) 'string-lessp)))
+	       (point-to-go 0)
+	       (curpoint (point)))
 	  (with-current-buffer (get-buffer-create (text-categories-viz-buffer))
 	    (setq-local buffer-read-only nil)
 	    (erase-buffer)
 	    (text-categories-make-legend found stored)
+	    (setq point-to-go (point-max))
 	    (insert-buffer-substring name)
 	    (goto-char (point-min))
 	    (while (not (eobp))
@@ -250,7 +253,10 @@
 	    (goto-char (point-min))
 	    (put-text-property (point-min) (point-max) 'invisible nil)
 	    (setq-local buffer-read-only t))
-	  (pop-to-buffer (text-categories-viz-buffer))))
+	  (let ((curbuf (current-buffer)))
+	    (pop-to-buffer (text-categories-viz-buffer))
+	    (goto-char (1- (+ point-to-go curpoint)))
+	    (pop-to-buffer curbuf))))
     (message "Text categories are not active.")))
 
 (defun text-categories-change-region-category (start end)
