@@ -4,8 +4,8 @@
 
 ;; Author: Tom Willemse <tom@ryuslash.org>
 ;; Keywords: faces
-;; Package-Version: 20210713.455
-;; Package-Commit: 06a6bcfc58d1f1cd8815c674c9fcbbf193bba0a9
+;; Package-Version: 20211031.456
+;; Package-Commit: 787bb0a13c6e1b28e904e1b7f18564d5e97c9c93
 ;; Version: 6.2.0
 ;; URL: http://projects.ryuslash.org/yoshi-theme/
 
@@ -38,8 +38,15 @@
   "Return ARGS with the car modified to contain 2 spaces."
   (cons (format " %s " (car args)) (cdr args)))
 
+(defun yoshi-theme-add-spaces-around-current-info-node (func &rest args)
+  (let ((Info-current-node (format " %s " Info-current-node)))
+    (apply func args)))
+
 (advice-add 'propertized-buffer-identification
             :filter-args #'yoshi-theme-add-space-to-first-arg)
+
+(advice-add 'Info-set-mode-line
+            :around #'yoshi-theme-add-spaces-around-current-info-node)
 
 (defun yoshi-theme--make-inline-box (border-color)
   "Return a list representing a box specification using BORDER-COLOR."
