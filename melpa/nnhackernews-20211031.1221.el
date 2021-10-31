@@ -4,8 +4,8 @@
 
 ;; Authors: dickmao <github id: dickmao>
 ;; Version: 0.1.0
-;; Package-Version: 20210921.1131
-;; Package-Commit: 4e584d4da81c400de145dbb7a58e63819cbaf340
+;; Package-Version: 20211031.1221
+;; Package-Commit: 34d82e2c2e4c190b85e751dd3f295daa264baa55
 ;; Keywords: news
 ;; URL: https://github.com/dickmao/nnhackernews
 ;; Package-Requires: ((emacs "25.2") (request "0.3.3") (dash "2.18.1") (anaphora "1.0.4"))
@@ -1263,55 +1263,57 @@ Optionally provide STATIC-MAX-ITEM and STATIC-NEWSTORIES to prevent querying out
   (nnhackernews--with-group group
     (with-current-buffer buffer
       (erase-buffer)
-      (let* ((header (nnhackernews--get-header article-number group))
-             (mail-header (nnhackernews--make-header article-number))
-             (score (cdr (assq 'X-Hackernews-Score (mail-header-extra mail-header))))
-             (permalink (cdr (assq 'X-Hackernews-Permalink (mail-header-extra mail-header))))
-             (body (nnhackernews--massage (nnhackernews--get-body header server))))
-        (when body
-          (insert
-           "Newsgroups: " group "\n"
-           "Subject: " (mail-header-subject mail-header)  "\n"
-           "From: " (or (mail-header-from mail-header) "nobody") "\n"
-           "Date: " (mail-header-date mail-header) "\n"
-           "Message-ID: " (mail-header-id mail-header) "\n"
-           "References: " (mail-header-references mail-header) "\n"
-           "Archived-at: " permalink "\n"
-           "Score: " score "\n"
-           "\n")
-          (mml-insert-multipart "alternative")
-          (mml-insert-tag 'part 'type "text/html"
-                          'disposition "inline"
-                          'charset "utf-8")
-          (save-excursion (mml-insert-tag '/part))
-          (-when-let*
-              ((parent (plist-get header :parent))
-               (parent-author
-                (or (nnhackernews--gethash parent nnhackernews-authors-hashtb)
-                    "Someone"))
-               (parent-body (nnhackernews--get-body
-                             (nnhackernews-find-header parent) server)))
-            (insert (nnhackernews--citation-wrap parent-author parent-body)))
-          (aif (and nnhackernews-render-story (plist-get header :url))
-              (condition-case err
-                  (nnhackernews--request
-                   "nnhackernews-request-article" it
-                   :success (cl-function
-                             (lambda (&key data &allow-other-keys)
-                               (if (> (length data) nnhackernews-max-render-bytes)
-                                   (insert body)
-                                 (insert data)))))
-                (error (gnus-message 5 "nnhackernews-request-article: %s"
-                                     (error-message-string err))
-                       (insert body)))
-            (insert body))
-          (insert "\n")
-          (if (mml-validate)
+      (if-let ((header (nnhackernews--get-header article-number group)))
+          (let* ((mail-header (nnhackernews--make-header article-number))
+               (score (cdr (assq 'X-Hackernews-Score (mail-header-extra mail-header))))
+               (permalink (cdr (assq 'X-Hackernews-Permalink (mail-header-extra mail-header))))
+               (body (nnhackernews--massage (nnhackernews--get-body header server))))
+          (when body
+            (insert
+             "Newsgroups: " group "\n"
+             "Subject: " (mail-header-subject mail-header)  "\n"
+             "From: " (or (mail-header-from mail-header) "nobody") "\n"
+             "Date: " (mail-header-date mail-header) "\n"
+             "Message-ID: " (mail-header-id mail-header) "\n"
+             "References: " (mail-header-references mail-header) "\n"
+             "Archived-at: " permalink "\n"
+             "Score: " score "\n"
+             "\n")
+            (mml-insert-multipart "alternative")
+            (mml-insert-tag 'part 'type "text/html"
+                            'disposition "inline"
+                            'charset "utf-8")
+            (save-excursion (mml-insert-tag '/part))
+            (-when-let*
+                ((parent (plist-get header :parent))
+                 (parent-author
+                  (or (nnhackernews--gethash parent nnhackernews-authors-hashtb)
+                      "Someone"))
+                 (parent-body (nnhackernews--get-body
+                               (nnhackernews-find-header parent) server)))
+              (insert (nnhackernews--citation-wrap parent-author parent-body)))
+            (aif (and nnhackernews-render-story (plist-get header :url))
+                (condition-case err
+                    (nnhackernews--request
+                     "nnhackernews-request-article" it
+                     :success (cl-function
+                               (lambda (&key data &allow-other-keys)
+                                 (if (> (length data) nnhackernews-max-render-bytes)
+                                     (insert body)
+                                   (insert data)))))
+                  (error (gnus-message 5 "nnhackernews-request-article: %s"
+                                       (error-message-string err))
+                         (insert body)))
+              (insert body))
+            (insert "\n")
+            (if (mml-validate)
 
-              (message-encode-message-body)
-            (gnus-message 2 "nnhackernews-request-article: Invalid mml:\n%s"
-                          (buffer-string)))
-          (cons group article-number))))))
+                (message-encode-message-body)
+              (gnus-message 2 "nnhackernews-request-article: Invalid mml:\n%s"
+                            (buffer-string)))
+            (cons group article-number)))
+        (gnus-message 5 "nnhackernews-request-article: header purged %s (article %s)"
+                      group article-number)))))
 
 (defsubst nnhackernews--shift-ranges (delta ranges)
   "Shift back by DELTA the elements of RANGES, removing any negative entries."

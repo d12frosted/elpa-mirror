@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-default-font-presets
-;; Package-Version: 20211030.1333
-;; Package-Commit: 5b7304ccadc675d4f8a8810f603820a6316365c8
+;; Package-Version: 20211031.1235
+;; Package-Commit: 276bb419936500e6ecc069ee5a6e21d4c29bdcc3
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -166,8 +166,6 @@ when the default font is already in the list.
 
 Replacement is done so any fine tuning to the default font is kept,
 so attributes are kept (for example)."
-  (unless default-font-presets-list
-    (user-error "The variable 'default-font-presets-list' is not a list of fonts!"))
   (let ((font-index-test nil))
     (let ((current-font (font-get (face-attribute 'default :font) :name)))
       (unless (string-equal current-font "")
