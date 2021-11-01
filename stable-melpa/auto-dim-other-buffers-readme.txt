@@ -19,13 +19,10 @@ to Emacs initialisation file (~/.emacs or ~/.emacs.d/init.el):
       (when (fboundp 'auto-dim-other-buffers-mode)
         (auto-dim-other-buffers-mode t))))
 
-To configure how dimmed buffers look like, customise
-`auto-dim-other-buffers-face'.  This can be accomplished by:
-
-    M-x customize-face RET auto-dim-other-buffers-face RET
-
-More customisation can be found in ‘auto-dim-other-buffers’ customisation
-group which can be accessed with:
+To configure how dimmed buffers look like, change
+`auto-dim-other-buffers-face' and `auto-dim-other-buffers-hide-face' faces.
+Those faces as well as other settings can be found in
+‘auto-dim-other-buffers’ group which can be accessed with:
 
     M-x customize-group RET auto-dim-other-buffers RET
 
