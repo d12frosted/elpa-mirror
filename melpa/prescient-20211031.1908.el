@@ -5,8 +5,8 @@
 ;; Author: Radon Rosborough <radon.neon@gmail.com>
 ;; Homepage: https://github.com/raxod502/prescient.el
 ;; Keywords: extensions
-;; Package-Version: 20210724.1756
-;; Package-Commit: 027c2137a8d9e01a1d4c7b5e5d98da017dd2d48e
+;; Package-Version: 20211031.1908
+;; Package-Commit: 292ac9fe351d469f44765d487f6b9a1c1a68ad1e
 ;; Created: 7 Aug 2017
 ;; Package-Requires: ((emacs "25.1"))
 ;; SPDX-License-Identifier: MIT
@@ -342,6 +342,18 @@ Usually this variable is dynamically bound to another value while
 
 ;;;; Utility functions
 
+(defun prescient--char-fold-to-regexp (string)
+  "Convert STRING to a regexp that handles char folding.
+This is the same as `char-fold-to-regexp' but it works around
+https://github.com/raxod502/prescient.el/issues/71. The issue
+should really be fixed upstream in Emacs, but it looks like that
+is not happening anytime soon."
+  (let ((regexp (char-fold-to-regexp string)))
+    (condition-case _
+        (prog1 regexp
+          (string-match-p regexp ""))
+      (invalid-regexp (regexp-quote string)))))
+
 (defun prescient-split-query (query)
   "Split QUERY string into sub-queries.
 The query is split on spaces, but a sequence of two or more
@@ -405,7 +417,7 @@ If WITH-GROUP is `all', enclose the match in a capture group.
 See also the customizable variable `prescient-use-char-folding'."
   (prescient-with-group
    (if prescient-use-char-folding
-       (char-fold-to-regexp query)
+       (prescient--char-fold-to-regexp query)
      query)
    (eq with-group 'all)))
 
@@ -427,7 +439,7 @@ See also the customizable variable `prescient-use-char-folding'."
              ;; in the candidate.
              "\\b")
            (if prescient-use-char-folding
-               (char-fold-to-regexp query)
+               (prescient--char-fold-to-regexp query)
              query))
    (eq with-group 'all)))
 

@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20211025.128
-;; Package-Commit: 1bf7db7477db4ca93740a5ebc5ad3c0dc3777273
+;; Package-Version: 20211031.1757
+;; Package-Commit: 1b7f2cf9969e7dfe610780b38b6f3dd834d1c01d
 ;; Package-Requires: ((emacs "25.2"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 1.1.2
@@ -386,7 +386,7 @@ as its sole argument."
     (with-current-buffer (get-buffer-create " *apheleia-patch*")
       (erase-buffer)
       (apheleia--make-process
-       :command `("diff" "--rcs" "--"
+       :command `("diff" "--rcs" "--strip-trailing-cr" "--"
                   ,(or old-fname "-")
                   ,(or new-fname "-"))
        :stdin (if new-fname old-buffer new-buffer)
@@ -469,6 +469,26 @@ sequence unless it's first in the sequence"))
                                         (cl-return)))
                                   arg))
                               command)))
+      ;; Evaluate each element of arg that isn't a string and replace
+      ;; it with the evaluated value. The result of an evaluation should
+      ;; be a string or a list of strings. If the former its replaced as
+      ;; is. If the latter the contents of the list is substituted in
+      ;; place.
+      (setq command
+            (cl-loop
+             for arg in command
+             with val = nil
+             do (setq val (if (stringp arg)
+                              arg
+                            (eval arg)))
+             if val
+               if (and (consp val)
+                       (cl-every #'stringp val))
+                 append val
+               else if (stringp val)
+                 collect val
+               else do (error "Result of command evaluation must be a string \
+or list of strings: %S" arg)))
       `(,input-fname ,output-fname ,stdin ,@command))))
 
 (defun apheleia--run-formatters (commands buffer callback &optional stdin)

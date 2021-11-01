@@ -1,8 +1,8 @@
 ;;; bazel.el --- Bazel support for Emacs -*- lexical-binding: t; -*-
 
 ;; URL: https://github.com/bazelbuild/emacs-bazel-mode
-;; Package-Version: 20211006.855
-;; Package-Commit: 41745212f75b4deafb27fc790df1a74ae344df84
+;; Package-Version: 20211031.1941
+;; Package-Commit: cdb2643dba39fe2bd64ba3b190b94d1ef1d83b18
 ;; Keywords: build tools, languages
 ;; Package-Requires: ((emacs "26.1"))
 ;; Version: 0
@@ -175,11 +175,11 @@ temporary file.  After BODY finishes, delete the temporary files."
   "Format current buffer using Buildifier.
 If TYPE is nil, detect the file type from the current major mode
 and visited filename, if available.  Otherwise, TYPE must be one
-of the symbols ‘build’, ‘bzl’, or ‘workspace’, corresponding to
-the file types documented at URL
+of the symbols ‘build’, ‘bzl’, ‘workspace’, or ‘default’,
+corresponding to the file types documented at URL
 ‘https://github.com/bazelbuild/buildtools/tree/master/buildifier#usage’."
   (interactive "*")
-  (cl-check-type type (member nil build bzl workspace))
+  (cl-check-type type (member nil build bzl workspace default))
   (let ((input-buffer (current-buffer))
         (directory default-directory)
         (input-file buffer-file-name)
@@ -1182,39 +1182,33 @@ Look for an imported file with the given NAME."
 
 ;;;; Compilation support
 
-;; Add entries to ‘compilation-error-regexp-alist’.  Bazel errors are of the
+;; Add an entry to ‘compilation-error-regexp-alist’.  Bazel errors are of the
 ;; form “SEVERITY: FILE:LINE:COLUMN: MESSAGE.”  We restrict the filename to the
 ;; most common characters to avoid matching too much.  In particular, Bazel
 ;; doesn’t allow spaces in filenames
 ;; (https://github.com/bazelbuild/bazel/issues/167), so we don’t have to look
-;; for spaces here.  We generate the constant entries at compile time to make
+;; for spaces here.  We generate the constant entry at compile time to make
 ;; loading a bit faster.
-(let-when-compile
-    ((entries
-      (cl-loop
-       for (name prefix type) in '((bazel-mode-debug "DEBUG" 0)
-                                   (bazel-mode-info "INFO" 0)
-                                   (bazel-mode-warning "WARNING" 1)
-                                   (bazel-mode-error "ERROR" 2))
-       for rx = (rx-to-string
-                 `(seq bol ,prefix ": "
-                       ;; This needs to at least match package names
-                       ;; (https://docs.bazel.build/versions/4.0.0/build-ref.html#package-names-package-name).
-                       ;; Bazel currently doesn’t allow spaces in filenames
-                       ;; (https://github.com/bazelbuild/bazel/issues/167 and
-                       ;; https://github.com/bazelbuild/bazel/issues/374), so we
-                       ;; don’t include spaces here either.  We do allow
-                       ;; non-ASCII alphanumeric characters, because they could
-                       ;; be part of the workspace directory name.
-                       (group (+ (any alnum ?/ ?- ?. ?_))
-                              (or (seq "/BUILD" (? ".bazel"))
-                                  (seq (+ (any alnum ?- ?. ?_)) ".bzl")))
-                       ?: (group (+ digit)) ?: (group (+ digit)) ": ")
-                 :no-group)
-       collect (list name rx 1 2 3 type))))
-  (dolist (entry (eval-when-compile entries))
-    (add-to-list 'compilation-error-regexp-alist (car entry))
-    (add-to-list 'compilation-error-regexp-alist-alist entry)))
+(add-to-list 'compilation-error-regexp-alist 'bazel)
+(add-to-list 'compilation-error-regexp-alist-alist
+             (eval-when-compile
+               `(bazel
+                 ,(rx bol
+                      (or "ERROR" (group "WARNING") (group (or "DEBUG" "INFO")))
+                      ": "
+                      ;; This needs to at least match package names
+                      ;; (https://docs.bazel.build/versions/4.0.0/build-ref.html#package-names-package-name).
+                      ;; Bazel currently doesn’t allow spaces in filenames
+                      ;; (https://github.com/bazelbuild/bazel/issues/167 and
+                      ;; https://github.com/bazelbuild/bazel/issues/374), so we
+                      ;; don’t include spaces here either.  We do allow
+                      ;; non-ASCII alphanumeric characters, because they could
+                      ;; be part of the workspace directory name.
+                      (group (+ (any alnum ?/ ?- ?. ?_))
+                             (or (seq "/BUILD" (? ".bazel"))
+                                 (seq (+ (any alnum ?- ?. ?_)) ".bzl")))
+                      ?: (group (+ digit)) ?: (group (+ digit)) ": ")
+                 3 4 5 (1 . 2))))
 
 (add-hook 'compilation-finish-functions #'bazel-finish-compilation)
 
