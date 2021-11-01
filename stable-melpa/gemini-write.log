@@ -3,11 +3,7 @@ Fetcher: git
 Source:  https://alexschroeder.ch/cgit/gemini-write
 
 Updating /mnt/store/melpa/working/gemini-write/
-Checking out origin/HEAD
-Checking out 169333a5c251c14a84286dea02a63d1a5e93cf54
-Built gemini-write in 6.535s, finished at 2021-10-31T21:47:57+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.4K Oct 31 21:47 packages/gemini-write-20211026.1639.el
-4.0K -rw-r--r-- 1 root root  404 Oct 31 21:47 packages/gemini-write-20211026.1639.entry
-4.0K -rw-r--r-- 1 root root 1.2K Oct 31 21:47 packages/gemini-write-badge.svg
-4.0K -rw-r--r-- 1 root root  491 Oct 31 21:47 packages/gemini-write-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://alexschroeder.ch/cgit/gemini-write/': Operation timed out after 300007 milliseconds with 0 out of 0 bytes received
+error: Could not fetch origin
+

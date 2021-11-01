@@ -1,0 +1,27 @@
+Package: citar
+Fetcher: github
+Source:  https://github.com/bdarcus/citar.git
+
+Updating /mnt/store/melpa/working/citar/
+Checking out origin/HEAD
+Checking out 6e30af6f739ed01437d58d7b3e54a5757e8eb55a
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/citar/
+  to /tmp/citarXSKmYP/citar-20211031.2012
+    citar-file.el -> citar-file.el
+    citar-filenotify.el -> citar-filenotify.el
+    citar-org.el -> citar-org.el
+    citar.el -> citar.el
+Created citar-20211031.2012.tar containing:
+  citar-20211031.2012/
+  citar-20211031.2012/citar-file.el
+  citar-20211031.2012/citar-filenotify.el
+  citar-20211031.2012/citar-org.el
+  citar-20211031.2012/citar-pkg.el
+  citar-20211031.2012/citar.el
+Built citar in 5.018s, finished at 2021-11-01T04:43:56+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  401 Nov  1 04:43 packages/citar-20211031.2012.entry
+ 72K -rw-r--r-- 1 root root  70K Nov  1 04:43 packages/citar-20211031.2012.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov  1 04:43 packages/citar-badge.svg
+4.0K -rw-r--r-- 1 root root  355 Nov  1 04:43 packages/citar-readme.txt
