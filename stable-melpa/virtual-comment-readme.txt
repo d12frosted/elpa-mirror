@@ -48,5 +48,8 @@ cask exec ert-runner
 https://github.com/blue0513/phantom-inline-comment
 https://www.emacswiki.org/emacs/InPlaceAnnotations
 
-Change log
-20210-09-27: 0.02 add location/reference
+Changelog
+2021-11-01:
+ 0.03 virtual-comment-make create its own buffer to get input, no longer use read-from-minibuffer
+2021-09-27:
+ 0.02 add location/reference

@@ -21,7 +21,7 @@
 
 ;; Version: 1.0
 ;; Package-Version: 20201229.1811
-;; Package-Commit: 00b4fd5cae7fe27085995dbb178828fb765c7edc
+;; Package-Commit: 0cb9c2fef6e611b4389f7df7fcccc17744053e9b
 ;; Author: Adrien Brochard
 ;; Keywords: walkman http curl org comm
 ;; URL: https://github.com/abrochard/walkman

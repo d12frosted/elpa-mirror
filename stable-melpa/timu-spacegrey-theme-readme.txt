@@ -7,7 +7,7 @@ I. Installation
       (load-theme 'timu-spacegrey t)
 
   B. From Melpa
-    1. M-x package-instal <RET> timu-spacegrey-theme.el <RET>.
+    1. M-x package-instal RET timu-spacegrey-theme.el RET.
     2. In your `~/.emacs.d/init.el' or `~/.emacs':
       (load-theme 'timu-spacegrey t)
 
@@ -20,6 +20,10 @@ I. Installation
 
 II. Configuration
   There is a light version now included as well.
-  By default the theme is `dark', to setup the `light' flavour
-  add the following to your `~/.emacs.d/init.el' or `~/.emacs':
+  By default the theme is `dark', to setup the `light' flavour:
+
+  A. Change the variable `timu-spacegrey-flavour' in the Customization Interface.
+     M-x customize RET. Then Search for `timu'.
+
+  B. add the following to your `~/.emacs.d/init.el' or `~/.emacs'
     (setq timu-spacegrey-flavour "light")

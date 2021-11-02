@@ -5,7 +5,7 @@
 ;; Author: Augusto Stoffel <arstoffel@gmail.com>
 ;; Keywords: help
 ;; Package-Version: 20211002.1657
-;; Package-Commit: 206d06512cd9934644fa9ea3e17b5e78d01b7e64
+;; Package-Commit: e1b4b0258289d442e349f67f175f05be6f4347d4
 ;; URL: https://github.com/astoff/devdocs.el
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 0.2

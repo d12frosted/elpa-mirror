@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/DaniruKun/ancient-one-dark-emacs-theme
 ;; Version: 0.1
 ;; Package-Version: 20211030.1358
-;; Package-Commit: f60362b6597f303b2cd09f7551a99c1b30e1da8a
+;; Package-Commit: e28c7e5c12768153bc35fcfb414bcad7f80df908
 ;; Package-Requires: ((emacs "24.1"))
 ;; Created with ThemeCreator, https://github.com/mswift42/themecreator.
 

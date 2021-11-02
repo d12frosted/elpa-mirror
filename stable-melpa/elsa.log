@@ -4,10 +4,10 @@ Source:  https://github.com/emacs-elsa/Elsa.git
 
 Updating /mnt/store/melpa/working/elsa/
 Checking out origin/HEAD
-Checking out ac0ab88abca1215cac60f8a986dadf3011b444bb
+Checking out 22bb5bd15e3f4fc2a9f10b998626fec18fd3a1a0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elsa/
-  to /tmp/elsavYLdGk/elsa-20201011.1950
+  to /tmp/elsaLksuqB/elsa-20211101.1023
     Elsafile.el -> Elsafile.el
     elsa-analyser.el -> elsa-analyser.el
     elsa-check.el -> elsa-check.el
@@ -38,42 +38,42 @@ Copying files (->) and directories (=>)
     elsa-variable.el -> elsa-variable.el
     elsa.el -> elsa.el
     bin => bin
-Created elsa-20201011.1950.tar containing:
-  elsa-20201011.1950/
-  elsa-20201011.1950/Elsafile.el
-  elsa-20201011.1950/bin/
-  elsa-20201011.1950/bin/elsa
-  elsa-20201011.1950/elsa-analyser.el
-  elsa-20201011.1950/elsa-check.el
-  elsa-20201011.1950/elsa-english.el
-  elsa-20201011.1950/elsa-error.el
-  elsa-20201011.1950/elsa-extension-builtin.el
-  elsa-20201011.1950/elsa-extension-cl.el
-  elsa-20201011.1950/elsa-extension-dash.el
-  elsa-20201011.1950/elsa-extension-eieio.el
-  elsa-20201011.1950/elsa-extension-elsa.el
-  elsa-20201011.1950/elsa-extension-flycheck.el
-  elsa-20201011.1950/elsa-extension-seq.el
-  elsa-20201011.1950/elsa-font-lock.el
-  elsa-20201011.1950/elsa-pkg.el
-  elsa-20201011.1950/elsa-reader.el
-  elsa-20201011.1950/elsa-rules-list.el
-  elsa-20201011.1950/elsa-ruleset.el
-  elsa-20201011.1950/elsa-scope.el
-  elsa-20201011.1950/elsa-state.el
-  elsa-20201011.1950/elsa-type-helpers.el
-  elsa-20201011.1950/elsa-typed-builtin.el
-  elsa-20201011.1950/elsa-typed-cl.el
-  elsa-20201011.1950/elsa-typed-eieio.el
-  elsa-20201011.1950/elsa-typed-subr.el
-  elsa-20201011.1950/elsa-typed-syntax.el
-  elsa-20201011.1950/elsa-typed-thingatpt.el
-  elsa-20201011.1950/elsa-types.el
-  elsa-20201011.1950/elsa-variable.el
-  elsa-20201011.1950/elsa.el
-Built elsa in 5.827s, finished at 2021-11-01T08:36:32+0000
+Created elsa-20211101.1023.tar containing:
+  elsa-20211101.1023/
+  elsa-20211101.1023/Elsafile.el
+  elsa-20211101.1023/bin/
+  elsa-20211101.1023/bin/elsa
+  elsa-20211101.1023/elsa-analyser.el
+  elsa-20211101.1023/elsa-check.el
+  elsa-20211101.1023/elsa-english.el
+  elsa-20211101.1023/elsa-error.el
+  elsa-20211101.1023/elsa-extension-builtin.el
+  elsa-20211101.1023/elsa-extension-cl.el
+  elsa-20211101.1023/elsa-extension-dash.el
+  elsa-20211101.1023/elsa-extension-eieio.el
+  elsa-20211101.1023/elsa-extension-elsa.el
+  elsa-20211101.1023/elsa-extension-flycheck.el
+  elsa-20211101.1023/elsa-extension-seq.el
+  elsa-20211101.1023/elsa-font-lock.el
+  elsa-20211101.1023/elsa-pkg.el
+  elsa-20211101.1023/elsa-reader.el
+  elsa-20211101.1023/elsa-rules-list.el
+  elsa-20211101.1023/elsa-ruleset.el
+  elsa-20211101.1023/elsa-scope.el
+  elsa-20211101.1023/elsa-state.el
+  elsa-20211101.1023/elsa-type-helpers.el
+  elsa-20211101.1023/elsa-typed-builtin.el
+  elsa-20211101.1023/elsa-typed-cl.el
+  elsa-20211101.1023/elsa-typed-eieio.el
+  elsa-20211101.1023/elsa-typed-subr.el
+  elsa-20211101.1023/elsa-typed-syntax.el
+  elsa-20211101.1023/elsa-typed-thingatpt.el
+  elsa-20211101.1023/elsa-types.el
+  elsa-20211101.1023/elsa-variable.el
+  elsa-20211101.1023/elsa.el
+Built elsa in 5.358s, finished at 2021-11-01T23:29:11+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  381 Nov  1 08:36 packages/elsa-20201011.1950.entry
-220K -rw-r--r-- 1 root root 220K Nov  1 08:36 packages/elsa-20201011.1950.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov  1 08:36 packages/elsa-badge.svg
-   0 -rw-r--r-- 1 root root    0 Nov  1 08:36 packages/elsa-readme.txt
+4.0K -rw-r--r-- 1 root root  381 Nov  1 23:29 packages/elsa-20211101.1023.entry
+220K -rw-r--r-- 1 root root 220K Nov  1 23:29 packages/elsa-20211101.1023.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov  1 23:29 packages/elsa-badge.svg
+   0 -rw-r--r-- 1 root root    0 Nov  1 23:29 packages/elsa-readme.txt

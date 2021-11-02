@@ -4,10 +4,10 @@ Source:  https://github.com/okamsn/loopy.git
 
 Updating /mnt/store/melpa/working/loopy/
 Checking out origin/HEAD
-Checking out 03c11bd01e88d6d8c311e300c8179bbaa003211e
+Checking out d95cf6dea7addd020d1ccacc25527f181b3eaa63
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/loopy/
-  to /tmp/loopyUpVu83/loopy-20211030.232
+  to /tmp/loopyVKNhSa/loopy-20211101.2351
     loopy-commands.el -> loopy-commands.el
     loopy-iter.el -> loopy-iter.el
     loopy-misc.el -> loopy-misc.el
@@ -16,27 +16,29 @@ Copying files (->) and directories (=>)
     loopy-vars.el -> loopy-vars.el
     loopy.el -> loopy.el
   ! doc/loopy.texi -> loopy.texi
-Created /tmp/loopyUpVu83/loopy-20211030.232/loopy.info
-Created loopy-20211030.232.tar containing:
-  loopy-20211030.232/
-  loopy-20211030.232/dir
-  loopy-20211030.232/loopy-commands.el
-  loopy-20211030.232/loopy-iter.el
-  loopy-20211030.232/loopy-misc.el
-  loopy-20211030.232/loopy-pcase.el
-  loopy-20211030.232/loopy-pkg.el
-  loopy-20211030.232/loopy-seq.el
-  loopy-20211030.232/loopy-vars.el
-  loopy-20211030.232/loopy.el
-  loopy-20211030.232/loopy.info
-Built loopy in 16.963s, finished at 2021-11-01T09:05:36+0000
+Created /tmp/loopyVKNhSa/loopy-20211101.2351/loopy.info
+Created loopy-20211101.2351.tar containing:
+  loopy-20211101.2351/
+  loopy-20211101.2351/dir
+  loopy-20211101.2351/loopy-commands.el
+  loopy-20211101.2351/loopy-iter.el
+  loopy-20211101.2351/loopy-misc.el
+  loopy-20211101.2351/loopy-pcase.el
+  loopy-20211101.2351/loopy-pkg.el
+  loopy-20211101.2351/loopy-seq.el
+  loopy-20211101.2351/loopy-vars.el
+  loopy-20211101.2351/loopy.el
+  loopy-20211101.2351/loopy.info
+Built loopy in 18.541s, finished at 2021-11-01T23:57:40+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  303 Nov  1 09:05 packages/loopy-20211030.232.entry
-460K -rw-r--r-- 1 root root 460K Nov  1 09:05 packages/loopy-20211030.232.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov  1 09:05 packages/loopy-badge.svg
-8.0K -rw-r--r-- 1 root root 5.9K Nov  1 09:05 packages/loopy-dash-20211020.157.el
-4.0K -rw-r--r-- 1 root root  394 Nov  1 09:05 packages/loopy-dash-20211020.157.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov  1 09:05 packages/loopy-dash-badge.svg
-4.0K -rw-r--r-- 1 root root  829 Nov  1 09:05 packages/loopy-dash-readme.txt
-4.0K -rw-r--r-- 1 root root  606 Nov  1 09:05 packages/loopy-dash.log
-4.0K -rw-r--r-- 1 root root 3.4K Nov  1 09:05 packages/loopy-readme.txt
+4.0K -rw-r--r-- 1 root root  303 Nov  1 20:15 packages/loopy-20211030.232.entry
+460K -rw-r--r-- 1 root root 460K Nov  1 20:15 packages/loopy-20211030.232.tar
+4.0K -rw-r--r-- 1 root root  304 Nov  1 23:57 packages/loopy-20211101.2351.entry
+460K -rw-r--r-- 1 root root 460K Nov  1 23:57 packages/loopy-20211101.2351.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov  1 23:57 packages/loopy-badge.svg
+8.0K -rw-r--r-- 1 root root 5.9K Nov  1 23:57 packages/loopy-dash-20211020.157.el
+4.0K -rw-r--r-- 1 root root  394 Nov  1 23:57 packages/loopy-dash-20211020.157.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov  1 23:57 packages/loopy-dash-badge.svg
+4.0K -rw-r--r-- 1 root root  829 Nov  1 23:57 packages/loopy-dash-readme.txt
+4.0K -rw-r--r-- 1 root root  606 Nov  1 23:57 packages/loopy-dash.log
+4.0K -rw-r--r-- 1 root root 3.4K Nov  1 23:57 packages/loopy-readme.txt
