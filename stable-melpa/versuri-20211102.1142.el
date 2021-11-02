@@ -4,8 +4,8 @@
 
 ;; Author: Mihai Olteanu <mihai_olteanu@fastmail.fm>
 ;; Version: 1.0
-;; Package-Version: 20211102.1123
-;; Package-Commit: 288bba49f8a5c54c2ec89abeaec2a7e622522e31
+;; Package-Version: 20211102.1142
+;; Package-Commit: eafc925e3089aa80cefd6ceeb0cb87abce5490a9
 ;; Package-Requires: ((emacs "26.1") (dash "2.16.0") (request "0.3.0") (anaphora "1.0.4") (esxml "0.1.0") (s "1.12.0") (esqlite "0.3.1"))
 ;; Keywords: multimedia
 ;; URL: https://github.com/mihaiolteanu/versuri/
@@ -333,24 +333,48 @@ the call with the remaining websites."
               (versuri-lyrics artist song callback
                               (-remove-item website websites))))))))
 
+(defvar versuri--artist nil)
+(defvar versuri--song nil)
+(defvar versuri--buffer nil)
+
+(defun versuri-lyrics-forget ()
+  "Forget the current lyrics and kill the buffer."
+  (interactive)
+  (versuri-delete-lyrics versuri--artist versuri--song)
+  (kill-buffer versuri--buffer))
+
+(defun versuri-lyrics-try-another-site ()
+  "Find another website for this lyrics.
+Similar to `versuri-lyrics-forget', but the lyrics is then
+searched and displayed again in a new buffer.  Not all websites
+have the same lyrics for the same song.  Some might be
+incomplete, some might be ugly."
+  (interactive)
+  (versuri-delete-lyrics versuri--artist versuri--song)
+  (kill-buffer versuri--buffer)
+  (versuri-display versuri--artist versuri--song))
+
+(defvar versuri-mode-map
+  (let ((m (make-sparse-keymap)))
+    (define-key m (kbd "q") #'kill-current-buffer)
+    (define-key m (kbd "x") #'versuri-lyrics-forget)
+    (define-key m (kbd "r") #'versuri-lyrics-try-another-site)
+    m)
+  "Keymap for `versuri-mode'.")
+
+(define-derived-mode versuri-mode fundamental-mode "versuri"
+  "Major mode for versuri lyrics buffers."
+  (make-local-variable 'versuri--artist)
+  (make-local-variable 'versuri--song)
+  (make-local-variable 'versuri--buffer)
+  (read-only-mode))
+
 (defun versuri-display (artist song)
   "Search and display the lyrics for ARTIST and SONG in a buffer.
 
 Async call.  When found, the lyrics are inserted in a new
-read-only buffer.  If the buffer with the same lyrics already
-exists, switch to it and don't create a new buffer.  Inside the
-buffer, the following keybindings are active:
-
-q: kill the buffer
-
-x: delete the entry from the database and kill the
-buffer.  Useful if you don't want to keep the lyrics around.
-
-r: find the lyrics on another website and redisplay the buffer.
-This is similar to 'x', but the lyrics is then searched and
-displayed again in a new buffer.  Not all websites have the same
-lyrics for the same song.  Some might be incomplete, some might
-be ugly."
+`versuri-mode' buffer.  If the buffer with the same lyrics
+already exists, switch to it and don't create a new buffer."
   (versuri-lyrics artist song
     (lambda (lyrics)
       (let ((name (format "%s - %s | lyrics" artist song)))
@@ -358,23 +382,13 @@ be ugly."
             (switch-to-buffer it)
           (let ((b (generate-new-buffer name)))
             (with-current-buffer b
-              (insert (format "%s - %s\n\n" artist song))
-              (insert lyrics)
-              (read-only-mode)
-              (local-set-key (kbd "q") 'kill-current-buffer)
-              ;; Forget about these lyrics.
-              (local-set-key (kbd "x")
-                             (lambda ()
-                               (interactive)
-                               (versuri-delete-lyrics artist song)
-                               (kill-buffer it)))
-              ;; Find another website for these lyrics.
-              (local-set-key (kbd "r")
-                             (lambda ()
-                               (interactive)
-                               (versuri-delete-lyrics artist song)
-                               (kill-buffer it)
-                               (versuri-display artist song))))
+              (save-excursion
+                (insert (format "%s - %s\n\n" artist song))
+                (insert lyrics))
+              (versuri-mode)
+              (setq-local versuri--artist artist)
+              (setq-local versuri--song song)
+              (setq-local versuri--buffer it))
             (switch-to-buffer b)))))))
 
 (defun versuri-save (artist song)

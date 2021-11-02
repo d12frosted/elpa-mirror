@@ -4,10 +4,10 @@ Source:  https://github.com/andras-simonyi/citeproc-el.git
 
 Updating /mnt/store/melpa/working/citeproc/
 Checking out origin/HEAD
-Checking out c8ff95862823cdff067e8cc9bb7f5ef537e8f1d9
+Checking out f1c935922ee9557de31c42963d897a7320e657d0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citeproc/
-  to /tmp/citeprocN2I5Bb/citeproc-20211014.1115
+  to /tmp/citeprocUBomnk/citeproc-20211102.1120
     citeproc-biblatex.el -> citeproc-biblatex.el
     citeproc-bibtex.el -> citeproc-bibtex.el
     citeproc-choose.el -> citeproc-choose.el
@@ -34,43 +34,45 @@ Copying files (->) and directories (=>)
     citeproc-term.el -> citeproc-term.el
     citeproc-test-human.el -> citeproc-test-human.el
     citeproc.el -> citeproc.el
-Created citeproc-20211014.1115.tar containing:
-  citeproc-20211014.1115/
-  citeproc-20211014.1115/citeproc-biblatex.el
-  citeproc-20211014.1115/citeproc-bibtex.el
-  citeproc-20211014.1115/citeproc-choose.el
-  citeproc-20211014.1115/citeproc-cite.el
-  citeproc-20211014.1115/citeproc-context.el
-  citeproc-20211014.1115/citeproc-date.el
-  citeproc-20211014.1115/citeproc-disamb.el
-  citeproc-20211014.1115/citeproc-formatters.el
-  citeproc-20211014.1115/citeproc-generic-elements.el
-  citeproc-20211014.1115/citeproc-itemdata.el
-  citeproc-20211014.1115/citeproc-itemgetters.el
-  citeproc-20211014.1115/citeproc-lib.el
-  citeproc-20211014.1115/citeproc-locale.el
-  citeproc-20211014.1115/citeproc-macro.el
-  citeproc-20211014.1115/citeproc-name.el
-  citeproc-20211014.1115/citeproc-number.el
-  citeproc-20211014.1115/citeproc-pkg.el
-  citeproc-20211014.1115/citeproc-prange.el
-  citeproc-20211014.1115/citeproc-proc.el
-  citeproc-20211014.1115/citeproc-rt.el
-  citeproc-20211014.1115/citeproc-s.el
-  citeproc-20211014.1115/citeproc-sort.el
-  citeproc-20211014.1115/citeproc-style.el
-  citeproc-20211014.1115/citeproc-subbibs.el
-  citeproc-20211014.1115/citeproc-term.el
-  citeproc-20211014.1115/citeproc-test-human.el
-  citeproc-20211014.1115/citeproc.el
-Built citeproc in 5.577s, finished at 2021-11-02T10:12:23+0000
+Created citeproc-20211102.1120.tar containing:
+  citeproc-20211102.1120/
+  citeproc-20211102.1120/citeproc-biblatex.el
+  citeproc-20211102.1120/citeproc-bibtex.el
+  citeproc-20211102.1120/citeproc-choose.el
+  citeproc-20211102.1120/citeproc-cite.el
+  citeproc-20211102.1120/citeproc-context.el
+  citeproc-20211102.1120/citeproc-date.el
+  citeproc-20211102.1120/citeproc-disamb.el
+  citeproc-20211102.1120/citeproc-formatters.el
+  citeproc-20211102.1120/citeproc-generic-elements.el
+  citeproc-20211102.1120/citeproc-itemdata.el
+  citeproc-20211102.1120/citeproc-itemgetters.el
+  citeproc-20211102.1120/citeproc-lib.el
+  citeproc-20211102.1120/citeproc-locale.el
+  citeproc-20211102.1120/citeproc-macro.el
+  citeproc-20211102.1120/citeproc-name.el
+  citeproc-20211102.1120/citeproc-number.el
+  citeproc-20211102.1120/citeproc-pkg.el
+  citeproc-20211102.1120/citeproc-prange.el
+  citeproc-20211102.1120/citeproc-proc.el
+  citeproc-20211102.1120/citeproc-rt.el
+  citeproc-20211102.1120/citeproc-s.el
+  citeproc-20211102.1120/citeproc-sort.el
+  citeproc-20211102.1120/citeproc-style.el
+  citeproc-20211102.1120/citeproc-subbibs.el
+  citeproc-20211102.1120/citeproc-term.el
+  citeproc-20211102.1120/citeproc-test-human.el
+  citeproc-20211102.1120/citeproc.el
+Built citeproc in 6.114s, finished at 2021-11-02T13:52:18+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  569 Nov  2 10:12 packages/citeproc-20211014.1115.entry
 260K -rw-r--r-- 1 root root 260K Nov  2 10:12 packages/citeproc-20211014.1115.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov  2 10:12 packages/citeproc-badge.svg
-4.0K -rw-r--r-- 1 root root  525 Nov  2 06:34 packages/citeproc-org-20200915.2009.entry
- 72K -rw-r--r-- 1 root root  70K Nov  2 06:34 packages/citeproc-org-20200915.2009.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov  2 06:34 packages/citeproc-org-badge.svg
-4.0K -rw-r--r-- 1 root root  177 Nov  2 06:34 packages/citeproc-org-readme.txt
-4.0K -rw-r--r-- 1 root root  226 Nov  2 10:12 packages/citeproc-org.log
-4.0K -rw-r--r-- 1 root root  126 Nov  2 10:12 packages/citeproc-readme.txt
+4.0K -rw-r--r-- 1 root root  569 Nov  2 13:52 packages/citeproc-20211102.1120.entry
+260K -rw-r--r-- 1 root root 260K Nov  2 13:52 packages/citeproc-20211102.1120.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov  2 13:52 packages/citeproc-badge.svg
+4.0K -rw-r--r-- 1 root root  525 Nov  2 13:52 packages/citeproc-org-20200915.2009.entry
+ 72K -rw-r--r-- 1 root root  70K Nov  2 13:52 packages/citeproc-org-20200915.2009.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov  2 13:52 packages/citeproc-org-badge.svg
+4.0K -rw-r--r-- 1 root root  177 Nov  2 13:52 packages/citeproc-org-readme.txt
+4.0K -rw-r--r-- 1 root root 1.3K Nov  2 13:52 packages/citeproc-org.log
+4.0K -rw-r--r-- 1 root root  126 Nov  2 13:52 packages/citeproc-readme.txt
