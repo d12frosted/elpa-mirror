@@ -14,3 +14,15 @@ Coming soon:
 - book info screen
 - displaying raw xml
 - integration with https://github.com/jumper047/librera-sync
+- rendering book in org-mode
+
+Installation:
+Add these strings to your config:
+
+   (use-package fb2-reader
+     :mode (("\\.fb2\\(.zip\\|\\)$" . fb2-reader-mode))
+     :custom
+     ;; This mode renders book with fixed width, adjust to your preferences.
+     (fb2-reader-page-width 120)
+     (fb2-reader-image-max-width 400)
+     (fb2-reader-image-max-height 400))
