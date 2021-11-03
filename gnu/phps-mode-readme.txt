@@ -5,8 +5,8 @@ Improved syntax table in comparison with old PHP major-mode.
 
 For flycheck support run `(phps-mode-flycheck-setup)'.
 
-For asynchronous lexer run: `(setq phps-mode-async-process t)'
+For asynchronous lexer set: `(setq phps-mode-async-process t)'
 
-For asynchronous lexer via `async.el' instead of threads run: `(phps-mode-async-process-using-async-el t)'
+For asynchronous lexer via `async.el' instead of threads set: `(setq phps-mode-async-process-using-async-el t)'
 
 Please see README.md from the same repository for extended documentation.

@@ -3,11 +3,6 @@ Fetcher: github
 Source:  https://github.com/wyuenho/all-the-icons-dired.git
 
 Updating /mnt/store/melpa/working/all-the-icons-dired/
-Checking out origin/HEAD
-Checking out 5e9b097f9950cc9f86de922b07903a4e5fefc733
-Built all-the-icons-dired in 5.147s, finished at 2021-11-02T17:27:31+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.5K Nov  2 17:27 packages/all-the-icons-dired-20211007.1729.el
-4.0K -rw-r--r-- 1 root root  447 Nov  2 17:27 packages/all-the-icons-dired-20211007.1729.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov  2 17:27 packages/all-the-icons-dired-badge.svg
-4.0K -rw-r--r-- 1 root root  290 Nov  2 17:27 packages/all-the-icons-dired-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: expected flush after ref listing
+

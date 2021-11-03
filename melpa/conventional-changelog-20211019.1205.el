@@ -6,7 +6,7 @@
 ;; Created: 2021-09-18 23:45:09
 ;; Version: 1.2.1
 ;; Package-Version: 20211019.1205
-;; Package-Commit: 449ce2a4020225a1f47ce9332ec3015d254fd531
+;; Package-Commit: 4d9ffe6d5a80b490b6a77ff89377651b548dccd2
 ;; Keywords: tools
 ;; Package-Requires: ((emacs "27") (transient "0.3.6"))
 ;; Homepage: https://github.com/liuyinz/emacs-conventional-changelog

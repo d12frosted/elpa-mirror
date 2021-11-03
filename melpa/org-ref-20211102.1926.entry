@@ -1,5 +1,5 @@
 (org-ref .
-	 [(20211101 1236)
+	 [(20211102 1926)
 	  ((dash
 	    (0))
 	   (s
@@ -10,6 +10,8 @@
 	    (0))
 	   (hydra
 	    (0))
+	   (avy
+	    (0))
 	   (parsebib
 	    (0))
 	   (bibtex-completion
@@ -17,7 +19,7 @@
 	   (citeproc
 	    (0)))
 	  "citations, cross-references and bibliographies in org-mode" tar
-	  ((:commit . "4f58b5db2ed6bc2bb4ca46484243ca8b7d391442")
+	  ((:commit . "c0c0739b49f8a7e987c0a39725d6806c93d62cad")
 	   (:authors
 	    ("John Kitchin" . "jkitchin@andrew.cmu.edu"))
 	   (:maintainer "John Kitchin" . "jkitchin@andrew.cmu.edu")

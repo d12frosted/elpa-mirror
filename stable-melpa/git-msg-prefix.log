@@ -3,11 +3,6 @@ Fetcher: github
 Source:  https://github.com/kidd/git-msg-prefix.el.git
 
 Updating /mnt/store/melpa/working/git-msg-prefix/
-Checking out origin/HEAD
-Checking out 43f6b31c1090371260a2f15b2117a7666920bee7
-Built git-msg-prefix in 5.223s, finished at 2021-11-02T17:58:55+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.7K Nov  2 17:58 packages/git-msg-prefix-20191031.1304.el
-4.0K -rw-r--r-- 1 root root  427 Nov  2 17:58 packages/git-msg-prefix-20191031.1304.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov  2 17:58 packages/git-msg-prefix-badge.svg
-4.0K -rw-r--r-- 1 root root 1.5K Nov  2 17:58 packages/git-msg-prefix-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: expected flush after ref listing
+
