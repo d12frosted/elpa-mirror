@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacsfodder/emacs-theme-darktooth.git
 
 Updating /mnt/store/melpa/working/darktooth-theme/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out ec03b30ee7f43f89ca4c382bb3fe4ee560c028a8
+Built darktooth-theme in 4.984s, finished at 2021-11-03T15:42:26+0000
+ ✓ Success:
+ 64K -rw-r--r-- 1 root root  61K Nov  3 15:42 packages/darktooth-theme-20201215.822.el
+4.0K -rw-r--r-- 1 root root  245 Nov  3 15:42 packages/darktooth-theme-20201215.822.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov  3 15:42 packages/darktooth-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  179 Nov  3 15:42 packages/darktooth-theme-readme.txt
