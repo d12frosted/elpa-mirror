@@ -8,11 +8,11 @@ Features:
 - internal links (select from keyboard, jumb back and forth)
 - navigation (next/previous chapters, imenu support)
 - restoring last read position
+- displaying raw xml
 
 Coming soon:
 
 - book info screen
-- displaying raw xml
 - integration with https://github.com/jumper047/librera-sync
 - rendering book in org-mode
 

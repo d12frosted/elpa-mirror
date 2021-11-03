@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/saf-dmitry/taskpaper-mode.git
 
 Updating /mnt/store/melpa/working/taskpaper-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 5eacb6c1c879038c4448c10b3df9a73d95a48fc3
+Built taskpaper-mode in 5.348s, finished at 2021-11-03T09:33:31+0000
+ ✓ Success:
+224K -rw-r--r-- 1 root root 224K Nov  3 09:33 packages/taskpaper-mode-20210415.1322.el
+4.0K -rw-r--r-- 1 root root  430 Nov  3 09:33 packages/taskpaper-mode-20210415.1322.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov  3 09:33 packages/taskpaper-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  518 Nov  3 09:33 packages/taskpaper-mode-readme.txt

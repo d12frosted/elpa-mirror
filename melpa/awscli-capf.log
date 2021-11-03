@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/sebasmonia/awscli-capf.git
 
 Updating /mnt/store/melpa/working/awscli-capf/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out eadfb26b35802ae8164565581e4a9c4d0280a7b5
+Built awscli-capf in 10.576s, finished at 2021-11-03T11:54:26+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  18K Nov  3 11:54 packages/awscli-capf-20190930.1517.el
+4.0K -rw-r--r-- 1 root root  432 Nov  3 11:54 packages/awscli-capf-20190930.1517.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov  3 11:54 packages/awscli-capf-badge.svg
+4.0K -rw-r--r-- 1 root root  442 Nov  3 11:54 packages/awscli-capf-readme.txt

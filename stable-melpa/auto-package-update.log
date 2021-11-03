@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/rranelli/auto-package-update.el.git
 
 Updating /mnt/store/melpa/working/auto-package-update/
-Checking out origin/HEAD
-Checking out 610576ed3adb6e732bc9288d1f9ec18e2ddef345
-Built auto-package-update in 5.639s, finished at 2021-11-03T00:58:50+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root  14K Nov  3 00:58 packages/auto-package-update-20211025.1352.el
-4.0K -rw-r--r-- 1 root root  413 Nov  3 00:58 packages/auto-package-update-20211025.1352.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov  3 00:58 packages/auto-package-update-badge.svg
-4.0K -rw-r--r-- 1 root root  771 Nov  3 00:58 packages/auto-package-update-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
