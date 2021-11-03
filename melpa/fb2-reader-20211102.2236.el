@@ -4,12 +4,12 @@
 
 ;; Author: Dmitriy Pshonko <jumper047@gmail.com>
 ;; URL: https://github.com/jumper047/fb2-reader
-;; Package-Version: 20211102.547
-;; Package-Commit: 2087c7cf654775e6b017dbd0763fdc2c0b4fc9ea
+;; Package-Version: 20211102.2236
+;; Package-Commit: c56a7c74a4b2ec0eb81ace6c7c8d5230e2b3fb64
 ;; Keywords: multimedia, ebook, fb2
 ;; Version: 0.1.0
 
-;; Package-Requires: ((emacs "27.1") (f "0.17") (s "1.11.0") (dash "2.12.0") (visual-fill-column "2.2") (async "1.9.4"))
+;; Package-Requires: ((emacs "26.2") (f "0.17") (s "1.11.0") (dash "2.12.0") (visual-fill-column "2.2") (async "1.9.4"))
 
 
 ;; This file is NOT part of GNU Emacs.
@@ -704,9 +704,9 @@ If ACTUAL-ONLY return 't if cache is existed and actual."
   
   (when-let ((idx-entry (alist-get file (fb2-reader-cache-index) nil nil 'equal)))
     (if actual-only
-	(time-equal-p (car idx-entry)
-		      (file-attribute-modification-time
-		       (file-attributes file)))
+	(equal (car idx-entry)
+	       (file-attribute-modification-time
+		(file-attributes file)))
       't)))
 
 

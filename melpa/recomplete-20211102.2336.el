@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-recomplete
-;; Package-Version: 20211102.38
-;; Package-Commit: 15f132634d9364007f621f201fefe55889573dc3
+;; Package-Version: 20211102.2336
+;; Package-Commit: a9013bfe4200e061404d71297a1701560e8affbb
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -113,7 +113,7 @@ WHERE using FN-ADVICE temporarily added to FN-ORIG."
       (unwind-protect
         (progn
           (activate-change-group ,handle)
-          (prog1 ,(macroexp-progn body)))
+          ,@body)
         (progn
           (accept-change-group ,handle)
           (undo-amalgamate-change-group ,handle))))))

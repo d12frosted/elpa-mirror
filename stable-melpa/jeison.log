@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/SavchenkoValeriy/jeison.git
 
 Updating /mnt/store/melpa/working/jeison/
-Checking out origin/HEAD
-Checking out 66e276c1f2f08ca54d2cd60f2c9f974c662aae8b
-Built jeison in 7.057s, finished at 2021-11-02T21:58:39+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root  17K Nov  2 21:58 packages/jeison-20190721.1651.el
-4.0K -rw-r--r-- 1 root root  283 Nov  2 21:58 packages/jeison-20190721.1651.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov  2 21:58 packages/jeison-badge.svg
-4.0K -rw-r--r-- 1 root root   84 Nov  2 21:58 packages/jeison-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: expected flush after ref listing
+error: Could not fetch origin
+

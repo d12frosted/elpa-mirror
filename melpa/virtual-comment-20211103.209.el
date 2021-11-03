@@ -2,8 +2,8 @@
 
 ;; Author: Thanh Vuong <thanhvg@gmail.com>
 ;; URL: https://github.com/thanhvg/emacs-virtual-comment
-;; Package-Version: 20211101.651
-;; Package-Commit: 65c7b562542a60fc606a4897ae87d0440f116274
+;; Package-Version: 20211103.209
+;; Package-Commit: 4effa95c7d6243fc5696597f488653f9d2a5d4a6
 ;; Package-Requires: ((emacs "26.1"))
 ;; Version: 0.0.3
 
@@ -658,6 +658,7 @@ Won't prepend new line if comment is nil"
 
 (defvar-local virtual-comment-make--callback nil)
 
+;;;###autoload
 (defun virtual-comment-make ()
   "Add or edit comment at current line."
   (interactive)

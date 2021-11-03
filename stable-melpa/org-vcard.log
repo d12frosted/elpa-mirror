@@ -3,33 +3,6 @@ Fetcher: github
 Source:  https://github.com/flexibeast/org-vcard.git
 
 Updating /mnt/store/melpa/working/org-vcard/
-Checking out origin/HEAD
-Checking out f4b7445550deb30e170a25fc42541e99730e21d0
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/org-vcard/
-  to /tmp/org-vcard94W4Ha/org-vcard-20210208.305
-    org-vcard.el -> org-vcard.el
-    styles => styles
-Created org-vcard-20210208.305.tar containing:
-  org-vcard-20210208.305/
-  org-vcard-20210208.305/org-vcard-pkg.el
-  org-vcard-20210208.305/org-vcard.el
-  org-vcard-20210208.305/styles/
-  org-vcard-20210208.305/styles/flat/
-  org-vcard-20210208.305/styles/flat/functions.el
-  org-vcard-20210208.305/styles/flat/mappings/
-  org-vcard-20210208.305/styles/flat/mappings/en
-  org-vcard-20210208.305/styles/flat/mappings/en_AU
-  org-vcard-20210208.305/styles/flat/mappings/en_US
-  org-vcard-20210208.305/styles/tree/
-  org-vcard-20210208.305/styles/tree/functions.el
-  org-vcard-20210208.305/styles/tree/mappings/
-  org-vcard-20210208.305/styles/tree/mappings/en
-  org-vcard-20210208.305/styles/tree/mappings/en_AU
-  org-vcard-20210208.305/styles/tree/mappings/en_US
-Built org-vcard in 5.405s, finished at 2021-11-02T22:17:02+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  417 Nov  2 22:17 packages/org-vcard-20210208.305.entry
-100K -rw-r--r-- 1 root root 100K Nov  2 22:17 packages/org-vcard-20210208.305.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov  2 22:17 packages/org-vcard-badge.svg
-8.0K -rw-r--r-- 1 root root 6.1K Nov  2 22:17 packages/org-vcard-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: expected flush after ref listing
+

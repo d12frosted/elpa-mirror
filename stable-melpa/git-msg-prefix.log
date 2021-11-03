@@ -3,6 +3,7 @@ Fetcher: github
 Source:  https://github.com/kidd/git-msg-prefix.el.git
 
 Updating /mnt/store/melpa/working/git-msg-prefix/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
 fatal: expected flush after ref listing
+error: Could not fetch origin
 

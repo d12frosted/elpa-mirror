@@ -4,10 +4,10 @@
 
 ;; Author: Artur Yaroshenko <artawower@protonmail.com>
 ;; URL: https://github.com/artawower/blamer.el
-;; Package-Version: 20211031.2232
-;; Package-Commit: 72eed02c050face2bf90cf3811e92add9770e18f
+;; Package-Version: 20211102.2116
+;; Package-Commit: 9979fbe64cdb7aaa8548a3ab430afbe27d00323f
 ;; Package-Requires: ((emacs "27.1"))
-;; Version: 0.2.1
+;; Version: 0.2.2
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -370,6 +370,7 @@ Return nil if error."
           (when popup-msg
             (overlay-put ov 'after-string popup-msg)
             (overlay-put ov 'intangible t)
+            (overlay-put ov 'window (get-buffer-window))
             (add-to-list 'blamer--overlays ov)
             (forward-line)))))))
 

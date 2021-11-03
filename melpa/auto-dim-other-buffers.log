@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/mina86/auto-dim-other-buffers.el.git
 
 Updating /mnt/store/melpa/working/auto-dim-other-buffers/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 2a19931b275dc3c70c4bb16a3c60046800ba631a
+Built auto-dim-other-buffers in 5.700s, finished at 2021-11-03T00:58:48+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root  23K Nov  3 00:58 packages/auto-dim-other-buffers-20211101.1155.el
+4.0K -rw-r--r-- 1 root root  364 Nov  3 00:58 packages/auto-dim-other-buffers-20211101.1155.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov  3 00:58 packages/auto-dim-other-buffers-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Nov  3 00:58 packages/auto-dim-other-buffers-readme.txt
