@@ -213,6 +213,7 @@ missing package or change you would like to see.
     ido-mode
     iedit
     iflipb
+    image-dired
     imenu-list
     indium
     info

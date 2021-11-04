@@ -1989,15 +1989,15 @@
 	   ("Mario Lang" . "mlang@delysid.org"))
 	  (:maintainer "Mario Lang" . "mlang@delysid.org"))])
  (posframe .
-	   [(1 0 4)
+	   [(1 1 0)
 	    ((emacs
-	      (26)))
+	      (26 1)))
 	    "Pop a posframe (just a frame) at point" tar
 	    ((:url . "https://github.com/tumashu/posframe")
+	     (:keywords "convenience" "tooltip")
 	     (:maintainer "Feng Shu" . "tumashu@163.com")
 	     (:authors
-	      ("Feng Shu" . "tumashu@163.com"))
-	     (:keywords "convenience" "tooltip"))])
+	      ("Feng Shu" . "tumashu@163.com")))])
  (project .
 	  [(0 8 1)
 	   ((emacs
@@ -2817,7 +2817,7 @@
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de")))])
  (vertico-posframe .
-		   [(0 3 9)
+		   [(0 3 10)
 		    ((emacs
 		      (26 0))
 		     (posframe

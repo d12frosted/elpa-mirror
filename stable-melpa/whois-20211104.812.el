@@ -5,8 +5,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-whois
-;; Package-Version: 20210429.805
-;; Package-Commit: 6ce65ec5c992b1e1cb538610f1c3708e9d467c39
+;; Package-Version: 20211104.812
+;; Package-Commit: f22244202fdac5064d5eff95c6f35ae887b01142
 ;; Version: 0.3.0
 ;; Package-Requires: ((emacs "24"))
 ;; Keywords: network comm
@@ -150,7 +150,7 @@ in which case the information in that buffer will be expanded."
           (error "No domain name"))
         (setq domain (downcase (match-string 1)))
         (unless (re-search-forward
-                 "registrar whois server: \\([a-z0-9.-]+\\)" nil t)
+                 "registrar whois server: \\([a-z0-9.-]+\\)$" nil t)
           (error "Registrar whois server not known"))
         (setq server (downcase (match-string 1)))
         (message "Looking up %s using %s..." domain server)
