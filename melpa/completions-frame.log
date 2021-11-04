@@ -3,6 +3,11 @@ Fetcher: github
 Source:  https://github.com/muffinmad/emacs-completions-frame.git
 
 Updating /mnt/store/melpa/working/completions-frame/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: expected flush after ref listing
-
+Checking out origin/HEAD
+Checking out 860e5b97730df7ef5c34584ad164bc69c561db84
+Built completions-frame in 6.219s, finished at 2021-11-03T22:59:05+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  13K Nov  3 22:59 packages/completions-frame-20210430.640.el
+4.0K -rw-r--r-- 1 root root  425 Nov  3 22:59 packages/completions-frame-20210430.640.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov  3 22:59 packages/completions-frame-badge.svg
+4.0K -rw-r--r-- 1 root root  471 Nov  3 22:59 packages/completions-frame-readme.txt

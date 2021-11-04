@@ -2741,13 +2741,13 @@
 	    ("Yuan Fu" . "casouri@gmail.com"))
 	   (:keywords "convenience" "text" "table"))])
  (vc-backup .
-	    [(1 0 0)
+	    [(1 1 0)
 	     nil "VC backend for versioned backups" tar
 	     ((:url . "https://git.sr.ht/~pkal/vc-backup")
+	      (:keywords "vc")
 	      (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
 	      (:authors
-	       ("Philip Kaludercic" . "philipk@posteo.net"))
-	      (:keywords "vc"))])
+	       ("Philip Kaludercic" . "philipk@posteo.net")))])
  (vc-got .
 	 [(1 0)
 	  ((emacs

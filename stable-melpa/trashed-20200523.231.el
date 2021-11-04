@@ -4,8 +4,6 @@
 
 ;; Author: Shingo Tanaka <shingo.fg8@gmail.com>
 ;; Version: 2.1.2
-;; Package-Version: 20200523.231
-;; Package-Commit: 23e782f78d9adf6b5479a01bfac90b2cfbf729fe
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: files, convenience, unix
 ;; URL: https://github.com/shingo256/trashed
