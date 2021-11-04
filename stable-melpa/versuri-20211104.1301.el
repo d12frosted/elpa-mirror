@@ -4,8 +4,8 @@
 
 ;; Author: Mihai Olteanu <mihai_olteanu@fastmail.fm>
 ;; Version: 1.0
-;; Package-Version: 20211102.1142
-;; Package-Commit: eafc925e3089aa80cefd6ceeb0cb87abce5490a9
+;; Package-Version: 20211104.1301
+;; Package-Commit: c8ea562304194f3379ed8f9c6a785ce8ee72898e
 ;; Package-Requires: ((emacs "26.1") (dash "2.16.0") (request "0.3.0") (anaphora "1.0.4") (esxml "0.1.0") (s "1.12.0") (esqlite "0.3.1"))
 ;; Keywords: multimedia
 ;; URL: https://github.com/mihaiolteanu/versuri/
@@ -354,6 +354,14 @@ incomplete, some might be ugly."
   (kill-buffer versuri--buffer)
   (versuri-display versuri--artist versuri--song))
 
+(defface versuri-lyrics-title
+  '((t :inherit default :height 1.6))
+  "Face for the lyrics title in `versuri-mode'.")
+
+(defface versuri-lyrics-text
+  '((t :inherit default))
+  "Face for the lyrics text in `versuri-mode'.")
+
 (defvar versuri-mode-map
   (let ((m (make-sparse-keymap)))
     (define-key m (kbd "q") #'kill-current-buffer)
@@ -383,8 +391,12 @@ already exists, switch to it and don't create a new buffer."
           (let ((b (generate-new-buffer name)))
             (with-current-buffer b
               (save-excursion
-                (insert (format "%s - %s\n\n" artist song))
-                (insert lyrics))
+                (insert
+                 (propertize (format "%s - %s\n\n" artist song)
+                             'face 'versuri-lyrics-title))
+                (insert
+                 (propertize lyrics
+                             'face 'versuri-lyrics-text)))
               (versuri-mode)
               (setq-local versuri--artist artist)
               (setq-local versuri--song song)
