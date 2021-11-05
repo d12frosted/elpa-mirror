@@ -1,17 +1,17 @@
-;;; egalgo.el --- Genetic algorithm for Emacs        -*- lexical-binding: t; -*-
+;;; egalgo.el --- Genetic algorithm        -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2019  ROCKTAKEY
 
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: data
-;; Package-Version: 20190706.1611
-;; Package-Commit: e683b16ed4265ddb46efcc8cbf9503301cc39e22
+;; Package-Version: 20211105.819
+;; Package-Commit: e6be054aa83949bcf71080bd70b776d9f61bb4a5
 
-;; Version: 1.0.2
+;; Version: 1.0.3
 
 ;; URL: https://github.com/ROCKTAKEY/egalgo
 
-;; Package-Requires: ((dash "2.14") (emacs "24"))
+;; Package-Requires: ((dash "2.14") (emacs "24.3"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -204,40 +204,40 @@ CHROMOSOME-DEFINITION is the first argument, and the value should be list.
 Each element expresses each gene.  Each element should be:
 
   - t
-   Means boolean gene. On the genetic locus, there is t or nil
+   Means boolean gene.  On the genetic locus, there is t or nil
    in chromosomes.
 
   - Vector which has 2 elements
-   Means spreaded and continuous gene. For example, on the genetic locus
+   Means spreaded and continuous gene.  For example, on the genetic locus
    of [3 5], there is decimal value from 3 to 5 in chromosomes.
 
   - list
-   Means discrete gene. For example, on genetic locus of (1 3 5 foo),
+   Means discrete gene.  For example, on genetic locus of (1 3 5 foo),
    there is 1, 3, 5 or symbol foo in chromosomes.
 
   - positive integer
-   Also means discrete gene. If the number is n, gene on the genetic locus can
+   Also means discrete gene.  If the number is n, gene on the genetic locus can
    be integer which is 0 or more, and less than n.
    For example, 5 is same as (0 1 2 3 4).
 
 RATER should be a function which takes 1 argument, and returns non-negative
-integer or decimal. The argument is chromosome, which is defined
-by CHROMOSOME-DEFINITION. Returned value is rate of the chromosome passed
+integer or decimal.  The argument is chromosome, which is defined
+by CHROMOSOME-DEFINITION.  Returned value is rate of the chromosome passed
 as the argument.
 
 SIZE is the number of chromosomes in each generation.
-It should be positive integer. Default value is 100.
+It should be positive integer.  Default value is 100.
 
 CROSSOVER is probability of crossovering 2 chromosomes.
 If determine DO crossover, then select 2 chromosomes, and crossover them.
 If not, Select 1 chromosome and push it to next generation.
-This should be non-negative decimal which is 1 or less. Default value is 0.9.
+This should be non-negative decimal which is 1 or less.  Default value is 0.9.
 
 MUTATION is probability of each gene being mutated.
-This should be non-negative decimal which is 1 or less. Default value is 0.01.
+This should be non-negative decimal which is 1 or less.  Default value is 0.01.
 
 N-POINT-CROSSOVER is number of times crossovering per 1 crossovering process.
-If the value is t, it means unicrossover. This should be positive integer or t.
+If the value is t, it means unicrossover.  This should be positive integer or t.
 
 SELECTOR is a function which selects chromosomes used to crossover or take over.
 This function should:
@@ -250,22 +250,21 @@ Default value is roulette, which means roulette selector.
 TERMINATION is the number of maximum generation, or function which determine to
 termination the algorithm or not.
 If number, finish algorithm when generation become the value.
-If function, continue algorithm when the function returns non-nil. The function
+If function, continue algorithm when the function returns non-nil.  The function
 take 2 arguments, stack list of rates of all generation and generation number.
 First element of the stack list is rates (list of rate of each chromosome) of
 latest generation, for example.
 Default value is 1000.
 
 If LOG is t, plist returned by `egalgo-run' has value keyed by :chromosomes-log.
-This is stack list of chromosomes of each generation. car of it is same as
-chromosomes of last generation. Default value is nil.
+This is stack list of chromosomes of each generation.  car of it is same as
+chromosomes of last generation.  Default value is nil.
 
 ELITE is the number of elite chromosomes, which absolutely stays until next
-generation. Default value is 0.
+generation.  Default value is 0.
 
 If SHOW-RATES is t, display rates of chromosomes of each generation.
-Default value is nil.
-"
+Default value is nil."
   (let* ((chromosome-forms
           (egalgo--generate-chromosome-forms chromosome-definition))
          (next-chromosomes

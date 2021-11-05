@@ -5,6 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-undo-fu
+;; Package-Version: 20211030.612
+;; Package-Commit: ab8bc10e424bccc847800c31ab41888db789d55d
 ;; Version: 0.4
 ;; Package-Requires: ((emacs "25.1"))
 
