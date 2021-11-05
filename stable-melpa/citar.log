@@ -4,24 +4,28 @@ Source:  https://github.com/bdarcus/citar.git
 
 Updating /mnt/store/melpa/working/citar/
 Checking out origin/HEAD
-Checking out e2e86bb9ad854548253322751f433b0b940fca1a
+Checking out 2dcf0c450a80609294edcb89d55f352e763d0570
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citar/
-  to /tmp/citarCV7H6b/citar-20211101.1853
+  to /tmp/citarzofTfe/citar-20211104.1955
     citar-file.el -> citar-file.el
     citar-filenotify.el -> citar-filenotify.el
+    citar-latex.el -> citar-latex.el
+    citar-markdown.el -> citar-markdown.el
     citar-org.el -> citar-org.el
     citar.el -> citar.el
-Created citar-20211101.1853.tar containing:
-  citar-20211101.1853/
-  citar-20211101.1853/citar-file.el
-  citar-20211101.1853/citar-filenotify.el
-  citar-20211101.1853/citar-org.el
-  citar-20211101.1853/citar-pkg.el
-  citar-20211101.1853/citar.el
-Built citar in 4.699s, finished at 2021-11-04T12:53:21+0000
+Created citar-20211104.1955.tar containing:
+  citar-20211104.1955/
+  citar-20211104.1955/citar-file.el
+  citar-20211104.1955/citar-filenotify.el
+  citar-20211104.1955/citar-latex.el
+  citar-20211104.1955/citar-markdown.el
+  citar-20211104.1955/citar-org.el
+  citar-20211104.1955/citar-pkg.el
+  citar-20211104.1955/citar.el
+Built citar in 6.655s, finished at 2021-11-04T23:49:30+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  401 Nov  4 12:53 packages/citar-20211101.1853.entry
- 72K -rw-r--r-- 1 root root  70K Nov  4 12:53 packages/citar-20211101.1853.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov  4 12:53 packages/citar-badge.svg
-4.0K -rw-r--r-- 1 root root  355 Nov  4 12:53 packages/citar-readme.txt
+4.0K -rw-r--r-- 1 root root  392 Nov  4 23:49 packages/citar-20211104.1955.entry
+ 80K -rw-r--r-- 1 root root  80K Nov  4 23:49 packages/citar-20211104.1955.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov  4 23:49 packages/citar-badge.svg
+4.0K -rw-r--r-- 1 root root  355 Nov  4 23:49 packages/citar-readme.txt

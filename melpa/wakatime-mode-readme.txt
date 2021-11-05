@@ -3,5 +3,5 @@ Enable WakaTime for the current buffer by invoking
 `global-wakatime-mode'.
 
 Set variable `wakatime-api-key' to your API key. Point
-`wakatime-cli-path' to the absolute path of the CLI script
-(wakatime-cli.py).
+`wakatime-cli-path' to the absolute path of the CLI binary available
+from <https://github.com/wakatime/wakatime-cli/releases>.

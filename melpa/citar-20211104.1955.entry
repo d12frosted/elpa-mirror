@@ -1,0 +1,14 @@
+(citar .
+       [(20211104 1955)
+	((emacs
+	  (26 3))
+	 (bibtex-completion
+	  (1 0))
+	 (parsebib
+	  (3 0)))
+	"Bibliographic commands based on completing-read" tar
+	((:commit . "2dcf0c450a80609294edcb89d55f352e763d0570")
+	 (:authors
+	  ("Bruce D'Arcus <https://github.com/bdarcus>"))
+	 (:maintainer "Bruce D'Arcus <https://github.com/bdarcus>")
+	 (:url . "https://github.com/bdarcus/citar"))])

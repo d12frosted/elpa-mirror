@@ -1,0 +1,13 @@
+(auto-package-update .
+		     [(20211104 1424)
+		      ((emacs
+			(24 4))
+		       (dash
+			(2 1 0)))
+		      "Automatically update Emacs packages." single
+		      ((:commit . "868c7a78d8d022ad8e4eec6a26e21dc4b8f37808")
+		       (:authors
+			("Renan Ranelli"))
+		       (:maintainer "Renan Ranelli")
+		       (:keywords "package" "update")
+		       (:url . "http://github.com/rranelli/auto-package-update.el"))])
