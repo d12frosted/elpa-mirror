@@ -4,8 +4,8 @@
 
 ;; Author: Naoya Yamashita <conao3@gmail.com>
 ;; Version: 1.0.0
-;; Package-Version: 20210503.531
-;; Package-Commit: 8126baf45c881fd4a692c2d74f9cc2eb15170401
+;; Package-Version: 20211105.19
+;; Package-Commit: 89c3b8842df067bba67663d309f43aa311acdccd
 ;; Keywords: convenience leaf
 ;; Package-Requires: ((emacs "25.1") (imenu-list "0.8"))
 ;; URL: https://github.com/conao3/leaf-tree.el
@@ -209,7 +209,7 @@ Unlike `mapcar', it works well with dotlist (last cdr is non-nil list)."
 
 (defun leaf-tree--advice-imenu-list--insert-entries-internal (fn &rest args)
   "Around advice for FN with ARGS.
-This code based on `imenu-list' (2019/03/15 hash:4600873)
+This code based on `imenu-list' (2020/08/05 hash:b502223)
 See `insert-entries-internal'."
   (let ((buf (or imenu-list--displayed-buffer (current-buffer))))
     (if (not (buffer-local-value 'leaf-tree-mode buf))
@@ -217,7 +217,7 @@ See `insert-entries-internal'."
       (seq-let (index-alist depth) args
         (leaf-tree--safe-mapcar
          (lambda (entry)
-           (setq imenu-list--line-entries (append imenu-list--line-entries (list entry)))
+           (setq imenu-list--line-entries (cons entry imenu-list--line-entries))
            (imenu-list--insert-entry entry depth)
            (when (imenu--subalist-p entry)
              (imenu-list--insert-entries-internal (cdr entry) (1+ depth))))
