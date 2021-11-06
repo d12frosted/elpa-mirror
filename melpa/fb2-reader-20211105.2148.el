@@ -4,8 +4,8 @@
 
 ;; Author: Dmitriy Pshonko <jumper047@gmail.com>
 ;; URL: https://github.com/jumper047/fb2-reader
-;; Package-Version: 20211104.24
-;; Package-Commit: 3d4f2aef7051ab35f63ed94fda19ab25d1182883
+;; Package-Version: 20211105.2148
+;; Package-Commit: a0ecb10bf1663dd41a27cf4ef5195fcf0be429a9
 ;; Keywords: multimedia, ebook, fb2
 ;; Version: 0.1.0
 
@@ -42,10 +42,10 @@
 ;; - navigation (next/previous chapters, imenu support)
 ;; - restoring last read position
 ;; - displaying raw xml
+;; - book info screen
 ;;
 ;; Coming soon:
 ;; 
-;; - book info screen
 ;; - integration with https://github.com/jumper047/librera-sync
 ;; - rendering book in org-mode
 ;;
@@ -77,7 +77,7 @@
   :type 'directory
   :group 'fb2-reader)
 
-(defcustom fb2-reader-title-in-headerline nil
+(defcustom fb2-reader-title-in-headerline t
   "Show current chapter's title in headerline."
   :type 'boolean
   :group 'fb2-reader)
@@ -112,6 +112,16 @@
   :type 'float
   :group 'fb2-reader)
 
+(defface fb2-reader-info-field-face
+  '((t (:weight bold)))
+  "Face for field name in book info buffer."
+  :group 'fb2-reader)
+
+(defface fb2-reader-info-category-face
+  '((t (:weight bold :underline 't)))
+  "Face for category name in book info buffer."
+  :group 'fb2-reader)
+
 (defvar fb2-reader-index-filename "index.el"
   "Filename for file containing meta information about cached books.")
 
@@ -137,6 +147,8 @@
 (defconst fb2-reader-header-line-format
   '(:eval (list (propertize " " 'display '((space :align-to 0)))
 		(fb2-reader-current-chapter))))
+
+;; Fb2 parsing
 
 (defun fb2-reader-parse (book item &optional tags face alignment indent)
   "Recursively parse ITEM and insert it into the buffer.
@@ -326,7 +338,7 @@ It should be rendered when propertized text will be inserted into buffer."
 			'fb2-reader-image-data data-str
 			'fb2-reader-tags tags))))
 
-(defun fb2-reader--extract-image-data (book attributes tags)
+(defun fb2-reader--extract-image-data (book attributes &optional tags)
   "Parse image ATTRIBUTES and return image related data.
 List of type string, binary data string, and tags will be returned.
 BOOK is whole book's xml tree. TAGS are list of fb2 tags."
@@ -336,7 +348,7 @@ BOOK is whole book's xml tree. TAGS are list of fb2 tags."
 	      (data-str (cl-third binary)))
     (list type-str data-str tags)))
 
-(defun fb2-reader--insert-image (data type tags)
+(defun fb2-reader--insert-image (data type &optional tags use-prefix)
   "Generate image from DATA of type TYPE and insert it at point.
 
  Property fb2-reader-tags will be set to TAGS and appended
@@ -351,16 +363,16 @@ to placeholder."
 	      (img-raw (fb2-reader--create-image data-decoded type-char))
 	      (size-raw (image-size img-raw 't))
 	      (img-adj (fb2-reader--create-image data-decoded type-char
-						 ;; TODO: should be customizable
-						 :max-width 400
-						 :max-height 400))
+						 :max-width fb2-reader-image-max-width
+						 :max-height fb2-reader-image-max-height))
 	      (width-ch (car (image-size img-adj)))
 	      (prefix-num (round (/ (- fb2-reader-page-width width-ch) 2)))
 	      (prefix-str (string-join (make-list prefix-num " ")))
 	      (fill-str (propertize " " 'fb2-reader-tags (cons 'image tags)
 				    'fb2-reader-image-params size-raw)))
     (insert "\n")
-    (insert prefix-str)
+    (if use-prefix
+	(insert prefix-str))
     (insert-image img-adj fill-str)
     (insert "\n")))
 
@@ -383,7 +395,7 @@ to placeholder."
 		image-type (plist-get plist 'fb2-reader-image-type)
 		tags (plist-get plist 'fb2-reader-tags))
 	  (delete-char 1)
-	  (fb2-reader--insert-image image-data image-type tags))
+	  (fb2-reader--insert-image image-data image-type tags 't))
 	(goto-char next-change)))))
 
 (defun fb2-reader--find-binary (book id)
@@ -398,6 +410,85 @@ to placeholder."
 
   (apply #'create-image data type 't props))
 
+
+;; Parse metadata (everything inside description tag)
+
+(defun fb2-reader-parse-metadata (book item)
+  (let ((current-tag (cl-first item))
+	(attributes (cl-second item))
+	  (body (cddr item)))
+    (cond ((member current-tag '(history annotation))
+	   (fb2-reader--parse-rich-text item))
+	  ((member current-tag '(author translator))
+	   (fb2-reader--parse-person item))
+	  ((equal current-tag 'sequence)
+	   (fb2-reader--parse-sequence item))
+	  ((equal current-tag 'coverpage)
+	     (fb2-reader--parse-cover book item))
+	    (t
+	     (if  (> (length body) 1)
+		 (progn (insert (format "\n%s\n" (fb2-reader--format-symbol current-tag 'fb2-reader-info-category-face)))
+		   (dolist (subitem body)
+			  (fb2-reader-parse-metadata book subitem)))
+	       (insert (format "%s: %s\n" (fb2-reader--format-symbol current-tag 'fb2-reader-info-field-face) (if (stringp (car body)) (car body) " -"))))))))
+
+(defun fb2-reader--format-symbol (symbol face)
+  (let ((prop (cond ((equal face 'fb2-reader-info-field-face)
+		     'fb2-reader-info-field)
+		    ((equal face 'fb2-reader-info-category-face)
+		     'fb2-reader-info-category))))
+  (propertize (s-capitalize (s-replace "-" " " (symbol-name symbol)))
+		   'face face prop t)))
+
+(defun fb2-reader--parse-person (item)
+  "Parse ITEM and insert as some person's data (author or translator).
+FIELD-NAME is what shold be in left of : when name is printed."
+  (let* ((fields (cddr item))
+	 (name (s-join " " (-non-nil (list (cl-second (alist-get 'first-name fields))
+					   (cl-second (alist-get 'middle-name fields))
+					   (cl-second (alist-get 'nick fields))
+					   (cl-second (alist-get 'last-name fields))))))
+	 (name-fields '(first-name middle-name nick last-name)))
+    (if name (insert (format "%s: %s\n" (fb2-reader--format-symbol (cl-first item) 'fb2-reader-info-field-face) name)))
+    (dolist (field fields)
+      (when (not (member (cl-first field) '(first-name middle-name nick last-name)))
+	  (insert (format "  %s: %s\n" (fb2-reader--format-symbol (cl-first field) 'fb2-reader-info-field-face) (cl-third field)))))))
+
+(defun fb2-reader--parse-rich-text (item)
+"Parse ITEM as field with rich text inside."
+  (let* ((field-name (s-capitalize (symbol-name (cl-first item))))
+	(fname-length (length field-name))
+	(start (point))
+	end)
+    (fb2-reader-parse nil item nil nil 'full (+ 2 fname-length))
+    (setq end (point))
+    (save-excursion
+      (goto-char start)
+      (insert (format "%s:" (propertize field-name 'face 'fb2-reader-info-field-face 'fb2-reader-info-field 't)))
+      (while (<= (line-number-at-pos (point)) (line-number-at-pos end))
+	(forward-line 1)
+	(insert (s-repeat (1+ fname-length) " "))))))
+
+(defun fb2-reader--parse-sequence (item)
+  "Parse ITEM as sequence and insert it at point."
+  (let* ((attributes (cl-second item))
+	 (field-name (fb2-reader--format-symbol (cl-first item) 'fb2-reader-info-field-face))
+	 (name (alist-get 'name attributes))
+	 (number (alist-get 'number attributes)))
+    (insert (format "%s: %s" field-name name))
+    (if number (insert (format "(%s)" number)))
+    (insert "\n")))
+
+(defun fb2-reader--parse-cover (book item)
+  "Get image attrs from ITEM, find image in BOOK and insert it."
+  (let* ((attrs (cl-second (cl-third item)))
+	 (imgdata (fb2-reader--extract-image-data book attrs))
+	 (type-str (cl-first imgdata))
+	 (data-str (cl-second imgdata))
+	 (covername (fb2-reader--format-symbol (cl-first item) 'fb2-reader-info-field-face)))
+  (insert (format "%s:\n" covername))
+  (fb2-reader--insert-image data-str type-str)
+  (insert "\n")))
 
 ;; Links
 
@@ -463,14 +554,15 @@ to placeholder."
 Founded item should have PROPERTY with certain VALUE,
 if these parameters are set."
   (if (listp item)
-      (catch 'subitem (dolist (subitem item)
+      (catch 'subitem (progn (dolist (subitem item)
 			(if (and
 			     (listp subitem)
 			     (equal (cl-first subitem) tag)
 			     (or (not property)
 				 (and (listp (cl-second subitem))
 				      (equal value (alist-get property (cl-second subitem))))))
-			    (throw 'subitem subitem))))))
+			    (throw 'subitem subitem)))
+			     nil))))
 
 (defun fb2-reader--find-subitem-recursively (item &rest tags)
   "Find ITEM 's subitem with first tag from TAGS, then subitem's subitem with second tag and so on."
@@ -489,10 +581,26 @@ if these parameters are set."
 	  (push item bodies)))
     (reverse bodies)))
 
-(defun fb2-reader--get-title (book)
-  "Get title from BOOK."
+(defun fb2-reader--get-description (book)
+  "Get description node from BOOK."
+  (fb2-reader--find-subitem-recursively (cddr book) 'description))
 
-  (cl-third (fb2-reader--find-subitem-recursively (cddr book) 'description 'title-info 'book-title)))
+(defun fb2-reader--get-title (book)
+  "Get title node from BOOK."
+
+  (fb2-reader--find-subitem-recursively (cddr book) 'description 'title-info 'book-title))
+
+(defun fb2-reader--get-author (book)
+  "Get author node from BOOK."
+  (fb2-reader--find-subitem-recursively (cddr book) 'description 'title-info 'author))
+
+(defun fb2-reader--get-cover (book)
+  "Get cover node from BOOK."
+  (fb2-reader--find-subitem-recursively (cddr book) 'description 'title-info 'coverpage))
+
+(defun fb2-reader--get-annotation (book)
+  "Get annotation node from BOOK."
+  (fb2-reader--find-subitem-recursively (cddr book) 'description 'title-info 'annotation))
 
 
 (defun fb2-reader-render (book)
@@ -889,7 +997,8 @@ Book name should be the same as archive except .zip extension."
 (defun fb2-reader-show-xml ()
   "Open current book's raw xml."
   (interactive)
-  (let* ((bname (format "*XML: %s*" (current-buffer)))
+  (fb2-reader--assert-mode-p)
+  (let* ((bname (format "*XML: %s*" (buffer-name)))
 	 (fname fb2-reader-file-name)
 	 (buffer-exist-p (get-buffer bname))
 	 (buffer (get-buffer-create bname)))
@@ -899,6 +1008,67 @@ Book name should be the same as archive except .zip extension."
       (setq buffer-read-only 't)
       (xml-mode)
       (goto-char (point-min)))))
+
+
+;; Metadata buffer
+
+(defun fb2-reader-show-info ()
+  "Show current book's metadata."
+  (interactive)
+  (fb2-reader--assert-mode-p)
+  (let* ((bname (format "*Info: %s*" (buffer-name)))
+	 (fname fb2-reader-file-name)
+	 (buffer-exist-p (get-buffer bname))
+	 (buffer (get-buffer-create bname))
+	 (book (fb2-reader-parse-file fb2-reader-file-name)))
+    (switch-to-buffer buffer)
+    (unless buffer-exist-p
+      (dolist (item (cddr (fb2-reader--get-description book)))
+	(fb2-reader-parse-metadata book item))
+      (goto-char (point-min))
+      (fb2-reader-info-mode))))
+
+(defun fb2-reader-info-backward-category (&optional n)
+  "Go N categories backward."
+  (interactive "p")
+  (setq n (* n -1))
+  (fb2-reader--jump-property n 'fb2-reader-info-category))
+
+(defun fb2-reader-info-forward-category (&optional n)
+  "Go N categories forward."
+  (interactive "p")
+  (fb2-reader--jump-property n 'fb2-reader-info-category))
+
+(defun fb2-reader-info-backward-field (&optional n)
+  "Go N fields backward."
+  (interactive "p")
+  (setq n (* n -1))
+  (fb2-reader--jump-property n 'fb2-reader-info-field))
+
+(defun fb2-reader-info-forward-field (&optional n)
+  "Go N fields forward."
+  (interactive "p")
+  (fb2-reader--jump-property n 'fb2-reader-info-field))
+
+(defvar fb2-reader-info-mode-map
+  (let ((map (make-sparse-keymap)))
+    (define-key map (kbd "n") 'fb2-reader-info-forward-field)
+    (define-key map (kbd "p") 'fb2-reader-info-backward-field)
+    (define-key map (kbd "N") 'fb2-reader-info-forward-category)
+    (define-key map (kbd "P") 'fb2-reader-info-backward-category)
+    map))
+
+(define-derived-mode fb2-reader-info-mode special-mode "FB2 Info"
+  "Major mode for reading FB2 metadata.
+\\{fb2-reader-info-mode-map}"
+
+  (setq buffer-read-only 't
+	truncate-lines 1
+	fill-column (round (* 1.5 fb2-reader-page-width))) ;Dirty hack - because width of annotation
+					;block is something like page-width + "annotation" word,
+					;and fill column should be more than it.
+  (buffer-disable-undo))
+
 
 (defvar fb2-reader-mode-map
   (let ((map (make-sparse-keymap)))
@@ -912,6 +1082,8 @@ Book name should be the same as archive except .zip extension."
   (define-key map (kbd "N") 'fb2-reader-link-forward)
   (define-key map (kbd "g") 'fb2-reader-refresh)
   (define-key map (kbd "v") 'fb2-reader-show-xml)
+  (define-key map (kbd "i") 'fb2-reader-show-info)
+  (define-key map (kbd "j") 'imenu)
   map))
 
 

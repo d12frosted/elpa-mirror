@@ -9,10 +9,10 @@ Features:
 - navigation (next/previous chapters, imenu support)
 - restoring last read position
 - displaying raw xml
+- book info screen
 
 Coming soon:
 
-- book info screen
 - integration with https://github.com/jumper047/librera-sync
 - rendering book in org-mode
 
