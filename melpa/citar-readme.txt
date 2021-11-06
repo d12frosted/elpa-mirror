@@ -1,4 +1,3 @@
-
  A completing-read front-end for browsing and acting on bibliographic data.
 
  When used with vertico/selectrum/icomplete-vertical, embark, and marginalia,
