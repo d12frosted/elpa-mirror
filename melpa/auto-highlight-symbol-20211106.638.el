@@ -8,8 +8,8 @@
 ;; Author: Mitsuo Saito <arch320@NOSPAM.gmail.com>
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Version: 1.61
-;; Package-Version: 20211006.603
-;; Package-Commit: 1a54a61fda6206c5e0fa843d16635133241292ba
+;; Package-Version: 20211106.638
+;; Package-Commit: 12471f3575f371a54820019dad4ced37fbc187af
 ;; Keywords: highlight face match convenience
 ;; URL: http://github.com/jcs-elpa/auto-highlight-symbol
 ;; Package-Requires: ((emacs "26.1") (ht "2.3"))
@@ -159,6 +159,8 @@
 ;;    *Non-nil means symbol search ignores case.
 ;;  `ahs-highlight-upon-window-switch'
 ;;    *Non-nil means rehighlighting is triggered upon window switch.
+;;  `ahs-enable-focus-hooks'
+;;    *Non-nil means focus-in and focus-out hooks will run.
 ;;  `ahs-include'
 ;;    Variable for start highlighting.
 ;;  `ahs-exclude'
@@ -426,6 +428,11 @@ Otherwise, the only window that is considered is the current one."
 
 (defcustom ahs-highlight-upon-window-switch t
   "*Non-nil means rehighlighting is triggered upon window switch."
+  :group 'auto-highlight-symbol
+  :type 'boolean)
+
+(defcustom ahs-enable-focus-hooks t
+  "Toggles whether to enable focus-in and focus-out hooks"
   :group 'auto-highlight-symbol
   :type 'boolean)
 
@@ -1706,11 +1713,13 @@ buffer' temporary."
 
 (defun ahs-focus-in (&rest _)
   "Focus in hook."
-  (ahs-highlight-now))
+  (when ahs-enable-focus-hooks
+    (ahs-highlight-now)))
 
 (defun ahs-focus-out (&rest _)
   "Focus out hook."
-  (ahs-unfocus-all))
+  (when ahs-enable-focus-hooks
+    (ahs-unfocus-all)))
 
 (if (< emacs-major-version 27)
     (with-no-warnings

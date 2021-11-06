@@ -4,8 +4,8 @@
 
 ;; Author: Dmitriy Pshonko <jumper047@gmail.com>
 ;; URL: https://github.com/jumper047/fb2-reader
-;; Package-Version: 20211105.2148
-;; Package-Commit: a0ecb10bf1663dd41a27cf4ef5195fcf0be429a9
+;; Package-Version: 20211106.907
+;; Package-Commit: 5e702691cae77a55b8018480ee84a9c5ef338d9a
 ;; Keywords: multimedia, ebook, fb2
 ;; Version: 0.1.0
 
@@ -110,6 +110,11 @@
 (defcustom fb2-reader-title-height 1.4
   "Height of the title's font."
   :type 'float
+  :group 'fb2-reader)
+
+(defcustom fb2-reader-max-in-cache 20
+  "Maximum number of files stored in cache."
+  :type 'integer
   :group 'fb2-reader)
 
 (defface fb2-reader-info-field-face
@@ -433,6 +438,7 @@ to placeholder."
 	       (insert (format "%s: %s\n" (fb2-reader--format-symbol current-tag 'fb2-reader-info-field-face) (if (stringp (car body)) (car body) " -"))))))))
 
 (defun fb2-reader--format-symbol (symbol face)
+  "Take SYMBOL, transform it it readable string and apply FACE."
   (let ((prop (cond ((equal face 'fb2-reader-info-field-face)
 		     'fb2-reader-info-field)
 		    ((equal face 'fb2-reader-info-category-face)
@@ -851,7 +857,7 @@ Replace already added data if presented."
 		 (file-attributes fb2-reader-file-name))
  		cache-filename)
 	  index)
-    (fb2-reader-save-cache-index idx-filename index)))
+    (fb2-reader-save-cache-index idx-filename (-take fb2-reader-max-in-cache index))))
 
 
 (defun fb2-reader-remove-from-cache (filename)
@@ -967,11 +973,15 @@ Book name should be the same as archive except .zip extension."
   (let ((tmpdir (concat (make-temp-file
 			 (concat (f-base file) "-")
 			 'directory) (f-path-separator)))
-	parsed)
+	fb2-file parsed)
     (call-process "unzip" nil nil nil "-d" tmpdir file)
-
+    (dolist (file (f-files tmpdir))
+      (if (equal "fb2" (f-ext file))
+	  (setq fb2-file file)))
+    (if (not file)
+	(user-error "Archive %s don't contain .fb2 file" file))
     (with-temp-buffer
-      (insert-file-contents (f-join tmpdir (f-base file)))
+      (insert-file-contents fb2-file)
       (setq parsed (buffer-string)))
     (f-delete tmpdir 't)
     parsed))
@@ -1099,6 +1109,7 @@ Book name should be the same as archive except .zip extension."
   (buffer-disable-undo)
   (set-visited-file-name nil t) ; disable autosaves and save questions
   (add-hook 'kill-buffer-hook #'fb2-reader-save-pos nil t)
+  (add-hook 'quit-window-hook #'fb2-reader-save-pos nil t)
   ;; (add-hook 'change-major-mode-hook 'fb2-reader-save-curr-buffer nil t)
   (add-hook 'kill-emacs-hook #'fb2-reader-save-all-pos)
   (fb2-reader-ensure-settingsdir)

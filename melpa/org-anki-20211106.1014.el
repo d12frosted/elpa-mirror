@@ -3,8 +3,8 @@
 ;; Copyright (C) 2021 Markus Läll
 ;;
 ;; URL: https://github.com/eyeinsky/org-anki
-;; Package-Version: 20211105.1600
-;; Package-Commit: ccf27773b4cd05eae7b0d93a213182c24f032c6f
+;; Package-Version: 20211106.1014
+;; Package-Commit: 33cce3f8932cd89f8dc0350eb38931316fb11ed2
 ;; Version: 0.0.6
 ;; Author: Markus Läll <markus.l2ll@gmail.com>
 ;; Keywords: outlines, flashcards, memory
@@ -131,11 +131,26 @@ with result."
 
 (cl-defstruct org-anki--note maybe-id front back tags deck point)
 
+(defun org-anki--back-post-processing (text)
+  (org-anki--string-to-anki-mathjax text)
+  )
+
+(defun org-anki--string-to-anki-mathjax (latex-code)
+  (let ((delimiter-map (list (cons (regexp-quote "\\begin{equation}") "\\\\[")
+                             (cons (regexp-quote "\\end{equation}") "\\\\]")
+                             (cons (regexp-quote "\\begin{align}") "\\\\[\n\\\\begin{aligned}")
+                             (cons (regexp-quote "\\end{align}") "\\\\end{aligned}\n\\\\]")))
+        (matched nil))
+    (dolist (delimiter delimiter-map)
+      (setq latex-code (replace-regexp-in-string (car delimiter) (cdr delimiter) latex-code))))
+  latex-code
+  )
+
 (defun org-anki--note-at-point ()
   (let
       ((front (org-anki--string-to-html (org-entry-get nil "ITEM")))
        (note-start (point))
-       (back (org-anki--string-to-html (org-anki--entry-content-until-any-heading)))
+       (back (org-anki--back-post-processing (org-anki--string-to-html (org-anki--entry-content-until-any-heading))))
        (tags (org-anki--get-tags))
        (deck (org-anki--find-deck))
        (maybe-id (org-entry-get nil org-anki-prop-note-id)))
@@ -467,6 +482,17 @@ question and answer are generated from it, and BACK is ignored."
   (with-current-buffer (or buffer (buffer-name))
     (org-anki--sync-notes
      (org-map-entries 'org-anki--note-at-point (org-anki--get-match)))))
+
+;;;###autoload
+(defun org-anki-update-all (&optional buffer)
+  ;; :: Maybe Buffer -> IO ()
+  "Updates all entries in optional BUFFER.
+
+Updates all entries that have ANKI_NOTE_ID property set."
+  (interactive)
+  (with-current-buffer (or buffer (buffer-name))
+    (org-anki--sync-notes
+     (org-map-entries 'org-anki--note-at-point "ANKI_NOTE_ID<>\"\""))))
 
 ;;;###autoload
 (defun org-anki-delete-entry ()
