@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 777c904c9d6c8dfff3ed21c5e4a24a6432f8ee52
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emms/
-  to /tmp/emmscNYu4k/emms-20211101.1746
+  to /tmp/emms4HF9mv/emms-20211101.1746
     emms-bookmarks.el -> emms-bookmarks.el
     emms-browser.el -> emms-browser.el
     emms-cache.el -> emms-cache.el
@@ -63,7 +63,7 @@ Copying files (->) and directories (=>)
     emms-volume.el -> emms-volume.el
     emms.el -> emms.el
   ! doc/emms.texinfo -> emms.texinfo
-Created /tmp/emmscNYu4k/emms-20211101.1746/emms.info
+Created /tmp/emms4HF9mv/emms-20211101.1746/emms.info
 Created emms-20211101.1746.tar containing:
   emms-20211101.1746/
   emms-20211101.1746/dir
@@ -123,49 +123,49 @@ Created emms-20211101.1746.tar containing:
   emms-20211101.1746/emms-volume.el
   emms-20211101.1746/emms.el
   emms-20211101.1746/emms.info
-Built emms in 18.606s, finished at 2021-11-06T14:11:44+0000
+Built emms in 26.862s, finished at 2021-11-06T17:50:46+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  418 Nov  6 14:11 packages/emms-20211101.1746.entry
-820K -rw-r--r-- 1 root root 820K Nov  6 14:11 packages/emms-20211101.1746.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov  6 14:11 packages/emms-badge.svg
-8.0K -rw-r--r-- 1 root root 5.2K Nov  6 14:11 packages/emms-bilibili-20180103.418.el
-4.0K -rw-r--r-- 1 root root  271 Nov  6 14:11 packages/emms-bilibili-20180103.418.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov  6 14:11 packages/emms-bilibili-badge.svg
-4.0K -rw-r--r-- 1 root root  170 Nov  6 14:11 packages/emms-bilibili-readme.txt
-4.0K -rw-r--r-- 1 root root  639 Nov  6 14:11 packages/emms-bilibili.log
-8.0K -rw-r--r-- 1 root root 5.4K Nov  6 14:11 packages/emms-info-mediainfo-20131223.1300.el
-4.0K -rw-r--r-- 1 root root  381 Nov  6 14:11 packages/emms-info-mediainfo-20131223.1300.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov  6 14:11 packages/emms-info-mediainfo-badge.svg
-4.0K -rw-r--r-- 1 root root  150 Nov  6 14:11 packages/emms-info-mediainfo-readme.txt
-4.0K -rw-r--r-- 1 root root  755 Nov  6 14:11 packages/emms-info-mediainfo.log
- 12K -rw-r--r-- 1 root root  11K Nov  6 14:11 packages/emms-mark-ext-20130529.327.el
-4.0K -rw-r--r-- 1 root root  396 Nov  6 14:11 packages/emms-mark-ext-20130529.327.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov  6 14:11 packages/emms-mark-ext-badge.svg
-4.0K -rw-r--r-- 1 root root  252 Nov  6 14:11 packages/emms-mark-ext-readme.txt
-4.0K -rw-r--r-- 1 root root  636 Nov  6 14:11 packages/emms-mark-ext.log
- 12K -rw-r--r-- 1 root root  10K Nov  6 14:11 packages/emms-mode-line-cycle-20160221.1120.el
-4.0K -rw-r--r-- 1 root root  384 Nov  6 14:11 packages/emms-mode-line-cycle-20160221.1120.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov  6 14:11 packages/emms-mode-line-cycle-badge.svg
-4.0K -rw-r--r-- 1 root root  851 Nov  6 14:11 packages/emms-mode-line-cycle-readme.txt
-4.0K -rw-r--r-- 1 root root  697 Nov  6 14:11 packages/emms-mode-line-cycle.log
-4.0K -rw-r--r-- 1 root root  444 Nov  6 14:11 packages/emms-player-mpv-jp-radios-20180325.1117.entry
-240K -rw-r--r-- 1 root root 240K Nov  6 14:11 packages/emms-player-mpv-jp-radios-20180325.1117.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov  6 14:11 packages/emms-player-mpv-jp-radios-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Nov  6 14:11 packages/emms-player-mpv-jp-radios-readme.txt
-8.0K -rw-r--r-- 1 root root 5.1K Nov  6 14:11 packages/emms-player-mpv-jp-radios.log
-4.0K -rw-r--r-- 1 root root  417 Nov  6 14:11 packages/emms-player-simple-mpv-20180316.1549.entry
-100K -rw-r--r-- 1 root root 100K Nov  6 14:11 packages/emms-player-simple-mpv-20180316.1549.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov  6 14:11 packages/emms-player-simple-mpv-badge.svg
-4.0K -rw-r--r-- 1 root root 1.8K Nov  6 14:11 packages/emms-player-simple-mpv-readme.txt
-4.0K -rw-r--r-- 1 root root 2.0K Nov  6 14:11 packages/emms-player-simple-mpv.log
-4.0K -rw-r--r-- 1 root root  619 Nov  6 14:11 packages/emms-readme.txt
-8.0K -rw-r--r-- 1 root root 4.4K Nov  6 14:11 packages/emms-soundcloud-20131221.1145.el
-4.0K -rw-r--r-- 1 root root  428 Nov  6 14:11 packages/emms-soundcloud-20131221.1145.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov  6 14:11 packages/emms-soundcloud-badge.svg
-4.0K -rw-r--r-- 1 root root  242 Nov  6 14:11 packages/emms-soundcloud-readme.txt
-4.0K -rw-r--r-- 1 root root  653 Nov  6 14:11 packages/emms-soundcloud.log
- 12K -rw-r--r-- 1 root root 9.4K Nov  6 14:11 packages/emms-state-20211023.1942.el
-4.0K -rw-r--r-- 1 root root  405 Nov  6 14:11 packages/emms-state-20211023.1942.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov  6 14:11 packages/emms-state-badge.svg
-4.0K -rw-r--r-- 1 root root  796 Nov  6 14:11 packages/emms-state-readme.txt
-4.0K -rw-r--r-- 1 root root  617 Nov  6 14:11 packages/emms-state.log
+4.0K -rw-r--r-- 1 root root  418 Nov  6 17:50 packages/emms-20211101.1746.entry
+820K -rw-r--r-- 1 root root 820K Nov  6 17:50 packages/emms-20211101.1746.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov  6 17:50 packages/emms-badge.svg
+8.0K -rw-r--r-- 1 root root 5.2K Nov  6 17:50 packages/emms-bilibili-20180103.418.el
+4.0K -rw-r--r-- 1 root root  271 Nov  6 17:50 packages/emms-bilibili-20180103.418.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov  6 17:50 packages/emms-bilibili-badge.svg
+4.0K -rw-r--r-- 1 root root  170 Nov  6 17:50 packages/emms-bilibili-readme.txt
+4.0K -rw-r--r-- 1 root root  640 Nov  6 17:50 packages/emms-bilibili.log
+8.0K -rw-r--r-- 1 root root 5.4K Nov  6 17:50 packages/emms-info-mediainfo-20131223.1300.el
+4.0K -rw-r--r-- 1 root root  381 Nov  6 17:50 packages/emms-info-mediainfo-20131223.1300.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov  6 17:50 packages/emms-info-mediainfo-badge.svg
+4.0K -rw-r--r-- 1 root root  150 Nov  6 17:50 packages/emms-info-mediainfo-readme.txt
+4.0K -rw-r--r-- 1 root root  755 Nov  6 17:50 packages/emms-info-mediainfo.log
+ 12K -rw-r--r-- 1 root root  11K Nov  6 17:50 packages/emms-mark-ext-20130529.327.el
+4.0K -rw-r--r-- 1 root root  396 Nov  6 17:50 packages/emms-mark-ext-20130529.327.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov  6 17:50 packages/emms-mark-ext-badge.svg
+4.0K -rw-r--r-- 1 root root  252 Nov  6 17:50 packages/emms-mark-ext-readme.txt
+4.0K -rw-r--r-- 1 root root  636 Nov  6 17:50 packages/emms-mark-ext.log
+ 12K -rw-r--r-- 1 root root  10K Nov  6 17:50 packages/emms-mode-line-cycle-20160221.1120.el
+4.0K -rw-r--r-- 1 root root  384 Nov  6 17:50 packages/emms-mode-line-cycle-20160221.1120.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov  6 17:50 packages/emms-mode-line-cycle-badge.svg
+4.0K -rw-r--r-- 1 root root  851 Nov  6 17:50 packages/emms-mode-line-cycle-readme.txt
+4.0K -rw-r--r-- 1 root root  697 Nov  6 17:50 packages/emms-mode-line-cycle.log
+4.0K -rw-r--r-- 1 root root  444 Nov  6 17:50 packages/emms-player-mpv-jp-radios-20180325.1117.entry
+240K -rw-r--r-- 1 root root 240K Nov  6 17:50 packages/emms-player-mpv-jp-radios-20180325.1117.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov  6 17:50 packages/emms-player-mpv-jp-radios-badge.svg
+4.0K -rw-r--r-- 1 root root 2.0K Nov  6 17:50 packages/emms-player-mpv-jp-radios-readme.txt
+8.0K -rw-r--r-- 1 root root 5.1K Nov  6 17:50 packages/emms-player-mpv-jp-radios.log
+4.0K -rw-r--r-- 1 root root  417 Nov  6 17:50 packages/emms-player-simple-mpv-20180316.1549.entry
+100K -rw-r--r-- 1 root root 100K Nov  6 17:50 packages/emms-player-simple-mpv-20180316.1549.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov  6 17:50 packages/emms-player-simple-mpv-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Nov  6 17:50 packages/emms-player-simple-mpv-readme.txt
+4.0K -rw-r--r-- 1 root root 2.0K Nov  6 17:50 packages/emms-player-simple-mpv.log
+4.0K -rw-r--r-- 1 root root  619 Nov  6 17:50 packages/emms-readme.txt
+8.0K -rw-r--r-- 1 root root 4.4K Nov  6 17:50 packages/emms-soundcloud-20131221.1145.el
+4.0K -rw-r--r-- 1 root root  428 Nov  6 17:50 packages/emms-soundcloud-20131221.1145.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov  6 17:50 packages/emms-soundcloud-badge.svg
+4.0K -rw-r--r-- 1 root root  242 Nov  6 17:50 packages/emms-soundcloud-readme.txt
+4.0K -rw-r--r-- 1 root root  653 Nov  6 17:50 packages/emms-soundcloud.log
+ 12K -rw-r--r-- 1 root root 9.4K Nov  6 17:50 packages/emms-state-20211023.1942.el
+4.0K -rw-r--r-- 1 root root  405 Nov  6 17:50 packages/emms-state-20211023.1942.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov  6 17:50 packages/emms-state-badge.svg
+4.0K -rw-r--r-- 1 root root  796 Nov  6 17:50 packages/emms-state-readme.txt
+4.0K -rw-r--r-- 1 root root  617 Nov  6 17:50 packages/emms-state.log

@@ -4,8 +4,8 @@
 ;;
 ;; Author: Ketan Patel <knpatel401@gmail.com>
 ;; URL: https://github.com/knpatel401/filetree
-;; Package-Version: 20211025.2000
-;; Package-Commit: a7a71d875cb666bed34e2ec86ae7921d8af5c28a
+;; Package-Version: 20211106.1527
+;; Package-Commit: ef6cb04d7a250c4e390501cb7a10473f962521a3
 ;; Package-Requires: ((emacs "27.1") (dash "2.12.0") (helm "3.7.0"))
 ;; Version: 1.0.1
 
@@ -674,6 +674,7 @@ expression to filter with."
 
 (defun filetree-run-dired ()
   "Run dired on directory at point."
+  (interactive)
   (dired (filetree-get-name)))
 
 (defun filetree-reduce-list-by-10 ()
