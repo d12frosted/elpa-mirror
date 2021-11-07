@@ -5,8 +5,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-symbolist
-;; Package-Version: 20210503.1220
-;; Package-Commit: f600e07fe06c19b67f917a8839bbcd6c78f1fbd4
+;; Package-Version: 20211107.1615
+;; Package-Commit: 92b712734941a45da7d47fd61b95e4013ff53481
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.5"))
 ;; Keywords: lisp maint
@@ -81,6 +81,13 @@ P -- has a property list with one or more properties"
   (add-hook 'tabulated-list-revert-hook
             'symbolist--refresh nil t))
 
+(defun symbolist--get-mark ()
+  "Internal function to get the mark on the current line."
+  (let ((entry (and (eq major-mode 'symbolist-mode)
+                    (tabulated-list-get-id)
+                    (tabulated-list-get-entry))))
+    (and entry (elt entry 0))))
+
 (defun symbolist--set-mark (string)
   "Internal function to set the mark on the current line to STRING."
   (when (and (eq major-mode 'symbolist-mode)
@@ -102,37 +109,39 @@ will delete it."
   (interactive)
   (symbolist--set-mark "D"))
 
+(defun symbolist--for-each-marked (delete-p fun)
+  "Internal function to walk symbols marked for deletion.
+
+FUN is called for each symbol. If DELETE-P is non-nil, delete
+each list entry after calling FUN."
+  (save-excursion
+    (goto-char (point-min))
+    (while (not (eobp))
+      (let* ((symbol (tabulated-list-get-id))
+             (marked-for-delete-p (equal "D" (symbolist--get-mark))))
+        (if (and marked-for-delete-p (progn (funcall fun symbol) delete-p))
+            (tabulated-list-delete-entry)
+          (forward-line))))))
+
 (defun symbolist-execute ()
   "Delete all symbols marked for deletion in this buffer.
 
 Symbols marked with \\<symbolist-mode-map>`\\[symbolist-mark-for-delete]' \
 are deleted."
   (interactive)
-  (let ((deleted-count 0))
-    (save-excursion
-      (goto-char (point-min))
-      (while (not (eobp))
-        (let* ((symbol (tabulated-list-get-id))
-               (entry  (tabulated-list-get-entry))
-               (delete (and entry (equal "D" (elt entry 0)))))
-          (cond (delete
-                 (symbolist--delete symbol)
-                 (tabulated-list-delete-entry)
-                 (setq deleted-count (1+ deleted-count)))
-                (t
-                 (forward-line))))))
-    (cond ((< deleted-count 1)
-           (message "No symbols marked for deletion"))
-          ((= deleted-count 1)
-           (message "Deleted 1 symbol"))
-          (t
-           (message "Deleted %d symbols" deleted-count)))))
+  (let ((n 0))
+    (symbolist--for-each-marked nil (lambda (_) (setq n (1+ n))))
+    (if (< n 1) (message "No symbols marked for deletion")
+      (let ((what (if (= n 1) "1 symbol" (format "%d symbols" n))))
+        (when (y-or-n-p (format "Delete %s? " what))
+          (symbolist--for-each-marked t #'symbolist--delete)
+          (message "Deleted %s" what))))))
 
 (defun symbolist--make-buffer-name (regexp)
   "Internal function to make a buffer name based on REGEXP."
   (let ((query (if (string-match "^\\^" regexp)
                    (substring regexp 1)
-                   regexp)))
+                 regexp)))
     (concat "*Symbolist: " query "*")))
 
 ;;;###autoload

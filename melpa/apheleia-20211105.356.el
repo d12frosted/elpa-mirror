@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20211031.1757
-;; Package-Commit: 1b7f2cf9969e7dfe610780b38b6f3dd834d1c01d
+;; Package-Version: 20211105.356
+;; Package-Commit: b71a5f615ac610a8efae43b19d3681dc694d6084
 ;; Package-Requires: ((emacs "25.2"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 1.1.2
@@ -585,6 +585,7 @@ such a directory exists anywhere above the current
 (defcustom apheleia-mode-alist
   '((cc-mode . clang-format)
     (c-mode . clang-format)
+    (c++-mode . clang-format)
     (css-mode . prettier)
     (elixir-mode . mix-format)
     (go-mode . gofmt)
