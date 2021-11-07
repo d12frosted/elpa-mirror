@@ -1,13 +1,13 @@
 Package: ccls
 Fetcher: github
-Source:  https://github.com/MaskRay/emacs-ccls.git
+Source:  https://github.com/emacs-lsp/emacs-ccls.git
 
-Updating /mnt/store/melpa/working/ccls/
+Cloning https://github.com/emacs-lsp/emacs-ccls.git to /mnt/store/melpa/working/ccls/
 Checking out origin/HEAD
 Checking out 675a5704c14a27931e835a431beea3631d92e8e6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ccls/
-  to /tmp/ccls4BXwN7/ccls-20200820.308
+  to /tmp/cclsiE1NP4/ccls-20200820.308
     ccls-call-hierarchy.el -> ccls-call-hierarchy.el
     ccls-code-lens.el -> ccls-code-lens.el
     ccls-common.el -> ccls-common.el
@@ -27,9 +27,9 @@ Created ccls-20200820.308.tar containing:
   ccls-20200820.308/ccls-semantic-highlight.el
   ccls-20200820.308/ccls-tree.el
   ccls-20200820.308/ccls.el
-Built ccls in 5.295s, finished at 2021-11-06T17:35:46+0000
+Built ccls in 4.310s, finished at 2021-11-06T21:22:26+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  379 Nov  6 17:35 packages/ccls-20200820.308.entry
- 72K -rw-r--r-- 1 root root  70K Nov  6 17:35 packages/ccls-20200820.308.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov  6 17:35 packages/ccls-badge.svg
-4.0K -rw-r--r-- 1 root root  122 Nov  6 17:35 packages/ccls-readme.txt
+4.0K -rw-r--r-- 1 root root  379 Nov  6 21:22 packages/ccls-20200820.308.entry
+ 72K -rw-r--r-- 1 root root  70K Nov  6 21:22 packages/ccls-20200820.308.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov  6 21:22 packages/ccls-badge.svg
+4.0K -rw-r--r-- 1 root root  122 Nov  6 21:22 packages/ccls-readme.txt

@@ -1,0 +1,15 @@
+(ghub .
+      [(20211106 2042)
+       ((emacs
+	 (25 1))
+	(let-alist
+	    (1 0 5))
+	(treepy
+	 (0 1 1)))
+       "Minuscule client libraries for Git forge APIs." tar
+       ((:commit . "bccd57bc4400fa302f034403c1c510d43fd22a5d")
+	(:authors
+	 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	(:keywords "tools")
+	(:url . "https://github.com/magit/ghub"))])
