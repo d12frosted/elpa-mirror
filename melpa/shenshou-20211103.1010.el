@@ -4,7 +4,7 @@
 ;;
 ;; Version: 0.0.1
 ;; Package-Version: 20211103.1010
-;; Package-Commit: 8e12d366ca371fc259294485047a431a7c610605
+;; Package-Commit: 5b9a400cafbf4778cdb4ab26f7718f8cb0c84705
 
 ;; Author: Chen Bin <chenbin DOT sh AT gmail DOT com>
 ;; URL: http://github.com/redguardtoo/shenshou

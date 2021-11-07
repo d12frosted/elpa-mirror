@@ -206,7 +206,7 @@ hook 使用的函数只有一个参数 fontsizes-list, 用来记录 *当前使�
                               :size fontsize
                               :weight 'normal
                               :slant 'normal)))
-    (if (cnfonts--fontspec-valid-p fontspec)
+    (if (fontp fontspec)
         (set-fontset-font "fontset-default" 'symbol fontspec nil 'append)
       (message "字体 %S 不存在！" fontname))))
 
@@ -222,7 +222,7 @@ hook 使用的函数只有一个参数 fontsizes-list, 用来记录 *当前使�
                               :size fontsize
                               :weight 'normal
                               :slant 'normal)))
-    (if (cnfonts--fontspec-valid-p fontspec)
+    (if (fontp fontspec)
         (set-fontset-font "fontset-default" '(#x3400 . #x4DFF) fontspec nil 'append)
       (message "字体 %S 不存在！" fontname))))
 
