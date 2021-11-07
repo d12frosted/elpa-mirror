@@ -4,8 +4,8 @@
 
 ;; Author: Dmitriy Pshonko <jumper047@gmail.com>
 ;; URL: https://github.com/jumper047/fb2-reader
-;; Package-Version: 20211106.907
-;; Package-Commit: 678f4ec183c02031f7658a65d2ba442337fcb87e
+;; Package-Version: 20211106.2351
+;; Package-Commit: 464850072a4bdf47b102a778a9ec9ad5097f3b2d
 ;; Keywords: multimedia, ebook, fb2
 ;; Version: 0.1.0
 
@@ -46,6 +46,7 @@
 ;;
 ;; Coming soon:
 ;; 
+;; - table of content in separate buffer
 ;; - integration with https://github.com/jumper047/librera-sync
 ;; - rendering book in org-mode
 ;;

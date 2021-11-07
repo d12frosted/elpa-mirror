@@ -13,6 +13,7 @@ Features:
 
 Coming soon:
 
+- table of content in separate buffer
 - integration with https://github.com/jumper047/librera-sync
 - rendering book in org-mode
 
