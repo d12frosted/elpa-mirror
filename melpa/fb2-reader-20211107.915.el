@@ -4,8 +4,8 @@
 
 ;; Author: Dmitriy Pshonko <jumper047@gmail.com>
 ;; URL: https://github.com/jumper047/fb2-reader
-;; Package-Version: 20211106.2351
-;; Package-Commit: 464850072a4bdf47b102a778a9ec9ad5097f3b2d
+;; Package-Version: 20211107.915
+;; Package-Commit: bfc5d622ebc296bbe09ae5cf6f0c53972d80b15d
 ;; Keywords: multimedia, ebook, fb2
 ;; Version: 0.1.0
 
@@ -150,9 +150,12 @@
 (defvar-local fb2-reader-link-target-pos nil
   "Last used link's target.")
 
+(defvar-local fb2-reader-header-line-toc nil
+  "List of chapters for header line.")
+
 (defconst fb2-reader-header-line-format
   '(:eval (list (propertize " " 'display '((space :align-to 0)))
-		(fb2-reader-current-chapter))))
+		(fb2-reader-header-line-text))))
 
 ;; Fb2 parsing
 
@@ -661,8 +664,70 @@ if these parameters are set."
 
 ;; Header line
 
-(defun fb2-reader-current-chapter ()
-  "Get current chapter's title."
+(defun fb2-reader-create-headerline-data ()
+  "Create reversed TOC for headerline.
+Each line in returned list consists of point, text prepared for
+header line and text for echo."
+  (save-excursion
+    (goto-char (point-min))
+    (let ((max-length (round (/ fb2-reader-page-width
+				fb2-reader-title-height)))
+	  start next-change plist displayed echo entry index)
+      (while (not (eobp))
+	(setq start (point)
+	      next-change (or (next-single-property-change (point) 'fb2-reader-title)
+			      (point-max))
+	      plist (text-properties-at (point)))
+	(when (plist-member plist 'fb2-reader-title)
+	  (while (< (point) next-change)
+	    (setq echo nil)
+	    (forward-line 1)
+	    (setq displayed (s-trim (s-collapse-whitespace (buffer-substring-no-properties start (point)))))
+	    (if (>= (length displayed) max-length)
+		(setq displayed (concat (s-left (- max-length 3) displayed) "...")
+		      echo (buffer-substring-no-properties start next-change)))
+	    (setq displayed (concat
+			     (s-repeat (round (/ (- max-length (length displayed)) 2)) " ")
+			     displayed))
+	    (push (list (point)
+			(propertize displayed
+				    'face (list (cons :height (list fb2-reader-title-height)))
+				    'help-echo echo))
+			index)))
+	(goto-char next-change))
+      (reverse index))))
+   
+(defun fb2-reader-toc-bisect (toc pos)
+  "Get TOC entry nearest to POS with bisect algorithm."
+  (let* ((first (caar toc))
+	 (last (caar (last toc)))
+	 (toc-length (length toc))
+	 (mid (car (nth (/ toc-length 2) toc))))
+    (if (<= toc-length 2)
+	(if (> pos last)
+	    (cadr toc)
+	(car toc))
+      (if (< pos mid)
+	  (fb2-reader-toc-bisect (butlast toc (1- (- toc-length (/ toc-length 2))))
+		  pos)
+	(fb2-reader-toc-bisect (seq-drop toc (/ toc-length 2)) pos)))))
+
+(defun fb2-reader-header-line-text ()
+  "Get text for header line."
+  (cl-second (fb2-reader-toc-bisect fb2-reader-header-line-toc (window-start))))
+
+(define-minor-mode fb2-reader-header-line-mode
+  "Toggle header line with current chapter"
+  :group 'fb2-reader
+  :global nil
+  (cond
+   (fb2-reader-header-line-mode
+    (setq fb2-reader-header-line-toc (fb2-reader-create-headerline-data)
+	  header-line-format 'fb2-reader-header-line-format))
+   (t
+    (setq fb2-reader-header-line-toc nil
+	  header-line-format nil))))
+
 
   (save-excursion
     (goto-char (window-start))
@@ -1135,7 +1200,7 @@ Book name should be the same as archive except .zip extension."
 				   (kill-local-variable 'cursor-type)))))
     (fb2-reader-imenu-setup)
     (if fb2-reader-title-in-headerline
-	(fb2-reader-set-up-header-line))
+	(fb2-reader-header-line-mode))
     (setq visual-fill-column-center-text 't)
     (visual-fill-column-mode)))
 

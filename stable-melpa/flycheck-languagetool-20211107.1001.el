@@ -8,8 +8,8 @@
 ;; Description: Flycheck support for LanguageTool.
 ;; Keyword: grammar check
 ;; Version: 0.3.0
-;; Package-Version: 20210715.946
-;; Package-Commit: 4fcf88d131fd0e149a7f1c787c07f4e03ea24fe8
+;; Package-Version: 20211107.1001
+;; Package-Commit: b6d0b1515418e5821241ac04143a12997c3bb240
 ;; Package-Requires: ((emacs "25.1") (flycheck "0.14"))
 ;; URL: https://github.com/emacs-languagetool/flycheck-languagetool
 
@@ -282,13 +282,18 @@ CALLBACK is passed from Flycheck."
   "Can the Flycheck LanguageTool checker be enabled?"
   (or (and flycheck-languagetool-server-jar
            (not (string= "" flycheck-languagetool-server-jar))
-           (file-exists-p flycheck-languagetool-server-jar))
+           (file-exists-p flycheck-languagetool-server-jar)
+           (executable-find "java"))
       (and flycheck-languagetool-url
            (not (string= "" flycheck-languagetool-url)))))
 
 (defun flycheck-languagetool--verify (_checker)
   "Verify proper configuration of Flycheck _CHECKER `languagetool'."
   (list
+   (flycheck-verification-result-new
+    :label "Java executable"
+    :message (or (executable-find "java") "Not found")
+    :face (if (executable-find "java") 'success '(bold warning)))
    (flycheck-verification-result-new
     :label "LanguageTool server JAR"
     :message
