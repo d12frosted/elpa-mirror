@@ -2,8 +2,8 @@
 
 ;; Author: wouter bolsterlee <wouter@bolsterl.ee>
 ;; Version: 3.0.0
-;; Package-Version: 20210219.1947
-;; Package-Commit: 31ae5e0e6813de8d889103f7b8dde252b04b1ae4
+;; Package-Version: 20211107.2245
+;; Package-Commit: abf4f040d3a9590e3e8eeae92e01e97e12727f25
 ;; Package-Requires: ((emacs "24.4") (dash "2.18.0") (transient "20200719") (projectile "0.14.0") (s "1.12.0"))
 ;; Keywords: pytest, test, python, languages, processes, tools
 ;; URL: https://github.com/wbolster/emacs-python-pytest
@@ -369,6 +369,7 @@ With a prefix ARG, allow editing."
   (let* ((buffer (python-pytest--get-buffer))
          (process (get-buffer-process buffer)))
     (with-current-buffer buffer
+      (display-buffer buffer)
       (when (comint-check-proc buffer)
         (unless (or compilation-always-kill
                     (yes-or-no-p "Kill running pytest process?"))
@@ -391,8 +392,7 @@ With a prefix ARG, allow editing."
       (make-comint-in-buffer "pytest" buffer "sh" nil "-c" command)
       (run-hooks 'python-pytest-started-hook)
       (setq process (get-buffer-process buffer))
-      (set-process-sentinel process #'python-pytest--process-sentinel)
-      (display-buffer buffer))))
+      (set-process-sentinel process #'python-pytest--process-sentinel))))
 
 (defun python-pytest--shell-quote (s)
   "Quote S for use in a shell command. Like `shell-quote-argument', but prettier."
@@ -559,7 +559,8 @@ Example: ‘MyABCThingy.__repr__’ becomes ‘test_my_abc_thingy_repr’."
             (->> (projectile-project-files (python-pytest--project-root))
                  (-sort 'string<)
                  (projectile-sort-by-recentf-first)
-                 (projectile-test-files)))
+                 ;; show test files if any found, otherwise show everything
+                 (funcall (-orfn #'projectile-test-files #'identity))))
            (test-directories
             (->> test-files
                  (-map 'file-name-directory)

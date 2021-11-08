@@ -1,5 +1,5 @@
 (realgud .
-	 [(20210522 2151)
+	 [(20211107 2210)
 	  ((load-relative
 	    (1 3 1))
 	   (loc-changes
@@ -9,7 +9,7 @@
 	   (emacs
 	    (25)))
 	  "A modular front-end for interacting with external debuggers" tar
-	  ((:commit . "7a70b27614c488be274898d0141ec82feb3a8d5a")
+	  ((:commit . "978b455d7da4dc41995192bfabc32092622651dd")
 	   (:authors
 	    ("Rocky Bernstein" . "rocky@gnu.org"))
 	   (:maintainer "Rocky Bernstein" . "rocky@gnu.org")
