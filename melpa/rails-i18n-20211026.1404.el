@@ -5,7 +5,7 @@
 ;; Author: Otávio Schwanck dos Santos <otavioschwanck@gmail.com>
 ;; Keywords: tools languages
 ;; Package-Version: 20211026.1404
-;; Package-Commit: 86be9e70f6fe90484f88d6c68c2f337f6ecd5651
+;; Package-Commit: 9ee25dee5d82418019c5ffc9d240567e377832d3
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "27.2") (yaml "0.1.0") (dash "2.19.1") (projectile "2.6.0-snapshot"))
 ;; Homepage: https://github.com/otavioschwanck/rails-i18n.el

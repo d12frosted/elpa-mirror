@@ -2,12 +2,12 @@ Package: json-par
 Fetcher: github
 Source:  https://github.com/taku0/json-par.git
 
-Cloning https://github.com/taku0/json-par.git to /mnt/store/melpa/working/json-par/
+Updating /mnt/store/melpa/working/json-par/
 Checking out origin/HEAD
 Checking out 85a5288bea5c579b2bfdd7be16bdfc18a58b3a26
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/json-par/
-  to /tmp/json-parpQDC8b/json-par-20211106.535
+  to /tmp/json-parpliqxG/json-par-20211106.535
     json-par-clone.el -> json-par-clone.el
     json-par-delete.el -> json-par-delete.el
     json-par-guess.el -> json-par-guess.el
@@ -41,9 +41,9 @@ Created json-par-20211106.535.tar containing:
   json-par-20211106.535/json-par-transpose.el
   json-par-20211106.535/json-par-utils.el
   json-par-20211106.535/json-par.el
-Built json-par in 4.532s, finished at 2021-11-08T04:02:11+0000
+Built json-par in 10.087s, finished at 2021-11-08T07:48:33+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  413 Nov  8 04:02 packages/json-par-20211106.535.entry
-412K -rw-r--r-- 1 root root 410K Nov  8 04:02 packages/json-par-20211106.535.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov  8 04:02 packages/json-par-badge.svg
-4.0K -rw-r--r-- 1 root root  739 Nov  8 04:02 packages/json-par-readme.txt
+4.0K -rw-r--r-- 1 root root  413 Nov  8 07:48 packages/json-par-20211106.535.entry
+412K -rw-r--r-- 1 root root 410K Nov  8 07:48 packages/json-par-20211106.535.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov  8 07:48 packages/json-par-badge.svg
+4.0K -rw-r--r-- 1 root root  739 Nov  8 07:48 packages/json-par-readme.txt
