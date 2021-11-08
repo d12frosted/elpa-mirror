@@ -6,7 +6,7 @@
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
 ;; Version: 0.1.1
 ;; Package-Version: 20211106.1731
-;; Package-Commit: a2cf50dfc492de5079ac42e500198c4fa78574ec
+;; Package-Commit: 081c1c29f60d9dc9f17a33aabc4bc82080f82e61
 ;; Package-Requires: ((emacs "27.1") (alert "1.2") (seq "2.22") (transient "0.2.0"))
 ;; Homepage: https://github.com/SqrtMinusOne/pomm.el
 
