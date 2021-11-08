@@ -1,0 +1,57 @@
+Package: fontsloth
+Fetcher: github
+Source:  https://github.com/jollm/fontsloth.git
+
+Cloning https://github.com/jollm/fontsloth.git to /mnt/store/melpa/working/fontsloth/
+Checking out origin/HEAD
+Checking out e43c7ed8302841aefe45f2e6bf35f84d854868f5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fontsloth/
+  to /tmp/fontslothwbejHw/fontsloth-20211102.511
+    fontsloth--common-types.el -> fontsloth--common-types.el
+    fontsloth-bbox.el -> fontsloth-bbox.el
+    fontsloth-cache.el -> fontsloth-cache.el
+    fontsloth-coords.el -> fontsloth-coords.el
+    fontsloth-geometry.el -> fontsloth-geometry.el
+    fontsloth-glyph.el -> fontsloth-glyph.el
+    fontsloth-layout-lb-tables.el -> fontsloth-layout-lb-tables.el
+    fontsloth-layout-linebreak.el -> fontsloth-layout-linebreak.el
+    fontsloth-layout.el -> fontsloth-layout.el
+    fontsloth-line.el -> fontsloth-line.el
+    fontsloth-log.el -> fontsloth-log.el
+    fontsloth-otf--mac-names.el -> fontsloth-otf--mac-names.el
+    fontsloth-otf-glyf.el -> fontsloth-otf-glyf.el
+    fontsloth-otf-kern.el -> fontsloth-otf-kern.el
+    fontsloth-otf-typo.el -> fontsloth-otf-typo.el
+    fontsloth-otf.el -> fontsloth-otf.el
+    fontsloth-point.el -> fontsloth-point.el
+    fontsloth-raster.el -> fontsloth-raster.el
+    fontsloth.el -> fontsloth.el
+Created fontsloth-20211102.511.tar containing:
+  fontsloth-20211102.511/
+  fontsloth-20211102.511/fontsloth--common-types.el
+  fontsloth-20211102.511/fontsloth-bbox.el
+  fontsloth-20211102.511/fontsloth-cache.el
+  fontsloth-20211102.511/fontsloth-coords.el
+  fontsloth-20211102.511/fontsloth-geometry.el
+  fontsloth-20211102.511/fontsloth-glyph.el
+  fontsloth-20211102.511/fontsloth-layout-lb-tables.el
+  fontsloth-20211102.511/fontsloth-layout-linebreak.el
+  fontsloth-20211102.511/fontsloth-layout.el
+  fontsloth-20211102.511/fontsloth-line.el
+  fontsloth-20211102.511/fontsloth-log.el
+  fontsloth-20211102.511/fontsloth-otf--mac-names.el
+  fontsloth-20211102.511/fontsloth-otf-glyf.el
+  fontsloth-20211102.511/fontsloth-otf-kern.el
+  fontsloth-20211102.511/fontsloth-otf-typo.el
+  fontsloth-20211102.511/fontsloth-otf.el
+  fontsloth-20211102.511/fontsloth-pkg.el
+  fontsloth-20211102.511/fontsloth-point.el
+  fontsloth-20211102.511/fontsloth-raster.el
+  fontsloth-20211102.511/fontsloth.el
+Built fontsloth in 4.689s, finished at 2021-11-08T00:05:26+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  480 Nov  8 00:05 packages/fontsloth-20211102.511.entry
+280K -rw-r--r-- 1 root root 280K Nov  8 00:05 packages/fontsloth-20211102.511.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov  8 00:05 packages/fontsloth-badge.svg
+4.0K -rw-r--r-- 1 root root  371 Nov  8 00:05 packages/fontsloth-readme.txt
