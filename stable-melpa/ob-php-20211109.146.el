@@ -4,8 +4,8 @@
 ;; Author: stardiviner <numbchild@gmail.com>
 ;; Maintainer: stardiviner <numbchild@gmail.com>
 ;; Keywords: org babel php
-;; Package-Version: 20210527.1333
-;; Package-Commit: ad173eaaab6b87ac29d7592af51df26c582e6070
+;; Package-Version: 20211109.146
+;; Package-Commit: 3699808eb1ba56268ccc2e366151183e91e8c711
 ;; URL: https://github.com/stardiviner/ob-php
 ;; Created: 04th May 2016
 ;; Version: 0.0.1
@@ -42,7 +42,9 @@
 (defun org-babel-execute:php (body params)
   "Orgmode Babel PHP evaluate function for `BODY' with `PARAMS'."
   (let* ((cmd (concat org-babel-php-command " " org-babel-php-command-options))
-         (body (concat "<?php\n" body "\n?>")))
+         (code (if (string-match-p "<\\?\\(?:php\\|=\\)\\_>" body)
+                   body
+                 (concat "<?php\n\n" body))))
     (org-babel-eval cmd body)))
 
 ;;;###autoload

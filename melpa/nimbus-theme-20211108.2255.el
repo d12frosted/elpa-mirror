@@ -6,8 +6,8 @@
 ;;              See README.md for full list of contributors.
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
 ;; Version:     1.0.0
-;; Package-Version: 20211014.1848
-;; Package-Commit: b9e383b4fcc7a3232f9943aed29586a760602a1d
+;; Package-Version: 20211108.2255
+;; Package-Commit: 8885c140adb23e44b57c095d24888978cf65a242
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/m-cat/nimbus-theme
 ;; Keywords:    faces
@@ -60,7 +60,7 @@
        (light-blue     "#68a5e9")
        (blue           "#598bc1")
        (dark-blue      "#267E99")
-       ;; (light-orange   "#eaaa0c")
+       (light-orange   "#eaaa0c")
        (orange         "#df9522")
        (dark-tan       "#7d7c61")
        (bright-yellow  "#fffe0a")
@@ -157,7 +157,7 @@
    `nimbus ;; You must use the same theme name here...
    `(default ((t (:foreground ,fg :background ,bg :bold nil))))
 
-   `(cursor ((t (:foreground ,black :background ,cursor))))
+   `(cursor ((t (:background ,cursor))))
    `(fringe ((t (:inherit default :background ,fringe))))
    `(highlight ((t (:background ,teal-bg))))
    `(link ((t (:foreground ,lighter-blue :underline t))))
@@ -884,15 +884,11 @@
    `(nswbuff-special-buffers-face ((t (:foreground ,special))))
 
    ;; org
-   `(org-agenda-date ((t (:foreground ,date))))
-   `(org-agenda-date-today ((t (:inherit org-agenda-date :bold t))))
-   `(org-agenda-date-weekend ((t (:inherit org-agenda-date :slant italic))))
-   `(org-agenda-done ((t (:foreground ,dark-green))))
-   `(org-agenda-structure ((t (:foreground ,heading))))
    `(org-block-begin-line ((t (:inherit org-meta-line :underline ,indent))))
    `(org-block-end-line ((t (:inherit org-meta-line :overline ,indent))))
    `(org-checkbox ((t (:foreground ,dark-tan :bold t))))
-   ;; `(org-checkbox-statistics-todo ((t (:inherit org-todo))))
+   `(org-checkbox-statistics-done ((t (:foreground ,dark-green))))
+   `(org-checkbox-statistics-todo ((t (:foreground ,red))))
    `(org-date ((t (:inherit link))))
    `(org-date-selected ((t (:inherit highlight :foreground ,current))))
    `(org-document-info ((t (:foreground ,lighter-green))))
@@ -910,7 +906,7 @@
    `(org-level-6 ((t (:foreground ,rainbow-6))))
    `(org-level-7 ((t (:foreground ,rainbow-7))))
    `(org-level-8 ((t (:foreground ,rainbow-8))))
-   `(org-priority ((t (:foreground ,dark-red))))
+   `(org-priority ((t (:foreground ,light-orange))))
    `(org-scheduled ((t (:foreground ,green))))
    `(org-scheduled-previously ((t (:foreground ,orange))))
    `(org-scheduled-today ((t (:foreground ,yellow))))
@@ -918,9 +914,26 @@
    `(org-table ((t (:foreground ,lighter-blue))))
    `(org-tag ((t (:foreground ,tag))))
    `(org-time-grid ((t (:foreground ,blue-gray))))
-   `(org-todo ((t (:foreground ,red))))
+   `(org-todo ((t (:foreground ,dark-red))))
    `(org-upcoming-deadline ((t (:inherit org-warning :bold nil))))
    `(org-warning ((t (:inherit font-lock-warning-face :foreground ,red))))
+
+   ;; org-agenda
+   `(org-agenda-date ((t (:foreground ,date))))
+   `(org-agenda-date-today ((t (:inherit org-agenda-date :bold t))))
+   `(org-agenda-date-weekend ((t (:inherit org-agenda-date :slant italic))))
+   `(org-agenda-done ((t (:inherit org-done))))
+   `(org-agenda-structure ((t (:foreground ,heading))))
+
+   ;; org-habit
+   ;; `(org-habit-alert-face ((t (:background ,dark-tan))))
+   ;; `(org-habit-alert-future-face ((t (:background ,dark-tan))))
+   ;; `(org-habit-overdue-face ((t (:background ,dark-tan))))
+   ;; `(org-habit-overdue-future-face ((t (:background ,dark-tan))))
+   ;; `(org-habit-clear-face ((t (:background ,dark-tan))))
+   ;; `(org-habit-clear-future-face ((t (:background ,dark-tan))))
+   ;; `(org-habit-ready-face ((t (:background ,dark-tan))))
+   ;; `(org-habit-ready-future-face ((t (:background ,dark-tan))))
 
    ;; org-recur
    `(org-recur ((t (:foreground ,dark-tan))))
