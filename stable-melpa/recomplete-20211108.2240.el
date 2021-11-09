@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-recomplete
-;; Package-Version: 20211104.51
-;; Package-Commit: 7288211d9dd5bae411cc697f7782dc3e01ac0b04
+;; Package-Version: 20211108.2240
+;; Package-Commit: 9d64b65855464bd92ccecf93c19db8b1fc12d7a3
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -96,17 +96,22 @@ WHERE using FN-ADVICE temporarily added to FN-ORIG."
         ,@body)
       (advice-remove ,fn-orig fn-advice-var))))
 
+;; Back-ported from emacs-29.1 (remove once older versions have beeen dropped).
+(defmacro recomplete--with-undo-amalgamate (&rest body)
+  "Like `progn' but perform BODY with amalgamated undo barriers.
 
-;; See: https://emacs.stackexchange.com/a/54412/2418
-(defmacro recomplete--with-undo-collapse (&rest body)
-  "Like `progn' but perform BODY with undo collapsed."
+This allows multiple operations to be undone in a single step.
+When undo is disabled this behaves like `progn'."
   (declare (indent 0) (debug t))
   (let ((handle (make-symbol "--change-group-handle--")))
     `
     (let
       (
         (,handle (prepare-change-group))
-        ;; Don't truncate any undo data in the middle of this.
+        ;; Don't truncate any undo data in the middle of this,
+        ;; otherwise Emacs might truncate part of the resulting
+        ;; undo step: we want to mimic the behavior we'd get if the
+        ;; undo-boundaries were never added in the first place.
         (undo-outer-limit nil)
         (undo-limit most-positive-fixnum)
         (undo-strong-limit most-positive-fixnum))
@@ -445,7 +450,7 @@ Argument CYCLE-OFFSET The offset for cycling words,
           ;; Without storing these in a list we get an unsightly flicker.
           (recomplete--with-messages-as-list message-list
             ;; Needed in case the operation does multiple undo pushes.
-            (recomplete--with-undo-collapse
+            (recomplete--with-undo-amalgamate
               (apply (symbol-function fn-symbol) (list cycle-index fn-cache))))))
 
       (cond

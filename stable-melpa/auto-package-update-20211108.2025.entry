@@ -1,11 +1,11 @@
 (auto-package-update .
-		     [(20211104 1424)
+		     [(20211108 2025)
 		      ((emacs
 			(24 4))
 		       (dash
 			(2 1 0)))
 		      "Automatically update Emacs packages." single
-		      ((:commit . "868c7a78d8d022ad8e4eec6a26e21dc4b8f37808")
+		      ((:commit . "ad95435fefe2bb501d1d787b08272f9c1b7df488")
 		       (:authors
 			("Renan Ranelli"))
 		       (:maintainer "Renan Ranelli")

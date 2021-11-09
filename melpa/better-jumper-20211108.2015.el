@@ -5,8 +5,8 @@
 ;; Created: March 20, 2019
 ;; Modified: March 26, 2019
 ;; Version: 1.0.0
-;; Package-Version: 20210713.1426
-;; Package-Commit: 7f328a886ba4dd01993d269eee01c8ee3d0ddf52
+;; Package-Version: 20211108.2015
+;; Package-Commit: 3148a17b5920bba8ec4f81b717b99acde5fd5b74
 ;; Keywords: convenience, jump, history, evil
 ;; Homepage: https://github.com/gilbertw1/better-jumper
 ;; Package-Requires: ((emacs "25.1"))
@@ -349,6 +349,7 @@ Uses current context if CONTEXT is nil."
 (defun better-jumper-set-jump (&optional pos)
   "Set jump point at POS.
 POS defaults to point."
+  (interactive)
   (unless (or (region-active-p)
               (and (boundp 'evil-visual-state-p)
                    (evil-visual-state-p)))
@@ -419,6 +420,7 @@ If COUNT is nil then defaults to 1."
   "Clears jump list for WINDOW-OR-BUFFER.
 WINDOW-OR-BUFFER should be either a window or buffer depending on the
 context and will default to current context if not provided."
+  (interactive)
   (let* ((context (or window-or-buffer (better-jumper--get-current-context))))
     (better-jumper--set-struct context (make-better-jumper-jump-list-struct))))
 

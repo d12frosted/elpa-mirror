@@ -2328,7 +2328,7 @@
 	 ("Nicolas Petton" . "nicolas@petton.fr"))
 	(:url . "https://elpa.gnu.org/packages/seq.html"))])
  (setup .
-	[(1 1 0)
+	[(1 2 0)
 	 ((emacs
 	   (26 1)))
 	 "Helpful Configuration Macro" tar
@@ -2808,7 +2808,7 @@
 		  ("Michael McNamara" . "mac@verilog.com")
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org")))])
  (vertico .
-	  [(0 14)
+	  [(0 15)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar

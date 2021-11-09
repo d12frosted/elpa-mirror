@@ -4,8 +4,8 @@
 
 ;; Author: Renan Ranelli
 ;; URL: http://github.com/rranelli/auto-package-update.el
-;; Package-Version: 20211104.1424
-;; Package-Commit: 868c7a78d8d022ad8e4eec6a26e21dc4b8f37808
+;; Package-Version: 20211108.2025
+;; Package-Commit: ad95435fefe2bb501d1d787b08272f9c1b7df488
 ;; Version: 1.7
 ;; Keywords: package, update
 ;; Package-Requires: ((emacs "24.4") (dash "2.1.0"))
@@ -215,6 +215,12 @@ prompting before running auto-package-update-maybe"
   :type 'boolean
   :group 'auto-package-update)
 
+(defcustom auto-package-update-excluded-packages
+  nil
+  "List of packages to exclude from automatic package update."
+  :type '(repeat symbol)
+  :group 'auto-package-update)
+
 (defvar auto-package-update-last-update-day-path
   (expand-file-name auto-package-update-last-update-day-filename user-emacs-directory)
   "Path to the file that will hold the day in which the last update was run.")
@@ -300,7 +306,9 @@ prompting before running auto-package-update-maybe"
   (not (apu--package-up-to-date-p package)))
 
 (defun apu--packages-to-install ()
-  (delete-dups (-filter 'apu--package-out-of-date-p package-activated-list)))
+  (delete-dups (-filter 'apu--package-out-of-date-p
+                        (-difference package-activated-list
+                                     auto-package-update-excluded-packages))))
 
 (defun apu--add-to-old-versions-dirs-list (package)
   "Add package old version dir to apu--old-versions-dirs-list"
