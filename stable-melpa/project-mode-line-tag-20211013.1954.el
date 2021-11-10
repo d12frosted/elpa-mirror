@@ -5,7 +5,7 @@
 ;; Author: Fritz Grabo <hello@fritzgrabo.com>
 ;; URL: https://github.com/fritzgrabo/project-mode-line-tag
 ;; Package-Version: 20211013.1954
-;; Package-Commit: e411432a33cd82f8a9ff95471c91e9fe1833841c
+;; Package-Commit: 69d44e5495185587ee8577f8b9d616063d6bd7f8
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: convenience

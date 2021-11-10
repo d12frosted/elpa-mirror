@@ -1,5 +1,5 @@
 (clj-refactor .
-	      [(20211108 1020)
+	      [(20211110 954)
 	       ((emacs
 		 (26 1))
 		(seq
@@ -21,7 +21,7 @@
 		(hydra
 		 (0 13 2)))
 	       "A collection of commands for refactoring Clojure code" tar
-	       ((:commit . "2efbee40f5bd67f6d2bd2f2e7318ea830b15a78b")
+	       ((:commit . "db98d5a0e23119be48a5f9ad6c962e5bf0487f51")
 		(:authors
 		 ("Magnar Sveen" . "magnars@gmail.com")
 		 ("Lars Andersen" . "expez@expez.com")

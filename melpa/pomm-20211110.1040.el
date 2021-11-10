@@ -4,9 +4,9 @@
 
 ;; Author: Korytov Pavel <thexcloud@gmail.com>
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
-;; Version: 0.1.1
-;; Package-Version: 20211106.1731
-;; Package-Commit: 081c1c29f60d9dc9f17a33aabc4bc82080f82e61
+;; Version: 0.1.2
+;; Package-Version: 20211110.1040
+;; Package-Commit: 62832704ba72613af8dbe0a6bf6d4daa89a21e12
 ;; Package-Requires: ((emacs "27.1") (alert "1.2") (seq "2.22") (transient "0.2.0"))
 ;; Homepage: https://github.com/SqrtMinusOne/pomm.el
 
@@ -89,7 +89,7 @@
   :type 'string)
 
 (defcustom pomm-state-file-location
-  (concat user-emacs-directory "pomm")
+  (locate-user-emacs-file "pomm")
   "Location of the pomm state file."
   :group 'pomm
   :type 'string)
@@ -124,6 +124,63 @@ of period.  The format is as follows:
 - iteration"
   :group 'pomm
   :type 'string)
+
+(defcustom pomm-csv-history-file-timestamp-format "%s"
+  "Timestamp format in the csv file.
+
+The format is the same as in `format-time-string'.  The default
+one is the UNIX timestamp."
+  :group 'pomm
+  :type 'string)
+
+(defcustom pomm-audio-player-executable (or (executable-find "afplay")
+                                            (executable-find "aplay"))
+  "Music player executable.
+
+Necessary for playing sounds.  The program has to be able to play
+.wav files with the invokation like <player> <file>.wav"
+  :group 'pomm
+  :type 'string)
+
+(defcustom pomm-audio-enabled nil
+  "Whether to play sounds.
+
+The `poom-audio-player-executable' variable has to be set up.
+
+`pomm-audio-files' stores settings on which sounds are to play on
+a particular event."
+  :group 'pomm
+  :type 'boolean)
+
+(defun pomm--get-sound-file-path (name)
+  "Get path to the sound resource NAME.
+
+When loading the package, `load-file-name' should point to the
+location of this file, which means that resources folder should
+be in the same directory.
+
+If the file is evaluated interactively (for development
+purposes), the `default-directory' is most likely the project
+root."
+  (or (and load-file-name (concat (file-name-directory load-file-name) name))
+      (concat default-directory name)))
+
+(defcustom pomm-audio-files
+  `((work . ,(pomm--get-sound-file-path "resources/bell.wav"))
+    (tick . ,(pomm--get-sound-file-path "resources/tick.wav"))
+    (short-break . ,(pomm--get-sound-file-path "resources/bell.wav"))
+    (long-break . ,(pomm--get-sound-file-path "resources/bell.wav"))
+    (stop . ,(pomm--get-sound-file-path "resources/air_horn.wav")))
+  "Paths to the sounds to play on various events.
+
+Each element of the list is a cons cell, where:
+- key is an event type
+- value is either a path to the sound file or nil."
+  :group 'pomm
+  :options '(work tick short-break long-break stop)
+  :type '(alist :key-type (symbol :tag "Event")
+                :value-type (choice (string :tag "Path")
+                                    (const nil :tag "No sound"))))
 
 (defcustom pomm-on-tick-hook nil
   "A hook to run on every tick when the timer is running."
@@ -192,6 +249,8 @@ This function is meant to be ran only once, at the first start of the timer."
   (add-hook 'pomm-on-status-changed-hook #'pomm--save-state)
   (add-hook 'pomm-on-status-changed-hook #'pomm--maybe-save-csv)
   (add-hook 'pomm-on-period-changed-hook #'pomm--maybe-save-csv)
+  (add-hook 'pomm-on-period-changed-hook #'pomm--dispatch-current-sound)
+  (add-hook 'pomm-on-status-changed-hook #'pomm--dispatch-current-sound)
   (if (or (not (file-exists-p pomm-state-file-location))
           (not pomm-state-file-location))
       (pomm--do-reset)
@@ -233,8 +292,8 @@ variable doesn't exist, function does nothing."
       (with-temp-file pomm-csv-history-file
         (insert "timestamp,status,period,iteration\n")))
     (write-region
-     (format "%d,%s,%s,%d\n"
-             (time-convert nil 'integer)
+     (format "%s,%s,%s,%d\n"
+             (format-time-string pomm-csv-history-file-timestamp-format)
              (symbol-name (alist-get 'status pomm--state))
              (symbol-name (alist-get 'kind (alist-get 'current pomm--state)))
              (or (alist-get 'iteration (alist-get 'current pomm--state)) 0))
@@ -245,6 +304,33 @@ variable doesn't exist, function does nothing."
   (interactive)
   (when (y-or-n-p "Are you sure you want to reset the Pomodoro timer? ")
     (pomm--do-reset)))
+
+(defun pomm--maybe-play-sound (kind)
+  "Play a sound of KIND.
+
+KIND is a key of `pomm-audio-files'.  The variable
+`pomm-audio-enabled' should be set to true, and the corresponding
+value of the `pomm-audio-files' should be a path to the file
+which can be played by `pomm-audio-player-executable'."
+  (when pomm-audio-enabled
+    (unless pomm-audio-player-executable
+      (error "No audio player executable! Set 'pomm-audio-player-executable'")
+      (setq pomm-audio-enabled nil))
+    (when-let (sound (alist-get kind pomm-audio-files))
+      (start-process
+       "pomm-audio-player"
+       nil
+       pomm-audio-player-executable
+       sound))))
+
+(defun pomm--dispatch-current-sound ()
+  "Dispatch an appropriate sound for the current state of the timer."
+  (cond
+   ((eq (alist-get 'status pomm--state) 'stopped)
+    (pomm--maybe-play-sound 'stop))
+   ((eq (alist-get 'status pomm--state) 'running)
+    (pomm--maybe-play-sound
+     (alist-get 'kind (alist-get 'current pomm--state))))))
 
 (defun pomm--dispatch-notification (kind)
   "Dispatch a notification about a start of a period.
@@ -356,7 +442,9 @@ The condition is: (effective-start-time + length) < now."
      (progn
        (when (pomm--need-switch-p)
          (pomm--switch-to-next))
-       (run-hooks 'pomm-on-tick-hook)))))
+       (run-hooks 'pomm-on-tick-hook)
+       (when (eq (alist-get 'kind (alist-get 'current pomm--state)) 'work)
+         (pomm--maybe-play-sound 'tick))))))
 
 (defun pomm--get-time-remaning ()
   "Get time remaining in the current pomodoro period.
