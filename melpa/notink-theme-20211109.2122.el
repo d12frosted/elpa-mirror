@@ -10,8 +10,8 @@
 
 ;; Author: MetroWind <chris.corsair@gmail.com>
 ;; URL: https://github.com/MetroWind/notink-theme
-;; Package-Version: 20210816.2337
-;; Package-Commit: ede878ee06d4f94b5819ed3ccffe121823fbcf44
+;; Package-Version: 20211109.2122
+;; Package-Commit: fa26294a43431ac7b42931c44c10e22813fe1ce3
 ;; Keywords: faces
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "26.1"))
@@ -325,7 +325,10 @@
 
    ;; Flycheck
    `(flycheck-error ((t (:inherit flymake-error))))
-   `(flycheck-warning ((t (:inherit flymake-warning))))))
+   `(flycheck-warning ((t (:inherit flymake-warning))))
+
+   ;; Mail
+   `(message-separator ((t (:foreground ,color-middle))))))
 
 ;;;###autoload
 (and load-file-name
