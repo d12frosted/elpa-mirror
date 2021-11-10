@@ -5,9 +5,9 @@
 ;; Copyright (C) 2019 Tim Vaughan
 
 ;; Author: Alex Schroeder <alex@gnu.org>
-;; Version: 1.0.1
-;; Package-Version: 20211107.842
-;; Package-Commit: 871fe5bf85d989742287803bb0e16ac549d33530
+;; Version: 1.0.2
+;; Package-Version: 20211110.1143
+;; Package-Commit: 1e6cfba8a426e227f3d446f2e34985420d3269bd
 ;; Keywords: comm gemini
 ;; Homepage: https://alexschroeder.ch/cgit/gemini-write
 ;; Package-Requires: ((emacs "26") (elpher "2.8.0") (gemini-mode "1.0.0"))
@@ -60,16 +60,16 @@
   :global t
   (cond
    (gemini-write-mode
-    (advice-add #'elpher-render-gemini-plain-text :after #'gemini-write-mime-type-text)
-    (advice-add #'elpher-render-gemini-map :after #'gemini-write-mime-type-text)
+    (advice-add #'elpher-render-gemini-plain-text :after #'gemini-write-mime-type-plain)
+    (advice-add #'elpher-render-gemini-map :after #'gemini-write-mime-type-gemini)
     (add-hook 'elpher-mode-hook #'gemini-write-set-keybindings)
     (add-hook 'gemini-mode-hook #'gemini-write-set-keybindings)
     (dolist (buf (buffer-list))
       (with-current-buffer buf
 	(gemini-write-set-keybindings))))
    (t
-    (advice-remove #'elpher-render-gemini-plain-text #'gemini-write-mime-type-text)
-    (advice-remove #'elpher-render-gemini-map #'gemini-write-mime-type-text)
+    (advice-remove #'elpher-render-gemini-plain-text #'gemini-write-mime-type-plain)
+    (advice-remove #'elpher-render-gemini-map #'gemini-write-mime-type-gemini)
     (remove-hook 'elpher-mode-hook #'gemini-write-set-keybindings)
     (remove-hook 'gemini-mode-hook #'gemini-write-set-keybindings)
     (dolist (buf (buffer-list))
@@ -96,13 +96,18 @@
 
 (defvar gemini-write-text-p nil
   "A buffer local variable to store whether this is plain text.
-Advice added to `elpher-render-gemini-plain-text' makes sure this
-is set correctly. We need to know that this is one of the pages
-we can potentially write to.")
+Advice added to `elpher-render-gemini-plain-text' and
+`elpher-render-gemini-map' makes sure this is set correctly. We
+need to know that this is one of the pages we can potentially
+write to. Possible values are nil, `plain', or `gemini'.")
 
-(defun gemini-write-mime-type-text (&rest _ignore)
-  "Remember that this buffer is plain/text."
-  (setq-local gemini-write-text-p t))
+(defun gemini-write-mime-type-plain (&rest _ignore)
+  "Remember that this buffer is text/plain."
+  (setq-local gemini-write-text-p 'plain))
+
+(defun gemini-write-mime-type-gemini (&rest _ignore)
+  "Remember that this buffer is text/gemini."
+  (setq-local gemini-write-text-p 'gemini))
 
 (defun gemini-write-text ()
   "Edit a copy of the current Elpher buffer, if possible.
@@ -111,14 +116,30 @@ gemtext. If you're looking at the rendered text, editing it
 will be a mess. In order to protect against this, the code
 checks `gemini-write-text-p'."
   (interactive)
-  (let ((address (elpher-page-address elpher-current-page)))
+  (let ((page elpher-current-page)
+	(address (elpher-page-address page)))
     (cond ((not (equal (elpher-address-protocol address) "gemini"))
 	   (error "Elpher does not know how to edit %s"
 		  (elpher-address-protocol address)))
-	  ((not gemini-write-text-p)
-	   (error "Elpher only knows how to edit text/plain"))
-	  (t (gemini-write-buffer (buffer-string)
-				  elpher-current-page (point))))))
+	  ((eq gemini-write-text-p 'plain)
+	   (gemini-write-buffer (buffer-string)
+				elpher-current-page (point)))
+	  ((eq gemini-write-text-p 'gemini)
+	   (elpher-visit-page page 'gemini-write-render-text t)
+	   (message
+	    (substitute-command-keys
+	     "Reloaded as text/plain, use `\\[gemini-write-text]' again to edit")))
+	  (t (call-interactively #'gemini-write-file)))))
+
+(defun gemini-write-render-text (data &optional _mime-type-string)
+  "Render DATA as text.  MIME-TYPE-STRING is unused.
+Return nil without data so that we always force a reload."
+  (elpher-with-clean-buffer
+   (if (not data)
+       nil
+     (insert (elpher-process-text-for-display
+	      (elpher-preprocess-text-response data)))
+     (gemini-write-mime-type-plain))))
 
 (defun gemini-write-buffer (text page point)
   "Edit TEXT using Gemini mode for PAGE.

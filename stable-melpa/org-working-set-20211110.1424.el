@@ -4,8 +4,8 @@
 
 ;; Author: Marc Ihm <1@2484.de>
 ;; URL: https://github.com/marcIhm/org-working-set
-;; Package-Version: 20210802.1435
-;; Package-Commit: bced50755c45047565a3ab395c3b5e59ab15cc8e
+;; Package-Version: 20211110.1424
+;; Package-Commit: 7688264d7234e12b7d3bc6ec928170f4bf195ee2
 ;; Version: 2.5.0
 ;; Package-Requires: ((org "9.3") (dash "2.12") (s "1.12") (emacs "26.3"))
 
@@ -910,27 +910,20 @@ Optional argument GO-TOP goes to top of new window, rather than keeping current 
 
 
 (defun org-working-set--id-find (id &optional markerp)
-  "Wrapper for org-id-find, that does not go stale during rebuild of org-id-locations"
+  "Wrapper for org-id-find, that offers help, if id cannot be found"
   (let (retval)
     (setq org-working-set--id-not-found id)
-    (unwind-protect
-        (progn
-          (advice-add 'org-id-update-id-locations :around #'org-working-set--advice-for-org-id-update-id-locations)
-          (setq retval (org-id-find id markerp)))
-      (advice-remove 'org-id-update-id-locations #'org-working-set--advice-for-org-id-update-id-locations))
+    (setq retval (or (org-id-find id markerp)
+                     (org-working-set--ask-and-handle-stale-id)))
     (setq org-working-set--id-not-found nil)
     retval))
 
 
 (defun org-working-set--id-goto (id)
-  "Wrapper for org-id-goto, that does not go stale during rebuild of org-id-locations"
+  "Wrapper for org-id-goto, that offers help, if id cannot be found"
   (setq org-working-set--id-not-found id)
-  (unwind-protect
-      (progn
-        (advice-add 'org-id-update-id-locations :around #'org-working-set--advice-for-org-id-update-id-locations)
-        (org-id-goto id))
-    (advice-remove 'org-id-update-id-locations #'org-working-set--advice-for-org-id-update-id-locations)
-    (org-working-set--check-id id))
+  (or (org-id-goto id))
+  (org-working-set--check-id id)
   (setq org-working-set--id-not-found nil))
 
 
@@ -958,8 +951,7 @@ Optional argument GO-TOP goes to top of new window, rather than keeping current 
 (defun org-working-set--check-id (id)
   "Check, if we really arrived there"
   (if (not (string= id (org-id-get)))
-      (error "Node with id '%s' was found, but 'goto' did not suceed%s" id
-             (if (buffer-narrowed-p) (format " (maybe because buffer %s is narrowed)" (buffer-name)) ""))))
+      (org-working-set--ask-and-handle-stale-id id)))
 
 
 (defun org-working-set--end-of-node ()
@@ -1005,16 +997,18 @@ Optional argument GO-TOP goes to top of new window, rather than keeping current 
     (setq org-working-set--id-not-found nil)))
 
 
-(defun org-working-set--ask-and-handle-stale-id ()
+(defun org-working-set--ask-and-handle-stale-id (id)
   "Ask user about stale ID from working set and handle answer."
   (let ((char-choices (list ?d ?u ?o ?q ?f))
         (window-config (current-window-configuration))
-        (idnf org-working-set--id-not-found)
+        (idnf (or id org-working-set--id-not-found))
         char)
 
     (org-working-set--show-explanation
      "*ID not found*"
-     (format "ERROR: ID %s from working set cannot be found. Please specify how to proceed:\n" org-working-set--id-not-found)
+     (format "ERROR: ID %s from working set cannot be found%s. Please specify how to proceed:\n"
+             idnf
+             (if (buffer-narrowed-p) (format " (maybe because buffer %s is narrowed)" (buffer-name)) ""))
      "  - d :: delete this ID from the working set"
      "  - u :: save all org buffers, then run `org-id-update-id-locations' to rescan your org-files"
      "  - o :: multi-occur over all org files for this id"
@@ -1030,18 +1024,18 @@ Optional argument GO-TOP goes to top of new window, rather than keeping current 
 
     (cond
      ((eq char ?q)
-      (message "The missing id is %s" org-working-set--id-not-found)
+      (message "The missing id is %s" idnf)
       (keyboard-quit))
      ((eq char ?d)
       (setq org-working-set--ids-saved org-working-set--ids)
-      (setq org-working-set--ids (delete org-working-set--id-not-found org-working-set--ids))
+      (setq org-working-set--ids (delete idnf org-working-set--ids))
       (org-working-set--nodes-persist)
       (error "Removed ID %s from working-set; please start over" idnf))
      ((eq char ?o)
-      (multi-occur-in-matching-buffers "\\.org$" org-working-set--id-not-found)
+      (multi-occur-in-matching-buffers "\\.org$" idnf)
       (pop-to-buffer-same-window "*Occur*")
       (setq org-working-set--id-not-found nil)
-      (error "Multi-occur for ID %s; if it has been found twice, `u' might help; otherwise the referred node or its properties might have been deleted (consider `d')" org-working-set--id-not-found))
+      (error "Multi-occur for ID %s; if it has been found twice, `u' might help; otherwise the referred node or its properties might have been deleted (consider `d')" idnf))
      ((eq char ?f)
       (let ((buna "*content of org-id-files*")
             file)
@@ -1064,7 +1058,7 @@ Optional argument GO-TOP goes to top of new window, rather than keeping current 
       (org-save-all-org-buffers)
       (org-id-update-id-locations)
       (setq  org-working-set--ids nil)
-      (error "Searched all files for ID %s; please start over" org-working-set--id-not-found)))))
+      (error "Searched all files for ID %s; please start over" idnf)))))
 
 
 (defun org-working-set--clock-in-maybe ()

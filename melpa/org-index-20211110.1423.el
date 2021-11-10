@@ -4,8 +4,8 @@
 
 ;; Author: Marc Ihm <1@2484.de>
 ;; URL: https://github.com/marcIhm/org-index
-;; Package-Version: 20211029.1604
-;; Package-Commit: 450dbacacfc0828e40a76a48a5933db60ec7d197
+;; Package-Version: 20211110.1423
+;; Package-Commit: 399020d435d296014f92fa5f632d7481ee002661
 ;; Version: 7.4.2
 ;; Package-Requires: ((org "9.3") (dash "2.12") (s "1.12") (emacs "26.3"))
 
@@ -2928,7 +2928,7 @@ Returns nil or plist with result"
   "Compute flag for current line."
   (let* ((yank (oidx--get-or-set-field 'yank))
         (id (oidx--get-or-set-field 'id))
-        (ff (cond ((and id yank) (cons "2" 'mode-line-hightlight)) (id (cons "n" nil)) (yank (cons "y" nil)) (t (cons " " nil)))))
+        (ff (cond ((and id yank) (cons "b" 'cursor)) (id (cons "n" nil)) (yank (cons "y" nil)) (t (cons " " nil)))))
     (propertize (car ff) 'face (or (cdr ff) 'org-agenda-dimmed-todo-face))))
 
 
@@ -3168,11 +3168,11 @@ Optional argument INVERT swaps actions."
   (let ((flag (get-text-property (point) 'org-index-flag)))
     (cond
      ((or (string= flag "y")
-          (and (string= flag "2")
+          (and (string= flag "b")
                (not invert)))
       (oidx--o-action-yank))
      ((or (string= flag "n")
-          (and (string= flag "2")
+          (and (string= flag "b")
                invert))
       (oidx--o-action-goto-node)))))
 
