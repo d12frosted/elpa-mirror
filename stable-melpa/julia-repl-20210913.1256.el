@@ -3,8 +3,6 @@
 ;; Copyright (C) 2016  Tamas K. Papp
 ;; Author: Tamas Papp <tkpapp@gmail.com>
 ;; Keywords: languages
-;; Package-Version: 20210913.1256
-;; Package-Commit: 3f888ecd30f613ed50f67c614be0b42b7546c693
 ;; Version: 1.3.0
 ;; Package-Requires: ((emacs "25.1")(s "1.12"))
 ;; URL: https://github.com/tpapp/julia-repl

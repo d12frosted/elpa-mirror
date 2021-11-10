@@ -71,7 +71,9 @@ Table of Contents
   • Deferred completion style highlighting for performance.
   • Jumping to location/documentation of current candidate.
   • Show candidate documentation/signature string in the echo area.
-  • Support for `annotation-function' and `affixation-function'.
+  • Deprecated candidates are crossed out in the display.
+  • Support for annotations (`annotation-function',
+    `affixation-function').
 
 
 [Orderless] <https://github.com/oantolin/orderless>
@@ -124,7 +126,8 @@ Table of Contents
   │ (use-package orderless
   │   :init
   │   ;; Configure a custom style dispatcher (see the Consult wiki)
-  │   ;; (setq orderless-style-dispatchers '(+orderless-dispatch))
+  │   ;; (setq orderless-style-dispatchers '(+orderless-dispatch)
+  │   ;;       orderless-component-separator #'orderless-escapable-split-on-space)
   │   (setq completion-styles '(orderless)
   │ 	completion-category-defaults nil
   │ 	completion-category-overrides '((file (styles . (partial-completion))))))
@@ -203,7 +206,7 @@ Table of Contents
     displays, since Corfu requires child frames.
   • The abort handling could be improved, for example the input could be
     undone.
-  • Company kind icons and match data are not supported (`company-kind',
+  • Some Company metadata extensions are not supported (`company-kind',
     `company-match').
   • No sorting by history, since `completion-at-point' does not maintain
     a history (See branch `history' for a possible solution).

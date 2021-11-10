@@ -1,0 +1,13 @@
+(sway .
+      [(20211109 1601)
+       ((emacs
+	 (27 1))
+	(dash
+	 (2 18 1)))
+       "Communication with the Sway window manager" single
+       ((:commit . "d84adab82ca5f84847702671dd60c0377c82ccd9")
+	(:authors
+	 ("Thibault Polge" . "thibault@thb.lt"))
+	(:maintainer "Thibault Polge" . "thibault@thb.lt")
+	(:keywords "frames")
+	(:url . "https://github.com/thblt/sway.el"))])
