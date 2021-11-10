@@ -4,6 +4,8 @@
 
 ;; Author: Sviatoslav Bulbakha <mail@ssbb.me>
 ;; URL: https://github.com/ssbb/pyenv-mode-auto
+;; Package-Version: 20180620.1252
+;; Package-Commit: 347b94cd5ad22e33cc41be661c102d4548767858
 ;; Keywords: python, pyenv
 ;; Version: 0.1.1
 ;; Package-Requires: ((pyenv-mode "0.1.0") (s "1.11.0") (f "0.17.0"))
