@@ -6,8 +6,8 @@
 ;; Author: Alex Kost <alezost@gmail.com>
 ;;         Vitus Schäfftlein <vitusschaefftlein@live.de>
 ;; Version: 0.1
-;; Package-Version: 20210920.634
-;; Package-Commit: 29e05416f102ceca50ac8b118a19a16f9fe7eb2f
+;; Package-Version: 20211111.742
+;; Package-Commit: 0cecd7b2611bd9d282876ab46d490ce3e635ba86
 ;; Package-Requires: ((emacs "24.3") (org-ref "1.1.0") (bibtex-completion "1.0.0"))
 ;; URL: https://github.com/alezost/org-ref-prettify.el
 ;; Keywords: convenience
@@ -82,8 +82,8 @@
 
 (defvar org-ref-prettify-regexp
   (rx-to-string
-   `(and (? "[[") (group (or ,@org-ref-cite-types))
-         ":" (group (one-or-more (any alnum "-_,"))) (? "]")
+   `(and (? "[[") (group (or ,@(mapcar #'car org-ref-cite-types)))
+         ":" (? "&") (group (one-or-more (any alnum "-_,"))) (? "]")
          (? "["
             (? (group (* (any alpha space))) "::")
             (group (* (any digit "-")))
@@ -229,21 +229,23 @@ KEY may be a single key or a list of keys."
                                        :post-page post-page))))
                         data))
                (strings (delq nil strings)))
-          (when strings
-            (let* ((link-beg (max link-beg beg))
-                   (link-end (min link-end end))
-                   (display-string (mapconcat #'identity strings "; "))
-                   (display-string (if (equal type "parencite")
-                                       (concat "(" display-string ")")
-                                     display-string)))
-              (with-silent-modifications
-                (unless data-at-point
-                  (put-text-property link-beg type-end
-                                     'org-ref-prettify-data data))
-                (put-text-property link-beg type-end
-                                   'org-ref-prettify-fresh t)
-                (put-text-property link-beg link-end
-                                   'display display-string))))))))
+          (let ((link-beg (max link-beg beg))
+                (link-end (min link-end end)))
+            (when strings
+              (let* ((display-string (mapconcat #'identity strings "; "))
+                     (display-string (if (equal type "parencite")
+                                         (concat "(" display-string ")")
+                                       display-string)))
+                (with-silent-modifications
+                  (unless data-at-point
+                    (put-text-property link-beg type-end
+                                       'org-ref-prettify-data data))
+                  (put-text-property link-beg link-end
+                                     'display display-string))))
+            ;; Add 'fresh' property even for non-existing links to
+            ;; avoid redundant calls of `bibtex-completion-get-entry'.
+            (put-text-property link-beg type-end
+                               'org-ref-prettify-fresh t))))))
   ;; Return nil because we are not adding any face property.
   nil)
 

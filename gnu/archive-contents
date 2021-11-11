@@ -757,7 +757,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20211109)
+      [(20211110)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -1548,6 +1548,15 @@
 		       ("Vitalie Spinu" . "spinuvit@gmail.com"))
 		      (:maintainer "Vitalie Spinu" . "spinuvit@gmail.com")
 		      (:url . "https://github.com/vspinu/math-symbol-lists"))])
+ (mct .
+      [(0 1 0)
+       ((emacs
+	 (28 1)))
+       "Minibuffer and Completions in Tandem" tar
+       ((:url . "https://gitlab.com/protesilaos/mct")
+	(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
+	(:authors
+	 ("Protesilaos Stavrou" . "info@protesilaos.com")))])
  (memory-usage .
 	       [(0 2)
 		nil "Analyze the memory usage of Emacs in various ways" single
