@@ -3,6 +3,8 @@
 ;; Copyright (C) 2013  João Távora
 
 ;; Version: 0.1
+;; Package-Version: 20151009.2031
+;; Package-Commit: 91a644662afb352475efad0b377713656f131e5c
 ;; Package-Requires: ((circe "1.2"))
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Keywords: convenience, tools

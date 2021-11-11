@@ -1,6 +1,6 @@
 ;;; cython-mode.el --- Major mode for editing Cython files
-;; Package-Version: 20190111.2150
-;; Package-Commit: 3f56484704742c1af33c9737642125c55b0634d5
+;; Package-Version: 20211111.1407
+;; Package-Commit: b75af38ce5c309cd84c1835220932e53e9a9adb6
 
 ;; License: Apache-2.0
 
@@ -266,16 +266,25 @@ Finds end of innermost nested class or method definition."
   (save-excursion
     ;; Move up the tree of nested `class' and `def' blocks until we
     ;; get to zero indentation, accumulating the defined names.
-    (let ((start t)
+    (let ((not-finished t)
           accum)
-      (while (or start (> (current-indentation) 0))
-        (setq start nil)
-        (cython-beginning-of-block)
-        (end-of-line)
-        (beginning-of-defun)
-        (if (looking-at (rx (0+ space) (or "def" "cdef" "cpdef" "class") (1+ space)
+      (skip-chars-backward " \t\r\n")
+      (cython-beginning-of-defun)
+      (while not-finished
+	(beginning-of-line)
+	(skip-chars-forward " \t\r\n")
+        (if (looking-at (rx (0+ space) (or "def" "class") (1+ space)
                             (group (1+ (or word (syntax symbol))))))
-            (push (match-string 1) accum)))
+	    (push (match-string 1) accum)
+	  (if (looking-at (rx (0+ space) (or "cdef" "cpdef") (1+ space) (1+ word) (1+ space)
+                              (group (1+ (or word (syntax symbol))))))
+	      (push (match-string 1) accum)))
+	(let ((indentation (current-indentation)))
+	  (if (= 0 indentation)
+	      (setq not-finished nil)
+	    (while (= indentation (current-indentation))
+	      (message "%s %s" indentation (current-indentation))
+	      (cython-beginning-of-defun)))))
       (if accum (mapconcat 'identity accum ".")))))
 
 ;;;###autoload
