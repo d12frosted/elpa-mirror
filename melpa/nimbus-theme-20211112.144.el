@@ -6,8 +6,8 @@
 ;;              See README.md for full list of contributors.
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
 ;; Version:     1.0.0
-;; Package-Version: 20211108.2255
-;; Package-Commit: 8885c140adb23e44b57c095d24888978cf65a242
+;; Package-Version: 20211112.144
+;; Package-Commit: ea929024e864fd21bbcf0993c81c25376c1852c5
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/m-cat/nimbus-theme
 ;; Keywords:    faces
@@ -196,7 +196,7 @@
    `(linum ((t (:inherit fringe :foreground ,line))))
    `(match ((t (:foreground ,black :background ,match))))
    `(popup-tip-face ((t (:background ,fg :foreground ,bg))))
-   `(trailing-whitespace ((t (:foreground ,white :underline t))))
+   `(trailing-whitespace ((t (:background ,red-bg))))
    `(vertical-border ((t (:foreground ,dark-gray))))
 
    ;;; Modes
@@ -650,8 +650,10 @@
 
    ;; highlight-indent-guides
    `(highlight-indent-guides-character-face ((t (:foreground ,indent))))
-   `(highlight-indent-guides-odd-face ((t (:background ,darkest-gray))))
-   `(highlight-indent-guides-even-face ((t (:background ,darker-gray))))
+   `(highlight-indent-guides-odd-face ((t (:background ,gray-bg))))
+   `(highlight-indent-guides-even-face ((t (:background ,gray-bg))))
+   `(highlight-indent-guides-top-odd-face ((t (:background ,blue-bg))))
+   `(highlight-indent-guides-top-even-face ((t (:background ,blue-bg))))
 
    ;; highlight-numbers
    `(highlight-numbers-number ((t (:foreground ,number))))
@@ -820,6 +822,12 @@
    `(magit-log-date ((t (:foreground ,date :slant normal))))
    `(magit-log-graph ((t (:foreground ,separator))))
 
+   ;; magit-commit-mark
+   ;; `(magit-commit-mark-read-face ((t ())))
+   ;; `(magit-commit-mark-star-face ((t ( ))))
+   `(magit-commit-mark-unread-face ((t (:inherit magit-hash :bold t))))
+   `(magit-commit-mark-urgent-face ((t (:foreground ,red))))
+
    ;; makey
    `(makey-key-mode-button-face ((t (:inherit font-lock-constant-face))))
 
@@ -949,6 +957,11 @@
    ;; paradox
    `(paradox-mode-line-face ((t (:foreground ,blue-bg :bold t))))
 
+   ;; paren
+   `(paren-face-match ((t (:foreground ,yellow))))
+   `(paren-face-mismatch ((t (:foreground ,nimbus-err))))
+   `(paren-face-no-match ((t (:foreground ,nimbus-warn))))
+
    ;; powerline
    `(powerline-active1 ((t (:foreground ,black :background ,darker-green))))
    `(powerline-active2 ((t (:foreground ,gray :background ,fringe))))
@@ -1015,7 +1028,7 @@
 
    ;; show-paren
    `(show-paren-match ((t (:foreground ,bright-yellow))))
-   `(show-paren-mismatch ((t (:inherit error :bold nil))))
+   `(show-paren-mismatch ((t (:foreground ,nimbus-err))))
 
    ;; slime
    `(sldb-restartable-frame-line-face ((t (:foreground ,green))))
@@ -1155,7 +1168,7 @@
    `(whitespace-empty ((t (:foreground ,gray :background "gray10"))))
    `(whitespace-hspace ((t (:foreground ,gray :background "grey11"))))
    `(whitespace-indentation ((t (:foreground ,gray :background "gray12"))))
-   `(whitespace-line ((t (:underline ,nimbus-err :bold nil))))
+   `(whitespace-line ((t (:background ,red-bg))))
    `(whitespace-newline ((t (:foreground ,gray))))
    `(whitespace-space ((t (:foreground ,gray))))
    `(whitespace-space-after-tab ((t (:foreground ,gray :background "gray13"))))
