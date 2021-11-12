@@ -10,27 +10,29 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `mct.el', and provides every other piece of information
 pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.1.0,
-released on 2021-10-22.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.2.0,
+released on 2021-11-12.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.2.0-dev.
+Current development target is 0.3.0-dev.
 
 Table of Contents
 ─────────────────
 
 1. COPYING
 2. Overview of mct.el
-3. Basic usage
+3. Usage
 .. 1. Cyclic behaviour
 .. 2. Selecting candidates
+.. 3. Other commands
 4. Installation
 5. Sample setup
 6. Keymaps
 7. Extensions
 8. Alternatives
-9. GNU Free Documentation License
-10. Indices
+9. Acknowledgements
+10. GNU Free Documentation License
+11. Indices
 .. 1. Function index
 .. 2. Variable index
 .. 3. Concept index
@@ -84,11 +86,40 @@ Table of Contents
   commands are on offer:
 
   ⁃ The blocklist (`mct-completion-blocklist') disables the
-    live-updating functionality for the commands specified therein.
+    live-updating functionality for the functions specified therein.
 
   ⁃ The passlist (`mct-completion-passlist') always shows the
-    Completions’ buffer for the designated command without accounting
+    Completions’ buffer for the designated function without accounting
     for the minimum input threshold.
+
+  The user option `mct-live-completion' controls the overall behaviour
+  of the Completions’ buffer:
+
+  ⁃ When nil, the user has to manually request completions, using the
+    regular activating commands.  The Completions’ buffer is never
+    updated live to match user input.  Updating has to be handled
+    manually.  This is like the out-of-the-box minibuffer completion
+    experience.
+
+  ⁃ When set to the value `visible', the Completions’ buffer is live
+    updated only if it is visible.  The actual display of the
+    completions is still handled manually.  For this reason, the
+    `visible' style does not read the `mct-minimum-input', meaning that
+    it will always try to live update the visible completions,
+    regardless of input length.
+
+  ⁃ When non-nil (the default), the Completions’ buffer is automatically
+    displayed once the `mct-minimum-input' is met and is hidden once the
+    input drops below that threshold.  While visible, the buffer is
+    updated live to match the user input.
+
+  ⁃ Note that every function in the `mct-completion-passlist' ignores
+    this option altogether.  This means that every such command will
+    always show the Completions’ buffer automatically and will always
+    update its contents live.  Same principle for every function
+    declared in the `mct-completion-blocklist', which will always
+    disable both the automatic display and live updating of the
+    Completions’ buffer.
 
   Other customisations:
 
@@ -122,8 +153,8 @@ Table of Contents
 [Basic usage] See section 3
 
 
-3 Basic usage
-═════════════
+3 Usage
+═══════
 
 3.1 Cyclic behaviour
 ────────────────────
@@ -165,10 +196,18 @@ Table of Contents
   minibuffer.  If point is anywhere else inside the buffer, those key
   bindings perform a regular line motion.  The commands are
   `mct-previous-completion-or-mini' and `mct-next-completion-or-mini'.
+  Both accept an optional numeric argument.  If the Nth line lies
+  outside the boundaries of the completions’ buffer, they move the point
+  to the minibuffer.
 
   The display of the `*Completions*' can be toggled at any time from
   inside the minibuffer with `C-l' (mnemonic is “[l]ist completions” and
   the command is `mct-list-completions-toggle').
+
+  By default, the `*Completions*' buffer appears in a window at the
+  bottom of the frame.  Users can change its placement by configuring
+  the variable `mct-display-buffer-action' (its doc string explains how
+  and provides sample code).
 
 
 3.2 Selecting candidates
@@ -177,47 +216,84 @@ Table of Contents
   There are several ways to select a completion candidate.
 
   1. Suppose that you are typing `mod' with the intent to select the
-     `modus-themes.el' buffer.  To complete the first candidate follow
-     up `mod' with the `TAB' key.  This is how you would do it with the
-     default minibuffer.  If done fast enough, no completions will be
-     shown (depending on your minimum input threshold and the
-     live-update delay).
-
-  2. Upon cycling through the completions, type `RET' to select the
-     candidate at point and exit the minibuffer.  This works for all
-     types of completion prompts.
-
-  3. For certain contexts where selecting a candidate does not
+     `modus-themes.el' buffer.  To force complete the first candidate
+     follow up `mod' with the `TAB' key (`minibuffer-force-complete').
+     This does not exit the minibuffer, meaning that it does not confirm
+     your choice.  It just expands your input to the first likely
+     candidate.  To confirm your choice, use `RET'.  If done fast
+     enough, no completions will be shown (depending on your minimum
+     input threshold and the live-update delay).  If you made a mistake,
+     just use `undo'.  If the candidates meet the
+     `completion-cycle-threshold' hit `TAB' again to switch between
+     them.
+  2. While cycling through the completions’ buffer, type `RET' to select
+     and confirm the current candidate (`mct-choose-completion-exit').
+     This works for all types of completion prompts.
+  3. Similar to the above, but without exiting the minibuffer (i.e. to
+     confirm your choice) is `mct-choose-completion-no-exit' which is
+     bound to `TAB' in the completions’ buffer.  This is particularly
+     useful for certain contexts where selecting a candidate does not
      necessarily mean that the process has to be finalised (e.g. when
-     using `find-file') selection in the `*Completions*' buffer can be
-     done with `TAB' which completes the item at point but does not exit
-     the minibuffer.  The command is instead renewed to update the list
-     of completions with the new candidates.
+     using `find-file').  In those cases, the event triggered by `TAB'
+     is followed by the renewal of the list of completions, where
+     relevant (e.g. `TAB' over a directory in `find-file', which then
+     shows the contents of that directory).
 
-  4. Select a candidate by its line number by typing `M-g M-g' in either
+     The command can correctly expand completion candidates even when
+     the active style in `completion-styles' is `partial-completion'.
+     In other words, if the minibuffer contains input like `~/G/P/m' and
+     the point is in the completions’ buffer over `Git/Projects/mct/'
+     the minibuffer’ contents will become `~/Git/Projects/mct/' and then
+     show the contents of that directory.
+  4. Type `M-e' (`mct-edit-completion') in the completions’ buffer to
+     place the current candidate in the minibuffer, without exiting the
+     session.  This allows you to edit the text before confirming it.
+     If point is in the minibuffer before performing this action, the
+     current candidate is either the one at the top of the completions’
+     buffer or that which is under the last known point in said buffer
+     (the last known position is reset when the window is deleted).
+     Internally, `mct-edit-completion' uses
+     `mct-choose-completion-no-exit' to expand the completion candidate,
+     so it retains its behaviour (as explained right above).
+  5. Select a candidate by its line number by typing `M-g M-g' in either
      the minibuffer or the `*Completions*' buffer.  This calls the
      command `mct-choose-completion-number' which internally enables
      line numbers and always makes the completions’ buffer visible.
+     Selection in this way exits the minibuffer.
 
-  5. In prompts that allow the selection of multiple candidates
+     NOTE: This method only works when `mct-completions-format' is set
+     to its default value of `one-column'.  The other formats show
+     completions in a grid view, which makes navigation based on line
+     numbers imprecise.
+  6. In prompts that allow the selection of multiple candidates
      (internally via the `completing-read-multiple' function) a `[CRM]'
      label is added to the text of the prompt.  The user thus knows that
-     pressing `M-RET' in the `*Completions*' will append the candidate
-     at point to the list of selections and keep the completions
-     available so that another item may be selected.  Any of the
-     aforementioned applicable methods can confirm the final selection.
-     If, say, you want to pick a total of three candidates, do `M-RET'
-     for the first two and `RET' for the last one.  In contexts that are
-     not CRM-powered, the `M-RET' has the same effect as `RET'.
+     pressing `M-RET' (`mct-choose-completion-dwim') in the
+     `*Completions*' will append the candidate at point to the list of
+     selections and keep the completions available so that another item
+     may be selected.  Any of the aforementioned applicable methods can
+     confirm the final selection.  If, say, you want to pick a total of
+     three candidates, do `M-RET' for the first two and `RET'
+     (`mct-choose-completion-exit') for the last one.  In contexts that
+     are not CRM-powered, the `M-RET' has the same effect as `TAB'
+     (`mct-choose-completion-no-exit').
 
-     NOTE 2021-10-22: this assumes the `crm-separator' to be constant
-     (the comma `,' character) but some commands `let' bind it to
-     something else, so the behaviour does not work as expected.  One
-     such case is `org-set-tags-command' which uses `:' as a separator.
 
-  6. Type `M-e' (`mct-edit-completion') in the completions’ buffer to
-     place the current candidate in the minibuffer, without exiting the
-     session.  This allows you to edit the text before confirming it.
+3.3 Other commands
+──────────────────
+
+  ⁃ Emacs 28 has the ability to group candidates inside the completions’
+    buffer under headings.  MCT provides motions that jump between such
+    heading, placing the point at the first candidate right below the
+    heading’s text.  Use `M-n' (`mct-next-completion-group') and `M-p'
+    (`mct-previous-completion-group') to move to the next or previous
+    one, respectively.  Both commands accept an optional numeric
+    argument.
+  ⁃ When using completion categories that involve file paths, such as
+    `find-file', the backspace key (`DEL') goes up a directory if point
+    is right after a path’s directory delimiter (a forward slash).
+    Otherwise it deletes a single character backwards.  The command’s
+    symbol is `mct-backward-updir'.
 
 
 4 Installation
@@ -242,14 +318,14 @@ Table of Contents
   │ cd manual-packages
   │ 
   │ # Clone this repo and name it "mct"
-  │ git clone https://gitlab.com/protesilaos/mct.el.git mct
+  │ git clone https://gitlab.com/protesilaos/mct.git mct
   └────
 
   Finally, in your `init.el' (or equivalent) evaluate this:
 
   ┌────
   │ ;; Make Elisp files in that directory available to the user.
-  │ (add-to-list 'load-path "~/.emacs.d/manual-packages/")
+  │ (add-to-list 'load-path "~/.emacs.d/manual-packages/mct")
   └────
 
   Everything is in place to set up the package.
@@ -277,6 +353,10 @@ Table of Contents
   │ (setq mct-minimum-input 3)
   │ (setq mct-live-update-delay 0.6)
   │ 
+  │ ;; NOTE: setting this variable with `setq', requires `mct-mode' to be
+  │ ;; reloaded.
+  │ (setq mct-completions-format 'one-column)
+  │ 
   │ ;; NOTE: `mct-completion-blocklist' can be used for commands with lots
   │ ;; of candidates, depending also on how low `mct-minimum-input' is.
   │ ;; With the settings shown here this is not required, otherwise I would
@@ -298,18 +378,53 @@ Table of Contents
   │ 	Info-menu
   │ 	vc-retrieve-tag))
   │ 
+  │ ;; You can place the Completions' buffer wherever you want, by following
+  │ ;; the syntax of `display-buffer'.  For example, try this:
+  │ 
+  │ ;; (setq mct-display-buffer-action
+  │ ;;       (quote ((display-buffer-reuse-window
+  │ ;;                display-buffer-in-side-window)
+  │ ;;               (side . left)
+  │ ;;               (slot . 99)
+  │ ;;               (window-width . 0.3))))
+  │ 
   │ (mct-mode 1)
   └────
 
-  Other useful extras from the Emacs source code:
+  Other useful extras from the Emacs source code (read their doc
+  strings):
 
   ┌────
+  │ ;; Add `orderless' to the completion styles, if you have it installed.
+  │ (setq completion-styles
+  │       '(basic substring initials flex partial-completion))
+  │ (setq completion-category-overrides
+  │ 	'((file (styles . (basic partial-completion initials substring)))))
+  │ 
+  │ (setq completion-cycle-threshold 2)
+  │ (setq completion-ignore-case t)
+  │ (setq completions-detailed t)
+  │ 
   │ (setq enable-recursive-minibuffers t)
+  │ (setq minibuffer-eldef-shorten-default t)
+  │ 
+  │ (setq read-buffer-completion-ignore-case t)
+  │ (setq read-file-name-completion-ignore-case t)
+  │ 
+  │ (setq resize-mini-windows t)
   │ (setq minibuffer-eldef-shorten-default t)
   │ 
   │ (file-name-shadow-mode 1)
   │ (minibuffer-depth-indicate-mode 1)
   │ (minibuffer-electric-default-mode 1)
+  │ 
+  │ ;;; Minibuffer history
+  │ (require 'savehist)
+  │ (setq savehist-file (locate-user-emacs-file "savehist"))
+  │ (setq history-length 10000)
+  │ (setq history-delete-duplicates t)
+  │ (setq savehist-save-minibuffer-history t)
+  │ (add-hook 'after-init-hook #'savehist-mode)
   └────
 
 
@@ -336,44 +451,169 @@ Table of Contents
   MCT only tweaks the default minibuffer.  To get more out of it,
   consider these exceptionally well-crafted extras:
 
-  `consult'
+  [Consult] by Daniel Mendler
         Adds several commands that make interacting with the minibuffer
-        more powerful.  There also are several packages that build on
-        it, such as `consult-dir'.
-  `embark'
+        more powerful.  There also are multiple packages that build on
+        it, such as [consult-dir] by Karthik Chikmagalur and
+        [consult-notmuch] by José Antonio Ortega Ruiz.
+
+  [Embark] by Omar Antolín Camarena
         Provides configurable contextual actions for completions and
-        many other constructs inside buffers.
-  `marginalia'
+        many other constructs inside buffers.  A genius package!
+
+  [Marginalia] by Daniel and Omar
         Displays informative annotations for all known types of
         completion candidates.
-  `orderless'
+
+  [Orderless] by Omar
         A completion style that matches a variety of patterns (regexp,
         flex, initialism, etc.) regardless of the order they appear in.
+
+
+[Consult] <https://github.com/minad/consult/>
+
+[consult-dir] <https://github.com/karthink/consult-dir>
+
+[consult-notmuch] <https://codeberg.org/jao/consult-notmuch>
+
+[Embark] <https://github.com/oantolin/embark/>
+
+[Marginalia] <https://github.com/minad/marginalia>
+
+[Orderless] <https://github.com/oantolin/orderless/>
 
 
 8 Alternatives
 ══════════════
 
-  The only alternative I have used that is conceptually close to MCT is
-  `vertico'.  Vertico is a more mature and feature-rich package, while
-  its maintainer, Daniel Mendler, is an accomplished programmer.
-  Whereas MCT is mostly an excuse to practice my Elisp skills.
+  Like MCT, these alternatives provide a thin layer of functionality
+  over the built-in infrastructure.  They all make for a natural
+  complement to the standard Emacs experience (also [Extensions]).
+
+  [Vertico] by Daniel Mendler
+        this is a more mature and feature-rich package with a large user
+        base and a highly competent maintainer.
+
+        Vertico has some performance optimisations on how candidates are
+        sorted and presented, which means that it displays results right
+        away without any noticeable performance penalty.  Whereas MCT
+        does not change the underlying behaviour of how candidates are
+        displayed.  As such, MCT will be slower in scenaria where there
+        are lots of candidates because core Emacs lacks those
+        optimisations.  One such case is with the `describe-symbol'
+        (`C-h o') prompt.  If the user asks for the completions’ buffer
+        without inputting any character (so without narrowing the list),
+        there will be a noticeable delay before the buffer is rendered.
+        This is mitigated in MCT by the requirement for
+        `mct-minimum-input', though the underlying mechanics remain in
+        tact.
+
+        In terms of the interaction model, the main difference between
+        Vertico and MCT is that the former uses the minibuffer by
+        default and shows the completions there.  The minibuffer is
+        expanded to show the candidates in a vertical list.  Whereas MCT
+        keeps the `*Completions*' buffer and the minibuffer as separate
+        entities, the way standard Emacs does it.
+
+        The presence of a fully fledged buffer means that the user can
+        invoke all relevant commands at their disposal, such as to write
+        the buffer to a file for future review, use Isearch to move
+        around, copy a string or rectangle to a register, and so on.
+        Also, the placement of such a buffer is configurable (as with
+        all buffers—though refer, in particular, to
+        `mct-display-buffer-action').
+
+        Vertico also supports buffer display, though only for the
+        placement of the buffer.  There is an extension for that in the
+        git repository called `vertico-buffer.el'.  Note, however, that
+        the common combination of Vertico and Embark means that users
+        can always place the list of completion candidates in a
+        standalone buffer by means of Embark’s collect/export
+        facilities.
+
+  [Elmo - Embark Live MOde for Emacs] by Karthik Chikmagalur
+        this package is best described as a sibling of MCT both in terms
+        of its functionality and overall interaction model.  In fact,
+        the cyclic motions that are at the core of the MCT experience
+        were first developed as part of my personal Emacs setup to cycle
+        between the minibuffer and Embark’s “live completions” buffer.
+        That was until Emacs28 got some refinements to the presentation
+        of the `*Completions*' buffer which allowed for a vertical,
+        single-column view.
+
+        Elmo can, in principle, have identical functionality with MCT,
+        given that the only substantive difference is that the former
+        uses an Embark buffer to show live-updating completions, while
+        the latter relies on the generic `*Completions*' buffer.
+
+        For users who are on Emacs 27, Elmo is a better choice because
+        MCT only works as intended with Emacs 28 or higher.
+
+  Icomplete and fido-mode (built-in, multiple authors)
+        Icomplete is closer in spirit to Vertico, as it too uses the
+        minibuffer to display completion candidates.  By default, it
+        presents the list horizontally, though there exists
+        `icomplete-vertical-mode' (and `fido-vertical-mode').
+
+        For our purposes, Icomplete and Fido are the same in terms of
+        the paradigm they follow.  The latter is a re-spin of the
+        former, as it adjusts certain variables and binds some commands
+        for the convenience of the end-user.  `fido-mode' and its
+        accoutrements are defined in `icomplete.el'.
+
+        What MCT borrows from Icomplete is the `mct-backward-updir'
+        command, the tidying of the shadowed file paths, and ideas for
+        the input delay (explained elsewhere in this document).
+        Internally, I also learnt how to extend local keymaps by
+        studying `icomplete.el'.
+
+        I had used Icomplete for several months before moving to what
+        now has become `mct.el'.  I think it is excellent at providing a
+        thin layer over the built-in infrastructure.
 
 
-9 GNU Free Documentation License
-════════════════════════════════
+[Extensions] See section 7
+
+[Vertico] <https://github.com/minad/vertico>
+
+[Elmo - Embark Live MOde for Emacs] <https://github.com/karthink/elmo>
 
 
-10 Indices
+9 Acknowledgements
+══════════════════
+
+  MCT is meant to be a collective effort.  Every bit of help matters.
+
+  Author/maintainer
+        Protesilaos Stavrou.
+
+  Contributions to code or documentation
+        James Norman Vladimir Cash, Philip Kaludercic.
+
+  Ideas and user feedback
+        Jonathan Irving, Kostadin Ninev, Manuel Uberti, Philip
+        Kaludercic.
+
+  Inspiration for certain features
+        `icomplete.el' (built-in—multiple authors), Daniel Mendler
+        (`vertico'), Omar Antolín Camarena (`embark',
+        `live-completions'), Štěpán Němec (`stripes.el').
+
+
+10 GNU Free Documentation License
+═════════════════════════════════
+
+
+11 Indices
 ══════════
 
-10.1 Function index
+11.1 Function index
 ───────────────────
 
 
-10.2 Variable index
+11.2 Variable index
 ───────────────────
 
 
-10.3 Concept index
+11.3 Concept index
 ──────────────────
