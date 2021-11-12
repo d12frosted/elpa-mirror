@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out d1176098c1b47ddaad9b66da68d559abfb1c6f13
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/treemacs/
-  to /tmp/treemacsIIKl6y/treemacs-20211107.1818
+  to /tmp/treemacs0KSesb/treemacs-20211107.1818
     Changelog.org -> Changelog.org
     icons => icons
   ! src/elisp/treemacs-async.el -> treemacs-async.el
@@ -264,44 +264,44 @@ Created treemacs-20211107.1818.tar containing:
   treemacs-20211107.1818/treemacs-visuals.el
   treemacs-20211107.1818/treemacs-workspaces.el
   treemacs-20211107.1818/treemacs.el
-Built treemacs in 6.641s, finished at 2021-11-12T11:03:03+0000
+Built treemacs in 6.248s, finished at 2021-11-12T14:51:41+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  565 Nov 12 11:03 packages/treemacs-20211107.1818.entry
-1.4M -rw-r--r-- 1 root root 1.4M Nov 12 11:03 packages/treemacs-20211107.1818.tar
- 36K -rw-r--r-- 1 root root  34K Nov 12 11:03 packages/treemacs-all-the-icons-20211107.1818.el
-4.0K -rw-r--r-- 1 root root  431 Nov 12 11:03 packages/treemacs-all-the-icons-20211107.1818.entry
+4.0K -rw-r--r-- 1 root root  565 Nov 12 14:51 packages/treemacs-20211107.1818.entry
+1.4M -rw-r--r-- 1 root root 1.4M Nov 12 14:51 packages/treemacs-20211107.1818.tar
+ 36K -rw-r--r-- 1 root root  34K Nov 12 14:51 packages/treemacs-all-the-icons-20211107.1818.el
+4.0K -rw-r--r-- 1 root root  431 Nov 12 14:51 packages/treemacs-all-the-icons-20211107.1818.entry
 4.0K -rw-r--r-- 1 root root 1.2K Nov 12 11:03 packages/treemacs-all-the-icons-badge.svg
-4.0K -rw-r--r-- 1 root root   29 Nov 12 11:03 packages/treemacs-all-the-icons-readme.txt
-4.0K -rw-r--r-- 1 root root  705 Nov 12 11:03 packages/treemacs-all-the-icons.log
-4.0K -rw-r--r-- 1 root root 1.2K Nov 12 11:03 packages/treemacs-badge.svg
-8.0K -rw-r--r-- 1 root root 5.5K Nov 12 11:03 packages/treemacs-evil-20211019.1654.el
-4.0K -rw-r--r-- 1 root root  397 Nov 12 07:23 packages/treemacs-evil-20211019.1654.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 12 07:23 packages/treemacs-evil-badge.svg
-4.0K -rw-r--r-- 1 root root   27 Nov 12 07:23 packages/treemacs-evil-readme.txt
-4.0K -rw-r--r-- 1 root root  226 Nov 12 11:03 packages/treemacs-evil.log
- 12K -rw-r--r-- 1 root root 8.7K Nov 12 07:23 packages/treemacs-icons-dired-20211011.1824.el
-4.0K -rw-r--r-- 1 root root  392 Nov 12 07:23 packages/treemacs-icons-dired-20211011.1824.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 12 07:23 packages/treemacs-icons-dired-badge.svg
-4.0K -rw-r--r-- 1 root root   69 Nov 12 07:23 packages/treemacs-icons-dired-readme.txt
-4.0K -rw-r--r-- 1 root root  161 Nov 12 11:03 packages/treemacs-icons-dired.log
-8.0K -rw-r--r-- 1 root root 7.4K Nov 12 07:23 packages/treemacs-magit-20211010.1005.el
-4.0K -rw-r--r-- 1 root root  426 Nov 12 07:23 packages/treemacs-magit-20211010.1005.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 12 07:23 packages/treemacs-magit-badge.svg
-4.0K -rw-r--r-- 1 root root  277 Nov 12 07:23 packages/treemacs-magit-readme.txt
-   0 -rw-r--r-- 1 root root    0 Nov 12 11:03 packages/treemacs-magit.log
-8.0K -rw-r--r-- 1 root root 5.5K Nov 12 07:23 packages/treemacs-persp-20210114.2135.el
-4.0K -rw-r--r-- 1 root root  435 Nov 12 07:23 packages/treemacs-persp-20210114.2135.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 12 07:23 packages/treemacs-persp-badge.svg
-4.0K -rw-r--r-- 1 root root   69 Nov 12 07:23 packages/treemacs-persp-readme.txt
-   0 -rw-r--r-- 1 root root    0 Nov 12 11:03 packages/treemacs-persp.log
-8.0K -rw-r--r-- 1 root root 5.8K Nov 12 07:23 packages/treemacs-perspective-20210116.1155.el
-4.0K -rw-r--r-- 1 root root  495 Nov 12 07:23 packages/treemacs-perspective-20210116.1155.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 12 07:23 packages/treemacs-perspective-badge.svg
-4.0K -rw-r--r-- 1 root root   73 Nov 12 07:23 packages/treemacs-perspective-readme.txt
-   0 -rw-r--r-- 1 root root    0 Nov 12 11:03 packages/treemacs-perspective.log
-8.0K -rw-r--r-- 1 root root 5.1K Nov 12 07:23 packages/treemacs-projectile-20210107.1251.el
-4.0K -rw-r--r-- 1 root root  453 Nov 12 07:23 packages/treemacs-projectile-20210107.1251.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 12 07:23 packages/treemacs-projectile-badge.svg
-4.0K -rw-r--r-- 1 root root   38 Nov 12 07:23 packages/treemacs-projectile-readme.txt
-   0 -rw-r--r-- 1 root root    0 Nov 12 11:03 packages/treemacs-projectile.log
-4.0K -rw-r--r-- 1 root root   52 Nov 12 11:03 packages/treemacs-readme.txt
+4.0K -rw-r--r-- 1 root root   29 Nov 12 14:51 packages/treemacs-all-the-icons-readme.txt
+4.0K -rw-r--r-- 1 root root  244 Nov 12 14:51 packages/treemacs-all-the-icons.log
+4.0K -rw-r--r-- 1 root root 1.2K Nov 12 14:51 packages/treemacs-badge.svg
+8.0K -rw-r--r-- 1 root root 5.6K Nov 12 14:51 packages/treemacs-evil-20211019.1654.el
+4.0K -rw-r--r-- 1 root root  397 Nov 12 14:51 packages/treemacs-evil-20211019.1654.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 12 11:03 packages/treemacs-evil-badge.svg
+4.0K -rw-r--r-- 1 root root   27 Nov 12 14:51 packages/treemacs-evil-readme.txt
+4.0K -rw-r--r-- 1 root root  226 Nov 12 14:51 packages/treemacs-evil.log
+ 12K -rw-r--r-- 1 root root 8.6K Nov 12 14:51 packages/treemacs-icons-dired-20211011.1824.el
+4.0K -rw-r--r-- 1 root root  392 Nov 12 11:03 packages/treemacs-icons-dired-20211011.1824.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 12 11:03 packages/treemacs-icons-dired-badge.svg
+4.0K -rw-r--r-- 1 root root   69 Nov 12 11:03 packages/treemacs-icons-dired-readme.txt
+4.0K -rw-r--r-- 1 root root  240 Nov 12 14:51 packages/treemacs-icons-dired.log
+8.0K -rw-r--r-- 1 root root 7.4K Nov 12 11:03 packages/treemacs-magit-20211010.1005.el
+4.0K -rw-r--r-- 1 root root  426 Nov 12 11:03 packages/treemacs-magit-20211010.1005.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 12 11:03 packages/treemacs-magit-badge.svg
+4.0K -rw-r--r-- 1 root root  277 Nov 12 11:03 packages/treemacs-magit-readme.txt
+4.0K -rw-r--r-- 1 root root  174 Nov 12 14:51 packages/treemacs-magit.log
+8.0K -rw-r--r-- 1 root root 5.5K Nov 12 11:03 packages/treemacs-persp-20210114.2135.el
+4.0K -rw-r--r-- 1 root root  435 Nov 12 11:03 packages/treemacs-persp-20210114.2135.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 12 11:03 packages/treemacs-persp-badge.svg
+4.0K -rw-r--r-- 1 root root   69 Nov 12 11:03 packages/treemacs-persp-readme.txt
+4.0K -rw-r--r-- 1 root root  149 Nov 12 14:51 packages/treemacs-persp.log
+8.0K -rw-r--r-- 1 root root 5.8K Nov 12 11:03 packages/treemacs-perspective-20210116.1155.el
+4.0K -rw-r--r-- 1 root root  495 Nov 12 11:03 packages/treemacs-perspective-20210116.1155.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 12 11:03 packages/treemacs-perspective-badge.svg
+4.0K -rw-r--r-- 1 root root   73 Nov 12 11:03 packages/treemacs-perspective-readme.txt
+   0 -rw-r--r-- 1 root root    0 Nov 12 14:51 packages/treemacs-perspective.log
+8.0K -rw-r--r-- 1 root root 5.1K Nov 12 11:03 packages/treemacs-projectile-20210107.1251.el
+4.0K -rw-r--r-- 1 root root  453 Nov 12 11:03 packages/treemacs-projectile-20210107.1251.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 12 11:03 packages/treemacs-projectile-badge.svg
+4.0K -rw-r--r-- 1 root root   38 Nov 12 11:03 packages/treemacs-projectile-readme.txt
+   0 -rw-r--r-- 1 root root    0 Nov 12 14:51 packages/treemacs-projectile.log
+4.0K -rw-r--r-- 1 root root   52 Nov 12 14:51 packages/treemacs-readme.txt

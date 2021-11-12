@@ -4,10 +4,10 @@ Source:  https://github.com/erlang/otp.git
 
 Updating /mnt/store/melpa/working/erlang/
 Checking out origin/HEAD
-Checking out 5abe90f1831759ddd0a3b7b7de426652619a4a9d
+Checking out 99943ae054dcb13432c2a4e193b8d240efb7247a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/erlang/
-  to /tmp/erlangNrNhmA/erlang-20210315.1640
+  to /tmp/erlangUSETOm/erlang-20211112.1232
   ! lib/tools/emacs/erlang-edoc.el -> erlang-edoc.el
   ! lib/tools/emacs/erlang-eunit.el -> erlang-eunit.el
   ! lib/tools/emacs/erlang-flymake.el -> erlang-flymake.el
@@ -18,21 +18,23 @@ Copying files (->) and directories (=>)
   ! lib/tools/emacs/erlang-test.el -> erlang-test.el
   ! lib/tools/emacs/erlang.el -> erlang.el
   ! lib/tools/emacs/erldoc.el -> erldoc.el
-Created erlang-20210315.1640.tar containing:
-  erlang-20210315.1640/
-  erlang-20210315.1640/erlang-edoc.el
-  erlang-20210315.1640/erlang-eunit.el
-  erlang-20210315.1640/erlang-flymake.el
-  erlang-20210315.1640/erlang-pkg.el
-  erlang-20210315.1640/erlang-skels-old.el
-  erlang-20210315.1640/erlang-skels.el
-  erlang-20210315.1640/erlang-start.el
-  erlang-20210315.1640/erlang-test.el
-  erlang-20210315.1640/erlang.el
-  erlang-20210315.1640/erldoc.el
-Built erlang in 16.328s, finished at 2021-11-12T10:01:22+0000
+Created erlang-20211112.1232.tar containing:
+  erlang-20211112.1232/
+  erlang-20211112.1232/erlang-edoc.el
+  erlang-20211112.1232/erlang-eunit.el
+  erlang-20211112.1232/erlang-flymake.el
+  erlang-20211112.1232/erlang-pkg.el
+  erlang-20211112.1232/erlang-skels-old.el
+  erlang-20211112.1232/erlang-skels.el
+  erlang-20211112.1232/erlang-start.el
+  erlang-20211112.1232/erlang-test.el
+  erlang-20211112.1232/erlang.el
+  erlang-20211112.1232/erldoc.el
+Built erlang in 20.531s, finished at 2021-11-12T13:46:50+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  259 Nov 12 10:01 packages/erlang-20210315.1640.entry
 432K -rw-r--r-- 1 root root 430K Nov 12 10:01 packages/erlang-20210315.1640.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 12 10:01 packages/erlang-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Nov 12 10:01 packages/erlang-readme.txt
+4.0K -rw-r--r-- 1 root root  259 Nov 12 13:46 packages/erlang-20211112.1232.entry
+432K -rw-r--r-- 1 root root 430K Nov 12 13:46 packages/erlang-20211112.1232.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 12 13:46 packages/erlang-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Nov 12 13:46 packages/erlang-readme.txt

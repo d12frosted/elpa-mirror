@@ -1,11 +1,11 @@
 (hide-mode-line .
-		[(20190922 115)
+		[(20211112 1400)
 		 ((emacs
 		   (24 4)))
 		 "minor mode that hides/masks your modeline" single
-		 ((:commit . "88888825b5b27b300683e662fa3be88d954b1cea")
+		 ((:commit . "bc5d293576c5e08c29e694078b96a5ed85631942")
 		  (:authors
 		   ("Henrik Lissner <http://github/hlissner>"))
-		  (:maintainer "Henrik Lissner" . "henrik@lissner.net")
+		  (:maintainer "Henrik Lissner" . "git@henrik.io")
 		  (:keywords "frames" "mode-line")
 		  (:url . "https://github.com/hlissner/emacs-hide-mode-line"))])
