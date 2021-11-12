@@ -11,7 +11,7 @@
 ;; Maintainer: TEC <tec@tecosaur.com>
 ;; Version: 0.0.1
 ;; Package-Version: 20210729.1808
-;; Package-Commit: 25c8d839cf78332c15b5762024ccb5f7c90b7a11
+;; Package-Commit: a49235c918d626f5053344604cb1c464960762af
 ;; Homepage: https://github.com/tecosaur/lexic
 ;; Package-Requires: ((emacs "26.3"))
 
