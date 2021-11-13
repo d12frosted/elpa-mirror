@@ -58,8 +58,8 @@ Table of Contents
 
   Consult is fully compatible with completion systems based on the
   standard Emacs `completing-read' API, notably the default completion
-  system, [Vertico], [Icomplete]/[Icomplete-vertical], [Selectrum] and
-  [Embark].
+  system, [Vertico], [Icomplete]/[Icomplete-vertical], [Selectrum],
+  [Embark] and [Mct].
 
   This package keeps the completion system specifics to a minimum. The
   ability of the Consult commands to work well with arbitrary completion
@@ -102,6 +102,8 @@ Table of Contents
 [Selectrum] <https://github.com/raxod502/selectrum>
 
 [Embark] <https://github.com/oantolin/embark/>
+
+[Mct] <https://github.com/protesilaos/mct>
 
 [Ivy] <https://github.com/abo-abo/swiper#ivy>
 
@@ -243,12 +245,6 @@ Table of Contents
   • `consult-line-multi': Search across multiple buffers. By default
     search across project buffers. If invoked with a prefix argument
     search across all buffers.  Behaves like `consult-line'.
-  • `consult-isearch': During an Isearch session, this command picks a
-    search string from history and continues the search with the newly
-    selected string. Outside of Isearch, the command allows you to pick
-    a string from the history and starts a new
-    Isearch. `consult-isearch' acts as a drop-in replacement for
-    `isearch-edit-string'.
   • `consult-multi-occur': Replacement for `multi-occur' which uses
     `completing-read-multiple'.
   • `consult-keep-lines': Replacement for `keep/flush-lines' which uses
@@ -329,6 +325,12 @@ Table of Contents
     You can invoke this command from the minibuffer. In that case
     `consult-history' uses the history stored in the
     `minibuffer-history-variable'.
+  • `consult-isearch-history': During an Isearch session, this command
+    picks a search string from history and continues the search with the
+    newly selected string. Outside of Isearch, the command allows you to
+    pick a string from the history and starts a new
+    Isearch. `consult-isearch-history' acts as a drop-in replacement for
+    `isearch-edit-string'.
 
 
 2.9 Modes
@@ -356,7 +358,9 @@ Table of Contents
 2.11 Miscellaneous
 ──────────────────
 
-  • `consult-apropos': Replacement for `apropos' with completion.
+  • `consult-apropos': Replacement for `apropos' with completion. As a
+    better alternative, you can run `embark-export' from commands like
+    `M-x' or `describe-symbol'.
   • `consult-man': Find Unix man page, via Unix `apropos' or `man -k'.
     `consult-man' opens the selected man page using the Emacs `man'
     command.
@@ -680,7 +684,7 @@ Table of Contents
   │ 		    :category 'bookmark
   │ 		    :face     'font-lock-keyword-face
   │ 		    :history  'bookmark-view-history
-  │ 		    :action   #'consult--bookmark-jump
+  │ 		    :action   #'consult--bookmark-action
   │ 		    :items    #'bookmark-view-names)
   │ 	      'append)
   │ 
@@ -865,10 +869,10 @@ Table of Contents
   │ 	 ("M-s k" . consult-keep-lines)
   │ 	 ("M-s u" . consult-focus-lines)
   │ 	 ;; Isearch integration
-  │ 	 ("M-s e" . consult-isearch)
+  │ 	 ("M-s e" . consult-isearch-history)
   │ 	 :map isearch-mode-map
-  │ 	 ("M-e" . consult-isearch)                 ;; orig. isearch-edit-string
-  │ 	 ("M-s e" . consult-isearch)               ;; orig. isearch-edit-string
+  │ 	 ("M-e" . consult-isearch-history)         ;; orig. isearch-edit-string
+  │ 	 ("M-s e" . consult-isearch-history)       ;; orig. isearch-edit-string
   │ 	 ("M-s l" . consult-line)                  ;; needed by consult-line to detect isearch
   │ 	 ("M-s L" . consult-line-multi))           ;; needed by consult-line to detect isearch
   │ 
@@ -1061,21 +1065,33 @@ Table of Contents
 5 Recommended packages
 ══════════════════════
 
-  It is highly recommended to install the following package combination:
+  I personally use and recommended this combination of packages:
 
   • consult: This package
-  • [vertico], [selectrum] or [icomplete-vertical]: Vertical completion
-    systems (Icomplete-vertical is only needed for Emacs 27, built-in on
-    Emacs 28)
+  • [vertico]: Fast and minimal vertical completion system
   • [marginalia]: Annotations for the completion candidates
   • [embark and embark-consult]: Action commands, which can act on the
     completion candidates
   • [orderless]: Completion style which offers flexible candidate
     filtering
 
-  There exist packages which integrate Consult with special programs or
-  with other packages in the Emacs ecosystem. You may want to install
-  some of them depending on your personal preferences.
+  There exist other completion UIs beside Vertico, which are supported
+  by Consult.  Give them a try and find out which interaction model fits
+  best for you!
+
+  • [selectrum by Radon Rosborough]: Alternative vertical completion
+    system.
+  • [icomplete-vertical by Omar Antolín Camarena]: Vertical completion
+    system based on Icomplete.  Icomplete-vertical is only needed for
+    Emacs 27, built-in on Emacs 28.
+  • [embark by Omar Antolín Camarena]: Completion based on live updating
+    Embark collect buffer.
+  • [mct by Protesilaos Stavrou]: Minibuffer and Completions in Tandem,
+    which builds on the default completion UI.
+
+  You can integrated Consult with special programs or with other
+  packages in the wider Emacs ecosystem. You may want to install some of
+  theses packages depending on your preferences and requirements.
 
   • [consult-bibtex]: Consult interface for bibliographies.
   • [consult-company]: Completion at point using the company backends.
@@ -1086,6 +1102,8 @@ Table of Contents
   • [consult-notmuch]: Access the [Notmuch] email system using Consult.
   • [consult-spotify]: Access the Spotify API and control your local
     music player.
+  • [consult-projectile]: Projectile integration, buffer sources for
+    Projectile.
   • [consult-recoll]: Access the [Recoll] desktop full-text search using
     Consult.
   • [consult-yasnippet]: Integration with yasnippet.
@@ -1097,37 +1115,30 @@ Table of Contents
   follow a similar spirit or offer functionality based on
   `completing-read'.
 
-  • [corfu], [company]: Completion systems for `completion-at-point'
-    using small popups.
+  • [corfu]: Completion systems for `completion-at-point' using small
+    popups (Alternative to [company]).
   • [bookmark-view]: Store window configuration as bookmarks, possible
     integration with `consult-buffer'.
-  • [bibtex-actions]: Versatile frontend for bibliographies, frontend
-    agnostic.
+  • [citar]: Versatile package for citation insertion and
+    bibliographies.
   • [flyspell-correct]: Apply spelling corrections by selecting via
     `completing-read'.
-  • [wgrep]: Editing of grep buffers, can be used together with
-    `consult-grep' via `embark-export'.
+  • [wgrep]: Editing of grep buffers, use together with `consult-grep'
+    via `embark-export'.
+  • [all-the-icons-completion]: Icons for the completion UI.
 
-  Note that all packages are independent and can potentially be
-  exchanged with alternative components, since there exist no hard
+  Note that all packages are independent and can be exchanged with
+  alternative components, since there exist no hard
   dependencies. Furthermore it is possible to get started with only
   default completion and Consult and add more components later to the
-  mix. For example Embark can be omitted if action support is not
-  desired.
-
-  The Selectrum repository provides a [set of scripts] which allow
-  experimenting with multiple package combinations of completion systems
-  and Consult. After cloning the repository, you can execute the scripts
-  with `cd selectrum/test; ./run.sh <package-combo.el>'. The scripts do
-  not modify your existing Emacs configuration, but create a separate
-  Emacs configuration in `/tmp'.
+  mix. For example you can omit Marginalia if you don't need
+  annotations. I highly recommend the Embark package, but in order to
+  familarize yourself with the other components, you can first start
+  without it - or you could even start with Embark right away and add
+  the other components later on.
 
 
 [vertico] <https://github.com/minad/vertico>
-
-[selectrum] <https://github.com/raxod502/selectrum>
-
-[icomplete-vertical] <https://github.com/oantolin/icomplete-vertical>
 
 [marginalia] <https://github.com/minad/marginalia>
 
@@ -1135,9 +1146,18 @@ Table of Contents
 
 [orderless] <https://github.com/oantolin/orderless>
 
+[selectrum by Radon Rosborough] <https://github.com/raxod502/selectrum>
+
+[icomplete-vertical by Omar Antolín Camarena]
+<https://github.com/oantolin/icomplete-vertical>
+
+[embark by Omar Antolín Camarena] <https://github.com/oantolin/embark>
+
+[mct by Protesilaos Stavrou] <https://gitlab.com/protesilaos/mct>
+
 [consult-bibtex] <https://github.com/mohkale/consult-bibtex>
 
-[consult-company] <https://github.com/mohkale/consult-yasnippet>
+[consult-company] <https://github.com/mohkale/consult-company>
 
 [consult-dir] <https://github.com/karthink/consult-dir>
 
@@ -1153,6 +1173,8 @@ Table of Contents
 
 [consult-spotify] <https://codeberg.org/jao/espotify>
 
+[consult-projectile] <https://gitlab.com/OlMon/consult-projectile/>
+
 [consult-recoll] <https://codeberg.org/jao/consult-recoll>
 
 [Recoll] <https://www.lesbonscomptes.com/recoll/>
@@ -1167,14 +1189,14 @@ Table of Contents
 
 [bookmark-view] <https://github.com/minad/bookmark-view>
 
-[bibtex-actions] <https://github.com/bdarcus/bibtex-actions>
+[citar] <https://github.com/bdarcus/citar>
 
 [flyspell-correct] <https://github.com/d12frosted/flyspell-correct>
 
 [wgrep] <https://github.com/mhayashi1120/Emacs-wgrep>
 
-[set of scripts]
-<https://github.com/raxod502/selectrum/tree/master/test>
+[all-the-icons-completion]
+<https://github.com/iyefrat/all-the-icons-completion>
 
 
 6 Bug reports
@@ -1236,9 +1258,19 @@ Table of Contents
   [lexical binding].  Consult often uses a functional programming style,
   relying on lambdas and lexical closures.
 
+  The Selectrum repository provides a [set of scripts] which allow
+  experimenting with multiple package combinations of completion systems
+  and Consult. After cloning the repository, you can execute the scripts
+  with `cd selectrum/test; ./run.sh <package-combo.el>'. The scripts do
+  not modify your existing Emacs configuration, but create a separate
+  Emacs configuration in `/tmp'.
+
 
 [lexical binding]
 <https://www.gnu.org/software/emacs/manual/html_node/elisp/Lexical-Binding.html>
+
+[set of scripts]
+<https://github.com/raxod502/selectrum/tree/master/test>
 
 
 7 Contributions
@@ -1310,6 +1342,7 @@ Table of Contents
   • [Karthik Chikmagalur] ([consult-dir])
   • [Mohsin Kaleem] ([consult-bibtex], [consult-company],
     [consult-eglot], [consult-yasnippet])
+  • [Marco Pawłowski] ([consult-projectile])
 
 
 [Counsel] <https://github.com/abo-abo/swiper#counsel>
@@ -1388,6 +1421,10 @@ Table of Contents
 [consult-eglot] <https://github.com/mohkale/consult-eglot>
 
 [consult-yasnippet] <https://github.com/mohkale/consult-yasnippet>
+
+[Marco Pawłowski] <https://gitlab.com/OlMon>
+
+[consult-projectile] <https://gitlab.com/OlMon/consult-projectile>
 
 
 9 Indices
