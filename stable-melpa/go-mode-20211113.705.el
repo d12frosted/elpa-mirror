@@ -8,8 +8,8 @@
 
 ;; Author: The go-mode Authors
 ;; Version: 1.5.0
-;; Package-Version: 20210509.2353
-;; Package-Commit: 34974346d1f74fa835d745514c9fe9afccce8dae
+;; Package-Version: 20211113.705
+;; Package-Commit: 5bd8efab64352dccf31dbc99c4fc96d3b985ef27
 ;; Keywords: languages go
 ;; URL: https://github.com/dominikh/go-mode.el
 ;;
@@ -300,9 +300,7 @@ You can install gogetdoc with 'go get -u github.com/zmb3/gogetdoc'."
       (error "Cannot use gogetdoc on a buffer without a file name"))
   (let ((posn (format "%s:#%d" (file-truename buffer-file-name) (1- (position-bytes point))))
         (out (godoc--get-buffer "<at point>")))
-  (with-current-buffer (get-buffer-create "*go-gogetdoc-input*")
-    (setq buffer-read-only nil)
-    (erase-buffer)
+  (with-temp-buffer
     (go--insert-modified-files)
     (call-process-region (point-min) (point-max) "gogetdoc" nil out nil
                          "-modified"
