@@ -1,0 +1,11 @@
+(osx-lib .
+	 [(20211113 1849)
+	  ((emacs
+	    (24 4)))
+	  "Basic functions for Apple/OSX" single
+	  ((:commit . "06744dae53b4ade99b0cd733823e1c8f6b0aa2c4")
+	   (:authors
+	    ("Raghav Kumar Gautam" . "raghav@apache.org"))
+	   (:maintainer "Raghav Kumar Gautam" . "raghav@apache.org")
+	   (:keywords "apple" "applescript" "osx" "finder" "emacs" "elisp" "vpn" "speech")
+	   (:url . "https://github.com/raghavgautam/osx-lib"))])
