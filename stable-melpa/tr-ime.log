@@ -4,10 +4,10 @@ Source:  https://github.com/trueroad/tr-emacs-ime-module.git
 
 Updating /mnt/store/melpa/working/tr-ime/
 Checking out origin/HEAD
-Checking out 92591f7c0b94f8b1875f1078d1ba3be40848f0b8
+Checking out c35be849f2cf5470e9d9cc40ff54e285e5170e93
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tr-ime/
-  to /tmp/tr-imeuVyMGz/tr-ime-20210202.1057
+  to /tmp/tr-imepJaQGi/tr-ime-20211114.440
   ! lisp/tr-ime-debug.el -> tr-ime-debug.el
   ! lisp/tr-ime-documentfeed.el -> tr-ime-documentfeed.el
   ! lisp/tr-ime-download.el -> tr-ime-download.el
@@ -25,29 +25,31 @@ Copying files (->) and directories (=>)
   ! lisp/tr-ime-workaround-isearch.el -> tr-ime-workaround-isearch.el
   ! lisp/tr-ime-workaround-prefix-key.el -> tr-ime-workaround-prefix-key.el
   ! lisp/tr-ime.el -> tr-ime.el
-Created tr-ime-20210202.1057.tar containing:
-  tr-ime-20210202.1057/
-  tr-ime-20210202.1057/tr-ime-debug.el
-  tr-ime-20210202.1057/tr-ime-documentfeed.el
-  tr-ime-20210202.1057/tr-ime-download.el
-  tr-ime-20210202.1057/tr-ime-font.el
-  tr-ime-20210202.1057/tr-ime-hook.el
-  tr-ime-20210202.1057/tr-ime-isearch.el
-  tr-ime-20210202.1057/tr-ime-openstatus.el
-  tr-ime-20210202.1057/tr-ime-pkg.el
-  tr-ime-20210202.1057/tr-ime-prefix-key.el
-  tr-ime-20210202.1057/tr-ime-reconversion.el
-  tr-ime-20210202.1057/tr-ime-recv-notify.el
-  tr-ime-20210202.1057/tr-ime-subclassify.el
-  tr-ime-20210202.1057/tr-ime-sync.el
-  tr-ime-20210202.1057/tr-ime-thread-message.el
-  tr-ime-20210202.1057/tr-ime-workaround-inconsistent.el
-  tr-ime-20210202.1057/tr-ime-workaround-isearch.el
-  tr-ime-20210202.1057/tr-ime-workaround-prefix-key.el
-  tr-ime-20210202.1057/tr-ime.el
-Built tr-ime in 4.744s, finished at 2021-11-14T10:14:47+0000
+Created tr-ime-20211114.440.tar containing:
+  tr-ime-20211114.440/
+  tr-ime-20211114.440/tr-ime-debug.el
+  tr-ime-20211114.440/tr-ime-documentfeed.el
+  tr-ime-20211114.440/tr-ime-download.el
+  tr-ime-20211114.440/tr-ime-font.el
+  tr-ime-20211114.440/tr-ime-hook.el
+  tr-ime-20211114.440/tr-ime-isearch.el
+  tr-ime-20211114.440/tr-ime-openstatus.el
+  tr-ime-20211114.440/tr-ime-pkg.el
+  tr-ime-20211114.440/tr-ime-prefix-key.el
+  tr-ime-20211114.440/tr-ime-reconversion.el
+  tr-ime-20211114.440/tr-ime-recv-notify.el
+  tr-ime-20211114.440/tr-ime-subclassify.el
+  tr-ime-20211114.440/tr-ime-sync.el
+  tr-ime-20211114.440/tr-ime-thread-message.el
+  tr-ime-20211114.440/tr-ime-workaround-inconsistent.el
+  tr-ime-20211114.440/tr-ime-workaround-isearch.el
+  tr-ime-20211114.440/tr-ime-workaround-prefix-key.el
+  tr-ime-20211114.440/tr-ime.el
+Built tr-ime in 4.986s, finished at 2021-11-14T13:49:34+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  366 Nov 14 10:14 packages/tr-ime-20210202.1057.entry
 112K -rw-r--r-- 1 root root 110K Nov 14 10:14 packages/tr-ime-20210202.1057.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 14 10:14 packages/tr-ime-badge.svg
-4.0K -rw-r--r-- 1 root root 1.8K Nov 14 10:14 packages/tr-ime-readme.txt
+4.0K -rw-r--r-- 1 root root  365 Nov 14 13:49 packages/tr-ime-20211114.440.entry
+112K -rw-r--r-- 1 root root 110K Nov 14 13:49 packages/tr-ime-20211114.440.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 14 13:49 packages/tr-ime-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Nov 14 13:49 packages/tr-ime-readme.txt
