@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "4.0.0"))
-;; Package-Version: 20210729.929
-;; Package-Commit: 69e7dcb50278ff0d7b220cda9562d4fe7e4db0ec
+;; Package-Version: 20210904.1643
+;; Package-Commit: bdf438847e05f1f9c08c69e93c3d5e717b589074
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://github.com/stardiviner/org-tag-beautify
@@ -80,6 +80,7 @@
                   ("idea" . ,(all-the-icons-faicon "lightbulb-o" :face '(:foreground "gold")))
                   ("Org" . ,(all-the-icons-fileicon "org" :face '(:foreground "SeaGreen")))
                   ("Emacs" . ,(all-the-icons-fileicon "emacs" :face '(:foreground "LightSlateBlue")))
+                  ("org_mode" . ,(all-the-icons-fileicon "org" :face '(:foreground "SeaGreen")))
                   ("Wiki" . ,(all-the-icons-fileicon "mediawiki" :face '(:foreground "gainsboro")))
                   ("language" . ,(all-the-icons-material "language" :face '(:foreground "SkyBlue")))
                   ("translate" . ,(all-the-icons-material "translate" :face '(:foreground "SkyBlue")))
@@ -103,6 +104,8 @@
                   ("label" . ,(all-the-icons-material "label_outline" :face '(:foreground "gold")))
                   ("info" . ,(all-the-icons-material "info_outline" :face '(:foreground "CornflowerBlue")))
                   ("question" . ,(all-the-icons-material "help_outline" :face '(:foreground "CornflowerBlue")))
+                  ("answer" . ,(all-the-icons-faicon "comments-o" :face '(:foreground "CornflowerBlue")))
+                  ("example" . ,(all-the-icons-faicon "info" :face '(:foreground "CornflowerBlue")))
                   ("error" . ,(all-the-icons-material "error" :face '(:foreground "CornflowerBlue")))
                   ("quote" . ,(all-the-icons-material "format_quote" :face '(:foreground "CornflowerBlue")))
                   ("lock" . ,(all-the-icons-material "lock" :face '(:foreground "red")))
