@@ -4,8 +4,6 @@
 
 ;; Author: Taylor R. Campbell <campbell+paredit@mumble.net>
 ;; Version: 25beta
-;; Package-Version: 20191121.2328
-;; Package-Commit: 8330a41e8188fe18d3fa805bb9aa529f015318e8
 ;; Created: 2005-07-31
 ;; Keywords: lisp
 
