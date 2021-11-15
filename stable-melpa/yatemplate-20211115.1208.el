@@ -4,8 +4,8 @@
 
 ;; Author: Wieland Hoffmann <themineo+yatemplate@gmail.com>
 ;; URL: https://github.com/mineo/yatemplate
-;; Package-Version: 20200625.1336
-;; Package-Commit: 399564fc1afa100aa6049ac6de11fb065882d230
+;; Package-Version: 20211115.1208
+;; Package-Commit: 275745ce1482edc08efb0b7807bc86d832bcc734
 ;; Version: 1.0
 ;; Package-Requires: ((yasnippet "0.8.1") (emacs "24.3"))
 ;; Keywords: files, convenience
@@ -147,7 +147,8 @@ Particularly useful when combined with `.dir-locals.el'.")
         (cl-remove-if
          (lambda (pair)
            (ignore-errors (eq 'yatemplate-expand-yas-buffer (aref (cdr pair) 1))))
-         auto-insert-alist)))
+         auto-insert-alist))
+  nil)
 
 ;;; Hooks
 (defun yatemplate--find-file-hook ()
@@ -172,6 +173,12 @@ Particularly useful when combined with `.dir-locals.el'.")
   (remove-hook 'find-file-hook 'yatemplate--find-file-hook)
   (remove-hook 'after-save-hook 'yatemplate--after-save-hook)
   (yatemplate-remove-old-yatemplates-from-alist))
+
+(defun yatemplate-reload-all ()
+  "Reload all templates."
+  (interactive)
+  (yatemplate-remove-old-yatemplates-from-alist)
+  (yatemplate-fill-alist))
 
 (provide 'yatemplate)
 ;;; yatemplate.el ends here

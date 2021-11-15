@@ -4,8 +4,8 @@
 
 ;; Author: Lars Andersen <expez@expez.com>
 ;; URL: https://www.github.com/expez/company-quickhelp
-;; Package-Version: 20210515.2212
-;; Package-Commit: 530b29380f0f95ae338cbe089693d786e6f53d86
+;; Package-Version: 20211115.1335
+;; Package-Commit: 3ca2708b4e5190205aca01d65fe1b391963a53f9
 ;; Keywords: company popup documentation quickhelp
 ;; Version: 2.2.0
 ;; Package-Requires: ((emacs "24.3") (company "0.8.9") (pos-tip "0.4.6"))
@@ -46,7 +46,7 @@
   "Documentation popups for `company-mode'"
   :group 'company)
 
-(defcustom company-quickhelp-use-propertized-text nil
+(defcustom company-quickhelp-use-propertized-text t
   "Allow the text to have properties like color, font size, etc."
   :type '(choice (boolean :tag "Allow"))
   :group 'company-quickhelp)
