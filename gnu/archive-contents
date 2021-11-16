@@ -499,15 +499,15 @@
 	   ("Gary D. Foster" . "Gary.Foster@Corp.Sun.COM"))
 	  (:maintainer "Luke Lee" . "luke.yx.lee@gmail.com"))])
  (csharp-mode .
-	      [(1 0 2)
+	      [(1 1 0)
 	       ((emacs
 		 (26 1)))
 	       "C# mode derived mode" tar
 	       ((:url . "https://github.com/emacs-csharp/csharp-mode")
+		(:keywords "c#" "languages" "oop" "mode")
 		(:maintainer "Jostein Kjønigsen" . "jostein@gmail.com")
 		(:authors
-		 ("Theodor Thornhill" . "theo@thornhill.no"))
-		(:keywords "c#" "languages" "oop" "mode"))])
+		 ("Theodor Thornhill" . "theo@thornhill.no")))])
  (csv-mode .
 	   [(1 16)
 	    ((emacs

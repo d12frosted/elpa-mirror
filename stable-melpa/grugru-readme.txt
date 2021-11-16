@@ -127,8 +127,8 @@
    The change is saved to file ~grugru-edit-save-file~.
    You can assign completing function to ~grugru-completing-function~.
 ; Functions Defining grugru
-;; ~(grugru-define-global GETTER STRINGS-OR-FUNCTION)~
-   Define global grugru with GETTER and STRINGS-OR-FUNCTION.
+;; ~(grugru-define-global GETTER STRINGS-OR-GENERATOR)~
+   Define global grugru with GETTER and STRINGS-OR-GENERATOR.
 
    GETTER is a function, or a symbol which is alias defined in ~grugru-getter-alist~.
    GETTER also can be positive or negative number, which means the number of characters.
@@ -136,7 +136,7 @@
    If it is a function, it should return cons cell ~(begin . end)~
    which express things at point, and with no argument.
 
-   STRINGS-OR-FUNCTION is list of string or function.
+   STRINGS-OR-GENERATOR is list of string or function.
 
    List of string: If it includes string gotten by GETTER,
    the things gotten by GETTER is replaced to next string.
@@ -150,8 +150,8 @@
      ;; Or replace "no" at point, to "yes".
      (grugru-define-global 'symbol '("yes" "no"))
 
-;; ~(grugru-define-on-major-mode MAJOR GETTER STRINGS-OR-FUNCTION)~
-   Define major-mode local grugru with GETTER and STRINGS-OR-FUNCTION.
+;; ~(grugru-define-on-major-mode MAJOR GETTER STRINGS-OR-GENERATOR)~
+   Define major-mode local grugru with GETTER and STRINGS-OR-GENERATOR.
 
    Same as ~grugru-define-global~, but grugru defined with this is applied
    only in buffer on MAJOR major-mode.  MAJOR can be list of major-modes.
@@ -160,8 +160,8 @@
      ;; only in lisp-interaction-mode.
      (grugru-define-on-major-mode lisp-interaction-mode 'symbol '("yes" "no"))
 
-;; ~(grugru-define-local GETTER STRINGS-OR-FUNCTION)~
-   Define buffer-local grugru with GETTER and STRINGS-OR-FUNCTION.
+;; ~(grugru-define-local GETTER STRINGS-OR-GENERATOR)~
+   Define buffer-local grugru with GETTER and STRINGS-OR-GENERATOR.
 
    Same as ~grugru-define-global~, but grugru defined with this is applied
    only in buffer where eval this expression.
@@ -174,18 +174,18 @@
                  (grugru-define-local 'word '("I" "my" "me" "mine"))))
 
 
-   Also, you can run it interactively (though cannot set STRINGS-OR-FUNCTION to a function).
-   On interactive usage, by default, GETTER is the length of car of STRINGS-OR-FUNCTION,
-   and STRINGS-OR-FUNCTION is a list which has 2 elements, constructed interactively.
-   With prefix argument, you can select GETTER and length of STRINGS-OR-FUNCTION.
+   Also, you can run it interactively (though cannot set STRINGS-OR-GENERATOR to a function).
+   On interactive usage, by default, GETTER is the length of car of STRINGS-OR-GENERATOR,
+   and STRINGS-OR-GENERATOR is a list which has 2 elements, constructed interactively.
+   With prefix argument, you can select GETTER and length of STRINGS-OR-GENERATOR.
    Default GETTER is set by ~grugru-local-interactively-default-getter~.
 
 ;; ~(grugru-define-multiple &rest CLAUSES)~
    This function define multiple grugru.
 
    Each ~CLAUSE~ is:
-   - ~(GETTER . STRINGS-OR-FUNCTION)~: means ~(grugru-define-global GETTER  STRINGS-OR-FUNCTION)~.
-   - ~(MAJOR (GETTER . STRINGS-OR-FUNCTION)...)~: means ~(grugru-define-on-major-mode MAJOR GETTER  STRINGS-OR-FUNCTION)...~.
+   - ~(GETTER . STRINGS-OR-GENERATOR)~: means ~(grugru-define-global GETTER  STRINGS-OR-GENERATOR)~.
+   - ~(MAJOR (GETTER . STRINGS-OR-GENERATOR)...)~: means ~(grugru-define-on-major-mode MAJOR GETTER  STRINGS-OR-GENERATOR)...~.
    - List of above.
 
 
@@ -221,7 +221,7 @@
 
 ;; ~(grugru-define-function NAME () &optional DOCSTRING &rest BODY)~
    Define function which can roate only grugru defined by BODY.
-   Each element of BODY is ~(GETTER . STRINGS-OR-FUNCTION)~,
+   Each element of BODY is ~(GETTER . STRINGS-OR-GENERATOR)~,
    which meaning is same as ~grugru-define-*~ functions.
 
      ;; The function `three-state' rotate like "water"=>"ice"=>"vapor"=>"water",
@@ -277,7 +277,7 @@
 
 ;; ~grugru-select-function-generate-number~
    This variable have how many strings are generated from function
-   in ~STRINGS-OR-FUNCTION~, on ~grugru-select~.
+   in ~STRINGS-OR-GENERATOR~, on ~grugru-select~.
 
 ;; ~grugru-local-interactively-default-getter~
    Indicate default getter on interactive usage of ~grugru-define-local~.
