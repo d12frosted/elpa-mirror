@@ -3,3 +3,33 @@ Fetcher: github
 Source:  https://github.com/Kungsgeten/ink-mode.git
 
 Updating /mnt/store/melpa/working/ink-mode/
+Checking out origin/HEAD
+Checking out 63c7ef39acf434a1682951bcf352e8fe1e1ac6d9
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ink-mode/
+  to /tmp/ink-mode8Eha2M/ink-mode-20201105.2242
+    ink-mode.el -> ink-mode.el
+  ! doc/WritingWithInk.texi -> WritingWithInk.texi
+    snippets => snippets
+Created /tmp/ink-mode8Eha2M/ink-mode-20201105.2242/WritingWithInk.info
+Created ink-mode-20201105.2242.tar containing:
+  ink-mode-20201105.2242/
+  ink-mode-20201105.2242/WritingWithInk.info
+  ink-mode-20201105.2242/dir
+  ink-mode-20201105.2242/ink-mode-pkg.el
+  ink-mode-20201105.2242/ink-mode.el
+  ink-mode-20201105.2242/snippets/
+  ink-mode-20201105.2242/snippets/ink-mode/
+  ink-mode-20201105.2242/snippets/ink-mode/choice_once
+  ink-mode-20201105.2242/snippets/ink-mode/choice_sticky
+  ink-mode-20201105.2242/snippets/ink-mode/condition
+  ink-mode-20201105.2242/snippets/ink-mode/condition_multiline
+  ink-mode-20201105.2242/snippets/ink-mode/divert
+  ink-mode-20201105.2242/snippets/ink-mode/knot
+  ink-mode-20201105.2242/snippets/ink-mode/stitch
+Built ink-mode in 15.074s, finished at 2021-11-16T15:43:10+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  385 Nov 16 15:43 packages/ink-mode-20201105.2242.entry
+220K -rw-r--r-- 1 root root 220K Nov 16 15:43 packages/ink-mode-20201105.2242.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 16 15:43 packages/ink-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  380 Nov 16 15:43 packages/ink-mode-readme.txt

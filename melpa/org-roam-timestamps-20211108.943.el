@@ -8,7 +8,7 @@
 ;; Modified: September 27, 2021
 ;; Version: 1.0.0
 ;; Package-Version: 20211108.943
-;; Package-Commit: 8f0ce6f163a293b289c3c8b3567a67997826dae5
+;; Package-Commit: f4de72c09cd2cace275ede19c39a56b68ca56b83
 ;; Keywords: calendar outlines files
 ;; Homepage: https://github.com/thomas/org-roam-timestamps
 ;; Package-Requires: ((emacs "26.1") (org-roam "2.0.0"))
