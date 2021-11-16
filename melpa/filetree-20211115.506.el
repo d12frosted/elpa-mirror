@@ -5,7 +5,7 @@
 ;; Author: Ketan Patel <knpatel401@gmail.com>
 ;; URL: https://github.com/knpatel401/filetree
 ;; Package-Version: 20211115.506
-;; Package-Commit: 884b3f3e84499b876d49be1c0c34a96b16a22c51
+;; Package-Commit: 4f97329cdc628d2b9424114a981d046daab50d61
 ;; Package-Requires: ((emacs "27.1") (dash "2.12.0") (helm "3.7.0"))
 ;; Version: 1.0.1
 

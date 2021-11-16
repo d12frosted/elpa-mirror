@@ -143,6 +143,14 @@ The heredoc marker can be used to specify the language:
 
 Both `LANG` and `__LANG__` are supported, see `separedit-heredoc-language-regexp-alist` for more detail.
 
+### Edit C/C++ macro
+
+    #define█FOO(a, b)    \      ->      #define█FOO(a, b)
+    do {                 \              do {
+        auto _a = (a);   \                  auto _a = (a);
+        auto _b = (b);   \                  auto _b = (b);
+    } while (false)                     } while (false)
+
 ### Edit value form of variable in help/helpful buffer
 
 Describe a variable, move cursor to the local/global value form, press <kbd>C-c '</kbd> to edit it.
