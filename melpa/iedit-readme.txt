@@ -36,10 +36,11 @@ when in Iedit mode - it toggles hiding non-matching lines.
 
  - With digit prefix argument 0, only occurrences in current function are matched
 
- - Restricting symbols in current region can be done by pressing C-; again
-
  - Last renaming refactoring is remembered and can be applied to other buffers
    later
+
+ - Once in iedit mode, you can select a region and hit C-; again to restrict
+   the search area to the region
 
  - Restricting the search area to just the current line can be done by
    pressing M-I.

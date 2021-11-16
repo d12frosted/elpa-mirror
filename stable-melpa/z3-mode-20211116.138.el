@@ -1,8 +1,8 @@
 ;;; z3-mode.el --- A z3/SMTLIBv2 interactive development environment -*-lexical-binding: t-*-
 
 ;; Version: 0.0.1
-;; Package-Version: 20151120.2255
-;; Package-Commit: 163dc01d59e9880b4dc188d4e1ad84d6c0c852e1
+;; Package-Version: 20211116.138
+;; Package-Commit: 0356cbe1e1e2b780ba0ddb4aaa055fa246a67931
 ;; Author: Zephyr Pellerin <zephyr.pellerin@gmail.com>
 ;; Homepage: https://github.com/zv/z3-mode
 ;; Keywords: z3 yices mathsat smt beaver
@@ -37,7 +37,7 @@
   :group 'languages
   :prefix "z3-")
 
-(defcustom z3-solver-cmd "/home/zv/Development/z3/build/z3"
+(defcustom z3-solver-cmd (executable-find "z3")
   "The command used when you run the solver.
 
 The following solvers are currently supported
