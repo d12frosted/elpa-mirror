@@ -5,7 +5,7 @@
 ;; Maintainer: Sid Kasivajhula <sid@countvajhula.com>
 ;; URL: https://github.com/countvajhula/buffer-ring
 ;; Package-Version: 20211008.1508
-;; Package-Commit: 7336ae668c0b26e3a53bcd36577ea84a8090ec21
+;; Package-Commit: a2bc0252eae7a787219627512d5d54984b97e1a2
 ;; Created: 2009-4-16
 ;; Version: 0.3.3
 ;; Package-Requires: ((emacs "25.1") (dynaring "0.3") (s "1.12.0") (ht "2.0"))

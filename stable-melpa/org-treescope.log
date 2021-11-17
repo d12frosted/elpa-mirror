@@ -1,0 +1,33 @@
+Package: org-treescope
+Fetcher: gitlab
+Source:  https://gitlab.com/mtekman/org-treescope.el.git
+
+Updating /mnt/store/melpa/working/org-treescope/
+Checking out origin/HEAD
+Checking out 905029a9e2ce6ed325bb8e10f59dc589c181d148
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/org-treescope/
+  to /tmp/org-treescopecdm5Gq/org-treescope-20200503.1609
+    org-treescope-calendarranges.el -> org-treescope-calendarranges.el
+    org-treescope-cyclestates.el -> org-treescope-cyclestates.el
+    org-treescope-datehelper.el -> org-treescope-datehelper.el
+    org-treescope-faces.el -> org-treescope-faces.el
+    org-treescope-modehelper.el -> org-treescope-modehelper.el
+    org-treescope-query.el -> org-treescope-query.el
+    org-treescope.el -> org-treescope.el
+Created org-treescope-20200503.1609.tar containing:
+  org-treescope-20200503.1609/
+  org-treescope-20200503.1609/org-treescope-calendarranges.el
+  org-treescope-20200503.1609/org-treescope-cyclestates.el
+  org-treescope-20200503.1609/org-treescope-datehelper.el
+  org-treescope-20200503.1609/org-treescope-faces.el
+  org-treescope-20200503.1609/org-treescope-modehelper.el
+  org-treescope-20200503.1609/org-treescope-pkg.el
+  org-treescope-20200503.1609/org-treescope-query.el
+  org-treescope-20200503.1609/org-treescope.el
+Built org-treescope in 5.074s, finished at 2021-11-17T03:02:19+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  393 Nov 17 03:02 packages/org-treescope-20200503.1609.entry
+ 40K -rw-r--r-- 1 root root  40K Nov 17 03:02 packages/org-treescope-20200503.1609.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 17 03:02 packages/org-treescope-badge.svg
+4.0K -rw-r--r-- 1 root root  178 Nov 17 03:02 packages/org-treescope-readme.txt
