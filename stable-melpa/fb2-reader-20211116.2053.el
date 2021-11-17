@@ -4,8 +4,8 @@
 
 ;; Author: Dmitriy Pshonko <jumper047@gmail.com>
 ;; URL: https://github.com/jumper047/fb2-reader
-;; Package-Version: 20211113.37
-;; Package-Commit: a803af99bc30eedcad91194afd90658796917610
+;; Package-Version: 20211116.2053
+;; Package-Commit: b93dfcacbe3ea1147642ee4e1dab2e2c36c4f6a3
 ;; Keywords: multimedia, ebook, fb2
 ;; Version: 0.1.0
 
@@ -118,14 +118,29 @@
   :type 'integer
   :group 'fb2-reader)
 
-(defface fb2-reader-info-field-face
+(defface fb2-reader-default
+  '((t (:inherit default)))
+   "Default face for fb2-reader buffer."
+   :group 'fb2-reader)
+
+(defface fb2-reader-title
+  '((t (:height 1.4 :inherit default)))
+   "Face for titles in fb2-reader buffer."
+   :group 'fb2-reader)
+
+(defface fb2-reader-info-field
   '((t (:weight bold)))
   "Face for field name in book info buffer."
   :group 'fb2-reader)
 
-(defface fb2-reader-info-category-face
+(defface fb2-reader-info-category
   '((t (:weight bold :underline 't)))
   "Face for category name in book info buffer."
+  :group 'fb2-reader)
+
+(defface fb2-reader-header-line
+  '((t (:height 1.4 :inherit 'header-line)))
+  "Face for header line with current title."
   :group 'fb2-reader)
 
 (defvar fb2-reader-index-filename "index.el"
@@ -153,6 +168,9 @@
 (defvar-local fb2-reader-header-line-toc nil
   "List of chapters for header line.")
 
+(defvar-local fb2-reader-rendering-future nil
+  "Rendering future for current buffer")
+
 (defconst fb2-reader-header-line-format
   '(:eval (list (propertize " " 'display '((space :align-to 0)))
 		(fb2-reader-header-line-text))))
@@ -165,7 +183,7 @@
   "Recursively parse ITEM and insert it into the buffer.
 BOOK is whole xml tree (it is needed in case)"
 
-  (or face (setq face 'default))
+  (or face (setq face '((:inherit 'fb2-reader-default))))
   (or tags (setq tags '()))
   ;; (or alignment (setq alignment 'left))
   (or alignment (setq alignment 'full))
@@ -260,8 +278,10 @@ BOOK is whole book xml tree, TAGS - fb2 tags, CURR-TAG - current fb2 tag."
 (defun fb2-reader--parse-title (book body tags face curr-tag)
   "Parse and insert BODY (BOOK 's part) as title."
 
-  (let* ((title-fill-column (round (/ fb2-reader-page-width fb2-reader-title-height)))
-	 (title-face (cons (cons :height (list fb2-reader-title-height)) face))
+  (let* ((height (face-attribute 'fb2-reader-title :height))
+	 (title-fill-column (round (/ fb2-reader-page-width height)))
+	 (title-face (cons '(:inherit 'fb2-reader-title)
+			   (assq-delete-all :inherit face)))
 	 (fill-column-backup fill-column)
 	 start
 	 end)
@@ -277,7 +297,7 @@ BOOK is whole book xml tree, TAGS - fb2 tags, CURR-TAG - current fb2 tag."
     ;; (For some reason when fill-region invoked inside fb2r-format-string,
     ;; every space or tab added to line not inherit :height property, and
     ;; resulting line length became longer or shorter than planned)
-    (fb2-reader--recenter-region start (point) fb2-reader-title-height)
+    (fb2-reader--recenter-region start (point) height)
     (setq end (point))
     (insert "\n")
     (add-text-properties start end '(fb2-reader-title t))))
@@ -292,7 +312,12 @@ LINELEN is maximum line's length (page width)"
 (defun fb2-reader--recenter-region (begin end height)
   "Recenter region from BEGIN to END.
 HEIGHT is font's height (should be coefficient).
-Every string's length in region should be less or equal fill column."
+Every string's length in region should be less or equal fill column.
+Because of strange `fill-region' behavior every line in region should
+be recenered \(For some reason when `fill-region' invoked inside
+fb2r-format-string,every space or tab added to line not inherit
+:height property, and resulting line length became longer or shorter
+than planned\)"
   (let ((lines (number-sequence (line-number-at-pos begin)
 				(line-number-at-pos end)))
 	linestr prefix)
@@ -441,16 +466,16 @@ BOOK should contain whole book's xml tree."
 	   (fb2-reader--parse-cover book item))
 	  (t
 	   (if  (> (length body) 1)
-	       (progn (insert (format "\n%s\n" (fb2-reader--format-symbol current-tag 'fb2-reader-info-category-face)))
+	       (progn (insert (format "\n%s\n" (fb2-reader--format-symbol current-tag 'fb2-reader-info-category)))
 		      (dolist (subitem body)
 			(fb2-reader-parse-metadata book subitem)))
-	     (insert (format "%s: %s\n" (fb2-reader--format-symbol current-tag 'fb2-reader-info-field-face) (if (stringp (car body)) (car body) " -"))))))))
+	     (insert (format "%s: %s\n" (fb2-reader--format-symbol current-tag 'fb2-reader-info-field) (if (stringp (car body)) (car body) " -"))))))))
 
 (defun fb2-reader--format-symbol (symbol face)
   "Take SYMBOL, transform it it readable string and apply FACE."
-  (let ((prop (cond ((equal face 'fb2-reader-info-field-face)
+  (let ((prop (cond ((equal face 'fb2-reader-info-field)
 		     'fb2-reader-info-field)
-		    ((equal face 'fb2-reader-info-category-face)
+		    ((equal face 'fb2-reader-info-category)
 		     'fb2-reader-info-category))))
     (propertize (s-capitalize (s-replace "-" " " (symbol-name symbol)))
 		'face face prop t)))
@@ -675,7 +700,7 @@ header line and text for echo."
   (save-excursion
     (goto-char (point-min))
     (let ((max-length (round (/ fb2-reader-page-width
-				fb2-reader-title-height)))
+				(face-attribute 'fb2-reader-header-line :height))))
 	  start next-change plist displayed echo index)
       (while (not (eobp))
 	(setq start (point)
@@ -695,7 +720,7 @@ header line and text for echo."
 			     displayed))
 	    (push (list (point)
 			(propertize displayed
-				    'face (list (cons :height (list fb2-reader-title-height)))
+				    'face 'fb2-reader-header-line
 				    'help-echo echo))
 		  index)))
 	(goto-char next-change))
@@ -860,12 +885,14 @@ presented."
   
   (when-let* ((idx-entry (alist-get file (fb2-reader-cache-index) nil nil 'equal))
 	      (modified-time (cl-first idx-entry))
-	      (page-width (cl-third idx-entry)))
+	      (page-width (cl-third idx-entry))
+	      (title-height (cl-fourth idx-entry)))
     (if actual-only
 	(and (equal modified-time
 		    (file-attribute-modification-time
 		     (file-attributes file)))
-	     (equal page-width fb2-reader-page-width))
+	     (equal page-width fb2-reader-page-width)
+	     (equal title-height (face-attribute 'fb2-reader-title :height)))
       't)))
 
 
@@ -894,7 +921,8 @@ Replace already added data if presented."
 		       (file-attribute-modification-time
 			(file-attributes fb2-reader-file-name))
  		       cache-filename
-		       fb2-reader-page-width)))
+		       fb2-reader-page-width
+		       (face-attribute 'fb2-reader-title :height))))
     (with-temp-file cache-filename
       (set-buffer-file-coding-system 'utf-8)
       (insert ";; fb2-reader.el -- read fb2 books  ")
@@ -939,25 +967,30 @@ Replace already added data if presented."
 	(setq buffer-read-only nil)
 	(set-buffer-modified-p nil)))))
 
-(defun fb2-reader--refresh-buffer (&optional buffer)
-  "Rerender book opened in BUFFER."
-  (setq buffer (or buffer (current-buffer)))
-  (let ((book (fb2-reader-parse-file
-	       (buffer-local-value 'fb2-reader-file-name buffer))))
+(defun fb2-reader--refresh-buffer ()
+  "Rerender book in current buffer."
+  (let ((book (fb2-reader-parse-file fb2-reader-file-name))
+	(buffer (current-buffer)))
     (fb2-reader-save-pos buffer)
-    (fb2-reader-render-async book
-			     (lambda (result)
-			       (with-current-buffer buffer
-				 (fb2-reader-add-to-cache fb2-reader-file-name
-							  (read (concat "#" result)))
-				 (fb2-reader-restore-buffer)
-				 (if fb2-reader-title-in-headerline
-				     (setq fb2-reader-header-line-toc (fb2-reader-create-headerline-data)))
-				 (message "Document %s reloaded" fb2-reader-file-name))))))
+    (setq fb2-reader-rendering-future
+	  (fb2-reader-render-async
+	   book
+	   (lambda (result)
+	     (with-current-buffer buffer
+	       (fb2-reader-add-to-cache fb2-reader-file-name
+					(read (concat "#" result)))
+	       (fb2-reader-restore-buffer)
+	       (if fb2-reader-title-in-headerline
+		   (setq fb2-reader-header-line-toc (fb2-reader-create-headerline-data)))
+	       (setq fb2-reader-rendering-future nil)
+	       (message "Document %s reloaded" fb2-reader-file-name)))))))
 
 (defun fb2-reader-refresh ()
   "Reread current book from disk, render and display it."
   (interactive)
+  (unless (or (null fb2-reader-rendering-future)
+	      (async-ready fb2-reader-rendering-future))
+    (user-error "Wait until current rendering process finished"))
   (fb2-reader--assert-mode-p)
   (when (y-or-n-p "During refresh current position may change.  Proceed? ")
     (message "Refreshing book asynchronously.")
@@ -1194,19 +1227,22 @@ and overall width of the page exceeds defined width."
 	(fb2-reader-restore-buffer)
       (setq book (fb2-reader-parse-file fb2-reader-file-name))
       (setq-local cursor-type nil)
-      (insert (propertize "Rendering in process, please wait." 'face (list (cons :height (list fb2-reader-title-height)))))
+      (insert (propertize "Rendering in process, please wait." 'face 'fb2-reader-title))
       (fill-region (point-min) (point-max) 'center)
-      (fb2-reader-render-async book
-			       (lambda (result)
-				 (with-current-buffer bufname
-				   ;; For some reason propertized string returned from async process
-				   ;; loses hash at it's beginning.
-				   (fb2-reader-add-to-cache fb2-reader-file-name
-							    (read (concat "#" result)))
-				   (fb2-reader-restore-buffer)
-				   (kill-local-variable 'cursor-type) ; can't remember why this string is here..
-				   (if fb2-reader-title-in-headerline
-				       (setq fb2-reader-header-line-toc (fb2-reader-create-headerline-data)))))))
+      (setq fb2-reader-rendering-future
+	    (fb2-reader-render-async
+	     book
+	     (lambda (result)
+	       (with-current-buffer bufname
+		 ;; For some reason propertized string returned from async process
+		 ;; loses hash at it's beginning.
+		 (fb2-reader-add-to-cache fb2-reader-file-name
+					  (read (concat "#" result)))
+		 (fb2-reader-restore-buffer)
+		 (kill-local-variable 'cursor-type) ; can't remember why this string is here..
+		 (if fb2-reader-title-in-headerline
+		     (setq fb2-reader-header-line-toc (fb2-reader-create-headerline-data)))
+		 (setq fb2-reader-rendering-future nil))))))
 
     (fb2-reader-imenu-setup)
     (if fb2-reader-title-in-headerline
