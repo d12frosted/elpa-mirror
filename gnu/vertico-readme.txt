@@ -38,8 +38,7 @@ Table of Contents
   tables. Vertico only provides the completion UI but aims to be
   flexible and extensible. Additional enhancements are available as
   [extensions] or [complementary packages]. The code base is small and
-  maintainable (`vertico.el' is only about 600 lines of code without
-  white space and comments).
+  maintainable (`vertico.el' is well below 1000 lines of code).
 
 
 [extensions] See section 5
@@ -107,6 +106,12 @@ Table of Contents
   │ (use-package vertico
   │   :init
   │   (vertico-mode)
+  │ 
+  │   ;; Different scroll margin
+  │   ;; (setq vertico-scroll-margin 0)
+  │ 
+  │   ;; Show more candidates
+  │   ;; (setq vertico-count 20)
   │ 
   │   ;; Grow and shrink the Vertico minibuffer
   │   ;; (setq vertico-resize t)
@@ -433,13 +438,14 @@ Table of Contents
   There are other interactive completion UIs, which follow a similar
   philosophy:
 
-  • [Selectrum]: Selectrum has a similar UI as Vertico. Selectrum is
-    more complex and not fully compatible with every Emacs completion
-    command ([Issue #481]), since it uses its own filtering
-    infrastructure, which deviates from the standard Emacs completion
-    facilities. Vertico additionally has the ability to cycle over
-    candidates, offers commands for grouping support and comes with a
-    rich set of [extensions].
+  • [Selectrum]: Selectrum has a similar UI as Vertico, since it
+    directly inspired Vertico. The Selectrum code base is more
+    complex. Unfortunately Selectrum is not fully compatible with every
+    Emacs completion command ([Issue #481]), since it uses its own
+    filtering infrastructure, which deviates from the standard Emacs
+    completion facilities. Vertico additionally has the ability to cycle
+    over candidates, offers commands for grouping support and comes with
+    a rich set of [extensions].
   • [Icomplete-vertical]: This package enhances the Emacs builtin
     Icomplete with a vertical display. In contrast to Vertico, Icomplete
     rotates the candidates such that the current candidate always
@@ -447,9 +453,18 @@ Table of Contents
     bit less intuitive than the UI of Vertico or Selectrum. Note that
     Emacs 28 offers a built-in `icomplete-vertical-mode'.
   • [Mct]: Minibuffer and Completions in Tandem. Mct reuses the default
-    completions buffer and enhances it with automatic updates and
+    `*Completions*' buffer and enhances it with automatic updates and
     additional keybindings, to select a candidate and move between
-    minibuffer and completions buffer.
+    minibuffer and completions buffer. Mct is great if you prefer an
+    unobtrusive UI since it can be configured to open only when
+    requested. Furthermore since Mct uses a fully functional buffer you
+    can reuse all your familar buffer commands inside the completions
+    buffer. The main distinction to an approach like Vertico's is that
+    `*Completions*' buffer displays all matching candidates. On the one
+    hand this is good since it allows you to interact with all the
+    candidates and jump around with Isearch or Avy. On the other hand it
+    necessarily causes a small slowdown in comparison to Vertico, which
+    only displays a small subset of candidates.
 
 
 [Selectrum] <https://github.com/raxod502/selectrum>

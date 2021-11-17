@@ -8,7 +8,7 @@ Table of Contents
 
 1. Introduction
 2. Features
-3. Configuration
+3. Installation and Configuration
 4. Key bindings
 5. Complementary packages
 6. Caveats
@@ -43,7 +43,9 @@ Table of Contents
   displays it will fall back to the default setting of the
   `completion-in-region-function'.
 
-  <https://github.com/minad/corfu/blob/main/screenshot.png?raw=true>
+  <https://github.com/minad/corfu/blob/screenshots/light.png?raw=true>
+
+  <https://github.com/minad/corfu/blob/screenshots/dark.png?raw=true>
 
 
 [Vertico] <https://github.com/minad/vertico>
@@ -62,34 +64,39 @@ Table of Contents
   • The current candidate is inserted with `TAB' and selected with
     `RET'.
   • Candidates sorting by prefix, string length and alphabetically.
-  • The selected candidate is automatically committed on any further
-    input by default.  This behavior can be configured by adjusting
-    `corfu-commit-predicate'.
-  • Filter string can contain arbitrary characters and spaces, if
-    `corfu-quit-at-boundary' is nil. This is needed when filtering with
-    the [Orderless] completion style.
+  • The selected candidate is previewed (configuable via
+    `corfu-preview-current').
+  • The selected candidate automatically committed on further input by
+    default (configurable via `~corfu-commit-predicate~').
+  • The [Orderless] completion style is supported. The filter string can
+    contain arbitrary characters, including spaces, if
+    `corfu-quit-at-boundary' is nil.
   • Deferred completion style highlighting for performance.
   • Jumping to location/documentation of current candidate.
   • Show candidate documentation/signature string in the echo area.
   • Deprecated candidates are crossed out in the display.
   • Support for annotations (`annotation-function',
     `affixation-function').
+  • Icons can be provided by an external package via margin formatter
+    functions.
 
 
 [Orderless] <https://github.com/oantolin/orderless>
 
 
-3 Configuration
-═══════════════
+3 Installation and Configuration
+════════════════════════════════
 
   Corfu is available from [GNU ELPA], such that it can be installed
-  directly via `package-install'. After installation, the local minor
-  mode can be enabled with `M-x corfu-mode'. In order to configure Corfu
-  and other packages in your init.el, you may want to use
-  `use-package'. I recommend to give Orderless completion a try, which
-  is different from the familiar prefix TAB completion.  However Corfu
-  works well with the default completion styles, the use of Orderless is
-  not a necessity. Here is an example configuration:
+  directly via `package-install'. After installation, the global minor
+  mode can be enabled with `M-x corfu-global-mode'. In order to
+  configure Corfu and other packages in your init.el, you may want to
+  use `use-package'. Corfu is highly flexible and customizable via
+  `corfu-*' customization variables. For filtering I recommend to give
+  Orderless completion a try, which is different from the familiar
+  prefix TAB completion. However Corfu works well with the default
+  completion styles, the use of Orderless is not a necessity. Here is an
+  example configuration:
 
   ┌────
   │ (use-package corfu
@@ -101,6 +108,8 @@ Table of Contents
   │   ;; (corfu-quit-at-boundary t)     ;; Automatically quit at word boundary
   │   ;; (corfu-quit-no-match t)        ;; Automatically quit if there is no match
   │   ;; (corfu-echo-documentation nil) ;; Do not show documentation in the echo area
+  │   ;; (corfu-scroll-margin 5)        ;; Use scroll margin
+  │   ;; (corfu-preview-current nil)    ;; Do not preview current candidate
   │ 
   │   ;; Optionally use TAB for cycling, default is `corfu-complete'.
   │   ;; :bind (:map corfu-map
@@ -206,10 +215,16 @@ Table of Contents
     displays, since Corfu requires child frames.
   • The abort handling could be improved, for example the input could be
     undone.
-  • Some Company metadata extensions are not supported (`company-kind',
-    `company-match').
   • No sorting by history, since `completion-at-point' does not maintain
     a history (See branch `history' for a possible solution).
+  • There is currently no equivalent for
+    `company-quickhelp'. Documentation and source can be opened manually
+    in a separate buffer.
+  • Company has the ability to merge and present the candidates of
+    multiple backends at the same time in some limited scenarios. This
+    feature is currently missing in the Capf backend mechanism, but it
+    should be possible to implement a super Capf, which can merge
+    multiple Capfs.
 
 
 7 Contributions
