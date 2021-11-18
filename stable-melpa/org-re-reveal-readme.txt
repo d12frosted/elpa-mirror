@@ -1,5 +1,8 @@
 This package provides Org export functionality to generate HTML
 presentations with the presentation framework reveal.js.
+In conjunction with other packages (see comments on emacs-reveal
+below), this is an excellent approach to generate Open Educational
+Resources (OER).
 
 Quickstart:
 0. Install reveal.js: https://revealjs.com/
@@ -28,6 +31,10 @@ reveal.js, and various reveal.js plugins:
 https://gitlab.com/oer/emacs-reveal
 Its howto, generated from Org source file with emacs-reveal:
 https://oer.gitlab.io/emacs-reveal-howto/howto.html
+As a real-life example, maybe check out the OER presentations
+(HTML with audio, different PDF variants, references into
+bibliography, index terms) for a course on Operating Systems:
+https://oer.gitlab.io/OS/
 
 The package org-re-reveal grew out of a forked version of org-reveal
 when upstream development stopped:
