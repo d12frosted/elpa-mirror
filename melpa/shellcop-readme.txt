@@ -2,7 +2,8 @@
   - Insert "(add-hook 'shell-mode-hook 'shellcop-start)" into ~/.emacs
   - Start shell-mode by "M-x shell"
   - Run any command line program in shell
-  - Press ENTER in the program's output containing file and line number
+  - Press ENTER in the program's output containing file and line number.
+    Or run `shellcop-goto-location-near-point'.
   - Cursor is NOT required to be on the same line containing file path.
 
 `shellcop-reset-with-new-command' will,
