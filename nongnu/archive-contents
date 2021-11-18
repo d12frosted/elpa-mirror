@@ -290,17 +290,17 @@
 		   ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
 		  (:keywords "languages" "racket" "scheme" "geiser"))])
  (geiser-stklos .
-		[(1 3)
+		[(1 4)
 		 ((emacs
 		   (24 4))
 		  (geiser
 		   (0 16)))
 		 "STklos Scheme implementation of the geiser protocols" tar
 		 ((:url . "https://gitlab.com/emacs-geiser/stklos")
+		  (:keywords "languages" "stklos" "scheme" "geiser")
 		  (:maintainer "Jeronimo Pellegrini" . "j_p@aleph0.info")
 		  (:authors
-		   ("Jeronimo Pellegrini" . "j_p@aleph0.info"))
-		  (:keywords "languages" "stklos" "scheme" "geiser"))])
+		   ("Jeronimo Pellegrini" . "j_p@aleph0.info")))])
  (git-commit .
 	     [(3 3 0)
 	      ((emacs

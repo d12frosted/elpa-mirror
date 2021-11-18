@@ -4,8 +4,6 @@
 
 ;; Copyright (C) 2021 by Jason Johnson
 ;; Package-Requires: ((alert "1.3"))
-;; Package-Version: 20210521.1238
-;; Package-Commit: ae2043db954e131d9de7347ab1a6107fd07e8893
 ;; Author:          Jason Johnson (jason@fullsteamlabs.com)
 ;; Maintainer:      Jason Johnson (jason@fullsteamlabs.com)
 ;; Created:         May 15, 2021
