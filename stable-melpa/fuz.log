@@ -3,29 +3,3 @@ Fetcher: github
 Source:  https://github.com/rustify-emacs/fuz.el.git
 
 Updating /mnt/store/melpa/working/fuz/
-Checking out origin/HEAD
-Checking out fee874aa35d2ee6b12b836290b5c8eaa44175a28
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/fuz/
-  to /tmp/fuzPVSZrz/fuz-20200104.524
-    fuz-extra.el -> fuz-extra.el
-    fuz.el -> fuz.el
-    Cargo.toml -> Cargo.toml
-    Cargo.lock -> Cargo.lock
-    src => src
-Created fuz-20200104.524.tar containing:
-  fuz-20200104.524/
-  fuz-20200104.524/Cargo.lock
-  fuz-20200104.524/Cargo.toml
-  fuz-20200104.524/fuz-extra.el
-  fuz-20200104.524/fuz-pkg.el
-  fuz-20200104.524/fuz.el
-  fuz-20200104.524/src/
-  fuz-20200104.524/src/dynmod.rs
-  fuz-20200104.524/src/lib.rs
-Built fuz in 5.739s, finished at 2021-11-17T20:45:52+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  367 Nov 17 20:45 packages/fuz-20200104.524.entry
- 52K -rw-r--r-- 1 root root  50K Nov 17 20:45 packages/fuz-20200104.524.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 17 20:45 packages/fuz-badge.svg
-4.0K -rw-r--r-- 1 root root  331 Nov 17 20:45 packages/fuz-readme.txt

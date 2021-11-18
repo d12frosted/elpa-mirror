@@ -5,7 +5,7 @@
 ;; Author: Kvashnin Vladimir <reangd@gmail.com>
 ;; Created: 2015-10-01
 ;; Version: 0.6.0
-;; Package-Commit: 360e44b200d07da379c906856d37613d0f06a9ae
+;; Package-Commit: 5e1e63b6ae4bd94aab5902b14b2bf4238e502cfb
 ;; Package-Version: 20211113.2119
 ;; Package-X-Original-Version: 20160215.1219
 ;; Keywords: tools compile build

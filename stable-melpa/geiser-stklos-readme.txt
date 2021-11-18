@@ -1,5 +1,5 @@
 
-Geiser, STklos and Geisr-STklos
+Geiser, STklos and Geiser-STklos
 ───────────────────────────────
 
 Geiser (https://www.nongnu.org/geiser/) is a collection of Emacs
@@ -22,7 +22,7 @@ Supported Geiser features
 * macroexpansion
 * symbol completion
 * listing of module exported symbols
-* autodoc (signature of procedurs and values of symbols are displayed in the minibuffer
+* autodoc (signature of procedures and values of symbols are displayed in the minibuffer
   when the mouse hovers over their names)
 * symbol documentation (docstrings for procedures, and values of variables)
 
