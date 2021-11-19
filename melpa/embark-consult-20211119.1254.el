@@ -5,8 +5,8 @@
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
-;; Package-Version: 20211117.1610
-;; Package-Commit: 6e064fcff8b65c94daae88a11894da4c70e01c73
+;; Package-Version: 20211119.1254
+;; Package-Commit: fb09ff86b943f1d8107b646fdcb3a3a48437a24a
 ;; Version: 0.2
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "26.1") (embark "0.12") (consult "0.10"))
@@ -224,11 +224,6 @@ actual type."
 ;;; Support for consult-register
 
 (setf (alist-get 'consult-register embark-collect-initial-view-alist)
-      'zebra)
-
-;;; Support for consult-yank*
-
-(setf (alist-get 'consult-yank embark-collect-initial-view-alist)
       'zebra)
 
 ;;; Bindings for consult commands in embark keymaps

@@ -47,6 +47,7 @@ Supported languages:
 - Ledger (ledger-mode)
 - Lua (lua-fmt, prettier plugin)
 - Markdown (prettier)
+- Nginx (nginxfmt)
 - Nix (nixpkgs-fmt, nixfmt)
 - OCaml (ocp-indent)
 - Perl (perltidy)
@@ -73,7 +74,6 @@ Supported languages:
 - V (v fmt)
 - Verilog (iStyle)
 - YAML (prettier)
-- Nginx (nginxfmt)
 
 You will need to install external programs to do the formatting.
 If `format-all-buffer` can't find the right program, it will try to

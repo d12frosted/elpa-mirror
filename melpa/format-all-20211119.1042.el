@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
-;; Package-Version: 20211119.838
-;; Package-Commit: 757e745f05ce98ccd5a7a650e3a916753451cdea
+;; Package-Version: 20211119.1042
+;; Package-Commit: 6200b91d9151b3177a676d30edd948266292bcc1
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.16"))
 ;; Keywords: languages util
@@ -62,6 +62,7 @@
 ;; - Ledger (ledger-mode)
 ;; - Lua (lua-fmt, prettier plugin)
 ;; - Markdown (prettier)
+;; - Nginx (nginxfmt)
 ;; - Nix (nixpkgs-fmt, nixfmt)
 ;; - OCaml (ocp-indent)
 ;; - Perl (perltidy)
@@ -88,7 +89,6 @@
 ;; - V (v fmt)
 ;; - Verilog (iStyle)
 ;; - YAML (prettier)
-;; - Nginx (nginxfmt)
 
 ;; You will need to install external programs to do the formatting.
 ;; If `format-all-buffer` can't find the right program, it will try to
@@ -192,8 +192,8 @@
     ("_Flow" prettier)
     ("_Gleam" gleam)
     ("_Ledger" ledger-mode)
-    ("_Snakemake" snakefmt)
-    ("_Nginx" nginxfmt))
+    ("_Nginx" nginxfmt)
+    ("_Snakemake" snakefmt))
   "Default formatter to use for each language."
   :type '(repeat (list string symbol))
   :group 'format-all)
@@ -730,6 +730,14 @@ Consult the existing formatters for examples of BODY."
   (:features)
   (:format (format-all--buffer-easy executable "tool" "format" "-")))
 
+(define-format-all-formatter dart-format
+  (:executable "dart")
+  (:install (macos "brew tap dart-lang/dart && brew install dart"))
+  (:languages "Dart")
+  (:features)
+  (:format
+   (format-all--buffer-easy executable "format" "--output" "show")))
+
 (define-format-all-formatter dartfmt
   (:executable "dartfmt")
   (:install (macos "brew tap dart-lang/dart && brew install dart"))
@@ -740,14 +748,6 @@ Consult the existing formatters for examples of BODY."
     executable
     (when (buffer-file-name)
       (list "--stdin-name" (buffer-file-name))))))
-
-(define-format-all-formatter dart-format
-  (:executable "dart")
-  (:install (macos "brew tap dart-lang/dart && brew install dart"))
-  (:languages "Dart")
-  (:features)
-  (:format
-   (format-all--buffer-easy executable "format" "--output" "show")))
 
 (define-format-all-formatter dfmt
   (:executable "dfmt")
@@ -947,6 +947,13 @@ Consult the existing formatters for examples of BODY."
       (when config-file (list "--dot-formatter" config-file)))
     "-")))
 
+(define-format-all-formatter nginxfmt
+  (:executable "nginxfmt")
+  (:install  "pip install nginxfmt")
+  (:languages "_Nginx")
+  (:features)
+  (:format (format-all--buffer-easy executable "-")))
+
 (define-format-all-formatter nixfmt
   (:executable "nixfmt")
   (:install
@@ -1118,13 +1125,6 @@ Consult the existing formatters for examples of BODY."
   (:features)
   (:format (format-all--buffer-easy executable "-")))
 
-(define-format-all-formatter nginxfmt
-  (:executable "nginxfmt")
-  (:install  "pip install nginxfmt")
-  (:languages "_Nginx")
-  (:features)
-  (:format (format-all--buffer-easy executable "-")))
-
 (define-format-all-formatter sqlformat
   (:executable "sqlformat")
   (:install "pip install sqlparse")
@@ -1247,8 +1247,8 @@ unofficial languages IDs are prefixed with \"_\"."
            "_Flow")
       (and (equal major-mode 'gleam-mode) "_Gleam")
       (and (equal major-mode 'ledger-mode) "_Ledger")
-      (and (equal major-mode 'snakemake-mode) "_Snakemake")
       (and (equal major-mode 'nginx-mode) "_Nginx")
+      (and (equal major-mode 'snakemake-mode) "_Snakemake")
       (language-id-buffer)))
 
 (defun format-all--please-install (executable installer)

@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.10
-;; Package-Version: 20211114.1401
-;; Package-Commit: 8b24ffc91222f8a61f8f2aa3c3662198c7d74de9
+;; Package-Version: 20211119.938
+;; Package-Commit: 440e2b969ba8c33509c1e78b76ecf652c61a01d1
 ;; Package-Requires: ((emacs "26.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -132,6 +132,7 @@ determine it."
     ("\\<charset\\>" . charset)
     ("\\<coding system\\>" . coding-system)
     ("\\<minor mode\\>" . minor-mode)
+    ("\\<kill-ring\\>" . kill-ring)
     ("\\<[Ll]ibrary\\>" . library))
   "Associates regexps to match against minibuffer prompts with categories."
   :type '(alist :key-type regexp :value-type symbol))
