@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/tarsius/fwb-cmds
 ;; Keywords: convenience
-;; Package-Version: 20211011.1610
-;; Package-Commit: 9418ad51eaf7c6fd973d7f068ca67de66f3635ee
+;; Package-Version: 20211118.2244
+;; Package-Commit: 69409a996ec589ea27df8fa92899900afe8d1011
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
 ;; This file is not part of GNU Emacs.
@@ -55,9 +55,8 @@
 If WINDOW is the only one in its frame, then `delete-frame' too."
   (interactive)
   (save-current-buffer
-    (if window
-        (select-window window)
-      (setq window (selected-window)))
+    (when window
+      (select-window window))
     (if (one-window-p t)
         (delete-frame)
       (with-no-warnings
@@ -94,6 +93,18 @@ Only buffers are considered that have a window in the current frame."
     (switch-to-buffer-other-frame (current-buffer))
     (with-no-warnings
       (old-delete-window window))))
+
+;;;###autoload
+(defun replace-some-window-with-frame ()
+  "Delete some window but show buffer in a newly created frame.
+Replace the first window that never displayed another buffer than
+the one it is currently displaying.  If all windows displayed
+another buffer before, then replace the selected window."
+  (interactive)
+  (if-let ((window (cl-find-if-not #'window-prev-buffers (window-list))))
+      (with-selected-window window
+        (replace-current-window-with-frame))
+    (replace-current-window-with-frame)))
 
 ;;;###autoload
 (defun switch-to-current-buffer-other-frame ()
