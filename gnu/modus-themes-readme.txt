@@ -3,7 +3,7 @@ accessibility between background and foreground values (WCAG AAA).
 This file contains all customization variables, helper functions,
 interactive commands, and face specifications.  Please refer to the
 official Info manual for further documentation (distributed with the
-themes, or available at: <https://protesilaos.com/modus-themes>).
+themes, or available at: <https://protesilaos.com/emacs/modus-themes>).
 
 The themes share the following customization variables:
 
@@ -11,8 +11,9 @@ The themes share the following customization variables:
     modus-themes-org-agenda                     (alist)
     modus-themes-bold-constructs                (boolean)
     modus-themes-inhibit-reload                 (boolean)
+    modus-themes-intense-markup                 (boolean)
     modus-themes-italic-constructs              (boolean)
-    modus-themes-no-mixed-fonts                 (boolean)
+    modus-themes-mixed-fonts                    (boolean)
     modus-themes-scale-headings                 (boolean)
     modus-themes-subtle-line-numbers            (boolean)
     modus-themes-success-deuteranopia           (boolean)
@@ -31,6 +32,7 @@ The themes share the following customization variables:
     modus-themes-prompts                        (choice)
     modus-themes-region                         (choice)
     modus-themes-syntax                         (choice)
+    modus-themes-mode-line-padding              (natnum)
 
 The default scale for headings is as follows (it can be customized as
 well---remember, no scaling takes place by default):
@@ -210,6 +212,7 @@ missing package or change you would like to see.
     ido-mode
     iedit
     iflipb
+    image-dired
     imenu-list
     indium
     info
@@ -250,6 +253,7 @@ missing package or change you would like to see.
     mu4e
     mu4e-conversation
     multiple-cursors
+    nano-modeline
     neotree
     no-emoji
     notmuch
@@ -350,6 +354,7 @@ missing package or change you would like to see.
     vc-annotate (C-x v g)
     vdiff
     vertico
+    vertico-quick
     vimish-fold
     visible-mark
     visual-regexp

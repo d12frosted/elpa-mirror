@@ -1,0 +1,19 @@
+(fontsloth .
+	   [(20211118 2018)
+	    ((f
+	      (0 20 0))
+	     (logito
+	      (0 1))
+	     (pcache
+	      (0 5))
+	     (stream
+	      (2 2 5))
+	     (emacs
+	      (28 0)))
+	    "Elisp otf/ttf font loader/renderer" tar
+	    ((:commit . "87fe1220fc2e107e02c89f1ddcb8baa16f1a607e")
+	     (:authors
+	      ("Jo Gay" . "jo.gay@mailfence.com"))
+	     (:maintainer "Jo Gay" . "jo.gay@mailfence.com")
+	     (:keywords "data" "font" "rasterization" "ttf" "otf")
+	     (:url . "https://github.com/jollm/fontsloth"))])
