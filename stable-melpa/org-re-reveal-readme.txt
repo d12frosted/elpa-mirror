@@ -33,7 +33,9 @@ Its howto, generated from Org source file with emacs-reveal:
 https://oer.gitlab.io/emacs-reveal-howto/howto.html
 As a real-life example, maybe check out the OER presentations
 (HTML with audio, different PDF variants, references into
-bibliography, index terms) for a course on Operating Systems:
+bibliography, index terms, management of metadata including
+license information and attribution, Docker image for publication
+as GitLab Pages with CI/CD) for a course on Operating Systems:
 https://oer.gitlab.io/OS/
 
 The package org-re-reveal grew out of a forked version of org-reveal

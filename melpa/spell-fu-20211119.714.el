@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-spell-fu
-;; Package-Version: 20211108.203
-;; Package-Commit: 570ccd84edddb60e6fc0f6bde5a9fb9b07ed2aa0
+;; Package-Version: 20211119.714
+;; Package-Commit: 36118d0ec60e49396a1ab9084feba99aceb7aeb6
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
@@ -154,6 +154,11 @@ Notes:
 ;; Buffer local dictionary.
 ;; Note that this is typically the same dictionary shared across all buffers.
 (defvar-local spell-fu--cache-table nil)
+
+;; Keep track of the last overlay, this allows expanding the existing overlay where possible.
+;; Useful since font-locking often uses multiple smaller ranges which can be merged into one range.
+;; Always check this has not been deleted (has a valid buffer) before use.
+(defvar-local spell-fu--idle-overlay-last nil)
 
 
 ;; ---------------------------------------------------------------------------
@@ -543,7 +548,7 @@ the caller will need to regenerate the cache."
 ;; ---------------------------------------------------------------------------
 ;; Shared Functions
 
-(defun spell-fu--remove-overlays (&optional point-start point-end)
+(defun spell-fu--overlays-remove (&optional point-start point-end)
   "Remove symbol `spell-fu-mode' overlays from current buffer.
 If optional arguments POINT-START and POINT-END exist
 remove overlays from range POINT-START to POINT-END.
@@ -601,7 +606,7 @@ Argument POINT-END the end position of WORD."
   "Check spelling for POINT-START & POINT-END.
 
 This only checks the text matching face rules."
-  (spell-fu--remove-overlays point-start point-end)
+  (spell-fu--overlays-remove point-start point-end)
   (with-syntax-table spell-fu-syntax-table
     (save-match-data ;; For regex search.
       (save-excursion ;; For moving the point.
@@ -661,7 +666,7 @@ This only checks the text matching face rules."
 
 (defun spell-fu--check-range-without-faces (point-start point-end)
   "Check spelling for POINT-START & POINT-END, checking all text."
-  (spell-fu--remove-overlays point-start point-end)
+  (spell-fu--overlays-remove point-start point-end)
   (with-syntax-table spell-fu-syntax-table
     (save-match-data
       (save-excursion
@@ -704,13 +709,13 @@ This only checks the text matching face rules."
 (defun spell-fu--immediate-disable ()
   "Disable immediate spell checking."
   (jit-lock-unregister #'spell-fu--font-lock-fontify-region)
-  (spell-fu--remove-overlays))
+  (spell-fu--overlays-remove))
 
 
 ;; ---------------------------------------------------------------------------
 ;; Timer Style (spell-fu-idle-delay over zero)
 
-(defun spell-fu--idle-remove-overlays (&optional point-start point-end)
+(defun spell-fu--idle-overlays-remove (&optional point-start point-end)
   "Remove `spell-fu-pending' overlays from current buffer.
 If optional arguments POINT-START and POINT-END exist
 remove overlays from range POINT-START to POINT-END.
@@ -762,7 +767,7 @@ when checking the entire buffer for example."
               ;; avoid this because it's possible `spell-fu-check-range' is interrupted.
               ;; Allowing interrupting is important, so users may set this to a slower function
               ;; which doesn't lock up Emacs as this is run from an idle timer.
-              (spell-fu--idle-remove-overlays point-start point-end))))))))
+              (spell-fu--idle-overlays-remove point-start point-end))))))))
 
 (defun spell-fu--idle-handle-pending-ranges ()
   "Spell check the on-screen overlay ranges."
@@ -770,11 +775,31 @@ when checking the entire buffer for example."
 
 (defun spell-fu--idle-font-lock-region-pending (point-start point-end)
   "Track the range to spell check, adding POINT-START & POINT-END to the queue."
-  (let ((item-ov (make-overlay point-start point-end)))
-    ;; Handy for debugging pending regions to be checked.
-    ;; (overlay-put item-ov 'face '(:background "#000000" :extend t))
-    (overlay-put item-ov 'spell-fu-pending t)
-    (overlay-put item-ov 'evaporate 't)))
+  (when (and spell-fu--idle-overlay-last (not (overlay-buffer spell-fu--idle-overlay-last)))
+    (setq spell-fu--idle-overlay-last nil))
+
+  (cond
+    ;; Extend forwards.
+    ((and spell-fu--idle-overlay-last (eq point-start (overlay-end spell-fu--idle-overlay-last)))
+      (move-overlay
+        spell-fu--idle-overlay-last
+        (overlay-start spell-fu--idle-overlay-last)
+        point-end))
+    ;; Extend backwards.
+    ((and spell-fu--idle-overlay-last (eq point-end (overlay-start spell-fu--idle-overlay-last)))
+      (move-overlay
+        spell-fu--idle-overlay-last
+        point-start
+        (overlay-end spell-fu--idle-overlay-last)))
+    (t
+      (let ((item-ov (make-overlay point-start point-end)))
+        ;; Handy for debugging pending regions to be checked.
+        ;; (overlay-put item-ov 'face '(:background "#000000" :extend t))
+
+        (overlay-put item-ov 'spell-fu-pending t)
+        (overlay-put item-ov 'evaporate 't)
+
+        (setq spell-fu--idle-overlay-last item-ov)))))
 
 ;; ---------------------------------------------------------------------------
 ;; Internal Timer Management
@@ -891,8 +916,8 @@ when checking the entire buffer for example."
 (defun spell-fu--idle-disable ()
   "Disable the idle style of updating."
   (jit-lock-unregister #'spell-fu--idle-font-lock-region-pending)
-  (spell-fu--remove-overlays)
-  (spell-fu--idle-remove-overlays)
+  (spell-fu--overlays-remove)
+  (spell-fu--idle-overlays-remove)
   (spell-fu--time-buffer-local-disable))
 
 ;; ---------------------------------------------------------------------------
@@ -1023,8 +1048,8 @@ Return t when found, otherwise nil."
         (when (eq cache-table (bound-and-true-p spell-fu--cache-table))
           ;; For now simply clear syntax highlighting.
           (unless (<= spell-fu-idle-delay 0.0)
-            (spell-fu--idle-remove-overlays))
-          (spell-fu--remove-overlays)
+            (spell-fu--idle-overlays-remove))
+          (spell-fu--overlays-remove)
           (font-lock-flush))))))
 
 (defun spell-fu--word-add-or-remove (word words-file action)

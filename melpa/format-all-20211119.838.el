@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
-;; Package-Version: 20211017.1857
-;; Package-Commit: 4851bab1659d519b4eaf8a16bfb76a4242d4dde2
+;; Package-Version: 20211119.838
+;; Package-Commit: 757e745f05ce98ccd5a7a650e3a916753451cdea
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.16"))
 ;; Keywords: languages util
@@ -88,6 +88,7 @@
 ;; - V (v fmt)
 ;; - Verilog (iStyle)
 ;; - YAML (prettier)
+;; - Nginx (nginxfmt)
 
 ;; You will need to install external programs to do the formatting.
 ;; If `format-all-buffer` can't find the right program, it will try to
@@ -191,7 +192,8 @@
     ("_Flow" prettier)
     ("_Gleam" gleam)
     ("_Ledger" ledger-mode)
-    ("_Snakemake" snakefmt))
+    ("_Snakemake" snakefmt)
+    ("_Nginx" nginxfmt))
   "Default formatter to use for each language."
   :type '(repeat (list string symbol))
   :group 'format-all)
@@ -1116,6 +1118,13 @@ Consult the existing formatters for examples of BODY."
   (:features)
   (:format (format-all--buffer-easy executable "-")))
 
+(define-format-all-formatter nginxfmt
+  (:executable "nginxfmt")
+  (:install  "pip install nginxfmt")
+  (:languages "_Nginx")
+  (:features)
+  (:format (format-all--buffer-easy executable "-")))
+
 (define-format-all-formatter sqlformat
   (:executable "sqlformat")
   (:install "pip install sqlparse")
@@ -1239,6 +1248,7 @@ unofficial languages IDs are prefixed with \"_\"."
       (and (equal major-mode 'gleam-mode) "_Gleam")
       (and (equal major-mode 'ledger-mode) "_Ledger")
       (and (equal major-mode 'snakemake-mode) "_Snakemake")
+      (and (equal major-mode 'nginx-mode) "_Nginx")
       (language-id-buffer)))
 
 (defun format-all--please-install (executable installer)
