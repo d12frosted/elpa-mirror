@@ -3,7 +3,21 @@ Fetcher: git
 Source:  https://gitee.com/shaqxu/prettify-math.git
 
 Updating /mnt/store/melpa/working/prettify-math/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://gitee.com/shaqxu/prettify-math.git/': Failed to connect to gitee.com port 443: Connection timed out
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out b766824d60e95720e28917b648e4957d7923370b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/prettify-math/
+  to /tmp/prettify-math4bQAec/prettify-math-20211107.38
+    prettify-math.el -> prettify-math.el
+    mathjax-jsonrpc.js -> mathjax-jsonrpc.js
+Created prettify-math-20211107.38.tar containing:
+  prettify-math-20211107.38/
+  prettify-math-20211107.38/mathjax-jsonrpc.js
+  prettify-math-20211107.38/prettify-math-pkg.el
+  prettify-math-20211107.38/prettify-math.el
+Built prettify-math in 7.357s, finished at 2021-11-20T10:32:52+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  439 Nov 20 10:32 packages/prettify-math-20211107.38.entry
+ 20K -rw-r--r-- 1 root root  20K Nov 20 10:32 packages/prettify-math-20211107.38.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 20 10:32 packages/prettify-math-badge.svg
+4.0K -rw-r--r-- 1 root root  722 Nov 20 10:32 packages/prettify-math-readme.txt
