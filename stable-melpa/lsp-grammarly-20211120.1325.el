@@ -7,8 +7,8 @@
 ;; Description: LSP Clients for Grammarly.
 ;; Keyword: lsp grammarly checker
 ;; Version: 0.2.2
-;; Package-Version: 20210715.918
-;; Package-Commit: 0a8d9468aeb414bc698566534389031837ba354d
+;; Package-Version: 20211120.1325
+;; Package-Commit: 279d7cf067bf009b80ff012d8e8ded78a5775a51
 ;; Package-Requires: ((emacs "27.1") (lsp-mode "6.1") (grammarly "0.3.0") (request "0.3.0") (s "1.12.0") (ht "2.3"))
 ;; URL: https://github.com/emacs-grammarly/lsp-grammarly
 
@@ -139,7 +139,7 @@ This is only for development use."
 
 (defun lsp-grammarly--scale-100 (score)
   "Convert SCORE to the scale of 100 instead of scale of 1."
-  (* score 100))
+  (ignore-errors (* score 100)))
 
 (defun lsp-grammarly--random-bytes (n)
   "Return random bytes up to N."
