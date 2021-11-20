@@ -4,8 +4,8 @@
 
 ;; Author: Felipe Lema <felipelema@mortemale.org>
 ;; Keywords: convenience, matching, tools
-;; Package-Version: 20210707.1954
-;; Package-Commit: 06db25d91cc8bfb5e24e02adc04de1226c7e742d
+;; Package-Version: 20211120.347
+;; Package-Commit: aaa37da4c538f35a90149ef4ad3d8b0922af54ab
 ;; Package-Requires: ((emacs "26.1") (async "1.9.4") (project "0.5.2") (ht "2.3"))
 ;; URL: https://launchpad.net/global-tags.el
 ;; Version: 0.7
@@ -74,6 +74,7 @@
 (require 'ht)
 (require 'project)
 (require 'rx)
+(require 's)
 (require 'subr-x)
 (require 'xref)
 
@@ -453,7 +454,7 @@ Use PROJECT COMMAND ARGS as key for cache.  See `global-tags--pre-fetch-key'."
 
 (cl-defgeneric global-tags--ensure-next-fetch-is-queued (project command args)
   "Queue next future only on selected (defmethod) parameters.")
-(cl-defmethod global-tags--ensure-next-fetch-is-queued ((project global-tags-project) command args)
+(cl-defmethod global-tags--ensure-next-fetch-is-queued ((_project global-tags-project) _command _args)
   "Don't queue any «next fetch»")
 
 (defconst global-tags--commands-and-args-that-allow-prefetch
@@ -758,20 +759,23 @@ Any opened buffers under this directory will point to the newly created db."
     (pcase-let* ((`(,_m ,name ,line-number ,_file-name ,_line-def)
                   matching))
       (cons (s-trim name)
-            (save-excursion
-              (goto-line
-               (string-to-number line-number))
-              (point))))))
+	    (save-restriction
+	      (widen)
+              (save-excursion
+		(goto-char (point-min))
+		(forward-line
+		 (string-to-number line-number))
+		(point)))))))
 
 (defun global-tags-create-imenu-index ()
   "Create imenu index from tags of current file."
   (if-let* ((b-fname
              (buffer-file-name)))
-      (seq-map
-       #'global-tags--file-tag-to-imenu-index
-       (global-tags--get-lines 'file
-                               (file-local-name b-fname)))
-    (error "Cannot create imenu index for buffer with no file name")))
+	   (seq-map
+	    #'global-tags--file-tag-to-imenu-index
+	    (global-tags--get-lines 'file
+				    (file-local-name b-fname)))
+	   (error "Cannot create imenu index for buffer with no file name")))
 
 ;;;###autoload
 (define-minor-mode global-tags-imenu-mode
