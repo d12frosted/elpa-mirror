@@ -10,29 +10,33 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `mct.el', and provides every other piece of information
 pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.2.0,
-released on 2021-11-12.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.3.0,
+released on 2021-11-19.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.3.0-dev.
+Current development target is 0.4.0-dev.
 
 Table of Contents
 ─────────────────
 
 1. COPYING
-2. Overview of mct.el
+2. Overview of MCT
 3. Usage
 .. 1. Cyclic behaviour
 .. 2. Selecting candidates
 .. 3. Other commands
 4. Installation
+.. 1. Install the package
+.. 2. Manual installation method
 5. Sample setup
 6. Keymaps
 7. Extensions
+.. 1. Enable Consult previews
 8. Alternatives
 9. Acknowledgements
-10. GNU Free Documentation License
-11. Indices
+10. Official sources
+11. GNU Free Documentation License
+12. Indices
 .. 1. Function index
 .. 2. Variable index
 .. 3. Concept index
@@ -56,12 +60,12 @@ Table of Contents
         copy and modify this GNU manual.”
 
 
-2 Overview of mct.el
-════════════════════
+2 Overview of MCT
+═════════════════
 
   Minibuffer and Completions in Tandem, also known as “MCT”, “Mct”,
   `mct', or `mct.el', is a package that enhances the default minibuffer
-  and `*Completions*' buffer of Emacs 28 (or higher) so that they work
+  and `*Completions*' buffer of Emacs 27 (or higher) so that they work
   together as part of a unified framework.  The idea is to make the
   presentation and overall functionality be consistent with other
   popular, vertically aligned completion UIs while leveraging built-in
@@ -87,7 +91,6 @@ Table of Contents
 
   ⁃ The blocklist (`mct-completion-blocklist') disables the
     live-updating functionality for the functions specified therein.
-
   ⁃ The passlist (`mct-completion-passlist') always shows the
     Completions’ buffer for the designated function without accounting
     for the minimum input threshold.
@@ -127,21 +130,18 @@ Table of Contents
     `*Completions*' buffer.  This removes the separation between it and
     the minibuffer, further contributing to the idea of a unified space
     between the two.
-
   ⁃ `mct-remove-shadowed-file-name' to clear shadowed file names when
     `file-name-shadow-mode' is enabled.  This means that in prompts that
     use file paths (such as `find-file') when you start in, say,
     `~/Git/mct.el' and type `~/' the previous file path is removed and
     only the new one is inserted.  Whereas the default is to keep the
     original file name visible yet “shadowed” by a different colour.
-
   ⁃ `mct-show-completion-line-numbers' to always display line numbers in
     the Completions’ buffer.  This can be helpful to get a sense of the
     length of the completion candidates’ list.  Though note that line
     numbers are displayed ephemerally while using the
     `mct-choose-completion-number' command, which is bound to `M-g M-g'
     in either the minibuffer or the `*Completions*' buffer.
-
   ⁃ `mct-apply-completion-stripes' applies alternative background
     colours in the Completions’ buffer.  This is only tested with the
     `modus-themes' and will only work nicely if the main background is
@@ -277,18 +277,26 @@ Table of Contents
      (`mct-choose-completion-exit') for the last one.  In contexts that
      are not CRM-powered, the `M-RET' has the same effect as `TAB'
      (`mct-choose-completion-no-exit').
+  7. When point is at the minibuffer, select the current candidate in
+     the completions buffer with `C-RET' (`mct-complete-and-exit'),
+     which has the same effect as first completing with `TAB' and then
+     immediately exit the minibuffer with the completed candidate as the
+     selected one.
 
 
 3.3 Other commands
 ──────────────────
 
   ⁃ Emacs 28 has the ability to group candidates inside the completions’
-    buffer under headings.  MCT provides motions that jump between such
-    heading, placing the point at the first candidate right below the
-    heading’s text.  Use `M-n' (`mct-next-completion-group') and `M-p'
-    (`mct-previous-completion-group') to move to the next or previous
-    one, respectively.  Both commands accept an optional numeric
-    argument.
+    buffer under headings.  For example, the Consult package makes good
+    use of those ([Extensions]).  MCT provides motions that jump between
+    such headings, placing the point at the first candidate right below
+    the heading’s text.  Use `M-n' (`mct-next-completion-group') and
+    `M-p' (`mct-previous-completion-group') to move to the next or
+    previous one, respectively.  Both commands accept an optional
+    numeric argument.  For the sake of avoiding surprises, these
+    commands do not cycle between the completions and the minibuffer:
+    they stop at the first or last heading.
   ⁃ When using completion categories that involve file paths, such as
     `find-file', the backspace key (`DEL') goes up a directory if point
     is right after a path’s directory delimiter (a forward slash).
@@ -296,14 +304,27 @@ Table of Contents
     symbol is `mct-backward-updir'.
 
 
+[Extensions] See section 7
+
+
 4 Installation
 ══════════════
 
-  MCT is not in any package archive for the time being, though I plan to
-  submit it to GNU ELPA (as such, any non-trivial patches require
-  copyright assignment to the Free Software Foundation).  Users can rely
-  on `straight.el', `quelpa', or equivalent to fetch the source.  Below
-  are the essentials for those who prefer the manual method.
+4.1 Install the package
+───────────────────────
+
+  `mct' is available on the official GNU ELPA archive for users of Emacs
+  version 27 or higher.  One can install the package without any further
+  configuration.  The following commands shall suffice:
+
+  ┌────
+  │ M-x package-refresh-contents
+  │ M-x package-install RET mct
+  └────
+
+
+4.2 Manual installation method
+──────────────────────────────
 
   Assuming your Emacs files are found in `~/.emacs.d/', execute the
   following commands in a shell prompt:
@@ -395,14 +416,15 @@ Table of Contents
   strings):
 
   ┌────
-  │ ;; Add `orderless' to the completion styles, if you have it installed.
   │ (setq completion-styles
   │       '(basic substring initials flex partial-completion))
   │ (setq completion-category-overrides
-  │ 	'((file (styles . (basic partial-completion initials substring)))))
+  │       '((file (styles . (basic partial-completion initials substring)))))
   │ 
   │ (setq completion-cycle-threshold 2)
   │ (setq completion-ignore-case t)
+  │ (setq completion-show-inline-help nil)
+  │ 
   │ (setq completions-detailed t)
   │ 
   │ (setq enable-recursive-minibuffers t)
@@ -418,6 +440,12 @@ Table of Contents
   │ (minibuffer-depth-indicate-mode 1)
   │ (minibuffer-electric-default-mode 1)
   │ 
+  │ ;; Do not allow the cursor in the minibuffer prompt
+  │ (setq minibuffer-prompt-properties
+  │       '(read-only t cursor-intangible t face minibuffer-prompt))
+  │ 
+  │ (add-hook 'minibuffer-setup-hook #'cursor-intangible-mode)
+  │ 
   │ ;;; Minibuffer history
   │ (require 'savehist)
   │ (setq savehist-file (locate-user-emacs-file "savehist"))
@@ -425,6 +453,29 @@ Table of Contents
   │ (setq history-delete-duplicates t)
   │ (setq savehist-save-minibuffer-history t)
   │ (add-hook 'after-init-hook #'savehist-mode)
+  │ 
+  │ ;;; Extensions
+  │ 
+  │ ;;;; Enable Consult previews in the Completions buffer.
+  │ ;; Requires the Consult package.
+  │ (add-hook 'completion-list-mode-hook #'consult-preview-at-point-mode)
+  │ 
+  │ ;;;; Setup for Orderless
+  │ ;; Requires the Orderless package
+  │ 
+  │ ;; We make the SPC key insert a literal space and the same for the
+  │ ;; question mark.  Spaces are used to delimit orderless groups, while
+  │ ;; the quedtion mark is a valid regexp character.
+  │ (let ((map minibuffer-local-completion-map))
+  │   (define-key map (kbd "SPC") nil)
+  │   (define-key map (kbd "?") nil))
+  │ 
+  │ ;; Because SPC works for Orderless and is trivial to activate, I like to
+  │ ;; put `orderless' at the end of my `completion-styles'.  Like this:
+  │ (setq completion-styles
+  │       '(basic substring initials flex partial-completion orderless))
+  │ (setq completion-category-overrides
+  │       '((file (styles . (basic partial-completion orderless)))))
   └────
 
 
@@ -440,7 +491,7 @@ Table of Contents
 
   You can invoke `describe-keymap' to learn more about them.
 
-  If you want to edit any key bindings, do it in those keymaps, not in
+  If you want to edit any key bindings, do it in these keymaps, not in
   those they extend and override (the names of the original ones are the
   same as above, minus the `mct-' prefix).
 
@@ -481,6 +532,17 @@ Table of Contents
 [Marginalia] <https://github.com/minad/marginalia>
 
 [Orderless] <https://github.com/oantolin/orderless/>
+
+7.1 Enable Consult previews
+───────────────────────────
+
+  One of the nice features of the Consult package is the ability to
+  preview the candidate at point.  All we need to enable it in the
+  `*Completions*' buffer is the following snippet:
+
+  ┌────
+  │ (add-hook 'completion-list-mode-hook #'consult-preview-at-point-mode)
+  └────
 
 
 8 Alternatives
@@ -546,8 +608,11 @@ Table of Contents
         uses an Embark buffer to show live-updating completions, while
         the latter relies on the generic `*Completions*' buffer.
 
-        For users who are on Emacs 27, Elmo is a better choice because
-        MCT only works as intended with Emacs 28 or higher.
+        For users who are on Emacs 27 and who need a single-column view,
+        Elmo is a better choice because MCT can only display such a view
+        on Emacs 28 or higher (though it has been meticulously tested
+        with the grid views of Emacs 27 and should work perfectly fine
+        with them).
 
   Icomplete and fido-mode (built-in, multiple authors)
         Icomplete is closer in spirit to Vertico, as it too uses the
@@ -588,11 +653,13 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to code or documentation
-        James Norman Vladimir Cash, Philip Kaludercic.
+        James Norman Vladimir Cash, José Antonio Ortega Ruiz, Philip
+        Kaludercic.
 
   Ideas and user feedback
-        Jonathan Irving, Kostadin Ninev, Manuel Uberti, Philip
-        Kaludercic.
+        Case Duckworth, Jonathan Irving, José Antonio Ortega Ruiz,
+        Kostadin Ninev, Manuel Uberti, Philip Kaludercic, Theodor
+        Thornhill.
 
   Inspiration for certain features
         `icomplete.el' (built-in—multiple authors), Daniel Mendler
@@ -600,20 +667,31 @@ Table of Contents
         `live-completions'), Štěpán Němec (`stripes.el').
 
 
-10 GNU Free Documentation License
+10 Official sources
+═══════════════════
+
+  Manual
+        <https://protesilaos.com/emacs/mct>
+  Change log
+        <https://protesilaos.com/emacs/mct-changelog>
+  Source code
+        <https://gitlab.com/protesilaos/mct>
+
+
+11 GNU Free Documentation License
 ═════════════════════════════════
 
 
-11 Indices
+12 Indices
 ══════════
 
-11.1 Function index
+12.1 Function index
 ───────────────────
 
 
-11.2 Variable index
+12.2 Variable index
 ───────────────────
 
 
-11.3 Concept index
+12.3 Concept index
 ──────────────────
