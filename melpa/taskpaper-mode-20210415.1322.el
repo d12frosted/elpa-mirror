@@ -6,7 +6,7 @@
 ;; Maintainer: Dmitry Safronov <saf.dmitry@gmail.com>
 ;; URL: <https://github.com/saf-dmitry/taskpaper-mode>
 ;; Package-Version: 20210415.1322
-;; Package-Commit: 5eacb6c1c879038c4448c10b3df9a73d95a48fc3
+;; Package-Commit: d13f93a8e11aa9f3b8544e51028b012c33d5c97d
 ;; Keywords: outlines, notetaking, task management, productivity, taskpaper
 
 ;; This file is not part of GNU Emacs.

@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-spell-fu
-;; Package-Version: 20211119.714
-;; Package-Commit: 36118d0ec60e49396a1ab9084feba99aceb7aeb6
+;; Package-Version: 20211121.701
+;; Package-Commit: b2da2874f3227c0a969be80946e0c4ea455e8458
 ;; Keywords: convenience
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.2"))
@@ -260,7 +260,7 @@ Optional argument BODY runs with the depth override."
       (funcall fn-orig hook function ,depth-override local))
     ,@body))
 
-(defmacro spell-fu--setq-expand-range-to-line-boundaries (point-start point-end)
+(defmacro spell-fu--setq-expand-range-to-line-boundaries (pos-beg pos-end)
   "Set POINT-START the the line beginning, POINT-END to the line end."
   (declare (indent 1))
   ;; Ignore field boundaries.
@@ -268,10 +268,10 @@ Optional argument BODY runs with the depth override."
     `
     (save-excursion
       ;; Extend the ranges to line start/end.
-      (goto-char ,point-end)
-      (setq ,point-end (line-end-position))
-      (goto-char ,point-start)
-      (setq ,point-start (line-beginning-position)))))
+      (goto-char ,pos-end)
+      (setq ,pos-end (line-end-position))
+      (goto-char ,pos-beg)
+      (setq ,pos-beg (line-beginning-position)))))
 
 (defun spell-fu--buffer-as-line-list (buffer lines)
   "Add lines from BUFFER to LINES, returning the updated LINES."
@@ -548,16 +548,16 @@ the caller will need to regenerate the cache."
 ;; ---------------------------------------------------------------------------
 ;; Shared Functions
 
-(defun spell-fu--overlays-remove (&optional point-start point-end)
+(defun spell-fu--overlays-remove (&optional pos-beg pos-end)
   "Remove symbol `spell-fu-mode' overlays from current buffer.
 If optional arguments POINT-START and POINT-END exist
 remove overlays from range POINT-START to POINT-END.
 Otherwise remove all overlays."
-  (remove-overlays point-start point-end 'spell-fu-mode t))
+  (remove-overlays pos-beg pos-end 'spell-fu-mode t))
 
-(defun spell-fu-mark-incorrect (point-start point-end)
+(defun spell-fu-mark-incorrect (pos-beg pos-end)
   "Mark the text from POINT-START to POINT-END with incorrect spelling overlay."
-  (let ((item-ov (make-overlay point-start point-end)))
+  (let ((item-ov (make-overlay pos-beg pos-end)))
     (overlay-put item-ov 'spell-fu-mode t)
     (overlay-put item-ov 'face 'spell-fu-incorrect-face)
     (overlay-put item-ov 'modification-hooks 'spell-fu--removed-changed-overlay)
@@ -566,7 +566,7 @@ Otherwise remove all overlays."
     (overlay-put item-ov 'evaporate t)
     item-ov))
 
-(defun spell-fu-check-word (point-start point-end word)
+(defun spell-fu-check-word (pos-beg pos-end word)
   "Run the spell checker on a word.
 
 Marking the spelling as incorrect using `spell-fu-incorrect-face' on failure.
@@ -575,7 +575,7 @@ Argument POINT-END the end position of WORD."
   (unless (gethash (encode-coding-string (downcase word) 'utf-8) spell-fu--cache-table nil)
     ;; Ignore all uppercase words.
     (unless (equal word (upcase word))
-      (spell-fu-mark-incorrect point-start point-end))))
+      (spell-fu-mark-incorrect pos-beg pos-end))))
 
 
 ;; ---------------------------------------------------------------------------
@@ -602,32 +602,32 @@ Argument POINT-END the end position of WORD."
           (setq result t))))
     result))
 
-(defun spell-fu--check-range-with-faces (point-start point-end)
+(defun spell-fu--check-range-with-faces (pos-beg pos-end)
   "Check spelling for POINT-START & POINT-END.
 
 This only checks the text matching face rules."
-  (spell-fu--overlays-remove point-start point-end)
+  (spell-fu--overlays-remove pos-beg pos-end)
   (with-syntax-table spell-fu-syntax-table
     (save-match-data ;; For regex search.
       (save-excursion ;; For moving the point.
         (save-restriction ;; For narrowing.
-          ;; Avoid duplicate calls that check if `point-start' passes the face test.
-          (let ((ok-start (spell-fu--check-faces-at-point point-start)))
+          ;; Avoid duplicate calls that check if `pos-beg' passes the face test.
+          (let ((ok-beg (spell-fu--check-faces-at-point pos-beg)))
             ;; It's possible the face changes part way through the word.
             ;; In practice this is likely caused by escape characters, e.g.
             ;; "test\nthe text" where "\n" may have separate highlighting.
-            (while (< point-start point-end)
+            (while (< pos-beg pos-end)
               (let*
-                ( ;; Assign to `ok-start' next iteration to avoid duplicate checks.
-                  (point-end-iter (spell-fu--next-faces-prop-change point-start point-end))
+                ( ;; Assign to `ok-beg' next iteration to avoid duplicate checks.
+                  (point-end-iter (spell-fu--next-faces-prop-change pos-beg pos-end))
                   (ok-end-iter
                     (and
-                      (< point-end-iter point-end)
+                      (< point-end-iter pos-end)
                       (spell-fu--check-faces-at-point point-end-iter))))
 
                 ;; No need to check faces of each word
                 ;; as face-changes are being stepped over.
-                (when ok-start
+                (when ok-beg
 
                   ;; Extend `point-end-iter' out for as long as the face isn't being ignored,
                   ;; needed when `whitespace-mode' sets a margin,
@@ -639,63 +639,62 @@ This only checks the text matching face rules."
                   ;; NOTE: this could be made into an option.
                   ;; Currently there doesn't seem much need for this at the moment.
                   (while ok-end-iter
-                    (setq point-end-iter
-                      (spell-fu--next-faces-prop-change point-end-iter point-end))
+                    (setq point-end-iter (spell-fu--next-faces-prop-change point-end-iter pos-end))
                     (setq ok-end-iter
                       (and
-                        (< point-end-iter point-end)
+                        (< point-end-iter pos-end)
                         (spell-fu--check-faces-at-point point-end-iter))))
 
                   ;; Use narrowing so the regex correctly handles boundaries
                   ;; that happen to fall on face changes.
-                  (narrow-to-region point-start point-end-iter)
-                  (goto-char point-start)
+                  (narrow-to-region pos-beg point-end-iter)
+                  (goto-char pos-beg)
                   (while (re-search-forward spell-fu-word-regexp point-end-iter t)
                     (let
                       (
-                        (word-start (match-beginning 0))
+                        (word-beg (match-beginning 0))
                         (word-end (match-end 0)))
                       (spell-fu-check-word
-                        word-start
+                        word-beg
                         word-end
-                        (buffer-substring-no-properties word-start word-end))))
+                        (buffer-substring-no-properties word-beg word-end))))
                   (widen))
 
-                (setq point-start point-end-iter)
-                (setq ok-start ok-end-iter)))))))))
+                (setq pos-beg point-end-iter)
+                (setq ok-beg ok-end-iter)))))))))
 
-(defun spell-fu--check-range-without-faces (point-start point-end)
+(defun spell-fu--check-range-without-faces (pos-beg pos-end)
   "Check spelling for POINT-START & POINT-END, checking all text."
-  (spell-fu--overlays-remove point-start point-end)
+  (spell-fu--overlays-remove pos-beg pos-end)
   (with-syntax-table spell-fu-syntax-table
     (save-match-data
       (save-excursion
-        (goto-char point-start)
-        (while (re-search-forward spell-fu-word-regexp point-end t)
+        (goto-char pos-beg)
+        (while (re-search-forward spell-fu-word-regexp pos-end t)
           (let
             (
-              (word-start (match-beginning 0))
+              (word-beg (match-beginning 0))
               (word-end (match-end 0)))
-            (spell-fu-check-word word-start word-end (match-string-no-properties 0))))))))
+            (spell-fu-check-word word-beg word-end (match-string-no-properties 0))))))))
 
-(defun spell-fu-check-range-default (point-start point-end)
+(defun spell-fu-check-range-default (pos-beg pos-end)
   "Check spelling POINT-START & POINT-END, checking comments and strings."
   (cond
     ((or spell-fu-faces-include spell-fu-faces-exclude)
-      (spell-fu--check-range-with-faces point-start point-end))
+      (spell-fu--check-range-with-faces pos-beg pos-end))
     (t
-      (spell-fu--check-range-without-faces point-start point-end))))
+      (spell-fu--check-range-without-faces pos-beg pos-end))))
 
 
 ;; ---------------------------------------------------------------------------
 ;; Immediate Style (spell-fu-idle-delay zero or lower)
 
-(defun spell-fu--font-lock-fontify-region (point-start point-end)
+(defun spell-fu--font-lock-fontify-region (pos-beg pos-end)
   "Update spelling for POINT-START & POINT-END to the queue, checking all text."
   (spell-fu--setq-expand-range-to-line-boundaries
     ;; Warning these values are set in place.
-    point-start point-end)
-  (funcall spell-fu-check-range point-start point-end))
+    pos-beg pos-end)
+  (funcall spell-fu-check-range pos-beg pos-end))
 
 (defun spell-fu--immediate-enable ()
   "Enable immediate spell checking."
@@ -715,19 +714,19 @@ This only checks the text matching face rules."
 ;; ---------------------------------------------------------------------------
 ;; Timer Style (spell-fu-idle-delay over zero)
 
-(defun spell-fu--idle-overlays-remove (&optional point-start point-end)
+(defun spell-fu--idle-overlays-remove (&optional pos-beg pos-end)
   "Remove `spell-fu-pending' overlays from current buffer.
 If optional arguments POINT-START and POINT-END exist
 remove overlays from range POINT-START to POINT-END.
 Otherwise remove all overlays."
-  (remove-overlays point-start point-end 'spell-fu-pending t))
+  (remove-overlays pos-beg pos-end 'spell-fu-pending t))
 
-(defun spell-fu--idle-handle-pending-ranges-impl (visible-start visible-end)
+(defun spell-fu--idle-handle-pending-ranges-impl (visible-beg visible-end)
   "VISIBLE-START and VISIBLE-END typically from `window-start' and `window-end'.
 
 Although you can pass in specific ranges as needed,
 when checking the entire buffer for example."
-  (let ((overlays-in-view (overlays-in visible-start visible-end)))
+  (let ((overlays-in-view (overlays-in visible-beg visible-end)))
     (while overlays-in-view
       (let ((item-ov (pop overlays-in-view)))
         (when
@@ -738,19 +737,19 @@ when checking the entire buffer for example."
 
           (let
             ( ;; Window clamped range.
-              (point-start (max visible-start (overlay-start item-ov)))
-              (point-end (min visible-end (overlay-end item-ov))))
+              (pos-beg (max visible-beg (overlay-start item-ov)))
+              (pos-end (min visible-end (overlay-end item-ov))))
 
             ;; Expand so we don't spell check half a word.
             (spell-fu--setq-expand-range-to-line-boundaries
               ;; Warning these values are set in place.
-              point-start point-end)
+              pos-beg pos-end)
 
             (when
               (condition-case err
                 ;; Needed so the idle timer won't quit mid-spelling.
                 (let ((inhibit-quit nil))
-                  (funcall spell-fu-check-range point-start point-end)
+                  (funcall spell-fu-check-range pos-beg pos-end)
                   t)
                 (error
                   (progn
@@ -767,32 +766,29 @@ when checking the entire buffer for example."
               ;; avoid this because it's possible `spell-fu-check-range' is interrupted.
               ;; Allowing interrupting is important, so users may set this to a slower function
               ;; which doesn't lock up Emacs as this is run from an idle timer.
-              (spell-fu--idle-overlays-remove point-start point-end))))))))
+              (spell-fu--idle-overlays-remove pos-beg pos-end))))))))
 
 (defun spell-fu--idle-handle-pending-ranges ()
   "Spell check the on-screen overlay ranges."
   (spell-fu--idle-handle-pending-ranges-impl (window-start) (window-end)))
 
-(defun spell-fu--idle-font-lock-region-pending (point-start point-end)
+(defun spell-fu--idle-font-lock-region-pending (pos-beg pos-end)
   "Track the range to spell check, adding POINT-START & POINT-END to the queue."
   (when (and spell-fu--idle-overlay-last (not (overlay-buffer spell-fu--idle-overlay-last)))
     (setq spell-fu--idle-overlay-last nil))
 
   (cond
     ;; Extend forwards.
-    ((and spell-fu--idle-overlay-last (eq point-start (overlay-end spell-fu--idle-overlay-last)))
+    ((and spell-fu--idle-overlay-last (eq pos-beg (overlay-end spell-fu--idle-overlay-last)))
       (move-overlay
         spell-fu--idle-overlay-last
         (overlay-start spell-fu--idle-overlay-last)
-        point-end))
+        pos-end))
     ;; Extend backwards.
-    ((and spell-fu--idle-overlay-last (eq point-end (overlay-start spell-fu--idle-overlay-last)))
-      (move-overlay
-        spell-fu--idle-overlay-last
-        point-start
-        (overlay-end spell-fu--idle-overlay-last)))
+    ((and spell-fu--idle-overlay-last (eq pos-end (overlay-start spell-fu--idle-overlay-last)))
+      (move-overlay spell-fu--idle-overlay-last pos-beg (overlay-end spell-fu--idle-overlay-last)))
     (t
-      (let ((item-ov (make-overlay point-start point-end)))
+      (let ((item-ov (make-overlay pos-beg pos-end)))
         ;; Handy for debugging pending regions to be checked.
         ;; (overlay-put item-ov 'face '(:background "#000000" :extend t))
 
@@ -918,40 +914,41 @@ when checking the entire buffer for example."
   (jit-lock-unregister #'spell-fu--idle-font-lock-region-pending)
   (spell-fu--overlays-remove)
   (spell-fu--idle-overlays-remove)
-  (spell-fu--time-buffer-local-disable))
+  (spell-fu--time-buffer-local-disable)
+  (kill-local-variable 'spell-fu--idle-overlay-last))
 
 ;; ---------------------------------------------------------------------------
 ;; Public Functions
 
-(defun spell-fu-region (&optional point-start point-end verbose)
+(defun spell-fu-region (&optional pos-beg pos-end verbose)
   "Spell check the region between POINT-START and POINT-END.
 
 The VERBOSE argument reports the findings."
   ;; Expand range to line bounds, when set.
-  (when (or point-start point-end)
-    (unless point-start
-      (setq point-start (point-min)))
-    (unless point-end
-      (setq point-end (point-max)))
+  (when (or pos-beg pos-end)
+    (unless pos-beg
+      (setq pos-beg (point-min)))
+    (unless pos-end
+      (setq pos-end (point-max)))
     (spell-fu--setq-expand-range-to-line-boundaries
       ;; Warning these values are set in place.
-      point-start point-end))
+      pos-beg pos-end))
 
-  (setq point-start (or point-start (point-min)))
-  (setq point-end (or point-end (point-max)))
+  (setq pos-beg (or pos-beg (point-min)))
+  (setq pos-end (or pos-end (point-max)))
 
-  (jit-lock-fontify-now point-start point-end)
+  (jit-lock-fontify-now pos-beg pos-end)
 
   ;; Ensure idle timer is handled immediately.
   (cond
     ((<= spell-fu-idle-delay 0.0)
       nil)
     (t
-      (spell-fu--idle-handle-pending-ranges-impl point-start point-end)))
+      (spell-fu--idle-handle-pending-ranges-impl pos-beg pos-end)))
 
   (when verbose
     (let ((count 0))
-      (dolist (item-ov (overlays-in point-start point-end))
+      (dolist (item-ov (overlays-in pos-beg pos-end))
         (when (overlay-get item-ov 'spell-fu-mode)
           (setq count (1+ count))))
       (message "Spell-fu: %d misspelled word(s) found!" count))))
@@ -980,33 +977,33 @@ Return t when found, otherwise nil."
       (while (and (null point-found) (not (equal (point) point-prev)))
         (let
           (
-            (point-start (line-beginning-position))
-            (point-end (line-end-position)))
+            (pos-beg (line-beginning-position))
+            (pos-end (line-end-position)))
 
-          (jit-lock-fontify-now point-start point-end)
+          (jit-lock-fontify-now pos-beg pos-end)
 
           ;; Ensure idle timer is handled immediately.
           (cond
             ((<= spell-fu-idle-delay 0.0)
               nil)
             (t
-              (spell-fu--idle-handle-pending-ranges-impl point-start point-end)))
+              (spell-fu--idle-handle-pending-ranges-impl pos-beg pos-end)))
 
-          (dolist (item-ov (overlays-in point-start point-end))
+          (dolist (item-ov (overlays-in pos-beg pos-end))
             (when (overlay-get item-ov 'spell-fu-mode)
               (let
                 (
-                  (item-start (overlay-start item-ov))
+                  (item-beg (overlay-start item-ov))
                   (item-end (overlay-end item-ov)))
                 (when
                   (cond
                     ((< dir 0)
                       (< item-end point-init))
                     (t
-                      (> item-start point-init)))
-                  (let ((test-delta (abs (- point-init item-start))))
+                      (> item-beg point-init)))
+                  (let ((test-delta (abs (- point-init item-beg))))
                     (when (< test-delta point-found-delta)
-                      (setq point-found item-start)
+                      (setq point-found item-beg)
                       (setq point-found-delta test-delta))))))))
         (setq point-prev (point))
         (forward-line dir)))
@@ -1182,14 +1179,14 @@ Return t when the action succeeded."
   (let
     (
       (point-init (point))
-      (point-start (line-beginning-position))
-      (point-end (line-end-position)))
+      (pos-beg (line-beginning-position))
+      (pos-end (line-end-position)))
     (save-excursion
-      (goto-char point-start)
+      (goto-char pos-beg)
       (catch 'result
         (with-syntax-table spell-fu-syntax-table
           (save-match-data
-            (while (re-search-forward spell-fu-word-regexp point-end t)
+            (while (re-search-forward spell-fu-word-regexp pos-end t)
               (when (and (<= (match-beginning 0) point-init) (<= point-init (match-end 0)))
                 (throw 'result (match-string-no-properties 0))))))
         (throw 'result nil)))))
