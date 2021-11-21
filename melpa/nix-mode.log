@@ -4,10 +4,10 @@ Source:  https://github.com/NixOS/nix-mode.git
 
 Updating /mnt/store/melpa/working/nix-mode/
 Checking out origin/HEAD
-Checking out e7bf2e4cc49e7a12265714dfaf5e286bfbc1e87f
+Checking out 3d04d92d9c3896d07bc9fed7e4f40032025fbe7b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nix-mode/
-  to /tmp/nix-modeNrvnqy/nix-mode-20211109.1805
+  to /tmp/nix-modessQ2rW/nix-mode-20211120.1627
     nix-build.el -> nix-build.el
     nix-drv-mode.el -> nix-drv-mode.el
     nix-edit.el -> nix-edit.el
@@ -23,27 +23,27 @@ Copying files (->) and directories (=>)
     nix-shell.el -> nix-shell.el
     nix-store.el -> nix-store.el
     nix.el -> nix.el
-Created nix-mode-20211109.1805.tar containing:
-  nix-mode-20211109.1805/
-  nix-mode-20211109.1805/nix-build.el
-  nix-mode-20211109.1805/nix-drv-mode.el
-  nix-mode-20211109.1805/nix-edit.el
-  nix-mode-20211109.1805/nix-flake.el
-  nix-mode-20211109.1805/nix-format.el
-  nix-mode-20211109.1805/nix-instantiate.el
-  nix-mode-20211109.1805/nix-log.el
-  nix-mode-20211109.1805/nix-mode-pkg.el
-  nix-mode-20211109.1805/nix-mode.el
-  nix-mode-20211109.1805/nix-prettify-mode.el
-  nix-mode-20211109.1805/nix-repl.el
-  nix-mode-20211109.1805/nix-search.el
-  nix-mode-20211109.1805/nix-shebang.el
-  nix-mode-20211109.1805/nix-shell.el
-  nix-mode-20211109.1805/nix-store.el
-  nix-mode-20211109.1805/nix.el
-Built nix-mode in 4.759s, finished at 2021-11-20T13:54:33+0000
+Created nix-mode-20211120.1627.tar containing:
+  nix-mode-20211120.1627/
+  nix-mode-20211120.1627/nix-build.el
+  nix-mode-20211120.1627/nix-drv-mode.el
+  nix-mode-20211120.1627/nix-edit.el
+  nix-mode-20211120.1627/nix-flake.el
+  nix-mode-20211120.1627/nix-format.el
+  nix-mode-20211120.1627/nix-instantiate.el
+  nix-mode-20211120.1627/nix-log.el
+  nix-mode-20211120.1627/nix-mode-pkg.el
+  nix-mode-20211120.1627/nix-mode.el
+  nix-mode-20211120.1627/nix-prettify-mode.el
+  nix-mode-20211120.1627/nix-repl.el
+  nix-mode-20211120.1627/nix-search.el
+  nix-mode-20211120.1627/nix-shebang.el
+  nix-mode-20211120.1627/nix-shell.el
+  nix-mode-20211120.1627/nix-store.el
+  nix-mode-20211120.1627/nix.el
+Built nix-mode in 4.835s, finished at 2021-11-21T00:43:26+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  356 Nov 20 13:54 packages/nix-mode-20211109.1805.entry
-132K -rw-r--r-- 1 root root 130K Nov 20 13:54 packages/nix-mode-20211109.1805.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 20 13:54 packages/nix-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  140 Nov 20 13:54 packages/nix-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  356 Nov 21 00:43 packages/nix-mode-20211120.1627.entry
+132K -rw-r--r-- 1 root root 130K Nov 21 00:43 packages/nix-mode-20211120.1627.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 21 00:43 packages/nix-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  140 Nov 21 00:43 packages/nix-mode-readme.txt
