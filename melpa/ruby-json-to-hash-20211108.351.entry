@@ -1,0 +1,15 @@
+(ruby-json-to-hash .
+		   [(20211108 351)
+		    ((emacs
+		      (27 2))
+		     (smartparens
+		      (1 11 0))
+		     (string-inflection
+		      (1 0 16)))
+		    "Convert JSON to Hash and play with the keys" single
+		    ((:commit . "383b22bb2e007289ac0dba146787d02ff99d4415")
+		     (:authors
+		      ("Otávio Schwanck dos Santos" . "otavioschwanck@gmail.com"))
+		     (:maintainer "Otávio Schwanck dos Santos" . "otavioschwanck@gmail.com")
+		     (:keywords "tools" "languages")
+		     (:url . "https://github.com/otavioschwanck/ruby-json-to-hash.el"))])

@@ -1,0 +1,33 @@
+Package: code-review
+Fetcher: github
+Source:  https://github.com/wandersoncferreira/code-review.git
+
+Cloning https://github.com/wandersoncferreira/code-review.git to /mnt/store/melpa/working/code-review/
+Checking out origin/HEAD
+Checking out e0995a021bd40a0401b9efc06251a3768375d957
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/code-review/
+  to /tmp/code-reviewgtx8lX/code-review-20211121.1948
+    code-review-comment.el -> code-review-comment.el
+    code-review-core.el -> code-review-core.el
+    code-review-db.el -> code-review-db.el
+    code-review-github.el -> code-review-github.el
+    code-review-section.el -> code-review-section.el
+    code-review-utils.el -> code-review-utils.el
+    code-review.el -> code-review.el
+Created code-review-20211121.1948.tar containing:
+  code-review-20211121.1948/
+  code-review-20211121.1948/code-review-comment.el
+  code-review-20211121.1948/code-review-core.el
+  code-review-20211121.1948/code-review-db.el
+  code-review-20211121.1948/code-review-github.el
+  code-review-20211121.1948/code-review-pkg.el
+  code-review-20211121.1948/code-review-section.el
+  code-review-20211121.1948/code-review-utils.el
+  code-review-20211121.1948/code-review.el
+Built code-review in 6.097s, finished at 2021-11-21T21:29:15+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  667 Nov 21 21:29 packages/code-review-20211121.1948.entry
+152K -rw-r--r-- 1 root root 150K Nov 21 21:29 packages/code-review-20211121.1948.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 21 21:29 packages/code-review-badge.svg
+4.0K -rw-r--r-- 1 root root  126 Nov 21 21:29 packages/code-review-readme.txt
