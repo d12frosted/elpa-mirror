@@ -1,12 +1,12 @@
 ;;; easy-jekyll.el --- Major mode managing jekyll blogs -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2017-2020 by Masashi Miyaura
+;; Copyright (C) 2017-2021 by Masashi Miyaura
 
 ;; Author: Masashi Miyaura
 ;; URL: https://github.com/masasam/emacs-easy-jekyll
-;; Package-Version: 20201205.1918
-;; Package-Commit: b79176c6c4a8d5914e2c6e2bb53f61633ff5e023
-;; Version: 2.4.30
+;; Package-Version: 20211121.2306
+;; Package-Commit: a680696a46d3d1aaa589ee443f816808f4e12b64
+;; Version: 2.5.30
 ;; Package-Requires: ((emacs "25.1") (request "0.3.0"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -139,6 +139,11 @@
 
 (defcustom easy-jekyll-sort-default-char t
   "Default setting to sort with charactor."
+  :group 'easy-jekyll
+  :type 'integer)
+
+(defcustom easy-jekyll-publish-production nil
+  "Flag to publish by setting environment 'JEKYLL_ENV' variable to production."
   :group 'easy-jekyll
   :type 'integer)
 
@@ -565,6 +570,8 @@ Automatically select the deployment destination from init.el."
   (easy-jekyll-with-env
    (when (file-directory-p "_site")
      (delete-directory "_site" t nil))
+   (when easy-jekyll-publish-production
+     (setenv "JEKYLL_ENV" "production"))
    (let ((ret (call-process "bundle" nil "*jekyll-publish*" t
 			    "exec" "jekyll" "build" "--destination" "_site")))
      (unless (zerop ret)
@@ -794,6 +801,8 @@ POST-FILE needs to have and extension '.md' or '.textile'."
   "Preview jekyll at localhost."
   (interactive)
   (easy-jekyll-with-env
+   (when easy-jekyll-publish-production
+     (setenv "JEKYLL_ENV" "development"))
    (if (process-live-p easy-jekyll--server-process)
        (browse-url easy-jekyll-preview-url)
      (progn
