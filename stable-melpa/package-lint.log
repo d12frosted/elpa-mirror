@@ -4,26 +4,28 @@ Source:  https://github.com/purcell/package-lint.git
 
 Updating /mnt/store/melpa/working/package-lint/
 Checking out origin/HEAD
-Checking out 786d8b5f382ee5f254a783378e904305cc41367f
+Checking out b5f5554ec38ec2a4d5ef49a0ad9f57f6825d9af9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/package-lint/
-  to /tmp/package-lintEUpef6/package-lint-20211107.1614
+  to /tmp/package-linthgbVFB/package-lint-20211122.1152
     package-lint.el -> package-lint.el
     data => data
-Created package-lint-20211107.1614.tar containing:
-  package-lint-20211107.1614/
-  package-lint-20211107.1614/data/
-  package-lint-20211107.1614/data/stdlib-changes
-  package-lint-20211107.1614/package-lint-pkg.el
-  package-lint-20211107.1614/package-lint.el
-Built package-lint in 5.042s, finished at 2021-11-22T09:09:04+0000
+Created package-lint-20211122.1152.tar containing:
+  package-lint-20211122.1152/
+  package-lint-20211122.1152/data/
+  package-lint-20211122.1152/data/stdlib-changes
+  package-lint-20211122.1152/package-lint-pkg.el
+  package-lint-20211122.1152/package-lint.el
+Built package-lint in 6.555s, finished at 2021-11-22T12:43:41+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  475 Nov 22 09:09 packages/package-lint-20211107.1614.entry
 760K -rw-r--r-- 1 root root 760K Nov 22 09:09 packages/package-lint-20211107.1614.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 22 09:09 packages/package-lint-badge.svg
-4.0K -rw-r--r-- 1 root root 2.9K Nov 22 09:09 packages/package-lint-flymake-20210530.319.el
-4.0K -rw-r--r-- 1 root root  277 Nov 22 09:09 packages/package-lint-flymake-20210530.319.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 22 05:35 packages/package-lint-flymake-badge.svg
-4.0K -rw-r--r-- 1 root root  345 Nov 22 09:09 packages/package-lint-flymake-readme.txt
-4.0K -rw-r--r-- 1 root root  235 Nov 22 09:09 packages/package-lint-flymake.log
-4.0K -rw-r--r-- 1 root root  260 Nov 22 09:09 packages/package-lint-readme.txt
+4.0K -rw-r--r-- 1 root root  475 Nov 22 12:43 packages/package-lint-20211122.1152.entry
+772K -rw-r--r-- 1 root root 770K Nov 22 12:43 packages/package-lint-20211122.1152.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 22 12:43 packages/package-lint-badge.svg
+4.0K -rw-r--r-- 1 root root 2.9K Nov 22 12:43 packages/package-lint-flymake-20210530.319.el
+4.0K -rw-r--r-- 1 root root  277 Nov 22 12:43 packages/package-lint-flymake-20210530.319.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 22 12:43 packages/package-lint-flymake-badge.svg
+4.0K -rw-r--r-- 1 root root  345 Nov 22 12:43 packages/package-lint-flymake-readme.txt
+4.0K -rw-r--r-- 1 root root  324 Nov 22 12:43 packages/package-lint-flymake.log
+4.0K -rw-r--r-- 1 root root  260 Nov 22 12:43 packages/package-lint-readme.txt

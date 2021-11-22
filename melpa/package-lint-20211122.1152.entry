@@ -1,5 +1,5 @@
 (package-lint .
-	      [(20211107 1614)
+	      [(20211122 1152)
 	       ((cl-lib
 		 (0 5))
 		(emacs
@@ -7,7 +7,7 @@
 		(let-alist
 		    (1 0 6)))
 	       "A linting library for elisp package authors" tar
-	       ((:commit . "786d8b5f382ee5f254a783378e904305cc41367f")
+	       ((:commit . "b5f5554ec38ec2a4d5ef49a0ad9f57f6825d9af9")
 		(:authors
 		 ("Steve Purcell" . "steve@sanityinc.com")
 		 ("Fanael Linithien" . "fanael4@gmail.com"))
