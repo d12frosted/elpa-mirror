@@ -4,10 +4,10 @@ Source:  https://github.com/org-roam/org-roam.git
 
 Updating /mnt/store/melpa/working/org-roam/
 Checking out origin/HEAD
-Checking out a2e46db80848cb17185f257a397370a22cd686bb
+Checking out 91aae058105d5547b905a6e32b5115a934444a77
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-roam/
-  to /tmp/org-roamzcO5eq/org-roam-20211120.833
+  to /tmp/org-roamKwClTv/org-roam-20211122.801
     org-roam-capture.el -> org-roam-capture.el
     org-roam-compat.el -> org-roam-compat.el
     org-roam-db.el -> org-roam-db.el
@@ -21,45 +21,47 @@ Copying files (->) and directories (=>)
   ! extensions/org-roam-graph.el -> org-roam-graph.el
   ! extensions/org-roam-overlay.el -> org-roam-overlay.el
   ! extensions/org-roam-protocol.el -> org-roam-protocol.el
-Created /tmp/org-roamzcO5eq/org-roam-20211120.833/org-roam.info
-Created org-roam-20211120.833.tar containing:
-  org-roam-20211120.833/
-  org-roam-20211120.833/dir
-  org-roam-20211120.833/org-roam-capture.el
-  org-roam-20211120.833/org-roam-compat.el
-  org-roam-20211120.833/org-roam-dailies.el
-  org-roam-20211120.833/org-roam-db.el
-  org-roam-20211120.833/org-roam-graph.el
-  org-roam-20211120.833/org-roam-migrate.el
-  org-roam-20211120.833/org-roam-mode.el
-  org-roam-20211120.833/org-roam-node.el
-  org-roam-20211120.833/org-roam-overlay.el
-  org-roam-20211120.833/org-roam-pkg.el
-  org-roam-20211120.833/org-roam-protocol.el
-  org-roam-20211120.833/org-roam-utils.el
-  org-roam-20211120.833/org-roam.el
-  org-roam-20211120.833/org-roam.info
-Built org-roam in 12.922s, finished at 2021-11-22T02:02:16+0000
+Created /tmp/org-roamKwClTv/org-roam-20211122.801/org-roam.info
+Created org-roam-20211122.801.tar containing:
+  org-roam-20211122.801/
+  org-roam-20211122.801/dir
+  org-roam-20211122.801/org-roam-capture.el
+  org-roam-20211122.801/org-roam-compat.el
+  org-roam-20211122.801/org-roam-dailies.el
+  org-roam-20211122.801/org-roam-db.el
+  org-roam-20211122.801/org-roam-graph.el
+  org-roam-20211122.801/org-roam-migrate.el
+  org-roam-20211122.801/org-roam-mode.el
+  org-roam-20211122.801/org-roam-node.el
+  org-roam-20211122.801/org-roam-overlay.el
+  org-roam-20211122.801/org-roam-pkg.el
+  org-roam-20211122.801/org-roam-protocol.el
+  org-roam-20211122.801/org-roam-utils.el
+  org-roam-20211122.801/org-roam.el
+  org-roam-20211122.801/org-roam.info
+Built org-roam in 12.343s, finished at 2021-11-22T09:06:59+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  572 Nov 22 02:02 packages/org-roam-20211120.833.entry
-332K -rw-r--r-- 1 root root 330K Nov 22 02:02 packages/org-roam-20211120.833.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 22 02:02 packages/org-roam-badge.svg
-4.0K -rw-r--r-- 1 root root  548 Nov 22 02:02 packages/org-roam-bibtex-20211118.1726.entry
-192K -rw-r--r-- 1 root root 190K Nov 22 02:02 packages/org-roam-bibtex-20211118.1726.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 22 02:02 packages/org-roam-bibtex-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Nov 22 02:02 packages/org-roam-bibtex-readme.txt
-4.0K -rw-r--r-- 1 root root 1.6K Nov 22 02:02 packages/org-roam-bibtex.log
-4.0K -rw-r--r-- 1 root root 2.1K Nov 22 02:02 packages/org-roam-readme.txt
+4.0K -rw-r--r-- 1 root root  572 Nov 22 05:33 packages/org-roam-20211120.833.entry
+332K -rw-r--r-- 1 root root 330K Nov 22 05:33 packages/org-roam-20211120.833.tar
+4.0K -rw-r--r-- 1 root root  572 Nov 22 09:06 packages/org-roam-20211122.801.entry
+332K -rw-r--r-- 1 root root 330K Nov 22 09:06 packages/org-roam-20211122.801.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 22 09:06 packages/org-roam-badge.svg
+4.0K -rw-r--r-- 1 root root  548 Nov 22 09:06 packages/org-roam-bibtex-20211118.1726.entry
+192K -rw-r--r-- 1 root root 190K Nov 22 09:06 packages/org-roam-bibtex-20211118.1726.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 22 09:06 packages/org-roam-bibtex-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Nov 22 09:06 packages/org-roam-bibtex-readme.txt
+4.0K -rw-r--r-- 1 root root 1.6K Nov 22 09:06 packages/org-roam-bibtex.log
+4.0K -rw-r--r-- 1 root root 2.1K Nov 22 09:06 packages/org-roam-readme.txt
 4.0K -rw-r--r-- 1 root root 1.2K Aug 23 11:40 packages/org-roam-server-badge.svg
 4.0K -rw-r--r-- 1 root root  166 Aug 23 11:40 packages/org-roam-server-readme.txt
 4.0K -rw-r--r-- 1 root root 1.7K Aug 23 11:40 packages/org-roam-server.log
- 12K -rw-r--r-- 1 root root 9.8K Nov 22 02:02 packages/org-roam-timestamps-20211108.943.el
-4.0K -rw-r--r-- 1 root root  496 Nov 22 02:02 packages/org-roam-timestamps-20211108.943.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 22 02:02 packages/org-roam-timestamps-badge.svg
-4.0K -rw-r--r-- 1 root root  309 Nov 22 02:02 packages/org-roam-timestamps-readme.txt
-4.0K -rw-r--r-- 1 root root  690 Nov 22 02:02 packages/org-roam-timestamps.log
-4.0K -rw-r--r-- 1 root root  475 Nov 22 02:02 packages/org-roam-ui-20211117.1208.entry
-5.4M -rw-r--r-- 1 root root 5.4M Nov 22 02:02 packages/org-roam-ui-20211117.1208.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 22 02:02 packages/org-roam-ui-badge.svg
-4.0K -rw-r--r-- 1 root root   93 Nov 22 02:02 packages/org-roam-ui-readme.txt
- 12K -rw-r--r-- 1 root root 9.9K Nov 22 02:02 packages/org-roam-ui.log
+ 12K -rw-r--r-- 1 root root 9.8K Nov 22 09:06 packages/org-roam-timestamps-20211108.943.el
+4.0K -rw-r--r-- 1 root root  496 Nov 22 09:06 packages/org-roam-timestamps-20211108.943.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 22 09:06 packages/org-roam-timestamps-badge.svg
+4.0K -rw-r--r-- 1 root root  309 Nov 22 09:06 packages/org-roam-timestamps-readme.txt
+4.0K -rw-r--r-- 1 root root  690 Nov 22 09:06 packages/org-roam-timestamps.log
+4.0K -rw-r--r-- 1 root root  475 Nov 22 09:06 packages/org-roam-ui-20211117.1208.entry
+5.4M -rw-r--r-- 1 root root 5.4M Nov 22 09:06 packages/org-roam-ui-20211117.1208.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 22 09:06 packages/org-roam-ui-badge.svg
+4.0K -rw-r--r-- 1 root root   93 Nov 22 09:06 packages/org-roam-ui-readme.txt
+ 12K -rw-r--r-- 1 root root 9.9K Nov 22 09:06 packages/org-roam-ui.log

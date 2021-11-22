@@ -1,0 +1,11 @@
+(sly-quicklisp .
+	       [(20211122 805)
+		((sly
+		  (1 0 0 -2 2)))
+		"Quicklisp support for SLY" tar
+		((:commit . "a46b848a2e6d206542c4cc14869456ba1eac7c9a")
+		 (:authors
+		  ("João Távora" . "joaotavora@gmail.com"))
+		 (:maintainer "João Távora" . "joaotavora@gmail.com")
+		 (:keywords "languages" "lisp" "sly")
+		 (:url . "https://github.com/capitaomorte/sly-quicklisp"))])

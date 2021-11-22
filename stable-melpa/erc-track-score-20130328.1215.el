@@ -4,8 +4,6 @@
 
 ;; Author: Julien Danjou <julien@danjou.info>
 ;; URL: http://julien.danjou.info/erc-track-score.html
-;; Package-Version: 20130328.1215
-;; Package-Commit: 5b27531ea6b1a4c4b703b270dfa9128cb5bfdaa3
 
 ;; This file is NOT part of GNU Emacs.
 
