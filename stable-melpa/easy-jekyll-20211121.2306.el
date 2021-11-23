@@ -5,7 +5,7 @@
 ;; Author: Masashi Miyaura
 ;; URL: https://github.com/masasam/emacs-easy-jekyll
 ;; Package-Version: 20211121.2306
-;; Package-Commit: a680696a46d3d1aaa589ee443f816808f4e12b64
+;; Package-Commit: ba8c0c04bb6ec21a446feba0a45aae7fd45d9dfc
 ;; Version: 2.5.30
 ;; Package-Requires: ((emacs "25.1") (request "0.3.0"))
 
