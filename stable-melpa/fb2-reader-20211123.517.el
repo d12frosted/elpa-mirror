@@ -4,8 +4,8 @@
 
 ;; Author: Dmitriy Pshonko <jumper047@gmail.com>
 ;; URL: https://github.com/jumper047/fb2-reader
-;; Package-Version: 20211120.2152
-;; Package-Commit: a157fff968cc684db258e80e75d1426a5ded8f1b
+;; Package-Version: 20211123.517
+;; Package-Commit: 55b9608fb71b000e1c581f9448e23647d79bc098
 ;; Keywords: multimedia, ebook, fb2
 ;; Version: 0.1.0
 
@@ -43,10 +43,10 @@
 ;; - restoring last read position
 ;; - displaying raw xml
 ;; - book info screen
+;; - table of content in separate buffer
 ;;
 ;; Coming soon:
 ;; 
-;; - table of content in separate buffer
 ;; - integration with https://github.com/jumper047/librera-sync
 ;; - rendering book in org-mode
 ;;
@@ -55,11 +55,16 @@
 ;;
 ;;    (use-package fb2-reader
 ;;      :mode (("\\.fb2\\(.zip\\|\\)$" . fb2-reader-mode))
+;;      :commands (fb2-reader-continue)
 ;;      :custom
 ;;      ;; This mode renders book with fixed width, adjust to your preferences.
 ;;      (fb2-reader-page-width 120)
 ;;      (fb2-reader-image-max-width 400)
 ;;      (fb2-reader-image-max-height 400))
+;;
+;; Usage:
+;; Just open any fb2 book, or execute command =fb2-reader-continue=
+
 
 ;;; Code:
 
@@ -1249,6 +1254,20 @@ Replace already added data if presented."
 	 (pos (car (alist-get filename (fb2-reader-positions) nil nil 'equal))))
     (with-current-buffer buffer (goto-char (or pos (point-min))))))
 
+;;;###autoload
+(defun fb2-reader-continue ()
+  "Continue reading last opened book."
+  (interactive)
+  (let ((positions (fb2-reader-positions))
+	filename)
+    (if (null positions)
+	(user-error "Can't find saved book positions, you should open at least one"))
+    (setq filename (caar positions))
+    (if (not (f-exists-p filename))
+	(user-error "Last opened book was moved or deleted"))
+    (find-file filename)
+    (if (not (eq major-mode 'fb2-reader-mode))
+	(fb2-reader-mode))))
 
 (defun fb2-reader-read-fb2-zip (file)
   "Read book from fb2.zip FILE.

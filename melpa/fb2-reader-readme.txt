@@ -10,10 +10,10 @@ Features:
 - restoring last read position
 - displaying raw xml
 - book info screen
+- table of content in separate buffer
 
 Coming soon:
 
-- table of content in separate buffer
 - integration with https://github.com/jumper047/librera-sync
 - rendering book in org-mode
 
@@ -22,8 +22,12 @@ Add these strings to your config:
 
    (use-package fb2-reader
      :mode (("\\.fb2\\(.zip\\|\\)$" . fb2-reader-mode))
+     :commands (fb2-reader-continue)
      :custom
      ;; This mode renders book with fixed width, adjust to your preferences.
      (fb2-reader-page-width 120)
      (fb2-reader-image-max-width 400)
      (fb2-reader-image-max-height 400))
+
+Usage:
+Just open any fb2 book, or execute command =fb2-reader-continue=

@@ -3,9 +3,9 @@
 ;; Copyright (C) 2016-2020 Rami Chowdhury
 ;; Author: Rami Chowdhury <rami.chowdhury@gmail.com>
 ;; URL: http://github.com/necaris/conda.el
-;; Package-Commit: e4c43648ee84fc9601d31ffb3e392c80bedef50d
+;; Package-Commit: 7a34e06931515d46f9e22154762e06e66cfbc81c
 ;; Version: 0.4
-;; Package-Version: 20211121.1945
+;; Package-Version: 20211123.357
 ;; Package-X-Original-Version: 0.4
 ;; Keywords: python, environment, conda
 ;; Package-Requires: ((emacs "24.4") (pythonic "0.1.0") (dash "2.13.0") (s "1.11.0") (f "0.18.2"))
@@ -507,8 +507,8 @@ buffer."
   :global t
   ;; Forms
   (if conda-env-autoactivate-mode ;; already on, now switching off
-      (advice-add 'pop-to-buffer :after #'conda--switch-buffer-auto-activate)
-    (advice-remove 'pop-to-buffer #'conda--switch-buffer-auto-activate)))
+      (advice-add 'switch-to-buffer :after #'conda--switch-buffer-auto-activate)
+    (advice-remove 'switch-to-buffer #'conda--switch-buffer-auto-activate)))
 
 (provide 'conda)
 
