@@ -30,7 +30,7 @@ Installation:
 
 To install coterm, type M-x package-install RET coterm RET
 
-It is best to add the following elisp snippet to you Emacs init file, to
+It is best to add the following elisp snippet to your Emacs init file, to
 enable `coterm-mode' automatically on startup:
 
   (coterm-mode)

@@ -283,7 +283,7 @@
 		("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	       (:keywords "lisp"))])
  (capf-autosuggest .
-		   [(0 2)
+		   [(0 3)
 		    ((emacs
 		      (25 1)))
 		    "History autosuggestions for comint and eshell" tar
@@ -449,7 +449,7 @@
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de")))])
  (coterm .
-	 [(1 2)
+	 [(1 3)
 	  ((emacs
 	    (26 1)))
 	  "Terminal emulation for comint" tar
