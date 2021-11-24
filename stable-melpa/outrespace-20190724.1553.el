@@ -3,6 +3,8 @@
 ;; Author: Dan Harms <danielrharms@gmail.com>
 ;; Created: Wednesday, June  1, 2016
 ;; Version: 0.1
+;; Package-Version: 20190724.1553
+;; Package-Commit: d8c1619ec81fd3f4e728212a3526cd13bc2b0147
 ;; Modified Time-stamp: <2019-07-24 10:53:07 dan.harms>
 ;; Modified by: Dan Harms
 ;; Keywords: tools c++ namespace

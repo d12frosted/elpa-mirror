@@ -4,8 +4,8 @@
 ;; Created: 2021
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
-;; Package-Version: 20211124.1056
-;; Package-Commit: ac65f2acdf9340aa11379d5904172480acae4ca5
+;; Package-Version: 20211124.1117
+;; Package-Commit: 12f5ae008ca45264970e5e613c53ef6e79996b0a
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 
@@ -468,7 +468,11 @@ METADATA is optional completion metadata."
 (defun cape-dict-capf ()
   "Dictionary completion-at-point-function."
   (when-let (bounds (bounds-of-thing-at-point 'word))
-    `(,(car bounds) ,(cdr bounds) ,(cape--dict-words) :exclusive no ,@cape--dict-properties)))
+    `(,(car bounds) ,(cdr bounds)
+      ,(lambda (str pred action)
+         ;; Load the dict lazily
+         (complete-with-action action (cape--dict-words) str pred))
+      :exclusive no ,@cape--dict-properties)))
 
 ;;;###autoload
 (defun cape-dict ()

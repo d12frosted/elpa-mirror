@@ -4,10 +4,10 @@ Source:  https://github.com/wandersoncferreira/code-review.git
 
 Updating /mnt/store/melpa/working/code-review/
 Checking out origin/HEAD
-Checking out 0685ad89923152b43a7a47e8925948adc2826d86
+Checking out dd1e5695b7f81f3cf1c2dc8e408bbe3c37ad3e72
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/code-review/
-  to /tmp/code-reviewDt5SOA/code-review-20211124.154
+  to /tmp/code-reviewxludxh/code-review-20211124.1403
     code-review-comment.el -> code-review-comment.el
     code-review-core.el -> code-review-core.el
     code-review-db.el -> code-review-db.el
@@ -15,19 +15,21 @@ Copying files (->) and directories (=>)
     code-review-section.el -> code-review-section.el
     code-review-utils.el -> code-review-utils.el
     code-review.el -> code-review.el
-Created code-review-20211124.154.tar containing:
-  code-review-20211124.154/
-  code-review-20211124.154/code-review-comment.el
-  code-review-20211124.154/code-review-core.el
-  code-review-20211124.154/code-review-db.el
-  code-review-20211124.154/code-review-github.el
-  code-review-20211124.154/code-review-pkg.el
-  code-review-20211124.154/code-review-section.el
-  code-review-20211124.154/code-review-utils.el
-  code-review-20211124.154/code-review.el
-Built code-review in 9.896s, finished at 2021-11-24T11:10:01+0000
+Created code-review-20211124.1403.tar containing:
+  code-review-20211124.1403/
+  code-review-20211124.1403/code-review-comment.el
+  code-review-20211124.1403/code-review-core.el
+  code-review-20211124.1403/code-review-db.el
+  code-review-20211124.1403/code-review-github.el
+  code-review-20211124.1403/code-review-pkg.el
+  code-review-20211124.1403/code-review-section.el
+  code-review-20211124.1403/code-review-utils.el
+  code-review-20211124.1403/code-review.el
+Built code-review in 5.462s, finished at 2021-11-24T14:45:45+0000
  ✓ Success:
+4.0K -rw-r--r-- 1 root root  667 Nov 24 14:45 packages/code-review-20211124.1403.entry
+152K -rw-r--r-- 1 root root 150K Nov 24 14:45 packages/code-review-20211124.1403.tar
 4.0K -rw-r--r-- 1 root root  666 Nov 24 11:10 packages/code-review-20211124.154.entry
 152K -rw-r--r-- 1 root root 150K Nov 24 11:10 packages/code-review-20211124.154.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 24 11:10 packages/code-review-badge.svg
-4.0K -rw-r--r-- 1 root root  126 Nov 24 11:10 packages/code-review-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Nov 24 14:45 packages/code-review-badge.svg
+4.0K -rw-r--r-- 1 root root  126 Nov 24 14:45 packages/code-review-readme.txt

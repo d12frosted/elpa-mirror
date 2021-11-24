@@ -1,5 +1,5 @@
 (hugsql-ghosts .
-	       [(20180425 1129)
+	       [(20211124 1358)
 		((s
 		  (1 9 0))
 		 (dash
@@ -7,7 +7,7 @@
 		 (cider
 		  (0 14 0)))
 		"Display hugsql defqueries in clojure code as an overlay." single
-		((:commit . "f3ebc60c66204ad39058cb84eb4bd5facce091df")
+		((:commit . "b101dd8dc1766985f0feccd945083b8f5a8cd514")
 		 (:authors
 		  ("Roland Kaercher" . "roland.kaercher@gmail.com"))
 		 (:maintainer "Roland Kaercher" . "roland.kaercher@gmail.com")

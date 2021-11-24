@@ -4,10 +4,10 @@
 
 ;; Author: Roland Kaercher <roland.kaercher@gmail.com>
 ;; URL: https://github.com/rkaercher/hugsql-ghosts
-;; Package-Commit: f3ebc60c66204ad39058cb84eb4bd5facce091df
-;; Package-Version: 20180425.1129
-;; Package-X-Original-Version: 20180425.1329
-;; Version: 0.1.3
+;; Package-Commit: b101dd8dc1766985f0feccd945083b8f5a8cd514
+;; Package-Version: 20211124.1358
+;; Package-X-Original-Version: 20211124.0613
+;; Version: 0.1.4
 ;; Package-Requires: ((s "1.9.0") (dash "2.10.0") (cider "0.14.0"))
 
 ;; This program is free software; you can redistribute it and/or
@@ -57,6 +57,11 @@
   "Face for hugsql defns overlayed when in cider-mode."
   :group 'hugsql-ghosts)
 
+(defface hugsql-ghosts-docstring
+  '((t :foreground "#989898" :background "#181818"))
+  "Face for hugsql docstrings overlayed when in cider-mode."
+  :group 'hugsql-ghosts)
+
 ;;;###autoload
 (defun hugsql-ghosts-remove-overlays ()
   "Remove all hugsql ghost overlays from the current buffer."
@@ -65,26 +70,31 @@
     (when (eq (overlay-get it 'type) 'hugsql-ghosts)
       (delete-overlay it))))
 
-(defun hugsql-ghosts--fontify-ghost (string)
-  "Add font attributes to the provided STRING."
-  (set-text-properties 0 (length string) `(face 'hugsql-ghosts-defn) string)
+(defun hugsql-ghosts--fontify-ghost (string ghost-face)
+  "Add font attributes for the face GHOST-FACE to the provided STRING."
+  (set-text-properties 0 (length string) (list 'face ghost-face) string)
   string)
 
 (defun hugsql-ghosts--insert-overlay (content)
   "Insert the overlay with the provided CONTENT at point."
   (let ((o (make-overlay (point) (point) nil nil t)))
     (overlay-put o 'type 'hugsql-ghosts)
-    (overlay-put o 'before-string (hugsql-ghosts--fontify-ghost (concat content "\n")))))
+    ;;    (overlay-put o 'before-string (hugsql-ghosts--fontify-ghost (concat content "\n") 'hugsql-ghosts-defn))))
+    (overlay-put o 'before-string  (concat content "\n"))))
 
 (defun hugsql-ghosts--format-query (query-metadata)
   "Format a single query fn for display using the provided QUERY-METADATA."
-  (-let [(name (&plist :doc doc)) query-metadata]
-    (if (and hugsql-ghosts-show-docstrings doc (not (s-blank? doc)))
-	(format "(defn %s [db ...]%s\"%s\")"  name (if hugsql-ghosts-newline-before-docstrings "\n" " ") doc)
-      (format "(defn %s [db ...])" name))))
+  (-let* (((name (&plist :doc doc)) query-metadata)
+	  (has-doc? (and hugsql-ghosts-show-docstrings doc (not (s-blank? doc)))))
+    (if has-doc?
+	(format (hugsql-ghosts--fontify-ghost "(defn %s [db ...]%s%s)" 'hugsql-ghosts-defn)
+		name
+		(if hugsql-ghosts-newline-before-docstrings "\n" " ")
+		(hugsql-ghosts--fontify-ghost (concat "\"" doc "\"") 'hugsql-ghosts-docstring))
+      (hugsql-ghosts--fontify-ghost (format "(defn %s [db ...])" name) 'hugsql-ghosts-defn))))
 
 (defun hugsql-ghosts--format-query-fns (query-fns)
-  "Make a single string divided by newlines from the proviced QUERY-FNS metadata."
+  "Make a single string divided by newlines from the provided QUERY-FNS metadata."
   (s-join "\n" (-map 'hugsql-ghosts--format-query query-fns)))
 
 (defconst hugsql-ghosts--clojure-eval-code-template "(map
