@@ -4,8 +4,6 @@
 
 ;; Author: hadashiA <dev@hadashikick.jp>
 ;; URL: https://github.com/f-kubotar/helm-rubygems-local
-;; Package-Version: 20130712.111
-;; Package-Commit: 289cb33d41c703af9791d6da46b55f070013c2e3
 ;; Version: 0.0.1
 ;; Package-Requires: ((helm "1.5.3"))
 

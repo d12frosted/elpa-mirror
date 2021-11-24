@@ -4,8 +4,8 @@
 ;; Created: 2021
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
-;; Package-Version: 20211123.2227
-;; Package-Commit: b5485b887878493ceeeab7e0ab5f9277295839db
+;; Package-Version: 20211124.648
+;; Package-Commit: 7325c5002f9c1fa06f1fdcf923191a8e46224c15
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 
@@ -388,35 +388,39 @@
         :company-kind (lambda (_) 'text)))
 
 (declare-function ispell-lookup-words "ispell")
-(defun cape--ispell-words (str)
-  "Return words from Ispell which match STR."
-  (require 'ispell)
-  (with-demoted-errors
-      (let ((message-log-max nil)
-            (inhibit-message t))
-        (ispell-lookup-words (format "*%s*" str)))))
+(defun cape--ispell-table (bounds)
+  "Return completion table for Ispell completion between BOUNDS."
+  (let ((input nil)
+        (beg (copy-marker (car bounds)))
+        (end (copy-marker (car bounds) t))
+        (words 'init))
+    (lambda (str pred action)
+      (let ((new-input (buffer-substring-no-properties beg end)))
+        (when (or (eq words 'init) (not (string-match-p (regexp-quote input) new-input)))
+          (setq input new-input
+                words (with-demoted-errors
+                          (require 'ispell)
+                        (let ((message-log-max nil)
+                              (inhibit-message t))
+                          (ispell-lookup-words (format "*%s*" input)))))))
+      (complete-with-action action words str pred))))
 
 ;;;###autoload
 (defun cape-ispell-capf ()
   "Ispell completion-at-point-function."
   (when-let (bounds (bounds-of-thing-at-point 'word))
-    (let ((input (buffer-substring-no-properties (car bounds) (cdr bounds)))
-          (words nil))
-      `(,(car bounds) ,(cdr bounds)
-        ,(lambda (str pred action)
-           (complete-with-action
-            action (or words (setq words (cape--ispell-words input))) str pred))
-        :exclusive no
-        ,@cape--ispell-properties))))
+    `(,(car bounds) ,(cdr bounds)
+      ,(cape--ispell-table bounds)
+      :exclusive no
+      ,@cape--ispell-properties)))
 
 ;;;###autoload
 (defun cape-ispell ()
   "Complete with Ispell at point."
   (interactive)
-  (let* ((bounds (or (bounds-of-thing-at-point 'word) (cons (point) (point))))
-         (input (buffer-substring-no-properties (car bounds) (cdr bounds)))
-         (completion-extra-properties cape--ispell-properties))
-    (completion-in-region (car bounds) (cdr bounds) (cape--ispell-words input))))
+  (let ((bounds (or (bounds-of-thing-at-point 'word) (cons (point) (point))))
+        (completion-extra-properties cape--ispell-properties))
+    (completion-in-region (car bounds) (cdr bounds) (cape--ispell-table bounds))))
 
 (defvar cape--dict-properties
   (list :annotation-function (lambda (_) " Dict")
@@ -615,6 +619,32 @@ This feature is experimental."
                         :annotation-function (lambda (x) (cape--company-call backend 'annotation x))
                         :exit-function (lambda (x _status) (cape--company-call backend 'post-completion x))))))))
     name))
+
+(defun cape-capf-buster (capf &optional cmp)
+  "Return transformed CAPF where the cache is busted on input change.
+The CMP argument determines how the new input is compared to the old input.
+- prefix/nil: Preserve cache when the old input is a prefix of the new input.
+- equal: Preserve cache when the old input is equal to the new input.
+- substring: Preserve cache when the old input is a substring of the new input."
+  (lambda ()
+    (pcase (funcall capf)
+      (`(,beg ,end ,table . ,plist)
+       (let* ((start (copy-marker beg))
+              (input (buffer-substring-no-properties start (point))))
+         `(,beg ,end
+                ,(lambda (str pred action)
+                   (let ((new-input (buffer-substring-no-properties start (point))))
+                     (unless (or
+                              (pcase-exhaustive cmp
+                                ((or 'prefix 'nil) (not (string-prefix-p input new-input)))
+                                ('equal (equal new-input input))
+                                ('substring (not (string-match-p (regexp-quote input) new-input))))
+                              (string-match-p "\\s-" new-input))
+                       (pcase (funcall capf)
+                         (`(,_beg ,_end ,new-table . ,_plist)
+                          (setq table new-table input new-input)))))
+                   (complete-with-action action table str pred))
+                ,@plist))))))
 
 (provide 'cape)
 ;;; cape.el ends here

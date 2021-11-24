@@ -1,5 +1,5 @@
 (jupyter .
-	 [(20211120 220)
+	 [(20211121 232)
 	  ((emacs
 	    (26))
 	   (zmq
@@ -11,7 +11,7 @@
 	   (websocket
 	    (1 9)))
 	  "Jupyter" tar
-	  ((:commit . "162d047e62468de763db322010a6c348b4fea710")
+	  ((:commit . "0dec83f7e4a125c73430a45c2fb2119dcc31bd28")
 	   (:authors
 	    ("Nathaniel Nicandro" . "nathanielnicandro@gmail.com"))
 	   (:maintainer "Nathaniel Nicandro" . "nathanielnicandro@gmail.com")

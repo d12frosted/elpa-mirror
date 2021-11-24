@@ -4,9 +4,7 @@
 ;; Maintainer: Brian Caruso <briancaruso@gmail.com>
 ;; Created: 2016-05-27
 ;; URL: https://github.com/bdc34/helm-taskswitch
-;; Package-Commit: 59f7cb99defa6e6bf6e7d599559fa8d5786cf8a9
-;; Package-Version: 20190304.1414
-;; Package-X-Original-Version: 2.0.0
+;; Package-Version: 2.0.0
 ;; Package-Requires: ((emacs "24")(helm "3.0"))
 ;; Keywords: frames
 
