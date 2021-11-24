@@ -2045,7 +2045,7 @@
 	       ("Scott Andrew Borton" . "scott@pp.htv.fi"))
 	      (:maintainer "John Darrington" . "john@darrington.wattle.id.au"))])
  (pyim .
-       [(3 9 4)
+       [(3 9 5)
 	((emacs
 	  (24 4))
 	 (async
@@ -2054,11 +2054,11 @@
 	  (1 13)))
 	"A Chinese input method support quanpin, shuangpin, wubi, cangjie and rime." tar
 	((:url . "https://github.com/tumashu/pyim")
+	 (:keywords "convenience" "chinese" "pinyin" "input-method")
 	 (:maintainer "Feng Shu" . "tumashu@163.com")
 	 (:authors
 	  ("Ye Wenbin" . "wenbinye@163.com")
-	  ("Feng Shu" . "tumashu@163.com"))
-	 (:keywords "convenience" "chinese" "pinyin" "input-method"))])
+	  ("Feng Shu" . "tumashu@163.com")))])
  (pyim-basedict .
 		[(0 5 0)
 		 nil "The default pinyin dict of pyim" tar

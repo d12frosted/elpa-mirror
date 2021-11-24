@@ -4,8 +4,8 @@
 ;; Created: 2021
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
-;; Package-Version: 20211124.648
-;; Package-Commit: 7325c5002f9c1fa06f1fdcf923191a8e46224c15
+;; Package-Version: 20211124.1056
+;; Package-Commit: ac65f2acdf9340aa11379d5904172480acae4ca5
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 
@@ -49,6 +49,10 @@
 (defcustom cape-company-async-wait 0.02
   "Company asynchronous busy waiting time."
   :type 'float)
+
+(defcustom cape-dabbrev-min-length 4
+  "Minimum length of dabbrev expansions."
+  :type 'integer)
 
 (defcustom cape-keywords
   ;; This variable was taken from company-keywords.el.
@@ -299,6 +303,13 @@
   "Alist of major modes and keywords."
   :type 'alist)
 
+(defmacro cape--silent (&rest body)
+  "Silence BODY."
+  `(cl-letf ((inhibit-message t)
+             (message-log-max nil)
+             ((symbol-function #'minibuffer-message) #'ignore))
+     (ignore-errors ,@body)))
+
 (defun cape--complete-in-region (thing table extra)
   "Complete THING at point given completion TABLE and EXTRA properties."
   (let ((bounds (or (bounds-of-thing-at-point thing) (cons (point) (point))))
@@ -307,7 +318,8 @@
 
 (defvar cape--file-properties
   (list :annotation-function (lambda (s) (if (string-suffix-p "/" s) " Folder" " File"))
-        :company-kind (lambda (s) (if (string-suffix-p "/" s) 'folder 'file))))
+        :company-kind (lambda (s) (if (string-suffix-p "/" s) 'folder 'file)))
+  "Completion extra properties for `cape-file-capf'.")
 
 ;;;###autoload
 (defun cape-file-capf ()
@@ -325,7 +337,8 @@
 
 (defvar cape--symbol-properties
   (list :annotation-function (lambda (_) " Symbol")
-        :company-kind #'cape--symbol-kind))
+        :company-kind #'cape--symbol-kind)
+  "Completion extra properties for `cape-symbol'.")
 
 (defun cape--symbol-kind (sym)
   "Return kind of SYM."
@@ -344,66 +357,80 @@
   (interactive)
   (cape--complete-in-region 'symbol obarray cape--symbol-properties))
 
+(defun cape--cached-table (beg end cmp fun &optional metadata)
+  "Create caching completion table.
+BEG and END are the input bounds.
+CMP is the input comparison function, see `cape--input-changed-p'.
+FUN is the function which computes the candidates.
+METADATA is optional completion metadata."
+  (let ((input 'init)
+        (beg (copy-marker beg))
+        (end (copy-marker end t))
+        (table nil))
+    (lambda (str pred action)
+      (if (eq action 'metadata)
+          metadata
+        (let ((new-input (buffer-substring-no-properties beg end)))
+          (when (or (eq input 'init) (cape--input-changed-p input new-input cmp))
+            (setq table (funcall fun new-input) input new-input)))
+        (complete-with-action action table str pred)))))
+
 (defvar cape--dabbrev-properties
   (list :annotation-function (lambda (_) " Dabbrev")
-        :company-kind (lambda (_) 'text)))
+        :company-kind (lambda (_) 'text))
+  "Completion extra properties for `cape-dabbrev-capf'.")
 
 (defvar dabbrev-check-all-buffers)
 (defvar dabbrev-check-other-buffers)
-(declare-function dabbrev--abbrev-at-point "dabbrev")
 (declare-function dabbrev--ignore-case-p "dabbrev")
 (declare-function dabbrev--find-all-expansions "dabbrev")
 (declare-function dabbrev--reset-global-variables "dabbrev")
+(declare-function dabbrev--abbrev-at-point "dabbrev")
 
 ;;;###autoload
 (defun cape-dabbrev-capf ()
-  "Dabbrev completion-at-point-function."
+  "Ispell completion-at-point-function."
   (require 'dabbrev)
+  (cape--dabbrev-reset)
+  (let ((abbrev (ignore-errors (dabbrev--abbrev-at-point))))
+    (when (and abbrev (not (string-match-p "\\s-" abbrev)))
+      (let ((beg (progn (search-backward abbrev) (point)))
+            (end (progn (search-forward abbrev) (point))))
+        `(,beg ,end
+          ,(cape--cached-table beg end 'prefix #'cape--dabbrev-expansions)
+          :exclusive no
+          ,@cape--dabbrev-properties)))))
+
+(defun cape--dabbrev-reset ()
+  "Reset dabbrev state."
   (let ((dabbrev-check-all-buffers nil)
         (dabbrev-check-other-buffers nil))
-    (dabbrev--reset-global-variables))
-  (let ((abbrev (ignore-errors (dabbrev--abbrev-at-point))))
-    (when (and abbrev (not (string-match-p "[ \t\n]" abbrev)))
-      (pcase ;; Interruptible scanning
-          (while-no-input
-            (let ((inhibit-message t)
-                  (message-log-max nil))
-              (or (dabbrev--find-all-expansions
-                   abbrev (dabbrev--ignore-case-p abbrev))
-                  t)))
-        ('nil (keyboard-quit))
-        ('t nil)
-        (words
-         ;; Ignore completions which are too short
-         (let ((min-len (+ 4 (length abbrev))))
-           (setq words (seq-remove (lambda (x) (< (length x) min-len)) words)))
-         (when words
-           (let ((beg (progn (search-backward abbrev) (point)))
-                 (end (progn (search-forward abbrev) (point))))
-             (unless (string-match-p "\n" (buffer-substring beg end))
-               `(,beg ,end ,words :exclusive no ,@cape--dabbrev-properties)))))))))
+    (dabbrev--reset-global-variables)))
+
+(defun cape--dabbrev-expansions (word)
+  "Find all dabbrev expansions for WORD."
+  (cape--dabbrev-reset)
+  (cape--silent
+   (cl-loop
+    with min-len = (+ cape-dabbrev-min-length (length word))
+    for w in (dabbrev--find-all-expansions word (dabbrev--ignore-case-p word))
+    if (>= (length w) min-len) collect w)))
 
 (defvar cape--ispell-properties
   (list :annotation-function (lambda (_) " Ispell")
-        :company-kind (lambda (_) 'text)))
+        :company-kind (lambda (_) 'text))
+  "Completion extra properties for `cape-ispell-capf'.")
 
 (declare-function ispell-lookup-words "ispell")
+(defun cape--ispell-words (str)
+  "Return all words from Ispell matching STR."
+  (with-demoted-errors "Ispell Error: %S"
+    (require 'ispell)
+    (cape--silent (ispell-lookup-words (format "*%s*" str)))))
+
 (defun cape--ispell-table (bounds)
   "Return completion table for Ispell completion between BOUNDS."
-  (let ((input nil)
-        (beg (copy-marker (car bounds)))
-        (end (copy-marker (car bounds) t))
-        (words 'init))
-    (lambda (str pred action)
-      (let ((new-input (buffer-substring-no-properties beg end)))
-        (when (or (eq words 'init) (not (string-match-p (regexp-quote input) new-input)))
-          (setq input new-input
-                words (with-demoted-errors
-                          (require 'ispell)
-                        (let ((message-log-max nil)
-                              (inhibit-message t))
-                          (ispell-lookup-words (format "*%s*" input)))))))
-      (complete-with-action action words str pred))))
+  (cape--cached-table (car bounds) (cdr bounds) 'substring #'cape--ispell-words))
 
 ;;;###autoload
 (defun cape-ispell-capf ()
@@ -424,7 +451,8 @@
 
 (defvar cape--dict-properties
   (list :annotation-function (lambda (_) " Dict")
-        :company-kind (lambda (_) 'text)))
+        :company-kind (lambda (_) 'text))
+  "Completion extra properties for `cape-dict-capf'.")
 
 (defvar cape--dict-words nil)
 (defun cape--dict-words ()
@@ -456,7 +484,8 @@
 (defvar cape--abbrev-properties
   (list :annotation-function (lambda (_) " Abbrev")
         :exit-function (lambda (&rest _) (expand-abbrev))
-        :company-kind (lambda (_) 'snippet)))
+        :company-kind (lambda (_) 'snippet))
+  "Completion extra properties for `cape-abbrev-capf'.")
 
 ;;;###autoload
 (defun cape-abbrev-capf ()
@@ -480,7 +509,8 @@
 
 (defvar cape--keyword-properties
   (list :annotation-function (lambda (_) " Keyword")
-        :company-kind (lambda (_) 'keyword)))
+        :company-kind (lambda (_) 'keyword))
+  "Completion extra properties for `cape-keyword-capf'.")
 
 ;;;###autoload
 (defun cape-keyword-capf ()
@@ -498,14 +528,14 @@
                                 (user-error "No keywords for %s" major-mode))
                             cape--keyword-properties))
 
-(defun cape--merged-function (ht prop)
+(defun cape--super-function (ht prop)
   "Return merged function for PROP given HT."
   (lambda (x)
     (when-let (fun (plist-get (gethash x ht) prop))
       (funcall fun x))))
 
 ;;;###autoload
-(defun cape-merge-capfs (&rest capfs)
+(defun cape-super-capf (&rest capfs)
   "Merge CAPFS and return new Capf which includes all candidates."
   (lambda ()
     (when-let (results (delq nil (mapcar #'funcall capfs)))
@@ -529,7 +559,7 @@
               (lambda (str pred action)
                 (if (eq action 'metadata)
                     '(metadata
-                      (category . cape-merged)
+                      (category . cape-super)
                       (display-sort-function . identity)
                       (cycle-sort-function . identity))
                   (when (eq candidates 'init)
@@ -545,13 +575,13 @@
                   (complete-with-action action candidates str pred)))
               :exclusive 'no
               :company-prefix-length prefix-len
-              :company-doc-buffer (cape--merged-function ht :company-doc-buffer)
-              :company-location (cape--merged-function ht :company-location)
-              :company-docsig (cape--merged-function ht :company-docsig)
-              :company-deprecated (cape--merged-function ht :company-deprecated)
-              :company-kind (cape--merged-function ht :company-kind)
-              :annotation-function (cape--merged-function ht :annotation-function)
-              :exit-function (lambda (x _status) (funcall (cape--merged-function ht :exit-function) x)))))))
+              :company-doc-buffer (cape--super-function ht :company-doc-buffer)
+              :company-location (cape--super-function ht :company-location)
+              :company-docsig (cape--super-function ht :company-docsig)
+              :company-deprecated (cape--super-function ht :company-deprecated)
+              :company-kind (cape--super-function ht :company-kind)
+              :annotation-function (cape--super-function ht :annotation-function)
+              :exit-function (lambda (x _status) (funcall (cape--super-function ht :exit-function) x)))))))
 
 (defun cape--company-call (backend &rest args)
   "Call Company BACKEND with ARGS."
@@ -567,84 +597,106 @@
     (res res)))
 
 ;;;###autoload
-(defun cape-company-to-capf (backend)
+(defun cape-company-to-capf (backend &optional cmp)
   "Convert Company BACKEND function to Capf.
+CMP is the input comparator, see `cape--input-changed-p'.
 This feature is experimental."
   (unless (symbolp backend)
     (error "Backend must be a symbol"))
-  (let ((name (intern (format "cape--company-capf:%s" backend)))
-        (initialized (intern (format "cape--company-capf-initialized:%s" backend))))
-    (unless (symbol-function name)
-      (make-variable-buffer-local initialized)
-      (set initialized nil)
-      (fset name
-            (lambda ()
-              (unless (symbol-value initialized)
-                (cape--company-call backend 'init)
-                (set initialized t))
-              (when-let* ((prefix (cape--company-call backend 'prefix))
-                          (input (if (stringp prefix) prefix (car-safe prefix))))
-                ;; TODO When fetching candidates, support asynchronous operation. If a
-                ;; future is returned, the capf should fail first. As soon as the future
-                ;; callback is called, remember the result, refresh the UI and return the
-                ;; remembered result the next time the capf is called.
-                (let* ((no-cache (cape--company-call backend 'no-cache input))
-                       (dups (if (cape--company-call backend 'duplicates) #'delete-dups #'identity))
-                       (metadata `(metadata (category . ,backend)))
-                       (beg (copy-marker (- (point) (length input))))
-                       (end (copy-marker (point) t))
-                       (candidates 'init))
-                  (when (cape--company-call backend 'sorted)
-                    (nconc metadata '((display-sort-function . identity)
-                                      (cycle-sort-function . identity))))
-                  (list beg end
-                        (lambda (str pred action)
-                          (if (eq action 'metadata)
-                              metadata
-                            (when (or (eq candidates 'init) no-cache)
-                              ;; Use current input string as prefix (before spaces)
-                              (let ((new-input (replace-regexp-in-string
-                                                "\\s-.*" "" (buffer-substring-no-properties beg end))))
-                                (unless (or (eq candidates 'init) (equal new-input input))
-                                  (setq input new-input
-                                        candidates (funcall dups (cape--company-call backend 'candidates input))))))
-                            (complete-with-action action candidates str pred)))
-                        :exclusive 'no
-                        :company-prefix-length (cdr-safe prefix)
-                        :company-doc-buffer (lambda (x) (cape--company-call backend 'doc-buffer x))
-                        :company-location (lambda (x) (cape--company-call backend 'location x))
-                        :company-docsig (lambda (x) (cape--company-call backend 'meta x))
-                        :company-deprecated (lambda (x) (cape--company-call backend 'deprecated x))
-                        :company-kind (lambda (x) (cape--company-call backend 'kind x))
-                        :annotation-function (lambda (x) (cape--company-call backend 'annotation x))
-                        :exit-function (lambda (x _status) (cape--company-call backend 'post-completion x))))))))
-    name))
+  (let ((init (intern (format "cape--company-init:%s" backend))))
+    (lambda ()
+      (unless (boundp init)
+        (make-variable-buffer-local init))
+      (unless (symbol-value init)
+        (cape--company-call backend 'init)
+        (set init t))
+      (when-let* ((prefix (cape--company-call backend 'prefix))
+                  (initial-input (if (stringp prefix) prefix (car-safe prefix))))
+        ;; TODO When fetching candidates, support asynchronous operation. If a
+        ;; future is returned, the capf should fail first. As soon as the future
+        ;; callback is called, remember the result, refresh the UI and return the
+        ;; remembered result the next time the capf is called.
+        (let* ((end (point)) (beg (- end (length initial-input))))
+          (list beg end
+                (cape--cached-table beg end
+                                    (if (cape--company-call backend 'no-cache initial-input)
+                                        'always cmp)
+                                    (if (cape--company-call backend 'duplicates)
+                                        (lambda (input)
+                                          (delete-dups (cape--company-call backend 'candidates input)))
+                                      (apply-partially #'cape--company-call backend 'candidates))
+                                    (if (cape--company-call backend 'sorted)
+                                        `(metadata
+                                          (category . ,backend)
+                                          (display-sort-function . identity)
+                                          (cycle-sort-function . identity))
+                                      `(metadata (category . ,backend))))
+                :exclusive 'no
+                :company-prefix-length (cdr-safe prefix)
+                :company-doc-buffer (lambda (x) (cape--company-call backend 'doc-buffer x))
+                :company-location (lambda (x) (cape--company-call backend 'location x))
+                :company-docsig (lambda (x) (cape--company-call backend 'meta x))
+                :company-deprecated (lambda (x) (cape--company-call backend 'deprecated x))
+                :company-kind (lambda (x) (cape--company-call backend 'kind x))
+                :annotation-function (lambda (x) (cape--company-call backend 'annotation x))
+                :exit-function (lambda (x _status) (cape--company-call backend 'post-completion x))))))))
 
+;;;###autoload
 (defun cape-capf-buster (capf &optional cmp)
   "Return transformed CAPF where the cache is busted on input change.
-The CMP argument determines how the new input is compared to the old input.
-- prefix/nil: Preserve cache when the old input is a prefix of the new input.
-- equal: Preserve cache when the old input is equal to the new input.
-- substring: Preserve cache when the old input is a substring of the new input."
+See `cape--input-changed-p' for the CMP argument."
   (lambda ()
     (pcase (funcall capf)
       (`(,beg ,end ,table . ,plist)
-       (let* ((start (copy-marker beg))
-              (input (buffer-substring-no-properties start (point))))
-         `(,beg ,end
-                ,(lambda (str pred action)
-                   (let ((new-input (buffer-substring-no-properties start (point))))
-                     (unless (or
-                              (pcase-exhaustive cmp
-                                ((or 'prefix 'nil) (not (string-prefix-p input new-input)))
-                                ('equal (equal new-input input))
-                                ('substring (not (string-match-p (regexp-quote input) new-input))))
-                              (string-match-p "\\s-" new-input))
+       `(,beg ,end
+              ,(let* ((beg (copy-marker beg))
+                      (end (copy-marker end t))
+                      (input (buffer-substring-no-properties beg end)))
+                 (lambda (str pred action)
+                   (let ((new-input (buffer-substring-no-properties beg end)))
+                     (when (cape--input-changed-p input new-input cmp)
                        (pcase (funcall capf)
                          (`(,_beg ,_end ,new-table . ,_plist)
                           (setq table new-table input new-input)))))
-                   (complete-with-action action table str pred))
-                ,@plist))))))
+                   (complete-with-action action table str pred)))
+              ,@plist)))))
+
+(defun cape--input-changed-p (old-input new-input cmp)
+  "Return non-nil if the NEW-INPUT has changed in comparison to OLD-INPUT.
+The CMP argument determines how the new input is compared to the old input.
+- always: Always treat the input as changed.
+- prefix/nil: The old input is not a prefix of the new input.
+- equal: The old input is not equal to the new input.
+- substring: The old input is not a substring of the new input."
+  ;; Treat input as not changed if it contains space to allow
+  ;; Orderless completion style filtering.
+  (not (or (string-match-p "\\s-" new-input)
+           (pcase-exhaustive cmp
+             ('always nil)
+             ((or 'prefix 'nil) (string-prefix-p old-input new-input))
+             ('equal (equal old-input new-input))
+             ('substring (string-match-p (regexp-quote old-input) new-input))))))
+
+;;;###autoload
+(defun cape-capf-with-properties (capf &rest properties)
+  "Return a new CAPF with additional completion PROPERTIES.
+Completion properties include for example :exclusive, :annotation-function
+and the various :company-* extensions."
+  (lambda ()
+    (pcase (funcall capf)
+      (`(,beg ,end ,table . ,plist)
+       `(,beg ,end ,table ,@properties ,@plist)))))
+
+;;;###autoload
+(defun cape-silent-capf (capf)
+  "Return a new CAPF which is silent (no messages, no errors)."
+  (lambda ()
+    (pcase (cape--silent (funcall capf))
+      (`(,beg ,end ,table . ,plist)
+       `(,beg ,end
+              ,(lambda (str pred action)
+                 (cape--silent (complete-with-action action table str pred)))
+              ,@plist)))))
 
 (provide 'cape)
 ;;; cape.el ends here
