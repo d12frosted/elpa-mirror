@@ -4,10 +4,10 @@ supposed to be used with `org-ref' package.  After enabling this mode
 citation org-ref links in the current buffer are shown in a more
 readable format, e.g.:
 
-  [[cite:CoxeterPG2ed][53]]          ->  Coxeter, 1987, p. 53
-  [[citetitle:CoxeterPG2ed]]         ->  Projective Geometry
-  citeauthor:CoxeterPG2ed            ->  Coxeter
-  [[parencite:CoxeterPG2ed][36-44]]  ->  (Coxeter, 1987, pp. 36-44)
+  [[cite:&CoxeterPG2ed pg 53]]       ->  Coxeter, 1987, p. 53
+  [[citetitle:&CoxeterPG2ed ch 3]]   ->  Projective Geometry ch 3
+  [[parencite:&CoxeterPG2ed 36-44]]  ->  (Coxeter, 1987, pp. 36-44)
+  [[citeauthor:See &GorFG; &RotITG; &AschFGT2ed]]  ->  See Gorenstein; Rotman; Aschbacher
 
 The citation links themselves are not changed, they are just
 displayed differently.  You can disable the mode by running "M-x
