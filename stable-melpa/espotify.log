@@ -3,7 +3,11 @@ Fetcher: git
 Source:  https://codeberg.org/jao/espotify
 
 Updating /mnt/store/melpa/working/espotify/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://codeberg.org/jao/espotify/': The requested URL returned error: 502
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 5c1dcf0182135cda4191d4ba206fe2f265100293
+Built espotify in 5.921s, finished at 2021-11-25T02:03:35+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Nov 25 02:03 packages/espotify-20211114.2251.el
+4.0K -rw-r--r-- 1 root root  339 Nov 25 02:03 packages/espotify-20211114.2251.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 25 02:03 packages/espotify-badge.svg
+4.0K -rw-r--r-- 1 root root  654 Nov 25 02:03 packages/espotify-readme.txt

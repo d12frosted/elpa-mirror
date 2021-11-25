@@ -3,7 +3,11 @@ Fetcher: git
 Source:  https://codeberg.org/jao/espotify
 
 Updating /mnt/store/melpa/working/consult-spotify/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://codeberg.org/jao/espotify/': The requested URL returned error: 502
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 5c1dcf0182135cda4191d4ba206fe2f265100293
+Built consult-spotify in 5.944s, finished at 2021-11-25T01:52:08+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.8K Nov 25 01:52 packages/consult-spotify-20211114.2258.el
+4.0K -rw-r--r-- 1 root root  408 Nov 25 01:52 packages/consult-spotify-20211114.2258.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 25 01:52 packages/consult-spotify-badge.svg
+4.0K -rw-r--r-- 1 root root  652 Nov 25 01:52 packages/consult-spotify-readme.txt
