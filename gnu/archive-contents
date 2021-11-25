@@ -18,7 +18,7 @@
 	 ("Leo Liu" . "sdl.web@gmail.com"))
 	(:keywords "tools" "processes" "convenience"))])
  (ada-mode .
-	   [(7 1 9)
+	   [(7 2 0)
 	    ((uniquify-files
 	      (1 0 1))
 	     (wisi
@@ -499,7 +499,7 @@
 	   ("Gary D. Foster" . "Gary.Foster@Corp.Sun.COM"))
 	  (:maintainer "Luke Lee" . "luke.yx.lee@gmail.com"))])
  (csharp-mode .
-	      [(1 1 0)
+	      [(1 1 1)
 	       ((emacs
 		 (26 1)))
 	       "C# mode derived mode" tar
@@ -2960,7 +2960,7 @@
 		("Bastien" . "bzg@gnu.org"))
 	       (:maintainer "Bastien" . "bzg@gnu.org"))])
  (wisi .
-       [(3 1 6)
+       [(3 1 7)
 	((emacs
 	  (25 3))
 	 (seq
