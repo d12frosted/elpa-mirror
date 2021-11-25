@@ -8,8 +8,8 @@
 ;; Author: Mitsuo Saito <arch320@NOSPAM.gmail.com>
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Version: 1.61
-;; Package-Version: 20211122.1003
-;; Package-Commit: 59223a1377981a5c83011fbf323f07d169cf2db4
+;; Package-Version: 20211125.747
+;; Package-Commit: 40efce76ee0dff920f2ba2315e568e75e5218830
 ;; Keywords: highlight face match convenience
 ;; URL: http://github.com/jcs-elpa/auto-highlight-symbol
 ;; Package-Requires: ((emacs "26.1") (ht "2.3"))
@@ -949,13 +949,13 @@ You can do these operations at One Key!
 ;; (@* "Timer" )
 ;;
 
-(defun ahs-start-timer ()
+(defun ahs-start-timer (&rest _)
   "Start idle timer."
   (when auto-highlight-symbol-mode
     (ahs-unhighlight)  ; unhighlight it once here so we can see the result immediately
     (when (timerp ahs-idle-timer) (cancel-timer ahs-idle-timer))
     (setq ahs-idle-timer
-          (run-with-timer
+          (run-with-idle-timer
            ;; if switch window, immediately change focus/unfocus unless the user
            ;; doesn't want us to
            (if (or (eq ahs-selected-window (selected-window))
@@ -1156,8 +1156,7 @@ You can do these operations at One Key!
                              (if (ahs-face-p face 'ahs-definition-face-list)
                                  (if current ahs-definition-face
                                    ahs-definition-face-unfocused)
-                               (if current ahs-face
-                                 ahs-face-unfocused)))
+                               (if current ahs-face ahs-face-unfocused)))
                 (push overlay ahs-overlay-list))))
 
 (defun ahs-highlight (symbol beg end)
@@ -1557,7 +1556,8 @@ If FORCE is non-nil, delete all in the current buffer."
   (unless ahs-current-range
     (ahs-change-range-internal ahs-default-range))
   (ahs-set-lighter)
-  (add-hook 'post-command-hook #'ahs-start-timer nil t))
+  (add-hook 'post-command-hook #'ahs-start-timer nil t)
+  (add-hook 'after-change-functions #'ahs-start-timer nil t))
 
 (defun ahs-clear (&optional verbose)
   "Remove all overlays and exit edit mode."
@@ -1565,7 +1565,8 @@ If FORCE is non-nil, delete all in the current buffer."
       (ahs-edit-mode-off (not verbose) nil)
     (ahs-unhighlight-all t)
     (ht-clear ahs-window-map)
-    (remove-hook 'post-command-hook #'ahs-start-timer t)))
+    (remove-hook 'post-command-hook #'ahs-start-timer t)
+    (remove-hook 'after-change-functions #'ahs-start-timer t)))
 
 (defun ahs-mode-maybe ()
   "Fire up `auto-highlight-symbol-mode' if major-mode in ahs-modes."

@@ -2293,10 +2293,10 @@
 		[(2 4)
 		 nil "Emacs interface to RT" tar
 		 ((:url . "http://www.nongnu.org/rtliber/")
+		  (:keywords "rt" "tickets")
 		  (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
 		  (:authors
-		   ("Yoni Rabkin" . "yrk@gnu.org"))
-		  (:keywords "rt" "tickets"))])
+		   ("Yoni Rabkin" . "yrk@gnu.org")))])
  (rudel .
 	[(0 3 2)
 	 ((emacs
@@ -2506,12 +2506,12 @@
 	    (:keywords "processes" "mode-line"))])
  (sql-beeline .
 	      [(0 1)
-	       nil "Beeline support for sql.el" single
-	       ((:url . "http://elpa.gnu.org/packages/sql-beeline.html")
-		(:keywords "sql" "hive" "beeline" "hiveserver2")
+	       nil "Beeline support for sql.el" tar
+	       ((:keywords "sql" "hive" "beeline" "hiveserver2")
+		(:maintainer "Filipp Gunbin" . "fgunbin@fastmail.fm")
 		(:authors
 		 ("Filipp Gunbin" . "fgunbin@fastmail.fm"))
-		(:maintainer "Filipp Gunbin" . "fgunbin@fastmail.fm"))])
+		(:url . "https://elpa.gnu.org/packages/sql-beeline.html"))])
  (sql-indent .
 	     [(1 6)
 	      ((cl-lib
@@ -2714,17 +2714,17 @@
 		  [(0 2)
 		   nil "Unicode confusables table" tar
 		   ((:maintainer "Teodor Zlatanov" . "tzz@lifelogs.com")
-		    (:url . "http://elpa.gnu.org/packages/uni-confusables.html"))])
+		    (:url . "https://elpa.gnu.org/packages/uni-confusables.html"))])
  (uniquify-files .
 		 [(1 0 3)
 		  ((emacs
 		    (25 0)))
 		  "Completion style for files, minimizing directories" tar
-		  ((:maintainer "Stephen Leake" . "stephen_leake@stephe-leake.org")
+		  ((:keywords "completion" "table" "uniquify")
+		   (:maintainer "Stephen Leake" . "stephen_leake@stephe-leake.org")
 		   (:authors
 		    ("Stephen Leake" . "stephen_leake@stephe-leake.org"))
-		   (:keywords "completion" "table" "uniquify")
-		   (:url . "http://elpa.gnu.org/packages/uniquify-files.html"))])
+		   (:url . "https://elpa.gnu.org/packages/uniquify-files.html"))])
  (url-http-ntlm .
 		[(2 0 4)
 		 ((cl-lib
