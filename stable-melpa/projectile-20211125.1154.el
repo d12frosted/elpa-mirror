@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20211116.700
-;; Package-Commit: d43f6c7ca471a777b164fbe9b9015aa376625552
+;; Package-Version: 20211125.1154
+;; Package-Commit: 45d217a921006f2daeecd9c7da1b788d6aab5b96
 ;; Keywords: project, convenience
 ;; Version: 2.6.0-snapshot
 ;; Package-Requires: ((emacs "25.1"))
@@ -1047,6 +1047,9 @@ The cache is created both in memory and on the hard drive."
 
 If DEPTH is non-nil recursively descend exactly DEPTH levels below DIRECTORY and
 discover projects there."
+  (interactive
+   (list (read-directory-name "Starting directory: ")))
+
   (if (file-directory-p directory)
       (if (and (numberp depth) (> depth 0))
           ;; Ignore errors when listing files in the directory, because

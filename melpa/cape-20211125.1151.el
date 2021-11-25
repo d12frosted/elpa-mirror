@@ -4,8 +4,8 @@
 ;; Created: 2021
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
-;; Package-Version: 20211124.2107
-;; Package-Commit: af4268549c6def31d613fc2984640f7063b87413
+;; Package-Version: 20211125.1151
+;; Package-Commit: 673b086daea275ada9fb536f1b41e822f46f020d
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 
@@ -488,8 +488,17 @@ METADATA is optional completion metadata."
   (delete "" (nconc (all-completions "" global-abbrev-table)
                     (all-completions "" local-abbrev-table))))
 
+(defun cape--abbrev-annotation (abbrev)
+  "Annotate ABBREV with expansion."
+  (concat " "
+          (truncate-string-to-width
+           (symbol-value
+            (or (abbrev--symbol abbrev local-abbrev-table)
+                (abbrev--symbol abbrev global-abbrev-table)))
+           30 0 nil t)))
+
 (defvar cape--abbrev-properties
-  (list :annotation-function (lambda (_) " Abbrev")
+  (list :annotation-function #'cape--abbrev-annotation
         :exit-function (lambda (&rest _) (expand-abbrev))
         :company-kind (lambda (_) 'snippet))
   "Completion extra properties for `cape-abbrev-capf'.")
