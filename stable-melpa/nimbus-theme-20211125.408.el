@@ -6,8 +6,8 @@
 ;;              See README.md for full list of contributors.
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
 ;; Version:     1.0.0
-;; Package-Version: 20211115.430
-;; Package-Commit: fe8ebe24cecb0181f49446de0a0faf3cd7630747
+;; Package-Version: 20211125.408
+;; Package-Commit: 5658d683faa8adc7d4bc58faea1cc1409e980314
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/m-cat/nimbus-theme
 ;; Keywords:    faces
@@ -118,7 +118,7 @@
        (indent         darker-gray)
        (key            blue)
        (line           blue-gray)
-       (line-current   dark-green)
+       (line-current   green)
        (name           dark-green)
        (number         orange)
        (selection      purple-bg)
@@ -650,10 +650,10 @@
 
    ;; highlight-indent-guides
    `(highlight-indent-guides-character-face ((t (:foreground ,indent))))
-   `(highlight-indent-guides-odd-face ((t (:background ,gray-bg))))
-   `(highlight-indent-guides-even-face ((t (:background ,gray-bg))))
-   `(highlight-indent-guides-top-odd-face ((t (:background ,blue-bg))))
-   `(highlight-indent-guides-top-even-face ((t (:background ,blue-bg))))
+   `(highlight-indent-guides-odd-face ((t (:background ,darkest-gray))))
+   `(highlight-indent-guides-even-face ((t (:background ,darkest-gray))))
+   `(highlight-indent-guides-top-odd-face ((t (:background ,teal-bg))))
+   `(highlight-indent-guides-top-even-face ((t (:background ,teal-bg))))
 
    ;; highlight-numbers
    `(highlight-numbers-number ((t (:foreground ,number))))
@@ -831,7 +831,7 @@
    ;; magit-commit-mark
    ;; `(magit-commit-mark-read-face ((t ())))
    ;; `(magit-commit-mark-star-face ((t ( ))))
-   `(magit-commit-mark-unread-face ((t (:inherit magit-hash :bold t))))
+   `(magit-commit-mark-unread-face ((t (:inherit magit-hash))))
    `(magit-commit-mark-urgent-face ((t (:foreground ,red))))
 
    ;; makey
