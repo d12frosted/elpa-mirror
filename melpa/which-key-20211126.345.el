@@ -5,8 +5,8 @@
 ;; Author: Justin Burkett <justin@burkett.cc>
 ;; Maintainer: Justin Burkett <justin@burkett.cc>
 ;; URL: https://github.com/justbur/emacs-which-key
-;; Package-Version: 20210824.11
-;; Package-Commit: 4790a14683a2f3e4f72ade197c78e4c0af1cdd4b
+;; Package-Version: 20211126.345
+;; Package-Commit: 521a59b6f461232a008fba62f79bbb14f487b16e
 ;; Version: 3.5.1
 ;; Keywords:
 ;; Package-Requires: ((emacs "24.4"))
@@ -409,6 +409,15 @@ Note that `which-key-idle-delay' should be set before turning on
   :group 'which-key
   :type 'boolean)
 
+(defcustom which-key-preserve-window-configuration nil
+  "If non-nil, save window configuration before which-key buffer is shown
+and restore it after which-key buffer is hidden. It prevents which-key from
+changing window position of visible buffers.
+Only takken into account when popup type is side-window."
+  :group
+  'which-key
+  :type 'boolean)
+
 (defvar which-key-C-h-map
   (let ((map (make-sparse-keymap)))
     (dolist (bind `(("\C-a" . which-key-abort)
@@ -656,6 +665,8 @@ update.")
   total-keys
   prefix
   prefix-title)
+
+(defvar which-key--saved-window-configuration nil)
 
 (defun which-key--rotate (list n)
   (let* ((len (length list))
@@ -1098,7 +1109,11 @@ total height."
   (when (buffer-live-p which-key--buffer)
     ;; in case which-key buffer was shown in an existing window, `quit-window'
     ;; will re-show the previous buffer, instead of closing the window
-    (quit-windows-on which-key--buffer)))
+    (quit-windows-on which-key--buffer)
+    (when (and which-key-preserve-window-configuration
+               which-key--saved-window-configuration)
+      (set-window-configuration which-key--saved-window-configuration)
+      (setq which-key--saved-window-configuration nil))))
 
 (defun which-key--hide-buffer-frame ()
   "Hide which-key buffer when frame popup is used."
@@ -1137,6 +1152,9 @@ call signature in different emacs versions"
 
 (defun which-key--show-buffer-side-window (act-popup-dim)
   "Show which-key buffer when popup type is side-window."
+  (when (and which-key-preserve-window-configuration
+             (not which-key--saved-window-configuration))
+    (setq which-key--saved-window-configuration (current-window-configuration)))
   (let* ((height (car act-popup-dim))
          (width (cdr act-popup-dim))
          (alist
@@ -1957,6 +1975,13 @@ is the width of the live window."
             (or prefix-title
                 (which-key--maybe-get-prefix-title
                  (key-description prefix-keys))))
+      (when (and (= (which-key--pages-num-pages result) 1)
+                 (> which-key-min-display-lines
+                    (which-key--pages-height result)))
+        ;; result is shorter than requested, so we artificially increase the
+        ;; height. See #325. Note this only has an effect if
+        ;; `which-key-allow-imprecise-window-fit' is non-nil.
+        (setf (which-key--pages-height result) which-key-min-display-lines))
       (which-key--debug-message "Frame height: %s
 Minibuffer height: %s
 Max dimensions: (%s,%s)
@@ -2363,7 +2388,10 @@ prefix) if `which-key-use-C-h-commands' is non nil."
                                      " 1..9"
                                      which-key-separator "digit-arg"))
                                    'face 'which-key-note-face)))
-                  (key (string (read-key prompt)))
+                  (key (let ((key (read-key prompt)))
+                         (if (numberp key)
+                             (string key)
+                           (vector key))))
                   (cmd (lookup-key which-key-C-h-map key))
                   (which-key-inhibit t))
              (if cmd (funcall cmd key) (which-key-turn-page 0)))))))

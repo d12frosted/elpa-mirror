@@ -119,22 +119,7 @@ cnfonts 使用下面两个命令来切换 profile ：
 [[./snapshots/cnfonts-ui-6.png]]
 [[./snapshots/cnfonts-ui-7.png]]
 
-*** 使用 cnfonts-edit-profile-without-ui 命令编辑 profile
-除了使用 `cnfonts-edit-profile' , *有经验* 的用户也可以使用
-`cnfonts-edit-profile-without-ui' 命令，直接编辑当前 profile 文件，
-两个命令的效果是一样的。
-
-在编辑的过程中，用户可以使用下面三个命令 *快速* 的测试编辑效果：
-
-| Key     | Command                             | Help                                   |
-|---------+-------------------------------------+----------------------------------------|
-| C-c C-c | cnfonts-test-fontsizes-at-point     | 查看字体显示效果                       |
-| C-up    | cnfonts-increment-fontsize-at-point | 增大光标下字号的大小，同时显示对齐效果 |
-| C-down  | cnfonts-decrement-fontsize-at-point | 减小光标下字号的大小，同时显示对齐效果 |
-
-注1: 不建议 cnfonts 新用户使用这种方式
-
-注2: 配置完成后，有可能需要重启 Emacs, 参考：http://debbugs.gnu.org/db/17/1785.html
+注1: 配置完成后，有可能需要重启 Emacs, 参考：http://debbugs.gnu.org/db/17/1785.html
 
 *** 使用 cnfonts-regenerate-profile 重置 profile
 `cnfonts-regenerate-profile' 命令会使用 cnfonts 自带的
