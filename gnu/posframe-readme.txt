@@ -18,6 +18,7 @@ Table of Contents
 .. 4. Delete a posframe
 .. 5. Delete all posframes
 .. 6. posframe-arghandler
+.. 7. Mouse banish
 
 
 
@@ -148,3 +149,14 @@ Table of Contents
 
   posframe-arghandler feature has been removed from posframe-1.1, user
   can use advice feature instead.
+
+
+3.7 Mouse banish
+────────────────
+
+  Default setting will work well in most case, but for EXWM user,
+  suggest use the below config.
+
+  ┌────
+  │ (setq posframe-mouse-banish-function #'posframe-mouse-banish-simple)
+  └────

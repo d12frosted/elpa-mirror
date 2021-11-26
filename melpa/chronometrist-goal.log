@@ -3,11 +3,7 @@ Fetcher: git
 Source:  https://tildegit.org/contrapunctus/chronometrist-goal.git
 
 Updating /mnt/store/melpa/working/chronometrist-goal/
-Checking out origin/HEAD
-Checking out 6cb939d160f5d5966d7853aa23f3ed7c7ef9df44
-Built chronometrist-goal in 5.162s, finished at 2021-11-26T07:18:10+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Nov 26 07:18 packages/chronometrist-goal-20210510.1831.el
-4.0K -rw-r--r-- 1 root root  531 Nov 26 07:18 packages/chronometrist-goal-20210510.1831.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 26 07:18 packages/chronometrist-goal-badge.svg
-4.0K -rw-r--r-- 1 root root  153 Nov 26 07:18 packages/chronometrist-goal-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://tildegit.org/contrapunctus/chronometrist-goal.git/': The requested URL returned error: 500
+error: Could not fetch origin
+
