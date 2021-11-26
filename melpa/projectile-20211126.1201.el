@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20211125.1154
-;; Package-Commit: d31860b7d37cf6a3e735062a2618c6b9f514a309
+;; Package-Version: 20211126.1201
+;; Package-Commit: 08fcdd51269d7e3c1c41c7f688555534067daa0e
 ;; Keywords: project, convenience
 ;; Version: 2.6.0-snapshot
 ;; Package-Requires: ((emacs "25.1"))
@@ -4527,7 +4527,7 @@ project of that type"
       (projectile-default-install-command (projectile-project-type))))
 
 (defun projectile-package-command (compile-dir)
-  "Retrieve the pacakge command for COMPILE-DIR.
+  "Retrieve the package command for COMPILE-DIR.
 
 The command is determined like this:
 
