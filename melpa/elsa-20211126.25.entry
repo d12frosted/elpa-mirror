@@ -1,5 +1,5 @@
 (elsa .
-      [(20211101 1023)
+      [(20211126 25)
        ((trinary
 	 (1 0 0))
 	(emacs
@@ -11,7 +11,7 @@
 	(cl-lib
 	 (0 3)))
        "Emacs Lisp Static Analyser" tar
-       ((:commit . "22bb5bd15e3f4fc2a9f10b998626fec18fd3a1a0")
+       ((:commit . "38a57df3931e7073046cc0bced9ff3d9e909adfb")
 	(:authors
 	 ("Matúš Goljer" . "matus.goljer@gmail.com"))
 	(:maintainer "Matúš Goljer" . "matus.goljer@gmail.com")
