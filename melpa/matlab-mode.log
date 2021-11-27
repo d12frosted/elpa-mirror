@@ -4,10 +4,10 @@ Source:  https://git.code.sf.net/p/matlab-emacs/src
 
 Updating /mnt/store/melpa/working/matlab-mode/
 Checking out origin/HEAD
-Checking out c25894b91225ccdf0044f04020adf97cb41e73e4
+Checking out c945bf50251150e0d4ad7ee751c7e9615cb4b3e8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/matlab-mode/
-  to /tmp/matlab-modeBBA8tS/matlab-mode-20210726.858
+  to /tmp/matlab-modeai14Ak/matlab-mode-20211122.833
     cedet-matlab.el -> cedet-matlab.el
     company-matlab-shell.el -> company-matlab-shell.el
     linemark.el -> linemark.el
@@ -49,57 +49,57 @@ Copying files (->) and directories (=>)
     toolbox/+emacs/@EmacsServer/EmacsServer.m -> toolbox/+emacs/@EmacsServer/EmacsServer.m
     toolbox/+emacs/@Stack/Stack.m -> toolbox/+emacs/@Stack/Stack.m
     templates/srecode-matlab.srt -> templates/srecode-matlab.srt
-Created matlab-mode-20210726.858.tar containing:
-  matlab-mode-20210726.858/
-  matlab-mode-20210726.858/cedet-matlab.el
-  matlab-mode-20210726.858/company-matlab-shell.el
-  matlab-mode-20210726.858/dl_emacs_support.m
-  matlab-mode-20210726.858/linemark.el
-  matlab-mode-20210726.858/matlab-cgen.el
-  matlab-mode-20210726.858/matlab-compat.el
-  matlab-mode-20210726.858/matlab-complete.el
-  matlab-mode-20210726.858/matlab-maint.el
-  matlab-mode-20210726.858/matlab-mode-pkg.el
-  matlab-mode-20210726.858/matlab-netshell.el
-  matlab-mode-20210726.858/matlab-publish.el
-  matlab-mode-20210726.858/matlab-scan.el
-  matlab-mode-20210726.858/matlab-shell-gud.el
-  matlab-mode-20210726.858/matlab-shell.el
-  matlab-mode-20210726.858/matlab-syntax.el
-  matlab-mode-20210726.858/matlab-topic.el
-  matlab-mode-20210726.858/matlab.el
-  matlab-mode-20210726.858/mlint.el
-  matlab-mode-20210726.858/semantic-matlab.el
-  matlab-mode-20210726.858/semanticdb-matlab.el
-  matlab-mode-20210726.858/srecode-matlab.el
-  matlab-mode-20210726.858/templates/
-  matlab-mode-20210726.858/templates/srecode-matlab.srt
-  matlab-mode-20210726.858/tlc.el
-  matlab-mode-20210726.858/toolbox/
-  matlab-mode-20210726.858/toolbox/+emacs/
-  matlab-mode-20210726.858/toolbox/+emacs/@Breakpoints/
-  matlab-mode-20210726.858/toolbox/+emacs/@Breakpoints/Breakpoints.m
-  matlab-mode-20210726.858/toolbox/+emacs/@EmacsServer/
-  matlab-mode-20210726.858/toolbox/+emacs/@EmacsServer/EmacsServer.m
-  matlab-mode-20210726.858/toolbox/+emacs/@Stack/
-  matlab-mode-20210726.858/toolbox/+emacs/@Stack/Stack.m
-  matlab-mode-20210726.858/toolbox/+emacs/set.m
-  matlab-mode-20210726.858/toolbox/dbhotlink.m
-  matlab-mode-20210726.858/toolbox/ebclear.m
-  matlab-mode-20210726.858/toolbox/ebstack.m
-  matlab-mode-20210726.858/toolbox/ebstatus.m
-  matlab-mode-20210726.858/toolbox/ebstop.m
-  matlab-mode-20210726.858/toolbox/emacscd.m
-  matlab-mode-20210726.858/toolbox/emacsdocomplete.m
-  matlab-mode-20210726.858/toolbox/emacsinit.m
-  matlab-mode-20210726.858/toolbox/emacsnetshell.m
-  matlab-mode-20210726.858/toolbox/emacsrun.m
-  matlab-mode-20210726.858/toolbox/emacsrunregion.m
-  matlab-mode-20210726.858/toolbox/emacstipstring.m
-  matlab-mode-20210726.858/toolbox/help.m
-  matlab-mode-20210726.858/toolbox/opentoline.m
-Built matlab-mode in 4.707s, finished at 2021-11-26T15:53:10+0000
+Created matlab-mode-20211122.833.tar containing:
+  matlab-mode-20211122.833/
+  matlab-mode-20211122.833/cedet-matlab.el
+  matlab-mode-20211122.833/company-matlab-shell.el
+  matlab-mode-20211122.833/dl_emacs_support.m
+  matlab-mode-20211122.833/linemark.el
+  matlab-mode-20211122.833/matlab-cgen.el
+  matlab-mode-20211122.833/matlab-compat.el
+  matlab-mode-20211122.833/matlab-complete.el
+  matlab-mode-20211122.833/matlab-maint.el
+  matlab-mode-20211122.833/matlab-mode-pkg.el
+  matlab-mode-20211122.833/matlab-netshell.el
+  matlab-mode-20211122.833/matlab-publish.el
+  matlab-mode-20211122.833/matlab-scan.el
+  matlab-mode-20211122.833/matlab-shell-gud.el
+  matlab-mode-20211122.833/matlab-shell.el
+  matlab-mode-20211122.833/matlab-syntax.el
+  matlab-mode-20211122.833/matlab-topic.el
+  matlab-mode-20211122.833/matlab.el
+  matlab-mode-20211122.833/mlint.el
+  matlab-mode-20211122.833/semantic-matlab.el
+  matlab-mode-20211122.833/semanticdb-matlab.el
+  matlab-mode-20211122.833/srecode-matlab.el
+  matlab-mode-20211122.833/templates/
+  matlab-mode-20211122.833/templates/srecode-matlab.srt
+  matlab-mode-20211122.833/tlc.el
+  matlab-mode-20211122.833/toolbox/
+  matlab-mode-20211122.833/toolbox/+emacs/
+  matlab-mode-20211122.833/toolbox/+emacs/@Breakpoints/
+  matlab-mode-20211122.833/toolbox/+emacs/@Breakpoints/Breakpoints.m
+  matlab-mode-20211122.833/toolbox/+emacs/@EmacsServer/
+  matlab-mode-20211122.833/toolbox/+emacs/@EmacsServer/EmacsServer.m
+  matlab-mode-20211122.833/toolbox/+emacs/@Stack/
+  matlab-mode-20211122.833/toolbox/+emacs/@Stack/Stack.m
+  matlab-mode-20211122.833/toolbox/+emacs/set.m
+  matlab-mode-20211122.833/toolbox/dbhotlink.m
+  matlab-mode-20211122.833/toolbox/ebclear.m
+  matlab-mode-20211122.833/toolbox/ebstack.m
+  matlab-mode-20211122.833/toolbox/ebstatus.m
+  matlab-mode-20211122.833/toolbox/ebstop.m
+  matlab-mode-20211122.833/toolbox/emacscd.m
+  matlab-mode-20211122.833/toolbox/emacsdocomplete.m
+  matlab-mode-20211122.833/toolbox/emacsinit.m
+  matlab-mode-20211122.833/toolbox/emacsnetshell.m
+  matlab-mode-20211122.833/toolbox/emacsrun.m
+  matlab-mode-20211122.833/toolbox/emacsrunregion.m
+  matlab-mode-20211122.833/toolbox/emacstipstring.m
+  matlab-mode-20211122.833/toolbox/help.m
+  matlab-mode-20211122.833/toolbox/opentoline.m
+Built matlab-mode in 7.618s, finished at 2021-11-27T02:56:57+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  157 Nov 26 15:53 packages/matlab-mode-20210726.858.entry
-592K -rw-r--r-- 1 root root 590K Nov 26 15:53 packages/matlab-mode-20210726.858.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 26 15:53 packages/matlab-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  157 Nov 27 02:56 packages/matlab-mode-20211122.833.entry
+592K -rw-r--r-- 1 root root 590K Nov 27 02:56 packages/matlab-mode-20211122.833.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 27 02:56 packages/matlab-mode-badge.svg

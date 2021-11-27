@@ -5,7 +5,7 @@
 ;; License: GPL-3.0-or-later
 ;; Version: 0.2
 ;; Package-Version: 20211019.511
-;; Package-Commit: 06e41de8ed7050e70627203c93b6132fec7e88d8
+;; Package-Commit: 59078eaa37ec168c37d52798c9f1020741271a64
 ;; Package-Requires: ((emacs "26"))
 ;; Homepage: https://github.com/minad/bookmark-view
 

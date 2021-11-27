@@ -1,0 +1,11 @@
+(async-backup .
+	      [(20211124 316)
+	       ((emacs
+		 (24 4)))
+	       "Backup on each save without freezing Emacs" single
+	       ((:commit . "ae97fa40320e78360b1c4629455644359dc69ab6")
+		(:authors
+		 ("contrapunctus" . "xmpp:contrapunctus@jabjab.de"))
+		(:maintainer "contrapunctus" . "xmpp:contrapunctus@jabjab.de")
+		(:keywords "files")
+		(:url . "https://tildegit.org/contrapunctus/async-backup"))])

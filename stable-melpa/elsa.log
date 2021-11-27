@@ -4,10 +4,10 @@ Source:  https://github.com/emacs-elsa/Elsa.git
 
 Updating /mnt/store/melpa/working/elsa/
 Checking out origin/HEAD
-Checking out 38a57df3931e7073046cc0bced9ff3d9e909adfb
+Checking out b056f041fb8f012b63fffa82e41057029bdcfaac
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elsa/
-  to /tmp/elsaoj0COD/elsa-20211126.25
+  to /tmp/elsa2ljT3u/elsa-20211127.130
     Elsafile.el -> Elsafile.el
     elsa-analyser.el -> elsa-analyser.el
     elsa-check.el -> elsa-check.el
@@ -21,6 +21,7 @@ Copying files (->) and directories (=>)
     elsa-extension-flycheck.el -> elsa-extension-flycheck.el
     elsa-extension-seq.el -> elsa-extension-seq.el
     elsa-font-lock.el -> elsa-font-lock.el
+    elsa-functions.el -> elsa-functions.el
     elsa-pkg.el -> elsa-pkg.el
     elsa-reader.el -> elsa-reader.el
     elsa-rules-list.el -> elsa-rules-list.el
@@ -38,42 +39,45 @@ Copying files (->) and directories (=>)
     elsa-variable.el -> elsa-variable.el
     elsa.el -> elsa.el
     bin => bin
-Created elsa-20211126.25.tar containing:
-  elsa-20211126.25/
-  elsa-20211126.25/Elsafile.el
-  elsa-20211126.25/bin/
-  elsa-20211126.25/bin/elsa
-  elsa-20211126.25/elsa-analyser.el
-  elsa-20211126.25/elsa-check.el
-  elsa-20211126.25/elsa-english.el
-  elsa-20211126.25/elsa-error.el
-  elsa-20211126.25/elsa-extension-builtin.el
-  elsa-20211126.25/elsa-extension-cl.el
-  elsa-20211126.25/elsa-extension-dash.el
-  elsa-20211126.25/elsa-extension-eieio.el
-  elsa-20211126.25/elsa-extension-elsa.el
-  elsa-20211126.25/elsa-extension-flycheck.el
-  elsa-20211126.25/elsa-extension-seq.el
-  elsa-20211126.25/elsa-font-lock.el
-  elsa-20211126.25/elsa-pkg.el
-  elsa-20211126.25/elsa-reader.el
-  elsa-20211126.25/elsa-rules-list.el
-  elsa-20211126.25/elsa-ruleset.el
-  elsa-20211126.25/elsa-scope.el
-  elsa-20211126.25/elsa-state.el
-  elsa-20211126.25/elsa-type-helpers.el
-  elsa-20211126.25/elsa-typed-builtin.el
-  elsa-20211126.25/elsa-typed-cl.el
-  elsa-20211126.25/elsa-typed-eieio.el
-  elsa-20211126.25/elsa-typed-subr.el
-  elsa-20211126.25/elsa-typed-syntax.el
-  elsa-20211126.25/elsa-typed-thingatpt.el
-  elsa-20211126.25/elsa-types.el
-  elsa-20211126.25/elsa-variable.el
-  elsa-20211126.25/elsa.el
-Built elsa in 5.695s, finished at 2021-11-26T15:20:13+0000
+Created elsa-20211127.130.tar containing:
+  elsa-20211127.130/
+  elsa-20211127.130/Elsafile.el
+  elsa-20211127.130/bin/
+  elsa-20211127.130/bin/elsa
+  elsa-20211127.130/elsa-analyser.el
+  elsa-20211127.130/elsa-check.el
+  elsa-20211127.130/elsa-english.el
+  elsa-20211127.130/elsa-error.el
+  elsa-20211127.130/elsa-extension-builtin.el
+  elsa-20211127.130/elsa-extension-cl.el
+  elsa-20211127.130/elsa-extension-dash.el
+  elsa-20211127.130/elsa-extension-eieio.el
+  elsa-20211127.130/elsa-extension-elsa.el
+  elsa-20211127.130/elsa-extension-flycheck.el
+  elsa-20211127.130/elsa-extension-seq.el
+  elsa-20211127.130/elsa-font-lock.el
+  elsa-20211127.130/elsa-functions.el
+  elsa-20211127.130/elsa-pkg.el
+  elsa-20211127.130/elsa-reader.el
+  elsa-20211127.130/elsa-rules-list.el
+  elsa-20211127.130/elsa-ruleset.el
+  elsa-20211127.130/elsa-scope.el
+  elsa-20211127.130/elsa-state.el
+  elsa-20211127.130/elsa-type-helpers.el
+  elsa-20211127.130/elsa-typed-builtin.el
+  elsa-20211127.130/elsa-typed-cl.el
+  elsa-20211127.130/elsa-typed-eieio.el
+  elsa-20211127.130/elsa-typed-subr.el
+  elsa-20211127.130/elsa-typed-syntax.el
+  elsa-20211127.130/elsa-typed-thingatpt.el
+  elsa-20211127.130/elsa-types.el
+  elsa-20211127.130/elsa-variable.el
+  elsa-20211127.130/elsa.el
+Built elsa in 6.826s, finished at 2021-11-27T02:25:28+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  379 Nov 26 15:20 packages/elsa-20211126.25.entry
-232K -rw-r--r-- 1 root root 230K Nov 26 15:20 packages/elsa-20211126.25.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 26 15:20 packages/elsa-badge.svg
-   0 -rw-r--r-- 1 root root    0 Nov 26 15:20 packages/elsa-readme.txt
+4.0K -rw-r--r-- 1 root root  381 Nov 26 22:43 packages/elsa-20211126.1634.entry
+232K -rw-r--r-- 1 root root 230K Nov 26 22:43 packages/elsa-20211126.1634.tar
+4.0K -rw-r--r-- 1 root root  380 Nov 27 02:25 packages/elsa-20211127.130.entry
+232K -rw-r--r-- 1 root root 230K Nov 27 02:25 packages/elsa-20211127.130.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 27 02:25 packages/elsa-badge.svg
+   0 -rw-r--r-- 1 root root    0 Nov 27 02:25 packages/elsa-readme.txt
