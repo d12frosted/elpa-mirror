@@ -3,8 +3,8 @@
 ;; Author: contrapunctus <xmpp:contrapunctus@jabjab.de>
 ;; Maintainer: contrapunctus <xmpp:contrapunctus@jabjab.de>
 ;; Keywords: files
-;; Package-Version: 20211124.316
-;; Package-Commit: ae97fa40320e78360b1c4629455644359dc69ab6
+;; Package-Version: 20211126.812
+;; Package-Commit: 0c67ad4523192863fd6e9a4f973ea72508391927
 ;; Homepage: https://tildegit.org/contrapunctus/async-backup
 ;; Package-Requires: ((emacs "24.4"))
 ;; Version: 0.0.1
@@ -43,7 +43,7 @@
   :group 'files)
 
 (defcustom async-backup-location
-  (concat (locate-user-emacs-file "") "/async-backup")
+  (locate-user-emacs-file "async-backup")
   "Path to save backups to."
   :type 'directory)
 
