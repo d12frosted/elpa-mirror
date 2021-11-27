@@ -9,6 +9,7 @@ Table of Contents
 1. Introduction
 2. Features
 3. Installation and Configuration
+.. 1. TAB-and-Go completion
 4. Key bindings
 5. Complementary packages
 6. Caveats
@@ -37,7 +38,9 @@ Table of Contents
 
   Corfu does not include custom completion backends. In contrast, the
   complex Company package includes custom completion backends, which
-  deviate from the Emacs completion infrastructure.
+  deviate from the Emacs completion infrastructure. The Emacs built-in
+  Capfs are mostly sufficient, but a few additional Capfs and completion
+  functions are provided by the [Cape] package.
 
   *NOTE*: Corfu uses child frames to show the popup; on non-graphical
   displays it will fall back to the default setting of the
@@ -54,6 +57,8 @@ Table of Contents
 
 [Lsp-mode] <https://github.com/emacs-lsp/lsp-mode>
 
+[Cape] <https://github.com/minad/cape>
+
 
 2 Features
 ══════════
@@ -67,7 +72,7 @@ Table of Contents
   • The selected candidate is previewed (configuable via
     `corfu-preview-current').
   • The selected candidate automatically committed on further input by
-    default (configurable via `~corfu-commit-predicate~').
+    default (configurable via `corfu-commit-predicate').
   • The [Orderless] completion style is supported. The filter string can
     contain arbitrary characters, including spaces, if
     `corfu-quit-at-boundary' is nil.
@@ -91,12 +96,17 @@ Table of Contents
   directly via `package-install'. After installation, the global minor
   mode can be enabled with `M-x corfu-global-mode'. In order to
   configure Corfu and other packages in your init.el, you may want to
-  use `use-package'. Corfu is highly flexible and customizable via
-  `corfu-*' customization variables. For filtering I recommend to give
-  Orderless completion a try, which is different from the familiar
-  prefix TAB completion. However Corfu works well with the default
-  completion styles, the use of Orderless is not a necessity. Here is an
-  example configuration:
+  use `use-package'.
+
+  Corfu is highly flexible and customizable via `corfu-*' customization
+  variables.  For filtering I recommend to give Orderless completion a
+  try, which is different from the familiar prefix TAB completion. Corfu
+  can be used with the default completion styles, the use of Orderless
+  is not a necessity. See also the [Corfu Wiki] for additional
+  configuration tips. In particular the Lsp-mode configuration is
+  documented in the Wiki.
+
+  Here is an example configuration:
 
   ┌────
   │ (use-package corfu
@@ -107,16 +117,10 @@ Table of Contents
   │   ;; (corfu-commit-predicate nil)   ;; Do not commit selected candidates on next input
   │   ;; (corfu-quit-at-boundary t)     ;; Automatically quit at word boundary
   │   ;; (corfu-quit-no-match t)        ;; Automatically quit if there is no match
-  │   ;; (corfu-echo-documentation nil) ;; Do not show documentation in the echo area
+  │   ;; (corfu-preview-current nil)    ;; Disable current candidate preview
+  │   ;; (corfu-preselect-first nil)    ;; Disable candidate preselection
+  │   ;; (corfu-echo-documentation nil) ;; Disable documentation in the echo area
   │   ;; (corfu-scroll-margin 5)        ;; Use scroll margin
-  │   ;; (corfu-preview-current nil)    ;; Do not preview current candidate
-  │ 
-  │   ;; Optionally use TAB for cycling, default is `corfu-complete'.
-  │   ;; :bind (:map corfu-map
-  │   ;;        ("TAB" . corfu-next)
-  │   ;;        ([tab] . corfu-next)
-  │   ;;        ("S-TAB" . corfu-previous)
-  │   ;;        ([backtab] . corfu-previous))
   │ 
   │   ;; You may want to enable Corfu only for certain modes.
   │   ;; :hook ((prog-mode . corfu-mode)
@@ -141,7 +145,7 @@ Table of Contents
   │ 	completion-category-defaults nil
   │ 	completion-category-overrides '((file (styles . (partial-completion))))))
   │ 
-  │ ;; Dabbrev works with Corfu
+  │ ;; Use dabbrev with Corfu!
   │ (use-package dabbrev
   │   ;; Swap M-/ and C-M-/
   │   :bind (("M-/" . dabbrev-completion)
@@ -153,7 +157,7 @@ Table of Contents
   │   ;; TAB cycle if there are only few candidates
   │   (setq completion-cycle-threshold 3)
   │ 
-  │   ;; Emacs 28: Hide commands in M-x which do not work in the current mode.
+  │   ;; Emacs 28: Hide commands in M-x which do not apply to the current mode.
   │   ;; Corfu commands are hidden, since they are not supposed to be used via M-x.
   │   ;; (setq read-extended-command-predicate
   │   ;;       #'command-completion-default-include-p)
@@ -165,6 +169,34 @@ Table of Contents
 
 
 [GNU ELPA] <http://elpa.gnu.org/packages/corfu.html>
+
+[Corfu Wiki] <https://github.com/minad/corfu/wiki>
+
+3.1 TAB-and-Go completion
+─────────────────────────
+
+  You may be interested in configuring Corfu in TAB-and-Go
+  style. Pressing TAB moves to the next candidate and further input will
+  then commit the selection.
+
+  ┌────
+  │ (use-package corfu
+  │   ;; TAB-and-Go customizations
+  │   :custom
+  │   (corfu-cycle t)             ;; Enable cycling for `corfu-next/previous'
+  │   (corfu-preselect-first nil) ;; Disable candidate preselection
+  │ 
+  │   ;; Use TAB for cycling, default is `corfu-complete'.
+  │   :bind
+  │   (:map corfu-map
+  │ 	("TAB" . corfu-next)
+  │ 	([tab] . corfu-next)
+  │ 	("S-TAB" . corfu-previous)
+  │ 	([backtab] . corfu-previous))
+  │ 
+  │   :init
+  │   (corfu-global-mode))
+  └────
 
 
 4 Key bindings
@@ -184,7 +216,8 @@ Table of Contents
   • `RET' -> `corfu-insert'
   • `M-g' -> `corfu-show-location'
   • `M-h' -> `corfu-show-documentation'
-  • `C-g', `ESC ESC ESC' -> `corfu-quit'
+  • `C-g' -> `corfu-quit'
+  • `keyboard-escape-quit' -> `corfu-reset'
 
 
 5 Complementary packages
@@ -196,11 +229,23 @@ Table of Contents
   style, where the filtering expressions are separated by spaces (see
   `corfu-quit-at-boundary').
 
+  I collect additional Capf backends and `completion-in-region' commands
+  in my small [Cape] package. For example the package provides a file
+  name and a dabbrev completion backend.
+
+  Icons are supported by Corfu via an external package. For example the
+  [kind-icon] package provides beautifully styled SVG icons based on
+  monochromatic icon sets like material design.
+
   You may also want to look into my [Vertico] package. Vertico is the
   minibuffer counterpart of Corfu.
 
 
 [Orderless] <https://github.com/oantolin/orderless>
+
+[Cape] <https://github.com/minad/cape>
+
+[kind-icon] <https://github.com/jdtsmith/kind-icon>
 
 [Vertico] <https://github.com/minad/vertico>
 
@@ -208,23 +253,22 @@ Table of Contents
 6 Caveats
 ═════════
 
-  Corfu works well in most scenarios. However there are a few known
-  technical caveats.
+  Corfu is robust in most scenarios. There are a few known technical
+  caveats.
 
   • Corfu falls back to the default Completion buffer on non-graphical
     displays, since Corfu requires child frames.
-  • The abort handling could be improved, for example the input could be
-    undone.
   • No sorting by history, since `completion-at-point' does not maintain
     a history (See branch `history' for a possible solution).
   • There is currently no equivalent for
     `company-quickhelp'. Documentation and source can be opened manually
     in a separate buffer.
-  • Company has the ability to merge and present the candidates of
-    multiple backends at the same time in some limited scenarios. This
-    feature is currently missing in the Capf backend mechanism, but it
-    should be possible to implement a super Capf, which can merge
-    multiple Capfs.
+  • Company has the ability to merge/group the candidates of multiple
+    backends in some scenarios. This feature is implemented by the
+    function `cape-super-capf' of the [Cape] package.
+
+
+[Cape] <https://github.com/minad/cape>
 
 
 7 Contributions

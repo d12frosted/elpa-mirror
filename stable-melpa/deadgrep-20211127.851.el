@@ -4,8 +4,8 @@
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; URL: https://github.com/Wilfred/deadgrep
-;; Package-Version: 20211107.445
-;; Package-Commit: 97663c41624526c4ceaf82fb6a0137ab2081affe
+;; Package-Version: 20211127.851
+;; Package-Commit: 2cd9ce3f008d1a3b243251abb2739299df7cad5d
 ;; Keywords: tools
 ;; Version: 0.11
 ;; Package-Requires: ((emacs "25.1") (dash "2.12.0") (s "1.11.0") (spinner "1.7.3"))
@@ -1461,12 +1461,19 @@ Otherwise, return PATH as is."
     (list (cons "Files" (reverse deadgrep--imenu-alist)))))
 
 ;;;###autoload
-(defun deadgrep (search-term)
-  "Start a ripgrep search for SEARCH-TERM.
+(defun deadgrep (search-term &optional directory)
+  "Start a ripgrep search for SEARCH-TERM in DIRECTORY.
+
+If not provided, DIR defaults to the directory as determined by 
+`deadgrep-project-root-function'. 
+
+See also `deadgrep-project-root-overrides'.
+
 If called with a prefix argument, create the results buffer but
 don't actually start the search."
   (interactive (list (deadgrep--read-search-term)))
-  (let* ((dir (funcall deadgrep-project-root-function))
+  (let* ((dir (or directory
+                  (funcall deadgrep-project-root-function)))
          (buf (deadgrep--buffer
                search-term
                dir

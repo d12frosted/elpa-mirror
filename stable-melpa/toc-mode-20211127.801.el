@@ -3,8 +3,8 @@
 
 ;; Author: Daniel Laurens Nicolai <dalanicolai@gmail.com>
 ;; Version: 0
-;; Package-Version: 20210714.725
-;; Package-Commit: 977bec00d8d448ad2a5e2e4c17b9c9ba3e194ec2
+;; Package-Version: 20211127.801
+;; Package-Commit: d5629c71652d80c5c515d30cdafb345f5a0b7595
 ;; Keywords: tools, outlines, convenience
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/dalanicolai/toc-mode
@@ -547,11 +547,19 @@ unprocessed text."
                                                (number-to-string page)
                                                (pdf-cache-get-image page 600)))
                               ((string= ".djvu" ext)
-                               (djvu-goto-page page)
-                               (make-temp-file "pageimage"
-                                               nil
-                                               (number-to-string page)
-                                               (image-property djvu-doc-image :data))))))
+                               ;; new code for djvu3
+                               (let ((outfile (format "/tmp/pageimagep%s" page)))
+                                 (shell-command (format "ddjvu -page=%s '%s' %s"
+                                                        page
+                                                        buffer-file-name
+                                                        outfile))
+                                 outfile)))))
+              ;; old code for original djvu.el
+              ;; (djvu-goto-page page)
+              ;; (make-temp-file "pageimage"
+              ;;                 nil
+              ;;                 (number-to-string page)
+              ;;                 (image-property djvu-doc-image :data))))))
               (apply 'call-process
                      (append (list "tesseract" nil (list buffer nil) nil file)
                              args))
