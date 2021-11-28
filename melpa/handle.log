@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/wurosh/handle.git
 
 Updating /mnt/store/melpa/working/handle/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/wurosh/handle.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out e27b2d0b229923f81a2c8afa3e9c65ae9e84a0da
+Built handle in 5.342s, finished at 2021-11-28T01:30:12+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Nov 28 01:30 packages/handle-20191029.856.el
+4.0K -rw-r--r-- 1 root root  337 Nov 28 01:30 packages/handle-20191029.856.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:30 packages/handle-badge.svg
+4.0K -rw-r--r-- 1 root root  647 Nov 28 01:30 packages/handle-readme.txt

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/storvik/gomacro-mode.git
 
 Updating /mnt/store/melpa/working/gomacro-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/storvik/gomacro-mode.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 3112e56d2d5e645a3e0fd877f3e810dbccbf989f
+Built gomacro-mode in 7.035s, finished at 2021-11-28T01:28:44+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Nov 28 01:28 packages/gomacro-mode-20200326.1103.el
+4.0K -rw-r--r-- 1 root root  396 Nov 28 01:28 packages/gomacro-mode-20200326.1103.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:28 packages/gomacro-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  661 Nov 28 01:28 packages/gomacro-mode-readme.txt

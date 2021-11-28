@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/john2x/jenkinsfile-mode.git
 
 Updating /mnt/store/melpa/working/jenkinsfile-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/john2x/jenkinsfile-mode.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 65bf3925852c35c6bd499978f08f83c1193f4347
+Built jenkinsfile-mode in 5.392s, finished at 2021-11-28T01:39:10+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  17K Nov 28 01:39 packages/jenkinsfile-mode-20200929.428.el
+4.0K -rw-r--r-- 1 root root  297 Nov 28 01:39 packages/jenkinsfile-mode-20200929.428.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:39 packages/jenkinsfile-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  116 Nov 28 01:39 packages/jenkinsfile-mode-readme.txt

@@ -1,10 +1,10 @@
 ;;; decide.el --- rolling dice and other random things
-;; Copyright 2016, 2017, 2019 Pelle Nilsson et al
+;; Copyright 2016, 2017, 2019, 2021 Pelle Nilsson et al
 ;;
 ;; Author: Pelle Nilsson <perni@lysator.liu.se>
-;; Version: 0.7
-;; Package-Version: 20190201.2137
-;; Package-Commit: 4bfcc826dd5b1c30caec455d8baa4f363159eac6
+;; Version: 0.8
+;; Package-Version: 20211127.2248
+;; Package-Commit: 668fa559b95b50f140e73f26a21fad559c1ffa77
 ;;
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -93,8 +93,7 @@
 ;; ? c (decide-random-choice)
 ;; and input a comma-separated list of things to choose from.
 ;; There are also some pre-defined lists of choices that can be
-;; accessed with the following shortcuts (and it should be obvious from
-;; a quick look in decide.el how to define your own for frequently used lists!):
+;; accessed with the following shortcuts.
 ;;
 ;; ? w 4 -> decide-whereto-compass-4 (N,S,W,E)
 ;; ? w 6 -> decide-whereto-compass-6 (N,S,W,E,U,D)
@@ -106,22 +105,34 @@
 ;; ? W 6 -> decide-whereto-relative-6 (forward,left,right,back,up,down)
 ;;
 ;; It is also possible to pick random combinations of words taken from the
-;; variable decide-tables using ? t (decide-from-table). decide-table is
-;; an alist that gives lists of possible values for each 'table'. If one of
-;; the strings is the name of another table in the alist a random from that
-;; list will be substituted. A word that is a valid dice-spec
-;; is rolled with the result inserted. A word that is a valid range (as for
-;; decide-random-range) will result in a random value from that range
-;; being inserted. If a word matches the name of a
-;; table that table will be used to insert something at that position.
-;; A tilde (~) can be used anywhere in a table string to insert nothing, to
-;; prevent the parser from recognizing some word, or to glue together words
-;; or dice-specifiers without a space to separate them.
-;; A possible expansion for a table name can have a weight added to make
-;; it more likely to be choosen like ("dragon" . 3) (making it three times
-;; as likely to be choosen as an expansion that has no weight given).
-;; The default-value for decide-tables contains some examples to hopefully
-;; make all this a bit less confusing.
+;; variable decide-tables using ? t (decide-from-table). decide-table is an
+;; alist that gives lists of possible values for each 'table'. If the name of
+;; another table in the alist is given in square brackets a random value from
+;; that list will be substituted, and this is applied recursively (do not
+;; include a reference to a table from a table referred to from that table!). A
+;; valid dice-spec in square brackets is rolled with the result inserted. A
+;; valid range in square brackets (as for decide-random-range) will result in a
+;; random value from that range being inserted. If a word matches the name of a
+;; table that table will be used to insert something at that position. A
+;; possible expansion for a table name can have a weight added to make it more
+;; likely to be choosen like ("dragon" . 3) (making it three times as likely to
+;; be choosen as an expansion that has no weight given). The default-value for
+;; decide-tables contains some examples to hopefully make all this a bit less
+;; confusing.
+;;
+;; The functions decide-table-load-file and decide-table-load-dir
+;; can be used to load random tables from text files into
+;; the decide-tables variable. Each file contains a single table,
+;; with one possible substitution per line, in the same format
+;; as is used in decide-tables. Weights are set by prefixing
+;; a line with a number and a comma, with no whitespace before
+;; or after. The name of the table is taken from the first
+;; non-empty, non-comment line, and that line must begin
+;; with a semicolon (to future-safe the format in case
+;; multiple tables in the same file is allowed eventually). No
+;; later lines in the file may begin with a semicolon.
+;; The random-tables subdirectory in the git-repository
+;; for decide-mode contains example tables.
 ;;
 ;; Example of globally binding a keyboard combination to roll dice:
 ;; (global-set-key (kbd "C-c r") 'decide-roll-dice)
@@ -144,34 +155,18 @@
   :lighter " Decide")
 
 (defvar decide-tables
-  '(("card" . ("card-rank card-suit"))
+  '(("card" . ("[card-rank] [card-suit]"))
     ("card-suit" . ("Spades" "Hearts" "Diamonds" "Clubs"))
     ("card-rank" . ("Ace" "2" "3" "4" "5" "6" "7" "8" "9" "10"
-                    "Jack" "Queen" "King"))
-
-    ;; The following tables are all prefixed example- because
-    ;; they are probably only useful to demonstrate how to
-    ;; specify decide-tables.
-    ("example-monster" . ("1d6+1 orcs"
-                          "3d6+1 kobolds"
-                          "2<<<20 goblins"
-                          "2>>5 small goblins"
-                          "level 1--10 hero"
-                          "example-dragon"))
-    ("example-dragon" . (("dragon" . 3)
-                         "example-dragon-prefix~dragon"
-                         "2-3 example-dragon-prefix~dragons"
-                         "example-dragon-prefix~dragon"
-                         "2d4~-headed dragon"
-                         "1d3+1 dragons"))
-    ("example-dragon-prefix" . ("" "ice " "undead " "epic " "old "
-                                "semi-" "cute " "ugly ")))
+                    "Jack" "Queen" "King")))
   "Alist specifying tables used for the decide-from-table function.")
 
 (defvar decide-custom-dice
   '(("F" . ((0 "0")
             (-1 "-")
             (1 "+")))
+    ("S" . ((0 "Fail")
+            (1 "Success")))
     ("A" . ((2 "2")
             (3 "3")
             (3 "3")
@@ -181,6 +176,14 @@
   "Alist specifying custom dice for decide-roll-dice. Keys are
   the names used when rolling dice. They are case insensitive, so
   avoid using names that only differ in case (e.g. Hi and HI).")
+
+(defvar decide-default-dice-faces 6
+  "The default faces of dice to use if left out of
+  a dice specification, for instance if rolling 3d.
+  Can be a number or a string matching one of the
+  custom names in decide-custom-dice."
+  )
+
 (setq decide-for-me-dice
       (let ((ya "YES+")
             (y "YES")
@@ -193,6 +196,8 @@
               (cons :normal (list ya y yb nb n na))
               (cons :unlikely (list y yb nb n na na)
                     ))))
+
+(require 'cl-lib)
 
 (defun decide-for-me-get (difficulty)
   "Get random decision for difficulty :likely, :normal, or :unlikely."
@@ -294,20 +299,22 @@
 
 (defun decide-random-choice (choices-string)
   (interactive "sRandom choice from (comma-separated choices): ")
-  (let ((choices (split-string choices-string ",")))
+  (let ((choices (mapcar 'string-trim (split-string choices-string ","))))
     (decide-insert
-     (decide-for-me-result (format "(%s)" choices-string)
+     (decide-for-me-result (format "(%s)" (mapconcat 'identity choices ", "))
                            (nth (random (length choices)) choices)))))
 
-(defun decide-choose-from-table-list-part (part)
-  (let ((parts (split-string part " ")))
-    (mapconcat 'identity
-               (mapcar 'decide-choose-from-table parts) " ")))
+(defun decide-choose-for-table-list-part (part)
+  (let ((subparts (split-string part "\\]")))
+    (if (= (length subparts) 2)
+        (concat (decide-choose-from-table (nth 0 subparts))
+                (nth 1 subparts))
+      part)))
 
 (defun decide-choose-from-table-list (choice)
   (mapconcat 'identity
-             (mapcar 'decide-choose-from-table-list-part
-                  (split-string choice "~")) ""))
+             (mapcar 'decide-choose-for-table-list-part
+                     (split-string choice "\\[")) ""))
 
 (defun decide-weight-for-choice (choice)
   (if (listp choice) (cdr choice) 1))
@@ -351,14 +358,64 @@
               (t table-name))))))
 
 
+(defun decide-visible-tables ()
+  (remove-if
+   (lambda (x)
+     (string= "-" (substring (car x) 0 1)))
+   decide-tables))
+
 (defun decide-from-table (table-name)
   (interactive (list (completing-read "Table name: "
-                                      decide-tables
+                                      (decide-visible-tables)
                                       nil
                                       1)))
   (decide-insert
    (decide-for-me-result (format "<%s>" table-name)
                          (decide-choose-from-table table-name))))
+
+(defun decide-table-parse-line (line)
+  (cond
+   ((string-match "^\s*#" line) nil)
+   ((string-match "^\\([0-9]+\\),\\(.*\\)" line)
+    (cons (match-string 2 line)
+          (string-to-number (match-string 1 line))
+          ))
+   (t line)))
+
+(defun decide-table-parse-lines (lines)
+  (remove-if-not
+   (lambda (x) (or (consp x) (stringp x)))
+   (mapcar 'decide-table-parse-line lines)))
+
+(defun decide-table-read-buffer ()
+  (save-excursion
+    (beginning-of-buffer)
+    (decide-table-parse-lines (split-string (buffer-string) "\n" t))))
+
+(defun decide-push-table (filename lines)
+  (let ((name-line (car lines))
+        (phrase-lines (cdr lines)))
+    (if (string-match "^\s*;" name-line)
+        (push
+         (cons
+          (string-trim (nth 1 (split-string name-line ";")))
+          phrase-lines)
+         decide-tables)
+        (error "First line in table-file must be name preceded by ; `%s'"
+               filename))))
+
+(defun decide-table-load-file (filename)
+  (interactive "f")
+  (with-temp-buffer
+    (insert-file-contents filename)
+    (decide-push-table filename
+     (decide-table-read-buffer))))
+
+(defun decide-table-load-dir (dir)
+  (interactive "D")
+  (mapcar 'decide-table-load-file
+          (directory-files-recursively dir ""))
+  )
 
 (defun decide-whereto-compass-4 ()
   (interactive)
@@ -392,13 +449,15 @@
   (interactive)
   (decide-random-choice "forward,left,right,back,up,down"))
 
-(defun decide-strings-to-numbers (numbers)
-  (mapcar (lambda (s)
-            (cond ((null s) 0)
-                  ((string-match "[0-9]+" s) (string-to-number s))
-                  ((equal "+" s) 0)
-                  ((equal "-" s) 0)
-                  (t s))) numbers))
+(defun decide-string-to-number (s default)
+  (let ((n (if (stringp s)
+               (string-to-number s)
+             0)))
+    (cond ((null s) default)
+          ((> n 0) n)
+          ((string= "+" s) 0)
+          ((string= "-" s) 0)
+          (t s))))
 
 (defun decide-roll-custom-die (sides)
   (nth (random (length sides)) sides))
@@ -406,6 +465,11 @@
 (defun decide-roll-number-die (faces)
   (let ((res (+ 1 (random faces))))
     (list res (format "%d" res))))
+
+(defun decide-roll-die (faces)
+  (if (and (stringp faces) (= (length faces) 0))
+      (decide-roll-die-nonempty decide-default-dice-faces)
+    (decide-roll-die-nonempty faces)))
 
 (defun decide-roll-die (faces)
   (cond ((stringp faces)
@@ -448,9 +512,10 @@
   (when (string-match
          "^\\([1-9][0-9]*\\)d\\([0-9a-zA-Z]*\\)\\([+-][0-9]*\\)?"
          s)
-    (decide-strings-to-numbers (list (match-string 1 s)
-                                     (match-string 2 s)
-                                     (match-string 3 s)))))
+    (list (decide-string-to-number (match-string 1 s) 1)
+          (decide-string-to-number (match-string 2 s)
+                                   decide-default-dice-faces)
+          (decide-string-to-number (match-string 3 s) 0))))
 
 (defun decide-describe-dice-spec (spec)
   (let* ((mod (car (last spec)))

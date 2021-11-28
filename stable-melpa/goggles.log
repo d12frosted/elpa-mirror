@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/minad/goggles.git
 
 Updating /mnt/store/melpa/working/goggles/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/minad/goggles.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 3e48a56356991b3ff5228eced19b07862835cdcd
+Built goggles in 6.599s, finished at 2021-11-28T01:28:36+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Nov 28 01:28 packages/goggles-20211031.1513.el
+4.0K -rw-r--r-- 1 root root  272 Nov 28 01:28 packages/goggles-20211031.1513.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:28 packages/goggles-badge.svg
+4.0K -rw-r--r-- 1 root root   23 Nov 28 01:28 packages/goggles-readme.txt

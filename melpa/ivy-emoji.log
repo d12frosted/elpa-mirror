@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/Sbozzolo/ivy-emoji.git
 
 Updating /mnt/store/melpa/working/ivy-emoji/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-
+Checking out origin/HEAD
+Checking out a1b7d32048278afd9b06536a8af96f533639d146
+Built ivy-emoji in 5.668s, finished at 2021-11-28T01:38:09+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.9K Nov 28 01:38 packages/ivy-emoji-20200316.2351.el
+4.0K -rw-r--r-- 1 root root  433 Nov 28 01:38 packages/ivy-emoji-20200316.2351.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:38 packages/ivy-emoji-badge.svg
+4.0K -rw-r--r-- 1 root root  410 Nov 28 01:38 packages/ivy-emoji-readme.txt

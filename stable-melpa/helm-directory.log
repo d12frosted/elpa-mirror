@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/masasam/emacs-helm-directory.git
 
 Updating /mnt/store/melpa/working/helm-directory/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/masasam/emacs-helm-directory.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 51bd7cd6e40a84a7efda894283ec76a0107830ad
+Built helm-directory in 5.413s, finished at 2021-11-28T01:31:41+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Nov 28 01:31 packages/helm-directory-20170706.402.el
+4.0K -rw-r--r-- 1 root root  343 Nov 28 01:31 packages/helm-directory-20170706.402.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:31 packages/helm-directory-badge.svg
+4.0K -rw-r--r-- 1 root root  327 Nov 28 01:31 packages/helm-directory-readme.txt

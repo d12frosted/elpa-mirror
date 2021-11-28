@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/masutaka/emacs-helm-qiita.git
 
 Updating /mnt/store/melpa/working/helm-qiita/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 5f82010c595f8e122aa3f68148ba8d8ccb1333d8
+Built helm-qiita in 4.827s, finished at 2021-11-28T01:33:12+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Nov 28 01:33 packages/helm-qiita-20190526.1359.el
+4.0K -rw-r--r-- 1 root root  401 Nov 28 01:33 packages/helm-qiita-20190526.1359.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:33 packages/helm-qiita-badge.svg
+4.0K -rw-r--r-- 1 root root   50 Nov 28 01:33 packages/helm-qiita-readme.txt

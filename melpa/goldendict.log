@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/stardiviner/goldendict.el.git
 
 Updating /mnt/store/melpa/working/goldendict/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/stardiviner/goldendict.el.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 700f60be192f4d46787e7f009637c15567064f2a
+Built goldendict in 6.263s, finished at 2021-11-28T01:28:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.1K Nov 28 01:28 packages/goldendict-20201108.201.el
+4.0K -rw-r--r-- 1 root root  316 Nov 28 01:28 packages/goldendict-20201108.201.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:28 packages/goldendict-badge.svg
+4.0K -rw-r--r-- 1 root root  161 Nov 28 01:28 packages/goldendict-readme.txt

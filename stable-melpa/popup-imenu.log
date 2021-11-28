@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/ancane/popup-imenu.git
 
 Updating /mnt/store/melpa/working/popup-imenu/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/ancane/popup-imenu.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out b00c4d503cbbaf01c136b1647329e6a6257d012c
+Built popup-imenu in 4.761s, finished at 2021-11-28T02:02:06+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.7K Nov 28 02:02 packages/popup-imenu-20210404.1153.el
+4.0K -rw-r--r-- 1 root root  437 Nov 28 02:02 packages/popup-imenu-20210404.1153.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:02 packages/popup-imenu-badge.svg
+4.0K -rw-r--r-- 1 root root  134 Nov 28 02:02 packages/popup-imenu-readme.txt

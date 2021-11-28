@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/PythonNut/historian.el.git
 
 Updating /mnt/store/melpa/working/ivy-historian/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
-fatal: expected flush after ref listing
-
+Checking out origin/HEAD
+Checking out 852cb4e72c0f78c8dbb2c972bdcb4e7b0108ff4c
+Built ivy-historian in 5.041s, finished at 2021-11-28T01:38:13+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.5K Nov 28 01:38 packages/ivy-historian-20210714.56.el
+4.0K -rw-r--r-- 1 root root  465 Nov 28 01:38 packages/ivy-historian-20210714.56.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:38 packages/ivy-historian-badge.svg
+4.0K -rw-r--r-- 1 root root   48 Nov 28 01:38 packages/ivy-historian-readme.txt

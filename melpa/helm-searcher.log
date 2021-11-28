@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm-searcher.git
 
 Updating /mnt/store/melpa/working/helm-searcher/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/emacs-helm/helm-searcher.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 326b5777db284f1e24c4f94730834e4b1e2bb66c
+Built helm-searcher in 5.458s, finished at 2021-11-28T01:33:26+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  13K Nov 28 01:33 packages/helm-searcher-20210221.923.el
+4.0K -rw-r--r-- 1 root root  432 Nov 28 01:33 packages/helm-searcher-20210221.923.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:33 packages/helm-searcher-badge.svg
+4.0K -rw-r--r-- 1 root root   33 Nov 28 01:33 packages/helm-searcher-readme.txt

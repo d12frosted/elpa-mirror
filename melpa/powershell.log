@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/jschaf/powershell.el.git
 
 Updating /mnt/store/melpa/working/powershell/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/jschaf/powershell.el.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out d1b3f95669343399f199f291ef76c09a0ede5e60
+Built powershell in 4.895s, finished at 2021-11-28T02:02:20+0000
+ ✓ Success:
+ 56K -rw-r--r-- 1 root root  56K Nov 28 02:02 packages/powershell-20201005.1642.el
+4.0K -rw-r--r-- 1 root root  467 Nov 28 02:02 packages/powershell-20201005.1642.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:02 packages/powershell-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Nov 28 02:02 packages/powershell-readme.txt

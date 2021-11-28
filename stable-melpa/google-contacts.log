@@ -3,7 +3,27 @@ Fetcher: github
 Source:  https://github.com/jd/google-contacts.el.git
 
 Updating /mnt/store/melpa/working/google-contacts/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/jd/google-contacts.el.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 8923c238fe0906184d2254b33ba72792ed12cd47
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/google-contacts/
+  to /tmp/google-contactsqXaa1v/google-contacts-20201012.1056
+    google-contacts-gnus.el -> google-contacts-gnus.el
+    google-contacts-message.el -> google-contacts-message.el
+    google-contacts.el -> google-contacts.el
+    google-oauth.el -> google-oauth.el
+    google-org-contacts.el -> google-org-contacts.el
+Created google-contacts-20201012.1056.tar containing:
+  google-contacts-20201012.1056/
+  google-contacts-20201012.1056/google-contacts-gnus.el
+  google-contacts-20201012.1056/google-contacts-message.el
+  google-contacts-20201012.1056/google-contacts-pkg.el
+  google-contacts-20201012.1056/google-contacts.el
+  google-contacts-20201012.1056/google-oauth.el
+  google-contacts-20201012.1056/google-org-contacts.el
+Built google-contacts in 5.370s, finished at 2021-11-28T01:28:48+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  405 Nov 28 01:28 packages/google-contacts-20201012.1056.entry
+ 52K -rw-r--r-- 1 root root  50K Nov 28 01:28 packages/google-contacts-20201012.1056.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:28 packages/google-contacts-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Nov 28 01:28 packages/google-contacts-readme.txt

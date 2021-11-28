@@ -3,9 +3,10 @@ Fetcher: github
 Source:  https://github.com/jacott/handlebars-sgml-mode.git
 
 Updating /mnt/store/melpa/working/handlebars-sgml-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/jacott/handlebars-sgml-mode.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out c76df93a9a8c1b1b3efdcc4add32bf93304192a4
+Built handlebars-sgml-mode in 4.871s, finished at 2021-11-28T01:30:15+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root  24K Nov 28 01:30 packages/handlebars-sgml-mode-20130623.2333.el
+4.0K -rw-r--r-- 1 root root  383 Nov 28 01:30 packages/handlebars-sgml-mode-20130623.2333.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:30 packages/handlebars-sgml-mode-badge.svg

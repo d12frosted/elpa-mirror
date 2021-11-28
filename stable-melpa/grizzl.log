@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/grizzl/grizzl.git
 
 Updating /mnt/store/melpa/working/grizzl/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/grizzl/grizzl.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 1e917253ce2b846f0272b8356fad3dbff9cd513a
+Built grizzl in 7.014s, finished at 2021-11-28T01:29:38+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  17K Nov 28 01:29 packages/grizzl-20160818.737.el
+4.0K -rw-r--r-- 1 root root  385 Nov 28 01:29 packages/grizzl-20160818.737.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:29 packages/grizzl-badge.svg
+4.0K -rw-r--r-- 1 root root 1.7K Nov 28 01:29 packages/grizzl-readme.txt

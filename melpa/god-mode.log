@@ -3,7 +3,21 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/god-mode.git
 
 Updating /mnt/store/melpa/working/god-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/emacsorphanage/god-mode.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out d7e933095041aa32033d29f2c87d201b5b43c3b3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/god-mode/
+  to /tmp/god-modeFmXDOG/god-mode-20210102.515
+    god-mode-isearch.el -> god-mode-isearch.el
+    god-mode.el -> god-mode.el
+Created god-mode-20210102.515.tar containing:
+  god-mode-20210102.515/
+  god-mode-20210102.515/god-mode-isearch.el
+  god-mode-20210102.515/god-mode-pkg.el
+  god-mode-20210102.515/god-mode.el
+Built god-mode in 5.642s, finished at 2021-11-28T01:28:33+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  348 Nov 28 01:28 packages/god-mode-20210102.515.entry
+ 32K -rw-r--r-- 1 root root  30K Nov 28 01:28 packages/god-mode-20210102.515.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:28 packages/god-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   69 Nov 28 01:28 packages/god-mode-readme.txt

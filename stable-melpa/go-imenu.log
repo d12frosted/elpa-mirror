@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/brantou/go-imenu.el.git
 
 Updating /mnt/store/melpa/working/go-imenu/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/brantou/go-imenu.el.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 4f3f334ed0b6f6afaca6b9775636a52ad3843053
+Built go-imenu in 5.103s, finished at 2021-11-28T01:28:17+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.2K Nov 28 01:28 packages/go-imenu-20181029.1029.el
+4.0K -rw-r--r-- 1 root root  356 Nov 28 01:28 packages/go-imenu-20181029.1029.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:28 packages/go-imenu-badge.svg
+4.0K -rw-r--r-- 1 root root  177 Nov 28 01:28 packages/go-imenu-readme.txt

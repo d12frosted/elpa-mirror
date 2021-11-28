@@ -3,6 +3,11 @@ Fetcher: github
 Source:  https://github.com/myuhe/helm-bind-key.el.git
 
 Updating /mnt/store/melpa/working/helm-bind-key/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://github.com/myuhe/helm-bind-key.el.git/': The requested URL returned error: 504
-
+Checking out origin/HEAD
+Checking out 9da6ad8b7530e72fb4ac67be8c6a482898dddc25
+Built helm-bind-key in 10.006s, finished at 2021-11-28T01:30:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.7K Nov 28 01:30 packages/helm-bind-key-20141109.515.el
+4.0K -rw-r--r-- 1 root root  317 Nov 28 01:30 packages/helm-bind-key-20141109.515.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:30 packages/helm-bind-key-badge.svg
+4.0K -rw-r--r-- 1 root root  164 Nov 28 01:30 packages/helm-bind-key-readme.txt

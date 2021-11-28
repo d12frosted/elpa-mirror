@@ -3,7 +3,33 @@ Fetcher: github
 Source:  https://github.com/Deducteam/lambdapi.git
 
 Updating /mnt/store/melpa/working/lambdapi-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/Deducteam/lambdapi.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out d41fe1153b9271c40af26b7dc505910bf5702079
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lambdapi-mode/
+  to /tmp/lambdapi-mode3FL01t/lambdapi-mode-20211116.1414
+  ! editors/emacs/lambdapi-abbrev.el -> lambdapi-abbrev.el
+  ! editors/emacs/lambdapi-capf.el -> lambdapi-capf.el
+  ! editors/emacs/lambdapi-input.el -> lambdapi-input.el
+  ! editors/emacs/lambdapi-layout.el -> lambdapi-layout.el
+  ! editors/emacs/lambdapi-mode.el -> lambdapi-mode.el
+  ! editors/emacs/lambdapi-proofs.el -> lambdapi-proofs.el
+  ! editors/emacs/lambdapi-smie.el -> lambdapi-smie.el
+  ! editors/emacs/lambdapi-vars.el -> lambdapi-vars.el
+Created lambdapi-mode-20211116.1414.tar containing:
+  lambdapi-mode-20211116.1414/
+  lambdapi-mode-20211116.1414/lambdapi-abbrev.el
+  lambdapi-mode-20211116.1414/lambdapi-capf.el
+  lambdapi-mode-20211116.1414/lambdapi-input.el
+  lambdapi-mode-20211116.1414/lambdapi-layout.el
+  lambdapi-mode-20211116.1414/lambdapi-mode-pkg.el
+  lambdapi-mode-20211116.1414/lambdapi-mode.el
+  lambdapi-mode-20211116.1414/lambdapi-proofs.el
+  lambdapi-mode-20211116.1414/lambdapi-smie.el
+  lambdapi-mode-20211116.1414/lambdapi-vars.el
+Built lambdapi-mode in 8.566s, finished at 2021-11-28T01:41:39+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  404 Nov 28 01:41 packages/lambdapi-mode-20211116.1414.entry
+ 60K -rw-r--r-- 1 root root  60K Nov 28 01:41 packages/lambdapi-mode-20211116.1414.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:41 packages/lambdapi-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  150 Nov 28 01:41 packages/lambdapi-mode-readme.txt

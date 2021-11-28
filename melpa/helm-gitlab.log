@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/nlamirault/emacs-gitlab.git
 
 Updating /mnt/store/melpa/working/helm-gitlab/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/nlamirault/emacs-gitlab.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 8c2324c02119500f094c2f92dfaba4c9977ce1ba
+Built helm-gitlab in 4.842s, finished at 2021-11-28T01:32:17+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.9K Nov 28 01:32 packages/helm-gitlab-20180312.1647.el
+4.0K -rw-r--r-- 1 root root  490 Nov 28 01:32 packages/helm-gitlab-20180312.1647.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:32 packages/helm-gitlab-badge.svg
+4.0K -rw-r--r-- 1 root root   36 Nov 28 01:32 packages/helm-gitlab-readme.txt

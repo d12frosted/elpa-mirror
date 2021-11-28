@@ -3,6 +3,11 @@ Fetcher: github
 Source:  https://github.com/julienXX/ivy-lobsters.git
 
 Updating /mnt/store/melpa/working/ivy-lobsters/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://github.com/julienXX/ivy-lobsters.git/': The requested URL returned error: 504
-
+Checking out origin/HEAD
+Checking out 3f7f90751d15ebcf91253ef3cda18c0aa7d856ff
+Built ivy-lobsters in 4.464s, finished at 2021-11-28T01:38:15+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.3K Nov 28 01:38 packages/ivy-lobsters-20200818.1406.el
+4.0K -rw-r--r-- 1 root root  392 Nov 28 01:38 packages/ivy-lobsters-20200818.1406.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:38 packages/ivy-lobsters-badge.svg
+4.0K -rw-r--r-- 1 root root   48 Nov 28 01:38 packages/ivy-lobsters-readme.txt

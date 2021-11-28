@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/Malabarba/ham-mode.git
 
 Updating /mnt/store/melpa/working/ham-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/Malabarba/ham-mode.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 3a141986a21c2aa6eefb428983352abb8b7907d2
+Built ham-mode in 5.510s, finished at 2021-11-28T01:30:08+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.7K Nov 28 01:30 packages/ham-mode-20150811.1306.el
+4.0K -rw-r--r-- 1 root root  486 Nov 28 01:30 packages/ham-mode-20150811.1306.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:30 packages/ham-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Nov 28 01:30 packages/ham-mode-readme.txt

@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/jacobono/emacs-gradle-mode.git
 
 Updating /mnt/store/melpa/working/gradle-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/jacobono/emacs-gradle-mode.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out e4d665d5784ecda7ddfba015f07c69be3cfc45f2
+Built gradle-mode in 5.842s, finished at 2021-11-28T01:29:08+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.3K Nov 28 01:29 packages/gradle-mode-20150313.1905.el
+4.0K -rw-r--r-- 1 root root  416 Nov 28 01:29 packages/gradle-mode-20150313.1905.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:29 packages/gradle-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  120 Nov 28 01:29 packages/gradle-mode-readme.txt

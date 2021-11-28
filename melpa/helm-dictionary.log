@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm-dictionary.git
 
 Updating /mnt/store/melpa/working/helm-dictionary/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/emacs-helm/helm-dictionary.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out b316a1d55e58645d59a84d33851d46fab3cd54b5
+Built helm-dictionary in 4.957s, finished at 2021-11-28T01:31:39+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Nov 28 01:31 packages/helm-dictionary-20201006.1511.el
+4.0K -rw-r--r-- 1 root root  440 Nov 28 01:31 packages/helm-dictionary-20201006.1511.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:31 packages/helm-dictionary-badge.svg
+4.0K -rw-r--r-- 1 root root  390 Nov 28 01:31 packages/helm-dictionary-readme.txt

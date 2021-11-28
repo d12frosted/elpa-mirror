@@ -3,7 +3,21 @@ Fetcher: github
 Source:  https://github.com/kawabata/helm-chrome.git
 
 Updating /mnt/store/melpa/working/helm-chrome/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/kawabata/helm-chrome.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out fd630ace4b4b4f33355a973743bbfe0c90ce4830
+Built helm-chrome in 9.621s, finished at 2021-11-28T01:31:09+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.9K Nov 28 01:31 packages/helm-chrome-20160719.520.el
+4.0K -rw-r--r-- 1 root root  459 Nov 28 01:31 packages/helm-chrome-20160719.520.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:31 packages/helm-chrome-badge.svg
+4.0K -rw-r--r-- 1 root root  375 Nov 27 17:04 packages/helm-chrome-control-20190707.1807.entry
+ 20K -rw-r--r-- 1 root root  20K Nov 27 17:04 packages/helm-chrome-control-20190707.1807.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 27 17:04 packages/helm-chrome-control-badge.svg
+4.0K -rw-r--r-- 1 root root   31 Nov 27 17:04 packages/helm-chrome-control-readme.txt
+4.0K -rw-r--r-- 1 root root  189 Nov 28 01:31 packages/helm-chrome-control.log
+8.0K -rw-r--r-- 1 root root 5.4K Nov 27 17:04 packages/helm-chrome-history-20191031.1233.el
+4.0K -rw-r--r-- 1 root root  442 Nov 27 17:04 packages/helm-chrome-history-20191031.1233.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 27 17:04 packages/helm-chrome-history-badge.svg
+4.0K -rw-r--r-- 1 root root   33 Nov 27 17:04 packages/helm-chrome-history-readme.txt
+4.0K -rw-r--r-- 1 root root  164 Nov 28 01:31 packages/helm-chrome-history.log
+4.0K -rw-r--r-- 1 root root  580 Nov 28 01:31 packages/helm-chrome-readme.txt

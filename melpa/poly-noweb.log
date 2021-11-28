@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/polymode/poly-noweb.git
 
 Updating /mnt/store/melpa/working/poly-noweb/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/polymode/poly-noweb.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 3b0cd36ca9a707e8a09337a3468fa85d81fc461c
+Built poly-noweb in 5.673s, finished at 2021-11-28T02:01:48+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.3K Nov 28 02:01 packages/poly-noweb-20200316.1315.el
+4.0K -rw-r--r-- 1 root root  381 Nov 28 02:01 packages/poly-noweb-20200316.1315.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:01 packages/poly-noweb-badge.svg
+4.0K -rw-r--r-- 1 root root   70 Nov 28 02:01 packages/poly-noweb-readme.txt

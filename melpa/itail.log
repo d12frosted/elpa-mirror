@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/re5et/itail.git
 
 Updating /mnt/store/melpa/working/itail/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/re5et/itail.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 6e43c20da03be3b9c6ece93b7dc3495975ec1888
+Built itail in 5.130s, finished at 2021-11-28T01:37:56+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Nov 28 01:37 packages/itail-20171112.804.el
+4.0K -rw-r--r-- 1 root root  256 Nov 28 01:37 packages/itail-20171112.804.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:37 packages/itail-badge.svg
+4.0K -rw-r--r-- 1 root root  169 Nov 28 01:37 packages/itail-readme.txt

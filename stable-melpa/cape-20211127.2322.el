@@ -4,8 +4,8 @@
 ;; Created: 2021
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
-;; Package-Version: 20211127.1547
-;; Package-Commit: fd8828cff312e3294b158118ddaee89c0b30036b
+;; Package-Version: 20211127.2322
+;; Package-Commit: 1d0d3abbd1035e46e3181d24ff7f895eec9feda6
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 
@@ -743,13 +743,13 @@ If INTERACTIVE is nil the function acts like a capf."
   (let ((old-toi throw-on-input)
         (throw-on-input nil))
     (pcase (apply backend args)
-      (`(:async . ,fetcher)
-       (let ((res 'trash)
+      (`(:async . ,future)
+       (let ((res 'cape--waiting)
              (start (time-to-seconds)))
-         (funcall fetcher (lambda (arg) (setq res arg)))
+         (funcall future (lambda (arg) (setq res arg)))
          ;; Force synchronization. The synchronization is interruptible!
          (let ((throw-on-input old-toi))
-           (while (eq res 'trash)
+           (while (eq res 'cape--waiting)
              (sleep-for cape-company-async-wait)
              (when (> (- (time-to-seconds) start) cape-company-async-timeout)
                (error "Cape company backend async timeout"))))
@@ -867,7 +867,7 @@ The PREDICATE is passed the candidate symbol or string."
 (defun cape-noninterruptible-capf (capf)
   "Create a new CAPF which is non-interruptible silent by input."
   (lambda ()
-    (pcase (let (throw-on-input) (funcall capf))
+    (pcase (funcall capf)
       (`(,beg ,end ,table . ,plist)
        `(,beg ,end ,(cape--noninterruptible-table table) ,@plist)))))
 

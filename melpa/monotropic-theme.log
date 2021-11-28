@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/caffo/monotropic-theme.git
 
 Updating /mnt/store/melpa/working/monotropic-theme/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/caffo/monotropic-theme.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out f32a04b5bfee9cbcce4b223f17228d1142a28211
+Built monotropic-theme in 8.528s, finished at 2021-11-28T01:48:44+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Nov 28 01:48 packages/monotropic-theme-20211116.1328.el
+4.0K -rw-r--r-- 1 root root  284 Nov 28 01:48 packages/monotropic-theme-20211116.1328.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:48 packages/monotropic-theme-badge.svg
+4.0K -rw-r--r-- 1 root root   77 Nov 28 01:48 packages/monotropic-theme-readme.txt

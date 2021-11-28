@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/zonkyy/helm-z.git
 
 Updating /mnt/store/melpa/working/helm-z/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 37212220bebea8b9c238cb1bbacd8332b7f26c03
+Built helm-z in 5.353s, finished at 2021-11-28T01:33:52+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 1.9K Nov 28 01:33 packages/helm-z-20171204.325.el
+4.0K -rw-r--r-- 1 root root  308 Nov 28 01:33 packages/helm-z-20171204.325.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:33 packages/helm-z-badge.svg
+4.0K -rw-r--r-- 1 root root   46 Nov 28 01:33 packages/helm-z-readme.txt

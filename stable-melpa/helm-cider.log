@@ -3,7 +3,32 @@ Fetcher: github
 Source:  https://github.com/clojure-emacs/helm-cider.git
 
 Updating /mnt/store/melpa/working/helm-cider/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/clojure-emacs/helm-cider.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 9363cc537f06233345aa3af5cd46aa5681ad607b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-cider/
+  to /tmp/helm-cider0QoM0E/helm-cider-20180307.458
+    helm-cider-cheatsheet.el -> helm-cider-cheatsheet.el
+    helm-cider-repl.el -> helm-cider-repl.el
+    helm-cider-spec.el -> helm-cider-spec.el
+    helm-cider-util.el -> helm-cider-util.el
+    helm-cider.el -> helm-cider.el
+Created helm-cider-20180307.458.tar containing:
+  helm-cider-20180307.458/
+  helm-cider-20180307.458/helm-cider-cheatsheet.el
+  helm-cider-20180307.458/helm-cider-pkg.el
+  helm-cider-20180307.458/helm-cider-repl.el
+  helm-cider-20180307.458/helm-cider-spec.el
+  helm-cider-20180307.458/helm-cider-util.el
+  helm-cider-20180307.458/helm-cider.el
+Built helm-cider in 9.851s, finished at 2021-11-28T01:31:24+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  493 Nov 28 01:31 packages/helm-cider-20180307.458.entry
+ 60K -rw-r--r-- 1 root root  60K Nov 28 01:31 packages/helm-cider-20180307.458.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:31 packages/helm-cider-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Nov 28 01:31 packages/helm-cider-history-20150719.2120.el
+4.0K -rw-r--r-- 1 root root  443 Nov 28 01:31 packages/helm-cider-history-20150719.2120.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 27 17:04 packages/helm-cider-history-badge.svg
+4.0K -rw-r--r-- 1 root root   62 Nov 28 01:31 packages/helm-cider-history-readme.txt
+4.0K -rw-r--r-- 1 root root  235 Nov 28 01:31 packages/helm-cider-history.log
+4.0K -rw-r--r-- 1 root root  153 Nov 28 01:31 packages/helm-cider-readme.txt

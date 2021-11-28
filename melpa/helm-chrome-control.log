@@ -3,7 +3,21 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/helm-chrome-control.git
 
 Updating /mnt/store/melpa/working/helm-chrome-control/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/xuchunyang/helm-chrome-control.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out e6758763099959e961e218bb1122526323f7ee5e
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-chrome-control/
+  to /tmp/helm-chrome-controlhbddw4/helm-chrome-control-20190707.1807
+    helm-chrome-control.el -> helm-chrome-control.el
+    chrome.js -> chrome.js
+Created helm-chrome-control-20190707.1807.tar containing:
+  helm-chrome-control-20190707.1807/
+  helm-chrome-control-20190707.1807/chrome.js
+  helm-chrome-control-20190707.1807/helm-chrome-control-pkg.el
+  helm-chrome-control-20190707.1807/helm-chrome-control.el
+Built helm-chrome-control in 9.414s, finished at 2021-11-28T01:31:13+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  375 Nov 28 01:31 packages/helm-chrome-control-20190707.1807.entry
+ 20K -rw-r--r-- 1 root root  20K Nov 28 01:31 packages/helm-chrome-control-20190707.1807.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:31 packages/helm-chrome-control-badge.svg
+4.0K -rw-r--r-- 1 root root   31 Nov 28 01:31 packages/helm-chrome-control-readme.txt

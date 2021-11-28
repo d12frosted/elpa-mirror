@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/thanhvg/emacs-hnreader.git
 
 Updating /mnt/store/melpa/working/hnreader/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/thanhvg/emacs-hnreader.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 5eb55aff411406882b8928ff233ac3d761641c6f
+Built hnreader in 4.765s, finished at 2021-11-28T01:34:49+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Nov 28 01:34 packages/hnreader-20211018.1746.el
+4.0K -rw-r--r-- 1 root root  408 Nov 28 01:34 packages/hnreader-20211018.1746.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:34 packages/hnreader-badge.svg
+4.0K -rw-r--r-- 1 root root  899 Nov 28 01:34 packages/hnreader-readme.txt

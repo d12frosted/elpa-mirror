@@ -3,7 +3,24 @@ Fetcher: github
 Source:  https://github.com/melmothx/pov-mode.git
 
 Updating /mnt/store/melpa/working/pov-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/melmothx/pov-mode.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 9fc1db3aab7c27155674dd1a87ec62606035d074
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pov-mode/
+  to /tmp/pov-modeLQsXwE/pov-mode-20161115.743
+    pov-mode-pkg.el -> pov-mode-pkg.el
+    pov-mode.el -> pov-mode.el
+    dir -> dir
+    pov-mode.info -> pov-mode.info
+Created pov-mode-20161115.743.tar containing:
+  pov-mode-20161115.743/
+  pov-mode-20161115.743/dir
+  pov-mode-20161115.743/pov-mode-pkg.el
+  pov-mode-20161115.743/pov-mode.el
+  pov-mode-20161115.743/pov-mode.info
+Built pov-mode in 4.392s, finished at 2021-11-28T02:02:14+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  308 Nov 28 02:02 packages/pov-mode-20161115.743.entry
+132K -rw-r--r-- 1 root root 130K Nov 28 02:02 packages/pov-mode-20161115.743.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:02 packages/pov-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Nov 28 02:02 packages/pov-mode-readme.txt

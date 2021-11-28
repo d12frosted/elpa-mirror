@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/zonuexe/emacs-presentation-mode.git
 
 Updating /mnt/store/melpa/working/presentation/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/zonuexe/emacs-presentation-mode.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out f53f67aeab97e8eea6d1f12df5f7ce3b1b03b879
+Built presentation in 4.746s, finished at 2021-11-28T02:02:27+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.9K Nov 28 02:02 packages/presentation-20180427.224.el
+4.0K -rw-r--r-- 1 root root  421 Nov 28 02:02 packages/presentation-20180427.224.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:02 packages/presentation-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Nov 28 02:02 packages/presentation-readme.txt

@@ -3,7 +3,48 @@ Fetcher: github
 Source:  https://github.com/blahgeek/emacs-pr-review.git
 
 Updating /mnt/store/melpa/working/pr-review/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/blahgeek/emacs-pr-review.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out d341063fe26ae063a102689b18422451d5b50876
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pr-review/
+  to /tmp/pr-reviewNIfwhR/pr-review-20211122.1657
+    pr-review-action.el -> pr-review-action.el
+    pr-review-api.el -> pr-review-api.el
+    pr-review-common.el -> pr-review-common.el
+    pr-review-input.el -> pr-review-input.el
+    pr-review-render.el -> pr-review-render.el
+    pr-review.el -> pr-review.el
+    graphql => graphql
+Created pr-review-20211122.1657.tar containing:
+  pr-review-20211122.1657/
+  pr-review-20211122.1657/graphql/
+  pr-review-20211122.1657/graphql/add-comment.graphql
+  pr-review-20211122.1657/graphql/add-review-comment-reply.graphql
+  pr-review-20211122.1657/graphql/add-review.graphql
+  pr-review-20211122.1657/graphql/close-pr.graphql
+  pr-review-20211122.1657/graphql/get-assignable-users.graphql
+  pr-review-20211122.1657/graphql/get-pull-request.graphql
+  pr-review-20211122.1657/graphql/merge-pr.graphql
+  pr-review-20211122.1657/graphql/reopen-pr.graphql
+  pr-review-20211122.1657/graphql/request-reviews.graphql
+  pr-review-20211122.1657/graphql/resolve-review-thread.graphql
+  pr-review-20211122.1657/graphql/search-prs.graphql
+  pr-review-20211122.1657/graphql/submit-review.graphql
+  pr-review-20211122.1657/graphql/unresolve-review-thread.graphql
+  pr-review-20211122.1657/graphql/update-comment.graphql
+  pr-review-20211122.1657/graphql/update-pr.graphql
+  pr-review-20211122.1657/graphql/update-review-comment.graphql
+  pr-review-20211122.1657/graphql/update-review.graphql
+  pr-review-20211122.1657/pr-review-action.el
+  pr-review-20211122.1657/pr-review-api.el
+  pr-review-20211122.1657/pr-review-common.el
+  pr-review-20211122.1657/pr-review-input.el
+  pr-review-20211122.1657/pr-review-pkg.el
+  pr-review-20211122.1657/pr-review-render.el
+  pr-review-20211122.1657/pr-review.el
+Built pr-review in 4.303s, finished at 2021-11-28T02:02:21+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  473 Nov 28 02:02 packages/pr-review-20211122.1657.entry
+120K -rw-r--r-- 1 root root 120K Nov 28 02:02 packages/pr-review-20211122.1657.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:02 packages/pr-review-badge.svg
+4.0K -rw-r--r-- 1 root root   27 Nov 28 02:02 packages/pr-review-readme.txt

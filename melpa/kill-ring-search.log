@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/nschum/kill-ring-search.el.git
 
 Updating /mnt/store/melpa/working/kill-ring-search/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/nschum/kill-ring-search.el.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 23535b4a01a1cb1574604e36c49614e84e85c883
+Built kill-ring-search in 8.154s, finished at 2021-11-28T01:40:59+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.7K Nov 28 01:40 packages/kill-ring-search-20140422.1555.el
+4.0K -rw-r--r-- 1 root root  391 Nov 28 01:40 packages/kill-ring-search-20140422.1555.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:40 packages/kill-ring-search-badge.svg
+4.0K -rw-r--r-- 1 root root  364 Nov 28 01:40 packages/kill-ring-search-readme.txt

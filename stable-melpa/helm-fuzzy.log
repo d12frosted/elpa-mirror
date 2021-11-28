@@ -3,7 +3,16 @@ Fetcher: github
 Source:  https://github.com/jcs-elpa/helm-fuzzy.git
 
 Updating /mnt/store/melpa/working/helm-fuzzy/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/jcs-elpa/helm-fuzzy.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 8d44247fd3600fe3e5e7a64a1904ae6b11bcc9fe
+Built helm-fuzzy in 6.863s, finished at 2021-11-28T01:32:09+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Nov 28 01:32 packages/helm-fuzzy-20200927.532.el
+4.0K -rw-r--r-- 1 root root  424 Nov 28 01:32 packages/helm-fuzzy-20200927.532.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:32 packages/helm-fuzzy-badge.svg
+8.0K -rw-r--r-- 1 root root 6.8K Nov 28 01:32 packages/helm-fuzzy-find-20171106.400.el
+4.0K -rw-r--r-- 1 root root  429 Nov 28 01:32 packages/helm-fuzzy-find-20171106.400.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 27 17:05 packages/helm-fuzzy-find-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Nov 28 01:32 packages/helm-fuzzy-find-readme.txt
+4.0K -rw-r--r-- 1 root root  231 Nov 28 01:32 packages/helm-fuzzy-find.log
+4.0K -rw-r--r-- 1 root root   33 Nov 28 01:32 packages/helm-fuzzy-readme.txt

@@ -3,6 +3,11 @@ Fetcher: github
 Source:  https://github.com/akirak/emacs-playground.git
 
 Updating /mnt/store/melpa/working/playground/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://github.com/akirak/emacs-playground.git/': The requested URL returned error: 504
-
+Checking out origin/HEAD
+Checking out 77d2faab0bc3f6e1f2c65c66644c52167304610d
+Built playground in 5.506s, finished at 2021-11-28T02:01:22+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  19K Nov 28 02:01 packages/playground-20200812.1336.el
+4.0K -rw-r--r-- 1 root root  424 Nov 28 02:01 packages/playground-20200812.1336.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:01 packages/playground-badge.svg
+4.0K -rw-r--r-- 1 root root  512 Nov 28 02:01 packages/playground-readme.txt

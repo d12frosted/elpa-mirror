@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/ptrv/processing2-emacs.git
 
 Updating /mnt/store/melpa/working/processing-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/ptrv/processing2-emacs.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 448aba82970c98322629eaf2746e73be6c30c98e
+Built processing-mode in 4.991s, finished at 2021-11-28T02:02:42+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root  22K Nov 28 02:02 packages/processing-mode-20171022.2302.el
+4.0K -rw-r--r-- 1 root root  366 Nov 28 02:02 packages/processing-mode-20171022.2302.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:02 packages/processing-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   31 Nov 28 02:02 packages/processing-mode-readme.txt

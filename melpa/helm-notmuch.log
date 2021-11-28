@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm-notmuch.git
 
 Updating /mnt/store/melpa/working/helm-notmuch/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
-fatal: expected flush after ref listing
-
+Checking out origin/HEAD
+Checking out 97a01497e079a7b6505987e9feba6b603bbec288
+Built helm-notmuch in 4.590s, finished at 2021-11-28T01:32:51+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 8.1K Nov 28 01:32 packages/helm-notmuch-20190320.1048.el
+4.0K -rw-r--r-- 1 root root  395 Nov 28 01:32 packages/helm-notmuch-20190320.1048.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:32 packages/helm-notmuch-badge.svg
+4.0K -rw-r--r-- 1 root root  542 Nov 28 01:32 packages/helm-notmuch-readme.txt

@@ -3,8 +3,21 @@ Fetcher: github
 Source:  https://github.com/k2052/moonscript-mode.git
 
 Updating /mnt/store/melpa/working/moonscript/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 56f90471e2ced2b0a177aed4d8c2f854797e9cc7
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/moonscript/
+  to /tmp/moonscriptAc1iFZ/moonscript-20170831.2226
+    moonscript-repl.el -> moonscript-repl.el
+    moonscript.el -> moonscript.el
+Created moonscript-20170831.2226.tar containing:
+  moonscript-20170831.2226/
+  moonscript-20170831.2226/moonscript-pkg.el
+  moonscript-20170831.2226/moonscript-repl.el
+  moonscript-20170831.2226/moonscript.el
+Built moonscript in 7.490s, finished at 2021-11-28T01:48:53+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  344 Nov 28 01:48 packages/moonscript-20170831.2226.entry
+ 12K -rw-r--r-- 1 root root  10K Nov 28 01:48 packages/moonscript-20170831.2226.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:48 packages/moonscript-badge.svg
+4.0K -rw-r--r-- 1 root root  150 Nov 28 01:48 packages/moonscript-readme.txt

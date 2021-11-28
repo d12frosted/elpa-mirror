@@ -71,8 +71,7 @@ To decide from a given list of possible choices press
 ? c (decide-random-choice)
 and input a comma-separated list of things to choose from.
 There are also some pre-defined lists of choices that can be
-accessed with the following shortcuts (and it should be obvious from
-a quick look in decide.el how to define your own for frequently used lists!):
+accessed with the following shortcuts.
 
 ? w 4 -> decide-whereto-compass-4 (N,S,W,E)
 ? w 6 -> decide-whereto-compass-6 (N,S,W,E,U,D)
@@ -84,22 +83,34 @@ a quick look in decide.el how to define your own for frequently used lists!):
 ? W 6 -> decide-whereto-relative-6 (forward,left,right,back,up,down)
 
 It is also possible to pick random combinations of words taken from the
-variable decide-tables using ? t (decide-from-table). decide-table is
-an alist that gives lists of possible values for each 'table'. If one of
-the strings is the name of another table in the alist a random from that
-list will be substituted. A word that is a valid dice-spec
-is rolled with the result inserted. A word that is a valid range (as for
-decide-random-range) will result in a random value from that range
-being inserted. If a word matches the name of a
-table that table will be used to insert something at that position.
-A tilde (~) can be used anywhere in a table string to insert nothing, to
-prevent the parser from recognizing some word, or to glue together words
-or dice-specifiers without a space to separate them.
-A possible expansion for a table name can have a weight added to make
-it more likely to be choosen like ("dragon" . 3) (making it three times
-as likely to be choosen as an expansion that has no weight given).
-The default-value for decide-tables contains some examples to hopefully
-make all this a bit less confusing.
+variable decide-tables using ? t (decide-from-table). decide-table is an
+alist that gives lists of possible values for each 'table'. If the name of
+another table in the alist is given in square brackets a random value from
+that list will be substituted, and this is applied recursively (do not
+include a reference to a table from a table referred to from that table!). A
+valid dice-spec in square brackets is rolled with the result inserted. A
+valid range in square brackets (as for decide-random-range) will result in a
+random value from that range being inserted. If a word matches the name of a
+table that table will be used to insert something at that position. A
+possible expansion for a table name can have a weight added to make it more
+likely to be choosen like ("dragon" . 3) (making it three times as likely to
+be choosen as an expansion that has no weight given). The default-value for
+decide-tables contains some examples to hopefully make all this a bit less
+confusing.
+
+The functions decide-table-load-file and decide-table-load-dir
+can be used to load random tables from text files into
+the decide-tables variable. Each file contains a single table,
+with one possible substitution per line, in the same format
+as is used in decide-tables. Weights are set by prefixing
+a line with a number and a comma, with no whitespace before
+or after. The name of the table is taken from the first
+non-empty, non-comment line, and that line must begin
+with a semicolon (to future-safe the format in case
+multiple tables in the same file is allowed eventually). No
+later lines in the file may begin with a semicolon.
+The random-tables subdirectory in the git-repository
+for decide-mode contains example tables.
 
 Example of globally binding a keyboard combination to roll dice:
 (global-set-key (kbd "C-c r") 'decide-roll-dice)

@@ -3,9 +3,162 @@ Fetcher: github
 Source:  https://github.com/legoscia/emacs-jabber.git
 
 Updating /mnt/store/melpa/working/jabber/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/legoscia/emacs-jabber.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out fff33826f42e040dad7ef64ea312d85215d3b0a1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/jabber/
+  to /tmp/jabberNRYGIt/jabber-20180927.2325
+    jabber-activity.el -> jabber-activity.el
+    jabber-ahc-presence.el -> jabber-ahc-presence.el
+    jabber-ahc.el -> jabber-ahc.el
+    jabber-alert.el -> jabber-alert.el
+    jabber-autoaway.el -> jabber-autoaway.el
+    jabber-avatar.el -> jabber-avatar.el
+    jabber-awesome.el -> jabber-awesome.el
+    jabber-bookmarks.el -> jabber-bookmarks.el
+    jabber-browse.el -> jabber-browse.el
+    jabber-chat.el -> jabber-chat.el
+    jabber-chatbuffer.el -> jabber-chatbuffer.el
+    jabber-chatstates.el -> jabber-chatstates.el
+    jabber-compose.el -> jabber-compose.el
+    jabber-conn.el -> jabber-conn.el
+    jabber-console.el -> jabber-console.el
+    jabber-core.el -> jabber-core.el
+    jabber-disco.el -> jabber-disco.el
+    jabber-events.el -> jabber-events.el
+    jabber-export.el -> jabber-export.el
+    jabber-feature-neg.el -> jabber-feature-neg.el
+    jabber-festival.el -> jabber-festival.el
+    jabber-ft-client.el -> jabber-ft-client.el
+    jabber-ft-common.el -> jabber-ft-common.el
+    jabber-ft-server.el -> jabber-ft-server.el
+    jabber-gmail.el -> jabber-gmail.el
+    jabber-history.el -> jabber-history.el
+    jabber-iq.el -> jabber-iq.el
+    jabber-keepalive.el -> jabber-keepalive.el
+    jabber-keymap.el -> jabber-keymap.el
+    jabber-libnotify.el -> jabber-libnotify.el
+    jabber-logon.el -> jabber-logon.el
+    jabber-menu.el -> jabber-menu.el
+    jabber-modeline.el -> jabber-modeline.el
+    jabber-muc-nick-coloring.el -> jabber-muc-nick-coloring.el
+    jabber-muc-nick-completion.el -> jabber-muc-nick-completion.el
+    jabber-muc.el -> jabber-muc.el
+    jabber-notifications.el -> jabber-notifications.el
+    jabber-osd.el -> jabber-osd.el
+    jabber-ourversion.el -> jabber-ourversion.el
+    jabber-ping.el -> jabber-ping.el
+    jabber-presence.el -> jabber-presence.el
+    jabber-private.el -> jabber-private.el
+    jabber-ratpoison.el -> jabber-ratpoison.el
+    jabber-register.el -> jabber-register.el
+    jabber-roster.el -> jabber-roster.el
+    jabber-rtt.el -> jabber-rtt.el
+    jabber-sasl.el -> jabber-sasl.el
+    jabber-sawfish.el -> jabber-sawfish.el
+    jabber-screen.el -> jabber-screen.el
+    jabber-search.el -> jabber-search.el
+    jabber-si-client.el -> jabber-si-client.el
+    jabber-si-common.el -> jabber-si-common.el
+    jabber-si-server.el -> jabber-si-server.el
+    jabber-socks5.el -> jabber-socks5.el
+    jabber-time.el -> jabber-time.el
+    jabber-tmux.el -> jabber-tmux.el
+    jabber-truncate.el -> jabber-truncate.el
+    jabber-util.el -> jabber-util.el
+    jabber-vcard-avatars.el -> jabber-vcard-avatars.el
+    jabber-vcard.el -> jabber-vcard.el
+    jabber-version.el -> jabber-version.el
+    jabber-watch.el -> jabber-watch.el
+    jabber-widget.el -> jabber-widget.el
+    jabber-wmii.el -> jabber-wmii.el
+    jabber-xmessage.el -> jabber-xmessage.el
+    jabber-xml.el -> jabber-xml.el
+    jabber.el -> jabber.el
+    jabber.texi -> jabber.texi
+    jabber-fallback-lib/hexrgb.el -> jabber-fallback-lib/hexrgb.el
+Created /tmp/jabberNRYGIt/jabber-20180927.2325/jabber.info
+Created jabber-20180927.2325.tar containing:
+  jabber-20180927.2325/
+  jabber-20180927.2325/dir
+  jabber-20180927.2325/jabber-activity.el
+  jabber-20180927.2325/jabber-ahc-presence.el
+  jabber-20180927.2325/jabber-ahc.el
+  jabber-20180927.2325/jabber-alert.el
+  jabber-20180927.2325/jabber-autoaway.el
+  jabber-20180927.2325/jabber-avatar.el
+  jabber-20180927.2325/jabber-awesome.el
+  jabber-20180927.2325/jabber-bookmarks.el
+  jabber-20180927.2325/jabber-browse.el
+  jabber-20180927.2325/jabber-chat.el
+  jabber-20180927.2325/jabber-chatbuffer.el
+  jabber-20180927.2325/jabber-chatstates.el
+  jabber-20180927.2325/jabber-compose.el
+  jabber-20180927.2325/jabber-conn.el
+  jabber-20180927.2325/jabber-console.el
+  jabber-20180927.2325/jabber-core.el
+  jabber-20180927.2325/jabber-disco.el
+  jabber-20180927.2325/jabber-events.el
+  jabber-20180927.2325/jabber-export.el
+  jabber-20180927.2325/jabber-fallback-lib/
+  jabber-20180927.2325/jabber-fallback-lib/hexrgb.el
+  jabber-20180927.2325/jabber-feature-neg.el
+  jabber-20180927.2325/jabber-festival.el
+  jabber-20180927.2325/jabber-ft-client.el
+  jabber-20180927.2325/jabber-ft-common.el
+  jabber-20180927.2325/jabber-ft-server.el
+  jabber-20180927.2325/jabber-gmail.el
+  jabber-20180927.2325/jabber-history.el
+  jabber-20180927.2325/jabber-iq.el
+  jabber-20180927.2325/jabber-keepalive.el
+  jabber-20180927.2325/jabber-keymap.el
+  jabber-20180927.2325/jabber-libnotify.el
+  jabber-20180927.2325/jabber-logon.el
+  jabber-20180927.2325/jabber-menu.el
+  jabber-20180927.2325/jabber-modeline.el
+  jabber-20180927.2325/jabber-muc-nick-coloring.el
+  jabber-20180927.2325/jabber-muc-nick-completion.el
+  jabber-20180927.2325/jabber-muc.el
+  jabber-20180927.2325/jabber-notifications.el
+  jabber-20180927.2325/jabber-osd.el
+  jabber-20180927.2325/jabber-ourversion.el
+  jabber-20180927.2325/jabber-ping.el
+  jabber-20180927.2325/jabber-pkg.el
+  jabber-20180927.2325/jabber-presence.el
+  jabber-20180927.2325/jabber-private.el
+  jabber-20180927.2325/jabber-ratpoison.el
+  jabber-20180927.2325/jabber-register.el
+  jabber-20180927.2325/jabber-roster.el
+  jabber-20180927.2325/jabber-rtt.el
+  jabber-20180927.2325/jabber-sasl.el
+  jabber-20180927.2325/jabber-sawfish.el
+  jabber-20180927.2325/jabber-screen.el
+  jabber-20180927.2325/jabber-search.el
+  jabber-20180927.2325/jabber-si-client.el
+  jabber-20180927.2325/jabber-si-common.el
+  jabber-20180927.2325/jabber-si-server.el
+  jabber-20180927.2325/jabber-socks5.el
+  jabber-20180927.2325/jabber-time.el
+  jabber-20180927.2325/jabber-tmux.el
+  jabber-20180927.2325/jabber-truncate.el
+  jabber-20180927.2325/jabber-util.el
+  jabber-20180927.2325/jabber-vcard-avatars.el
+  jabber-20180927.2325/jabber-vcard.el
+  jabber-20180927.2325/jabber-version.el
+  jabber-20180927.2325/jabber-watch.el
+  jabber-20180927.2325/jabber-widget.el
+  jabber-20180927.2325/jabber-wmii.el
+  jabber-20180927.2325/jabber-xmessage.el
+  jabber-20180927.2325/jabber-xml.el
+  jabber-20180927.2325/jabber.el
+  jabber-20180927.2325/jabber.info
+Built jabber in 14.301s, finished at 2021-11-28T01:38:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  163 Nov 28 01:38 packages/jabber-20180927.2325.entry
+792K -rw-r--r-- 1 root root 790K Nov 28 01:38 packages/jabber-20180927.2325.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:38 packages/jabber-badge.svg
+4.0K -rw-r--r-- 1 root root  441 Nov 28 01:38 packages/jabber-otr-20150918.1144.entry
+ 32K -rw-r--r-- 1 root root  30K Nov 28 01:38 packages/jabber-otr-20150918.1144.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:38 packages/jabber-otr-badge.svg
+4.0K -rw-r--r-- 1 root root  529 Nov 28 01:38 packages/jabber-otr-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Nov 28 01:38 packages/jabber-otr.log

@@ -3,7 +3,36 @@ Fetcher: github
 Source:  https://github.com/narendraj9/hledger-mode.git
 
 Updating /mnt/store/melpa/working/hledger-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/narendraj9/hledger-mode.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 9ac07ff0adbce6a402c17e789b1750f9da0d22f4
+Note: hledger-mode :files spec is equivalent to the default.
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hledger-mode/
+  to /tmp/hledger-mode8x0ST7/hledger-mode-20210706.1225
+    hledger-core.el -> hledger-core.el
+    hledger-defuns.el -> hledger-defuns.el
+    hledger-input.el -> hledger-input.el
+    hledger-mail.el -> hledger-mail.el
+    hledger-mode.el -> hledger-mode.el
+    hledger-navigate.el -> hledger-navigate.el
+    hledger-reports.el -> hledger-reports.el
+    hledger-suggest.el -> hledger-suggest.el
+    hledger-webservice.el -> hledger-webservice.el
+Created hledger-mode-20210706.1225.tar containing:
+  hledger-mode-20210706.1225/
+  hledger-mode-20210706.1225/hledger-core.el
+  hledger-mode-20210706.1225/hledger-defuns.el
+  hledger-mode-20210706.1225/hledger-input.el
+  hledger-mode-20210706.1225/hledger-mail.el
+  hledger-mode-20210706.1225/hledger-mode-pkg.el
+  hledger-mode-20210706.1225/hledger-mode.el
+  hledger-mode-20210706.1225/hledger-navigate.el
+  hledger-mode-20210706.1225/hledger-reports.el
+  hledger-mode-20210706.1225/hledger-suggest.el
+  hledger-mode-20210706.1225/hledger-webservice.el
+Built hledger-mode in 4.673s, finished at 2021-11-28T01:34:45+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  458 Nov 28 01:34 packages/hledger-mode-20210706.1225.entry
+120K -rw-r--r-- 1 root root 120K Nov 28 01:34 packages/hledger-mode-20210706.1225.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:34 packages/hledger-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  436 Nov 28 01:34 packages/hledger-mode-readme.txt

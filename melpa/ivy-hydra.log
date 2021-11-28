@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/abo-abo/swiper.git
 
 Updating /mnt/store/melpa/working/ivy-hydra/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/abo-abo/swiper.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 1c6b3da377a840e898b14020133f59fca9ceea1c
+Built ivy-hydra in 4.796s, finished at 2021-11-28T01:38:15+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.8K Nov 28 01:38 packages/ivy-hydra-20210311.1108.el
+4.0K -rw-r--r-- 1 root root  436 Nov 28 01:38 packages/ivy-hydra-20210311.1108.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:38 packages/ivy-hydra-badge.svg
+4.0K -rw-r--r-- 1 root root  178 Nov 28 01:38 packages/ivy-hydra-readme.txt

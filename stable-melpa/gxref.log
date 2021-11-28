@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/dedi/gxref.git
 
 Updating /mnt/store/melpa/working/gxref/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/dedi/gxref.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 380b02c3c3c2586c828456716eef6a6392bb043b
+Built gxref in 5.320s, finished at 2021-11-28T01:30:00+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  14K Nov 28 01:29 packages/gxref-20170411.1753.el
+4.0K -rw-r--r-- 1 root root  304 Nov 28 01:29 packages/gxref-20170411.1753.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:30 packages/gxref-badge.svg
+4.0K -rw-r--r-- 1 root root 3.5K Nov 28 01:29 packages/gxref-readme.txt

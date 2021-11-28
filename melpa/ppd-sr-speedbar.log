@@ -3,7 +3,20 @@ Fetcher: github
 Source:  https://github.com/rdallasgray/ppd-sr-speedbar.git
 
 Updating /mnt/store/melpa/working/ppd-sr-speedbar/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/rdallasgray/ppd-sr-speedbar.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out d88d7f63f695824c435dd996405454d1e46d2aa3
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ppd-sr-speedbar/
+  to /tmp/ppd-sr-speedbarMiB0Ce/ppd-sr-speedbar-20151108.1224
+  ! lib/ppd-sr-speedbar-pkg.el -> ppd-sr-speedbar-pkg.el
+  ! lib/ppd-sr-speedbar.el -> ppd-sr-speedbar.el
+Created ppd-sr-speedbar-20151108.1224.tar containing:
+  ppd-sr-speedbar-20151108.1224/
+  ppd-sr-speedbar-20151108.1224/ppd-sr-speedbar-pkg.el
+  ppd-sr-speedbar-20151108.1224/ppd-sr-speedbar.el
+Built ppd-sr-speedbar in 4.631s, finished at 2021-11-28T02:02:20+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  430 Nov 28 02:02 packages/ppd-sr-speedbar-20151108.1224.entry
+ 20K -rw-r--r-- 1 root root  20K Nov 28 02:02 packages/ppd-sr-speedbar-20151108.1224.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:02 packages/ppd-sr-speedbar-badge.svg
+4.0K -rw-r--r-- 1 root root  222 Nov 28 02:02 packages/ppd-sr-speedbar-readme.txt

@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/pitkali/pos-tip.git
 
 Updating /mnt/store/melpa/working/pos-tip/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/pitkali/pos-tip.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 179cc126b363f72ca12fab1e0dc462ce0ee79742
+Built pos-tip in 5.090s, finished at 2021-11-28T02:02:13+0000
+ ✓ Success:
+ 36K -rw-r--r-- 1 root root  35K Nov 28 02:02 packages/pos-tip-20191227.1356.el
+4.0K -rw-r--r-- 1 root root  216 Nov 28 02:02 packages/pos-tip-20191227.1356.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:02 packages/pos-tip-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Nov 28 02:02 packages/pos-tip-readme.txt

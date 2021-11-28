@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/jerrypnz/major-mode-hydra.el.git
 
 Updating /mnt/store/melpa/working/pretty-hydra/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/jerrypnz/major-mode-hydra.el.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 84c1929a5153be169ca5c36737439d51dffde505
+Built pretty-hydra in 5.270s, finished at 2021-11-28T02:02:30+0000
+ ✓ Success:
+ 20K -rw-r--r-- 1 root root  18K Nov 28 02:02 packages/pretty-hydra-20210221.834.el
+4.0K -rw-r--r-- 1 root root  418 Nov 28 02:02 packages/pretty-hydra-20210221.834.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:02 packages/pretty-hydra-badge.svg
+4.0K -rw-r--r-- 1 root root  100 Nov 28 02:02 packages/pretty-hydra-readme.txt

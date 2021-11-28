@@ -3,7 +3,21 @@ Fetcher: github
 Source:  https://github.com/Emacs-Kotlin-Mode-Maintainers/kotlin-mode.git
 
 Updating /mnt/store/melpa/working/kotlin-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/Emacs-Kotlin-Mode-Maintainers/kotlin-mode.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 3e0c34087ba4965a8bf08d3f27325f0a1e631bfb
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/kotlin-mode/
+  to /tmp/kotlin-modezR6mWo/kotlin-mode-20210917.1911
+    kotlin-mode-lexer.el -> kotlin-mode-lexer.el
+    kotlin-mode.el -> kotlin-mode.el
+Created kotlin-mode-20210917.1911.tar containing:
+  kotlin-mode-20210917.1911/
+  kotlin-mode-20210917.1911/kotlin-mode-lexer.el
+  kotlin-mode-20210917.1911/kotlin-mode-pkg.el
+  kotlin-mode-20210917.1911/kotlin-mode.el
+Built kotlin-mode in 5.192s, finished at 2021-11-28T01:41:12+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  330 Nov 28 01:41 packages/kotlin-mode-20210917.1911.entry
+ 40K -rw-r--r-- 1 root root  40K Nov 28 01:41 packages/kotlin-mode-20210917.1911.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:41 packages/kotlin-mode-badge.svg
+   0 -rw-r--r-- 1 root root    0 Nov 28 01:41 packages/kotlin-mode-readme.txt

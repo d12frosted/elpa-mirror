@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/vmware/govmomi.git
 
 Updating /mnt/store/melpa/working/govc/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/vmware/govmomi.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out a96a919252ceb63fa18e597b95ade8bf5da8040f
+Built govc in 7.769s, finished at 2021-11-28T01:29:05+0000
+ ✓ Success:
+ 64K -rw-r--r-- 1 root root  61K Nov 28 01:29 packages/govc-20191213.2131.el
+4.0K -rw-r--r-- 1 root root  447 Nov 28 01:29 packages/govc-20191213.2131.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:29 packages/govc-badge.svg
+4.0K -rw-r--r-- 1 root root  595 Nov 28 01:29 packages/govc-readme.txt

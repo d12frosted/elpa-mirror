@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/nex3/haml-mode.git
 
 Updating /mnt/store/melpa/working/haml-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/nex3/haml-mode.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out bf5b6c11b1206759d2b28af48765e04882dd1fc4
+Built haml-mode in 6.220s, finished at 2021-11-28T01:30:11+0000
+ ✓ Success:
+ 32K -rw-r--r-- 1 root root  32K Nov 28 01:30 packages/haml-mode-20190219.2102.el
+4.0K -rw-r--r-- 1 root root  386 Nov 28 01:30 packages/haml-mode-20190219.2102.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:30 packages/haml-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  265 Nov 28 01:30 packages/haml-mode-readme.txt

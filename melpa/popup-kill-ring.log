@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/waymondo/popup-kill-ring.git
 
 Updating /mnt/store/melpa/working/popup-kill-ring/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/waymondo/popup-kill-ring.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 5773dfadc104a906c088a3ec62e8cdd3e01e57fa
+Built popup-kill-ring in 5.126s, finished at 2021-11-28T02:02:08+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  16K Nov 28 02:02 packages/popup-kill-ring-20131020.1854.el
+4.0K -rw-r--r-- 1 root root  441 Nov 28 02:02 packages/popup-kill-ring-20131020.1854.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:02 packages/popup-kill-ring-badge.svg
+4.0K -rw-r--r-- 1 root root  162 Nov 28 02:02 packages/popup-kill-ring-readme.txt

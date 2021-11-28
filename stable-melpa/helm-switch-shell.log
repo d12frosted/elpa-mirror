@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/jamesnvc/helm-switch-shell.git
 
 Updating /mnt/store/melpa/working/helm-switch-shell/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/jamesnvc/helm-switch-shell.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 8d7ba1d99ff12a8f1d6ce3b9684ae8aebf494cf3
+Built helm-switch-shell in 5.173s, finished at 2021-11-28T01:33:36+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Nov 28 01:33 packages/helm-switch-shell-20210713.1440.el
+4.0K -rw-r--r-- 1 root root  523 Nov 28 01:33 packages/helm-switch-shell-20210713.1440.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:33 packages/helm-switch-shell-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Nov 28 01:33 packages/helm-switch-shell-readme.txt

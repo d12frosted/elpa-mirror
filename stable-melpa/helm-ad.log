@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/tnoda/helm-ad.git
 
 Updating /mnt/store/melpa/working/helm-ad/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 8ac044705d8620ee354a9cfa8cc1b865e83c0d55
+Built helm-ad in 4.802s, finished at 2021-11-28T01:30:42+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.8K Nov 28 01:30 packages/helm-ad-20151209.1015.el
+4.0K -rw-r--r-- 1 root root  351 Nov 28 01:30 packages/helm-ad-20151209.1015.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:30 packages/helm-ad-badge.svg
+4.0K -rw-r--r-- 1 root root  116 Nov 28 01:30 packages/helm-ad-readme.txt

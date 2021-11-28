@@ -3,6 +3,11 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/plur.git
 
 Updating /mnt/store/melpa/working/plur/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://github.com/xuchunyang/plur.git/': The requested URL returned error: 504
-
+Checking out origin/HEAD
+Checking out 5bdd3b9a2f0624414bd596e798644713cd1545f0
+Built plur in 5.057s, finished at 2021-11-28T02:01:25+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.9K Nov 28 02:01 packages/plur-20160504.924.el
+4.0K -rw-r--r-- 1 root root  354 Nov 28 02:01 packages/plur-20160504.924.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:01 packages/plur-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Nov 28 02:01 packages/plur-readme.txt

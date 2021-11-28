@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacs-pe/jist.el.git
 
 Updating /mnt/store/melpa/working/jist/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out da0692452e312a99bb27d8708504b521798aca48
+Built jist in 5.547s, finished at 2021-11-28T01:39:18+0000
+ ✓ Success:
+ 28K -rw-r--r-- 1 root root  27K Nov 28 01:39 packages/jist-20161229.1721.el
+4.0K -rw-r--r-- 1 root root  463 Nov 28 01:39 packages/jist-20161229.1721.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:39 packages/jist-badge.svg
+4.0K -rw-r--r-- 1 root root 2.6K Nov 28 01:39 packages/jist-readme.txt

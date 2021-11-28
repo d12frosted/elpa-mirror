@@ -3,6 +3,11 @@ Fetcher: github
 Source:  https://github.com/jcs-elpa/goto-char-preview.git
 
 Updating /mnt/store/melpa/working/goto-char-preview/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://github.com/jcs-elpa/goto-char-preview.git/': The requested URL returned error: 504
-
+Checking out origin/HEAD
+Checking out 51a66148c31f0ee7fdcc7aa554ae42e9c4db876c
+Built goto-char-preview in 5.206s, finished at 2021-11-28T01:28:56+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.4K Nov 28 01:28 packages/goto-char-preview-20210323.332.el
+4.0K -rw-r--r-- 1 root root  403 Nov 28 01:28 packages/goto-char-preview-20210323.332.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:28 packages/goto-char-preview-badge.svg
+4.0K -rw-r--r-- 1 root root   55 Nov 28 01:28 packages/goto-char-preview-readme.txt

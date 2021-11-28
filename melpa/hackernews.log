@@ -3,6 +3,12 @@ Fetcher: github
 Source:  https://github.com/clarete/hackernews.el.git
 
 Updating /mnt/store/melpa/working/hackernews/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://github.com/clarete/hackernews.el.git/': The requested URL returned error: 504
-
+Checking out origin/HEAD
+Checking out ccfa75c0b3d67201cdf0f2324f311544ade498db
+Built hackernews in 5.458s, finished at 2021-11-28T01:30:06+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root  40K Feb 11  2019 packages/hackernews-20181124.122.tar
+ 32K -rw-r--r-- 1 root root  30K Nov 28 01:30 packages/hackernews-20210226.1226.el
+4.0K -rw-r--r-- 1 root root  390 Nov 28 01:30 packages/hackernews-20210226.1226.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:30 packages/hackernews-badge.svg
+4.0K -rw-r--r-- 1 root root   37 Nov 28 01:30 packages/hackernews-readme.txt

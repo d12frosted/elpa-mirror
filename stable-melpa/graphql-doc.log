@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/ifitzpatrick/graphql-doc.el.git
 
 Updating /mnt/store/melpa/working/graphql-doc/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/ifitzpatrick/graphql-doc.el.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 6ba7961fc9c5c9818bd60abce6ba9dfef2dad452
+Built graphql-doc in 8.333s, finished at 2021-11-28T01:29:21+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Nov 28 01:29 packages/graphql-doc-20210808.8.el
+4.0K -rw-r--r-- 1 root root  375 Nov 28 01:29 packages/graphql-doc-20210808.8.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:29 packages/graphql-doc-badge.svg
+4.0K -rw-r--r-- 1 root root  339 Nov 28 01:29 packages/graphql-doc-readme.txt

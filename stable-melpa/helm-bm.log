@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/yasuyk/helm-bm.git
 
 Updating /mnt/store/melpa/working/helm-bm/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/yasuyk/helm-bm.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out d66341f5646c23178d4d8bffb6cfebe3fb73f1d7
+Built helm-bm in 9.522s, finished at 2021-11-28T01:30:55+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.8K Nov 28 01:30 packages/helm-bm-20160321.1331.el
+4.0K -rw-r--r-- 1 root root  413 Nov 28 01:30 packages/helm-bm-20160321.1331.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:30 packages/helm-bm-badge.svg
+4.0K -rw-r--r-- 1 root root  170 Nov 28 01:30 packages/helm-bm-readme.txt

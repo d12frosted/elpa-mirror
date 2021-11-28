@@ -3,8 +3,11 @@ Fetcher: github
 Source:  https://github.com/vapniks/helm-helm-commands.git
 
 Updating /mnt/store/melpa/working/helm-helm-commands/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 3a05aa19c976501343ad9ae630a36810921a85f6
+Built helm-helm-commands in 5.190s, finished at 2021-11-28T01:32:24+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.1K Nov 28 01:32 packages/helm-helm-commands-20130902.1748.el
+4.0K -rw-r--r-- 1 root root  414 Nov 28 01:32 packages/helm-helm-commands-20130902.1748.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:32 packages/helm-helm-commands-badge.svg
+4.0K -rw-r--r-- 1 root root  924 Nov 28 01:32 packages/helm-helm-commands-readme.txt

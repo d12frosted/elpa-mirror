@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/rustify-emacs/fuz.el.git
 
 Updating /mnt/store/melpa/working/helm-fuz/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/rustify-emacs/fuz.el.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out fee874aa35d2ee6b12b836290b5c8eaa44175a28
+Built helm-fuz in 7.115s, finished at 2021-11-28T01:32:07+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Nov 28 01:32 packages/helm-fuz-20200812.1222.el
+4.0K -rw-r--r-- 1 root root  403 Nov 28 01:32 packages/helm-fuz-20200812.1222.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:32 packages/helm-fuz-badge.svg
+4.0K -rw-r--r-- 1 root root  113 Nov 28 01:32 packages/helm-fuz-readme.txt

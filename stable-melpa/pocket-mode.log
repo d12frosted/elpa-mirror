@@ -3,7 +3,10 @@ Fetcher: github
 Source:  https://github.com/lujun9972/pocket-mode.git
 
 Updating /mnt/store/melpa/working/pocket-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/lujun9972/pocket-mode.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 229de7d35b7e5605797591c46aa8200d7efc363c
+Built pocket-mode in 5.519s, finished at 2021-11-28T02:01:32+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.8K Nov 28 02:01 packages/pocket-mode-20171201.1315.el
+4.0K -rw-r--r-- 1 root root  350 Nov 28 02:01 packages/pocket-mode-20171201.1315.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:01 packages/pocket-mode-badge.svg

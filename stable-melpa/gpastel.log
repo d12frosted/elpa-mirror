@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/DamienCassou/gpastel.git
 
 Updating /mnt/store/melpa/working/gpastel/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/DamienCassou/gpastel.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out d5fc55bc825203f998537c5834718e665bb87c29
+Built gpastel in 6.182s, finished at 2021-11-28T01:29:05+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.3K Nov 28 01:29 packages/gpastel-20181229.1404.el
+4.0K -rw-r--r-- 1 root root  377 Nov 28 01:29 packages/gpastel-20181229.1404.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:29 packages/gpastel-badge.svg
+4.0K -rw-r--r-- 1 root root  945 Nov 28 01:29 packages/gpastel-readme.txt

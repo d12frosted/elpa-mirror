@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/cacology/private-diary.git
 
 Updating /mnt/store/melpa/working/private-diary/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/cacology/private-diary.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 0c86fb6150ad8ed14f94def3504f5a68f4147283
+Built private-diary in 5.177s, finished at 2021-11-28T02:02:36+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.1K Nov 28 02:02 packages/private-diary-20151216.1657.el
+4.0K -rw-r--r-- 1 root root  382 Nov 28 02:02 packages/private-diary-20151216.1657.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:02 packages/private-diary-badge.svg
+4.0K -rw-r--r-- 1 root root  221 Nov 28 02:02 packages/private-diary-readme.txt

@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/gruggiero/kubernetes-tramp.git
 
 Updating /mnt/store/melpa/working/kubernetes-tramp/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
-fatal: expected flush after ref listing
-
+Checking out origin/HEAD
+Checking out 8713571b66940f8f3f496b55baa23cdf1df7a869
+Built kubernetes-tramp in 7.858s, finished at 2021-11-28T01:41:24+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.5K Nov 28 01:41 packages/kubernetes-tramp-20181228.922.el
+4.0K -rw-r--r-- 1 root root  489 Nov 28 01:41 packages/kubernetes-tramp-20181228.922.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:41 packages/kubernetes-tramp-badge.svg
+4.0K -rw-r--r-- 1 root root  878 Nov 28 01:41 packages/kubernetes-tramp-readme.txt

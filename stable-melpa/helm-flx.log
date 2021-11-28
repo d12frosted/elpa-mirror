@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/PythonNut/helm-flx.git
 
 Updating /mnt/store/melpa/working/helm-flx/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/PythonNut/helm-flx.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 6640fac5cb16bee73c95b8ed1248a4e5e113690e
+Built helm-flx in 8.554s, finished at 2021-11-28T01:31:59+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Nov 28 01:31 packages/helm-flx-20180103.516.el
+4.0K -rw-r--r-- 1 root root  446 Nov 28 01:31 packages/helm-flx-20180103.516.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:31 packages/helm-flx-badge.svg
+4.0K -rw-r--r-- 1 root root  313 Nov 28 01:31 packages/helm-flx-readme.txt

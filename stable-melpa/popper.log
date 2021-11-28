@@ -3,7 +3,21 @@ Fetcher: github
 Source:  https://github.com/karthink/popper.git
 
 Updating /mnt/store/melpa/working/popper/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/karthink/popper.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 4d58a6dbba5d488ff9ac9318e202d84da505e691
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/popper/
+  to /tmp/popperrq7kwJ/popper-20211116.624
+    popper-echo.el -> popper-echo.el
+    popper.el -> popper.el
+Created popper-20211116.624.tar containing:
+  popper-20211116.624/
+  popper-20211116.624/popper-echo.el
+  popper-20211116.624/popper-pkg.el
+  popper-20211116.624/popper.el
+Built popper in 5.056s, finished at 2021-11-28T02:02:02+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  383 Nov 28 02:02 packages/popper-20211116.624.entry
+ 52K -rw-r--r-- 1 root root  50K Nov 28 02:02 packages/popper-20211116.624.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:02 packages/popper-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Nov 28 02:02 packages/popper-readme.txt

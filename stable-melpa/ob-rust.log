@@ -3,6 +3,21 @@ Fetcher: github
 Source:  https://github.com/micanzhang/ob-rust.git
 
 Updating /mnt/store/melpa/working/ob-rust/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://github.com/micanzhang/ob-rust.git/': The requested URL returned error: 504
-
+Checking out origin/HEAD
+Checking out 30fe7e7181f44443d02e905dda77f83ec4944e76
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ob-rust/
+  to /tmp/ob-rustuVl6aO/ob-rust-20210204.244
+    ob-rust.el -> ob-rust.el
+    test-ob-rust.el -> test-ob-rust.el
+Created ob-rust-20210204.244.tar containing:
+  ob-rust-20210204.244/
+  ob-rust-20210204.244/ob-rust-pkg.el
+  ob-rust-20210204.244/ob-rust.el
+  ob-rust-20210204.244/test-ob-rust.el
+Built ob-rust in 4.020s, finished at 2021-11-28T01:52:43+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  303 Nov 28 01:52 packages/ob-rust-20210204.244.entry
+ 20K -rw-r--r-- 1 root root  20K Nov 28 01:52 packages/ob-rust-20210204.244.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:52 packages/ob-rust-badge.svg
+4.0K -rw-r--r-- 1 root root  861 Nov 28 01:52 packages/ob-rust-readme.txt

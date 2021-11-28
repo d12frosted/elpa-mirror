@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/rolandwalker/list-utils.git
 
 Updating /mnt/store/melpa/working/list-utils/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
-fatal: expected flush after ref listing
-
+Checking out origin/HEAD
+Checking out ca9654cd1418e874c876c6b3b7d4cd8339bfde77
+Built list-utils in 8.422s, finished at 2021-11-28T01:43:27+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root  38K Nov 28 01:43 packages/list-utils-20210111.1522.el
+4.0K -rw-r--r-- 1 root root  371 Nov 28 01:43 packages/list-utils-20210111.1522.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:43 packages/list-utils-badge.svg
+8.0K -rw-r--r-- 1 root root 4.2K Nov 28 01:43 packages/list-utils-readme.txt

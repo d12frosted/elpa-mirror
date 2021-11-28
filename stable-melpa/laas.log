@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/tecosaur/LaTeX-auto-activating-snippets.git
 
 Updating /mnt/store/melpa/working/laas/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
-fatal: expected flush after ref listing
-
+Checking out origin/HEAD
+Checking out 397bde14a67e91cb95ca6b2d5a5d5025cae243c3
+Built laas in 5.050s, finished at 2021-11-28T01:41:30+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  16K Nov 28 01:41 packages/laas-20211103.1633.el
+4.0K -rw-r--r-- 1 root root  384 Nov 28 01:41 packages/laas-20211103.1633.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:41 packages/laas-badge.svg
+4.0K -rw-r--r-- 1 root root  190 Nov 28 01:41 packages/laas-readme.txt

@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/sje30/yesterbox.git
 
 Updating /mnt/store/melpa/working/yesterbox/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/sje30/yesterbox.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 10591342f1759e25756f5865371a53c132d8b0a0
+Built yesterbox in 6.098s, finished at 2021-11-28T02:23:34+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.0K Nov 28 02:23 packages/yesterbox-20200327.52.el
+4.0K -rw-r--r-- 1 root root  377 Nov 28 02:23 packages/yesterbox-20200327.52.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:23 packages/yesterbox-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Nov 28 02:23 packages/yesterbox-readme.txt

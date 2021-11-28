@@ -3,7 +3,10 @@ Fetcher: github
 Source:  https://github.com/rlister/emacs-haste-client.git
 
 Updating /mnt/store/melpa/working/haste/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/rlister/emacs-haste-client.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 22d05aacc3296ab50a7361222ab139fb4d447c25
+Built haste in 5.781s, finished at 2021-11-28T01:30:27+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 4.2K Nov 28 01:30 packages/haste-20141030.2034.el
+4.0K -rw-r--r-- 1 root root  297 Nov 28 01:30 packages/haste-20141030.2034.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:30 packages/haste-badge.svg

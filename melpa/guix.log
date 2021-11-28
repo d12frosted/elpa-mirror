@@ -3,36 +3,132 @@ Fetcher: github
 Source:  https://github.com/alezost/guix.el.git
 
 Updating /mnt/store/melpa/working/guix/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: <!DOCTYPE html>
-remote: <!--
-remote: 
-remote: Hello future GitHubber! I bet you're here to remove those nasty inline styles,
-remote: DRY up these templates and make 'em nice and re-usable, right?
-remote: 
-remote: Please, don't. https://github.com/styleguide/templates/2.0
-remote: 
-remote: -->
-remote: <html>
-remote:   <head>
-remote:     <title>Unicorn! &middot; GitHub</title>
-remote:     <style type="text/css" media="screen">
-remote:       body {
-remote:         background-color: #f1f1f1;
-remote:         margin: 0;
-remote:         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-remote:       }
-remote: 
-remote:       .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
-remote: 
-remote:       a { color: #4183c4; text-decoration: none; }
-remote:       a:hover { text-decoration: underline; }
-remote: 
-remote:       h1 { letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px; text-shadow: 0 1px 0 #fff; }
-remote:       p { color: rgba(0, 0, 0, 0.5); margin: 10px 0 10px; font-size: 18px; font-weight: 200; line-height: 1.6em;}
-remote: 
-remote:       ul { list-style: none; margin: 25px 0; padding: 0; }
-remote:       li { display: table-cell; font-weight: bold; width: 1%; }
-fatal: unable to access 'https://github.com/alezost/guix.el.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out c9aef52121b458297e70bb50f49f7276b4a8d759
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/guix/
+  to /tmp/guixDWTMds/guix-20210608.1653
+  ! elisp/guix-about.el -> guix-about.el
+  ! elisp/guix-auto-mode.el -> guix-auto-mode.el
+  ! elisp/guix-build-log.el -> guix-build-log.el
+  ! elisp/guix-command.el -> guix-command.el
+  ! elisp/guix-config.el -> guix-config.el
+  ! elisp/guix-default-config.el -> guix-default-config.el
+  ! elisp/guix-derivation.el -> guix-derivation.el
+  ! elisp/guix-devel.el -> guix-devel.el
+  ! elisp/guix-env-var.el -> guix-env-var.el
+  ! elisp/guix-external.el -> guix-external.el
+  ! elisp/guix-geiser.el -> guix-geiser.el
+  ! elisp/guix-graph.el -> guix-graph.el
+  ! elisp/guix-guile.el -> guix-guile.el
+  ! elisp/guix-hash.el -> guix-hash.el
+  ! elisp/guix-help-vars.el -> guix-help-vars.el
+  ! elisp/guix-help.el -> guix-help.el
+  ! elisp/guix-license.el -> guix-license.el
+  ! elisp/guix-location.el -> guix-location.el
+  ! elisp/guix-misc.el -> guix-misc.el
+  ! elisp/guix-package.el -> guix-package.el
+  ! elisp/guix-pcomplete.el -> guix-pcomplete.el
+  ! elisp/guix-popup.el -> guix-popup.el
+  ! elisp/guix-prettify.el -> guix-prettify.el
+  ! elisp/guix-profiles.el -> guix-profiles.el
+  ! elisp/guix-read.el -> guix-read.el
+  ! elisp/guix-repl.el -> guix-repl.el
+  ! elisp/guix-scheme.el -> guix-scheme.el
+  ! elisp/guix-service.el -> guix-service.el
+  ! elisp/guix-ui-generation.el -> guix-ui-generation.el
+  ! elisp/guix-ui-license.el -> guix-ui-license.el
+  ! elisp/guix-ui-lint-checker.el -> guix-ui-lint-checker.el
+  ! elisp/guix-ui-messages.el -> guix-ui-messages.el
+  ! elisp/guix-ui-package-location.el -> guix-ui-package-location.el
+  ! elisp/guix-ui-package.el -> guix-ui-package.el
+  ! elisp/guix-ui-profile.el -> guix-ui-profile.el
+  ! elisp/guix-ui-service-location.el -> guix-ui-service-location.el
+  ! elisp/guix-ui-service.el -> guix-ui-service.el
+  ! elisp/guix-ui-store-item.el -> guix-ui-store-item.el
+  ! elisp/guix-ui-system-generation.el -> guix-ui-system-generation.el
+  ! elisp/guix-ui-system.el -> guix-ui-system.el
+  ! elisp/guix-ui.el -> guix-ui.el
+  ! elisp/guix-utils.el -> guix-utils.el
+  ! elisp/guix.el -> guix.el
+  ! doc/emacs-guix.texi -> emacs-guix.texi
+    images/guix-logo.svg -> images/guix-logo.svg
+    scheme/emacs-guix => scheme/emacs-guix
+    scheme/emacs-guix.scm -> scheme/emacs-guix.scm
+Created /tmp/guixDWTMds/guix-20210608.1653/emacs-guix.info
+Created guix-20210608.1653.tar containing:
+  guix-20210608.1653/
+  guix-20210608.1653/dir
+  guix-20210608.1653/emacs-guix.info
+  guix-20210608.1653/guix-about.el
+  guix-20210608.1653/guix-auto-mode.el
+  guix-20210608.1653/guix-build-log.el
+  guix-20210608.1653/guix-command.el
+  guix-20210608.1653/guix-config.el
+  guix-20210608.1653/guix-default-config.el
+  guix-20210608.1653/guix-derivation.el
+  guix-20210608.1653/guix-devel.el
+  guix-20210608.1653/guix-env-var.el
+  guix-20210608.1653/guix-external.el
+  guix-20210608.1653/guix-geiser.el
+  guix-20210608.1653/guix-graph.el
+  guix-20210608.1653/guix-guile.el
+  guix-20210608.1653/guix-hash.el
+  guix-20210608.1653/guix-help-vars.el
+  guix-20210608.1653/guix-help.el
+  guix-20210608.1653/guix-license.el
+  guix-20210608.1653/guix-location.el
+  guix-20210608.1653/guix-misc.el
+  guix-20210608.1653/guix-package.el
+  guix-20210608.1653/guix-pcomplete.el
+  guix-20210608.1653/guix-pkg.el
+  guix-20210608.1653/guix-popup.el
+  guix-20210608.1653/guix-prettify.el
+  guix-20210608.1653/guix-profiles.el
+  guix-20210608.1653/guix-read.el
+  guix-20210608.1653/guix-repl.el
+  guix-20210608.1653/guix-scheme.el
+  guix-20210608.1653/guix-service.el
+  guix-20210608.1653/guix-ui-generation.el
+  guix-20210608.1653/guix-ui-license.el
+  guix-20210608.1653/guix-ui-lint-checker.el
+  guix-20210608.1653/guix-ui-messages.el
+  guix-20210608.1653/guix-ui-package-location.el
+  guix-20210608.1653/guix-ui-package.el
+  guix-20210608.1653/guix-ui-profile.el
+  guix-20210608.1653/guix-ui-service-location.el
+  guix-20210608.1653/guix-ui-service.el
+  guix-20210608.1653/guix-ui-store-item.el
+  guix-20210608.1653/guix-ui-system-generation.el
+  guix-20210608.1653/guix-ui-system.el
+  guix-20210608.1653/guix-ui.el
+  guix-20210608.1653/guix-utils.el
+  guix-20210608.1653/guix.el
+  guix-20210608.1653/images/
+  guix-20210608.1653/images/guix-logo.svg
+  guix-20210608.1653/scheme/
+  guix-20210608.1653/scheme/emacs-guix.scm
+  guix-20210608.1653/scheme/emacs-guix/
+  guix-20210608.1653/scheme/emacs-guix/actions.scm
+  guix-20210608.1653/scheme/emacs-guix/commands.scm
+  guix-20210608.1653/scheme/emacs-guix/emacs.scm
+  guix-20210608.1653/scheme/emacs-guix/generations.scm
+  guix-20210608.1653/scheme/emacs-guix/graph.scm
+  guix-20210608.1653/scheme/emacs-guix/hash.scm
+  guix-20210608.1653/scheme/emacs-guix/licenses.scm
+  guix-20210608.1653/scheme/emacs-guix/lint.scm
+  guix-20210608.1653/scheme/emacs-guix/pack.scm
+  guix-20210608.1653/scheme/emacs-guix/packages.scm
+  guix-20210608.1653/scheme/emacs-guix/profiles.scm
+  guix-20210608.1653/scheme/emacs-guix/refresh.scm
+  guix-20210608.1653/scheme/emacs-guix/services.scm
+  guix-20210608.1653/scheme/emacs-guix/store-items.scm
+  guix-20210608.1653/scheme/emacs-guix/system-generations.scm
+  guix-20210608.1653/scheme/emacs-guix/system.scm
+  guix-20210608.1653/scheme/emacs-guix/utils.scm
+Built guix in 13.659s, finished at 2021-11-28T01:30:03+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  435 Nov 28 01:30 packages/guix-20210608.1653.entry
+752K -rw-r--r-- 1 root root 750K Nov 28 01:30 packages/guix-20210608.1653.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:30 packages/guix-badge.svg
+4.0K -rw-r--r-- 1 root root  474 Nov 28 01:30 packages/guix-readme.txt

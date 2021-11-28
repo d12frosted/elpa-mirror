@@ -3,7 +3,25 @@ Fetcher: github
 Source:  https://github.com/yveszoundi/grails-projectile-mode.git
 
 Updating /mnt/store/melpa/working/grails-projectile-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/yveszoundi/grails-projectile-mode.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 8efca50ce92b556fe9d467b157d7aec635bcc017
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/grails-projectile-mode/
+  to /tmp/grails-projectile-modeC0Zqb0/grails-projectile-mode-20160327.1324
+    grails-projectile-commands.el -> grails-projectile-commands.el
+    grails-projectile-config.el -> grails-projectile-config.el
+    grails-projectile-discover.el -> grails-projectile-discover.el
+    grails-projectile-mode.el -> grails-projectile-mode.el
+Created grails-projectile-mode-20160327.1324.tar containing:
+  grails-projectile-mode-20160327.1324/
+  grails-projectile-mode-20160327.1324/grails-projectile-commands.el
+  grails-projectile-mode-20160327.1324/grails-projectile-config.el
+  grails-projectile-mode-20160327.1324/grails-projectile-discover.el
+  grails-projectile-mode-20160327.1324/grails-projectile-mode-pkg.el
+  grails-projectile-mode-20160327.1324/grails-projectile-mode.el
+Built grails-projectile-mode in 5.740s, finished at 2021-11-28T01:29:12+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  465 Nov 28 01:29 packages/grails-projectile-mode-20160327.1324.entry
+ 52K -rw-r--r-- 1 root root  50K Nov 28 01:29 packages/grails-projectile-mode-20160327.1324.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:29 packages/grails-projectile-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:29 packages/grails-projectile-mode-readme.txt

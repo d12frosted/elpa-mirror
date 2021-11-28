@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/helm-ack.git
 
 Updating /mnt/store/melpa/working/helm-ack/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/emacsorphanage/helm-ack.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 889bc225318d14c6e3be80e73b1d9d6fb30e48c3
+Built helm-ack in 5.210s, finished at 2021-11-28T01:30:40+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.7K Nov 28 01:30 packages/helm-ack-20141030.1226.el
+4.0K -rw-r--r-- 1 root root  367 Nov 28 01:30 packages/helm-ack-20141030.1226.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:30 packages/helm-ack-badge.svg
+   0 -rw-r--r-- 1 root root    0 Nov 28 01:30 packages/helm-ack-readme.txt

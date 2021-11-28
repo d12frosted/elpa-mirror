@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/Boruch-Baum/emacs-home-end.git
 
 Updating /mnt/store/melpa/working/home-end/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/Boruch-Baum/emacs-home-end.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out fbddad2c1268720ce17662a232b48f666e489526
+Built home-end in 4.930s, finished at 2021-11-28T01:34:52+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.8K Nov 28 01:34 packages/home-end-20180817.855.el
+4.0K -rw-r--r-- 1 root root  451 Nov 28 01:34 packages/home-end-20180817.855.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:34 packages/home-end-badge.svg
+4.0K -rw-r--r-- 1 root root  913 Nov 28 01:34 packages/home-end-readme.txt

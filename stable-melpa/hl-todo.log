@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/tarsius/hl-todo.git
 
 Updating /mnt/store/melpa/working/hl-todo/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/tarsius/hl-todo.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 42f744ffb513cf2b95517144c64dbf3fc69f711a
+Built hl-todo in 4.839s, finished at 2021-11-28T01:34:43+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  14K Nov 28 01:34 packages/hl-todo-20210909.1114.el
+4.0K -rw-r--r-- 1 root root  361 Nov 28 01:34 packages/hl-todo-20210909.1114.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:34 packages/hl-todo-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:34 packages/hl-todo-readme.txt

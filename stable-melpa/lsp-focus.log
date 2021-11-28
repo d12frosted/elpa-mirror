@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-focus.git
 
 Updating /mnt/store/melpa/working/lsp-focus/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/emacs-lsp/lsp-focus.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out d01f0af156e4e78dcb9fa8e080a652cf8f221d30
+Built lsp-focus in 5.150s, finished at 2021-11-28T01:44:25+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.2K Nov 28 01:44 packages/lsp-focus-20200906.1917.el
+4.0K -rw-r--r-- 1 root root  401 Nov 28 01:44 packages/lsp-focus-20200906.1917.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:44 packages/lsp-focus-badge.svg
+4.0K -rw-r--r-- 1 root root  206 Nov 28 01:44 packages/lsp-focus-readme.txt

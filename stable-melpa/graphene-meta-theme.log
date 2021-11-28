@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/rdallasgray/graphene-meta-theme.git
 
 Updating /mnt/store/melpa/working/graphene-meta-theme/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/rdallasgray/graphene-meta-theme.git/': The requested URL returned error: 504
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 62cc73fee31f1bd9474027b83a249feee050271e
+Built graphene-meta-theme in 7.437s, finished at 2021-11-28T01:29:17+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Nov 28 01:29 packages/graphene-meta-theme-20161204.1607.el
+4.0K -rw-r--r-- 1 root root  416 Nov 28 01:29 packages/graphene-meta-theme-20161204.1607.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:29 packages/graphene-meta-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  342 Nov 28 01:29 packages/graphene-meta-theme-readme.txt

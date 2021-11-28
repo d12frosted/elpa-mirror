@@ -3,9 +3,12 @@ Fetcher: github
 Source:  https://github.com/edran/hc-zenburn-emacs.git
 
 Updating /mnt/store/melpa/working/hc-zenburn-theme/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/edran/hc-zenburn-emacs.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out fd0024a5191cdce204d91c8f1db99ba31640f6e9
+Note: hc-zenburn-theme :files spec is equivalent to the default.
+Built hc-zenburn-theme in 5.698s, finished at 2021-11-28T01:30:35+0000
+ ✓ Success:
+ 68K -rw-r--r-- 1 root root  67K Nov 28 01:30 packages/hc-zenburn-theme-20150928.1633.el
+4.0K -rw-r--r-- 1 root root  371 Nov 28 01:30 packages/hc-zenburn-theme-20150928.1633.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:30 packages/hc-zenburn-theme-badge.svg
+4.0K -rw-r--r-- 1 root root   48 Nov 28 01:30 packages/hc-zenburn-theme-readme.txt

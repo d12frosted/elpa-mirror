@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/juanjux/emacs-professional-theme.git
 
 Updating /mnt/store/melpa/working/professional-theme/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/juanjux/emacs-professional-theme.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 0927d1474049a193f9f366bde5eb1887b9ba20ed
+Built professional-theme in 5.004s, finished at 2021-11-28T02:02:42+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.7K Nov 28 02:02 packages/professional-theme-20150315.1100.el
+4.0K -rw-r--r-- 1 root root  436 Nov 28 02:02 packages/professional-theme-20150315.1100.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:02 packages/professional-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  881 Nov 28 02:02 packages/professional-theme-readme.txt

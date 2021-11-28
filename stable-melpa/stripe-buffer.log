@@ -3,9 +3,11 @@ Fetcher: github
 Source:  https://github.com/sabof/stripe-buffer.git
 
 Updating /mnt/store/melpa/working/stripe-buffer/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/sabof/stripe-buffer.git/': The requested URL returned error: 500
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out c252080f55cb78c951b19ebab9687f6d00237baf
+Built stripe-buffer in 5.081s, finished at 2021-11-28T02:13:38+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Nov 28 02:13 packages/stripe-buffer-20141208.1508.el
+4.0K -rw-r--r-- 1 root root  351 Nov 28 02:13 packages/stripe-buffer-20141208.1508.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:13 packages/stripe-buffer-badge.svg
+4.0K -rw-r--r-- 1 root root  209 Nov 28 02:13 packages/stripe-buffer-readme.txt

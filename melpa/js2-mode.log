@@ -3,8 +3,23 @@ Fetcher: github
 Source:  https://github.com/mooz/js2-mode.git
 
 Updating /mnt/store/melpa/working/js2-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
-fatal: expected flush after ref listing
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out d2636f95ebe4d423dc9b4311aff248c7688271c5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/js2-mode/
+  to /tmp/js2-modetIFmGs/js2-mode-20211105.1214
+    js2-imenu-extras.el -> js2-imenu-extras.el
+    js2-mode.el -> js2-mode.el
+    js2-old-indent.el -> js2-old-indent.el
+Created js2-mode-20211105.1214.tar containing:
+  js2-mode-20211105.1214/
+  js2-mode-20211105.1214/js2-imenu-extras.el
+  js2-mode-20211105.1214/js2-mode-pkg.el
+  js2-mode-20211105.1214/js2-mode.el
+  js2-mode-20211105.1214/js2-old-indent.el
+Built js2-mode in 5.113s, finished at 2021-11-28T01:39:34+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  491 Nov 28 01:39 packages/js2-mode-20211105.1214.entry
+560K -rw-r--r-- 1 root root 560K Nov 28 01:39 packages/js2-mode-20211105.1214.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 01:39 packages/js2-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 2.6K Nov 28 01:39 packages/js2-mode-readme.txt

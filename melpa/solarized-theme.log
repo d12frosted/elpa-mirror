@@ -3,8 +3,51 @@ Fetcher: github
 Source:  https://github.com/bbatsov/solarized-emacs.git
 
 Updating /mnt/store/melpa/working/solarized-theme/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-remote: Internal Server Error.
-remote: 
-fatal: unable to access 'https://github.com/bbatsov/solarized-emacs.git/': The requested URL returned error: 500
-
+Checking out origin/HEAD
+Checking out f34a171ff0e39549972edf533120f0b556f0b5ad
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/solarized-theme/
+  to /tmp/solarized-themelDHQjx/solarized-theme-20211114.807
+    solarized-dark-high-contrast-theme.el -> solarized-dark-high-contrast-theme.el
+    solarized-dark-theme.el -> solarized-dark-theme.el
+    solarized-faces.el -> solarized-faces.el
+    solarized-gruvbox-dark-theme.el -> solarized-gruvbox-dark-theme.el
+    solarized-gruvbox-light-theme.el -> solarized-gruvbox-light-theme.el
+    solarized-light-high-contrast-theme.el -> solarized-light-high-contrast-theme.el
+    solarized-light-theme.el -> solarized-light-theme.el
+    solarized-palettes.el -> solarized-palettes.el
+    solarized-selenized-black-theme.el -> solarized-selenized-black-theme.el
+    solarized-selenized-dark-theme.el -> solarized-selenized-dark-theme.el
+    solarized-selenized-light-theme.el -> solarized-selenized-light-theme.el
+    solarized-selenized-white-theme.el -> solarized-selenized-white-theme.el
+    solarized-theme-utils.el -> solarized-theme-utils.el
+    solarized-theme.el -> solarized-theme.el
+    solarized-wombat-dark-theme.el -> solarized-wombat-dark-theme.el
+    solarized-zenburn-theme.el -> solarized-zenburn-theme.el
+    solarized.el -> solarized.el
+Created solarized-theme-20211114.807.tar containing:
+  solarized-theme-20211114.807/
+  solarized-theme-20211114.807/solarized-dark-high-contrast-theme.el
+  solarized-theme-20211114.807/solarized-dark-theme.el
+  solarized-theme-20211114.807/solarized-faces.el
+  solarized-theme-20211114.807/solarized-gruvbox-dark-theme.el
+  solarized-theme-20211114.807/solarized-gruvbox-light-theme.el
+  solarized-theme-20211114.807/solarized-light-high-contrast-theme.el
+  solarized-theme-20211114.807/solarized-light-theme.el
+  solarized-theme-20211114.807/solarized-palettes.el
+  solarized-theme-20211114.807/solarized-selenized-black-theme.el
+  solarized-theme-20211114.807/solarized-selenized-dark-theme.el
+  solarized-theme-20211114.807/solarized-selenized-light-theme.el
+  solarized-theme-20211114.807/solarized-selenized-white-theme.el
+  solarized-theme-20211114.807/solarized-theme-pkg.el
+  solarized-theme-20211114.807/solarized-theme-utils.el
+  solarized-theme-20211114.807/solarized-theme.el
+  solarized-theme-20211114.807/solarized-wombat-dark-theme.el
+  solarized-theme-20211114.807/solarized-zenburn-theme.el
+  solarized-theme-20211114.807/solarized.el
+Built solarized-theme in 5.193s, finished at 2021-11-28T02:12:05+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  401 Nov 28 02:12 packages/solarized-theme-20211114.807.entry
+212K -rw-r--r-- 1 root root 210K Nov 28 02:12 packages/solarized-theme-20211114.807.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 28 02:12 packages/solarized-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  329 Nov 28 02:12 packages/solarized-theme-readme.txt
