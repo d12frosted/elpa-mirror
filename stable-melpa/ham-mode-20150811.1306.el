@@ -4,6 +4,8 @@
 
 ;; Author: Artur Malabarba <bruce.connor.am@gmail.com>
 ;; URL: http://github.com/Bruce-Connor/ham-mode
+;; Package-Version: 20150811.1306
+;; Package-Commit: 3a141986a21c2aa6eefb428983352abb8b7907d2
 ;; Version: 1.1.2
 ;; Package-Requires: ((html-to-markdown "1.2") (markdown-mode "2.0"))
 ;; Keywords: convenience emulation wp

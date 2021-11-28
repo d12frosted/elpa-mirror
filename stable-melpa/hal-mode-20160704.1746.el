@@ -2,6 +2,8 @@
 
 ;; Author: Alexander Rössler
 ;; URL: https://github.com/strahlex/hal-mode/
+;; Package-Version: 20160704.1746
+;; Package-Commit: cd2f66f219ee520198d4586fb6b169cef7ad3f21
 ;; Version: 0.1
 ;; Keywords: language
 

@@ -4,8 +4,6 @@
 
 ;; Author: Kevin Kim <kevinkim1991@gmail.com>
 ;; URL: https://github.com/007kevin/pdf-view-restore
-;; Package-Version: 20190904.1708
-;; Package-Commit: 5a1947c01a3edecc9e0fe7629041a2f53e0610c9
 ;; Keywords: files convenience
 ;; Version: 0.1
 ;; Package-Requires: ((pdf-tools "0.90") (emacs "26.0"))

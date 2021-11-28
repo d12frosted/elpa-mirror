@@ -9,8 +9,8 @@
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Package-Requires: ((cl-lib "0.3"))
-;; Package-Version: 20211027.1933
-;; Package-Commit: 20e5ab2a8bfdf9b44c813c6abd96b478f822ddef
+;; Package-Version: 20211128.1356
+;; Package-Commit: 2f247333435b8b036547658caf04228831f613d2
 ;; Homepage: https://github.com/tarsius/keymap-utils
 ;; Keywords: convenience, extensions
 
@@ -92,7 +92,7 @@ is or would be stored outside its char-table, then return nil.
 EVENT should be a character or symbol."
   (and (not (symbolp event))
        (char-table-p (cadr keymap))
-       (ignore-errors (char-table-range (cadr keymap) event) t)))
+       (ignore-errors (and (char-table-range (cadr keymap) event) t))))
 
 ;;; Key Lookup
 
