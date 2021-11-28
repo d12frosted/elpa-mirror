@@ -3,10 +3,7 @@ Fetcher: github
 Source:  https://github.com/brotzeit/helm-xref.git
 
 Updating /mnt/store/melpa/working/helm-xref/
-Checking out origin/HEAD
-Checking out ea0e4ed8a9baf236e4085cbc7178241f109a53fa
-Built helm-xref in 4.803s, finished at 2021-11-27T13:35:00+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.7K Nov 27 13:34 packages/helm-xref-20211017.1334.el
-4.0K -rw-r--r-- 1 root root  392 Nov 27 13:34 packages/helm-xref-20211017.1334.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:35 packages/helm-xref-badge.svg
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/brotzeit/helm-xref.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

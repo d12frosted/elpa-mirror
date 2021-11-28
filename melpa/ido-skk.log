@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/tsukimizake/ido-skk.git
 
 Updating /mnt/store/melpa/working/ido-skk/
-Checking out origin/HEAD
-Checking out 89a2e62799bff2841ff634517c86084c4ce69246
-Built ido-skk in 5.451s, finished at 2021-11-27T13:37:14+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.3K Nov 27 13:37 packages/ido-skk-20151111.950.el
-4.0K -rw-r--r-- 1 root root  386 Nov 27 13:37 packages/ido-skk-20151111.950.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:37 packages/ido-skk-badge.svg
-4.0K -rw-r--r-- 1 root root  297 Nov 27 13:37 packages/ido-skk-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/tsukimizake/ido-skk.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

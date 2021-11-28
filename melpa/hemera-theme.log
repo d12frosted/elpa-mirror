@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/guidoschmidt/emacs-hemera-theme.git
 
 Updating /mnt/store/melpa/working/hemera-theme/
-Checking out origin/HEAD
-Checking out b67c902b210b37b00cac68726822404543147ba8
-Built hemera-theme in 4.776s, finished at 2021-11-27T13:35:06+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root  15K Nov 27 13:35 packages/hemera-theme-20180916.924.el
-4.0K -rw-r--r-- 1 root root  361 Nov 27 13:35 packages/hemera-theme-20180916.924.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:35 packages/hemera-theme-badge.svg
-4.0K -rw-r--r-- 1 root root   74 Nov 27 13:35 packages/hemera-theme-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/guidoschmidt/emacs-hemera-theme.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

@@ -3,11 +3,14 @@ Fetcher: github
 Source:  https://github.com/habamax/habamax-theme.git
 
 Updating /mnt/store/melpa/working/habamax-theme/
-Checking out origin/HEAD
-Checking out 6e86a1b23b6e2aaf40d4374b5673da00a28be447
-Built habamax-theme in 7.518s, finished at 2021-11-27T13:31:04+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root  19K Nov 27 13:31 packages/habamax-theme-20181001.850.el
-4.0K -rw-r--r-- 1 root root  348 Nov 27 13:31 packages/habamax-theme-20181001.850.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:31 packages/habamax-theme-badge.svg
-   0 -rw-r--r-- 1 root root    0 Nov 27 13:31 packages/habamax-theme-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: <html>
+remote: <head><title>404 Not Found</title></head>
+remote: <body>
+remote: <center><h1>404 Not Found</h1></center>
+remote: <hr><center>nginx</center>
+remote: </body>
+remote: </html>
+fatal: unable to access 'https://github.com/habamax/habamax-theme.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

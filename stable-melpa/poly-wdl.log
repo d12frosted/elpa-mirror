@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/jmonlong/poly-wdl.git
 
 Updating /mnt/store/melpa/working/poly-wdl/
-Checking out origin/HEAD
-Checking out 963faa828d15d49cee5a63f619c3c30e162c2d0f
-Built poly-wdl in 9.591s, finished at 2021-11-27T14:03:09+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.4K Nov 27 14:03 packages/poly-wdl-20190712.529.el
-4.0K -rw-r--r-- 1 root root  419 Nov 27 14:03 packages/poly-wdl-20190712.529.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:03 packages/poly-wdl-badge.svg
-4.0K -rw-r--r-- 1 root root   68 Nov 27 14:03 packages/poly-wdl-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+error: Could not fetch origin
+

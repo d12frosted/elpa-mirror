@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/mpdel/ivy-mpdel.git
 
 Updating /mnt/store/melpa/working/ivy-mpdel/
-Checking out origin/HEAD
-Checking out a42dcc943914c71975c115195d38c739f25e475c
-Built ivy-mpdel in 5.347s, finished at 2021-11-27T13:39:14+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.2K Nov 27 13:39 packages/ivy-mpdel-20190428.920.el
-4.0K -rw-r--r-- 1 root root  468 Nov 27 13:39 packages/ivy-mpdel-20190428.920.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:39 packages/ivy-mpdel-badge.svg
-4.0K -rw-r--r-- 1 root root  268 Nov 27 13:39 packages/ivy-mpdel-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/mpdel/ivy-mpdel.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

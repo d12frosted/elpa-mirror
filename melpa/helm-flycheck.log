@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/yasuyk/helm-flycheck.git
 
 Updating /mnt/store/melpa/working/helm-flycheck/
-Checking out origin/HEAD
-Checking out 3cf7d3bb194acacc6395f88360588013d92675d6
-Built helm-flycheck in 4.973s, finished at 2021-11-27T13:32:42+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Nov 27 13:32 packages/helm-flycheck-20160710.829.el
-4.0K -rw-r--r-- 1 root root  414 Nov 27 13:32 packages/helm-flycheck-20160710.829.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:32 packages/helm-flycheck-badge.svg
-4.0K -rw-r--r-- 1 root root  232 Nov 27 13:32 packages/helm-flycheck-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/yasuyk/helm-flycheck.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

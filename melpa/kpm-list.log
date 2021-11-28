@@ -3,10 +3,7 @@ Fetcher: github
 Source:  https://github.com/KMahoney/kpm-list.git
 
 Updating /mnt/store/melpa/working/kpm-list/
-Checking out origin/HEAD
-Checking out e0f5112e5ce8ec1b603f4428fa51681c68bb28f5
-Built kpm-list in 5.487s, finished at 2021-11-27T13:42:32+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root  16K Nov 27 13:42 packages/kpm-list-20170924.1352.el
-4.0K -rw-r--r-- 1 root root  314 Nov 27 13:42 packages/kpm-list-20170924.1352.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:42 packages/kpm-list-badge.svg
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/KMahoney/kpm-list.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/pmiddend/emacs-rtm.git
 
 Updating /mnt/store/melpa/working/rtm/
-Checking out origin/HEAD
-Checking out 3e3d09387cb84801343ecca8fb02e82f213e7bbe
-Built rtm in 4.797s, finished at 2021-11-27T14:08:23+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root  24K Nov 27 14:08 packages/rtm-20180329.1508.el
-4.0K -rw-r--r-- 1 root root  459 Nov 27 14:08 packages/rtm-20180329.1508.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:08 packages/rtm-badge.svg
-4.0K -rw-r--r-- 1 root root  147 Nov 27 14:08 packages/rtm-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/pmiddend/emacs-rtm.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+

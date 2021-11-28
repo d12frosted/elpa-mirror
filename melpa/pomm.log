@@ -3,25 +3,7 @@ Fetcher: github
 Source:  https://github.com/SqrtMinusOne/pomm.el.git
 
 Updating /mnt/store/melpa/working/pomm/
-Checking out origin/HEAD
-Checking out 2b58c3cad0106299d98e4a12de4f78dbd96fe67b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/pomm/
-  to /tmp/pommBkH5ke/pomm-20211125.1806
-    pomm.el -> pomm.el
-    resources => resources
-Created pomm-20211125.1806.tar containing:
-  pomm-20211125.1806/
-  pomm-20211125.1806/pomm-pkg.el
-  pomm-20211125.1806/pomm.el
-  pomm-20211125.1806/resources/
-  pomm-20211125.1806/resources/air_horn.wav
-  pomm-20211125.1806/resources/bell.wav
-  pomm-20211125.1806/resources/tick.wav
-Built pomm in 8.913s, finished at 2021-11-27T14:03:19+0000
- ✓ Success:
- 28K -rw-r--r-- 1 root root  27K Nov 11 12:52 packages/pomm-20211110.1040.el
-4.0K -rw-r--r-- 1 root root  397 Nov 27 14:03 packages/pomm-20211125.1806.entry
-1.3M -rw-r--r-- 1 root root 1.3M Nov 27 14:03 packages/pomm-20211125.1806.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:03 packages/pomm-badge.svg
-4.0K -rw-r--r-- 1 root root  459 Nov 27 14:03 packages/pomm-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/SqrtMinusOne/pomm.el.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

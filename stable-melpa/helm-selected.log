@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/takaxp/helm-selected.git
 
 Updating /mnt/store/melpa/working/helm-selected/
-Checking out origin/HEAD
-Checking out a9c769998bc56373d19f0ec9cbbbb4bd89a43c2d
-Built helm-selected in 10.669s, finished at 2021-11-27T13:34:34+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.9K Nov 27 13:34 packages/helm-selected-20171223.210.el
-4.0K -rw-r--r-- 1 root root  434 Nov 27 13:34 packages/helm-selected-20171223.210.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:34 packages/helm-selected-badge.svg
-4.0K -rw-r--r-- 1 root root  124 Nov 27 13:34 packages/helm-selected-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/takaxp/helm-selected.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

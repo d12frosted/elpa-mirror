@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/helm-css-scss.git
 
 Updating /mnt/store/melpa/working/helm-css-scss/
-Checking out origin/HEAD
-Checking out 48b996f73af1fef8d6e88a1c545d98f8c50b0cf3
-Built helm-css-scss in 5.098s, finished at 2021-11-27T13:32:20+0000
- ✓ Success:
- 36K -rw-r--r-- 1 root root  34K Nov 27 13:32 packages/helm-css-scss-20191230.1549.el
-4.0K -rw-r--r-- 1 root root  445 Nov 27 13:32 packages/helm-css-scss-20191230.1549.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:32 packages/helm-css-scss-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Nov 27 13:32 packages/helm-css-scss-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/emacsorphanage/helm-css-scss.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

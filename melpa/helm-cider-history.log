@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/Kungi/helm-cider-history.git
 
 Updating /mnt/store/melpa/working/helm-cider-history/
-Checking out origin/HEAD
-Checking out c391fcb2e162a02001605a0b9449783575a831fd
-Built helm-cider-history in 5.035s, finished at 2021-11-27T13:32:12+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 1.9K Nov 27 13:32 packages/helm-cider-history-20150719.2120.el
-4.0K -rw-r--r-- 1 root root  443 Nov 27 13:32 packages/helm-cider-history-20150719.2120.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:32 packages/helm-cider-history-badge.svg
-4.0K -rw-r--r-- 1 root root   62 Nov 27 13:32 packages/helm-cider-history-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/Kungi/helm-cider-history.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

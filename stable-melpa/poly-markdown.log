@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/polymode/poly-markdown.git
 
 Updating /mnt/store/melpa/working/poly-markdown/
-Checking out origin/HEAD
-Checking out e79d811d78da668556a694bb840bea3515b4c6f8
-Built poly-markdown in 10.588s, finished at 2021-11-27T14:02:55+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.0K Nov 27 14:02 packages/poly-markdown-20210625.803.el
-4.0K -rw-r--r-- 1 root root  364 Nov 27 14:02 packages/poly-markdown-20210625.803.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:02 packages/poly-markdown-badge.svg
-4.0K -rw-r--r-- 1 root root   70 Nov 27 14:02 packages/poly-markdown-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/polymode/poly-markdown.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

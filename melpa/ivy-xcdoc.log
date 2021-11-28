@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/hex2010/emacs-ivy-xcdoc.git
 
 Updating /mnt/store/melpa/working/ivy-xcdoc/
-Checking out origin/HEAD
-Checking out 5ea22af36c4c2737fb0bec53432c233482d8b314
-Built ivy-xcdoc in 5.361s, finished at 2021-11-27T13:39:24+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.3K Nov 27 13:39 packages/ivy-xcdoc-20160917.1055.el
-4.0K -rw-r--r-- 1 root root  427 Nov 27 13:39 packages/ivy-xcdoc-20160917.1055.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:39 packages/ivy-xcdoc-badge.svg
-4.0K -rw-r--r-- 1 root root  719 Nov 27 13:39 packages/ivy-xcdoc-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+

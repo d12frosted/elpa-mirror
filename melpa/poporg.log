@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/QBobWatson/poporg.git
 
 Updating /mnt/store/melpa/working/poporg/
-Checking out origin/HEAD
-Checking out 2c58d68c81ecca4140bf179f19ed153ec804b65a
-Built poporg in 11.865s, finished at 2021-11-27T14:03:27+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root  32K Nov 27 14:03 packages/poporg-20170403.751.el
-4.0K -rw-r--r-- 1 root root  434 Nov 27 14:03 packages/poporg-20170403.751.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:03 packages/poporg-badge.svg
-4.0K -rw-r--r-- 1 root root  407 Nov 27 14:03 packages/poporg-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/QBobWatson/poporg.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

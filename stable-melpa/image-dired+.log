@@ -3,11 +3,36 @@ Fetcher: github
 Source:  https://github.com/mhayashi1120/Emacs-image-diredx.git
 
 Updating /mnt/store/melpa/working/image-dired+/
-Checking out origin/HEAD
-Checking out b68094625d963056ad64e0e44af0e2266b2eadc7
-Built image-dired+ in 5.577s, finished at 2021-11-27T13:37:29+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root  20K Nov 27 13:37 packages/image-dired+-20150430.544.el
-4.0K -rw-r--r-- 1 root root  404 Nov 27 13:37 packages/image-dired+-20150430.544.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:37 packages/image-dired+-badge.svg
-4.0K -rw-r--r-- 1 root root 1.6K Nov 27 13:37 packages/image-dired+-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: <!DOCTYPE html>
+remote: <!--
+remote: 
+remote: Hello future GitHubber! I bet you're here to remove those nasty inline styles,
+remote: DRY up these templates and make 'em nice and re-usable, right?
+remote: 
+remote: Please, don't. https://github.com/styleguide/templates/2.0
+remote: 
+remote: -->
+remote: <html>
+remote:   <head>
+remote:     <title>Unicorn! &middot; GitHub</title>
+remote:     <style type="text/css" media="screen">
+remote:       body {
+remote:         background-color: #f1f1f1;
+remote:         margin: 0;
+remote:         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+remote:       }
+remote: 
+remote:       .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
+remote: 
+remote:       a { color: #4183c4; text-decoration: none; }
+remote:       a:hover { text-decoration: underline; }
+remote: 
+remote:       h1 { letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px; text-shadow: 0 1px 0 #fff; }
+remote:       p { color: rgba(0, 0, 0, 0.5); margin: 10px 0 10px; font-size: 18px; font-weight: 200; line-height: 1.6em;}
+remote: 
+remote:       ul { list-style: none; margin: 25px 0; padding: 0; }
+remote:       li { display: table-cell; font-weight: bold; width: 1%; }
+fatal: unable to access 'https://github.com/mhayashi1120/Emacs-image-diredx.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

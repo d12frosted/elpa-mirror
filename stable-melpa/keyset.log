@@ -3,11 +3,6 @@ Fetcher: github
 Source:  https://github.com/HKey/keyset.git
 
 Updating /mnt/store/melpa/working/keyset/
-Checking out origin/HEAD
-Checking out 45ce83c4b56f064874256db37e697a63b2c69e65
-Built keyset in 5.298s, finished at 2021-11-27T13:42:08+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.1K Nov 27 13:42 packages/keyset-20150220.530.el
-4.0K -rw-r--r-- 1 root root  350 Nov 27 13:42 packages/keyset-20150220.530.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:42 packages/keyset-badge.svg
-   0 -rw-r--r-- 1 root root    0 Nov 27 13:42 packages/keyset-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: unable to access 'https://github.com/HKey/keyset.git/': The requested URL returned error: 504
+

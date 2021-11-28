@@ -3,11 +3,6 @@ Fetcher: github
 Source:  https://github.com/skuro/plantuml-mode.git
 
 Updating /mnt/store/melpa/working/plantuml-mode/
-Checking out origin/HEAD
-Checking out ea45a13707abd2a70df183f1aec6447197fc9ccc
-Built plantuml-mode in 5.401s, finished at 2021-11-27T14:02:17+0000
- ✓ Success:
- 40K -rw-r--r-- 1 root root  37K Nov 27 14:02 packages/plantuml-mode-20191102.2056.el
-4.0K -rw-r--r-- 1 root root  304 Nov 27 14:02 packages/plantuml-mode-20191102.2056.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:02 packages/plantuml-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  296 Nov 27 14:02 packages/plantuml-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: unable to access 'https://github.com/skuro/plantuml-mode.git/': The requested URL returned error: 504
+

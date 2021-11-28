@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/wpcarro/ivy-clipmenu.el.git
 
 Updating /mnt/store/melpa/working/ivy-clipmenu/
-Checking out origin/HEAD
-Checking out ef25acf3f058fe1ede3a29fae2e9cdac8b08cd17
-Built ivy-clipmenu in 5.678s, finished at 2021-11-27T13:38:58+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.0K Nov 27 13:38 packages/ivy-clipmenu-20200302.1419.el
-4.0K -rw-r--r-- 1 root root  423 Nov 27 13:38 packages/ivy-clipmenu-20200302.1419.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:38 packages/ivy-clipmenu-badge.svg
-4.0K -rw-r--r-- 1 root root 1017 Nov 27 13:38 packages/ivy-clipmenu-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+error: Could not fetch origin
+

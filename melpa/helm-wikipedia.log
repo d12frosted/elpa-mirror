@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm-wikipedia.git
 
 Updating /mnt/store/melpa/working/helm-wikipedia/
-Checking out origin/HEAD
-Checking out c242c74efaeda2ffbafd281ee6bceae1a42507bb
-Built helm-wikipedia in 4.747s, finished at 2021-11-27T13:34:59+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.9K Nov 27 13:34 packages/helm-wikipedia-20210525.717.el
-4.0K -rw-r--r-- 1 root root  239 Nov 27 13:34 packages/helm-wikipedia-20210525.717.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:34 packages/helm-wikipedia-badge.svg
-4.0K -rw-r--r-- 1 root root   41 Nov 27 13:34 packages/helm-wikipedia-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/emacs-helm/helm-wikipedia.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

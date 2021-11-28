@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/tokenrove/goose-theme.git
 
 Updating /mnt/store/melpa/working/goose-theme/
-Checking out origin/HEAD
-Checking out acd017b50ab25a75fd1331eb3de66467e2042e9c
-Built goose-theme in 5.278s, finished at 2021-11-27T13:29:58+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root  10K Nov 27 13:29 packages/goose-theme-20160828.1245.el
-4.0K -rw-r--r-- 1 root root  345 Nov 27 13:29 packages/goose-theme-20160828.1245.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:29 packages/goose-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  161 Nov 27 13:29 packages/goose-theme-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+error: Could not fetch origin
+

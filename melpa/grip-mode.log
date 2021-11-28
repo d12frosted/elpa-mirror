@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/seagle0128/grip-mode.git
 
 Updating /mnt/store/melpa/working/grip-mode/
-Checking out origin/HEAD
-Checking out 1c82e27beec629514a8039e22f4f7c649e77ee2b
-Built grip-mode in 6.622s, finished at 2021-11-27T13:30:37+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.1K Nov 27 13:30 packages/grip-mode-20210818.623.el
-4.0K -rw-r--r-- 1 root root  435 Nov 27 13:30 packages/grip-mode-20210818.623.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:30 packages/grip-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  499 Nov 27 13:30 packages/grip-mode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/seagle0128/grip-mode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

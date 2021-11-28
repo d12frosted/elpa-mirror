@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/r0bobo/kubedoc.el.git
 
 Updating /mnt/store/melpa/working/kubedoc/
-Checking out origin/HEAD
-Checking out 20692189359ce0517726a945c8ab798bb91a8624
-Built kubedoc in 5.449s, finished at 2021-11-27T13:42:35+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Nov 27 13:42 packages/kubedoc-20211005.810.el
-4.0K -rw-r--r-- 1 root root  387 Nov 27 13:42 packages/kubedoc-20211005.810.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:42 packages/kubedoc-badge.svg
-4.0K -rw-r--r-- 1 root root   59 Nov 27 13:42 packages/kubedoc-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/r0bobo/kubedoc.el.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/grab-x-link.git
 
 Updating /mnt/store/melpa/working/grab-x-link/
-Checking out origin/HEAD
-Checking out d898db46e4864118359fdedfe915e180de3fe290
-Built grab-x-link in 4.636s, finished at 2021-11-27T13:30:11+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.6K Nov 27 13:30 packages/grab-x-link-20191113.848.el
-4.0K -rw-r--r-- 1 root root  427 Nov 27 13:30 packages/grab-x-link-20191113.848.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:30 packages/grab-x-link-badge.svg
-4.0K -rw-r--r-- 1 root root  556 Nov 27 13:30 packages/grab-x-link-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/xuchunyang/grab-x-link.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/bomgar/helm-unicode.git
 
 Updating /mnt/store/melpa/working/helm-unicode/
-Checking out origin/HEAD
-Checking out fbeb0c5e741a6f462520884b744d43a9acbe1d34
-Built helm-unicode in 5.497s, finished at 2021-11-27T13:34:54+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.7K Nov 27 13:34 packages/helm-unicode-20180608.1407.el
-4.0K -rw-r--r-- 1 root root  209 Nov 27 13:34 packages/helm-unicode-20180608.1407.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:34 packages/helm-unicode-badge.svg
-4.0K -rw-r--r-- 1 root root   63 Nov 27 13:34 packages/helm-unicode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/bomgar/helm-unicode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

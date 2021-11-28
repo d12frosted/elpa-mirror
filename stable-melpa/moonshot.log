@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/ageldama/moonshot.git
 
 Updating /mnt/store/melpa/working/moonshot/
-Checking out origin/HEAD
-Checking out ec37a12825888047a90d9ee8131aa4bea348edf7
-Built moonshot in 5.225s, finished at 2021-11-27T13:49:51+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root  13K Nov 27 13:49 packages/moonshot-20210627.2244.el
-4.0K -rw-r--r-- 1 root root  652 Nov 27 13:49 packages/moonshot-20210627.2244.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:49 packages/moonshot-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Nov 27 13:49 packages/moonshot-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+

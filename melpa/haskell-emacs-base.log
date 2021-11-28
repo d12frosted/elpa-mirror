@@ -3,21 +3,7 @@ Fetcher: github
 Source:  https://github.com/knupfer/haskell-emacs.git
 
 Updating /mnt/store/melpa/working/haskell-emacs-base/
-Checking out origin/HEAD
-Checking out a2c6a079175904689eed7c6c200754bfa85d1ed9
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/haskell-emacs-base/
-  to /tmp/haskell-emacs-basevL7N10/haskell-emacs-base-20150714.1559
-  ! modules/base/haskell-emacs-base.el -> haskell-emacs-base.el
-  ! modules/base/Base.hs -> Base.hs
-Created haskell-emacs-base-20150714.1559.tar containing:
-  haskell-emacs-base-20150714.1559/
-  haskell-emacs-base-20150714.1559/Base.hs
-  haskell-emacs-base-20150714.1559/haskell-emacs-base-pkg.el
-  haskell-emacs-base-20150714.1559/haskell-emacs-base.el
-Built haskell-emacs-base in 5.680s, finished at 2021-11-27T13:31:27+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  402 Nov 27 13:31 packages/haskell-emacs-base-20150714.1559.entry
- 20K -rw-r--r-- 1 root root  20K Nov 27 13:31 packages/haskell-emacs-base-20150714.1559.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:31 packages/haskell-emacs-base-badge.svg
-4.0K -rw-r--r-- 1 root root  542 Nov 27 13:31 packages/haskell-emacs-base-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/knupfer/haskell-emacs.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

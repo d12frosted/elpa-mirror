@@ -3,41 +3,9 @@ Fetcher: github
 Source:  https://github.com/polymode/polymode.git
 
 Updating /mnt/store/melpa/working/polymode/
-Checking out origin/HEAD
-Checking out 47a7b6541a1e1cea9c22052fa202b7fdb715f03b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/polymode/
-  to /tmp/polymodegol7zR/polymode-20211124.913
-    poly-lock.el -> poly-lock.el
-    polymode-base.el -> polymode-base.el
-    polymode-classes.el -> polymode-classes.el
-    polymode-compat.el -> polymode-compat.el
-    polymode-core.el -> polymode-core.el
-    polymode-debug.el -> polymode-debug.el
-    polymode-export.el -> polymode-export.el
-    polymode-methods.el -> polymode-methods.el
-    polymode-tangle.el -> polymode-tangle.el
-    polymode-test-utils.el -> polymode-test-utils.el
-    polymode-weave.el -> polymode-weave.el
-    polymode.el -> polymode.el
-Created polymode-20211124.913.tar containing:
-  polymode-20211124.913/
-  polymode-20211124.913/poly-lock.el
-  polymode-20211124.913/polymode-base.el
-  polymode-20211124.913/polymode-classes.el
-  polymode-20211124.913/polymode-compat.el
-  polymode-20211124.913/polymode-core.el
-  polymode-20211124.913/polymode-debug.el
-  polymode-20211124.913/polymode-export.el
-  polymode-20211124.913/polymode-methods.el
-  polymode-20211124.913/polymode-pkg.el
-  polymode-20211124.913/polymode-tangle.el
-  polymode-20211124.913/polymode-test-utils.el
-  polymode-20211124.913/polymode-weave.el
-  polymode-20211124.913/polymode.el
-Built polymode in 9.170s, finished at 2021-11-27T14:03:10+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  358 Nov 27 14:03 packages/polymode-20211124.913.entry
-300K -rw-r--r-- 1 root root 300K Nov 27 14:03 packages/polymode-20211124.913.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:03 packages/polymode-badge.svg
-4.0K -rw-r--r-- 1 root root  117 Nov 27 14:03 packages/polymode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/polymode/polymode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

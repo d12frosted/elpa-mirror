@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-haskell.git
 
 Updating /mnt/store/melpa/working/lsp-haskell/
-Checking out origin/HEAD
-Checking out 4e62cf897dd9e9fcef25c6e8e483490a07a5d439
-Built lsp-haskell in 5.594s, finished at 2021-11-27T13:45:13+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root  11K Nov 27 13:45 packages/lsp-haskell-20210813.1040.el
-4.0K -rw-r--r-- 1 root root  323 Nov 27 13:45 packages/lsp-haskell-20210813.1040.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:45 packages/lsp-haskell-badge.svg
-4.0K -rw-r--r-- 1 root root   38 Nov 27 13:45 packages/lsp-haskell-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/emacs-lsp/lsp-haskell.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+

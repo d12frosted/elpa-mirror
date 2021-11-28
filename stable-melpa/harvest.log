@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/kostajh/harvest.el.git
 
 Updating /mnt/store/melpa/working/harvest/
-Checking out origin/HEAD
-Checking out 7acbc0564b250521b67131ee2a0a92720239454f
-Built harvest in 6.299s, finished at 2021-11-27T13:31:25+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Nov 27 13:31 packages/harvest-20170822.1746.el
-4.0K -rw-r--r-- 1 root root  400 Nov 27 13:31 packages/harvest-20170822.1746.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:31 packages/harvest-badge.svg
-4.0K -rw-r--r-- 1 root root  264 Nov 27 13:31 packages/harvest-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/kostajh/harvest.el.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

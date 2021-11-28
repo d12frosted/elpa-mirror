@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/purcell/emacs-hcl-mode.git
 
 Updating /mnt/store/melpa/working/hcl-mode/
-Checking out origin/HEAD
-Checking out e4d9eef631e8a386341ae8f94f7c2579586e65b5
-Built hcl-mode in 5.452s, finished at 2021-11-27T13:31:41+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 8.0K Nov 27 13:31 packages/hcl-mode-20200315.2129.el
-4.0K -rw-r--r-- 1 root root  339 Nov 27 13:31 packages/hcl-mode-20200315.2129.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:31 packages/hcl-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   44 Nov 27 13:31 packages/hcl-mode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/purcell/emacs-hcl-mode.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

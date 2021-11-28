@@ -3,23 +3,7 @@ Fetcher: github
 Source:  https://github.com/victorhge/iedit.git
 
 Updating /mnt/store/melpa/working/iedit/
-Checking out origin/HEAD
-Checking out 012de2e8d8519e850a790f8a2c71a5b08358c29c
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/iedit/
-  to /tmp/ieditTdesNG/iedit-20211116.11
-    iedit-lib.el -> iedit-lib.el
-    iedit-rect.el -> iedit-rect.el
-    iedit.el -> iedit.el
-Created iedit-20211116.11.tar containing:
-  iedit-20211116.11/
-  iedit-20211116.11/iedit-lib.el
-  iedit-20211116.11/iedit-pkg.el
-  iedit-20211116.11/iedit-rect.el
-  iedit-20211116.11/iedit.el
-Built iedit in 4.787s, finished at 2021-11-27T13:37:21+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  377 Nov 27 13:37 packages/iedit-20211116.11.entry
-100K -rw-r--r-- 1 root root 100K Nov 27 13:37 packages/iedit-20211116.11.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:37 packages/iedit-badge.svg
-4.0K -rw-r--r-- 1 root root 2.8K Nov 27 13:37 packages/iedit-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/victorhge/iedit.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

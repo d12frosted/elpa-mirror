@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/DamienCassou/vdirel.git
 
 Updating /mnt/store/melpa/working/vdirel/
-Checking out origin/HEAD
-Checking out dccc51bf68ad3f0066a462b354ec395229bd6a7f
-Built vdirel in 4.894s, finished at 2021-11-27T14:20:51+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.8K Nov 27 14:20 packages/vdirel-20210813.754.el
-4.0K -rw-r--r-- 1 root root  398 Nov 27 14:20 packages/vdirel-20210813.754.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:20 packages/vdirel-badge.svg
-4.0K -rw-r--r-- 1 root root   54 Nov 27 14:20 packages/vdirel-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/DamienCassou/vdirel.git/': The requested URL returned error: 500
+

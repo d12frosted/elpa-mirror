@@ -3,33 +3,9 @@ Fetcher: github
 Source:  https://github.com/greduan/emacs-theme-gruvbox.git
 
 Updating /mnt/store/melpa/working/gruvbox-theme/
-Checking out origin/HEAD
-Checking out b9e661e2e141ef1a9e82b57f3b277090474a9b4d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/gruvbox-theme/
-  to /tmp/gruvbox-theme7hnI51/gruvbox-theme-20211022.318
-    gruvbox-dark-hard-theme.el -> gruvbox-dark-hard-theme.el
-    gruvbox-dark-medium-theme.el -> gruvbox-dark-medium-theme.el
-    gruvbox-dark-soft-theme.el -> gruvbox-dark-soft-theme.el
-    gruvbox-light-hard-theme.el -> gruvbox-light-hard-theme.el
-    gruvbox-light-medium-theme.el -> gruvbox-light-medium-theme.el
-    gruvbox-light-soft-theme.el -> gruvbox-light-soft-theme.el
-    gruvbox-theme.el -> gruvbox-theme.el
-    gruvbox.el -> gruvbox.el
-Created gruvbox-theme-20211022.318.tar containing:
-  gruvbox-theme-20211022.318/
-  gruvbox-theme-20211022.318/gruvbox-dark-hard-theme.el
-  gruvbox-theme-20211022.318/gruvbox-dark-medium-theme.el
-  gruvbox-theme-20211022.318/gruvbox-dark-soft-theme.el
-  gruvbox-theme-20211022.318/gruvbox-light-hard-theme.el
-  gruvbox-theme-20211022.318/gruvbox-light-medium-theme.el
-  gruvbox-theme-20211022.318/gruvbox-light-soft-theme.el
-  gruvbox-theme-20211022.318/gruvbox-theme-pkg.el
-  gruvbox-theme-20211022.318/gruvbox-theme.el
-  gruvbox-theme-20211022.318/gruvbox.el
-Built gruvbox-theme in 4.591s, finished at 2021-11-27T13:30:44+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  350 Nov 27 13:30 packages/gruvbox-theme-20211022.318.entry
-112K -rw-r--r-- 1 root root 110K Nov 27 13:30 packages/gruvbox-theme-20211022.318.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:30 packages/gruvbox-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  600 Nov 27 13:30 packages/gruvbox-theme-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/greduan/emacs-theme-gruvbox.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

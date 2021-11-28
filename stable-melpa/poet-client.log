@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/wailo/emacs-poet.git
 
 Updating /mnt/store/melpa/working/poet-client/
-Checking out origin/HEAD
-Checking out 32382057b3e4b8a02ec5ac3190dbe4b93d058741
-Built poet-client in 5.240s, finished at 2021-11-27T14:02:40+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root  13K Nov 27 14:02 packages/poet-client-20190124.654.el
-4.0K -rw-r--r-- 1 root root  322 Nov 27 14:02 packages/poet-client-20190124.654.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:02 packages/poet-client-badge.svg
-4.0K -rw-r--r-- 1 root root  190 Nov 27 14:02 packages/poet-client-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/wailo/emacs-poet.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

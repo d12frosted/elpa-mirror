@@ -3,16 +3,9 @@ Fetcher: github
 Source:  https://github.com/rmuslimov/jenkins.el.git
 
 Updating /mnt/store/melpa/working/jenkins/
-Checking out origin/HEAD
-Checking out bd06cdc57c0cb9217d773eeba06ecc998f10033b
-Built jenkins in 10.950s, finished at 2021-11-27T13:40:20+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root  19K Nov 27 13:40 packages/jenkins-20200524.2016.el
-4.0K -rw-r--r-- 1 root root  378 Nov 27 13:40 packages/jenkins-20200524.2016.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:40 packages/jenkins-badge.svg
-4.0K -rw-r--r-- 1 root root  323 Nov 27 13:40 packages/jenkins-readme.txt
- 12K -rw-r--r-- 1 root root 9.5K Nov 27 10:07 packages/jenkins-watch-20121004.2326.el
-4.0K -rw-r--r-- 1 root root  333 Nov 27 10:07 packages/jenkins-watch-20121004.2326.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 10:07 packages/jenkins-watch-badge.svg
-4.0K -rw-r--r-- 1 root root   90 Nov 27 10:07 packages/jenkins-watch-readme.txt
-4.0K -rw-r--r-- 1 root root  225 Nov 27 13:40 packages/jenkins-watch.log
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/rmuslimov/jenkins.el.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

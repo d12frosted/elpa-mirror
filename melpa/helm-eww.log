@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm-eww.git
 
 Updating /mnt/store/melpa/working/helm-eww/
-Checking out origin/HEAD
-Checking out 76ba59fda8dd6f32a1bc7c6df0b43c6f76169911
-Built helm-eww in 5.313s, finished at 2021-11-27T13:32:35+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root  15K Nov 27 13:32 packages/helm-eww-20190315.907.el
-4.0K -rw-r--r-- 1 root root  423 Nov 27 13:32 packages/helm-eww-20190315.907.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:32 packages/helm-eww-badge.svg
-4.0K -rw-r--r-- 1 root root   47 Nov 27 13:32 packages/helm-eww-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/emacs-helm/helm-eww.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm-switch-to-repl.git
 
 Updating /mnt/store/melpa/working/helm-switch-to-repl/
-Checking out origin/HEAD
-Checking out f0e732e7217fc0373b0805245fa15920cf676619
-Built helm-switch-to-repl in 5.165s, finished at 2021-11-27T13:34:47+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Nov 27 13:34 packages/helm-switch-to-repl-20210206.844.el
-4.0K -rw-r--r-- 1 root root  422 Nov 27 13:34 packages/helm-switch-to-repl-20210206.844.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:34 packages/helm-switch-to-repl-badge.svg
-4.0K -rw-r--r-- 1 root root  467 Nov 27 13:34 packages/helm-switch-to-repl-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/emacs-helm/helm-switch-to-repl.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

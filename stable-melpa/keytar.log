@@ -3,11 +3,6 @@ Fetcher: github
 Source:  https://github.com/emacs-grammarly/keytar.git
 
 Updating /mnt/store/melpa/working/keytar/
-Checking out origin/HEAD
-Checking out 584395339f85a95ffe3ade3f4e30898bad495ecd
-Built keytar in 5.282s, finished at 2021-11-27T13:42:10+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.6K Nov 27 13:42 packages/keytar-20210523.403.el
-4.0K -rw-r--r-- 1 root root  336 Nov 27 13:42 packages/keytar-20210523.403.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:42 packages/keytar-badge.svg
-4.0K -rw-r--r-- 1 root root  135 Nov 27 13:42 packages/keytar-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: unable to access 'https://github.com/emacs-grammarly/keytar.git/': The requested URL returned error: 504
+

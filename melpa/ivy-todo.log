@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/Kungsgeten/ivy-todo.git
 
 Updating /mnt/store/melpa/working/ivy-todo/
-Checking out origin/HEAD
-Checking out d74501cd334b7d709659946c5e02b21cfd5507de
-Built ivy-todo in 6.057s, finished at 2021-11-27T13:39:24+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 9.3K Nov 27 13:39 packages/ivy-todo-20200323.2005.el
-4.0K -rw-r--r-- 1 root root  412 Nov 27 13:39 packages/ivy-todo-20200323.2005.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:39 packages/ivy-todo-badge.svg
-4.0K -rw-r--r-- 1 root root  290 Nov 27 13:39 packages/ivy-todo-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/Kungsgeten/ivy-todo.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

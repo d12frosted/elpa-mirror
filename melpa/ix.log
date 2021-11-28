@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/theanalyst/ix.el.git
 
 Updating /mnt/store/melpa/working/ix/
-Checking out origin/HEAD
-Checking out aea4c54a5cc5a6f26637353c16a3a0e70fc76963
-Built ix in 5.941s, finished at 2021-11-27T13:39:32+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.5K Nov 27 13:39 packages/ix-20131027.1629.el
-4.0K -rw-r--r-- 1 root root  362 Nov 27 13:39 packages/ix-20131027.1629.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:39 packages/ix-badge.svg
-4.0K -rw-r--r-- 1 root root  965 Nov 27 13:39 packages/ix-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/theanalyst/ix.el.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

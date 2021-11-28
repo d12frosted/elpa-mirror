@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/tumashu/helm-posframe.git
 
 Updating /mnt/store/melpa/working/helm-posframe/
-Checking out origin/HEAD
-Checking out 87461b52b6f3f378c63642a33f584d4a4ba28351
-Built helm-posframe in 4.972s, finished at 2021-11-27T13:33:50+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.9K Nov 27 13:33 packages/helm-posframe-20211103.236.el
-4.0K -rw-r--r-- 1 root root  407 Nov 27 13:33 packages/helm-posframe-20211103.236.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:33 packages/helm-posframe-badge.svg
-4.0K -rw-r--r-- 1 root root  776 Nov 27 13:33 packages/helm-posframe-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+error: Could not fetch origin
+

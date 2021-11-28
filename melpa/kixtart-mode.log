@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/ryrun/kixtart-mode.git
 
 Updating /mnt/store/melpa/working/kixtart-mode/
-Checking out origin/HEAD
-Checking out 1c2356797e7b766bbaaa2b341176a8b10499cd79
-Built kixtart-mode in 4.997s, finished at 2021-11-27T13:42:23+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.0K Nov 27 13:42 packages/kixtart-mode-20150611.1604.el
-4.0K -rw-r--r-- 1 root root  370 Nov 27 13:42 packages/kixtart-mode-20150611.1604.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:42 packages/kixtart-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  133 Nov 27 13:42 packages/kixtart-mode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+error: Could not fetch origin
+

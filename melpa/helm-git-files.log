@@ -3,10 +3,7 @@ Fetcher: github
 Source:  https://github.com/kenbeese/helm-git-files.git
 
 Updating /mnt/store/melpa/working/helm-git-files/
-Checking out origin/HEAD
-Checking out 43193960774069369ac6964bbf7c026900206fa8
-Built helm-git-files in 4.960s, finished at 2021-11-27T13:32:55+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Nov 27 13:32 packages/helm-git-files-20141212.1317.el
-4.0K -rw-r--r-- 1 root root  353 Nov 27 13:32 packages/helm-git-files-20141212.1317.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:32 packages/helm-git-files-badge.svg
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/kenbeese/helm-git-files.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

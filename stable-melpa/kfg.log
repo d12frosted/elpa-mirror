@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/czipperz/kfg.git
 
 Updating /mnt/store/melpa/working/kfg/
-Checking out origin/HEAD
-Checking out d2c9dd26618fb2f7bf1e7b6eae193b1cceba3c97
-Built kfg in 4.826s, finished at 2021-11-27T13:42:13+0000
- ✓ Success:
-8.0K -rwxr-xr-x 1 root root 4.9K Nov 27 13:42 packages/kfg-20140909.538.el
-4.0K -rw-r--r-- 1 root root  344 Nov 27 13:42 packages/kfg-20140909.538.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:42 packages/kfg-badge.svg
-4.0K -rw-r--r-- 1 root root  540 Nov 27 13:42 packages/kfg-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+

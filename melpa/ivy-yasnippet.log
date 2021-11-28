@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/mkcms/ivy-yasnippet.git
 
 Updating /mnt/store/melpa/working/ivy-yasnippet/
-Checking out origin/HEAD
-Checking out 83402d91b4eba5307f71884a72df8e11cc6a994e
-Built ivy-yasnippet in 5.782s, finished at 2021-11-27T13:39:29+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.9K Nov 27 13:39 packages/ivy-yasnippet-20200704.700.el
-4.0K -rw-r--r-- 1 root root  466 Nov 27 13:39 packages/ivy-yasnippet-20200704.700.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:39 packages/ivy-yasnippet-badge.svg
-4.0K -rw-r--r-- 1 root root  278 Nov 27 13:39 packages/ivy-yasnippet-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/mkcms/ivy-yasnippet.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

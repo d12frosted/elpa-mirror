@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/rbanffy/green-screen-emacs.git
 
 Updating /mnt/store/melpa/working/green-screen-theme/
-Checking out origin/HEAD
-Checking out 774e8f6c033786406267f71ec07319d906a30b75
-Built green-screen-theme in 6.941s, finished at 2021-11-27T13:30:33+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.8K Nov 27 13:30 packages/green-screen-theme-20180816.1502.el
-4.0K -rw-r--r-- 1 root root  411 Nov 27 13:30 packages/green-screen-theme-20180816.1502.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:30 packages/green-screen-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  551 Nov 27 13:30 packages/green-screen-theme-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/rbanffy/green-screen-emacs.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

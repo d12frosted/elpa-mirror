@@ -3,22 +3,36 @@ Fetcher: github
 Source:  https://github.com/Groovy-Emacs-Modes/groovy-emacs-modes.git
 
 Updating /mnt/store/melpa/working/groovy-mode/
-Checking out origin/HEAD
-Checking out 84f89b68ec8f79bce0b3f5b29af155a85124e3a6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/groovy-mode/
-  to /tmp/groovy-modeNoSRFy/groovy-mode-20210831.1601
-    groovy-electric.el -> groovy-electric.el
-    groovy-mode.el -> groovy-mode.el
-    inf-groovy.el -> inf-groovy.el
-Created groovy-mode-20210831.1601.tar containing:
-  groovy-mode-20210831.1601/
-  groovy-mode-20210831.1601/groovy-electric.el
-  groovy-mode-20210831.1601/groovy-mode-pkg.el
-  groovy-mode-20210831.1601/groovy-mode.el
-  groovy-mode-20210831.1601/inf-groovy.el
-Built groovy-mode in 5.946s, finished at 2021-11-27T13:30:38+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  468 Nov 27 13:30 packages/groovy-mode-20210831.1601.entry
- 72K -rw-r--r-- 1 root root  70K Nov 27 13:30 packages/groovy-mode-20210831.1601.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:30 packages/groovy-mode-badge.svg
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: <!DOCTYPE html>
+remote: <!--
+remote: 
+remote: Hello future GitHubber! I bet you're here to remove those nasty inline styles,
+remote: DRY up these templates and make 'em nice and re-usable, right?
+remote: 
+remote: Please, don't. https://github.com/styleguide/templates/2.0
+remote: 
+remote: -->
+remote: <html>
+remote:   <head>
+remote:     <title>Unicorn! &middot; GitHub</title>
+remote:     <style type="text/css" media="screen">
+remote:       body {
+remote:         background-color: #f1f1f1;
+remote:         margin: 0;
+remote:         font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+remote:       }
+remote: 
+remote:       .container { margin: 50px auto 40px auto; width: 600px; text-align: center; }
+remote: 
+remote:       a { color: #4183c4; text-decoration: none; }
+remote:       a:hover { text-decoration: underline; }
+remote: 
+remote:       h1 { letter-spacing: -1px; line-height: 60px; font-size: 60px; font-weight: 100; margin: 0px; text-shadow: 0 1px 0 #fff; }
+remote:       p { color: rgba(0, 0, 0, 0.5); margin: 10px 0 10px; font-size: 18px; font-weight: 200; line-height: 1.6em;}
+remote: 
+remote:       ul { list-style: none; margin: 25px 0; padding: 0; }
+remote:       li { display: table-cell; font-weight: bold; width: 1%; }
+fatal: unable to access 'https://github.com/Groovy-Emacs-Modes/groovy-emacs-modes.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

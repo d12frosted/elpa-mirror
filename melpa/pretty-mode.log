@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/pretty-mode/pretty-mode.git
 
 Updating /mnt/store/melpa/working/pretty-mode/
-Checking out origin/HEAD
-Checking out 5154355e90fdd70d3647257280a89eeb725ef084
-Built pretty-mode in 5.415s, finished at 2021-11-27T14:04:01+0000
- ✓ Success:
- 36K -rw-r--r-- 1 root root  35K Nov 27 14:04 packages/pretty-mode-20190615.2045.el
-4.0K -rw-r--r-- 1 root root  422 Nov 27 14:04 packages/pretty-mode-20190615.2045.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:04 packages/pretty-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  377 Nov 27 14:04 packages/pretty-mode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/pretty-mode/pretty-mode.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

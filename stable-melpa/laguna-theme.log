@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/HenryNewcomer/laguna-theme.git
 
 Updating /mnt/store/melpa/working/laguna-theme/
-Checking out origin/HEAD
-Checking out 61b18f6362b94e42ea5ab19a6f2debc2bd917eda
-Built laguna-theme in 4.817s, finished at 2021-11-27T13:42:50+0000
- ✓ Success:
- 56K -rw-r--r-- 1 root root  54K Nov 27 13:42 packages/laguna-theme-20200928.2159.el
-4.0K -rw-r--r-- 1 root root  370 Nov 27 13:42 packages/laguna-theme-20200928.2159.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:42 packages/laguna-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  989 Nov 27 13:42 packages/laguna-theme-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/HenryNewcomer/laguna-theme.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

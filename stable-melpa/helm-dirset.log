@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/k1LoW/helm-dirset.git
 
 Updating /mnt/store/melpa/working/helm-dirset/
-Checking out origin/HEAD
-Checking out eb30810cd26e1ee73d84a863e6b2667700e9aead
-Built helm-dirset in 5.496s, finished at 2021-11-27T13:32:27+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.7K Nov 27 13:32 packages/helm-dirset-20151209.12.el
-4.0K -rw-r--r-- 1 root root  560 Nov 27 13:32 packages/helm-dirset-20151209.12.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:32 packages/helm-dirset-badge.svg
-   0 -rw-r--r-- 1 root root    0 Nov 27 13:32 packages/helm-dirset-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/k1LoW/helm-dirset.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

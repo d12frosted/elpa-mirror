@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/masasam/emacs-helm-tramp.git
 
 Updating /mnt/store/melpa/working/helm-tramp/
-Checking out origin/HEAD
-Checking out 55e56975fe1456591a293bf60c183c3dda9f788f
-Built helm-tramp in 5.719s, finished at 2021-11-27T13:34:54+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.3K Nov 27 13:34 packages/helm-tramp-20190616.125.el
-4.0K -rw-r--r-- 1 root root  371 Nov 27 13:34 packages/helm-tramp-20190616.125.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:34 packages/helm-tramp-badge.svg
-4.0K -rw-r--r-- 1 root root  247 Nov 27 13:34 packages/helm-tramp-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/masasam/emacs-helm-tramp.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

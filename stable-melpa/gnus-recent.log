@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/unhammer/gnus-recent.git
 
 Updating /mnt/store/melpa/working/gnus-recent/
-Checking out origin/HEAD
-Checking out dfa0e687601e78d6be82530413cb00edb1a39889
-Built gnus-recent in 5.070s, finished at 2021-11-27T13:29:12+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root  15K Nov 27 13:29 packages/gnus-recent-20210920.902.el
-4.0K -rw-r--r-- 1 root root  415 Nov 27 13:29 packages/gnus-recent-20210920.902.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:29 packages/gnus-recent-badge.svg
-4.0K -rw-r--r-- 1 root root  417 Nov 27 13:29 packages/gnus-recent-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+

@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/krzysztof-magosa/haxor-mode.git
 
 Updating /mnt/store/melpa/working/haxor-mode/
-Checking out origin/HEAD
-Checking out 6fa25a8e6b6a59481bc0354c2fe1e0ed53cbdc91
-Built haxor-mode in 5.577s, finished at 2021-11-27T13:31:39+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.7K Nov 27 13:31 packages/haxor-mode-20160618.1129.el
-4.0K -rw-r--r-- 1 root root  418 Nov 27 13:31 packages/haxor-mode-20160618.1129.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:31 packages/haxor-mode-badge.svg
-   0 -rw-r--r-- 1 root root    0 Nov 27 13:31 packages/haxor-mode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/krzysztof-magosa/haxor-mode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

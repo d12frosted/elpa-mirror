@@ -3,21 +3,7 @@ Fetcher: github
 Source:  https://github.com/tumashu/posframe.git
 
 Updating /mnt/store/melpa/working/posframe/
-Checking out origin/HEAD
-Checking out 3b1dc400d286b0a4bd42e518bf3e7eedb49fd1e6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/posframe/
-  to /tmp/posframeWLcjU9/posframe-20211126.944
-    posframe-benchmark.el -> posframe-benchmark.el
-    posframe.el -> posframe.el
-Created posframe-20211126.944.tar containing:
-  posframe-20211126.944/
-  posframe-20211126.944/posframe-benchmark.el
-  posframe-20211126.944/posframe-pkg.el
-  posframe-20211126.944/posframe.el
-Built posframe in 4.726s, finished at 2021-11-27T14:03:40+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  368 Nov 27 14:03 packages/posframe-20211126.944.entry
- 72K -rw-r--r-- 1 root root  70K Nov 27 14:03 packages/posframe-20211126.944.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:03 packages/posframe-badge.svg
-4.0K -rw-r--r-- 1 root root  307 Nov 27 14:03 packages/posframe-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/tumashu/posframe.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/prettier/prettier-emacs.git
 
 Updating /mnt/store/melpa/working/prettier-js/
-Checking out origin/HEAD
-Checking out e9b73e81d3e1642aec682195f127a42dfb0b5774
-Built prettier-js in 4.419s, finished at 2021-11-27T14:03:55+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.7K Nov 27 14:03 packages/prettier-js-20180109.726.el
-4.0K -rw-r--r-- 1 root root  383 Nov 27 14:03 packages/prettier-js-20180109.726.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:03 packages/prettier-js-badge.svg
-4.0K -rw-r--r-- 1 root root   60 Nov 27 14:03 packages/prettier-js-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/prettier/prettier-emacs.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

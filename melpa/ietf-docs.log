@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/choppsv1/ietf-docs.git
 
 Updating /mnt/store/melpa/working/ietf-docs/
-Checking out origin/HEAD
-Checking out ae157549eae5ec78dcbf215c2f48cb662b73abd0
-Built ietf-docs in 5.366s, finished at 2021-11-27T13:37:24+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 5.4K Nov 27 13:37 packages/ietf-docs-20190420.851.el
-4.0K -rw-r--r-- 1 root root  368 Nov 27 13:37 packages/ietf-docs-20190420.851.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:37 packages/ietf-docs-badge.svg
-4.0K -rw-r--r-- 1 root root  107 Nov 27 13:37 packages/ietf-docs-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/choppsv1/ietf-docs.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

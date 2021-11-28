@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/abrochard/kubel.git
 
 Updating /mnt/store/melpa/working/kubel-evil/
-Checking out origin/HEAD
-Checking out 4f1e4f4bb591d1870ff9453f1f2c8992e0044b89
-Built kubel-evil in 5.794s, finished at 2021-11-27T13:42:38+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Nov 27 13:42 packages/kubel-evil-20210922.2325.el
-4.0K -rw-r--r-- 1 root root  469 Nov 27 13:42 packages/kubel-evil-20210922.2325.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:42 packages/kubel-evil-badge.svg
-4.0K -rw-r--r-- 1 root root   61 Nov 27 13:42 packages/kubel-evil-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/abrochard/kubel.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

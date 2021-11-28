@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/benma/hayoo.el.git
 
 Updating /mnt/store/melpa/working/hayoo/
-Checking out origin/HEAD
-Checking out 3ca2fb0c4d5f337d0410c21b2702dd147014e984
-Built hayoo in 5.239s, finished at 2021-11-27T13:31:40+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.9K Nov 27 13:31 packages/hayoo-20140831.1221.el
-4.0K -rw-r--r-- 1 root root  380 Nov 27 13:31 packages/hayoo-20140831.1221.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:31 packages/hayoo-badge.svg
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/benma/hayoo.el.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

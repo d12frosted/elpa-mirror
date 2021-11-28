@@ -3,24 +3,7 @@ Fetcher: github
 Source:  https://github.com/jsinglet/latex-preview-pane.git
 
 Updating /mnt/store/melpa/working/latex-preview-pane/
-Checking out origin/HEAD
-Checking out 5297668a89996b50b2b62f99cba01cc544dbed2e
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/latex-preview-pane/
-  to /tmp/latex-preview-panepMJr3G/latex-preview-pane-20181008.1822
-    latex-preview-pane-pkg.el -> latex-preview-pane-pkg.el
-    latex-preview-pane.el -> latex-preview-pane.el
-    message-latex-preview-pane-welcome.txt -> message-latex-preview-pane-welcome.txt
-    message-no-preview-yet.txt -> message-no-preview-yet.txt
-Created latex-preview-pane-20181008.1822.tar containing:
-  latex-preview-pane-20181008.1822/
-  latex-preview-pane-20181008.1822/latex-preview-pane-pkg.el
-  latex-preview-pane-20181008.1822/latex-preview-pane.el
-  latex-preview-pane-20181008.1822/message-latex-preview-pane-welcome.txt
-  latex-preview-pane-20181008.1822/message-no-preview-yet.txt
-Built latex-preview-pane in 4.955s, finished at 2021-11-27T13:43:05+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  442 Nov 27 13:43 packages/latex-preview-pane-20181008.1822.entry
- 32K -rw-r--r-- 1 root root  30K Nov 27 13:43 packages/latex-preview-pane-20181008.1822.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:43 packages/latex-preview-pane-badge.svg
-4.0K -rw-r--r-- 1 root root  644 Nov 27 13:43 packages/latex-preview-pane-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/jsinglet/latex-preview-pane.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

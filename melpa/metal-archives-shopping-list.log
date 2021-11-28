@@ -3,11 +3,6 @@ Fetcher: github
 Source:  https://github.com/seblemaguer/metal-archives.el.git
 
 Updating /mnt/store/melpa/working/metal-archives-shopping-list/
-Checking out origin/HEAD
-Checking out a218d63b990365edeef6a2394f72d1f2286aeeae
-Built metal-archives-shopping-list in 6.270s, finished at 2021-11-27T13:48:31+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.1K Nov 27 13:48 packages/metal-archives-shopping-list-20201229.949.el
-4.0K -rw-r--r-- 1 root root  556 Nov 27 13:48 packages/metal-archives-shopping-list-20201229.949.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:48 packages/metal-archives-shopping-list-badge.svg
-4.0K -rw-r--r-- 1 root root  111 Nov 27 13:48 packages/metal-archives-shopping-list-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: unable to access 'https://github.com/seblemaguer/metal-archives.el.git/': gnutls_handshake() failed: Error in the pull function.
+

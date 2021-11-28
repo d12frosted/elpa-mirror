@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/ocaml-ppx/ocamlformat.git
 
 Updating /mnt/store/melpa/working/ocamlformat/
-Checking out origin/HEAD
-Checking out d3e7b5b99786a9670e0e90ed2ebb13a5c5778993
-Built ocamlformat in 6.917s, finished at 2021-11-27T13:54:41+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root  17K Nov 27 13:54 packages/ocamlformat-20210923.1348.el
-4.0K -rw-r--r-- 1 root root  285 Nov 27 13:54 packages/ocamlformat-20210923.1348.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:54 packages/ocamlformat-badge.svg
-4.0K -rw-r--r-- 1 root root  200 Nov 27 13:54 packages/ocamlformat-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+

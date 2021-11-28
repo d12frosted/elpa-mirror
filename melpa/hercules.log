@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/wurosh/hercules.git
 
 Updating /mnt/store/melpa/working/hercules/
-Checking out origin/HEAD
-Checking out 557da39878d0637395fdded91243b340c37eff7b
-Built hercules in 5.284s, finished at 2021-11-27T13:35:09+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.3K Nov 27 13:35 packages/hercules-20200420.747.el
-4.0K -rw-r--r-- 1 root root  371 Nov 27 13:35 packages/hercules-20200420.747.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:35 packages/hercules-badge.svg
-4.0K -rw-r--r-- 1 root root  321 Nov 27 13:35 packages/hercules-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/wurosh/hercules.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

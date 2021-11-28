@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/stardiviner/smiles-mode.git
 
 Updating /mnt/store/melpa/working/smiles-mode/
-Checking out origin/HEAD
-Checking out fbb381758adcb000a0c304be1b797f985f00e2de
-Built smiles-mode in 5.332s, finished at 2021-11-27T14:12:37+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 1.7K Nov 27 14:12 packages/smiles-mode-20160717.1120.el
-4.0K -rw-r--r-- 1 root root  315 Nov 27 14:12 packages/smiles-mode-20160717.1120.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:12 packages/smiles-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   97 Nov 27 14:12 packages/smiles-mode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+

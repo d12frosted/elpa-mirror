@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/carldotac/kdeconnect.el.git
 
 Updating /mnt/store/melpa/working/kdeconnect/
-Checking out origin/HEAD
-Checking out 4977af8cb5fdc21da770f3ee43ad7823f2937da3
-Built kdeconnect in 5.783s, finished at 2021-11-27T13:41:44+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Nov 27 13:41 packages/kdeconnect-20210519.2016.el
-4.0K -rw-r--r-- 1 root root  306 Nov 27 13:41 packages/kdeconnect-20210519.2016.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:41 packages/kdeconnect-badge.svg
-4.0K -rw-r--r-- 1 root root  321 Nov 27 13:41 packages/kdeconnect-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/carldotac/kdeconnect.el.git/': gnutls_handshake() failed: The TLS connection was non-properly terminated.
+error: Could not fetch origin
+

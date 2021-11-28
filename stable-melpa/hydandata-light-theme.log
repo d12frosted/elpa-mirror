@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/chkhd/hydandata-light-theme.git
 
 Updating /mnt/store/melpa/working/hydandata-light-theme/
-Checking out origin/HEAD
-Checking out 180c3797fa7ef3e4bb679baaf5b492c33bbb9b8b
-Built hydandata-light-theme in 5.203s, finished at 2021-11-27T13:36:36+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.7K Nov 27 13:36 packages/hydandata-light-theme-20190809.1925.el
-4.0K -rw-r--r-- 1 root root  395 Nov 27 13:36 packages/hydandata-light-theme-20190809.1925.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:36 packages/hydandata-light-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  152 Nov 27 13:36 packages/hydandata-light-theme-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/chkhd/hydandata-light-theme.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

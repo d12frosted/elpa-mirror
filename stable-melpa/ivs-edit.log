@@ -3,23 +3,7 @@ Fetcher: github
 Source:  https://github.com/kawabata/ivs-edit.git
 
 Updating /mnt/store/melpa/working/ivs-edit/
-Checking out origin/HEAD
-Checking out 5db39c234aa7393b591168a4fd0a9a4cbbca347d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/ivs-edit/
-  to /tmp/ivs-editukY9ol/ivs-edit-20170818.1441
-    ivs-edit.el -> ivs-edit.el
-    IVD_Sequences.txt -> IVD_Sequences.txt
-    jp-old-style.txt -> jp-old-style.txt
-Created ivs-edit-20170818.1441.tar containing:
-  ivs-edit-20170818.1441/
-  ivs-edit-20170818.1441/IVD_Sequences.txt
-  ivs-edit-20170818.1441/ivs-edit-pkg.el
-  ivs-edit-20170818.1441/ivs-edit.el
-  ivs-edit-20170818.1441/jp-old-style.txt
-Built ivs-edit in 5.318s, finished at 2021-11-27T13:38:55+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  453 Nov 27 13:38 packages/ivs-edit-20170818.1441.entry
-1.3M -rw-r--r-- 1 root root 1.3M Nov 27 13:38 packages/ivs-edit-20170818.1441.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:38 packages/ivs-edit-badge.svg
-4.0K -rw-r--r-- 1 root root 1.9K Nov 27 13:38 packages/ivs-edit-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/kawabata/ivs-edit.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

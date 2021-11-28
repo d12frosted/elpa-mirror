@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/dantecatalfamo/helm-atoms.git
 
 Updating /mnt/store/melpa/working/helm-atoms/
-Checking out origin/HEAD
-Checking out 7e6f91a16f556c96ae1b0d1f965ea56861bb6372
-Built helm-atoms in 4.347s, finished at 2021-11-27T13:31:50+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.4K Nov 27 13:31 packages/helm-atoms-20201013.1723.el
-4.0K -rw-r--r-- 1 root root  425 Nov 27 13:31 packages/helm-atoms-20201013.1723.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:31 packages/helm-atoms-badge.svg
-4.0K -rw-r--r-- 1 root root  408 Nov 27 13:31 packages/helm-atoms-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/dantecatalfamo/helm-atoms.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

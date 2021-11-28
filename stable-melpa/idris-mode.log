@@ -3,69 +3,7 @@ Fetcher: github
 Source:  https://github.com/idris-hackers/idris-mode.git
 
 Updating /mnt/store/melpa/working/idris-mode/
-Checking out origin/HEAD
-Checking out 2e4b5c6a979b04d9383c44423388f6cb0988f14f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/idris-mode/
-  to /tmp/idris-mode1uXR6N/idris-mode-20211103.1521
-    idris-commands.el -> idris-commands.el
-    idris-common-utils.el -> idris-common-utils.el
-    idris-compat.el -> idris-compat.el
-    idris-core.el -> idris-core.el
-    idris-events.el -> idris-events.el
-    idris-highlight-input.el -> idris-highlight-input.el
-    idris-hole-list.el -> idris-hole-list.el
-    idris-info.el -> idris-info.el
-    idris-ipkg-mode.el -> idris-ipkg-mode.el
-    idris-keys.el -> idris-keys.el
-    idris-log.el -> idris-log.el
-    idris-mode.el -> idris-mode.el
-    idris-navigate.el -> idris-navigate.el
-    idris-prover.el -> idris-prover.el
-    idris-repl.el -> idris-repl.el
-    idris-settings.el -> idris-settings.el
-    idris-simple-indent.el -> idris-simple-indent.el
-    idris-syntax.el -> idris-syntax.el
-    idris-test-utils.el -> idris-test-utils.el
-    idris-tests2.el -> idris-tests2.el
-    idris-tests3.el -> idris-tests3.el
-    idris-tree-info.el -> idris-tree-info.el
-    idris-warnings-tree.el -> idris-warnings-tree.el
-    idris-warnings.el -> idris-warnings.el
-    inferior-idris.el -> inferior-idris.el
-    logo-small.png -> logo-small.png
-Created idris-mode-20211103.1521.tar containing:
-  idris-mode-20211103.1521/
-  idris-mode-20211103.1521/idris-commands.el
-  idris-mode-20211103.1521/idris-common-utils.el
-  idris-mode-20211103.1521/idris-compat.el
-  idris-mode-20211103.1521/idris-core.el
-  idris-mode-20211103.1521/idris-events.el
-  idris-mode-20211103.1521/idris-highlight-input.el
-  idris-mode-20211103.1521/idris-hole-list.el
-  idris-mode-20211103.1521/idris-info.el
-  idris-mode-20211103.1521/idris-ipkg-mode.el
-  idris-mode-20211103.1521/idris-keys.el
-  idris-mode-20211103.1521/idris-log.el
-  idris-mode-20211103.1521/idris-mode-pkg.el
-  idris-mode-20211103.1521/idris-mode.el
-  idris-mode-20211103.1521/idris-navigate.el
-  idris-mode-20211103.1521/idris-prover.el
-  idris-mode-20211103.1521/idris-repl.el
-  idris-mode-20211103.1521/idris-settings.el
-  idris-mode-20211103.1521/idris-simple-indent.el
-  idris-mode-20211103.1521/idris-syntax.el
-  idris-mode-20211103.1521/idris-test-utils.el
-  idris-mode-20211103.1521/idris-tests2.el
-  idris-mode-20211103.1521/idris-tests3.el
-  idris-mode-20211103.1521/idris-tree-info.el
-  idris-mode-20211103.1521/idris-warnings-tree.el
-  idris-mode-20211103.1521/idris-warnings.el
-  idris-mode-20211103.1521/inferior-idris.el
-  idris-mode-20211103.1521/logo-small.png
-Built idris-mode in 5.388s, finished at 2021-11-27T13:37:21+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  332 Nov 27 13:37 packages/idris-mode-20211103.1521.entry
-332K -rw-r--r-- 1 root root 330K Nov 27 13:37 packages/idris-mode-20211103.1521.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:37 packages/idris-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  150 Nov 27 13:37 packages/idris-mode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/idris-hackers/idris-mode.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

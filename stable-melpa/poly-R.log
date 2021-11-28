@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/polymode/poly-R.git
 
 Updating /mnt/store/melpa/working/poly-R/
-Checking out origin/HEAD
-Checking out e4a39caaf48e1c2e5afab3865644267b10610537
-Built poly-R in 9.275s, finished at 2021-11-27T14:02:52+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root  30K Nov 27 14:02 packages/poly-R-20210930.1921.el
-4.0K -rw-r--r-- 1 root root  398 Nov 27 14:02 packages/poly-R-20210930.1921.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:02 packages/poly-R-badge.svg
-4.0K -rw-r--r-- 1 root root   70 Nov 27 14:02 packages/poly-R-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/polymode/poly-R.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

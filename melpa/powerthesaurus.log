@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/SavchenkoValeriy/emacs-powerthesaurus.git
 
 Updating /mnt/store/melpa/working/powerthesaurus/
-Checking out origin/HEAD
-Checking out 31aeb8fc410c04dd9b4c4a090718417d8f999d51
-Built powerthesaurus in 5.148s, finished at 2021-11-27T14:03:48+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root  23K Nov 27 14:03 packages/powerthesaurus-20211127.911.el
-4.0K -rw-r--r-- 1 root root  320 Nov 27 14:03 packages/powerthesaurus-20211127.911.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:03 packages/powerthesaurus-badge.svg
-4.0K -rw-r--r-- 1 root root  204 Nov 27 14:03 packages/powerthesaurus-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/SavchenkoValeriy/emacs-powerthesaurus.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

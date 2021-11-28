@@ -3,23 +3,8 @@ Fetcher: github
 Source:  https://github.com/vapniks/syslog-mode.git
 
 Updating /mnt/store/melpa/working/syslog-mode/
-Checking out origin/HEAD
-Checking out 072664784dae41a573a9de8d178bf577b7526b82
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/syslog-mode/
-  to /tmp/syslog-modeGkwoOb/syslog-mode-20210910.1952
-    strace_notes.el -> strace_notes.el
-    syslog-mode.el -> syslog-mode.el
-    syslog_notes.el -> syslog_notes.el
-Created syslog-mode-20210910.1952.tar containing:
-  syslog-mode-20210910.1952/
-  syslog-mode-20210910.1952/strace_notes.el
-  syslog-mode-20210910.1952/syslog-mode-pkg.el
-  syslog-mode-20210910.1952/syslog-mode.el
-  syslog-mode-20210910.1952/syslog_notes.el
-Built syslog-mode in 5.496s, finished at 2021-11-27T14:16:14+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  459 Nov 27 14:16 packages/syslog-mode-20210910.1952.entry
-120K -rw-r--r-- 1 root root 120K Nov 27 14:16 packages/syslog-mode-20210910.1952.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:16 packages/syslog-mode-badge.svg
-   0 -rw-r--r-- 1 root root    0 Nov 27 14:16 packages/syslog-mode-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/vapniks/syslog-mode.git/': The requested URL returned error: 500
+

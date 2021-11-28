@@ -3,10 +3,9 @@ Fetcher: github
 Source:  https://github.com/kostafey/popup-switcher.git
 
 Updating /mnt/store/melpa/working/popup-switcher/
-Checking out origin/HEAD
-Checking out 94e01b9ea7970e86ed0f2fbeaa8cd320b60ae821
-Built popup-switcher in 5.860s, finished at 2021-11-27T14:03:35+0000
- ✓ Success:
- 20K -rw-r--r-- 1 root root  19K Nov 27 14:03 packages/popup-switcher-20210402.1208.el
-4.0K -rw-r--r-- 1 root root  452 Nov 27 14:03 packages/popup-switcher-20210402.1208.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:03 packages/popup-switcher-badge.svg
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/kostafey/popup-switcher.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

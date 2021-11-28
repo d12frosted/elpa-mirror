@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/reactormonk/kwin-minor-mode.git
 
 Updating /mnt/store/melpa/working/kwin/
-Checking out origin/HEAD
-Checking out d4f8f3593598b71ee596e0a87b2c1d6a912a9566
-Built kwin in 5.288s, finished at 2021-11-27T13:42:45+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.4K Nov 27 13:42 packages/kwin-20150308.1812.el
-4.0K -rw-r--r-- 1 root root  276 Nov 27 13:42 packages/kwin-20150308.1812.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:42 packages/kwin-badge.svg
-4.0K -rw-r--r-- 1 root root  331 Nov 27 13:42 packages/kwin-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+

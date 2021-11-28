@@ -3,11 +3,14 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/haxe-mode.git
 
 Updating /mnt/store/melpa/working/haxe-mode/
-Checking out origin/HEAD
-Checking out 6057c05154464bfb88d2ba119cdc8d4c7e767541
-Built haxe-mode in 5.649s, finished at 2021-11-27T13:31:38+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root  11K Nov 27 13:31 packages/haxe-mode-20210108.1835.el
-4.0K -rw-r--r-- 1 root root  329 Nov 27 13:31 packages/haxe-mode-20210108.1835.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:31 packages/haxe-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  218 Nov 27 13:31 packages/haxe-mode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: <html>
+remote: <head><title>404 Not Found</title></head>
+remote: <body>
+remote: <center><h1>404 Not Found</h1></center>
+remote: <hr><center>nginx</center>
+remote: </body>
+remote: </html>
+fatal: unable to access 'https://github.com/emacsorphanage/haxe-mode.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

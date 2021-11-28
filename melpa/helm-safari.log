@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/xuchunyang/helm-safari.git
 
 Updating /mnt/store/melpa/working/helm-safari/
-Checking out origin/HEAD
-Checking out 664c7f4488829228eed7e90cd53002e14bec555b
-Built helm-safari in 11.844s, finished at 2021-11-27T13:34:28+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.1K Nov 27 13:34 packages/helm-safari-20160404.324.el
-4.0K -rw-r--r-- 1 root root  425 Nov 27 13:34 packages/helm-safari-20160404.324.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:34 packages/helm-safari-badge.svg
-4.0K -rw-r--r-- 1 root root  398 Nov 27 13:34 packages/helm-safari-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/xuchunyang/helm-safari.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/rejeep/prodigy.el.git
 
 Updating /mnt/store/melpa/working/prodigy/
-Checking out origin/HEAD
-Checking out 168f5ace1671876d8c3bd350c0853bd0196bddda
-Built prodigy in 4.473s, finished at 2021-11-27T14:04:08+0000
- ✓ Success:
- 52K -rw-r--r-- 1 root root  50K Nov 27 14:04 packages/prodigy-20210116.816.el
-4.0K -rw-r--r-- 1 root root  417 Nov 27 14:04 packages/prodigy-20210116.816.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:04 packages/prodigy-badge.svg
-   0 -rw-r--r-- 1 root root    0 Nov 27 14:04 packages/prodigy-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/rejeep/prodigy.el.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

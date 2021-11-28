@@ -3,21 +3,7 @@ Fetcher: github
 Source:  https://github.com/johnson-christopher/powerline-evil.git
 
 Updating /mnt/store/melpa/working/powerline-evil/
-Checking out origin/HEAD
-Checking out b77e2cf571e9990734f2b30d826f3a362b559fd1
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/powerline-evil/
-  to /tmp/powerline-evild1fjKD/powerline-evil-20190603.340
-    powerline-evil-themes.el -> powerline-evil-themes.el
-    powerline-evil.el -> powerline-evil.el
-Created powerline-evil-20190603.340.tar containing:
-  powerline-evil-20190603.340/
-  powerline-evil-20190603.340/powerline-evil-pkg.el
-  powerline-evil-20190603.340/powerline-evil-themes.el
-  powerline-evil-20190603.340/powerline-evil.el
-Built powerline-evil in 4.571s, finished at 2021-11-27T14:03:46+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  463 Nov 27 14:03 packages/powerline-evil-20190603.340.entry
- 20K -rw-r--r-- 1 root root  20K Nov 27 14:03 packages/powerline-evil-20190603.340.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:03 packages/powerline-evil-badge.svg
-4.0K -rw-r--r-- 1 root root   73 Nov 27 14:03 packages/powerline-evil-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/johnson-christopher/powerline-evil.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/pronobis/helm-flyspell.git
 
 Updating /mnt/store/melpa/working/helm-flyspell/
-Checking out origin/HEAD
-Checking out 8d4d947c687cb650cb149aa2271ad5201ea92594
-Built helm-flyspell in 4.964s, finished at 2021-11-27T13:32:43+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.1K Nov 27 13:32 packages/helm-flyspell-20170210.1901.el
-4.0K -rw-r--r-- 1 root root  347 Nov 27 13:32 packages/helm-flyspell-20170210.1901.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:32 packages/helm-flyspell-badge.svg
-4.0K -rw-r--r-- 1 root root  645 Nov 27 13:32 packages/helm-flyspell-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/pronobis/helm-flyspell.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

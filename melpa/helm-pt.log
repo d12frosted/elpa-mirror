@@ -3,20 +3,8 @@ Fetcher: github
 Source:  https://github.com/ralesi/helm-pt.git
 
 Updating /mnt/store/melpa/working/helm-pt/
-Checking out origin/HEAD
-Checking out 8acc52911dad1ed0c3975f134a468762afe0b76b
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/helm-pt/
-  to /tmp/helm-pt3uDyGF/helm-pt-20160214.2342
-    helm-pt-pkg.el -> helm-pt-pkg.el
-    helm-pt.el -> helm-pt.el
-Created helm-pt-20160214.2342.tar containing:
-  helm-pt-20160214.2342/
-  helm-pt-20160214.2342/helm-pt-pkg.el
-  helm-pt-20160214.2342/helm-pt.el
-Built helm-pt in 4.411s, finished at 2021-11-27T13:33:51+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  281 Nov 27 13:33 packages/helm-pt-20160214.2342.entry
- 20K -rw-r--r-- 1 root root  20K Nov 27 13:33 packages/helm-pt-20160214.2342.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:33 packages/helm-pt-badge.svg
-4.0K -rw-r--r-- 1 root root  203 Nov 27 13:33 packages/helm-pt-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+error: RPC failed; HTTP 504 curl 22 The requested URL returned error: 504
+fatal: expected flush after ref listing
+error: Could not fetch origin
+

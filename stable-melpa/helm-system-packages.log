@@ -3,33 +3,8 @@ Fetcher: github
 Source:  https://github.com/emacs-helm/helm-system-packages.git
 
 Updating /mnt/store/melpa/working/helm-system-packages/
-Checking out origin/HEAD
-Checking out a16bb1c3708416984106a98353700d456414b6a1
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/helm-system-packages/
-  to /tmp/helm-system-packagesccIlBj/helm-system-packages-20210628.1727
-    helm-system-packages-brew.el -> helm-system-packages-brew.el
-    helm-system-packages-dnf.el -> helm-system-packages-dnf.el
-    helm-system-packages-dpkg.el -> helm-system-packages-dpkg.el
-    helm-system-packages-guix.el -> helm-system-packages-guix.el
-    helm-system-packages-pacman.el -> helm-system-packages-pacman.el
-    helm-system-packages-portage.el -> helm-system-packages-portage.el
-    helm-system-packages-xbps.el -> helm-system-packages-xbps.el
-    helm-system-packages.el -> helm-system-packages.el
-Created helm-system-packages-20210628.1727.tar containing:
-  helm-system-packages-20210628.1727/
-  helm-system-packages-20210628.1727/helm-system-packages-brew.el
-  helm-system-packages-20210628.1727/helm-system-packages-dnf.el
-  helm-system-packages-20210628.1727/helm-system-packages-dpkg.el
-  helm-system-packages-20210628.1727/helm-system-packages-guix.el
-  helm-system-packages-20210628.1727/helm-system-packages-pacman.el
-  helm-system-packages-20210628.1727/helm-system-packages-pkg.el
-  helm-system-packages-20210628.1727/helm-system-packages-portage.el
-  helm-system-packages-20210628.1727/helm-system-packages-xbps.el
-  helm-system-packages-20210628.1727/helm-system-packages.el
-Built helm-system-packages in 4.940s, finished at 2021-11-27T13:34:51+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  465 Nov 27 13:34 packages/helm-system-packages-20210628.1727.entry
-132K -rw-r--r-- 1 root root 130K Nov 27 13:34 packages/helm-system-packages-20210628.1727.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:34 packages/helm-system-packages-badge.svg
-4.0K -rw-r--r-- 1 root root   45 Nov 27 13:34 packages/helm-system-packages-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+error: Could not fetch origin
+

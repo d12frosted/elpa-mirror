@@ -3,11 +3,9 @@ Fetcher: github
 Source:  https://github.com/morganey-lang/morganey-mode.git
 
 Updating /mnt/store/melpa/working/morganey-mode/
-Checking out origin/HEAD
-Checking out 5cf3870432a2aeb69d373abe63b3be1f325f6d21
-Built morganey-mode in 5.337s, finished at 2021-11-27T13:49:52+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.7K Nov 27 13:49 packages/morganey-mode-20170118.934.el
-4.0K -rw-r--r-- 1 root root  352 Nov 27 13:49 packages/morganey-mode-20170118.934.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:49 packages/morganey-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  120 Nov 27 13:49 packages/morganey-mode-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/morganey-lang/morganey-mode.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

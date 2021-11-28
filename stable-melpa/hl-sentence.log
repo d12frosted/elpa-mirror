@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/milkypostman/hl-sentence.git
 
 Updating /mnt/store/melpa/working/hl-sentence/
-Checking out origin/HEAD
-Checking out 86ae38d3103bd20da5485cbdd59dfbd396c45ee4
-Built hl-sentence in 5.085s, finished at 2021-11-27T13:35:53+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.3K Nov 27 13:35 packages/hl-sentence-20171018.1519.el
-4.0K -rw-r--r-- 1 root root  410 Nov 27 13:35 packages/hl-sentence-20171018.1519.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:35 packages/hl-sentence-badge.svg
-4.0K -rw-r--r-- 1 root root  526 Nov 27 13:35 packages/hl-sentence-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/milkypostman/hl-sentence.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

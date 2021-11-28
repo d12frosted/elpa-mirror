@@ -3,21 +3,9 @@ Fetcher: github
 Source:  https://github.com/DamienCassou/khardel.git
 
 Updating /mnt/store/melpa/working/khardel/
-Checking out origin/HEAD
-Checking out ca021fad32430e3f3a995d4158e73b5ee485258d
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/khardel/
-  to /tmp/khardelmK5ZQx/khardel-20201019.553
-    khardel-org.el -> khardel-org.el
-    khardel.el -> khardel.el
-Created khardel-20201019.553.tar containing:
-  khardel-20201019.553/
-  khardel-20201019.553/khardel-org.el
-  khardel-20201019.553/khardel-pkg.el
-  khardel-20201019.553/khardel.el
-Built khardel in 4.481s, finished at 2021-11-27T13:42:14+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  345 Nov 27 13:42 packages/khardel-20201019.553.entry
- 20K -rw-r--r-- 1 root root  20K Nov 27 13:42 packages/khardel-20201019.553.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:42 packages/khardel-badge.svg
-4.0K -rw-r--r-- 1 root root  105 Nov 27 13:42 packages/khardel-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/DamienCassou/khardel.git/': The requested URL returned error: 500
+error: Could not fetch origin
+

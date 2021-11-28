@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/go-noisegate/go-noisegate.el.git
 
 Updating /mnt/store/melpa/working/go-noisegate/
-Checking out origin/HEAD
-Checking out e3fc198c234131c94f7d307b7f7c6ef623fb93b7
-Built go-noisegate in 5.380s, finished at 2021-11-27T13:29:35+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.1K Nov 27 13:29 packages/go-noisegate-20200502.703.el
-4.0K -rw-r--r-- 1 root root  367 Nov 27 13:29 packages/go-noisegate-20200502.703.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:29 packages/go-noisegate-badge.svg
-4.0K -rw-r--r-- 1 root root  249 Nov 27 13:29 packages/go-noisegate-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/go-noisegate/go-noisegate.el.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

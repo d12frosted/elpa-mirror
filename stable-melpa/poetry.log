@@ -3,11 +3,8 @@ Fetcher: github
 Source:  https://github.com/galaunay/poetry.el.git
 
 Updating /mnt/store/melpa/working/poetry/
-Checking out origin/HEAD
-Checking out 5b9ef569d629d79820e73b5380e54e443ba90616
-Built poetry in 4.840s, finished at 2021-11-27T14:02:41+0000
- ✓ Success:
- 36K -rw-r--r-- 1 root root  35K Nov 27 14:02 packages/poetry-20211016.834.el
-4.0K -rw-r--r-- 1 root root  402 Nov 27 14:02 packages/poetry-20211016.834.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:02 packages/poetry-badge.svg
-4.0K -rw-r--r-- 1 root root  425 Nov 27 14:02 packages/poetry-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+remote: Internal Server Error.
+remote: 
+fatal: unable to access 'https://github.com/galaunay/poetry.el.git/': The requested URL returned error: 500
+

@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/raghavgautam/helm-wordnet.git
 
 Updating /mnt/store/melpa/working/helm-wordnet/
-Checking out origin/HEAD
-Checking out a36dbc6fcb570b812870bc1e190f203e0a0042fc
-Built helm-wordnet in 4.827s, finished at 2021-11-27T13:34:59+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.7K Nov 27 13:34 packages/helm-wordnet-20160128.1507.el
-4.0K -rw-r--r-- 1 root root  475 Nov 27 13:34 packages/helm-wordnet-20160128.1507.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:34 packages/helm-wordnet-badge.svg
-4.0K -rw-r--r-- 1 root root  225 Nov 27 13:34 packages/helm-wordnet-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/raghavgautam/helm-wordnet.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

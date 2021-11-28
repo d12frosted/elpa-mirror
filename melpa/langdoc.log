@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/tom-tan/langdoc.git
 
 Updating /mnt/store/melpa/working/langdoc/
-Checking out origin/HEAD
-Checking out 2c7223bacb116992d700ecb19a60df5c09c63424
-Built langdoc in 5.299s, finished at 2021-11-27T13:42:54+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.1K Nov 27 13:42 packages/langdoc-20150218.645.el
-4.0K -rw-r--r-- 1 root root  385 Nov 27 13:42 packages/langdoc-20150218.645.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:42 packages/langdoc-badge.svg
-4.0K -rw-r--r-- 1 root root 1.7K Nov 27 13:42 packages/langdoc-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/tom-tan/langdoc.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

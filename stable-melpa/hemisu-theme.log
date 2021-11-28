@@ -3,23 +3,7 @@ Fetcher: github
 Source:  https://github.com/andrzejsliwa/hemisu-theme.git
 
 Updating /mnt/store/melpa/working/hemisu-theme/
-Checking out origin/HEAD
-Checking out 5c206561aa2c844ecdf3e3b672c3235e559ddd7f
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/hemisu-theme/
-  to /tmp/hemisu-theme3IJwx5/hemisu-theme-20130508.1844
-    hemisu-dark-theme.el -> hemisu-dark-theme.el
-    hemisu-light-theme.el -> hemisu-light-theme.el
-    hemisu-theme.el -> hemisu-theme.el
-Created hemisu-theme-20130508.1844.tar containing:
-  hemisu-theme-20130508.1844/
-  hemisu-theme-20130508.1844/hemisu-dark-theme.el
-  hemisu-theme-20130508.1844/hemisu-light-theme.el
-  hemisu-theme-20130508.1844/hemisu-theme-pkg.el
-  hemisu-theme-20130508.1844/hemisu-theme.el
-Built hemisu-theme in 4.474s, finished at 2021-11-27T13:35:07+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  261 Nov 27 13:35 packages/hemisu-theme-20130508.1844.entry
- 20K -rw-r--r-- 1 root root  20K Nov 27 13:35 packages/hemisu-theme-20130508.1844.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:35 packages/hemisu-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  375 Nov 27 13:35 packages/hemisu-theme-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/andrzejsliwa/hemisu-theme.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

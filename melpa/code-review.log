@@ -4,32 +4,34 @@ Source:  https://github.com/wandersoncferreira/code-review.git
 
 Updating /mnt/store/melpa/working/code-review/
 Checking out origin/HEAD
-Checking out 3678c8e723ac8f61cb86a49a73cbe778bb8385e5
+Checking out a62c78e56b2c65012730909cb40f9c893f431b7d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/code-review/
-  to /tmp/code-reviewECFSRd/code-review-20211127.1251
+  to /tmp/code-reviewhNprDR/code-review-20211127.1907
     code-review-comment.el -> code-review-comment.el
     code-review-core.el -> code-review-core.el
     code-review-db.el -> code-review-db.el
     code-review-github.el -> code-review-github.el
+    code-review-gitlab.el -> code-review-gitlab.el
     code-review-section.el -> code-review-section.el
     code-review-utils.el -> code-review-utils.el
     code-review.el -> code-review.el
-Created code-review-20211127.1251.tar containing:
-  code-review-20211127.1251/
-  code-review-20211127.1251/code-review-comment.el
-  code-review-20211127.1251/code-review-core.el
-  code-review-20211127.1251/code-review-db.el
-  code-review-20211127.1251/code-review-github.el
-  code-review-20211127.1251/code-review-pkg.el
-  code-review-20211127.1251/code-review-section.el
-  code-review-20211127.1251/code-review-utils.el
-  code-review-20211127.1251/code-review.el
-Built code-review in 5.317s, finished at 2021-11-27T13:04:58+0000
+Created code-review-20211127.1907.tar containing:
+  code-review-20211127.1907/
+  code-review-20211127.1907/code-review-comment.el
+  code-review-20211127.1907/code-review-core.el
+  code-review-20211127.1907/code-review-db.el
+  code-review-20211127.1907/code-review-github.el
+  code-review-20211127.1907/code-review-gitlab.el
+  code-review-20211127.1907/code-review-pkg.el
+  code-review-20211127.1907/code-review-section.el
+  code-review-20211127.1907/code-review-utils.el
+  code-review-20211127.1907/code-review.el
+Built code-review in 4.562s, finished at 2021-11-27T20:12:40+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  667 Nov 27 09:29 packages/code-review-20211126.1005.entry
-152K -rw-r--r-- 1 root root 150K Nov 27 09:29 packages/code-review-20211126.1005.tar
-4.0K -rw-r--r-- 1 root root  667 Nov 27 13:04 packages/code-review-20211127.1251.entry
-152K -rw-r--r-- 1 root root 150K Nov 27 13:04 packages/code-review-20211127.1251.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:04 packages/code-review-badge.svg
-4.0K -rw-r--r-- 1 root root  126 Nov 27 13:04 packages/code-review-readme.txt
+4.0K -rw-r--r-- 1 root root  667 Nov 27 16:39 packages/code-review-20211127.1251.entry
+152K -rw-r--r-- 1 root root 150K Nov 27 16:39 packages/code-review-20211127.1251.tar
+4.0K -rw-r--r-- 1 root root  678 Nov 27 20:12 packages/code-review-20211127.1907.entry
+180K -rw-r--r-- 1 root root 180K Nov 27 20:12 packages/code-review-20211127.1907.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 27 20:12 packages/code-review-badge.svg
+4.0K -rw-r--r-- 1 root root  132 Nov 27 20:12 packages/code-review-readme.txt

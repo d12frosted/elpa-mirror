@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/jwiegley/springboard.git
 
 Updating /mnt/store/melpa/working/ido-springboard/
-Checking out origin/HEAD
-Checking out 687d1e5898a880878995dc9bffe93b4598366203
-Built ido-springboard in 5.297s, finished at 2021-11-27T13:37:16+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.5K Nov 27 13:37 packages/ido-springboard-20170106.755.el
-4.0K -rw-r--r-- 1 root root  369 Nov 27 13:37 packages/ido-springboard-20170106.755.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:37 packages/ido-springboard-badge.svg
-4.0K -rw-r--r-- 1 root root  521 Nov 27 13:37 packages/ido-springboard-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/jwiegley/springboard.git/': The requested URL returned error: 504
+error: Could not fetch origin
+

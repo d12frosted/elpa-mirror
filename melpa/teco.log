@@ -3,11 +3,7 @@ Fetcher: github
 Source:  https://github.com/mtk/teco.git
 
 Updating /mnt/store/melpa/working/teco/
-Checking out origin/HEAD
-Checking out 61caf8f419659a0567a269f290c90427a215d77b
-Built teco in 5.909s, finished at 2021-11-27T14:16:43+0000
- ✓ Success:
- 80K -rw-r--r-- 1 root root  78K Nov 27 14:16 packages/teco-20200707.2309.el
-4.0K -rw-r--r-- 1 root root  332 Nov 27 14:16 packages/teco-20200707.2309.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 14:16 packages/teco-badge.svg
-4.0K -rw-r--r-- 1 root root   92 Nov 27 14:16 packages/teco-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+error: RPC failed; HTTP 500 curl 22 The requested URL returned error: 500
+fatal: expected flush after ref listing
+

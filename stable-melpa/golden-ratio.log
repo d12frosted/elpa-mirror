@@ -3,15 +3,7 @@ Fetcher: github
 Source:  https://github.com/roman/golden-ratio.el.git
 
 Updating /mnt/store/melpa/working/golden-ratio/
-Checking out origin/HEAD
-Checking out 007911d8a431b72670f5fe5f0e5b4380c2777a31
-Built golden-ratio in 4.951s, finished at 2021-11-27T13:29:48+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.8K Nov 27 13:29 packages/golden-ratio-20191028.1732.el
-4.0K -rw-r--r-- 1 root root  338 Nov 27 13:29 packages/golden-ratio-20191028.1732.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 13:29 packages/golden-ratio-badge.svg
-8.0K -rw-r--r-- 1 root root 7.1K Nov 27 13:29 packages/golden-ratio-scroll-screen-20200419.451.el
-4.0K -rw-r--r-- 1 root root  454 Nov 27 09:56 packages/golden-ratio-scroll-screen-20200419.451.entry
-4.0K -rw-r--r-- 1 root root 1.2K Nov 27 09:56 packages/golden-ratio-scroll-screen-badge.svg
-4.0K -rw-r--r-- 1 root root  750 Nov 27 09:56 packages/golden-ratio-scroll-screen-readme.txt
-4.0K -rw-r--r-- 1 root root  260 Nov 27 13:29 packages/golden-ratio-scroll-screen.log
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/roman/golden-ratio.el.git/': The requested URL returned error: 504
+error: Could not fetch origin
+
