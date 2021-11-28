@@ -4,8 +4,8 @@
 ;;
 ;; Author: Ketan Patel <knpatel401@gmail.com>
 ;; URL: https://github.com/knpatel401/filetree
-;; Package-Version: 20211127.1854
-;; Package-Commit: 18a75836d245b873f29feab81768c4e57e05173b
+;; Package-Version: 20211128.205
+;; Package-Commit: 5a30023c897f0f93ec90f84caed8752b4ac98418
 ;; Package-Requires: ((emacs "27.1") (dash "2.12.0") (helm "3.7.0"))
 ;; Version: 1.0.1
 
@@ -1611,13 +1611,15 @@ Supported buffer types are:
 (defun filetree-show-vc-root-dir-recursively ()
   "Load files (recursively) in vc root directory of current file."
   (interactive)
-  (if (fboundp 'vc-root-dir)
-      (let ((root-dir (vc-root-dir)))
+  (if (or (fboundp 'vc-root-dir) (fboundp 'magit-toplevel))
+
+      (let ((root-dir (or (if (fboundp 'vc-root-dir) (vc-root-dir))
+                          (if (fboundp 'magit-toplevel) (magit-toplevel)))))
         (if root-dir
             (progn
               (setq filetree-current-file-list nil)
               (setq filetree-file-list-stack (list filetree-current-file-list))
-              (filetree-expand-dir-recursively root-dir 0)
+              (filetree-expand-dir-recursively (expand-file-name root-dir) 0)
               ;; filter for only files under vc and add to stack
               (if (fboundp 'vc-backend)
                   (progn
@@ -1628,7 +1630,7 @@ Supported buffer types are:
                                               filetree-current-file-list)))
                     (filetree-update-buffer))))
           (error "Not a version controlled repo")))
-    (error "No vc-root-dir command available to find root dir")))
+    (error "No vc-root-dir or magit-toplevel command available to find root dir")))
 
 (define-derived-mode filetree nil "Text"
   "A mode to view and perform operations on files via a tree view"

@@ -6,8 +6,6 @@
 ;; Author: Artur Hefczyc, created 2003-04-18
 ;;         David Caldwell <david@porkrind.org>
 ;; URL: https://github.com/caldwell/calmer-forest-theme
-;; Package-Version: 20130926.510
-;; Package-Commit: 87ba7bae389084d13fe3bc34e0c923017eda6ba0
 ;; Version: 1.1
 
 ;; This program is free software; you can redistribute it and/or modify

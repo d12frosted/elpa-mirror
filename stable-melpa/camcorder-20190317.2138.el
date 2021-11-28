@@ -4,8 +4,6 @@
 
 ;; Author: Artur Malabarba <bruce.connor.am@gmail.com>
 ;; URL: http://github.com/Bruce-Connor/camcorder.el
-;; Package-Version: 20190317.2138
-;; Package-Commit: b11ca61491a27681bb3131b72b51c105fd996bed
 ;; Keywords: multimedia screencast
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "24") (names "20150000") (cl-lib "0.5"))
