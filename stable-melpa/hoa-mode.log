@@ -3,8 +3,7 @@ Fetcher: git
 Source:  https://gitlab.lrde.epita.fr/spot/emacs-modes.git
 
 Updating /mnt/store/melpa/working/hoa-mode/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-remote: GitLab is not responding
-fatal: unable to access 'https://gitlab.lrde.epita.fr/spot/emacs-modes.git/': The requested URL returned error: 502
-error: Could not fetch origin
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+error: RPC failed; HTTP 502 curl 22 The requested URL returned error: 502
+fatal: expected flush after ref listing
 
