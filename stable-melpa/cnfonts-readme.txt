@@ -36,7 +36,7 @@ cnfonts 添加了许多辅助工具，使配置和调节字体和字号的工作
    #+BEGIN_EXAMPLE
    (require 'cnfonts)
    ;; 让 cnfonts 随着 Emacs 自动生效。
-   (cnfonts-enable)
+   (cnfonts-mode 1)
    #+END_EXAMPLE
 
 ** 配置使用
@@ -124,7 +124,7 @@ http://debbugs.gnu.org/db/17/1785.html
 
 *** 让 cnfonts 随着 Emacs 自动启动
 
-`cnfonts-enable' 命令可以让 cnfonts 随着 Emacs 自动启动，这个命令将
+`cnfonts-mode' 命令可以让 cnfonts 随着 Emacs 自动启动，这个命令将
 `cnfonts-set-font-with-saved-fontsize' 添加到下面两个 hook:
 
 1. `after-make-frame-functions'
