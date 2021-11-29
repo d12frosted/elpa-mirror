@@ -1,5 +1,5 @@
 (slack .
-       [(20210712 628)
+       [(20211129 310)
 	((websocket
 	  (1 8))
 	 (request
@@ -13,7 +13,7 @@
 	 (emojify
 	  (0 2)))
 	"Slack client for Emacs" tar
-	((:commit . "ae1d742a0193fba38698931055708a28cc382bcf")
+	((:commit . "ff46d88726482211e3ac3d0b9c95dd4fdffe11c2")
 	 (:authors
 	  ("yuya.minami" . "yuya.minami@yuyaminami-no-MacBook-Pro.local"))
 	 (:maintainer "yuya.minami" . "yuya.minami@yuyaminami-no-MacBook-Pro.local")

@@ -3,7 +3,12 @@ Fetcher: github
 Source:  https://github.com/yuutayamada/bpe.git
 
 Updating /mnt/store/melpa/working/bpe/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/yuutayamada/bpe.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 7b5b25f83506e6c9f4075d3803fa32404943a189
+Note: bpe :files spec is equivalent to the default.
+Built bpe in 5.173s, finished at 2021-11-29T05:11:45+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 6.1K Nov 29 05:11 packages/bpe-20141228.2205.el
+4.0K -rw-r--r-- 1 root root  374 Nov 29 05:11 packages/bpe-20141228.2205.entry
+4.0K -rw-r--r-- 1 root root 1.2K Nov 29 05:11 packages/bpe-badge.svg
+4.0K -rw-r--r-- 1 root root  367 Nov 29 05:11 packages/bpe-readme.txt

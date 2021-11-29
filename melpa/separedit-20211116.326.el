@@ -6,7 +6,7 @@
 ;; Created: 2019/04/06
 ;; Version: 0.3.0
 ;; Package-Version: 20211116.326
-;; Package-Commit: 0a2dc1a22955fdd065f04dfdd5242f1b61b4a303
+;; Package-Commit: 59c4e3718943dbe8d14bdbba5de24fe2c80f0b56
 ;; Package-Requires: ((emacs "25.1") (dash "2.18") (edit-indirect "0.1.5"))
 ;; URL: https://github.com/twlz0ne/separedit.el
 ;; Keywords: tools languages docs
