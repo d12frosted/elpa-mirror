@@ -4,24 +4,30 @@ Source:  https://github.com/topikettunen/brutal-emacs.git
 
 Updating /mnt/store/melpa/working/brutal-theme/
 Checking out origin/HEAD
-Checking out 4c36c01deff0a6d17078a2f0d68bb4f7b95c97d6
+Checking out 560f67765b421bad20f940033e53004c99712689
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/brutal-theme/
-  to /tmp/brutal-themeeRDqW3/brutal-theme-20211128.2137
+  to /tmp/brutal-themez4QSkC/brutal-theme-20211128.2317
     brutal-dark-theme.el -> brutal-dark-theme.el
+    brutal-faces.el -> brutal-faces.el
     brutal-light-theme.el -> brutal-light-theme.el
+    brutal-palettes.el -> brutal-palettes.el
     brutal-theme.el -> brutal-theme.el
-Created brutal-theme-20211128.2137.tar containing:
-  brutal-theme-20211128.2137/
-  brutal-theme-20211128.2137/brutal-dark-theme.el
-  brutal-theme-20211128.2137/brutal-light-theme.el
-  brutal-theme-20211128.2137/brutal-theme-pkg.el
-  brutal-theme-20211128.2137/brutal-theme.el
-Built brutal-theme in 5.736s, finished at 2021-11-28T22:09:10+0000
+    brutal.el -> brutal.el
+Created brutal-theme-20211128.2317.tar containing:
+  brutal-theme-20211128.2317/
+  brutal-theme-20211128.2317/brutal-dark-theme.el
+  brutal-theme-20211128.2317/brutal-faces.el
+  brutal-theme-20211128.2317/brutal-light-theme.el
+  brutal-theme-20211128.2317/brutal-palettes.el
+  brutal-theme-20211128.2317/brutal-theme-pkg.el
+  brutal-theme-20211128.2317/brutal-theme.el
+  brutal-theme-20211128.2317/brutal.el
+Built brutal-theme in 6.727s, finished at 2021-11-29T01:39:06+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  341 Nov 28 18:38 packages/brutal-theme-20211128.1457.entry
- 32K -rw-r--r-- 1 root root  30K Nov 28 18:38 packages/brutal-theme-20211128.1457.tar
 4.0K -rw-r--r-- 1 root root  341 Nov 28 22:09 packages/brutal-theme-20211128.2137.entry
  32K -rw-r--r-- 1 root root  30K Nov 28 22:09 packages/brutal-theme-20211128.2137.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 28 22:09 packages/brutal-theme-badge.svg
-4.0K -rw-r--r-- 1 root root   73 Nov 28 22:09 packages/brutal-theme-readme.txt
+4.0K -rw-r--r-- 1 root root  341 Nov 29 01:39 packages/brutal-theme-20211128.2317.entry
+ 32K -rw-r--r-- 1 root root  30K Nov 29 01:39 packages/brutal-theme-20211128.2317.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 29 01:39 packages/brutal-theme-badge.svg
+4.0K -rw-r--r-- 1 root root   59 Nov 29 01:39 packages/brutal-theme-readme.txt

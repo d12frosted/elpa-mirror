@@ -4,8 +4,8 @@
 ;; Created: 2021
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
-;; Package-Version: 20211128.1847
-;; Package-Commit: 4cd6cdd4a264f354c03a2d8dd3ffb54edf275b17
+;; Package-Version: 20211129.119
+;; Package-Commit: 26d6025da205386955cd065aef94c4b7e0acb5a4
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 
@@ -46,11 +46,15 @@
 
 (defcustom cape-company-timeout 5.0
   "Company asynchronous timeout."
-  :type 'float)
+  :type '(choice nil float))
 
 (defcustom cape-dabbrev-min-length 4
   "Minimum length of dabbrev expansions."
   :type 'integer)
+
+(defcustom cape-dabbrev-check-other-buffers t
+  "Buffers to check for dabbrev."
+  :type 'boolean)
 
 (defcustom cape-file-directory-must-exist t
   "The parent directory must exist for file completion."
@@ -495,8 +499,8 @@ If INTERACTIVE is nil the function acts like a capf."
 
 (defun cape--dabbrev-reset ()
   "Reset dabbrev state."
-  (let ((dabbrev-check-all-buffers nil)
-        (dabbrev-check-other-buffers nil))
+  (let ((dabbrev-check-all-buffers cape-dabbrev-check-other-buffers)
+        (dabbrev-check-other-buffers cape-dabbrev-check-other-buffers))
     (dabbrev--reset-global-variables)))
 
 (defun cape--dabbrev-list (word)
@@ -733,30 +737,36 @@ If INTERACTIVE is nil the function acts like a capf."
               :annotation-function (funcall extra-fun :annotation-function)
               :exit-function (lambda (x _status) (funcall (funcall extra-fun :exit-function) x)))))))
 
-(defun cape--company-call (backend &rest args)
-  "Call Company BACKEND with ARGS."
-  ;; Company backends are non-interruptible.
+(defun cape--company-call (&rest app)
+  "Apply APP and handle future return values."
+  ;; Backends are non-interruptible. Disable interrupts!
   (let ((toi throw-on-input)
         (throw-on-input nil))
-    (pcase (apply backend args)
-      (`(:async . ,future)
+    (pcase (apply app)
+      ;; Handle async future return values.
+      (`(:async . ,fetch)
        (let ((res 'cape--waiting)
              (start (time-to-seconds)))
-         (funcall future (lambda (arg)
-                           (when (eq res 'cape--waiting)
-                             (push 'cape--event unread-command-events))
-                           (setq res arg)))
-         ;; Force synchronization.
-         (while (eq res 'cape--waiting)
-           ;; When we've got input, interrupt the computation.
-           (when (and unread-command-events toi)
-             (throw toi nil))
-           (when (> (- (time-to-seconds) start) cape-company-timeout)
-             (error "Cape company backend async timeout"))
-           (sit-for 0.1 'noredisplay))
-         ;; Remove cape--events introduced by future callback
-         (setq unread-command-events (delq 'cape--event unread-command-events))
+         (unwind-protect
+             (progn
+               (funcall fetch (lambda (arg)
+                                (when (eq res 'cape--waiting)
+                                  (push 'cape--done unread-command-events))
+                                (setq res arg)))
+               ;; Force synchronization.
+               (while (eq res 'cape--waiting)
+                 ;; When we've got input, interrupt the computation.
+                 (when (and unread-command-events toi)
+                   (throw toi nil))
+                 (when (and cape-company-timeout
+                            (> (- (time-to-seconds) start) cape-company-timeout))
+                   (error "Cape company backend async timeout"))
+                 (sit-for 0.1 'noredisplay)))
+           ;; Remove cape--done introduced by future callback
+           (setq unread-command-events
+                 (delq 'cape--done unread-command-events)))
          res))
+      ;; Plain old synchronous return value.
       (res res))))
 
 ;;;###autoload
