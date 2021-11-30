@@ -4,10 +4,10 @@ Source:  https://github.com/magit/forge.git
 
 Updating /mnt/store/melpa/working/forge/
 Checking out origin/HEAD
-Checking out 41efa674cff0b447efbc103494fd61ec9b9156ae
+Checking out 1220c0ccebc84e3689cd52df90dad6d08b307f10
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/forge/
-  to /tmp/forgejliUWR/forge-20211111.2038
+  to /tmp/forgepHvHtk/forge-20211126.1526
   ! lisp/forge-bitbucket.el -> forge-bitbucket.el
   ! lisp/forge-commands.el -> forge-commands.el
   ! lisp/forge-core.el -> forge-core.el
@@ -27,33 +27,35 @@ Copying files (->) and directories (=>)
   ! lisp/forge-topic.el -> forge-topic.el
   ! lisp/forge.el -> forge.el
   ! docs/forge.texi -> forge.texi
-Created /tmp/forgejliUWR/forge-20211111.2038/forge.info
-Created forge-20211111.2038.tar containing:
-  forge-20211111.2038/
-  forge-20211111.2038/dir
-  forge-20211111.2038/forge-bitbucket.el
-  forge-20211111.2038/forge-commands.el
-  forge-20211111.2038/forge-core.el
-  forge-20211111.2038/forge-db.el
-  forge-20211111.2038/forge-gitea.el
-  forge-20211111.2038/forge-github.el
-  forge-20211111.2038/forge-gitlab.el
-  forge-20211111.2038/forge-gogs.el
-  forge-20211111.2038/forge-issue.el
-  forge-20211111.2038/forge-list.el
-  forge-20211111.2038/forge-notify.el
-  forge-20211111.2038/forge-pkg.el
-  forge-20211111.2038/forge-post.el
-  forge-20211111.2038/forge-pullreq.el
-  forge-20211111.2038/forge-repo.el
-  forge-20211111.2038/forge-revnote.el
-  forge-20211111.2038/forge-semi.el
-  forge-20211111.2038/forge-topic.el
-  forge-20211111.2038/forge.el
-  forge-20211111.2038/forge.info
-Built forge in 13.204s, finished at 2021-11-29T12:41:31+0000
+Created /tmp/forgepHvHtk/forge-20211126.1526/forge.info
+Created forge-20211126.1526.tar containing:
+  forge-20211126.1526/
+  forge-20211126.1526/dir
+  forge-20211126.1526/forge-bitbucket.el
+  forge-20211126.1526/forge-commands.el
+  forge-20211126.1526/forge-core.el
+  forge-20211126.1526/forge-db.el
+  forge-20211126.1526/forge-gitea.el
+  forge-20211126.1526/forge-github.el
+  forge-20211126.1526/forge-gitlab.el
+  forge-20211126.1526/forge-gogs.el
+  forge-20211126.1526/forge-issue.el
+  forge-20211126.1526/forge-list.el
+  forge-20211126.1526/forge-notify.el
+  forge-20211126.1526/forge-pkg.el
+  forge-20211126.1526/forge-post.el
+  forge-20211126.1526/forge-pullreq.el
+  forge-20211126.1526/forge-repo.el
+  forge-20211126.1526/forge-revnote.el
+  forge-20211126.1526/forge-semi.el
+  forge-20211126.1526/forge-topic.el
+  forge-20211126.1526/forge.el
+  forge-20211126.1526/forge.info
+Built forge in 10.939s, finished at 2021-11-30T02:57:15+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  554 Nov 29 12:41 packages/forge-20211111.2038.entry
-340K -rw-r--r-- 1 root root 340K Nov 29 12:41 packages/forge-20211111.2038.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 29 12:41 packages/forge-badge.svg
-4.0K -rw-r--r-- 1 root root  314 Nov 29 12:41 packages/forge-readme.txt
+4.0K -rw-r--r-- 1 root root  554 Nov 29 23:25 packages/forge-20211111.2038.entry
+340K -rw-r--r-- 1 root root 340K Nov 29 23:25 packages/forge-20211111.2038.tar
+4.0K -rw-r--r-- 1 root root  554 Nov 30 02:57 packages/forge-20211126.1526.entry
+340K -rw-r--r-- 1 root root 340K Nov 30 02:57 packages/forge-20211126.1526.tar
+4.0K -rw-r--r-- 1 root root 1.2K Nov 30 02:57 packages/forge-badge.svg
+4.0K -rw-r--r-- 1 root root  314 Nov 30 02:57 packages/forge-readme.txt

@@ -35,7 +35,7 @@ cnfonts 添加了许多辅助工具，使配置和调节字体和字号的工作
 
    #+BEGIN_EXAMPLE
    (require 'cnfonts)
-   ;; 让 cnfonts 随着 Emacs 自动生效。
+   ;; 让 cnfonts 在 Emacs 启动时自动生效。
    (cnfonts-mode 1)
    #+END_EXAMPLE
 
