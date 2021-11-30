@@ -5,8 +5,8 @@
 ;; Author: Eric Schulte
 ;; Maintainer: Chen Bin (redguardtoo)
 ;; Keywords: mime, mail, email, html
-;; Package-Version: 20210901.244
-;; Package-Commit: 23cc52bb539c898de228fc438cd24ed10213bea3
+;; Package-Version: 20211130.716
+;; Package-Commit: 3b119a22be0ee22d16773e4d9a26478d3c8bf2df
 ;; Homepage: http://github.com/org-mime/org-mime
 ;; Version: 0.2.3
 ;; Package-Requires: ((emacs "25.1"))
@@ -365,9 +365,16 @@ Or else use CURRENT-FILE to calculate path."
          (path (expand-file-name url dir)))
     (cond
      ((string-match-p "^file:///" url)
-      (replace-regexp-in-string "^file://" "" url))
+      (let* ((str (replace-regexp-in-string "^file://" "" url)))
+        (when (and (eq system-type 'windows-nt)
+                   (string-match "^/[a-zA-Z]:" str))
+          ;; remove the first character from "/C:/Windows/File.txt"
+          (setq str (substring str 1)))
+        str))
+
      ((file-exists-p path)
       path)
+
      (t
       (expand-file-name url default-directory)))))
 

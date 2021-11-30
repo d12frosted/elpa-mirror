@@ -4,8 +4,8 @@
 
 ;; Author:  Kien Nguyen <kien.n.quang@gmail.com>
 ;; URL: https://github.com/kiennq/emacs-mini-modeline
-;; Package-Version: 20210725.900
-;; Package-Commit: fb2fc8661b4a32a40b3f5777ae1d69654c263ff0
+;; Package-Version: 20211130.604
+;; Package-Commit: 434b98b22c69c8b3b08e9c267c935591c49a8301
 ;; Version: 0.1
 ;; Keywords: convenience, tools
 ;; Package-Requires: ((emacs "25.1") (dash "2.12.0"))
@@ -160,9 +160,9 @@ Set this to the minimal value that doesn't cause truncation."
         (goto-char (point-max))
         (insert (apply #'format args))))))
 
-(defmacro mini-modeline--overduep (since duration)
+(defsubst mini-modeline--overduep (since duration)
   "Check if time already pass DURATION from SINCE."
-  `(>= (float-time (time-since ,since)) ,duration))
+  (>= (float-time (time-since since)) duration))
 
 (defvar mini-modeline--minibuffer nil)
 (defun mini-modeline-display (&optional arg)
@@ -431,7 +431,7 @@ BODY will be supplied with orig-func and args."
   (redisplay)
   ;; (remove-hook 'post-command-hook #'mini-modeline-display)
   ;; (remove-hook 'pre-redisplay-functions #'mini-modeline-display)
-  (when (timerp (cancel-timer mini-modeline--timer)))
+  (when (timerp mini-modeline--timer) (cancel-timer mini-modeline--timer))
   (mini-modeline-display 'clear)
   (advice-remove #'message #'mini-modeline--reroute-msg)
 
