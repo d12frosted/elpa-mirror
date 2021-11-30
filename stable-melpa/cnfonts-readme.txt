@@ -37,6 +37,9 @@ cnfonts 添加了许多辅助工具，使配置和调节字体和字号的工作
    (require 'cnfonts)
    ;; 让 cnfonts 在 Emacs 启动时自动生效。
    (cnfonts-mode 1)
+   ;; 添加两个字号增大缩小的快捷键
+   ;; (define-key cnfonts-mode-map (kbd "C--") #'cnfonts-decrease-fontsize)
+   ;; (define-key cnfonts-mode-map (kbd "C-=") #'cnfonts-increase-fontsize)
    #+END_EXAMPLE
 
 ** 配置使用
