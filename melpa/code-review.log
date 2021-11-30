@@ -4,10 +4,10 @@ Source:  https://github.com/wandersoncferreira/code-review.git
 
 Updating /mnt/store/melpa/working/code-review/
 Checking out origin/HEAD
-Checking out 6dfdcd0af0cd02177d6106478e632d4545f8f301
+Checking out 7ce1839db71f329cf322b6d31cce0562015b35b6
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/code-review/
-  to /tmp/code-reviewgYn4cF/code-review-20211130.153
+  to /tmp/code-reviewPx3yKw/code-review-20211130.1233
     code-review-comment.el -> code-review-comment.el
     code-review-core.el -> code-review-core.el
     code-review-db.el -> code-review-db.el
@@ -16,20 +16,22 @@ Copying files (->) and directories (=>)
     code-review-section.el -> code-review-section.el
     code-review-utils.el -> code-review-utils.el
     code-review.el -> code-review.el
-Created code-review-20211130.153.tar containing:
-  code-review-20211130.153/
-  code-review-20211130.153/code-review-comment.el
-  code-review-20211130.153/code-review-core.el
-  code-review-20211130.153/code-review-db.el
-  code-review-20211130.153/code-review-github.el
-  code-review-20211130.153/code-review-gitlab.el
-  code-review-20211130.153/code-review-pkg.el
-  code-review-20211130.153/code-review-section.el
-  code-review-20211130.153/code-review-utils.el
-  code-review-20211130.153/code-review.el
-Built code-review in 5.215s, finished at 2021-11-30T09:39:20+0000
+Created code-review-20211130.1233.tar containing:
+  code-review-20211130.1233/
+  code-review-20211130.1233/code-review-comment.el
+  code-review-20211130.1233/code-review-core.el
+  code-review-20211130.1233/code-review-db.el
+  code-review-20211130.1233/code-review-github.el
+  code-review-20211130.1233/code-review-gitlab.el
+  code-review-20211130.1233/code-review-pkg.el
+  code-review-20211130.1233/code-review-section.el
+  code-review-20211130.1233/code-review-utils.el
+  code-review-20211130.1233/code-review.el
+Built code-review in 6.141s, finished at 2021-11-30T13:11:04+0000
  ✓ Success:
+4.0K -rw-r--r-- 1 root root  678 Nov 30 13:11 packages/code-review-20211130.1233.entry
+192K -rw-r--r-- 1 root root 190K Nov 30 13:11 packages/code-review-20211130.1233.tar
 4.0K -rw-r--r-- 1 root root  677 Nov 30 09:39 packages/code-review-20211130.153.entry
 192K -rw-r--r-- 1 root root 190K Nov 30 09:39 packages/code-review-20211130.153.tar
-4.0K -rw-r--r-- 1 root root 1.2K Nov 30 09:39 packages/code-review-badge.svg
-4.0K -rw-r--r-- 1 root root  132 Nov 30 09:39 packages/code-review-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Nov 30 13:11 packages/code-review-badge.svg
+4.0K -rw-r--r-- 1 root root  132 Nov 30 13:11 packages/code-review-readme.txt
