@@ -4,8 +4,8 @@
 
 ;; Author: Vasilij Schneidermann <mail@vasilij.de>
 ;; URL: https://depp.brause.cc/shackle
-;; Package-Version: 20210508.1637
-;; Package-Commit: 4ef05b117c87e1f0d97e0ee74fd2f0bfd07a49b1
+;; Package-Version: 20211118.1129
+;; Package-Commit: f1467db75a8fa5d51c676181fb308ccbf7b05e6f
 ;; Version: 1.0.3
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "24.3") (cl-lib "0.5"))
@@ -340,11 +340,12 @@ afterwards."
 (defun shackle--display-buffer-same (buffer alist)
   "Display BUFFER in the currently selected window.
 ALIST is passed to `shackle--window-display-buffer' internally."
-  (let ((window (shackle--window-display-buffer buffer (selected-window)
-                                                'window alist)))
-    (prog1 window
-      (when shackle-inhibit-window-quit-on-same-windows
-        (shackle--inhibit-window-quit window)))))
+  (unless (window-minibuffer-p)
+    (let ((window (shackle--window-display-buffer
+                   buffer (selected-window) 'window alist)))
+      (prog1 window
+        (when shackle-inhibit-window-quit-on-same-windows
+          (shackle--inhibit-window-quit window))))))
 
 (defun shackle--display-buffer-frame (buffer alist plist)
   "Display BUFFER in a popped up frame.

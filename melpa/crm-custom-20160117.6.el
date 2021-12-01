@@ -4,8 +4,6 @@
 
 ;; Author: Ryan C. Thompson <rct@thompsonclan.org>
 ;; Keywords: completion, minibuffer, multiple elements
-;; Package-Version: 20160117.6
-;; Package-Commit: f1aaccf64306a5f99d9bf7ba815d7ea41c15518d
 ;; URL: https://github.com/DarwinAwardWinner/crm-custom
 ;; Version: 0.5
 ;; Created: 2014-08-15

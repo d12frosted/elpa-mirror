@@ -4,8 +4,8 @@
 
 ;; Author: Vasilij Schneidermann <mail@vasilij.de>
 ;; URL: https://depp.brause.cc/nov.el
-;; Package-Version: 20210323.1105
-;; Package-Commit: b3c7cc28e95fe25ce7b443e5f49e2e45360944a3
+;; Package-Version: 20211130.1805
+;; Package-Commit: 436f5ec473b69a9d3b6cb6405508e3564f61cd4b
 ;; Version: 0.3.4
 ;; Package-Requires: ((dash "2.12.0") (esxml "0.3.6") (emacs "24.4"))
 ;; Keywords: hypermedia, multimedia, epub
@@ -332,7 +332,7 @@ Each alist item consists of the identifier and full path."
       (cons toc-file files))))
 
 (defun nov--content-epub3-files (content manifest files)
-  (let* ((node (esxml-query "package>manifest>item[properties=nav]" content))
+  (let* ((node (esxml-query "package>manifest>item[properties~=nav]" content))
          (id (esxml-node-attribute 'id node)))
     (when (not id)
       (error "EPUB 3 <nav> ID not found"))

@@ -4,7 +4,7 @@
 ;; Author: Jeremie Dimino <jeremie@dimino.org>
 ;; URL: https://github.com/diml/utop
 ;; Package-Version: 20210607.1941
-;; Package-Commit: 560617c64f544dba7fe5b6f1a2ad1a963b3d36e4
+;; Package-Commit: 3145c3f77d835fe2c53c832d5991307e60b0698d
 ;; Licence: BSD3
 ;; Version: 1.11
 ;; Package-Requires: ((emacs "24") (tuareg "2.2.0"))
