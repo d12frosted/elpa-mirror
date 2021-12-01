@@ -52,6 +52,6 @@ Here is sample to skip checking in specified major modes,
                        Info-mode)))))
 
 This program assumes Flyspell is already set up properly.
-If you have problems on Flyspell configuration, check  wucuo's website.
+If you have problems on Flyspell configuration, check wucuo's README.
 
 To ignore specific typo, you can set `wucuo-extra-predicate'.

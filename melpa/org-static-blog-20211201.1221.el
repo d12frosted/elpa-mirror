@@ -6,8 +6,8 @@
 ;; luhuaei, zngguvnf, Qiantan Hong, Jonas Bernoulli, Théo Jacquin,
 ;; K. Scarlet, zsxh
 ;; URL: https://github.com/bastibe/org-static-blog
-;; Package-Version: 20210616.809
-;; Package-Commit: 4738a7bdb24cb4e1d1d5effc23f953e4c76e7713
+;; Package-Version: 20211201.1221
+;; Package-Commit: 6c28f51d9cf6ace03e6fcbe0ce35d0ffdd969820
 ;; Version: 1.5.0
 ;; Package-Requires: ((emacs "24.3"))
 
@@ -213,6 +213,11 @@ in the generated HTML."
 The contents shown in the preview is determined by the values of
 the variables `org-static-blog-preview-start' and
 `org-static-blog-preview-end'."
+  :type '(string)
+  :safe t)
+
+(defcustom org-static-blog-no-post-tag "nonpost"
+  "Do not pushlish the subtree with this tag or property."
   :type '(string)
   :safe t)
 
@@ -655,18 +660,23 @@ The index, archive, tags, and RSS feed are not updated."
         (org-html-html5-fancy t))
     (save-excursion
       (let ((current-buffer (current-buffer))
-	    (buffer-exists (org-static-blog-file-buffer post-filename))
-	    (result nil))
-	(if buffer-exists
-	    (switch-to-buffer buffer-exists)
-	  (find-file post-filename))
-	(setq result
-	      (org-export-as 'org-static-blog-post-bare nil nil nil nil))
-	(basic-save-buffer)
-	(unless buffer-exists
-	  (kill-buffer))
-	(switch-to-buffer current-buffer)
-	result))))
+            (buffer-exists (org-static-blog-file-buffer post-filename))
+            (result nil))
+        (with-temp-buffer
+          (if buffer-exists
+              (insert-buffer-substring buffer-exists)
+            (insert-file-contents post-filename))
+          (org-mode)
+          (goto-char (point-min))
+          (org-map-entries
+           (lambda ()
+             (setq org-map-continue-from (point))
+             (org-cut-subtree))
+           org-static-blog-no-post-tag)
+          (setq result
+                (org-export-as 'org-static-blog-post-bare nil nil nil nil))
+          (switch-to-buffer current-buffer)
+          result)))))
 
 (org-export-define-derived-backend 'org-static-blog-post-bare 'html
   :translate-alist '((template . (lambda (contents info) contents))))
