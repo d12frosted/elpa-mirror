@@ -128,13 +128,12 @@ http://debbugs.gnu.org/db/17/1785.html
 *** 让 cnfonts 随着 Emacs 自动启动
 
 `cnfonts-mode' 命令可以让 cnfonts 随着 Emacs 自动启动，这个命令将
-`cnfonts-set-font-with-saved-fontsize' 添加到下面两个 hook:
+`cnfonts-set-font' 添加到下面两个 hook:
 
 1. `after-make-frame-functions'
 2. `window-setup-hook'
 
-用户也可以手动运行 `cnfonts-set-font-with-saved-fontsize' 来让
-cnfonts 生效。
+用户也可以手动运行 `cnfonts-set-font' 来让 cnfonts 生效。
 
 *** cnfonts 与 org-mode 配合使用
 
