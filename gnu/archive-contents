@@ -509,7 +509,7 @@
 		(:authors
 		 ("Theodor Thornhill" . "theo@thornhill.no")))])
  (csv-mode .
-	   [(1 16)
+	   [(1 17)
 	    ((emacs
 	      (24 1))
 	     (cl-lib
@@ -757,7 +757,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20211127)
+      [(20211201)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar

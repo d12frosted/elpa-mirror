@@ -2,8 +2,8 @@
 
 ;; Author: Alex McGrath <amk@amk.ie>
 ;; URL: https://git.sr.ht/~amk/subsonic.el
-;; Package-Version: 20211130.1709
-;; Package-Commit: 46c6122e633e107c777a8485e0d248fbe5df717f
+;; Package-Version: 20211201.939
+;; Package-Commit: ee2b1f20521e647472be7553242eb2253809e1d1
 ;; Version: 0.2.0
 ;; Keywords: multimedia
 ;; Package-Requires: ((emacs "27.1") (transient "0.2"))
@@ -91,6 +91,11 @@ Used to find the correct authinfo entry."
 (defcustom subsonic-album-list-count 50
   "Number of albums to display in random/newest albums etc."
   :type 'integer
+  :group 'subsonic)
+
+(defcustom subsonic-browse-by-tags t
+  "Browse by folder or by idv3 tags."
+  :type 'boolean
   :group 'subsonic)
 
 (defvar subsonic-mpv--volume subsonic-default-volume)
@@ -433,11 +438,16 @@ subsonic, and ensure subsonic-host is set correctly")))
             (cons (car current) accu))))
       tabulated-list-entries '())))
 
+(defvar subsonic--tracks-extract
+  (if subsonic-browse-by-tags
+	  '("subsonic-response" "album" "song")
+	'("subsonic-response" "directory" "child")))
+
 (defun subsonic-tracks-parse (data)
   "Parse tracks from json DATA."
   (let*
     (
-      (tracks (subsonic-recursive-assoc data '("subsonic-response" "directory" "child")))
+      (tracks (subsonic-recursive-assoc data subsonic--tracks-extract))
       (result
         (mapcar
           (lambda (track)
@@ -455,8 +465,9 @@ subsonic, and ensure subsonic-host is set correctly")))
   "Refresh the list of subsonic tracks from ID."
   (setq tabulated-list-entries
     (subsonic-tracks-parse
-      (subsonic-get-json (subsonic-build-url "/getMusicDirectory.view" `(("id" . ,id)))))))
-
+     (subsonic-get-json (if subsonic-browse-by-tags
+							(subsonic-build-url "/getAlbum.view" `(("id" . ,id)))
+						  (subsonic-build-url "/getMusicDirectory.view" `(("id" . ,id))))))))
 
 (defun subsonic-play-tracks ()
   "Play all the tracks after the point in the list."
