@@ -6,8 +6,8 @@
 ;;              See README.md for full list of contributors.
 ;; Created:     Thu Mar 2 22:19:19 CET 2017
 ;; Version:     1.0.0
-;; Package-Version: 20211125.408
-;; Package-Commit: 3710149890c04aafd09c1d8c979b588548d3eaf2
+;; Package-Version: 20211201.130
+;; Package-Commit: 4aaf36db2bbbb8aef80a39e9af01ae18d017f103
 ;; Package-Requires: ((emacs "24.1"))
 ;; URL:         https://github.com/m-cat/nimbus-theme
 ;; Keywords:    faces
@@ -122,7 +122,7 @@
        (name           dark-green)
        (number         orange)
        (selection      purple-bg)
-       (separator      orange)
+       (separator      brown)
        (special        blue-gray)
        (summary        red)
        (tag            dark-blue)
@@ -1132,11 +1132,11 @@
    `(web-mode-function-name-face ((t (:inherit font-lock-function-name-face))))
    `(web-mode-html-attr-custom-face ((t (:inherit font-lock-comment-face))))
    `(web-mode-html-attr-equal-face ((t (:inherit font-lock-comment-face))))
-   `(web-mode-html-attr-name-face ((t (:inherit font-lock-comment-face))))
+   `(web-mode-html-attr-name-face ((t (:foreground ,special))))
    `(web-mode-html-attr-value-face ((t (:inherit font-lock-string-face))))
-   `(web-mode-html-tag-bracket-face ((t (:inherit font-lock-comment-face))))
-   `(web-mode-html-tag-custom-face ((t (:inherit font-lock-comment-face))))
-   `(web-mode-html-tag-face ((t (:inherit font-lock-comment-face))))
+   `(web-mode-html-tag-bracket-face ((t (:foreground ,separator))))
+   `(web-mode-html-tag-custom-face ((t (:foreground ,special))))
+   `(web-mode-html-tag-face ((t (:foreground ,dark-green))))
    `(web-mode-javascript-comment-face ((t (:inherit font-lock-comment-face))))
    `(web-mode-javascript-string-face ((t (:inherit font-lock-string-face))))
    `(web-mode-json-comment-face ((t (:inherit font-lock-comment-face))))
