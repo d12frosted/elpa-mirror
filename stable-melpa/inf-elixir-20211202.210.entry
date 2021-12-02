@@ -1,0 +1,11 @@
+(inf-elixir .
+	    [(20211202 210)
+	     ((emacs
+	       (25 1)))
+	     "Run an interactive Elixir shell" single
+	     ((:commit . "acb948ca41a862c8c9b3f61ad576dec2c30d0052")
+	      (:authors
+	       ("Jonathan Arnett" . "jonathan.arnett@protonmail.com"))
+	      (:maintainer "Jonathan Arnett" . "jonathan.arnett@protonmail.com")
+	      (:keywords "languages" "processes" "tools")
+	      (:url . "https://github.com/J3RN/inf-elixir"))])

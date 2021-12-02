@@ -1958,6 +1958,16 @@
 	   (:authors
 	    ("Junpeng Qiu" . "qjpchmail@gmail.com"))
 	   (:keywords "extensions"))])
+ (parser-generator .
+		   [(0 1 3)
+		    ((emacs
+		      (26)))
+		    "Parser Generator library" tar
+		    ((:url . "https://github.com/cjohansson/emacs-parser-generator")
+		     (:keywords "tools" "convenience")
+		     (:maintainer "Christian Johansson" . "christian@cvj.se")
+		     (:authors
+		      ("Christian Johansson" . "christian@cvj.se")))])
  (path-iterator .
 		[(1 0)
 		 ((emacs
@@ -2838,7 +2848,7 @@
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de")))])
  (vertico-posframe .
-		   [(0 4 1)
+		   [(0 4 2)
 		    ((emacs
 		      (26 0))
 		     (posframe
