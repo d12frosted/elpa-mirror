@@ -4,8 +4,8 @@
 ;;
 ;; Author: Ethan Leba <ethanleba5@gmail.com>
 ;; Version: 0.1.0
-;; Package-Version: 20211120.2246
-;; Package-Commit: e6060a69e870efcff6a30f3a4c3137e0e2ca47a8
+;; Package-Version: 20211202.1457
+;; Package-Commit: bf43cae6579ce41d58eb2a13156dcee39345c6ba
 ;; Homepage: https://github.com/ethan-leba/tree-edit
 ;; Package-Requires: ((emacs "27.0") (tree-edit "0.1.0") (tree-sitter "0.15.0") (evil "1.0.0") (avy "0.5.0") (s "0.0.0"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
@@ -74,7 +74,10 @@ moving the sibling index by the provided value."
   (let ((parent (tsc-get-parent node)))
     (cond
      ((not parent) (user-error "No significant node past the current!"))
-     ((member (tsc-node-type parent) tree-edit-significant-node-types) parent)
+     ((--any (member (tsc-node-type parent)
+                     (cons it (alist-get it tree-edit--subtypes '())))
+             tree-edit-significant-node-types)
+      parent)
      (t (evil-tree-edit--goto-sig-parent parent)))))
 
 ;;* Globals: navigation
@@ -150,13 +153,14 @@ NODE-TYPE can be a symbol or a list of symbol."
 (defun evil-tree-edit-wrap-node (type)
   "Wrap the current node in a node of selected TYPE."
   (evil-tree-edit--preserve-location
-    (let ((node-text (tsc-node-text evil-tree-edit-current-node)))
-      (evil-tree-edit-exchange type)
-      (unwind-protect
-          (evil-tree-edit-avy-jump (alist-get type tree-edit--supertypes)
-                                   (-lambda ((_ . node)) (tree-edit--valid-replacement-p type node)))
-        ;; If avy fails, replace the old node back
-        (evil-tree-edit-exchange node-text)))))
+   (let* ((node-type (tsc-node-type evil-tree-edit-current-node))
+          (node-text (tsc-node-text evil-tree-edit-current-node)))
+     (evil-tree-edit-exchange type)
+     (unwind-protect
+         (evil-tree-edit-avy-jump (alist-get node-type tree-edit--supertypes)
+                                  (-lambda ((_ . node)) (tree-edit--valid-replacement-p type node)))
+       ;; If avy fails, replace the old node back
+       (evil-tree-edit-exchange node-text)))))
 
 (defun evil-tree-edit-exchange (type-or-text)
   "Exchange current node for TYPE-OR-TEXT.
@@ -165,7 +169,7 @@ See `tree-edit-exchange'."
 
   (interactive)
   (evil-tree-edit--preserve-location
-    (tree-edit-exchange type-or-text evil-tree-edit-current-node)))
+   (tree-edit-exchange type-or-text evil-tree-edit-current-node)))
 
 (defun evil-tree-edit-delete ()
   "Delete the current node.
@@ -173,7 +177,7 @@ See `tree-edit-exchange'."
 See `tree-edit-delete'."
   (interactive)
   (evil-tree-edit--preserve-location
-    (tree-edit-delete evil-tree-edit-current-node)))
+   (tree-edit-delete evil-tree-edit-current-node)))
 
 (defun evil-tree-edit-raise ()
   "Move the current node up the syntax tree until a valid replacement is found.
@@ -181,7 +185,8 @@ See `tree-edit-delete'."
 See `tree-edit-raise'."
   (interactive)
   (let ((raised-node (tree-edit-raise evil-tree-edit-current-node)))
-    (setq evil-tree-edit-current-node raised-node)))
+    (setq evil-tree-edit-current-node raised-node))
+  (evil-tree-edit--update-overlay))
 
 (defun evil-tree-edit-insert-sibling (type-or-text &optional before)
   "Insert a node of the given TYPE-OR-TEXT next to the current node.
@@ -192,7 +197,7 @@ current, otherwise after.
 See `tree-edit-insert-sibling'."
   (interactive)
   (evil-tree-edit--preserve-location
-    (tree-edit-insert-sibling type-or-text evil-tree-edit-current-node before))
+   (tree-edit-insert-sibling type-or-text evil-tree-edit-current-node before))
   (unless before
     (evil-tree-edit-goto-next-sibling)))
 
@@ -204,20 +209,20 @@ See `tree-edit-insert-sibling'."
   "Insert a node of the given TYPE-OR-TEXT inside of the current node."
   (interactive)
   (evil-tree-edit--preserve-location
-    (tree-edit-insert-child type-or-text evil-tree-edit-current-node))
+   (tree-edit-insert-child type-or-text evil-tree-edit-current-node))
   (evil-tree-edit-goto-child))
 
 (defun evil-tree-edit-slurp ()
   "Transform current node's next sibling into it's leftmost child, if possible."
   (interactive)
   (evil-tree-edit--preserve-location
-    (tree-edit-slurp evil-tree-edit-current-node)))
+   (tree-edit-slurp evil-tree-edit-current-node)))
 
 (defun evil-tree-edit-barf ()
   "Transform current node's leftmost child into it's next sibling, if possible."
   (interactive)
   (evil-tree-edit--preserve-location
-      (tree-edit-barf evil-tree-edit-current-node)))
+   (tree-edit-barf evil-tree-edit-current-node)))
 
 ;;* Mode and evil state definitions
 (defun evil-tree-edit--update-overlay ()
@@ -252,7 +257,7 @@ See `tree-edit-insert-sibling'."
     (tree-edit--restore-location evil-tree-edit--return-to-tree-state)
     (setq evil-tree-edit--return-to-tree-state nil)))
 
-(defun evil-tree-edit-teardown ()
+(defun evil-tree-edit--teardown ()
   "De-activate tree-edit state."
   (when evil-tree-edit--node-overlay
     (delete-overlay evil-tree-edit--node-overlay)))
@@ -279,16 +284,16 @@ See `tree-edit-insert-sibling'."
         (user-error "Tree-edit does not support %s!" (symbol-name major-mode)))
       (unless (featurep language-file)
         (require language-file)
-        (evil-tree-edit--set-state-bindings major-mode)))
+        (evil-tree-edit-set-state-bindings major-mode)))
     (tree-sitter-mode)
     ;; HACK: Above mode binding won't come into effect until the state is changed.
     (evil-normal-state)
-    (add-hook 'before-revert-hook #'evil-tree-edit-teardown nil 'local)
+    (add-hook 'before-revert-hook #'evil-tree-edit--teardown nil 'local)
     ;; TODO: can we just run these on load?
     (add-hook 'evil-tree-edit-movement-hook #'evil-tree-edit--update-overlay nil 'local)
     (add-hook 'evil-normal-state-entry-hook #'evil-tree-edit--re-enter-tree-state nil 'local))
    (t
-    (remove-hook 'before-revert-hook #'evil-tree-edit-teardown 'local)
+    (remove-hook 'before-revert-hook #'evil-tree-edit--teardown 'local)
     (remove-hook 'evil-normal-state-entry-hook #'evil-tree-edit--re-enter-tree-state 'local))))
 
 (defun define-evil-tree-edit-verb (key func &optional wrap)
@@ -324,7 +329,7 @@ If WRAP is t, include :wrap-override."
   "Create a sparse keymap where keys default to undefined."
   (make-composed-keymap (make-sparse-keymap) evil-suppress-map))
 
-(defun evil-tree-edit--set-state-bindings (mode)
+(defun evil-tree-edit-set-state-bindings (mode)
   "Set keybindings for MODE in `evil-tree-state'.
 
 Should only be used in the context of mode-local bindings, as

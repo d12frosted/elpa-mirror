@@ -5,8 +5,8 @@
 ;; Author: Thierry Banel tbanelwebmin at free dot fr
 ;; Contributors:
 ;; Version: 0.1
-;; Package-Version: 20210828.715
-;; Package-Commit: f09ba7fd304b36773a337323a0749cc681ce5049
+;; Package-Version: 20211202.1204
+;; Package-Commit: e6a6d1265e1aa93a5b5228ebd3c40fc37fe4496a
 ;; Keywords: org, table, join, filtering
 ;; Package-Requires: ((cl-lib "0.5"))
 
@@ -42,12 +42,13 @@
 ;;; Code:
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-;; The function (org-table-to-lisp) has been greatly enhanced
+;; The function (org-table-to-lisp) have been greatly enhanced
 ;; in Org Mode version 9.4
 ;; To benefit from this speedup in older versions of Org Mode,
 ;; this function is copied here with a slightly different name
+;; It has also undergone near 2x speedup
 
-(defun org-table-to-lisp-9-4 (&optional txt)
+(defun org-table-to-lisp-post-9-4 (&optional txt)
   "Convert the table at point to a Lisp structure.
 
 The structure will be a list.  Each item is either the symbol `hline'
@@ -55,25 +56,34 @@ for a horizontal separator line, or a list of field values as strings.
 The table is taken from the parameter TXT, or from the buffer at point."
   (if txt
       (with-temp-buffer
+	(buffer-disable-undo)
         (insert txt)
         (goto-char (point-min))
-        (org-table-to-lisp-9-4))
+        (org-table-to-lisp-post-9-4))
     (save-excursion
       (goto-char (org-table-begin))
-      (let ((table nil))
+      (let ((table nil)
+	    (inhibit-changing-match-data t)
+	    q
+	    p
+	    row)
         (while (re-search-forward "\\=[ \t]*|" nil t)
-	  (let ((row nil))
-	    (if (looking-at "-")
-		(push 'hline table)
-	      (while (not (progn (skip-chars-forward " \t") (eolp)))
-		(push (buffer-substring-no-properties
-		       (point)
-		       (progn (re-search-forward "[ \t]*\\(|\\|$\\)")
-			      (match-beginning 0)))
-		      row))
-	      (push (nreverse row) table)))
+	  (if (looking-at "-")
+	      (push 'hline table)
+	    (setq row nil)
+	    (while (progn (skip-chars-forward " \t") (not (eolp)))
+	      (push
+	       (buffer-substring-no-properties
+		(setq q (point))
+		(if (progn (skip-chars-forward "^|\n") (eolp))
+		    (1- (point))
+		  (setq p (1+ (point)))
+		  (skip-chars-backward " \t" q)
+		  (prog1 (point) (goto-char p))))
+	       row))
+	    (push (nreverse row) table))
 	  (forward-line))
-        (nreverse table)))))
+	(nreverse table)))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Utility functions
@@ -87,7 +97,7 @@ The table is taken from the parameter TXT, or from the buffer at point."
   `(unless (stringp ,place)
      (setq ,place (format "%s" ,place))))
 
-(defun orgtbl--join-colname-to-int (colname table &optional err)
+(defun orgtbl-to-aggregated-table-colname-to-int (colname table &optional err)
   "Convert the column name into an integer (first column is numbered 1)
 COLNAME may be:
 - a dollar form, like $5 which is converted to 5
@@ -100,13 +110,21 @@ an error is generated if ERR optional parameter is true
 otherwise nil is returned."
   (if (symbolp colname)
       (setq colname (symbol-name colname)))
-  (if (or (string-match "^'\\(.*\\)'$" colname)
-	  (string-match "^\"\\(.*\\)\"$" colname))
+  (if (string-match
+       (rx
+	bol
+	(or
+	 (seq ?'  (group-n 1 (* (not (any ?' )))) ?' )
+	 (seq ?\" (group-n 1 (* (not (any ?\")))) ?\"))
+	eol)
+       colname)
       (setq colname (match-string 1 colname)))
   ;; skip first hlines if any
   (while (not (listp (car table)))
-    (pop-simple table))
-  (cond ((equal colname "hline")
+    (setq table (cdr table)))
+  (cond ((equal colname "")
+	 (and err (user-error "Empty column name")))
+	((equal colname "hline")
 	 0)
 	((string-match "^\\$\\([0-9]+\\)$" colname)
 	 (let ((n (string-to-number (match-string 1 colname))))
@@ -114,9 +132,6 @@ otherwise nil is returned."
 	       n
 	     (if err
 		 (user-error "Column %s outside table" colname)))))
-	((string-match "^\\([0-9]+\\)$" colname)
-	 (user-error "%s as column name no longer supported, write $%s"
-		     colname colname))
 	(t
 	 (or
 	  (cl-loop
@@ -160,23 +175,35 @@ $1, $2..."
     (save-excursion
       (goto-char (point-min))
       (while (let ((case-fold-search t))
-	       (re-search-forward "^[ \t]*#\\+\\(tbl\\)?name:[ \t]*\\(.*\\)" nil t))
-	(push (match-string-no-properties 2) tables)))
+	       (re-search-forward
+		(rx bol
+		    (* (any " \t")) "#+" (? "tbl") "name:"
+		    (* (any " \t")) (group (* not-newline)))
+		nil t))
+	(push (match-string-no-properties 1) tables)))
     tables))
 
 (defun orgtbl-get-distant-table (name-or-id)
   "Find a table in the current buffer named NAME-OR-ID
 and returns it as a lisp list of lists.
 An horizontal line is translated as the special symbol `hline'."
-  (stringify name-or-id)
+  (unless (stringp name-or-id)
+    (setq name-or-id (format "%s" name-or-id)))
   (let (buffer loc)
     (save-excursion
       (goto-char (point-min))
       (if (let ((case-fold-search t))
 	    (re-search-forward
-	     (concat "^[ \t]*#\\+\\(tbl\\)?name:[ \t]*"
-		     (regexp-quote name-or-id)
-		     "[ \t]*$")
+	     ;; This concat is automatically done by new versions of rx
+	     ;; using "literal". This appeared on june 26, 2019
+	     ;; For older versions of Emacs, we fallback to concat
+	     (concat
+	      (rx bol
+		  (* (any " \t")) "#+" (? "tbl") "name:"
+		  (* (any " \t")))
+	      (regexp-quote name-or-id)
+	      (rx (* (any " \t"))
+		  eol))
 	     nil t))
 	  (setq buffer (current-buffer)
 		loc (match-beginning 0))
@@ -193,7 +220,16 @@ An horizontal line is translated as the special symbol `hline'."
 	(unless (and (re-search-forward "^\\(\\*+ \\)\\|[ \t]*|" nil t)
 		     (not (match-beginning 1)))
 	  (user-error "Cannot find a table at NAME or ID %s" name-or-id))
-	(org-table-to-lisp-9-4)))))
+	(org-table-to-lisp-post-9-4)))))
+
+(defun orgtbl-aggregate-make-spaces (n spaces-cache)
+  "Makes a string of N spaces.
+Caches results to avoid re-allocating again and again
+the same string"
+  (if (< n (length spaces-cache))
+      (or (aref spaces-cache n)
+	  (aset spaces-cache n (make-string n ? )))
+    (make-string n ? )))
 
 (defun orgtbl-insert-elisp-table (table)
   "Insert TABLE in current buffer at point.
@@ -205,16 +241,17 @@ special symbol 'hline to mean an horizontal line."
 		  maximize (if (listp row) (length row) 0)))
 	 (maxwidths  (make-list nbcols 1))
 	 (numbers    (make-list nbcols 0))
-	 (non-empty  (make-list nbcols 0)))
+	 (non-empty  (make-list nbcols 0))
+	 (spaces-cache (make-vector 100 nil)))
 
-    ;; remove text properties, compute maxwidths
+    ;; compute maxwidths
     (cl-loop for row in table
 	     do
 	     (cl-loop for cell on row
 		      for mx on maxwidths
 		      for nu on numbers
 		      for ne on non-empty
-		      for cellnp = (substring-no-properties (or (car cell) ""))
+		      for cellnp = (or (car cell) "")
 		      do (setcar cell cellnp)
 		      if (string-match-p org-table-number-regexp cellnp)
 		      do (setcar nu (1+ (car nu)))
@@ -239,31 +276,33 @@ special symbol 'hline to mean an horizontal line."
 	       ;; (insert (concat a b c)) is faster than
 	       ;; (insert a b c)
 	       (insert
-		(concat
-		 (if (listp row)
-		     (cl-loop for cell in row
-			      for mx in maxwidths
-			      for nu in numbers
-			      for pad = (- mx (length cell))
-			      concat "| "
-			      ;; no alignment
-			      if (<= pad 0)
-			      concat cell
-			      ;; left alignment
-			      else if nu
-			      concat cell and
-			      concat (make-string pad ? )
-			      ;; right alignment
-			      else
-			      concat (make-string pad ? ) and
-			      concat cell
-			      concat " ")
-		   (cl-loop with bar = "|"
-			    for mx in maxwidths
-			    concat bar
-			    concat (make-string (+ mx 2) ?-)
-			    do (setq bar "+")))
-		 "|\n"))))))
+		(mapconcat
+		 #'identity
+		 (nconc
+		  (if (listp row)
+		      (cl-loop for cell in row
+			       for mx in maxwidths
+			       for nu in numbers
+			       for pad = (- mx (length cell))
+			       collect "| "
+			       ;; no alignment
+			       if (<= pad 0)
+			       collect cell
+			       ;; left alignment
+			       else if nu
+			       collect cell and
+			       collect (orgtbl-aggregate-make-spaces pad spaces-cache)
+			       ;; right alignment
+			       else
+			       collect (orgtbl-aggregate-make-spaces pad spaces-cache) and
+			       collect cell
+			       collect " ")
+		    (cl-loop for bar = "|" then "+"
+			     for mx in maxwidths
+			     collect bar
+			     collect (make-string (+ mx 2) ?-)))
+		  (list "|\n"))
+		 ""))))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; In-place mode
@@ -295,7 +334,7 @@ current row is kept, with empty cells appended to it."
   (interactive)
   (org-table-check-inside-data-field)
   (let ((col (org-table-current-column))
-	(tbl (org-table-to-lisp-9-4))
+	(tbl (org-table-to-lisp-post-9-4))
 	(pt (line-number-at-pos))
 	(cn (- (point) (point-at-bol))))
     (unless ref-table
@@ -386,8 +425,8 @@ Returns MASTABLE enriched with material from REFTABLE."
     (while (eq (car reftable) 'hline)
       (pop-simple reftable))
     ;; convert column-names to numbers
-    (setq mascol (1- (orgtbl--join-colname-to-int mascol mastable t)))
-    (setq refcol (1- (orgtbl--join-colname-to-int refcol reftable t)))
+    (setq mascol (1- (orgtbl-to-aggregated-table-colname-to-int mascol mastable t)))
+    (setq refcol (1- (orgtbl-to-aggregated-table-colname-to-int refcol reftable t)))
     ;; split header and body
     (setq refbody (memq 'hline reftable))
     (if (not refbody)
