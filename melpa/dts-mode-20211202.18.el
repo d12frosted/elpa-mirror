@@ -3,8 +3,8 @@
 ;; Copyright (C) 2014  Ben Gamari
 
 ;; Version: 0.1.0
-;; Package-Version: 20161103.1223
-;; Package-Commit: 9ee0854446dcc6c53d2b8d2941051768dba50344
+;; Package-Version: 20211202.18
+;; Package-Commit: 32517e7eeeccc785b7c669fd5e93c5df45597ef1
 ;; Author: Ben Gamari <ben@smart-cactus.org>
 ;; Keywords: languages
 
@@ -45,8 +45,8 @@
 
 (defvar dts-mode-syntax-table
   (let ((table (make-syntax-table)))
-    (modify-syntax-entry ?<  "(" table)
-    (modify-syntax-entry ?>  ")" table)
+    (modify-syntax-entry ?<  "(>" table)
+    (modify-syntax-entry ?>  ")<" table)
 
     (modify-syntax-entry ?&  "." table)
     (modify-syntax-entry ?|  "." table)
