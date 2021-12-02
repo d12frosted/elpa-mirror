@@ -20,7 +20,8 @@ Table of Contents
 9. Problematic completion commands
 .. 1. `org-refile'
 .. 2. `tmm-menubar'
-.. 3. Tramp hostname completion
+.. 3. `ffap-menu'
+.. 4. Tramp hostname completion
 10. Contributions
 
 
@@ -38,7 +39,8 @@ Table of Contents
   tables. Vertico only provides the completion UI but aims to be
   flexible and extensible. Additional enhancements are available as
   [extensions] or [complementary packages]. The code base is small and
-  maintainable (`vertico.el' is well below 1000 lines of code).
+  maintainable (`vertico.el' is only about 600 lines of code without
+  white space and comments).
 
 
 [extensions] See section 5
@@ -163,8 +165,12 @@ Table of Contents
   │   (setq enable-recursive-minibuffers t))
   └────
 
+  See also the [Vertico Wiki] for additional configuration tips.
+
 
 [GNU ELPA] <http://elpa.gnu.org/packages/vertico.html>
+
+[Vertico Wiki] <https://github.com/minad/vertico/wiki>
 
 4.1 Completion styles and TAB completion
 ────────────────────────────────────────
@@ -238,12 +244,13 @@ Table of Contents
   │ 	       args)))
   └────
 
-  This also affects TAB completion in the minibuffer when `M-:'
-  (`eval-expression') is used.
+  The `completion-in-region-function' setting also affects TAB
+  completion in the minibuffer when `M-:' (`eval-expression') is used.
 
   You may also want to look into my [Corfu] package, which provides a
-  minimal completion system for completion-in-region using
-  overlays. Corfu is developed in the same spirit as Vertico.
+  minimal completion system for `completion-in-region' in a child frame
+  popup. Corfu is also a narrowly focused package and developed in the
+  same spirit as Vertico.
 
 
 [Corfu] <https://github.com/minad/corfu>
@@ -264,40 +271,43 @@ Table of Contents
 5 Extensions
 ════════════
 
-  *NOTE*: The extensions currently require manual installation, e.g.,
-  via `package-install-file'. Please ensure that you are using the
-  /newest/ Vertico commit when using extensions.
-
   We maintain small extension packages to Vertico in this repository in
-  the subdirectory [extensions/]. The extensions can be installed
-  additionally to Vertico. Currently these extensions are available:
+  the subdirectory [extensions/]. The extensions are installed together
+  with Vertico if you pull the package from ELPA. The extensions are of
+  course inactive by default and can be enabled manually if
+  desired. Furthermore it is possible to install all of the files
+  separately, both `vertico.el' and the `vertico-*.el'
+  extensions. Currently the following extensions come with the Vertico
+  ELPA package:
 
-  • [vertico-buffer.el]: `vertico-buffer-mode' to display Vertico in a
+  • [vertico-buffer]: `vertico-buffer-mode' to display Vertico in a
     separate buffer
-  • [vertico-directory.el]: Commands for Ido-like directory navigation
-  • [vertico-flat.el]: `vertico-flat-mode' to enable a flat, horizontal
+  • [vertico-directory]: Commands for Ido-like directory navigation
+  • [vertico-flat]: `vertico-flat-mode' to enable a flat, horizontal
     display
-  • [vertico-grid.el]: `vertico-grid-mode' to enable a grid display
-  • [vertico-indexed.el]: `vertico-indexed-mode' to select indexed
+  • [vertico-grid]: `vertico-grid-mode' to enable a grid display
+  • [vertico-indexed]: `vertico-indexed-mode' to select indexed
     candidates with prefix arguments
-  • [vertico-mouse.el]: `vertico-mouse-mode' to support for scrolling
-    and candidate selection
-  • [vertico-quick.el]: Commands to select using Avy-style quick keys
-  • [vertico-repeat.el]: The command `vertico-repeat' repeats the last
+  • [vertico-mouse]: `vertico-mouse-mode' to support for scrolling and
+    candidate selection
+  • [vertico-quick]: Commands to select using Avy-style quick keys
+  • [vertico-repeat]: The command `vertico-repeat' repeats the last
     completion session
-  • [vertico-reverse.el]: `vertico-reverse-mode' to reverse the display
+  • [vertico-reverse]: `vertico-reverse-mode' to reverse the display
 
-  With these extensions it is possible to adapt Vertico heavily such
-  that it matches your preference or behaves similar to familiar
-  UIs. The combination `vertico-flat' plus `vertico-directory' resembles
-  Ido in look and feel.
+  With these extensions it is possible to adapt Vertico such that it
+  matches your preference or behaves similar to other familiar UIs. For
+  example, the combination `vertico-flat' plus `vertico-directory'
+  resembles Ido in look and feel. For an interface similar to Helm, the
+  extension `vertico-buffer' allows you to configure more freely where
+  the completion buffer opens, instead of growing the minibuffer.
 
-  Configuration example for `vertico-directory.el':
+  Configuration example for `vertico-directory':
 
   ┌────
   │ ;; Configure directory extension.
-  │ ;; NOTE: The file `vertico-directory.el' must be installed manually.
   │ (use-package vertico-directory
+  │   :ensure nil
   │   ;; More convenient directory navigation commands
   │   :bind (:map vertico-map
   │ 	      ("RET" . vertico-directory-enter)
@@ -310,31 +320,31 @@ Table of Contents
 
 [extensions/] <https://github.com/minad/vertico/tree/main/extensions>
 
-[vertico-buffer.el]
+[vertico-buffer]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-buffer.el>
 
-[vertico-directory.el]
+[vertico-directory]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-directory.el>
 
-[vertico-flat.el]
+[vertico-flat]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-flat.el>
 
-[vertico-grid.el]
+[vertico-grid]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-grid.el>
 
-[vertico-indexed.el]
+[vertico-indexed]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-indexed.el>
 
-[vertico-mouse.el]
+[vertico-mouse]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-mouse.el>
 
-[vertico-quick.el]
+[vertico-quick]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-quick.el>
 
-[vertico-repeat.el]
+[vertico-repeat]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-repeat.el>
 
-[vertico-reverse.el]
+[vertico-reverse]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-reverse.el>
 
 
@@ -522,7 +532,22 @@ Table of Contents
   └────
 
 
-9.3 Tramp hostname completion
+9.3 `ffap-menu'
+───────────────
+
+  The command `ffap-menu' shows the `=*Completions*' buffer by default
+  like `tmm-menubar', which is unnecessary with Vertico. This completion
+  buffer can be disabled as follows.
+
+  ┌────
+  │ (advice-add #'ffap-menu-ask :around (lambda (&rest args)
+  │ 				 (cl-letf (((symbol-function #'minibuffer-completion-help)
+  │ 					    #'ignore))
+  │ 				   (apply args))))
+  └────
+
+
+9.4 Tramp hostname completion
 ─────────────────────────────
 
   In combination with Orderless, hostnames are not made available for

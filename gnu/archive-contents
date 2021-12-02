@@ -825,12 +825,12 @@
 		      ("William Xu" . "william.xwl@gmail.com"))
 		     (:maintainer "William Xu" . "william.xwl@gmail.com"))])
  (elisp-benchmarks .
-		   [(1 12)
+		   [(1 13)
 		    nil "elisp benchmarks collection" tar
-		    ((:maintainer "Andrea Corallo" . "akrl@sdf.org")
+		    ((:keywords "languages" "lisp")
+		     (:maintainer "Andrea Corallo" . "akrl@sdf.org")
 		     (:authors
 		      ("Andrea Corallo" . "akrl@sdf.org"))
-		     (:keywords "languages" "lisp")
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html"))])
  (embark .
 	 [(0 13)
@@ -2829,7 +2829,7 @@
 		  ("Michael McNamara" . "mac@verilog.com")
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org")))])
  (vertico .
-	  [(0 16)
+	  [(0 17)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar
