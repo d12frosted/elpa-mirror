@@ -62,14 +62,12 @@ font-lock or some basic group).  You are encouraged to report any
 missing package or change you would like to see.
 
     ace-window
-    ag
     alert
     all-the-icons
     annotate
     ansi-color
     anzu
     apropos
-    apt-sources-list
     artbollocks-mode
     auctex and TeX
     auto-dim-other-buffers
@@ -82,7 +80,6 @@ missing package or change you would like to see.
     boon
     bookmark
     breakpoint (provided by built-in gdb-mi.el)
-    buffer-expose
     calendar and diary
     calfw
     centaur-tabs
@@ -100,7 +97,6 @@ missing package or change you would like to see.
     corfu
     counsel
     counsel-css
-    counsel-org-capture-string
     cov
     cperl-mode
     css-mode
@@ -112,7 +108,6 @@ missing package or change you would like to see.
     dashboard (emacs-dashboard)
     deadgrep
     debbugs
-    define-word
     deft
     dictionary
     diff-hl
@@ -125,15 +120,12 @@ missing package or change you would like to see.
     dired-git-info
     dired-narrow
     dired-subtree
-    diredc
     diredfl
     diredp (dired+)
-    disk-usage
     display-fill-column-indicator-mode
     doom-modeline
     dynamic-ruler
     easy-jekyll
-    easy-kill
     ebdb
     ediff
     eglot
@@ -170,7 +162,6 @@ missing package or change you would like to see.
     flycheck-posframe
     flymake
     flyspell
-    flyspell-correct
     flx
     freeze-it
     frog-menu
@@ -182,10 +173,8 @@ missing package or change you would like to see.
     geiser
     git-commit
     git-gutter (and variants)
-    git-lens
     git-rebase
     git-timemachine
-    git-walktree
     gnus
     gotest
     golden-ratio-scroll-screen
@@ -194,20 +183,14 @@ missing package or change you would like to see.
     helm-switch-shell
     helm-xref
     helpful
-    highlight-blocks
-    highlight-defined
-    highlight-escape-sequences (`hes-mode')
     highlight-indentation
     highlight-numbers
-    highlight-symbol
-    highlight-tail
     highlight-thing
     hl-defined
     hl-fill-column
     hl-line-mode
     hl-todo
     hydra
-    hyperlist
     ibuffer
     icomplete
     ido-mode
@@ -221,7 +204,6 @@ missing package or change you would like to see.
     interaction-log
     ioccur
     isearch, occur, etc.
-    isl (isearch-light)
     ivy
     ivy-posframe
     jira (org-jira)
@@ -245,22 +227,18 @@ missing package or change you would like to see.
     markup-faces (`adoc-mode')
     mentor
     messages
-    minibuffer-line
     minimap
     mmm-mode
     mode-line
     mood-line
     mpdel
     mu4e
-    mu4e-conversation
     multiple-cursors
     nano-modeline
     neotree
-    no-emoji
     notmuch
     num3-mode
     nxml-mode
-    objed
     orderless
     org
     org-journal
@@ -280,14 +258,11 @@ missing package or change you would like to see.
     pandoc-mode
     paradox
     paren-face
-    parrot
     pass
     pdf-tools
     persp-mode
     perspective
     phi-grep
-    phi-search
-    pkgbuild-mode
     pomidor
     popup
     powerline
@@ -299,7 +274,6 @@ missing package or change you would like to see.
     quick-peek
     racket-mode
     rainbow-blocks
-    rainbow-identifiers
     rainbow-delimiters
     rcirc
     recursion-indicator
@@ -308,7 +282,6 @@ missing package or change you would like to see.
     ripgrep
     rmail
     ruler-mode
-    sallet
     selectrum
     selectrum-prescient
     semantic
@@ -325,13 +298,10 @@ missing package or change you would like to see.
     smerge
     spaceline
     speedbar
-    spell-fu
-    spray
     stripes
     suggest
     switch-window
     swiper
-    swoop
     sx
     symbol-overlay
     syslog-mode
@@ -353,13 +323,11 @@ missing package or change you would like to see.
     undo-tree
     vc (vc-dir.el, vc-hooks.el)
     vc-annotate (C-x v g)
-    vdiff
     vertico
     vertico-quick
     vimish-fold
     visible-mark
     visual-regexp
-    volatile-highlights
     vterm
     wcheck-mode
     web-mode
