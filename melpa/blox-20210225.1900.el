@@ -4,8 +4,6 @@
 
 ;; Author: Kenneth Loeffler <kenneth.loeffler@outlook.com>
 ;; Version: 0.3.0
-;; Package-Version: 20210225.1900
-;; Package-Commit: 2bf0e618451fb1da11263d8a35ffcd9210590c0a
 ;; Keywords: roblox, rojo, tools
 ;; URL: https://github.com/kennethloeffler/blox
 ;; Package-Requires: ((emacs "25.1"))
