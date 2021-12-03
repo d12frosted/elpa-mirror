@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/go-eldoc.git
 
 Updating /mnt/store/melpa/working/go-eldoc/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/emacsorphanage/go-eldoc.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out cbbd2ea1e94a36004432a9ac61414cb5a95a39bd
+Built go-eldoc in 5.186s, finished at 2021-12-03T02:01:02+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  16K Dec  3 02:01 packages/go-eldoc-20170305.1427.el
+4.0K -rw-r--r-- 1 root root  358 Dec  3 02:01 packages/go-eldoc-20170305.1427.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec  3 02:01 packages/go-eldoc-badge.svg
+4.0K -rw-r--r-- 1 root root  280 Dec  3 02:01 packages/go-eldoc-readme.txt
