@@ -3,11 +3,6 @@ Fetcher: github
 Source:  https://github.com/matsievskiysv/vimish-fold.git
 
 Updating /mnt/store/melpa/working/vimish-fold/
-Checking out origin/HEAD
-Checking out a6501cbfe3db791f9ca17fd986c7202a87f3adb8
-Built vimish-fold in 11.905s, finished at 2021-12-03T09:49:02+0000
- ✓ Success:
- 24K -rw-r--r-- 1 root root  22K Dec  3 09:49 packages/vimish-fold-20201205.1156.el
-4.0K -rw-r--r-- 1 root root  434 Dec  3 09:49 packages/vimish-fold-20201205.1156.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec  3 09:49 packages/vimish-fold-badge.svg
-4.0K -rw-r--r-- 1 root root  711 Dec  3 09:49 packages/vimish-fold-readme.txt
+Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
+fatal: unable to access 'https://github.com/matsievskiysv/vimish-fold.git/': gnutls_handshake() failed: Error in the pull function.
+

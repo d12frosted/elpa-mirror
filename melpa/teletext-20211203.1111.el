@@ -3,8 +3,8 @@
 ;; SPDX-License-Identifier: ISC
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-teletext
-;; Package-Version: 20211122.1451
-;; Package-Commit: 7748e58b37842ec74e24e5323d55d8fbbb9a508b
+;; Package-Version: 20211203.1111
+;; Package-Commit: 6b003e9dab9bd0c27d188a81f5fff740d66a2282
 ;; Package-Requires: ((emacs "24.3"))
 ;; Version: 0.1.0
 ;; Keywords: comm help hypermedia
@@ -95,7 +95,7 @@ number CURRENT-PAGE is not linkified."
     (goto-char (point-min))
     (goto-char (point-at-eol))
     (while (re-search-forward
-            "\\(\\<[1-8][0-9][0-9]\\>\\)\\(?:[ )>!;,.-]\\|$\\)" nil t)
+            "\\(\\<[1-8][0-9][0-9]\\>\\)\\(?:[ )>/!;,.-]\\|$\\)" nil t)
       (let ((page (string-to-number (match-string 1))))
         (unless (= page current-page)
           (add-text-properties
@@ -395,10 +395,51 @@ number of teletext buffers can be open at once."
     (setq-local teletext--state (copy-tree old-state))
     (teletext--update)))
 
+(defun teletext-copy-page-text ()
+  "Save the text of the current teletext page into the kill ring."
+  (interactive)
+  (save-match-data
+    (save-excursion
+      (save-restriction
+        (widen)
+        (goto-char (point-min))
+        (forward-line 2)
+        (let ((string (buffer-substring-no-properties (point) (point-max))))
+          (with-temp-buffer
+            (insert string)
+            (let ((paragraph-break (string #xE000)))
+              (goto-char (point-min))
+              (while (re-search-forward "\n[ \n]*\n" nil t)
+                (replace-match paragraph-break))
+              (goto-char (point-min))
+              (while (re-search-forward "\n" nil t)
+                (replace-match " "))
+              (goto-char (point-min))
+              (while (search-forward paragraph-break nil t)
+                (replace-match "\n\n"))
+              (goto-char (point-min))
+              (while (re-search-forward " +" nil t)
+                (replace-match " "))
+              (goto-char (point-min))
+              (while (re-search-forward "^ " nil t)
+                (replace-match ""))
+              (goto-char (point-min))
+              (while (re-search-forward " $" nil t)
+                (replace-match ""))
+              (goto-char (point-min))
+              (when (looking-at "\n+")
+                (replace-match ""))
+              (goto-char (point-max))
+              (when (looking-back "\n+" nil t)
+                (replace-match ""))
+              (copy-region-as-kill (point-min) (point-max))
+              (message "Copied teletext page"))))))))
+
 (defvar teletext-mode-map
   (let ((map (make-sparse-keymap)))
     (set-keymap-parent map special-mode-map)
     (define-key map (kbd "b") 'teletext-previous-subpage)
+    (define-key map (kbd "c") 'teletext-copy-page-text)
     (define-key map (kbd "d") 'teletext-duplicate-buffer)
     (define-key map (kbd "f") 'teletext-next-subpage)
     (define-key map (kbd "n") 'teletext-next-page)

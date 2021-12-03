@@ -4,10 +4,10 @@ Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
 Checking out origin/HEAD
-Checking out 5387c800ea372f768375dab0c31afbc197c8843e
+Checking out 39261651935eb62b20c43d9d40f25c746d2f0876
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghubLO8tXP/ghub-20211201.1715
+  to /tmp/ghubU6ADla/ghub-20211203.1342
     buck.el -> buck.el
     ghub-graphql.el -> ghub-graphql.el
     ghub-pkg.el -> ghub-pkg.el
@@ -17,22 +17,24 @@ Copying files (->) and directories (=>)
     gsexp.el -> gsexp.el
     gtea.el -> gtea.el
     ghub.texi -> ghub.texi
-Created /tmp/ghubLO8tXP/ghub-20211201.1715/ghub.info
-Created ghub-20211201.1715.tar containing:
-  ghub-20211201.1715/
-  ghub-20211201.1715/buck.el
-  ghub-20211201.1715/dir
-  ghub-20211201.1715/ghub-graphql.el
-  ghub-20211201.1715/ghub-pkg.el
-  ghub-20211201.1715/ghub.el
-  ghub-20211201.1715/ghub.info
-  ghub-20211201.1715/glab.el
-  ghub-20211201.1715/gogs.el
-  ghub-20211201.1715/gsexp.el
-  ghub-20211201.1715/gtea.el
-Built ghub in 10.270s, finished at 2021-12-03T08:58:14+0000
+Created /tmp/ghubU6ADla/ghub-20211203.1342/ghub.info
+Created ghub-20211203.1342.tar containing:
+  ghub-20211203.1342/
+  ghub-20211203.1342/buck.el
+  ghub-20211203.1342/dir
+  ghub-20211203.1342/ghub-graphql.el
+  ghub-20211203.1342/ghub-pkg.el
+  ghub-20211203.1342/ghub.el
+  ghub-20211203.1342/ghub.info
+  ghub-20211203.1342/glab.el
+  ghub-20211203.1342/gogs.el
+  ghub-20211203.1342/gsexp.el
+  ghub-20211203.1342/gtea.el
+Built ghub in 10.047s, finished at 2021-12-03T15:59:52+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  401 Dec  3 08:58 packages/ghub-20211201.1715.entry
-152K -rw-r--r-- 1 root root 150K Dec  3 08:58 packages/ghub-20211201.1715.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  3 08:58 packages/ghub-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Dec  3 08:58 packages/ghub-readme.txt
+4.0K -rw-r--r-- 1 root root  401 Dec  3 12:27 packages/ghub-20211201.1715.entry
+152K -rw-r--r-- 1 root root 150K Dec  3 12:27 packages/ghub-20211201.1715.tar
+4.0K -rw-r--r-- 1 root root  401 Dec  3 15:59 packages/ghub-20211203.1342.entry
+152K -rw-r--r-- 1 root root 150K Dec  3 15:59 packages/ghub-20211203.1342.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  3 15:59 packages/ghub-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Dec  3 15:59 packages/ghub-readme.txt
