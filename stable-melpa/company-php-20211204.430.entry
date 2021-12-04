@@ -1,5 +1,5 @@
 (company-php .
-	     [(20201009 1025)
+	     [(20211204 430)
 	      ((cl-lib
 		(0 5))
 	       (ac-php-core
@@ -7,7 +7,7 @@
 	       (company
 		(0 9)))
 	      "A company back-end for PHP." single
-	      ((:commit . "933805013e026991d29a7abfb425075d104aa1cf")
+	      ((:commit . "07abb9adb094a429d392d4a4024c5105d011e36d")
 	       (:authors
 		("jim" . "xcwenn@qq.com"))
 	       (:maintainer "jim")

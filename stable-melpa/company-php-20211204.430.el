@@ -5,8 +5,8 @@
 ;; Author: jim <xcwenn@qq.com>
 ;; Maintainer: jim
 ;; URL: https://github.com/xcwen/ac-php
-;; Package-Version: 20201009.1025
-;; Package-Commit: 933805013e026991d29a7abfb425075d104aa1cf
+;; Package-Version: 20211204.430
+;; Package-Commit: 07abb9adb094a429d392d4a4024c5105d011e36d
 ;; Keywords: completion, convenience, intellisense
 ;; Package-Requires: ((cl-lib "0.5") (ac-php-core "2.0") (company "0.9"))
 ;; Compatibility: GNU Emacs: 24.4, 25.x, 26.x, 27.x
@@ -193,7 +193,29 @@ matches IDLE-BEGIN-AFTER-RE, return it wrapped in a cons."
     (annotation (company-ac-php-annotation arg))
     (duplicates t)
     (doc-buffer (company-ac-php--doc-buffer arg))
+    (kind  (company-php--get-kind (get-text-property 0 'ac-php-tag-type arg)))
     (post-completion (company-ac-php-backend-post-completion arg))))
+(defun company-php--get-kind( tag-type )
+  (cond
+   ( (string= tag-type "type" )
+     'array)
+   ( (string= tag-type "m" )
+     'method)
+   ( (string= tag-type "p" )
+     'field)
+   ( (string= tag-type "c" )
+     'class)
+   ( (string= tag-type "f" )
+     'function)
+   ( (string= tag-type "v" )
+     'variable)
+   ( (string= tag-type "k" )
+     'keyword)
+   ( (string= tag-type "d" )
+     'constant)
+   (t
+    ;;(message "--- %s=="  tag-type)
+    'keyword)))
 
 (defun company-ac-php-backend-post-completion (arg)
   (let ((doc))
