@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 045b61b8681222456b8df6d4d153907a6879eca9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser/
-  to /tmp/geiserYyyzf7/geiser-20211203.2124
+  to /tmp/geiserkQ2ByD/geiser-20211203.2124
   ! elisp/geiser-autodoc.el -> geiser-autodoc.el
   ! elisp/geiser-base.el -> geiser-base.el
   ! elisp/geiser-company.el -> geiser-company.el
@@ -33,7 +33,7 @@ Copying files (->) and directories (=>)
   ! elisp/geiser.el -> geiser.el
   ! doc/dir -> dir
   ! doc/geiser.texi -> geiser.texi
-Created /tmp/geiserYyyzf7/geiser-20211203.2124/geiser.info
+Created /tmp/geiserkQ2ByD/geiser-20211203.2124/geiser.info
 Created geiser-20211203.2124.tar containing:
   geiser-20211203.2124/
   geiser-20211203.2124/dir
@@ -62,59 +62,59 @@ Created geiser-20211203.2124.tar containing:
   geiser-20211203.2124/geiser-xref.el
   geiser-20211203.2124/geiser.el
   geiser-20211203.2124/geiser.info
-Built geiser in 21.683s, finished at 2021-12-04T09:17:25+0000
+Built geiser in 11.321s, finished at 2021-12-04T15:59:20+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  375 Dec  4 09:17 packages/geiser-20211203.2124.entry
-312K -rw-r--r-- 1 root root 310K Dec  4 09:17 packages/geiser-20211203.2124.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:17 packages/geiser-badge.svg
-4.0K -rw-r--r-- 1 root root  443 Dec  4 09:17 packages/geiser-chez-20211118.645.entry
- 32K -rw-r--r-- 1 root root  30K Dec  4 09:17 packages/geiser-chez-20211118.645.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:17 packages/geiser-chez-badge.svg
-4.0K -rw-r--r-- 1 root root   57 Dec  4 09:17 packages/geiser-chez-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:17 packages/geiser-chez.log
-4.0K -rw-r--r-- 1 root root  424 Dec  4 09:17 packages/geiser-chibi-20210421.123.entry
- 32K -rw-r--r-- 1 root root  30K Dec  4 09:17 packages/geiser-chibi-20210421.123.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:17 packages/geiser-chibi-badge.svg
-4.0K -rw-r--r-- 1 root root   51 Dec  4 09:17 packages/geiser-chibi-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:17 packages/geiser-chibi.log
-4.0K -rw-r--r-- 1 root root  389 Dec  4 09:17 packages/geiser-chicken-20210421.127.entry
- 60K -rw-r--r-- 1 root root  60K Dec  4 09:17 packages/geiser-chicken-20210421.127.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:17 packages/geiser-chicken-badge.svg
-4.0K -rw-r--r-- 1 root root   69 Dec  4 09:17 packages/geiser-chicken-readme.txt
-4.0K -rw-r--r-- 1 root root 1.3K Dec  4 09:17 packages/geiser-chicken.log
-4.0K -rw-r--r-- 1 root root  416 Dec  4 09:17 packages/geiser-gambit-20210421.124.entry
-140K -rw-r--r-- 1 root root 140K Dec  4 09:17 packages/geiser-gambit-20210421.124.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:17 packages/geiser-gambit-badge.svg
-4.0K -rw-r--r-- 1 root root  148 Dec  4 09:17 packages/geiser-gambit-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:17 packages/geiser-gambit.log
-4.0K -rw-r--r-- 1 root root  430 Dec  4 09:17 packages/geiser-gauche-20210911.1041.entry
- 32K -rw-r--r-- 1 root root  30K Dec  4 09:17 packages/geiser-gauche-20210911.1041.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:17 packages/geiser-gauche-badge.svg
-4.0K -rw-r--r-- 1 root root   65 Dec  4 09:17 packages/geiser-gauche-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Dec  4 09:17 packages/geiser-gauche.log
-4.0K -rw-r--r-- 1 root root  439 Dec  4 09:17 packages/geiser-guile-20211130.205.entry
- 60K -rw-r--r-- 1 root root  60K Dec  4 09:17 packages/geiser-guile-20211130.205.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:17 packages/geiser-guile-badge.svg
-4.0K -rw-r--r-- 1 root root   69 Dec  4 09:17 packages/geiser-guile-readme.txt
-4.0K -rw-r--r-- 1 root root 1.4K Dec  4 09:17 packages/geiser-guile.log
-4.0K -rw-r--r-- 1 root root  452 Dec  4 09:17 packages/geiser-kawa-20210920.1607.entry
-140K -rw-r--r-- 1 root root 140K Dec  4 09:17 packages/geiser-kawa-20210920.1607.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:17 packages/geiser-kawa-badge.svg
-4.0K -rw-r--r-- 1 root root   87 Dec  4 09:17 packages/geiser-kawa-readme.txt
-4.0K -rw-r--r-- 1 root root 3.7K Dec  4 09:17 packages/geiser-kawa.log
-4.0K -rw-r--r-- 1 root root  453 Dec  4 09:17 packages/geiser-mit-20210405.1920.entry
- 32K -rw-r--r-- 1 root root  30K Dec  4 09:17 packages/geiser-mit-20210405.1920.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:17 packages/geiser-mit-badge.svg
-4.0K -rw-r--r-- 1 root root   56 Dec  4 09:17 packages/geiser-mit-readme.txt
-4.0K -rw-r--r-- 1 root root 1.3K Dec  4 09:17 packages/geiser-mit.log
-4.0K -rw-r--r-- 1 root root  415 Dec  4 09:17 packages/geiser-racket-20210421.125.entry
- 80K -rw-r--r-- 1 root root  80K Dec  4 09:17 packages/geiser-racket-20210421.125.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:17 packages/geiser-racket-badge.svg
-4.0K -rw-r--r-- 1 root root   94 Dec  4 09:17 packages/geiser-racket-readme.txt
-4.0K -rw-r--r-- 1 root root 1.9K Dec  4 09:17 packages/geiser-racket.log
-4.0K -rw-r--r-- 1 root root 1.4K Dec  4 09:17 packages/geiser-readme.txt
- 16K -rw-r--r-- 1 root root  15K Dec  4 05:57 packages/geiser-stklos-20211117.2114.el
-4.0K -rw-r--r-- 1 root root  441 Dec  4 05:57 packages/geiser-stklos-20211117.2114.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 05:57 packages/geiser-stklos-badge.svg
-4.0K -rw-r--r-- 1 root root 1.8K Dec  4 05:57 packages/geiser-stklos-readme.txt
-4.0K -rw-r--r-- 1 root root  220 Dec  4 09:17 packages/geiser-stklos.log
+4.0K -rw-r--r-- 1 root root  375 Dec  4 15:59 packages/geiser-20211203.2124.entry
+312K -rw-r--r-- 1 root root 310K Dec  4 15:59 packages/geiser-20211203.2124.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 15:59 packages/geiser-badge.svg
+4.0K -rw-r--r-- 1 root root  443 Dec  4 15:59 packages/geiser-chez-20211118.645.entry
+ 32K -rw-r--r-- 1 root root  30K Dec  4 15:59 packages/geiser-chez-20211118.645.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 15:59 packages/geiser-chez-badge.svg
+4.0K -rw-r--r-- 1 root root   57 Dec  4 15:59 packages/geiser-chez-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 15:59 packages/geiser-chez.log
+4.0K -rw-r--r-- 1 root root  424 Dec  4 15:59 packages/geiser-chibi-20210421.123.entry
+ 32K -rw-r--r-- 1 root root  30K Dec  4 15:59 packages/geiser-chibi-20210421.123.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 15:59 packages/geiser-chibi-badge.svg
+4.0K -rw-r--r-- 1 root root   51 Dec  4 15:59 packages/geiser-chibi-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 15:59 packages/geiser-chibi.log
+4.0K -rw-r--r-- 1 root root  389 Dec  4 15:59 packages/geiser-chicken-20210421.127.entry
+ 60K -rw-r--r-- 1 root root  60K Dec  4 15:59 packages/geiser-chicken-20210421.127.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 15:59 packages/geiser-chicken-badge.svg
+4.0K -rw-r--r-- 1 root root   69 Dec  4 15:59 packages/geiser-chicken-readme.txt
+4.0K -rw-r--r-- 1 root root 1.3K Dec  4 15:59 packages/geiser-chicken.log
+4.0K -rw-r--r-- 1 root root  416 Dec  4 15:59 packages/geiser-gambit-20210421.124.entry
+140K -rw-r--r-- 1 root root 140K Dec  4 15:59 packages/geiser-gambit-20210421.124.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 15:59 packages/geiser-gambit-badge.svg
+4.0K -rw-r--r-- 1 root root  148 Dec  4 15:59 packages/geiser-gambit-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 15:59 packages/geiser-gambit.log
+4.0K -rw-r--r-- 1 root root  430 Dec  4 15:59 packages/geiser-gauche-20210911.1041.entry
+ 32K -rw-r--r-- 1 root root  30K Dec  4 15:59 packages/geiser-gauche-20210911.1041.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 15:59 packages/geiser-gauche-badge.svg
+4.0K -rw-r--r-- 1 root root   65 Dec  4 15:59 packages/geiser-gauche-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Dec  4 15:59 packages/geiser-gauche.log
+4.0K -rw-r--r-- 1 root root  439 Dec  4 15:59 packages/geiser-guile-20211130.205.entry
+ 60K -rw-r--r-- 1 root root  60K Dec  4 15:59 packages/geiser-guile-20211130.205.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 12:37 packages/geiser-guile-badge.svg
+4.0K -rw-r--r-- 1 root root   69 Dec  4 15:59 packages/geiser-guile-readme.txt
+4.0K -rw-r--r-- 1 root root 1022 Dec  4 15:59 packages/geiser-guile.log
+4.0K -rw-r--r-- 1 root root  452 Dec  4 15:59 packages/geiser-kawa-20210920.1607.entry
+140K -rw-r--r-- 1 root root 140K Dec  4 15:59 packages/geiser-kawa-20210920.1607.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 12:37 packages/geiser-kawa-badge.svg
+4.0K -rw-r--r-- 1 root root   87 Dec  4 15:59 packages/geiser-kawa-readme.txt
+4.0K -rw-r--r-- 1 root root 3.3K Dec  4 15:59 packages/geiser-kawa.log
+4.0K -rw-r--r-- 1 root root  453 Dec  4 12:37 packages/geiser-mit-20210405.1920.entry
+ 32K -rw-r--r-- 1 root root  30K Dec  4 12:37 packages/geiser-mit-20210405.1920.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 12:37 packages/geiser-mit-badge.svg
+4.0K -rw-r--r-- 1 root root   56 Dec  4 12:37 packages/geiser-mit-readme.txt
+4.0K -rw-r--r-- 1 root root  157 Dec  4 15:59 packages/geiser-mit.log
+4.0K -rw-r--r-- 1 root root  415 Dec  4 12:37 packages/geiser-racket-20210421.125.entry
+ 80K -rw-r--r-- 1 root root  80K Dec  4 12:37 packages/geiser-racket-20210421.125.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 12:37 packages/geiser-racket-badge.svg
+4.0K -rw-r--r-- 1 root root   94 Dec  4 12:37 packages/geiser-racket-readme.txt
+4.0K -rw-r--r-- 1 root root  166 Dec  4 15:59 packages/geiser-racket.log
+4.0K -rw-r--r-- 1 root root 1.4K Dec  4 15:59 packages/geiser-readme.txt
+ 16K -rw-r--r-- 1 root root  15K Dec  4 12:37 packages/geiser-stklos-20211117.2114.el
+4.0K -rw-r--r-- 1 root root  441 Dec  4 12:37 packages/geiser-stklos-20211117.2114.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 12:37 packages/geiser-stklos-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Dec  4 12:37 packages/geiser-stklos-readme.txt
+4.0K -rw-r--r-- 1 root root  141 Dec  4 15:59 packages/geiser-stklos.log

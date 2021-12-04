@@ -4,115 +4,117 @@ Source:  https://github.com/org-roam/org-roam-ui.git
 
 Updating /mnt/store/melpa/working/org-roam-ui/
 Checking out origin/HEAD
-Checking out af0a8f2365968bbafc7991304060f381f9e67316
+Checking out 05d7de409e92dbf3d6b8ef50da0b743c247b4eac
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-roam-ui/
-  to /tmp/org-roam-uibk0nYq/org-roam-ui-20211130.921
+  to /tmp/org-roam-ui6HMTVs/org-roam-ui-20211204.1247
     org-roam-ui.el -> org-roam-ui.el
     out => out
-Created org-roam-ui-20211130.921.tar containing:
-  org-roam-ui-20211130.921/
-  org-roam-ui-20211130.921/org-roam-ui-pkg.el
-  org-roam-ui-20211130.921/org-roam-ui.el
-  org-roam-ui-20211130.921/out/
-  org-roam-ui-20211130.921/out/404.html
-  org-roam-ui-20211130.921/out/_next/
-  org-roam-ui-20211130.921/out/_next/static/
-  org-roam-ui-20211130.921/out/_next/static/chunks/
-  org-roam-ui-20211130.921/out/_next/static/chunks/0c428ae2-753f1ebbec24c403674c.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/17007de1-7d8b9c17ee7cc8107af3.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/1a48c3c1-648f6631a5e9a5f8e954.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/252f366e-54a484ebfe8fe95dfdbb.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/907.06370254df2573a8d372.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/911-811443f68e27e1fd4f52.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/95b64a6e-860b8751a48619de0c76.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/b5f2ed29-c14b12daa385c4cc7854.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/d25bd147-2c59edc357c0e2372258.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/fb7d5399-b53d39280eb7028fd5fb.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/framework-2f612445bd50b211f15a.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/main-965b0767a8d0eaf0c110.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/pages/
-  org-roam-ui-20211130.921/out/_next/static/chunks/pages/_app-7ef60f4a6a38c5e0c8ec.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/pages/_error-ea939aab753d9e9db3bd.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/pages/index-16649282f4ba45df9da0.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/polyfills-a40ef1678bae11e696dba45124eadd70.js
-  org-roam-ui-20211130.921/out/_next/static/chunks/webpack-96298ddac7773fa5ecad.js
-  org-roam-ui-20211130.921/out/_next/static/css/
-  org-roam-ui-20211130.921/out/_next/static/css/9aeb688eb5e47ce218d8.css
-  org-roam-ui-20211130.921/out/_next/static/css/a37ded5ec4cf14937ec5.css
-  org-roam-ui-20211130.921/out/_next/static/fOBYzUWi6gOq-z3sGt1al/
-  org-roam-ui-20211130.921/out/_next/static/fOBYzUWi6gOq-z3sGt1al/_buildManifest.js
-  org-roam-ui-20211130.921/out/_next/static/fOBYzUWi6gOq-z3sGt1al/_ssgManifest.js
-  org-roam-ui-20211130.921/out/_next/static/media/
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_AMS-Regular.0d9f7ab640a0a7ab35edc350b00674df.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_AMS-Regular.4c4ccbd9ffaa7d323d55b044e142419e.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_AMS-Regular.a47238c0c668165e9d0b1f594d84c209.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Caligraphic-Bold.0926786647deaf17d76d54f52ad74657.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Caligraphic-Bold.19f570357f4fe9102516d952cef1b2ff.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Caligraphic-Bold.ca08d02310fa9f19ba0299d17128e055.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Caligraphic-Regular.3e19c488cac3849dd20a92525f4701cc.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Caligraphic-Regular.e37e9cd84c4964f2d9ecf563af44ccec.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Caligraphic-Regular.f37960f4fd4766e02ca4ee064ad5f23c.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Fraktur-Bold.b956c7a12877a36343b891acffeefb5d.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Fraktur-Bold.bf17ccf46b827b19854aa4defe751127.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Fraktur-Bold.f3050194985440e1fc6fa5963bbd5079.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Fraktur-Regular.3298092a28560733527fd4a50510bafc.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Fraktur-Regular.8a8e9684ad0e83b71c0b86c79336c8ab.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Fraktur-Regular.a163bcf09449ae8ed783557e7c9c9aaf.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Main-Bold.5050a336dd1ba9fd3e21588d8360f544.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Main-Bold.7087a6c82e23f30cdd53e29010ec6fe2.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Main-Bold.dd7b51f1a2ca5bd9b20536cab3fa2beb.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Main-BoldItalic.4b77d71b9d3961b7c4859a08623c8579.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Main-BoldItalic.5631f11cc4eb168245d4ade061ba16c3.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Main-BoldItalic.fcff27e282d1c5cb42152024912c5e2e.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Main-Italic.432673bb817dd78a6c12012ddc660a57.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Main-Italic.68ec33c535171d771861ea56e7660894.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Main-Italic.b3b010b2535ede725806a63aa7635e4f.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Main-Regular.3fd0ceb35aff44106478820d1810a919.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Main-Regular.ce81924a0d43971b565b12e4421bc36f.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Main-Regular.e939c6a296ec5f785a248019e41861ba.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Math-BoldItalic.4ad67686722aeefffe2dfe5b4db5a069.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Math-BoldItalic.85a50d0b44230b474112e56a57ea55e7.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Math-BoldItalic.ebfa134b566c6fa6354e8f1302148135.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Math-Italic.962a48c9434cfdf579ba5db3185719b6.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Math-Italic.bde72b970d8e9b7c9a61b2b49dc5fb75.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Math-Italic.fc87a1cbfe0b4afce15b66f3c1e79cee.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_SansSerif-Bold.26afbcc72a29c5a65fc99d06689086bf.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_SansSerif-Bold.3ac45b1695b81088d99f417b78556e1c.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_SansSerif-Bold.7227401d5436cf059385329a645d0ec3.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_SansSerif-Italic.19370fb8ec09ba94c9e42255d9fbff0c.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_SansSerif-Italic.68b6c062412a84bbafdfcfb9a233c04f.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_SansSerif-Italic.a074675505eb4665feea16d12eb8a0fe.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_SansSerif-Regular.7b292c5b318d8c9800d02a3b3be6aee7.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_SansSerif-Regular.abb48c18c3350196db971e54be76e5a6.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_SansSerif-Regular.c13f0338e43cbed1c89f6165b94e3650.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Script-Regular.25b86a61b42992afecec60daddc856bb.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Script-Regular.9ccc9adb41a39760484d6d0f1c5417e9.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Script-Regular.df0c5e1ec60655a03ef19f59321c0c3c.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Size1-Regular.1882c67066d09e2e81ddec7c953860bc.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Size1-Regular.21f0471311ce052c2e54af595e8421b4.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Size1-Regular.6445a5c8d2057878c1abcfa23e0be18f.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Size2-Regular.1ae9beb4a11a89465a296fd7af735d30.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Size2-Regular.96031a0ce648a723ca5ed5b726ec3509.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Size2-Regular.bdc7b2d5e9f73527989af37c9cd30c8d.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Size3-Regular.681badffdf434ad52e511cdb988232df.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Size3-Regular.c1ea72eebf23ad29466ad040a318de37.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Size3-Regular.c383b1becf152be4fcb9de127f861535.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Size4-Regular.70d03400f4ee016200b2b74e42906cdd.woff
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Size4-Regular.75fe4fc7f4d626a294ae6b44d58f46f1.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Size4-Regular.79503c3df0d63ffa947e21c352c4bd4c.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Typewriter-Regular.352d267c075ec07f8670bd9fd3877675.woff2
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Typewriter-Regular.9120561f14585063cc9df4b7ae284aad.ttf
-  org-roam-ui-20211130.921/out/_next/static/media/KaTeX_Typewriter-Regular.9f1a86cb45a9fd167fdd638313959329.woff
-  org-roam-ui-20211130.921/out/favicon.ico
-  org-roam-ui-20211130.921/out/index.html
-  org-roam-ui-20211130.921/out/manifest.json
-  org-roam-ui-20211130.921/out/sw.js
-  org-roam-ui-20211130.921/out/vercel.svg
-  org-roam-ui-20211130.921/out/workbox-ea903bce.js
-Built org-roam-ui in 5.194s, finished at 2021-12-04T09:43:56+0000
+Created org-roam-ui-20211204.1247.tar containing:
+  org-roam-ui-20211204.1247/
+  org-roam-ui-20211204.1247/org-roam-ui-pkg.el
+  org-roam-ui-20211204.1247/org-roam-ui.el
+  org-roam-ui-20211204.1247/out/
+  org-roam-ui-20211204.1247/out/404.html
+  org-roam-ui-20211204.1247/out/_next/
+  org-roam-ui-20211204.1247/out/_next/static/
+  org-roam-ui-20211204.1247/out/_next/static/TRB_w901sY-z_7CCTa1Kl/
+  org-roam-ui-20211204.1247/out/_next/static/TRB_w901sY-z_7CCTa1Kl/_buildManifest.js
+  org-roam-ui-20211204.1247/out/_next/static/TRB_w901sY-z_7CCTa1Kl/_ssgManifest.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/
+  org-roam-ui-20211204.1247/out/_next/static/chunks/0c428ae2-753f1ebbec24c403674c.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/17007de1-7d8b9c17ee7cc8107af3.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/1a48c3c1-648f6631a5e9a5f8e954.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/252f366e-54a484ebfe8fe95dfdbb.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/907.06370254df2573a8d372.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/911-811443f68e27e1fd4f52.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/95b64a6e-860b8751a48619de0c76.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/b5f2ed29-c14b12daa385c4cc7854.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/d25bd147-2c59edc357c0e2372258.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/fb7d5399-b53d39280eb7028fd5fb.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/framework-2f612445bd50b211f15a.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/main-965b0767a8d0eaf0c110.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/pages/
+  org-roam-ui-20211204.1247/out/_next/static/chunks/pages/_app-7ef60f4a6a38c5e0c8ec.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/pages/_error-ea939aab753d9e9db3bd.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/pages/index-8fc59807ca4ab13892e2.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/polyfills-a40ef1678bae11e696dba45124eadd70.js
+  org-roam-ui-20211204.1247/out/_next/static/chunks/webpack-96298ddac7773fa5ecad.js
+  org-roam-ui-20211204.1247/out/_next/static/css/
+  org-roam-ui-20211204.1247/out/_next/static/css/9aeb688eb5e47ce218d8.css
+  org-roam-ui-20211204.1247/out/_next/static/css/a37ded5ec4cf14937ec5.css
+  org-roam-ui-20211204.1247/out/_next/static/media/
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_AMS-Regular.0d9f7ab640a0a7ab35edc350b00674df.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_AMS-Regular.4c4ccbd9ffaa7d323d55b044e142419e.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_AMS-Regular.a47238c0c668165e9d0b1f594d84c209.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Caligraphic-Bold.0926786647deaf17d76d54f52ad74657.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Caligraphic-Bold.19f570357f4fe9102516d952cef1b2ff.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Caligraphic-Bold.ca08d02310fa9f19ba0299d17128e055.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Caligraphic-Regular.3e19c488cac3849dd20a92525f4701cc.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Caligraphic-Regular.e37e9cd84c4964f2d9ecf563af44ccec.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Caligraphic-Regular.f37960f4fd4766e02ca4ee064ad5f23c.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Fraktur-Bold.b956c7a12877a36343b891acffeefb5d.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Fraktur-Bold.bf17ccf46b827b19854aa4defe751127.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Fraktur-Bold.f3050194985440e1fc6fa5963bbd5079.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Fraktur-Regular.3298092a28560733527fd4a50510bafc.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Fraktur-Regular.8a8e9684ad0e83b71c0b86c79336c8ab.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Fraktur-Regular.a163bcf09449ae8ed783557e7c9c9aaf.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Main-Bold.5050a336dd1ba9fd3e21588d8360f544.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Main-Bold.7087a6c82e23f30cdd53e29010ec6fe2.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Main-Bold.dd7b51f1a2ca5bd9b20536cab3fa2beb.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Main-BoldItalic.4b77d71b9d3961b7c4859a08623c8579.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Main-BoldItalic.5631f11cc4eb168245d4ade061ba16c3.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Main-BoldItalic.fcff27e282d1c5cb42152024912c5e2e.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Main-Italic.432673bb817dd78a6c12012ddc660a57.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Main-Italic.68ec33c535171d771861ea56e7660894.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Main-Italic.b3b010b2535ede725806a63aa7635e4f.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Main-Regular.3fd0ceb35aff44106478820d1810a919.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Main-Regular.ce81924a0d43971b565b12e4421bc36f.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Main-Regular.e939c6a296ec5f785a248019e41861ba.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Math-BoldItalic.4ad67686722aeefffe2dfe5b4db5a069.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Math-BoldItalic.85a50d0b44230b474112e56a57ea55e7.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Math-BoldItalic.ebfa134b566c6fa6354e8f1302148135.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Math-Italic.962a48c9434cfdf579ba5db3185719b6.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Math-Italic.bde72b970d8e9b7c9a61b2b49dc5fb75.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Math-Italic.fc87a1cbfe0b4afce15b66f3c1e79cee.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_SansSerif-Bold.26afbcc72a29c5a65fc99d06689086bf.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_SansSerif-Bold.3ac45b1695b81088d99f417b78556e1c.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_SansSerif-Bold.7227401d5436cf059385329a645d0ec3.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_SansSerif-Italic.19370fb8ec09ba94c9e42255d9fbff0c.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_SansSerif-Italic.68b6c062412a84bbafdfcfb9a233c04f.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_SansSerif-Italic.a074675505eb4665feea16d12eb8a0fe.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_SansSerif-Regular.7b292c5b318d8c9800d02a3b3be6aee7.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_SansSerif-Regular.abb48c18c3350196db971e54be76e5a6.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_SansSerif-Regular.c13f0338e43cbed1c89f6165b94e3650.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Script-Regular.25b86a61b42992afecec60daddc856bb.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Script-Regular.9ccc9adb41a39760484d6d0f1c5417e9.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Script-Regular.df0c5e1ec60655a03ef19f59321c0c3c.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Size1-Regular.1882c67066d09e2e81ddec7c953860bc.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Size1-Regular.21f0471311ce052c2e54af595e8421b4.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Size1-Regular.6445a5c8d2057878c1abcfa23e0be18f.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Size2-Regular.1ae9beb4a11a89465a296fd7af735d30.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Size2-Regular.96031a0ce648a723ca5ed5b726ec3509.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Size2-Regular.bdc7b2d5e9f73527989af37c9cd30c8d.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Size3-Regular.681badffdf434ad52e511cdb988232df.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Size3-Regular.c1ea72eebf23ad29466ad040a318de37.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Size3-Regular.c383b1becf152be4fcb9de127f861535.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Size4-Regular.70d03400f4ee016200b2b74e42906cdd.woff
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Size4-Regular.75fe4fc7f4d626a294ae6b44d58f46f1.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Size4-Regular.79503c3df0d63ffa947e21c352c4bd4c.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Typewriter-Regular.352d267c075ec07f8670bd9fd3877675.woff2
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Typewriter-Regular.9120561f14585063cc9df4b7ae284aad.ttf
+  org-roam-ui-20211204.1247/out/_next/static/media/KaTeX_Typewriter-Regular.9f1a86cb45a9fd167fdd638313959329.woff
+  org-roam-ui-20211204.1247/out/favicon.ico
+  org-roam-ui-20211204.1247/out/index.html
+  org-roam-ui-20211204.1247/out/manifest.json
+  org-roam-ui-20211204.1247/out/sw.js
+  org-roam-ui-20211204.1247/out/vercel.svg
+  org-roam-ui-20211204.1247/out/workbox-ea903bce.js
+Built org-roam-ui in 6.498s, finished at 2021-12-04T13:04:41+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  474 Dec  4 09:43 packages/org-roam-ui-20211130.921.entry
 5.4M -rw-r--r-- 1 root root 5.4M Dec  4 09:43 packages/org-roam-ui-20211130.921.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  4 09:43 packages/org-roam-ui-badge.svg
-4.0K -rw-r--r-- 1 root root   93 Dec  4 09:43 packages/org-roam-ui-readme.txt
+4.0K -rw-r--r-- 1 root root  475 Dec  4 13:04 packages/org-roam-ui-20211204.1247.entry
+5.4M -rw-r--r-- 1 root root 5.4M Dec  4 13:04 packages/org-roam-ui-20211204.1247.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  4 13:04 packages/org-roam-ui-badge.svg
+4.0K -rw-r--r-- 1 root root   93 Dec  4 13:04 packages/org-roam-ui-readme.txt
