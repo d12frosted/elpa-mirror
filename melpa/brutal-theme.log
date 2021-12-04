@@ -3,29 +3,7 @@ Fetcher: github
 Source:  https://github.com/topikettunen/brutal-emacs.git
 
 Updating /mnt/store/melpa/working/brutal-theme/
-Checking out origin/HEAD
-Checking out 01140537dcddec7869529fb65784b6b83052a253
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/brutal-theme/
-  to /tmp/brutal-themeRM1Oss/brutal-theme-20211130.1048
-    brutal-dark-theme.el -> brutal-dark-theme.el
-    brutal-faces.el -> brutal-faces.el
-    brutal-light-theme.el -> brutal-light-theme.el
-    brutal-palettes.el -> brutal-palettes.el
-    brutal-theme.el -> brutal-theme.el
-    brutal.el -> brutal.el
-Created brutal-theme-20211130.1048.tar containing:
-  brutal-theme-20211130.1048/
-  brutal-theme-20211130.1048/brutal-dark-theme.el
-  brutal-theme-20211130.1048/brutal-faces.el
-  brutal-theme-20211130.1048/brutal-light-theme.el
-  brutal-theme-20211130.1048/brutal-palettes.el
-  brutal-theme-20211130.1048/brutal-theme-pkg.el
-  brutal-theme-20211130.1048/brutal-theme.el
-  brutal-theme-20211130.1048/brutal.el
-Built brutal-theme in 5.865s, finished at 2021-12-03T15:35:30+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  338 Dec  3 15:35 packages/brutal-theme-20211130.1048.entry
- 32K -rw-r--r-- 1 root root  30K Dec  3 15:35 packages/brutal-theme-20211130.1048.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  3 15:35 packages/brutal-theme-badge.svg
-4.0K -rw-r--r-- 1 root root   59 Dec  3 15:35 packages/brutal-theme-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: could not read Username for 'https://github.com': No such device or address
+error: Could not fetch origin
+

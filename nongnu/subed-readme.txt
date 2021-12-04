@@ -1,0 +1,112 @@
+Table of Contents
+─────────────────
+
+subed
+.. Features
+..... mpv integration (optional)
+.. Installation
+.. License
+
+
+<file:https://raw.githubusercontent.com/rndusr/subed/master/screenshot.jpg>
+
+
+subed
+═════
+
+  subed is an Emacs major mode for editing subtitles while playing the
+  corresponding video with [mpv].  At the moment, the only supported
+  format is SubRip ( `.srt').
+
+
+[mpv] <https://mpv.io/>
+
+Features
+────────
+
+  • Quickly jump to next (`M-n') and previous (`M-p') subtitle text.
+  • Quickly jump to the beginning (`C-M-a') and end (`C-M-e') of the
+    current subtitle's text.
+  • Insert subtitles evenly spaced throughout the available space
+    (`M-i') or right next the current subtitle (`C-M-i').  A prefix
+    argument controls how many subtitles to insert and whether they are
+    inserted before or after the current subtitle.
+  • Kill subtitles (`M-k').
+  • Adjust subtitle start (`M-[' / `M-]') and stop (`M-{' / `M-}') time.
+    A prefix argument sets the number of milliseconds for the current
+    session (e.g. `C-u 1000 M-[ M-[ M-[' decreases start time by 3
+    seconds).
+  • Move the current subtitle or all marked subtitles forward (`C-M-n')
+    or backward (`C-M-p') in time without changing subtitle duration.  A
+    prefix argument sets the number of milliseconds for the current
+    session (e.g. `C-u 500 C-M-n C-M-n' moves the current subtitle 1
+    second forward).
+  • Shift the current subtitle forward (`C-M-f') or backward (`C-M-b')
+    together with all following subtitles.  This is basically a
+    convenience shortcut for `C-SPC M-> C-M-n/p'.
+  • Sort and re-number subtitles and remove any extra spaces and
+    newlines (`M-s').  This is done automatically every time the buffer
+    is saved.
+
+
+mpv integration (optional)
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  • Open videos with `C-c C-v' or automatically when entering subed-mode
+    if the video file is named like the subtitle file but with a video
+    extension (e.g. `.mkv' or `.avi').
+  • Subtitles are automatically reloaded in mpv when the buffer is
+    saved.
+  • Cursor and playback position are synchronized:
+    • Playback in mpv seeks to the position of the current subtitle as
+      the cursor moves between subtitles (`C-c ,').
+    • The cursor is moved to the currently relevant subtitle as the
+      video is playing (`C-c .').
+  • Copy the current playback position as start (`C-c [') or stop (`C-c
+    ]') time of the current subtitle.
+  • Playback is paused or slowed down when a subtitle's text is edited
+         (`C-c C-p').
+  • Loop over the current subtitle in mpv (`C-c C-l').
+  • When a subtitle's start or stop time changes, mpv seeks to the
+    subtitle's start time (`C-c C-r').
+  • Pause video playback without leaving Emacs (`M-SPC').
+
+
+Installation
+────────────
+
+  For now, you have to install it manually.  For example, copy
+  `subed/*.el' to `$HOME/.emacs.d/elisp/' and add
+  `$HOME/.emacs.d/elisp/' to your `load-path'.
+
+  ┌────
+  │ (use-package subed
+  │   ;; Tell emacs where to find subed
+  │   :load-path "~/.emacs.d/elisp/"
+  │   :config
+  │   ;; Disable automatic movement of point by default
+  │   (add-hook 'subed-mode-hook 'subed-disable-sync-point-to-player)
+  │   ;; Break lines automatically while typing
+  │   (add-hook 'subed-mode-hook 'turn-on-auto-fill))
+  │   ;; Break lines at 50 characters
+  │   (add-hook 'subed-mode-hook (lambda () (setq-local fill-column 50)))
+  └────
+
+  `C-h f subed-mode' should get you started.
+
+
+License
+───────
+
+  subed is free software: you can redistribute it and/or modify it under
+  the terms of the GNU General Public License as published by the Free
+  Software Foundation, either version 3 of the License, or (at your
+  option) any later version.
+
+  This program is distributed in the hope that it will be useful but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the [GNU
+  General Public License] for more details.
+
+
+[GNU General Public License] <https://www.gnu.org/licenses/gpl-3.0.txt>

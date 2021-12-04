@@ -580,6 +580,20 @@
 		(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 		(:authors
 		 ("Bastien Guerry" . "bzg@gnu.org")))])
+ (pdf-tools .
+	    [(1 0)
+	     ((emacs
+	       (24 3))
+	      (tablist
+	       (1 0))
+	      (let-alist
+		  (1 0 4)))
+	     "Support library for PDF documents" tar
+	     ((:url . "http://github.com/vedang/pdf-tools/")
+	      (:keywords "files" "multimedia")
+	      (:maintainer "Andreas Politz" . "politza@fh-trier.de")
+	      (:authors
+	       ("Andreas Politz" . "politza@fh-trier.de")))])
  (php-mode .
 	   [(1 24 0)
 	    ((emacs
@@ -710,6 +724,13 @@
 		    (:maintainer "John Olsson" . "john@cryon.se")
 		    (:authors
 		     ("John Olsson" . "john@cryon.se")))])
+ (subed .
+	[(0 0 1)
+	 ((emacs
+	   (25 1)))
+	 "A major mode for editing subtitles" tar
+	 ((:url . "https://github.com/rndusr/subed")
+	  (:keywords "convenience" "files" "hypermedia" "multimedia"))])
  (swift-mode .
 	     [(8 4 2)
 	      ((emacs
@@ -735,6 +756,16 @@
 	     ("Mark Oteiza" . "mvoteiza@udel.edu"))
 	    (:keywords "tools" "unix")
 	    (:url . "https://elpa.nongnu.org/nongnu/systemd.html"))])
+ (tablist .
+	  [(1 0)
+	   ((emacs
+	     (24 3)))
+	   "Extended tabulated-list-mode" tar
+	   ((:keywords "extensions" "lisp")
+	    (:maintainer "Andreas Politz" . "politza@fh-trier.de")
+	    (:authors
+	     ("Andreas Politz" . "politza@fh-trier.de"))
+	    (:url . "https://elpa.nongnu.org/nongnu/tablist.html"))])
  (tuareg .
 	 [(2 3 0)
 	  ((caml
