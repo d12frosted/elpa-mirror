@@ -5,8 +5,8 @@
 ;; Author: jim <xcwenn@qq.com>
 ;; Maintainer: jim
 ;; URL: https://github.com/xcwen/ac-php
-;; Package-Version: 20211204.430
-;; Package-Commit: 07abb9adb094a429d392d4a4024c5105d011e36d
+;; Package-Version: 20211204.558
+;; Package-Commit: fc834dcc193e7168ffa0b3ae81ab3eefa4fd3c59
 ;; Keywords: completion, convenience, intellisense
 ;; Package-Requires: ((cl-lib "0.5") (ac-php-core "2.0") (company "0.9"))
 ;; Compatibility: GNU Emacs: 24.4, 25.x, 26.x, 27.x
@@ -187,8 +187,8 @@ matches IDLE-BEGIN-AFTER-RE, return it wrapped in a cons."
   (cl-case command
     (interactive (company-begin-backend 'company-ac-php-backend))
     (prefix (when (or (equal major-mode 'phps-mode)
-		                  (equal major-mode 'php-mode))
-	            (company-ac-php--prefix)))
+                      (equal major-mode 'php-mode))
+              (company-ac-php--prefix)))
     (candidates (company-ac-php-candidate arg))
     (annotation (company-ac-php-annotation arg))
     (duplicates t)
@@ -197,8 +197,6 @@ matches IDLE-BEGIN-AFTER-RE, return it wrapped in a cons."
     (post-completion (company-ac-php-backend-post-completion arg))))
 (defun company-php--get-kind( tag-type )
   (cond
-   ( (string= tag-type "type" )
-     'array)
    ( (string= tag-type "m" )
      'method)
    ( (string= tag-type "p" )

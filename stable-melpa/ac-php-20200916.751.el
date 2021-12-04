@@ -6,7 +6,7 @@
 ;; Maintainer: jim
 ;; URL: https://github.com/xcwen/ac-php
 ;; Package-Version: 20200916.751
-;; Package-Commit: 07abb9adb094a429d392d4a4024c5105d011e36d
+;; Package-Commit: fc834dcc193e7168ffa0b3ae81ab3eefa4fd3c59
 ;; Keywords: completion, convenience, intellisense
 ;; Package-Requires: ((ac-php-core "2.0") (auto-complete "1.4.0") (yasnippet "0.8.0"))
 ;; Compatibility: GNU Emacs: 24.4, 25.x, 26.x, 27.x

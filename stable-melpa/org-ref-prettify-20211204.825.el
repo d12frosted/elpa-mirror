@@ -6,8 +6,8 @@
 ;; Author: Alex Kost <alezost@gmail.com>
 ;;         Vitus Schäfftlein <vitusschaefftlein@live.de>
 ;; Version: 0.2
-;; Package-Version: 20211124.737
-;; Package-Commit: 6329fe1c21c0ff9addcc25fea6c8df684f3e0733
+;; Package-Version: 20211204.825
+;; Package-Commit: bffbc409d277e78ffc4005834d5cbaee19b89bbb
 ;; Package-Requires: ((emacs "24.3") (org-ref "3.0") (bibtex-completion "1.0.0"))
 ;; URL: https://github.com/alezost/org-ref-prettify.el
 ;; Keywords: convenience
@@ -110,10 +110,10 @@ will not be displayed in the prettified citations.")
                   author))
                 " and ")))
     (if (> (length names) 3)
-        (concat (car (split-string (car names) ", "))
+        (concat (car (split-string (car names) ", *"))
                 " et al.")
       (mapconcat (lambda (str)
-                   (car (split-string str ", ")))
+                   (car (split-string str ", *")))
                  names
                  " and "))))
 
