@@ -3,8 +3,8 @@
 ;; Copyright (C) 2016-2020 David Thompson
 ;; Author: David Thompson
 ;; Version: 0.2
-;; Package-Version: 20210818.2257
-;; Package-Commit: d54f661c8b3477f342c6c3b3c6c9a500cde595a9
+;; Package-Version: 20211205.712
+;; Package-Commit: b4a5341e22efed3c1a261b9b5098d7c429d655d1
 ;; Keywords: dired, launch
 ;; URL: https://github.com/thomp/dired-launch
 
@@ -29,7 +29,7 @@
   (setf dired-launch-default-launcher
 	(cond ((eq system-type 'darwin)
 	       '("open"))
-	      ((eq system-type 'gnu/linux)
+	      ((or (eq system-type 'gnu/linux) (eq system-type 'berkeley-unix))
 	       (if (executable-find "mimeopen")
 		   '("mimeopen" "-n")
 		 '("xdg-open")))
@@ -146,7 +146,7 @@
   (cond ((eq system-type 'darwin)
 	 (dired-launch-homebrew
 	  (dired-get-marked-files t current-prefix-arg)))
-	((eq system-type 'gnu/linux)
+	((or (eq system-type 'gnu/linux) (eq system-type 'berkeley-unix))
 	 (dired-launch-homebrew
 	  (dired-get-marked-files t current-prefix-arg)))
         ((eq system-type 'cygwin)

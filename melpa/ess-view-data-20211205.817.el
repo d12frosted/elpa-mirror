@@ -5,8 +5,8 @@
 ;; Author: Shuguang Sun <shuguang79@qq.com>
 ;; Created: 2019/04/06
 ;; Version: 1.3
-;; Package-Version: 20211103.1525
-;; Package-Commit: 060ea424d7781d652ae385a48384848b6ded0105
+;; Package-Version: 20211205.817
+;; Package-Commit: 887370274be7edff0eb0387ba6161d57451fdaed
 ;; URL: https://github.com/ShuguangSun/ess-view-data
 ;; Package-Requires: ((emacs "26.1") (ess "18.10.1") (csv-mode "1.12"))
 ;; Keywords: tools
@@ -463,7 +463,8 @@ Optional argument PROC The assciated ESS process."
     (when (and proc-name proc
                (not (process-get proc 'busy)))
       (ess-command (concat "{suppressPackageStartupMessages(require(dplyr)); "
-                           ess-view-data-temp-object " <- as_tibble("
+                           ;; ess-command using local 2021-12-04
+                           ess-view-data-temp-object " <<- as_tibble("
                            (format (cond (obj-back-quote-p "`%s`")
                                          (obj-space-p "`%s`")
                                          (t "`%s`"))
@@ -521,8 +522,8 @@ Optional argument PROC-NAME The name of associated ESS process, usually `ess-loc
 Optional argument PROC The assciated ESS process."
     (when (and proc-name proc
                (not (process-get proc 'busy)))
-      (ess-command (format "rm(%s)\n" ess-view-data-temp-object))
-      (ess-write-to-dribble-buffer (format "[ESS-v] rm(%s)\n" ess-view-data-temp-object))))
+      (ess-command (format "rm(%s, envir = globalenv())\n" ess-view-data-temp-object))
+      (ess-write-to-dribble-buffer (format "[ESS-v] rm(%s, envir = globalenv())\n" ess-view-data-temp-object))))
 
 
 ;;; ** Utilities
@@ -827,7 +828,7 @@ Optional argument PROC The assciated ESS process."
                (not (process-get proc 'busy)))
       (ess-command (concat "{suppressPackageStartupMessages(require(dplyr));"
                            "suppressPackageStartupMessages(require(DT)); "
-                           ess-view-data-temp-object " <- as_tibble("
+                           ess-view-data-temp-object " <<- as_tibble("
                            (format (cond (obj-back-quote-p "`%s`")
                                          (obj-space-p "`%s`")
                                          (t "`%s`"))
@@ -872,8 +873,8 @@ Optional argument PROC-NAME The name of associated ESS process, usually `ess-loc
 Optional argument PROC The assciated ESS process."
     (when (and proc-name proc
                (not (process-get proc 'busy)))
-      (ess-command (format "rm(%s)\n" ess-view-data-temp-object))
-      (ess-write-to-dribble-buffer (format "[ESS-v] rm(%s)\n" ess-view-data-temp-object))))
+      (ess-command (format "rm(%s, envir = globalenv())\n" ess-view-data-temp-object))
+      (ess-write-to-dribble-buffer (format "[ESS-v] rm(%s, envir = globalenv())\n" ess-view-data-temp-object))))
 
 ;;; ** Utilities
 (cl-defmethod ess-view-data--do-update ((_backend (eql dplyr+DT)) fun action)
@@ -1158,8 +1159,8 @@ Optional argument PROC-NAME The name of associated ESS process, usually `ess-loc
 Optional argument PROC The assciated ESS process."
     (when (and proc-name proc
                (not (process-get proc 'busy)))
-      (ess-command (format "rm(%s)\n" ess-view-data-temp-object))
-      (ess-write-to-dribble-buffer (format "[ESS-v] rm(%s)\n" ess-view-data-temp-object))))
+      (ess-command (format "rm(%s, envir = globalenv())\n" ess-view-data-temp-object))
+      (ess-write-to-dribble-buffer (format "[ESS-v] rm(%s, envir = globalenv())\n" ess-view-data-temp-object))))
 
 
 ;;; ** Utilities
@@ -2145,7 +2146,7 @@ Optional argument MAXPRINT maxprint."
     (setq command (concat "rm("
                           (mapconcat 'identity ess-view-data-temp-object-list
                                       ",")
-                           ")\n"))
+                           ", envir = globalenv())\n"))
     (when (and proc-name proc command
                (not (process-get proc 'busy)))
       (ess-command (concat "{" command "}") nil nil nil nil proc))
