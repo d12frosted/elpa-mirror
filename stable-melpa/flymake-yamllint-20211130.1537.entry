@@ -1,0 +1,10 @@
+(flymake-yamllint .
+		  [(20211130 1537)
+		   ((emacs
+		     (26 1)))
+		   "YAML linter with yamllint" single
+		   ((:commit . "a7676d8de714f2e0f8aa21b4e57a5fc802d47fa6")
+		    (:authors
+		     ("Martin Kjær Jørgensen" . "mkj@gotu.dk"))
+		    (:maintainer "Martin Kjær Jørgensen" . "mkj@gotu.dk")
+		    (:url . "https://github.com/shaohme/flymake-yamllint"))])

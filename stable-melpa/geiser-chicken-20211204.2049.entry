@@ -1,0 +1,13 @@
+(geiser-chicken .
+		[(20211204 2049)
+		 ((emacs
+		   (24 4))
+		  (geiser
+		   (0 19)))
+		 "Chicken's implementation of the geiser protocols" tar
+		 ((:commit . "79a9ac78f4df7c9ec1f918313c543c116dbb8b70")
+		  (:authors
+		   ("Daniel Leslie"))
+		  (:maintainer "Daniel Leslie")
+		  (:keywords "languages" "chicken" "scheme" "geiser")
+		  (:url . "https://gitlab.com/emacs-geiser/chicken"))])

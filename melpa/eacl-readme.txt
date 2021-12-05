@@ -1,6 +1,8 @@
 Multiple commands are provided to grep files in the project to get
 auto complete candidates.
-The keyword to grep is text from line beginning to current cursor.
+
+The keyword to grep is text from the line beginning to current cursor.
+
 Project is *automatically* detected if Git/Mercurial/Subversion is used.
 You can override the project root by setting `eacl-project-root',
 
@@ -48,6 +50,9 @@ The content of ".dir-locals.el":
 "git grep" is automatically used for grepping in git repository.
 Please note "git grep" does NOT use `grep-find-ignored-directories' OR
 `grep-find-ignored-files'.
-To use "git grep", Git should be added into environment variable "PATH".
+
+The command line program of grep and git need be added into environment variable
+"PATH".  Or else you need set `eacl-grep-program' and `eacl-git-program' to
+specify their path.
 
 Set `eacl-git-grep-untracked' if untracked files should be git grepped too.
