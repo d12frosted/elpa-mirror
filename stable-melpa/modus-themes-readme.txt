@@ -16,9 +16,7 @@ The themes share the following customization variables:
     modus-themes-intense-markup                 (boolean)
     modus-themes-italic-constructs              (boolean)
     modus-themes-mixed-fonts                    (boolean)
-    modus-themes-scale-headings                 (boolean)
     modus-themes-subtle-line-numbers            (boolean)
-    modus-themes-variable-pitch-headings        (boolean)
     modus-themes-variable-pitch-ui              (boolean)
     modus-themes-completions                    (choice)
     modus-themes-diffs                          (choice)
@@ -34,20 +32,6 @@ The themes share the following customization variables:
     modus-themes-region                         (choice)
     modus-themes-syntax                         (choice)
     modus-themes-mode-line-padding              (natnum)
-
-The default scale for headings is as follows (it can be customized as
-well---remember, no scaling takes place by default):
-
-    modus-themes-scale-1                        1.05
-    modus-themes-scale-2                        1.1
-    modus-themes-scale-3                        1.15
-    modus-themes-scale-4                        1.2
-    modus-themes-scale-title                    1.3
-
-There is another scaling-related option, which however is reserved
-for special cases and is not used for headings:
-
-    modus-themes-scale-small                    0.9
 
 There also exist two unique customization variables for overriding
 color palette values.  The specifics are documented in the manual.
