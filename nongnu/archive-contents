@@ -172,7 +172,7 @@
 		   (:authors
 		    ("https://turbocafe.keybase.pub")))])
  (geiser .
-	 [(0 18)
+	 [(0 19)
 	  ((emacs
 	    (24 4)))
 	  "GNU Emacs and Scheme talk to each other" tar
@@ -194,41 +194,41 @@
 		 ("Peter" . "craven@gmx.net"))
 		(:keywords "languages" "chez" "scheme" "geiser"))])
  (geiser-chibi .
-	       [(0 16)
+	       [(0 17)
 		((emacs
 		  (24 4))
 		 (geiser
-		  (0 16)))
+		  (0 18)))
 		"Chibi Scheme's implementation of the geiser protocols" tar
 		((:url . "https://gitlab.com/emacs-geiser/chibi")
+		 (:keywords "languages" "chibi" "scheme" "geiser")
 		 (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
 		 (:authors
-		  ("Peter" . "craven@gmx.net"))
-		 (:keywords "languages" "chibi" "scheme" "geiser"))])
+		  ("Peter" . "craven@gmx.net")))])
  (geiser-chicken .
-		 [(0 16)
+		 [(0 17)
 		  ((emacs
 		    (24 4))
 		   (geiser
-		    (0 16)))
+		    (0 19)))
 		  "Chicken's implementation of the geiser protocols" tar
 		  ((:url . "https://gitlab.com/emacs-geiser/chicken")
+		   (:keywords "languages" "chicken" "scheme" "geiser")
 		   (:maintainer "Daniel Leslie")
 		   (:authors
-		    ("Daniel Leslie"))
-		   (:keywords "languages" "chicken" "scheme" "geiser"))])
+		    ("Daniel Leslie")))])
  (geiser-gambit .
-		[(0 16)
+		[(0 17)
 		 ((emacs
 		   (26 1))
 		  (geiser
-		   (0 16)))
+		   (0 18)))
 		 "Gambit's implementation of the geiser protocols" tar
 		 ((:url . "https://gitlab.com/emacs-geiser/gambit")
+		  (:keywords "languages" "gambit" "scheme" "geiser")
 		  (:maintainer "Daniel Leslie, Jose A Ortega Ruiz" . "jao@gnu.org")
 		  (:authors
-		   ("Daniel Leslie"))
-		  (:keywords "languages" "gambit" "scheme" "geiser"))])
+		   ("Daniel Leslie")))])
  (geiser-gauche .
 		[(0 0 2)
 		 ((emacs
@@ -242,11 +242,11 @@
 		   ("András Simonyi" . "andras.simonyi@gmail.com"))
 		  (:keywords "languages" "gauche" "scheme" "geiser"))])
  (geiser-guile .
-	       [(0 18)
+	       [(0 19)
 		((emacs
 		  (24 4))
 		 (geiser
-		  (0 16)))
+		  (0 19)))
 		"Guile's implementation of the geiser protocols" tar
 		((:url . "https://gitlab.com/emacs-geiser/guile")
 		 (:keywords "languages" "guile" "scheme" "geiser")
@@ -266,17 +266,17 @@
 		 ("spellcard199" . "spellcard199@protonmail.com"))
 		(:keywords "languages" "kawa" "scheme" "geiser"))])
  (geiser-mit .
-	     [(0 13)
+	     [(0 15)
 	      ((emacs
 		(24 4))
 	       (geiser
-		(0 12)))
+		(0 18)))
 	      "MIT/GNU Scheme's implementation of the geiser protocols" tar
 	      ((:url . "https://gitlab.com/emacs-geiser/mit")
+	       (:keywords "languages" "mit" "scheme" "geiser")
 	       (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
 	       (:authors
-		("Peter" . "craven@gmx.net"))
-	       (:keywords "languages" "mit" "scheme" "geiser"))])
+		("Peter" . "craven@gmx.net")))])
  (geiser-racket .
 		[(0 16)
 		 ((emacs
