@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 162d7d545ed41c27967d108c04aa31f5a61c8e16
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elfeed/
-  to /tmp/elfeedeUARnZ/elfeed-20210606.1130
+  to /tmp/elfeedfhe6su/elfeed-20210606.1130
     elfeed-csv.el -> elfeed-csv.el
     elfeed-curl.el -> elfeed-curl.el
     elfeed-db.el -> elfeed-db.el
@@ -32,44 +32,44 @@ Created elfeed-20210606.1130.tar containing:
   elfeed-20210606.1130/elfeed-show.el
   elfeed-20210606.1130/elfeed.el
   elfeed-20210606.1130/xml-query.el
-Built elfeed in 4.824s, finished at 2021-12-06T11:55:18+0000
+Built elfeed in 4.776s, finished at 2021-12-06T15:29:47+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  334 Dec  6 11:55 packages/elfeed-20210606.1130.entry
-180K -rw-r--r-- 1 root root 180K Dec  6 11:55 packages/elfeed-20210606.1130.tar
+4.0K -rw-r--r-- 1 root root  334 Dec  6 15:29 packages/elfeed-20210606.1130.entry
+180K -rw-r--r-- 1 root root 180K Dec  6 15:29 packages/elfeed-20210606.1130.tar
  12K -rw-r--r-- 1 root root  12K Dec  6 11:55 packages/elfeed-autotag-20210607.637.el
 4.0K -rw-r--r-- 1 root root  481 Dec  6 11:55 packages/elfeed-autotag-20210607.637.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 08:22 packages/elfeed-autotag-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Dec  6 11:55 packages/elfeed-autotag-badge.svg
 4.0K -rw-r--r-- 1 root root  120 Dec  6 11:55 packages/elfeed-autotag-readme.txt
-4.0K -rw-r--r-- 1 root root  226 Dec  6 11:55 packages/elfeed-autotag.log
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 11:55 packages/elfeed-badge.svg
-8.0K -rw-r--r-- 1 root root 6.7K Dec  6 08:22 packages/elfeed-dashboard-20210727.603.el
-4.0K -rw-r--r-- 1 root root  474 Dec  6 08:22 packages/elfeed-dashboard-20210727.603.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 08:22 packages/elfeed-dashboard-badge.svg
-4.0K -rw-r--r-- 1 root root  130 Dec  6 08:22 packages/elfeed-dashboard-readme.txt
-4.0K -rw-r--r-- 1 root root  232 Dec  6 11:55 packages/elfeed-dashboard.log
-4.0K -rw-r--r-- 1 root root  413 Dec  6 08:22 packages/elfeed-goodies-20190128.1631.entry
- 32K -rw-r--r-- 1 root root  30K Dec  6 08:22 packages/elfeed-goodies-20190128.1631.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 08:22 packages/elfeed-goodies-badge.svg
-4.0K -rw-r--r-- 1 root root  298 Dec  6 08:22 packages/elfeed-goodies-readme.txt
-4.0K -rw-r--r-- 1 root root  147 Dec  6 11:55 packages/elfeed-goodies.log
- 20K -rw-r--r-- 1 root root  17K Dec  6 08:22 packages/elfeed-org-20210510.1219.el
-4.0K -rw-r--r-- 1 root root  522 Dec  6 08:22 packages/elfeed-org-20210510.1219.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 08:22 packages/elfeed-org-badge.svg
-4.0K -rw-r--r-- 1 root root  466 Dec  6 08:22 packages/elfeed-org-readme.txt
-4.0K -rw-r--r-- 1 root root  136 Dec  6 11:55 packages/elfeed-org.log
-4.0K -rw-r--r-- 1 root root  455 Dec  6 08:22 packages/elfeed-protocol-20210430.846.entry
-160K -rw-r--r-- 1 root root 160K Dec  6 08:22 packages/elfeed-protocol-20210430.846.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 08:22 packages/elfeed-protocol-badge.svg
-4.0K -rw-r--r-- 1 root root 1.9K Dec  6 08:22 packages/elfeed-protocol-readme.txt
-4.0K -rw-r--r-- 1 root root  149 Dec  6 11:55 packages/elfeed-protocol.log
-4.0K -rw-r--r-- 1 root root   99 Dec  6 11:55 packages/elfeed-readme.txt
-4.0K -rw-r--r-- 1 root root  385 Dec  6 08:22 packages/elfeed-score-20211123.1505.entry
-252K -rw-r--r-- 1 root root 250K Dec  6 08:22 packages/elfeed-score-20211123.1505.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 08:22 packages/elfeed-score-badge.svg
-4.0K -rw-r--r-- 1 root root  629 Dec  6 08:22 packages/elfeed-score-readme.txt
-   0 -rw-r--r-- 1 root root    0 Dec  6 11:55 packages/elfeed-score.log
-4.0K -rw-r--r-- 1 root root  437 Dec  6 08:22 packages/elfeed-web-20210226.258.entry
- 20K -rw-r--r-- 1 root root  20K Dec  6 08:22 packages/elfeed-web-20210226.258.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 08:22 packages/elfeed-web-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 08:22 packages/elfeed-web-readme.txt
-   0 -rw-r--r-- 1 root root    0 Dec  6 11:55 packages/elfeed-web.log
+4.0K -rw-r--r-- 1 root root  172 Dec  6 15:29 packages/elfeed-autotag.log
+4.0K -rw-r--r-- 1 root root 1.2K Dec  6 15:29 packages/elfeed-badge.svg
+8.0K -rw-r--r-- 1 root root 6.7K Dec  6 11:55 packages/elfeed-dashboard-20210727.603.el
+4.0K -rw-r--r-- 1 root root  474 Dec  6 11:55 packages/elfeed-dashboard-20210727.603.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec  6 11:55 packages/elfeed-dashboard-badge.svg
+4.0K -rw-r--r-- 1 root root  130 Dec  6 11:55 packages/elfeed-dashboard-readme.txt
+4.0K -rw-r--r-- 1 root root  153 Dec  6 15:29 packages/elfeed-dashboard.log
+4.0K -rw-r--r-- 1 root root  413 Dec  6 11:55 packages/elfeed-goodies-20190128.1631.entry
+ 32K -rw-r--r-- 1 root root  30K Dec  6 11:55 packages/elfeed-goodies-20190128.1631.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  6 11:55 packages/elfeed-goodies-badge.svg
+4.0K -rw-r--r-- 1 root root  298 Dec  6 11:55 packages/elfeed-goodies-readme.txt
+4.0K -rw-r--r-- 1 root root  147 Dec  6 15:29 packages/elfeed-goodies.log
+ 20K -rw-r--r-- 1 root root  17K Dec  6 11:55 packages/elfeed-org-20210510.1219.el
+4.0K -rw-r--r-- 1 root root  522 Dec  6 11:55 packages/elfeed-org-20210510.1219.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec  6 11:55 packages/elfeed-org-badge.svg
+4.0K -rw-r--r-- 1 root root  466 Dec  6 11:55 packages/elfeed-org-readme.txt
+   0 -rw-r--r-- 1 root root    0 Dec  6 15:29 packages/elfeed-org.log
+4.0K -rw-r--r-- 1 root root  455 Dec  6 11:55 packages/elfeed-protocol-20210430.846.entry
+160K -rw-r--r-- 1 root root 160K Dec  6 11:55 packages/elfeed-protocol-20210430.846.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  6 11:55 packages/elfeed-protocol-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Dec  6 11:55 packages/elfeed-protocol-readme.txt
+   0 -rw-r--r-- 1 root root    0 Dec  6 15:29 packages/elfeed-protocol.log
+4.0K -rw-r--r-- 1 root root   99 Dec  6 15:29 packages/elfeed-readme.txt
+4.0K -rw-r--r-- 1 root root  385 Dec  6 11:55 packages/elfeed-score-20211123.1505.entry
+252K -rw-r--r-- 1 root root 250K Dec  6 11:55 packages/elfeed-score-20211123.1505.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  6 11:55 packages/elfeed-score-badge.svg
+4.0K -rw-r--r-- 1 root root  629 Dec  6 11:55 packages/elfeed-score-readme.txt
+4.0K -rw-r--r-- 1 root root 2.0K Dec  6 11:55 packages/elfeed-score.log
+4.0K -rw-r--r-- 1 root root  437 Dec  6 11:55 packages/elfeed-web-20210226.258.entry
+ 20K -rw-r--r-- 1 root root  20K Dec  6 11:55 packages/elfeed-web-20210226.258.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  6 11:55 packages/elfeed-web-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Dec  6 11:55 packages/elfeed-web-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Dec  6 11:55 packages/elfeed-web.log

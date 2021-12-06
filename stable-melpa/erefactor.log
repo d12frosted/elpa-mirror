@@ -3,12 +3,7 @@ Fetcher: github
 Source:  https://github.com/mhayashi1120/Emacs-erefactor.git
 
 Updating /mnt/store/melpa/working/erefactor/
-Checking out origin/HEAD
-Checking out bfe27a1b8c7cac0fe054e76113e941efa3775fe8
-Note: erefactor :files spec is equivalent to the default.
-Built erefactor in 5.466s, finished at 2021-12-06T11:57:30+0000
- ✓ Success:
- 48K -rw-r--r-- 1 root root  45K Dec  6 11:57 packages/erefactor-20200513.1252.el
-4.0K -rw-r--r-- 1 root root  424 Dec  6 11:57 packages/erefactor-20200513.1252.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 11:57 packages/erefactor-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Dec  6 11:57 packages/erefactor-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://github.com/mhayashi1120/Emacs-erefactor.git/': gnutls_handshake() failed: Error in the pull function.
+error: Could not fetch origin
+
