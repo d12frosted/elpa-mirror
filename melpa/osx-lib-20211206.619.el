@@ -1,13 +1,13 @@
-;;; osx-lib.el --- Basic functions for Apple/OSX
+;;; osx-lib.el --- Basic functions for Apple/OSX -*- lexical-binding: t; -*-
 ;;
 ;; Copyright (C) 2015 OSX Lib authors
 ;;
 ;; Author: Raghav Kumar Gautam <raghav@apache.org>
 ;; URL: https://github.com/raghavgautam/osx-lib
-;; Package-Commit: 06744dae53b4ade99b0cd733823e1c8f6b0aa2c4
+;; Package-Commit: 7afdb57edd5725e8a66f841a90fa571a4cbb81e7
 ;; Keywords: Apple, AppleScript, OSX, Finder, Emacs, Elisp, VPN, Speech
 ;; Package-Requires: ((emacs "24.4"))
-;; Package-Version: 20211113.1849
+;; Package-Version: 20211206.619
 ;; Package-X-Original-Version: 0.1
 ;;; Commentary:
 ;; Provides functions for:
@@ -57,6 +57,30 @@
   "Escape STR to make it suitable for using is applescripts."
   (replace-regexp-in-string "\"" "\\\\\"" str))
 
+;; Constants for major releases of macOS
+;; macOS versions are formatted at MAJOR.MINOR[.PATCH]
+
+(defconst osx-lib-ver-monterey "12.0"
+  "Release version of macOS Monterey.")
+
+(defconst osx-lib-ver-big-sur "11.0"
+  "Release version of macOS Big Sur.")
+
+(defconst osx-lib-ver-catalina "10.15"
+  "Release version of macOS Catalina.")
+
+(defconst osx-lib-ver-yosemite "10.10"
+  "Release version of macOS Yosemite.")
+
+;; macros
+
+(defmacro with-min-osx-ver (min-ver &rest body)
+  "Execute BODY if current macOS version meets MIN-VER requirement.
+Otherwise prints error message."
+  `(if (string-lessp (osx-lib-osx-version) ,min-ver)
+       (message (concat "Unsupported on this version of macOS, minimum required: " ,min-ver))
+     ,@body))
+
 ;;;###autoload
 (defun osx-lib-run-osascript (script-content)
   "Run an SCRIPT-CONTENT as AppleScript/osascipt."
@@ -81,7 +105,7 @@
   "Get OS version."
   (interactive)
   (string-trim (shell-command-to-string
-		"sw_vers  -productVersion")))
+        "sw_vers  -productVersion")))
 
 (defun osx-lib-run-js-file (file)
   "Run an AppleScript/osascipt FILE."
@@ -112,22 +136,22 @@
   "Create a notification with title as TITLE and message as MESSAGE."
   (osx-lib-run-osascript
    (concat "display notification \""
-	   (osx-lib-escape message)
-	   "\" with title  \""
-	   (osx-lib-escape title)
-	   "\"")))
+       (osx-lib-escape message)
+       "\" with title  \""
+       (osx-lib-escape title)
+       "\"")))
 
 ;;;###autoload
 (defun osx-lib-notify3 (title subtitle message)
   "Create a notification with title as TITLE, subtitle as SUBTITLE and message as MESSAGE."
   (osx-lib-run-osascript
    (concat "display notification \""
-	   (osx-lib-escape message)
-	   "\" with title  \""
-	   (osx-lib-escape title)
-	   "\" subtitle \""
-	   (osx-lib-escape subtitle)
-	   "\"")))
+       (osx-lib-escape message)
+       "\" with title  \""
+       (osx-lib-escape title)
+       "\" subtitle \""
+       (osx-lib-escape subtitle)
+       "\"")))
 
 ;;clipboard functions
 ;;;###autoload
@@ -179,10 +203,10 @@ In a dired buffer, it will open the current file."
   "Connect to vpn using given VPN-NAME and PASSWORD."
   (interactive "MPlease enter vpn-name:\nMPlease enter vpn password:")
   (let ((old-content (osx-lib-copy-from-clipboard)))
-    (if (string-lessp (osx-lib-osx-version) "10.10")
-	(osx-lib-run-osascript
-	 (format
-	  "tell application \"System Events\"
+    (if (string-lessp (osx-lib-osx-version) osx-lib-ver-yosemite)
+    (osx-lib-run-osascript
+     (format
+      "tell application \"System Events\"
         tell current location of network preferences
                 set VPN to service \"%s\" -- your VPN name here
                 if exists VPN then connect VPN
@@ -202,7 +226,7 @@ end tell" (osx-lib-escape vpn-name)))
 (defun osx-lib-vpn-disconnect (vpn-name)
   "Disconnect from VPN-NAME vpn."
   (interactive "MEnter the vpn that you want to connect to:")
-  (if (string-lessp (osx-lib-osx-version) "10.10")
+  (if (string-lessp (osx-lib-osx-version) osx-lib-ver-yosemite)
       (osx-lib-run-osascript
        (format "
 tell application \"System Events\"
@@ -214,7 +238,7 @@ tell application \"System Events\"
                 end repeat
         end tell
 end tell"
-	       (osx-lib-escape vpn-name)))
+           (osx-lib-escape vpn-name)))
     (shell-command-to-string (shell-command-to-string (format "scutil --nc stop \"%s\"" (shell-quote-argument vpn-name)))))
   (osx-lib-notify2 "VPN Disconnected" ""))
 
@@ -225,16 +249,16 @@ end tell"
   (osx-lib-run-osascript
    (format "
 tell application \"System Events\"
-	say \"%s\"%s%s
+    say \"%s\"%s%s
 end tell
 "
-	   (osx-lib-escape message)
-	   (if (and osx-lib-say-rate (numberp osx-lib-say-rate))
-	       (format " speaking rate %d" osx-lib-say-rate)
-	     "")
-	   (if (and osx-lib-say-voice (stringp osx-lib-say-voice) (> (length (string-trim osx-lib-say-voice)) 1))
-	       (format " using \"%s\"" osx-lib-say-voice)
-	     ""))))
+       (osx-lib-escape message)
+       (if (and osx-lib-say-rate (numberp osx-lib-say-rate))
+           (format " speaking rate %d" osx-lib-say-rate)
+         "")
+       (if (and osx-lib-say-voice (stringp osx-lib-say-voice) (> (length (string-trim osx-lib-say-voice)) 1))
+           (format " using \"%s\"" osx-lib-say-voice)
+         ""))))
 
 (defalias 'osx-lib-speak 'osx-lib-say)
 
@@ -275,11 +299,11 @@ end tell
    "osascript -e 'set volume output muted false'"))
 
 ;;;###autoload
-(defun osx-lib-start-terminal (&optional dir cmd-with-quoted-args)
+(cl-defun osx-lib-start-terminal (&optional (dir default-directory) cmd-with-quoted-args)
   "Start terminal in DIR."
   (interactive)
   (let ((cd-cmd (concat "cd "
-                        (shell-quote-argument (expand-file-name (or dir default-directory)))
+                        (shell-quote-argument (expand-file-name dir))
                         (when cmd-with-quoted-args
                           (concat ";" cmd-with-quoted-args)))))
     (osx-lib-run-applescript (concat "tell application \"Terminal\" to activate do script \"" cd-cmd "\""))))
@@ -288,21 +312,23 @@ end tell
   "Send current region to osx speaker."
   (interactive "r")
   (let ((selection (buffer-substring-no-properties start end)))
-		(osx-lib-say selection)))
+        (osx-lib-say selection)))
 
 ;;;###autoload
 (defun osx-lib-network-quality ()
   "Test the network's quality using the built-in NQ tool."
   (interactive)
-  (get-buffer-create "*network quality*")
-  (switch-to-buffer "*network quality*")
-  (let (buffer-read-only)
-	(erase-buffer)
-	(message "Running network quality tests...")
-	(center-line)
-	(insert "\n")
-	(insert (shell-command-to-string "networkQuality -s"))
-	(message "Tests completed.")))
+  (with-min-osx-ver osx-lib-ver-monterey
+                    (get-buffer-create "*network quality*")
+                    (switch-to-buffer "*network quality*")
+                    (let (buffer-read-only)
+                      (erase-buffer)
+                      (message "Running network quality tests...")
+                      (center-line)
+                      (insert "\n")
+                      (insert (shell-command-to-string "networkQuality -s"))
+                      (message "Tests completed."))))
+
 
 (provide 'osx-lib)
 ;;; osx-lib.el ends here

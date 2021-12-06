@@ -3,11 +3,7 @@ Fetcher: git
 Source:  https://tildegit.org/contrapunctus/async-backup.git
 
 Updating /mnt/store/melpa/working/async-backup/
-Checking out origin/development
-Checking out ba927feec1b568eb2b0a647b3eb7adf2d4a061e8
-Built async-backup in 4.746s, finished at 2021-12-06T04:44:35+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 3.1K Dec  6 04:44 packages/async-backup-20211128.1603.el
-4.0K -rw-r--r-- 1 root root  410 Dec  6 04:44 packages/async-backup-20211128.1603.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 04:44 packages/async-backup-badge.svg
-4.0K -rw-r--r-- 1 root root  514 Dec  6 04:44 packages/async-backup-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://tildegit.org/contrapunctus/async-backup.git/': Failed to connect to tildegit.org port 443: Connection timed out
+error: Could not fetch origin
+

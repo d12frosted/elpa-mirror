@@ -4,8 +4,6 @@
 
 ;; Author: Aaron Jensen <aaronjensen@gmail.com>
 ;; URL: https://github.com/aaronjensen/flycheck-dogma
-;; Package-Version: 20170125.721
-;; Package-Commit: eea1844a81e87e2488b05e703a93272d0fc3bc74
 ;; Version: 0.1.0
 ;; Package-Requires: ((flycheck "29"))
 
