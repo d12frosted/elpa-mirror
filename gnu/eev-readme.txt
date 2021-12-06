@@ -13,24 +13,12 @@ eev-mode keybindings, and open this tutorial,
   http://angg.twu.net/eev-intros/find-eev-quick-intro.html
   (find-eev-quick-intro)
 
-in a sandboxed buffer. For a list of the other sandboxed tutorials,
-see:
+in a sandboxed buffer. The URL aboves points to an HTMLized version of
+the sandboxed tutorial, and the `(find-*-intro)' sexp opens it in
+Emacs. You can find an index of the other sandboxed tutorials here:
 
   http://angg.twu.net/eev-intros/find-eev-intro.html
   (find-eev-intro)
-
-Note that the URLs point to the HTMLized versions of the sandboxed
-tutorials, and the `(find-*-intro)' sexps open them in Emacs.
-
-For a _non-technical_ description of what e-scripts are, see:
-
-  http://angg.twu.net/escripts.html
-
-For an analysis of an e-script that uses most of the main features of
-eev, see:
-
-  http://angg.twu.net/eev-intros/find-escripts-intro.html#4
-  (find-escripts-intro "4. How to read an e-script")
 
 The home page of eev is:
 
@@ -38,10 +26,31 @@ The home page of eev is:
 
 
 
+Autoloads
+=========
+Eev handles autoloads in a very atypical way, explained in these two
+places:
+
+  http://angg.twu.net/eev-current/eev-load.el.html#autoloads
+  http://angg.twu.net/eev-intros/find-eev-intro.html#4
+  (find-eev "eev-load.el" "autoloads")
+  (find-eev-intro "4. The prefix `find-'")
+
+If you load eev in one of these three ways
+
+  1. `M-x eev-beginner'
+  2. (require 'eev-beginner)
+  3. (require 'eev-load)
+
+then everything will work. If you try to use a package that tries to
+bypass autoloads - say, by loading the file that seems to contain the
+definition of `eev-foo' when you try to run `M-x eev-foo' - then lots
+of things will break. =(
 
 
-EEV WITHOUT EEV-MODE
-====================
+
+Eev mode
+========
 Eev mode only activates some keybindings and adds a reminder saying
 "eev" to the mode line, as explained here:
 
@@ -50,10 +59,8 @@ Eev mode only activates some keybindings and adds a reminder saying
 
 It is possible to use eev's elisp hyperlink functions with eev-mode
 turned off: just put the point on a line with an elisp hyperlink and
-type `C-e C-x C-e'.
-
-If you want to load all the main modules of eev to make its functions
-available in this way, do:
+type `C-e C-x C-e' to execute it. To load all the main modules of eev
+to make its functions available to be used in this way, do this:
 
   (require 'eev-load)
 

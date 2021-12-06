@@ -31,7 +31,6 @@ The themes share the following customization variables:
     modus-themes-prompts                        (choice)
     modus-themes-region                         (choice)
     modus-themes-syntax                         (choice)
-    modus-themes-mode-line-padding              (natnum)
 
 There also exist two unique customization variables for overriding
 color palette values.  The specifics are documented in the manual.
