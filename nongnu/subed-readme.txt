@@ -5,10 +5,8 @@ subed
 .. Features
 ..... mpv integration (optional)
 .. Installation
+.. Contributions
 .. License
-
-
-<file:https://raw.githubusercontent.com/rndusr/subed/master/screenshot.jpg>
 
 
 subed
@@ -16,7 +14,10 @@ subed
 
   subed is an Emacs major mode for editing subtitles while playing the
   corresponding video with [mpv].  At the moment, the only supported
-  format is SubRip ( `.srt').
+  formats are SubRip ( `.srt'), WebVTT ( `.vtt' ), and Advanced
+  SubStation Alpha ( `.ass', experimental ).
+
+  <file:https://raw.githubusercontent.com/rndusr/subed/master/screenshot.jpg>
 
 
 [mpv] <https://mpv.io/>
@@ -44,6 +45,22 @@ Features
   • Shift the current subtitle forward (`C-M-f') or backward (`C-M-b')
     together with all following subtitles.  This is basically a
     convenience shortcut for `C-SPC M-> C-M-n/p'.
+  • Scale all subtitles or all marked subtitles forward (`C-M-x') or
+    backward (`C-M-S-x') in time without changing subtitle duration.  A
+    prefix argument sets the number of milliseconds for the current
+    session (e.g. `C-u 500 C-M-x' moves the last [or last marked]
+    subtitle forward 500ms and proportionally scales all [or all marked]
+    subtitles based on this time extension.  Similarly, `C-u 500
+    C-M-S-x' moves the last [or last marked] subtitle backward 500ms and
+    proportionally scales all [or all marked] subtitles based on this
+    time contraction).  This can be extremely useful to correct
+    synchronization issues in existing subtitle files.  First, adjust
+    the starting time if necessary (e.g. `C-M-f'), then adjust the
+    ending and scale constituent subtitles (e.g. `C-M-x').
+  • Show CPS (characters per second) for the current subtitle.
+  • Insert HTML-like tags (`C-c C-t C-t', with an optional attribute
+    when prefixed by `C-u'), in particular italics (`C-c C-t C-i') or
+    boldface (`C-c C-t C-b').
   • Sort and re-number subtitles and remove any extra spaces and
     newlines (`M-s').  This is done automatically every time the buffer
     is saved.
@@ -70,29 +87,62 @@ mpv integration (optional)
   • When a subtitle's start or stop time changes, mpv seeks to the
     subtitle's start time (`C-c C-r').
   • Pause video playback without leaving Emacs (`M-SPC').
+  • Move one frame forward or backward (`C-c C-f .' and `C-c C-f ,';
+    pressing `,' or `.' afterwards moves by frames until any other key
+    is pressed).
 
 
 Installation
 ────────────
 
-  For now, you have to install it manually.  For example, copy
-  `subed/*.el' to `$HOME/.emacs.d/elisp/' and add
+  `subed' is now on [NonGNU ELPA].  You may be able to install it with
+  `M-x package-install' `subed'.  If not, you can install it manually.
+  For example, copy `subed/*.el' to `$HOME/.emacs.d/elisp/' and add
   `$HOME/.emacs.d/elisp/' to your `load-path'.
+
+  Here's some sample code for manual installation:
+
+  ┌────
+  │ (add-to-list 'load-path "~/.emacs.d/elisp")
+  │ (require 'subed)
+  └────
+
+  Here's an example setup if you use use-package:
 
   ┌────
   │ (use-package subed
-  │   ;; Tell emacs where to find subed
-  │   :load-path "~/.emacs.d/elisp/"
+  │   :ensure t
   │   :config
   │   ;; Disable automatic movement of point by default
   │   (add-hook 'subed-mode-hook 'subed-disable-sync-point-to-player)
+  │   ;; Remember cursor position between sessions
+  │   (add-hook 'subed-mode-hook 'save-place-local-mode)
   │   ;; Break lines automatically while typing
-  │   (add-hook 'subed-mode-hook 'turn-on-auto-fill))
-  │   ;; Break lines at 50 characters
-  │   (add-hook 'subed-mode-hook (lambda () (setq-local fill-column 50)))
+  │   (add-hook 'subed-mode-hook 'turn-on-auto-fill)
+  │    ;; Break lines at 40 characters
+  │   (add-hook 'subed-mode-hook (lambda () (setq-local fill-column 40))))
   └────
 
   `C-h f subed-mode' should get you started.
+
+
+[NonGNU ELPA] <https://elpa.nongnu.org/nongnu/subed.html>
+
+
+Contributions
+─────────────
+
+  Contributions would be really appreciated! subed conforms to the
+  [REUSE Specification]; this means that every file has copyright and
+  license information. If you modify a file, please update the year
+  shown after `SPDX-FileCopyrightText'. Thank you!
+
+  There's a list of authors in the file `AUTHORS.org'. If you have at
+  any point contributed to subed, you are most welcome to add your name
+  (and email address if you like) to the list.
+
+
+[REUSE Specification] <https://reuse.software/spec/>
 
 
 License
