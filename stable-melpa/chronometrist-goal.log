@@ -3,7 +3,11 @@ Fetcher: git
 Source:  https://tildegit.org/contrapunctus/chronometrist-goal.git
 
 Updating /mnt/store/melpa/working/chronometrist-goal/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://tildegit.org/contrapunctus/chronometrist-goal.git/': Failed to connect to tildegit.org port 443: Connection timed out
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 6cb939d160f5d5966d7853aa23f3ed7c7ef9df44
+Built chronometrist-goal in 5.204s, finished at 2021-12-06T22:25:44+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Dec  6 22:25 packages/chronometrist-goal-20210510.1831.el
+4.0K -rw-r--r-- 1 root root  531 Dec  6 22:25 packages/chronometrist-goal-20210510.1831.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec  6 22:25 packages/chronometrist-goal-badge.svg
+4.0K -rw-r--r-- 1 root root  153 Dec  6 22:25 packages/chronometrist-goal-readme.txt

@@ -3,6 +3,11 @@ Fetcher: github
 Source:  https://github.com/emacsorphanage/evil-anzu.git
 
 Updating /mnt/store/melpa/working/evil-anzu/
-Command '(env LC_ALL=C git remote set-head origin --auto)' exited with non-zero status 128: Fetching origin
-fatal: unable to access 'https://github.com/emacsorphanage/evil-anzu.git/': gnutls_handshake() failed: Error in the pull function.
-
+Checking out origin/HEAD
+Checking out d3f6ed4773b48767bd5f4708c7f083336a8a8a86
+Built evil-anzu in 3.312s, finished at 2021-12-06T22:40:55+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.8K Dec  6 22:40 packages/evil-anzu-20200514.1902.el
+4.0K -rw-r--r-- 1 root root  420 Dec  6 22:40 packages/evil-anzu-20200514.1902.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec  6 22:40 packages/evil-anzu-badge.svg
+   0 -rw-r--r-- 1 root root    0 Dec  6 22:40 packages/evil-anzu-readme.txt
