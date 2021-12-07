@@ -4,10 +4,10 @@ Source:  https://github.com/kubernetes-el/kubernetes-el.git
 
 Updating /mnt/store/melpa/working/kubernetes/
 Checking out origin/HEAD
-Checking out 79c5d1ee76eded5921a203f8bd544171c307b472
+Checking out a6ee8c8875ca5129e0a36fd4611f0b82c5cd616a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/kubernetes/
-  to /tmp/kubernetesqWnyji/kubernetes-20211202.623
+  to /tmp/kubernetesORqDnA/kubernetes-20211207.312
     kubernetes-ast.el -> kubernetes-ast.el
     kubernetes-commands.el -> kubernetes-commands.el
     kubernetes-configmaps.el -> kubernetes-configmaps.el
@@ -40,59 +40,61 @@ Copying files (->) and directories (=>)
     kubernetes-vars.el -> kubernetes-vars.el
     kubernetes-yaml.el -> kubernetes-yaml.el
     kubernetes.el -> kubernetes.el
-Created kubernetes-20211202.623.tar containing:
-  kubernetes-20211202.623/
-  kubernetes-20211202.623/kubernetes-ast.el
-  kubernetes-20211202.623/kubernetes-commands.el
-  kubernetes-20211202.623/kubernetes-configmaps.el
-  kubernetes-20211202.623/kubernetes-contexts.el
-  kubernetes-20211202.623/kubernetes-deployments.el
-  kubernetes-20211202.623/kubernetes-el-tramp.el
-  kubernetes-20211202.623/kubernetes-errors.el
-  kubernetes-20211202.623/kubernetes-ingress.el
-  kubernetes-20211202.623/kubernetes-jobs.el
-  kubernetes-20211202.623/kubernetes-kubectl.el
-  kubernetes-20211202.623/kubernetes-labels.el
-  kubernetes-20211202.623/kubernetes-loading-container.el
-  kubernetes-20211202.623/kubernetes-logs.el
-  kubernetes-20211202.623/kubernetes-modes.el
-  kubernetes-20211202.623/kubernetes-namespaces.el
-  kubernetes-20211202.623/kubernetes-nodes.el
-  kubernetes-20211202.623/kubernetes-overview.el
-  kubernetes-20211202.623/kubernetes-persistentvolumeclaims.el
-  kubernetes-20211202.623/kubernetes-pkg.el
-  kubernetes-20211202.623/kubernetes-pod-line.el
-  kubernetes-20211202.623/kubernetes-pods.el
-  kubernetes-20211202.623/kubernetes-popups.el
-  kubernetes-20211202.623/kubernetes-process.el
-  kubernetes-20211202.623/kubernetes-props.el
-  kubernetes-20211202.623/kubernetes-secrets.el
-  kubernetes-20211202.623/kubernetes-services.el
-  kubernetes-20211202.623/kubernetes-state.el
-  kubernetes-20211202.623/kubernetes-statefulsets.el
-  kubernetes-20211202.623/kubernetes-timers.el
-  kubernetes-20211202.623/kubernetes-utils.el
-  kubernetes-20211202.623/kubernetes-vars.el
-  kubernetes-20211202.623/kubernetes-yaml.el
-  kubernetes-20211202.623/kubernetes.el
-Built kubernetes in 5.605s, finished at 2021-12-07T02:38:11+0000
+Created kubernetes-20211207.312.tar containing:
+  kubernetes-20211207.312/
+  kubernetes-20211207.312/kubernetes-ast.el
+  kubernetes-20211207.312/kubernetes-commands.el
+  kubernetes-20211207.312/kubernetes-configmaps.el
+  kubernetes-20211207.312/kubernetes-contexts.el
+  kubernetes-20211207.312/kubernetes-deployments.el
+  kubernetes-20211207.312/kubernetes-el-tramp.el
+  kubernetes-20211207.312/kubernetes-errors.el
+  kubernetes-20211207.312/kubernetes-ingress.el
+  kubernetes-20211207.312/kubernetes-jobs.el
+  kubernetes-20211207.312/kubernetes-kubectl.el
+  kubernetes-20211207.312/kubernetes-labels.el
+  kubernetes-20211207.312/kubernetes-loading-container.el
+  kubernetes-20211207.312/kubernetes-logs.el
+  kubernetes-20211207.312/kubernetes-modes.el
+  kubernetes-20211207.312/kubernetes-namespaces.el
+  kubernetes-20211207.312/kubernetes-nodes.el
+  kubernetes-20211207.312/kubernetes-overview.el
+  kubernetes-20211207.312/kubernetes-persistentvolumeclaims.el
+  kubernetes-20211207.312/kubernetes-pkg.el
+  kubernetes-20211207.312/kubernetes-pod-line.el
+  kubernetes-20211207.312/kubernetes-pods.el
+  kubernetes-20211207.312/kubernetes-popups.el
+  kubernetes-20211207.312/kubernetes-process.el
+  kubernetes-20211207.312/kubernetes-props.el
+  kubernetes-20211207.312/kubernetes-secrets.el
+  kubernetes-20211207.312/kubernetes-services.el
+  kubernetes-20211207.312/kubernetes-state.el
+  kubernetes-20211207.312/kubernetes-statefulsets.el
+  kubernetes-20211207.312/kubernetes-timers.el
+  kubernetes-20211207.312/kubernetes-utils.el
+  kubernetes-20211207.312/kubernetes-vars.el
+  kubernetes-20211207.312/kubernetes-yaml.el
+  kubernetes-20211207.312/kubernetes.el
+Built kubernetes in 5.134s, finished at 2021-12-07T06:14:54+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  593 Dec  7 02:38 packages/kubernetes-20211202.623.entry
 252K -rw-r--r-- 1 root root 250K Dec  7 02:38 packages/kubernetes-20211202.623.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  7 02:38 packages/kubernetes-badge.svg
-4.0K -rw-r--r-- 1 root root 3.1K Dec  6 23:03 packages/kubernetes-evil-20210830.2219.el
-4.0K -rw-r--r-- 1 root root  345 Dec  6 23:03 packages/kubernetes-evil-20210830.2219.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 23:03 packages/kubernetes-evil-badge.svg
-4.0K -rw-r--r-- 1 root root   60 Dec  6 23:03 packages/kubernetes-evil-readme.txt
-4.0K -rw-r--r-- 1 root root  232 Dec  7 02:38 packages/kubernetes-evil.log
-8.0K -rw-r--r-- 1 root root 4.8K Dec  6 23:03 packages/kubernetes-helm-20210902.2232.el
-4.0K -rw-r--r-- 1 root root  432 Dec  6 23:03 packages/kubernetes-helm-20210902.2232.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 23:03 packages/kubernetes-helm-badge.svg
-4.0K -rw-r--r-- 1 root root   71 Dec  6 23:03 packages/kubernetes-helm-readme.txt
-4.0K -rw-r--r-- 1 root root  230 Dec  7 02:38 packages/kubernetes-helm.log
-4.0K -rw-r--r-- 1 root root  111 Dec  7 02:38 packages/kubernetes-readme.txt
-8.0K -rw-r--r-- 1 root root 5.5K Dec  6 23:03 packages/kubernetes-tramp-20181228.922.el
-4.0K -rw-r--r-- 1 root root  489 Dec  6 23:03 packages/kubernetes-tramp-20181228.922.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec  6 23:03 packages/kubernetes-tramp-badge.svg
-4.0K -rw-r--r-- 1 root root  878 Dec  6 23:03 packages/kubernetes-tramp-readme.txt
-4.0K -rw-r--r-- 1 root root  154 Dec  7 02:38 packages/kubernetes-tramp.log
+4.0K -rw-r--r-- 1 root root  593 Dec  7 06:14 packages/kubernetes-20211207.312.entry
+252K -rw-r--r-- 1 root root 250K Dec  7 06:14 packages/kubernetes-20211207.312.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  7 06:14 packages/kubernetes-badge.svg
+4.0K -rw-r--r-- 1 root root 3.1K Dec  7 02:38 packages/kubernetes-evil-20210830.2219.el
+4.0K -rw-r--r-- 1 root root  345 Dec  7 02:38 packages/kubernetes-evil-20210830.2219.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec  7 02:38 packages/kubernetes-evil-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Dec  7 02:38 packages/kubernetes-evil-readme.txt
+4.0K -rw-r--r-- 1 root root  178 Dec  7 06:14 packages/kubernetes-evil.log
+8.0K -rw-r--r-- 1 root root 4.8K Dec  7 02:38 packages/kubernetes-helm-20210902.2232.el
+4.0K -rw-r--r-- 1 root root  432 Dec  7 02:38 packages/kubernetes-helm-20210902.2232.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec  7 02:38 packages/kubernetes-helm-badge.svg
+4.0K -rw-r--r-- 1 root root   71 Dec  7 02:38 packages/kubernetes-helm-readme.txt
+4.0K -rw-r--r-- 1 root root  230 Dec  7 06:14 packages/kubernetes-helm.log
+4.0K -rw-r--r-- 1 root root  111 Dec  7 06:14 packages/kubernetes-readme.txt
+8.0K -rw-r--r-- 1 root root 5.5K Dec  7 02:38 packages/kubernetes-tramp-20181228.922.el
+4.0K -rw-r--r-- 1 root root  489 Dec  7 02:38 packages/kubernetes-tramp-20181228.922.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec  7 02:38 packages/kubernetes-tramp-badge.svg
+4.0K -rw-r--r-- 1 root root  878 Dec  7 02:38 packages/kubernetes-tramp-readme.txt
+4.0K -rw-r--r-- 1 root root  233 Dec  7 06:14 packages/kubernetes-tramp.log
