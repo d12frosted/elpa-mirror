@@ -4,28 +4,32 @@ Source:  https://github.com/bdarcus/citar.git
 
 Updating /mnt/store/melpa/working/citar/
 Checking out origin/HEAD
-Checking out d3935ec4363b437ee6a6358682fda8bb4d351efc
+Checking out f6c97cf00b483ed45d91e53909556a51f33ff188
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citar/
-  to /tmp/citarpYDLoK/citar-20211207.2304
+  to /tmp/citaraAzNpv/citar-20211208.1645
+    citar-citeproc.el -> citar-citeproc.el
     citar-file.el -> citar-file.el
     citar-filenotify.el -> citar-filenotify.el
     citar-latex.el -> citar-latex.el
     citar-markdown.el -> citar-markdown.el
     citar-org.el -> citar-org.el
     citar.el -> citar.el
-Created citar-20211207.2304.tar containing:
-  citar-20211207.2304/
-  citar-20211207.2304/citar-file.el
-  citar-20211207.2304/citar-filenotify.el
-  citar-20211207.2304/citar-latex.el
-  citar-20211207.2304/citar-markdown.el
-  citar-20211207.2304/citar-org.el
-  citar-20211207.2304/citar-pkg.el
-  citar-20211207.2304/citar.el
-Built citar in 4.330s, finished at 2021-12-08T13:36:20+0000
+Created citar-20211208.1645.tar containing:
+  citar-20211208.1645/
+  citar-20211208.1645/citar-citeproc.el
+  citar-20211208.1645/citar-file.el
+  citar-20211208.1645/citar-filenotify.el
+  citar-20211208.1645/citar-latex.el
+  citar-20211208.1645/citar-markdown.el
+  citar-20211208.1645/citar-org.el
+  citar-20211208.1645/citar-pkg.el
+  citar-20211208.1645/citar.el
+Built citar in 5.583s, finished at 2021-12-08T17:09:14+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  397 Dec  8 13:36 packages/citar-20211207.2304.entry
 100K -rw-r--r-- 1 root root 100K Dec  8 13:36 packages/citar-20211207.2304.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  8 13:36 packages/citar-badge.svg
-4.0K -rw-r--r-- 1 root root  292 Dec  8 13:36 packages/citar-readme.txt
+4.0K -rw-r--r-- 1 root root  397 Dec  8 17:09 packages/citar-20211208.1645.entry
+100K -rw-r--r-- 1 root root 100K Dec  8 17:09 packages/citar-20211208.1645.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec  8 17:09 packages/citar-badge.svg
+4.0K -rw-r--r-- 1 root root  292 Dec  8 17:09 packages/citar-readme.txt

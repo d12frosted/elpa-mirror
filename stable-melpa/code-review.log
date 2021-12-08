@@ -4,10 +4,10 @@ Source:  https://github.com/wandersoncferreira/code-review.git
 
 Updating /mnt/store/melpa/working/code-review/
 Checking out origin/HEAD
-Checking out a6409dc4081bc950f9f61666b1285e458aa02d49
+Checking out c4dbe641436a0fe1a1cbddda334281730a9cb8ae
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/code-review/
-  to /tmp/code-reviewpBrVqo/code-review-20211208.26
+  to /tmp/code-reviewugpftL/code-review-20211208.1419
     code-review-comment.el -> code-review-comment.el
     code-review-core.el -> code-review-core.el
     code-review-db.el -> code-review-db.el
@@ -16,20 +16,22 @@ Copying files (->) and directories (=>)
     code-review-section.el -> code-review-section.el
     code-review-utils.el -> code-review-utils.el
     code-review.el -> code-review.el
-Created code-review-20211208.26.tar containing:
-  code-review-20211208.26/
-  code-review-20211208.26/code-review-comment.el
-  code-review-20211208.26/code-review-core.el
-  code-review-20211208.26/code-review-db.el
-  code-review-20211208.26/code-review-github.el
-  code-review-20211208.26/code-review-gitlab.el
-  code-review-20211208.26/code-review-pkg.el
-  code-review-20211208.26/code-review-section.el
-  code-review-20211208.26/code-review-utils.el
-  code-review-20211208.26/code-review.el
-Built code-review in 4.484s, finished at 2021-12-08T13:37:03+0000
+Created code-review-20211208.1419.tar containing:
+  code-review-20211208.1419/
+  code-review-20211208.1419/code-review-comment.el
+  code-review-20211208.1419/code-review-core.el
+  code-review-20211208.1419/code-review-db.el
+  code-review-20211208.1419/code-review-github.el
+  code-review-20211208.1419/code-review-gitlab.el
+  code-review-20211208.1419/code-review-pkg.el
+  code-review-20211208.1419/code-review-section.el
+  code-review-20211208.1419/code-review-utils.el
+  code-review-20211208.1419/code-review.el
+Built code-review in 5.691s, finished at 2021-12-08T17:10:07+0000
  ✓ Success:
+4.0K -rw-r--r-- 1 root root  678 Dec  8 17:10 packages/code-review-20211208.1419.entry
+212K -rw-r--r-- 1 root root 210K Dec  8 17:10 packages/code-review-20211208.1419.tar
 4.0K -rw-r--r-- 1 root root  676 Dec  8 13:37 packages/code-review-20211208.26.entry
 212K -rw-r--r-- 1 root root 210K Dec  8 13:37 packages/code-review-20211208.26.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec  8 13:37 packages/code-review-badge.svg
-4.0K -rw-r--r-- 1 root root  132 Dec  8 13:37 packages/code-review-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Dec  8 17:10 packages/code-review-badge.svg
+4.0K -rw-r--r-- 1 root root  132 Dec  8 17:10 packages/code-review-readme.txt
