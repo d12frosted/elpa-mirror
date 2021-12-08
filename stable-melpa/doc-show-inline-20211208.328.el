@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-doc-show-inline
-;; Package-Version: 20211205.2143
-;; Package-Commit: 1c5837d2a667d977a1bd90ba44ebd911cc660f26
+;; Package-Version: 20211208.328
+;; Package-Commit: 2ddb1c70f9f3b430f7b3e50fec1e3ef28ef3bbd6
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
@@ -279,16 +279,13 @@ the point should not be moved by this function."
 
 (defun doc-show-inline-extract-doc-default (sym)
   "Extract doc-string for SYM."
-  (let
-    (
-      ;; There may be blank lines between the comment beginning.
-      (pos-end
-        (progn
-          (beginning-of-line)
-          (skip-chars-backward " \t\n" (point-min))
-          (point))))
 
+  ;; There may be blank lines between the comment beginning,
+  ;; include these since it's useful to display the the space to know if the comment
+  ;; was directly above the text or not.
+  (let ((pos-end (max (point-min) (1- (line-beginning-position)))))
     ;; Move one character into the comment.
+    (goto-char pos-end)
     (cond
       ((forward-comment -1)
         (let
