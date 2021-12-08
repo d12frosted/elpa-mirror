@@ -4,8 +4,8 @@
 ;; Created: 2021
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
-;; Package-Version: 20211129.1504
-;; Package-Commit: b895c8cf280f80a0cf724f137de06217679cb846
+;; Package-Version: 20211208.1313
+;; Package-Commit: fab063f187fe03c1a5df66946ae277146136b5fd
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 
@@ -414,7 +414,8 @@ If INTERACTIVE is nil the function acts like a capf."
       (when (or (not cape-file-directory-must-exist)
                 (and (string-match-p "/" file) (file-exists-p (file-name-directory file))))
         `(,(car bounds) ,(cdr bounds) ,#'read-file-name-internal
-          :company-prefix-length ,(and (not (equal file "/")) (string-suffix-p "/" file))
+          ,@(and (not (equal file "/")) (string-suffix-p "/" file)
+                 '(:company-prefix-length t))
           :exclusive no ,@cape--file-properties)))))
 
 ;;;;; cape-symbol
@@ -569,6 +570,79 @@ If INTERACTIVE is nil the function acts like a capf."
         ,(cape--table-with-properties (cape--dict-words) :category 'cape-dict)
         :exclusive no ,@cape--dict-properties))))
 
+;;;;; cape-tex, cape-sgml, cape-rfc1345
+
+(defmacro cape--char-define (name method prefix)
+  "Define quail translation variable with NAME.
+METHOD is the input method.
+PREFIX is the prefix regular expression."
+  (describe-input-method method)
+  (let ((capf (intern (format "cape-%s" name)))
+        (list (intern (format "cape--%s-list" name)))
+        (ann (intern (format "cape--%s-annotation" name)))
+        (exit (intern (format "cape--%s-exit" name)))
+        (properties (intern (format "cape--%s-properties" name)))
+        (translation
+         (with-current-buffer "*Help*"
+           (let ((str (replace-regexp-in-string
+                       "\n\n\\(\n\\|.\\)*" ""
+                       (replace-regexp-in-string
+                        "\\`\\(\n\\|.\\)*?----\n" ""
+                        (replace-regexp-in-string
+                         "\\`\\(\n\\|.\\)*?KEY SEQUENCE\n-+\n" ""
+                         (buffer-substring-no-properties (point-min) (point-max))))))
+                 (pos 0)
+                 (list nil)
+                 (regexp (format "\\(?:^\\|[\t\n ]\\)\\(%s[^ \t\n]+\\)[ \t\n]+\\([^ \t\n]+\\)" prefix)))
+             (while (string-match regexp str pos)
+               (let ((char (match-string 2 str))
+                     (name (if (equal method "sgml")
+                               (string-remove-suffix ";" (match-string 1 str))
+                             (match-string 1 str))))
+                 (push (cons name char) list)
+                 (setq pos (match-end 0))))
+             (kill-buffer-and-window)
+             (sort list (lambda (x y) (string< (car x) (car y))))))))
+    `(progn
+       (defvar ,list ',translation)
+       (defun ,ann (name)
+         (concat " " (cdr (assoc name ,list))))
+       (defun ,exit (name status)
+         (unless (eq status 'exact)
+           (when-let (str (cdr (assoc name ,list)))
+             (delete-region (- (point) (length name)) (point))
+             (insert str))))
+       (defvar ,properties
+         (list :annotation-function #',ann
+               :exit-function #',exit
+               :company-kind (lambda (_) 'text)))
+       (defun ,capf (&optional interactive)
+         ,(format "Complete unicode character at point.
+Uses the same input format as the %s input method,
+see `describe-input-method'. If INTERACTIVE is nil
+the function acts like a capf." method)
+         (interactive (list t))
+         (if interactive
+             ;; NOTE: Disable cycling since replacement breaks it.
+             (let (completion-cycle-threshold)
+               (cape--interactive #',capf))
+           (require 'thingatpt)
+           (let ((bounds (if (thing-at-point-looking-at ,(format "%s[^ \n\t]*" prefix))
+                             (cons (match-beginning 0) (match-end 0))
+                           (cons (point) (point)))))
+             (append
+              (list (car bounds) (cdr bounds)
+                    (cape--table-with-properties ,list :category ',capf)
+                    :exclusive 'no)
+              ,properties)))))))
+
+;;;###autoload (autoload 'cape-tex "cape" nil t)
+;;;###autoload (autoload 'cape-sgml "cape" nil t)
+;;;###autoload (autoload 'cape-rfc1345 "cape" nil t)
+(cape--char-define tex "TeX" "[\\\\^_]")
+(cape--char-define sgml "sgml" "&")
+(cape--char-define rfc1345 "rfc1345" "&")
+
 ;;;;; cape-abbrev
 
 (defun cape--abbrev-list ()
@@ -585,9 +659,14 @@ If INTERACTIVE is nil the function acts like a capf."
                 (abbrev--symbol abbrev global-abbrev-table)))
            30 0 nil t)))
 
+(defun cape--abbrev-exit (_str status)
+  "Expand expansion if STATUS is not exact."
+   (unless (eq status 'exact)
+     (expand-abbrev)))
+
 (defvar cape--abbrev-properties
   (list :annotation-function #'cape--abbrev-annotation
-        :exit-function (lambda (&rest _) (expand-abbrev))
+        :exit-function #'cape--abbrev-exit
         :company-kind (lambda (_) 'snippet))
   "Completion extra properties for `cape-abbrev'.")
 
@@ -597,7 +676,9 @@ If INTERACTIVE is nil the function acts like a capf."
 If INTERACTIVE is nil the function acts like a capf."
   (interactive (list t))
   (if interactive
-      (cape--interactive #'cape-abbrev)
+      ;; NOTE: Disable cycling since abbreviation replacement breaks it.
+      (let (completion-cycle-threshold)
+        (cape--interactive #'cape-abbrev))
     (when-let (abbrevs (cape--abbrev-list))
       (let ((bounds (cape--bounds 'symbol)))
         `(,(car bounds) ,(cdr bounds)
