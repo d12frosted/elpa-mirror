@@ -1,0 +1,20 @@
+(evil-tree-edit .
+		[(20211207 1645)
+		 ((emacs
+		   (27 0))
+		  (tree-edit
+		   (0 1 0))
+		  (tree-sitter
+		   (0 15 0))
+		  (evil
+		   (1 0 0))
+		  (avy
+		   (0 5 0))
+		  (s
+		   (0 0 0)))
+		 "Evil structural editing for any language!" single
+		 ((:commit . "d80d5013dc7d7acfc640ea1fcfa7f44712e4d942")
+		  (:authors
+		   ("Ethan Leba" . "ethanleba5@gmail.com"))
+		  (:maintainer "Ethan Leba" . "ethanleba5@gmail.com")
+		  (:url . "https://github.com/ethan-leba/tree-edit"))])

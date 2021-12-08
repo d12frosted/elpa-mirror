@@ -3,7 +3,11 @@ Fetcher: github
 Source:  https://github.com/m-cat/org-recur.git
 
 Updating /mnt/store/melpa/working/org-recur/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://github.com/m-cat/org-recur.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 5662cc897ab1533b39e3e93b2150dacbe699d591
+Built org-recur in 5.646s, finished at 2021-12-07T20:42:28+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Dec  7 20:42 packages/org-recur-20211007.238.el
+4.0K -rw-r--r-- 1 root root  398 Dec  7 20:42 packages/org-recur-20211007.238.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec  7 20:42 packages/org-recur-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Dec  7 20:42 packages/org-recur-readme.txt
