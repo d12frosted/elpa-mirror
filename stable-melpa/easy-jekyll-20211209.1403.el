@@ -4,9 +4,9 @@
 
 ;; Author: Masashi Miyaura
 ;; URL: https://github.com/masasam/emacs-easy-jekyll
-;; Package-Version: 20211121.2306
-;; Package-Commit: ba8c0c04bb6ec21a446feba0a45aae7fd45d9dfc
-;; Version: 2.5.30
+;; Package-Version: 20211209.1403
+;; Package-Commit: 1af4a6cea3be06cd2c34ddfaae834725fedc22c2
+;; Version: 2.6.30
 ;; Package-Requires: ((emacs "25.1") (request "0.3.0"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -173,6 +173,11 @@ The default is drwxr-xr-x."
   :group 'easy-jekyll
   :type 'string)
 
+(defcustom easy-jekyll-additional-postdir nil
+  "Additional directory where stores its markdown files."
+  :group 'easy-jekyll
+  :type 'string)
+
 (defcustom easy-jekyll-rsync-delete-directory "_site/"
   "Disappear directory when synchronizing with rsync."
   :group 'easy-jekyll
@@ -289,7 +294,8 @@ The default is drwxr-xr-x."
 	(easy-jekyll-textile-extension . ,easy-jekyll-textile-extension)
 	(easy-jekyll-markdown-extension . ,easy-jekyll-markdown-extension)
 	(easy-jekyll-default-ext . ,easy-jekyll-default-ext)
-	(easy-jekyll-postdir . ,easy-jekyll-postdir))
+	(easy-jekyll-postdir . ,easy-jekyll-postdir)
+	(easy-jekyll-additional-postdir . ,easy-jekyll-additional-postdir))
       easy-jekyll-bloglist)
 
 (defvar easy-jekyll--publish-timer-list
@@ -350,7 +356,11 @@ The default is drwxr-xr-x."
 
 (defconst easy-jekyll--default-postdir
   "_posts"
-  "Default easy-jekyll-postdir.")
+  "Default `easy-jekyll-postdir'.")
+
+(defconst easy-jekyll--default-additional-postdir
+  nil
+  "Default `easy-jekyll-additional-postdir'.")
 
 (defconst easy-jekyll--default-ext
   easy-jekyll-default-ext
@@ -1695,6 +1705,9 @@ Optional prefix ARG says how many lines to move; default is one line."
     (if (easy-jekyll-eval-bloglist easy-jekyll-postdir)
 	(easy-jekyll-set-bloglist easy-jekyll-postdir)
       (setq easy-jekyll-postdir easy-jekyll--default-postdir))
+    (if (easy-jekyll-eval-bloglist easy-jekyll-additional-postdir)
+	(easy-jekyll-set-bloglist easy-jekyll-additional-postdir)
+      (setq easy-jekyll-additional-postdir easy-jekyll--default-additional-postdir))
     (easy-jekyll--preview-end)
     (easy-jekyll)))
 
@@ -1746,6 +1759,9 @@ Optional prefix ARG says how many lines to move; default is one line."
     (if (easy-jekyll-eval-bloglist easy-jekyll-postdir)
 	(easy-jekyll-set-bloglist easy-jekyll-postdir)
       (setq easy-jekyll-postdir easy-jekyll--default-postdir))
+    (if (easy-jekyll-eval-bloglist easy-jekyll-additional-postdir)
+	(easy-jekyll-set-bloglist easy-jekyll-additional-postdir)
+      (setq easy-jekyll-additional-postdir easy-jekyll--default-additional-postdir))
     (easy-jekyll--preview-end)
     (easy-jekyll)))
 
@@ -1799,6 +1815,9 @@ Optional prefix ARG says how many lines to move; default is one line."
     (if (easy-jekyll-eval-bloglist easy-jekyll-postdir)
 	(easy-jekyll-set-bloglist easy-jekyll-postdir)
       (setq easy-jekyll-postdir easy-jekyll--default-postdir))
+    (if (easy-jekyll-eval-bloglist easy-jekyll-additional-postdir)
+	(easy-jekyll-set-bloglist easy-jekyll-additional-postdir)
+      (setq easy-jekyll-additional-postdir easy-jekyll--default-additional-postdir))
     (easy-jekyll--preview-end)
     (easy-jekyll)))
 
@@ -1823,6 +1842,9 @@ Optional prefix ARG says how many lines to move; default is one line."
 	       (expand-file-name easy-jekyll-basedir))
   (add-to-list 'easy-jekyll--postdir-list
   	       (expand-file-name "_posts" easy-jekyll-basedir))
+  (when easy-jekyll-additional-postdir
+	     (add-to-list 'easy-jekyll--postdir-list
+			(expand-file-name easy-jekyll-additional-postdir easy-jekyll-basedir)))
   (setq easy-jekyll-postdir
 	(file-relative-name
 	 (completing-read
@@ -1924,6 +1946,9 @@ output directories whose names match REGEXP."
 	       (expand-file-name easy-jekyll-basedir))
   (add-to-list 'easy-jekyll--postdir-list
   	       (expand-file-name "_posts" easy-jekyll-basedir))
+  (when easy-jekyll-additional-postdir
+	     (add-to-list 'easy-jekyll--postdir-list
+			(expand-file-name easy-jekyll-additional-postdir easy-jekyll-basedir)))
   (if (eq (- (length easy-jekyll--postdir-list) 1) easy-jekyll--current-postdir)
       (setq easy-jekyll--current-postdir 0)
     (setq easy-jekyll--current-postdir (+ easy-jekyll--current-postdir 1)))
@@ -1944,6 +1969,9 @@ output directories whose names match REGEXP."
 	       (expand-file-name easy-jekyll-basedir))
   (add-to-list 'easy-jekyll--postdir-list
 	       (expand-file-name "_posts" easy-jekyll-basedir))
+  (when easy-jekyll-additional-postdir
+	     (add-to-list 'easy-jekyll--postdir-list
+			(expand-file-name easy-jekyll-additional-postdir easy-jekyll-basedir)))
   (setq easy-jekyll--current-postdir (- easy-jekyll--current-postdir 1))
   (when (> 0 easy-jekyll--current-postdir)
     (setq easy-jekyll--current-postdir (- (length easy-jekyll--postdir-list) 1)))
