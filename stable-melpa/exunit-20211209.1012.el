@@ -4,11 +4,11 @@
 
 ;; Author: Anantha kumaran <ananthakumaran@gmail.com>
 ;; URL: http://github.com/ananthakumaran/exunit.el
-;; Package-Version: 20210222.1453
-;; Package-Commit: 5bb115f3270cfe29d36286da889f0ee5bba03cfd
+;; Package-Version: 20211209.1012
+;; Package-Commit: 8871bb12ce0cdb209029ab796b0b202735f82f7f
 ;; Version: 0.1
 ;; Keywords: processes elixir exunit
-;; Package-Requires: ((s "1.11.0") (emacs "24.3") (f "0.20.0"))
+;; Package-Requires: ((s "1.11.0") (emacs "24.3") (f "0.20.0") (transient "0.3.6"))
 
 ;; This program is free software: you can redistribute it and/or modify it
 ;; under the terms of the GNU General Public License as published by
@@ -36,18 +36,28 @@
 (require 'f)
 (require 'ansi-color)
 (require 'compile)
+(require 'transient)
+(require 'subr-x)
 
 ;;; Private
 
-(define-prefix-command 'exunit-mode-keymap)
-(define-key exunit-mode-keymap (kbd "a") 'exunit-verify-all)
-(define-key exunit-mode-keymap (kbd "s") 'exunit-verify-single)
-(define-key exunit-mode-keymap (kbd "v") 'exunit-verify)
-(define-key exunit-mode-keymap (kbd "d") 'exunit-debug)
-(define-key exunit-mode-keymap (kbd "r") 'exunit-rerun)
-(define-key exunit-mode-keymap (kbd "u") 'exunit-verify-all-in-umbrella)
-(define-key exunit-mode-keymap (kbd "t") 'exunit-toggle-file-and-test)
-(define-key exunit-mode-keymap (kbd "4 t") 'exunit-toggle-file-and-test-other-window)
+(transient-define-prefix exunit-transient ()
+  "ExUnit"
+  ["Arguments"
+   [("-f" "Failed" "--failed")
+    ("-s" "Stale" "--stale")
+    ("-t" "Trace" "--trace")
+    ("-c" "Coverage" "--cover")]
+   [("-z" "Slowest" "--slowest=10")]]
+  ["Actions"
+   [("a" "all" exunit-verify-all)
+    ("v" "current buffer" exunit-verify)]
+   [("s" "single" exunit-verify-single)
+    ("d" "debug" exunit-debug)]
+   [("r" "rerun" exunit-rerun)
+    ("u" "all in umbrella" exunit-verify-all-in-umbrella)]
+   [("t" "toggle file and test" exunit-toggle-file-and-test)
+    ("4 t" "toggle other window" exunit-toggle-file-and-test-other-window)]])
 
 (defcustom exunit-mix-test-default-options '()
   "List of options that gets passed to the mix test command."
@@ -184,8 +194,8 @@ and filename relative to the dependency."
   "Run mix test with the given ARGS."
   (let ((default-directory (or directory (exunit-project-root)))
         (compilation-environment exunit-environment)
-        (args (if current-prefix-arg
-                  (list (read-from-minibuffer "Args: " (s-join " " args) nil nil 'exunit-arguments))
+        (args (if-let (infixes (transient-args 'exunit-transient))
+                  (append infixes args)
                 args)))
     (exunit-do-compile
      (s-join " " (append '("mix" "test") exunit-mix-test-default-options args)))))
@@ -266,7 +276,7 @@ If the file does not exist, display an error message."
 ;;;###autoload
 (define-minor-mode exunit-mode
   "Minor mode for ExUnit test runner"
-  :lighter " ExUnit" :keymap `((,exunit-key-command-prefix . exunit-mode-keymap)))
+  :lighter " ExUnit" :keymap `((,exunit-key-command-prefix . exunit-transient)))
 
 ;;;###autoload
 (defun exunit-rerun ()

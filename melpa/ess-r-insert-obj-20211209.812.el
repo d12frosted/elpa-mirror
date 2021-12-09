@@ -5,8 +5,8 @@
 ;; Author: Shuguang Sun <shuguang79@qq.com>
 ;; Created: 2019/04/06
 ;; Version: 1.0
-;; Package-Version: 20200916.843
-;; Package-Commit: f6731eb26dc0fc5b7ca1fa881a5f9100f8fcf494
+;; Package-Version: 20211209.812
+;; Package-Commit: dd367cb918c90ec6d3824da869f7a75bb1ca49b6
 ;; URL: https://github.com/ShuguangSun/ess-r-insert-obj
 ;; Package-Requires: ((emacs "26.1") (ess "18.10.1"))
 ;; Keywords: tools
@@ -128,7 +128,7 @@ Optional argument DATAFRAME name of data.frame-like object."
 ;;; Utility
 (defun ess-r-insert-obj-get-objects ()
   "Get the list of data.frame-like objects (is.list) for completion."
-  (let* ((call1 "ls()[c(sapply(ls(), function(x) {is.list(eval(parse(text = x)))}))]")
+  (let* ((call1 "ls(.GlobalEnv)[c(sapply(ls(.GlobalEnv), function(x) {is.list(eval(parse(text = x)))}))]")
          (cmd (concat  call1 "\n")))
     (setq ess-r-insert-obj-dt-candidate (ess-get-words-from-vector cmd))
     ess-r-insert-obj-dt-candidate))
