@@ -4,8 +4,6 @@
 ;;
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; URL: https://github.com/Wilfred/ag.el
-;; Package-Version: 20201031.2202
-;; Package-Commit: ed7e32064f92f1315cecbfc43f120bbc7508672c
 ;; Created: 11 January 2013
 ;; Version: 0.48
 ;; Package-Requires: ((dash "2.8.0") (s "1.9.0") (cl-lib "0.5"))

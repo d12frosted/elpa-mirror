@@ -4,8 +4,8 @@
 ;; Created: 2021
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
-;; Package-Version: 20211208.1535
-;; Package-Commit: 516eb36e8dd739b70e3df0d89e97537d86d216a9
+;; Package-Version: 20211208.1852
+;; Package-Commit: ad7f35fdbe3c2d3b96f27a917ff039274810b145
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 
@@ -625,7 +625,7 @@ PREFIX is the prefix regular expression."
        (defun ,exit (name status)
          (unless (eq status 'exact)
            (when-let (str (cdr (assoc name ,list)))
-             (delete-region (- (point) (length name)) (point))
+             (delete-region (max (point-min) (- (point) (length name))) (point))
              (insert str))))
        (defvar ,properties
          (list :annotation-function #',ann
