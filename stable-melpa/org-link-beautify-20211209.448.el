@@ -2,8 +2,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "27.1") (all-the-icons "4.0.0"))
-;; Package-Version: 20211120.846
-;; Package-Commit: 51c6d4efba7692ed288b7891127dc0aa44a9b585
+;; Package-Version: 20211209.448
+;; Package-Commit: 29a44cff345928d8ded7ff814edcbf5a3ea0550e
 ;; Version: 1.2.2
 ;; Keywords: hypermedia
 ;; homepage: https://github.com/stardiviner/org-link-beautify
@@ -549,9 +549,9 @@ Set `org-link-beautify-pdf-preview-image-format' to `svg'."))
     ("elisp" (all-the-icons-icon-for-mode 'emacs-lisp-mode :v-adjust -0.05))
     ("eshell" (all-the-icons-icon-for-mode 'eshell-mode))
     ("shell" (all-the-icons-icon-for-mode 'shell-mode))
-    ("man" (all-the-icons-material "description"))
-    ("info" (all-the-icons-material "description"))
-    ("help" (all-the-icons-material "description"))
+    ("man" (all-the-icons-faicon "info-circle" :v-adjust -0.05))
+    ("info" (all-the-icons-faicon "info" :v-adjust -0.05))
+    ("help" (all-the-icons-faicon "info" :v-adjust -0.05))
 
     ("eaf" (all-the-icons-material "apps" :v-adjust -0.05)) ; emacs-application-framework
     ("eww" (all-the-icons-icon-for-mode 'eww-mode))
