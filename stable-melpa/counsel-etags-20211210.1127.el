@@ -4,8 +4,8 @@
 
 ;; Author: Chen Bin <chenbin dot sh AT gmail dot com>
 ;; URL: http://github.com/redguardtoo/counsel-etags
-;; Package-Version: 20211010.1332
-;; Package-Commit: 98860e5981b07952b5c15361cdb996741e5842c5
+;; Package-Version: 20211210.1127
+;; Package-Commit: bafd22a20c3328b0cf81aa9c35bfa37a095cf9c3
 ;; Package-Requires: ((emacs "25.1") (counsel "0.13.4"))
 ;; Keywords: tools, convenience
 ;; Version: 1.10.0
@@ -1731,7 +1731,13 @@ If HINT is not nil, it's used as grep hint.
 ROOT is the directory to grep.  It's automatically detected.
 If current file is org file, current node or parent node's property
 \"GREP_PROJECT_ROOT\" is read to get the root directory to grep.
-If SHOW-KEYWORD-P is t, show the keyword in the minibuffer."
+If SHOW-KEYWORD-P is t, show the keyword in the minibuffer.
+
+This command uses Ivy which supports regexp negation with \"!\".
+For example, \"define key ! ivy quit\" first selects everything
+matching \"define.*key\", then removes everything matching \"ivy\",
+and finally removes everything matching \"quit\". What remains is the
+final result set of the negation regexp."
   (interactive)
   (let* ((text (if default-keyword default-keyword
                   (counsel-etags-read-keyword "Regular expression for grep: ")))
