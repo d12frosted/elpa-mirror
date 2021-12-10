@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-doc-show-inline
-;; Package-Version: 20211210.35
-;; Package-Commit: 6b1d848b43841b55a43349509225ed78ea926e00
+;; Package-Version: 20211210.102
+;; Package-Commit: 3a4eee3ef3fb3b50252418308f1b45e22a67bc8e
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
@@ -72,6 +72,10 @@
 Set to 0.0 to highlight immediately (as part of syntax highlighting)."
   :type 'float)
 
+(defcustom doc-show-inline-exclude-regexp nil
+  "Optionally skip comments that match this regular expression."
+  :type '(choice (const nil) (regexp)))
+
 (defcustom doc-show-inline-face-background-highlight -0.04
   "Use to tint the background color for overlay text (between -1.0 and 1.0).
 Ignored when `doc-show-inline-face'
@@ -120,8 +124,7 @@ This hook is called instead of the mode hooks such as:
 The buffer and point will be the destination (the header file for example).
 The function must return a (BEG . END) cons cell representing the range to
 display or nil on failure.
-Note that the beginning may contain white-space
-(instead of the beginning of the comment)
+Note that the beginning may contain white-space (before the comment begins)
 in order to maintain alignment with the following lines.")
 
 (defvar-local doc-show-inline-filter nil
@@ -310,7 +313,24 @@ the point should not be moved by this function."
                 sym
                 (current-buffer)
                 (point))
-              ;; Failure.
+              ;; Skip this comment.
+              nil)
+            ;; Optionally exclude a regexp.
+            (
+              (and
+                doc-show-inline-exclude-regexp
+                (save-match-data
+                  (goto-char pos-beg)
+                  (search-forward-regexp doc-show-inline-exclude-regexp pos-end t)))
+
+              (doc-show-inline--log-info
+                "comment \"%s\" in %S at point %d was skipped because of regex match with %S"
+                sym
+                (current-buffer)
+                pos-beg
+                doc-show-inline-exclude-regexp)
+
+              ;; Skip this comment.
               nil)
 
             (t

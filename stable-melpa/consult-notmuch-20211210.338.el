@@ -3,8 +3,8 @@
 ;; Author: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Maintainer: Jose A Ortega Ruiz
 ;; Keywords: mail
-;; Package-Version: 20211203.354
-;; Package-Commit: dfdefb95abb88d27c646729cb36d28da08d7fb3d
+;; Package-Version: 20211210.338
+;; Package-Commit: 2fd4befde0a2664b862a0e0c4ed3ccaedfc19c00
 ;; License: GPL-3.0-or-later
 ;; Version: 0.6
 ;; Package-Requires: ((emacs "26.1") (consult "0.9") (notmuch "0.31"))
@@ -114,8 +114,9 @@ If given, use INITIAL as the starting point of the query."
     (let ((result-string))
       (dolist (spec consult-notmuch-result-format)
         (when-let (field (consult-notmuch--format-field spec msg))
-	  (setq result-string (concat result-string field))))
-      (propertize result-string 'thread-id id))))
+          (setq result-string (concat result-string field))))
+      (propertize result-string 'thread-id id
+                  'tags (plist-get msg :tags)))))
 
 (defun consult-notmuch--thread-id (candidate)
   "Recover the thread id for the given CANDIDATE string."
@@ -172,11 +173,14 @@ If given, use INITIAL as the starting point of the query."
            (auths (string-trim (nth 1 (split-string mid "[];]"))))
            (subject (string-trim (nth 1 (split-string mid "[;]"))))
            (headers (list :Subject subject :From auths))
+           (t0 (string-match "([^)]+)\\s-*$" mid))
+           (tags (split-string (substring mid (1+  t0) -1)))
            (msg (list :id thread-id
                       :match t
                       :headers headers
                       :count count
-                      :date_relative date)))
+                      :date_relative date
+                      :tags tags)))
       (consult-notmuch--format-candidate msg))))
 
 
@@ -213,6 +217,32 @@ If given, use INITIAL as the starting point of the query."
   (when-let ((thread-id (consult-notmuch--thread-id candidate)))
     (notmuch-tree thread-id nil nil)))
 
+
+;; Embark Integration:
+(with-eval-after-load 'embark
+  (defvar consult-notmuch-map
+    (let ((map (make-sparse-keymap)))
+      (define-key map (kbd "+") 'consult-notmuch-tag)
+      (define-key map (kbd "-") 'consult-notmuch-tag)
+      map)
+    "Keymap for actions on Notmuch entries.")
+  
+  (set-keymap-parent consult-notmuch-map embark-general-map)
+  (add-to-list 'embark-keymap-alist '(notmuch-result . consult-notmuch-map))
+  
+  (defun consult-notmuch-tag (msg)
+    (when-let* ((thread-id (consult-notmuch--thread-id msg))
+                (tags (get-text-property 0 'tags msg))
+                (tag-changes (notmuch-read-tag-changes tags "Tags: " "+")))
+      (notmuch-tag (concat "(" thread-id ")") tag-changes)))
+  
+  (defun consult-notmuch-export (msgs)
+    "Create a notmuch search buffer listing messages."
+    (notmuch-search
+     (concat "("
+             (mapconcat #'consult-notmuch--thread-id msgs " ")
+             ")")))
+  (add-to-list 'embark-exporters-alist '(notmuch-result . consult-notmuch-export)))
 
 ;;;###autoload
 (defun consult-notmuch (&optional initial)
