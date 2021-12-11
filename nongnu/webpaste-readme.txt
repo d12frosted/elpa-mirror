@@ -2,9 +2,10 @@ Table of Contents
 ─────────────────
 
 1. Webpaste.el – Paste text to pastebin-like services
-2. Table of Contents                                          :TOC_3_gh:
+2. Table of Contents
 3. Installation
-.. 1. The lazy way (Using [use-package])
+.. 1. The interactive way
+.. 2. A declarative way (Using [use-package])
 4. Configuration
 .. 1. Choosing providers / provider priority
 .. 2. Only paste plaintext pastes
@@ -16,19 +17,23 @@ Table of Contents
 ..... 3. Open the recently created paste in the browser
 ..... 4. Use a custom hook
 .. 6. Custom providers
-5. TODO Providers to implement [8/15]
+5. TODO Providers to implement [7/14]
 
 
 [https://img.shields.io/badge/license-GPL_3-green.svg]
+[https://elpa.nongnu.org/nongnu/webpaste.svg]
 [https://melpa.org/packages/webpaste-badge.svg]
 [https://stable.melpa.org/packages/webpaste-badge.svg]
 [https://github.com/etu/webpaste.el/workflows/Unit%20tests/badge.svg]
 [https://github.com/etu/webpaste.el/workflows/Integration%20tests/badge.svg]
-[https://coveralls.io/repos/github/etu/webpaste.el/badge.svg?branch=master]
+[https://coveralls.io/repos/github/etu/webpaste.el/badge.svg?branch=main]
 
 
 [https://img.shields.io/badge/license-GPL_3-green.svg]
 <https://www.gnu.org/licenses/gpl-3.0.txt>
+
+[https://elpa.nongnu.org/nongnu/webpaste.svg]
+<https://elpa.nongnu.org/nongnu/webpaste.html>
 
 [https://melpa.org/packages/webpaste-badge.svg]
 <https://melpa.org/#/webpaste>
@@ -42,8 +47,8 @@ Table of Contents
 [https://github.com/etu/webpaste.el/workflows/Integration%20tests/badge.svg]
 <https://github.com/etu/webpaste.el/actions?query=workflow%3A%22Integration+tests%22>
 
-[https://coveralls.io/repos/github/etu/webpaste.el/badge.svg?branch=master]
-<https://coveralls.io/github/etu/webpaste.el?branch=master>
+[https://coveralls.io/repos/github/etu/webpaste.el/badge.svg?branch=main]
+<https://coveralls.io/github/etu/webpaste.el?branch=main>
 
 
 1 Webpaste.el – Paste text to pastebin-like services
@@ -55,12 +60,13 @@ Table of Contents
   time and preferred services can easily be configured.
 
 
-2 Table of Contents                                           :TOC_3_gh:
+2 Table of Contents
 ═══════════════════
 
   • 
   • 
 
+    • 
     • 
   • 
 
@@ -81,10 +87,24 @@ Table of Contents
 3 Installation
 ══════════════
 
-[use-package] <https://github.com/jwiegley/use-package>
+  The package is available on [NonGNU ELPA], which is part of the
+  default set of repositories starting in Emacs 28. For information on
+  how to add this repository if you're on an older Emacs, check the
+  [NonGNU ELPA] instructions.
 
-3.1 The lazy way (Using [use-package])
-──────────────────────────────────────
+
+[NonGNU ELPA] <https://elpa.nongnu.org/>
+
+3.1 The interactive way
+───────────────────────
+
+  You can install `webpaste' using the interactive `package-install'
+  command like the following:
+  M-x package-install RET webpaste RET
+
+
+3.2 A declarative way (Using [use-package])
+───────────────────────────────────────────
 
   This requires that you have [use-package] set up. But it's in my
   opinion the easiest way to install and configure packages.
@@ -288,7 +308,7 @@ Table of Contents
   └────
 
 
-5 TODO Providers to implement [8/15]
+5 TODO Providers to implement [7/14]
 ════════════════════════════════════
 
   • ☐ clbin.com
@@ -298,7 +318,6 @@ Table of Contents
   • ☑ dpaste.com
   • ☑ dpaste.org
   • ☑ gist.github.com
-  • ☑ paste.pound-python.org
   • ☑ paste.mozilla.org
   • ☑ bpa.st
   • ☐ paste.debian.net

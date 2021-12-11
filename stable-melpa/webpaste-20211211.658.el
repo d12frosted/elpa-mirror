@@ -2,12 +2,13 @@
 
 ;; Copyright (c) 2016 Elis Hirwing
 
-;; Author: Elis "etu" Hirwing
+;; Author: Elis "etu" Hirwing <elis@hirwing.se>
+;; Maintainer: Elis "etu" Hirwing <elis@hirwing.se>
 ;; URL: https://github.com/etu/webpaste.el
-;; Package-Commit: 65f664d71a9dfff3c09bcc05fa5de539bd7903e0
-;; Package-Version: 20210813.1901
-;; Package-X-Original-Version: 3.2.1
-;; Version: 3.2.1
+;; Package-Commit: 78272662e6992b8614e79a571ff2395fa9630357
+;; Package-Version: 20211211.658
+;; Package-X-Original-Version: 3.2.2
+;; Version: 3.2.2
 ;; Keywords: convenience, comm, paste
 ;; Package-Requires: ((emacs "24.4") (request "0.2.0") (cl-lib "0.5"))
 

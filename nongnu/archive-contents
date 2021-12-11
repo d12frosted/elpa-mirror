@@ -808,7 +808,7 @@
 	      ("François-Xavier Bois <fxbois AT Google Mail Service>"))
 	     (:keywords "languages"))])
  (webpaste .
-	   [(3 2 1)
+	   [(3 2 2)
 	    ((emacs
 	      (24 4))
 	     (request
@@ -818,9 +818,9 @@
 	    "Paste to pastebin-like services" tar
 	    ((:url . "https://github.com/etu/webpaste.el")
 	     (:keywords "convenience" "comm" "paste")
-	     (:maintainer "Elis \"etu\" Hirwing")
+	     (:maintainer "Elis \"etu\" Hirwing" . "elis@hirwing.se")
 	     (:authors
-	      ("Elis \"etu\" Hirwing")))])
+	      ("Elis \"etu\" Hirwing" . "elis@hirwing.se")))])
  (wgrep .
 	[(2 3 3)
 	 nil "Writable grep buffer and apply the changes to files" tar
