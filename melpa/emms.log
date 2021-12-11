@@ -4,10 +4,10 @@ Source:  https://git.savannah.gnu.org/git/emms.git
 
 Updating /mnt/store/melpa/working/emms/
 Checking out origin/HEAD
-Checking out da021c0d300d334069ab4cfe5ca3194564fd628a
+Checking out 32ff8a70ca9726dd0e3b8ad68430bc6fd66bf387
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emms/
-  to /tmp/emmsGEVn7g/emms-20211210.2218
+  to /tmp/emmsSnLpoJ/emms-20211211.232
     emms-bookmarks.el -> emms-bookmarks.el
     emms-browser.el -> emms-browser.el
     emms-cache.el -> emms-cache.el
@@ -63,111 +63,111 @@ Copying files (->) and directories (=>)
     emms-volume.el -> emms-volume.el
     emms.el -> emms.el
   ! doc/emms.texinfo -> emms.texinfo
-Created /tmp/emmsGEVn7g/emms-20211210.2218/emms.info
-Created emms-20211210.2218.tar containing:
-  emms-20211210.2218/
-  emms-20211210.2218/dir
-  emms-20211210.2218/emms-bookmarks.el
-  emms-20211210.2218/emms-browser.el
-  emms-20211210.2218/emms-cache.el
-  emms-20211210.2218/emms-compat.el
-  emms-20211210.2218/emms-cue.el
-  emms-20211210.2218/emms-history.el
-  emms-20211210.2218/emms-i18n.el
-  emms-20211210.2218/emms-info-exiftool.el
-  emms-20211210.2218/emms-info-libtag.el
-  emms-20211210.2218/emms-info-metaflac.el
-  emms-20211210.2218/emms-info-mp3info.el
-  emms-20211210.2218/emms-info-native.el
-  emms-20211210.2218/emms-info-ogginfo.el
-  emms-20211210.2218/emms-info-opusinfo.el
-  emms-20211210.2218/emms-info-tinytag.el
-  emms-20211210.2218/emms-info.el
-  emms-20211210.2218/emms-jack.el
-  emms-20211210.2218/emms-last-played.el
-  emms-20211210.2218/emms-later-do.el
-  emms-20211210.2218/emms-librefm-scrobbler.el
-  emms-20211210.2218/emms-librefm-stream.el
-  emms-20211210.2218/emms-lyrics.el
-  emms-20211210.2218/emms-maint.el
-  emms-20211210.2218/emms-mark.el
-  emms-20211210.2218/emms-metaplaylist-mode.el
-  emms-20211210.2218/emms-mode-line-icon.el
-  emms-20211210.2218/emms-mode-line.el
-  emms-20211210.2218/emms-pkg.el
-  emms-20211210.2218/emms-player-mpd.el
-  emms-20211210.2218/emms-player-mpg321-remote.el
-  emms-20211210.2218/emms-player-mplayer.el
-  emms-20211210.2218/emms-player-mpv.el
-  emms-20211210.2218/emms-player-simple.el
-  emms-20211210.2218/emms-player-vlc.el
-  emms-20211210.2218/emms-player-xine.el
-  emms-20211210.2218/emms-playing-time.el
-  emms-20211210.2218/emms-playlist-limit.el
-  emms-20211210.2218/emms-playlist-mode.el
-  emms-20211210.2218/emms-playlist-sort.el
-  emms-20211210.2218/emms-score.el
-  emms-20211210.2218/emms-setup.el
-  emms-20211210.2218/emms-show-all.el
-  emms-20211210.2218/emms-source-file.el
-  emms-20211210.2218/emms-source-playlist.el
-  emms-20211210.2218/emms-stream-info.el
-  emms-20211210.2218/emms-streams.el
-  emms-20211210.2218/emms-tag-editor.el
-  emms-20211210.2218/emms-tag-tracktag.el
-  emms-20211210.2218/emms-url.el
-  emms-20211210.2218/emms-volume-amixer.el
-  emms-20211210.2218/emms-volume-mixerctl.el
-  emms-20211210.2218/emms-volume-pulse.el
-  emms-20211210.2218/emms-volume-sndioctl.el
-  emms-20211210.2218/emms-volume.el
-  emms-20211210.2218/emms.el
-  emms-20211210.2218/emms.info
-Built emms in 17.514s, finished at 2021-12-11T01:37:02+0000
+Created /tmp/emmsSnLpoJ/emms-20211211.232/emms.info
+Created emms-20211211.232.tar containing:
+  emms-20211211.232/
+  emms-20211211.232/dir
+  emms-20211211.232/emms-bookmarks.el
+  emms-20211211.232/emms-browser.el
+  emms-20211211.232/emms-cache.el
+  emms-20211211.232/emms-compat.el
+  emms-20211211.232/emms-cue.el
+  emms-20211211.232/emms-history.el
+  emms-20211211.232/emms-i18n.el
+  emms-20211211.232/emms-info-exiftool.el
+  emms-20211211.232/emms-info-libtag.el
+  emms-20211211.232/emms-info-metaflac.el
+  emms-20211211.232/emms-info-mp3info.el
+  emms-20211211.232/emms-info-native.el
+  emms-20211211.232/emms-info-ogginfo.el
+  emms-20211211.232/emms-info-opusinfo.el
+  emms-20211211.232/emms-info-tinytag.el
+  emms-20211211.232/emms-info.el
+  emms-20211211.232/emms-jack.el
+  emms-20211211.232/emms-last-played.el
+  emms-20211211.232/emms-later-do.el
+  emms-20211211.232/emms-librefm-scrobbler.el
+  emms-20211211.232/emms-librefm-stream.el
+  emms-20211211.232/emms-lyrics.el
+  emms-20211211.232/emms-maint.el
+  emms-20211211.232/emms-mark.el
+  emms-20211211.232/emms-metaplaylist-mode.el
+  emms-20211211.232/emms-mode-line-icon.el
+  emms-20211211.232/emms-mode-line.el
+  emms-20211211.232/emms-pkg.el
+  emms-20211211.232/emms-player-mpd.el
+  emms-20211211.232/emms-player-mpg321-remote.el
+  emms-20211211.232/emms-player-mplayer.el
+  emms-20211211.232/emms-player-mpv.el
+  emms-20211211.232/emms-player-simple.el
+  emms-20211211.232/emms-player-vlc.el
+  emms-20211211.232/emms-player-xine.el
+  emms-20211211.232/emms-playing-time.el
+  emms-20211211.232/emms-playlist-limit.el
+  emms-20211211.232/emms-playlist-mode.el
+  emms-20211211.232/emms-playlist-sort.el
+  emms-20211211.232/emms-score.el
+  emms-20211211.232/emms-setup.el
+  emms-20211211.232/emms-show-all.el
+  emms-20211211.232/emms-source-file.el
+  emms-20211211.232/emms-source-playlist.el
+  emms-20211211.232/emms-stream-info.el
+  emms-20211211.232/emms-streams.el
+  emms-20211211.232/emms-tag-editor.el
+  emms-20211211.232/emms-tag-tracktag.el
+  emms-20211211.232/emms-url.el
+  emms-20211211.232/emms-volume-amixer.el
+  emms-20211211.232/emms-volume-mixerctl.el
+  emms-20211211.232/emms-volume-pulse.el
+  emms-20211211.232/emms-volume-sndioctl.el
+  emms-20211211.232/emms-volume.el
+  emms-20211211.232/emms.el
+  emms-20211211.232/emms.info
+Built emms in 16.502s, finished at 2021-12-11T05:07:04+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  418 Dec 10 22:07 packages/emms-20211207.2108.entry
-820K -rw-r--r-- 1 root root 820K Dec 10 22:07 packages/emms-20211207.2108.tar
 4.0K -rw-r--r-- 1 root root  418 Dec 11 01:37 packages/emms-20211210.2218.entry
-820K -rw-r--r-- 1 root root 820K Dec 11 01:37 packages/emms-20211210.2218.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 01:37 packages/emms-badge.svg
-8.0K -rw-r--r-- 1 root root 5.2K Dec 11 01:36 packages/emms-bilibili-20180103.418.el
-4.0K -rw-r--r-- 1 root root  271 Dec 11 01:36 packages/emms-bilibili-20180103.418.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 01:36 packages/emms-bilibili-badge.svg
-4.0K -rw-r--r-- 1 root root  170 Dec 11 01:36 packages/emms-bilibili-readme.txt
-4.0K -rw-r--r-- 1 root root  639 Dec 11 01:36 packages/emms-bilibili.log
-8.0K -rw-r--r-- 1 root root 5.4K Dec 11 01:36 packages/emms-info-mediainfo-20131223.1300.el
-4.0K -rw-r--r-- 1 root root  381 Dec 11 01:36 packages/emms-info-mediainfo-20131223.1300.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 01:36 packages/emms-info-mediainfo-badge.svg
-4.0K -rw-r--r-- 1 root root  150 Dec 11 01:36 packages/emms-info-mediainfo-readme.txt
-4.0K -rw-r--r-- 1 root root  755 Dec 11 01:36 packages/emms-info-mediainfo.log
- 12K -rw-r--r-- 1 root root  11K Dec 11 01:36 packages/emms-mark-ext-20130529.327.el
-4.0K -rw-r--r-- 1 root root  396 Dec 11 01:36 packages/emms-mark-ext-20130529.327.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 01:36 packages/emms-mark-ext-badge.svg
-4.0K -rw-r--r-- 1 root root  252 Dec 11 01:36 packages/emms-mark-ext-readme.txt
-4.0K -rw-r--r-- 1 root root  636 Dec 11 01:36 packages/emms-mark-ext.log
- 12K -rw-r--r-- 1 root root  10K Dec 11 01:36 packages/emms-mode-line-cycle-20160221.1120.el
-4.0K -rw-r--r-- 1 root root  384 Dec 11 01:36 packages/emms-mode-line-cycle-20160221.1120.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 01:36 packages/emms-mode-line-cycle-badge.svg
-4.0K -rw-r--r-- 1 root root  851 Dec 11 01:36 packages/emms-mode-line-cycle-readme.txt
-4.0K -rw-r--r-- 1 root root  697 Dec 11 01:36 packages/emms-mode-line-cycle.log
-4.0K -rw-r--r-- 1 root root  444 Dec 11 01:36 packages/emms-player-mpv-jp-radios-20180325.1117.entry
-240K -rw-r--r-- 1 root root 240K Dec 11 01:36 packages/emms-player-mpv-jp-radios-20180325.1117.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 01:36 packages/emms-player-mpv-jp-radios-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Dec 11 01:36 packages/emms-player-mpv-jp-radios-readme.txt
-8.0K -rw-r--r-- 1 root root 5.1K Dec 11 01:36 packages/emms-player-mpv-jp-radios.log
-4.0K -rw-r--r-- 1 root root  417 Dec 11 01:36 packages/emms-player-simple-mpv-20180316.1549.entry
-100K -rw-r--r-- 1 root root 100K Dec 11 01:36 packages/emms-player-simple-mpv-20180316.1549.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 01:36 packages/emms-player-simple-mpv-badge.svg
-4.0K -rw-r--r-- 1 root root 1.8K Dec 11 01:36 packages/emms-player-simple-mpv-readme.txt
-4.0K -rw-r--r-- 1 root root 2.0K Dec 11 01:36 packages/emms-player-simple-mpv.log
-4.0K -rw-r--r-- 1 root root  619 Dec 11 01:37 packages/emms-readme.txt
-8.0K -rw-r--r-- 1 root root 4.4K Dec 11 01:36 packages/emms-soundcloud-20131221.1145.el
-4.0K -rw-r--r-- 1 root root  428 Dec 11 01:36 packages/emms-soundcloud-20131221.1145.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 01:36 packages/emms-soundcloud-badge.svg
-4.0K -rw-r--r-- 1 root root  242 Dec 11 01:36 packages/emms-soundcloud-readme.txt
-4.0K -rw-r--r-- 1 root root  653 Dec 11 01:36 packages/emms-soundcloud.log
- 12K -rw-r--r-- 1 root root 9.4K Dec 11 01:36 packages/emms-state-20211023.1942.el
-4.0K -rw-r--r-- 1 root root  405 Dec 11 01:37 packages/emms-state-20211023.1942.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 01:37 packages/emms-state-badge.svg
-4.0K -rw-r--r-- 1 root root  796 Dec 11 01:37 packages/emms-state-readme.txt
-4.0K -rw-r--r-- 1 root root  617 Dec 11 01:37 packages/emms-state.log
+824K -rw-r--r-- 1 root root 820K Dec 11 01:37 packages/emms-20211210.2218.tar
+4.0K -rw-r--r-- 1 root root  417 Dec 11 05:07 packages/emms-20211211.232.entry
+820K -rw-r--r-- 1 root root 820K Dec 11 05:07 packages/emms-20211211.232.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 05:07 packages/emms-badge.svg
+8.0K -rw-r--r-- 1 root root 5.2K Dec 11 05:06 packages/emms-bilibili-20180103.418.el
+4.0K -rw-r--r-- 1 root root  271 Dec 11 05:06 packages/emms-bilibili-20180103.418.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 05:06 packages/emms-bilibili-badge.svg
+4.0K -rw-r--r-- 1 root root  170 Dec 11 05:06 packages/emms-bilibili-readme.txt
+4.0K -rw-r--r-- 1 root root  639 Dec 11 05:06 packages/emms-bilibili.log
+8.0K -rw-r--r-- 1 root root 5.4K Dec 11 05:06 packages/emms-info-mediainfo-20131223.1300.el
+4.0K -rw-r--r-- 1 root root  381 Dec 11 05:06 packages/emms-info-mediainfo-20131223.1300.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 05:06 packages/emms-info-mediainfo-badge.svg
+4.0K -rw-r--r-- 1 root root  150 Dec 11 05:06 packages/emms-info-mediainfo-readme.txt
+4.0K -rw-r--r-- 1 root root  755 Dec 11 05:06 packages/emms-info-mediainfo.log
+ 12K -rw-r--r-- 1 root root  11K Dec 11 05:06 packages/emms-mark-ext-20130529.327.el
+4.0K -rw-r--r-- 1 root root  396 Dec 11 05:06 packages/emms-mark-ext-20130529.327.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 05:06 packages/emms-mark-ext-badge.svg
+4.0K -rw-r--r-- 1 root root  252 Dec 11 05:06 packages/emms-mark-ext-readme.txt
+4.0K -rw-r--r-- 1 root root  636 Dec 11 05:06 packages/emms-mark-ext.log
+ 12K -rw-r--r-- 1 root root  10K Dec 11 05:06 packages/emms-mode-line-cycle-20160221.1120.el
+4.0K -rw-r--r-- 1 root root  384 Dec 11 05:06 packages/emms-mode-line-cycle-20160221.1120.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 05:06 packages/emms-mode-line-cycle-badge.svg
+4.0K -rw-r--r-- 1 root root  851 Dec 11 05:06 packages/emms-mode-line-cycle-readme.txt
+4.0K -rw-r--r-- 1 root root  697 Dec 11 05:06 packages/emms-mode-line-cycle.log
+4.0K -rw-r--r-- 1 root root  444 Dec 11 05:06 packages/emms-player-mpv-jp-radios-20180325.1117.entry
+240K -rw-r--r-- 1 root root 240K Dec 11 05:06 packages/emms-player-mpv-jp-radios-20180325.1117.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 05:06 packages/emms-player-mpv-jp-radios-badge.svg
+4.0K -rw-r--r-- 1 root root 2.0K Dec 11 05:06 packages/emms-player-mpv-jp-radios-readme.txt
+8.0K -rw-r--r-- 1 root root 5.1K Dec 11 05:06 packages/emms-player-mpv-jp-radios.log
+4.0K -rw-r--r-- 1 root root  417 Dec 11 05:06 packages/emms-player-simple-mpv-20180316.1549.entry
+100K -rw-r--r-- 1 root root 100K Dec 11 05:06 packages/emms-player-simple-mpv-20180316.1549.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 05:06 packages/emms-player-simple-mpv-badge.svg
+4.0K -rw-r--r-- 1 root root 1.8K Dec 11 05:06 packages/emms-player-simple-mpv-readme.txt
+4.0K -rw-r--r-- 1 root root 2.0K Dec 11 05:06 packages/emms-player-simple-mpv.log
+4.0K -rw-r--r-- 1 root root  619 Dec 11 05:07 packages/emms-readme.txt
+8.0K -rw-r--r-- 1 root root 4.4K Dec 11 05:06 packages/emms-soundcloud-20131221.1145.el
+4.0K -rw-r--r-- 1 root root  428 Dec 11 05:06 packages/emms-soundcloud-20131221.1145.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 05:06 packages/emms-soundcloud-badge.svg
+4.0K -rw-r--r-- 1 root root  242 Dec 11 05:06 packages/emms-soundcloud-readme.txt
+4.0K -rw-r--r-- 1 root root  653 Dec 11 05:06 packages/emms-soundcloud.log
+ 12K -rw-r--r-- 1 root root 9.4K Dec 11 05:07 packages/emms-state-20211023.1942.el
+4.0K -rw-r--r-- 1 root root  405 Dec 11 05:07 packages/emms-state-20211023.1942.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 05:07 packages/emms-state-badge.svg
+4.0K -rw-r--r-- 1 root root  796 Dec 11 05:07 packages/emms-state-readme.txt
+4.0K -rw-r--r-- 1 root root  617 Dec 11 05:07 packages/emms-state.log

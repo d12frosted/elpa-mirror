@@ -4,9 +4,9 @@
 
 ;; Author: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: https://github.com/redguardtoo/company-ctags
-;; Package-Version: 20210723.1322
-;; Package-Commit: ff813c58e930d01fb55ee2f57fe810896a12c51b
-;; Version: 0.0.6
+;; Package-Version: 20211211.338
+;; Package-Commit: 313508ba5d4f1e4b5d5d554faaa74076201c3248
+;; Version: 0.0.7
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "25.1") (company "0.9.0"))
 
@@ -258,7 +258,8 @@ the candidate."
   "Extract tag names from TEXT.
 DICT is the existing lookup dictionary contains tag names.
 If it's nil, return a dictionary, or else return the existing dictionary."
-  (let* ((start 0))
+  (let* ((start 0)
+         (case-fold-search company-ctags-ignore-case))
     (unless dict (setq dict (company-ctags-init-tagname-dict)))
 
     ;; Code inside the loop should be optimized.
@@ -290,15 +291,16 @@ If it's nil, return a dictionary, or else return the existing dictionary."
 (defun company-ctags-all-completions (string collection)
   "Search  match to STRING in COLLECTION to see if it begins with STRING.
 If `company-ctags-fuzzy-match-p' is t, check if the match contains STRING."
-  (cond
-   (company-ctags-fuzzy-match-p
-    (let* (rlt)
-      ;; code should be efficient in side the this loop
-      (dolist (c collection)
-        (if (string-match string c) (push c rlt)))
-      rlt))
-   (t
-    (all-completions string collection))))
+  (let ((case-fold-search company-ctags-ignore-case))
+    (cond
+     (company-ctags-fuzzy-match-p
+      (let* (rlt)
+        ;; code should be efficient in side the this loop
+        (dolist (c collection)
+          (if (string-match string c) (push c rlt)))
+        rlt))
+     (t
+      (all-completions string collection)))))
 
 (defun company-ctags-fetch-by-first-char (c prefix tagname-dict)
   "Fetch candidates by first character C of PREFIX from TAGNAME-DICT."
@@ -412,7 +414,8 @@ This function return t if any tag file is reloaded."
   "Test PREFIX in `company-ctags-cached-candidates'."
   (let* ((cands company-ctags-cached-candidates)
          (key (plist-get cands :key))
-         (keylen (length key)))
+         (keylen (length key))
+         (case-fold-search company-ctags-ignore-case))
     ;;  prefix is "hello" and cache's prefix "ell"
     (and (>= (length prefix) keylen)
          (if company-ctags-fuzzy-match-p (string-match key prefix)
