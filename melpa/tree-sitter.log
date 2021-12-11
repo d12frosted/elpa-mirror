@@ -4,10 +4,10 @@ Source:  https://github.com/emacs-tree-sitter/elisp-tree-sitter.git
 
 Updating /mnt/store/melpa/working/tree-sitter/
 Checking out origin/release
-Checking out 8bbbfa4fc5f478f10c7cb968177d5a907fe5928f
+Checking out 48b06796a3b2e76ce004972d929de38146eafaa0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tree-sitter/
-  to /tmp/tree-sitterlrPEmQ/tree-sitter-20211208.1154
+  to /tmp/tree-sitter6p9KMr/tree-sitter-20211211.1220
   ! lisp/tree-sitter-cli.el -> tree-sitter-cli.el
   ! lisp/tree-sitter-debug.el -> tree-sitter-debug.el
   ! lisp/tree-sitter-extras.el -> tree-sitter-extras.el
@@ -15,29 +15,31 @@ Copying files (->) and directories (=>)
   ! lisp/tree-sitter-load.el -> tree-sitter-load.el
   ! lisp/tree-sitter-query.el -> tree-sitter-query.el
   ! lisp/tree-sitter.el -> tree-sitter.el
-Created tree-sitter-20211208.1154.tar containing:
-  tree-sitter-20211208.1154/
-  tree-sitter-20211208.1154/tree-sitter-cli.el
-  tree-sitter-20211208.1154/tree-sitter-debug.el
-  tree-sitter-20211208.1154/tree-sitter-extras.el
-  tree-sitter-20211208.1154/tree-sitter-hl.el
-  tree-sitter-20211208.1154/tree-sitter-load.el
-  tree-sitter-20211208.1154/tree-sitter-pkg.el
-  tree-sitter-20211208.1154/tree-sitter-query.el
-  tree-sitter-20211208.1154/tree-sitter.el
-Built tree-sitter in 7.246s, finished at 2021-12-11T09:31:38+0000
+Created tree-sitter-20211211.1220.tar containing:
+  tree-sitter-20211211.1220/
+  tree-sitter-20211211.1220/tree-sitter-cli.el
+  tree-sitter-20211211.1220/tree-sitter-debug.el
+  tree-sitter-20211211.1220/tree-sitter-extras.el
+  tree-sitter-20211211.1220/tree-sitter-hl.el
+  tree-sitter-20211211.1220/tree-sitter-load.el
+  tree-sitter-20211211.1220/tree-sitter-pkg.el
+  tree-sitter-20211211.1220/tree-sitter-query.el
+  tree-sitter-20211211.1220/tree-sitter.el
+Built tree-sitter in 7.553s, finished at 2021-12-11T13:00:52+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  470 Dec 11 09:31 packages/tree-sitter-20211208.1154.entry
  72K -rw-r--r-- 1 root root  70K Dec 11 09:31 packages/tree-sitter-20211208.1154.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 09:31 packages/tree-sitter-badge.svg
- 24K -rw-r--r-- 1 root root  23K Dec 11 09:31 packages/tree-sitter-indent-20211128.2236.el
-4.0K -rw-r--r-- 1 root root  533 Dec 11 09:31 packages/tree-sitter-indent-20211128.2236.entry
+4.0K -rw-r--r-- 1 root root  470 Dec 11 13:00 packages/tree-sitter-20211211.1220.entry
+ 72K -rw-r--r-- 1 root root  70K Dec 11 13:00 packages/tree-sitter-20211211.1220.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 13:00 packages/tree-sitter-badge.svg
+ 24K -rw-r--r-- 1 root root  23K Dec 11 13:00 packages/tree-sitter-indent-20211128.2236.el
+4.0K -rw-r--r-- 1 root root  533 Dec 11 13:00 packages/tree-sitter-indent-20211128.2236.entry
 4.0K -rw-r--r-- 1 root root 1.2K Dec 11 09:31 packages/tree-sitter-indent-badge.svg
-4.0K -rw-r--r-- 1 root root  532 Dec 11 09:31 packages/tree-sitter-indent-readme.txt
-4.0K -rw-r--r-- 1 root root  683 Dec 11 09:31 packages/tree-sitter-indent.log
-4.0K -rw-r--r-- 1 root root  497 Dec 11 06:03 packages/tree-sitter-langs-20211209.1639.entry
-100K -rw-r--r-- 1 root root 100K Dec 11 06:03 packages/tree-sitter-langs-20211209.1639.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 06:03 packages/tree-sitter-langs-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Dec 11 06:03 packages/tree-sitter-langs-readme.txt
-4.0K -rw-r--r-- 1 root root  247 Dec 11 09:31 packages/tree-sitter-langs.log
-4.0K -rw-r--r-- 1 root root  318 Dec 11 09:31 packages/tree-sitter-readme.txt
+4.0K -rw-r--r-- 1 root root  532 Dec 11 13:00 packages/tree-sitter-indent-readme.txt
+4.0K -rw-r--r-- 1 root root  242 Dec 11 13:00 packages/tree-sitter-indent.log
+4.0K -rw-r--r-- 1 root root  497 Dec 11 09:31 packages/tree-sitter-langs-20211209.1639.entry
+100K -rw-r--r-- 1 root root 100K Dec 11 09:31 packages/tree-sitter-langs-20211209.1639.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 09:31 packages/tree-sitter-langs-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Dec 11 09:31 packages/tree-sitter-langs-readme.txt
+4.0K -rw-r--r-- 1 root root  247 Dec 11 13:00 packages/tree-sitter-langs.log
+4.0K -rw-r--r-- 1 root root  318 Dec 11 13:00 packages/tree-sitter-readme.txt

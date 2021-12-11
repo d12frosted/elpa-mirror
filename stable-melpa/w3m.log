@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 6112c6a9e13c00c2c7aecd96820a46b4800d4cda
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/w3m/
-  to /tmp/w3mnDPx9r/w3m-20211122.335
+  to /tmp/w3mfB4Grp/w3m-20211122.335
     bookmark-w3m.el -> bookmark-w3m.el
     mime-w3m.el -> mime-w3m.el
     w3m-antenna.el -> w3m-antenna.el
@@ -40,7 +40,7 @@ Copying files (->) and directories (=>)
   ! doc/emacs-w3m-ja.texi -> emacs-w3m-ja.texi
   ! doc/emacs-w3m.texi -> emacs-w3m.texi
     icons => icons
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3mnDPx9r/w3m-20211122.335/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi -o /tmp/w3mfB4Grp/w3m-20211122.335/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at 6112c6a9 * mime-w3m.el: Fix last change
 HEAD is now at 6112c6a9 * mime-w3m.el: Fix last change
@@ -52,8 +52,8 @@ HEAD is now at 6112c6a9 * mime-w3m.el: Fix last change
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
 ")
-Created /tmp/w3mnDPx9r/w3m-20211122.335/emacs-w3m-ja.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mnDPx9r/w3m-20211122.335/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/w3mfB4Grp/w3m-20211122.335/emacs-w3m-ja.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mfB4Grp/w3m-20211122.335/emacs-w3m-ja.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at 6112c6a9 * mime-w3m.el: Fix last change
 HEAD is now at 6112c6a9 * mime-w3m.el: Fix last change
@@ -64,9 +64,9 @@ HEAD is now at 6112c6a9 * mime-w3m.el: Fix last change
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mnDPx9r/w3m-20211122.335/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3mfB4Grp/w3m-20211122.335/emacs-w3m-ja.info
 ")
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3mnDPx9r/w3m-20211122.335/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi -o /tmp/w3mfB4Grp/w3m-20211122.335/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at 6112c6a9 * mime-w3m.el: Fix last change
 HEAD is now at 6112c6a9 * mime-w3m.el: Fix last change
@@ -77,7 +77,7 @@ HEAD is now at 6112c6a9 * mime-w3m.el: Fix last change
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mnDPx9r/w3m-20211122.335/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3mfB4Grp/w3m-20211122.335/emacs-w3m-ja.info
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
@@ -85,8 +85,8 @@ install-info: No such file or directory for /tmp/w3mnDPx9r/w3m-20211122.335/emac
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
 ")
-Created /tmp/w3mnDPx9r/w3m-20211122.335/emacs-w3m.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mnDPx9r/w3m-20211122.335/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/w3mfB4Grp/w3m-20211122.335/emacs-w3m.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/w3mfB4Grp/w3m-20211122.335/emacs-w3m.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at 6112c6a9 * mime-w3m.el: Fix last change
 HEAD is now at 6112c6a9 * mime-w3m.el: Fix last change
@@ -97,14 +97,14 @@ HEAD is now at 6112c6a9 * mime-w3m.el: Fix last change
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:82: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:317: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m-ja.texi:318: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mnDPx9r/w3m-20211122.335/emacs-w3m-ja.info
+install-info: No such file or directory for /tmp/w3mfB4Grp/w3m-20211122.335/emacs-w3m-ja.info
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:7: @include: could not find version.texi
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:37: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:43: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:60: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:294: warning: undefined flag: VERSION
 /mnt/store/melpa/working/w3m/doc/emacs-w3m.texi:295: warning: undefined flag: VERSION
-install-info: No such file or directory for /tmp/w3mnDPx9r/w3m-20211122.335/emacs-w3m.info
+install-info: No such file or directory for /tmp/w3mfB4Grp/w3m-20211122.335/emacs-w3m.info
 ")
 Created w3m-20211122.335.tar containing:
   w3m-20211122.335/
@@ -183,9 +183,9 @@ Created w3m-20211122.335.tar containing:
   w3m-20211122.335/w3m-weather.el
   w3m-20211122.335/w3m.el
   w3m-20211122.335/w3mhack.el
-Built w3m in 52.572s, finished at 2021-12-11T09:35:11+0000
+Built w3m in 28.309s, finished at 2021-12-11T13:04:27+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  179 Dec 11 09:35 packages/w3m-20211122.335.entry
-1.1M -rw-r--r-- 1 root root 1.1M Dec 11 09:35 packages/w3m-20211122.335.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 09:35 packages/w3m-badge.svg
-4.0K -rw-r--r-- 1 root root  380 Dec 11 09:35 packages/w3m-readme.txt
+4.0K -rw-r--r-- 1 root root  179 Dec 11 13:04 packages/w3m-20211122.335.entry
+1.1M -rw-r--r-- 1 root root 1.1M Dec 11 13:04 packages/w3m-20211122.335.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 13:04 packages/w3m-badge.svg
+4.0K -rw-r--r-- 1 root root  380 Dec 11 13:04 packages/w3m-readme.txt

@@ -4,37 +4,39 @@ Source:  https://github.com/emacs-tree-sitter/elisp-tree-sitter.git
 
 Updating /mnt/store/melpa/working/tsc/
 Checking out origin/release
-Checking out 8bbbfa4fc5f478f10c7cb968177d5a907fe5928f
+Checking out 48b06796a3b2e76ce004972d929de38146eafaa0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tsc/
-  to /tmp/tsczGDntt/tsc-20211208.1154
+  to /tmp/tsclFLWuU/tsc-20211211.1220
   ! core/tsc-dyn-get.el -> tsc-dyn-get.el
   ! core/tsc-obsolete.el -> tsc-obsolete.el
   ! core/tsc.el -> tsc.el
   ! core/Cargo.toml -> Cargo.toml
   ! core/Cargo.lock -> Cargo.lock
   ! core/src => src
-Created tsc-20211208.1154.tar containing:
-  tsc-20211208.1154/
-  tsc-20211208.1154/Cargo.lock
-  tsc-20211208.1154/Cargo.toml
-  tsc-20211208.1154/src/
-  tsc-20211208.1154/src/cursor.rs
-  tsc-20211208.1154/src/error.rs
-  tsc-20211208.1154/src/lang.rs
-  tsc-20211208.1154/src/lib.rs
-  tsc-20211208.1154/src/node.rs
-  tsc-20211208.1154/src/parser.rs
-  tsc-20211208.1154/src/query.rs
-  tsc-20211208.1154/src/tree.rs
-  tsc-20211208.1154/src/types.rs
-  tsc-20211208.1154/tsc-dyn-get.el
-  tsc-20211208.1154/tsc-obsolete.el
-  tsc-20211208.1154/tsc-pkg.el
-  tsc-20211208.1154/tsc.el
-Built tsc in 7.761s, finished at 2021-12-11T09:31:59+0000
+Created tsc-20211211.1220.tar containing:
+  tsc-20211211.1220/
+  tsc-20211211.1220/Cargo.lock
+  tsc-20211211.1220/Cargo.toml
+  tsc-20211211.1220/src/
+  tsc-20211211.1220/src/cursor.rs
+  tsc-20211211.1220/src/error.rs
+  tsc-20211211.1220/src/lang.rs
+  tsc-20211211.1220/src/lib.rs
+  tsc-20211211.1220/src/node.rs
+  tsc-20211211.1220/src/parser.rs
+  tsc-20211211.1220/src/query.rs
+  tsc-20211211.1220/src/tree.rs
+  tsc-20211211.1220/src/types.rs
+  tsc-20211211.1220/tsc-dyn-get.el
+  tsc-20211211.1220/tsc-obsolete.el
+  tsc-20211211.1220/tsc-pkg.el
+  tsc-20211211.1220/tsc.el
+Built tsc in 7.453s, finished at 2021-12-11T13:01:11+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  503 Dec 11 09:31 packages/tsc-20211208.1154.entry
 100K -rw-r--r-- 1 root root 100K Dec 11 09:31 packages/tsc-20211208.1154.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 09:31 packages/tsc-badge.svg
-4.0K -rw-r--r-- 1 root root   91 Dec 11 09:31 packages/tsc-readme.txt
+4.0K -rw-r--r-- 1 root root  503 Dec 11 13:01 packages/tsc-20211211.1220.entry
+100K -rw-r--r-- 1 root root 100K Dec 11 13:01 packages/tsc-20211211.1220.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 13:01 packages/tsc-badge.svg
+4.0K -rw-r--r-- 1 root root   91 Dec 11 13:01 packages/tsc-readme.txt

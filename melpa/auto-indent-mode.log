@@ -7,11 +7,11 @@ Checking out origin/HEAD
 Checking out 664006b67329a8e27330541547f8c2187dab947c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/auto-indent-mode/
-  to /tmp/auto-indent-mode8hGGaJ/auto-indent-mode-20211029.11
+  to /tmp/auto-indent-modesH43WL/auto-indent-mode-20211029.11
     auto-indent-mode.el -> auto-indent-mode.el
     dir -> dir
     auto-indent-mode.texi -> auto-indent-mode.texi
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi -o /tmp/auto-indent-mode8hGGaJ/auto-indent-mode-20211029.11/auto-indent-mode.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi -o /tmp/auto-indent-modesH43WL/auto-indent-mode-20211029.11/auto-indent-mode.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at 664006b Merge pull request #68 from zw963/master
 HEAD is now at 664006b Merge pull request #68 from zw963/master
@@ -52,8 +52,8 @@ HEAD is now at 664006b Merge pull request #68 from zw963/master
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:201: node `Auto-indent and org-mode' lacks menu item for `How do I change the auto-indent default offset?' despite being its Up target
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:247: warning: node `How do I change the auto-indent default offset?' is prev for `Why is auto-indent-mode changing tabs to spaces' in sectioning but not in menu
 ")
-Created /tmp/auto-indent-mode8hGGaJ/auto-indent-mode-20211029.11/auto-indent-mode.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/auto-indent-mode8hGGaJ/auto-indent-mode-20211029.11/auto-indent-mode.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/auto-indent-modesH43WL/auto-indent-mode-20211029.11/auto-indent-mode.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/auto-indent-modesH43WL/auto-indent-mode-20211029.11/auto-indent-mode.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at 664006b Merge pull request #68 from zw963/master
 HEAD is now at 664006b Merge pull request #68 from zw963/master
@@ -93,16 +93,16 @@ HEAD is now at 664006b Merge pull request #68 from zw963/master
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:235: warning: node `Auto-indent and org-mode' is up for `How do I change the auto-indent default offset?' in sectioning but not in menu
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:201: node `Auto-indent and org-mode' lacks menu item for `How do I change the auto-indent default offset?' despite being its Up target
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:247: warning: node `How do I change the auto-indent default offset?' is prev for `Why is auto-indent-mode changing tabs to spaces' in sectioning but not in menu
-install-info: No such file or directory for /tmp/auto-indent-mode8hGGaJ/auto-indent-mode-20211029.11/auto-indent-mode.info
+install-info: No such file or directory for /tmp/auto-indent-modesH43WL/auto-indent-mode-20211029.11/auto-indent-mode.info
 ")
 Created auto-indent-mode-20211029.11.tar containing:
   auto-indent-mode-20211029.11/
   auto-indent-mode-20211029.11/auto-indent-mode-pkg.el
   auto-indent-mode-20211029.11/auto-indent-mode.el
   auto-indent-mode-20211029.11/dir
-Built auto-indent-mode in 8.121s, finished at 2021-12-11T11:45:03+0000
+Built auto-indent-mode in 8.043s, finished at 2021-12-11T15:15:53+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  350 Dec 11 11:45 packages/auto-indent-mode-20211029.11.entry
-120K -rw-r--r-- 1 root root 120K Dec 11 11:45 packages/auto-indent-mode-20211029.11.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 11 11:45 packages/auto-indent-mode-badge.svg
- 12K -rw-r--r-- 1 root root  11K Dec 11 11:45 packages/auto-indent-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  350 Dec 11 15:15 packages/auto-indent-mode-20211029.11.entry
+120K -rw-r--r-- 1 root root 120K Dec 11 15:15 packages/auto-indent-mode-20211029.11.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 11 15:15 packages/auto-indent-mode-badge.svg
+ 12K -rw-r--r-- 1 root root  11K Dec 11 15:15 packages/auto-indent-mode-readme.txt
