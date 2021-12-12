@@ -5,7 +5,7 @@
 ;; Author: Md Arif Shaikh <arifshaikh.astro@gmail.com>
 ;; Keywords: expense tracking, convenience
 ;; Package-Version: 20211206.602
-;; Package-Commit: e4d36a84bc82f7fdd476d87be782e57815737f0f
+;; Package-Commit: b5a3d7c6333aad6343a9fcffd4152afa9ec521f2
 ;; Version: 0.0.1
 ;; Homepage: https://github.com/md-arif-shaikh/expenses
 ;; URL: https://github.com/md-arif-shaikh/expenses

@@ -2895,13 +2895,13 @@
 	(:maintainer "Andrey Kotlarski" . "m00naticus@gmail.com")
 	(:keywords "large files" "utilities"))])
  (wcheck-mode .
-	      [(2020 10 4)
-	       nil "General interface for text checkers" single
-	       ((:keywords "text" "spell" "check" "languages" "ispell")
-		(:authors
-		 ("Teemu Likonen" . "tlikonen@iki.fi"))
+	      [(2021)
+	       nil "General interface for text checkers" tar
+	       ((:url . "https://github.com/tlikonen/wcheck-mode")
+		(:keywords "text" "spell" "check" "languages" "ispell")
 		(:maintainer "Teemu Likonen" . "tlikonen@iki.fi")
-		(:url . "https://github.com/tlikonen/wcheck-mode"))])
+		(:authors
+		 ("Teemu Likonen" . "tlikonen@iki.fi")))])
  (wconf .
 	[(0 2 1)
 	 ((emacs

@@ -97,7 +97,7 @@ missing package or change you would like to see.
     diff-mode
     dim-autoload
     dir-treeview
-    dired
+    Dired
     dired-async
     dired-git
     dired-git-info
