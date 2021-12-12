@@ -5,8 +5,8 @@
 ;; Author: liuyinz <liuyinz95@gmail.com>
 ;; Created: 2021-09-18 23:45:09
 ;; Version: 1.1.0
-;; Package-Version: 20211103.1242
-;; Package-Commit: 9db9dcfdff2ff8cf6a88e938646cb26ce0f61774
+;; Package-Version: 20211212.1158
+;; Package-Commit: 40c2ee58364422b776e81dc153918205bfbeda86
 ;; Keywords: tools
 ;; Package-Requires: ((emacs "27") (transient "0.3.6"))
 ;; Homepage: https://github.com/liuyinz/emacs-conventional-changelog
@@ -158,8 +158,8 @@ default filemode."
    ["Option"
     ("-k" "Select preset" "--preset="
      :always-read t
-     :choices ("angular" "atom" "codemirror" "ember"
-               "eslint" "express" "jquery" "jscs" "jshint"))
+     :choices ("angular" "atom" "codemirror" "conventionalcommits"
+               "ember" "eslint" "express" "jquery" "jshint"))
     ("-r" "Specify release type manually" "--release-as="
      :reader conventional-changelog--get-release-preset)
     ("-p" "Make pre-release with tag id" "--prerelease="
