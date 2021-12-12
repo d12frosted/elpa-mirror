@@ -6,6 +6,8 @@
 ;;         Thomas Refis <thomas.refis(_)gmail.com>
 ;; Created: 27 June 2014
 ;; Version: 0.1
+;; Package-Version: 20210615.1208
+;; Package-Commit: d136be61cdd2d25c2b69abb88c005f497775c431
 ;; Keywords: ocaml languages
 ;; Package-Requires: ((emacs "25.1") (merlin "3") (iedit "0.9"))
 ;; URL: http://github.com/ocaml/merlin
@@ -63,3 +65,5 @@
 
 (provide 'merlin-iedit)
 ;;; merlin.el ends here
+
+;;; merlin-iedit.el ends here
