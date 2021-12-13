@@ -1,0 +1,39 @@
+Package: dirvish
+Fetcher: github
+Source:  https://github.com/alexluigit/dirvish.git
+
+Cloning https://github.com/alexluigit/dirvish.git to /mnt/store/melpa/working/dirvish/
+Checking out origin/HEAD
+Checking out d36abff4db176643d1282d53b1d8727150e8f6bb
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/dirvish/
+  to /tmp/dirvish8DD6am/dirvish-20211212.935
+    dirvish-advices.el -> dirvish-advices.el
+    dirvish-body.el -> dirvish-body.el
+    dirvish-footer.el -> dirvish-footer.el
+    dirvish-header.el -> dirvish-header.el
+    dirvish-helpers.el -> dirvish-helpers.el
+    dirvish-minibuffer-preview.el -> dirvish-minibuffer-preview.el
+    dirvish-parents.el -> dirvish-parents.el
+    dirvish-preview.el -> dirvish-preview.el
+    dirvish-vars.el -> dirvish-vars.el
+    dirvish.el -> dirvish.el
+Created dirvish-20211212.935.tar containing:
+  dirvish-20211212.935/
+  dirvish-20211212.935/dirvish-advices.el
+  dirvish-20211212.935/dirvish-body.el
+  dirvish-20211212.935/dirvish-footer.el
+  dirvish-20211212.935/dirvish-header.el
+  dirvish-20211212.935/dirvish-helpers.el
+  dirvish-20211212.935/dirvish-minibuffer-preview.el
+  dirvish-20211212.935/dirvish-parents.el
+  dirvish-20211212.935/dirvish-pkg.el
+  dirvish-20211212.935/dirvish-preview.el
+  dirvish-20211212.935/dirvish-vars.el
+  dirvish-20211212.935/dirvish.el
+Built dirvish in 5.127s, finished at 2021-12-12T23:08:04+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  410 Dec 12 23:08 packages/dirvish-20211212.935.entry
+ 80K -rw-r--r-- 1 root root  80K Dec 12 23:08 packages/dirvish-20211212.935.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 12 23:08 packages/dirvish-badge.svg
+4.0K -rw-r--r-- 1 root root  712 Dec 12 23:08 packages/dirvish-readme.txt

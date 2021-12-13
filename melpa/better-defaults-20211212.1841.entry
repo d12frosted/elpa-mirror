@@ -1,0 +1,11 @@
+(better-defaults .
+		 [(20211212 1841)
+		  ((emacs
+		    (25 1)))
+		  "Fixing weird quirks and poor defaults" single
+		  ((:commit . "5383a9b2560adc4f7ebbdf148d87b19bf7cf8cc4")
+		   (:authors
+		    ("Phil Hagelberg"))
+		   (:maintainer "Phil Hagelberg")
+		   (:keywords "convenience")
+		   (:url . "https://github.com/technomancy/better-defaults"))])
