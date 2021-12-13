@@ -1,4 +1,6 @@
 ;;; purty-mode.el --- Safely pretty-print greek letters, mathematical symbols, or anything else.
+;; Package-Version: 20131004.2259
+;; Package-Commit: 8eef77317a3bab07ade212353a50fbd3f20f365a
 
 ;; Author: James Atwood <jatwood@cs.umass.edu>
 
