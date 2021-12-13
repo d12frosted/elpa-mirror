@@ -6,8 +6,8 @@
 
 ;; Author: Natalie Weizenbaum <nex342@gmail.com>
 ;; URL: http://github.com/nex3/perspective-el
-;; Package-Version: 20211122.510
-;; Package-Commit: b84b4e2e3efd3455bcdebb9efb4b07a4cec94ebb
+;; Package-Version: 20211213.435
+;; Package-Commit: d8211a80fbc2cc0d9e163ef6a3e1d0a693b4e00e
 ;; Package-Requires: ((emacs "24.4") (cl-lib "0.5"))
 ;; Version: 2.17
 ;; Created: 2008-03-05
@@ -1473,7 +1473,10 @@ PERSP-SET-IDO-BUFFERS)."
       ;; persp-interactive-completion-function, since it is expected to have
       ;; been replaced by a completion framework.
       (completing-read (format "Kill buffer (default %s): " (buffer-name (current-buffer)))
-                       (persp-current-buffer-names)
+                       (lambda (string predicate action)
+                         (if (eq 'metadata action)
+                             '(metadata (category . buffer))
+                           (complete-with-action action (persp-current-buffer-names) string predicate)))
                        nil nil nil nil
                        (buffer-name (current-buffer))))))
   (kill-buffer buffer-or-name))
@@ -1865,7 +1868,7 @@ restored."
         (frame-count 0)
         (state-complete (read
                          (with-temp-buffer
-                           (insert-file-contents-literally file)
+                           (insert-file-contents file)
                            (buffer-string)))))
     ;; open all files in a temporary perspective to avoid polluting "main"
     (persp-switch tmp-persp-name)
