@@ -5,7 +5,7 @@
 ;; Author: Kazuki Nishikawa <kzkn@hey.com>
 ;; Keywords: convenience
 ;; Package-Version: 20211205.635
-;; Package-Commit: 3e52e25d5d426480385e1b02d274aa4d1dd23fd6
+;; Package-Commit: 4ae1a722750f7ecb4db93c062ffdbe353e706bf0
 ;; Homepage: https://github.com/kzkn/ruled-switch-buffer
 ;; Package-Requires: ((emacs "24.3"))
 ;; Version: 0.1.0

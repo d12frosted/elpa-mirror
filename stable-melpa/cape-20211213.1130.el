@@ -4,8 +4,8 @@
 ;; Created: 2021
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
-;; Package-Version: 20211212.2327
-;; Package-Commit: 5319e343bbaf272ac0d0b376b5b37f09be800314
+;; Package-Version: 20211213.1130
+;; Package-Commit: 700c9d7bc221e04e259947f8fb7a908bf1909bc0
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 
@@ -1015,23 +1015,6 @@ case sensitive instead."
     (pcase (funcall capf)
       (`(,beg ,end ,table . ,plist)
        `(,beg ,end ,(cape--noninterruptible-table table) ,@plist)))))
-
-;;;###autoload
-(defun cape-repair-misbehaving-capf (capf)
-  "Repair a misbehaving CAPF."
-  (save-mark-and-excursion
-    (let ((beg (copy-marker (point)))
-          (end (copy-marker (point) t)))
-      (with-silent-modifications
-        (unwind-protect
-            (pcase (funcall capf)
-              ((and res `(,beg ,end ,_table . ,_plist)
-                    (guard (integer-or-marker-p beg))
-                    (guard (integer-or-marker-p end)))
-               (ignore beg end)
-               res))
-          (when (/= beg end)
-            (delete-region beg end)))))))
 
 ;;;###autoload
 (defun cape-interactive-capf (capf)
