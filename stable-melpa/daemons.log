@@ -4,28 +4,30 @@ Source:  https://github.com/cbowdon/daemons.el.git
 
 Updating /mnt/store/melpa/working/daemons/
 Checking out origin/HEAD
-Checking out cf0ab15a26490ca82aaf6c258f1fc7da195e4fdd
+Checking out e18e84ccc13101f1609c213029cf011ae0ad1178
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/daemons/
-  to /tmp/daemonsPVlpBe/daemons-20211204.1202
+  to /tmp/daemonsOtC3ld/daemons-20211214.1251
     daemons-brew.el -> daemons-brew.el
     daemons-openrc.el -> daemons-openrc.el
     daemons-shepherd.el -> daemons-shepherd.el
     daemons-systemd.el -> daemons-systemd.el
     daemons-sysvinit.el -> daemons-sysvinit.el
     daemons.el -> daemons.el
-Created daemons-20211204.1202.tar containing:
-  daemons-20211204.1202/
-  daemons-20211204.1202/daemons-brew.el
-  daemons-20211204.1202/daemons-openrc.el
-  daemons-20211204.1202/daemons-pkg.el
-  daemons-20211204.1202/daemons-shepherd.el
-  daemons-20211204.1202/daemons-systemd.el
-  daemons-20211204.1202/daemons-sysvinit.el
-  daemons-20211204.1202/daemons.el
-Built daemons in 4.754s, finished at 2021-12-14T10:33:49+0000
+Created daemons-20211214.1251.tar containing:
+  daemons-20211214.1251/
+  daemons-20211214.1251/daemons-brew.el
+  daemons-20211214.1251/daemons-openrc.el
+  daemons-20211214.1251/daemons-pkg.el
+  daemons-20211214.1251/daemons-shepherd.el
+  daemons-20211214.1251/daemons-systemd.el
+  daemons-20211214.1251/daemons-sysvinit.el
+  daemons-20211214.1251/daemons.el
+Built daemons in 5.034s, finished at 2021-12-14T14:05:44+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  333 Dec 14 10:33 packages/daemons-20211204.1202.entry
  40K -rw-r--r-- 1 root root  40K Dec 14 10:33 packages/daemons-20211204.1202.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 14 10:33 packages/daemons-badge.svg
-4.0K -rw-r--r-- 1 root root  350 Dec 14 10:33 packages/daemons-readme.txt
+4.0K -rw-r--r-- 1 root root  333 Dec 14 14:05 packages/daemons-20211214.1251.entry
+ 40K -rw-r--r-- 1 root root  40K Dec 14 14:05 packages/daemons-20211214.1251.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 14 14:05 packages/daemons-badge.svg
+4.0K -rw-r--r-- 1 root root  350 Dec 14 14:05 packages/daemons-readme.txt

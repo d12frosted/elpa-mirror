@@ -1,5 +1,5 @@
 (sonic-pi .
-	  [(20171205 1205)
+	  [(20211214 1242)
 	   ((cl-lib
 	     (0 5))
 	    (osc
@@ -11,7 +11,7 @@
 	    (highlight
 	     (0)))
 	   "A Emacs client for SonicPi" tar
-	   ((:commit . "3cf101b3b299735ed91658c7791ea4f04164e076")
+	   ((:commit . "9ae16d0fd4cba77ae0bedac83f2cb46569be6ade")
 	    (:authors
 	     ("Joseph Wilk" . "joe@josephwilk.net"))
 	    (:maintainer "Joseph Wilk" . "joe@josephwilk.net")

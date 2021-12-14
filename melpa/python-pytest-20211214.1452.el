@@ -2,8 +2,8 @@
 
 ;; Author: wouter bolsterlee <wouter@bolsterl.ee>
 ;; Version: 3.1.0
-;; Package-Version: 20211111.1912
-;; Package-Commit: e77469fcb727f1b63f0d921ed15b1631a6bd0cae
+;; Package-Version: 20211214.1452
+;; Package-Commit: e491a98cf8839ba87cdfafd15abbee5d1106ae1a
 ;; Package-Requires: ((emacs "24.4") (dash "2.18.0") (transient "0.3.7") (projectile "0.14.0") (s "1.12.0"))
 ;; Keywords: pytest, test, python, languages, processes, tools
 ;; URL: https://github.com/wbolster/emacs-python-pytest
@@ -145,6 +145,9 @@ When non-nil only ‘test_foo()’ will match, and nothing else."
     ("--rx" "run xfail tests" "--runxfail")
     (python-pytest:--tb)
     ("--tr" "debug on each test" "--trace")]]
+  ["Options for pytest-xdist"
+   [(python-pytest:-n)]
+   [("-f" "loop on failure" "--looponfail")]]
   ["Run tests"
    [("t" "all" python-pytest)]
    [("r" "repeat" python-pytest-repeat)
@@ -477,6 +480,13 @@ When present ON-REPLACEMENT is substituted, else OFF-REPLACEMENT is appended."
   :key "--tb"
   :argument "--tb="
   :choices '("long" "short" "line" "native" "no"))
+
+(transient-define-argument python-pytest:-n ()
+  :description "number of processes"
+  :class 'transient-option
+  :key "-n"
+  :argument "--numprocesses="
+  :choices '("auto" "1" "2" "4" "8" "16"))
 
 
 ;; python helpers
