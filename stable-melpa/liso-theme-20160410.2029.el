@@ -2,6 +2,8 @@
 
 ;; Author: Vlad Piersec <vlad.piersec@gmail.com>
 ;; Keywords: theme, themes
+;; Package-Version: 20160410.2029
+;; Package-Commit: 844688245eb860d23043455e165ee24503454c81
 ;; URL: https://github.com/caisah/liso-theme
 ;; Version: 2.1
 

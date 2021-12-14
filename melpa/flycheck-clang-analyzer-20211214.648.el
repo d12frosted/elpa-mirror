@@ -5,8 +5,8 @@
 ;; Author: Alex Murray <murray.alex@gmail.com>
 ;; Maintainer: Alex Murray <murray.alex@gmail.com>
 ;; URL: https://github.com/alexmurray/flycheck-clang-analyzer
-;; Package-Version: 20200429.238
-;; Package-Commit: 0c9b6e4626cd5376037464f8d6b8c64aa32768ee
+;; Package-Version: 20211214.648
+;; Package-Commit: 646d9f3a80046ab231a07526778695d5decad92d
 ;; Version: 0.8
 ;; Package-Requires: ((flycheck "0.24") (emacs "24.4"))
 
@@ -217,7 +217,7 @@
 (flycheck-define-checker clang-analyzer
   "A checker using clang-analyzer.
 
-See `https://github.com/alexmurray/clang-analyzer/'."
+See `https://clang-analyzer.llvm.org/'."
   :command ("clang"
             "--analyze"
             (eval (flycheck-clang-analyzer--filter-compile-options
@@ -258,7 +258,7 @@ Add `clang-analyzer' to `flycheck-checkers'."
   ;; append to list and chain after existing checkers
   (add-to-list 'flycheck-checkers 'clang-analyzer t)
   (dolist (feature-checker '((lsp-mode . lsp)
-                             (lsp-ui-flycheck . lsp-ui)
+                             (lsp-ui . lsp-ui)
                              (flycheck-irony . irony)
                              (flycheck-rtags . rtags)
                              (flycheck . c/c++-clang)))
