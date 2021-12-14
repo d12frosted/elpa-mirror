@@ -4,8 +4,8 @@
 
 ;; Author: Dmitriy Pshonko <jumper047@gmail.com>
 ;; URL: https://github.com/jumper047/fb2-reader
-;; Package-Version: 20211213.2213
-;; Package-Commit: 9301cb3ca9ecdbb9903eff2465d12fdb82f2ec3d
+;; Package-Version: 20211214.954
+;; Package-Commit: 9dcc0801a7dd302ee0620781ea17868895d3f082
 ;; Keywords: multimedia, ebook, fb2
 ;; Version: 0.1.0
 
@@ -397,7 +397,7 @@ return that variable, otherwise calculate heights."
   (let ((height 1)
 	height-curr)
     (if (listp face) (setq face (car (alist-get :inherit face))))
-    (while face
+    (while (and face (not (equal face 'unspecified)))
       (setq height-curr (face-attribute face :height))
       (if (equal height-curr 'unspecified)
 	  (setq height-curr 1.0))
