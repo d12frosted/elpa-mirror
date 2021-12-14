@@ -4,10 +4,10 @@ Source:  https://github.com/millejoh/emacs-ipython-notebook.git
 
 Updating /mnt/store/melpa/working/ein/
 Checking out origin/HEAD
-Checking out 1e42a2b26c2b113884170a94229c2743978e2dec
+Checking out c6696c12eb7ced9418cd37b3353089633e7e9884
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ein/
-  to /tmp/einV5Lcff/ein-20211107.1724
+  to /tmp/einMt3GCI/ein-20211213.2119
   ! lisp/ein-cell.el -> ein-cell.el
   ! lisp/ein-classes.el -> ein-classes.el
   ! lisp/ein-completer.el -> ein-completer.el
@@ -45,51 +45,51 @@ Copying files (->) and directories (=>)
   ! lisp/ein.el -> ein.el
   ! lisp/ob-ein.el -> ob-ein.el
   ! lisp/poly-ein.el -> poly-ein.el
-Created ein-20211107.1724.tar containing:
-  ein-20211107.1724/
-  ein-20211107.1724/ein-cell.el
-  ein-20211107.1724/ein-classes.el
-  ein-20211107.1724/ein-completer.el
-  ein-20211107.1724/ein-contents-api.el
-  ein-20211107.1724/ein-core.el
-  ein-20211107.1724/ein-dev.el
-  ein-20211107.1724/ein-events.el
-  ein-20211107.1724/ein-file.el
-  ein-20211107.1724/ein-gat.el
-  ein-20211107.1724/ein-ipdb.el
-  ein-20211107.1724/ein-ipynb-mode.el
-  ein-20211107.1724/ein-jupyter.el
-  ein-20211107.1724/ein-kernel.el
-  ein-20211107.1724/ein-kernelinfo.el
-  ein-20211107.1724/ein-kill-ring.el
-  ein-20211107.1724/ein-log.el
-  ein-20211107.1724/ein-markdown-mode.el
-  ein-20211107.1724/ein-node.el
-  ein-20211107.1724/ein-notebook.el
-  ein-20211107.1724/ein-notebooklist.el
-  ein-20211107.1724/ein-notification.el
-  ein-20211107.1724/ein-output-area.el
-  ein-20211107.1724/ein-pager.el
-  ein-20211107.1724/ein-pkg.el
-  ein-20211107.1724/ein-process.el
-  ein-20211107.1724/ein-python-send.el
-  ein-20211107.1724/ein-pytools.el
-  ein-20211107.1724/ein-query.el
-  ein-20211107.1724/ein-scratchsheet.el
-  ein-20211107.1724/ein-shared-output.el
-  ein-20211107.1724/ein-traceback.el
-  ein-20211107.1724/ein-utils.el
-  ein-20211107.1724/ein-websocket.el
-  ein-20211107.1724/ein-worksheet.el
-  ein-20211107.1724/ein.el
-  ein-20211107.1724/ob-ein.el
-  ein-20211107.1724/poly-ein.el
-Built ein in 4.814s, finished at 2021-12-13T13:19:27+0000
+Created ein-20211213.2119.tar containing:
+  ein-20211213.2119/
+  ein-20211213.2119/ein-cell.el
+  ein-20211213.2119/ein-classes.el
+  ein-20211213.2119/ein-completer.el
+  ein-20211213.2119/ein-contents-api.el
+  ein-20211213.2119/ein-core.el
+  ein-20211213.2119/ein-dev.el
+  ein-20211213.2119/ein-events.el
+  ein-20211213.2119/ein-file.el
+  ein-20211213.2119/ein-gat.el
+  ein-20211213.2119/ein-ipdb.el
+  ein-20211213.2119/ein-ipynb-mode.el
+  ein-20211213.2119/ein-jupyter.el
+  ein-20211213.2119/ein-kernel.el
+  ein-20211213.2119/ein-kernelinfo.el
+  ein-20211213.2119/ein-kill-ring.el
+  ein-20211213.2119/ein-log.el
+  ein-20211213.2119/ein-markdown-mode.el
+  ein-20211213.2119/ein-node.el
+  ein-20211213.2119/ein-notebook.el
+  ein-20211213.2119/ein-notebooklist.el
+  ein-20211213.2119/ein-notification.el
+  ein-20211213.2119/ein-output-area.el
+  ein-20211213.2119/ein-pager.el
+  ein-20211213.2119/ein-pkg.el
+  ein-20211213.2119/ein-process.el
+  ein-20211213.2119/ein-python-send.el
+  ein-20211213.2119/ein-pytools.el
+  ein-20211213.2119/ein-query.el
+  ein-20211213.2119/ein-scratchsheet.el
+  ein-20211213.2119/ein-shared-output.el
+  ein-20211213.2119/ein-traceback.el
+  ein-20211213.2119/ein-utils.el
+  ein-20211213.2119/ein-websocket.el
+  ein-20211213.2119/ein-worksheet.el
+  ein-20211213.2119/ein.el
+  ein-20211213.2119/ob-ein.el
+  ein-20211213.2119/poly-ein.el
+Built ein in 4.543s, finished at 2021-12-14T03:34:27+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  481 Dec 13 13:19 packages/ein-20211107.1724.entry
-820K -rw-r--r-- 1 root root 820K Dec 13 13:19 packages/ein-20211107.1724.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 13 13:19 packages/ein-badge.svg
+4.0K -rw-r--r-- 1 root root  481 Dec 14 03:34 packages/ein-20211213.2119.entry
+820K -rw-r--r-- 1 root root 820K Dec 14 03:34 packages/ein-20211213.2119.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 14 03:34 packages/ein-badge.svg
 4.0K -rw-r--r-- 1 root root 1.2K Jul 24 04:34 packages/ein-mumamo-badge.svg
 4.0K -rw-r--r-- 1 root root  595 Jul 24 04:34 packages/ein-mumamo-readme.txt
 4.0K -rw-r--r-- 1 root root  532 Jul 24 04:34 packages/ein-mumamo.log
-4.0K -rw-r--r-- 1 root root  493 Dec 13 13:19 packages/ein-readme.txt
+4.0K -rw-r--r-- 1 root root  493 Dec 14 03:34 packages/ein-readme.txt

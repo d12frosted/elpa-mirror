@@ -7,7 +7,7 @@
 ;; Created: 2020-12-24
 ;; Keywords: tools
 ;; Package-Version: 20211212.851
-;; Package-Commit: 130ef8218c9e2a776130ab95b6cd199955328913
+;; Package-Commit: 083a2c1708af80779d23b562260cdf8246efa569
 ;; URL: https://github.com/flashcode/impostman
 ;; Version: 0.3.0-snapshot
 ;; Package-Requires: ((emacs "27.1"))

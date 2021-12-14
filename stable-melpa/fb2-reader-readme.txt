@@ -26,10 +26,7 @@ Add these strings to your config:
      ;; This mode renders book with fixed width, adjust to your preferences.
      (fb2-reader-page-width 120)
      (fb2-reader-image-max-width 400)
-     (fb2-reader-image-max-height 400)
-     :config
-     ;; Hide nobreak-space (may be not needed, depending on your theme)
-     (set-face-attribute 'nobreak-space nil :underline nil))
+     (fb2-reader-image-max-height 400))
 
 Usage:
 Just open any fb2 book, or execute command =fb2-reader-continue=

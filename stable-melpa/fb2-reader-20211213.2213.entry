@@ -1,0 +1,21 @@
+(fb2-reader .
+	    [(20211213 2213)
+	     ((emacs
+	       (26 2))
+	      (f
+	       (0 17))
+	      (s
+	       (1 11 0))
+	      (dash
+	       (2 12 0))
+	      (visual-fill-column
+	       (2 2))
+	      (async
+	       (1 9 4)))
+	     "Read FB2 and FB2.ZIP documents" single
+	     ((:commit . "9301cb3ca9ecdbb9903eff2465d12fdb82f2ec3d")
+	      (:authors
+	       ("Dmitriy Pshonko" . "jumper047@gmail.com"))
+	      (:maintainer "Dmitriy Pshonko" . "jumper047@gmail.com")
+	      (:keywords "multimedia" "ebook" "fb2")
+	      (:url . "https://github.com/jumper047/fb2-reader"))])

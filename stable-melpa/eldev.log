@@ -4,10 +4,11 @@ Source:  https://github.com/doublep/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
 Checking out origin/HEAD
-Checking out 8ced25116e4eab6792513307cf0e41d9a4b12528
+Checking out 182170f076ccd90f601df8af5e8dcf75c5703743
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldevLzFAVl/eldev-20211211.1809
+  to /tmp/eldevhwoPST/eldev-20211213.1900
+    eldev-build.el -> eldev-build.el
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-ecukes.el -> eldev-ecukes.el
     eldev-ert.el -> eldev-ert.el
@@ -18,23 +19,24 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20211211.1809.tar containing:
-  eldev-20211211.1809/
-  eldev-20211211.1809/bin/
-  eldev-20211211.1809/bin/eldev
-  eldev-20211211.1809/bin/eldev.bat
-  eldev-20211211.1809/bin/eldev.ps1
-  eldev-20211211.1809/eldev-buttercup.el
-  eldev-20211211.1809/eldev-ecukes.el
-  eldev-20211211.1809/eldev-ert.el
-  eldev-20211211.1809/eldev-pkg.el
-  eldev-20211211.1809/eldev-plugins.el
-  eldev-20211211.1809/eldev-util.el
-  eldev-20211211.1809/eldev-vc.el
-  eldev-20211211.1809/eldev.el
-Built eldev in 4.747s, finished at 2021-12-13T13:19:50+0000
+Created eldev-20211213.1900.tar containing:
+  eldev-20211213.1900/
+  eldev-20211213.1900/bin/
+  eldev-20211213.1900/bin/eldev
+  eldev-20211213.1900/bin/eldev.bat
+  eldev-20211213.1900/bin/eldev.ps1
+  eldev-20211213.1900/eldev-build.el
+  eldev-20211213.1900/eldev-buttercup.el
+  eldev-20211213.1900/eldev-ecukes.el
+  eldev-20211213.1900/eldev-ert.el
+  eldev-20211213.1900/eldev-pkg.el
+  eldev-20211213.1900/eldev-plugins.el
+  eldev-20211213.1900/eldev-util.el
+  eldev-20211213.1900/eldev-vc.el
+  eldev-20211213.1900/eldev.el
+Built eldev in 5.111s, finished at 2021-12-14T03:34:50+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  340 Dec 13 13:19 packages/eldev-20211211.1809.entry
-452K -rw-r--r-- 1 root root 450K Dec 13 13:19 packages/eldev-20211211.1809.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 13 13:19 packages/eldev-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Dec 13 13:19 packages/eldev-readme.txt
+4.0K -rw-r--r-- 1 root root  340 Dec 14 03:34 packages/eldev-20211213.1900.entry
+460K -rw-r--r-- 1 root root 460K Dec 14 03:34 packages/eldev-20211213.1900.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 14 03:34 packages/eldev-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Dec 14 03:34 packages/eldev-readme.txt
