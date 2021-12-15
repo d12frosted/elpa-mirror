@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 8d64cf4f84d7da5f839a8248fdddfb635a63f803
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docker/
-  to /tmp/dockerItxQgv/docker-20211105.138
+  to /tmp/dockerOkdygX/docker-20211105.138
     docker-compose.el -> docker-compose.el
     docker-container.el -> docker-container.el
     docker-core.el -> docker-core.el
@@ -29,29 +29,29 @@ Created docker-20211105.138.tar containing:
   docker-20211105.138/docker-utils.el
   docker-20211105.138/docker-volume.el
   docker-20211105.138/docker.el
-Built docker in 5.594s, finished at 2021-12-14T14:08:41+0000
+Built docker in 6.091s, finished at 2021-12-15T00:54:55+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  520 Dec 14 14:08 packages/docker-20211105.138.entry
- 92K -rw-r--r-- 1 root root  90K Dec 14 14:08 packages/docker-20211105.138.tar
-4.0K -rw-r--r-- 1 root root  445 Dec 14 14:08 packages/docker-api-20160525.720.entry
- 20K -rw-r--r-- 1 root root  20K Dec 14 14:08 packages/docker-api-20160525.720.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 14 14:08 packages/docker-api-badge.svg
-   0 -rw-r--r-- 1 root root    0 Dec 14 14:08 packages/docker-api-readme.txt
-4.0K -rw-r--r-- 1 root root 1.5K Dec 14 14:08 packages/docker-api.log
-4.0K -rw-r--r-- 1 root root 1.2K Dec 14 14:08 packages/docker-badge.svg
- 12K -rw-r--r-- 1 root root 8.5K Dec 14 14:08 packages/docker-cli-20190524.1624.el
-4.0K -rw-r--r-- 1 root root  406 Dec 14 10:36 packages/docker-cli-20190524.1624.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 14 10:36 packages/docker-cli-badge.svg
-4.0K -rw-r--r-- 1 root root  461 Dec 14 10:36 packages/docker-cli-readme.txt
-4.0K -rw-r--r-- 1 root root  211 Dec 14 14:08 packages/docker-cli.log
- 28K -rw-r--r-- 1 root root  26K Dec 14 10:36 packages/docker-compose-mode-20200830.1336.el
-4.0K -rw-r--r-- 1 root root  448 Dec 14 10:36 packages/docker-compose-mode-20200830.1336.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 14 10:36 packages/docker-compose-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  476 Dec 14 10:36 packages/docker-compose-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  238 Dec 14 14:08 packages/docker-compose-mode.log
-4.0K -rw-r--r-- 1 root root   83 Dec 14 14:08 packages/docker-readme.txt
-4.0K -rw-r--r-- 1 root root  434 Dec 14 10:36 packages/docker-tramp-20210729.508.entry
- 20K -rw-r--r-- 1 root root  20K Dec 14 10:36 packages/docker-tramp-20210729.508.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 14 10:36 packages/docker-tramp-badge.svg
-4.0K -rw-r--r-- 1 root root 1.9K Dec 14 10:36 packages/docker-tramp-readme.txt
-4.0K -rw-r--r-- 1 root root  169 Dec 14 14:08 packages/docker-tramp.log
+4.0K -rw-r--r-- 1 root root  520 Dec 15 00:54 packages/docker-20211105.138.entry
+ 92K -rw-r--r-- 1 root root  90K Dec 15 00:54 packages/docker-20211105.138.tar
+4.0K -rw-r--r-- 1 root root  445 Dec 15 00:54 packages/docker-api-20160525.720.entry
+ 20K -rw-r--r-- 1 root root  20K Dec 15 00:54 packages/docker-api-20160525.720.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 15 00:54 packages/docker-api-badge.svg
+   0 -rw-r--r-- 1 root root    0 Dec 15 00:54 packages/docker-api-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Dec 15 00:54 packages/docker-api.log
+4.0K -rw-r--r-- 1 root root 1.2K Dec 15 00:54 packages/docker-badge.svg
+ 12K -rw-r--r-- 1 root root 8.5K Dec 15 00:54 packages/docker-cli-20190524.1624.el
+4.0K -rw-r--r-- 1 root root  406 Dec 14 21:18 packages/docker-cli-20190524.1624.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 14 21:18 packages/docker-cli-badge.svg
+4.0K -rw-r--r-- 1 root root  461 Dec 14 21:18 packages/docker-cli-readme.txt
+4.0K -rw-r--r-- 1 root root  211 Dec 15 00:54 packages/docker-cli.log
+ 28K -rw-r--r-- 1 root root  26K Dec 14 21:18 packages/docker-compose-mode-20200830.1336.el
+4.0K -rw-r--r-- 1 root root  448 Dec 14 21:18 packages/docker-compose-mode-20200830.1336.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 14 21:18 packages/docker-compose-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  476 Dec 14 21:18 packages/docker-compose-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  184 Dec 15 00:54 packages/docker-compose-mode.log
+4.0K -rw-r--r-- 1 root root   83 Dec 15 00:54 packages/docker-readme.txt
+4.0K -rw-r--r-- 1 root root  434 Dec 14 21:18 packages/docker-tramp-20210729.508.entry
+ 20K -rw-r--r-- 1 root root  20K Dec 14 21:18 packages/docker-tramp-20210729.508.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 14 21:18 packages/docker-tramp-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Dec 14 21:18 packages/docker-tramp-readme.txt
+4.0K -rw-r--r-- 1 root root  144 Dec 15 00:54 packages/docker-tramp.log

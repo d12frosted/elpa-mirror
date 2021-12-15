@@ -5,7 +5,7 @@
 ;; Author: Ethan Leba <ethanleba5@gmail.com>
 ;; Version: 0.1.0
 ;; Package-Version: 20211211.2301
-;; Package-Commit: 1a670b73cd990af3b08633b01f84b57edaeb92ba
+;; Package-Commit: 25c7c9870a76ab64e091cd4362a3439eed17ee68
 ;; Homepage: https://github.com/ethan-leba/tree-edit
 ;; Package-Requires: ((emacs "27.0") (tree-edit "0.1.0") (tree-sitter "0.15.0") (evil "1.0.0") (avy "0.5.0") (s "0.0.0"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
