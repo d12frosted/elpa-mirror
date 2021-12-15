@@ -6,8 +6,6 @@
 ;; Filename: iss-mode.el
 ;; Author: Stefan Reichoer, <stefan@xsteve.at>
 ;; Version: 1.1d
-;; Package-Version: 20141001.1913
-;; Package-Commit: 3b517aff31529bab33f8d7b562bd17aff0107fd1
 
 ;; iss-mode.el is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

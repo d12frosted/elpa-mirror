@@ -1,5 +1,5 @@
 (auto-virtualenv .
-		 [(20200729 2204)
+		 [(20211215 907)
 		  ((cl-lib
 		    (0 5))
 		   (pyvenv
@@ -7,7 +7,7 @@
 		   (s
 		    (1 10 0)))
 		  "Auto activate python virtualenvs" single
-		  ((:commit . "214604ebd3366078d03814a344c3249268d1f15a")
+		  ((:commit . "07064e05feb62277991b8a7c04f7cdad50acaddf")
 		   (:authors
 		    ("Marcwebbie" . "marcwebbie@gmail.com"))
 		   (:maintainer "Marcwebbie" . "marcwebbie@gmail.com")
