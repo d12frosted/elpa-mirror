@@ -5,8 +5,6 @@
 ;; Author: Ben Liblit <liblit@acm.org>
 ;; Created: 12 Feb 2014
 ;; Version: 2.1
-;; Package-Version: 20210822.2210
-;; Package-Commit: 04f545adab066708d6151f13da65aaf519f8ac4e
 ;; Package-Requires: ((cl-lib "0.1") (emacs "24.3"))
 ;; Keywords: c tools
 ;; URL: https://github.com/liblit/demangle-mode

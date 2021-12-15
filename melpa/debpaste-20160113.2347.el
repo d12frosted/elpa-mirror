@@ -5,8 +5,6 @@
 ;; Author: Alex Kost <alezost@gmail.com>
 ;; Created: 3 Dec 2013
 ;; Version: 0.1.5
-;; Package-Version: 20160113.2347
-;; Package-Commit: 6f2a400665062468ebd03a2ce1de2a73d9084958
 ;; Package-Requires: ((xml-rpc "1.6.7"))
 ;; URL: http://github.com/alezost/debpaste.el
 ;; Keywords: paste

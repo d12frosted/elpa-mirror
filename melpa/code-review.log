@@ -4,10 +4,10 @@ Source:  https://github.com/wandersoncferreira/code-review.git
 
 Updating /mnt/store/melpa/working/code-review/
 Checking out origin/HEAD
-Checking out 4f9fc7ac72072d9fb1625e7701c72e2a16cd69a2
+Checking out b0bedbdb30e019ed8c40fedf1087c3ad28e72c59
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/code-review/
-  to /tmp/code-reviewsQYlFj/code-review-20211215.10
+  to /tmp/code-review5H1exp/code-review-20211215.414
     code-review-comment.el -> code-review-comment.el
     code-review-db.el -> code-review-db.el
     code-review-faces.el -> code-review-faces.el
@@ -17,23 +17,21 @@ Copying files (->) and directories (=>)
     code-review-section.el -> code-review-section.el
     code-review-utils.el -> code-review-utils.el
     code-review.el -> code-review.el
-Created code-review-20211215.10.tar containing:
-  code-review-20211215.10/
-  code-review-20211215.10/code-review-comment.el
-  code-review-20211215.10/code-review-db.el
-  code-review-20211215.10/code-review-faces.el
-  code-review-20211215.10/code-review-github.el
-  code-review-20211215.10/code-review-gitlab.el
-  code-review-20211215.10/code-review-interfaces.el
-  code-review-20211215.10/code-review-pkg.el
-  code-review-20211215.10/code-review-section.el
-  code-review-20211215.10/code-review-utils.el
-  code-review-20211215.10/code-review.el
-Built code-review in 8.383s, finished at 2021-12-15T00:46:08+0000
+Created code-review-20211215.414.tar containing:
+  code-review-20211215.414/
+  code-review-20211215.414/code-review-comment.el
+  code-review-20211215.414/code-review-db.el
+  code-review-20211215.414/code-review-faces.el
+  code-review-20211215.414/code-review-github.el
+  code-review-20211215.414/code-review-gitlab.el
+  code-review-20211215.414/code-review-interfaces.el
+  code-review-20211215.414/code-review-pkg.el
+  code-review-20211215.414/code-review-section.el
+  code-review-20211215.414/code-review-utils.el
+  code-review-20211215.414/code-review.el
+Built code-review in 10.981s, finished at 2021-12-15T07:57:25+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  678 Dec 14 21:11 packages/code-review-20211214.1230.entry
-220K -rw-r--r-- 1 root root 220K Dec 14 21:11 packages/code-review-20211214.1230.tar
-4.0K -rw-r--r-- 1 root root  676 Dec 15 00:46 packages/code-review-20211215.10.entry
-220K -rw-r--r-- 1 root root 220K Dec 15 00:46 packages/code-review-20211215.10.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 15 00:46 packages/code-review-badge.svg
-4.0K -rw-r--r-- 1 root root  132 Dec 15 00:46 packages/code-review-readme.txt
+4.0K -rw-r--r-- 1 root root  677 Dec 15 07:57 packages/code-review-20211215.414.entry
+220K -rw-r--r-- 1 root root 220K Dec 15 07:57 packages/code-review-20211215.414.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 15 07:57 packages/code-review-badge.svg
+4.0K -rw-r--r-- 1 root root  132 Dec 15 07:57 packages/code-review-readme.txt

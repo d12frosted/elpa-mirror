@@ -5,8 +5,8 @@
 ;; Author: J.D. Smith
 ;; Homepage: https://github.com/jdtsmith/python-mls
 ;; Package-Requires: ((emacs "27.1"))
-;; Package-Version: 20211211.1934
-;; Package-Commit: 5f0a0665cd958b83d86bdd3e40a934d0fd862f14
+;; Package-Version: 20211215.240
+;; Package-Commit: 2f7ce2c44e5d94eade297c07139bec6353e18ad7
 ;; Keywords: languages, processes
 ;; Version: 0.1.0
 
@@ -459,7 +459,7 @@ If DISABLE is non-nil, disable instead."
   (if disable
       (progn
 	(remove-hook 'inferior-python-mode-hook #'python-mls-mode)
-	(add-hook 'python-mode-hook #'python-mls-python-setup)
+	(remove-hook 'python-mode-hook #'python-mls-python-setup)
 	(if (version< emacs-version "28")
 	    (advice-remove #'comint-output-filter
 			   #'python-mls--comint-output-filter-fix-rear-nonsticky)))

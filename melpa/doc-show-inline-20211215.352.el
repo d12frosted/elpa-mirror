@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-doc-show-inline
-;; Package-Version: 20211210.102
-;; Package-Commit: 3a4eee3ef3fb3b50252418308f1b45e22a67bc8e
+;; Package-Version: 20211215.352
+;; Package-Commit: 8b457d565d352c863197c42d7a0cd3b6ae920453
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
@@ -811,8 +811,8 @@ XREF-BACKEND is the back-end used to find this symbol."
   "Advice for `c-context-expand-fl-region' (OLD-FN),extract the region (BEG END)."
   (let ((bounds (funcall old-fn beg end)))
     (when (bound-and-true-p doc-show-inline-mode)
-      (doc-show-inline--idle-font-lock-region-pending (car bounds) (cdr bounds))
-      bounds)))
+      (doc-show-inline--idle-font-lock-region-pending (car bounds) (cdr bounds)))
+    bounds))
 
 (defun doc-show-inline--jit-or-gapless-hack-is-needed ()
   "Check if any buffers need this hack."
