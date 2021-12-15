@@ -3,11 +3,7 @@ Fetcher: git
 Source:  https://bitbucket.org/yphil/faustine
 
 Updating /mnt/store/melpa/working/faustine/
-Checking out origin/HEAD
-Checking out 07a38963111518f86123802f9d477be0d4689a3f
-Built faustine in 4.762s, finished at 2021-12-15T11:45:21+0000
- ✓ Success:
- 32K -rw-r--r-- 1 root root  29K Dec 15 11:45 packages/faustine-20171122.1202.el
-4.0K -rw-r--r-- 1 root root  424 Dec 15 11:45 packages/faustine-20171122.1202.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 15 11:45 packages/faustine-badge.svg
-4.0K -rw-r--r-- 1 root root 2.1K Dec 15 11:45 packages/faustine-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://bitbucket.org/yphil/faustine/': Operation timed out after 300020 milliseconds with 0 out of 0 bytes received
+error: Could not fetch origin
+

@@ -8,12 +8,20 @@ You can override the project root by setting `eacl-project-root',
 
 List of commands,
 
-`eacl-complete-line' completes single line.
-Line candidates are extracted in project root.
+`eacl-complete-line' completes single line by grepping the project root.
+Line candidates are extracted from the files in the project root.
 "C-u M-x eacl-complete-line" completes single line from deleted code
 if current project is tracked by Git.
 
 `eacl-complete-multiline' completes multiline code or html tag.
+
+`eacl-complete-line-from-buffer' completes single line by searching text
+in the buffers.  Set `eacl-ignore-buffers' and `eacl-include-buffers' to specify
+ignored&included buffers.
+
+`eacl-complete-line-from-buffer-or-project' completes one line by grepping
+the project root when editing a physical file.  Or else, it completes one line
+by search all buffers.
 
 Modify `grep-find-ignored-directories' and `grep-find-ignored-files'
 to setup directories and files grep should ignore:

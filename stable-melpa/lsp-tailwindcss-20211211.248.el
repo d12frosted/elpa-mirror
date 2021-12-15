@@ -5,7 +5,7 @@
 ;; Author: A.I. <merrick@luois.me>
 ;; Keywords: language tools
 ;; Package-Version: 20211211.248
-;; Package-Commit: 629ece1acc3280ee506660170cdee77446ba8c18
+;; Package-Commit: dc4d5246afe8620cdffaff1a362529f5d63b1ef5
 ;; Version: 0.2
 ;; Package-Requires: ((lsp-mode "7.1") (emacs "26.1"))
 ;; Keywords: tailwindcss
