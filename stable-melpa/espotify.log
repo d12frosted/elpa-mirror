@@ -3,11 +3,7 @@ Fetcher: git
 Source:  https://codeberg.org/jao/espotify.git
 
 Updating /mnt/store/melpa/working/espotify/
-Checking out origin/HEAD
-Checking out 5c1dcf0182135cda4191d4ba206fe2f265100293
-Built espotify in 6.276s, finished at 2021-12-16T08:46:57+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root  11K Dec 16 08:46 packages/espotify-20211114.2251.el
-4.0K -rw-r--r-- 1 root root  339 Dec 16 08:46 packages/espotify-20211114.2251.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 16 08:46 packages/espotify-badge.svg
-4.0K -rw-r--r-- 1 root root  654 Dec 16 08:46 packages/espotify-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+fatal: unable to access 'https://codeberg.org/jao/espotify.git/': Failed to connect to codeberg.org port 443: Connection timed out
+error: Could not fetch origin
+

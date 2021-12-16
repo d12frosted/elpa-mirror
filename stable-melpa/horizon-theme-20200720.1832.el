@@ -4,8 +4,6 @@
 ;; Copyright (C) 2019-2020 Aodnait Étaín
 ;; Authors: Aodnait Étaín <aodhneine@tuta.io>
 ;; Version: 0.1.5
-;; Package-Version: 20200720.1832
-;; Package-Commit: 9595549c514a9376c61d5d303405f6a6982e9e46
 ;; URL: https://github.com/aodhneine/horizon-theme.el
 ;; Package-Requires: ((emacs "24.3"))
 
