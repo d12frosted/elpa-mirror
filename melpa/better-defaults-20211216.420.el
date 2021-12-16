@@ -4,8 +4,8 @@
 
 ;; Author: Phil Hagelberg
 ;; URL: https://github.com/technomancy/better-defaults
-;; Package-Version: 20211212.1841
-;; Package-Commit: 5383a9b2560adc4f7ebbdf148d87b19bf7cf8cc4
+;; Package-Version: 20211216.420
+;; Package-Commit: 4b833e0601e77a8ed86b30929da2aba2b88f33be
 ;; Version: 0.1.4
 ;; Package-Requires: ((emacs "25.1"))
 ;; Created: 2013-04-16
@@ -86,7 +86,7 @@
         visible-bell t
         load-prefer-newer t
         ediff-window-setup-function 'ediff-setup-windows-plain
-        custom-file (expand-file-name "~/.emacs.d/custom.el"))
+        custom-file (expand-file-name "custom.el" user-emacs-directory))
 
   (unless backup-directory-alist
     (setq backup-directory-alist `(("." . ,(concat user-emacs-directory

@@ -4,8 +4,8 @@
 
 ;; Author: Giap Tran <txgvnn@gmail.com>
 ;; URL: https://github.com/TxGVNN/github-explorer
-;; Package-Version: 20211031.120
-;; Package-Commit: a40c122e6768578254641fc0f24a8437ee70fac9
+;; Package-Version: 20211216.749
+;; Package-Commit: 069e25c3e72290adc5d32c380999840ba42ccd78
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "25") (graphql))
 ;; Keywords: comm
@@ -47,6 +47,11 @@
 
 (defcustom github-explorer-name "GitHub"
   "*Modeline of `github-explorer'."
+  :type 'string
+  :group 'github)
+
+(defcustom github-explorer-sourcegraph-url "https://github1s.com/api/sourcegraph"
+  "Sourcegraph API path."
   :type 'string
   :group 'github)
 
@@ -264,7 +269,7 @@ If PREFIX is set, prompt repo"
         (url-request-extra-headers '())
         (url-request-data (json-encode (github-build-graphql (format "repo:^github.com/%s$ %s" repo query))))
         (url-mime-charset-string (url-mime-charset-string)))
-    (url-retrieve "https://sourcegraph.com/.api/graphql"
+    (url-retrieve github-explorer-sourcegraph-url
                   #'github-explorer-search-response
                   (append (list repo query)))))
 
