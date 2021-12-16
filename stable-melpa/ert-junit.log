@@ -3,7 +3,11 @@ Fetcher: git
 Source:  https://bitbucket.org/olanilsson/ert-junit
 
 Updating /mnt/store/melpa/working/ert-junit/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://bitbucket.org/olanilsson/ert-junit/': GnuTLS recv error (-54): Error in the pull function.
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out 65f91c35b088b87943dbbbe7e1ce354bc9bc0992
+Built ert-junit in 5.760s, finished at 2021-12-16T01:51:51+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  11K Dec 16 01:51 packages/ert-junit-20190802.2232.el
+4.0K -rw-r--r-- 1 root root  434 Dec 16 01:51 packages/ert-junit-20190802.2232.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 16 01:51 packages/ert-junit-badge.svg
+4.0K -rw-r--r-- 1 root root  213 Dec 16 01:51 packages/ert-junit-readme.txt

@@ -3,7 +3,11 @@ Fetcher: git
 Source:  https://bitbucket.org/sbarbit/jack-connect
 
 Updating /mnt/store/melpa/working/jack-connect/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: unable to access 'https://bitbucket.org/sbarbit/jack-connect/': Empty reply from server
-error: Could not fetch origin
-
+Checking out origin/HEAD
+Checking out fae8c5f9b383f7606f3883badfd1294e8affb0db
+Built jack-connect in 4.826s, finished at 2021-12-16T02:14:57+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  15K Dec 16 02:14 packages/jack-connect-20200519.1027.el
+4.0K -rw-r--r-- 1 root root  285 Dec 16 02:14 packages/jack-connect-20200519.1027.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 16 02:14 packages/jack-connect-badge.svg
+4.0K -rw-r--r-- 1 root root  248 Dec 16 02:14 packages/jack-connect-readme.txt

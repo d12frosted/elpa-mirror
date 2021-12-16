@@ -4,10 +4,11 @@ Source:  https://github.com/wandersoncferreira/code-review.git
 
 Updating /mnt/store/melpa/working/code-review/
 Checking out origin/HEAD
-Checking out b0bedbdb30e019ed8c40fedf1087c3ad28e72c59
+Checking out 25a5e4dba87a4bc7bd80c031145614b5b10d5146
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/code-review/
-  to /tmp/code-reviewtX1mrt/code-review-20211215.414
+  to /tmp/code-reviewal9UZl/code-review-20211216.45
+    code-review-actions.el -> code-review-actions.el
     code-review-comment.el -> code-review-comment.el
     code-review-db.el -> code-review-db.el
     code-review-faces.el -> code-review-faces.el
@@ -17,21 +18,24 @@ Copying files (->) and directories (=>)
     code-review-section.el -> code-review-section.el
     code-review-utils.el -> code-review-utils.el
     code-review.el -> code-review.el
-Created code-review-20211215.414.tar containing:
-  code-review-20211215.414/
-  code-review-20211215.414/code-review-comment.el
-  code-review-20211215.414/code-review-db.el
-  code-review-20211215.414/code-review-faces.el
-  code-review-20211215.414/code-review-github.el
-  code-review-20211215.414/code-review-gitlab.el
-  code-review-20211215.414/code-review-interfaces.el
-  code-review-20211215.414/code-review-pkg.el
-  code-review-20211215.414/code-review-section.el
-  code-review-20211215.414/code-review-utils.el
-  code-review-20211215.414/code-review.el
-Built code-review in 4.882s, finished at 2021-12-15T15:02:11+0000
+Created code-review-20211216.45.tar containing:
+  code-review-20211216.45/
+  code-review-20211216.45/code-review-actions.el
+  code-review-20211216.45/code-review-comment.el
+  code-review-20211216.45/code-review-db.el
+  code-review-20211216.45/code-review-faces.el
+  code-review-20211216.45/code-review-github.el
+  code-review-20211216.45/code-review-gitlab.el
+  code-review-20211216.45/code-review-interfaces.el
+  code-review-20211216.45/code-review-pkg.el
+  code-review-20211216.45/code-review-section.el
+  code-review-20211216.45/code-review-utils.el
+  code-review-20211216.45/code-review.el
+Built code-review in 6.111s, finished at 2021-12-16T01:37:15+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  677 Dec 15 15:02 packages/code-review-20211215.414.entry
-220K -rw-r--r-- 1 root root 220K Dec 15 15:02 packages/code-review-20211215.414.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 15 15:02 packages/code-review-badge.svg
-4.0K -rw-r--r-- 1 root root  132 Dec 15 15:02 packages/code-review-readme.txt
+4.0K -rw-r--r-- 1 root root  678 Dec 15 22:06 packages/code-review-20211215.2143.entry
+220K -rw-r--r-- 1 root root 220K Dec 15 22:06 packages/code-review-20211215.2143.tar
+4.0K -rw-r--r-- 1 root root  676 Dec 16 01:37 packages/code-review-20211216.45.entry
+232K -rw-r--r-- 1 root root 230K Dec 16 01:37 packages/code-review-20211216.45.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 16 01:37 packages/code-review-badge.svg
+4.0K -rw-r--r-- 1 root root  132 Dec 16 01:37 packages/code-review-readme.txt

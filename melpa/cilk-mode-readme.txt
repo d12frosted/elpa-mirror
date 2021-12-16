@@ -23,15 +23,11 @@ bindings of `flycheck' options for the `c/c++-clang' checker.  If
 `flycheck' is not installed, this feature is elided.  The OpenCilk compiler
 path is found in `cilk-mode-flycheck-opencilk-executable'.
 
-Each of the above features is automatically enabled/disabled via the
-following hook functions for `cilk-mode'.  In fact, activating `cilk-mode'
-does nothing except trigger the functions in `cilk-mode-hook'.  To disable
-any feature hook function `cilk-mode-<feature>', set the value of the
-corresponding variable `cilk-mode-enable-<feature>' to `nil' BEFORE loading
-the package.
-
-Each of the hook functions above can also be called interactively (in any
-mode) to toggle the corresponding feature on/off.
+Each of the above features is enabled whenever the `cilk-mode' minor mode
+is activated.  To stop a feature with function `cilk-mode-<feature>' from
+automatically activating with `cilk-mode', set the corresponding variable
+`cilk-mode-enable-<feature>' to nil.  To toggle a feature on or off, one
+may also call the corresponding function interactively.
 
 The `cilk-mode' minor mode can only be enabled in buffers with major mode
-`c-mode' or `c++-mode' (provided by `cc-mode').
+`c-mode' or `c++-mode' (provided by CC Mode).
