@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-undo-fu-session
-;; Package-Version: 20211216.2304
-;; Package-Commit: a6a23301a4030335ff3de1c5556f6ab5d915f7b5
+;; Package-Version: 20211217.351
+;; Package-Commit: cbe37c664389e2ef8c580dd800ca76b0139f09c5
 ;; Keywords: convenience
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "24.1"))
@@ -472,8 +472,6 @@ Argument PENDING-LIST an `pending-undo-list' compatible list."
           (write-char ?\n (current-buffer))
           (prin1 content-data (current-buffer))
           (write-region nil nil undo-file nil 0)
-          ;; This file should only readable by the owner, see #2.
-          (set-file-modes undo-file #o600)
           t)))))
 
 (defun undo-fu-session-save-safe ()
@@ -590,7 +588,9 @@ Argument PENDING-LIST an `pending-undo-list' compatible list."
 (defun undo-fu-session-mode-enable ()
   "Turn on 'undo-fu-session-mode' for the current buffer."
   (unless (file-directory-p undo-fu-session-directory)
-    (make-directory undo-fu-session-directory t))
+    (make-directory undo-fu-session-directory t)
+    ;; These files should only readable by the owner, see #2.
+    (set-file-modes undo-fu-session-directory #o700))
   (add-hook 'before-save-hook #'undo-fu-session-save-safe)
   (add-hook 'find-file-hook #'undo-fu-session-recover-safe))
 

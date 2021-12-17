@@ -28,12 +28,14 @@ The home page of eev is:
 
 Autoloads
 =========
-Eev handles autoloads in a very atypical way, explained in these two
+Eev handles autoloads in a very atypical way, explained in these three
 places:
 
   http://angg.twu.net/eev-current/eev-load.el.html#autoloads
+  http://angg.twu.net/eev-intros/find-eev-install-intro.html#7.3
   http://angg.twu.net/eev-intros/find-eev-intro.html#4
   (find-eev "eev-load.el" "autoloads")
+  (find-eev-install-intro "7.3. Autoloads")
   (find-eev-intro "4. The prefix `find-'")
 
 If you load eev in one of these three ways
