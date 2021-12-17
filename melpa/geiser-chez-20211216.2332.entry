@@ -1,11 +1,11 @@
 (geiser-chez .
-	     [(20211120 250)
+	     [(20211216 2332)
 	      ((emacs
 		(26 1))
 	       (geiser
-		(0 18)))
+		(0 19)))
 	      "Chez Scheme's implementation of the geiser protocols" tar
-	      ((:commit . "ab2dde7a345c1c135ec0ed8fcd49eff1114951bd")
+	      ((:commit . "48427d4aecc6fed751d266673f1ce2ad57ddbcfc")
 	       (:authors
 		("Peter" . "craven@gmx.net"))
 	       (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")

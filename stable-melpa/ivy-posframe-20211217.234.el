@@ -6,8 +6,8 @@
 ;;         Naoya Yamashita <conao3@gmail.com>
 ;; Maintainer: Feng Shu <tumashu@163.com>
 ;; URL: https://github.com/tumashu/ivy-posframe
-;; Package-Version: 20211103.233
-;; Package-Commit: 5d9420252ca855d6d206f1f8ef5993a6be3c618f
+;; Package-Version: 20211217.234
+;; Package-Commit: 533a8e368fcabfd534761a5c685ce713376fa594
 ;; Version: 0.6.3
 ;; Keywords: abbrev, convenience, matching, ivy
 ;; Package-Requires: ((emacs "26.0") (posframe "1.0.0") (ivy "0.13.0"))
@@ -330,6 +330,9 @@ This variable is useful for `ivy-posframe-read-action' .")
 
 (defun ivy-posframe-display-at-frame-bottom-left (str)
   (ivy-posframe--display str #'posframe-poshandler-frame-bottom-left-corner))
+
+(defun ivy-posframe-display-at-frame-bottom-center (str)
+  (ivy-posframe--display str #'posframe-poshandler-frame-bottom-center))
 
 (defun ivy-posframe-display-at-frame-bottom-window-center (str)
   (ivy-posframe--display

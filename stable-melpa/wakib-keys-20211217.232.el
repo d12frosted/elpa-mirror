@@ -2,8 +2,8 @@
 
 ;; Author: Abdulla Bubshait
 ;; URL: https://github.com/darkstego/wakib-keys/
-;; Package-Version: 20211116.2049
-;; Package-Commit: b2a62fb74f2fdfd00fd56ff8343651fa0a079f50
+;; Package-Version: 20211217.232
+;; Package-Commit: eb5a5ebbf2de88e32f51c85f8f9468765320258c
 ;; Created: 6 April 2018
 ;; Keywords: convenience, keybindings, keys
 ;; License: GPL v3
@@ -478,13 +478,19 @@ Then add C-d and C-e to KEYMAP"
     ("<C-S-return>" . wakib-insert-line-before)
     ("C-b" . switch-to-buffer)
     ("M-X" . pp-eval-expression)
-    (,(concat "<C-" (symbol-name mouse-wheel-down-event)  ">") . text-scale-increase)
-    (,(concat "<C-" (symbol-name mouse-wheel-up-event)  ">") . text-scale-decrease)
     ("<escape>" . keyboard-quit)) ;; should quit minibuffer
   "List of all wakib mode keybindings.")
 
+(defun wakib--add-dynamic-keybindings ()
+  (when mouse-wheel-down-event
+	 (define-key wakib-keys-overriding-map
+		(concat "<C-" (symbol-name mouse-wheel-down-event)  ">") `text-scale-increase))
+  (when mouse-wheel-up-event
+	 (define-key wakib-keys-overriding-map
+		(concat "<C-" (symbol-name mouse-wheel-up-event)  ">") `text-scale-decrease)))
 
 (wakib-define-keys wakib-keys-overriding-map wakib-keylist)
+(wakib--add-dynamic-keybindings)
 (add-to-list 'emulation-mode-map-alists
 	     `((wakib-keys . ,wakib-keys-overriding-map)))
 
