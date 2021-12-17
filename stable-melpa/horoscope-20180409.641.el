@@ -3,6 +3,8 @@
 ;; Author: Bob Manson <manson@cygnus.com>
 ;; Maintainer: Noah Friedman <friedman@prep.ai.mit.edu>
 ;; Keywords: extensions games
+;; Package-Version: 20180409.641
+;; Package-Commit: f4c683e991adce0a8f9023f15050f306f9b9a9ed
 ;; Created: 1995-08-02
 ;; Version: 2.0
 ;; Package-Requires: ((emacs "24"))

@@ -4,41 +4,4 @@ Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
 Checking out origin/HEAD
-Checking out eac43b29286e05192cbeada4cad09774493e0ab7
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/epkg/
-  to /tmp/epkgRWcIQ7/epkg-20211119.21
-    epkg-desc.el -> epkg-desc.el
-    epkg-gelpa.el -> epkg-gelpa.el
-    epkg-list.el -> epkg-list.el
-    epkg-melpa.el -> epkg-melpa.el
-    epkg-org.el -> epkg-org.el
-    epkg-schemata.el -> epkg-schemata.el
-    epkg-utils.el -> epkg-utils.el
-    epkg.el -> epkg.el
-    epkg.texi -> epkg.texi
-Created /tmp/epkgRWcIQ7/epkg-20211119.21/epkg.info
-Created epkg-20211119.21.tar containing:
-  epkg-20211119.21/
-  epkg-20211119.21/dir
-  epkg-20211119.21/epkg-desc.el
-  epkg-20211119.21/epkg-gelpa.el
-  epkg-20211119.21/epkg-list.el
-  epkg-20211119.21/epkg-melpa.el
-  epkg-20211119.21/epkg-org.el
-  epkg-20211119.21/epkg-pkg.el
-  epkg-20211119.21/epkg-schemata.el
-  epkg-20211119.21/epkg-utils.el
-  epkg-20211119.21/epkg.el
-  epkg-20211119.21/epkg.info
-Built epkg in 8.324s, finished at 2021-12-16T15:45:07+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  379 Dec 16 15:45 packages/epkg-20211119.21.entry
-112K -rw-r--r-- 1 root root 110K Dec 16 15:45 packages/epkg-20211119.21.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 16 15:45 packages/epkg-badge.svg
-4.0K -rw-r--r-- 1 root root 3.7K Dec 16 15:45 packages/epkg-marginalia-20210802.1740.el
-4.0K -rw-r--r-- 1 root root  427 Dec 16 15:45 packages/epkg-marginalia-20210802.1740.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 16 15:45 packages/epkg-marginalia-badge.svg
-4.0K -rw-r--r-- 1 root root  425 Dec 16 15:45 packages/epkg-marginalia-readme.txt
-4.0K -rw-r--r-- 1 root root  662 Dec 16 15:45 packages/epkg-marginalia.log
-4.0K -rw-r--r-- 1 root root  341 Dec 16 15:45 packages/epkg-readme.txt
+No matching file(s) found in /mnt/store/melpa/working/epkg/: (*.el *.el.in dir *.info *.texi *.texinfo doc/dir doc/*.info doc/*.texi doc/*.texinfo (:exclude .dir-locals.el test.el tests.el *-test.el *-tests.el))

@@ -67,6 +67,15 @@
 		("Eric Beuscher" . "beuscher@eecs.tulane.edu"))
 	       (:keywords "bison-mode" "yacc-mode")
 	       (:url . "https://elpa.nongnu.org/nongnu/bison-mode.html"))])
+ (buttercup .
+	    [(1 24)
+	     ((emacs
+	       (24 3)))
+	     "Behavior-Driven Emacs Lisp Testing" tar
+	     ((:url . "https://github.com/jorgenschaefer/emacs-buttercup")
+	      (:maintainer "Jorgen Schaefer" . "contact@jorgenschaefer.de")
+	      (:authors
+	       ("Jorgen Schaefer" . "contact@jorgenschaefer.de")))])
  (caml .
        [(4 9)
 	((emacs
