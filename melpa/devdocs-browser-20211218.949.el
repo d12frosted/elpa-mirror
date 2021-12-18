@@ -4,8 +4,8 @@
 
 ;; Author: blahgeek <i@blahgeek.com>
 ;; URL: https://github.com/blahgeek/emacs-devdocs-browser
-;; Package-Version: 20211212.1544
-;; Package-Commit: 2d265d48d40156d4a2dd2b6b433c8d969e037c5a
+;; Package-Version: 20211218.949
+;; Package-Commit: a46a2cdb83ed27869befe56fea04914a33252b3a
 ;; Version: 20210525
 ;; Keywords: docs, help, tools
 ;; Package-Requires: ((emacs "27.1"))
@@ -721,8 +721,10 @@ When called interactively, user can choose from the list."
               (format "%s.html?%s" (url-filename url) mtime))))
 
     (pop-to-buffer (format "*devdocs-%s*" slug))
-    (eww-mode)
-    (devdocs-browser-eww-mode)
+    (if devdocs-browser-eww-mode
+        (eww-save-history)
+      (eww-mode)
+      (devdocs-browser-eww-mode))
     (setq-local devdocs-browser--eww-data
                 (list :doc doc
                       :base-url base-url))

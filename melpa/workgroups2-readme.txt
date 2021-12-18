@@ -29,3 +29,20 @@ By default prefix is: "C-c z"
 Change workgroups session file,
 
   (setq wg-session-file "~/.emacs.d/.emacs_workgroups")
+
+Support some special buffer (say `ivy-occur-grep-mode'),
+
+  (with-eval-after-load 'workgroups2
+    ;; provide major mode, package to require, and functions
+    (wg-support 'ivy-occur-grep-mode 'ivy
+                `((serialize . ,(lambda (_buffer)
+                                  (list default-directory
+                                        (base64-encode-string (buffer-string) t))))
+                  (deserialize . ,(lambda (buffer _vars)
+                                    (switch-to-buffer (wg-buf-name buffer))
+                                    (setq default-directory (nth 0 _vars))
+                                    (insert (base64-decode-string (nth 1 _vars)))
+                                    ;; easier than `ivy-occur-grep-mode' to set up
+                                    (grep-mode)
+                                    ;; need return current buffer at the end of function
+                                    (current-buffer))))))
