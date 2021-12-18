@@ -6,8 +6,8 @@
 ;;
 ;; Author: Sergey Pashinin <sergey at pashinin dot com>
 ;; Keywords: session management window-configuration persistence
-;; Package-Version: 20210511.1128
-;; Package-Commit: c310d1ba0e0238e5a22f2a584c966b8b5e7e6616
+;; Package-Version: 20211218.34
+;; Package-Commit: 691298ad53179db4b71ca52349f18af00925a3e5
 ;; Homepage: https://github.com/pashinin/workgroups2
 ;; Version: 1.2.1
 ;; Package-Requires: ((emacs "25.1"))
@@ -1298,12 +1298,9 @@ how to write your own."
                         (let ((d (wg-get-first-existing-dir)))
                           (if (file-directory-p d) (dired d))))))))
 
-;; `Info-mode'     C-h i
 (wg-support 'Info-mode 'info
   `((save . (Info-current-file Info-current-node))
     (deserialize . ,(lambda (buffer vars)
-                      ;;(with-current-buffer
-                      ;;    (get-buffer-create (wg-buf-name buffer))
                       (if vars
                           (if (fboundp 'Info-find-node)
                               (apply #'Info-find-node vars))
