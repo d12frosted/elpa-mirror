@@ -4,8 +4,8 @@
 
 ;; Author: Md Arif Shaikh <arifshaikh.astro@gmail.com>
 ;; Keywords: expense tracking, convenience
-;; Package-Version: 20211214.157
-;; Package-Commit: 0422ee95c11d3ea3bc60128e9e0c5dcb87bfd944
+;; Package-Version: 20211218.755
+;; Package-Commit: 5ada2db4161785731a03bed064856e9c8661fae7
 ;; Version: 0.0.1
 ;; Homepage: https://github.com/md-arif-shaikh/expenses
 ;; URL: https://github.com/md-arif-shaikh/expenses
@@ -106,6 +106,10 @@
   "Get the name of file from the DATE."
   (let ((year-month (substring date 0 7)))
     (concat expenses-directory year-month "-" "expenses.org")))
+
+(defun expenses--get-date (file-name)
+  "Get the date from a given FILE-NAME."
+  (concat (substring (-last-item (split-string file-name "/")) 0 7) "-01"))
 
 (defun expenses--goto-table-end (name)
   "Go to end of table named NAME if point is not in any table."
@@ -532,6 +536,195 @@ Looks for the last two existing files and collect the details."
     (cond ((string-equal calc-for "day") (expenses-calc-expense-for-day-filtered-by-categories))
 	  ((string-equal calc-for "month") (expenses-calc-expense-for-month-filtered-by-categories))
 	  ((string-equal calc-for "year") (message "Will be implemented soon...")))))
+
+;;; Import data from CSV and add entry to the expense file.
+(defun expenses--read-file (file-name)
+  "Read lines from file FILE-NAME and return a list of strings.
+Each string represents a line in the file."
+  (with-temp-buffer
+   (insert-file-contents-literally file-name)
+   (split-string (buffer-string) "\n")))
+
+(defun expenses--convert-date-to-org-format (date format)
+  "Convert given DATE to yyyy-mm-dd from given FORMAT."
+  (let ((day-position)
+	(month-position)
+	(year-position)
+	(sep)
+	(day)
+	(month)
+	(year)
+	(old-list))
+    (if (member format '("yyyy-mm-dd" "yyyy/mm/dd" "dd/mm/yyyy"))
+	(progn (cond ((string-equal format "yyyy-mm-dd")
+		      (setq day-position 2)
+		      (setq month-position 1)
+		      (setq year-position 0)
+		      (setq sep "-"))
+		     ((string-equal format "yyyy/mm/dd")
+		      (setq day-position 2)
+		      (setq month-position 1)
+		      (setq year-position 0)
+		      (setq sep "/"))
+		     ((string-equal format "dd/mm/yyyy")
+		      (setq day-position 0)
+		      (setq month-position 1)
+		      (setq year-position 2)
+		      (setq sep "/")))
+	       (setq old-list (split-string date sep))
+	       (setq day (nth day-position old-list))
+	       (setq month (nth month-position old-list))
+	       (setq year (nth year-position old-list))
+	       (when (< (length year) 4)
+		 (setq year (concat "20" year)))
+	       (format "%s-%02s-%02s" year month day))
+      (let* ((time-list (parse-time-string date)))
+	(setq day (nth 3 time-list))
+	(setq month (nth 4 time-list))
+	(unless month
+	  (setq month 1))
+	(setq year (nth 5 time-list))
+	(when (< year 2000)
+	  (setq year (concat "20" year)))
+	(format "%s-%02d-%02d" year month day)))))
+
+(defun expenses--import-data (file-name sep date-col debit-col date-format &optional narrative-col category-col)
+  "Import data from FILE-NAME with SEP separated values.
+Date and debit column are specified by DATE-COL and DEBIT-COL, respectively.
+DATE-FORMAT specifies format of Date.
+NARRATIVE-COL and CATEGORY-COL specify narrative and category column.
+Column number starts with 0, i.e., second column has column no 1."
+  (let* ((line-strings-list (cdr (expenses--read-file file-name)))
+	 (dates)
+	 (debits)
+	 (narratives)
+	 (categories))
+    (while line-strings-list
+      (let* ((current-line (car line-strings-list))
+	     (current-list (split-string current-line sep))
+	     (date (nth date-col current-list))
+	     (debit (nth debit-col current-list))
+	     (narrative "")
+	     (category "ImportedFromBank"))
+	(setq date (expenses--convert-date-to-org-format date date-format))
+	(setq dates (cons date dates))
+	(setq debits (cons debit debits))
+	(when (> narrative-col 0)
+	  (setq narrative (nth narrative-col current-list)))
+	(when (> category-col 0)
+	  (setq category (nth category-col current-list)))
+	(setq narratives (cons narrative narratives))
+	(setq categories (cons category categories)))
+      (setq line-strings-list (cdr line-strings-list)))
+    `(("dates" . ,(reverse dates))
+      ("debits" . ,(reverse debits))
+      ("narratives" . ,(reverse narratives))
+      ("categories" . ,(reverse categories)))))
+
+(defun expenses-test-import-data (file-name sep date-col debit-col date-format &optional narrative-col category-col)
+  "Test imported data from FILE-NAME with SEP separated values.
+Date and debit are specified by DATE-COL, DEBIT-COL.
+DATE-FORMAT specifies date format.
+Optional arguments are NARRATIVE-COL and CATEGORY-COL.
+Column number starts with 0, i.e., second column has column no 1."
+  (interactive
+   (let ((file (read-file-name "Enter file name: "))
+	 (sep (completing-read "Separtor: " '("," "\t")))
+	 (date-col (read-number "date column number: (0 for first column) "))
+	 (date-format (completing-read "date format" '("dd/mm/yyyy" "yyyy/mm/dd" "yyyy-mm-dd")))
+	 (debit-col (read-number "debit column number: (0 for first column) "))
+	 (narrative-col (read-number "narrative column number: (0 for first column, negative for no such column) "))
+	 (category-col (read-number "category column number: (0 for first column, negative for no such column) ")))
+     (list file sep date-col debit-col date-format narrative-col category-col)))
+  (let* ((data (expenses--import-data file-name sep date-col debit-col date-format narrative-col category-col))
+	 (dates (cdr (assoc "dates" data)))
+	 (debits (cdr (assoc "debits" data)))
+	 (narratives (cdr (assoc "narratives" data)))
+	 (categories (cdr (assoc "categories" data)))
+	 (test-buff "*expenses-test-import.org*")
+	 (iter 0))
+    (with-current-buffer (generate-new-buffer test-buff)
+      (insert "|Date | Amount | Category | details|\n")
+      (insert "|---|---|----|---|\n")
+      (while (< iter 4)
+	(let ((date (nth iter dates))
+	      (amount (nth iter debits))
+	      (category (nth iter categories))
+	      (detail (nth iter narratives)))
+	  (insert (format "|%s|%s|%s|%s|\n" date amount category detail)))
+	(setq iter (1+ iter)))
+      (write-file (concat (temporary-file-directory) "/" test-buff))
+      (goto-char (point-max))
+      (forward-line -1)
+      (org-table-align)
+      (write-file (concat (temporary-file-directory) "/" test-buff))
+      (switch-to-buffer-other-window test-buff))))
+
+(defun expenses-import-expense (file-name sep date-col debit-col date-format &optional narrative-col category-col)
+  "Imported expense from FILE-NAME with SEP separated values.
+Date and debit are specified by DATE-COL, DEBIT-COL.
+DATE-FORMAT specifies date format.
+Optional arguments are NARRATIVE-COL and CATEGORY-COL.
+Column number starts with 0, i.e., second column has column no 1."
+  (interactive
+   (let ((file (read-file-name "Enter file name: "))
+	 (sep (completing-read "Separtor: " '("," "\t")))
+	 (date-col (read-number "date column number: (0 for first column) "))
+	 (date-format (completing-read "date format" '("dd/mm/yyyy" "yyyy/mm/dd" "yyyy-mm-dd")))
+	 (debit-col (read-number "debit column number: (0 for first column) "))
+	 (narrative-col (read-number "narrative column number: (0 for first column, negative for no such column) "))
+	 (category-col (read-number "category column number: (0 for first column, negative for no such column) ")))
+     (list file sep date-col debit-col date-format narrative-col category-col)))
+  (let* ((data (expenses--import-data file-name sep date-col debit-col date-format narrative-col category-col))
+	 (dates (cdr (assoc "dates" data)))
+	 (debits (cdr (assoc "debits" data)))
+	 (narratives (cdr (assoc "narratives" data)))
+	 (categories (cdr (assoc "categories" data)))
+	 (add-narrative-p nil)
+	 (add-category-p nil)
+	 (add-one-category-for-all-entry-p nil)
+	 (add-one-narrative-for-all-entry-p nil)
+	 (one-narrative)
+	 (one-category)
+	 (file-names (delete-dups (-map #'expenses--get-file-name dates))))
+    (when (< narrative-col 0)
+      (when (string-equal (completing-read "No narrative column chosen. Do you want to add one for each entry?: " '("yes" "no")) "yes")
+	(setq add-narrative-p t)
+	(when (string-equal (completing-read "Do you want a single narrative for all entries?: " '("yes" "no")) "yes")
+	  (setq add-one-narrative-for-all-entry-p t)
+	  (setq one-narrative (read-string "Enter one narrative for all entries: ")))))
+    (when (< category-col 0)
+      (when (string-equal (completing-read "No category column chosen. Do you want to add one for each entry?: " '("yes" "no")) "yes")
+	(setq add-category-p t)
+	(when (string-equal (completing-read "Do you want a single category for all entries?: " '("yes" "no")) "yes")
+	  (setq add-one-category-for-all-entry-p t)
+	  (setq one-category (read-string "Enter one category for all entries: ")))))
+    (dolist (file-name file-names)
+      (unless (file-exists-p file-name)
+	(expenses--create-initial-file (expenses--get-date file-name)))
+      (with-temp-buffer
+	(let ((new-entries))
+	  (setq new-entries (cl-loop for date in dates
+				     for amount in debits
+				     for category in categories
+				     for details in narratives
+				     if (string-equal (expenses--get-file-name date) file-name)
+				     collect (format "|%s |%.2f |%s |%s |"
+						     date
+						     (string-to-number amount)
+						     (cond (add-one-category-for-all-entry-p one-category)
+							   (add-category-p (read-string (format "Add category for %s %s %s: " date amount details)))
+							   (t category))
+						     (cond (add-one-narrative-for-all-entry-p one-narrative)
+							   (add-narrative-p (read-string (format "Add details for %s %s %s: " date amount category)))
+							   (t details)))))
+	  (insert (string-join new-entries "\n"))
+	  (append-to-file (point-min) (point-max) file-name)))
+      (with-current-buffer (find-file-noselect file-name)
+	(goto-char (point-max))
+	(forward-line -2)
+	(org-table-align)
+	(write-file file-name)))))
 
 (provide 'expenses)
 ;;; expenses.el ends here
