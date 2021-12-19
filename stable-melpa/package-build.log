@@ -4,24 +4,26 @@ Source:  https://github.com/melpa/package-build.git
 
 Updating /mnt/store/melpa/working/package-build/
 Checking out origin/HEAD
-Checking out da9fcbb6bf020922987914a96f1d12012c914d4c
+Checking out 12da8c305ce8c7e753473d2f35ba2f6faa0c4d02
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/package-build/
-  to /tmp/package-buildMs4z2a/package-build-20211213.1428
+  to /tmp/package-buildOPbXAq/package-build-20211219.302
     package-build-badges.el -> package-build-badges.el
     package-build.el -> package-build.el
     package-recipe-mode.el -> package-recipe-mode.el
     package-recipe.el -> package-recipe.el
-Created package-build-20211213.1428.tar containing:
-  package-build-20211213.1428/
-  package-build-20211213.1428/package-build-badges.el
-  package-build-20211213.1428/package-build-pkg.el
-  package-build-20211213.1428/package-build.el
-  package-build-20211213.1428/package-recipe-mode.el
-  package-build-20211213.1428/package-recipe.el
-Built package-build in 4.579s, finished at 2021-12-18T21:01:48+0000
+Created package-build-20211219.302.tar containing:
+  package-build-20211219.302/
+  package-build-20211219.302/package-build-badges.el
+  package-build-20211219.302/package-build-pkg.el
+  package-build-20211219.302/package-build.el
+  package-build-20211219.302/package-recipe-mode.el
+  package-build-20211219.302/package-recipe.el
+Built package-build in 4.618s, finished at 2021-12-19T03:57:06+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  404 Dec 18 21:01 packages/package-build-20211213.1428.entry
- 72K -rw-r--r-- 1 root root  70K Dec 18 21:01 packages/package-build-20211213.1428.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 18 21:01 packages/package-build-badge.svg
-4.0K -rw-r--r-- 1 root root  308 Dec 18 21:01 packages/package-build-readme.txt
+4.0K -rw-r--r-- 1 root root  404 Dec 19 00:29 packages/package-build-20211213.1428.entry
+ 72K -rw-r--r-- 1 root root  70K Dec 19 00:29 packages/package-build-20211213.1428.tar
+4.0K -rw-r--r-- 1 root root  403 Dec 19 03:57 packages/package-build-20211219.302.entry
+ 72K -rw-r--r-- 1 root root  70K Dec 19 03:57 packages/package-build-20211219.302.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 19 03:57 packages/package-build-badge.svg
+4.0K -rw-r--r-- 1 root root  308 Dec 19 03:57 packages/package-build-readme.txt
