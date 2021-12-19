@@ -2,6 +2,8 @@
 
 ;; Author: wouter bolsterlee <wouter@bolsterl.ee>
 ;; Version: 1.0.0
+;; Package-Version: 20211213.2017
+;; Package-Commit: 25d9940f3c144797581b2992c6527bbf018d3199
 ;; Package-Requires: ((emacs "25.1") (dash "2.18.0") (s "1.12.0") (xml+ "1"))
 ;; Keywords: languages, processes, tools
 ;; URL: https://github.com/wbolster/emacs-python-coverage
