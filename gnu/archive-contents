@@ -1132,7 +1132,7 @@
 			    (:keywords "maint" "tools")
 			    (:url . "http://elpa.gnu.org/packages/gnu-elpa-keyring-update.html"))])
  (gnugo .
-	[(3 1 1)
+	[(3 1 2)
 	 ((ascii-art-to-unicode
 	   (1 5))
 	  (xpm
@@ -1140,11 +1140,11 @@
 	  (cl-lib
 	   (0 5)))
 	 "play GNU Go in a buffer" tar
-	 ((:url . "http://www.gnuvola.org/software/gnugo/")
+	 ((:url . "https://www.gnuvola.org/software/gnugo/")
+	  (:keywords "games" "processes")
 	  (:maintainer "Thien-Thi Nguyen" . "ttn@gnu.org")
 	  (:authors
-	   ("Thien-Thi Nguyen" . "ttn@gnu.org"))
-	  (:keywords "games" "processes"))])
+	   ("Thien-Thi Nguyen" . "ttn@gnu.org")))])
  (gnus-mock .
 	    [(0 5)
 	     nil "Mock Gnus installation for testing" tar
