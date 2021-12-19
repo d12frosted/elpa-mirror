@@ -1,8 +1,8 @@
 ;;; zig-mode.el --- A major mode for the Zig programming language -*- lexical-binding: t -*-
 
 ;; Version: 0.0.8
-;; Package-Version: 20210831.719
-;; Package-Commit: aba01b6199b7697692e5e9217f602477dd5ebd9b
+;; Package-Version: 20211219.1221
+;; Package-Commit: 9befa4a0d673770af07b150cf35cb46745ecc099
 ;; Author: Andrea Orru <andreaorru1991@gmail.com>, Andrew Kelley <superjoe30@gmail.com>
 ;; Keywords: zig, languages
 ;; Package-Requires: ((emacs "24.3"))
@@ -236,13 +236,14 @@ If given a SOURCE, execute the CMD on it."
 
     ;; C types
     "c_short" "c_ushort" "c_int" "c_uint" "c_long" "c_ulong"
-    "c_longlong" "c_ulonglong" "c_longdouble" "c_void"
+    "c_longlong" "c_ulonglong" "c_longdouble"
 
     ;; Comptime types
     "comptime_int" "comptime_float"
 
     ;; Other types
-    "bool" "void" "noreturn" "type" "error" "anyerror" "anyframe" "anytype"))
+    "bool" "void" "noreturn" "type" "error" "anyerror" "anyframe" "anytype"
+    "anyopaque"))
 
 (defconst zig-constants
   '(

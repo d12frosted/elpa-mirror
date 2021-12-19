@@ -3,8 +3,8 @@
 ;; Author: Lucien Cartier-Tilet <lucien@phundrak.com>
 ;; Maintainer: Lucien Cartier-Tilet <lucien@phundrak.com>
 ;; Version: 0.7.7
-;; Package-Version: 20211218.2317
-;; Package-Commit: 6ec3280a8de47f5230ad8152c833b320eb94c92a
+;; Package-Version: 20211219.1248
+;; Package-Commit: 89f78f023a8b2d6cf9b7e71d543063cdf23b7ea8
 ;; Package-Requires: ((emacs "25.1") (f "0.20") (s "1"))
 ;; Homepage: https://github.com/Phundrak/eshell-info-banner.el
 
@@ -226,7 +226,7 @@ If the executable `uptime' is not found, return nil."
     (let ((uptime-str (eshell-info-banner--shell-command-to-string "uptime -p")))
       (if (not (seq-some (lambda (keyword)
                            (string-match-p keyword uptime-str))
-                         '("invalid" "illegal")))
+                         '("invalid" "illegal" "unknown")))
           (s-chop-prefix "up " (s-trim uptime-str))
         (let ((uptime-str (eshell-info-banner--shell-command-to-string "uptime")))
           (save-match-data
