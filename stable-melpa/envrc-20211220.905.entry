@@ -1,0 +1,15 @@
+(envrc .
+       [(20211220 905)
+	((seq
+	  (2))
+	 (emacs
+	  (24 4))
+	 (inheritenv
+	  (0 1)))
+	"Support for `direnv' that operates buffer-locally" single
+	((:commit . "fc23f4f342ee100a865b50bb5bd9a54681a6387e")
+	 (:authors
+	  ("Steve Purcell" . "steve@sanityinc.com"))
+	 (:maintainer "Steve Purcell" . "steve@sanityinc.com")
+	 (:keywords "processes" "tools")
+	 (:url . "https://github.com/purcell/envrc"))])

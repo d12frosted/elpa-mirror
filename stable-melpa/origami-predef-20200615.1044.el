@@ -2,6 +2,8 @@
 
 ;; Author: Álvaro González Sotillo <alvarogonzalezsotillo@gmail.com>
 ;; URL: https://github.com/alvarogonzalezsotillo/origami-predef
+;; Package-Version: 20200615.1044
+;; Package-Commit: cc363f4b2fd20021ab330fc989369e2658457f93
 ;; Package-Requires: ((emacs "24.3") (origami "1.0"))
 ;; Version: 1.0
 ;; Keywords: convenience folding
