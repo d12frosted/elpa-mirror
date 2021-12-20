@@ -4,30 +4,28 @@ Source:  https://gitlab.com/emacs-geiser/guile.git
 
 Updating /mnt/store/melpa/working/geiser-guile/
 Checking out origin/HEAD
-Checking out c5a4a60480abf26db68e2a820189daef1d87fb4b
+Checking out 3d42dc2e723cd647322531a9737d8b7e5d4d16ff
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser-guile/
-  to /tmp/geiser-guileU0gucW/geiser-guile-20211219.2304
+  to /tmp/geiser-guileifMFqW/geiser-guile-20211220.235
     geiser-guile.el -> geiser-guile.el
     src/geiser => src/geiser
-Created geiser-guile-20211219.2304.tar containing:
-  geiser-guile-20211219.2304/
-  geiser-guile-20211219.2304/geiser-guile-pkg.el
-  geiser-guile-20211219.2304/geiser-guile.el
-  geiser-guile-20211219.2304/src/
-  geiser-guile-20211219.2304/src/geiser/
-  geiser-guile-20211219.2304/src/geiser/completion.scm
-  geiser-guile-20211219.2304/src/geiser/doc.scm
-  geiser-guile-20211219.2304/src/geiser/emacs.scm
-  geiser-guile-20211219.2304/src/geiser/evaluation.scm
-  geiser-guile-20211219.2304/src/geiser/modules.scm
-  geiser-guile-20211219.2304/src/geiser/utils.scm
-  geiser-guile-20211219.2304/src/geiser/xref.scm
-Built geiser-guile in 6.298s, finished at 2021-12-20T00:32:47+0000
+Created geiser-guile-20211220.235.tar containing:
+  geiser-guile-20211220.235/
+  geiser-guile-20211220.235/geiser-guile-pkg.el
+  geiser-guile-20211220.235/geiser-guile.el
+  geiser-guile-20211220.235/src/
+  geiser-guile-20211220.235/src/geiser/
+  geiser-guile-20211220.235/src/geiser/completion.scm
+  geiser-guile-20211220.235/src/geiser/doc.scm
+  geiser-guile-20211220.235/src/geiser/emacs.scm
+  geiser-guile-20211220.235/src/geiser/evaluation.scm
+  geiser-guile-20211220.235/src/geiser/modules.scm
+  geiser-guile-20211220.235/src/geiser/utils.scm
+  geiser-guile-20211220.235/src/geiser/xref.scm
+Built geiser-guile in 5.492s, finished at 2021-12-20T07:32:32+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  440 Dec 19 21:01 packages/geiser-guile-20211204.2047.entry
- 60K -rw-r--r-- 1 root root  60K Dec 19 21:01 packages/geiser-guile-20211204.2047.tar
-4.0K -rw-r--r-- 1 root root  440 Dec 20 00:32 packages/geiser-guile-20211219.2304.entry
- 60K -rw-r--r-- 1 root root  60K Dec 20 00:32 packages/geiser-guile-20211219.2304.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 20 00:32 packages/geiser-guile-badge.svg
-4.0K -rw-r--r-- 1 root root   69 Dec 20 00:32 packages/geiser-guile-readme.txt
+4.0K -rw-r--r-- 1 root root  439 Dec 20 07:32 packages/geiser-guile-20211220.235.entry
+ 60K -rw-r--r-- 1 root root  60K Dec 20 07:32 packages/geiser-guile-20211220.235.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 20 07:32 packages/geiser-guile-badge.svg
+4.0K -rw-r--r-- 1 root root   69 Dec 20 07:32 packages/geiser-guile-readme.txt
