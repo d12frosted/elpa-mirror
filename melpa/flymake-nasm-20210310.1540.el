@@ -4,8 +4,6 @@
 
 ;; Author: Jürgen Hötzel <juergen@hoetzel.info>
 ;; URL: http://github.com/juergenhoetzel/flymake-nasm
-;; Package-Version: 20210310.1540
-;; Package-Commit: 27e58d7f3a48ca6fc12238fe6c888a3fdffc3f75
 ;; Maintainer: Jürgen Hötzel
 ;; Keywords: tools, languages
 ;; Package-Requires: ((flymake-quickdef "1.0.0") (emacs "26.1"))

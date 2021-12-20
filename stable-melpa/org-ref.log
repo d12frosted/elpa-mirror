@@ -4,10 +4,10 @@ Source:  https://github.com/jkitchin/org-ref.git
 
 Updating /mnt/store/melpa/working/org-ref/
 Checking out origin/HEAD
-Checking out d4f7923eb795185cdb35c9a5ef52ebd30d1a0951
+Checking out 4eba13248bf427fb0adc6c25f5fa77d2c71c0b97
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-ref/
-  to /tmp/org-refaU5C2g/org-ref-20211216.1246
+  to /tmp/org-refUsGK8I/org-ref-20211219.2130
     doi-utils.el -> doi-utils.el
     nist-webbook.el -> nist-webbook.el
     org-ref-arxiv.el -> org-ref-arxiv.el
@@ -41,58 +41,60 @@ Copying files (->) and directories (=>)
     org-ref.org -> org-ref.org
     org-ref.bib -> org-ref.bib
     citeproc => citeproc
-Created org-ref-20211216.1246.tar containing:
-  org-ref-20211216.1246/
-  org-ref-20211216.1246/citeproc/
-  org-ref-20211216.1246/citeproc/csl-locales/
-  org-ref-20211216.1246/citeproc/csl-locales/locales-en-US.xml
-  org-ref-20211216.1246/citeproc/csl-styles/
-  org-ref-20211216.1246/citeproc/csl-styles/apa-5th-edition.csl
-  org-ref-20211216.1246/citeproc/csl-styles/apa-numeric-superscript-brackets.csl
-  org-ref-20211216.1246/citeproc/csl-styles/chicago-author-date-16th-edition.csl
-  org-ref-20211216.1246/citeproc/csl-styles/elsevier-harvard.csl
-  org-ref-20211216.1246/citeproc/csl-styles/elsevier-with-titles.csl
-  org-ref-20211216.1246/doi-utils.el
-  org-ref-20211216.1246/nist-webbook.el
-  org-ref-20211216.1246/org-ref-arxiv.el
-  org-ref-20211216.1246/org-ref-bibliography-links.el
-  org-ref-20211216.1246/org-ref-bibtex.el
-  org-ref-20211216.1246/org-ref-citation-links.el
-  org-ref-20211216.1246/org-ref-core.el
-  org-ref-20211216.1246/org-ref-export.el
-  org-ref-20211216.1246/org-ref-glossary.el
-  org-ref-20211216.1246/org-ref-helm.el
-  org-ref-20211216.1246/org-ref-isbn.el
-  org-ref-20211216.1246/org-ref-ivy.el
-  org-ref-20211216.1246/org-ref-label-link.el
-  org-ref-20211216.1246/org-ref-latex.el
-  org-ref-20211216.1246/org-ref-misc-links.el
-  org-ref-20211216.1246/org-ref-natbib-bbl-citeproc.el
-  org-ref-20211216.1246/org-ref-pdf.el
-  org-ref-20211216.1246/org-ref-pgk.el
-  org-ref-20211216.1246/org-ref-pkg.el
-  org-ref-20211216.1246/org-ref-pubmed.el
-  org-ref-20211216.1246/org-ref-ref-links.el
-  org-ref-20211216.1246/org-ref-refproc.el
-  org-ref-20211216.1246/org-ref-sci-id.el
-  org-ref-20211216.1246/org-ref-scifinder.el
-  org-ref-20211216.1246/org-ref-scopus.el
-  org-ref-20211216.1246/org-ref-url-utils.el
-  org-ref-20211216.1246/org-ref-utils.el
-  org-ref-20211216.1246/org-ref-worldcat.el
-  org-ref-20211216.1246/org-ref-wos.el
-  org-ref-20211216.1246/org-ref.bib
-  org-ref-20211216.1246/org-ref.el
-  org-ref-20211216.1246/org-ref.org
-  org-ref-20211216.1246/x2bib.el
-Built org-ref in 13.608s, finished at 2021-12-19T14:27:23+0000
+Created org-ref-20211219.2130.tar containing:
+  org-ref-20211219.2130/
+  org-ref-20211219.2130/citeproc/
+  org-ref-20211219.2130/citeproc/csl-locales/
+  org-ref-20211219.2130/citeproc/csl-locales/locales-en-US.xml
+  org-ref-20211219.2130/citeproc/csl-styles/
+  org-ref-20211219.2130/citeproc/csl-styles/apa-5th-edition.csl
+  org-ref-20211219.2130/citeproc/csl-styles/apa-numeric-superscript-brackets.csl
+  org-ref-20211219.2130/citeproc/csl-styles/chicago-author-date-16th-edition.csl
+  org-ref-20211219.2130/citeproc/csl-styles/elsevier-harvard.csl
+  org-ref-20211219.2130/citeproc/csl-styles/elsevier-with-titles.csl
+  org-ref-20211219.2130/doi-utils.el
+  org-ref-20211219.2130/nist-webbook.el
+  org-ref-20211219.2130/org-ref-arxiv.el
+  org-ref-20211219.2130/org-ref-bibliography-links.el
+  org-ref-20211219.2130/org-ref-bibtex.el
+  org-ref-20211219.2130/org-ref-citation-links.el
+  org-ref-20211219.2130/org-ref-core.el
+  org-ref-20211219.2130/org-ref-export.el
+  org-ref-20211219.2130/org-ref-glossary.el
+  org-ref-20211219.2130/org-ref-helm.el
+  org-ref-20211219.2130/org-ref-isbn.el
+  org-ref-20211219.2130/org-ref-ivy.el
+  org-ref-20211219.2130/org-ref-label-link.el
+  org-ref-20211219.2130/org-ref-latex.el
+  org-ref-20211219.2130/org-ref-misc-links.el
+  org-ref-20211219.2130/org-ref-natbib-bbl-citeproc.el
+  org-ref-20211219.2130/org-ref-pdf.el
+  org-ref-20211219.2130/org-ref-pgk.el
+  org-ref-20211219.2130/org-ref-pkg.el
+  org-ref-20211219.2130/org-ref-pubmed.el
+  org-ref-20211219.2130/org-ref-ref-links.el
+  org-ref-20211219.2130/org-ref-refproc.el
+  org-ref-20211219.2130/org-ref-sci-id.el
+  org-ref-20211219.2130/org-ref-scifinder.el
+  org-ref-20211219.2130/org-ref-scopus.el
+  org-ref-20211219.2130/org-ref-url-utils.el
+  org-ref-20211219.2130/org-ref-utils.el
+  org-ref-20211219.2130/org-ref-worldcat.el
+  org-ref-20211219.2130/org-ref-wos.el
+  org-ref-20211219.2130/org-ref.bib
+  org-ref-20211219.2130/org-ref.el
+  org-ref-20211219.2130/org-ref.org
+  org-ref-20211219.2130/x2bib.el
+Built org-ref in 7.242s, finished at 2021-12-20T01:03:46+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  584 Dec 19 14:27 packages/org-ref-20211216.1246.entry
-640K -rw-r--r-- 1 root root 640K Dec 19 14:27 packages/org-ref-20211216.1246.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 19 14:27 packages/org-ref-badge.svg
- 16K -rw-r--r-- 1 root root  16K Dec 19 14:27 packages/org-ref-prettify-20211204.825.el
-4.0K -rw-r--r-- 1 root root  519 Dec 19 14:27 packages/org-ref-prettify-20211204.825.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 19 14:27 packages/org-ref-prettify-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Dec 19 14:27 packages/org-ref-prettify-readme.txt
-4.0K -rw-r--r-- 1 root root  664 Dec 19 14:27 packages/org-ref-prettify.log
-4.0K -rw-r--r-- 1 root root  310 Dec 19 14:27 packages/org-ref-readme.txt
+4.0K -rw-r--r-- 1 root root  584 Dec 19 21:29 packages/org-ref-20211216.1246.entry
+640K -rw-r--r-- 1 root root 640K Dec 19 21:29 packages/org-ref-20211216.1246.tar
+4.0K -rw-r--r-- 1 root root  584 Dec 20 01:03 packages/org-ref-20211219.2130.entry
+640K -rw-r--r-- 1 root root 640K Dec 20 01:03 packages/org-ref-20211219.2130.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 20 01:03 packages/org-ref-badge.svg
+ 16K -rw-r--r-- 1 root root  16K Dec 19 21:29 packages/org-ref-prettify-20211204.825.el
+4.0K -rw-r--r-- 1 root root  519 Dec 19 21:29 packages/org-ref-prettify-20211204.825.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 19 21:29 packages/org-ref-prettify-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Dec 19 21:29 packages/org-ref-prettify-readme.txt
+4.0K -rw-r--r-- 1 root root  180 Dec 20 01:03 packages/org-ref-prettify.log
+4.0K -rw-r--r-- 1 root root  310 Dec 20 01:03 packages/org-ref-readme.txt
