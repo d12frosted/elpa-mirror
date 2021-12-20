@@ -1,13 +1,31 @@
+Table of Contents
+─────────────────
 
-*** SVG Library
+1. SVG Library
+2. Installation
+3. Usage example
 
-A small Emacs library to create and display various SVG objects,
-namely tags, progress bars, progress pies and icons. Each object is
-guaranteed to fit nicely in a text buffer ensuring width is an integer
-multiple of charater width.
 
-*** Usage example
+1 SVG Library
+═════════════
 
-[[file:screenshot.png]]
+  A small Emacs library to create and display various SVG objects,
+  namely tags, progress bars, progress pies and icons. Each object is
+  guaranteed to fit nicely in a text buffer ensuring width is an integer
+  multiple of charater width.
 
-[[file:screenshot-2.png]]
+
+2 Installation
+══════════════
+
+  ┌────
+  │ M-x package-install RET svg-lib RET
+  └────
+
+
+3 Usage example
+═══════════════
+
+  <file:screenshot.png>
+
+  <file:screenshot-2.png>
