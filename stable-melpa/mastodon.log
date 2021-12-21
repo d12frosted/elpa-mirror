@@ -1,13 +1,14 @@
 Package: mastodon
 Fetcher: github
-Source:  https://github.com/jdenen/mastodon.el.git
+Source:  https://github.com/mooseyboots/mastodon.el.git
 
-Updating /mnt/store/melpa/working/mastodon/
+Cloning https://github.com/mooseyboots/mastodon.el.git to /mnt/store/melpa/working/mastodon/
 Checking out origin/HEAD
-Checking out 5095797ef32b922d2a624fa6beb970b5e9cf5ca0
+Checking out d4c0d2a2a3013136f5b1fea40ae1e7022f461dd9
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonYXcaCd/mastodon-20190305.344
+  to /tmp/mastodonqkbr6O/mastodon-20211221.917
+  ! lisp/mastodon-auth--test.el -> mastodon-auth--test.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
   ! lisp/mastodon-discover.el -> mastodon-discover.el
@@ -19,23 +20,24 @@ Copying files (->) and directories (=>)
   ! lisp/mastodon-tl.el -> mastodon-tl.el
   ! lisp/mastodon-toot.el -> mastodon-toot.el
   ! lisp/mastodon.el -> mastodon.el
-Created mastodon-20190305.344.tar containing:
-  mastodon-20190305.344/
-  mastodon-20190305.344/mastodon-auth.el
-  mastodon-20190305.344/mastodon-client.el
-  mastodon-20190305.344/mastodon-discover.el
-  mastodon-20190305.344/mastodon-http.el
-  mastodon-20190305.344/mastodon-inspect.el
-  mastodon-20190305.344/mastodon-media.el
-  mastodon-20190305.344/mastodon-notifications.el
-  mastodon-20190305.344/mastodon-pkg.el
-  mastodon-20190305.344/mastodon-profile.el
-  mastodon-20190305.344/mastodon-tl.el
-  mastodon-20190305.344/mastodon-toot.el
-  mastodon-20190305.344/mastodon.el
-Built mastodon in 4.874s, finished at 2021-12-21T08:40:29+0000
+Created mastodon-20211221.917.tar containing:
+  mastodon-20211221.917/
+  mastodon-20211221.917/mastodon-auth--test.el
+  mastodon-20211221.917/mastodon-auth.el
+  mastodon-20211221.917/mastodon-client.el
+  mastodon-20211221.917/mastodon-discover.el
+  mastodon-20211221.917/mastodon-http.el
+  mastodon-20211221.917/mastodon-inspect.el
+  mastodon-20211221.917/mastodon-media.el
+  mastodon-20211221.917/mastodon-notifications.el
+  mastodon-20211221.917/mastodon-pkg.el
+  mastodon-20211221.917/mastodon-profile.el
+  mastodon-20211221.917/mastodon-tl.el
+  mastodon-20211221.917/mastodon-toot.el
+  mastodon-20211221.917/mastodon.el
+Built mastodon in 4.733s, finished at 2021-12-21T19:12:26+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  336 Dec 21 08:40 packages/mastodon-20190305.344.entry
-132K -rw-r--r-- 1 root root 130K Dec 21 08:40 packages/mastodon-20190305.344.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 21 08:40 packages/mastodon-badge.svg
-4.0K -rw-r--r-- 1 root root  192 Dec 21 08:40 packages/mastodon-readme.txt
+4.0K -rw-r--r-- 1 root root  336 Dec 21 19:12 packages/mastodon-20211221.917.entry
+132K -rw-r--r-- 1 root root 130K Dec 21 19:12 packages/mastodon-20211221.917.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 21 19:12 packages/mastodon-badge.svg
+4.0K -rw-r--r-- 1 root root  192 Dec 21 19:12 packages/mastodon-readme.txt
