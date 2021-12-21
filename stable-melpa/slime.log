@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 9005cdaac4c0adaa8e26ee5285c7b155762c0ce5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/slime/
-  to /tmp/slimez31ZEI/slime-20211108.2224
+  to /tmp/slimewAJjg0/slime-20211108.2224
     slime-autoloads.el -> slime-autoloads.el
     slime-tests.el -> slime-tests.el
     slime.el -> slime.el
@@ -97,7 +97,7 @@ Copying files (->) and directories (=>)
     contrib/swank-util.lisp -> contrib/swank-util.lisp
     contrib/swank.rb -> contrib/swank.rb
   ! doc/slime.texi -> slime.texi
-Created /tmp/slimez31ZEI/slime-20211108.2224/slime.info
+Created /tmp/slimewAJjg0/slime-20211108.2224/slime.info
 Created slime-20211108.2224.tar containing:
   slime-20211108.2224/
   slime-20211108.2224/contrib/
@@ -212,34 +212,34 @@ Created slime-20211108.2224.tar containing:
   slime-20211108.2224/swank/source-file-cache.lisp
   slime-20211108.2224/swank/source-path-parser.lisp
   slime-20211108.2224/xref.lisp
-Built slime in 17.129s, finished at 2021-12-21T05:33:56+0000
+Built slime in 16.679s, finished at 2021-12-21T09:03:28+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  270 Dec 21 05:33 packages/slime-20211108.2224.entry
-2.6M -rw-r--r-- 1 root root 2.6M Dec 21 05:33 packages/slime-20211108.2224.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 21 05:33 packages/slime-badge.svg
- 16K -rw-r--r-- 1 root root  15K Dec 21 05:33 packages/slime-company-20210124.1627.el
-4.0K -rw-r--r-- 1 root root  382 Dec 21 05:33 packages/slime-company-20210124.1627.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 21 05:33 packages/slime-company-badge.svg
-4.0K -rw-r--r-- 1 root root  798 Dec 21 05:33 packages/slime-company-readme.txt
-4.0K -rw-r--r-- 1 root root  636 Dec 21 05:33 packages/slime-company.log
-4.0K -rw-r--r-- 1 root root  351 Dec 21 05:33 packages/slime-docker-20210426.1422.entry
- 40K -rw-r--r-- 1 root root  40K Dec 21 05:33 packages/slime-docker-20210426.1422.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 21 05:33 packages/slime-docker-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Dec 21 05:33 packages/slime-docker-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Dec 21 05:33 packages/slime-docker.log
-4.0K -rw-r--r-- 1 root root 1.1K Dec 21 05:33 packages/slime-readme.txt
-4.0K -rw-r--r-- 1 root root 2.0K Dec 21 05:33 packages/slime-repl-ansi-color-20200712.1226.el
-4.0K -rw-r--r-- 1 root root  413 Dec 21 05:33 packages/slime-repl-ansi-color-20200712.1226.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 21 05:33 packages/slime-repl-ansi-color-badge.svg
-4.0K -rw-r--r-- 1 root root   57 Dec 21 05:33 packages/slime-repl-ansi-color-readme.txt
-4.0K -rw-r--r-- 1 root root  701 Dec 21 05:33 packages/slime-repl-ansi-color.log
-8.0K -rw-r--r-- 1 root root 7.4K Dec 21 05:33 packages/slime-theme-20170808.1322.el
-4.0K -rw-r--r-- 1 root root  336 Dec 21 05:33 packages/slime-theme-20170808.1322.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 21 05:33 packages/slime-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  116 Dec 21 05:33 packages/slime-theme-readme.txt
-4.0K -rw-r--r-- 1 root root  632 Dec 21 05:33 packages/slime-theme.log
-4.0K -rw-r--r-- 1 root root  311 Dec 21 05:33 packages/slime-volleyball-20190701.1624.entry
-4.0M -rw-r--r-- 1 root root 4.0M Dec 21 05:33 packages/slime-volleyball-20190701.1624.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 21 05:33 packages/slime-volleyball-badge.svg
-4.0K -rw-r--r-- 1 root root 2.5K Dec 21 05:33 packages/slime-volleyball-readme.txt
-4.0K -rw-r--r-- 1 root root 1.5K Dec 21 05:33 packages/slime-volleyball.log
+4.0K -rw-r--r-- 1 root root  270 Dec 21 09:03 packages/slime-20211108.2224.entry
+2.6M -rw-r--r-- 1 root root 2.6M Dec 21 09:03 packages/slime-20211108.2224.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 21 09:03 packages/slime-badge.svg
+ 16K -rw-r--r-- 1 root root  15K Dec 21 09:03 packages/slime-company-20210124.1627.el
+4.0K -rw-r--r-- 1 root root  382 Dec 21 09:03 packages/slime-company-20210124.1627.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 21 09:03 packages/slime-company-badge.svg
+4.0K -rw-r--r-- 1 root root  798 Dec 21 09:03 packages/slime-company-readme.txt
+4.0K -rw-r--r-- 1 root root  636 Dec 21 09:03 packages/slime-company.log
+4.0K -rw-r--r-- 1 root root  351 Dec 21 09:03 packages/slime-docker-20210426.1422.entry
+ 40K -rw-r--r-- 1 root root  40K Dec 21 09:03 packages/slime-docker-20210426.1422.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 21 09:03 packages/slime-docker-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Dec 21 09:03 packages/slime-docker-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Dec 21 09:03 packages/slime-docker.log
+4.0K -rw-r--r-- 1 root root 1.1K Dec 21 09:03 packages/slime-readme.txt
+4.0K -rw-r--r-- 1 root root 2.0K Dec 21 09:03 packages/slime-repl-ansi-color-20200712.1226.el
+4.0K -rw-r--r-- 1 root root  413 Dec 21 09:03 packages/slime-repl-ansi-color-20200712.1226.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 21 09:03 packages/slime-repl-ansi-color-badge.svg
+4.0K -rw-r--r-- 1 root root   57 Dec 21 09:03 packages/slime-repl-ansi-color-readme.txt
+4.0K -rw-r--r-- 1 root root  701 Dec 21 09:03 packages/slime-repl-ansi-color.log
+8.0K -rw-r--r-- 1 root root 7.4K Dec 21 09:03 packages/slime-theme-20170808.1322.el
+4.0K -rw-r--r-- 1 root root  336 Dec 21 09:03 packages/slime-theme-20170808.1322.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 21 09:03 packages/slime-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  116 Dec 21 09:03 packages/slime-theme-readme.txt
+4.0K -rw-r--r-- 1 root root  632 Dec 21 09:03 packages/slime-theme.log
+4.0K -rw-r--r-- 1 root root  311 Dec 21 09:03 packages/slime-volleyball-20190701.1624.entry
+4.0M -rw-r--r-- 1 root root 4.0M Dec 21 09:03 packages/slime-volleyball-20190701.1624.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 21 09:03 packages/slime-volleyball-badge.svg
+4.0K -rw-r--r-- 1 root root 2.5K Dec 21 09:03 packages/slime-volleyball-readme.txt
+4.0K -rw-r--r-- 1 root root 1.5K Dec 21 09:03 packages/slime-volleyball.log

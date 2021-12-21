@@ -2,6 +2,8 @@
 
 ;; Author: Kuang Chen <http://github.com/kchenphy>
 ;; URL: https://github.com/kchenphy/counsel-world-clock
+;; Package-Version: 20190709.2211
+;; Package-Commit: 674e4c6b82a92ea765af97cc5f017b357284c7dc
 ;; Version: 0.2.1
 ;; Package-Requires: ((ivy "0.9.0") (s "1.12.0"))
 

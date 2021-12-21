@@ -4,8 +4,8 @@
 
 ;; Author: Tobias Zawada <i@tn-home.de>
 ;; Keywords: tools, matching, files, unix
-;; Package-Version: 20210829.1619
-;; Package-Commit: ed1ddf377447a82d643b46f3a72cbf5ecb21fb4b
+;; Package-Version: 20211221.852
+;; Package-Commit: f8124c699b6a4abfb471269bc26afbcc8136f476
 ;; Version: 1.0.0
 ;; URL: https://github.com/TobiasZawada/elgrep
 ;; Package-Requires: ((emacs "26.2") (async "1.5"))
@@ -1627,12 +1627,12 @@ and search with the help of the library async otherwise.
 :maxdepth Maximal depth. Defaults to the value of `most-positive-fixnum'.
 
 :depth Internal. Should not be used."
-  (interactive (let ((dir (read-directory-name "Directory:")))
+  (interactive (let ((dir (read-directory-name "Directory: ")))
 		 (append (list dir
 			       (let ((default-file-name-regexp (elgrep-default-filename-regexp dir)))
-				 (read-regexp (concat "File-name regexp (defaults:\"\" and \"" default-file-name-regexp "\"):") (list "" default-file-name-regexp) 'elgrep-file-name-re-hist)
+				 (read-regexp (concat "File-name regexp (defaults:\"\" and \"" default-file-name-regexp "\"): ") (list "" default-file-name-regexp) 'elgrep-file-name-re-hist)
 				 )
-			       (read-regexp "Emacs regexp:" nil 'elgrep-re-hist))
+			       (read-regexp "Emacs regexp: " nil 'elgrep-re-hist))
 			 (list :recursive current-prefix-arg
 			       :interactive t ;; during debugging `called-interactively-p' returns nil
 			       ))))

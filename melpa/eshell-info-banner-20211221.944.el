@@ -3,8 +3,8 @@
 ;; Author: Lucien Cartier-Tilet <lucien@phundrak.com>
 ;; Maintainer: Lucien Cartier-Tilet <lucien@phundrak.com>
 ;; Version: 0.8.1
-;; Package-Version: 20211220.2312
-;; Package-Commit: 36b964a99311c95850ea14b6dc54f469d7b4e8b7
+;; Package-Version: 20211221.944
+;; Package-Commit: d248447cb07eb1fb6ef96bb9f660a024345f9158
 ;; Package-Requires: ((emacs "25.1") (f "0.20") (s "1"))
 ;; Homepage: https://github.com/Phundrak/eshell-info-banner.el
 
@@ -67,7 +67,11 @@
 
 (eval-when-compile
   (defconst eshell-info-banner--macos-versions
-    '(("10.4"  . "Mac OS X Tiger")
+    '(("10.0"  . "Mac OS X Cheetah")
+      ("10.1"  . "Mac OS X Puma")
+      ("10.2"  . "Mac OS X Jaguar")
+      ("10.3"  . "Mac OS X Panther")
+      ("10.4"  . "Mac OS X Tiger")
       ("10.5"  . "Mac OS X Leopard")
       ("10.6"  . "Mac OS X Snow Leopard")
       ("10.7"  . "Mac OS X Lion")
@@ -86,7 +90,10 @@
       ("11.3"  . "macOS Big Sur")
       ("11.4"  . "macOS Big Sur")
       ("11.5"  . "macOS Big Sur")
-      ("11.6"  . "macOS Big Sur"))
+      ("11.6"  . "macOS Big Sur")
+      ("12.0"  . "macOS Monterey")
+      ("12.1"  . "macOS Monterey")
+      ("12.2"  . "macOS Monterey"))
     "Versions of OSX and macOS and their name."))
 
 (defconst eshell-info-banner--posix-shells '("bash" "zsh" "sh")

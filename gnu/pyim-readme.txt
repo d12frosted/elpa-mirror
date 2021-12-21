@@ -84,8 +84,7 @@ Table of Contents
   1. 五笔用户
      1. 需要 (require 'pyim-wbdict), 加载五笔 scheme 设置。
      2. 需要将自己的五笔词库文件中的 code-prefix "." 替换为 "wubi/".
-     3. 运行 `pyim-dcache-upgrade-icode2word' 命令，升级 icode2word 词库
-        缓存。
+     3. 运行 `pyim-dcache-upgrade' 命令，升级 icode2word 词库缓存。
   2. 仓颉用户
      1. 需要 (require 'pyim-cangjie5dict), 加载仓颉 scheme 设置。
      2. 需要将自己的五笔词库文件中的 code-prefix "@" 替换为 "cangjie/".
@@ -259,6 +258,7 @@ Table of Contents
    DEL 或 BACKSPACE       删除最后一个字符           
    C-DEL 或  C-BACKSPACE  删除最后一个拼音           
    M-DEL 或  M-BACKSPACE  删除最后一个拼音           
+   F1,F2,F3,F4            以词定字                   
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
