@@ -4,8 +4,6 @@
 
 ;; Author: Abhinav Tushar <abhinav.tushar.vs@gmail.com>
 ;; Version: 0.3.6
-;; Package-Version: 20180804.2254
-;; Package-Commit: 0b95d45991bbcd2fa58d96ce921f6a57ba42c153
 ;; Package-Requires: ((enlive "0.0.1") (f "0.19.0") (dash "2.13.0") (s "1.11.0"))
 ;; Keywords: cricket, score
 ;; URL: https://github.com/lepisma/cricbuzz.el

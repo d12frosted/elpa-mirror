@@ -5,8 +5,8 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/emacscollective/emacsql-libsqlite3
 ;; Keywords: mail
-;; Package-Version: 20210927.2137
-;; Package-Commit: ce95d8a373321bdeafa13e81dac18495c055fd95
+;; Package-Version: 20211209.1243
+;; Package-Commit: d3e401750410979be50cab3fee0ec8d0d2a9998c
 ;; Package-Requires: ((emacs "25.1") (emacsql "3.0.0") (emacsql-sqlite "3.0.0") (sqlite "0"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -52,7 +52,7 @@
                       (object "TEXT")
                       (nil nil)))
    (handle :documentation "Database handle.")
-   (value :document "(internal) Value of last query."))
+   (value :documentation "(internal) Value of last query."))
   (:documentation "A connection to a SQLite database using a module."))
 
 (cl-defmethod initialize-instance :after
@@ -71,8 +71,12 @@
       (emacsql-enable-debugging connection))
     connection))
 
+(cl-defmethod emacsql-live-p ((connection emacsql-libsqlite3-connection))
+  (and (oref connection handle) t))
+
 (cl-defmethod emacsql-close ((connection emacsql-libsqlite3-connection))
-  (sqlite3-close (oref connection handle)))
+  (sqlite3-close (oref connection handle))
+  (oset connection handle nil))
 
 (cl-defmethod emacsql-send-message ((connection emacsql-libsqlite3-connection)
                                     message)

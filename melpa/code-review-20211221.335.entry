@@ -1,5 +1,5 @@
 (code-review .
-	     [(20211220 1400)
+	     [(20211221 335)
 	      ((emacs
 		(25 1))
 	       (closql
@@ -20,8 +20,8 @@
 		(0 3 0))
 	       (emojify
 		(1 2)))
-	      "Perform code review from Github and Gitlab" tar
-	      ((:commit . "aa6b3ed2b94084c8416a72da8f8cbe17e2d78ff9")
+	      "Perform code review from Github, Gitlab, and Bitbucket Cloud" tar
+	      ((:commit . "1b8cacad65a047392dda06969a3580d073b67a11")
 	       (:authors
 		("Wanderson Ferreira <https://github.com/wandersoncferreira>"))
 	       (:maintainer "Wanderson Ferreira" . "wand@hey.com")

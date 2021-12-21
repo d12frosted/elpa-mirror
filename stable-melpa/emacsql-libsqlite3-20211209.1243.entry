@@ -1,5 +1,5 @@
 (emacsql-libsqlite3 .
-		    [(20210927 2137)
+		    [(20211209 1243)
 		     ((emacs
 		       (25 1))
 		      (emacsql
@@ -9,7 +9,7 @@
 		      (sqlite
 		       (0)))
 		     "EmacSQL back-end for SQLite using a module" single
-		     ((:commit . "ce95d8a373321bdeafa13e81dac18495c055fd95")
+		     ((:commit . "d3e401750410979be50cab3fee0ec8d0d2a9998c")
 		      (:authors
 		       ("Jonas Bernoulli" . "jonas@bernoul.li"))
 		      (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")

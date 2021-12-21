@@ -4,8 +4,6 @@
 
 ;; Author: Mario Rodas <marsam@users.noreply.github.com>
 ;; URL: https://github.com/emacs-pe/crontab-mode
-;; Package-Version: 20210715.133
-;; Package-Commit: 7412f3df0958812bfcacd5875a409fa795fa8ecc
 ;; Keywords: languages
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.3"))
