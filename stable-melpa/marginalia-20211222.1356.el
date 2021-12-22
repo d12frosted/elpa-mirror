@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.10
-;; Package-Version: 20211222.1045
-;; Package-Commit: 8ad6b5aa44390bdadaefe8f0b11092b4c3651a8e
+;; Package-Version: 20211222.1356
+;; Package-Commit: f8e3d409b478461e277cdea1df567387e4b9b1cd
 ;; Package-Requires: ((emacs "26.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -442,6 +442,7 @@ f function
 c command
 C interactive-only command
 m macro
+M special-form
 p pure
 s side-effect-free
 @ autoloaded
@@ -467,7 +468,8 @@ t cl-type"
         ((get s 'side-effect-free) "s"))
        (cond
         ((commandp s) (if (get s 'interactive-only) "C" "c"))
-        ((eq (car-safe (symbol-function s)) 'macro) "m")
+        ((macrop (symbol-function s)) "m")
+        ((special-form-p (symbol-function s)) "M")
         (t "f"))
        (and (autoloadp (symbol-function s)) "@")
        (and (marginalia--advised s) "!")
@@ -557,7 +559,7 @@ keybinding since CAND includes it."
 (defun marginalia-annotate-function (cand)
   "Annotate function CAND with its documentation string."
   (when-let (sym (intern-soft cand))
-    (when (functionp sym)
+    (when (fboundp sym)
       (concat
        (marginalia-annotate-binding cand)
        (marginalia--fields

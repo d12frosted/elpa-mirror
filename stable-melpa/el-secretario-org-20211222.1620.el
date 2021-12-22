@@ -7,8 +7,8 @@
 ;; Created: September 20, 2020
 ;; Modified: October 17, 2020
 ;; Version: 0.0.1
-;; Package-Version: 20211212.1409
-;; Package-Commit: 4c42e3bf55d9dd6863094e64e309c3aba2bd974f
+;; Package-Version: 20211222.1620
+;; Package-Commit: aaf183877156c69bf5eb02832dc33a1908eb1091
 ;; Keywords: convenience
 ;; Homepage: https://git.sr.ht/~zetagon/el-secretario
 ;; Package-Requires: ((emacs "27.1")  (org-ql "0.6-pre") (dash "2.18.1") (el-secretario "0.0.1"))
@@ -368,13 +368,7 @@ properties put in."
        (nth 1 it)
        (plist-put it :file-name (buffer-file-name))
        (plist-put it :buffer (current-buffer))
-       (plist-put it :marker (point-marker))
-       (plist-put it :EL-SECRETARIO-PRIORITY
-                  (or (-some-> (plist-get
-                                it
-                                :EL-SECRETARIO-PRIORITY)
-                        (string-to-number))
-                      1))))
+       (plist-put it :marker (point-marker))))
 
 (provide 'el-secretario-org)
 ;;; el-secretario-org.el ends here

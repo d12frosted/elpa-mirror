@@ -3,8 +3,8 @@
 ;; Author: Boris Glavic <lordpretzel@gmail.com>
 ;; Maintainer: Boris Glavic <lordpretzel@gmail.com>
 ;; Version: 0.3
-;; Package-Version: 20211220.218
-;; Package-Commit: 309aeb8b4e2ad850d5a572c2cc6390bac5313971
+;; Package-Version: 20211222.1457
+;; Package-Commit: a1d7268eb2b737ee69b5bdf45aacbc30e50204fe
 ;; Package-Requires: ((emacs "26.1") (xwidgets-reuse "0.2") (ht "2.2") (esxml "20210323.1102"))
 ;; Homepage: https://github.com/lordpretzel/mu4e-views
 ;; Keywords: mail
@@ -100,6 +100,10 @@
     ;; open with browser
 	("browser" . (:viewfunc mu4e-views-view-in-browser
                             :no-view-window t))
+    ;; open with browser do not block remote content
+	("browser-nonblock" . (:viewfunc mu4e-views-view-in-browser
+                                     :no-view-window t
+                                     :filter-html nil))
     ;; open with gnus
     ("gnus" . (:viewfunc mu4e-views-gnus-view-message
                          :create-view-window mu4e-views-gnus-create-view-window

@@ -5,7 +5,7 @@
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
 ;; Package-Version: 20211213.2349
-;; Package-Commit: 8726bc7246cda99b85a4bf84ff7681f1bfff0d4b
+;; Package-Commit: ba24e62961a341f811a12017c9024be27ae16a37
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 
