@@ -181,7 +181,7 @@
 		   (:authors
 		    ("https://turbocafe.keybase.pub")))])
  (geiser .
-	 [(0 20 1)
+	 [(0 21)
 	  ((emacs
 	    (25 1))
 	   (transient
@@ -253,11 +253,11 @@
 		   ("András Simonyi" . "andras.simonyi@gmail.com"))
 		  (:keywords "languages" "gauche" "scheme" "geiser"))])
  (geiser-guile .
-	       [(0 20)
+	       [(0 20 1)
 		((emacs
 		  (25 1))
 		 (geiser
-		  (0 20)))
+		  (0 21)))
 		"Guile's implementation of the geiser protocols" tar
 		((:url . "https://gitlab.com/emacs-geiser/guile")
 		 (:keywords "languages" "guile" "scheme" "geiser")

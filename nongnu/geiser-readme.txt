@@ -203,6 +203,7 @@ Table of Contents
    C-c C-e C-l  Add a given directory to Scheme's load path      
    C-c C-e [    Toggle between () and [] for current form        
    c-c C-e \    Insert λ                                         
+   C-c C-i      Interrupt on-going evaluation                    
    C-M-x        Eval definition around point                     
    C-c C-c      Eval definition around point                     
    C-c M-e      Eval definition around point and switch to REPL  
@@ -277,7 +278,9 @@ Table of Contents
 5.4 In backtrace (evaluation/compile result) buffers:
 ─────────────────────────────────────────────────────
 
-  • `M-g n', `M-g p', `C-x `' for error navigation.
+  • `M-g n', `M-g p', `C-x `' for error location navigation.
+  • `n', `p' for moving among errors in the buffer.
+  • `,' to pop-up the debugger actions menu.
   • `q' to bury buffer.
 
 

@@ -14,3 +14,7 @@ To enable org-autolist mode in the current buffer:
 To enable it whenever you open an org file, add this to your init.el:
 
   (add-hook 'org-mode-hook (lambda () (org-autolist-mode)))
+
+To disable backspace deleting the whole list item, add this:
+
+  (setq org-autolist-enable-delete t)

@@ -1,0 +1,9 @@
+(org-autolist .
+	      [(20211222 445)
+	       nil "Improved list management in org-mode" single
+	       ((:commit . "24622c5792af4a3e2fdd8592b0ca02f8d31e7df1")
+		(:authors
+		 ("Calvin Young"))
+		(:maintainer "Calvin Young")
+		(:keywords "lists" "checklists" "org-mode")
+		(:url . "https://github.com/calvinwyoung/org-autolist"))])
