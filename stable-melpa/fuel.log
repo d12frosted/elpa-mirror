@@ -4,10 +4,10 @@ Source:  https://github.com/factor/factor.git
 
 Updating /mnt/store/melpa/working/fuel/
 Checking out origin/HEAD
-Checking out 94fc1f5faf4df0ba11d10ccecc71d996472102cc
+Checking out f93602c02915dc97014f77ffbdef778376002996
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fuel/
-  to /tmp/fuelIVyvmy/fuel-20210602.1531
+  to /tmp/fuelnCO8Ba/fuel-20211221.2127
   ! misc/fuel/factor-mode.el -> factor-mode.el
   ! misc/fuel/factor-smie.el -> factor-smie.el
   ! misc/fuel/fuel-autodoc.el -> fuel-autodoc.el
@@ -33,35 +33,37 @@ Copying files (->) and directories (=>)
   ! misc/fuel/fuel-table.el -> fuel-table.el
   ! misc/fuel/fuel-tests.el -> fuel-tests.el
   ! misc/fuel/fuel-xref.el -> fuel-xref.el
-Created fuel-20210602.1531.tar containing:
-  fuel-20210602.1531/
-  fuel-20210602.1531/factor-mode.el
-  fuel-20210602.1531/factor-smie.el
-  fuel-20210602.1531/fuel-autodoc.el
-  fuel-20210602.1531/fuel-autohelp.el
-  fuel-20210602.1531/fuel-base.el
-  fuel-20210602.1531/fuel-completion.el
-  fuel-20210602.1531/fuel-connection.el
-  fuel-20210602.1531/fuel-debug-uses.el
-  fuel-20210602.1531/fuel-debug.el
-  fuel-20210602.1531/fuel-edit.el
-  fuel-20210602.1531/fuel-eval.el
-  fuel-20210602.1531/fuel-help.el
-  fuel-20210602.1531/fuel-listener.el
-  fuel-20210602.1531/fuel-log.el
-  fuel-20210602.1531/fuel-markup.el
-  fuel-20210602.1531/fuel-menu.el
-  fuel-20210602.1531/fuel-mode.el
-  fuel-20210602.1531/fuel-pkg.el
-  fuel-20210602.1531/fuel-popup.el
-  fuel-20210602.1531/fuel-refactor.el
-  fuel-20210602.1531/fuel-scaffold.el
-  fuel-20210602.1531/fuel-stack.el
-  fuel-20210602.1531/fuel-table.el
-  fuel-20210602.1531/fuel-tests.el
-  fuel-20210602.1531/fuel-xref.el
-Built fuel in 14.137s, finished at 2021-12-21T18:52:28+0000
+Created fuel-20211221.2127.tar containing:
+  fuel-20211221.2127/
+  fuel-20211221.2127/factor-mode.el
+  fuel-20211221.2127/factor-smie.el
+  fuel-20211221.2127/fuel-autodoc.el
+  fuel-20211221.2127/fuel-autohelp.el
+  fuel-20211221.2127/fuel-base.el
+  fuel-20211221.2127/fuel-completion.el
+  fuel-20211221.2127/fuel-connection.el
+  fuel-20211221.2127/fuel-debug-uses.el
+  fuel-20211221.2127/fuel-debug.el
+  fuel-20211221.2127/fuel-edit.el
+  fuel-20211221.2127/fuel-eval.el
+  fuel-20211221.2127/fuel-help.el
+  fuel-20211221.2127/fuel-listener.el
+  fuel-20211221.2127/fuel-log.el
+  fuel-20211221.2127/fuel-markup.el
+  fuel-20211221.2127/fuel-menu.el
+  fuel-20211221.2127/fuel-mode.el
+  fuel-20211221.2127/fuel-pkg.el
+  fuel-20211221.2127/fuel-popup.el
+  fuel-20211221.2127/fuel-refactor.el
+  fuel-20211221.2127/fuel-scaffold.el
+  fuel-20211221.2127/fuel-stack.el
+  fuel-20211221.2127/fuel-table.el
+  fuel-20211221.2127/fuel-tests.el
+  fuel-20211221.2127/fuel-xref.el
+Built fuel in 18.296s, finished at 2021-12-21T22:33:18+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  202 Dec 21 18:52 packages/fuel-20210602.1531.entry
 212K -rw-r--r-- 1 root root 210K Dec 21 18:52 packages/fuel-20210602.1531.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 21 18:52 packages/fuel-badge.svg
+4.0K -rw-r--r-- 1 root root  202 Dec 21 22:33 packages/fuel-20211221.2127.entry
+212K -rw-r--r-- 1 root root 210K Dec 21 22:33 packages/fuel-20211221.2127.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 21 22:33 packages/fuel-badge.svg

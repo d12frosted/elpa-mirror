@@ -8,7 +8,7 @@
 ;; Modified: June 20, 2021
 ;; Version: 0.0.1
 ;; Package-Version: 20211214.1851
-;; Package-Commit: 07b7f34383150690394a6ca3b8b192e38637633e
+;; Package-Commit: fdbf7629a27efbb1287568ab741b9d0630d76861
 ;; Keywords: convenience mail
 ;; Homepage: https://git.sr.ht/~zetagon/el-secretario
 ;; Package-Requires: ((emacs "27.1")  (org-ql "0.6-pre") (el-secretario "0.0.1"))

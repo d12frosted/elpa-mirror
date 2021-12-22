@@ -5,29 +5,29 @@ Source:  https://github.com/google/mozc.git
 Updating /mnt/store/melpa/working/mozc/
 Checking out origin/HEAD
 Checking out 01306d0c67c5faa203994bab281c515b9d1248fa
-Built mozc in 29.759s, finished at 2021-12-21T19:15:26+0000
+Built mozc in 32.448s, finished at 2021-12-21T22:56:12+0000
  ✓ Success:
- 80K -rw-r--r-- 1 root root  79K Dec 21 19:15 packages/mozc-20210306.1053.el
-4.0K -rw-r--r-- 1 root root  206 Dec 21 19:15 packages/mozc-20210306.1053.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 21 19:15 packages/mozc-badge.svg
- 12K -rw-r--r-- 1 root root 9.4K Dec 21 19:15 packages/mozc-cand-posframe-20200208.750.el
-4.0K -rw-r--r-- 1 root root  532 Dec 21 19:15 packages/mozc-cand-posframe-20200208.750.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 21 19:15 packages/mozc-cand-posframe-badge.svg
-4.0K -rw-r--r-- 1 root root  106 Dec 21 19:15 packages/mozc-cand-posframe-readme.txt
-4.0K -rw-r--r-- 1 root root  670 Dec 21 19:15 packages/mozc-cand-posframe.log
-8.0K -rwxr-xr-x 1 root root 4.7K Dec 21 19:15 packages/mozc-im-20160412.22.el
-4.0K -rw-r--r-- 1 root root  326 Dec 21 19:15 packages/mozc-im-20160412.22.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 21 19:15 packages/mozc-im-badge.svg
-4.0K -rw-r--r-- 1 root root  161 Dec 21 19:15 packages/mozc-im-readme.txt
-4.0K -rw-r--r-- 1 root root  584 Dec 21 19:15 packages/mozc-im.log
-8.0K -rwxr-xr-x 1 root root 5.2K Dec 21 19:15 packages/mozc-popup-20150224.34.el
-4.0K -rw-r--r-- 1 root root  360 Dec 21 19:15 packages/mozc-popup-20150224.34.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 21 19:15 packages/mozc-popup-badge.svg
-4.0K -rw-r--r-- 1 root root   89 Dec 21 19:15 packages/mozc-popup-readme.txt
-4.0K -rw-r--r-- 1 root root  608 Dec 21 19:15 packages/mozc-popup.log
-4.0K -rw-r--r-- 1 root root 2.9K Dec 21 19:15 packages/mozc-readme.txt
- 12K -rw-r--r-- 1 root root 8.3K Dec 21 19:15 packages/mozc-temp-20160228.840.el
-4.0K -rw-r--r-- 1 root root  387 Dec 21 19:15 packages/mozc-temp-20160228.840.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 21 19:15 packages/mozc-temp-badge.svg
-4.0K -rw-r--r-- 1 root root  200 Dec 21 19:15 packages/mozc-temp-readme.txt
-4.0K -rw-r--r-- 1 root root  601 Dec 21 19:15 packages/mozc-temp.log
+ 80K -rw-r--r-- 1 root root  79K Dec 21 22:56 packages/mozc-20210306.1053.el
+4.0K -rw-r--r-- 1 root root  206 Dec 21 22:56 packages/mozc-20210306.1053.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 21 22:56 packages/mozc-badge.svg
+ 12K -rw-r--r-- 1 root root 9.4K Dec 21 22:55 packages/mozc-cand-posframe-20200208.750.el
+4.0K -rw-r--r-- 1 root root  532 Dec 21 22:55 packages/mozc-cand-posframe-20200208.750.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 21 22:55 packages/mozc-cand-posframe-badge.svg
+4.0K -rw-r--r-- 1 root root  106 Dec 21 22:55 packages/mozc-cand-posframe-readme.txt
+4.0K -rw-r--r-- 1 root root  670 Dec 21 22:55 packages/mozc-cand-posframe.log
+8.0K -rwxr-xr-x 1 root root 4.7K Dec 21 22:55 packages/mozc-im-20160412.22.el
+4.0K -rw-r--r-- 1 root root  326 Dec 21 22:55 packages/mozc-im-20160412.22.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 21 22:55 packages/mozc-im-badge.svg
+4.0K -rw-r--r-- 1 root root  161 Dec 21 22:55 packages/mozc-im-readme.txt
+4.0K -rw-r--r-- 1 root root  584 Dec 21 22:55 packages/mozc-im.log
+8.0K -rwxr-xr-x 1 root root 5.2K Dec 21 22:55 packages/mozc-popup-20150224.34.el
+4.0K -rw-r--r-- 1 root root  360 Dec 21 22:55 packages/mozc-popup-20150224.34.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 21 22:55 packages/mozc-popup-badge.svg
+4.0K -rw-r--r-- 1 root root   89 Dec 21 22:55 packages/mozc-popup-readme.txt
+4.0K -rw-r--r-- 1 root root  608 Dec 21 22:55 packages/mozc-popup.log
+4.0K -rw-r--r-- 1 root root 2.9K Dec 21 22:56 packages/mozc-readme.txt
+ 12K -rw-r--r-- 1 root root 8.3K Dec 21 22:55 packages/mozc-temp-20160228.840.el
+4.0K -rw-r--r-- 1 root root  387 Dec 21 22:55 packages/mozc-temp-20160228.840.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 21 22:55 packages/mozc-temp-badge.svg
+4.0K -rw-r--r-- 1 root root  200 Dec 21 22:55 packages/mozc-temp-readme.txt
+4.0K -rw-r--r-- 1 root root  601 Dec 21 22:55 packages/mozc-temp.log
