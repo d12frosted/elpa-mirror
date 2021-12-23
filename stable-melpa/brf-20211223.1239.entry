@@ -1,0 +1,13 @@
+(brf .
+     [(20211223 1239)
+      ((fringe-helper
+	(0 1 1))
+       (emacs
+	(24 3)))
+      "Brf-mode provides features from the legendary editor Brief" tar
+      ((:commit . "4cc66575ab5e3836f83e68dedce161b55eb54dba")
+       (:authors
+	("Mike Woolley" . "mike@bulsara.com"))
+       (:maintainer "Mike Woolley" . "mike@bulsara.com")
+       (:keywords "brief" "crisp" "emulations")
+       (:url . "https://bitbucket.org/MikeWoolley/brf-mode"))])

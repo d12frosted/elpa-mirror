@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 0cffc91cfd362190eac9580983cda74248a2d3a0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonw7hVZc/mastodon-20211223.951
+  to /tmp/mastodonQQjTeG/mastodon-20211223.951
   ! lisp/mastodon-auth--test.el -> mastodon-auth--test.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -35,11 +35,9 @@ Created mastodon-20211223.951.tar containing:
   mastodon-20211223.951/mastodon-tl.el
   mastodon-20211223.951/mastodon-toot.el
   mastodon-20211223.951/mastodon.el
-Built mastodon in 5.127s, finished at 2021-12-23T10:47:50+0000
+Built mastodon in 4.956s, finished at 2021-12-23T14:19:11+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  336 Dec 23 07:13 packages/mastodon-20211221.917.entry
-132K -rw-r--r-- 1 root root 130K Dec 23 07:13 packages/mastodon-20211221.917.tar
-4.0K -rw-r--r-- 1 root root  336 Dec 23 10:47 packages/mastodon-20211223.951.entry
-132K -rw-r--r-- 1 root root 130K Dec 23 10:47 packages/mastodon-20211223.951.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 23 10:47 packages/mastodon-badge.svg
-4.0K -rw-r--r-- 1 root root  192 Dec 23 10:47 packages/mastodon-readme.txt
+4.0K -rw-r--r-- 1 root root  336 Dec 23 14:19 packages/mastodon-20211223.951.entry
+132K -rw-r--r-- 1 root root 130K Dec 23 14:19 packages/mastodon-20211223.951.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 23 14:19 packages/mastodon-badge.svg
+4.0K -rw-r--r-- 1 root root  192 Dec 23 14:19 packages/mastodon-readme.txt
