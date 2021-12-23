@@ -5,7 +5,7 @@
 ;; Author: Lukas Lichtl <support@embed-me.com>
 ;; URL: https://github.com/embed-me
 ;; Package-Version: 20211219.1852
-;; Package-Commit: fc62e1eeb4f6453de10ff6796c513dee85a83e9e
+;; Package-Commit: 4b105cd10464660fb195b3c9c2ded3fbd647d98d
 ;; Version: 1.0
 ;; Package-Requires: ((hydra "0.14.0")(emacs "24.3"))
 ;; Keywords: VUnit, Python, tools

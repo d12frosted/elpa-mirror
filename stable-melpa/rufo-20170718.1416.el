@@ -33,10 +33,8 @@
 
 ;; Author: Daniel Ma <danielhgma@gmail.com> and contributors
 ;; URL: https://github.com/danielma/rufo.el
-;; Package-Commit: 020b02ed6e9ab49e79d2ddf63e4ee2684c1728f4
 ;; Version: 0.3.0
-;; Package-Version: 20170718.1416
-;; Package-X-Original-Version: 0.3.0
+;; Package-Version: 0.3.0
 ;; Package-Requires: ((emacs "24.3"))
 
 ;;; Commentary:
