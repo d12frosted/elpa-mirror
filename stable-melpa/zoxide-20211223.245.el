@@ -7,8 +7,8 @@
 ;; Created: 23 Jun 2021
 ;; Modified: 23 Jun 2021
 ;; Version: 0.0.1
-;; Package-Version: 20210705.448
-;; Package-Commit: f68d7cf9c8c813bdc1ec75f880e0dd1b64112f7c
+;; Package-Version: 20211223.245
+;; Package-Commit: 29508e94255c34174bc07c93749cad5d04700063
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: converience matching
 ;; URL: https://gitlab.com/Vonfry/zoxide.el
@@ -49,15 +49,20 @@
   :group 'zoxide)
 
 (defcustom zoxide-find-file-function #'find-file
-  "The callback function for the target path.
-This is used by `zoxide-find-file' and `zoxide-find-file-with-query'.  For other
-actions, you can use `zoxide-open-with' instead.  If the function is
-interactive, it will be called by `call-interactively' in
-`default-directory'with target path.  Otherwise, the target path is passed as
+  "The callback function for the target path in `zoxide-find-file'.
+If the function is interactive, it will be called by `call-interactively' in
+`default-directory' with target path. Otherwise, the target path is passed as
 argument.
 
-For example, you set this to `counsel-fzf' to open file with fzf through
-counsel or `dired' to open directory instead of a file."
+For example, you set this to `counsel-fzf' to open file with fzf through counsel
+or `dired' to open directory instead of a file."
+  :type 'function
+  :group 'zoxide)
+
+(defcustom zoxide-travel-callback-function #'find-file
+  "The callback function for the target path in `zoxide-travel'.
+Unlike `zoxide-find-file-function', this always be called with the selected path
+as its first argument noninteractively."
   :type 'function
   :group 'zoxide)
 
@@ -117,13 +122,16 @@ a list of paths is returned."
     (zoxide-query-with "-l")))
 
 ;;;###autoload
-(defun zoxide-open-with (query callback)
-  "Search QUERY and run CALLBACK function with a selected path."
+(defun zoxide-open-with (query callback &optional noninteractive)
+  "Search query and run callback function with a selected path.
+
+If noninteractive is non-nil, the callback is always called directly with the
+selected path as its first argument."
   (let* ((results (if query
                       (zoxide-query-with query)
                     (zoxide-query)))
          (default-directory (completing-read "path: " results nil t)))
-    (if (commandp callback)
+    (if (and (not noninteractive) (commandp callback))
         (call-interactively callback)
       (funcall callback default-directory))))
 
@@ -145,14 +153,26 @@ a list of paths is returned."
   "Select default directory through zoxide with a search query."
   (interactive)
   (let ((query (read-string "query: ")))
-    (zoxide-open-with query #'cd)))
+    (zoxide-open-with query #'cd t)))
 
 ;;;###autoload
 (defun zoxide-cd ()
   "Select default directory through zoxide with all paths."
   (interactive)
-  (zoxide-open-with nil #'cd))
+  (zoxide-open-with nil #'cd t))
 
+;;;###autoload
+(defun zoxide-travel ()
+  "Like `zoxide-find-file', this function is used to open the path directly."
+  (interactive)
+  (zoxide-open-with nil zoxide-travel-callback-function t))
+
+;;;###autoload
+(defun zoxide-travel-with-query ()
+  "Like `zoxide-travel', a query mached at first."
+  (interactive)
+  (let ((query (read-string "query: ")))
+    (zoxide-open-with query zoxide-travel-callback-function t)))
 (provide 'zoxide)
 
 ;;; zoxide.el ends here

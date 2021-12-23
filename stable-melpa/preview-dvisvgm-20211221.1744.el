@@ -5,7 +5,7 @@
 ;; Author: Tobias Zawada <i@tn-home.de>
 ;; Keywords: tex
 ;; Package-Version: 20211221.1744
-;; Package-Commit: 72ee787acdbf0b7767ef9a8d26a74c7225eec4d3
+;; Package-Commit: aa1dfcdeebf01de5e5c9d50bd697bf4e7339f841
 ;; Version: 1.0.0
 ;; URL: https://github.com/TobiasZawada/preview-dvisvgm
 ;; Package-Requires: ((emacs "27.1") (auctex "13.0.12"))
