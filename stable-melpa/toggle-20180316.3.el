@@ -6,7 +6,7 @@
 ;; Version 1.3.1
 ;; Keywords: files, extensions, convenience
 ;; Package-Version: 20180316.3
-;; Package-Commit: 2d76365d2aa13543121d5c623df465adb68b76f7
+;; Package-Commit: 842ae4df222bbd6596068814ac1b1e505c2a6b7a
 ;; Created: 2006-03-22
 ;; Compatibility: Emacs 22, 21?
 ;; URL(en): http://seattlerb.rubyforge.org/

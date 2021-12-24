@@ -4,10 +4,11 @@ Source:  https://github.com/mooseyboots/mastodon.el.git
 
 Updating /mnt/store/melpa/working/mastodon/
 Checking out origin/HEAD
-Checking out 0cffc91cfd362190eac9580983cda74248a2d3a0
+Checking out 6c19decad2bdb86d55c96409cd0c96e1c8dd1a32
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonQQjTeG/mastodon-20211223.951
+  to /tmp/mastodonrG8cwb/mastodon-20211223.1924
+  ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth--test.el -> mastodon-auth--test.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -17,27 +18,30 @@ Copying files (->) and directories (=>)
   ! lisp/mastodon-media.el -> mastodon-media.el
   ! lisp/mastodon-notifications.el -> mastodon-notifications.el
   ! lisp/mastodon-profile.el -> mastodon-profile.el
+  ! lisp/mastodon-search.el -> mastodon-search.el
   ! lisp/mastodon-tl.el -> mastodon-tl.el
   ! lisp/mastodon-toot.el -> mastodon-toot.el
   ! lisp/mastodon.el -> mastodon.el
-Created mastodon-20211223.951.tar containing:
-  mastodon-20211223.951/
-  mastodon-20211223.951/mastodon-auth--test.el
-  mastodon-20211223.951/mastodon-auth.el
-  mastodon-20211223.951/mastodon-client.el
-  mastodon-20211223.951/mastodon-discover.el
-  mastodon-20211223.951/mastodon-http.el
-  mastodon-20211223.951/mastodon-inspect.el
-  mastodon-20211223.951/mastodon-media.el
-  mastodon-20211223.951/mastodon-notifications.el
-  mastodon-20211223.951/mastodon-pkg.el
-  mastodon-20211223.951/mastodon-profile.el
-  mastodon-20211223.951/mastodon-tl.el
-  mastodon-20211223.951/mastodon-toot.el
-  mastodon-20211223.951/mastodon.el
-Built mastodon in 4.956s, finished at 2021-12-23T14:19:11+0000
+Created mastodon-20211223.1924.tar containing:
+  mastodon-20211223.1924/
+  mastodon-20211223.1924/mastodon-async.el
+  mastodon-20211223.1924/mastodon-auth--test.el
+  mastodon-20211223.1924/mastodon-auth.el
+  mastodon-20211223.1924/mastodon-client.el
+  mastodon-20211223.1924/mastodon-discover.el
+  mastodon-20211223.1924/mastodon-http.el
+  mastodon-20211223.1924/mastodon-inspect.el
+  mastodon-20211223.1924/mastodon-media.el
+  mastodon-20211223.1924/mastodon-notifications.el
+  mastodon-20211223.1924/mastodon-pkg.el
+  mastodon-20211223.1924/mastodon-profile.el
+  mastodon-20211223.1924/mastodon-search.el
+  mastodon-20211223.1924/mastodon-tl.el
+  mastodon-20211223.1924/mastodon-toot.el
+  mastodon-20211223.1924/mastodon.el
+Built mastodon in 5.215s, finished at 2021-12-24T01:10:26+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  336 Dec 23 14:19 packages/mastodon-20211223.951.entry
-132K -rw-r--r-- 1 root root 130K Dec 23 14:19 packages/mastodon-20211223.951.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 23 14:19 packages/mastodon-badge.svg
-4.0K -rw-r--r-- 1 root root  192 Dec 23 14:19 packages/mastodon-readme.txt
+4.0K -rw-r--r-- 1 root root  394 Dec 24 01:10 packages/mastodon-20211223.1924.entry
+232K -rw-r--r-- 1 root root 230K Dec 24 01:10 packages/mastodon-20211223.1924.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 24 01:10 packages/mastodon-badge.svg
+4.0K -rw-r--r-- 1 root root  192 Dec 24 01:10 packages/mastodon-readme.txt
