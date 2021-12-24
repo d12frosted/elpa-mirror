@@ -4,9 +4,11 @@
 
 ;; Author: Tobias Zawada <i@tn-home.de>
 ;; Keywords: tex
-;; Package-Version: 20211221.1744
-;; Package-Commit: aa1dfcdeebf01de5e5c9d50bd697bf4e7339f841
-;; Version: 1.0.0
+;; Package-Version: 20211224.135
+;; Package-X-Original-Version: 20211221.1744
+;; Package-Commit: 72ee787acdbf0b7767ef9a8d26a74c7225eec4d3
+;; Package-Commit: df3b809d2f4663a091f34f964e823cd068bdd2e6
+;; X-Original-Version: 1.0.0
 ;; URL: https://github.com/TobiasZawada/preview-dvisvgm
 ;; Package-Requires: ((emacs "27.1") (auctex "13.0.12"))
 
@@ -52,6 +54,12 @@
 (require 'cl-lib)
 (require 'face-remap)
 
+;; Solve the chicken-or-egg problem with "preview" and "preview-dvisvgm":
+;; The following (require 'preview-dvisvgm) does
+;; not hurt, since in the case that "preview" is already loaded, the
+;; above (require 'preview) does nothing.
+;;;###autoload (with-eval-after-load 'preview (require 'preview-dvisvgm))
+
 (defcustom preview-dvisvgm-debug 0
   "Verbosity level for debugging of preview-dvisvgm."
   :type 'integer
@@ -78,13 +86,18 @@
 (cl-pushnew '(dvisvgm (open preview-gs-open preview-dvisvgm-process-setup)
 		      (place preview-gs-place)
 		      (close preview-dvisvgm-close))
-	    (preview-dvisvgm-variable-standard-value 'preview-image-creators))
+	    (preview-dvisvgm-variable-standard-value 'preview-image-creators)
+	    :test #'equal)
 
 (put 'preview-image-type 'custom-type
      (append '(choice)
              (mapcar (lambda (symbol) (list 'const (car symbol)))
                      preview-image-creators)
              '((symbol :tag "Other"))))
+
+(cl-pushnew '(dvisvgm png "-sDEVICE=png16m")
+	    (preview-dvisvgm-variable-standard-value 'preview-gs-image-type-alist)
+	    :test #'equal)
 
 (defcustom preview-dvisvgm-command
   "dvisvgm --no-fonts %d --page=- --output=\"%m/prev%%3p.svg\""
@@ -109,6 +122,10 @@ if you customize this."
                  (const gif)
                  (symbol :tag "Other" :value png)))
 
+(defvar-local preview-dvisvgm-warn-pdfoutput t
+  "Warn about the fallback to dvipng at pdfoutput.
+This warning is only issued once for each TeX-buffer.")
+
 (defun preview-dvisvgm-process-setup ()
   "Set up dvisvgm process for conversion."
   (when (> preview-dvisvgm-debug 0)
@@ -120,10 +137,14 @@ if you customize this."
                                         (car preview-resolution)
                                         (cdr preview-resolution)))))
   (if preview-parsed-pdfoutput
-      (if (preview-supports-image-type preview-gs-image-type)
-          (preview-pdf2dsc-process-setup)
-        (error "Setting \"%s\" for `preview-image-type' unsupported by this Emacs"
-               preview-gs-image-type))
+      (progn
+	(when preview-dvisvgm-warn-pdfoutput
+	  (warn "Pdf output not supported by preview-dvisvgm -- falling back to dvipng")
+	  (setq preview-dvisvgm-warn-pdfoutput nil))
+	(if (preview-supports-image-type preview-gs-image-type)
+            (preview-pdf2dsc-process-setup)
+          (error "Setting \"%s\" for `preview-image-type' unsupported by this Emacs"
+		 preview-gs-image-type)))
     (unless (preview-supports-image-type preview-dvisvgm-image-type)
       (error "Setting \"%s\" for `preview-dvisvgm-image-type'  unsupported by this Emacs"
              preview-dvisvgm-image-type))
@@ -144,7 +165,7 @@ if you customize this."
 		     (if text-scale-mode
 		       (expt text-scale-mode-step text-scale-mode-amount)
 		     1.0))))
-         (scale-str  (format " --scale=%d " scale))
+         (scale-str  (format " --scale=%g " scale))
          (command (with-current-buffer TeX-command-buffer
                     (prog1
                         (concat (TeX-command-expand preview-dvisvgm-command)
