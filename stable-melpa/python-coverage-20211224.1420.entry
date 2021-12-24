@@ -1,5 +1,5 @@
 (python-coverage .
-		 [(20211213 2017)
+		 [(20211224 1420)
 		  ((emacs
 		    (25 1))
 		   (dash
@@ -9,7 +9,7 @@
 		   (xml+
 		    (1)))
 		  "Show Python coverage via overlays or Flycheck" single
-		  ((:commit . "25d9940f3c144797581b2992c6527bbf018d3199")
+		  ((:commit . "a341615af03dbe3ce0ac9b63cf43dc01c1ae5ebe")
 		   (:authors
 		    ("wouter bolsterlee" . "wouter@bolsterl.ee"))
 		   (:maintainer "wouter bolsterlee" . "wouter@bolsterl.ee")

@@ -10,8 +10,8 @@
 ;; Maintainer: FENTON, Alex <a-fent@github>
 ;; Created: 2014-07-20
 ;; Version: 1.210925
-;; Package-Version: 20211127.1430
-;; Package-Commit: eda1f21fd519427c070d165f8a663db07b87ac29
+;; Package-Version: 20211224.1240
+;; Package-Commit: b2e43b936249de2a100afb4262698105c39ce289
 ;; Package-Requires: ((org "8.2") (emacs "24.4") (dash "2.8") (ht "2.0"))
 ;; Keywords: tools
 ;; URL: https://github.com/a-fent/ox-pandoc
@@ -51,7 +51,7 @@
 (defconst org-pandoc-valid-options
   '(abbreviations ascii atx-headers base-header-level bash-completion
     biblatex bibliography citation-abbreviations citeproc columns csl css
-    data-dir default-image-extension dpi dump-args email-obfuscation eol
+    data-dir default-image-extension defaults dpi dump-args email-obfuscation eol
     epub-chapter-level epub-cover-image epub-embed-font epub-metadata
     epub-subdirectory extract-media fail-if-warnings file-scope filter
     highlight-style html-q-tags id-prefix ignore-args include-after-body
@@ -73,10 +73,10 @@
     filter lua-filter))
 
 (defconst org-pandoc-file-options
-  '(abbreviations bibliography citation-abbreviations csl
+  '(abbreviations bibliography citation-abbreviations csl defaults
     epub-cover-image epub-embed-font epub-metadata include-after-body
     include-before-body include-in-header log lue-filter
-	print-default-data-file reference-doc syntax-definition ))
+	print-default-data-file reference-doc syntax-definition))
 
 (defconst org-pandoc-extensions
   '((asciidoc . txt) (beamer . tex)

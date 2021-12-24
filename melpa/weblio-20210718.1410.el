@@ -4,8 +4,6 @@
 
 ;; Author: Simon Zelazny
 ;; Version: 0.3.4
-;; Package-Version: 20210718.1410
-;; Package-Commit: 2b4b0c206440b5c63960214feacfceb0c26231c7
 ;; Package-Requires: ((request "0.3.3") (emacs "25.1"))
 ;; Keywords: langauges, i18n
 ;; URL: https://github.com/pzel/weblio

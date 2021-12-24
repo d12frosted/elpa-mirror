@@ -57,3 +57,5 @@ Sample configuration to integrate with Magit (https://magit.vc/),
                  (magit-find-file (plist-get info :id )
                                   (concat git-dir (plist-get info :filename))))))
            vc-msg-git-extra)))
+
+If git-link is installed, a new menu item to copy the git link is displayed.
