@@ -1,5 +1,5 @@
 Nano modeline is a minor mode that modify the modeline as:
-[ status | name (primary)                               secondary ]
+[ prefix | name (primary)                      secondary ]
 
 It can be displayed at the bottom (mode-line) or at the top (header-line)
 depending on nano-modeline-position custom setting.
