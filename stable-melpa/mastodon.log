@@ -4,12 +4,11 @@ Source:  https://github.com/mooseyboots/mastodon.el.git
 
 Updating /mnt/store/melpa/working/mastodon/
 Checking out origin/HEAD
-Checking out 6c19decad2bdb86d55c96409cd0c96e1c8dd1a32
+Checking out 59f7c2747a39f72cc9f8d18b3b9d44d7382c6056
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodon0XKz5g/mastodon-20211223.1924
+  to /tmp/mastodonbxeRWj/mastodon-20211223.1924
   ! lisp/mastodon-async.el -> mastodon-async.el
-  ! lisp/mastodon-auth--test.el -> mastodon-auth--test.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
   ! lisp/mastodon-discover.el -> mastodon-discover.el
@@ -25,7 +24,6 @@ Copying files (->) and directories (=>)
 Created mastodon-20211223.1924.tar containing:
   mastodon-20211223.1924/
   mastodon-20211223.1924/mastodon-async.el
-  mastodon-20211223.1924/mastodon-auth--test.el
   mastodon-20211223.1924/mastodon-auth.el
   mastodon-20211223.1924/mastodon-client.el
   mastodon-20211223.1924/mastodon-discover.el
@@ -39,9 +37,9 @@ Created mastodon-20211223.1924.tar containing:
   mastodon-20211223.1924/mastodon-tl.el
   mastodon-20211223.1924/mastodon-toot.el
   mastodon-20211223.1924/mastodon.el
-Built mastodon in 5.159s, finished at 2021-12-24T04:45:34+0000
+Built mastodon in 5.071s, finished at 2021-12-24T11:53:51+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  394 Dec 24 04:45 packages/mastodon-20211223.1924.entry
-232K -rw-r--r-- 1 root root 230K Dec 24 04:45 packages/mastodon-20211223.1924.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 24 04:45 packages/mastodon-badge.svg
-4.0K -rw-r--r-- 1 root root  192 Dec 24 04:45 packages/mastodon-readme.txt
+4.0K -rw-r--r-- 1 root root  394 Dec 24 11:53 packages/mastodon-20211223.1924.entry
+232K -rw-r--r-- 1 root root 230K Dec 24 11:53 packages/mastodon-20211223.1924.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 24 11:53 packages/mastodon-badge.svg
+4.0K -rw-r--r-- 1 root root  192 Dec 24 11:53 packages/mastodon-readme.txt
