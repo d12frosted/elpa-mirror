@@ -17,4 +17,4 @@ To enable it whenever you open an org file, add this to your init.el:
 
 To disable backspace deleting the whole list item, add this:
 
-  (setq org-autolist-enable-delete t)
+  (setq org-autolist-enable-delete nil)

@@ -4,10 +4,10 @@ Source:  https://github.com/universal-ctags/citre.git
 
 Updating /mnt/store/melpa/working/citre/
 Checking out origin/HEAD
-Checking out b9e274b180fcda981eec35dae0355d9d1305ad42
+Checking out 641f2f7f69de2c0f4f055efe55b3ecd899a60b24
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citre/
-  to /tmp/citreF5WF4u/citre-20211204.1356
+  to /tmp/citrey8cmu9/citre-20211225.1020
     citre-basic-tools.el -> citre-basic-tools.el
     citre-common.el -> citre-common.el
     citre-config.el -> citre-config.el
@@ -22,26 +22,28 @@ Copying files (->) and directories (=>)
     citre-tag.el -> citre-tag.el
     citre-util.el -> citre-util.el
     citre.el -> citre.el
-Created citre-20211204.1356.tar containing:
-  citre-20211204.1356/
-  citre-20211204.1356/citre-basic-tools.el
-  citre-20211204.1356/citre-common.el
-  citre-20211204.1356/citre-config.el
-  citre-20211204.1356/citre-core-tables.el
-  citre-20211204.1356/citre-core.el
-  citre-20211204.1356/citre-ctags.el
-  citre-20211204.1356/citre-global.el
-  citre-20211204.1356/citre-lang-c.el
-  citre-20211204.1356/citre-lang-fileref.el
-  citre-20211204.1356/citre-lang-verilog.el
-  citre-20211204.1356/citre-peek.el
-  citre-20211204.1356/citre-pkg.el
-  citre-20211204.1356/citre-tag.el
-  citre-20211204.1356/citre-util.el
-  citre-20211204.1356/citre.el
-Built citre in 8.785s, finished at 2021-12-25T01:33:00+0000
+Created citre-20211225.1020.tar containing:
+  citre-20211225.1020/
+  citre-20211225.1020/citre-basic-tools.el
+  citre-20211225.1020/citre-common.el
+  citre-20211225.1020/citre-config.el
+  citre-20211225.1020/citre-core-tables.el
+  citre-20211225.1020/citre-core.el
+  citre-20211225.1020/citre-ctags.el
+  citre-20211225.1020/citre-global.el
+  citre-20211225.1020/citre-lang-c.el
+  citre-20211225.1020/citre-lang-fileref.el
+  citre-20211225.1020/citre-lang-verilog.el
+  citre-20211225.1020/citre-peek.el
+  citre-20211225.1020/citre-pkg.el
+  citre-20211225.1020/citre-tag.el
+  citre-20211225.1020/citre-util.el
+  citre-20211225.1020/citre.el
+Built citre in 8.323s, finished at 2021-12-25T10:30:19+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  346 Dec 25 01:33 packages/citre-20211204.1356.entry
-340K -rw-r--r-- 1 root root 340K Dec 25 01:33 packages/citre-20211204.1356.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 25 01:33 packages/citre-badge.svg
-4.0K -rw-r--r-- 1 root root  525 Dec 25 01:33 packages/citre-readme.txt
+4.0K -rw-r--r-- 1 root root  346 Dec 25 06:16 packages/citre-20211204.1356.entry
+340K -rw-r--r-- 1 root root 340K Dec 25 06:16 packages/citre-20211204.1356.tar
+4.0K -rw-r--r-- 1 root root  346 Dec 25 10:30 packages/citre-20211225.1020.entry
+340K -rw-r--r-- 1 root root 340K Dec 25 10:30 packages/citre-20211225.1020.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 25 10:30 packages/citre-badge.svg
+4.0K -rw-r--r-- 1 root root  525 Dec 25 10:30 packages/citre-readme.txt

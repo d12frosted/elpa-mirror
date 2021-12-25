@@ -1,5 +1,5 @@
 This minor mode replaces keywords or expressions with SVG tags
-that are fully customizable and clickable.
+that are fully customizable and activable.
 
 Usage example:
 --------------

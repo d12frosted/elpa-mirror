@@ -7,8 +7,9 @@ https://github.com/pashinin/workgroups2/issues
 
 Quick start,
 
-- `wg-create-workgroup' to save current windows layout
-- `wg-open-workgroup' to open saved windows layout
+- `wg-create-workgroup' to save window&buffer layout as a work group
+- `wg-open-workgroup' to open an existing work group
+- `wg-kill-workgroup' to delete an existing work group
 
 Optionally, you can use minor-mode `workgroups-mode' by put below
 line into .emacs ,
@@ -25,6 +26,7 @@ By default prefix is: "C-c z"
 
 <prefix> C-c    - create new workgroup
 <prefix> C-v    - open existing workgroup
+<prefix> C-k    - delete existing workgroup
 
 Change workgroups session file,
 
