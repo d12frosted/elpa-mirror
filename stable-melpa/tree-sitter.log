@@ -3,41 +3,35 @@ Fetcher: github
 Source:  https://github.com/emacs-tree-sitter/elisp-tree-sitter.git
 
 Updating /mnt/store/melpa/working/tree-sitter/
-Checking out origin/release
-Checking out 48b06796a3b2e76ce004972d929de38146eafaa0
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/tree-sitter/
-  to /tmp/tree-sittervQzisr/tree-sitter-20211211.1220
-  ! lisp/tree-sitter-cli.el -> tree-sitter-cli.el
-  ! lisp/tree-sitter-debug.el -> tree-sitter-debug.el
-  ! lisp/tree-sitter-extras.el -> tree-sitter-extras.el
-  ! lisp/tree-sitter-hl.el -> tree-sitter-hl.el
-  ! lisp/tree-sitter-load.el -> tree-sitter-load.el
-  ! lisp/tree-sitter-query.el -> tree-sitter-query.el
-  ! lisp/tree-sitter.el -> tree-sitter.el
-Created tree-sitter-20211211.1220.tar containing:
-  tree-sitter-20211211.1220/
-  tree-sitter-20211211.1220/tree-sitter-cli.el
-  tree-sitter-20211211.1220/tree-sitter-debug.el
-  tree-sitter-20211211.1220/tree-sitter-extras.el
-  tree-sitter-20211211.1220/tree-sitter-hl.el
-  tree-sitter-20211211.1220/tree-sitter-load.el
-  tree-sitter-20211211.1220/tree-sitter-pkg.el
-  tree-sitter-20211211.1220/tree-sitter-query.el
-  tree-sitter-20211211.1220/tree-sitter.el
-Built tree-sitter in 7.407s, finished at 2021-12-24T23:03:35+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  470 Dec 24 23:03 packages/tree-sitter-20211211.1220.entry
- 72K -rw-r--r-- 1 root root  70K Dec 24 23:03 packages/tree-sitter-20211211.1220.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 24 23:03 packages/tree-sitter-badge.svg
- 24K -rw-r--r-- 1 root root  23K Dec 24 23:03 packages/tree-sitter-indent-20211128.2236.el
-4.0K -rw-r--r-- 1 root root  533 Dec 24 23:03 packages/tree-sitter-indent-20211128.2236.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 24 19:31 packages/tree-sitter-indent-badge.svg
-4.0K -rw-r--r-- 1 root root  532 Dec 24 23:03 packages/tree-sitter-indent-readme.txt
-4.0K -rw-r--r-- 1 root root  242 Dec 24 23:03 packages/tree-sitter-indent.log
-4.0K -rw-r--r-- 1 root root  496 Dec 24 19:31 packages/tree-sitter-langs-20211213.159.entry
-100K -rw-r--r-- 1 root root 100K Dec 24 19:31 packages/tree-sitter-langs-20211213.159.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 24 19:31 packages/tree-sitter-langs-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Dec 24 19:31 packages/tree-sitter-langs-readme.txt
-4.0K -rw-r--r-- 1 root root  247 Dec 24 23:03 packages/tree-sitter-langs.log
-4.0K -rw-r--r-- 1 root root  318 Dec 24 23:03 packages/tree-sitter-readme.txt
+Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
+From https://github.com/emacs-tree-sitter/elisp-tree-sitter
+ * [new branch]      stashes    -> origin/stashes
+Fetching submodule langs
+From https://github.com/emacs-tree-sitter/tree-sitter-langs
+   e2e302f..4da6527  azure-pipelines       -> origin/azure-pipelines
+ + fa4458f...a3b911a ci                    -> origin/ci  (forced update)
+   cff2ba3..e537b90  github-actions        -> origin/github-actions
+ + 054f6f3...120d9ed hcl                   -> origin/hcl  (forced update)
+   e73eba6..b4858f6  master                -> origin/master
+   2b845a7..c66b03f  release               -> origin/release
+ * [new tag]         0.10.10               -> 0.10.10
+ * [new tag]         0.10.11               -> 0.10.11
+ * [new tag]         0.10.12               -> 0.10.12
+ * [new tag]         0.10.13               -> 0.10.13
+ * [new tag]         0.10.8                -> 0.10.8
+ * [new tag]         0.10.9                -> 0.10.9
+ * [new tag]         melpa-stable/v0.10.10 -> melpa-stable/v0.10.10
+ * [new tag]         melpa-stable/v0.10.11 -> melpa-stable/v0.10.11
+ * [new tag]         melpa-stable/v0.10.12 -> melpa-stable/v0.10.12
+ * [new tag]         melpa-stable/v0.10.8  -> melpa-stable/v0.10.8
+ * [new tag]         melpa-stable/v0.10.9  -> melpa-stable/v0.10.9
+Fetching submodule langs/repos/hcl
+From https://github.com/mitchellh/tree-sitter-hcl
+   a8bd256..bdc2ee0  main       -> origin/main
+fatal: remote error: upload-pack: not our ref b048a42c6d907ff04e1a82e8dadcd9e8957024a1
+Errors during submodule fetch:
+	repos/hcl
+Errors during submodule fetch:
+	langs
+error: Could not fetch origin
+
