@@ -2,7 +2,7 @@
 
 ;; Version: 0.1.0
 ;; Package-Version: 20161201.711
-;; Package-Commit: d42a6eedefeb44919fbacf58d302b6df18f05bbc
+;; Package-Commit: 7fdcf4ead88d451c0a4a6425b2e730818eaf610e
 ;; Author: Vladimir Panteleev
 ;; Url: https://github.com/CyberShadow/sdlang-mode
 ;; Keywords: languages
