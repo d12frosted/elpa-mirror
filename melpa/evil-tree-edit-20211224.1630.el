@@ -4,8 +4,8 @@
 ;;
 ;; Author: Ethan Leba <ethanleba5@gmail.com>
 ;; Version: 0.1.0
-;; Package-Version: 20211223.1540
-;; Package-Commit: 2423228258ff6bb0f7726f745bc02528f9f0f7ae
+;; Package-Version: 20211224.1630
+;; Package-Commit: d74266cbf0dbf4fa18b0ad7cd7f44b14130d1ec3
 ;; Homepage: https://github.com/ethan-leba/tree-edit
 ;; Package-Requires: ((emacs "27.1") (tree-edit "0.1.0") (tree-sitter "0.15.0") (evil "1.0.0") (avy "0.5.0") (s "0.0.0"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
@@ -94,6 +94,7 @@ but it seems to not work reliably with `tree-edit--save-location'."
   "Move NODE to the next (interesting) named sibling."
   (let ((parent (tsc-get-parent node)))
     (cond
+     ((not parent) node)
      ((tsc-node-eq parent (tsc-root-node tree-sitter-tree)) node)
      ((--any (member (tsc-node-type parent)
                      (cons it (alist-get it tree-edit--subtypes '())))
@@ -242,6 +243,15 @@ See `tree-edit-delete'."
   (evil-tree-edit-ensure-current-node)
   (tree-edit-delete evil-tree-edit-current-node))
 
+(defun evil-tree-edit-move ()
+  "Copy then delete the current node.
+
+See `tree-edit-delete'."
+  (interactive)
+  (evil-tree-edit-ensure-current-node)
+  (tree-edit-copy evil-tree-edit-current-node)
+  (tree-edit-delete evil-tree-edit-current-node))
+
 (defun evil-tree-edit-raise ()
   "Move the current node up the syntax tree until a valid replacement is found.
 
@@ -314,6 +324,12 @@ Placeholder is defined by `tree-edit-placeholder-node-type'."
     (evil-tree-edit-goto-next-placeholder)
     (evil-tree-edit-change current-location)))
 
+(defun evil-tree-edit-change-next-placeholder-from-insert ()
+  "Complete edit of current node and change the next placeholder node."
+  (interactive)
+  (evil-tree-edit-normal-or-tree-state)
+  (evil-tree-edit-change-next-placeholder))
+
 (defun evil-tree-edit-preview-node ()
   "Preview the different variations of the current node."
   (interactive)
@@ -330,6 +346,15 @@ Placeholder is defined by `tree-edit-placeholder-node-type'."
          (-uniq it)
          ;; TODO: Prettier print
          (message (string-join (-map #'prin1-to-string it) "\n")))))
+
+(defun evil-tree-edit-open-tree-view ()
+  "Preview the different variations of the current node."
+  (interactive)
+  (evil-tree-edit-ensure-current-node)
+  (require 'tree-edit-view)
+  (if tree-edit-view-mode
+      (display-buffer tree-edit-view--tree-buffer)
+    (tree-edit-view-mode)))
 
 
 (defun evil-tree-edit--ambiguous-node-range-p (node-a node-b)
@@ -375,6 +400,8 @@ Placeholder is defined by `tree-edit-placeholder-node-type'."
 
 (defun evil-tree-edit--exit-tree-state ()
   "De-activate tree-edit state."
+  (unless (eq evil-next-state 'insert)
+    (setq evil-tree-edit--return-position nil))
   (when evil-tree-edit--node-overlay
     (overlay-put evil-tree-edit--node-overlay 'after-string "")
     (overlay-put evil-tree-edit--node-overlay 'face '())))
@@ -484,7 +511,7 @@ each language will have it's own set of nouns."
       (define-evil-tree-edit-verb mode-local-keymap "e" #'evil-tree-edit-exchange)
       (define-evil-tree-edit-verb mode-local-keymap "w" #'evil-tree-edit-wrap-node t)
       (define-evil-tree-edit-avy-jump mode-local-keymap "s" #'evil-tree-edit-avy-jump)
-      (define-evil-tree-edit-avy-jump mode-local-keymap "S" #'evil-tree-edit-sig-avy-jump)
+      (define-evil-tree-edit-avy-jump mode-local-keymap "q" #'evil-tree-edit-sig-avy-jump)
       (define-key mode-local-keymap [escape] 'evil-normal-state)
       (define-key mode-local-keymap ">" #'evil-tree-edit-slurp)
       (define-key mode-local-keymap "<" #'evil-tree-edit-barf)
@@ -497,11 +524,13 @@ each language will have it's own set of nouns."
       (define-key mode-local-keymap "N" #'evil-tree-edit-change-next-placeholder)
       (define-key mode-local-keymap "c" #'evil-tree-edit-change)
       (define-key mode-local-keymap "d" #'evil-tree-edit-delete)
+      (define-key mode-local-keymap "m" #'evil-tree-edit-move)
       (define-key mode-local-keymap "r" #'evil-tree-edit-raise)
       (define-key mode-local-keymap "y" #'evil-tree-edit-copy)
       (define-key mode-local-keymap "u" #'evil-tree-edit-undo)
       (define-key mode-local-keymap "A" #'evil-tree-edit-goto-sig-parent)
       (define-key mode-local-keymap "?" #'evil-tree-edit-preview-node)
+      (define-key mode-local-keymap "v" #'evil-tree-edit-open-tree-view)
       (define-key mode-local-keymap "zz" #'evil-scroll-line-to-center)
       ;; `setq-mode-local' macroexpanded, since it doesn't accept symbols
       (mode-local-bind `((evil-tree-state-map . ,mode-local-keymap)) '(mode-variable-flag t) mode)
@@ -511,7 +540,8 @@ each language will have it's own set of nouns."
 
 (unless evil-tree-edit-disable-nontree-bindings
   (evil-define-key 'normal evil-tree-edit-mode-map "Q" #'evil-tree-state)
-  (evil-define-key 'insert evil-tree-edit-mode-map (kbd "<escape>") #'evil-tree-edit-normal-or-tree-state))
+  (evil-define-key 'insert evil-tree-edit-mode-map (kbd "<escape>") #'evil-tree-edit-normal-or-tree-state)
+  (evil-define-key 'insert evil-tree-edit-mode-map (kbd "C-<return>") #'evil-tree-edit-change-next-placeholder-from-insert))
 
 (provide 'evil-tree-edit)
 ;;; evil-tree-edit.el ends here

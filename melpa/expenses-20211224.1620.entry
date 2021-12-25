@@ -1,11 +1,13 @@
 (expenses .
-	  [(20211220 1239)
+	  [(20211224 1620)
 	   ((emacs
 	     (26 1))
 	    (dash
-	     (2 19 1)))
-	   "Record and view expenses" single
-	   ((:commit . "d004cabd1a31f5010640371e8aa04f06a7d8ca29")
+	     (2 19 1))
+	    (ht
+	     (2 3)))
+	   "Record and view expenses" tar
+	   ((:commit . "e02a80eedbc825dafd0a0a6cf566f4978dc5ed89")
 	    (:authors
 	     ("Md Arif Shaikh" . "arifshaikh.astro@gmail.com"))
 	    (:maintainer "Md Arif Shaikh" . "arifshaikh.astro@gmail.com")

@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.6.4
-;; Package-Version: 20211221.1602
-;; Package-Commit: 03b5ed80af067ebf18fdd09b75b19c2f691241aa
+;; Package-Version: 20211224.1739
+;; Package-Commit: e2eaf1fd961d33812272d63667078a8ea619b43c
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -1051,11 +1051,11 @@ MAP-VARIABLE is registered as GLOBAL and WITHOUT-BASE-MAP."
     (set-keymap-parent (symbol-value map-variable) loophole-base-map))
   (when (and (listp loophole--buffer-list)
              (not global))
-    (mapc (lambda (buffer)
-            (with-current-buffer buffer
-              (if (local-variable-p state-variable)
-                  (add-to-list 'loophole--buffer-list buffer nil #'eq))))
-          (buffer-list))
+    (dolist (buffer (buffer-list))
+      (with-current-buffer buffer
+        (when (local-variable-p state-variable)
+          (add-to-list 'loophole--buffer-list buffer nil #'eq)
+          (force-mode-line-update))))
     (add-variable-watcher state-variable
                           #'loophole--follow-adding-local-variable))
   (run-hook-with-args 'loophole-register-functions map-variable))
@@ -1077,14 +1077,15 @@ MAP-VARIABLE is registered as GLOBAL and WITHOUT-BASE-MAP."
     (when (listp loophole--buffer-list)
       (remove-variable-watcher state-variable
                                #'loophole--follow-adding-local-variable)
-      (mapc (lambda (buffer)
-              (with-current-buffer buffer
-                (if (and (local-variable-p state-variable)
-                         (not (seq-some #'local-variable-p
-                                        (loophole-local-variable-if-set-list))))
-                    (setq loophole--buffer-list
-                          (delq buffer loophole--buffer-list)))))
-            loophole--buffer-list))
+      (dolist (buffer loophole--buffer-list)
+        (with-current-buffer buffer
+          (if (and (local-variable-p state-variable)
+                   (not (seq-some
+                         #'local-variable-p
+                         (remq state-variable
+                               (loophole-local-variable-if-set-list)))))
+              (setq loophole--buffer-list
+                    (delq buffer loophole--buffer-list))))))
     (if (eq (keymap-parent (symbol-value map-variable))
             loophole-base-map)
         (set-keymap-parent (symbol-value map-variable) nil))
@@ -2712,33 +2713,30 @@ Followings are the key bindings for Loophole commands.
   (if loophole-mode
       (progn
         (setq loophole--buffer-list nil)
-        (mapc (lambda (buffer)
-                (with-current-buffer buffer
-                  (if (seq-some #'local-variable-p
-                                (loophole-local-variable-if-set-list))
-                      (push buffer loophole--buffer-list))))
-              (buffer-list))
+        (dolist (buffer (buffer-list))
+          (with-current-buffer buffer
+            (if (seq-some #'local-variable-p
+                          (loophole-local-variable-if-set-list))
+                (push buffer loophole--buffer-list))))
         (dolist (variable (loophole-local-variable-if-set-list))
           (add-variable-watcher variable
                                 #'loophole--follow-adding-local-variable))
-        (mapc (lambda (buffer)
-                (with-current-buffer buffer
-                  (add-hook 'change-major-mode-hook
-                            #'loophole--follow-killing-local-variable nil t)
-                  (add-hook 'kill-buffer-hook
-                            #'loophole--follow-killing-local-variable nil t)))
-              loophole--buffer-list)
+        (dolist (buffer loophole--buffer-list)
+          (with-current-buffer buffer
+            (add-hook 'change-major-mode-hook
+                      #'loophole--follow-killing-local-variable nil t)
+            (add-hook 'kill-buffer-hook
+                      #'loophole--follow-killing-local-variable nil t)))
         (unless loophole--suspended (loophole-resume)))
     (let ((flag loophole--suspended))
       (loophole-suspend)
       (setq loophole--suspended flag))
-    (mapc (lambda (buffer)
-            (with-current-buffer buffer
-              (remove-hook 'kill-buffer-hook
-                           #'loophole--follow-killing-local-variable t)
-              (remove-hook 'change-major-mode-hook
-                           #'loophole--follow-killing-local-variable t)))
-          loophole--buffer-list)
+    (dolist (buffer loophole--buffer-list)
+      (with-current-buffer buffer
+        (remove-hook 'kill-buffer-hook
+                     #'loophole--follow-killing-local-variable t)
+        (remove-hook 'change-major-mode-hook
+                     #'loophole--follow-killing-local-variable t)))
     (dolist (variable (loophole-local-variable-if-set-list))
       (remove-variable-watcher variable
                                #'loophole--follow-adding-local-variable))
@@ -3127,11 +3125,10 @@ TAG, GLOBAL and WITHOUT-BASE-MAP are passed to
                     (cond ((keymapp s) s)
                           ((listp s)
                            (let ((m (make-sparse-keymap)))
-                             (mapc (lambda (key-binding)
-                                     (define-key m
-                                       (car key-binding)
-                                       (cdr key-binding)))
-                                   s)
+                             (dolist (key-binding s)
+                               (define-key m
+                                 (car key-binding)
+                                 (cdr key-binding)))
                              m))
                           ((null s) (make-sparse-keymap))
                           (t (error "Invalid keymap %" s))))

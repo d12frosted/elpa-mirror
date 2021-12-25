@@ -3,11 +3,11 @@
 ;; Copyright (C) 2021 Liāu, Kiong-Gē
 
 ;; ------------------------------------------------------------------------------
-;; Author: Liāu, Kiong-Gē <gongyi.liao@gmail.com>
+;; Author: Liāu, Kiong-Gē <gliao.tw@pm.me>
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Package-Requires: ((emacs "26"))
-;; Package-Version: 20210408.2149
-;; Package-Commit: ec7f522ec25c7f8342dfd067b7d9f6862c828c93
+;; Package-Version: 20211224.2042
+;; Package-Commit: aad9c0c0c888325cf6f9bb2310677d667b364f21
 ;; Keywords: extensions, lisp, theme
 ;; Homepage: https://github.com/GongYiLiao/theme-anchor
 ;; ------------------------------------------------------------------------------
@@ -96,19 +96,19 @@ It uses 'face-remap-set-base' to load that theme in a buffer local manner"
   (unless (custom-theme-name-valid-p theme)
     (error "Invalid theme name `%s'" theme))
   ;; prepare the theme for face-remap
-  (load-theme theme t t)
-  ;; set the theme-values as well 
-  (theme-anchor-set-values theme) 
-  ;; choose the most appropriate theme for the environment
-  (setq-local face-remapping-alist 	;
-	      (cl-remove nil
-			 (mapcar (lambda (specs)
-				   (theme-anchor-remove-nil-fgbg
-				    (theme-anchor-spec-choose specs)))
-				 (theme-anchor-get-faces theme))))
-  (if (local-variable-p 'ansi-color-names-vector)
-      (setq-local ansi-color-map (ansi-color-make-color-map)))
-  (force-mode-line-update))
+  (if (load-theme theme t t)
+      (progn 
+	;; set the theme-values as well 
+	(theme-anchor-set-values theme)
+	;; choose the most appropriate theme for the environment
+	(setq-local face-remapping-alist ;
+		    (cl-remove nil
+			       (mapcar (lambda (specs)
+					 (theme-anchor-remove-nil-fgbg
+					  (theme-anchor-spec-choose specs)))
+				       (theme-anchor-get-faces theme)))) 
+	(disable-theme theme)
+	(force-mode-line-update))))
 
 (defmacro theme-anchor-hook-gen (theme &rest other-step)
   "Generate hook functions.
