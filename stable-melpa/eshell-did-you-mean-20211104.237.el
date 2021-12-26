@@ -4,8 +4,6 @@
 
 ;; Author: Chunyang Xu <xuchunyang56@gmail.com>
 ;; URL: https://github.com/xuchunyang/eshell-did-you-mean
-;; Package-Version: 20211104.237
-;; Package-Commit: 80cd8c4b186a2fb29621cf634bcf2bcd914f1e3d
 ;; Package-Requires: ((emacs "24.1") (cl-lib "0.5"))
 ;; Keywords: eshell
 ;; Version: 0.2

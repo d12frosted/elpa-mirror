@@ -4,10 +4,10 @@ Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
 Checking out origin/HEAD
-Checking out ac68fd0677fc393ceba8d74f22472425b910ad53
+Checking out 20ccd6f641b47a8606760629ebec8daee770b246
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghub6ZKuVa/ghub-20211221.2332
+  to /tmp/ghubZpZGrb/ghub-20211226.737
   ! lisp/buck.el -> buck.el
   ! lisp/ghub-graphql.el -> ghub-graphql.el
   ! lisp/ghub-pkg.el -> ghub-pkg.el
@@ -17,22 +17,24 @@ Copying files (->) and directories (=>)
   ! lisp/gsexp.el -> gsexp.el
   ! lisp/gtea.el -> gtea.el
   ! docs/ghub.texi -> ghub.texi
-Created /tmp/ghub6ZKuVa/ghub-20211221.2332/ghub.info
-Created ghub-20211221.2332.tar containing:
-  ghub-20211221.2332/
-  ghub-20211221.2332/buck.el
-  ghub-20211221.2332/dir
-  ghub-20211221.2332/ghub-graphql.el
-  ghub-20211221.2332/ghub-pkg.el
-  ghub-20211221.2332/ghub.el
-  ghub-20211221.2332/ghub.info
-  ghub-20211221.2332/glab.el
-  ghub-20211221.2332/gogs.el
-  ghub-20211221.2332/gsexp.el
-  ghub-20211221.2332/gtea.el
-Built ghub in 11.560s, finished at 2021-12-26T05:31:11+0000
+Created /tmp/ghubZpZGrb/ghub-20211226.737/ghub.info
+Created ghub-20211226.737.tar containing:
+  ghub-20211226.737/
+  ghub-20211226.737/buck.el
+  ghub-20211226.737/dir
+  ghub-20211226.737/ghub-graphql.el
+  ghub-20211226.737/ghub-pkg.el
+  ghub-20211226.737/ghub.el
+  ghub-20211226.737/ghub.info
+  ghub-20211226.737/glab.el
+  ghub-20211226.737/gogs.el
+  ghub-20211226.737/gsexp.el
+  ghub-20211226.737/gtea.el
+Built ghub in 10.032s, finished at 2021-12-26T08:52:16+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  401 Dec 26 05:31 packages/ghub-20211221.2332.entry
 152K -rw-r--r-- 1 root root 150K Dec 26 05:31 packages/ghub-20211221.2332.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 26 05:31 packages/ghub-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Dec 26 05:31 packages/ghub-readme.txt
+4.0K -rw-r--r-- 1 root root  400 Dec 26 08:52 packages/ghub-20211226.737.entry
+152K -rw-r--r-- 1 root root 150K Dec 26 08:52 packages/ghub-20211226.737.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 26 08:52 packages/ghub-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Dec 26 08:52 packages/ghub-readme.txt
