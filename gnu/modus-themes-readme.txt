@@ -10,14 +10,12 @@ The themes share the following customization variables:
     modus-themes-headings                       (alist)
     modus-themes-org-agenda                     (alist)
     modus-themes-bold-constructs                (boolean)
+    modus-themes-deuteranopia                   (boolean)
     modus-themes-inhibit-reload                 (boolean)
     modus-themes-intense-markup                 (boolean)
     modus-themes-italic-constructs              (boolean)
     modus-themes-mixed-fonts                    (boolean)
-    modus-themes-scale-headings                 (boolean)
     modus-themes-subtle-line-numbers            (boolean)
-    modus-themes-success-deuteranopia           (boolean)
-    modus-themes-variable-pitch-headings        (boolean)
     modus-themes-variable-pitch-ui              (boolean)
     modus-themes-completions                    (choice)
     modus-themes-diffs                          (choice)
@@ -32,21 +30,6 @@ The themes share the following customization variables:
     modus-themes-prompts                        (choice)
     modus-themes-region                         (choice)
     modus-themes-syntax                         (choice)
-    modus-themes-mode-line-padding              (natnum)
-
-The default scale for headings is as follows (it can be customized as
-well---remember, no scaling takes place by default):
-
-    modus-themes-scale-1                        1.05
-    modus-themes-scale-2                        1.1
-    modus-themes-scale-3                        1.15
-    modus-themes-scale-4                        1.2
-    modus-themes-scale-title                    1.3
-
-There is another scaling-related option, which however is reserved
-for special cases and is not used for headings:
-
-    modus-themes-scale-small                    0.9
 
 There also exist two unique customization variables for overriding
 color palette values.  The specifics are documented in the manual.
@@ -61,14 +44,12 @@ font-lock or some basic group).  You are encouraged to report any
 missing package or change you would like to see.
 
     ace-window
-    ag
     alert
     all-the-icons
     annotate
     ansi-color
     anzu
     apropos
-    apt-sources-list
     artbollocks-mode
     auctex and TeX
     auto-dim-other-buffers
@@ -81,7 +62,6 @@ missing package or change you would like to see.
     boon
     bookmark
     breakpoint (provided by built-in gdb-mi.el)
-    buffer-expose
     calendar and diary
     calfw
     centaur-tabs
@@ -99,7 +79,6 @@ missing package or change you would like to see.
     corfu
     counsel
     counsel-css
-    counsel-org-capture-string
     cov
     cperl-mode
     css-mode
@@ -111,28 +90,24 @@ missing package or change you would like to see.
     dashboard (emacs-dashboard)
     deadgrep
     debbugs
-    define-word
     deft
     dictionary
     diff-hl
     diff-mode
     dim-autoload
     dir-treeview
-    dired
+    Dired
     dired-async
     dired-git
     dired-git-info
     dired-narrow
     dired-subtree
-    diredc
     diredfl
     diredp (dired+)
-    disk-usage
     display-fill-column-indicator-mode
     doom-modeline
     dynamic-ruler
     easy-jekyll
-    easy-kill
     ebdb
     ediff
     eglot
@@ -169,7 +144,6 @@ missing package or change you would like to see.
     flycheck-posframe
     flymake
     flyspell
-    flyspell-correct
     flx
     freeze-it
     frog-menu
@@ -181,10 +155,8 @@ missing package or change you would like to see.
     geiser
     git-commit
     git-gutter (and variants)
-    git-lens
     git-rebase
     git-timemachine
-    git-walktree
     gnus
     gotest
     golden-ratio-scroll-screen
@@ -193,20 +165,14 @@ missing package or change you would like to see.
     helm-switch-shell
     helm-xref
     helpful
-    highlight-blocks
-    highlight-defined
-    highlight-escape-sequences (`hes-mode')
     highlight-indentation
     highlight-numbers
-    highlight-symbol
-    highlight-tail
     highlight-thing
     hl-defined
     hl-fill-column
     hl-line-mode
     hl-todo
     hydra
-    hyperlist
     ibuffer
     icomplete
     ido-mode
@@ -220,7 +186,6 @@ missing package or change you would like to see.
     interaction-log
     ioccur
     isearch, occur, etc.
-    isl (isearch-light)
     ivy
     ivy-posframe
     jira (org-jira)
@@ -244,22 +209,18 @@ missing package or change you would like to see.
     markup-faces (`adoc-mode')
     mentor
     messages
-    minibuffer-line
     minimap
     mmm-mode
     mode-line
     mood-line
     mpdel
     mu4e
-    mu4e-conversation
     multiple-cursors
     nano-modeline
     neotree
-    no-emoji
     notmuch
     num3-mode
     nxml-mode
-    objed
     orderless
     org
     org-journal
@@ -279,14 +240,11 @@ missing package or change you would like to see.
     pandoc-mode
     paradox
     paren-face
-    parrot
     pass
     pdf-tools
     persp-mode
     perspective
     phi-grep
-    phi-search
-    pkgbuild-mode
     pomidor
     popup
     powerline
@@ -298,7 +256,6 @@ missing package or change you would like to see.
     quick-peek
     racket-mode
     rainbow-blocks
-    rainbow-identifiers
     rainbow-delimiters
     rcirc
     recursion-indicator
@@ -307,7 +264,6 @@ missing package or change you would like to see.
     ripgrep
     rmail
     ruler-mode
-    sallet
     selectrum
     selectrum-prescient
     semantic
@@ -324,13 +280,10 @@ missing package or change you would like to see.
     smerge
     spaceline
     speedbar
-    spell-fu
-    spray
     stripes
     suggest
     switch-window
     swiper
-    swoop
     sx
     symbol-overlay
     syslog-mode
@@ -352,13 +305,11 @@ missing package or change you would like to see.
     undo-tree
     vc (vc-dir.el, vc-hooks.el)
     vc-annotate (C-x v g)
-    vdiff
     vertico
     vertico-quick
     vimish-fold
     visible-mark
     visual-regexp
-    volatile-highlights
     vterm
     wcheck-mode
     web-mode
