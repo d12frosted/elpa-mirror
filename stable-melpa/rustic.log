@@ -4,10 +4,10 @@ Source:  https://github.com/brotzeit/rustic.git
 
 Updating /mnt/store/melpa/working/rustic/
 Checking out origin/HEAD
-Checking out 9c49d4f217b6087ff7ec3d5a0f051081a033fa05
+Checking out d6f086d1d21da2b54a0f305b0283d2abb9252a41
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rustic/
-  to /tmp/rusticfzvUyI/rustic-20211223.1744
+  to /tmp/rustic80y9lb/rustic-20211225.2046
     rustic-babel.el -> rustic-babel.el
     rustic-cargo.el -> rustic-cargo.el
     rustic-compile.el -> rustic-compile.el
@@ -21,25 +21,29 @@ Copying files (->) and directories (=>)
     rustic-rustfix.el -> rustic-rustfix.el
     rustic-rustfmt.el -> rustic-rustfmt.el
     rustic.el -> rustic.el
-Created rustic-20211223.1744.tar containing:
-  rustic-20211223.1744/
-  rustic-20211223.1744/rustic-babel.el
-  rustic-20211223.1744/rustic-cargo.el
-  rustic-20211223.1744/rustic-compile.el
-  rustic-20211223.1744/rustic-doc.el
-  rustic-20211223.1744/rustic-flycheck.el
-  rustic-20211223.1744/rustic-interaction.el
-  rustic-20211223.1744/rustic-lsp.el
-  rustic-20211223.1744/rustic-pkg.el
-  rustic-20211223.1744/rustic-playpen.el
-  rustic-20211223.1744/rustic-popup.el
-  rustic-20211223.1744/rustic-racer.el
-  rustic-20211223.1744/rustic-rustfix.el
-  rustic-20211223.1744/rustic-rustfmt.el
-  rustic-20211223.1744/rustic.el
-Built rustic in 6.355s, finished at 2021-12-25T15:59:21+0000
+Created rustic-20211225.2046.tar containing:
+  rustic-20211225.2046/
+  rustic-20211225.2046/rustic-babel.el
+  rustic-20211225.2046/rustic-cargo.el
+  rustic-20211225.2046/rustic-compile.el
+  rustic-20211225.2046/rustic-doc.el
+  rustic-20211225.2046/rustic-flycheck.el
+  rustic-20211225.2046/rustic-interaction.el
+  rustic-20211225.2046/rustic-lsp.el
+  rustic-20211225.2046/rustic-pkg.el
+  rustic-20211225.2046/rustic-playpen.el
+  rustic-20211225.2046/rustic-popup.el
+  rustic-20211225.2046/rustic-racer.el
+  rustic-20211225.2046/rustic-rustfix.el
+  rustic-20211225.2046/rustic-rustfmt.el
+  rustic-20211225.2046/rustic.el
+Built rustic in 4.936s, finished at 2021-12-26T02:41:56+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  478 Dec 25 15:59 packages/rustic-20211223.1744.entry
 160K -rw-r--r-- 1 root root 160K Dec 25 15:59 packages/rustic-20211223.1744.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 25 15:59 packages/rustic-badge.svg
-4.0K -rw-r--r-- 1 root root  427 Dec 25 15:59 packages/rustic-readme.txt
+4.0K -rw-r--r-- 1 root root  478 Dec 25 19:55 packages/rustic-20211225.1703.entry
+160K -rw-r--r-- 1 root root 160K Dec 25 19:55 packages/rustic-20211225.1703.tar
+4.0K -rw-r--r-- 1 root root  478 Dec 26 02:41 packages/rustic-20211225.2046.entry
+160K -rw-r--r-- 1 root root 160K Dec 26 02:41 packages/rustic-20211225.2046.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 26 02:41 packages/rustic-badge.svg
+4.0K -rw-r--r-- 1 root root  427 Dec 26 02:41 packages/rustic-readme.txt

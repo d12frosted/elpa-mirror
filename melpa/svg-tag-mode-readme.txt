@@ -35,7 +35,7 @@ Examples:
                        (lambda () (interactive) (message "Hello world!"))
                        "Print a greeting message"))))
 
-;; This replaces any occurence of ":TODO:" with a static SVG tag
+;; This replaces any occurence of ":TODO:" with a dynamic SVG tag
 ;; displaying ":TODO:"
 (setq svg-tag-tags
       '((":TODO:" . (svg-tag-make))))

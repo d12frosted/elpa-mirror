@@ -8,7 +8,7 @@
 ;; Keyword: file ivy swiper preview select selection
 ;; Version: 0.4.5
 ;; Package-Version: 20210124.1639
-;; Package-Commit: 368c0c2db6b2ff279a956b8075eaf9ba2c334234
+;; Package-Commit: cb7e0f03e1df90855b7cb1433706a8b46f5592aa
 ;; Package-Requires: ((emacs "25.1") (ivy "0.8.0") (s "1.12.0") (f "0.20.0"))
 ;; URL: https://github.com/jcs-elpa/ivy-file-preview
 

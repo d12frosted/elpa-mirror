@@ -8,7 +8,7 @@
 ;; Keyword: keybindings
 ;; Version: 0.0.3
 ;; Package-Version: 20200929.559
-;; Package-Commit: ec85e68a4cba064d4caa593e1dec69b1b35b12dd
+;; Package-Commit: 40075bdd61cb0f839c26d2f86b67d22d04f21093
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs-elpa/htmltagwrap
 

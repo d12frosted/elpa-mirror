@@ -5,6 +5,8 @@
 ;; Author: Roland Walker <walker@pobox.com>
 ;; Homepage: http://github.com/rolandwalker/simpleclip
 ;; URL: http://raw.githubusercontent.com/rolandwalker/simpleclip/master/simpleclip.el
+;; Package-Version: 20210406.1221
+;; Package-Commit: 67c8c17adbbe6d9407a5ce4159d097a8b8bf6adb
 ;; Version: 1.0.10
 ;; Last-Updated: 10 Feb 2020
 ;; Keywords: convenience
