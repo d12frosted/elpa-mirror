@@ -1,0 +1,17 @@
+(mpv .
+     [(20211226 1112)
+      ((cl-lib
+	(0 5))
+       (emacs
+	(25 1))
+       (json
+	(1 3))
+       (org
+	(8 0)))
+      "control mpv for easy note-taking" single
+      ((:commit . "9bd6d36cc77d3123b5ab11f11c47a0eff8cbf968")
+       (:authors
+	("Johann Klähn" . "kljohann@gmail.com"))
+       (:maintainer "Johann Klähn" . "kljohann@gmail.com")
+       (:keywords "tools" "multimedia")
+       (:url . "https://github.com/kljohann/mpv.el"))])
