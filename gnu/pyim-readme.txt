@@ -338,15 +338,15 @@ Table of Contents
   用户可以将待选词 “特殊处理” 后再 “上屏”，比如 “简体转繁体” 或者 “输入
   中文，上屏英文” 之类的。
 
-  用户需要设置 `pyim-magic-converter', 比如：下面这个例子实现，输入 “二
-  呆”，“一个超级帅的小伙子” 上屏 :-)
+  用户需要设置 `pyim-outcome-magic-converter', 比如：下面这个例子实现，
+  输入 “二呆”，“一个超级帅的小伙子” 上屏 :-)
 
   ┌────
   │ (defun my-converter (string)
   │   (if (equal string "二呆")
   │       "“一个超级帅的小伙子”"
   │     string))
-  │ (setq pyim-magic-converter #'my-converter)
+  │ (setq pyim-outcome-magic-converter #'my-converter)
   └────
 
 
