@@ -2,12 +2,12 @@ Package: calibredb
 Fetcher: github
 Source:  https://github.com/chenyanming/calibredb.el.git
 
-Updating /mnt/store/melpa/working/calibredb/
+Cloning https://github.com/chenyanming/calibredb.el.git to /mnt/store/melpa/working/calibredb/
 Checking out origin/HEAD
 Checking out cb93563d0ec9e0c653210bc574f9546d1e7db437
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/calibredb/
-  to /tmp/calibredblRQQrU/calibredb-20210603.323
+  to /tmp/calibredbHE47xd/calibredb-20210603.323
     calibredb-annotation.el -> calibredb-annotation.el
     calibredb-core.el -> calibredb-core.el
     calibredb-faces.el -> calibredb-faces.el
@@ -35,9 +35,9 @@ Created calibredb-20210603.323.tar containing:
   calibredb-20210603.323/calibredb-transient.el
   calibredb-20210603.323/calibredb-utils.el
   calibredb-20210603.323/calibredb.el
-Built calibredb in 4.836s, finished at 2021-12-27T11:26:46+0000
+Built calibredb in 26.568s, finished at 2021-12-27T14:43:14+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  457 Dec 27 11:26 packages/calibredb-20210603.323.entry
-200K -rw-r--r-- 1 root root 200K Dec 27 11:26 packages/calibredb-20210603.323.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:26 packages/calibredb-badge.svg
-4.0K -rw-r--r-- 1 root root  381 Dec 27 11:26 packages/calibredb-readme.txt
+4.0K -rw-r--r-- 1 root root  457 Dec 27 14:43 packages/calibredb-20210603.323.entry
+200K -rw-r--r-- 1 root root 200K Dec 27 14:43 packages/calibredb-20210603.323.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 14:43 packages/calibredb-badge.svg
+4.0K -rw-r--r-- 1 root root  381 Dec 27 14:43 packages/calibredb-readme.txt

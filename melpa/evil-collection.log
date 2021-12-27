@@ -2,12 +2,12 @@ Package: evil-collection
 Fetcher: github
 Source:  https://github.com/emacs-evil/evil-collection.git
 
-Updating /mnt/store/melpa/working/evil-collection/
+Cloning https://github.com/emacs-evil/evil-collection.git to /mnt/store/melpa/working/evil-collection/
 Checking out origin/HEAD
 Checking out f78156db21b907c28448bc1316e58b0ba1eef4f8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/evil-collection/
-  to /tmp/evil-collection38TTWx/evil-collection-20211220.933
+  to /tmp/evil-collection2o5WYE/evil-collection-20211220.933
     evil-collection.el -> evil-collection.el
     modes => modes
 Created evil-collection-20211220.933.tar containing:
@@ -377,9 +377,9 @@ Created evil-collection-20211220.933.tar containing:
   evil-collection-20211220.933/modes/zmusic/evil-collection-zmusic.el
   evil-collection-20211220.933/modes/ztree/
   evil-collection-20211220.933/modes/ztree/evil-collection-ztree.el
-Built evil-collection in 9.045s, finished at 2021-12-27T11:42:25+0000
+Built evil-collection in 14.901s, finished at 2021-12-27T15:10:56+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  443 Dec 27 11:42 packages/evil-collection-20211220.933.entry
-896K -rw-r--r-- 1 root root 890K Dec 27 11:42 packages/evil-collection-20211220.933.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:42 packages/evil-collection-badge.svg
-4.0K -rw-r--r-- 1 root root  301 Dec 27 11:42 packages/evil-collection-readme.txt
+4.0K -rw-r--r-- 1 root root  443 Dec 27 15:10 packages/evil-collection-20211220.933.entry
+892K -rw-r--r-- 1 root root 890K Dec 27 15:10 packages/evil-collection-20211220.933.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:10 packages/evil-collection-badge.svg
+4.0K -rw-r--r-- 1 root root  301 Dec 27 15:10 packages/evil-collection-readme.txt

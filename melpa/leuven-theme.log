@@ -2,12 +2,12 @@ Package: leuven-theme
 Fetcher: github
 Source:  https://github.com/fniessen/emacs-leuven-theme.git
 
-Updating /mnt/store/melpa/working/leuven-theme/
+Cloning https://github.com/fniessen/emacs-leuven-theme.git to /mnt/store/melpa/working/leuven-theme/
 Checking out origin/HEAD
 Checking out b8b5076d643046008ea1496559acdd4ddfdb649a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/leuven-theme/
-  to /tmp/leuven-themenzKJEb/leuven-theme-20210602.709
+  to /tmp/leuven-themev6jyk2/leuven-theme-20210602.709
   ! lisp/leuven-dark-theme.el -> leuven-dark-theme.el
   ! lisp/leuven-theme.el -> leuven-theme.el
 Created leuven-theme-20210602.709.tar containing:
@@ -15,9 +15,9 @@ Created leuven-theme-20210602.709.tar containing:
   leuven-theme-20210602.709/leuven-dark-theme.el
   leuven-theme-20210602.709/leuven-theme-pkg.el
   leuven-theme-20210602.709/leuven-theme.el
-Built leuven-theme in 4.678s, finished at 2021-12-27T08:42:53+0000
+Built leuven-theme in 3.887s, finished at 2021-12-27T15:45:41+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  430 Dec 27 08:42 packages/leuven-theme-20210602.709.entry
-140K -rw-r--r-- 1 root root 140K Dec 27 08:42 packages/leuven-theme-20210602.709.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 08:42 packages/leuven-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  322 Dec 27 08:42 packages/leuven-theme-readme.txt
+4.0K -rw-r--r-- 1 root root  430 Dec 27 15:45 packages/leuven-theme-20210602.709.entry
+140K -rw-r--r-- 1 root root 140K Dec 27 15:45 packages/leuven-theme-20210602.709.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:45 packages/leuven-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  322 Dec 27 15:45 packages/leuven-theme-readme.txt

@@ -2,12 +2,12 @@ Package: company-coq
 Fetcher: github
 Source:  https://github.com/cpitclaudel/company-coq.git
 
-Updating /mnt/store/melpa/working/company-coq/
+Cloning https://github.com/cpitclaudel/company-coq.git to /mnt/store/melpa/working/company-coq/
 Checking out origin/HEAD
 Checking out 382db93374380e5db56f02934ee32bbe39159019
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/company-coq/
-  to /tmp/company-coqV9QOgc/company-coq-20210708.2357
+  to /tmp/company-coqzAOOXX/company-coq-20210708.2357
     company-coq-abbrev.el -> company-coq-abbrev.el
     company-coq-pkg.el -> company-coq-pkg.el
     company-coq-tg.el -> company-coq-tg.el
@@ -698,9 +698,9 @@ Created company-coq-20210708.2357.tar containing:
   company-coq-20210708.2357/refman/x.html.gz
   company-coq-20210708.2357/refman/y.html.gz
   company-coq-20210708.2357/refman/z.html.gz
-Built company-coq in 8.786s, finished at 2021-12-27T11:29:48+0000
+Built company-coq in 39.753s, finished at 2021-12-27T14:51:17+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  579 Dec 27 11:29 packages/company-coq-20210708.2357.entry
-1.8M -rw-r--r-- 1 root root 1.7M Dec 27 11:29 packages/company-coq-20210708.2357.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:29 packages/company-coq-badge.svg
-4.0K -rw-r--r-- 1 root root  340 Dec 27 11:29 packages/company-coq-readme.txt
+4.0K -rw-r--r-- 1 root root  579 Dec 27 14:51 packages/company-coq-20210708.2357.entry
+1.7M -rw-r--r-- 1 root root 1.7M Dec 27 14:51 packages/company-coq-20210708.2357.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 14:51 packages/company-coq-badge.svg
+4.0K -rw-r--r-- 1 root root  340 Dec 27 14:51 packages/company-coq-readme.txt

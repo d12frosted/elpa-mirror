@@ -2,12 +2,12 @@ Package: emojify
 Fetcher: github
 Source:  https://github.com/iqbalansari/emacs-emojify.git
 
-Updating /mnt/store/melpa/working/emojify/
+Cloning https://github.com/iqbalansari/emacs-emojify.git to /mnt/store/melpa/working/emojify/
 Checking out origin/HEAD
 Checking out 1b726412f19896abf5e4857d4c32220e33400b55
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/emojify/
-  to /tmp/emojifyllxqBs/emojify-20210108.1111
+  to /tmp/emojify7QYVkh/emojify-20210108.1111
     emojify.el -> emojify.el
     data => data
 Created emojify-20210108.1111.tar containing:
@@ -17,14 +17,14 @@ Created emojify-20210108.1111.tar containing:
   emojify-20210108.1111/data/emoji.json
   emojify-20210108.1111/emojify-pkg.el
   emojify-20210108.1111/emojify.el
-Built emojify in 4.708s, finished at 2021-12-27T11:40:13+0000
+Built emojify in 46.989s, finished at 2021-12-27T15:07:15+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  421 Dec 27 11:40 packages/emojify-20210108.1111.entry
-900K -rw-r--r-- 1 root root 900K Dec 27 11:40 packages/emojify-20210108.1111.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:40 packages/emojify-badge.svg
-4.0K -rw-r--r-- 1 root root  327 Dec 27 08:17 packages/emojify-logos-20180814.917.entry
- 52K -rw-r--r-- 1 root root  50K Dec 27 08:17 packages/emojify-logos-20180814.917.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 08:17 packages/emojify-logos-badge.svg
-4.0K -rw-r--r-- 1 root root  362 Dec 27 08:17 packages/emojify-logos-readme.txt
-4.0K -rw-r--r-- 1 root root  147 Dec 27 11:40 packages/emojify-logos.log
-4.0K -rw-r--r-- 1 root root  407 Dec 27 11:40 packages/emojify-readme.txt
+4.0K -rw-r--r-- 1 root root  421 Dec 27 15:07 packages/emojify-20210108.1111.entry
+900K -rw-r--r-- 1 root root 900K Dec 27 15:07 packages/emojify-20210108.1111.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:07 packages/emojify-badge.svg
+4.0K -rw-r--r-- 1 root root  327 Dec 27 15:06 packages/emojify-logos-20180814.917.entry
+ 52K -rw-r--r-- 1 root root  50K Dec 27 15:06 packages/emojify-logos-20180814.917.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:06 packages/emojify-logos-badge.svg
+4.0K -rw-r--r-- 1 root root  362 Dec 27 15:06 packages/emojify-logos-readme.txt
+4.0K -rw-r--r-- 1 root root 2.0K Dec 27 15:06 packages/emojify-logos.log
+4.0K -rw-r--r-- 1 root root  407 Dec 27 15:07 packages/emojify-readme.txt

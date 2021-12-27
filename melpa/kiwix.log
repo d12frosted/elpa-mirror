@@ -2,12 +2,12 @@ Package: kiwix
 Fetcher: github
 Source:  https://github.com/stardiviner/kiwix.el.git
 
-Updating /mnt/store/melpa/working/kiwix/
+Cloning https://github.com/stardiviner/kiwix.el.git to /mnt/store/melpa/working/kiwix/
 Checking out origin/HEAD
 Checking out cb843349c10b1a492ceb59da20bfcef3ef02f4b5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/kiwix/
-  to /tmp/kiwixdRsEVa/kiwix-20211013.1558
+  to /tmp/kiwixa6vUSj/kiwix-20211013.1558
     kiwix.el -> kiwix.el
     org-kiwix.el -> org-kiwix.el
 Created kiwix-20211013.1558.tar containing:
@@ -15,9 +15,9 @@ Created kiwix-20211013.1558.tar containing:
   kiwix-20211013.1558/kiwix-pkg.el
   kiwix-20211013.1558/kiwix.el
   kiwix-20211013.1558/org-kiwix.el
-Built kiwix in 4.563s, finished at 2021-12-27T08:41:43+0000
+Built kiwix in 3.611s, finished at 2021-12-27T15:44:26+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  384 Dec 27 08:41 packages/kiwix-20211013.1558.entry
- 32K -rw-r--r-- 1 root root  30K Dec 27 08:41 packages/kiwix-20211013.1558.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 08:41 packages/kiwix-badge.svg
-4.0K -rw-r--r-- 1 root root  151 Dec 27 08:41 packages/kiwix-readme.txt
+4.0K -rw-r--r-- 1 root root  384 Dec 27 15:44 packages/kiwix-20211013.1558.entry
+ 32K -rw-r--r-- 1 root root  30K Dec 27 15:44 packages/kiwix-20211013.1558.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:44 packages/kiwix-badge.svg
+4.0K -rw-r--r-- 1 root root  151 Dec 27 15:44 packages/kiwix-readme.txt

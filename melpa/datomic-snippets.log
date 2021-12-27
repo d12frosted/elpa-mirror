@@ -2,12 +2,12 @@ Package: datomic-snippets
 Fetcher: github
 Source:  https://github.com/magnars/datomic-snippets.git
 
-Updating /mnt/store/melpa/working/datomic-snippets/
+Cloning https://github.com/magnars/datomic-snippets.git to /mnt/store/melpa/working/datomic-snippets/
 Checking out origin/HEAD
 Checking out 4a14228840d5252e13d2bf6209670f26345bbb84
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/datomic-snippets/
-  to /tmp/datomic-snippetsbhpx00/datomic-snippets-20180817.1045
+  to /tmp/datomic-snippetsCijJnj/datomic-snippets-20180817.1045
     datomic-snippets-pkg.el -> datomic-snippets-pkg.el
     datomic-snippets.el -> datomic-snippets.el
     snippets => snippets
@@ -41,9 +41,9 @@ Created datomic-snippets-20180817.1045.tar containing:
   datomic-snippets-20180817.1045/snippets/clojure-mode/datomic-schema-type-uuid
   datomic-snippets-20180817.1045/snippets/clojure-mode/datomic-schema-unique-identity
   datomic-snippets-20180817.1045/snippets/clojure-mode/datomic-schema-value-type-ref
-Built datomic-snippets in 5.311s, finished at 2021-12-27T11:33:27+0000
+Built datomic-snippets in 5.711s, finished at 2021-12-27T14:58:41+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  375 Dec 27 11:33 packages/datomic-snippets-20180817.1045.entry
- 40K -rw-r--r-- 1 root root  40K Dec 27 11:33 packages/datomic-snippets-20180817.1045.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:33 packages/datomic-snippets-badge.svg
-4.0K -rw-r--r-- 1 root root   96 Dec 27 11:33 packages/datomic-snippets-readme.txt
+4.0K -rw-r--r-- 1 root root  375 Dec 27 14:58 packages/datomic-snippets-20180817.1045.entry
+ 40K -rw-r--r-- 1 root root  40K Dec 27 14:58 packages/datomic-snippets-20180817.1045.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 14:58 packages/datomic-snippets-badge.svg
+4.0K -rw-r--r-- 1 root root   96 Dec 27 14:58 packages/datomic-snippets-readme.txt

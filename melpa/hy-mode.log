@@ -2,12 +2,12 @@ Package: hy-mode
 Fetcher: github
 Source:  https://github.com/hylang/hy-mode.git
 
-Updating /mnt/store/melpa/working/hy-mode/
+Cloning https://github.com/hylang/hy-mode.git to /mnt/store/melpa/working/hy-mode/
 Checking out origin/HEAD
 Checking out df814865a1faa8414dacdbb35b2a9029995312ec
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/hy-mode/
-  to /tmp/hy-modewewJSf/hy-mode-20211016.2011
+  to /tmp/hy-modeVa57du/hy-mode-20211016.2011
     hy-base.el -> hy-base.el
     hy-font-lock.el -> hy-font-lock.el
     hy-jedhy.el -> hy-jedhy.el
@@ -21,9 +21,9 @@ Created hy-mode-20211016.2011.tar containing:
   hy-mode-20211016.2011/hy-mode-pkg.el
   hy-mode-20211016.2011/hy-mode.el
   hy-mode-20211016.2011/hy-shell.el
-Built hy-mode in 4.845s, finished at 2021-12-27T11:58:06+0000
+Built hy-mode in 3.383s, finished at 2021-12-27T15:40:21+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  285 Dec 27 11:58 packages/hy-mode-20211016.2011.entry
- 60K -rw-r--r-- 1 root root  60K Dec 27 11:58 packages/hy-mode-20211016.2011.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:58 packages/hy-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  576 Dec 27 11:58 packages/hy-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  285 Dec 27 15:40 packages/hy-mode-20211016.2011.entry
+ 60K -rw-r--r-- 1 root root  60K Dec 27 15:40 packages/hy-mode-20211016.2011.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:40 packages/hy-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  576 Dec 27 15:40 packages/hy-mode-readme.txt

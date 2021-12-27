@@ -2,12 +2,12 @@ Package: github-elpa
 Fetcher: github
 Source:  https://github.com/10sr/github-elpa.git
 
-Updating /mnt/store/melpa/working/github-elpa/
+Cloning https://github.com/10sr/github-elpa.git to /mnt/store/melpa/working/github-elpa/
 Checking out origin/HEAD
 Checking out 04a55c723ffcd84dd35e5438e7e2b9f1cce08d42
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/github-elpa/
-  to /tmp/github-elpar0F5uN/github-elpa-20200129.417
+  to /tmp/github-elpaPlo1nf/github-elpa-20200129.417
     github-elpa.el -> github-elpa.el
     bin => bin
 Created github-elpa-20200129.417.tar containing:
@@ -16,9 +16,9 @@ Created github-elpa-20200129.417.tar containing:
   github-elpa-20200129.417/bin/github-elpa
   github-elpa-20200129.417/github-elpa-pkg.el
   github-elpa-20200129.417/github-elpa.el
-Built github-elpa in 4.669s, finished at 2021-12-27T11:50:31+0000
+Built github-elpa in 7.748s, finished at 2021-12-27T15:30:24+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  429 Dec 27 11:50 packages/github-elpa-20200129.417.entry
- 20K -rw-r--r-- 1 root root  20K Dec 27 11:50 packages/github-elpa-20200129.417.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:50 packages/github-elpa-badge.svg
-4.0K -rw-r--r-- 1 root root  389 Dec 27 11:50 packages/github-elpa-readme.txt
+4.0K -rw-r--r-- 1 root root  429 Dec 27 15:30 packages/github-elpa-20200129.417.entry
+ 20K -rw-r--r-- 1 root root  20K Dec 27 15:30 packages/github-elpa-20200129.417.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:30 packages/github-elpa-badge.svg
+4.0K -rw-r--r-- 1 root root  389 Dec 27 15:30 packages/github-elpa-readme.txt

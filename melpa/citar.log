@@ -2,12 +2,12 @@ Package: citar
 Fetcher: github
 Source:  https://github.com/bdarcus/citar.git
 
-Updating /mnt/store/melpa/working/citar/
+Cloning https://github.com/bdarcus/citar.git to /mnt/store/melpa/working/citar/
 Checking out origin/HEAD
-Checking out ca8c9cc119c67bbfab3b8ad301f6687a0ba7fd88
+Checking out 606f63b3204ecabed7bea00acbe6564ff1fc9dcf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citar/
-  to /tmp/citarD659Wa/citar-20211219.2046
+  to /tmp/citaraH1wV7/citar-20211227.1347
     citar-citeproc.el -> citar-citeproc.el
     citar-file.el -> citar-file.el
     citar-filenotify.el -> citar-filenotify.el
@@ -15,19 +15,19 @@ Copying files (->) and directories (=>)
     citar-markdown.el -> citar-markdown.el
     citar-org.el -> citar-org.el
     citar.el -> citar.el
-Created citar-20211219.2046.tar containing:
-  citar-20211219.2046/
-  citar-20211219.2046/citar-citeproc.el
-  citar-20211219.2046/citar-file.el
-  citar-20211219.2046/citar-filenotify.el
-  citar-20211219.2046/citar-latex.el
-  citar-20211219.2046/citar-markdown.el
-  citar-20211219.2046/citar-org.el
-  citar-20211219.2046/citar-pkg.el
-  citar-20211219.2046/citar.el
-Built citar in 4.985s, finished at 2021-12-27T11:28:05+0000
+Created citar-20211227.1347.tar containing:
+  citar-20211227.1347/
+  citar-20211227.1347/citar-citeproc.el
+  citar-20211227.1347/citar-file.el
+  citar-20211227.1347/citar-filenotify.el
+  citar-20211227.1347/citar-latex.el
+  citar-20211227.1347/citar-markdown.el
+  citar-20211227.1347/citar-org.el
+  citar-20211227.1347/citar-pkg.el
+  citar-20211227.1347/citar.el
+Built citar in 9.002s, finished at 2021-12-27T14:47:05+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  419 Dec 27 11:28 packages/citar-20211219.2046.entry
-112K -rw-r--r-- 1 root root 110K Dec 27 11:28 packages/citar-20211219.2046.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:28 packages/citar-badge.svg
-4.0K -rw-r--r-- 1 root root  292 Dec 27 11:28 packages/citar-readme.txt
+4.0K -rw-r--r-- 1 root root  419 Dec 27 14:47 packages/citar-20211227.1347.entry
+112K -rw-r--r-- 1 root root 110K Dec 27 14:47 packages/citar-20211227.1347.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 14:47 packages/citar-badge.svg
+4.0K -rw-r--r-- 1 root root  292 Dec 27 14:47 packages/citar-readme.txt

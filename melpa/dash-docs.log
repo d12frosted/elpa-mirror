@@ -2,12 +2,12 @@ Package: dash-docs
 Fetcher: github
 Source:  https://github.com/dash-docs-el/dash-docs.git
 
-Updating /mnt/store/melpa/working/dash-docs/
+Cloning https://github.com/dash-docs-el/dash-docs.git to /mnt/store/melpa/working/dash-docs/
 Checking out origin/HEAD
 Checking out 29848b6b347ac520f7646c200ed2ec36cea3feda
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dash-docs/
-  to /tmp/dash-docsZIdEys/dash-docs-20210830.926
+  to /tmp/dash-docsqHqdRh/dash-docs-20210830.926
     dash-docs.el -> dash-docs.el
     use-package-dash-docs.el -> use-package-dash-docs.el
 Created dash-docs-20210830.926.tar containing:
@@ -15,9 +15,9 @@ Created dash-docs-20210830.926.tar containing:
   dash-docs-20210830.926/dash-docs-pkg.el
   dash-docs-20210830.926/dash-docs.el
   dash-docs-20210830.926/use-package-dash-docs.el
-Built dash-docs in 5.077s, finished at 2021-12-27T11:33:15+0000
+Built dash-docs in 12.052s, finished at 2021-12-27T14:58:23+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  534 Dec 27 11:33 packages/dash-docs-20210830.926.entry
- 40K -rw-r--r-- 1 root root  40K Dec 27 11:33 packages/dash-docs-20210830.926.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:33 packages/dash-docs-badge.svg
-4.0K -rw-r--r-- 1 root root  143 Dec 27 11:33 packages/dash-docs-readme.txt
+4.0K -rw-r--r-- 1 root root  534 Dec 27 14:58 packages/dash-docs-20210830.926.entry
+ 40K -rw-r--r-- 1 root root  40K Dec 27 14:58 packages/dash-docs-20210830.926.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 14:58 packages/dash-docs-badge.svg
+4.0K -rw-r--r-- 1 root root  143 Dec 27 14:58 packages/dash-docs-readme.txt

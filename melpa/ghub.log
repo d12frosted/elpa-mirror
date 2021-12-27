@@ -2,12 +2,12 @@ Package: ghub
 Fetcher: github
 Source:  https://github.com/magit/ghub.git
 
-Updating /mnt/store/melpa/working/ghub/
+Cloning https://github.com/magit/ghub.git to /mnt/store/melpa/working/ghub/
 Checking out origin/HEAD
 Checking out 20ccd6f641b47a8606760629ebec8daee770b246
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghub5wQ2Qp/ghub-20211226.737
+  to /tmp/ghubBPQOPT/ghub-20211226.737
   ! lisp/buck.el -> buck.el
   ! lisp/ghub-graphql.el -> ghub-graphql.el
   ! lisp/ghub-pkg.el -> ghub-pkg.el
@@ -17,7 +17,7 @@ Copying files (->) and directories (=>)
   ! lisp/gsexp.el -> gsexp.el
   ! lisp/gtea.el -> gtea.el
   ! docs/ghub.texi -> ghub.texi
-Created /tmp/ghub5wQ2Qp/ghub-20211226.737/ghub.info
+Created /tmp/ghubBPQOPT/ghub-20211226.737/ghub.info
 Created ghub-20211226.737.tar containing:
   ghub-20211226.737/
   ghub-20211226.737/buck.el
@@ -30,11 +30,9 @@ Created ghub-20211226.737.tar containing:
   ghub-20211226.737/gogs.el
   ghub-20211226.737/gsexp.el
   ghub-20211226.737/gtea.el
-Built ghub in 10.914s, finished at 2021-12-27T11:49:57+0000
+Built ghub in 24.531s, finished at 2021-12-27T15:29:08+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  401 Dec 26 05:31 packages/ghub-20211221.2332.entry
-152K -rw-r--r-- 1 root root 150K Dec 26 05:31 packages/ghub-20211221.2332.tar
-4.0K -rw-r--r-- 1 root root  400 Dec 27 11:49 packages/ghub-20211226.737.entry
-152K -rw-r--r-- 1 root root 150K Dec 27 11:49 packages/ghub-20211226.737.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:49 packages/ghub-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Dec 27 11:49 packages/ghub-readme.txt
+4.0K -rw-r--r-- 1 root root  400 Dec 27 15:29 packages/ghub-20211226.737.entry
+152K -rw-r--r-- 1 root root 150K Dec 27 15:29 packages/ghub-20211226.737.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:29 packages/ghub-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Dec 27 15:29 packages/ghub-readme.txt

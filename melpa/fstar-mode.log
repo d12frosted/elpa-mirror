@@ -2,12 +2,12 @@ Package: fstar-mode
 Fetcher: github
 Source:  https://github.com/FStarLang/fstar-mode.el.git
 
-Updating /mnt/store/melpa/working/fstar-mode/
+Cloning https://github.com/FStarLang/fstar-mode.el.git to /mnt/store/melpa/working/fstar-mode/
 Checking out origin/HEAD
 Checking out 751726d708f90c543b80a8916f4397140422273c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fstar-mode/
-  to /tmp/fstar-modeTm13ZJ/fstar-mode-20211219.1815
+  to /tmp/fstar-modeiEysJQ/fstar-mode-20211219.1815
     fstar-mode.el -> fstar-mode.el
     etc => etc
 Created fstar-mode-20211219.1815.tar containing:
@@ -186,9 +186,9 @@ Created fstar-mode-20211219.1815.tar containing:
   fstar-mode-20211219.1815/etc/icons/light/switch-to-rst.xpm
   fstar-mode-20211219.1815/fstar-mode-pkg.el
   fstar-mode-20211219.1815/fstar-mode.el
-Built fstar-mode in 6.898s, finished at 2021-12-27T11:48:52+0000
+Built fstar-mode in 35.220s, finished at 2021-12-27T15:26:38+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  645 Dec 27 11:48 packages/fstar-mode-20211219.1815.entry
-592K -rw-r--r-- 1 root root 590K Dec 27 11:48 packages/fstar-mode-20211219.1815.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:48 packages/fstar-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  475 Dec 27 11:48 packages/fstar-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  645 Dec 27 15:26 packages/fstar-mode-20211219.1815.entry
+592K -rw-r--r-- 1 root root 590K Dec 27 15:26 packages/fstar-mode-20211219.1815.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:26 packages/fstar-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  475 Dec 27 15:26 packages/fstar-mode-readme.txt

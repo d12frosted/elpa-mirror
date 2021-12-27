@@ -2,12 +2,12 @@ Package: dap-mode
 Fetcher: github
 Source:  https://github.com/emacs-lsp/dap-mode.git
 
-Updating /mnt/store/melpa/working/dap-mode/
+Cloning https://github.com/emacs-lsp/dap-mode.git to /mnt/store/melpa/working/dap-mode/
 Checking out origin/HEAD
 Checking out 76cad34de8984f57c2b1e374e9c985cc7ec8dad0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dap-mode/
-  to /tmp/dap-modeml1hAc/dap-mode-20211117.1555
+  to /tmp/dap-modebl7b4H/dap-mode-20211117.1555
     dap-chrome.el -> dap-chrome.el
     dap-codelldb.el -> dap-codelldb.el
     dap-cpptools.el -> dap-cpptools.el
@@ -99,9 +99,9 @@ Created dap-mode-20211117.1555.tar containing:
   dap-mode-20211117.1555/icons/vscode/stop-disabled.png
   dap-mode-20211117.1555/icons/vscode/stop.png
   dap-mode-20211117.1555/icons/vscode/toggle-breakpoints.png
-Built dap-mode in 5.505s, finished at 2021-12-27T11:33:01+0000
+Built dap-mode in 21.737s, finished at 2021-12-27T14:57:56+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  586 Dec 27 11:33 packages/dap-mode-20211117.1555.entry
-340K -rw-r--r-- 1 root root 340K Dec 27 11:33 packages/dap-mode-20211117.1555.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:33 packages/dap-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   41 Dec 27 11:33 packages/dap-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  586 Dec 27 14:57 packages/dap-mode-20211117.1555.entry
+340K -rw-r--r-- 1 root root 340K Dec 27 14:57 packages/dap-mode-20211117.1555.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 14:57 packages/dap-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   41 Dec 27 14:57 packages/dap-mode-readme.txt

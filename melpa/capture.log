@@ -2,12 +2,12 @@ Package: capture
 Fetcher: github
 Source:  https://github.com/pashinin/capture.el.git
 
-Updating /mnt/store/melpa/working/capture/
+Cloning https://github.com/pashinin/capture.el.git to /mnt/store/melpa/working/capture/
 Checking out origin/HEAD
 Checking out 1bb26060311da76767f70096218313fc93b0c806
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/capture/
-  to /tmp/capturekjkgRq/capture-20130828.1644
+  to /tmp/capturenjufXf/capture-20130828.1644
   ! src/capture-functions.el -> capture-functions.el
   ! src/capture-helpers.el -> capture-helpers.el
   ! src/capture-keys.el -> capture-keys.el
@@ -23,9 +23,9 @@ Created capture-20130828.1644.tar containing:
   capture-20130828.1644/capture-ui.el
   capture-20130828.1644/capture-vars.el
   capture-20130828.1644/capture.el
-Built capture in 5.402s, finished at 2021-12-27T11:26:53+0000
+Built capture in 10.698s, finished at 2021-12-27T14:43:35+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  283 Dec 27 11:26 packages/capture-20130828.1644.entry
- 40K -rw-r--r-- 1 root root  40K Dec 27 11:26 packages/capture-20130828.1644.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:26 packages/capture-badge.svg
-4.0K -rw-r--r-- 1 root root  649 Dec 27 11:26 packages/capture-readme.txt
+4.0K -rw-r--r-- 1 root root  283 Dec 27 14:43 packages/capture-20130828.1644.entry
+ 40K -rw-r--r-- 1 root root  40K Dec 27 14:43 packages/capture-20130828.1644.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 14:43 packages/capture-badge.svg
+4.0K -rw-r--r-- 1 root root  649 Dec 27 14:43 packages/capture-readme.txt

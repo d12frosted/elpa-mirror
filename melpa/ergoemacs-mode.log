@@ -2,12 +2,12 @@ Package: ergoemacs-mode
 Fetcher: github
 Source:  https://github.com/ergoemacs/ergoemacs-mode.git
 
-Updating /mnt/store/melpa/working/ergoemacs-mode/
+Cloning https://github.com/ergoemacs/ergoemacs-mode.git to /mnt/store/melpa/working/ergoemacs-mode/
 Checking out origin/HEAD
 Checking out df8d4253c44aee607308826093222188c4732099
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ergoemacs-mode/
-  to /tmp/ergoemacs-modekoxEC4/ergoemacs-mode-20211105.1531
+  to /tmp/ergoemacs-modeYp3Qod/ergoemacs-mode-20211105.1531
     ergoemacs-advice.el -> ergoemacs-advice.el
     ergoemacs-calculate-bindings.el -> ergoemacs-calculate-bindings.el
     ergoemacs-command-loop.el -> ergoemacs-command-loop.el
@@ -55,9 +55,9 @@ Created ergoemacs-mode-20211105.1531.tar containing:
   ergoemacs-mode-20211105.1531/kbd-ergo.svg
   ergoemacs-mode-20211105.1531/kbd.svg
   ergoemacs-mode-20211105.1531/os_x_qwerty.dict.txt
-Built ergoemacs-mode in 5.418s, finished at 2021-12-27T11:41:01+0000
+Built ergoemacs-mode in 41.632s, finished at 2021-12-27T15:09:00+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  569 Dec 27 11:41 packages/ergoemacs-mode-20211105.1531.entry
-1.1M -rw-r--r-- 1 root root 1.1M Dec 27 11:41 packages/ergoemacs-mode-20211105.1531.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:41 packages/ergoemacs-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  159 Dec 27 11:41 packages/ergoemacs-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  569 Dec 27 15:09 packages/ergoemacs-mode-20211105.1531.entry
+1.1M -rw-r--r-- 1 root root 1.1M Dec 27 15:09 packages/ergoemacs-mode-20211105.1531.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:09 packages/ergoemacs-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  159 Dec 27 15:09 packages/ergoemacs-mode-readme.txt

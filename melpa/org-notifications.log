@@ -2,12 +2,12 @@ Package: org-notifications
 Fetcher: github
 Source:  https://github.com/doppelc/org-notifications.git
 
-Updating /mnt/store/melpa/working/org-notifications/
+Cloning https://github.com/doppelc/org-notifications.git to /mnt/store/melpa/working/org-notifications/
 Checking out origin/HEAD
 Checking out b8032f8adfbeb328962a5657c6dd173e64cc76e5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-notifications/
-  to /tmp/org-notificationsx67Eiz/org-notifications-20210918.1827
+  to /tmp/org-notificationsNiYxPw/org-notifications-20210918.1827
     org-notifications.el -> org-notifications.el
     sounds => sounds
 Created org-notifications-20210918.1827.tar containing:
@@ -17,9 +17,9 @@ Created org-notifications-20210918.1827.tar containing:
   org-notifications-20210918.1827/sounds/
   org-notifications-20210918.1827/sounds/ding_elevator.wav
   org-notifications-20210918.1827/sounds/ding_percussion.wav
-Built org-notifications in 4.567s, finished at 2021-12-27T08:53:57+0000
+Built org-notifications in 3.102s, finished at 2021-12-27T15:57:54+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  473 Dec 27 08:53 packages/org-notifications-20210918.1827.entry
-380K -rw-r--r-- 1 root root 380K Dec 27 08:53 packages/org-notifications-20210918.1827.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 08:53 packages/org-notifications-badge.svg
-4.0K -rw-r--r-- 1 root root  502 Dec 27 08:53 packages/org-notifications-readme.txt
+4.0K -rw-r--r-- 1 root root  473 Dec 27 15:57 packages/org-notifications-20210918.1827.entry
+380K -rw-r--r-- 1 root root 380K Dec 27 15:57 packages/org-notifications-20210918.1827.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:57 packages/org-notifications-badge.svg
+4.0K -rw-r--r-- 1 root root  502 Dec 27 15:57 packages/org-notifications-readme.txt

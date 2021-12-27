@@ -2,12 +2,12 @@ Package: minimal-theme
 Fetcher: github
 Source:  https://github.com/anler/minimal-theme.git
 
-Updating /mnt/store/melpa/working/minimal-theme/
+Cloning https://github.com/anler/minimal-theme.git to /mnt/store/melpa/working/minimal-theme/
 Checking out origin/HEAD
 Checking out 221b43aad320d226863892dfe4d85465e8eb81ce
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/minimal-theme/
-  to /tmp/minimal-themee4oNau/minimal-theme-20190113.2132
+  to /tmp/minimal-themewyDxGq/minimal-theme-20190113.2132
     minimal-black-theme.el -> minimal-black-theme.el
     minimal-light-theme.el -> minimal-light-theme.el
     minimal-theme.el -> minimal-theme.el
@@ -17,9 +17,9 @@ Created minimal-theme-20190113.2132.tar containing:
   minimal-theme-20190113.2132/minimal-light-theme.el
   minimal-theme-20190113.2132/minimal-theme-pkg.el
   minimal-theme-20190113.2132/minimal-theme.el
-Built minimal-theme in 4.630s, finished at 2021-12-27T08:47:22+0000
+Built minimal-theme in 3.459s, finished at 2021-12-27T15:51:35+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  359 Dec 27 08:47 packages/minimal-theme-20190113.2132.entry
- 32K -rw-r--r-- 1 root root  30K Dec 27 08:47 packages/minimal-theme-20190113.2132.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 08:47 packages/minimal-theme-badge.svg
-4.0K -rw-r--r-- 1 root root   89 Dec 27 08:47 packages/minimal-theme-readme.txt
+4.0K -rw-r--r-- 1 root root  359 Dec 27 15:51 packages/minimal-theme-20190113.2132.entry
+ 32K -rw-r--r-- 1 root root  30K Dec 27 15:51 packages/minimal-theme-20190113.2132.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:51 packages/minimal-theme-badge.svg
+4.0K -rw-r--r-- 1 root root   89 Dec 27 15:51 packages/minimal-theme-readme.txt

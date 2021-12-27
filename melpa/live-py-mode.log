@@ -2,12 +2,12 @@ Package: live-py-mode
 Fetcher: github
 Source:  https://github.com/donkirkby/live-py-plugin.git
 
-Updating /mnt/store/melpa/working/live-py-mode/
+Cloning https://github.com/donkirkby/live-py-plugin.git to /mnt/store/melpa/working/live-py-mode/
 Checking out origin/HEAD
 Checking out d5bb9187d773a815e22d4c97b6c66d67978e3917
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/live-py-mode/
-  to /tmp/live-py-modebDElqZ/live-py-mode-20211226.1718
+  to /tmp/live-py-modesm3UQF/live-py-mode-20211226.1718
   ! emacs-live-py-mode/live-py-mode.el -> live-py-mode.el
   ! plugin/PySrc/space_tracer => space_tracer
 Created live-py-mode-20211226.1718.tar containing:
@@ -26,13 +26,9 @@ Created live-py-mode-20211226.1718.tar containing:
   live-py-mode-20211226.1718/space_tracer/module_importers.py
   live-py-mode-20211226.1718/space_tracer/report_builder.py
   live-py-mode-20211226.1718/space_tracer/traced_finder.py
-Built live-py-mode in 5.506s, finished at 2021-12-27T08:43:45+0000
+Built live-py-mode in 32.916s, finished at 2021-12-27T15:47:10+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  370 Dec 25 22:55 packages/live-py-mode-20211221.329.entry
-180K -rw-r--r-- 1 root root 180K Dec 25 22:55 packages/live-py-mode-20211221.329.tar
-4.0K -rw-r--r-- 1 root root  371 Dec 27 08:43 packages/live-py-mode-20211226.1718.entry
-180K -rw-r--r-- 1 root root 180K Dec 27 08:43 packages/live-py-mode-20211226.1718.tar
-4.0K -rw-r--r-- 1 root root  370 Dec 26 15:47 packages/live-py-mode-20211226.200.entry
-180K -rw-r--r-- 1 root root 180K Dec 26 15:47 packages/live-py-mode-20211226.200.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 08:43 packages/live-py-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  156 Dec 27 08:43 packages/live-py-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  371 Dec 27 15:47 packages/live-py-mode-20211226.1718.entry
+180K -rw-r--r-- 1 root root 180K Dec 27 15:47 packages/live-py-mode-20211226.1718.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:47 packages/live-py-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  156 Dec 27 15:47 packages/live-py-mode-readme.txt

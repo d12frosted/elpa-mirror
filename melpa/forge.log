@@ -2,12 +2,12 @@ Package: forge
 Fetcher: github
 Source:  https://github.com/magit/forge.git
 
-Updating /mnt/store/melpa/working/forge/
+Cloning https://github.com/magit/forge.git to /mnt/store/melpa/working/forge/
 Checking out origin/HEAD
 Checking out 5225c10873e0085632687644910c12e8fd15a48e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/forge/
-  to /tmp/forgeC1PUdX/forge-20211226.736
+  to /tmp/forgeUazMTp/forge-20211226.736
   ! lisp/forge-bitbucket.el -> forge-bitbucket.el
   ! lisp/forge-commands.el -> forge-commands.el
   ! lisp/forge-core.el -> forge-core.el
@@ -27,7 +27,7 @@ Copying files (->) and directories (=>)
   ! lisp/forge-topic.el -> forge-topic.el
   ! lisp/forge.el -> forge.el
   ! docs/forge.texi -> forge.texi
-Created /tmp/forgeC1PUdX/forge-20211226.736/forge.info
+Created /tmp/forgeUazMTp/forge-20211226.736/forge.info
 Created forge-20211226.736.tar containing:
   forge-20211226.736/
   forge-20211226.736/dir
@@ -51,13 +51,9 @@ Created forge-20211226.736.tar containing:
   forge-20211226.736/forge-topic.el
   forge-20211226.736/forge.el
   forge-20211226.736/forge.info
-Built forge in 11.008s, finished at 2021-12-27T11:48:24+0000
+Built forge in 22.212s, finished at 2021-12-27T15:24:52+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  554 Dec 25 19:16 packages/forge-20211216.2020.entry
-340K -rw-r--r-- 1 root root 340K Dec 25 19:16 packages/forge-20211216.2020.tar
-4.0K -rw-r--r-- 1 root root  554 Dec 26 05:29 packages/forge-20211223.1329.entry
-340K -rw-r--r-- 1 root root 340K Dec 26 05:29 packages/forge-20211223.1329.tar
-4.0K -rw-r--r-- 1 root root  553 Dec 27 11:48 packages/forge-20211226.736.entry
-340K -rw-r--r-- 1 root root 340K Dec 27 11:48 packages/forge-20211226.736.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:48 packages/forge-badge.svg
-4.0K -rw-r--r-- 1 root root  314 Dec 27 11:48 packages/forge-readme.txt
+4.0K -rw-r--r-- 1 root root  553 Dec 27 15:24 packages/forge-20211226.736.entry
+340K -rw-r--r-- 1 root root 340K Dec 27 15:24 packages/forge-20211226.736.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:24 packages/forge-badge.svg
+4.0K -rw-r--r-- 1 root root  314 Dec 27 15:24 packages/forge-readme.txt

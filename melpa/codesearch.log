@@ -2,12 +2,12 @@ Package: codesearch
 Fetcher: github
 Source:  https://github.com/abingham/emacs-codesearch.git
 
-Updating /mnt/store/melpa/working/codesearch/
+Cloning https://github.com/abingham/emacs-codesearch.git to /mnt/store/melpa/working/codesearch/
 Checking out origin/HEAD
 Checking out f6eb96f034a925444412cfa03e45e0ccbbafe3f2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/codesearch/
-  to /tmp/codesearchNzaMLd/codesearch-20181006.1431
+  to /tmp/codesearchUnBUbu/codesearch-20181006.1431
     codesearch.el -> codesearch.el
     listing-codesearch.el -> listing-codesearch.el
 Created codesearch-20181006.1431.tar containing:
@@ -15,9 +15,9 @@ Created codesearch-20181006.1431.tar containing:
   codesearch-20181006.1431/codesearch-pkg.el
   codesearch-20181006.1431/codesearch.el
   codesearch-20181006.1431/listing-codesearch.el
-Built codesearch in 4.411s, finished at 2021-12-27T11:29:02+0000
+Built codesearch in 5.459s, finished at 2021-12-27T14:48:53+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  490 Dec 27 11:29 packages/codesearch-20181006.1431.entry
- 20K -rw-r--r-- 1 root root  20K Dec 27 11:29 packages/codesearch-20181006.1431.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:29 packages/codesearch-badge.svg
-4.0K -rw-r--r-- 1 root root  774 Dec 27 11:29 packages/codesearch-readme.txt
+4.0K -rw-r--r-- 1 root root  490 Dec 27 14:48 packages/codesearch-20181006.1431.entry
+ 20K -rw-r--r-- 1 root root  20K Dec 27 14:48 packages/codesearch-20181006.1431.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 14:48 packages/codesearch-badge.svg
+4.0K -rw-r--r-- 1 root root  774 Dec 27 14:48 packages/codesearch-readme.txt

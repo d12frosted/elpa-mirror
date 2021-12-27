@@ -2,19 +2,19 @@ Package: identica-mode
 Fetcher: github
 Source:  https://github.com/gabrielsaldana/Emacs-Identica-mode.git
 
-Updating /mnt/store/melpa/working/identica-mode/
+Cloning https://github.com/gabrielsaldana/Emacs-Identica-mode.git to /mnt/store/melpa/working/identica-mode/
 Checking out origin/HEAD
 Checking out cf9183ee11ac922e85c7c908f04e2d00b03111b3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/identica-mode/
-  to /tmp/identica-modeVOU6DV/identica-mode-20130204.2253
+  to /tmp/identica-mode45q1Xo/identica-mode-20130204.2253
     bbdb-identica.el -> bbdb-identica.el
     identica-friends.el -> identica-friends.el
     identica-mode.el -> identica-mode.el
   ! doc/fdl.texi -> fdl.texi
   ! doc/identica-mode.texi -> identica-mode.texi
-Created /tmp/identica-modeVOU6DV/identica-mode-20130204.2253/fdl.info
-Created /tmp/identica-modeVOU6DV/identica-mode-20130204.2253/identica-mode.info
+Created /tmp/identica-mode45q1Xo/identica-mode-20130204.2253/fdl.info
+Created /tmp/identica-mode45q1Xo/identica-mode-20130204.2253/identica-mode.info
 Created identica-mode-20130204.2253.tar containing:
   identica-mode-20130204.2253/
   identica-mode-20130204.2253/bbdb-identica.el
@@ -24,9 +24,9 @@ Created identica-mode-20130204.2253.tar containing:
   identica-mode-20130204.2253/identica-mode-pkg.el
   identica-mode-20130204.2253/identica-mode.el
   identica-mode-20130204.2253/identica-mode.info
-Built identica-mode in 12.192s, finished at 2021-12-27T11:58:40+0000
+Built identica-mode in 8.352s, finished at 2021-12-27T15:40:45+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  392 Dec 27 11:58 packages/identica-mode-20130204.2253.entry
-200K -rw-r--r-- 1 root root 200K Dec 27 11:58 packages/identica-mode-20130204.2253.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 11:58 packages/identica-mode-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Dec 27 11:58 packages/identica-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  392 Dec 27 15:40 packages/identica-mode-20130204.2253.entry
+200K -rw-r--r-- 1 root root 200K Dec 27 15:40 packages/identica-mode-20130204.2253.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:40 packages/identica-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Dec 27 15:40 packages/identica-mode-readme.txt
