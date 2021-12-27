@@ -1,0 +1,11 @@
+(el-patch .
+	  [(20211226 2106)
+	   ((emacs
+	     (25)))
+	   "Future-proof your Elisp" tar
+	   ((:commit . "8ab8fb3315ec9d3fd758929409ddf3151f464e80")
+	    (:authors
+	     ("Radon Rosborough" . "radon.neon@gmail.com"))
+	    (:maintainer "Radon Rosborough" . "radon.neon@gmail.com")
+	    (:keywords "extensions")
+	    (:url . "https://github.com/raxod502/el-patch"))])

@@ -4,28 +4,30 @@ Source:  https://github.com/rust-lang/rust-mode.git
 
 Updating /mnt/store/melpa/working/rust-mode/
 Checking out origin/HEAD
-Checking out b017f746503df27ccdca8ee6d2627529d64d76e1
+Checking out eba544147aa6769f4f0e153e9f7373801dd2db89
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rust-mode/
-  to /tmp/rust-modep5htqK/rust-mode-20211218.1542
+  to /tmp/rust-mode4U0cQh/rust-mode-20211226.1824
     rust-cargo.el -> rust-cargo.el
     rust-compile.el -> rust-compile.el
     rust-mode.el -> rust-mode.el
     rust-playpen.el -> rust-playpen.el
     rust-rustfmt.el -> rust-rustfmt.el
     rust-utils.el -> rust-utils.el
-Created rust-mode-20211218.1542.tar containing:
-  rust-mode-20211218.1542/
-  rust-mode-20211218.1542/rust-cargo.el
-  rust-mode-20211218.1542/rust-compile.el
-  rust-mode-20211218.1542/rust-mode-pkg.el
-  rust-mode-20211218.1542/rust-mode.el
-  rust-mode-20211218.1542/rust-playpen.el
-  rust-mode-20211218.1542/rust-rustfmt.el
-  rust-mode-20211218.1542/rust-utils.el
-Built rust-mode in 5.246s, finished at 2021-12-26T16:10:51+0000
+Created rust-mode-20211226.1824.tar containing:
+  rust-mode-20211226.1824/
+  rust-mode-20211226.1824/rust-cargo.el
+  rust-mode-20211226.1824/rust-compile.el
+  rust-mode-20211226.1824/rust-mode-pkg.el
+  rust-mode-20211226.1824/rust-mode.el
+  rust-mode-20211226.1824/rust-playpen.el
+  rust-mode-20211226.1824/rust-rustfmt.el
+  rust-mode-20211226.1824/rust-utils.el
+Built rust-mode in 4.555s, finished at 2021-12-27T02:20:30+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  332 Dec 26 16:10 packages/rust-mode-20211218.1542.entry
 100K -rw-r--r-- 1 root root 100K Dec 26 16:10 packages/rust-mode-20211218.1542.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 26 16:10 packages/rust-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   67 Dec 26 16:10 packages/rust-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  332 Dec 27 02:20 packages/rust-mode-20211226.1824.entry
+100K -rw-r--r-- 1 root root 100K Dec 27 02:20 packages/rust-mode-20211226.1824.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 02:20 packages/rust-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   67 Dec 27 02:20 packages/rust-mode-readme.txt
