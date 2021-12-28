@@ -1,0 +1,13 @@
+(jsonnet-mode .
+	      [(20211228 1346)
+	       ((emacs
+		 (24))
+		(dash
+		 (2 17 0)))
+	       "Major mode for editing jsonnet files" single
+	       ((:commit . "d188745d1b42e1a28723dade1e5f7caf1282cb01")
+		(:authors
+		 ("Nick Lanham"))
+		(:maintainer "Nick Lanham")
+		(:keywords "languages")
+		(:url . "https://github.com/mgyucht/jsonnet-mode"))])
