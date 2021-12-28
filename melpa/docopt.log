@@ -2,12 +2,12 @@ Package: docopt
 Fetcher: github
 Source:  https://github.com/r0man/docopt.el.git
 
-Cloning https://github.com/r0man/docopt.el.git to /mnt/store/melpa/working/docopt/
+Updating /mnt/store/melpa/working/docopt/
 Checking out origin/HEAD
 Checking out 6e1105347decbf9b4b848d952858455f9b145c56
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docopt/
-  to /tmp/docoptYSb7Eb/docopt-20201211.1008
+  to /tmp/docopt1lDbd6/docopt-20201211.1008
   ! src/docopt-abbrev.el -> docopt-abbrev.el
   ! src/docopt-analyzer.el -> docopt-analyzer.el
   ! src/docopt-argv.el -> docopt-argv.el
@@ -29,9 +29,9 @@ Created docopt-20201211.1008.tar containing:
   docopt-20201211.1008/docopt-transient.el
   docopt-20201211.1008/docopt-util.el
   docopt-20201211.1008/docopt.el
-Built docopt in 5.429s, finished at 2021-12-27T15:01:08+0000
+Built docopt in 4.054s, finished at 2021-12-28T02:03:23+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  489 Dec 27 15:01 packages/docopt-20201211.1008.entry
-140K -rw-r--r-- 1 root root 140K Dec 27 15:01 packages/docopt-20201211.1008.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:01 packages/docopt-badge.svg
-4.0K -rw-r--r-- 1 root root   33 Dec 27 15:01 packages/docopt-readme.txt
+4.0K -rw-r--r-- 1 root root  489 Dec 28 02:03 packages/docopt-20201211.1008.entry
+140K -rw-r--r-- 1 root root 140K Dec 28 02:03 packages/docopt-20201211.1008.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 02:03 packages/docopt-badge.svg
+4.0K -rw-r--r-- 1 root root   33 Dec 28 02:03 packages/docopt-readme.txt

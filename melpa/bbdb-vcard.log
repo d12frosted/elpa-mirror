@@ -2,16 +2,16 @@ Package: bbdb-vcard
 Fetcher: github
 Source:  https://github.com/tohojo/bbdb-vcard.git
 
-Cloning https://github.com/tohojo/bbdb-vcard.git to /mnt/store/melpa/working/bbdb-vcard/
+Updating /mnt/store/melpa/working/bbdb-vcard/
 Checking out origin/HEAD
 Checking out 113c66115ce68316e209f51ebce56de8dded3606
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/bbdb-vcard/
-  to /tmp/bbdb-vcardnB1peg/bbdb-vcard-20210325.2208
+  to /tmp/bbdb-vcardRKUPjf/bbdb-vcard-20210325.2208
     bbdb-vcard-vcard21.el -> bbdb-vcard-vcard21.el
     bbdb-vcard.el -> bbdb-vcard.el
     bbdb-vcard.texi -> bbdb-vcard.texi
-Created /tmp/bbdb-vcardnB1peg/bbdb-vcard-20210325.2208/bbdb-vcard.info
+Created /tmp/bbdb-vcardRKUPjf/bbdb-vcard-20210325.2208/bbdb-vcard.info
 Created bbdb-vcard-20210325.2208.tar containing:
   bbdb-vcard-20210325.2208/
   bbdb-vcard-20210325.2208/bbdb-vcard-pkg.el
@@ -19,10 +19,9 @@ Created bbdb-vcard-20210325.2208.tar containing:
   bbdb-vcard-20210325.2208/bbdb-vcard.el
   bbdb-vcard-20210325.2208/bbdb-vcard.info
   bbdb-vcard-20210325.2208/dir
-Built bbdb-vcard in 5.717s, finished at 2021-12-27T14:38:43+0000
+Built bbdb-vcard in 6.960s, finished at 2021-12-28T01:54:20+0000
  ✓ Success:
- 64K -rw-r--r-- 1 root root  62K Oct 20  2020 packages/bbdb-vcard-20201016.1902.el
-4.0K -rw-r--r-- 1 root root  572 Dec 27 14:38 packages/bbdb-vcard-20210325.2208.entry
-112K -rw-r--r-- 1 root root 110K Dec 27 14:38 packages/bbdb-vcard-20210325.2208.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 14:38 packages/bbdb-vcard-badge.svg
-8.0K -rw-r--r-- 1 root root 5.1K Dec 27 14:38 packages/bbdb-vcard-readme.txt
+4.0K -rw-r--r-- 1 root root  572 Dec 28 01:54 packages/bbdb-vcard-20210325.2208.entry
+112K -rw-r--r-- 1 root root 110K Dec 28 01:54 packages/bbdb-vcard-20210325.2208.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 01:54 packages/bbdb-vcard-badge.svg
+8.0K -rw-r--r-- 1 root root 5.1K Dec 28 01:54 packages/bbdb-vcard-readme.txt

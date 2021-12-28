@@ -2,12 +2,12 @@ Package: govc
 Fetcher: github
 Source:  https://github.com/vmware/govmomi.git
 
-Cloning https://github.com/vmware/govmomi.git to /mnt/store/melpa/working/govc/
+Updating /mnt/store/melpa/working/govc/
 Checking out origin/HEAD
 Checking out 10046a02daec375b12624e2e46fd555c28e8fd6c
-Built govc in 35.163s, finished at 2021-12-27T15:35:06+0000
+Built govc in 5.267s, finished at 2021-12-28T02:16:20+0000
  ✓ Success:
- 64K -rw-r--r-- 1 root root  61K Dec 27 15:35 packages/govc-20191213.2131.el
-4.0K -rw-r--r-- 1 root root  447 Dec 27 15:35 packages/govc-20191213.2131.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:35 packages/govc-badge.svg
-4.0K -rw-r--r-- 1 root root  595 Dec 27 15:35 packages/govc-readme.txt
+ 64K -rw-r--r-- 1 root root  61K Dec 28 02:16 packages/govc-20191213.2131.el
+4.0K -rw-r--r-- 1 root root  447 Dec 28 02:16 packages/govc-20191213.2131.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 02:16 packages/govc-badge.svg
+4.0K -rw-r--r-- 1 root root  595 Dec 28 02:16 packages/govc-readme.txt

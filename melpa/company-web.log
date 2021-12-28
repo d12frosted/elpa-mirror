@@ -2,12 +2,12 @@ Package: company-web
 Fetcher: github
 Source:  https://github.com/osv/company-web.git
 
-Cloning https://github.com/osv/company-web.git to /mnt/store/melpa/working/company-web/
+Updating /mnt/store/melpa/working/company-web/
 Checking out origin/HEAD
 Checking out f0cc9187c9c34f72ad71f5649a69c74f996bae9a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/company-web/
-  to /tmp/company-webg2QlAn/company-web-20180402.1155
+  to /tmp/company-web3MPiBb/company-web-20180402.1155
     company-web-html.el -> company-web-html.el
     company-web-jade.el -> company-web-jade.el
     company-web-slim.el -> company-web-slim.el
@@ -19,9 +19,9 @@ Created company-web-20180402.1155.tar containing:
   company-web-20180402.1155/company-web-pkg.el
   company-web-20180402.1155/company-web-slim.el
   company-web-20180402.1155/company-web.el
-Built company-web in 5.615s, finished at 2021-12-27T14:52:28+0000
+Built company-web in 5.194s, finished at 2021-12-28T01:59:06+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  542 Dec 27 14:52 packages/company-web-20180402.1155.entry
- 52K -rw-r--r-- 1 root root  50K Dec 27 14:52 packages/company-web-20180402.1155.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 14:52 packages/company-web-badge.svg
-4.0K -rw-r--r-- 1 root root  904 Dec 27 14:52 packages/company-web-readme.txt
+4.0K -rw-r--r-- 1 root root  542 Dec 28 01:59 packages/company-web-20180402.1155.entry
+ 52K -rw-r--r-- 1 root root  50K Dec 28 01:59 packages/company-web-20180402.1155.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 01:59 packages/company-web-badge.svg
+4.0K -rw-r--r-- 1 root root  904 Dec 28 01:59 packages/company-web-readme.txt

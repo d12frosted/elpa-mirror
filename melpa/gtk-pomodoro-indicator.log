@@ -2,12 +2,12 @@ Package: gtk-pomodoro-indicator
 Fetcher: github
 Source:  https://github.com/abo-abo/gtk-pomodoro-indicator.git
 
-Cloning https://github.com/abo-abo/gtk-pomodoro-indicator.git to /mnt/store/melpa/working/gtk-pomodoro-indicator/
+Updating /mnt/store/melpa/working/gtk-pomodoro-indicator/
 Checking out origin/HEAD
 Checking out 338e6dca6d749cfc85195907bba593f9f6855715
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gtk-pomodoro-indicator/
-  to /tmp/gtk-pomodoro-indicatorJlPFQJ/gtk-pomodoro-indicator-20191007.1500
+  to /tmp/gtk-pomodoro-indicator1BzIGb/gtk-pomodoro-indicator-20191007.1500
     gtk-pomodoro-indicator.el -> gtk-pomodoro-indicator.el
     Cookbook.py -> Cookbook.py
     setup.py -> setup.py
@@ -25,9 +25,9 @@ Created gtk-pomodoro-indicator-20191007.1500.tar containing:
   gtk-pomodoro-indicator-20191007.1500/pomodoro_indicator/__init__.py
   gtk-pomodoro-indicator-20191007.1500/pomodoro_indicator/pomodoro_indicator.py
   gtk-pomodoro-indicator-20191007.1500/setup.py
-Built gtk-pomodoro-indicator in 4.823s, finished at 2021-12-27T15:35:39+0000
+Built gtk-pomodoro-indicator in 5.675s, finished at 2021-12-28T02:16:54+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  388 Dec 27 15:35 packages/gtk-pomodoro-indicator-20191007.1500.entry
- 20K -rw-r--r-- 1 root root  20K Dec 27 15:35 packages/gtk-pomodoro-indicator-20191007.1500.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:35 packages/gtk-pomodoro-indicator-badge.svg
-4.0K -rw-r--r-- 1 root root   50 Dec 27 15:35 packages/gtk-pomodoro-indicator-readme.txt
+4.0K -rw-r--r-- 1 root root  388 Dec 28 02:16 packages/gtk-pomodoro-indicator-20191007.1500.entry
+ 20K -rw-r--r-- 1 root root  20K Dec 28 02:16 packages/gtk-pomodoro-indicator-20191007.1500.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 02:16 packages/gtk-pomodoro-indicator-badge.svg
+4.0K -rw-r--r-- 1 root root   50 Dec 28 02:16 packages/gtk-pomodoro-indicator-readme.txt

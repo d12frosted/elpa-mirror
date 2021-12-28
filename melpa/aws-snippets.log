@@ -2,12 +2,12 @@ Package: aws-snippets
 Fetcher: github
 Source:  https://github.com/baron42bba/aws-snippets.git
 
-Cloning https://github.com/baron42bba/aws-snippets.git to /mnt/store/melpa/working/aws-snippets/
+Updating /mnt/store/melpa/working/aws-snippets/
 Checking out origin/HEAD
 Checking out 557d19a0bc486e0fddb597b2be5087769d9bd47e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/aws-snippets/
-  to /tmp/aws-snippetsZxRdbL/aws-snippets-20191203.1553
+  to /tmp/aws-snippets39P0eM/aws-snippets-20191203.1553
     aws-snippets.el -> aws-snippets.el
     snippets => snippets
 Created aws-snippets-20191203.1553.tar containing:
@@ -258,9 +258,9 @@ Created aws-snippets-20191203.1553.tar containing:
   aws-snippets-20191203.1553/snippets/yaml-mode/aws-tag
   aws-snippets-20191203.1553/snippets/yaml-mode/aws-vpc
   aws-snippets-20191203.1553/snippets/yaml-mode/aws-vpn-gateway
-Built aws-snippets in 6.390s, finished at 2021-12-27T14:38:03+0000
+Built aws-snippets in 4.846s, finished at 2021-12-28T01:53:52+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  198 Dec 27 14:38 packages/aws-snippets-20191203.1553.entry
-280K -rw-r--r-- 1 root root 280K Dec 27 14:38 packages/aws-snippets-20191203.1553.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 14:38 packages/aws-snippets-badge.svg
-4.0K -rw-r--r-- 1 root root   94 Dec 27 14:38 packages/aws-snippets-readme.txt
+4.0K -rw-r--r-- 1 root root  198 Dec 28 01:53 packages/aws-snippets-20191203.1553.entry
+280K -rw-r--r-- 1 root root 280K Dec 28 01:53 packages/aws-snippets-20191203.1553.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 01:53 packages/aws-snippets-badge.svg
+4.0K -rw-r--r-- 1 root root   94 Dec 28 01:53 packages/aws-snippets-readme.txt

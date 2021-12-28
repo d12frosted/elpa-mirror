@@ -2,12 +2,12 @@ Package: jdee
 Fetcher: github
 Source:  https://github.com/jdee-emacs/jdee.git
 
-Cloning https://github.com/jdee-emacs/jdee.git to /mnt/store/melpa/working/jdee/
+Updating /mnt/store/melpa/working/jdee/
 Checking out origin/HEAD
 Checking out b510a29f1fc1bea218a6230fb219922775687c78
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/jdee/
-  to /tmp/jdeexQ7lC0/jdee-20191102.1426
+  to /tmp/jdeejYXe9g/jdee-20191102.1426
     beanshell.el -> beanshell.el
     efc.el -> efc.el
     jcomplete.el -> jcomplete.el
@@ -75,7 +75,7 @@ Copying files (->) and directories (=>)
     jdee.el -> jdee.el
   ! doc/jdee.texi -> jdee.texi
     jdee-test.el -> jdee-test.el
-Created /tmp/jdeexQ7lC0/jdee-20191102.1426/jdee.info
+Created /tmp/jdeejYXe9g/jdee-20191102.1426/jdee.info
 Created jdee-20191102.1426.tar containing:
   jdee-20191102.1426/
   jdee-20191102.1426/beanshell.el
@@ -147,9 +147,9 @@ Created jdee-20191102.1426.tar containing:
   jdee-20191102.1426/jdee-xref.el
   jdee-20191102.1426/jdee.el
   jdee-20191102.1426/jdee.info
-Built jdee in 15.447s, finished at 2021-12-27T15:42:56+0000
+Built jdee in 11.171s, finished at 2021-12-28T02:23:52+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  409 Dec 27 15:42 packages/jdee-20191102.1426.entry
-1.8M -rw-r--r-- 1 root root 1.8M Dec 27 15:42 packages/jdee-20191102.1426.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:42 packages/jdee-badge.svg
-4.0K -rw-r--r-- 1 root root   28 Dec 27 15:42 packages/jdee-readme.txt
+4.0K -rw-r--r-- 1 root root  409 Dec 28 02:23 packages/jdee-20191102.1426.entry
+1.8M -rw-r--r-- 1 root root 1.8M Dec 28 02:23 packages/jdee-20191102.1426.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 02:23 packages/jdee-badge.svg
+4.0K -rw-r--r-- 1 root root   28 Dec 28 02:23 packages/jdee-readme.txt

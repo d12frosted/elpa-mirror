@@ -1,9 +1,0 @@
-Package: gopher
-Fetcher: github
-Source:  https://github.com/msnyder-info/gopher.el.git
-
-Updating /mnt/store/melpa/working/gopher/
-Command '(env LC_ALL=C git fetch -f --all --tags)' exited with non-zero status 1: Fetching origin
-fatal: could not read Username for 'https://github.com': No such device or address
-error: Could not fetch origin
-

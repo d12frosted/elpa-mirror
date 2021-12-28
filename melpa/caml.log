@@ -2,12 +2,12 @@ Package: caml
 Fetcher: github
 Source:  https://github.com/ocaml/caml-mode.git
 
-Cloning https://github.com/ocaml/caml-mode.git to /mnt/store/melpa/working/caml/
+Updating /mnt/store/melpa/working/caml/
 Checking out origin/HEAD
 Checking out 204bfde9ad21cb94c273db8b0c12d31a4eb425e5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/caml/
-  to /tmp/camlRUXltb/caml-20211226.27
+  to /tmp/camlQ0qcWR/caml-20211226.27
     caml-font-old.el -> caml-font-old.el
     caml-font.el -> caml-font.el
     caml-help.el -> caml-help.el
@@ -25,9 +25,9 @@ Created caml-20211226.27.tar containing:
   caml-20211226.27/caml.el
   caml-20211226.27/camldebug.el
   caml-20211226.27/inf-caml.el
-Built caml in 14.744s, finished at 2021-12-27T14:43:18+0000
+Built caml in 3.786s, finished at 2021-12-28T01:56:03+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  459 Dec 27 14:43 packages/caml-20211226.27.entry
-212K -rw-r--r-- 1 root root 210K Dec 27 14:43 packages/caml-20211226.27.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 14:43 packages/caml-badge.svg
-4.0K -rw-r--r-- 1 root root  455 Dec 27 14:43 packages/caml-readme.txt
+4.0K -rw-r--r-- 1 root root  459 Dec 28 01:56 packages/caml-20211226.27.entry
+212K -rw-r--r-- 1 root root 210K Dec 28 01:56 packages/caml-20211226.27.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 01:56 packages/caml-badge.svg
+4.0K -rw-r--r-- 1 root root  455 Dec 28 01:56 packages/caml-readme.txt

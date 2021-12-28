@@ -2,12 +2,12 @@ Package: eide
 Fetcher: git
 Source:  https://forge.chapril.org/hjuvi/eide.git
 
-Cloning https://forge.chapril.org/hjuvi/eide.git to /mnt/store/melpa/working/eide/
+Updating /mnt/store/melpa/working/eide/
 Checking out origin/HEAD
 Checking out 3a36db2bf007cc5afeead407492add1e2d2a51c7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eide/
-  to /tmp/eidezf5POE/eide-20211210.2050
+  to /tmp/eideabQGtg/eide-20211210.2050
   ! src/eide-compare.el -> eide-compare.el
   ! src/eide-config.el -> eide-config.el
   ! src/eide-display.el -> eide-display.el
@@ -46,9 +46,9 @@ Created eide-20211210.2050.tar containing:
   eide-20211210.2050/eide-vc.el
   eide-20211210.2050/eide-windows.el
   eide-20211210.2050/eide.el
-Built eide in 8.119s, finished at 2021-12-27T15:02:59+0000
+Built eide in 7.232s, finished at 2021-12-28T02:05:05+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  287 Dec 27 15:02 packages/eide-20211210.2050.entry
-320K -rw-r--r-- 1 root root 320K Dec 27 15:02 packages/eide-20211210.2050.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:02 packages/eide-badge.svg
-4.0K -rw-r--r-- 1 root root  548 Dec 27 15:02 packages/eide-readme.txt
+4.0K -rw-r--r-- 1 root root  287 Dec 28 02:05 packages/eide-20211210.2050.entry
+320K -rw-r--r-- 1 root root 320K Dec 28 02:05 packages/eide-20211210.2050.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 02:05 packages/eide-badge.svg
+4.0K -rw-r--r-- 1 root root  548 Dec 28 02:05 packages/eide-readme.txt

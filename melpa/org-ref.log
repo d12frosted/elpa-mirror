@@ -2,12 +2,12 @@ Package: org-ref
 Fetcher: github
 Source:  https://github.com/jkitchin/org-ref.git
 
-Cloning https://github.com/jkitchin/org-ref.git to /mnt/store/melpa/working/org-ref/
+Updating /mnt/store/melpa/working/org-ref/
 Checking out origin/HEAD
 Checking out 6f3e4a7ea14e6900acffe88303491b64b96ecb59
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-ref/
-  to /tmp/org-refwBnWLb/org-ref-20211222.2014
+  to /tmp/org-refsZfbE2/org-ref-20211222.2014
     doi-utils.el -> doi-utils.el
     nist-webbook.el -> nist-webbook.el
     org-ref-arxiv.el -> org-ref-arxiv.el
@@ -85,14 +85,14 @@ Created org-ref-20211222.2014.tar containing:
   org-ref-20211222.2014/org-ref.el
   org-ref-20211222.2014/org-ref.org
   org-ref-20211222.2014/x2bib.el
-Built org-ref in 11.323s, finished at 2021-12-27T15:58:24+0000
+Built org-ref in 5.121s, finished at 2021-12-28T02:36:06+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  584 Dec 27 15:58 packages/org-ref-20211222.2014.entry
-640K -rw-r--r-- 1 root root 640K Dec 27 15:58 packages/org-ref-20211222.2014.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:58 packages/org-ref-badge.svg
- 16K -rw-r--r-- 1 root root  16K Dec 27 15:58 packages/org-ref-prettify-20211204.825.el
-4.0K -rw-r--r-- 1 root root  519 Dec 27 15:58 packages/org-ref-prettify-20211204.825.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:58 packages/org-ref-prettify-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Dec 27 15:58 packages/org-ref-prettify-readme.txt
-4.0K -rw-r--r-- 1 root root  716 Dec 27 15:58 packages/org-ref-prettify.log
-4.0K -rw-r--r-- 1 root root  310 Dec 27 15:58 packages/org-ref-readme.txt
+4.0K -rw-r--r-- 1 root root  584 Dec 28 02:36 packages/org-ref-20211222.2014.entry
+640K -rw-r--r-- 1 root root 640K Dec 28 02:36 packages/org-ref-20211222.2014.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 02:36 packages/org-ref-badge.svg
+ 16K -rw-r--r-- 1 root root  16K Dec 28 02:36 packages/org-ref-prettify-20211204.825.el
+4.0K -rw-r--r-- 1 root root  519 Dec 28 02:36 packages/org-ref-prettify-20211204.825.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 23:39 packages/org-ref-prettify-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Dec 28 02:36 packages/org-ref-prettify-readme.txt
+4.0K -rw-r--r-- 1 root root  234 Dec 28 02:36 packages/org-ref-prettify.log
+4.0K -rw-r--r-- 1 root root  310 Dec 28 02:36 packages/org-ref-readme.txt

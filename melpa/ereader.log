@@ -2,12 +2,12 @@ Package: ereader
 Fetcher: github
 Source:  https://github.com/bddean/emacs-ereader.git
 
-Cloning https://github.com/bddean/emacs-ereader.git to /mnt/store/melpa/working/ereader/
+Updating /mnt/store/melpa/working/ereader/
 Checking out origin/HEAD
 Checking out f3bbd3f13195f8fba3e3c880aab0e4c60430dcf3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ereader/
-  to /tmp/ereaderYmVeAF/ereader-20170810.501
+  to /tmp/ereaderP1pkXb/ereader-20170810.501
     ereader.el -> ereader.el
     org-ebook.el -> org-ebook.el
 Created ereader-20170810.501.tar containing:
@@ -15,9 +15,9 @@ Created ereader-20170810.501.tar containing:
   ereader-20170810.501/ereader-pkg.el
   ereader-20170810.501/ereader.el
   ereader-20170810.501/org-ebook.el
-Built ereader in 5.707s, finished at 2021-12-27T15:08:16+0000
+Built ereader in 3.757s, finished at 2021-12-28T02:07:24+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  450 Dec 27 15:08 packages/ereader-20170810.501.entry
- 32K -rw-r--r-- 1 root root  30K Dec 27 15:08 packages/ereader-20170810.501.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:08 packages/ereader-badge.svg
-4.0K -rw-r--r-- 1 root root   38 Dec 27 15:08 packages/ereader-readme.txt
+4.0K -rw-r--r-- 1 root root  450 Dec 28 02:07 packages/ereader-20170810.501.entry
+ 32K -rw-r--r-- 1 root root  30K Dec 28 02:07 packages/ereader-20170810.501.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 02:07 packages/ereader-badge.svg
+4.0K -rw-r--r-- 1 root root   38 Dec 28 02:07 packages/ereader-readme.txt

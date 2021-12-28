@@ -2,12 +2,12 @@ Package: doom-themes
 Fetcher: github
 Source:  https://github.com/doomemacs/themes.git
 
-Cloning https://github.com/doomemacs/themes.git to /mnt/store/melpa/working/doom-themes/
+Updating /mnt/store/melpa/working/doom-themes/
 Checking out origin/HEAD
 Checking out 2d7bf3daa50a4e0a612faed43cd8cd4af33b9e19
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/doom-themes/
-  to /tmp/doom-themeshbQAqi/doom-themes-20211221.1836
+  to /tmp/doom-themes8HSSwR/doom-themes-20211221.1836
     doom-themes-base.el -> doom-themes-base.el
     doom-themes.el -> doom-themes.el
   ! themes/doom-1337-theme.el -> doom-1337-theme.el
@@ -153,9 +153,9 @@ Created doom-themes-20211221.1836.tar containing:
   doom-themes-20211221.1836/doom-wilmersdorf-theme.el
   doom-themes-20211221.1836/doom-xcode-theme.el
   doom-themes-20211221.1836/doom-zenburn-theme.el
-Built doom-themes in 16.782s, finished at 2021-12-27T15:01:26+0000
+Built doom-themes in 5.007s, finished at 2021-12-28T02:03:31+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  451 Dec 27 15:01 packages/doom-themes-20211221.1836.entry
-800K -rw-r--r-- 1 root root 800K Dec 27 15:01 packages/doom-themes-20211221.1836.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:01 packages/doom-themes-badge.svg
-4.0K -rw-r--r-- 1 root root 3.2K Dec 27 15:01 packages/doom-themes-readme.txt
+4.0K -rw-r--r-- 1 root root  451 Dec 28 02:03 packages/doom-themes-20211221.1836.entry
+800K -rw-r--r-- 1 root root 800K Dec 28 02:03 packages/doom-themes-20211221.1836.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 02:03 packages/doom-themes-badge.svg
+4.0K -rw-r--r-- 1 root root 3.2K Dec 28 02:03 packages/doom-themes-readme.txt

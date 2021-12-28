@@ -2,12 +2,12 @@ Package: kubernetes
 Fetcher: github
 Source:  https://github.com/kubernetes-el/kubernetes-el.git
 
-Cloning https://github.com/kubernetes-el/kubernetes-el.git to /mnt/store/melpa/working/kubernetes/
+Updating /mnt/store/melpa/working/kubernetes/
 Checking out origin/HEAD
 Checking out 587c6e2ed5e179c1a2351ec07d195993eda41db0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/kubernetes/
-  to /tmp/kubernetesTUBSAx/kubernetes-20211225.1536
+  to /tmp/kubernetesXUguTX/kubernetes-20211225.1536
     kubernetes-ast.el -> kubernetes-ast.el
     kubernetes-commands.el -> kubernetes-commands.el
     kubernetes-configmaps.el -> kubernetes-configmaps.el
@@ -75,24 +75,24 @@ Created kubernetes-20211225.1536.tar containing:
   kubernetes-20211225.1536/kubernetes-vars.el
   kubernetes-20211225.1536/kubernetes-yaml.el
   kubernetes-20211225.1536/kubernetes.el
-Built kubernetes in 10.570s, finished at 2021-12-27T15:44:50+0000
+Built kubernetes in 5.021s, finished at 2021-12-28T02:25:37+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  594 Dec 27 15:44 packages/kubernetes-20211225.1536.entry
-252K -rw-r--r-- 1 root root 250K Dec 27 15:44 packages/kubernetes-20211225.1536.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:44 packages/kubernetes-badge.svg
-4.0K -rw-r--r-- 1 root root 3.1K Dec 27 12:04 packages/kubernetes-evil-20211225.300.el
-4.0K -rw-r--r-- 1 root root  344 Dec 27 12:04 packages/kubernetes-evil-20211225.300.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 12:04 packages/kubernetes-evil-badge.svg
-4.0K -rw-r--r-- 1 root root   60 Dec 27 12:04 packages/kubernetes-evil-readme.txt
-4.0K -rw-r--r-- 1 root root  285 Dec 27 15:44 packages/kubernetes-evil.log
-8.0K -rw-r--r-- 1 root root 4.8K Dec 27 15:44 packages/kubernetes-helm-20210902.2232.el
-4.0K -rw-r--r-- 1 root root  432 Dec 27 15:44 packages/kubernetes-helm-20210902.2232.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:44 packages/kubernetes-helm-badge.svg
-4.0K -rw-r--r-- 1 root root   71 Dec 27 15:44 packages/kubernetes-helm-readme.txt
-4.0K -rw-r--r-- 1 root root  707 Dec 27 15:44 packages/kubernetes-helm.log
-4.0K -rw-r--r-- 1 root root  111 Dec 27 15:44 packages/kubernetes-readme.txt
-8.0K -rw-r--r-- 1 root root 5.5K Dec 27 15:44 packages/kubernetes-tramp-20181228.922.el
-4.0K -rw-r--r-- 1 root root  489 Dec 27 15:44 packages/kubernetes-tramp-20181228.922.entry
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 15:44 packages/kubernetes-tramp-badge.svg
-4.0K -rw-r--r-- 1 root root  878 Dec 27 15:44 packages/kubernetes-tramp-readme.txt
-4.0K -rw-r--r-- 1 root root  714 Dec 27 15:44 packages/kubernetes-tramp.log
+4.0K -rw-r--r-- 1 root root  594 Dec 28 02:25 packages/kubernetes-20211225.1536.entry
+252K -rw-r--r-- 1 root root 250K Dec 28 02:25 packages/kubernetes-20211225.1536.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 02:25 packages/kubernetes-badge.svg
+4.0K -rw-r--r-- 1 root root 3.1K Dec 27 23:29 packages/kubernetes-evil-20211225.300.el
+4.0K -rw-r--r-- 1 root root  344 Dec 27 23:29 packages/kubernetes-evil-20211225.300.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 23:29 packages/kubernetes-evil-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Dec 27 23:29 packages/kubernetes-evil-readme.txt
+4.0K -rw-r--r-- 1 root root  178 Dec 28 02:25 packages/kubernetes-evil.log
+8.0K -rw-r--r-- 1 root root 4.8K Dec 27 23:29 packages/kubernetes-helm-20210902.2232.el
+4.0K -rw-r--r-- 1 root root  432 Dec 27 23:29 packages/kubernetes-helm-20210902.2232.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 23:29 packages/kubernetes-helm-badge.svg
+4.0K -rw-r--r-- 1 root root   71 Dec 27 23:29 packages/kubernetes-helm-readme.txt
+4.0K -rw-r--r-- 1 root root  176 Dec 28 02:25 packages/kubernetes-helm.log
+4.0K -rw-r--r-- 1 root root  111 Dec 28 02:25 packages/kubernetes-readme.txt
+8.0K -rw-r--r-- 1 root root 5.5K Dec 27 23:29 packages/kubernetes-tramp-20181228.922.el
+4.0K -rw-r--r-- 1 root root  489 Dec 27 23:29 packages/kubernetes-tramp-20181228.922.entry
+4.0K -rw-r--r-- 1 root root 1.2K Dec 27 23:29 packages/kubernetes-tramp-badge.svg
+4.0K -rw-r--r-- 1 root root  878 Dec 27 23:29 packages/kubernetes-tramp-readme.txt
+4.0K -rw-r--r-- 1 root root  154 Dec 28 02:25 packages/kubernetes-tramp.log

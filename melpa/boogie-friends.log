@@ -2,12 +2,12 @@ Package: boogie-friends
 Fetcher: github
 Source:  https://github.com/boogie-org/boogie-friends.git
 
-Cloning https://github.com/boogie-org/boogie-friends.git to /mnt/store/melpa/working/boogie-friends/
+Updating /mnt/store/melpa/working/boogie-friends/
 Checking out origin/HEAD
 Checking out 1e3b6a8aee9fa7c113468838c5b647080caf3703
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/boogie-friends/
-  to /tmp/boogie-friendsrqrLnD/boogie-friends-20210703.238
+  to /tmp/boogie-friendsuMGELa/boogie-friends-20210703.238
   ! emacs/boogie-friends-pkg.el -> boogie-friends-pkg.el
   ! emacs/boogie-friends.el -> boogie-friends.el
   ! emacs/boogie-mode.el -> boogie-mode.el
@@ -29,9 +29,9 @@ Created boogie-friends-20210703.238.tar containing:
   boogie-friends-20210703.238/etc/dafny-snippets
   boogie-friends-20210703.238/inferior-dafny.el
   boogie-friends-20210703.238/z3-smt2-mode.el
-Built boogie-friends in 7.854s, finished at 2021-12-27T14:40:28+0000
+Built boogie-friends in 4.870s, finished at 2021-12-28T01:55:04+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  571 Dec 27 14:40 packages/boogie-friends-20210703.238.entry
-120K -rw-r--r-- 1 root root 120K Dec 27 14:40 packages/boogie-friends-20210703.238.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 27 14:40 packages/boogie-friends-badge.svg
-4.0K -rw-r--r-- 1 root root  931 Dec 27 14:40 packages/boogie-friends-readme.txt
+4.0K -rw-r--r-- 1 root root  571 Dec 28 01:55 packages/boogie-friends-20210703.238.entry
+120K -rw-r--r-- 1 root root 120K Dec 28 01:55 packages/boogie-friends-20210703.238.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 28 01:55 packages/boogie-friends-badge.svg
+4.0K -rw-r--r-- 1 root root  931 Dec 28 01:55 packages/boogie-friends-readme.txt
