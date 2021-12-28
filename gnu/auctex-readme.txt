@@ -210,8 +210,10 @@ You can get its files from the AUCTeX download area
 preview-latex should already be integrated into AUCTeX, so no separate
 download will be necessary.
 
-You will also find '.rpm' files there for Fedora and possibly SuSE.
-Anonymous Git is available as well.
+Anonymous Git is available at <git://git.savannah.gnu.org/auctex.git> or
+<https://git.savannah.gnu.org/git/auctex.git>.  You can also browse the
+repository (https://git.savannah.gnu.org/cgit/auctex.git) via web
+interface.
 
 7 Contacts
 **********
