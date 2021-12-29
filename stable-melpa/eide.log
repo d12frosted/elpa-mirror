@@ -4,10 +4,10 @@ Source:  https://forge.chapril.org/hjuvi/eide.git
 
 Updating /mnt/store/melpa/working/eide/
 Checking out origin/HEAD
-Checking out 3a36db2bf007cc5afeead407492add1e2d2a51c7
+Checking out 35f128ec30cdd7216b9f84dda7c2bdf64d420f1c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eide/
-  to /tmp/eideaUfIZb/eide-20211210.2050
+  to /tmp/eideDMlc40/eide-20211229.844
   ! src/eide-compare.el -> eide-compare.el
   ! src/eide-config.el -> eide-config.el
   ! src/eide-display.el -> eide-display.el
@@ -26,29 +26,31 @@ Copying files (->) and directories (=>)
   ! src/themes/eide-display-theme.el -> eide-display-theme.el
   ! src/themes/eide-light-theme.el -> eide-light-theme.el
   ! src/themes/eide-settings-theme.el -> eide-settings-theme.el
-Created eide-20211210.2050.tar containing:
-  eide-20211210.2050/
-  eide-20211210.2050/eide-browsing-theme.el
-  eide-20211210.2050/eide-compare.el
-  eide-20211210.2050/eide-config.el
-  eide-20211210.2050/eide-dark-theme.el
-  eide-20211210.2050/eide-display-theme.el
-  eide-20211210.2050/eide-display.el
-  eide-20211210.2050/eide-edit.el
-  eide-20211210.2050/eide-keys.el
-  eide-20211210.2050/eide-light-theme.el
-  eide-20211210.2050/eide-menu.el
-  eide-20211210.2050/eide-pkg.el
-  eide-20211210.2050/eide-popup.el
-  eide-20211210.2050/eide-project.el
-  eide-20211210.2050/eide-search.el
-  eide-20211210.2050/eide-settings-theme.el
-  eide-20211210.2050/eide-vc.el
-  eide-20211210.2050/eide-windows.el
-  eide-20211210.2050/eide.el
-Built eide in 5.380s, finished at 2021-12-29T01:39:16+0000
+Created eide-20211229.844.tar containing:
+  eide-20211229.844/
+  eide-20211229.844/eide-browsing-theme.el
+  eide-20211229.844/eide-compare.el
+  eide-20211229.844/eide-config.el
+  eide-20211229.844/eide-dark-theme.el
+  eide-20211229.844/eide-display-theme.el
+  eide-20211229.844/eide-display.el
+  eide-20211229.844/eide-edit.el
+  eide-20211229.844/eide-keys.el
+  eide-20211229.844/eide-light-theme.el
+  eide-20211229.844/eide-menu.el
+  eide-20211229.844/eide-pkg.el
+  eide-20211229.844/eide-popup.el
+  eide-20211229.844/eide-project.el
+  eide-20211229.844/eide-search.el
+  eide-20211229.844/eide-settings-theme.el
+  eide-20211229.844/eide-vc.el
+  eide-20211229.844/eide-windows.el
+  eide-20211229.844/eide.el
+Built eide in 6.139s, finished at 2021-12-29T10:26:34+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  287 Dec 29 01:39 packages/eide-20211210.2050.entry
-320K -rw-r--r-- 1 root root 320K Dec 29 01:39 packages/eide-20211210.2050.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 29 01:39 packages/eide-badge.svg
-4.0K -rw-r--r-- 1 root root  548 Dec 29 01:39 packages/eide-readme.txt
+4.0K -rw-r--r-- 1 root root  287 Dec 29 07:31 packages/eide-20211210.2050.entry
+320K -rw-r--r-- 1 root root 320K Dec 29 07:31 packages/eide-20211210.2050.tar
+4.0K -rw-r--r-- 1 root root  286 Dec 29 10:26 packages/eide-20211229.844.entry
+320K -rw-r--r-- 1 root root 320K Dec 29 10:26 packages/eide-20211229.844.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 29 10:26 packages/eide-badge.svg
+4.0K -rw-r--r-- 1 root root  548 Dec 29 10:26 packages/eide-readme.txt

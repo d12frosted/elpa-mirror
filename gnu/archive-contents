@@ -833,7 +833,7 @@
 		      ("Andrea Corallo" . "akrl@sdf.org"))
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html"))])
  (embark .
-	 [(0 13)
+	 [(0 14)
 	  ((emacs
 	    (26 1)))
 	  "Conveniently act on minibuffer completions" tar
@@ -843,7 +843,7 @@
 	   (:authors
 	    ("Omar Antolín Camarena" . "omar@matem.unam.mx")))])
  (embark-consult .
-		 [(0 2)
+		 [(0 3)
 		  ((emacs
 		    (26 1))
 		   (embark
@@ -1373,19 +1373,19 @@
 		 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		(:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (js2-mode .
-	   [(20201220)
+	   [(20211229)
 	    ((emacs
 	      (24 1))
 	     (cl-lib
 	      (0 5)))
 	    "Improved JavaScript editing mode" tar
 	    ((:url . "https://github.com/mooz/js2-mode/")
+	     (:keywords "languages" "javascript")
 	     (:maintainer "Steve Yegge" . "steve.yegge@gmail.com")
 	     (:authors
 	      ("Steve Yegge" . "steve.yegge@gmail.com")
 	      ("mooz" . "stillpedant@gmail.com")
-	      ("Dmitry Gutov" . "dgutov@yandex.ru"))
-	     (:keywords "languages" "javascript"))])
+	      ("Dmitry Gutov" . "dgutov@yandex.ru")))])
  (json-mode .
 	    [(0 2)
 	     ((emacs
@@ -2067,7 +2067,7 @@
 	       ("Scott Andrew Borton" . "scott@pp.htv.fi"))
 	      (:maintainer "John Darrington" . "john@darrington.wattle.id.au"))])
  (pyim .
-       [(4 0 2)
+       [(4 0 3)
 	((emacs
 	  (25 1))
 	 (async
@@ -2596,11 +2596,11 @@
 	    (:keywords "svg" "icons" "tags" "convenience")
 	    (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
  (svg-tag-mode .
-	       [(0 3 1)
+	       [(0 3 2)
 		((emacs
 		  (27 1))
 		 (svg-lib
-		  (0 3)))
+		  (0 2)))
 		"Replace keywords with SVG tags" tar
 		((:url . "https://github.com/rougier/svg-tag-mode")
 		 (:keywords "convenience")
