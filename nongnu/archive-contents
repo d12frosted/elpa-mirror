@@ -88,6 +88,33 @@
 	  ("Ian T Zimmerman" . "itz@rahul.net")
 	  ("Damien Doligez" . "damien.doligez@inria.fr"))
 	 (:keywords "ocaml"))])
+ (cider .
+	[(1 2 0)
+	 ((emacs
+	   (26))
+	  (clojure-mode
+	   (5 12))
+	  (parseedn
+	   (1 0 6))
+	  (queue
+	   (0 2))
+	  (spinner
+	   (1 7))
+	  (seq
+	   (2 22))
+	  (sesman
+	   (0 3 2)))
+	 "Clojure Interactive Development Environment that Rocks" tar
+	 ((:url . "http://www.github.com/clojure-emacs/cider")
+	  (:keywords "languages" "clojure" "cider")
+	  (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
+	  (:authors
+	   ("Tim King" . "kingtim@gmail.com")
+	   ("Phil Hagelberg" . "technomancy@gmail.com")
+	   ("Bozhidar Batsov" . "bozhidar@batsov.dev")
+	   ("Artur Malabarba" . "bruce.connor.am@gmail.com")
+	   ("Hugo Duncan" . "hugo@hugoduncan.org")
+	   ("Steve Purcell" . "steve@sanityinc.com")))])
  (clojure-mode .
 	       [(5 13 0)
 		((emacs
@@ -555,7 +582,7 @@
 		  (:authors
 		   ("Kelvin Smith" . "oneKelvinSmith@gmail.com")))])
  (mpv .
-      [(0 1 0)
+      [(0 2 0)
        ((cl-lib
 	 (0 5))
 	(emacs
@@ -567,9 +594,9 @@
        "control mpv for easy note-taking" tar
        ((:url . "https://github.com/kljohann/mpv.el")
 	(:keywords "tools" "multimedia")
-	(:maintainer "Johann Klähn" . "kljohann@gmail.com")
+	(:maintainer "Johann Klähn" . "johann@jklaehn.de")
 	(:authors
-	 ("Johann Klähn" . "kljohann@gmail.com")))])
+	 ("Johann Klähn" . "johann@jklaehn.de")))])
  (multiple-cursors .
 		   [(1 4 0)
 		    nil "Multiple cursors for emacs." tar
@@ -607,6 +634,30 @@
 		(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 		(:authors
 		 ("Bastien Guerry" . "bzg@gnu.org")))])
+ (parseclj .
+	   [(1 0 6)
+	    ((emacs
+	      (25)))
+	    "Clojure/EDN parser" tar
+	    ((:keywords "lisp" "clojure" "edn" "parser")
+	     (:maintainer "Arne Brasseur" . "arne@arnebrasseur.net")
+	     (:authors
+	      ("Arne Brasseur" . "arne@arnebrasseur.net"))
+	     (:url . "https://elpa.nongnu.org/nongnu/parseclj.html"))])
+ (parseedn .
+	   [(1 0 6)
+	    ((emacs
+	      (26))
+	     (parseclj
+	      (1 0 6))
+	     (map
+	      (2)))
+	    "Clojure/EDN parser" tar
+	    ((:keywords "lisp" "clojure" "edn" "parser")
+	     (:maintainer "Arne Brasseur" . "arne@arnebrasseur.net")
+	     (:authors
+	      ("Arne Brasseur" . "arne@arnebrasseur.net"))
+	     (:url . "https://elpa.nongnu.org/nongnu/parseedn.html"))])
  (pdf-tools .
 	    [(1 0)
 	     ((emacs
@@ -709,6 +760,16 @@
 	      nil "Major mode for editing Scala" tar
 	      ((:url . "https://github.com/hvesalai/emacs-scala-mode")
 	       (:keywords "languages"))])
+ (sesman .
+	 [(0 3 2)
+	  ((emacs
+	    (25)))
+	  "Generic Session Manager" tar
+	  ((:url . "https://github.com/vspinu/sesman")
+	   (:keywords "process")
+	   (:maintainer "Vitalie Spinu")
+	   (:authors
+	    ("Vitalie Spinu")))])
  (slime .
 	[(2 26 1)
 	 ((cl-lib
