@@ -1,0 +1,15 @@
+(consult-notmuch .
+		 [(20211228 2310)
+		  ((emacs
+		    (26 1))
+		   (consult
+		    (0 9))
+		   (notmuch
+		    (0 31)))
+		  "Notmuch search using consult" single
+		  ((:commit . "7cfe649489a2f490d099ce4e8bcd437262bf6dee")
+		   (:authors
+		    ("Jose A Ortega Ruiz" . "jao@gnu.org"))
+		   (:maintainer "Jose A Ortega Ruiz")
+		   (:keywords "mail")
+		   (:url . "https://codeberg.org/jao/consult-notmuch"))])
