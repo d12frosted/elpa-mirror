@@ -1,4 +1,4 @@
-This version of lsp-julia requires julia 1.3 to run.
+This version of lsp-julia requires julia 1.7 to run.
 Manual installation:
 
 (require 'julia-mode)

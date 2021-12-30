@@ -1,1 +1,1 @@
-; Treemacs icons for dired.  Code is based on all-the-icons-dired.el
+; Treemacs icons for Dired.  Code is based on all-the-icons-dired.el
