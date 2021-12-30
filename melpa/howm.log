@@ -4,10 +4,10 @@ Source:  https://scm.osdn.net/gitroot/howm/howm.git
 
 Updating /mnt/store/melpa/working/howm/
 Checking out origin/HEAD
-Checking out ffd7f5f921a4d83e2b86127d653ec87c3a3a6dac
+Checking out c381e50f0c771c38306bda37bd972a37a36a5db5
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/howm/
-  to /tmp/howmhn1FWe/howm-20211228.1145
+  to /tmp/howm6oRsn5/howm-20211230.1221
     action-lock.el -> action-lock.el
     bcomp.el -> bcomp.el
     cheat-font-lock.el -> cheat-font-lock.el
@@ -32,35 +32,37 @@ Copying files (->) and directories (=>)
     howm.el -> howm.el
     illusion.el -> illusion.el
     riffle.el -> riffle.el
-Created howm-20211228.1145.tar containing:
-  howm-20211228.1145/
-  howm-20211228.1145/action-lock.el
-  howm-20211228.1145/bcomp.el
-  howm-20211228.1145/cheat-font-lock.el
-  howm-20211228.1145/gfunc.el
-  howm-20211228.1145/honest-report.el
-  howm-20211228.1145/howm-backend.el
-  howm-20211228.1145/howm-common.el
-  howm-20211228.1145/howm-date.el
-  howm-20211228.1145/howm-lang-en.el
-  howm-20211228.1145/howm-lang-fr.el
-  howm-20211228.1145/howm-lang-ja.el
-  howm-20211228.1145/howm-menu-en.el
-  howm-20211228.1145/howm-menu-fr.el
-  howm-20211228.1145/howm-menu-ja.el
-  howm-20211228.1145/howm-menu.el
-  howm-20211228.1145/howm-misc.el
-  howm-20211228.1145/howm-mkmenu.el
-  howm-20211228.1145/howm-mode.el
-  howm-20211228.1145/howm-pkg.el
-  howm-20211228.1145/howm-reminder.el
-  howm-20211228.1145/howm-vars.el
-  howm-20211228.1145/howm-view.el
-  howm-20211228.1145/howm.el
-  howm-20211228.1145/illusion.el
-  howm-20211228.1145/riffle.el
-Built howm in 3.913s, finished at 2021-12-30T10:12:46+0000
+Created howm-20211230.1221.tar containing:
+  howm-20211230.1221/
+  howm-20211230.1221/action-lock.el
+  howm-20211230.1221/bcomp.el
+  howm-20211230.1221/cheat-font-lock.el
+  howm-20211230.1221/gfunc.el
+  howm-20211230.1221/honest-report.el
+  howm-20211230.1221/howm-backend.el
+  howm-20211230.1221/howm-common.el
+  howm-20211230.1221/howm-date.el
+  howm-20211230.1221/howm-lang-en.el
+  howm-20211230.1221/howm-lang-fr.el
+  howm-20211230.1221/howm-lang-ja.el
+  howm-20211230.1221/howm-menu-en.el
+  howm-20211230.1221/howm-menu-fr.el
+  howm-20211230.1221/howm-menu-ja.el
+  howm-20211230.1221/howm-menu.el
+  howm-20211230.1221/howm-misc.el
+  howm-20211230.1221/howm-mkmenu.el
+  howm-20211230.1221/howm-mode.el
+  howm-20211230.1221/howm-pkg.el
+  howm-20211230.1221/howm-reminder.el
+  howm-20211230.1221/howm-vars.el
+  howm-20211230.1221/howm-view.el
+  howm-20211230.1221/howm.el
+  howm-20211230.1221/illusion.el
+  howm-20211230.1221/riffle.el
+Built howm in 5.108s, finished at 2021-12-30T13:09:00+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  309 Dec 30 10:12 packages/howm-20211228.1145.entry
 452K -rw-r--r-- 1 root root 450K Dec 30 10:12 packages/howm-20211228.1145.tar
-4.0K -rw-r--r-- 1 root root 1.2K Dec 30 10:12 packages/howm-badge.svg
+4.0K -rw-r--r-- 1 root root  309 Dec 30 13:08 packages/howm-20211230.1221.entry
+452K -rw-r--r-- 1 root root 450K Dec 30 13:08 packages/howm-20211230.1221.tar
+4.0K -rw-r--r-- 1 root root 1.2K Dec 30 13:09 packages/howm-badge.svg

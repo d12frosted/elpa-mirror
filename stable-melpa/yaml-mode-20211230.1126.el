@@ -6,8 +6,8 @@
 ;;         Marshall T. Vandegrift <llasram@gmail.com>
 ;; Maintainer: Vasilij Schneidermann <mail@vasilij.de>
 ;; URL: https://github.com/yoshiki/yaml-mode
-;; Package-Version: 20211230.1031
-;; Package-Commit: 749a74cd4237a6886f97d179dca9d653ee98badf
+;; Package-Version: 20211230.1126
+;; Package-Commit: 0ca35e8a0e75756c7f062339f1aabe2dc37bccf1
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: data yaml
 ;; Version: 0.0.15
@@ -105,8 +105,8 @@ that key is pressed to begin a block literal."
   :group 'yaml)
 
 (defface yaml-tab-face
-   '((((class color)) (:background "red" :foreground "red" :bold t))
-     (t (:reverse-video t)))
+  '((((class color)) (:background "red" :foreground "red" :bold t))
+    (t (:reverse-video t)))
   "Face to use for highlighting tabs in YAML files."
   :group 'faces
   :group 'yaml)
@@ -245,7 +245,7 @@ that key is pressed to begin a block literal."
     (,yaml-document-delimiter-re . (0 font-lock-comment-face))
     (,yaml-directive-re . (1 font-lock-builtin-face))
     ("^[\t]+" 0 'yaml-tab-face t))
-   "Additional expressions to highlight in YAML mode.")
+  "Additional expressions to highlight in YAML mode.")
 
 (defun yaml-mode-syntax-propertize-function (beg end)
   "Override buffer's syntax table for special syntactic constructs."
@@ -433,27 +433,27 @@ otherwise do nothing."
     (while (and (looking-at-p yaml-blank-line-re) (not (bobp)))
       (forward-line -1))
     (let ((nlines yaml-block-literal-search-lines)
-	  (min-level (current-indentation))
-	  beg)
+          (min-level (current-indentation))
+          beg)
       (forward-line -1)
       (while (and (/= nlines 0)
-		  (/= min-level 0)
-		  (not (looking-at-p yaml-block-literal-re))
-		  (not (bobp)))
-	(setq nlines (1- nlines))
-	(unless (looking-at-p yaml-blank-line-re)
-	  (setq min-level (min min-level (current-indentation))))
-	(forward-line -1))
+                  (/= min-level 0)
+                  (not (looking-at-p yaml-block-literal-re))
+                  (not (bobp)))
+        (setq nlines (1- nlines))
+        (unless (looking-at-p yaml-blank-line-re)
+          (setq min-level (min min-level (current-indentation))))
+        (forward-line -1))
       (when (and (< (current-indentation) min-level)
                  (looking-at-p yaml-block-literal-re))
-	(setq min-level (current-indentation))
-	(forward-line)
-	(setq beg (point))
-	(while (and (not (eobp))
-		    (or (looking-at-p yaml-blank-line-re)
-			(> (current-indentation) min-level)))
-	  (forward-line))
-	(narrow-to-region beg (point))))))
+        (setq min-level (current-indentation))
+        (forward-line)
+        (setq beg (point))
+        (while (and (not (eobp))
+                    (or (looking-at-p yaml-blank-line-re)
+                        (> (current-indentation) min-level)))
+          (forward-line))
+        (narrow-to-region beg (point))))))
 
 (defun yaml-fill-paragraph (&optional justify region)
   "Fill paragraph.

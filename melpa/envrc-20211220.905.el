@@ -4,7 +4,7 @@
 
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: processes, tools
-;; Package-Commit: fc23f4f342ee100a865b50bb5bd9a54681a6387e
+;; Package-Commit: 891ed146099b2d8c2c207c262f483ca95ad4954c
 ;; Homepage: https://github.com/purcell/envrc
 ;; Package-Requires: ((seq "2") (emacs "24.4") (inheritenv "0.1"))
 ;; Package-Version: 20211220.905
