@@ -64,6 +64,12 @@ Features
   • Sort and re-number subtitles and remove any extra spaces and
     newlines (`M-s').  This is done automatically every time the buffer
     is saved.
+  • Trim subtitle overlaps with `M-x subed-trim-overlaps'. By default,
+    this adjusts the stop time of overlapping subtitles to
+    `subed-subtitle-spacing' milliseconds before the next subtitle
+    starts. Use `M-x customize-group' `subed' to configure trimming to
+    happen automatically when buffers are loaded or saved, which time is
+    adjusted, and how much time to leave between subtitles.
 
 
 mpv integration (optional)
@@ -95,10 +101,24 @@ mpv integration (optional)
 Installation
 ────────────
 
-  `subed' is now on [NonGNU ELPA].  You may be able to install it with
-  `M-x package-install' `subed'.  If not, you can install it manually.
-  For example, copy `subed/*.el' to `$HOME/.emacs.d/elisp/' and add
-  `$HOME/.emacs.d/elisp/' to your `load-path'.
+  `subed' is now on [NonGNU ELPA].  On Emacs 28 and later, you can
+  install it with `M-x package-install' `subed'.
+
+  To install it on Emacs 27 or earlier, add the following to your Emacs
+  configuration file:
+
+  ┌────
+  │ (with-eval-after-load 'package (add-to-list 'package-archives '("nongnu" . "https://elpa.nongnu.org/nongnu/")))
+  └────
+
+  Use `M-x eval-buffer' to run the code, and then use `M-x
+  package-install' `subed'.
+
+  If that doesn't work, you can install it manually.  For example, copy
+  `subed/*.el' to
+
+  `$HOME/.emacs.d/elisp/' and add `$HOME/.emacs.d/elisp/' to your
+  `load-path'.
 
   Here's some sample code for manual installation:
 

@@ -1905,7 +1905,7 @@
 	     (:authors
 	      ("Tyler Grinn" . "tylergrinn@gmail.com")))])
  (org-transclusion .
-		   [(1 1 0)
+		   [(1 1 1)
 		    ((emacs
 		      (27 1))
 		     (org
@@ -2704,7 +2704,7 @@
 	  ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	 (:keywords "convenience"))])
  (tramp .
-	[(2 5 1 5)
+	[(2 5 2)
 	 ((emacs
 	   (25 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
