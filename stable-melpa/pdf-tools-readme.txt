@@ -47,7 +47,7 @@ Features:
   back to the PDF file.
 
 * Attachments
-  Save files attached to the PDF-file or list them in a dired buffer.
+  Save files attached to the PDF-file or list them in a Dired buffer.
 
 * Outline
   Use imenu or a special buffer to examine and navigate the PDF's
