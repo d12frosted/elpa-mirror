@@ -14,6 +14,7 @@ Table of Contents
 .. 2. Completion-at-point and completion-in-region
 .. 3. Completing-read-multiple (CRM)
 5. Extensions
+.. 1. Configure Vertico per command or completion category
 6. Complementary packages
 7. Child frames and Popups
 8. Alternatives
@@ -64,7 +65,7 @@ Table of Contents
     `affixation-function')
   • Support for grouping and group cycling commands (`group-function')
 
-  <https://github.com/minad/vertico/blob/main/screenshot.svg?raw=true>
+  <https://github.com/minad/vertico/blob/screenshots/vertico-mx.png?raw=true>
 
 
 3 Key bindings
@@ -165,12 +166,21 @@ Table of Contents
   │   (setq enable-recursive-minibuffers t))
   └────
 
-  See also the [Vertico Wiki] for additional configuration tips.
+  See also the [Vertico Wiki] for additional configuration tips. For
+  more general documentation read the chapter about completion in the
+  [Emacs manual]. If you want to create your own completion commands,
+  you can find documentation about completion in the [Elisp manual].
 
 
 [GNU ELPA] <http://elpa.gnu.org/packages/vertico.html>
 
 [Vertico Wiki] <https://github.com/minad/vertico/wiki>
+
+[Emacs manual]
+<https://www.gnu.org/software/emacs/manual/html_node/emacs/Completion.html>
+
+[Elisp manual]
+<https://www.gnu.org/software/emacs/manual/html_node/elisp/Completion.html>
 
 4.1 Completion styles and TAB completion
 ────────────────────────────────────────
@@ -281,32 +291,37 @@ Table of Contents
   ELPA package:
 
   • [vertico-buffer]: `vertico-buffer-mode' to display Vertico in a
-    separate buffer
-  • [vertico-directory]: Commands for Ido-like directory navigation
+    separate buffer.
+  • [vertico-directory]: Commands for Ido-like directory navigation.
   • [vertico-flat]: `vertico-flat-mode' to enable a flat, horizontal
-    display
-  • [vertico-grid]: `vertico-grid-mode' to enable a grid display
+    display.
+  • [vertico-grid]: `vertico-grid-mode' to enable a grid display.
   • [vertico-indexed]: `vertico-indexed-mode' to select indexed
-    candidates with prefix arguments
+    candidates with prefix arguments.
   • [vertico-mouse]: `vertico-mouse-mode' to support for scrolling and
-    candidate selection
-  • [vertico-quick]: Commands to select using Avy-style quick keys
+    candidate selection.
+  • [vertico-multiform]: Configure Vertico modes per command or
+    completion category.
+  • [vertico-quick]: Commands to select using Avy-style quick keys.
   • [vertico-repeat]: The command `vertico-repeat' repeats the last
-    completion session
-  • [vertico-reverse]: `vertico-reverse-mode' to reverse the display
+    completion session.
+  • [vertico-reverse]: `vertico-reverse-mode' to reverse the display.
 
   With these extensions it is possible to adapt Vertico such that it
   matches your preference or behaves similar to other familiar UIs. For
   example, the combination `vertico-flat' plus `vertico-directory'
   resembles Ido in look and feel. For an interface similar to Helm, the
-  extension `vertico-buffer' allows you to configure more freely where
-  the completion buffer opens, instead of growing the minibuffer.
+  extension `vertico-buffer' allows you to configure freely where the
+  completion buffer opens, instead of growing the
+  minibuffer. Furthermore `vertico-buffer' will adjust the number of
+  displayed candidates according to the buffer height.
 
   Configuration example for `vertico-directory':
 
   ┌────
   │ ;; Configure directory extension.
   │ (use-package vertico-directory
+  │   :after vertico
   │   :ensure nil
   │   ;; More convenient directory navigation commands
   │   :bind (:map vertico-map
@@ -338,6 +353,9 @@ Table of Contents
 [vertico-mouse]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-mouse.el>
 
+[vertico-multiform]
+<https://github.com/minad/vertico/blob/main/extensions/vertico-multiform.el>
+
 [vertico-quick]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-quick.el>
 
@@ -346,6 +364,108 @@ Table of Contents
 
 [vertico-reverse]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-reverse.el>
+
+5.1 Configure Vertico per command or completion category
+────────────────────────────────────────────────────────
+
+  <https://github.com/minad/vertico/blob/screenshots/vertico-ripgrep.png?raw=true>
+
+  Vertico offers the `vertico-multiform-mode' which allows you to
+  configure Vertico per command or per completion category. The
+  `vertico-buffer-mode' enables a Helm-like buffer display, which takes
+  more space but also displays more candidates. This verbose display
+  mode is useful for commands like `consult-imenu' or `consult-outline'
+  since the buffer display allows you to get a better overview over the
+  entire current buffer. But for other commands you want to keep using
+  the default Vertico display. `vertico-multiform-mode' solves this
+  configuration problem!
+
+  ┌────
+  │ ;; Enable vertico-multiform
+  │ (vertico-multiform-mode)
+  │ 
+  │ ;; Configure the display per command.
+  │ ;; Use a buffer with indices for imenu
+  │ ;; and a flat (Ido-like) menu for M-x.
+  │ (setq vertico-multiform-command-modes
+  │       '((consult-imenu buffer indexed)
+  │ 	(execute-extended-command flat)))
+  │ 
+  │ ;; Configure the display per completion category.
+  │ ;; Use the grid display for files and a buffer
+  │ ;; for the consult-grep commands.
+  │ (setq vertico-multiform-category-modes
+  │       '((file grid)
+  │ 	(consult-grep buffer)))
+  └────
+
+  You can use your own functions or even lambdas to configure the
+  completion behavior per command or per completion category. The
+  function must have the calling convention of a mode, i.e., it takes a
+  single argument, which is either 1 to turn on the mode and -1 to turn
+  off the mode.
+
+  ┌────
+  │ ;; Configure `consult-outline' as a scaled down TOC in a separate buffer
+  │ (setq vertico-multiform-command-modes
+  │       `((consult-outline buffer ,(lambda (_) (text-scale-set -1)))))
+  └────
+
+  Furthermore you can tune buffer-local settings per command (or
+  category).
+
+  ┌────
+  │ ;; Change the default sorting function
+  │ (setq vertico-multiform-command-settings
+  │       '((describe-symbol (vertico-sort-function . vertico-sort-alpha))))
+  │ 
+  │ (setq vertico-multiform-category-settings
+  │       '((symbol (vertico-sort-function . vertico-sort-alpha))
+  │ 	(file (vertico-sort-function . sort-directories-first))))
+  │ 
+  │ ;; Sort directories before files
+  │ (defun sort-directories-first (files)
+  │   (setq files (vertico-sort-history-length-alpha files))
+  │   (nconc (seq-filter (lambda (x) (string-suffix-p "/" x)) files)
+  │ 	 (seq-remove (lambda (x) (string-suffix-p "/" x)) files)))
+  └────
+
+  As another example, the following code uses `vertico-flat' and
+  `vertico-cycle' to emulate `(ido-mode 'buffer)', i.e. Ido when it is
+  enabled only for completion of buffer names. `vertico-cycle' set to
+  `t' is necessary here to prevent completion candidates from
+  disappearing when they scroll off-screen to the left.
+
+  ┌────
+  │ (setq vertico-multiform-category-modes
+  │       '((buffer flat)))
+  │ 
+  │ (setq vertico-multiform-category-settings
+  │       '((buffer (vertico-cycle . t))))
+  └────
+
+  Combining these features allows us to fine-tune the completion display
+  even more by adjusting the `vertico-buffer-display-action'. We can for
+  example reuse the current window for commands of the `consult-grep'
+  category (`consult-grep', `consult-git-grep' and
+  `consult-ripgrep'). Note that this configuration is incompatible with
+  Consult preview, since the previewed buffer is usually shown in
+  exactly this window. Nevertheless this snippet demonstrates the
+  flexibility of the configuration system.
+
+  ┌────
+  │ ;; Configure the display action
+  │ (setq vertico-multiform-category-settings
+  │       '((consult-grep
+  │ 	 (vertico-buffer-display-action . (display-buffer-same-window)))))
+  │ 
+  │ ;; Configure the buffer display
+  │ (setq vertico-multiform-category-modes
+  │       '((consult-grep buffer)))
+  │ 
+  │ ;; Disable preview for consult-grep commands
+  │ (consult-customize consult-ripgrep consult-git-grep consult-grep :preview-key nil)
+  └────
 
 
 6 Complementary packages
@@ -504,17 +624,32 @@ Table of Contents
   path in steps, when `org-refile-use-outline-path' is non-nil.
 
   Unfortunately the implementation of this Org completion table assumes
-  that the default completion UI is used. In order to fix the issue at
-  the root, the completion table should make use of completion
-  boundaries similar to the built-in file completion table.
-
-  In order to workaround the issues with the current implementation I
-  recommend to disable the outline path completion in steps. The
-  completion on the full path is also faster since the input string
-  matches directly against the full path, which is particularily useful
-  with Orderless.
+  that the `basic' completion style is used. The table is incompatible
+  with completion styles like `substring', `flex' or `orderless'. In
+  order to fix the issue at the root, the completion table should make
+  use of completion boundaries similar to the built-in file completion
+  table. In your user configuration you can prioritize `basic' before
+  `orderless:'
 
   ┌────
+  │ ;; Alternative 1: Use the basic completion style
+  │ (setq org-refile-use-outline-path 'file
+  │       org-outline-path-complete-in-steps t)
+  │ (advice-add #'org-olpath-completing-read :around
+  │ 	    (lambda (&rest args)
+  │ 	      (minibuffer-with-setup-hook
+  │ 		  (lambda () (setq-local completion-styles '(basic)))
+  │ 		(apply args))))
+  └────
+
+  Alternatively you may want to disable the outline path completion in
+  steps.  The completion on the full path can be quicker since the input
+  string matches directly against substrings of the full path, which is
+  useful with Orderless.  However the list of possible completions
+  becomes much more cluttered.
+
+  ┌────
+  │ ;; Alternative 2: Complete full paths
   │ (setq org-refile-use-outline-path 'file
   │       org-outline-path-complete-in-steps nil)
   └────

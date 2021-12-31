@@ -42,9 +42,10 @@ Table of Contents
   Capfs are mostly sufficient, but a few additional Capfs and completion
   functions are provided by the [Cape] package.
 
-  *NOTE*: Corfu uses child frames to show the popup; on non-graphical
-  displays it will fall back to the default setting of the
-  `completion-in-region-function'.
+  *NOTE*: Corfu uses child frames to show the popup. For now Corfu falls
+  back to the default setting of the `completion-in-region-function' on
+  non-graphical displays. You may want to use
+  `consult-completion-in-region'.
 
   <https://github.com/minad/corfu/blob/screenshots/light.png?raw=true>
 
@@ -167,10 +168,21 @@ Table of Contents
   │   (setq tab-always-indent 'complete))
   └────
 
+  See also the [Corfu Wiki] for additional configuration tips. For more
+  general documentation read the chapter about completion in the [Emacs
+  manual]. If you want to create your own Capfs, you can find
+  documentation about completion in the [Elisp manual].
+
 
 [GNU ELPA] <http://elpa.gnu.org/packages/corfu.html>
 
 [Corfu Wiki] <https://github.com/minad/corfu/wiki>
+
+[Emacs manual]
+<https://www.gnu.org/software/emacs/manual/html_node/emacs/Completion.html>
+
+[Elisp manual]
+<https://www.gnu.org/software/emacs/manual/html_node/elisp/Completion.html>
 
 3.1 TAB-and-Go completion
 ─────────────────────────
@@ -224,21 +236,35 @@ Table of Contents
 ════════════════════════
 
   Corfu works well together with all packages providing code completion
-  via the `completion-at-point-functions'. Furthermore it supports
-  completion styles, including the advanced [Orderless] completion
-  style, where the filtering expressions are separated by spaces (see
-  `corfu-quit-at-boundary').
+  via the `completion-at-point-functions'. Many modes and packages
+  already provide a Capf out of the box. Nevertheless you may want to
+  look into complementary packages to enhance your setup.
 
-  I collect additional Capf backends and `completion-in-region' commands
-  in my small [Cape] package. For example the package provides a file
-  name and a dabbrev completion backend.
+  • [Orderless]: Cofu supports completion styles, including the advanced
+    [Orderless] completion style, where the filtering expressions are
+    separated by spaces (see `corfu-quit-at-boundary').
 
-  Icons are supported by Corfu via an external package. For example the
-  [kind-icon] package provides beautifully styled SVG icons based on
-  monochromatic icon sets like material design.
+  • [Cape]: I collect additional Capf backends and
+    `completion-in-region' commands in my [Cape] package. The package
+    provides a file path, a dabbrev completion backend and a backend
+    which allows you to enter unicode characters in the form of TeX
+    commands. Cape provides an adapter to reuse Company backends in
+    Corfu. Furthermore the function `cape-super-capf' can merge/groups
+    multiple Capfs, such that the candidates of multiple Capfs are
+    displayed together at the same time.
 
-  You may also want to look into my [Vertico] package. Vertico is the
-  minibuffer counterpart of Corfu.
+  • [kind-icon]: Icons are supported by Corfu via an external
+    package. For example the [kind-icon] package provides beautifully
+    styled SVG icons based on monochromatic icon sets like material
+    design.
+
+  • [corfu-doc]: The corfu-doc package by @galeo allows you to display
+    the candidate documentation in a popup next to the Corfu popup,
+    similar to `company-quickhelp'. /Note that the corfu-doc package is
+    new and still work in progress./
+
+  • [Vertico]: You may also want to look into my [Vertico]
+    package. Vertico is the minibuffer completion counterpart of Corfu.
 
 
 [Orderless] <https://github.com/oantolin/orderless>
@@ -246,6 +272,8 @@ Table of Contents
 [Cape] <https://github.com/minad/cape>
 
 [kind-icon] <https://github.com/jdtsmith/kind-icon>
+
+[corfu-doc] <https://github.com/galeo/corfu-doc>
 
 [Vertico] <https://github.com/minad/vertico>
 
@@ -256,19 +284,13 @@ Table of Contents
   Corfu is robust in most scenarios. There are a few known technical
   caveats.
 
-  • Corfu falls back to the default Completion buffer on non-graphical
-    displays, since Corfu requires child frames.
-  • No sorting by history, since `completion-at-point' does not maintain
-    a history (See branch `history' for a possible solution).
-  • There is currently no equivalent for
-    `company-quickhelp'. Documentation and source can be opened manually
-    in a separate buffer.
-  • Company has the ability to merge/group the candidates of multiple
-    backends in some scenarios. This feature is implemented by the
-    function `cape-super-capf' of the [Cape] package.
+  • Corfu uses child frames to show the popup. For now Corfu falls back
+    to the default setting of the `completion-in-region-function' on
+    non-graphical displays. You may want to use
+    `consult-completion-in-region'.
 
-
-[Cape] <https://github.com/minad/cape>
+  • Corfu does not sort by history, since `completion-at-point' does not
+    maintain a history (See branch `history' for a possible solution).
 
 
 7 Contributions

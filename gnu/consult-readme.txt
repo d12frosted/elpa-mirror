@@ -74,8 +74,8 @@ Table of Contents
   with annotations, e.g., documentation strings or file information. The
   versatile Embark package provides local actions, comparable to a
   context menu. These actions operate on the selected candidate in the
-  minibuffer or in other contexts. For example, when selecting from a
-  list of files, Embark offers an action to delete the file.
+  minibuffer or at point in normal buffers. For example, when selecting
+  from a list of files, Embark offers an action to delete the file.
   Additionally Embark offers a completion system by itself through its
   live-updating collect buffer. The section [Embark integration]
   documents in greater detail how Consult and Embark work together.
@@ -149,10 +149,10 @@ Table of Contents
       `consult-project-root-function' as shown in the [example
       configuration]).
     • Arbitrary [other sources] configured in `consult-buffer-sources'.
-  • `consult-bookmark': Select or create bookmark. You might use the
-    powerful `consult-buffer' as an alternative, which can include a
-    bookmark virtual buffer source. But note that `consult-bookmark'
-    supports preview of bookmarks and narrowing.
+  • `consult-bookmark': Select or create bookmark. To select bookmarks
+    you might use the `consult-buffer' as an alternative, which can
+    include a bookmark virtual buffer source. Note that
+    `consult-bookmark' supports preview of bookmarks and narrowing.
   • `consult-recent-file': Select from recent files with preview.  You
     might prefer the powerful `consult-buffer' instead, which can
     include recent files as a virtual buffer source. The `recentf-mode'
@@ -273,13 +273,15 @@ Table of Contents
     `consult-async-min-input' characters, the search gets
     started. Consult splits the input string into two parts, if the
     first character is a punctuation character, like `#'. For example
-    `#grep-regexps#filter-string', is split at the second `#'. The
-    string `grep-regexps' is passed to Grep. If you enter multiple
-    regular expressions separated by space only lines matching all
-    regular expressions are shown. In order to match space literally,
-    escape the space with a backslash. The `filter-string' is passed to
-    the /fast/ Emacs filtering to further narrow down the list of
-    matches. This is particularly useful if you are using an advanced
+    `#regexps#filter-string', is split at the second `#'. The string
+    `regexps' is passed to Grep. Note that Consult transforms Emacs
+    regular expressions to expressions understand by the search
+    program. Always use Emacs regular expressions at the prompt. If you
+    enter multiple regular expressions separated by space only lines
+    matching all regular expressions are shown. In order to match space
+    literally, escape the space with a backslash. The `filter-string' is
+    passed to the /fast/ Emacs filtering to further narrow down the list
+    of matches. This is particularly useful if you are using an advanced
     completion style like orderless. `consult-grep' supports preview. If
     the `consult-project-root-function' is [configured] and returns
     non-nil, `consult-grep' searches the current project
@@ -379,10 +381,10 @@ Table of Contents
     will be used for `completion-at-point'. This function is
     particularly useful in combination with Vertico or Icomplete, since
     these UIs do not provide their own
-    `completion-in-region-function'. Selectrum already comes with its
-    own function similar to `consult-completion-in-region'. If you use
-    the default `*Completions*' UI, note that
-    `consult-completion-in-region' is not useful.
+    `completion-in-region-function'. Selectrum provides its own function
+    similar to `consult-completion-in-region'. If you use the default
+    `*Completions*' UI, note that `consult-completion-in-region' is not
+    useful.
     ┌────
     │ ;; Use `consult-completion-in-region' if Vertico is enabled.
     │ ;; Otherwise use the default `completion--in-region' function.
@@ -447,8 +449,8 @@ Table of Contents
   configure each command individually with its own `:preview-key'. The
   following settings are possible:
 
-  • Automatic and immediate `any'
-  • Automatic and delayed `(:debounce 0.5 any)'
+  • Automatic and immediate `'any'
+  • Automatic and delayed `(list :debounce 0.5 'any)'
   • Manual and immediate `(kbd "M-.")'
   • Manual and delayed `(list :debounce 0.5 (kbd "M-."))'
   • Disabled `nil'
@@ -461,7 +463,7 @@ Table of Contents
   │ (consult-customize
   │  consult-ripgrep consult-git-grep consult-grep
   │  consult-bookmark consult-recent-file consult-xref
-  │  consult--source-file consult--source-project-file consult--source-bookmark
+  │  consult--source-recent-file consult--source-project-recent-file consult--source-bookmark
   │  :preview-key (kbd "M-."))
   └────
 
@@ -487,7 +489,7 @@ Table of Contents
   │ 		   :preview-key
   │ 		   (list (kbd "M-.")
   │ 			 :debounce 0.5 (kbd "<up>") (kbd "<down>")
-  │ 			 :debounce 1 any))
+  │ 			 :debounce 1 'any))
   └────
 
 
@@ -499,8 +501,7 @@ Table of Contents
 
   Consult has special support for candidate groups. If the completion UI
   supports the grouping functionality, the UI separates the groups with
-  thin lines and shows group titles. As of now, Vertico, Selectrum and
-  Icomplete-vertical provide support. Grouping is useful if the list of
+  thin lines and shows group titles. Grouping is useful if the list of
   candidates consists of candidates of multiple types or candidates from
   [multiple sources], like the `consult-buffer' command, which shows
   both buffers and recently opened files.  Note that you can disable the
@@ -540,8 +541,8 @@ Table of Contents
   Consult has support for asynchronous generation of candidate
   lists. This feature is used for search commands like `consult-grep',
   where the list of matches is generated dynamically while the user is
-  typing a grep regular expression. The grep process is executed in the
-  background. When modifying the grep regular expression, the background
+  typing a regular expression.  The grep process is executed in the
+  background. When modifying the regular expression, the background
   process is terminated and a new process is started with the modified
   regular expression.
 
@@ -567,8 +568,12 @@ Table of Contents
   Examples:
 
   • `#defun': Search for "defun" using grep.
-  • `#consult embark': Search for both "consult" and "embark" using
+  • `#consult embark': Search for both "consult" and "embark" using grep
+    in any order.
+  • `#first.*second': Search for "first" followed by "second" using
     grep.
+  • `#\(consult\|embark\)': Search for "consult" or "embark" using
+    grep. Note the usage of Emacs-style regular expressions.
   • `#defun#consult': Search for "defun" using grep, filter with the
     word "consult".
   • `/defun/consult': It is also possible to use other punctuation
@@ -619,7 +624,7 @@ Table of Contents
   Required source fields:
   • `:category' Completion category.
   • `:items' List of strings to select from or function returning list
-    of strings.
+    of strings.  A list of cons cells is not supported.
 
   Optional source fields:
   • `:name' Name of the source, used for narrowing, group titles and
@@ -668,7 +673,7 @@ Table of Contents
 
   ┌────
   │ (consult-customize
-  │  consult--source-file consult--source-project-file consult--source-bookmark
+  │  consult--source-recent-file consult--source-project-recent-file consult--source-bookmark
   │  :preview-key (kbd "M-."))
   └────
 
@@ -772,13 +777,15 @@ Table of Contents
   `occur-edit-mode' (press key `e'). Similarly, Embark supports
   exporting the matches found by `consult-grep', `consult-ripgrep' and
   `consult-git-grep' to a Grep buffer, where the matches across files
-  can be edited, if the [wgrep] package is installed. The two workflows
-  are symmetric.
+  can be edited, if the [wgrep] package is installed. These three
+  workflows are symmetric.
 
   ⁃ `consult-line' -> `embark-export' to `occur-mode' buffer ->
     `occur-edit-mode' for editing of matches in buffer.
   ⁃ `consult-grep' -> `embark-export' to `grep-mode' buffer -> `wgrep'
     for editing of all matches.
+  ⁃ `consult-find' -> `embark-export' to `dired-mode' buffer ->
+    `wdired-change-to-wdired-mode' for editing.
 
 
 [Embark manual] <https://github.com/oantolin/embark>
@@ -833,13 +840,13 @@ Table of Contents
   │   :bind (;; C-c bindings (mode-specific-map)
   │ 	 ("C-c h" . consult-history)
   │ 	 ("C-c m" . consult-mode-command)
-  │ 	 ("C-c b" . consult-bookmark)
   │ 	 ("C-c k" . consult-kmacro)
   │ 	 ;; C-x bindings (ctl-x-map)
   │ 	 ("C-x M-:" . consult-complex-command)     ;; orig. repeat-complex-command
   │ 	 ("C-x b" . consult-buffer)                ;; orig. switch-to-buffer
   │ 	 ("C-x 4 b" . consult-buffer-other-window) ;; orig. switch-to-buffer-other-window
   │ 	 ("C-x 5 b" . consult-buffer-other-frame)  ;; orig. switch-to-buffer-other-frame
+  │ 	 ("C-x r b" . consult-bookmark)            ;; orig. bookmark-jump
   │ 	 ;; Custom M-# bindings for fast register access
   │ 	 ("M-#" . consult-register-load)
   │ 	 ("M-'" . consult-register-store)          ;; orig. abbrev-prefix-mark (unrelated)
@@ -858,8 +865,8 @@ Table of Contents
   │ 	 ("M-g i" . consult-imenu)
   │ 	 ("M-g I" . consult-imenu-multi)
   │ 	 ;; M-s bindings (search-map)
-  │ 	 ("M-s f" . consult-find)
-  │ 	 ("M-s F" . consult-locate)
+  │ 	 ("M-s d" . consult-find)
+  │ 	 ("M-s D" . consult-locate)
   │ 	 ("M-s g" . consult-grep)
   │ 	 ("M-s G" . consult-git-grep)
   │ 	 ("M-s r" . consult-ripgrep)
@@ -876,9 +883,9 @@ Table of Contents
   │ 	 ("M-s l" . consult-line)                  ;; needed by consult-line to detect isearch
   │ 	 ("M-s L" . consult-line-multi))           ;; needed by consult-line to detect isearch
   │ 
-  │   ;; Enable automatic preview at point in the *Completions* buffer.
-  │   ;; This is relevant when you use the default completion UI,
-  │   ;; and not necessary for Vertico, Selectrum, etc.
+  │   ;; Enable automatic preview at point in the *Completions* buffer. This is
+  │   ;; relevant when you use the default completion UI. You may want to also
+  │   ;; enable `consult-preview-at-point-mode` in Embark Collect buffers.
   │   :hook (completion-list-mode . consult-preview-at-point-mode)
   │ 
   │   ;; The :init configuration is always executed (Not lazy)
@@ -917,7 +924,7 @@ Table of Contents
   │    :preview-key '(:debounce 0.2 any)
   │    consult-ripgrep consult-git-grep consult-grep
   │    consult-bookmark consult-recent-file consult-xref
-  │    consult--source-file consult--source-project-file consult--source-bookmark
+  │    consult--source-recent-file consult--source-project-recent-file consult--source-bookmark
   │    :preview-key (kbd "M-."))
   │ 
   │   ;; Optionally configure the narrowing key.
@@ -994,6 +1001,7 @@ Table of Contents
    consult-preview-max-size          Files larger than this size are not previewed         
    consult-preview-raw-size          Files larger than this size are previewed in raw form 
    consult-project-root-function     Function which returns current project root           
+   consult-recent-file-filter        Filter for `consult-recent-file'                      
    consult-register-narrow           Narrowing configuration for `consult-register'        
    consult-ripgrep-args              Command line arguments for ripgrep                    
    consult-themes                    List of themes to be presented for selection          
@@ -1065,7 +1073,7 @@ Table of Contents
 5 Recommended packages
 ══════════════════════
 
-  I personally use and recommended this combination of packages:
+  I use and recommend this combination of packages:
 
   • consult: This package
   • [vertico]: Fast and minimal vertical completion system
@@ -1075,9 +1083,9 @@ Table of Contents
   • [orderless]: Completion style which offers flexible candidate
     filtering
 
-  There exist other completion UIs beside Vertico, which are supported
-  by Consult.  Give them a try and find out which interaction model fits
-  best for you!
+  There exist many other fine completion UIs beside Vertico, which are
+  supported by Consult. Give them a try and find out which interaction
+  model fits best for you!
 
   • [selectrum by Radon Rosborough]: Alternative vertical completion
     system.
@@ -1093,7 +1101,6 @@ Table of Contents
   packages in the wider Emacs ecosystem. You may want to install some of
   theses packages depending on your preferences and requirements.
 
-  • [consult-bibtex]: Consult interface for bibliographies.
   • [consult-company]: Completion at point using the company backends.
   • [consult-dir]: Directory jumper using Consult multi sources.
   • [consult-eglot]: Integration with eglot (lsp client).
@@ -1117,10 +1124,12 @@ Table of Contents
 
   • [corfu]: Completion systems for `completion-at-point' using small
     popups (Alternative to [company]).
+  • [cape]: Completion At Point Extensions, which can be used with
+    `consult-completion-in-region' and [Corfu].
   • [bookmark-view]: Store window configuration as bookmarks, possible
     integration with `consult-buffer'.
-  • [citar]: Versatile package for citation insertion and
-    bibliographies.
+  • [citar]: Versatile package for citation insertion and bibliography
+    management.
   • [flyspell-correct]: Apply spelling corrections by selecting via
     `completing-read'.
   • [wgrep]: Editing of grep buffers, use together with `consult-grep'
@@ -1155,8 +1164,6 @@ Table of Contents
 
 [mct by Protesilaos Stavrou] <https://gitlab.com/protesilaos/mct>
 
-[consult-bibtex] <https://github.com/mohkale/consult-bibtex>
-
 [consult-company] <https://github.com/mohkale/consult-company>
 
 [consult-dir] <https://github.com/karthink/consult-dir>
@@ -1187,6 +1194,10 @@ Table of Contents
 
 [company] <https://github.com/company-mode/company-mode>
 
+[cape] <https://github.com/minad/cape>
+
+[Corfu] <https://github.com/minad/corfu>
+
 [bookmark-view] <https://github.com/minad/bookmark-view>
 
 [citar] <https://github.com/bdarcus/citar>
@@ -1206,12 +1217,13 @@ Table of Contents
   please carry out the following steps:
 
   1. *Update all the relevant packages to the newest version*.  This
-     includes Consult, Vertico, Selectrum, Icomplete-vertical,
+     includes Consult, Vertico, Mct, Selectrum, Icomplete-vertical,
      Marginalia, Embark, Orderless and Prescient in case you are using
      any of those packages.
-  2. Ensure that one of `vertico-mode', `selectrum-mode' or
-     `icomplete-mode' is enabled.  Furthermore both `ivy-mode' and
-     `helm-mode' must be disabled.
+  2. Either use the default completion UI or ensure that exactly one of
+     `vertico-mode', `selectrum-mode', `mct-mode', or `icomplete-mode'
+     is enabled.  Furthermore `ivy-mode' and `helm-mode' must be
+     disabled.
   3. Ensure that the `completion-styles' variable is properly
      configured. Try to set `completion-styles' to a list including
      `substring' or `orderless'.
@@ -1242,10 +1254,13 @@ Table of Contents
   report:
 
   • The minimal configuration snippet used to reproduce the issue.
+  • Your completion UI (Default completion, Vertico, Mct, Selectrum or
+    Icomplete).
   • The full stack trace in case the bug triggers an exception.
-  • Your Emacs version, since bugs are often version-dependent.
-  • Your operating system, since Emacs builds vary between Linux, Mac
-    and Windows.
+  • Your Emacs version, since bugs may be fixed or introduced in newer
+    versions.
+  • Your operating system, since Emacs behavior varies between Linux,
+    Mac and Windows.
   • The package manager, e.g., straight.el or package.el, used to
     install the Emacs packages, in order to exclude update issues. Did
     you install Consult as part of the Doom or Spacemacs Emacs
@@ -1282,9 +1297,11 @@ Table of Contents
   contributions require a copyright assignment to the FSF.
 
   If you have a proposal, take a look at the [Consult issue tracker] and
-  the [Consult wishlist]. There exists a rich set of prior feature
-  discussions. You can contribute to the [Consult wiki], in case you
-  want to share small configuration or command snippets.
+  the [Consult wishlist]. There have been many prior feature
+  discussions. Please search through the issue tracker, maybe your issue
+  or feature request has already been discussed. You can contribute to
+  the [Consult wiki], in case you want to share small configuration or
+  command snippets.
 
 
 [GNU ELPA] <http://elpa.gnu.org/packages/consult.html>
@@ -1340,8 +1357,8 @@ Table of Contents
     [consult-spotify])
   • [Gerry Agbobada] ([consult-lsp])
   • [Karthik Chikmagalur] ([consult-dir])
-  • [Mohsin Kaleem] ([consult-bibtex], [consult-company],
-    [consult-eglot], [consult-yasnippet])
+  • [Mohsin Kaleem] ([consult-company], [consult-eglot],
+    [consult-yasnippet])
   • [Marco Pawłowski] ([consult-projectile])
 
 
@@ -1413,8 +1430,6 @@ Table of Contents
 [consult-dir] <https://github.com/karthink/consult-dir>
 
 [Mohsin Kaleem] <https://github.com/mohkale>
-
-[consult-bibtex] <https://github.com/mohkale/consult-bibtex>
 
 [consult-company] <https://github.com/mohkale/consult-company>
 
