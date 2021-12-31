@@ -2,7 +2,7 @@
 
 ;; Package-Requires: ((emacs "25.1") (request "0.3.3"))
 ;; Package-Version: 20211222.2321
-;; Package-Commit: 884ac7221df1106bda7363ecddbad4183dd5bce6
+;; Package-Commit: 6b025d526dbb9f701a318f4163b4bab0d3b47e59
 ;; Version: 2.0.0
 ;; Author: Ben Whitley
 ;; Homepage: https://github.com/purplg/hass
