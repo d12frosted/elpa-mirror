@@ -6,7 +6,7 @@
 
 ;; Version: 0.17.0
 ;; Package-Version: 20211225.300
-;; Package-Commit: c6a0b682e403c5c1bfde7a7321aa3eb87912d7f9
+;; Package-Commit: 26f89e63c25e9f3e9d1379a7810b2a3e76097470
 
 ;; Package-Requires: ((kubernetes "0.17.0") (evil "1.2.12"))
 
