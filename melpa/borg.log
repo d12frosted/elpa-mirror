@@ -4,26 +4,28 @@ Source:  https://github.com/emacscollective/borg.git
 
 Updating /mnt/store/melpa/working/borg/
 Checking out origin/HEAD
-Checking out dd38c655906b5b0ff775ab78ad5d28c91068bdcf
+Checking out aa5dbc5f6b6bb985ba3225ee4c2055009e7ec271
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/borg/
-  to /tmp/borgjSI52E/borg-20211226.736
+  to /tmp/borge6uVkV/borg-20220101.1026
     borg-elpa.el -> borg-elpa.el
     borg.el -> borg.el
     borg.mk -> borg.mk
   ! docs/borg.texi -> borg.texi
-Created /tmp/borgjSI52E/borg-20211226.736/borg.info
-Created borg-20211226.736.tar containing:
-  borg-20211226.736/
-  borg-20211226.736/borg-elpa.el
-  borg-20211226.736/borg-pkg.el
-  borg-20211226.736/borg.el
-  borg-20211226.736/borg.info
-  borg-20211226.736/borg.mk
-  borg-20211226.736/dir
-Built borg in 8.923s, finished at 2022-01-01T02:39:58+0000
+Created /tmp/borge6uVkV/borg-20220101.1026/borg.info
+Created borg-20220101.1026.tar containing:
+  borg-20220101.1026/
+  borg-20220101.1026/borg-elpa.el
+  borg-20220101.1026/borg-pkg.el
+  borg-20220101.1026/borg.el
+  borg-20220101.1026/borg.info
+  borg-20220101.1026/borg.mk
+  borg-20220101.1026/dir
+Built borg in 7.236s, finished at 2022-01-01T11:23:53+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  396 Jan  1 02:39 packages/borg-20211226.736.entry
-120K -rw-r--r-- 1 root root 120K Jan  1 02:39 packages/borg-20211226.736.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan  1 02:39 packages/borg-badge.svg
-4.0K -rw-r--r-- 1 root root  462 Jan  1 02:39 packages/borg-readme.txt
+4.0K -rw-r--r-- 1 root root  396 Jan  1 08:30 packages/borg-20211226.736.entry
+120K -rw-r--r-- 1 root root 120K Jan  1 08:30 packages/borg-20211226.736.tar
+4.0K -rw-r--r-- 1 root root  397 Jan  1 11:23 packages/borg-20220101.1026.entry
+120K -rw-r--r-- 1 root root 120K Jan  1 11:23 packages/borg-20220101.1026.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  1 11:23 packages/borg-badge.svg
+4.0K -rw-r--r-- 1 root root  462 Jan  1 11:23 packages/borg-readme.txt

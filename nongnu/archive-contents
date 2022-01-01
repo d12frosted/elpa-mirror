@@ -67,6 +67,16 @@
 		("Eric Beuscher" . "beuscher@eecs.tulane.edu"))
 	       (:keywords "bison-mode" "yacc-mode")
 	       (:url . "https://elpa.nongnu.org/nongnu/bison-mode.html"))])
+ (boxquote .
+	   [(2 2)
+	    ((cl-lib
+	      (0 5)))
+	    "Quote text with a semi-box." tar
+	    ((:url . "https://github.com/davep/boxquote.el")
+	     (:keywords "quoting")
+	     (:maintainer "Dave Pearson" . "davep@davep.org")
+	     (:authors
+	      ("Dave Pearson" . "davep@davep.org")))])
  (buttercup .
 	    [(1 24)
 	     ((emacs
@@ -400,6 +410,15 @@
 	     (:authors
 	      ("David Andersson <l.david.andersson(at)sverige.nu>"))
 	     (:keywords "convenience" "matching"))])
+ (gruvbox-theme .
+		[(1 26 0)
+		 ((autothemer
+		   (0 2)))
+		 "A retro-groove colour theme for Emacs" tar
+		 ((:url . "http://github.com/greduan/emacs-theme-gruvbox")
+		  (:maintainer "Jason Milkins" . "jasonm23@gmail.com")
+		  (:authors
+		   ("Jason Milkins" . "jasonm23@gmail.com")))])
  (guru-mode .
 	    [(1 0)
 	     nil "Become an Emacs guru" tar
@@ -634,6 +653,18 @@
 		(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 		(:authors
 		 ("Bastien Guerry" . "bzg@gnu.org")))])
+ (org-superstar .
+		[(1 5 1)
+		 ((org
+		   (9 1 9))
+		  (emacs
+		   (26 1)))
+		 "Prettify headings and plain lists in Org mode" tar
+		 ((:url . "https://github.com/integral-dw/org-superstar-mode")
+		  (:keywords "faces" "outlines")
+		  (:maintainer "D. Williams" . "d.williams@posteo.net")
+		  (:authors
+		   ("D. Williams" . "d.williams@posteo.net")))])
  (parseclj .
 	   [(1 0 6)
 	    ((emacs
@@ -714,6 +745,15 @@
 	      (:authors
 	       ("David Christiansen" . "david@davidchristiansen.dk"))
 	      (:keywords "convenience"))])
+ (rainbow-delimiters .
+		     [(2 1 5)
+		      nil "Highlight brackets according to their depth" tar
+		      ((:url . "https://github.com/Fanael/rainbow-delimiters")
+		       (:keywords "faces" "convenience" "lisp" "tools")
+		       (:maintainer "Fanael Linithien" . "fanael4@gmail.com")
+		       (:authors
+			("Jeremy Rayman" . "opensource@jeremyrayman.com")
+			("Fanael Linithien" . "fanael4@gmail.com")))])
  (request .
 	  [(0 3 3)
 	   ((emacs
@@ -934,6 +974,12 @@
 	      (:maintainer "Le Wang")
 	      (:authors
 	       ("Le Wang")))])
+ (xml-rpc .
+	  [(1 6 15)
+	   nil "An elisp implementation of clientside XML-RPC" tar
+	   ((:url . "http://github.com/xml-rpc-el/xml-rpc-el")
+	    (:keywords "xml" "rpc" "network")
+	    (:maintainer "Mark A. Hershberger" . "mah@everybody.org"))])
  (yaml-mode .
 	    [(0 0 15)
 	     ((emacs
