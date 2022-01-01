@@ -4,32 +4,34 @@ Source:  https://github.com/magit/transient.git
 
 Updating /mnt/store/melpa/working/transient/
 Checking out origin/HEAD
-Checking out 51c50d8c828b5fac2878b651e2188ad0c6f44184
+Checking out 2c9cef1f5af602e12ab25ce31ee985929df8614d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/transient/
-  to /tmp/transientxFzu1a/transient-20211226.738
+  to /tmp/transientHxOc5A/transient-20220101.1024
   ! lisp/transient.el -> transient.el
   ! docs/transient.texi -> transient.texi
-Created /tmp/transientxFzu1a/transient-20211226.738/transient.info
-Created transient-20211226.738.tar containing:
-  transient-20211226.738/
-  transient-20211226.738/dir
-  transient-20211226.738/transient-pkg.el
-  transient-20211226.738/transient.el
-  transient-20211226.738/transient.info
-Built transient in 8.343s, finished at 2022-01-01T09:26:21+0000
+Created /tmp/transientHxOc5A/transient-20220101.1024/transient.info
+Created transient-20220101.1024.tar containing:
+  transient-20220101.1024/
+  transient-20220101.1024/dir
+  transient-20220101.1024/transient-pkg.el
+  transient-20220101.1024/transient.el
+  transient-20220101.1024/transient.info
+Built transient in 9.361s, finished at 2022-01-01T15:14:30+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  361 Jan  1 09:26 packages/transient-20211226.738.entry
-260K -rw-r--r-- 1 root root 260K Jan  1 09:26 packages/transient-20211226.738.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan  1 09:26 packages/transient-badge.svg
- 28K -rw-r--r-- 1 root root  27K Jan  1 09:26 packages/transient-dwim-20200812.1033.el
-4.0K -rw-r--r-- 1 root root  397 Jan  1 09:26 packages/transient-dwim-20200812.1033.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan  1 09:26 packages/transient-dwim-badge.svg
-4.0K -rw-r--r-- 1 root root  633 Jan  1 09:26 packages/transient-dwim-readme.txt
-4.0K -rw-r--r-- 1 root root  648 Jan  1 09:26 packages/transient-dwim.log
-8.0K -rw-r--r-- 1 root root 4.4K Jan  1 09:26 packages/transient-posframe-20210102.130.el
-4.0K -rw-r--r-- 1 root root  490 Jan  1 09:26 packages/transient-posframe-20210102.130.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan  1 09:26 packages/transient-posframe-badge.svg
-4.0K -rw-r--r-- 1 root root   86 Jan  1 09:26 packages/transient-posframe-readme.txt
-4.0K -rw-r--r-- 1 root root  679 Jan  1 09:26 packages/transient-posframe.log
-4.0K -rw-r--r-- 1 root root  994 Jan  1 09:26 packages/transient-readme.txt
+4.0K -rw-r--r-- 1 root root  361 Jan  1 12:20 packages/transient-20211226.738.entry
+260K -rw-r--r-- 1 root root 260K Jan  1 12:20 packages/transient-20211226.738.tar
+4.0K -rw-r--r-- 1 root root  362 Jan  1 15:14 packages/transient-20220101.1024.entry
+280K -rw-r--r-- 1 root root 280K Jan  1 15:14 packages/transient-20220101.1024.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  1 15:14 packages/transient-badge.svg
+ 28K -rw-r--r-- 1 root root  27K Jan  1 15:14 packages/transient-dwim-20200812.1033.el
+4.0K -rw-r--r-- 1 root root  397 Jan  1 15:14 packages/transient-dwim-20200812.1033.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  1 15:14 packages/transient-dwim-badge.svg
+4.0K -rw-r--r-- 1 root root  633 Jan  1 15:14 packages/transient-dwim-readme.txt
+4.0K -rw-r--r-- 1 root root  648 Jan  1 15:14 packages/transient-dwim.log
+8.0K -rw-r--r-- 1 root root 4.4K Jan  1 15:14 packages/transient-posframe-20210102.130.el
+4.0K -rw-r--r-- 1 root root  490 Jan  1 15:14 packages/transient-posframe-20210102.130.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  1 15:14 packages/transient-posframe-badge.svg
+4.0K -rw-r--r-- 1 root root   86 Jan  1 15:14 packages/transient-posframe-readme.txt
+4.0K -rw-r--r-- 1 root root  679 Jan  1 15:14 packages/transient-posframe.log
+4.0K -rw-r--r-- 1 root root  994 Jan  1 15:14 packages/transient-readme.txt

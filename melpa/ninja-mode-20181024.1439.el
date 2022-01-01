@@ -2,7 +2,7 @@
 
 ;; Package-Requires: ((emacs "24"))
 ;; Package-Version: 20181024.1439
-;; Package-Commit: ee360022f8a4a540039bbdf7e10a0c7c586a90ce
+;; Package-Commit: e234b25bb51a4d3ce5376febb4ad9a11e77d5ca3
 
 ;; Copyright 2011 Google Inc. All Rights Reserved.
 ;;
