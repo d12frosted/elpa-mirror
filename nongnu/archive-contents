@@ -927,6 +927,13 @@
 		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
 		(:authors
 		 ("Jonas Bernoulli" . "jonas@bernoul.li")))])
+ (ws-butler .
+	    [(0 6)
+	     nil "Unobtrusively remove trailing whitespace." tar
+	     ((:url . "https://github.com/lewang/ws-butler")
+	      (:maintainer "Le Wang")
+	      (:authors
+	       ("Le Wang")))])
  (yaml-mode .
 	    [(0 0 15)
 	     ((emacs
