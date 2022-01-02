@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out d36c2b2419b04d7bc559756d37d39d615add6395
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghubUa1cBb/ghub-20220101.1019
+  to /tmp/ghubVzulgg/ghub-20220101.1019
   ! lisp/buck.el -> buck.el
   ! lisp/ghub-graphql.el -> ghub-graphql.el
   ! lisp/ghub-pkg.el -> ghub-pkg.el
@@ -18,23 +18,3 @@ Copying files (->) and directories (=>)
   ! lisp/gtea.el -> gtea.el
   ! docs/ghub.texi -> ghub.texi
     .dir-locals.el -> .dir-locals.el
-Created /tmp/ghubUa1cBb/ghub-20220101.1019/ghub.info
-Created ghub-20220101.1019.tar containing:
-  ghub-20220101.1019/
-  ghub-20220101.1019/.dir-locals.el
-  ghub-20220101.1019/buck.el
-  ghub-20220101.1019/dir
-  ghub-20220101.1019/ghub-graphql.el
-  ghub-20220101.1019/ghub-pkg.el
-  ghub-20220101.1019/ghub.el
-  ghub-20220101.1019/ghub.info
-  ghub-20220101.1019/glab.el
-  ghub-20220101.1019/gogs.el
-  ghub-20220101.1019/gsexp.el
-  ghub-20220101.1019/gtea.el
-Built ghub in 7.790s, finished at 2022-01-02T02:11:54+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  401 Jan  2 02:11 packages/ghub-20220101.1019.entry
-152K -rw-r--r-- 1 root root 150K Jan  2 02:11 packages/ghub-20220101.1019.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan  2 02:11 packages/ghub-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jan  2 02:11 packages/ghub-readme.txt
