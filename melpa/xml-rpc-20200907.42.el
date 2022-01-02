@@ -10,7 +10,7 @@
 ;; Original Author: Daniel Lundin <daniel@codefactory.se>
 ;; Version: 1.6.15
 ;; Package-Version: 20200907.42
-;; Package-Commit: 8020ccd176986d8e49e0bb5dd9f4e756cf12eafc
+;; Package-Commit: b8c9c3147095983d45532627171c2b2ad422ef10
 ;; Created: May 13 2001
 ;; Keywords: xml rpc network
 ;; URL: http://github.com/xml-rpc-el/xml-rpc-el

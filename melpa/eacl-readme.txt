@@ -19,9 +19,9 @@ if current project is tracked by Git.
 in the buffers.  Set `eacl-ignore-buffers' and `eacl-include-buffers' to specify
 ignored&included buffers.
 
-`eacl-complete-line-from-buffer-or-project' completes one line by grepping
-the project root when editing a physical file.  Or else, it completes one line
-by search all buffers.
+`eacl-complete-line-from-buffer-or-project' completes single line by grepping
+the project root when editing a physical file.  Or else, it searches all buffers
+for line completion.
 
 Modify `grep-find-ignored-directories' and `grep-find-ignored-files'
 to setup directories and files grep should ignore:
