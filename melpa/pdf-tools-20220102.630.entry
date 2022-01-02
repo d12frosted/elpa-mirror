@@ -1,0 +1,17 @@
+(pdf-tools .
+	   [(20220102 630)
+	    ((emacs
+	      (24 3))
+	     (nadvice
+	      (0 3))
+	     (tablist
+	      (1 0))
+	     (let-alist
+		 (1 0 4)))
+	    "Support library for PDF documents" tar
+	    ((:commit . "33376cb16a8553a78ff5feedb192fa8dfad23ab0")
+	     (:authors
+	      ("Andreas Politz" . "mail@andreas-politz.de"))
+	     (:maintainer "Vedang Manerikar" . "vedang.manerikar@gmail.com")
+	     (:keywords "files" "multimedia")
+	     (:url . "http://github.com/vedang/pdf-tools/"))])

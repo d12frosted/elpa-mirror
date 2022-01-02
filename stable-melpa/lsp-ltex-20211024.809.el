@@ -8,7 +8,7 @@
 ;; Keyword: lsp languagetool checker
 ;; Version: 0.2.1
 ;; Package-Version: 20211024.809
-;; Package-Commit: 6564913091a553ff78a063a7c22d82f824a15f22
+;; Package-Commit: c0506df20dcb6543ae78b3f43dfc505c79318221
 ;; Package-Requires: ((emacs "26.1") (lsp-mode "6.1") (f "0.20.0") (s "1.12.0"))
 ;; URL: https://github.com/emacs-languagetool/lsp-ltex
 
