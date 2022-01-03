@@ -1,11 +1,11 @@
 (direnv .
-	[(20211011 1804)
+	[(20220103 1305)
 	 ((emacs
 	   (25 1))
 	  (dash
 	   (2 12 0)))
-	 "Support for direnv" single
-	 ((:commit . "3fde8f912074d38f7ac21a78f6ff5d5e6725e507")
+	 "direnv integration" single
+	 ((:commit . "c3af09ce4efcd718da3e34a1d89fdc84ae82cce2")
 	  (:authors
 	   ("wouter bolsterlee" . "wouter@bolsterl.ee"))
 	  (:maintainer "wouter bolsterlee" . "wouter@bolsterl.ee")
