@@ -5,8 +5,8 @@
 ;; Author: Jingtao Xu <jingtaozf@gmail.com>
 ;; Created: 6 Dec 2018
 ;; Version: 0.1
-;; Package-Version: 20211004.212
-;; Package-Commit: d1eb390e01407a0b17bbed51f2928afdc26cc488
+;; Package-Version: 20220103.717
+;; Package-Commit: 399f3cbaac0d81f9b44ed048b9e6698c39c69c3d
 ;; Keywords: lisp docs extensions tools
 ;; URL: https://github.com/jingtaozf/literate-elisp
 ;; Package-Requires: ((emacs "26.1"))
@@ -151,8 +151,17 @@ Argument IN: input stream."
   (let ((rtn (cdr (assq :load
                         (literate-elisp-read-header-arguments
                          (literate-elisp-read-until-end-of-line in))))))
-    (when (stringp rtn)
-      (intern rtn))))
+    (if (stringp rtn)
+      (intern rtn)
+      ;; read load option from org property `literate-load'.
+      (save-current-buffer
+        ;; If using `poly-org-mode', then we have to switch to org buffer to access property value.
+        (when (and (boundp 'poly-org-mode)
+                   poly-org-mode)
+          (pm-set-buffer (plist-get (second (org-element-context)) :begin)))
+        (let ((literate-load (org-entry-get (point) "literate-load" t)))
+          (when literate-load
+            (intern literate-load)))))))
 
 (defun literate-elisp-ignore-white-space (in)
   "Skip white space characters.
@@ -528,38 +537,48 @@ Argument SOURCE-FILE the path of source file."
   (with-current-buffer (find-file-noselect source-file)
     (goto-char (point-min))
     (loop with items = nil
-          do (unless (search-forward-regexp "^\s*[;|(]" nil t)
+          do (unless (search-forward-regexp "^\s*[;|(|#]" nil t)
                (setf items (nconc items (list (list :done nil nil))))
                (return items))
              (backward-char)
              (let (toplevel-type
                    toplevel-name
                    (start (point)))
-               (if (= ?\; (following-char))
-                 (if (search " -*- " (buffer-substring-no-properties (line-beginning-position) (line-end-position)))
-                   ;; This is a special comment for emacs
-                   (progn
-                     (goto-char (line-end-position))
-                     (setf items (nconc items (list (list :special-comment-for-emacs nil
-                                                          (buffer-substring-no-properties start (line-end-position)))))))
-                   ;; This is a normal comment, let's try to collect the comments lines together
-                   (search-forward-regexp "^\s*(")
-                   (backward-char)
-                   (setf items (nconc items (list (list :comment nil
-                                                        (buffer-substring-no-properties start (1- (line-beginning-position))))))))
-                 ;; If a top level form, let try to determine its type and end position
-                 (save-excursion
-                   (forward-char)
-                   (setf toplevel-type (symbol-at-point))
-                   (when (eq toplevel-type 'eval-when)
-                     (forward-sexp 2)
-                     (search-forward-regexp "^\s*(")
-                     (setf toplevel-type (symbol-at-point)))
-                   (search-forward-regexp "[\s|(|#|:]+")
-                   (setf toplevel-name (string-trim (symbol-name (symbol-at-point)) ":")))
-                 (forward-sexp 1)
-                 (setf items (nconc items (list (list toplevel-type toplevel-name
-                                                      (buffer-substring-no-properties start (point)))))))))))
+               (cond ((and (= ?\# (following-char))
+                           (= ?| (char-after (1+ (point)))))
+                      ;; a block of comment surround by #| and |#
+                      (search-forward-regexp "^\s*|#")
+                      (setf items (nconc items (list (list :block-comment nil
+                                                           (buffer-substring-no-properties start (line-end-position)))))))
+                     ((= ?\; (following-char))
+                      (if (search " -*- " (buffer-substring-no-properties (line-beginning-position) (line-end-position)))
+                        ;; This is a special comment for emacs
+                        (progn
+                          (goto-char (line-end-position))
+                          (setf items (nconc items (list (list :special-comment-for-emacs nil
+                                                               (buffer-substring-no-properties start (line-end-position)))))))
+                        ;; This is a normal comment, let's try to collect the comments lines together
+                        (if (search-forward-regexp "^\s*[(|#]" nil t)
+                          (backward-char)
+                          (goto-char (point-max)))
+                        (setf items (nconc items (list (list :comment nil
+                                                             (buffer-substring-no-properties start (1- (line-beginning-position)))))))))
+                     (t ;; If a top level form, let try to determine its type and end position
+                      (when (= ?\# (following-char))
+                        (search-forward "(") 
+                        (backward-char))
+                      (save-excursion
+                        (forward-char)
+                        (setf toplevel-type (symbol-at-point))
+                        (when (eq toplevel-type 'eval-when)
+                          (forward-sexp 2)
+                          (search-forward-regexp "^\s*(")
+                          (setf toplevel-type (symbol-at-point)))
+                        (search-forward-regexp "[\s|(|#|:]+")
+                        (setf toplevel-name (string-trim (symbol-name (symbol-at-point)) ":")))
+                      (forward-sexp 1)
+                      (setf items (nconc items (list (list toplevel-type toplevel-name
+                                                           (buffer-substring-no-properties start (point))))))))))))
 
 (defun literate-elisp-import-lisp-file ()
   "Insert the Lisp source file into current section."
@@ -576,7 +595,8 @@ Argument SOURCE-FILE the path of source file."
                    ((eq type :special-comment-for-emacs)
                     ;; ignore special comment line
                     )
-                   ((eq type :comment)
+                   ((or (eq type :comment)
+                        (eq type :block-comment))
                     (setf last-comment content))
                    ((eq type :done)
                     ;; No more to add.
