@@ -12,6 +12,7 @@ hnreader-past: Load past page.
 hnreader-ask: Load ask page.
 hnreader-show: Load show page.
 hnreader-newest: Load new link page.
+hnreader-best: Load page with best articles.
 hnreader-more: Load more.
 hnreader-back: Go back to previous page.
 hnreader-comment: read an HN item url such as https://news.ycombinator.com/item?id=1
