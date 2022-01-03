@@ -894,6 +894,14 @@
 	    (:authors
 	     ("Andreas Politz" . "politza@fh-trier.de"))
 	    (:url . "https://elpa.nongnu.org/nongnu/tablist.html"))])
+ (toc-org .
+	  [(1 1)
+	   nil "add table of contents to org-mode files (formerly, org-toc)" tar
+	   ((:url . "https://github.com/snosov1/toc-org")
+	    (:keywords "org-mode" "org-toc" "toc-org" "org" "toc" "table" "of" "contents")
+	    (:maintainer "Sergei Nosov <sergei.nosov [at] gmail.com>")
+	    (:authors
+	     ("Sergei Nosov <sergei.nosov [at] gmail.com>")))])
  (tuareg .
 	 [(2 3 0)
 	  ((caml
