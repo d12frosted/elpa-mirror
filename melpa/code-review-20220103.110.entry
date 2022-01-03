@@ -1,0 +1,29 @@
+(code-review .
+	     [(20220103 110)
+	      ((emacs
+		(25 1))
+	       (closql
+		(1 2 0))
+	       (magit
+		(3 0 0))
+	       (a
+		(1 0 0))
+	       (ghub
+		(3 5 1))
+	       (uuidgen
+		(1 2))
+	       (deferred
+		 (0 5 1))
+	       (markdown-mode
+		(2 4))
+	       (forge
+		(0 3 0))
+	       (emojify
+		(1 2)))
+	      "Perform code review from Github, Gitlab, and Bitbucket Cloud" tar
+	      ((:commit . "8376fb53e31db8e3939b7f8a18be505c2fd52acd")
+	       (:authors
+		("Wanderson Ferreira <https://github.com/wandersoncferreira>"))
+	       (:maintainer "Wanderson Ferreira" . "wand@hey.com")
+	       (:keywords "git" "tools" "vc")
+	       (:url . "https://github.com/wandersoncferreira/code-review"))])

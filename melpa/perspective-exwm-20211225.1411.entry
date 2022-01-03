@@ -1,0 +1,16 @@
+(perspective-exwm .
+		  [(20211225 1411)
+		   ((emacs
+		     (27 1))
+		    (burly
+		     (0 2 -1))
+		    (exwm
+		     (0 26))
+		    (perspective
+		     (2 17)))
+		   "Better integration for perspective.el and EXWM" single
+		   ((:commit . "26179187bb7401cd59d5d593a5bdbf0a1b6beb05")
+		    (:authors
+		     ("Korytov Pavel" . "thexcloud@gmail.com"))
+		    (:maintainer "Korytov Pavel" . "thexcloud@gmail.com")
+		    (:url . "https://github.com/SqrtMinusOne/perspective-exwm.el"))])

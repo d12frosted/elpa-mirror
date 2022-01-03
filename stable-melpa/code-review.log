@@ -4,10 +4,10 @@ Source:  https://github.com/wandersoncferreira/code-review.git
 
 Updating /mnt/store/melpa/working/code-review/
 Checking out origin/HEAD
-Checking out 6e55248a1ff509fb2836bd04929966949e7cbc2f
+Checking out 8376fb53e31db8e3939b7f8a18be505c2fd52acd
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/code-review/
-  to /tmp/code-reviewckTEkT/code-review-20211231.1719
+  to /tmp/code-review5ZW4wq/code-review-20220103.110
     code-review-actions.el -> code-review-actions.el
     code-review-bitbucket.el -> code-review-bitbucket.el
     code-review-comment.el -> code-review-comment.el
@@ -20,24 +20,26 @@ Copying files (->) and directories (=>)
     code-review-section.el -> code-review-section.el
     code-review-utils.el -> code-review-utils.el
     code-review.el -> code-review.el
-Created code-review-20211231.1719.tar containing:
-  code-review-20211231.1719/
-  code-review-20211231.1719/code-review-actions.el
-  code-review-20211231.1719/code-review-bitbucket.el
-  code-review-20211231.1719/code-review-comment.el
-  code-review-20211231.1719/code-review-db.el
-  code-review-20211231.1719/code-review-faces.el
-  code-review-20211231.1719/code-review-github.el
-  code-review-20211231.1719/code-review-gitlab.el
-  code-review-20211231.1719/code-review-interfaces.el
-  code-review-20211231.1719/code-review-parse-hunk.el
-  code-review-20211231.1719/code-review-pkg.el
-  code-review-20211231.1719/code-review-section.el
-  code-review-20211231.1719/code-review-utils.el
-  code-review-20211231.1719/code-review.el
-Built code-review in 3.834s, finished at 2022-01-02T14:00:31+0000
+Created code-review-20220103.110.tar containing:
+  code-review-20220103.110/
+  code-review-20220103.110/code-review-actions.el
+  code-review-20220103.110/code-review-bitbucket.el
+  code-review-20220103.110/code-review-comment.el
+  code-review-20220103.110/code-review-db.el
+  code-review-20220103.110/code-review-faces.el
+  code-review-20220103.110/code-review-github.el
+  code-review-20220103.110/code-review-gitlab.el
+  code-review-20220103.110/code-review-interfaces.el
+  code-review-20220103.110/code-review-parse-hunk.el
+  code-review-20220103.110/code-review-pkg.el
+  code-review-20220103.110/code-review-section.el
+  code-review-20220103.110/code-review-utils.el
+  code-review-20220103.110/code-review.el
+Built code-review in 4.712s, finished at 2022-01-03T01:38:00+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  696 Jan  2 14:00 packages/code-review-20211231.1719.entry
-260K -rw-r--r-- 1 root root 260K Jan  2 14:00 packages/code-review-20211231.1719.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan  2 14:00 packages/code-review-badge.svg
-4.0K -rw-r--r-- 1 root root  150 Jan  2 14:00 packages/code-review-readme.txt
+4.0K -rw-r--r-- 1 root root  696 Jan  2 22:43 packages/code-review-20211231.1719.entry
+260K -rw-r--r-- 1 root root 260K Jan  2 22:43 packages/code-review-20211231.1719.tar
+4.0K -rw-r--r-- 1 root root  695 Jan  3 01:38 packages/code-review-20220103.110.entry
+260K -rw-r--r-- 1 root root 260K Jan  3 01:38 packages/code-review-20220103.110.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  3 01:38 packages/code-review-badge.svg
+4.0K -rw-r--r-- 1 root root  150 Jan  3 01:38 packages/code-review-readme.txt

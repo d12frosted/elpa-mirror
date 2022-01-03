@@ -4,35 +4,33 @@ Source:  https://github.com/emacs-lsp/lsp-ui.git
 
 Updating /mnt/store/melpa/working/lsp-ui/
 Checking out origin/HEAD
-Checking out 39043fe44cd82df2bc67deb07ad3224c651ea7b2
+Checking out de4796cf0eaf46dba2e7c87ae17b9fc0a31b1b2c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lsp-ui/
-  to /tmp/lsp-uiWA3cqK/lsp-ui-20211229.1307
+  to /tmp/lsp-uiF64628/lsp-ui-20220102.1934
     lsp-ui-doc.el -> lsp-ui-doc.el
     lsp-ui-flycheck.el -> lsp-ui-flycheck.el
     lsp-ui-imenu.el -> lsp-ui-imenu.el
     lsp-ui-peek.el -> lsp-ui-peek.el
     lsp-ui-sideline.el -> lsp-ui-sideline.el
-    lsp-ui-util.el -> lsp-ui-util.el
     lsp-ui.el -> lsp-ui.el
     lsp-ui-doc.html -> lsp-ui-doc.html
     resources => resources
-Created lsp-ui-20211229.1307.tar containing:
-  lsp-ui-20211229.1307/
-  lsp-ui-20211229.1307/lsp-ui-doc.el
-  lsp-ui-20211229.1307/lsp-ui-doc.html
-  lsp-ui-20211229.1307/lsp-ui-flycheck.el
-  lsp-ui-20211229.1307/lsp-ui-imenu.el
-  lsp-ui-20211229.1307/lsp-ui-peek.el
-  lsp-ui-20211229.1307/lsp-ui-pkg.el
-  lsp-ui-20211229.1307/lsp-ui-sideline.el
-  lsp-ui-20211229.1307/lsp-ui-util.el
-  lsp-ui-20211229.1307/lsp-ui.el
-  lsp-ui-20211229.1307/resources/
-  lsp-ui-20211229.1307/resources/lightbulb.png
-Built lsp-ui in 4.394s, finished at 2022-01-02T14:30:07+0000
+Created lsp-ui-20220102.1934.tar containing:
+  lsp-ui-20220102.1934/
+  lsp-ui-20220102.1934/lsp-ui-doc.el
+  lsp-ui-20220102.1934/lsp-ui-doc.html
+  lsp-ui-20220102.1934/lsp-ui-flycheck.el
+  lsp-ui-20220102.1934/lsp-ui-imenu.el
+  lsp-ui-20220102.1934/lsp-ui-peek.el
+  lsp-ui-20220102.1934/lsp-ui-pkg.el
+  lsp-ui-20220102.1934/lsp-ui-sideline.el
+  lsp-ui-20220102.1934/lsp-ui.el
+  lsp-ui-20220102.1934/resources/
+  lsp-ui-20220102.1934/resources/lightbulb.png
+Built lsp-ui in 4.505s, finished at 2022-01-03T02:07:34+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  486 Jan  2 14:30 packages/lsp-ui-20211229.1307.entry
-160K -rw-r--r-- 1 root root 160K Jan  2 14:30 packages/lsp-ui-20211229.1307.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan  2 14:30 packages/lsp-ui-badge.svg
-4.0K -rw-r--r-- 1 root root  104 Jan  2 14:30 packages/lsp-ui-readme.txt
+4.0K -rw-r--r-- 1 root root  486 Jan  3 02:07 packages/lsp-ui-20220102.1934.entry
+160K -rw-r--r-- 1 root root 160K Jan  3 02:07 packages/lsp-ui-20220102.1934.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  3 02:07 packages/lsp-ui-badge.svg
+4.0K -rw-r--r-- 1 root root  104 Jan  3 02:07 packages/lsp-ui-readme.txt

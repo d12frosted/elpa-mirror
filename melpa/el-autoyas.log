@@ -7,10 +7,10 @@ Checking out origin/HEAD
 Checking out bde0251ecb504f585dfa27c205c8e312655310cc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/el-autoyas/
-  to /tmp/el-autoyaslYVVfJ/el-autoyas-20120918.1317
+  to /tmp/el-autoyasR5HsDe/el-autoyas-20120918.1317
     el-autoyas.el -> el-autoyas.el
     el-autoyas.texi -> el-autoyas.texi
-Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/el-autoyas/el-autoyas.texi -o /tmp/el-autoyaslYVVfJ/el-autoyas-20120918.1317/el-autoyas.info)' exited with non-zero status 1: Fetching origin
+Error: (error "Command '(env LC_ALL=C makeinfo /mnt/store/melpa/working/el-autoyas/el-autoyas.texi -o /tmp/el-autoyasR5HsDe/el-autoyas-20120918.1317/el-autoyas.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at bde0251 Tested with 0.6.  Bug fixes applied.
 HEAD is now at bde0251 Tested with 0.6.  Bug fixes applied.
@@ -44,8 +44,8 @@ HEAD is now at bde0251 Tested with 0.6.  Bug fixes applied.
 /mnt/store/melpa/working/el-autoyas/el-autoyas.texi:66: warning: node prev `Hook run on package load' in menu `Hook run on package load' and in sectioning `About' differ
 /mnt/store/melpa/working/el-autoyas/el-autoyas.texi:126: warning: node prev `History' in menu `Hook run on package load' and in sectioning `' differ
 ")
-Created /tmp/el-autoyaslYVVfJ/el-autoyas-20120918.1317/el-autoyas.info
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/el-autoyaslYVVfJ/el-autoyas-20120918.1317/el-autoyas.info)' exited with non-zero status 1: Fetching origin
+Created /tmp/el-autoyasR5HsDe/el-autoyas-20120918.1317/el-autoyas.info
+Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/el-autoyasR5HsDe/el-autoyas-20120918.1317/el-autoyas.info)' exited with non-zero status 1: Fetching origin
 origin/HEAD set to master
 HEAD is now at bde0251 Tested with 0.6.  Bug fixes applied.
 HEAD is now at bde0251 Tested with 0.6.  Bug fixes applied.
@@ -78,16 +78,16 @@ HEAD is now at bde0251 Tested with 0.6.  Bug fixes applied.
 /mnt/store/melpa/working/el-autoyas/el-autoyas.texi:66: warning: node next `Hook run on package load' in menu `History' and in sectioning `' differ
 /mnt/store/melpa/working/el-autoyas/el-autoyas.texi:66: warning: node prev `Hook run on package load' in menu `Hook run on package load' and in sectioning `About' differ
 /mnt/store/melpa/working/el-autoyas/el-autoyas.texi:126: warning: node prev `History' in menu `Hook run on package load' and in sectioning `' differ
-install-info: No such file or directory for /tmp/el-autoyaslYVVfJ/el-autoyas-20120918.1317/el-autoyas.info
+install-info: No such file or directory for /tmp/el-autoyasR5HsDe/el-autoyas-20120918.1317/el-autoyas.info
 ")
 Created el-autoyas-20120918.1317.tar containing:
   el-autoyas-20120918.1317/
   el-autoyas-20120918.1317/dir
   el-autoyas-20120918.1317/el-autoyas-pkg.el
   el-autoyas-20120918.1317/el-autoyas.el
-Built el-autoyas in 5.853s, finished at 2022-01-02T14:07:24+0000
+Built el-autoyas in 6.223s, finished at 2022-01-03T01:45:05+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  362 Jan  2 14:07 packages/el-autoyas-20120918.1317.entry
- 32K -rw-r--r-- 1 root root  30K Jan  2 14:07 packages/el-autoyas-20120918.1317.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan  2 14:07 packages/el-autoyas-badge.svg
-8.0K -rw-r--r-- 1 root root 4.4K Jan  2 14:07 packages/el-autoyas-readme.txt
+4.0K -rw-r--r-- 1 root root  362 Jan  3 01:45 packages/el-autoyas-20120918.1317.entry
+ 32K -rw-r--r-- 1 root root  30K Jan  3 01:45 packages/el-autoyas-20120918.1317.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  3 01:45 packages/el-autoyas-badge.svg
+8.0K -rw-r--r-- 1 root root 4.4K Jan  3 01:45 packages/el-autoyas-readme.txt
