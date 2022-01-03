@@ -5,7 +5,7 @@
 ;; Author: Sergei Nosov <sergei.nosov [at] gmail.com>
 ;; Version: 1.1
 ;; Package-Version: 20220102.710
-;; Package-Commit: a2cb4c254f1f584af7d18fd26e774c3828215099
+;; Package-Commit: 953eef6b395acb6230fc4cf4e629391ef2d28db5
 ;; Keywords: org-mode org-toc toc-org org toc table of contents
 ;; URL: https://github.com/snosov1/toc-org
 

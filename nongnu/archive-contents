@@ -933,6 +933,15 @@
 	      (:authors
 	       ("Venkat Iyer" . "venkat@comit.com"))
 	      (:url . "https://elpa.nongnu.org/nongnu/vc-fossil.html"))])
+ (visual-fill-column .
+		     [(2 4)
+		      ((emacs
+			(25 1)))
+		      "fill-column for visual-line-mode" tar
+		      ((:url . "https://codeberg.org/joostkremers/visual-fill-column")
+		       (:maintainer "Joost Kremers" . "joostkremers@fastmail.fm")
+		       (:authors
+			("Joost Kremers" . "joostkremers@fastmail.fm")))])
  (web-mode .
 	   [(17 0 4)
 	    ((emacs
