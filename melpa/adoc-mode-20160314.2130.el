@@ -4,6 +4,8 @@
 ;;
 ;; Author: Florian Kaufmann <sensorflo@gmail.com>
 ;; URL: https://github.com/sensorflo/adoc-mode/wiki
+;; Package-Version: 20160314.2130
+;; Package-Commit: 745884359a1b8826ede2c4cfd2f0b5478953ac40
 ;; Created: 2009
 ;; Version: 0.6.6
 ;; Package-Requires: ((markup-faces "1.0.0"))
