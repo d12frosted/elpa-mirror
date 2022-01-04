@@ -653,6 +653,18 @@
 		(:maintainer "Bastien Guerry" . "bzg@gnu.org")
 		(:authors
 		 ("Bastien Guerry" . "bzg@gnu.org")))])
+ (org-journal .
+	      [(2 1 2)
+	       ((emacs
+		 (25 1))
+		(org
+		 (9 1)))
+	       "a simple org-mode based journaling mode" tar
+	       ((:url . "http://github.com/bastibe/org-journal")
+		(:maintainer "Bastian Bechtold")
+		(:authors
+		 ("Bastian Bechtold")
+		 ("Christian Schwarzgruber")))])
  (org-superstar .
 		[(1 5 1)
 		 ((org
