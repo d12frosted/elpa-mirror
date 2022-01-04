@@ -4,10 +4,10 @@ Source:  https://github.com/diku-dk/futhark-mode.git
 
 Updating /mnt/store/melpa/working/futhark-mode/
 Checking out origin/HEAD
-Checking out 4c340703cb749298dd472cd981df182335e3b4af
+Checking out ea4b26bc5fbc074a011918172ea0c624a81c8092
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/futhark-mode/
-  to /tmp/futhark-modeO635ju/futhark-mode-20211212.2032
+  to /tmp/futhark-modeshKzDH/futhark-mode-20220104.1200
     futhark-comint.el -> futhark-comint.el
     futhark-dev.el -> futhark-dev.el
     futhark-eldoc.el -> futhark-eldoc.el
@@ -16,20 +16,22 @@ Copying files (->) and directories (=>)
     futhark-indent.el -> futhark-indent.el
     futhark-mode.el -> futhark-mode.el
     futhark-query.el -> futhark-query.el
-Created futhark-mode-20211212.2032.tar containing:
-  futhark-mode-20211212.2032/
-  futhark-mode-20211212.2032/futhark-comint.el
-  futhark-mode-20211212.2032/futhark-dev.el
-  futhark-mode-20211212.2032/futhark-eldoc.el
-  futhark-mode-20211212.2032/futhark-flycheck.el
-  futhark-mode-20211212.2032/futhark-highlight.el
-  futhark-mode-20211212.2032/futhark-indent.el
-  futhark-mode-20211212.2032/futhark-mode-pkg.el
-  futhark-mode-20211212.2032/futhark-mode.el
-  futhark-mode-20211212.2032/futhark-query.el
-Built futhark-mode in 4.220s, finished at 2022-01-04T10:25:05+0000
+Created futhark-mode-20220104.1200.tar containing:
+  futhark-mode-20220104.1200/
+  futhark-mode-20220104.1200/futhark-comint.el
+  futhark-mode-20220104.1200/futhark-dev.el
+  futhark-mode-20220104.1200/futhark-eldoc.el
+  futhark-mode-20220104.1200/futhark-flycheck.el
+  futhark-mode-20220104.1200/futhark-highlight.el
+  futhark-mode-20220104.1200/futhark-indent.el
+  futhark-mode-20220104.1200/futhark-mode-pkg.el
+  futhark-mode-20220104.1200/futhark-mode.el
+  futhark-mode-20220104.1200/futhark-query.el
+Built futhark-mode in 3.693s, finished at 2022-01-04T13:23:15+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  292 Jan  4 10:25 packages/futhark-mode-20211212.2032.entry
  60K -rw-r--r-- 1 root root  60K Jan  4 10:25 packages/futhark-mode-20211212.2032.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan  4 10:25 packages/futhark-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  417 Jan  4 10:25 packages/futhark-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  292 Jan  4 13:23 packages/futhark-mode-20220104.1200.entry
+ 60K -rw-r--r-- 1 root root  60K Jan  4 13:23 packages/futhark-mode-20220104.1200.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  4 13:23 packages/futhark-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  417 Jan  4 13:23 packages/futhark-mode-readme.txt

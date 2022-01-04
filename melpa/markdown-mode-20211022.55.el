@@ -8,7 +8,7 @@
 ;; Created: May 24, 2007
 ;; Version: 2.5-dev
 ;; Package-Version: 20211022.55
-;; Package-Commit: c3c2f0d473a3f8ca8c4ffb2ecc094d5c3541769f
+;; Package-Commit: 4469553a7395359e96b8796e1fac4de73cb6ccc4
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/

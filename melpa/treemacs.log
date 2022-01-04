@@ -4,10 +4,10 @@ Source:  https://github.com/Alexander-Miller/treemacs.git
 
 Updating /mnt/store/melpa/working/treemacs/
 Checking out origin/HEAD
-Checking out d92a9d9e8f072b35ecc05761c417b91718094ffd
+Checking out deb7f2cd9eb06960798edd7393df2602902ed071
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/treemacs/
-  to /tmp/treemacsGTP5Qa/treemacs-20220103.1822
+  to /tmp/treemacs81WoVt/treemacs-20220104.1302
     Changelog.org -> Changelog.org
     icons => icons
   ! src/elisp/treemacs-async.el -> treemacs-async.el
@@ -46,262 +46,264 @@ Copying files (->) and directories (=>)
   ! src/scripts/treemacs-find-ignored-files.py -> treemacs-find-ignored-files.py
   ! src/scripts/treemacs-git-status.py -> treemacs-git-status.py
   ! src/scripts/treemacs-single-file-git-status.py -> treemacs-single-file-git-status.py
-Created treemacs-20220103.1822.tar containing:
-  treemacs-20220103.1822/
-  treemacs-20220103.1822/Changelog.org
-  treemacs-20220103.1822/icons/
-  treemacs-20220103.1822/icons/default/
-  treemacs-20220103.1822/icons/default/asciidoc.png
-  treemacs-20220103.1822/icons/default/audio.png
-  treemacs-20220103.1822/icons/default/babel.png
-  treemacs-20220103.1822/icons/default/bookmark.png
-  treemacs-20220103.1822/icons/default/buffer-group-closed.png
-  treemacs-20220103.1822/icons/default/buffer-group-open.png
-  treemacs-20220103.1822/icons/default/c.png
-  treemacs-20220103.1822/icons/default/cabal.png
-  treemacs-20220103.1822/icons/default/clojure.png
-  treemacs-20220103.1822/icons/default/conf.png
-  treemacs-20220103.1822/icons/default/css.png
-  treemacs-20220103.1822/icons/default/dart.png
-  treemacs-20220103.1822/icons/default/direnv.png
-  treemacs-20220103.1822/icons/default/docker.png
-  treemacs-20220103.1822/icons/default/elx-light.png
-  treemacs-20220103.1822/icons/default/elx.png
-  treemacs-20220103.1822/icons/default/emacs.png
-  treemacs-20220103.1822/icons/default/erlang.png
-  treemacs-20220103.1822/icons/default/error.png
-  treemacs-20220103.1822/icons/default/git.png
-  treemacs-20220103.1822/icons/default/go.png
-  treemacs-20220103.1822/icons/default/gradle.png
-  treemacs-20220103.1822/icons/default/haskell.png
-  treemacs-20220103.1822/icons/default/html.png
-  treemacs-20220103.1822/icons/default/hy.png
-  treemacs-20220103.1822/icons/default/image.png
-  treemacs-20220103.1822/icons/default/info.png
-  treemacs-20220103.1822/icons/default/jar.png
-  treemacs-20220103.1822/icons/default/jinja2.png
-  treemacs-20220103.1822/icons/default/js.png
-  treemacs-20220103.1822/icons/default/json.png
-  treemacs-20220103.1822/icons/default/julia.png
-  treemacs-20220103.1822/icons/default/kotlin.png
-  treemacs-20220103.1822/icons/default/ledger.png
-  treemacs-20220103.1822/icons/default/lock.png
-  treemacs-20220103.1822/icons/default/mail-mark-read.png
-  treemacs-20220103.1822/icons/default/mail-mark-unread.png
-  treemacs-20220103.1822/icons/default/mail.png
-  treemacs-20220103.1822/icons/default/markdown.png
-  treemacs-20220103.1822/icons/default/nix.png
-  treemacs-20220103.1822/icons/default/ocaml.png
-  treemacs-20220103.1822/icons/default/pdf.png
-  treemacs-20220103.1822/icons/default/php.png
-  treemacs-20220103.1822/icons/default/project.png
-  treemacs-20220103.1822/icons/default/puppet.png
-  treemacs-20220103.1822/icons/default/purescript.png
-  treemacs-20220103.1822/icons/default/python.png
-  treemacs-20220103.1822/icons/default/racket.png
-  treemacs-20220103.1822/icons/default/rust.png
-  treemacs-20220103.1822/icons/default/sbt.png
-  treemacs-20220103.1822/icons/default/scala.png
-  treemacs-20220103.1822/icons/default/scons.png
-  treemacs-20220103.1822/icons/default/shell.png
-  treemacs-20220103.1822/icons/default/svgrepo/
-  treemacs-20220103.1822/icons/default/svgrepo/README.txt
-  treemacs-20220103.1822/icons/default/svgrepo/briefcase.png
-  treemacs-20220103.1822/icons/default/svgrepo/cal.png
-  treemacs-20220103.1822/icons/default/svgrepo/close.png
-  treemacs-20220103.1822/icons/default/svgrepo/house.png
-  treemacs-20220103.1822/icons/default/svgrepo/list.png
-  treemacs-20220103.1822/icons/default/svgrepo/repeat.png
-  treemacs-20220103.1822/icons/default/svgrepo/screen.png
-  treemacs-20220103.1822/icons/default/svgrepo/suitcase.png
-  treemacs-20220103.1822/icons/default/systemd.png
-  treemacs-20220103.1822/icons/default/tags-closed.png
-  treemacs-20220103.1822/icons/default/tags-leaf.png
-  treemacs-20220103.1822/icons/default/tags-open.png
-  treemacs-20220103.1822/icons/default/tex.png
-  treemacs-20220103.1822/icons/default/ts.png
-  treemacs-20220103.1822/icons/default/txt.png
-  treemacs-20220103.1822/icons/default/vagrant.png
-  treemacs-20220103.1822/icons/default/video.png
-  treemacs-20220103.1822/icons/default/vsc/
-  treemacs-20220103.1822/icons/default/vsc/README.txt
-  treemacs-20220103.1822/icons/default/vsc/access.png
-  treemacs-20220103.1822/icons/default/vsc/ai.png
-  treemacs-20220103.1822/icons/default/vsc/alaw.png
-  treemacs-20220103.1822/icons/default/vsc/angular.png
-  treemacs-20220103.1822/icons/default/vsc/ansible.png
-  treemacs-20220103.1822/icons/default/vsc/antlr.png
-  treemacs-20220103.1822/icons/default/vsc/any.png
-  treemacs-20220103.1822/icons/default/vsc/apache.png
-  treemacs-20220103.1822/icons/default/vsc/apple.png
-  treemacs-20220103.1822/icons/default/vsc/appveyor.png
-  treemacs-20220103.1822/icons/default/vsc/arduino.png
-  treemacs-20220103.1822/icons/default/vsc/ascript.png
-  treemacs-20220103.1822/icons/default/vsc/asm.png
-  treemacs-20220103.1822/icons/default/vsc/asp.png
-  treemacs-20220103.1822/icons/default/vsc/autohk.png
-  treemacs-20220103.1822/icons/default/vsc/babel.png
-  treemacs-20220103.1822/icons/default/vsc/bat.png
-  treemacs-20220103.1822/icons/default/vsc/bazel.png
-  treemacs-20220103.1822/icons/default/vsc/binary.png
-  treemacs-20220103.1822/icons/default/vsc/bower.png
-  treemacs-20220103.1822/icons/default/vsc/bundler.png
-  treemacs-20220103.1822/icons/default/vsc/cargo.png
-  treemacs-20220103.1822/icons/default/vsc/cert.png
-  treemacs-20220103.1822/icons/default/vsc/cfscript.png
-  treemacs-20220103.1822/icons/default/vsc/class.png
-  treemacs-20220103.1822/icons/default/vsc/cmake.png
-  treemacs-20220103.1822/icons/default/vsc/cobol.png
-  treemacs-20220103.1822/icons/default/vsc/cpp.png
-  treemacs-20220103.1822/icons/default/vsc/cpph.png
-  treemacs-20220103.1822/icons/default/vsc/cucumber.png
-  treemacs-20220103.1822/icons/default/vsc/cython.png
-  treemacs-20220103.1822/icons/default/vsc/delphi.png
-  treemacs-20220103.1822/icons/default/vsc/deps.png
-  treemacs-20220103.1822/icons/default/vsc/diff.png
-  treemacs-20220103.1822/icons/default/vsc/dir-closed.png
-  treemacs-20220103.1822/icons/default/vsc/dir-open.png
-  treemacs-20220103.1822/icons/default/vsc/django.png
-  treemacs-20220103.1822/icons/default/vsc/dlang.png
-  treemacs-20220103.1822/icons/default/vsc/editorcfg.png
-  treemacs-20220103.1822/icons/default/vsc/elm.png
-  treemacs-20220103.1822/icons/default/vsc/elx.png
-  treemacs-20220103.1822/icons/default/vsc/erb.png
-  treemacs-20220103.1822/icons/default/vsc/eslint.png
-  treemacs-20220103.1822/icons/default/vsc/excel.png
-  treemacs-20220103.1822/icons/default/vsc/font.png
-  treemacs-20220103.1822/icons/default/vsc/fortran.png
-  treemacs-20220103.1822/icons/default/vsc/fsharp.png
-  treemacs-20220103.1822/icons/default/vsc/fsproj.png
-  treemacs-20220103.1822/icons/default/vsc/godot.png
-  treemacs-20220103.1822/icons/default/vsc/graphql.png
-  treemacs-20220103.1822/icons/default/vsc/helm.png
-  treemacs-20220103.1822/icons/default/vsc/jar.png
-  treemacs-20220103.1822/icons/default/vsc/java.png
-  treemacs-20220103.1822/icons/default/vsc/jenkins.png
-  treemacs-20220103.1822/icons/default/vsc/jupyter.png
-  treemacs-20220103.1822/icons/default/vsc/key.png
-  treemacs-20220103.1822/icons/default/vsc/less.png
-  treemacs-20220103.1822/icons/default/vsc/license.png
-  treemacs-20220103.1822/icons/default/vsc/lisp.png
-  treemacs-20220103.1822/icons/default/vsc/locale.png
-  treemacs-20220103.1822/icons/default/vsc/log.png
-  treemacs-20220103.1822/icons/default/vsc/lua.png
-  treemacs-20220103.1822/icons/default/vsc/make.png
-  treemacs-20220103.1822/icons/default/vsc/manifest.png
-  treemacs-20220103.1822/icons/default/vsc/maven.png
-  treemacs-20220103.1822/icons/default/vsc/meson.png
-  treemacs-20220103.1822/icons/default/vsc/nginx.png
-  treemacs-20220103.1822/icons/default/vsc/nim.png
-  treemacs-20220103.1822/icons/default/vsc/npm.png
-  treemacs-20220103.1822/icons/default/vsc/org.png
-  treemacs-20220103.1822/icons/default/vsc/patch.png
-  treemacs-20220103.1822/icons/default/vsc/perl.png
-  treemacs-20220103.1822/icons/default/vsc/perl6.png
-  treemacs-20220103.1822/icons/default/vsc/pgsql.png
-  treemacs-20220103.1822/icons/default/vsc/phpunit.png
-  treemacs-20220103.1822/icons/default/vsc/pip.png
-  treemacs-20220103.1822/icons/default/vsc/pkg.png
-  treemacs-20220103.1822/icons/default/vsc/plsql.png
-  treemacs-20220103.1822/icons/default/vsc/pp.png
-  treemacs-20220103.1822/icons/default/vsc/prettier.png
-  treemacs-20220103.1822/icons/default/vsc/prolog.png
-  treemacs-20220103.1822/icons/default/vsc/protobuf.png
-  treemacs-20220103.1822/icons/default/vsc/r.png
-  treemacs-20220103.1822/icons/default/vsc/rake.png
-  treemacs-20220103.1822/icons/default/vsc/reason.png
-  treemacs-20220103.1822/icons/default/vsc/root-closed.png
-  treemacs-20220103.1822/icons/default/vsc/root-open.png
-  treemacs-20220103.1822/icons/default/vsc/ruby.png
-  treemacs-20220103.1822/icons/default/vsc/scss.png
-  treemacs-20220103.1822/icons/default/vsc/sql.png
-  treemacs-20220103.1822/icons/default/vsc/sqlite.png
-  treemacs-20220103.1822/icons/default/vsc/swagger.png
-  treemacs-20220103.1822/icons/default/vsc/swift.png
-  treemacs-20220103.1822/icons/default/vsc/toml.png
-  treemacs-20220103.1822/icons/default/vsc/vim.png
-  treemacs-20220103.1822/icons/default/vsc/wasm.png
-  treemacs-20220103.1822/icons/default/vsc/xml.png
-  treemacs-20220103.1822/icons/default/vsc/yarn.png
-  treemacs-20220103.1822/icons/default/vsc/zip.png
-  treemacs-20220103.1822/icons/default/vue.png
-  treemacs-20220103.1822/icons/default/warning.png
-  treemacs-20220103.1822/icons/default/yaml.png
-  treemacs-20220103.1822/treemacs-async.el
-  treemacs-20220103.1822/treemacs-bookmarks.el
-  treemacs-20220103.1822/treemacs-compatibility.el
-  treemacs-20220103.1822/treemacs-core-utils.el
-  treemacs-20220103.1822/treemacs-customization.el
-  treemacs-20220103.1822/treemacs-diagnostics.el
-  treemacs-20220103.1822/treemacs-dirs-to-collapse.py
-  treemacs-20220103.1822/treemacs-dom.el
-  treemacs-20220103.1822/treemacs-extensions.el
-  treemacs-20220103.1822/treemacs-faces.el
-  treemacs-20220103.1822/treemacs-file-management.el
-  treemacs-20220103.1822/treemacs-filewatch-mode.el
-  treemacs-20220103.1822/treemacs-find-ignored-files.py
-  treemacs-20220103.1822/treemacs-follow-mode.el
-  treemacs-20220103.1822/treemacs-fringe-indicator.el
-  treemacs-20220103.1822/treemacs-git-status.py
-  treemacs-20220103.1822/treemacs-header-line.el
-  treemacs-20220103.1822/treemacs-hydras.el
-  treemacs-20220103.1822/treemacs-icons.el
-  treemacs-20220103.1822/treemacs-interface.el
-  treemacs-20220103.1822/treemacs-logging.el
-  treemacs-20220103.1822/treemacs-macros.el
-  treemacs-20220103.1822/treemacs-mode.el
-  treemacs-20220103.1822/treemacs-mouse-interface.el
-  treemacs-20220103.1822/treemacs-peek-mode.el
-  treemacs-20220103.1822/treemacs-persistence.el
-  treemacs-20220103.1822/treemacs-pkg.el
-  treemacs-20220103.1822/treemacs-project-follow-mode.el
-  treemacs-20220103.1822/treemacs-rendering.el
-  treemacs-20220103.1822/treemacs-scope.el
-  treemacs-20220103.1822/treemacs-single-file-git-status.py
-  treemacs-20220103.1822/treemacs-tag-follow-mode.el
-  treemacs-20220103.1822/treemacs-tags.el
-  treemacs-20220103.1822/treemacs-themes.el
-  treemacs-20220103.1822/treemacs-visuals.el
-  treemacs-20220103.1822/treemacs-workspaces.el
-  treemacs-20220103.1822/treemacs.el
-Built treemacs in 8.088s, finished at 2022-01-04T11:03:45+0000
+Created treemacs-20220104.1302.tar containing:
+  treemacs-20220104.1302/
+  treemacs-20220104.1302/Changelog.org
+  treemacs-20220104.1302/icons/
+  treemacs-20220104.1302/icons/default/
+  treemacs-20220104.1302/icons/default/asciidoc.png
+  treemacs-20220104.1302/icons/default/audio.png
+  treemacs-20220104.1302/icons/default/babel.png
+  treemacs-20220104.1302/icons/default/bookmark.png
+  treemacs-20220104.1302/icons/default/buffer-group-closed.png
+  treemacs-20220104.1302/icons/default/buffer-group-open.png
+  treemacs-20220104.1302/icons/default/c.png
+  treemacs-20220104.1302/icons/default/cabal.png
+  treemacs-20220104.1302/icons/default/clojure.png
+  treemacs-20220104.1302/icons/default/conf.png
+  treemacs-20220104.1302/icons/default/css.png
+  treemacs-20220104.1302/icons/default/dart.png
+  treemacs-20220104.1302/icons/default/direnv.png
+  treemacs-20220104.1302/icons/default/docker.png
+  treemacs-20220104.1302/icons/default/elx-light.png
+  treemacs-20220104.1302/icons/default/elx.png
+  treemacs-20220104.1302/icons/default/emacs.png
+  treemacs-20220104.1302/icons/default/erlang.png
+  treemacs-20220104.1302/icons/default/error.png
+  treemacs-20220104.1302/icons/default/git.png
+  treemacs-20220104.1302/icons/default/go.png
+  treemacs-20220104.1302/icons/default/gradle.png
+  treemacs-20220104.1302/icons/default/haskell.png
+  treemacs-20220104.1302/icons/default/html.png
+  treemacs-20220104.1302/icons/default/hy.png
+  treemacs-20220104.1302/icons/default/image.png
+  treemacs-20220104.1302/icons/default/info.png
+  treemacs-20220104.1302/icons/default/jar.png
+  treemacs-20220104.1302/icons/default/jinja2.png
+  treemacs-20220104.1302/icons/default/js.png
+  treemacs-20220104.1302/icons/default/json.png
+  treemacs-20220104.1302/icons/default/julia.png
+  treemacs-20220104.1302/icons/default/kotlin.png
+  treemacs-20220104.1302/icons/default/ledger.png
+  treemacs-20220104.1302/icons/default/lock.png
+  treemacs-20220104.1302/icons/default/mail-mark-read.png
+  treemacs-20220104.1302/icons/default/mail-mark-unread.png
+  treemacs-20220104.1302/icons/default/mail.png
+  treemacs-20220104.1302/icons/default/markdown.png
+  treemacs-20220104.1302/icons/default/nix.png
+  treemacs-20220104.1302/icons/default/ocaml.png
+  treemacs-20220104.1302/icons/default/pdf.png
+  treemacs-20220104.1302/icons/default/php.png
+  treemacs-20220104.1302/icons/default/project.png
+  treemacs-20220104.1302/icons/default/puppet.png
+  treemacs-20220104.1302/icons/default/purescript.png
+  treemacs-20220104.1302/icons/default/python.png
+  treemacs-20220104.1302/icons/default/racket.png
+  treemacs-20220104.1302/icons/default/rust.png
+  treemacs-20220104.1302/icons/default/sbt.png
+  treemacs-20220104.1302/icons/default/scala.png
+  treemacs-20220104.1302/icons/default/scons.png
+  treemacs-20220104.1302/icons/default/shell.png
+  treemacs-20220104.1302/icons/default/svgrepo/
+  treemacs-20220104.1302/icons/default/svgrepo/README.txt
+  treemacs-20220104.1302/icons/default/svgrepo/briefcase.png
+  treemacs-20220104.1302/icons/default/svgrepo/cal.png
+  treemacs-20220104.1302/icons/default/svgrepo/close.png
+  treemacs-20220104.1302/icons/default/svgrepo/house.png
+  treemacs-20220104.1302/icons/default/svgrepo/list.png
+  treemacs-20220104.1302/icons/default/svgrepo/repeat.png
+  treemacs-20220104.1302/icons/default/svgrepo/screen.png
+  treemacs-20220104.1302/icons/default/svgrepo/suitcase.png
+  treemacs-20220104.1302/icons/default/systemd.png
+  treemacs-20220104.1302/icons/default/tags-closed.png
+  treemacs-20220104.1302/icons/default/tags-leaf.png
+  treemacs-20220104.1302/icons/default/tags-open.png
+  treemacs-20220104.1302/icons/default/tex.png
+  treemacs-20220104.1302/icons/default/ts.png
+  treemacs-20220104.1302/icons/default/txt.png
+  treemacs-20220104.1302/icons/default/vagrant.png
+  treemacs-20220104.1302/icons/default/video.png
+  treemacs-20220104.1302/icons/default/vsc/
+  treemacs-20220104.1302/icons/default/vsc/README.txt
+  treemacs-20220104.1302/icons/default/vsc/access.png
+  treemacs-20220104.1302/icons/default/vsc/ai.png
+  treemacs-20220104.1302/icons/default/vsc/alaw.png
+  treemacs-20220104.1302/icons/default/vsc/angular.png
+  treemacs-20220104.1302/icons/default/vsc/ansible.png
+  treemacs-20220104.1302/icons/default/vsc/antlr.png
+  treemacs-20220104.1302/icons/default/vsc/any.png
+  treemacs-20220104.1302/icons/default/vsc/apache.png
+  treemacs-20220104.1302/icons/default/vsc/apple.png
+  treemacs-20220104.1302/icons/default/vsc/appveyor.png
+  treemacs-20220104.1302/icons/default/vsc/arduino.png
+  treemacs-20220104.1302/icons/default/vsc/ascript.png
+  treemacs-20220104.1302/icons/default/vsc/asm.png
+  treemacs-20220104.1302/icons/default/vsc/asp.png
+  treemacs-20220104.1302/icons/default/vsc/autohk.png
+  treemacs-20220104.1302/icons/default/vsc/babel.png
+  treemacs-20220104.1302/icons/default/vsc/bat.png
+  treemacs-20220104.1302/icons/default/vsc/bazel.png
+  treemacs-20220104.1302/icons/default/vsc/binary.png
+  treemacs-20220104.1302/icons/default/vsc/bower.png
+  treemacs-20220104.1302/icons/default/vsc/bundler.png
+  treemacs-20220104.1302/icons/default/vsc/cargo.png
+  treemacs-20220104.1302/icons/default/vsc/cert.png
+  treemacs-20220104.1302/icons/default/vsc/cfscript.png
+  treemacs-20220104.1302/icons/default/vsc/class.png
+  treemacs-20220104.1302/icons/default/vsc/cmake.png
+  treemacs-20220104.1302/icons/default/vsc/cobol.png
+  treemacs-20220104.1302/icons/default/vsc/cpp.png
+  treemacs-20220104.1302/icons/default/vsc/cpph.png
+  treemacs-20220104.1302/icons/default/vsc/cucumber.png
+  treemacs-20220104.1302/icons/default/vsc/cython.png
+  treemacs-20220104.1302/icons/default/vsc/delphi.png
+  treemacs-20220104.1302/icons/default/vsc/deps.png
+  treemacs-20220104.1302/icons/default/vsc/diff.png
+  treemacs-20220104.1302/icons/default/vsc/dir-closed.png
+  treemacs-20220104.1302/icons/default/vsc/dir-open.png
+  treemacs-20220104.1302/icons/default/vsc/django.png
+  treemacs-20220104.1302/icons/default/vsc/dlang.png
+  treemacs-20220104.1302/icons/default/vsc/editorcfg.png
+  treemacs-20220104.1302/icons/default/vsc/elm.png
+  treemacs-20220104.1302/icons/default/vsc/elx.png
+  treemacs-20220104.1302/icons/default/vsc/erb.png
+  treemacs-20220104.1302/icons/default/vsc/eslint.png
+  treemacs-20220104.1302/icons/default/vsc/excel.png
+  treemacs-20220104.1302/icons/default/vsc/font.png
+  treemacs-20220104.1302/icons/default/vsc/fortran.png
+  treemacs-20220104.1302/icons/default/vsc/fsharp.png
+  treemacs-20220104.1302/icons/default/vsc/fsproj.png
+  treemacs-20220104.1302/icons/default/vsc/godot.png
+  treemacs-20220104.1302/icons/default/vsc/graphql.png
+  treemacs-20220104.1302/icons/default/vsc/helm.png
+  treemacs-20220104.1302/icons/default/vsc/jar.png
+  treemacs-20220104.1302/icons/default/vsc/java.png
+  treemacs-20220104.1302/icons/default/vsc/jenkins.png
+  treemacs-20220104.1302/icons/default/vsc/jupyter.png
+  treemacs-20220104.1302/icons/default/vsc/key.png
+  treemacs-20220104.1302/icons/default/vsc/less.png
+  treemacs-20220104.1302/icons/default/vsc/license.png
+  treemacs-20220104.1302/icons/default/vsc/lisp.png
+  treemacs-20220104.1302/icons/default/vsc/locale.png
+  treemacs-20220104.1302/icons/default/vsc/log.png
+  treemacs-20220104.1302/icons/default/vsc/lua.png
+  treemacs-20220104.1302/icons/default/vsc/make.png
+  treemacs-20220104.1302/icons/default/vsc/manifest.png
+  treemacs-20220104.1302/icons/default/vsc/maven.png
+  treemacs-20220104.1302/icons/default/vsc/meson.png
+  treemacs-20220104.1302/icons/default/vsc/nginx.png
+  treemacs-20220104.1302/icons/default/vsc/nim.png
+  treemacs-20220104.1302/icons/default/vsc/npm.png
+  treemacs-20220104.1302/icons/default/vsc/org.png
+  treemacs-20220104.1302/icons/default/vsc/patch.png
+  treemacs-20220104.1302/icons/default/vsc/perl.png
+  treemacs-20220104.1302/icons/default/vsc/perl6.png
+  treemacs-20220104.1302/icons/default/vsc/pgsql.png
+  treemacs-20220104.1302/icons/default/vsc/phpunit.png
+  treemacs-20220104.1302/icons/default/vsc/pip.png
+  treemacs-20220104.1302/icons/default/vsc/pkg.png
+  treemacs-20220104.1302/icons/default/vsc/plsql.png
+  treemacs-20220104.1302/icons/default/vsc/pp.png
+  treemacs-20220104.1302/icons/default/vsc/prettier.png
+  treemacs-20220104.1302/icons/default/vsc/prolog.png
+  treemacs-20220104.1302/icons/default/vsc/protobuf.png
+  treemacs-20220104.1302/icons/default/vsc/r.png
+  treemacs-20220104.1302/icons/default/vsc/rake.png
+  treemacs-20220104.1302/icons/default/vsc/reason.png
+  treemacs-20220104.1302/icons/default/vsc/root-closed.png
+  treemacs-20220104.1302/icons/default/vsc/root-open.png
+  treemacs-20220104.1302/icons/default/vsc/ruby.png
+  treemacs-20220104.1302/icons/default/vsc/scss.png
+  treemacs-20220104.1302/icons/default/vsc/sql.png
+  treemacs-20220104.1302/icons/default/vsc/sqlite.png
+  treemacs-20220104.1302/icons/default/vsc/swagger.png
+  treemacs-20220104.1302/icons/default/vsc/swift.png
+  treemacs-20220104.1302/icons/default/vsc/toml.png
+  treemacs-20220104.1302/icons/default/vsc/vim.png
+  treemacs-20220104.1302/icons/default/vsc/wasm.png
+  treemacs-20220104.1302/icons/default/vsc/xml.png
+  treemacs-20220104.1302/icons/default/vsc/yarn.png
+  treemacs-20220104.1302/icons/default/vsc/zip.png
+  treemacs-20220104.1302/icons/default/vue.png
+  treemacs-20220104.1302/icons/default/warning.png
+  treemacs-20220104.1302/icons/default/yaml.png
+  treemacs-20220104.1302/treemacs-async.el
+  treemacs-20220104.1302/treemacs-bookmarks.el
+  treemacs-20220104.1302/treemacs-compatibility.el
+  treemacs-20220104.1302/treemacs-core-utils.el
+  treemacs-20220104.1302/treemacs-customization.el
+  treemacs-20220104.1302/treemacs-diagnostics.el
+  treemacs-20220104.1302/treemacs-dirs-to-collapse.py
+  treemacs-20220104.1302/treemacs-dom.el
+  treemacs-20220104.1302/treemacs-extensions.el
+  treemacs-20220104.1302/treemacs-faces.el
+  treemacs-20220104.1302/treemacs-file-management.el
+  treemacs-20220104.1302/treemacs-filewatch-mode.el
+  treemacs-20220104.1302/treemacs-find-ignored-files.py
+  treemacs-20220104.1302/treemacs-follow-mode.el
+  treemacs-20220104.1302/treemacs-fringe-indicator.el
+  treemacs-20220104.1302/treemacs-git-status.py
+  treemacs-20220104.1302/treemacs-header-line.el
+  treemacs-20220104.1302/treemacs-hydras.el
+  treemacs-20220104.1302/treemacs-icons.el
+  treemacs-20220104.1302/treemacs-interface.el
+  treemacs-20220104.1302/treemacs-logging.el
+  treemacs-20220104.1302/treemacs-macros.el
+  treemacs-20220104.1302/treemacs-mode.el
+  treemacs-20220104.1302/treemacs-mouse-interface.el
+  treemacs-20220104.1302/treemacs-peek-mode.el
+  treemacs-20220104.1302/treemacs-persistence.el
+  treemacs-20220104.1302/treemacs-pkg.el
+  treemacs-20220104.1302/treemacs-project-follow-mode.el
+  treemacs-20220104.1302/treemacs-rendering.el
+  treemacs-20220104.1302/treemacs-scope.el
+  treemacs-20220104.1302/treemacs-single-file-git-status.py
+  treemacs-20220104.1302/treemacs-tag-follow-mode.el
+  treemacs-20220104.1302/treemacs-tags.el
+  treemacs-20220104.1302/treemacs-themes.el
+  treemacs-20220104.1302/treemacs-visuals.el
+  treemacs-20220104.1302/treemacs-workspaces.el
+  treemacs-20220104.1302/treemacs.el
+Built treemacs in 5.051s, finished at 2022-01-04T14:02:57+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  565 Jan  4 11:03 packages/treemacs-20220103.1822.entry
 1.4M -rw-r--r-- 1 root root 1.4M Jan  4 11:03 packages/treemacs-20220103.1822.tar
+4.0K -rw-r--r-- 1 root root  565 Jan  4 14:02 packages/treemacs-20220104.1302.entry
+1.4M -rw-r--r-- 1 root root 1.4M Jan  4 14:02 packages/treemacs-20220104.1302.tar
  36K -rw-r--r-- 1 root root  34K Jan  4 11:03 packages/treemacs-all-the-icons-20211107.1818.el
 4.0K -rw-r--r-- 1 root root  431 Jan  4 11:03 packages/treemacs-all-the-icons-20211107.1818.entry
 4.0K -rw-r--r-- 1 root root 1.2K Jan  4 11:03 packages/treemacs-all-the-icons-badge.svg
 4.0K -rw-r--r-- 1 root root   29 Jan  4 11:03 packages/treemacs-all-the-icons-readme.txt
-4.0K -rw-r--r-- 1 root root  705 Jan  4 11:03 packages/treemacs-all-the-icons.log
-4.0K -rw-r--r-- 1 root root 1.2K Jan  4 11:03 packages/treemacs-badge.svg
+4.0K -rw-r--r-- 1 root root  190 Jan  4 14:02 packages/treemacs-all-the-icons.log
+4.0K -rw-r--r-- 1 root root 1.2K Jan  4 14:02 packages/treemacs-badge.svg
 8.0K -rw-r--r-- 1 root root 5.6K Jan  4 11:03 packages/treemacs-evil-20211019.1654.el
 4.0K -rw-r--r-- 1 root root  397 Jan  4 11:03 packages/treemacs-evil-20211019.1654.entry
 4.0K -rw-r--r-- 1 root root 1.2K Jan  4 11:03 packages/treemacs-evil-badge.svg
 4.0K -rw-r--r-- 1 root root   27 Jan  4 11:03 packages/treemacs-evil-readme.txt
-4.0K -rw-r--r-- 1 root root  642 Jan  4 11:03 packages/treemacs-evil.log
- 12K -rw-r--r-- 1 root root 8.6K Jan  4 11:03 packages/treemacs-icons-dired-20211229.1448.el
-4.0K -rw-r--r-- 1 root root  392 Jan  4 08:04 packages/treemacs-icons-dired-20211229.1448.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan  4 08:04 packages/treemacs-icons-dired-badge.svg
-4.0K -rw-r--r-- 1 root root   69 Jan  4 08:04 packages/treemacs-icons-dired-readme.txt
-4.0K -rw-r--r-- 1 root root  240 Jan  4 11:03 packages/treemacs-icons-dired.log
-8.0K -rw-r--r-- 1 root root 7.4K Jan  4 08:04 packages/treemacs-magit-20211010.1005.el
-4.0K -rw-r--r-- 1 root root  426 Jan  4 08:04 packages/treemacs-magit-20211010.1005.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan  4 08:04 packages/treemacs-magit-badge.svg
-4.0K -rw-r--r-- 1 root root  277 Jan  4 08:04 packages/treemacs-magit-readme.txt
-4.0K -rw-r--r-- 1 root root  228 Jan  4 11:03 packages/treemacs-magit.log
-8.0K -rw-r--r-- 1 root root 5.5K Jan  4 08:04 packages/treemacs-persp-20211229.1448.el
-4.0K -rw-r--r-- 1 root root  435 Jan  4 08:04 packages/treemacs-persp-20211229.1448.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan  4 08:04 packages/treemacs-persp-badge.svg
-4.0K -rw-r--r-- 1 root root   69 Jan  4 08:04 packages/treemacs-persp-readme.txt
-4.0K -rw-r--r-- 1 root root  149 Jan  4 11:03 packages/treemacs-persp.log
-8.0K -rw-r--r-- 1 root root 5.8K Jan  4 08:04 packages/treemacs-perspective-20211229.1448.el
-4.0K -rw-r--r-- 1 root root  495 Jan  4 08:04 packages/treemacs-perspective-20211229.1448.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan  4 08:04 packages/treemacs-perspective-badge.svg
-4.0K -rw-r--r-- 1 root root   73 Jan  4 08:04 packages/treemacs-perspective-readme.txt
-4.0K -rw-r--r-- 1 root root  161 Jan  4 11:03 packages/treemacs-perspective.log
-8.0K -rw-r--r-- 1 root root 6.9K Jan  4 08:04 packages/treemacs-projectile-20211223.1454.el
-4.0K -rw-r--r-- 1 root root  453 Jan  4 08:04 packages/treemacs-projectile-20211223.1454.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan  4 08:04 packages/treemacs-projectile-badge.svg
-4.0K -rw-r--r-- 1 root root   38 Jan  4 08:04 packages/treemacs-projectile-readme.txt
-   0 -rw-r--r-- 1 root root    0 Jan  4 11:03 packages/treemacs-projectile.log
-4.0K -rw-r--r-- 1 root root   52 Jan  4 11:03 packages/treemacs-readme.txt
+4.0K -rw-r--r-- 1 root root  172 Jan  4 14:02 packages/treemacs-evil.log
+ 12K -rw-r--r-- 1 root root 8.7K Jan  4 11:03 packages/treemacs-icons-dired-20211229.1448.el
+4.0K -rw-r--r-- 1 root root  392 Jan  4 11:03 packages/treemacs-icons-dired-20211229.1448.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  4 11:03 packages/treemacs-icons-dired-badge.svg
+4.0K -rw-r--r-- 1 root root   69 Jan  4 11:03 packages/treemacs-icons-dired-readme.txt
+4.0K -rw-r--r-- 1 root root  186 Jan  4 14:02 packages/treemacs-icons-dired.log
+8.0K -rw-r--r-- 1 root root 7.4K Jan  4 11:03 packages/treemacs-magit-20211010.1005.el
+4.0K -rw-r--r-- 1 root root  426 Jan  4 11:03 packages/treemacs-magit-20211010.1005.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  4 11:03 packages/treemacs-magit-badge.svg
+4.0K -rw-r--r-- 1 root root  277 Jan  4 11:03 packages/treemacs-magit-readme.txt
+4.0K -rw-r--r-- 1 root root  174 Jan  4 14:02 packages/treemacs-magit.log
+8.0K -rw-r--r-- 1 root root 5.5K Jan  4 11:03 packages/treemacs-persp-20211229.1448.el
+4.0K -rw-r--r-- 1 root root  435 Jan  4 11:03 packages/treemacs-persp-20211229.1448.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  4 11:03 packages/treemacs-persp-badge.svg
+4.0K -rw-r--r-- 1 root root   69 Jan  4 11:03 packages/treemacs-persp-readme.txt
+4.0K -rw-r--r-- 1 root root  149 Jan  4 14:02 packages/treemacs-persp.log
+8.0K -rw-r--r-- 1 root root 5.8K Jan  4 11:03 packages/treemacs-perspective-20211229.1448.el
+4.0K -rw-r--r-- 1 root root  495 Jan  4 11:03 packages/treemacs-perspective-20211229.1448.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  4 11:03 packages/treemacs-perspective-badge.svg
+4.0K -rw-r--r-- 1 root root   73 Jan  4 11:03 packages/treemacs-perspective-readme.txt
+4.0K -rw-r--r-- 1 root root  691 Jan  4 11:03 packages/treemacs-perspective.log
+8.0K -rw-r--r-- 1 root root 6.9K Jan  4 11:03 packages/treemacs-projectile-20211223.1454.el
+4.0K -rw-r--r-- 1 root root  453 Jan  4 11:03 packages/treemacs-projectile-20211223.1454.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  4 11:03 packages/treemacs-projectile-badge.svg
+4.0K -rw-r--r-- 1 root root   38 Jan  4 11:03 packages/treemacs-projectile-readme.txt
+4.0K -rw-r--r-- 1 root root  684 Jan  4 11:03 packages/treemacs-projectile.log
+4.0K -rw-r--r-- 1 root root   52 Jan  4 14:02 packages/treemacs-readme.txt
