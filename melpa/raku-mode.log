@@ -3,3 +3,33 @@ Fetcher: github
 Source:  https://github.com/Raku/raku-mode.git
 
 Updating /mnt/store/melpa/working/raku-mode/
+Checking out origin/HEAD
+Checking out 977b14a7c1295ebf2aad2f807d3f8e7c27aeb47f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/raku-mode/
+  to /tmp/raku-modeqOADDq/raku-mode-20210927.1227
+    raku-detect.el -> raku-detect.el
+    raku-font-lock.el -> raku-font-lock.el
+    raku-imenu.el -> raku-imenu.el
+    raku-indent.el -> raku-indent.el
+    raku-mode.el -> raku-mode.el
+    raku-repl.el -> raku-repl.el
+    raku-skeletons.el -> raku-skeletons.el
+    raku-unicode-menu.el -> raku-unicode-menu.el
+Created raku-mode-20210927.1227.tar containing:
+  raku-mode-20210927.1227/
+  raku-mode-20210927.1227/raku-detect.el
+  raku-mode-20210927.1227/raku-font-lock.el
+  raku-mode-20210927.1227/raku-imenu.el
+  raku-mode-20210927.1227/raku-indent.el
+  raku-mode-20210927.1227/raku-mode-pkg.el
+  raku-mode-20210927.1227/raku-mode.el
+  raku-mode-20210927.1227/raku-repl.el
+  raku-mode-20210927.1227/raku-skeletons.el
+  raku-mode-20210927.1227/raku-unicode-menu.el
+Built raku-mode in 4.552s, finished at 2022-01-04T01:56:07+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  403 Jan  4 01:56 packages/raku-mode-20210927.1227.entry
+ 60K -rw-r--r-- 1 root root  60K Jan  4 01:56 packages/raku-mode-20210927.1227.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  4 01:56 packages/raku-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  104 Jan  4 01:56 packages/raku-mode-readme.txt

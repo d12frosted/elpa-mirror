@@ -4,28 +4,34 @@ Source:  https://github.com/ethan-leba/tree-edit.git
 
 Updating /mnt/store/melpa/working/tree-edit/
 Checking out origin/HEAD
-Checking out 6d8e495169d4e6bb98b3cd1a1a0a06cc806c5e59
+Checking out 3f286fac3c74016a4e3dfa1d146415ca7914a3ab
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tree-edit/
-  to /tmp/tree-editRP8wVv/tree-edit-20211226.1648
+  to /tmp/tree-editgWzwtr/tree-edit-20220104.129
+    tree-edit-c-grammar.el -> tree-edit-c-grammar.el
+    tree-edit-c.el -> tree-edit-c.el
     tree-edit-java-grammar.el -> tree-edit-java-grammar.el
     tree-edit-java.el -> tree-edit-java.el
     tree-edit-python-grammar.el -> tree-edit-python-grammar.el
     tree-edit-python.el -> tree-edit-python.el
     tree-edit-view.el -> tree-edit-view.el
     tree-edit.el -> tree-edit.el
-Created tree-edit-20211226.1648.tar containing:
-  tree-edit-20211226.1648/
-  tree-edit-20211226.1648/tree-edit-java-grammar.el
-  tree-edit-20211226.1648/tree-edit-java.el
-  tree-edit-20211226.1648/tree-edit-pkg.el
-  tree-edit-20211226.1648/tree-edit-python-grammar.el
-  tree-edit-20211226.1648/tree-edit-python.el
-  tree-edit-20211226.1648/tree-edit-view.el
-  tree-edit-20211226.1648/tree-edit.el
-Built tree-edit in 4.913s, finished at 2022-01-03T17:15:18+0000
+Created tree-edit-20220104.129.tar containing:
+  tree-edit-20220104.129/
+  tree-edit-20220104.129/tree-edit-c-grammar.el
+  tree-edit-20220104.129/tree-edit-c.el
+  tree-edit-20220104.129/tree-edit-java-grammar.el
+  tree-edit-20220104.129/tree-edit-java.el
+  tree-edit-20220104.129/tree-edit-pkg.el
+  tree-edit-20220104.129/tree-edit-python-grammar.el
+  tree-edit-20220104.129/tree-edit-python.el
+  tree-edit-20220104.129/tree-edit-view.el
+  tree-edit-20220104.129/tree-edit.el
+Built tree-edit in 14.544s, finished at 2022-01-04T02:06:17+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  554 Jan  3 17:15 packages/tree-edit-20211226.1648.entry
-392K -rw-r--r-- 1 root root 390K Jan  3 17:15 packages/tree-edit-20211226.1648.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan  3 17:15 packages/tree-edit-badge.svg
-4.0K -rw-r--r-- 1 root root  272 Jan  3 17:15 packages/tree-edit-readme.txt
+4.0K -rw-r--r-- 1 root root  554 Jan  3 23:08 packages/tree-edit-20211226.1648.entry
+392K -rw-r--r-- 1 root root 390K Jan  3 23:08 packages/tree-edit-20211226.1648.tar
+4.0K -rw-r--r-- 1 root root  553 Jan  4 02:06 packages/tree-edit-20220104.129.entry
+780K -rw-r--r-- 1 root root 780K Jan  4 02:06 packages/tree-edit-20220104.129.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  4 02:06 packages/tree-edit-badge.svg
+4.0K -rw-r--r-- 1 root root  272 Jan  4 02:06 packages/tree-edit-readme.txt
