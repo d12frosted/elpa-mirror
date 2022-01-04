@@ -210,18 +210,18 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/blist.html"))])
  (bluetooth .
-	    [(0 2)
+	    [(0 3)
 	     ((emacs
 	       (25 1))
 	      (dash
-	       (2 12 0)))
-	     "A Major mode for Bluetooth devices" single
-	     ((:keywords "hardware")
+	       (2 18 1)))
+	     "A Major mode for Bluetooth devices" tar
+	     ((:url . "https://gitlab.com/rstocker/emacs-bluetooth")
+	      (:keywords "hardware")
+	      (:maintainer "Raffael Stocker" . "r.stocker@mnet-mail.de")
 	      (:authors
 	       ("Raffael Stocker" . "r.stocker@mnet-mail.de")
-	       ("Etienne Prud’homme" . "e.e.f.prudhomme@gmail.com"))
-	      (:maintainer "Raffael Stocker" . "r.stocker@mnet-mail.de")
-	      (:url . "https://gitlab.com/rstocker/emacs-bluetooth"))])
+	       ("Etienne Prud’homme" . "e.e.f.prudhomme@gmail.com")))])
  (bnf-mode .
 	   [(0 4 5)
 	    ((cl-lib
@@ -1759,7 +1759,7 @@
 		(:keywords "convenience" "org-mode" "org-agenda")
 		(:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
  (nano-modeline .
-		[(0 3)
+		[(0 4)
 		 ((emacs
 		   (27 1)))
 		 "N Λ N O modeline" tar
