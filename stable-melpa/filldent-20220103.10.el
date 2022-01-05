@@ -5,7 +5,7 @@
 ;; Author: Case Duckworth <acdw@acdw.net>
 ;; URL: https://github.com/duckwork/filldent.el
 ;; Package-Version: 20220103.10
-;; Package-Commit: 0b9aa02c2519d9ba9df168fd5b15a0d59f286507
+;; Package-Commit: 5969bdf50a1fcf0bd3a1507782152effb5be85e7
 ;; Version: 1.0.1
 ;; Package-Requires: ((emacs "24.1"))
 

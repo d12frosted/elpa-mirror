@@ -6,7 +6,7 @@
 ;; Maintainer: Matúš Goljer <matus.goljer@gmail.com>
 ;; Version: 0.0.1
 ;; Package-Version: 20210519.1225
-;; Package-Commit: 4ba26bbd26102c45c234bc6ce9a8e9c655c6a0a2
+;; Package-Commit: 86d7581202a37d2004589b8c8e9d8638806c6bcc
 ;; Created: 10th March 2018
 ;; Package-requires: ((dash "2.13.0") (emacs "24"))
 ;; Keywords: outlines

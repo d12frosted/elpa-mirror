@@ -4,3 +4,26 @@ Source:  https://github.com/emacscollective/borg.git
 
 Updating /mnt/store/melpa/working/borg/
 Checking out origin/HEAD
+Checking out c563966e969b19b10f08046f5c132eefa5534da4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/borg/
+  to /tmp/borgmxa4SA/borg-20220103.932
+    borg-elpa.el -> borg-elpa.el
+    borg.el -> borg.el
+    borg.mk -> borg.mk
+  ! docs/borg.texi -> borg.texi
+Created /tmp/borgmxa4SA/borg-20220103.932/borg.info
+Created borg-20220103.932.tar containing:
+  borg-20220103.932/
+  borg-20220103.932/borg-elpa.el
+  borg-20220103.932/borg-pkg.el
+  borg-20220103.932/borg.el
+  borg-20220103.932/borg.info
+  borg-20220103.932/borg.mk
+  borg-20220103.932/dir
+Built borg in 8.737s, finished at 2022-01-05T03:44:48+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  396 Jan  5 03:44 packages/borg-20220103.932.entry
+120K -rw-r--r-- 1 root root 120K Jan  5 03:44 packages/borg-20220103.932.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  5 03:44 packages/borg-badge.svg
+4.0K -rw-r--r-- 1 root root  462 Jan  5 03:44 packages/borg-readme.txt

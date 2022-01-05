@@ -4,6 +4,8 @@
 ;; Created: 2020
 ;; License: GPL-3.0-or-later
 ;; Version: 0.2
+;; Package-Version: 20211223.1106
+;; Package-Commit: 841750afb272a596f1536e6a5731d9de22c7c5cb
 ;; Package-Requires: ((emacs "26"))
 ;; Homepage: https://github.com/minad/bookmark-view
 
@@ -218,11 +220,6 @@ without overwriting an already existing bookmark."
                    (bookmark-view-names))
                   (user-error "View stack is empty"))))
     (bookmark-view-open name)
-    (bookmark-view-delete name)))
-
-(provide 'bookmark-view)
-;;; bookmark-view.el ends here
-e)
     (bookmark-view-delete name)))
 
 (provide 'bookmark-view)

@@ -5,6 +5,8 @@
 ;; Author: USAMI Kenta <tadsan@zonu.me>
 ;; Created: 4 Mar 2017
 ;; Version: 0.0.1
+;; Package-Version: 20200827.1754
+;; Package-Commit: db209bf5b7f76f4c3dc4d0892fc6a24430779f29
 ;; Keywords: files, convenience
 ;; Homepage: https://github.com/zonuexe/auto-read-only.el
 ;; Package-Requires: ((emacs "25.1") (cl-lib "0.5"))

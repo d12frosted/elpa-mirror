@@ -21,7 +21,7 @@
 
 ;; Version: 1.0
 ;; Package-Version: 20210922.2325
-;; Package-Commit: f75a78f785ef1782a32f4464a89fd4c33bf368ca
+;; Package-Commit: 68d2925c7942039e3fb3eb6c113adec5369c6c72
 ;; Author: Marcel Patzwahl
 ;; Keywords: kubernetes k8s tools processes evil keybindings
 ;; URL: https://github.com/abrochard/kubel
