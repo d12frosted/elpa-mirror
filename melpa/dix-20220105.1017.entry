@@ -1,0 +1,13 @@
+(dix .
+     [(20220105 1017)
+      ((cl-lib
+	(0 5))
+       (emacs
+	(26 2)))
+      "Apertium XML editing minor mode" tar
+      ((:commit . "a2d924725380aca4d61df4a70825fc4b76185938")
+       (:authors
+	("Kevin Brubeck Unhammer" . "unhammer@fsfe.org"))
+       (:maintainer "Kevin Brubeck Unhammer" . "unhammer@fsfe.org")
+       (:keywords "languages")
+       (:url . "http://wiki.apertium.org/wiki/Emacs"))])
