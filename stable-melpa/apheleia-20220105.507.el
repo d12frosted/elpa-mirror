@@ -6,8 +6,8 @@
 ;; Created: 7 Jul 2019
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
-;; Package-Version: 20220105.21
-;; Package-Commit: cbffa9298cec8f787eefd0d4bc86c943f7b5272b
+;; Package-Version: 20220105.507
+;; Package-Commit: 41fa1f70ee01cd2ab3ab90f6fe4c4fc0819c2f96
 ;; Package-Requires: ((emacs "25.2"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 1.2
@@ -460,10 +460,8 @@ as in `write-region'. WRITE-REGION is used instead of the actual
     (set-visited-file-modtime)
     (set-buffer-modified-p nil)))
 
-(defun apheleia--write-file-silently (&optional filename)
-  "Write contents of current buffer into file FILENAME, silently.
-FILENAME defaults to value of variable `buffer-file-name'. Do not
-mark the buffer as visiting FILENAME."
+(defun apheleia--save-buffer-silently ()
+  "Save the current buffer to its backing file, silently."
   (cl-letf* ((write-region (symbol-function #'write-region))
              ((symbol-function #'write-region)
               (lambda (start end filename &optional
@@ -486,7 +484,7 @@ mark the buffer as visiting FILENAME."
               (lambda (&rest args)
                 (unless (equal args '(after-set-visited-file-name-hook))
                   (apply run-hooks args)))))
-    (write-file (or filename buffer-file-name))))
+    (save-buffer)))
 
 (defun apheleia--create-rcs-patch (old-buffer new-buffer callback)
   "Generate RCS patch from text in OLD-BUFFER to text in NEW-BUFFER.
@@ -585,10 +583,11 @@ cmd is to be run."
                                     output-fname
                                   arg))
                               command)))
-      (when (memq 'file command)
+      (when (or (memq 'file command) (memq 'filepath command))
         ;; Fail when using file but not as the first formatter in this
-        ;; sequence.
-        (when stdin-buffer
+        ;; sequence. (But filepath is okay, since it indicates content
+        ;; is not actually being read from the named file.)
+        (when (and stdin-buffer (memq 'file command))
           (error "Cannot run formatter using `file' in a \
 sequence unless it's first in the sequence"))
         (let ((file-name (or buffer-file-name
@@ -599,7 +598,14 @@ sequence unless it's first in the sequence"))
                                     (setq stdin nil))
                                   (if (memq arg '(file filepath))
                                       (prog1 file-name
-                                        (when (buffer-modified-p)
+                                        ;; If `buffer-file-name' is
+                                        ;; nil then there is no
+                                        ;; backing file, so
+                                        ;; `buffer-modified-p' should
+                                        ;; be ignored (it always
+                                        ;; returns non-nil).
+                                        (when (and (buffer-modified-p)
+                                                   buffer-file-name)
                                           (cl-return)))
                                     arg))
                                 command))))
@@ -998,7 +1004,7 @@ operating, to prevent an infinite loop.")
            (with-demoted-errors "Apheleia: %s"
              (when buffer-file-name
                (let ((apheleia--format-after-save-in-progress t))
-                 (apheleia--write-file-silently buffer-file-name)))
+                 (apheleia--save-buffer-silently)))
              (run-hooks 'apheleia-post-format-hook))))))))
 
 ;; Use `progn' to force the entire minor mode definition to be copied
