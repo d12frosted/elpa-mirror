@@ -906,6 +906,22 @@
 	    (:authors
 	     ("Andreas Politz" . "politza@fh-trier.de"))
 	    (:url . "https://elpa.nongnu.org/nongnu/tablist.html"))])
+ (telephone-line .
+		 [(0 5)
+		  ((emacs
+		    (24 4))
+		   (cl-lib
+		    (0 5))
+		   (cl-generic
+		    (0 2))
+		   (seq
+		    (1 8)))
+		  "Rewrite of Powerline" tar
+		  ((:url . "https://github.com/dbordak/telephone-line")
+		   (:keywords "mode-line")
+		   (:maintainer "Daniel Bordak" . "dbordak@fastmail.fm")
+		   (:authors
+		    ("Daniel Bordak" . "dbordak@fastmail.fm")))])
  (toc-org .
 	  [(1 1)
 	   nil "add table of contents to org-mode files (formerly, org-toc)" tar
