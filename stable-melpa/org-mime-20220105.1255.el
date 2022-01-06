@@ -6,7 +6,7 @@
 ;; Maintainer: Chen Bin (redguardtoo)
 ;; Keywords: mime, mail, email, html
 ;; Package-Version: 20220105.1255
-;; Package-Commit: 613969effcf47d1002c7bc7b0e943df31bf47257
+;; Package-Commit: a3519ebb94aae41005417ee4376b145e84feeebc
 ;; Homepage: http://github.com/org-mime/org-mime
 ;; Version: 0.2.4
 ;; Package-Requires: ((emacs "25.1"))
