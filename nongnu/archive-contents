@@ -34,6 +34,15 @@
 		       (:maintainer "Andrey Kotlarski" . "m00naticus@gmail.com")
 		       (:authors
 			("Andrey Kotlarski" . "m00naticus@gmail.com")))])
+ (anzu .
+       [(0 64)
+	((emacs
+	  (25 1)))
+	"Show number of matches in mode-line while searching" tar
+	((:url . "https://github.com/emacsorphanage/anzu")
+	 (:maintainer "Neil Okamoto" . "neil.okamoto+melpa@gmail.com")
+	 (:authors
+	  ("Syohei YOSHIDA" . "syohex@gmail.com")))])
  (apache-mode .
 	      [(2 2 0)
 	       nil "Major mode for editing Apache httpd configuration files" tar
@@ -59,6 +68,19 @@
 		((:url . "https://github.com/stardiviner/arduino-mode")
 		 (:maintainer "stardiviner" . "numbchild@gmail.com")
 		 (:keywords "languages" "arduino"))])
+ (autothemer .
+	     [(0 2 3)
+	      ((dash
+		(2 10 0))
+	       (emacs
+		(24))
+	       (cl-lib
+		(0 5)))
+	      "Conveniently define themes." tar
+	      ((:url . "https://github.com/sebastiansturm/autothemer")
+	       (:maintainer "Sebastian Sturm")
+	       (:authors
+		("Sebastian Sturm")))])
  (bison-mode .
 	     [(0 4)
 	      nil "Major mode for editing bison, yacc and lex files." tar
@@ -208,6 +230,100 @@
 	nil "extensible vi layer" tar
 	((:url . "https://github.com/emacs-evil/evil")
 	 (:keywords "emulation" "vim"))])
+ (evil-anzu .
+	    [(0 2)
+	     ((evil
+	       (1 0 0))
+	      (anzu
+	       (0 46)))
+	     "anzu for evil-mode" tar
+	     ((:url . "https://github.com/syohex/emacs-evil-anzu")
+	      (:maintainer "Syohei YOSHIDA" . "syohex@gmail.com")
+	      (:authors
+	       ("Syohei YOSHIDA" . "syohex@gmail.com")
+	       ("Fredrik Bergroth" . "fbergroth@gmail.com")))])
+ (evil-exchange .
+		[(0 41)
+		 ((evil
+		   (1 2 8))
+		  (cl-lib
+		   (0 3)))
+		 "Exchange text more easily within Evil" tar
+		 ((:url . "http://github.com/Dewdrops/evil-exchange")
+		  (:keywords "evil" "plugin")
+		  (:maintainer "Dewdrops" . "v_v_4474@126.com")
+		  (:authors
+		   ("Dewdrops" . "v_v_4474@126.com")))])
+ (evil-indent-plus .
+		   [(1 0 1)
+		    ((evil
+		      (0))
+		     (cl-lib
+		      (0 5)))
+		    "Evil textobjects based on indentation" tar
+		    ((:url . "http://github.com/TheBB/evil-indent-plus")
+		     (:keywords "convenience" "evil")
+		     (:maintainer "Eivind Fonn" . "evfonn@gmail.com")
+		     (:authors
+		      ("Eivind Fonn" . "evfonn@gmail.com")))])
+ (evil-lisp-state .
+		  [(8 2)
+		   ((evil
+		     (1 0 9))
+		    (bind-map
+		     (0))
+		    (smartparens
+		     (1 6 1)))
+		   "An evil state to edit Lisp code" tar
+		   ((:url . "https://github.com/syl20bnr/evil-lisp-state")
+		    (:keywords "convenience" "editing" "evil" "smartparens" "lisp" "mnemonic")
+		    (:maintainer "Sylvain Benner" . "sylvain.benner@gmail.com")
+		    (:authors
+		     ("Sylvain Benner" . "sylvain.benner@gmail.com")))])
+ (evil-matchit .
+	       [(2 4 1)
+		((evil
+		  (1 14 0))
+		 (emacs
+		  (25 1)))
+		"Vim matchit ported to Evil" tar
+		((:url . "http://github.com/redguardtoo/evil-matchit")
+		 (:keywords "matchit" "vim" "evil")
+		 (:maintainer "Chen Bin <chenbin DOT sh AT gmail DOT com>")
+		 (:authors
+		  ("Chen Bin <chenbin DOT sh AT gmail DOT com>")))])
+ (evil-nerd-commenter .
+		      [(3 5 5)
+		       ((emacs
+			 (25 1)))
+		       "Comment/uncomment lines efficiently. Like Nerd Commenter in Vim" tar
+		       ((:url . "http://github.com/redguardtoo/evil-nerd-commenter")
+			(:keywords "convenience" "evil")
+			(:maintainer "Chen Bin <chenbin DOT sh AT gmail.com>")
+			(:authors
+			 ("Chen Bin <chenbin DOT sh AT gmail.com>")))])
+ (evil-numbers .
+	       [(0 6)
+		((emacs
+		  (24 1))
+		 (evil
+		  (1 2 0)))
+		"Increment/decrement numbers like in VIM" tar
+		((:url . "http://github.com/juliapath/evil-numbers")
+		 (:keywords "convenience" "tools")
+		 (:maintainer "Julia Path" . "julia@jpath.de")
+		 (:authors
+		  ("Michael Markert" . "markert.michael@googlemail.com")))])
+ (evil-visualstar .
+		  [(0 2 0)
+		   ((evil
+		     (0)))
+		   "Starts a * or # search from the visual selection" tar
+		   ((:url . "https://github.com/bling/evil-visualstar")
+		    (:keywords "evil" "vim" "visualstar")
+		    (:maintainer "Bailey Ling")
+		    (:authors
+		     ("Bailey Ling")))])
  (flymake-kondor .
 		 [(0 1 3)
 		  ((emacs

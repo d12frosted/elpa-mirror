@@ -1,0 +1,366 @@
+Table of Contents
+─────────────────
+
+1. evil-matchit
+2. Why use evil-matchit
+3. Install
+4. Set up
+5. Usage
+6. Advanced tips
+.. 1. Support new major modes
+.. 2. Use evilmi-select-items instead press "%" in evil-visual-state
+.. 3. Add new tags into existing languages
+.. 4. Re-define keybinding
+.. 5. Jump between the two end of the "string"
+.. 6. Match case-sensitive tags?
+.. 7. Python
+7. Developer guide
+.. 1. Create plugin to support new language
+.. 2. Use SDK
+.. 3. APIs
+8. Contact me
+
+
+1 evil-matchit
+══════════════
+
+  [https://github.com/redguardtoo/evil-matchit/actions/workflows/test.yml/badge.svg]
+  [file:http://melpa.org/packages/evil-matchit-badge.svg]
+  [file:http://stable.melpa.org/packages/evil-matchit-badge.svg]
+
+  Vim [matchit.vim] by Benji Fisher is ported into Emacs.
+
+  Press "%" to jump between matched tags in Emacs. For example, in HTML
+  "<div>" and "</div>" are a pair of tags.
+
+  Supported programming languages and major modes:
+  • HTML
+  • Python
+  • Java
+  • C++/C
+  • Javascript
+  • Typescript
+  • React JSX (rjsx-mode, react-mode)
+  • JSON
+  • OCaml
+  • Markdown
+  • Perl
+  • Latex
+  • MATLAB/Octave
+  • CMake
+  • Org-mode (match tag of org-mode and tags of other languages embedded
+    in org file)
+  • Ruby
+  • Elixir
+  • Bash
+  • Lua
+  • PHP
+  • Fortran
+  • SQL
+  • Laravel Blade Templating
+  • Vim script
+  • Verilog
+  • Diff/Patch
+  • Shell/Terminal bundled in Emacs
+  • Emacs email (message-mode)
+  • VCS (Git/Subversion/Perforce …) merge conflicts
+
+  This package uses Evil as its vi layer!
+
+  Tested on Emacs 25, 26, 27, 28
+
+
+[https://github.com/redguardtoo/evil-matchit/actions/workflows/test.yml/badge.svg]
+<https://github.com/redguardtoo/evil-matchit/actions/workflows/test.yml>
+
+[file:http://melpa.org/packages/evil-matchit-badge.svg]
+<http://melpa.org/#/evil-matchit>
+
+[file:http://stable.melpa.org/packages/evil-matchit-badge.svg]
+<http://stable.melpa.org/#/evil-matchit>
+
+[matchit.vim] <http://www.vim.org/scripts/script.php?script_id=39>
+
+
+2 Why use evil-matchit
+══════════════════════
+
+  • No learning curve. Press "%" to jump. That's all!
+  • Stable
+  • Perfect integration with Evil
+  • Support any modern languages
+    (html/java/c/c++/python/latex/javascript …)
+  • Powerful. If you mix jsp, freemarker, html, jquery template or any
+    weird syntax into one file, it still works!
+  • Extendable. Write a plugin for it takes only 5 minutes
+
+  Screen cast for python: <file:screencast.gif>
+
+
+3 Install
+═════════
+
+  It's already uploaded to <http://melpa.org/>.
+
+
+4 Set up
+════════
+
+  Insert below code into `~/.emacs':
+  ┌────
+  │ (require 'evil-matchit)
+  │ (global-evil-matchit-mode 1)
+  └────
+
+  Alternatively, you can enable `evil-matchit-mode' along a major mode
+  by adding `turn-on-evil-matchit-mode' to the mode hook.
+
+
+5 Usage
+═══════
+
+  Press "%" to jump inside between tag pair in normal mode or visual
+  mode (you press "v" to switch to visual mode). Please note
+  evil-matchit is smart enough to *detect the tag automatically*.
+
+  Tag pair could be open/closed html tag, or character pair like "{}"
+  "[]" "()", or the single/double quote(s) at the two ends of the
+  string.
+
+  Inner/outer text object "%" is also created. It roughly equals the
+  region when you press "%" from evil-matchit.
+
+  Press "va%" to select line(s) wrapped by tags including tags
+  themselves. `M-x evilmi-select-items' does the same thing.
+
+  Press "da%" to delete line(s) wrapped by tags including tags
+  themselves. `M-x evilmi-delete-items' does the same thing.
+
+  All commands support numeric argument like "3%", "5va%" or "9da%"
+
+  Pressing "3%" jumps to a line 3 percentage down the file. It's the
+  default behavior in original `evil-mode'. You can `(setq
+  evilmi-may-jump-by-percentage nil)' to turn off this feature. Then
+  "3%" will jump 3 times.
+
+  Please note *only `evil-visual-state' and `evil-normal-state' are
+  supported*.
+
+  If you need visually select lines, I *strongly recommend* using
+  `evilmi-select-items' instead.
+
+  This is actually an advantage of Emacs, you can tweak the select
+  region without go into visual state at all.
+
+
+6 Advanced tips
+═══════════════
+
+6.1 Support new major modes
+───────────────────────────
+
+  In order to apply three matching rules `evilmi-template',
+  `evilmi-simple', and `evilmi-html' on `mhtml-mode', please insert
+  below code *after* your evil-matchit setup:
+  ┌────
+  │ (evilmi-load-plugin-rules '(mhtml-mode) '(template simple html))
+  └────
+
+
+6.2 Use evilmi-select-items instead press "%" in evil-visual-state
+──────────────────────────────────────────────────────────────────
+
+  `evilmi-select-items' is more robust and provides more
+  functionality. It works even when `evil-mode' is not loaded.
+
+  So you'd better stick to `evilmi-select-item' if possible.
+
+
+6.3 Add new tags into existing languages
+────────────────────────────────────────
+
+  Use ruby as an example.
+
+  If you want to add more tags into ruby, you can do two things:
+  • You need define the regular expression to extract keyword
+  • You need define the open/middle/closed tags
+
+  Open evil-matchit-ruby.el whole structure is like,
+  ┌────
+  │ (defvar evilmi-ruby-extract-keyword-howtos '())
+  │ (defvar evilmi-ruby-match-tags '())
+  │ ;; more code here ...
+  │ (provide 'evil-matchit-ruby)
+  └────
+
+  So you configuration in `~/.emacs' is as below:
+  ┌────
+  │ (with-eval-after-load "evil-matchit-ruby"
+  │   (push '("^[ \t]*\\([a-z]+\\)\\( .*\\| *\\)$" 1) evilmi-ruby-extract-keyword-howtos)
+  │   (push '(("unless" "if") ("elsif" "else") "end")) evilmi-ruby-match-tags)
+  └────
+
+
+6.4 Re-define keybinding
+────────────────────────
+
+  All you need to do is to define function `evilmi-customize-keybinding'
+  before turning on `evil-matchit-mode':
+
+  The shortcut `%' is defined in `evilmi-shortcut'. It's the name of
+  text object and shortcut of `evilmi-jump-items'. Some people prefer
+  set it to "m".
+
+  Change keybinding of `evilmi-jump-items' *and* name of the text
+  object,
+  ┌────
+  │ (setq evilmi-shortcut "m")
+  │ (global-evil-matchit-mode 1)
+  └────
+
+  Change keybinding *only*,
+  ┌────
+  │ (defun evilmi-customize-keybinding ()
+  │   (evil-define-key 'normal evil-matchit-mode-map
+  │     "%" 'evilmi-jump-items))
+  │ (global-evil-matchit-mode 1)
+  └────
+
+
+6.5 Jump between the two end of the "string"
+────────────────────────────────────────────
+
+  Please note the definition of "string" could be *customized* by user.
+
+  For example, we could treat C comment as string wrapper by "/".
+
+  Here is the setup to jump between the two ends of the C comment:
+  ┌────
+  │ (setq evilmi-quote-chars (string-to-list "'\"/"))
+  └────
+
+
+6.6 Match case-sensitive tags?
+──────────────────────────────
+
+  It's decided by the Emacs global variable "case-fold-search". You need
+  not care about it because the major mode will set this flag
+  automatically.
+
+
+6.7 Python
+──────────
+
+  You can turn on `evilmi-always-simple-jump' to match brackets at
+  first.
+
+  Thus, you disable our *advanced algorithm* which I highly recommend.
+
+  Some people may prefer simpler algorithm in `python-mode'.
+
+
+7 Developer guide
+═════════════════
+
+7.1 Create plugin to support new language
+─────────────────────────────────────────
+
+  Simple. You only need define two functions and tell evil-matchit in
+  which major mode they should be used.
+
+  A complete setup:
+  ┌────
+  │ ;; detect tag in current line and return the result in variable rlt
+  │ ;; the rlt will be used by evilmi-mylang-jump as the first parameter.
+  │ ;; if NO tag found, the rlt SHOULD be nil
+  │ ;;
+  │ ;; @return the data to be used by evilmi-mylang-jump which should be a list
+  │ ;;         the first element of the list is the position of cursor before jump
+  │ ;;         we use it to select/delete tag. The other elements of the list could
+  │ ;;         be any data type
+  │ (defun evilmi-mylang-find-tag ()
+  │   (list position-of-open-end "anything-you-like" "anything-you-like"))
+  │ 
+  │ ;; @parama rlt result from evilmi-mylang-find-tag
+  │ ;; @param NUM numeric argument when user press "%" to match tag
+  │ ;; @return the matching tag position in theory, useful only for
+  │ ;;         selecting or deleting text between matching tags and tags
+  │ (defun evilmi-mylang-jump (info num)
+  │   (message "info=%s" info)
+  │   ;; if we need select region between tags (including tags itself)
+  │   ;; we get the beginning of region by reading the first element of
+  │   ;; info
+  │   (push-mark (nth 0 info) t t)
+  │   ;; say 999 is the where we jump to
+  │   (goto-char 999)
+  │   ;; If you need know where is the end of the region for region operation,
+  │   ;; you need return the end of region at the end of function
+  │   ;; region operation means selection/deletion of region.
+  │   888)
+  │ 
+  │ ;; Notify evil-matchit how to use above functions
+  │ (evilmi-load-plugin-rules '(mylang-mode) '(mylang))
+  └────
+
+  Place above code into your `~/.emacs', after the line
+  "(global-evil-matchit-mode 1)"
+
+
+7.2 Use SDK
+───────────
+
+  For example, it only takes 3 steps to create a new rule `script' to
+  match tags in script like Ruby/Lua/Bash/VimScript,
+
+  Step 1, create `evil-matchit-script.el',
+  ┌────
+  │ (require 'evil-matchit-sdk)
+  │ 
+  │ ;; ruby/bash/lua/vimrc
+  │ (defvar evilmi-script-match-tags
+  │   '((("unless" "if") ("elif" "elsif" "elseif" "else") ( "end" "fi" "endif"))
+  │     ("begin" ("rescue" "ensure") "end")
+  │     ("case" ("when" "else") ("esac" "end"))
+  │     (("fun!" "function!" "class" "def" "while" "function" "do") () ("end" "endfun" "endfunction"))
+  │     ("repeat" ()  "until"))
+  │   "The table we look up match tags. This is a three column table.
+  │ The first column contains the open tag(s).
+  │ The second column contains the middle tag(s).
+  │ The third column contains the closed tags(s).
+  │ The forth *optional* column defines the relationship between open and close tags. It could be MONOGAMY
+  │ ")
+  │ 
+  │ ;;;###autoload
+  │ (defun evilmi-script-get-tag ()
+  │   (evilmi-sdk-get-tag evilmi-script-match-tags
+  │ 		      evilmi-sdk-extract-keyword-howtos))
+  │ 
+  │ ;;;###autoload
+  │ (defun evilmi-script-jump (rlt num)
+  │   (evilmi-sdk-jump rlt
+  │ 		   num
+  │ 		   evilmi-script-match-tags
+  │ 		   evilmi-sdk-extract-keyword-howtos))
+  │ 
+  │ (provide 'evil-matchit-script)
+  └────
+
+  Step 2, make sure the directory of `evil-matchit-script.el' is added
+  into `load-path'.
+
+  Step 3, add below code to `~/.emacs.',
+  ┌────
+  │ (evilmi-load-plugin-rules '(ruby-mode lua-mode) '(script))
+  └────
+
+
+7.3 APIs
+────────
+
+  • evilmi-load-plugin-rules
+
+
+8 Contact me
+════════════
+
+  Report bugs at <https://github.com/redguardtoo/evil-matchit>.
