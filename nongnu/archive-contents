@@ -480,7 +480,7 @@
 	     ("Hrvoje Niksic" . "hniksic@gmail.com"))
 	    (:keywords "hypermedia" "extensions"))])
  (idris-mode .
-	     [(0 9 18)
+	     [(1 1 0)
 	      ((emacs
 		(24))
 	       (prop-menu
@@ -593,6 +593,24 @@
 		   (:maintainer "Christoph Paulik" . "cpaulik@gmail.com")
 		   (:authors
 		    ("Christoph Paulik" . "cpaulik@gmail.com")))])
+ (mentor .
+	 [(0 3 5)
+	  ((emacs
+	    (25 1))
+	   (xml-rpc
+	    (1 6 15))
+	   (seq
+	    (1 11))
+	   (cl-lib
+	    (0 5))
+	   (async
+	    (1 9 3)))
+	  "Frontend for the rTorrent bittorrent client" tar
+	  ((:keywords "comm" "processes" "bittorrent")
+	   (:maintainer "Stefan Kangas" . "stefankangas@gmail.com")
+	   (:authors
+	    ("Stefan Kangas" . "stefankangas@gmail.com"))
+	   (:url . "https://elpa.nongnu.org/nongnu/mentor.html"))])
  (monokai-theme .
 		[(3 5 3)
 		 nil "A fruity color theme for Emacs." tar
@@ -665,6 +683,16 @@
 		(:authors
 		 ("Bastian Bechtold")
 		 ("Christian Schwarzgruber")))])
+ (org-mime .
+	   [(0 2 4)
+	    ((emacs
+	      (25 1)))
+	    "org html export for text/html MIME emails" tar
+	    ((:url . "http://github.com/org-mime/org-mime")
+	     (:keywords "mime" "mail" "email" "html")
+	     (:maintainer "Chen Bin (redguardtoo)")
+	     (:authors
+	      ("Eric Schulte")))])
  (org-superstar .
 		[(1 5 1)
 		 ((org
@@ -822,6 +850,16 @@
 	   (:maintainer "Vitalie Spinu")
 	   (:authors
 	    ("Vitalie Spinu")))])
+ (shellcop .
+	   [(0 0 7)
+	    ((emacs
+	      (25 1)))
+	    "Analyze info&error in shell-mode" tar
+	    ((:url . "https://github.com/redguardtoo/shellcop")
+	     (:keywords "unix" "tools")
+	     (:maintainer "Chen Bin <chenbin DOT sh AT gmail DOT com>")
+	     (:authors
+	      ("Chen Bin <chenbin DOT sh AT gmail DOT com>")))])
  (slime .
 	[(2 26 1)
 	 ((cl-lib
