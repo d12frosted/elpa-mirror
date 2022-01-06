@@ -1,13 +1,26 @@
 ;;; autothemer.el --- Conveniently define themes. -*- lexical-binding: t -*-
 
-;; Copyright 2015 Sebastian Sturm
+;; Copyright 2015-2022 Sebastian Sturm
 
 ;; Author: Sebastian Sturm
 ;; URL: https://github.com/sebastiansturm/autothemer
-;; Package-Version: 20180920.923
-;; Package-Commit: 8ec0c27a73b2d0a335eda63fde695a101e2956b2
-;; Version: 0.2.2
+;; Package-Version: 20220106.416
+;; Package-Commit: 36f1f4f0c71d546b0b19d1d359832ec91d02532d
+;; Version: 0.2.3
 ;; Package-Requires: ((dash "2.10.0") (emacs "24") (cl-lib "0.5"))
+
+;; This program is free software; you can redistribute it and/or modify
+;; it under the terms of the GNU General Public License as published by
+;; the Free Software Foundation, either version 3 of the License, or
+;; (at your option) any later version.
+
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+
+;; You should have received a copy of the GNU General Public License
+;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 ;;; Commentary:
 
