@@ -1,13 +1,14 @@
 ;;; go-playground.el --- Local Golang playground for short snippets.
 
-;; Copyright (C) 2015-2019  Alexander I.Grafov
+;; Copyright (C) 2015-2021 Alexander I.Grafov and the project
+;; contibutors.
 
 ;; Author: Alexander I.Grafov <grafov@gmail.com>
 ;; URL: https://github.com/grafov/go-playground
-;; Package-Version: 20200818.2215
-;; Package-Commit: ede417a52c0eea1a69658f4c6c6c12d6165e64a4
+;; Package-Version: 20220106.1618
+;; Package-Commit: 9ee7dcc7f78be67cc391f13efa6570c2baac0204
 ;; Keywords: tools, golang
-;; Version: 1.7
+;; Version: 1.7.1
 ;; Package-Requires: ((emacs "24") (go-mode "1.4.0") (gotest "0.13.0"))
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -69,7 +70,7 @@ By default confirmation required."
   :type 'file
   :group 'go-playground)
 
-(defcustom go-playground-go-compiler-args "run *.go"
+(defcustom go-playground-go-compiler-args "run ./"
   "The arguments that passed to `go` compiler."
   :type 'string
   :group 'go-playground)
@@ -107,8 +108,8 @@ environment like \"GO111MODULE=on go\")."
 			 (go-playground-ask-file-name
 			  (read-string "Go Playground filename: "))
 			 ("snippet")))
-	 (snippet-dir (go-playground-snippet-unique-dir file-name)))
-    (cd snippet-dir)
+	 (snippet-dir (go-playground-snippet-unique-dir file-name))
+	 (default-directory snippet-dir))
     (shell-command go-playground-init-command)
     (concat snippet-dir "/" file-name ".go")))
 

@@ -5,8 +5,8 @@
 ;; Author: Doug Davis <ddavis@ddavis.io>
 ;; Maintainer: Doug Davis <ddavis@ddavis.io>
 ;; URL: https://github.com/douglasdavis/numpydoc.el
-;; Package-Version: 20210811.1458
-;; Package-Commit: 2d280dd704a1a54bcb3e8091f06656c3311894bc
+;; Package-Version: 20220106.1703
+;; Package-Commit: 385fc0bdd648d5f8bffabc073662577c8941c86d
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Version: 0.5
 ;; Package-Requires: ((emacs "25.1") (s "1.12.0") (dash "2.18.0"))
@@ -95,6 +95,11 @@ When nil, template text will be inserted."
   "Flag to control if the Raises section is inserted.
 This section will only be inserted if the flag is on and the function
 body has raise statements."
+  :group 'numpydoc
+  :type 'boolean)
+
+(defcustom numpydoc-insert-return-without-typehint nil
+  "Flag to control inserting a Return block if a type hint is absent."
   :group 'numpydoc
   :type 'boolean)
 
@@ -436,12 +441,16 @@ This function assumes the cursor to be in the function body."
   "Insert FNRET (return) description (if exists) at INDENT level."
   (let ((tmpr (cond ((numpydoc--yas-p) numpydoc--yas-replace-pat)
                     (t numpydoc-template-arg-desc))))
-    (when (and fnret (not (string= fnret "None")))
+    (when (or numpydoc-insert-return-without-typehint
+              (and fnret (not (string= fnret "None"))))
       (insert "\n")
       (numpydoc--insert indent
                         "Returns\n"
                         "-------\n"
-                        fnret)
+                        (cond (fnret fnret)
+                              ((numpydoc--prompt-p) (read-string "Return type: "))
+                              ((numpydoc--yas-p) numpydoc--yas-replace-pat)
+                              (t numpydoc-template-type-desc)))
       (insert "\n")
       (numpydoc--insert indent
                         (concat (make-string 4 ?\s)
