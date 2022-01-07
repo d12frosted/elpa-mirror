@@ -293,7 +293,7 @@
 		 (:authors
 		  ("Chen Bin <chenbin DOT sh AT gmail DOT com>")))])
  (evil-nerd-commenter .
-		      [(3 5 5)
+		      [(3 5 6)
 		       ((emacs
 			 (25 1)))
 		       "Comment/uncomment lines efficiently. Like Nerd Commenter in Vim" tar
@@ -1060,6 +1060,14 @@
 	    (:authors
 	     ("Andreas Politz" . "politza@fh-trier.de"))
 	    (:url . "https://elpa.nongnu.org/nongnu/tablist.html"))])
+ (tangotango-theme .
+		   [(0 0 7)
+		    nil "Tango Palette color theme for Emacs 24." tar
+		    ((:url . "https://github.com/juba/color-theme-tangotango")
+		     (:keywords "tango" "palette" "color" "theme" "emacs")
+		     (:maintainer "Julien Barnier")
+		     (:authors
+		      ("Julien Barnier")))])
  (telephone-line .
 		 [(0 5)
 		  ((emacs

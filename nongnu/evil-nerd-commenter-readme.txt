@@ -12,7 +12,7 @@ Table of Contents
 .. 2. Use evil-leader instead
 .. 3. Assign key bindings manually
 5. Usage
-.. 1. Available commands and hotkeys
+.. 1. Commands and hotkeys
 ..... 1. evilnc-comment-or-uncomment-lines (RECOMMENDED)
 ..... 2. evilnc-quick-comment-or-uncomment-to-the-line
 ..... 3. evilnc-comment-or-uncomment-paragraphs
@@ -44,7 +44,7 @@ Table of Contents
 .. 3. Comment code snippet
 .. 4. Comment and uncomment Lisp code
 .. 5. Choose the style of copy and comment
-.. 6. Customise comment style
+.. 6. Customize comment style
 8. Credits
 9. Contact me
 
@@ -53,13 +53,14 @@ Table of Contents
 ═════════════════════
 
   [https://github.com/redguardtoo/evil-nerd-commenter/actions/workflows/test.yml/badge.svg]
+  [file:https://elpa.nongnu.org/nongnu/evil-nerd-commenter.svg]
   [file:http://melpa.org/packages/evil-nerd-commenter-badge.svg]
   [file:http://stable.melpa.org/packages/evil-nerd-commenter-badge.svg]
 
   This program can be used *WITHOUT* [evil-mode]!
 
   A [Nerd Commenter] emulation, help you comment code efficiently. For
-  example, you can press `99,ci' to comment out 99 lines.
+  example, you can press "99,ci" to comment out 99 lines.
 
   I recommend using it with Evil though Evil is optional.
 
@@ -68,6 +69,9 @@ Table of Contents
 
 [https://github.com/redguardtoo/evil-nerd-commenter/actions/workflows/test.yml/badge.svg]
 <https://github.com/redguardtoo/evil-nerd-commenter/actions/workflows/test.yml>
+
+[file:https://elpa.nongnu.org/nongnu/evil-nerd-commenter.svg]
+<https://elpa.nongnu.org/nongnu/evil-nerd-commenter.html>
 
 [file:http://melpa.org/packages/evil-nerd-commenter-badge.svg]
 <http://melpa.org/#/evil-nerd-commenter>
@@ -86,12 +90,11 @@ Table of Contents
 2.1 A simple use case on the efficiency
 ───────────────────────────────────────
 
-  If you want to comment out nine lines. Instead pressing `C-space M-9
-  C-n M-;', now you can press `M-9 M-;' or `,,9j' or `9,ci'.
+  The old way to comment out 9 lines is `C-space M-9 C-n M-;' ("M-;" is
+  the default key binding of `comment-dwim'.
 
-  The point is that you need *NOT* mark any text to comment line(s)!
-
-  So you strike less keys than the original `M-x comment-dwim'.
+  With this package's help, you can press "M-9 M-;" or ",,9j" or "9,ci"
+  instead. It's much faster because you donot need mark any text first!
 
   demo:
 
@@ -101,8 +104,8 @@ Table of Contents
 2.2 It fixes Emacs bug for you
 ──────────────────────────────
 
-  I'll provide long-term support for *ANY language* in the future. Here
-  is an example how I work around [a bug in autoconf.el].
+  Long-term support is provided for *ANY programming language*. Here is
+  an example to fix [a bug in autoconf.el].
 
 
 [a bug in autoconf.el]
@@ -112,15 +115,15 @@ Table of Contents
 2.3 Perfect integration with org-mode
 ─────────────────────────────────────
 
-  The code snippet embedded in org file will automatically be detected
-  and *correct* comment syntax will be used!
+  The code snippet embedded in org file is automatically detected and
+  *correct* comment syntax will be used!
 
 
 3 Install
 ═════════
 
-  evil-nerd-commenter is already uploaded to <http://melpa.org>. The
-  best way to install is Emacs package manager.
+  This package is already uploaded to <http://melpa.org>. The best way
+  to install is Emacs package manager.
 
 
 4 Setup
@@ -196,8 +199,8 @@ Table of Contents
 5 Usage
 ═══════
 
-5.1 Available commands and hotkeys
-──────────────────────────────────
+5.1 Commands and hotkeys
+────────────────────────
 
   Here are available commands which are NOT dependent on [evil-mode]:
 
@@ -466,7 +469,7 @@ Table of Contents
 
   All you need to is `M-x evilnc-toggle-invert-comment-line-by-line'
   then `C-u 2 evilnc-comment-or-uncomment-lines'. The first command turn
-  on some flag, so the behaviour of (un)commenting is different.
+  on some flag, so the behavior of (un)commenting is different.
 
 
 6 Evil usage
@@ -618,12 +621,12 @@ Table of Contents
   • Or place the original text above commented out text
 
 
-7.6 Customise comment style
+7.6 Customize comment style
 ───────────────────────────
 
   Most commands call `evilnc-comment-or-uncomment-region-function'.
 
-  You can modify this variable to customise the comment style.
+  You can modify this variable to customize the comment style.
 
   ┌────
   │ (with-eval-after-load 'evil-nerd-commenter
