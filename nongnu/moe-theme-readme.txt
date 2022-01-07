@@ -1,0 +1,327 @@
+Table of Contents
+─────────────────
+
+1. moe-theme
+.. 1. Acknowedgement
+.. 2. Screenshot
+.. 3. What Special?
+.. 4. Requirements
+.. 5. Download
+..... 1. Via package.el
+..... 2. Manually
+.. 6. Customizations
+..... 1. Resize Titles
+..... 2. Change Color of Mode-line (or Powerline)
+.. 7. Frenquently Asked Problems
+..... 1. No 256-Color Output?
+..... 2. Parenthesis Is Hard To Read?
+.. 8. Known Issues
+.. 9. License
+
+
+1 moe-theme
+═══════════
+
+  #+BEGIN_QUOTE
+
+
+1.1 Acknowedgement
+──────────────────
+
+  Latest version is under inactive development. I haven't finished it
+  indeed, however, I personally have already used it for quite a long
+  time.
+
+  Currently free time is precious for me, to rest from work, to learn
+  foreign languages, to study Harmony & Voice Leading, to compose, to
+  practice piano and violin, to exercise. So I will not spend more
+  massive time on this project for any large modification. I've ever
+  spent too much time on this project before to hold more passion and
+  patience to write merely a color theme, even not an application. (You
+  will not believe how much it is if you has never done such tedious
+  task for EACH mode and find a color balances manually for them) I
+  think it's enough now.
+
+  *If you want to try or help to QA the latest development version, see
+   `dev' branch.*
+
+  *If you want to make `moe-theme` supports more modes, please send a PR
+   (but be aesthetic; patch with too ugly color balance will be
+   rejected.^^||| )*. Currently I honestly has no more free time and
+   passion on such a tedious time-costing trial-and-error task.
+
+  The last but not the least, thanks for your using and happy hacking!
+  #+END_QUOTE
+
+  <a
+  href="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png>"><img
+  src="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/moe-theme.png>"
+  width="720" height="401"/></a>
+
+
+1.2 Screenshot
+──────────────
+
+  <a
+  href="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark01.png>"><img
+  src="pics/dark01.png" width="355" height="192"/></a> <a
+  href="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/light01.png>"><img
+  src="pics/light01.png" width="355" height="192"/></a> <a
+  href="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark02.png>"><img
+  src="pics/dark02.png" width="355" height="192"/></a> <a
+  href="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/light02.png>"><img
+  src="pics/light02.png" width="355" height="192"/></a> <a
+  href="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark03.png>"><img
+  src="pics/dark03.png" width="355" height="192"/></a> <a
+  href="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/light03.png>"><img
+  src="pics/light03.png" width="355" height="192"/></a> <a
+  href="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark04.png>"><img
+  src="pics/dark04.png" width="355" height="192"/></a> <a
+  href="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/light04.png>"><img
+  src="pics/light04.png" width="355" height="192"/></a> <a
+  href="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/dark05.png>"><img
+  src="pics/dark05.png" width="355" height="192"/></a> <a
+  href="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/light05.png>"><img
+  src="pics/light05.png" width="355" height="192"/></a> <a
+  href="<https://raw.github.com/kuanyui/moe-theme.el/master/pics/mode-line-preview.png>"><img
+  src="pics/mode-line-preview.png" width="710" height="182"/></a>
+
+
+1.3 What Special?
+─────────────────
+
+  Most basic:
+  1. Optimized for terminal's 256 color palettes.
+  2. Dark & Light
+
+  And more:
+  1. Carefully-considered & reasonable colors
+  2. Delightful & good-looking color palettes™
+  3. Customizable
+     • Optional `Monokai' / `Tomorrow' for syntax-highlighting (or
+       totally customize by yourself)
+     • Changable Mode-line / Powerline color.
+     • Titles font sizes for .
+  4. Fully-supported for each modes:
+     • Diff / EDiff
+     • Dired / Dired+
+     • ERC / rcirc
+     • Eshell / Ansi-term
+     • Gnus / Message
+     • Helm / ido
+     • Org-mode / Agenda / calfw
+     • Magit / Git-commit / Git-gutter
+     • Markdown-mode / ReStructText-mode
+     • Auto-complete-mode / Company
+     • Rainbow-delimiters
+     • Swoop
+     • Twittering-mode
+     • undo-tree / Neotree
+     • Ruby / Haskell / CPerl / Tuareg / Web-mode
+     • ……etc
+
+
+1.4 Requirements
+────────────────
+
+  • Emacs 25.3 or above.
+  • 256-colors (or higher) terminal.
+
+
+1.5 Download
+────────────
+
+1.5.1 Via package.el
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  `Moe-theme' is available in [MELPA] repository now, so you can install
+  `moe-theme' easily with `M-x' `list-packages'.
+
+
+[MELPA] <https://github.com/milkypostman/melpa>
+
+
+1.5.2 Manually
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Download the archive of `moe-theme' (or `git clone' it) to
+  `~/.emacs.d/moe-theme.el' and extract it. Then, add these to your init
+  file:
+
+  ┌────
+  │ ;;customize theme
+  │ (add-to-list 'custom-theme-load-path "~/.emacs.d/moe-theme.el/")
+  │ (add-to-list 'load-path "~/.emacs.d/moe-theme.el/")
+  │ (require 'moe-theme)
+  └────
+
+
+1.6 Customizations
+──────────────────
+
+  It's impossible to satisfy everyone with one fixed theme, but
+  `moe-theme' provide some easy ways to customize itself.
+
+  There's a full customization example:
+
+  ┌────
+  │ ;; If you want to use powerline, (require 'powerline) must be
+  │ ;; before (require 'moe-theme).
+  │ (add-to-list 'load-path "~/.emacs.d/PATH/TO/powerline/")
+  │ (require 'powerline)
+  │ 
+  │ ;; Moe-theme
+  │ (add-to-list 'custom-theme-load-path "~/.emacs.d/PATH/TO/moe-theme/")
+  │ (add-to-list 'load-path "~/.emacs.d/PATH/TO/moe-theme/")
+  │ (require 'moe-theme)
+  │ 
+  │ ;; Show highlighted buffer-id as decoration. (Default: nil)
+  │ (setq moe-theme-highlight-buffer-id t)
+  │ 
+  │ ;; Resize titles (optional).
+  │ (setq moe-theme-resize-markdown-title '(1.5 1.4 1.3 1.2 1.0 1.0))
+  │ (setq moe-theme-resize-org-title '(1.5 1.4 1.3 1.2 1.1 1.0 1.0 1.0 1.0))
+  │ (setq moe-theme-resize-rst-title '(1.5 1.4 1.3 1.2 1.1 1.0))
+  │ 
+  │ ;; Choose a color for mode-line.(Default: blue)
+  │ (moe-theme-set-color 'cyan)
+  │ 
+  │ ;; Finally, apply moe-theme now.
+  │ ;; Choose what you like, (moe-light) or (moe-dark)
+  │ (moe-light)
+  └────
+
+  If you have any question about settings, go on and read following
+  README to get more detailed information first.
+
+        **** Note
+
+        *Notice that the file `moe-theme.el' is NOT a theme file,
+        but it provide the ability for customization
+        `moe-dark-theme' & `moe-light-theme'.*
+
+        So, if you just want to use `load-theme' to apply *ONLY*
+        `moe-theme' itself and *without customizations*, you can
+        skip "Customizations" chapter and just use this:
+
+        ┌────
+        │ (add-to-list 'custom-theme-load-path "~/.emacs.d/PATH/TO/moe-theme/")
+        │ 
+        │ (load-theme 'moe-dark t)
+        │ ;;or
+        │ (load-theme 'moe-light t)
+        └────
+
+
+1.6.1 Resize Titles
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  You may want to resize titles in `markdown-mode', `org-mode', or
+  `ReStructuredText-mode':
+
+  ┌────
+  │ ;; Resize titles
+  │ (setq moe-theme-resize-markdown-title '(2.0 1.7 1.5 1.3 1.0 1.0))
+  │ (setq moe-theme-resize-org-title '(2.2 1.8 1.6 1.4 1.2 1.0 1.0 1.0 1.0))
+  │ (setq moe-theme-resize-rst-title '(2.0 1.7 1.5 1.3 1.1 1.0))
+  └────
+
+        Markdown should have 6 items; org has 9 items; rst has 6
+        items.
+
+        Make sure that these resizing settings should be placed
+        *before* `(moe-dark)' or `(moe-light)'.
+
+  The values should be lists. Larger the values, larger the fonts. If
+  you don't like this, just leave them nil, and all the titles will be
+  the same size.
+
+
+1.6.2 Change Color of Mode-line (or Powerline)
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  ┌────
+  │ (moe-theme-set-color 'orange)
+  │ ;; (Available colors: blue, orange, green ,magenta, yellow, purple, red, cyan, w/b.)
+  └────
+
+  You can also use `M-x' `moe-theme-select-color' to change color
+  interactively.
+
+  Or `M-x' `moe-theme-random-color' to have a good luck.
+
+
+◊ 1.6.2.1 Powerline support
+
+  Now `moe-theme' supports [Powerline]. Run `powerline-moe-theme' if
+  `powerline' installed.
+
+  ┌────
+  │ (powerline-moe-theme)
+  └────
+
+
+  [Powerline] <https://github.com/milkypostman/powerline>
+
+
+1.7 Frenquently Asked Problems
+──────────────────────────────
+
+1.7.1 No 256-Color Output?
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  If your terminal emulator doesn't render 256-color output correctly,
+  set its environment variable `TERM' to `xterm-256color'. For example:
+
+  • If you are using `bash' or `zsh', add following line into your
+    `~/.bashrc' or `~/.zshrc':
+
+    ┌────
+    │ export TERM=xterm-256color
+    └────
+
+  • Or if you are using `Konsole', navigate to `Edit Current Profile
+    General > Environment > Edit' and add the following line:
+
+    ┌────
+    │ TERM=xterm-256color
+    └────
+
+  • If you're using `tmux' and it cannot display in 256-color correctly,
+    add this to `~/.tmux.conf', too:
+
+    ┌────
+    │ set -g default-terminal "screen-256color"
+    └────
+
+
+1.7.2 Parenthesis Is Hard To Read?
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  I recommend set the value of `show-paren-style' to `expression' for
+  better visual experience:
+
+  ┌────
+  │ (show-paren-mode t)
+  │ (setq show-paren-style 'expression)
+  └────
+
+
+1.8 Known Issues
+────────────────
+
+  • If you add `(moe-dark)' or `(moe-light)' to your init file, the
+    color of `buffer-id' would be incorrect after startuping CLI
+    Emacs(but if you `M-x moe-dark/light' again, it would be corrected
+    immediately). I don't know why, but this issue doesn't occur in GUI
+    version Emacs.  (Tested on GNU Emacs 24.3.90.1 2014-04-11)
+  • When using `moe-light' and typing characters under terminal emulator
+    (e.g. Konsole) with IM (e.g. fcitx), the string embedded in Emacs
+    may be very insignificant (But as you output the word from IM, it
+    turns normal).
+
+
+1.9 License
+───────────
+
+  `moe-theme.el' (include images) is released under GPL v3.

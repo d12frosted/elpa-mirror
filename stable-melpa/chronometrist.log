@@ -4,34 +4,36 @@ Source:  https://tildegit.org/contrapunctus/chronometrist.git
 
 Updating /mnt/store/melpa/working/chronometrist/
 Checking out origin/dev
-Checking out 0d00ac6fe28cd8a8d56bc36178f3d110b33f23ab
+Checking out ea336afe09dfe3d977c7edbad86f02cbc199dbcf
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/chronometrist/
-  to /tmp/chronometristvQeSCg/chronometrist-20220105.1801
+  to /tmp/chronometristD5OaWe/chronometrist-20220107.1046
   ! elisp/chronometrist-spark.el -> chronometrist-spark.el
   ! elisp/chronometrist.el -> chronometrist.el
   ! elisp/chronometrist-spark.org -> chronometrist-spark.org
   ! elisp/chronometrist.org -> chronometrist.org
-Created chronometrist-20220105.1801.tar containing:
-  chronometrist-20220105.1801/
-  chronometrist-20220105.1801/chronometrist-pkg.el
-  chronometrist-20220105.1801/chronometrist-spark.el
-  chronometrist-20220105.1801/chronometrist-spark.org
-  chronometrist-20220105.1801/chronometrist.el
-  chronometrist-20220105.1801/chronometrist.org
-Built chronometrist in 4.241s, finished at 2022-01-07T02:24:15+0000
+Created chronometrist-20220107.1046.tar containing:
+  chronometrist-20220107.1046/
+  chronometrist-20220107.1046/chronometrist-pkg.el
+  chronometrist-20220107.1046/chronometrist-spark.el
+  chronometrist-20220107.1046/chronometrist-spark.org
+  chronometrist-20220107.1046/chronometrist.el
+  chronometrist-20220107.1046/chronometrist.org
+Built chronometrist in 4.242s, finished at 2022-01-07T11:04:03+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  456 Jan  7 02:24 packages/chronometrist-20220105.1801.entry
-372K -rw-r--r-- 1 root root 370K Jan  7 02:24 packages/chronometrist-20220105.1801.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan  7 02:24 packages/chronometrist-badge.svg
- 12K -rw-r--r-- 1 root root  12K Jan  6 23:30 packages/chronometrist-goal-20210510.1831.el
-4.0K -rw-r--r-- 1 root root  531 Jan  6 23:30 packages/chronometrist-goal-20210510.1831.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan  6 23:30 packages/chronometrist-goal-badge.svg
-4.0K -rw-r--r-- 1 root root  153 Jan  6 23:30 packages/chronometrist-goal-readme.txt
-4.0K -rw-r--r-- 1 root root  188 Jan  7 02:24 packages/chronometrist-goal.log
-4.0K -rw-r--r-- 1 root root  448 Jan  6 23:30 packages/chronometrist-key-values-20211118.1235.entry
- 72K -rw-r--r-- 1 root root  70K Jan  6 23:30 packages/chronometrist-key-values-20211118.1235.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan  6 23:30 packages/chronometrist-key-values-badge.svg
-4.0K -rw-r--r-- 1 root root  329 Jan  6 23:30 packages/chronometrist-key-values-readme.txt
-4.0K -rw-r--r-- 1 root root  170 Jan  7 02:24 packages/chronometrist-key-values.log
-4.0K -rw-r--r-- 1 root root 2.0K Jan  7 02:24 packages/chronometrist-readme.txt
+4.0K -rw-r--r-- 1 root root  456 Jan  7 08:10 packages/chronometrist-20220105.1801.entry
+372K -rw-r--r-- 1 root root 370K Jan  7 08:10 packages/chronometrist-20220105.1801.tar
+4.0K -rw-r--r-- 1 root root  456 Jan  7 11:04 packages/chronometrist-20220107.1046.entry
+372K -rw-r--r-- 1 root root 370K Jan  7 11:04 packages/chronometrist-20220107.1046.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  7 11:04 packages/chronometrist-badge.svg
+ 12K -rw-r--r-- 1 root root  12K Jan  7 11:04 packages/chronometrist-goal-20210510.1831.el
+4.0K -rw-r--r-- 1 root root  531 Jan  7 11:04 packages/chronometrist-goal-20210510.1831.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan  7 11:04 packages/chronometrist-goal-badge.svg
+4.0K -rw-r--r-- 1 root root  153 Jan  7 11:04 packages/chronometrist-goal-readme.txt
+4.0K -rw-r--r-- 1 root root  683 Jan  7 11:04 packages/chronometrist-goal.log
+4.0K -rw-r--r-- 1 root root  448 Jan  7 08:11 packages/chronometrist-key-values-20211118.1235.entry
+ 72K -rw-r--r-- 1 root root  70K Jan  7 08:11 packages/chronometrist-key-values-20211118.1235.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  7 08:11 packages/chronometrist-key-values-badge.svg
+4.0K -rw-r--r-- 1 root root  329 Jan  7 08:11 packages/chronometrist-key-values-readme.txt
+4.0K -rw-r--r-- 1 root root  194 Jan  7 11:04 packages/chronometrist-key-values.log
+4.0K -rw-r--r-- 1 root root 2.0K Jan  7 11:04 packages/chronometrist-readme.txt

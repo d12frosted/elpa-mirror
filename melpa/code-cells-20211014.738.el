@@ -5,7 +5,7 @@
 ;; Author: Augusto Stoffel <arstoffel@gmail.com>
 ;; Keywords: convenience, outlines
 ;; Package-Version: 20211014.738
-;; Package-Commit: 68148cfc1f0723e554a09cbae4c732cfc348ecfd
+;; Package-Commit: f5150fc213da470da2d4fedaa4b86f476167b235
 ;; URL: https://github.com/astoff/code-cells.el
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 0.1

@@ -26,4 +26,8 @@ M-x filetree-show-cur-dir
 M-x filetree-show-cur-dir-recursively
 M-x filetree-show-cur-buffers
 
+Use the following command to pull up help transient for available commands
+M-x filetree-command-help
+
+
 -------------------------------------------

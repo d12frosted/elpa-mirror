@@ -727,6 +727,14 @@
 	   (:authors
 	    ("Stefan Kangas" . "stefankangas@gmail.com"))
 	   (:url . "https://elpa.nongnu.org/nongnu/mentor.html"))])
+ (moe-theme .
+	    [(1 0 2)
+	     nil "A colorful eye-candy theme. Moe, moe, kyun!" tar
+	     ((:url . "https://github.com/kuanyui/moe-theme.el")
+	      (:keywords "themes")
+	      (:maintainer "kuanyui" . "azazabc123@gmail.com")
+	      (:authors
+	       ("kuanyui" . "azazabc123@gmail.com")))])
  (monokai-theme .
 		[(3 5 3)
 		 nil "A fruity color theme for Emacs." tar
@@ -821,6 +829,21 @@
 		  (:maintainer "D. Williams" . "d.williams@posteo.net")
 		  (:authors
 		   ("D. Williams" . "d.williams@posteo.net")))])
+ (pacmacs .
+	  [(0 1)
+	   ((emacs
+	     (24 4))
+	    (dash
+	     (2 18 0))
+	    (cl-lib
+	     (0 5))
+	    (f
+	     (0 18 0)))
+	   "Pacman for Emacs" tar
+	   ((:url . "http://github.com/codingteam/pacmacs.el")
+	    (:maintainer "Alexey Kutepov" . "reximkut@gmail.com")
+	    (:authors
+	     ("Codingteam" . "codingteam@conference.jabber.ru")))])
  (parseclj .
 	   [(1 0 6)
 	    ((emacs
