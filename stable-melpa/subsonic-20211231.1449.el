@@ -3,7 +3,7 @@
 ;; Author: Alex McGrath <amk@amk.ie>
 ;; URL: https://git.sr.ht/~amk/subsonic.el
 ;; Package-Version: 20211231.1449
-;; Package-Commit: f7a91df94d7d0cda4d8421e28d7b6b331927eec2
+;; Package-Commit: 992bce5fe3c2322101610d53d08a89ec3bb8fc43
 ;; Version: 0.2.0
 ;; Keywords: multimedia
 ;; Package-Requires: ((emacs "27.1") (transient "0.2"))

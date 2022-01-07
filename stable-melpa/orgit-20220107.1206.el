@@ -1,13 +1,14 @@
 ;;; orgit.el --- support for Org links to Magit buffers  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2014-2021  The Magit Project Contributors
+;; Copyright (C) 2014-2022  The Magit Project Contributors
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
 
 ;; Package-Requires: ((emacs "25.1") (magit "3.0") (org "9.4"))
-;; Package-Version: 20210620.1943
-;; Package-Commit: f956d802f19ea495efa95af6c673588afeb3adc5
+;; Package-Commit: 66367d6bfc5e00726fb74f7cd20c32175ab8521b
+;; Package-Version: 20220107.1206
+;; Package-X-Original-Version: 1.7.2
 ;; Homepage: https://github.com/magit/orgit
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
