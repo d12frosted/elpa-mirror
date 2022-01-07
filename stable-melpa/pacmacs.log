@@ -4,10 +4,10 @@ Source:  https://github.com/codingteam/pacmacs.el.git
 
 Updating /mnt/store/melpa/working/pacmacs/
 Checking out origin/HEAD
-Checking out 5e0bcba1eeb10a4218087ff9cd6217d662fb775b
+Checking out 25a8c30210f6bd94634a7ff743a2f8be391ed3b3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pacmacs/
-  to /tmp/pacmacs3s8wBy/pacmacs-20210225.1255
+  to /tmp/pacmacsDme6Pp/pacmacs-20220106.2248
     pacmacs-anim.el -> pacmacs-anim.el
     pacmacs-board.el -> pacmacs-board.el
     pacmacs-render.el -> pacmacs-render.el
@@ -46,64 +46,64 @@ Copying files (->) and directories (=>)
     sprites/Red-Ghost-Up.xpm -> sprites/Red-Ghost-Up.xpm
     sprites/Red-Ghost-Win.xpm -> sprites/Red-Ghost-Win.xpm
     sprites/Terrified-Ghost.xpm -> sprites/Terrified-Ghost.xpm
-Created pacmacs-20210225.1255.tar containing:
-  pacmacs-20210225.1255/
-  pacmacs-20210225.1255/maps/
-  pacmacs-20210225.1255/maps/map01.txt
-  pacmacs-20210225.1255/maps/map02.txt
-  pacmacs-20210225.1255/maps/map03.txt
-  pacmacs-20210225.1255/maps/map04.txt
-  pacmacs-20210225.1255/maps/map05.txt
-  pacmacs-20210225.1255/maps/map06.txt
-  pacmacs-20210225.1255/maps/map07.txt
-  pacmacs-20210225.1255/maps/map08.txt
-  pacmacs-20210225.1255/maps/map09.txt
-  pacmacs-20210225.1255/maps/map10.txt
-  pacmacs-20210225.1255/maps/map11.txt
-  pacmacs-20210225.1255/pacmacs-anim.el
-  pacmacs-20210225.1255/pacmacs-board.el
-  pacmacs-20210225.1255/pacmacs-pkg.el
-  pacmacs-20210225.1255/pacmacs-render.el
-  pacmacs-20210225.1255/pacmacs-score.el
-  pacmacs-20210225.1255/pacmacs-utils.el
-  pacmacs-20210225.1255/pacmacs-vector.el
-  pacmacs-20210225.1255/pacmacs-walls.el
-  pacmacs-20210225.1255/pacmacs.el
-  pacmacs-20210225.1255/signs/
-  pacmacs-20210225.1255/signs/game-over.txt
-  pacmacs-20210225.1255/signs/scores.txt
-  pacmacs-20210225.1255/sprites/
-  pacmacs-20210225.1255/sprites/Big-Pill.json
-  pacmacs-20210225.1255/sprites/Big-Pill.xpm
-  pacmacs-20210225.1255/sprites/Blinking-Terrified-Ghost.json
-  pacmacs-20210225.1255/sprites/Blinking-Terrified-Ghost.xpm
-  pacmacs-20210225.1255/sprites/Pacman-Chomping-Down.json
-  pacmacs-20210225.1255/sprites/Pacman-Chomping-Down.xpm
-  pacmacs-20210225.1255/sprites/Pacman-Chomping-Left.json
-  pacmacs-20210225.1255/sprites/Pacman-Chomping-Left.xpm
-  pacmacs-20210225.1255/sprites/Pacman-Chomping-Right.json
-  pacmacs-20210225.1255/sprites/Pacman-Chomping-Right.xpm
-  pacmacs-20210225.1255/sprites/Pacman-Chomping-Up.json
-  pacmacs-20210225.1255/sprites/Pacman-Chomping-Up.xpm
-  pacmacs-20210225.1255/sprites/Pacman-Death.json
-  pacmacs-20210225.1255/sprites/Pacman-Death.xpm
-  pacmacs-20210225.1255/sprites/Pill.json
-  pacmacs-20210225.1255/sprites/Pill.xpm
-  pacmacs-20210225.1255/sprites/Red-Ghost-Down.json
-  pacmacs-20210225.1255/sprites/Red-Ghost-Down.xpm
-  pacmacs-20210225.1255/sprites/Red-Ghost-Left.json
-  pacmacs-20210225.1255/sprites/Red-Ghost-Left.xpm
-  pacmacs-20210225.1255/sprites/Red-Ghost-Right.json
-  pacmacs-20210225.1255/sprites/Red-Ghost-Right.xpm
-  pacmacs-20210225.1255/sprites/Red-Ghost-Up.json
-  pacmacs-20210225.1255/sprites/Red-Ghost-Up.xpm
-  pacmacs-20210225.1255/sprites/Red-Ghost-Win.json
-  pacmacs-20210225.1255/sprites/Red-Ghost-Win.xpm
-  pacmacs-20210225.1255/sprites/Terrified-Ghost.json
-  pacmacs-20210225.1255/sprites/Terrified-Ghost.xpm
-Built pacmacs in 4.427s, finished at 2022-01-06T18:23:49+0000
+Created pacmacs-20220106.2248.tar containing:
+  pacmacs-20220106.2248/
+  pacmacs-20220106.2248/maps/
+  pacmacs-20220106.2248/maps/map01.txt
+  pacmacs-20220106.2248/maps/map02.txt
+  pacmacs-20220106.2248/maps/map03.txt
+  pacmacs-20220106.2248/maps/map04.txt
+  pacmacs-20220106.2248/maps/map05.txt
+  pacmacs-20220106.2248/maps/map06.txt
+  pacmacs-20220106.2248/maps/map07.txt
+  pacmacs-20220106.2248/maps/map08.txt
+  pacmacs-20220106.2248/maps/map09.txt
+  pacmacs-20220106.2248/maps/map10.txt
+  pacmacs-20220106.2248/maps/map11.txt
+  pacmacs-20220106.2248/pacmacs-anim.el
+  pacmacs-20220106.2248/pacmacs-board.el
+  pacmacs-20220106.2248/pacmacs-pkg.el
+  pacmacs-20220106.2248/pacmacs-render.el
+  pacmacs-20220106.2248/pacmacs-score.el
+  pacmacs-20220106.2248/pacmacs-utils.el
+  pacmacs-20220106.2248/pacmacs-vector.el
+  pacmacs-20220106.2248/pacmacs-walls.el
+  pacmacs-20220106.2248/pacmacs.el
+  pacmacs-20220106.2248/signs/
+  pacmacs-20220106.2248/signs/game-over.txt
+  pacmacs-20220106.2248/signs/scores.txt
+  pacmacs-20220106.2248/sprites/
+  pacmacs-20220106.2248/sprites/Big-Pill.json
+  pacmacs-20220106.2248/sprites/Big-Pill.xpm
+  pacmacs-20220106.2248/sprites/Blinking-Terrified-Ghost.json
+  pacmacs-20220106.2248/sprites/Blinking-Terrified-Ghost.xpm
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Down.json
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Down.xpm
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Left.json
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Left.xpm
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Right.json
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Right.xpm
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Up.json
+  pacmacs-20220106.2248/sprites/Pacman-Chomping-Up.xpm
+  pacmacs-20220106.2248/sprites/Pacman-Death.json
+  pacmacs-20220106.2248/sprites/Pacman-Death.xpm
+  pacmacs-20220106.2248/sprites/Pill.json
+  pacmacs-20220106.2248/sprites/Pill.xpm
+  pacmacs-20220106.2248/sprites/Red-Ghost-Down.json
+  pacmacs-20220106.2248/sprites/Red-Ghost-Down.xpm
+  pacmacs-20220106.2248/sprites/Red-Ghost-Left.json
+  pacmacs-20220106.2248/sprites/Red-Ghost-Left.xpm
+  pacmacs-20220106.2248/sprites/Red-Ghost-Right.json
+  pacmacs-20220106.2248/sprites/Red-Ghost-Right.xpm
+  pacmacs-20220106.2248/sprites/Red-Ghost-Up.json
+  pacmacs-20220106.2248/sprites/Red-Ghost-Up.xpm
+  pacmacs-20220106.2248/sprites/Red-Ghost-Win.json
+  pacmacs-20220106.2248/sprites/Red-Ghost-Win.xpm
+  pacmacs-20220106.2248/sprites/Terrified-Ghost.json
+  pacmacs-20220106.2248/sprites/Terrified-Ghost.xpm
+Built pacmacs in 3.989s, finished at 2022-01-07T03:03:46+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  398 Jan  6 18:23 packages/pacmacs-20210225.1255.entry
-200K -rw-r--r-- 1 root root 200K Jan  6 18:23 packages/pacmacs-20210225.1255.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan  6 18:23 packages/pacmacs-badge.svg
-4.0K -rw-r--r-- 1 root root   59 Jan  6 18:23 packages/pacmacs-readme.txt
+4.0K -rw-r--r-- 1 root root  398 Jan  7 03:03 packages/pacmacs-20220106.2248.entry
+200K -rw-r--r-- 1 root root 200K Jan  7 03:03 packages/pacmacs-20220106.2248.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan  7 03:03 packages/pacmacs-badge.svg
+4.0K -rw-r--r-- 1 root root   59 Jan  7 03:03 packages/pacmacs-readme.txt
