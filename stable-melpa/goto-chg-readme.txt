@@ -20,6 +20,8 @@ Works with XEmacs-20.4 and 21.4 (but see todo about `last-command' below)
 --------------------------------------------------------------------
 History
 
+Ver 1.7.5 2022-01-04 Axel Foesman, Stefan Kangas
+   Consider all entries in undo-tree changesets, bump license to GPL3+
 Ver 1.7.4 2020-10-08 Vasilij Schneidermann
    Remove hard dependency on undo-tree
 Ver 1.7.3 2019-01-07 Vasilij Schneidermann
