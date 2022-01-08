@@ -7,8 +7,6 @@
 ;; Copyleft (Ↄ) 2012, Joe Bloggs, all rites reversed.
 ;; Created: 2012-11-01 21:28:07
 ;; Version: 20151116.1603
-;; Package-Version: 20210625.2001
-;; Package-Commit: 26de24bcde0eae911a0185bb5a6b74b9864fcfc3
 ;; Package-Requires: ((emacs "24.3") (anaphora "1.0.0"))
 ;; Last-Updated: Mon Nov 16 16:03:18 2015
 ;;           By: Joe Bloggs

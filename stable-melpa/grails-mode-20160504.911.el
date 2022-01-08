@@ -5,7 +5,7 @@
 ;; Author: Jim Morris <morris@wolfman.com>
 ;; URL: http://blog.wolfman.com
 ;; Package-Version: 20160504.911
-;; Package-Commit: 84f89b68ec8f79bce0b3f5b29af155a85124e3a6
+;; Package-Commit: 02670e1401c070e6ae3f50a8d79b210ca4f3a0ee
 ;; Maintainer:  Russel Winder <russel@winder.org.uk>
 ;; Version: 201605040908
 ;; Keywords: languages
