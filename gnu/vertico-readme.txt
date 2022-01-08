@@ -37,11 +37,11 @@ Table of Contents
   to provide a UI which behaves /correctly/ under all circumstances. By
   reusing the built-in facilities system, Vertico achieves /full
   compatibility/ with built-in Emacs completion commands and completion
-  tables. Vertico only provides the completion UI but aims to be
-  flexible and extensible. Additional enhancements are available as
-  [extensions] or [complementary packages]. The code base is small and
-  maintainable (`vertico.el' is only about 600 lines of code without
-  white space and comments).
+  tables. Vertico only provides the completion UI but aims to be highly
+  flexible, extensible and modular.  Additional enhancements are
+  available as [extensions] or [complementary packages].  The code base
+  is small and maintainable. The main `vertico.el' package is only about
+  600 lines of code without white space and comments.
 
 
 [extensions] See section 5
@@ -52,7 +52,8 @@ Table of Contents
 2 Features
 ══════════
 
-  • Vertical display with arrow key navigation
+  • Vertical display with arrow key navigation (see the [extensions] for
+    additional display modes)
   • Prompt shows the current candidate index and the total number of
     candidates
   • The current candidate is inserted with `TAB' and selected with `RET'
@@ -66,6 +67,9 @@ Table of Contents
   • Support for grouping and group cycling commands (`group-function')
 
   <https://github.com/minad/vertico/blob/screenshots/vertico-mx.png?raw=true>
+
+
+[extensions] See section 5
 
 
 3 Key bindings
@@ -283,12 +287,11 @@ Table of Contents
 
   We maintain small extension packages to Vertico in this repository in
   the subdirectory [extensions/]. The extensions are installed together
-  with Vertico if you pull the package from ELPA. The extensions are of
-  course inactive by default and can be enabled manually if
+  with Vertico if you pull the package from ELPA. The extensions are
+  inactive by default and can be enabled manually if
   desired. Furthermore it is possible to install all of the files
-  separately, both `vertico.el' and the `vertico-*.el'
-  extensions. Currently the following extensions come with the Vertico
-  ELPA package:
+  separately, both `vertico.el' and the `vertico-*.el' extensions.
+  Currently the following extensions come with the Vertico ELPA package:
 
   • [vertico-buffer]: `vertico-buffer-mode' to display Vertico in a
     separate buffer.
@@ -306,6 +309,8 @@ Table of Contents
   • [vertico-repeat]: The command `vertico-repeat' repeats the last
     completion session.
   • [vertico-reverse]: `vertico-reverse-mode' to reverse the display.
+  • [vertico-unobtrusive]: `vertico-unobtrusive-mode' displays only the
+    topmost candidate.
 
   With these extensions it is possible to adapt Vertico such that it
   matches your preference or behaves similar to other familiar UIs. For
@@ -365,6 +370,9 @@ Table of Contents
 [vertico-reverse]
 <https://github.com/minad/vertico/blob/main/extensions/vertico-reverse.el>
 
+[vertico-unobtrusive]
+<https://github.com/minad/vertico/blob/main/extensions/vertico-unobtrusive.el>
+
 5.1 Configure Vertico per command or completion category
 ────────────────────────────────────────────────────────
 
@@ -387,14 +395,14 @@ Table of Contents
   │ ;; Configure the display per command.
   │ ;; Use a buffer with indices for imenu
   │ ;; and a flat (Ido-like) menu for M-x.
-  │ (setq vertico-multiform-command-modes
+  │ (setq vertico-multiform-commands
   │       '((consult-imenu buffer indexed)
-  │ 	(execute-extended-command flat)))
+  │ 	(execute-extended-command unobtrusive)))
   │ 
   │ ;; Configure the display per completion category.
   │ ;; Use the grid display for files and a buffer
   │ ;; for the consult-grep commands.
-  │ (setq vertico-multiform-category-modes
+  │ (setq vertico-multiform-categories
   │       '((file grid)
   │ 	(consult-grep buffer)))
   └────
@@ -407,19 +415,19 @@ Table of Contents
 
   ┌────
   │ ;; Configure `consult-outline' as a scaled down TOC in a separate buffer
-  │ (setq vertico-multiform-command-modes
+  │ (setq vertico-multiform-commands
   │       `((consult-outline buffer ,(lambda (_) (text-scale-set -1)))))
   └────
 
-  Furthermore you can tune buffer-local settings per command (or
-  category).
+  Furthermore you can tune buffer-local settings per command or
+  category.
 
   ┌────
   │ ;; Change the default sorting function
-  │ (setq vertico-multiform-command-settings
+  │ (setq vertico-multiform-commands
   │       '((describe-symbol (vertico-sort-function . vertico-sort-alpha))))
   │ 
-  │ (setq vertico-multiform-category-settings
+  │ (setq vertico-multiform-categories
   │       '((symbol (vertico-sort-function . vertico-sort-alpha))
   │ 	(file (vertico-sort-function . sort-directories-first))))
   │ 
@@ -428,20 +436,6 @@ Table of Contents
   │   (setq files (vertico-sort-history-length-alpha files))
   │   (nconc (seq-filter (lambda (x) (string-suffix-p "/" x)) files)
   │ 	 (seq-remove (lambda (x) (string-suffix-p "/" x)) files)))
-  └────
-
-  As another example, the following code uses `vertico-flat' and
-  `vertico-cycle' to emulate `(ido-mode 'buffer)', i.e. Ido when it is
-  enabled only for completion of buffer names. `vertico-cycle' set to
-  `t' is necessary here to prevent completion candidates from
-  disappearing when they scroll off-screen to the left.
-
-  ┌────
-  │ (setq vertico-multiform-category-modes
-  │       '((buffer flat)))
-  │ 
-  │ (setq vertico-multiform-category-settings
-  │       '((buffer (vertico-cycle . t))))
   └────
 
   Combining these features allows us to fine-tune the completion display
@@ -454,17 +448,25 @@ Table of Contents
   flexibility of the configuration system.
 
   ┌────
-  │ ;; Configure the display action
-  │ (setq vertico-multiform-category-settings
+  │ ;; Configure the buffer display and the buffer display action
+  │ (setq vertico-multiform-categories
   │       '((consult-grep
+  │ 	 buffer
   │ 	 (vertico-buffer-display-action . (display-buffer-same-window)))))
-  │ 
-  │ ;; Configure the buffer display
-  │ (setq vertico-multiform-category-modes
-  │       '((consult-grep buffer)))
   │ 
   │ ;; Disable preview for consult-grep commands
   │ (consult-customize consult-ripgrep consult-git-grep consult-grep :preview-key nil)
+  └────
+
+  As another example, the following code uses `vertico-flat' and
+  `vertico-cycle' to emulate `(ido-mode 'buffer)', i.e., Ido when it is
+  enabled only for completion of buffer names. `vertico-cycle' set to
+  `t' is necessary here to prevent completion candidates from
+  disappearing when they scroll off-screen to the left.
+
+  ┌────
+  │ (setq vertico-multiform-categories
+  │       '((buffer flat (vertico-cycle . t))))
   └────
 
 
@@ -480,31 +482,33 @@ Table of Contents
   • [Orderless]: Advanced completion style
 
   In order to get accustomed with the package ecosystem, I recommed the
-  following approach:
+  following quick start approach:
 
-  1. Start with plain Emacs.
+  1. Start with plain Emacs (`emacs -Q').
   2. Install and enable Vertico to get incremental minibuffer
      completion.
   3. Install Orderless and/or configure the built-in completion styles
      for more flexible minibuffer filtering.
   4. Install Marginalia if you like rich minibuffer annotations.
   5. Install Embark and add two keybindings for `embark-dwim' and
-     `embark-act'.  I am using `M-.' and `C-.'. These commands allow you
-     to act on the object at point or in the minibuffer.
+     `embark-act'.  I am using the mnemonic keybindings `M-.' and `C-.'
+     since these commands allow you to act on the object at point or in
+     the minibuffer.
   6. Install Consult if you want additional featureful completion
      commands, e.g, the buffer switcher `consult-buffer' with preview or
      the line-based search `consult-line'.
   7. Install Embark-Consult and Wgrep for export from `consult-line' to
      `occur-mode' buffers and from `consult-grep' to editable
      `grep-mode' buffers.
+  8. Fine tune Vertico with [extensions].
 
-  You don't have to use all of these components. Use only the ones you
-  like and the ones which fit well into your setup. The steps 1. to
-  4. introduce no new commands over plain Emacs. Step 5. introduces the
-  new commands `embark-act' and `embark-dwim'. In step 6. you get the
-  Consult commands, some offer new functionality not present in Emacs
-  already (e.g., `consult-line') and some are substitutes (e.g.,
-  `consult-buffer' for `switch-to-buffer').
+  The ecosystem is modular. You don't have to use all of these
+  components. Use only the ones you like and the ones which fit well
+  into your setup. The steps 1. to 4. introduce no new commands over
+  plain Emacs. Step 5. introduces the new commands `embark-act' and
+  `embark-dwim'. In step 6. you get the Consult commands, some offer new
+  functionality not present in Emacs already (e.g., `consult-line') and
+  some are substitutes (e.g., `consult-buffer' for `switch-to-buffer').
 
 
 [Marginalia] <https://github.com/minad/marginalia>
@@ -515,17 +519,24 @@ Table of Contents
 
 [Orderless] <https://github.com/oantolin/orderless>
 
+[extensions] See section 5
+
 
 7 Child frames and Popups
 ═════════════════════════
 
   An often requested feature is the ability to display the completions
-  in a child frame popup. I do not recommend this, since from my
-  experience it introduces more problems than it solves. Child frames
-  can feel slow and sometimes flicker.  On the other hand the completion
-  display appears right in your focus at the center of the screen,
-  leading to a modern look and feel. Please give these packages a try
-  and judge for yourself.
+  in a child frame popup. Personally I am critical of using child frames
+  for minibuffer completion. From my experience it introduces more
+  problems than it solves. Most importantly child frames hide the
+  content of the underlying buffer. Furthermore child frames do not play
+  well together with changing windows and entering recursive minibuffer
+  sessions. On top, child frames can feel slow and sometimes flicker. A
+  better alternative is the `vertico-buffer' display which can even be
+  configured individually per command using `vertico-multiform'. On the
+  plus side of child frames, the completion display appears at the
+  center of the screen, where your eyes are focused. Please give the
+  following packages a try and judge for yourself.
 
   • [mini-frame]: Display the entire minibuffer in a child frame.
   • [mini-popup]: Slightly simpler alternative to mini-frame.
@@ -589,12 +600,13 @@ Table of Contents
     unobtrusive UI since it can be configured to open only when
     requested. Furthermore since Mct uses a fully functional buffer you
     can reuse all your familar buffer commands inside the completions
-    buffer. The main distinction to an approach like Vertico's is that
+    buffer. The main distinction to Vertico's approach is that
     `*Completions*' buffer displays all matching candidates. On the one
     hand this is good since it allows you to interact with all the
     candidates and jump around with Isearch or Avy. On the other hand it
-    necessarily causes a small slowdown in comparison to Vertico, which
-    only displays a small subset of candidates.
+    necessarily causes a slowdown in comparison to Vertico, which only
+    displays a subset of candidates. Mct supports completion in region
+    via its `mct-region-mode'.
 
 
 [Selectrum] <https://github.com/raxod502/selectrum>

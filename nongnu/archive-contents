@@ -517,15 +517,15 @@
 	     ("The go-mode Authors"))
 	    (:keywords "languages" "go"))])
  (goto-chg .
-	   [(1 7 4)
+	   [(1 7 5)
 	    ((emacs
 	      (24 1)))
 	    "Go to last change" tar
 	    ((:url . "https://github.com/emacs-evil/goto-chg")
+	     (:keywords "convenience" "matching")
 	     (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de")
 	     (:authors
-	      ("David Andersson <l.david.andersson(at)sverige.nu>"))
-	     (:keywords "convenience" "matching"))])
+	      ("David Andersson <l.david.andersson(at)sverige.nu>")))])
  (gruvbox-theme .
 		[(1 26 0)
 		 ((autothemer
@@ -1188,7 +1188,7 @@
 	   ("Masahiro Hayashi" . "mhayashi1120@gmail.com"))
 	  (:keywords "grep" "edit" "extensions"))])
  (with-editor .
-	      [(3 0 5)
+	      [(3 1 1)
 	       ((emacs
 		 (24 4)))
 	       "Use the Emacsclient as $EDITOR" tar
