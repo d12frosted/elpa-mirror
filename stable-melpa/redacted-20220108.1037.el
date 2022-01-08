@@ -4,11 +4,11 @@
 
 ;; Author:  Benjamin Kästner <benjamin.kaestner@gmail.com>
 ;; URL: https://github.com/bkaestner/redacted.el
-;; Package-Version: 20211218.1109
-;; Package-Commit: 156311eb128bd6cc7d6912552c70f6cf22a14cff
+;; Package-Version: 20220108.1037
+;; Package-Commit: c4ea6cbffda9c67af112f25b2db2843aa4abce85
 ;; Keywords: games
-;; Version: 0.1.0
-;; Package-Requires: ((emacs "24.1"))
+;; Version: 0.1.1
+;; Package-Requires: ((emacs "25.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
