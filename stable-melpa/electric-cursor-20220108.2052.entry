@@ -1,0 +1,11 @@
+(electric-cursor .
+		 [(20220108 2052)
+		  ((emacs
+		    (25 1)))
+		  "Change cursor automatically depending on mode" single
+		  ((:commit . "92f77b05fec80c5440a8b800b33345dabca13872")
+		   (:authors
+		    ("Case Duckworth" . "acdw@acdw.net"))
+		   (:maintainer "Case Duckworth" . "acdw@acdw.net")
+		   (:keywords "terminals" "frames")
+		   (:url . "https://github.com/duckwork/electric-cursor"))])

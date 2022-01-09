@@ -1,0 +1,15 @@
+(inf-ruby .
+	  [(20220108 2343)
+	   ((emacs
+	     (24 3)))
+	   "Run a Ruby process in a buffer" single
+	   ((:commit . "2fae1a8ba9e7f4fa87b468f90bea3d11d3a7c387")
+	    (:authors
+	     ("Yukihiro Matsumoto")
+	     ("Nobuyoshi Nakada")
+	     ("Cornelius Mika" . "cornelius.mika@gmail.com")
+	     ("Dmitry Gutov" . "dgutov@yandex.ru")
+	     ("Kyle Hargraves" . "pd@krh.me"))
+	    (:maintainer "Yukihiro Matsumoto")
+	    (:keywords "languages" "ruby")
+	    (:url . "http://github.com/nonsequitur/inf-ruby"))])

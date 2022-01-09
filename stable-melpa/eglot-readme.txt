@@ -24,5 +24,5 @@ You can also do:
 
   (add-hook 'foo-mode-hook 'eglot-ensure)
 
-To attempt to start an eglot session automatically everytime a
+To attempt to start an eglot session automatically every time a
 foo-mode buffer is visited.
