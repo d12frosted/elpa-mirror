@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2021 Free Software Foundation, Inc.
 
 ;; Version: 1.7
-;; Package-Version: 20220109.151
-;; Package-Commit: 3705da07a628c63bf57276fbd80b9d49029666e8
+;; Package-Version: 20220109.733
+;; Package-Commit: 1ca6b1dfb74e5c85f94adc9c3fe2a1993931596a
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -142,6 +142,8 @@ chosen (interactively or automatically)."
                       finally (funcall err)))))))
 
 (defvar eglot-server-programs `((rust-mode . (eglot-rls "rls"))
+                                (cmake-mode . ("cmake-language-server"))
+                                (vimrc-mode . ("vim-language-server" "--stdio"))
                                 (python-mode
                                  . ,(eglot-alternatives
                                      '("pylsp" "pyls" ("pyright-langserver" "--stdio"))))
