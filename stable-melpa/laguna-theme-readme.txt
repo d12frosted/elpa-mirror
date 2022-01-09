@@ -1,6 +1,6 @@
 
- Framework based on the initial structure found within "Ample Theme"
- (originally created by Jordon Biondo)
+ Framework based on the initial code found within "Ample Theme"
+ by Jordon Biondo.
  URL: https://github.com/jordonbiondo/ample-theme
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
