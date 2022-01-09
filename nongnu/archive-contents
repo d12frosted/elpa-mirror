@@ -826,6 +826,15 @@
 	     (:maintainer "Chen Bin (redguardtoo)")
 	     (:authors
 	      ("Eric Schulte")))])
+ (org-present .
+	      [(0 1)
+	       ((org
+		 (7)))
+	       "Minimalist presentation minor-mode for Emacs org-mode." tar
+	       ((:url . "https://github.com/rlister/org-present")
+		(:maintainer "Ric Lister")
+		(:authors
+		 ("Ric Lister")))])
  (org-superstar .
 		[(1 5 1)
 		 ((org
