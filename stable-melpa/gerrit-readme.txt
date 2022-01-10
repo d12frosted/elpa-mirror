@@ -1,7 +1,7 @@
 This package contains
 
 * functions for downloading and uploading a change
-* (`gerrit-upload-transient` and `gerrit-download`)
+* (`gerrit-upload` and `gerrit-download`)
 
 * `gerrit-dashboard`, function for displaying a dashboard, similar to the
   one of the gerrit web-interface

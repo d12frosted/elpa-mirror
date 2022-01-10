@@ -1,4 +1,4 @@
-`dirvish.el' is a minimalistic file manager based on `dired-mode'.  It is
+`dirvish' is a minimalistic file manager based on `dired-mode'.  It is
 inspired by ranger (see https://github.com/ranger/ranger), which is a
 terminal file manager that shows a stack of the parent directories, and
 updates its parent buffers while navigating the file system with an optional

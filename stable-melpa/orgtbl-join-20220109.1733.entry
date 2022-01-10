@@ -1,0 +1,10 @@
+(orgtbl-join .
+	     [(20220109 1733)
+	      ((cl-lib
+		(0 5)))
+	      "join columns from another table" single
+	      ((:commit . "3e99ebc8ad013d846d9d987a7dce54dd6f83e52a")
+	       (:authors
+		("Thierry Banel tbanelwebmin at free dot fr"))
+	       (:maintainer "Thierry Banel tbanelwebmin at free dot fr")
+	       (:keywords "org" "table" "join" "filtering"))])
