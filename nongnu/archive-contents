@@ -81,6 +81,16 @@
 	       (:maintainer "Sebastian Sturm")
 	       (:authors
 		("Sebastian Sturm")))])
+ (better-jumper .
+		[(1 0 1)
+		 ((emacs
+		   (25 1)))
+		 "configurable jump list" tar
+		 ((:url . "https://github.com/gilbertw1/better-jumper")
+		  (:keywords "convenience" "jump" "history" "evil")
+		  (:maintainer "Bryan Gilbert" . "bryan@bryan.sh")
+		  (:authors
+		   ("Bryan Gilbert <http://github/gilbertw1>")))])
  (bison-mode .
 	     [(0 4)
 	      nil "Major mode for editing bison, yacc and lex files." tar

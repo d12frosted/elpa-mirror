@@ -5,7 +5,7 @@
 ;; Author: Bozhidar Batsov <bozhidar@batsov.com>
 ;; URL: http://github.com/bbatsov/zenburn-emacs
 ;; Package-Version: 20210823.504
-;; Package-Commit: 13266182dc51534394bd427840bc78e2a78d01bd
+;; Package-Commit: 23615ebdc95d3de2ae26ee57352c593c59739ab5
 ;; Version: 2.8.0-snapshot
 
 ;; This program is free software; you can redistribute it and/or modify

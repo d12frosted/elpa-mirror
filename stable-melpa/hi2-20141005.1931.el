@@ -6,8 +6,6 @@
 
 ;; Author: Gergely Risko <gergely@risko.hu>
 ;; Version: 20141005.0
-;; Package-Version: 20141005.1931
-;; Package-Commit: c9d199727b5cdcb9e36a972b38131ce4611fd6c8
 ;; Keywords: indentation haskell
 ;; URL: https://github.com/errge/hi2
 
