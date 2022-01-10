@@ -636,6 +636,15 @@
 	      "Major mode for editing Julia source code" tar
 	      ((:url . "https://github.com/JuliaEditorSupport/julia-emacs")
 	       (:keywords "languages"))])
+ (keycast .
+	  [(1 1 2)
+	   ((emacs
+	     (25 3)))
+	   "Show current command and its key in the mode line" tar
+	   ((:url . "https://github.com/tarsius/keycast")
+	    (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	    (:authors
+	     ("Jonas Bernoulli" . "jonas@bernoul.li")))])
  (lua-mode .
 	   [(20210802)
 	    ((emacs
