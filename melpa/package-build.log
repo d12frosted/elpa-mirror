@@ -4,24 +4,24 @@ Source:  https://github.com/melpa/package-build.git
 
 Updating /mnt/store/melpa/working/package-build/
 Checking out origin/HEAD
-Checking out 12da8c305ce8c7e753473d2f35ba2f6faa0c4d02
+Checking out 8a0b5e40616bae0fd4b9e1e4da6f1e0dc3c9c703
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/package-build/
-  to /tmp/package-build8WhFsQ/package-build-20211219.302
+  to /tmp/package-buildwqghmo/package-build-20220110.1641
     package-build-badges.el -> package-build-badges.el
     package-build.el -> package-build.el
     package-recipe-mode.el -> package-recipe-mode.el
     package-recipe.el -> package-recipe.el
-Created package-build-20211219.302.tar containing:
-  package-build-20211219.302/
-  package-build-20211219.302/package-build-badges.el
-  package-build-20211219.302/package-build-pkg.el
-  package-build-20211219.302/package-build.el
-  package-build-20211219.302/package-recipe-mode.el
-  package-build-20211219.302/package-recipe.el
-Built package-build in 3.644s, finished at 2022-01-10T09:26:23+0000
+Created package-build-20220110.1641.tar containing:
+  package-build-20220110.1641/
+  package-build-20220110.1641/package-build-badges.el
+  package-build-20220110.1641/package-build-pkg.el
+  package-build-20220110.1641/package-build.el
+  package-build-20220110.1641/package-recipe-mode.el
+  package-build-20220110.1641/package-recipe.el
+Built package-build in 4.067s, finished at 2022-01-10T21:17:26+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  403 Jan 10 09:26 packages/package-build-20211219.302.entry
- 72K -rw-r--r-- 1 root root  70K Jan 10 09:26 packages/package-build-20211219.302.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 10 09:26 packages/package-build-badge.svg
-4.0K -rw-r--r-- 1 root root  308 Jan 10 09:26 packages/package-build-readme.txt
+4.0K -rw-r--r-- 1 root root  404 Jan 10 21:17 packages/package-build-20220110.1641.entry
+ 72K -rw-r--r-- 1 root root  70K Jan 10 21:17 packages/package-build-20220110.1641.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 10 21:17 packages/package-build-badge.svg
+4.0K -rw-r--r-- 1 root root  308 Jan 10 21:17 packages/package-build-readme.txt

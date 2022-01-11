@@ -4,9 +4,15 @@ Source:  https://hg.sr.ht/~zck/minesweeper
 
 Updating /mnt/store/melpa/working/minesweeper/
 Checking out d4248e3c9b3e9e7277cb9e6d081330611898f334
-Built minesweeper in 16.084s, finished at 2022-01-10T09:18:18+0000
- ✓ Success:
- 36K -rw-r--r-- 1 root root  35K Jan 10 09:18 packages/minesweeper-20200416.2342.el
-4.0K -rw-r--r-- 1 root root  393 Jan 10 09:18 packages/minesweeper-20200416.2342.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 10 09:18 packages/minesweeper-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Jan 10 09:18 packages/minesweeper-readme.txt
+Command '(env LC_ALL=C hg purge)' exited with non-zero status 255: pulling from https://hg.sr.ht/~zck/minesweeper
+searching for changes
+no changes found
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
+
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
+

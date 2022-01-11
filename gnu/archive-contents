@@ -290,6 +290,16 @@
 	       (:authors
 		("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	       (:keywords "lisp"))])
+ (cape .
+       [(0 5)
+	((emacs
+	  (27 1)))
+	"Completion At Point Extensions" tar
+	((:url . "https://github.com/minad/cape")
+	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+	 (:authors
+	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
+	 (:commit . "9567f1ca09a3867e50ef8f990b486e916460df9d"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -2888,7 +2898,7 @@
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de")))])
  (vertico-posframe .
-		   [(0 4 9)
+		   [(0 5 0)
 		    ((emacs
 		      (26 0))
 		     (posframe
@@ -2900,7 +2910,8 @@
 		     (:keywords "abbrev" "convenience" "matching" "vertico")
 		     (:maintainer "Feng Shu" . "tumashu@163.com")
 		     (:authors
-		      ("Feng Shu" . "tumashu@163.com")))])
+		      ("Feng Shu" . "tumashu@163.com"))
+		     (:commit . "37e749842d6efe227387b045c4bedc94863175ad"))])
  (vigenere .
 	   [(1 0)
 	    ((emacs

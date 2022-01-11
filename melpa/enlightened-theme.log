@@ -4,9 +4,15 @@ Source:  https://hg.sr.ht/~slondr/enlightened
 
 Updating /mnt/store/melpa/working/enlightened-theme/
 Checking out 1bfebd8f47e8a8357c9e557cf6e95d7027861e6d
-Built enlightened-theme in 12.937s, finished at 2022-01-10T11:51:55+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 7.3K Jan 10 11:51 packages/enlightened-theme-20210220.2327.el
-4.0K -rw-r--r-- 1 root root  211 Jan 10 11:51 packages/enlightened-theme-20210220.2327.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 10 11:51 packages/enlightened-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  121 Jan 10 11:51 packages/enlightened-theme-readme.txt
+Command '(env LC_ALL=C hg purge)' exited with non-zero status 255: pulling from https://hg.sr.ht/~slondr/enlightened
+searching for changes
+no changes found
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+hg: unknown command 'purge'
+'purge' is provided by the following extension:
+
+    purge         command to delete untracked files from the working directory
+
+(use 'hg help extensions' for information on enabling extensions)
+
