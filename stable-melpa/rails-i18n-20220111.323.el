@@ -4,10 +4,10 @@
 
 ;; Author: Otávio Schwanck dos Santos <otavioschwanck@gmail.com>
 ;; Keywords: tools languages
-;; Package-Version: 20211026.1404
-;; Package-Commit: 5d7a3e46d801668f53efc4c974b5f46b2cd28a0c
+;; Package-Version: 20220111.323
+;; Package-Commit: 4d7c7ba4c6549e29aadb1eadbce8378291277623
 ;; Version: 0.2
-;; Package-Requires: ((emacs "27.2") (yaml "0.1.0") (dash "2.19.1") (projectile "2.6.0-snapshot"))
+;; Package-Requires: ((emacs "27.2") (yaml "0.1.0") (dash "2.19.1"))
 ;; Homepage: https://github.com/otavioschwanck/rails-i18n.el
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -32,16 +32,22 @@
 
 ;;; Code:
 
-(require 'savehist)
 (require 'subr-x)
 (require 'yaml)
 (require 'dash)
-(require 'projectile)
 
 (defgroup rails-i18n nil
   "Search for and insert rails i18n."
   :group 'tools
   :group 'languages)
+
+(defcustom rails-i18n-cache-path (concat user-emacs-directory ".local/rails-i18n")
+  "Where the cache will be saved."
+  :type 'string)
+
+(defcustom rails-i18n--cache-loaded nil
+  "If t, means that rails i18n already loaded the cache."
+  :type 'string)
 
 (defcustom rails-i18n-use-double-quotes nil
   "If t, use double quotes instead single-quotes."
@@ -70,11 +76,28 @@
 (defvar rails-i18n-cache '() "Initialize the i18n cache.")
 (defvar rails-i18n-yaml-mode-hook 'yaml-mode-hook "Hook used to add rails-i18n cache upgrader.")
 
-(defun rails-i18n--read-lines (file-path)
-  "Return file-path's file content. FILE-PATH: Path of yaml."
+(defun rails-i18n--read-lines (filePath)
+  "Return filePath's file content. FILEPATH: Path of yaml."
   (condition-case nil (yaml-parse-string (with-temp-buffer
-                                           (insert-file-contents file-path)
+                                           (insert-file-contents filePath)
                                            (buffer-string))) (error nil)))
+
+(defun rails-i18n--save-cache ()
+  "Save rails routes cache file."
+  (save-excursion
+    (let ((buf (find-file-noselect rails-i18n-cache-path)))
+      (set-buffer buf)
+      (erase-buffer)
+      (cl-loop for var in '(rails-i18n-cache) do
+            (print (list 'setq var (list 'quote (symbol-value var)))
+                   buf))
+      (save-buffer)
+      (kill-buffer))))
+
+(defun rails-i18n--load-cache ()
+  "Love rails routes cache file."
+  (when (and (file-exists-p rails-i18n-cache-path) (not rails-i18n--cache-loaded))
+    (load rails-i18n-cache-path)))
 
 (defun rails-i18n--quotes ()
   "Return the quote to be used."
@@ -86,56 +109,57 @@
   (interactive)
   (message "Reading the yml files.  it can take some time...")
   (let* ((collection (rails-i18n--parse-yamls))
-         (selected-i18n (completing-read "Select your I18n: " collection)))
+         (selectedI18n (completing-read "Select your I18n: " collection)))
     (rails-i18n--set-cache collection)
-    (rails-i18n--insert-i18n selected-i18n)))
+    (rails-i18n--insert-i18n selectedI18n)))
 
 ;;;###autoload
 (defun rails-i18n-insert-with-cache ()
   "Search and insert the i18n, searching on cache.  If cache is nil, refresh the cache."
   (interactive)
-  (let ((cached-i18n (rails-i18n--get-cached)))
-    (if cached-i18n
-        (rails-i18n--insert-i18n (completing-read "Select your I18n: " cached-i18n))
+  (rails-i18n--load-cache)
+  (let ((cachedI18n (rails-i18n--get-cached)))
+    (if cachedI18n
+        (rails-i18n--insert-i18n (completing-read "Select your I18n: " cachedI18n))
       (rails-i18n-insert-no-cache))))
 
 (defun rails-i18n--get-cached ()
   "Get the cached routes if not exists."
   (cdr (assoc (funcall rails-i18n-project-name-function) rails-i18n-cache)))
 
-(defun rails-i18n--insert-i18n (i18n-string)
-  "Insert the i18n on code. I18N-STRING: string to be inserted."
-  (let ((ignore-class (rails-i18n--guess-use-class))
-        (has-arguments (string-match-p "%{\\([a-z]+[_]*[a-z]*\\)}"
-                                       (nth 1 (split-string i18n-string rails-i18n-separator)))))
+(defun rails-i18n--insert-i18n (i18nString)
+  "Insert the i18n on code. I18NSTRING: string to be inserted."
+  (let ((ignoreClass (rails-i18n--guess-use-class))
+        (hasArguments (string-match-p "%{\\([a-z]+[_]*[a-z]*\\)}"
+                                      (nth 1 (split-string i18nString rails-i18n-separator)))))
     (insert
-     (if ignore-class "" "I18n.")
-     "t(" (rails-i18n--quotes) (rails-i18n--format-substring i18n-string ignore-class) (rails-i18n--quotes) ")")
-    (when has-arguments (forward-char -1) (insert ", "))))
+     (if ignoreClass "" "I18n.")
+     "t(" (rails-i18n--quotes) (rails-i18n--format-substring i18nString ignoreClass) (rails-i18n--quotes) ")")
+    (when hasArguments (forward-char -1) (insert ", "))))
 
-(defun rails-i18n--format-substring (i18n-string ignore-class)
-  "Format the substring depending of mode. IGNORE-CLASS: boolean taht indicates if I18n class was ignored. I18N-STRING: String to be inserted."
-  (let ((string-to-be-inserted (nth 0 (split-string i18n-string rails-i18n-separator))))
+(defun rails-i18n--format-substring (i18nString ignoreClass)
+  "Format the substring depending of mode. IGNORECLASS: boolean taht indicates if I18n class was ignored. I18NSTRING: String to be inserted."
+  (let ((stringToBeInserted (nth 0 (split-string i18nString rails-i18n-separator))))
     (if
-        ignore-class
-        (rails-i18n--insert-for-view string-to-be-inserted)
-      string-to-be-inserted)))
+        ignoreClass
+        (rails-i18n--insert-for-view stringToBeInserted)
+      stringToBeInserted)))
 
-(defun rails-i18n--insert-for-view (i18n-string)
-  "Insert with view rules. I18N-STRING: String to be inserted."
-  (let ((string-to-be-inserted (substring i18n-string 1 (length i18n-string))))
+(defun rails-i18n--insert-for-view (i18nString)
+  "Insert with view rules. I18NSTRING: String to be inserted."
+  (let ((stringToBeInserted (substring i18nString 1 (length i18nString))))
     (if (string-match "app/views" (buffer-file-name))
-        (replace-regexp-in-string (rails-i18n--controller-and-action-name) "" string-to-be-inserted)
-      string-to-be-inserted)))
+        (replace-regexp-in-string (rails-i18n--controller-and-action-name) "" stringToBeInserted)
+      stringToBeInserted)))
 
 (defun rails-i18n--controller-and-action-name ()
   "Current controller and action."
   (let*
-      ((without-project-name (replace-regexp-in-string (concat (funcall rails-i18n-project-root-function) "app/views") "" (buffer-file-name)))
-       (without-underline (replace-regexp-in-string "/_" "/" without-project-name))
-       (slash-changed (replace-regexp-in-string "/" "." without-underline))
-       (fixed-string (string-join (butlast (split-string slash-changed "\\.") 2) ".")))
-    (substring fixed-string 1 (length fixed-string))))
+      ((withoutProjectName (replace-regexp-in-string (concat (funcall rails-i18n-project-root-function) "app/views") "" (buffer-file-name)))
+       (withoutUnderline (replace-regexp-in-string "/_" "/" withoutProjectName))
+       (slashChanged (replace-regexp-in-string "/" "." withoutUnderline))
+       (fixedString (string-join (butlast (split-string slashChanged "\\.") 2) ".")))
+    (substring fixedString 1 (length fixedString))))
 
 (defun rails-i18n--guess-use-class ()
   "Guess if current file needs to pass the class."
@@ -145,12 +169,13 @@
   "Set the cache values. VAL:  Value to set."
   (when (assoc (funcall rails-i18n-project-name-function) rails-i18n-cache)
     (setq rails-i18n-cache (remove (assoc (funcall rails-i18n-project-name-function) rails-i18n-cache) rails-i18n-cache)))
-  (setq rails-i18n-cache (cons `(,(funcall rails-i18n-project-name-function) . ,val) rails-i18n-cache)))
+  (setq rails-i18n-cache (cons `(,(funcall rails-i18n-project-name-function) . ,val) rails-i18n-cache))
+  (rails-i18n--save-cache))
 
 (defun rails-i18n--parse-yamls ()
   "Return the parsed yaml list."
   (let ((files (rails-i18n--get-yaml-files))
-        (result))
+        ($result))
     (mapc
      (lambda (file)
        (let ((parsed-file (rails-i18n--read-lines file)))
@@ -158,36 +183,36 @@
              (push (flatten-list
                     (rails-i18n--parse-yaml
                      []
-                     parsed-file )) result)
+                     parsed-file )) $result)
            (message "[warning] Cannot read %s - error on parse. (keep calm, still loading the yamls.)"
                     (file-name-nondirectory file)))))
      files)
-    (-distinct (flatten-list result))))
+    (-distinct (flatten-list $result))))
 
 (defun rails-i18n--get-yaml-files ()
   "Find all i18n files."
   (directory-files-recursively
    (concat (funcall rails-i18n-project-root-function) rails-i18n-locales-directory) rails-i18n-locales-regexp))
 
-(defun rails-i18n--parse-yaml (previous-key yaml-hash-table)
-  "Parse the yaml into an single list.  PREVIOUS-KEY: key to be mounted.  YAML-HASH-TABLE:  Value to be parsed."
-  (if (eq (type-of yaml-hash-table) 'hash-table)
+(defun rails-i18n--parse-yaml (previousKey yamlHashTable)
+  "Parse the yaml into an single list.  PREVIOUSKEY: key to be mounted.  YAMLHASHTABLE:  Value to be parsed."
+  (if (eq (type-of yamlHashTable) 'hash-table)
       (progn
-        (let (result)
+        (let ($result)
           (maphash
            (lambda (k v)
              (push (rails-i18n--parse-yaml
-                    (append previous-key
-                            (make-vector 1 (format "%s" k)) nil) v) result))
-           yaml-hash-table)
+                    (append previousKey
+                            (make-vector 1 (format "%s" k)) nil) v) $result))
+           yamlHashTable)
 
-          result))
-    (rails-i18n--mount-string previous-key yaml-hash-table)))
+          $result))
+    (rails-i18n--mount-string previousKey yamlHashTable)))
 
-(defun rails-i18n--mount-string (previous-key string)
-  "Create the string to be selected. PREVIOUS-KEY: list of keys to mount. STRING: Value to the i18n."
+(defun rails-i18n--mount-string (previousKey string)
+  "Create the string to be selected. PREVIOUSKEY: list of keys to mount. STRING: Value to the i18n."
   (concat "."
-          (string-join (remove (nth 0 previous-key) previous-key) ".")
+          (string-join (remove (nth 0 previousKey) previousKey) ".")
           rails-i18n-separator
           (propertize (format "%s" string) 'face 'bold)))
 
@@ -197,7 +222,7 @@
          (buffer-file-name)
          (string-match-p rails-i18n-locales-regexp (file-name-nondirectory (buffer-file-name)))
          (string-match-p rails-i18n-locales-directory (buffer-file-name)))
-    (add-hook 'after-save-hook #'rails-i18n--upgrade-single-file-cache 100 t)))
+    (add-hook 'after-save-hook #'rails-i18n--upgrade-single-file-cache) 100 t))
 
 (defun rails-i18n--upgrade-cache-for (result)
   "Upgrade cache for just one project / file.  RESULT:  Texts to be upgraded."
@@ -206,8 +231,8 @@
     (rplacd (assoc (funcall rails-i18n-project-name-function) rails-i18n-cache)
             (-distinct (flatten-list (push result cleanedI18n))))))
 
-(defun rails-i18n--remove-old (current-i18n result)
-  "Remove old i18n and change to new. CURRENT-I18N: i18n at moment, RESULT: new file i18ns parsed."
+(defun rails-i18n--remove-old (currentI18n result)
+  "Remove old i18n and change to new. CURRENTI18N: i18n at moment, RESULT: new file i18ns parsed."
   (mapcar
    (lambda (element)
      (when
@@ -215,40 +240,23 @@
                          (mapcar (lambda (oldElement) (nth 0 (split-string oldElement rails-i18n-separator))) result)
                          :test #'string-match))
        element))
-   current-i18n))
+   currentI18n))
 
 (defun rails-i18n--upgrade-single-file-cache ()
   "Upgrade rails-i18n when file is changed (when possible)."
   (let* ((yaml (rails-i18n--read-lines (buffer-file-name)))
-         (has-cache (rails-i18n--get-cached))
-         (result))
-    (if (and (eq (type-of yaml) 'hash-table) has-cache)
+         (hasCache (rails-i18n--get-cached))
+         ($result))
+    (if (and (eq (type-of yaml) 'hash-table) hasCache)
         (progn
           (message "Upgrading file cache (rails-i18n)...  Press C-g to cancel.")
           (push (flatten-list
                  (rails-i18n--parse-yaml
                   []
-                  yaml )) result)
-          (rails-i18n--upgrade-cache-for (-distinct (flatten-list result)))
+                  yaml )) $result)
+          (rails-i18n--upgrade-cache-for (-distinct (flatten-list $result)))
           (message "Cache upgraded!"))
       (message "Rails i18n: Cache not found or cannot parse yaml."))))
-
-(defun rails-i18n--add-to-savehist ()
-  "Add rails-i18n-cache to savehist."
-  (add-to-list 'savehist-additional-variables 'rails-i18n-cache))
-
-;;;###autoload
-(define-minor-mode rails-i18n-global-mode
-  "Toggle cache hooks and watchs for rails-i18n."
-  :global t
-  :lighter " i18n"
-  (if rails-i18n-global-mode
-      (progn
-        (add-to-list 'savehist-additional-variables 'rails-i18n-cache)
-        (add-hook rails-i18n-yaml-mode-hook #'rails-i18n--watch-rb))
-    (progn
-      (setq savehist-additional-variables (delete 'rails-i18n-cache savehist-additional-variables))
-      (remove-hook rails-i18n-yaml-mode-hook #'rails-i18n--watch-rb))))
 
 (provide 'rails-i18n)
 ;;; rails-i18n.el ends here

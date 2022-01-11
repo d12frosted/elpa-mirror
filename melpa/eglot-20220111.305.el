@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.7
-;; Package-Version: 20220110.1921
-;; Package-Commit: 7be57f132b7c5a1e9ee715ae8c4513d43d582d2f
+;; Package-Version: 20220111.305
+;; Package-Commit: 2c0f262c240222e42e3ec914307b9690354bb3a3
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -2418,6 +2418,13 @@ is not active."
                      (kind (alist-get (plist-get lsp-item :kind)
                                       eglot--kind-names)))
            (intern (downcase kind))))
+       :company-docsig
+       ;; FIXME: autoImportText is specific to the pyright language server
+       (lambda (proxy)
+         (when-let* ((lsp-comp (get-text-property 0 'eglot--lsp-item proxy))
+                     (data (plist-get (funcall resolve-maybe lsp-comp) :data))
+                     (import-text (plist-get data :autoImportText)))
+           import-text))
        :company-doc-buffer
        (lambda (proxy)
          (let* ((documentation

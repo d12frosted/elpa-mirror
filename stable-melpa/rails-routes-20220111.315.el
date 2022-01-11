@@ -4,8 +4,8 @@
 
 ;; Author: Otávio Schwanck <otavioschwanck@gmail.com>
 ;; Keywords: tools languages
-;; Package-Version: 20220111.313
-;; Package-Commit: 210e6af0ae9a54332523f75f65e554b8e2c091da
+;; Package-Version: 20220111.315
+;; Package-Commit: 76fde6e50ff42e392cbc6c0b158be2921ef24445
 ;; Homepage: https://github.com/otavioschwanck/rails-routes
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "27.2") (inflections "1.1") (projectile "2.5.0"))
@@ -78,6 +78,7 @@
   :type 'string)
 
 (defun rails-routes--save-cache ()
+  "Save rails routes cache file."
   (save-excursion
     (let ((buf (find-file-noselect rails-routes-cache-path)))
       (set-buffer buf)
@@ -89,6 +90,7 @@
       (kill-buffer))))
 
 (defun rails-routes--load-cache ()
+  "Love rails routes cache file."
   (when (and (file-exists-p rails-routes-cache-path) (not rails-routes--cache-loaded))
     (load rails-routes-cache-path)))
 
