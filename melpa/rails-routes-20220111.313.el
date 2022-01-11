@@ -4,8 +4,8 @@
 
 ;; Author: Otávio Schwanck <otavioschwanck@gmail.com>
 ;; Keywords: tools languages
-;; Package-Version: 20211108.347
-;; Package-Commit: b1326e9f4ede6b3da0fada29697fa7f797d7576d
+;; Package-Version: 20220111.313
+;; Package-Commit: 210e6af0ae9a54332523f75f65e554b8e2c091da
 ;; Homepage: https://github.com/otavioschwanck/rails-routes
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "27.2") (inflections "1.1") (projectile "2.5.0"))
@@ -39,7 +39,6 @@
 ;; Add rails-routes-jump to jump to the route controller.  Works with activeadmin.
 
 ;;; Code:
-(require 'savehist)
 (require 'subr-x)
 (require 'inflections)
 (require 'cl-lib)
@@ -66,9 +65,32 @@
   "What will be inserted after calling `rails-routes-insert'."
   :type 'string)
 
+(defcustom rails-routes-cache-path (concat user-emacs-directory ".local/rails-routes")
+  "Where the cache will be saved."
+  :type 'string)
+
 (defcustom rails-routes-class-name "Rails.application.routes.url_helpers."
   "Prefix used to access rails routes outside the views."
   :type 'string)
+
+(defcustom rails-routes--cache-loaded nil
+  "If t, means that rails routes already loaded the cache."
+  :type 'string)
+
+(defun rails-routes--save-cache ()
+  (save-excursion
+    (let ((buf (find-file-noselect rails-routes-cache-path)))
+      (set-buffer buf)
+      (erase-buffer)
+      (cl-loop for var in '(rails-routes-cache rails-routes-cache-validations) do
+            (print (list 'setq var (list 'quote (symbol-value var)))
+                   buf))
+      (save-buffer)
+      (kill-buffer))))
+
+(defun rails-routes--load-cache ()
+  (when (and (file-exists-p rails-routes-cache-path) (not rails-routes--cache-loaded))
+    (load rails-routes-cache-path)))
 
 (defvar rails-routes-cache '())
 (defvar rails-routes-cache-validations '())
@@ -103,6 +125,7 @@
 
       (rails-routes--set-cache command-result)
       (rails-routes--set-cache-validations t)
+      (rails-routes--save-cache)
     command-result))
 
 (defun rails-routes--get-routes-cached ()
@@ -137,6 +160,7 @@ CONTROLLER-FULL-PATH is the controller name plus action."
 With prefix argument INSERT-CLASS, fully-qualify the route with
 the `rails-routes-class-name' prefix."
   (interactive)
+  (rails-routes--load-cache)
   (let* ((selected-value (split-string (completing-read "Route: " (rails-routes--get-routes-cached)) " +"))
          (selected-route (nth (if (eq (length selected-value) 5) 3 2) selected-value)))
     (when (not (rails-routes--guess-ignore-class)) (insert rails-routes-class-name))
@@ -155,12 +179,8 @@ the `rails-routes-class-name' prefix."
 (defun rails-routes-invalidate-cache ()
   "Invalidate cache when the file that will be saved is routes.rb."
   (when (string-match-p "routes.rb" (buffer-file-name))
-    (rails-routes--set-cache-validations nil)))
-
-(defun rails-routes--add-alist ()
-  "Add the rails-routes-cache and rails-routes-cache-validations to alist."
-    (add-to-list 'savehist-additional-variables 'rails-routes-cache
-    (add-to-list 'savehist-additional-variables 'rails-routes-cache-validations)))
+    (rails-routes--set-cache-validations nil)
+    (rails-routes--save-cache)))
 
 (defun rails-routes--remove-path-or-url (path)
   "Remove any \"_path\" or \"_url\" suffix from PATH."
@@ -242,19 +262,6 @@ CONTROLLER-NAME: Path of controller.  ACTION:  Action of the path."
              (assoc (funcall rails-routes-project-name-function) rails-routes-cache)
              (assoc (funcall rails-routes-project-name-function) rails-routes-cache-validations))
     (add-hook 'after-save-hook #'rails-routes-invalidate-cache nil t)))
-
-;;;###autoload
-(define-minor-mode rails-routes-global-mode
-  "Initialize cache and routes watch."
-  :global t
-  :lighter " routes"
-  (if rails-routes-global-mode
-      (progn
-        (add-hook 'ruby-mode-hook #'rails-routes--set-routes-hook)
-        (add-hook 'savehist-mode-hook #'rails-routes--add-alist))
-    (progn
-      (remove-hook 'ruby-mode-hook #'rails-routes--set-routes-hook)
-      (remove-hook 'savehist-mode-hook #'rails-routes--add-alist))))
 
 (provide 'rails-routes)
 ;;; rails-routes.el ends here

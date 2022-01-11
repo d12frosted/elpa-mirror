@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.11
-;; Package-Version: 20220110.1143
-;; Package-Commit: a87a4c323c4d626de58527b46471695e7231827e
+;; Package-Version: 20220110.2242
+;; Package-Commit: 7608acbe6f8cca3c484d05b5d21d27319ba1ed4f
 ;; Package-Requires: ((emacs "26.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -1064,10 +1064,10 @@ PROP is the property which is looked up."
   (pcase prop
     ('annotation-function
      ;; We do want the advice triggered for `completion-metadata-get'.
-     ;; Return wrapper around the more general `affixation-function'.
-     (when-let (aff (completion-metadata-get metadata 'affixation-function))
+     (when-let* ((cat (completion-metadata-get metadata 'category))
+                 (annotator (marginalia--annotator cat)))
        (lambda (cand)
-         (let ((ann (caddar (funcall aff (list cand)))))
+         (let ((ann (caddar (marginalia--affixate metadata annotator (list cand)))))
            (and (not (equal ann "")) ann)))))
     ('affixation-function
      ;; We do want the advice triggered for `completion-metadata-get'.
