@@ -6,7 +6,7 @@
 
 This package provides major modes for editing OpenFOAM data files
 and C++ code.  There are also user commands for managing OpenFOAM
-case directories.
+case and application directories.
 
 By default, verbatim text blocks in OpenFOAM data files are
 indented like data which yields acceptable results for C++ code.

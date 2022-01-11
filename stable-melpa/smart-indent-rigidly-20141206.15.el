@@ -4,8 +4,6 @@
 
 ;; Author: atom smith
 ;; URL: https://github.com/re5et/smart-indent-rigidly
-;; Package-Version: 20141206.15
-;; Package-Commit: 323d1fe4d0b81e598249aad01bc44adb180ece0e
 ;; Created: 07 Jul 2014
 ;; Version: 20140801.1051
 ;; X-Original-Version: 0.0.1

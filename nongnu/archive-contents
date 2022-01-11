@@ -625,6 +625,15 @@
 	      "Major mode for editing Idris code" tar
 	      ((:url . "https://github.com/idris-hackers/idris-mode")
 	       (:keywords "languages"))])
+ (iedit .
+	[(0 9 9 9)
+	 nil "Edit multiple regions in the same way simultaneously." tar
+	 ((:url . "https://github.com/victorhge/iedit")
+	  (:keywords "occurrence" "region" "simultaneous" "refactoring")
+	  (:maintainer "Victor Ren" . "victorhge@gmail.com")
+	  (:authors
+	   ("Victor Ren" . "victorhge@gmail.com"))
+	  (:commit . "abcc27a9f07a7f855b0a8314f18640fd5cd7a0b6"))])
  (inf-clojure .
 	      [(3 1 0)
 	       ((emacs
@@ -1234,6 +1243,18 @@
 		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
 		(:authors
 		 ("Jonas Bernoulli" . "jonas@bernoul.li")))])
+ (with-simulated-input .
+		       [(3 0)
+			((emacs
+			  (24 4)))
+			"A macro to simulate user input non-interactively" tar
+			((:url . "https://github.com/DarwinAwardWinner/with-simulated-input")
+			 (:keywords "lisp" "tools" "extensions")
+			 (:maintainer "Ryan C Thompson" . "rct@thompsonclan.org")
+			 (:authors
+			  ("Ryan C. Thompson" . "rct@thompsonclan.org")
+			  ("Nikita Bloshchanevich" . "nikblos@outlook.com"))
+			 (:commit . "07bdfbe9ab9eab4a04ad02e98b011649a4f4e6a2"))])
  (ws-butler .
 	    [(0 6)
 	     nil "Unobtrusively remove trailing whitespace." tar

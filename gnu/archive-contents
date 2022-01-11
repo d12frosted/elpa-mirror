@@ -829,12 +829,13 @@
 	   ("Noah Friedman" . "friedman@splode.com"))
 	  (:maintainer "Noah Friedman" . "friedman@splode.com"))])
  (eldoc-eval .
-	     [(0 1)
-	      nil "Enable eldoc support when minibuffer is in use." single
-	      ((:url . "http://elpa.gnu.org/packages/eldoc-eval.html")
+	     [(0 2)
+	      nil "Enable eldoc support when minibuffer is in use." tar
+	      ((:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	       (:authors
-		("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
-	       (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))])
+		("Thierry Volpiatto" . "thievol@posteo.net"))
+	       (:url . "https://elpa.gnu.org/packages/eldoc-eval.html")
+	       (:commit . "e91800503c90cb75dc70abe42f1d6ae499346cc1"))])
  (electric-spacing .
 		   [(5 0)
 		    nil "Insert operators with surrounding spaces smartly" single
@@ -2338,13 +2339,14 @@
 	      ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	     (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (rt-liberation .
-		[(2 4)
+		[(3)
 		 nil "Emacs interface to RT" tar
 		 ((:url . "http://www.nongnu.org/rtliber/")
 		  (:keywords "rt" "tickets")
 		  (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
 		  (:authors
-		   ("Yoni Rabkin" . "yrk@gnu.org")))])
+		   ("Yoni Rabkin" . "yrk@gnu.org"))
+		  (:commit . "d9342c68c3fd28d8a13738e2ac32a34f31f2debd"))])
  (rudel .
 	[(0 3 2)
 	 ((emacs
