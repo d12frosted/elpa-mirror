@@ -4,6 +4,8 @@
 
 ;; Author: Hauke Rehfeld <emacs@haukerehfeld.de>
 ;; Version: 0.1
+;; Package-Version: 20211020.1822
+;; Package-Commit: 78acd1f16fb99b66a6c9bd605a988c3c74280577
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: convenience
 ;; URL: https://github.com/hrehfeld/emacs-smart-hungry-delete

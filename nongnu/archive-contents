@@ -656,14 +656,15 @@
 	      ((:url . "https://github.com/JuliaEditorSupport/julia-emacs")
 	       (:keywords "languages"))])
  (keycast .
-	  [(1 1 2)
+	  [(1 1 3)
 	   ((emacs
 	     (25 3)))
 	   "Show current command and its key in the mode line" tar
 	   ((:url . "https://github.com/tarsius/keycast")
 	    (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
 	    (:authors
-	     ("Jonas Bernoulli" . "jonas@bernoul.li")))])
+	     ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	    (:commit . "b4965ff5db0e913e58c906c228042921b22335a0"))])
  (lua-mode .
 	   [(20210802)
 	    ((emacs

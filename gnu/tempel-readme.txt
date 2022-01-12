@@ -1,0 +1,249 @@
+		 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+		  TEMPEL - SIMPLE TEMPLATES FOR EMACS
+		 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Table of Contents
+─────────────────
+
+1. Introduction
+2. Quick start
+3. Template file format
+4. Template syntax
+5. Adding template sources
+6. Binding important to a key
+7. Contributions
+
+
+
+
+
+1 Introduction
+══════════════
+
+  Tempel is a tiny template package for Emacs, which uses the syntax of
+  the Emacs Tempo library. Tempo is an ancient temple of the church of
+  Emacs. It is 27 years old, but still in good shape since it
+  successfully resisted change over the decades. However it may look a
+  bit dusty here and there. Therefore I present to you, Tempel, a
+  modernized implementation of Tempo, in the form of three commands:
+
+  ⁃ `tempel-complete' completes a template name at point in the buffer
+    and subsequently expands the template. If called non-interactively
+    the function behaves like a Capf and can be added to
+    `completion-at-point-functions'.
+  ⁃ `tempel-expand' expands an exactly matching template name at point
+    in the buffer.  If called non-interactively the function behaves
+    like a Capf and can be added to `completion-at-point-functions'.
+  ⁃ `tempel-insert' selects a template by name and insert it into the
+    current buffer.
+
+  For the completion at point commands `tempel-complete' and
+  `tempel-expand', you may want to give my [Corfu] completion at point
+  popup UI a try. After inserting the template you can move between the
+  visible template fields with the keys `M-{', `M-}' or `C-up/down'
+  which are normally bound to `forward/backward-paragraph'. Tempel
+  temporarily remaps these commands to `tempel-next' and
+  `tempel-previous'. The key bindings are defined in the `tempel-map'
+  keymap. You can customize them there. As soon as you move before
+  (behind) the first (last) field, the fields are finalized.
+
+  Tempel can hook into the abbrev mechanism of Emacs by enabling the
+  `tempel-abbrev-mode' in a buffer or by enabling the
+  `tempel-global-abbrev-mode'. Then the Tempel templates will be
+  available via `expand-abbrev' which is usually bound to `C-x ''.
+
+  Note that this package is not a competitor to the mature and widely
+  used YASnippet library. Try Tempel only if you like small and simple
+  packages. With Tempel you write your templates in Lisp syntax, which
+  from my perspective fits well to the hackable nature of Emacs. Tempel
+  took inspiration from the [Tempo-Snippets] package by Nikolaj
+  Schumacher ([GitHub link]).
+
+
+[Corfu] <https://github.com/minad/corfu>
+
+[Tempo-Snippets] <https://nschum.de/src/emacs/tempo-snippets/>
+
+[GitHub link] <https://github.com/nschum/tempo-snippets.el>
+
+
+2 Quick start
+═════════════
+
+  As of 2022-01-05 the package is not yet available in a package
+  repository and has to be installed manually with
+  `package-install-file'.
+
+  ┌────
+  │ ;; Bind the Tempel commands
+  │ (use-package tempel
+  │   :bind (("M-+" . tempel-complete) ;; Alternative tempel-expand
+  │ 	 ("M-*" . tempel-insert))
+  │   :init
+  │ 
+  │   ;; Setup completion at point
+  │   (defun tempel-setup-capf ()
+  │     ;; Add the Tempel Capf to `completion-at-point-functions'.
+  │     ;; The depth is set to -1, such that `tempel-expand' is tried *before* the
+  │     ;; programming mode Capf. If a template name can be completed it takes
+  │     ;; precedence over the programming mode completion. `tempel-expand' only
+  │     ;; triggers on exact matches. Alternatively use `tempel-complete' if you
+  │     ;; want to see all matches, but then Tempel will probably trigger too
+  │     ;; often when you don't expect it.
+  │     (add-hook 'completion-at-point-functions #'tempel-expand -1 'local))
+  │   (add-hook 'prog-mode-hook 'tempel-setup-capf)
+  │   (add-hook 'text-mode-hook 'tempel-setup-capf)
+  │ 
+  │   ;; Optionally make the Tempel templates available to Abbrev,
+  │   ;; either locally or globally. `expand-abbrev' is bound to C-x '.
+  │   ;; (add-hook 'prog-mode-hook #'tempel-abbrev-mode)
+  │   ;; (tempel-global-abbrev-mode)
+  │ )
+  │ 
+  │ ;; Optional: Use the Corfu completion UI
+  │ (use-package corfu
+  │   :init
+  │   (corfu-global-mode))
+  └────
+
+
+3 Template file format
+══════════════════════
+
+  The templates are defined in a Lisp file `templates' which is stored
+  by default in the `user-emacs-directory'
+  (`~/.config/emacs/templates'). The templates are written as Lisp
+  expressions in the concise form of the Emacs Tempo syntax. The first
+  element of the list is the name of the template. Behind the name, the
+  Tempo syntax elements follow.
+
+  ┌────
+  │ ;; -*- mode: lisp -*-
+  │ 
+  │ fundamental-mode ;; Available everywhere
+  │ 
+  │ (today (format-time-string "%Y-%m-%d"))
+  │ 
+  │ latex-mode
+  │ 
+  │ (begin "\\begin{" (s env) "}" > n> r> "\\end{" (s env) "}" > n)
+  │ (enumerate "\\begin{enumerate}\n\\item " r> n> "\\end{enumerate}" > n)
+  │ (itemize "\\begin{itemize}\n\\item " r> n> "\\end{itemize}" > n)
+  │ 
+  │ emacs-lisp-mode
+  │ 
+  │ (lambda "(lambda (" p ")" n> r> ")")
+  │ (var "(defvar " p "\n  \"" p "\")" n n)
+  │ (const "(defconst " p "\n  \"" p "\")" n n)
+  │ (custom "(defcustom " p "\n  \"" p "\"" n> ":type '" p ")" n n)
+  │ (face "(defface " p " '((t :inherit font-lock-" p "-face))\n  \"" p "\")" n n)
+  │ (group "(defgroup " p " nil\n  \"" p "\"" n> ":group '" p n> ":prefix \"" p "-\")" n n)
+  │ (macro "(defmacro " p " (" p ")\n  \"" p "\"" n> r> ")" n n)
+  │ (fun "(defun " p " (" p ")\n  \"" p "\"" n> r> ")" n n)
+  │ (let "(let (" p ")" n> r> ")")
+  │ (star "(let* (" p ")" n> r> ")")
+  │ (rec "(letrec (" p ")" n> r> ")")
+  │ (command "(defun " p " (" p ")\n  \"" p "\"" n> "(interactive)" n> r> ")" n n)
+  │ 
+  │ text-mode
+  │ 
+  │ (cut "--8<---------------cut here---------------start------------->8---" n r n
+  │      "--8<---------------cut here---------------end--------------->8---" n)
+  │ (asciibox "+-" (make-string (length str) ?-) "-+" n
+  │ 	  "| " (s str)                       " |" n
+  │ 	  "+-" (make-string (length str) ?-) "-+" n)
+  │ 
+  │ rst-mode
+  │ 
+  │ (title (make-string (length title) ?=) n (p "Title: " title) n (make-string (length title) ?=) n)
+  │ 
+  │ org-mode
+  │ 
+  │ (title "#+title: " p n "#+author: Daniel Mendler" n "#+language: en" n n)
+  └────
+
+
+4 Template syntax
+═════════════════
+
+  All the Tempo syntax elements are fully supported. The syntax elements
+  are described in detail in `tempo-define-template' are supported. We
+  document the important ones here:
+
+  • "string" Inserts a string literal.
+  • `p' Inserts an unnamed placeholder field.
+  • `n' Inserts a newline.
+  • `>' Indents with `indent-according-to-mode'.
+  • `r' Inserts the current region.
+  • `r>' The region, but indented.
+  • `n>' Inserts a newline and indents.
+  • `&' Insert newline if there is only whitespace between line start
+    and point.
+  • `%' Insert newline if there is only whitespace between point and
+    line end.
+  • `o' Like `%' but leaves the point before newline.
+  • `(s NAME)' Inserts a named field.
+  • `(p PROMPT <NAME> <NONINS>)' Insert an optionally named field with a
+    prompt.  The `PROMPT' is displayed directly in the buffer as default
+    value. If `NOINSERT' is non-nil, no field is inserted. Then the
+    minibuffer is used for prompting and the value is bound to `NAME'.
+  • `(r PROMPT <NAME> <NOINSERT>)' Insert region or act like `(p ...)'.
+  • `(r> PROMPT <NAME> <NOINSERT>)' Act like `(r ...)', but indent
+    region.
+
+  Furthermore Tempel supports syntax extensions:
+
+  • `(p FORM <NAME> <NONINS>)' Like `p' described above, but `FORM' is
+    evaluated.
+  • `(FORM ...)' Other Lisp forms are evaluated. Named fields are
+    lexically bound.
+
+  Use caution with templates which execute arbitrary code!
+
+
+5 Adding template sources
+═════════════════════════
+
+  Tempel offers a flexible mechanism for providing the templates which
+  are applicable to the current context. The variable
+  `tempel-template-sources' specifies a list of sources or a single
+  source. A source can either be a function, which should return a list
+  of applicable templates, or a variable name symbol of a variable which
+  holds a list of templates, which apply to the current context. By
+  default Tempel install the sources `tempel--file-templates' and the
+  variable `tempel-local-templates'.
+
+
+6 Binding important to a key
+════════════════════════════
+
+  Important kemplates can be bound to a key with the small utility macro
+  `tempel-key' which accepts three arguments, a key, a template or name
+  and optionally a map.
+
+  ┌────
+  │ (tempel-key "C-c t f" fun emacs-lisp-mode-map)
+  │ (tempel-key "C-c t d" (format-time-string "%Y-%m-%d"))
+  └────
+
+  Internally `tempel-key' uses `tempel-insert' to trigger the
+  insertion. Depending on the style of your user configuration you may
+  want to write your own helper macros, which allow you to conveniently
+  bind templates via [use-package], [general] or similar keybinding
+  packages.
+
+
+[use-package] <https://github.com/jwiegley/use-package>
+
+[general] <https://github.com/noctuid/general>
+
+
+7 Contributions
+═══════════════
+
+  Since this package is part of [GNU ELPA] contributions require a
+  copyright assignment to the FSF.
+
+
+[GNU ELPA] <http://elpa.gnu.org/packages/marginalia.html>
