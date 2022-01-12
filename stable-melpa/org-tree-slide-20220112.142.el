@@ -4,8 +4,8 @@
 ;;
 ;; Author: Takaaki ISHIKAWA <takaxp at ieee dot org>
 ;; Version: 2.8.18
-;; Package-Version: 20211213.1254
-;; Package-Commit: 917612a0d1593de533b7bf0a2792d7e37bb2ca3d
+;; Package-Version: 20220112.142
+;; Package-Commit: 3faa042393ebfe5699a3bffce775f039d7416ceb
 ;; Package-Requires: ((emacs "24.4"))
 ;; Maintainer: Takaaki ISHIKAWA <takaxp at ieee dot org>
 ;; Twitter: @takaxp
@@ -798,16 +798,12 @@ Some number of BLANK-LINES will be shown below the header."
       (overlay-put org-tree-slide--header-overlay 'display
                    (concat (if org-tree-slide-title org-tree-slide-title
                              (buffer-name))
-
-                           ;; Use one line for date and author (but only if either of those is set)
-                           (when (or org-tree-slide-date org-tree-slide-author org-tree-slide-email)
-                             "\n"
-                             org-tree-slide-date "  "
-                             (when org-tree-slide-author
-                               (concat org-tree-slide-author "  "))
-                             (when org-tree-slide-email
-                               (concat "<" org-tree-slide-email ">")))
-
+                           "\n"
+                           org-tree-slide-date "  "
+                           (when org-tree-slide-author
+                             (concat org-tree-slide-author "  "))
+                           (when org-tree-slide-email
+                             (concat "<" org-tree-slide-email ">"))
                            (when org-tree-slide-breadcrumbs
                              (concat "\n" (org-tree-slide--get-parents
                                            org-tree-slide-breadcrumbs)))

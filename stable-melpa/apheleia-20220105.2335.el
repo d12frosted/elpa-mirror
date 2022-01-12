@@ -7,7 +7,7 @@
 ;; Homepage: https://github.com/raxod502/apheleia
 ;; Keywords: tools
 ;; Package-Version: 20220105.2335
-;; Package-Commit: 53f243b111b18f49d910d1501b5795a1ec045420
+;; Package-Commit: e95769bf348cd348ef361cd212b72232196809ba
 ;; Package-Requires: ((emacs "25.2"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 1.2

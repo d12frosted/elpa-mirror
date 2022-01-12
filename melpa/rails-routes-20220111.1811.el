@@ -5,7 +5,7 @@
 ;; Author: Otávio Schwanck <otavioschwanck@gmail.com>
 ;; Keywords: tools languages
 ;; Package-Version: 20220111.1811
-;; Package-Commit: 50daf1d06dbd6a1e262757b5da844d7246dd2b0b
+;; Package-Commit: 9df7e0499e093463267d210f14e96cb7f2263387
 ;; Homepage: https://github.com/otavioschwanck/rails-routes
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "27.2") (inflections "1.1") (projectile "2.5.0"))

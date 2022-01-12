@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.7
-;; Package-Version: 20220111.305
-;; Package-Commit: 2c0f262c240222e42e3ec914307b9690354bb3a3
+;; Package-Version: 20220112.728
+;; Package-Commit: dade5a148712463a15b7ac65f779e25596a3eefc
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -353,7 +353,7 @@ This can be useful when using docker to run a language server.")
                              :sortText :filterText :insertText :insertTextFormat
                              :textEdit :additionalTextEdits :commitCharacters
                              :command :data))
-      (Diagnostic (:range :message) (:severity :code :source :relatedInformation))
+      (Diagnostic (:range :message) (:severity :code :source :relatedInformation :codeDescription))
       (DocumentHighlight (:range) (:kind))
       (FileSystemWatcher (:globPattern) (:kind))
       (Hover (:contents) (:range))
@@ -691,7 +691,11 @@ treated as in `eglot-dbind'."
              :formatting         `(:dynamicRegistration :json-false)
              :rangeFormatting    `(:dynamicRegistration :json-false)
              :rename             `(:dynamicRegistration :json-false)
-             :publishDiagnostics `(:relatedInformation :json-false))
+             :publishDiagnostics (list :relatedInformation :json-false
+                                       ;; TODO: We can support :codeDescription after
+                                       ;; adding an appropriate UI to
+                                       ;; Flymake.
+                                       :codeDescriptionSupport :json-false))
             :experimental eglot--{})))
 
 (defclass eglot-lsp-server (jsonrpc-process-connection)
