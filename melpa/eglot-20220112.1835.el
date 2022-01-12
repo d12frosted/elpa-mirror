@@ -2,9 +2,9 @@
 
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
-;; Version: 1.7
-;; Package-Version: 20220112.728
-;; Package-Commit: dade5a148712463a15b7ac65f779e25596a3eefc
+;; Version: 1.8
+;; Package-Version: 20220112.1835
+;; Package-Commit: 132ea08f97f94ad2e050fc8d1628ecb41de7229a
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
