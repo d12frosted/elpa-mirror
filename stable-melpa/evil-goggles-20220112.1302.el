@@ -4,10 +4,10 @@
 
 ;; Author: edkolev <evgenysw@gmail.com>
 ;; URL: http://github.com/edkolev/evil-goggles
-;; Package-Version: 20200101.1935
-;; Package-Commit: 08a22058fd6a167f9f1b684c649008caef571459
+;; Package-Version: 20220112.1302
+;; Package-Commit: 1b66053ea5f06b08a52bebdd42bffd8eff82032b
 ;; Package-Requires: ((emacs "24.4") (evil "1.0.0"))
-;; Version: 0.0.1
+;; Version: 0.0.2
 ;; Keywords: emulations, evil, vim, visual
 
 ;; This file is NOT part of GNU Emacs.

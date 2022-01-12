@@ -6,8 +6,8 @@
 ;; Author: Alex Kost <alezost@gmail.com>
 ;;         Vitus Schäfftlein <vitusschaefftlein@live.de>
 ;; Version: 0.2
-;; Package-Version: 20211204.825
-;; Package-Commit: bffbc409d277e78ffc4005834d5cbaee19b89bbb
+;; Package-Version: 20220112.1252
+;; Package-Commit: 004876f72d13de637e3332362f46ed07ae7422c0
 ;; Package-Requires: ((emacs "24.3") (org-ref "3.0") (bibtex-completion "1.0.0"))
 ;; URL: https://github.com/alezost/org-ref-prettify.el
 ;; Keywords: convenience
@@ -120,8 +120,8 @@ will not be displayed in the prettified citations.")
 (defun org-ref-prettify-postfix-to-page (postfix)
   "Return formatted page string if POSTFIX contains only page number."
   (when (string-match
-         ;; (rx string-start (* space) (? "pg" (+ space)) (group (+ (any digit "-"))) (* space) string-end)
-         "\\`[[:space:]]*\\(?:pg[[:space:]]+\\)?\\([[:digit:]-]+\\)[[:space:]]*\\'"
+         ;; (rx string-start (* space) (? "pg" (? ".") (+ space)) (group (+ (any digit "-"))) (* space) string-end)
+         "\\`[[:space:]]*\\(?:pg\\.?[[:space:]]+\\)?\\([[:digit:]-]+\\)[[:space:]]*\\'"
          postfix)
     (let ((page (match-string-no-properties 1 postfix)))
       (concat (if (cdr (split-string page "-"))
@@ -153,7 +153,14 @@ PRE and POST are what taken from the citation before and after &key."
             (concat author
                     (and year (concat ", " year))
                     (and page (concat ", " page)))))))
-    (concat pre (if page str (concat str post)))))
+    (concat pre
+            (if (or page (null post))
+                str
+              (concat str
+                      ;; Add leading space to POST if it does not have it.
+                      (if (string-match-p "\\` " post)
+                          post
+                        (concat " " post)))))))
 
 (defun org-ref-prettify-get-entry-fields (entry)
   "Return (AUTHOR YEAR TITLE) list for the citation ENTRY."
@@ -201,6 +208,8 @@ KEY may be a single key or a list of keys."
         (let* ((cite-data (org-ref-parse-cite-path
                            (org-element-property :path link)))
                (refs (plist-get cite-data :references))
+               (prefix (plist-get cite-data :prefix))
+               (suffix (plist-get cite-data :suffix))
                (keys (mapcar (lambda (ref)
                                (plist-get ref :key))
                              refs))
@@ -211,8 +220,8 @@ KEY may be a single key or a list of keys."
                    (cl-multiple-value-bind (author year title)
                        fields
                      (when (or author year title)
-                       (let ((pre (plist-get ref :prefix))
-                             (post (plist-get ref :suffix)))
+                       (let ((pre (or (plist-get ref :prefix) prefix))
+                             (post (or (plist-get ref :suffix) suffix)))
                          (funcall org-ref-prettify-format-function
                                   :type type
                                   :author author
