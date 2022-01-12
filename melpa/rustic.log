@@ -4,10 +4,10 @@ Source:  https://github.com/brotzeit/rustic.git
 
 Updating /mnt/store/melpa/working/rustic/
 Checking out origin/HEAD
-Checking out 2602da32fcecb4107dbfc375f8aace9b4f5de6c7
+Checking out 168ecaf60425fce5ecf4ca0cd65b17180321510c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rustic/
-  to /tmp/rustic5Up98p/rustic-20220110.2040
+  to /tmp/rusticOZhNgW/rustic-20220112.900
     rustic-babel.el -> rustic-babel.el
     rustic-cargo.el -> rustic-cargo.el
     rustic-clippy.el -> rustic-clippy.el
@@ -22,26 +22,28 @@ Copying files (->) and directories (=>)
     rustic-rustfix.el -> rustic-rustfix.el
     rustic-rustfmt.el -> rustic-rustfmt.el
     rustic.el -> rustic.el
-Created rustic-20220110.2040.tar containing:
-  rustic-20220110.2040/
-  rustic-20220110.2040/rustic-babel.el
-  rustic-20220110.2040/rustic-cargo.el
-  rustic-20220110.2040/rustic-clippy.el
-  rustic-20220110.2040/rustic-compile.el
-  rustic-20220110.2040/rustic-doc.el
-  rustic-20220110.2040/rustic-flycheck.el
-  rustic-20220110.2040/rustic-interaction.el
-  rustic-20220110.2040/rustic-lsp.el
-  rustic-20220110.2040/rustic-pkg.el
-  rustic-20220110.2040/rustic-playpen.el
-  rustic-20220110.2040/rustic-popup.el
-  rustic-20220110.2040/rustic-racer.el
-  rustic-20220110.2040/rustic-rustfix.el
-  rustic-20220110.2040/rustic-rustfmt.el
-  rustic-20220110.2040/rustic.el
-Built rustic in 4.668s, finished at 2022-01-12T05:32:33+0000
+Created rustic-20220112.900.tar containing:
+  rustic-20220112.900/
+  rustic-20220112.900/rustic-babel.el
+  rustic-20220112.900/rustic-cargo.el
+  rustic-20220112.900/rustic-clippy.el
+  rustic-20220112.900/rustic-compile.el
+  rustic-20220112.900/rustic-doc.el
+  rustic-20220112.900/rustic-flycheck.el
+  rustic-20220112.900/rustic-interaction.el
+  rustic-20220112.900/rustic-lsp.el
+  rustic-20220112.900/rustic-pkg.el
+  rustic-20220112.900/rustic-playpen.el
+  rustic-20220112.900/rustic-popup.el
+  rustic-20220112.900/rustic-racer.el
+  rustic-20220112.900/rustic-rustfix.el
+  rustic-20220112.900/rustic-rustfmt.el
+  rustic-20220112.900/rustic.el
+Built rustic in 4.410s, finished at 2022-01-12T11:27:19+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  478 Jan 12 05:32 packages/rustic-20220110.2040.entry
-172K -rw-r--r-- 1 root root 170K Jan 12 05:32 packages/rustic-20220110.2040.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 05:32 packages/rustic-badge.svg
-4.0K -rw-r--r-- 1 root root  427 Jan 12 05:32 packages/rustic-readme.txt
+4.0K -rw-r--r-- 1 root root  478 Jan 12 08:31 packages/rustic-20220110.2040.entry
+172K -rw-r--r-- 1 root root 170K Jan 12 08:31 packages/rustic-20220110.2040.tar
+4.0K -rw-r--r-- 1 root root  477 Jan 12 11:27 packages/rustic-20220112.900.entry
+172K -rw-r--r-- 1 root root 170K Jan 12 11:27 packages/rustic-20220112.900.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 11:27 packages/rustic-badge.svg
+4.0K -rw-r--r-- 1 root root  427 Jan 12 11:27 packages/rustic-readme.txt

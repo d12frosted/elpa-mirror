@@ -204,11 +204,6 @@ Table of Contents
   │ ;; 开启代码搜索中文功能（比如拼音，五笔码等）
   │ (pyim-isearch-mode 1)
   │ 
-  │ ;; 设置选词框的绘制方式
-  │ (if (posframe-workable-p)
-  │     (setq pyim-page-tooltip 'posframe)
-  │   (setq pyim-page-tooltip 'popup))
-  │ 
   │ ;; 显示5个候选词。
   │ (setq pyim-page-length 5)
   │ 
@@ -311,6 +306,10 @@ Table of Contents
      │ (setq pyim-page-tooltip 'posframe)
      └────
      注意：pyim 不会自动安装 posframe, 用户需要手动安装这个包，
+  3. 按照优先顺序自动选择一个可用的 tooltip
+     ┌────
+     │ (setq pyim-page-tooltip '(posframe popup minibuffer))
+     └────
 
 
 9.6 调整 tooltip 选词框的显示样式

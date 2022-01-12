@@ -11,10 +11,11 @@ other occurrences changed in the same way, with visual feedback as you type.
 
 Normal work flow of Iedit mode is like:
 
- - Move to certain point and press C-; (The default key binding).  All
-   occurrences of a symbol, string or a region in the buffer are highlighted
-   corresponding to the thing under the point, current mark and prefix argument.
-   Refer to the document of `iedit-mode' for details.
+ - Move point to a target by `isearch' or other moving commands
+
+ - Press C-;(The default key binding) to enable Iedit mode. The thing under
+   the point is recognized as an occurrence, and all the occurrences in the
+   buffer are highlighted
 
  - Edit one of the occurrences
    The change is applied to other occurrences simultaneously.
@@ -22,7 +23,7 @@ Normal work flow of Iedit mode is like:
  - Finish - by pressing C-; again
 
 Many other work flows to highlight occurrences are possible, for example,
-activation from isearch, incremental selection and markup tag pair selection.
+rectangle selection, incremental selection and markup tag pair selection.
 
 You can also use Iedit mode as a quick way to temporarily show only the
 buffer lines that match the current text being edited.  This gives you the

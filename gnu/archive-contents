@@ -1877,6 +1877,17 @@
 	       ("Michael Heerdegen" . "michael_heerdegen@web.de"))
 	      (:maintainer "Michael Heerdegen" . "michael_heerdegen@web.de")
 	      (:url . "https://github.com/michael-heerdegen/on-screen.el"))])
+ (orderless .
+	    [(0 7)
+	     ((emacs
+	       (26 1)))
+	     "Completion style for matching regexps in any order" tar
+	     ((:url . "https://github.com/oantolin/orderless")
+	      (:keywords "extensions")
+	      (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
+	      (:authors
+	       ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
+	      (:commit . "92008e762b30cb445a2227e458cbb9a5e1b1d4e8"))])
  (org .
       [(9 5 2)
        ((emacs
@@ -2095,7 +2106,7 @@
 	       ("Scott Andrew Borton" . "scott@pp.htv.fi"))
 	      (:maintainer "John Darrington" . "john@darrington.wattle.id.au"))])
  (pyim .
-       [(4 0 3)
+       [(4 1 0)
 	((emacs
 	  (25 1))
 	 (async
@@ -2108,7 +2119,8 @@
 	 (:maintainer "Feng Shu" . "tumashu@163.com")
 	 (:authors
 	  ("Ye Wenbin" . "wenbinye@163.com")
-	  ("Feng Shu" . "tumashu@163.com")))])
+	  ("Feng Shu" . "tumashu@163.com"))
+	 (:commit . "75ead11eeaaf801e342bb18d7c0ff93ed1c123ff"))])
  (pyim-basedict .
 		[(0 5 0)
 		 nil "The default pinyin dict of pyim" tar
@@ -2911,7 +2923,7 @@
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de")))])
  (vertico-posframe .
-		   [(0 5 0)
+		   [(0 5 1)
 		    ((emacs
 		      (26 0))
 		     (posframe
@@ -2924,7 +2936,7 @@
 		     (:maintainer "Feng Shu" . "tumashu@163.com")
 		     (:authors
 		      ("Feng Shu" . "tumashu@163.com"))
-		     (:commit . "37e749842d6efe227387b045c4bedc94863175ad"))])
+		     (:commit . "7a75271fdaf593e6f491a953b511d2540553b532"))])
  (vigenere .
 	   [(1 0)
 	    ((emacs
