@@ -82,7 +82,7 @@ Suggested (not part of Emacs):
 2) I recommend defining a global keybinding for function `diredc',
    with a preference for Shift-F11, as follows:
 
-     (global-set-key (kbd "S-<f11>") 'diredc))
+     (global-set-key (kbd "S-<f11>") 'diredc)
 
    An alternative or additional option would be:
 
