@@ -3,3 +3,49 @@ Fetcher: github
 Source:  https://github.com/emacs-lsp/lsp-metals.git
 
 Updating /mnt/store/melpa/working/lsp-metals/
+Checking out origin/HEAD
+Checking out 743db8df15375ff9270424951d2dcc3a7e8e7a0b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/lsp-metals/
+  to /tmp/lsp-metalscB8jYG/lsp-metals-20220107.1434
+    lsp-metals-protocol.el -> lsp-metals-protocol.el
+    lsp-metals-treeview.el -> lsp-metals-treeview.el
+    lsp-metals.el -> lsp-metals.el
+    icons => icons
+Created lsp-metals-20220107.1434.tar containing:
+  lsp-metals-20220107.1434/
+  lsp-metals-20220107.1434/icons/
+  lsp-metals-20220107.1434/icons/book-dark.png
+  lsp-metals-20220107.1434/icons/book-light.png
+  lsp-metals-20220107.1434/icons/bug-dark.png
+  lsp-metals-20220107.1434/icons/bug-light.png
+  lsp-metals-20220107.1434/icons/class.png
+  lsp-metals-20220107.1434/icons/discord-dark.png
+  lsp-metals-20220107.1434/icons/discord-light.png
+  lsp-metals-20220107.1434/icons/enum.png
+  lsp-metals-20220107.1434/icons/field.png
+  lsp-metals-20220107.1434/icons/github-dark.png
+  lsp-metals-20220107.1434/icons/github-light.png
+  lsp-metals-20220107.1434/icons/gitter-dark.png
+  lsp-metals-20220107.1434/icons/gitter-light.png
+  lsp-metals-20220107.1434/icons/interface.png
+  lsp-metals-20220107.1434/icons/issue-opened-dark.png
+  lsp-metals-20220107.1434/icons/issue-opened-light.png
+  lsp-metals-20220107.1434/icons/logo.png
+  lsp-metals-20220107.1434/icons/method.png
+  lsp-metals-20220107.1434/icons/object.png
+  lsp-metals-20220107.1434/icons/trait.png
+  lsp-metals-20220107.1434/icons/twitter-dark.png
+  lsp-metals-20220107.1434/icons/twitter-light.png
+  lsp-metals-20220107.1434/icons/val.png
+  lsp-metals-20220107.1434/icons/var.png
+  lsp-metals-20220107.1434/lsp-metals-pkg.el
+  lsp-metals-20220107.1434/lsp-metals-protocol.el
+  lsp-metals-20220107.1434/lsp-metals-treeview.el
+  lsp-metals-20220107.1434/lsp-metals.el
+Built lsp-metals in 4.457s, finished at 2022-01-12T22:59:30+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  701 Jan 12 22:59 packages/lsp-metals-20220107.1434.entry
+120K -rw-r--r-- 1 root root 120K Jan 12 22:59 packages/lsp-metals-20220107.1434.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 22:59 packages/lsp-metals-badge.svg
+4.0K -rw-r--r-- 1 root root   18 Jan 12 22:59 packages/lsp-metals-readme.txt

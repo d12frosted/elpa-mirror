@@ -264,6 +264,19 @@
 		  (:maintainer "Dewdrops" . "v_v_4474@126.com")
 		  (:authors
 		   ("Dewdrops" . "v_v_4474@126.com")))])
+ (evil-goggles .
+	       [(0 0 2)
+		((emacs
+		  (24 4))
+		 (evil
+		  (1 0 0)))
+		"Add a visual hint to evil operations" tar
+		((:url . "http://github.com/edkolev/evil-goggles")
+		 (:keywords "emulations" "evil" "vim" "visual")
+		 (:maintainer "edkolev" . "evgenysw@gmail.com")
+		 (:authors
+		  ("edkolev" . "evgenysw@gmail.com"))
+		 (:commit . "7801d9204cd57d5aec11ef43b15357a431cf025c"))])
  (evil-indent-plus .
 		   [(1 0 1)
 		    ((evil

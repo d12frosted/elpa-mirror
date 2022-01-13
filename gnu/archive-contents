@@ -785,7 +785,7 @@
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com")))])
  (eglot .
-	[(1 7)
+	[(1 8)
 	 ((emacs
 	   (26 1))
 	  (jsonrpc
@@ -800,10 +800,11 @@
 	   (1 11 0)))
 	 "Client for Language Server Protocol (LSP) servers" tar
 	 ((:url . "https://github.com/joaotavora/eglot")
+	  (:keywords "convenience" "languages")
 	  (:maintainer "João Távora" . "joaotavora@gmail.com")
 	  (:authors
 	   ("João Távora" . "joaotavora@gmail.com"))
-	  (:keywords "convenience" "languages"))])
+	  (:commit . "132ea08f97f94ad2e050fc8d1628ecb41de7229a"))])
  (el-search .
 	    [(1 12 6 1)
 	     ((emacs

@@ -13,4 +13,9 @@ Per default `vunit-run-script' assumes "run.py", but this
 is also user configurable.  For a full list of available
 configurations run "M-x customize" and search for vunit.
 
+Keys highlighted in blue will execute the specified action and
+quit the vunit-mode command window.
+The ones marked in red, however, will add additional flags
+to the actions available in blue.
+
 The default keybinding to invoke vunit-mode is "C-x x".
