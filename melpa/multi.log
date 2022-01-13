@@ -5,43 +5,43 @@ Source:  https://github.com/kurisuwhyte/emacs-multi.git
 Updating /mnt/store/melpa/working/multi/
 Checking out origin/HEAD
 Checking out 0987ab71692717ed457cb3984de184db9185806d
-Built multi in 5.481s, finished at 2022-01-12T23:03:07+0000
+Built multi in 4.866s, finished at 2022-01-13T01:59:10+0000
  ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.9K Jan 12 23:03 packages/multi-20131013.1544.el
-4.0K -rw-r--r-- 1 root root  405 Jan 12 23:03 packages/multi-20131013.1544.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 23:03 packages/multi-badge.svg
+8.0K -rw-r--r-- 1 root root 4.9K Jan 13 01:59 packages/multi-20131013.1544.el
+4.0K -rw-r--r-- 1 root root  405 Jan 13 01:59 packages/multi-20131013.1544.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 13 01:59 packages/multi-badge.svg
  16K -rw-r--r-- 1 root root  15K Jan 12 23:03 packages/multi-compile-20211113.2119.el
 4.0K -rw-r--r-- 1 root root  415 Jan 12 23:03 packages/multi-compile-20211113.2119.entry
 4.0K -rw-r--r-- 1 root root 1.2K Jan 12 23:03 packages/multi-compile-badge.svg
 4.0K -rw-r--r-- 1 root root 1.7K Jan 12 23:03 packages/multi-compile-readme.txt
-4.0K -rw-r--r-- 1 root root  643 Jan 12 23:03 packages/multi-compile.log
-4.0K -rw-r--r-- 1 root root  578 Jan 12 20:06 packages/multi-line-20220112.1744.entry
- 52K -rw-r--r-- 1 root root  50K Jan 12 20:06 packages/multi-line-20220112.1744.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 20:06 packages/multi-line-badge.svg
-4.0K -rw-r--r-- 1 root root  325 Jan 12 20:06 packages/multi-line-readme.txt
-4.0K -rw-r--r-- 1 root root  217 Jan 12 23:03 packages/multi-line.log
- 52K -rw-r--r-- 1 root root  50K Jan 12 20:06 packages/multi-project-20211230.2223.el
-4.0K -rw-r--r-- 1 root root  430 Jan 12 20:06 packages/multi-project-20211230.2223.entry
+4.0K -rw-r--r-- 1 root root  173 Jan 13 01:59 packages/multi-compile.log
+4.0K -rw-r--r-- 1 root root  578 Jan 12 23:03 packages/multi-line-20220112.1744.entry
+ 52K -rw-r--r-- 1 root root  50K Jan 12 23:03 packages/multi-line-20220112.1744.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 23:03 packages/multi-line-badge.svg
+4.0K -rw-r--r-- 1 root root  325 Jan 12 23:03 packages/multi-line-readme.txt
+4.0K -rw-r--r-- 1 root root  138 Jan 13 01:59 packages/multi-line.log
+ 52K -rw-r--r-- 1 root root  50K Jan 12 23:03 packages/multi-project-20211230.2223.el
+4.0K -rw-r--r-- 1 root root  430 Jan 12 23:03 packages/multi-project-20211230.2223.entry
 4.0K -rw-r--r-- 1 root root 1.2K Jan 10 15:14 packages/multi-project-badge.svg
-4.0K -rw-r--r-- 1 root root 2.8K Jan 12 20:06 packages/multi-project-readme.txt
-4.0K -rw-r--r-- 1 root root  147 Jan 12 23:03 packages/multi-project.log
-4.0K -rw-r--r-- 1 root root  403 Jan 12 20:06 packages/multi-run-20210108.336.entry
- 32K -rw-r--r-- 1 root root  30K Jan 12 20:06 packages/multi-run-20210108.336.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 20:06 packages/multi-run-badge.svg
-4.0K -rw-r--r-- 1 root root   73 Jan 12 20:06 packages/multi-run-readme.txt
-4.0K -rw-r--r-- 1 root root  157 Jan 12 23:03 packages/multi-run.log
- 36K -rw-r--r-- 1 root root  33K Jan 12 20:06 packages/multi-term-20200514.428.el
-4.0K -rw-r--r-- 1 root root  430 Jan 12 20:06 packages/multi-term-20200514.428.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 20:06 packages/multi-term-badge.svg
-4.0K -rw-r--r-- 1 root root 1.7K Jan 12 20:06 packages/multi-term-readme.txt
-   0 -rw-r--r-- 1 root root    0 Jan 12 23:03 packages/multi-term.log
- 12K -rw-r--r-- 1 root root  11K Jan 12 20:06 packages/multi-vterm-20210727.1050.el
-4.0K -rw-r--r-- 1 root root  338 Jan 12 20:06 packages/multi-vterm-20210727.1050.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 20:06 packages/multi-vterm-badge.svg
-4.0K -rw-r--r-- 1 root root  844 Jan 12 20:06 packages/multi-vterm-readme.txt
-   0 -rw-r--r-- 1 root root    0 Jan 12 23:03 packages/multi-vterm.log
-4.0K -rw-r--r-- 1 root root  382 Jan 12 20:06 packages/multi-web-mode-20130824.354.entry
- 20K -rw-r--r-- 1 root root  20K Jan 12 20:06 packages/multi-web-mode-20130824.354.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 12 20:06 packages/multi-web-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  292 Jan 12 20:06 packages/multi-web-mode-readme.txt
-   0 -rw-r--r-- 1 root root    0 Jan 12 23:03 packages/multi-web-mode.log
+4.0K -rw-r--r-- 1 root root 2.8K Jan 12 23:03 packages/multi-project-readme.txt
+4.0K -rw-r--r-- 1 root root   98 Jan 13 01:59 packages/multi-project.log
+4.0K -rw-r--r-- 1 root root  403 Jan 12 23:03 packages/multi-run-20210108.336.entry
+ 32K -rw-r--r-- 1 root root  30K Jan 12 23:03 packages/multi-run-20210108.336.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 23:03 packages/multi-run-badge.svg
+4.0K -rw-r--r-- 1 root root   73 Jan 12 23:03 packages/multi-run-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jan 13 01:59 packages/multi-run.log
+ 36K -rw-r--r-- 1 root root  33K Jan 12 23:03 packages/multi-term-20200514.428.el
+4.0K -rw-r--r-- 1 root root  430 Jan 12 23:03 packages/multi-term-20200514.428.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 23:03 packages/multi-term-badge.svg
+4.0K -rw-r--r-- 1 root root 1.7K Jan 12 23:03 packages/multi-term-readme.txt
+   0 -rw-r--r-- 1 root root    0 Jan 13 01:59 packages/multi-term.log
+ 12K -rw-r--r-- 1 root root  11K Jan 12 23:03 packages/multi-vterm-20210727.1050.el
+4.0K -rw-r--r-- 1 root root  338 Jan 12 23:03 packages/multi-vterm-20210727.1050.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 23:03 packages/multi-vterm-badge.svg
+4.0K -rw-r--r-- 1 root root  844 Jan 12 23:03 packages/multi-vterm-readme.txt
+4.0K -rw-r--r-- 1 root root  624 Jan 12 23:03 packages/multi-vterm.log
+4.0K -rw-r--r-- 1 root root  382 Jan 12 23:03 packages/multi-web-mode-20130824.354.entry
+ 20K -rw-r--r-- 1 root root  20K Jan 12 23:03 packages/multi-web-mode-20130824.354.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 12 23:03 packages/multi-web-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  292 Jan 12 23:03 packages/multi-web-mode-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Jan 12 23:03 packages/multi-web-mode.log
