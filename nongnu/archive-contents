@@ -429,7 +429,7 @@
 		   ("András Simonyi" . "andras.simonyi@gmail.com"))
 		  (:keywords "languages" "gauche" "scheme" "geiser"))])
  (geiser-guile .
-	       [(0 21)
+	       [(0 21 1)
 		((emacs
 		  (25 1))
 		 (geiser
@@ -440,7 +440,7 @@
 		 (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 		 (:authors
 		  ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-		 (:commit . "60e1b0e40cdf87586f9be2bef195cd24d36a2a77"))])
+		 (:commit . "de2260883726d23eb964050797fdcf48655f0dc4"))])
  (geiser-kawa .
 	      [(0 0 1)
 	       ((emacs
