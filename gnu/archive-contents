@@ -1425,15 +1425,16 @@
 	       ("Simen Heggestøyl" . "simenheg@gmail.com"))
 	      (:maintainer "Simen Heggestøyl" . "simenheg@gmail.com"))])
  (jsonrpc .
-	  [(1 0 14)
+	  [(1 0 15)
 	   ((emacs
 	     (25 2)))
-	   "JSON-RPC library" single
-	   ((:url . "http://elpa.gnu.org/packages/jsonrpc.html")
-	    (:keywords "processes" "languages" "extensions")
+	   "JSON-RPC library" tar
+	   ((:keywords "processes" "languages" "extensions")
+	    (:maintainer "João Távora" . "joaotavora@gmail.com")
 	    (:authors
 	     ("João Távora" . "joaotavora@gmail.com"))
-	    (:maintainer "João Távora" . "joaotavora@gmail.com"))])
+	    (:url . "https://elpa.gnu.org/packages/jsonrpc.html")
+	    (:commit . "50654cf0b1bf6210fc8f46d8e7ae13bbeeccecb5"))])
  (jumpc .
 	[(3 0)
 	 nil "jump to previous insertion points" single

@@ -890,6 +890,20 @@
 		  (:maintainer "D. Williams" . "d.williams@posteo.net")
 		  (:authors
 		   ("D. Williams" . "d.williams@posteo.net")))])
+ (orgit .
+	[(1 7 2)
+	 ((emacs
+	   (25 1))
+	  (magit
+	   (3 0))
+	  (org
+	   (9 4)))
+	 "support for Org links to Magit buffers" tar
+	 ((:url . "https://github.com/magit/orgit")
+	  (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	  (:authors
+	   ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	  (:commit . "66367d6bfc5e00726fb74f7cd20c32175ab8521b"))])
  (pacmacs .
 	  [(0 1)
 	   ((emacs
