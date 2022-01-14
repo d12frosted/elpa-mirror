@@ -1,13 +1,13 @@
 ;;; bazel.el --- Bazel support for Emacs -*- lexical-binding: t; -*-
 
 ;; URL: https://github.com/bazelbuild/emacs-bazel-mode
-;; Package-Version: 20220112.2050
-;; Package-Commit: e6e63777ab416a3eb28907fb27dc06b55c63172c
+;; Package-Version: 20220114.1320
+;; Package-Commit: 57a28859258bc83f2cca62b8530221d228119655
 ;; Keywords: build tools, languages
 ;; Package-Requires: ((emacs "26.1"))
 ;; Version: 0
 
-;; Copyright (C) 2018-2021 Google LLC
+;; Copyright (C) 2018-2022 Google LLC
 ;; Licensed under the Apache License, Version 2.0 (the "License");
 ;; you may not use this file except in compliance with the License.
 ;; You may obtain a copy of the License at
@@ -2213,6 +2213,8 @@ completion to test targets.  This is a helper function for
   (cl-check-type root string)
   (cl-check-type package string)
   (cl-check-type string string)
+  ;; The cases below shouldn’t rebind the PACKAGE or ROOT parameters due to
+  ;; Bug#53071.
   (pcase string
     ;; The following patterns should cover all potential target patterns from
     ;; https://docs.bazel.build/versions/4.0.0/guide.html#specifying-targets-to-build
@@ -2269,25 +2271,25 @@ completion to test targets.  This is a helper function for
     ((rx bos
          ;; Can’t use ‘(? … (let …))’ due to Bug#44532.
          (opt ?@ (let workspace (+ (not (any ?: ?/))))) "//"
-         (let package (+ (not (any ?:)))) ?/
+         (let pkg (+ (not (any ?:)))) ?/
          eos)
      ;; A full package name followed by a slash must be followed by a package
      ;; name or wildcard.
      (bazel--completion-table-with-prefix string
-       (bazel--target-package-completion-table root (or workspace "") package
+       (bazel--target-package-completion-table root (or workspace "") pkg
                                                pattern)))
     ((rx bos
          (let prefix
            ;; Can’t use ‘(? … (let …))’ due to Bug#44532.
            (opt ?@ (let workspace (* (not (any ?: ?/))))) "//"
-           (let package (* (not (any ?:))))
+           (let pkg (* (not (any ?:))))
            ?:)
          (* (not (any ?:)))
          eos)
      ;; Absolute target label prefix, including the colon.  Must complete to a
      ;; target label.
      (bazel--completion-table-with-prefix prefix
-       (bazel--target-completion-table-2 root (or workspace "") package pattern
+       (bazel--target-completion-table-2 root (or workspace "") pkg pattern
                                          only-tests nil)))
     ((rx bos
          ;; Can’t use ‘(? … (let …))’ due to Bug#44532.
@@ -2320,11 +2322,11 @@ completion to test targets.  This is a helper function for
      ;; Target pattern in a subpackage of the current package.  Must be
      ;; followed by a target name or wildcard.
      (when pattern
-       (let ((package (if (string-empty-p package)
-                          subpackage
-                        (concat package "/" subpackage))))
+       (let ((pkg (if (string-empty-p package)
+                      subpackage
+                    (concat package "/" subpackage))))
          (bazel--completion-table-with-prefix prefix
-           (bazel--target-completion-table-2 root "" package pattern
+           (bazel--target-completion-table-2 root "" pkg pattern
                                              only-tests nil)))))
     ((rx bos (+ (not (any ?:))) eos)
      ;; Something else, could be either a target or a subpackage of the current
