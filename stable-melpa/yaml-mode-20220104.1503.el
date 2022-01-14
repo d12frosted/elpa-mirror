@@ -7,7 +7,7 @@
 ;; Maintainer: Vasilij Schneidermann <mail@vasilij.de>
 ;; URL: https://github.com/yoshiki/yaml-mode
 ;; Package-Version: 20220104.1503
-;; Package-Commit: a79d2a7b9281f8c56f461d717b1ba40fc58e22fd
+;; Package-Commit: 535273d5a1eb76999d20afbcf4d9f056d8ffd2da
 ;; Package-Requires: ((emacs "24.1"))
 ;; Keywords: data yaml
 ;; Version: 0.0.15
