@@ -7,8 +7,8 @@
 ;;      Siavash Askari Nasr <siavash.askari.nasr@gmail.com>
 ;; Maintainer: Siavash Askari Nasr <siavash.askari.nasr@gmail.com>
 ;; Version: 0.1
-;; Package-Version: 20210524.656
-;; Package-Commit: c8a2b76c4972c1e00648def5a9b59a2942bd462a
+;; Package-Version: 20220115.602
+;; Package-Commit: cacc22942ca5dffdfc3d16cf88576ce0bd9e3a68
 ;; Package-Requires: ((emacs "27.1") (persp-mode "2.9"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 ;; Keywords: vc, persp-mode, perspective, project, project.el
@@ -54,7 +54,15 @@
 ;;             (lambda ()
 ;;                 (persp-mode-project-bridge-mode 1))
 ;;             t))
-
+;; 
+;; With use-package:
+;; (use-package persp-mode-project-bridge
+;;   :hook
+;;   (persp-mode-project-bridge-mode . (lambda ()
+;;                                       (if persp-mode-project-bridge-mode
+;;                                           (persp-mode-project-bridge-find-perspectives-for-all-buffers)
+;;                                         (persp-mode-project-bridge-kill-perspectives))))
+;;   (persp-mode . persp-mode-project-bridge-mode))
 
 ;;; Code:
 

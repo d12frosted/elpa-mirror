@@ -4,6 +4,8 @@
 ;;
 ;; Author: Svend Sorensen <svend@ciffer.net>
 ;; Keywords: convenience
+;; Package-Version: 20151118.1739
+;; Package-Commit: bcad0bda3a67f55d1be936bf8fa9ef735fe1e3f3
 ;; X-URL: http://github.com/svend/ibuffer-tramp
 ;; URL: http://github.com/svend/ibuffer-tramp
 ;; Version: DEV
