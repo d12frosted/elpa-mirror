@@ -6,8 +6,8 @@
 ;; Homepage: https://github.com/tarsius/moody
 
 ;; Package-Requires: ((emacs "25.3"))
-;; Package-Version: 20220103.1539
-;; Package-Commit: 6e0ee218788ec5b2d9e1d765ee4cf6a3deec25b6
+;; Package-Version: 20220115.1428
+;; Package-Commit: 90503f872b42670d4dbe62ce033042cac7062aa4
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -93,8 +93,9 @@
 ;;; Options
 
 (defcustom moody-mode-line-height
-  (let ((font (face-font 'mode-line)))
-    (if font (* 2 (aref (font-info font) 2)) 30))
+  (and (fboundp 'font-info)
+       (let ((font (face-font 'mode-line)))
+         (if font (* 2 (aref (font-info font) 2)) 30)))
   "When using `moody', height of the mode line in pixels.
 
 This should be an even number or nil to leave this unspecified,

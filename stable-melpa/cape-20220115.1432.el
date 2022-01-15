@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2021
 ;; Version: 0.5
-;; Package-Version: 20220114.1050
-;; Package-Commit: 9db78299616bab3c601ace2bcab205c9fbff8dd0
+;; Package-Version: 20220115.1432
+;; Package-Commit: 45fe322c993aa08cac55a8bcfac3ccc3518ad24d
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 
@@ -894,8 +894,12 @@ If INTERACTIVE is nil the function acts like a capf."
                    (error "Cape company backend async timeout"))
                  (sit-for 0.1 'noredisplay)))
            ;; Remove cape--done introduced by future callback
+           ;; XXX NOTE: For some reason Emacs sometimes converts
+           ;; cape--done to (t . cape--done).
            (setq unread-command-events
-                 (delq 'cape--done unread-command-events)))
+                 (delq 'cape--done
+                       (delete '(t . cape--done)
+                               unread-command-events))))
          res))
       ;; Plain old synchronous return value.
       (res res))))

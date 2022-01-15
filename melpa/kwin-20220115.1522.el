@@ -20,8 +20,8 @@
 
 ;; Author: Simon Hafner
 ;; URL: http://github.com/reactormonk/kwin-minor-mode
-;; Package-Version: 20150308.1812
-;; Package-Commit: d4f8f3593598b71ee596e0a87b2c1d6a912a9566
+;; Package-Version: 20220115.1522
+;; Package-Commit: ec1e794168692c71e5bf89e124981f790b2a726b
 ;; Version: 0.1
 
 
@@ -78,12 +78,12 @@ The following keys are bound in this minor mode:
 
 (defun kwin-send-file (path)
   "Sends the path to KWin, tells it to load the file and connects the stdout and stderr to the inf-kwin buffer."
-  (lexical-let* ((script-id (dbus-call-method :session "org.kde.kwin.Scripting" "/Scripting" "org.kde.kwin.Scripting" "loadScript" path))
+  (lexical-let* ((script-id (dbus-call-method :session "org.kde.KWin" "/Scripting" "org.kde.kwin.Scripting" "loadScript" path))
          (script-path (concat "/" (number-to-string script-id)))
          (dbus-handles nil)             ; TODO: unregister these
          (start-time (current-time)))
     ;; Register the signals for stdout/stderr
-    (flet ((register-output (method handler) (dbus-register-signal :session "org.kde.kwin.Scripting" script-path "org.kde.kwin.Scripting" method handler)))
+    (flet ((register-output (method handler) (dbus-register-signal :session "org.kde.KWin" script-path "org.kde.kwin.Scripting" method handler)))
       (setq dbus-handles (list (register-output "print" (lambda (stdout) (kwin-write-to-output :stdout stdout script-id)))
                                (register-output "printError" (lambda (stderr) (kwin-write-to-output :stderr stderr script-id))))))
 
@@ -92,7 +92,7 @@ The following keys are bound in this minor mode:
     ;; connect isn't captured here, so we don't do cleanup... yet.
     ;; Apparently, the output isn't displayed twice even with the same
     ;; script id reused, so we should be fine.
-    (dbus-call-method-asynchronously :session "org.kde.kwin.Scripting" script-path "org.kde.kwin.Scripting" "run"
+    (dbus-call-method-asynchronously :session "org.kde.KWin" script-path "org.kde.kwin.Scripting" "run"
                                      (lambda (&rest args)
                                        
                                        ;; Only report if the script

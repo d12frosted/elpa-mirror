@@ -4,8 +4,6 @@
 
 ;; Author: Diego Zamboni <diego@zzamboni.org>
 ;; Keywords: literate programming, elvish, shell, languages, processes, tools
-;; Package-Version: 20180427.1900
-;; Package-Commit: 369181ceae1190bf971c71aebf9fc6133bd98c39
 ;; Homepage: https://github.com/zzamboni/ob-elvish
 ;; Version: 0.0.1
 

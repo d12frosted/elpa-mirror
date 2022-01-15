@@ -6,8 +6,8 @@
 ;; Homepage: https://github.com/tarsius/keycast
 
 ;; Package-Requires: ((emacs "25.3"))
-;; Package-Commit: b4965ff5db0e913e58c906c228042921b22335a0
-;; Package-Version: 20220111.1112
+;; Package-Commit: b3c15c3b4564a2b23025e9ee97e7634a6c17b053
+;; Package-Version: 20220115.1538
 ;; Package-X-Original-Version: 1.1.3
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
@@ -106,10 +106,11 @@ with no argument and acts on `selected-window'.
 
 %s `keycast-separator-width' spaces.
 %k The key using the `keycast-key' face and padding.
-%K The key with no styling without any padding.
+%K The key with no styling and without any padding.
 %c The command using the `keycast-command' face.
-%C The command with-no styling.
-%r The times the command was repeated."
+%C The command with no styling.
+%r The times the command was repeated.
+%R The times the command was repeated using the `shadow' face."
   :package-version '(keycast . "1.0.3")
   :group 'keycast
   :type 'integer)
@@ -155,15 +156,16 @@ instead."
                         (const   :tag "Use actual command" t)
                         (symbol  :tag "Substitute command")))))
 
-(defcustom keycast-log-format "%-20K%C\n"
+(defcustom keycast-log-format "%-20K%C%R\n"
   "The format spec used by `keycast-log-mode'.
 
 %s `keycast-separator-width' spaces.
 %k The key using the `keycast-key' face and padding.
-%K The key with no styling without any padding.
+%K The key with no styling and without any padding.
 %c The command using the `keycast-command' face.
-%C The command with-no styling.
-%r The times the command was repeated."
+%C The command with no styling.
+%r The times the command was repeated.
+%R The times the command was repeated using the `shadow' face."
   :package-version '(keycast . "2.0.0")
   :group 'keycast
   :type 'string)
@@ -246,7 +248,10 @@ instead."
                          (let ((pad (max 2 (- 5 (length key)))))
                            (concat (make-string (ceiling pad 2) ?\s) key
                                    (make-string (floor   pad 2) ?\s)))))
-                    (c (format " %s" cmd)))
+                    (c (format " %s" cmd))
+                    (r (if (> keycast--command-repetitions 0)
+                           (format " x%s" (1+ keycast--command-repetitions))
+                         "")))
                 (format-spec
                  format
                  `((?s . ,(make-string keycast-separator-width ?\s))
@@ -254,9 +259,8 @@ instead."
                    (?K . ,key)
                    (?c . ,(propertize c 'face 'keycast-command))
                    (?C . ,c)
-                   (?r . ,(if (> keycast--command-repetitions 0)
-                              (format " x%s" (1+ keycast--command-repetitions))
-                            "")))))))))
+                   (?r . ,r)
+                   (?R . ,(propertize r 'face 'shadow)))))))))
 
 (defun keycast--read-passwd (fn prompt &optional confirm default)
   (let ((keycast--reading-passwd t))
@@ -351,12 +355,18 @@ instead."
           (setq mode-line-format nil)
           (let ((default-frame-alist keycast-log-frame-alist))
             (switch-to-buffer-other-frame (current-buffer)))))
-      (with-current-buffer buf
-        (goto-char (if keycast-log-newest-first (point-min) (point-max)))
-        (let ((inhibit-read-only t))
-          (when-let ((output (keycast--format keycast-log-format)))
-            (insert output)))
-        (goto-char (if keycast-log-newest-first (point-min) (point-max)))))))
+      (when-let ((output (keycast--format keycast-log-format)))
+        (with-current-buffer buf
+          (goto-char (if keycast-log-newest-first (point-min) (point-max)))
+          (let ((inhibit-read-only t))
+            (when (and (> keycast--command-repetitions 0)
+                       (string-match-p "%[rR]" keycast-log-format))
+              (unless keycast-log-newest-first
+                (backward-char))
+              (delete-region (line-beginning-position)
+                             (1+ (line-end-position))))
+            (insert output))
+          (goto-char (if keycast-log-newest-first (point-min) (point-max))))))))
 
 (defun keycast-log-erase-buffer ()
   "Erase the contents of `keycast-log-mode's buffer."

@@ -3,23 +3,11 @@ Fetcher: github
 Source:  https://github.com/purcell/color-theme-sanityinc-solarized.git
 
 Updating /mnt/store/melpa/working/color-theme-sanityinc-solarized/
-Checking out origin/HEAD
-Checking out 7ef39ac9d99bfb699903cfc3623521c0ceec7b86
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/color-theme-sanityinc-solarized/
-  to /tmp/color-theme-sanityinc-solarizedMHPGQR/color-theme-sanityinc-solarized-20200805.603
-    color-theme-sanityinc-solarized.el -> color-theme-sanityinc-solarized.el
-    sanityinc-solarized-dark-theme.el -> sanityinc-solarized-dark-theme.el
-    sanityinc-solarized-light-theme.el -> sanityinc-solarized-light-theme.el
-Created color-theme-sanityinc-solarized-20200805.603.tar containing:
-  color-theme-sanityinc-solarized-20200805.603/
-  color-theme-sanityinc-solarized-20200805.603/color-theme-sanityinc-solarized-pkg.el
-  color-theme-sanityinc-solarized-20200805.603/color-theme-sanityinc-solarized.el
-  color-theme-sanityinc-solarized-20200805.603/sanityinc-solarized-dark-theme.el
-  color-theme-sanityinc-solarized-20200805.603/sanityinc-solarized-light-theme.el
-Built color-theme-sanityinc-solarized in 3.550s, finished at 2022-01-15T09:32:40+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  485 Jan 15 09:32 packages/color-theme-sanityinc-solarized-20200805.603.entry
- 52K -rw-r--r-- 1 root root  50K Jan 15 09:32 packages/color-theme-sanityinc-solarized-20200805.603.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 15 09:32 packages/color-theme-sanityinc-solarized-badge.svg
-4.0K -rw-r--r-- 1 root root  663 Jan 15 09:32 packages/color-theme-sanityinc-solarized-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/purcell/color-theme-sanityinc-solarized.git/': Empty reply from server
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

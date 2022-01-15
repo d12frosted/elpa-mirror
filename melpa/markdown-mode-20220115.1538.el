@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.5-dev
-;; Package-Version: 20220110.1204
-;; Package-Commit: ba8de41d861ea0947f2585429b4ca39917683e35
+;; Package-Version: 20220115.1538
+;; Package-Commit: 1f8dda7465b1a62d0a6b992be83649c234ddc362
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -2972,7 +2972,8 @@ $..$ or `markdown-regex-math-inline-double' for matching $$..$$."
 (defun markdown-match-math-double (last)
   "Match double quoted $$..$$ math from point to LAST."
   (when markdown-enable-math
-    (when (and (char-equal (char-after) ?$)
+    (when (and (< (1+ (point)) (point-max))
+               (char-equal (char-after) ?$)
                (char-equal (char-after (1+ (point))) ?$)
                (not (bolp))
                (not (char-equal (char-before) ?\\))
