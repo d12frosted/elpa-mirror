@@ -4,10 +4,10 @@ Source:  https://git.notmuchmail.org/git/notmuch
 
 Updating /mnt/store/melpa/working/notmuch/
 Checking out origin/HEAD
-Checking out f9d8f9c6bae1a9ea60b41755008b71381464e208
+Checking out c7c422ded29e73f7f6b53e82c40a36c93c041253
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/notmuch/
-  to /tmp/notmuchDyhc3W/notmuch-20220110.1203
+  to /tmp/notmuchEPdvoD/notmuch-20220114.2112
   ! emacs/coolj.el -> coolj.el
   ! emacs/make-deps.el -> make-deps.el
   ! emacs/notmuch-address.el -> notmuch-address.el
@@ -31,60 +31,60 @@ Copying files (->) and directories (=>)
   ! emacs/notmuch.el -> notmuch.el
   ! emacs/rstdoc.el -> rstdoc.el
   ! emacs/notmuch-logo.png -> notmuch-logo.png
-Created notmuch-20220110.1203.tar containing:
-  notmuch-20220110.1203/
-  notmuch-20220110.1203/coolj.el
-  notmuch-20220110.1203/make-deps.el
-  notmuch-20220110.1203/notmuch-address.el
-  notmuch-20220110.1203/notmuch-company.el
-  notmuch-20220110.1203/notmuch-compat.el
-  notmuch-20220110.1203/notmuch-crypto.el
-  notmuch-20220110.1203/notmuch-draft.el
-  notmuch-20220110.1203/notmuch-hello.el
-  notmuch-20220110.1203/notmuch-jump.el
-  notmuch-20220110.1203/notmuch-lib.el
-  notmuch-20220110.1203/notmuch-logo.png
-  notmuch-20220110.1203/notmuch-maildir-fcc.el
-  notmuch-20220110.1203/notmuch-message.el
-  notmuch-20220110.1203/notmuch-mua.el
-  notmuch-20220110.1203/notmuch-parser.el
-  notmuch-20220110.1203/notmuch-pkg.el
-  notmuch-20220110.1203/notmuch-print.el
-  notmuch-20220110.1203/notmuch-query.el
-  notmuch-20220110.1203/notmuch-show.el
-  notmuch-20220110.1203/notmuch-tag.el
-  notmuch-20220110.1203/notmuch-tree.el
-  notmuch-20220110.1203/notmuch-wash.el
-  notmuch-20220110.1203/notmuch.el
-  notmuch-20220110.1203/rstdoc.el
-Built notmuch in 4.819s, finished at 2022-01-14T13:36:29+0000
+Created notmuch-20220114.2112.tar containing:
+  notmuch-20220114.2112/
+  notmuch-20220114.2112/coolj.el
+  notmuch-20220114.2112/make-deps.el
+  notmuch-20220114.2112/notmuch-address.el
+  notmuch-20220114.2112/notmuch-company.el
+  notmuch-20220114.2112/notmuch-compat.el
+  notmuch-20220114.2112/notmuch-crypto.el
+  notmuch-20220114.2112/notmuch-draft.el
+  notmuch-20220114.2112/notmuch-hello.el
+  notmuch-20220114.2112/notmuch-jump.el
+  notmuch-20220114.2112/notmuch-lib.el
+  notmuch-20220114.2112/notmuch-logo.png
+  notmuch-20220114.2112/notmuch-maildir-fcc.el
+  notmuch-20220114.2112/notmuch-message.el
+  notmuch-20220114.2112/notmuch-mua.el
+  notmuch-20220114.2112/notmuch-parser.el
+  notmuch-20220114.2112/notmuch-pkg.el
+  notmuch-20220114.2112/notmuch-print.el
+  notmuch-20220114.2112/notmuch-query.el
+  notmuch-20220114.2112/notmuch-show.el
+  notmuch-20220114.2112/notmuch-tag.el
+  notmuch-20220114.2112/notmuch-tree.el
+  notmuch-20220114.2112/notmuch-wash.el
+  notmuch-20220114.2112/notmuch.el
+  notmuch-20220114.2112/rstdoc.el
+Built notmuch in 4.787s, finished at 2022-01-15T01:18:27+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  169 Jan 14 13:36 packages/notmuch-20220110.1203.entry
-432K -rw-r--r-- 1 root root 430K Jan 14 13:36 packages/notmuch-20220110.1203.tar
-8.0K -rw-r--r-- 1 root root 6.3K Jan 14 13:36 packages/notmuch-addr-20210615.1512.el
-4.0K -rw-r--r-- 1 root root  397 Jan 14 13:36 packages/notmuch-addr-20210615.1512.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 14 13:36 packages/notmuch-addr-badge.svg
-4.0K -rw-r--r-- 1 root root  945 Jan 14 13:36 packages/notmuch-addr-readme.txt
-4.0K -rw-r--r-- 1 root root  623 Jan 14 13:36 packages/notmuch-addr.log
-4.0K -rw-r--r-- 1 root root 1.2K Jan 14 13:36 packages/notmuch-badge.svg
- 16K -rw-r--r-- 1 root root  13K Jan 14 10:40 packages/notmuch-bookmarks-20200322.1925.el
-4.0K -rw-r--r-- 1 root root  487 Jan 14 10:40 packages/notmuch-bookmarks-20200322.1925.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 14 10:40 packages/notmuch-bookmarks-badge.svg
-4.0K -rw-r--r-- 1 root root  611 Jan 14 10:40 packages/notmuch-bookmarks-readme.txt
-4.0K -rw-r--r-- 1 root root  162 Jan 14 13:36 packages/notmuch-bookmarks.log
-4.0K -rw-r--r-- 1 root root  436 Jan 14 10:40 packages/notmuch-labeler-20131230.1719.entry
- 32K -rw-r--r-- 1 root root  30K Jan 14 10:40 packages/notmuch-labeler-20131230.1719.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 14 10:40 packages/notmuch-labeler-badge.svg
-4.0K -rw-r--r-- 1 root root  959 Jan 14 10:40 packages/notmuch-labeler-readme.txt
-4.0K -rw-r--r-- 1 root root  154 Jan 14 13:36 packages/notmuch-labeler.log
-8.0K -rw-r--r-- 1 root root 4.5K Jan 14 10:40 packages/notmuch-maildir-20210615.1513.el
-4.0K -rw-r--r-- 1 root root  401 Jan 14 10:40 packages/notmuch-maildir-20210615.1513.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 14 10:40 packages/notmuch-maildir-badge.svg
-4.0K -rw-r--r-- 1 root root  133 Jan 14 10:40 packages/notmuch-maildir-readme.txt
-4.0K -rw-r--r-- 1 root root  142 Jan 14 13:36 packages/notmuch-maildir.log
-4.0K -rw-r--r-- 1 root root 1.4K Jan 14 13:36 packages/notmuch-readme.txt
- 16K -rw-r--r-- 1 root root  16K Jan 14 10:40 packages/notmuch-transient-20210703.2133.el
-4.0K -rw-r--r-- 1 root root  436 Jan 14 10:40 packages/notmuch-transient-20210703.2133.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 14 10:40 packages/notmuch-transient-badge.svg
-4.0K -rw-r--r-- 1 root root  189 Jan 14 10:40 packages/notmuch-transient-readme.txt
-   0 -rw-r--r-- 1 root root    0 Jan 14 13:36 packages/notmuch-transient.log
+4.0K -rw-r--r-- 1 root root  169 Jan 15 01:18 packages/notmuch-20220114.2112.entry
+432K -rw-r--r-- 1 root root 430K Jan 15 01:18 packages/notmuch-20220114.2112.tar
+8.0K -rw-r--r-- 1 root root 6.3K Jan 15 01:18 packages/notmuch-addr-20210615.1512.el
+4.0K -rw-r--r-- 1 root root  397 Jan 15 01:18 packages/notmuch-addr-20210615.1512.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 15 01:18 packages/notmuch-addr-badge.svg
+4.0K -rw-r--r-- 1 root root  945 Jan 15 01:18 packages/notmuch-addr-readme.txt
+4.0K -rw-r--r-- 1 root root  623 Jan 15 01:18 packages/notmuch-addr.log
+4.0K -rw-r--r-- 1 root root 1.2K Jan 15 01:18 packages/notmuch-badge.svg
+ 16K -rw-r--r-- 1 root root  13K Jan 14 22:23 packages/notmuch-bookmarks-20200322.1925.el
+4.0K -rw-r--r-- 1 root root  487 Jan 14 22:23 packages/notmuch-bookmarks-20200322.1925.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 14 22:23 packages/notmuch-bookmarks-badge.svg
+4.0K -rw-r--r-- 1 root root  611 Jan 14 22:23 packages/notmuch-bookmarks-readme.txt
+4.0K -rw-r--r-- 1 root root  162 Jan 15 01:18 packages/notmuch-bookmarks.log
+4.0K -rw-r--r-- 1 root root  436 Jan 14 22:23 packages/notmuch-labeler-20131230.1719.entry
+ 32K -rw-r--r-- 1 root root  30K Jan 14 22:23 packages/notmuch-labeler-20131230.1719.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 14 22:23 packages/notmuch-labeler-badge.svg
+4.0K -rw-r--r-- 1 root root  959 Jan 14 22:23 packages/notmuch-labeler-readme.txt
+4.0K -rw-r--r-- 1 root root  154 Jan 15 01:18 packages/notmuch-labeler.log
+8.0K -rw-r--r-- 1 root root 4.5K Jan 14 22:23 packages/notmuch-maildir-20210615.1513.el
+4.0K -rw-r--r-- 1 root root  401 Jan 14 22:23 packages/notmuch-maildir-20210615.1513.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 14 22:23 packages/notmuch-maildir-badge.svg
+4.0K -rw-r--r-- 1 root root  133 Jan 14 22:23 packages/notmuch-maildir-readme.txt
+4.0K -rw-r--r-- 1 root root  142 Jan 15 01:18 packages/notmuch-maildir.log
+4.0K -rw-r--r-- 1 root root 1.4K Jan 15 01:18 packages/notmuch-readme.txt
+ 16K -rw-r--r-- 1 root root  16K Jan 14 22:23 packages/notmuch-transient-20210703.2133.el
+4.0K -rw-r--r-- 1 root root  436 Jan 14 22:23 packages/notmuch-transient-20210703.2133.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 14 22:23 packages/notmuch-transient-badge.svg
+4.0K -rw-r--r-- 1 root root  189 Jan 14 22:23 packages/notmuch-transient-readme.txt
+4.0K -rw-r--r-- 1 root root  148 Jan 15 01:18 packages/notmuch-transient.log

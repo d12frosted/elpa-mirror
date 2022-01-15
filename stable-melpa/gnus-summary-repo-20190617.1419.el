@@ -5,7 +5,7 @@
 ;; Author: Giap Tran <txgvnn@gmail.com>
 ;; URL: https://github.com/TxGVNN/gnus-summary-repo
 ;; Package-Version: 20190617.1419
-;; Package-Commit: d0cb218fea13563c1b2bfba3e72716fb860f767c
+;; Package-Commit: 1341b68dfda952a95f5d9b4cb7d427716dafa310
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "25"))
 ;; Keywords: Gnus, Repository

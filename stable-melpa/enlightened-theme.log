@@ -4,7 +4,10 @@ Source:  https://hg.sr.ht/~slondr/enlightened
 
 Updating /mnt/store/melpa/working/enlightened-theme/
 Checking out 1bfebd8f47e8a8357c9e557cf6e95d7027861e6d
-Command '(env LC_ALL=C hg purge)' exited with non-zero status 255: pulling from https://hg.sr.ht/~slondr/enlightened
+
+Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
+
+pulling from https://hg.sr.ht/~slondr/enlightened
 searching for changes
 no changes found
 0 files updated, 0 files merged, 0 files removed, 0 files unresolved
@@ -16,3 +19,4 @@ hg: unknown command 'purge'
 
 (use 'hg help extensions' for information on enabling extensions)
 
+Command exited with non-zero exit-code: 255

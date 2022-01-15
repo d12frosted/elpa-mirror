@@ -4,7 +4,10 @@ Source:  https://hg.osdn.net/view/multi-project/multi-project
 
 Updating /mnt/store/melpa/working/multi-project/
 Checking out 81262345927d30571d2797a8fb8dbd9eeeb6ccf8
-Command '(env LC_ALL=C hg purge)' exited with non-zero status 255: pulling from https://hg.osdn.net/view/multi-project/multi-project
+
+Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
+
+pulling from https://hg.osdn.net/view/multi-project/multi-project
 searching for changes
 no changes found
 0 files updated, 0 files merged, 0 files removed, 0 files unresolved
@@ -16,3 +19,4 @@ hg: unknown command 'purge'
 
 (use 'hg help extensions' for information on enabling extensions)
 
+Command exited with non-zero exit-code: 255

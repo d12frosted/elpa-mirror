@@ -4,7 +4,10 @@ Source:  https://hg.serna.eu/emacs/lms
 
 Updating /mnt/store/melpa/working/lms/
 Checking out 05c8fd16ff94590393b6b0a9cb193ec9572a9c97
-Command '(env LC_ALL=C hg purge)' exited with non-zero status 255: pulling from https://hg.serna.eu/emacs/lms
+
+Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
+
+pulling from https://hg.serna.eu/emacs/lms
 searching for changes
 no changes found
 0 files updated, 0 files merged, 0 files removed, 0 files unresolved
@@ -18,3 +21,4 @@ hg: unknown command 'purge'
 
 (use 'hg help extensions' for information on enabling extensions)
 
+Command exited with non-zero exit-code: 255

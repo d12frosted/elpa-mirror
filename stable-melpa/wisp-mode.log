@@ -4,7 +4,10 @@ Source:  https://hg.sr.ht/~arnebab/wisp
 
 Updating /mnt/store/melpa/working/wisp-mode/
 Checking out c15e50edbfadf6cc46b8ed22a13438ecdb6757ee
-Command '(env LC_ALL=C hg purge)' exited with non-zero status 255: pulling from https://hg.sr.ht/~arnebab/wisp
+
+Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
+
+pulling from https://hg.sr.ht/~arnebab/wisp
 searching for changes
 no changes found
 0 files updated, 0 files merged, 0 files removed, 0 files unresolved
@@ -16,3 +19,4 @@ hg: unknown command 'purge'
 
 (use 'hg help extensions' for information on enabling extensions)
 
+Command exited with non-zero exit-code: 255

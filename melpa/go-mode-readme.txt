@@ -3,8 +3,9 @@ Use of this source code is governed by a BSD-style
 license that can be found in the LICENSE file.
 
 Author: The go-mode Authors
-Version: 1.5.0
+Version: 1.6.0
 Keywords: languages go
+Package-Requires: ((emacs "26.1"))
 URL: https://github.com/dominikh/go-mode.el
 
 This file is not part of GNU Emacs.

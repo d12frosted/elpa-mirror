@@ -4,7 +4,10 @@ Source:  https://hg.sr.ht/~zck/org-parser
 
 Updating /mnt/store/melpa/working/org-parser/
 Checking out fd4cb7035ff649378cc968b1ec2c386b5c565706
-Command '(env LC_ALL=C hg purge)' exited with non-zero status 255: pulling from https://hg.sr.ht/~zck/org-parser
+
+Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
+
+pulling from https://hg.sr.ht/~zck/org-parser
 searching for changes
 no changes found
 0 files updated, 0 files merged, 0 files removed, 0 files unresolved
@@ -16,3 +19,4 @@ hg: unknown command 'purge'
 
 (use 'hg help extensions' for information on enabling extensions)
 
+Command exited with non-zero exit-code: 255

@@ -4,7 +4,7 @@ python-mode.
 
 Features:
 - Works with both python and ipython.
-- Arbitrary command lengths.
+- Accepts arbitrary multi-line command lengths.
 - Auto-detects and handles native continuation prompts.
 - Auto-indents multi-line commands.
 - Replaces buffer-based fontifications with in-buffer python-mode

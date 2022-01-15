@@ -4,10 +4,10 @@ Source:  https://github.com/ocaml/merlin.git
 
 Updating /mnt/store/melpa/working/merlin/
 Checking out origin/HEAD
-Checking out b483ba6567df28358920dd6378529e71a7190bde
+Checking out 181a21085035a9b625021d8a79cb52cbdee7a7a4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/merlin/
-  to /tmp/merlin4Uc7xK/merlin-20210720.950
+  to /tmp/merlinhsQv7U/merlin-20210720.950
   ! emacs/merlin-cap.el -> merlin-cap.el
   ! emacs/merlin-imenu.el -> merlin-imenu.el
   ! emacs/merlin-xref.el -> merlin-xref.el
@@ -19,29 +19,29 @@ Created merlin-20210720.950.tar containing:
   merlin-20210720.950/merlin-pkg.el
   merlin-20210720.950/merlin-xref.el
   merlin-20210720.950/merlin.el
-Built merlin in 7.140s, finished at 2022-01-14T13:33:05+0000
+Built merlin in 5.481s, finished at 2022-01-15T01:15:04+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  373 Jan 14 13:33 packages/merlin-20210720.950.entry
-100K -rw-r--r-- 1 root root 100K Jan 14 13:33 packages/merlin-20210720.950.tar
-8.0K -rw-r--r-- 1 root root 6.1K Jan 14 13:33 packages/merlin-ac-20210615.1208.el
-4.0K -rw-r--r-- 1 root root  572 Jan 14 13:33 packages/merlin-ac-20210615.1208.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 14 10:37 packages/merlin-ac-badge.svg
-4.0K -rw-r--r-- 1 root root  328 Jan 14 13:33 packages/merlin-ac-readme.txt
-4.0K -rw-r--r-- 1 root root  205 Jan 14 13:33 packages/merlin-ac.log
-4.0K -rw-r--r-- 1 root root 1.2K Jan 14 13:33 packages/merlin-badge.svg
-8.0K -rw-r--r-- 1 root root 5.6K Jan 14 10:37 packages/merlin-company-20210615.1208.el
-4.0K -rw-r--r-- 1 root root  538 Jan 14 10:37 packages/merlin-company-20210615.1208.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 14 10:37 packages/merlin-company-badge.svg
-4.0K -rw-r--r-- 1 root root  216 Jan 14 10:37 packages/merlin-company-readme.txt
-4.0K -rw-r--r-- 1 root root  161 Jan 14 13:33 packages/merlin-company.log
- 28K -rw-r--r-- 1 root root  28K Jan 14 10:37 packages/merlin-eldoc-20190830.517.el
-4.0K -rw-r--r-- 1 root root  414 Jan 14 10:37 packages/merlin-eldoc-20190830.517.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 14 10:37 packages/merlin-eldoc-badge.svg
-4.0K -rw-r--r-- 1 root root  252 Jan 14 10:37 packages/merlin-eldoc-readme.txt
-4.0K -rw-r--r-- 1 root root  163 Jan 14 13:33 packages/merlin-eldoc.log
-4.0K -rw-r--r-- 1 root root 2.6K Jan 14 10:37 packages/merlin-iedit-20210615.1208.el
-4.0K -rw-r--r-- 1 root root  523 Jan 14 10:37 packages/merlin-iedit-20210615.1208.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 14 10:37 packages/merlin-iedit-badge.svg
-4.0K -rw-r--r-- 1 root root  141 Jan 14 10:37 packages/merlin-iedit-readme.txt
-4.0K -rw-r--r-- 1 root root  132 Jan 14 13:33 packages/merlin-iedit.log
-4.0K -rw-r--r-- 1 root root  247 Jan 14 13:33 packages/merlin-readme.txt
+4.0K -rw-r--r-- 1 root root  373 Jan 15 01:15 packages/merlin-20210720.950.entry
+100K -rw-r--r-- 1 root root 100K Jan 15 01:15 packages/merlin-20210720.950.tar
+8.0K -rw-r--r-- 1 root root 6.1K Jan 14 22:20 packages/merlin-ac-20210615.1208.el
+4.0K -rw-r--r-- 1 root root  572 Jan 14 22:20 packages/merlin-ac-20210615.1208.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 14 22:20 packages/merlin-ac-badge.svg
+4.0K -rw-r--r-- 1 root root  328 Jan 14 22:20 packages/merlin-ac-readme.txt
+4.0K -rw-r--r-- 1 root root  205 Jan 15 01:15 packages/merlin-ac.log
+4.0K -rw-r--r-- 1 root root 1.2K Jan 15 01:15 packages/merlin-badge.svg
+8.0K -rw-r--r-- 1 root root 5.6K Jan 14 22:20 packages/merlin-company-20210615.1208.el
+4.0K -rw-r--r-- 1 root root  538 Jan 14 22:20 packages/merlin-company-20210615.1208.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 14 22:20 packages/merlin-company-badge.svg
+4.0K -rw-r--r-- 1 root root  216 Jan 14 22:20 packages/merlin-company-readme.txt
+4.0K -rw-r--r-- 1 root root  215 Jan 15 01:15 packages/merlin-company.log
+ 28K -rw-r--r-- 1 root root  28K Jan 15 01:15 packages/merlin-eldoc-20190830.517.el
+4.0K -rw-r--r-- 1 root root  414 Jan 14 22:20 packages/merlin-eldoc-20190830.517.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 14 22:20 packages/merlin-eldoc-badge.svg
+4.0K -rw-r--r-- 1 root root  252 Jan 14 22:20 packages/merlin-eldoc-readme.txt
+4.0K -rw-r--r-- 1 root root  217 Jan 15 01:15 packages/merlin-eldoc.log
+4.0K -rw-r--r-- 1 root root 2.6K Jan 14 22:20 packages/merlin-iedit-20210615.1208.el
+4.0K -rw-r--r-- 1 root root  523 Jan 14 22:20 packages/merlin-iedit-20210615.1208.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 14 22:20 packages/merlin-iedit-badge.svg
+4.0K -rw-r--r-- 1 root root  141 Jan 14 22:20 packages/merlin-iedit-readme.txt
+4.0K -rw-r--r-- 1 root root  132 Jan 15 01:15 packages/merlin-iedit.log
+4.0K -rw-r--r-- 1 root root  247 Jan 15 01:15 packages/merlin-readme.txt

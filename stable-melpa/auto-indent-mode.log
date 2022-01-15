@@ -7,12 +7,15 @@ Checking out origin/HEAD
 Checking out 664006b67329a8e27330541547f8c2187dab947c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/auto-indent-mode/
-  to /tmp/auto-indent-modeZzesEO/auto-indent-mode-20211029.11
+  to /tmp/auto-indent-modeUjSt8s/auto-indent-mode-20211029.11
     auto-indent-mode.el -> auto-indent-mode.el
     dir -> dir
     auto-indent-mode.texi -> auto-indent-mode.texi
-Generating /tmp/auto-indent-modeZzesEO/auto-indent-mode-20211029.11/auto-indent-mode.info
-Error: (error "Command '(env LC_ALL=C makeinfo --no-split /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi -o /tmp/auto-indent-modeZzesEO/auto-indent-mode-20211029.11/auto-indent-mode.info)' exited with non-zero status 1: Fetching origin
+Generating /tmp/auto-indent-modeUjSt8s/auto-indent-mode-20211029.11/auto-indent-mode.info
+
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi -o /tmp/auto-indent-modeUjSt8s/auto-indent-mode-20211029.11/auto-indent-mode.info' exited with non-zero exit-code: 1
+
+Fetching origin
 origin/HEAD set to master
 HEAD is now at 664006b Merge pull request #68 from zw963/master
 HEAD is now at 664006b Merge pull request #68 from zw963/master
@@ -23,28 +26,28 @@ HEAD is now at 664006b Merge pull request #68 from zw963/master
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:193: misplaced }
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:193: warning: @tex should only appear at the beginning of a line
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:195: warning: @tex should only appear at the beginning of a line
-/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:197: superfluous argument to @end tex: \") (goto-char (point-at-eol))))))))
-/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:195: superfluous argument to @end tex: ]+\") (replace-match \"@tex
-@end tex\") (goto-char (point-at-eol))))))))
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:197: superfluous argument to @end tex: ") (goto-char (point-at-eol))))))))
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:195: superfluous argument to @end tex: ]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:193: superfluous argument to @end tex: ][+][ @tex
-@end tex]+\") (replace-match \"@tex
-@end tex\") (goto-char (point-at-eol))))))))
+@end tex]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:191: superfluous argument to @end tex: @tex
 @end tex][+][ @tex
-@end tex]+\") (replace-match \"@tex
-@end tex\") (goto-char (point-at-eol))))))))
-/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:189: superfluous argument to @end tex: ]+\" nil t) (replace-match \"\") (goto-char (point-at-eol)) (while (looking-at \"[ @tex
+@end tex]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:189: superfluous argument to @end tex: ]+" nil t) (replace-match "") (goto-char (point-at-eol)) (while (looking-at "[ @tex
 @end tex@tex
 @end tex][+][ @tex
-@end tex]+\") (replace-match \"@tex
-@end tex\") (goto-char (point-at-eol))))))))
+@end tex]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:187: @emph missing closing brace
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:187: superfluous argument to @end tex: @emph{[>][ @tex
-@end tex]+\" nil t) (replace-match \"\") (goto-char (point-at-eol)) (while (looking-at \"[ @tex
+@end tex]+" nil t) (replace-match "") (goto-char (point-at-eol)) (while (looking-at "[ @tex
 @end tex@tex
 @end tex][+][ @tex
-@end tex]+\") (replace-match \"@tex
-@end tex\") (goto-char (point-at-eol))))))))
+@end tex]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
 }
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:185: @node seen before @footnote closing brace
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:236: raising the section level of @subsubsection which is too low
@@ -52,8 +55,12 @@ HEAD is now at 664006b Merge pull request #68 from zw963/master
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:235: warning: node `Auto-indent and org-mode' is up for `How do I change the auto-indent default offset?' in sectioning but not in menu
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:201: node `Auto-indent and org-mode' lacks menu item for `How do I change the auto-indent default offset?' despite being its Up target
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:247: warning: node `How do I change the auto-indent default offset?' is prev for `Why is auto-indent-mode changing tabs to spaces' in sectioning but not in menu
-")
-Error: (error "Command '(env LC_ALL=C install-info --dir=dir /tmp/auto-indent-modeZzesEO/auto-indent-mode-20211029.11/auto-indent-mode.info)' exited with non-zero status 1: Fetching origin
+
+Error: (error "Command exited with non-zero exit-code: 1")
+
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/auto-indent-modeUjSt8s/auto-indent-mode-20211029.11/auto-indent-mode.info' exited with non-zero exit-code: 1
+
+Fetching origin
 origin/HEAD set to master
 HEAD is now at 664006b Merge pull request #68 from zw963/master
 HEAD is now at 664006b Merge pull request #68 from zw963/master
@@ -64,28 +71,28 @@ HEAD is now at 664006b Merge pull request #68 from zw963/master
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:193: misplaced }
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:193: warning: @tex should only appear at the beginning of a line
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:195: warning: @tex should only appear at the beginning of a line
-/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:197: superfluous argument to @end tex: \") (goto-char (point-at-eol))))))))
-/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:195: superfluous argument to @end tex: ]+\") (replace-match \"@tex
-@end tex\") (goto-char (point-at-eol))))))))
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:197: superfluous argument to @end tex: ") (goto-char (point-at-eol))))))))
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:195: superfluous argument to @end tex: ]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:193: superfluous argument to @end tex: ][+][ @tex
-@end tex]+\") (replace-match \"@tex
-@end tex\") (goto-char (point-at-eol))))))))
+@end tex]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:191: superfluous argument to @end tex: @tex
 @end tex][+][ @tex
-@end tex]+\") (replace-match \"@tex
-@end tex\") (goto-char (point-at-eol))))))))
-/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:189: superfluous argument to @end tex: ]+\" nil t) (replace-match \"\") (goto-char (point-at-eol)) (while (looking-at \"[ @tex
+@end tex]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
+/mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:189: superfluous argument to @end tex: ]+" nil t) (replace-match "") (goto-char (point-at-eol)) (while (looking-at "[ @tex
 @end tex@tex
 @end tex][+][ @tex
-@end tex]+\") (replace-match \"@tex
-@end tex\") (goto-char (point-at-eol))))))))
+@end tex]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:187: @emph missing closing brace
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:187: superfluous argument to @end tex: @emph{[>][ @tex
-@end tex]+\" nil t) (replace-match \"\") (goto-char (point-at-eol)) (while (looking-at \"[ @tex
+@end tex]+" nil t) (replace-match "") (goto-char (point-at-eol)) (while (looking-at "[ @tex
 @end tex@tex
 @end tex][+][ @tex
-@end tex]+\") (replace-match \"@tex
-@end tex\") (goto-char (point-at-eol))))))))
+@end tex]+") (replace-match "@tex
+@end tex") (goto-char (point-at-eol))))))))
 }
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:185: @node seen before @footnote closing brace
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:236: raising the section level of @subsubsection which is too low
@@ -93,16 +100,17 @@ HEAD is now at 664006b Merge pull request #68 from zw963/master
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:235: warning: node `Auto-indent and org-mode' is up for `How do I change the auto-indent default offset?' in sectioning but not in menu
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:201: node `Auto-indent and org-mode' lacks menu item for `How do I change the auto-indent default offset?' despite being its Up target
 /mnt/store/melpa/working/auto-indent-mode/auto-indent-mode.texi:247: warning: node `How do I change the auto-indent default offset?' is prev for `Why is auto-indent-mode changing tabs to spaces' in sectioning but not in menu
-install-info: No such file or directory for /tmp/auto-indent-modeZzesEO/auto-indent-mode-20211029.11/auto-indent-mode.info
-")
+install-info: No such file or directory for /tmp/auto-indent-modeUjSt8s/auto-indent-mode-20211029.11/auto-indent-mode.info
+
+Error: (error "Command exited with non-zero exit-code: 1")
 Created auto-indent-mode-20211029.11.tar containing:
   auto-indent-mode-20211029.11/
   auto-indent-mode-20211029.11/auto-indent-mode-pkg.el
   auto-indent-mode-20211029.11/auto-indent-mode.el
   auto-indent-mode-20211029.11/dir
-Built auto-indent-mode in 10.041s, finished at 2022-01-14T15:53:23+0000
+Built auto-indent-mode in 6.664s, finished at 2022-01-15T03:36:27+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  350 Jan 14 15:53 packages/auto-indent-mode-20211029.11.entry
-120K -rw-r--r-- 1 root root 120K Jan 14 15:53 packages/auto-indent-mode-20211029.11.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 14 15:53 packages/auto-indent-mode-badge.svg
- 12K -rw-r--r-- 1 root root  11K Jan 14 15:53 packages/auto-indent-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  350 Jan 15 03:36 packages/auto-indent-mode-20211029.11.entry
+120K -rw-r--r-- 1 root root 120K Jan 15 03:36 packages/auto-indent-mode-20211029.11.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 15 03:36 packages/auto-indent-mode-badge.svg
+ 12K -rw-r--r-- 1 root root  11K Jan 15 03:36 packages/auto-indent-mode-readme.txt
