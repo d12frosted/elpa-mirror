@@ -4,8 +4,8 @@
 
 ;; Author: Bruce Rannala <brannala@ucdavis.edu>
 ;; URL: https://github.com/brannala/sequed
-;; Package-Version: 20220113.346
-;; Package-Commit: 5b0ce92962ee076f507e06876e9011b275366151
+;; Package-Version: 20220115.743
+;; Package-Commit: c886981c46d199e1522f18c3fc15198ab8c9a02f
 ;; Version: 1.00
 ;; Package-Requires: ((emacs "25.2"))
 ;; License: GNU General Public License Version 3
@@ -461,10 +461,12 @@ Argument ENDPOS Last nucleotide position in alignment to display."
 ;; Get short labels for display on mode line
 (defun sequed-short-labels (labels)
   "Create short LABELS for display in mode line."
-  (let* ((currline 0) seqID)
+  (let* ((currline 0) seqID  smallSize)
+    (setq smallSize (length (nth 1 labels)))
+    (if (> smallSize 11) (setq smallSize 11))
     (setq seqID (make-vector(length labels) "Empty"))
     (while (< currline (length labels))
-      (aset seqID currline (substring (nth currline labels) 1 11))
+      (aset seqID currline (substring (nth currline labels) 1 smallSize))
       (setq currline (+ 1 currline)))
     seqID))
 

@@ -533,13 +533,16 @@
 	     ("Phil Type"))
 	    (:keywords "data" "gnuplot" "plotting"))])
  (go-mode .
-	  [(1 5 0)
-	   nil "Major mode for the Go programming language" tar
+	  [(1 6 0)
+	   ((emacs
+	     (26 1)))
+	   "Major mode for the Go programming language" tar
 	   ((:url . "https://github.com/dominikh/go-mode.el")
+	    (:keywords "languages" "go")
 	    (:maintainer "The go-mode Authors")
 	    (:authors
 	     ("The go-mode Authors"))
-	    (:keywords "languages" "go"))])
+	    (:commit . "3273fcece5d9ab7edd4f15b2d6bce61f4e5a0666"))])
  (gotham-theme .
 	       [(1 1 9)
 		((emacs
