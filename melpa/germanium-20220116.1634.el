@@ -2,8 +2,8 @@
 
 ;; Author: Masaya Watanabe
 ;; Version: 0.1.0
-;; Package-Version: 20220116.842
-;; Package-Commit: 810b1dc1e7c97a9f6496ecef94cf826589ca492d
+;; Package-Version: 20220116.1634
+;; Package-Commit: 54c9a56da1e86941f2580d4838fbb6097f22f349
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/matsuyoshi30/germanium-el
@@ -134,6 +134,7 @@ Output file name is based on FILE-PATH default."
         (mapconcat #'identity
                    (append
                     (list "echo"
+                          "-E"
                           (shell-quote-argument contents)
                           "|"
                           germanium-executable-path

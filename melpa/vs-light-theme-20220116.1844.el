@@ -4,8 +4,8 @@
 
 ;; Author: Jen-Chieh Shen
 ;; URL: https://github.com/emacs-vs/vs-light-theme
-;; Package-Version: 20220112.722
-;; Package-Commit: 2017bac6847c47a564b12139cef45a4a1af8527f
+;; Package-Version: 20220116.1844
+;; Package-Commit: b60bbe05b5085cedcfd135375ccd51cc8d44e879
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -55,6 +55,8 @@
  `(hl-line     ((t :background "#E6E6E6")))
  `(region      ((t :background "#99C9EF")))
  `(fringe      ((t :background "#E6E7E8")))
+
+ `(highlight ((t :background "#E6E6E6")))
 
  `(fill-column-indicator ((t :foreground "#AA4242")))
 
