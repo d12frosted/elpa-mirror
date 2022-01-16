@@ -4,9 +4,9 @@
 
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
-;; Version: 0.7.4
-;; Package-Version: 20220104.1452
-;; Package-Commit: 65e35072d8d38c4882a3f9ff9c88c796ad4ad07d
+;; Version: 0.7.5
+;; Package-Version: 20220116.1511
+;; Package-Commit: 5235d7a02f7b27292906dd7db644139dea33019b
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -97,12 +97,18 @@ Default value holds timers for global Loophole map.")
 By default, local timers are used.
 If editing session is globalized, default value is used.")
 
-(defvar loophole--idle-pripritize-timer nil
+(defvar loophole--idle-prioritize-timer nil
   "Idle timer for prioritize.
 If `loophole-use-idle-prioritize' is set t, idle timer is
 kept in this variable.
 Idle timer prioritizes `loophole-idle-prioritize-list' for
 all local values and default value of `loophole--map-alist'.")
+
+(defvar loophole--idle-save-timer nil
+  "Idle timer for save.
+If `loophole-use-idle-save' is set t, idle timer is kept in
+this variable.
+Idle timer do `loophole-save'.")
 
 (defvar loophole--read-map-variable-help-condition
   '((index . 0) (last))
@@ -218,7 +224,15 @@ Map variables will be prioritized when
 First entry of this list will be placed at the head of
 `loophole--map-alist'."
   :group 'loophole
-  :type 'sexp)
+  :type '(choice (repeat symbol)
+                 (function)))
+
+(defcustom loophole-idle-save-time (* 60 30)
+  "Idle time to run idle save.
+This should be set before `loophole-use-idle-save' to take
+effect."
+  :group 'loophole
+  :type 'number)
 
 (defvar loophole-write-lisp-mode-map
   (let ((map (make-sparse-keymap)))
@@ -573,6 +587,33 @@ Because binding commands including `loophole-set-key' and
 this hook is run with all of them."
   :group 'loophole
   :type 'hook)
+
+(defcustom loophole-default-storage-file
+  (concat user-emacs-directory "loophole-maps")
+  "Default file path to storage Loophole maps.
+`loophole-save' and `loophole-load' use this user option if
+file is not specified by an argument."
+  :group 'loophole
+  :type 'file)
+
+(defcustom loophole-make-load-overwrite-map 'temporary
+  "Flag if `loophole-load' overwrites existing map without prompt.
+If the value is symbol all, any map will be overwritten.
+If the value is symbol temporary, only temporary maps that
+look like loophole-n-map will be overwritten.
+If the value is function, it will be used as predicate that
+takes one argument, each map-variable of loaded Loophole
+maps.
+If the value is non-nil but other than above, normal
+Loophole maps that look like loophole-*-map will be
+overwritten.
+If the value is nil, always ask user to overwrite a map."
+  :group 'loophole
+  :type '(choice (const :tag "Temporary Loophole maps" temporary)
+                 (const :tag "All registered maps" all)
+                 (const nil)
+                 (function :tag "Predicate to filter maps")
+                 (other :tag "Normal Loophole maps" t)))
 
 (defcustom loophole-tag-sign "#"
   "String indicating tag string of Loophole map."
@@ -2088,6 +2129,191 @@ with any prefix argument."
       (setq duplicated-map-variable (loophole-generate)))
     (setcdr (symbol-value duplicated-map-variable)
             (cdr (copy-keymap (symbol-value map-variable))))))
+
+(defun loophole-save (&optional target file)
+  "Save Loophole maps to file storage.
+
+By default, normal Loophole maps that look like
+loophole-*-map will be saved into
+`loophole-default-storage-file'.
+Maps who contain object(s) that has no read syntax, e.g.,
+buffer, window, frame...  will be omitted.
+
+If an optional argument TARGET is non-nil, saving target is
+changed according to the value of TARGET.
+When TARGET is a symbol named,  named Loophole map, i.e.,
+loophole-*-name but not loophole-n-map will be saved.
+When TARGET is a symbol all, all registered maps will be
+saved.
+When TARGET is a function, it will be used as a filter
+function who takes one argument, each map-variable of
+Loophole maps.
+Other than above, falls back on nil.
+
+If an optional argument FILE is non-nil, this function will
+save maps into FILE instead of
+`loophole-default-storage-file'.
+
+When called interactively with a prefix argument, TARGET and
+FILE will be asked."
+  (interactive (list (if current-prefix-arg
+                         (intern
+                          (completing-read "Saving target: " '(named all))))
+                     (if current-prefix-arg
+                         (read-file-name "Loading file: "))))
+  (setq file (or file loophole-default-storage-file))
+  (if (file-writable-p file)
+      (let* ((target-filter
+              (cond ((eq target 'named)
+                     (lambda (map-variable)
+                       (let ((name (symbol-name map-variable)))
+                         (and (string-match "^loophole-.+-map$" name)
+                              (not (string-match "^loophole-[0-9]+-map$"
+                                                 name))))))
+                    ((eq target 'all) (lambda () t))
+                    ((functionp target) target)
+                    (t (lambda (map-variable)
+                         (let ((name (symbol-name map-variable)))
+                           (string-match "^loophole-.+-map$" name))))))
+             (map-variable-list
+              (seq-filter target-filter
+                          (mapcar (lambda (e)
+                                    (get (car e) :loophole-map-variable))
+                                  (default-value 'loophole--map-alist))))
+             (valid-map-variable-list
+              (seq-filter (lambda (map-variable)
+                            (with-temp-buffer
+                              (save-excursion
+                                (prin1 (symbol-value map-variable)
+                                       (current-buffer)))
+                              (condition-case _e
+                                  (progn (read (current-buffer)) t)
+                                (invalid-read-syntax
+                                 (message (concat
+                                           "%s is not saved.  "
+                                           "It contains object(s) "
+                                           "that has no read syntax.")
+                                          map-variable)
+                                 nil))))
+                          map-variable-list))
+             (printed-map-list
+              (mapcar (lambda (map-variable)
+                        `(,map-variable
+                          ,(let ((keymap (copy-keymap
+                                          (symbol-value map-variable))))
+                             (set-keymap-parent keymap nil)
+                             keymap)
+                          :parent ,(let ((keymap (symbol-value map-variable)))
+                                     (if (eq (keymap-parent keymap)
+                                             loophole-base-map)
+                                         'loophole-base-map
+                                       `(quote ,(keymap-parent keymap))))
+                          :documentation ,(get map-variable
+                                               'variable-documentation)
+                          :state-variable ,(get map-variable
+                                                :loophole-state-variable)
+                          :state-variable-documentation
+                          ,(get (get map-variable :loophole-state-variable)
+                                'variable-documentation)
+                          :tag ,(get map-variable :loophole-tag)
+                          :global ,(not (local-variable-if-set-p
+                                         (get map-variable
+                                              :loophole-state-variable)))))
+                      valid-map-variable-list)))
+        (with-temp-file file
+          (prin1 printed-map-list (current-buffer))))
+    (message "File storage is not writable: %s" file)))
+
+(defun loophole-load (&optional target file)
+  "Load Loophole maps from file storage.
+
+By default, normal saved maps that look like
+loophole-*-map will be loaded from
+`loophole-default-storage-file'.
+If read maps from file storage have already been bound or
+registered, this function asks user to overwrite it.
+`loophole-make-load-overwrite-map' specifies maps which will
+be overwritten without asking.
+
+If an optional argument TARGET is non-nil, loading target is
+changed according to the value of TARGET.
+When TARGET is a symbol named,  named Loophole map, i.e.,
+loophole-*-name but not loophole-n-map will be loaded.
+When TARGET is a symbol all, all registered maps will be
+loaded.
+When TARGET is a function, it will be used as a filter
+function who takes one argument, each map-variable of
+saved maps.
+Other than above, falls back on nil.
+
+If an optional argument FILE is non-nil, this function load
+maps from FILE instead of `loophole-default-storage-file'.
+
+When called interactively with a prefix argument, TARGET and
+FILE will be asked."
+  (interactive (list (if current-prefix-arg
+                         (intern
+                          (completing-read "Loading target: " '(named all))))
+                     (if current-prefix-arg
+                         (read-file-name "Loading file: "))))
+  (setq file (or file loophole-default-storage-file))
+  (if (file-readable-p file)
+      (let* ((target-filter
+              (cond ((eq target 'named)
+                     (lambda (map)
+                       (let ((name (symbol-name (car map))))
+                         (and (string-match "^loophole-.+-map$" name)
+                              (not (string-match "^loophole-[0-9]+-map$"
+                                                 name))))))
+                    ((eq target 'all) (lambda () t))
+                    ((functionp target) target)
+                    (t (lambda (map)
+                         (let ((name (symbol-name (car map))))
+                           (string-match "^loophole-.+-map$" name))))))
+             (read-map-list
+              (with-temp-buffer
+                (insert-file-contents file)
+                (read (current-buffer))))
+             (map-list (seq-filter target-filter read-map-list)))
+        (dolist (map (reverse map-list))
+          (let* ((map-variable (car map))
+                 (keymap (cadr map))
+                 (plist (cddr map))
+                 (parent (eval (plist-get plist :parent)))
+                 (documentation (plist-get plist :documentation))
+                 (state-variable (plist-get plist :state-variable))
+                 (state-variable-documentation
+                  (plist-get plist :state-variable-documentation))
+                 (tag (plist-get plist :tag))
+                 (global (plist-get plist :global)))
+            (when (or (and (not (loophole-registered-p map-variable))
+                           (not (boundp map-variable))
+                           (not (boundp state-variable)))
+                      (cond ((eq loophole-make-load-overwrite-map 'all))
+                            ((eq loophole-make-load-overwrite-map 'temporary)
+                             (string-match "^loophole-[0-9]+-map$"
+                                           (symbol-name map-variable)))
+                            ((functionp loophole-make-load-overwrite-map)
+                             (funcall loophole-make-load-overwrite-map
+                                      map-variable))
+                            (loophole-make-load-overwrite-map
+                             (string-match "^loophole-.+-map$"
+                                           (symbol-name map-variable))))
+                      (yes-or-no-p
+                       (format
+                        (concat "%s has already been bound or registered.  "
+                                "Overwrite it? ")
+                        map-variable)))
+              (if (loophole-registered-p map-variable)
+                  (loophole-unregister map-variable))
+              (set map-variable keymap)
+              (put map-variable 'variable-documentation documentation)
+              (set-keymap-parent keymap parent)
+              (set state-variable nil)
+              (put state-variable 'variable-documentation
+                   state-variable-documentation)
+              (loophole-register map-variable state-variable tag global t)))))
+    (message "File storage is not readable: %s" file)))
 
 ;;; Binding utilities
 
@@ -3327,10 +3553,10 @@ Remove hooks added by `loophole-turn-on-auto-editing-timer'."
   "Turn on idle prioritize as user customization.
 Start idle timer for prioritizing Loophole maps according to
 `loophole-idle-prioritize-list'.
-Idle timer is set in `loophole--idle-pripritize-timer'."
-  (if (timerp loophole--idle-pripritize-timer)
-      (cancel-timer loophole--idle-pripritize-timer))
-  (setq loophole--idle-pripritize-timer
+Idle timer is set in `loophole--idle-prioritize-timer'."
+  (if (timerp loophole--idle-prioritize-timer)
+      (cancel-timer loophole--idle-prioritize-timer))
+  (setq loophole--idle-prioritize-timer
         (run-with-idle-timer
          loophole-idle-prioritize-time
          t
@@ -3353,11 +3579,30 @@ Idle timer is set in `loophole--idle-pripritize-timer'."
 
 (defun loophole-turn-off-idle-prioritize ()
   "Turn off idle prioritize as user customization.
-Cancel timer `loophole--idle-pripritize-timer' and set nil
+Cancel timer `loophole--idle-prioritize-timer' and set nil
 to it."
-  (if (timerp loophole--idle-pripritize-timer)
-      (cancel-timer loophole--idle-pripritize-timer))
-  (setq loophole--idle-pripritize-timer nil))
+  (if (timerp loophole--idle-prioritize-timer)
+      (cancel-timer loophole--idle-prioritize-timer))
+  (setq loophole--idle-prioritize-timer nil))
+
+(defun loophole-turn-on-idle-save (&optional target)
+  "Turn on idle save as user customization.
+Start idle timer for saving Loophole maps.
+Idle timer is set in `loophole--idle-save-timer'.
+
+Optional argument TARGET will be passed to `loophole-save'."
+  (if (timerp loophole--idle-save-timer)
+      (cancel-timer loophole--idle-save-timer))
+  (setq loophole--idle-save-timer
+        (run-with-idle-timer loophole-idle-save-time t
+                             #'loophole-save target)))
+
+(defun loophole-turn-off-idle-save ()
+  "Turn off idle save as user customization.
+Cancel timer `loophole--idle-save-timer' and set nil to it."
+  (if (timerp loophole--idle-save-timer)
+      (cancel-timer loophole--idle-save-timer))
+  (setq loophole--idle-save-timer nil))
 
 (defcustom loophole-use-auto-prioritize t
   "Flag if prioritize Loophole map automatically.
@@ -3461,10 +3706,7 @@ Because this option uses :set property, `setq' does not work
 for this variable.  Use `custom-set-variables' or call
 `loophole-turn-on-idle-prioritize' or
 `loophole-turn-off-idle-prioritize' manually.
-They setup idle timer.
-
-For more detailed customization, see documentation string of
-`loophole-turn-on-idle-prioritize'."
+They setup idle timer."
   :group 'loophole
   :type 'boolean
   :set (lambda (symbol value)
@@ -3472,6 +3714,25 @@ For more detailed customization, see documentation string of
          (if value
              (loophole-turn-on-idle-prioritize)
            (loophole-turn-off-idle-prioritize))))
+
+(defcustom loophole-use-idle-save nil
+  "Flag if save Loophole maps when idle.
+
+Because this option uses :set property, `setq' does not work
+for this variable.  Use `custom-set-variables' or call
+`loophole-turn-on-idle-save' or
+`loophole-turn-off-idle-save' manually.
+They setup idle timer.
+
+The value of this user option is passed to `loophole-save'
+through `loophople-turn-on-idle-save'."
+  :group 'loophole
+  :type 'boolean
+  :set (lambda (symbol value)
+         (set-default symbol value)
+         (if value
+             (loophole-turn-on-idle-save value)
+           (loophole-turn-off-idle-save))))
 
 ;;; A macro for defining keymap
 
