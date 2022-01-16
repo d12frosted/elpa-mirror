@@ -494,22 +494,24 @@ Table of Contents
 ─────────────────────────────────────────────────
 
   You can customize what happens after the target is inserted at the
-  minibuffer prompt of an action. There are `embark-setup-action-hooks',
-  that are run by default after injecting the target into the
-  minibuffer. The variable `embark-setup-action-hooks' is an alist
-  associating commands to their setup hooks. There are two special keys:
-  if no setup hook is specified for a given action, the hook associated
-  to `t' is run; and the hook associated to `:always' is run regardless
-  of the action.
+  minibuffer prompt of an action. There are
+  `embark-target-injection-hooks', that are run by default after
+  injecting the target into the minibuffer. The variable
+  `embark-target-injection-hooks' is an alist associating commands to
+  their setup hooks. There are two special keys: if no setup hook is
+  specified for a given action, the hook associated to `t' is run; and
+  the hook associated to `:always' is run regardless of the
+  action. (This variable used to have the less explicit name of
+  `embark-setup-action-hooks', so please update your configuration.)
 
   For example, consider using `shell-command' as an action during file
   completion. It would be useful to insert a space before the target
   file name and to leave the point at the beginning, so you can
   immediately type the shell command to run on that file. That's why in
   Embark's default configuration there is an entry in
-  `embark-setup-action-hooks' associating `shell-command' to a hook that
-  includes `embark--shell-prep', a simple helper function that quotes
-  all the spaces in the file name, inserts an extra space at the
+  `embark-target-injection-hooks' associating `shell-command' to a hook
+  that includes `embark--shell-prep', a simple helper function that
+  quotes all the spaces in the file name, inserts an extra space at the
   beginning of the line and leaves point to the left of it.
 
   Now, the preparation that `embark--shell-prep' does would be useless
@@ -518,15 +520,15 @@ Table of Contents
   accepting the target as is; if Embark did that for `shell-command' you
   wouldn't get a chance to type in the command to execute! That is why
   in Embark's default configuration the entry for `shell-command' in
-  `embark-setup-action-hooks' also contains the function
+  `embark-target-injection-hooks' also contains the function
   `embark--allow-edit'.
 
   Embark used to have a dedicated variable `embark-allow-edit-actions'
   to which you could add commands for which Embark should forgo pressing
   `RET' for you after inserting the target. Since its effect can also be
-  achieved via the general `embark-setup-action-hooks' mechanism, that
-  variable has been removed to simply Embark. Be sure to update your
-  configuration; if you had something like:
+  achieved via the general `embark-target-injection-hooks' mechanism,
+  that variable has been removed to simply Embark. Be sure to update
+  your configuration; if you had something like:
 
   ┌────
   │ (add-to-list 'embark-allow-edit-actions 'my-command)
@@ -536,7 +538,7 @@ Table of Contents
 
   ┌────
   │ (push 'embark--allow-edit
-  │       (alist-get 'my-command embark-setup-action-hooks))
+  │       (alist-get 'my-command embark-target-injection-hooks))
   └────
 
 
@@ -564,10 +566,10 @@ Table of Contents
   Embark has two variables, `embark-pre-action-hooks' and
   `embark-post-action-hooks', which are alists associating commands to
   hooks that should run before or after the command is used as an
-  action. As with, `embark-setup-action-hooks', there are two special
-  keys for the alists: `t' designates the default hook to run when no
-  specific hook is specified for a command; and the hook associated to
-  `:always' runs regardless.
+  action. As with, `embark-target-injection-hooks', there are two
+  special keys for the alists: `t' designates the default hook to run
+  when no specific hook is specified for a command; and the hook
+  associated to `:always' runs regardless.
 
   The default values of those variables are fairly extensive, adding
   creature comforts to make running actions a smooth experience. Embark
@@ -594,6 +596,18 @@ Table of Contents
         so that it works on s-expression targets, or for `fill-region'
         so that it works on paragraph targets.
 
+  `embark--unmark-target'
+        Unmark the active region. Use this for commands you want to act
+        on the region contents but without the region being active. The
+        default configuration uses this function as a pre-action hook
+        for `occur' and `query-replace', for example, so that you can
+        use them as actions with region targets to search the whole
+        buffer for the text contained in the region. Without this
+        pre-action hook using `occur' as an action for a region target
+        would be pointless: it would search for the the region contents
+        /in the region/, (typically, due to the details of regexps)
+        finding only one match!
+
   `embark--beginning-of-target'
         Move to the beginning of the target (for targets that report
         bounds). This is used by default for backward motion commands
@@ -606,6 +620,12 @@ Table of Contents
         s-expression like `eval-last-sexp'. This allow you to act on an
         s-expression from anywhere inside it and still use
         `eval-last-sexp' as an action.
+
+  `embark--narrow-to-target'
+        Narrow buffer to current target. Use this as a pre-action hook
+        to localize the effect of actions that don't already work on
+        just the region. In the default configuration it is used for
+        `repunctuate-sentences'.
 
   `embark--xref-push-markers'
         Push the current location on the xref marker stack. Use this for
@@ -840,13 +860,13 @@ Table of Contents
   immediate minibuffer exit can be disabled for specific actions in
   order to allow editing the input; this is done by adding the
   `embark--allow-edit' function to the appropriate entry of
-  `embark-setup-action-hooks'). Embark inserts the target string at the
-  first minibuffer opened by the action command, and if the command
+  `embark-target-injection-hooks'). Embark inserts the target string at
+  the first minibuffer opened by the action command, and if the command
   happens to prompt the user for input more than once, the user still
   interacts with the second and further prompts in the normal
   fashion. Note that if a command does not prompt the user for input in
   the minibuffer, Embark still allows you to use it as an action, but of
-  course, never inserts the target anywhere.  (There are plenty of
+  course, never inserts the target anywhere. (There are plenty of
   examples in the default configuration of commands that do not prompt
   the user bound to keys in the action maps, most of the region actions,
   for instance.)

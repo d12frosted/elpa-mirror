@@ -596,6 +596,18 @@ Table of Contents
         so that it works on s-expression targets, or for `fill-region'
         so that it works on paragraph targets.
 
+  `embark--unmark-target'
+        Unmark the active region. Use this for commands you want to act
+        on the region contents but without the region being active. The
+        default configuration uses this function as a pre-action hook
+        for `occur' and `query-replace', for example, so that you can
+        use them as actions with region targets to search the whole
+        buffer for the text contained in the region. Without this
+        pre-action hook using `occur' as an action for a region target
+        would be pointless: it would search for the the region contents
+        /in the region/, (typically, due to the details of regexps)
+        finding only one match!
+
   `embark--beginning-of-target'
         Move to the beginning of the target (for targets that report
         bounds). This is used by default for backward motion commands
@@ -608,6 +620,12 @@ Table of Contents
         s-expression like `eval-last-sexp'. This allow you to act on an
         s-expression from anywhere inside it and still use
         `eval-last-sexp' as an action.
+
+  `embark--narrow-to-target'
+        Narrow buffer to current target. Use this as a pre-action hook
+        to localize the effect of actions that don't already work on
+        just the region. In the default configuration it is used for
+        `repunctuate-sentences'.
 
   `embark--xref-push-markers'
         Push the current location on the xref marker stack. Use this for

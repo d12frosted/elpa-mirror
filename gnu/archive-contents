@@ -776,7 +776,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20211226)
+      [(20220115)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -784,7 +784,8 @@
 	(:keywords "lisp" "e-scripts")
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
-	 ("Eduardo Ochs" . "eduardoochs@gmail.com")))])
+	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
+	(:commit . "65bc251809ca9196b3b47ebb4feba4e73c22388a"))])
  (eglot .
 	[(1 8)
 	 ((emacs
@@ -854,7 +855,7 @@
 		      ("Andrea Corallo" . "akrl@sdf.org"))
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html"))])
  (embark .
-	 [(0 14)
+	 [(0 15)
 	  ((emacs
 	    (26 1)))
 	  "Conveniently act on minibuffer completions" tar
@@ -862,9 +863,10 @@
 	   (:keywords "convenience")
 	   (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
 	   (:authors
-	    ("Omar Antolín Camarena" . "omar@matem.unam.mx")))])
+	    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
+	   (:commit . "7814a7345067da31a1e7af682bb1f6f050527001"))])
  (embark-consult .
-		 [(0 3)
+		 [(0 4)
 		  ((emacs
 		    (26 1))
 		   (embark
@@ -876,7 +878,8 @@
 		   (:keywords "convenience")
 		   (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
 		   (:authors
-		    ("Omar Antolín Camarena" . "omar@matem.unam.mx")))])
+		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
+		   (:commit . "7745ad00091bbf3bdf98a2dcdbb20fc9cb05d5c1"))])
  (emms .
        [(8)
 	((cl-lib
