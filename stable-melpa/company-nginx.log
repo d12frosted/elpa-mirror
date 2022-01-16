@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/stardiviner/company-nginx.git
 
 Updating /mnt/store/melpa/working/company-nginx/
-Checking out origin/HEAD
-Checking out 82bdb730ad5971c594d9c99c069f3c7bb067897d
-Built company-nginx in 3.681s, finished at 2022-01-15T15:28:48+0000
- ✓ Success:
- 16K -rw-r--r-- 1 root root  16K Jan 15 15:28 packages/company-nginx-20201020.2038.el
-4.0K -rw-r--r-- 1 root root  313 Jan 15 15:28 packages/company-nginx-20201020.2038.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 15 15:28 packages/company-nginx-badge.svg
-   0 -rw-r--r-- 1 root root    0 Jan 15 15:28 packages/company-nginx-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: could not read Username for 'https://github.com': No such device or address
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

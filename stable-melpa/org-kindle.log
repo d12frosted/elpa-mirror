@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/stardiviner/org-kindle.git
 
 Updating /mnt/store/melpa/working/org-kindle/
-Checking out origin/HEAD
-Checking out fdba34a47b670226f46ad7b3a4db4edc7f7907e7
-Built org-kindle in 4.197s, finished at 2022-01-15T13:07:18+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root 8.7K Jan 15 13:07 packages/org-kindle-20210930.1008.el
-4.0K -rw-r--r-- 1 root root  369 Jan 15 13:07 packages/org-kindle-20210930.1008.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 15 13:07 packages/org-kindle-badge.svg
-4.0K -rw-r--r-- 1 root root  628 Jan 15 13:07 packages/org-kindle-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: could not read Username for 'https://github.com': No such device or address
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

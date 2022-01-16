@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/stardiviner/goldendict.el.git
 
 Updating /mnt/store/melpa/working/goldendict/
-Checking out origin/HEAD
-Checking out 700f60be192f4d46787e7f009637c15567064f2a
-Built goldendict in 7.137s, finished at 2022-01-15T15:45:51+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 2.1K Jan 15 15:45 packages/goldendict-20201108.201.el
-4.0K -rw-r--r-- 1 root root  316 Jan 15 15:45 packages/goldendict-20201108.201.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 15 15:45 packages/goldendict-badge.svg
-4.0K -rw-r--r-- 1 root root  161 Jan 15 15:45 packages/goldendict-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: could not read Username for 'https://github.com': No such device or address
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

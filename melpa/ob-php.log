@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/stardiviner/ob-php.git
 
 Updating /mnt/store/melpa/working/ob-php/
-Checking out origin/HEAD
-Checking out cff022a2aaaf1785e1937e232c31670d748b8c6e
-Built ob-php in 4.279s, finished at 2022-01-15T13:05:39+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root 1.6K Jan 15 13:05 packages/ob-php-20211229.744.el
-4.0K -rw-r--r-- 1 root root  353 Jan 15 13:05 packages/ob-php-20211229.744.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 15 13:05 packages/ob-php-badge.svg
-4.0K -rw-r--r-- 1 root root   37 Jan 15 13:05 packages/ob-php-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: could not read Username for 'https://github.com': No such device or address
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

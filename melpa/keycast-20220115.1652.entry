@@ -1,0 +1,10 @@
+(keycast .
+	 [(20220115 1652)
+	  ((emacs
+	    (25 3)))
+	  "Show current command and its key in the mode line" single
+	  ((:commit . "a345618fd8742df34fa3ed950443474ce6d8dad4")
+	   (:authors
+	    ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	   (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	   (:url . "https://github.com/tarsius/keycast"))])
