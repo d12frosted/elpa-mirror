@@ -4,10 +4,10 @@ Source:  https://github.com/alexluigit/dirvish.git
 
 Updating /mnt/store/melpa/working/dirvish/
 Checking out origin/HEAD
-Checking out 9ab1d7da2d26701da8fe723ea52c9747b5b27e18
+Checking out 32e58955da1f653660b6a9843c42e9a2d43ccfb2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dirvish/
-  to /tmp/dirvish4ZUBLa/dirvish-20220116.902
+  to /tmp/dirvishH7lhDy/dirvish-20220117.1342
     dirvish-advices.el -> dirvish-advices.el
     dirvish-builder.el -> dirvish-builder.el
     dirvish-helpers.el -> dirvish-helpers.el
@@ -16,24 +16,26 @@ Copying files (->) and directories (=>)
     dirvish-structs.el -> dirvish-structs.el
     dirvish-updater.el -> dirvish-updater.el
     dirvish.el -> dirvish.el
-  ! extensions/dirvish-minibuffer-preview.el -> dirvish-minibuffer-preview.el
+  ! extensions/dirvish-peek.el -> dirvish-peek.el
   ! extensions/dirvish-yank.el -> dirvish-yank.el
-Created dirvish-20220116.902.tar containing:
-  dirvish-20220116.902/
-  dirvish-20220116.902/dirvish-advices.el
-  dirvish-20220116.902/dirvish-builder.el
-  dirvish-20220116.902/dirvish-helpers.el
-  dirvish-20220116.902/dirvish-minibuffer-preview.el
-  dirvish-20220116.902/dirvish-options.el
-  dirvish-20220116.902/dirvish-pkg.el
-  dirvish-20220116.902/dirvish-preview.el
-  dirvish-20220116.902/dirvish-structs.el
-  dirvish-20220116.902/dirvish-updater.el
-  dirvish-20220116.902/dirvish-yank.el
-  dirvish-20220116.902/dirvish.el
-Built dirvish in 4.322s, finished at 2022-01-17T11:48:27+0000
+Created dirvish-20220117.1342.tar containing:
+  dirvish-20220117.1342/
+  dirvish-20220117.1342/dirvish-advices.el
+  dirvish-20220117.1342/dirvish-builder.el
+  dirvish-20220117.1342/dirvish-helpers.el
+  dirvish-20220117.1342/dirvish-options.el
+  dirvish-20220117.1342/dirvish-peek.el
+  dirvish-20220117.1342/dirvish-pkg.el
+  dirvish-20220117.1342/dirvish-preview.el
+  dirvish-20220117.1342/dirvish-structs.el
+  dirvish-20220117.1342/dirvish-updater.el
+  dirvish-20220117.1342/dirvish-yank.el
+  dirvish-20220117.1342/dirvish.el
+Built dirvish in 4.563s, finished at 2022-01-17T14:49:10+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  382 Jan 17 11:48 packages/dirvish-20220116.902.entry
  92K -rw-r--r-- 1 root root  90K Jan 17 11:48 packages/dirvish-20220116.902.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 17 11:48 packages/dirvish-badge.svg
-4.0K -rw-r--r-- 1 root root  709 Jan 17 11:48 packages/dirvish-readme.txt
+4.0K -rw-r--r-- 1 root root  383 Jan 17 14:49 packages/dirvish-20220117.1342.entry
+ 92K -rw-r--r-- 1 root root  90K Jan 17 14:49 packages/dirvish-20220117.1342.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 17 14:49 packages/dirvish-badge.svg
+4.0K -rw-r--r-- 1 root root  709 Jan 17 14:49 packages/dirvish-readme.txt
