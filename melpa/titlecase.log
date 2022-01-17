@@ -1,0 +1,23 @@
+Package: titlecase
+Fetcher: github
+Source:  https://github.com/duckwork/titlecase.el.git
+
+Cloning https://github.com/duckwork/titlecase.el.git to /mnt/store/melpa/working/titlecase/
+Checking out origin/HEAD
+Checking out 5c60eeedd259bf137544b5711f767349c2734da1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/titlecase/
+  to /tmp/titlecase3kyr0b/titlecase-20220109.2137
+    titlecase-data.el -> titlecase-data.el
+    titlecase.el -> titlecase.el
+Created titlecase-20220109.2137.tar containing:
+  titlecase-20220109.2137/
+  titlecase-20220109.2137/titlecase-data.el
+  titlecase-20220109.2137/titlecase-pkg.el
+  titlecase-20220109.2137/titlecase.el
+Built titlecase in 4.065s, finished at 2022-01-17T18:35:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  331 Jan 17 18:35 packages/titlecase-20220109.2137.entry
+ 72K -rw-r--r-- 1 root root  70K Jan 17 18:35 packages/titlecase-20220109.2137.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 17 18:35 packages/titlecase-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Jan 17 18:35 packages/titlecase-readme.txt

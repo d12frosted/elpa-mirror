@@ -7,7 +7,7 @@
 ;; Created: 2021
 ;; Version: 0.5
 ;; Package-Version: 20220117.1225
-;; Package-Commit: 46a6807ec43d3403f0b3f54f9b6c12e61ae6a8ea
+;; Package-Commit: a2375b5f77955fccb517a1ef2fd874bac7a86593
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 

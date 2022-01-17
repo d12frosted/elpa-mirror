@@ -4,43 +4,45 @@ Source:  https://github.com/emacs-dashboard/emacs-dashboard.git
 
 Updating /mnt/store/melpa/working/dashboard/
 Checking out origin/HEAD
-Checking out 1bb5c43b6be65f72c2ff3ab948697c902458a32f
+Checking out c51d94778fd5806ff1b37339f97ec94cfd9d390a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dashboard/
-  to /tmp/dashboardujde13/dashboard-20211221.2005
+  to /tmp/dashboardbEDr9x/dashboard-20220117.1613
     dashboard-widgets.el -> dashboard-widgets.el
     dashboard.el -> dashboard.el
     banners => banners
-Created dashboard-20211221.2005.tar containing:
-  dashboard-20211221.2005/
-  dashboard-20211221.2005/banners/
-  dashboard-20211221.2005/banners/1.txt
-  dashboard-20211221.2005/banners/2.txt
-  dashboard-20211221.2005/banners/3.txt
-  dashboard-20211221.2005/banners/4.txt
-  dashboard-20211221.2005/banners/emacs.png
-  dashboard-20211221.2005/banners/logo.png
-  dashboard-20211221.2005/dashboard-pkg.el
-  dashboard-20211221.2005/dashboard-widgets.el
-  dashboard-20211221.2005/dashboard.el
-Built dashboard in 5.272s, finished at 2022-01-17T14:47:35+0000
+Created dashboard-20220117.1613.tar containing:
+  dashboard-20220117.1613/
+  dashboard-20220117.1613/banners/
+  dashboard-20220117.1613/banners/1.txt
+  dashboard-20220117.1613/banners/2.txt
+  dashboard-20220117.1613/banners/3.txt
+  dashboard-20220117.1613/banners/4.txt
+  dashboard-20220117.1613/banners/emacs.png
+  dashboard-20220117.1613/banners/logo.png
+  dashboard-20220117.1613/dashboard-pkg.el
+  dashboard-20220117.1613/dashboard-widgets.el
+  dashboard-20220117.1613/dashboard.el
+Built dashboard in 4.857s, finished at 2022-01-17T17:45:59+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  447 Jan 17 14:47 packages/dashboard-20211221.2005.entry
 152K -rw-r--r-- 1 root root 150K Jan 17 14:47 packages/dashboard-20211221.2005.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 17 14:47 packages/dashboard-badge.svg
+4.0K -rw-r--r-- 1 root root  447 Jan 17 17:45 packages/dashboard-20220117.1613.entry
+152K -rw-r--r-- 1 root root 150K Jan 17 17:45 packages/dashboard-20220117.1613.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 17 17:45 packages/dashboard-badge.svg
 4.0K -rw-r--r-- 1 root root 3.8K Jan 17 14:47 packages/dashboard-hackernews-20190109.205.el
 4.0K -rw-r--r-- 1 root root  432 Jan 17 14:47 packages/dashboard-hackernews-20190109.205.entry
 4.0K -rw-r--r-- 1 root root 1.2K Jan 17 14:47 packages/dashboard-hackernews-badge.svg
 4.0K -rw-r--r-- 1 root root   34 Jan 17 14:47 packages/dashboard-hackernews-readme.txt
-4.0K -rw-r--r-- 1 root root  696 Jan 17 14:47 packages/dashboard-hackernews.log
-4.0K -rw-r--r-- 1 root root 3.4K Jan 17 11:46 packages/dashboard-ls-20211222.1402.el
-4.0K -rw-r--r-- 1 root root  416 Jan 17 11:46 packages/dashboard-ls-20211222.1402.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 17 11:46 packages/dashboard-ls-badge.svg
-4.0K -rw-r--r-- 1 root root   62 Jan 17 11:46 packages/dashboard-ls-readme.txt
-4.0K -rw-r--r-- 1 root root  148 Jan 17 14:47 packages/dashboard-ls.log
-4.0K -rw-r--r-- 1 root root 3.9K Jan 17 11:46 packages/dashboard-project-status-20190202.1354.el
-4.0K -rw-r--r-- 1 root root  483 Jan 17 11:46 packages/dashboard-project-status-20190202.1354.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 17 11:46 packages/dashboard-project-status-badge.svg
-4.0K -rw-r--r-- 1 root root   96 Jan 17 11:46 packages/dashboard-project-status-readme.txt
-4.0K -rw-r--r-- 1 root root  191 Jan 17 14:47 packages/dashboard-project-status.log
-4.0K -rw-r--r-- 1 root root  118 Jan 17 14:47 packages/dashboard-readme.txt
+4.0K -rw-r--r-- 1 root root  193 Jan 17 17:45 packages/dashboard-hackernews.log
+4.0K -rw-r--r-- 1 root root 3.4K Jan 17 14:47 packages/dashboard-ls-20211222.1402.el
+4.0K -rw-r--r-- 1 root root  416 Jan 17 14:47 packages/dashboard-ls-20211222.1402.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 17 14:47 packages/dashboard-ls-badge.svg
+4.0K -rw-r--r-- 1 root root   62 Jan 17 14:47 packages/dashboard-ls-readme.txt
+4.0K -rw-r--r-- 1 root root  148 Jan 17 17:45 packages/dashboard-ls.log
+4.0K -rw-r--r-- 1 root root 3.9K Jan 17 14:47 packages/dashboard-project-status-20190202.1354.el
+4.0K -rw-r--r-- 1 root root  483 Jan 17 14:47 packages/dashboard-project-status-20190202.1354.entry
+4.0K -rw-r--r-- 1 root root 1.2K Jan 17 14:47 packages/dashboard-project-status-badge.svg
+4.0K -rw-r--r-- 1 root root   96 Jan 17 14:47 packages/dashboard-project-status-readme.txt
+4.0K -rw-r--r-- 1 root root  191 Jan 17 17:45 packages/dashboard-project-status.log
+4.0K -rw-r--r-- 1 root root  118 Jan 17 17:45 packages/dashboard-readme.txt
