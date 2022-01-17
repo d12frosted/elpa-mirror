@@ -5,8 +5,8 @@
 ;; Author: Eric Schulte
 ;; Maintainer: Chen Bin (redguardtoo)
 ;; Keywords: mime, mail, email, html
-;; Package-Version: 20220105.1255
-;; Package-Commit: a3519ebb94aae41005417ee4376b145e84feeebc
+;; Package-Version: 20220117.438
+;; Package-Commit: b3932a64ca0d3017255fc99b9cde253eb17b08f5
 ;; Homepage: http://github.com/org-mime/org-mime
 ;; Version: 0.2.4
 ;; Package-Requires: ((emacs "25.1"))
@@ -58,10 +58,12 @@
 ;;   :END:
 ;;
 ;; To avoid exporting the table of contents, you can setup
-;; `org-mime-export-options':
-;;   (setq org-mime-export-options '(:section-numbers nil
+;; `org-mime-export-options' as below,
+;;   (setq org-mime-export-options '(:with-latex dvipng
+;;                                   :section-numbers nil
 ;;                                   :with-author nil
 ;;                                   :with-toc nil))
+;; It overrides Org default settings, but still inferior to file-local settings.
 ;;
 ;; Or just setup your export options in the org buffer/subtree.  These are
 ;; overridden by `org-mime-export-options' when it is non-nil.
@@ -170,10 +172,8 @@ Default (nil) selects the original org file."
 
 (defvar org-mime-export-options '(:with-latex dvipng)
   "Default export options which may override org buffer/subtree options.
-You avoid exporting section-number/author/toc with the setup below,
-`(setq org-mime-export-options '(:section-numbers nil
-                                 :with-author nil
-                                 :with-toc nil))'")
+You could avoid exporting section-number/author/toc.
+It overrides Org default settings, but still inferior to file-local settings.")
 
 (defvar org-mime-html-hook nil
   "Hook to run over the html buffer before attachment to email.
@@ -223,7 +223,7 @@ buffer holding the text to be exported.")
   (car (memq org-mime-export-ascii '(ascii utf-8 latin1))))
 
 (defun org-mime-export-ascii-maybe (text-for-ascii text-for-plain &optional opts)
-  "Export `TEXT-FOR-ASCII' to ascii format or use TEXT-FOR-PLAIN."
+  "Export `TEXT-FOR-ASCII' to ascii format or use TEXT-FOR-PLAIN with OPTS."
   (let* ((ascii-charset (org-mime-use-ascii-charset)))
     (cond
      (ascii-charset

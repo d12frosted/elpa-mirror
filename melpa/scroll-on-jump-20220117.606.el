@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-scroll-on-jump
-;; Package-Version: 20220114.17
-;; Package-Commit: 7b2919f8d8c5350f302ef2382e4bc0921938d355
+;; Package-Version: 20220117.606
+;; Package-Commit: 556e9a7a8119e24503f54b25f5c2a8084752d64d
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -485,7 +485,7 @@ Argument USE-WINDOW-START detects window scrolling when non-nil."
         ;; So don't prioritize correct jumping in the case of errors and assume errors
         ;; are not something that happen after cursor motion.
         (scroll-on-jump--outer-scoped-mark point-orig point-prev
-          (scroll-on-jump--outer-scoped-mark (window-start window) window-start-prev
+          (scroll-on-jump--inner-scoped-mark (window-start window) window-start-prev
             (scroll-on-jump--inner-scoped-mark point-orig point-next
               ;; Run the main body of this macro.
               ;; It's important the result if returned (hence the `prog1' use).

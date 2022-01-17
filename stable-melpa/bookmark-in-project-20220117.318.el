@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-bookmark-in-project
-;; Package-Version: 20220117.237
-;; Package-Commit: 61e9d20aeb8a7b6986e1b1305f6fe8fdd1d2d834
+;; Package-Version: 20220117.318
+;; Package-Commit: d4c60c022d5df4e6325eaf0775e15186a4b73737
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))

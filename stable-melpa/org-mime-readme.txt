@@ -26,10 +26,12 @@ Here is the sample of a subtree:
   :END:
 
 To avoid exporting the table of contents, you can setup
-`org-mime-export-options':
-  (setq org-mime-export-options '(:section-numbers nil
+`org-mime-export-options' as below,
+  (setq org-mime-export-options '(:with-latex dvipng
+                                  :section-numbers nil
                                   :with-author nil
                                   :with-toc nil))
+It overrides Org default settings, but still inferior to file-local settings.
 
 Or just setup your export options in the org buffer/subtree.  These are
 overridden by `org-mime-export-options' when it is non-nil.
