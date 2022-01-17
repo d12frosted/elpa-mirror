@@ -7,15 +7,15 @@ Checking out origin/HEAD
 Checking out 846a81b984d71edf8278a4d9f9b886e44d5b8365
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/clmemo/
-  to /tmp/clmemohdhsjB/clmemo-20160326.1623
+  to /tmp/clmemo1LCh0Y/clmemo-20160326.1623
     clmemo.el -> clmemo.el
   ! doc/clmemo.texi -> clmemo.texi
   ! doc/install.texi -> install.texi
   ! doc/news.texi -> news.texi
-Generating /tmp/clmemohdhsjB/clmemo-20160326.1623/clmemo.info
-Generating /tmp/clmemohdhsjB/clmemo-20160326.1623/install.info
+Generating /tmp/clmemo1LCh0Y/clmemo-20160326.1623/clmemo.info
+Generating /tmp/clmemo1LCh0Y/clmemo-20160326.1623/install.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/clmemo/doc/install.texi -o /tmp/clmemohdhsjB/clmemo-20160326.1623/install.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/clmemo/doc/install.texi -o /tmp/clmemo1LCh0Y/clmemo-20160326.1623/install.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
@@ -30,7 +30,7 @@ HEAD is now at 846a81b Update year of copyright
 
 Error: (error "Command exited with non-zero exit-code: 1")
 
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/clmemohdhsjB/clmemo-20160326.1623/install.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/clmemo1LCh0Y/clmemo-20160326.1623/install.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
@@ -42,10 +42,10 @@ HEAD is now at 846a81b Update year of copyright
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Next reference to nonexistent `input memo'
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Prev reference to nonexistent `clmemo'
 /mnt/store/melpa/working/clmemo/doc/install.texi:6: Up reference to nonexistent `clmemo'
-install-info: No such file or directory for /tmp/clmemohdhsjB/clmemo-20160326.1623/install.info
+install-info: No such file or directory for /tmp/clmemo1LCh0Y/clmemo-20160326.1623/install.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
-Generating /tmp/clmemohdhsjB/clmemo-20160326.1623/news.info
+Generating /tmp/clmemo1LCh0Y/clmemo-20160326.1623/news.info
 Created clmemo-20160326.1623.tar containing:
   clmemo-20160326.1623/
   clmemo-20160326.1623/clmemo-pkg.el
@@ -53,9 +53,9 @@ Created clmemo-20160326.1623.tar containing:
   clmemo-20160326.1623/clmemo.info
   clmemo-20160326.1623/dir
   clmemo-20160326.1623/news.info
-Built clmemo in 12.026s, finished at 2022-01-17T05:41:45+0000
+Built clmemo in 10.889s, finished at 2022-01-17T11:42:59+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  321 Jan 17 05:41 packages/clmemo-20160326.1623.entry
-132K -rw-r--r-- 1 root root 130K Jan 17 05:41 packages/clmemo-20160326.1623.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 17 05:41 packages/clmemo-badge.svg
-4.0K -rw-r--r-- 1 root root 2.9K Jan 17 05:41 packages/clmemo-readme.txt
+4.0K -rw-r--r-- 1 root root  321 Jan 17 11:42 packages/clmemo-20160326.1623.entry
+132K -rw-r--r-- 1 root root 130K Jan 17 11:42 packages/clmemo-20160326.1623.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 17 11:42 packages/clmemo-badge.svg
+4.0K -rw-r--r-- 1 root root 2.9K Jan 17 11:42 packages/clmemo-readme.txt

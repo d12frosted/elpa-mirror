@@ -3,7 +3,7 @@ Org-roam-bibtex, ORB for short, offers integration of Org-roam with BibTeX
 Emacs software: Org-ref, Helm/Ivy-bibtex and Citar.  The main task of ORB is
 to seamlessly expose Org-roam as a note management solution to these
 packages, shadowing their native facilities for taking bibliographic
-notes. As its main feature, ORB enables expansion of BibTeX keywords in
+notes.  As its main feature, ORB enables expansion of BibTeX keywords in
 Org-roam templates.
 
 Main usage:
