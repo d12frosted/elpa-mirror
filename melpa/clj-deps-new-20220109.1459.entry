@@ -1,0 +1,12 @@
+(clj-deps-new .
+	      [(20220109 1459)
+	       ((emacs
+		 (25 1))
+		(transient
+		 (0 3 7)))
+	       "Create clojure projects from templates" single
+	       ((:commit . "7d774b5e66bd292ab817103dd6bd4281f3d447b3")
+		(:authors
+		 ("jpe90" . "eskinjp@gmail.com"))
+		(:maintainer "jpe90" . "eskinjp@gmail.com")
+		(:url . "https://github.com/jpe90/emacs-deps-new"))])
