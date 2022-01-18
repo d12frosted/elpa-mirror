@@ -2318,17 +2318,18 @@
 		   ("Bastien Guerry" . "bzg@gnu.org"))
 		  (:maintainer "Bastien Guerry" . "bzg@gnu.org"))])
  (relint .
-	 [(1 19)
+	 [(1 20)
 	  ((xr
-	    (1 20))
+	    (1 22))
 	   (emacs
 	    (26 1)))
 	  "Elisp regexp mistake finder" tar
 	  ((:url . "https://github.com/mattiase/relint")
+	   (:keywords "lisp" "regexps")
 	   (:maintainer "Mattias Engdegård" . "mattiase@acm.org")
 	   (:authors
 	    ("Mattias Engdegård" . "mattiase@acm.org"))
-	   (:keywords "lisp" "regexps"))])
+	   (:commit . "5a918af0c99ab83355d4ec73a2fb39e70c173956"))])
  (repology .
 	   [(1 1 0)
 	    ((emacs
@@ -2635,13 +2636,14 @@
 	       ("Ulf Jasper" . "ulf.jasper@web.de"))
 	      (:maintainer "Ulf Jasper" . "ulf.jasper@web.de"))])
  (svg-lib .
-	  [(0 2 4)
+	  [(0 2 5)
 	   ((emacs
 	     (27 1)))
 	   "SVG tags, progress bars & icons" tar
 	   ((:url . "https://github.com/rougier/svg-lib")
 	    (:keywords "svg" "icons" "tags" "convenience")
-	    (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
+	    (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
+	    (:commit . "0486c9453449771bc3f5872f70bc5cb23580d0f4"))])
  (svg-tag-mode .
 	       [(0 3 2)
 		((emacs
@@ -3117,15 +3119,16 @@
 	(:authors
 	 ("Thien-Thi Nguyen" . "ttn@gnu.org")))])
  (xr .
-     [(1 21)
+     [(1 22)
       ((emacs
 	(26 1)))
       "Convert string regexp to rx notation" tar
       ((:url . "https://github.com/mattiase/xr")
+       (:keywords "lisp" "regexps")
        (:maintainer "Mattias Engdegård" . "mattiase@acm.org")
        (:authors
 	("Mattias Engdegård" . "mattiase@acm.org"))
-       (:keywords "lisp" "regexps"))])
+       (:commit . "a873bbbe9cdf1abab63fc94730966f5a8f9adaa6"))])
  (xref .
        [(1 3 2)
 	((emacs

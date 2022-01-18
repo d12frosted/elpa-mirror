@@ -1,10 +1,10 @@
                 relint -- Emacs regexp mistake finder
                 =====================================
 
-Relint scans elisp files for mistakes in regexps, including deprecated
-syntax and bad practice. It also checks the regexp-like arguments to
-skip-chars-forward, skip-chars-backward, skip-syntax-forward and
-skip-syntax-backward.
+Relint scans Emacs Lisp files for mistakes in regexps, including
+deprecated syntax and bad practice. It also checks the regexp-like
+arguments to the functions skip-chars-forward, skip-chars-backward,
+skip-syntax-forward and skip-syntax-backward.
 
 * Contents
 
@@ -40,7 +40,7 @@ skip-syntax-backward.
 
     In the *relint* buffer, pressing "g" will re-run the same check.
 
-  - From elisp code, use one of the above functions or
+  - From Emacs Lisp code, use one of the above functions or
 
       (relint-buffer BUFFER)
 
@@ -60,7 +60,7 @@ skip-syntax-backward.
 * What the diagnostics mean
 
   Tip: if a regexp string is difficult to understand, consider
-  decoding it using 'xr', as in (xr-lint "gibberish").
+  using 'xr' to decode it, as in (xr-pp "your-messy-regexp").
 
   - Unescaped literal 'X'
 
@@ -346,9 +346,9 @@ skip-syntax-backward.
 
   Relint uses a combination of ad-hoc rules to locate regexps:
 
-  - Arguments to standard functions taking regexps as arguments,
-    such as re-search-forward, or to user-defined functions
-    whose arguments have regexp-sounding names (like 'regexp')
+  - Arguments to certain standard functions such as re-search-forward,
+    or to user-defined functions whose arguments have regexp-sounding
+    names (like 'regexp')
 
   - Values of variables believed to be a regexp from their name
     (ending in '-regexp', for instance), from their doc string,
@@ -357,8 +357,8 @@ skip-syntax-backward.
   - Assignment to certain standard variables, such as page-delimiter
 
   It will then try to evaluate expressions statically as far as
-  possible, to arrive at strings which can be analysed. The regexp
-  analysis is done by the xr library.
+  possible in order to arrive at strings which can be analysed. The
+  regexp analysis is done by the xr library.
 
   This means that if relint complains about something that isn't
   actually a regexp, some names in your code may be misleading.

@@ -665,6 +665,14 @@
 	  nil "Major mode for editing J programs" tar
 	  ((:url . "http://github.com/zellio/j-mode")
 	   (:keywords "j" "languages"))])
+ (jinja2-mode .
+	      [(0 3)
+	       nil "A major mode for jinja2" tar
+	       ((:maintainer "Florian Mounier aka paradoxxxzero")
+		(:authors
+		 ("Florian Mounier aka paradoxxxzero"))
+		(:url . "https://elpa.nongnu.org/nongnu/jinja2-mode.html")
+		(:commit . "a598357069a68b0ac2bf128c19edd8e899084cdc"))])
  (julia-mode .
 	     [(0 4)
 	      ((emacs
