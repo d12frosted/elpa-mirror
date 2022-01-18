@@ -3087,13 +3087,14 @@
 	     ("Ivan Kanis" . "ivan@kanis.fr"))
 	    (:maintainer "Ivan Kanis" . "ivan@kanis.fr"))])
  (xclip .
-	[(1 10)
-	 nil "Copy&paste GUI clipboard from text terminal" single
-	 ((:url . "http://elpa.gnu.org/packages/xclip.html")
-	  (:keywords "convenience" "tools")
+	[(1 11)
+	 nil "Copy&paste GUI clipboard from text terminal" tar
+	 ((:keywords "convenience" "tools")
+	  (:maintainer "Leo Liu" . "sdl.web@gmail.com")
 	  (:authors
 	   ("Leo Liu" . "sdl.web@gmail.com"))
-	  (:maintainer "Leo Liu" . "sdl.web@gmail.com"))])
+	  (:url . "https://elpa.gnu.org/packages/xclip.html")
+	  (:commit . "5b54645cab438e133e27b4690c57066f8271a992"))])
  (xelb .
        [(0 18)
 	((emacs

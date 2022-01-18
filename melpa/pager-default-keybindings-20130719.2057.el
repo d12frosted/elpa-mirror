@@ -4,8 +4,6 @@
 
 ;; Author: Nathaniel Flath <nflath@gmail.com>
 ;; URL: http://github.com/nflath/pager-default-keybindings
-;; Package-Version: 20130719.2057
-;; Package-Commit: dbbd49c2ac5906d1dabf9e9c832bfebc1ab405b3
 ;; Version: 1.1
 ;; Package-Requires: ((pager "1.0"))
 

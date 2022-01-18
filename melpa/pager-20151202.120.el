@@ -1,6 +1,4 @@
 ;;; pager.el --- windows-scroll commands
-;; Package-Version: 20151202.120
-;; Package-Commit: 5c791ed23f1136e04040d6f4bc9b4ca5b6dc919f
 ;;; Version 2.0 - 97-10-06
 ;;; Copyright (C) 1992-1997 Mikael Sjödin (mic@docs.uu.se)
 ;;;

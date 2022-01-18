@@ -4,8 +4,6 @@
 ;;
 ;; Author: John Walker <john.lou.walker@gmail.com>
 ;; URL: https://github.com/johnwalker/pixie-mode
-;; Package-Version: 20180626.541
-;; Package-Commit: a40c2632cfbe948852a5cdcfd44e6a65db11834d
 ;; Version: 0.1.0
 ;; Package-Requires: ((clojure-mode "3.0.1") (inf-clojure "1.0.0"))
 
