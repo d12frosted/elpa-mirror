@@ -5,8 +5,8 @@
 ;; Author: Md Arif Shaikh <arifshaikh.astro@gmail.com>
 ;; Homepage: https://github.com/md-arif-shaikh/tzc
 ;; Version: 0.0.1
-;; Package-Version: 20220117.1746
-;; Package-Commit: e5c5a9e4c8506c23f4c87690f51d022dd1554d98
+;; Package-Version: 20220118.557
+;; Package-Commit: d1f08fff5d4f9c2584a3b405464c6a92000f62b3
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: convenience
 
@@ -37,7 +37,8 @@
 ;;; Code:
 (require 'timezone)
 
-(defcustom tzc-favourite-time-zones '("Asia/Kolkata"
+(defcustom tzc-favourite-time-zones '("UTC+0000"
+				      "Asia/Kolkata"
 				      "America/New_York"
 				      "UK/London"
 				      "Europe/Berlin"
