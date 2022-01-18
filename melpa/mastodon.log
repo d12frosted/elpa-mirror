@@ -1,13 +1,13 @@
 Package: mastodon
-Fetcher: github
-Source:  https://github.com/mooseyboots/mastodon.el.git
+Fetcher: git
+Source:  https://codeberg.org/martianh/mastodon.el
 
 Updating /mnt/store/melpa/working/mastodon/
 Checking out origin/HEAD
-Checking out ef10fe596e394dac16d23df893d91e7d68989ffc
+Checking out 6113fa77d1cceb5bfe06d016dc2c81850c4b498e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/mastodon/
-  to /tmp/mastodonu9TzKo/mastodon-20220111.1813
+  to /tmp/mastodonqWmJPx/mastodon-20220111.2155
   ! lisp/mastodon-async.el -> mastodon-async.el
   ! lisp/mastodon-auth.el -> mastodon-auth.el
   ! lisp/mastodon-client.el -> mastodon-client.el
@@ -21,25 +21,25 @@ Copying files (->) and directories (=>)
   ! lisp/mastodon-tl.el -> mastodon-tl.el
   ! lisp/mastodon-toot.el -> mastodon-toot.el
   ! lisp/mastodon.el -> mastodon.el
-Created mastodon-20220111.1813.tar containing:
-  mastodon-20220111.1813/
-  mastodon-20220111.1813/mastodon-async.el
-  mastodon-20220111.1813/mastodon-auth.el
-  mastodon-20220111.1813/mastodon-client.el
-  mastodon-20220111.1813/mastodon-discover.el
-  mastodon-20220111.1813/mastodon-http.el
-  mastodon-20220111.1813/mastodon-inspect.el
-  mastodon-20220111.1813/mastodon-media.el
-  mastodon-20220111.1813/mastodon-notifications.el
-  mastodon-20220111.1813/mastodon-pkg.el
-  mastodon-20220111.1813/mastodon-profile.el
-  mastodon-20220111.1813/mastodon-search.el
-  mastodon-20220111.1813/mastodon-tl.el
-  mastodon-20220111.1813/mastodon-toot.el
-  mastodon-20220111.1813/mastodon.el
-Built mastodon in 3.844s, finished at 2022-01-17T18:13:41+0000
+Created mastodon-20220111.2155.tar containing:
+  mastodon-20220111.2155/
+  mastodon-20220111.2155/mastodon-async.el
+  mastodon-20220111.2155/mastodon-auth.el
+  mastodon-20220111.2155/mastodon-client.el
+  mastodon-20220111.2155/mastodon-discover.el
+  mastodon-20220111.2155/mastodon-http.el
+  mastodon-20220111.2155/mastodon-inspect.el
+  mastodon-20220111.2155/mastodon-media.el
+  mastodon-20220111.2155/mastodon-notifications.el
+  mastodon-20220111.2155/mastodon-pkg.el
+  mastodon-20220111.2155/mastodon-profile.el
+  mastodon-20220111.2155/mastodon-search.el
+  mastodon-20220111.2155/mastodon-tl.el
+  mastodon-20220111.2155/mastodon-toot.el
+  mastodon-20220111.2155/mastodon.el
+Built mastodon in 4.953s, finished at 2022-01-18T03:02:23+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  394 Jan 17 18:13 packages/mastodon-20220111.1813.entry
-232K -rw-r--r-- 1 root root 230K Jan 17 18:13 packages/mastodon-20220111.1813.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 17 18:13 packages/mastodon-badge.svg
-4.0K -rw-r--r-- 1 root root  192 Jan 17 18:13 packages/mastodon-readme.txt
+4.0K -rw-r--r-- 1 root root  394 Jan 18 03:02 packages/mastodon-20220111.2155.entry
+232K -rw-r--r-- 1 root root 230K Jan 18 03:02 packages/mastodon-20220111.2155.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 18 03:02 packages/mastodon-badge.svg
+4.0K -rw-r--r-- 1 root root  192 Jan 18 03:02 packages/mastodon-readme.txt
