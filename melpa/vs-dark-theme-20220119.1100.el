@@ -4,8 +4,8 @@
 
 ;; Author: Jen-Chieh Shen
 ;; URL: https://github.com/emacs-vs/vs-dark-theme
-;; Package-Version: 20220116.1844
-;; Package-Commit: 442026eea23a7a8e73de3f837ae0d1435b13e838
+;; Package-Version: 20220119.1100
+;; Package-Commit: be9e32f04ea7f190c57d18e59eb4fdd53e89e542
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -56,7 +56,7 @@
  `(region      ((t :background "#264F78")))
  `(fringe      ((t :background "#333333")))
 
- `(highlight ((t :background "#2E2E2E")))
+ `(highlight ((t :background "#264F78")))
 
  `(fill-column-indicator ((t :foreground "#AA4242")))
 

@@ -4,8 +4,8 @@
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
 ;; Version: 0.3.6
-;; Package-Version: 20220118.754
-;; Package-Commit: faca69e10bc53b761b4d95cb05afb1c29dff7a97
+;; Package-Version: 20220119.1444
+;; Package-Commit: eac6aa8694b37623cef14d208ed88415499072a1
 ;; Package-Requires: ((emacs "26.1") (dash "2.12") (org "9.3"))
 ;; Keywords: outlines
 ;; URL: https://github.com/akirak/org-reverse-datetree
@@ -937,22 +937,26 @@ A prefix argument FIND-DONE should be treated as in
                                                          ancestors)
   "Delete empty date entries in the buffer.
 
-If NOCONFIRM is non-nil, leaf nodes are deleted without
-confirmation. In non-interactive mode, you have to explicitly set
-this argument.
+If NOCONFIRM is non-nil, nodes are deleted without confirmation.
+In non-interactive mode, you have to explicitly set this
+argument.
 
 If both NOCONFIRM and ANCESTORS are non-nil, upper level nodes
 are deleted without confirmation as well."
   (interactive)
   (unless (derived-mode-p 'org-mode)
     (user-error "Not in org-mode"))
+  (when (and (or noninteractive
+                 (not (called-interactively-p 'any)))
+             (not noconfirm))
+    (error "Please set NOCONFIRM when called non-interactively"))
   (let ((levels (length (org-reverse-datetree--get-level-formats)))
         count)
     (org-save-outline-visibility t
       (outline-hide-sublevels (1+ levels))
-      (when (and (not noninteractive)
-                 (not (org-before-first-heading-p))
-                 (yes-or-no-p "Start from the beginning?"))
+      (when (or noconfirm
+                (and (not (org-before-first-heading-p))
+                     (yes-or-no-p "Start from the beginning?")))
         (goto-char (point-min)))
       (catch 'abort
         (while (> levels 0)
@@ -986,8 +990,11 @@ are deleted without confirmation as well."
             (message "No trees were deleted. Aborting")
             (throw 'abort t))
           (if (and (> levels 1)
-                   (or (and ancestors (or noninteractive noconfirm))
-                       (yes-or-no-p "Clean up the upper level as well?")))
+                   (or (and ancestors
+                            noconfirm)
+                       (and (not noninteractive)
+                            (called-interactively-p 'any)
+                            (yes-or-no-p "Clean up the upper level as well?"))))
               (progn
                 (cl-decf levels)
                 (goto-char (point-min)))

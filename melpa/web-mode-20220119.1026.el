@@ -4,8 +4,8 @@
 ;; Copyright 2011-2021 François-Xavier Bois
 
 ;; Version: 17.0.4
-;; Package-Version: 20220104.1504
-;; Package-Commit: 4f1c96381a96000358b6621782d79c79b05ca5da
+;; Package-Version: 20220119.1026
+;; Package-Commit: d95e0db1bd042d1a8c9bb6bf744eb07ecbf62d73
 ;; Author: François-Xavier Bois <fxbois AT Google Mail Service>
 ;; Maintainer: François-Xavier Bois
 ;; Package-Requires: ((emacs "23.1"))
@@ -2838,6 +2838,9 @@ another auto-completion with different ac-sources (e.g. ac-php)")
   (when (or (null web-mode-change-end) (> font-lock-end web-mode-change-end))
     (when web-mode-trace (message "extend-region: font-lock-end(%S) > web-mode-change-end(%S)" font-lock-end web-mode-change-end))
     (setq web-mode-change-end font-lock-end))
+  (when font-lock-dont-widen
+    (setq web-mode-change-beg (max web-mode-change-beg (point-min))
+          web-mode-change-end (min web-mode-change-end (point-max))))
   (let ((region (web-mode-scan web-mode-change-beg web-mode-change-end)))
     (when region
       ;;(message "region: %S" region)
