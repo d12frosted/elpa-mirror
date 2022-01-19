@@ -1594,14 +1594,15 @@
 		      (:maintainer "Vitalie Spinu" . "spinuvit@gmail.com")
 		      (:url . "https://github.com/vspinu/math-symbol-lists"))])
  (mct .
-      [(0 3 0)
+      [(0 4 0)
        ((emacs
 	 (27 1)))
        "Minibuffer and Completions in Tandem" tar
        ((:url . "https://gitlab.com/protesilaos/mct")
 	(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	(:authors
-	 ("Protesilaos Stavrou" . "info@protesilaos.com")))])
+	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
+	(:commit . "e6e5d3318146133f3772a8cdddcf88c974808eaf"))])
  (memory-usage .
 	       [(0 2)
 		nil "Analyze the memory usage of Emacs in various ways" single

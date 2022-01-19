@@ -7,6 +7,7 @@ dired-fdclone.el provides the following interactive commands:
 * diredfd-toggle-mark
 * diredfd-toggle-all-marks
 * diredfd-mark-or-unmark-all
+* diredfd-unmark-all-marks
 * diredfd-narrow-to-marked-files
 * diredfd-narrow-to-files-regexp
 * diredfd-goto-filename
