@@ -4,6 +4,8 @@
 
 ;; Author: Zainab Ali <zainab @kebab-ca.se>
 ;; Keywords: lisp, tools
+;; Package-Version: 20211219.1816
+;; Package-Commit: 6fe6143954bb4025ce6b05aad41e777fcbf413d9
 ;; URL: https://github.com/zainab-ali/pair-tree
 
 ;; This program is free software; you can redistribute it and/or modify
