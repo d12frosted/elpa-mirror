@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-bookmark-in-project
-;; Package-Version: 20220117.833
-;; Package-Commit: 9bbadacc557c0c7bf80aa39b3d91014183a1d440
+;; Package-Version: 20220119.421
+;; Package-Commit: e725de273de33e48ecb066f00d9665021edb9a28
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
@@ -251,7 +251,17 @@ using `default-directory' as a fallback."
             (when (< 1 lines-rel)
               (let ((lines-all (count-lines pos-best pos-next)))
                 (setq text
-                  (concat text " [" (number-to-string (/ (* 100 lines-rel) lines-all)) "%]")))))
+                  (concat
+                    text " ["
+                    (number-to-string
+                      ;; Avoid divide by zero for empty files.
+                      (cond
+                        ((zerop lines-all)
+                          0)
+                        (t
+                          (/ (* 100 lines-rel) lines-all))))
+                    "%]")))))
+
 
           text))
       (t ;; No context, show the percent in the file.
@@ -259,7 +269,16 @@ using `default-directory' as a fallback."
         ;; Otherwise there is no context given which seems strange.
         (let ((lines-rel (count-lines (point-min) pos)))
           (let ((lines-all (count-lines (point-min) (point-max))))
-            (concat "[" (number-to-string (/ (* 100 lines-rel) lines-all)) "%]")))))))
+            (concat
+              "["
+              (number-to-string
+                ;; Avoid divide by zero for empty files.
+                (cond
+                  ((zerop lines-all)
+                    0)
+                  (t
+                    (/ (* 100 lines-rel) lines-all))))
+              "%]")))))))
 
 (defun bookmark-in-project-name-default-with-line ()
   "Return the name used to create ."
