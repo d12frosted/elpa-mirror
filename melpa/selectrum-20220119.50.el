@@ -6,8 +6,8 @@
 ;; Created: 8 Dec 2019
 ;; Homepage: https://github.com/raxod502/selectrum
 ;; Keywords: extensions
-;; Package-Version: 20220114.106
-;; Package-Commit: afe2063341a1bc5ad912109b715aacb0fb983f6b
+;; Package-Version: 20220119.50
+;; Package-Commit: 823eec0246388e8dcf5581533dac96c2626d51f3
 ;; Package-Requires: ((emacs "26.1"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 3.1
@@ -2549,6 +2549,7 @@ COLLECTION, and PREDICATE, see `completion-in-region'."
                           (car cands)
                         (selectrum--read
                          "Completion: " cands
+                         :initial-input input
                          :mc-table collection
                          :mc-predicate predicate))
                       exit-status (cond ((not (member result cands)) 'sole)
