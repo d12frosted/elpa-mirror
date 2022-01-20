@@ -296,6 +296,7 @@ missing package or change you would like to see.
     telephone-line
     terraform-mode
     term
+    textsec
     tomatinho
     transient (pop-up windows like Magit's)
     trashed

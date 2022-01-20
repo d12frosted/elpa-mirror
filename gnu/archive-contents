@@ -1489,15 +1489,16 @@
 	      ("Terrence Brannon" . "metaperl@gmail.com"))
 	     (:maintainer nil . "emacs-devel@gnu.org"))])
  (leaf .
-       [(4 5 2)
+       [(4 5 5)
 	((emacs
 	  (24 1)))
 	"Simplify your init.el configuration, extended use-package" tar
 	((:url . "https://github.com/conao3/leaf.el")
+	 (:keywords "lisp" "settings")
 	 (:maintainer "Naoya Yamashita" . "conao3@gmail.com")
 	 (:authors
 	  ("Naoya Yamashita" . "conao3@gmail.com"))
-	 (:keywords "lisp" "settings"))])
+	 (:commit . "7cc38f9739eadc569b1179fabe7f7893167105da"))])
  (let-alist .
    [(1 0 6)
     ((emacs
