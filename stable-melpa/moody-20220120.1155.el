@@ -6,8 +6,8 @@
 ;; Homepage: https://github.com/tarsius/moody
 
 ;; Package-Requires: ((emacs "25.3"))
-;; Package-Version: 20220115.1428
-;; Package-Commit: 90503f872b42670d4dbe62ce033042cac7062aa4
+;; Package-Version: 20220120.1155
+;; Package-Commit: aa6666eb344947bf1eb9d14619f4249403048321
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -150,7 +150,7 @@ If optional REVERSE is non-nil, then replace WRAPPED with PLAIN."
 (defun moody-format-find (elt &optional format)
   (cl-labels ((find (elt tree)
                     (cond ((eq tree elt) tree)
-	                  ((consp tree)
+                          ((consp tree)
                            (or (find elt (car tree))
                                (find elt (cdr tree)))))))
     (find elt (or format (default-value 'mode-line-format)))))
