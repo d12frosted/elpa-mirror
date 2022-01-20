@@ -9,4 +9,4 @@ convenient keyboard shortcuts, and project management.
 It is suitable for almost all languages (as long as they are supported by
 Ctags). Cscope provides additional browsing facility for C/C++ files.
 
-Homepage: https://eide.hjuvi.fr.eu.org/
+Homepage: https://forge.chapril.org/hjuvi/eide
