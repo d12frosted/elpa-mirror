@@ -36,6 +36,7 @@ Table of Contents
 .. 1. MCT in the current or the other window
 8. Extensions
 .. 1. Enable Consult previews
+.. 2. Avoid conflict between MCT and Corfu
 9. Alternatives
 10. Acknowledgements
 11. Official sources
@@ -809,6 +810,30 @@ Table of Contents
   ┌────
   │ (add-hook 'completion-list-mode-hook #'consult-preview-at-point-mode)
   └────
+
+
+8.2 Avoid conflict between MCT and Corfu
+────────────────────────────────────────
+
+  Daniel Mendler’s `corfu' package provides an alternative to the
+  `mct-region-mode' ([MCT in the minibuffer and in regular buffers]).
+  Given that MCT’s implementation is a global minor-mode, chances are
+  that users of both will run into weird issues with conflicting
+  functionality.  The following snippet from Corfu’s README can be added
+  to user configuration files to avoid any potential trouble when using
+  commands such as `eval-expression' (bound to `M-:' by default):
+
+  ┌────
+  │ (defun corfu-in-minibuffer ()
+  │   "Enable Corfu in the minibuffer only if Mct/Vertico are not active."
+  │   (unless (or (mct--minibuffer-p) vertico--input)
+  │     (corfu-mode 1)))
+  │ 
+  │ (add-hook 'minibuffer-setup-hook #'corfu-in-minibuffer 1)
+  └────
+
+
+[MCT in the minibuffer and in regular buffers] See section 2.1
 
 
 9 Alternatives

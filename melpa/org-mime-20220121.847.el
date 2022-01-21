@@ -5,8 +5,8 @@
 ;; Author: Eric Schulte
 ;; Maintainer: Chen Bin (redguardtoo)
 ;; Keywords: mime, mail, email, html
-;; Package-Version: 20220117.438
-;; Package-Commit: b3932a64ca0d3017255fc99b9cde253eb17b08f5
+;; Package-Version: 20220121.847
+;; Package-Commit: fc3ac72c3a5912f8ec1b64ee67997002b59bd931
 ;; Homepage: http://github.com/org-mime/org-mime
 ;; Version: 0.2.4
 ;; Package-Requires: ((emacs "25.1"))
@@ -95,17 +95,16 @@
 ;; 1. In order to embed images into your mail, use the syntax below,
 ;; [[/full/path/to/your.jpg]]
 ;;
-;; 2. It's easy to add your own emphasis markup.  For example, to render text
-;; between "@" in a red color, you can add a function to `org-mime-html-hook':
+;; 2. It's easy to define your own emphasis markup.
+;; For example, below code renders text between "#" in red color,:
 ;;
 ;;   (add-hook 'org-mime-html-hook
 ;;             (lambda ()
-;;               (while (re-search-forward "@\\([^@]*\\)@" nil t)
+;;               (while (re-search-forward "#\\([^#]*\\)#" nil t)
 ;;                 (replace-match "<span style=\"color:red\">\\1</span>"))))
 ;;
-;; 3. Now the quoted mail uses a modern style (like Gmail), so mail replies
-;; looks clean and modern. If you prefer the old style, please set
-;; `org-mime-beautify-quoted-mail' to nil.
+;; 3. The quoted mail uses Gmail's style, so mail replies looks clean and modern.
+;; If you prefer the old style, please set `org-mime-beautify-quoted-mail' to nil.
 ;;
 ;; 4. Please note this program can only embed exported HTML into mail.
 ;;    Org-mode is responsible for rendering HTML.

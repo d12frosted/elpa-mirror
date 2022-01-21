@@ -47,6 +47,8 @@ missing package or change you would like to see.
     ace-window
     alert
     all-the-icons
+    all-the-icons-dired
+    all-the-icons-ibuffer
     annotate
     ansi-color
     anzu

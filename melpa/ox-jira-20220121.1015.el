@@ -4,8 +4,8 @@
 
 ;; Author: Stig Brautaset <stig@brautaset.org>
 ;; Version: 0.1-SNAPSHOT
-;; Package-Version: 20201202.1658
-;; Package-Commit: 0bd966ba241a2458d5097e256543eceee50d462c
+;; Package-Version: 20220121.1015
+;; Package-Commit: a8019237a8f5e016a7c952fc2f673a2498a0e779
 ;; Keywords: outlines, hypermedia, wp
 ;; Homepage: https://github.com/stig/ox-jira.el
 ;; Package-Requires: ((org "8.3"))
@@ -341,6 +341,7 @@ INFO is a plist holding contextual information.  See
                  (if desc (concat "#" desc) (concat "#" raw-path)))
                 ((string-prefix-p "*" raw-path)
                  (concat "#" (seq-subseq raw-path 1)))
+                ((org-export-custom-protocol-maybe link desc 'jira info))
                 (t raw-path))))
     (cond
      ;; Link with description
