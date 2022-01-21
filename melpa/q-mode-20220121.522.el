@@ -2,8 +2,8 @@
 
 ;; Copyright (C) 2006-2021 Nick Psaris <nick.psaris@gmail.com>
 ;; Keywords: faces files q
-;; Package-Version: 20211126.1944
-;; Package-Commit: 43e509ed323c105f9b312813a1ae953d1a2efe3e
+;; Package-Version: 20220121.522
+;; Package-Commit: a75924cc4de5d3f9709cb9a640c8d12bfe4b0fe8
 ;; Package-Requires: ((emacs "24"))
 ;; Created: 8 Jun 2015
 ;; Version: 0.1
@@ -399,7 +399,7 @@ This marks the PROCESS with a MESSAGE, at a particular time point."
   (q-eval-region (point-min) (point-max)))
 
 (defvar q-function-regex
-  "\\_<\\([.]?[a-zA-Z]\\(?:\\s_\\|\\w\\|_\\)*\\s *\\):\\s *{"
+  "\\_<\\([.]?[a-zA-Z]\\(?:\\s_\\|\\w\\|_\\)*\\s *\\):\\s *\\(?:{\\|'\\s *\\[\\|.*::\\)"
   "Regular expression used to find function declarations.")
 
 (defvar q-variable-regex
@@ -437,23 +437,23 @@ This marks the PROCESS with a MESSAGE, at a particular time point."
   "Keymap for inferior q mode.")
 
 (defvar q-mode-map
-  (let ((q-mode-map (make-sparse-keymap)))
-    (define-key q-mode-map "\C-c\C-l"    'q-eval-line)
-    (define-key q-mode-map "\C-c\C-j"    'q-eval-line)
-    (define-key q-mode-map "\C-c\M-j"    'q-eval-line-and-go)
-    (define-key q-mode-map (kbd "<C-return>") 'q-eval-line-and-step)
-    (define-key q-mode-map "\C-c\C-f"    'q-eval-function)
-    (define-key q-mode-map "\C-c\M-f"    'q-eval-function-and-go)
-    (define-key q-mode-map "\C-c\C-r"    'q-eval-region)
-    (define-key q-mode-map "\C-c\M-r"    'q-eval-region-and-go)
-    (define-key q-mode-map "\C-c\C-b"    'q-eval-buffer)
-    (define-key q-mode-map "\C-c\M-l"    'q-load-file)
-    (define-key q-mode-map (kbd "C-c M-RET") 'q-activate-buffer)
-    (define-key q-mode-map "\C-c\C-q"   'q-show-q-buffer)
-    (define-key q-mode-map "\C-c\C-\\"  'q-kill-q-buffer)
-    (define-key q-mode-map "\C-c\C-z"   'q-customize)
-    (define-key q-mode-map "\C-c\C-c"   'comment-region)
-    q-mode-map)
+  (let ((map (make-sparse-keymap)))
+    (define-key map "\C-c\C-l"    'q-eval-line)
+    (define-key map "\C-c\C-j"    'q-eval-line)
+    (define-key map "\C-c\M-j"    'q-eval-line-and-go)
+    (define-key map (kbd "<C-return>") 'q-eval-line-and-step)
+    (define-key map "\C-c\C-f"    'q-eval-function)
+    (define-key map "\C-c\M-f"    'q-eval-function-and-go)
+    (define-key map "\C-c\C-r"    'q-eval-region)
+    (define-key map "\C-c\M-r"    'q-eval-region-and-go)
+    (define-key map "\C-c\C-b"    'q-eval-buffer)
+    (define-key map "\C-c\M-l"    'q-load-file)
+    (define-key map (kbd "C-c M-RET") 'q-activate-buffer)
+    (define-key map "\C-c\C-q"   'q-show-q-buffer)
+    (define-key map "\C-c\C-\\"  'q-kill-q-buffer)
+    (define-key map "\C-c\C-z"   'q-customize)
+    (define-key map "\C-c\C-c"   'comment-region)
+    map)
   "Keymap for q major mode.")
 
 ;; menu bars
@@ -591,27 +591,27 @@ This marks the PROCESS with a MESSAGE, at a particular time point."
 ;; syntax table
 
 (defvar q-mode-syntax-table
-  (let ((q-mode-syntax-table (make-syntax-table)))
-    (modify-syntax-entry ?\" ".  " q-mode-syntax-table) ; treat " as punctuation
-    (modify-syntax-entry ?\/ ".  " q-mode-syntax-table) ; treat / as punctuation
-    (modify-syntax-entry ?\n ">  " q-mode-syntax-table) ; comments are ended by a new line
-    (modify-syntax-entry ?\r ">  " q-mode-syntax-table) ; comments are ended by a new line
-    (modify-syntax-entry ?\. "_  " q-mode-syntax-table) ; treat . as a symbol
-    (modify-syntax-entry ?\_ ".  " q-mode-syntax-table) ; treat _ as punctuation
-    (modify-syntax-entry ?\\ ".  " q-mode-syntax-table) ; treat \ as punctuation
-    (modify-syntax-entry ?\$ ".  " q-mode-syntax-table) ; treat $ as punctuation
-    (modify-syntax-entry ?\% ".  " q-mode-syntax-table) ; treat % as punctuation
-    (modify-syntax-entry ?\& ".  " q-mode-syntax-table) ; treat & as punctuation
-    (modify-syntax-entry ?\+ ".  " q-mode-syntax-table) ; treat + as punctuation
-    (modify-syntax-entry ?\, ".  " q-mode-syntax-table) ; treat , as punctuation
-    (modify-syntax-entry ?\- ".  " q-mode-syntax-table) ; treat - as punctuation
-    (modify-syntax-entry ?\= ".  " q-mode-syntax-table) ; treat < as punctuation
-    (modify-syntax-entry ?\* ".  " q-mode-syntax-table) ; treat * as punctuation
-    (modify-syntax-entry ?\< ".  " q-mode-syntax-table) ; treat < as punctuation
-    (modify-syntax-entry ?\> ".  " q-mode-syntax-table) ; treat > as punctuation
-    (modify-syntax-entry ?\| ".  " q-mode-syntax-table) ; treat | as punctuation
-    (modify-syntax-entry ?\` "_  " q-mode-syntax-table) ; treat ` as symbol
-    q-mode-syntax-table)
+  (let ((table (make-syntax-table)))
+    (modify-syntax-entry ?\" ".  " table) ; treat " as punctuation
+    (modify-syntax-entry ?\/ ".  " table) ; treat / as punctuation
+    (modify-syntax-entry ?\n ">  " table) ; comments are ended by a new line
+    (modify-syntax-entry ?\r ">  " table) ; comments are ended by a new line
+    (modify-syntax-entry ?\. "_  " table) ; treat . as a symbol
+    (modify-syntax-entry ?\_ ".  " table) ; treat _ as punctuation
+    (modify-syntax-entry ?\\ ".  " table) ; treat \ as punctuation
+    (modify-syntax-entry ?\$ ".  " table) ; treat $ as punctuation
+    (modify-syntax-entry ?\% ".  " table) ; treat % as punctuation
+    (modify-syntax-entry ?\& ".  " table) ; treat & as punctuation
+    (modify-syntax-entry ?\+ ".  " table) ; treat + as punctuation
+    (modify-syntax-entry ?\, ".  " table) ; treat , as punctuation
+    (modify-syntax-entry ?\- ".  " table) ; treat - as punctuation
+    (modify-syntax-entry ?\= ".  " table) ; treat < as punctuation
+    (modify-syntax-entry ?\* ".  " table) ; treat * as punctuation
+    (modify-syntax-entry ?\< ".  " table) ; treat < as punctuation
+    (modify-syntax-entry ?\> ".  " table) ; treat > as punctuation
+    (modify-syntax-entry ?\| ".  " table) ; treat | as punctuation
+    (modify-syntax-entry ?\` "_  " table) ; treat ` as symbol
+    table)
   "Syntax table for `q-mode'.")
 
 ;; modes
@@ -629,7 +629,9 @@ This marks the PROCESS with a MESSAGE, at a particular time point."
   )
 
 (defvar q-imenu-generic-expression
-  (list (list nil (concat "^" q-variable-regex) 1))
+  (list
+   (list "variables" (concat "^" q-variable-regex) 1)
+   (list "functions" (concat "^" q-function-regex) 1) )
   "Regular expressions to get q expressions into imenu.")
 
 ;;;###autoload

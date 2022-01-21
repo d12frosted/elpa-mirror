@@ -4,8 +4,8 @@
 
 ;; Author: Junpeng Qiu <qjpchmail@gmail.com>
 ;; Package-Requires: ((emacs "24"))
-;; Package-Version: 20171031.2054
-;; Package-Commit: c5d362169819ee8b8e8954145daee7e260c54921
+;; Package-Version: 20220121.631
+;; Package-Commit: 97b103eea8b18f7e27b0f0be6cb4809a4156c032
 ;; Keywords: extensions
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -361,7 +361,7 @@ exact location of `glpsol'.")
                     "--ranges" gmpl--glpsol-ranges-file-name))
         proc)
     (when gmpl-glpsol-extra-args
-      (setq args (cons gmpl-glpsol-extra-args args)))
+      (setq args (append args (split-string gmpl-glpsol-extra-args))))
     (gmpl--glpsol-output-setup)
     (set-process-filter
      (setq proc (apply #'start-process gmpl--glpsol-process-name
