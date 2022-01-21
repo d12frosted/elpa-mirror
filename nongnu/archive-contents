@@ -91,6 +91,16 @@
 		  (:maintainer "Bryan Gilbert" . "bryan@bryan.sh")
 		  (:authors
 		   ("Bryan Gilbert <http://github/gilbertw1>")))])
+ (bind-map .
+	   [(1 1 2)
+	    ((emacs
+	      (24 3)))
+	    "Bind personal keymaps in multiple locations" tar
+	    ((:url . "https://github.com/justbur/emacs-bind-map")
+	     (:maintainer "Justin Burkett" . "justin@burkett.cc")
+	     (:authors
+	      ("Justin Burkett" . "justin@burkett.cc"))
+	     (:commit . "6977e0fec5c4a3c62a10503798c2a15194167046"))])
  (bison-mode .
 	     [(0 4)
 	      nil "Major mode for editing bison, yacc and lex files." tar
