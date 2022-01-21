@@ -1,1 +1,1 @@
-Simple united editing method.
+Hands-eased united editing method.
