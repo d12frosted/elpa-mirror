@@ -3,13 +3,13 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220120.2206
-;; Package-Commit: 76971e53e16d6debecc21efe1d96c2d42c68a705
+;; Package-Version: 20220122.359
+;; Package-Commit: d25a7e2558202717befbcf79d65d312cea2a05d3
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
 ;; Keywords: convenience, languages
-;; Package-Requires: ((emacs "26.1") (jsonrpc "1.0.14") (flymake "1.2.1") (project "0.3.0") (xref "1.0.1") (eldoc "1.11.0"))
+;; Package-Requires: ((emacs "26.1") (jsonrpc "1.0.14") (flymake "1.2.1") (project "0.3.0") (xref "1.0.1") (eldoc "1.11.0") (seq "2.23"))
 
 ;; This file is part of GNU Emacs.
 
@@ -64,7 +64,6 @@
 (require 'imenu)
 (require 'cl-lib)
 (require 'project)
-(require 'seq)
 (require 'url-parse)
 (require 'url-util)
 (require 'pcase)
@@ -86,6 +85,11 @@
          (not (boundp 'eldoc-documentation-strategy)))
     (load "eldoc")
   (require 'eldoc))
+
+;; Similar issue as above for Emacs 26.3 and seq.el.
+(if (< emacs-major-version 27)
+    (load "seq")
+  (require 'seq))
 
 ;; forward-declare, but don't require (Emacs 28 doesn't seem to care)
 (defvar markdown-fontify-code-blocks-natively)
@@ -367,7 +371,7 @@ This can be useful when using docker to run a language server.")
                       (:kind :detail :documentation :deprecated :preselect
                              :sortText :filterText :insertText :insertTextFormat
                              :textEdit :additionalTextEdits :commitCharacters
-                             :command :data))
+                             :command :data :tags))
       (Diagnostic (:range :message) (:severity :code :source :relatedInformation :codeDescription :tags))
       (DocumentHighlight (:range) (:kind))
       (FileSystemWatcher (:globPattern) (:kind))
@@ -661,7 +665,9 @@ treated as in `eglot-dbind'."
                                     `(:snippetSupport
                                       ,(if (eglot--snippet-expansion-fn)
                                            t
-                                         :json-false))
+                                         :json-false)
+                                      :deprecatedSupport t
+                                      :tagSupport (:valueSet [1]))
                                     :contextSupport t)
              :hover              (list :dynamicRegistration :json-false
                                        :contentFormat
@@ -1824,8 +1830,8 @@ COMMAND is a symbol naming the command."
   "Handle notification telemetry/event.") ;; noop, use events buffer
 
 (cl-defmethod eglot-handle-notification
-  (server (_method (eql textDocument/publishDiagnostics)) &key uri diagnostics
-          &allow-other-keys) ; FIXME: doesn't respect `eglot-strict-mode'
+  (_server (_method (eql textDocument/publishDiagnostics)) &key uri diagnostics
+           &allow-other-keys) ; FIXME: doesn't respect `eglot-strict-mode'
   "Handle notification publishDiagnostics."
   (cl-flet ((eglot--diag-type (sev)
               (cond ((null sev) 'eglot-error)
@@ -2463,6 +2469,12 @@ is not active."
                      (kind (alist-get (plist-get lsp-item :kind)
                                       eglot--kind-names)))
            (intern (downcase kind))))
+       :company-deprecated
+       (lambda (proxy)
+         (when-let ((lsp-item (get-text-property 0 'eglot--lsp-item proxy)))
+           (or (seq-contains-p (plist-get lsp-item :tags)
+                               1)
+               (plist-get lsp-item :deprecated))))
        :company-docsig
        ;; FIXME: autoImportText is specific to the pyright language server
        (lambda (proxy)
@@ -2491,7 +2503,6 @@ is not active."
             (regexp-opt
              (cl-coerce (cl-getf completion-capability :triggerCharacters) 'list))
             (line-beginning-position))))
-       :exclusive 'no
        :exit-function
        (lambda (proxy status)
          (when (eq status 'finished)

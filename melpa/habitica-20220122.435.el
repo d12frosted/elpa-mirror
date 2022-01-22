@@ -20,8 +20,8 @@
 ;; USA
 
 ;; Version: 1.0
-;; Package-Version: 20220121.2315
-;; Package-Commit: 473fc2048ab93b53156c6a1abab98994ad887768
+;; Package-Version: 20220122.435
+;; Package-Commit: 0f86e706683541910742a4bed7b0b722012667de
 ;; Author: Adrien Brochard
 ;; Keywords: habitica todo
 ;; URL: https://github.com/abrochard/emacs-habitica
@@ -259,11 +259,27 @@ DATA is the form to be sent as x-www-form-urlencoded."
   "Gets all the completed user's tasks."
   (habitica--send-request "/tasks/user?type=completedTodos" "GET" ""))
 
+(defun habitica-api-get-task-id-by-name (&optional name)
+  "Get a task id by NAME."
+  (let* ((tasks (habitica-api-get-tasks))
+         (get-task-name-fn (lambda (task)
+                             (cdr (assoc-string "text" task))))
+         (name (or name (completing-read "Please select a task: " (mapcar get-task-name-fn tasks))))
+         (the-task-p-fn (lambda (task)
+                          (string= name (funcall get-task-name-fn task))))
+         (the-task (cl-find-if the-task-p-fn tasks)))
+    (cdr (assoc-string "id" the-task))))
+
 (defun habitica-api-get-task (id)
   "Get a task from task id.
 
 ID is the task id."
   (habitica--send-request (concat "/tasks/" id) "GET" ""))
+
+(defun habitica-api-get-task-by-name (&optional name)
+  "Get a task from task NAME."
+  (let ((id (habitica-api-get-task-id-by-name name)))
+    (habitica-api-get-task id)))
 
 (defun habitica-api-create-task (type name &optional down)
   "Send a post request to create a new user task.
@@ -281,6 +297,14 @@ DOWN is optional, in case of a habit, if you want to be able to downvote the tas
 ID is the id of the task that you are scoring
 DIRECTION is up or down, if the task is a habit."
   (habitica--send-request (concat "/tasks/" id "/score/" direction) "POST" ""))
+
+(defun habitica-api-score-task-by-name (name direction)
+  "Send a post request to score a task.
+
+NAME is the name of the task that you are scoring
+DIRECTION is up or down, if the task is a habit."
+  (let ((id (habitica-api-get-task-id-by-name name)))
+    (habitica-api-score-task id direction)))
 
 (defun habitica-api-get-profile ()
   "Get the user's raw profile data."
