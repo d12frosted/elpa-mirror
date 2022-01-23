@@ -1,0 +1,35 @@
+Package: helm-tree-sitter
+Fetcher: github
+Source:  https://github.com/Giedriusj1/helm-tree-sitter.git
+
+Updating /mnt/store/melpa/working/helm-tree-sitter/
+Checking out origin/HEAD
+Checking out 8ee97eaa59084faad78931c35694fc2d8907e68f
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/helm-tree-sitter/
+  to /tmp/helm-tree-sitter1xvk5H/helm-tree-sitter-20220116.2021
+    helm-tree-sitter-c.el -> helm-tree-sitter-c.el
+    helm-tree-sitter-core.el -> helm-tree-sitter-core.el
+    helm-tree-sitter-cpp.el -> helm-tree-sitter-cpp.el
+    helm-tree-sitter-debug.el -> helm-tree-sitter-debug.el
+    helm-tree-sitter-python.el -> helm-tree-sitter-python.el
+    helm-tree-sitter-rust.el -> helm-tree-sitter-rust.el
+    helm-tree-sitter-utils.el -> helm-tree-sitter-utils.el
+    helm-tree-sitter.el -> helm-tree-sitter.el
+Created helm-tree-sitter-20220116.2021.tar containing:
+  helm-tree-sitter-20220116.2021/
+  helm-tree-sitter-20220116.2021/helm-tree-sitter-c.el
+  helm-tree-sitter-20220116.2021/helm-tree-sitter-core.el
+  helm-tree-sitter-20220116.2021/helm-tree-sitter-cpp.el
+  helm-tree-sitter-20220116.2021/helm-tree-sitter-debug.el
+  helm-tree-sitter-20220116.2021/helm-tree-sitter-pkg.el
+  helm-tree-sitter-20220116.2021/helm-tree-sitter-python.el
+  helm-tree-sitter-20220116.2021/helm-tree-sitter-rust.el
+  helm-tree-sitter-20220116.2021/helm-tree-sitter-utils.el
+  helm-tree-sitter-20220116.2021/helm-tree-sitter.el
+Built helm-tree-sitter in 4.095s, finished at 2022-01-23T05:59:01+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  438 Jan 23 05:59 packages/helm-tree-sitter-20220116.2021.entry
+ 52K -rw-r--r-- 1 root root  50K Jan 23 05:59 packages/helm-tree-sitter-20220116.2021.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 23 05:59 packages/helm-tree-sitter-badge.svg
+4.0K -rw-r--r-- 1 root root  439 Jan 23 05:59 packages/helm-tree-sitter-readme.txt

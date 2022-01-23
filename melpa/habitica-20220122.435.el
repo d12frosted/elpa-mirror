@@ -21,7 +21,7 @@
 
 ;; Version: 1.0
 ;; Package-Version: 20220122.435
-;; Package-Commit: 0f86e706683541910742a4bed7b0b722012667de
+;; Package-Commit: c511cbcb923c250bec9e218d2e2b8e0ca59abf0d
 ;; Author: Adrien Brochard
 ;; Keywords: habitica todo
 ;; URL: https://github.com/abrochard/emacs-habitica

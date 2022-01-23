@@ -1,5 +1,5 @@
 
-A time tracker in Emacs with a nice interface
+Friendly and powerful time tracker and analyzer.
 
 Largely modelled after the Android application, [A Time Tracker](https://github.com/netmackan/ATimeTracker)
 

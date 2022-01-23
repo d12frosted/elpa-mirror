@@ -1,0 +1,14 @@
+(helm-tree-sitter .
+		  [(20220116 2021)
+		   ((emacs
+		     (25 1))
+		    (helm
+		     (3 6 2))
+		    (tree-sitter
+		     (0 16 1)))
+		   "Helm interface for tree-sitter" tar
+		   ((:commit . "8ee97eaa59084faad78931c35694fc2d8907e68f")
+		    (:authors
+		     ("Giedrius Jonikas" . "giedriusj1@gmail.com"))
+		    (:maintainer "Giedrius Jonikas" . "giedriusj1@gmail.com")
+		    (:url . "https://github.com/Giedriusj1/helm-tree-sitter"))])
