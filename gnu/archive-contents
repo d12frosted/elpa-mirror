@@ -578,17 +578,18 @@
 		  ("Daiki Ueno" . "ueno@gnu.org"))
 		 (:maintainer nil . "emacs-devel@gnu.org"))])
  (debbugs .
-	  [(0 29)
+	  [(0 30)
 	   ((emacs
 	     (25 1))
 	    (soap-client
 	     (3 1 5)))
 	   "SOAP library to access debbugs servers" tar
-	   ((:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
+	   ((:keywords "comm" "hypermedia")
+	    (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	    (:authors
 	     ("Michael Albinus" . "michael.albinus@gmx.de"))
-	    (:keywords "comm" "hypermedia")
-	    (:url . "https://elpa.gnu.org/packages/debbugs.html"))])
+	    (:url . "https://elpa.gnu.org/packages/debbugs.html")
+	    (:commit . "e875a34129ddddefd88895017701607e8affa6d7"))])
  (delight .
 	  [(1 7)
 	   ((cl-lib
