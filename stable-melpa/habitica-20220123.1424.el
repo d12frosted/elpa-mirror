@@ -20,8 +20,8 @@
 ;; USA
 
 ;; Version: 1.0
-;; Package-Version: 20220122.435
-;; Package-Commit: c511cbcb923c250bec9e218d2e2b8e0ca59abf0d
+;; Package-Version: 20220123.1424
+;; Package-Commit: cbb5a0f11a8a91111d753c25c59582741ae49f2e
 ;; Author: Adrien Brochard
 ;; Keywords: habitica todo
 ;; URL: https://github.com/abrochard/emacs-habitica
@@ -143,11 +143,18 @@
 (defvar habitica-max-mp 0)
 (defvar habitica-gold 0)
 (defvar habitica-silver 0)
+(defvar habitica-class "")
 
 (defvar habitica-status-bar-length 20)
 
 (defvar habitica-difficulty '((1 . "easy") (1.5 . "medium") (2 . "hard"))
   "Assoc list of priority/difficulty.")
+
+(defvar habitica-spells '(("mage" "fireball" "mpheal" "earth" "frost")
+                          ("warrior" "smash" "defensiveStance" "valorousPresence" "intimidate")
+                          ("rogue" "pickPocket" "backStab" "toolsOfTrade" "stealth")
+                          ("healer" "heal" "protectAura" "brightness" "healAll"))
+  "Assoc list of class and available spells.")
 
 (defvar habitica-tags-buffer-name "*habitica tags*")
 
@@ -396,6 +403,14 @@ Options are 0.1, 1, 1.5, 2; eqivalent of Trivial, Easy, Medium, Hard."
   "Post chat MESSAGE to a group."
   (habitica--send-request (format "/groups/%s/chat" group-id) "POST" (concat "message=" (url-encode-url message))))
 
+(defun habitica-api-cast-skill (&optional spell target-id)
+  (let* ((available-spells (cdr (assoc-string habitica-class habitica-spells)))
+         (spell (or spell
+                    (completing-read "Select a skill: " available-spells)))
+         (query-paramaters (if target-id
+                               (format "?targetId=%s" target-id)
+                             "")))
+    (habitica--send-request (format "/user/class/cast/%s%s" spell query-paramaters) "POST" "")))
 
 ;;;; Utilities
 (defun habitica--task-checklist (task)
@@ -688,6 +703,7 @@ PROFILE is the JSON formatted response."
   (setq habitica-max-mp (assoc-default 'maxMP profile)) ;get max mp
   (setq habitica-gold (string-to-number (format "%d" (assoc-default 'gp profile)))) ;get gold
   (setq habitica-silver (string-to-number (format "%d" (* 100 (- (assoc-default 'gp profile) habitica-gold))))) ;get silver
+  (setq habitica-class (assoc-default 'class stats))
   )
 
 (defun habitica--format-status-bar (current max length)
@@ -715,7 +731,7 @@ SHOW-NOTIFICATION, if true, it will add notification tags."
     (habitica--set-profile stats)
     (insert "* Stats\n")
     (insert (concat "** Level  : " (format "%d" habitica-level) "\n"))
-    (insert (concat "** Class  : " (assoc-default 'class stats) "\n"))
+    (insert (concat "** Class  : " habitica-class "\n"))
     (insert (concat "** Health : "
                     (habitica--format-status-bar habitica-hp habitica-max-hp habitica-status-bar-length)
                     "  "

@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220122.359
-;; Package-Commit: d25a7e2558202717befbcf79d65d312cea2a05d3
+;; Package-Version: 20220123.1406
+;; Package-Commit: 57779f9c3940a188e2c089758d095d05cf0a0e24
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -2474,7 +2474,7 @@ is not active."
          (when-let ((lsp-item (get-text-property 0 'eglot--lsp-item proxy)))
            (or (seq-contains-p (plist-get lsp-item :tags)
                                1)
-               (plist-get lsp-item :deprecated))))
+               (eq t (plist-get lsp-item :deprecated)))))
        :company-docsig
        ;; FIXME: autoImportText is specific to the pyright language server
        (lambda (proxy)

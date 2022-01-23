@@ -4,10 +4,10 @@
 
 ;; Author: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: http://github.com/redguardtoo/elpa-mirror
-;; Package-Version: 20210614.302
-;; Package-Commit: a3e5b974ca9a7004ed6cf72f9d831ba525432c67
+;; Package-Version: 20220123.1237
+;; Package-Commit: 3e0fe0f91d1c5798752c255b89950617f88b8d9e
 ;; Package-Requires: ((emacs "25.1"))
-;; Version: 2.1.5
+;; Version: 2.2.0
 ;; Keywords: tools
 ;;
 ;; This file is not part of GNU Emacs.
@@ -43,7 +43,7 @@
 ;; Usage in Emacs,
 ;; Run `elpamr-create-mirror-for-installed'.
 ;;
-;; CLI program tar is required.  It's already installed on Windows10/Linux/macOS.
+;; CLI program tar is required.  It's bundled with Windows10/Linux/macOS.
 ;;
 ;; Usage in Shell,
 ;;   Emacs --batch -l ~/.emacs.d/init.el
@@ -52,15 +52,30 @@
 ;;         --eval='(elpamr-create-mirror-for-installed)
 ;;
 ;; Use the repository created by elpa-mirror,
-;;   - Insert `(setq package-archives '(("myelpa" . "~/myelpa/")))` into ~/.emacs
+;;   - Add `(setq package-archives '(("myelpa" . "~/myelpa/")))` into ~/.emacs
 ;;   - Restart Emacs
 ;;
 ;; Tips,
 ;;   - `elpamr-exclude-packages' excludes packages
+;;
 ;;   - `elpamr-tar-command-exclude-patterns' excludes file and directories in
 ;;   package directory.
+;;
+;;   - `elpamr-exclude-patterns-filter-function' lets users define a function to
+;;     exclude files and directories per package.
+;;
+;;     Below setup adds directory "bin/" into package "vagrant-tramp".
+;;
+;;     (setq elpamr-exclude-patterns-filter-function
+;;           (lambda (package-dir)
+;;             (let ((patterns elpamr-tar-command-exclude-patterns))
+;;               (when (string-match "vagrant-tramp" package-dir)
+;;                 (setq patterns (remove "*/bin" patterns)))
+;;               patterns)))
+
 ;;   - You can also setup repositories on Dropbox and Github.
 ;;   See https://github.com/redguardtoo/elpa-mirror for details.
+;;
 
 ;;; Code:
 (require 'package)
@@ -109,6 +124,13 @@ Note that a slash at the start or the end of a pattern will cause
 it to match nothing."
   :type '(repeat string)
   :group 'elpa-mirror)
+
+(defcustom elpamr-exclude-patterns-filter-function nil
+  "Filter `elpamr-tar-command-exclude-patterns' before using it per package.
+It's a function with one parameter which is package directory being processed.
+The function returns the result to replace `elpamr-tar-command-exclude-patterns'."
+  :group 'elpa-mirror
+  :type 'hook)
 
 (defcustom elpamr-tar-executable
   "tar"
@@ -237,7 +259,10 @@ command compatible with BSD tar instead of GNU tar."
   ;; and then passing it as an argument improves performance.
   (let* ((exclude-opts (mapcar (lambda (s)
                                  (concat "--exclude=" (if is-bsd-tar "^" "") s))
-                               elpamr-tar-command-exclude-patterns))
+                               (if elpamr-exclude-patterns-filter-function
+                                   (funcall elpamr-exclude-patterns-filter-function
+                                            dir-to-archive)
+                                 elpamr-tar-command-exclude-patterns)))
          ;; set pwd of process
          (default-directory working-dir)
          ;; create tar using GNU tar
@@ -275,7 +300,7 @@ command compatible with BSD tar instead of GNU tar."
 (defun elpamr-version ()
   "Current version."
   (interactive)
-  (message "2.1.5"))
+  (message "2.2.0"))
 
 (defun elpamr--win-executable-find (exe)
   "Find EXE on windows."
