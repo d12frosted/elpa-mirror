@@ -1,0 +1,11 @@
+(tzc .
+     [(20220123 700)
+      ((emacs
+	(27 1)))
+      "Converts time between different time zones" single
+      ((:commit . "1477a61cf46c5a4418b45fd6ff9b8637a56355c5")
+       (:authors
+	("Md Arif Shaikh" . "arifshaikh.astro@gmail.com"))
+       (:maintainer "Md Arif Shaikh" . "arifshaikh.astro@gmail.com")
+       (:keywords "convenience")
+       (:url . "https://github.com/md-arif-shaikh/tzc"))])
