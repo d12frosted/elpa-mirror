@@ -1,0 +1,28 @@
+Package: asm-blox
+Fetcher: github
+Source:  https://github.com/zkry/asm-blox.git
+
+Updating /mnt/store/melpa/working/asm-blox/
+Checking out origin/HEAD
+Checking out 8bc20ab442765dffc6c710c1922757c2df3675a4
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/asm-blox/
+  to /tmp/asm-bloxjQ7NAY/asm-blox-20220124.53
+    asm-blox-puzzles.el -> asm-blox-puzzles.el
+    asm-blox.el -> asm-blox.el
+    asm-blox.info -> asm-blox.info
+Created asm-blox-20220124.53.tar containing:
+  asm-blox-20220124.53/
+  asm-blox-20220124.53/asm-blox-pkg.el
+  asm-blox-20220124.53/asm-blox-puzzles.el
+  asm-blox-20220124.53/asm-blox.el
+  asm-blox-20220124.53/asm-blox.info
+  asm-blox-20220124.53/dir
+Built asm-blox in 3.605s, finished at 2022-01-24T01:54:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  346 Jan 23 23:01 packages/asm-blox-20220118.1.entry
+212K -rw-r--r-- 1 root root 210K Jan 23 23:01 packages/asm-blox-20220118.1.tar
+4.0K -rw-r--r-- 1 root root  347 Jan 24 01:54 packages/asm-blox-20220124.53.entry
+212K -rw-r--r-- 1 root root 210K Jan 24 01:54 packages/asm-blox-20220124.53.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 24 01:54 packages/asm-blox-badge.svg
+4.0K -rw-r--r-- 1 root root  482 Jan 24 01:54 packages/asm-blox-readme.txt

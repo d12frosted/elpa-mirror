@@ -1,0 +1,13 @@
+(accent .
+	[(20220121 6)
+	 ((emacs
+	   (24 1))
+	  (popup
+	   (0 5 8)))
+	 "Popup for accented characters (diacritics)" single
+	 ((:commit . "04642cb6aea0281bd489df737b13d7ef7db49626")
+	  (:authors
+	   ("Elia Scotto" . "eliascotto94@gmail.com"))
+	  (:maintainer "Elia Scotto" . "eliascotto94@gmail.com")
+	  (:keywords "i18n")
+	  (:url . "https://github.com/elias94/accent"))])

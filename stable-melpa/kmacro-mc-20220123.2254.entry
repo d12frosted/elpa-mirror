@@ -1,0 +1,11 @@
+(kmacro-mc .
+	   [(20220123 2254)
+	    ((emacs
+	      (27 2)))
+	    "Multiple cursors emulation with keyboard macros" single
+	    ((:commit . "c7fe2f8200ae993787246ad6c8a5021b4946b118")
+	     (:authors
+	      ("Wojciech Siewierski"))
+	     (:maintainer "Wojciech Siewierski")
+	     (:keywords "convenience")
+	     (:url . "https://github.com/vifon/kmacro-mc.el"))])
