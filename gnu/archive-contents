@@ -468,7 +468,7 @@
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de")))])
  (coterm .
-	 [(1 3)
+	 [(1 4)
 	  ((emacs
 	    (26 1)))
 	  "Terminal emulation for comint" tar
@@ -476,7 +476,8 @@
 	   (:keywords "processes")
 	   (:maintainer "jakanakaevangeli" . "jakanakaevangeli@chiru.no")
 	   (:authors
-	    ("jakanakaevangeli" . "jakanakaevangeli@chiru.no")))])
+	    ("jakanakaevangeli" . "jakanakaevangeli@chiru.no"))
+	   (:commit . "28ea65f0f88b65e561359d0fb8fc8dd84d6258d6"))])
  (counsel .
 	  [(0 13 4)
 	   ((emacs
