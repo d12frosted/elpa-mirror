@@ -4,8 +4,8 @@
 
 ;; Author: Aliaksey Kandratsenka <alk@tut.by>
 ;; Keywords: 
-;; Package-Version: 20100124.1028
-;; Package-Commit: ac89ab8b7691a165ef3007cb84417125cfc0632e
+;; Package-Version: 20220125.506
+;; Package-Commit: 8802555ecdab8b50bb64181798497c10cdb5034b
 
 ;; This file is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -137,7 +137,7 @@
 	  chars))
 
 (defun redsl-to-regexp-rec (re)
-  (case (car re)
+  (cl-case (car re)
     (group
      (format "\\(?:%s\\)" (redsl-to-regexp-rec (cadr re))))
     (cap-group
