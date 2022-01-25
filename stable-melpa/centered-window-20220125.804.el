@@ -2,8 +2,8 @@
 ;;
 ;; Author: Anler Hernández Peral <inbox+emacs@anler.me>
 ;; Version: 1.4.0
-;; Package-Version: 20200426.1053
-;; Package-Commit: f50859941ab5c7cbeaee410f2d38716252b552ac
+;; Package-Version: 20220125.804
+;; Package-Commit: 80965f6c6afe8d918481433984b493de72af5399
 ;; Contributors:
 ;;    Mickael Kerjean <https://github.com/mickael-kerjean>
 ;;    Pierre Lecocq   <https://github.com/pierre-lecocq>
@@ -182,7 +182,11 @@ by this function."
   (remove-hook 'window-configuration-change-hook #'cwm-center-windows)
   (remove-hook 'window-size-change-functions #'cwm-center-windows-frame)
   (cwm-center-windows)
-  (set-frame-parameter nil 'internal-border-width 0)
+  (set-frame-parameter
+   nil
+   'internal-border-width
+   (or (alist-get 'internal-border-width default-frame-alist)
+       0))
   (cwm-unbind-fringe-mouse-events))
 
 (defun cwm-center-windows-frame (frame)
@@ -228,8 +232,8 @@ by this function."
                   0))
                0))
          (ratio (/ (* n cwm-left-fringe-ratio) 100))
-         (left-width (* pixel (if (> n 0) (+ n ratio) n)))
-         (right-width (* pixel (if (> n 0) (- n ratio) n))))
+         (left-width (and mode-active-p (* pixel (if (> n 0) (+ n ratio) n))))
+         (right-width (and mode-active-p (* pixel (if (> n 0) (- n ratio) n)))))
     `(,left-width . ,right-width)))
 
 (defun cwm-toggle-bind-fringe-mouse-events (&optional bind direction-command-alist)

@@ -4,8 +4,8 @@
 ;;   Phil Hagelberg, Doug Alcorn, Will Farrington, Chen Bin
 ;;
 ;; Version: 6.1.2
-;; Package-Version: 20210924.952
-;; Package-Commit: a62eaa0b07d8d22f309ec07992283f0fc340ce17
+;; Package-Version: 20220125.726
+;; Package-Commit: 204b3d489a606c6e7b83518e46be3bbcef1bcb3d
 ;; Author: Phil Hagelberg, Doug Alcorn, and Will Farrington
 ;; Maintainer: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: https://github.com/redguardtoo/find-file-in-project
@@ -596,6 +596,7 @@ If CHECK-ONLY is true, only do the check."
          (i 0)
          j
          (dirs '(":\\\\cygwin64\\\\bin\\\\"
+                 ":\\\\cygwin-portable\\\\cygwin\\\\bin\\\\"
                  ":\\\\msys64\\\\usr\\\\bin\\\\"))
          rlt)
     (while (and (not rlt)
