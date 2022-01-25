@@ -5,8 +5,8 @@
 ;; Author: Md Arif Shaikh <arifshaikh.astro@gmail.com>
 ;; Homepage: https://github.com/md-arif-shaikh/tzc
 ;; Version: 0.0.1
-;; Package-Version: 20220124.58
-;; Package-Commit: 08566843f598e645aec25d7d75e486b47ab8ef9e
+;; Package-Version: 20220125.1331
+;; Package-Commit: 080d8b161300708fb5b0960a7e9582840fbda040
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: convenience
 
@@ -42,6 +42,10 @@
   "Color to indicate a time zone label.")
 (defvar tzc-color--time-string "#56B6C2"
   "Color to indicate a time string.")
+(defvar tzc-color--date-string "#C678DD"
+  "Color to indicate a date string.")
+(defvar tzc-color--offset-string "#E5C07B"
+  "Color to indicate a offset string.")
 
 (defface tzc-face-time-zone-label
   `((t :foreground ,tzc-color--time-zone-label
@@ -59,8 +63,29 @@
   "Face for time string."
   :group 'tzc-face)
 
+(defface tzc-face-date-string
+  `((t :foreground ,tzc-color--date-string
+       :weight extra-bold
+       :box nil
+       :underline nil))
+  "Face for time string."
+  :group 'tzc-face)
+
+(defface tzc-face-offset-string
+  `((t :foreground ,tzc-color--offset-string
+       :weight extra-bold
+       :box nil
+       :underline nil))
+  "Face for time string."
+  :group 'tzc-face)
+
 (defcustom tzc-use-date-in-world-clock t
   "Whether to use full date in world clock buffer."
+  :type 'boolean
+  :group 'tzc)
+
+(defcustom tzc-use-offset-in-world-clock t
+  "Whether to display offset in world clock buffer."
   :type 'boolean
   :group 'tzc)
 
@@ -181,10 +206,11 @@ Returns a list of the form `(min hour day)`."
 				      to-zone-day (1+ to-zone-day))))
     (list to-zone-minute to-zone-hour to-zone-day)))
 
-(defun tzc--get-converted-time-string (time-string from-zone to-zone &optional use-date)
+(defun tzc--get-converted-time-string (time-string from-zone to-zone &optional use-date use-offset)
   "Convert a given time as given in TIME-STRING from FROM-ZONE to TO-ZONE.
 If USE-DATE is non-nil then the full date and day is shown,
-otherwise only relative information is shown."
+otherwise only relative information is shown. If USE-OFFSET is non-nil
+then offset will be displayed."
   (unless (string-match-p ":" time-string)
     (user-error "Seems like the time is not specified in HH:MM format.  This might lead to
 erroneous calculation.  Please use correct format for time!"))
@@ -193,14 +219,19 @@ erroneous calculation.  Please use correct format for time!"))
 	 (hour (nth 1 to-zone-list))
 	 (day (nth 2 to-zone-list))
 	 (to-time-string (format "%02d:%02d" hour minute))
-	 (to-day-string ""))
+	 (to-day-string "")
+	 (offset-string))
     (if use-date
 	(setq to-day-string (format-time-string " %a %d %B %Y" (time-add (current-time) (days-to-time day))))
       (setq to-day-string (cond
 			   ((= day 0) "")
 			   ((> day 0) (format " +%sD" day))
 			   ((< day 0) (format " %sD" day)))))
-    (concat to-time-string to-day-string)))
+    (when use-offset
+      (setq offset-string (format " %s" (tzc--get-offset to-zone))))
+    (concat (propertize to-time-string 'face 'tzc-face-time-string)
+	    (propertize to-day-string 'face 'tzc-face-date-string)
+	    (propertize offset-string 'face 'tzc-face-offset-string))))
 
 (defun tzc--time-list (time-zone)
   "A list of times to display for completion based on TIME-ZONE."
@@ -299,7 +330,7 @@ See `tzc-world-clock'."
         (erase-buffer)
         (dolist (to-zone (tzc--favourite-time-zones))
 	  (unless (string-equal to-zone nil)
-	    (insert (propertize (tzc--get-time-zone-label to-zone) 'face 'tzc-face-time-zone-label) " " (propertize (tzc--get-converted-time-string (format-time-string "%H:%M") nil to-zone tzc-use-date-in-world-clock) 'face 'tzc-face-time-string) "\n")))
+	    (insert (propertize (tzc--get-time-zone-label to-zone) 'face 'tzc-face-time-zone-label) " " (tzc--get-converted-time-string (format-time-string "%H:%M") nil to-zone tzc-use-date-in-world-clock tzc-use-offset-in-world-clock) "\n")))
 	(align-regexp (point-min) (point-max) "\\(\\s-*\\) ")
         (goto-char op)))))
 
@@ -309,10 +340,12 @@ See `tzc-world-clock'."
   (when (get-buffer tzc-world-clock-buffer-name)
     (with-current-buffer (get-buffer tzc-world-clock-buffer-name)
       (let* ((inhibit-read-only t)
+	     (op (point))
 	     (first-line)
 	     (time-zone-list)
 	     (time)
 	     (hour-now)
+	     (min-now)
 	     (hour-previous-or-next)
 	     (zone))
 	(goto-char (point-min))
@@ -320,17 +353,21 @@ See `tzc-world-clock'."
 	(setq time-zone-list (split-string first-line))
 	(setq time (nth 1 time-zone-list))
 	(setq hour-now (string-to-number (substring time 0 2)))
+	(setq min-now (string-to-number (substring time 3 5)))
 	(setq hour-previous-or-next (if (string-equal previous-or-next "previous")
-				     (1- hour-now)
-				   (1+ hour-now)))
+					(if (> min-now 0)
+					    hour-now
+					  (1- hour-now))
+				      (1+ hour-now)))
 	(cond ((>= hour-previous-or-next 24) (setq hour-previous-or-next (- hour-previous-or-next 24)))
 	      ((< hour-previous-or-next 0) (setq hour-previous-or-next (+ hour-previous-or-next 24))))
 	(setq zone (car (car tzc-favourite-time-zones-alist)))
         (erase-buffer)
         (dolist (to-zone (tzc--favourite-time-zones))
 	  (unless (string-equal to-zone nil)
-	    (insert  (propertize (tzc--get-time-zone-label to-zone) 'face 'tzc-face-time-zone-label) " " (propertize (tzc--get-converted-time-string (format "%s:00" hour-previous-or-next) zone to-zone tzc-use-date-in-world-clock) 'face 'tzc-face-time-string) "\n")))
-	(align-regexp (point-min) (point-max) "\\(\\s-*\\) ")))))
+	    (insert  (propertize (tzc--get-time-zone-label to-zone) 'face 'tzc-face-time-zone-label) " " (tzc--get-converted-time-string (format "%s:00" hour-previous-or-next) zone to-zone tzc-use-date-in-world-clock tzc-use-offset-in-world-clock) "\n")))
+	(align-regexp (point-min) (point-max) "\\(\\s-*\\) ")
+	(goto-char op)))))
 
 ;;;###autoload
 (defun tzc-world-clock-previous ()
@@ -360,7 +397,7 @@ See `tzc-world-clock'."
     (pop-to-buffer tzc-world-clock-buffer-name)
     (dolist (to-zone (tzc--favourite-time-zones))
       (unless (string-equal to-zone nil)
-	(insert (propertize (tzc--get-time-zone-label to-zone) 'face 'tzc-face-time-zone-label) " " (propertize (tzc--get-converted-time-string (format-time-string "%H:%M") nil to-zone tzc-use-date-in-world-clock) 'face 'tzc-face-time-string) "\n")))
+	(insert (propertize (tzc--get-time-zone-label to-zone) 'face 'tzc-face-time-zone-label) " " (tzc--get-converted-time-string (format-time-string "%H:%M") nil to-zone tzc-use-date-in-world-clock tzc-use-offset-in-world-clock) "\n")))
     (align-regexp (point-min) (point-max) "\\(\\s-*\\) "))
   (tzc-world-clock-mode))
 

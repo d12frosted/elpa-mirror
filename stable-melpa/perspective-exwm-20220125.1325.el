@@ -1,13 +1,13 @@
 ;;; perspective-exwm.el --- Better integration for perspective.el and EXWM -*- lexical-binding: t -*-
 
-;; Copyright (C) 2021 Korytov Pavel
+;; Copyright (C) 2022 Korytov Pavel
 ;; Copyright (C) 2008-2020 Natalie Weizenbaum <nex342@gmail.com>
 
 ;; Author: Korytov Pavel <thexcloud@gmail.com>
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
 ;; Version: 0.1.4
-;; Package-Version: 20220123.1529
-;; Package-Commit: c758a6d0c0aab0643cb11ce40a5fe0abb9de3f5c
+;; Package-Version: 20220125.1325
+;; Package-Commit: 2a3d9c0af98e20876f956d0d822baba25561d1f8
 ;; Package-Requires: ((emacs "27.1") (burly "0.2-pre") (exwm "0.26") (perspective "2.17"))
 ;; Homepage: https://github.com/SqrtMinusOne/perspective-exwm.el
 
