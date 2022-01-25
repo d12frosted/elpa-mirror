@@ -2,8 +2,8 @@
 
 ;; Author: Dan Davison <dandavison7@gmail.com>
 ;; URL: https://github.com/dandavison/magit-delta
-;; Package-Version: 20210104.1541
-;; Package-Commit: 56cdffd377279589aa0cb1df99455c098f1848cf
+;; Package-Version: 20220125.50
+;; Package-Commit: 5fc7dbddcfacfe46d3fd876172ad02a9ab6ac616
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "25.1") (magit "20200426") (xterm-color "2.0"))
 
@@ -45,7 +45,7 @@
 
 (defcustom magit-delta-delta-args
   `("--max-line-distance" "0.6"
-    "--24-bit-color" ,(if xterm-color--support-truecolor "always" "never")
+    "--true-color" ,(if xterm-color--support-truecolor "always" "never")
     "--color-only")
   "Delta command line arguments as a list of strings.
 
@@ -68,9 +68,9 @@ will be added if not present."
 (defun magit-delta--make-delta-args ()
   "Make final list of delta command-line arguments."
   (let ((args magit-delta-delta-args))
-    (unless (-intersection '("--theme" "--light" "--dark") args)
+    (unless (-intersection '("--syntax-theme" "--light" "--dark") args)
       (setq args (nconc
-                  (list "--theme"
+                  (list "--syntax-theme"
                         (if (eq (frame-parameter nil 'background-mode) 'dark)
                             magit-delta-default-dark-theme
                           magit-delta-default-light-theme))
