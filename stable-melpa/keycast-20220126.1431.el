@@ -6,8 +6,8 @@
 ;; Homepage: https://github.com/tarsius/keycast
 
 ;; Package-Requires: ((emacs "25.3"))
-;; Package-Commit: 72d9add8ba16e0cae8cfcff7fc050fa75e493b4e
-;; Package-Version: 20220117.1747
+;; Package-Commit: 99693da56ba81e1d1239770f207e9ff8a7a3a000
+;; Package-Version: 20220126.1431
 ;; Package-X-Original-Version: 1.1.3
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
@@ -41,13 +41,20 @@
   (require 'cl-lib)
   (require 'subr-x))
 
+(define-obsolete-variable-alias 'keycast-insert-after
+  'keycast-mode-line-insert-after "Keycast 2.0.0")
+(define-obsolete-variable-alias 'keycast-remove-tail-elements
+  'keycast-mode-line-remove-tail-elements "Keycast 2.0.0")
+(define-obsolete-variable-alias 'keycast-window-predicate
+  'keycast-mode-line-window-predicate "Keycast 2.0.0")
+
 ;;; Options
 
 (defgroup keycast nil
   "Show the current command and its key binding in the mode line."
   :group 'applications)
 
-(defcustom keycast-insert-after 'mode-line-buffer-identification
+(defcustom keycast-mode-line-insert-after 'mode-line-buffer-identification
   "The position in `mode-line-format' where `keycast-mode-line' is inserted.
 
 Enabling `keycast-mode' inserts the element `keycast-mode-line'
@@ -60,7 +67,7 @@ into `mode-line-format' after the element specified here."
                        sexp)
                (boolean :tag "Remove following elements")))
 
-(defcustom keycast-remove-tail-elements t
+(defcustom keycast-mode-line-remove-tail-elements t
   "Whether enabling `keycast-mode' removes elements to the right.
 
 When this is non-nil, then enabling `keycast-mode' not only
@@ -69,7 +76,7 @@ removes all elements to the right of where that was inserted."
   :group 'keycast
   :type 'boolean)
 
-(defcustom keycast-window-predicate 'keycast-active-frame-bottom-right-p
+(defcustom keycast-mode-line-window-predicate 'keycast-active-frame-bottom-right-p
   "Whether to display the binding in the mode line of the selected window.
 
 This predicate is used while updating the mode line of a window
@@ -101,10 +108,10 @@ with no argument and acts on `selected-window'.
   :group 'keycast
   :type 'function)
 
-(defcustom keycast-mode-line-format "%s%k%c%r"
+(defcustom keycast-mode-line-format "%10s%k%c%r"
   "The format spec used by `keycast-mode-line'.
 
-%s `keycast-separator-width' spaces.
+%s Some spaces, intended to be used like so: %10s.
 %k The key using the `keycast-key' face and padding.
 %K The key with no styling and without any padding.
 %c The command using the `keycast-command' face.
@@ -115,46 +122,55 @@ with no argument and acts on `selected-window'.
   :group 'keycast
   :type 'integer)
 
-(defcustom keycast-separator-width 10
-  "How many spaces to insert before the key binding."
+(defcustom keycast-tab-bar-location 'tab-bar-format-align-right
+  "The location in `tab-bar-format' where `keycast-tab-bar' is inserted.
+
+Enabling `keycast-tab-bar-mode' inserts the element
+`keycast-tab-bar' into `tab-tab-bar-format' at the location
+specified here.
+
+If the value is `beginning' or `end', then insert as the first or
+last element.  If the value is `replace', then insert as the only
+element until the mode is disabled again.
+
+Otherwise the value has to be a function that should be a member
+of the format list.  `keycast-tab-bar' is inserted after that
+function if it is a member or at the end of the list if not, in
+which case a warning is shown.
+
+As a special case it the value is `tab-bar-format-align-right'
+but that isn't a member yet, then insert that followed by
+`keycast-tab-bar', without showing a warning."
+  :package-version '(keycast . "2.0.0")
+  :group 'keycast
+  :type
+  '(choice
+    (const :tag "Insert after tab-bar-format-add-tab" tab-bar-format-add-tab)
+    (const :tag "Insert after tab-bar-format-align-right" tab-bar-format-align-right)
+    (const :tag "Insert after tab-bar-format-global" tab-bar-format-global)
+    (function :tag "Insert after function")
+    (const :tag "Insert as first element" beginning)
+    (const :tag "Insert as last element" end)
+    (const :tag "Replace all other elements" replace)))
+
+(defcustom keycast-tab-bar-format "%k%c%r"
+  "The format spec used by `keycast-tab-bar'.
+
+%s Some spaces, intended to be used like so: %10s.
+%k The key using the `keycast-key' face and padding.
+%K The key with no styling and without any padding.
+%c The command using the `keycast-command' face.
+%C The command with no styling.
+%r The times the command was repeated.
+%R The times the command was repeated using the `shadow' face."
   :group 'keycast
   :type 'integer)
 
-(defcustom keycast-substitute-alist nil
-  "Alist used to substituted events and/or commands for display.
-
-Occasionally it might be necessary to pretend you pressed another
-key than the one you actually pressed (because watchers don't
-care about your weird key bindings), or to hide certain commands
-\(such as `self-insert-command').  This option allows doing that
-and more.
-
-Each element has the form (MATCH EVENT COMMAND).  MATCH is an
-event or a command.  When a command is invoked then this package
-looks for a MATCH for that.  If there is a match, then that the
-respective EVENT and COMMAND are used.  If not, then it looks
-for a MATCH for that instead.
-
-If either EVENT or COMMAND is nil, then neither the event nor
-the command is shown (regardless of the value of the other).
-Otherwise if EVENT is t then the actual event is shown, else
-it has to be a string to be shown instead.  Likewise COMMAND
-can be t to show the actual COMMAND or a symbol to be shown
-instead."
+(defcustom keycast-tab-bar-minimal-width 40
+  "The minimal width of `keycast-tab-bar'."
+  :package-version '(keycast . "2.0.0")
   :group 'keycast
-  :type '(repeat
-          (list (choice :format "%{Actual event/command%}: %[Value Menu%] %v"
-                        (string  :tag "Event")
-                        (symbol  :tag "Command")
-                        (const   :tag "Lambda" t))
-                (choice :format "%{Display event%}:        %[Value Menu%] %v"
-                        (const   :tag "Omit binding" nil)
-                        (const   :tag "Use actual event" t)
-                        (string  :tag "Substitute event"))
-                (choice :format "%{Display command%}:      %[Value Menu%] %v"
-                        (const   :tag "Omit binding" nil)
-                        (const   :tag "Use actual command" t)
-                        (symbol  :tag "Substitute command")))))
+  :type 'integer)
 
 (defcustom keycast-log-format "%-20K%C%R\n"
   "The format spec used by `keycast-log-mode'.
@@ -200,9 +216,44 @@ instead."
   :group 'keycast
   :type 'string)
 
+(defcustom keycast-substitute-alist nil
+  "Alist used to substituted events and/or commands for display.
+
+Occasionally it might be necessary to pretend you pressed another
+key than the one you actually pressed (because watchers don't
+care about your weird key bindings), or to hide certain commands
+\(such as `self-insert-command').  This option allows doing that
+and more.
+
+Each element has the form (MATCH EVENT COMMAND).  MATCH is an
+event or a command.  When a command is invoked then this package
+looks for a MATCH for that.  If there is a match, then that the
+respective EVENT and COMMAND are used.  If not, then it looks
+for a MATCH for that instead.
+
+If either EVENT or COMMAND is nil, then neither the event nor
+the command is shown (regardless of the value of the other).
+Otherwise if EVENT is t then the actual event is shown, else
+it has to be a string to be shown instead.  Likewise COMMAND
+can be t to show the actual COMMAND or a symbol to be shown
+instead."
+  :group 'keycast
+  :type '(repeat
+          (list (choice :format "%{Actual event/command%}: %[Value Menu%] %v"
+                        (string  :tag "Event")
+                        (symbol  :tag "Command")
+                        (const   :tag "Lambda" t))
+                (choice :format "%{Display event%}:        %[Value Menu%] %v"
+                        (const   :tag "Omit binding" nil)
+                        (const   :tag "Use actual event" t)
+                        (string  :tag "Substitute event"))
+                (choice :format "%{Display command%}:      %[Value Menu%] %v"
+                        (const   :tag "Omit binding" nil)
+                        (const   :tag "Use actual command" t)
+                        (symbol  :tag "Substitute command")))))
+
 (defface keycast-key
   '((t (:weight bold
-        :height 1.2
         :background "#d5cfbf"
         :foreground "#000000"
 	:box (:line-width -3 :style released-button))))
@@ -216,7 +267,12 @@ instead."
 ;;; Common
 
 (defvar keycast-mode)
+(defvar keycast-tab-bar-mode)
 (defvar keycast-log-mode)
+
+(defun keycast--mode-active-p (&optional line)
+  (or keycast-mode keycast-tab-bar-mode
+      (and (not line) keycast-log-mode)))
 
 (defvar keycast--this-command nil)
 (defvar keycast--this-command-keys nil)
@@ -238,7 +294,7 @@ instead."
   (when (and keycast-log-mode
              (not keycast--reading-passwd))
     (keycast-log-update-buffer))
-  (when keycast-mode
+  (when (keycast--mode-active-p 'line)
     (force-mode-line-update (minibufferp))))
 
 (defun keycast--format (format)
@@ -265,7 +321,7 @@ instead."
                          "")))
                 (format-spec
                  format
-                 `((?s . ,(make-string keycast-separator-width ?\s))
+                 `((?s . "")
                    (?k . ,(propertize k 'face 'keycast-key))
                    (?K . ,key)
                    (?c . ,(propertize c 'face 'keycast-command))
@@ -278,47 +334,6 @@ instead."
     (funcall fn prompt confirm default)))
 
 (advice-add 'read-passwd :around #'keycast--read-passwd)
-
-;;; Mode-Line
-
-(defvar keycast--removed-tail nil)
-
-;;;###autoload
-(define-minor-mode keycast-mode
-  "Show current command and its key binding in the mode line."
-  :global t
-  (if keycast-mode
-      (let ((cons (keycast--tree-member keycast-insert-after mode-line-format)))
-        (unless cons
-          (setq keycast-mode nil)
-          (user-error
-           "Cannot turn on %s.  %s not found in %s.  Try customizing %s."
-           'keycast-mode keycast-insert-after 'mode-line-format
-           'keycast-insert-after))
-        (cond (keycast-remove-tail-elements
-               (setq keycast--removed-tail (cdr cons))
-               (setcdr cons (list 'keycast-mode-line)))
-              (t
-               (setcdr cons (cons 'keycast-mode-line (cdr cons)))))
-        (add-hook 'pre-command-hook 'keycast--update t))
-    (let ((cons (keycast--tree-member 'keycast-mode-line mode-line-format)))
-      (cond (keycast--removed-tail
-             (setcar cons (car keycast--removed-tail))
-             (setcdr cons (cdr keycast--removed-tail)))
-            (t
-             (setcar cons (cadr cons))
-             (setcdr cons (cddr cons)))))
-    (setq keycast--removed-tail nil)
-    (unless keycast-log-mode
-      (remove-hook 'pre-command-hook 'keycast--update))))
-
-(defun keycast--tree-member (elt tree)
-  (or (member elt tree)
-      (catch 'found
-        (dolist (sub tree)
-          (when-let ((found (and (listp sub)
-                                 (keycast--tree-member elt sub))))
-            (throw 'found found))))))
 
 (defun keycast-bottom-right-window-p ()
   (and (window-at-side-p nil 'right)
@@ -335,13 +350,117 @@ instead."
          (eq (window-frame) (window-frame powerline-selected-window)))
         (t t)))
 
+;;; Mode-Line
+
+(defvar keycast--removed-tail nil)
+
+;;;###autoload
+(define-minor-mode keycast-mode
+  "Show current command and its key binding in the mode line."
+  :global t
+  (if keycast-mode
+      (let ((cons (keycast--tree-member keycast-mode-line-insert-after mode-line-format)))
+        (unless cons
+          (setq keycast-mode nil)
+          (user-error
+           "Cannot turn on %s.  %s not found in %s.  Try customizing %s."
+           'keycast-mode keycast-mode-line-insert-after 'mode-line-format
+           'keycast-mode-line-insert-after))
+        (cond (keycast-mode-line-remove-tail-elements
+               (setq keycast--removed-tail (cdr cons))
+               (setcdr cons (list 'keycast-mode-line)))
+              (t
+               (setcdr cons (cons 'keycast-mode-line (cdr cons)))))
+        (add-hook 'pre-command-hook 'keycast--update t))
+    (let ((cons (keycast--tree-member 'keycast-mode-line mode-line-format)))
+      (cond (keycast--removed-tail
+             (setcar cons (car keycast--removed-tail))
+             (setcdr cons (cdr keycast--removed-tail)))
+            (t
+             (setcar cons (cadr cons))
+             (setcdr cons (cddr cons)))))
+    (setq keycast--removed-tail nil)
+    (unless (keycast--mode-active-p)
+      (remove-hook 'pre-command-hook 'keycast--update))))
+
+(defun keycast--tree-member (elt tree)
+  (or (member elt tree)
+      (catch 'found
+        (dolist (sub tree)
+          (when-let ((found (and (listp sub)
+                                 (keycast--tree-member elt sub))))
+            (throw 'found found))))))
+
 (defvar keycast-mode-line
   '(:eval
-    (and (funcall keycast-window-predicate)
+    (and (funcall keycast-mode-line-window-predicate)
          (keycast--format keycast-mode-line-format))))
 
 (put 'keycast-mode-line 'risky-local-variable t)
 (make-variable-buffer-local 'keycast-mode-line)
+
+;;; Tab-Bar
+
+(eval-when-compile
+  (defvar tab-bar-format))
+
+(defvar keycast--temporary-tab-bar nil)
+(defvar keycast--previous-tab-bar-format nil)
+
+;;;###autoload
+(define-minor-mode keycast-tab-bar-mode
+  "Show current command and its key binding in the tab bar."
+  :global t
+  (when (< emacs-major-version 28)
+    (user-error "`keycast-tab-bar-mode' requires Emacs 28.1"))
+  (cond
+   (keycast-tab-bar-mode
+    (unless tab-bar-mode
+      (setq keycast--temporary-tab-bar t)
+      (tab-bar-mode 1))
+    (cl-case keycast-tab-bar-location
+      (replace
+       (setq keycast--previous-tab-bar-format tab-bar-format)
+       (setq tab-bar-format (list 'keycast-tab-bar)))
+      (beginning
+       (setq tab-bar-format (cons 'keycast-tab-bar tab-bar-format)))
+      (end
+       (setq tab-bar-format (nconc tab-bar-format (list 'keycast-tab-bar))))
+      (t
+       (let ((mem (memq keycast-tab-bar-location tab-bar-format)))
+         (if mem
+             (setcdr mem (cons 'keycast-tab-bar (cdr mem)))
+           (setq tab-bar-format
+                 (nconc tab-bar-format
+                        (if (eq keycast-tab-bar-location
+                                'tab-bar-format-align-right)
+                            (list 'tab-bar-format-align-right
+                                  'keycast-tab-bar)
+                          (message "%s not found in %s; adding at end instead"
+                                   keycast-tab-bar-location 'tab-bar-format)
+                          (list 'keycast-tab-bar))))))))
+    (add-hook 'pre-command-hook 'keycast--update t))
+   (t
+    (when keycast--temporary-tab-bar
+      (setq keycast--temporary-tab-bar nil)
+      (tab-bar-mode -1))
+    (cond (keycast--previous-tab-bar-format
+           (setq tab-bar-format keycast--previous-tab-bar-format)
+           (setq keycast--previous-tab-bar-format nil))
+          (t
+           (setq tab-bar-format (delq 'keycast-tab-bar tab-bar-format))))
+    (unless (keycast--mode-active-p)
+      (remove-hook 'pre-command-hook 'keycast--update)))))
+
+(defun keycast-tab-bar ()
+  "Produce key binding information for the tab bar."
+  (and keycast-tab-bar-mode
+       (keycast--active-frame-p)
+       (when-let ((output (keycast--format keycast-tab-bar-format)))
+         (concat output
+                 (make-string (max 0 (- keycast-tab-bar-minimal-width
+                                        (length output)))
+                              ?\s)))))
 
 ;;; Log-Buffer
 
@@ -353,7 +472,7 @@ instead."
    (keycast-log-mode
     (add-hook 'pre-command-hook 'keycast--update t)
     (keycast-log-update-buffer))
-   ((not keycast-mode)
+   ((not (keycast--mode-active-p))
     (remove-hook 'pre-command-hook 'keycast--update))))
 
 (defun keycast-log-update-buffer ()
@@ -374,8 +493,9 @@ instead."
                      (string-match-p "%[rR]" keycast-log-format))
             (unless keycast-log-newest-first
               (backward-char))
-            (delete-region (line-beginning-position)
-                           (1+ (line-end-position))))
+            (ignore-errors
+              (delete-region (line-beginning-position)
+                             (1+ (line-end-position)))))
           (insert output))
         (goto-char (if keycast-log-newest-first (point-min) (point-max)))))))
 

@@ -4,9 +4,9 @@
 
 ;; Author: Marko Bencun <mbencun@gmail.com>
 ;; URL: https://github.com/benma/go-dlv.el/
-;; Package-Version: 20211015.816
-;; Package-Commit: 8811c0aa79fcbc0d495ed8c68f49a3c42d1a0d4b
-;; Version: 0.5
+;; Package-Version: 20220126.1436
+;; Package-Commit: 0a296bc3b7b4dcf0c140a78c5ca3e1a8c6b7ea1a
+;; Version: 0.6
 ;; Package-Requires: ((go-mode "1.3.1"))
 ;; Keywords: Go, debug, debugger, delve, interactive, gud
 
@@ -110,7 +110,8 @@
     output))
 
 (define-obsolete-variable-alias 'go-dlv-command-name
-  'gud-dlv-command-name)
+  'gud-dlv-command-name
+  "0.4")
 
 (defcustom gud-dlv-command-name "dlv"
   "File name for executing the Go Delve debugger.

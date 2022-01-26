@@ -4,9 +4,9 @@
 
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
-;; Version: 0.7.6
-;; Package-Version: 20220123.652
-;; Package-Commit: 792a0085d73e081bf338555904e35d00edd8b4f8
+;; Version: 0.7.7
+;; Package-Version: 20220126.1002
+;; Package-Commit: eb82ec7caa608afed6db166033e6461c9696f833
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
