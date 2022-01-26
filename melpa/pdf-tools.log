@@ -4,10 +4,10 @@ Source:  https://github.com/vedang/pdf-tools.git
 
 Updating /mnt/store/melpa/working/pdf-tools/
 Checking out origin/HEAD
-Checking out 4e6c778194bea39d81871a3caa0b72539fdb6868
+Checking out 72ef774320d9eacd4d79b5016e9e989ab176afba
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pdf-tools/
-  to /tmp/pdf-toolsFZvC6f/pdf-tools-20220107.1241
+  to /tmp/pdf-toolsgEqPkP/pdf-tools-20220125.1708
   ! lisp/pdf-annot.el -> pdf-annot.el
   ! lisp/pdf-cache.el -> pdf-cache.el
   ! lisp/pdf-dev.el -> pdf-dev.el
@@ -28,79 +28,79 @@ Copying files (->) and directories (=>)
     README -> README
   ! Makefile -> build/Makefile
   ! server => build/server
-Created pdf-tools-20220107.1241.tar containing:
-  pdf-tools-20220107.1241/
-  pdf-tools-20220107.1241/README
-  pdf-tools-20220107.1241/build/
-  pdf-tools-20220107.1241/build/Makefile
-  pdf-tools-20220107.1241/build/server/
-  pdf-tools-20220107.1241/build/server/.gitignore
-  pdf-tools-20220107.1241/build/server/Makefile.am
-  pdf-tools-20220107.1241/build/server/autobuild
-  pdf-tools-20220107.1241/build/server/autogen.sh
-  pdf-tools-20220107.1241/build/server/configure.ac
-  pdf-tools-20220107.1241/build/server/epdfinfo.c
-  pdf-tools-20220107.1241/build/server/epdfinfo.h
-  pdf-tools-20220107.1241/build/server/install_test.cpp
-  pdf-tools-20220107.1241/build/server/m4/
-  pdf-tools-20220107.1241/build/server/m4/ax_check_compile_flag.m4
-  pdf-tools-20220107.1241/build/server/poppler-hack.cc
-  pdf-tools-20220107.1241/build/server/poppler-versions
-  pdf-tools-20220107.1241/build/server/synctex_parser.c
-  pdf-tools-20220107.1241/build/server/synctex_parser.h
-  pdf-tools-20220107.1241/build/server/synctex_parser_advanced.h
-  pdf-tools-20220107.1241/build/server/synctex_parser_local.h
-  pdf-tools-20220107.1241/build/server/synctex_parser_readme.txt
-  pdf-tools-20220107.1241/build/server/synctex_parser_utils.c
-  pdf-tools-20220107.1241/build/server/synctex_parser_utils.h
-  pdf-tools-20220107.1241/build/server/synctex_parser_version.txt
-  pdf-tools-20220107.1241/build/server/synctex_version.h
-  pdf-tools-20220107.1241/build/server/test/
-  pdf-tools-20220107.1241/build/server/test/Makefile
-  pdf-tools-20220107.1241/build/server/test/docker/
-  pdf-tools-20220107.1241/build/server/test/docker/.gitignore
-  pdf-tools-20220107.1241/build/server/test/docker/lib/
-  pdf-tools-20220107.1241/build/server/test/docker/lib/run-tests
-  pdf-tools-20220107.1241/build/server/test/docker/lib/yes-or-enter
-  pdf-tools-20220107.1241/build/server/test/docker/templates/
-  pdf-tools-20220107.1241/build/server/test/docker/templates/Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/arch.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/centos-7.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/debian-10.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/debian-8.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/debian-9.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/fedora-32.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/fedora-33.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/fedora-34.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/fedora-35.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/gentoo.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/ubuntu-14.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/ubuntu-16.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/ubuntu-18.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/ubuntu-20.10.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/ubuntu-20.Dockerfile.in
-  pdf-tools-20220107.1241/build/server/test/docker/templates/ubuntu-21.Dockerfile.in
-  pdf-tools-20220107.1241/pdf-annot.el
-  pdf-tools-20220107.1241/pdf-cache.el
-  pdf-tools-20220107.1241/pdf-dev.el
-  pdf-tools-20220107.1241/pdf-history.el
-  pdf-tools-20220107.1241/pdf-info.el
-  pdf-tools-20220107.1241/pdf-isearch.el
-  pdf-tools-20220107.1241/pdf-links.el
-  pdf-tools-20220107.1241/pdf-loader.el
-  pdf-tools-20220107.1241/pdf-macs.el
-  pdf-tools-20220107.1241/pdf-misc.el
-  pdf-tools-20220107.1241/pdf-occur.el
-  pdf-tools-20220107.1241/pdf-outline.el
-  pdf-tools-20220107.1241/pdf-sync.el
-  pdf-tools-20220107.1241/pdf-tools-pkg.el
-  pdf-tools-20220107.1241/pdf-tools.el
-  pdf-tools-20220107.1241/pdf-util.el
-  pdf-tools-20220107.1241/pdf-view.el
-  pdf-tools-20220107.1241/pdf-virtual.el
-Built pdf-tools in 5.915s, finished at 2022-01-25T10:41:41+0000
+Created pdf-tools-20220125.1708.tar containing:
+  pdf-tools-20220125.1708/
+  pdf-tools-20220125.1708/README
+  pdf-tools-20220125.1708/build/
+  pdf-tools-20220125.1708/build/Makefile
+  pdf-tools-20220125.1708/build/server/
+  pdf-tools-20220125.1708/build/server/.gitignore
+  pdf-tools-20220125.1708/build/server/Makefile.am
+  pdf-tools-20220125.1708/build/server/autobuild
+  pdf-tools-20220125.1708/build/server/autogen.sh
+  pdf-tools-20220125.1708/build/server/configure.ac
+  pdf-tools-20220125.1708/build/server/epdfinfo.c
+  pdf-tools-20220125.1708/build/server/epdfinfo.h
+  pdf-tools-20220125.1708/build/server/install_test.cpp
+  pdf-tools-20220125.1708/build/server/m4/
+  pdf-tools-20220125.1708/build/server/m4/ax_check_compile_flag.m4
+  pdf-tools-20220125.1708/build/server/poppler-hack.cc
+  pdf-tools-20220125.1708/build/server/poppler-versions
+  pdf-tools-20220125.1708/build/server/synctex_parser.c
+  pdf-tools-20220125.1708/build/server/synctex_parser.h
+  pdf-tools-20220125.1708/build/server/synctex_parser_advanced.h
+  pdf-tools-20220125.1708/build/server/synctex_parser_local.h
+  pdf-tools-20220125.1708/build/server/synctex_parser_readme.txt
+  pdf-tools-20220125.1708/build/server/synctex_parser_utils.c
+  pdf-tools-20220125.1708/build/server/synctex_parser_utils.h
+  pdf-tools-20220125.1708/build/server/synctex_parser_version.txt
+  pdf-tools-20220125.1708/build/server/synctex_version.h
+  pdf-tools-20220125.1708/build/server/test/
+  pdf-tools-20220125.1708/build/server/test/Makefile
+  pdf-tools-20220125.1708/build/server/test/docker/
+  pdf-tools-20220125.1708/build/server/test/docker/.gitignore
+  pdf-tools-20220125.1708/build/server/test/docker/lib/
+  pdf-tools-20220125.1708/build/server/test/docker/lib/run-tests
+  pdf-tools-20220125.1708/build/server/test/docker/lib/yes-or-enter
+  pdf-tools-20220125.1708/build/server/test/docker/templates/
+  pdf-tools-20220125.1708/build/server/test/docker/templates/Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/arch.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/centos-7.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/debian-10.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/debian-8.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/debian-9.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/fedora-32.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/fedora-33.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/fedora-34.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/fedora-35.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/gentoo.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/ubuntu-14.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/ubuntu-16.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/ubuntu-18.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/ubuntu-20.10.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/ubuntu-20.Dockerfile.in
+  pdf-tools-20220125.1708/build/server/test/docker/templates/ubuntu-21.Dockerfile.in
+  pdf-tools-20220125.1708/pdf-annot.el
+  pdf-tools-20220125.1708/pdf-cache.el
+  pdf-tools-20220125.1708/pdf-dev.el
+  pdf-tools-20220125.1708/pdf-history.el
+  pdf-tools-20220125.1708/pdf-info.el
+  pdf-tools-20220125.1708/pdf-isearch.el
+  pdf-tools-20220125.1708/pdf-links.el
+  pdf-tools-20220125.1708/pdf-loader.el
+  pdf-tools-20220125.1708/pdf-macs.el
+  pdf-tools-20220125.1708/pdf-misc.el
+  pdf-tools-20220125.1708/pdf-occur.el
+  pdf-tools-20220125.1708/pdf-outline.el
+  pdf-tools-20220125.1708/pdf-sync.el
+  pdf-tools-20220125.1708/pdf-tools-pkg.el
+  pdf-tools-20220125.1708/pdf-tools.el
+  pdf-tools-20220125.1708/pdf-util.el
+  pdf-tools-20220125.1708/pdf-view.el
+  pdf-tools-20220125.1708/pdf-virtual.el
+Built pdf-tools in 4.637s, finished at 2022-01-26T01:18:30+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  491 Jan 25 10:41 packages/pdf-tools-20220107.1241.entry
-1.1M -rw-r--r-- 1 root root 1.1M Jan 25 10:41 packages/pdf-tools-20220107.1241.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 25 10:41 packages/pdf-tools-badge.svg
-4.0K -rw-r--r-- 1 root root 1.9K Jan 25 10:41 packages/pdf-tools-readme.txt
+4.0K -rw-r--r-- 1 root root  491 Jan 26 01:18 packages/pdf-tools-20220125.1708.entry
+1.1M -rw-r--r-- 1 root root 1.1M Jan 26 01:18 packages/pdf-tools-20220125.1708.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 26 01:18 packages/pdf-tools-badge.svg
+4.0K -rw-r--r-- 1 root root 1.9K Jan 26 01:18 packages/pdf-tools-readme.txt

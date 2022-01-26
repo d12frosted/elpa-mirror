@@ -7,7 +7,7 @@
 ;; Created: 15 May 2015
 ;; Version: 0.1
 ;; Package-Version: 20210615.1208
-;; Package-Commit: 181a21085035a9b625021d8a79cb52cbdee7a7a4
+;; Package-Commit: 93b16f3c586b35c9a8f1e51160fff5a1edfa879f
 ;; Keywords: ocaml languages
 ;; Package-Requires: ((emacs "25.1") (merlin "3") (auto-complete "1.5"))
 ;; URL: http://github.com/ocaml/merlin
