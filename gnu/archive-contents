@@ -747,7 +747,7 @@
 	       ("Leo Liu" . "sdl.web@gmail.com"))
 	      (:keywords "killing" "convenience"))])
  (ebdb .
-       [(0 8 8)
+       [(0 8 9)
 	((emacs
 	  (25 1))
 	 (seq
@@ -757,7 +757,8 @@
 	 (:keywords "convenience" "mail")
 	 (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
 	 (:authors
-	  ("Eric Abrahamsen" . "eric@ericabrahamsen.net")))])
+	  ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
+	 (:commit . "c23b924374a46bfc40d61831438a9d72f1951857"))])
  (ebdb-gnorb .
 	     [(1 0 2)
 	      ((gnorb
@@ -2067,15 +2068,16 @@
 	     ("Phillip Lord" . "phillip.lord@russet.org.uk"))
 	    (:url . "http://elpa.gnu.org/packages/persist.html"))])
  (phps-mode .
-	    [(0 4 13)
+	    [(0 4 14)
 	     ((emacs
 	       (26)))
-	     "Major mode for PHP with Semantic integration" tar
+	     "Major mode for PHP with code intelligence" tar
 	     ((:url . "https://github.com/cjohansson/emacs-phps-mode")
 	      (:keywords "tools" "convenience")
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
-	       ("Christian Johansson" . "christian@cvj.se")))])
+	       ("Christian Johansson" . "christian@cvj.se"))
+	      (:commit . "5ae4886f141b21c1521390d8f6670c0e7bac873e"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single

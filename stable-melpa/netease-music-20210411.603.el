@@ -2,7 +2,8 @@
 
 ;; Copyright (C) 2018  hiro方圆
 ;; Version: 1.0
-;; Package-Version: 20190708.215
+;; Package-Version: 20210411.603
+;; Package-X-Original-Version: 20190708.215
 ;; Package-Commit: 39a7d7a15f63435d9efaf469ea7c971069c07acb
 ;; URL: https://github.com/nicehiro/netease-music
 ;; Package-Requires: ((names "0.5") (emacs "25"))
@@ -11,7 +12,8 @@
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
-;; the Free Software Foundation, either version 3 of the License, or
+;; Package-Commit: db7f1eef2d8544983509db679be1cbe6a5678071
+;; the Free Software Foundation, either X-Original-version 3 of the License, or
 ;; (at your option) any later version.
 
 ;; This program is distributed in the hope that it will be useful,
@@ -873,11 +875,6 @@ Argument LST: play this song from LST."
 (defun proc-sentinel (proc change)
 	"Netease music sentinel for PROC with CHANGE."
 	(when (string-match "\\(finished\\|Exiting\\)" change)
-		(play-next))))
-
-(provide 'netease-music)
-;;; netease-music.el ends here
-match "\\(finished\\|Exiting\\)" change)
 		(play-next))))
 
 (provide 'netease-music)
