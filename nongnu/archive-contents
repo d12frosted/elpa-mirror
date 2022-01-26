@@ -232,6 +232,17 @@
 		  (:maintainer "Étienne Deparis" . "etienne@depar.is")
 		  (:authors
 		   ("film42")))])
+ (drupal-mode .
+	      [(0 7 4)
+	       ((php-mode
+		 (1 5 0)))
+	       "Advanced minor mode for Drupal development" tar
+	       ((:url . "https://github.com/arnested/drupal-mode")
+		(:keywords "programming" "php" "drupal")
+		(:maintainer "Arne Jørgensen" . "arne@arnested.dk")
+		(:authors
+		 ("Arne Jørgensen" . "arne@arnested.dk"))
+		(:commit . "ed90b0c4d808365e9ae9f16cc8a96eff17815621"))])
  (editorconfig .
 	       [(0 8 2)
 		((cl-lib

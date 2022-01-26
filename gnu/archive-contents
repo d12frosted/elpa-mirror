@@ -894,7 +894,7 @@
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
 		   (:commit . "7745ad00091bbf3bdf98a2dcdbb20fc9cb05d5c1"))])
  (emms .
-       [(8)
+       [(9)
 	((cl-lib
 	  (0 5))
 	 (nadvice
@@ -906,7 +906,8 @@
 	 (:keywords "emms" "mp3" "ogg" "flac" "music" "mpeg" "video" "multimedia")
 	 (:maintainer "Yoni Rabkin" . "yrk@gnu.org")
 	 (:authors
-	  ("Jorgen Schäfer" . "forcer@forcix.cx")))])
+	  ("Jorgen Schäfer" . "forcer@forcix.cx"))
+	 (:commit . "c3596ae7166db2de004c57da303b5eb8d3e1f2e8"))])
  (engrave-faces .
 		[(0 2 0)
 		 ((emacs
