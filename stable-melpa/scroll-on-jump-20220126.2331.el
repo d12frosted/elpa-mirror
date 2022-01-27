@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-scroll-on-jump
-;; Package-Version: 20220117.606
-;; Package-Commit: 556e9a7a8119e24503f54b25f5c2a8084752d64d
+;; Package-Version: 20220126.2331
+;; Package-Commit: 1e9e09f0ccadf805e9bb4dbd1050944f82c5ed0f
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))
 
@@ -504,6 +504,12 @@ Argument USE-WINDOW-START detects window scrolling when non-nil."
           (goto-char point-next))
 
         (t ;; Perform animated scroll.
+
+          ;; It's possible the requested `point-next' exceeds the maximum point.
+          ;; This causes an error counting lines and calculating offsets,
+          ;; so clamp it here to avoid complications later.
+          (setq point-next (min point-next (point-max)))
+
           (cond
             (,use-window-start
               (setq window-start-next (window-start window))

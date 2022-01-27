@@ -6,8 +6,8 @@
 ;; Created: 26 May 2019
 ;; Homepage: https://github.com/leotaku/flycheck-aspell
 ;; Keywords: wp flymake spell aspell
-;; Package-Commit: 576e7f3e96ef8757a45106346a5f45831a8fee13
-;; Package-Version: 20210411.2342
+;; Package-Commit: ab499be2b7e99bb851b472fbc243155595bdd107
+;; Package-Version: 20220126.2310
 ;; Package-X-Original-Version: 0.1.0
 ;; Package-Requires: ((emacs "26.1"))
 
@@ -217,26 +217,26 @@ REPORT-FN is flymake's callback function."
 (defun flymake-aspell--handle-hash (line)
   "Handle a LINE of aspell output starting with a hash (#) sign."
   (string-match
-   (rx line-start "# "                  ; start
-       (group (+ wordchar)) " "         ; error
-       (group (+ digit)))               ; column
+   (rx line-start "# "              ; start
+       (group (+? anything)) " "    ; error
+       (group (+ digit)))           ; column
    line)
   (let ((word (match-string 1 line))
-	    (column (match-string 2 line)))
+        (column (match-string 2 line)))
     (list word (string-to-number column) nil)))
 
 (defun flymake-aspell--handle-and (line)
   "Handle a LINE of aspell output starting with an and (&) sign."
   (string-match
-   (rx line-start "& "			; start
-       (group (+ wordchar)) " "	; error
-       (+ digit) " "			; suggestion count
-       (group (+ digit)) ": "	; column
+   (rx line-start "& "              ; start
+       (group (+? anything)) " "    ; error
+       (+ digit) " "                ; suggestion count
+       (group (+ digit)) ": "       ; column
        (group (+? anything)) line-end)
    line)
   (let ((word (match-string 1 line))
-	    (column (match-string 2 line))
-	    (suggestions (match-string 3 line)))
+        (column (match-string 2 line))
+        (suggestions (match-string 3 line)))
     (list word (string-to-number column) suggestions)))
 
 (provide 'flymake-aspell)

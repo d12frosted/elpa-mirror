@@ -6,8 +6,8 @@
 ;; Created: 26 May 2019
 ;; Homepage: https://github.com/leotaku/flycheck-aspell
 ;; Keywords: wp flycheck spell aspell
-;; Package-Commit: 576e7f3e96ef8757a45106346a5f45831a8fee13
-;; Package-Version: 20210618.920
+;; Package-Commit: ab499be2b7e99bb851b472fbc243155595bdd107
+;; Package-Version: 20220126.2310
 ;; Package-X-Original-Version: 0.2.0
 ;; Package-Requires: ((flycheck "28.0") (emacs "25.1"))
 
@@ -104,10 +104,10 @@ The Aspell process is additionally passed FLAGS."
       (push
        (flycheck-error-new-at
         line-number (1+ column)
-	    (if (member word ispell-buffer-session-localwords)
-		    'info 'error)
+        (if (member word ispell-buffer-session-localwords)
+            'info 'error)
         (if (null suggestions)
-    	    (concat "Unknown: " word)
+            (concat "Unknown: " word)
           (concat "Suggest: " word " -> " suggestions))
         :checker checker
         :buffer buffer
@@ -133,25 +133,25 @@ The Aspell process is additionally passed FLAGS."
 
 (defun flycheck-aspell--handle-hash (line)
   (string-match
-   (rx line-start "# "			; start
-       (group (+ wordchar)) " "	; error
-       (group (+ digit)))		; column
+   (rx line-start "# "              ; start
+       (group (+? anything)) " "    ; error
+       (group (+ digit)))           ; column
    line)
   (let ((word (match-string 1 line))
-	    (column (match-string 2 line)))
+        (column (match-string 2 line)))
     (list (string-to-number column) word nil)))
 
 (defun flycheck-aspell--handle-and (line)
   (string-match
-   (rx line-start "& "			; start
-       (group (+ wordchar)) " "	; error
-       (+ digit) " "			; suggestion count
-       (group (+ digit)) ": "	; column
+   (rx line-start "& "              ; start
+       (group (+? anything)) " "    ; error
+       (+ digit) " "                ; suggestion count
+       (group (+ digit)) ": "       ; column
        (group (+? anything)) line-end)
    line)
   (let ((word (match-string 1 line))
-	    (column (match-string 2 line))
-	    (suggestions (match-string 3 line)))
+        (column (match-string 2 line))
+        (suggestions (match-string 3 line)))
     (list (string-to-number column) word suggestions)))
 
 (provide 'flycheck-aspell)
