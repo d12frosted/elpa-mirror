@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-bookmark-in-project
-;; Package-Version: 20220123.128
-;; Package-Commit: ce70eee389d3698443ff7eb2c6bba7c4764e372d
+;; Package-Version: 20220127.449
+;; Package-Commit: 0ecafa919d9250668410c050a575d4f2188c48d5
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
@@ -456,6 +456,18 @@ Argument DIRECTION represents the stepping direction (in -1 1)."
           (-1 (min (1- (point)) (line-beginning-position)))
           (_ (error "Invalid direction")))))))
 
+(defun bookmark-in-project--item-handle-or-nil (item)
+  "Jump to ITEM, returning non-nil on success."
+  (let ((bookmark-name-or-record (car item)))
+    (condition-case _err
+      (progn
+        (funcall
+          (or (bookmark-get-handler bookmark-name-or-record) 'bookmark-default-handler)
+          (bookmark-get-bookmark bookmark-name-or-record))
+        t)
+      (error nil))))
+
+
 (defun bookmark-in-project--item-get-filename (item)
   "Return the filename from a bookmark (ITEM)."
   (let
@@ -486,6 +498,22 @@ otherwise it will switch the buffer."
     (bookmark-handle-bookmark (car item))
     (point)))
 
+;; Extracted from: `bookmark-handle-bookmark',
+;; Doesn't attempt to handle errors, just skip them.
+(defun bookmark-in-project--item-get-position-or-nil (item)
+  "Return the position of bookmark ITEM.
+Note that this must only run on the for bookmarks in the current buffer,
+otherwise it will switch the buffer."
+  ;; Note that edits to the document mean: (alist-get 'position item)
+  ;; May not reflect the location after the context has been used to resolve the actual point.
+  ;; For this reason, the actual jump call is needed.
+  (save-excursion
+    (cond
+      ((bookmark-in-project--item-handle-or-nil item)
+        (point))
+      (t
+        nil))))
+
 (defun bookmark-in-project--compare (a b)
   "Return t when A is less than B."
   (let
@@ -504,24 +532,179 @@ otherwise it will switch the buffer."
       (t
         nil))))
 
-(defun bookmark-in-project--step-index (bm-list direction)
-  "Return the index in the BM-LIST, stepping in DIRECTION direction."
+
+;; ---------------------------------------------------------------------------
+;; Bookmark Relative Navigation Next/Previous
+
+(defun bookmark-in-project--bookmarks-by-file-vector (bm-list &optional extra-files)
+  "Return a sorted vector of `(file-path . bm-list)' pairs from BM-LIST.
+Optionally include EXTRA-FILES (dummy files useful for ordering)."
   (let
     (
-      (len (length bm-list))
-      (item-placeholder (bookmark-in-project--placeholder-item direction))
-      (result 0))
+      (filepath-bm-list-pairs nil)
+      (files-map (make-hash-table :test #'equal)))
+    (while extra-files
+      (puthash (pop extra-files) nil files-map))
     (while bm-list
-      (let ((item (car bm-list)))
+      (let*
+        (
+          (item (pop bm-list))
+          (filepath-iter (bookmark-in-project--item-get-filename item))
+          (bm-list-local (gethash filepath-iter files-map)))
+
+        ;; Maintain a list of items.
+        (puthash filepath-iter (cons item bm-list-local) files-map)))
+
+    (maphash (lambda (key value) (push (cons key value) filepath-bm-list-pairs)) files-map)
+    (vconcat (sort filepath-bm-list-pairs (lambda (a b) (string-lessp (car a) (car b)))))))
+
+(defun bookmark-in-project--bm-list-sorted-with-pos-and-valid (bm-list)
+  "Return a list of (position . item) pairs from BM-LIST."
+  (let
+    (
+      (bm-list-with-pos-and-valid
+        (mapcar
+          (lambda (item)
+            ;; Real location, or stored location or a fallback.
+            (let*
+              (
+                (pos-real (bookmark-in-project--item-get-position-or-nil item))
+                (pos (or pos-real (alist-get 'position item 1))))
+              (list item pos (not (null pos-real)))))
+          bm-list)))
+    ;; Sort by fallback position.
+    (sort bm-list-with-pos-and-valid (lambda (a b) (< (cadr a) (cadr b))))))
+
+(defun bookmark-in-project--step-in-buffer (bm-list direction filepath-current pos-current)
+  "Return the next/previous based on DIRECTION (item . is-valid) in BM-LIST.
+Arguments FILEPATH-CURRENT & POS-CURRENT are used as a reference.
+When no bookmark is found in the buffer, return nil."
+  ;; Take care, `filepath-current' and `pos-current' may not be the current buffer
+  ;; so avoid (point-min) or anything that relies on the current buffers values.
+  (setq filepath-current (bookmark-in-project--canonicalize-path filepath-current))
+  (let
+    (
+      (bm-list-local (list))
+      (item-with-valid nil)
+      (i 0)
+      (pos-best
         (cond
-          ((bookmark-in-project--compare item item-placeholder)
-            (setq bm-list (cdr bm-list))
-            (setq result (1+ result)))
+          ((< direction 0)
+            0)
           (t
-            (setq bm-list nil)))))
-    (when (< direction 0)
-      (setq result (1- result)))
-    (mod result len)))
+            most-positive-fixnum))))
+    (while bm-list
+      (let ((item (pop bm-list)))
+        (when (string-equal filepath-current (bookmark-in-project--item-get-filename item))
+          (push item bm-list-local))))
+
+    (when bm-list-local
+      (let
+        (
+          (bm-list-local-with-pos-and-valid
+            (bookmark-in-project--bm-list-sorted-with-pos-and-valid bm-list-local)))
+        (while bm-list-local-with-pos-and-valid
+          (pcase-let ((`(,item ,pos ,is-valid) (pop bm-list-local-with-pos-and-valid)))
+            (when
+              (cond
+                ((< direction 0)
+                  (and (< pos-best pos) (> pos-current pos)))
+                (t
+                  (and (> pos-best pos) (< pos-current pos))))
+              (setq pos-best pos)
+              (setq item-with-valid (cons item is-valid))))
+          (setq i (1+ i)))))
+
+    item-with-valid))
+
+(defun bookmark-in-project--step-the-buffer (bm-list direction)
+  "Step into a buffer in BM-LIST along DIRECTION, returning (item . is-valid)."
+  (let*
+    (
+      (item-with-valid nil)
+      (filepath-current (bookmark-in-project--canonicalize-path (buffer-file-name)))
+      (filepath-bm-list-pairs
+        (bookmark-in-project--bookmarks-by-file-vector bm-list (list filepath-current)))
+      (i-best nil))
+
+    (let*
+      (
+        (files-len (length filepath-bm-list-pairs))
+        (i files-len))
+      (when (> i 1)
+        (while (not (zerop i))
+          (setq i (1- i))
+          (when (string-equal filepath-current (car (aref filepath-bm-list-pairs i)))
+            (setq i-best i)
+            ;; Break.
+            (setq i 0))))
+
+      ;; It's possible there is only one buffer, in that case do nothing.
+      (when i-best
+        ;; We could check the file exists.
+        (setq i (mod (+ i-best direction) files-len))
+        (pcase-let ((`(,filepath-next . ,bm-list-local) (aref filepath-bm-list-pairs i)))
+          (setq item-with-valid
+            (bookmark-in-project--step-in-buffer
+              bm-list-local direction filepath-next
+              (cond
+                ((< direction 0)
+                  most-positive-fixnum)
+                (t
+                  0)))))))
+
+    item-with-valid))
+
+(defun bookmark-in-project--step-any (bm-list direction)
+  "Step along DIRECTION in BM-LIST relative to the current buffer."
+  (or
+    (bookmark-in-project--step-in-buffer
+      bm-list direction (buffer-file-name)
+      (cond
+        ((< direction 0)
+          (line-beginning-position))
+        (t
+          (line-end-position))))
+    (bookmark-in-project--step-the-buffer bm-list direction)
+    ;; When there is only a single buffer, wrap back around to the start.
+    (bookmark-in-project--step-in-buffer
+      bm-list direction (buffer-file-name)
+      (cond
+        ((< direction 0)
+          most-positive-fixnum)
+        (t
+          0)))))
+
+(defun bookmark-in-project--calc-global-index (bm-list item)
+  "Calculate the global index for ITEM in BM-LIST."
+  (let*
+    (
+      (filepath-item (bookmark-in-project--item-get-filename item))
+      (filepath-bm-list-pairs (bookmark-in-project--bookmarks-by-file-vector bm-list))
+      (filepath-bm-list-pairs-len (length filepath-bm-list-pairs))
+      (index 0)
+      (i 0))
+
+    (while (< i filepath-bm-list-pairs-len)
+      (pcase-let ((`(,filepath-iter . ,bm-list-iter) (aref filepath-bm-list-pairs i)))
+        (cond
+          ((string-equal filepath-iter filepath-item)
+            (let
+              (
+                (bm-list-local-with-pos-and-valid
+                  (bookmark-in-project--bm-list-sorted-with-pos-and-valid bm-list-iter)))
+
+              (while bm-list-local-with-pos-and-valid
+                (pcase-let ((`(,item-iter ,_ ,_) (pop bm-list-local-with-pos-and-valid)))
+                  (when (eq item-iter item)
+                    ;; Break.
+                    (setq bm-list-local-with-pos-and-valid nil)
+                    (setq i filepath-bm-list-pairs-len)))
+                (setq index (1+ index)))))
+          (t
+            (setq index (+ index (length bm-list-iter))))))
+      (setq i (1+ i)))
+    index))
 
 (defun bookmark-in-project--default-name-at-point ()
   "Return the default name to use (based on surrounding context)."
@@ -534,25 +717,65 @@ otherwise it will switch the buffer."
 
 (defun bookmark-in-project--jump-direction-impl (proj-dir bm-list direction)
   "Step bookmark in DIRECTION direction in PROJ-DIR & BM-LIST."
-  (setq bm-list (sort bm-list #'bookmark-in-project--compare))
-  (let*
-    (
-      (i-next (bookmark-in-project--step-index bm-list direction))
-      (item-next (nth i-next bm-list))
-      (name (car item-next)))
 
-
-    ;; Call jump (non-interactively).
-    (bookmark-jump item-next)
-
-    (when bookmark-in-project-verbose-cycle
-      (bookmark-in-project--message "(%s) %d of %d: %s"
+  (let
+    ( ;; Track the number of failed attempts (report this when verbose).
+      (skip 0)
+      (item-with-valid nil)
+      (bm-list-orig
         (cond
-          ((< direction 0)
-            "prev")
+          (bookmark-in-project-verbose-cycle
+            bm-list)
           (t
-            "next"))
-        (1+ i-next) (length bm-list) (bookmark-in-project--name-abbrev-and-fontify proj-dir name)))))
+            nil))))
+
+    (let ((keep-searching t))
+      (while (and keep-searching bm-list (null item-with-valid))
+        (setq item-with-valid (bookmark-in-project--step-any bm-list direction))
+        (cond
+          (item-with-valid
+            (pcase-let ((`(,item . ,is-valid) item-with-valid))
+              (unless is-valid
+                ;; Lazy initialize a copy of `bm-list' before modifying it.
+                (when (zerop skip)
+                  (when bookmark-in-project-verbose-cycle
+                    (setq bm-list-orig (copy-sequence bm-list))))
+                (setq bm-list
+                  (delete item
+                    bm-list))
+                (setq skip (1+ skip))
+                (setq item-with-valid nil))))
+          (t
+            (setq keep-searching nil)))))
+
+    (cond
+      (item-with-valid
+        (pcase-let ((`(,item . ,_is-valid) item-with-valid))
+          ;; Call jump (non-interactively).
+          (bookmark-jump item)
+
+          (when bookmark-in-project-verbose-cycle
+            (let ((name (car item)))
+              (bookmark-in-project--message "(%s) %d of %d: %s%s"
+                (cond
+                  ((< direction 0)
+                    "prev")
+                  (t
+                    "next"))
+                (bookmark-in-project--calc-global-index bm-list-orig item)
+                (length bm-list-orig)
+                (bookmark-in-project--name-abbrev-and-fontify proj-dir name)
+                (cond
+                  ((zerop skip)
+                    "")
+                  (t
+                    (format " (%d skipped)" skip))))))))
+      (t
+        ;; Note that his is  unlikely.
+        (when bookmark-in-project-verbose-cycle
+          (bookmark-in-project--message "unable to cycle %d bookmarks in %S!"
+            (length bm-list)
+            proj-dir))))))
 
 (defun bookmark-in-project--jump-direction (direction)
   "Jump between bookmarks in DIRECTION (+1/-1)."
