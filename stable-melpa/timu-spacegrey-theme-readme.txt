@@ -7,7 +7,7 @@ I. Installation
       (load-theme 'timu-spacegrey t)
 
   B. From Melpa
-    1. M-x package-instal RET timu-spacegrey-theme.el RET.
+    1. M-x package-install RET timu-spacegrey-theme RET.
     2. In your `~/.emacs.d/init.el' or `~/.emacs':
       (load-theme 'timu-spacegrey t)
 
