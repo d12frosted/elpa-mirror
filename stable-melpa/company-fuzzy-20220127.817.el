@@ -6,10 +6,10 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Fuzzy matching for `company-mode'.
 ;; Keyword: auto auto-complete complete fuzzy matching
-;; Version: 1.3.0
-;; Package-Version: 20211104.1200
-;; Package-Commit: ca52f1bf0a2ad927d629274f648726769ce770de
-;; Package-Requires: ((emacs "24.4") (company "0.8.12") (s "1.12.0") (ht "2.0"))
+;; Version: 1.4.0
+;; Package-Version: 20220127.817
+;; Package-Commit: d80e0fef7e9abfd3dd4a912ec77e81db33f35727
+;; Package-Requires: ((emacs "26.1") (company "0.8.12") (s "1.12.0") (ht "2.0"))
 ;; URL: https://github.com/jcs-elpa/company-fuzzy
 
 ;; This file is NOT part of GNU Emacs.
@@ -295,8 +295,8 @@ See function `string-prefix-p' for arguments PREFIX, STRING and IGNORE-CASE."
 
 (defun company-fuzzy--backend-command (candidate command)
   "Find the backend from the CANDIDATE then call the COMMAND."
-  (let ((backend (company-fuzzy--get-backend-by-candidate candidate)))
-    (if (or (string-empty-p candidate) (not backend)) nil
+  (unless (string-empty-p candidate)
+    (when-let ((backend (company-fuzzy--get-backend-by-candidate candidate)))
       (company-fuzzy--call-backend backend command candidate))))
 
 ;;
@@ -492,12 +492,11 @@ does best describe the for this candidate."
      ;; for the best match.
      ;;
      ;; Example, if I have path `/path/to/dir'; then it shall return `dir'.
-     (let ((prefix (company-files 'prefix)))
-       (when prefix
-         (let* ((splitted (split-string prefix "/" t))
-                (len-splitted (length splitted))
-                (last (nth (1- len-splitted) splitted)))
-           last))))
+     (when-let* ((prefix (company-files 'prefix))
+                 (splitted (split-string prefix "/" t))
+                 (len-splitted (length splitted))
+                 (last (nth (1- len-splitted) splitted)))
+       last))
     (`company-yasnippet (thing-at-point 'symbol))
     (t company-fuzzy--prefix)))
 
@@ -592,8 +591,8 @@ Insert .* between each char."
 
 (defun company-fuzzy-all-candidates ()
   "Return the list of all candidates."
-  (setq company-fuzzy--ht-backends-candidates (ht-create)  ; Clean up.
-        company-fuzzy--is-trigger-prefix-p (company-fuzzy--trigger-prefix-p))
+  (ht-clear company-fuzzy--ht-backends-candidates)  ; Clean up
+  (setq company-fuzzy--is-trigger-prefix-p (company-fuzzy--trigger-prefix-p))
   (dolist (backend company-fuzzy--backends)
     (if (memq backend company-fuzzy-passthrough-backends)
         (company-fuzzy--candidates-from-passthrough-backend backend)
