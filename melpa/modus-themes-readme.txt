@@ -210,6 +210,7 @@ missing package or change you would like to see.
     marginalia
     markdown-mode
     markup-faces (`adoc-mode')
+    mct
     mentor
     messages
     minimap

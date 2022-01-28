@@ -647,6 +647,17 @@
 	      ("Mitchel Humpherys" . "mitch.special@gmail.com"))
 	     (:maintainer "Mitchel Humpherys" . "mitch.special@gmail.com")
 	     (:url . "https://github.com/mgalgs/diffview-mode"))])
+ (diminish .
+	   [(0 46)
+	    ((emacs
+	      (24 3)))
+	    "Diminished modes are minor modes with no modeline display" tar
+	    ((:url . "https://github.com/myrjola/diminish.el")
+	     (:keywords "extensions" "diminish" "minor" "codeprose")
+	     (:maintainer "Martin Yrjölä" . "martin.yrjola@gmail.com")
+	     (:authors
+	      ("Will Mengarini" . "seldon@eskimo.com"))
+	     (:commit . "66b3902401059d161424b1b8d0abc3cb0a7d6df0"))])
  (dired-du .
 	   [(0 5 2)
 	    ((emacs

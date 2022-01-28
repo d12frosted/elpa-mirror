@@ -1,11 +1,11 @@
 (arxiv-mode .
-	    [(20211231 100)
+	    [(20220128 920)
 	     ((emacs
 	       (27 1))
 	      (hydra
 	       (0)))
 	     "Read and search for articles on arXiv.org" tar
-	     ((:commit . "209a026f528d5b8de0da996d46fddc47ce0749fd")
+	     ((:commit . "f550583d2da8bd9600bd26bb4028fe22a9744da2")
 	      (:authors
 	       ("Alex Chen (fizban007)" . "fizban007@gmail.com")
 	       ("Simon Lin (Simon-Lin)" . "n.sibetz@gmail.com"))

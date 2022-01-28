@@ -29,10 +29,16 @@ All available commands are listed in a hydra help menu accessable by `?` wheneve
 Installation
 ============
 
-Just put the directory in your filesystem and at it to your
-`load-path`. Put the following into your `.emacs` file
+arxiv-mode is available on MELPA.
+After `M-x package-install RET arxiv-mode RET`, put the following code in your `init.el`:
 
 (require 'arxiv-mode)
+
+Or if you use `use-package`, you can simply put:
+(use-package arxiv-mode
+  :ensure t)
+
+into the your init file. `use-package` will automatically download `arxiv-mode` for you.
 
 
 Customization
