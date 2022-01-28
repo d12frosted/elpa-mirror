@@ -5,7 +5,7 @@
 ;; Author: Ketan Patel <knpatel401@gmail.com>
 ;; URL: https://github.com/knpatel401/filetree
 ;; Package-Version: 20220120.630
-;; Package-Commit: 0187be7e538f89eacc06324a0e712cde2fe7d8a6
+;; Package-Commit: a21b464202d52657350d2462703e8be8b784f9af
 ;; Package-Requires: ((dash "2.12.0") (helm "3.7.0")
 ;;                    (seq "2.23") (transient "0.3.6"))
 ;; Version: 1.1
