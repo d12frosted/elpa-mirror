@@ -1,7 +1,6 @@
-A major-mode that uses original PHP lex-analyzer and parser for syntax coloring, imenu and indentation making it easier to spot errors in syntax.
+A major-mode that uses original PHP lex-analyzer and parser for syntax coloring, bookkeeping, imenu and indentation making it easier to spot errors in syntax.
 
-Also includes full support for PSR-1 and PSR-2 indentation and imenu.
-Improved syntax table in comparison with old PHP major-mode.
+Also includes full support for PSR-1 and PSR-2 indentation and indentaton for HTML/XML contents.
 
 For flycheck support run `(phps-mode-flycheck-setup)'.
 

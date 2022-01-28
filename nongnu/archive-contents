@@ -378,7 +378,7 @@
 		   (:authors
 		    ("https://turbocafe.keybase.pub")))])
  (geiser .
-	 [(0 22)
+	 [(0 22 1)
 	  ((emacs
 	    (25 1))
 	   (transient
@@ -388,7 +388,8 @@
 	   (:keywords "languages" "scheme" "geiser")
 	   (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 	   (:authors
-	    ("Jose Antonio Ortega Ruiz" . "jao@gnu.org")))])
+	    ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
+	   (:commit . "c811ed77d45a61ea3888de9858e89e1cb883de35"))])
  (geiser-chez .
 	      [(0 17)
 	       ((emacs
