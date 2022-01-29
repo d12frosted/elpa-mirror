@@ -1181,13 +1181,14 @@
 		     ("Nasser Alshammari"))
 		    (:commit . "4857e6eb7ea20be3a2631beee42d0644dff7eb1b"))])
  (subatomic-theme .
-		  [(1 8 1)
+		  [(1 8 2)
 		   nil "Low contrast bluish color theme" tar
 		   ((:url . "https://github.com/cryon/subatomic")
 		    (:keywords "color-theme" "blue" "low contrast")
 		    (:maintainer "John Olsson" . "john@cryon.se")
 		    (:authors
-		     ("John Olsson" . "john@cryon.se")))])
+		     ("John Olsson" . "john@cryon.se"))
+		    (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed .
 	[(0 0 4)
 	 ((emacs

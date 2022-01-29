@@ -6,7 +6,7 @@
 ;; Maintainer: Martin Yrjölä <martin.yrjola@gmail.com>
 ;; URL: https://github.com/myrjola/diminish.el
 ;; Package-Version: 20220104.1539
-;; Package-Commit: fd486ef76e4c1d8211ae337a43b8bba106d4bca7
+;; Package-Commit: 6b7e837b0cf0129e9d7d6abae48093cf599bb9e8
 ;; Created: Th 19 Feb 98
 ;; Version: 0.46
 ;; Package-Requires: ((emacs "24.3"))
