@@ -3,8 +3,8 @@
 ;; Copyright (C) 2013-2020 Skye Shaw and others
 ;; Author: Skye Shaw <skye.shaw@gmail.com>
 ;; Version: 0.8.4
-;; Package-Version: 20211208.312
-;; Package-Commit: 09961648e654ba0f7239eedf5cbaea0f0cc0ccf1
+;; Package-Version: 20220128.2343
+;; Package-Commit: 783d88b9acf0fb3cd83c5a176cbcb4231904136d
 ;; Keywords: git, vc, github, bitbucket, gitlab, sourcehut, convenience
 ;; URL: http://github.com/sshaw/git-link
 ;; Package-Requires: ((emacs "24.3"))
@@ -717,7 +717,7 @@ Defaults to \"origin\"."
                 (funcall handler
                          (car remote-info)
                          (cadr remote-info)
-                         filename
+                         (url-hexify-string filename (cons ?/ url-unreserved-chars))
                          (if (or (git-link--using-git-timemachine)
                                  (git-link--using-magit-blob-mode)
                                  vc-revison
