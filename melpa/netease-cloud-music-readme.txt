@@ -1,9 +1,11 @@
 Netease Cloud Music Client for Emacs.
 
-; Tips: The basic functions are in `netease-cloud-music-functions.el',
-; Commands & functions about UI are in `netease-cloud-music-ui.el'.
-; If you want to use the TUI, you should add
+Tips: The basic functions are in `netease-cloud-music-functions.el',
+Commands & functions about UI are in `netease-cloud-music-ui.el'.
+If you want to use the TUI, you should add
 
-; (require 'netease-cloud-music-ui)
+(require 'netease-cloud-music-ui)
 
-; In your configuration.
+In your configuration.
+
+If you want to use comment feature, you should install 'async' package.
