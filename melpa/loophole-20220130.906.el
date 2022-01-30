@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.8.0
-;; Package-Version: 20220129.1057
-;; Package-Commit: 81af073bf1e69d0267699c7da9bf4b8fdafee3e9
+;; Package-Version: 20220130.906
+;; Package-Commit: fb13574163b78fa87a7e2f5cf53a53452fe17ce1
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -187,6 +187,11 @@ write protected."
   :group 'loophole
   :type 'number)
 
+(defcustom loophole-force-overwrite-bound-variable t
+  "Flag if use bound variable and overwrite it without prompting."
+  :group 'loophole
+  :type 'boolean)
+
 (defcustom loophole-force-make-variable-buffer-local t
   "Flag if `make-variable-buffer-local' is done without prompting."
   :group 'loophole
@@ -194,14 +199,6 @@ write protected."
 
 (defcustom loophole-force-unintern nil
   "Flag if `unintern' is done without prompting."
-  :group 'loophole
-  :type 'boolean)
-
-(defcustom loophole-force-overwrite-parent-map nil
-  "Flag if `set-keymap-parent' is done without prompting.
-If parent of the keymap which is about to be
-`set-keymap-parent' is nil, parent is set without prompt
-regardless of the value of this user option."
   :group 'loophole
   :type 'boolean)
 
@@ -1000,10 +997,11 @@ If there are no candidates after PREDICATE is applied to
 (defun loophole-map-variable-for-key-binding (key)
   "Return map variable for active KEY in `loophole--map-alist'."
   (get (car (seq-find (lambda (a)
-                        (let ((binding (lookup-key (cdr a) key)))
+                        (let ((binding (lookup-key (cdr a) key t)))
                           (and (symbol-value (car a))
                                binding
-                               (eq binding (key-binding key)))))
+                               (not (numberp binding))
+                               (eq binding (key-binding key t)))))
                       loophole--map-alist))
        :loophole-map-variable))
 
@@ -1095,7 +1093,7 @@ returned."
                                            ((eq modifier 'alt) "A"))))
                            modifiers "")
                 (char-to-string basic-type)))
-    event))
+    (prin1-to-string event)))
 
 (defun loophole--protected-keymap-entry-list (protected-keymap)
   "Return list of protected keymap entry from raw PROTECTED-KEYMAP.
@@ -1241,7 +1239,9 @@ they will be removed."
                (parent (keymap-parent map)))
           (cond ((eq parent protected-keymap) (set-keymap-parent map nil))
                 ((memq protected-keymap parent)
-                 (funcall delete-from-keymap protected-keymap parent)))
+                 (funcall delete-from-keymap protected-keymap parent)
+                 (if (= (length parent) 2)
+                     (set-keymap-parent map (cadr parent)))))
           (put map-variable :loophole-protected-keymap nil))))))
 
 (defun loophole--protected-keymap-prefix-key (keymap)
@@ -1430,11 +1430,8 @@ These query can be skipped with yes by setting t to
 Unless WITHOUT-BASE-MAP is non-nil, `loophole-base-map' is
 set as parent keymap for MAP-VARIABLE.
 If parent of keymap of MAP-VARIABLE is non-nil when setting
-parent keymap, this function ask user if it is overwritten
-by composed keymap of existing keymap and
-`loophole-base-map'.
-This query also can be skipped with yes by setting t to
-`loophole-force-overwrite-parent-map'.
+parent keymap, composed keymap is made from exisiting parent
+and `loophole-base-map'.
 Because `loophole-unregister' assumes that a keymap parent
 has a form described above, if other feature modifies keymap
 parent, `loophole-unregister' cannot remove
@@ -1510,14 +1507,6 @@ MAP-VARIABLE is registered as GLOBAL and WITHOUT-BASE-MAP."
          (user-error
           "Specified map-variable holds keymap which is already used: %s"
           map-variable)))
-  (if (and (not without-base-map)
-           (keymap-parent (symbol-value map-variable)))
-      (unless (or loophole-force-overwrite-parent-map
-                  (yes-or-no-p
-                   (format
-                    "%s has a parent map.  Overwrite it by a composed map? "
-                    map-variable)))
-        (setq without-base-map t)))
   (if global
       (if (local-variable-if-set-p state-variable)
           (if (or loophole-force-unintern
@@ -1556,23 +1545,12 @@ MAP-VARIABLE is registered as GLOBAL and WITHOUT-BASE-MAP."
        (setq loophole--map-alist
              (cons `(,state-variable . ,(symbol-value map-variable))
                    loophole--map-alist))))
-  (unless without-base-map
-    (let ((parent (keymap-parent (symbol-value map-variable))))
-      (cond ((null parent)
-             (set-keymap-parent (symbol-value map-variable) loophole-base-map)
-             (put map-variable :loophole-protected-keymap nil))
-            ((and (get map-variable :loophole-protected-keymap)
-                  (memq (get map-variable :loophole-protected-keymap)
-                        parent))
-             (let ((grand-parent (keymap-parent parent)))
-               (set-keymap-parent parent nil)
-               (setcdr (last parent) (cons loophole-base-map nil))
-               (set-keymap-parent parent grand-parent)))
-            (t (unless (eq (get map-variable :loophole-protected-keymap) parent)
-                 (put map-variable :loophole-protected-keymap nil))
-               (set-keymap-parent (symbol-value map-variable)
-                                  (make-composed-keymap
-                                   (list parent loophole-base-map)))))))
+  (let ((parent (keymap-parent (symbol-value map-variable))))
+    (unless (and parent
+                 (or (eq parent (get map-variable :loophole-protected-keymap))
+                     (memq (get map-variable :loophole-protected-keymap)
+                           parent)))
+      (put map-variable :loophole-protected-keymap nil)))
   (when (and (listp loophole--buffer-list)
              (not global))
     (dolist (buffer (buffer-list))
@@ -1582,6 +1560,19 @@ MAP-VARIABLE is registered as GLOBAL and WITHOUT-BASE-MAP."
           (force-mode-line-update))))
     (add-variable-watcher state-variable
                           #'loophole--follow-adding-local-variable))
+  (unless without-base-map
+    (let ((parent (keymap-parent (symbol-value map-variable))))
+      (cond ((null parent)
+             (set-keymap-parent (symbol-value map-variable) loophole-base-map))
+            ((and (get map-variable :loophole-protected-keymap)
+                  (memq (get map-variable :loophole-protected-keymap) parent))
+             (let ((grand-parent (keymap-parent parent)))
+               (set-keymap-parent parent nil)
+               (setcdr (last parent) (cons loophole-base-map nil))
+               (set-keymap-parent parent grand-parent)))
+            (t (set-keymap-parent (symbol-value map-variable)
+                                  (make-composed-keymap
+                                   (list parent loophole-base-map)))))))
   (run-hook-with-args 'loophole-after-register-functions map-variable))
 
 (defun loophole-unregister (map-variable)
@@ -1782,19 +1773,20 @@ If optional argument TAG is non-nil, tag string for the map
 is set as TAG; otherwise, initial character of MAP-NAME is
 used as tag string.
 Old MAP-VARIABLE and corresponding state-variable are
-initialized; their documentation is set as nil, they are
-unbound, their properties for Loophole are set as nil, they
-are removed from `loophole--map-alist'.
+manipulated as unregistered; their properties for Loophole
+are set as nil, they are removed from `loophole--map-alist'.
 
 If loophole-MAP-NAME-map or loophole-MAP-NAME-map-state have
-been already bound, this function signals `user-error'.
-Only unbound name can be used for MAP-NAME.
+been already bound, this function asks user if Loophole can
+use it anyway.
+These query can be skipped with yes by setting t to
+`loophole-force-overwrite-bound-variable'.
 
 Global or local behavior is also inherited.
 loophole-MAP-NAME-map-state is prepared by the same manner
 of `loophole-register'.
 If global or local property of loophole-MAP-NAME-map-state
-does not match with MAP-VARIABLE, this function ask user
+does not match with MAP-VARIABLE, this function asks user
 if Loophole can fit it.
 These query can be skipped with yes by setting t to
 `loophole-force-make-variable-buffer-local' and
@@ -1831,10 +1823,26 @@ string as TAG regardless of the value of prefix-argument."
          (tag (or tag (substring map-name 0 1))))
     (let ((named-map-variable (intern map-variable-name))
           (named-state-variable (intern state-variable-name)))
-      (let ((bound (seq-find #'boundp
-                             (list named-map-variable named-state-variable))))
-        (if bound
-            (user-error "Specified name %s has already been bound" bound)))
+      (if (loophole-registered-p named-map-variable)
+          (user-error "Specified name %s has already been used" map-name))
+      (if (boundp named-map-variable)
+          (unless (or loophole-force-overwrite-bound-variable
+                      (yes-or-no-p
+                       (format "%s has already been bound.  Use it anyway? "
+                               named-map-variable)))
+            (user-error "Abort naming.  Variable %s is preserved"))
+        (put named-map-variable 'variable-documentation
+             "Keymap for temporary use.
+Introduced by `loophole-name'."))
+      (if (boundp named-state-variable)
+          (unless (or loophole-force-overwrite-bound-variable
+                      (yes-or-no-p
+                       (format "%s has already been bound.  Use it anyway? "
+                               named-state-variable)))
+            (user-error "Abort naming.  Variable %s is preserved"))
+        (put named-state-variable 'variable-documentation
+             (format "State of `%s'.
+Introduced by `loophole-name'." named-map-variable)))
       (if (local-variable-if-set-p state-variable)
           (unless (local-variable-if-set-p named-state-variable)
             (if (or loophole-force-make-variable-buffer-local
@@ -1859,14 +1867,6 @@ string as TAG regardless of the value of prefix-argument."
               (user-error (concat "Abort naming."
                                   "  Local variable if set cannot be used"
                                   " for global state-variable")))))
-      (put named-map-variable 'variable-documentation
-           (format "Keymap for temporary use.
-Introduced by `loophole-name' for renaming %s
-which had been already unbound." map-variable))
-      (put named-state-variable 'variable-documentation
-           (format "State of `%s'.
-Introduced by `loophole-name' for renaming %s
-which had been already unbound." named-map-variable state-variable))
       (set named-map-variable (symbol-value map-variable))
       (if (not (local-variable-if-set-p named-state-variable))
           (set named-state-variable (symbol-value state-variable))
@@ -1903,10 +1903,6 @@ which had been already unbound." named-map-variable state-variable))
       (put map-variable :loophole-tag nil)
       (put state-variable :loophole-map-variable nil)
       (put map-variable :loophole-state-variable nil)
-      (makunbound state-variable)
-      (makunbound map-variable)
-      (put state-variable 'variable-documentation nil)
-      (put map-variable 'variable-documentation nil)
       (run-hook-with-args 'loophole-after-name-functions named-map-variable))))
 
 (defun loophole-tag (map-variable tag)
@@ -2358,6 +2354,8 @@ If TIME is negative, shorten timer."
                                        (format "\"%s\"" entry))
                                       ((vectorp entry)
                                        (format "[%s]" (key-description entry)))
+                                      ((or (numberp entry) (null entry))
+                                       "\\1")
                                       (t (format "%s" entry))))
                               (car assoc) t t))
                            assoc-list)))
@@ -2532,10 +2530,26 @@ with any prefix argument."
                (tag (or tag (substring map-name 0 1)))
                (duplicated-state-variable (intern state-variable-name)))
           (setq duplicated-map-variable (intern map-variable-name))
-          (let ((bound (seq-find #'boundp (list duplicated-map-variable
-                                                duplicated-state-variable))))
-            (if bound
-                (user-error "Specified name %s has already been bound" bound)))
+          (if (loophole-registered-p duplicated-map-variable)
+              (user-error "Specified name %s has already been used" map-name))
+          (if (boundp duplicated-map-variable)
+              (unless (or loophole-force-overwrite-bound-variable
+                          (yes-or-no-p
+                           (format "%s has already been bound.  Use it anyway? "
+                                   duplicated-map-variable)))
+                (user-error "Abort duplicating.  Variable %s is preserved"))
+            (put duplicated-map-variable 'variable-documentation
+                 "Keymap for temporary use.
+Introduced by `loophole-duplicate'."))
+          (if (boundp duplicated-state-variable)
+              (unless (or loophole-force-overwrite-bound-variable
+                          (yes-or-no-p
+                           (format "%s has already been bound.  Use it anyway? "
+                                   duplicated-state-variable)))
+                (user-error "Abort duplicating.  Variable %s is preserved"))
+            (put duplicated-state-variable 'variable-documentation
+                 (format "State of `%s'.
+Introduced by `loophole-duplicate'." duplicated-map-variable)))
           (if (local-variable-if-set-p
                (get map-variable :loophole-state-variable))
               (unless (local-variable-if-set-p duplicated-state-variable)
@@ -3015,7 +3029,8 @@ Read key sequence with prompt in which KEY is embedded."
   (let ((binding (key-binding (loophole-read-key
                                (format
                                 "Set key %s to command bound for: "
-                                (key-description key))))))
+                                (key-description key)))
+                              t)))
     (message "%s" binding)
     binding))
 
@@ -3031,6 +3046,8 @@ valid lambda command, this function return it."
     (insert ";; For obtaining lambda form.\n\n")
     (insert loophole-command-by-lambda-form-format)
     (if (search-backward "(#)" nil t) (delete-region (point) (+ (point) 3)))
+    (setq buffer-undo-list nil)
+    (deactivate-mark t)
     (loophole-write-lisp-mode)
     (goto-char 1)
     (let ((lambda-form (eval (read (current-buffer)))))
@@ -3552,8 +3569,9 @@ well as ordinary binding can be unset."
                           "Unset temporarily set key: "))
                  (user-error "There is no editing map")))
   (if (loophole-editing)
-      (let ((map (symbol-value (loophole-editing))))
-        (when (lookup-key map key)
+      (let* ((map (symbol-value (loophole-editing)))
+             (entry (lookup-key map key)))
+        (when (and entry (not (numberp entry)))
           (loophole-bind-entry key nil map)
           (message "Key %s is unset" (key-description key))))))
 
@@ -3579,8 +3597,8 @@ the first one will be read."
     (unless map-variable
       (user-error "No entry found in loophole maps for key: %s"
                   (key-description key))))
-  (let ((entry (lookup-key (symbol-value map-variable) key)))
-    (cond ((null entry)
+  (let ((entry (lookup-key (symbol-value map-variable) key t)))
+    (cond ((or (null entry) (numberp entry))
            (user-error "No entry found in loophole map: %s" map-variable))
           ((not (and (commandp entry)
                      (listp entry)
@@ -3590,6 +3608,8 @@ the first one will be read."
       (erase-buffer)
       (insert ";; For modifying lambda form.\n\n")
       (pp entry (current-buffer))
+      (setq buffer-undo-list nil)
+      (deactivate-mark t)
       (loophole-write-lisp-mode)
       (goto-char 1)
       (let ((lambda-form (read (current-buffer))))
@@ -3623,10 +3643,10 @@ the first one will be read."
     (unless map-variable
       (user-error "No entry found in loophole maps for key: %s"
                   (key-description key))))
-  (let ((entry (lookup-key (symbol-value map-variable) key)))
+  (let ((entry (lookup-key (symbol-value map-variable) key t)))
     (unless (featurep 'kmacro)
       (user-error "Bound entry cannot be kmacro, feature has not been loaded"))
-    (cond ((null entry)
+    (cond ((or (null entry) (numberp entry))
            (user-error "No entry found in loophole map: %s" map-variable))
           ((not (kmacro-p entry))
            (user-error "Bound entry is not kmacro: %s" entry)))
@@ -3642,6 +3662,8 @@ the first one will be read."
                     (substring (prin1-to-string (cdr extracted)) 1)
                     "\n")
           (pp extracted (current-buffer))))
+      (setq buffer-undo-list nil)
+      (deactivate-mark t)
       (loophole-write-lisp-mode)
       (goto-char 1)
       (let ((kmacro (kmacro-lambda-form (read (current-buffer)))))
@@ -3668,8 +3690,8 @@ the first one will be read."
     (unless map-variable
       (user-error "No entry found in loophole maps for key: %s"
                   (key-description key))))
-  (let ((entry (lookup-key (symbol-value map-variable) key)))
-    (cond ((null entry)
+  (let ((entry (lookup-key (symbol-value map-variable) key t)))
+    (cond ((or (null entry) (numberp entry))
            (user-error "No entry found in loophole map: %s" map-variable))
           ((not (or (vectorp entry) (stringp entry)))
            (user-error "Bound entry is not array: %s" entry)))
@@ -3680,6 +3702,8 @@ the first one will be read."
       (if loophole-print-event-in-char-read-syntax
           (insert "[" (mapconcat #'loophole--char-read-syntax entry " ") "]\n")
         (pp entry (current-buffer)))
+      (setq buffer-undo-list nil)
+      (deactivate-mark t)
       (loophole-write-lisp-mode)
       (goto-char 1)
       (let ((array (read (current-buffer))))
@@ -3703,8 +3727,8 @@ function to modify it."
     (unless map-variable
       (user-error "No entry found in loophole maps for key: %s"
                   (key-description key))))
-  (let ((entry (lookup-key (symbol-value map-variable) key)))
-    (cond ((null entry)
+  (let ((entry (lookup-key (symbol-value map-variable) key t)))
+    (cond ((or (null entry) (numberp entry))
            (user-error "No entry found in loophole map: %s" map-variable))
           ((and (commandp entry) (listp entry) (eq (car entry) 'lambda))
            (loophole-modify-lambda-form key map-variable))

@@ -2777,7 +2777,7 @@
 	  ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	 (:keywords "convenience"))])
  (tramp .
-	[(2 5 2)
+	[(2 5 2 1)
 	 ((emacs
 	   (25 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -2785,7 +2785,8 @@
 	  (:keywords "comm" "processes")
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
-	   ("Kai Großjohann" . "kai.grossjohann@gmx.net")))])
+	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
+	  (:commit . "974db74a36729d67dc758301e1cc9341396c79d9"))])
  (tramp-theme .
 	      [(0 2)
 	       ((emacs
@@ -2962,7 +2963,7 @@
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de")))])
  (vertico-posframe .
-		   [(0 5 1)
+		   [(0 5 2)
 		    ((emacs
 		      (26 0))
 		     (posframe
@@ -2975,7 +2976,7 @@
 		     (:maintainer "Feng Shu" . "tumashu@163.com")
 		     (:authors
 		      ("Feng Shu" . "tumashu@163.com"))
-		     (:commit . "7a75271fdaf593e6f491a953b511d2540553b532"))])
+		     (:commit . "cd54c3f022a47afc0a540eee117efc38289ae72d"))])
  (vigenere .
 	   [(1 0)
 	    ((emacs
