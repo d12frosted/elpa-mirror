@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.8.0
-;; Package-Version: 20220130.906
-;; Package-Commit: fb13574163b78fa87a7e2f5cf53a53452fe17ce1
+;; Package-Version: 20220130.1038
+;; Package-Commit: 9e8fb32da21144f72cfe51fd0a9528e3fe68a7ad
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -1096,7 +1096,7 @@ returned."
     (prin1-to-string event)))
 
 (defun loophole--protected-keymap-entry-list (protected-keymap)
-  "Return list of protected keymap entry from raw PROTECTED-KEYMAP.
+  "Return list of protected keymap element from raw PROTECTED-KEYMAP.
 PROTECTED-KEYMAP is flatten keymap object stored in the each
 map-variable as symbol property :loohpole-protected-keymap.
 It looks like
@@ -1181,12 +1181,7 @@ make KEYMAP accessible."
     (setcdr protected-keymap
             (let ((body-map (make-sparse-keymap))
                   (wall-map (make-sparse-keymap)))
-              (define-key body-map key
-                (if (symbolp keymap)
-                    keymap
-                  (let ((entry-map (make-sparse-keymap)))
-                    (set-keymap-parent entry-map keymap)
-                    entry-map)))
+              (define-key body-map key keymap)
               (define-key wall-map key 'undefined)
               (cons body-map (cons wall-map (cdr protected-keymap)))))))
 
@@ -1244,30 +1239,35 @@ they will be removed."
                      (set-keymap-parent map (cadr parent)))))
           (put map-variable :loophole-protected-keymap nil))))))
 
-(defun loophole--protected-keymap-prefix-key (keymap)
-  "Return prefix keys vector of protected keymap element KEYMAP.
-KEYMAP must be a keymap for binding keymap on protected
-region, i.e., looks like
-  (keymap (KEY (keymap ... (KEY . SYMBOL)))) or
-  (keymap (KEY (keymap ... (KEY . (keymap . (keymap ...)))))).
+(defun loophole--protected-keymap-prefix-key (protected-element)
+  "Return prefix keys vector of PROTECTED-ELEMENT.
+PROTECTED-ELEMENT must be a list object representing
+protected keymap entry, i.e., looks like
+  ((keymap (KEY (keymap ... (KEY . SYMBOL))))
+   (keymap (KEY (keymap ... (KEY . undefined)))))
+or
+  ((keymap (KEY (keymap ... (KEY . (keymap ...)))))
+   (keymap (KEY (keymap ... (KEY . undefined))))).
 First one is for a symbol whose function cell is a keymap.
 Second one is for a keymap object.
 The portion (KEY (keymap ... (KEY ...))) is a prefix key,
-and SYMBOL and last (keymap ...) is an entry."
+and SYMBOL and last (keymap ...) is an entry.
+
+Actually, this function searches the symbol undefined in
+the cadr of PROTECTED-ELEMENT and return found keys vector."
   (letrec ((prefix-key-list
             (lambda (object)
-              (cond ((or (symbolp object)
-                         (and (keymapp object)
-                              (keymap-parent object)))
+              (cond ((eq object 'undefined)
                      nil)
                     ((or (not (consp (cdr object)))
                          (not (= (length object) 2))
                          (not (eventp (caadr object)))
-                         (not (keymapp (cdadr object))))
+                         (not (or (keymapp (cdadr object))
+                                  (eq 'undefined (cdadr object)))))
                      (error "KEYMAP is not an element of protected keymap"))
                     (t (cons (caadr object)
                              (funcall prefix-key-list (cdadr object))))))))
-    (vconcat (funcall prefix-key-list keymap))))
+    (vconcat (funcall prefix-key-list (cadr protected-element)))))
 
 (defun loophole--trace-key-to-find-non-keymap-entry (key-sequence keymap)
   "Trace KEY-SEQUENCE in KEYMAP to find non-keymap entry.
@@ -2471,16 +2471,8 @@ from Loophole."
                                     (loophole--protected-keymap-entry-list
                                      protected-keymap)))
           (let* ((prefix-key (loophole--protected-keymap-prefix-key
-                              (car protected-element)))
-                 (raw-entry (lookup-key (car protected-element) prefix-key))
-                 (entry (cond ((symbolp raw-entry) raw-entry)
-                              ((and (keymapp raw-entry)
-                                    (keymap-parent raw-entry))
-                               (keymap-parent raw-entry))
-                              (t (error (concat
-                                         "Protected keymap element"
-                                         " is corrupted: %s")
-                                        protected-element))))
+                              protected-element))
+                 (entry (lookup-key (car protected-element) prefix-key))
                  (merger-keymap (symbol-value merger-map-variable)))
             (if (or (null (lookup-key merger-keymap prefix-key))
                     (null (loophole--trace-key-to-find-non-keymap-entry
@@ -2612,17 +2604,9 @@ Introduced by `loophole-duplicate'." duplicated-map-variable)))
                          (reverse (loophole--protected-keymap-entry-list
                                    protected-keymap)))
                   (let* ((prefix-key (loophole--protected-keymap-prefix-key
-                                      (car protected-element)))
-                         (raw-entry (lookup-key (car protected-element)
-                                                prefix-key))
-                         (entry (cond ((symbolp raw-entry) raw-entry)
-                                      ((and (keymapp raw-entry)
-                                            (keymap-parent raw-entry))
-                                       (keymap-parent raw-entry))
-                                      (t (error (concat
-                                                 "Protected keymap element"
-                                                 " is corrupted: %s")
-                                                protected-element)))))
+                                      protected-element))
+                         (entry (lookup-key (car protected-element)
+                                                prefix-key)))
                     (loophole--add-protected-keymap-entry
                      duplicated-map-variable prefix-key entry)))))
           (set-keymap-parent (symbol-value map-variable) parent)))
@@ -2706,9 +2690,8 @@ FILE will be asked."
                              (set-keymap-parent keymap nil)
                              keymap)
                           :parent
-                          ,(let* ((keymap (copy-keymap
-                                           (symbol-value map-variable)))
-                                  (parent (keymap-parent keymap)))
+                          ,(let ((parent (keymap-parent
+                                          (symbol-value map-variable))))
                              (cond ((eq parent loophole-base-map)
                                     'loophole-base-map)
                                    ((memq loophole-base-map parent)
@@ -2731,7 +2714,9 @@ FILE will be asked."
                           :tag ,(get map-variable :loophole-tag)
                           :global ,(not (local-variable-if-set-p
                                          (get map-variable
-                                              :loophole-state-variable)))))
+                                              :loophole-state-variable)))
+                          :protected-keymap ,(get map-variable
+                                                  :loophole-protected-keymap)))
                       valid-map-variable-list)))
         (with-temp-file file
           (prin1 printed-map-list (current-buffer))))
@@ -2798,7 +2783,8 @@ FILE will be asked."
                  (state-variable-documentation
                   (plist-get plist :state-variable-documentation))
                  (tag (plist-get plist :tag))
-                 (global (plist-get plist :global)))
+                 (global (plist-get plist :global))
+                 (protected-keymap (plist-get plist :protected-keymap)))
             (when (or (and (not (loophole-registered-p map-variable))
                            (not (boundp map-variable))
                            (not (boundp state-variable)))
@@ -2825,6 +2811,7 @@ FILE will be asked."
               (set state-variable nil)
               (put state-variable 'variable-documentation
                    state-variable-documentation)
+              (put map-variable :loophole-protected-keymap protected-keymap)
               (loophole-register map-variable state-variable tag global t)))))
     (message "File storage is not readable: %s" file)))
 
