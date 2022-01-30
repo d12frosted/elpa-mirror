@@ -1,0 +1,11 @@
+(go-translate .
+	      [(20220130 138)
+	       ((emacs
+		 (27 1)))
+	       "Translation framework supports multiple engines such as Google/Bing/DeepL" tar
+	       ((:commit . "b6a5842fdd08872d9243375c46cd549f1399e5b8")
+		(:authors
+		 ("lorniu" . "lorniu@gmail.com"))
+		(:maintainer "lorniu" . "lorniu@gmail.com")
+		(:keywords "convenience")
+		(:url . "https://github.com/lorniu/go-translate"))])

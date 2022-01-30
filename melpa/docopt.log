@@ -3,3 +3,35 @@ Fetcher: github
 Source:  https://github.com/r0man/docopt.el.git
 
 Updating /mnt/store/melpa/working/docopt/
+Checking out origin/HEAD
+Checking out 2e49c2f4e9ee023d2a143086463bac47db914846
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/docopt/
+  to /tmp/docoptdNFUfU/docopt-20201211.1008
+  ! src/docopt-abbrev.el -> docopt-abbrev.el
+  ! src/docopt-analyzer.el -> docopt-analyzer.el
+  ! src/docopt-argv.el -> docopt-argv.el
+  ! src/docopt-ast.el -> docopt-ast.el
+  ! src/docopt-generic.el -> docopt-generic.el
+  ! src/docopt-parser.el -> docopt-parser.el
+  ! src/docopt-transient.el -> docopt-transient.el
+  ! src/docopt-util.el -> docopt-util.el
+  ! src/docopt.el -> docopt.el
+Created docopt-20201211.1008.tar containing:
+  docopt-20201211.1008/
+  docopt-20201211.1008/docopt-abbrev.el
+  docopt-20201211.1008/docopt-analyzer.el
+  docopt-20201211.1008/docopt-argv.el
+  docopt-20201211.1008/docopt-ast.el
+  docopt-20201211.1008/docopt-generic.el
+  docopt-20201211.1008/docopt-parser.el
+  docopt-20201211.1008/docopt-pkg.el
+  docopt-20201211.1008/docopt-transient.el
+  docopt-20201211.1008/docopt-util.el
+  docopt-20201211.1008/docopt.el
+Built docopt in 3.873s, finished at 2022-01-30T06:56:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  489 Jan 30 06:56 packages/docopt-20201211.1008.entry
+140K -rw-r--r-- 1 root root 140K Jan 30 06:56 packages/docopt-20201211.1008.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 30 06:56 packages/docopt-badge.svg
+4.0K -rw-r--r-- 1 root root   33 Jan 30 06:56 packages/docopt-readme.txt
