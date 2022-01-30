@@ -223,6 +223,14 @@
 	      (:authors
 	       ("https://github.com/bradyt/dart-mode/issues"))
 	      (:keywords "languages"))])
+ (dockerfile-mode .
+		  [(1 5)
+		   ((emacs
+		     (24)))
+		   "Major mode for editing Docker's Dockerfiles" tar
+		   ((:url . "https://github.com/spotify/dockerfile-mode")
+		    (:keywords "docker")
+		    (:commit . "628315e2e4ab2f269548126444234caa057b2c75"))])
  (dracula-theme .
 		[(1 7 0)
 		 ((emacs
@@ -256,6 +264,25 @@
 		 (:maintainer "EditorConfig Team" . "editorconfig@googlegroups.com")
 		 (:authors
 		  ("EditorConfig Team" . "editorconfig@googlegroups.com")))])
+ (elixir-mode .
+	      [(2 4 0)
+	       ((emacs
+		 (25)))
+	       "Major mode for editing Elixir files" tar
+	       ((:url . "https://github.com/elixir-editors/emacs-elixir")
+		(:keywords "languages" "elixir")
+		(:commit . "1d94b525ddcc995b5a979de7b050c2309648ca6f"))])
+ (elpher .
+	 [(3 2 2)
+	  ((emacs
+	    (27 1)))
+	  "A friendly gopher and gemini client" tar
+	  ((:url . "https://thelambdalab.xyz/elpher")
+	   (:keywords "comm" "gopher")
+	   (:maintainer "Tim Vaughan" . "plugd@thelambdalab.xyz")
+	   (:authors
+	    ("Tim Vaughan" . "plugd@thelambdalab.xyz"))
+	   (:commit . "7b52709ddf798fe53db3855eef52ca8862e7700d"))])
  (evil .
        [(1 14 0)
 	nil "extensible vi layer" tar
@@ -377,6 +404,26 @@
 		   (:maintainer "https://turbocafe.keybase.pub")
 		   (:authors
 		    ("https://turbocafe.keybase.pub")))])
+ (forth-mode .
+	     [(0 2)
+	      nil "Programming language mode for Forth" tar
+	      ((:url . "http://github.com/larsbrinkhoff/forth-mode")
+	       (:keywords "languages" "forth")
+	       (:maintainer "Lars Brinkhoff" . "lars@nocrew.org")
+	       (:authors
+		("Lars Brinkhoff" . "lars@nocrew.org"))
+	       (:commit . "38d5152011ee67e0cff9d4a5ddfb1f908e5be013"))])
+ (free-keys .
+	    [(1 0)
+	     ((cl-lib
+	       (0 3)))
+	     "Show free keybindings for modkeys or prefixes" tar
+	     ((:url . "https://github.com/Fuco1/free-keys")
+	      (:keywords "convenience")
+	      (:maintainer "Matus Goljer" . "matus.goljer@gmail.com")
+	      (:authors
+	       ("Matus Goljer" . "matus.goljer@gmail.com"))
+	      (:commit . "6f9172376af4d399c7853cbdfdd7425348a878f9"))])
  (geiser .
 	 [(0 22 1)
 	  ((emacs
@@ -584,6 +631,17 @@
 	     (:maintainer "Vasilij Schneidermann" . "mail@vasilij.de")
 	     (:authors
 	      ("David Andersson <l.david.andersson(at)sverige.nu>")))])
+ (graphql-mode .
+	       [(1 0 0)
+		((emacs
+		  (24 3)))
+		"Major mode for editing GraphQL schemas" tar
+		((:url . "https://github.com/davazp/graphql-mode")
+		 (:keywords "languages")
+		 (:maintainer "David Vazquez Pua" . "davazp@gmail.com")
+		 (:authors
+		  ("David Vazquez Pua" . "davazp@gmail.com"))
+		 (:commit . "fe8d7e2db5581cd0cb7a69563bc44f0669f76322"))])
  (gruvbox-theme .
 		[(1 26 0)
 		 ((autothemer
@@ -635,6 +693,22 @@
 		    "Major mode for editing Haskell" tar
 		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
 		     (:keywords "languages"))])
+ (helm .
+       [(3 6 2)
+	nil "Emacs incremental and narrowing framework" tar
+	((:url . "https://github.com/emacs-helm/helm")
+	 (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
+	 (:authors
+	  ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
+	 (:commit . "4ff354efb6b24044fd38b725b61d470bd5423265"))])
+ (helm-core .
+	    [(3 6 2)
+	     nil "Emacs incremental and narrowing framework" tar
+	     ((:url . "https://github.com/emacs-helm/helm")
+	      (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
+	      (:authors
+	       ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
+	      (:commit . "4ff354efb6b24044fd38b725b61d470bd5423265"))])
  (highlight-parentheses .
 			[(2 1 0)
 			 ((emacs
@@ -687,6 +761,15 @@
 	  nil "Major mode for editing J programs" tar
 	  ((:url . "http://github.com/zellio/j-mode")
 	   (:keywords "j" "languages"))])
+ (jade-mode .
+	    [(1 0 1)
+	     nil "Major mode for editing .jade files" tar
+	     ((:url . "https://github.com/brianc/jade-mode")
+	      (:keywords "languages")
+	      (:maintainer "Brian M. Carlson and other contributors")
+	      (:authors
+	       ("Brian M. Carlson and other contributors"))
+	      (:commit . "dad17dc86c93401646802a639a98dd2ec875db6f"))])
  (jinja2-mode .
 	      [(0 3)
 	       nil "A major mode for jinja2" tar
@@ -712,6 +795,17 @@
 	    (:authors
 	     ("Jonas Bernoulli" . "jonas@bernoul.li"))
 	    (:commit . "b4965ff5db0e913e58c906c228042921b22335a0"))])
+ (kotlin-mode .
+	      [(1 0 0)
+	       ((emacs
+		 (24 3)))
+	       "Major mode for kotlin" tar
+	       ((:keywords "languages")
+		(:maintainer "Shodai Yokoyama" . "quantumcars@gmail.com")
+		(:authors
+		 ("Shodai Yokoyama" . "quantumcars@gmail.com"))
+		(:url . "https://elpa.nongnu.org/nongnu/kotlin-mode.html")
+		(:commit . "b9d03a769b91c6b15e99a9cadb8b1618e5205595"))])
  (lua-mode .
 	   [(20210802)
 	    ((emacs
@@ -868,6 +962,19 @@
 		("Andrew J Cosgriff" . "andrew@cosgriff.name"))
 	       (:keywords "languages" "nginx")
 	       (:url . "https://elpa.nongnu.org/nongnu/nginx-mode.html"))])
+ (nix-mode .
+	   [(1 4 4)
+	    ((emacs
+	      (25 1))
+	     (magit-section
+	      (0))
+	     (transient
+	      (0 3)))
+	    "Major mode for editing .nix files" tar
+	    ((:url . "https://github.com/NixOS/nix-mode")
+	     (:keywords "nix" "languages" "tools" "unix")
+	     (:maintainer "Matthew Bauer" . "mjbauer95@gmail.com")
+	     (:commit . "e4e604ae3ac91748c4e7d51a591cb9ee60961b7c"))])
  (org-contrib .
 	      [(0 3)
 	       ((emacs
@@ -1069,6 +1176,17 @@
 		       (:authors
 			("Jeremy Rayman" . "opensource@jeremyrayman.com")
 			("Fanael Linithien" . "fanael4@gmail.com")))])
+ (raku-mode .
+	    [(0 2 1)
+	     ((emacs
+	       (24 4)))
+	     "Major mode for editing Raku code" tar
+	     ((:url . "https://github.com/hinrik/perl6-mode")
+	      (:keywords "languages")
+	      (:maintainer "Hinrik Örn Sigurðsson" . "hinrik.sig@gmail.com")
+	      (:authors
+	       ("Hinrik Örn Sigurðsson" . "hinrik.sig@gmail.com"))
+	      (:commit . "4ee9045eeb90f7831d7c0ee2e4adfcd957f712be"))])
  (request .
 	  [(0 3 3)
 	   ((emacs
@@ -1180,6 +1298,15 @@
 		    (:authors
 		     ("Nasser Alshammari"))
 		    (:commit . "4857e6eb7ea20be3a2631beee42d0644dff7eb1b"))])
+ (stylus-mode .
+	      [(1 0 1)
+	       nil "Major mode for editing .styl files" tar
+	       ((:url . "https://github.com/brianc/jade-mode")
+		(:keywords "languages")
+		(:maintainer "Brian M. Carlson and other contributors")
+		(:authors
+		 ("Brian M. Carlson and other contributors"))
+		(:commit . "dad17dc86c93401646802a639a98dd2ec875db6f"))])
  (subatomic-theme .
 		  [(1 8 2)
 		   nil "Low contrast bluish color theme" tar
@@ -1256,6 +1383,15 @@
 		   (:maintainer "Daniel Bordak" . "dbordak@fastmail.fm")
 		   (:authors
 		    ("Daniel Bordak" . "dbordak@fastmail.fm")))])
+ (textile-mode .
+	       [(1 0 0)
+		nil "Textile markup editing major mode" tar
+		((:url . "https://github.com/juba/textile-mode")
+		 (:keywords "wp" "languages")
+		 (:maintainer "Julien Barnier" . "julien@nozav.org")
+		 (:authors
+		  ("Julien Barnier" . "julien@nozav.org"))
+		 (:commit . "16ac26b5b4c9bb5c7a3c7aed6c6b3a6c5fb8c62c"))])
  (toc-org .
 	  [(1 1)
 	   nil "add table of contents to org-mode files (formerly, org-toc)" tar
