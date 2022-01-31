@@ -6,8 +6,8 @@
 
 ;; Author: Arne Babenhauserheide <arne_bab@web.de>
 ;; Version: 0.2.9
-;; Package-Version: 20220130.2218
-;; Package-Commit: 45c9d49ba1c1d1bee3428dec17eb2c381efe3769
+;; Package-Version: 20220131.642
+;; Package-Commit: 15ee500031e65a8a16772ca79f642ebb5ae4f147
 ;; Keywords: languages, lisp, scheme
 ;; Homepage: http://www.draketo.de/english/wisp
 ;; Package-Requires: ((emacs "24.4"))
@@ -249,18 +249,17 @@ prev, not to prev+tab."
 
 (defcustom wisp--bg-colors
   '( ;; paul tol's pale scheme
+     "#DDDDDD" ;; -1: . foo at toplevel
      "#BBCCEE"
      "#CCEEFF"
      "#CCDDAA"
      "#EEEEBB"
      "#FFCCCC"
-     "#DDDDDD"
      "#BBCCEE"
      "#CCEEFF"
      "#CCDDAA"
      "#EEEEBB"
      "#FFCCCC"
-     "#DDDDDD"
     ) "Background-colors to show the indentation."
       :group 'wisp
       :type 'list)
@@ -273,7 +272,7 @@ prev, not to prev+tab."
 
 (defun wisp--current-indentation-level (indent)
   "Get the indentation level at the INDENT — the number of indentation levels defined before it."
-  (wisp--add-indentation-levels-before indent 0))
+  (wisp--add-indentation-levels-before indent 1))
 
 (defun wisp--highlight-indentation (&optional begin end length)
   "Colorize a buffer or the region between BEGIN and END up to LENGTH."
@@ -290,13 +289,27 @@ prev, not to prev+tab."
       (with-silent-modifications
 	    (while (string-match "[^ \n\r	]+" (buffer-substring (point) (point-max)))
           (back-to-indentation)
-	      (let ((start (point)))
+	      (let* ((start (point))
+                 (period (looking-at "\\. "))
+                 (colon (looking-at ": "))
+                 (raw-level (wisp--current-indentation-level (wisp--current-indent)))
+                 (level (if period (- raw-level 1) raw-level)))
 	        (end-of-line)
-	        (overlay-put (make-overlay start (point))
-				         'face
-				         `(:background
-				           ,(nth (wisp--current-indentation-level (wisp--current-indent)) wisp--bg-colors)))
-            (forward-line 1)))))))
+            (let ((end (point)))
+              (back-to-indentation)
+	          (overlay-put (make-overlay (point) end)
+				           'face
+				           `(:background
+				             ,(nth level wisp--bg-colors)))
+              
+              (while (search-forward ": " end 'move-to-end)
+                (when (null (nth 8 (syntax-ppss))) ;; not within string or comment
+                  (setq level (+ level 1))
+	              (overlay-put (make-overlay (point) end)
+				               'face
+				               `(:background
+				                 ,(nth level wisp--bg-colors)))))
+              (forward-line 1))))))))
                         
 
 (provide 'wisp-mode)
