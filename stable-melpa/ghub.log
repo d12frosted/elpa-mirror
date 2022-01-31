@@ -4,10 +4,10 @@ Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
 Checking out origin/HEAD
-Checking out e174deed021ff9c48d7b8e7fd7ab8ae5d4b2b751
+Checking out 38be4a4bd92f4cddcd93b6784007774ce892a6c7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghubA3cO9R/ghub-20220101.1019
+  to /tmp/ghubcTnrZm/ghub-20220130.1941
   ! lisp/buck.el -> buck.el
   ! lisp/ghub-graphql.el -> ghub-graphql.el
   ! lisp/ghub-pkg.el -> ghub-pkg.el
@@ -18,23 +18,23 @@ Copying files (->) and directories (=>)
   ! lisp/gtea.el -> gtea.el
   ! docs/ghub.texi -> ghub.texi
     .dir-locals.el -> .dir-locals.el
-Generating /tmp/ghubA3cO9R/ghub-20220101.1019/ghub.info
-Created ghub-20220101.1019.tar containing:
-  ghub-20220101.1019/
-  ghub-20220101.1019/.dir-locals.el
-  ghub-20220101.1019/buck.el
-  ghub-20220101.1019/dir
-  ghub-20220101.1019/ghub-graphql.el
-  ghub-20220101.1019/ghub-pkg.el
-  ghub-20220101.1019/ghub.el
-  ghub-20220101.1019/ghub.info
-  ghub-20220101.1019/glab.el
-  ghub-20220101.1019/gogs.el
-  ghub-20220101.1019/gsexp.el
-  ghub-20220101.1019/gtea.el
-Built ghub in 7.628s, finished at 2022-01-30T15:56:08+0000
+Generating /tmp/ghubcTnrZm/ghub-20220130.1941/ghub.info
+Created ghub-20220130.1941.tar containing:
+  ghub-20220130.1941/
+  ghub-20220130.1941/.dir-locals.el
+  ghub-20220130.1941/buck.el
+  ghub-20220130.1941/dir
+  ghub-20220130.1941/ghub-graphql.el
+  ghub-20220130.1941/ghub-pkg.el
+  ghub-20220130.1941/ghub.el
+  ghub-20220130.1941/ghub.info
+  ghub-20220130.1941/glab.el
+  ghub-20220130.1941/gogs.el
+  ghub-20220130.1941/gsexp.el
+  ghub-20220130.1941/gtea.el
+Built ghub in 7.146s, finished at 2022-01-31T03:40:04+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  401 Jan 30 15:56 packages/ghub-20220101.1019.entry
-152K -rw-r--r-- 1 root root 150K Jan 30 15:56 packages/ghub-20220101.1019.tar
-4.0K -rw-r--r-- 1 root root 1.2K Jan 30 15:56 packages/ghub-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Jan 30 15:56 packages/ghub-readme.txt
+4.0K -rw-r--r-- 1 root root  401 Jan 31 03:40 packages/ghub-20220130.1941.entry
+152K -rw-r--r-- 1 root root 150K Jan 31 03:40 packages/ghub-20220130.1941.tar
+4.0K -rw-r--r-- 1 root root 1.2K Jan 31 03:40 packages/ghub-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Jan 31 03:40 packages/ghub-readme.txt
