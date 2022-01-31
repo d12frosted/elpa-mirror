@@ -1336,6 +1336,7 @@ Table of Contents
   • [Tecosaur]
   • [Mohamed Abdelnour]
   • [Sylvain Rousseau]
+  • [J.D. Smith]
 
   Advice and useful discussions:
   • [Clemens Radermacher]
@@ -1350,6 +1351,7 @@ Table of Contents
   • [Dmitry Gutov]
   • [Itai Y. Efrat]
   • [Bruce d'Arcus]
+  • [J.D. Smith]
 
   Authors of supplementary `consult-*' packages:
 
@@ -1394,6 +1396,8 @@ Table of Contents
 [Mohamed Abdelnour] <https://github.com/mohamed-abdelnour>
 
 [Sylvain Rousseau] <https://github.com/thisirs>
+
+[J.D. Smith] <https://github.com/jdtsmith>
 
 [Protesilaos Stavrou] <https://gitlab.com/protesilaos/>
 

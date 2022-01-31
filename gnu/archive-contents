@@ -292,7 +292,7 @@
 		("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	       (:keywords "lisp"))])
  (cape .
-       [(0 5)
+       [(0 6)
 	((emacs
 	  (27 1)))
 	"Completion At Point Extensions" tar
@@ -300,7 +300,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "9567f1ca09a3867e50ef8f990b486e916460df9d"))])
+	 (:commit . "92c3168283c6d9faa3fcf2e72d0d71afbfa5d6e1"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -440,14 +440,15 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (consult .
-	  [(0 14)
+	  [(0 15)
 	   ((emacs
 	     (26 1)))
 	   "Consulting completing-read" tar
 	   ((:url . "https://github.com/minad/consult")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
-	     ("Daniel Mendler and Consult contributors")))])
+	     ("Daniel Mendler and Consult contributors"))
+	    (:commit . "e1e17965a98515a620c439be1eb28cd125f984a0"))])
  (context-coloring .
 		   [(8 1 0)
 		    ((emacs
@@ -459,14 +460,15 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 17)
+	[(0 18)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
 	 ((:url . "https://github.com/minad/corfu")
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
-	   ("Daniel Mendler" . "mail@daniel-mendler.de")))])
+	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
+	  (:commit . "2caa3e0088be4c1d970d788a14a8d9f4e1b993b7"))])
  (coterm .
 	 [(1 4)
 	  ((emacs
@@ -1597,14 +1599,15 @@
 	 ("Nicolas Petton" . "nicolas@petton.fr"))
 	(:url . "https://elpa.gnu.org/packages/map.html"))])
  (marginalia .
-	     [(0 11)
+	     [(0 12)
 	      ((emacs
 		(26 1)))
 	      "Enrich existing commands with completion annotations" tar
 	      ((:url . "https://github.com/minad/marginalia")
 	       (:maintainer "Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
-		("Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de")))])
+		("Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de"))
+	       (:commit . "e9540a7b80f9c4d044748b88720e5cba3e30c20a"))])
  (markchars .
 	    [(0 2 2)
 	     nil "Mark chars fitting certain characteristics" single
@@ -2954,14 +2957,15 @@
 		  ("Michael McNamara" . "mac@verilog.com")
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org")))])
  (vertico .
-	  [(0 19)
+	  [(0 20)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar
 	   ((:url . "https://github.com/minad/vertico")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
-	     ("Daniel Mendler" . "mail@daniel-mendler.de")))])
+	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
+	    (:commit . "1bd5438da9c661e2df5e9516f36d9cbc6d100a34"))])
  (vertico-posframe .
 		   [(0 5 2)
 		    ((emacs

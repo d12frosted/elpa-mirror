@@ -38,7 +38,7 @@ Table of Contents
   for completion of a line from the current buffer and `cape-file' for
   completion of a file name.  The command `cape-symbol' is particularily
   useful for documentation of Elisp packages or configurations, since it
-  completes elisp symbols anywere.
+  completes elisp symbols anywhere.
 
   On the more experimental side, Cape has the super power to transform
   Company backends into Capfs and merge multiple Capfs into a
@@ -71,8 +71,9 @@ Table of Contents
 3 Configuration
 ═══════════════
 
-  Cape is available from MELPA. In the long term some of the Capfs
-  provided by this package should be upstreamed into Emacs itself.
+  Cape is available on GNU ELPA and MELPA. You can install the package
+  with `package-install'. In the long term some of the Capfs provided by
+  this package could be upstreamed into Emacs itself.
 
   ┌────
   │ ;; Enable Corfu completion UI
@@ -95,6 +96,8 @@ Table of Contents
   │ 	 ("C-c p l" . cape-line)
   │ 	 ("C-c p w" . cape-dict)
   │ 	 ("C-c p \\" . cape-tex)
+  │ 	 ("C-c p _" . cape-tex)
+  │ 	 ("C-c p ^" . cape-tex)
   │ 	 ("C-c p &" . cape-sgml)
   │ 	 ("C-c p r" . cape-rfc1345))
   │   :init
@@ -209,7 +212,10 @@ Table of Contents
   Completion table merging works only for tables which are sufficiently
   well-behaved and tables which do not define completion boundaries.
   `cape-super-capf' has the same restrictions as
-  `completion-table-merge' and `completion-table-in-turn'.
+  `completion-table-merge' and `completion-table-in-turn'. As a simple
+  rule of thumb, `cape-super-capf' works only well for static completion
+  functions like `cape-dabbrev', `cape-keyword', `cape-ispell,' etc.,
+  but not for complex multi-step completions like `cape-file'.
 
   ┌────
   │ ;; Merge the dabbrev, dict and keyword capfs, display candidates together.
@@ -245,14 +251,20 @@ Table of Contents
 4.4 Other Capf transformers
 ───────────────────────────
 
-  • `cape-silent-capf': Wrap a chatty Capf and silence it.
-  • `cape-noninterruptible-capf': Protect a Capf which does not like to
-    be interrupted.
   • `cape-interactive-capf': Create a Capf which can be called
     interactively.
-  • `cape-capf-case-fold': Create a Capf which is case insensitive.
-  • `cape-capf-with-properties': Add completion properties to a Capf.
-  • `cape-capf-with-predicate': Add candidate predicate to a Capf.
+  • `cape-wrap-silent', `cape-capf-silent': Wrap a chatty Capf and
+    silence it.
+  • `cape-wrap-purify', `cape-capf-purify': Purify a broken Capf and
+    ensure that it does not modify the buffer.
+  • `cape-wrap-noninterruptible', `cape-capf-noninterruptible:' Protect
+    a Capf which does not like to be interrupted.
+  • `cape-wrap-case-fold', `cape-capf-case-fold': Create a Capf which is
+    case insensitive.
+  • `cape-wrap-properties', `cape-capf-properties': Add completion
+    properties to a Capf.
+  • `cape-wrap-predicate', `cape-capf-predicate': Add candidate
+    predicate to a Capf.
 
 
 5 Contributions

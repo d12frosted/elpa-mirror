@@ -6,7 +6,7 @@
 ;;         Clemens Radermacher <clemera@posteo.net>
 ;; URL: https://github.com/d12frosted/flyspell-correct
 ;; Package-Version: 20210124.1143
-;; Package-Commit: 2e098db03cba74149257e31213097d043780e80a
+;; Package-Commit: e9fde6f93af991b0528d6ed47d44bed470dc70af
 ;; Version: 0.6.1
 ;; Package-Requires: ((flyspell-correct "0.6.1") (avy-menu "0.1.1") (emacs "24"))
 ;;

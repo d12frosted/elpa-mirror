@@ -9,11 +9,14 @@ Table of Contents
 1. Introduction
 2. Features
 3. Installation and Configuration
-.. 1. TAB-and-Go completion
+.. 1. Completing with Corfu in the minibuffer
+.. 2. Completing with Corfu in the Shell or Eshell
+.. 3. TAB-and-Go completion
 4. Key bindings
 5. Complementary packages
-6. Caveats
-7. Contributions
+6. Alternatives
+7. Caveats
+8. Contributions
 
 
 
@@ -22,30 +25,27 @@ Table of Contents
 1 Introduction
 ══════════════
 
-  Corfu enhances the default completion in region function with a
-  completion overlay. The current candidates are shown in a popup below
-  or above the point.  Corfu is the minimalistic `completion-in-region'
-  counterpart of the [Vertico] minibuffer UI.
+  Corfu enhances completion at point with a small completion popup. The
+  current candidates are shown in a popup below or above the
+  point. Corfu is the minimalistic `completion-in-region' counterpart of
+  the [Vertico] minibuffer UI.
 
-  Corfu is a minimal package, which relies on the Emacs completion
+  Corfu is a small package, which relies on the Emacs completion
   facilities and concentrates on providing a polished completion
   UI. Completions are either provided by commands like
   `dabbrev-completion' or by pluggable backends
   (`completion-at-point-functions', Capfs). Most programming language
   major modes implement a Capf. Furthermore the language server
-  packages, [Eglot] and [Lsp-mode], both use Capfs which talk to the LSP
-  server to retrieve the completions.
-
-  Corfu does not include custom completion backends. In contrast, the
-  complex Company package includes custom completion backends, which
-  deviate from the Emacs completion infrastructure. The Emacs built-in
-  Capfs are mostly sufficient, but a few additional Capfs and completion
-  functions are provided by the [Cape] package.
+  packages, [Eglot] and [Lsp-mode], use Capfs which talk to the LSP
+  server to retrieve the completions.  Corfu does not include its own
+  completion backends. The Emacs built-in Capfs and the Capfs provided
+  by other programming language packages are usually sufficient. A few
+  additional Capfs and completion utilities are provided by the [Cape]
+  package.
 
   *NOTE*: Corfu uses child frames to show the popup. For now Corfu falls
   back to the default setting of the `completion-in-region-function' on
-  non-graphical displays. You may want to use
-  `consult-completion-in-region'.
+  non-graphical displays.
 
   <https://github.com/minad/corfu/blob/screenshots/light.png?raw=true>
 
@@ -184,7 +184,95 @@ Table of Contents
 [Elisp manual]
 <https://www.gnu.org/software/emacs/manual/html_node/elisp/Completion.html>
 
-3.1 TAB-and-Go completion
+3.1 Completing with Corfu in the minibuffer
+───────────────────────────────────────────
+
+  Corfu can be used for completion in the minibuffer, since it relies on
+  child frames to display the candidates. By default,
+  `corfu-global-mode' does not activate `corfu-mode' in the minibuffer,
+  to avoid interference with specialised minibuffer completion UIs like
+  Vertico or Mct. However you may still want to enable Corfu completion
+  for commands like `M-:' (`eval-expression') or `M-!'
+  (`shell-command'), which read from the minibuffer. Activate
+  `corfu-mode' only if `completion-at-point' is bound in the
+  minibuffer-local keymap to achieve this effect.
+
+  ┌────
+  │ (defun corfu-enable-in-minibuffer ()
+  │   "Enable Corfu in the minibuffer if `completion-at-point' is bound."
+  │   (when (where-is-internal #'completion-at-point (list (current-local-map)))
+  │     ;; (setq-local corfu-auto nil) Enable/disable auto completion
+  │     (corfu-mode 1)))
+  │ (add-hook 'minibuffer-setup-hook #'corfu-enable-in-minibuffer)
+  └────
+
+  You can also enable Corfu more generally for every minibuffer, as long
+  as no other completion UI is active. If you use Mct or Vertico as your
+  main minibuffer completion UI, the following snippet should yield the
+  desired result.
+
+  ┌────
+  │ (defun corfu-enable-always-in-minibuffer ()
+  │   "Enable Corfu in the minibuffer if Vertico/Mct are not active."
+  │   (unless (or (bound-and-true-p mct--active)
+  │ 	      (bound-and-true-p vertico--input))
+  │     ;; (setq-local corfu-auto nil) Enable/disable auto completion
+  │     (corfu-mode 1)))
+  │ (add-hook 'minibuffer-setup-hook #'corfu-enable-always-in-minibuffer 1)
+  └────
+
+
+3.2 Completing with Corfu in the Shell or Eshell
+────────────────────────────────────────────────
+
+  When completing in the Eshell I recommend conservative local settings,
+  no auto completion, quitting at boundary and quitting if there is no
+  match.
+
+  ┌────
+  │ (add-hook 'eshell-mode-hook
+  │ 	  (lambda ()
+  │ 	    (setq-local corfu-quit-at-boundary t
+  │ 			corfu-quit-no-match t
+  │ 			corfu-auto nil)
+  │ 	    (corfu-mode)))
+  └────
+
+  Shell completion uses the flexible `pcomplete' mechanism internally,
+  which allows you to program the completions per shell command. If you
+  want to know more, look into this [blog post], which shows how to
+  configure pcomplete for git commands. I recommend the [pcmpl-args]
+  package which extends Pcomplete with completion support and helpful
+  annotation support for more commands. Similar to the Fish shell,
+  pcmpl-args uses man page parsing and –help output parsing to
+  dynamically generate completions. This package brings Eshell
+  completion to another level!
+
+  Unfortunately Pcomplete has a few technical issues, which we can work
+  around with the [Cape] library (Completion at point extensions). Cape
+  provides wrappers, which sanitize the pcomplete function. Ideally the
+  bugs in pcomplete should be fixed upstream. *For now these two advices
+  are strongly recommended to achieve a sane Eshell experience.*
+
+  ┌────
+  │ ;; Silence the pcomplete capf, no errors or messages!
+  │ (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-silent)
+  │ 
+  │ ;; Ensure that pcomplete does not write to the buffer
+  │ ;; and behaves as a pure `completion-at-point-function'.
+  │ (advice-add 'pcomplete-completions-at-point :around #'cape-wrap-purify)
+  └────
+
+
+[blog post]
+<https://www.masteringemacs.org/article/pcomplete-context-sensitive-completion-emacs>
+
+[pcmpl-args] <https://github.com/JonWaltman/pcmpl-args.el>
+
+[Cape] <https://github.com/minad/cape>
+
+
+3.3 TAB-and-Go completion
 ─────────────────────────
 
   You may be interested in configuring Corfu in TAB-and-Go
@@ -263,6 +351,15 @@ Table of Contents
     similar to `company-quickhelp'. /Note that the corfu-doc package is
     new and still work in progress./
 
+  • [pcmpl-args]: Extend the Eshell/Shell Pcomplete mechanism with
+    support for many more commands. Similar to the Fish shell, Pcomplete
+    uses man page parsing to dynamically retrieve the completions and
+    helpful annotations. This package brings Eshell completions to
+    another level!
+
+  • [Tempel]: Tiny template/snippet package which can be used in
+    conjunction with Corfu.
+
   • [Vertico]: You may also want to look into my [Vertico]
     package. Vertico is the minibuffer completion counterpart of Corfu.
 
@@ -275,10 +372,62 @@ Table of Contents
 
 [corfu-doc] <https://github.com/galeo/corfu-doc>
 
+[pcmpl-args] <https://github.com/JonWaltman/pcmpl-args.el>
+
+[Tempel] <https://github.com/minad/tempel>
+
 [Vertico] <https://github.com/minad/vertico>
 
 
-6 Caveats
+6 Alternatives
+══════════════
+
+  • [Company]: Company is a widely used and mature completion package,
+    which implements a similar interaction model and popup UI as
+    Corfu. While Corfu relies exclusively on the standard Emacs
+    completion API (Capfs), Company defines its own API for the
+    backends. Furthermore Company includes its completion backends,
+    which are incompatible with the Emacs completion infrastructure. As
+    a result of this design, Company is a more complex package than
+    Corfu. Company by default uses overlays to display the popup in
+    contrast to the child frames used by Corfu. Overall both packages
+    work well.  Company is more mature but the integration into Emacs is
+    a bit less tight, since for example the `completion-at-point'
+    command (or the `completion-in-region' function) does not invoke
+    Company.
+
+  • [Mct]: Protesilaos' Minibuffer Confines Transcended package supports
+    both minibuffer completion and completion in region. It reuses the
+    default completion UI for this purpose and installs a timer which
+    live updates the completion buffer. The main advantage of Mct is
+    that you work with a regular Emacs buffer instead of with a
+    popup. You can take advantage of the usual Emacs commands to
+    navigate in the completions buffer. On top, Mct enhances the
+    movement such that you can quickly switch between the completions
+    buffer and the minibuffer or the region which is being
+    completed. Mct does not support timer-based auto completion, but the
+    integration into Emacs is naturally tight.
+
+  • [consult-completion-in-region]: The Consult package provides the
+    function `consult-completion-in-region' which can be set as
+    `completion-in-region-function' such that it handles
+    `completion-at-point'. The function works by transferring the
+    in-buffer completion to the minibuffer.  In the minibuffer, the
+    minibuffer completion UI, for example [Vertico] takes over. If you
+    prefer to perform all your completions in the minibuffer
+    `consult-completion-in-region' is your best option.
+
+
+[Company] <https://github.com/company-mode/company-mode>
+
+[Mct] <https://gitlab.com/protesilaos/mct>
+
+[consult-completion-in-region] <https://github.com/minad/consult>
+
+[Vertico] <https://github.com/minad/vertico>
+
+
+7 Caveats
 ═════════
 
   Corfu is robust in most scenarios. There are a few known technical
@@ -286,14 +435,14 @@ Table of Contents
 
   • Corfu uses child frames to show the popup. For now Corfu falls back
     to the default setting of the `completion-in-region-function' on
-    non-graphical displays. You may want to use
-    `consult-completion-in-region'.
+    non-graphical displays. You can use one of the alternatives in
+    terminals.
 
   • Corfu does not sort by history, since `completion-at-point' does not
     maintain a history (See branch `history' for a possible solution).
 
 
-7 Contributions
+8 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a

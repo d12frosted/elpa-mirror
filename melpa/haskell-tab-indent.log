@@ -3,11 +3,11 @@ Fetcher: git
 Source:  https://git.spwhitton.name/haskell-tab-indent
 
 Updating /mnt/store/melpa/working/haskell-tab-indent/
-Checking out origin/HEAD
-Checking out 3239e814d6999f31ad845cc58df53395ad299059
-Built haskell-tab-indent in 4.480s, finished at 2022-01-31T06:39:43+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.7K Jan 31 06:39 packages/haskell-tab-indent-20200513.1950.el
-4.0K -rw-r--r-- 1 root root  426 Jan 31 06:39 packages/haskell-tab-indent-20200513.1950.entry
-4.0K -rw-r--r-- 1 root root 1.2K Jan 31 06:39 packages/haskell-tab-indent-badge.svg
-4.0K -rw-r--r-- 1 root root  827 Jan 31 06:39 packages/haskell-tab-indent-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://git.spwhitton.name/haskell-tab-indent/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
