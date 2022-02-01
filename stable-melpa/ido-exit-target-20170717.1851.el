@@ -4,8 +4,6 @@
 
 ;; Author: justin talbott <justin@waymondo.com>
 ;; Keywords: convenience, tools, extensions
-;; Package-Version: 20170717.1851
-;; Package-Commit: e56fc6928649c87ccf39d56d84ab53ebaced1f73
 ;; URL: https://github.com/waymondo/ido-exit-target
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "24.4"))
