@@ -4,10 +4,10 @@ Source:  https://github.com/brotzeit/rustic.git
 
 Updating /mnt/store/melpa/working/rustic/
 Checking out origin/HEAD
-Checking out 91e07768920918d0182b46085fe7a756881e1951
+Checking out 15e5662ffbfa1bd0197d478fbd0c0e579dc68bee
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rustic/
-  to /tmp/rustictP6Wpu/rustic-20220131.1906
+  to /tmp/rusticyzgcek/rustic-20220201.1704
     rustic-babel.el -> rustic-babel.el
     rustic-cargo.el -> rustic-cargo.el
     rustic-clippy.el -> rustic-clippy.el
@@ -23,27 +23,29 @@ Copying files (->) and directories (=>)
     rustic-rustfix.el -> rustic-rustfix.el
     rustic-rustfmt.el -> rustic-rustfmt.el
     rustic.el -> rustic.el
-Created rustic-20220131.1906.tar containing:
-  rustic-20220131.1906/
-  rustic-20220131.1906/rustic-babel.el
-  rustic-20220131.1906/rustic-cargo.el
-  rustic-20220131.1906/rustic-clippy.el
-  rustic-20220131.1906/rustic-comint.el
-  rustic-20220131.1906/rustic-compile.el
-  rustic-20220131.1906/rustic-doc.el
-  rustic-20220131.1906/rustic-flycheck.el
-  rustic-20220131.1906/rustic-interaction.el
-  rustic-20220131.1906/rustic-lsp.el
-  rustic-20220131.1906/rustic-pkg.el
-  rustic-20220131.1906/rustic-playpen.el
-  rustic-20220131.1906/rustic-popup.el
-  rustic-20220131.1906/rustic-racer.el
-  rustic-20220131.1906/rustic-rustfix.el
-  rustic-20220131.1906/rustic-rustfmt.el
-  rustic-20220131.1906/rustic.el
-Built rustic in 4.472s, finished at 2022-02-01T09:31:36+0000
+Created rustic-20220201.1704.tar containing:
+  rustic-20220201.1704/
+  rustic-20220201.1704/rustic-babel.el
+  rustic-20220201.1704/rustic-cargo.el
+  rustic-20220201.1704/rustic-clippy.el
+  rustic-20220201.1704/rustic-comint.el
+  rustic-20220201.1704/rustic-compile.el
+  rustic-20220201.1704/rustic-doc.el
+  rustic-20220201.1704/rustic-flycheck.el
+  rustic-20220201.1704/rustic-interaction.el
+  rustic-20220201.1704/rustic-lsp.el
+  rustic-20220201.1704/rustic-pkg.el
+  rustic-20220201.1704/rustic-playpen.el
+  rustic-20220201.1704/rustic-popup.el
+  rustic-20220201.1704/rustic-racer.el
+  rustic-20220201.1704/rustic-rustfix.el
+  rustic-20220201.1704/rustic-rustfmt.el
+  rustic-20220201.1704/rustic.el
+Built rustic in 5.127s, finished at 2022-02-01T18:21:45+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  478 Feb  1 09:31 packages/rustic-20220131.1906.entry
-180K -rw-r--r-- 1 root root 180K Feb  1 09:31 packages/rustic-20220131.1906.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb  1 09:31 packages/rustic-badge.svg
-4.0K -rw-r--r-- 1 root root  427 Feb  1 09:31 packages/rustic-readme.txt
+4.0K -rw-r--r-- 1 root root  478 Feb  1 15:26 packages/rustic-20220131.1906.entry
+180K -rw-r--r-- 1 root root 180K Feb  1 15:26 packages/rustic-20220131.1906.tar
+4.0K -rw-r--r-- 1 root root  478 Feb  1 18:21 packages/rustic-20220201.1704.entry
+180K -rw-r--r-- 1 root root 180K Feb  1 18:21 packages/rustic-20220201.1704.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  1 18:21 packages/rustic-badge.svg
+4.0K -rw-r--r-- 1 root root  427 Feb  1 18:21 packages/rustic-readme.txt
