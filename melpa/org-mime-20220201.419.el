@@ -5,10 +5,10 @@
 ;; Author: Eric Schulte
 ;; Maintainer: Chen Bin (redguardtoo)
 ;; Keywords: mime, mail, email, html
-;; Package-Version: 20220201.318
-;; Package-Commit: c4268dbca5a48fe47a2761ecd0c28a6db5f5abee
+;; Package-Version: 20220201.419
+;; Package-Commit: 3facf18272d0a72edec5a21bbb2111203af90da0
 ;; Homepage: http://github.com/org-mime/org-mime
-;; Version: 0.2.4
+;; Version: 0.2.5
 ;; Package-Requires: ((emacs "25.1"))
 
 ;; This file is not part of GNU Emacs.
@@ -496,7 +496,7 @@ CURRENT-FILE is used to calculate full path of images."
            e
            (old-pos (point)))
       (goto-char (point-min))
-      (while (re-search-forward "<#secure \\|<#part " (point-max) t)
+      (while (re-search-forward "<#secure \\|<#part .* filename=" (point-max) t)
         (setq str (match-string 0))
         (setq b (match-beginning 0))
         (cond
@@ -506,7 +506,7 @@ CURRENT-FILE is used to calculate full path of images."
           (org-mime-extract-tag-in-current-buffer b e secure-tags))
 
          ;; multi-lines attachment
-         ((string-match "^<#part " str)
+         ((string-match "^<#part .* filename=" str)
           (save-excursion
             (unless (re-search-forward "<#/part>" (point-max) t)
               (error (format "\"%s\" should have end tag." str)))

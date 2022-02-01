@@ -5,9 +5,9 @@
 ;;               from https://github.com/kwrooijen/indy/blob/master/indy.el
 
 ;; Author: Arne Babenhauserheide <arne_bab@web.de>
-;; Version: 0.2.9
-;; Package-Version: 20220131.2355
-;; Package-Commit: 930a0198f792fcb27931c06e796ebb00e3395740
+;; Version: 0.3.0
+;; Package-Version: 20220201.637
+;; Package-Commit: 01f343f0c8fe15841b1de4823cf81ab15e235f3c
 ;; Keywords: languages, lisp, scheme
 ;; Homepage: http://www.draketo.de/english/wisp
 ;; Package-Requires: ((emacs "24.4"))
@@ -44,6 +44,8 @@
 ;; 
 ;; ChangeLog:
 ;;
+;;  - 0.3.0: provide wisp-color-indentation-minor--mode
+;;           that highlights the indentation levels, following wisp-semantics (period and colon)
 ;;  - 0.2.9: enabled imenu - thanks to Greg Reagle!
 ;;  - 0.2.8: use electric-indent-inhibit instead of electric-indent-local-mode
 ;;           rename gpl.txt to COPYING for melpa
@@ -248,6 +250,7 @@ prev, not to prev+tab."
 
 
 (defcustom wisp--bg-colors
+  :group 'wisp
   '( ;; paul tol's pale scheme
      "#DDDDDD" ;; -1: . foo at toplevel
      "#BBCCEE"
@@ -298,8 +301,7 @@ prev, not to prev+tab."
   (interactive)
   (wisp--highlight-indentation-region (point-min) (point-max)))
 
-;; TODO: this is very prototype-level code. It should have a
-;; highlight-current-block function to use in an after-change-hook.
+
 (defun wisp--highlight-indentation-region (&optional begin end length)
   "Colorize a buffer or the region between BEGIN and END up to LENGTH."
   (interactive "r")
@@ -340,6 +342,7 @@ prev, not to prev+tab."
 	      (let* ((start (point))
                  (period (looking-at "\\. "))
                  (colon (looking-at ": "))
+                 (empty-line (looking-at ": *$"))
                  (raw-level (wisp--current-indentation-level (wisp--current-indent)))
                  (level (if period (- raw-level 1) raw-level)))
 	        (end-of-line)
@@ -351,21 +354,30 @@ prev, not to prev+tab."
 				             'face
 				             `(:background
 				               ,(nth level wisp--bg-colors)))
-                
-                (while (string-match ": " (buffer-substring (point) line-end))
-                  (forward-char (match-beginning 0))
-                  (when (null (nth 8 (syntax-ppss))) ;; not within string or comment
-                    (let ((overlay (make-overlay (point) line-end)))
-                      (push overlay wisp--highlight-indentation-overlays)
-                      (setq level (+ level 1))
-	                  (overlay-put overlay
-				                   'face
-				                   `(:background
-				                     ,(nth level wisp--bg-colors)))))
-                  (forward-char 1)))
+                (unless empty-line
+                  (while (string-match ": " (buffer-substring (point) line-end))
+                    (forward-char (match-beginning 0))
+                    (when (null (nth 8 (syntax-ppss))) ;; not within string or comment
+                      (let ((overlay (make-overlay (point) line-end)))
+                        (push overlay wisp--highlight-indentation-overlays)
+                        (setq level (+ level 1))
+	                    (overlay-put overlay
+				                     'face
+				                     `(:background
+				                       ,(nth level wisp--bg-colors)))))
+                    (forward-char 1))))
               (forward-line 1))))))))
 
-;; to have interactive coloring: (add-hook 'after-change-functions 'wisp--highlight-indentation-region nil t)
+;;;###autoload
+(define-minor-mode wisp-color-indentation-minor-mode
+  "Mode to colorize the indentation level according to wisp-semanttics."
+  nil nil nil
+  :group 'wisp
+  :after-hook (if wisp-color-indentation-minor-mode
+                  (progn
+                    (wisp--highlight-indentation)
+                    (add-hook 'after-change-functions 'wisp--highlight-indentation-region nil t))
+                (remove-hook  'after-change-functions 'wisp--highlight-indentation-region t)))
 
 
 (provide 'wisp-mode)

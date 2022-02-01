@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-bookmark-in-project
-;; Package-Version: 20220128.24
-;; Package-Commit: e0677c03bed8e16b94ccce021d23d566215488b6
+;; Package-Version: 20220201.544
+;; Package-Commit: ff0d1c3531352a6c54bb48ced797f41bda95939e
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
@@ -947,6 +947,7 @@ only bookmarks on the current line will be considered."
 (defun bookmark-in-project-jump-next ()
   "Jump to the next bookmark."
   (interactive)
+  (bookmark-in-project--has-file-name-or-error)
   (bookmark-maybe-load-default-file)
   (bookmark-in-project--jump-direction 1))
 
@@ -954,6 +955,7 @@ only bookmarks on the current line will be considered."
 (defun bookmark-in-project-jump-previous ()
   "Jump to the previous bookmark."
   (interactive)
+  (bookmark-in-project--has-file-name-or-error)
   (bookmark-maybe-load-default-file)
   (bookmark-in-project--jump-direction -1))
 
@@ -961,6 +963,7 @@ only bookmarks on the current line will be considered."
 (defun bookmark-in-project-jump ()
   "Jump to a bookmark in the current project."
   (interactive)
+  (bookmark-in-project--has-file-name-or-error)
   (bookmark-maybe-load-default-file)
   (bookmark-in-project--jump-impl #'bookmark-jump))
 
@@ -968,6 +971,7 @@ only bookmarks on the current line will be considered."
 (defun bookmark-in-project-jump-other-window ()
   "Jump to a bookmark in another window, see `bookmark-in-project-jump'."
   (interactive)
+  (bookmark-in-project--has-file-name-or-error)
   (bookmark-maybe-load-default-file)
   (bookmark-in-project--jump-impl #'bookmark-jump-other-window))
 
@@ -975,6 +979,7 @@ only bookmarks on the current line will be considered."
 (defun bookmark-in-project-jump-other-frame ()
   "Jump to a bookmark in another frame, see `bookmark-in-project-jump'."
   (interactive)
+  (bookmark-in-project--has-file-name-or-error)
   (bookmark-maybe-load-default-file)
   (bookmark-in-project--jump-impl #'bookmark-jump-other-frame))
 
