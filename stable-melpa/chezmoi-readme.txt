@@ -1,1 +1,7 @@
-One of the main goals of this package is to allow users to access their files managed by chezmoi and sync changes in the source state with the target state files that are used. Opening source state files is done using ~chezmoi-find~. This opens a buffer for the source state and adds a hook to sync it with the corresponding target state file when changes are saved. However, to prevent overwriting changes that were made to the target state file outside of the source state (such as by auto-generated content), this hook is only added when the source and target states are in sync at the time of opening.
+Chezmoi is a dotfile management system that uses a source-target state
+architecture. This package provides convenience functions for maintaining
+synchronization between the source and target states when making changes to
+your dotfiles through Emacs. It provides alternatives to 'find-file' and
+'save-buffer' for source state files which maintain synchronization to the
+target state. It also provides diff/ediff tools for resolving when dotfiles
+get out of sync. Dired and magit integration is also provided.

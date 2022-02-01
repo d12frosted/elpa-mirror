@@ -1,0 +1,15 @@
+(rake .
+      [(20220131 808)
+       ((f
+	 (0 13 0))
+	(dash
+	 (1 5 0))
+	(cl-lib
+	 (0 5)))
+       "Run rake commands" single
+       ((:commit . "759fb373b90dc4cf762a58217e81d8a3fecb5563")
+	(:authors
+	 ("Adam Sokolnicki" . "adam.sokolnicki@gmail.com"))
+	(:maintainer "Adam Sokolnicki" . "adam.sokolnicki@gmail.com")
+	(:keywords "rake" "ruby")
+	(:url . "https://github.com/asok/rake.el"))])
