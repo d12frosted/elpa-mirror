@@ -1815,13 +1815,14 @@
 		  (:keywords "convenience" "mode-line" "header-line")
 		  (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
  (nano-theme .
-	     [(0 2 1)
+	     [(0 3 0)
 	      ((emacs
 		(27 1)))
 	      "N Λ N O theme" tar
 	      ((:url . "https://github.com/rougier/nano-theme")
 	       (:keywords "theme" "dark" "light")
-	       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
+	       (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
+	       (:commit . "11362f22ba631d84ae300fd3c4bd6db128ba5960"))])
  (nhexl-mode .
 	     [(1 5)
 	      ((emacs

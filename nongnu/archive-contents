@@ -498,7 +498,7 @@
 		   ("András Simonyi" . "andras.simonyi@gmail.com"))
 		  (:keywords "languages" "gauche" "scheme" "geiser"))])
  (geiser-guile .
-	       [(0 21 1)
+	       [(0 21 2)
 		((emacs
 		  (25 1))
 		 (geiser
@@ -509,7 +509,7 @@
 		 (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 		 (:authors
 		  ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-		 (:commit . "de2260883726d23eb964050797fdcf48655f0dc4"))])
+		 (:commit . "ecd118171a111e04120d11c0d72345ce1d0f8066"))])
  (geiser-kawa .
 	      [(0 0 1)
 	       ((emacs
@@ -1111,6 +1111,17 @@
 	     (:authors
 	      ("Arne Brasseur" . "arne@arnebrasseur.net"))
 	     (:url . "https://elpa.nongnu.org/nongnu/parseedn.html"))])
+ (pcmpl-args .
+	     [(0 1 3)
+	      ((emacs
+		(25 1)))
+	      "Enhanced shell command completion" tar
+	      ((:url . "https://github.com/JonWaltman/pcmpl-args.el")
+	       (:keywords "abbrev" "completion" "convenience" "processes" "terminals" "unix")
+	       (:maintainer "Jonathan Waltman" . "jonathan.waltman@gmail.com")
+	       (:authors
+		("Jonathan Waltman" . "jonathan.waltman@gmail.com"))
+	       (:commit . "5f2943fd70d94065496c52d21f05eb89028637cc"))])
  (pdf-tools .
 	    [(1 0)
 	     ((emacs
