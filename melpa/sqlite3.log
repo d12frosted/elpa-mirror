@@ -4,26 +4,26 @@ Source:  https://github.com/pekingduck/emacs-sqlite3-api.git
 
 Updating /mnt/store/melpa/working/sqlite3/
 Checking out origin/HEAD
-Checking out 95abc25cc67d652ce2ba79907224e581aef62e93
+Checking out 88dfeae8f9612cb3564a7393aa8a5c867aacbaf8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/sqlite3/
-  to /tmp/sqlite3Ak6IfT/sqlite3-20200916.132
+  to /tmp/sqlite3HbMxpt/sqlite3-20220202.728
     sqlite3.el -> sqlite3.el
     Makefile -> Makefile
     consts.c -> consts.c
     emacs-module.h -> emacs-module.h
     sqlite3-api.c -> sqlite3-api.c
-Created sqlite3-20200916.132.tar containing:
-  sqlite3-20200916.132/
-  sqlite3-20200916.132/Makefile
-  sqlite3-20200916.132/consts.c
-  sqlite3-20200916.132/emacs-module.h
-  sqlite3-20200916.132/sqlite3-api.c
-  sqlite3-20200916.132/sqlite3-pkg.el
-  sqlite3-20200916.132/sqlite3.el
-Built sqlite3 in 3.779s, finished at 2022-02-02T03:11:44+0000
+Created sqlite3-20220202.728.tar containing:
+  sqlite3-20220202.728/
+  sqlite3-20220202.728/Makefile
+  sqlite3-20220202.728/consts.c
+  sqlite3-20220202.728/emacs-module.h
+  sqlite3-20220202.728/sqlite3-api.c
+  sqlite3-20220202.728/sqlite3-pkg.el
+  sqlite3-20220202.728/sqlite3.el
+Built sqlite3 in 4.840s, finished at 2022-02-02T12:01:03+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  374 Feb  2 03:11 packages/sqlite3-20200916.132.entry
-100K -rw-r--r-- 1 root root 100K Feb  2 03:11 packages/sqlite3-20200916.132.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb  2 03:11 packages/sqlite3-badge.svg
-4.0K -rw-r--r-- 1 root root  123 Feb  2 03:11 packages/sqlite3-readme.txt
+4.0K -rw-r--r-- 1 root root  374 Feb  2 12:01 packages/sqlite3-20220202.728.entry
+100K -rw-r--r-- 1 root root 100K Feb  2 12:01 packages/sqlite3-20220202.728.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  2 12:01 packages/sqlite3-badge.svg
+4.0K -rw-r--r-- 1 root root  123 Feb  2 12:01 packages/sqlite3-readme.txt
