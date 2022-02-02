@@ -2083,7 +2083,7 @@
 	     ("Phillip Lord" . "phillip.lord@russet.org.uk"))
 	    (:url . "http://elpa.gnu.org/packages/persist.html"))])
  (phps-mode .
-	    [(0 4 15)
+	    [(0 4 16)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -2092,7 +2092,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "73c4106bbff2782699c358f0c5badf6993e48e85"))])
+	      (:commit . "a42188a24fd0c02bf83df8795a2977078fadcf45"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single
@@ -2899,16 +2899,17 @@
 	      (:authors
 	       ("Philip Kaludercic" . "philipk@posteo.net")))])
  (vc-got .
-	 [(1 0)
+	 [(1 1)
 	  ((emacs
 	    (25 1)))
 	  "VC backend for Game of Trees VCS" tar
 	  ((:url . "https://git.omarpolo.com/vc-got/")
+	   (:keywords "vc" "tools")
 	   (:maintainer "Omar Polo" . "op@omarpolo.com")
 	   (:authors
 	    ("Omar Polo" . "op@omarpolo.com")
 	    ("Timo Myyrä" . "timo.myyra@bittivirhe.fi"))
-	   (:keywords "vc" "tools"))])
+	   (:commit . "86d9909a7e54c02179e40afd05693c00f6689edc"))])
  (vc-hgcmd .
 	   [(1 14 1)
 	    ((emacs

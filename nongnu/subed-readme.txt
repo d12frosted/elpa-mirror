@@ -2,9 +2,14 @@ Table of Contents
 ─────────────────
 
 subed
+.. Important change in v1.0.0
 .. Features
 ..... mpv integration (optional)
 .. Installation
+..... Installing the subed package from NonGNU Elpa
+..... Manual installation
+..... use-package configuration
+.. Getting started
 .. Contributions
 .. License
 
@@ -21,6 +26,26 @@ subed
 
 
 [mpv] <https://mpv.io/>
+
+Important change in v1.0.0
+──────────────────────────
+
+  `subed' now uses `subed-srt-mode', `subed-vtt-mode', and
+  `subed-ass-mode' instead of directly using `subed-mode'. These modes
+  should be automatically associated with the `.vtt', `.srt', and `.ass'
+  extensions. If the generic `subed-mode' is loaded instead of the
+  format-specific mode, you may get an error such as:
+
+  ┌────
+  │ Error in post-command-hook (subed--post-command-handler): (cl-no-applicable-method subed--subtitle-id)
+  └────
+
+  If you set `auto-mode-alist' manually in your config, please make sure
+  you associate extensions the appropriate format-specific mode instead
+  of `subed-mode'. The specific backend functions (ex:
+  `subed-srt--jump-to-subtitle-id') are also deprecated in favor of
+  using generic functions such as `subed-jump-to-subtitle-id'.
+
 
 Features
 ────────
@@ -75,9 +100,9 @@ Features
 mpv integration (optional)
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  • Open videos with `C-c C-v' or automatically when entering subed-mode
-    if the video file is named like the subtitle file but with a video
-    extension (e.g. `.mkv' or `.avi').
+  • Open videos with `C-c C-v' or automatically when opening a subtitle
+    file if the video file is named like the subtitle file but with a
+    video extension (e.g. `.mkv' or `.avi').
   • Subtitles are automatically reloaded in mpv when the buffer is
     saved.
   • Cursor and playback position are synchronized:
@@ -101,6 +126,9 @@ mpv integration (optional)
 Installation
 ────────────
 
+Installing the subed package from NonGNU Elpa
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
   `subed' is now on [NonGNU ELPA].  On Emacs 28 and later, you can
   install it with `M-x package-install' `subed'.
 
@@ -114,18 +142,43 @@ Installation
   Use `M-x eval-buffer' to run the code, and then use `M-x
   package-install' `subed'.
 
-  If that doesn't work, you can install it manually.  For example, copy
-  `subed/*.el' to
 
-  `$HOME/.emacs.d/elisp/' and add `$HOME/.emacs.d/elisp/' to your
-  `load-path'.
+[NonGNU ELPA] <https://elpa.nongnu.org/nongnu/subed.html>
 
-  Here's some sample code for manual installation:
+
+Manual installation
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  If that doesn't work, you can install it manually. To install from the
+  main branch:
 
   ┌────
-  │ (add-to-list 'load-path "~/.emacs.d/elisp")
-  │ (require 'subed)
+  │ git clone https://github.com/sachac/subed.git
   └────
+
+  This will create a `subed' directory with the code.  Then you can add
+  the following to your Emacs configuration (typically
+  `~/.config/emacs-init.el', `~/.emacs.d/init.el', or `~/.emacs'; you
+  can create this file if it doesn't exist yet):
+
+  ┌────
+  │ ;; Note the reference to the subed subdirectory
+  │ (add-to-list 'load-path "/path/to/subed/subed")
+  │ (require 'subed-autoloads)
+  └────
+
+  and reload your configuration with `M-x eval-buffer' or restart Emacs.
+
+  If you want to try a branch (ex: `derived-mode'), you can use the
+  following command inside the `subed' directory:
+
+  ┌────
+  │ git checkout branchname
+  └────
+
+
+use-package configuration
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   Here's an example setup if you use use-package:
 
@@ -143,10 +196,14 @@ Installation
   │   (add-hook 'subed-mode-hook (lambda () (setq-local fill-column 40))))
   └────
 
-  `C-h f subed-mode' should get you started.
 
+Getting started
+───────────────
 
-[NonGNU ELPA] <https://elpa.nongnu.org/nongnu/subed.html>
+  `C-h f subed-mode' should get you started. This is the parent mode for
+  `subed-srt-mode', `subed-vtt-mode', and `subed-ass-mode'. When
+  manually loading a mode, use those specific format modes instead of
+  `subed-mode'.
 
 
 Contributions
