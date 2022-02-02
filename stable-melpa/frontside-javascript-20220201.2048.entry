@@ -1,5 +1,5 @@
 (frontside-javascript .
-		      [(20210515 1811)
+		      [(20220201 2048)
 		       ((emacs
 			 (25 1))
 			(add-node-modules-path
@@ -17,9 +17,11 @@
 			(tide
 			 (4 0 2))
 			(web-mode
-			 (17)))
-		       "JS  development that just work™️" single
-		       ((:commit . "315d23d23b32f413ea5a4dcc6f4e270b7bef7b67")
+			 (17))
+			(lsp-mode
+			 (20220124)))
+		       "JS  development that just work™️" tar
+		       ((:commit . "774b4b3a1f24c46c91f189a2c67d5fcf0785e2be")
 			(:authors
 			 ("Frontside Engineering" . "engineering@frontside.com"))
 			(:maintainer "Frontside Engineering" . "engineering@frontside.com")

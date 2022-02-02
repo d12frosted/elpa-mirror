@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2021
 ;; Version: 0.6
-;; Package-Version: 20220131.739
-;; Package-Commit: 92c3168283c6d9faa3fcf2e72d0d71afbfa5d6e1
+;; Package-Version: 20220201.2018
+;; Package-Commit: dba8492f70a46fde51d6269ae971693fd1777575
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 
@@ -498,11 +498,12 @@ If INTERACTIVE is nil the function acts like a capf."
             (end (match-end 0)))
         `(,beg ,end
           ,(cape--table-with-properties
-            ;; Use equal, if candidates must be longer than cape-dabbrev-min-length.
             (cape--cached-table beg end
                                 #'cape--dabbrev-list
-                                (if (> cape-dabbrev-min-length 0)
-                                    'equal 'prefix))
+                                ;; TODO: Use equal, if candidates must be longer than cape-dabbrev-min-length.
+                                ;;(if (> cape-dabbrev-min-length 0) 'equal 'prefix)
+                                ;; Problem is that when entering more input, candidates get lost!
+                                'prefix)
             :category 'cape-dabbrev)
           :exclusive no ,@cape--dabbrev-properties)))))
 
