@@ -5,11 +5,11 @@
 ;; Author: Elia Scotto <eliascotto94@gmail.com>
 ;; Maintainer: Elia Scotto <eliascotto94@gmail.com>
 ;; URL: https://github.com/elias94/accent
-;; Package-Version: 20220121.6
-;; Package-Commit: 04642cb6aea0281bd489df737b13d7ef7db49626
+;; Package-Version: 20220202.1312
+;; Package-Commit: 6b502df6940587dae2dfbd349c22dfd44c803a86
 ;; Keywords: i18n
-;; Version: 1.2
-;; Package-Requires: ((emacs "24.1") (popup "0.5.8"))
+;; Version: 1.3
+;; Package-Requires: ((emacs "24.3") (popup "0.5.8"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -40,7 +40,7 @@
 
 (require 'popup)
 
-(defconst accent-version "1.2"
+(defconst accent-version "1.3"
   "Version of accent.el.")
 
 (defgroup accent nil
@@ -51,10 +51,17 @@ accented character."
 (defcustom accent-position 'before
   "If set to 'before (default) it takes the character before the cursor.
 If set to 'after it takes the caracter after the cursor. Set it to 'after
-if you have the `cursor-type' set to 'block and want to apply an accent to
+if you have the `cursor-type` set to 'block and want to apply an accent to
 the character under the cursor."
   :group 'accent
   :type 'symbol)
+
+(defcustom accent-custom '()
+  "Used to append custom accented characters to the default one.
+It uses a list of characters associated to a single letter,
+e.g. '(a (ằ)) ."
+  :group 'accent
+  :type '(alist :value-type (character (alist :value-type character))))
 
 (defvar accent-diacritics '((a (à á â ä æ ã å ā))
                             (c (ç ć č))
@@ -82,6 +89,18 @@ the character under the cursor."
 For each character, includes a list
 of available options to be displayed in the popup.")
 
+(defun accent-lst ()
+  "Merge `accent-custom` with default accenter characters."
+  (cl-labels ((merge-custom (accent)
+                (let ((custom-acc (cl-find (car accent) accent-custom :key #'car)))
+                  (if custom-acc
+                      (list (car accent)
+                            (cl-concatenate 'list
+                                            (cadr accent)
+                                            (cadr custom-acc)))
+                    accent))))
+    (mapcar #'merge-custom accent-diacritics)))
+
 ;;;###autoload
 (defun accent-menu ()
   "Display a popup menu with available accents if current character is matching."
@@ -89,7 +108,7 @@ of available options to be displayed in the popup.")
   (let* ((after? (eq accent-position 'after))
          (char (if after? (char-after) (char-before)))
          (curr (intern (string char)))
-         (diac (assoc curr accent-diacritics)))
+         (diac (assoc curr (accent-lst))))
     (if diac
         (let ((opt (popup-menu* (cadr diac))))
           (when opt

@@ -11,8 +11,8 @@
 ;;       Magnar Sveen <magnars@gmail.com>
 ;; Maintainer: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: http://github.com/clojure-emacs/clojure-mode
-;; Package-Version: 20220202.1024
-;; Package-Commit: f8989ab615a171d8a62c1313ad0b63aff1a2cab9
+;; Package-Version: 20220202.1341
+;; Package-Commit: 913e2450a77a6ddda051f55ac651c99337147db1
 ;; Keywords: languages clojure clojurescript lisp
 ;; Version: 5.13.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -60,14 +60,13 @@
 ;;; Code:
 
 
-(eval-when-compile
-  (defvar calculate-lisp-indent-last-sexp)
-  (defvar delete-pair-blink-delay)
-  (defvar font-lock-beg)
-  (defvar font-lock-end)
-  (defvar paredit-space-for-delimiter-predicates)
-  (defvar paredit-version)
-  (defvar paredit-mode))
+(defvar calculate-lisp-indent-last-sexp)
+(defvar delete-pair-blink-delay)
+(defvar font-lock-beg)
+(defvar font-lock-end)
+(defvar paredit-space-for-delimiter-predicates)
+(defvar paredit-version)
+(defvar paredit-mode)
 
 (require 'cl-lib)
 (require 'imenu)

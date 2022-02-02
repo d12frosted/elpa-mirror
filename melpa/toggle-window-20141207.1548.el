@@ -3,6 +3,8 @@
 ;; Copyright © 2014 Kenny Liu
 ;; Author: Kenny Liu
 ;; URL: https://github.com/deadghost/toggle-window
+;; Package-Version: 20141207.1548
+;; Package-Commit: e82c60e543933880402ede11e9423e48a17dde53
 ;; Git-Repository: git://github.com/deadghost/toggle-window.git
 ;; Created: 2014-12-06
 ;; Version: 0.1.0
