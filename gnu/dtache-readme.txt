@@ -22,24 +22,27 @@ Table of Contents
 .. 1. Creating a session
 .. 2. Interacting with a session
 5. Extensions
-.. 1. Dtache-shell
-.. 2. Dtache-eshell
+.. 1. Shell
+.. 2. Eshell
 .. 3. Compile
-.. 4. Consult
-.. 5. 3rd party
-..... 1. Embark
-..... 2. Alert
+.. 4. Org
+.. 5. Consult
 6. Customization
 .. 1. Customizable variables
-.. 2. Completion annotations
-.. 3. Status deduction
-.. 4. Metadata annotators
-.. 5. Nonattachable commands
-.. 6. Remote support
-7. Versions
-8. Support
-9. Contributions
-10. Credits
+.. 2. Remote support
+.. 3. Completion annotations
+.. 4. Status deduction
+.. 5. Metadata annotators
+.. 6. Nonattachable commands
+7. Tips & Tricks
+.. 1. 3rd party extensions
+..... 1. Embark
+..... 2. Alert
+..... 3. Projectile
+8. Versions
+9. Support
+10. Contributions
+11. Credits
 
 
 
@@ -127,7 +130,9 @@ Table of Contents
 1.1.5 Remote
 ╌╌╌╌╌╌╌╌╌╌╌╌
 
-  Proper support for running session on a remote host.
+  Proper support for running session on a remote host. See the `Remote
+  suppport' section of the README for further details on how to
+  configure `dtache' to work for a remote host.
 
 
 1.1.6 Actions
@@ -149,19 +154,15 @@ Table of Contents
 2 Installation
 ══════════════
 
-  The package is available on [GNU ELPA] and [GNU-devel ELPA].
+  The package is available on [GNU ELPA] and [MELPA], and for users of
+  the [GNU Guix package manager] there is a guix package.
 
-  For users of the [GNU Guix package manager] there is a [guix package].
 
+[GNU ELPA] <https://elpa.gnu.org>
 
-[GNU ELPA] <https://elpa.gnu.org/packages/dtache>
-
-[GNU-devel ELPA] <https://elpa.gnu.org/devel/dtache.html>
+[MELPA] <https://melpa.org/>
 
 [GNU Guix package manager] <https://guix.gnu.org/>
-
-[guix package]
-<https://guix.gnu.org/en/packages/emacs-dtache-0.3-0.9e0acd5/>
 
 
 3 Configuration
@@ -198,6 +199,7 @@ Table of Contents
    `dtache-shell-send-input'   Called from inside M-x shell  
    `dtache-eshell-send-input'  Called from inside eshell     
    `dtache-compile'            Called from M-x               
+   `dtache-org'                Used in org-babel src blocks  
    `dtache-start-session'      Called from within a function 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
@@ -207,8 +209,10 @@ Table of Contents
   want to run a command through `dtache' when inside a `shell'
   buffer. The `dtache-eshell-send-input' is the equivalent for
   `eshell'. The `dtache-compile' is supposed to be used as a replacement
-  for `compile'. Last there is the `dtache-start-session' function,
-  which users can utilize in their own custom commands.
+  for `compile'. The `dtache-org' provides integration with `org-babel'
+  in order to execute shell source code blocks with `dtache'. Last there
+  is the `dtache-start-session' function, which users can utilize in
+  their own custom commands.
 
   To detach from a `dtache' session you should use the universal
   `dtache-detach-session' command. The keybinding for this command is
@@ -274,8 +278,8 @@ Table of Contents
 5 Extensions
 ════════════
 
-5.1 Dtache-shell
-────────────────
+5.1 Shell
+─────────
 
   A `use-package' configuration of the `dtache-shell' extension, which
   provides the integration with `M-x shell'.
@@ -300,8 +304,8 @@ Table of Contents
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-5.2 Dtache-eshell
-─────────────────
+5.2 Eshell
+──────────
 
   A `use-package' configuration of the `dtache-eshell' extension, which
   provides the integration with `eshell'.
@@ -349,7 +353,40 @@ Table of Contents
   difference except from the possibility to `detach'.
 
 
-5.4 Consult
+5.4 Org
+───────
+
+  A `use-package' configuration of the `dtache-org' extension, which
+  provides the integration with `org-babel'.
+
+  ┌────
+  │ (use-package dtache-org
+  │   :after (dtache org)
+  │   :config
+  │   (dtache-org-setup))
+  └────
+
+  The package implements an additional header argument for
+  `ob-shell'. The header argument is `:dtache t'. When provided it will
+  enable the code inside a src block to be run with `dtache'. Since org
+  is not providing any live updates on the output the session is created
+  with `dtache-sesion-mode' set to `create'. This means that if you want
+  to access the output of the session you do that the same way you would
+  for any other type of session. The `dtache-org' works both with and
+  without the `:session' header argument.
+
+  ┌────
+  │ #+begin_src sh :dtache t
+  │   cd ~/code
+  │   ls -la
+  │ #+end_src
+  │ 
+  │ #+RESULTS:
+  │ : [detached]
+  └────
+
+
+5.5 Consult
 ───────────
 
   A `use-package' configuration of the `dtache-consult' extension, which
@@ -389,58 +426,6 @@ Table of Contents
 [blog post] <https://niklaseklund.gitlab.io/blog/posts/dtache_consult/>
 
 
-5.5 3rd party
-─────────────
-
-5.5.1 Embark
-╌╌╌╌╌╌╌╌╌╌╌╌
-
-  The user have the possibility to integrate `dtache' with the package
-  [embark]. The `dtache-action-map' can be reused for this purpose, so
-  the user doesn't need to bind it to any key. Instead the user simply
-  adds the following to their `dtache' configuration in order to get
-  embark actions for `dtache-open-session'.
-
-  ┌────
-  │ (defvar embark-dtache-map (make-composed-keymap dtache-action-map embark-general-map))
-  │ (add-to-list 'embark-keymap-alist '(dtache . embark-dtache-map))
-  └────
-
-
-[embark] <https://github.com/oantolin/embark/>
-
-
-5.5.2 Alert
-╌╌╌╌╌╌╌╌╌╌╌
-
-  By default `dtache' uses the built in `notifications' library to issue
-  a notification. This solution uses `dbus' but if that doesn't work for
-  the user there is the possibility to set the
-  `dtache-notification-function' to
-  `dtache-state-transitionion-echo-message' to use the echo area
-  instead. If that doesn't suffice there is the possibility to use the
-  [alert] package to get a system notification instead.
-
-  ┌────
-  │ (defun my/dtache-state-transition-alert-notification (session)
-  │   "Send an `alert' notification when SESSION becomes inactive."
-  │   (let ((status (car (dtache--session-status session)))
-  │ 	(host (car (dtache--session-host session))))
-  │     (alert (dtache--session-command session)
-  │      :title (pcase status
-  │ 	      ('success (format "Dtache finished [%s]" host))
-  │ 	      ('failure (format "Dtache failed [%s]" host)))
-  │      :severity (pcase status
-  │ 		('success 'moderate)
-  │ 		('failure 'high)))))
-  │ 
-  │ (setq dtache-notification-function #'my/dtache-state-transition-alert-notification)
-  └────
-
-
-[alert] <https://github.com/jwiegley/alert>
-
-
 6 Customization
 ═══════════════
 
@@ -477,10 +462,37 @@ Table of Contents
    dtache-eshell-session-action         Actions for sessions launched with `dtache-eshell-send-input' 
    dtache-shell-session-action          Actions for sessions launched with `dtache-shell-send-input'  
    dtache-compile-session-action        Actions for sessions launched with `dtache-compile'           
+   dtache-org-session-action            Actions for sessions launched with `dtache-org'               
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
 
-6.2 Completion annotations
+6.2 Remote support
+──────────────────
+
+  The `dtache' package supports [Connection Local Variables] which
+  allows the user to customize the variables used by `dtache' when
+  running on a remote host. This example shows how the following
+  variables are customized for all remote hosts.
+
+  ┌────
+  │ (connection-local-set-profile-variables
+  │  'remote-dtache
+  │  '((dtache-env . "~/bin/dtache-env")
+  │    (dtache-shell-program . "/bin/bash")
+  │    (dtache-shell-history-file . "~/.bash_history")
+  │    (dtache-session-directory . "~/tmp")
+  │    (dtache-dtach-program . "/home/user/.local/bin/dtach")))
+  │ 
+  │ (connection-local-set-profiles
+  │  '(:application tramp :protocol "ssh") 'remote-dtache)
+  └────
+
+
+[Connection Local Variables]
+<https://www.gnu.org/software/emacs/manual/html_node/elisp/Connection-Local-Variables.html>
+
+
+6.3 Completion annotations
 ──────────────────────────
 
   Users can customize the appearance of annotations in
@@ -501,7 +513,7 @@ Table of Contents
   └────
 
 
-6.3 Status deduction
+6.4 Status deduction
 ────────────────────
 
   Users are encouraged to define the `dtache-env' variable. It should
@@ -516,7 +528,7 @@ Table of Contents
   └────
 
 
-6.4 Metadata annotators
+6.5 Metadata annotators
 ───────────────────────
 
   The user can configure any number of annotators to run upon creation
@@ -543,7 +555,7 @@ Table of Contents
   └────
 
 
-6.5 Nonattachable commands
+6.6 Nonattachable commands
 ──────────────────────────
 
   To be able to both attach to a dtach session as well as logging its
@@ -565,48 +577,97 @@ Table of Contents
   nonattachable.
 
 
-6.6 Remote support
-──────────────────
+7 Tips & Tricks
+═══════════════
 
-  The `dtache' package supports [Connection Local Variables] which
-  allows the user to customize the variables used by `dtache' when
-  running on a remote host. This example shows how the following
-  variables are customized for all remote hosts.
+7.1 3rd party extensions
+────────────────────────
+
+7.1.1 Embark
+╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The user have the possibility to integrate `dtache' with the package
+  [embark]. The `dtache-action-map' can be reused for this purpose, so
+  the user doesn't need to bind it to any key. Instead the user simply
+  adds the following to their `dtache' configuration in order to get
+  embark actions for `dtache-open-session'.
 
   ┌────
-  │ (connection-local-set-profile-variables
-  │  'remote-dtache
-  │  '((dtache-env . "~/bin/dtache-env")
-  │    (dtache-shell-program . "/bin/bash")
-  │    (dtache-shell-history-file . "~/.bash_history")
-  │    (dtache-session-directory . "~/tmp")
-  │    (dtache-dtach-program . "/home/user/.local/bin/dtach")))
-  │ 
-  │ (connection-local-set-profiles
-  │  '(:application tramp :protocol "ssh") 'remote-dtache)
+  │ (defvar embark-dtache-map (make-composed-keymap dtache-action-map embark-general-map))
+  │ (add-to-list 'embark-keymap-alist '(dtache . embark-dtache-map))
   └────
 
 
-[Connection Local Variables]
-<https://www.gnu.org/software/emacs/manual/html_node/elisp/Connection-Local-Variables.html>
+[embark] <https://github.com/oantolin/embark/>
 
 
-7 Versions
+7.1.2 Alert
+╌╌╌╌╌╌╌╌╌╌╌
+
+  By default `dtache' uses the built in `notifications' library to issue
+  a notification. This solution uses `dbus' but if that doesn't work for
+  the user there is the possibility to set the
+  `dtache-notification-function' to
+  `dtache-state-transitionion-echo-message' to use the echo area
+  instead. If that doesn't suffice there is the possibility to use the
+  [alert] package to get a system notification instead.
+
+  ┌────
+  │ (defun my/dtache-state-transition-alert-notification (session)
+  │   "Send an `alert' notification when SESSION becomes inactive."
+  │   (let ((status (car (dtache--session-status session)))
+  │ 	(host (car (dtache--session-host session))))
+  │     (alert (dtache--session-command session)
+  │      :title (pcase status
+  │ 	      ('success (format "Dtache finished [%s]" host))
+  │ 	      ('failure (format "Dtache failed [%s]" host)))
+  │      :severity (pcase status
+  │ 		('success 'moderate)
+  │ 		('failure 'high)))))
+  │ 
+  │ (setq dtache-notification-function #'my/dtache-state-transition-alert-notification)
+  └────
+
+
+[alert] <https://github.com/jwiegley/alert>
+
+
+7.1.3 Projectile
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  The package can be integrated with [projectile], by overriding its
+  compilation command in the following fashion.
+
+  ┌────
+  │ (defun my/dtache-projectile-run-compilation (cmd &optional use-comint-mode)
+  │   "If CMD is a string execute it with `dtache-compile', optionally USE-COMINT-MODE."
+  │   (if (functionp cmd)
+  │       (funcall cmd)
+  │     (dtache-compile cmd use-comint-mode)))
+  │ 
+  │ (advice-add 'projectile-run-compilation :override #'my/dtache-projectile-run-compilation)
+  └────
+
+
+[projectile] <https://github.com/bbatsov/projectile>
+
+
+8 Versions
 ══════════
 
   Information about larger changes that has been made between versions
   can be found in the `CHANGELOG.org'
 
 
-8 Support
+9 Support
 ═════════
 
   The `dtache' package should work on `Linux' and `macOS'. It is
   regularly tested on `Ubuntu' and `GNU Guix System'.
 
 
-9 Contributions
-═══════════════
+10 Contributions
+════════════════
 
   The package is part of [ELPA] which means that if you want to
   contribute you must have a [copyright assignment].
@@ -618,7 +679,7 @@ Table of Contents
 <https://www.gnu.org/software/emacs/manual/html_node/emacs/Copyright-Assignment.html>
 
 
-10 Credits
+11 Credits
 ══════════
 
   I got inspired when reading about `Ambrevar's' pursuits on [using

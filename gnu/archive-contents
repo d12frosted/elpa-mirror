@@ -721,7 +721,7 @@
 	     ("Chong Yidong" . "cyd@gnu.org"))
 	    (:maintainer "Chong Yidong" . "cyd@gnu.org"))])
  (dtache .
-	 [(0 4)
+	 [(0 5)
 	  ((emacs
 	    (27 1)))
 	  "Run and interact with detached shell commands" tar
@@ -730,7 +730,7 @@
 	   (:maintainer "Niklas Eklund" . "niklas.eklund@posteo.net")
 	   (:authors
 	    ("Niklas Eklund" . "niklas.eklund@posteo.net"))
-	   (:commit . "45eeecf2d57369961bbc09539d26a3b522e71cdf"))])
+	   (:commit . "ecf4c57d96eda400d9b2d5cfeaa9244993ae3603"))])
  (dts-mode .
 	   [(0 1 1)
 	    nil "Major mode for Device Tree source files" tar

@@ -85,30 +85,29 @@ Info directory which can be displayed using "C-h i".
 Contributors
 ------------
 
-Elpher was originally written by Tim Vaughan. Recent maintenance has
-been done by and with the help of Alex Schroeder. In addition, the
-following people (in alphabetical order) have generously provided
-assistance and/or patches:
+Elpher was originally written and is currently maintained by Tim Vaughan
+<plugd@thelambdalab.xyz>.  Significant improvements and
+maintenance have also been contributed by and with the help of Alex
+Schroeder <alex@gnu.org>.  In addition, the following people have
+all generously provided assistance and/or patches over the years:
 
-* Alexis
-* Christopher Brannon
-* Zhiwei Chen
-* condy0919
-* Étienne Deparis
-* Roy Koushik
-* Simon Nicolussi
-* Noodles!
-* Jens Östlund
-* Abhiseck Paira
-* F. Jason Park
-* Omar Polo
-* Koushk Roy
-* Michel Alexandre Salim
-* Alex Schroeder
-* Daniel Semyonov
-* Simon South
-* Bradley Thornton
-* Vee
+* Jens Östlund <jostlund@gmail.com>
+* F. Jason Park <jp@neverwas.me>
+* Christopher Brannon <chris@the-brannons.com>
+* Omar Polo <op@omarpolo.com>
+* Noodles! <nnoodle@chiru.no>
+* Abhiseck Paira <abhiseckpaira@disroot.org>
+* Zhiwei Chen <chenzhiwei03@kuaishou.com>
+* condy0919 <condy0919@gmail.com>
+* Alexis <flexibeast@gmail.com>
+* Étienne Deparis <etienne@depar.is>
+* Simon Nicolussi <sinic@sinic.name>
+* Michel Alexandre Salim <michel@michel-slm.name>
+* Koushk Roy <kroy@twilio.com>
+* Vee <vee@vnsf.xyz>
+* Simon South <simon@simonsouth.net>
+* Daniel Semyonov <daniel@dsemy.com>
+* Bradley Thornton <bradley@northtech.us>
 
 License
 -------
