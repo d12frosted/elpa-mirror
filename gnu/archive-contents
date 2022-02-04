@@ -2567,15 +2567,18 @@
 	    (:authors
 	     ("Phil Sainty" . "psainty@orcon.net.nz")))])
  (soap-client .
-	      [(3 2 0)
-	       ((cl-lib
+	      [(3 2 1)
+	       ((emacs
+		 (24 1))
+		(cl-lib
 		 (0 6 1)))
 	       "Access SOAP web services" tar
 	       ((:url . "https://github.com/alex-hhh/emacs-soap-client")
+		(:keywords "soap" "web-services" "comm" "hypermedia")
 		(:maintainer "Alexandru Harsanyi" . "AlexHarsanyi@gmail.com")
 		(:authors
 		 ("Alexandru Harsanyi" . "AlexHarsanyi@gmail.com"))
-		(:keywords "soap" "web-services" "comm" "hypermedia"))])
+		(:commit . "37eef19fd608ca81acb40f974b8d7bbe7fc27127"))])
  (sokoban .
 	  [(1 4 8)
 	   ((emacs
