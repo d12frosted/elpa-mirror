@@ -6,7 +6,7 @@
 ;; Created: 6 Dec 2018
 ;; Version: 0.1
 ;; Package-Version: 20220103.717
-;; Package-Commit: f4f206ff17e5900996e552ff960e74feadb481ba
+;; Package-Commit: b17645f2dfdf8d6b945123cafc253b1fc71f336b
 ;; Keywords: lisp docs extensions tools
 ;; URL: https://github.com/jingtaozf/literate-elisp
 ;; Package-Requires: ((emacs "26.1"))

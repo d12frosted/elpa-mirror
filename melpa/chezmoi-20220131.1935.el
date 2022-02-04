@@ -4,7 +4,7 @@
 ;; Maintainer: Harrison Pielke-Lombardo
 ;; Version: 1.0.0
 ;; Package-Version: 20220131.1935
-;; Package-Commit: c0854aabdce2dd73b37efc2b45195263b1688b80
+;; Package-Commit: 3d7f6bf3abaf0f236e159bde4751b55bc803a7d6
 ;; Package-Requires: ((emacs "26.1") (magit "3.0.0"))
 ;; Homepage: http://www.github.com/tuh8888/chezmoi.el
 ;; Keywords: vc

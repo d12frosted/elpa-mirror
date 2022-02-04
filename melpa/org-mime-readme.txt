@@ -64,8 +64,15 @@ Extra Tips:
 
    [[/full/path/to/your.jpg]]
 
-2. It's easy to define your hack the exported HTML.
-For example, below code renders text between "#" in red color,:
+2. It's easy to define your hack the exported plain text and html.
+For example, below code removes "\\" from plain text,
+
+  (add-hook 'org-mime-plain-text-hook
+            (lambda ()
+              (while (re-search-forward "\\\\" nil t)
+                (replace-match ""))))
+
+For example, below code renders text between "#" in red color from html,
 
   (add-hook 'org-mime-html-hook
             (lambda ()

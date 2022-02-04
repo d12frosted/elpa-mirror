@@ -4,30 +4,28 @@ Source:  https://github.com/rust-lang/rust-mode.git
 
 Updating /mnt/store/melpa/working/rust-mode/
 Checking out origin/HEAD
-Checking out 07e1e0aa2f750da0a73d95e45eb474b54031d2a0
+Checking out 832980d96a3b7e985bc8bfb1dc2bd7e9599c6312
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/rust-mode/
-  to /tmp/rust-modekHZpch/rust-mode-20220203.902
+  to /tmp/rust-mode5yT4wB/rust-mode-20220203.1832
     rust-cargo.el -> rust-cargo.el
     rust-compile.el -> rust-compile.el
     rust-mode.el -> rust-mode.el
     rust-playpen.el -> rust-playpen.el
     rust-rustfmt.el -> rust-rustfmt.el
     rust-utils.el -> rust-utils.el
-Created rust-mode-20220203.902.tar containing:
-  rust-mode-20220203.902/
-  rust-mode-20220203.902/rust-cargo.el
-  rust-mode-20220203.902/rust-compile.el
-  rust-mode-20220203.902/rust-mode-pkg.el
-  rust-mode-20220203.902/rust-mode.el
-  rust-mode-20220203.902/rust-playpen.el
-  rust-mode-20220203.902/rust-rustfmt.el
-  rust-mode-20220203.902/rust-utils.el
-Built rust-mode in 4.226s, finished at 2022-02-03T11:22:02+0000
+Created rust-mode-20220203.1832.tar containing:
+  rust-mode-20220203.1832/
+  rust-mode-20220203.1832/rust-cargo.el
+  rust-mode-20220203.1832/rust-compile.el
+  rust-mode-20220203.1832/rust-mode-pkg.el
+  rust-mode-20220203.1832/rust-mode.el
+  rust-mode-20220203.1832/rust-playpen.el
+  rust-mode-20220203.1832/rust-rustfmt.el
+  rust-mode-20220203.1832/rust-utils.el
+Built rust-mode in 4.331s, finished at 2022-02-04T08:01:12+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  332 Feb  3 08:25 packages/rust-mode-20220108.1844.entry
-100K -rw-r--r-- 1 root root 100K Feb  3 08:25 packages/rust-mode-20220108.1844.tar
-4.0K -rw-r--r-- 1 root root  331 Feb  3 11:22 packages/rust-mode-20220203.902.entry
-100K -rw-r--r-- 1 root root 100K Feb  3 11:22 packages/rust-mode-20220203.902.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb  3 11:22 packages/rust-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   67 Feb  3 11:22 packages/rust-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  332 Feb  4 08:01 packages/rust-mode-20220203.1832.entry
+100K -rw-r--r-- 1 root root 100K Feb  4 08:01 packages/rust-mode-20220203.1832.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 08:01 packages/rust-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   67 Feb  4 08:01 packages/rust-mode-readme.txt

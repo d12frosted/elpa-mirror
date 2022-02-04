@@ -4,51 +4,51 @@ Source:  https://github.com/bbatsov/projectile.git
 
 Updating /mnt/store/melpa/working/projectile/
 Checking out origin/HEAD
-Checking out 4e6f66c329e57d66269b4bd3fc02518eb0c677bc
+Checking out df3d73e1f0ff625a09196ff3ba6f4be82a53fb3b
 Note: projectile :files spec is equivalent to the default.
-Built projectile in 6.045s, finished at 2022-02-03T11:18:14+0000
+Built projectile in 4.960s, finished at 2022-02-04T07:57:43+0000
  ✓ Success:
-244K -rw-r--r-- 1 root root 241K Feb  3 11:18 packages/projectile-20211220.1144.el
-4.0K -rw-r--r-- 1 root root  424 Feb  3 11:18 packages/projectile-20211220.1144.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  3 11:18 packages/projectile-badge.svg
-4.0K -rw-r--r-- 1 root root 2.8K Feb  3 11:18 packages/projectile-codesearch-20180508.1522.el
-4.0K -rw-r--r-- 1 root root  481 Feb  3 11:18 packages/projectile-codesearch-20180508.1522.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  3 08:21 packages/projectile-codesearch-badge.svg
-4.0K -rw-r--r-- 1 root root  613 Feb  3 11:18 packages/projectile-codesearch-readme.txt
-4.0K -rw-r--r-- 1 root root  242 Feb  3 11:18 packages/projectile-codesearch.log
- 12K -rw-r--r-- 1 root root 8.3K Feb  3 11:18 packages/projectile-git-autofetch-20200820.2028.el
-4.0K -rw-r--r-- 1 root root  455 Feb  3 11:18 packages/projectile-git-autofetch-20200820.2028.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  3 08:21 packages/projectile-git-autofetch-badge.svg
-4.0K -rw-r--r-- 1 root root  250 Feb  3 11:18 packages/projectile-git-autofetch-readme.txt
-4.0K -rw-r--r-- 1 root root  256 Feb  3 11:18 packages/projectile-git-autofetch.log
- 84K -rw-r--r-- 1 root root  81K Feb  3 08:22 packages/projectile-rails-20210810.1303.el
-4.0K -rw-r--r-- 1 root root  625 Feb  3 08:22 packages/projectile-rails-20210810.1303.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  3 08:22 packages/projectile-rails-badge.svg
-4.0K -rw-r--r-- 1 root root   72 Feb  3 08:22 packages/projectile-rails-readme.txt
-4.0K -rw-r--r-- 1 root root  174 Feb  3 11:18 packages/projectile-rails.log
-4.0K -rw-r--r-- 1 root root  356 Feb  3 11:18 packages/projectile-readme.txt
-4.0K -rw-r--r-- 1 root root 2.6K Feb  3 08:22 packages/projectile-ripgrep-20180914.1500.el
-4.0K -rw-r--r-- 1 root root  489 Feb  3 08:22 packages/projectile-ripgrep-20180914.1500.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  3 08:22 packages/projectile-ripgrep-badge.svg
-4.0K -rw-r--r-- 1 root root  102 Feb  3 08:22 packages/projectile-ripgrep-readme.txt
-4.0K -rw-r--r-- 1 root root  153 Feb  3 11:18 packages/projectile-ripgrep.log
-4.0K -rw-r--r-- 1 root root 2.1K Feb  3 08:22 packages/projectile-sift-20160107.1015.el
-4.0K -rw-r--r-- 1 root root  440 Feb  3 08:22 packages/projectile-sift-20160107.1015.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  3 08:22 packages/projectile-sift-badge.svg
-4.0K -rw-r--r-- 1 root root   99 Feb  3 08:22 packages/projectile-sift-readme.txt
-4.0K -rw-r--r-- 1 root root  144 Feb  3 11:18 packages/projectile-sift.log
-8.0K -rw-r--r-- 1 root root 5.7K Feb  3 08:22 packages/projectile-speedbar-20190807.2010.el
-4.0K -rw-r--r-- 1 root root  508 Feb  3 08:22 packages/projectile-speedbar-20190807.2010.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  3 08:22 packages/projectile-speedbar-badge.svg
-4.0K -rw-r--r-- 1 root root  622 Feb  3 08:22 packages/projectile-speedbar-readme.txt
-4.0K -rw-r--r-- 1 root root  165 Feb  3 11:18 packages/projectile-speedbar.log
-8.0K -rw-r--r-- 1 root root 4.2K Feb  3 08:22 packages/projectile-trailblazer-20170928.1624.el
-4.0K -rw-r--r-- 1 root root  602 Feb  3 08:22 packages/projectile-trailblazer-20170928.1624.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  3 08:22 packages/projectile-trailblazer-badge.svg
-4.0K -rw-r--r-- 1 root root   78 Feb  3 08:22 packages/projectile-trailblazer-readme.txt
-   0 -rw-r--r-- 1 root root    0 Feb  3 11:18 packages/projectile-trailblazer.log
-8.0K -rw-r--r-- 1 root root 4.2K Feb  3 08:22 packages/projectile-variable-20170208.1718.el
-4.0K -rw-r--r-- 1 root root  441 Feb  3 08:22 packages/projectile-variable-20170208.1718.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  3 08:22 packages/projectile-variable-badge.svg
-4.0K -rw-r--r-- 1 root root  789 Feb  3 08:22 packages/projectile-variable-readme.txt
-4.0K -rw-r--r-- 1 root root  688 Feb  3 08:22 packages/projectile-variable.log
+244K -rw-r--r-- 1 root root 241K Feb  4 07:57 packages/projectile-20220203.1326.el
+4.0K -rw-r--r-- 1 root root  424 Feb  4 07:57 packages/projectile-20220203.1326.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 07:57 packages/projectile-badge.svg
+4.0K -rw-r--r-- 1 root root 2.8K Feb  4 07:57 packages/projectile-codesearch-20180508.1522.el
+4.0K -rw-r--r-- 1 root root  481 Feb  4 07:57 packages/projectile-codesearch-20180508.1522.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 05:00 packages/projectile-codesearch-badge.svg
+4.0K -rw-r--r-- 1 root root  613 Feb  4 07:57 packages/projectile-codesearch-readme.txt
+4.0K -rw-r--r-- 1 root root  242 Feb  4 07:57 packages/projectile-codesearch.log
+ 12K -rw-r--r-- 1 root root 8.3K Feb  4 05:00 packages/projectile-git-autofetch-20200820.2028.el
+4.0K -rw-r--r-- 1 root root  455 Feb  4 05:00 packages/projectile-git-autofetch-20200820.2028.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 05:00 packages/projectile-git-autofetch-badge.svg
+4.0K -rw-r--r-- 1 root root  250 Feb  4 05:00 packages/projectile-git-autofetch-readme.txt
+4.0K -rw-r--r-- 1 root root  202 Feb  4 07:57 packages/projectile-git-autofetch.log
+ 84K -rw-r--r-- 1 root root  81K Feb  4 05:00 packages/projectile-rails-20210810.1303.el
+4.0K -rw-r--r-- 1 root root  625 Feb  4 05:00 packages/projectile-rails-20210810.1303.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 05:00 packages/projectile-rails-badge.svg
+4.0K -rw-r--r-- 1 root root   72 Feb  4 05:00 packages/projectile-rails-readme.txt
+4.0K -rw-r--r-- 1 root root  149 Feb  4 07:57 packages/projectile-rails.log
+4.0K -rw-r--r-- 1 root root  356 Feb  4 07:57 packages/projectile-readme.txt
+4.0K -rw-r--r-- 1 root root 2.6K Feb  4 05:00 packages/projectile-ripgrep-20180914.1500.el
+4.0K -rw-r--r-- 1 root root  489 Feb  4 05:00 packages/projectile-ripgrep-20180914.1500.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 05:00 packages/projectile-ripgrep-badge.svg
+4.0K -rw-r--r-- 1 root root  102 Feb  4 05:00 packages/projectile-ripgrep-readme.txt
+4.0K -rw-r--r-- 1 root root  153 Feb  4 07:57 packages/projectile-ripgrep.log
+4.0K -rw-r--r-- 1 root root 2.1K Feb  4 05:00 packages/projectile-sift-20160107.1015.el
+4.0K -rw-r--r-- 1 root root  440 Feb  4 05:00 packages/projectile-sift-20160107.1015.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 05:00 packages/projectile-sift-badge.svg
+4.0K -rw-r--r-- 1 root root   99 Feb  4 05:00 packages/projectile-sift-readme.txt
+4.0K -rw-r--r-- 1 root root  144 Feb  4 07:57 packages/projectile-sift.log
+8.0K -rw-r--r-- 1 root root 5.7K Feb  4 05:00 packages/projectile-speedbar-20190807.2010.el
+4.0K -rw-r--r-- 1 root root  508 Feb  4 05:00 packages/projectile-speedbar-20190807.2010.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 05:00 packages/projectile-speedbar-badge.svg
+4.0K -rw-r--r-- 1 root root  622 Feb  4 05:00 packages/projectile-speedbar-readme.txt
+4.0K -rw-r--r-- 1 root root  165 Feb  4 07:57 packages/projectile-speedbar.log
+8.0K -rw-r--r-- 1 root root 4.2K Feb  4 05:00 packages/projectile-trailblazer-20170928.1624.el
+4.0K -rw-r--r-- 1 root root  602 Feb  4 05:00 packages/projectile-trailblazer-20170928.1624.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 05:00 packages/projectile-trailblazer-badge.svg
+4.0K -rw-r--r-- 1 root root   78 Feb  4 05:00 packages/projectile-trailblazer-readme.txt
+4.0K -rw-r--r-- 1 root root  170 Feb  4 07:57 packages/projectile-trailblazer.log
+8.0K -rw-r--r-- 1 root root 4.2K Feb  4 05:00 packages/projectile-variable-20170208.1718.el
+4.0K -rw-r--r-- 1 root root  441 Feb  4 05:00 packages/projectile-variable-20170208.1718.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 05:00 packages/projectile-variable-badge.svg
+4.0K -rw-r--r-- 1 root root  789 Feb  4 05:00 packages/projectile-variable-readme.txt
+4.0K -rw-r--r-- 1 root root  688 Feb  4 05:00 packages/projectile-variable.log
