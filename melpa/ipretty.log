@@ -3,11 +3,11 @@ Fetcher: git
 Source:  https://framagit.org/steckerhalter/ipretty.git
 
 Updating /mnt/store/melpa/working/ipretty/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://framagit.org/steckerhalter/ipretty.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 042f5cc4e6f81d59115e8335c582bb5c571c2585
+Built ipretty in 6.278s, finished at 2022-02-04T10:37:07+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.1K Feb  4 10:37 packages/ipretty-20180606.522.el
+4.0K -rw-r--r-- 1 root root  324 Feb  4 10:37 packages/ipretty-20180606.522.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 10:37 packages/ipretty-badge.svg
+4.0K -rw-r--r-- 1 root root  174 Feb  4 10:37 packages/ipretty-readme.txt

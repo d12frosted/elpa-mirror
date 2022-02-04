@@ -6,9 +6,9 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Line annotation for changed and saved lines.
 ;; Keyword: annotation line number linum reminder highlight display
-;; Version: 0.5.0
-;; Package-Version: 20220102.1539
-;; Package-Commit: ff58aceed180bb6bc0d4477620689c7656144055
+;; Version: 0.5.1
+;; Package-Version: 20220204.952
+;; Package-Commit: 8bf9e6d70347a99528bab56f90e0210f9a88dad8
 ;; Package-Requires: ((emacs "25.1") (indicators "0.0.4") (fringe-helper "1.0.1") (ht "2.0"))
 ;; URL: https://github.com/emacs-vs/line-reminder
 
@@ -435,9 +435,9 @@ Arguments BEG and END are passed in by before/after change functions."
 
 (defun line-reminder--remove-lines-out-range ()
   "Remove all lines outside of buffer."
-  (let ((max-line line-reminder--cache-max-line))
+  (when line-reminder--cache-max-line
     (ht-map (lambda (line _value)
-              (when (or (< max-line line) (<= line 0))
+              (when (or (< line-reminder--cache-max-line line) (<= line 0))
                 (line-reminder--remove-change-line line)))
             line-reminder--line-status)))
 

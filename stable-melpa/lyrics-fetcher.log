@@ -4,20 +4,24 @@ Source:  https://github.com/SqrtMinusOne/lyrics-fetcher.el.git
 
 Updating /mnt/store/melpa/working/lyrics-fetcher/
 Checking out origin/HEAD
-Checking out f0212bea838f0c284ea97e051c9c6c63f1b527ff
+Checking out f6948259b388102208d8a29dabf383f10f801cab
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/lyrics-fetcher/
-  to /tmp/lyrics-fetchervQsCde/lyrics-fetcher-20210828.813
+  to /tmp/lyrics-fetchermjusxd/lyrics-fetcher-20220204.916
     lyrics-fetcher-genius.el -> lyrics-fetcher-genius.el
+    lyrics-fetcher-neteasecloud.el -> lyrics-fetcher-neteasecloud.el
     lyrics-fetcher.el -> lyrics-fetcher.el
-Created lyrics-fetcher-20210828.813.tar containing:
-  lyrics-fetcher-20210828.813/
-  lyrics-fetcher-20210828.813/lyrics-fetcher-genius.el
-  lyrics-fetcher-20210828.813/lyrics-fetcher-pkg.el
-  lyrics-fetcher-20210828.813/lyrics-fetcher.el
-Built lyrics-fetcher in 4.589s, finished at 2022-02-04T07:44:13+0000
+Created lyrics-fetcher-20220204.916.tar containing:
+  lyrics-fetcher-20220204.916/
+  lyrics-fetcher-20220204.916/lyrics-fetcher-genius.el
+  lyrics-fetcher-20220204.916/lyrics-fetcher-neteasecloud.el
+  lyrics-fetcher-20220204.916/lyrics-fetcher-pkg.el
+  lyrics-fetcher-20220204.916/lyrics-fetcher.el
+Built lyrics-fetcher in 4.235s, finished at 2022-02-04T10:42:32+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  421 Feb  4 07:44 packages/lyrics-fetcher-20210828.813.entry
  40K -rw-r--r-- 1 root root  40K Feb  4 07:44 packages/lyrics-fetcher-20210828.813.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb  4 07:44 packages/lyrics-fetcher-badge.svg
-4.0K -rw-r--r-- 1 root root  579 Feb  4 07:44 packages/lyrics-fetcher-readme.txt
+4.0K -rw-r--r-- 1 root root  421 Feb  4 10:42 packages/lyrics-fetcher-20220204.916.entry
+ 52K -rw-r--r-- 1 root root  50K Feb  4 10:42 packages/lyrics-fetcher-20220204.916.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 10:42 packages/lyrics-fetcher-badge.svg
+4.0K -rw-r--r-- 1 root root  579 Feb  4 10:42 packages/lyrics-fetcher-readme.txt
