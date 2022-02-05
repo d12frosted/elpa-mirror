@@ -4,10 +4,10 @@ Source:  https://github.com/slime/slime.git
 
 Updating /mnt/store/melpa/working/slime/
 Checking out origin/HEAD
-Checking out 321ec0c032cf5cecb4f715719aae29ddcfd243e6
+Checking out 2080537746ba808b9c1683a280e803e65f196a9c
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/slime/
-  to /tmp/slimedahH3B/slime-20220203.1336
+  to /tmp/slimeDTOfvt/slime-20220204.1357
     slime-autoloads.el -> slime-autoloads.el
     slime-tests.el -> slime-tests.el
     slime.el -> slime.el
@@ -97,149 +97,149 @@ Copying files (->) and directories (=>)
     contrib/swank-util.lisp -> contrib/swank-util.lisp
     contrib/swank.rb -> contrib/swank.rb
   ! doc/slime.texi -> slime.texi
-Generating /tmp/slimedahH3B/slime-20220203.1336/slime.info
-Created slime-20220203.1336.tar containing:
-  slime-20220203.1336/
-  slime-20220203.1336/contrib/
-  slime-20220203.1336/contrib/README.md
-  slime-20220203.1336/contrib/bridge.el
-  slime-20220203.1336/contrib/inferior-slime.el
-  slime-20220203.1336/contrib/slime-asdf.el
-  slime-20220203.1336/contrib/slime-autodoc.el
-  slime-20220203.1336/contrib/slime-banner.el
-  slime-20220203.1336/contrib/slime-buffer-streams.el
-  slime-20220203.1336/contrib/slime-c-p-c.el
-  slime-20220203.1336/contrib/slime-cl-indent.el
-  slime-20220203.1336/contrib/slime-clipboard.el
-  slime-20220203.1336/contrib/slime-compiler-notes-tree.el
-  slime-20220203.1336/contrib/slime-editing-commands.el
-  slime-20220203.1336/contrib/slime-enclosing-context.el
-  slime-20220203.1336/contrib/slime-fancy-inspector.el
-  slime-20220203.1336/contrib/slime-fancy-trace.el
-  slime-20220203.1336/contrib/slime-fancy.el
-  slime-20220203.1336/contrib/slime-fontifying-fu.el
-  slime-20220203.1336/contrib/slime-fuzzy.el
-  slime-20220203.1336/contrib/slime-highlight-edits.el
-  slime-20220203.1336/contrib/slime-hyperdoc.el
-  slime-20220203.1336/contrib/slime-indentation.el
-  slime-20220203.1336/contrib/slime-listener-hooks.el
-  slime-20220203.1336/contrib/slime-macrostep.el
-  slime-20220203.1336/contrib/slime-mdot-fu.el
-  slime-20220203.1336/contrib/slime-media.el
-  slime-20220203.1336/contrib/slime-mrepl.el
-  slime-20220203.1336/contrib/slime-package-fu.el
-  slime-20220203.1336/contrib/slime-parse.el
-  slime-20220203.1336/contrib/slime-presentation-streams.el
-  slime-20220203.1336/contrib/slime-presentations.el
-  slime-20220203.1336/contrib/slime-quicklisp.el
-  slime-20220203.1336/contrib/slime-references.el
-  slime-20220203.1336/contrib/slime-repl.el
-  slime-20220203.1336/contrib/slime-sbcl-exts.el
-  slime-20220203.1336/contrib/slime-scheme.el
-  slime-20220203.1336/contrib/slime-scratch.el
-  slime-20220203.1336/contrib/slime-snapshot.el
-  slime-20220203.1336/contrib/slime-sprof.el
-  slime-20220203.1336/contrib/slime-trace-dialog.el
-  slime-20220203.1336/contrib/slime-tramp.el
-  slime-20220203.1336/contrib/slime-typeout-frame.el
-  slime-20220203.1336/contrib/slime-xref-browser.el
-  slime-20220203.1336/contrib/swank-arglists.lisp
-  slime-20220203.1336/contrib/swank-asdf.lisp
-  slime-20220203.1336/contrib/swank-buffer-streams.lisp
-  slime-20220203.1336/contrib/swank-c-p-c.lisp
-  slime-20220203.1336/contrib/swank-clipboard.lisp
-  slime-20220203.1336/contrib/swank-fancy-inspector.lisp
-  slime-20220203.1336/contrib/swank-fuzzy.lisp
-  slime-20220203.1336/contrib/swank-goo.goo
-  slime-20220203.1336/contrib/swank-hyperdoc.lisp
-  slime-20220203.1336/contrib/swank-ikarus.ss
-  slime-20220203.1336/contrib/swank-indentation.lisp
-  slime-20220203.1336/contrib/swank-jolt.k
-  slime-20220203.1336/contrib/swank-kawa.scm
-  slime-20220203.1336/contrib/swank-larceny.scm
-  slime-20220203.1336/contrib/swank-listener-hooks.lisp
-  slime-20220203.1336/contrib/swank-macrostep.lisp
-  slime-20220203.1336/contrib/swank-media.lisp
-  slime-20220203.1336/contrib/swank-mit-scheme.scm
-  slime-20220203.1336/contrib/swank-mlworks.sml
-  slime-20220203.1336/contrib/swank-mrepl.lisp
-  slime-20220203.1336/contrib/swank-package-fu.lisp
-  slime-20220203.1336/contrib/swank-presentation-streams.lisp
-  slime-20220203.1336/contrib/swank-presentations.lisp
-  slime-20220203.1336/contrib/swank-quicklisp.lisp
-  slime-20220203.1336/contrib/swank-r6rs.scm
-  slime-20220203.1336/contrib/swank-repl.lisp
-  slime-20220203.1336/contrib/swank-sbcl-exts.lisp
-  slime-20220203.1336/contrib/swank-snapshot.lisp
-  slime-20220203.1336/contrib/swank-sprof.lisp
-  slime-20220203.1336/contrib/swank-trace-dialog.lisp
-  slime-20220203.1336/contrib/swank-util.lisp
-  slime-20220203.1336/contrib/swank.rb
-  slime-20220203.1336/dir
-  slime-20220203.1336/lib/
-  slime-20220203.1336/lib/hyperspec.el
-  slime-20220203.1336/metering.lisp
-  slime-20220203.1336/nregex.lisp
-  slime-20220203.1336/packages.lisp
-  slime-20220203.1336/sbcl-pprint-patch.lisp
-  slime-20220203.1336/slime-autoloads.el
-  slime-20220203.1336/slime-pkg.el
-  slime-20220203.1336/slime-tests.el
-  slime-20220203.1336/slime.el
-  slime-20220203.1336/slime.info
-  slime-20220203.1336/start-swank.lisp
-  slime-20220203.1336/swank-loader.lisp
-  slime-20220203.1336/swank.asd
-  slime-20220203.1336/swank.lisp
-  slime-20220203.1336/swank/
-  slime-20220203.1336/swank/abcl.lisp
-  slime-20220203.1336/swank/allegro.lisp
-  slime-20220203.1336/swank/backend.lisp
-  slime-20220203.1336/swank/ccl.lisp
-  slime-20220203.1336/swank/clasp.lisp
-  slime-20220203.1336/swank/clisp.lisp
-  slime-20220203.1336/swank/cmucl.lisp
-  slime-20220203.1336/swank/corman.lisp
-  slime-20220203.1336/swank/ecl.lisp
-  slime-20220203.1336/swank/gray.lisp
-  slime-20220203.1336/swank/lispworks.lisp
-  slime-20220203.1336/swank/match.lisp
-  slime-20220203.1336/swank/mezzano.lisp
-  slime-20220203.1336/swank/mkcl.lisp
-  slime-20220203.1336/swank/rpc.lisp
-  slime-20220203.1336/swank/sbcl.lisp
-  slime-20220203.1336/swank/scl.lisp
-  slime-20220203.1336/swank/source-file-cache.lisp
-  slime-20220203.1336/swank/source-path-parser.lisp
-  slime-20220203.1336/xref.lisp
-Built slime in 12.528s, finished at 2022-02-04T11:01:30+0000
+Generating /tmp/slimeDTOfvt/slime-20220204.1357/slime.info
+Created slime-20220204.1357.tar containing:
+  slime-20220204.1357/
+  slime-20220204.1357/contrib/
+  slime-20220204.1357/contrib/README.md
+  slime-20220204.1357/contrib/bridge.el
+  slime-20220204.1357/contrib/inferior-slime.el
+  slime-20220204.1357/contrib/slime-asdf.el
+  slime-20220204.1357/contrib/slime-autodoc.el
+  slime-20220204.1357/contrib/slime-banner.el
+  slime-20220204.1357/contrib/slime-buffer-streams.el
+  slime-20220204.1357/contrib/slime-c-p-c.el
+  slime-20220204.1357/contrib/slime-cl-indent.el
+  slime-20220204.1357/contrib/slime-clipboard.el
+  slime-20220204.1357/contrib/slime-compiler-notes-tree.el
+  slime-20220204.1357/contrib/slime-editing-commands.el
+  slime-20220204.1357/contrib/slime-enclosing-context.el
+  slime-20220204.1357/contrib/slime-fancy-inspector.el
+  slime-20220204.1357/contrib/slime-fancy-trace.el
+  slime-20220204.1357/contrib/slime-fancy.el
+  slime-20220204.1357/contrib/slime-fontifying-fu.el
+  slime-20220204.1357/contrib/slime-fuzzy.el
+  slime-20220204.1357/contrib/slime-highlight-edits.el
+  slime-20220204.1357/contrib/slime-hyperdoc.el
+  slime-20220204.1357/contrib/slime-indentation.el
+  slime-20220204.1357/contrib/slime-listener-hooks.el
+  slime-20220204.1357/contrib/slime-macrostep.el
+  slime-20220204.1357/contrib/slime-mdot-fu.el
+  slime-20220204.1357/contrib/slime-media.el
+  slime-20220204.1357/contrib/slime-mrepl.el
+  slime-20220204.1357/contrib/slime-package-fu.el
+  slime-20220204.1357/contrib/slime-parse.el
+  slime-20220204.1357/contrib/slime-presentation-streams.el
+  slime-20220204.1357/contrib/slime-presentations.el
+  slime-20220204.1357/contrib/slime-quicklisp.el
+  slime-20220204.1357/contrib/slime-references.el
+  slime-20220204.1357/contrib/slime-repl.el
+  slime-20220204.1357/contrib/slime-sbcl-exts.el
+  slime-20220204.1357/contrib/slime-scheme.el
+  slime-20220204.1357/contrib/slime-scratch.el
+  slime-20220204.1357/contrib/slime-snapshot.el
+  slime-20220204.1357/contrib/slime-sprof.el
+  slime-20220204.1357/contrib/slime-trace-dialog.el
+  slime-20220204.1357/contrib/slime-tramp.el
+  slime-20220204.1357/contrib/slime-typeout-frame.el
+  slime-20220204.1357/contrib/slime-xref-browser.el
+  slime-20220204.1357/contrib/swank-arglists.lisp
+  slime-20220204.1357/contrib/swank-asdf.lisp
+  slime-20220204.1357/contrib/swank-buffer-streams.lisp
+  slime-20220204.1357/contrib/swank-c-p-c.lisp
+  slime-20220204.1357/contrib/swank-clipboard.lisp
+  slime-20220204.1357/contrib/swank-fancy-inspector.lisp
+  slime-20220204.1357/contrib/swank-fuzzy.lisp
+  slime-20220204.1357/contrib/swank-goo.goo
+  slime-20220204.1357/contrib/swank-hyperdoc.lisp
+  slime-20220204.1357/contrib/swank-ikarus.ss
+  slime-20220204.1357/contrib/swank-indentation.lisp
+  slime-20220204.1357/contrib/swank-jolt.k
+  slime-20220204.1357/contrib/swank-kawa.scm
+  slime-20220204.1357/contrib/swank-larceny.scm
+  slime-20220204.1357/contrib/swank-listener-hooks.lisp
+  slime-20220204.1357/contrib/swank-macrostep.lisp
+  slime-20220204.1357/contrib/swank-media.lisp
+  slime-20220204.1357/contrib/swank-mit-scheme.scm
+  slime-20220204.1357/contrib/swank-mlworks.sml
+  slime-20220204.1357/contrib/swank-mrepl.lisp
+  slime-20220204.1357/contrib/swank-package-fu.lisp
+  slime-20220204.1357/contrib/swank-presentation-streams.lisp
+  slime-20220204.1357/contrib/swank-presentations.lisp
+  slime-20220204.1357/contrib/swank-quicklisp.lisp
+  slime-20220204.1357/contrib/swank-r6rs.scm
+  slime-20220204.1357/contrib/swank-repl.lisp
+  slime-20220204.1357/contrib/swank-sbcl-exts.lisp
+  slime-20220204.1357/contrib/swank-snapshot.lisp
+  slime-20220204.1357/contrib/swank-sprof.lisp
+  slime-20220204.1357/contrib/swank-trace-dialog.lisp
+  slime-20220204.1357/contrib/swank-util.lisp
+  slime-20220204.1357/contrib/swank.rb
+  slime-20220204.1357/dir
+  slime-20220204.1357/lib/
+  slime-20220204.1357/lib/hyperspec.el
+  slime-20220204.1357/metering.lisp
+  slime-20220204.1357/nregex.lisp
+  slime-20220204.1357/packages.lisp
+  slime-20220204.1357/sbcl-pprint-patch.lisp
+  slime-20220204.1357/slime-autoloads.el
+  slime-20220204.1357/slime-pkg.el
+  slime-20220204.1357/slime-tests.el
+  slime-20220204.1357/slime.el
+  slime-20220204.1357/slime.info
+  slime-20220204.1357/start-swank.lisp
+  slime-20220204.1357/swank-loader.lisp
+  slime-20220204.1357/swank.asd
+  slime-20220204.1357/swank.lisp
+  slime-20220204.1357/swank/
+  slime-20220204.1357/swank/abcl.lisp
+  slime-20220204.1357/swank/allegro.lisp
+  slime-20220204.1357/swank/backend.lisp
+  slime-20220204.1357/swank/ccl.lisp
+  slime-20220204.1357/swank/clasp.lisp
+  slime-20220204.1357/swank/clisp.lisp
+  slime-20220204.1357/swank/cmucl.lisp
+  slime-20220204.1357/swank/corman.lisp
+  slime-20220204.1357/swank/ecl.lisp
+  slime-20220204.1357/swank/gray.lisp
+  slime-20220204.1357/swank/lispworks.lisp
+  slime-20220204.1357/swank/match.lisp
+  slime-20220204.1357/swank/mezzano.lisp
+  slime-20220204.1357/swank/mkcl.lisp
+  slime-20220204.1357/swank/rpc.lisp
+  slime-20220204.1357/swank/sbcl.lisp
+  slime-20220204.1357/swank/scl.lisp
+  slime-20220204.1357/swank/source-file-cache.lisp
+  slime-20220204.1357/swank/source-path-parser.lisp
+  slime-20220204.1357/xref.lisp
+Built slime in 12.771s, finished at 2022-02-04T22:47:49+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  270 Feb  4 11:01 packages/slime-20220203.1336.entry
-2.6M -rw-r--r-- 1 root root 2.6M Feb  4 11:01 packages/slime-20220203.1336.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb  4 11:01 packages/slime-badge.svg
- 16K -rw-r--r-- 1 root root  15K Feb  4 11:01 packages/slime-company-20210124.1627.el
-4.0K -rw-r--r-- 1 root root  382 Feb  4 11:01 packages/slime-company-20210124.1627.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  4 11:01 packages/slime-company-badge.svg
-4.0K -rw-r--r-- 1 root root  798 Feb  4 11:01 packages/slime-company-readme.txt
-4.0K -rw-r--r-- 1 root root  636 Feb  4 11:01 packages/slime-company.log
-4.0K -rw-r--r-- 1 root root  351 Feb  4 11:01 packages/slime-docker-20210426.1422.entry
- 40K -rw-r--r-- 1 root root  40K Feb  4 11:01 packages/slime-docker-20210426.1422.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb  4 11:01 packages/slime-docker-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Feb  4 11:01 packages/slime-docker-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Feb  4 11:01 packages/slime-docker.log
-4.0K -rw-r--r-- 1 root root 1.1K Feb  4 11:01 packages/slime-readme.txt
-4.0K -rw-r--r-- 1 root root 2.0K Feb  4 11:01 packages/slime-repl-ansi-color-20200712.1226.el
-4.0K -rw-r--r-- 1 root root  413 Feb  4 11:01 packages/slime-repl-ansi-color-20200712.1226.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  4 11:01 packages/slime-repl-ansi-color-badge.svg
-4.0K -rw-r--r-- 1 root root   57 Feb  4 11:01 packages/slime-repl-ansi-color-readme.txt
-4.0K -rw-r--r-- 1 root root  701 Feb  4 11:01 packages/slime-repl-ansi-color.log
-8.0K -rw-r--r-- 1 root root 7.4K Feb  4 11:01 packages/slime-theme-20170808.1322.el
-4.0K -rw-r--r-- 1 root root  336 Feb  4 11:01 packages/slime-theme-20170808.1322.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb  4 11:01 packages/slime-theme-badge.svg
-4.0K -rw-r--r-- 1 root root  116 Feb  4 11:01 packages/slime-theme-readme.txt
-4.0K -rw-r--r-- 1 root root  632 Feb  4 11:01 packages/slime-theme.log
-4.0K -rw-r--r-- 1 root root  311 Feb  4 11:01 packages/slime-volleyball-20190701.1624.entry
-4.0M -rw-r--r-- 1 root root 4.0M Feb  4 11:01 packages/slime-volleyball-20190701.1624.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb  4 11:01 packages/slime-volleyball-badge.svg
-4.0K -rw-r--r-- 1 root root 2.5K Feb  4 11:01 packages/slime-volleyball-readme.txt
-4.0K -rw-r--r-- 1 root root 1.5K Feb  4 11:01 packages/slime-volleyball.log
+4.0K -rw-r--r-- 1 root root  270 Feb  4 22:47 packages/slime-20220204.1357.entry
+2.6M -rw-r--r-- 1 root root 2.6M Feb  4 22:47 packages/slime-20220204.1357.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 22:47 packages/slime-badge.svg
+ 16K -rw-r--r-- 1 root root  15K Feb  4 22:47 packages/slime-company-20210124.1627.el
+4.0K -rw-r--r-- 1 root root  382 Feb  4 22:47 packages/slime-company-20210124.1627.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 22:47 packages/slime-company-badge.svg
+4.0K -rw-r--r-- 1 root root  798 Feb  4 22:47 packages/slime-company-readme.txt
+4.0K -rw-r--r-- 1 root root  636 Feb  4 22:47 packages/slime-company.log
+4.0K -rw-r--r-- 1 root root  351 Feb  4 22:47 packages/slime-docker-20210426.1422.entry
+ 40K -rw-r--r-- 1 root root  40K Feb  4 22:47 packages/slime-docker-20210426.1422.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 22:47 packages/slime-docker-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Feb  4 22:47 packages/slime-docker-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Feb  4 22:47 packages/slime-docker.log
+4.0K -rw-r--r-- 1 root root 1.1K Feb  4 22:47 packages/slime-readme.txt
+4.0K -rw-r--r-- 1 root root 2.0K Feb  4 22:47 packages/slime-repl-ansi-color-20200712.1226.el
+4.0K -rw-r--r-- 1 root root  413 Feb  4 22:47 packages/slime-repl-ansi-color-20200712.1226.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 22:47 packages/slime-repl-ansi-color-badge.svg
+4.0K -rw-r--r-- 1 root root   57 Feb  4 22:47 packages/slime-repl-ansi-color-readme.txt
+4.0K -rw-r--r-- 1 root root  701 Feb  4 22:47 packages/slime-repl-ansi-color.log
+8.0K -rw-r--r-- 1 root root 7.4K Feb  4 22:47 packages/slime-theme-20170808.1322.el
+4.0K -rw-r--r-- 1 root root  336 Feb  4 22:47 packages/slime-theme-20170808.1322.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 22:47 packages/slime-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  116 Feb  4 22:47 packages/slime-theme-readme.txt
+4.0K -rw-r--r-- 1 root root  632 Feb  4 22:47 packages/slime-theme.log
+4.0K -rw-r--r-- 1 root root  311 Feb  4 22:47 packages/slime-volleyball-20190701.1624.entry
+4.0M -rw-r--r-- 1 root root 4.0M Feb  4 22:47 packages/slime-volleyball-20190701.1624.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  4 22:47 packages/slime-volleyball-badge.svg
+4.0K -rw-r--r-- 1 root root 2.5K Feb  4 22:47 packages/slime-volleyball-readme.txt
+4.0K -rw-r--r-- 1 root root 1.5K Feb  4 22:47 packages/slime-volleyball.log

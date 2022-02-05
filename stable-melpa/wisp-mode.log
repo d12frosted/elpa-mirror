@@ -3,14 +3,19 @@ Fetcher: hg
 Source:  https://hg.sr.ht/~arnebab/wisp
 
 Updating /mnt/store/melpa/working/wisp-mode/
-Checking out f16bd207ec09eb46dc3737212a63e7a843f4f0b5
+Checking out 08b3d086d1f1ac77a7d14f763063e75c29e600c8
 
 Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
 
 pulling from https://hg.sr.ht/~arnebab/wisp
 searching for changes
-no changes found
-0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+adding changesets
+adding manifests
+adding file changes
+added 6 changesets with 5 changes to 3 files
+new changesets c1ed216e12fd:08b3d086d1f1
+(run 'hg update' to get a working copy)
+3 files updated, 0 files merged, 0 files removed, 0 files unresolved
 0 files updated, 0 files merged, 0 files removed, 0 files unresolved
 hg: unknown command 'purge'
 'purge' is provided by the following extension:

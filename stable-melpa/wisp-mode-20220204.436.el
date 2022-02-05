@@ -7,7 +7,7 @@
 ;; Author: Arne Babenhauserheide <arne_bab@web.de>
 ;; Version: 0.3.0
 ;; Package-Version: 20220204.436
-;; Package-Commit: f16bd207ec09eb46dc3737212a63e7a843f4f0b5
+;; Package-Commit: 08b3d086d1f1ac77a7d14f763063e75c29e600c8
 ;; Keywords: languages, lisp, scheme
 ;; Homepage: http://www.draketo.de/english/wisp
 ;; Package-Requires: ((emacs "24.4"))
