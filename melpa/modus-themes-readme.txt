@@ -279,6 +279,8 @@ missing package or change you would like to see.
     side-notes
     sieve-mode
     skewer-mode
+    slime (sldb)
+    sly
     smart-mode-line
     smartparens
     smerge

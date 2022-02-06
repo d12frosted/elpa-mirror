@@ -4,30 +4,32 @@ Source:  https://github.com/semenInRussia/emacs-run-command-recipes.git
 
 Updating /mnt/store/melpa/working/run-command-recipes/
 Checking out origin/HEAD
-Checking out 5357a857432ccb432dbad711fc3d178883c45a56
+Checking out b14cde6f15fc52eb4b836dae76078d68f29bd0df
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/run-command-recipes/
-  to /tmp/run-command-recipes6B1Izj/run-command-recipes-20220131.1307
+  to /tmp/run-command-recipesNBKsWG/run-command-recipes-20220205.1840
     run-command-recipes-elisp.el -> run-command-recipes-elisp.el
     run-command-recipes-hashtables.el -> run-command-recipes-hashtables.el
     run-command-recipes-haskell.el -> run-command-recipes-haskell.el
     run-command-recipes-latex.el -> run-command-recipes-latex.el
     run-command-recipes-pandoc.el -> run-command-recipes-pandoc.el
     run-command-recipes-project.el -> run-command-recipes-project.el
+    run-command-recipes-rust.el -> run-command-recipes-rust.el
     run-command-recipes.el -> run-command-recipes.el
-Created run-command-recipes-20220131.1307.tar containing:
-  run-command-recipes-20220131.1307/
-  run-command-recipes-20220131.1307/run-command-recipes-elisp.el
-  run-command-recipes-20220131.1307/run-command-recipes-hashtables.el
-  run-command-recipes-20220131.1307/run-command-recipes-haskell.el
-  run-command-recipes-20220131.1307/run-command-recipes-latex.el
-  run-command-recipes-20220131.1307/run-command-recipes-pandoc.el
-  run-command-recipes-20220131.1307/run-command-recipes-pkg.el
-  run-command-recipes-20220131.1307/run-command-recipes-project.el
-  run-command-recipes-20220131.1307/run-command-recipes.el
-Built run-command-recipes in 4.230s, finished at 2022-02-05T10:25:21+0000
+Created run-command-recipes-20220205.1840.tar containing:
+  run-command-recipes-20220205.1840/
+  run-command-recipes-20220205.1840/run-command-recipes-elisp.el
+  run-command-recipes-20220205.1840/run-command-recipes-hashtables.el
+  run-command-recipes-20220205.1840/run-command-recipes-haskell.el
+  run-command-recipes-20220205.1840/run-command-recipes-latex.el
+  run-command-recipes-20220205.1840/run-command-recipes-pandoc.el
+  run-command-recipes-20220205.1840/run-command-recipes-pkg.el
+  run-command-recipes-20220205.1840/run-command-recipes-project.el
+  run-command-recipes-20220205.1840/run-command-recipes-rust.el
+  run-command-recipes-20220205.1840/run-command-recipes.el
+Built run-command-recipes in 3.094s, finished at 2022-02-05T22:10:42+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  543 Feb  5 10:25 packages/run-command-recipes-20220131.1307.entry
- 40K -rw-r--r-- 1 root root  40K Feb  5 10:25 packages/run-command-recipes-20220131.1307.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb  5 10:25 packages/run-command-recipes-badge.svg
-4.0K -rw-r--r-- 1 root root  349 Feb  5 10:25 packages/run-command-recipes-readme.txt
+4.0K -rw-r--r-- 1 root root  543 Feb  5 22:10 packages/run-command-recipes-20220205.1840.entry
+ 40K -rw-r--r-- 1 root root  40K Feb  5 22:10 packages/run-command-recipes-20220205.1840.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  5 22:10 packages/run-command-recipes-badge.svg
+4.0K -rw-r--r-- 1 root root  344 Feb  5 22:10 packages/run-command-recipes-readme.txt

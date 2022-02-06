@@ -1,13 +1,13 @@
 Package: languagetool
 Fetcher: github
-Source:  https://github.com/PillFall/Emacs-LanguageTool.el.git
+Source:  https://github.com/PillFall/languagetool.el.git
 
-Updating /mnt/store/melpa/working/languagetool/
+Cloning https://github.com/PillFall/languagetool.el.git to /mnt/store/melpa/working/languagetool/
 Checking out origin/HEAD
 Checking out ea50c120ee3418489b43d51ed750288791d6eb95
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/languagetool/
-  to /tmp/languagetoolpFID0g/languagetool-20220127.2215
+  to /tmp/languagetoolnbcdKn/languagetool-20220127.2215
     languagetool-console.el -> languagetool-console.el
     languagetool-core.el -> languagetool-core.el
     languagetool-correction.el -> languagetool-correction.el
@@ -25,9 +25,9 @@ Created languagetool-20220127.2215.tar containing:
   languagetool-20220127.2215/languagetool-pkg.el
   languagetool-20220127.2215/languagetool-server.el
   languagetool-20220127.2215/languagetool.el
-Built languagetool in 4.076s, finished at 2022-02-05T10:06:37+0000
+Built languagetool in 4.296s, finished at 2022-02-05T21:52:02+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  480 Feb  5 10:06 packages/languagetool-20220127.2215.entry
- 60K -rw-r--r-- 1 root root  60K Feb  5 10:06 packages/languagetool-20220127.2215.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb  5 10:06 packages/languagetool-badge.svg
-4.0K -rw-r--r-- 1 root root  340 Feb  5 10:06 packages/languagetool-readme.txt
+4.0K -rw-r--r-- 1 root root  480 Feb  5 21:52 packages/languagetool-20220127.2215.entry
+ 60K -rw-r--r-- 1 root root  60K Feb  5 21:52 packages/languagetool-20220127.2215.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  5 21:52 packages/languagetool-badge.svg
+4.0K -rw-r--r-- 1 root root  340 Feb  5 21:52 packages/languagetool-readme.txt

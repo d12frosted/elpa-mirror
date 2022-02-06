@@ -6,7 +6,7 @@ dtach[1].  These sessions can be easily created through the command
 
 When a session is created, dtache makes sure that Emacs is attached
 to it the same time, which makes it a seamless experience for the
-users.  The `dtache' package internaly creates a `dtache-session'
+users.  The `dtache' package internally creates a `dtache-session'
 for all commands.
 
 [1] https://github.com/crigler/dtach

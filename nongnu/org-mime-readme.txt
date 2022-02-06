@@ -13,7 +13,7 @@ Table of Contents
 .. 3. Beautify quoted mail when replying
 .. 4. Export options
 .. 5. Latex export problem
-.. 6. The exported HTML is wrong
+.. 6. fix exported plain text and html
 .. 7. Keep gpg signatures outside of multipart
 .. 8. ASCII export options for text/plain
 .. 9. Prompt for confirmation if message has no HTML
@@ -28,6 +28,7 @@ Table of Contents
 ══════════
 
   [https://travis-ci.org/org-mime/org-mime.svg?branch=master]
+  [file:https://elpa.nongnu.org/nongnu/org-mime.svg]
   [file:http://melpa.org/packages/org-mime-badge.svg]
   [file:http://stable.melpa.org/packages/org-mime-badge.svg]
 
@@ -45,6 +46,9 @@ Table of Contents
 [https://travis-ci.org/org-mime/org-mime.svg?branch=master]
 <https://travis-ci.org/org-mime/org-mime>
 
+[file:https://elpa.nongnu.org/nongnu/org-mime.svg]
+<https://elpa.nongnu.org/nongnu/org-mime.html>
+
 [file:http://melpa.org/packages/org-mime-badge.svg]
 <http://melpa.org/#/org-mime>
 
@@ -61,8 +65,6 @@ Table of Contents
   │ (setq org-mime-library 'mml)
   │ ;; OR for Wanderlust (WL)
   │ ;; (setq org-mime-library 'semi)
-  │ ;; OR for VM – not yet supported
-  │ ;; (setq org-mime-library 'vm)
   └────
 
 
@@ -163,10 +165,6 @@ Table of Contents
   styles are rendered correctly they must be included in the actual body
   of the elements to which they apply.
 
-  The `org-mime-html-hook' allows for the insertion of these important
-  CSS elements into the resulting HTML before mime encoding. The
-  following are some possible uses of this hook.
-
   For those who use color themes with Dark backgrounds it is useful to
   set a dark background for all exported code blocks and example
   regions. This can be accomplished with the following,
@@ -185,12 +183,11 @@ Table of Contents
   │ 	     "blockquote" "border-left: 2px solid gray; padding-left: 4px;")))
   └────
 
-  Render text between "@" in red color, you can use
-  `org-mime-html-hook',
+  Below code renders text between "#" in red color,
   ┌────
   │ (add-hook 'org-mime-html-hook
   │ 	  (lambda ()
-  │ 	    (while (re-search-forward "@\\([^@]*\\)@" nil t)
+  │ 	    (while (re-search-forward "#\\([^#]*\\)#" nil t)
   │ 	      (replace-match "<span style=\"color:red\">\\1</span>"))))
   └────
   For other customization options see the org-mime customization group.
@@ -199,17 +196,20 @@ Table of Contents
 4.3 Beautify quoted mail when replying
 ──────────────────────────────────────
 
-  It already works out of box. Currently it emulate Gmail's style. You
-  can go back the old Gnus style by `(setq org-mime-beautify-quoted-mail
+  It already works out of box. Currently it emulates Gmail's style. You
+  can go back the old style by `(setq org-mime-beautify-quoted-mail
   nil)'.
 
 
 4.4 Export options
 ──────────────────
 
-  To avoid exporting TOC, you can setup `org-mime-export-options',
+  To avoid exporting TOC, you can setup `org-mime-export-options' which
+  overrides Org default settings (but still inferior to file-local
+  settings),
   ┌────
-  │ (setq org-mime-export-options '(:section-numbers nil
+  │ (setq org-mime-export-options '(:with-latex dvipng
+  │ 				:section-numbers nil
   │ 				:with-author nil
   │ 				:with-toc nil))
   └────
@@ -230,22 +230,45 @@ Table of Contents
   `org-mime-org-html-with-latex-default'.
 
 
-4.6 The exported HTML is wrong
-──────────────────────────────
+4.6 fix exported plain text and html
+────────────────────────────────────
 
-  Please note this program can only embed exported HTML into
-  mail. Org-mode is responsible for rendering HTML.
+  By default both the plain text and html are exported into the email.
 
-  One issue of org-mode is [unwanted numbers in displaymath and
-  equation].
+  The exported plain text could be modified in
+  `org-mime-plain-text-hook'. For example, below code removes "\\",
+  ┌────
+  │ (add-hook 'org-mime-plain-text-hook
+  │ 	  (lambda ()
+  │ 	    (while (re-search-forward "\\\\" nil t)
+  │ 	      (replace-match ""))))
+  └────
 
-  Thibault Marin provided [a patch to fix the org-mode].
+  The exported HTML could be modified in `org-mime-html-hook'. For
+  example, below code renders text between "#" in red color,
+  ┌────
+  │ (add-hook 'org-mime-html-hook
+  │ 	  (lambda ()
+  │ 	    (while (re-search-forward "#\\([^#]*\\)#" nil t)
+  │ 	      (replace-match "<span style=\"color:red\">\\1</span>"))))
+  └────
+
+  Surely you can fix the exported HTML in `org-mode'. For example, One
+  issue of `org-mode' is [unwanted numbers in displaymath and equation].
+
+  Thibault Marin provided [a patch] to fix the `org-mode'.
+
+  In summary, this package gives you freedom to hack the plain text part
+  or html part of the email.
+
+  If you prefer a more "elegant" way, you could always investigate the
+  `org-mode' instead.
 
 
 [unwanted numbers in displaymath and equation]
 <https://github.com/org-mime/org-mime/issues/38>
 
-[a patch to fix the org-mode]
+[a patch]
 <https://lists.gnu.org/archive/html/emacs-orgmode/2019-11/msg00016.html>
 
 

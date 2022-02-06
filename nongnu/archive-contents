@@ -713,21 +713,21 @@
 		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
 		     (:keywords "languages"))])
  (helm .
-       [(3 6 2)
+       [(3 8 3)
 	nil "Emacs incremental and narrowing framework" tar
 	((:url . "https://github.com/emacs-helm/helm")
 	 (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
 	 (:authors
 	  ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
-	 (:commit . "4ff354efb6b24044fd38b725b61d470bd5423265"))])
+	 (:commit . "129cf538a00b99913abc7fb258c474de3ec897ee"))])
  (helm-core .
-	    [(3 6 2)
+	    [(3 8 3)
 	     nil "Emacs incremental and narrowing framework" tar
 	     ((:url . "https://github.com/emacs-helm/helm")
 	      (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
 	      (:authors
 	       ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
-	      (:commit . "4ff354efb6b24044fd38b725b61d470bd5423265"))])
+	      (:commit . "129cf538a00b99913abc7fb258c474de3ec897ee"))])
  (highlight-parentheses .
 			[(2 1 0)
 			 ((emacs
@@ -1036,7 +1036,7 @@
 		 ("Bastian Bechtold")
 		 ("Christian Schwarzgruber")))])
  (org-mime .
-	   [(0 2 4)
+	   [(0 2 6)
 	    ((emacs
 	      (25 1)))
 	    "org html export for text/html MIME emails" tar
@@ -1044,7 +1044,8 @@
 	     (:keywords "mime" "mail" "email" "html")
 	     (:maintainer "Chen Bin (redguardtoo)")
 	     (:authors
-	      ("Eric Schulte")))])
+	      ("Eric Schulte"))
+	     (:commit . "3f1f3a38429da17811f61a7a5685224d79de9594"))])
  (org-present .
 	      [(0 1)
 	       ((org
