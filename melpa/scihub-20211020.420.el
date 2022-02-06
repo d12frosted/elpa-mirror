@@ -5,7 +5,7 @@
 ;; Author: Mario Rodas <marsam@users.noreply.github.com>
 ;; URL: https://github.com/emacs-pe/scihub.el
 ;; Package-Version: 20211020.420
-;; Package-Commit: d96c462e7f340f142ce3c5ffd31fa267223fd854
+;; Package-Commit: aac29628d4eea2d6ec0bfda39503c1f71a379bc9
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
