@@ -4,7 +4,7 @@
 ;; Copyright (C) 2020-2021 Benedikt Broich
 ;; Version: 0.1
 ;; Package-Version: 20220207.813
-;; Package-Commit: 9fefeef59fb1b3e651fbc9bbfed1fec916768ab3
+;; Package-Commit: e48b0b350516e20eaf85514e8855c2fbfbf09c11
 ;; Keywords: multimedia, twitch-api
 ;; URL: https://github.com/BenediktBroich/twitch-api
 ;; Package-Requires: ((emacs "27.1") (dash "2.19.0"))

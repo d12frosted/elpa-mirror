@@ -4,26 +4,28 @@ Source:  https://github.com/clojure-emacs/parseclj.git
 
 Updating /mnt/store/melpa/working/parseclj/
 Checking out origin/HEAD
-Checking out 1ce54fa2eb7a5d99d34c07d271e18eaabd0489da
+Checking out 90595049634549e6d8872f719b13e9555897d17b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/parseclj/
-  to /tmp/parseclj4TV4qW/parseclj-20220206.1811
+  to /tmp/parseclj61AltZ/parseclj-20220207.1351
     parseclj-alist.el -> parseclj-alist.el
     parseclj-ast.el -> parseclj-ast.el
     parseclj-lex.el -> parseclj-lex.el
     parseclj-parser.el -> parseclj-parser.el
     parseclj.el -> parseclj.el
-Created parseclj-20220206.1811.tar containing:
-  parseclj-20220206.1811/
-  parseclj-20220206.1811/parseclj-alist.el
-  parseclj-20220206.1811/parseclj-ast.el
-  parseclj-20220206.1811/parseclj-lex.el
-  parseclj-20220206.1811/parseclj-parser.el
-  parseclj-20220206.1811/parseclj-pkg.el
-  parseclj-20220206.1811/parseclj.el
-Built parseclj in 4.107s, finished at 2022-02-07T09:24:34+0000
+Created parseclj-20220207.1351.tar containing:
+  parseclj-20220207.1351/
+  parseclj-20220207.1351/parseclj-alist.el
+  parseclj-20220207.1351/parseclj-ast.el
+  parseclj-20220207.1351/parseclj-lex.el
+  parseclj-20220207.1351/parseclj-parser.el
+  parseclj-20220207.1351/parseclj-pkg.el
+  parseclj-20220207.1351/parseclj.el
+Built parseclj in 3.364s, finished at 2022-02-07T15:17:34+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  325 Feb  7 09:24 packages/parseclj-20220206.1811.entry
- 60K -rw-r--r-- 1 root root  60K Feb  7 09:24 packages/parseclj-20220206.1811.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb  7 09:24 packages/parseclj-badge.svg
-4.0K -rw-r--r-- 1 root root   38 Feb  7 09:24 packages/parseclj-readme.txt
+4.0K -rw-r--r-- 1 root root  325 Feb  7 12:20 packages/parseclj-20220206.1811.entry
+ 60K -rw-r--r-- 1 root root  60K Feb  7 12:20 packages/parseclj-20220206.1811.tar
+4.0K -rw-r--r-- 1 root root  325 Feb  7 15:17 packages/parseclj-20220207.1351.entry
+ 60K -rw-r--r-- 1 root root  60K Feb  7 15:17 packages/parseclj-20220207.1351.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  7 15:17 packages/parseclj-badge.svg
+4.0K -rw-r--r-- 1 root root   38 Feb  7 15:17 packages/parseclj-readme.txt

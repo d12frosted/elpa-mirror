@@ -1,9 +1,13 @@
-(parseclj .
-	  [(20220206 1811)
+(parseedn .
+	  [(20220207 1352)
 	   ((emacs
-	     (25)))
-	   "Clojure/EDN parser" tar
-	   ((:commit . "1ce54fa2eb7a5d99d34c07d271e18eaabd0489da")
+	     (26))
+	    (parseclj
+	     (1 1 0))
+	    (map
+	     (2)))
+	   "Clojure/EDN parser" single
+	   ((:commit . "ea7b5281ec80aca0bd1cc93a348aebb302497339")
 	    (:authors
 	     ("Arne Brasseur" . "arne@arnebrasseur.net"))
 	    (:maintainer "Arne Brasseur" . "arne@arnebrasseur.net")

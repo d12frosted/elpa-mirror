@@ -4,10 +4,10 @@
 
 ;; Author: Arne Brasseur <arne@arnebrasseur.net>
 ;; Keywords: lisp clojure edn parser
-;; Package-Version: 20211013.452
-;; Package-Commit: e5ba280d1fb7b408d54062d4eac545326e850172
-;; Package-Requires: ((emacs "26") (parseclj "1.0.6") (map "2"))
-;; Version: 1.0.6
+;; Package-Version: 20220207.1352
+;; Package-Commit: ea7b5281ec80aca0bd1cc93a348aebb302497339
+;; Package-Requires: ((emacs "26") (parseclj "1.1.0") (map "2"))
+;; Version: 1.1.0
 
 ;; This file is not part of GNU Emacs.
 
@@ -67,6 +67,23 @@ is not recommended you change this variable, as this globally
 changes the behavior of the EDN reader.  Instead pass your own
 handlers as an optional argument to the reader functions.")
 
+(defun parseedn-tagged-literal (tag form)
+  "Construct a data representation of a tagged literal from TAG and FORM."
+  (list 'edn-tagged-literal tag form))
+
+(defvar parseedn-default-data-reader-fn nil
+  "The default tagged literal reader function.
+
+When no data reader is found for a tag and
+`parseedn-default-data-reader-fn' is non-nil, it will be called
+with two arguments, the tag and the value.  If
+`parseedn-default-data-reader-fn' is nil (the default), an
+exception will be thrown for the unknown tag.
+
+The default data reader can also be provided via the tagged
+reader options registered under the :default keyword when calling
+the reader functions.")
+
 (defun parseedn-reduce-leaf (stack token _options)
   "Put in the STACK an elisp value representing TOKEN.
 
@@ -103,10 +120,14 @@ on available options."
                                            kvs)
                                    hash-map))
         ((eq :tag token-type) (let* ((tag (intern (substring (alist-get :form opening-token) 1)))
-                                     (reader (alist-get tag tag-readers :missing)))
-                                (when (eq :missing reader)
-                                  (user-error "No reader for tag #%S in %S" tag (map-keys tag-readers)))
-                                (funcall reader (car children)))))
+                                     (reader (alist-get tag tag-readers))
+                                     (default-reader (alist-get :default tag-readers parseedn-default-data-reader-fn)))
+                                (cond
+                                 ((functionp reader)
+                                  (funcall reader (car children)))
+                                 ((functionp default-reader)
+                                  (funcall default-reader tag (car children)))
+                                 (t (user-error "No reader for tag #%S in %S" tag (map-keys tag-readers)))))))
        stack))))
 
 (defun parseedn-read (&optional tag-readers)
@@ -238,6 +259,9 @@ DATUM can be any Emacs Lisp value."
       (insert "#uuid ") (parseedn-print-seq (cdr datum)))
      ((eq 'edn-inst (car datum))
       (insert "#inst ") (parseedn-print-inst (cdr datum)))
+     ((eq 'edn-tagged-literal (car datum))
+      (insert "#" (symbol-name (cadr datum)) " ")
+      (parseedn-print (caddr datum)))
      (t (insert "(") (parseedn-print-seq datum) (insert ")"))))
 
    (t (error "Don't know how to print: %s" datum))))

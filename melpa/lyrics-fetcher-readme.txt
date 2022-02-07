@@ -7,9 +7,10 @@ Main commands:
 - `lyrics-fetcher-show-lyrics-query' - show lyrics by a
    text query.
 - `lyrics-fetcher-emms-browser-show-at-point' - show lyrics
-   for the current point in EMMS browser,
+   for the current point in EMMS browser.
 - `lyrics-fetcher-emms-browser-fetch-covers-at-point' - fetch
    album covers for the current point in the EMMS browser.
+- `lyrics-fetcher-use-backend' - select a backend.
 
 Take a look at the package README.org at
 <https://github.com/SqrtMinusOne/lyrics-fetcher.el> for more
