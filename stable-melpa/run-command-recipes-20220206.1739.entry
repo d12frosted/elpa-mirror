@@ -1,0 +1,17 @@
+(run-command-recipes .
+		     [(20220206 1739)
+		      ((emacs
+			(25 1))
+		       (dash
+			(2 18 0))
+		       (f
+			(0 20 0))
+		       (run-command
+			(0 1 0)))
+		      "This is collection of recipes to `run-command'" tar
+		      ((:commit . "250abc8eb5ed7d38b84b1823a1d853f2189c9237")
+		       (:authors
+			("semenInRussia" . "hrams205@gmail.com"))
+		       (:maintainer "semenInRussia" . "hrams205@gmail.com")
+		       (:keywords "extensions" "run-command")
+		       (:url . "https://github.com/semenInRussia/emacs-run-command-recipes"))])

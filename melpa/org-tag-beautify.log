@@ -1,13 +1,13 @@
 Package: org-tag-beautify
 Fetcher: github
-Source:  https://github.com/stardiviner/org-tag-beautify.git
+Source:  https://github.com/emacsmirror/org-tag-beautify.git
 
 Updating /mnt/store/melpa/working/org-tag-beautify/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: could not read Username for 'https://github.com': No such device or address
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out c92cec0229b428440aea23917984be82b83c74e5
+Built org-tag-beautify in 2.839s, finished at 2022-02-07T03:29:12+0000
+ ✓ Success:
+ 80K -rw-r--r-- 1 root root  80K Feb  7 03:29 packages/org-tag-beautify-20210125.1126.el
+4.0K -rw-r--r-- 1 root root  343 Feb  7 03:29 packages/org-tag-beautify-20210125.1126.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  7 03:29 packages/org-tag-beautify-badge.svg
+4.0K -rw-r--r-- 1 root root   34 Feb  7 03:29 packages/org-tag-beautify-readme.txt

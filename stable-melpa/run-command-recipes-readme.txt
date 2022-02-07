@@ -16,3 +16,4 @@ Also Instead of LaTeX and pandoc you can use something from this:
 - haskell
 - elisp
 - rust
+- python

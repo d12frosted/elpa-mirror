@@ -1,13 +1,13 @@
 Package: proxy-mode
 Fetcher: github
-Source:  https://github.com/stardiviner/proxy-mode.git
+Source:  https://github.com/emacsmirror/proxy-mode.git
 
 Updating /mnt/store/melpa/working/proxy-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: could not read Username for 'https://github.com': No such device or address
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out dbf163413e9e404c652cc0ea7185c623016a38e1
+Built proxy-mode in 3.324s, finished at 2022-02-07T03:34:18+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.1K Feb  7 03:34 packages/proxy-mode-20201214.727.el
+4.0K -rw-r--r-- 1 root root  268 Feb  7 03:34 packages/proxy-mode-20201214.727.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  7 03:34 packages/proxy-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   57 Feb  7 03:34 packages/proxy-mode-readme.txt

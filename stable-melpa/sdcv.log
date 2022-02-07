@@ -1,13 +1,13 @@
 Package: sdcv
 Fetcher: github
-Source:  https://github.com/stardiviner/sdcv.el.git
+Source:  https://github.com/emacsmirror/sdcv.el.git
 
 Updating /mnt/store/melpa/working/sdcv/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: could not read Username for 'https://github.com': No such device or address
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 943ae3e90cc9a0a88a37cc710acd7424fd4defc4
+Built sdcv in 3.644s, finished at 2022-02-07T03:38:13+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  16K Feb  7 03:38 packages/sdcv-20190610.732.el
+4.0K -rw-r--r-- 1 root root  476 Feb  7 03:38 packages/sdcv-20190610.732.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  7 03:38 packages/sdcv-badge.svg
+4.0K -rw-r--r-- 1 root root 1.7K Feb  7 03:38 packages/sdcv-readme.txt

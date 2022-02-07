@@ -1,13 +1,13 @@
 Package: company-nginx
 Fetcher: github
-Source:  https://github.com/stardiviner/company-nginx.git
+Source:  https://github.com/emacsmirror/company-nginx.git
 
 Updating /mnt/store/melpa/working/company-nginx/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: could not read Username for 'https://github.com': No such device or address
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 82bdb730ad5971c594d9c99c069f3c7bb067897d
+Built company-nginx in 4.158s, finished at 2022-02-07T02:51:18+0000
+ ✓ Success:
+ 16K -rw-r--r-- 1 root root  16K Feb  7 02:51 packages/company-nginx-20201020.2038.el
+4.0K -rw-r--r-- 1 root root  313 Feb  7 02:51 packages/company-nginx-20201020.2038.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  7 02:51 packages/company-nginx-badge.svg
+   0 -rw-r--r-- 1 root root    0 Feb  7 02:51 packages/company-nginx-readme.txt

@@ -1,11 +1,13 @@
 ;;; bury-successful-compilation.el --- Bury the *compilation* buffer after successful compilation
 ;; Version: 0.0.20140308
+;; Package-Commit: 674644c844184605a1bb4f9487a60f7a780a6fe7
 
 ;; Copyright (C) 2015 Eric Crosson
 
 ;; Author: Eric Crosson <esc@ericcrosson.com>
 ;; Keywords: compilation
-;; Package-Version: 0.1.2
+;; Package-Version: 20181106.403
+;; Package-X-Original-Version: 0.1.2
 
 ;; This program is free software: you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

@@ -1,0 +1,10 @@
+(twitch-api .
+	    [(20220205 732)
+	     ((emacs
+	       (27 1))
+	      (dash
+	       (2 19 0)))
+	     "An elisp interface for the Twitch.tv API" single
+	     ((:commit . "7298951b124dc772a7b0c3e97cc475d9255716ac")
+	      (:keywords "multimedia" "twitch-api")
+	      (:url . "https://github.com/BenediktBroich/twitch-api"))])

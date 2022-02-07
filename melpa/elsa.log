@@ -4,10 +4,10 @@ Source:  https://github.com/emacs-elsa/Elsa.git
 
 Updating /mnt/store/melpa/working/elsa/
 Checking out origin/HEAD
-Checking out ea2d2afee38af1511728f61083b22a3e688c7570
+Checking out ce2fc8cdf67e74ee2df6f79fd6f7358e6e34a461
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/elsa/
-  to /tmp/elsa8bN5kt/elsa-20220205.2040
+  to /tmp/elsakV2yPa/elsa-20220206.2118
     Elsafile.el -> Elsafile.el
     elsa-analyser.el -> elsa-analyser.el
     elsa-check.el -> elsa-check.el
@@ -20,6 +20,7 @@ Copying files (->) and directories (=>)
     elsa-extension-elsa.el -> elsa-extension-elsa.el
     elsa-extension-flycheck.el -> elsa-extension-flycheck.el
     elsa-extension-seq.el -> elsa-extension-seq.el
+    elsa-extension-subr.el -> elsa-extension-subr.el
     elsa-font-lock.el -> elsa-font-lock.el
     elsa-functions.el -> elsa-functions.el
     elsa-pkg.el -> elsa-pkg.el
@@ -40,44 +41,45 @@ Copying files (->) and directories (=>)
     elsa-variable.el -> elsa-variable.el
     elsa.el -> elsa.el
     bin => bin
-Created elsa-20220205.2040.tar containing:
-  elsa-20220205.2040/
-  elsa-20220205.2040/Elsafile.el
-  elsa-20220205.2040/bin/
-  elsa-20220205.2040/bin/elsa
-  elsa-20220205.2040/elsa-analyser.el
-  elsa-20220205.2040/elsa-check.el
-  elsa-20220205.2040/elsa-english.el
-  elsa-20220205.2040/elsa-error.el
-  elsa-20220205.2040/elsa-extension-builtin.el
-  elsa-20220205.2040/elsa-extension-cl.el
-  elsa-20220205.2040/elsa-extension-dash.el
-  elsa-20220205.2040/elsa-extension-eieio.el
-  elsa-20220205.2040/elsa-extension-elsa.el
-  elsa-20220205.2040/elsa-extension-flycheck.el
-  elsa-20220205.2040/elsa-extension-seq.el
-  elsa-20220205.2040/elsa-font-lock.el
-  elsa-20220205.2040/elsa-functions.el
-  elsa-20220205.2040/elsa-pkg.el
-  elsa-20220205.2040/elsa-reader.el
-  elsa-20220205.2040/elsa-rules-list.el
-  elsa-20220205.2040/elsa-ruleset.el
-  elsa-20220205.2040/elsa-scope.el
-  elsa-20220205.2040/elsa-state.el
-  elsa-20220205.2040/elsa-type-algebra.el
-  elsa-20220205.2040/elsa-type-helpers.el
-  elsa-20220205.2040/elsa-typed-builtin.el
-  elsa-20220205.2040/elsa-typed-cl.el
-  elsa-20220205.2040/elsa-typed-eieio.el
-  elsa-20220205.2040/elsa-typed-subr.el
-  elsa-20220205.2040/elsa-typed-syntax.el
-  elsa-20220205.2040/elsa-typed-thingatpt.el
-  elsa-20220205.2040/elsa-types.el
-  elsa-20220205.2040/elsa-variable.el
-  elsa-20220205.2040/elsa.el
-Built elsa in 4.427s, finished at 2022-02-06T09:17:24+0000
+Created elsa-20220206.2118.tar containing:
+  elsa-20220206.2118/
+  elsa-20220206.2118/Elsafile.el
+  elsa-20220206.2118/bin/
+  elsa-20220206.2118/bin/elsa
+  elsa-20220206.2118/elsa-analyser.el
+  elsa-20220206.2118/elsa-check.el
+  elsa-20220206.2118/elsa-english.el
+  elsa-20220206.2118/elsa-error.el
+  elsa-20220206.2118/elsa-extension-builtin.el
+  elsa-20220206.2118/elsa-extension-cl.el
+  elsa-20220206.2118/elsa-extension-dash.el
+  elsa-20220206.2118/elsa-extension-eieio.el
+  elsa-20220206.2118/elsa-extension-elsa.el
+  elsa-20220206.2118/elsa-extension-flycheck.el
+  elsa-20220206.2118/elsa-extension-seq.el
+  elsa-20220206.2118/elsa-extension-subr.el
+  elsa-20220206.2118/elsa-font-lock.el
+  elsa-20220206.2118/elsa-functions.el
+  elsa-20220206.2118/elsa-pkg.el
+  elsa-20220206.2118/elsa-reader.el
+  elsa-20220206.2118/elsa-rules-list.el
+  elsa-20220206.2118/elsa-ruleset.el
+  elsa-20220206.2118/elsa-scope.el
+  elsa-20220206.2118/elsa-state.el
+  elsa-20220206.2118/elsa-type-algebra.el
+  elsa-20220206.2118/elsa-type-helpers.el
+  elsa-20220206.2118/elsa-typed-builtin.el
+  elsa-20220206.2118/elsa-typed-cl.el
+  elsa-20220206.2118/elsa-typed-eieio.el
+  elsa-20220206.2118/elsa-typed-subr.el
+  elsa-20220206.2118/elsa-typed-syntax.el
+  elsa-20220206.2118/elsa-typed-thingatpt.el
+  elsa-20220206.2118/elsa-types.el
+  elsa-20220206.2118/elsa-variable.el
+  elsa-20220206.2118/elsa.el
+Built elsa in 4.005s, finished at 2022-02-07T02:58:48+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  394 Feb  6 09:17 packages/elsa-20220205.2040.entry
-240K -rw-r--r-- 1 root root 240K Feb  6 09:17 packages/elsa-20220205.2040.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb  6 09:17 packages/elsa-badge.svg
-   0 -rw-r--r-- 1 root root    0 Feb  6 09:17 packages/elsa-readme.txt
+4.0K -rw-r--r-- 1 root root  394 Feb  7 02:58 packages/elsa-20220206.2118.entry
+240K -rw-r--r-- 1 root root 240K Feb  7 02:58 packages/elsa-20220206.2118.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb  7 02:58 packages/elsa-badge.svg
+   0 -rw-r--r-- 1 root root    0 Feb  7 02:58 packages/elsa-readme.txt
