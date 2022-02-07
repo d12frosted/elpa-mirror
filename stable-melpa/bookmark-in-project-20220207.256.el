@@ -5,8 +5,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-bookmark-in-project
-;; Package-Version: 20220201.544
-;; Package-Commit: ff0d1c3531352a6c54bb48ced797f41bda95939e
+;; Package-Version: 20220207.256
+;; Package-Commit: 63831add85c28c7077b44a1682b9aa5dda580fea
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
@@ -244,7 +244,14 @@ using `default-directory' as a fallback."
               (setq pos-depth (1+ pos-depth))
               (push (car pair) result-stack))
             ((number-or-marker-p (setq mark (cdr pair)))
-              (let ((pos-test (marker-position mark)))
+              (let
+                (
+                  (pos-test
+                    (cond
+                      ((markerp mark)
+                        (marker-position mark))
+                      (t
+                        mark))))
                 (when (and (> pos-test pos-best) (> pos pos-test))
                   ;; Store result and it's parents.
                   (setq result (cons (car pair) result-stack))
@@ -277,7 +284,14 @@ using `default-directory' as a fallback."
               ((number-or-marker-p (setq mark (cdr pair)))
                 ;; Ensure the next item isn't nested.
                 (when (<= pos-depth pos-best-depth)
-                  (let ((pos-test (marker-position mark)))
+                  (let
+                    (
+                      (pos-test
+                        (cond
+                          ((markerp mark)
+                            (marker-position mark))
+                          (t
+                            mark))))
                     (when (and (> pos-next pos-test) (> pos-test pos))
                       (setq pos-next pos-test)))))))
           (t
