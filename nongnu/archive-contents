@@ -713,21 +713,29 @@
 		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
 		     (:keywords "languages"))])
  (helm .
-       [(3 8 3)
-	nil "Emacs incremental and narrowing framework" tar
-	((:url . "https://github.com/emacs-helm/helm")
+       [(3 8 4)
+	((helm-core
+	  (3 8 4))
+	 (popup
+	  (0 5 3)))
+	"Helm is an Emacs incremental and narrowing framework" tar
+	((:url . "https://emacs-helm.github.io/helm/")
 	 (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
 	 (:authors
 	  ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
-	 (:commit . "129cf538a00b99913abc7fb258c474de3ec897ee"))])
+	 (:commit . "a7b9e898296142465c0857b2d201d8d828ba7b05"))])
  (helm-core .
-	    [(3 8 3)
-	     nil "Emacs incremental and narrowing framework" tar
-	     ((:url . "https://github.com/emacs-helm/helm")
+	    [(3 8 4)
+	     ((helm-core
+	       (3 8 4))
+	      (popup
+	       (0 5 3)))
+	     "Helm is an Emacs incremental and narrowing framework" tar
+	     ((:url . "https://emacs-helm.github.io/helm/")
 	      (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
 	      (:authors
 	       ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
-	      (:commit . "129cf538a00b99913abc7fb258c474de3ec897ee"))])
+	      (:commit . "a7b9e898296142465c0857b2d201d8d828ba7b05"))])
  (highlight-parentheses .
 			[(2 1 0)
 			 ((emacs
@@ -1448,6 +1456,14 @@
 	    ("Sean McLaughlin" . "seanmcl@gmail.com")
 	    ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	   (:keywords "ocaml" "languages"))])
+ (typescript-mode .
+		  [(0 4)
+		   ((emacs
+		     (24 3)))
+		   "Major mode for editing typescript" tar
+		   ((:url . "http://github.com/ananthakumaran/typescript.el")
+		    (:keywords "typescript" "languages")
+		    (:commit . "2a58631230fe2d176352af262a0efdecc21f90ac"))])
  (ujelly-theme .
 	       [(1 2 9)
 		nil "Ujelly theme for GNU Emacs 24 (deftheme)" tar
