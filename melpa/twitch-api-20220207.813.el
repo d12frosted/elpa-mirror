@@ -3,8 +3,8 @@
 ;; Copyright (C) 2015-2016 Aaron Jacobs
 ;; Copyright (C) 2020-2021 Benedikt Broich
 ;; Version: 0.1
-;; Package-Version: 20220205.732
-;; Package-Commit: 7298951b124dc772a7b0c3e97cc475d9255716ac
+;; Package-Version: 20220207.813
+;; Package-Commit: 9fefeef59fb1b3e651fbc9bbfed1fec916768ab3
 ;; Keywords: multimedia, twitch-api
 ;; URL: https://github.com/BenediktBroich/twitch-api
 ;; Package-Requires: ((emacs "27.1") (dash "2.19.0"))
@@ -28,7 +28,7 @@
 
 
 ;;; Commentary:
-;; This are twitch api funtions mainly used by helm-twitch.
+;; These are twitch API functions mainly used by helm-twitch.
 
 ;;; Code:
 
@@ -269,7 +269,7 @@ If LIMIT is an integer, pass that along to `twitch-api'."
             'twitch-api--refresh-top-streams nil t))
 
 (defun twitch-api--refresh-top-streams ()
-  "Recive a list of top streams from twitch."
+  "Receive a list of top streams from twitch."
   (setq tabulated-list-entries
         (mapcar (lambda (elt)
                   (list elt (vector (twitch-api-stream-name elt)

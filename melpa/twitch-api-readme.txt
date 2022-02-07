@@ -1,1 +1,1 @@
-This are twitch api funtions mainly used by helm-twitch.
+These are twitch API functions mainly used by helm-twitch.

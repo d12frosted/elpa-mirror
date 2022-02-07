@@ -7,8 +7,6 @@
 ;; Copyleft (Ↄ) 2013, Joe Bloggs, all rites reversed.
 ;; Created: 2013-06-21 12:26:18
 ;; Version: 0.4
-;; Package-Version: 20140216.1646
-;; Package-Commit: f5fe3f6aa8086f675ba216abace9e3d5f2e3a089
 ;; Last-Updated: 2013-07-26 16:30:00
 ;;           By: Joe Bloggs
 ;; URL: https://github.com/vapniks/ido-gnus
