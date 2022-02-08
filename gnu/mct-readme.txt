@@ -10,38 +10,56 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `mct' (or `mct.el' and variants), and provides every other
 piece of information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.4.0,
-released on 2022-01-19.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.5.0,
+released on 2022-02-08.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.5.0-dev.
+Current development target is 0.6.0-dev.
 
 Table of Contents
 ─────────────────
 
 1. COPYING
 2. Overview of MCT
-.. 1. MCT in the minibuffer and in regular buffers
-3. Usage
+3. Customizations
+.. 1. Format of the Completions
+.. 2. Live completion
+.. 3. Minimum input threshold
+.. 4. Delay between live updates
+.. 5. Live updates per command or completion category
+..... 1. Passlist for commands or completion categories
+..... 2. Blocklist for commands or completion categories
+..... 3. Known completion categories
+.. 6. Size boundaries of the Completions
+.. 7. Dynamic completion tables in mct-minibuffer-mode
+.. 8. Hide the Completions mode line
+.. 9. Remove shadowed file paths
+.. 10. Alternating backgrounds in the Completions
+.. 11. MCT in the minibuffer and in regular buffers
+4. Usage
 .. 1. Cyclic behaviour for mct-minibuffer-mode
 .. 2. Selecting candidates with mct-minibuffer-mode
 .. 3. Other commands for mct-minibuffer-mode
 .. 4. Interaction model of mct-region-mode
-4. Installation
+5. Installation
 .. 1. Install the package
 .. 2. Manual installation method
-5. Sample setup
-6. Keymaps
-7. User-level tweaks or custom code
-.. 1. MCT in the current or the other window
-8. Extensions
+6. Sample setup
+7. Known issues and workarounds
+.. 1. Avoid global-hl-line-mode in the Completions
+8. Keymaps
+.. 1. The use of remap for key bindings
+9. User-level tweaks or custom code
+.. 1. Sort completion candidates on Emacs 29
+.. 2. MCT in the current or the other window
+10. Extensions
 .. 1. Enable Consult previews
 .. 2. Avoid conflict between MCT and Corfu
-9. Alternatives
-10. Acknowledgements
-11. Official sources
-12. GNU Free Documentation License
-13. Indices
+11. Alternatives
+12. Acknowledgements
+13. Official sources
+14. GNU Free Documentation License
+15. Indices
 .. 1. Function index
 .. 2. Variable index
 .. 3. Concept index
@@ -89,76 +107,421 @@ Table of Contents
   `*Completions*' buffer and starts updating it to respond to user
   input.
 
-  Customization options control the input threshold
-  (`mct-minimum-input') and the delay between live updates
-  (`mct-live-update-delay').  Similarly, a blocklist and a passlist for
-  commands are on offer:
 
-  ⁃ The blocklist (`mct-completion-blocklist') disables the
-    live-updating functionality for the functions specified therein.
-  ⁃ The passlist (`mct-completion-passlist') always shows the
-    Completions’ buffer for the designated function without accounting
-    for the minimum input threshold.
+[Basic usage] See section 4
 
-  The user option `mct-live-completion' controls the overall behaviour
-  of the Completions’ buffer:
+
+3 Customizations
+════════════════
+
+  MCT is highly configurable to adapt to the varying needs of users.
+  This section documents each user option.
+
+
+3.1 Format of the Completions
+─────────────────────────────
+
+  Brief: Set the presentation of candidates in the Completions’ buffer.
+
+  Symbol: `mct-completions-format' (`choice' type)
+
+  Possible values:
+
+  1. `one-column' (default—only works on Emacs 28 or higher)
+  2. `horizontal'
+  3. `vertical'
+
+  By default, MCT tries to display completion candidates in a single
+  column.  This only works for Emacs version 28 or higher.  In older
+  versions of Emacs, the choices are between two grid views as explained
+  in the built-in user option `completions-format', with the fallback
+  being the `horizontal' style.
+
+
+3.2 Live completion
+───────────────────
+
+  Brief: Control auto-display and live-update of the `*Completions*'
+  buffer.
+
+  Symbol: `mct-live-completion' (`choice' type)
+
+  Possible values:
+
+  1. `nil'
+  2. `t' (default)
+  3. `visible'
+
+  This user option governs the overall behaviour of MCT with regard to
+  how it uses the Completions’ buffer:
 
   ⁃ When nil, the user has to manually request completions, using the
-    regular activating commands.  The Completions’ buffer is never
-    updated live to match user input.  Updating has to be handled
+    regular activating commands ([Usage]).  The Completions’ buffer is
+    never updated live to match user input.  Updating has to be handled
     manually.  This is like the out-of-the-box minibuffer completion
     experience.
 
-  ⁃ When set to the value `visible', the Completions’ buffer is live
-    updated only if it is visible.  The actual display of the
+  ⁃ When set to `visible', the Completions’ buffer is live updated only
+    if it is visible (present in a window).  The actual display of the
     completions is still handled manually.  For this reason, the
     `visible' style does not read the `mct-minimum-input', meaning that
     it will always try to live update the visible completions,
-    regardless of input length.
+    regardless of input length ([Minimum input threshold]).
 
   ⁃ When non-nil (the default), the Completions’ buffer is automatically
     displayed once the `mct-minimum-input' is met and is hidden if the
     input drops below that threshold.  While visible, the buffer is
     updated live to match the user’s input.
 
-  ⁃ Note that every function in the `mct-completion-passlist' ignores
-    this option altogether.  This means that every such command will
-    always show the Completions’ buffer automatically and will always
-    update its contents live.  Same principle for every function
-    declared in the `mct-completion-blocklist', which will always
-    disable both the automatic display and live updating of the
-    Completions’ buffer.
+  Note that every command or completion category that is declared in the
+  `mct-completion-passlist' ignores this option altogether.  This means
+  that every such symbol will always show the Completions’ buffer
+  automatically and will always update its contents live to match any
+  further user input ([Passlist for commands or completion categories]).
+  Same principle for the `mct-completion-blocklist', which will always
+  disable both the automatic display and live updating of the
+  Completions’ buffer ([Blocklist for commands or completion
+  categories]).
 
-  Other customizations:
-
-  ⁃ `mct-hide-completion-mode-line' to hide the mode line of the
-    `*Completions*' buffer.  This removes the separation between it and
-    the minibuffer, further contributing to the idea of a unified space
-    between the two.
-  ⁃ `mct-remove-shadowed-file-name' to clear shadowed file names when
-    `file-name-shadow-mode' is enabled.  This means that in prompts that
-    use file paths (such as `find-file') when you start in, say,
-    `~/Git/mct.el' and type `~/' the previous file path is removed and
-    only the new one is inserted.  Whereas the default is to keep the
-    original file name visible yet “shadowed” by a different color.
-  ⁃ `mct-show-completion-line-numbers' to always display line numbers in
-    the Completions’ buffer.  This can be helpful to get a sense of the
-    length of the completion candidates’ list.  Though note that line
-    numbers are displayed ephemerally while using the
-    `mct-choose-completion-number' command, which is bound to `M-g M-g'
-    in either the minibuffer or the `*Completions*' buffer.
-  ⁃ `mct-apply-completion-stripes' applies alternating background colors
-    in the Completions’ buffer.  This is only tested with the
-    `modus-themes' and will only work nicely if the main background is
-    pure black or white—other themes would need to add support for the
-    faces we define or, at least, users must modify the `mct-stripe'
-    face.
+  [Size boundaries of the Completions].
 
 
-[Basic usage] See section 3
+[Usage] See section 4
 
-2.1 MCT in the minibuffer and in regular buffers
-────────────────────────────────────────────────
+[Minimum input threshold] See section 3.3
+
+[Passlist for commands or completion categories] See section 3.5.1
+
+[Blocklist for commands or completion categories] See section 3.5.2
+
+[Size boundaries of the Completions] See section 3.6
+
+
+3.3 Minimum input threshold
+───────────────────────────
+
+  Brief: Try to live update completions when input is >= N.
+
+  Symbol: `mct-minimum-input' (`natnum' type)
+
+  By default, MCT expects the user to type `3' characters before it
+  tries to compute completion candidates, display the `*Completions*'
+  buffer and keep it updated live to match any subsequent input.
+
+  Setting this user option to a value greater than 1 can help reduce the
+  total number of candidates that are being computed.  That is because
+  the Completions can consist of thousands of items that all need to be
+  rendered at once in a buffer.
+
+  In terms of the user experience, the minimum input threshold can make
+  sessions feel less visually demanding when the user (i) knows what
+  they are looking for and (ii) types fast enough so that the
+  `*Completions*' never have the time to pop up.
+
+  This variable is ignored for commands or completion categories that
+  are specified in the `mct-completion-passlist' and
+  `mct-completion-blocklist'.
+
+  [Live updates per command or completion category].
+
+
+[Live updates per command or completion category] See section 3.5
+
+
+3.4 Delay between live updates
+──────────────────────────────
+
+  Brief: Delay in seconds before updating the Completions’ buffer.
+
+  Symbol: `mct-live-update-delay' (`number' type)
+
+  The delay in seconds between live updates of the Completions’ buffer.
+  The default value is `0.3'.
+
+  This variable is ignored for commands or completion categories that
+  are specified in the `mct-completion-passlist' and
+  `mct-completion-blocklist'.
+
+  [Live updates per command or completion category].
+
+
+[Live updates per command or completion category] See section 3.5
+
+
+3.5 Live updates per command or completion category
+───────────────────────────────────────────────────
+
+  By default, MCT has the same behaviour across all types of completion.
+  Specifically, it respects the `mct-live-completion' option on whether
+  and when to perform live completion, the `mct-minimum-input' threshold
+  before doing so, and the `mct-live-update-delay' between changes to
+  the `*Completions*' buffer.
+
+  [Live completion].
+
+  [Minimum input threshold].
+
+  [Delay between live updates].
+
+  A passlist and a blocklist can override those options for the commands
+  or categories specified.
+
+
+[Live completion] See section 3.5.2
+
+[Minimum input threshold] See section 3.3
+
+[Delay between live updates] See section 3.4
+
+3.5.1 Passlist for commands or completion categories
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  [ Updated as part of 0.6.0-dev. ]
+
+  Brief: List of symbols where live completions are always enabled.
+
+  Symbol: `mct-completion-passlist' (`repeat symbol' type)
+
+  The value of this user option is a list of symbols.  Those can refer
+  to commands like `find-file' or completion categories such as `file',
+  `buffer', or what other packages define like Consult’s
+  `consult-location' category.
+
+  Any entry in the passlist ignores the value of `mct-live-completion'
+  and the `mct-minimum-input'.  It also bypasses any possible delay
+  introduced by `mct-live-update-delay'.  In other words, it immediately
+  displays the `*Completions*' buffer and instantly updates it to match
+  user input.
+
+  [Known completion categories].
+
+
+[Known completion categories] See section 3.5.3
+
+
+3.5.2 Blocklist for commands or completion categories
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  [ Updated as part of 0.6.0-dev. ]
+
+  Brief: List of symbols where live completions are always disabled.
+
+  Symbol: `mct-completion-blocklist' (`repeat symbol' type)
+
+  The value of this user option is a list of symbols.  Those can refer
+  to commands like `find-file' or completion categories such as `file',
+  `buffer', or what other packages define like Consult’s
+  `consult-location' category.
+
+  This means that they ignore `mct-live-completion'.  They do not
+  automatically display the Completions’ buffer, nor do they update it
+  to match user input.
+
+  The Completions’ buffer can still be accessed with commands that place
+  it in a window (such as `mct-list-completions-toggle',
+  `mct-switch-to-completions-top').
+
+  Perhaps a less drastic measure is to set `mct-minimum-input' to an
+  appropriate value.  Or better use `mct-completion-passlist'.
+
+  [Known completion categories].
+
+
+[Known completion categories] See section 3.5.3
+
+
+3.5.3 Known completion categories
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  Below are the known completion categories that can be added to the
+  `mct-completion-passlist' and `mct-completion-blocklist' (and relevant
+  custom code).  This resource is non-exhaustive and will be updated to
+  match available information.
+
+  ⁃ `bookmark'
+  ⁃ `buffer'
+  ⁃ `charset'
+  ⁃ `coding-system'
+  ⁃ `color'
+  ⁃ `command' (e.g. `M-x')
+  ⁃ `customize-group'
+  ⁃ `environment-variable'
+  ⁃ `expression'
+  ⁃ `face'
+  ⁃ `file'
+  ⁃ `function' (the `describe-function' command bound to `C-h f')
+  ⁃ `info-menu'
+  ⁃ `imenu'
+  ⁃ `input-method'
+  ⁃ `kill-ring'
+  ⁃ `library'
+  ⁃ `minor-mode'
+  ⁃ `multi-category'
+  ⁃ `package'
+  ⁃ `project-file'
+  ⁃ `symbol' (the `describe-symbol' command bound to `C-h o')
+  ⁃ `theme'
+  ⁃ `unicode-name' (the `insert-char' command bound to `C-x 8 RET')
+  ⁃ `variable' (the `describe-variable' command bound to `C-h v')
+
+  From the `consult' package:
+
+  ⁃ `consult-grep'
+  ⁃ `consult-isearch'
+  ⁃ `consult-isearch'
+  ⁃ `consult-kmacro'
+  ⁃ `consult-location'
+
+  From the `embark' package:
+
+  ⁃ `embark-keybinding'
+
+  In general, it is best not to add symbols which include several
+  thousands of candidates to the passlist.  So no `command', `function',
+  `symbol', `unicode-name', `variable'.
+
+  When in doubt, do not add a symbol to either the pass- or block- list.
+
+
+3.6 Size boundaries of the Completions
+──────────────────────────────────────
+
+  Brief: Set the maximum and minimum height of the Completions’ buffer.
+
+  Symbol: `mct-completion-window-size' (`choice' type between nil and
+  cons cell)
+
+  The value is a cons cell in the form of `(max-height . min-height)'
+  where each value is either a natural number or a function which
+  returns such a number.
+
+  The default maximum height of the window is calculated by the function
+  `mct--frame-height-fraction', which finds the closest round number to
+  1/3 of the frame’s height.  While the default minimum height is 1.
+  This means that during live completions the Completions’ window will
+  shrink or grow to show candidates within the specified boundaries.  To
+  disable this bouncing effect, set both max-height and min-height to
+  the same number.
+
+  If nil, do not try to fit the Completions’ buffer to its window.
+
+  [Live completion].
+
+
+[Live completion] See section 3.2
+
+
+3.7 Dynamic completion tables in mct-minibuffer-mode
+────────────────────────────────────────────────────
+
+  [ Part of 0.6.0-dev. ]
+
+  Brief: Whether to keep dynamic completion live.
+
+  Symbol: `mct-persist-dynamic-completion' (`boolean' type)
+
+  Possible values:
+
+  1. `nil'
+  2. `t' (default)
+
+  Without any intervention from MCT, the default Emacs behavior for
+  commands such as `find-file' or for a `file' completion category is to
+  hide the `*Completions*' buffer after updating the list of candidates
+  in a non-exiting fashion (e.g. select a directory and expect to
+  continue typing the path).  This, however, runs contrary to the
+  interaction model of MCT when it performs live completions, because
+  the user expects the Completions’ buffer to remain visible while
+  typing out the path to the file ([Live completion]).
+
+  When this user option is non-nil (the default) it makes all
+  non-exiting commands keep the `*Completions*' visible when updating
+  the list of candidates.
+
+  This applies to prompts in the `file' completion category whenever the
+  user selects a candidate with `mct-choose-completion-no-exit',
+  `mct-edit-completion', `minibuffer-complete',
+  `minibuffer-force-complete' (i.e. any command that does not exit the
+  minibuffer).
+
+  [Selecting candidates with mct-minibuffer-mode].
+
+  The two exceptions are (i) when the current completion session runs a
+  command or category that is blocked by the `mct-completion-blocklist'
+  or (ii) the user option `mct-live-completion' is nil.
+
+  [Blocklist for commands or completion categories].
+
+  The underlying rationale:
+
+  Most completion commands present a flat list of candidates to choose
+  from.  Picking a candidate concludes the session.  Some prompts,
+  however, can recalculate the list of completions based on the selected
+  candidate.  A case in point is `find-file' (or any command with the
+  `file' completion category) which dynamically adjusts the completions
+  to show only the elements which extend the given file system path.  We
+  call such cases “dynamic completion”.  Due to their particular nature,
+  these need to be handled explicitly.  The present user option is
+  provided primarily to raise awareness about this state of affairs.
+
+
+[Live completion] See section 3.2
+
+[Selecting candidates with mct-minibuffer-mode] See section 4.2
+
+[Blocklist for commands or completion categories] See section 3.5.2
+
+
+3.8 Hide the Completions mode line
+──────────────────────────────────
+
+  Brief: Do not show a mode line in the Completions’ buffer.
+
+  Symbol: `mct-hide-completion-mode-line' (`boolean' type)
+
+  By default, the `*Completions*' buffer has its own mode line, just
+  like every other window.  Set this user option to non-nil to remove
+  the mode line.
+
+
+3.9 Remove shadowed file paths
+──────────────────────────────
+
+  Brief: Delete shadowed parts of file names from the minibuffer.
+
+  Symbol: `mct-remove-shadowed-file-names' (`boolean' type)
+
+  When the built-in `file-name-shadow-mode' is enabled and this user
+  option is non-nil, MCT will delete the part of the file path that is
+  shadowed (meaning that it is overriden) by the given input.
+
+  For example, if the user types `~/' after a long path name, everything
+  preceding the `~/' is removed so the interactive selection process
+  starts again from the user’s `$HOME'.
+
+
+3.10 Alternating backgrounds in the Completions
+───────────────────────────────────────────────
+
+  Brief: Use alternating backgrounds in the Completions.
+
+  Symbol: `mct-apply-completion-stripes' (`boolean' type)
+
+  By default, the `*Completions*' buffer uses the main background of the
+  active theme (more specifically the `:background' attribute of the
+  `default' face).  When set to non-nil, MCT applies applies alternating
+  background colors in the Completions’ buffer.  These are in a shade of
+  gray that contrasts with the main background.
+
+  Due to the specific nature of this style, there is no basic face that
+  can be inherited to achieve a consistent result across themes.  As
+  such, it only looks as intended with the `modus-themes' (built into
+  Emacs 28 or higher or available as a package).  Other themes would
+  need to add support for the `mct-stripe' face.
+
+
+3.11 MCT in the minibuffer and in regular buffers
+─────────────────────────────────────────────────
 
   Emacs draws a distinction between two types of completion sessions:
 
@@ -191,14 +554,14 @@ Table of Contents
   [Interaction model of mct-region-mode].
 
 
-[Extensions] See section 8
+[Extensions] See section 10
 
-[Alternatives] See section 9
+[Alternatives] See section 11
 
-[Interaction model of mct-region-mode] See section 3.4
+[Interaction model of mct-region-mode] See section 4.4
 
 
-3 Usage
+4 Usage
 ═══════
 
   This section outlines the various patterns of interaction that MCT
@@ -210,9 +573,9 @@ Table of Contents
   comparison.
 
 
-[MCT in the minibuffer and in regular buffers] See section 2.1
+[MCT in the minibuffer and in regular buffers] See section 3.11
 
-3.1 Cyclic behaviour for mct-minibuffer-mode
+4.1 Cyclic behaviour for mct-minibuffer-mode
 ────────────────────────────────────────────
 
   When `mct-minibuffer-mode' is enabled, some new keymaps are activated
@@ -271,10 +634,10 @@ Table of Contents
   `mct-region-mode' ([Interaction model of mct-region-mode]).
 
 
-[Interaction model of mct-region-mode] See section 3.4
+[Interaction model of mct-region-mode] See section 4.4
 
 
-3.2 Selecting candidates with mct-minibuffer-mode
+4.2 Selecting candidates with mct-minibuffer-mode
 ─────────────────────────────────────────────────
 
   There are several ways to select a completion candidate.  These
@@ -359,10 +722,10 @@ Table of Contents
      selected one.
 
 
-[Cyclic behaviour for in-buffer completion] See section 3.4
+[Cyclic behaviour for in-buffer completion] See section 4.4
 
 
-3.3 Other commands for mct-minibuffer-mode
+4.3 Other commands for mct-minibuffer-mode
 ──────────────────────────────────────────
 
   ⁃ Emacs 28 has the ability to group candidates inside the completions’
@@ -382,10 +745,10 @@ Table of Contents
     symbol is `mct-backward-updir'.
 
 
-[Extensions] See section 8
+[Extensions] See section 10
 
 
-3.4 Interaction model of mct-region-mode
+4.4 Interaction model of mct-region-mode
 ────────────────────────────────────────
 
   When `mct-region-mode' is enabled, MCT is used for in-buffer
@@ -446,22 +809,14 @@ Table of Contents
   To cancel in-buffer completion, type `C-g' either before switching to
   the Completions’ buffer or while inside of it.
 
-  The only customization option for `mct-region-mode' pertains to the
-  presentation of the `*Completions*': `mct-region-completions-format'.
-  By default, it uses the same style as `mct-completions-format', though
-  it can be configured to, for example, display candidates in a grid
-  with either of the `horizontal' or `vertical' values (on Emacs 27,
-  candidates are always displayed in a grid, as the `one-column' layout
-  was introduced in Emacs 28).
+
+[Cyclic behaviour in the minibuffer] See section 4.1
 
 
-[Cyclic behaviour in the minibuffer] See section 3.1
-
-
-4 Installation
+5 Installation
 ══════════════
 
-4.1 Install the package
+5.1 Install the package
 ───────────────────────
 
   `mct' is available on the official GNU ELPA archive for users of Emacs
@@ -473,8 +828,14 @@ Table of Contents
   │ M-x package-install RET mct
   └────
 
+  A package is also available via Guix:
 
-4.2 Manual installation method
+  ┌────
+  │ guix package -i emacs-mct
+  └────
+
+
+5.2 Manual installation method
 ──────────────────────────────
 
   Assuming your Emacs files are found in `~/.emacs.d/', execute the
@@ -503,7 +864,7 @@ Table of Contents
   Everything is in place to set up the package.
 
 
-5 Sample setup
+6 Sample setup
 ══════════════
 
   Minimal setup for the minibuffer and in-buffer completion:
@@ -519,34 +880,37 @@ Table of Contents
   ┌────
   │ (require 'mct)
   │ 
+  │ (setq mct-completion-window-size (cons #'mct--frame-height-fraction 1))
   │ (setq mct-remove-shadowed-file-names t) ; works when `file-name-shadow-mode' is enabled
   │ (setq mct-hide-completion-mode-line t)
   │ (setq mct-show-completion-line-numbers nil)
   │ (setq mct-apply-completion-stripes t)
   │ (setq mct-minimum-input 3)
+  │ (setq mct-live-completion t)
   │ (setq mct-live-update-delay 0.6)
+  │ (setq mct-persist-dynamic-completion t)
   │ (setq mct-completions-format 'one-column)
   │ 
-  │ ;; NOTE: `mct-completion-blocklist' can be used for commands with lots
-  │ ;; of candidates, depending also on how low `mct-minimum-input' is.
-  │ ;; With the settings shown here this is not required, otherwise I would
-  │ ;; use something like this:
-  │ ;;
-  │ ;; (setq mct-completion-blocklist
-  │ ;;       '( describe-symbol describe-function describe-variable
-  │ ;;          execute-extended-command insert-char))
-  │ (setq mct-completion-blocklist nil)
-  │ 
-  │ ;; This is for commands that should always pop up the completions'
-  │ ;; buffer.  It circumvents the default method of waiting for some user
-  │ ;; input (see `mct-minimum-input') before displaying and updating the
-  │ ;; completions' buffer.
+  │ ;; This is for commands or completion categories that should always pop
+  │ ;; up the completions' buffer.  It circumvents the default method of
+  │ ;; waiting for some user input (see `mct-minimum-input') before
+  │ ;; displaying and updating the completions' buffer.
   │ (setq mct-completion-passlist
-  │       '(imenu
+  │       '(;; Some commands
   │ 	Info-goto-node
   │ 	Info-index
   │ 	Info-menu
-  │ 	vc-retrieve-tag))
+  │ 	vc-retrieve-tag
+  │ 	;; Some completion categories
+  │ 	imenu
+  │ 	file
+  │ 	buffer
+  │ 	kill-ring
+  │ 	consult-location))
+  │ 
+  │ ;; The blocklist follows the same principle as the passlist, except it
+  │ ;; disables live completions altogether.
+  │ (setq mct-completion-blocklist nil)
   │ 
   │ ;; You can place the Completions' buffer wherever you want, by following
   │ ;; the syntax of `display-buffer'.  For example, try this:
@@ -636,7 +1000,30 @@ Table of Contents
   └────
 
 
-6 Keymaps
+7 Known issues and workarounds
+══════════════════════════════
+
+  This section documents known issues and how to address them.
+
+
+7.1 Avoid global-hl-line-mode in the Completions
+────────────────────────────────────────────────
+
+  MCT uses its own overlay to highlight the candidate at point.  To
+  ensure that it does not interfere with the optional stripes (provided
+  by the user option `mct-apply-completion-stripes') the highlight’s
+  priority is set to a custom value.  This, in turn, means that when the
+  user enables `global-hl-line-mode', its highlighted line takes
+  precedence over the MCT highlight.  The solution to this conflict is
+  to disable the hl-line locally for the `*Completions*' buffer like
+  this:
+
+  ┌────
+  │ (add-hook 'completion-list-mode-hook (lambda () (setq-local global-hl-line-mode nil)))
+  └────
+
+
+8 Keymaps
 ═════════
 
   MCT defines its own keymaps, which extend those that are active in the
@@ -655,13 +1042,116 @@ Table of Contents
   same as above, minus the `mct-' prefix).
 
 
-7 User-level tweaks or custom code
+8.1 The use of remap for key bindings
+─────────────────────────────────────
+
+  MCT tries not to hardcode key bindings in order to respect user
+  configurations.  To this end, Emacs provides the `remap' mechanism
+  which effectively intercepts the key binding of the original command
+  and applies it to the one specified.  Think of it like redirecting
+  from the old to the new one.
+
+  The code looks like this:
+
+  ┌────
+  │ (defvar mct-minibuffer-local-completion-map
+  │   (let ((map (make-sparse-keymap)))
+  │     (define-key map (kbd "C-j") #'exit-minibuffer)
+  │     (define-key map [remap goto-line] #'mct-choose-completion-number)
+  │     (define-key map [remap next-line] #'mct-switch-to-completions-top)
+  │     (define-key map [remap next-line-or-history-element] #'mct-switch-to-completions-top)
+  │     (define-key map [remap previous-line] #'mct-switch-to-completions-bottom)
+  │     (define-key map [remap previous-line-or-history-element] #'mct-switch-to-completions-bottom)
+  │     (define-key map (kbd "M-e") #'mct-edit-completion)
+  │     (define-key map (kbd "C-<return>") #'mct-complete-and-exit)
+  │     (define-key map (kbd "C-l") #'mct-list-completions-toggle)
+  │     map)
+  │   "Derivative of `minibuffer-local-completion-map'.")
+  └────
+
+  The `remap' might cause unwanted behaviour in cases where a user
+  maintaints their own remappings which conflict with those of the
+  package.  Consider, for example, this scenario:
+
+  ┌────
+  │ (require 'mct)
+  │ 
+  │ ;; Here goes the MCT setup
+  │ 
+  │ ;; More code...
+  │ 
+  │ ;; The user remaps `goto-line' to `my-goto-line-replacement' in the
+  │ ;; `global-map'.
+  │ (define-key global-map [remap goto-line] #'my-goto-line-replacement)
+  └────
+
+  If a user loads MCT first and later in their configuration defines a
+  remap for `goto-line', then that will take precedence over what MCT
+  wants to do.  The solution is for the user to update their code to
+  specify an explicit key binding:
+
+  ┌────
+  │ (require 'mct)
+  │ 
+  │ ;; Here goes the MCT setup
+  │ 
+  │ ;; More code...
+  │ 
+  │ ;; The user specifies an explicit key binding for
+  │ ;; `my-goto-line-replacement' in the `global-map'.
+  │ (define-key global-map (kbd "M-g M-g") #'my-goto-line-replacement)
+  └────
+
+
+9 User-level tweaks or custom code
 ══════════════════════════════════
 
   In this section we cover custom code that builds on what MCT offers.
 
 
-7.1 MCT in the current or the other window
+9.1 Sort completion candidates on Emacs 29
+──────────────────────────────────────────
+
+  Starting with Emacs 29 (current development target), the user option
+  `completions-sort' controls the sorting method of candidates in the
+  `*Completions*' buffer.  Beside the default of using `string-lessp',
+  it accepts a custom function.  Consider any of the following examples:
+
+  ┌────
+  │ ;; Some sorting functions...
+  │ (defun my-sort-by-alpha-length (elems)
+  │   "Sort ELEMS first alphabetically, then by length."
+  │   (sort elems (lambda (c1 c2)
+  │ 		(or (string-version-lessp c1 c2)
+  │ 		    (< (length c1) (length c2)))))))
+  │ 
+  │ (defun my-sort-by-history (elems)
+  │   "Sort ELEMS by minibuffer history.
+  │ Use `mct-sort-sort-by-alpha-length' if no history is available."
+  │   (if-let ((hist (and (not (eq minibuffer-history-variable t))
+  │ 		      (symbol-value minibuffer-history-variable))))
+  │       (minibuffer--sort-by-position hist elems)
+  │     (my-sort-by-alpha-length elems)))
+  │ 
+  │ (defun my-sort-multi-category (elems)
+  │   "Sort ELEMS per completion category."
+  │   (pcase (mct--completion-category)
+  │     ('nil elems) ; no sorting
+  │     ('kill-ring elems)
+  │     ('project-file (my-sort-by-alpha-length elems))
+  │     (_ (my-sort-by-history elems))))
+  │ 
+  │ ;; Specify the sorting function.
+  │ (setq completions-sort #'my-sort-multi-category)
+  └────
+
+  [Known completion categories].
+
+
+[Known completion categories] See section 3.5.3
+
+
+9.2 MCT in the current or the other window
 ──────────────────────────────────────────
 
   Over at the [rde project], Andrew Tropin configures MCT to display the
@@ -735,8 +1225,8 @@ Table of Contents
 [rde project] <https://git.sr.ht/~abcdw/rde>
 
 
-8 Extensions
-════════════
+10 Extensions
+═════════════
 
   MCT only tweaks the default minibuffer.  To get more out of it,
   consider these exceptionally well-crafted extras:
@@ -800,8 +1290,8 @@ Table of Contents
 
 [Cape] <https://github.com/minad/cape>
 
-8.1 Enable Consult previews
-───────────────────────────
+10.1 Enable Consult previews
+────────────────────────────
 
   One of the nice features of the Consult package is the ability to
   preview the candidate at point.  All we need to enable it in the
@@ -812,8 +1302,8 @@ Table of Contents
   └────
 
 
-8.2 Avoid conflict between MCT and Corfu
-────────────────────────────────────────
+10.2 Avoid conflict between MCT and Corfu
+─────────────────────────────────────────
 
   Daniel Mendler’s `corfu' package provides an alternative to the
   `mct-region-mode' ([MCT in the minibuffer and in regular buffers]).
@@ -833,11 +1323,11 @@ Table of Contents
   └────
 
 
-[MCT in the minibuffer and in regular buffers] See section 2.1
+[MCT in the minibuffer and in regular buffers] See section 3.11
 
 
-9 Alternatives
-══════════════
+11 Alternatives
+═══════════════
 
   In the grand scheme of things, it may be helpful to think of MCT as
   proof-of-concept on how the default Emacs completion can become more
@@ -946,14 +1436,14 @@ Table of Contents
         thin layer over the built-in infrastructure.
 
 
-[Extensions] See section 8
+[Extensions] See section 10
 
 [Vertico] <https://github.com/minad/vertico>
 
 [Elmo - Embark Live MOde for Emacs] <https://github.com/karthink/elmo>
 
 
-10 Acknowledgements
+12 Acknowledgements
 ═══════════════════
 
   MCT is meant to be a collective effort.  Every bit of help matters.
@@ -968,7 +1458,11 @@ Table of Contents
   Ideas and user feedback
         Andrew Tropin, Benjamin (@zealotrush), Case Duckworth, Jonathan
         Irving, José Antonio Ortega Ruiz, Kostadin Ninev, Manuel Uberti,
-        Philip Kaludercic, Theodor Thornhill.
+        Philip Kaludercic, Theodor Thornhill, Tomasz Hołubowicz, Z.Du.
+        As well as users: danrobi11.
+
+  Packaging
+        Andrew Tropin and Nicolas Goaziou (Guix).
 
   Inspiration for certain features
         `icomplete.el' (built-in—multiple authors), Daniel Mendler
@@ -976,7 +1470,7 @@ Table of Contents
         `live-completions'), Štěpán Němec (`stripes.el').
 
 
-11 Official sources
+13 Official sources
 ═══════════════════
 
   Manual
@@ -987,20 +1481,20 @@ Table of Contents
         <https://gitlab.com/protesilaos/mct>
 
 
-12 GNU Free Documentation License
+14 GNU Free Documentation License
 ═════════════════════════════════
 
 
-13 Indices
+15 Indices
 ══════════
 
-13.1 Function index
+15.1 Function index
 ───────────────────
 
 
-13.2 Variable index
+15.2 Variable index
 ───────────────────
 
 
-13.3 Concept index
+15.3 Concept index
 ──────────────────

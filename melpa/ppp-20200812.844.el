@@ -5,7 +5,7 @@
 ;; Author: Naoya Yamashita <conao3@gmail.com>
 ;; Version: 2.2.4
 ;; Package-Version: 20200812.844
-;; Package-Commit: 86dad69c3a7dae770f6b99285647dff2aad81930
+;; Package-Commit: 272235d74b0857819410797f26540c6eca747c4c
 ;; Keywords: tools
 ;; Package-Requires: ((emacs "25.1") (leaf "4.1.1"))
 ;; URL: https://github.com/conao3/ppp.el

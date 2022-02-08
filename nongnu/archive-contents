@@ -493,7 +493,7 @@
 		   (:authors
 		    ("Daniel Leslie")))])
  (geiser-gambit .
-		[(0 17)
+		[(0 18)
 		 ((emacs
 		   (26 1))
 		  (geiser
@@ -503,7 +503,8 @@
 		  (:keywords "languages" "gambit" "scheme" "geiser")
 		  (:maintainer "Daniel Leslie, Jose A Ortega Ruiz" . "jao@gnu.org")
 		  (:authors
-		   ("Daniel Leslie")))])
+		   ("Daniel Leslie"))
+		  (:commit . "42249ec44d02ca3c45a6b76072f108ae32af2a8f"))])
  (geiser-gauche .
 		[(0 0 2)
 		 ((emacs
