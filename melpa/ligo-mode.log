@@ -3,18 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/ligolang/ligo.git
 
 Updating /mnt/store/melpa/working/ligo-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-From https://gitlab.com/ligolang/ligo
-   222e084b0..30d382ae1  dev                     -> origin/dev
- * [new branch]          er433/test/add_account  -> origin/er433/test/add_account
- * [new branch]          prometheansacrifice/esy -> origin/prometheansacrifice/esy
-Fetching submodule vendors/tezos-ligo
-fatal: remote error: upload-pack: not our ref a00bdee3936f6900dfd2fd2f5cbc1569180a68f9
-Errors during submodule fetch:
-	vendors/tezos-ligo
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out ee8f0ece3c011aba3364c7530dab92d003e19619
+Built ligo-mode in 14.765s, finished at 2022-02-08T02:47:36+0000
+ ✓ Success:
+ 24K -rw-r--r-- 1 root root  22K Feb  8 02:47 packages/ligo-mode-20211119.1813.el
+4.0K -rw-r--r-- 1 root root  364 Feb  8 02:47 packages/ligo-mode-20211119.1813.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb  8 02:47 packages/ligo-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  508 Feb  8 02:47 packages/ligo-mode-readme.txt
