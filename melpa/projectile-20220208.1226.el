@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20220203.1326
-;; Package-Commit: df3d73e1f0ff625a09196ff3ba6f4be82a53fb3b
+;; Package-Version: 20220208.1226
+;; Package-Commit: 474cd42df58e748eb83d312ccb7ea75b1b3dda13
 ;; Keywords: project, convenience
 ;; Version: 2.6.0-snapshot
 ;; Package-Requires: ((emacs "25.1"))
@@ -2918,7 +2918,8 @@ select a name of a command preset, or opt a manual command by selecting
 (defconst projectile--cmake-manual-command-alist
   '((:configure-command . "cmake -S . -B build")
     (:compile-command . "cmake --build build")
-    (:test-command . "cmake --build build --target test")))
+    (:test-command . "cmake --build build --target test")
+    (:install-command . "cmake --build build --target install")))
 
 (defun projectile--cmake-manual-command (command-type)
   "Create maunual CMake COMMAND-TYPE command."
@@ -2927,7 +2928,8 @@ select a name of a command preset, or opt a manual command by selecting
 (defconst projectile--cmake-preset-command-alist
   '((:configure-command . "cmake . --preset %s")
     (:compile-command . "cmake --build --preset %s")
-    (:test-command . "ctest --preset %s")))
+    (:test-command . "ctest --preset %s")
+    (:install-command . "cmake --build --preset %s --target install")))
 
 (defun projectile--cmake-preset-command (command-type preset)
   "Create CMake COMMAND-TYPE command using PRESET."
@@ -2960,6 +2962,10 @@ a manual COMMAND-TYPE command is created with
 (defun projectile--cmake-test-command ()
   "CMake test command."
   (projectile--cmake-command :test-command))
+
+(defun projectile--cmake-install-command ()
+  "CMake install command."
+  (projectile--cmake-command :install-command))
 
 ;;; Project type registration
 ;;
@@ -3034,7 +3040,7 @@ a manual COMMAND-TYPE command is created with
                                   :configure #'projectile--cmake-configure-command
                                   :compile #'projectile--cmake-compile-command
                                   :test #'projectile--cmake-test-command
-                                  :install "cmake --build build --target install"
+                                  :install #'projectile--cmake-install-command
                                   :package "cmake --build build --target package")
 ;; PHP
 (projectile-register-project-type 'php-symfony '("composer.json" "app" "src" "vendor")
@@ -3118,8 +3124,8 @@ a manual COMMAND-TYPE command is created with
                                   :compile "mvn -B clean install"
                                   :test "mvn -B test"
                                   :test-suffix "Test"
-                                  :src-dir "main/src/"
-                                  :test-dir "main/test/")
+                                  :src-dir "src/main/"
+                                  :test-dir "src/test/")
 (projectile-register-project-type 'gradle '("build.gradle")
                                   :project-file "build.gradle"
                                   :compile "gradle build"

@@ -1,13 +1,13 @@
 (geiser-gambit .
-	       [(20220207 2239)
+	       [(20220208 1356)
 		((emacs
 		  (26 1))
 		 (geiser
 		  (0 18)))
 		"Gambit's implementation of the geiser protocols" tar
-		((:commit . "42249ec44d02ca3c45a6b76072f108ae32af2a8f")
+		((:commit . "381d74ca5059b44fe3d8b5daf42214019c6d1a88")
 		 (:authors
 		  ("Daniel Leslie"))
-		 (:maintainer "Daniel Leslie, Jose A Ortega Ruiz" . "jao@gnu.org")
+		 (:maintainer "Jose A Ortega Ruiz" . "jao@gnu.org")
 		 (:keywords "languages" "gambit" "scheme" "geiser")
 		 (:url . "https://gitlab.com/emacs-geiser/gambit"))])

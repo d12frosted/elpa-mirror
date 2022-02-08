@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.8.2
-;; Package-Version: 20220207.1335
-;; Package-Commit: 450a2c1d9994adc760ac36f5a9cdeebafd1c630c
+;; Package-Version: 20220208.1410
+;; Package-Commit: de9538b91fcbd4b392c231d14fa001405625a7c9
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -740,7 +740,21 @@ If nil, ordinary key event is printed as raw integer."
   :type 'string)
 
 (defcustom loophole-mode-lighter-use-face nil
-  "Flag if lighter use face."
+  "Flag if lighter use face.
+Even if this value is non-nil, mode-line lighter of Loophole
+may stay having no face with default `mode-line-format',
+because `minor-mode-alist' in default `mode-line-format',
+and `mode-line-modes' may be already propertized with some
+text properties.  To show `loophole-mode-lighter' with face,
+`mode-line-format' have to be modified by something like the
+following customization form.  Note that the following form
+eliminates help echos and clickable buttons.
+  (setq mode-line-modes
+        \\='(\"%[\" \"(\"
+          mode-name
+          mode-line-process
+          minor-mode-alist
+          \"%n\" \")\" \"%]\" \" \"))"
   :group 'loophole
   :type 'boolean)
 
