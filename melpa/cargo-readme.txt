@@ -26,4 +26,5 @@ Current supported Cargo Key Combinations:
  * C-c C-c C-U - cargo-process-upgrade
  * C-c C-c C-A - cargo-process-audit
  * C-c C-c C-R - cargo-process-script
+ * C-c C-c C-w - cargo-process-watch
 
