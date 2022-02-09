@@ -26,11 +26,17 @@ Any suggestions for improvements are welcome!
 Installation
 ------------
 
-Elpher is available from  MELPA (https://melpa.org).  If you have
-never installed packages from this repository before, you'll need
-to follow the instructions at https://melpa.org/#/getting-started.
+Elpher is available on the non-GNU ELPA package archive.  If you are
+using Emacs 28 or later, this archive should be available on your system
+by default.  For Emacs 27, you'll need to follow the instructions at
+https://elpa.nongnu.org to make the archive accessible.
 
-To install Elpher, enter the following:
+Alternatively, Elpher is available from MELPA (https://melpa.org).  If
+you have never installed packages from this repository before, you'll
+need to follow the instructions at https://melpa.org/#/getting-started.
+
+Once one of these package archives is installed, enter the following to
+install Elpher:
 
     M-x package-install RET elpher RET
 
