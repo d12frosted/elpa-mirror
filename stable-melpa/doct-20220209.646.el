@@ -4,12 +4,12 @@
 
 ;; Author: Nicholas Vollmer <progfolio@protonmail.com>
 ;; URL: https://github.com/progfolio/doct
-;; Package-Version: 20220121.2018
-;; Package-Commit: 9ed9b8c7f7e2ea2d2fb739d65ae4626a1cf16b9f
+;; Package-Version: 20220209.646
+;; Package-Commit: ce21bce19b91e6f1dfc1f23983b4b8ce4464c8f5
 ;; Created: December 10, 2019
 ;; Keywords: org, convenience
 ;; Package-Requires: ((emacs "25.1"))
-;; Version: 3.1.4
+;; Version: 3.1.5
 
 ;; This file is not part of GNU Emacs.
 
@@ -978,6 +978,7 @@ The following keywords refine the target file location:
   - :datetree nil|t
     Requires use of the :file keyword.
     If :datetree has a non-nil value, create a date tree for today's date.
+    If :olp is given, the date tree is added under that heading path.
     Use a non-nil :time-prompt property to prompt for a different date.
     Set the :tree-type property to the symbol 'week' to make a week tree
     instead of the default month tree.

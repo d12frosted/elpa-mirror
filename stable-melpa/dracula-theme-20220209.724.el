@@ -7,8 +7,8 @@
 ;; Maintainer: Étienne Deparis <etienne@depar.is>
 ;; Author: film42
 ;; Version: 1.7.0
-;; Package-Version: 20220118.748
-;; Package-Commit: a7a3becaf11488eee36d50c06a692f3fa4201297
+;; Package-Version: 20220209.724
+;; Package-Commit: 2c9efdae8b7b9a8e57dfd3aa1c62426a262e9eba
 ;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/dracula/emacs
 
@@ -118,6 +118,10 @@ read it before opening a new issue about your will.")
                (linum :slant italic :foreground ,bg4 :background ,dracula-bg)
                (line-number :slant italic :foreground ,bg4 :background ,dracula-bg)
                (match :background ,dracula-yellow :foreground ,dracula-bg)
+               (menu :background ,dracula-current :inverse-video nil
+                     ,@(if dracula-alternate-mode-line-and-minibuffer
+                           (list :foreground fg3)
+                         (list :foreground dracula-fg)))
                (minibuffer-prompt
                 ,@(if dracula-alternate-mode-line-and-minibuffer
                       (list :weight 'normal :foreground dracula-fg)

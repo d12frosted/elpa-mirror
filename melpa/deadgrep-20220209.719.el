@@ -4,8 +4,8 @@
 
 ;; Author: Wilfred Hughes <me@wilfred.me.uk>
 ;; URL: https://github.com/Wilfred/deadgrep
-;; Package-Version: 20211228.1756
-;; Package-Commit: aebaf72e35546fd235b4861399791814e4e4c7d8
+;; Package-Version: 20220209.719
+;; Package-Commit: 0a3ba239c458ffc4f63a180b43d0e70b81742a3e
 ;; Keywords: tools
 ;; Version: 0.11
 ;; Package-Requires: ((emacs "25.1") (dash "2.12.0") (s "1.11.0") (spinner "1.7.3"))
@@ -51,19 +51,25 @@ path to the binary."
   :type 'string
   :group 'deadgrep)
 
-(defvar deadgrep-max-buffers
+(defcustom deadgrep-max-buffers
   4
   "Deadgrep will kill the least recently used results buffer
 if there are more than this many.
 
-To disable cleanup entirely, set this variable to nil.")
+To disable cleanup entirely, set this variable to nil."
+  :type '(choice
+          (number :tag "Maximum of buffers allowed")
+          (const :tag "Disable cleanup" nil))
+  :group 'deadgrep)
 
-(defvar deadgrep-project-root-function
+(defcustom deadgrep-project-root-function
   #'deadgrep--project-root
   "Function called by `deadgrep' to work out the root directory
 to search from.
 
-See also `deadgrep-project-root-overrides'.")
+See also `deadgrep-project-root-overrides'."
+  :type 'function
+  :group 'deadgrep)
 
 (defvar deadgrep-project-root-overrides nil
   "An alist associating project directories with the desired
@@ -85,19 +91,21 @@ variable has no effect if you change
   500
   "Truncate lines if they are longer than this.
 
-Emacs performance can be really poor long lines, so this ensures
-that searching minified files does not slow down movement in
-results buffers.
+Emacs performance can be really poor with long lines, so this
+ensures that searching minified files does not slow down movement
+in results buffers.
 
 In extreme cases (100KiB+ single-line files), we can get a stack
 overflow on our regexp matchers if we don't apply this.")
 
-(defvar deadgrep-display-buffer-function
+(defcustom deadgrep-display-buffer-function
   'switch-to-buffer-other-window
   "Function used to show the deadgrep result buffer.
 
 This function is called with one argument, the results buffer to
-display.")
+display."
+  :type 'function
+  :group 'deadgrep)
 
 (defface deadgrep-meta-face
   '((t :inherit font-lock-comment-face))
@@ -266,8 +274,10 @@ It is used to create `imenu' index.")
 
             (setq prev-line-num line-num))))))))
 
-(defvar deadgrep-finished-hook nil
-  "Hook run when `deadgrep' search is finished.")
+(defcustom deadgrep-finished-hook nil
+  "Hook run when `deadgrep' search is finished."
+  :type 'hook
+  :group 'deadgrep)
 
 (defun deadgrep--process-sentinel (process output)
   "Update the deadgrep buffer associated with PROCESS as complete."
@@ -990,7 +1000,10 @@ underlying file."
             (basic-save-buffer)
             (kill-buffer buf)))))))
 
-(defvar deadgrep-edit-mode-hook nil)
+(defcustom deadgrep-edit-mode-hook nil
+  "Called after `deadgrep-edit-mode' is turned on."
+  :type 'hook
+  :group 'deadgrep)
 
 (defun deadgrep-edit-mode ()
   "Major mode for editing the results files directly from a
@@ -1471,8 +1484,8 @@ Otherwise, return PATH as is."
 (defun deadgrep (search-term &optional directory)
   "Start a ripgrep search for SEARCH-TERM in DIRECTORY.
 
-If not provided, DIR defaults to the directory as determined by 
-`deadgrep-project-root-function'. 
+If not provided, DIR defaults to the directory as determined by
+`deadgrep-project-root-function'.
 
 See also `deadgrep-project-root-overrides'.
 
@@ -1569,7 +1582,7 @@ This is intended for use with `next-error-function', which see."
      (format "default-directory: %S\n" default-directory)
      (format "exec-path: %S\n" exec-path)
      (if (boundp 'tramp-remote-path)
-	 (format "tramp-remote-path: %S\n" tramp-remote-path)
+     (format "tramp-remote-path: %S\n" tramp-remote-path)
        "")
      (propertize
       "\nInitial output from ripgrep:\n"
