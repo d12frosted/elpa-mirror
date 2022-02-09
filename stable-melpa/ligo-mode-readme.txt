@@ -8,8 +8,3 @@ in an init file:
   (with-eval-after-load 'lsp-mode
     (with-eval-after-load 'ligo-mode
       (ligo-setup-lsp)))
-
-
-------------------------------------------------
-            Customizable options
-------------------------------------------------
