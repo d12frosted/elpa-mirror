@@ -1,11 +1,11 @@
 Major mode for editing Python files with some fontification and
 indentation bits extracted from original Dave Love's python.el
-found in GNU Emacs.
+found in GNU/Emacs.
 
 Implements Syntax highlighting, Indentation, Movement, Shell
 interaction, Shell completion, Shell virtualenv support, Shell
 package support, Shell syntax highlighting, Pdb tracking, Symbol
-completion, Skeletons, FFAP, Code Check, ElDoc, Imenu.
+completion, Skeletons, FFAP, Code Check, Eldoc, Imenu.
 
 Syntax highlighting: Fontification of code is provided and supports
 python's triple quoted strings properly.
@@ -25,7 +25,14 @@ Extra functions `python-nav-forward-statement',
 `python-nav-backward-statement',
 `python-nav-beginning-of-statement', `python-nav-end-of-statement',
 `python-nav-beginning-of-block', `python-nav-end-of-block' and
-`python-nav-if-name-main' are included but no bound to any key.
+`python-nav-if-name-main' are included but no bound to any key.  At
+last but not least the specialized `python-nav-forward-sexp' allows
+easy navigation between code blocks.  If you prefer `cc-mode'-like
+`forward-sexp' movement, setting `forward-sexp-function' to nil is
+enough, You can do that using the `python-mode-hook':
+
+(add-hook 'python-mode-hook
+          (lambda () (setq forward-sexp-function nil)))
 
 Shell interaction: is provided and allows opening Python shells
 inside Emacs and executing any block of code of your current buffer
@@ -99,7 +106,7 @@ completion can be found in `python-shell-completion-setup-code' and
 values enable completion for both CPython and IPython, and probably
 any readline based shell (it's known to work with PyPy).  If your
 Python installation lacks readline (like CPython for Windows),
-installing pyreadline (URL `https://ipython.org/pyreadline.html')
+installing pyreadline (URL `http://ipython.org/pyreadline.html')
 should suffice.  To troubleshoot why you are not getting any
 completions, you can try the following in your Python shell:
 
@@ -180,7 +187,7 @@ running.
 Code check: Check the current file for errors with `python-check'
 using the program defined in `python-check-command'.
 
-ElDoc: returns documentation for object at point by using the
+Eldoc: returns documentation for object at point by using the
 inferior python subprocess to inspect its documentation.  As you
 might guessed you should run `python-shell-send-buffer' from time
 to time to get better results too.
@@ -205,8 +212,8 @@ options:
 2) Add the following hook in your .emacs:
 
 (add-hook 'python-mode-hook
-  (lambda ()
-    (define-key python-mode-map "\C-m" 'newline-and-indent)))
+  #'(lambda ()
+      (define-key python-mode-map "\C-m" 'newline-and-indent)))
 
 I'd recommend the first one since you'll get the same behavior for
 all modes out-of-the-box.

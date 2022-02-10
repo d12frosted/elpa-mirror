@@ -1,6 +1,5 @@
-map.el provides generic map-manipulation functions that work on
-alists, plists, hash-tables, and arrays.  All functions are
-prefixed with "map-".
+map.el provides map-manipulation functions that work on alists,
+hash-table and arrays.  All functions are prefixed with "map-".
 
 Functions taking a predicate or iterating over a map using a
 function take the function as their first argument.  All other

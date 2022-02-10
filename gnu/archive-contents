@@ -1042,7 +1042,7 @@
 	     ("Barry O'Reilly" . "gundaetiapo@gmail.com"))
 	    (:maintainer "Barry O'Reilly" . "gundaetiapo@gmail.com"))])
  (flymake .
-	  [(1 2 1)
+	  [(1 2 2)
 	   ((emacs
 	     (26 1))
 	    (eldoc
@@ -1054,7 +1054,8 @@
 	    (:maintainer "João Távora" . "joaotavora@gmail.com")
 	    (:authors
 	     ("Pavel Kobyakov" . "pk_at_work@yahoo.com"))
-	    (:url . "https://elpa.gnu.org/packages/flymake.html"))])
+	    (:url . "https://elpa.gnu.org/packages/flymake.html")
+	    (:commit . "31af9bca99fa88350271e1a905c9b435eaec28cf"))])
  (flymake-proselint .
 		    [(0 2 3)
 		     ((emacs
@@ -1457,7 +1458,7 @@
 	       ("Simen Heggestøyl" . "simenheg@gmail.com"))
 	      (:maintainer "Simen Heggestøyl" . "simenheg@gmail.com"))])
  (jsonrpc .
-	  [(1 0 15)
+	  [(1 0 14)
 	   ((emacs
 	     (25 2)))
 	   "JSON-RPC library" tar
@@ -1466,7 +1467,7 @@
 	    (:authors
 	     ("João Távora" . "joaotavora@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/jsonrpc.html")
-	    (:commit . "50654cf0b1bf6210fc8f46d8e7ae13bbeeccecb5"))])
+	    (:commit . "e7791c7e57b4b9ea895598cdb3f779c2173dccd9"))])
  (jumpc .
 	[(3 0)
 	 nil "jump to previous insertion points" single
@@ -1589,15 +1590,16 @@
 	   (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
 	   (:url . "https://github.com/fourier/loccur"))])
  (map .
-      [(3 2 1)
+      [(2 1)
        ((emacs
-	 (26)))
+	 (25)))
        "Map manipulation functions" tar
-       ((:keywords "extensions" "lisp")
+       ((:keywords "convenience" "map" "hash-table" "alist" "array")
 	(:maintainer nil . "emacs-devel@gnu.org")
 	(:authors
 	 ("Nicolas Petton" . "nicolas@petton.fr"))
-	(:url . "https://elpa.gnu.org/packages/map.html"))])
+	(:url . "https://elpa.gnu.org/packages/map.html")
+	(:commit . "e287da5a8154d83a97107b64915ccc17e3a086b8"))])
  (marginalia .
 	     [(0 12)
 	      ((emacs
@@ -2170,9 +2172,9 @@
 		   ("Feng Shu" . "tumashu@163.com"))
 		  (:keywords "convenience" "chinese" "pinyin" "input-method" "complete"))])
  (python .
-	 [(0 28)
+	 [(0 26 1)
 	  ((emacs
-	    (24 4))
+	    (24 1))
 	   (cl-lib
 	    (1 0)))
 	  "Python's flying circus support for Emacs" tar
@@ -2180,7 +2182,8 @@
 	   (:keywords "languages")
 	   (:maintainer nil . "emacs-devel@gnu.org")
 	   (:authors
-	    ("Fabián E. Gallina" . "fgallina@gnu.org")))])
+	    ("Fabián E. Gallina" . "fgallina@gnu.org"))
+	   (:commit . "2291d9ae888961ce7e4f22675244f535db54df56"))])
  (quarter-plane .
 		[(0 1)
 		 nil "Minor mode for quarter-plane style editing" single
@@ -2567,10 +2570,8 @@
 	    (:authors
 	     ("Phil Sainty" . "psainty@orcon.net.nz")))])
  (soap-client .
-	      [(3 2 1)
-	       ((emacs
-		 (24 1))
-		(cl-lib
+	      [(3 1 3)
+	       ((cl-lib
 		 (0 6 1)))
 	       "Access SOAP web services" tar
 	       ((:url . "https://github.com/alex-hhh/emacs-soap-client")
@@ -2578,7 +2579,7 @@
 		(:maintainer "Alexandru Harsanyi" . "AlexHarsanyi@gmail.com")
 		(:authors
 		 ("Alexandru Harsanyi" . "AlexHarsanyi@gmail.com"))
-		(:commit . "37eef19fd608ca81acb40f974b8d7bbe7fc27127"))])
+		(:commit . "2a058b7ef8eecd0e0e2c509cc9fdb5d3020f4b5b"))])
  (sokoban .
 	  [(1 4 8)
 	   ((emacs
