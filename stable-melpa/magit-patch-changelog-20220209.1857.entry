@@ -1,0 +1,10 @@
+(magit-patch-changelog .
+		       [(20220209 1857)
+			((emacs
+			  (25 1))
+			 (magit
+			  (2 91 0)))
+			"Generate a patch according to emacs-mirror/CONTRIBUTE" single
+			((:commit . "e792755514cb5a98b94fcd1c5eacd487f7e04d7b")
+			 (:keywords "git" "tools" "vc")
+			 (:url . "https://github.com/dickmao/magit-patch-changelog"))])
