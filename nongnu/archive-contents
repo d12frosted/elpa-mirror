@@ -727,11 +727,11 @@
 	 (:commit . "a7b9e898296142465c0857b2d201d8d828ba7b05"))])
  (helm-core .
 	    [(3 8 4)
-	     ((helm-core
-	       (3 8 4))
-	      (popup
-	       (0 5 3)))
-	     "Helm is an Emacs incremental and narrowing framework" tar
+	     ((emacs
+	       (25 1))
+	      (async
+	       (1 9 4)))
+	     "Development files for Helm" tar
 	     ((:url . "https://emacs-helm.github.io/helm/")
 	      (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
 	      (:authors
