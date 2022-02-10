@@ -1,13 +1,15 @@
 Package: company-nginx
-Fetcher: github
-Source:  https://github.com/emacsmirror/company-nginx.git
+Fetcher: git
+Source:  https://repo.or.cz/company-nginx.git
 
-Updating /mnt/store/melpa/working/company-nginx/
+Cloning https://repo.or.cz/company-nginx.git to /mnt/store/melpa/working/company-nginx/
 Checking out origin/HEAD
-Checking out 82bdb730ad5971c594d9c99c069f3c7bb067897d
-Built company-nginx in 4.417s, finished at 2022-02-10T09:46:23+0000
+Checking out 8a9f1a5653fe2d9a5042bfb9377d54f37fcc64c8
+Built company-nginx in 6.939s, finished at 2022-02-10T15:40:11+0000
  ✓ Success:
- 16K -rw-r--r-- 1 root root  16K Feb 10 09:46 packages/company-nginx-20201020.2038.el
-4.0K -rw-r--r-- 1 root root  313 Feb 10 09:46 packages/company-nginx-20201020.2038.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 10 09:46 packages/company-nginx-badge.svg
-   0 -rw-r--r-- 1 root root    0 Feb 10 09:46 packages/company-nginx-readme.txt
+ 16K -rw-r--r-- 1 root root  16K Feb 10 12:41 packages/company-nginx-20201020.2038.el
+4.0K -rw-r--r-- 1 root root  313 Feb 10 12:41 packages/company-nginx-20201020.2038.entry
+ 16K -rw-r--r-- 1 root root  16K Feb 10 15:40 packages/company-nginx-20220210.1411.el
+4.0K -rw-r--r-- 1 root root  305 Feb 10 15:40 packages/company-nginx-20220210.1411.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 10 15:40 packages/company-nginx-badge.svg
+   0 -rw-r--r-- 1 root root    0 Feb 10 15:40 packages/company-nginx-readme.txt

@@ -1,13 +1,15 @@
 Package: edebug-inline-result
-Fetcher: github
-Source:  https://github.com/emacsmirror/edebug-inline-result.git
+Fetcher: git
+Source:  https://repo.or.cz/edebug-inline-result.git
 
-Updating /mnt/store/melpa/working/edebug-inline-result/
+Cloning https://repo.or.cz/edebug-inline-result.git to /mnt/store/melpa/working/edebug-inline-result/
 Checking out origin/HEAD
-Checking out 86a9ed9e4f58c2e9870b8918dc898ccd78d2d3f8
-Built edebug-inline-result in 4.197s, finished at 2022-02-10T09:52:03+0000
+Checking out 9fb3c48434da24f800833a5ee3419452d5fb83cb
+Built edebug-inline-result in 5.977s, finished at 2022-02-10T15:45:45+0000
  ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K Feb 10 09:52 packages/edebug-inline-result-20210213.25.el
-4.0K -rw-r--r-- 1 root root  302 Feb 10 09:52 packages/edebug-inline-result-20210213.25.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 10 09:52 packages/edebug-inline-result-badge.svg
-4.0K -rw-r--r-- 1 root root   39 Feb 10 09:52 packages/edebug-inline-result-readme.txt
+8.0K -rw-r--r-- 1 root root 6.4K Feb 10 12:47 packages/edebug-inline-result-20210213.25.el
+4.0K -rw-r--r-- 1 root root  302 Feb 10 12:47 packages/edebug-inline-result-20210213.25.entry
+8.0K -rw-r--r-- 1 root root 6.4K Feb 10 15:45 packages/edebug-inline-result-20220210.1357.el
+4.0K -rw-r--r-- 1 root root  292 Feb 10 15:45 packages/edebug-inline-result-20220210.1357.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 10 15:45 packages/edebug-inline-result-badge.svg
+4.0K -rw-r--r-- 1 root root   39 Feb 10 15:45 packages/edebug-inline-result-readme.txt

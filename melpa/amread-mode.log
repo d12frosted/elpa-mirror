@@ -1,13 +1,15 @@
 Package: amread-mode
-Fetcher: github
-Source:  https://github.com/emacsmirror/amread-mode.git
+Fetcher: git
+Source:  https://repo.or.cz/amread-mode.git
 
-Updating /mnt/store/melpa/working/amread-mode/
+Cloning https://repo.or.cz/amread-mode.git to /mnt/store/melpa/working/amread-mode/
 Checking out origin/HEAD
-Checking out 7b1ed6c8aea409e2dce4a3b59f304d716a8efab7
-Built amread-mode in 4.245s, finished at 2022-02-10T09:39:48+0000
+Checking out a3358645582148e81bff54e18877451b747173bb
+Built amread-mode in 6.326s, finished at 2022-02-10T15:33:18+0000
  ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K Feb 10 09:39 packages/amread-mode-20200623.1544.el
-4.0K -rw-r--r-- 1 root root  299 Feb 10 09:39 packages/amread-mode-20200623.1544.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 10 09:39 packages/amread-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  103 Feb 10 09:39 packages/amread-mode-readme.txt
+8.0K -rw-r--r-- 1 root root 6.4K Feb 10 12:34 packages/amread-mode-20200623.1544.el
+4.0K -rw-r--r-- 1 root root  299 Feb 10 12:34 packages/amread-mode-20200623.1544.entry
+8.0K -rw-r--r-- 1 root root 6.4K Feb 10 15:33 packages/amread-mode-20220210.1354.el
+4.0K -rw-r--r-- 1 root root  291 Feb 10 15:33 packages/amread-mode-20220210.1354.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 10 15:33 packages/amread-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  103 Feb 10 15:33 packages/amread-mode-readme.txt

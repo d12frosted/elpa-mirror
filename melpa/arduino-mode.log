@@ -1,29 +1,31 @@
 Package: arduino-mode
-Fetcher: github
-Source:  https://github.com/emacsmirror/arduino-mode.git
+Fetcher: git
+Source:  https://repo.or.cz/arduino-mode.git
 
-Updating /mnt/store/melpa/working/arduino-mode/
+Cloning https://repo.or.cz/arduino-mode.git to /mnt/store/melpa/working/arduino-mode/
 Checking out origin/HEAD
-Checking out 3bc47bd7f75a7ccae409236dab43208ce8d41d51
+Checking out 652c6a328fa8f2db06534d5f231c6b6933be3edc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/arduino-mode/
-  to /tmp/arduino-modeara5Og/arduino-mode-20211112.1223
+  to /tmp/arduino-modej9anuw/arduino-mode-20220210.1355
     arduino-mode-init.el -> arduino-mode-init.el
     arduino-mode.el -> arduino-mode.el
     ede-arduino.el -> ede-arduino.el
     flycheck-arduino.el -> flycheck-arduino.el
     ob-arduino.el -> ob-arduino.el
-Created arduino-mode-20211112.1223.tar containing:
-  arduino-mode-20211112.1223/
-  arduino-mode-20211112.1223/arduino-mode-init.el
-  arduino-mode-20211112.1223/arduino-mode-pkg.el
-  arduino-mode-20211112.1223/arduino-mode.el
-  arduino-mode-20211112.1223/ede-arduino.el
-  arduino-mode-20211112.1223/flycheck-arduino.el
-  arduino-mode-20211112.1223/ob-arduino.el
-Built arduino-mode in 3.952s, finished at 2022-02-10T09:40:22+0000
+Created arduino-mode-20220210.1355.tar containing:
+  arduino-mode-20220210.1355/
+  arduino-mode-20220210.1355/arduino-mode-init.el
+  arduino-mode-20220210.1355/arduino-mode-pkg.el
+  arduino-mode-20220210.1355/arduino-mode.el
+  arduino-mode-20220210.1355/ede-arduino.el
+  arduino-mode-20220210.1355/flycheck-arduino.el
+  arduino-mode-20220210.1355/ob-arduino.el
+Built arduino-mode in 5.486s, finished at 2022-02-10T15:33:55+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  355 Feb 10 09:40 packages/arduino-mode-20211112.1223.entry
- 52K -rw-r--r-- 1 root root  50K Feb 10 09:40 packages/arduino-mode-20211112.1223.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 10 09:40 packages/arduino-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   95 Feb 10 09:40 packages/arduino-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  354 Feb 10 12:34 packages/arduino-mode-20211113.207.entry
+ 52K -rw-r--r-- 1 root root  50K Feb 10 12:34 packages/arduino-mode-20211113.207.tar
+4.0K -rw-r--r-- 1 root root  347 Feb 10 15:33 packages/arduino-mode-20220210.1355.entry
+ 52K -rw-r--r-- 1 root root  50K Feb 10 15:33 packages/arduino-mode-20220210.1355.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 10 15:33 packages/arduino-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   95 Feb 10 15:33 packages/arduino-mode-readme.txt

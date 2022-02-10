@@ -4,10 +4,10 @@ Source:  https://github.com/emacscollective/epkg.git
 
 Updating /mnt/store/melpa/working/epkg/
 Checking out origin/HEAD
-Checking out c18a2fc8b4a83ceea6a1128d7a77107983301e56
+Checking out beaf643468372cf24250b60449dfa788c8633cad
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkg5o9hKk/epkg-20220130.1922
+  to /tmp/epkgxFGR2K/epkg-20220210.1319
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-gelpa.el -> epkg-gelpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -18,29 +18,31 @@ Copying files (->) and directories (=>)
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
     .dir-locals.el -> .dir-locals.el
-Generating /tmp/epkg5o9hKk/epkg-20220130.1922/epkg.info
-Created epkg-20220130.1922.tar containing:
-  epkg-20220130.1922/
-  epkg-20220130.1922/.dir-locals.el
-  epkg-20220130.1922/dir
-  epkg-20220130.1922/epkg-desc.el
-  epkg-20220130.1922/epkg-gelpa.el
-  epkg-20220130.1922/epkg-list.el
-  epkg-20220130.1922/epkg-melpa.el
-  epkg-20220130.1922/epkg-org.el
-  epkg-20220130.1922/epkg-pkg.el
-  epkg-20220130.1922/epkg-schemata.el
-  epkg-20220130.1922/epkg-utils.el
-  epkg-20220130.1922/epkg.el
-  epkg-20220130.1922/epkg.info
-Built epkg in 7.439s, finished at 2022-02-10T09:54:36+0000
+Generating /tmp/epkgxFGR2K/epkg-20220210.1319/epkg.info
+Created epkg-20220210.1319.tar containing:
+  epkg-20220210.1319/
+  epkg-20220210.1319/.dir-locals.el
+  epkg-20220210.1319/dir
+  epkg-20220210.1319/epkg-desc.el
+  epkg-20220210.1319/epkg-gelpa.el
+  epkg-20220210.1319/epkg-list.el
+  epkg-20220210.1319/epkg-melpa.el
+  epkg-20220210.1319/epkg-org.el
+  epkg-20220210.1319/epkg-pkg.el
+  epkg-20220210.1319/epkg-schemata.el
+  epkg-20220210.1319/epkg-utils.el
+  epkg-20220210.1319/epkg.el
+  epkg-20220210.1319/epkg.info
+Built epkg in 11.340s, finished at 2022-02-10T15:48:09+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  381 Feb 10 09:54 packages/epkg-20220130.1922.entry
-112K -rw-r--r-- 1 root root 110K Feb 10 09:54 packages/epkg-20220130.1922.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 10 09:54 packages/epkg-badge.svg
-4.0K -rw-r--r-- 1 root root 3.7K Feb 10 09:54 packages/epkg-marginalia-20220131.1328.el
-4.0K -rw-r--r-- 1 root root  458 Feb 10 09:54 packages/epkg-marginalia-20220131.1328.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 10 09:54 packages/epkg-marginalia-badge.svg
-4.0K -rw-r--r-- 1 root root  425 Feb 10 09:54 packages/epkg-marginalia-readme.txt
-4.0K -rw-r--r-- 1 root root  662 Feb 10 09:54 packages/epkg-marginalia.log
-4.0K -rw-r--r-- 1 root root  341 Feb 10 09:54 packages/epkg-readme.txt
+4.0K -rw-r--r-- 1 root root  381 Feb 10 12:49 packages/epkg-20220210.1054.entry
+112K -rw-r--r-- 1 root root 110K Feb 10 12:49 packages/epkg-20220210.1054.tar
+4.0K -rw-r--r-- 1 root root  381 Feb 10 15:48 packages/epkg-20220210.1319.entry
+112K -rw-r--r-- 1 root root 110K Feb 10 15:48 packages/epkg-20220210.1319.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 10 15:48 packages/epkg-badge.svg
+4.0K -rw-r--r-- 1 root root 3.7K Feb 10 15:48 packages/epkg-marginalia-20220131.1328.el
+4.0K -rw-r--r-- 1 root root  458 Feb 10 15:48 packages/epkg-marginalia-20220131.1328.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 10 15:48 packages/epkg-marginalia-badge.svg
+4.0K -rw-r--r-- 1 root root  425 Feb 10 15:48 packages/epkg-marginalia-readme.txt
+4.0K -rw-r--r-- 1 root root  662 Feb 10 15:48 packages/epkg-marginalia.log
+4.0K -rw-r--r-- 1 root root  341 Feb 10 15:48 packages/epkg-readme.txt

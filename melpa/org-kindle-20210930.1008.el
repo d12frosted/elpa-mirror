@@ -2,7 +2,7 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "25") (cl-lib "0.5") (seq "2.20"))
-;; Package-Commit: fdba34a47b670226f46ad7b3a4db4edc7f7907e7
+;; Package-Commit: c0d4b0371d96883b33a526d8662ef6814e636014
 ;; Package-Version: 20210930.1008
 ;; Package-X-Original-Version: 0.1
 ;; Keywords: org link ebook kindle epub azw3 mobi
