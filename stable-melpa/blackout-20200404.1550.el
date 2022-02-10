@@ -7,7 +7,7 @@
 ;; Homepage: https://github.com/raxod502/blackout
 ;; Keywords: extensions
 ;; Package-Version: 20200404.1550
-;; Package-Commit: 9a208d395db66aebadf663344f18effffaac59fe
+;; Package-Commit: c221fa2c8a204b4aff2e09c606f59be58b960b97
 ;; Package-Requires: ((emacs "26"))
 ;; SPDX-License-Identifier: MIT
 ;; Version: 1.0

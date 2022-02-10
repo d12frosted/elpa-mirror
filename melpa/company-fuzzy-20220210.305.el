@@ -7,8 +7,8 @@
 ;; Description: Fuzzy matching for `company-mode'.
 ;; Keyword: auto auto-complete complete fuzzy matching
 ;; Version: 1.4.0
-;; Package-Version: 20220207.1957
-;; Package-Commit: dcdf9568b3ca6e63e8c3955748b2cec2748a417d
+;; Package-Version: 20220210.305
+;; Package-Commit: 74922fcd0c4bd1102d10bd40b63fc36756330969
 ;; Package-Requires: ((emacs "26.1") (company "0.8.12") (s "1.12.0") (ht "2.0"))
 ;; URL: https://github.com/jcs-elpa/company-fuzzy
 
@@ -467,6 +467,12 @@ If optional argument FLIP is non-nil, reverse query and pattern order."
 ;; (@* "Prefix" )
 ;;
 
+(defun company-fuzzy--valid-prefix (backend)
+  "Guess the current BACKEND prefix."
+  (let ((prefix (funcall backend 'prefix)))
+    (if (stringp prefix) prefix
+      (thing-at-point 'symbol))))  ; Fallback
+
 (defun company-fuzzy--backend-prefix-complete (backend)
   "Return prefix for each BACKEND while doing completion.
 
@@ -474,7 +480,7 @@ This function is use when function `company-fuzzy--insert-candidate' is
 called.  It returns the current selection prefix to prevent completion
 completes in an odd way."
   (cl-case backend
-    (`company-files (funcall backend 'prefix))
+    (`company-files (company-fuzzy--valid-prefix backend))
     (t (company-fuzzy--backend-prefix backend 'match))))
 
 (defun company-fuzzy--backend-prefix-match (backend)
@@ -487,7 +493,7 @@ For instance, if there is a candidate function `buffer-file-name' and with
 current prefix `bfn'.  It will just return `bfn' because the current prefix
 does best describe the for this candidate."
   (cl-case backend
-    ((company-capf company-yasnippet) (funcall backend 'prefix))
+    ((company-capf company-yasnippet) (company-fuzzy--valid-prefix backend))
     (`company-files
      ;; NOTE: For `company-files', we will return the last section of the path
      ;; for the best match.
@@ -514,16 +520,15 @@ that may be relavent to the first character `b'.
 P.S. Not all backend work this way."
   (cl-case backend
     (`company-files
-     (let ((prefix (company-files 'prefix)))
-       (when prefix
-         (let* ((splitted (split-string prefix "/" t))
-                (len-splitted (length splitted))
-                (last (nth (1- len-splitted) splitted))
-                (new-prefix prefix))
-           (when (< 1 len-splitted)
-             (setq new-prefix
-                   (substring prefix 0 (- (length prefix) (length last)))))
-           new-prefix))))
+     (when-let ((prefix (company-files 'prefix)))
+       (let* ((splitted (split-string prefix "/" t))
+              (len-splitted (length splitted))
+              (last (nth (1- len-splitted) splitted))
+              (new-prefix prefix))
+         (when (< 1 len-splitted)
+           (setq new-prefix
+                 (substring prefix 0 (- (length prefix) (length last)))))
+         new-prefix)))
     (`company-yasnippet (company-yasnippet 'prefix))
     (t (ignore-errors (substring company-fuzzy--prefix 0 1)))))
 
