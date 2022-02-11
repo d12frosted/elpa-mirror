@@ -6,9 +6,9 @@
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
 
 ;; Package-Requires: ((emacs "25.1") (magit "3.0") (org "9.4"))
-;; Package-Commit: 66367d6bfc5e00726fb74f7cd20c32175ab8521b
-;; Package-Version: 20220107.1206
-;; Package-X-Original-Version: 1.7.2
+;; Package-Commit: 42b7f682b3e4e487ff209a44221a729921241133
+;; Package-Version: 20220211.25
+;; Package-X-Original-Version: 1.8.0-git
 ;; Homepage: https://github.com/magit/orgit
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -102,17 +102,6 @@
 
 (eval-when-compile
   (require 'subr-x))
-
-;;;###autoload
-(defun orgit-link-set-parameters (type &rest parameters)
-  (if (fboundp 'org-link-set-parameters) ; since v9.0
-      (apply  #'org-link-set-parameters type parameters)
-    (with-no-warnings
-      (org-add-link-type type
-                         (plist-get parameters :follow)
-                         (plist-get parameters :export))
-      (add-hook 'org-store-link-functions
-                (plist-get parameters :store)))))
 
 ;;; Options
 
@@ -265,11 +254,11 @@ the git-show(1) manpage.  The second pass accepts these specs:
 
 ;;;###autoload
 (with-eval-after-load 'org
-  (orgit-link-set-parameters "orgit"
-                             :store    'orgit-status-store
-                             :follow   'orgit-status-open
-                             :export   'orgit-status-export
-                             :complete 'orgit-status-complete-link))
+  (org-link-set-parameters "orgit"
+                           :store    'orgit-status-store
+                           :follow   'orgit-status-open
+                           :export   'orgit-status-export
+                           :complete 'orgit-status-complete-link))
 
 ;;;###autoload
 (defun orgit-status-store ()
@@ -301,11 +290,11 @@ In that case `orgit-rev-store' stores one or more links instead."
 
 ;;;###autoload
 (with-eval-after-load 'org
-  (orgit-link-set-parameters "orgit-log"
-                             :store    'orgit-log-store
-                             :follow   'orgit-log-open
-                             :export   'orgit-log-export
-                             :complete 'orgit-log-complete-link))
+  (org-link-set-parameters "orgit-log"
+                           :store    'orgit-log-store
+                           :follow   'orgit-log-open
+                           :export   'orgit-log-export
+                           :complete 'orgit-log-complete-link))
 
 ;;;###autoload
 (defun orgit-log-store ()
@@ -365,11 +354,11 @@ In that case `orgit-rev-store' stores one or more links instead."
 
 ;;;###autoload
 (with-eval-after-load 'org
-  (orgit-link-set-parameters "orgit-rev"
-                             :store    'orgit-rev-store
-                             :follow   'orgit-rev-open
-                             :export   'orgit-rev-export
-                             :complete 'orgit-rev-complete-link))
+  (org-link-set-parameters "orgit-rev"
+                           :store    'orgit-rev-store
+                           :follow   'orgit-rev-open
+                           :export   'orgit-rev-export
+                           :complete 'orgit-rev-complete-link))
 
 ;;;###autoload
 (defun orgit-rev-store ()

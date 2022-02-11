@@ -1,13 +1,14 @@
 ;;; orgit-forge.el --- Org links to Forge issue buffers  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2020-2021  The Magit Project Contributors
+;; Copyright (C) 2020-2022  The Magit Project Contributors
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
 
-;; Package-Requires: ((emacs "25.1") (forge "0.2") (magit "3.0") (org "9.4") (orgit "1.7"))
-;; Package-Version: 20210615.1516
-;; Package-Commit: 365b75609a9454dccf5681eb6075ca53bd32af85
+;; Package-Requires: ((emacs "25.1") (forge "0.3") (magit "3.3") (org "9.5") (orgit "1.8"))
+;; Package-Commit: 36e57a0359992e02312f453b8086512e77beb150
+;; Package-Version: 20220211.26
+;; Package-X-Original-Version: 0.1.3-git
 ;; Homepage: https://github.com/magit/orgit-forge
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 
@@ -47,11 +48,11 @@
 
 ;;;###autoload
 (with-eval-after-load "org"
-  (orgit-link-set-parameters "orgit-topic"
-                             :store    'orgit-topic-store
-                             :follow   'orgit-topic-open
-                             :export   'orgit-topic-export
-                             :complete 'orgit-topic-complete-link))
+  (org-link-set-parameters "orgit-topic"
+                           :store    'orgit-topic-store
+                           :follow   'orgit-topic-open
+                           :export   'orgit-topic-export
+                           :complete 'orgit-topic-complete-link))
 
 ;;;###autoload
 (defun orgit-topic-store ()

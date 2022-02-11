@@ -1,17 +1,17 @@
 (orgit-forge .
-	     [(20210615 1516)
+	     [(20220211 26)
 	      ((emacs
 		(25 1))
 	       (forge
-		(0 2))
+		(0 3))
 	       (magit
-		(3 0))
+		(3 3))
 	       (org
-		(9 4))
+		(9 5))
 	       (orgit
-		(1 7)))
+		(1 8)))
 	      "Org links to Forge issue buffers" single
-	      ((:commit . "365b75609a9454dccf5681eb6075ca53bd32af85")
+	      ((:commit . "36e57a0359992e02312f453b8086512e77beb150")
 	       (:authors
 		("Jonas Bernoulli" . "jonas@bernoul.li"))
 	       (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
