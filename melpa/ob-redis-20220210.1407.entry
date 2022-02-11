@@ -1,0 +1,11 @@
+(ob-redis .
+	  [(20220210 1407)
+	   ((org
+	     (8)))
+	   "Execute Redis queries within org-mode blocks." single
+	   ((:commit . "937099d74f2e8cb68e4166c141ff742a278c4dec")
+	    (:authors
+	     ("stardiviner" . "numbchild@gmail.com"))
+	    (:maintainer "stardiviner" . "numbchild@gmail.com")
+	    (:keywords "org" "babel" "redis")
+	    (:url . "https://repo.or.cz/ob-redis.git"))])

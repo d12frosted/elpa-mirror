@@ -1458,7 +1458,7 @@
 	       ("Simen Heggestøyl" . "simenheg@gmail.com"))
 	      (:maintainer "Simen Heggestøyl" . "simenheg@gmail.com"))])
  (jsonrpc .
-	  [(1 0 14)
+	  [(1 0 15)
 	   ((emacs
 	     (25 2)))
 	   "JSON-RPC library" tar
@@ -1467,7 +1467,7 @@
 	    (:authors
 	     ("João Távora" . "joaotavora@gmail.com"))
 	    (:url . "https://elpa.gnu.org/packages/jsonrpc.html")
-	    (:commit . "e7791c7e57b4b9ea895598cdb3f779c2173dccd9"))])
+	    (:commit . "50654cf0b1bf6210fc8f46d8e7ae13bbeeccecb5"))])
  (jumpc .
 	[(3 0)
 	 nil "jump to previous insertion points" single
@@ -1590,16 +1590,16 @@
 	   (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
 	   (:url . "https://github.com/fourier/loccur"))])
  (map .
-      [(2 1)
+      [(3 2 1)
        ((emacs
-	 (25)))
+	 (26)))
        "Map manipulation functions" tar
-       ((:keywords "convenience" "map" "hash-table" "alist" "array")
+       ((:keywords "extensions" "lisp")
 	(:maintainer nil . "emacs-devel@gnu.org")
 	(:authors
 	 ("Nicolas Petton" . "nicolas@petton.fr"))
 	(:url . "https://elpa.gnu.org/packages/map.html")
-	(:commit . "e287da5a8154d83a97107b64915ccc17e3a086b8"))])
+	(:commit . "fa92b040c6738de7278605cadeace0c5380a0814"))])
  (marginalia .
 	     [(0 12)
 	      ((emacs
@@ -1720,7 +1720,8 @@
 		 (:keywords "faces" "theme" "accessibility")
 		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		 (:authors
-		  ("Protesilaos Stavrou" . "info@protesilaos.com")))])
+		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
+		 (:commit . "f03d0de26fc718058567951ed46dc6772638928c"))])
  (modus-vivendi-theme .
 		      [(0 13 2)
 		       ((emacs
@@ -2129,7 +2130,8 @@
 	    (xref
 	     (1 0 2)))
 	   "Operations on the current project" tar
-	   ((:url . "https://elpa.gnu.org/packages/project.html"))])
+	   ((:url . "https://elpa.gnu.org/packages/project.html")
+	    (:commit . "6bf29072e968401f842789c71468e624e5c913a9"))])
  (psgml .
 	[(1 3 4)
 	 nil "SGML-editing mode with parsing support" tar
@@ -2172,9 +2174,9 @@
 		   ("Feng Shu" . "tumashu@163.com"))
 		  (:keywords "convenience" "chinese" "pinyin" "input-method" "complete"))])
  (python .
-	 [(0 26 1)
+	 [(0 28)
 	  ((emacs
-	    (24 1))
+	    (24 4))
 	   (cl-lib
 	    (1 0)))
 	  "Python's flying circus support for Emacs" tar
@@ -2183,7 +2185,7 @@
 	   (:maintainer nil . "emacs-devel@gnu.org")
 	   (:authors
 	    ("Fabián E. Gallina" . "fgallina@gnu.org"))
-	   (:commit . "2291d9ae888961ce7e4f22675244f535db54df56"))])
+	   (:commit . "b3d0f53b296a0876ec7a55ae840868e65ed54e14"))])
  (quarter-plane .
 		[(0 1)
 		 nil "Minor mode for quarter-plane style editing" single
@@ -2568,10 +2570,13 @@
 	    (:keywords "convenience")
 	    (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
 	    (:authors
-	     ("Phil Sainty" . "psainty@orcon.net.nz")))])
+	     ("Phil Sainty" . "psainty@orcon.net.nz"))
+	    (:commit . "045a4fe94c18cd36ef297e62a80cdff449af3aa5"))])
  (soap-client .
-	      [(3 1 3)
-	       ((cl-lib
+	      [(3 2 1)
+	       ((emacs
+		 (24 1))
+		(cl-lib
 		 (0 6 1)))
 	       "Access SOAP web services" tar
 	       ((:url . "https://github.com/alex-hhh/emacs-soap-client")
@@ -2579,7 +2584,7 @@
 		(:maintainer "Alexandru Harsanyi" . "AlexHarsanyi@gmail.com")
 		(:authors
 		 ("Alexandru Harsanyi" . "AlexHarsanyi@gmail.com"))
-		(:commit . "2a058b7ef8eecd0e0e2c509cc9fdb5d3020f4b5b"))])
+		(:commit . "37eef19fd608ca81acb40f974b8d7bbe7fc27127"))])
  (sokoban .
 	  [(1 4 8)
 	   ((emacs
@@ -2961,7 +2966,8 @@
 		 (:maintainer "Michael McNamara" . "mac@verilog.com")
 		 (:authors
 		  ("Michael McNamara" . "mac@verilog.com")
-		  ("Wilson Snyder" . "wsnyder@wsnyder.org")))])
+		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
+		 (:commit . "86f08fb377e2b8f2df0614c48783bdce347f3758"))])
  (vertico .
 	  [(0 20)
 	   ((emacs
@@ -3177,7 +3183,8 @@
 	((emacs
 	  (26 1)))
 	"Cross-referencing commands" tar
-	((:url . "https://elpa.gnu.org/packages/xref.html"))])
+	((:url . "https://elpa.gnu.org/packages/xref.html")
+	 (:commit . "766108f48db29f766908c728969f78d8e896171e"))])
  (yasnippet .
 	    [(0 14 0)
 	     ((cl-lib

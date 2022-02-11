@@ -1,15 +1,13 @@
 Package: smiles-mode
-Fetcher: github
-Source:  https://github.com/emacsmirror/smiles-mode.git
+Fetcher: git
+Source:  https://repo.or.cz/smiles-mode.git
 
 Updating /mnt/store/melpa/working/smiles-mode/
 Checking out origin/HEAD
-Checking out 5494a0d13a32fb96f052b83ac3f07c6fc102a8bc
-Built smiles-mode in 4.112s, finished at 2022-02-10T13:31:23+0000
+Checking out 950a8b3224f8f069c82faeb0282d041f872d5550
+Built smiles-mode in 5.291s, finished at 2022-02-10T22:19:39+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root 1.7K Feb 10 10:34 packages/smiles-mode-20160717.1120.el
-4.0K -rw-r--r-- 1 root root  315 Feb 10 10:34 packages/smiles-mode-20160717.1120.entry
-4.0K -rw-r--r-- 1 root root 1.8K Feb 10 13:31 packages/smiles-mode-20160717.715.el
-4.0K -rw-r--r-- 1 root root  314 Feb 10 13:31 packages/smiles-mode-20160717.715.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 10 13:31 packages/smiles-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  149 Feb 10 13:31 packages/smiles-mode-readme.txt
+4.0K -rw-r--r-- 1 root root 1.9K Feb 10 22:19 packages/smiles-mode-20220210.1413.el
+4.0K -rw-r--r-- 1 root root  369 Feb 10 22:19 packages/smiles-mode-20220210.1413.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 10 22:19 packages/smiles-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  149 Feb 10 22:19 packages/smiles-mode-readme.txt

@@ -28,7 +28,7 @@ conventions described below and in the pull request template).
 location.  You will have to move the files manually.  See issue
 #79 for more information.
 
-Usage:
+;; Usage
 
 Load the feature `no-littering' as early as possible in your init
 file.  Make sure you load it at least before you change any path
@@ -46,9 +46,10 @@ variables before loading the feature.
         (expand-file-name "data/" user-emacs-directory))
   (require 'no-littering)
 
-Conventions:
+For additional optional settings see "README.md".
 
-* A) File names
+;; Conventions
+;;; A) File names
 
 1. File names are based on the name of the respective Emacs Lisp
    variables and the name of the respective Emacs package.
@@ -70,7 +71,7 @@ Conventions:
    E.g.  if a file contains an S-expression, then the suffix should be
    `*.el`.
 
-* B) File location and subdirectories
+;;; B) File location and subdirectories
 
 1. If a package has only one data file, then that is usually placed in
    `no-littering-var-directory` itself.  Likewise if a package has
@@ -103,7 +104,7 @@ Conventions:
    when the name of the variable is `<package>-directory`, in which
    case we would use just `<package>/` as the path.
 
-* C) Ordering and alignment
+;;; C) Ordering and alignment
 
 1. The code that sets the values of themed variables is split into two
    groups.  The first group sets the value of variables that belong to
@@ -119,7 +120,7 @@ Conventions:
    If it turns out that this happens very often, then we will adjust
    the alignment eventually.
 
-* D) Commit messages
+;;; D) Commit messages
 
 1. Please theme each package using a separate commit and use commit
    messages of the form "<package>: theme <variable".
