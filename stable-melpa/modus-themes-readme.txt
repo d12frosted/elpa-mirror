@@ -257,6 +257,7 @@ missing package or change you would like to see.
     proced
     prodigy
     pulse
+    pyim
     quick-peek
     racket-mode
     rainbow-blocks
