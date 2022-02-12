@@ -72,6 +72,7 @@ missing package or change you would like to see.
     change-log and log-view (`vc-print-log' and `vc-print-root-log')
     cider
     circe
+    citar
     color-rg
     column-enforce-mode
     company-mode

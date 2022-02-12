@@ -803,7 +803,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20220211)
+      [(20220212)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -812,7 +812,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "a2726972b9166e1a8d694a7a4404870722eb40f7"))])
+	(:commit . "abadb863afdd7876aeaa1662af014e6a5e212985"))])
  (eglot .
 	[(1 8)
 	 ((emacs
@@ -2051,7 +2051,7 @@
 	    ("Junpeng Qiu" . "qjpchmail@gmail.com"))
 	   (:keywords "extensions"))])
  (parser-generator .
-		   [(0 1 3)
+		   [(0 1 4)
 		    ((emacs
 		      (26)))
 		    "Parser Generator library" tar
@@ -2059,7 +2059,8 @@
 		     (:keywords "tools" "convenience")
 		     (:maintainer "Christian Johansson" . "christian@cvj.se")
 		     (:authors
-		      ("Christian Johansson" . "christian@cvj.se")))])
+		      ("Christian Johansson" . "christian@cvj.se"))
+		     (:commit . "e2e464bb1771d60afb7ab44e21fb7477425563e2"))])
  (path-iterator .
 		[(1 0)
 		 ((emacs

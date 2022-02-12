@@ -7,8 +7,8 @@
 ;; Maintainer: Jason R. Blevins <jblevins@xbeta.org>
 ;; Created: May 24, 2007
 ;; Version: 2.6-dev
-;; Package-Version: 20220211.1518
-;; Package-Commit: 8c7b0c4ab4483a18c3dc0c44be71630362843fc7
+;; Package-Version: 20220212.728
+;; Package-Commit: 521658eb32e456681592443e04ae507c3a59ed07
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: Markdown, GitHub Flavored Markdown, itex
 ;; URL: https://jblevins.org/projects/markdown-mode/
@@ -7353,7 +7353,11 @@ Return the name of the output buffer used."
                      (if (not (null command-args))
                          (apply #'call-process-region begin-region end-region command nil buf nil command-args)
                        (call-process-region begin-region end-region command nil buf))
-                   (funcall markdown-command begin-region end-region buf)
+                   (if markdown-command-needs-filename
+                       (if (not buffer-file-name)
+                           (user-error "Must be visiting a file")
+                         (funcall markdown-command begin-region end-region buf buffer-file-name))
+                     (funcall markdown-command begin-region end-region buf))
                    ;; If the ‘markdown-command’ function didn’t signal an
                    ;; error, assume it succeeded by binding ‘exit-code’ to 0.
                    0))))))
