@@ -21,7 +21,7 @@
 
 ;; Version: 0.3
 ;; Package-Version: 20220212.814
-;; Package-Commit: d4ffe4752d36915f5dbd8da11b38b4a81743cbc4
+;; Package-Commit: f60f57ad3e8c97509af3ea925dbb3afa2a25f814
 ;; Author: Sibi Prabakaran
 ;; Keywords: just justfile tools processes
 ;; URL: https://github.com/psibi/justl.el
