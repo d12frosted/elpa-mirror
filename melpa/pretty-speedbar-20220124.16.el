@@ -5,7 +5,7 @@
 ;; Created: 2019-11-18
 ;; Version: 0.2
 ;; Package-Version: 20220124.16
-;; Package-Commit: ea3daaf6a526a1ad4ae385066c99fd9643da7f94
+;; Package-Commit: 4153fed2c83faad90803f57a3c9364609eb7b3eb
 ;; Last-Updated: 2022-01-17
 ;; URL: https://github.com/kcyarn/pretty-speedbar
 ;; Package-Requires: ((emacs "27.1"))

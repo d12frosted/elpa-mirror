@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/emacscollective/closql
 ;; Keywords: extensions
 ;; Package-Version: 20210927.2245
-;; Package-Commit: 15f906c393db1a0fb6577afc3cf59466531eafef
+;; Package-Commit: 9f870d8415a60e537e8a15014584cb69d15629bf
 ;; Package-Requires: ((emacs "25.1") (emacsql-sqlite "3.0.0"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 

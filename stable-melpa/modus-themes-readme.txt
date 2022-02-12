@@ -121,6 +121,7 @@ missing package or change you would like to see.
     elfeed-score
     elpher
     embark
+    ement (ement.el)
     emms
     enh-ruby-mode (enhanced-ruby-mode)
     epa
