@@ -460,7 +460,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 18)
+	[(0 19)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -468,7 +468,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "2caa3e0088be4c1d970d788a14a8d9f4e1b993b7"))])
+	  (:commit . "9381c4625452e0e1f37a0f2902f3e0440a80d7bf"))])
  (coterm .
 	 [(1 4)
 	  ((emacs
@@ -1967,6 +1967,19 @@
 	     (:maintainer "Tyler Grinn" . "tylergrinn@gmail.com")
 	     (:authors
 	      ("Tyler Grinn" . "tylergrinn@gmail.com")))])
+ (org-remark .
+	     [(1 0 1)
+	      ((emacs
+		(27 1))
+	       (org
+		(9 4)))
+	      "Highlight & annotate any text files" tar
+	      ((:url . "https://github.com/nobiot/org-remark")
+	       (:keywords "org-mode" "annotation" "writing" "note-taking" "marginal-notes")
+	       (:maintainer "Noboru Ota" . "me@nobiot.com")
+	       (:authors
+		("Noboru Ota" . "me@nobiot.com"))
+	       (:commit . "eedfeb4fa629481c5d98a6a3144cf9ecb3280cca"))])
  (org-transclusion .
 		   [(1 2 0)
 		    ((emacs

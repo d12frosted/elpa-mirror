@@ -1,0 +1,136 @@
+			 ━━━━━━━━━━━━━━━━━━━━━
+			  README – ORG-REMARK
+			 ━━━━━━━━━━━━━━━━━━━━━
+
+
+Table of Contents
+─────────────────
+
+1. Introduction
+2. Installation
+3. Contributing and Feedback
+4. License
+
+
+
+
+
+1 Introduction
+══════════════
+
+  Org-remark lets you highlight and annotate any text file with using
+  Org mode.
+
+  A user manual is available [online] (Info node will be available when
+  Org-remark is added to ELPA/MELPA) or Emacs in-system as an Info node
+  `(org-remark)': (`C-h i' and find the `Org-remark' node).
+
+  For installation and minimum configuration, refer to [Installation]
+  below or the user manual: [online] or Info node `(org-remark)
+  Installation'
+
+  Getting Started in the user manual will get you started in 5 minutes:
+  [online] or or Info node `(org-remark) Getting Started'.
+
+  For customization, refer to the customization group `org-remark' or
+  user manual: [online] or Info node `(org-remark) Customizing'.
+
+  An [introductory video] (8 minutes) is available on YouTube.
+
+
+[online] <https://nobiot.github.io/org-remark/>
+
+[Installation] See section 2
+
+[online] <https://nobiot.github.io/org-remark/#Installation>
+
+[online] <https://nobiot.github.io/org-remark/#getting-started>
+
+[online] <https://nobiot.github.io/org-remark/#Customizing>
+
+[introductory video] <https://youtu.be/c8DHrAsFiLc>
+
+
+2 Installation
+══════════════
+
+  This package is available on:
+
+  • [GNU-devel ELPA] (unreleased development branch; equivalent to
+    MELPA)
+
+  It will soon be available on GNU ELPA (releases only; equivalent to
+  MELPA-Stable) in one of the next updates.
+
+  GNU ELPA should be already set up in your Emacs by default. If you
+  wish to add GNU-devel ELPA, simply add its URL to `package-archives'
+  like this:
+
+  ┌────
+  │ (add-to-list 'package-archives
+  │ 	     '("gnu-devel" . "https://elpa.gnu.org/devel/") :append)
+  └────
+
+  After installation, we suggest you put the setup below in your
+  configuration.
+
+  ┌────
+  │ (require 'org-remark-global-tracking)
+  │ (org-remark-global-tracking-mode +1)
+  └────
+
+  Unless you explicitly load `org' during Emacs initialization, I
+  suggest to defer loading `org-remark' (thus there is no `(require
+  'org-remark)' in the example above). This is because it will also pull
+  in `org', which can slow down initialization. You can control the
+  timing of loading `org-remark' by autoloading some commands in a
+  similar way with the example keybindings below.
+
+  Below are example keybindings you might like to consider:
+
+  ┌────
+  │ ;; Key-bind `org-remark-mark' to global-map so that you can call it
+  │ ;; globally before the library is loaded.
+  │ 
+  │ (define-key global-map (kbd "C-c n m") #'org-remark-mark)
+  │ 
+  │ ;; The rest of keybidings are done only on loading `org-remark'
+  │ (with-eval-after-load 'org-remark
+  │   (define-key org-remark-mode-map (kbd "C-c n o") #'org-remark-open)
+  │   (define-key org-remark-mode-map (kbd "C-c n ]") #'org-remark-view-next)
+  │   (define-key org-remark-mode-map (kbd "C-c n [") #'org-remark-view-prev)
+  │   (define-key org-remark-mode-map (kbd "C-c n r") #'org-remark-remove))
+  └────
+
+
+[GNU-devel ELPA] <https://elpa.gnu.org/devel/org-remark.html>
+
+
+3 Contributing and Feedback
+═══════════════════════════
+
+  Create issues, discussion, and/or pull requests in the GitHub
+  repository. All welcome.
+
+  Org-remark is planned to be submitted to GNU ELPA and thus copyrighted
+  by the [Free Software Foundation] (FSF). This means that anyone who is
+  making a substantive code contribution will need to "assign the
+  copyright for your contributions to the FSF so that they can be
+  included in GNU Emacs" ([Org Mode website]).
+
+  Thank you.
+
+
+[Free Software Foundation] <http://fsf.org>
+
+[Org Mode website] <https://orgmode.org/contribute.html#copyright>
+
+
+4 License
+═════════
+
+  This work is licensed under a GPLv3 license. For a full copy of the
+  license, refer to [LICENSE].
+
+
+[LICENSE] <./LICENSE>

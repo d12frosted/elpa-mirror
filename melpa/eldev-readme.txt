@@ -26,11 +26,11 @@ executable is placed.
 
      $ curl -fsSL https://raw.github.com/doublep/eldev/master/webinstall/eldev | sh
 
-   This will install eldev script to ~/.eldev/bin.
+   This will install eldev script to ~/.local/bin.
 
-2. Add the directory to your $PATH; e.g. in ~/.profile add this:
+2. If not yet there, add the directory to your $PATH; e.g. in ~/.profile add this:
 
-     export PATH="$HOME/.eldev/bin:$PATH"
+     export PATH="$HOME/.local/bin:$PATH"
 
 Afterwards Eldev will bootstrap itself as needed on first
 invocation.
