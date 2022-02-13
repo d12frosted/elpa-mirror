@@ -5,6 +5,8 @@
 ;; Author: Ben Sless <ben.sless@gmail.com>
 ;; Maintainer: Ben Sless <ben.sless@gmail.com>
 ;; URL: https://www.github.com/bsless/clj-decompiler.el
+;; Package-Version: 20220103.1746
+;; Package-Commit: 8c0c53f87e6e33f2be7e7aff6095eb586b50be1a
 ;; Keywords: languages, clojure, cider, java, decompiler
 ;; Package-Requires: ((emacs "26.1") (clojure-mode "5.12") (cider "1.2.0"))
 ;; Version: 0.0.1
