@@ -4,10 +4,10 @@ Source:  https://github.com/blahgeek/emacs-pr-review.git
 
 Updating /mnt/store/melpa/working/pr-review/
 Checking out origin/HEAD
-Checking out ed083924961fddd89bfb6eb4175a60f9e80fd3dc
+Checking out 0bf87e491b8130d815ef220ac5d5c4fa086e7372
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/pr-review/
-  to /tmp/pr-reviewggNz0D/pr-review-20220213.652
+  to /tmp/pr-reviewyHrM31/pr-review-20220213.1320
     pr-review-action.el -> pr-review-action.el
     pr-review-api.el -> pr-review-api.el
     pr-review-common.el -> pr-review-common.el
@@ -16,37 +16,39 @@ Copying files (->) and directories (=>)
     pr-review-render.el -> pr-review-render.el
     pr-review.el -> pr-review.el
     graphql => graphql
-Created pr-review-20220213.652.tar containing:
-  pr-review-20220213.652/
-  pr-review-20220213.652/graphql/
-  pr-review-20220213.652/graphql/add-comment.graphql
-  pr-review-20220213.652/graphql/add-review-comment-reply.graphql
-  pr-review-20220213.652/graphql/add-review.graphql
-  pr-review-20220213.652/graphql/close-pr.graphql
-  pr-review-20220213.652/graphql/get-assignable-users.graphql
-  pr-review-20220213.652/graphql/get-pull-request.graphql
-  pr-review-20220213.652/graphql/merge-pr.graphql
-  pr-review-20220213.652/graphql/reopen-pr.graphql
-  pr-review-20220213.652/graphql/request-reviews.graphql
-  pr-review-20220213.652/graphql/resolve-review-thread.graphql
-  pr-review-20220213.652/graphql/search-prs.graphql
-  pr-review-20220213.652/graphql/submit-review.graphql
-  pr-review-20220213.652/graphql/unresolve-review-thread.graphql
-  pr-review-20220213.652/graphql/update-comment.graphql
-  pr-review-20220213.652/graphql/update-pr.graphql
-  pr-review-20220213.652/graphql/update-review-comment.graphql
-  pr-review-20220213.652/graphql/update-review.graphql
-  pr-review-20220213.652/pr-review-action.el
-  pr-review-20220213.652/pr-review-api.el
-  pr-review-20220213.652/pr-review-common.el
-  pr-review-20220213.652/pr-review-input.el
-  pr-review-20220213.652/pr-review-notification.el
-  pr-review-20220213.652/pr-review-pkg.el
-  pr-review-20220213.652/pr-review-render.el
-  pr-review-20220213.652/pr-review.el
-Built pr-review in 4.612s, finished at 2022-02-13T11:41:48+0000
+Created pr-review-20220213.1320.tar containing:
+  pr-review-20220213.1320/
+  pr-review-20220213.1320/graphql/
+  pr-review-20220213.1320/graphql/add-comment.graphql
+  pr-review-20220213.1320/graphql/add-review-comment-reply.graphql
+  pr-review-20220213.1320/graphql/add-review.graphql
+  pr-review-20220213.1320/graphql/close-pr.graphql
+  pr-review-20220213.1320/graphql/get-assignable-users.graphql
+  pr-review-20220213.1320/graphql/get-pull-request.graphql
+  pr-review-20220213.1320/graphql/merge-pr.graphql
+  pr-review-20220213.1320/graphql/reopen-pr.graphql
+  pr-review-20220213.1320/graphql/request-reviews.graphql
+  pr-review-20220213.1320/graphql/resolve-review-thread.graphql
+  pr-review-20220213.1320/graphql/search-prs.graphql
+  pr-review-20220213.1320/graphql/submit-review.graphql
+  pr-review-20220213.1320/graphql/unresolve-review-thread.graphql
+  pr-review-20220213.1320/graphql/update-comment.graphql
+  pr-review-20220213.1320/graphql/update-pr.graphql
+  pr-review-20220213.1320/graphql/update-review-comment.graphql
+  pr-review-20220213.1320/graphql/update-review.graphql
+  pr-review-20220213.1320/pr-review-action.el
+  pr-review-20220213.1320/pr-review-api.el
+  pr-review-20220213.1320/pr-review-common.el
+  pr-review-20220213.1320/pr-review-input.el
+  pr-review-20220213.1320/pr-review-notification.el
+  pr-review-20220213.1320/pr-review-pkg.el
+  pr-review-20220213.1320/pr-review-render.el
+  pr-review-20220213.1320/pr-review.el
+Built pr-review in 2.263s, finished at 2022-02-13T14:38:27+0000
  ✓ Success:
+4.0K -rw-r--r-- 1 root root  473 Feb 13 14:38 packages/pr-review-20220213.1320.entry
+140K -rw-r--r-- 1 root root 140K Feb 13 14:38 packages/pr-review-20220213.1320.tar
 4.0K -rw-r--r-- 1 root root  472 Feb 13 11:41 packages/pr-review-20220213.652.entry
 132K -rw-r--r-- 1 root root 130K Feb 13 11:41 packages/pr-review-20220213.652.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 13 11:41 packages/pr-review-badge.svg
-4.0K -rw-r--r-- 1 root root   27 Feb 13 11:41 packages/pr-review-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Feb 13 14:38 packages/pr-review-badge.svg
+4.0K -rw-r--r-- 1 root root   27 Feb 13 14:38 packages/pr-review-readme.txt

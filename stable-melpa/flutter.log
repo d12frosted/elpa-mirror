@@ -4,27 +4,29 @@ Source:  https://github.com/amake/flutter.el.git
 
 Updating /mnt/store/melpa/working/flutter/
 Checking out origin/HEAD
-Checking out 81c524a43c46f4949ccde3b57e2a6ea359f712f4
+Checking out 8cc0507cc6619cb9ec236c4eca7417ac081f1468
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flutter/
-  to /tmp/fluttervguM2f/flutter-20210914.17
+  to /tmp/flutter35LCaA/flutter-20220213.1334
     flutter.el -> flutter.el
     flutter-project.el -> flutter-project.el
     flutter-l10n.el -> flutter-l10n.el
-Created flutter-20210914.17.tar containing:
-  flutter-20210914.17/
-  flutter-20210914.17/flutter-l10n.el
-  flutter-20210914.17/flutter-pkg.el
-  flutter-20210914.17/flutter-project.el
-  flutter-20210914.17/flutter.el
-Built flutter in 4.186s, finished at 2022-02-13T11:12:32+0000
+Created flutter-20220213.1334.tar containing:
+  flutter-20220213.1334/
+  flutter-20220213.1334/flutter-l10n.el
+  flutter-20220213.1334/flutter-pkg.el
+  flutter-20220213.1334/flutter-project.el
+  flutter-20220213.1334/flutter.el
+Built flutter in 4.412s, finished at 2022-02-13T14:08:20+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  316 Feb 13 11:12 packages/flutter-20210914.17.entry
  32K -rw-r--r-- 1 root root  30K Feb 13 11:12 packages/flutter-20210914.17.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 13 11:12 packages/flutter-badge.svg
+4.0K -rw-r--r-- 1 root root  318 Feb 13 14:08 packages/flutter-20220213.1334.entry
+ 32K -rw-r--r-- 1 root root  30K Feb 13 14:08 packages/flutter-20220213.1334.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 13 14:08 packages/flutter-badge.svg
 4.0K -rw-r--r-- 1 root root 2.6K Feb 13 11:12 packages/flutter-l10n-flycheck-20200221.1415.el
 4.0K -rw-r--r-- 1 root root  397 Feb 13 11:12 packages/flutter-l10n-flycheck-20200221.1415.entry
 4.0K -rw-r--r-- 1 root root 1.2K Feb 13 11:12 packages/flutter-l10n-flycheck-badge.svg
 4.0K -rw-r--r-- 1 root root  123 Feb 13 11:12 packages/flutter-l10n-flycheck-readme.txt
-4.0K -rw-r--r-- 1 root root  689 Feb 13 11:12 packages/flutter-l10n-flycheck.log
-4.0K -rw-r--r-- 1 root root  142 Feb 13 11:12 packages/flutter-readme.txt
+4.0K -rw-r--r-- 1 root root  233 Feb 13 14:08 packages/flutter-l10n-flycheck.log
+4.0K -rw-r--r-- 1 root root  142 Feb 13 14:08 packages/flutter-readme.txt
