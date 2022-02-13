@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.8.2
-;; Package-Version: 20220212.1751
-;; Package-Commit: 3d5eaec4c37410d5d1dd51a75b22cdd930ac1709
+;; Package-Version: 20220213.355
+;; Package-Commit: 766dc1c79c0e1e40d1a6eb096f5e6c32e49e0dad
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -719,11 +719,11 @@ text properties.  To show `loophole-mode-lighter' with face,
 following customization form.  Note that the following form
 eliminates help echos and clickable buttons.
   (setq mode-line-modes
-        \\='(\"%[\" \"(\"
-          mode-name
-          mode-line-process
-          minor-mode-alist
-          \"%n\" \")\" \"%]\" \" \"))"
+        (list \"%[\" \"(\"
+              \\='mode-name
+              \\='mode-line-process
+              \\='minor-mode-alist
+              \"%n\" \")\" \"%]\" \" \"))"
   :group 'loophole
   :type 'boolean)
 
@@ -906,9 +906,10 @@ keys will be prompetd."
     (let ((timer (run-with-idle-timer
                   loophole-read-key-limit-time
                   t
-                  (lambda () (if read-keys (throw 'read-keys read-keys))))))
+                  (lambda ()
+                    (if read-keys (throw 'loophole-read-keys read-keys))))))
       (unwind-protect
-          (let ((key (catch 'read-keys
+          (let ((key (catch 'loophole-read-keys
                        (setq read-keys (vector (read-key prompt)))
                        (while t
                          (if (and loophole-allow-keyboard-quit
