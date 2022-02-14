@@ -1,0 +1,19 @@
+(helm-twitch .
+	     [(20220207 1314)
+	      ((dash
+		(2 11 0))
+	       (helm
+		(1 5))
+	       (emacs
+		(24))
+	       (twitch-api
+		(20210809 1641))
+	       (streamlink
+		(20210811 1429)))
+	      "Navigate Twitch.tv via `helm'" single
+	      ((:commit . "533216a1add8acc2d6f2b4039c67528b97d06549")
+	       (:authors
+		("Aaron Jacobs" . "atheriel@gmail.com"))
+	       (:maintainer "Aaron Jacobs" . "atheriel@gmail.com")
+	       (:keywords "helm" "twitch" "games")
+	       (:url . "https://github.com/BenediktBroich/helm-twitch"))])

@@ -1,0 +1,13 @@
+(chezmoi .
+	 [(20220213 2147)
+	  ((emacs
+	    (26 1))
+	   (magit
+	    (3 0 0)))
+	  "A package for interacting with chezmoi" single
+	  ((:commit . "2b85c471817c40cfe913415f79a2b3e3884a551a")
+	   (:authors
+	    ("Harrison Pielke-Lombardo"))
+	   (:maintainer "Harrison Pielke-Lombardo")
+	   (:keywords "vc")
+	   (:url . "http://www.github.com/tuh8888/chezmoi.el"))])

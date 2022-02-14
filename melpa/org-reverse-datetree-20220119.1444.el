@@ -5,7 +5,7 @@
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
 ;; Version: 0.3.6
 ;; Package-Version: 20220119.1444
-;; Package-Commit: 341e829a730dd9eb1c14e2588fecb3ad7361f989
+;; Package-Commit: a4191ee1d8d98bad392d90275dcb704d8c73cfc2
 ;; Package-Requires: ((emacs "26.1") (dash "2.12") (org "9.3"))
 ;; Keywords: outlines
 ;; URL: https://github.com/akirak/org-reverse-datetree
