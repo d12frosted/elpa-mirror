@@ -3,8 +3,8 @@
 ;; Author: Harrison Pielke-Lombardo
 ;; Maintainer: Harrison Pielke-Lombardo
 ;; Version: 1.0.0
-;; Package-Version: 20220213.2147
-;; Package-Commit: 2b85c471817c40cfe913415f79a2b3e3884a551a
+;; Package-Version: 20220214.311
+;; Package-Commit: e037884556aec7f4f6b830a6f44b1dcb51120d40
 ;; Package-Requires: ((emacs "26.1") (magit "3.0.0"))
 ;; Homepage: http://www.github.com/tuh8888/chezmoi.el
 ;; Keywords: vc
@@ -110,7 +110,7 @@
   (let* ((to-find (chezmoi--unchezmoi-source-file-name source-file))
          (potential-targets (cl-remove-if-not (lambda (f)
                                                 (let* ((dir (string-replace "~" "~/.local/share/chezmoi" (file-name-directory f)))
-                                                       (base (string-replace "." "" (file-name-base f)))
+                                                       (base (file-name-base f))
                                                        (ext (file-name-extension f))
                                                        (corrected-f (file-name-concat dir (if ext (file-name-with-extension base ext) base)))
                                                        (trying (expand-file-name corrected-f)))

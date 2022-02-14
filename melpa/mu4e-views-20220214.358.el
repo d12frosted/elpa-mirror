@@ -3,8 +3,8 @@
 ;; Author: Boris Glavic <lordpretzel@gmail.com>
 ;; Maintainer: Boris Glavic <lordpretzel@gmail.com>
 ;; Version: 0.3
-;; Package-Version: 20211222.1457
-;; Package-Commit: a1d7268eb2b737ee69b5bdf45aacbc30e50204fe
+;; Package-Version: 20220214.358
+;; Package-Commit: 84a17bb3d725cb8b37cd700a6b88fbf98f5ca094
 ;; Package-Requires: ((emacs "26.1") (xwidgets-reuse "0.2") (ht "2.2") (esxml "20210323.1102"))
 ;; Homepage: https://github.com/lordpretzel/mu4e-views
 ;; Keywords: mail
@@ -97,6 +97,16 @@
     ("pdf" . (:viewfunc mu4e-view-pdf-view-message
                         :is-view-window-p mu4e-views-pdf-is-view-window-p
                         :create-view-window mu4e-views-text-create-view-window))
+    ;; open as pdf file with remote content
+    ("pdf-nonblock" . (:viewfunc mu4e-view-pdf-view-message
+                        :is-view-window-p mu4e-views-pdf-is-view-window-p
+                        :create-view-window mu4e-views-text-create-view-window
+                        :filter-html nil))
+    ;; open as pdf file with remote content
+    ("pdf-block" . (:viewfunc mu4e-view-pdf-view-message
+                        :is-view-window-p mu4e-views-pdf-is-view-window-p
+                        :create-view-window mu4e-views-text-create-view-window
+                        :filter-html t))
     ;; open with browser
 	("browser" . (:viewfunc mu4e-views-view-in-browser
                             :no-view-window t))
@@ -173,7 +183,7 @@ determine which view method to use for an email.  The predicates can refer to a
 variable msg to access information about the email to be shown.  This is a
 `mu4e' message plist."
   :group 'mu4e-views
-  :type 'alist)
+  :type '(alist :key-type function :value-type string))
 
 (defcustom mu4e-views-html-to-pdf-command
   "html-pdf %h %p"
@@ -295,6 +305,26 @@ by applying itself to the children of the current node using
 `esxml-tree-map'."
   :group 'mu4e-views
   :type '(list function))
+
+(defcustom mu4e-views-file-open-function
+  'open
+  "Function to use to open attachments.
+
+If `mu4e-views-mu4e-view-open-attachment' is called with a prefix
+argument, then this function is used."
+  :group 'mu4e-views
+  :type 'function)
+
+(defcustom mu4e-views-export-alist
+  '((pdf . mu4e-views-export-to-pdf)
+    (html . mu4e-views-export-to-html))
+  "An alist of cons cells mapping export file formats to functions.
+
+These functions are used to export email messages into a
+particular format. The functions should take a single parameters,
+the `mu4e' message plist."
+  :group 'mu4e-views
+  :type '(alist :key-type symbol :value-type function))
 
 (defvar mu4e-views--mu4e-select-view-msg-method-history
   nil
@@ -671,6 +701,13 @@ in WIN."
     (switch-to-buffer
      (find-file-noselect pdf) t t)))
 
+(defun mu4e-views--html-to-pdf (html-file pdf-file)
+  "Export HTML-FILE as pdf PDF-FILE."
+  (let ((cmd (format-spec mu4e-views-html-to-pdf-command
+                          (format-spec-make ?h html-file ?p pdf-file))))
+    (message "Execute: %s" cmd)
+    (shell-command cmd nil nil)))
+
 (defun mu4e-views-pdf-is-view-window-p (window)
   "Check whether WINDOW is the mu4e-view window for the `pdf' view method."
   (let ((buf (window-buffer window)))
@@ -964,7 +1001,7 @@ determine whether to filter or not."
 	  (with-temp-buffer
 		(setq before-save-hook nil)
 		(setq after-save-hook nil)
-		(insert (concat "<head><meta charset=\"UTF-8\">" mu4e-views-mu4e-html-email-header-style  "</head>\n"))
+		(insert (concat "<html><head><meta charset=\"UTF-8\">" mu4e-views-mu4e-html-email-header-style  "</head>\n"))
         ;; insert mu4e-views info header
         (when mu4e-views-inject-email-information-into-html
           (insert (funcall mu4e-views-mu4e-email-headers-as-html-function msg)))
@@ -1382,6 +1419,49 @@ The window to switch to is determined based on
       (always-switch-to-headers (mu4e~headers-select-window)))))
 
 ;; ********************************************************************************
+;; functions for exporting email
+(defun mu4e-views-export-email-dispatch (format msg file)
+  (let ((exporter (alist-get format mu4e-views-export-alist)))
+    (funcall exporter msg file)))
+
+(defun mu4e-views-export-to-pdf (msg file)
+  "Exports MSG to FILE as a pdf document."
+  (let* ((html (mu4e-views-mu4e~write-body-and-headers-to-html msg -1 nil)))
+    (mu4e-views--html-to-pdf html file)))
+
+(defun mu4e-views-export-to-html (msg file)
+  "Exports MSG to FILE as an html document."
+  (let* ((html (mu4e-views-mu4e~write-body-and-headers-to-html msg -1 nil)))
+    (copy-file html file)))
+
+(defun mu4e-views-export-msg-action (msg)
+  "Export current message as a file."
+  (let* ((format (mu4e-views-completing-read
+                 "Select export file format: "
+                 (--map (symbol-name (car it)) mu4e-views-export-alist)
+                 :require-match t))
+         (formatsym (intern format))
+         (default-file-name (concat
+                             (replace-regexp-in-string "[^[:alnum:]_-]" "_"
+                                                       (concat
+                                                        (caar (mu4e-message-field msg :from))
+                                                        (mu4e-message-field msg :subject)))
+                                                       "."
+                                                       format))
+         (file-name
+          (read-file-name
+           "Export to file: "
+           "~/Downloads/"
+           default-file-name
+           nil
+           default-file-name
+           (lambda (fname)
+             (and
+              (not (directory-name-p fname))
+              (string-suffix-p (concat "." format) fname))))))
+    (mu4e-views-export-email-dispatch formatsym msg file-name)))
+
+;; ********************************************************************************
 ;; helpers for mu4e-headers view.
 
 ;;;###autoload
@@ -1524,9 +1604,9 @@ urls in `mu4e-views' xwidget message view."
 			                  :caller 'mu4e-views-mu4e-select-url-from-message))
 
 ;;;###autoload
-(defun mu4e-views-mu4e-open-attachment ()
+(defun mu4e-views-mu4e-open-attachment (arg)
   "Select an attached from a mu4e message and open it."
-  (interactive)
+  (interactive "P")
   (let* ((attachments (mapcar (lambda (k)
                                 (list k
                                       (mu4e~view-get-attach
@@ -1617,7 +1697,7 @@ Passes on the message stored in `mu4e-views--current-mu4e-message'."
   (interactive)
   (mu4e-views-mu4e-create-mu4e-attachment-table-if-need-by
    mu4e-views--current-mu4e-message)
-  (mu4e-views-mu4e-open-attachment))
+  (mu4e-views-mu4e-open-attachment nil))
 
 ;;;###autoload
 (defun mu4e-views-mu4e-view-go-to-url ()
