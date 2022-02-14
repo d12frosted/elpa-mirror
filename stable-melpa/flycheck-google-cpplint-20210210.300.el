@@ -6,7 +6,7 @@
 ;; Maintainer: Jen-Chieh Shen <jcs090218@gmail.com>
 ;; URL: https://github.com/flycheck/flycheck-google-cpplint/
 ;; Package-Version: 20210210.300
-;; Package-Commit: 8b68168db13df4e393d65ca8c0464019dcc45745
+;; Package-Commit: 65e7d90594b5f624702b3cf6e8867407419980b7
 ;; Version: 1.0.2
 ;; Keywords: flycheck, C, C++
 ;; Package-Requires: ((flycheck "0.20-cvs1"))

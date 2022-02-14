@@ -17,6 +17,7 @@ The themes share the following customization variables:
     modus-themes-mixed-fonts                    (boolean)
     modus-themes-subtle-line-numbers            (boolean)
     modus-themes-variable-pitch-ui              (boolean)
+    modus-themes-box-buttons                    (choice)
     modus-themes-completions                    (choice)
     modus-themes-diffs                          (choice)
     modus-themes-fringes                        (choice)

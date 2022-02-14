@@ -8,7 +8,7 @@
 ;; Keyword: fuzzy matching
 ;; Version: 1.3.0
 ;; Package-Version: 20211004.1429
-;; Package-Commit: 5450cf3fae023cb652ef7391d96d9969eadf3866
+;; Package-Commit: 7b208f99612a359690da76efdcce7196fef6a65a
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs-elpa/liquidmetal
 

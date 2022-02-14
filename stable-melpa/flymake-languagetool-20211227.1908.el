@@ -8,7 +8,7 @@
 ;; Keyword: grammar check
 ;; Version: 0.2.0
 ;; Package-Version: 20211227.1908
-;; Package-Commit: a43fd0d92dbec5f1d4129b30ab0ed917e0864129
+;; Package-Commit: 107fd8231d130bc63f1d4cdcca3622e8c667f22e
 ;; Package-Requires: ((emacs "27.1") (s "1.9.0"))
 ;; URL: https://github.com/emacs-languagetool/flymake-languagetool
 
