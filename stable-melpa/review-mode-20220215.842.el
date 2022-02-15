@@ -1,10 +1,10 @@
 ;;; review-mode.el --- major mode for ReVIEW -*- lexical-binding: t -*-
-;; Copyright 2007-2021 Kenshi Muto <kmuto@kmuto.jp>
+;; Copyright 2007-2022 Kenshi Muto <kmuto@kmuto.jp>
 
 ;; Author: Kenshi Muto <kmuto@kmuto.jp>
 ;; URL: https://github.com/kmuto/review-el
-;; Package-Version: 20210516.503
-;; Package-Commit: 4f64f0ce1fe3a59389a1462dc26d6ba89d44d51c
+;; Package-Version: 20220215.842
+;; Package-Commit: f08ef20d9ff4f03a00a8c24dae9ce416da0d9d1c
 
 ;;; Commentary:
 
@@ -90,7 +90,7 @@
 (declare-function skk-mode "skk-mode")
 (declare-function whitespace-mode "whitespace-mode")
 
-(defconst review-version "1.17"
+(defconst review-version "1.18"
   "編集モードバージョン")
 
 ;;;; Custom Variables
@@ -445,6 +445,7 @@
     ("翻訳者" . "翻訳注")
     ("監訳" . "監注")
     ("著者" . "注")
+    ("DTP" . "注")
     ("kmuto" . "注") ; ユーザーの名前で置き換え
     )
   "編集モードの名前リスト")
