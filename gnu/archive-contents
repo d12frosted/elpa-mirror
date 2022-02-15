@@ -874,13 +874,14 @@
 		      ("William Xu" . "william.xwl@gmail.com"))
 		     (:maintainer "William Xu" . "william.xwl@gmail.com"))])
  (elisp-benchmarks .
-		   [(1 13)
+		   [(1 14)
 		    nil "elisp benchmarks collection" tar
 		    ((:keywords "languages" "lisp")
 		     (:maintainer "Andrea Corallo" . "akrl@sdf.org")
 		     (:authors
 		      ("Andrea Corallo" . "akrl@sdf.org"))
-		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html"))])
+		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
+		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (embark .
 	 [(0 15)
 	  ((emacs
@@ -1968,7 +1969,7 @@
 	     (:authors
 	      ("Tyler Grinn" . "tylergrinn@gmail.com")))])
  (org-remark .
-	     [(1 0 1)
+	     [(1 0 2)
 	      ((emacs
 		(27 1))
 	       (org
@@ -1979,7 +1980,7 @@
 	       (:maintainer "Noboru Ota" . "me@nobiot.com")
 	       (:authors
 		("Noboru Ota" . "me@nobiot.com"))
-	       (:commit . "eedfeb4fa629481c5d98a6a3144cf9ecb3280cca"))])
+	       (:commit . "1051b649585a65db89948b5b841a3e4357d26c28"))])
  (org-transclusion .
 		   [(1 2 0)
 		    ((emacs
@@ -3089,14 +3090,15 @@
 	       ("Andrew Hyatt" . "ahyatt@gmail.com"))
 	      (:keywords "communication" "websocket" "server"))])
  (which-key .
-	    [(3 5 1)
+	    [(3 6 0)
 	     ((emacs
 	       (24 4)))
 	     "Display available keybindings in popup" tar
 	     ((:url . "https://github.com/justbur/emacs-which-key")
 	      (:maintainer "Justin Burkett" . "justin@burkett.cc")
 	      (:authors
-	       ("Justin Burkett" . "justin@burkett.cc")))])
+	       ("Justin Burkett" . "justin@burkett.cc"))
+	      (:commit . "1217db8c6356659e67b35dedd9f5f260c06f6e99"))])
  (windower .
 	   [(0 0 1)
 	    ((emacs

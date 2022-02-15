@@ -21,8 +21,7 @@ Table of Contents
   Org-remark lets you highlight and annotate any text file with using
   Org mode.
 
-  A user manual is available [online] (Info node will be available when
-  Org-remark is added to ELPA/MELPA) or Emacs in-system as an Info node
+  A user manual is available [online] or Emacs in-system as an Info node
   `(org-remark)': (`C-h i' and find the `Org-remark' node).
 
   For installation and minimum configuration, refer to [Installation]
@@ -56,11 +55,10 @@ Table of Contents
 
   This package is available on:
 
+  • [GNU-ELPA] (releases only; equivalent to MELPA-Stable)
   • [GNU-devel ELPA] (unreleased development branch; equivalent to
     MELPA)
 
-  It will soon be available on GNU ELPA (releases only; equivalent to
-  MELPA-Stable) in one of the next updates.
 
   GNU ELPA should be already set up in your Emacs by default. If you
   wish to add GNU-devel ELPA, simply add its URL to `package-archives'
@@ -103,6 +101,8 @@ Table of Contents
   └────
 
 
+[GNU-ELPA] <https://elpa.gnu.org/packages/org-remark.html>
+
 [GNU-devel ELPA] <https://elpa.gnu.org/devel/org-remark.html>
 
 
@@ -112,11 +112,11 @@ Table of Contents
   Create issues, discussion, and/or pull requests in the GitHub
   repository. All welcome.
 
-  Org-remark is planned to be submitted to GNU ELPA and thus copyrighted
-  by the [Free Software Foundation] (FSF). This means that anyone who is
-  making a substantive code contribution will need to "assign the
-  copyright for your contributions to the FSF so that they can be
-  included in GNU Emacs" ([Org Mode website]).
+  Org-remark is available on GNU ELPA and thus copyrighted by the [Free
+  Software Foundation] (FSF). This means that anyone who is making a
+  substantive code contribution will need to "assign the copyright for
+  your contributions to the FSF so that they can be included in GNU
+  Emacs" ([Org Mode website]).
 
   Thank you.
 
