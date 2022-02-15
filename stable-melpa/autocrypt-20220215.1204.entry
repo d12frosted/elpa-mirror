@@ -1,11 +1,11 @@
 (autocrypt .
-	   [(20220201 2102)
+	   [(20220215 1204)
 	    ((emacs
 	      (24 3)))
 	    "Autocrypt implementation" tar
-	    ((:commit . "8965ce57c7d206e5d28167a37c11b9713576b009")
+	    ((:commit . "00b87a82c4561b017052974eecd93c79b6790841")
 	     (:authors
 	      ("Philip Kaludercic" . "philipk@posteo.net"))
-	     (:maintainer "Philip Kaludercic" . "philipk@posteo.net")
+	     (:maintainer "Philip Kaludercic" . "~pkal/public-inbox@lists.sr.ht")
 	     (:keywords "comm")
 	     (:url . "https://git.sr.ht/~pkal/autocrypt"))])
