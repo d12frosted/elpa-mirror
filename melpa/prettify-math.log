@@ -3,10 +3,21 @@ Fetcher: git
 Source:  https://gitee.com/shaqxu/prettify-math.git
 
 Updating /mnt/store/melpa/working/prettify-math/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://gitee.com/shaqxu/prettify-math.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 5bdb9a8af7593d3a38492a618aedc545278fe8a1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/prettify-math/
+  to /tmp/prettify-mathN60dit/prettify-math-20220101.549
+    prettify-math.el -> prettify-math.el
+    mathjax-jsonrpc.js -> mathjax-jsonrpc.js
+Created prettify-math-20220101.549.tar containing:
+  prettify-math-20220101.549/
+  prettify-math-20220101.549/mathjax-jsonrpc.js
+  prettify-math-20220101.549/prettify-math-pkg.el
+  prettify-math-20220101.549/prettify-math.el
+Built prettify-math in 7.368s, finished at 2022-02-15T01:41:59+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  441 Feb 15 01:41 packages/prettify-math-20220101.549.entry
+ 32K -rw-r--r-- 1 root root  30K Feb 15 01:41 packages/prettify-math-20220101.549.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 15 01:41 packages/prettify-math-badge.svg
+4.0K -rw-r--r-- 1 root root  722 Feb 15 01:41 packages/prettify-math-readme.txt
