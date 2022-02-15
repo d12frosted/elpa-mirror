@@ -1,6 +1,8 @@
 ;;; clang-format.el --- Format code using clang-format  -*- lexical-binding: t; -*-
 
 ;; Keywords: tools, c
+;; Package-Version: 20191106.950
+;; Package-Commit: e48ff8ae18dc7ab6118c1f6752deb48cb1fc83ac
 ;; Package-Requires: ((cl-lib "0.3"))
 ;; SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
