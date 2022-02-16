@@ -4,26 +4,28 @@ Source:  https://github.com/emacscollective/borg.git
 
 Updating /mnt/store/melpa/working/borg/
 Checking out origin/HEAD
-Checking out e59d2cbc92d58eedbbabb7983506db9cf8fe493c
+Checking out ee4491481955eb49de07693b58e00a5ff5908d0b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/borg/
-  to /tmp/borgEAdyDv/borg-20220214.2133
+  to /tmp/borgwCV2iP/borg-20220216.1925
     borg-elpa.el -> borg-elpa.el
     borg.el -> borg.el
     borg.mk -> borg.mk
   ! docs/borg.texi -> borg.texi
-Generating /tmp/borgEAdyDv/borg-20220214.2133/borg.info
-Created borg-20220214.2133.tar containing:
-  borg-20220214.2133/
-  borg-20220214.2133/borg-elpa.el
-  borg-20220214.2133/borg-pkg.el
-  borg-20220214.2133/borg.el
-  borg-20220214.2133/borg.info
-  borg-20220214.2133/borg.mk
-  borg-20220214.2133/dir
-Built borg in 8.669s, finished at 2022-02-16T13:33:55+0000
+Generating /tmp/borgwCV2iP/borg-20220216.1925/borg.info
+Created borg-20220216.1925.tar containing:
+  borg-20220216.1925/
+  borg-20220216.1925/borg-elpa.el
+  borg-20220216.1925/borg-pkg.el
+  borg-20220216.1925/borg.el
+  borg-20220216.1925/borg.info
+  borg-20220216.1925/borg.mk
+  borg-20220216.1925/dir
+Built borg in 9.002s, finished at 2022-02-16T19:27:33+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  397 Feb 16 13:33 packages/borg-20220214.2133.entry
-120K -rw-r--r-- 1 root root 120K Feb 16 13:33 packages/borg-20220214.2133.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 16 13:33 packages/borg-badge.svg
-4.0K -rw-r--r-- 1 root root  462 Feb 16 13:33 packages/borg-readme.txt
+4.0K -rw-r--r-- 1 root root  397 Feb 16 16:30 packages/borg-20220214.2133.entry
+120K -rw-r--r-- 1 root root 120K Feb 16 16:30 packages/borg-20220214.2133.tar
+4.0K -rw-r--r-- 1 root root  397 Feb 16 19:27 packages/borg-20220216.1925.entry
+120K -rw-r--r-- 1 root root 120K Feb 16 19:27 packages/borg-20220216.1925.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 19:27 packages/borg-badge.svg
+4.0K -rw-r--r-- 1 root root  462 Feb 16 19:27 packages/borg-readme.txt

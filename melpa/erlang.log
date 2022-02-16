@@ -4,10 +4,10 @@ Source:  https://github.com/erlang/otp.git
 
 Updating /mnt/store/melpa/working/erlang/
 Checking out origin/HEAD
-Checking out eccc556e79f315d1f87c10fb46f2c4af50a63f20
+Checking out 98b6ec065782ed17010fb2548764a72f540ef9ab
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/erlang/
-  to /tmp/erlangK8M7C5/erlang-20220215.1844
+  to /tmp/erlang13THHN/erlang-20220215.1844
   ! lib/tools/emacs/erlang-edoc.el -> erlang-edoc.el
   ! lib/tools/emacs/erlang-eunit.el -> erlang-eunit.el
   ! lib/tools/emacs/erlang-flymake.el -> erlang-flymake.el
@@ -30,9 +30,9 @@ Created erlang-20220215.1844.tar containing:
   erlang-20220215.1844/erlang-test.el
   erlang-20220215.1844/erlang.el
   erlang-20220215.1844/erldoc.el
-Built erlang in 31.050s, finished at 2022-02-16T13:47:23+0000
+Built erlang in 15.526s, finished at 2022-02-16T19:39:50+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  259 Feb 16 13:47 packages/erlang-20220215.1844.entry
-432K -rw-r--r-- 1 root root 430K Feb 16 13:47 packages/erlang-20220215.1844.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 16 13:47 packages/erlang-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Feb 16 13:47 packages/erlang-readme.txt
+4.0K -rw-r--r-- 1 root root  259 Feb 16 19:39 packages/erlang-20220215.1844.entry
+432K -rw-r--r-- 1 root root 430K Feb 16 19:39 packages/erlang-20220215.1844.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 19:39 packages/erlang-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Feb 16 19:39 packages/erlang-readme.txt
