@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 71dd984aa45dccea1cb797d336507eafa81b5bf4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/auto-complete/
-  to /tmp/auto-completeL4hDYh/auto-complete-20220105.439
+  to /tmp/auto-completeqPyqMj/auto-complete-20220105.439
     auto-complete-config.el -> auto-complete-config.el
     auto-complete-pkg.el -> auto-complete-pkg.el
     auto-complete.el -> auto-complete.el
@@ -50,64 +50,64 @@ Created auto-complete-20220105.439.tar containing:
   auto-complete-20220105.439/dict/ts-mode
   auto-complete-20220105.439/dict/tuareg-mode
   auto-complete-20220105.439/dict/verilog-mode
-Built auto-complete in 16.294s, finished at 2022-02-15T15:42:53+0000
+Built auto-complete in 11.621s, finished at 2022-02-16T01:47:30+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  411 Feb 15 15:42 packages/auto-complete-20220105.439.entry
-332K -rw-r--r-- 1 root root 330K Feb 15 15:42 packages/auto-complete-20220105.439.tar
-8.0K -rw-r--r-- 1 root root 7.4K Feb 15 15:42 packages/auto-complete-auctex-20140223.1758.el
-4.0K -rw-r--r-- 1 root root  349 Feb 15 15:42 packages/auto-complete-auctex-20140223.1758.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-auctex-badge.svg
-4.0K -rw-r--r-- 1 root root  103 Feb 15 15:42 packages/auto-complete-auctex-readme.txt
-4.0K -rw-r--r-- 1 root root  695 Feb 15 15:42 packages/auto-complete-auctex.log
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-badge.svg
-8.0K -rw-r--r-- 1 root root 6.3K Feb 15 15:42 packages/auto-complete-c-headers-20150912.323.el
-4.0K -rw-r--r-- 1 root root  366 Feb 15 15:42 packages/auto-complete-c-headers-20150912.323.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-c-headers-badge.svg
-4.0K -rw-r--r-- 1 root root   82 Feb 15 15:42 packages/auto-complete-c-headers-readme.txt
-4.0K -rw-r--r-- 1 root root  713 Feb 15 15:42 packages/auto-complete-c-headers.log
-4.0K -rw-r--r-- 1 root root 3.7K Feb 15 15:42 packages/auto-complete-chunk-20140225.946.el
-4.0K -rw-r--r-- 1 root root  357 Feb 15 15:42 packages/auto-complete-chunk-20140225.946.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-chunk-badge.svg
-4.0K -rw-r--r-- 1 root root  282 Feb 15 15:42 packages/auto-complete-chunk-readme.txt
-4.0K -rw-r--r-- 1 root root  680 Feb 15 15:42 packages/auto-complete-chunk.log
- 16K -rw-r--r-- 1 root root  16K Feb 15 15:42 packages/auto-complete-clang-20140409.752.el
-4.0K -rw-r--r-- 1 root root  452 Feb 15 15:42 packages/auto-complete-clang-20140409.752.entry
- 24K -rw-r--r-- 1 root root  24K Feb 15 15:42 packages/auto-complete-clang-async-20130526.1514.el
-4.0K -rw-r--r-- 1 root root  232 Feb 15 15:42 packages/auto-complete-clang-async-20130526.1514.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-clang-async-badge.svg
-4.0K -rw-r--r-- 1 root root  129 Feb 15 15:42 packages/auto-complete-clang-async-readme.txt
-4.0K -rw-r--r-- 1 root root  735 Feb 15 15:42 packages/auto-complete-clang-async.log
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-clang-badge.svg
-4.0K -rw-r--r-- 1 root root  128 Feb 15 15:42 packages/auto-complete-clang-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-clang.log
-4.0K -rw-r--r-- 1 root root 1.6K Feb 15 15:42 packages/auto-complete-distel-20180827.1344.el
-4.0K -rw-r--r-- 1 root root  461 Feb 15 15:42 packages/auto-complete-distel-20180827.1344.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-distel-badge.svg
-4.0K -rw-r--r-- 1 root root  422 Feb 15 15:42 packages/auto-complete-distel-readme.txt
-4.0K -rw-r--r-- 1 root root  692 Feb 15 15:42 packages/auto-complete-distel.log
-8.0K -rw-r--r-- 1 root root 7.8K Feb 15 15:42 packages/auto-complete-exuberant-ctags-20140320.724.el
-4.0K -rw-r--r-- 1 root root  429 Feb 15 15:42 packages/auto-complete-exuberant-ctags-20140320.724.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-exuberant-ctags-badge.svg
-4.0K -rw-r--r-- 1 root root  506 Feb 15 15:42 packages/auto-complete-exuberant-ctags-readme.txt
-4.0K -rw-r--r-- 1 root root  762 Feb 15 15:42 packages/auto-complete-exuberant-ctags.log
- 36K -rw-r--r-- 1 root root  34K Feb 15 15:42 packages/auto-complete-nxml-20140221.458.el
-4.0K -rw-r--r-- 1 root root  458 Feb 15 15:42 packages/auto-complete-nxml-20140221.458.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-nxml-badge.svg
-4.0K -rw-r--r-- 1 root root  148 Feb 15 15:42 packages/auto-complete-nxml-readme.txt
-4.0K -rw-r--r-- 1 root root  674 Feb 15 15:42 packages/auto-complete-nxml.log
-8.0K -rw-r--r-- 1 root root 6.6K Feb 15 15:42 packages/auto-complete-pcmp-20140227.651.el
-4.0K -rw-r--r-- 1 root root  523 Feb 15 15:42 packages/auto-complete-pcmp-20140227.651.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-pcmp-badge.svg
-4.0K -rw-r--r-- 1 root root  273 Feb 15 15:42 packages/auto-complete-pcmp-readme.txt
-4.0K -rw-r--r-- 1 root root  674 Feb 15 15:42 packages/auto-complete-pcmp.log
-4.0K -rw-r--r-- 1 root root  355 Feb 15 15:42 packages/auto-complete-readme.txt
-4.0K -rw-r--r-- 1 root root  349 Feb 15 15:42 packages/auto-complete-rst-20140225.944.entry
- 20K -rw-r--r-- 1 root root  20K Feb 15 15:42 packages/auto-complete-rst-20140225.944.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-rst-badge.svg
-4.0K -rw-r--r-- 1 root root   60 Feb 15 15:42 packages/auto-complete-rst-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-rst.log
- 16K -rw-r--r-- 1 root root  13K Feb 15 15:42 packages/auto-complete-sage-20160514.751.el
-4.0K -rw-r--r-- 1 root root  505 Feb 15 15:42 packages/auto-complete-sage-20160514.751.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 15 15:42 packages/auto-complete-sage-badge.svg
-4.0K -rw-r--r-- 1 root root  158 Feb 15 15:42 packages/auto-complete-sage-readme.txt
-4.0K -rw-r--r-- 1 root root  677 Feb 15 15:42 packages/auto-complete-sage.log
+4.0K -rw-r--r-- 1 root root  411 Feb 16 01:47 packages/auto-complete-20220105.439.entry
+332K -rw-r--r-- 1 root root 330K Feb 16 01:47 packages/auto-complete-20220105.439.tar
+8.0K -rw-r--r-- 1 root root 7.4K Feb 16 01:47 packages/auto-complete-auctex-20140223.1758.el
+4.0K -rw-r--r-- 1 root root  349 Feb 16 01:47 packages/auto-complete-auctex-20140223.1758.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 01:47 packages/auto-complete-auctex-badge.svg
+4.0K -rw-r--r-- 1 root root  103 Feb 16 01:47 packages/auto-complete-auctex-readme.txt
+4.0K -rw-r--r-- 1 root root  695 Feb 16 01:47 packages/auto-complete-auctex.log
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 01:47 packages/auto-complete-badge.svg
+8.0K -rw-r--r-- 1 root root 6.3K Feb 16 01:47 packages/auto-complete-c-headers-20150912.323.el
+4.0K -rw-r--r-- 1 root root  366 Feb 16 01:47 packages/auto-complete-c-headers-20150912.323.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 01:47 packages/auto-complete-c-headers-badge.svg
+4.0K -rw-r--r-- 1 root root   82 Feb 16 01:47 packages/auto-complete-c-headers-readme.txt
+4.0K -rw-r--r-- 1 root root  713 Feb 16 01:47 packages/auto-complete-c-headers.log
+4.0K -rw-r--r-- 1 root root 3.7K Feb 16 01:47 packages/auto-complete-chunk-20140225.946.el
+4.0K -rw-r--r-- 1 root root  357 Feb 16 01:47 packages/auto-complete-chunk-20140225.946.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 01:47 packages/auto-complete-chunk-badge.svg
+4.0K -rw-r--r-- 1 root root  282 Feb 16 01:47 packages/auto-complete-chunk-readme.txt
+4.0K -rw-r--r-- 1 root root  680 Feb 16 01:47 packages/auto-complete-chunk.log
+ 16K -rw-r--r-- 1 root root  16K Feb 16 01:47 packages/auto-complete-clang-20140409.752.el
+4.0K -rw-r--r-- 1 root root  452 Feb 16 01:47 packages/auto-complete-clang-20140409.752.entry
+ 24K -rw-r--r-- 1 root root  24K Feb 16 01:47 packages/auto-complete-clang-async-20130526.1514.el
+4.0K -rw-r--r-- 1 root root  232 Feb 16 01:47 packages/auto-complete-clang-async-20130526.1514.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 01:47 packages/auto-complete-clang-async-badge.svg
+4.0K -rw-r--r-- 1 root root  129 Feb 16 01:47 packages/auto-complete-clang-async-readme.txt
+4.0K -rw-r--r-- 1 root root  735 Feb 16 01:47 packages/auto-complete-clang-async.log
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 01:47 packages/auto-complete-clang-badge.svg
+4.0K -rw-r--r-- 1 root root  128 Feb 16 01:47 packages/auto-complete-clang-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 01:47 packages/auto-complete-clang.log
+4.0K -rw-r--r-- 1 root root 1.6K Feb 16 01:47 packages/auto-complete-distel-20180827.1344.el
+4.0K -rw-r--r-- 1 root root  461 Feb 16 01:47 packages/auto-complete-distel-20180827.1344.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 01:47 packages/auto-complete-distel-badge.svg
+4.0K -rw-r--r-- 1 root root  422 Feb 16 01:47 packages/auto-complete-distel-readme.txt
+4.0K -rw-r--r-- 1 root root  692 Feb 16 01:47 packages/auto-complete-distel.log
+8.0K -rw-r--r-- 1 root root 7.8K Feb 16 01:47 packages/auto-complete-exuberant-ctags-20140320.724.el
+4.0K -rw-r--r-- 1 root root  429 Feb 16 01:47 packages/auto-complete-exuberant-ctags-20140320.724.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 01:47 packages/auto-complete-exuberant-ctags-badge.svg
+4.0K -rw-r--r-- 1 root root  506 Feb 16 01:47 packages/auto-complete-exuberant-ctags-readme.txt
+4.0K -rw-r--r-- 1 root root  762 Feb 16 01:47 packages/auto-complete-exuberant-ctags.log
+ 36K -rw-r--r-- 1 root root  34K Feb 16 01:47 packages/auto-complete-nxml-20140221.458.el
+4.0K -rw-r--r-- 1 root root  458 Feb 16 01:47 packages/auto-complete-nxml-20140221.458.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 01:47 packages/auto-complete-nxml-badge.svg
+4.0K -rw-r--r-- 1 root root  148 Feb 16 01:47 packages/auto-complete-nxml-readme.txt
+4.0K -rw-r--r-- 1 root root  674 Feb 16 01:47 packages/auto-complete-nxml.log
+8.0K -rw-r--r-- 1 root root 6.6K Feb 16 01:47 packages/auto-complete-pcmp-20140227.651.el
+4.0K -rw-r--r-- 1 root root  523 Feb 16 01:47 packages/auto-complete-pcmp-20140227.651.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 15 22:39 packages/auto-complete-pcmp-badge.svg
+4.0K -rw-r--r-- 1 root root  273 Feb 16 01:47 packages/auto-complete-pcmp-readme.txt
+4.0K -rw-r--r-- 1 root root  235 Feb 16 01:47 packages/auto-complete-pcmp.log
+4.0K -rw-r--r-- 1 root root  355 Feb 16 01:47 packages/auto-complete-readme.txt
+4.0K -rw-r--r-- 1 root root  349 Feb 16 01:47 packages/auto-complete-rst-20140225.944.entry
+ 20K -rw-r--r-- 1 root root  20K Feb 16 01:47 packages/auto-complete-rst-20140225.944.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 01:47 packages/auto-complete-rst-badge.svg
+4.0K -rw-r--r-- 1 root root   60 Feb 16 01:47 packages/auto-complete-rst-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 01:47 packages/auto-complete-rst.log
+ 16K -rw-r--r-- 1 root root  13K Feb 16 01:47 packages/auto-complete-sage-20160514.751.el
+4.0K -rw-r--r-- 1 root root  505 Feb 16 01:47 packages/auto-complete-sage-20160514.751.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 01:47 packages/auto-complete-sage-badge.svg
+4.0K -rw-r--r-- 1 root root  158 Feb 16 01:47 packages/auto-complete-sage-readme.txt
+4.0K -rw-r--r-- 1 root root  677 Feb 16 01:47 packages/auto-complete-sage.log

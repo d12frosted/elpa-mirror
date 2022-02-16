@@ -1,0 +1,15 @@
+(chronometrist-spark .
+		     [(20220215 1904)
+		      ((emacs
+			(25 1))
+		       (chronometrist
+			(0 7 0))
+		       (spark
+			(0 1)))
+		      "Show sparklines in Chronometrist buffers" tar
+		      ((:commit . "2b2bfa27787ae524852abcb75408b0b1927aa2e1")
+		       (:authors
+			("contrapunctus" . "xmpp:contrapunctus@jabjab.de"))
+		       (:maintainer "contrapunctus" . "xmpp:contrapunctus@jabjab.de")
+		       (:keywords "calendar")
+		       (:url . "https://tildegit.org/contrapunctus/chronometrist"))])
