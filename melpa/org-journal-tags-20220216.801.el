@@ -5,10 +5,10 @@
 ;; Author: Korytov Pavel <thexcloud@gmail.com>
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
 ;; Version: 0.1.0
-;; Package-Version: 20220208.1429
-;; Package-Commit: c27c77246e821e20349e5019b9fe92ff1d67da58
+;; Package-Version: 20220216.801
+;; Package-Commit: f8ad372c5839eeb882d2bd256ddd740e900aad95
 ;; Package-Requires: ((emacs "27.1") (org-journal "2.1.2") (magit-section "3.3.0") (transient "0.3.7"))
-;; Homepage: https://github.com/SqrtMinusOne/org-journal-tags.el
+;; Homepage: https://github.com/SqrtMinusOne/org-journal-tags
 
 ;; This file is NOT part of GNU Emacs.
 

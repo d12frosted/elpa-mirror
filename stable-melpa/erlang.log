@@ -4,10 +4,10 @@ Source:  https://github.com/erlang/otp.git
 
 Updating /mnt/store/melpa/working/erlang/
 Checking out origin/HEAD
-Checking out 60497f1b78d9fc7f02e16b8dba035548abbf4e9f
+Checking out eccc556e79f315d1f87c10fb46f2c4af50a63f20
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/erlang/
-  to /tmp/erlangVsgHGf/erlang-20220213.554
+  to /tmp/erlangjWCU0f/erlang-20220215.1844
   ! lib/tools/emacs/erlang-edoc.el -> erlang-edoc.el
   ! lib/tools/emacs/erlang-eunit.el -> erlang-eunit.el
   ! lib/tools/emacs/erlang-flymake.el -> erlang-flymake.el
@@ -18,21 +18,23 @@ Copying files (->) and directories (=>)
   ! lib/tools/emacs/erlang-test.el -> erlang-test.el
   ! lib/tools/emacs/erlang.el -> erlang.el
   ! lib/tools/emacs/erldoc.el -> erldoc.el
-Created erlang-20220213.554.tar containing:
-  erlang-20220213.554/
-  erlang-20220213.554/erlang-edoc.el
-  erlang-20220213.554/erlang-eunit.el
-  erlang-20220213.554/erlang-flymake.el
-  erlang-20220213.554/erlang-pkg.el
-  erlang-20220213.554/erlang-skels-old.el
-  erlang-20220213.554/erlang-skels.el
-  erlang-20220213.554/erlang-start.el
-  erlang-20220213.554/erlang-test.el
-  erlang-20220213.554/erlang.el
-  erlang-20220213.554/erldoc.el
-Built erlang in 31.425s, finished at 2022-02-16T07:52:31+0000
+Created erlang-20220215.1844.tar containing:
+  erlang-20220215.1844/
+  erlang-20220215.1844/erlang-edoc.el
+  erlang-20220215.1844/erlang-eunit.el
+  erlang-20220215.1844/erlang-flymake.el
+  erlang-20220215.1844/erlang-pkg.el
+  erlang-20220215.1844/erlang-skels-old.el
+  erlang-20220215.1844/erlang-skels.el
+  erlang-20220215.1844/erlang-start.el
+  erlang-20220215.1844/erlang-test.el
+  erlang-20220215.1844/erlang.el
+  erlang-20220215.1844/erldoc.el
+Built erlang in 39.544s, finished at 2022-02-16T10:51:22+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  258 Feb 16 07:52 packages/erlang-20220213.554.entry
 432K -rw-r--r-- 1 root root 430K Feb 16 07:52 packages/erlang-20220213.554.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 16 07:52 packages/erlang-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Feb 16 07:52 packages/erlang-readme.txt
+4.0K -rw-r--r-- 1 root root  259 Feb 16 10:51 packages/erlang-20220215.1844.entry
+432K -rw-r--r-- 1 root root 430K Feb 16 10:51 packages/erlang-20220215.1844.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 10:51 packages/erlang-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Feb 16 10:51 packages/erlang-readme.txt

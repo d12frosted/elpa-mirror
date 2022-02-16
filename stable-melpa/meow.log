@@ -4,10 +4,10 @@ Source:  https://github.com/meow-edit/meow.git
 
 Updating /mnt/store/melpa/working/meow/
 Checking out origin/HEAD
-Checking out 904d823ee80646b3aeb4ea798999543e08b3742e
+Checking out df68729f6fd4afd280689a7771ec18028a51048d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/meow/
-  to /tmp/meowqgTXFR/meow-20220214.1732
+  to /tmp/meowAEE6nb/meow-20220216.845
     meow-beacon.el -> meow-beacon.el
     meow-cheatsheet-layout.el -> meow-cheatsheet-layout.el
     meow-cheatsheet.el -> meow-cheatsheet.el
@@ -25,29 +25,31 @@ Copying files (->) and directories (=>)
     meow-var.el -> meow-var.el
     meow-visual.el -> meow-visual.el
     meow.el -> meow.el
-Created meow-20220214.1732.tar containing:
-  meow-20220214.1732/
-  meow-20220214.1732/meow-beacon.el
-  meow-20220214.1732/meow-cheatsheet-layout.el
-  meow-20220214.1732/meow-cheatsheet.el
-  meow-20220214.1732/meow-command.el
-  meow-20220214.1732/meow-core.el
-  meow-20220214.1732/meow-esc.el
-  meow-20220214.1732/meow-face.el
-  meow-20220214.1732/meow-helpers.el
-  meow-20220214.1732/meow-keymap.el
-  meow-20220214.1732/meow-keypad.el
-  meow-20220214.1732/meow-pkg.el
-  meow-20220214.1732/meow-shims.el
-  meow-20220214.1732/meow-thing.el
-  meow-20220214.1732/meow-tutor.el
-  meow-20220214.1732/meow-util.el
-  meow-20220214.1732/meow-var.el
-  meow-20220214.1732/meow-visual.el
-  meow-20220214.1732/meow.el
-Built meow in 5.415s, finished at 2022-02-16T05:18:03+0000
+Created meow-20220216.845.tar containing:
+  meow-20220216.845/
+  meow-20220216.845/meow-beacon.el
+  meow-20220216.845/meow-cheatsheet-layout.el
+  meow-20220216.845/meow-cheatsheet.el
+  meow-20220216.845/meow-command.el
+  meow-20220216.845/meow-core.el
+  meow-20220216.845/meow-esc.el
+  meow-20220216.845/meow-face.el
+  meow-20220216.845/meow-helpers.el
+  meow-20220216.845/meow-keymap.el
+  meow-20220216.845/meow-keypad.el
+  meow-20220216.845/meow-pkg.el
+  meow-20220216.845/meow-shims.el
+  meow-20220216.845/meow-thing.el
+  meow-20220216.845/meow-tutor.el
+  meow-20220216.845/meow-util.el
+  meow-20220216.845/meow-var.el
+  meow-20220216.845/meow-visual.el
+  meow-20220216.845/meow.el
+Built meow in 4.760s, finished at 2022-02-16T11:12:34+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  317 Feb 16 05:18 packages/meow-20220214.1732.entry
-272K -rw-r--r-- 1 root root 270K Feb 16 05:18 packages/meow-20220214.1732.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 16 05:18 packages/meow-badge.svg
-4.0K -rw-r--r-- 1 root root   53 Feb 16 05:18 packages/meow-readme.txt
+4.0K -rw-r--r-- 1 root root  316 Feb 16 08:14 packages/meow-20220216.547.entry
+272K -rw-r--r-- 1 root root 270K Feb 16 08:14 packages/meow-20220216.547.tar
+4.0K -rw-r--r-- 1 root root  316 Feb 16 11:12 packages/meow-20220216.845.entry
+272K -rw-r--r-- 1 root root 270K Feb 16 11:12 packages/meow-20220216.845.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 16 11:12 packages/meow-badge.svg
+4.0K -rw-r--r-- 1 root root   53 Feb 16 11:12 packages/meow-readme.txt
