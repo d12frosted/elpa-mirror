@@ -5,6 +5,8 @@
 ;; Author: Simon Manning <simon@ecksdee.org>
 ;; Maintainer: Simon Manning <simon@ecksdee.org>
 ;; Package-Requires: ((emacs "24"))
+;; Package-Version: 20161113.1442
+;; Package-Commit: a3265a1be7f4d73f44acce6d968ca6f7add1f2ca
 ;; Homepage: https://github.com/sjrmanning/noctilux-theme
 
 ;; This file is not part of GNU Emacs.
