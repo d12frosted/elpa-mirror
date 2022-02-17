@@ -4,10 +4,10 @@ Source:  https://github.com/bdarcus/citar.git
 
 Updating /mnt/store/melpa/working/citar/
 Checking out origin/HEAD
-Checking out a447d8c7f80c3ba8c5f544e6e1181757c7c3d742
+Checking out b84cb375933053cf3e5408f0386034e8dabca5cb
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/citar/
-  to /tmp/citar6w3pcI/citar-20220209.37
+  to /tmp/citarniUo4y/citar-20220217.1606
     citar-citeproc.el -> citar-citeproc.el
     citar-file.el -> citar-file.el
     citar-filenotify.el -> citar-filenotify.el
@@ -15,19 +15,21 @@ Copying files (->) and directories (=>)
     citar-markdown.el -> citar-markdown.el
     citar-org.el -> citar-org.el
     citar.el -> citar.el
-Created citar-20220209.37.tar containing:
-  citar-20220209.37/
-  citar-20220209.37/citar-citeproc.el
-  citar-20220209.37/citar-file.el
-  citar-20220209.37/citar-filenotify.el
-  citar-20220209.37/citar-latex.el
-  citar-20220209.37/citar-markdown.el
-  citar-20220209.37/citar-org.el
-  citar-20220209.37/citar-pkg.el
-  citar-20220209.37/citar.el
-Built citar in 4.450s, finished at 2022-02-16T22:25:33+0000
+Created citar-20220217.1606.tar containing:
+  citar-20220217.1606/
+  citar-20220217.1606/citar-citeproc.el
+  citar-20220217.1606/citar-file.el
+  citar-20220217.1606/citar-filenotify.el
+  citar-20220217.1606/citar-latex.el
+  citar-20220217.1606/citar-markdown.el
+  citar-20220217.1606/citar-org.el
+  citar-20220217.1606/citar-pkg.el
+  citar-20220217.1606/citar.el
+Built citar in 4.154s, finished at 2022-02-17T18:59:42+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  417 Feb 16 22:25 packages/citar-20220209.37.entry
-112K -rw-r--r-- 1 root root 110K Feb 16 22:25 packages/citar-20220209.37.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 16 22:25 packages/citar-badge.svg
-4.0K -rw-r--r-- 1 root root  292 Feb 16 22:25 packages/citar-readme.txt
+4.0K -rw-r--r-- 1 root root  417 Feb 17 16:04 packages/citar-20220209.37.entry
+112K -rw-r--r-- 1 root root 110K Feb 17 16:04 packages/citar-20220209.37.tar
+4.0K -rw-r--r-- 1 root root  419 Feb 17 18:59 packages/citar-20220217.1606.entry
+112K -rw-r--r-- 1 root root 110K Feb 17 18:59 packages/citar-20220217.1606.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 17 18:59 packages/citar-badge.svg
+4.0K -rw-r--r-- 1 root root  292 Feb 17 18:59 packages/citar-readme.txt

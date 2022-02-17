@@ -20,7 +20,7 @@
 ;; Maintainer: Mgmt contributors <https://github.com/purpleidea/mgmt>
 ;; Keywords: languages
 ;; Package-Version: 20210131.2152
-;; Package-Commit: bf7e45439b044d18d0fdf3151fbdd7994875edce
+;; Package-Commit: 0ab2406db9b4d5dac2348dd033d5fd37abd92a94
 ;; URL: https://github.com/purpleidea/mgmt/misc/emacs
 ;; Package-Requires: ((emacs "24.3"))
 
