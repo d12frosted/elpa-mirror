@@ -12,11 +12,11 @@ The themes share the following customization variables:
     modus-themes-bold-constructs                (boolean)
     modus-themes-deuteranopia                   (boolean)
     modus-themes-inhibit-reload                 (boolean)
-    modus-themes-intense-markup                 (boolean)
     modus-themes-italic-constructs              (boolean)
     modus-themes-mixed-fonts                    (boolean)
     modus-themes-subtle-line-numbers            (boolean)
     modus-themes-variable-pitch-ui              (boolean)
+    modus-themes-box-buttons                    (choice)
     modus-themes-completions                    (choice)
     modus-themes-diffs                          (choice)
     modus-themes-fringes                        (choice)
@@ -24,6 +24,7 @@ The themes share the following customization variables:
     modus-themes-lang-checkers                  (choice)
     modus-themes-links                          (choice)
     modus-themes-mail-citations                 (choice)
+    modus-themes-markup                         (choice)
     modus-themes-mode-line                      (choice)
     modus-themes-org-blocks                     (choice)
     modus-themes-paren-match                    (choice)
@@ -46,6 +47,8 @@ missing package or change you would like to see.
     ace-window
     alert
     all-the-icons
+    all-the-icons-dired
+    all-the-icons-ibuffer
     annotate
     ansi-color
     anzu
@@ -69,6 +72,7 @@ missing package or change you would like to see.
     change-log and log-view (`vc-print-log' and `vc-print-root-log')
     cider
     circe
+    citar
     color-rg
     column-enforce-mode
     company-mode
@@ -118,6 +122,7 @@ missing package or change you would like to see.
     elfeed-score
     elpher
     embark
+    ement (ement.el)
     emms
     enh-ruby-mode (enhanced-ruby-mode)
     epa
@@ -207,6 +212,7 @@ missing package or change you would like to see.
     marginalia
     markdown-mode
     markup-faces (`adoc-mode')
+    mct
     mentor
     messages
     minimap
@@ -253,6 +259,7 @@ missing package or change you would like to see.
     proced
     prodigy
     pulse
+    pyim
     quick-peek
     racket-mode
     rainbow-blocks
@@ -275,6 +282,8 @@ missing package or change you would like to see.
     side-notes
     sieve-mode
     skewer-mode
+    slime (sldb)
+    sly
     smart-mode-line
     smartparens
     smerge
@@ -295,6 +304,7 @@ missing package or change you would like to see.
     telephone-line
     terraform-mode
     term
+    textsec
     tomatinho
     transient (pop-up windows like Magit's)
     trashed
