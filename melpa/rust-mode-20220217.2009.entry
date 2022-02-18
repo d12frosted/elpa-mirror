@@ -1,0 +1,11 @@
+(rust-mode .
+	   [(20220217 2009)
+	    ((emacs
+	      (25 1)))
+	    "A major-mode for editing Rust source code" tar
+	    ((:commit . "e35a1800fc0f9ed178539d6fb82ed885c1014fb5")
+	     (:authors
+	      ("Mozilla"))
+	     (:maintainer "Mozilla")
+	     (:keywords "languages")
+	     (:url . "https://github.com/rust-lang/rust-mode"))])

@@ -4,7 +4,7 @@
 ;; Maintainer: Boris Glavic <lordpretzel@gmail.com>
 ;; Version: 0.3
 ;; Package-Version: 20220214.358
-;; Package-Commit: 84a17bb3d725cb8b37cd700a6b88fbf98f5ca094
+;; Package-Commit: fa47f35e56edcc84f00d622e415ae970cc5df0dd
 ;; Package-Requires: ((emacs "26.1") (xwidgets-reuse "0.2") (ht "2.2") (esxml "20210323.1102"))
 ;; Homepage: https://github.com/lordpretzel/mu4e-views
 ;; Keywords: mail
