@@ -7,8 +7,8 @@
 ;; Description: Diminish (hide) buffers from buffer-menu.
 ;; Keyword: diminish hide buffer menu
 ;; Version: 0.2.0
-;; Package-Version: 20220217.1855
-;; Package-Commit: 672de7e1d022cb7da47a746ba508fe23f7bd6737
+;; Package-Version: 20220218.831
+;; Package-Commit: 687e695214ebab3792ccfad19d2b016192d53e83
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs-elpa/diminish-buffer
 
@@ -43,12 +43,7 @@
   :link '(url-link :tag "Repository" "https://github.com/jcs-elpa/diminish-buffer"))
 
 (defcustom diminish-buffer-list
-  (append
-   '("[*]Buffer List[*]"
-     "[*]Minibuf-[01][*]" "[*]Echo Area [01][*]"
-     "[*]code-converting-work[*]" "[*]code-conversion-work[*]"
-     "[*]tip[*]")
-   '("[*]diff-hl[*]" "[*]helm"))
+  '()
   "List of buffer name that you want to hide in the `buffer-menu'."
   :type 'list
   :group 'diminish-buffer)
@@ -96,8 +91,23 @@
 
 (defun diminish-buffer--filter (buffer)
   "Filter out the BUFFER."
-  (or (diminish-buffer--contain-list-string-regex (buffer-name buffer) diminish-buffer-list)
-      (diminish-buffer--contain-list-string-regex (with-current-buffer buffer major-mode) diminish-buffer-mode-list)))
+  (with-current-buffer buffer
+    (or (diminish-buffer--contain-list-string-regex (buffer-name) diminish-buffer-list)
+        (diminish-buffer--contain-list-string-regex major-mode diminish-buffer-mode-list))))
+
+;; XXX This is the default filter from Emacs itself; leave this feature as is it.
+(defun diminish-buffer--default-filter (buffer)
+  "Copy it from function `list-buffers--refresh'."
+  (let ((buffer-menu-buffer (current-buffer))
+        (show-non-file (not Buffer-menu-files-only)))
+    (with-current-buffer buffer
+      (let* ((name (buffer-name))
+             (file buffer-file-name))
+        (and (buffer-live-p buffer)
+             (or (not (string= (substring name 0 1) " "))
+                 file)
+             (not (eq buffer buffer-menu-buffer))
+             (or file show-non-file))))))
 
 (defun diminish-buffer--refresh-list (fnc &rest args)
   "Modified argument `buffer-list' before display the buffer menu.
@@ -106,6 +116,7 @@ Override FNC and ARGS."
     (unless buffer-list
       (setq buffer-list (buffer-list (if Buffer-menu-use-frame-buffer-list
                                          (selected-frame)))  ; see function `list-buffers--refresh'
+            buffer-list (cl-remove-if-not #'diminish-buffer--default-filter buffer-list)
             buffer-list (cl-remove-if #'diminish-buffer--filter buffer-list))  ; filter
       (pop args) (push buffer-list args)))  ; update
   (apply fnc args))
