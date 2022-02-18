@@ -4,34 +4,36 @@ Source:  https://github.com/gcv/julia-snail.git
 
 Updating /mnt/store/melpa/working/julia-snail/
 Checking out origin/HEAD
-Checking out d06598796f863010e6783b48e946d0337b88e68f
+Checking out fc67e4d603907160766cf22e8ef16029238e78d3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/julia-snail/
-  to /tmp/julia-snailEgMjgx/julia-snail-20220216.2301
+  to /tmp/julia-snailPV45Ik/julia-snail-20220218.512
     julia-snail.el -> julia-snail.el
     JuliaSnail.jl -> JuliaSnail.jl
     Manifest.toml -> Manifest.toml
     Project.toml -> Project.toml
     extensions => extensions
-Created julia-snail-20220216.2301.tar containing:
-  julia-snail-20220216.2301/
-  julia-snail-20220216.2301/JuliaSnail.jl
-  julia-snail-20220216.2301/Manifest.toml
-  julia-snail-20220216.2301/Project.toml
-  julia-snail-20220216.2301/extensions/
-  julia-snail-20220216.2301/extensions/formatter/
-  julia-snail-20220216.2301/extensions/formatter/Formatter.jl
-  julia-snail-20220216.2301/extensions/formatter/Manifest.toml
-  julia-snail-20220216.2301/extensions/formatter/Project.toml
-  julia-snail-20220216.2301/extensions/formatter/formatter.el
-  julia-snail-20220216.2301/extensions/repl-history/
-  julia-snail-20220216.2301/extensions/repl-history/REPLHistory.jl
-  julia-snail-20220216.2301/extensions/repl-history/repl-history.el
-  julia-snail-20220216.2301/julia-snail-pkg.el
-  julia-snail-20220216.2301/julia-snail.el
-Built julia-snail in 6.914s, finished at 2022-02-18T01:15:48+0000
+Created julia-snail-20220218.512.tar containing:
+  julia-snail-20220218.512/
+  julia-snail-20220218.512/JuliaSnail.jl
+  julia-snail-20220218.512/Manifest.toml
+  julia-snail-20220218.512/Project.toml
+  julia-snail-20220218.512/extensions/
+  julia-snail-20220218.512/extensions/formatter/
+  julia-snail-20220218.512/extensions/formatter/Formatter.jl
+  julia-snail-20220218.512/extensions/formatter/Manifest.toml
+  julia-snail-20220218.512/extensions/formatter/Project.toml
+  julia-snail-20220218.512/extensions/formatter/formatter.el
+  julia-snail-20220218.512/extensions/repl-history/
+  julia-snail-20220218.512/extensions/repl-history/REPLHistory.jl
+  julia-snail-20220218.512/extensions/repl-history/repl-history.el
+  julia-snail-20220218.512/julia-snail-pkg.el
+  julia-snail-20220218.512/julia-snail.el
+Built julia-snail in 4.744s, finished at 2022-02-18T07:04:42+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  341 Feb 18 01:15 packages/julia-snail-20220216.2301.entry
-132K -rw-r--r-- 1 root root 130K Feb 18 01:15 packages/julia-snail-20220216.2301.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 18 01:15 packages/julia-snail-badge.svg
-4.0K -rw-r--r-- 1 root root  200 Feb 18 01:15 packages/julia-snail-readme.txt
+4.0K -rw-r--r-- 1 root root  341 Feb 18 04:11 packages/julia-snail-20220216.2301.entry
+132K -rw-r--r-- 1 root root 130K Feb 18 04:11 packages/julia-snail-20220216.2301.tar
+4.0K -rw-r--r-- 1 root root  340 Feb 18 07:04 packages/julia-snail-20220218.512.entry
+132K -rw-r--r-- 1 root root 130K Feb 18 07:04 packages/julia-snail-20220218.512.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 18 07:04 packages/julia-snail-badge.svg
+4.0K -rw-r--r-- 1 root root  200 Feb 18 07:04 packages/julia-snail-readme.txt
