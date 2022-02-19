@@ -5,7 +5,7 @@
 ;; Author: Christopher Wellons <wellons@nullprogram.com>
 ;; URL: https://github.com/skeeto/emacsql
 ;; Package-Version: 20171219.227
-;; Package-Commit: c82a0e6b4d256a3743b718cfb640fa9efc045f6e
+;; Package-Commit: 374726060d74df0e2bcb9d0355ff41e2c400ed30
 ;; Version: 1.0.0
 ;; Package-Requires: ((emacs "25.1") (emacsql "2.0.0"))
 

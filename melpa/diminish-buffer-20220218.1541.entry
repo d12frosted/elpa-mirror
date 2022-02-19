@@ -1,0 +1,10 @@
+(diminish-buffer .
+		 [(20220218 1541)
+		  ((emacs
+		    (24 4)))
+		  "Diminish (hide) buffers from buffer-menu" single
+		  ((:commit . "f9b8dac19ccf0df06d29c0f9f2ac71b178ecd803")
+		   (:authors
+		    ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
+		   (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
+		   (:url . "https://github.com/jcs-elpa/diminish-buffer"))])
