@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
 ;; Version: 1.6.4
-;; Package-Version: 20220217.604
-;; Package-Commit: d2658536b58cb42e9f2dac551d42055b734552ba
+;; Package-Version: 20220219.1054
+;; Package-Commit: 2aca118abec76886a0689bcb4b6ba1049ff4e297
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -1464,7 +1464,7 @@ If the buffer is killed, return \"--\"."
            (all-the-icons-material "view_module" :height 0.95 :v-adjust -0.15 :face 'all-the-icons-lblue))
           ((string-match-p "Packages?[:)]" cand)
            (all-the-icons-faicon "archive" :height 0.9 :v-adjust -0.05 :face 'all-the-icons-silver))
-          (t (all-the-icons-faicon "tag" :height 0.9 :v-adjust -0.05 :face 'all-the-icons-lblue))))))))
+          (t (all-the-icons-octicon "tag" :height 0.95 :v-adjust 0 :face 'all-the-icons-blue))))))))
 
 (defun all-the-icons-ivy-rich-bookmark-icon (cand)
   "Return bookmark type for CAND."
