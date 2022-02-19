@@ -4,8 +4,8 @@
 
 ;; Author: MATSUYAMA Tomohiro <m2ym.pub@gmail.com>
 ;; Package-Requires: ((cl-lib "1.0"))
-;; Package-Version: 20210517.411
-;; Package-Commit: 56c6f58873f8ebb743e4dc5aff143744720375bd
+;; Package-Version: 20220219.634
+;; Package-Commit: 94959e708d5a74913788324893d0b6dabc88ff18
 ;; Keywords: convenience
 ;; Version: 0.2.1
 
@@ -203,6 +203,7 @@ recovering of undo history."
       (undohist-recover-1)
     (error (message "Can not recover undo history: %s" var))))
 
+;;;###autoload
 (defun undohist-initialize ()
   "Initialize undo history facilities.
 To use undohist, you just call this function."
