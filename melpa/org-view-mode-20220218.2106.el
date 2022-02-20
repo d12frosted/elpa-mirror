@@ -5,7 +5,7 @@
 ;; Author: Arthur Miller <arthur.miller@live.com>
 ;; Keywords: convenience, outlines, tools
 ;; Package-Version: 20220218.2106
-;; Package-Commit: 927d7099dcb28bee54edef0623a12340c77c4ae7
+;; Package-Commit: 88321917b095a8cbabfa8327c915bd46eb741750
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

@@ -1,0 +1,33 @@
+Package: cerbere
+Fetcher: github
+Source:  https://github.com/nlamirault/cerbere.git
+
+Updating /mnt/store/melpa/working/cerbere/
+Checking out origin/HEAD
+Checking out c667c165d9c1657f13d2d46f09ba21b61f9402cc
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/cerbere/
+  to /tmp/cerbereKEr1C2/cerbere-20181113.1641
+    cerbere-common.el -> cerbere-common.el
+    cerbere-elisp-ert-runner.el -> cerbere-elisp-ert-runner.el
+    cerbere-php-phpunit.el -> cerbere-php-phpunit.el
+    cerbere-python-tox.el -> cerbere-python-tox.el
+    cerbere-ruby-minitest.el -> cerbere-ruby-minitest.el
+    cerbere-rust-libtest.el -> cerbere-rust-libtest.el
+    cerbere.el -> cerbere.el
+Created cerbere-20181113.1641.tar containing:
+  cerbere-20181113.1641/
+  cerbere-20181113.1641/cerbere-common.el
+  cerbere-20181113.1641/cerbere-elisp-ert-runner.el
+  cerbere-20181113.1641/cerbere-php-phpunit.el
+  cerbere-20181113.1641/cerbere-pkg.el
+  cerbere-20181113.1641/cerbere-python-tox.el
+  cerbere-20181113.1641/cerbere-ruby-minitest.el
+  cerbere-20181113.1641/cerbere-rust-libtest.el
+  cerbere-20181113.1641/cerbere.el
+Built cerbere in 3.953s, finished at 2022-02-20T10:55:44+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  455 Feb 20 10:55 packages/cerbere-20181113.1641.entry
+ 52K -rw-r--r-- 1 root root  50K Feb 20 10:55 packages/cerbere-20181113.1641.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 10:55 packages/cerbere-badge.svg
+   0 -rw-r--r-- 1 root root    0 Feb 20 10:55 packages/cerbere-readme.txt

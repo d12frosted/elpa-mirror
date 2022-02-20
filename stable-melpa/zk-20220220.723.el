@@ -6,8 +6,8 @@
 ;; Created: January 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
-;; Package-Version: 20220217.2020
-;; Package-Commit: 7c6c6ce774880fa2a413e0d14dff0215f2f9fb12
+;; Package-Version: 20220220.723
+;; Package-Commit: b91a310a150a38234f9f22050e40dd803c7e032b
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "24.4"))
 
@@ -85,6 +85,15 @@
 
 (defcustom zk-file-extension nil
   "The extension for zk files."
+  :type 'string)
+
+(defcustom zk-file-name-separator " "
+  "Character(s), as a string, to separate elements of filename.
+
+Useful for keeping spaces out of file-names. When set to \"-\",
+for example, the file-name will be in the form
+\"202012341234-Title-of-note.ext\". In notes, the title will be
+rendered with spaces."
   :type 'string)
 
 (defcustom zk-enable-link-buttons t
@@ -366,7 +375,10 @@ supplied. Can take a PROMPT argument."
                              zk-file-extension
                              ".*")
                      file)
-       `(,(match-string-no-properties 1 file) ,(match-string-no-properties 2 file) ,file)))
+       `(,(match-string-no-properties 1 file)
+         ,(replace-regexp-in-string zk-file-name-separator " "
+                                    (match-string-no-properties 2 file))
+         ,file)))
    (zk--directory-files t)))
 
 (defun zk--parse-id (target ids)
@@ -419,7 +431,8 @@ file extension."
                                    zk-file-extension
                                    ".*")
                            file)
-             (match-string target file))
+             (replace-regexp-in-string zk-file-name-separator " "
+              (match-string target file)))
            files)))
     (if (eq 1 (length return))
         (car return)
@@ -496,7 +509,14 @@ Adds 'zk-make-link-buttons' to 'find-file-hook.'"
                    (forward-line 2)
                    (buffer-substring
                     (point)
-                    (point-max))))))
+                    (point-max)))))
+         (file-name (replace-regexp-in-string " " zk-file-name-separator
+                     (concat (format "%s/%s%s%s.%s"
+                               zk-directory
+                               new-id
+                               zk-file-name-separator
+                               title
+                               zk-file-extension)))))
     (unless orig-id
       (setq orig-id zk-default-backlink))
     (when (use-region-p)
@@ -509,11 +529,7 @@ Adds 'zk-make-link-buttons' to 'find-file-hook.'"
                    (y-or-n-p "Insert link at point? ")))
       (zk-insert-link new-id title))
     (save-buffer)
-    (find-file (concat (format "%s/%s %s.%s"
-                               zk-directory
-                               new-id
-                               title
-                               zk-file-extension)))
+    (find-file file-name)
     (funcall zk-new-note-header-function title new-id orig-id)
     (when body (insert body))
     (when zk-enable-link-buttons (zk-make-link-buttons))
@@ -562,8 +578,12 @@ title."
       (insert new-title))
     (let ((new-file (concat
                      zk-directory "/"
-                     id " "
-                     new-title
+                     id
+                     zk-file-name-separator
+                     (replace-regexp-in-string
+                     " "
+                     zk-file-name-separator
+                     new-title)
                      "." zk-file-extension)))
       (rename-file buffer-file-name new-file t)
       (set-visited-file-name new-file t t)
@@ -709,7 +729,8 @@ FILES must be a list of filepaths. If nil, all files in
                               ".*")
                       file)
         (let ((id (match-string 1 file))
-              (title (match-string 2 file)))
+              (title (replace-regexp-in-string zk-file-name-separator " "
+                                               (match-string 2 file))))
           (when id
             (push (format-spec format
                                `((?i . ,id)(?t . ,title)))

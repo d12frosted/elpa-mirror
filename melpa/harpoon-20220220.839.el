@@ -4,8 +4,8 @@
 
 ;; Author: Otávio Schwanck <otavioschwanck@gmail.com>
 ;; Keywords: tools languages
-;; Package-Version: 20220220.459
-;; Package-Commit: f8f19a61222b55d41aed3f63de0e1231e1e56997
+;; Package-Version: 20220220.839
+;; Package-Commit: 2e252559667ebe27485aa990a5ec062f94b67835
 ;; Homepage: https://github.com/otavioschwanck/harpoon.el
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "27.2") (f "0.20.0"))
@@ -45,7 +45,7 @@
   "Organize bookmarks by project and branch."
   :group 'tools)
 
-(defcustom harpoon-without-project-function 'harpoon--current-file-directory
+(defcustom harpoon-without-project-function 'harpoon--package-name
   "When project is not found, use this function instead."
   :type 'string)
 
@@ -89,7 +89,7 @@
 (defun harpoon--has-project ()
   "Get the project name."
   (let ((project-name (harpoon--get-project-name)))
-    (not (or (eq project-name "") (eq project-name "-") (eq project-name nil)))))
+    (not (or (string= project-name "") (string= project-name "-") (string= project-name nil)))))
 
 (defun harpoon--get-project-name ()
   "Get the harpoon project name."
@@ -226,6 +226,10 @@
   "Get text inside harpoon file."
   (if (file-exists-p (harpoon--file-name))
       (f-read (harpoon--file-name) 'utf-8) ""))
+
+(defun harpoon--package-name ()
+  "Return harpoon package name."
+  "harpoon")
 
 ;;;###autoload
 (defun harpoon-toggle-file ()
