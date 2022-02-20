@@ -1,0 +1,13 @@
+(ob-solidity .
+	     [(20220213 1910)
+	      ((emacs
+		(24 4))
+	       (solidity-mode
+		(0 1 10)))
+	      "Org-babel functions for solidity evaluation" single
+	      ((:commit . "7e3e6cb2d7ec9269514e80248c7ec85c04dbbf89")
+	       (:authors
+		("hrkrshnn"))
+	       (:maintainer "hrkrshnn")
+	       (:keywords "solidity" "literate programming" "reproducible research" "languages")
+	       (:url . "https://github.com/hrkrshnn/ob-solidity"))])

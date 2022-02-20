@@ -4,10 +4,10 @@ Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/magit/
 Checking out origin/HEAD
-Checking out f9a15cb349b24ce705cae3dde646a1e027dc54d5
+Checking out 222cbb30f9fcbbb619b5c826301566c8efbae463
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/magit/
-  to /tmp/magitkagwsb/magit-20220217.349
+  to /tmp/magitHjtq7Y/magit-20220220.201
   ! lisp/magit-apply.el -> magit-apply.el
   ! lisp/magit-autorevert.el -> magit-autorevert.el
   ! lisp/magit-bisect.el -> magit-bisect.el
@@ -58,185 +58,185 @@ Copying files (->) and directories (=>)
   ! docs/magit.texi -> magit.texi
   ! docs/AUTHORS.md -> AUTHORS.md
     LICENSE -> LICENSE
-Generating /tmp/magitkagwsb/magit-20220217.349/magit.info
-Created magit-20220217.349.tar containing:
-  magit-20220217.349/
-  magit-20220217.349/AUTHORS.md
-  magit-20220217.349/LICENSE
-  magit-20220217.349/dir
-  magit-20220217.349/git-rebase.el
-  magit-20220217.349/magit-apply.el
-  magit-20220217.349/magit-autorevert.el
-  magit-20220217.349/magit-bisect.el
-  magit-20220217.349/magit-blame.el
-  magit-20220217.349/magit-bookmark.el
-  magit-20220217.349/magit-branch.el
-  magit-20220217.349/magit-bundle.el
-  magit-20220217.349/magit-clone.el
-  magit-20220217.349/magit-commit.el
-  magit-20220217.349/magit-core.el
-  magit-20220217.349/magit-diff.el
-  magit-20220217.349/magit-ediff.el
-  magit-20220217.349/magit-extras.el
-  magit-20220217.349/magit-fetch.el
-  magit-20220217.349/magit-files.el
-  magit-20220217.349/magit-git.el
-  magit-20220217.349/magit-gitignore.el
-  magit-20220217.349/magit-imenu.el
-  magit-20220217.349/magit-log.el
-  magit-20220217.349/magit-margin.el
-  magit-20220217.349/magit-merge.el
-  magit-20220217.349/magit-mode.el
-  magit-20220217.349/magit-notes.el
-  magit-20220217.349/magit-obsolete.el
-  magit-20220217.349/magit-patch.el
-  magit-20220217.349/magit-pkg.el
-  magit-20220217.349/magit-process.el
-  magit-20220217.349/magit-pull.el
-  magit-20220217.349/magit-push.el
-  magit-20220217.349/magit-reflog.el
-  magit-20220217.349/magit-refs.el
-  magit-20220217.349/magit-remote.el
-  magit-20220217.349/magit-repos.el
-  magit-20220217.349/magit-reset.el
-  magit-20220217.349/magit-sequence.el
-  magit-20220217.349/magit-sparse-checkout.el
-  magit-20220217.349/magit-stash.el
-  magit-20220217.349/magit-status.el
-  magit-20220217.349/magit-submodule.el
-  magit-20220217.349/magit-subtree.el
-  magit-20220217.349/magit-tag.el
-  magit-20220217.349/magit-transient.el
-  magit-20220217.349/magit-utils.el
-  magit-20220217.349/magit-wip.el
-  magit-20220217.349/magit-worktree.el
-  magit-20220217.349/magit.el
-  magit-20220217.349/magit.info
-Built magit in 23.437s, finished at 2022-02-19T09:22:33+0000
+Generating /tmp/magitHjtq7Y/magit-20220220.201/magit.info
+Created magit-20220220.201.tar containing:
+  magit-20220220.201/
+  magit-20220220.201/AUTHORS.md
+  magit-20220220.201/LICENSE
+  magit-20220220.201/dir
+  magit-20220220.201/git-rebase.el
+  magit-20220220.201/magit-apply.el
+  magit-20220220.201/magit-autorevert.el
+  magit-20220220.201/magit-bisect.el
+  magit-20220220.201/magit-blame.el
+  magit-20220220.201/magit-bookmark.el
+  magit-20220220.201/magit-branch.el
+  magit-20220220.201/magit-bundle.el
+  magit-20220220.201/magit-clone.el
+  magit-20220220.201/magit-commit.el
+  magit-20220220.201/magit-core.el
+  magit-20220220.201/magit-diff.el
+  magit-20220220.201/magit-ediff.el
+  magit-20220220.201/magit-extras.el
+  magit-20220220.201/magit-fetch.el
+  magit-20220220.201/magit-files.el
+  magit-20220220.201/magit-git.el
+  magit-20220220.201/magit-gitignore.el
+  magit-20220220.201/magit-imenu.el
+  magit-20220220.201/magit-log.el
+  magit-20220220.201/magit-margin.el
+  magit-20220220.201/magit-merge.el
+  magit-20220220.201/magit-mode.el
+  magit-20220220.201/magit-notes.el
+  magit-20220220.201/magit-obsolete.el
+  magit-20220220.201/magit-patch.el
+  magit-20220220.201/magit-pkg.el
+  magit-20220220.201/magit-process.el
+  magit-20220220.201/magit-pull.el
+  magit-20220220.201/magit-push.el
+  magit-20220220.201/magit-reflog.el
+  magit-20220220.201/magit-refs.el
+  magit-20220220.201/magit-remote.el
+  magit-20220220.201/magit-repos.el
+  magit-20220220.201/magit-reset.el
+  magit-20220220.201/magit-sequence.el
+  magit-20220220.201/magit-sparse-checkout.el
+  magit-20220220.201/magit-stash.el
+  magit-20220220.201/magit-status.el
+  magit-20220220.201/magit-submodule.el
+  magit-20220220.201/magit-subtree.el
+  magit-20220220.201/magit-tag.el
+  magit-20220220.201/magit-transient.el
+  magit-20220220.201/magit-utils.el
+  magit-20220220.201/magit-wip.el
+  magit-20220220.201/magit-worktree.el
+  magit-20220220.201/magit.el
+  magit-20220220.201/magit.info
+Built magit in 22.712s, finished at 2022-02-20T05:40:10+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  532 Feb 19 09:22 packages/magit-20220217.349.entry
-1.7M -rw-r--r-- 1 root root 1.7M Feb 19 09:22 packages/magit-20220217.349.tar
- 32K -rw-r--r-- 1 root root  29K Feb 19 09:22 packages/magit-annex-20211004.2314.el
-4.0K -rw-r--r-- 1 root root  444 Feb 19 09:22 packages/magit-annex-20211004.2314.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-annex-badge.svg
-4.0K -rw-r--r-- 1 root root 1.6K Feb 19 09:22 packages/magit-annex-readme.txt
-4.0K -rw-r--r-- 1 root root  620 Feb 19 09:22 packages/magit-annex.log
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-badge.svg
- 12K -rw-r--r-- 1 root root  11K Feb 19 09:22 packages/magit-circleci-20191209.2113.el
-4.0K -rw-r--r-- 1 root root  457 Feb 19 09:22 packages/magit-circleci-20191209.2113.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-circleci-badge.svg
-4.0K -rw-r--r-- 1 root root   96 Feb 19 09:22 packages/magit-circleci-readme.txt
-4.0K -rw-r--r-- 1 root root  648 Feb 19 09:22 packages/magit-circleci.log
- 20K -rw-r--r-- 1 root root  20K Feb 19 09:22 packages/magit-commit-mark-20220211.548.el
-4.0K -rw-r--r-- 1 root root  423 Feb 19 09:22 packages/magit-commit-mark-20220211.548.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-commit-mark-badge.svg
-4.0K -rw-r--r-- 1 root root  175 Feb 19 09:22 packages/magit-commit-mark-readme.txt
-4.0K -rw-r--r-- 1 root root  677 Feb 19 09:22 packages/magit-commit-mark.log
-8.0K -rw-r--r-- 1 root root 5.2K Feb 19 09:22 packages/magit-delta-20220125.50.el
-4.0K -rw-r--r-- 1 root root  430 Feb 19 09:22 packages/magit-delta-20220125.50.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-delta-badge.svg
-4.0K -rw-r--r-- 1 root root  271 Feb 19 09:22 packages/magit-delta-readme.txt
-4.0K -rw-r--r-- 1 root root  621 Feb 19 09:22 packages/magit-delta.log
- 12K -rw-r--r-- 1 root root  12K Feb 19 09:22 packages/magit-diff-flycheck-20190524.551.el
-4.0K -rw-r--r-- 1 root root  489 Feb 19 09:22 packages/magit-diff-flycheck-20190524.551.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-diff-flycheck-badge.svg
-4.0K -rw-r--r-- 1 root root  272 Feb 19 09:22 packages/magit-diff-flycheck-readme.txt
-4.0K -rw-r--r-- 1 root root  683 Feb 19 09:22 packages/magit-diff-flycheck.log
- 12K -rw-r--r-- 1 root root  12K Feb 19 09:22 packages/magit-filenotify-20151116.2340.el
-4.0K -rw-r--r-- 1 root root  391 Feb 19 09:22 packages/magit-filenotify-20151116.2340.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-filenotify-badge.svg
-4.0K -rw-r--r-- 1 root root  295 Feb 19 09:22 packages/magit-filenotify-readme.txt
-4.0K -rw-r--r-- 1 root root  663 Feb 19 09:22 packages/magit-filenotify.log
-4.0K -rw-r--r-- 1 root root 2.9K Feb 19 09:22 packages/magit-find-file-20150702.830.el
-4.0K -rw-r--r-- 1 root root  424 Feb 19 09:22 packages/magit-find-file-20150702.830.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-find-file-badge.svg
-4.0K -rw-r--r-- 1 root root  572 Feb 19 09:22 packages/magit-find-file-readme.txt
-4.0K -rw-r--r-- 1 root root  658 Feb 19 09:22 packages/magit-find-file.log
- 24K -rw-r--r-- 1 root root  21K Feb 19 09:22 packages/magit-gerrit-20210831.1453.el
-4.0K -rw-r--r-- 1 root root  413 Feb 19 09:22 packages/magit-gerrit-20210831.1453.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-gerrit-badge.svg
-4.0K -rw-r--r-- 1 root root  353 Feb 19 09:22 packages/magit-gerrit-readme.txt
-4.0K -rw-r--r-- 1 root root  637 Feb 19 09:22 packages/magit-gerrit.log
- 28K -rw-r--r-- 1 root root  27K Feb 19 09:22 packages/magit-gh-pulls-20191230.1944.el
-4.0K -rw-r--r-- 1 root root  481 Feb 19 09:22 packages/magit-gh-pulls-20191230.1944.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-gh-pulls-badge.svg
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-gh-pulls-readme.txt
-4.0K -rw-r--r-- 1 root root  644 Feb 19 09:22 packages/magit-gh-pulls.log
- 24K -rw-r--r-- 1 root root  21K Feb 19 09:22 packages/magit-gitflow-20170929.824.el
-4.0K -rw-r--r-- 1 root root  395 Feb 19 09:22 packages/magit-gitflow-20170929.824.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-gitflow-badge.svg
-4.0K -rw-r--r-- 1 root root  163 Feb 19 09:22 packages/magit-gitflow-readme.txt
-4.0K -rw-r--r-- 1 root root  637 Feb 19 09:22 packages/magit-gitflow.log
- 16K -rw-r--r-- 1 root root  16K Feb 19 09:22 packages/magit-imerge-20211004.2311.el
-4.0K -rw-r--r-- 1 root root  382 Feb 19 09:22 packages/magit-imerge-20211004.2311.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-imerge-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Feb 19 09:22 packages/magit-imerge-readme.txt
-4.0K -rw-r--r-- 1 root root  628 Feb 19 09:22 packages/magit-imerge.log
- 16K -rw-r--r-- 1 root root  16K Feb 19 09:22 packages/magit-lfs-20210918.2000.el
-4.0K -rw-r--r-- 1 root root  463 Feb 19 09:22 packages/magit-lfs-20210918.2000.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-lfs-badge.svg
-4.0K -rw-r--r-- 1 root root  626 Feb 19 09:22 packages/magit-lfs-readme.txt
-4.0K -rw-r--r-- 1 root root  605 Feb 19 09:22 packages/magit-lfs.log
-4.0K -rw-r--r-- 1 root root  382 Feb 19 09:22 packages/magit-libgit-20220130.2007.entry
- 12K -rw-r--r-- 1 root root  10K Feb 19 09:22 packages/magit-libgit-20220130.2007.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-libgit-badge.svg
-4.0K -rw-r--r-- 1 root root  493 Feb 19 09:22 packages/magit-libgit-readme.txt
-4.0K -rw-r--r-- 1 root root 1.1K Feb 19 09:22 packages/magit-libgit.log
-4.0K -rw-r--r-- 1 root root 3.1K Feb 19 09:22 packages/magit-org-todos-20180709.1950.el
-4.0K -rw-r--r-- 1 root root  385 Feb 19 09:22 packages/magit-org-todos-20180709.1950.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-org-todos-badge.svg
-4.0K -rw-r--r-- 1 root root   97 Feb 19 09:22 packages/magit-org-todos-readme.txt
-4.0K -rw-r--r-- 1 root root  658 Feb 19 09:22 packages/magit-org-todos.log
-4.0K -rw-r--r-- 1 root root  241 Feb 19 09:22 packages/magit-p4.log
- 32K -rw-r--r-- 1 root root  30K Feb 19 09:22 packages/magit-patch-changelog-20220209.1857.el
-4.0K -rw-r--r-- 1 root root  329 Feb 19 09:22 packages/magit-patch-changelog-20220209.1857.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-patch-changelog-badge.svg
-4.0K -rw-r--r-- 1 root root   55 Feb 19 09:22 packages/magit-patch-changelog-readme.txt
-4.0K -rw-r--r-- 1 root root  702 Feb 19 09:22 packages/magit-patch-changelog.log
-4.0K -rw-r--r-- 1 root root  421 Feb 19 09:22 packages/magit-popup-20200719.1015.entry
- 92K -rw-r--r-- 1 root root  90K Feb 19 09:22 packages/magit-popup-20200719.1015.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-popup-badge.svg
-4.0K -rw-r--r-- 1 root root  343 Feb 19 09:22 packages/magit-popup-readme.txt
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-popup.log
-4.0K -rw-r--r-- 1 root root 2.0K Feb 19 09:22 packages/magit-rbr-20181009.2016.el
-4.0K -rw-r--r-- 1 root root  455 Feb 19 09:22 packages/magit-rbr-20181009.2016.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-rbr-badge.svg
-4.0K -rw-r--r-- 1 root root  319 Feb 19 09:22 packages/magit-rbr-readme.txt
-4.0K -rw-r--r-- 1 root root  607 Feb 19 09:22 packages/magit-rbr.log
-4.0K -rw-r--r-- 1 root root  581 Feb 19 09:22 packages/magit-readme.txt
- 24K -rw-r--r-- 1 root root  23K Feb 19 09:22 packages/magit-reviewboard-20200727.1748.el
-4.0K -rw-r--r-- 1 root root  513 Feb 19 09:22 packages/magit-reviewboard-20200727.1748.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 09:22 packages/magit-reviewboard-badge.svg
-4.0K -rw-r--r-- 1 root root   81 Feb 19 09:22 packages/magit-reviewboard-readme.txt
-4.0K -rw-r--r-- 1 root root  672 Feb 19 09:22 packages/magit-reviewboard.log
-4.0K -rw-r--r-- 1 root root  373 Feb 19 06:28 packages/magit-section-20220216.1853.entry
-100K -rw-r--r-- 1 root root 100K Feb 19 06:28 packages/magit-section-20220216.1853.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 06:28 packages/magit-section-badge.svg
-4.0K -rw-r--r-- 1 root root  255 Feb 19 06:28 packages/magit-section-readme.txt
-4.0K -rw-r--r-- 1 root root  590 Feb 19 09:22 packages/magit-section.log
-4.0K -rw-r--r-- 1 root root  250 Feb 19 09:22 packages/magit-stgit.log
- 16K -rw-r--r-- 1 root root  13K Feb 19 09:22 packages/magit-svn-20210426.2114.el
-4.0K -rw-r--r-- 1 root root  395 Feb 19 09:22 packages/magit-svn-20210426.2114.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 06:28 packages/magit-svn-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Feb 19 09:22 packages/magit-svn-readme.txt
-4.0K -rw-r--r-- 1 root root  217 Feb 19 09:22 packages/magit-svn.log
- 16K -rw-r--r-- 1 root root  15K Feb 19 06:28 packages/magit-tbdiff-20220204.455.el
-4.0K -rw-r--r-- 1 root root  382 Feb 19 06:28 packages/magit-tbdiff-20220204.455.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 06:28 packages/magit-tbdiff-badge.svg
-4.0K -rw-r--r-- 1 root root 1.6K Feb 19 06:28 packages/magit-tbdiff-readme.txt
-4.0K -rw-r--r-- 1 root root  217 Feb 19 09:22 packages/magit-tbdiff.log
- 72K -rw-r--r-- 1 root root  69K Feb 19 06:28 packages/magit-todos-20210811.459.el
-4.0K -rw-r--r-- 1 root root  597 Feb 19 06:28 packages/magit-todos-20210811.459.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 06:28 packages/magit-todos-badge.svg
-4.0K -rw-r--r-- 1 root root  224 Feb 19 06:28 packages/magit-todos-readme.txt
-4.0K -rw-r--r-- 1 root root  139 Feb 19 09:22 packages/magit-todos.log
- 12K -rw-r--r-- 1 root root 9.3K Feb 19 06:28 packages/magit-topgit-20160313.1954.el
-4.0K -rw-r--r-- 1 root root  341 Feb 19 06:28 packages/magit-topgit-20160313.1954.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 06:28 packages/magit-topgit-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Feb 19 06:28 packages/magit-topgit-readme.txt
-   0 -rw-r--r-- 1 root root    0 Feb 19 09:22 packages/magit-topgit.log
-4.0K -rw-r--r-- 1 root root 3.1K Feb 19 06:28 packages/magit-vcsh-20190817.2014.el
-4.0K -rw-r--r-- 1 root root  460 Feb 19 06:28 packages/magit-vcsh-20190817.2014.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 19 06:28 packages/magit-vcsh-badge.svg
-4.0K -rw-r--r-- 1 root root  468 Feb 19 06:28 packages/magit-vcsh-readme.txt
-   0 -rw-r--r-- 1 root root    0 Feb 19 09:22 packages/magit-vcsh.log
+4.0K -rw-r--r-- 1 root root  532 Feb 20 05:40 packages/magit-20220220.201.entry
+1.7M -rw-r--r-- 1 root root 1.7M Feb 20 05:40 packages/magit-20220220.201.tar
+ 32K -rw-r--r-- 1 root root  29K Feb 20 05:39 packages/magit-annex-20211004.2314.el
+4.0K -rw-r--r-- 1 root root  444 Feb 20 05:39 packages/magit-annex-20211004.2314.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:39 packages/magit-annex-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Feb 20 05:39 packages/magit-annex-readme.txt
+4.0K -rw-r--r-- 1 root root  620 Feb 20 05:39 packages/magit-annex.log
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:40 packages/magit-badge.svg
+ 12K -rw-r--r-- 1 root root  11K Feb 20 05:39 packages/magit-circleci-20191209.2113.el
+4.0K -rw-r--r-- 1 root root  457 Feb 20 05:39 packages/magit-circleci-20191209.2113.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:39 packages/magit-circleci-badge.svg
+4.0K -rw-r--r-- 1 root root   96 Feb 20 05:39 packages/magit-circleci-readme.txt
+4.0K -rw-r--r-- 1 root root  648 Feb 20 05:39 packages/magit-circleci.log
+ 20K -rw-r--r-- 1 root root  20K Feb 20 05:39 packages/magit-commit-mark-20220211.548.el
+4.0K -rw-r--r-- 1 root root  423 Feb 20 05:39 packages/magit-commit-mark-20220211.548.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:39 packages/magit-commit-mark-badge.svg
+4.0K -rw-r--r-- 1 root root  175 Feb 20 05:39 packages/magit-commit-mark-readme.txt
+4.0K -rw-r--r-- 1 root root  677 Feb 20 05:39 packages/magit-commit-mark.log
+8.0K -rw-r--r-- 1 root root 5.2K Feb 20 05:39 packages/magit-delta-20220125.50.el
+4.0K -rw-r--r-- 1 root root  430 Feb 20 05:39 packages/magit-delta-20220125.50.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:39 packages/magit-delta-badge.svg
+4.0K -rw-r--r-- 1 root root  271 Feb 20 05:39 packages/magit-delta-readme.txt
+4.0K -rw-r--r-- 1 root root  621 Feb 20 05:39 packages/magit-delta.log
+ 12K -rw-r--r-- 1 root root  12K Feb 20 05:39 packages/magit-diff-flycheck-20190524.551.el
+4.0K -rw-r--r-- 1 root root  489 Feb 20 05:39 packages/magit-diff-flycheck-20190524.551.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:39 packages/magit-diff-flycheck-badge.svg
+4.0K -rw-r--r-- 1 root root  272 Feb 20 05:39 packages/magit-diff-flycheck-readme.txt
+4.0K -rw-r--r-- 1 root root  683 Feb 20 05:39 packages/magit-diff-flycheck.log
+ 12K -rw-r--r-- 1 root root  12K Feb 20 05:39 packages/magit-filenotify-20151116.2340.el
+4.0K -rw-r--r-- 1 root root  391 Feb 20 05:39 packages/magit-filenotify-20151116.2340.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:39 packages/magit-filenotify-badge.svg
+4.0K -rw-r--r-- 1 root root  295 Feb 20 05:39 packages/magit-filenotify-readme.txt
+4.0K -rw-r--r-- 1 root root  663 Feb 20 05:39 packages/magit-filenotify.log
+4.0K -rw-r--r-- 1 root root 2.9K Feb 20 05:39 packages/magit-find-file-20150702.830.el
+4.0K -rw-r--r-- 1 root root  424 Feb 20 05:39 packages/magit-find-file-20150702.830.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:39 packages/magit-find-file-badge.svg
+4.0K -rw-r--r-- 1 root root  572 Feb 20 05:39 packages/magit-find-file-readme.txt
+4.0K -rw-r--r-- 1 root root  658 Feb 20 05:39 packages/magit-find-file.log
+ 24K -rw-r--r-- 1 root root  21K Feb 20 05:39 packages/magit-gerrit-20210831.1453.el
+4.0K -rw-r--r-- 1 root root  413 Feb 20 05:39 packages/magit-gerrit-20210831.1453.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:39 packages/magit-gerrit-badge.svg
+4.0K -rw-r--r-- 1 root root  353 Feb 20 05:39 packages/magit-gerrit-readme.txt
+4.0K -rw-r--r-- 1 root root  637 Feb 20 05:39 packages/magit-gerrit.log
+ 28K -rw-r--r-- 1 root root  27K Feb 20 05:39 packages/magit-gh-pulls-20191230.1944.el
+4.0K -rw-r--r-- 1 root root  481 Feb 20 05:39 packages/magit-gh-pulls-20191230.1944.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:39 packages/magit-gh-pulls-badge.svg
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:39 packages/magit-gh-pulls-readme.txt
+4.0K -rw-r--r-- 1 root root  644 Feb 20 05:39 packages/magit-gh-pulls.log
+ 24K -rw-r--r-- 1 root root  21K Feb 20 05:39 packages/magit-gitflow-20170929.824.el
+4.0K -rw-r--r-- 1 root root  395 Feb 20 05:39 packages/magit-gitflow-20170929.824.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:39 packages/magit-gitflow-badge.svg
+4.0K -rw-r--r-- 1 root root  163 Feb 20 05:39 packages/magit-gitflow-readme.txt
+4.0K -rw-r--r-- 1 root root  637 Feb 20 05:39 packages/magit-gitflow.log
+ 16K -rw-r--r-- 1 root root  16K Feb 20 05:40 packages/magit-imerge-20211004.2311.el
+4.0K -rw-r--r-- 1 root root  382 Feb 20 05:40 packages/magit-imerge-20211004.2311.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:40 packages/magit-imerge-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Feb 20 05:40 packages/magit-imerge-readme.txt
+4.0K -rw-r--r-- 1 root root  628 Feb 20 05:40 packages/magit-imerge.log
+ 16K -rw-r--r-- 1 root root  16K Feb 20 05:40 packages/magit-lfs-20210918.2000.el
+4.0K -rw-r--r-- 1 root root  463 Feb 20 05:40 packages/magit-lfs-20210918.2000.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:40 packages/magit-lfs-badge.svg
+4.0K -rw-r--r-- 1 root root  626 Feb 20 05:40 packages/magit-lfs-readme.txt
+4.0K -rw-r--r-- 1 root root  605 Feb 20 05:40 packages/magit-lfs.log
+4.0K -rw-r--r-- 1 root root  382 Feb 20 05:40 packages/magit-libgit-20220130.2007.entry
+ 12K -rw-r--r-- 1 root root  10K Feb 20 05:40 packages/magit-libgit-20220130.2007.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:40 packages/magit-libgit-badge.svg
+4.0K -rw-r--r-- 1 root root  493 Feb 20 05:40 packages/magit-libgit-readme.txt
+4.0K -rw-r--r-- 1 root root 1.1K Feb 20 05:40 packages/magit-libgit.log
+4.0K -rw-r--r-- 1 root root 3.1K Feb 20 05:40 packages/magit-org-todos-20180709.1950.el
+4.0K -rw-r--r-- 1 root root  385 Feb 20 05:40 packages/magit-org-todos-20180709.1950.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:40 packages/magit-org-todos-badge.svg
+4.0K -rw-r--r-- 1 root root   97 Feb 20 05:40 packages/magit-org-todos-readme.txt
+4.0K -rw-r--r-- 1 root root  658 Feb 20 05:40 packages/magit-org-todos.log
+4.0K -rw-r--r-- 1 root root  241 Feb 20 05:40 packages/magit-p4.log
+ 32K -rw-r--r-- 1 root root  30K Feb 20 05:40 packages/magit-patch-changelog-20220209.1857.el
+4.0K -rw-r--r-- 1 root root  329 Feb 20 05:40 packages/magit-patch-changelog-20220209.1857.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:40 packages/magit-patch-changelog-badge.svg
+4.0K -rw-r--r-- 1 root root   55 Feb 20 05:40 packages/magit-patch-changelog-readme.txt
+4.0K -rw-r--r-- 1 root root  702 Feb 20 05:40 packages/magit-patch-changelog.log
+4.0K -rw-r--r-- 1 root root  421 Feb 20 05:40 packages/magit-popup-20200719.1015.entry
+ 92K -rw-r--r-- 1 root root  90K Feb 20 05:40 packages/magit-popup-20200719.1015.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:40 packages/magit-popup-badge.svg
+4.0K -rw-r--r-- 1 root root  343 Feb 20 05:40 packages/magit-popup-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:40 packages/magit-popup.log
+4.0K -rw-r--r-- 1 root root 2.0K Feb 20 05:40 packages/magit-rbr-20181009.2016.el
+4.0K -rw-r--r-- 1 root root  455 Feb 20 05:40 packages/magit-rbr-20181009.2016.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:40 packages/magit-rbr-badge.svg
+4.0K -rw-r--r-- 1 root root  319 Feb 20 05:40 packages/magit-rbr-readme.txt
+4.0K -rw-r--r-- 1 root root  607 Feb 20 05:40 packages/magit-rbr.log
+4.0K -rw-r--r-- 1 root root  581 Feb 20 05:40 packages/magit-readme.txt
+ 24K -rw-r--r-- 1 root root  23K Feb 20 05:40 packages/magit-reviewboard-20200727.1748.el
+4.0K -rw-r--r-- 1 root root  513 Feb 20 05:40 packages/magit-reviewboard-20200727.1748.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:40 packages/magit-reviewboard-badge.svg
+4.0K -rw-r--r-- 1 root root   81 Feb 20 05:40 packages/magit-reviewboard-readme.txt
+4.0K -rw-r--r-- 1 root root  672 Feb 20 05:40 packages/magit-reviewboard.log
+4.0K -rw-r--r-- 1 root root  373 Feb 20 02:46 packages/magit-section-20220216.1853.entry
+100K -rw-r--r-- 1 root root 100K Feb 20 02:46 packages/magit-section-20220216.1853.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 02:46 packages/magit-section-badge.svg
+4.0K -rw-r--r-- 1 root root  255 Feb 20 02:46 packages/magit-section-readme.txt
+4.0K -rw-r--r-- 1 root root  590 Feb 20 05:40 packages/magit-section.log
+4.0K -rw-r--r-- 1 root root  250 Feb 20 05:40 packages/magit-stgit.log
+ 16K -rw-r--r-- 1 root root  13K Feb 20 05:40 packages/magit-svn-20210426.2114.el
+4.0K -rw-r--r-- 1 root root  395 Feb 20 05:40 packages/magit-svn-20210426.2114.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 02:46 packages/magit-svn-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Feb 20 05:40 packages/magit-svn-readme.txt
+4.0K -rw-r--r-- 1 root root  217 Feb 20 05:40 packages/magit-svn.log
+ 16K -rw-r--r-- 1 root root  15K Feb 20 02:46 packages/magit-tbdiff-20220204.455.el
+4.0K -rw-r--r-- 1 root root  382 Feb 20 02:46 packages/magit-tbdiff-20220204.455.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 02:46 packages/magit-tbdiff-badge.svg
+4.0K -rw-r--r-- 1 root root 1.6K Feb 20 02:46 packages/magit-tbdiff-readme.txt
+4.0K -rw-r--r-- 1 root root  217 Feb 20 05:40 packages/magit-tbdiff.log
+ 72K -rw-r--r-- 1 root root  69K Feb 20 02:46 packages/magit-todos-20210811.459.el
+4.0K -rw-r--r-- 1 root root  597 Feb 20 02:46 packages/magit-todos-20210811.459.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 02:46 packages/magit-todos-badge.svg
+4.0K -rw-r--r-- 1 root root  224 Feb 20 02:46 packages/magit-todos-readme.txt
+4.0K -rw-r--r-- 1 root root  139 Feb 20 05:40 packages/magit-todos.log
+ 12K -rw-r--r-- 1 root root 9.3K Feb 20 02:46 packages/magit-topgit-20160313.1954.el
+4.0K -rw-r--r-- 1 root root  341 Feb 20 02:46 packages/magit-topgit-20160313.1954.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 02:46 packages/magit-topgit-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Feb 20 02:46 packages/magit-topgit-readme.txt
+4.0K -rw-r--r-- 1 root root  140 Feb 20 05:40 packages/magit-topgit.log
+4.0K -rw-r--r-- 1 root root 3.1K Feb 20 02:46 packages/magit-vcsh-20190817.2014.el
+4.0K -rw-r--r-- 1 root root  460 Feb 20 02:46 packages/magit-vcsh-20190817.2014.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 02:46 packages/magit-vcsh-badge.svg
+4.0K -rw-r--r-- 1 root root  468 Feb 20 02:46 packages/magit-vcsh-readme.txt
+   0 -rw-r--r-- 1 root root    0 Feb 20 05:40 packages/magit-vcsh.log

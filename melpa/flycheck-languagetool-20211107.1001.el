@@ -9,7 +9,7 @@
 ;; Keyword: grammar check
 ;; Version: 0.3.0
 ;; Package-Version: 20211107.1001
-;; Package-Commit: 24db2496b5320614534f38d5cfc71f43b00155ff
+;; Package-Commit: c22c4f33cfc1229177fc67b18885363fb8a23af9
 ;; Package-Requires: ((emacs "25.1") (flycheck "0.14"))
 ;; URL: https://github.com/emacs-languagetool/flycheck-languagetool
 

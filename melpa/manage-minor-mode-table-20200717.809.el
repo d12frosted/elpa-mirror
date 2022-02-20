@@ -8,7 +8,7 @@
 ;; Keyword: tools minor-mode manage
 ;; Version: 0.1.3
 ;; Package-Version: 20200717.809
-;; Package-Commit: ff6cfaa5bb4d48f8909f0cc3d0da41720c1f69f4
+;; Package-Commit: e4d748adcf52c6d9483cd9d8bd91a1288c2d7052
 ;; Package-Requires: ((emacs "25.1") (manage-minor-mode "1.1"))
 ;; URL: https://github.com/jcs-elpa/manage-minor-mode-table
 

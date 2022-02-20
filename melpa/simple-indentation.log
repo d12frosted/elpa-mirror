@@ -1,0 +1,29 @@
+Package: simple-indentation
+Fetcher: github
+Source:  https://github.com/semenInRussia/simple-indentation.el.git
+
+Updating /mnt/store/melpa/working/simple-indentation/
+Checking out origin/HEAD
+Checking out e7c8238af9e1a6b1fc4dab8014d779ac178fc249
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/simple-indentation/
+  to /tmp/simple-indentationm6lihT/simple-indentation-20220215.1745
+    simple-indentation-hooks.el -> simple-indentation-hooks.el
+    simple-indentation-namespace.el -> simple-indentation-namespace.el
+    simple-indentation-rules.el -> simple-indentation-rules.el
+    simple-indentation-utils.el -> simple-indentation-utils.el
+    simple-indentation.el -> simple-indentation.el
+Created simple-indentation-20220215.1745.tar containing:
+  simple-indentation-20220215.1745/
+  simple-indentation-20220215.1745/simple-indentation-hooks.el
+  simple-indentation-20220215.1745/simple-indentation-namespace.el
+  simple-indentation-20220215.1745/simple-indentation-pkg.el
+  simple-indentation-20220215.1745/simple-indentation-rules.el
+  simple-indentation-20220215.1745/simple-indentation-utils.el
+  simple-indentation-20220215.1745/simple-indentation.el
+Built simple-indentation in 4.691s, finished at 2022-02-20T05:57:54+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  488 Feb 20 05:57 packages/simple-indentation-20220215.1745.entry
+ 72K -rw-r--r-- 1 root root  70K Feb 20 05:57 packages/simple-indentation-20220215.1745.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 05:57 packages/simple-indentation-badge.svg
+4.0K -rw-r--r-- 1 root root   74 Feb 20 05:57 packages/simple-indentation-readme.txt
