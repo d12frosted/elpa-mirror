@@ -2,7 +2,7 @@
 Open recentf immediately after Emacs is started.
 Here are some example scenarios for when Emacs is started from the command line:
   - If files are opened (e.g. '$ emacs file1.txt'), nothing out of the ordinary occurs-- the file is opened.
-  - However if a file is not indicated (e.g. '$ emacs '), recentf will be opened after emacs is initialized.
+  - However if a file is not indicated (e.g. '$ emacs '), recentf will be opened after Emacs is initialized.
 This script uses only the inbuilt advice function for startup.  It does not require or use any interactive function.
 (This approach is a dirty hack, but an alternative hook to accomplish the same thing does not exist.)
 

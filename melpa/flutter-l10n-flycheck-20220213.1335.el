@@ -5,7 +5,7 @@
 ;; Author: Aaron Madlon-Kay
 ;; Version: 0.1.0
 ;; Package-Version: 20220213.1335
-;; Package-Commit: 8cc0507cc6619cb9ec236c4eca7417ac081f1468
+;; Package-Commit: 08138f8c95488aaf315a1f5d52c33deb8d28672b
 ;; URL: https://github.com/amake/flutter.el
 ;; Package-Requires: ((emacs "24.4") (flycheck "30") (flutter "0.1.0"))
 ;; Keywords: languages

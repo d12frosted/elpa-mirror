@@ -4,10 +4,10 @@ Source:  https://tildegit.org/contrapunctus/chronometrist.git
 
 Updating /mnt/store/melpa/working/chronometrist/
 Checking out origin/dev
-Checking out e6df8138eef45cf149cdb8b4d77e8ef289f7aaa7
+Checking out c51f4a45609b99d694de6cfad0d99d854b8e4af4
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/chronometrist/
-  to /tmp/chronometristz5drQQ/chronometrist-20220215.1904
+  to /tmp/chronometristOzyiQJ/chronometrist-20220215.1904
   ! elisp/chronometrist-spark.el -> chronometrist-spark.el
   ! elisp/chronometrist-third.el -> chronometrist-third.el
   ! elisp/chronometrist.el -> chronometrist.el
@@ -23,24 +23,24 @@ Created chronometrist-20220215.1904.tar containing:
   chronometrist-20220215.1904/chronometrist-third.org
   chronometrist-20220215.1904/chronometrist.el
   chronometrist-20220215.1904/chronometrist.org
-Built chronometrist in 8.031s, finished at 2022-02-20T10:56:11+0000
+Built chronometrist in 4.131s, finished at 2022-02-21T01:25:43+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  476 Feb 20 10:56 packages/chronometrist-20220215.1904.entry
-400K -rw-r--r-- 1 root root 400K Feb 20 10:56 packages/chronometrist-20220215.1904.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 20 10:56 packages/chronometrist-badge.svg
- 12K -rw-r--r-- 1 root root  12K Feb 20 10:56 packages/chronometrist-goal-20210510.1831.el
-4.0K -rw-r--r-- 1 root root  531 Feb 20 10:56 packages/chronometrist-goal-20210510.1831.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 20 10:56 packages/chronometrist-goal-badge.svg
-4.0K -rw-r--r-- 1 root root  153 Feb 20 10:56 packages/chronometrist-goal-readme.txt
-4.0K -rw-r--r-- 1 root root  683 Feb 20 10:56 packages/chronometrist-goal.log
-4.0K -rw-r--r-- 1 root root  448 Feb 20 10:56 packages/chronometrist-key-values-20220215.1904.entry
- 92K -rw-r--r-- 1 root root  90K Feb 20 10:56 packages/chronometrist-key-values-20220215.1904.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 20 10:56 packages/chronometrist-key-values-badge.svg
-4.0K -rw-r--r-- 1 root root  329 Feb 20 10:56 packages/chronometrist-key-values-readme.txt
-4.0K -rw-r--r-- 1 root root 1.9K Feb 20 10:56 packages/chronometrist-key-values.log
-4.0K -rw-r--r-- 1 root root 2.0K Feb 20 10:56 packages/chronometrist-readme.txt
-4.0K -rw-r--r-- 1 root root  506 Feb 20 10:56 packages/chronometrist-spark-20220215.1904.entry
- 20K -rw-r--r-- 1 root root  20K Feb 20 10:56 packages/chronometrist-spark-20220215.1904.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 20 10:56 packages/chronometrist-spark-badge.svg
-4.0K -rw-r--r-- 1 root root   82 Feb 20 10:56 packages/chronometrist-spark-readme.txt
-4.0K -rw-r--r-- 1 root root 1.3K Feb 20 10:56 packages/chronometrist-spark.log
+4.0K -rw-r--r-- 1 root root  476 Feb 21 01:25 packages/chronometrist-20220215.1904.entry
+400K -rw-r--r-- 1 root root 400K Feb 21 01:25 packages/chronometrist-20220215.1904.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 21 01:25 packages/chronometrist-badge.svg
+ 12K -rw-r--r-- 1 root root  12K Feb 21 01:25 packages/chronometrist-goal-20210510.1831.el
+4.0K -rw-r--r-- 1 root root  531 Feb 21 01:25 packages/chronometrist-goal-20210510.1831.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 21 01:25 packages/chronometrist-goal-badge.svg
+4.0K -rw-r--r-- 1 root root  153 Feb 21 01:25 packages/chronometrist-goal-readme.txt
+4.0K -rw-r--r-- 1 root root  683 Feb 21 01:25 packages/chronometrist-goal.log
+4.0K -rw-r--r-- 1 root root  448 Feb 20 22:32 packages/chronometrist-key-values-20220215.1904.entry
+ 92K -rw-r--r-- 1 root root  90K Feb 20 22:32 packages/chronometrist-key-values-20220215.1904.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 22:32 packages/chronometrist-key-values-badge.svg
+4.0K -rw-r--r-- 1 root root  329 Feb 20 22:32 packages/chronometrist-key-values-readme.txt
+4.0K -rw-r--r-- 1 root root  170 Feb 21 01:25 packages/chronometrist-key-values.log
+4.0K -rw-r--r-- 1 root root 2.0K Feb 21 01:25 packages/chronometrist-readme.txt
+4.0K -rw-r--r-- 1 root root  506 Feb 20 22:32 packages/chronometrist-spark-20220215.1904.entry
+ 20K -rw-r--r-- 1 root root  20K Feb 20 22:32 packages/chronometrist-spark-20220215.1904.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 20 22:32 packages/chronometrist-spark-badge.svg
+4.0K -rw-r--r-- 1 root root   82 Feb 20 22:32 packages/chronometrist-spark-readme.txt
+4.0K -rw-r--r-- 1 root root  160 Feb 21 01:25 packages/chronometrist-spark.log
