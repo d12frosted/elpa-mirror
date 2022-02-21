@@ -6,8 +6,8 @@
 ;; Created: January 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
-;; Package-Version: 20220220.723
-;; Package-Commit: 3cca6a7271c9f7975828c9bcfa0d761a05c8e4a1
+;; Package-Version: 20220221.1035
+;; Package-Commit: 69e1e25188ad2bb925b12e1426a5afd9e11fa714
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "24.4"))
 
@@ -261,13 +261,17 @@ The ID is created using `zk-id-time-string-format'."
     id))
 
 (defun zk--id-list (&optional str)
-  "Return a list of zk IDs for notes in 'zk-directory'.
-Optional search for regexp STR in note title."
-  (let* ((files (if str (zk--directory-files t str)
-                 (zk--directory-files t)))
-	(id-list (zk--parse-file 'id files)))
-    (if (listp id-list) id-list
-      (list id-list))))
+    "Return a list of zk IDs for notes in 'zk-directory'.
+Optional search for regexp STR in note title, case-insenstive."
+  (let ((zk-alist (zk--alist))
+        (case-fold-search t)
+        (ids))
+    (dolist (item zk-alist)
+      (if str
+          (when (string-match str (cadr item))
+            (push (car item) ids))
+        (push (car item) ids)))
+    ids))
 
 (defun zk--id-unavailable-p (str)
   "Return t if provided string STR is already in use as an id."

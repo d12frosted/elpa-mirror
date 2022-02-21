@@ -137,14 +137,14 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:keywords "async"))])
  (auctex .
-	 [(13 0 16)
+	 [(13 1 0)
 	  ((emacs
 	    (24 3)))
 	  "Integrated environment for *TeX*" tar
 	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
-	   (:commit . "a24ec9d7cb9f43ef41b4207ab970617bc0e5a7ae"))])
+	   (:commit . "484df614d8c95ce73fc97adc1b5355b17bc29948"))])
  (aumix-mode .
 	     [(7)
 	      nil "run the aumix program in a buffer" single
@@ -184,14 +184,15 @@
 	 ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	(:keywords "point" "location"))])
  (bbdb .
-       [(3 2)
+       [(3 2 1)
 	((emacs
 	  (24))
 	 (cl-lib
 	  (0 5)))
 	"core of BBDB" tar
 	((:maintainer "Roland Winkler" . "winkler@gnu.org")
-	 (:url . "http://elpa.gnu.org/packages/bbdb.html"))])
+	 (:url . "https://elpa.gnu.org/packages/bbdb.html")
+	 (:commit . "b3739cbaf2f021ac776925254e12abf0699e46f8"))])
  (beacon .
 	 [(1 3 3)
 	  ((seq
@@ -3206,12 +3207,12 @@
 	("Mattias Engdegård" . "mattiase@acm.org"))
        (:commit . "a873bbbe9cdf1abab63fc94730966f5a8f9adaa6"))])
  (xref .
-       [(1 3 2)
+       [(1 4 0)
 	((emacs
 	  (26 1)))
 	"Cross-referencing commands" tar
 	((:url . "https://elpa.gnu.org/packages/xref.html")
-	 (:commit . "766108f48db29f766908c728969f78d8e896171e"))])
+	 (:commit . "f0ac4b7797fb16833a7a0c49593f36d88c69d2d5"))])
  (yasnippet .
 	    [(0 14 0)
 	     ((cl-lib

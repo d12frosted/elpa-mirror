@@ -18,7 +18,7 @@ constructor to `xref-backend-functions'.
 
 The last three methods operate with "xref" and "location" values.
 
-One would usually call `make-xref' and `xref-make-file-location',
+One would usually call `xref-make' and `xref-make-file-location',
 `xref-make-buffer-location' or `xref-make-bogus-location' to create
 them.  More generally, a location must be an instance of a type for
 which methods `xref-location-group' and `xref-location-marker' are

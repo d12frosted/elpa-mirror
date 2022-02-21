@@ -4,8 +4,8 @@
 
 ;; Authors: Valeriy Savchenko <sinmipt@gmail.com>
 ;; URL: http://github.com/SavchenkoValeriy/emacs-powerthesaurus
-;; Package-Version: 20211127.1502
-;; Package-Commit: 02c9d11a3f407023aa7c7b080bb9f8a5f5e7cd7a
+;; Package-Version: 20220221.1004
+;; Package-Commit: 810a25056c623f304de6a72123652d9c35936718
 ;; Version: 0.2.1
 ;; Package-Requires: ((emacs "24") (request "0.3.0") (s "1.12.0"))
 ;; Keywords: convenience, writing
@@ -449,7 +449,8 @@ its default value varies depending on value of QUERY-TYPE."
           (dom-children
            (dom-children
             (dom-children
-             (dom-by-tag data 'main)))))
+             (dom-children
+              (dom-by-tag data 'main))))))
          (results (cl-map 'list
                           (lambda (it)
                             (dom-text

@@ -4,8 +4,8 @@
 
 ;; Author: Dimitar Dimitrov <mail.mitko@gmail.com>
 ;; URL: https://github.com/drdv/yahtzee
-;; Package-Commit: c3218914269ec1ac97336fee3a88816b73437b39
-;; Package-Version: 20200511.2005
+;; Package-Commit: 9b42ba4612d3043464414c08a3d60f6ad594566c
+;; Package-Version: 20220221.803
 ;; Package-X-Original-Version: 20170616.1
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: games
@@ -722,6 +722,7 @@ A bonus is awarded when the player scores at least
   (setq yahtzee-dice-outcomes-counts
 	(make-vector (length yahtzee-dice-possible-outcomes) 0)))
 
+;;;###autoload
 (defun yahtzee ()
   "Start a new game."
   (interactive)
