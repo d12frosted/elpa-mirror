@@ -2815,6 +2815,17 @@
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
 	  (:commit . "974db74a36729d67dc758301e1cc9341396c79d9"))])
+ (tramp-nspawn .
+	       [(1 0)
+		((emacs
+		  (23)))
+		"Tramp integration for systemd-nspawn containers" tar
+		((:url . "https://github.com/bjc/tramp-nspawn")
+		 (:keywords "tramp" "nspawn" "machinectl" "systemd" "systemd-nspawn")
+		 (:maintainer "Brian Cully" . "bjc@kublai.com")
+		 (:authors
+		  ("Brian Cully" . "bjc@kublai.com"))
+		 (:commit . "b8380ee8a7c15ad4b96963d224969fc1a0337180"))])
  (tramp-theme .
 	      [(0 2)
 	       ((emacs
