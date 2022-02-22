@@ -1,0 +1,13 @@
+(snakemake-mode .
+		[(20220222 515)
+		 ((emacs
+		   (26 1))
+		  (transient
+		   (0 3 0)))
+		 "Major mode for editing Snakemake files" tar
+		 ((:commit . "f6abb59d4f3b97d9519b075157f4bb19efac494b")
+		  (:authors
+		   ("Kyle Meyer" . "kyle@kyleam.com"))
+		  (:maintainer "Kyle Meyer" . "kyle@kyleam.com")
+		  (:keywords "tools")
+		  (:url . "https://git.kyleam.com/snakemake-mode/about"))])

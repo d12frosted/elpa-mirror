@@ -6,6 +6,8 @@
 ;;         Michael Heerdegen <michael_heerdegen@web.de>
 ;; Maintainer: Titus von der Malsburg <malsburg@posteo.de>
 ;; URL: https://github.com/emacs-helm/helm-dictionary
+;; Package-Version: 20201006.1511
+;; Package-Commit: b316a1d55e58645d59a84d33851d46fab3cd54b5
 ;; Version: 1.0.0
 ;; Package-Requires: ((helm "1.5.5"))
 

@@ -5,7 +5,7 @@
 ;; Author: jpe90 <eskinjp@gmail.com>
 ;; URL: https://github.com/jpe90/emacs-deps-new
 ;; Package-Version: 20220221.2235
-;; Package-Commit: 7610809815cedcd3078fb83e16a58deb12a295f8
+;; Package-Commit: 183089e6d4ded90efff491916e1c87411ead0461
 ;; Version: 1.1
 ;; Package-Requires: ((emacs "25.1" ) (transient "0.3.7"))
 

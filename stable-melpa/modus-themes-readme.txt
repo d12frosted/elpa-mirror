@@ -8,6 +8,7 @@ themes, or available at: <https://protesilaos.com/emacs/modus-themes>).
 
 The themes share the following customization variables:
 
+    modus-themes-completions                    (alist)
     modus-themes-headings                       (alist)
     modus-themes-org-agenda                     (alist)
     modus-themes-bold-constructs                (boolean)
@@ -18,7 +19,6 @@ The themes share the following customization variables:
     modus-themes-subtle-line-numbers            (boolean)
     modus-themes-variable-pitch-ui              (boolean)
     modus-themes-box-buttons                    (choice)
-    modus-themes-completions                    (choice)
     modus-themes-diffs                          (choice)
     modus-themes-fringes                        (choice)
     modus-themes-hl-line                        (choice)
