@@ -4,10 +4,28 @@ Source:  https://github.com/tuh8888/chezmoi.el.git
 
 Updating /mnt/store/melpa/working/chezmoi/
 Checking out origin/HEAD
-Checking out 1f8326d8f693fc9177f8ccb8b98a2d480f4110cc
-Built chezmoi in 4.618s, finished at 2022-02-21T10:10:26+0000
+Checking out 96d3448ae1e2293855e93633faf4b959726ded99
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/chezmoi/
+  to /tmp/chezmoidgIuj4/chezmoi-20220221.1556
+    chezmoi-company.el -> chezmoi-company.el
+    chezmoi-dired.el -> chezmoi-dired.el
+    chezmoi-ediff.el -> chezmoi-ediff.el
+    chezmoi-magit.el -> chezmoi-magit.el
+    chezmoi-template.el -> chezmoi-template.el
+    chezmoi.el -> chezmoi.el
+Created chezmoi-20220221.1556.tar containing:
+  chezmoi-20220221.1556/
+  chezmoi-20220221.1556/chezmoi-company.el
+  chezmoi-20220221.1556/chezmoi-dired.el
+  chezmoi-20220221.1556/chezmoi-ediff.el
+  chezmoi-20220221.1556/chezmoi-magit.el
+  chezmoi-20220221.1556/chezmoi-pkg.el
+  chezmoi-20220221.1556/chezmoi-template.el
+  chezmoi-20220221.1556/chezmoi.el
+Built chezmoi in 4.233s, finished at 2022-02-22T03:41:46+0000
  ✓ Success:
- 12K -rw-r--r-- 1 root root  12K Feb 21 10:10 packages/chezmoi-20220220.524.el
-4.0K -rw-r--r-- 1 root root  363 Feb 21 10:10 packages/chezmoi-20220220.524.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 21 10:10 packages/chezmoi-badge.svg
-4.0K -rw-r--r-- 1 root root  508 Feb 21 10:10 packages/chezmoi-readme.txt
+4.0K -rw-r--r-- 1 root root  336 Feb 22 03:41 packages/chezmoi-20220221.1556.entry
+ 40K -rw-r--r-- 1 root root  40K Feb 22 03:41 packages/chezmoi-20220221.1556.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 22 03:41 packages/chezmoi-badge.svg
+4.0K -rw-r--r-- 1 root root  508 Feb 22 03:41 packages/chezmoi-readme.txt

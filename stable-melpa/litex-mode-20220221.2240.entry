@@ -1,0 +1,13 @@
+(litex-mode .
+	    [(20220221 2240)
+	     ((cl-lib
+	       (0 5))
+	      (emacs
+	       (24 1)))
+	     "Minor mode for converting lisp to LaTeX" tar
+	     ((:commit . "bad847232a9453db76a9a1de024bdcf4ed1e97e2")
+	      (:authors
+	       ("Gaurav Atreya" . "allmanpride@gmail.com"))
+	      (:maintainer "Gaurav Atreya" . "allmanpride@gmail.com")
+	      (:keywords "calculator" "lisp" "latex")
+	      (:url . "https://github.com/Atreyagaurav/litex-mode"))])

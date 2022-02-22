@@ -1,0 +1,23 @@
+(lsp-mode .
+	  [(20220221 2042)
+	   ((emacs
+	     (26 1))
+	    (dash
+	     (2 18 0))
+	    (f
+	     (0 20 0))
+	    (ht
+	     (2 3))
+	    (spinner
+	     (1 7 3))
+	    (markdown-mode
+	     (2 3))
+	    (lv
+	     (0)))
+	   "LSP mode" tar
+	   ((:commit . "fc5c06c562cea739e2a969f261aa8670120a4c82")
+	    (:authors
+	     ("Vibhav Pant, Fangrui Song, Ivan Yonchovski"))
+	    (:maintainer "Vibhav Pant, Fangrui Song, Ivan Yonchovski")
+	    (:keywords "languages")
+	    (:url . "https://github.com/emacs-lsp/lsp-mode"))])
