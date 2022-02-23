@@ -1,12 +1,12 @@
 ;;; morlock.el --- more font-lock keywords for elisp  -*- lexical-binding: t -*-
 
-;; Copyright (C) 2013-2018  Jonas Bernoulli
+;; Copyright (C) 2013-2022  Jonas Bernoulli
 
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Homepage: https://github.com/tarsius/morlock
 ;; Keywords: convenience
-;; Package-Version: 20180318.2023
-;; Package-Commit: b883d48024ddfffebe2d0dd69f5ed54c617f8834
+;; Package-Version: 20220223.1454
+;; Package-Commit: ca6d72900392f1940914ee38ac3ebbce89f11373
 
 ;; This file is not part of GNU Emacs.
 
@@ -32,7 +32,7 @@
 ;; `morlock-el-font-lock-keywords' expressions that aren't
 ;;     covered by the default keywords.
 ;; `morlock-op-font-lock-keywords' expressions that would be
-;;     operators in other languages: `or' `and' `not'.
+;;     operators in other languages: `or', `xor', `and' and `not'.
 ;; `morlock-cl-font-lock-keywords' expressions that used to be
 ;;     covered by the default keywords but aren't anymore since
 ;;     the `cl-' prefix was added.
@@ -63,7 +63,7 @@
   "Fresh expressions to highlight in Emacs-Lisp mode.")
 
 (defconst morlock-op-font-lock-keywords
-  '(("(\\(and\\|or\\|not\\)\\>" 1 'font-lock-keyword-face)))
+  '(("(\\(or\\|xor\\|and\\|not\\)\\>" 1 'font-lock-keyword-face)))
 
 (defconst morlock-cl-font-lock-keywords
   (eval-when-compile

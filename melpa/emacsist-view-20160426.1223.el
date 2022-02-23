@@ -5,6 +5,8 @@
 ;; Author: DarkSun <lujun9972@gmail.com>
 ;; Created: 2015-12-31
 ;; Version: 0.1
+;; Package-Version: 20160426.1223
+;; Package-Commit: f67761259ed779a9bc95c9a4e0474522990c5c6b
 ;; Keywords: convenience, usability
 ;; Homepage: https://github.com/lujun9972/emacsist-view
 
