@@ -40,6 +40,30 @@ that I do not ignore:
                 (repology-search-projects
                  :search "emacs" :inrepo "gnuguix" :outdated "on")))
 
+By default, the package trusts Repology's status values to report
+outdated packages.  However, this can introduce false positives.
+You can then set `repology-outdated-project-definition' and call
+`repology-filter-outdated-projects' to ignore those.
+
+For example, with the following set-up, I can look for every
+outdated Emacs packages and Asymptote package in GNU Guix, ignoring
+bogus versions for "emacs:circe", and "emacs:erlang" package
+altogether.  I also sort projects alphabetically.
+
+   (setq repology-outdated-project-definition
+         '(("emacs:circe" "<=2.11" nil)
+           ("emacs:erlang" nil nil))
+         repology-display-projects-sort-key "Project")
+
+   (let ((repo "gnuguix"))
+     (repology-display-projects
+      (repology-filter-outdated-projects
+          (append (repology-search-projects :search "emacs:" :outdated "on"
+                                            :inrepo repo)
+                  '("asymptote"))
+          repo)
+      repo))
+
 Eventually, this library provides an interactive function with
 a spartan interface wrapping this up: `repology'.  Since it builds
 and displays incrementally search filters, you may use it as

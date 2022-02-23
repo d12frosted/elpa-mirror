@@ -2386,15 +2386,16 @@
 	    ("Mattias Engdegård" . "mattiase@acm.org"))
 	   (:commit . "5a918af0c99ab83355d4ec73a2fb39e70c173956"))])
  (repology .
-	   [(1 1 0)
+	   [(1 2 1)
 	    ((emacs
 	      (26 1)))
 	    "Repology API access via Elisp" tar
-	    ((:maintainer "Nicolas Goaziou" . "mail@nicolasgoaziou.fr")
+	    ((:keywords "web")
+	     (:maintainer "Nicolas Goaziou" . "mail@nicolasgoaziou.fr")
 	     (:authors
 	      ("Nicolas Goaziou" . "mail@nicolasgoaziou.fr"))
-	     (:keywords "web")
-	     (:url . "https://elpa.gnu.org/packages/repology.html"))])
+	     (:url . "https://elpa.gnu.org/packages/repology.html")
+	     (:commit . "aa7275de834c540af512e3579851a68b7feba9b8"))])
  (rich-minority .
 		[(1 0 3)
 		 ((cl-lib
@@ -2438,6 +2439,19 @@
 	  (:authors
 	   ("Jan Moringen" . "scymtym@users.sourceforge.net"))
 	  (:keywords "rudel" "collaboration"))])
+ (satchel .
+	  [(0 2)
+	   ((emacs
+	     (27 2))
+	    (project
+	     (0 8 1)))
+	   "A bag for your files, separated by git branches" tar
+	   ((:keywords "tools" "languages")
+	    (:maintainer "Theodor Thornhill" . "theo@thornhill.no")
+	    (:authors
+	     ("Theodor Thornhill" . "theo@thornhill.no"))
+	    (:url . "https://elpa.gnu.org/packages/satchel.html")
+	    (:commit . "6e5613e203f6937202cb5d55249e7e6be939067b"))])
  (scanner .
 	  [(0 2)
 	   ((emacs
