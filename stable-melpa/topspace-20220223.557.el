@@ -5,8 +5,8 @@
 ;; Author: Trevor Edwin Pogue <trevor.pogue@gmail.com>
 ;; Maintainer: Trevor Edwin Pogue <trevor.pogue@gmail.com>
 ;; URL: https://github.com/trevorpogue/topspace
-;; Package-Version: 20220223.347
-;; Package-Commit: 4eb27abaa182e856ba3f3c8e1e84fdd2e1f009af
+;; Package-Version: 20220223.557
+;; Package-Commit: 25841387a5d0300ea49356b9781c357b84df20bd
 ;; Keywords: convenience, scrolling, center, cursor, margin, padding
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -95,7 +95,7 @@ Customize `topspace-center-position' to adjust the centering position."
   :type 'boolean)
 
 (defcustom topspace-center-position
-  0.5
+  0.4
   "Target position when centering buffers as a ratio of frame height.
 A value from 0 to 1 where lower values center buffers higher up in the screen.
 Used in `topspace-recenter-buffer' when called or when opening/resizing buffers
