@@ -5,6 +5,8 @@
 ;; Authors: Nikola Knezevic <knl@soba143.net>
 ;; Created: 2015-10-10
 ;; Version: 0.3.0
+;; Package-Version: 20151014.2030
+;; Package-Commit: e37cd1291d5d68d4c8d6386eab9cb9d94fd3bcfa
 ;; URL: https://github.com/knl/name-this-color.el
 ;; Package-Requires: ((emacs "24") (cl-lib "0.5") (dash "2.11.0"))
 ;; Keywords: lisp, color, hex, rgb, shade, name
@@ -1753,12 +1755,6 @@ closest alternative.
   a string specifying a color's RGB components (e.g. \"#ff12ec\", \"#fff\")."
   (let* ((candidate (ntc--get-closest-color color-code))
          (shade (ntc--struct-shade (cdr candidate))))
-    shade))
-
-(provide 'name-this-color)
-
-;;; name-this-color.el ends here
- (cdr candidate))))
     shade))
 
 (provide 'name-this-color)
