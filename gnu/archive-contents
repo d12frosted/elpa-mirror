@@ -1714,7 +1714,7 @@
 			  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 			 (:keywords "faces" "theme" "accessibility"))])
  (modus-themes .
-	       [(2 1 0)
+	       [(2 2 0)
 		((emacs
 		  (27 1)))
 		"Highly accessible and customizable themes (WCAG AAA)" tar
@@ -1723,7 +1723,7 @@
 		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "c78b3c02a3d5bf250bfc9db34745888da44c1543"))])
+		 (:commit . "b68217fe044c68c0ca73e43a3c1dee7fb73a9284"))])
  (modus-vivendi-theme .
 		      [(0 13 2)
 		       ((emacs
@@ -2386,7 +2386,7 @@
 	    ("Mattias Engdegård" . "mattiase@acm.org"))
 	   (:commit . "5a918af0c99ab83355d4ec73a2fb39e70c173956"))])
  (repology .
-	   [(1 2 1)
+	   [(1 2 2)
 	    ((emacs
 	      (26 1)))
 	    "Repology API access via Elisp" tar
@@ -2395,7 +2395,7 @@
 	     (:authors
 	      ("Nicolas Goaziou" . "mail@nicolasgoaziou.fr"))
 	     (:url . "https://elpa.gnu.org/packages/repology.html")
-	     (:commit . "aa7275de834c540af512e3579851a68b7feba9b8"))])
+	     (:commit . "db7ddc5593964e9cecb162627bdd2a0f59658f3f"))])
  (rich-minority .
 		[(1 0 3)
 		 ((cl-lib
