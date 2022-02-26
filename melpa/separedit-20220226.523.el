@@ -5,8 +5,8 @@
 ;; Author: Gong Qijian <gongqijian@gmail.com>
 ;; Created: 2019/04/06
 ;; Version: 0.3.26
-;; Package-Version: 20220202.1359
-;; Package-Commit: a2cea75f7b66a02e28334291fc6fb371cd5741b1
+;; Package-Version: 20220226.523
+;; Package-Commit: 6161b6e2a4d234ead7bdbda0e978c7669e7133d1
 ;; Package-Requires: ((emacs "25.1") (dash "2.18") (edit-indirect "0.1.5"))
 ;; URL: https://github.com/twlz0ne/separedit.el
 ;; Keywords: tools languages docs
@@ -1926,10 +1926,10 @@ If you just want to check `major-mode', use `derived-mode-p'."
 (defun separedit-dwim-described-variable ()
   "Edit value of variable at poin in help/helpful buffer."
   (interactive)
-  (-if-let* ((info (pcase major-mode
-                     (`help-mode (separedit-help-variable-edit-info))
-                     (`helpful-mode (separedit-helpful-variable-edit-info))))
-             (region (nth 1 info))
+  (-if-let (info (pcase major-mode
+                   (`help-mode (separedit-help-variable-edit-info))
+                   (`helpful-mode (separedit-helpful-variable-edit-info))))
+      (let* ((region (nth 1 info))
              (strp (and (nth 2 info) t))
              (edit-indirect-after-creation-hook #'separedit--buffer-creation-setup)
              (point-info (separedit--point-info (car region) (cdr region)))
@@ -1946,7 +1946,7 @@ If you just want to check `major-mode', use `derived-mode-p'."
                  (separedit--restore-point ,@point-info)
                  (setq-local separedit--inhibit-read-only t)
                  (setq-local separedit--help-variable-edit-info ',info))))
-      (edit-indirect-region (car region) (cdr region) 'display-buffer)
+        (edit-indirect-region (car region) (cdr region) 'display-buffer))
     (user-error "Not at variable value")))
 
 ;;;###autoload

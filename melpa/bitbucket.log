@@ -1,0 +1,27 @@
+Package: bitbucket
+Fetcher: github
+Source:  https://github.com/tjaartvdwalt/bitbucket.el.git
+
+Updating /mnt/store/melpa/working/bitbucket/
+Checking out origin/HEAD
+Checking out 5e663da1bd38a14c1ecf4d66a79d4321ac833bcf
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/bitbucket/
+  to /tmp/bitbucket1FoNT2/bitbucket-20170405.446
+    bitbucket-api.el -> bitbucket-api.el
+    bitbucket-http.el -> bitbucket-http.el
+    bitbucket-issues.el -> bitbucket-issues.el
+    bitbucket.el -> bitbucket.el
+Created bitbucket-20170405.446.tar containing:
+  bitbucket-20170405.446/
+  bitbucket-20170405.446/bitbucket-api.el
+  bitbucket-20170405.446/bitbucket-http.el
+  bitbucket-20170405.446/bitbucket-issues.el
+  bitbucket-20170405.446/bitbucket-pkg.el
+  bitbucket-20170405.446/bitbucket.el
+Built bitbucket in 3.775s, finished at 2022-02-26T06:55:34+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  453 Feb 26 06:55 packages/bitbucket-20170405.446.entry
+ 20K -rw-r--r-- 1 root root  20K Feb 26 06:55 packages/bitbucket-20170405.446.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 26 06:55 packages/bitbucket-badge.svg
+4.0K -rw-r--r-- 1 root root  116 Feb 26 06:55 packages/bitbucket-readme.txt

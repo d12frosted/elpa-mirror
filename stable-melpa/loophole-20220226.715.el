@@ -5,8 +5,8 @@
 ;; Author: 0x60DF <0x60df@gmail.com>
 ;; Created: 30 Aug 2020
 ;; Version: 0.8.2
-;; Package-Version: 20220219.1614
-;; Package-Commit: 6971dd1d2e88aa8ecd61cc79a639a28b93ff8895
+;; Package-Version: 20220226.715
+;; Package-Commit: 97e52aef8659161b83358bd037e3bfb536d51e76
 ;; Keywords: convenience
 ;; URL: https://github.com/0x60df/loophole
 ;; Package-Requires: ((emacs "27.1"))
@@ -179,6 +179,16 @@ write protected."
   :group 'loophole
   :type 'number)
 
+(define-obsolete-variable-alias 'loophole-kmacro-by-read-key-finish-key
+  'loophole-read-key-termination-key "27.1")
+(define-obsolete-variable-alias 'loophole-array-by-read-key-finish-key
+  'loophole-read-key-termination-key "27.1")
+(defcustom loophole-read-key-termination-key (where-is-internal
+                                              'keyboard-quit nil t)
+  "Key sequence to finish `loophole-read-key-until-termination-key'."
+  :group 'loophole
+  :type 'key-sequence)
+
 (defcustom loophole-read-buffer-inhibit-recursive-edit nil
   "Flag if `recursive-edit' is inhibited on `loophole-read-buffer'.
 Instead of it, `loophole-read-buffer' set up some utilities
@@ -253,13 +263,6 @@ in the buffer."
   :group 'loophole
   :type 'string)
 
-(defcustom loophole-kmacro-by-read-key-finish-key (where-is-internal
-                                                   'keyboard-quit nil t)
-  "Key sequence to finish definition of keyboard macro.
-This is used by `loophole-obtain-kmacro-by-read-key'."
-  :group 'loophole
-  :type 'key-sequence)
-
 (define-obsolete-variable-alias 'loophole-kmacro-by-recursive-edit-map
   'loophole-defining-kmacro-map "27.1")
 (defvar loophole-defining-kmacro-map
@@ -289,13 +292,6 @@ Activity of this map is controled by
   "Tag string for `loophole-defining-kmacro-map'."
   :group 'loophole
   :type 'string)
-
-(defcustom loophole-array-by-read-key-finish-key (where-is-internal
-                                                  'keyboard-quit nil t)
-  "Key sequence to finish inputting key sequence.
-This is used by `loophole-obtain-array-by-read-key'."
-  :group 'loophole
-  :type 'key-sequence)
 
 (defcustom loophole-bind-entry-order
   '(loophole-obtain-object)
@@ -359,8 +355,7 @@ or while it is 'negative-argument and
 
 (defcustom loophole-bind-kmacro-order
   '(loophole-obtain-kmacro-by-recursive-edit
-    (loophole-obtain-kmacro-by-read-key
-     :key loophole-read-key-for-kmacro-by-read-key)
+    loophole-obtain-kmacro-by-read-key
     loophole-obtain-kmacro-by-recall-record
     loophole-obtain-object)
   "The priority list of methods to obtain kmacro for binding.
@@ -391,8 +386,7 @@ is called with `negative-argument',
   :type '(repeat sexp))
 
 (defcustom loophole-bind-array-order
-  '((loophole-obtain-array-by-read-key
-     :key loophole-read-key-for-array-by-read-key)
+  '(loophole-obtain-array-by-read-key
     loophole-obtain-array-by-read-string
     loophole-obtain-object)
   "The priority list of methods to obtain array for binding.
@@ -487,8 +481,7 @@ is called with `negative-argument',
   '(loophole-obtain-command-by-read-command
     loophole-obtain-kmacro-by-recursive-edit
     loophole-obtain-command-by-key-sequence
-    (loophole-obtain-kmacro-by-read-key
-     :key loophole-read-key-for-array-by-read-key)
+    loophole-obtain-kmacro-by-read-key
     loophole-obtain-command-by-lambda-form
     loophole-obtain-kmacro-by-recall-record
     loophole-obtain-object)
@@ -896,10 +889,10 @@ Otherwise, \\[keyboard-quit] will be returned as it is read."
     key))
 
 (defun loophole-read-key-with-time-limit (prompt)
-  "Read arbitrary key sequence with time limit, and return read keys.
+  "Read keys with time limit, and return read key sequence.
 PROMPT is a prompt string displayed at the first time for
-reading key.  A second or later time for reading key, read
-keys will be prompetd."
+reading key.  For a second or later time for reading key,
+read keys will be shown in echo area."
   (let ((menu-prompting nil)
         (quit (vconcat (where-is-internal 'keyboard-quit nil t)))
         (read-keys nil))
@@ -915,7 +908,7 @@ keys will be prompetd."
                          (if (and loophole-allow-keyboard-quit
                                   (not (zerop (length quit)))
                                   (loophole-key-equal
-                                   (seq-take read-keys (length quit))
+                                   (seq-take (reverse read-keys) (length quit))
                                    quit))
                              (keyboard-quit))
                          (setq read-keys
@@ -931,6 +924,55 @@ keys will be prompetd."
                 (signal 'wrong-type-argument (list 'arrayp key)))
             key)
         (cancel-timer timer)))))
+
+(defun loophole-read-key-until-termination-key (prompt)
+  "Read keys until termination key, and return read key sequence.
+PROMPT is a prompt string displayed with termination key and
+read keys.
+
+By default, `loophole-read-key-termination-key' is \\[keyboard-quit]
+the key bound to `keyboard-quit'.  In this situation, you
+cannot use \\[keyboard-quit] for quitting.
+Once `loophole-read-key-termination-key' is changed, and
+user option `loophole-allow-keyboard-quit' is non-nil,
+\\[keyboard-quit] takes effect as quit."
+  (let ((finish (vconcat loophole-read-key-termination-key))
+        (quit (vconcat (where-is-internal 'keyboard-quit nil t))))
+    (or (not (zerop (length finish)))
+        (and loophole-allow-keyboard-quit (not (zerop (length quit))))
+        (user-error "Neither finishing key nor quitting key is invalid"))
+    (let ((menu-prompting nil))
+      (letrec
+          ((read-arbitrary-key-sequence
+            (lambda (v)
+              (let* ((k (vector
+                         (read-key
+                          (format "%s%s(%s to %s) [%s]"
+                                  prompt
+                                  (if (string-match "[^ ]$" prompt) " " "")
+                                  (if (zerop (length finish))
+                                      (key-description quit)
+                                    (key-description finish))
+                                  (if (zerop (length finish))
+                                      "quit"
+                                    "finish")
+                                  (mapconcat (lambda (e)
+                                               (key-description (vector e)))
+                                             (reverse v)
+                                             " ")))))
+                     (k-v (vconcat k v)))
+                (cond ((and (not (zerop (length finish)))
+                            (loophole-key-equal (seq-take k-v (length finish))
+                                                finish))
+                       (seq-take (reverse k-v)
+                                 (- (length k-v) (length finish))))
+                      ((and loophole-allow-keyboard-quit
+                            (not (zerop (length quit)))
+                            (loophole-key-equal (seq-take k-v (length quit))
+                                                quit))
+                       (keyboard-quit))
+                      (t (funcall read-arbitrary-key-sequence k-v)))))))
+        (funcall read-arbitrary-key-sequence [])))))
 
 (defun loophole-read-map-variable (prompt &optional predicate)
   "`completing-read' existing map-variable and return read one.
@@ -3126,6 +3168,7 @@ Definition can be finished by calling `loophole-end-kmacro'."
 (defun loophole-read-key-for-kmacro-by-read-key (prompt)
   "`loophole-read-key' with checking finish and quit key.
 PROMPT is a string for reading key."
+  (declare (obsolete nil "27.1"))
   (let ((finish (vconcat loophole-kmacro-by-read-key-finish-key))
         (quit (vconcat (where-is-internal 'keyboard-quit nil t))))
     (or (not (zerop (length finish)))
@@ -3136,6 +3179,7 @@ PROMPT is a string for reading key."
 (defun loophole-read-key-for-array-by-read-key (prompt)
   "`loophole-read-key' with checking finish and quit key.
 PROMPT is a string for reading key."
+  (declare (obsolete nil "27.1"))
   (let ((finish (vconcat loophole-array-by-read-key-finish-key))
         (quit (vconcat (where-is-internal 'keyboard-quit nil t))))
     (or (not (zerop (length finish)))
@@ -3303,54 +3347,24 @@ KEYMAP."
 
 (defun loophole-obtain-kmacro-by-read-key (key &optional _keymap)
   "Return kmacro obtained by reading key.
-This function `read-key' recursively with prompt in which
-KEY is embedded.  When you finish keyboard macro, type
-`loophole-kmacro-by-read-key-finish-key'.
-By default, `loophole-kmacro-by-read-key-finish-key' is \\[keyboard-quit]
+This function uses `loophole-read-key-until-termination-key'
+to define kmacro.  Read keys until
+`loophole-read-key-termination-key' will be kmacro.
+
+By default, `loophole-read-key-termination-key' is \\[keyboard-quit]
 the key bound to `keyboard-quit'.  In this situation, you
 cannot use \\[keyboard-quit] for quitting.
-Once `loophole-kmacro-by-read-key-finish-key' is changed,
-you can finish definition of kmacro by new finish key, and
-\\[keyboard-quit] takes effect as quit."
-  (let ((finish (vconcat loophole-kmacro-by-read-key-finish-key))
-        (quit (vconcat (where-is-internal 'keyboard-quit nil t))))
-    (or (not (zerop (length finish)))
-        (not (zerop (length quit)))
-        (user-error "Neither finishing key nor quitting key is invalid"))
-    (let ((menu-prompting nil))
-      (letrec
-          ((read-arbitrary-key-sequence
-            (lambda (v)
-              (let* ((k (vector
-                         (read-key
-                          (format "Set key %s to kmacro: (%s to %s) [%s]"
-                                  (key-description key)
-                                  (if (zerop (length finish))
-                                      (key-description quit)
-                                    (key-description finish))
-                                  (if (zerop (length finish))
-                                      "quit"
-                                    "finish")
-                                  (mapconcat (lambda (e)
-                                               (key-description (vector e)))
-                                             (reverse v)
-                                             " ")))))
-                     (k-v (vconcat k v)))
-                (cond ((and (not (zerop (length finish)))
-                            (loophole-key-equal (seq-take k-v (length finish))
-                                                finish))
-                       (seq-take (reverse k-v)
-                                 (- (length k-v) (length finish))))
-                      ((and (not (zerop (length quit)))
-                            (loophole-key-equal (seq-take k-v (length quit))
-                                                quit))
-                       (keyboard-quit))
-                      (t (funcall read-arbitrary-key-sequence k-v)))))))
-        (let ((macro (funcall read-arbitrary-key-sequence [])))
-          (kmacro-start-macro nil)
-          (end-kbd-macro nil #'kmacro-loop-setup-function)
-          (setq last-kbd-macro macro)
-          (kmacro-lambda-form (kmacro-ring-head)))))))
+Once `loophole-read-key-termination-key' is changed, and
+user option `loophole-allow-keyboard-quit' is non-nil,
+\\[keyboard-quit] takes effect as quit.
+
+KEY which is about to be bound is embedded in prompt string."
+  (let ((macro (loophole-read-key-until-termination-key
+                (format "Set key %s to kmacro: " (key-description key)))))
+    (kmacro-start-macro nil)
+    (end-kbd-macro nil #'kmacro-loop-setup-function)
+    (setq last-kbd-macro macro)
+    (kmacro-lambda-form (kmacro-ring-head))))
 
 (defun loophole-obtain-kmacro-by-recursive-edit (_key &optional _keymap)
   "Return kmacro obtained by recursive edit.
@@ -3488,50 +3502,20 @@ Completing read record with prompt in which KEY is embedded."
 
 (defun loophole-obtain-array-by-read-key (key &optional _keymap)
   "Return array obtained by reading key.
-This function `read-key' recursively with prompt in which
-KEY is embedded.  When you finish inputting key sequence,
-type `loophole-array-by-read-key-finish-key'.
-By default, `loophole-array-by-read-key-finish-key' is \\[keyboard-quit]
+This function uses `loophole-read-key-until-termination-key'
+to define kbd macro denoted by array.  Read keys until
+`loophole-read-key-termination-key' will be kbd macro.
+
+By default, `loophole-read-key-termination-key' is \\[keyboard-quit]
 the key bound to `keyboard-quit'.  In this situation, you
 cannot use \\[keyboard-quit] for quitting.
-Once `loophole-array-by-read-key-finish-key' is changed, you
-can finish definition of array by new finish key, and \\[keyboard-quit]
-takes effect as quit."
-  (let ((finish (vconcat loophole-array-by-read-key-finish-key))
-        (quit (vconcat (where-is-internal 'keyboard-quit nil t))))
-    (or (not (zerop (length finish)))
-        (not (zerop (length quit)))
-        (user-error "Neither finishing key nor quitting key is invalid"))
-    (let ((menu-prompting nil))
-      (letrec
-          ((read-arbitrary-key-sequence
-            (lambda (v)
-              (let* ((k (vector
-                         (read-key
-                          (format "Set key %s to array: (%s to %s) [%s]"
-                                  (key-description key)
-                                  (if (zerop (length finish))
-                                      (key-description quit)
-                                    (key-description finish))
-                                  (if (zerop (length finish))
-                                      "quit"
-                                    "finish")
-                                  (mapconcat (lambda (e)
-                                               (key-description (vector e)))
-                                             (reverse v)
-                                             " ")))))
-                     (k-v (vconcat k v)))
-                (cond ((and (not (zerop (length finish)))
-                            (loophole-key-equal (seq-take k-v (length finish))
-                                                finish))
-                       (seq-take (reverse k-v)
-                                 (- (length k-v) (length finish))))
-                      ((and (not (zerop (length quit)))
-                            (loophole-key-equal (seq-take k-v (length quit))
-                                                quit))
-                       (keyboard-quit))
-                      (t (funcall read-arbitrary-key-sequence k-v)))))))
-        (funcall read-arbitrary-key-sequence [])))))
+Once `loophole-read-key-termination-key' is changed, and
+user option `loophole-allow-keyboard-quit' is non-nil,
+\\[keyboard-quit] takes effect as quit.
+
+KEY which is about to be bound is embedded in prompt string."
+  (loophole-read-key-until-termination-key
+   (format "Set key %s to array: " (key-description key))))
 
 (defun loophole-obtain-array-by-read-string (key &optional _keymap)
   "Return array obtained by `read-string'.

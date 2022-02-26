@@ -4,28 +4,30 @@ Source:  https://gitlab.com/protesilaos/modus-themes.git
 
 Updating /mnt/store/melpa/working/modus-themes/
 Checking out origin/main
-Checking out b0beb8affbb0e28b1c1916d536a2b14a302bb7f6
+Checking out c08d623721e8c5d3fec71dd5b09dbe55d38d8ea3
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/modus-themes/
-  to /tmp/modus-themesCLt39p/modus-themes-20220225.1725
+  to /tmp/modus-themes0K8HXf/modus-themes-20220226.725
     modus-operandi-theme.el -> modus-operandi-theme.el
     modus-themes.el -> modus-themes.el
     modus-vivendi-theme.el -> modus-vivendi-theme.el
   ! doc/modus-themes.info -> modus-themes.info
   ! doc/doclicense.texi -> doclicense.texi
-Generating /tmp/modus-themesCLt39p/modus-themes-20220225.1725/doclicense.info
-Created modus-themes-20220225.1725.tar containing:
-  modus-themes-20220225.1725/
-  modus-themes-20220225.1725/dir
-  modus-themes-20220225.1725/doclicense.info
-  modus-themes-20220225.1725/modus-operandi-theme.el
-  modus-themes-20220225.1725/modus-themes-pkg.el
-  modus-themes-20220225.1725/modus-themes.el
-  modus-themes-20220225.1725/modus-themes.info
-  modus-themes-20220225.1725/modus-vivendi-theme.el
-Built modus-themes in 6.652s, finished at 2022-02-26T01:44:25+0000
+Generating /tmp/modus-themes0K8HXf/modus-themes-20220226.725/doclicense.info
+Created modus-themes-20220226.725.tar containing:
+  modus-themes-20220226.725/
+  modus-themes-20220226.725/dir
+  modus-themes-20220226.725/doclicense.info
+  modus-themes-20220226.725/modus-operandi-theme.el
+  modus-themes-20220226.725/modus-themes-pkg.el
+  modus-themes-20220226.725/modus-themes.el
+  modus-themes-20220226.725/modus-themes.info
+  modus-themes-20220226.725/modus-vivendi-theme.el
+Built modus-themes in 8.801s, finished at 2022-02-26T07:30:48+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  433 Feb 26 01:44 packages/modus-themes-20220225.1725.entry
-680K -rw-r--r-- 1 root root 680K Feb 26 01:44 packages/modus-themes-20220225.1725.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 26 01:44 packages/modus-themes-badge.svg
-8.0K -rw-r--r-- 1 root root 7.2K Feb 26 01:44 packages/modus-themes-readme.txt
+4.0K -rw-r--r-- 1 root root  432 Feb 26 04:37 packages/modus-themes-20220226.359.entry
+680K -rw-r--r-- 1 root root 680K Feb 26 04:37 packages/modus-themes-20220226.359.tar
+4.0K -rw-r--r-- 1 root root  432 Feb 26 07:30 packages/modus-themes-20220226.725.entry
+680K -rw-r--r-- 1 root root 680K Feb 26 07:30 packages/modus-themes-20220226.725.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 26 07:30 packages/modus-themes-badge.svg
+8.0K -rw-r--r-- 1 root root 7.2K Feb 26 07:30 packages/modus-themes-readme.txt
