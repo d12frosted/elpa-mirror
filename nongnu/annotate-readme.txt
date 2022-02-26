@@ -3,10 +3,15 @@
 			     ━━━━━━━━━━━━━
 
 
+[https://elpa.nongnu.org/nongnu/annotate.svg]
+
 [http://melpa.org/packages/annotate-badge.svg]
 
 [http://stable.melpa.org/packages/annotate-badge.svg]
 
+
+[https://elpa.nongnu.org/nongnu/annotate.svg]
+<https://elpa.nongnu.org/nongnu/annotate.svg>
 
 [http://melpa.org/packages/annotate-badge.svg]
 <http://melpa.org/#/annotate>
