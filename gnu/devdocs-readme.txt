@@ -6,39 +6,22 @@
 Table of Contents
 ─────────────────
 
-1. Contributing
+1. Basic usage
+2. Managing documents
+3. Setting the default documents for a collection of buffers
+4. Contributing
 
 
 devdocs.el is a documentation viewer for Emacs similar to the built-in
-Info browser, but geared towards documentation obtained from the
-[DevDocs] website.  The stable version is available from [GNU ELPA] and
-a development version is available from [MELPA]; to install, type `M-x
+Info browser, but geared towards documentation distributed by the
+[DevDocs] website.  Currently, this covers over 500 versions of 188
+different software components.
+
+The stable version of the package is available from [GNU ELPA] and a
+development version is available from [MELPA]; to install, type `M-x
 package-install RET devdocs'.
 
-<https://user-images.githubusercontent.com/6500902/135726213-683b1f7d-5502-4afa-a549-c1aedaad8519.png>
-
-To get started, download some documentation with `M-x devdocs-install'.
-This will first query <https://devdocs.io> for the available documents
-and save the selected one to disk.  Once you have the desired documents
-at hand, call `M-x devdocs-lookup' to search for entries.
-
-In any given buffer, the first call to `devdocs-lookup' will query for a
-list of documents to search (you can select more than one option by
-entering a comma-separated list).  This selection will be remembered in
-subsequent calls to `devdocs-lookup', unless a prefix argument is given;
-in this case you can select a new list of documents.  Alternatively, you
-can set the `devdocs-current-docs' variable directly, say via [dir-local
-variables] or a mode hook:
-
-┌────
-│ (add-hook 'python-mode-hook
-│ 	  (lambda () (setq-local devdocs-current-docs '("python~3.9"))))
-└────
-
-In the `*devdocs*' buffer, navigation keys similar to Info and `*Help*'
-buffers are available; press `C-h m' for details.  Internal hyperlinks
-are opened in the same viewing buffer, and external links are opened as
-`browse-url' normally would.
+<https://raw.githubusercontent.com/astoff/devdocs.el/images/screenshot.png>
 
 
 [DevDocs] <https://devdocs.io>
@@ -47,11 +30,79 @@ are opened in the same viewing buffer, and external links are opened as
 
 [MELPA] <https://melpa.org/#/devdocs>
 
+
+1 Basic usage
+═════════════
+
+  To get started, download some documentation with `M-x
+  devdocs-install'.  This will query <https://devdocs.io> for the
+  available documents and save the selected one to disk.  To read the
+  installed documentation, there are two options:
+
+  • `devdocs-peruse': Select a document and display its first page.
+  • `devdocs-lookup': Select an index entry and display it.
+
+  It's handy to have a keybinding for the latter command.  One
+  possibility, in analogy to `C-h S' (`info-lookup-symbol'), is
+
+  ┌────
+  │ (global-set-key (kbd ("C-h D")) 'devdocs-lookup)
+  └────
+
+  In any given buffer, the first call to `devdocs-lookup' will query for
+  a list of documents to search (you can select more than one option by
+  entering a comma-separated list).  This selection will be remembered
+  in subsequent calls to `devdocs-lookup', unless a prefix argument is
+  given; in this case you can select a new list of documents.
+
+  In the `*devdocs*' buffer, navigation keys similar to Info and
+  `*Help*' buffers are available; press `C-h m' for details.  Internal
+  hyperlinks are opened in the same viewing buffer, and external links
+  are opened as `browse-url' normally would.
+
+
+2 Managing documents
+════════════════════
+
+  To manage the collection of installed documents, use the following
+  commands:
+
+  • `devdocs-install': Download and install (or reinstall) a document
+    distributed by <https://devdocs.io>.
+  • `devdocs-delete': Remove an installed document.
+  • `devdocs-update-all': Download and reinstall all installed documents
+    for which a newer version is available.
+
+  In some cases, variants of a document are available for each (major)
+  version.  It is possible to install several versions in parallel.
+
+  Documents are installed under `devdocs-data-dir', which defaults to
+  `~/.emacs.d/devdocs'.  To completely uninstall the package, remove
+  this directory.
+
+
+3 Setting the default documents for a collection of buffers
+═══════════════════════════════════════════════════════════
+
+  You may wish to select a predefined list of documents in all buffers
+  of a certain major mode or project.  To achieve this, set the
+  `devdocs-current-docs' variable directly, say via [dir-local
+  variables] or a mode hook:
+
+  ┌────
+  │ (add-hook 'python-mode-hook
+  │ 	  (lambda () (setq-local devdocs-current-docs '("python~3.9"))))
+  └────
+
+  As usual, calling `devdocs-lookup' with a prefix argument redefines
+  the selected documents for that specific buffer.
+
+
 [dir-local variables]
 <https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html>
 
 
-1 Contributing
+4 Contributing
 ══════════════
 
   Discussions, suggestions and code contributions are welcome! Since

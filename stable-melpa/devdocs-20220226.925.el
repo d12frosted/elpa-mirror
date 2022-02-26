@@ -4,11 +4,11 @@
 
 ;; Author: Augusto Stoffel <arstoffel@gmail.com>
 ;; Keywords: help
-;; Package-Version: 20220224.1712
-;; Package-Commit: 4f64975c609e5b052a7dee8f96bc3a025a4a581b
+;; Package-Version: 20220226.925
+;; Package-Commit: cdc1a7cc3f05235883ffb098fe1c5a8963ed06e2
 ;; URL: https://github.com/astoff/devdocs.el
 ;; Package-Requires: ((emacs "27.1"))
-;; Version: 0.3
+;; Version: 0.4
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by

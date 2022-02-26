@@ -607,7 +607,7 @@
 	    (:maintainer "Phil Sainty" . "psainty@orcon.net.nz")
 	    (:url . "https://savannah.nongnu.org/projects/delight"))])
  (devdocs .
-	  [(0 3)
+	  [(0 4)
 	   ((emacs
 	     (27 1)))
 	   "Emacs viewer for DevDocs" tar
@@ -615,7 +615,8 @@
 	    (:keywords "help")
 	    (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	    (:authors
-	     ("Augusto Stoffel" . "arstoffel@gmail.com")))])
+	     ("Augusto Stoffel" . "arstoffel@gmail.com"))
+	    (:commit . "cdc1a7cc3f05235883ffb098fe1c5a8963ed06e2"))])
  (dict-tree .
 	    [(0 16)
 	     ((trie
@@ -2103,7 +2104,7 @@
 	     ("Phillip Lord" . "phillip.lord@russet.org.uk"))
 	    (:url . "http://elpa.gnu.org/packages/persist.html"))])
  (phps-mode .
-	    [(0 4 16)
+	    [(0 4 17)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -2112,7 +2113,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "a42188a24fd0c02bf83df8795a2977078fadcf45"))])
+	      (:commit . "be18349ec97c76919bba2f7ac467385daf1c5626"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single
