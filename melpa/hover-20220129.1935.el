@@ -5,7 +5,7 @@
 ;; Author: Eric Dallo
 ;; Version: 1.2.3
 ;; Package-Version: 20220129.1935
-;; Package-Commit: 2b826735bb8d3bcfced489a1e0fa21b10fbc967e
+;; Package-Commit: 4ca0638a14a8b304ac2b46e7b342b8d8732ad199
 
 ;; Package-Requires: ((emacs "25.2") (dash "2.14.1"))
 ;; Keywords: hover, flutter, mobile, tools

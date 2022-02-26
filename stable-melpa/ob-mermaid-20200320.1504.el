@@ -5,7 +5,7 @@
 ;; Author: Alexei Nunez <alexeirnunez@gmail.com>
 ;; URL: https://github.com/arnm/ob-mermaid
 ;; Package-Version: 20200320.1504
-;; Package-Commit: cca09b64eff689d8bb15a77de9d4c7fe9845a1f9
+;; Package-Commit: b4ce25699e3ebff054f523375d1cf5a17bd0dbaf
 ;; Keywords: lisp
 ;; Version: 0
 
