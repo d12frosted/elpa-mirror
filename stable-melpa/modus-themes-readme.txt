@@ -14,6 +14,7 @@ The themes share the following customization variables:
     modus-themes-bold-constructs                (boolean)
     modus-themes-deuteranopia                   (boolean)
     modus-themes-inhibit-reload                 (boolean)
+    modus-themes-intense-mouseovers             (boolean)
     modus-themes-italic-constructs              (boolean)
     modus-themes-mixed-fonts                    (boolean)
     modus-themes-subtle-line-numbers            (boolean)

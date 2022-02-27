@@ -1,3 +1,3 @@
 ==============================================================================
-WEB-MODE is sponsored by ** Kernix ** Best Digital Factory & Data Lab (Paris)
+WEB-MODE is sponsored by ** Kernix ** Best Digital Agency & Data Lab (Paris)
 ==============================================================================

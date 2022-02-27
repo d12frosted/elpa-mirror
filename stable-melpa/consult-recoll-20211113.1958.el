@@ -4,7 +4,7 @@
 ;; Maintainer: Jose A Ortega Ruiz
 ;; Keywords: docs, convenience
 ;; Package-Version: 20211113.1958
-;; Package-Commit: 42dea1d40fedf7894e2515b4566a783b7b85486a
+;; Package-Commit: 6ef792703b3a82f8565a1c6f9acf05c34b1ab7ec
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "26.1") (consult "0.9"))
