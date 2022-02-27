@@ -2822,7 +2822,7 @@
 	  ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	 (:keywords "convenience"))])
  (tramp .
-	[(2 5 2 1)
+	[(2 5 2 2)
 	 ((emacs
 	   (25 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -2831,7 +2831,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "974db74a36729d67dc758301e1cc9341396c79d9"))])
+	  (:commit . "aeb0ea73406d7d7066149cb487683e55b86e7124"))])
  (tramp-nspawn .
 	       [(1 0)
 		((emacs

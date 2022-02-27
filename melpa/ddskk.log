@@ -4,10 +4,10 @@ Source:  https://github.com/skk-dev/ddskk.git
 
 Updating /mnt/store/melpa/working/ddskk/
 Checking out origin/HEAD
-Checking out eede626d70953715d2405b325dcb151b7cb597e7
+Checking out e3fb5e2905ea66a8b15d6da9ed6abee031bc8ebc
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ddskk/
-  to /tmp/ddskkUqnOqj/ddskk-20220210.2155
+  to /tmp/ddskkpIJ1kI/ddskk-20220227.853
     context-skk.el -> context-skk.el
     ddskk-pkg.el -> ddskk-pkg.el
     skk-abbrev.el -> skk-abbrev.el
@@ -51,60 +51,62 @@ Copying files (->) and directories (=>)
     tar-util.el -> tar-util.el
   ! doc/skk.texi -> skk.texi
   ! etc/skk.xpm -> skk.xpm
-Generating /tmp/ddskkUqnOqj/ddskk-20220210.2155/skk.info
-Created ddskk-20220210.2155.tar containing:
-  ddskk-20220210.2155/
-  ddskk-20220210.2155/context-skk.el
-  ddskk-20220210.2155/ddskk-pkg.el
-  ddskk-20220210.2155/dir
-  ddskk-20220210.2155/skk-abbrev.el
-  ddskk-20220210.2155/skk-act.el
-  ddskk-20220210.2155/skk-annotation.el
-  ddskk-20220210.2155/skk-auto.el
-  ddskk-20220210.2155/skk-azik.el
-  ddskk-20220210.2155/skk-cdb.el
-  ddskk-20220210.2155/skk-comp.el
-  ddskk-20220210.2155/skk-cursor.el
-  ddskk-20220210.2155/skk-cus.el
-  ddskk-20220210.2155/skk-dcomp.el
-  ddskk-20220210.2155/skk-decor.el
-  ddskk-20220210.2155/skk-develop.el
-  ddskk-20220210.2155/skk-emacs.el
-  ddskk-20220210.2155/skk-gadget.el
-  ddskk-20220210.2155/skk-hint.el
-  ddskk-20220210.2155/skk-inline.el
-  ddskk-20220210.2155/skk-isearch.el
-  ddskk-20220210.2155/skk-jisx0201.el
-  ddskk-20220210.2155/skk-jisx0213.el
-  ddskk-20220210.2155/skk-jisyo-edit-mode.el
-  ddskk-20220210.2155/skk-kakasi.el
-  ddskk-20220210.2155/skk-kcode.el
-  ddskk-20220210.2155/skk-leim.el
-  ddskk-20220210.2155/skk-look.el
-  ddskk-20220210.2155/skk-macs.el
-  ddskk-20220210.2155/skk-num.el
-  ddskk-20220210.2155/skk-search-web.el
-  ddskk-20220210.2155/skk-server-completion.el
-  ddskk-20220210.2155/skk-server.el
-  ddskk-20220210.2155/skk-show-mode.el
-  ddskk-20220210.2155/skk-sticky.el
-  ddskk-20220210.2155/skk-study.el
-  ddskk-20220210.2155/skk-tankan.el
-  ddskk-20220210.2155/skk-tut.el
-  ddskk-20220210.2155/skk-vars.el
-  ddskk-20220210.2155/skk-version.el
-  ddskk-20220210.2155/skk-viper.el
-  ddskk-20220210.2155/skk.el
-  ddskk-20220210.2155/skk.info
-  ddskk-20220210.2155/skk.xpm
-  ddskk-20220210.2155/tar-util.el
-Built ddskk in 22.072s, finished at 2022-02-27T06:19:10+0000
+Generating /tmp/ddskkpIJ1kI/ddskk-20220227.853/skk.info
+Created ddskk-20220227.853.tar containing:
+  ddskk-20220227.853/
+  ddskk-20220227.853/context-skk.el
+  ddskk-20220227.853/ddskk-pkg.el
+  ddskk-20220227.853/dir
+  ddskk-20220227.853/skk-abbrev.el
+  ddskk-20220227.853/skk-act.el
+  ddskk-20220227.853/skk-annotation.el
+  ddskk-20220227.853/skk-auto.el
+  ddskk-20220227.853/skk-azik.el
+  ddskk-20220227.853/skk-cdb.el
+  ddskk-20220227.853/skk-comp.el
+  ddskk-20220227.853/skk-cursor.el
+  ddskk-20220227.853/skk-cus.el
+  ddskk-20220227.853/skk-dcomp.el
+  ddskk-20220227.853/skk-decor.el
+  ddskk-20220227.853/skk-develop.el
+  ddskk-20220227.853/skk-emacs.el
+  ddskk-20220227.853/skk-gadget.el
+  ddskk-20220227.853/skk-hint.el
+  ddskk-20220227.853/skk-inline.el
+  ddskk-20220227.853/skk-isearch.el
+  ddskk-20220227.853/skk-jisx0201.el
+  ddskk-20220227.853/skk-jisx0213.el
+  ddskk-20220227.853/skk-jisyo-edit-mode.el
+  ddskk-20220227.853/skk-kakasi.el
+  ddskk-20220227.853/skk-kcode.el
+  ddskk-20220227.853/skk-leim.el
+  ddskk-20220227.853/skk-look.el
+  ddskk-20220227.853/skk-macs.el
+  ddskk-20220227.853/skk-num.el
+  ddskk-20220227.853/skk-search-web.el
+  ddskk-20220227.853/skk-server-completion.el
+  ddskk-20220227.853/skk-server.el
+  ddskk-20220227.853/skk-show-mode.el
+  ddskk-20220227.853/skk-sticky.el
+  ddskk-20220227.853/skk-study.el
+  ddskk-20220227.853/skk-tankan.el
+  ddskk-20220227.853/skk-tut.el
+  ddskk-20220227.853/skk-vars.el
+  ddskk-20220227.853/skk-version.el
+  ddskk-20220227.853/skk-viper.el
+  ddskk-20220227.853/skk.el
+  ddskk-20220227.853/skk.info
+  ddskk-20220227.853/skk.xpm
+  ddskk-20220227.853/tar-util.el
+Built ddskk in 21.288s, finished at 2022-02-27T09:15:27+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  186 Feb 27 06:19 packages/ddskk-20220210.2155.entry
 1.8M -rw-r--r-- 1 root root 1.8M Feb 27 06:19 packages/ddskk-20220210.2155.tar
-4.0K -rw-r--r-- 1 root root 1.2K Feb 27 06:19 packages/ddskk-badge.svg
- 12K -rw-r--r-- 1 root root 8.3K Feb 27 06:18 packages/ddskk-posframe-20200812.917.el
-4.0K -rw-r--r-- 1 root root  461 Feb 27 06:18 packages/ddskk-posframe-20200812.917.entry
-4.0K -rw-r--r-- 1 root root 1.2K Feb 27 06:18 packages/ddskk-posframe-badge.svg
-4.0K -rw-r--r-- 1 root root  200 Feb 27 06:18 packages/ddskk-posframe-readme.txt
-4.0K -rw-r--r-- 1 root root  646 Feb 27 06:18 packages/ddskk-posframe.log
+4.0K -rw-r--r-- 1 root root  185 Feb 27 09:15 packages/ddskk-20220227.853.entry
+1.8M -rw-r--r-- 1 root root 1.8M Feb 27 09:15 packages/ddskk-20220227.853.tar
+4.0K -rw-r--r-- 1 root root 1.2K Feb 27 09:15 packages/ddskk-badge.svg
+ 12K -rw-r--r-- 1 root root 8.3K Feb 27 09:15 packages/ddskk-posframe-20200812.917.el
+4.0K -rw-r--r-- 1 root root  461 Feb 27 09:15 packages/ddskk-posframe-20200812.917.entry
+4.0K -rw-r--r-- 1 root root 1.2K Feb 27 09:15 packages/ddskk-posframe-badge.svg
+4.0K -rw-r--r-- 1 root root  200 Feb 27 09:15 packages/ddskk-posframe-readme.txt
+4.0K -rw-r--r-- 1 root root  646 Feb 27 09:15 packages/ddskk-posframe.log

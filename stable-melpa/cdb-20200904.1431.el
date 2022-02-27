@@ -6,7 +6,7 @@
 ;; Maintainer: SKK Development Team
 ;; URL: https://github.com/skk-dev/ddskk
 ;; Package-Version: 20200904.1431
-;; Package-Commit: eede626d70953715d2405b325dcb151b7cb597e7
+;; Package-Commit: e3fb5e2905ea66a8b15d6da9ed6abee031bc8ebc
 ;; Keywords: cdb
 
 ;; This file is not part of GNU Emacs.

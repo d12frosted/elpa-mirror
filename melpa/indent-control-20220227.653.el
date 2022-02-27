@@ -1,14 +1,14 @@
 ;;; indent-control.el --- Management for indentation level  -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019  Shen, Jen-Chieh
+;; Copyright (C) 2019-2022  Shen, Jen-Chieh
 ;; Created date 2019-07-30 09:37:44
 
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Description: Management for indentation level.
 ;; Keyword: control indent tab generic level
 ;; Version: 0.3.4
-;; Package-Version: 20210508.309
-;; Package-Commit: 2bc911df2055ec42a0cda12a0a14bfffaf997f86
+;; Package-Version: 20220227.653
+;; Package-Commit: 73682aac9aff60937a5f0187b1896c8f78f1b9cc
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/jcs-elpa/indent-control
 
@@ -208,8 +208,7 @@
 
 (defun indent-control--indent-level-record (&optional record-name)
   "Return record of current indent level by RECORD-NAME."
-  (unless record-name (setq record-name major-mode))
-  (cdr (assoc record-name indent-control-records)))
+  (cdr (assoc (or record-name major-mode) indent-control-records)))
 
 (defun indent-control--set-indent-level-record (new-level &optional record-name)
   "Set NEW-LEVEL to RECORD-NAME indent record."
