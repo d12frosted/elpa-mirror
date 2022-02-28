@@ -4,8 +4,8 @@
 
 ;; Author: Otávio Schwanck <otavioschwanck@gmail.com>
 ;; Keywords: tools languages
-;; Package-Version: 20220227.2159
-;; Package-Commit: e179ca76d5a82e7ab9c6aaa618b163a54fa694c7
+;; Package-Version: 20220228.500
+;; Package-Commit: b897380708b02e112e997269fbeba9b7352f332d
 ;; Homepage: https://github.com/otavioschwanck/harpoon.el
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "27.2") (f "0.20.0"))
@@ -251,7 +251,7 @@
                    (harpoon--remove-number result))))))
 
 (defun harpoon--remove-number (file)
-  "Remove number of the file."
+  "Remove number of the file. FILE = Filename to remove the number."
   (nth 1 (split-string file " - ")))
 
 (defun harpoon--fix-quick-menu-items ()
@@ -261,7 +261,7 @@
     (completing-read "Harpoon to file: " (harpoon--add-numbers-to-quick-menu (delete "" (split-string (harpoon--get-file-text) "\n"))))))
 
 (defun harpoon--add-numbers-to-quick-menu (files)
-  "Add numbers to files."
+  "Add numbers to files.  FILES = Files to add the numbers."
   (let ((line-number 0))
     (mapcar (lambda (line) (setq line-number (+ 1 line-number)) (concat (format "%s" line-number) " - " line)) files)))
 

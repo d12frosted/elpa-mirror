@@ -5,11 +5,11 @@
 ;; Author: Jake B <jakebox0@protonmail.com>
 ;; Original author of org-preview-html (until 2021-09): DarkSun <lujun9972@gmail.com>
 ;; Url: https://github.com/jakebox/org-preview-html
-;; Package-Version: 20211126.2350
-;; Package-Commit: 14e39aec6e29dc15ff40b219b2b7284a9ec0af36
+;; Package-Version: 20220228.414
+;; Package-Commit: cb85524d5090b8189e965cc49d65be04650c17c4
 ;; Keywords: Org, convenience, outlines
 ;; Version: 0.3
-;; Package-Requires: ((emacs "27.1") (org "8.0"))
+;; Package-Requires: ((emacs "25.1") (org "8.0"))
 
 ;; This file is NOT part of GNU Emacs.
 
@@ -115,6 +115,15 @@ Obselete as of version 0.3, instead use `org-preview-html-subtree-only'."
       (delete-window))
     (display-buffer-pop-up-frame buffer nil)))
 
+;; Taken from frame.el Emacs 27.1, copied here for better version compatibility.
+;; Without this here 27.1 required. With, 25.1.
+(defun org-preview-html--previous-window-any-frame ()
+  (select-window (previous-window (selected-window)
+				  (> (minibuffer-depth) 0)
+				  0))
+  (select-frame-set-input-focus (selected-frame)))
+
+
 (defun org-preview-html-refresh ()
   "Exports the org file to HTML and refreshes the preview."
   ;; Refresh the preview.
@@ -218,7 +227,7 @@ Obselete as of version 0.3, instead use `org-preview-html-subtree-only'."
 	(cond ((eq org-preview-html-viewer 'xwidget) (xwidget-webkit-browse-url file))
 		  ((eq org-preview-html-viewer 'eww) (eww-browse-url file))))
   (setq org-preview-html--browser-buffer (get-buffer (buffer-name)))
-  (previous-window-any-frame))
+  (org-preview-html--previous-window-any-frame))
 
 (defun org-preview-html--start-preview ()
   "Begin the org-preview-html preview."
