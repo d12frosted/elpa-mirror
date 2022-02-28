@@ -5,7 +5,7 @@
 ;; Author:  Marco Pawłowski
 ;; Keywords: convenience
 ;; Package-Version: 20220225.1544
-;; Package-Commit: 758cfc259ae83421d008731642ff1ada41b7b514
+;; Package-Commit: db46920eb34f9be8e18cc057a730e48ff23fa8a6
 ;; Version: 0.5
 ;; Package-Requires: ((emacs "25.1") (consult "0.12") (projectile "2.5.0"))
 ;; URL: https://gitlab.com/OlMon/consult-projectile

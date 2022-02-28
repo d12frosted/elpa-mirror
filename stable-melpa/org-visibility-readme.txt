@@ -90,6 +90,8 @@ Or, if using `use-package', add something like this instead:
                 ("C-x M-v" . org-visibility-remove))    ; defaults to undefined
     :hook (org-mode . org-visibility-mode)
     :custom
+    ;; optionally change the location of the state file
+    ;;(org-visibility-state-file `,(expand-file-name "/some/path/.org-visibility"))
     ;; list of directories and files to persist and restore visibility state of
     (org-visibility-include-paths `(,(file-truename "~/.emacs.d/init-emacs.org")
                                     ,(file-truename "~/org"))))

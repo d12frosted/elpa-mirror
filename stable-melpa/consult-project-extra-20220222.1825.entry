@@ -1,0 +1,15 @@
+(consult-project-extra .
+		       [(20220222 1825)
+			((emacs
+			  (27 1))
+			 (consult
+			  (0 15))
+			 (project
+			  (0 8 1)))
+			"Consult integration for project.el" single
+			((:commit . "b2a7062251b101aa9d1ba6c1f3f65c69ebdfd784")
+			 (:authors
+			  ("Enrique Kessler Martínez"))
+			 (:maintainer "Enrique Kessler Martínez")
+			 (:keywords "convenience" "project" "management")
+			 (:url . "https://github.com/Qkessler/consult-project-extra"))])

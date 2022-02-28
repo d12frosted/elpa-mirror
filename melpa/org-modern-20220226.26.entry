@@ -1,0 +1,10 @@
+(org-modern .
+	    [(20220226 26)
+	     ((emacs
+	       (27 1)))
+	     "Modern looks for Org" single
+	     ((:commit . "fdb7b59682b656a998bf8821d112283e1a3edbd8")
+	      (:authors
+	       ("Daniel Mendler" . "mail@daniel-mendler.de"))
+	      (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+	      (:url . "https://github.com/minad/org-modern"))])

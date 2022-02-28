@@ -1,0 +1,13 @@
+(consult-recoll .
+		[(20220227 2050)
+		 ((emacs
+		   (26 1))
+		  (consult
+		   (0 9)))
+		 "Recoll queries using consult" single
+		 ((:commit . "228306eeda8c57db45609ca068f60ee433367c17")
+		  (:authors
+		   ("Jose A Ortega Ruiz" . "jao@gnu.org"))
+		  (:maintainer "Jose A Ortega Ruiz")
+		  (:keywords "docs" "convenience")
+		  (:url . "https://codeberg.org/jao/consult-recoll"))])
