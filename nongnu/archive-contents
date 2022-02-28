@@ -1493,16 +1493,16 @@
 		       (:authors
 			("Joost Kremers" . "joostkremers@fastmail.fm")))])
  (web-mode .
-	   [(17 1 4)
+	   [(17 2 0)
 	    ((emacs
 	      (23 1)))
 	    "major mode for editing web templates" tar
 	    ((:url . "https://web-mode.org")
 	     (:keywords "languages")
-	     (:maintainer "François-Xavier Bois")
+	     (:maintainer "François-Xavier Bois" . "fxbois@gmail.com")
 	     (:authors
-	      ("François-Xavier Bois <fxbois AT Google Mail Service>"))
-	     (:commit . "1662f1f762e59d197ef61604cd1ad71fe053e517"))])
+	      ("François-Xavier Bois"))
+	     (:commit . "f70277774a725e177774cc81ecbd228792cd6656"))])
  (webpaste .
 	   [(3 2 2)
 	    ((emacs
