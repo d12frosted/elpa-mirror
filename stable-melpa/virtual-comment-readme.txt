@@ -27,6 +27,7 @@ Vanilla
 - virtual-comment-realign: realign the comments if they are misplaced
 - virtual-comment-persist: manually persist project comments
 - virtual-comment-show: show all comments of current project in a derived mode
+- virtual-comment-show-delete-display-unit-at-point: delete comment from virtual-comment-show buffer
 from outline-mode, press enter on a comment will call virtual-comment-go to go
 to the location of comment.
 Commands to link to other location (reference):
@@ -49,6 +50,8 @@ https://github.com/blue0513/phantom-inline-comment
 https://www.emacswiki.org/emacs/InPlaceAnnotations
 
 Changelog
+2022-02-28:
+ 0.4 virtual-comment-show-delete-display-unit-at-point
 2021-11-01:
  0.03 virtual-comment-make create its own buffer to get input, no longer use read-from-minibuffer
 2021-09-27:

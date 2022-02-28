@@ -7,8 +7,7 @@ Updating /mnt/store/melpa/working/dpkg-dev-el/
 Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
 
 Fetching origin
-remote: GitLab is not responding
-fatal: unable to access 'https://salsa.debian.org/emacsen-team/dpkg-dev-el.git/': The requested URL returned error: 502
+fatal: unable to access 'https://salsa.debian.org/emacsen-team/dpkg-dev-el.git/': The requested URL returned error: 403
 error: Could not fetch origin
 
 Command exited with non-zero exit-code: 1
