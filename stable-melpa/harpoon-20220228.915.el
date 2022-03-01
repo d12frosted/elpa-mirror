@@ -5,7 +5,7 @@
 ;; Author: Otávio Schwanck <otavioschwanck@gmail.com>
 ;; Keywords: tools languages
 ;; Package-Version: 20220228.915
-;; Package-Commit: 0b0f98fca3f40db88c27c0005f20f5b4c37f7e01
+;; Package-Commit: 3dbb95821319303de5fdd92835c9ba2d7b68e558
 ;; Homepage: https://github.com/otavioschwanck/harpoon.el
 ;; Version: 0.4
 ;; Package-Requires: ((emacs "27.2") (f "0.20.0") (hydra "0.14.0"))
