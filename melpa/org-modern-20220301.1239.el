@@ -6,8 +6,8 @@
 ;; Created: 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
-;; Package-Version: 20220301.1128
-;; Package-Commit: 718bd89e2fe12a7b84d36b242108918992e100af
+;; Package-Version: 20220301.1239
+;; Package-Commit: f45be59ff5f754a2638399254cd7be37c02fb933
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/org-modern
 
@@ -138,8 +138,11 @@ Set to nil to disable styling checkboxes."
   :type 'boolean)
 
 (defcustom org-modern-keyword t
-  "Prettify keywords like #+title."
-  :type 'boolean)
+  "Prettify keywords like #+title.
+If set to a string, e.g., \"‣\", the string is used as replacement for #+."
+  :type '(choice (boolean :tag "Hide keyword prefix")
+                 (string :tag "Custom replacement")
+                 (const :tag "Triangle bullet" "‣")))
 
 (defcustom org-modern-statistics t
   "Prettify todo statistics."
@@ -458,7 +461,11 @@ Set to nil to disable the indicator."
       (when org-modern-todo
         `((,(format "^\\*+ +%s " (regexp-opt org-todo-keywords-1 t)) (0 (org-modern--todo)))))
       (when org-modern-keyword
-        `(("^[ \t]*\\(#\\+\\)\\S-" 1 '(face nil invisible t))))
+        `(("^[ \t]*\\(#\\+\\)\\S-" 1
+           '(face nil
+                  ,@(if (stringp org-modern-keyword)
+                       `(display ,org-modern-keyword)
+                     '(invisible t))))))
       (when org-modern-checkbox
         '(("^[ \t]*\\(?:[-+*]\\|[0-9]+[.)]\\)[ \t]+\\(\\[[ X-]\\]\\)[ \t]"
            (0 (org-modern--checkbox)))))
@@ -482,7 +489,7 @@ Set to nil to disable the indicator."
       (when org-modern-tag
         '(("^\\*+.*?\\( \\)\\(:.*:\\)[ \t]*$" (0 (org-modern--tag)))))
       (when org-modern-timestamp
-        '(("\\(?:<\\|\\[\\)\\([0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\}\\(?: [A-Za-z]+\\)?\\)\\(\\(?: [0-9]\\{2\\}:[0-9]\\{2\\}\\)?\\(?: [.+-]+[0-9]+[hdwmy]\\)?\\)\\(?:>\\|\\]\\)"
+        '(("\\(?:<\\|\\[\\)\\([0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\}\\(?: [[:word:]]+\\)?\\)\\(\\(?: [0-9:-]+\\)?\\(?: [.+-]+[0-9]+[hdwmy]\\)?\\)\\(?:>\\|\\]\\)"
            (0 (org-modern--timestamp)))))
       (when org-modern-statistics
         '((" \\[\\(\\([0-9]+\\)%\\|\\([0-9]+\\)/\\([0-9]+\\)\\)\\]" (0 (org-modern--statistics)))))))
