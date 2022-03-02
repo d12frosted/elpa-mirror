@@ -7,8 +7,8 @@
 ;; Created: 23 Jun 2021
 ;; Modified: 23 Jun 2021
 ;; Version: 0.0.1
-;; Package-Version: 20211223.245
-;; Package-Commit: 29508e94255c34174bc07c93749cad5d04700063
+;; Package-Version: 20220302.522
+;; Package-Commit: ecdcb62847b5e54ccd477d740e4974f28c8f5809
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: converience matching
 ;; URL: https://gitlab.com/Vonfry/zoxide.el
@@ -51,7 +51,7 @@
 (defcustom zoxide-find-file-function #'find-file
   "The callback function for the target path in `zoxide-find-file'.
 If the function is interactive, it will be called by `call-interactively' in
-`default-directory' with target path. Otherwise, the target path is passed as
+`default-directory' with target path.  Otherwise, the target path is passed as
 argument.
 
 For example, you set this to `counsel-fzf' to open file with fzf through counsel
@@ -63,6 +63,18 @@ or `dired' to open directory instead of a file."
   "The callback function for the target path in `zoxide-travel'.
 Unlike `zoxide-find-file-function', this always be called with the selected path
 as its first argument noninteractively."
+  :type 'function
+  :group 'zoxide)
+
+(defcustom zoxide-get-path-function (lambda (&rest _) default-directory)
+  "A function how to get current path.
+
+The function should take a argument to get the context and return a string for
+path.
+
+The context may be one of add or remove.
+
+The default defination is get from `default-directory' for add and remove and."
   :type 'function
   :group 'zoxide)
 
@@ -84,7 +96,7 @@ The second argument ARGS is passed to zoxide directly, like query -l"
   "Add PATH to zoxide database.  This function is called asynchronously."
   (interactive "Dpath: ")
   (unless path
-    (setq path default-directory))
+    (setq path (funcall zoxide-get-path-function 'add)))
   (zoxide-run t "add" path))
 
 ;;;###autoload
@@ -92,7 +104,7 @@ The second argument ARGS is passed to zoxide directly, like query -l"
   "Remove PATH from zoxide database."
   (interactive "Dpath: ")
   (unless path
-    (setq path default-directory))
+    (setq path (funcall zoxide-get-path-function 'remove)))
   (zoxide-run t "remove" path))
 
 ;;;###autoload
@@ -123,10 +135,14 @@ a list of paths is returned."
 
 ;;;###autoload
 (defun zoxide-open-with (query callback &optional noninteractive)
-  "Search query and run callback function with a selected path.
+  "Search QUERY and run CALLBACK function with a selected path.
 
-If noninteractive is non-nil, the callback is always called directly with the
-selected path as its first argument."
+If NONINTERACTIVE is non-nil, the callback is always called
+directly with the selected path as its first argument.
+
+This is a help function to define interactive commands like
+`zoxide-find-file'.  If you want to do things noninteractive, please use
+`zoxide-query', filter results and pass it to your function manually instead."
   (let* ((results (if query
                       (zoxide-query-with query)
                     (zoxide-query)))

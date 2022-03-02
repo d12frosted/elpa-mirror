@@ -3,10 +3,10 @@
 ;; Author: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Maintainer: Jose A Ortega Ruiz
 ;; Keywords: mail
-;; Package-Version: 20211229.420
-;; Package-Commit: 0b7fae73f51bc855078dca9593c8c7f67fe2ed98
+;; Package-Version: 20220302.229
+;; Package-Commit: 883527072b56bb09dd921800bca13860caaa4ffe
 ;; License: GPL-3.0-or-later
-;; Version: 0.6
+;; Version: 0.7
 ;; Package-Requires: ((emacs "26.1") (consult "0.9") (notmuch "0.31"))
 ;; Homepage: https://codeberg.org/jao/consult-notmuch
 
@@ -250,9 +250,13 @@ If given, use INITIAL as the starting point of the query."
                 (tag-changes (notmuch-read-tag-changes tags "Tags: " "+")))
       (notmuch-tag (concat "(" thread-id ")") tag-changes)))
   
+  (defvar consult-notmuch-export-function #'notmuch-search
+    "Function used to ask notmuch to display a list of found ids.
+  Typical options are notmuch-search and notmuch-tree.")
+  
   (defun consult-notmuch-export (msgs)
     "Create a notmuch search buffer listing messages."
-    (notmuch-search
+    (funcall consult-notmuch-export-function
      (concat "(" (mapconcat #'consult-notmuch--thread-id msgs " ") ")")))
   (add-to-list 'embark-exporters-alist
                '(notmuch-result . consult-notmuch-export)))
