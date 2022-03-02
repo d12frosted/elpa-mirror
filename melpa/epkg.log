@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 4bb8a13a43e30798e27c80174169ff955bf2b631
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/epkg/
-  to /tmp/epkgAXdeqC/epkg-20220216.1916
+  to /tmp/epkgtmUktv/epkg-20220216.1916
   ! lisp/epkg-desc.el -> epkg-desc.el
   ! lisp/epkg-gelpa.el -> epkg-gelpa.el
   ! lisp/epkg-list.el -> epkg-list.el
@@ -18,7 +18,7 @@ Copying files (->) and directories (=>)
   ! lisp/epkg.el -> epkg.el
   ! docs/epkg.texi -> epkg.texi
     .dir-locals.el -> .dir-locals.el
-Generating /tmp/epkgAXdeqC/epkg-20220216.1916/epkg.info
+Generating /tmp/epkgtmUktv/epkg-20220216.1916/epkg.info
 Created epkg-20220216.1916.tar containing:
   epkg-20220216.1916/
   epkg-20220216.1916/.dir-locals.el
@@ -33,14 +33,14 @@ Created epkg-20220216.1916.tar containing:
   epkg-20220216.1916/epkg-utils.el
   epkg-20220216.1916/epkg.el
   epkg-20220216.1916/epkg.info
-Built epkg in 7.817s, finished at 2022-03-01T14:03:27+0000
+Built epkg in 6.708s, finished at 2022-03-02T01:40:52+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  381 Mar  1 14:03 packages/epkg-20220216.1916.entry
-112K -rw-r--r-- 1 root root 110K Mar  1 14:03 packages/epkg-20220216.1916.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar  1 14:03 packages/epkg-badge.svg
-4.0K -rw-r--r-- 1 root root 3.7K Mar  1 14:03 packages/epkg-marginalia-20220131.1328.el
-4.0K -rw-r--r-- 1 root root  458 Mar  1 14:03 packages/epkg-marginalia-20220131.1328.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar  1 14:03 packages/epkg-marginalia-badge.svg
-4.0K -rw-r--r-- 1 root root  425 Mar  1 14:03 packages/epkg-marginalia-readme.txt
-4.0K -rw-r--r-- 1 root root  662 Mar  1 14:03 packages/epkg-marginalia.log
-4.0K -rw-r--r-- 1 root root  341 Mar  1 14:03 packages/epkg-readme.txt
+4.0K -rw-r--r-- 1 root root  381 Mar  2 01:40 packages/epkg-20220216.1916.entry
+112K -rw-r--r-- 1 root root 110K Mar  2 01:40 packages/epkg-20220216.1916.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar  2 01:40 packages/epkg-badge.svg
+4.0K -rw-r--r-- 1 root root 3.7K Mar  2 01:40 packages/epkg-marginalia-20220131.1328.el
+4.0K -rw-r--r-- 1 root root  458 Mar  2 01:40 packages/epkg-marginalia-20220131.1328.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar  1 22:47 packages/epkg-marginalia-badge.svg
+4.0K -rw-r--r-- 1 root root  425 Mar  2 01:40 packages/epkg-marginalia-readme.txt
+4.0K -rw-r--r-- 1 root root  236 Mar  2 01:40 packages/epkg-marginalia.log
+4.0K -rw-r--r-- 1 root root  341 Mar  2 01:40 packages/epkg-readme.txt
