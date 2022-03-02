@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220123.1406
-;; Package-Commit: bd6a1cccfe9c0f724772f846d1f4a9300f40f88f
+;; Package-Version: 20220302.1035
+;; Package-Commit: 8dc518045c017f09b26d9baf0d002439b2481b2c
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -1868,11 +1868,11 @@ COMMAND is a symbol naming the command."
                         (current-buffer) beg end
                         (eglot--diag-type severity)
                         message `((eglot-lsp-diag . ,diag-spec))
-                        (and tags
-                             `((face
-                                . ,(mapcar (lambda (tag)
-                                             (alist-get tag eglot--tag-faces))
-                                           tags)))))))
+                        (when-let ((faces
+                                    (cl-loop for tag across tags
+                                             when (alist-get tag eglot--tag-faces)
+                                             collect it)))
+                          `((face . ,faces))))))
            into diags
            finally (cond (eglot--current-flymake-report-fn
                           (eglot--report-to-flymake diags))

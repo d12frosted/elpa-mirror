@@ -1,13 +1,13 @@
 This package provides two methods to insert mathematical symbols:
 
-- A completing-read based command, `unicode-math-input', which
-  reads the TeX name of a symbol and inserts the corresponding
-  Unicode character.
-
 - A proper input method for efficient typing.  Activate with `C-u
   C-\ unicode-math RET'.  Then TeX commands (e.g., `\alpha') are
   replaced automatically as you type with the corresponding Unicode
   character.
+
+- An interactive command, `unicode-math-input', which reads the TeX
+  name of a symbol with completion and inserts the corresponding
+  Unicode character.
 
 In either case, all symbols provided by the unicode-math LaTeX
 package are available, with the same names.
