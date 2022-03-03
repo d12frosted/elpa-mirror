@@ -6,7 +6,7 @@
 ;; Maintainer: Trevor Edwin Pogue <trevor.pogue@gmail.com>
 ;; URL: https://github.com/trevorpogue/topspace
 ;; Package-Version: 20220301.1633
-;; Package-Commit: 156dabbe05c05fde44638e0b161bdff1141cf39d
+;; Package-Commit: 06316cb9d4db703e4ee8391c5cd527a911bd86b6
 ;; Keywords: convenience, scrolling, center, cursor, margin, padding
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "25.1"))

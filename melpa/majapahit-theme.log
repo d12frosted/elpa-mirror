@@ -3,23 +3,12 @@ Fetcher: gitlab
 Source:  https://gitlab.com/franksn/majapahit-theme.git
 
 Updating /mnt/store/melpa/working/majapahit-theme/
-Checking out origin/HEAD
-Checking out 77c96df7619666b2102d90d452eeadf04adc89a6
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/majapahit-theme/
-  to /tmp/majapahit-themetdbG7E/majapahit-theme-20160817.1848
-    majapahit-common.el -> majapahit-common.el
-    majapahit-dark-theme.el -> majapahit-dark-theme.el
-    majapahit-light-theme.el -> majapahit-light-theme.el
-    majapahit-theme-pkg.el -> majapahit-theme-pkg.el
-Created majapahit-theme-20160817.1848.tar containing:
-  majapahit-theme-20160817.1848/
-  majapahit-theme-20160817.1848/majapahit-common.el
-  majapahit-theme-20160817.1848/majapahit-dark-theme.el
-  majapahit-theme-20160817.1848/majapahit-light-theme.el
-  majapahit-theme-20160817.1848/majapahit-theme-pkg.el
-Built majapahit-theme in 4.316s, finished at 2022-03-02T13:46:30+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  159 Mar  2 13:46 packages/majapahit-theme-20160817.1848.entry
-132K -rw-r--r-- 1 root root 130K Mar  2 13:46 packages/majapahit-theme-20160817.1848.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar  2 13:46 packages/majapahit-theme-badge.svg
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: The git server, Gitaly, is not available at this time. Please contact your administrator.
+fatal: unable to access 'https://gitlab.com/franksn/majapahit-theme.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

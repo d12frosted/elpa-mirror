@@ -3,11 +3,12 @@ Fetcher: gitlab
 Source:  https://gitlab.com/latex-math-preview/latex-math-preview.git
 
 Updating /mnt/store/melpa/working/latex-math-preview/
-Checking out origin/HEAD
-Checking out 1c082179493eed3ce8bc255f87791eb4acb1fbdb
-Built latex-math-preview in 4.587s, finished at 2022-03-02T13:43:45+0000
- ✓ Success:
-108K -rw-r--r-- 1 root root 108K Mar  2 13:43 packages/latex-math-preview-20211228.641.el
-4.0K -rw-r--r-- 1 root root  406 Mar  2 13:43 packages/latex-math-preview-20211228.641.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar  2 13:43 packages/latex-math-preview-badge.svg
- 16K -rw-r--r-- 1 root root  14K Mar  2 13:43 packages/latex-math-preview-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+remote: The git server, Gitaly, is not available at this time. Please contact your administrator.
+fatal: unable to access 'https://gitlab.com/latex-math-preview/latex-math-preview.git/': The requested URL returned error: 503
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1
