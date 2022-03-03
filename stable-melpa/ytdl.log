@@ -3,12 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/tuedachu/ytdl.git
 
 Updating /mnt/store/melpa/working/ytdl/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-remote: The git server, Gitaly, is not available at this time. Please contact your administrator.
-fatal: unable to access 'https://gitlab.com/tuedachu/ytdl.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 23da64f5c38b8cb83dbbadf704171b86cc0fa937
+Built ytdl in 4.847s, finished at 2022-03-03T16:35:14+0000
+ ✓ Success:
+ 40K -rw-r--r-- 1 root root  40K Mar  3 16:35 packages/ytdl-20210506.914.el
+4.0K -rw-r--r-- 1 root root  421 Mar  3 16:35 packages/ytdl-20210506.914.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar  3 16:35 packages/ytdl-badge.svg
+4.0K -rw-r--r-- 1 root root  431 Mar  3 16:35 packages/ytdl-readme.txt

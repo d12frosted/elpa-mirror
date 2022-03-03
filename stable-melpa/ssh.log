@@ -5,29 +5,29 @@ Source:  https://github.com/ieure/ssh-el.git
 Updating /mnt/store/melpa/working/ssh/
 Checking out origin/HEAD
 Checking out 812e27409d01c38d74906a1816640506d6e7e3ef
-Built ssh in 4.268s, finished at 2022-03-03T10:34:30+0000
+Built ssh in 3.842s, finished at 2022-03-03T16:26:59+0000
  ✓ Success:
- 16K -rw-r--r-- 1 root root  16K Mar  3 10:34 packages/ssh-20120904.2042.el
-4.0K -rw-r--r-- 1 root root  299 Mar  3 10:34 packages/ssh-20120904.2042.entry
- 16K -rw-r--r-- 1 root root  14K Mar  3 10:34 packages/ssh-agency-20200329.1558.el
-4.0K -rw-r--r-- 1 root root  411 Mar  3 10:34 packages/ssh-agency-20200329.1558.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar  3 07:38 packages/ssh-agency-badge.svg
-4.0K -rw-r--r-- 1 root root  362 Mar  3 10:34 packages/ssh-agency-readme.txt
-4.0K -rw-r--r-- 1 root root  211 Mar  3 10:34 packages/ssh-agency.log
-4.0K -rw-r--r-- 1 root root 1.2K Mar  3 10:34 packages/ssh-badge.svg
-4.0K -rw-r--r-- 1 root root  379 Mar  3 10:34 packages/ssh-config-mode-20211003.2330.entry
- 20K -rw-r--r-- 1 root root  20K Mar  3 10:34 packages/ssh-config-mode-20211003.2330.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar  3 10:34 packages/ssh-config-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  597 Mar  3 10:34 packages/ssh-config-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  817 Mar  3 10:34 packages/ssh-config-mode.log
-4.0K -rw-r--r-- 1 root root  429 Mar  3 10:34 packages/ssh-deploy-20220126.658.entry
-100K -rw-r--r-- 1 root root 100K Mar  3 10:34 packages/ssh-deploy-20220126.658.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar  3 10:34 packages/ssh-deploy-badge.svg
-8.0K -rw-r--r-- 1 root root 5.4K Mar  3 10:34 packages/ssh-deploy-readme.txt
-4.0K -rw-r--r-- 1 root root  828 Mar  3 10:34 packages/ssh-deploy.log
-4.0K -rw-r--r-- 1 root root  469 Mar  3 10:34 packages/ssh-readme.txt
-4.0K -rw-r--r-- 1 root root  380 Mar  3 07:38 packages/ssh-tunnels-20190622.931.entry
- 32K -rw-r--r-- 1 root root  30K Mar  3 07:38 packages/ssh-tunnels-20190622.931.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar  3 07:38 packages/ssh-tunnels-badge.svg
-4.0K -rw-r--r-- 1 root root  789 Mar  3 07:38 packages/ssh-tunnels-readme.txt
-4.0K -rw-r--r-- 1 root root  214 Mar  3 10:34 packages/ssh-tunnels.log
+ 16K -rw-r--r-- 1 root root  16K Mar  3 16:26 packages/ssh-20120904.2042.el
+4.0K -rw-r--r-- 1 root root  299 Mar  3 16:26 packages/ssh-20120904.2042.entry
+ 16K -rw-r--r-- 1 root root  14K Mar  3 13:30 packages/ssh-agency-20200329.1558.el
+4.0K -rw-r--r-- 1 root root  411 Mar  3 13:30 packages/ssh-agency-20200329.1558.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar  3 13:30 packages/ssh-agency-badge.svg
+4.0K -rw-r--r-- 1 root root  362 Mar  3 13:30 packages/ssh-agency-readme.txt
+4.0K -rw-r--r-- 1 root root  211 Mar  3 16:26 packages/ssh-agency.log
+4.0K -rw-r--r-- 1 root root 1.2K Mar  3 16:26 packages/ssh-badge.svg
+4.0K -rw-r--r-- 1 root root  379 Mar  3 13:30 packages/ssh-config-mode-20211003.2330.entry
+ 20K -rw-r--r-- 1 root root  20K Mar  3 13:30 packages/ssh-config-mode-20211003.2330.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar  3 13:30 packages/ssh-config-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  597 Mar  3 13:30 packages/ssh-config-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  233 Mar  3 16:26 packages/ssh-config-mode.log
+4.0K -rw-r--r-- 1 root root  429 Mar  3 13:30 packages/ssh-deploy-20220126.658.entry
+100K -rw-r--r-- 1 root root 100K Mar  3 13:30 packages/ssh-deploy-20220126.658.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar  3 13:30 packages/ssh-deploy-badge.svg
+8.0K -rw-r--r-- 1 root root 5.4K Mar  3 13:30 packages/ssh-deploy-readme.txt
+4.0K -rw-r--r-- 1 root root  143 Mar  3 16:26 packages/ssh-deploy.log
+4.0K -rw-r--r-- 1 root root  469 Mar  3 16:26 packages/ssh-readme.txt
+4.0K -rw-r--r-- 1 root root  380 Mar  3 13:30 packages/ssh-tunnels-20190622.931.entry
+ 32K -rw-r--r-- 1 root root  30K Mar  3 13:30 packages/ssh-tunnels-20190622.931.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar  3 13:30 packages/ssh-tunnels-badge.svg
+4.0K -rw-r--r-- 1 root root  789 Mar  3 13:30 packages/ssh-tunnels-readme.txt
+4.0K -rw-r--r-- 1 root root  160 Mar  3 16:26 packages/ssh-tunnels.log

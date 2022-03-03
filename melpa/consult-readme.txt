@@ -8,7 +8,7 @@ view, the buffer shows the candidate immediately.
 
 The Consult commands are compatible with completion systems based
 on the Emacs `completing-read' API, including the default completion
-system, Vertico, Icomplete, Mct, Selectrum and Embark.
+system, Vertico, Mct, Icomplete and Selectrum.
 
 Consult has been inspired by Counsel. Some of the Consult commands
 originated in the Counsel package or the Selectrum wiki. See the

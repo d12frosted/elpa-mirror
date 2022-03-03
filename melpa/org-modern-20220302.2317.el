@@ -7,7 +7,7 @@
 ;; License: GPL-3.0-or-later
 ;; Version: 0.1
 ;; Package-Version: 20220302.2317
-;; Package-Commit: 91e113ff4f458731b29d5b8785f51449353e2255
+;; Package-Commit: 9974bcb67558f833fad8e59a05baea7f462e5234
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/org-modern
 
