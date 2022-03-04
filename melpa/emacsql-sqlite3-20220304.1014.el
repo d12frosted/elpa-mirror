@@ -4,8 +4,8 @@
 
 ;; Author: Zhu Zihao <all_but_last@163.com>
 ;; URL: https://github.com/cireu/emacsql-sqlite3
-;; Package-Version: 20200914.508
-;; Package-Commit: 209fd0c2649db0c7532e543ec12e7ba881a3325c
+;; Package-Version: 20220304.1014
+;; Package-Commit: 2113618732665f2112cb932a66c0e89c404d8777
 ;; Version: 1.0.2
 ;; Package-Requires: ((emacs "26.1") (emacsql "3.0.0"))
 ;; Keywords: extensions
@@ -216,16 +216,18 @@ each arg will be quoted first."
 (cl-defmethod emacsql-parse ((conn emacsql-sqlite3-connection))
   (with-current-buffer (emacsql-buffer conn)
     (goto-char (point-min))
-    (if (looking-at (rx "Error: " (group (1+ any)) eol))
+    ;; https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=1006666
+    ;; SQLite 3.38 prints "Parse error" instead of "Error:"
+    (if (looking-at (rx (or "Error:" "Parse error ") (group (1+ any)) eol))
         (signal 'emacsql-error (list (match-string 1)))
       (cl-macrolet ((sexps-in-line! ()
                       `(cl-loop until (looking-at "\n")
-                                collect (read (current-buffer)))))
+                          collect (read (current-buffer)))))
         (cl-loop
-          until (looking-at
-                 (concat (regexp-quote emacsql-sqlite3--cmd-end-mark) "\n"))
-          collect (sexps-in-line!)
-          do (forward-char))))))
+           until (looking-at
+                  (concat (regexp-quote emacsql-sqlite3--cmd-end-mark) "\n"))
+           collect (sexps-in-line!)
+           do (forward-char))))))
 
 (cl-defmethod emacsql-close ((conn emacsql-sqlite3-connection))
   (let ((process (emacsql-process conn)))
