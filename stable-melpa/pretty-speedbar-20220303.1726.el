@@ -4,8 +4,8 @@
 ;; Maintainer: Kristle Chester <kcyarn7@gmail.com>
 ;; Created: 2019-11-18
 ;; Version: 0.2
-;; Package-Version: 20220124.16
-;; Package-Commit: 4153fed2c83faad90803f57a3c9364609eb7b3eb
+;; Package-Version: 20220303.1726
+;; Package-Commit: 56dc9f114fcc55843e182cde1fc9d7a14c261c6a
 ;; Last-Updated: 2022-01-17
 ;; URL: https://github.com/kcyarn/pretty-speedbar
 ;; Package-Requires: ((emacs "27.1"))
@@ -26,7 +26,7 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <https://www.gnu.org/licenses/>.
 ;;; Commentary:
-;; Pretty Speedbar defaults to Font Awesome 5 Free Solid, which must be
+;; Pretty Speedbar defaults to Font Awesome 6 Free Solid, which must be
 ;; installed from the otf available from Font Awesome's GitHub repository --
 ;; https://github.com/FortAwesome/Font-Awesome.
 ;; To use svg icons, you must first run pretty-speedbar-generate.  This
@@ -61,8 +61,8 @@ This is located in the user's default Emacs directory.")
   :group 'pretty-speedbar
   :prefix "pretty-speedbar-")
 
-(defcustom pretty-speedbar-font "Font Awesome 5 Free Solid"
-  "Set the default icon font To Font Awesome 5 Free Solid.
+(defcustom pretty-speedbar-font "Font Awesome 6 Free Solid"
+  "Set the default icon font To Font Awesome 6 Free Solid.
 This is obtainable as an otf from github."
   :type '(string)
   :group 'pretty-speedbar)

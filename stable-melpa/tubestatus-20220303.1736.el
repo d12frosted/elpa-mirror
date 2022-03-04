@@ -4,8 +4,8 @@
 
 ;; Author: Matthieu Petiteau <matt@smallwat3r.com>
 ;; URL: https://github.com/smallwat3r/tubestatus.el
-;; Package-Version: 20210801.1522
-;; Package-Commit: eeda4c2647cfdb910de776398037183f48e3fa72
+;; Package-Version: 20220303.1736
+;; Package-Commit: c81373f1bc32cbd2e2d642ee10ee1cb31915acb0
 ;; Package-Requires: ((emacs "26.1") (request "0.3.2"))
 ;; Version: 0.0.1
 
@@ -88,8 +88,7 @@
          (reason (assoc-default 'reason status-content))
          (sev (assoc-default 'statusSeverity status-content)))
     (insert (concat
-             (format "*%s* (Last update: %s)\n\nStatus:\n    "
-                     (assoc-default 'name content) (assoc-default 'modified content))
+             (format "*%s*\n\nStatus:\n    " (assoc-default 'name content))
              (cond ((eql sev 10) (propertize "●" 'face 'tubestatus-good-service-face))
                    ((eql sev 20) (propertize "●" 'face 'tubestatus-line-closed-face))
                    ((eql sev 0)  (propertize "●" 'face 'tubestatus-special-service-face))

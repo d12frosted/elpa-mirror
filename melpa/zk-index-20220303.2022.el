@@ -6,8 +6,8 @@
 ;; Created: January 25, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.4
-;; Package-Version: 20220302.1816
-;; Package-Commit: d71acd8e9b032bab896dd81c212a081d144d7f16
+;; Package-Version: 20220303.2022
+;; Package-Commit: d7b138ac94e341273bde78d9a6f57b035df576e6
 ;; Homepage: https://github.com/localauthor/zk
 
 ;; Package-Requires: ((emacs "26.1")(zk "0.2"))
@@ -606,10 +606,7 @@ If 'zk-index-auto-scroll' is non-nil, show note in other window."
   (interactive)
   (let ((buffer (current-buffer))
         (split-width-threshold nil))
-    (if (save-excursion
-          (forward-line)
-          (and zk-index-auto-scroll
-               (zk-index--button-at-point-p)))
+    (if zk-index-auto-scroll
         (progn
           (other-window 1)
           (when (and (zk-file-p)
@@ -619,10 +616,10 @@ If 'zk-index-auto-scroll' is non-nil, show note in other window."
           (if (get-buffer-window buffer)
               (other-window -1)
             (select-window (get-buffer-window buffer)))
-          (forward-line)
+          (forward-button 1)
           (unless (looking-at-p "[[:space:]]*$")
             (zk-index-view-note)))
-      (forward-line))))
+      (forward-button 1))))
 
 (defun zk-index-previous-line ()
   "Move to previous line.
@@ -630,23 +627,20 @@ If 'zk-index-auto-scroll' is non-nil, show note in other window."
   (interactive)
   (let ((buffer (current-buffer))
         (split-width-threshold nil))
-  (if (save-excursion
-          (forward-line -1)
-          (and zk-index-auto-scroll
-               (zk-index--button-at-point-p)))
-      (progn
-        (other-window 1)
-        (when (and (zk-file-p)
-                   view-mode
-                   (not (buffer-modified-p)))
-          (kill-buffer))
-        (if (get-buffer-window buffer)
-            (other-window -1)
-          (select-window (get-buffer-window buffer)))
-        (forward-line -1)
-        (unless (looking-at-p "[[:space:]]*$")
-          (zk-index-view-note)))
-    (forward-line -1))))
+    (if zk-index-auto-scroll
+        (progn
+          (other-window 1)
+          (when (and (zk-file-p)
+                     view-mode
+                     (not (buffer-modified-p)))
+            (kill-buffer))
+          (if (get-buffer-window buffer)
+              (other-window -1)
+            (select-window (get-buffer-window buffer)))
+          (forward-button -1)
+          (unless (looking-at-p "[[:space:]]*$")
+            (zk-index-view-note)))
+      (forward-button -1))))
 
 (defun zk-index-move-line-down ()
   "Move line at point down in 'read-only-mode'."

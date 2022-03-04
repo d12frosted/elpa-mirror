@@ -1,4 +1,4 @@
-Pretty Speedbar defaults to Font Awesome 5 Free Solid, which must be
+Pretty Speedbar defaults to Font Awesome 6 Free Solid, which must be
 installed from the otf available from Font Awesome's GitHub repository --
 https://github.com/FortAwesome/Font-Awesome.
 To use svg icons, you must first run pretty-speedbar-generate.  This

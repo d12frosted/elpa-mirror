@@ -7,7 +7,7 @@
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
 ;; Package-Version: 20220303.1329
-;; Package-Commit: d71acd8e9b032bab896dd81c212a081d144d7f16
+;; Package-Commit: d7b138ac94e341273bde78d9a6f57b035df576e6
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "24.4"))
 
