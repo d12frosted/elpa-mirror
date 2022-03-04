@@ -6,8 +6,8 @@
 ;; Author: jtbm37
 ;; Maintainer: Jimmy Yuen Ho Wong <wyuenho@gmail.com>
 ;; Version: 2.0
-;; Package-Version: 20211007.1729
-;; Package-Commit: 5e9b097f9950cc9f86de922b07903a4e5fefc733
+;; Package-Version: 20220304.728
+;; Package-Commit: de9b14c8d25a35bd6399336407f5bb746d771dc6
 ;; Keywords: files icons dired
 ;; Package-Requires: ((emacs "24.4") (all-the-icons "2.2.0"))
 ;; URL: https://github.com/wyuenho/all-the-icons-dired
@@ -102,8 +102,8 @@
                                       (when all-the-icons-dired-monochrome
                                         `(:face ,(face-at-point))))))))
             (if (member file '("." ".."))
-                (all-the-icons-dired--add-overlay (point) "  \t")
-              (all-the-icons-dired--add-overlay (point) (concat icon "\t"))))))
+                (all-the-icons-dired--add-overlay (dired-move-to-filename) "  \t")
+              (all-the-icons-dired--add-overlay (dired-move-to-filename) (concat icon "\t"))))))
       (forward-line 1))))
 
 (defun all-the-icons-dired--refresh-advice (fn &rest args)
@@ -113,7 +113,8 @@
       (all-the-icons-dired--refresh))))
 
 (defvar all-the-icons-dired-advice-alist
-  '((dired-aux     dired-create-directory       all-the-icons-dired--refresh-advice)
+  '((dired         dired-do-redisplay           all-the-icons-dired--refresh-advice)
+    (dired-aux     dired-create-directory       all-the-icons-dired--refresh-advice)
     (dired-aux     dired-do-create-files        all-the-icons-dired--refresh-advice)
     (dired-aux     dired-do-kill-lines          all-the-icons-dired--refresh-advice)
     (dired-aux     dired-do-rename              all-the-icons-dired--refresh-advice)
