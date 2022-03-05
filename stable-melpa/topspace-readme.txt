@@ -23,7 +23,7 @@ No new keybindings are required as topspace automatically works for
 any commands or subsequent function calls which use `scroll-up',
 `scroll-down', or `recenter' as the underlying primitives for
 scrolling.  This includes all scrolling commands/functions available
-in Emacs as far as the author is aware. This is achieved by using
+in Emacs as far as the author is aware.  This is achieved by using
 `advice-add' with the `scroll-up', `scroll-down', and `recenter'
 commands so that custom topspace functions are called before or after
 each time any of these other commands are called (interactively or
