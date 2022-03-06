@@ -756,13 +756,16 @@
 	    ("Niklas Eklund" . "niklas.eklund@posteo.net"))
 	   (:commit . "ecf4c57d96eda400d9b2d5cfeaa9244993ae3603"))])
  (dts-mode .
-	   [(0 1 1)
-	    nil "Major mode for Device Tree source files" tar
-	    ((:maintainer "Ben Gamari" . "ben@smart-cactus.org")
+	   [(1 0)
+	    ((emacs
+	      (24)))
+	    "Major mode for Device Tree source files" tar
+	    ((:keywords "languages")
+	     (:maintainer "Ben Gamari" . "ben@smart-cactus.org")
 	     (:authors
 	      ("Ben Gamari" . "ben@smart-cactus.org"))
-	     (:keywords "languages")
-	     (:url . "https://elpa.gnu.org/packages/dts-mode.html"))])
+	     (:url . "https://elpa.gnu.org/packages/dts-mode.html")
+	     (:commit . "8413d2dc9b3347831aa9e8c8b2524af3ef005441"))])
  (easy-escape .
 	      [(0 2 1)
 	       nil "Improve readability of escape characters in regular expressions" tar

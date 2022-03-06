@@ -183,6 +183,17 @@
 		((:url . "http://github.com/clojure-emacs/clojure-mode")
 		 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
 		 (:keywords "languages" "clojure" "clojurescript" "lisp"))])
+ (coffee-mode .
+	      [(0 6 3)
+	       ((emacs
+		 (24 3)))
+	       "Major mode for CoffeeScript code" tar
+	       ((:url . "http://github.com/defunkt/coffee-mode")
+		(:keywords "coffeescript" "major" "mode")
+		(:maintainer "Chris Wanstrath" . "chris@ozmm.org")
+		(:authors
+		 ("Chris Wanstrath" . "chris@ozmm.org"))
+		(:commit . "adfb7ae73d6ee2ef790c780dd3c967e62930e94a"))])
  (color-theme-tangotango .
 			 [(0 0 6)
 			  ((color-theme
