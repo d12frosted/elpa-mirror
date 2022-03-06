@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220302.1035
-;; Package-Commit: 8dc518045c017f09b26d9baf0d002439b2481b2c
+;; Package-Version: 20220306.1115
+;; Package-Commit: 2548c25c843d217e03ddd92b19a9d66483232585
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -260,11 +260,11 @@ CONTACT can be:
   "Face for package-name in EGLOT's mode line.")
 
 (defface eglot-diagnostic-tag-unnecessary-face
-  '((t . (:weight ultra-light)))
+  '((t (:inherit shadow)))
   "Face used to render unused or unnecessary code.")
 
 (defface eglot-diagnostic-tag-deprecated-face
-  '((t . (:strike-through t)))
+  '((t . (:inherit shadow :strike-through t)))
   "Face used to render deprecated or obsolete code.")
 
 (defcustom eglot-autoreconnect 3
