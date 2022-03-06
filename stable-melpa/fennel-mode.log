@@ -4,20 +4,22 @@ Source:  https://gitlab.com/technomancy/fennel-mode.git
 
 Updating /mnt/store/melpa/working/fennel-mode/
 Checking out origin/HEAD
-Checking out 824d330c32637d8e0ef349ffaa8e002aca56991a
+Checking out 55c3fdc6ab8e919636c35176348046f6c80cf9e7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fennel-mode/
-  to /tmp/fennel-mode6yDviq/fennel-mode-20220131.627
+  to /tmp/fennel-mode6qtr7F/fennel-mode-20220304.2258
+    fennel-eldoc.el -> fennel-eldoc.el
     fennel-mode.el -> fennel-mode.el
     fennel-scratch.el -> fennel-scratch.el
-Created fennel-mode-20220131.627.tar containing:
-  fennel-mode-20220131.627/
-  fennel-mode-20220131.627/fennel-mode-pkg.el
-  fennel-mode-20220131.627/fennel-mode.el
-  fennel-mode-20220131.627/fennel-scratch.el
-Built fennel-mode in 4.108s, finished at 2022-03-05T11:29:08+0000
+Created fennel-mode-20220304.2258.tar containing:
+  fennel-mode-20220304.2258/
+  fennel-mode-20220304.2258/fennel-eldoc.el
+  fennel-mode-20220304.2258/fennel-mode-pkg.el
+  fennel-mode-20220304.2258/fennel-mode.el
+  fennel-mode-20220304.2258/fennel-scratch.el
+Built fennel-mode in 4.349s, finished at 2022-03-06T07:46:18+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  360 Mar  5 11:29 packages/fennel-mode-20220131.627.entry
- 40K -rw-r--r-- 1 root root  40K Mar  5 11:29 packages/fennel-mode-20220131.627.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar  5 11:29 packages/fennel-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   71 Mar  5 11:29 packages/fennel-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  361 Mar  6 07:46 packages/fennel-mode-20220304.2258.entry
+ 52K -rw-r--r-- 1 root root  50K Mar  6 07:46 packages/fennel-mode-20220304.2258.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar  6 07:46 packages/fennel-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   71 Mar  6 07:46 packages/fennel-mode-readme.txt

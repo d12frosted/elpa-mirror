@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 638d089bba25ce8184c981d0721eba6417b3d7e2
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/wanderlust/
-  to /tmp/wanderlusttT2VF4/wanderlust-20220103.800
+  to /tmp/wanderlustGCl0kz/wanderlust-20220103.800
   ! doc/wl.texi -> wl.texi
   ! doc/wl-ja.texi -> wl-ja.texi
   ! elmo/acap.el -> acap.el
@@ -83,8 +83,8 @@ Copying files (->) and directories (=>)
   ! wl/wl-version.el -> wl-version.el
   ! wl/wl.el -> wl.el
   ! etc/icons => icons
-Generating /tmp/wanderlusttT2VF4/wanderlust-20220103.800/wl.info
-Generating /tmp/wanderlusttT2VF4/wanderlust-20220103.800/wl-ja.info
+Generating /tmp/wanderlustGCl0kz/wanderlust-20220103.800/wl.info
+Generating /tmp/wanderlustGCl0kz/wanderlust-20220103.800/wl-ja.info
 Created wanderlust-20220103.800.tar containing:
   wanderlust-20220103.800/
   wanderlust-20220103.800/acap.el
@@ -242,8 +242,9 @@ Created wanderlust-20220103.800.tar containing:
   wanderlust-20220103.800/wl-version.el
   wanderlust-20220103.800/wl.el
   wanderlust-20220103.800/wl.info
-Built wanderlust in 46.682s, finished at 2022-03-05T09:20:13+0000
+Failed to fetch badge
+Built wanderlust in 47.351s, finished at 2022-03-06T05:35:44+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  275 Mar  5 09:20 packages/wanderlust-20220103.800.entry
-3.6M -rw-r--r-- 1 root root 3.6M Mar  5 09:20 packages/wanderlust-20220103.800.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar  5 09:20 packages/wanderlust-badge.svg
+4.0K -rw-r--r-- 1 root root  275 Mar  6 05:35 packages/wanderlust-20220103.800.entry
+3.6M -rw-r--r-- 1 root root 3.6M Mar  6 05:35 packages/wanderlust-20220103.800.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar  6 02:42 packages/wanderlust-badge.svg
