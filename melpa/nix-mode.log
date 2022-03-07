@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 20ee8d88900b169831d6b0783bd82d2625e940c7
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/nix-mode/
-  to /tmp/nix-modeEVVTKv/nix-mode-20220228.1520
+  to /tmp/nix-modenW1LLu/nix-mode-20220228.1520
     nix-build.el -> nix-build.el
     nix-drv-mode.el -> nix-drv-mode.el
     nix-edit.el -> nix-edit.el
@@ -41,9 +41,10 @@ Created nix-mode-20220228.1520.tar containing:
   nix-mode-20220228.1520/nix-shell.el
   nix-mode-20220228.1520/nix-store.el
   nix-mode-20220228.1520/nix.el
-Built nix-mode in 4.841s, finished at 2022-03-07T07:30:57+0000
+Failed to fetch badge
+Built nix-mode in 5.622s, finished at 2022-03-07T10:28:38+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  385 Mar  7 07:30 packages/nix-mode-20220228.1520.entry
-132K -rw-r--r-- 1 root root 130K Mar  7 07:30 packages/nix-mode-20220228.1520.tar
+4.0K -rw-r--r-- 1 root root  385 Mar  7 10:28 packages/nix-mode-20220228.1520.entry
+132K -rw-r--r-- 1 root root 130K Mar  7 10:28 packages/nix-mode-20220228.1520.tar
 4.0K -rw-r--r-- 1 root root 1.2K Mar  7 07:30 packages/nix-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  140 Mar  7 07:30 packages/nix-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  140 Mar  7 10:28 packages/nix-mode-readme.txt

@@ -5,9 +5,9 @@
 ;; Author: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; License: GPL-3.0-or-later
-;; Version: 0.1
-;; Package-Version: 20220306.255
-;; Package-Commit: 83ee897ac18bfada7396eabe1220909d87dc1236
+;; Version: 0.2
+;; Package-Version: 20220307.1016
+;; Package-Commit: f9be17a6317d395a2426e8060f503d24038a62f8
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/org-modern
 

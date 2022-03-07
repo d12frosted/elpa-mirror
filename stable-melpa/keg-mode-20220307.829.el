@@ -4,8 +4,8 @@
 
 ;; Author: Naoya Yamashita <conao3@gmail.com>
 ;; Keywords: convenience
-;; Package-Version: 20220305.1445
-;; Package-Commit: e915aba012ad1910ff5ad355de4414f9e1277d39
+;; Package-Version: 20220307.829
+;; Package-Commit: c28ce03bbaee51874246aa798c8532a1c0df7495
 ;; URL: https://github.com/conao3/keg.el
 ;; Package-Requires: ((emacs "24.4"))
 ;; Version: 0.0.1
@@ -42,7 +42,7 @@ Original variable is `lisp-mode-symbol-regexp'.")
        'symbols)
      . font-lock-keyword-face)
     (,(regexp-opt
-       '("gnu" "melpa-stable" "melpa" "org")
+       '("gnu" "org" "melpa" "nongnu" "celpa")
        'symbols)
      . font-lock-variable-name-face)
     ;; Constant values.

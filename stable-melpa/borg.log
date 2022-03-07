@@ -7,12 +7,12 @@ Checking out origin/HEAD
 Checking out ee4491481955eb49de07693b58e00a5ff5908d0b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/borg/
-  to /tmp/borgdpXH3d/borg-20220216.1925
+  to /tmp/borgaCbK5Y/borg-20220216.1925
     borg-elpa.el -> borg-elpa.el
     borg.el -> borg.el
     borg.mk -> borg.mk
   ! docs/borg.texi -> borg.texi
-Generating /tmp/borgdpXH3d/borg-20220216.1925/borg.info
+Generating /tmp/borgaCbK5Y/borg-20220216.1925/borg.info
 Created borg-20220216.1925.tar containing:
   borg-20220216.1925/
   borg-20220216.1925/borg-elpa.el
@@ -21,9 +21,10 @@ Created borg-20220216.1925.tar containing:
   borg-20220216.1925/borg.info
   borg-20220216.1925/borg.mk
   borg-20220216.1925/dir
-Built borg in 10.581s, finished at 2022-03-07T06:53:20+0000
+Failed to fetch badge
+Built borg in 8.518s, finished at 2022-03-07T09:51:40+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  397 Mar  7 06:53 packages/borg-20220216.1925.entry
-120K -rw-r--r-- 1 root root 120K Mar  7 06:53 packages/borg-20220216.1925.tar
+4.0K -rw-r--r-- 1 root root  397 Mar  7 09:51 packages/borg-20220216.1925.entry
+120K -rw-r--r-- 1 root root 120K Mar  7 09:51 packages/borg-20220216.1925.tar
 4.0K -rw-r--r-- 1 root root 1.2K Mar  7 06:53 packages/borg-badge.svg
-4.0K -rw-r--r-- 1 root root  462 Mar  7 06:53 packages/borg-readme.txt
+4.0K -rw-r--r-- 1 root root  462 Mar  7 09:51 packages/borg-readme.txt
