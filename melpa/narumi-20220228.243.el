@@ -3,7 +3,7 @@
 ;; Copyright (C) 2022 Nakamura, Ryotaro <nakamura.ryotaro.kzs@gmail.com>
 ;; Version: 1.0.0
 ;; Package-Version: 20220228.243
-;; Package-Commit: 2f23f03a7b94766799f26605e167b259a4a90903
+;; Package-Commit: 284bd430945db83e73142db4de4417040d918fda
 ;; Package-Requires: ((emacs "26.1"))
 ;; URL: https://github.com/nryotaro/narumi
 ;; This file is not part of GNU Emacs.
