@@ -5,7 +5,7 @@
 ;; Author:  Marco Pawłowski
 ;; Keywords: convenience
 ;; Package-Version: 20220227.2210
-;; Package-Commit: a8bd7a584f63585878b1716e08b39095d30a40a4
+;; Package-Commit: 2e7b99dec6c51259d0bffbae3e863f4054dd2346
 ;; Version: 0.5
 ;; Package-Requires: ((emacs "25.1") (consult "0.12"))
 ;; URL: https://gitlab.com/OlMon/consult-flyspell

@@ -1,8 +1,8 @@
 ;;; ocamlformat.el --- Utility functions to format ocaml code -*- lexical-binding: t; -*-
 
 ;; Package-Requires: ((emacs "24.3"))
-;; Package-Version: 20210923.1348
-;; Package-Commit: 9193d712e408f89a48b00df924a56edeaccefc6f
+;; Package-Version: 20220307.1315
+;; Package-Commit: d42c4089d983c4cc2e1bcdd58ce0487b0ccd1a30
 ;; Version: 0.15.0
 ;; Keywords: languages, ocaml
 ;; URL: https://github.com/ocaml-ppx/ocamlformat
@@ -292,10 +292,10 @@ is nil."
                     (erase-buffer))
                   (ocamlformat--process-errors
                    (buffer-file-name) bufferfile errorfile errbuf)))
-            (message "Could not apply ocamlformat on %s" buffer-file-name))))
-    (delete-file errorfile)
-    (delete-file bufferfile)
-    (delete-file outputfile)))
+            (message "Could not apply ocamlformat on %s" buffer-file-name)))
+      (delete-file errorfile)
+      (delete-file bufferfile)
+      (delete-file outputfile))))
 
 (defun ocamlformat-args (name start-line end-line)
   (let*
@@ -358,13 +358,14 @@ is nil."
                      (buffer-file-name) bufferfile errorfile errbuf)))
                 (message "Could not apply ocamlformat")))))
        (indents (mapcar 'string-to-number (split-string indents-str))))
-    (save-excursion
-      (goto-char start)
-      (mapcar
-       #'(lambda (indent) (indent-line-to indent) (forward-line))
-       indents))
-    (delete-file errorfile)
-    (delete-file bufferfile)))
+    (unwind-protect
+      (save-excursion
+        (goto-char start)
+        (mapcar
+         #'(lambda (indent) (indent-line-to indent) (forward-line))
+         indents))
+      (delete-file errorfile)
+      (delete-file bufferfile))))
 
 (defun ocamlformat-line ()
   (interactive nil)
