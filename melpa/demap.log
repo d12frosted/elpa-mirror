@@ -1,0 +1,27 @@
+Package: demap
+Fetcher: gitlab
+Source:  https://gitlab.com/sawyerjgardner/demap.el.git
+
+Updating /mnt/store/melpa/working/demap/
+Checking out origin/HEAD
+Checking out 9987f4b5f921c862d548c973111182f3bd34f29c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/demap/
+  to /tmp/demapdzEhcn/demap-20220303.333
+    demap-minimap.el -> demap-minimap.el
+    demap-modes.el -> demap-modes.el
+    demap-tools.el -> demap-tools.el
+    demap.el -> demap.el
+Created demap-20220303.333.tar containing:
+  demap-20220303.333/
+  demap-20220303.333/demap-minimap.el
+  demap-20220303.333/demap-modes.el
+  demap-20220303.333/demap-pkg.el
+  demap-20220303.333/demap-tools.el
+  demap-20220303.333/demap.el
+Built demap in 4.063s, finished at 2022-03-07T01:10:59+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  407 Mar  7 01:10 packages/demap-20220303.333.entry
+ 72K -rw-r--r-- 1 root root  70K Mar  7 01:10 packages/demap-20220303.333.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar  7 01:10 packages/demap-badge.svg
+4.0K -rw-r--r-- 1 root root  682 Mar  7 01:10 packages/demap-readme.txt

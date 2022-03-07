@@ -5,8 +5,6 @@
 ;; Author: USAMI Kenta <tadsan@zonu.me>
 ;; Created: 27 Jul 2017
 ;; Version: 0.0.5
-;; Package-Version: 20200616.518
-;; Package-Commit: 811c8fe638c5616b6471525421e61a4470be3b52
 ;; Keywords: files comm deploy
 ;; URL: https://github.com/emacs-php/emacs-auto-deployment
 ;; Package-Requires: ((emacs "24.3") (cl-lib "0.5") (f "0.17") (s "1.7.0"))
@@ -178,6 +176,10 @@
   turn-on-copy-file-on-save
   :group 'copy-file-on-save
   :require 'copy-file-on-save)
+
+(provide 'copy-file-on-save)
+;;; copy-file-on-save.el ends here
+require 'copy-file-on-save)
 
 (provide 'copy-file-on-save)
 ;;; copy-file-on-save.el ends here

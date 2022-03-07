@@ -1,0 +1,13 @@
+(consult-flyspell .
+		  [(20220227 2210)
+		   ((emacs
+		     (25 1))
+		    (consult
+		     (0 12)))
+		   "Consult integration for flyspell" single
+		   ((:commit . "a8bd7a584f63585878b1716e08b39095d30a40a4")
+		    (:authors
+		     ("Marco Pawłowski"))
+		    (:maintainer "Marco Pawłowski")
+		    (:keywords "convenience")
+		    (:url . "https://gitlab.com/OlMon/consult-flyspell"))])
