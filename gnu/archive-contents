@@ -830,7 +830,7 @@
 	      (:maintainer "Markus Triska" . "triska@metalevel.at")
 	      (:url . "https://www.metalevel.at/ediprolog/"))])
  (eev .
-      [(20220224)
+      [(20220308)
        ((emacs
 	 (24 4)))
        "Support for e-scripts (eepitch blocks, elisp hyperlinks, etc)" tar
@@ -839,7 +839,7 @@
 	(:maintainer "Eduardo Ochs" . "eduardoochs@gmail.com")
 	(:authors
 	 ("Eduardo Ochs" . "eduardoochs@gmail.com"))
-	(:commit . "a33e2d7edf6e1d22ecc0201402d344c727205f43"))])
+	(:commit . "e4e49af92a69bfd45cb201c786757f72ece7b520"))])
  (eglot .
 	[(1 8)
 	 ((emacs
@@ -1982,6 +1982,16 @@
 	     (:authors
 	      ("Ian Dunn" . "dunni@gnu.org"))
 	     (:keywords "convenience" "text" "org"))])
+ (org-modern .
+	     [(0 3)
+	      ((emacs
+		(27 1)))
+	      "Modern looks for Org" tar
+	      ((:url . "https://github.com/minad/org-modern")
+	       (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+	       (:authors
+		("Daniel Mendler" . "mail@daniel-mendler.de"))
+	       (:commit . "64fa67a3e4cc7af4084bb879bd8a0e5380333bcf"))])
  (org-real .
 	   [(1 0 4)
 	    ((emacs

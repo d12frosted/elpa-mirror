@@ -1,5 +1,5 @@
 (ivy-migemo .
-	    [(20210425 613)
+	    [(20220308 908)
 	     ((emacs
 	       (24 3))
 	      (ivy
@@ -9,7 +9,7 @@
 	      (nadvice
 	       (0 3)))
 	     "Use migemo on ivy" single
-	     ((:commit . "b91f341d1b70175baf989f0c6eee6573bf781a27")
+	     ((:commit . "fe1e76cc6f5e958920b5eb922969bec3f8fe3ece")
 	      (:authors
 	       ("ROCKTAKEY" . "rocktakey@gmail.com"))
 	      (:maintainer "ROCKTAKEY" . "rocktakey@gmail.com")

@@ -4,10 +4,10 @@
 
 ;; Author: ROCKTAKEY <rocktakey@gmail.com>
 ;; Keywords: matching
-;; Package-Version: 20210425.613
-;; Package-Commit: b91f341d1b70175baf989f0c6eee6573bf781a27
+;; Package-Version: 20220308.908
+;; Package-Commit: fe1e76cc6f5e958920b5eb922969bec3f8fe3ece
 
-;; Version: 1.4.2
+;; Version: 1.4.4
 ;; Package-Requires: ((emacs "24.3") (ivy "0.13.0") (migemo "1.9.2") (nadvice "0.3"))
 
 ;; URL: https://github.com/ROCKTAKEY/ivy-migemo
@@ -107,7 +107,7 @@ which is boolean that is non-nil when `ivy' is toggled to migemo."
      'ivy-migemo-from-migemo-hook)))
 
 (defun ivy-migemo--get-pattern (word)
-  "Same as `migemo-get-pattern' except \"\\(\" is replaced to \"\\(:?\".
+  "Same as `migemo-get-pattern' except \"\\(\" is replaced to \"\\(?:\".
 
 WORD"
   (let* ((str (migemo-get-pattern word))
@@ -127,6 +127,7 @@ WORD"
       (setq escape? (and (eq ?\\ c) (not escape?))))
     (apply #'concat (nreverse result))))
 
+;;;###autoload
 (defun ivy-migemo--regex (str &optional greedy)
   "Same as `ivy--regex' except using migemo.
 Make regex sequence from STR (greedily if GREEDY is non-nil).
@@ -164,6 +165,7 @@ Each string made by splitting STR with space can match Japanese."
                           nil t))))
                     ivy-migemo--regex-hash)))))
 
+;;;###autoload
 (defun ivy-migemo--regex-plus (str)
   "Same as `ivy--regex-plus' except using migemo.
 Make regex sequence from STR.
@@ -185,6 +187,7 @@ Each string made by splitting STR with space or `!' can match Japanese."
                   (split-string (cadr parts) " " t))))
       (t (error "Unexpected: use only one !")))))
 
+;;;###autoload
 (defun ivy-migemo--regex-fuzzy (str)
   "Same as `ivy--regex-fuzzy' except using migemo.
 Make regex sequence from STR.

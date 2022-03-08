@@ -4,8 +4,8 @@
 
 ;; Author:  Marco Pawłowski
 ;; Keywords: convenience
-;; Package-Version: 20220225.1544
-;; Package-Commit: db46920eb34f9be8e18cc057a730e48ff23fa8a6
+;; Package-Version: 20220308.458
+;; Package-Commit: 0cfbadac64f44b901770f09e2806b869b0628880
 ;; Version: 0.5
 ;; Package-Requires: ((emacs "25.1") (consult "0.12") (projectile "2.5.0"))
 ;; URL: https://gitlab.com/OlMon/consult-projectile
@@ -59,6 +59,12 @@
 
 (defvar consult-projectile-display-info t
   "Settings to let `consult-projectile' display project information in the annotation.")
+
+(defvar consult-projectile-use-projectile-switch-project nil
+  "If non-nil will use `projectile-switch-project'
+when switching from one project to an other.
+This allows the use of `projectile-swtich-project-action'.
+Default is to use `consult-projectile-find-file'.")
 
 (defcustom consult-projectile-sources
   '(consult-projectile--source-projectile-buffer
@@ -149,7 +155,11 @@ See `consult--multi' for a description of the source values."
                       (format "Project: %s [%s]"
                               (projectile-project-name dir)
                               (projectile-project-vcs dir))))
-        :action   #'consult-projectile--file
+        :action   (lambda (dir)
+                    (let ((ppr (projectile-project-root)))
+                      (if (and ppr consult-projectile-use-projectile-switch-project)
+                          (projectile-switch-project-by-name dir)
+                        (consult-projectile--file dir))))
         :items    #'projectile-relevant-known-projects))
 
 ;;;###autoload

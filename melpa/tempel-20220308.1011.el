@@ -5,9 +5,9 @@
 ;; Author: Daniel Mendler <mail@daniel-mendler.de>
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
-;; Version: 0.2
-;; Package-Version: 20220223.2047
-;; Package-Commit: 54ba0f24c66cb3aa153343acb2f8e828e4dd95dc
+;; Version: 0.3
+;; Package-Version: 20220308.1011
+;; Package-Commit: ee964c24b69579fcd5ec3c7d3d1d84d1ca3d90e4
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/tempel
 

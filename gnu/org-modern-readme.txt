@@ -1,0 +1,133 @@
+			   ━━━━━━━━━━━━━━━━━━
+			    MODERN ORG STYLE
+			   ━━━━━━━━━━━━━━━━━━
+
+
+Table of Contents
+─────────────────
+
+1. Introduction
+2. Contributions
+
+
+
+
+
+1 Introduction
+══════════════
+
+  This package implements a "modern" style for your Org buffers using
+  font locking and text properties. The package styles headlines,
+  keywords, tables and source blocks. The styling is configurable, you
+  can enable, disable or modify the style of each syntax element
+  individually via the `org-modern' customization group.
+
+  <https://github.com/minad/org-modern/blob/screenshots/example.gif?raw=true>
+
+  The screenshots shows [example.org] with `org-modern-mode' turned on
+  and off. The elegant theme featured in the screenshot is
+  [modus-operandi].
+
+  This package is still early in its development, so expect bugs and
+  issues in particular due to unfortunate interactions of the
+  `variable-pitch' and `fixed-pitch' fonts. You should ensure that your
+  fonts combine harmonically and have approximately the same
+  height. `org-modern-mode' tries to adjust the tag label display based
+  on the value of `line-spacing'. This looks best if `line-spacing' has
+  a value between 0.1 and 0.4 in the Org buffer. Note that
+  `org-indent-mode' interferes with some of the style elements applied
+  by `org-modern-mode', e.g., the block brackets in the fringe.
+
+  Bug reports, improvement or style proposals are welcome! Maybe some
+  more Org elements deserve styling or alternative stylings should be
+  offered?
+
+  The tag style of `org-modern' is a poor Emacsien's ripoff from
+  Nicholas Rougier's beautiful [svg-tag-mode]. In contrast to
+  `svg-tag-mode', this package avoids images and uses cheap and fast
+  Emacs box text properties. By only styling the text via text
+  properties, the styled text, e.g., dates or tags stay editable and are
+  easy to interact with.
+
+  On the downside, this restricts our flexibility and may lead to
+  font-dependent issues. We do our best, but for example there is no way
+  we can get round corners. Combining `org-modern-mode' with
+  `svg-tag-mode' is possible. You can use SVG tags and use the table and
+  block styling from `org-modern'. If you are interested in further
+  tweaks, Emacs comes with the builtin `prettify-symbols-mode' which can
+  be used for individual styling of custom keywords.
+
+  Another popular alternative is [org-superstar], which has a more
+  restricted feature set and mainly adjusts headlines and
+  lists. `org-superstar' relies on character composition, while
+  `org-modern' uses text properties, which are considered more
+  future-proof.
+
+  The package is available on MELPA. You can install it with
+  `package-install' if you have the MELPA package repository
+  activated. Then `org-modern' can be enabled manually in an Org buffer
+  by invoking `M-x org-modern-mode'. In order to enable `org-modern' for
+  all your Org buffers, add `org-modern-mode' to the Org mode hooks.
+
+  ┌────
+  │ (add-hook 'org-mode-hook #'org-modern-mode)
+  └────
+
+  Try the following minimal setup in `emacs -Q' to emulate the looks of
+  the screenshot above.
+
+  ┌────
+  │ ;; Minimal UI
+  │ (package-initialize)
+  │ (menu-bar-mode -1)
+  │ (tool-bar-mode -1)
+  │ (scroll-bar-mode -1)
+  │ (modus-themes-load-operandi)
+  │ 
+  │ ;; Choose some fonts
+  │ ;; (set-face-attribute 'default nil :family "???")
+  │ ;; (set-face-attribute 'variable-pitch nil :family "???")
+  │ 
+  │ ;; Add frame borders and window dividers
+  │ (modify-all-frames-parameters
+  │  '((right-divider-width . 40)
+  │    (internal-border-width . 40)))
+  │ (dolist (face '(window-divider
+  │ 		window-divider-first-pixel
+  │ 		window-divider-last-pixel))
+  │   (face-spec-reset-face face)
+  │   (set-face-foreground face (face-attribute 'default :background)))
+  │ (set-face-background 'fringe (face-attribute 'default :background))
+  │ 
+  │ ;; Org settings
+  │ (setq org-hide-emphasis-markers t
+  │       org-pretty-entities t
+  │       org-auto-align-tags nil
+  │       org-tags-column 0
+  │       org-ellipsis "…"
+  │       org-catch-invisible-edits 'show-and-error
+  │       org-special-ctrl-a/e t
+  │       org-insert-heading-respect-content t)
+  │ 
+  │ ;; Enable org-modern-mode
+  │ (add-hook 'org-mode-hook 'org-modern-mode)
+  └────
+
+
+[example.org] <file:example.org>
+
+[modus-operandi] <https://protesilaos.com/emacs/modus-themes>
+
+[svg-tag-mode] <https://github.com/rougier/svg-tag-mode>
+
+[org-superstar] <https://github.com/integral-dw/org-superstar-mode>
+
+
+2 Contributions
+═══════════════
+
+  Since this package is part of [GNU ELPA] contributions require a
+  copyright assignment to the FSF.
+
+
+[GNU ELPA] <http://elpa.gnu.org/packages/org-modern.html>
