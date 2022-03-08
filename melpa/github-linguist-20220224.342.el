@@ -5,7 +5,7 @@
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
 ;; Version: 0.1
 ;; Package-Version: 20220224.342
-;; Package-Commit: 8381da617b3e40cd1d7ac3c339504e3e85c7f7ae
+;; Package-Commit: fe144c2c0266ff7d19e58431f02dad02d1443b8b
 ;; Package-Requires: ((emacs "27.1") (project "0.6") (async "1.9") (map "3"))
 ;; Keywords: processes
 ;; URL: https://github.com/akirak/github-linguist.el

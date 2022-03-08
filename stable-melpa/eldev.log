@@ -4,10 +4,10 @@ Source:  https://github.com/doublep/eldev.git
 
 Updating /mnt/store/melpa/working/eldev/
 Checking out origin/HEAD
-Checking out 198910a70e3ef376283bf0d2cae516973e69a5a2
+Checking out d90aae7001b93aec4e65eb94f86fea052f896d57
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/eldev/
-  to /tmp/eldevaBJKVd/eldev-20220306.1826
+  to /tmp/eldevUjE7HM/eldev-20220307.2114
     eldev-build.el -> eldev-build.el
     eldev-buttercup.el -> eldev-buttercup.el
     eldev-ecukes.el -> eldev-ecukes.el
@@ -19,25 +19,24 @@ Copying files (->) and directories (=>)
     bin/eldev -> bin/eldev
     bin/eldev.bat -> bin/eldev.bat
     bin/eldev.ps1 -> bin/eldev.ps1
-Created eldev-20220306.1826.tar containing:
-  eldev-20220306.1826/
-  eldev-20220306.1826/bin/
-  eldev-20220306.1826/bin/eldev
-  eldev-20220306.1826/bin/eldev.bat
-  eldev-20220306.1826/bin/eldev.ps1
-  eldev-20220306.1826/eldev-build.el
-  eldev-20220306.1826/eldev-buttercup.el
-  eldev-20220306.1826/eldev-ecukes.el
-  eldev-20220306.1826/eldev-ert.el
-  eldev-20220306.1826/eldev-pkg.el
-  eldev-20220306.1826/eldev-plugins.el
-  eldev-20220306.1826/eldev-util.el
-  eldev-20220306.1826/eldev-vc.el
-  eldev-20220306.1826/eldev.el
-Failed to fetch badge
-Built eldev in 4.022s, finished at 2022-03-07T12:59:57+0000
+Created eldev-20220307.2114.tar containing:
+  eldev-20220307.2114/
+  eldev-20220307.2114/bin/
+  eldev-20220307.2114/bin/eldev
+  eldev-20220307.2114/bin/eldev.bat
+  eldev-20220307.2114/bin/eldev.ps1
+  eldev-20220307.2114/eldev-build.el
+  eldev-20220307.2114/eldev-buttercup.el
+  eldev-20220307.2114/eldev-ecukes.el
+  eldev-20220307.2114/eldev-ert.el
+  eldev-20220307.2114/eldev-pkg.el
+  eldev-20220307.2114/eldev-plugins.el
+  eldev-20220307.2114/eldev-util.el
+  eldev-20220307.2114/eldev-vc.el
+  eldev-20220307.2114/eldev.el
+Built eldev in 4.635s, finished at 2022-03-08T03:52:00+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  340 Mar  7 12:59 packages/eldev-20220306.1826.entry
-480K -rw-r--r-- 1 root root 480K Mar  7 12:59 packages/eldev-20220306.1826.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar  7 07:03 packages/eldev-badge.svg
-4.0K -rw-r--r-- 1 root root 1.5K Mar  7 12:59 packages/eldev-readme.txt
+4.0K -rw-r--r-- 1 root root  340 Mar  8 03:51 packages/eldev-20220307.2114.entry
+480K -rw-r--r-- 1 root root 480K Mar  8 03:51 packages/eldev-20220307.2114.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar  8 03:52 packages/eldev-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Mar  8 03:51 packages/eldev-readme.txt

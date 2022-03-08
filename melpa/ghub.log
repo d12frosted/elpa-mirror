@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 2f50383cb35f0cc54599c54cc9794bf25387c050
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghub0vj4NV/ghub-20220216.2156
+  to /tmp/ghub598DUR/ghub-20220216.2156
   ! lisp/buck.el -> buck.el
   ! lisp/ghub-graphql.el -> ghub-graphql.el
   ! lisp/ghub-pkg.el -> ghub-pkg.el
@@ -18,7 +18,7 @@ Copying files (->) and directories (=>)
   ! lisp/gtea.el -> gtea.el
   ! docs/ghub.texi -> ghub.texi
     .dir-locals.el -> .dir-locals.el
-Generating /tmp/ghub0vj4NV/ghub-20220216.2156/ghub.info
+Generating /tmp/ghub598DUR/ghub-20220216.2156/ghub.info
 Created ghub-20220216.2156.tar containing:
   ghub-20220216.2156/
   ghub-20220216.2156/.dir-locals.el
@@ -32,10 +32,9 @@ Created ghub-20220216.2156.tar containing:
   ghub-20220216.2156/gogs.el
   ghub-20220216.2156/gsexp.el
   ghub-20220216.2156/gtea.el
-Failed to fetch badge
-Built ghub in 7.635s, finished at 2022-03-07T13:13:17+0000
+Built ghub in 7.002s, finished at 2022-03-08T04:00:58+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  401 Mar  7 13:13 packages/ghub-20220216.2156.entry
-152K -rw-r--r-- 1 root root 150K Mar  7 13:13 packages/ghub-20220216.2156.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar  7 07:13 packages/ghub-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Mar  7 13:13 packages/ghub-readme.txt
+4.0K -rw-r--r-- 1 root root  401 Mar  8 04:00 packages/ghub-20220216.2156.entry
+152K -rw-r--r-- 1 root root 150K Mar  8 04:00 packages/ghub-20220216.2156.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar  8 04:00 packages/ghub-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Mar  8 04:00 packages/ghub-readme.txt
