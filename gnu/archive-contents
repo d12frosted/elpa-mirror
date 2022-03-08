@@ -2051,6 +2051,16 @@
 	 ("Mario Lang" . "mlang@blind.guru"))
 	(:keywords "comm" "processes" "multimedia")
 	(:url . "https://elpa.gnu.org/packages/osc.html"))])
+ (osm .
+      [(0 2)
+       ((emacs
+	 (27 1)))
+       "OpenStreetMap viewer" tar
+       ((:url . "https://github.com/minad/osm")
+	(:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+	(:authors
+	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
+	(:commit . "cb191d426f1ac387e6d1895cd7fb4a79ad81762b"))])
  (other-frame-window .
 		     [(1 0 6)
 		      ((emacs

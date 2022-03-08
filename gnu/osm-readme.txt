@@ -1,0 +1,120 @@
+	       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+		OSM.EL - OPENSTREETMAP VIEWER FOR EMACS
+	       ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+
+Table of Contents
+─────────────────
+
+1. Features
+2. Configuration
+3. Bookmarks and Org links
+4. Commands and Key Bindings
+5. Related projects
+6. Contributions
+
+
+<https://github.com/minad/osm/blob/screenshots/osm.png?raw=true> (Map
+tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
+
+
+1 Features
+══════════
+
+  • Parallel fetching of tiles with curl
+  • Scrolling in large and small steps
+  • Zooming
+  • Mouse support (dragging, clicking)
+  • Map scale indicator
+  • Jump to coordinate
+  • Search for location by name
+  • Org link support
+  • Bookmarked positions with pins
+  • Multiple preconfigured servers
+
+
+2 Configuration
+═══════════════
+
+  ┌────
+  │ (use-package osm
+  │   :bind (("C-c m h" . osm-home)
+  │ 	 ("C-c m s" . osm-search)
+  │ 	 ("C-c m t" . osm-server)
+  │ 	 ("C-c m g" . osm-goto)
+  │ 	 ("C-c m b" . osm-bookmark-jump))
+  │   :init
+  │   ;; Load Org link support
+  │   (with-eval-after-load 'org
+  │     (require 'osm-ol)))
+  └────
+
+
+3 Bookmarks and Org links
+═════════════════════════
+
+  To store a bookmark press the key `b', to store Org links press the
+  key `l'. You can also use a custom binding, e.g., `C-c l'. Then the
+  link can be inserted into an Org buffer with `C-c C-l'. Bookmarks and
+  Org links can be created at point with the mouse, see
+  `osm-bookmark-set-click' and `osm-org-link-click'.
+
+  Examples:
+
+  • 
+  • 
+  • 
+  • 
+  • 
+
+
+4 Commands and Key Bindings
+═══════════════════════════
+
+  Top-level commands:
+  • `osm-home': Open new map at home coordinates
+  • `osm-search': Search and jump to location
+  • `osm-goto': Go to coordinates
+  • `osm-server': Select server
+  • `osm-bookmark-jump': Jump to bookmark
+
+  Key bindings in `osm-mode' buffer:
+  • `<arrow>': Small step scrolling
+  • `C-<arrow>', `M-<arrow>': Large step scrolling
+  • `+', `SPC': `osm-zoom-in' - Zoom in
+  • `-', `S-SPC': `osm-zoom-out' - Zoom out
+  • `<mouse-1>': `osm-zoom-click' - Zoom to point
+  • `<mouse-2>': `osm-org-link-click' - Store point as Org link
+  • `<mouse-3>': `osm-bookmark-set-click' - Store point as bookmark
+  • `<S-mouse-3>': `osm-bookmark-delete-click' - Delete bookmark at
+    point
+  • `<down-mouse-*>': `osm-drag' - Drag the map with the mouse
+  • `g': `osm-goto' - Go to location
+  • `h': `osm-home' - Go to home location
+  • `s': `osm-search' - Search for location
+  • `t': `osm-server' - Select tile server
+  • `l': `org-store-link' - Store org link
+  • `b': `osm-bookmark-set' - Set bookmark
+  • `B': `osm-bookmark-jump' - Jump to bookmark
+  • `q': `quit-window' - Close buffer and window
+  • `c': `clone-buffer' - Clone buffer
+
+
+5 Related projects
+══════════════════
+
+  There have been other attempts at map viewers in Emacs before.
+
+  • <https://github.com/ruediger/osm-mode>
+  • <https://github.com/svenssonjoel/Emacs-OSM>
+  • <https://github.com/jd/google-maps.el>
+
+
+6 Contributions
+═══════════════
+
+  Since this package is part of [GNU ELPA] contributions require a
+  copyright assignment to the FSF.
+
+
+[GNU ELPA] <http://elpa.gnu.org/packages/osm.html>
