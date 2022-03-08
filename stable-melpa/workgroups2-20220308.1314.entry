@@ -1,0 +1,11 @@
+(workgroups2 .
+	     [(20220308 1314)
+	      ((emacs
+		(25 1)))
+	      "save&load multiple named workspaces (or \"workgroups\")" tar
+	      ((:commit . "b2c457a720e98dd1c560860e44a6a80372ef07ef")
+	       (:authors
+		("Sergey Pashinin <sergey at pashinin dot com>"))
+	       (:maintainer "Sergey Pashinin <sergey at pashinin dot com>")
+	       (:keywords "session" "management" "window-configuration" "persistence")
+	       (:url . "https://github.com/pashinin/workgroups2"))])
