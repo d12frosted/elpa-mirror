@@ -36,6 +36,11 @@ tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
 2 Configuration
 ═══════════════
 
+  The package is available on GNU ELPA and can be installed with
+  `package-install'.  The following is an example configuration which
+  relies on `use-package'. Please take a look at the [wiki] for
+  additional configuration.
+
   ┌────
   │ (use-package osm
   │   :bind (("C-c m h" . osm-home)
@@ -48,6 +53,9 @@ tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
   │   (with-eval-after-load 'org
   │     (require 'osm-ol)))
   └────
+
+
+[wiki] <https://github.com/minad/osm/wiki>
 
 
 3 Bookmarks and Org links
@@ -83,12 +91,13 @@ tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
   • `C-<arrow>', `M-<arrow>': Large step scrolling
   • `+', `SPC': `osm-zoom-in' - Zoom in
   • `-', `S-SPC': `osm-zoom-out' - Zoom out
-  • `<mouse-1>': `osm-zoom-click' - Zoom to point
+  • `<mouse-1>': `osm-center-click' - Center to point
   • `<mouse-2>': `osm-org-link-click' - Store point as Org link
   • `<mouse-3>': `osm-bookmark-set-click' - Store point as bookmark
-  • `<S-mouse-3>': `osm-bookmark-delete-click' - Delete bookmark at
-    point
+  • `<osm-bookmark mouse-*>': `osm-bookmark-delete-click' - Click on
+    bookmark at point to delete
   • `<down-mouse-*>': `osm-drag' - Drag the map with the mouse
+  • `d', `DEL': `osm-bookmark-delete' - Delete selected bookmark
   • `g': `osm-goto' - Go to location
   • `h': `osm-home' - Go to home location
   • `s': `osm-search' - Search for location
@@ -108,6 +117,7 @@ tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
   • <https://github.com/ruediger/osm-mode>
   • <https://github.com/svenssonjoel/Emacs-OSM>
   • <https://github.com/jd/google-maps.el>
+  • <https://github.com/emacsattic/org-osm-link>
 
 
 6 Contributions

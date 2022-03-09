@@ -11,8 +11,9 @@ Table of Contents
 3. Template file format
 4. Template syntax
 5. Adding template sources
-6. Binding important to a key
-7. Contributions
+6. Binding important templates to a key
+7. Alternatives
+8. Contributions
 
 
 
@@ -25,7 +26,7 @@ Table of Contents
   the Emacs Tempo library. Tempo is an ancient temple of the church of
   Emacs. It is 27 years old, but still in good shape since it
   successfully resisted change over the decades. However it may look a
-  bit dusty here and there. Therefore I present to you, Tempel, a
+  bit dusty here and there. Therefore we present to you, Tempel, a
   modernized implementation of Tempo, in the form of three commands:
 
   ⁃ `tempel-complete' completes a template name at point in the buffer
@@ -43,18 +44,19 @@ Table of Contents
   popup UI a try. After inserting the template you can move between the
   visible template fields with the keys `M-{', `M-}' or `C-up/down'
   which are normally bound to `forward/backward-paragraph'. Tempel
-  temporarily remaps these commands to `tempel-next' and
-  `tempel-previous'. The key bindings are defined in the `tempel-map'
-  keymap. You can customize them there. As soon as you move before
-  (behind) the first (last) field, the fields are finalized.
+  temporarily remaps these commands to `tempel-next/previous'. The key
+  bindings are defined in the `tempel-map' keymap. You can customize
+  them there. As soon as you move before (behind) the first (last)
+  field, the fields are finalized.
 
   Tempel can hook into the abbrev mechanism of Emacs by enabling the
   `tempel-abbrev-mode' in a buffer or by enabling the
-  `tempel-global-abbrev-mode'. Then the Tempel templates will be
+  `tempel-global-abbrev-mode'.  Then the Tempel templates will be
   available via `expand-abbrev' which is usually bound to `C-x ''.
 
   Note that this package is not a competitor to the mature and widely
-  used YASnippet library. Try Tempel only if you like small and simple
+  used YASnippet library, which comes with many readily available
+  snippet collections.  Try Tempel only if you like small and simple
   packages. With Tempel you write your templates in Lisp syntax, which
   from my perspective fits well to the hackable nature of Emacs. Tempel
   took inspiration from the [Tempo-Snippets] package by Nikolaj
@@ -71,27 +73,30 @@ Table of Contents
 2 Quick start
 ═════════════
 
-  As of 2022-01-05 the package is not yet available in a package
-  repository and has to be installed manually with
-  `package-install-file'.
+  The package is available on GNU ELPA and MELPA and can be installed
+  with `package-install'. In the following we show an example
+  configuration, which relies on on `use-package'.
 
   ┌────
-  │ ;; Bind the Tempel commands
+  │ ;; Configure Tempel
   │ (use-package tempel
   │   :bind (("M-+" . tempel-complete) ;; Alternative tempel-expand
   │ 	 ("M-*" . tempel-insert))
+  │ 
   │   :init
   │ 
   │   ;; Setup completion at point
   │   (defun tempel-setup-capf ()
-  │     ;; Add the Tempel Capf to `completion-at-point-functions'.
-  │     ;; The depth is set to -1, such that `tempel-expand' is tried *before* the
-  │     ;; programming mode Capf. If a template name can be completed it takes
-  │     ;; precedence over the programming mode completion. `tempel-expand' only
-  │     ;; triggers on exact matches. Alternatively use `tempel-complete' if you
-  │     ;; want to see all matches, but then Tempel will probably trigger too
+  │     ;; Add the Tempel Capf to `completion-at-point-functions'. `tempel-expand'
+  │     ;; only triggers on exact matches. Alternatively use `tempel-complete' if
+  │     ;; you want to see all matches, but then Tempel will probably trigger too
   │     ;; often when you don't expect it.
-  │     (add-hook 'completion-at-point-functions #'tempel-expand -1 'local))
+  │     ;; NOTE: We add `tempel-expand' *before* the main programming mode Capf,
+  │     ;; such that it will be tried first.
+  │     (setq-local completion-at-point-functions
+  │ 		(cons #'tempel-expand
+  │ 		      completion-at-point-functions)))
+  │ 
   │   (add-hook 'prog-mode-hook 'tempel-setup-capf)
   │   (add-hook 'text-mode-hook 'tempel-setup-capf)
   │ 
@@ -111,12 +116,14 @@ Table of Contents
 3 Template file format
 ══════════════════════
 
-  The templates are defined in a Lisp file `templates' which is stored
-  by default in the `user-emacs-directory'
-  (`~/.config/emacs/templates'). The templates are written as Lisp
-  expressions in the concise form of the Emacs Tempo syntax. The first
-  element of the list is the name of the template. Behind the name, the
-  Tempo syntax elements follow.
+  The templates are defined in a Lisp file which is stored by default in
+  the `user-emacs-directory' (`~/.config/emacs/templates'). The
+  templates are grouped by major mode with an optional
+  `:condition'. Each template is a list in the concise form of the Emacs
+  Tempo syntax. The first element of each list is the name of the
+  template. Behind the name, the Tempo syntax elements follow. Pre- and
+  post-expansion operations can be specified per template by the
+  optional keys `:pre' and `:post'.
 
   ┌────
   │ ;; -*- mode: lisp -*-
@@ -125,26 +132,48 @@ Table of Contents
   │ 
   │ (today (format-time-string "%Y-%m-%d"))
   │ 
+  │ prog-mode
+  │ 
+  │ (fixme (if (derived-mode-p 'emacs-lisp-mode) ";; " comment-start) "FIXME ")
+  │ (todo (if (derived-mode-p 'emacs-lisp-mode) ";; " comment-start) "TODO ")
+  │ (bug (if (derived-mode-p 'emacs-lisp-mode) ";; " comment-start) "BUG ")
+  │ (hack (if (derived-mode-p 'emacs-lisp-mode) ";; " comment-start) "HACK ")
+  │ 
   │ latex-mode
   │ 
-  │ (begin "\\begin{" (s env) "}" > n> r> "\\end{" (s env) "}" > n)
-  │ (enumerate "\\begin{enumerate}\n\\item " r> n> "\\end{enumerate}" > n)
-  │ (itemize "\\begin{itemize}\n\\item " r> n> "\\end{itemize}" > n)
+  │ (begin "\\begin{" (s env) "}" > n> r> "\\end{" (s env) "}")
+  │ (frac "\\frac{" p "}{" p "}")
+  │ (enumerate "\\begin{enumerate}\n\\item " r> n> "\\end{enumerate}")
+  │ (itemize "\\begin{itemize}\n\\item " r> n> "\\end{itemize}")
+  │ 
+  │ lisp-mode emacs-lisp-mode ;; Specify multiple modes
+  │ 
+  │ (lambda "(lambda (" p ")" n> r> ")")
   │ 
   │ emacs-lisp-mode
   │ 
   │ (lambda "(lambda (" p ")" n> r> ")")
-  │ (var "(defvar " p "\n  \"" p "\")" n n)
-  │ (const "(defconst " p "\n  \"" p "\")" n n)
-  │ (custom "(defcustom " p "\n  \"" p "\"" n> ":type '" p ")" n n)
-  │ (face "(defface " p " '((t :inherit font-lock-" p "-face))\n  \"" p "\")" n n)
-  │ (group "(defgroup " p " nil\n  \"" p "\"" n> ":group '" p n> ":prefix \"" p "-\")" n n)
-  │ (macro "(defmacro " p " (" p ")\n  \"" p "\"" n> r> ")" n n)
-  │ (fun "(defun " p " (" p ")\n  \"" p "\"" n> r> ")" n n)
+  │ (var "(defvar " p "\n  \"" p "\")")
+  │ (const "(defconst " p "\n  \"" p "\")")
+  │ (custom "(defcustom " p "\n  \"" p "\"" n> ":type '" p ")")
+  │ (face "(defface " p " '((t :inherit " p "))\n  \"" p "\")")
+  │ (group "(defgroup " p " nil\n  \"" p "\"" n> ":group '" p n> ":prefix \"" p "-\")")
+  │ (macro "(defmacro " p " (" p ")\n  \"" p "\"" n> r> ")")
+  │ (fun "(defun " p " (" p ")\n  \"" p "\"" n> r> ")")
   │ (let "(let (" p ")" n> r> ")")
   │ (star "(let* (" p ")" n> r> ")")
   │ (rec "(letrec (" p ")" n> r> ")")
-  │ (command "(defun " p " (" p ")\n  \"" p "\"" n> "(interactive)" n> r> ")" n n)
+  │ (command "(defun " p " (" p ")\n  \"" p "\"" n> "(interactive)" n> r> ")")
+  │ 
+  │ eshell-mode
+  │ 
+  │ (for "for " (p "i") " in " p " { " p " }")
+  │ (while "while { " p " } { " p " }")
+  │ (until "until { " p " } { " p " }")
+  │ (if "if { " p " } { " p " }")
+  │ (if-else "if { " p " } { " p " } { " p " }")
+  │ (unless "unless { " p " } { " p " }")
+  │ (unless-else "unless { " p " } { " p " } { " p " }")
   │ 
   │ text-mode
   │ 
@@ -153,14 +182,33 @@ Table of Contents
   │ (asciibox "+-" (make-string (length str) ?-) "-+" n
   │ 	  "| " (s str)                       " |" n
   │ 	  "+-" (make-string (length str) ?-) "-+" n)
+  │ (rot13 (p "plain text" text) n "----" n (rot13 text))
+  │ (calc (p "taylor(sin(x),x=0,3)" formula) n "----" n (format "%s" (calc-eval formula)))
   │ 
   │ rst-mode
   │ 
   │ (title (make-string (length title) ?=) n (p "Title: " title) n (make-string (length title) ?=) n)
   │ 
+  │ java-mode
+  │ 
+  │ (class "public class " (p (file-name-base (or (buffer-file-name) (buffer-name)))) " {" n> r> n "}")
+  │ 
+  │ c-mode :condition (re-search-backward "^\\w*$" (line-beginning-position) 'noerror)
+  │ 
+  │ (inc "#include <" (p (concat (file-name-base (or (buffer-file-name) (buffer-name))) ".h")) ">")
+  │ (incc "#include \"" (p (concat (file-name-base (or (buffer-file-name) (buffer-name))) ".h")) "\"")
+  │ 
   │ org-mode
   │ 
   │ (title "#+title: " p n "#+author: Daniel Mendler" n "#+language: en" n n)
+  │ (quote "#+begin_quote" n> r> n> "#+end_quote")
+  │ (example "#+begin_example" n> r> n> "#+end_example")
+  │ (center "#+begin_center" n> r> n> "#+end_center")
+  │ (comment "#+begin_comment" n> r> n> "#+end_comment")
+  │ (verse "#+begin_verse" n> r> n> "#+end_verse")
+  │ (src "#+begin_src " p n> r> n> "#+end_src")
+  │ (elisp "#+begin_src emacs-lisp" n> r> n "#+end_src"
+  │        :post (progn (tempel-done) (org-edit-src-code)))
   └────
 
 
@@ -168,8 +216,8 @@ Table of Contents
 ═════════════════
 
   All the Tempo syntax elements are fully supported. The syntax elements
-  are described in detail in `tempo-define-template' are supported. We
-  document the important ones here:
+  are described in detail in the docstring of `tempo-define-template' in
+  tempo.el. We document the important ones here:
 
   • "string" Inserts a string literal.
   • `p' Inserts an unnamed placeholder field.
@@ -205,20 +253,31 @@ Table of Contents
 5 Adding template sources
 ═════════════════════════
 
-  Tempel offers a flexible mechanism for providing the templates which
+  Tempel offers a flexible mechanism for providing the templates, which
   are applicable to the current context. The variable
   `tempel-template-sources' specifies a list of sources or a single
   source. A source can either be a function, which should return a list
-  of applicable templates, or a variable name symbol of a variable which
-  holds a list of templates, which apply to the current context. By
-  default Tempel install the sources `tempel--file-templates' and the
-  variable `tempel-local-templates'.
+  of applicable templates, or the symbol of a variable, which holds a
+  list of templates, which apply to the current context.  By default,
+  Tempel configures only the source `tempel-file-templates'. You may
+  want to add global or local template variables to your user
+  configuration:
+
+  ┌────
+  │ (defvar my-global-templates
+  │   '((example "Global example template"))
+  │   "My global templates.")
+  │ (defvar-local my-local-templates nil
+  │   "Buffer-local templates.")
+  │ (add-to-list 'tempel-template-sources 'my-global-templates)
+  │ (add-to-list 'tempel-template-sources 'my-local-templates)
+  └────
 
 
-6 Binding important to a key
-════════════════════════════
+6 Binding important templates to a key
+══════════════════════════════════════
 
-  Important kemplates can be bound to a key with the small utility macro
+  Important templates can be bound to a key with the small utility macro
   `tempel-key' which accepts three arguments, a key, a template or name
   and optionally a map.
 
@@ -239,11 +298,50 @@ Table of Contents
 [general] <https://github.com/noctuid/general>
 
 
-7 Contributions
+7 Alternatives
+══════════════
+
+  There are plenty of alternative packages which provide abbreviation or
+  snippet expansion.
+
+  • abbrev.el: Abbreviation expansion, builtin
+  • skeleton.el: Lisp syntax for templates, builtin
+  • tempo.el: Lisp syntax for templates, builtin
+  • [aas.el]: Auto activating snippets
+  • [cdlatex.el]: Fast LaTeX insertion
+  • [laas.el]: Latex auto activating snippets
+  • [muban.el]: Lightweight template expansion
+  • [placeholder.el]: Treat buffers as templates
+  • [skempo.el]: Unifies the Skeleton and Tempo configuration
+  • [snippet.el]: Original snippet mode
+  • [tempo-snippets.el]: snippet.el-like interface for Tempo
+  • [yasnippet.el]: The most popular Emacs template system
+
+
+[aas.el] <https://github.com/ymarco/auto-activating-snippets>
+
+[cdlatex.el] <https://github.com/cdominik/cdlatex>
+
+[laas.el] <https://github.com/tecosaur/LaTeX-auto-activating-snippets>
+
+[muban.el] <https://github.com/jiahaowork/muban.el>
+
+[placeholder.el] <https://github.com/oantolin/placeholder>
+
+[skempo.el] <https://github.com/xFA25E/skempo>
+
+[snippet.el] <https://github.com/pkazmier/snippet.el>
+
+[tempo-snippets.el] <https://nschum.de/src/emacs/tempo-snippets/>
+
+[yasnippet.el] <https://github.com/joaotavora/yasnippet>
+
+
+8 Contributions
 ═══════════════
 
   Since this package is part of [GNU ELPA] contributions require a
   copyright assignment to the FSF.
 
 
-[GNU ELPA] <http://elpa.gnu.org/packages/marginalia.html>
+[GNU ELPA] <http://elpa.gnu.org/packages/tempel.html>

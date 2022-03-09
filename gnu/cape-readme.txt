@@ -62,7 +62,7 @@ Table of Contents
     `add-mode-abbrev')
   ⁃ `cape-ispell': Complete word from Ispell dictionary
   ⁃ `cape-dict': Complete word from dictionary file
-  ⁃ `cape-line': Complete entire line from file
+  ⁃ `cape-line': Complete entire line from current buffer
   ⁃ `cape-tex': Complete unicode char from TeX command, e.g. `\hbar'.
   ⁃ `cape-sgml': Complete unicode char from Sgml entity, e.g., `&alpha'.
   ⁃ `cape-rfc1345': Complete unicode char using RFC 1345 mnemonics.
@@ -197,7 +197,8 @@ Table of Contents
 
   Cape supports merging multiple Capfs using the function
   `cape-super-capf'. This feature is experimental and should only be
-  used in special scenarios.
+  used in special scenarios.  *Don't use cape-super-capf if you are not
+  100% sure that you need it!*
 
   Note that `cape-super-capf' is not needed if you want to use multiple
   Capfs which are tried one by one, e.g., it is perfectly possible to
@@ -214,7 +215,7 @@ Table of Contents
   `cape-super-capf' has the same restrictions as
   `completion-table-merge' and `completion-table-in-turn'. As a simple
   rule of thumb, `cape-super-capf' works only well for static completion
-  functions like `cape-dabbrev', `cape-keyword', `cape-ispell,' etc.,
+  functions like `cape-dabbrev', `cape-keyword', `cape-ispell', etc.,
   but not for complex multi-step completions like `cape-file'.
 
   ┌────
@@ -274,4 +275,4 @@ Table of Contents
   copyright assignment to the FSF.
 
 
-[GNU ELPA] <http://elpa.gnu.org/packages/marginalia.html>
+[GNU ELPA] <http://elpa.gnu.org/packages/cape.html>

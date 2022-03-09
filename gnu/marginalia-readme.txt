@@ -43,7 +43,7 @@ Table of Contents
 ═══════════════
 
   It is recommended to use Marginalia together with either the
-  [Selectrum], [Vertico] or the [Icomplete-vertical] completion
+  [Vertico], [Mct], [Icomplete] or the [Selectrum] completion
   system. Furthermore Marginalia can be combined with [Embark] for
   action support and [Consult], which provides many useful commands.
 
@@ -64,11 +64,14 @@ Table of Contents
   └────
 
 
-[Selectrum] <https://github.com/raxod502/selectrum>
-
 [Vertico] <https://github.com/minad/vertico>
 
-[Icomplete-vertical] <https://github.com/oantolin/icomplete-vertical>
+[Mct] <https://github.com/protesilaos/mct>
+
+[Icomplete]
+<https://www.gnu.org/software/emacs/manual/html_node/emacs/Icomplete.html>
+
+[Selectrum] <https://github.com/raxod502/selectrum>
 
 [Embark] <https://github.com/oantolin/embark>
 

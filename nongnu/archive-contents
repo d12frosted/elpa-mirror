@@ -177,13 +177,14 @@
 	   ("Steve Purcell" . "steve@sanityinc.com"))
 	  (:commit . "6ddccef1d8cf48515b1cfa0addc1dd41e57e840a"))])
  (clojure-mode .
-	       [(5 13 0)
+	       [(5 14 0)
 		((emacs
 		  (25 1)))
 		"Major mode for Clojure code" tar
 		((:url . "http://github.com/clojure-emacs/clojure-mode")
-		 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.com")
-		 (:keywords "languages" "clojure" "clojurescript" "lisp"))])
+		 (:keywords "languages" "clojure" "clojurescript" "lisp")
+		 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
+		 (:commit . "b7d08b87f6a116ff47b33ee857926b60c66c3ab7"))])
  (coffee-mode .
 	      [(0 6 3)
 	       ((emacs

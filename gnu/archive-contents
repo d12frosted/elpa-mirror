@@ -304,7 +304,7 @@
 		("Artur Malabarba" . "emacs@endlessparentheses.com"))
 	       (:keywords "lisp"))])
  (cape .
-       [(0 6)
+       [(0 7)
 	((emacs
 	  (27 1)))
 	"Completion At Point Extensions" tar
@@ -312,7 +312,7 @@
 	 (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	 (:authors
 	  ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	 (:commit . "92c3168283c6d9faa3fcf2e72d0d71afbfa5d6e1"))])
+	 (:commit . "51b9bf1276445faebfbad636d9b6a39dc57b22bc"))])
  (capf-autosuggest .
 		   [(0 3)
 		    ((emacs
@@ -463,7 +463,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (consult .
-	  [(0 15)
+	  [(0 16)
 	   ((emacs
 	     (26 1)))
 	   "Consulting completing-read" tar
@@ -471,7 +471,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler and Consult contributors"))
-	    (:commit . "e1e17965a98515a620c439be1eb28cd125f984a0"))])
+	    (:commit . "800824601b610016066991d6e2dde198d4b0ad8f"))])
  (context-coloring .
 		   [(8 1 0)
 		    ((emacs
@@ -483,7 +483,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 19)
+	[(0 20)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -491,7 +491,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "9381c4625452e0e1f37a0f2902f3e0440a80d7bf"))])
+	  (:commit . "e2cc92b029bd9334f88d382def7066c35c31b3a9"))])
  (coterm .
 	 [(1 4)
 	  ((emacs
@@ -1630,7 +1630,7 @@
 	(:url . "https://elpa.gnu.org/packages/map.html")
 	(:commit . "fa92b040c6738de7278605cadeace0c5380a0814"))])
  (marginalia .
-	     [(0 12)
+	     [(0 13)
 	      ((emacs
 		(26 1)))
 	      "Enrich existing commands with completion annotations" tar
@@ -1638,7 +1638,7 @@
 	       (:maintainer "Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de")
 	       (:authors
 		("Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler" . "mail@daniel-mendler.de"))
-	       (:commit . "e9540a7b80f9c4d044748b88720e5cba3e30c20a"))])
+	       (:commit . "bd98c02720bc59a5c185c293f60595d06dfd7637"))])
  (markchars .
 	    [(0 2 2)
 	     nil "Mark chars fitting certain characteristics" single
@@ -2062,7 +2062,7 @@
 	(:keywords "comm" "processes" "multimedia")
 	(:url . "https://elpa.gnu.org/packages/osc.html"))])
  (osm .
-      [(0 2)
+      [(0 3)
        ((emacs
 	 (27 1)))
        "OpenStreetMap viewer" tar
@@ -2070,7 +2070,7 @@
 	(:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	(:authors
 	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	(:commit . "cb191d426f1ac387e6d1895cd7fb4a79ad81762b"))])
+	(:commit . "954a97495d50ae27f21597a7ca29f14ac1f8e7c6"))])
  (other-frame-window .
 		     [(1 0 6)
 		      ((emacs
@@ -2828,7 +2828,7 @@
 			("Leo Liu" . "sdl.web@gmail.com"))
 		       (:maintainer "Leo Liu" . "sdl.web@gmail.com"))])
  (tempel .
-	 [(0 2)
+	 [(0 3)
 	  ((emacs
 	    (27 1)))
 	  "Tempo templates/snippets with in-buffer field editing" tar
@@ -2836,7 +2836,7 @@
 	   (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	   (:authors
 	    ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	   (:commit . "91d19e22f9f77f897c97177601d7f870fbf807cb"))])
+	   (:commit . "ee964c24b69579fcd5ec3c7d3d1d84d1ca3d90e4"))])
  (test-simple .
 	      [(1 3 0)
 	       ((cl-lib
@@ -3057,7 +3057,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "86f08fb377e2b8f2df0614c48783bdce347f3758"))])
  (vertico .
-	  [(0 20)
+	  [(0 21)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar
@@ -3065,7 +3065,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "1bd5438da9c661e2df5e9516f36d9cbc6d100a34"))])
+	    (:commit . "e82b7ff371a348d9e5a1ac7bf4b652f0a2d38198"))])
  (vertico-posframe .
 		   [(0 5 2)
 		    ((emacs

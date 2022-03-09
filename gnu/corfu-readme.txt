@@ -12,7 +12,7 @@ Table of Contents
 .. 1. Auto completion
 .. 2. Completing with Corfu in the minibuffer
 .. 3. Completing with Corfu in the Eshell or Shell
-.. 4. Orderless auto-completion
+.. 4. Orderless completion
 .. 5. TAB-and-Go completion
 .. 6. Transfer completion to the minibuffer
 4. Key bindings
@@ -73,19 +73,18 @@ Table of Contents
   • The current candidate is inserted with `TAB' and selected with
     `RET'.
   • Candidates sorting by prefix, string length and alphabetically.
-  • The selected candidate is previewed (configuable via
+  • The selected candidate is previewed (configurable via
     `corfu-preview-current').
   • The selected candidate automatically committed on further input by
-    default (configurable via `corfu-commit-predicate').
+    default.  (configurable via `corfu-preview-current').
   • The [Orderless] completion style is supported. The filter string can
-    contain arbitrary characters, including spaces, if `corfu-separator'
-    is configured (try `M-SPC').
+    contain arbitrary characters, after inserting a space via `M-SPC'
+    (configurable via `corfu-quit-at-boundary' and `corfu-separator').
   • Deferred completion style highlighting for performance.
   • Jumping to location/documentation of current candidate.
-  • Show candidate documentation/signature string in the echo area.
+  • Support for candidate annotations and documentation in the echo
+    area.
   • Deprecated candidates are crossed out in the display.
-  • Support for annotations (`annotation-function',
-    `affixation-function').
   • Icons can be provided by an external package via margin formatter
     functions.
 
@@ -103,9 +102,17 @@ Table of Contents
   use `use-package'.
 
   Corfu is highly flexible and customizable via `corfu-*' customization
-  variables.  For filtering I recommend to give Orderless completion a
-  try, which is different from the familiar prefix TAB completion. Corfu
-  can be used with the default completion styles, the use of Orderless
+  variables, such that you can adapt it precisely to your
+  requirements. However in order to quickly try out the Corfu completion
+  package, it should be sufficient to activate `corfu-global-mode'. Then
+  you experiment with manual completion for example in an Elisp buffer
+  or in an Eshell or Shell buffer. For auto completion, set
+  `corfu-auto=t' before turning on `corfu-global-mode'.
+
+  If you start to configure the package more deeply, I recommend to give
+  the Orderless completion style a try for filtering. Orderless
+  completion is different from the familiar prefix TAB completion. Corfu
+  can be used with the default completion styles. The use of Orderless
   is not a necessity. See also the [Corfu Wiki] for additional
   configuration tips. In particular the Lsp-mode configuration is
   documented in the Wiki.
@@ -118,11 +125,12 @@ Table of Contents
   │   ;; :custom
   │   ;; (corfu-cycle t)                ;; Enable cycling for `corfu-next/previous'
   │   ;; (corfu-auto t)                 ;; Enable auto completion
-  │   ;; (corfu-commit-predicate nil)   ;; Do not commit selected candidates on next input
   │   ;; (corfu-separator ?\s)          ;; Orderless field separator
+  │   ;; (corfu-quit-at-boundary nil)   ;; Never quit at completion boundary
   │   ;; (corfu-quit-no-match nil)      ;; Never quit, even if there is no match
   │   ;; (corfu-preview-current nil)    ;; Disable current candidate preview
   │   ;; (corfu-preselect-first nil)    ;; Disable candidate preselection
+  │   ;; (corfu-on-exact-match nil)     ;; Configure handling of exact matches
   │   ;; (corfu-echo-documentation nil) ;; Disable documentation in the echo area
   │   ;; (corfu-scroll-margin 5)        ;; Use scroll margin
   │ 
@@ -280,12 +288,7 @@ Table of Contents
   │    ((derived-mode-p 'comint-mode)
   │     (comint-send-input))))
   │ 
-  │ (add-hook 'eshell-mode
-  │ 	  (lambda ()
-  │ 	    ;; Create a local copy of corfu-map
-  │ 	    (setq-local corfu-map (copy-keymap corfu-map))
-  │ 	    ;; Rebind RET to corfu-insert-and-send
-  │ 	    (define-key corfu-map "\r" #'corfu-insert-and-send)))
+  │ (define-key corfu-map "\r" #'+corfu-insert-and-send)
   └────
 
   Shell completion uses the flexible `pcomplete' mechanism internally,
@@ -322,43 +325,68 @@ Table of Contents
 [Cape] <https://github.com/minad/cape>
 
 
-3.4 Orderless auto-completion
-─────────────────────────────
+3.4 Orderless completion
+────────────────────────
 
   [Orderless] is an advanced completion style that supports
   multi-component search filters separated by a configurable character
   (space, by default). Normally, entering characters like space which
   lie outside the completion region boundaries (words, typically) causes
-  corfu to quit. This behavior is very helpful with auto-completion,
-  which may pop-up when not desired, e.g. on entering a new variable
-  name. Just keep typing and corfu will get out of the way.
+  Corfu to quit. This behavior is helpful with auto-completion, which
+  may pop-up when not desired, e.g. on entering a new variable
+  name. Just keep typing and Corfu will get out of the way.
 
-  But orderless search terms can contain any characters; they are
-  regular expressions. To use orderless in the buffer with `corfu-auto',
-  set `corfu-separator' (a space, by default) to the primary character
-  of your orderless component separator.
+  But orderless search terms can contain arbitrary characters; they are
+  also interpreted as regular expressions. To use orderless, set
+  `corfu-separator' (a space, by default) to the primary character of
+  your orderless component separator.
 
-  Then, when a new orderless component is desired, simply use `M-SPC'
+  Then, when a new orderless component is desired, use `M-SPC'
   (`corfu-insert-separator') to enter the /first/ component separator in
   the input, and arbitrary orderless search terms and new separators can
   be entered thereafter.
 
-  Note that `corfu-separator' replaced and obsoleted
-  `corfu-quit-at-boundary'. If you want similar behavior as with
-  `corfu-quit-at-boundary=nil', you can bind `corfu-insert-separator' to
-  `SPC' (or whatever separator character you use) in `corfu-map'.  If
-  you /always/ want to quit at the boundary, simply set
-  `corfu-separator' to `nil'.
+  To treat the entire input as Orderless input, you can set the
+  customization option `corfu-quit-at-boundary=t'. This disables the
+  predicate which checks if the current completion boundary has been
+  left. In contrast, if you /always/ want to quit at the boundary,
+  simply set `corfu-quit-at-boundary=nil'. By default
+  `corfu-quit-at-boundary' is set to `separator' which quits at
+  completion boundaries as long as no separator has been inserted with
+  `corfu-insert-separator'.
+
+  Finally, there exists the user option `corfu-quit-no-match' which is
+  set to `separator' by default. With this setting Corfu stays alive as
+  soon as you start advanced filtering with a `corfu-separator' even if
+  there are no matches, for example due to a typo. As long as no
+  separator character has been inserted with `corfu-insert-separator',
+  Corfu will still quit if there are no matches. This ensures that the
+  Corfu popup goes away quickly if completion is not possible.
+
+  In the following we show two configurations, one which works best with
+  auto completion and one which may work better with manual completion
+  if you prefer to always use `SPC' to separate the Orderless
+  components.
 
   ┌────
+  │ ;; Auto completion example
   │ (use-package corfu
-  │   ;; Orderless customizations
   │   :custom
-  │   (corfu-auto t)
+  │   (corfu-auto t)          ;; Enable auto completion
   │   ;; (corfu-separator ?_) ;; Set to orderless separator, if not using space
   │   :bind
-  │   ;; (:map corfu-map  ;; Another key binding can be used, such as S-SPC
-  │   ;;	   ("M-SPC" . corfu-insert-separator))
+  │   ;; Another key binding can be used, such as S-SPC.
+  │   ;; (:map corfu-map ("M-SPC" . corfu-insert-separator))
+  │   :init
+  │   (corfu-global-mode))
+  │ 
+  │ ;; Manual completion example
+  │ (use-package corfu
+  │   :custom
+  │   ;; (corfu-separator ?_) ;; Set to orderless separator, if not using space
+  │   :bind
+  │   ;; Configure SPC for separator insertion
+  │   (:map corfu-map ("SPC" . corfu-insert-separator))
   │   :init
   │   (corfu-global-mode))
   └────
@@ -473,10 +501,9 @@ Table of Contents
     styled SVG icons based on monochromatic icon sets like material
     design.
 
-  • [corfu-doc]: The corfu-doc package by @galeo allows you to display
-    the candidate documentation in a popup next to the Corfu popup,
-    similar to `company-quickhelp'. /Note that the corfu-doc package is
-    new and still work in progress./
+  • [corfu-doc]: The corfu-doc package displays the candidate
+    documentation in a popup next to the Corfu popup, similar to
+    `company-quickhelp'.
 
   • [pcmpl-args]: Extend the Eshell/Shell Pcomplete mechanism with
     support for many more commands. Similar to the Fish shell, Pcomplete
@@ -484,8 +511,8 @@ Table of Contents
     helpful annotations. This package brings Eshell completions to
     another level!
 
-  • [Tempel]: Tiny template/snippet package which can be used in
-    conjunction with Corfu.
+  • [Tempel]: Tiny template/snippet package with templates in Lisp
+    syntax, which can be used in conjunction with Corfu.
 
   • [Vertico]: You may also want to look into my [Vertico]
     package. Vertico is the minibuffer completion counterpart of Corfu.
