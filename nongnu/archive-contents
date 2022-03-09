@@ -457,18 +457,20 @@
 	       ("Matus Goljer" . "matus.goljer@gmail.com"))
 	      (:commit . "6f9172376af4d399c7853cbdfdd7425348a878f9"))])
  (geiser .
-	 [(0 22 2)
+	 [(0 23)
 	  ((emacs
 	    (25 1))
 	   (transient
-	    (0 3)))
+	    (0 3))
+	   (project
+	    (0 8 1)))
 	  "GNU Emacs and Scheme talk to each other" tar
 	  ((:url . "https://gitlab.com/emacs-geiser/")
 	   (:keywords "languages" "scheme" "geiser")
 	   (:maintainer "Jose Antonio Ortega Ruiz" . "jao@gnu.org")
 	   (:authors
 	    ("Jose Antonio Ortega Ruiz" . "jao@gnu.org"))
-	   (:commit . "c1cc4da1edc46b763e0342ab4aa971e54f48658d"))])
+	   (:commit . "e3b65ae29a78728cf4078f8a949217ec75204074"))])
  (geiser-chez .
 	      [(0 17)
 	       ((emacs

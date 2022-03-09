@@ -1,7 +1,6 @@
 
-This file provides `add-node-modules-path', which searches
-the current files parent directories for the `node_modules/.bin/' directory
-and adds it to the buffer local `exec-path'.
+This file provides `add-node-modules-path', which runs `npm bin` and
+and adds the path to the buffer local `exec-path'.
 This allows Emacs to find project based installs of e.g. eslint.
 
 Usage:

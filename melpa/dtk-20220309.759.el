@@ -1,11 +1,11 @@
 ;;; dtk.el --- access SWORD content via diatheke
 ;;
-;; Copyright (C) 2017-2021 David Thompson
+;; Copyright (C) 2017-2022 David Thompson
 ;;
 ;; Author: David Thompson
 ;; Keywords: hypermedia
-;; Package-Version: 20210926.541
-;; Package-Commit: f6a94d86263041f9a172cb7df90e00d1ec44604a
+;; Package-Version: 20220309.759
+;; Package-Commit: 56b339bc76926defa775c406113e306ec6d31b36
 ;; Package-Requires: ((emacs "24.4") (cl-lib "0.6.1") (dash "2.12.0") (seq "1.9") (s "1.9"))
 ;; Version: 0.2
 ;; URL: https://github.com/dtk01/dtk.el
@@ -85,7 +85,7 @@ thing made that was made."
   "Module currently in use.")
 
 (defcustom dtk-module-category nil
-  "Module category last selected by the user.")
+  "Module category currently in use.")
 
 ;;;;; Internal variables
 (defcustom dtk--recent-book nil
@@ -495,6 +495,8 @@ DTK-INSERTER."
                       :inserter dtk-insert-verses
                       :retrieve-setup dtk-bible-retrieve-setup)
     ;("Daily" dtk-daily-retrieve dtk-daily-parse dtk-daily-insert)
+    ("StrongsGreek"   :parser dtk-dict-strongs-parse)
+    ("StrongsHebrew"  :parser dtk-dict-strongs-parse)
     )
   "DTK-MODULE-MAP is an alist where each key is a string corresponding
 either to a module category or a module. Modules and module categories
@@ -547,9 +549,11 @@ funcallable entity to invoke prior to retrieving the text."
 		 (cdr (assoc (or module-category dtk-module-category)
 			     (dtk-modulelist)))))))
 
-(defun dtk-module-remember-selection ()
-  "Remember the module last selected by the user."
-  (setq dtk-module-last-selection (lax-plist-put dtk-module-last-selection dtk-module-category dtk-module)))
+(defun dtk-module-remember-selection (module-category module)
+  "Remember the module last selected by the user in the module category MODULE-CATEGORY."
+  (setq dtk-module-last-selection (lax-plist-put dtk-module-last-selection
+						 module-category
+						 module)))
 
 (defun dtk-modulelist ()
   "Return an alist where each key is a string corresponding to a category and each value is a list of lists. Each value represents a set of modules. Each module is described by a list of the form (\"Nave\" \"Nave's Topical Bible\")."
@@ -566,11 +570,17 @@ funcallable entity to invoke prior to retrieving the text."
 	    (t
 	     ;; handle "modulename : moduledescription"
 	     (let ((colon-position (seq-position x 58)))
-	       (let ((modulename (seq-subseq x 0 (1- colon-position)))
-		     (module-description (seq-subseq x (+ 2 colon-position))))
-		 (setf (elt modules-by-category 0)
-		       (append (elt modules-by-category 0)
-			       (list (list modulename module-description)))))))))
+	       ;; Lack of a colon suggests something is awry
+	       (cond (colon-position
+		      (let ((modulename (seq-subseq x 0 (1- colon-position)))
+			    (module-description (seq-subseq x (+ 2 colon-position))))
+			(setf (elt modules-by-category 0)
+			      (append (elt modules-by-category 0)
+				      (list (list modulename module-description))))))
+		     (t (display-warning 'dtk
+					 "Inspect the value returned by (dtk-diatheke-string '(\"modulelist\") \"system\")"
+					 :warning)))
+	       ))))
     modules-by-category))
 
 (defun dtk-modules-in-category (category)
@@ -599,14 +609,16 @@ member of the value returned by DTK-MODULELIST."
 	(setf dtk-module-category module-category))))
 
 ;;;###autoload
-(defun dtk-select-module ()
-  "Prompt the user to select a module."
+(defun dtk-select-module (&optional prompt)
+  "Prompt the user to select a module. Return the selected module value."
   (interactive)
-  (let ((module (dtk-select-module-of-type "Module: " dtk-module-category)))
+  (let ((module (dtk-select-module-of-type (or prompt "Module: ")
+					   dtk-module-category)))
     (if module
 	(progn
 	  (dtk-set-module module)
-	  (dtk-module-remember-selection))
+	  (dtk-module-remember-selection dtk-module-category module)
+	  module)
       (message "Module not selected"))))
 
 (defun dtk-select-module-of-type (prompt module-category)
@@ -760,8 +772,12 @@ specified for a specific module."
 	 ;; the "gloss" attribute used to support inclusion of
 	 ;; Strong's numbers. The reality seems to be that the "lemma"
 	 ;; attribute is used to support inclusion of Strong's numbers
-	 ;; for Biblical texts.
-	 (let ((lemma (let ((lemma-pair (assoc 'lemma attributes)))
+	 ;; for Biblical texts. The whole thing is pretty tenuous
+	 ;; since the devs make it clear these attributes are not to
+	 ;; be relied upon. The latest-greatest attribute appears to
+	 ;; be "savlm".
+	 (let ((lemma (let ((lemma-pair (or (assoc 'lemma attributes)
+					    (assoc 'savlm attributes))))
 			(if lemma-pair
 			    (cdr lemma-pair)))))
 	   (let ((beg (point)))
@@ -1255,8 +1271,10 @@ OSIS XML document."
   (let* ((dict-module-category "Lexicons / Dictionaries")
 	 (dict-module (or (if (equal dtk-module-category dict-module-category)
 			      dtk-module)
-			  (lax-plist-get dtk-module-last-selection dict-module-category)
-			  (dtk-select-module-of-type "First select a module: " dict-module-category))))
+			  (lax-plist-get dtk-module-last-selection
+					 dict-module-category)
+			  (let ((dtk-module-category dict-module-category))
+			    (dtk-select-module "First select a module: ")))))
     (cond (dict-module
 	   (let ((key-module-note (dtk-dict-key-for-word-at-point dict-module))
 		 (format :plain))

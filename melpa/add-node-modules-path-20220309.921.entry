@@ -1,7 +1,7 @@
 (add-node-modules-path .
-		       [(20210305 312)
+		       [(20220309 921)
 			nil "Add node_modules to your exec-path" single
-			((:commit . "7d9be65b3be062842b7ead862dec15d6f25db4a2")
+			((:commit . "d8bd55d5929ac4655fdd163a3e59c7660fd5d1c4")
 			 (:authors
 			  ("Neri Marschik" . "marschik_neri@cyberagent.co.jp"))
 			 (:maintainer "Neri Marschik" . "marschik_neri@cyberagent.co.jp")

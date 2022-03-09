@@ -1,15 +1,17 @@
 (line-reminder .
-	       [(20220309 611)
+	       [(20220309 848)
 		((emacs
 		  (25 1))
 		 (indicators
 		  (0 0 4))
 		 (fringe-helper
 		  (1 0 1))
+		 (ov
+		  (1 0 6))
 		 (ht
 		  (2 0)))
 		"Line annotation for changed and saved lines" single
-		((:commit . "880b0f252ec18b318c9b76e5f59f09faca564205")
+		((:commit . "9728edf1c0db9efcd2a92055db9bb9747c8b4bf1")
 		 (:authors
 		  ("Shen, Jen-Chieh" . "jcs090218@gmail.com"))
 		 (:maintainer "Shen, Jen-Chieh" . "jcs090218@gmail.com")
