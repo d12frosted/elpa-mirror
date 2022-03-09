@@ -3,30 +3,3 @@ Fetcher: github
 Source:  https://github.com/Lompik/x-path-walker.git
 
 Updating /mnt/store/melpa/working/x-path-walker/
-Checking out origin/HEAD
-Checking out e553968b6ddebe39ea00904a2e9ff4cff6096985
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/x-path-walker/
-  to /tmp/x-path-walkerUPKcVi/x-path-walker-20201220.628
-    x-path-walker.el -> x-path-walker.el
-    xpathwalker => xpathwalker
-Created x-path-walker-20201220.628.tar containing:
-  x-path-walker-20201220.628/
-  x-path-walker-20201220.628/x-path-walker-pkg.el
-  x-path-walker-20201220.628/x-path-walker.el
-  x-path-walker-20201220.628/xpathwalker/
-  x-path-walker-20201220.628/xpathwalker/__init__.py
-  x-path-walker-20201220.628/xpathwalker/__main__.py
-  x-path-walker-20201220.628/xpathwalker/args.py
-  x-path-walker-20201220.628/xpathwalker/json_Processor.py
-  x-path-walker-20201220.628/xpathwalker/json_jq_Processor.py
-  x-path-walker-20201220.628/xpathwalker/lxml_Processor.py
-  x-path-walker-20201220.628/xpathwalker/processor.py
-  x-path-walker-20201220.628/xpathwalker/utils.py
-  x-path-walker-20201220.628/xpathwalker/yaml_Processor.py
-Built x-path-walker in 4.078s, finished at 2022-03-09T10:09:32+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  322 Mar  9 10:09 packages/x-path-walker-20201220.628.entry
- 40K -rw-r--r-- 1 root root  40K Mar  9 10:09 packages/x-path-walker-20201220.628.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar  9 10:09 packages/x-path-walker-badge.svg
-   0 -rw-r--r-- 1 root root    0 Mar  9 10:09 packages/x-path-walker-readme.txt

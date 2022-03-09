@@ -8,7 +8,7 @@
 ;; Keyword: annotation line number linum reminder highlight display
 ;; Version: 0.5.1
 ;; Package-Version: 20220309.848
-;; Package-Commit: 9728edf1c0db9efcd2a92055db9bb9747c8b4bf1
+;; Package-Commit: 260b8b84459ba40955970b6ee979fc71ebcac68a
 ;; Package-Requires: ((emacs "25.1") (indicators "0.0.4") (fringe-helper "1.0.1") (ov "1.0.6") (ht "2.0"))
 ;; URL: https://github.com/emacs-vs/line-reminder
 

@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 944e36144d92a798e1fd0f3d83fc6347d57a976e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/keg/
-  to /tmp/kegrJRnfL/keg-20220309.647
+  to /tmp/kegIzUTnd/keg-20220309.647
     keg-ansi.el -> keg-ansi.el
     keg-command.el -> keg-command.el
     keg-lint.el -> keg-lint.el
@@ -19,16 +19,14 @@ Created keg-20220309.647.tar containing:
   keg-20220309.647/keg-lint.el
   keg-20220309.647/keg-pkg.el
   keg-20220309.647/keg.el
-Built keg in 3.670s, finished at 2022-03-09T09:38:12+0000
+Built keg in 4.587s, finished at 2022-03-09T15:34:00+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  373 Mar  9 06:40 packages/keg-20220309.637.entry
- 60K -rw-r--r-- 1 root root  60K Mar  9 06:40 packages/keg-20220309.637.tar
-4.0K -rw-r--r-- 1 root root  373 Mar  9 09:38 packages/keg-20220309.647.entry
- 60K -rw-r--r-- 1 root root  60K Mar  9 09:38 packages/keg-20220309.647.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar  9 09:38 packages/keg-badge.svg
-4.0K -rw-r--r-- 1 root root 2.0K Mar  9 06:40 packages/keg-mode-20220307.829.el
-4.0K -rw-r--r-- 1 root root  368 Mar  9 06:40 packages/keg-mode-20220307.829.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar  9 06:41 packages/keg-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   34 Mar  9 06:40 packages/keg-mode-readme.txt
-4.0K -rw-r--r-- 1 root root  125 Mar  9 09:38 packages/keg-mode.log
-4.0K -rw-r--r-- 1 root root   40 Mar  9 09:38 packages/keg-readme.txt
+4.0K -rw-r--r-- 1 root root  373 Mar  9 15:34 packages/keg-20220309.647.entry
+ 60K -rw-r--r-- 1 root root  60K Mar  9 15:34 packages/keg-20220309.647.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar  9 15:34 packages/keg-badge.svg
+4.0K -rw-r--r-- 1 root root 2.0K Mar  9 15:34 packages/keg-mode-20220307.829.el
+4.0K -rw-r--r-- 1 root root  368 Mar  9 15:34 packages/keg-mode-20220307.829.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar  9 12:34 packages/keg-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   34 Mar  9 15:34 packages/keg-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  204 Mar  9 15:33 packages/keg-mode.log
+4.0K -rw-r--r-- 1 root root   40 Mar  9 15:34 packages/keg-readme.txt
