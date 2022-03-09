@@ -7,8 +7,8 @@
 ;; Description: Line annotation for changed and saved lines.
 ;; Keyword: annotation line number linum reminder highlight display
 ;; Version: 0.5.1
-;; Package-Version: 20220228.1927
-;; Package-Commit: 1532e941c298db8f05dfd93188fcb208380e50f0
+;; Package-Version: 20220309.611
+;; Package-Commit: 880b0f252ec18b318c9b76e5f59f09faca564205
 ;; Package-Requires: ((emacs "25.1") (indicators "0.0.4") (fringe-helper "1.0.1") (ht "2.0"))
 ;; URL: https://github.com/emacs-vs/line-reminder
 
@@ -147,7 +147,7 @@
   :group 'line-reminder)
 
 (defvar-local line-reminder--line-status (ht-create)
-  "Reocrd modified/saved lines' status in hash-table")
+  "Reocrd modified/saved lines' status in hash-table.")
 
 (defvar-local line-reminder--before-max-pt -1
   "Record down the point max for out of range calculation.")
@@ -203,10 +203,14 @@
   (declare (indent 0) (debug t))
   `(let ((inhibit-redisplay t)
          (inhibit-modification-hooks t)
+         (inhibit-point-motion-hooks t)
+         after-focus-change-function
          buffer-list-update-hook
          display-buffer-alist
          window-configuration-change-hook
-         after-focus-change-function)
+         window-scroll-functions
+         window-size-change-functions
+         window-state-change-hook)
      ,@body))
 
 (defun line-reminder--goto-line (line)
@@ -370,8 +374,8 @@ LINE : pass in by `linum-format' variable."
   (add-hook 'after-change-functions #'line-reminder--after-change nil t)
   (add-hook 'post-command-hook #'line-reminder--post-command nil t)
   (advice-add 'save-buffer :after #'line-reminder--save-buffer)
-  (add-hook 'window-scroll-functions #'line-reminder--start-show-thumb nil t)
-  (add-hook 'window-configuration-change-hook #'line-reminder--start-show-thumb nil t))
+  (add-hook 'window-scroll-functions #'line-reminder--start-show-thumb)
+  (add-hook 'window-size-change-functions #'line-reminder--start-show-thumb))
 
 (defun line-reminder--disable ()
   "Disable `line-reminder' in current buffer."
@@ -380,8 +384,8 @@ LINE : pass in by `linum-format' variable."
   (remove-hook 'post-command-hook #'line-reminder--post-command t)
   (advice-remove 'save-buffer #'line-reminder--save-buffer)
   (line-reminder-clear-reminder-lines-sign)
-  (remove-hook 'window-scroll-functions #'line-reminder--start-show-thumb t)
-  (remove-hook 'window-configuration-change-hook #'line-reminder--start-show-thumb t))
+  (remove-hook 'window-scroll-functions #'line-reminder--start-show-thumb)
+  (remove-hook 'window-size-change-functions #'line-reminder--start-show-thumb))
 
 ;;;###autoload
 (define-minor-mode line-reminder-mode
@@ -629,40 +633,41 @@ Arguments BEG and END are passed in by before/after change functions."
       (/ (window-pixel-height) (line-pixel-height))
     (window-height)))
 
-(defun line-reminder--create-thumb-tty-overlay (face)
-  "Create single tty thumbnail overlay with FACE."
-  (let* ((left-or-right (line-reminder--oppose-fringe line-reminder-fringe-placed))
-         (msg (line-reminder--get-string-sign face))
+(defun line-reminder--create-thumb-tty-overlay (face fringe)
+  "Create single tty thumbnail overlay with FACE in FRINGE."
+  (let* ((msg (line-reminder--get-string-sign face))
          (len (length msg))
          (msg (progn (add-face-text-property 0 len face nil msg) msg))
-         (display-string `(space :align-to (- ,left-or-right 2)))
+         (display-string `(space :align-to (- ,fringe 2)))
          (after-string (concat (propertize "." 'display display-string) msg))
          (overlay (make-overlay (line-beginning-position) (line-end-position))))
     (put-text-property 0 1 'cursor t after-string)
     (overlay-put overlay 'after-string after-string)
+    (overlay-put overlay 'window t)
     (overlay-put overlay 'priority (line-reminder--get-priority face))
     overlay))
 
-(defun line-reminder--create-thumb-fringe-overlay (face)
-  "Create single fringe thumbnail overlay with FACE."
-  (let* ((left-or-right (line-reminder--oppose-fringe line-reminder-fringe-placed))
-         (pos (point))
+(defun line-reminder--create-thumb-fringe-overlay (face fringe)
+  "Create single fringe thumbnail overlay with FACE in FRINGE."
+  (let* ((pos (point))
          ;; If `pos' is at the beginning of line, overlay of the
          ;; fringe will be on the previous visual line.
          (pos (if (= (line-end-position) pos) pos (1+ pos)))
-         (display-string `(,left-or-right ,line-reminder-thumbnail-bitmap ,face))
+         (display-string `(,fringe ,line-reminder-thumbnail-bitmap ,face))
          (after-string (propertize "." 'display display-string))
          (overlay (make-overlay pos pos)))
     (overlay-put overlay 'after-string after-string)
     (overlay-put overlay 'fringe-helper t)
+    (overlay-put overlay 'window t)
     (overlay-put overlay 'priority (line-reminder--get-priority face))
     overlay))
 
 (defun line-reminder--create-thumb-overlay (face)
   "Create single thumbnail overlay with FACE."
-  (let ((overlay (if (display-graphic-p)
-                     (line-reminder--create-thumb-fringe-overlay face)
-                   (line-reminder--create-thumb-tty-overlay face))))
+  (let* ((fringe (line-reminder--oppose-fringe line-reminder-fringe-placed))
+         (overlay (if (display-graphic-p)
+                      (line-reminder--create-thumb-fringe-overlay face fringe)
+                    (line-reminder--create-thumb-tty-overlay face fringe))))
     (push overlay line-reminder--thumb-overlays)))
 
 (defun line-reminder--show-thumb (window &rest _)
@@ -673,8 +678,7 @@ Arguments BEG and END are passed in by before/after change functions."
         (line-reminder--with-no-redisplay
           (let ((window-lines (float (line-reminder--window-height)))
                 (buffer-lines (float line-reminder--cache-max-line))
-                (guard (ht-create)) added start-point
-                percent-line face)
+                (guard (ht-create)) added start-point percent-line face)
             (when (< window-lines buffer-lines)
               (save-excursion
                 (move-to-window-line 0)  ; start from 0 percent

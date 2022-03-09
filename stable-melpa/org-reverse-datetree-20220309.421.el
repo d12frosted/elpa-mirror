@@ -3,9 +3,9 @@
 ;; Copyright (C) 2018-2020,2021,2022 Akira Komamura
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
-;; Version: 0.3.9
-;; Package-Version: 20220304.1116
-;; Package-Commit: 274c775692e34c4580ff7c7d7019d73863ea7770
+;; Version: 0.3.9.1
+;; Package-Version: 20220309.421
+;; Package-Commit: 1ecc9c8da12fb7d270b42301bda02ca2c23bde3f
 ;; Package-Requires: ((emacs "26.1") (dash "2.12") (org "9.3"))
 ;; Keywords: outlines
 ;; URL: https://github.com/akirak/org-reverse-datetree
@@ -190,7 +190,7 @@ refiling many entries to a single file."
 (defvar-local org-reverse-datetree-non-reverse nil
   "If non-nil, creates a non-reverse date tree.")
 
-(cl-eval-when (compile load)
+(eval-and-compile
   (if (version< emacs-version "27")
       (defun org-reverse-datetree--encode-time (time)
         "Encode TIME using `encode-time'."

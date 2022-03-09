@@ -4,8 +4,8 @@
 
 ;; Author: Akib Azmain Turja <akib@disroot.org>
 ;; Version: 1.0
-;; Package-Version: 20220222.1306
-;; Package-Commit: 3497115c2b3cc6f288770d3ae61ff1079ecc3b1e
+;; Package-Version: 20220309.534
+;; Package-Commit: f3d1e47b80446899fa08815b605a6c17f6284f81
 ;; Package-Requires: ((emacs "27.2"))
 ;; Keywords: tools, convenience, vc
 ;; URL: https://codeberg.org/akib/emacs-why-this
@@ -707,24 +707,25 @@ Do CMD with ARGS."
                              "git rev-parse --is-inside-work-tree"))))
     ('line-data
      (when (> (- (nth 1 args) (nth 0 args)) 0)
-       (let* ((command (let ((temp-file
-                              (let ((file (make-temp-file "why-this-git-"))
-                                    (text (buffer-substring-no-properties
-                                           (point-min) (point-max))))
-                                (with-temp-file file
-                                  (insert text))
-                                file)))
-                         (unwind-protect
-                             (format (concat
-                                      "git blame -L %i,%i \"%s\""
-                                      " --porcelain --contents \"%s\""
-                                      " ; echo $?")
-                                     (nth 0 args) (1- (nth 1 args))
-                                     (buffer-file-name) temp-file)
-                           (delete-file temp-file))))
-              (blame (butlast
-                      (split-string (shell-command-to-string command)
-                       "\n")))
+       (let* ((blame (let ((temp-file
+                            (let ((file (make-temp-file "why-this-git-"))
+                                  (text (buffer-substring-no-properties
+                                         (point-min) (point-max))))
+                              (with-temp-file file
+                                (insert text))
+                              file)))
+                       (unwind-protect
+                           (butlast
+                            (split-string
+                             (shell-command-to-string
+                              (format (concat
+                                       "git blame -L %i,%i \"%s\""
+                                       " --porcelain --contents \"%s\""
+                                       " ; echo $?")
+                                      (nth 0 args) (1- (nth 1 args))
+                                      (buffer-file-name) temp-file))
+                             "\n"))
+                         (delete-file temp-file))))
               (status (string-to-number (car (last blame))))
               line-data
               (i 0)
