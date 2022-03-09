@@ -1,0 +1,23 @@
+Package: xcode-project
+Fetcher: github
+Source:  https://github.com/nhojb/xcode-project.git
+
+Updating /mnt/store/melpa/working/xcode-project/
+Checking out origin/HEAD
+Checking out 11743f0a2212c840a108e1b905b1f20afcff8156
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/xcode-project/
+  to /tmp/xcode-projectu8sjuh/xcode-project-20200810.2010
+    xcode-parser.el -> xcode-parser.el
+    xcode-project.el -> xcode-project.el
+Created xcode-project-20200810.2010.tar containing:
+  xcode-project-20200810.2010/
+  xcode-project-20200810.2010/xcode-parser.el
+  xcode-project-20200810.2010/xcode-project-pkg.el
+  xcode-project-20200810.2010/xcode-project.el
+Built xcode-project in 5.848s, finished at 2022-03-09T19:03:08+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  382 Mar  9 19:03 packages/xcode-project-20200810.2010.entry
+ 40K -rw-r--r-- 1 root root  40K Mar  9 19:03 packages/xcode-project-20200810.2010.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar  9 19:03 packages/xcode-project-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Mar  9 19:03 packages/xcode-project-readme.txt

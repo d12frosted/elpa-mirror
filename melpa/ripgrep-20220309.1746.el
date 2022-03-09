@@ -4,8 +4,8 @@
 ;;
 ;; Author: Nicolas Lamirault <nicolas.lamirault@gmail.com>
 ;; Version: 0.4.0
-;; Package-Version: 20190215.841
-;; Package-Commit: 40e871dcc4519a70981e9f28acea304692a60978
+;; Package-Version: 20220309.1746
+;; Package-Commit: 4ed5c741233a81d96115f556784269042070901e
 ;; Keywords : ripgrep ack pt ag sift grep search
 ;; Homepage: https://github.com/nlamirault/ripgrep.el
 
@@ -164,7 +164,7 @@ This gets tacked on the end of the generated expressions.")
   (set (make-local-variable 'compilation-disable-input) t)
   (set (make-local-variable 'tool-bar-map) grep-mode-tool-bar-map)
   (let ((symbol 'compilation-ripgrep)
-        (pattern '("^\\([^:\n]+?\\):\\([0-9]+\\):" 1 2)))
+        (pattern '("^\\(.+\\):\\([1-9][0-9]*\\):" 1 2)))
     (set (make-local-variable 'compilation-error-regexp-alist) (list symbol))
     (set (make-local-variable 'compilation-error-regexp-alist-alist) (list (cons symbol pattern))))
   (set (make-local-variable 'compilation-error-face) 'ripgrep-hit-face)

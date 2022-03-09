@@ -3,8 +3,8 @@
 ;; Copyright (C) 2019-2020 Jordan Besly
 ;;
 ;; Version: 0.2.4
-;; Package-Version: 20201212.2302
-;; Package-Commit: ad4ac00662829fa18858be02b322753ad091ffe3
+;; Package-Version: 20220309.1711
+;; Package-Commit: e530e359848e8bdad09d26529f17eb25e5558b3e
 ;; Keywords: processes, terminals
 ;; URL: https://github.com/p3r7/friendly-shell
 ;; Package-Requires: ((emacs "24.1")(cl-lib "0.6.1")(dash "2.17.0")(with-shell-interpreter "0.2.4"))
@@ -164,10 +164,24 @@ For more details about the keyword arguments, see `with-shell-interpreter'"
   (let ((vec (tramp-dissect-file-name path)))
     (friendly-shell--generate-buffer-name-remote-from-vec vec)))
 
+(defun friendly-shell--tramp-hop-paths-from-vec (vec)
+  "Compute multi-hop paths from VEC."
+  (--map
+   (substring-no-properties (tramp-make-tramp-file-name it))
+   (tramp-compute-multi-hops vec)))
+
+(defun friendly-shell--tramp-hop-paths (path)
+  "Split PATH into multiple multi-hop sub-paths."
+  (friendly-shell--tramp-hop-paths-from-vec (tramp-dissect-file-name path)))
+
 (defun friendly-shell--generate-buffer-name-remote-from-vec (vec)
   "Generate a buffer name for remote shell, from VEC (split tramp path)."
-  (concat
-   (tramp-file-name-user vec) "@" (tramp-file-name-host vec)))
+  (let* ((mh-paths (nreverse (friendly-shell--tramp-hop-paths-from-vec vec)))
+         (user (or (--some (tramp-file-name-user (tramp-dissect-file-name it)) mh-paths)
+                   ;; TODO: also take into account newish `tramp-default-user-alist'
+                   tramp-default-user)))
+    (concat
+     user "@" (tramp-file-name-host vec))))
 
 
 
