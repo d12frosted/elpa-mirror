@@ -5,7 +5,7 @@
 ;; Author: Joel Bryan Juliano <joelbryan dot juliano at gmail dot com>
 ;; URL: https://github.com/jjuliano/org-simple-timeline
 ;; Package-Version: 20210118.536
-;; Package-Commit: 238e05b01dde37fa27a3a8943cc04dcc9b9b83b2
+;; Package-Commit: edb2cdf36db88d233d4103df91357579f4b7650a
 ;; Package-Requires: ((emacs "24.4"))
 ;; Version: 1.0.0
 ;; Keywords: simple timeline, timeline, hypermedia, HTML Timeline
