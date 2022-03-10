@@ -6,9 +6,9 @@ Usage example:
 (use-package reverse-im
   :ensure t
   :custom
-  (reverse-im-input-methods '("russian-computer")) ; use your input-method(s) here
+  (reverse-im-input-methods '("ukrainian-computer")) ; put your input-method(s) here
   :config
   (reverse-im-mode t))
 
 or, alternatively, add the library to your load-path and
-(reverse-im-activate "russian-computer")
+(reverse-im-activate "ukrainian-computer") manually
