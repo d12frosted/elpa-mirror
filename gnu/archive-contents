@@ -910,7 +910,7 @@
 		     (:url . "https://elpa.gnu.org/packages/elisp-benchmarks.html")
 		     (:commit . "70e38dbfa8f4acbdebfd0f417410d99f5031e05f"))])
  (embark .
-	 [(0 15)
+	 [(0 16)
 	  ((emacs
 	    (26 1)))
 	  "Conveniently act on minibuffer completions" tar
@@ -919,9 +919,9 @@
 	   (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
 	   (:authors
 	    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-	   (:commit . "7814a7345067da31a1e7af682bb1f6f050527001"))])
+	   (:commit . "5faf1389162dd64bfe3511dfb8f52c18efb5140b"))])
  (embark-consult .
-		 [(0 4)
+		 [(0 5)
 		  ((emacs
 		    (26 1))
 		   (embark
@@ -934,7 +934,7 @@
 		   (:maintainer "Omar Antolín Camarena" . "omar@matem.unam.mx")
 		   (:authors
 		    ("Omar Antolín Camarena" . "omar@matem.unam.mx"))
-		   (:commit . "7745ad00091bbf3bdf98a2dcdbb20fc9cb05d5c1"))])
+		   (:commit . "5faf1389162dd64bfe3511dfb8f52c18efb5140b"))])
  (emms .
        [(10)
 	((cl-lib

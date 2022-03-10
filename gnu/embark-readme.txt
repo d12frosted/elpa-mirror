@@ -189,7 +189,10 @@ Table of Contents
 
   • The `embark-act-all' command runs the same action on each of the
     current candidates. It is just like using `embark-act' on each
-    candidate in turn.
+    candidate in turn. (Because you can easily act on many more
+    candidates than you meant to, by default Embark asks you to confirm
+    uses of `embark-act-all'; you can turn this off by setting the user
+    option `embark-confirm-act-all' to `nil'.)
 
   • The `embark-collect-snapshot' command produces a buffer listing all
     the current candidates, for you to peruse and run actions on at your
@@ -461,25 +464,39 @@ Table of Contents
 
   By default, if you call `embark-act' from the minibuffer it quits the
   minibuffer after performing the action. You can change this by setting
-  the user option `embark-quit-after-action' to `nil'. That variable
-  controls whether or not `embark-act' quits the minibuffer when you
-  call it without a prefix argument, and you can select the opposite
-  behavior to what the variable says by calling `embark-act' with
-  `C-u'. Note that both the variable `embark-quit-after-action' and
-  `C-u' have no effect when you call `embark-act' outside the
-  minibuffer.
+  the user option `embark-quit-after-action' to `nil'. Having
+  `embark-act' /not/ quit the minibuffer can be useful to turn commands
+  into little "thing managers". For example, you can use `find-file' as
+  a little file manager or `describe-package' as a little package
+  manager: you can run those commands, perform a series of actions, and
+  then quit the command.
 
-  Having `embark-act' /not/ quit the minibuffer can be useful to turn
-  commands into little "thing managers". For example, you can use
-  `find-file' as a little file manager or `describe-package' as a little
-  package manager: you can run those commands, perform a series of
-  actions, and then quit the command.
+  If you want to control the quitting behavior in a fine-grained manner
+  depending on the action, you can set `embark-quit-after-action' to an
+  alist, associating commands to either `t' for quitting or `nil' for
+  not quitting. When using an alist, you can use the special key `t' to
+  specify the default behavior. For example, to specify that by default
+  actions should not quit the minibuffer but that using `kill-buffer' as
+  an action should quit, you can use the following configuration:
+
+  ┌────
+  │ (setq embark-quit-after-action '((kill-buffer . t) (t . nil)))
+  └────
+
+  The variable `embark-quit-after-action' only specifies a default, that
+  is, it only controls whether or not `embark-act' quits the minibuffer
+  when you call it without a prefix argument, and you can select the
+  opposite behavior to what the variable says by calling `embark-act'
+  with `C-u'. Also note that both the variable
+  `embark-quit-after-action' and `C-u' have no effect when you call
+  `embark-act' outside the minibuffer.
 
   If you find yourself using the quitting and non-quitting variants of
-  `embark-act' about equally often, you may prefer to have separate
-  commands for them instead of a single command that you call with `C-u'
-  half the time. You could, for example, keep the default exiting
-  behavior of `embark-act' and define a non-quitting version as follows:
+  `embark-act' about equally often, independently of the action, you may
+  prefer to simply have separate commands for them instead of a single
+  command that you call with `C-u' half the time. You could, for
+  example, keep the default exiting behavior of `embark-act' and define
+  a non-quitting version as follows:
 
   ┌────
   │ (defun embark-act-noquit ()
@@ -682,11 +699,14 @@ Table of Contents
 3.7.1 New minibuffer target example - tab-bar tabs
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
-  Say you use the new [tab bars] from Emacs 27 and you want Embark to
-  offer tab-specific actions when you use the tab-bar-mode commands that
-  mention tabs by name. You would need to: (1) make sure Embark knows
-  those commands deal with tabs, (2) define a keymap for tab actions and
-  configure Embark so it knows that's the keymap you want.
+  As an example, take the new [tab bars] from Emacs 27. I'll explain how
+  to configure Embark to offer tab-specific actions when you use the
+  tab-bar-mode commands that mention tabs by name. The configuration
+  explained here is now built-in to Embark (and Marginalia), but it's
+  still a good self-contained example. In order to setup up tab actions
+  you would need to: (1) make sure Embark knows those commands deal with
+  tabs, (2) define a keymap for tab actions and configure Embark so it
+  knows that's the keymap you want.
 
 
 [tab bars]
