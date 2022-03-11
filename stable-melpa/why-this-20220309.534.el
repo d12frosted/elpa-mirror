@@ -5,7 +5,7 @@
 ;; Author: Akib Azmain Turja <akib@disroot.org>
 ;; Version: 1.0
 ;; Package-Version: 20220309.534
-;; Package-Commit: f3d1e47b80446899fa08815b605a6c17f6284f81
+;; Package-Commit: 3e3f8528354bf2083ec8cf184069ee4a468f83a4
 ;; Package-Requires: ((emacs "27.2"))
 ;; Keywords: tools, convenience, vc
 ;; URL: https://codeberg.org/akib/emacs-why-this

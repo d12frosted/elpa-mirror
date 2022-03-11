@@ -1,4 +1,4 @@
-Allows reading sites without clutter.  Uses outline.com service or lynx for actual work.
+Allows reading sites without clutter.  Uses eww, rdrview, lynx or txtify.it for actual work.
 
 ; Installation:
 
