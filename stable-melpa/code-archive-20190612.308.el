@@ -4,8 +4,6 @@
 
 ;; Author: Michael Schuldt <mbschuldt@gmail.com>
 ;; Version: 0.3
-;; Package-Version: 20190612.308
-;; Package-Commit: 1ad9af6679d0294c3056eab9cad673f29c562721
 ;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/mschuldt/code-archive
 

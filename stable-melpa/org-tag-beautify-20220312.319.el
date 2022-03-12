@@ -3,8 +3,8 @@
 
 ;; Authors: stardiviner <numbchild@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (org-pretty-tags "0.2.2") (all-the-icons "4.0.0"))
-;; Package-Version: 20220310.847
-;; Package-Commit: e0b1151c15d0eb7e0fac3f3a61e868fe1e2875fe
+;; Package-Version: 20220312.319
+;; Package-Commit: e4c3dfa1aaf3ffcab9637481d4e36b0d80ac85f5
 ;; Version: 0.1.0
 ;; Keywords: hypermedia
 ;; homepage: https://repo.or.cz/org-tag-beautify.git
@@ -929,7 +929,7 @@
 ;;======================== auto add tags based on `org-attach' file types. ========================
 (defvar org-attach-attach--smart-tags-alist
   '(;; video formats
-    ("mp4" ("video")) ("mkv" ("video")) ("mov" ("video")) ("webm" ("video")) ("flv" ("video"))
+    ("mp4" ("video")) ("mkv" ("video")) ("mov" ("video")) ("webm" ("video")) ("flv" ("video")) ("rmvb" ("video"))
     ;; audio formats
     ("mp3" ("audio")) ("m4a" ("audio")) ("opus" ("audio"))
     ;; image formats
