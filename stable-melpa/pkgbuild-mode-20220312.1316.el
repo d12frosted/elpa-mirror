@@ -5,8 +5,8 @@
 ;; Author: Juergen Hoetzel <juergen@hoetzel.info>
 ;; Maintainer: Juergen Hoetzel <juergen@hoetzel.info>
 ;; URL: https://github.com/juergenhoetzel/pkgbuild-mode
-;; Package-Version: 20220304.1645
-;; Package-Commit: 56d628cc755b472d6c213a936de781aa77d72a5c
+;; Package-Version: 20220312.1316
+;; Package-Commit: 3cbf38c22d783ac77d5dbc69a38afa04e0aa4803
 ;; Package-Requires: ((emacs "26.1"))
 ;; Version: 1.0-snapshot
 ;; Keywords: languages
@@ -252,9 +252,9 @@ value of `user-mail-address'."
   :type 'string
   :group 'pkgbuild)
 
-(defcustom pkgbuild-sums-command "makepkg -g 2>/dev/null"
+(defcustom pkgbuild-sums-command '("makepkg" "-g")
   "Shell command to generate *sums lines."
-  :type 'string
+  :type '(repeat string)
   :group 'pkgbuild)
 
 (defcustom pkgbuild-srcinfo-command "makepkg --printsrcinfo 2>/dev/null > .SRCINFO"
@@ -359,7 +359,9 @@ REPORT-FN is flymake's callback function."
 
 (defun pkgbuild-sums-line ()
   "Calculate *sums=() line in PKGBUILD."
-  (shell-command-to-string pkgbuild-sums-command))
+  (with-temp-buffer
+    (call-process "makepkg" nil '(t nil) nil "-g")
+    (string-trim (buffer-string))))
 
 (defun pkgbuild-update-sums-line ()
   "Update the sums line in a PKGBUILD."

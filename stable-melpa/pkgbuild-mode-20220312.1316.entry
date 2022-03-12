@@ -1,9 +1,9 @@
 (pkgbuild-mode .
-	       [(20220304 1645)
+	       [(20220312 1316)
 		((emacs
 		  (26 1)))
 		"Interface to the ArchLinux package manager" single
-		((:commit . "56d628cc755b472d6c213a936de781aa77d72a5c")
+		((:commit . "3cbf38c22d783ac77d5dbc69a38afa04e0aa4803")
 		 (:authors
 		  ("Juergen Hoetzel" . "juergen@hoetzel.info"))
 		 (:maintainer "Juergen Hoetzel" . "juergen@hoetzel.info")

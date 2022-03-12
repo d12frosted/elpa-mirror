@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.13
-;; Package-Version: 20220308.1007
-;; Package-Commit: bd98c02720bc59a5c185c293f60595d06dfd7637
+;; Package-Version: 20220312.1357
+;; Package-Commit: e63d27e6fb24ed16339de9d813c555d40aa1e4ca
 ;; Package-Requires: ((emacs "26.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -66,13 +66,6 @@ This value is adjusted depending on the `window-width'."
 (defcustom marginalia-align-offset 0
   "Additional offset added to the alignment."
   :type 'integer)
-
-(defvar marginalia-separator-threshold nil)
-(defvar marginalia-margin-min nil)
-(defvar marginalia-margin-threshold nil)
-(make-obsolete-variable 'marginalia-separator-threshold "Deprecated in favor of `marginalia-separator'." "0.11")
-(make-obsolete-variable 'marginalia-margin-min "Deprecated in favor of `marginalia-align'." "0.11")
-(make-obsolete-variable 'marginalia-margin-threshold "Deprecated in favor of `marginalia-threshold'." "0.11")
 
 (defcustom marginalia-max-relative-age (* 60 60 24 14)
   "Maximum relative age in seconds displayed by the file annotator.

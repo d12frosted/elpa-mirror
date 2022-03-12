@@ -16,6 +16,8 @@ r/popular are included.
 
 reddigg-view-sub: prompt for a subreddits and show it,
 
+reddigg-view-frontpage: view frontpage
+
 reddigg-view-comments: prompt for a post (eg:
 r/emacs/comments/lfww57/weekly_tipstricketc_thread/ or
 https://www.reddit.com/r/emacs/comments/lfww57/weekly_tipstricketc_thread/)
