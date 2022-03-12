@@ -1618,6 +1618,16 @@
 	    ("Alexey Veretennikov" . "alexey.veretennikov@gmail.com"))
 	   (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
 	   (:url . "https://github.com/fourier/loccur"))])
+ (logos .
+	[(0 1 2)
+	 ((emacs
+	   (27 1)))
+	 "Simple focus mode and extras" tar
+	 ((:url . "https://gitlab.com/protesilaos/logos")
+	  (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
+	  (:authors
+	   ("Protesilaos Stavrou" . "info@protesilaos.com"))
+	  (:commit . "37138ce54044d04eaad5d5f81d42eefceef0df01"))])
  (map .
       [(3 2 1)
        ((emacs
