@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220311.1241
-;; Package-Commit: b90d2f39259c9f6e7ec4cd964f3608a52a0f335b
+;; Package-Version: 20220312.957
+;; Package-Commit: 9389d2e4a0976068f129c9b4d20253bc0c562199
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -651,7 +651,7 @@ treated as in `eglot-dbind'."
             :workspace (list
                         :applyEdit t
                         :executeCommand `(:dynamicRegistration :json-false)
-                        :workspaceEdit `(:documentChanges :json-false)
+                        :workspaceEdit `(:documentChanges t)
                         :didChangeWatchedFiles `(:dynamicRegistration t)
                         :symbol `(:dynamicRegistration :json-false)
                         :configuration t)

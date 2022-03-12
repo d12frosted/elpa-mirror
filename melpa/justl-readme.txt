@@ -10,3 +10,23 @@ the directory where the justfile is present should be enough.
 Alternatively, if you want to just execute a recipe, call
 
 M-x justl-execute-recipe-in-dir
+
+Shortcuts:
+
+On the just screen, place your cursor on a recipe
+
+h => help popup
+? => help popup
+g => refresh
+e => execute recipe
+E => execute recipe with eshell
+w => execute recipe with arguments
+W => open eshell without executing
+
+Customize:
+
+By default, justl searches the executable named `just`, you can
+change the `justl-executable` variable to set any explicit path.
+
+You can also control the width of the RECIPE column in the justl
+buffer via `justl-recipe width`.  By default it has a value of 20.

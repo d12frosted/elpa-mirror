@@ -19,9 +19,9 @@
 ;; Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
 ;; USA
 
-;; Version: 0.3
-;; Package-Version: 20220311.340
-;; Package-Commit: b24b4ec07b3c6458b33e1e52f8e9ede613bcf5f4
+;; Version: 0.7
+;; Package-Version: 20220312.1104
+;; Package-Commit: 9f77366aaf2227bb0cbd3cdc0f78088032f2e873
 ;; Author: Sibi Prabakaran
 ;; Keywords: just justfile tools processes
 ;; URL: https://github.com/psibi/justl.el
@@ -43,22 +43,25 @@
 ;;
 ;; M-x justl-execute-recipe-in-dir
 ;;
-;;; Shortcuts:
-
+;; Shortcuts:
+;;
 ;; On the just screen, place your cursor on a recipe
 ;;
 ;; h => help popup
 ;; ? => help popup
 ;; g => refresh
 ;; e => execute recipe
-
-;;; Customize:
-
+;; E => execute recipe with eshell
+;; w => execute recipe with arguments
+;; W => open eshell without executing
+;;
+;; Customize:
+;;
 ;; By default, justl searches the executable named `just`, you can
 ;; change the `justl-executable` variable to set any explicit path.
 ;;
 ;; You can also control the width of the RECIPE column in the justl
-;; buffer via `justl-recipe width`. By default it has a value of 20.
+;; buffer via `justl-recipe width`.  By default it has a value of 20.
 
 ;;; Code:
 

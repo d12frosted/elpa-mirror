@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2021
 ;; Version: 0.7
-;; Package-Version: 20220311.1302
-;; Package-Commit: 0f222fc942503ffacec8a22c4466c5abfdc8fe71
+;; Package-Version: 20220312.1052
+;; Package-Commit: 8f5f8d67169e2c889b78d5d19f27684aed6daa3e
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/cape
 
@@ -965,7 +965,11 @@ This feature is experimental."
                 :company-docsig (lambda (x) (cape--company-call backend 'meta x))
                 :company-deprecated (lambda (x) (cape--company-call backend 'deprecated x))
                 :company-kind (lambda (x) (cape--company-call backend 'kind x))
-                :annotation-function (lambda (x) (cape--company-call backend 'annotation x))
+                :annotation-function (lambda (x)
+                                       (when-let (ann (cape--company-call backend 'annotation x))
+                                         (if (string-match-p "^[ \t]" ann)
+                                             ann
+                                           (concat " " ann))))
                 :exit-function
                 (lambda (x _status)
                   (cape--company-call backend 'post-completion
