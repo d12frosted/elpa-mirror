@@ -21,16 +21,17 @@ tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
 1 Features
 ══════════
 
+  • Zoomable and moveable map display
+  • Display of tracks and POIs from GPX file
   • Parallel fetching of tiles with curl
-  • Scrolling in large and small steps
-  • Zooming
+  • Moving in large and small steps
   • Mouse support (dragging, clicking)
   • Map scale indicator
-  • Jump to coordinate
+  • Go to coordinate
   • Search for location by name
   • Org link support
   • Bookmarked positions with pins
-  • Multiple preconfigured servers
+  • Multiple preconfigured tile servers
 
 
 2 Configuration
@@ -45,9 +46,10 @@ tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
   │ (use-package osm
   │   :bind (("C-c m h" . osm-home)
   │ 	 ("C-c m s" . osm-search)
-  │ 	 ("C-c m t" . osm-server)
-  │ 	 ("C-c m g" . osm-goto)
-  │ 	 ("C-c m b" . osm-bookmark-jump))
+  │ 	 ("C-c m v" . osm-server)
+  │ 	 ("C-c m t" . osm-goto)
+  │ 	 ("C-c m x" . osm-gpx-show)
+  │ 	 ("C-c m j" . osm-bookmark-jump))
   │   :init
   │   ;; Load Org link support
   │   (with-eval-after-load 'org
@@ -85,6 +87,7 @@ tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
   • `osm-goto': Go to coordinates
   • `osm-server': Select server
   • `osm-bookmark-jump': Jump to bookmark
+  • `osm-gpx-show': Show GPX file in map viewer
 
   Key bindings in `osm-mode' buffer:
   • `<arrow>': Small step scrolling
@@ -96,15 +99,18 @@ tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
   • `<mouse-3>': `osm-bookmark-set-click' - Store point as bookmark
   • `<osm-bookmark mouse-*>': `osm-bookmark-delete-click' - Click on
     bookmark at point to delete
-  • `<down-mouse-*>': `osm-drag' - Drag the map with the mouse
+  • `<down-mouse-*>': `osm-mouse-drag' - Drag the map with the mouse
   • `d', `DEL': `osm-bookmark-delete' - Delete selected bookmark
-  • `g': `osm-goto' - Go to location
+  • `n': `osm-bookmark-rename' - Rename selected bookmark
+  • `t': `osm-goto' - Go to location
   • `h': `osm-home' - Go to home location
   • `s': `osm-search' - Search for location
-  • `t': `osm-server' - Select tile server
+  • `v': `osm-server' - Select tile server
+  • `x': `osm-gpx-show' - Show tracks and POIs from GPX file
+  • `X': `osm-gpx-hide' - Hide overlays from GPX file
   • `l': `org-store-link' - Store org link
   • `b': `osm-bookmark-set' - Set bookmark
-  • `B': `osm-bookmark-jump' - Jump to bookmark
+  • `j': `osm-bookmark-jump' - Jump to bookmark
   • `q': `quit-window' - Close buffer and window
   • `c': `clone-buffer' - Clone buffer
 

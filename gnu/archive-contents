@@ -2043,16 +2043,17 @@
 		      ("Noboru Ota" . "me@nobiot.com"))
 		     (:commit . "2d44c56fb666da2dbb6c988389a21bee5bdd406c"))])
  (org-translate .
-		[(0 1 3)
+		[(0 1 4)
 		 ((emacs
-		   (25 1))
+		   (27 1))
 		  (org
 		   (9 1)))
-		 "Org-based translation environment" single
-		 ((:url . "http://elpa.gnu.org/packages/org-translate.html")
+		 "Org-based translation environment" tar
+		 ((:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
 		  (:authors
 		   ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
-		  (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net"))])
+		  (:url . "https://elpa.gnu.org/packages/org-translate.html")
+		  (:commit . "bdc5d169ef0c502f46aa673918ccf34fcc8415f2"))])
  (orgalist .
 	   [(1 13)
 	    ((emacs
@@ -2072,7 +2073,7 @@
 	(:keywords "comm" "processes" "multimedia")
 	(:url . "https://elpa.gnu.org/packages/osc.html"))])
  (osm .
-      [(0 3)
+      [(0 4)
        ((emacs
 	 (27 1)))
        "OpenStreetMap viewer" tar
@@ -2080,7 +2081,7 @@
 	(:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	(:authors
 	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	(:commit . "954a97495d50ae27f21597a7ca29f14ac1f8e7c6"))])
+	(:commit . "5135cd6063801e23be3eed099777b61232967eb1"))])
  (other-frame-window .
 		     [(1 0 6)
 		      ((emacs
