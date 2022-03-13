@@ -4,12 +4,13 @@ Source:  https://github.com/swift-emacs/swift-mode.git
 
 Updating /mnt/store/melpa/working/swift-mode/
 Checking out origin/HEAD
-Checking out 4777c409ba0cd0d02b9a8397ba810e449b5ac213
+Checking out 0d1ef0ef183398143b13fb8c76c1284df0d5e616
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/swift-mode/
-  to /tmp/swift-modes35foj/swift-mode-20211031.543
+  to /tmp/swift-mode1gajbg/swift-mode-20220313.542
     src-autoloads.el -> src-autoloads.el
     swift-mode-beginning-of-defun.el -> swift-mode-beginning-of-defun.el
+    swift-mode-fill.el -> swift-mode-fill.el
     swift-mode-font-lock.el -> swift-mode-font-lock.el
     swift-mode-imenu.el -> swift-mode-imenu.el
     swift-mode-indent.el -> swift-mode-indent.el
@@ -17,21 +18,22 @@ Copying files (->) and directories (=>)
     swift-mode-repl.el -> swift-mode-repl.el
     swift-mode-standard-types.el -> swift-mode-standard-types.el
     swift-mode.el -> swift-mode.el
-Created swift-mode-20211031.543.tar containing:
-  swift-mode-20211031.543/
-  swift-mode-20211031.543/src-autoloads.el
-  swift-mode-20211031.543/swift-mode-beginning-of-defun.el
-  swift-mode-20211031.543/swift-mode-font-lock.el
-  swift-mode-20211031.543/swift-mode-imenu.el
-  swift-mode-20211031.543/swift-mode-indent.el
-  swift-mode-20211031.543/swift-mode-lexer.el
-  swift-mode-20211031.543/swift-mode-pkg.el
-  swift-mode-20211031.543/swift-mode-repl.el
-  swift-mode-20211031.543/swift-mode-standard-types.el
-  swift-mode-20211031.543/swift-mode.el
-Built swift-mode in 4.610s, finished at 2022-03-13T05:28:39+0000
+Created swift-mode-20220313.542.tar containing:
+  swift-mode-20220313.542/
+  swift-mode-20220313.542/src-autoloads.el
+  swift-mode-20220313.542/swift-mode-beginning-of-defun.el
+  swift-mode-20220313.542/swift-mode-fill.el
+  swift-mode-20220313.542/swift-mode-font-lock.el
+  swift-mode-20220313.542/swift-mode-imenu.el
+  swift-mode-20220313.542/swift-mode-indent.el
+  swift-mode-20220313.542/swift-mode-lexer.el
+  swift-mode-20220313.542/swift-mode-pkg.el
+  swift-mode-20220313.542/swift-mode-repl.el
+  swift-mode-20220313.542/swift-mode-standard-types.el
+  swift-mode-20220313.542/swift-mode.el
+Built swift-mode in 4.100s, finished at 2022-03-13T14:13:48+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  588 Mar 13 05:28 packages/swift-mode-20211031.543.entry
-440K -rw-r--r-- 1 root root 440K Mar 13 05:28 packages/swift-mode-20211031.543.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 13 05:28 packages/swift-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   51 Mar 13 05:28 packages/swift-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  588 Mar 13 14:13 packages/swift-mode-20220313.542.entry
+452K -rw-r--r-- 1 root root 450K Mar 13 14:13 packages/swift-mode-20220313.542.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 13 14:13 packages/swift-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   51 Mar 13 14:13 packages/swift-mode-readme.txt
