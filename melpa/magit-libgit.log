@@ -3,20 +3,3 @@ Fetcher: github
 Source:  https://github.com/magit/magit.git
 
 Updating /mnt/store/melpa/working/magit-libgit/
-Checking out origin/HEAD
-Checking out ca7504a12d0e899d7a82f3b0cbe2598d8d376fb8
-Copying files (->) and directories (=>)
-  from /mnt/store/melpa/working/magit-libgit/
-  to /tmp/magit-libgitXw4CIV/magit-libgit-20220130.2007
-  ! lisp/magit-libgit.el -> magit-libgit.el
-  ! lisp/magit-libgit-pkg.el -> magit-libgit-pkg.el
-Created magit-libgit-20220130.2007.tar containing:
-  magit-libgit-20220130.2007/
-  magit-libgit-20220130.2007/magit-libgit-pkg.el
-  magit-libgit-20220130.2007/magit-libgit.el
-Built magit-libgit in 6.928s, finished at 2022-03-12T14:27:32+0000
- ✓ Success:
-4.0K -rw-r--r-- 1 root root  382 Mar 12 14:27 packages/magit-libgit-20220130.2007.entry
- 12K -rw-r--r-- 1 root root  10K Mar 12 14:27 packages/magit-libgit-20220130.2007.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 12 14:27 packages/magit-libgit-badge.svg
-4.0K -rw-r--r-- 1 root root  493 Mar 12 14:27 packages/magit-libgit-readme.txt

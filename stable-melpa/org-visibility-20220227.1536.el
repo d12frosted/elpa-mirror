@@ -5,7 +5,7 @@
 ;; Author: Kyle W T Sherman <kylewsherman@gmail.com>
 ;; URL: https://github.com/nullman/emacs-org-visibility
 ;; Package-Version: 20220227.1536
-;; Package-Commit: 604cee9fa5c16ddb2bf3ce163077e718465bbc1b
+;; Package-Commit: 623d596ff02e54d7e090fa30c67a4d0dd4e7fe72
 ;; Created: 2021-07-17
 ;; Version: 1.1
 ;; Keywords: outlines convenience
