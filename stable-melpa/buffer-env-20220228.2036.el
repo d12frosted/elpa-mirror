@@ -5,7 +5,7 @@
 ;; Author: Augusto Stoffel <arstoffel@gmail.com>
 ;; URL: https://github.com/astoff/buffer-env
 ;; Package-Version: 20220228.2036
-;; Package-Commit: ef6ca9a50d5612db023617814d7bcea7f4a477cd
+;; Package-Commit: a2b3544757f1fe725b52cc7d0b9a72700d34ebd9
 ;; Keywords: processes, tools
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 0.2

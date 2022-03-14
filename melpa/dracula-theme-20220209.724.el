@@ -8,7 +8,7 @@
 ;; Author: film42
 ;; Version: 1.7.0
 ;; Package-Version: 20220209.724
-;; Package-Commit: 2c9efdae8b7b9a8e57dfd3aa1c62426a262e9eba
+;; Package-Commit: e725c9e790c9e9cdaccdb35faaae9d5cb16ddb89
 ;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/dracula/emacs
 
