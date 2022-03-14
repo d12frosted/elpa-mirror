@@ -4,8 +4,8 @@
 
 ;; Author: Augusto Stoffel <arstoffel@gmail.com>
 ;; URL: https://github.com/astoff/buffer-env
-;; Package-Version: 20220228.2036
-;; Package-Commit: a2b3544757f1fe725b52cc7d0b9a72700d34ebd9
+;; Package-Version: 20220314.832
+;; Package-Commit: 5d0a3d67c9ae196bd44c9d41edc60cb59550eb21
 ;; Keywords: processes, tools
 ;; Package-Requires: ((emacs "27.1"))
 ;; Version: 0.2
@@ -153,14 +153,14 @@ When called interactively, ask for a FILE."
                                        file file t))))
   (when-let* ((file (if file
                         (expand-file-name file)
-                     (buffer-env--locate-script)))
+                      (buffer-env--locate-script)))
+              (command buffer-env-command)
               ((buffer-env--authorize file))
               (vars (with-temp-buffer
                       (let* ((default-directory (file-name-directory file))
                              (status (call-process shell-file-name nil t nil
                                                    shell-command-switch
-                                                   buffer-env-command
-                                                   file)))
+                                                   command file)))
                         (if (eq 0 status)
                             (split-string (buffer-substring (point-min) (point-max))
                                           "\0" t)

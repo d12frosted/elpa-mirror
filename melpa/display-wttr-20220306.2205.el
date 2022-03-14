@@ -6,7 +6,7 @@
 ;; Maintainer: Jose G Perez Taveras <josegpt27@gmail.com>
 ;; Version: 0.0.8
 ;; Package-Version: 20220306.2205
-;; Package-Commit: 4021cd3cbaf1e8fbda206cccd1042829df07d1e0
+;; Package-Commit: 5eb6ef32ae9207342cf2deb61b5a167bee9036f6
 ;; Package-Requires: ((emacs "27.1"))
 ;; URL: https://github.com/josegpt/display-wttr
 ;; SPDX-License-Identifier: GPL-3.0-only
