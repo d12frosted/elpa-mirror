@@ -1,4 +1,3 @@
-
 A minimalistic yet versatile file manager based on Dired.
 This package gives Dired the following features:
 

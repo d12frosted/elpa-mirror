@@ -1,5 +1,5 @@
 (docker .
-	[(20220306 1533)
+	[(20220315 715)
 	 ((aio
 	   (1 0))
 	  (dash
@@ -17,7 +17,7 @@
 	  (transient
 	   (0 3 7)))
 	 "Interface to Docker" tar
-	 ((:commit . "78b804c08f3116198e669337add5a35f2a8c2a61")
+	 ((:commit . "674bfb7e24da3f9d0fe926945dd0625e2c15e50a")
 	  (:authors
 	   ("Philippe Vaucher" . "philippe.vaucher@gmail.com"))
 	  (:maintainer "Philippe Vaucher" . "philippe.vaucher@gmail.com")
