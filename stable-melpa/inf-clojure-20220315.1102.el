@@ -5,10 +5,10 @@
 ;; Authors: Bozhidar Batsov <bozhidar@batsov.dev>
 ;;       Olin Shivers <shivers@cs.cmu.edu>
 ;; URL: http://github.com/clojure-emacs/inf-clojure
-;; Package-Version: 20220208.1627
-;; Package-Commit: e47684de78da1ee470d42ae2a411909b2cf61d50
+;; Package-Version: 20220315.1102
+;; Package-Commit: f511dcad0e0684c9609c7526930e88d11da989ab
 ;; Keywords: processes, clojure
-;; Version: 3.1.0
+;; Version: 3.2.0-snapshot
 ;; Package-Requires: ((emacs "25.1") (clojure-mode "5.11"))
 
 ;; This file is not part of GNU Emacs.
@@ -422,6 +422,17 @@ mode line entirely."
   :type 'sexp
   :risky t)
 
+(defcustom inf-clojure-enable-eldoc t
+  "Var that allows disabling `eldoc-mode' in `inf-clojure'.
+
+Set to nil to disable eldoc.  Eldoc can be quite useful by
+displaying function signatures in the modeline, but can also
+cause multiple prompts to appear in the REPL and mess with *1,
+*2, etc."
+  :type 'boolean
+  :safe 'booleanp
+  :package-version '(inf-clojure . "3.2.0"))
+
 ;;;###autoload
 (define-minor-mode inf-clojure-minor-mode
   "Minor mode for interacting with the inferior Clojure process buffer.
@@ -432,7 +443,8 @@ The following commands are available:
   :lighter inf-clojure-mode-line
   :keymap inf-clojure-minor-mode-map
   (setq-local comint-input-sender 'inf-clojure--send-string)
-  (inf-clojure-eldoc-setup)
+  (when inf-clojure-enable-eldoc
+    (inf-clojure-eldoc-setup))
   (make-local-variable 'completion-at-point-functions)
   (add-to-list 'completion-at-point-functions
                #'inf-clojure-completion-at-point))
@@ -634,7 +646,8 @@ to continue it."
   (setq mode-line-process '(":%s"))
   (clojure-mode-variables)
   (clojure-font-lock-setup)
-  (inf-clojure-eldoc-setup)
+  (when inf-clojure-enable-eldoc
+    (inf-clojure-eldoc-setup))
   (setq comint-get-old-input #'inf-clojure-get-old-input)
   (setq comint-input-filter #'inf-clojure-input-filter)
   (setq-local comint-prompt-read-only inf-clojure-prompt-read-only)
@@ -1410,6 +1423,7 @@ Return the number of nested sexp the point was over or after."
   "Backend function for eldoc to show argument list in the echo area."
   ;; todo: this never gets unset once connected and is a lie
   (when (and (inf-clojure-connected-p)
+             inf-clojure-enable-eldoc
              ;; don't clobber an error message in the minibuffer
              (not (member last-command '(next-error previous-error))))
     (let* ((info (inf-clojure-eldoc-info-in-current-sexp))

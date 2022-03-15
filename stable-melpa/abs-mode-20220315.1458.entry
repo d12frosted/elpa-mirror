@@ -1,15 +1,15 @@
 (abs-mode .
-	  [(20220312 1113)
+	  [(20220315 1458)
 	   ((emacs
 	     (25 3))
 	    (erlang
 	     (2 8))
 	    (maude-mode
 	     (0 3))
-	    (flymake
+	    (flymake-proc
 	     (1 0)))
 	   "Major mode for the modeling language Abs" single
-	   ((:commit . "50e9b85f278835a86af2fbf64a85e4f6324fa7a7")
+	   ((:commit . "3838449a517ad346a87510bbd39324674e198408")
 	    (:authors
 	     ("Rudi Schlatte" . "rudi@constantly.at"))
 	    (:maintainer "Rudi Schlatte" . "rudi@constantly.at")

@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220312.957
-;; Package-Commit: 9389d2e4a0976068f129c9b4d20253bc0c562199
+;; Package-Version: 20220315.1021
+;; Package-Commit: d5c7c40bc25cd77605c0800277fd7f73060c6fee
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -646,13 +646,15 @@ treated as in `eglot-dbind'."
 
 (cl-defgeneric eglot-client-capabilities (server)
   "What the EGLOT LSP client supports for SERVER."
-  (:method (_s)
+  (:method (s)
            (list
             :workspace (list
                         :applyEdit t
                         :executeCommand `(:dynamicRegistration :json-false)
                         :workspaceEdit `(:documentChanges t)
-                        :didChangeWatchedFiles `(:dynamicRegistration t)
+                        :didChangeWatchedFiles
+                        `(:dynamicRegistration
+                          ,(if (eglot--trampish-p s) :json-false t))
                         :symbol `(:dynamicRegistration :json-false)
                         :configuration t)
             :textDocument
@@ -1403,9 +1405,7 @@ If optional MARKER, return a marker instead"
   "Convert URI to file path, helped by `eglot--current-server'."
   (when (keywordp uri) (setq uri (substring (symbol-name uri) 1)))
   (let* ((server (eglot-current-server))
-         (remote-prefix (and server
-                             (file-remote-p
-                              (project-root (eglot--project server)))))
+         (remote-prefix (and server (eglot--trampish-p server)))
          (retval (url-filename (url-generic-parse-url (url-unhex-string uri))))
          ;; Remove the leading "/" for local MS Windows-style paths.
          (normalized (if (and (not remote-prefix)
@@ -1519,6 +1519,10 @@ and just return it.  PROMPT shouldn't end with a question mark."
                          default)))
              (cl-find read servers :key name :test #'equal)))
           (t (car servers)))))
+
+(defun eglot--trampish-p (server)
+  "Tell if SERVER's project root is `file-remote-p'."
+  (file-remote-p (project-root (eglot--project server))))
 
 
 ;;; Minor modes

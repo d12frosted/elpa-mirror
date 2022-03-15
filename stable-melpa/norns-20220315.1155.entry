@@ -1,5 +1,5 @@
 (norns .
-       [(20220314 1913)
+       [(20220315 1155)
 	((emacs
 	  (27 1))
 	 (dash
@@ -14,7 +14,7 @@
 	  (1 13))
 	 (osc
 	  (0 4)))
-	"Control your monome norns" single
-	((:commit . "dd0c7050d6ddcb7b9fcffb346ce09ee241322fa3")
+	"Interactive development environment for monome norns" single
+	((:commit . "b70ab2f9a58859243762c633628ad515f5563da8")
 	 (:keywords "processes" "terminals")
 	 (:url . "https://github.com/p3r7/norns.el"))])
