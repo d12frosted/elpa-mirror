@@ -6,9 +6,9 @@
 
 ;; Author: Neri Marschik <marschik_neri@cyberagent.co.jp>
 ;; Version: 1.0
-;; Package-Version: 20220309.921
-;; Package-Commit: d8bd55d5929ac4655fdd163a3e59c7660fd5d1c4
-;; Package-Requires: ()
+;; Package-Version: 20220315.340
+;; Package-Commit: 63f047fd84b825876152743f66de7ee6f9ed203b
+;; Package-Requires: ((s "1.12.0"))
 ;; Keywords: javascript, node, node_modules, eslint
 ;; URL: https://github.com/codesuki/add-node-modules-path
 
@@ -31,6 +31,8 @@
 ;;       '(add-hook 'js2-mode-hook #'add-node-modules-path))
 
 ;;; Code:
+
+(require 's)
 
 (defgroup add-node-modules-path nil
   "Put node_modules binaries into `exec-path'."
