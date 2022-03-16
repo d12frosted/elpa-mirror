@@ -4,10 +4,10 @@
 
 ;; Author: Rudi Schlatte <rudi@constantly.at>
 ;; URL: https://github.com/abstools/abs-mode
-;; Package-Version: 20220315.1458
-;; Package-Commit: 3838449a517ad346a87510bbd39324674e198408
+;; Package-Version: 20220316.921
+;; Package-Commit: d860ddbbd7cb93c7a77980c78c1a2a7634ef01e1
 ;; Version: 1.5
-;; Package-Requires: ((emacs "25.3") (erlang "2.8") (maude-mode "0.3") (flymake-proc "1.0"))
+;; Package-Requires: ((emacs "26.1") (erlang "2.8") (maude-mode "0.3") (flymake "1.0"))
 ;; Keywords: languages
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -33,7 +33,7 @@
 (require 'custom)
 (require 'easymenu)
 (eval-when-compile (require 'rx))
-(require 'flymake)
+(require 'flymake-proc)
 (require 'cl-lib)
 (require 'cc-mode)
 (require 'cc-langs)
