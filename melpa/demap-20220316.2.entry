@@ -1,0 +1,13 @@
+(demap .
+       [(20220316 2)
+	((emacs
+	  (24 4))
+	 (dash
+	  (2 18 0)))
+	"Detachable minimap package" tar
+	((:commit . "237a33714c094577510b2e040635ee7732fe36fe")
+	 (:authors
+	  ("Sawyer Gardner <https://gitlab.com/sawyerjgardner>"))
+	 (:maintainer "Sawyer Gardner <https://gitlab.com/sawyerjgardner>")
+	 (:keywords "lisp" "tools" "convenience")
+	 (:url . "https://gitlab.com/sawyerjgardner/demap.el"))])

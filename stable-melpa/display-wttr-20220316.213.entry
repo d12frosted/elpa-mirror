@@ -1,0 +1,10 @@
+(display-wttr .
+	      [(20220316 213)
+	       ((emacs
+		 (27 1)))
+	       "Display wttr(weather) in the mode line" single
+	       ((:commit . "2cb36df32b0ecf381185126a969b7282af5a0e01")
+		(:authors
+		 ("Jose G Perez Taveras" . "josegpt27@gmail.com"))
+		(:maintainer "Jose G Perez Taveras" . "josegpt27@gmail.com")
+		(:url . "https://github.com/josegpt/display-wttr"))])
