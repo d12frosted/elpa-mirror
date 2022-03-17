@@ -2,6 +2,8 @@
 
 ;; Author: wamei <wamei.cho@gmail.com>
 ;; Keywords: elscreen, multi term
+;; Package-Version: 20200417.821
+;; Package-Commit: 4ea89bae0444d9d4377515929f76cb3e98140f1f
 ;; Version: 0.1.3
 ;; Package-Requires: ((emacs "24.4") (elscreen "1.4.6") (multi-term "1.3"))
 
