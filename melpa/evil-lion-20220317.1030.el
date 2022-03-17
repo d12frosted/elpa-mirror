@@ -4,8 +4,8 @@
 
 ;; Author: edkolev <evgenysw@gmail.com>
 ;; URL: http://github.com/edkolev/evil-lion
-;; Package-Version: 20170811.614
-;; Package-Commit: 6b03593f5dd6e7c9ca02207f9a73615cf94c93ab
+;; Package-Version: 20220317.1030
+;; Package-Commit: 4da660e124731ed65e7aaa6c067c30e876619429
 ;; Package-Requires: ((emacs "24.3") (evil "1.0.0"))
 ;; Version: 0.0.2
 ;; Keywords: emulations, evil, vim
@@ -79,7 +79,7 @@ Must be set before the minor mode is enabled."
   "Align the text in the given region using CHAR. Spaces are added to
 the left of the found CHAR.
 
-If CHAR is \"/\" the user is propted interactively for a regular
+If CHAR is \"/\" the user is prompted interactively for a regular
 expression instead of a single character"
   :move-point nil
   :type line
@@ -91,7 +91,7 @@ expression instead of a single character"
   "Align the text in the given region using CHAR. Spaces are added to
 the right of the found CHAR.
 
-If CHAR is \"/\" the user is propted interactively for a regular
+If CHAR is \"/\" the user is prompted interactively for a regular
 expression instead of a single character"
   :move-point nil
   :type line

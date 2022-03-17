@@ -6,8 +6,8 @@
 ;; Created: January 4, 2022
 ;; License: GPL-3.0-or-later
 ;; Version: 0.3
-;; Package-Version: 20220311.839
-;; Package-Commit: 53f529c81a867f2d2a64c01fbb5bbffd7a974289
+;; Package-Version: 20220317.843
+;; Package-Commit: 6e5c0afeac545fdde30bf1442bf559fc5b90c4ed
 ;; Homepage: https://github.com/localauthor/zk
 ;; Package-Requires: ((emacs "24.4"))
 
@@ -663,7 +663,7 @@ Optionally call a custom function by setting the variable
       (while (re-search-forward zk-id-regexp nil t)
         (if (member (match-string-no-properties 0) zk-ids)
             (push (match-string-no-properties 0) id-list)))
-      (zk--parse-id 'file-path id-list))))
+      (zk--parse-id 'file-path (delete-dups id-list)))))
 
 ;;;###autoload
 (defun zk-links-in-note ()
