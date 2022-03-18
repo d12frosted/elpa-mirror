@@ -8,14 +8,24 @@ Table of Contents
 
 1. Features
 2. Configuration
-3. Bookmarks and Org links
+3. Bookmarks, Org and Elisp links
 4. Commands and Key Bindings
 5. Related projects
 6. Contributions
 
 
-<https://github.com/minad/osm/blob/screenshots/osm.png?raw=true> (Map
-tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
+<https://github.com/minad/osm/blob/screenshots/osm.png?raw=true> The map
+data is © [OpenStreetMap] contributors, licensed under the [ODbL] The
+map rendering is © [OpenTopoMap], licensed under the [CC-BY-SA.]
+
+
+[OpenStreetMap] <https://www.openstreetmap.org/copyright>
+
+[ODbL] <https://opendatacommons.org/licenses/odbl/>
+
+[OpenTopoMap] <https://opentopomap.org/about>
+
+[CC-BY-SA.] <https://creativecommons.org/licenses/by-sa/3.0/>
 
 
 1 Features
@@ -25,11 +35,11 @@ tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
   • Display of tracks and POIs from GPX file
   • Parallel fetching of tiles with curl
   • Moving in large and small steps
-  • Mouse support (dragging, clicking)
+  • Mouse support (dragging, clicking, menu)
   • Map scale indicator
   • Go to coordinate
   • Search for location by name
-  • Org link support
+  • Org and Elisp link support
   • Bookmarked positions with pins
   • Multiple preconfigured tile servers
 
@@ -50,6 +60,12 @@ tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
   │ 	 ("C-c m t" . osm-goto)
   │ 	 ("C-c m x" . osm-gpx-show)
   │ 	 ("C-c m j" . osm-bookmark-jump))
+  │ 
+  │   :custom
+  │   ;; Take a look at the customization group `osm' for more options.
+  │   (osm-server 'default) ;; Configure the tile server
+  │   (osm-copyright t)     ;; Display the copyright information
+  │ 
   │   :init
   │   ;; Load Org link support
   │   (with-eval-after-load 'org
@@ -60,22 +76,41 @@ tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
 [wiki] <https://github.com/minad/osm/wiki>
 
 
-3 Bookmarks and Org links
-═════════════════════════
+3 Bookmarks, Org and Elisp links
+════════════════════════════════
 
-  To store a bookmark press the key `b', to store Org links press the
-  key `l'. You can also use a custom binding, e.g., `C-c l'. Then the
-  link can be inserted into an Org buffer with `C-c C-l'. Bookmarks and
-  Org links can be created at point with the mouse, see
-  `osm-bookmark-set-click' and `osm-org-link-click'.
+  To store a bookmark press the key `b', to store Org/Elisp links press
+  the keys `l' or `e' respectively. You can also use a custom binding,
+  e.g., `C-c l'. Then the link can be inserted into an Org buffer with
+  `C-c C-l'. Bookmarks and Org links can be created at point with the
+  mouse, see `osm-bookmark-set-click' and `osm-org-link-click'.
 
-  Examples:
+
+◊ 3.0.0.1 Org link examples
+
+  Click on a link or press `RET' to jump to the location. These links
+  work in Org buffers in Emacs.
 
   • 
   • 
   • 
   • 
   • 
+
+
+◊ 3.0.0.2 Elisp link examples
+
+  Place the point behind the closing parenthesis and press `C-x C-e' to
+  jump to the location. The Elisp links can be used in arbitary text
+  files.
+
+  ┌────
+  │ (osm 41.869561 12.458496 6 opentopomap "Lazio, Italia")
+  │ (osm 51.489507 -0.144196 11 "London, Greater London, England, SW1A 2DX, United Kingdom")
+  │ (osm 55.686875 12.569733 12 cyclosm "København, Københavns Kommune, Region Hovedstaden, 1357, Danmark")
+  │ (osm 40.729568 -73.979187 12 stamen-watercolor "New York County, New York, United States")
+  │ (osm 27.961656 86.892242 13 opentopomap "Khumjung, Khumbupasanglahmu, सोलुखुम्बु, Province #1, Nepal")
+  └────
 
 
 4 Commands and Key Bindings
@@ -109,6 +144,7 @@ tiles © <https://opentopomap.org>, <https://openstreetmap.org>)
   • `x': `osm-gpx-show' - Show tracks and POIs from GPX file
   • `X': `osm-gpx-hide' - Hide overlays from GPX file
   • `l': `org-store-link' - Store org link
+  • `e': `osm-elisp-link' - Store Elisp link in the kill ring
   • `b': `osm-bookmark-set' - Set bookmark
   • `j': `osm-bookmark-jump' - Jump to bookmark
   • `q': `quit-window' - Close buffer and window

@@ -1619,15 +1619,16 @@
 	   (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
 	   (:url . "https://github.com/fourier/loccur"))])
  (logos .
-	[(0 1 2)
+	[(0 2 0)
 	 ((emacs
 	   (27 1)))
 	 "Simple focus mode and extras" tar
 	 ((:url . "https://gitlab.com/protesilaos/logos")
+	  (:keywords "convenience" "focus" "writing" "presentation" "narrowing")
 	  (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	  (:authors
 	   ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	  (:commit . "37138ce54044d04eaad5d5f81d42eefceef0df01"))])
+	  (:commit . "36e911064c263813110b17acd5fb9b01b9436112"))])
  (map .
       [(3 2 1)
        ((emacs
@@ -2073,7 +2074,7 @@
 	(:keywords "comm" "processes" "multimedia")
 	(:url . "https://elpa.gnu.org/packages/osc.html"))])
  (osm .
-      [(0 4)
+      [(0 5)
        ((emacs
 	 (27 1)))
        "OpenStreetMap viewer" tar
@@ -2081,7 +2082,7 @@
 	(:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	(:authors
 	 ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	(:commit . "5135cd6063801e23be3eed099777b61232967eb1"))])
+	(:commit . "6b4a0a340871a23e98b0e540e0b93ae37bdfc7d2"))])
  (other-frame-window .
 		     [(1 0 6)
 		      ((emacs

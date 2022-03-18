@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `logos' (or `logos.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.1.0,
-released on 2022-03-11.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.2.0,
+released on 2022-03-17.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.2.0-dev.
+Current development target is 0.3.0-dev.
 
 Table of Contents
 ─────────────────
@@ -23,14 +23,17 @@ Table of Contents
 1. COPYING
 2. Overview
 3. Installation
+.. 1. GNU ELPA package
+.. 2. Manual installation
 4. Sample configuration
 5. Extra tweaks
 .. 1. Center the buffer in its window
 .. 2. Automatically reveal Org or Outline subtree
 .. 3. Recenter at the top upon page motion
 .. 4. Use outlines and page breaks
-6. GNU Free Documentation License
-7. Indices
+6. Acknowledgements
+7. GNU Free Documentation License
+8. Indices
 .. 1. Function index
 .. 2. Variable index
 .. 3. Concept index
@@ -81,17 +84,23 @@ Table of Contents
   │   (define-key map [remap backward-page] #'logos-backward-page-dwim))
   └────
 
-  On stanard Emacs, those key bindings are: `C-x n n', `C-x ]', `C-x ['.
-  The `logos-narrow-dwim' is not necessary for users who already know
-  how to narrow effectively.  Such users may still want to bind it to a
-  key.
+  On standard Emacs, those key bindings are: `C-x n n', `C-x ]', `C-x
+  ['.  The `logos-narrow-dwim' is not necessary for users who already
+  know how to narrow effectively.  Such users may still want to bind it
+  to a key.
 
   Logos provides some optional aesthetic tweaks which come into effect
   when the buffer-local `logos-focus-mode' is enabled.  These will hide
-  the mode line (`logos-hide-mode-line'), enable `scroll-lock-mode'
-  (`logos-scroll-lock'), and use `variable-pitch-mode' in
-  non-programming buffers (`logos-variable-pitch').  All these variables
-  are buffer-local.
+  the mode line (`logos-hide-mode-line'), disable the buffer boundary
+  indicators (`indicate-buffer-boundaries'), enable `scroll-lock-mode'
+  (`logos-scroll-lock'), use `variable-pitch-mode' in non-programming
+  buffers (`logos-variable-pitch'), make the buffer read-only
+  (`logos-buffer-read-only'), and center the buffer in its window if the
+  `olivetti' package is installed (`logos-olivetti').  All these
+  variables are buffer-local.
+
+  [ User options have changed as part of 0.3.0-dev.  Especially the glue
+    code for Olivetti. ]
 
   Logos is the familiar word derived from Greek (watch my presentation
   on philosophy about Cosmos, Logos, and the living universe:
@@ -106,11 +115,25 @@ Table of Contents
 3 Installation
 ══════════════
 
-  Logos is not in any package archive for the time being, though I plan
-  to submit it to GNU ELPA (as such, any non-trivial patches require
-  copyright assignment to the Free Software Foundation).  Users can rely
-  on `straight.el', `quelpa', or equivalent to fetch the source.  Below
-  are the essentials for those who prefer the manual method.
+
+
+
+3.1 GNU ELPA package
+────────────────────
+
+  The package is available as `logos'.  Simply do:
+
+  ┌────
+  │ M-x package-refresh-contents
+  │ M-x package-install
+  └────
+
+
+  And search for it.
+
+
+3.2 Manual installation
+───────────────────────
 
   Assuming your Emacs files are found in `~/.emacs.d/', execute the
   following commands in a shell prompt:
@@ -153,10 +176,15 @@ Table of Contents
 
   ⁃ To have quick access to `logos-focus-mode', bind it to a key.  This
     mode checks the variables `logos-hide-mode-line',
-    `logos-scroll-lock', `logos-variable-pitch' and applies their
+    `logos-scroll-lock', `logos-variable-pitch',
+    `logos-indicate-buffer-boundaries', `logos-buffer-read-only',
+    `logos-olivetti' (requires `olivetti' package) and applies their
     effects if they are non-nil.  Note that everything is buffer-local,
     so it is possible to use file variables as described in the Emacs
     manual.
+
+  [ User options have changed as part of 0.3.0-dev.  Especially the glue
+    code for Olivetti. ]
 
   ┌────
   │ (require 'logos)
@@ -170,9 +198,12 @@ Table of Contents
   │ 
   │ ;; These apply when `logos-focus-mode' is enabled.  Their value is
   │ ;; buffer-local.
-  │ (setq-default logos-hide-mode-line nil)
-  │ (setq-default logos-scroll-lock nil)
-  │ (setq-default logos-variable-pitch nil)
+  │ (setq-default logos-hide-mode-line nil
+  │ 	      logos-scroll-lock nil
+  │ 	      logos-variable-pitch nil
+  │ 	      logos-indicate-buffer-boundaries nil
+  │ 	      logos-buffer-read-only nil
+  │ 	      logos-olivetti nil)
   │ 
   │ (let ((map global-map))
   │   (define-key map [remap narrow-to-region] #'logos-narrow-dwim)
@@ -196,21 +227,22 @@ Table of Contents
 5.1 Center the buffer in its window
 ───────────────────────────────────
 
-  Use the excellent `olivetti' package by Paul W. Rankin.  Here we
-  configure Olivetti to take effect when we enter `logos-focus-mode' and
-  be disabled when we exit.
+  [ Changed as part of 0.3.0-dev ]
+
+  Install the excellent `olivetti' package by Paul W. Rankin.  Then set
+  `logos-olivetti' to non-nil.
+
+  The present author’s favourite settings given that a `fill-column' of
+  `72':
 
   ┌────
-  │ ;; glue code for `logos-focus-mode' and `olivetti-mode'
-  │ (defun my-logos--olivetti-mode ()
-  │   "Toggle `olivetti-mode'."
-  │   (if (or (bound-and-true-p olivetti-mode)
-  │ 	  (null (logos--focus-p)))
-  │       (olivetti-mode -1)
-  │     (olivetti-mode 1)))
-  │ 
-  │ (add-hook 'logos-focus-mode-hook #'my-logos--olivetti-mode)
+  │ (setq olivetti-body-width 0.7
+  │       olivetti-minimum-body-width 80
+  │       olivetti-recall-visual-line-mode-entry-state t)
   └────
+
+  Though note that Olivetti works well even without a `fill-column' and
+  `auto-fill-mode' disabled.
 
 
 5.2 Automatically reveal Org or Outline subtree
@@ -302,7 +334,7 @@ Table of Contents
   By default, the page motions only move between the `^L' delimiters.
   While the option `logos-outlines-are-pages' changes the behaviour to
   move between outline headings instead.  What constitutes an “outline
-  heading” is determined by `logos-outline-regexp-alist'.
+  heading” is determined by the `logos-outline-regexp-alist'.
 
   Provided this:
 
@@ -347,21 +379,50 @@ Table of Contents
   │ 	(t . ,(or outline-regexp logos--page-delimiter))))
   └────
 
+  Another Org-specific tweak is to use heading levels up to a specific
+  number.  The idea would be that anything below that number is not
+  significant.  For example, `^\\* +' only applies to top-level
+  headings, while `^\\*\\{1,3\\} +' covers heading levels 1 through 3.
+  Accounting for the aforementiond horizontal rle and generic page
+  delimiter, the end result can look like this:
 
-6 GNU Free Documentation License
+  ┌────
+  │ (setq logos-outline-regexp-alist
+  │       `((emacs-lisp-mode . ,(format "\\(^;;;+ \\|%s\\)" logos--page-delimiter))
+  │ 	(org-mode . ,(format "\\(^\\*\\{1,3\\} +\\|^-\\{5\\}$\\|%s\\)" logos--page-delimiter))
+  │ 	(t . ,(or outline-regexp logos--page-delimiter))))
+  └────
+
+
+6 Acknowledgements
+══════════════════
+
+  Logos is meant to be a collective effort.  Every bit of help matters.
+
+  Author/maintainer
+        Protesilaos Stavrou.
+
+  Contributions to code or the manual
+        Philip Kaludercic, Remco van ’t Veer, and user Ypot.
+
+  Ideas and user feedback
+        Daniel Mendler.
+
+
+7 GNU Free Documentation License
 ════════════════════════════════
 
 
-7 Indices
+8 Indices
 ═════════
 
-7.1 Function index
+8.1 Function index
 ──────────────────
 
 
-7.2 Variable index
+8.2 Variable index
 ──────────────────
 
 
-7.3 Concept index
+8.3 Concept index
 ─────────────────
