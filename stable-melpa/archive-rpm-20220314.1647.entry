@@ -1,9 +1,9 @@
 (archive-rpm .
-	     [(20180706 1232)
+	     [(20220314 1647)
 	      ((emacs
 		(24 4)))
 	      "RPM and CPIO support for archive-mode" tar
-	      ((:commit . "59f83caebbd2f92fd634f6968e6d17b50ffa3dc7")
+	      ((:commit . "379dddfbe4e801df6fdb81a55528fab6c7dbb78e")
 	       (:authors
 		("Magnus Henoch" . "magnus.henoch@gmail.com"))
 	       (:maintainer "Magnus Henoch" . "magnus.henoch@gmail.com")

@@ -1,24 +1,26 @@
 Package: archive-rpm
 Fetcher: github
-Source:  https://github.com/legoscia/archive-rpm.git
+Source:  https://github.com/nbarrientos/archive-rpm.git
 
-Updating /mnt/store/melpa/working/archive-rpm/
+Cloning https://github.com/nbarrientos/archive-rpm.git to /mnt/store/melpa/working/archive-rpm/
 Checking out origin/HEAD
-Checking out 59f83caebbd2f92fd634f6968e6d17b50ffa3dc7
+Checking out 379dddfbe4e801df6fdb81a55528fab6c7dbb78e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/archive-rpm/
-  to /tmp/archive-rpmFZA3bP/archive-rpm-20180706.1232
+  to /tmp/archive-rpmgoDb6d/archive-rpm-20220314.1647
     archive-cpio.el -> archive-cpio.el
     archive-rpm-pkg.el -> archive-rpm-pkg.el
     archive-rpm.el -> archive-rpm.el
-Created archive-rpm-20180706.1232.tar containing:
-  archive-rpm-20180706.1232/
-  archive-rpm-20180706.1232/archive-cpio.el
-  archive-rpm-20180706.1232/archive-rpm-pkg.el
-  archive-rpm-20180706.1232/archive-rpm.el
-Built archive-rpm in 3.694s, finished at 2022-03-18T11:04:44+0000
+Created archive-rpm-20220314.1647.tar containing:
+  archive-rpm-20220314.1647/
+  archive-rpm-20220314.1647/archive-cpio.el
+  archive-rpm-20220314.1647/archive-rpm-pkg.el
+  archive-rpm-20220314.1647/archive-rpm.el
+Built archive-rpm in 4.635s, finished at 2022-03-18T14:02:36+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  342 Mar 18 11:04 packages/archive-rpm-20180706.1232.entry
  32K -rw-r--r-- 1 root root  30K Mar 18 11:04 packages/archive-rpm-20180706.1232.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 18 11:04 packages/archive-rpm-badge.svg
-4.0K -rw-r--r-- 1 root root  269 Mar 18 11:04 packages/archive-rpm-readme.txt
+4.0K -rw-r--r-- 1 root root  342 Mar 18 14:02 packages/archive-rpm-20220314.1647.entry
+ 32K -rw-r--r-- 1 root root  30K Mar 18 14:02 packages/archive-rpm-20220314.1647.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 18 14:02 packages/archive-rpm-badge.svg
+4.0K -rw-r--r-- 1 root root  269 Mar 18 14:02 packages/archive-rpm-readme.txt

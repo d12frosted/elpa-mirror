@@ -4,26 +4,28 @@ Source:  https://github.com/kaushalmodi/ox-hugo.git
 
 Updating /mnt/store/melpa/working/ox-hugo/
 Checking out origin/HEAD
-Checking out e1a3e07c96ea0ab8fa5cdd4ec674448a26d62279
+Checking out 9ac379e30d741c9d57401f4d626940d8276f5efe
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ox-hugo/
-  to /tmp/ox-hugo9QwHDS/ox-hugo-20220318.611
+  to /tmp/ox-hugoaAybuq/ox-hugo-20220318.1404
     org-hugo-auto-export-mode.el -> org-hugo-auto-export-mode.el
     ox-blackfriday.el -> ox-blackfriday.el
     ox-hugo-deprecated.el -> ox-hugo-deprecated.el
     ox-hugo-pandoc-cite.el -> ox-hugo-pandoc-cite.el
     ox-hugo.el -> ox-hugo.el
-Created ox-hugo-20220318.611.tar containing:
-  ox-hugo-20220318.611/
-  ox-hugo-20220318.611/org-hugo-auto-export-mode.el
-  ox-hugo-20220318.611/ox-blackfriday.el
-  ox-hugo-20220318.611/ox-hugo-deprecated.el
-  ox-hugo-20220318.611/ox-hugo-pandoc-cite.el
-  ox-hugo-20220318.611/ox-hugo-pkg.el
-  ox-hugo-20220318.611/ox-hugo.el
-Built ox-hugo in 6.567s, finished at 2022-03-18T11:48:54+0000
+Created ox-hugo-20220318.1404.tar containing:
+  ox-hugo-20220318.1404/
+  ox-hugo-20220318.1404/org-hugo-auto-export-mode.el
+  ox-hugo-20220318.1404/ox-blackfriday.el
+  ox-hugo-20220318.1404/ox-hugo-deprecated.el
+  ox-hugo-20220318.1404/ox-hugo-pandoc-cite.el
+  ox-hugo-20220318.1404/ox-hugo-pkg.el
+  ox-hugo-20220318.1404/ox-hugo.el
+Built ox-hugo in 7.873s, finished at 2022-03-18T14:48:26+0000
  ✓ Success:
+4.0K -rw-r--r-- 1 root root  275 Mar 18 14:48 packages/ox-hugo-20220318.1404.entry
+340K -rw-r--r-- 1 root root 340K Mar 18 14:48 packages/ox-hugo-20220318.1404.tar
 4.0K -rw-r--r-- 1 root root  274 Mar 18 11:48 packages/ox-hugo-20220318.611.entry
 340K -rw-r--r-- 1 root root 340K Mar 18 11:48 packages/ox-hugo-20220318.611.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 18 11:48 packages/ox-hugo-badge.svg
-4.0K -rw-r--r-- 1 root root 2.4K Mar 18 11:48 packages/ox-hugo-readme.txt
+4.0K -rw-r--r-- 1 root root 1.2K Mar 18 14:48 packages/ox-hugo-badge.svg
+4.0K -rw-r--r-- 1 root root 2.4K Mar 18 14:48 packages/ox-hugo-readme.txt

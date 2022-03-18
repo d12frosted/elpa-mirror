@@ -1,0 +1,8 @@
+Auto-Dark is an auto-changer between 2 themes, dark/light, respecting the
+overall settings of MacOS.  To enable it, install the package and add it to your load path:
+
+    (require 'auto-dark)
+
+To customize the themes used by light / dark mode:
+
+    M-x customize-group auto-dark

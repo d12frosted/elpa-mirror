@@ -1,11 +1,11 @@
 (async .
-       [(20220318 850)
+       [(20220318 1342)
 	((emacs
 	  (24 4)))
 	"Asynchronous processing in Emacs" tar
-	((:commit . "394f1f904b1790bc2588f196398369e7635fb4ae")
+	((:commit . "c78bab7506a70a735d2c3deab13fa87bf44a83d3")
 	 (:authors
 	  ("John Wiegley" . "jwiegley@gmail.com"))
-	 (:maintainer "John Wiegley" . "jwiegley@gmail.com")
+	 (:maintainer "Thierry Volpiatto" . "thievol@posteo.net")
 	 (:keywords "async")
 	 (:url . "https://github.com/jwiegley/emacs-async"))])
