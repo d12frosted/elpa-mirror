@@ -48,9 +48,11 @@ map rendering is © [OpenTopoMap], licensed under the [CC-BY-SA.]
 ═══════════════
 
   The package is available on GNU ELPA and can be installed with
-  `package-install'.  The following is an example configuration which
-  relies on `use-package'. Please take a look at the [wiki] for
-  additional configuration.
+  `package-install'.  Note that osm.el requires Emacs 27 and depends on
+  the external `curl' program.  Emacs must be built with libxml,
+  libjansson, librsvg, libjpeg and libpng support. The following is an
+  example configuration which relies on `use-package'.  Please take a
+  look at the [wiki] for additional configuration.
 
   ┌────
   │ (use-package osm
@@ -89,7 +91,9 @@ map rendering is © [OpenTopoMap], licensed under the [CC-BY-SA.]
 ◊ 3.0.0.1 Org link examples
 
   Click on a link or press `RET' to jump to the location. These links
-  work in Org buffers in Emacs.
+  work in Org buffers in Emacs. Furthermore you can open Org links in
+  arbitary buffers with `org-open-at-point-global'. I recommend binding
+  this command to a key, e.g, `C-c o'.
 
   • 
   • 
@@ -102,7 +106,8 @@ map rendering is © [OpenTopoMap], licensed under the [CC-BY-SA.]
 
   Place the point behind the closing parenthesis and press `C-x C-e' to
   jump to the location. The Elisp links can be used in arbitary text
-  files.
+  files. Since they are Elisp s-expressions they can be easily
+  manipulated programatically.
 
   ┌────
   │ (osm 41.869561 12.458496 6 opentopomap "Lazio, Italia")
