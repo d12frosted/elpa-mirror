@@ -8,7 +8,7 @@
 ;; Keyword: convenience, search
 ;; Version: 0.2.6
 ;; Package-Version: 20210715.1041
-;; Package-Commit: 68271c7784d9ef7eee61d1f55dc050225d3448e9
+;; Package-Commit: 1ccf7219c2f78485aa23174e46aa8cd77a98a6a0
 ;; Package-Requires: ((emacs "26.1") (f "0.20.0"))
 ;; URL: https://github.com/jcs-elpa/isearch-project
 

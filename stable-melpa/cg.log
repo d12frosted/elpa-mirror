@@ -1,7 +1,13 @@
 Package: cg
 Fetcher: github
-Source:  https://github.com/emacsmirror/cg.git
+Source:  https://github.com/GrammarSoft/cg3.git
 
 Updating /mnt/store/melpa/working/cg/
 Checking out origin/HEAD
-No matching file(s) found in /mnt/store/melpa/working/cg/: (*.el *.el.in dir *.info *.texi *.texinfo doc/dir doc/*.info doc/*.texi doc/*.texinfo (:exclude .dir-locals.el test.el tests.el *-test.el *-tests.el))
+Checking out a23a2aa346dd5b3561437d51f0b6d63fc6de7389
+Built cg in 5.508s, finished at 2022-03-18T02:15:53+0000
+ ✓ Success:
+ 52K -rw-r--r-- 1 root root  50K Mar 18 02:15 packages/cg-20220316.1359.el
+4.0K -rw-r--r-- 1 root root  413 Mar 18 02:15 packages/cg-20220316.1359.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 18 02:15 packages/cg-badge.svg
+4.0K -rw-r--r-- 1 root root 1.5K Mar 18 02:15 packages/cg-readme.txt

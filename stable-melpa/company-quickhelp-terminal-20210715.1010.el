@@ -8,7 +8,7 @@
 ;; Keyword: terminal extends support tip help
 ;; Version: 0.1.1
 ;; Package-Version: 20210715.1010
-;; Package-Commit: 5bafab30e0edb99a3064edf1e9265a416c632a71
+;; Package-Commit: fe68967d901ec284022fd67d296866795476e60d
 ;; Package-Requires: ((emacs "24.4") (company-quickhelp "2.2.0") (popup "0.5.3"))
 ;; URL: https://github.com/jcs-elpa/company-quickhelp-terminal
 

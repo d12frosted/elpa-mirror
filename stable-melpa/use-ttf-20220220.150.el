@@ -8,7 +8,7 @@
 ;; Keyword: customize font install ttf
 ;; Version: 0.1.3
 ;; Package-Version: 20220220.150
-;; Package-Commit: b590f6d3643ff70dfde0181abb287d7b24073067
+;; Package-Commit: fb82a02b6c86e6224482b27caa08662b023b40a1
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs-elpa/use-ttf
 
