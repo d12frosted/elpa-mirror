@@ -1,0 +1,12 @@
+(helm-core .
+	   [(20220319 953)
+	    ((emacs
+	      (25 1))
+	     (async
+	      (1 9 4)))
+	    "Development files for Helm" tar
+	    ((:commit . "2f89214b0b387f21f3a5753539ab7460559c6f17")
+	     (:authors
+	      ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
+	     (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
+	     (:url . "https://emacs-helm.github.io/helm/"))])

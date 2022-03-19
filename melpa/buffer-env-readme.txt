@@ -18,7 +18,7 @@ following in your init file:
 
     (add-hook 'hack-local-variables-hook 'buffer-env-update)
 
-This way, any buffer potentially affected by directory-local
+In this way, any buffer potentially affected by directory-local
 variables will also be affected by buffer-env.  It is nonetheless
 possible to call `buffer-env-update' interactively or add it only
 to specific major-mode hooks.
