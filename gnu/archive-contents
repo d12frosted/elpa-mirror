@@ -493,7 +493,7 @@
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	  (:commit . "e2cc92b029bd9334f88d382def7066c35c31b3a9"))])
  (coterm .
-	 [(1 4)
+	 [(1 5)
 	  ((emacs
 	    (26 1)))
 	  "Terminal emulation for comint" tar
@@ -502,7 +502,7 @@
 	   (:maintainer "jakanakaevangeli" . "jakanakaevangeli@chiru.no")
 	   (:authors
 	    ("jakanakaevangeli" . "jakanakaevangeli@chiru.no"))
-	   (:commit . "28ea65f0f88b65e561359d0fb8fc8dd84d6258d6"))])
+	   (:commit . "ef4b5fb55304266244c87d2c6aaefab58149da62"))])
  (counsel .
 	  [(0 13 4)
 	   ((emacs
@@ -2161,7 +2161,7 @@
 	     ("Phillip Lord" . "phillip.lord@russet.org.uk"))
 	    (:url . "http://elpa.gnu.org/packages/persist.html"))])
  (phps-mode .
-	    [(0 4 18)
+	    [(0 4 19)
 	     ((emacs
 	       (26)))
 	     "Major mode for PHP with code intelligence" tar
@@ -2170,7 +2170,7 @@
 	      (:maintainer "Christian Johansson" . "christian@cvj.se")
 	      (:authors
 	       ("Christian Johansson" . "christian@cvj.se"))
-	      (:commit . "d1d1d4b9a7b8cb56aa05b95718ff936eec6a5605"))])
+	      (:commit . "246bcc69675323f5213ca54a348713e6f3879809"))])
  (pinentry .
 	   [(0 1)
 	    nil "GnuPG Pinentry server implementation" single
