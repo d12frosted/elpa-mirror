@@ -4,6 +4,8 @@
 
 ;; Author: Raimon Grau <raimonster@gmail.com>
 ;; Keywords: vc, tools
+;; Package-Version: 20191031.1304
+;; Package-Commit: 43f6b31c1090371260a2f15b2117a7666920bee7
 
 ;; URL: http://github.com/kidd/git-msg-prefix.el
 ;; Version: 0.1.0
