@@ -729,7 +729,7 @@
 		    ((:url . "https://gitlab.com/tseenshe/haskell-tng-mode")
 		     (:keywords "languages"))])
  (helm .
-       [(3 8 4)
+       [(3 8 5)
 	((helm-core
 	  (3 8 4))
 	 (popup
@@ -739,9 +739,9 @@
 	 (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
 	 (:authors
 	  ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
-	 (:commit . "a7b9e898296142465c0857b2d201d8d828ba7b05"))])
+	 (:commit . "5e035c9193bf1e1d4bb709794a154957544dcfc7"))])
  (helm-core .
-	    [(3 8 4)
+	    [(3 8 5)
 	     ((emacs
 	       (25 1))
 	      (async
@@ -751,7 +751,7 @@
 	      (:maintainer "Thierry Volpiatto" . "thierry.volpiatto@gmail.com")
 	      (:authors
 	       ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
-	      (:commit . "a7b9e898296142465c0857b2d201d8d828ba7b05"))])
+	      (:commit . "5e035c9193bf1e1d4bb709794a154957544dcfc7"))])
  (highlight-parentheses .
 			[(2 1 0)
 			 ((emacs
