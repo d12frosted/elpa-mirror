@@ -2,8 +2,6 @@
 
 ;; Author: 10sr <8slashes+el [at] gmail [dot] com>
 ;; URL: https://github.com/10sr/git-ps1-mode-el
-;; Package-Version: 20200113.704
-;; Package-Commit: 6762a309bd593d26258dfbf43e7bc21254a70fbf
 ;; Version: 0.2.2
 ;; Keywords: utility mode-line git
 
@@ -362,6 +360,11 @@ This function returns nil if the output is not available for some reasons."
                                    t)
           (buffer-substring-no-properties (point-min)
                                           (point-max))))))
+
+(provide 'git-ps1-mode)
+
+;;; git-ps1-mode.el ends here
+                    (point-max))))))
 
 (provide 'git-ps1-mode)
 

@@ -1,0 +1,11 @@
+(ob-compile .
+	    [(20220307 1609)
+	     ((emacs
+	       (24 4)))
+	     "Run compile by org-babel" single
+	     ((:commit . "4217ae0cfa71793ee1b42bc8e07283f5e269e7cb")
+	      (:authors
+	       ("Giap Tran" . "txgvnn@gmail.com"))
+	      (:maintainer "Giap Tran" . "txgvnn@gmail.com")
+	      (:keywords "literate programming" "reproducible" "processes")
+	      (:url . "https://github.com/TxGVNN/giaelpa/tree/recipes/ob-compile"))])

@@ -5,7 +5,7 @@
 ;; Author: Manoj Kumar Manikchand <manojm321@protonmail.com>
 ;; URL: https://github.com/Manoj321/elfeed-dashboard
 ;; Package-Version: 20210727.603
-;; Package-Commit: b143f8453aed2053e8fc6f05cef6233797408546
+;; Package-Commit: 26ff3573efce3cb66c8814854a2983a69683af09
 ;; Keywords: convenience
 ;; Package-Requires: ((emacs "25.1")(elfeed "3.3.0"))
 ;; Version: 0.0.0

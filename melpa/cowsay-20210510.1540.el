@@ -7,7 +7,7 @@
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-cowsay
 ;; Package-Version: 20210510.1540
-;; Package-Commit: d8a72a311c6875f1aef6a30b3d23a1b02df75941
+;; Package-Commit: 683c23afa2a37272be54de822ad19f4e11dd86ba
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "24.5"))
 ;; Keywords: games

@@ -4,10 +4,10 @@ Source:  https://github.com/org-roam/org-roam.git
 
 Updating /mnt/store/melpa/working/org-roam/
 Checking out origin/HEAD
-Checking out 3782e88d50f83c5b9fbb4b10df71df3f37e27156
+Checking out d71675fb479d11da3ae597bb13bc1c96256ff0b0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-roam/
-  to /tmp/org-roamJRc7FU/org-roam-20220315.637
+  to /tmp/org-roambBnM8J/org-roam-20220319.1902
     org-roam-capture.el -> org-roam-capture.el
     org-roam-compat.el -> org-roam-compat.el
     org-roam-db.el -> org-roam-db.el
@@ -22,43 +22,43 @@ Copying files (->) and directories (=>)
   ! extensions/org-roam-graph.el -> org-roam-graph.el
   ! extensions/org-roam-overlay.el -> org-roam-overlay.el
   ! extensions/org-roam-protocol.el -> org-roam-protocol.el
-Generating /tmp/org-roamJRc7FU/org-roam-20220315.637/org-roam.info
-Created org-roam-20220315.637.tar containing:
-  org-roam-20220315.637/
-  org-roam-20220315.637/dir
-  org-roam-20220315.637/org-roam-capture.el
-  org-roam-20220315.637/org-roam-compat.el
-  org-roam-20220315.637/org-roam-dailies.el
-  org-roam-20220315.637/org-roam-db.el
-  org-roam-20220315.637/org-roam-graph.el
-  org-roam-20220315.637/org-roam-id.el
-  org-roam-20220315.637/org-roam-migrate.el
-  org-roam-20220315.637/org-roam-mode.el
-  org-roam-20220315.637/org-roam-node.el
-  org-roam-20220315.637/org-roam-overlay.el
-  org-roam-20220315.637/org-roam-pkg.el
-  org-roam-20220315.637/org-roam-protocol.el
-  org-roam-20220315.637/org-roam-utils.el
-  org-roam-20220315.637/org-roam.el
-  org-roam-20220315.637/org-roam.info
-Built org-roam in 9.596s, finished at 2022-03-19T11:33:04+0000
+Generating /tmp/org-roambBnM8J/org-roam-20220319.1902/org-roam.info
+Created org-roam-20220319.1902.tar containing:
+  org-roam-20220319.1902/
+  org-roam-20220319.1902/dir
+  org-roam-20220319.1902/org-roam-capture.el
+  org-roam-20220319.1902/org-roam-compat.el
+  org-roam-20220319.1902/org-roam-dailies.el
+  org-roam-20220319.1902/org-roam-db.el
+  org-roam-20220319.1902/org-roam-graph.el
+  org-roam-20220319.1902/org-roam-id.el
+  org-roam-20220319.1902/org-roam-migrate.el
+  org-roam-20220319.1902/org-roam-mode.el
+  org-roam-20220319.1902/org-roam-node.el
+  org-roam-20220319.1902/org-roam-overlay.el
+  org-roam-20220319.1902/org-roam-pkg.el
+  org-roam-20220319.1902/org-roam-protocol.el
+  org-roam-20220319.1902/org-roam-utils.el
+  org-roam-20220319.1902/org-roam.el
+  org-roam-20220319.1902/org-roam.info
+Built org-roam in 8.789s, finished at 2022-03-20T05:15:19+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  548 Mar 19 11:33 packages/org-roam-20220315.637.entry
-352K -rw-r--r-- 1 root root 350K Mar 19 11:33 packages/org-roam-20220315.637.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 19 11:33 packages/org-roam-badge.svg
-4.0K -rw-r--r-- 1 root root  521 Mar 19 11:32 packages/org-roam-bibtex-20220213.1609.entry
-200K -rw-r--r-- 1 root root 200K Mar 19 11:32 packages/org-roam-bibtex-20220213.1609.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 19 11:32 packages/org-roam-bibtex-badge.svg
-4.0K -rw-r--r-- 1 root root  893 Mar 19 11:32 packages/org-roam-bibtex-readme.txt
-4.0K -rw-r--r-- 1 root root 1.7K Mar 19 11:32 packages/org-roam-bibtex.log
-4.0K -rw-r--r-- 1 root root 2.1K Mar 19 11:33 packages/org-roam-readme.txt
- 12K -rw-r--r-- 1 root root 9.8K Mar 19 11:33 packages/org-roam-timestamps-20220111.1755.el
-4.0K -rw-r--r-- 1 root root  505 Mar 19 11:33 packages/org-roam-timestamps-20220111.1755.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 19 11:33 packages/org-roam-timestamps-badge.svg
-4.0K -rw-r--r-- 1 root root  309 Mar 19 11:33 packages/org-roam-timestamps-readme.txt
-4.0K -rw-r--r-- 1 root root  692 Mar 19 11:33 packages/org-roam-timestamps.log
-4.0K -rw-r--r-- 1 root root  475 Mar 19 11:33 packages/org-roam-ui-20220225.2151.entry
-5.3M -rw-r--r-- 1 root root 5.3M Mar 19 11:33 packages/org-roam-ui-20220225.2151.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 19 11:33 packages/org-roam-ui-badge.svg
-4.0K -rw-r--r-- 1 root root   93 Mar 19 11:33 packages/org-roam-ui-readme.txt
- 12K -rw-r--r-- 1 root root 9.9K Mar 19 11:33 packages/org-roam-ui.log
+4.0K -rw-r--r-- 1 root root  549 Mar 20 05:15 packages/org-roam-20220319.1902.entry
+352K -rw-r--r-- 1 root root 350K Mar 20 05:15 packages/org-roam-20220319.1902.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 20 05:15 packages/org-roam-badge.svg
+4.0K -rw-r--r-- 1 root root  521 Mar 20 05:15 packages/org-roam-bibtex-20220213.1609.entry
+200K -rw-r--r-- 1 root root 200K Mar 20 05:15 packages/org-roam-bibtex-20220213.1609.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 20 05:15 packages/org-roam-bibtex-badge.svg
+4.0K -rw-r--r-- 1 root root  893 Mar 20 05:15 packages/org-roam-bibtex-readme.txt
+4.0K -rw-r--r-- 1 root root 1.7K Mar 20 05:15 packages/org-roam-bibtex.log
+4.0K -rw-r--r-- 1 root root 2.1K Mar 20 05:15 packages/org-roam-readme.txt
+ 12K -rw-r--r-- 1 root root 9.8K Mar 20 05:15 packages/org-roam-timestamps-20220111.1755.el
+4.0K -rw-r--r-- 1 root root  505 Mar 20 05:15 packages/org-roam-timestamps-20220111.1755.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 20 05:15 packages/org-roam-timestamps-badge.svg
+4.0K -rw-r--r-- 1 root root  309 Mar 20 05:15 packages/org-roam-timestamps-readme.txt
+4.0K -rw-r--r-- 1 root root  692 Mar 20 05:15 packages/org-roam-timestamps.log
+4.0K -rw-r--r-- 1 root root  475 Mar 20 05:15 packages/org-roam-ui-20220225.2151.entry
+5.3M -rw-r--r-- 1 root root 5.3M Mar 20 05:15 packages/org-roam-ui-20220225.2151.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 20 05:15 packages/org-roam-ui-badge.svg
+4.0K -rw-r--r-- 1 root root   93 Mar 20 05:15 packages/org-roam-ui-readme.txt
+ 12K -rw-r--r-- 1 root root 9.9K Mar 20 05:15 packages/org-roam-ui.log
