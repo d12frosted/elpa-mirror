@@ -2445,7 +2445,7 @@
 	    ("Mattias Engdegård" . "mattiase@acm.org"))
 	   (:commit . "5a918af0c99ab83355d4ec73a2fb39e70c173956"))])
  (repology .
-	   [(1 2 2)
+	   [(1 2 3)
 	    ((emacs
 	      (26 1)))
 	    "Repology API access via Elisp" tar
@@ -2454,7 +2454,7 @@
 	     (:authors
 	      ("Nicolas Goaziou" . "mail@nicolasgoaziou.fr"))
 	     (:url . "https://elpa.gnu.org/packages/repology.html")
-	     (:commit . "db7ddc5593964e9cecb162627bdd2a0f59658f3f"))])
+	     (:commit . "b5829003decbdbe9002e7e1d29f45989a4659927"))])
  (rich-minority .
 		[(1 0 3)
 		 ((cl-lib
