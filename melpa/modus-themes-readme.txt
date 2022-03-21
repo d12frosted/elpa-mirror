@@ -97,6 +97,7 @@ missing package or change you would like to see.
     deadgrep
     debbugs
     deft
+    devdocs
     dictionary
     diff-hl
     diff-mode

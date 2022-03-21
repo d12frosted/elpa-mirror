@@ -1,13 +1,13 @@
 (format-all .
-	    [(20220319 635)
+	    [(20220321 632)
 	     ((emacs
 	       (24 4))
 	      (inheritenv
 	       (0 1))
 	      (language-id
-	       (0 16)))
+	       (0 18)))
 	     "Auto-format C, C++, JS, Python, Ruby and 50 other languages" single
-	     ((:commit . "5407bcf05c8123bada150bfac0929bd02c8cdd52")
+	     ((:commit . "6bcd9a5f0af2627536d22c64af559b776b27cd64")
 	      (:authors
 	       ("Lassi Kortela" . "lassi@lassi.io"))
 	      (:maintainer "Lassi Kortela" . "lassi@lassi.io")

@@ -787,7 +787,7 @@
 	       ("Leo Liu" . "sdl.web@gmail.com"))
 	      (:keywords "killing" "convenience"))])
  (ebdb .
-       [(0 8 12)
+       [(0 8 13)
 	((emacs
 	  (25 1))
 	 (seq
@@ -798,7 +798,7 @@
 	 (:maintainer "Eric Abrahamsen" . "eric@ericabrahamsen.net")
 	 (:authors
 	  ("Eric Abrahamsen" . "eric@ericabrahamsen.net"))
-	 (:commit . "ecbbc3555061e4b7de9f973946d8191edf075323"))])
+	 (:commit . "333c68f7e95590e867ca02742c9f5d612e633c28"))])
  (ebdb-gnorb .
 	     [(1 0 2)
 	      ((gnorb
@@ -3084,7 +3084,7 @@
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
 	    (:commit . "e82b7ff371a348d9e5a1ac7bf4b652f0a2d38198"))])
  (vertico-posframe .
-		   [(0 5 2)
+		   [(0 5 3)
 		    ((emacs
 		      (26 0))
 		     (posframe
@@ -3097,7 +3097,7 @@
 		     (:maintainer "Feng Shu" . "tumashu@163.com")
 		     (:authors
 		      ("Feng Shu" . "tumashu@163.com"))
-		     (:commit . "cd54c3f022a47afc0a540eee117efc38289ae72d"))])
+		     (:commit . "47e9aa75431e76830d826f6b8e4466f62449819e"))])
  (vigenere .
 	   [(1 0)
 	    ((emacs

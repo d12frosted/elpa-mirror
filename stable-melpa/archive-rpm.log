@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 379dddfbe4e801df6fdb81a55528fab6c7dbb78e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/archive-rpm/
-  to /tmp/archive-rpm90dXUh/archive-rpm-20220314.1647
+  to /tmp/archive-rpmmhfMta/archive-rpm-20220314.1647
     archive-cpio.el -> archive-cpio.el
     archive-rpm-pkg.el -> archive-rpm-pkg.el
     archive-rpm.el -> archive-rpm.el
@@ -16,9 +16,10 @@ Created archive-rpm-20220314.1647.tar containing:
   archive-rpm-20220314.1647/archive-cpio.el
   archive-rpm-20220314.1647/archive-rpm-pkg.el
   archive-rpm-20220314.1647/archive-rpm.el
-Built archive-rpm in 5.723s, finished at 2022-03-21T04:43:56+0000
+Failed to fetch badge
+Built archive-rpm in 8.082s, finished at 2022-03-21T09:05:00+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  342 Mar 21 04:43 packages/archive-rpm-20220314.1647.entry
- 32K -rw-r--r-- 1 root root  30K Mar 21 04:43 packages/archive-rpm-20220314.1647.tar
+4.0K -rw-r--r-- 1 root root  342 Mar 21 09:04 packages/archive-rpm-20220314.1647.entry
+ 32K -rw-r--r-- 1 root root  30K Mar 21 09:04 packages/archive-rpm-20220314.1647.tar
 4.0K -rw-r--r-- 1 root root 1.2K Mar 21 04:43 packages/archive-rpm-badge.svg
-4.0K -rw-r--r-- 1 root root  269 Mar 21 04:43 packages/archive-rpm-readme.txt
+4.0K -rw-r--r-- 1 root root  269 Mar 21 09:04 packages/archive-rpm-readme.txt

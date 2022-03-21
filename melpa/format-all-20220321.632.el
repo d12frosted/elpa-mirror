@@ -2,10 +2,10 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
-;; Package-Version: 20220319.635
-;; Package-Commit: 5407bcf05c8123bada150bfac0929bd02c8cdd52
+;; Package-Version: 20220321.632
+;; Package-Commit: 6bcd9a5f0af2627536d22c64af559b776b27cd64
 ;; Version: 0.5.0
-;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.16"))
+;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.18"))
 ;; Keywords: languages util
 ;; SPDX-License-Identifier: MIT
 
@@ -150,6 +150,7 @@
     ("Java" clang-format)
     ("JavaScript" prettier)
     ("JSON" prettier)
+    ("JSON5" prettier)
     ("Jsonnet" jsonnetfmt)
     ("JSX" prettier)
     ("Kotlin" ktlint)
@@ -716,13 +717,6 @@ Consult the existing formatters for examples of BODY."
   (:features)
   (:format (format-all--buffer-easy executable)))
 
-(define-format-all-formatter zprint
-  (:executable "zprint")
-  (:install)
-  (:languages "Clojure")
-  (:features)
-  (:format (format-all--buffer-easy executable)))
-
 (define-format-all-formatter cmake-format
   (:executable "cmake-format")
   (:install "pip install cmake-format")
@@ -1015,8 +1009,9 @@ Consult the existing formatters for examples of BODY."
   (:executable "prettier")
   (:install "npm install --global prettier @prettier/plugin-lua @prettier/plugin-php prettier-plugin-solidity prettier-plugin-svelte prettier-plugin-toml")
   (:languages
-   "CSS" "GraphQL" "HTML" "JavaScript" "JSON" "JSX" "Less" "Lua" "Markdown"
-   "PHP" "SCSS" "Solidity" "Svelte" "TOML" "TSX" "TypeScript" "Vue" "YAML"
+   "CSS" "GraphQL" "HTML" "JavaScript" "JSON" "JSON5" "JSX" "Less" "Lua"
+   "Markdown" "PHP" "SCSS" "Solidity" "Svelte" "TOML" "TSX" "TypeScript"
+   "Vue" "YAML"
    "_Angular" "_Flow")
   (:features region)
   (:format
@@ -1256,6 +1251,13 @@ Consult the existing formatters for examples of BODY."
   (:executable "yapf")
   (:install "pip install yapf")
   (:languages "Python")
+  (:features)
+  (:format (format-all--buffer-easy executable)))
+
+(define-format-all-formatter zprint
+  (:executable "zprint")
+  (:install)
+  (:languages "Clojure")
   (:features)
   (:format (format-all--buffer-easy executable)))
 

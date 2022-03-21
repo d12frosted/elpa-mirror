@@ -2,9 +2,9 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-language-id
-;; Package-Version: 20220320.1407
-;; Package-Commit: cca4441fcf3721f5016c29ff3b537648a5c0f465
-;; Version: 0.17
+;; Package-Version: 20220321.638
+;; Package-Commit: 46a44793a2ac73c7b70f8b4c11818423aa1582e3
+;; Version: 0.18
 ;; Package-Requires: ((emacs "24.3"))
 ;; Keywords: languages util
 ;; SPDX-License-Identifier: ISC
@@ -29,6 +29,8 @@
 
 ;;; Code:
 
+(require 'cl-lib)
+
 (defvar language-id--file-name-extension nil
   "Internal variable for file name extension during lookup.")
 
@@ -47,7 +49,12 @@
 
     ;; json-mode is derived from javascript-mode.
     ("JSON5"
-     (json-mode (language-id--file-name-extension ".json5")))
+     (json-mode
+      (language-id--file-name-extension ".json5"))
+     (web-mode
+      (web-mode-content-type "json")
+      (web-mode-engine "none")
+      (language-id--file-name-extension ".json5")))
     ("JSON"
      json-mode
      (web-mode (web-mode-content-type "json") (web-mode-engine "none")))
