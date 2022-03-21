@@ -1,0 +1,13 @@
+(prettier-rc .
+	     [(20220321 1516)
+	      ((emacs
+		(24 3))
+	       (prettier-js
+		(0 1 0)))
+	      "Use local rc rules with prettier" single
+	      ((:commit . "eaef4cd76094c7351a2da508b4bc3b25966d0da6")
+	       (:authors
+		("Joel Bryan Juliano <joelbryan dot juliano at gmail dot com>"))
+	       (:maintainer "Joel Bryan Juliano <joelbryan dot juliano at gmail dot com>")
+	       (:keywords "convenience" "edit" "js" "ts" "rc" "prettierrc" "prettier-rc" "prettier" "prettier-js")
+	       (:url . "https://github.com/jjuliano/prettier-rc-emacs"))])
