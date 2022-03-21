@@ -59,12 +59,14 @@ you are in the minibuffer the candidates are simply the possible
 completions of your input.  Embark provides three commands to work
 on candidate sets:
 
-- The `embark-collect-snapshot' command produces a buffer listing
-  all candidates, for you to peruse and run actions on at your
-  leisure.  The candidates can be viewed in a grid or as a list
-  showing additional annotations.  The `embark-collect-live'
-  variant produces "live" Embark Collect buffers, meaning they
-  autoupdate as the set of candidates changes.
+- The `embark-act-all' command runs the same action on each of the
+  current candidates. It is just like using `embark-act' on each
+  candidate in turn.
+
+- The `embark-collect' command produces a buffer listing all
+  candidates, for you to peruse and run actions on at your leisure.
+  The candidates can be viewed in a grid or as a list showing
+  additional annotations.
 
 - The `embark-export' command tries to open a buffer in an
   appropriate major mode for the set of candidates.  If the
@@ -73,7 +75,8 @@ on candidate sets:
   get a buffer in package menu mode.
 
 These are always available as "actions" (although they do not act
-on just the current target but on all candidates) for embark-act and
-are bound to S, L and E, respectively, in embark-general-map.  This
-means that you do not have to bind your own key bindings for these
-(although you can, of course), just a key binding for `embark-act'.
+on just the current target but on all candidates) for embark-act
+and are bound to A, S (for "snapshot") and E, respectively, in
+embark-general-map.  This means that you do not have to bind your
+own key bindings for these (although you can, of course), just a
+key binding for `embark-act'.
