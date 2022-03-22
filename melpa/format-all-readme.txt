@@ -18,7 +18,7 @@ Supported languages:
 - C/C++/Objective-C (clang-format, astyle)
 - C# (clang-format, astyle)
 - Cabal (cabal-fmt)
-- Clojure/ClojureScript (node-cljfmt, zprint)
+- Clojure/ClojureScript (zprint, node-cljfmt)
 - CMake (cmake-format)
 - Crystal (crystal tool format)
 - CSS/Less/SCSS (prettier)

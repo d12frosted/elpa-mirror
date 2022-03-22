@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
-;; Package-Version: 20220321.632
-;; Package-Commit: 6bcd9a5f0af2627536d22c64af559b776b27cd64
+;; Package-Version: 20220322.1003
+;; Package-Commit: eb2a7fa6da15d23b57921218a36ac67d523e81f1
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.18"))
 ;; Keywords: languages util
@@ -33,7 +33,7 @@
 ;; - C/C++/Objective-C (clang-format, astyle)
 ;; - C# (clang-format, astyle)
 ;; - Cabal (cabal-fmt)
-;; - Clojure/ClojureScript (node-cljfmt, zprint)
+;; - Clojure/ClojureScript (zprint, node-cljfmt)
 ;; - CMake (cmake-format)
 ;; - Crystal (crystal tool format)
 ;; - CSS/Less/SCSS (prettier)
@@ -127,7 +127,7 @@
     ("C#" clang-format)
     ("C++" clang-format)
     ("Cabal Config" cabal-fmt)
-    ("Clojure" cljfmt)
+    ("Clojure" zprint)
     ("CMake" cmake-format)
     ("Crystal" crystal)
     ("CSS" prettier)
