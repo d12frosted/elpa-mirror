@@ -10,7 +10,7 @@
 ;; Created: 08 March 2022
 ;; URL: https://github.com/jjuliano/prettier-rc-emacs
 ;; Package-Version: 20220321.1516
-;; Package-Commit: eaef4cd76094c7351a2da508b4bc3b25966d0da6
+;; Package-Commit: f2aa1a7469d62a11479a3abb826c8fb96dd00082
 ;; Package-Requires: ((emacs "24.3") (prettier-js "0.1.0"))
 ;; Version: 0.1.0
 ;; Keywords: convenience edit js ts rc prettierrc prettier-rc prettier prettier-js
