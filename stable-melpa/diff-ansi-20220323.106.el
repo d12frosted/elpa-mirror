@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-diff-ansi
-;; Package-Version: 20220211.548
-;; Package-Commit: 6ced92510df2c121e577189fa838dbf84303a0a9
+;; Package-Version: 20220323.106
+;; Package-Commit: 39b39a7265c59e413ff32f1fccebe4dc1a7a966e
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
 
@@ -59,7 +59,7 @@ This must take the diff content as the `standard-input'."
 ;; Extra arguments for command presets.
 
 (defcustom diff-ansi-extra-args-for-delta
-  (list "--side-by-side" "--no-gitconfig" "--syntax-theme=github" "--true-color=always")
+  (list "--side-by-side" "--no-gitconfig" "--true-color=always")
   "Additional arguments to pass to `delta'."
   :type '(repeat string))
 

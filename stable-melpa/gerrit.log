@@ -4,25 +4,27 @@ Source:  https://github.com/thisch/gerrit.el.git
 
 Updating /mnt/store/melpa/working/gerrit/
 Checking out origin/HEAD
-Checking out bd0349236baacfdcdf82cb33c9ba45f451b9b255
+Checking out 8feebfb1d31f9490dda81726286bcc1d78e7d840
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gerrit/
-  to /tmp/gerritVQRmAL/gerrit-20220208.2103
+  to /tmp/gerritQ1Apwr/gerrit-20220323.851
     gerrit-rest.el -> gerrit-rest.el
     gerrit.el -> gerrit.el
-Created gerrit-20220208.2103.tar containing:
-  gerrit-20220208.2103/
-  gerrit-20220208.2103/gerrit-pkg.el
-  gerrit-20220208.2103/gerrit-rest.el
-  gerrit-20220208.2103/gerrit.el
-Built gerrit in 4.713s, finished at 2022-03-23T00:20:16+0000
+Created gerrit-20220323.851.tar containing:
+  gerrit-20220323.851/
+  gerrit-20220323.851/gerrit-pkg.el
+  gerrit-20220323.851/gerrit-rest.el
+  gerrit-20220323.851/gerrit.el
+Built gerrit in 5.886s, finished at 2022-03-23T08:55:42+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  390 Mar 23 00:20 packages/gerrit-20220208.2103.entry
- 72K -rw-r--r-- 1 root root  70K Mar 23 00:20 packages/gerrit-20220208.2103.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 23 00:20 packages/gerrit-badge.svg
-8.0K -rw-r--r-- 1 root root 4.7K Mar 22 19:53 packages/gerrit-download-20150714.1408.el
-4.0K -rw-r--r-- 1 root root  438 Mar 22 19:53 packages/gerrit-download-20150714.1408.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 22 19:53 packages/gerrit-download-badge.svg
-4.0K -rw-r--r-- 1 root root  422 Mar 22 19:53 packages/gerrit-download-readme.txt
-4.0K -rw-r--r-- 1 root root  231 Mar 23 00:20 packages/gerrit-download.log
-4.0K -rw-r--r-- 1 root root  441 Mar 23 00:20 packages/gerrit-readme.txt
+4.0K -rw-r--r-- 1 root root  390 Mar 23 04:39 packages/gerrit-20220208.2103.entry
+ 72K -rw-r--r-- 1 root root  70K Mar 23 04:39 packages/gerrit-20220208.2103.tar
+4.0K -rw-r--r-- 1 root root  389 Mar 23 08:55 packages/gerrit-20220323.851.entry
+ 80K -rw-r--r-- 1 root root  80K Mar 23 08:55 packages/gerrit-20220323.851.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 23 08:55 packages/gerrit-badge.svg
+8.0K -rw-r--r-- 1 root root 4.7K Mar 23 08:55 packages/gerrit-download-20150714.1408.el
+4.0K -rw-r--r-- 1 root root  438 Mar 23 08:55 packages/gerrit-download-20150714.1408.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 23 08:55 packages/gerrit-download-badge.svg
+4.0K -rw-r--r-- 1 root root  422 Mar 23 08:55 packages/gerrit-download-readme.txt
+4.0K -rw-r--r-- 1 root root  657 Mar 23 08:55 packages/gerrit-download.log
+4.0K -rw-r--r-- 1 root root  441 Mar 23 08:55 packages/gerrit-readme.txt

@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/grip-mode
 ;; Version: 2.3.2
-;; Package-Version: 20220311.1034
-;; Package-Commit: d49af7a21a1f81d809566755085679bbc7d794a5
+;; Package-Version: 20220323.312
+;; Package-Commit: 3071699b96c23806b2a08f50912004e5c3e88553
 ;; Package-Requires: ((emacs "24.4"))
 ;; Keywords: convenience, markdown, preview
 
@@ -58,9 +58,17 @@
   :type 'file
   :group 'grip)
 
+(defcustom grip-preview-use-webkit t
+  "Use embedded webkit to preview.
+
+This requires GNU/Emacs version >= 26 and built with the `--with-xwidgets`
+option."
+  :type 'boolean
+  :group 'grip)
+
 (defcustom grip-url-browser nil
   "Browser to launch Markdown/Org previews.
-Use default browser if nil."
+Use default browser if nil. It respects `grip-preview-use-webkit'."
   :type '(choice (const :tag "None" nil) string)
   :group 'grip)
 
@@ -90,14 +98,7 @@ When nil, only update the preview on file save."
   :type 'string
   :group 'grip)
 
-(defcustom grip-preview-use-webkit t
-  "Use embedded webkit to preview.
-
-This requires GNU/Emacs version >= 26 and built with the `--with-xwidgets`
-option."
-  :type 'boolean
-  :group 'grip)
-
+
 
 ;; Externals
 (declare-function xwidget-buffer "xwidget")

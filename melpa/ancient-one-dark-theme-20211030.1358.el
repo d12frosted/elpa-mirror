@@ -5,6 +5,8 @@
 ;; Author: Daniils Petrovs
 ;; Homepage: https://github.com/DaniruKun/ancient-one-dark-emacs-theme
 ;; Version: 0.1
+;; Package-Version: 20211030.1358
+;; Package-Commit: db79f86842c10874ce18c1a1e4496e9d0e28bed9
 ;; Package-Requires: ((emacs "24.1"))
 ;; Created with ThemeCreator, https://github.com/mswift42/themecreator.
 

@@ -3,11 +3,25 @@ Fetcher: github
 Source:  https://github.com/rnkn/fountain-mode.git
 
 Updating /mnt/store/melpa/working/fountain-mode/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/rnkn/fountain-mode.git/': gnutls_handshake() failed: Error in the pull function.
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 0aab300c0a6225d93087ae112f123eb89048ce1d
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/fountain-mode/
+  to /tmp/fountain-modebyv0r3/fountain-mode-20211223.405
+    fountain-mode.el -> fountain-mode.el
+  ! doc/fountain-mode.texi -> fountain-mode.texi
+  ! contrib/fountain-theme.el -> fountain-theme.el
+Generating /tmp/fountain-modebyv0r3/fountain-mode-20211223.405/fountain-mode.info
+Created fountain-mode-20211223.405.tar containing:
+  fountain-mode-20211223.405/
+  fountain-mode-20211223.405/dir
+  fountain-mode-20211223.405/fountain-mode-pkg.el
+  fountain-mode-20211223.405/fountain-mode.el
+  fountain-mode-20211223.405/fountain-mode.info
+  fountain-mode-20211223.405/fountain-theme.el
+Built fountain-mode in 12.470s, finished at 2022-03-23T08:53:57+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  393 Mar 23 08:53 packages/fountain-mode-20211223.405.entry
+180K -rw-r--r-- 1 root root 180K Mar 23 08:53 packages/fountain-mode-20211223.405.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 23 08:53 packages/fountain-mode-badge.svg
+4.0K -rw-r--r-- 1 root root 3.3K Mar 23 08:53 packages/fountain-mode-readme.txt
