@@ -1,0 +1,28 @@
+(cider .
+       [(20220324 118)
+	((emacs
+	  (26))
+	 (clojure-mode
+	  (5 14))
+	 (parseedn
+	  (1 0 6))
+	 (queue
+	  (0 2))
+	 (spinner
+	  (1 7))
+	 (seq
+	  (2 22))
+	 (sesman
+	  (0 3 2)))
+	"Clojure Interactive Development Environment that Rocks" tar
+	((:commit . "41840db4776ecc1a966efe2d0fe842b40ddaf095")
+	 (:authors
+	  ("Tim King" . "kingtim@gmail.com")
+	  ("Phil Hagelberg" . "technomancy@gmail.com")
+	  ("Bozhidar Batsov" . "bozhidar@batsov.dev")
+	  ("Artur Malabarba" . "bruce.connor.am@gmail.com")
+	  ("Hugo Duncan" . "hugo@hugoduncan.org")
+	  ("Steve Purcell" . "steve@sanityinc.com"))
+	 (:maintainer "Bozhidar Batsov" . "bozhidar@batsov.dev")
+	 (:keywords "languages" "clojure" "cider")
+	 (:url . "http://www.github.com/clojure-emacs/cider"))])

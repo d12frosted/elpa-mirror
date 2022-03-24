@@ -5,7 +5,7 @@
 ;; Author: Kevin Brubeck Unhammer <unhammer@fsfe.org>
 ;; Version: 0.1.0
 ;; Package-Version: 20170105.1423
-;; Package-Commit: a2d924725380aca4d61df4a70825fc4b76185938
+;; Package-Commit: 5230c18456ab034f2fb69acdbef62c1abae6a8cf
 ;; Url: http://wiki.apertium.org/wiki/Emacs
 ;; Keywords: languages
 ;; Package-Requires: ((dix "0.3.0") (evil "1.0.7"))

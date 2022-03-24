@@ -1,10 +1,6 @@
 Basic usage:
 
-(add-hook 'nxml-mode-hook
-	  (lambda () (and buffer-file-name
-			  (string-match "^modes\\.xml$\\|\\.\\(dix\\|metadix\\|t[0-9s]x\\|lrx\\)$"
-                                     buffer-file-name)
-			  (dix-mode 1))))
+(add-hook 'nxml-mode-hook #'dix-on-nxml-mode)
 
 Unless you installed from MELPA, you'll also need
 

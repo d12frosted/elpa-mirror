@@ -8,7 +8,7 @@
 ;; Modified: October 17, 2020
 ;; Version: 0.0.1
 ;; Package-Version: 20211214.1851
-;; Package-Commit: 99f4d9d38b8e6a5b3f32bd4f6a3c7f68c2523dd9
+;; Package-Commit: dd7edc12568902561c8939e389626b3f0c7f6312
 ;; Keywords: convenience
 ;; Homepage: https://git.sr.ht/~zetagon/el-secretario
 ;; Package-Requires: ((emacs "27.1") (el-secretario "0.0.1") (elfeed "3.4.1"))
