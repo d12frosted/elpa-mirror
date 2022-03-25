@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ibuffer
 ;; Version: 1.4.0
 ;; Package-Version: 20220228.1513
-;; Package-Commit: b494b329400dafac5d41ec90d505120559ee589e
+;; Package-Commit: 66317e945dc63b7947b99162d8c482ffe936ff96
 ;; Package-Requires: ((emacs "24.4") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ibuffer
 
