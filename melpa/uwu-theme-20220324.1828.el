@@ -6,7 +6,7 @@
 ;; Created: December 24, 2021
 ;; Version: 1.0.0
 ;; Package-Version: 20220324.1828
-;; Package-Commit: 04fb60d75295a057dcc4d050217122215e6765d6
+;; Package-Commit: a40f96f35cd6dafe0fc98bd19c9783f6b265173c
 ;; Keywords: custom themes, dark, faces
 ;; License: MIT
 ;; URL: https://github.com/kborling/uwu-theme

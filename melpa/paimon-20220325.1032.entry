@@ -1,0 +1,27 @@
+(paimon .
+	[(20220325 1032)
+	 ((aio
+	   (1 0))
+	  (closql
+	   (1 2 0))
+	  (emacs
+	   (27 1))
+	  (emacsql
+	   (3 0 0))
+	  (emacsql-sqlite
+	   (3 0 0))
+	  (f
+	   (0 20 0))
+	  (ht
+	   (2 4))
+	  (transient
+	   (0 3 7))
+	  (request
+	   (0 3 3)))
+	 "A major mode for Splunk" tar
+	 ((:commit . "8e28efe96a171b04b1fd83f763ca26e939dd44ed")
+	  (:authors
+	   ("r0man" . "roman@burningswell.com"))
+	  (:maintainer "r0man" . "roman@burningswell.com")
+	  (:keywords "paimon" "search" "tools")
+	  (:url . "https://github.com/r0man/paimon.el"))])
