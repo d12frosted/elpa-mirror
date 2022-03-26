@@ -269,7 +269,7 @@
 	  (:keywords "brief" "emulations" "crisp")
 	  (:url . "http://elpa.gnu.org/packages/brief.html"))])
  (buffer-env .
-	     [(0 2)
+	     [(0 3)
 	      ((emacs
 		(27 1)))
 	      "Buffer-local process environments" tar
@@ -278,7 +278,7 @@
 	       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	       (:authors
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
-	       (:commit . "dc7342277f5094058f88f1a9a76cc8879f95d05a"))])
+	       (:commit . "ba1c9d24d3f1ba58445cbf1f762ba6859b66f6bf"))])
  (buffer-expose .
 		[(0 4 3)
 		 ((emacs
@@ -1360,7 +1360,7 @@
 	   (:authors
 	    ("Thierry Volpiatto" . "thievol@posteo.net")))])
  (isearch-mb .
-	     [(0 4)
+	     [(0 5)
 	      ((emacs
 		(27 1)))
 	      "Control isearch from the minibuffer" tar
@@ -1369,7 +1369,7 @@
 	       (:maintainer "Augusto Stoffel" . "arstoffel@gmail.com")
 	       (:authors
 		("Augusto Stoffel" . "arstoffel@gmail.com"))
-	       (:commit . "ee6a67c7e12eb3c49b96f9aeeaacda110b9d1208"))])
+	       (:commit . "e70ba8f594afef989006493dd71bd693a29e9f42"))])
  (iterators .
 	    [(0 1 1)
 	     ((emacs

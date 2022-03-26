@@ -32,15 +32,16 @@ isearch-mb-mode RET'.
   During a search, `isearch-mb-minibuffer-map' is active. By default, it
   includes the following commands:
 
-  • `C-s', `↓': `isearch-repeat-forward'
-  • `C-r', `↑': `isearch-repeat-backward'
-  • `M-<': `beginning-of-buffer' (in the search buffer)
-  • `M->': `end-of-buffer' (in the search buffer)
-  • `M-v', `<prior>': `scroll-down-command' (in the search buffer)
-  • `C-v', `<next>': `scroll-up-command' (in the search buffer)
-  • `M-%': `isearch-query-replace'
-  • `C-M-%': `isearch-query-replace-regexp'
-  • `M-s' prefix: similar to standard isearch
+  • `C-s', `↓': Repeat search forwards.
+  • `C-r', `↑': Repeat search backwards.
+  • `M-<': Go to first match (or /n/-th match with numeric argument).
+  • `M->': Go to last match (or /n/-th last match with numeric
+    argument).
+  • `C-v', `<next>': Search forward from the bottom of the window.
+  • `M-v', `<prior>': Search backward from the top of the window.
+  • `M-%': Replace occurrences of the search string.
+  • `C-M-%': Replace occurrences of the search string (regexp mode).
+  • `M-s' prefix: similar to standard isearch.
 
   Everything else works as in a plain minibuffer. For instance, `RET'
   ends the search normally and `C-g' cancels it.
@@ -74,19 +75,27 @@ isearch-mb-mode RET'.
   │ (global-set-key (kbd "C-r") 'isearch-backward-regexp)
   └────
 
-  For a Swiper-style fuzzy search, where spaces match any sequence of
-  characters in a line, use the settings below.  You can still toggle
-  strict whitespace matching with `M-s SPC' during a search, or escape a
-  space with a backslash to match it literally.
+  Another handy option is to enable lax whitespace matching in one of
+  the two variations indicated below.  You can still toggle strict
+  whitespace matching with `M-s SPC' during a search, or escape a space
+  with a backslash to match it literally.
 
   ┌────
   │ (setq-default
   │  isearch-regexp-lax-whitespace t
-  │  search-whitespace-regexp ".*?")
+  │  ;; Swiper style: space matches any sequence of characters in a line.
+  │  search-whitespace-regexp ".*?"
+  │  ;; Alternative: space matches whitespace, newlines and punctuation.
+  │  search-whitespace-regexp "\\W+")
   └────
+
+  Finally, you may want to check out the [isearch-mb wiki] for
+  additional tips and tricks.
 
 
 [Consult] <https://github.com/minad/consult>
+
+[isearch-mb wiki] <https://github.com/astoff/isearch-mb/wiki>
 
 
 3 Interaction with other isearch extensions
@@ -141,8 +150,8 @@ isearch-mb-mode RET'.
     │   (if (eobp)
     │       (isearch-mb--after-exit
     │        (lambda ()
-    │          (move-end-of-line arg)
-    │          (isearch-done)))
+    │ 	 (move-end-of-line arg)
+    │ 	 (isearch-done)))
     │     (move-end-of-line arg)))
     │ 
     │ (define-key isearch-mb-minibuffer-map (kbd "C-e") 'move-end-of-line-maybe-ending-isearch)
@@ -163,5 +172,5 @@ isearch-mb-mode RET'.
 ══════════════
 
   Discussions, suggestions and code contributions are welcome! Since
-  this package is part of GNU ELPA, nontrivial contributions (above 15
-  lines of code) require a copyright assignment to the FSF.
+  this package is part of GNU ELPA, contributions require a copyright
+  assignment to the FSF.

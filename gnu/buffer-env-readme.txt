@@ -9,20 +9,21 @@ Table of Contents
 1. Basic setup
 .. 1. On the project side
 .. 2. On the Emacs side
-2. Alternative settings
+2. How this package works
+3. Integration with other environment management mechanisms
 .. 1. Python virtualenvs
 .. 2. .env files
 .. 3. Direnv
-.. 4. Non-Unix-like systems
-3. Compatibility issues
-4. Related packages
-5. Contributing
+4. Compatibility issues
+.. 1. Non-Unix-like systems
+5. Related packages
+6. Contributing
 
 
 With this package, you can teach Emacs to call the correct version of
 external programs such as linters, compilers and language servers on a
 /per-project/ basis.  Thus you can work on several projects in parallel
-without undue interference and switching seamlessly between them.
+with no undue interference and switch seamlessly between them.
 
 
 1 Basic setup
@@ -36,10 +37,10 @@ without undue interference and switching seamlessly between them.
   environment variables.  Place this script at the root directory of
   your project.
 
-  This follows the ansatz of the popular [direnv] program, and is mostly
-  compatible with it.  However, buffer-env is entirely independent of
-  direnv so it is not possible to use direnv-specific features in the
-  `.envrc' scripts — at least not directly.
+  This follows the approach of the popular [direnv] program, and is
+  mostly compatible with it.  However, buffer-env is entirely
+  independent of direnv so it is not possible to use direnv-specific
+  features in the `.envrc' scripts — at least not directly.
 
   Alternatively, it is possible to configure buffer-env to directly
   support other environment setup methods, such as Python virtualenvs or
@@ -59,98 +60,115 @@ without undue interference and switching seamlessly between them.
   │ (add-hook 'hack-local-variables-hook 'buffer-env-update)
   └────
 
-  This way, any buffer potentially affected by [directory-local
-  variables] will also be affected by buffer-env.  It is nonetheless
-  possible to call `buffer-env-update' interactively or add it only to
-  specific major-mode hooks.
+  In this way, any buffer potentially affected by [directory-local
+  variables] will also be affected by buffer-env.  It is also possible
+  to add `buffer-env-update' only to specific major-mode hooks, or call
+  it interactively.
 
 
 [directory-local variables]
 <https://www.gnu.org/software/emacs/manual/html_node/emacs/Directory-Variables.html>
 
 
-2 Alternative settings
-══════════════════════
+2 How this package works
+════════════════════════
 
-  This package works as follows.  First, a file named `buffer-env-file'
-  is looked up in the current directory or one of its parents.  In case
-  of success, `buffer-env-command' is executed in a shell, with the
-  found file as argument.  This command should print a null-separated
-  list of environment variables (and nothing else) to stdout.  The
-  buffer-local values of `process-environment' and `exec-path' are then
-  set based on that.
+  When called interactively, `buffer-env-update' asks for a script file
+  and executes it (in the sense detailed below).  The role of the script
+  is to set some environment variables.  Then the Emacs variables
+  `process-environment' and `exec-path' are made buffer-local and their
+  values are set so as to replicate the environment defined by the
+  script.
 
-  With this in sight, it should be possible to integrate with any of the
-  numerous environment management tools out there.
+  When `buffer-env-update' is called from a hook, a file named
+  `buffer-env-script-name' is looked up in the current directory or one
+  of its parents.  If found, the same procedure as in the interactive
+  case takes place.  Otherwise, nothing happens.
+
+  It remains to clarify what “executing a script” means in the
+  paragraphs above.  Normally, it simply means to execute the script as
+  a shell script and collect all the exported variables.  However,
+  certain script names are treated specially.  These are:
+
+  • `.env': These files, used by Docker, Node.js and others, are simple
+    lists of `VARIABLE=value' pairs.  They are still executed as shell
+    scripts (which dictates when and how quotes are to be used, for
+    instance), but no `export' statements are needed.
+  • `guix.scm': The development environment of the Guix package is
+    loaded and exported to Emacs.  Make sure you have entered `guix
+    shell' at least once before to install the dependencies, otherwise
+    you may block Emacs for a long time.
+
+  For instructions on how to extend this list, see the documentation of
+  the variable `buffer-env-commands'.
 
 
-2.1 Python virtualenvs
+3 Integration with other environment management mechanisms
+══════════════════════════════════════════════════════════
+
+3.1 Python virtualenvs
 ──────────────────────
 
-  One can always source a virtualenv activation script from an `.envrc'
-  script, but this additional step can be avoided by calling
-  `buffer-env-update' manually and pointing to the `bin/activate'
-  script.  This can be automated if you create virtualenvs in a
-  predictable place, say in a `.venv' directory at the root of each
-  project; in this case you can say
+  In most cases, the easiest way to interface with Python virtualenvs is
+  to create an `.envrc' file with the following contents:
 
   ┌────
-  │ (setq buffer-env-file ".venv/bin/activate")
+  │ source path-to-virtualenv/bin/activate
+  └────
+
+  You can also call `buffer-env-activate' interactively and select the
+  `activate' script directly.
+
+  However, if you want to avoid writing `.envrc' scripts and you create
+  virtualenvs in a predictable place, say in a `.venv' directory at the
+  root of each project, you can say
+
+  ┌────
+  │ (setq buffer-env-script-name ".venv/bin/activate")
   └────
 
   or a variation thereof.  Note that it is also possible to provide an
-  absolute path for `buffer-env-file', and it is possible to specify it
-  as a buffer- or directory-local variable.
+  absolute path for `buffer-env-script-name', and it is possible to
+  specify it as a buffer- or directory-local variable.
 
 
-2.2 .env files
+3.2 .env files
 ──────────────
 
-  To gather environment variables from `.env' files in the style of
-  Docker, Node.js and others, use the following settings:
-
-  ┌────
-  │ (setq buffer-env-file ".env")
-  │ (setq buffer-env-command "set -a && >&2 . \"$0\" && env -0")
-  └────
-
-  Obviously, this assumes that the `.env' file is correct when
-  interpreted as a shell script, which dictates, for instance, how and
-  when quotes are to be used.
+  To load the environment defined by a `.env' file, you can select it
+  interactively with `buffer-env-update'.  To automate the process, set
+  `buffer-env-script-name' to `".env"', either globally, dir-locally or
+  buffer-locally.
 
 
-2.3 Direnv
+3.3 Direnv
 ──────────
 
-  As mentioned above, the default settings are compatible with direnv,
-  but only as long as `.envrc' is a regular shell script.  If you need
-  any direnv extensions, you will probably be better served by the
-  [envrc] package.  It is nonetheless possible to take some advantage of
-  direnv by setting
+  Buffer-env is /mostly/ compatible with direnv; specifically, it
+  assumes `.envrc' is a regular shell script, so you can't directly use
+  anything from direnv's library of helper functions.  A workaround is
+  to use the following configuration:
 
   ┌────
-  │ (setq buffer-env-command "direnv exec . env -0")
+  │ (with-eval-after-load 'buffer-env
+  │   (add-to-list 'buffer-env-commands '(".envrc" . "direnv exec . env -0")))
   └────
+
+  If you need tighter integration with direnv, you may want to check out
+  the [envrc] package.
 
 
 [envrc] <https://github.com/purcell/envrc>
 
 
-2.4 Non-Unix-like systems
-─────────────────────────
-
-  I need to know what the appropriate value of `buffer-env-command' is
-  for those.  Drop me a line if you can help.
-
-
-3 Compatibility issues
+4 Compatibility issues
 ══════════════════════
 
   Most Emacs packages are not written with the possibility of a
-  buffer-local process environment in mind.  This can lead to issues
-  with a few commands; specifically, those which start an external
-  process after switching to a different buffer or remote directory.
-  Examples include:
+  buffer-local process environment in mind.  This leads to issues with a
+  few commands; specifically, those which start an external process
+  after switching to a different buffer or remote directory.  Examples
+  include:
 
   • `shell', `project-shell' (`C-x p s') and other REPLs;
   • `compile' and `project-compile' (`C-x p c') in Emacs 27 and older;
@@ -176,8 +194,15 @@ without undue interference and switching seamlessly between them.
 
 [inheritenv] <https://github.com/purcell/inheritenv>
 
+4.1 Non-Unix-like systems
+─────────────────────────
 
-4 Related packages
+  Currently, this package assumes your system shell is POSIX.  For other
+  types of operating system, I would need to know what the appropriate
+  value of `buffer-env-commands' is.  Drop me a line if you can help.
+
+
+5 Related packages
 ══════════════════
 
   This package is essentially a knockoff of the [envrc] package by Steve
@@ -187,22 +212,24 @@ without undue interference and switching seamlessly between them.
 
   For a comparison of the buffer-local approach to environment variables
   with the global approach used by most of the similar packages, see
-  envrc's README.
+  [envrc's design notes].
 
-  There is a large number of Emacs packages interfacing with Python's
+  There is a large number of Emacs packages interfacing with the Python
   virtualenv system.  They all seem to take the global approach and,
-  therefore, the comparisons and caveats in the envrc README also apply,
-  mutatis mutandis.
+  therefore, the comparisons and caveats in the envrc design notes also
+  apply, mutatis mutandis.
 
 
 [envrc] <https://github.com/purcell/envrc>
 
 [direnv] <https://direnv.net/>
 
+[envrc's design notes] <https://github.com/purcell/envrc#design-notes>
 
-5 Contributing
+
+6 Contributing
 ══════════════
 
   Discussions, suggestions and code contributions are welcome! Since
-  this package is part of GNU ELPA, nontrivial contributions (above 15
-  lines of code) require a copyright assignment to the FSF.
+  this package is part of GNU ELPA, contributions require a copyright
+  assignment to the FSF.
