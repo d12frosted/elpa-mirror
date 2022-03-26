@@ -4,46 +4,45 @@ Source:  https://github.com/emacs-dashboard/emacs-dashboard.git
 
 Updating /mnt/store/melpa/working/dashboard/
 Checking out origin/HEAD
-Checking out c8fb844b0c0f4cb8d58553d0f26d4f96f8e9b9bb
+Checking out 1d3fce6e8e8605f770f2b23184b055029128c477
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/dashboard/
-  to /tmp/dashboard6VhbUP/dashboard-20220326.435
+  to /tmp/dashboardGFLeLT/dashboard-20220326.725
     dashboard-widgets.el -> dashboard-widgets.el
     dashboard.el -> dashboard.el
     banners => banners
-Created dashboard-20220326.435.tar containing:
-  dashboard-20220326.435/
-  dashboard-20220326.435/banners/
-  dashboard-20220326.435/banners/1.txt
-  dashboard-20220326.435/banners/2.txt
-  dashboard-20220326.435/banners/3.txt
-  dashboard-20220326.435/banners/4.txt
-  dashboard-20220326.435/banners/emacs.png
-  dashboard-20220326.435/banners/logo.png
-  dashboard-20220326.435/dashboard-pkg.el
-  dashboard-20220326.435/dashboard-widgets.el
-  dashboard-20220326.435/dashboard.el
-Built dashboard in 7.937s, finished at 2022-03-26T06:55:41+0000
+Created dashboard-20220326.725.tar containing:
+  dashboard-20220326.725/
+  dashboard-20220326.725/banners/
+  dashboard-20220326.725/banners/1.txt
+  dashboard-20220326.725/banners/2.txt
+  dashboard-20220326.725/banners/3.txt
+  dashboard-20220326.725/banners/4.txt
+  dashboard-20220326.725/banners/emacs.png
+  dashboard-20220326.725/banners/logo.png
+  dashboard-20220326.725/dashboard-pkg.el
+  dashboard-20220326.725/dashboard-widgets.el
+  dashboard-20220326.725/dashboard.el
+Built dashboard in 7.488s, finished at 2022-03-26T11:11:59+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  447 Mar 26 02:36 packages/dashboard-20220307.1807.entry
-152K -rw-r--r-- 1 root root 150K Mar 26 02:36 packages/dashboard-20220307.1807.tar
 4.0K -rw-r--r-- 1 root root  446 Mar 26 06:55 packages/dashboard-20220326.435.entry
 152K -rw-r--r-- 1 root root 150K Mar 26 06:55 packages/dashboard-20220326.435.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 26 06:55 packages/dashboard-badge.svg
-4.0K -rw-r--r-- 1 root root 3.8K Mar 26 06:55 packages/dashboard-hackernews-20190109.205.el
-4.0K -rw-r--r-- 1 root root  432 Mar 26 06:55 packages/dashboard-hackernews-20190109.205.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 26 02:36 packages/dashboard-hackernews-badge.svg
-4.0K -rw-r--r-- 1 root root   34 Mar 26 06:55 packages/dashboard-hackernews-readme.txt
-4.0K -rw-r--r-- 1 root root  247 Mar 26 06:55 packages/dashboard-hackernews.log
-4.0K -rw-r--r-- 1 root root 3.4K Mar 26 02:36 packages/dashboard-ls-20220117.1607.el
-4.0K -rw-r--r-- 1 root root  416 Mar 26 02:36 packages/dashboard-ls-20220117.1607.entry
-4.0K -rw-r--r-- 1 root root 3.6K Mar 26 06:55 packages/dashboard-ls-20220326.628.el
-4.0K -rw-r--r-- 1 root root 1.2K Mar 26 02:36 packages/dashboard-ls-badge.svg
-4.0K -rw-r--r-- 1 root root   62 Mar 26 06:55 packages/dashboard-ls-readme.txt
-4.0K -rw-r--r-- 1 root root  227 Mar 26 06:55 packages/dashboard-ls.log
-4.0K -rw-r--r-- 1 root root 3.9K Mar 26 02:36 packages/dashboard-project-status-20190202.1354.el
-4.0K -rw-r--r-- 1 root root  483 Mar 26 02:36 packages/dashboard-project-status-20190202.1354.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 26 02:36 packages/dashboard-project-status-badge.svg
-4.0K -rw-r--r-- 1 root root   96 Mar 26 02:36 packages/dashboard-project-status-readme.txt
-4.0K -rw-r--r-- 1 root root  216 Mar 26 06:55 packages/dashboard-project-status.log
-4.0K -rw-r--r-- 1 root root  118 Mar 26 06:55 packages/dashboard-readme.txt
+4.0K -rw-r--r-- 1 root root  446 Mar 26 11:11 packages/dashboard-20220326.725.entry
+160K -rw-r--r-- 1 root root 160K Mar 26 11:11 packages/dashboard-20220326.725.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 26 11:11 packages/dashboard-badge.svg
+4.0K -rw-r--r-- 1 root root 3.8K Mar 26 11:11 packages/dashboard-hackernews-20190109.205.el
+4.0K -rw-r--r-- 1 root root  432 Mar 26 11:11 packages/dashboard-hackernews-20190109.205.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 26 11:11 packages/dashboard-hackernews-badge.svg
+4.0K -rw-r--r-- 1 root root   34 Mar 26 11:11 packages/dashboard-hackernews-readme.txt
+4.0K -rw-r--r-- 1 root root  696 Mar 26 11:11 packages/dashboard-hackernews.log
+4.0K -rw-r--r-- 1 root root 3.6K Mar 26 11:11 packages/dashboard-ls-20220326.628.el
+4.0K -rw-r--r-- 1 root root  415 Mar 26 11:11 packages/dashboard-ls-20220326.628.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 26 11:11 packages/dashboard-ls-badge.svg
+4.0K -rw-r--r-- 1 root root   62 Mar 26 11:11 packages/dashboard-ls-readme.txt
+4.0K -rw-r--r-- 1 root root  308 Mar 26 11:11 packages/dashboard-ls.log
+4.0K -rw-r--r-- 1 root root 3.9K Mar 26 11:11 packages/dashboard-project-status-20190202.1354.el
+4.0K -rw-r--r-- 1 root root  483 Mar 26 11:11 packages/dashboard-project-status-20190202.1354.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 26 11:11 packages/dashboard-project-status-badge.svg
+4.0K -rw-r--r-- 1 root root   96 Mar 26 11:11 packages/dashboard-project-status-readme.txt
+4.0K -rw-r--r-- 1 root root  741 Mar 26 11:11 packages/dashboard-project-status.log
+4.0K -rw-r--r-- 1 root root  118 Mar 26 11:11 packages/dashboard-readme.txt
