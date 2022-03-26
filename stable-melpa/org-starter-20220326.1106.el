@@ -3,9 +3,9 @@
 ;; Copyright (C) 2018-2022 by Akira Komamura
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
-;; Version: 0.2.9.1
-;; Package-Version: 20220218.743
-;; Package-Commit: 1d7aeee94667d9277ca5452ff44ebca67888d244
+;; Version: 0.2.10
+;; Package-Version: 20220326.1106
+;; Package-Commit: cd9c5c0402de941299d1c8901f26a8f24d755022
 ;; Package-Requires: ((emacs "25.1") (dash "2.18"))
 ;; URL: https://github.com/akirak/org-starter
 
@@ -245,6 +245,17 @@ If this variable is nil, it doesn't take effect, and the same
                  (const other-frame)
                  (const nil)))
 
+(defcustom org-starter-check-truename t
+  "Whether to compare file names according to true names.
+
+When this option is t, it compares file names by true names in
+several functions. This is accurate if you store org files in
+symlinked directories, but it is slower.
+
+Set the value to nil if your org files don't involve symlinks."
+  :group 'org-starter
+  :type 'boolean)
+
 ;;;; Variables
 (defvar org-starter-suppress-override-messages-once nil)
 
@@ -280,6 +291,9 @@ value of `enable-local-variables`."
 
 This is updated by `org-starter-define-directory'.
 The user should not update this value.")
+
+(defvar org-starter-truename-cache nil
+  "Hash table used to store true names of files and directories.")
 
 ;;;###autoload
 (define-minor-mode org-starter-mode
@@ -424,6 +438,33 @@ OBJ should be a symbol, or a list of symbols."
    ((symbolp obj) (list obj))
    ((listp obj) obj)))
 
+(cl-defun org-starter--file-member-p (file list &key expand)
+  "Return non-nil if the file is included in the list.
+
+FILE is an absolute path to a file, and LIST is a list of files.
+
+If EXPAND is non-nil, use `expand-file-name' to expand abbreviate
+file names. It doesn't take effect if
+`org-starter-check-truename' is non-nil."
+  (cond
+   (org-starter-check-truename
+    (cl-member file list :test #'equal
+               :key #'org-starter--cached-truename))
+   (expand
+    (cl-member file list :test #'equal :key #'expand-file-name))
+   (t
+    (member file list))))
+
+(defun org-starter--cached-truename (file)
+  "Return the true name of FILE, from a cache value if available."
+  (unless org-starter-truename-cache
+    (setq org-starter-truename-cache
+          (make-hash-table :test #'equal)))
+  (or (gethash file org-starter-truename-cache)
+      (let ((truename (file-truename file)))
+        (puthash file truename org-starter-truename-cache)
+        truename)))
+
 ;;;; Exclude files in org-starter from recentf
 
 (defcustom org-starter-exclude-from-recentf nil
@@ -433,16 +474,16 @@ OBJ should be a symbol, or a list of symbols."
               (const :tag "Exclude files in path" 'path)))
 
 (defun org-starter-recentf-excluded-p (file)
-  "Check if FILE is an org-starter file that should be excluded from recentf."
-  (and (listp org-starter-exclude-from-recentf)
+  "Return non-nil if FILE should be excluded from recentf."
+  (and (string-match-p org-agenda-file-regexp file)
+       (listp org-starter-exclude-from-recentf)
        org-starter-exclude-from-recentf
        (or (and (memq 'known-files org-starter-exclude-from-recentf)
-                (cl-member file org-starter-known-files
-                           :test #'file-equal-p))
+                (org-starter--file-member-p (expand-file-name file)
+                                            org-starter-known-files))
            (and (memq 'path org-starter-exclude-from-recentf)
-                (string-match-p org-agenda-file-regexp file)
-                (cl-member (file-name-directory file) org-starter-path
-                           :test #'file-equal-p)))))
+                (org-starter--file-member-p (file-name-directory file)
+                                            org-starter-path)))))
 
 (add-hook 'recentf-exclude #'org-starter-recentf-excluded-p t)
 
@@ -579,20 +620,19 @@ the path to the directory is returned as the result of this function."
 (defun org-starter-org-mode-hook ()
   "Apply file-local settings."
   (org-starter--when-let* ((fpath (buffer-file-name)))
-    (mapc (pcase-lambda
-            (`(,symbol . ,value))
-            (cl-assert (symbolp symbol))
-            (set (make-local-variable symbol) value))
-          (cdr (cl-assoc fpath org-starter-file-local-variables
-                         :test #'file-equal-p)))
-    (mapc (pcase-lambda
-            ((or `(,mode ,arg) (and (let arg 1) mode)))
-            (funcall mode arg))
-          (cdr (cl-assoc fpath org-starter-file-local-minor-modes
-                         :test #'file-equal-p)))
+    (dolist (x (cdr (assoc fpath org-starter-file-local-variables)))
+      (pcase x
+        (`(,symbol . ,value)
+         (cl-assert (symbolp symbol))
+         (set (make-local-variable symbol) value))))
+
+    (dolist (x (cdr (assoc fpath org-starter-file-local-minor-modes)))
+      (pcase x
+        ((pred symbolp) (funcall x 1))
+        (`(,mode ,arg) (funcall mode arg))))
+
     (org-starter--when-let*
-        ((hook (cdr (cl-assoc fpath org-starter-file-local-hooks
-                              :test #'file-equal-p))))
+        ((hook (cdr (assoc fpath org-starter-file-local-hooks))))
       (funcall hook))))
 
 (define-obsolete-function-alias 'org-starter-load-local-variables

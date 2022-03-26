@@ -5,7 +5,7 @@
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
 ;; Version: 0.1.1
 ;; Package-Version: 20201202.144
-;; Package-Commit: 1d7aeee94667d9277ca5452ff44ebca67888d244
+;; Package-Commit: cd9c5c0402de941299d1c8901f26a8f24d755022
 ;; Package-Requires: ((emacs "25.1") (swiper "0.11") (org-starter "0.2.4"))
 ;; URL: https://github.com/akirak/org-starter
 
