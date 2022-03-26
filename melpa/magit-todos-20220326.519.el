@@ -4,8 +4,8 @@
 
 ;; Author: Adam Porter <adam@alphapapa.net>
 ;; URL: http://github.com/alphapapa/magit-todos
-;; Package-Version: 20210811.459
-;; Package-Commit: 12a7b80dc421804450f01a3f23e39dfb618c8bbd
+;; Package-Version: 20220326.519
+;; Package-Commit: 67fd80c2f10aec4d5b2a24b5d3d53c08cc1f05dc
 ;; Version: 1.6-pre
 ;; Package-Requires: ((emacs "25.2") (async "1.9.2") (dash "2.13.0") (f "0.17.2") (hl-todo "1.9.0") (magit "2.13.0") (pcre2el "1.8") (s "1.12.0") (transient "0.2.0"))
 ;; Keywords: magit, vc
@@ -468,7 +468,11 @@ With prefix, prompt for repository."
 ;;;###autoload
 (defun magit-todos-list-internal (directory)
   "Open buffer showing to-do list of repository at DIRECTORY."
-  (magit--tramp-asserts directory)
+  (if (fboundp 'magit--tramp-asserts)
+      (magit--tramp-asserts directory)
+    (when (file-remote-p directory)
+      (magit-git-version-assert)))
+
   (let ((default-directory directory))
     (magit-setup-buffer #'magit-todos-list-mode)))
 

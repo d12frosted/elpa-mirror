@@ -3,8 +3,8 @@
 ;; Copyright (C) 2020 Kinney Zhang
 ;;
 ;; Version: 2.4.3
-;; Package-Version: 20210914.1311
-;; Package-Commit: a9c9034a8fa3c08ec3097ae40e227d400d766db9
+;; Package-Version: 20220326.521
+;; Package-Commit: 38f517ac2894b16e6cf983b93ee96762fffa152a
 ;; Keywords: org, convenience
 ;; Author: Kinney Zhang <kinneyzhang666@gmail.com>
 ;; URL: https://github.com/Kinneyzhang/gkroam
@@ -121,6 +121,7 @@
 (require 'org-element)
 (require 'db)
 (require 'company)
+(require 'calendar)
 (eval-when-compile
   (require 'subr-x)
   (require 'hl-line)
@@ -1189,7 +1190,9 @@ Output matched files' path."
 (defun gkroam-daily ()
   "Create or open gkroam daily notes."
   (interactive)
-  (let* ((title (format-time-string "%b %d, %Y")))
+  (let* ((month (calendar-month-name
+                 (string-to-number (format-time-string "%m")) t))
+         (title (concat month (format-time-string " %d, %Y"))))
     (gkroam-find title)))
 
 ;;;###autoload

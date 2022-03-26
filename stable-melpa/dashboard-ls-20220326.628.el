@@ -7,8 +7,8 @@
 ;; Description: Display files/directories in current directory on Dashboard.
 ;; Keyword: directory file show dashboard
 ;; Version: 0.3.0
-;; Package-Version: 20220117.1607
-;; Package-Commit: 08b621b78f193471025c02e4cde348010db754d9
+;; Package-Version: 20220326.628
+;; Package-Commit: 73d280e029dfb68c2666dbc20130300439b170b7
 ;; Package-Requires: ((emacs "24.3") (dashboard "1.2.5"))
 ;; URL: https://github.com/emacs-dashboard/dashboard-ls
 
@@ -56,18 +56,32 @@ Use this variable when you don't have the `default-directory' up to date.")
   (when (file-directory-p path)
     (directory-files path nil "^\\([^.]\\|\\.[^.]\\|\\.\\..\\)")))
 
+(defun dashboard-ls--dirs ()
+  "Return list of current directories."
+  (let* ((current-dir (dashboard-ls--current-path))
+         (entries (dashboard-ls--entries current-dir))
+         result)
+    (dolist (dir entries)
+      (when (file-directory-p (expand-file-name dir current-dir))
+        (setq dir (concat "/" dir))
+        (push (concat dir "/") result)))
+    (reverse result)))
+
+(defun dashboard-ls--files ()
+  "Return list of current files."
+  (let* ((current-dir (dashboard-ls--current-path))
+         (entries (dashboard-ls--entries current-dir))
+         result)
+    (dolist (file entries)
+      (unless (file-directory-p (expand-file-name file current-dir))
+        (push file result)))
+    (reverse result)))
+
 (defun dashboard-ls--insert-dir (list-size)
   "Add the list of LIST-SIZE items from current directory."
   (dashboard-insert-section
    "List Directories:"
-   (let* ((current-dir (dashboard-ls--current-path))
-          (entries (dashboard-ls--entries current-dir))
-          result)
-     (dolist (dir entries)
-       (when (file-directory-p (expand-file-name dir current-dir))
-         (setq dir (concat "/" dir))
-         (push (concat dir "/") result)))
-     (reverse result))
+   (dashboard-ls--dirs)
    list-size
    'ls-directories
    (dashboard-get-shortcut 'ls-directories)
@@ -79,13 +93,7 @@ Use this variable when you don't have the `default-directory' up to date.")
   "Add the list of LIST-SIZE items from current files."
   (dashboard-insert-section
    "List Files:"
-   (let* ((current-dir (dashboard-ls--current-path))
-          (entries (dashboard-ls--entries current-dir))
-          result)
-     (dolist (file entries)
-       (unless (file-directory-p (expand-file-name file current-dir))
-         (push file result)))
-     (reverse result))
+   (dashboard-ls--files)
    list-size
    'ls-files
    (dashboard-get-shortcut 'ls-files)
