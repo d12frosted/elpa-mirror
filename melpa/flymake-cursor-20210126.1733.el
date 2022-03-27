@@ -9,7 +9,7 @@
 ;;             Jen-Chieh Shen <jcs090218@gmail.com>
 ;; URL: https://github.com/flymake/emacs-flymake-cursor
 ;; Package-Version: 20210126.1733
-;; Package-Commit: 3797897a97ba09b3f8cbf9b1741aa6067aabb1df
+;; Package-Commit: ca9c91b1a8e841ebb05f3e18690da5b42f6aa34c
 ;; origin: http://paste.lisp.org/display/60617,1/raw
 ;; Version: 1.0.2
 ;; Keywords: languages mode flymake

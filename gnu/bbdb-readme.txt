@@ -1,4 +1,4 @@
-Copyright (C) 2010-2017 Free Software Foundation, Inc.
+Copyright (C) 2010-2022 Free Software Foundation, Inc.
 See the end of the file for license conditions.
 
 BBDB is the Insidious Big Brother Database for GNU Emacs.
@@ -147,7 +147,7 @@ Interactive commands
 --------------------
 
 Call bbdb-initialize (usually in your init file) to initialize
-the MUA interfaces based on interactive commands
+the MUA interfaces based on interactive commands.
 
 MUA commands include
 
@@ -158,7 +158,7 @@ MUA commands include
 These MUA commands operate either on existing records only.  Or they
 can also create new records.
 
-All these commands are controlled by bbdb-mua-update-interactive-p.
+All these commands are controlled by bbdb-mua-interactive-action.
 This is a cons pair (WITHOUT-PREFIX . WITH-PREFIX).
 The car is used if the command is called without a prefix.
 The cdr is used if the command is called with a prefix (and if the prefix
@@ -196,14 +196,14 @@ bbdb-mua-auto-update automatically updates the BBDB records for the
 sender and/or recipients of a message.  If bbdb-mua-pop-up is non-nil,
 the matching records are also displayed in a continuously updated BBDB window,
 
-The behavior of bbdb-mua-auto-update is controlled by bbdb-mua-auto-update-p.
-This may take the same values as bbdb-mua-update-interactive-p (except read).
+The behavior of bbdb-mua-auto-update is controlled by bbdb-mua-auto-action.
+This may take the same values as bbdb-mua-interactive-action (except read).
 Binding this to a function is often most helpful for noninteractive use.
-For example, you may want to bind bbdb-mua-auto-update-p to the function
+For example, you may want to bind bbdb-mua-auto-action to the function
 bbdb-select-message,  see bbdb-accept-message-alist and
 bbdb-ignore-message-alist.  If a message is accepted by bbdb-select-message,
 the actual action performed by BBDB (i.e., the return value of
-bbdb-select-message) is given by bbdb-update-records-p.
+bbdb-select-message) is given by bbdb-mua-action.
 
 ==================================================================
 
@@ -211,9 +211,7 @@ Notes for BBDB lisp hackers:
 ----------------------------
 
 If you write your own functions and commands to modify BBDB records,
-do not call the low-level functions bbdb-record-set-* such as
-bbdb-record-set-aka, bbdb-record-set-mail etc.  The recommended
-sequence of calls is
+do not modify the records directly.  The recommended sequence of calls is
 
 - one or multiple calls of bbdb-record-set-field for the respective
   fields to be changed.  This not only sets the fields, but it also
@@ -228,7 +226,7 @@ sequence of calls is
 
 ==================================================================
 
-Copyright (C) 2010-2017 Free Software Foundation, Inc.
+Copyright (C) 2010-2022 Free Software Foundation, Inc.
 
 This file is part of the Insidious Big Brother Database (aka BBDB),
 

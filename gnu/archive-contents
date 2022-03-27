@@ -184,15 +184,15 @@
 	 ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	(:keywords "point" "location"))])
  (bbdb .
-       [(3 2 1)
+       [(3 2 2)
 	((emacs
 	  (24))
 	 (cl-lib
 	  (0 5)))
-	"core of BBDB" tar
+	"Big Brother DataBase" tar
 	((:maintainer "Roland Winkler" . "winkler@gnu.org")
 	 (:url . "https://elpa.gnu.org/packages/bbdb.html")
-	 (:commit . "b3739cbaf2f021ac776925254e12abf0699e46f8"))])
+	 (:commit . "e300a375d55ef4033b3651e937c5ec2042871f91"))])
  (beacon .
 	 [(1 3 3)
 	  ((seq
@@ -1506,7 +1506,7 @@
 	   ("Ivan Kanis" . "ivan@kanis.fr"))
 	  (:maintainer "Ivan Kanis" . "ivan@kanis.fr"))])
  (kind-icon .
-	    [(0 1 4)
+	    [(0 1 5)
 	     ((emacs
 	       (27 1))
 	      (svg-lib
@@ -1516,7 +1516,8 @@
 	      (:keywords "completion")
 	      (:maintainer "J.D. Smith" . "jdtsmith@gmail.com")
 	      (:authors
-	       ("J.D. Smith" . "jdtsmith@gmail.com")))])
+	       ("J.D. Smith" . "jdtsmith@gmail.com"))
+	      (:commit . "235c3d20d1e667d6ac73e11d55a380e070b7cacf"))])
  (kiwix .
 	[(1 1 5)
 	 ((emacs
