@@ -9,7 +9,7 @@
 ;; Maintainer: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; Version: 1.61
 ;; Package-Version: 20220223.1622
-;; Package-Commit: 939aa7f58c555a05451238e40c34bc8da0150870
+;; Package-Commit: 6ce1549c23669a36040957580ee37cb19561bb7f
 ;; Keywords: highlight face match convenience
 ;; URL: http://github.com/jcs-elpa/auto-highlight-symbol
 ;; Package-Requires: ((emacs "26.1") (ht "2.3"))

@@ -8,6 +8,8 @@
 ;; Time-stamp: <2016-05-03 08:26:13 rubikitch>
 ;; Created: 2012-09-08 12:56:37
 ;; Version: 0.1
+;; Package-Version: 20160502.2326
+;; Package-Commit: 4eda13f90da51ab217d024701f4c30f91ffcb90e
 ;;           By: rubikitch
 ;; URL: http://www.emacswiki.org/emacs/download/hippie-exp-ext.el
 ;; Keywords: abbrev, convenience, completions, hippie-expand
