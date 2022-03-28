@@ -1,0 +1,11 @@
+(gnu-indent .
+	    [(20220328 412)
+	     ((emacs
+	       (27 2)))
+	     "Indent your code with GNU Indent" single
+	     ((:commit . "892ac23b266022cd98ff82541738cedb7b439118")
+	      (:authors
+	       ("Akib Azmain Turja" . "akib@disroot.org"))
+	      (:maintainer "Akib Azmain Turja" . "akib@disroot.org")
+	      (:keywords "tools" "c")
+	      (:url . "https://codeberg.org/akib/emacs-why-this"))])

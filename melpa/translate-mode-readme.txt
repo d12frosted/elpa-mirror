@@ -1,15 +1,15 @@
-A useful minor mode for doing translation jobs.
+Paragraph-oriented minor mode for side-by-side document translation workflow
 
 Usage:
 
-  Open the translating file you are working with, and run command
+  Open the translation file you are working with, and run command
 
-    (translate-select-original-buffer)
+    (translate-select-reference-buffer)
 
-  to select an existed buffer, or
+  to select an existed reference buffer, or
 
-    (translate-open-original-file)
+    (translate-open-reference-file)
 
-  to setup a buffer for referring the original article.
+  to open a reference file.
 
   See: https://github.com/rayw000/translate-mode for more details.
