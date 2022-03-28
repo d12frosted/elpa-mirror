@@ -1,0 +1,11 @@
+(flymake-hadolint .
+		  [(20220321 212)
+		   ((emacs
+		     (26 1)))
+		   "Flymake backend for hadolint, a Dockerfile linter" single
+		   ((:commit . "9b650a4962d92003708f956a59331dc4dfb348ab")
+		    (:authors
+		     ("Taiki Sugawara" . "buzz.taiki@gmail.com"))
+		    (:maintainer "Taiki Sugawara" . "buzz.taiki@gmail.com")
+		    (:keywords "convenience" "processes" "docker" "flymake")
+		    (:url . "https://github.com/buzztaiki/flymake-hadolint"))])

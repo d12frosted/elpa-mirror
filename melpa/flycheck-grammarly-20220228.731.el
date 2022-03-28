@@ -8,7 +8,7 @@
 ;; Keyword: grammar check
 ;; Version: 0.2.3
 ;; Package-Version: 20220228.731
-;; Package-Commit: dd53582c21da442ab1b9f9415f68d230ae43604e
+;; Package-Commit: ee1953c2f8011e7ee0815de17b8978750afc49f8
 ;; Package-Requires: ((emacs "25.1") (flycheck "0.14") (grammarly "0.3.0") (s "1.12.0"))
 ;; URL: https://github.com/emacs-grammarly/flycheck-grammarly
 

@@ -1,0 +1,27 @@
+Package: eslint-disable-rule
+Fetcher: github
+Source:  https://github.com/DamienCassou/eslint-disable-rule.git
+
+Cloning https://github.com/DamienCassou/eslint-disable-rule.git to /mnt/store/melpa/working/eslint-disable-rule/
+Checking out origin/HEAD
+Checking out d22fc4756f94274b5f22139e3b6a931d0297dfa1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/eslint-disable-rule/
+  to /tmp/eslint-disable-ruleYmrxXk/eslint-disable-rule-20220320.1848
+    eslint-disable-rule-all.el -> eslint-disable-rule-all.el
+    eslint-disable-rule-flycheck.el -> eslint-disable-rule-flycheck.el
+    eslint-disable-rule-flymake.el -> eslint-disable-rule-flymake.el
+    eslint-disable-rule.el -> eslint-disable-rule.el
+Created eslint-disable-rule-20220320.1848.tar containing:
+  eslint-disable-rule-20220320.1848/
+  eslint-disable-rule-20220320.1848/eslint-disable-rule-all.el
+  eslint-disable-rule-20220320.1848/eslint-disable-rule-flycheck.el
+  eslint-disable-rule-20220320.1848/eslint-disable-rule-flymake.el
+  eslint-disable-rule-20220320.1848/eslint-disable-rule-pkg.el
+  eslint-disable-rule-20220320.1848/eslint-disable-rule.el
+Built eslint-disable-rule in 5.223s, finished at 2022-03-28T02:05:50+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  279 Mar 28 02:05 packages/eslint-disable-rule-20220320.1848.entry
+ 20K -rw-r--r-- 1 root root  20K Mar 28 02:05 packages/eslint-disable-rule-20220320.1848.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 28 02:05 packages/eslint-disable-rule-badge.svg
+4.0K -rw-r--r-- 1 root root  132 Mar 28 02:05 packages/eslint-disable-rule-readme.txt
