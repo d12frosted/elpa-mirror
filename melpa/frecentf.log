@@ -3,12 +3,11 @@ Fetcher: git
 Source:  https://git.launchpad.net/frecentf.el
 
 Updating /mnt/store/melpa/working/frecentf/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-remote: Backend connection failed
-fatal: unable to access 'https://git.launchpad.net/frecentf.el/': The requested URL returned error: 500
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 19e2c48a8b8c8ee8cae5c93b58b57a0aa81a8c46
+Built frecentf in 9.003s, finished at 2022-03-28T11:05:39+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root 9.8K Mar 28 11:05 packages/frecentf-20210330.1521.el
+4.0K -rw-r--r-- 1 root root  459 Mar 28 11:05 packages/frecentf-20210330.1521.entry
+4.0K -rw-r--r-- 1 root root 1.2K Mar 28 11:05 packages/frecentf-badge.svg
+4.0K -rw-r--r-- 1 root root  231 Mar 28 11:05 packages/frecentf-readme.txt

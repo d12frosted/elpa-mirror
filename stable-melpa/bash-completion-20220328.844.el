@@ -5,8 +5,8 @@
 ;; Author: Stephane Zermatten <szermatt@gmx.net>
 ;; Maintainer: Stephane Zermatten <szermatt@gmail.com>
 ;; Version: 3.1.0
-;; Package-Version: 20210821.1941
-;; Package-Commit: c5eaeed156ab906190c662d491269230967104b1
+;; Package-Version: 20220328.844
+;; Package-Commit: 29b5fc860a5b0db9828acfceca09b773fbdb8e8a
 ;; Keywords: shell bash bash-completion
 ;; URL: http://github.com/szermatt/emacs-bash-completion
 ;; Package-Requires: ((emacs "24.3"))
@@ -238,7 +238,9 @@ to remove the extra space bash adds after a completion."
 
 (defvar bash-completion-start-files
   '("~/.emacs_bash.sh" "~/.emacs.d/init_bash.sh")
-  "Shell files that, if they exist, will be sourced at the beginning of a bash completion subprocess.
+  "Shell files that sourced at the beginning of a bash completion subprocess.
+
+If a listed file does not exist that is silently ignored.
 
 This variable is only used when creating separate processes for
 performing completion. See

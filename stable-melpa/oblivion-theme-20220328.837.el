@@ -3,8 +3,8 @@
 ;; SPDX-License-Identifier: GPL-2.0-or-later
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://gitlab.com/ideasman42/emacs-oblivion-theme
-;; Package-Version: 20220328.651
-;; Package-Commit: 4a2dc8127bd5e9589bda59617a3eaf910e397500
+;; Package-Version: 20220328.837
+;; Package-Commit: 3a1d67637ea4a6099a62de45842b8c5e4440ede4
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -251,7 +251,7 @@
     ;; reStructuredText.
     `(rst-external ((t (:foreground ,ob-plum1))))
     `(rst-definition ((t (:foreground ,ob-skyblue1))))
-    `(rst-directive ((t (:foreground ,ob-skyblue2))))
+    `(rst-directive ((t (:foreground ,ob-skyblue1))))
     '(rst-emphasis1 ((t (:italic t))))
     '(rst-emphasis2 ((t (:weight bold t))))
     `(rst-reference ((t (:foreground ,ob-plum1))))
