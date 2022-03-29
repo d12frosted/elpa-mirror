@@ -1,4 +1,4 @@
-This library defines more font-lock keywords for Emacs lisp.
+This library defines more font-lock keywords for Emacs Lisp.
 
 These keyword variables are available:
 
@@ -9,7 +9,7 @@ These keyword variables are available:
 `morlock-cl-font-lock-keywords' expressions that used to be
     covered by the default keywords but aren't anymore since
     the `cl-' prefix was added.
-`morlock-font-lock-keywords' combines the above tree.
+`morlock-font-lock-keywords' combines the above three.
 
 To use `morlock-font-lock-keywords' in `emacs-lisp-mode' and
 `lisp-interaction-mode' enable `global-morlock-mode'.

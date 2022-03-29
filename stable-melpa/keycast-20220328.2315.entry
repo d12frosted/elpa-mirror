@@ -1,0 +1,10 @@
+(keycast .
+	 [(20220328 2315)
+	  ((emacs
+	    (25 3)))
+	  "Show current command and its binding" single
+	  ((:commit . "56887cfea8323a8ce2effebba8b37477049eae80")
+	   (:authors
+	    ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	   (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	   (:url . "https://github.com/tarsius/keycast"))])

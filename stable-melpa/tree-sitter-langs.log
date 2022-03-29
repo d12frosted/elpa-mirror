@@ -4,58 +4,58 @@ Source:  https://github.com/emacs-tree-sitter/tree-sitter-langs.git
 
 Updating /mnt/store/melpa/working/tree-sitter-langs/
 Checking out origin/release
-Checking out f8e4790c5f5a35d189f889ab3f82580e37bf64b4
+Checking out 0dd5e56e2f5646aa51ed0fc9eb869a8f7090228a
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/tree-sitter-langs/
-  to /tmp/tree-sitter-langsIJKV5p/tree-sitter-langs-20220328.214
+  to /tmp/tree-sitter-langsCZpCJN/tree-sitter-langs-20220328.1344
     tree-sitter-langs-build.el -> tree-sitter-langs-build.el
     tree-sitter-langs.el -> tree-sitter-langs.el
     queries => queries
-Created tree-sitter-langs-20220328.214.tar containing:
-  tree-sitter-langs-20220328.214/
-  tree-sitter-langs-20220328.214/queries/
-  tree-sitter-langs-20220328.214/queries/bash/
-  tree-sitter-langs-20220328.214/queries/bash/highlights.scm
-  tree-sitter-langs-20220328.214/queries/c/
-  tree-sitter-langs-20220328.214/queries/c/highlights.scm
-  tree-sitter-langs-20220328.214/queries/cpp/
-  tree-sitter-langs-20220328.214/queries/cpp/highlights.scm
-  tree-sitter-langs-20220328.214/queries/css/
-  tree-sitter-langs-20220328.214/queries/css/highlights.scm
-  tree-sitter-langs-20220328.214/queries/go/
-  tree-sitter-langs-20220328.214/queries/go/highlights.scm
-  tree-sitter-langs-20220328.214/queries/hcl/
-  tree-sitter-langs-20220328.214/queries/hcl/highlights.scm
-  tree-sitter-langs-20220328.214/queries/html/
-  tree-sitter-langs-20220328.214/queries/html/highlights.scm
-  tree-sitter-langs-20220328.214/queries/java/
-  tree-sitter-langs-20220328.214/queries/java/highlights.scm
-  tree-sitter-langs-20220328.214/queries/javascript/
-  tree-sitter-langs-20220328.214/queries/javascript/highlights.scm
-  tree-sitter-langs-20220328.214/queries/json/
-  tree-sitter-langs-20220328.214/queries/json/highlights.scm
-  tree-sitter-langs-20220328.214/queries/ocaml/
-  tree-sitter-langs-20220328.214/queries/ocaml/highlights.scm
-  tree-sitter-langs-20220328.214/queries/pgn/
-  tree-sitter-langs-20220328.214/queries/pgn/highlights.scm
-  tree-sitter-langs-20220328.214/queries/php/
-  tree-sitter-langs-20220328.214/queries/php/highlights.scm
-  tree-sitter-langs-20220328.214/queries/python/
-  tree-sitter-langs-20220328.214/queries/python/highlights.scm
-  tree-sitter-langs-20220328.214/queries/ruby/
-  tree-sitter-langs-20220328.214/queries/ruby/highlights.scm
-  tree-sitter-langs-20220328.214/queries/rust/
-  tree-sitter-langs-20220328.214/queries/rust/highlights.scm
-  tree-sitter-langs-20220328.214/queries/tsx/
-  tree-sitter-langs-20220328.214/queries/tsx/highlights.scm
-  tree-sitter-langs-20220328.214/queries/typescript/
-  tree-sitter-langs-20220328.214/queries/typescript/highlights.scm
-  tree-sitter-langs-20220328.214/tree-sitter-langs-build.el
-  tree-sitter-langs-20220328.214/tree-sitter-langs-pkg.el
-  tree-sitter-langs-20220328.214/tree-sitter-langs.el
-Built tree-sitter-langs in 13.713s, finished at 2022-03-28T12:13:50+0000
+Created tree-sitter-langs-20220328.1344.tar containing:
+  tree-sitter-langs-20220328.1344/
+  tree-sitter-langs-20220328.1344/queries/
+  tree-sitter-langs-20220328.1344/queries/bash/
+  tree-sitter-langs-20220328.1344/queries/bash/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/c/
+  tree-sitter-langs-20220328.1344/queries/c/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/cpp/
+  tree-sitter-langs-20220328.1344/queries/cpp/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/css/
+  tree-sitter-langs-20220328.1344/queries/css/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/go/
+  tree-sitter-langs-20220328.1344/queries/go/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/hcl/
+  tree-sitter-langs-20220328.1344/queries/hcl/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/html/
+  tree-sitter-langs-20220328.1344/queries/html/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/java/
+  tree-sitter-langs-20220328.1344/queries/java/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/javascript/
+  tree-sitter-langs-20220328.1344/queries/javascript/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/json/
+  tree-sitter-langs-20220328.1344/queries/json/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/ocaml/
+  tree-sitter-langs-20220328.1344/queries/ocaml/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/pgn/
+  tree-sitter-langs-20220328.1344/queries/pgn/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/php/
+  tree-sitter-langs-20220328.1344/queries/php/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/python/
+  tree-sitter-langs-20220328.1344/queries/python/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/ruby/
+  tree-sitter-langs-20220328.1344/queries/ruby/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/rust/
+  tree-sitter-langs-20220328.1344/queries/rust/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/tsx/
+  tree-sitter-langs-20220328.1344/queries/tsx/highlights.scm
+  tree-sitter-langs-20220328.1344/queries/typescript/
+  tree-sitter-langs-20220328.1344/queries/typescript/highlights.scm
+  tree-sitter-langs-20220328.1344/tree-sitter-langs-build.el
+  tree-sitter-langs-20220328.1344/tree-sitter-langs-pkg.el
+  tree-sitter-langs-20220328.1344/tree-sitter-langs.el
+Built tree-sitter-langs in 12.083s, finished at 2022-03-29T01:40:55+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  496 Mar 28 12:13 packages/tree-sitter-langs-20220328.214.entry
-100K -rw-r--r-- 1 root root 100K Mar 28 12:13 packages/tree-sitter-langs-20220328.214.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 28 12:13 packages/tree-sitter-langs-badge.svg
-4.0K -rw-r--r-- 1 root root 1.1K Mar 28 12:13 packages/tree-sitter-langs-readme.txt
+4.0K -rw-r--r-- 1 root root  497 Mar 29 01:40 packages/tree-sitter-langs-20220328.1344.entry
+100K -rw-r--r-- 1 root root 100K Mar 29 01:40 packages/tree-sitter-langs-20220328.1344.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 29 01:40 packages/tree-sitter-langs-badge.svg
+4.0K -rw-r--r-- 1 root root 1.1K Mar 29 01:40 packages/tree-sitter-langs-readme.txt

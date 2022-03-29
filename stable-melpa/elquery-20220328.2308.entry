@@ -1,0 +1,13 @@
+(elquery .
+	 [(20220328 2308)
+	  ((emacs
+	    (25 1))
+	   (dash
+	    (2 13 0)))
+	  "The HTML library for elisp" single
+	  ((:commit . "53555e6c48640ac0188997c2f80bc1f18772ed1a")
+	   (:authors
+	    ("Adam Niederer"))
+	   (:maintainer "Adam Niederer")
+	   (:keywords "html" "hypermedia" "tools" "webscale")
+	   (:url . "https://github.com/AdamNiederer/elquery"))])

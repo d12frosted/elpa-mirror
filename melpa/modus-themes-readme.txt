@@ -218,6 +218,7 @@ missing package or change you would like to see.
     mct
     mentor
     messages
+    mini-modeline
     minimap
     mmm-mode
     mode-line
