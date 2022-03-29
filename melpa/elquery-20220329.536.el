@@ -7,8 +7,8 @@
 ;; Created: 19 Feb 2017
 
 ;; Keywords: html hypermedia tools webscale
-;; Package-Version: 20220328.2308
-;; Package-Commit: 53555e6c48640ac0188997c2f80bc1f18772ed1a
+;; Package-Version: 20220329.536
+;; Package-Commit: 0e5f7addacb14502977e93b05786ecec1e108619
 ;; Homepage: https://github.com/AdamNiederer/elquery
 ;; Version: 1.1.0
 ;; Package-Requires: ((emacs "25.1") (dash "2.13.0"))
@@ -135,7 +135,8 @@ This does not preserve the order of the elements."
               list)))
 
 (defun elquery--plist-map (fn list)
-  "Apply FN to all key-value pairs in LIST, returning a list half as long as the original."
+  "Apply FN to all key-value pairs in LIST.
+Returns a list half as long as the original."
   (declare (pure t) (side-effect-free t))
   (if (null list) nil
     (cons (funcall fn (car list) (cadr list)) (elquery--plist-map fn (cddr list)))))
@@ -169,24 +170,24 @@ If KEYS is supplied, only test keys from that list."
 
 ;; Functions for string manipulation
 (defun elquery--string-repeat (n string)
-  "Return STRING repeated N times"
+  "Return STRING repeated N times."
   (declare (pure t) (side-effect-free t))
   (mapconcat #'identity (make-list n string)))
 
 (defun elquery--match (re string)
-  "Return a list of substrings corresponding to matches of RE on STRING."
+  "Return a list of matches of RE on STRING."
   (declare (pure t) (side-effect-free t))
   (save-match-data
     (when (string-match re string)
       (mapcar (lambda (n) (match-string n string)) (number-sequence 0 (1- (/ (length (match-data)) 2)))))))
 
 (defun elquery--match-all (re string)
-  "Return all possible lists of substrings corresponding to matches of RE on STRING"
+  "Return all possible lists of matches of RE on STRING."
   (declare (pure t) (side-effect-free t))
   (if (string-empty-p string) nil
     (save-match-data
       (string-match re string)
-      (cons (mapcar (lambda (n) (match-string n string)) (number-sequence 0 (1- (/ length (match-data)) 2)))
+      (cons (mapcar (lambda (n) (match-string n string)) (number-sequence 0 (1- (/ (length (match-data)) 2))))
             (elquery--match-all re (substring string (match-beginning 0) (length string)))))))
 
 ;; Predicates specific to elquery
@@ -307,9 +308,9 @@ See also `elquery-full-text', which includes text from non-immediate children."
   "Return the text content of NODE and its children.
 
 If there are multiple text nodes in NODE
-\(e.g.  <h1>some text <span>and </span> more text</h1>), return the concatenation
-of these text nodes, ignoring leading and trailing spaces in each text node.
-\(e.g. \"some textandmore text\").
+\(e.g.  <h1>some text <span>and </span> more text</h1>), return the
+concatenation of these text nodes, ignoring leading and trailing
+spaces in each text node.  \(e.g. \"some textandmore text\").
 
 If SEPARATOR is non-nil, separate child nodes' text with it.
 
@@ -549,7 +550,7 @@ If CAN-RECURSE is set, continue down the tree until a matching element is found.
 
 (defun elquery--indent-insert (string depth whitespace?)
   "Insert the proper amount of indentation for STRING.
-Inserts the product of based on `sgml-basic-offset' and DEPTH, then STRING, then
+Inserts indentation based on `sgml-basic-offset' and DEPTH, then STRING, then
 a newline.  If WHITESPACE? is nil, do not insert any indentation or newline."
   (insert (if whitespace? (elquery--string-repeat (* depth sgml-basic-offset) " ") "")
           string
@@ -611,8 +612,8 @@ Always of the form el-name#id.class[key=val], with null elements omitted."
                       (elquery--fmt-heirarchy (elquery-child query :include-empty t)))))))
 
 (defun elquery--fmt-union (query)
-  (declare (pure t) (side-effect-free t))
   "Return a query string for the given query QUERY."
+  (declare (pure t) (side-effect-free t))
   (string-join (-map 'elquery--fmt-heirarchy query) ", "))
 
 (provide 'elquery)

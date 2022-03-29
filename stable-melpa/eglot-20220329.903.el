@@ -3,8 +3,8 @@
 ;; Copyright (C) 2018-2022 Free Software Foundation, Inc.
 
 ;; Version: 1.8
-;; Package-Version: 20220327.2058
-;; Package-Commit: 7a0b93a76d1c53811a1670eb8f8091e3536aa248
+;; Package-Version: 20220329.903
+;; Package-Commit: cf5e4f8cb653497e2d7a8ef1990c423908ff91f3
 ;; Author: João Távora <joaotavora@gmail.com>
 ;; Maintainer: João Távora <joaotavora@gmail.com>
 ;; URL: https://github.com/joaotavora/eglot
@@ -1976,8 +1976,16 @@ THINGS are either registrations or unregisterations (sic)."
   "If non-nil, value of the last inserted character in buffer.")
 
 (defun eglot--post-self-insert-hook ()
-  "Set `eglot--last-inserted-char'."
-  (setq eglot--last-inserted-char last-input-event))
+  "Set `eglot--last-inserted-char', maybe call on-type-formatting."
+  (setq eglot--last-inserted-char last-input-event)
+  (let ((ot-provider (eglot--server-capable :documentOnTypeFormattingProvider)))
+    (when (and ot-provider
+               (or (eq last-input-event
+                       (elt (plist-get ot-provider :firstTriggerCharacter) 0))
+                   (cl-find last-input-event
+                            (plist-get ot-provider :moreTriggerCharacter)
+                            :key #'seq-first)))
+      (eglot-format (point) nil last-input-event))))
 
 (defun eglot--pre-command-hook ()
   "Reset `eglot--last-inserted-char'."
@@ -2359,14 +2367,22 @@ Try to visit the target file for a richer summary line."
   (interactive)
   (eglot-format nil nil))
 
-(defun eglot-format (&optional beg end)
+(defun eglot-format (&optional beg end on-type-format)
   "Format region BEG END.
 If either BEG or END is nil, format entire buffer.
 Interactively, format active region, or entire buffer if region
-is not active."
+is not active.
+
+If non-nil, ON-TYPE-FORMAT is a character just inserted at BEG
+for which LSP on-type-formatting should be requested."
   (interactive (and (region-active-p) (list (region-beginning) (region-end))))
   (pcase-let ((`(,method ,cap ,args)
                (cond
+                ((and beg on-type-format)
+                 `(:textDocument/onTypeFormatting
+                   :documentOnTypeFormattingProvider
+                   ,`(:position ,(eglot--pos-to-lsp-position beg)
+                      :ch ,(string on-type-format))))
                 ((and beg end)
                  `(:textDocument/rangeFormatting
                    :documentRangeFormattingProvider

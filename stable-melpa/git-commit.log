@@ -7,21 +7,22 @@ Checking out origin/HEAD
 Checking out 7c8254f6db66d6dfbe9ff9732f2c54ad65e9bd49
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/git-commit/
-  to /tmp/git-commitgzQBnL/git-commit-20220328.47
+  to /tmp/git-commitupGRPG/git-commit-20220328.47
   ! lisp/git-commit.el -> git-commit.el
   ! lisp/git-commit-pkg.el -> git-commit-pkg.el
 Created git-commit-20220328.47.tar containing:
   git-commit-20220328.47/
   git-commit-20220328.47/git-commit-pkg.el
   git-commit-20220328.47/git-commit.el
-Built git-commit in 8.950s, finished at 2022-03-29T04:56:22+0000
+Failed to fetch badge
+Built git-commit in 10.310s, finished at 2022-03-29T09:22:11+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  618 Mar 29 04:56 packages/git-commit-20220328.47.entry
- 52K -rw-r--r-- 1 root root  50K Mar 29 04:56 packages/git-commit-20220328.47.tar
+4.0K -rw-r--r-- 1 root root  618 Mar 29 09:22 packages/git-commit-20220328.47.entry
+ 52K -rw-r--r-- 1 root root  50K Mar 29 09:22 packages/git-commit-20220328.47.tar
 4.0K -rw-r--r-- 1 root root 1.2K Mar 29 04:56 packages/git-commit-badge.svg
- 16K -rw-r--r-- 1 root root  14K Mar 29 04:56 packages/git-commit-insert-issue-20210107.2018.el
-4.0K -rw-r--r-- 1 root root  517 Mar 29 04:56 packages/git-commit-insert-issue-20210107.2018.entry
+ 16K -rw-r--r-- 1 root root  14K Mar 29 09:22 packages/git-commit-insert-issue-20210107.2018.el
+4.0K -rw-r--r-- 1 root root  517 Mar 29 09:22 packages/git-commit-insert-issue-20210107.2018.entry
 4.0K -rw-r--r-- 1 root root 1.2K Mar 29 04:56 packages/git-commit-insert-issue-badge.svg
-4.0K -rw-r--r-- 1 root root  171 Mar 29 04:56 packages/git-commit-insert-issue-readme.txt
-4.0K -rw-r--r-- 1 root root  348 Mar 29 04:56 packages/git-commit-insert-issue.log
-4.0K -rw-r--r-- 1 root root 3.5K Mar 29 04:56 packages/git-commit-readme.txt
+4.0K -rw-r--r-- 1 root root  171 Mar 29 09:22 packages/git-commit-insert-issue-readme.txt
+4.0K -rw-r--r-- 1 root root  744 Mar 29 09:22 packages/git-commit-insert-issue.log
+4.0K -rw-r--r-- 1 root root 3.5K Mar 29 09:22 packages/git-commit-readme.txt

@@ -4,8 +4,8 @@
 
 ;; Author: Bozhidar Batsov <bozhidar@batsov.dev>
 ;; URL: https://github.com/bbatsov/projectile
-;; Package-Version: 20220313.1334
-;; Package-Commit: 20df208385ce7b80207602c9931e31094eca85fb
+;; Package-Version: 20220329.937
+;; Package-Commit: f3468e8d20b9d3c0da58fe5d779bd2ff35e310a9
 ;; Keywords: project, convenience
 ;; Version: 2.6.0-snapshot
 ;; Package-Requires: ((emacs "25.1"))
@@ -398,23 +398,23 @@ is set to 'alien'."
   :type '(repeat string))
 
 (defcustom projectile-globally-ignored-directories
-  '(".idea"
-    ".vscode"
-    ".ensime_cache"
-    ".eunit"
-    ".git"
-    ".hg"
-    ".fslckout"
-    "_FOSSIL_"
-    ".bzr"
-    "_darcs"
-    ".pijul"
-    ".tox"
-    ".svn"
-    ".stack-work"
-    ".ccls-cache"
-    ".cache"
-    ".clangd")
+  '("^\\.idea$"
+    "^\\.vscode$"
+    "^\\.ensime_cache$"
+    "^\\.eunit$"
+    "^\\.git$"
+    "^\\.hg$"
+    "^\\.fslckout$"
+    "^_FOSSIL_$"
+    "^\\.bzr$"
+    "^_darcs$"
+    "^\\.pijul$"
+    "^\\.tox$"
+    "^\\.svn$"
+    "^\\.stack-work$"
+    "^\\.ccls-cache$"
+    "^\\.cache$"
+    "^\\.clangd$")
   "A list of directories globally ignored by projectile.
 Regular expressions can be used.
 

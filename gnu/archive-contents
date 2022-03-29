@@ -2833,7 +2833,7 @@
 	 (:maintainer "Toby Cubitt" . "toby-predictive@dr-qubit.org")
 	 (:url . "http://www.dr-qubit.org/emacs.php"))])
  (taxy .
-       [(0 8)
+       [(0 9)
 	((emacs
 	  (26 3)))
 	"Programmable taxonomical grouping for arbitrary objects" tar
@@ -2841,7 +2841,21 @@
 	 (:keywords "lisp")
 	 (:maintainer "Adam Porter" . "adam@alphapapa.net")
 	 (:authors
-	  ("Adam Porter" . "adam@alphapapa.net")))])
+	  ("Adam Porter" . "adam@alphapapa.net"))
+	 (:commit . "b209692b632bbe8d7f97ea8a39b0c28c1be3b7ec"))])
+ (taxy-magit-section .
+		     [(0 9)
+		      ((emacs
+			(26 3))
+		       (magit-section
+			(3 2 1)))
+		      "View Taxy structs in a Magit Section buffer" tar
+		      ((:url . "https://github.com/alphapapa/taxy.el")
+		       (:keywords "lisp")
+		       (:maintainer "Adam Porter" . "adam@alphapapa.net")
+		       (:authors
+			("Adam Porter" . "adam@alphapapa.net"))
+		       (:commit . "250211dcc90e47c12323c6b0af22dd74d34b34fa"))])
  (temp-buffer-browse .
 		     [(1 5)
 		      ((emacs

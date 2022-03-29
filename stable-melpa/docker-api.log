@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 206144346b7fa4165223349cfeb64a75d47ddd1b
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/docker-api/
-  to /tmp/docker-apieH0gRi/docker-api-20160525.720
+  to /tmp/docker-apiLiVo6o/docker-api-20160525.720
     docker-api-connection.el -> docker-api-connection.el
     docker-api-containers.el -> docker-api-containers.el
     docker-api-images.el -> docker-api-images.el
@@ -23,9 +23,10 @@ Created docker-api-20160525.720.tar containing:
   docker-api-20160525.720/docker-api-pkg.el
   docker-api-20160525.720/docker-api-volumes.el
   docker-api-20160525.720/docker-api.el
-Built docker-api in 6.032s, finished at 2022-03-29T04:37:27+0000
+Failed to fetch badge
+Built docker-api in 5.966s, finished at 2022-03-29T09:02:16+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  445 Mar 29 04:37 packages/docker-api-20160525.720.entry
- 20K -rw-r--r-- 1 root root  20K Mar 29 04:37 packages/docker-api-20160525.720.tar
+4.0K -rw-r--r-- 1 root root  445 Mar 29 09:02 packages/docker-api-20160525.720.entry
+ 20K -rw-r--r-- 1 root root  20K Mar 29 09:02 packages/docker-api-20160525.720.tar
 4.0K -rw-r--r-- 1 root root 1.2K Mar 29 04:37 packages/docker-api-badge.svg
-   0 -rw-r--r-- 1 root root    0 Mar 29 04:37 packages/docker-api-readme.txt
+   0 -rw-r--r-- 1 root root    0 Mar 29 09:02 packages/docker-api-readme.txt

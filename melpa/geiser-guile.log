@@ -7,11 +7,11 @@ Checking out origin/HEAD
 Checking out c641fcc50b6b86ca95743122b5206cdcd475f96e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/geiser-guile/
-  to /tmp/geiser-guileHYEIMg/geiser-guile-20220323.2352
+  to /tmp/geiser-guile2phhIa/geiser-guile-20220323.2352
     geiser-guile.el -> geiser-guile.el
     geiser-guile.texi -> geiser-guile.texi
     src/geiser => src/geiser
-Generating /tmp/geiser-guileHYEIMg/geiser-guile-20220323.2352/geiser-guile.info
+Generating /tmp/geiser-guile2phhIa/geiser-guile-20220323.2352/geiser-guile.info
 Created geiser-guile-20220323.2352.tar containing:
   geiser-guile-20220323.2352/
   geiser-guile-20220323.2352/dir
@@ -27,9 +27,10 @@ Created geiser-guile-20220323.2352.tar containing:
   geiser-guile-20220323.2352/src/geiser/modules.scm
   geiser-guile-20220323.2352/src/geiser/utils.scm
   geiser-guile-20220323.2352/src/geiser/xref.scm
-Built geiser-guile in 10.527s, finished at 2022-03-29T04:55:32+0000
+Failed to fetch badge
+Built geiser-guile in 11.536s, finished at 2022-03-29T09:21:02+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  442 Mar 29 04:55 packages/geiser-guile-20220323.2352.entry
- 72K -rw-r--r-- 1 root root  70K Mar 29 04:55 packages/geiser-guile-20220323.2352.tar
+4.0K -rw-r--r-- 1 root root  442 Mar 29 09:21 packages/geiser-guile-20220323.2352.entry
+ 72K -rw-r--r-- 1 root root  70K Mar 29 09:21 packages/geiser-guile-20220323.2352.tar
 4.0K -rw-r--r-- 1 root root 1.2K Mar 29 04:55 packages/geiser-guile-badge.svg
-4.0K -rw-r--r-- 1 root root   69 Mar 29 04:55 packages/geiser-guile-readme.txt
+4.0K -rw-r--r-- 1 root root   69 Mar 29 09:21 packages/geiser-guile-readme.txt
