@@ -4,96 +4,98 @@ Source:  https://github.com/meain/evil-textobj-tree-sitter.git
 
 Updating /mnt/store/melpa/working/evil-textobj-tree-sitter/
 Checking out origin/HEAD
-Checking out d488792ee1ceadf3ae4a8b7b93ca3a88d36111cc
+Checking out f9346b6b4a1edff487820c39b771fb941cb88170
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/evil-textobj-tree-sitter/
-  to /tmp/evil-textobj-tree-sitterhhPu4n/evil-textobj-tree-sitter-20220325.1401
+  to /tmp/evil-textobj-tree-sitterlBVix0/evil-textobj-tree-sitter-20220329.421
     evil-textobj-tree-sitter.el -> evil-textobj-tree-sitter.el
     queries => queries
-Created evil-textobj-tree-sitter-20220325.1401.tar containing:
-  evil-textobj-tree-sitter-20220325.1401/
-  evil-textobj-tree-sitter-20220325.1401/evil-textobj-tree-sitter-pkg.el
-  evil-textobj-tree-sitter-20220325.1401/evil-textobj-tree-sitter.el
-  evil-textobj-tree-sitter-20220325.1401/queries/
-  evil-textobj-tree-sitter-20220325.1401/queries/bash/
-  evil-textobj-tree-sitter-20220325.1401/queries/bash/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/bibtex/
-  evil-textobj-tree-sitter-20220325.1401/queries/bibtex/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/c/
-  evil-textobj-tree-sitter-20220325.1401/queries/c/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/c_sharp/
-  evil-textobj-tree-sitter-20220325.1401/queries/c_sharp/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/cpp/
-  evil-textobj-tree-sitter-20220325.1401/queries/cpp/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/cuda/
-  evil-textobj-tree-sitter-20220325.1401/queries/cuda/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/dart/
-  evil-textobj-tree-sitter-20220325.1401/queries/dart/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/elixir/
-  evil-textobj-tree-sitter-20220325.1401/queries/elixir/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/elm/
-  evil-textobj-tree-sitter-20220325.1401/queries/elm/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/fennel/
-  evil-textobj-tree-sitter-20220325.1401/queries/fennel/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/fish/
-  evil-textobj-tree-sitter-20220325.1401/queries/fish/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/foam/
-  evil-textobj-tree-sitter-20220325.1401/queries/foam/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/glsl/
-  evil-textobj-tree-sitter-20220325.1401/queries/glsl/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/go/
-  evil-textobj-tree-sitter-20220325.1401/queries/go/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/hcl/
-  evil-textobj-tree-sitter-20220325.1401/queries/hcl/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/html/
-  evil-textobj-tree-sitter-20220325.1401/queries/html/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/java/
-  evil-textobj-tree-sitter-20220325.1401/queries/java/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/javascript/
-  evil-textobj-tree-sitter-20220325.1401/queries/javascript/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/julia/
-  evil-textobj-tree-sitter-20220325.1401/queries/julia/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/latex/
-  evil-textobj-tree-sitter-20220325.1401/queries/latex/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/lua/
-  evil-textobj-tree-sitter-20220325.1401/queries/lua/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/markdown/
-  evil-textobj-tree-sitter-20220325.1401/queries/markdown/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/php/
-  evil-textobj-tree-sitter-20220325.1401/queries/php/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/python/
-  evil-textobj-tree-sitter-20220325.1401/queries/python/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/ql/
-  evil-textobj-tree-sitter-20220325.1401/queries/ql/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/query/
-  evil-textobj-tree-sitter-20220325.1401/queries/query/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/r/
-  evil-textobj-tree-sitter-20220325.1401/queries/r/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/rst/
-  evil-textobj-tree-sitter-20220325.1401/queries/rst/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/ruby/
-  evil-textobj-tree-sitter-20220325.1401/queries/ruby/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/rust/
-  evil-textobj-tree-sitter-20220325.1401/queries/rust/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/scala/
-  evil-textobj-tree-sitter-20220325.1401/queries/scala/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/supercollider/
-  evil-textobj-tree-sitter-20220325.1401/queries/supercollider/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/tsx/
-  evil-textobj-tree-sitter-20220325.1401/queries/tsx/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/typescript/
-  evil-textobj-tree-sitter-20220325.1401/queries/typescript/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/verilog/
-  evil-textobj-tree-sitter-20220325.1401/queries/verilog/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/vim/
-  evil-textobj-tree-sitter-20220325.1401/queries/vim/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/vue/
-  evil-textobj-tree-sitter-20220325.1401/queries/vue/textobjects.scm
-  evil-textobj-tree-sitter-20220325.1401/queries/zig/
-  evil-textobj-tree-sitter-20220325.1401/queries/zig/textobjects.scm
-Built evil-textobj-tree-sitter in 7.860s, finished at 2022-03-29T00:23:31+0000
+Created evil-textobj-tree-sitter-20220329.421.tar containing:
+  evil-textobj-tree-sitter-20220329.421/
+  evil-textobj-tree-sitter-20220329.421/evil-textobj-tree-sitter-pkg.el
+  evil-textobj-tree-sitter-20220329.421/evil-textobj-tree-sitter.el
+  evil-textobj-tree-sitter-20220329.421/queries/
+  evil-textobj-tree-sitter-20220329.421/queries/bash/
+  evil-textobj-tree-sitter-20220329.421/queries/bash/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/bibtex/
+  evil-textobj-tree-sitter-20220329.421/queries/bibtex/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/c/
+  evil-textobj-tree-sitter-20220329.421/queries/c/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/c_sharp/
+  evil-textobj-tree-sitter-20220329.421/queries/c_sharp/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/cpp/
+  evil-textobj-tree-sitter-20220329.421/queries/cpp/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/cuda/
+  evil-textobj-tree-sitter-20220329.421/queries/cuda/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/dart/
+  evil-textobj-tree-sitter-20220329.421/queries/dart/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/elixir/
+  evil-textobj-tree-sitter-20220329.421/queries/elixir/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/elm/
+  evil-textobj-tree-sitter-20220329.421/queries/elm/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/fennel/
+  evil-textobj-tree-sitter-20220329.421/queries/fennel/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/fish/
+  evil-textobj-tree-sitter-20220329.421/queries/fish/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/foam/
+  evil-textobj-tree-sitter-20220329.421/queries/foam/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/glsl/
+  evil-textobj-tree-sitter-20220329.421/queries/glsl/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/go/
+  evil-textobj-tree-sitter-20220329.421/queries/go/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/hcl/
+  evil-textobj-tree-sitter-20220329.421/queries/hcl/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/html/
+  evil-textobj-tree-sitter-20220329.421/queries/html/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/java/
+  evil-textobj-tree-sitter-20220329.421/queries/java/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/javascript/
+  evil-textobj-tree-sitter-20220329.421/queries/javascript/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/julia/
+  evil-textobj-tree-sitter-20220329.421/queries/julia/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/latex/
+  evil-textobj-tree-sitter-20220329.421/queries/latex/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/lua/
+  evil-textobj-tree-sitter-20220329.421/queries/lua/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/markdown/
+  evil-textobj-tree-sitter-20220329.421/queries/markdown/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/php/
+  evil-textobj-tree-sitter-20220329.421/queries/php/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/python/
+  evil-textobj-tree-sitter-20220329.421/queries/python/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/ql/
+  evil-textobj-tree-sitter-20220329.421/queries/ql/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/query/
+  evil-textobj-tree-sitter-20220329.421/queries/query/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/r/
+  evil-textobj-tree-sitter-20220329.421/queries/r/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/rst/
+  evil-textobj-tree-sitter-20220329.421/queries/rst/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/ruby/
+  evil-textobj-tree-sitter-20220329.421/queries/ruby/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/rust/
+  evil-textobj-tree-sitter-20220329.421/queries/rust/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/scala/
+  evil-textobj-tree-sitter-20220329.421/queries/scala/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/supercollider/
+  evil-textobj-tree-sitter-20220329.421/queries/supercollider/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/tsx/
+  evil-textobj-tree-sitter-20220329.421/queries/tsx/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/typescript/
+  evil-textobj-tree-sitter-20220329.421/queries/typescript/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/verilog/
+  evil-textobj-tree-sitter-20220329.421/queries/verilog/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/vim/
+  evil-textobj-tree-sitter-20220329.421/queries/vim/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/vue/
+  evil-textobj-tree-sitter-20220329.421/queries/vue/textobjects.scm
+  evil-textobj-tree-sitter-20220329.421/queries/zig/
+  evil-textobj-tree-sitter-20220329.421/queries/zig/textobjects.scm
+Built evil-textobj-tree-sitter in 7.939s, finished at 2022-03-29T04:47:23+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  406 Mar 29 00:23 packages/evil-textobj-tree-sitter-20220325.1401.entry
 112K -rw-r--r-- 1 root root 110K Mar 29 00:23 packages/evil-textobj-tree-sitter-20220325.1401.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 29 00:23 packages/evil-textobj-tree-sitter-badge.svg
-4.0K -rw-r--r-- 1 root root  835 Mar 29 00:23 packages/evil-textobj-tree-sitter-readme.txt
+4.0K -rw-r--r-- 1 root root  405 Mar 29 04:47 packages/evil-textobj-tree-sitter-20220329.421.entry
+112K -rw-r--r-- 1 root root 110K Mar 29 04:47 packages/evil-textobj-tree-sitter-20220329.421.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 29 04:47 packages/evil-textobj-tree-sitter-badge.svg
+4.0K -rw-r--r-- 1 root root  835 Mar 29 04:47 packages/evil-textobj-tree-sitter-readme.txt

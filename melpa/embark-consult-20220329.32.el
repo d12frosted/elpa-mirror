@@ -5,8 +5,8 @@
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
-;; Package-Version: 20220321.239
-;; Package-Commit: b80d96ce0ab79e73829322e46c6d7493eb2b8c34
+;; Package-Version: 20220329.32
+;; Package-Commit: 8460d47768cba7b0019c59f4007120bd94109a1b
 ;; Version: 0.5
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "26.1") (embark "0.12") (consult "0.10"))
@@ -166,8 +166,6 @@ This function is meant to be added to `embark-collect-mode-hook'."
       (mapc (lambda (x) (consult--get-location (funcall fn x)))
             embark-collect--candidates))))
 
-(setf (alist-get 'consult-location embark-collect-initial-view-alist)
-      'list)
 (setf (alist-get 'consult-location embark-exporters-alist)
       #'embark-consult-export-occur)
 (cl-pushnew #'embark-consult--upgrade-markers embark-collect-mode-hook)
@@ -207,8 +205,6 @@ This function is meant to be added to `embark-collect-mode-hook'."
       #'embark-consult-goto-grep)
 (setf (alist-get 'consult-grep embark-exporters-alist)
       #'embark-consult-export-grep)
-(setf (alist-get 'consult-grep embark-collect-initial-view-alist)
-      'list)
 
 ;;; Support for consult-isearch
 

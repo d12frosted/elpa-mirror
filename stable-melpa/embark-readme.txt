@@ -65,8 +65,8 @@ on candidate sets:
 
 - The `embark-collect' command produces a buffer listing all
   candidates, for you to peruse and run actions on at your leisure.
-  The candidates can be viewed in a grid or as a list showing
-  additional annotations.
+  The candidates are displayed as a list showing additional
+  annotations.
 
 - The `embark-export' command tries to open a buffer in an
   appropriate major mode for the set of candidates.  If the
