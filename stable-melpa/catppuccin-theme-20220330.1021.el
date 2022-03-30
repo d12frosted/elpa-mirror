@@ -1,14 +1,14 @@
 ;;; catppuccin-theme.el --- Catppuccin Theme
 
 ;; Copyright 2015-present, All rights reserved
-;;
-;; Code licensed under the MIT license
+;; 
+;; SPDX-License-Identifier: MIT
 
 ;; Maintainer: pspiagicw <pspiagicw@gmail.com>
 ;; Author: pspiagicw
 ;; Version: 1.0.0
-;; Package-Version: 20220327.505
-;; Package-Commit: c5e268c9f9c5ed4523be28a8fcab921e8c108751
+;; Package-Version: 20220330.1021
+;; Package-Commit: 352ebf62099e95cb4a71060a7d4a228f00358b97
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/catppuccin/emacs
 

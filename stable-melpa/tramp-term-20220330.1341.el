@@ -1,12 +1,12 @@
-;;; tramp-term.el --- Automatic setup of directory tracking in ssh sessions.
+;;; tramp-term.el --- Automatic setup of directory tracking in ssh sessions
 
 ;; Copyright (C) 2014 Randy Morris
 
 ;; Author: Randy Morris <randy.morris@archlinux.us>
 ;; Version: 0.5
-;; Package-Version: 20220329.1324
-;; Package-Commit: 2ce4b7c03a04551a119841c4226106358358b4d0
-;; Keywords: tramp, ssh
+;; Package-Version: 20220330.1341
+;; Package-Commit: 1e9cdd404f816f8dd3692c12192ca5ef4d62324b
+;; Keywords: comm, terminals
 ;; URL: https://github.com/randymorris/tramp-term.el
 
 ;; This program is free software; you can redistribute it and/or

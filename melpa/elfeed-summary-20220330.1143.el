@@ -5,8 +5,8 @@
 ;; Author: Korytov Pavel <thexcloud@gmail.com>
 ;; Maintainer: Korytov Pavel <thexcloud@gmail.com>
 ;; Version: 0.1.0
-;; Package-Version: 20220328.907
-;; Package-Commit: 7b58bb1beb49f84c39ece322fbd22f22d7da2a5e
+;; Package-Version: 20220330.1143
+;; Package-Commit: 2f351bed59e251b53b884f8c59f828a352d56269
 ;; Package-Requires: ((emacs "27.1") (magit-section "3.3.0") (elfeed "3.4.1"))
 ;; Homepage: https://github.com/SqrtMinusOne/elfeed-summary.el
 
@@ -630,9 +630,7 @@ The return value is a list of alists of the following elements:
     (set-keymap-parent map magit-section-mode-map)
     (define-key map (kbd "RET") #'elfeed-summary--action)
     (define-key map (kbd "M-RET") #'elfeed-summary--action-show-read)
-    (define-key map (kbd "q") (lambda ()
-                                (interactive)
-                                (quit-window t)))
+    (define-key map (kbd "q") #'elfeed-summary-quit-window)
     (define-key map (kbd "r") #'elfeed-summary--refresh)
     (define-key map (kbd "R") #'elfeed-summary-update)
     (define-key map (kbd "u") #'elfeed-summary-toggle-only-unread)
@@ -646,9 +644,7 @@ The return value is a list of alists of the following elements:
         (kbd "RET") #'elfeed-summary--action
         "M-RET" #'elfeed-summary--action-show-read
         "U" #'elfeed-summary--action-mark-read
-        "q" (lambda ()
-              (interactive)
-              (quit-window t))))
+        "q" #'elfeed-summary-quit-window))
     map)
   "A keymap for `elfeed-summary-mode-map'.")
 
@@ -1099,6 +1095,12 @@ search buffer."
       (with-current-buffer buffer
         (elfeed-summary--refresh))
     (elfeed-db-save)))
+
+(defun elfeed-summary-quit-window ()
+  "Save the database, then `quit-window'."
+  (interactive)
+  (elfeed-db-save)
+  (quit-window t))
 
 (defun elfeed-summary--setup ()
   "Setup elfeed summary."
