@@ -8,7 +8,8 @@ Table of Contents
 
 1. Installation
 2. Changelog
-.. 1. 0.9
+.. 1. 0.9.1
+.. 2. 0.9
 3. Development
 4. Credits
 5. License
@@ -41,7 +42,18 @@ This library renders [Taxy] structs with [magit-section].
 2 Changelog
 ═══════════
 
-2.1 0.9
+2.1 0.9.1
+─────────
+
+  *Fixes*
+  ⁃ `taxy-magit-section-insert' appends heading faces, so users can
+    override (or merge with) the default.
+  ⁃ `taxy-magit-section-format-items' uses columns' headers as their
+    minimum width, which preserves each column's width regardless of
+    items' values.
+
+
+2.2 0.9
 ───────
 
   ⁃ `taxy-magit-section' moved to separate package.

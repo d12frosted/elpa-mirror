@@ -1852,13 +1852,14 @@
 		(:keywords "convenience" "org-mode" "org-agenda")
 		(:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
  (nano-modeline .
-		[(0 5)
+		[(0 6)
 		 ((emacs
 		   (27 1)))
 		 "N Λ N O modeline" tar
 		 ((:url . "https://github.com/rougier/nano-modeline")
 		  (:keywords "convenience" "mode-line" "header-line")
-		  (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr"))])
+		  (:maintainer "Nicolas P. Rougier" . "Nicolas.Rougier@inria.fr")
+		  (:commit . "1c743a9dbe72a1bdc2196ad43a217060e163c929"))])
  (nano-theme .
 	     [(0 3 0)
 	      ((emacs
@@ -2844,7 +2845,7 @@
 	  ("Adam Porter" . "adam@alphapapa.net"))
 	 (:commit . "b209692b632bbe8d7f97ea8a39b0c28c1be3b7ec"))])
  (taxy-magit-section .
-		     [(0 9)
+		     [(0 9 1)
 		      ((emacs
 			(26 3))
 		       (magit-section
@@ -2855,7 +2856,7 @@
 		       (:maintainer "Adam Porter" . "adam@alphapapa.net")
 		       (:authors
 			("Adam Porter" . "adam@alphapapa.net"))
-		       (:commit . "250211dcc90e47c12323c6b0af22dd74d34b34fa"))])
+		       (:commit . "62624c32d7f58bfa4acc89becc7cc8427d546aab"))])
  (temp-buffer-browse .
 		     [(1 5)
 		      ((emacs

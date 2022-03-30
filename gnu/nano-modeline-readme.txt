@@ -7,6 +7,7 @@ depending on nano-modeline-position custom setting.
 There are two sets of faces (for active and inactive modelines) that
 can be customized (M-x: customize-group + nano-modeline)
 
+- nano-modeline-active           / nano-modeline-inactive
 - nano-modeline-active-name      / nano-modeline-inactive-name
 - nano-modeline-active-primary   / nano-modeline-inactive-primary
 - nano-modeline-active-secondary / nano-modeline-inactive-secondary
