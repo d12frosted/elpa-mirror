@@ -4,11 +4,11 @@
 
 ;; Author: Akib Azmain Turja <akib@disroot.org>
 ;; Version: 1.0
-;; Package-Version: 20220328.412
-;; Package-Commit: 892ac23b266022cd98ff82541738cedb7b439118
+;; Package-Version: 20220330.422
+;; Package-Commit: cd5dc79ac65c24e9e775bd2582ad620e316f2182
 ;; Package-Requires: ((emacs "27.2"))
 ;; Keywords: tools, c
-;; URL: https://codeberg.org/akib/emacs-why-this
+;; URL: https://codeberg.org/akib/emacs-gnu-indent
 
 ;; This file is not part of GNU Emacs.
 
@@ -42,7 +42,8 @@
 
 (defgroup gnu-indent nil
   "Indent your code with GNU Indent."
-  :group 'tools)
+  :group 'tools
+  :link '(url-link "https://codeberg.org/akib/emacs-gnu-indent"))
 
 (defcustom gnu-indent-program "indent"
   "Name of GNU Indent executable."

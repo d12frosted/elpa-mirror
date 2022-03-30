@@ -4,8 +4,8 @@
 
 ;; Author: Paul W. Rankin <pwr@bydasein.com>
 ;; Keywords: wp, text
-;; Package-Version: 20211030.838
-;; Package-Commit: a31ac05a161a91fe5c157930b62a6c07037982ee
+;; Package-Version: 20220330.635
+;; Package-Commit: 8d287a80c5e3d72ac01b56c8afe60b01f18500b4
 ;; Version: 2.0.4
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/rnkn/olivetti
@@ -293,6 +293,13 @@ if it is an integer, and otherwise return WIDTH."
 (defun olivetti-reset-all-windows ()
   "Call `olivetti-reset-window' on all windows."
   (walk-windows #'olivetti-reset-window nil t))
+
+;; FIXME: these split-window functions seem to be ignored by
+;; `window-toggle-side-windows'
+;; WORKAROUND:
+;; (with-eval-after-load 'olivetti
+;;   (advice-add 'window-toggle-side-windows
+;;               :before 'olivetti-reset-all-windows))
 
 (defun olivetti-split-window (&optional window size side pixelwise)
   "Call `split-window' after resetting WINDOW.

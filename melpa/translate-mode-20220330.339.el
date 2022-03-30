@@ -4,8 +4,8 @@
 
 ;; Author: Ray Wang <rayw.public@gmail.com>
 ;; Package-Requires: ((emacs "24.3"))
-;; Package-Version: 20220328.1100
-;; Package-Commit: beecbd5e448fbb01a42346a4033729361d5655ff
+;; Package-Version: 20220330.339
+;; Package-Commit: f313293bf6d0780bd8438d0d44cedfcf0dc45cba
 ;; Version: 0
 ;; Keywords: translate, convenience, editing
 ;; URL: https://github.com/rayw000/translate-mode
@@ -250,17 +250,17 @@ BUFFER is the newly created buffer which is supposed to be set to the new window
 
 ;;;###autoload
 (defun translate-open-reference-file (&optional filename)
-  "Prompt to open a file and set it as the reference buffer for translation referring."
+  "Prompt to open a file and set it as the reference buffer."
   (interactive)
   (let ((buffer (find-file-noselect
                  (or filename
-                     (read-file-name "Open reference file for translatin: ")))))
+                     (read-file-name "Open reference file: ")))))
     (translate--prepare-window-layout-and-set-buffer buffer)
     buffer))
 
 ;;;###autoload
 (defun translate-select-reference-buffer (&optional buf)
-  "Prompt to select the reference buffer for referring."
+  "Prompt to select the reference buffer."
   (interactive)
   (let ((buffer (or buf
                     (completing-read
