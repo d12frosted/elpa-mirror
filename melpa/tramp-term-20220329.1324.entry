@@ -1,0 +1,9 @@
+(tramp-term .
+	    [(20220329 1324)
+	     nil "Automatic setup of directory tracking in ssh sessions." single
+	     ((:commit . "2ce4b7c03a04551a119841c4226106358358b4d0")
+	      (:authors
+	       ("Randy Morris" . "randy.morris@archlinux.us"))
+	      (:maintainer "Randy Morris" . "randy.morris@archlinux.us")
+	      (:keywords "tramp" "ssh")
+	      (:url . "https://github.com/randymorris/tramp-term.el"))])

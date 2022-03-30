@@ -4,10 +4,10 @@ Source:  https://github.com/factor/factor.git
 
 Updating /mnt/store/melpa/working/fuel/
 Checking out origin/HEAD
-Checking out 5219bcf400922c32f56dc0bd1219bcbc42459496
+Checking out 1aeafdb87bb8937035d06c59d8c997a58b5e53ae
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/fuel/
-  to /tmp/fuelkPABZO/fuel-20211221.2127
+  to /tmp/fuelJQKgga/fuel-20211221.2127
   ! misc/fuel/factor-mode.el -> factor-mode.el
   ! misc/fuel/factor-smie.el -> factor-smie.el
   ! misc/fuel/fuel-autodoc.el -> fuel-autodoc.el
@@ -60,9 +60,8 @@ Created fuel-20211221.2127.tar containing:
   fuel-20211221.2127/fuel-table.el
   fuel-20211221.2127/fuel-tests.el
   fuel-20211221.2127/fuel-xref.el
-Failed to fetch badge
-Built fuel in 44.097s, finished at 2022-03-29T09:20:58+0000
+Built fuel in 36.452s, finished at 2022-03-30T02:35:04+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  202 Mar 29 09:20 packages/fuel-20211221.2127.entry
-212K -rw-r--r-- 1 root root 210K Mar 29 09:20 packages/fuel-20211221.2127.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 29 04:55 packages/fuel-badge.svg
+4.0K -rw-r--r-- 1 root root  202 Mar 30 02:35 packages/fuel-20211221.2127.entry
+212K -rw-r--r-- 1 root root 210K Mar 30 02:35 packages/fuel-20211221.2127.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 30 02:35 packages/fuel-badge.svg

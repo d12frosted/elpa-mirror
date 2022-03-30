@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/hl-todo
 ;; Keywords: convenience
 ;; Package-Version: 20220326.1539
-;; Package-Commit: 8046bebb977ddf81d311c4ca38f40c815ab7755b
+;; Package-Commit: e52285965b5ee89c18080661d4f80270143ae8dc
 
 ;; Package-Requires: ((emacs "25"))
 

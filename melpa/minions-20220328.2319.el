@@ -7,7 +7,7 @@
 
 ;; Package-Requires: ((emacs "25.2"))
 ;; Package-Version: 20220328.2319
-;; Package-Commit: 76916b6961708782b7b0f64c4d0236e51dafd589
+;; Package-Commit: 98b6e8cbd28b56c6a81c561ddd175761d8536fcd
 
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 

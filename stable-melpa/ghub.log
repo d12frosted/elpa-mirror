@@ -4,10 +4,10 @@ Source:  https://github.com/magit/ghub.git
 
 Updating /mnt/store/melpa/working/ghub/
 Checking out origin/HEAD
-Checking out fdf2e5bb9ba34216d6a76444c1889863db447b29
+Checking out 80f5008b8c6b48dee2b77fbffe380653d2d7720d
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ghub/
-  to /tmp/ghubC0iifm/ghub-20220325.1028
+  to /tmp/ghubD85LKb/ghub-20220329.2141
   ! lisp/buck.el -> buck.el
   ! lisp/ghub-graphql.el -> ghub-graphql.el
   ! lisp/ghub-pkg.el -> ghub-pkg.el
@@ -18,24 +18,23 @@ Copying files (->) and directories (=>)
   ! lisp/gtea.el -> gtea.el
   ! docs/ghub.texi -> ghub.texi
     .dir-locals.el -> .dir-locals.el
-Generating /tmp/ghubC0iifm/ghub-20220325.1028/ghub.info
-Created ghub-20220325.1028.tar containing:
-  ghub-20220325.1028/
-  ghub-20220325.1028/.dir-locals.el
-  ghub-20220325.1028/buck.el
-  ghub-20220325.1028/dir
-  ghub-20220325.1028/ghub-graphql.el
-  ghub-20220325.1028/ghub-pkg.el
-  ghub-20220325.1028/ghub.el
-  ghub-20220325.1028/ghub.info
-  ghub-20220325.1028/glab.el
-  ghub-20220325.1028/gogs.el
-  ghub-20220325.1028/gsexp.el
-  ghub-20220325.1028/gtea.el
-Failed to fetch badge
-Built ghub in 23.227s, finished at 2022-03-29T09:21:56+0000
+Generating /tmp/ghubD85LKb/ghub-20220329.2141/ghub.info
+Created ghub-20220329.2141.tar containing:
+  ghub-20220329.2141/
+  ghub-20220329.2141/.dir-locals.el
+  ghub-20220329.2141/buck.el
+  ghub-20220329.2141/dir
+  ghub-20220329.2141/ghub-graphql.el
+  ghub-20220329.2141/ghub-pkg.el
+  ghub-20220329.2141/ghub.el
+  ghub-20220329.2141/ghub.info
+  ghub-20220329.2141/glab.el
+  ghub-20220329.2141/gogs.el
+  ghub-20220329.2141/gsexp.el
+  ghub-20220329.2141/gtea.el
+Built ghub in 13.774s, finished at 2022-03-30T02:35:50+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  401 Mar 29 09:21 packages/ghub-20220325.1028.entry
-152K -rw-r--r-- 1 root root 150K Mar 29 09:21 packages/ghub-20220325.1028.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 29 04:56 packages/ghub-badge.svg
-4.0K -rw-r--r-- 1 root root 1.3K Mar 29 09:21 packages/ghub-readme.txt
+4.0K -rw-r--r-- 1 root root  391 Mar 30 02:35 packages/ghub-20220329.2141.entry
+152K -rw-r--r-- 1 root root 150K Mar 30 02:35 packages/ghub-20220329.2141.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 30 02:35 packages/ghub-badge.svg
+4.0K -rw-r--r-- 1 root root 1.3K Mar 30 02:35 packages/ghub-readme.txt

@@ -1,4 +1,4 @@
-This package provides a way to initiate ssh sessions within emacs
+This package provides a way to initiate ssh sessions within Emacs
 and have directory tracking automatically set up for editing files
 with TRAMP.  No configuration is required on the remote host.
 
