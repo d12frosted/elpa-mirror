@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `logos' (or `logos.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.2.0,
-released on 2022-03-17.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.3.0,
+released on 2022-03-30.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.3.0-dev.
+Current development target is 0.4.0-dev.
 
 Table of Contents
 ─────────────────
@@ -99,9 +99,6 @@ Table of Contents
   `olivetti' package is installed (`logos-olivetti').  All these
   variables are buffer-local.
 
-  [ User options have changed as part of 0.3.0-dev.  Especially the glue
-    code for Olivetti. ]
-
   Logos is the familiar word derived from Greek (watch my presentation
   on philosophy about Cosmos, Logos, and the living universe:
   <https://protesilaos.com/books/2022-02-05-cosmos-logos-living-universe/>),
@@ -183,9 +180,6 @@ Table of Contents
     so it is possible to use file variables as described in the Emacs
     manual.
 
-  [ User options have changed as part of 0.3.0-dev.  Especially the glue
-    code for Olivetti. ]
-
   ┌────
   │ (require 'logos)
   │ 
@@ -226,8 +220,6 @@ Table of Contents
 
 5.1 Center the buffer in its window
 ───────────────────────────────────
-
-  [ Changed as part of 0.3.0-dev ]
 
   Install the excellent `olivetti' package by Paul W. Rankin.  Then set
   `logos-olivetti' to non-nil.
@@ -403,7 +395,8 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to code or the manual
-        Philip Kaludercic, Remco van ’t Veer, and user Ypot.
+        Daniel Mendler, Omar Antolín Camarena, Philip Kaludercic, Remco
+        van ’t Veer, and user Ypot.
 
   Ideas and user feedback
         Daniel Mendler.

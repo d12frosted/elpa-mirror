@@ -1621,7 +1621,7 @@
 	   (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
 	   (:url . "https://github.com/fourier/loccur"))])
  (logos .
-	[(0 2 0)
+	[(0 3 0)
 	 ((emacs
 	   (27 1)))
 	 "Simple focus mode and extras" tar
@@ -1630,7 +1630,7 @@
 	  (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	  (:authors
 	   ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	  (:commit . "36e911064c263813110b17acd5fb9b01b9436112"))])
+	  (:commit . "de6959ceef59d818aa5ec2b1700932f5b78bcb78"))])
  (map .
       [(3 2 1)
        ((emacs
@@ -2907,7 +2907,7 @@
 	  ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	 (:keywords "convenience"))])
  (tramp .
-	[(2 5 2 2)
+	[(2 5 2 3)
 	 ((emacs
 	   (25 1)))
 	 "Transparent Remote Access, Multiple Protocol" tar
@@ -2916,7 +2916,7 @@
 	  (:maintainer "Michael Albinus" . "michael.albinus@gmx.de")
 	  (:authors
 	   ("Kai Großjohann" . "kai.grossjohann@gmx.net"))
-	  (:commit . "aeb0ea73406d7d7066149cb487683e55b86e7124"))])
+	  (:commit . "ad1b28dca70c70cd4c317dcb606c92dfb436ccee"))])
  (tramp-nspawn .
 	       [(1 0)
 		((emacs
