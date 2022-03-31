@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out b3edf04740f6edfc872b1ba61b13a58a03d983c0
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/racket-mode/
-  to /tmp/racket-modepLNL3c/racket-mode-20220330.1931
+  to /tmp/racket-modeiMEEYj/racket-mode-20220330.1931
     racket-back-end.el -> racket-back-end.el
     racket-browse-url.el -> racket-browse-url.el
     racket-bug-report.el -> racket-bug-report.el
@@ -69,7 +69,7 @@ Copying files (->) and directories (=>)
     racket/stack-checkpoint.rkt -> racket/stack-checkpoint.rkt
     racket/syntax.rkt -> racket/syntax.rkt
     racket/util.rkt -> racket/util.rkt
-Generating /tmp/racket-modepLNL3c/racket-mode-20220330.1931/racket-mode.info
+Generating /tmp/racket-modeiMEEYj/racket-mode-20220330.1931/racket-mode.info
 Created racket-mode-20220330.1931.tar containing:
   racket-mode-20220330.1931/
   racket-mode-20220330.1931/dir
@@ -143,9 +143,10 @@ Created racket-mode-20220330.1931.tar containing:
   racket-mode-20220330.1931/racket/stack-checkpoint.rkt
   racket-mode-20220330.1931/racket/syntax.rkt
   racket-mode-20220330.1931/racket/util.rkt
-Built racket-mode in 14.600s, finished at 2022-03-31T00:09:44+0000
+Failed to fetch badge
+Built racket-mode in 29.614s, finished at 2022-03-31T04:17:09+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  305 Mar 31 00:09 packages/racket-mode-20220330.1931.entry
-872K -rw-r--r-- 1 root root 870K Mar 31 00:09 packages/racket-mode-20220330.1931.tar
+4.0K -rw-r--r-- 1 root root  305 Mar 31 04:17 packages/racket-mode-20220330.1931.entry
+872K -rw-r--r-- 1 root root 870K Mar 31 04:17 packages/racket-mode-20220330.1931.tar
 4.0K -rw-r--r-- 1 root root 1.2K Mar 31 00:09 packages/racket-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  213 Mar 31 00:09 packages/racket-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  213 Mar 31 04:17 packages/racket-mode-readme.txt
