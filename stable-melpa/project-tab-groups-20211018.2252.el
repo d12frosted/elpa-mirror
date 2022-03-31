@@ -5,7 +5,7 @@
 ;; Author: Fritz Grabo <hello@fritzgrabo.com>
 ;; URL: https://github.com/fritzgrabo/project-tab-groups
 ;; Package-Version: 20211018.2252
-;; Package-Commit: 7332577ebc17db80a3124cd2bbaab28a29ed58e6
+;; Package-Commit: 28cc1c3c883676e81e05a04d12271e19970536fc
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "28"))
 ;; Keywords: convenience

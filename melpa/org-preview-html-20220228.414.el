@@ -5,8 +5,6 @@
 ;; Author: Jake B <jakebox0@protonmail.com>
 ;; Original author of org-preview-html (until 2021-09): DarkSun <lujun9972@gmail.com>
 ;; Url: https://github.com/jakebox/org-preview-html
-;; Package-Version: 20220228.414
-;; Package-Commit: cb85524d5090b8189e965cc49d65be04650c17c4
 ;; Keywords: Org, convenience, outlines
 ;; Version: 0.3
 ;; Package-Requires: ((emacs "25.1") (org "8.0"))

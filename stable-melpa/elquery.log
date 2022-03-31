@@ -4,10 +4,24 @@ Source:  https://github.com/AdamNiederer/elquery.git
 
 Updating /mnt/store/melpa/working/elquery/
 Checking out origin/HEAD
-Checking out 0e5f7addacb14502977e93b05786ecec1e108619
-Built elquery in 6.988s, finished at 2022-03-30T14:32:10+0000
+Checking out 38f3bd41096cb270919b06095da0b9ac1add4598
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/elquery/
+  to /tmp/elquerydvsQZF/elquery-20220331.143
+    elquery.el -> elquery.el
+    elquery.texi -> elquery.texi
+Generating /tmp/elquerydvsQZF/elquery-20220331.143/elquery.info
+Created elquery-20220331.143.tar containing:
+  elquery-20220331.143/
+  elquery-20220331.143/dir
+  elquery-20220331.143/elquery-pkg.el
+  elquery-20220331.143/elquery.el
+  elquery-20220331.143/elquery.info
+Built elquery in 16.231s, finished at 2022-03-31T03:11:16+0000
  ✓ Success:
- 28K -rw-r--r-- 1 root root  26K Mar 30 14:32 packages/elquery-20220329.536.el
-4.0K -rw-r--r-- 1 root root  362 Mar 30 14:32 packages/elquery-20220329.536.entry
-4.0K -rw-r--r-- 1 root root 1.2K Mar 30 14:32 packages/elquery-badge.svg
-4.0K -rw-r--r-- 1 root root  223 Mar 30 14:32 packages/elquery-readme.txt
+ 28K -rw-r--r-- 1 root root  26K Mar 30 23:10 packages/elquery-20220329.536.el
+4.0K -rw-r--r-- 1 root root  362 Mar 30 23:10 packages/elquery-20220329.536.entry
+4.0K -rw-r--r-- 1 root root  359 Mar 31 03:11 packages/elquery-20220331.143.entry
+ 52K -rw-r--r-- 1 root root  50K Mar 31 03:11 packages/elquery-20220331.143.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 31 03:11 packages/elquery-badge.svg
+4.0K -rw-r--r-- 1 root root  223 Mar 31 03:11 packages/elquery-readme.txt

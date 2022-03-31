@@ -4,10 +4,10 @@ Source:  https://github.com/donkirkby/live-py-plugin.git
 
 Updating /mnt/store/melpa/working/live-py-mode/
 Checking out origin/HEAD
-Checking out 6fa9967b2ac69ae40980804ca6152e8f2f5e9f12
+Checking out 3f936922ee5d96de3f282195f587246c447a6c75
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/live-py-mode/
-  to /tmp/live-py-modeG2cHyI/live-py-mode-20220208.308
+  to /tmp/live-py-modeXDhsLd/live-py-mode-20220208.308
   ! emacs-live-py-mode/live-py-mode.el -> live-py-mode.el
   ! plugin/PySrc/space_tracer => space_tracer
 Created live-py-mode-20220208.308.tar containing:
@@ -26,9 +26,10 @@ Created live-py-mode-20220208.308.tar containing:
   live-py-mode-20220208.308/space_tracer/module_importers.py
   live-py-mode-20220208.308/space_tracer/report_builder.py
   live-py-mode-20220208.308/space_tracer/traced_finder.py
-Built live-py-mode in 11.152s, finished at 2022-03-30T15:08:01+0000
+Failed to fetch badge
+Built live-py-mode in 11.690s, finished at 2022-03-31T03:50:39+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  370 Mar 30 15:08 packages/live-py-mode-20220208.308.entry
-180K -rw-r--r-- 1 root root 180K Mar 30 15:08 packages/live-py-mode-20220208.308.tar
-4.0K -rw-r--r-- 1 root root 1.2K Mar 30 15:08 packages/live-py-mode-badge.svg
-4.0K -rw-r--r-- 1 root root  156 Mar 30 15:08 packages/live-py-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  370 Mar 31 03:50 packages/live-py-mode-20220208.308.entry
+180K -rw-r--r-- 1 root root 180K Mar 31 03:50 packages/live-py-mode-20220208.308.tar
+4.0K -rw-r--r-- 1 root root 1.2K Mar 30 23:44 packages/live-py-mode-badge.svg
+4.0K -rw-r--r-- 1 root root  156 Mar 31 03:50 packages/live-py-mode-readme.txt
