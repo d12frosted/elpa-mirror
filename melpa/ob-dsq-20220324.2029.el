@@ -5,7 +5,7 @@
 ;; Author: Fritz Grabo <hello@fritzgrabo.com>
 ;; URL: https://github.com/fritzgrabo/ob-dsq
 ;; Package-Version: 20220324.2029
-;; Package-Commit: 55433631458dd57ae890b2665f8f15b2df2f71e8
+;; Package-Commit: 6877b84ff3f1860af52fa7fe71042db649b02d78
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
 ;; Keywords: data, tools

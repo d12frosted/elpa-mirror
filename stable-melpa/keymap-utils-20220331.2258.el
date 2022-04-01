@@ -10,7 +10,7 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Package-Requires: ((cl-lib "0.3"))
 ;; Package-Version: 20220331.2258
-;; Package-Commit: 47a9fecb3f05feafdad4cf2e7f99348be2e9b51a
+;; Package-Commit: 8faaad75d21c6ad8d9a1f40e45b09875e2626002
 ;; Homepage: https://github.com/tarsius/keymap-utils
 ;; Keywords: convenience, extensions
 
