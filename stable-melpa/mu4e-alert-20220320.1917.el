@@ -7,7 +7,7 @@
 ;; Maintainer: Mikhail Rudenko <mike.rudenko@gmail.com>
 ;; URL: https://github.com/iqbalansari/mu4e-alert
 ;; Package-Version: 20220320.1917
-;; Package-Commit: cfd8bf3edab29ba7babb7cbe75c67aeb15a8a386
+;; Package-Commit: 08898d29ea291dd8f51cb599729e4b566903a5db
 ;; Keywords: mail, convenience
 ;; Version: 1.0
 ;; Package-Requires: ((alert "1.2") (s "1.10.0") (ht "2.0") (emacs "24.4"))

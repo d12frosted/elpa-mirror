@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/bicycle
 ;; Keywords: outlines
 ;; Package-Version: 20220101.1042
-;; Package-Commit: c69b010c7b4899b6c016f926ad3a6e11ebfec0bc
+;; Package-Commit: 56c9fc7970191aba506fb7d237ecf2e6a2f7d7ae
 
 ;; Package-Requires: ((emacs "25.1"))
 

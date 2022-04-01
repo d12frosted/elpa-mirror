@@ -3,11 +3,35 @@ Fetcher: gitlab
 Source:  https://gitlab.com/fvdbeek/emacs-pubmed.git
 
 Updating /mnt/store/melpa/working/pubmed/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-error: RPC failed; HTTP 503 curl 22 The requested URL returned error: 503
-fatal: expected flush after ref listing
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out e1ac5433daf966cf7c5e9178b037191e1eb3e4bd
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/pubmed/
+  to /tmp/pubmedldeqOn/pubmed-20210927.1933
+    pubmed-advanced-search.el -> pubmed-advanced-search.el
+    pubmed-bibtex.el -> pubmed-bibtex.el
+    pubmed-dissemin.el -> pubmed-dissemin.el
+    pubmed-openaccessbutton.el -> pubmed-openaccessbutton.el
+    pubmed-pmc.el -> pubmed-pmc.el
+    pubmed-scihub.el -> pubmed-scihub.el
+    pubmed-springer.el -> pubmed-springer.el
+    pubmed-unpaywall.el -> pubmed-unpaywall.el
+    pubmed.el -> pubmed.el
+Created pubmed-20210927.1933.tar containing:
+  pubmed-20210927.1933/
+  pubmed-20210927.1933/pubmed-advanced-search.el
+  pubmed-20210927.1933/pubmed-bibtex.el
+  pubmed-20210927.1933/pubmed-dissemin.el
+  pubmed-20210927.1933/pubmed-openaccessbutton.el
+  pubmed-20210927.1933/pubmed-pkg.el
+  pubmed-20210927.1933/pubmed-pmc.el
+  pubmed-20210927.1933/pubmed-scihub.el
+  pubmed-20210927.1933/pubmed-springer.el
+  pubmed-20210927.1933/pubmed-unpaywall.el
+  pubmed-20210927.1933/pubmed.el
+Built pubmed in 7.289s, finished at 2022-04-01T00:14:08+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  473 Apr  1 00:14 packages/pubmed-20210927.1933.entry
+232K -rw-r--r-- 1 root root 230K Apr  1 00:14 packages/pubmed-20210927.1933.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  1 00:14 packages/pubmed-badge.svg
+4.0K -rw-r--r-- 1 root root  107 Apr  1 00:14 packages/pubmed-readme.txt

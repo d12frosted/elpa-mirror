@@ -1,0 +1,17 @@
+(gerrit .
+	[(20220331 2019)
+	 ((emacs
+	   (25 1))
+	  (magit
+	   (2 13 1))
+	  (s
+	   (1 12 0))
+	  (dash
+	   (0 2 15)))
+	 "Gerrit client" tar
+	 ((:commit . "7bde8b4ebb58417d509abcff320ffd96ee2c3159")
+	  (:authors
+	   ("Thomas Hisch" . "t.hisch@gmail.com"))
+	  (:maintainer "Thomas Hisch" . "t.hisch@gmail.com")
+	  (:keywords "extensions")
+	  (:url . "https://github.com/thisch/gerrit.el"))])

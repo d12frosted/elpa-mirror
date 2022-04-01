@@ -1,19 +1,21 @@
-modern-fringes is meant to replace the arguably ugly default fringe bitmaps
-with more modern, easier on the eyes ones.  They are very simple to use,
-simply use the modern-fringes-mode.  As one knows, you may use customize to
-make the mode permanent.  It is a global minor mode, so it will affect all
-buffers.
+modern-fringes is meant to replace the default fringes with ones that are
+more visually pleasing.  They are very simple to use, just enable the
+modern-fringes-mode minor mode.  You are able to use customize to make the
+mode permanent, as well as change other aspects.  It is a global minor mode
+and will affect all buffers.
 
-It is suggested to use the following function in your init file to
-use modern-fringes at intended.  It makes the truncation arrows appear
-transparent, making a very easy on the eyes zipper-effect.
+It is suggested to use the following function in your init file to use
+modern-fringes at intended.  It matches the truncation arrow foreground color
+to the current main background color of your theme, making them appear
+transparent and less visually cluttering.
 
-   (modern-fringes-invert-arrows)
+(modern-fringes-invert-arrows)
 
-Depending on your theme, it may not work
-properly.  In that case, you can edit the bitmap faces as you wish in your
-config.  modern-fringes was designed assuming the fringe width is 8 pixels
-wide.  It will likely look strange if the width is any less or more.
+Depending on your theme, the function may make them look unappealing.  In
+that case, you can edit the bitmap faces as you wish in your config.
+
+modern-fringes assumes the fringe width is 8 pixels wide, and the bitmaps
+will likely look strange if the width is any different.
 
 bitmap references
 
