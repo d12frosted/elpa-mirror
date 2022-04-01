@@ -4,3 +4,46 @@ Source:  https://github.com/OmniSharp/omnisharp-emacs.git
 
 Updating /mnt/store/melpa/working/omnisharp/
 Checking out origin/master
+Checking out e276ff140666057c6d6848f9cfc84a82e3a7650c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/omnisharp/
+  to /tmp/omnisharpAR9p2l/omnisharp-20210725.1955
+    omnisharp-auto-complete-actions.el -> omnisharp-auto-complete-actions.el
+    omnisharp-code-structure.el -> omnisharp-code-structure.el
+    omnisharp-current-symbol-actions.el -> omnisharp-current-symbol-actions.el
+    omnisharp-format-actions.el -> omnisharp-format-actions.el
+    omnisharp-helm-integration.el -> omnisharp-helm-integration.el
+    omnisharp-http-utils.el -> omnisharp-http-utils.el
+    omnisharp-navigation-actions.el -> omnisharp-navigation-actions.el
+    omnisharp-server-actions.el -> omnisharp-server-actions.el
+    omnisharp-server-installation.el -> omnisharp-server-installation.el
+    omnisharp-server-management.el -> omnisharp-server-management.el
+    omnisharp-settings.el -> omnisharp-settings.el
+    omnisharp-solution-actions.el -> omnisharp-solution-actions.el
+    omnisharp-unit-test-actions.el -> omnisharp-unit-test-actions.el
+    omnisharp-utils.el -> omnisharp-utils.el
+    omnisharp.el -> omnisharp.el
+Created omnisharp-20210725.1955.tar containing:
+  omnisharp-20210725.1955/
+  omnisharp-20210725.1955/omnisharp-auto-complete-actions.el
+  omnisharp-20210725.1955/omnisharp-code-structure.el
+  omnisharp-20210725.1955/omnisharp-current-symbol-actions.el
+  omnisharp-20210725.1955/omnisharp-format-actions.el
+  omnisharp-20210725.1955/omnisharp-helm-integration.el
+  omnisharp-20210725.1955/omnisharp-http-utils.el
+  omnisharp-20210725.1955/omnisharp-navigation-actions.el
+  omnisharp-20210725.1955/omnisharp-pkg.el
+  omnisharp-20210725.1955/omnisharp-server-actions.el
+  omnisharp-20210725.1955/omnisharp-server-installation.el
+  omnisharp-20210725.1955/omnisharp-server-management.el
+  omnisharp-20210725.1955/omnisharp-settings.el
+  omnisharp-20210725.1955/omnisharp-solution-actions.el
+  omnisharp-20210725.1955/omnisharp-unit-test-actions.el
+  omnisharp-20210725.1955/omnisharp-utils.el
+  omnisharp-20210725.1955/omnisharp.el
+Built omnisharp in 6.985s, finished at 2022-04-01T04:06:22+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  660 Apr  1 04:06 packages/omnisharp-20210725.1955.entry
+160K -rw-r--r-- 1 root root 160K Apr  1 04:06 packages/omnisharp-20210725.1955.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  1 04:06 packages/omnisharp-badge.svg
+4.0K -rw-r--r-- 1 root root  278 Apr  1 04:06 packages/omnisharp-readme.txt

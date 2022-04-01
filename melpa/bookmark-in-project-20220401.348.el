@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-bookmark-in-project
-;; Package-Version: 20220212.156
-;; Package-Commit: 70ae40b4c4cdf44999ee4c738f5a4ae34a2d8421
+;; Package-Version: 20220401.348
+;; Package-Commit: e95aa25b933e705e87b7a9328e89c8cf0898c201
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "27.1"))
@@ -1041,7 +1041,7 @@ confirmation."
                 (setq bm-list (cdr bm-list))
                 (let ((name (car item)))
                   ;; Errors should not happen, even so - don't early exit if they do.
-                  (with-demoted-errors (bookmark-delete name)))))))))))
+                  (with-demoted-errors "%S" (bookmark-delete name)))))))))))
 
 (provide 'bookmark-in-project)
 ;;; bookmark-in-project.el ends here

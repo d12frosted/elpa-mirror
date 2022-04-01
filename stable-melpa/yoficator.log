@@ -3,10 +3,21 @@ Fetcher: gitlab
 Source:  https://gitlab.com/alx.k/yoficator.git
 
 Updating /mnt/store/melpa/working/yoficator/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/alx.k/yoficator.git/': The requested URL returned error: 524
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out fa914f9648515bca54b5e558ca57d2b65fa57491
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/yoficator/
+  to /tmp/yoficator66bT2u/yoficator-20190509.1620
+    yoficator.el -> yoficator.el
+    yo.txt -> yo.txt
+Created yoficator-20190509.1620.tar containing:
+  yoficator-20190509.1620/
+  yoficator-20190509.1620/yo.txt
+  yoficator-20190509.1620/yoficator-pkg.el
+  yoficator-20190509.1620/yoficator.el
+Built yoficator in 7.025s, finished at 2022-04-01T04:41:51+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  376 Apr  1 04:41 packages/yoficator-20190509.1620.entry
+1.3M -rw-r--r-- 1 root root 1.3M Apr  1 04:41 packages/yoficator-20190509.1620.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  1 04:41 packages/yoficator-badge.svg
+4.0K -rw-r--r-- 1 root root  217 Apr  1 04:41 packages/yoficator-readme.txt

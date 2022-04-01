@@ -1,11 +1,11 @@
 (rspec-mode .
-	    [(20220203 211)
+	    [(20220401 306)
 	     ((ruby-mode
 	       (1 0))
 	      (cl-lib
 	       (0 4)))
 	     "Enhance ruby-mode for RSpec" tar
-	     ((:commit . "4215ff1f2d1cee24a144ff08297276dc7b971c25")
+	     ((:commit . "a54ac64097b6ccc6acc52a8b077ceb63766fc4d1")
 	      (:authors
 	       ("Peter Williams, et al."))
 	      (:maintainer "Peter Williams, et al.")

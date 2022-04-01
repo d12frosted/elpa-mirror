@@ -4,8 +4,8 @@
 
 ;; Author: Ray Wang <rayw.public@gmail.com>
 ;; Package-Requires: ((emacs "24.3"))
-;; Package-Version: 20220331.907
-;; Package-Commit: 592e6dce5fac9c988aff11a7bd10bab9690abb89
+;; Package-Version: 20220401.356
+;; Package-Commit: 3bee9802524ea704e3c4dee9648b094caa4ebf68
 ;; Version: 0
 ;; Keywords: translate, convenience, editing
 ;; URL: https://github.com/rayw000/translate-mode
@@ -186,7 +186,9 @@ ARG is the argument to pass to `translate-recenter-function'."
   "Move cursor in the reference buffer to the same n-th paragraph as translation buffer."
   (interactive)
   (let ((i 0)
-        (point (point)))
+        (point (progn (while (looking-at "^$")
+                        (translate-previous-line))
+                      (point))))
     (save-excursion (goto-char (point-min))
                     (while (and (not (eobp))
                                 (< (point) point))
@@ -194,22 +196,31 @@ ARG is the argument to pass to `translate-recenter-function'."
                       (setq i (1+ i))))
     (master-says translate-beginning-of-buffer-function)
     (master-says translate-forward-paragraph-function (list i))
+    (master-says translate-backward-paragraph-function)
     (master-says translate-recenter-function)
     (translate--redraw-highlighting)
     (master-says 'translate--pulse-overlay)
-    (message "Sync to paragraph %s" (1+ i))))
+    (message "Sync to paragraph %s" i)))
 
 (defun translate--get-overlay-at-point ()
   "Get the paragraph the point belongs to as an overlay."
   (save-excursion
-    (let ((beg (progn (call-interactively translate-backward-paragraph-function)
-                      (while (and (not (eobp))
-                                  (looking-at "^$"))
-                        (forward-line))
-                      (point)))
-          (end (progn (call-interactively translate-forward-paragraph-function)
-                      (point))))
-      (make-overlay beg end))))
+    (let ((pair (translate--get-paragraph-beg-end-at-point)))
+      (make-overlay (car pair) (cdr pair)))))
+
+(defun translate--get-paragraph-beg-end-at-point ()
+  "Get the begin and end positions of a paragraph."
+  (save-excursion
+    (let* ((beg (cond ((not (looking-at "^$"))
+                       (forward-char)
+                       (call-interactively translate-backward-paragraph-function)
+                       (point))
+                      (t (point))))
+           (end (cond ((not (looking-at "^$"))
+                       (call-interactively translate-forward-paragraph-function)
+                       (point))
+                      (t beg))))
+      (cons beg end))))
 
 (defun translate--highlight-paragraph-overlay-at-point ()
   "Highligh overlay at point."
@@ -221,15 +232,8 @@ ARG is the argument to pass to `translate-recenter-function'."
   "Get text of the paragraph at point in the reference buffer."
   (if master-of
       (with-current-buffer (get-buffer master-of)
-        (save-excursion
-          (let ((beg (progn (call-interactively translate-backward-paragraph-function)
-                            (while (and (not (eobp))
-                                        (looking-at "^$"))
-                              (forward-line))
-                            (point)))
-                (end (progn (call-interactively translate-forward-paragraph-function)
-                            (point))))
-            (buffer-substring-no-properties beg end))))
+        (let ((pair (translate--get-paragraph-beg-end-at-point)))
+          (buffer-substring-no-properties (car pair) (cdr pair))))
     (error "You don't have a reference buffer. See `translate-select-reference-buffer' or `translate-open-reference-file'")))
 
 (defun translate--prepare-window-layout-and-set-buffer (buffer)
@@ -250,7 +254,7 @@ BUFFER is the newly created buffer which is supposed to be set to the new window
 
 ;;;###autoload
 (defun translate-open-reference-file (&optional filename)
-  "Prompt to open a file and set it as the reference buffer."
+  "Prompt to open the file FILENAME and set it as the reference buffer."
   (interactive)
   (let ((buffer (find-file-noselect
                  (or filename
@@ -260,7 +264,7 @@ BUFFER is the newly created buffer which is supposed to be set to the new window
 
 ;;;###autoload
 (defun translate-select-reference-buffer (&optional buf)
-  "Prompt to select the reference buffer."
+  "Prompt to select the reference buffer BUF."
   (interactive)
   (let ((buffer (or buf
                     (completing-read
