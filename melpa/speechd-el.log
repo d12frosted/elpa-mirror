@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out a4be22b5b62a6be1e749df6f64b06e16a6b09790
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/speechd-el/
-  to /tmp/speechd-elsL1D1q/speechd-el-20211231.758
+  to /tmp/speechd-el6i2OwN/speechd-el-20211231.758
     braille.el -> braille.el
     brltty.el -> brltty.el
     mmanager.el -> mmanager.el
@@ -27,43 +27,43 @@ Copying files (->) and directories (=>)
     gpl.texi -> gpl.texi
     speechd-el.cs.texi -> speechd-el.cs.texi
     speechd-el.texi -> speechd-el.texi
-Generating /tmp/speechd-elsL1D1q/speechd-el-20211231.758/fdl.info
-Generating /tmp/speechd-elsL1D1q/speechd-el-20211231.758/gpl.info
-Generating /tmp/speechd-elsL1D1q/speechd-el-20211231.758/speechd-el.cs.info
+Generating /tmp/speechd-el6i2OwN/speechd-el-20211231.758/fdl.info
+Generating /tmp/speechd-el6i2OwN/speechd-el-20211231.758/gpl.info
+Generating /tmp/speechd-el6i2OwN/speechd-el-20211231.758/speechd-el.cs.info
 
-Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi -o /tmp/speechd-elsL1D1q/speechd-el-20211231.758/speechd-el.cs.info' exited with non-zero exit-code: 1
-
-Fetching origin
-origin/HEAD set to master
-HEAD is now at a4be22b Add speechd-el.el
-HEAD is now at a4be22b Add speechd-el.el
-/mnt/store/melpa/working/speechd-el/fdl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/speechd-elsL1D1q/speechd-el-20211231.758/fdl.info'
-/mnt/store/melpa/working/speechd-el/gpl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/speechd-elsL1D1q/speechd-el-20211231.758/gpl.info'
-/mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced {
-/mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced }
-./fdl.texi:404: raising the section level of @appendixsubsec which is too low
-
-Error: (error "Command exited with non-zero exit-code: 1")
-
-Command 'env LC_ALL\=C install-info --dir\=dir /tmp/speechd-elsL1D1q/speechd-el-20211231.758/speechd-el.cs.info' exited with non-zero exit-code: 1
+Command 'env LC_ALL\=C makeinfo --no-split /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi -o /tmp/speechd-el6i2OwN/speechd-el-20211231.758/speechd-el.cs.info' exited with non-zero exit-code: 1
 
 Fetching origin
 origin/HEAD set to master
 HEAD is now at a4be22b Add speechd-el.el
 HEAD is now at a4be22b Add speechd-el.el
 /mnt/store/melpa/working/speechd-el/fdl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/speechd-elsL1D1q/speechd-el-20211231.758/fdl.info'
+install-info: warning: no info dir entry in `/tmp/speechd-el6i2OwN/speechd-el-20211231.758/fdl.info'
 /mnt/store/melpa/working/speechd-el/gpl.texi: warning: document without nodes
-install-info: warning: no info dir entry in `/tmp/speechd-elsL1D1q/speechd-el-20211231.758/gpl.info'
+install-info: warning: no info dir entry in `/tmp/speechd-el6i2OwN/speechd-el-20211231.758/gpl.info'
 /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced {
 /mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced }
 ./fdl.texi:404: raising the section level of @appendixsubsec which is too low
-install-info: No such file or directory for /tmp/speechd-elsL1D1q/speechd-el-20211231.758/speechd-el.cs.info
 
 Error: (error "Command exited with non-zero exit-code: 1")
-Generating /tmp/speechd-elsL1D1q/speechd-el-20211231.758/speechd-el.info
+
+Command 'env LC_ALL\=C install-info --dir\=dir /tmp/speechd-el6i2OwN/speechd-el-20211231.758/speechd-el.cs.info' exited with non-zero exit-code: 1
+
+Fetching origin
+origin/HEAD set to master
+HEAD is now at a4be22b Add speechd-el.el
+HEAD is now at a4be22b Add speechd-el.el
+/mnt/store/melpa/working/speechd-el/fdl.texi: warning: document without nodes
+install-info: warning: no info dir entry in `/tmp/speechd-el6i2OwN/speechd-el-20211231.758/fdl.info'
+/mnt/store/melpa/working/speechd-el/gpl.texi: warning: document without nodes
+install-info: warning: no info dir entry in `/tmp/speechd-el6i2OwN/speechd-el-20211231.758/gpl.info'
+/mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced {
+/mnt/store/melpa/working/speechd-el/speechd-el.cs.texi:2: misplaced }
+./fdl.texi:404: raising the section level of @appendixsubsec which is too low
+install-info: No such file or directory for /tmp/speechd-el6i2OwN/speechd-el-20211231.758/speechd-el.cs.info
+
+Error: (error "Command exited with non-zero exit-code: 1")
+Generating /tmp/speechd-el6i2OwN/speechd-el-20211231.758/speechd-el.info
 Created speechd-el-20211231.758.tar containing:
   speechd-el-20211231.758/
   speechd-el-20211231.758/braille.el
@@ -85,8 +85,8 @@ Created speechd-el-20211231.758.tar containing:
   speechd-el-20211231.758/speechd-ssip.el
   speechd-el-20211231.758/speechd-version.el
   speechd-el-20211231.758/speechd.el
-Built speechd-el in 30.455s, finished at 2022-04-02T00:46:56+0000
+Built speechd-el in 27.272s, finished at 2022-04-02T04:42:13+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  289 Apr  2 00:46 packages/speechd-el-20211231.758.entry
-452K -rw-r--r-- 1 root root 450K Apr  2 00:46 packages/speechd-el-20211231.758.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  2 00:46 packages/speechd-el-badge.svg
+4.0K -rw-r--r-- 1 root root  289 Apr  2 04:42 packages/speechd-el-20211231.758.entry
+452K -rw-r--r-- 1 root root 450K Apr  2 04:42 packages/speechd-el-20211231.758.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  2 04:42 packages/speechd-el-badge.svg

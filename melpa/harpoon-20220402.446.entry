@@ -1,13 +1,15 @@
 (harpoon .
-	 [(20220301 607)
+	 [(20220402 446)
 	  ((emacs
 	    (27 2))
 	   (f
 	    (0 20 0))
 	   (hydra
-	    (0 14 0)))
+	    (0 14 0))
+	   (project
+	    (0 8 1)))
 	  "Bookmarks on steroids" single
-	  ((:commit . "331eea2ed64e34cdbea024fa0fd6ba930b60d95f")
+	  ((:commit . "a23571eaab94fb2da0569ed5ab3c1b469f123b97")
 	   (:authors
 	    ("Otávio Schwanck" . "otavioschwanck@gmail.com"))
 	   (:maintainer "Otávio Schwanck" . "otavioschwanck@gmail.com")

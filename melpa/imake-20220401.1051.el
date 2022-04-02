@@ -5,7 +5,7 @@
 ;; Author: Jonas Bernoulli <jonas@bernoul.li>
 ;; Package-Requires: ((emacs "24.3"))
 ;; Package-Version: 20220401.1051
-;; Package-Commit: 39b7de523f18d51d4fb992b8969434882c4122bb
+;; Package-Commit: 2541fb021dec9eaa3083aca4c8ce30b67a50d6b9
 ;; Homepage: https://github.com/tarsius/imake
 
 ;; This file is not part of GNU Emacs.

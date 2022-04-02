@@ -1,11 +1,11 @@
 ;;; git-identity.el --- Identity management for (ma)git -*- lexical-binding: t -*-
 
-;; Copyright (C) 2019-2021 Akira Komamura
+;; Copyright (C) 2019-2022 Akira Komamura
 
 ;; Author: Akira Komamura <akira.komamura@gmail.com>
-;; Version: 0.2.0
-;; Package-Version: 20210905.1208
-;; Package-Commit: e2620767694d8cd2860b632c47fbe92e20a9ef14
+;; Version: 0.2.1
+;; Package-Version: 20220402.708
+;; Package-Commit: e7da2b3e3a5a790311431e3263b00df41d335136
 ;; Package-Requires: ((emacs "25.1") (dash "2.10") (hydra "0.14") (f "0.20"))
 ;; Keywords: git vc convenience
 ;; URL: https://github.com/akirak/git-identity.el
@@ -335,8 +335,9 @@ MAYBE-ANCESTORS is a list of directories of an identity in
         (if (git-identity--validate-mail-address input)
             (let* ((name (read-string "Name: "))
                    (newent (list input :name name)))
-              (customize-set-variable git-identity-list
-                                      (cons newent git-identity-list)))
+              (customize-set-variable 'git-identity-list
+                                      (cons newent git-identity-list)
+                                      "Added an entry interactively"))
           (user-error "Not a valid mail address: %s" input)))))
 
 (defun git-identity--validate-mail-address (_input)

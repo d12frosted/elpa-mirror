@@ -4,11 +4,11 @@
 
 ;; Author: Otávio Schwanck <otavioschwanck@gmail.com>
 ;; Keywords: tools languages
-;; Package-Version: 20220301.607
-;; Package-Commit: 331eea2ed64e34cdbea024fa0fd6ba930b60d95f
+;; Package-Version: 20220402.446
+;; Package-Commit: a23571eaab94fb2da0569ed5ab3c1b469f123b97
 ;; Homepage: https://github.com/otavioschwanck/harpoon.el
-;; Version: 0.4
-;; Package-Requires: ((emacs "27.2") (f "0.20.0") (hydra "0.14.0"))
+;; Version: 0.5
+;; Package-Requires: ((emacs "27.2") (f "0.20.0") (hydra "0.14.0") (project "0.8.1"))
 
 ;; This program is free software; you can redistribute it and/or modify
 ;; it under the terms of the GNU General Public License as published by
@@ -31,6 +31,9 @@
 ;; separated by project and branch.
 
 ;;; Changelog
+;;; 0.5
+;;; Fix when project is not loaded
+;;;
 ;;; 0.4
 ;;; Added hydra support
 
@@ -82,10 +85,10 @@
   "Get the project root."
   (cond
    ((eq harpoon-project-package 'projectile) (when (fboundp 'projectile-project-root) (projectile-project-root)))
-   ((eq harpoon-project-package 'project) (string-replace "~/"
-                                                          (concat (car (split-string
-                                                                        (shell-command-to-string "echo $HOME") "\n")) "/")
-                                                          (when (fboundp 'project-root) (project-root (project-current)))))))
+   ((eq harpoon-project-package 'project) (replace-regexp-in-string "~/"
+                                                                    (concat (car (split-string
+                                                                                  (shell-command-to-string "echo $HOME") "\n")) "/")
+                                                                    (when (fboundp 'project-root) (project-root (project-current)))))))
 
 (defun harpoon--current-file-directory ()
   "Return current directory path sanitized."
@@ -147,8 +150,10 @@
   "Sanitize word to save file.  STRING: String to sanitize."
   (s-replace-regexp "/" "---" string))
 
-(defun harpoon--go-to (line-number)
+;;;###autoload
+(defun harpoon-go-to (line-number)
   "Go to specific file on harpoon (by line order). LINE-NUMBER: Line to go."
+  (require 'project)
   (let* ((file-name (s-replace-regexp "\n" ""
                                       (shell-command-to-string
                                        (format "head -n %s < %s | tail -n 1"
@@ -157,7 +162,7 @@
          (full-file-name (if (and (fboundp 'project-root) (harpoon--has-project)) (concat (or harpoon--project-path (harpoon-project-root-function)) file-name) file-name)))
     (if (file-exists-p full-file-name)
         (find-file full-file-name)
-      (message "File not found."))))
+      (message (concat full-file-name " not found.")))))
 
 (defun harpoon--delete (line-number)
   "Delete an item on harpoon. LINE-NUMBER: Line of item to delete."
@@ -169,46 +174,55 @@
   (harpoon-delete-item))
 
 
+;;;###autoload
 (defun harpoon-delete-1 ()
   "Delete item harpoon on position 1."
   (interactive)
   (harpoon--delete 1))
 
+;;;###autoload
 (defun harpoon-delete-2 ()
   "Delete item harpoon on position 1."
   (interactive)
   (harpoon--delete 2))
 
+;;;###autoload
 (defun harpoon-delete-3 ()
   "Delete item harpoon on position 1."
   (interactive)
   (harpoon--delete 3))
 
+;;;###autoload
 (defun harpoon-delete-4 ()
   "Delete item harpoon on position 1."
   (interactive)
   (harpoon--delete 4))
 
+;;;###autoload
 (defun harpoon-delete-5 ()
   "Delete item harpoon on position 1."
   (interactive)
   (harpoon--delete 5))
 
+;;;###autoload
 (defun harpoon-delete-6 ()
   "Delete item harpoon on position 1."
   (interactive)
   (harpoon--delete 6))
 
+;;;###autoload
 (defun harpoon-delete-7 ()
   "Delete item harpoon on position 1."
   (interactive)
   (harpoon--delete 7))
 
+;;;###autoload
 (defun harpoon-delete-8 ()
   "Delete item harpoon on position 1."
   (interactive)
   (harpoon--delete 8))
 
+;;;###autoload
 (defun harpoon-delete-9 ()
   "Delete item harpoon on position 1."
   (interactive)
@@ -218,55 +232,55 @@
 (defun harpoon-go-to-1 ()
   "Go to file 1 on harpoon."
   (interactive)
-  (harpoon--go-to 1))
+  (harpoon-go-to 1))
 
 ;;;###autoload
 (defun harpoon-go-to-2 ()
   "Go to file 2 on harpoon."
   (interactive)
-  (harpoon--go-to 2))
+  (harpoon-go-to 2))
 
 ;;;###autoload
 (defun harpoon-go-to-3 ()
   "Go to file 3 on harpoon."
   (interactive)
-  (harpoon--go-to 3))
+  (harpoon-go-to 3))
 
 ;;;###autoload
 (defun harpoon-go-to-4 ()
   "Go to file 4 on harpoon."
   (interactive)
-  (harpoon--go-to 4))
+  (harpoon-go-to 4))
 
 ;;;###autoload
 (defun harpoon-go-to-5 ()
   "Go to file 5 on harpoon."
   (interactive)
-  (harpoon--go-to 5))
+  (harpoon-go-to 5))
 
 ;;;###autoload
 (defun harpoon-go-to-6 ()
   "Go to file 6 on harpoon."
   (interactive)
-  (harpoon--go-to 6))
+  (harpoon-go-to 6))
 
 ;;;###autoload
 (defun harpoon-go-to-7 ()
   "Go to file 7 on harpoon."
   (interactive)
-  (harpoon--go-to 7))
+  (harpoon-go-to 7))
 
 ;;;###autoload
 (defun harpoon-go-to-8 ()
   "Go to file 8 on harpoon."
   (interactive)
-  (harpoon--go-to 8))
+  (harpoon-go-to 8))
 
 ;;;###autoload
 (defun harpoon-go-to-9 ()
   "Go to file 9 on harpoon."
   (interactive)
-  (harpoon--go-to 9))
+  (harpoon-go-to 9))
 
 ;;;###autoload
 (defun harpoon-add-file ()
@@ -289,17 +303,14 @@
   (let ((candidates (harpoon--hydra-candidates "harpoon-go-to-")))
     (eval `(defhydra harpoon-hydra (:exit t :column 1)
 "
-          ||                          ||
-          ||  ╭╮ ╭╮                   ||
-          ||  ┃┃ ┃┃                   ||
-          ||  ┃╰━╯┣━━┳━┳━━┳━━┳━━┳━╮   ||
-          ||  ┃╭━╮┃╭╮┃╭┫╭╮┃╭╮┃╭╮┃╭╮╮  ||
-          ||  ┃┃ ┃┃╭╮┃┃┃╰╯┃╰╯┃╰╯┃┃┃┃  ||
-          ||  ╰╯ ╰┻╯╰┻╯┃╭━┻━━┻━━┻╯╰╯  ||
-          ||           ┃┃             ||
-          ||           ╰╯             ||
-          ||                          ||
-"
+
+        ██╗  ██╗ █████╗ ██████╗ ██████╗  ██████╗  ██████╗ ███╗   ██╗
+        ██║  ██║██╔══██╗██╔══██╗██╔══██╗██╔═══██╗██╔═══██╗████╗  ██║
+        ███████║███████║██████╔╝██████╔╝██║   ██║██║   ██║██╔██╗ ██║
+        ██╔══██║██╔══██║██╔══██╗██╔═══╝ ██║   ██║██║   ██║██║╚██╗██║
+        ██║  ██║██║  ██║██║  ██║██║     ╚██████╔╝╚██████╔╝██║ ╚████║
+        ╚═╝  ╚═╝╚═╝  ╚═╝╚═╝  ╚═╝╚═╝      ╚═════╝  ╚═════╝ ╚═╝  ╚═══╝
+                                                            "
              ,@candidates
              ("SPC" harpoon-toggle-quick-menu "Open Menu" :column "Other Actions")
              ("d" harpoon-delete-item "Delete some harpoon" :column "Other Actions")
