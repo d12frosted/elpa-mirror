@@ -1,0 +1,13 @@
+(closql .
+	[(20220402 1037)
+	 ((emacs
+	   (25 1))
+	  (emacsql-sqlite
+	   (3 0 0)))
+	 "store EIEIO objects using EmacSQL" single
+	 ((:commit . "522cc52a4df6b55099888e89a18f48f7c9275c3d")
+	  (:authors
+	   ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	  (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	  (:keywords "extensions")
+	  (:url . "https://github.com/emacscollective/closql"))])

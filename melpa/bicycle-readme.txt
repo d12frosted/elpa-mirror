@@ -23,5 +23,5 @@ A reasonable configuration could be:
 
   (use-package prog-mode
     :config
-    (add-hook 'prog-mode-hook 'outline-minor-mode)
-    (add-hook 'prog-mode-hook 'hs-minor-mode))
+    (add-hook 'prog-mode-hook #'outline-minor-mode)
+    (add-hook 'prog-mode-hook #'hs-minor-mode))
