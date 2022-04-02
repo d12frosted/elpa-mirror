@@ -1754,16 +1754,16 @@
 			  ("Protesilaos Stavrou" . "info@protesilaos.com"))
 			 (:keywords "faces" "theme" "accessibility"))])
  (modus-themes .
-	       [(2 2 0)
+	       [(2 3 0)
 		((emacs
 		  (27 1)))
-		"Highly accessible and customizable themes (WCAG AAA)" tar
+		"Elegant, highly legible and customizable themes" tar
 		((:url . "https://gitlab.com/protesilaos/modus-themes")
 		 (:keywords "faces" "theme" "accessibility")
 		 (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 		 (:authors
 		  ("Protesilaos Stavrou" . "info@protesilaos.com"))
-		 (:commit . "b68217fe044c68c0ca73e43a3c1dee7fb73a9284"))])
+		 (:commit . "7b08e3a8e41db1483322f48305f837e705540249"))])
  (modus-vivendi-theme .
 		      [(0 13 2)
 		       ((emacs
