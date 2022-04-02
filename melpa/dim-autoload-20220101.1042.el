@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/dim-autoload
 ;; Keywords: convenience
 ;; Package-Version: 20220101.1042
-;; Package-Commit: c32bef04e80dad8525dd840d877ca2afe6ee69b4
+;; Package-Commit: 63471f8798157d15776fc8d9470796e56d1a415b
 
 ;; This file is not part of GNU Emacs.
 

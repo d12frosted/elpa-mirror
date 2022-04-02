@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/keycast
 
 ;; Package-Requires: ((emacs "25.3"))
-;; Package-Commit: 2316522e734a8e4493ce315907d889b801f28ed5
+;; Package-Commit: 27e95c0894f3284a3429b8a94660690a715e465d
 ;; Package-Version: 20220331.2256
 ;; Package-X-Original-Version: 1.2.0-git
 

@@ -7,7 +7,7 @@
 ;; Homepage: https://github.com/tarsius/orglink
 ;; Keywords: hypertext
 ;; Package-Version: 20220101.1045
-;; Package-Commit: d0210403b62eaf5c68f04a313f509589f253bc12
+;; Package-Commit: 08514bbc934ee068f4d695d03afcc35390c70c3e
 
 ;; Package-Requires: ((emacs "24.3") (org "9.5") (seq "2.20"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later

@@ -1,0 +1,15 @@
+(helm-flx .
+	  [(20220402 21)
+	   ((emacs
+	     (24 4))
+	    (helm
+	     (1 7 9))
+	    (flx
+	     (0 5)))
+	   "Sort helm candidates by flx score" single
+	   ((:commit . "27dd9e3ce385a3ca15092150e65781de14b5b00b")
+	    (:authors
+	     ("Jonathan Hayase" . "jonathan.hayase@gmail.com"))
+	    (:maintainer "Jonathan Hayase" . "jonathan.hayase@gmail.com")
+	    (:keywords "convenience" "helm" "fuzzy" "flx")
+	    (:url . "https://github.com/PythonNut/helm-flx"))])

@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/tarsius/outline-minor-faces
 ;; Keywords: outlines
 ;; Package-Version: 20210530.1259
-;; Package-Commit: 942bd43ea7099984e9ebccf48db70af345d4b6bf
+;; Package-Commit: 8082fd6420ef975dcfd6fcff174226b8da72b1ff
 
 ;; Package-Requires: ((emacs "25.1"))
 

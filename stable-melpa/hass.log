@@ -4,10 +4,24 @@ Source:  https://github.com/purplg/hass.git
 
 Updating /mnt/store/melpa/working/hass/
 Checking out origin/HEAD
-Checking out 6b025d526dbb9f701a318f4163b4bab0d3b47e59
-Built hass in 8.589s, finished at 2022-04-01T11:36:07+0000
+Checking out 44bb81d9d1b5263d6fbcd52c708bc81dcca935bb
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/hass/
+  to /tmp/hassTSg2v3/hass-20220402.144
+    hass-dash.el -> hass-dash.el
+    hass-websocket.el -> hass-websocket.el
+    hass.el -> hass.el
+Created hass-20220402.144.tar containing:
+  hass-20220402.144/
+  hass-20220402.144/hass-dash.el
+  hass-20220402.144/hass-pkg.el
+  hass-20220402.144/hass-websocket.el
+  hass-20220402.144/hass.el
+Built hass in 9.497s, finished at 2022-04-02T03:54:44+0000
  ✓ Success:
- 16K -rw-r--r-- 1 root root  16K Apr  1 11:36 packages/hass-20211222.2321.el
-4.0K -rw-r--r-- 1 root root  291 Apr  1 11:36 packages/hass-20211222.2321.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr  1 11:36 packages/hass-badge.svg
-4.0K -rw-r--r-- 1 root root 1.4K Apr  1 11:36 packages/hass-readme.txt
+4.0K -rw-r--r-- 1 root root  288 Apr  1 23:59 packages/hass-20220401.2158.entry
+ 40K -rw-r--r-- 1 root root  40K Apr  1 23:59 packages/hass-20220401.2158.tar
+4.0K -rw-r--r-- 1 root root  287 Apr  2 03:54 packages/hass-20220402.144.entry
+ 40K -rw-r--r-- 1 root root  40K Apr  2 03:54 packages/hass-20220402.144.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  2 03:54 packages/hass-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Apr  2 03:54 packages/hass-readme.txt

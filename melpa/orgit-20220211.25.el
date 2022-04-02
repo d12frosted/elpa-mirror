@@ -6,7 +6,7 @@
 ;; Maintainer: Jonas Bernoulli <jonas@bernoul.li>
 
 ;; Package-Requires: ((emacs "25.1") (magit "3.0") (org "9.4"))
-;; Package-Commit: 42b7f682b3e4e487ff209a44221a729921241133
+;; Package-Commit: 3769eaa2d3bc233716d3be6781ebdc4c500c7439
 ;; Package-Version: 20220211.25
 ;; Package-X-Original-Version: 1.8.0-git
 ;; Homepage: https://github.com/magit/orgit
