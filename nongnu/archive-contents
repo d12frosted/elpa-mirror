@@ -384,7 +384,7 @@
 		    (:authors
 		     ("Sylvain Benner" . "sylvain.benner@gmail.com")))])
  (evil-matchit .
-	       [(2 4 1)
+	       [(2 4 2)
 		((evil
 		  (1 14 0))
 		 (emacs
@@ -394,7 +394,8 @@
 		 (:keywords "matchit" "vim" "evil")
 		 (:maintainer "Chen Bin <chenbin DOT sh AT gmail DOT com>")
 		 (:authors
-		  ("Chen Bin <chenbin DOT sh AT gmail DOT com>")))])
+		  ("Chen Bin <chenbin DOT sh AT gmail DOT com>"))
+		 (:commit . "7715248c67e22afedff04a3a35be2c4ad0b046af"))])
  (evil-nerd-commenter .
 		      [(3 5 6)
 		       ((emacs

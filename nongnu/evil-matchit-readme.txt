@@ -15,8 +15,9 @@ Table of Contents
 .. 6. Match case-sensitive tags?
 .. 7. Python
 7. Developer guide
-.. 1. Create plugin to support new language
+.. 1. Quick start to support new language
 .. 2. Use SDK
+..... 1. Support languages using indentation to indentify a block of code
 .. 3. APIs
 8. Contact me
 
@@ -25,6 +26,7 @@ Table of Contents
 ══════════════
 
   [https://github.com/redguardtoo/evil-matchit/actions/workflows/test.yml/badge.svg]
+  [file:https://elpa.nongnu.org/nongnu/evil-matchit.svg]
   [file:http://melpa.org/packages/evil-matchit-badge.svg]
   [file:http://stable.melpa.org/packages/evil-matchit-badge.svg]
 
@@ -45,6 +47,7 @@ Table of Contents
   • OCaml
   • Markdown
   • Perl
+  • Yaml
   • Latex
   • MATLAB/Octave
   • CMake
@@ -72,6 +75,9 @@ Table of Contents
 
 [https://github.com/redguardtoo/evil-matchit/actions/workflows/test.yml/badge.svg]
 <https://github.com/redguardtoo/evil-matchit/actions/workflows/test.yml>
+
+[file:https://elpa.nongnu.org/nongnu/evil-matchit.svg]
+<https://elpa.nongnu.org/nongnu/evil-matchit.html>
 
 [file:http://melpa.org/packages/evil-matchit-badge.svg]
 <http://melpa.org/#/evil-matchit>
@@ -143,11 +149,8 @@ Table of Contents
   evilmi-may-jump-by-percentage nil)' to turn off this feature. Then
   "3%" will jump 3 times.
 
-  Please note *only `evil-visual-state' and `evil-normal-state' are
-  supported*.
-
-  If you need visually select lines, I *strongly recommend* using
-  `evilmi-select-items' instead.
+  If you need visually select lines, you could use
+  `evilmi-select-items'.
 
   This is actually an advantage of Emacs, you can tweak the select
   region without go into visual state at all.
@@ -262,13 +265,13 @@ Table of Contents
 7 Developer guide
 ═════════════════
 
-7.1 Create plugin to support new language
-─────────────────────────────────────────
+7.1 Quick start to support new language
+───────────────────────────────────────
 
   Simple. You only need define two functions and tell evil-matchit in
   which major mode they should be used.
 
-  A complete setup:
+  A complete setup to insert into "~/.emacs":
   ┌────
   │ ;; detect tag in current line and return the result in variable rlt
   │ ;; the rlt will be used by evilmi-mylang-jump as the first parameter.
@@ -278,10 +281,10 @@ Table of Contents
   │ ;;         the first element of the list is the position of cursor before jump
   │ ;;         we use it to select/delete tag. The other elements of the list could
   │ ;;         be any data type
-  │ (defun evilmi-mylang-find-tag ()
+  │ (defun evilmi-mylang-get-tag ()
   │   (list position-of-open-end "anything-you-like" "anything-you-like"))
   │ 
-  │ ;; @parama rlt result from evilmi-mylang-find-tag
+  │ ;; @parama rlt result from evilmi-mylang-get-tag
   │ ;; @param NUM numeric argument when user press "%" to match tag
   │ ;; @return the matching tag position in theory, useful only for
   │ ;;         selecting or deleting text between matching tags and tags
@@ -351,6 +354,26 @@ Table of Contents
   Step 3, add below code to `~/.emacs.',
   ┌────
   │ (evilmi-load-plugin-rules '(ruby-mode lua-mode) '(script))
+  └────
+
+
+7.2.1 Support languages using indentation to indentify a block of code
+╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
+
+  It's easy to support such language (Python, Yaml, …).
+
+  Here is a minimum example to support yaml,
+  ┌────
+  │ (require 'evil-matchit-indent)
+  │ 
+  │ (defun evilmi-yaml-get-tag ()
+  │   (evilmi-indent-get-tag))
+  │ 
+  │ (defun evilmi-yaml-jump (info num)
+  │   (let* ((evilmi-spaces-per-tab 2))
+  │     (evilmi-indent-jump info)))
+  │ 
+  │ (evilmi-load-plugin-rules '(yaml-mode) '(yaml))
   └────
 
 
