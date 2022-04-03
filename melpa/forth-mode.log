@@ -4,10 +4,10 @@ Source:  https://github.com/larsbrinkhoff/forth-mode.git
 
 Updating /mnt/store/melpa/working/forth-mode/
 Checking out origin/HEAD
-Checking out 38d5152011ee67e0cff9d4a5ddfb1f908e5be013
+Checking out 122a9916c1ad1f1e3f4888951e1ad92a2fc10804
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/forth-mode/
-  to /tmp/forth-modeiLuxCr/forth-mode-20210829.1824
+  to /tmp/forth-modeIjR0JR/forth-mode-20220402.2103
     forth-block-mode.el -> forth-block-mode.el
     forth-interaction-mode.el -> forth-interaction-mode.el
     forth-mode.el -> forth-mode.el
@@ -17,30 +17,30 @@ Copying files (->) and directories (=>)
     forth-syntax.el -> forth-syntax.el
     forth-mode.texi -> forth-mode.texi
     backend => backend
-Generating /tmp/forth-modeiLuxCr/forth-mode-20210829.1824/forth-mode.info
-Created forth-mode-20210829.1824.tar containing:
-  forth-mode-20210829.1824/
-  forth-mode-20210829.1824/backend/
-  forth-mode-20210829.1824/backend/gforth.el
-  forth-mode-20210829.1824/backend/lbforth.el
-  forth-mode-20210829.1824/backend/pforth.el
-  forth-mode-20210829.1824/backend/spforth.el
-  forth-mode-20210829.1824/backend/swiftforth.el
-  forth-mode-20210829.1824/backend/swiftforth.fth
-  forth-mode-20210829.1824/backend/vfxforth.el
-  forth-mode-20210829.1824/dir
-  forth-mode-20210829.1824/forth-block-mode.el
-  forth-mode-20210829.1824/forth-interaction-mode.el
-  forth-mode-20210829.1824/forth-mode-pkg.el
-  forth-mode-20210829.1824/forth-mode.el
-  forth-mode-20210829.1824/forth-mode.info
-  forth-mode-20210829.1824/forth-parse.el
-  forth-mode-20210829.1824/forth-smie.el
-  forth-mode-20210829.1824/forth-spec.el
-  forth-mode-20210829.1824/forth-syntax.el
-Built forth-mode in 11.436s, finished at 2022-04-02T11:34:22+0000
+Generating /tmp/forth-modeIjR0JR/forth-mode-20220402.2103/forth-mode.info
+Created forth-mode-20220402.2103.tar containing:
+  forth-mode-20220402.2103/
+  forth-mode-20220402.2103/backend/
+  forth-mode-20220402.2103/backend/gforth.el
+  forth-mode-20220402.2103/backend/lbforth.el
+  forth-mode-20220402.2103/backend/pforth.el
+  forth-mode-20220402.2103/backend/spforth.el
+  forth-mode-20220402.2103/backend/swiftforth.el
+  forth-mode-20220402.2103/backend/swiftforth.fth
+  forth-mode-20220402.2103/backend/vfxforth.el
+  forth-mode-20220402.2103/dir
+  forth-mode-20220402.2103/forth-block-mode.el
+  forth-mode-20220402.2103/forth-interaction-mode.el
+  forth-mode-20220402.2103/forth-mode-pkg.el
+  forth-mode-20220402.2103/forth-mode.el
+  forth-mode-20220402.2103/forth-mode.info
+  forth-mode-20220402.2103/forth-parse.el
+  forth-mode-20220402.2103/forth-smie.el
+  forth-mode-20220402.2103/forth-spec.el
+  forth-mode-20220402.2103/forth-syntax.el
+Built forth-mode in 9.718s, finished at 2022-04-03T03:53:16+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  376 Apr  2 11:34 packages/forth-mode-20210829.1824.entry
- 60K -rw-r--r-- 1 root root  60K Apr  2 11:34 packages/forth-mode-20210829.1824.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  2 11:34 packages/forth-mode-badge.svg
-4.0K -rw-r--r-- 1 root root   36 Apr  2 11:34 packages/forth-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  376 Apr  3 03:53 packages/forth-mode-20220402.2103.entry
+ 60K -rw-r--r-- 1 root root  60K Apr  3 03:53 packages/forth-mode-20220402.2103.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  3 03:53 packages/forth-mode-badge.svg
+4.0K -rw-r--r-- 1 root root   36 Apr  3 03:53 packages/forth-mode-readme.txt

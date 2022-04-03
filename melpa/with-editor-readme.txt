@@ -14,9 +14,9 @@ commands prompt for an alternative environment variable such as
 file:
 
   (define-key (current-global-map)
-    [remap async-shell-command] 'with-editor-async-shell-command)
+    [remap async-shell-command] #'with-editor-async-shell-command)
   (define-key (current-global-map)
-    [remap shell-command] 'with-editor-shell-command)
+    [remap shell-command] #'with-editor-shell-command)
 
 Alternatively use the global `shell-command-with-editor-mode',
 which always sets `$EDITOR' for all Emacs commands which ultimately
@@ -29,17 +29,17 @@ before executing a shell command which needs the editor set, or
 always arrange for the current Emacs instance to be used as editor
 by adding it to the appropriate mode hooks:
 
-  (add-hook 'shell-mode-hook  'with-editor-export-editor)
-  (add-hook 'eshell-mode-hook 'with-editor-export-editor)
-  (add-hook 'term-exec-hook   'with-editor-export-editor)
-  (add-hook 'vterm-mode-hook  'with-editor-export-editor)
+  (add-hook 'shell-mode-hook  #'with-editor-export-editor)
+  (add-hook 'eshell-mode-hook #'with-editor-export-editor)
+  (add-hook 'term-exec-hook   #'with-editor-export-editor)
+  (add-hook 'vterm-mode-hook  #'with-editor-export-editor)
 
 Some variants of this function exist, these two forms are
 equivalent:
 
   (add-hook 'shell-mode-hook
-            (apply-partially 'with-editor-export-editor "GIT_EDITOR"))
-  (add-hook 'shell-mode-hook 'with-editor-export-git-editor)
+            (apply-partially #'with-editor-export-editor "GIT_EDITOR"))
+  (add-hook 'shell-mode-hook #'with-editor-export-git-editor)
 
 This library can also be used by other packages which need to use
 the current Emacs instance as editor.  In fact this library was
