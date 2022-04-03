@@ -2,8 +2,8 @@
 
 ;; Author: Alex McGrath <amk@amk.ie>
 ;; URL: https://git.sr.ht/~amk/subsonic.el
-;; Package-Version: 20211231.1449
-;; Package-Commit: 992bce5fe3c2322101610d53d08a89ec3bb8fc43
+;; Package-Version: 20220403.1208
+;; Package-Commit: e9acece0f840bc6ea096ae56e77573939a2c510c
 ;; Version: 0.2.0
 ;; Keywords: multimedia
 ;; Package-Requires: ((emacs "27.1") (transient "0.2"))
@@ -160,7 +160,7 @@ this case usually track lists"
         (when (memq (process-status process) '(exit signal))
           (subsonic-mpv-kill)
           (when (file-exists-p socket)
-            (with-demoted-errors (delete-file socket))))))
+            (with-demoted-errors "%S" (delete-file socket))))))
     (with-timeout (0.5 (subsonic-mpv-kill) (error "Failed to connect to mpv"))
       (while (not (file-exists-p socket))
         (sleep-for 0.05)))

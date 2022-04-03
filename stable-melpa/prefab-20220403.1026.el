@@ -3,8 +3,8 @@
 ;; Author: Laurence Warne
 ;; Maintainer: Laurence Warne
 ;; Version: 0.1
-;; Package-Version: 20220314.2005
-;; Package-Commit: 4d9cac415a4ee86bb5793ce18a350a30f562c2fd
+;; Package-Version: 20220403.1026
+;; Package-Commit: cbb701796a35ed21cf5743cc8965a8ca956c95fb
 ;; URL: https://github.com/laurencewarne/prefab.el
 ;; Package-Requires: ((emacs "27.1") (f "0.2.0") (transient "0.3.7"))
 
@@ -140,10 +140,14 @@ installation instructions.")
 
 (defun prefab--alist-to-python-dict (alist)
   "Convert ALIST to a python dictionary (as a string)."
-  (format "{%s}" (mapconcat #'identity (cl-loop for (key . value) in alist
-                                                collect
-                                                (format "'%s': '%s'" key value))
-                            ", ")))
+  (format "{%s}"
+          (mapconcat #'identity
+                     (cl-loop for (key . value) in alist
+                              collect
+                              (format "'%s': '%s'"
+                                      (prefab--escape-quotes key)
+                                      (prefab--escape-quotes value)))
+                     ", ")))
 
 (defun prefab--json-from-python (python-src)
   "Return JSON returned by executing PYTHON-SRC.
@@ -163,6 +167,15 @@ shell output:
       (error
        (error error-fmt-string
               (error-message-string err) python-src shell-output)))))
+
+(defun prefab--python-check-for-err (output error-msg-prefix)
+  "Check the string OUTPUT for python errors.
+
+Check the string OUTPUT for errors.  If it is an error string signal
+an error starting with ERROR-MSG-PREFIX, else return OUTPUT."
+  (if (string-match-p "^Error:" output)
+      (error (concat error-msg-prefix output))
+    output))
 
 (defun prefab--cookiecutter-conf ()
   "Return the cookiecutter config file as an appropriate python object."
@@ -187,15 +200,24 @@ output_dir = '%s'
 
 name_tmpl = env.from_string(dirname)
 rendered_dirname = name_tmpl.render(**ctx)
+prev = None
+
+# https://stackoverflow.com/questions/8862731/jinja-nested-rendering-on-variable-content
+while rendered_dirname != prev:
+    rendered_dirname, prev = env.from_string(rendered_dirname).render(**ctx), rendered_dirname
+
 dir_to_create = os.path.normpath(os.path.join(output_dir, rendered_dirname))
+
 print(dir_to_create, end='')"
-                      ctx-str template-dir prefab-cookiecutter-output-dir)))
-    (shell-command-to-string
-     (format "%s -c \"%s\"" prefab-cookiecutter-python-executable src))))
+                      ctx-str template-dir prefab-cookiecutter-output-dir))
+         (output
+          (shell-command-to-string
+           (format "%s -c \"%s\"" prefab-cookiecutter-python-executable src))))
+    (prefab--python-check-for-err output "Error getting output directory: ")))
 
 (defun prefab--cookiecutter-download-template (template)
   "Download TEMPLATE and return the template directory."
-  (let ((src (format "from cookiecutter.config import get_user_config
+  (let* ((src (format "from cookiecutter.config import get_user_config
 from cookiecutter.repository import determine_repo_dir
 
 config_dict = get_user_config(config_file=%s)
@@ -208,13 +230,21 @@ repo_dir, cleanup = determine_repo_dir(
     #password=password,
     #directory=directory,
 )
-print(repo_dir, end='')" (prefab--cookiecutter-conf) template)))
-    (shell-command-to-string
-     (format "%s -c \"%s\"" prefab-cookiecutter-python-executable src))))
+print(repo_dir, end='')" (prefab--cookiecutter-conf) template))
+         (output (shell-command-to-string
+                  (format "%s -c \"%s\""
+                          prefab-cookiecutter-python-executable src))))
+    (prefab--python-check-for-err output "Error downloading template: ")))
 
 (defun prefab--escape-quotes (s)
   "Return S with quotes escaped."
   (replace-regexp-in-string "'" "\\'" s nil t nil 0))
+
+(defun prefab--escape-quotes-bash (s)
+  "Return S with quotes escaped, suitable for bash.
+
+See URL 'https://stackoverflow.com/questions/1250079/how-to-escape-single-quotes-within-single-quoted-strings'."
+  (replace-regexp-in-string "'" "'\"'\"'" s nil t nil 0))
 
 (defun prefab--transient-set-value (project-src template replay)
   "Set the infixes and suffixes of the prefab transient.
@@ -376,9 +406,10 @@ CONTEXT is an alist with string keys (template attributes) and values
  (attribute values).  TEMPLATE should be of the form returned by
 `prefab-templates'"
   (let* ((extra-args
-          (mapconcat (lambda (s)
-                       (format "%s='%s'" (car s) (prefab--escape-quotes (cdr s))))
-                     context " "))
+          (mapconcat
+           (lambda (s)
+             (format "%s='%s'" (car s) (prefab--escape-quotes-bash (cdr s))))
+           context " "))
          (cmd (format "cookiecutter %s %s --no-input --output-dir %s %s"
                       template
                       (if prefab-cookiecutter-config-file
@@ -388,9 +419,8 @@ CONTEXT is an alist with string keys (template attributes) and values
                       prefab-cookiecutter-output-dir
                       extra-args))
          (response (shell-command-to-string cmd)))
-    (if (string-match-p "^Error:" response)
-        (error response)
-      (prefab--cookiecutter-created-dir template context))))
+    (prefab--python-check-for-err response "Error running cookiecutter: ")
+    (prefab--cookiecutter-created-dir template context)))
 
 ;;; Commands
 
