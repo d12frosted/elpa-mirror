@@ -1,0 +1,11 @@
+(flymake-swi-prolog .
+		    [(20220403 2016)
+		     ((emacs
+		       (26 1)))
+		     "A Flymake backend for SWI-Prolog" single
+		     ((:commit . "10561537e893f03306a55bc83506a8bdc82b33b9")
+		      (:authors
+		       ("Eshel Yaron"))
+		      (:maintainer "Eshel Yaron")
+		      (:keywords "languages")
+		      (:url . "https://git.sr.ht/~eshel/flymake-swi-prolog"))])

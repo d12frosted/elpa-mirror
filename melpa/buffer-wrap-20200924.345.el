@@ -8,7 +8,7 @@
 ;; Keyword: buffer tool wrap
 ;; Version: 0.1.5
 ;; Package-Version: 20200924.345
-;; Package-Commit: 1734ee6cadaa8094e6b06876c57dbca5dbd289cf
+;; Package-Commit: 36f3257cf836455af652d7e6e99615532d0705a8
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs-elpa/buffer-wrap
 

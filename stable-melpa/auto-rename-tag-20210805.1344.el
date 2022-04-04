@@ -8,7 +8,7 @@
 ;; Keyword: auto-complete html rename tag xml
 ;; Version: 0.3.5
 ;; Package-Version: 20210805.1344
-;; Package-Commit: 5551157ab81b55322e7787ce16ba84162933aece
+;; Package-Commit: 392e5d3fe8bd94408ea6ad8b268330ac5eac2f1f
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs-elpa/auto-rename-tag
 

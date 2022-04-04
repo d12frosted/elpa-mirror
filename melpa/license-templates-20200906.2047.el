@@ -8,7 +8,7 @@
 ;; Keyword: license api template
 ;; Version: 0.1.3
 ;; Package-Version: 20200906.2047
-;; Package-Commit: 52fcd8efc293694af1b23ea401a2991f8554dbbc
+;; Package-Commit: c40a49724278b43b9c27650684fbc28720be16f4
 ;; Package-Requires: ((emacs "24.3") (request "0.3.0"))
 ;; URL: https://github.com/jcs-elpa/license-templates
 
