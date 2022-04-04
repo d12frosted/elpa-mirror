@@ -6,9 +6,9 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.13
-;; Package-Version: 20220331.2340
-;; Package-Commit: 746f73898987571a6703155d882d983334c7f950
-;; Package-Requires: ((emacs "26.1"))
+;; Package-Version: 20220404.804
+;; Package-Commit: a514c024ac2796ec9d52f65c1f51b51f96bcb1c7
+;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
 ;; This file is part of GNU Emacs.
@@ -872,8 +872,7 @@ These annotations are skipped for remote paths."
     (when (or (/= (user-uid) uid) (/= (group-gid) gid))
       (format "%s:%s"
               (or (user-login-name uid) uid)
-              ;; group-name was introduced on Emacs 27
-              (or (and (fboundp 'group-name) (group-name gid)) gid)))))
+              (or (group-name gid) gid)))))
 
 (defun marginalia--file-modes (attrs)
   "Return fontified file modes given the ATTRS."
@@ -921,9 +920,8 @@ These annotations are skipped for remote paths."
   "Format TIME as an absolute age."
   (let ((system-time-locale "C"))
     (format-time-string
-     ;; decoded-time-year is only available on Emacs 27, use nth 5 here.
-     (if (> (nth 5 (decode-time (current-time)))
-            (nth 5 (decode-time time)))
+     (if (> (decoded-time-year (decode-time (current-time)))
+            (decoded-time-year (decode-time time)))
          " %Y %b %d"
        "%b %d %H:%M")
      time)))
@@ -1036,9 +1034,7 @@ These annotations are skipped for remote paths."
                       (lambda (tab _) (equal (alist-get 'name tab) cand)))))
     (let* ((tab (nth index tabs))
            (ws (alist-get 'ws tab))
-           ;; window-state-buffers requires Emacs 27
-           (bufs (and (fboundp 'window-state-buffers)
-                      (window-state-buffers ws))))
+           (bufs (window-state-buffers ws)))
       ;; NOTE: When the buffer key is present in the window state
       ;; it is added in front of the window buffer list and gets duplicated.
       (when (cadr (assq 'buffer ws)) (pop bufs))

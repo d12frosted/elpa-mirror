@@ -2,8 +2,8 @@
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
 ;; URL: https://github.com/lassik/emacs-format-all-the-code
-;; Package-Version: 20220322.1003
-;; Package-Commit: eb2a7fa6da15d23b57921218a36ac67d523e81f1
+;; Package-Version: 20220404.512
+;; Package-Commit: 69e72fabb010cac2e0f3d3294b8bda2edc3aecc7
 ;; Version: 0.5.0
 ;; Package-Requires: ((emacs "24.4") (inheritenv "0.1") (language-id "0.18"))
 ;; Keywords: languages util
@@ -266,7 +266,8 @@ the rules for an entire source tree can be given in one file.")
 (defun format-all--proper-list-p (object)
   "Return t if OBJECT is a proper list, nil otherwise."
   ;; If we could depend on Emacs 27.1 this function would be built in.
-  (and (listp object) (not (null (cl-list-length object)))))
+  (condition-case _ (not (null (cl-list-length object)))
+    (wrong-type-argument nil)))
 
 (defun format-all--normalize-formatter (formatter)
   "Internal function to convert FORMATTER spec into normal form."

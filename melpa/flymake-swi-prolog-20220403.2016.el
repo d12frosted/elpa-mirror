@@ -2,7 +2,7 @@
 
 ;; Version: 0.2.1
 ;; Package-Version: 20220403.2016
-;; Package-Commit: 10561537e893f03306a55bc83506a8bdc82b33b9
+;; Package-Commit: 81864e2c02593a13aa229a0b8a2eb3efa02d0c68
 ;; Author: Eshel Yaron
 ;; URL: https://git.sr.ht/~eshel/flymake-swi-prolog
 ;; Keywords: languages

@@ -237,7 +237,7 @@
 	      ("Serghei Iakovlev" . "egrep@protonmail.ch"))
 	     (:keywords "languages"))])
  (boxy .
-       [(1 0 4)
+       [(1 0 5)
 	((emacs
 	  (26 1)))
 	"A boxy layout framework" tar
@@ -245,7 +245,8 @@
 	 (:keywords "tools")
 	 (:maintainer "Tyler Grinn" . "tylergrinn@gmail.com")
 	 (:authors
-	  ("Tyler Grinn" . "tylergrinn@gmail.com")))])
+	  ("Tyler Grinn" . "tylergrinn@gmail.com"))
+	 (:commit . "3a949d5b14349f33f27bc5041178445a0fedcc6c"))])
  (boxy-headings .
 		[(2 1 2)
 		 ((emacs
