@@ -1,0 +1,25 @@
+Package: shanty-themes
+Fetcher: github
+Source:  https://github.com/qhga/shanty-themes.git
+
+Cloning https://github.com/qhga/shanty-themes.git to /mnt/store/melpa/working/shanty-themes/
+Checking out origin/HEAD
+Checking out 404e721e0cb5dbf813bebc997f9c10623b101c4b
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/shanty-themes/
+  to /tmp/shanty-themesOnC4jQ/shanty-themes-20220403.2333
+    shanty-themes-dark-theme.el -> shanty-themes-dark-theme.el
+    shanty-themes-light-theme.el -> shanty-themes-light-theme.el
+    shanty-themes.el -> shanty-themes.el
+Created shanty-themes-20220403.2333.tar containing:
+  shanty-themes-20220403.2333/
+  shanty-themes-20220403.2333/shanty-themes-dark-theme.el
+  shanty-themes-20220403.2333/shanty-themes-light-theme.el
+  shanty-themes-20220403.2333/shanty-themes-pkg.el
+  shanty-themes-20220403.2333/shanty-themes.el
+Built shanty-themes in 7.644s, finished at 2022-04-04T05:24:22+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  391 Apr  4 05:24 packages/shanty-themes-20220403.2333.entry
+ 52K -rw-r--r-- 1 root root  50K Apr  4 05:24 packages/shanty-themes-20220403.2333.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  4 05:24 packages/shanty-themes-badge.svg
+4.0K -rw-r--r-- 1 root root   53 Apr  4 05:24 packages/shanty-themes-readme.txt
