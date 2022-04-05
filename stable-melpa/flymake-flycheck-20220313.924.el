@@ -5,7 +5,7 @@
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: convenience, languages, tools
 ;; Package-Version: 20220313.924
-;; Package-Commit: 850a3f2f6908db5d4a3739e385b2c9fb3ad488f9
+;; Package-Commit: 9040be3763b8f9952dccd9a04be25ac20a0f8745
 ;; Homepage: https://github.com/purcell/flymake-flycheck
 ;; Version: 0.1-pre
 ;; Package-Requires: ((flycheck "31") (emacs "26.1"))

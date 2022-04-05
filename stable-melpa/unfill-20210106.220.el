@@ -7,7 +7,7 @@
 ;; Package-Version: 20210106.220
 ;; Package-X-Original-Version: 0
 ;; Package-Requires: ((emacs "24.1"))
-;; Package-Commit: 3bd4c8d3df15fb54a79f97e26177819fc0ebf877
+;; Package-Commit: b4a386900098633a7d38776ea0291b682281ae1e
 ;; Keywords: convenience
 
 ;; This program is free software; you can redistribute it and/or modify

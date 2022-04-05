@@ -5,7 +5,7 @@
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: languages
 ;; Package-Version: 20210803.222
-;; Package-Commit: 8496b0df2209cf6792c5197b924dd55807f0cffd
+;; Package-Commit: ceb1ed4df3d7e198e4c5af0c2fd44c4d9d65832e
 ;; URL: https://github.com/purcell/emacs-shfmt
 ;; Package-Requires: ((emacs "24") (reformatter "0.3"))
 ;; Version: 0

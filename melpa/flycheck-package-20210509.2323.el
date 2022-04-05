@@ -6,7 +6,7 @@
 ;;         Fanael Linithien <fanael4@gmail.com>
 ;; Keywords: lisp
 ;; Package-Version: 20210509.2323
-;; Package-Commit: ecd03f83790611888d693c684d719e033f69cb40
+;; Package-Commit: 615c1ed8c6fb7c73abec6aaa73d3fef498d231bc
 ;; Version: 0
 ;; URL: https://github.com/purcell/flycheck-package
 ;; Package-Requires: ((emacs "24.1") (flycheck "0.22") (package-lint "0.2"))

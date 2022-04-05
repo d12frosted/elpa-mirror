@@ -4,7 +4,7 @@
 
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; Keywords: languages
-;; Package-Commit: eda7a16ae378e7c482c11228c43ef32b893a1520
+;; Package-Commit: 196f16a01f4c855de7becddbc4cfed2f6788693a
 ;; Package-Requires: ((reformatter "0.6") (emacs "24.1"))
 ;; Package-Version: 20210505.108
 ;; Package-X-Original-Version: 0.1-pre

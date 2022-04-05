@@ -5,7 +5,7 @@
 ;; Author: Steve Purcell <steve@sanityinc.com>
 ;; URL: https://github.com/purcell/inheritenv
 ;; Package-Version: 20210204.354
-;; Package-Commit: 7e4c8b0d0a43b6f1c6c4d6dbd2f3bf5ce7f20067
+;; Package-Commit: c2c879acf89682559b157fb069e1da008f4912ea
 ;; Package-Requires: ((emacs "24.4"))
 ;; Version: 0.1-pre
 ;; Keywords: unix
