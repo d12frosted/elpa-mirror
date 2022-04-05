@@ -325,6 +325,7 @@ missing package or change you would like to see.
     visible-mark
     visual-regexp
     vterm
+    vundo
     wcheck-mode
     web-mode
     wgrep

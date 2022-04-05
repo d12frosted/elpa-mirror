@@ -7,4 +7,4 @@ fog index (aka "Fog Index"), and SMOG Index (aka "SMOG-Grading", “Simple
 Measure Of Gobbledygook“). It also summarises word usage and provides
 information about sentence and paragraph structure.
 
-M-x smog-check-buffer
+M-x smog-check

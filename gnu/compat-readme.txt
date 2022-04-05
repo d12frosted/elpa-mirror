@@ -1,0 +1,12 @@
+To allow for the usage of Emacs functions and macros that are
+defined in newer versions of Emacs, compat.el provides definitions
+that are installed ONLY if necessary.  These reimplementations of
+functions and macros are at least subsets of the actual
+implementations.  Be sure to read the documentation string to make
+sure.
+
+Not every function provided in newer versions of Emacs is provided
+here.  Some depend on new features from the core, others cannot be
+implemented to a meaningful degree.  The main audience for this
+library are not regular users, but package maintainers.  Therefore
+commands and user options are usually not implemented here.

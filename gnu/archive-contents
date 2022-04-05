@@ -474,6 +474,19 @@
 		       (:authors
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
+ (compat .
+	 [(28 1 0 0)
+	  ((emacs
+	    (24 3))
+	   (nadvice
+	    (0 3)))
+	  "Compatibility Library" tar
+	  ((:url . "https://git.sr.ht/~pkal/compat/")
+	   (:keywords "lisp")
+	   (:maintainer "Compat Development" . "~pkal/compat-devel@lists.sr.ht")
+	   (:authors
+	    ("Philip Kaludercic" . "philipk@posteo.net"))
+	   (:commit . "561f3404b871ce05f9b14679dd9993f43bc0d441"))])
  (consult .
 	  [(0 16)
 	   ((emacs
