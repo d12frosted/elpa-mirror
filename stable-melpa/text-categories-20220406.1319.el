@@ -4,8 +4,8 @@
 
 ;; Author: Dionisios Spiliopoulos <dennisspiliopoylos@gmail.com>
 ;; Keywords: lisp
-;; Package-Version: 20220405.1649
-;; Package-Commit: 057078125fe69b11bdc86ace7134ceb5d92f1c7a
+;; Package-Version: 20220406.1319
+;; Package-Commit: e9848f14503dcae2d4b9f0aa995e52d1b208956b
 ;; Version: 0.0.1
 ;; URL: https://github.com/Dspil/text-categories
 ;; Package-Requires: ((emacs "26.2"))
@@ -530,13 +530,62 @@
         (goto-char where)
       (message "No further instances of category %s" cat))))
 
+(defun text-categories-mark-island ()
+  "Mark all the adjascent characters of the same category in the visualisation buffer."
+  (interactive)
+  (let ((cat (get-text-property (point) 'text-categories-category))
+        (origin (point))
+        start)
+    (while (and (not (bobp)) (equal cat (get-text-property (point) 'text-categories-category)))
+      (backward-char))
+    (setq start (1+  (point)))
+    (goto-char origin)
+    (while (and (not (eobp)) (equal cat (get-text-property (point) 'text-categories-category)))
+      (forward-char))
+    (push-mark start t t)))
+
+(defun text-categories-delete-island ()
+  "Delete an island in the visualization buffer as well as the original buffer."
+  (interactive)
+  (if (use-region-p)
+      (let ((regionstart (1+ (- (mark) text-categories-legend-size)))
+            (regionend (1+ (- (point) text-categories-legend-size))))
+        (when (and (> regionstart 0) (> regionend 0))
+          (setq-local buffer-read-only nil)
+          (delete-active-region)
+          (with-current-buffer text-categories-buffer
+            (save-excursion
+              (push-mark regionstart t t)
+              (goto-char regionend)
+              (delete-active-region)))
+          (setq-local buffer-read-only t)))
+    (message "No active region.")))
+
+(defun text-categories-update-island-category (category)
+  "Update the category of a marked region in the visualization buffer and at the original buffer to CATEGORY."
+  (interactive "sEnter category: ")
+  (if (use-region-p)
+      (let ((regionstart (1+ (- (mark) text-categories-legend-size)))
+            (regionend (1+ (- (point) text-categories-legend-size))))
+        (when (and (> regionstart 0) (> regionend 0))
+          (with-current-buffer text-categories-buffer
+            (setq text-categories-suppress-changes t)
+            (put-text-property regionstart regionend 'text-categories-category category)
+            (setq text-categories-suppress-changes nil)
+            (text-categories-visualize))
+          (setq-local buffer-read-only t)))
+    (message "No active region.")))
+
 (defvar text-categories-viz-mode-map nil "Keymap for text-categories-viz.")
 
 (when (not text-categories-viz-mode-map)
   (setq text-categories-viz-mode-map (make-sparse-keymap))
   (define-key text-categories-viz-mode-map (kbd "RET") 'text-categories-jump-to-point)
   (define-key text-categories-viz-mode-map (kbd "n") 'text-categories-next-instance)
-  (define-key text-categories-viz-mode-map (kbd "p") 'text-categories-prev-instance))
+  (define-key text-categories-viz-mode-map (kbd "p") 'text-categories-prev-instance)
+  (define-key text-categories-viz-mode-map (kbd "m") 'text-categories-mark-island)
+  (define-key text-categories-viz-mode-map (kbd "d") 'text-categories-delete-island)
+  (define-key text-categories-viz-mode-map (kbd "u") 'text-categories-update-island-category))
 
 (define-derived-mode text-categories-viz-mode fundamental-mode
   "text-categories-viz mode"

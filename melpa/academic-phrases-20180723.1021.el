@@ -4,8 +4,6 @@
 
 ;; Author: Nasser Alshammari <designernasser@gmail.com>
 ;; Version: 0.0.1
-;; Package-Version: 20180723.1021
-;; Package-Commit: 25d9cf67feac6359cb213f061735e2679c84187f
 ;; Package-Requires: ((dash "2.12.0") (s "1.12.0") (ht "2.0") (emacs "24"))
 ;; Keywords: academic, convenience, papers, writing, wp
 ;; Homepage: https://github.com/nashamri/academic-phrases

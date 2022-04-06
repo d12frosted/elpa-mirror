@@ -3,11 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/KAction/emacs-execline.git
 
 Updating /mnt/store/melpa/working/execline/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/KAction/emacs-execline.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out c75dd9b2c54d8e59fc35fd4bd98d8e213948a3f5
+Built execline in 7.117s, finished at 2022-04-06T12:09:37+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.7K Apr  6 12:09 packages/execline-20190711.2010.el
+4.0K -rw-r--r-- 1 root root  423 Apr  6 12:09 packages/execline-20190711.2010.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr  6 12:09 packages/execline-badge.svg
+4.0K -rw-r--r-- 1 root root  660 Apr  6 12:09 packages/execline-readme.txt

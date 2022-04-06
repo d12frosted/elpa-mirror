@@ -3,3 +3,36 @@ Fetcher: github
 Source:  https://github.com/erlang/otp.git
 
 Updating /mnt/store/melpa/working/erlang/
+Checking out origin/HEAD
+Checking out 008d5be1980ed7a96e9882764fb20b853ed954d1
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/erlang/
+  to /tmp/erlangckX3oG/erlang-20220215.1844
+  ! lib/tools/emacs/erlang-edoc.el -> erlang-edoc.el
+  ! lib/tools/emacs/erlang-eunit.el -> erlang-eunit.el
+  ! lib/tools/emacs/erlang-flymake.el -> erlang-flymake.el
+  ! lib/tools/emacs/erlang-pkg.el -> erlang-pkg.el
+  ! lib/tools/emacs/erlang-skels-old.el -> erlang-skels-old.el
+  ! lib/tools/emacs/erlang-skels.el -> erlang-skels.el
+  ! lib/tools/emacs/erlang-start.el -> erlang-start.el
+  ! lib/tools/emacs/erlang-test.el -> erlang-test.el
+  ! lib/tools/emacs/erlang.el -> erlang.el
+  ! lib/tools/emacs/erldoc.el -> erldoc.el
+Created erlang-20220215.1844.tar containing:
+  erlang-20220215.1844/
+  erlang-20220215.1844/erlang-edoc.el
+  erlang-20220215.1844/erlang-eunit.el
+  erlang-20220215.1844/erlang-flymake.el
+  erlang-20220215.1844/erlang-pkg.el
+  erlang-20220215.1844/erlang-skels-old.el
+  erlang-20220215.1844/erlang-skels.el
+  erlang-20220215.1844/erlang-start.el
+  erlang-20220215.1844/erlang-test.el
+  erlang-20220215.1844/erlang.el
+  erlang-20220215.1844/erldoc.el
+Built erlang in 44.244s, finished at 2022-04-06T12:06:33+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  259 Apr  6 12:06 packages/erlang-20220215.1844.entry
+432K -rw-r--r-- 1 root root 430K Apr  6 12:06 packages/erlang-20220215.1844.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  6 12:06 packages/erlang-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Apr  6 12:06 packages/erlang-readme.txt
