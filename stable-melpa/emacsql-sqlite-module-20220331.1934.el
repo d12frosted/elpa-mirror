@@ -6,7 +6,7 @@
 ;; Homepage: https://github.com/emacscollective/emacsql-sqlite-builtin
 ;; Keywords: data
 ;; Package-Version: 20220331.1934
-;; Package-Commit: d587cd6102f36855c3eb21e86695b1a10a691eb9
+;; Package-Commit: 165be4156b91284a98f894f61de8664c5429f66c
 ;; Package-Requires: ((emacs "25") (emacsql "3.0.0") (emacsql-sqlite "3.0.0") (sqlite3 "0.15"))
 ;; SPDX-License-Identifier: GPL-3.0-or-later
 

@@ -3,11 +3,11 @@ Fetcher: gitlab
 Source:  https://gitlab.com/jagrg/org-emms.git
 
 Updating /mnt/store/melpa/working/org-emms/
-Checking out origin/HEAD
-Checking out 07a8917f3d628c32e5de1dbd118ac08203772533
-Built org-emms in 6.359s, finished at 2022-04-05T10:54:23+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 6.4K Apr  5 10:54 packages/org-emms-20181010.1114.el
-4.0K -rw-r--r-- 1 root root  386 Apr  5 10:54 packages/org-emms-20181010.1114.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr  5 10:54 packages/org-emms-badge.svg
-4.0K -rw-r--r-- 1 root root  890 Apr  5 10:54 packages/org-emms-readme.txt
+
+Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
+
+Fetching origin
+error: RPC failed; HTTP 524 curl 22 The requested URL returned error: 524
+fatal: expected flush after ref listing
+
+Command exited with non-zero exit-code: 128
