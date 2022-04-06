@@ -475,18 +475,18 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(28 1 0 0)
+	 [(28 1 0 1)
 	  ((emacs
 	    (24 3))
 	   (nadvice
 	    (0 3)))
 	  "Compatibility Library" tar
-	  ((:url . "https://git.sr.ht/~pkal/compat/")
+	  ((:url . "https://sr.ht/~pkal/compat")
 	   (:keywords "lisp")
 	   (:maintainer "Compat Development" . "~pkal/compat-devel@lists.sr.ht")
 	   (:authors
 	    ("Philip Kaludercic" . "philipk@posteo.net"))
-	   (:commit . "561f3404b871ce05f9b14679dd9993f43bc0d441"))])
+	   (:commit . "b527bf88f394defd06380767bce2178c74f60068"))])
  (consult .
 	  [(0 16)
 	   ((emacs
@@ -2454,14 +2454,15 @@
 		      (:authors
 		       ("Rocky Bernstein" . "rocky@gnu.org")))])
  (rec-mode .
-	   [(1 8 2)
+	   [(1 8 3)
 	    ((emacs
 	      (25)))
 	    "Major mode for viewing/editing rec files" tar
 	    ((:url . "https://www.gnu.org/software/recutils/")
 	     (:maintainer "Antoine Kalmbach" . "ane@iki.fi")
 	     (:authors
-	      ("Jose E. Marchesi" . "jemarch@gnu.org")))])
+	      ("Jose E. Marchesi" . "jemarch@gnu.org"))
+	     (:commit . "24adb19f70f682f28d6edac03598b1fee971d599"))])
  (register-list .
 		[(0 1)
 		 nil "Interactively list/edit registers" single
