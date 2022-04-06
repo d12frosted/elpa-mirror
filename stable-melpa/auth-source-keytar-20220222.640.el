@@ -8,7 +8,7 @@
 ;; Keyword: keytar password credential secret security
 ;; Version: 0.1.3
 ;; Package-Version: 20220222.640
-;; Package-Commit: 1b7de8cede641877ac5660041f1c371a2643b55c
+;; Package-Commit: c7783e5068fbccaf0144856635ddc4b2c474debd
 ;; Package-Requires: ((emacs "24.4") (keytar "0.1.2") (s "1.12.0"))
 ;; URL: https://github.com/emacs-grammarly/auth-source-keytar
 
