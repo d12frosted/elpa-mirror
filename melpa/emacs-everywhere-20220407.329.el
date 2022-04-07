@@ -7,8 +7,8 @@
 ;; Created: February 06, 2021
 ;; Modified: February 06, 2021
 ;; Version: 0.1.0
-;; Package-Version: 20220220.1404
-;; Package-Commit: f23230e67c45536501d651ef6b93546b4ac9fe4f
+;; Package-Version: 20220407.329
+;; Package-Commit: 54b9ba1ac0d7f8b644354fd6d27c9e3aff111dcc
 ;; Keywords: conenience, frames
 ;; Homepage: https://github.com/tecosaur/emacs-everywhere
 ;; Package-Requires: ((emacs "26.3"))
@@ -95,9 +95,9 @@ When nil, nothing is executed, and pasting is not attempted."
   :group 'emacs-everywhere)
 
 (defcustom emacs-everywhere-markdown-windows
-  '("Stack Exchange" "Stack Overflow" "Reddit" ; Sites
-    "Pull Request" "Issue" "Comparing .*\\.\\.\\." ; Github
-    "Discord")
+  '("Reddit" "Stack Exchange" "Stack Overflow" ; Sites
+    "Discord" "Element" "Slack" "HedgeDoc" "HackMD" "Zulip" ; Web Apps
+    "Pull Request" "Issue" "Comparing .*\\.\\.\\.") ; Github
   "For use with `emacs-everywhere-markdown-p'.
 Patterns which are matched against the window title."
   :type '(rep string)

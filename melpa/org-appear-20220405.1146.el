@@ -6,7 +6,7 @@
 ;; Author: Alice Istleyeva <awth13@gmail.com>
 ;; Version: 0.3.0
 ;; Package-Version: 20220405.1146
-;; Package-Commit: 89e25b8d04cd1445f0ec4cec773f7e173d173bcd
+;; Package-Commit: 8dd1e564153d8007ebc4bb4e14250bde84e26a34
 ;; Description: Toggle Org mode element visibility upon entering and leaving
 ;; Homepage: https://github.com/awth13/org-appear
 ;; Package-Requires: ((emacs "25.1") (org "9.3"))

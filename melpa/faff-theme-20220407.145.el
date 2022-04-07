@@ -4,8 +4,8 @@
 
 ;; Author: James Ferguson <(concat "wjcferguson" at-sign "gmail.com")>
 ;; URL: https://github.com/WJCFerguson/emacs-faff-theme
-;; Package-Version: 20220401.1750
-;; Package-Commit: fffae9ada9057e81812f90edbd589f4a4f346768
+;; Package-Version: 20220407.145
+;; Package-Commit: f824c3f55ea42d65e0b632879c6948d3eb43b2f3
 ;; Version: 2.6
 ;; Keywords: color theme
 
@@ -94,7 +94,7 @@
  '(mode-line-buffer-id ((t (:weight bold))))
  '(mode-line-emphasis ((t (:weight bold))))
  '(mode-line-highlight ((((class color) (min-colors 88)) (:box (:line-width 2 :color "cornsilk4" :style released-button))) (t (:inherit (highlight)))))
- '(mode-line-inactive ((t (:inherit mode-line :background "cornsilk4"))))
+ '(mode-line-inactive ((t (:inherit mode-line :background "cornsilk4" :box nil))))
  '(isearch ((((class color) (min-colors 88) (background light)) (:foreground "lightskyblue1" :background "magenta3")) (((class color) (min-colors 88) (background dark)) (:foreground "brown4" :background "palevioletred2")) (((class color) (min-colors 16)) (:foreground "cyan1" :background "magenta4")) (((class color) (min-colors 8)) (:foreground "cyan1" :background "magenta4")) (t (:inverse-video t))))
  '(isearch-fail ((((class color) (min-colors 88) (background light)) (:background "RosyBrown1")) (((class color) (min-colors 88) (background dark)) (:background "red4")) (((class color) (min-colors 16)) (:background "red")) (((class color) (min-colors 8)) (:background "red")) (((class color grayscale)) (:foreground "grey")) (t (:inverse-video t))))
  '(lazy-highlight ((((class color) (min-colors 88) (background light)) (:background "paleturquoise")) (((class color) (min-colors 88) (background dark)) (:background "paleturquoise4")) (((class color) (min-colors 16)) (:background "turquoise3")) (((class color) (min-colors 8)) (:background "turquoise3")) (t (:underline (:color foreground-color :style line)))))
@@ -104,7 +104,9 @@
  '(aw-leading-char-face ((t (:foreground "red" :height 4.0))))
  '(aw-mode-line-face ((t (:background "green1" :inverse-video t))))
  '(calendar-today ((t (:background "yellow1" :underline t))))
- '(custom-button ((((type x w32 mac) (class color)) (:background "grey85" :foreground "black" :box (:line-width 1 :style released-button)))))
+ '(custom-button ((t (:background "cornsilk2" :foreground "black" :box (:line-width (2 . 2) :style released-button)))))
+ '(custom-button-mouse ((t (:background "cornsilk1" :foreground "black" :box (:line-width (2 . 2) :style released-button)))))
+ '(custom-button-pressed ((t (:background "cornsilk2" :foreground "black" :box (:line-width (2 . 2) :style pressed-button)))))
  '(diff-added ((t (:inherit diff-changed :foreground "green3"))))
  '(diff-file-header ((t (:background "grey80" :box (:line-width 2 :color "grey80") :weight bold))))
  '(diff-header ((t (:background "grey80" :box (:line-width 2 :color "grey80")))))
@@ -221,6 +223,7 @@
  '(whitespace-line ((t (:background "yellow2"))))
  '(whitespace-newline ((t (:background "cornsilk2" :foreground "cornsilk4" :weight normal))))
  '(whitespace-space ((t (:foreground "cornsilk2"))))
+ '(widget-field ((t (:extend t :background "cornsilk2" :box (:line-width (1 . -1) :color "gray80")))))
  '(window-divider-first-pixel ((t (:foreground "cornsilk2"))))
  '(window-divider-last-pixel ((t (:foreground "cornsilk4")))))
 
