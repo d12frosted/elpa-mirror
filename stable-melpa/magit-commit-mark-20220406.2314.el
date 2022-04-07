@@ -6,10 +6,10 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-magit-commit-mark
-;; Package-Version: 20220315.250
-;; Package-Commit: f0fff86ffb669357b0897132d386c4c19dbf300e
+;; Package-Version: 20220406.2314
+;; Package-Commit: 18d03e38f2825dfcf9d121720ee550294e5611a0
 ;; Version: 0.1.0
-;; Package-Requires: ((emacs "26.2") (magit "3.3.0"))
+;; Package-Requires: ((emacs "28.1") (magit "3.3.0"))
 
 ;;; Commentary:
 
@@ -92,11 +92,9 @@ This must not be longer than the value used when displaying the log."
 
 (defun magit-commit-mark--make-file-name-from-repo (repo-name)
   "Take the path REPO-NAME and return a name base on this."
-  (concat
-    (expand-file-name
-      (url-hexify-string (convert-standard-filename (expand-file-name repo-name)))
-      magit-commit-mark-directory)
-    ".data"))
+  (file-name-concat
+    magit-commit-mark-directory
+    (concat (url-hexify-string (convert-standard-filename (expand-file-name repo-name))) ".data")))
 
 (defun magit-commit-mark--get-repo-dir ()
   "Return the current repository root directory."

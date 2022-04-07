@@ -3,8 +3,8 @@
 ;; Copyright (C) 2013-2020 Skye Shaw and others
 ;; Author: Skye Shaw <skye.shaw@gmail.com>
 ;; Version: 0.8.6
-;; Package-Version: 20220217.2315
-;; Package-Commit: f5691f8c66eb0f6050d9ab3834ab32661244b378
+;; Package-Version: 20220406.2328
+;; Package-Commit: 0197c9812417e18df2c7b5cd5c0084271c2f3286
 ;; Keywords: git, vc, github, bitbucket, gitlab, sourcehut, aws, azure, convenience
 ;; URL: http://github.com/sshaw/git-link
 ;; Package-Requires: ((emacs "24.3"))
@@ -253,7 +253,7 @@ As an example, \"gitlab\" will match with both \"gitlab.com\" and
 (defcustom git-link-homepage-remote-alist
   '(("git.sr.ht" git-link-homepage-github)
     ("github" git-link-homepage-github)
-    ("bitbucket" git-link-homepage-bitbucket)
+    ("bitbucket" git-link-homepage-github)
     ("gitorious" git-link-homepage-github)
     ("gitlab" git-link-homepage-github)
     ("git\\.\\(sv\\|savannah\\)\\.gnu\\.org" git-link-homepage-savannah)
