@@ -4,8 +4,8 @@
 ;; Author: Sarah Iovan <sarah@hwaetageek.com>
 ;;         Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://gitlab.com/ideasman42/emacs-inkpot-theme
-;; Package-Version: 20220326.733
-;; Package-Commit: a8d0d2ecd4855ba91e21d0481b02dff3755f8afd
+;; Package-Version: 20220407.754
+;; Package-Commit: 42925d521315ddefd0afcd7b003fbe7e3f97b15f
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -130,6 +130,7 @@
    `(font-lock-comment-face ((t (:foreground ,ip-orange-bright))))
    `(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
    `(font-lock-doc-face ((t (:foreground ,ip-blue-bright)))) ;; Alternate comment face.
+   `(font-lock-doc-markup-face ((t (:foreground ,ip-orange-dark))))
    `(font-lock-constant-face ((t (:foreground ,ip-cyan-mid))))
    `(font-lock-function-name-face ((t (:foreground ,ip-pink-dark))))
    `(font-lock-keyword-face ((t (:foreground ,ip-blue-bright))))
@@ -373,7 +374,7 @@
     `(lsp-face-semhl-interface ((t (:foreground ,ip-pink-dark))))
     `(lsp-face-semhl-parameter ((t (:foreground ,ip-cream-light))))
     `(lsp-face-semhl-variable ((t (:foreground ,ip-cream-light))))
-    `(lsp-face-semhl-constant ((t (:foreground ,ip-cyan-mid))))
+    `(lsp-face-semhl-constant ((t (:foreground ,ip-cream-light))))
     `(lsp-face-semhl-function ((t (:foreground ,ip-pink-dark))))
 
    ;; magit-commit-mark (melpa).

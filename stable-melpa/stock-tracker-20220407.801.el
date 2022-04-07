@@ -1,15 +1,15 @@
 ;;; stock-tracker.el --- Track stock price -*- lexical-binding: t; -*-
 
-;; Copyright (C) 2019-2020 Huming Chen
+;; Copyright (C) 2019-2022 Huming Chen
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/stock-tracker
-;; Package-Version: 20200228.542
-;; Package-Commit: 32ae436a4cad49fea5038cc3e8eb638a3a83dd6c
+;; Package-Version: 20220407.801
+;; Package-Commit: a00beca4a1526fa85e087c9e67a981c801c4b79a
 ;; Version: 0.1
 ;; Created: 2019-08-18
 ;; Keywords: convenience, chinese, stock
-;; Package-Requires: ((emacs "26") (dash "2.16.0"))
+;; Package-Requires: ((emacs "26.1") (dash "2.16.0"))
 
 ;; This file is not part of GNU Emacs.
 
@@ -89,7 +89,7 @@
   "Buffer name for error report when fail to read server response.")
 
 (defconst stock-tracker--note-string
-  "To add     stock, use `i'
+  "To add     stock, use `a'
 To delete  stock, use `d'
 To refresh stock, use `g'
 
@@ -379,7 +379,7 @@ Apply CALLBACK to the call result when retrieve it."
     (define-key map (kbd "q") 'quit-window)
     (define-key map (kbd "p") 'previous-line)
     (define-key map (kbd "n") 'next-line)
-    (define-key map (kbd "i") 'stock-tracker-add-stock)
+    (define-key map (kbd "a") 'stock-tracker-add-stock)
     (define-key map (kbd "d") 'stock-tracker-remove-stock)
     (define-key map (kbd "g") 'stock-tracker-start)
     map)

@@ -3,8 +3,8 @@
 ;; SPDX-License-Identifier: GPL-2.0-or-later
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://gitlab.com/ideasman42/emacs-oblivion-theme
-;; Package-Version: 20220328.837
-;; Package-Commit: 3a1d67637ea4a6099a62de45842b8c5e4440ede4
+;; Package-Version: 20220407.748
+;; Package-Commit: 95eff40ed18adbce14bb390e9a4a7d6fa864c14b
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -92,6 +92,8 @@
     `(font-lock-comment-face ((t (:foreground ,ob-aluminium4))))
     `(font-lock-comment-delimiter-face ((t (:inherit font-lock-comment-face))))
     `(font-lock-doc-face ((t (:foreground ,ob-skyblue1-2-blend)))) ;; Alternate comment face.
+    ;; This doesn't have an equivalent for GEdit.
+    `(font-lock-doc-markup-face ((t (:foreground ,ob-plum1))))
     `(font-lock-constant-face ((t (:foreground ,ob-plum1))))
     `(font-lock-function-name-face ((t (:foreground ,ob-skyblue1))))
     `(font-lock-keyword-face ((t (:foreground ,ob-white))))

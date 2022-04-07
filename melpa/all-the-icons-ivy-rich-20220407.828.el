@@ -5,8 +5,8 @@
 ;; Author: Vincent Zhang <seagle0128@gmail.com>
 ;; Homepage: https://github.com/seagle0128/all-the-icons-ivy-rich
 ;; Version: 1.8.0
-;; Package-Version: 20220406.1059
-;; Package-Commit: 6bcfeca9f47a6b1c10660accd43cf86d1ae398de
+;; Package-Version: 20220407.828
+;; Package-Commit: 99655faedf11c129cc78ed7b8edbcbb6f2e678d3
 ;; Package-Requires: ((emacs "25.1") (ivy-rich "0.1.0") (all-the-icons "2.2.0"))
 ;; Keywords: convenience, icons, ivy
 
@@ -204,6 +204,11 @@
 (defface all-the-icons-ivy-rich-project-face
   '((t (:inherit font-lock-string-face)))
   "Face used for project."
+  :group 'all-the-icons-ivy-rich)
+
+(defface all-the-icons-ivy-rich-persp-face
+  '((t (:inherit font-lock-string-face)))
+  "Face used for persp."
   :group 'all-the-icons-ivy-rich)
 
 (defface all-the-icons-ivy-rich-file-name-face
@@ -608,7 +613,11 @@ This value is adjusted depending on the `window-width'."
     counsel-projectile-switch-project
     (:columns
      ((all-the-icons-ivy-rich-file-icon)
-      (all-the-icons-ivy-rich-project-name (:width 0.4)))
+      (all-the-icons-ivy-rich-project-name (:width 0.4))
+      (all-the-icons-ivy-rich-project-file-id (:width 15 :face all-the-icons-ivy-rich-file-owner-face :align right))
+      (all-the-icons-ivy-rich-project-file-modes (:width 12))
+      (all-the-icons-ivy-rich-project-file-size (:width 7 :face all-the-icons-ivy-rich-size-face))
+      (all-the-icons-ivy-rich-project-file-modification-time (:face all-the-icons-ivy-rich-time-face)))
      :delimiter "\t")
     counsel-projectile-switch-to-buffer
     (:columns
@@ -625,7 +634,7 @@ This value is adjusted depending on the `window-width'."
      :delimiter "\t")
     counsel-projectile-find-dir
     (:columns
-     ((all-the-icons-ivy-rich-dir-icon)
+     ((all-the-icons-ivy-rich-file-icon)
       (counsel-projectile-find-dir-transformer (:width 0.4))
       (all-the-icons-ivy-rich-project-file-id (:width 15 :face all-the-icons-ivy-rich-file-owner-face :align right))
       (all-the-icons-ivy-rich-project-file-modes (:width 12))
@@ -649,6 +658,21 @@ This value is adjusted depending on the `window-width'."
      ((all-the-icons-ivy-rich-company-icon)
       (ivy-rich-candidate))
      :delimiter "\t")
+    counsel-command-history
+    (:columns
+     ((all-the-icons-ivy-rich-command-icon)
+      (ivy-rich-candidate))
+     :delimiter "\t")
+    counsel-minibuffer-history
+    (:columns
+     ((all-the-icons-ivy-rich-history-icon)
+      (ivy-rich-candidate))
+     :delimiter "\t")
+    counsel-read-directory-name
+    (:columns
+     ((all-the-icons-ivy-rich-dir-icon)
+      (all-the-icons-ivy-rich-project-name))
+     :delimiter "\t")
 
     ;; Execute command
     execute-extended-command
@@ -666,6 +690,17 @@ This value is adjusted depending on the `window-width'."
      ((all-the-icons-ivy-rich-function-icon)
       (counsel-M-x-transformer (:width 0.3))
       (ivy-rich-counsel-function-docstring (:face all-the-icons-ivy-rich-doc-face))))
+
+    ;; projectile
+    projectile-completing-read
+    (:columns
+     ((all-the-icons-ivy-rich-file-icon)
+      (all-the-icons-ivy-rich-project-find-file-transformer (:width 0.4))
+      (all-the-icons-ivy-rich-project-file-id (:width 15 :face all-the-icons-ivy-rich-file-owner-face :align right))
+      (all-the-icons-ivy-rich-project-file-modes (:width 12))
+      (all-the-icons-ivy-rich-project-file-size (:width 7 :face all-the-icons-ivy-rich-size-face))
+      (all-the-icons-ivy-rich-project-file-modification-time (:face all-the-icons-ivy-rich-time-face)))
+     :delimiter "\t")
 
     ;; project
     project-switch-project
@@ -743,6 +778,7 @@ This value is adjusted depending on the `window-width'."
       (all-the-icons-ivy-rich-package-install-summary (:face all-the-icons-ivy-rich-pacage-desc-face)))
      :delimiter "\t")
 
+    ;; persp
     persp-switch-to-buffer
     (:columns
      ((all-the-icons-ivy-rich-buffer-icon)
@@ -757,38 +793,38 @@ This value is adjusted depending on the `window-width'."
      :delimiter "\t")
     persp-switch
     (:columns
-     ((all-the-icons-ivy-rich-dir-icon)
-      (ivy-rich-candidate))
+     ((all-the-icons-ivy-rich-project-icon)
+      (ivy-rich-candidate (:face all-the-icons-ivy-rich-persp-face)))
      :delimiter "\t")
     persp-frame-switch
     (:columns
-     ((all-the-icons-ivy-rich-dir-icon)
-      (ivy-rich-candidate))
+     ((all-the-icons-ivy-rich-project-icon)
+      (ivy-rich-candidate (:face all-the-icons-ivy-rich-persp-face)))
      :delimiter "\t")
     persp-window-switch
     (:columns
-     ((all-the-icons-ivy-rich-dir-icon)
-      (ivy-rich-candidate))
+     ((all-the-icons-ivy-rich-project-icon)
+      (ivy-rich-candidate (:face all-the-icons-ivy-rich-persp-face)))
      :delimiter "\t")
     persp-kill
     (:columns
-     ((all-the-icons-ivy-rich-dir-icon)
-      (ivy-rich-candidate))
+     ((all-the-icons-ivy-rich-project-icon)
+      (ivy-rich-candidate (:face all-the-icons-ivy-rich-persp-face)))
      :delimiter "\t")
     persp-save-and-kill
     (:columns
-     ((all-the-icons-ivy-rich-dir-icon)
-      (ivy-rich-candidate))
+     ((all-the-icons-ivy-rich-project-icon)
+      (ivy-rich-candidate (:face all-the-icons-ivy-rich-persp-face)))
      :delimiter "\t")
     persp-import-buffers
     (:columns
-     ((all-the-icons-ivy-rich-dir-icon)
-      (ivy-rich-candidate))
+     ((all-the-icons-ivy-rich-project-icon)
+      (ivy-rich-candidate (:face all-the-icons-ivy-rich-persp-face)))
      :delimiter "\t")
     persp-import-win-conf
     (:columns
-     ((all-the-icons-ivy-rich-dir-icon)
-      (ivy-rich-candidate))
+     ((all-the-icons-ivy-rich-project-icon)
+      (ivy-rich-candidate (:face all-the-icons-ivy-rich-persp-face)))
      :delimiter "\t")
     persp-kill-buffer
     (:columns
@@ -813,7 +849,12 @@ This value is adjusted depending on the `window-width'."
     persp-add-buffer
     (:columns
      ((all-the-icons-ivy-rich-buffer-icon)
-      (ivy-rich-candidate))
+      (ivy-switch-buffer-transformer (:width 0.3))
+      (ivy-rich-switch-buffer-size (:width 7 :face all-the-icons-ivy-rich-size-face))
+      (ivy-rich-switch-buffer-indicators (:width 4 :face all-the-icons-ivy-rich-indicator-face :align right))
+      (all-the-icons-ivy-rich-switch-buffer-major-mode (:width 18 :face all-the-icons-ivy-rich-major-mode-face))
+      (ivy-rich-switch-buffer-project (:width 0.12 :face all-the-icons-ivy-rich-project-face))
+      (ivy-rich-switch-buffer-path (:width (lambda (x) (ivy-rich-switch-buffer-shorten-path x (ivy-rich-minibuffer-width 0.3))) :face all-the-icons-ivy-rich-path-face)))
      :delimiter "\t")
 
     all-the-icons-ivy-rich-kill-buffer
@@ -875,13 +916,21 @@ This value is adjusted depending on the `window-width'."
     lsp-ivy-workspace-folders-remove
     (:columns
      ((all-the-icons-ivy-rich-dir-icon)
-      (all-the-icons-ivy-rich-project-name))
+      (all-the-icons-ivy-rich-project-name (:width 0.4))
+      (all-the-icons-ivy-rich-project-file-id (:width 15 :face all-the-icons-ivy-rich-file-owner-face :align right))
+      (all-the-icons-ivy-rich-project-file-modes (:width 12))
+      (all-the-icons-ivy-rich-project-file-size (:width 7 :face all-the-icons-ivy-rich-size-face))
+      (all-the-icons-ivy-rich-project-file-modification-time (:face all-the-icons-ivy-rich-time-face)))
      :delimiter "\t")
 
     treemacs-projectile
     (:columns
      ((all-the-icons-ivy-rich-dir-icon)
-      (all-the-icons-ivy-rich-project-name))
+      (all-the-icons-ivy-rich-project-name (:width 0.4))
+      (all-the-icons-ivy-rich-project-file-id (:width 15 :face all-the-icons-ivy-rich-file-owner-face :align right))
+      (all-the-icons-ivy-rich-project-file-modes (:width 12))
+      (all-the-icons-ivy-rich-project-file-size (:width 7 :face all-the-icons-ivy-rich-size-face))
+      (all-the-icons-ivy-rich-project-file-modification-time (:face all-the-icons-ivy-rich-time-face)))
      :delimiter "\t"))
   "Definitions for ivy-rich transformers.
 
@@ -1508,6 +1557,12 @@ If the buffer is killed, return \"--\"."
     (all-the-icons-ivy-rich--format-icon
      (all-the-icons-octicon "file-directory" :height 1.0 :v-adjust 0.01 :face 'all-the-icons-silver))))
 
+(defun all-the-icons-ivy-rich-project-icon (_cand)
+  "Display project icon in `ivy-rich'."
+  (when (and (display-graphic-p) all-the-icons-ivy-rich-icon)
+    (all-the-icons-ivy-rich--format-icon
+     (all-the-icons-faicon "folder" :height 0.9 :v-adjust 0.0 :face 'all-the-icons-silver))))
+
 (defun all-the-icons-ivy-rich-mode-icon (_cand)
   "Display mode icon in `ivy-rich'."
   (when (and (display-graphic-p) all-the-icons-ivy-rich-icon)
@@ -1521,6 +1576,18 @@ If the buffer is killed, return \"--\"."
      (if (commandp (intern cand))
          (all-the-icons-faicon "cog" :height 0.95 :v-adjust -0.05 :face 'all-the-icons-blue)
        (all-the-icons-faicon "cube" :height 0.95 :v-adjust -0.05 :face 'all-the-icons-purple)))))
+
+(defun all-the-icons-ivy-rich-command-icon (_cand)
+  "Display command icon in `ivy-rich'."
+  (when (and (display-graphic-p) all-the-icons-ivy-rich-icon)
+    (all-the-icons-ivy-rich--format-icon
+     (all-the-icons-faicon "cog" :height 0.95 :v-adjust -0.05 :face 'all-the-icons-blue))))
+
+(defun all-the-icons-ivy-rich-history-icon (_cand)
+  "Display command icon in `ivy-rich'."
+  (when (and (display-graphic-p) all-the-icons-ivy-rich-icon)
+    (all-the-icons-ivy-rich--format-icon
+     (all-the-icons-material "history" :height 1.1 :v-adjust -0.1 :face 'all-the-icons-lblue))))
 
 (defun all-the-icons-ivy-rich-variable-icon (cand)
   "Display the variable icon in `ivy-rich'."
