@@ -1,0 +1,22 @@
+(tree-edit .
+	   [(20220407 1629)
+	    ((emacs
+	      (27 1))
+	     (tree-sitter
+	      (0 15 0))
+	     (tsc
+	      (0 15 0))
+	     (tree-sitter-langs
+	      (0 10 0))
+	     (dash
+	      (2 19))
+	     (reazon
+	      (0 4 0))
+	     (s
+	      (0 0 0)))
+	    "A library for structural refactoring and editing" tar
+	    ((:commit . "774a1e9598617f334fcd31aa606c5e738012fb60")
+	     (:authors
+	      ("Ethan Leba" . "ethanleba5@gmail.com"))
+	     (:maintainer "Ethan Leba" . "ethanleba5@gmail.com")
+	     (:url . "https://github.com/ethan-leba/tree-edit"))])

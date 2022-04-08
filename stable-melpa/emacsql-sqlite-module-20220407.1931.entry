@@ -1,0 +1,17 @@
+(emacsql-sqlite-module .
+		       [(20220407 1931)
+			((emacs
+			  (25))
+			 (emacsql
+			  (3 0 0))
+			 (emacsql-sqlite
+			  (3 0 0))
+			 (sqlite3
+			  (0 15)))
+			"EmacSQL back-end for SQLite using a module" single
+			((:commit . "0f7b7b02fb9a49fbebda2c0f830f2e43dd1e22d0")
+			 (:authors
+			  ("Jonas Bernoulli" . "jonas@bernoul.li"))
+			 (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+			 (:keywords "data")
+			 (:url . "https://github.com/emacscollective/emacsql-sqlite-builtin"))])

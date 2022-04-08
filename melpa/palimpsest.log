@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/danielsz/Palimpsest.git
 
 Updating /mnt/store/melpa/working/palimpsest/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/danielsz/Palimpsest.git/': The requested URL returned error: 503
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out f474b3ad706373d9953abdc401d683a2a023d28e
+Built palimpsest in 6.714s, finished at 2022-04-08T04:01:32+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.6K Apr  8 04:01 packages/palimpsest-20200804.2308.el
+4.0K -rw-r--r-- 1 root root  314 Apr  8 04:01 packages/palimpsest-20200804.2308.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr  8 04:01 packages/palimpsest-badge.svg
+4.0K -rw-r--r-- 1 root root  261 Apr  8 04:01 packages/palimpsest-readme.txt
