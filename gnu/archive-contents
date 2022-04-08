@@ -1646,16 +1646,16 @@
 	   (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
 	   (:url . "https://github.com/fourier/loccur"))])
  (logos .
-	[(0 3 0)
+	[(0 3 1)
 	 ((emacs
 	   (27 1)))
 	 "Simple focus mode and extras" tar
-	 ((:url . "https://gitlab.com/protesilaos/logos")
+	 ((:url . "https://git.sr.ht/~protesilaos/logos")
 	  (:keywords "convenience" "focus" "writing" "presentation" "narrowing")
 	  (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	  (:authors
 	   ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	  (:commit . "de6959ceef59d818aa5ec2b1700932f5b78bcb78"))])
+	  (:commit . "9e6824b8fa67c6c96e46eeb410cbca2f88193a2d"))])
  (map .
       [(3 2 1)
        ((emacs
@@ -2253,16 +2253,16 @@
 	       ("Scott Andrew Borton" . "scott@pp.htv.fi"))
 	      (:maintainer "John Darrington" . "john@darrington.wattle.id.au"))])
  (pulsar .
-	 [(0 2 0)
+	 [(0 2 4)
 	  ((emacs
 	    (27 1)))
 	  "Pulse highlight on demand or after select functions" tar
-	  ((:url . "https://protesilaos.com/emacs/pulsar")
+	  ((:url . "https://git.sr.ht/~protesilaos/pulsar")
 	   (:keywords "convenience" "pulse" "highlight")
 	   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "4cfc18a0093b1c4478fc5dc0342f07a4f0033c8b"))])
+	   (:commit . "061bf7136f68ca827c40f41ea44258873f687780"))])
  (pyim .
        [(4 1 0)
 	((emacs

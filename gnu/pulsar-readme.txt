@@ -23,11 +23,13 @@ Table of Contents
 1. COPYING
 2. Overview
 3. Installation
-4. Sample configuration
-5. Integration with other packages
-6. Acknowledgements
-7. GNU Free Documentation License
-8. Indices
+4. GNU ELPA package
+.. 1. Manual installation
+5. Sample configuration
+6. Integration with other packages
+7. Acknowledgements
+8. GNU Free Documentation License
+9. Indices
 .. 1. Function index
 .. 2. Variable index
 .. 3. Concept index
@@ -56,30 +58,39 @@ Table of Contents
 
   This is a small package that temporarily highlights the current line
   after a given function is invoked.  The affected functions are defined
-  in the user option `pulsar-pulse-functions'.  What Pulsar does is set
-  up an advice so that those functions run a hook after they are called.
-  The pulse effect is added there (`pulsar-after-function-hook').
+  in the user option `pulsar-pulse-functions' and the effect takes place
+  when either `pulsar-mode' (buffer-local) or `pulsar-global-mode' is
+  enabled.
 
-  To remove the advice and disable Pulsar altogether, evaluate this
-  form: `(pulsar-setup 'reverse)'.  The `pulsar-setup' function can be
-  used manually to install the advice on the relevant functions, though
-  it is strongly encouraged to use `customize-set-variable' for the user
-  option `pulsar-pulse-functions' and let Emacs set up everything
-  correctly (that user option has a special custom setter function).
+  [ The minor modes are part of 0.3.0-dev ]
 
-  The duration of the highlight is determined by `pulsar-delay'.  How
-  smooth the effect is depends on `pulsar-iterations'.  While the
-  applicable face is specified in `pulsar-face'.
+  The overall duration of the highlight is determined by a combination
+  of `pulsar-delay' and `pulsar-iterations'.  The latter determines the
+  number of blinks in a pulse, while the former sets their delay in
+  seconds before they fade out.  The applicable face is specified in
+  `pulsar-face'.
 
-  To disable the pulse but keep the highlight, set `pulsar-pulse' to
-  nil.  The current line will remain highlighted until another command
-  is invoked.
+  To disable the pulse but keep the temporary highlight, set the user
+  option `pulsar-pulse' to nil.  The current line will remain
+  highlighted until another command is invoked.
 
   To highlight the current line on demand, use the `pulsar-pulse-line'
   command.  When `pulsar-pulse' is non-nil (the default), its highlight
   will pulse before fading away.  Whereas the `pulsar-highlight-line'
   command never pulses the line: the highlight stays in place as if
   `pulsar-pulse' is nil.
+
+  [ The `pulsar-highlight-dwim' is part of 0.3.0-dev ]
+
+  A do-what-I-mean command is also on offer: `pulsar-highlight-dwim'.
+  It highlights the current line line like `pulsar-highlight-line'.  If
+  the region is active, it applies its effect there.  The region may
+  also be a rectangle (internally they differ from ordinary regions).
+
+  To help users differentiate between the pulse and highlight effects,
+  the user option `pulsar-highlight-face' controls the presentation of
+  the `pulsar-highlight-line' and `pulsar-highlight-dwim' commands.  By
+  default, this variable is the same as `pulsar-face'.
 
   Pulsar depends on the built-in `pulse.el' library.
 
@@ -91,11 +102,23 @@ Table of Contents
 3 Installation
 ══════════════
 
-  Pulsar is not in any package archive for the time being, though I plan
-  to submit it to GNU ELPA (as such, any non-trivial patches require
-  copyright assignment to the Free Software Foundation).  Users can rely
-  on `straight.el', `quelpa', or equivalent to fetch the source.  Below
-  are the essentials for those who prefer the manual method.
+
+4 GNU ELPA package
+══════════════════
+
+  The package is available as `pulsar'.  Simply do:
+
+  ┌────
+  │ M-x package-refresh-contents
+  │ M-x package-install
+  └────
+
+
+  And search for it.
+
+
+4.1 Manual installation
+───────────────────────
 
   Assuming your Emacs files are found in `~/.emacs.d/', execute the
   following commands in a shell prompt:
@@ -110,7 +133,7 @@ Table of Contents
   │ cd manual-packages
   │ 
   │ # Clone this repo, naming it "pulsar"
-  │ git clone https://gitlab.com/protesilaos/pulsar.git pulsar
+  │ git clone https://git.sr.ht/~protesilaos/pulsar pulsar
   └────
 
   Finally, in your `init.el' (or equivalent) evaluate this:
@@ -123,7 +146,7 @@ Table of Contents
   Everything is in place to set up the package.
 
 
-4 Sample configuration
+5 Sample configuration
 ══════════════════════
 
   Remember to read the doc string of each of these variables.
@@ -131,46 +154,53 @@ Table of Contents
   ┌────
   │ (require 'pulsar)
   │ 
-  │ (pulsar-setup)
-  │ 
-  │ (customize-set-variable
-  │  'pulsar-pulse-functions ; Read the doc string for why not `setq'
-  │  '(recenter-top-bottom
-  │    move-to-window-line-top-bottom
-  │    reposition-window
-  │    bookmark-jump
-  │    other-window
-  │    delete-window
-  │    delete-other-windows
-  │    forward-page
-  │    backward-page
-  │    scroll-up-command
-  │    scroll-down-command
-  │    windmove-right
-  │    windmove-left
-  │    windmove-up
-  │    windmove-down
-  │    windmove-swap-states-right
-  │    windmove-swap-states-left
-  │    windmove-swap-states-up
-  │    windmove-swap-states-down
-  │    tab-new
-  │    tab-close
-  │    tab-next
-  │    org-next-visible-heading
-  │    org-previous-visible-heading
-  │    org-forward-heading-same-level
-  │    org-backward-heading-same-level
-  │    outline-backward-same-level
-  │    outline-forward-same-level
-  │    outline-next-visible-heading
-  │    outline-previous-visible-heading
-  │    outline-up-heading))
+  │ (setq pulsar-pulse-functions
+  │       '(isearch-repeat-forward
+  │ 	isearch-repeat-backward
+  │ 	recenter-top-bottom
+  │ 	move-to-window-line-top-bottom
+  │ 	reposition-window
+  │ 	bookmark-jump
+  │ 	other-window
+  │ 	delete-window
+  │ 	delete-other-windows
+  │ 	forward-page
+  │ 	backward-page
+  │ 	scroll-up-command
+  │ 	scroll-down-command
+  │ 	windmove-right
+  │ 	windmove-left
+  │ 	windmove-up
+  │ 	windmove-down
+  │ 	windmove-swap-states-right
+  │ 	windmove-swap-states-left
+  │ 	windmove-swap-states-up
+  │ 	windmove-swap-states-down
+  │ 	tab-new
+  │ 	tab-close
+  │ 	tab-next
+  │ 	org-next-visible-heading
+  │ 	org-previous-visible-heading
+  │ 	org-forward-heading-same-level
+  │ 	org-backward-heading-same-level
+  │ 	outline-backward-same-level
+  │ 	outline-forward-same-level
+  │ 	outline-next-visible-heading
+  │ 	outline-previous-visible-heading
+  │ 	outline-up-heading))
   │ 
   │ (setq pulsar-pulse t)
   │ (setq pulsar-delay 0.055)
   │ (setq pulsar-iterations 10)
   │ (setq pulsar-face 'pulsar-magenta)
+  │ (setq pulsar-highlight-face 'pulsar-yellow)
+  │ 
+  │ (pulsar-global-mode 1)
+  │ 
+  │ ;; OR use the local mode for select mode hooks
+  │ 
+  │ (dolist (hook '(org-mode-hook emacs-lisp-mode-hook))
+  │   (add-hook hook #'pulsar-mode))
   │ 
   │ ;; pulsar does not define any key bindings.  This is just a sample that
   │ ;; respects the key binding conventions.  Evaluate:
@@ -179,13 +209,16 @@ Table of Contents
   │ ;;
   │ ;; The author uses C-x l for `pulsar-pulse-line' and C-x L for
   │ ;; `pulsar-highlight-line'.
+  │ ;;
+  │ ;; You can replace `pulsar-highlight-line' with the command
+  │ ;; `pulsar-highlight-dwim'.
   │ (let ((map global-map))
   │   (define-key map (kbd "C-c h p") #'pulsar-pulse-line)
   │   (define-key map (kbd "C-c h h") #'pulsar-highlight-line))
   └────
 
 
-5 Integration with other packages
+6 Integration with other packages
 ═════════════════════════════════
 
   Beside `pulsar-pulse-line', Pulsar defines a few functions that can be
@@ -211,7 +244,7 @@ Table of Contents
   └────
 
 
-6 Acknowledgements
+7 Acknowledgements
 ══════════════════
 
   Pulsar is meant to be a collective effort.  Every bit of help matters.
@@ -219,24 +252,28 @@ Table of Contents
   Author/maintainer
         Protesilaos Stavrou.
 
+  Contributions to the code or manual
+        Aymeric Agon-Rambosson, Daniel Mendler, JD Smith.
+
   Ideas and user feedback
-        Mark Barton, Petter Storvik, and user kb.
+        Mark Barton, Petter Storvik, Rudolf Adamkovič, Toon Claes, and
+        user kb.
 
 
-7 GNU Free Documentation License
+8 GNU Free Documentation License
 ════════════════════════════════
 
 
-8 Indices
+9 Indices
 ═════════
 
-8.1 Function index
+9.1 Function index
 ──────────────────
 
 
-8.2 Variable index
+9.2 Variable index
 ──────────────────
 
 
-8.3 Concept index
+9.3 Concept index
 ─────────────────

@@ -145,7 +145,7 @@ Table of Contents
   │ cd manual-packages
   │ 
   │ # Clone this repo, naming it "logos"
-  │ git clone https://gitlab.com/protesilaos/logos.git logos
+  │ git clone https://git.sr.ht/~protesilaos/logos logos
   └────
 
   Finally, in your `init.el' (or equivalent) evaluate this:
@@ -224,8 +224,7 @@ Table of Contents
   Install the excellent `olivetti' package by Paul W. Rankin.  Then set
   `logos-olivetti' to non-nil.
 
-  The present author’s favourite settings given that a `fill-column' of
-  `72':
+  The present author’s favourite settings given a `fill-column' of `72':
 
   ┌────
   │ (setq olivetti-body-width 0.7
