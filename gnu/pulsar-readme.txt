@@ -11,11 +11,11 @@ This manual, written by Protesilaos Stavrou, describes the customization
 options for `pulsar' (or `pulsar.el'), and provides every other piece of
 information pertinent to it.
 
-The documentation furnished herein corresponds to stable version 0.2.0,
-released on 2022-03-16.  Any reference to a newer feature which does not
+The documentation furnished herein corresponds to stable version 0.3.0,
+released on 2022-04-08.  Any reference to a newer feature which does not
 yet form part of the latest tagged commit, is explicitly marked as such.
 
-Current development target is 0.3.0-dev.
+Current development target is 0.4.0-dev.
 
 Table of Contents
 ─────────────────
@@ -62,7 +62,7 @@ Table of Contents
   when either `pulsar-mode' (buffer-local) or `pulsar-global-mode' is
   enabled.
 
-  [ The minor modes are part of 0.3.0-dev ]
+  [ The minor modes are part of 0.4.0-dev ]
 
   The overall duration of the highlight is determined by a combination
   of `pulsar-delay' and `pulsar-iterations'.  The latter determines the
@@ -80,7 +80,7 @@ Table of Contents
   command never pulses the line: the highlight stays in place as if
   `pulsar-pulse' is nil.
 
-  [ The `pulsar-highlight-dwim' is part of 0.3.0-dev ]
+  [ The `pulsar-highlight-dwim' is part of 0.4.0-dev ]
 
   A do-what-I-mean command is also on offer: `pulsar-highlight-dwim'.
   It highlights the current line line like `pulsar-highlight-line'.  If

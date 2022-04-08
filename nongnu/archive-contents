@@ -755,15 +755,16 @@
 	       ("Thierry Volpiatto" . "thierry.volpiatto@gmail.com"))
 	      (:commit . "5e035c9193bf1e1d4bb709794a154957544dcfc7"))])
  (highlight-parentheses .
-			[(2 1 0)
+			[(2 1 1)
 			 ((emacs
 			   (24 3)))
 			 "Highlight surrounding parentheses" tar
 			 ((:url . "https://sr.ht/~tsdh/highlight-parentheses.el/")
+			  (:keywords "faces" "matching")
 			  (:maintainer "Tassilo Horn" . "tsdh@gnu.org")
 			  (:authors
 			   ("Nikolaj Schumacher <bugs * nschum de>"))
-			  (:keywords "faces" "matching"))])
+			  (:commit . "438a1cb2563e2a2496be4678cc0df8d5b22caf5d"))])
  (htmlize .
 	  [(1 57)
 	   nil "Convert buffer text and decorations to HTML." tar

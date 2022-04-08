@@ -1,5 +1,7 @@
 # highlight-parentheses: Highlights parentheses surrounding point in Emacs
 
+[![NonGNU ELPA](https://elpa.nongnu.org/nongnu/highlight-parentheses.svg)](https://elpa.nongnu.org/nongnu/highlight-parentheses.html)
+
 `highlight-parentheses.el` dynamically highlights the parentheses surrounding
 point based on nesting-level using configurable lists of colors, background
 colors, and other properties.

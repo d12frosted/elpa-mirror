@@ -1601,6 +1601,17 @@
 	(:authors
 	 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	(:url . "http://elpa.gnu.org/packages/lex.html"))])
+ (lin .
+      [(0 3 0)
+       ((emacs
+	 (27 1)))
+       "Make `hl-line-mode' more suitable for selection UIs" tar
+       ((:url . "https://git.sr.ht/~protesilaos/lin")
+	(:keywords "convenience" "faces" "theme")
+	(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
+	(:authors
+	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
+	(:commit . "edc29c2afe98ecd120108b7d3561aff938cc22c3"))])
  (lmc .
       [(1 4)
        ((emacs
@@ -2253,7 +2264,7 @@
 	       ("Scott Andrew Borton" . "scott@pp.htv.fi"))
 	      (:maintainer "John Darrington" . "john@darrington.wattle.id.au"))])
  (pulsar .
-	 [(0 2 4)
+	 [(0 3 0)
 	  ((emacs
 	    (27 1)))
 	  "Pulse highlight on demand or after select functions" tar
@@ -2262,7 +2273,7 @@
 	   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "061bf7136f68ca827c40f41ea44258873f687780"))])
+	   (:commit . "cdb7892a2b7e8e7cc644b8e24e5ab6bf0c51584d"))])
  (pyim .
        [(4 1 0)
 	((emacs
