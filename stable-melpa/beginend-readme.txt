@@ -1,6 +1,6 @@
 Redefine M-< and M-> for some modes.  For example,
 
-- in dired mode, M-< (respectively M->) goes to first (respectively last)
+- in `dired-mode', M-< (respectively M->) goes to first (respectively last)
   file line
 
 - in message mode,

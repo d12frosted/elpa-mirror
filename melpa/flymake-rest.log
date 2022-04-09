@@ -4,10 +4,10 @@ Source:  https://github.com/mohkale/flymake-rest.git
 
 Updating /mnt/store/melpa/working/flymake-rest/
 Checking out origin/HEAD
-Checking out 6c0f39ae1e8b476b195adfe477b40cf6c4a162b6
+Checking out 4b7051222b64650e2ec8c8340fdbe792138ede83
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/flymake-rest/
-  to /tmp/flymake-restnThi23/flymake-rest-20220313.1311
+  to /tmp/flymake-resthmwpEc/flymake-rest-20220409.1233
     flymake-rest-commands.el -> flymake-rest-commands.el
     flymake-rest-define.el -> flymake-rest-define.el
     flymake-rest-hook.el -> flymake-rest-hook.el
@@ -16,6 +16,7 @@ Copying files (->) and directories (=>)
   ! checkers/flymake-rest-clang.el -> flymake-rest-clang.el
   ! checkers/flymake-rest-eslint.el -> flymake-rest-eslint.el
   ! checkers/flymake-rest-gcc.el -> flymake-rest-gcc.el
+  ! checkers/flymake-rest-hlint.el -> flymake-rest-hlint.el
   ! checkers/flymake-rest-html-tidy.el -> flymake-rest-html-tidy.el
   ! checkers/flymake-rest-jq.el -> flymake-rest-jq.el
   ! checkers/flymake-rest-jsonlint.el -> flymake-rest-jsonlint.el
@@ -33,37 +34,40 @@ Copying files (->) and directories (=>)
   ! checkers/flymake-rest-sqlint.el -> flymake-rest-sqlint.el
   ! checkers/flymake-rest-xmllint.el -> flymake-rest-xmllint.el
   ! checkers/flymake-rest-yamllint.el -> flymake-rest-yamllint.el
-Created flymake-rest-20220313.1311.tar containing:
-  flymake-rest-20220313.1311/
-  flymake-rest-20220313.1311/flymake-rest-awk-gawk.el
-  flymake-rest-20220313.1311/flymake-rest-clang.el
-  flymake-rest-20220313.1311/flymake-rest-commands.el
-  flymake-rest-20220313.1311/flymake-rest-define.el
-  flymake-rest-20220313.1311/flymake-rest-eslint.el
-  flymake-rest-20220313.1311/flymake-rest-gcc.el
-  flymake-rest-20220313.1311/flymake-rest-hook.el
-  flymake-rest-20220313.1311/flymake-rest-html-tidy.el
-  flymake-rest-20220313.1311/flymake-rest-jq.el
-  flymake-rest-20220313.1311/flymake-rest-jsonlint.el
-  flymake-rest-20220313.1311/flymake-rest-less.el
-  flymake-rest-20220313.1311/flymake-rest-lua.el
-  flymake-rest-20220313.1311/flymake-rest-luacheck.el
-  flymake-rest-20220313.1311/flymake-rest-markdownlint.el
-  flymake-rest-20220313.1311/flymake-rest-mypy.el
-  flymake-rest-20220313.1311/flymake-rest-pkg.el
-  flymake-rest-20220313.1311/flymake-rest-proselint.el
-  flymake-rest-20220313.1311/flymake-rest-pycodestyle.el
-  flymake-rest-20220313.1311/flymake-rest-pylint.el
-  flymake-rest-20220313.1311/flymake-rest-rubocop.el
-  flymake-rest-20220313.1311/flymake-rest-shellcheck.el
-  flymake-rest-20220313.1311/flymake-rest-sql-lint.el
-  flymake-rest-20220313.1311/flymake-rest-sqlint.el
-  flymake-rest-20220313.1311/flymake-rest-xmllint.el
-  flymake-rest-20220313.1311/flymake-rest-yamllint.el
-  flymake-rest-20220313.1311/flymake-rest.el
-Built flymake-rest in 5.395s, finished at 2022-04-09T08:36:35+0000
+Created flymake-rest-20220409.1233.tar containing:
+  flymake-rest-20220409.1233/
+  flymake-rest-20220409.1233/flymake-rest-awk-gawk.el
+  flymake-rest-20220409.1233/flymake-rest-clang.el
+  flymake-rest-20220409.1233/flymake-rest-commands.el
+  flymake-rest-20220409.1233/flymake-rest-define.el
+  flymake-rest-20220409.1233/flymake-rest-eslint.el
+  flymake-rest-20220409.1233/flymake-rest-gcc.el
+  flymake-rest-20220409.1233/flymake-rest-hlint.el
+  flymake-rest-20220409.1233/flymake-rest-hook.el
+  flymake-rest-20220409.1233/flymake-rest-html-tidy.el
+  flymake-rest-20220409.1233/flymake-rest-jq.el
+  flymake-rest-20220409.1233/flymake-rest-jsonlint.el
+  flymake-rest-20220409.1233/flymake-rest-less.el
+  flymake-rest-20220409.1233/flymake-rest-lua.el
+  flymake-rest-20220409.1233/flymake-rest-luacheck.el
+  flymake-rest-20220409.1233/flymake-rest-markdownlint.el
+  flymake-rest-20220409.1233/flymake-rest-mypy.el
+  flymake-rest-20220409.1233/flymake-rest-pkg.el
+  flymake-rest-20220409.1233/flymake-rest-proselint.el
+  flymake-rest-20220409.1233/flymake-rest-pycodestyle.el
+  flymake-rest-20220409.1233/flymake-rest-pylint.el
+  flymake-rest-20220409.1233/flymake-rest-rubocop.el
+  flymake-rest-20220409.1233/flymake-rest-shellcheck.el
+  flymake-rest-20220409.1233/flymake-rest-sql-lint.el
+  flymake-rest-20220409.1233/flymake-rest-sqlint.el
+  flymake-rest-20220409.1233/flymake-rest-xmllint.el
+  flymake-rest-20220409.1233/flymake-rest-yamllint.el
+  flymake-rest-20220409.1233/flymake-rest.el
+Built flymake-rest in 6.126s, finished at 2022-04-09T12:48:20+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  422 Apr  9 08:36 packages/flymake-rest-20220313.1311.entry
 112K -rw-r--r-- 1 root root 110K Apr  9 08:36 packages/flymake-rest-20220313.1311.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr  9 08:36 packages/flymake-rest-badge.svg
-4.0K -rw-r--r-- 1 root root  329 Apr  9 08:36 packages/flymake-rest-readme.txt
+4.0K -rw-r--r-- 1 root root  422 Apr  9 12:48 packages/flymake-rest-20220409.1233.entry
+120K -rw-r--r-- 1 root root 120K Apr  9 12:48 packages/flymake-rest-20220409.1233.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr  9 12:48 packages/flymake-rest-badge.svg
+4.0K -rw-r--r-- 1 root root  329 Apr  9 12:48 packages/flymake-rest-readme.txt

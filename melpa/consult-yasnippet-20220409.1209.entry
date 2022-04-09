@@ -1,0 +1,14 @@
+(consult-yasnippet .
+		   [(20220409 1209)
+		    ((emacs
+		      (27 1))
+		     (yasnippet
+		      (0 14))
+		     (consult
+		      (0 16)))
+		    "A consulting-read interface for yasnippet" single
+		    ((:commit . "cdb256d2c50e4f8473c6052e1009441b65b8f8ab")
+		     (:authors
+		      ("mohsin kaleem" . "mohkale@kisara.moe"))
+		     (:maintainer "mohsin kaleem" . "mohkale@kisara.moe")
+		     (:url . "https://github.com/mohkale/consult-yasnippet"))])

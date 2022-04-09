@@ -1,0 +1,17 @@
+(consult-lsp .
+	     [(20220409 1107)
+	      ((emacs
+		(27 1))
+	       (lsp-mode
+		(5 0))
+	       (consult
+		(0 16))
+	       (f
+		(0 20 0)))
+	      "LSP-mode Consult integration" single
+	      ((:commit . "a8eb3a062feb2715f174500d0624d3a85e000cf7")
+	       (:authors
+		("Gerry Agbobada"))
+	       (:maintainer "Gerry Agbobada")
+	       (:keywords "tools" "completion" "lsp")
+	       (:url . "https://github.com/gagbo/consult-lsp"))])
