@@ -137,14 +137,14 @@
 	   ("John Wiegley" . "jwiegley@gmail.com"))
 	  (:keywords "async"))])
  (auctex .
-	 [(13 1 1)
+	 [(13 1 2)
 	  ((emacs
 	    (24 3)))
 	  "Integrated environment for *TeX*" tar
 	  ((:url . "https://www.gnu.org/software/auctex/")
 	   (:keywords "tex" "latex" "texinfo" "context" "doctex" "preview-latex")
 	   (:maintainer nil . "auctex-devel@gnu.org")
-	   (:commit . "8ff369bd92d213f6ae000fadab0e3c4fd3f3e8e2"))])
+	   (:commit . "2568505587f0f6fb9bdac54ba59bda8503882a7a"))])
  (aumix-mode .
 	     [(7)
 	      nil "run the aumix program in a buffer" single
@@ -475,7 +475,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(28 1 0 1)
+	 [(28 1 0 3)
 	  ((emacs
 	    (24 3))
 	   (nadvice
@@ -486,7 +486,7 @@
 	   (:maintainer "Compat Development" . "~pkal/compat-devel@lists.sr.ht")
 	   (:authors
 	    ("Philip Kaludercic" . "philipk@posteo.net"))
-	   (:commit . "b527bf88f394defd06380767bce2178c74f60068"))])
+	   (:commit . "7a97ee1860e15ff9657d94dc15d03bc5e47d1773"))])
  (consult .
 	  [(0 16)
 	   ((emacs
@@ -579,7 +579,7 @@
 		(:authors
 		 ("Theodor Thornhill" . "theo@thornhill.no")))])
  (csv-mode .
-	   [(1 18)
+	   [(1 19)
 	    ((emacs
 	      (24 1))
 	     (cl-lib
@@ -589,7 +589,8 @@
 	     (:maintainer nil . "emacs-devel@gnu.org")
 	     (:authors
 	      ("\"Francis J. Wright\"" . "F.J.Wright@qmul.ac.uk"))
-	     (:url . "https://elpa.gnu.org/packages/csv-mode.html"))])
+	     (:url . "https://elpa.gnu.org/packages/csv-mode.html")
+	     (:commit . "5c19624398bfd6b976cc9876db582e3e23611601"))])
  (cycle-quotes .
 	       [(0 1)
 		nil "Cycle between quote styles" tar
