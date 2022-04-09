@@ -4,8 +4,6 @@
 
 ;; Author: Magnar Sveen <magnars@gmail.com>
 ;; Package-Requires: ((cl-lib "0.5"))
-;; Package-Version: 20161024.646
-;; Package-Commit: 3c42e9807d7696da2da2a21b63beebf9cdb3f5dc
 ;; Version: 0.1.0
 
 ;; This program is free software; you can redistribute it and/or modify
@@ -100,6 +98,10 @@
                                      (cl-remove-if (lambda (cmd)
                                                      (memq cmd old-alts)) alternatives)
                                      old-alts))))
+
+(provide 'annoying-arrows-mode)
+;;; annoying-arrows-mode.el ends here
+         old-alts))))
 
 (provide 'annoying-arrows-mode)
 ;;; annoying-arrows-mode.el ends here

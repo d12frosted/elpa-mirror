@@ -312,6 +312,7 @@ missing package or change you would like to see.
     tomatinho
     transient (pop-up windows like Magit's)
     trashed
+    tree-sitter
     treemacs
     tty-menu
     tuareg

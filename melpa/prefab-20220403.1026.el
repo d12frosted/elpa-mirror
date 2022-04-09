@@ -4,7 +4,7 @@
 ;; Maintainer: Laurence Warne
 ;; Version: 0.1
 ;; Package-Version: 20220403.1026
-;; Package-Commit: 0b226a51b072df9e18b89e21e4d029cf47c2d4cb
+;; Package-Commit: ffcf9c640c8c458a58b752ef2608e07a929a1104
 ;; URL: https://github.com/laurencewarne/prefab.el
 ;; Package-Requires: ((emacs "27.1") (f "0.2.0") (transient "0.3.7"))
 
