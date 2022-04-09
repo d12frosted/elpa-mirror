@@ -22,10 +22,12 @@ Table of Contents
 10. Contributions
 11. Problematic completion commands
 .. 1. `org-refile'
-.. 2. `tmm-menubar'
-.. 3. `ffap-menu'
-.. 4. Submitting the empty string
-.. 5. Tramp hostname completion
+.. 2. `org-agenda-filter'
+.. 3. `tmm-menubar'
+.. 4. `ffap-menu'
+.. 5. `completion-table-dynamic'
+.. 6. Submitting the empty string
+.. 7. Tramp hostname completion
 
 
 
@@ -108,9 +110,7 @@ Table of Contents
   `package-install'. After installation, you can activate the global
   minor mode with `M-x vertico-mode'. In order to configure Vertico and
   other packages in your init.el, you may want to take advantage of
-  `use-package'. I recommend to give Orderless completion a try, which
-  is different from the prefix TAB completion used by the basic default
-  completion system or in shells. Here is an example configuration:
+  `use-package'. Here is an example configuration:
 
   ┌────
   │ ;; Enable vertico
@@ -130,21 +130,6 @@ Table of Contents
   │   ;; Optionally enable cycling for `vertico-next' and `vertico-previous'.
   │   ;; (setq vertico-cycle t)
   │   )
-  │ 
-  │ ;; Optionally use the `orderless' completion style. See
-  │ ;; `+orderless-dispatch' in the Consult wiki for an advanced Orderless style
-  │ ;; dispatcher. Additionally enable `partial-completion' for file path
-  │ ;; expansion. `partial-completion' is important for wildcard support.
-  │ ;; Multiple files can be opened at once with `find-file' if you enter a
-  │ ;; wildcard. You may also give the `initials' completion style a try.
-  │ (use-package orderless
-  │   :init
-  │   ;; Configure a custom style dispatcher (see the Consult wiki)
-  │   ;; (setq orderless-style-dispatchers '(+orderless-dispatch)
-  │   ;;       orderless-component-separator #'orderless-escapable-split-on-space)
-  │   (setq completion-styles '(orderless)
-  │ 	completion-category-defaults nil
-  │ 	completion-category-overrides '((file (styles partial-completion)))))
   │ 
   │ ;; Persist history over Emacs restarts. Vertico sorts by history position.
   │ (use-package savehist
@@ -174,6 +159,33 @@ Table of Contents
   │   (setq enable-recursive-minibuffers t))
   └────
 
+  I recommend to give Orderless completion a try, which is different
+  from the prefix TAB completion used by the basic default completion
+  system or in shells.
+
+  ┌────
+  │ ;; Optionally use the `orderless' completion style.
+  │ (use-package orderless
+  │   :init
+  │   ;; Configure a custom style dispatcher (see the Consult wiki)
+  │   ;; (setq orderless-style-dispatchers '(+orderless-dispatch)
+  │   ;;       orderless-component-separator #'orderless-escapable-split-on-space)
+  │   (setq completion-styles '(orderless basic)
+  │ 	completion-category-defaults nil
+  │ 	completion-category-overrides '((file (styles partial-completion)))))
+  └────
+
+  The `basic' completion style is specified as fallback in addition to
+  `orderless' in order to ensure that completion commands which rely on
+  dynamic completion tables, e.g., `completion-table-dynamic' or
+  `completion-table-in-turn', work correctly. See `+orderless-dispatch'
+  in the [Consult wiki] for an advanced Orderless style
+  dispatcher. Additionally enable `partial-completion' for file path
+  expansion. `partial-completion' is important for file wildcard
+  support. Multiple files can be opened at once with `find-file' if you
+  enter a wildcard. You may also give the `initials' completion style a
+  try.
+
   See also the [Vertico Wiki] for additional configuration tips. For
   more general documentation read the chapter about completion in the
   [Emacs manual]. If you want to create your own completion commands,
@@ -181,6 +193,8 @@ Table of Contents
 
 
 [GNU ELPA] <http://elpa.gnu.org/packages/vertico.html>
+
+[Consult wiki] <https://github.com/minad/consult/wiki>
 
 [Vertico Wiki] <https://github.com/minad/vertico/wiki>
 
@@ -217,7 +231,7 @@ Table of Contents
   `completion-styles' configuration.
 
   ┌────
-  │ (setq completion-styles '(substring orderless))
+  │ (setq completion-styles '(substring orderless basic))
   └────
 
   Alternatively you can experiment with the built-in completion-styles,
@@ -731,7 +745,20 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-11.2 `tmm-menubar'
+11.2 `org-agenda-filter'
+────────────────────────
+
+  Similar to `org-refile', the `org-agenda-filter' completion function
+  (`org-agenda-filter-completion-function') does not make use of
+  completion boundaries. Unfortunately `TAB' completion
+  (`minibuffer-complete') does not work for this reason. This affects
+  Vertico and also the Emacs default completion system.  For example if
+  you enter `+tag<0 TAB' the input is replaced with `0:10' which is not
+  correct. With preserved completion boundaries, the expected result
+  would be `+tag<0:10'.
+
+
+11.3 `tmm-menubar'
 ──────────────────
 
   The text menu bar works well with Vertico but always shows a
@@ -746,7 +773,7 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-11.3 `ffap-menu'
+11.4 `ffap-menu'
 ────────────────
 
   The command `ffap-menu' shows the `*Completions*' buffer by default
@@ -761,7 +788,31 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   └────
 
 
-11.4 Submitting the empty string
+11.5 `completion-table-dynamic'
+───────────────────────────────
+
+  Dynamic completion tables (`completion-table-dynamic',
+  `completion-table-in-turn', etc.) should work well with
+  Vertico. However the requirement is that the `basic' completion style
+  is enabled. The `basic' style performs prefix filtering by passing the
+  input to the completion table (or the dynamic completion table
+  function). The `basic' completion style must not necessarily be
+  configured with highest priority, it can also come after other
+  completion styles like `orderless', `substring' or `flex'.
+
+  ┌────
+  │ (setq completion-styles '(basic))
+  │ ;; (setq completion-styles '(orderless basic))
+  │ (completing-read "Dynamic: "
+  │ 		 (completion-table-dynamic
+  │ 		  (lambda (str)
+  │ 		    (list (concat str "1")
+  │ 			  (concat str "2")
+  │ 			  (concat str "3")))))
+  └────
+
+
+11.6 Submitting the empty string
 ────────────────────────────────
 
   The commands `multi-occur', `auto-insert', `bbdb-create' read multiple
@@ -789,16 +840,16 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   possible by pressing `RET' only.
 
 
-11.5 Tramp hostname completion
+11.7 Tramp hostname completion
 ──────────────────────────────
 
   In combination with Orderless, hostnames are not made available for
   completion after entering `/ssh:'. In order to avoid this problem, the
   `basic' completion style should be specified for the file completion
-  category.
+  category, such that `basic' is tried before `orderless'.
 
   ┌────
-  │ (setq completion-styles '(orderless)
+  │ (setq completion-styles '(orderless basic)
   │       completion-category-overrides '((file (styles basic partial-completion))))
   └────
 
@@ -816,6 +867,6 @@ Consult] <https://www.youtube.com/watch?v=UtqE-lR2HCA>
   │ (add-to-list
   │  'completion-styles-alist
   │  '(basic-remote basic-remote-try-completion basic-remote-all-completions nil))
-  │ (setq completion-styles '(orderless)
+  │ (setq completion-styles '(orderless basic)
   │       completion-category-overrides '((file (styles basic-remote partial-completion))))
   └────

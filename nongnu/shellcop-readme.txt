@@ -11,11 +11,15 @@ Table of Contents
 1 shellcop
 ══════════
 
+  [file:https://elpa.nongnu.org/nongnu/shellcop.svg]
   [file:http://melpa.org/packages/shellcop-badge.svg]
   [file:http://stable.melpa.org/packages/shellcop-badge.svg]
 
   Analyze info&error in shell-mode.
 
+
+[file:https://elpa.nongnu.org/nongnu/shellcop.svg]
+<https://elpa.nongnu.org/nongnu/shellcop.html>
 
 [file:http://melpa.org/packages/shellcop-badge.svg]
 <http://melpa.org/#/shellcop>
@@ -61,7 +65,12 @@ Table of Contents
   and `message-buffer-mode'. Or else it erases content in message
   buffer.
 
-  Run `M-x shellcop-search-in-shell-buffer-of-other-window'. Use current
+  Run `shellcop-jump-around' to jump to directories recorded by
+  <https://github.com/rupa/z>,
+  • If shell is visible, \"cd dest-dir\" is inserted into shell
+  • Or else, the directory is opened in `dired-mode'
+
+  Run `shellcop-search-in-shell-buffer-of-other-window'. Use current
   word or selected text to search in *shell* buffer of the other window.
 
 

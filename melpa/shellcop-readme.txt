@@ -18,5 +18,9 @@
   - "*Javascript REPL*" (if parameter 2 is passed)
   - "*eshell*" (if parameter 3 is passed)
 
+`shellcop-jump-around' jumps to directories recorded by https://github.com/rupa/z,
+  - If shell is visible, \"cd destination-dir\" is inserted into shell
+  - Or else, the directory is opened in `dired-mode'
+
 `shellcop-search-in-shell-buffer-of-other-window' uses current word or selected text
 to search in *shell* buffer of the other window.

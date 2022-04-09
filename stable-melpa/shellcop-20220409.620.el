@@ -2,11 +2,11 @@
 
 ;; Copyright (C) 2020-2021 Chen Bin
 ;;
-;; Version: 0.0.7
-;; Package-Version: 20211118.1229
-;; Package-Commit: c97a80b58337f7ac257cace4a3fbed86f7fe8456
+;; Version: 0.0.8
+;; Package-Version: 20220409.620
+;; Package-Commit: f6060cc292d0143c925252b27d5db21de03ce7f0
 ;; Keywords: unix tools
-;; Author: Chen Bin <chenbin DOT sh AT gmail DOT com>
+;; Author: Chen Bin <chenbin.sh@gmail.com>
 ;; URL: https://github.com/redguardtoo/shellcop
 ;; Package-Requires: ((emacs "25.1"))
 
@@ -46,6 +46,10 @@
 ;;   - "*shell*" (if parameter 1 is passed)
 ;;   - "*Javascript REPL*" (if parameter 2 is passed)
 ;;   - "*eshell*" (if parameter 3 is passed)
+;;
+;; `shellcop-jump-around' jumps to directories recorded by https://github.com/rupa/z,
+;;   - If shell is visible, \"cd destination-dir\" is inserted into shell
+;;   - Or else, the directory is opened in `dired-mode'
 ;;
 ;; `shellcop-search-in-shell-buffer-of-other-window' uses current word or selected text
 ;; to search in *shell* buffer of the other window.
@@ -104,6 +108,11 @@ If there is error, it returns t."
   :type 'string
   :group 'shellcop)
 
+(defcustom shellcop-jump-around-data-file "~/.z"
+  "The data file created by z (see https://github.com/rupa/z)."
+  :type 'string
+  :group 'shellcop)
+
 (defvar shellcop-debug nil "Enable debug output if not nil.")
 
 (defun shellcop-location-detail (str)
@@ -148,14 +157,14 @@ If there is error, it returns t."
 (defun shellcop-extract-locations-at-point (&optional above)
   "Extract locations in one direction into RLT.
 If ABOVE is t, extract locations above current point; or else below current point."
-  (let* (rlt
-         (line (if above -1 1))
-         location)
-    (save-excursion
-      (while (and (eq (forward-line line) 0)
-                  (setq location (shellcop-extract-location)))
-        (shellcop-push-location location rlt)))
-    rlt))
+(let* (rlt
+       (line (if above -1 1))
+       location)
+  (save-excursion
+    (while (and (eq (forward-line line) 0)
+                (setq location (shellcop-extract-location)))
+      (shellcop-push-location location rlt)))
+  rlt))
 
 (defun shellcop-extract-all-locations ()
   "Extract all locations near current point."
@@ -354,11 +363,17 @@ Or else erase current buffer."
              (visible-frame-list)))
 
 ;;;###autoload
-(defun shellcop-focus-window (buffer-name fn)
-  "Focus on window with BUFFER-NAME and run function FN."
+(defun shellcop-get-window (buffer-name)
+  "Get window of buffer with BUFFER-NAME."
   (let* ((sub-window (cl-find-if `(lambda (w)
                                     (string= (buffer-name (window-buffer w)) ,buffer-name))
-                                 (shellcop-visible-window-list)))
+                                 (shellcop-visible-window-list))))
+    sub-window))
+
+;;;###autoload
+(defun shellcop-focus-window (buffer-name fn)
+  "Focus on window with BUFFER-NAME and run function FN."
+  (let* ((sub-window (shellcop-get-window buffer-name))
          (keyword (cond
                    ((region-active-p)
                     (buffer-substring (region-beginning) (region-end)))
@@ -381,6 +396,57 @@ Or else erase current buffer."
    (lambda (keyword)
      (when keyword
        (funcall shellcop-string-search-function keyword)))))
+
+;;;###autoload
+(defun shellcop-jump-around ()
+  "Jump to directories recorded by https://github.com/rupa/z.
+If shell is visible, \"cd destination-dir\" is inserted into shell.
+Or else, the directory is opened in `dired-mode'."
+  (interactive)
+  (when (file-exists-p shellcop-jump-around-data-file)
+    ;; Emacs use gzip to extract plain text file "~/.z"
+    (let* ((content (shell-command-to-string (format "cat %s" shellcop-jump-around-data-file)))
+           (dirs (mapcar (lambda (line)
+                           ;; line's format: "dir | score | timestamp"
+                           (let* ((a (split-string line "|")))
+                             (cons (nth 0 a) (string-to-number (nth 2 a)))))
+                         (split-string (string-trim content))))
+           dest
+           pattern
+           shell-window)
+      ;; sort by timestamp in descending order
+      (setq dirs (sort dirs (lambda (a b) (> (cdr a) (cdr b)))))
+      (when (> (length dirs) 0)
+        (setq pattern
+              (read-string "pattern to filter directory (or leave it empty): "))
+        (unless (string= pattern "")
+          (setq dirs
+                (cl-remove-if-not (lambda (d) (string-match pattern (car d)))
+                                  dirs)))
+        ;; only directory candidate, select it
+        (cond
+         ((eq (length dirs) 1)
+          (setq dest (car (nth 0 dirs))))
+         (t
+          (setq dest (completing-read "Select directory: " dirs))))
+
+        (when dest
+          (cond
+           ((derived-mode-p 'comint-mode)
+            ;; press return key to clear up current input
+            (comint-send-input)
+            ;; cd into "dest" directory
+            (insert "cd " dest))
+
+           ;; jump to the shell
+           ((setq shell-window (shellcop-get-window shellcop-shell-buffer-name))
+            (shellcop-focus-window shellcop-shell-buffer-name
+                                   (lambda (keyword)
+                                     (ignore keyword)
+                                     (insert "cd " dest))))
+
+           (t
+            (dired dest))))))))
 
 (provide 'shellcop)
 ;;; shellcop.el ends here

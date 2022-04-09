@@ -109,14 +109,6 @@ Table of Contents
   or in an Eshell or Shell buffer. For auto completion, set
   `corfu-auto=t' before turning on `corfu-global-mode'.
 
-  If you start to configure the package more deeply, I recommend to give
-  the Orderless completion style a try for filtering. Orderless
-  completion is different from the familiar prefix TAB completion. Corfu
-  can be used with the default completion styles. The use of Orderless
-  is not a necessity. See also the [Corfu Wiki] for additional
-  configuration tips. In particular the Lsp-mode configuration is
-  documented in the Wiki.
-
   Here is an example configuration:
 
   ┌────
@@ -144,19 +136,6 @@ Table of Contents
   │   :init
   │   (corfu-global-mode))
   │ 
-  │ ;; Optionally use the `orderless' completion style. See `+orderless-dispatch'
-  │ ;; in the Consult wiki for an advanced Orderless style dispatcher.
-  │ ;; Enable `partial-completion' for files to allow path expansion.
-  │ ;; You may prefer to use `initials' instead of `partial-completion'.
-  │ (use-package orderless
-  │   :init
-  │   ;; Configure a custom style dispatcher (see the Consult wiki)
-  │   ;; (setq orderless-style-dispatchers '(+orderless-dispatch)
-  │   ;;       orderless-component-separator #'orderless-escapable-split-on-space)
-  │   (setq completion-styles '(orderless)
-  │ 	completion-category-defaults nil
-  │ 	completion-category-overrides '((file (styles . (partial-completion))))))
-  │ 
   │ ;; Use dabbrev with Corfu!
   │ (use-package dabbrev
   │   ;; Swap M-/ and C-M-/
@@ -179,13 +158,45 @@ Table of Contents
   │   (setq tab-always-indent 'complete))
   └────
 
-  See also the [Corfu Wiki] for additional configuration tips. For more
-  general documentation read the chapter about completion in the [Emacs
-  manual]. If you want to create your own Capfs, you can find
+  If you start to configure the package more deeply, I recommend to give
+  the Orderless completion style a try for filtering. Orderless
+  completion is different from the familiar prefix TAB completion. Corfu
+  can be used with the default completion styles. The use of Orderless
+  is not a necessity.
+
+  ┌────
+  │ ;; Optionally use the `orderless' completion style.
+  │ (use-package orderless
+  │   :init
+  │   ;; Configure a custom style dispatcher (see the Consult wiki)
+  │   ;; (setq orderless-style-dispatchers '(+orderless-dispatch)
+  │   ;;       orderless-component-separator #'orderless-escapable-split-on-space)
+  │   (setq completion-styles '(orderless basic)
+  │ 	completion-category-defaults nil
+  │ 	completion-category-overrides '((file (styles . (partial-completion))))))
+  └────
+
+  The `basic' completion style is specified as fallback in addition to
+  `orderless' in order to ensure that completion commands which rely on
+  dynamic completion tables, e.g., `completion-table-dynamic' or
+  `completion-table-in-turn', work correctly. See `+orderless-dispatch'
+  in the [Consult wiki] for an advanced Orderless style
+  dispatcher. Additionally enable `partial-completion' for file path
+  expansion. `partial-completion' is important for file wildcard
+  support.  Multiple files can be opened at once with `find-file' if you
+  enter a wildcard.  You may also give the `initials' completion style a
+  try.
+
+  See also the [Corfu Wiki] for additional configuration tips. In
+  particular the Lsp-mode configuration is documented in the wiki. For
+  more general documentation read the chapter about completion in the
+  [Emacs manual]. If you want to create your own Capfs, you can find
   documentation about completion in the [Elisp manual].
 
 
 [GNU ELPA] <http://elpa.gnu.org/packages/corfu.html>
+
+[Consult wiki] <https://github.com/minad/consult/wiki>
 
 [Corfu Wiki] <https://github.com/minad/corfu/wiki>
 
@@ -285,7 +296,7 @@ Table of Contents
   │   (cond
   │    ((and (derived-mode-p 'eshell-mode) (fboundp 'eshell-send-input))
   │     (eshell-send-input))
-  │    ((derived-mode-p 'comint-mode)
+  │    ((and (derived-mode-p 'comint-mode) (fboundp 'comint-send-input))
   │     (comint-send-input))))
   │ 
   │ (define-key corfu-map "\r" #'+corfu-insert-and-send)
@@ -400,7 +411,10 @@ Table of Contents
 
   You may be interested in configuring Corfu in TAB-and-Go
   style. Pressing TAB moves to the next candidate and further input will
-  then commit the selection.
+  then commit the selection.  Note that further input will not expand
+  snippets or templates, which may not be desired but which leads
+  overall to a more predictable behavior. In order to force snippet
+  expansion, confirm a candidate explicitly with `RET'.
 
   ┌────
   │ (use-package corfu

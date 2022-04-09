@@ -1306,15 +1306,16 @@
 	   (:authors
 	    ("Vitalie Spinu")))])
  (shellcop .
-	   [(0 0 7)
+	   [(0 0 8)
 	    ((emacs
 	      (25 1)))
 	    "Analyze info&error in shell-mode" tar
 	    ((:url . "https://github.com/redguardtoo/shellcop")
 	     (:keywords "unix" "tools")
-	     (:maintainer "Chen Bin <chenbin DOT sh AT gmail DOT com>")
+	     (:maintainer "Chen Bin" . "chenbin.sh@gmail.com")
 	     (:authors
-	      ("Chen Bin <chenbin DOT sh AT gmail DOT com>")))])
+	      ("Chen Bin" . "chenbin.sh@gmail.com"))
+	     (:commit . "f6060cc292d0143c925252b27d5db21de03ce7f0"))])
  (slime .
 	[(2 26 1)
 	 ((cl-lib

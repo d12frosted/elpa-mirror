@@ -508,7 +508,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 20)
+	[(0 21)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -516,7 +516,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "e2cc92b029bd9334f88d382def7066c35c31b3a9"))])
+	  (:commit . "ba099c770dd6d410553473604f184adf20d7b359"))])
  (coterm .
 	 [(1 5)
 	  ((emacs
@@ -630,9 +630,9 @@
 		  ("Daiki Ueno" . "ueno@gnu.org"))
 		 (:maintainer nil . "emacs-devel@gnu.org"))])
  (debbugs .
-	  [(0 31)
+	  [(0 32)
 	   ((emacs
-	     (25 1))
+	     (26 1))
 	    (soap-client
 	     (3 1 5)))
 	   "SOAP library to access debbugs servers" tar
@@ -641,7 +641,7 @@
 	    (:authors
 	     ("Michael Albinus" . "michael.albinus@gmx.de"))
 	    (:url . "https://elpa.gnu.org/packages/debbugs.html")
-	    (:commit . "0be023a614f49f295e63337a875a7514db78be2f"))])
+	    (:commit . "a35646a9798226b8630fbd7a0691edc78ccd92b3"))])
  (delight .
 	  [(1 7)
 	   ((cl-lib
@@ -3140,7 +3140,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "86f08fb377e2b8f2df0614c48783bdce347f3758"))])
  (vertico .
-	  [(0 21)
+	  [(0 22)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar
@@ -3148,7 +3148,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "e82b7ff371a348d9e5a1ac7bf4b652f0a2d38198"))])
+	    (:commit . "abf488b8bd501354cc36afb8901fa6929f34bbeb"))])
  (vertico-posframe .
 		   [(0 5 3)
 		    ((emacs
