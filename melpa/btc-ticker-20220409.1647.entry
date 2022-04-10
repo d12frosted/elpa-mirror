@@ -1,0 +1,12 @@
+(btc-ticker .
+	    [(20220409 1647)
+	     ((json
+	       (1 2))
+	      (request
+	       (0 2 0)))
+	     "Shows latest bitcoin price" single
+	     ((:commit . "2ed18ac6338d5fe98c578f0875840af07f0bc42a")
+	      (:authors
+	       ("Jorge Niedbalski R." . "jnr@metaklass.org"))
+	      (:maintainer "Jorge Niedbalski R." . "jnr@metaklass.org")
+	      (:keywords "news"))])

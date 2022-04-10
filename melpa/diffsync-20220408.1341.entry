@@ -1,0 +1,11 @@
+(diffsync .
+	  [(20220408 1341)
+	   ((emacs
+	     (25 1)))
+	   "Use diff to allow syncing of directories" single
+	   ((:commit . "32a3e64bec16b34c3df4dc41d3df09a2ca2dc63f")
+	    (:authors
+	     ("Bernhard Rotter" . "bernhard@b-rotter.de"))
+	    (:maintainer "Bernhard Rotter" . "bernhard@b-rotter.de")
+	    (:keywords "tools")
+	    (:url . "https://github.com/ber-ro/diffsync"))])
