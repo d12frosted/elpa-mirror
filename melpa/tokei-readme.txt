@@ -1,0 +1,2 @@
+
+ Tokei mode for Emacs

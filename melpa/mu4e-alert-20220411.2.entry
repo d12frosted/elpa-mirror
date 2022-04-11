@@ -1,0 +1,17 @@
+(mu4e-alert .
+	    [(20220411 2)
+	     ((alert
+	       (1 2))
+	      (s
+	       (1 10 0))
+	      (ht
+	       (2 0))
+	      (emacs
+	       (24 4)))
+	     "Desktop notification for mu4e" single
+	     ((:commit . "56c58eea4fe5cd015300649d98d0314b454b0fc7")
+	      (:authors
+	       ("Iqbal Ansari" . "iqbalansari02@yahoo.com"))
+	      (:maintainer "Mikhail Rudenko" . "mike.rudenko@gmail.com")
+	      (:keywords "mail" "convenience")
+	      (:url . "https://github.com/iqbalansari/mu4e-alert"))])
