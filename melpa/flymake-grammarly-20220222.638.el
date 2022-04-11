@@ -8,7 +8,7 @@
 ;; Keyword: grammar check
 ;; Version: 0.2.1
 ;; Package-Version: 20220222.638
-;; Package-Commit: 04b31605ac54d3e6b111dbf4598e750526414ec3
+;; Package-Commit: 4c469d9e25f65aa72cf0a95dea0b4e87c81b6b0f
 ;; Package-Requires: ((emacs "26.1") (grammarly "0.3.0") (s "1.12.0"))
 ;; URL: https://github.com/emacs-grammarly/flymake-grammarly
 

@@ -8,7 +8,7 @@
 ;; Keyword: diminish hide buffer menu
 ;; Version: 0.2.0
 ;; Package-Version: 20220218.1541
-;; Package-Commit: e332efb1175edd9f34ec07226ce0a27c9922a263
+;; Package-Commit: c72c02751c419ce8bf76e08efefd86b3919e2e47
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs-elpa/diminish-buffer
 

@@ -6,7 +6,7 @@
 ;; Author: Shen, Jen-Chieh <jcs090218@gmail.com>
 ;; URL: https://github.com/quelpa/quelpa-leaf
 ;; Package-Version: 20210124.348
-;; Package-Commit: 5e43446bd3b9a279bb45ec72d4f42ca10d7a5e63
+;; Package-Commit: 82f6fa34f0b4747fe535bed56e67a66812195e97
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "25.1") (quelpa "1.0") (leaf "4.1.0"))
 ;; Keyword: package managment elpa leaf

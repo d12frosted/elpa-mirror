@@ -5,7 +5,7 @@
 ;; Author: Jen-Chieh Shen
 ;; URL: https://github.com/emacs-vs/vs-light-theme
 ;; Package-Version: 20220319.1729
-;; Package-Commit: 57c43a91c75200781cdeebdb7f806719264df5c8
+;; Package-Commit: 05e80702e57a192be0bdc9f6271f0c4abbd17c29
 ;; Version: 1.0
 ;; Package-Requires: ((emacs "24.1"))
 
