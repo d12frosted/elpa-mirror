@@ -7,8 +7,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-undo-fu-session
-;; Package-Version: 20220410.2359
-;; Package-Commit: 1a3d500d8b433bf17c366d7df5193ce5ab778615
+;; Package-Version: 20220411.359
+;; Package-Commit: 8f5736061a0942fc7839bb587439471fc93968a5
 ;; Keywords: convenience
 ;; Version: 0.2
 ;; Package-Requires: ((emacs "28.1"))
@@ -154,19 +154,18 @@ ignoring all branches that aren't included in the current undo state."
             (let*
               (
                 (cons (cons (undo-fu-session--walk-tree fn (car tree)) nil))
-                (cur cons)
-                cdr)
+                (cur cons))
               (while tree
-                (setq cdr (cdr tree))
-                (cond
-                  ((consp cdr)
-                    (let ((next (cons (undo-fu-session--walk-tree fn (car cdr)) nil)))
-                      (setcdr cur next)
-                      (setq cur next)
-                      (setq tree cdr)))
-                  (t
-                    (setcdr cur (undo-fu-session--walk-tree fn cdr))
-                    (setq tree nil))))
+                (let ((cdr (cdr tree)))
+                  (cond
+                    ((consp cdr)
+                      (let ((next (cons (undo-fu-session--walk-tree fn (car cdr)) nil)))
+                        (setcdr cur next)
+                        (setq cur next)
+                        (setq tree cdr)))
+                    (t
+                      (setcdr cur (undo-fu-session--walk-tree fn cdr))
+                      (setq tree nil)))))
               cons))
           (t
             value))))
@@ -200,7 +199,7 @@ ignoring all branches that aren't included in the current undo state."
                 'marker))
             (marker-position a)))
         ((overlayp a)
-          `(overlay ,(overlay-start a) ,(overlay-end a)))
+          (list 'overlay (overlay-start a) (overlay-end a)))
         ((stringp a)
           (substring-no-properties a))
         (t
@@ -512,7 +511,8 @@ Argument PENDING-LIST an `pending-undo-list' compatible list."
           (emacs-undo-equiv-table nil))
 
         (cond
-          ;; Simplified linear history (no redo).
+          ;; Simplified linear history (no redo or implicit tree-structure).
+          ;; Only store steps reachable by calling `undo-only'.
           (undo-fu-session-linear
             (setq emacs-buffer-undo-list
               (undo-fu-session--encode

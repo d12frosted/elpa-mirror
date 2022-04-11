@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out a50c89a6f01be757335e64df322837300c4ced04
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/bbdb/
-  to /tmp/bbdb9Swplw/bbdb-20220328.1456
+  to /tmp/bbdbss3SwS/bbdb-20220328.1456
   ! lisp/bbdb-anniv.el -> bbdb-anniv.el
   ! lisp/bbdb-com.el -> bbdb-com.el
   ! lisp/bbdb-gnus-aux.el -> bbdb-gnus-aux.el
@@ -32,9 +32,9 @@ Copying files (->) and directories (=>)
   ! doc/bbdb.texi -> bbdb.texi
   ! doc/doclicense.texi -> doclicense.texi
   ! doc/gpl.texi -> gpl.texi
-Generating /tmp/bbdb9Swplw/bbdb-20220328.1456/bbdb.info
-Generating /tmp/bbdb9Swplw/bbdb-20220328.1456/doclicense.info
-Generating /tmp/bbdb9Swplw/bbdb-20220328.1456/gpl.info
+Generating /tmp/bbdbss3SwS/bbdb-20220328.1456/bbdb.info
+Generating /tmp/bbdbss3SwS/bbdb-20220328.1456/doclicense.info
+Generating /tmp/bbdbss3SwS/bbdb-20220328.1456/gpl.info
 Created bbdb-20220328.1456.tar containing:
   bbdb-20220328.1456/
   bbdb-20220328.1456/bbdb-anniv.el
@@ -62,29 +62,29 @@ Created bbdb-20220328.1456.tar containing:
   bbdb-20220328.1456/dir
   bbdb-20220328.1456/doclicense.info
   bbdb-20220328.1456/gpl.info
-Built bbdb in 24.436s, finished at 2022-04-11T03:26:16+0000
+Built bbdb in 29.479s, finished at 2022-04-11T07:49:24+0000
  ✓ Success:
- 40K -rw-r--r-- 1 root root  39K Apr 11 03:25 packages/bbdb--20140221.2354.el
-4.0K -rw-r--r-- 1 root root  433 Apr 11 03:25 packages/bbdb--20140221.2354.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 11 03:25 packages/bbdb--badge.svg
-4.0K -rw-r--r-- 1 root root  189 Apr 11 03:25 packages/bbdb--readme.txt
-4.0K -rw-r--r-- 1 root root  572 Apr 11 03:25 packages/bbdb-.log
-4.0K -rw-r--r-- 1 root root  215 Apr 11 03:26 packages/bbdb-20220328.1456.entry
-692K -rw-r--r-- 1 root root 690K Apr 11 03:26 packages/bbdb-20220328.1456.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 11 03:26 packages/bbdb-badge.svg
- 28K -rw-r--r-- 1 root root  25K Apr 11 03:26 packages/bbdb-csv-import-20140802.1142.el
-4.0K -rw-r--r-- 1 root root  448 Apr 11 03:26 packages/bbdb-csv-import-20140802.1142.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 11 03:26 packages/bbdb-csv-import-badge.svg
-8.0K -rw-r--r-- 1 root root 5.1K Apr 11 03:26 packages/bbdb-csv-import-readme.txt
-4.0K -rw-r--r-- 1 root root  644 Apr 11 03:26 packages/bbdb-csv-import.log
- 12K -rw-r--r-- 1 root root  11K Apr 11 03:26 packages/bbdb-ext-20151220.2013.el
-4.0K -rw-r--r-- 1 root root  353 Apr 11 03:26 packages/bbdb-ext-20151220.2013.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 11 03:26 packages/bbdb-ext-badge.svg
-4.0K -rw-r--r-- 1 root root  161 Apr 11 03:26 packages/bbdb-ext-readme.txt
-4.0K -rw-r--r-- 1 root root  598 Apr 11 03:26 packages/bbdb-ext.log
-4.0K -rw-r--r-- 1 root root  707 Apr 11 03:26 packages/bbdb-readme.txt
-4.0K -rw-r--r-- 1 root root  572 Apr 11 03:26 packages/bbdb-vcard-20210325.2208.entry
-112K -rw-r--r-- 1 root root 110K Apr 11 03:26 packages/bbdb-vcard-20210325.2208.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 11 03:26 packages/bbdb-vcard-badge.svg
-8.0K -rw-r--r-- 1 root root 5.1K Apr 11 03:26 packages/bbdb-vcard-readme.txt
-4.0K -rw-r--r-- 1 root root 1.3K Apr 11 03:26 packages/bbdb-vcard.log
+ 40K -rw-r--r-- 1 root root  39K Apr 11 07:49 packages/bbdb--20140221.2354.el
+4.0K -rw-r--r-- 1 root root  433 Apr 11 07:49 packages/bbdb--20140221.2354.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 11 07:49 packages/bbdb--badge.svg
+4.0K -rw-r--r-- 1 root root  189 Apr 11 07:49 packages/bbdb--readme.txt
+4.0K -rw-r--r-- 1 root root  572 Apr 11 07:49 packages/bbdb-.log
+4.0K -rw-r--r-- 1 root root  215 Apr 11 07:49 packages/bbdb-20220328.1456.entry
+692K -rw-r--r-- 1 root root 690K Apr 11 07:49 packages/bbdb-20220328.1456.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 11 07:49 packages/bbdb-badge.svg
+ 28K -rw-r--r-- 1 root root  25K Apr 11 07:49 packages/bbdb-csv-import-20140802.1142.el
+4.0K -rw-r--r-- 1 root root  448 Apr 11 07:49 packages/bbdb-csv-import-20140802.1142.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 11 07:49 packages/bbdb-csv-import-badge.svg
+8.0K -rw-r--r-- 1 root root 5.1K Apr 11 07:49 packages/bbdb-csv-import-readme.txt
+4.0K -rw-r--r-- 1 root root  644 Apr 11 07:49 packages/bbdb-csv-import.log
+ 12K -rw-r--r-- 1 root root  11K Apr 11 07:49 packages/bbdb-ext-20151220.2013.el
+4.0K -rw-r--r-- 1 root root  353 Apr 11 07:49 packages/bbdb-ext-20151220.2013.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 11 07:49 packages/bbdb-ext-badge.svg
+4.0K -rw-r--r-- 1 root root  161 Apr 11 07:49 packages/bbdb-ext-readme.txt
+4.0K -rw-r--r-- 1 root root  598 Apr 11 07:49 packages/bbdb-ext.log
+4.0K -rw-r--r-- 1 root root  707 Apr 11 07:49 packages/bbdb-readme.txt
+4.0K -rw-r--r-- 1 root root  572 Apr 11 07:49 packages/bbdb-vcard-20210325.2208.entry
+112K -rw-r--r-- 1 root root 110K Apr 11 07:49 packages/bbdb-vcard-20210325.2208.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 11 07:49 packages/bbdb-vcard-badge.svg
+8.0K -rw-r--r-- 1 root root 5.1K Apr 11 07:49 packages/bbdb-vcard-readme.txt
+4.0K -rw-r--r-- 1 root root 1.3K Apr 11 07:49 packages/bbdb-vcard.log

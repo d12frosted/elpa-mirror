@@ -4,8 +4,8 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/stock-tracker
-;; Package-Version: 20220411.7
-;; Package-Commit: 76e15e4b8bcb08fcae8a669e1ae8df81d0f88fdb
+;; Package-Version: 20220411.130
+;; Package-Commit: b8351ca8ed5eb685fe1105b85b7b4c09efa1624b
 ;; Version: 0.1.2
 ;; Created: 2019-08-18
 ;; Keywords: convenience, chinese, stock
@@ -444,14 +444,20 @@ It defaults to a comma."
         (let ((result '((chn-stock . 0) (us-stock . 0)))
               (chn-result nil)
               (us-result nil))
-          (when subprocess-chn-stocks-string
+      
+          ;; fetch chn stocks
+          (unless (string-empty-p subprocess-chn-stocks-string)
             (push
-             (stock-tracker--subprocess-request-synchronously subprocess-chn-stocks-string "chn-stock") chn-result))
-          (dolist (us-stock (split-string subprocess-us-stocks-string ","))
-            (push
-             (stock-tracker--subprocess-request-synchronously us-stock "us-stock") us-result))
-          (when chn-result (map-put! result 'chn-stock chn-result))
-          (when us-result (map-put! result 'us-stock us-result))
+             (stock-tracker--subprocess-request-synchronously subprocess-chn-stocks-string "chn-stock") chn-result)
+            (when chn-result (map-put! result 'chn-stock chn-result)))
+      
+          ;; fetch us stocks
+          (unless (string-empty-p subprocess-us-stocks-string)
+            (dolist (us-stock (split-string subprocess-us-stocks-string ","))
+              (push
+               (stock-tracker--subprocess-request-synchronously us-stock "us-stock") us-result))
+            (when us-result (map-put! result 'us-stock us-result)))
+      
           result))
 
      ;; What to do when it finishes

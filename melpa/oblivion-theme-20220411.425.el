@@ -3,8 +3,8 @@
 ;; SPDX-License-Identifier: GPL-2.0-or-later
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 ;; URL: https://gitlab.com/ideasman42/emacs-oblivion-theme
-;; Package-Version: 20220407.748
-;; Package-Commit: 95eff40ed18adbce14bb390e9a4a7d6fa864c14b
+;; Package-Version: 20220411.425
+;; Package-Commit: 49b2441adac44538de481b8202ca493b65198c91
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.1"))
 
@@ -20,7 +20,7 @@
   (
     (ob-butter1 "#fce94f")
     (ob-butter2 "#edd400")
-    ;; (ob-butter3 "#c4a000")
+    (ob-butter3 "#c4a000")
     (ob-chameleon1 "#8ae234")
     (ob-chameleon2 "#73d216")
     (ob-chameleon3 "#4e9a06")
@@ -259,14 +259,14 @@
     `(rst-reference ((t (:foreground ,ob-plum1))))
     `(rst-literal ((t (:inherit font-lock-string-face :background ,ob-aluminium6+16))))
     ;; titles baseline.
-    `(rst-adornment ((t (:foreground ,ob-chameleon1))))
+    `(rst-adornment ((t (:foreground ,ob-butter3))))
 
     ;; titles.
-    `(rst-level-1 ((t (:foreground ,ob-chameleon1))))
-    `(rst-level-2 ((t (:foreground ,ob-chameleon1))))
-    `(rst-level-3 ((t (:foreground ,ob-chameleon1))))
-    `(rst-level-4 ((t (:foreground ,ob-chameleon1))))
-    `(rst-level-6 ((t (:foreground ,ob-chameleon1))))
+    `(rst-level-1 ((t (:foreground ,ob-butter3))))
+    `(rst-level-2 ((t (:foreground ,ob-butter3))))
+    `(rst-level-3 ((t (:foreground ,ob-butter3))))
+    `(rst-level-4 ((t (:foreground ,ob-butter3))))
+    `(rst-level-6 ((t (:foreground ,ob-butter3))))
 
     ;; Colors for popular plugins.
 

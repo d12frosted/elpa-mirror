@@ -5,8 +5,8 @@
 ;; Author: Alex Murray <murray.alex@gmail.com>
 ;; Maintainer: Alex Murray <murray.alex@gmail.com>
 ;; URL: https://github.com/alexmurray/apparmor-mode
-;; Package-Version: 20211014.2319
-;; Package-Commit: 9d1937af52cd8ecfeec27185644ea8cbf0dc1c08
+;; Package-Version: 20220411.648
+;; Package-Commit: abc2a6adf563b89daee9f8fa07a71d78957defdb
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "24.4"))
 
@@ -321,8 +321,8 @@
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\`/etc/apparmor\\.d/" . apparmor-mode))
-
-;; flycheck integration
+;;;###autoload
+(add-to-list 'auto-mode-alist '("\\`/var/lib/snapd/apparmor/profiles/" . apparmor-mode))
 
 
 (provide 'apparmor-mode)
