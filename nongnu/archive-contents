@@ -128,14 +128,15 @@
 	     (:authors
 	      ("Dave Pearson" . "davep@davep.org")))])
  (buttercup .
-	    [(1 24)
+	    [(1 25)
 	     ((emacs
 	       (24 3)))
 	     "Behavior-Driven Emacs Lisp Testing" tar
 	     ((:url . "https://github.com/jorgenschaefer/emacs-buttercup")
-	      (:maintainer "Jorgen Schaefer" . "contact@jorgenschaefer.de")
+	      (:maintainer "Ola Nilsson" . "ola.nilsson@gmail.com")
 	      (:authors
-	       ("Jorgen Schaefer" . "contact@jorgenschaefer.de")))])
+	       ("Jorgen Schaefer" . "contact@jorgenschaefer.de"))
+	      (:commit . "ba62f80555d46faf49dc451c0ad20f39f6a170ab"))])
  (caml .
        [(4 9)
 	((emacs
