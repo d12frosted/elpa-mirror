@@ -1,0 +1,13 @@
+(flycheck-aspell .
+		 [(20220411 826)
+		  ((flycheck
+		    (28 0))
+		   (emacs
+		    (25 1)))
+		  "Aspell checker for flycheck" single
+		  ((:commit . "5ec0f9b28b1d86eec192b23bc24d9a33dfe51882")
+		   (:authors
+		    ("Leo Gaskin" . "leo.gaskin@le0.gs"))
+		   (:maintainer "Leo Gaskin" . "leo.gaskin@le0.gs")
+		   (:keywords "wp" "flycheck" "spell" "aspell")
+		   (:url . "https://github.com/leotaku/flycheck-aspell"))])

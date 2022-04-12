@@ -5,7 +5,7 @@
 ;; Author: Tomohiro Matsuyama <m2ym.pub@gmail.com>
 ;; Keywords: convenience
 ;; Package-Version: 20210215.1849
-;; Package-Commit: 8f90c6faeecd77c88883cafc03c37a5cce4b1982
+;; Package-Commit: 76b8b427cc1bbb5aeaa2dc20cfa0443b89efab43
 ;; Version: 1.0.2
 ;; URL: https://github.com/emacsorphanage/popwin
 ;; Package-Requires: ((emacs "24.3"))

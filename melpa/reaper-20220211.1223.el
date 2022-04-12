@@ -6,7 +6,7 @@
 ;; Created: August 11, 2019
 ;; Version: 1.0.0
 ;; Package-Version: 20220211.1223
-;; Package-Commit: d073fa8d00411af58fced861b7236aaa23b0692d
+;; Package-Commit: 5a69cc206c8719bde897394376555bb74e77b915
 ;; Package-Requires: ((emacs "25.1"))
 ;; Keywords: tools
 ;; Url: https://github.com/xendk/reaper

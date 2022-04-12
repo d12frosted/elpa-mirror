@@ -5,7 +5,7 @@
 ;; Author: Eric Dallo <ercdll1337@gmail.com>
 ;; Package-Requires: ((emacs "26.1") (all-the-icons "4.0.1") (treemacs "0.0"))
 ;; Package-Version: 20220124.1914
-;; Package-Commit: b18a05b1f62074a40e6011d83cd4c92cbee040dd
+;; Package-Commit: 6e206216cec383d47acec872a0c8ef6e70b7746b
 ;; Version: 0
 ;; Homepage: https://github.com/Alexander-Miller/treemacs
 

@@ -5,7 +5,7 @@
 ;; Author: Topi Kettunen <topi@topikettunen.com>
 ;; URL: https://github.com/topikettunen/tok-theme
 ;; Package-Version: 20220411.655
-;; Package-Commit: 4c35ab16b93addfd68d6189379189029b73da63e
+;; Package-Commit: f8ec6b3e301d511649ce84b36067c8eab7038c72
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.1"))
 

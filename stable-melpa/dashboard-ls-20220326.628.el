@@ -8,7 +8,7 @@
 ;; Keyword: directory file show dashboard
 ;; Version: 0.3.0
 ;; Package-Version: 20220326.628
-;; Package-Commit: 345b4d8dbd313130b56bad6c275c8334f1c6e220
+;; Package-Commit: 2b0bf850e893c87380ae0b64d887db0b3a3fcead
 ;; Package-Requires: ((emacs "24.3") (dashboard "1.2.5"))
 ;; URL: https://github.com/emacs-dashboard/dashboard-ls
 

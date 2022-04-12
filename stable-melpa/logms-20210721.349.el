@@ -8,7 +8,7 @@
 ;; Keyword: debug log
 ;; Version: 0.3.1
 ;; Package-Version: 20210721.349
-;; Package-Commit: c66a6e09d83cac3f0e6917e8bfb4cb09bc3e9f56
+;; Package-Commit: 87cdae737bc540520aa8c8eb3e90a9a3a2108592
 ;; Package-Requires: ((emacs "27.1") (f "0.20.0") (s "1.9.0") (ht "2.3"))
 ;; URL: https://github.com/jcs-elpa/logms
 

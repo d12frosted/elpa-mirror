@@ -8,7 +8,7 @@
 ;; Keyword: window transparent frame
 ;; Version: 0.1.3
 ;; Package-Version: 20200910.1636
-;; Package-Commit: c61be4900945cf42273d742aede62239efe63067
+;; Package-Commit: e3721ed8bd1ac985c497eb718112906a2534bdbc
 ;; Package-Requires: ((emacs "24.3"))
 ;; URL: https://github.com/jcs-elpa/transwin
 
