@@ -5,8 +5,8 @@
 ;; Author: Giap Tran <txgvnn@gmail.com>
 ;; Homepage: https://github.com/TxGVNN/ob-compile
 ;; Version: 0.1.0
-;; Package-Version: 20220320.1343
-;; Package-Commit: cbfad24503491ba2bb0fff7454c339e655968c90
+;; Package-Version: 20220413.228
+;; Package-Commit: eb4fca6dc728cdc1e73d5d7ca8cad0f4cb1ad36a
 ;; Keywords:  literate programming, reproducible, processes
 ;; Package-Requires: ((emacs "24.4"))
 ;; This file is NOT part of GNU Emacs.
@@ -55,7 +55,7 @@
     (let ((compilation-buffer-name-function
            (lambda (_)
              (format "*ob-compile:%s*" file))))
-      (compile (format "true '%s'; %s" params body) t))
+      (compile (format "true '%s';\n%s" params body) t))
     file))
 
 (defvar org-babel-default-header-args:compile '())

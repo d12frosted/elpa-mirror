@@ -5,8 +5,8 @@
 ;; Author: Trevor Edwin Pogue <trevor.pogue@gmail.com>
 ;; Maintainer: Trevor Edwin Pogue <trevor.pogue@gmail.com>
 ;; URL: https://github.com/trevorpogue/topspace
-;; Package-Version: 20220412.2017
-;; Package-Commit: c21ceb5e3aceb6bfddf23e2818d943250df84e4a
+;; Package-Version: 20220413.630
+;; Package-Commit: 8fcd11d4a5adddf4b0b60658bfe9b04106bf155b
 ;; Keywords: convenience, scrolling, center, cursor, margin, padding
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -97,6 +97,9 @@ space should be reduced in size or not")
 This flag signals to wait until then to display top space.")
 
 (defvar topspace--advice-added nil "Keep track if `advice-add` done already.")
+
+(defvar-local topspace--previous-mwheel-scroll-down-function nil
+  "Previous mwheel function that does the job of scrolling downward.")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;;; Customization
@@ -215,12 +218,25 @@ TOTAL-LINES is used in the same way as in `scroll-down'."
           (- total-lines (- new-topspace-height old-topspace-height)))
     (if (display-graphic-p) total-lines (round total-lines))))
 
+(defun topspace--mwheel-scroll-down-function (&optional total-lines)
+  "Run instead of `mwheel-scroll-down-function' for scrolling down.
+For some reason this function only works if it is different from
+`scroll-down' in the sense that
+it does nothing in the case that TOTAL-LINES is nil.
+TODO: figure out exactly why this is the case."
+  (cond
+   ((not (topspace--enabled))
+    (scroll-down total-lines))
+   (total-lines
+    (scroll-down total-lines))))
+
 (defun topspace--filter-args-scroll-down (&optional total-lines)
   "Run before `scroll-down' for scrolling above the top line.
 TOTAL-LINES is used in the same way as in `scroll-down'."
   (cond
    ((not (topspace--enabled)) total-lines)
-   ((setq total-lines (car total-lines))
+   (t
+    (setq total-lines (car total-lines))
     (setq total-lines (or total-lines (- (topspace--window-height)
                                          next-screen-context-lines)))
     (setq topspace--total-lines-scrolling total-lines)
@@ -231,7 +247,8 @@ TOTAL-LINES is used in the same way as in `scroll-down'."
 TOTAL-LINES is used in the same way as in `scroll-up'."
   (cond
    ((not (topspace--enabled)) total-lines)
-   ((setq total-lines (car total-lines))
+   (t
+    (setq total-lines (car total-lines))
     (setq total-lines (* (or total-lines (- (topspace--window-height)
                                             next-screen-context-lines)) -1))
     (setq topspace--total-lines-scrolling total-lines)
@@ -580,11 +597,17 @@ Topspace will not be enabled for:
       (advice-add #'scroll-up :after #'topspace--after-scroll)
       (advice-add #'scroll-down :after #'topspace--after-scroll)
       (advice-add #'recenter :after #'topspace--after-recenter))
+    (setq topspace--previous-mwheel-scroll-down-function
+          mwheel-scroll-down-function)
+    (setq mwheel-scroll-down-function
+          #'topspace--mwheel-scroll-down-function)
     (dolist (window (get-buffer-window-list))
       (with-selected-window window (topspace--draw)))))
 
 (defun topspace--disable ()
   "Disable `topspace-mode' and do mode cleanup."
+  (setq mwheel-scroll-down-function
+        topspace--previous-mwheel-scroll-down-function)
   (remove-overlays 1 1 'topspace--remove-from-buffer-tag t)
   (topspace--remove-hooks))
 

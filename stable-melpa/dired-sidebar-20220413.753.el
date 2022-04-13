@@ -5,8 +5,8 @@
 ;; Author: James Nguyen <james@jojojames.com>
 ;; Maintainer: James Nguyen <james@jojojames.com>
 ;; URL: https://github.com/jojojames/dired-sidebar
-;; Package-Version: 20220317.1546
-;; Package-Commit: aed7e44b5a4ef37fa7be6210ddfe73bb724bac6f
+;; Package-Version: 20220413.753
+;; Package-Commit: 0521cdc53e4a7ae7ea4728e5ac9f69287528dc56
 ;; Version: 0.0.1
 ;; Package-Requires: ((emacs "25.1") (dired-subtree "0.0.1"))
 ;; Keywords: dired, files, tools
@@ -111,8 +111,10 @@ This only takes effect if on a local connection. (e.g. Not Tramp)"
   :type 'integer
   :group 'dired-sidebar)
 
-(defcustom dired-sidebar-refresh-on-projectile-switch t
-  "Refresh sidebar when `projectile' changes projects."
+(define-obsolete-variable-alias 'dired-sidebar-refresh-on-projectile-switch
+'dired-sidebar-refresh-on-project-switch "2022-04-13")
+(defcustom dired-sidebar-refresh-on-project-switch t
+  "Refresh sidebar when `projectile' or `project' changes projects."
   :type 'boolean
   :group 'dired-sidebar)
 
@@ -312,12 +314,17 @@ For more information, look up `delete-other-windows'."
   :type 'boolean
   :group 'dired-sidebar)
 
-(defcustom dired-sidebar-one-instance-p nil
+
+(define-obsolete-variable-alias 'dired-sidebar-one-instance-p
+'dired-sidebar-use-one-instance "2022-04-13")
+(defcustom dired-sidebar-use-one-instance nil
   "Only show one buffer instance for dired-sidebar for each frame."
   :type 'boolean
   :group 'dired-sidebar)
 
-(defcustom dired-sidebar-display-icons-for-remote-p nil
+(define-obsolete-variable-alias 'dired-sidebar-display-icons-for-remote-p
+'dired-sidebar-display-remote-icons "2022-04-13")
+(defcustom dired-sidebar-display-remote-icons nil
   "Show icons for remote directories. nil by default for performance reasons."
   :type 'boolean
   :group 'dired-sidebar)
@@ -498,7 +505,9 @@ Works around marker pointing to wrong buffer in Emacs 25."
   (when dired-sidebar-use-custom-modeline
     (dired-sidebar-set-mode-line))
 
-  (when dired-sidebar-refresh-on-projectile-switch
+  (when dired-sidebar-refresh-on-project-switch
+    (advice-add 'project-find-file
+                :after #'dired-sidebar-follow-file)
     (add-hook 'projectile-after-switch-project-hook
               #'dired-sidebar-follow-file))
 
@@ -937,7 +946,7 @@ Optional argument NOCONFIRM Pass NOCONFIRM on to `dired-buffer-stale-p'."
         (ignore auto-revert-verbose) ;; Make byte compiler happy.
         (revert-buffer)))))
 
-(defun dired-sidebar-follow-file ()
+(defun dired-sidebar-follow-file (&rest _)
   "Follow new file.
 
 The root of the sidebar will be determined by `dired-sidebar-get-dir-to-show'

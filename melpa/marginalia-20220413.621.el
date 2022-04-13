@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.13
-;; Package-Version: 20220410.810
-;; Package-Commit: f7026bac4809be5e0625070d429be1acee9d4989
+;; Package-Version: 20220413.621
+;; Package-Commit: 20c019e8847128b1303fbbad339a55a7ec2a482d
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -135,7 +135,7 @@ determine it."
   :type '(alist :key-type regexp :value-type symbol))
 
 (defcustom marginalia-censor-variables
-  '("pass")
+  '("pass\\|auth-source-netrc-cache\\|auth-source-.*-nonce")
   "The values of variables matching any of these regular expressions is not shown."
   :type '(repeat (choice symbol regexp)))
 

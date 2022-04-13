@@ -4,8 +4,8 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/stock-tracker
-;; Package-Version: 20220412.908
-;; Package-Commit: 11fb6bc7d1920c9b9895dea6dde47ed47a11cae4
+;; Package-Version: 20220413.514
+;; Package-Commit: 3977981e1b78a5905e2af19dd2ff7fa4c89f2597
 ;; Version: 0.1.2
 ;; Created: 2019-08-18
 ;; Keywords: convenience, chinese, stock
@@ -437,8 +437,10 @@ It defaults to a comma."
                 (kill-current-buffer)))
             jsons))
 
-        ;; make sure subprocess can exit without query
+        ;; make sure subprocess can exit successfully
         (setq kill-buffer-query-functions (delq 'process-kill-buffer-query-function kill-buffer-query-functions))
+        (when (>= emacs-major-version 28)
+          (setq backtrace-on-error-noninteractive nil))
 
         ;; do real business here
         (let ((result '((chn-stock . 0) (us-stock . 0)))
