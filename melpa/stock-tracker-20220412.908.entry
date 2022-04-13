@@ -1,0 +1,15 @@
+(stock-tracker .
+	       [(20220412 908)
+		((emacs
+		  (27 1))
+		 (dash
+		  (2 16 0))
+		 (async
+		  (1 9 5)))
+		"Track stock price" single
+		((:commit . "11fb6bc7d1920c9b9895dea6dde47ed47a11cae4")
+		 (:authors
+		  ("Huming Chen" . "chenhuming@gmail.com"))
+		 (:maintainer "Huming Chen" . "chenhuming@gmail.com")
+		 (:keywords "convenience" "chinese" "stock")
+		 (:url . "https://github.com/beacoder/stock-tracker"))])

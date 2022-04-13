@@ -4,10 +4,10 @@ Source:  https://github.com/Chobbes/org-chef.git
 
 Updating /mnt/store/melpa/working/org-chef/
 Checking out origin/HEAD
-Checking out 87e9a6c4844ff32f47c8d1108ec0f087a3148a8e
+Checking out f244b33a5a42d2879b9a6f4fcfeedcefb3326b94
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/org-chef/
-  to /tmp/org-chefn9ZlLM/org-chef-20210930.1418
+  to /tmp/org-chefE2reUm/org-chef-20220412.1423
     org-chef-24kitchen.el -> org-chef-24kitchen.el
     org-chef-basics-with-babish.el -> org-chef-basics-with-babish.el
     org-chef-bbc-food.el -> org-chef-bbc-food.el
@@ -20,6 +20,7 @@ Copying files (->) and directories (=>)
     org-chef-genius-kitchen.el -> org-chef-genius-kitchen.el
     org-chef-jamie-oliver.el -> org-chef-jamie-oliver.el
     org-chef-json-ld.el -> org-chef-json-ld.el
+    org-chef-kotikokki.el -> org-chef-kotikokki.el
     org-chef-marmiton.el -> org-chef-marmiton.el
     org-chef-martha-stewart.el -> org-chef-martha-stewart.el
     org-chef-nytimes.el -> org-chef-nytimes.el
@@ -33,37 +34,38 @@ Copying files (->) and directories (=>)
     org-chef-wordpress.el -> org-chef-wordpress.el
     org-chef-xiachufang.el -> org-chef-xiachufang.el
     org-chef.el -> org-chef.el
-Created org-chef-20210930.1418.tar containing:
-  org-chef-20210930.1418/
-  org-chef-20210930.1418/org-chef-24kitchen.el
-  org-chef-20210930.1418/org-chef-basics-with-babish.el
-  org-chef-20210930.1418/org-chef-bbc-food.el
-  org-chef-20210930.1418/org-chef-bbc-good-food.el
-  org-chef-20210930.1418/org-chef-binging-with-babish.el
-  org-chef-20210930.1418/org-chef-chef-koch.el
-  org-chef-20210930.1418/org-chef-cultures-for-health.el
-  org-chef-20210930.1418/org-chef-edit.el
-  org-chef-20210930.1418/org-chef-fine-cooking.el
-  org-chef-20210930.1418/org-chef-genius-kitchen.el
-  org-chef-20210930.1418/org-chef-jamie-oliver.el
-  org-chef-20210930.1418/org-chef-json-ld.el
-  org-chef-20210930.1418/org-chef-marmiton.el
-  org-chef-20210930.1418/org-chef-martha-stewart.el
-  org-chef-20210930.1418/org-chef-nytimes.el
-  org-chef-20210930.1418/org-chef-pkg.el
-  org-chef-20210930.1418/org-chef-recipetin-eats.el
-  org-chef-20210930.1418/org-chef-reluctant-gourmet.el
-  org-chef-20210930.1418/org-chef-saveur.el
-  org-chef-20210930.1418/org-chef-serious-eats.el
-  org-chef-20210930.1418/org-chef-simply-recipes.el
-  org-chef-20210930.1418/org-chef-taste.el
-  org-chef-20210930.1418/org-chef-utils.el
-  org-chef-20210930.1418/org-chef-wordpress.el
-  org-chef-20210930.1418/org-chef-xiachufang.el
-  org-chef-20210930.1418/org-chef.el
-Built org-chef in 6.694s, finished at 2022-04-12T11:51:18+0000
+Created org-chef-20220412.1423.tar containing:
+  org-chef-20220412.1423/
+  org-chef-20220412.1423/org-chef-24kitchen.el
+  org-chef-20220412.1423/org-chef-basics-with-babish.el
+  org-chef-20220412.1423/org-chef-bbc-food.el
+  org-chef-20220412.1423/org-chef-bbc-good-food.el
+  org-chef-20220412.1423/org-chef-binging-with-babish.el
+  org-chef-20220412.1423/org-chef-chef-koch.el
+  org-chef-20220412.1423/org-chef-cultures-for-health.el
+  org-chef-20220412.1423/org-chef-edit.el
+  org-chef-20220412.1423/org-chef-fine-cooking.el
+  org-chef-20220412.1423/org-chef-genius-kitchen.el
+  org-chef-20220412.1423/org-chef-jamie-oliver.el
+  org-chef-20220412.1423/org-chef-json-ld.el
+  org-chef-20220412.1423/org-chef-kotikokki.el
+  org-chef-20220412.1423/org-chef-marmiton.el
+  org-chef-20220412.1423/org-chef-martha-stewart.el
+  org-chef-20220412.1423/org-chef-nytimes.el
+  org-chef-20220412.1423/org-chef-pkg.el
+  org-chef-20220412.1423/org-chef-recipetin-eats.el
+  org-chef-20220412.1423/org-chef-reluctant-gourmet.el
+  org-chef-20220412.1423/org-chef-saveur.el
+  org-chef-20220412.1423/org-chef-serious-eats.el
+  org-chef-20220412.1423/org-chef-simply-recipes.el
+  org-chef-20220412.1423/org-chef-taste.el
+  org-chef-20220412.1423/org-chef-utils.el
+  org-chef-20220412.1423/org-chef-wordpress.el
+  org-chef-20220412.1423/org-chef-xiachufang.el
+  org-chef-20220412.1423/org-chef.el
+Built org-chef in 12.159s, finished at 2022-04-13T01:20:06+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  450 Apr 12 11:51 packages/org-chef-20210930.1418.entry
-132K -rw-r--r-- 1 root root 130K Apr 12 11:51 packages/org-chef-20210930.1418.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 12 11:51 packages/org-chef-badge.svg
-4.0K -rw-r--r-- 1 root root  161 Apr 12 11:51 packages/org-chef-readme.txt
+4.0K -rw-r--r-- 1 root root  450 Apr 13 01:20 packages/org-chef-20220412.1423.entry
+132K -rw-r--r-- 1 root root 130K Apr 13 01:20 packages/org-chef-20220412.1423.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 13 01:20 packages/org-chef-badge.svg
+4.0K -rw-r--r-- 1 root root  161 Apr 13 01:20 packages/org-chef-readme.txt
