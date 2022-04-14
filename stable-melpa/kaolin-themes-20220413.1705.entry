@@ -1,0 +1,15 @@
+(kaolin-themes .
+	       [(20220413 1705)
+		((emacs
+		  (25 1))
+		 (autothemer
+		  (0 2 2))
+		 (cl-lib
+		  (0 6)))
+		"A set of eye pleasing themes" tar
+		((:commit . "bd37ae6e48d918e9d72513345903093239a8ad8d")
+		 (:authors
+		  ("Ogden Webb" . "ogdenwebb@gmail.com"))
+		 (:maintainer "Ogden Webb" . "ogdenwebb@gmail.com")
+		 (:keywords "dark" "light" "teal" "blue" "violet" "purple" "brown" "theme" "faces")
+		 (:url . "https://github.com/ogdenwebb/emacs-kaolin-themes"))])
