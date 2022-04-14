@@ -4,10 +4,10 @@ Source:  https://tildegit.org/contrapunctus/chronometrist.git
 
 Updating /mnt/store/melpa/working/chronometrist/
 Checking out origin/dev
-Checking out 059579e841148362d5081a43dcb27c8a3c7751ea
+Checking out 88aa54c08224bb8b8987dd2024052a25b275dab8
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/chronometrist/
-  to /tmp/chronometristGB5VdC/chronometrist-20220401.1453
+  to /tmp/chronometristKtgrHd/chronometrist-20220414.726
   ! elisp/chronometrist-spark.el -> chronometrist-spark.el
   ! elisp/chronometrist-sqlite.el -> chronometrist-sqlite.el
   ! elisp/chronometrist-third.el -> chronometrist-third.el
@@ -16,35 +16,39 @@ Copying files (->) and directories (=>)
   ! elisp/chronometrist-sqlite.org -> chronometrist-sqlite.org
   ! elisp/chronometrist-third.org -> chronometrist-third.org
   ! elisp/chronometrist.org -> chronometrist.org
-Created chronometrist-20220401.1453.tar containing:
-  chronometrist-20220401.1453/
-  chronometrist-20220401.1453/chronometrist-pkg.el
-  chronometrist-20220401.1453/chronometrist-spark.el
-  chronometrist-20220401.1453/chronometrist-spark.org
-  chronometrist-20220401.1453/chronometrist-sqlite.el
-  chronometrist-20220401.1453/chronometrist-sqlite.org
-  chronometrist-20220401.1453/chronometrist-third.el
-  chronometrist-20220401.1453/chronometrist-third.org
-  chronometrist-20220401.1453/chronometrist.el
-  chronometrist-20220401.1453/chronometrist.org
-Built chronometrist in 6.313s, finished at 2022-04-14T06:45:24+0000
+Created chronometrist-20220414.726.tar containing:
+  chronometrist-20220414.726/
+  chronometrist-20220414.726/chronometrist-pkg.el
+  chronometrist-20220414.726/chronometrist-spark.el
+  chronometrist-20220414.726/chronometrist-spark.org
+  chronometrist-20220414.726/chronometrist-sqlite.el
+  chronometrist-20220414.726/chronometrist-sqlite.org
+  chronometrist-20220414.726/chronometrist-third.el
+  chronometrist-20220414.726/chronometrist-third.org
+  chronometrist-20220414.726/chronometrist.el
+  chronometrist-20220414.726/chronometrist.org
+Built chronometrist in 11.309s, finished at 2022-04-14T10:48:23+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  476 Apr 14 06:45 packages/chronometrist-20220401.1453.entry
 432K -rw-r--r-- 1 root root 430K Apr 14 06:45 packages/chronometrist-20220401.1453.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 14 06:45 packages/chronometrist-badge.svg
- 12K -rw-r--r-- 1 root root  12K Apr 14 06:45 packages/chronometrist-goal-20210510.1831.el
-4.0K -rw-r--r-- 1 root root  531 Apr 14 06:45 packages/chronometrist-goal-20210510.1831.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 14 06:45 packages/chronometrist-goal-badge.svg
-4.0K -rw-r--r-- 1 root root  153 Apr 14 06:45 packages/chronometrist-goal-readme.txt
-4.0K -rw-r--r-- 1 root root  329 Apr 14 06:45 packages/chronometrist-goal.log
+4.0K -rw-r--r-- 1 root root  475 Apr 14 10:48 packages/chronometrist-20220414.726.entry
+432K -rw-r--r-- 1 root root 430K Apr 14 10:48 packages/chronometrist-20220414.726.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 14 10:48 packages/chronometrist-badge.svg
+ 12K -rw-r--r-- 1 root root  12K Apr 14 10:48 packages/chronometrist-goal-20210510.1831.el
+4.0K -rw-r--r-- 1 root root  531 Apr 14 10:48 packages/chronometrist-goal-20210510.1831.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 14 10:48 packages/chronometrist-goal-badge.svg
+4.0K -rw-r--r-- 1 root root  153 Apr 14 10:48 packages/chronometrist-goal-readme.txt
+4.0K -rw-r--r-- 1 root root  683 Apr 14 10:48 packages/chronometrist-goal.log
 4.0K -rw-r--r-- 1 root root  448 Apr 14 06:45 packages/chronometrist-key-values-20220401.1453.entry
 120K -rw-r--r-- 1 root root 120K Apr 14 06:45 packages/chronometrist-key-values-20220401.1453.tar
+4.0K -rw-r--r-- 1 root root  447 Apr 14 10:48 packages/chronometrist-key-values-20220414.726.entry
+120K -rw-r--r-- 1 root root 120K Apr 14 10:48 packages/chronometrist-key-values-20220414.726.tar
 4.0K -rw-r--r-- 1 root root 1.2K Apr 14 06:45 packages/chronometrist-key-values-badge.svg
-4.0K -rw-r--r-- 1 root root  329 Apr 14 06:45 packages/chronometrist-key-values-readme.txt
-4.0K -rw-r--r-- 1 root root 2.1K Apr 14 06:45 packages/chronometrist-key-values.log
-4.0K -rw-r--r-- 1 root root 2.0K Apr 14 06:45 packages/chronometrist-readme.txt
-4.0K -rw-r--r-- 1 root root  505 Apr 14 06:45 packages/chronometrist-spark-20220321.349.entry
- 20K -rw-r--r-- 1 root root  20K Apr 14 06:45 packages/chronometrist-spark-20220321.349.tar
+4.0K -rw-r--r-- 1 root root  329 Apr 14 10:48 packages/chronometrist-key-values-readme.txt
+4.0K -rw-r--r-- 1 root root 1.6K Apr 14 10:48 packages/chronometrist-key-values.log
+4.0K -rw-r--r-- 1 root root 2.0K Apr 14 10:48 packages/chronometrist-readme.txt
+4.0K -rw-r--r-- 1 root root  505 Apr 14 10:48 packages/chronometrist-spark-20220321.349.entry
+ 20K -rw-r--r-- 1 root root  20K Apr 14 10:48 packages/chronometrist-spark-20220321.349.tar
 4.0K -rw-r--r-- 1 root root 1.2K Apr 14 06:45 packages/chronometrist-spark-badge.svg
-4.0K -rw-r--r-- 1 root root   82 Apr 14 06:45 packages/chronometrist-spark-readme.txt
-4.0K -rw-r--r-- 1 root root  880 Apr 14 06:45 packages/chronometrist-spark.log
+4.0K -rw-r--r-- 1 root root   82 Apr 14 10:48 packages/chronometrist-spark-readme.txt
+4.0K -rw-r--r-- 1 root root  792 Apr 14 10:48 packages/chronometrist-spark.log

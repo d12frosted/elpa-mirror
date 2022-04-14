@@ -1,0 +1,15 @@
+(consult-projectile .
+		    [(20220414 738)
+		     ((emacs
+		       (25 1))
+		      (consult
+		       (0 12))
+		      (projectile
+		       (2 5 0)))
+		     "Consult integration for projectile" single
+		     ((:commit . "f510a5ca83cc8a42a2038ae15e998ca1c4f2f575")
+		      (:authors
+		       ("Marco Pawłowski"))
+		      (:maintainer "Marco Pawłowski")
+		      (:keywords "convenience")
+		      (:url . "https://gitlab.com/OlMon/consult-projectile"))])

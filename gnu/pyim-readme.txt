@@ -7,7 +7,7 @@
 Table of Contents
 ─────────────────
 
-1. Changlog
+1. 不兼容更新
 .. 1. <2021-04-28 Wed>  五笔输入法和仓颉输入法的不兼容更新
 2. 截图
 3. 简介
@@ -45,7 +45,7 @@ Table of Contents
 .. 6. 如何使用其它字符翻页
 .. 7. 如何用 ";" 来选择第二个候选词
 .. 8. 如何添加自定义拼音词库
-..... 1. 第－种方式 (Windows 用户推荐使用)
+..... 1. 第一种方式 (Windows 用户推荐使用)
 ..... 2. 第二种方式 (Linux & Unix 用户推荐使用)
 ..... 3. 第三种方式
 .. 9. 如何手动安装和管理词库
@@ -64,23 +64,23 @@ Table of Contents
 
 
 
-1 Changlog
-══════════
+1 不兼容更新
+════════════
 
 1.1 <2021-04-28 Wed>  五笔输入法和仓颉输入法的不兼容更新
 ────────────────────────────────────────────────────────
 
-  五笔输入法和仓颉输入法的 code-prefix 原来是使用一个标点符号作为
-  code-prefix, 现在使用 "wubi/" 和 "cangjie/" 这种形式的 code-prefix, 减
-  少不同输入法误用相同code-prefix 带来的词库冲突。
+  五笔输入法和仓颉输入法原来使用一个标点符号作为 code-prefix, 现在使用
+  "wubi/" 和"cangjie/" 这种形式的 code-prefix, 这样可以减少不同输入法误
+  用同一个 code-prefix带来的词库冲突。
 
   五笔输入法的 scheme 设置已经移到 pyim-wbdict 包，仓颉输入法的 scheme
-  设置已经移动到 pyim-cangjie5dict 包。
+  设置已经移到 pyim-cangjie5dict 包。
 
-  对于使用上述两个包的用户，此次变更不受影响，因为我已经更新两个包，让其
-  使用新的code-prefix.
+  使用上述两个包的用户，此次变更不受影响，因为两个包使用新的
+  code-prefix.
 
-  受影响的是自己维护词库的五笔和仓颉用户，需要做以下更新：
+  受影响的是自己维护五笔和仓颉词库用户，这些用户需要做以下更新：
   1. 五笔用户
      1. 需要 (require 'pyim-wbdict), 加载五笔 scheme 设置。
      2. 需要将自己的五笔词库文件中的 code-prefix "." 替换为 "wubi/".
@@ -99,10 +99,8 @@ Table of Contents
 3 简介
 ══════
 
-  pyim 是 Emacs 环境下的一个中文输入法，最初它只支持全拼输入，所以当时
-  "pyim" 代表"Chinese Pinyin Input Method" 的意思，后来根据同学的提议，
-  添加了五笔等输入法的支持，再叫 “拼音输入法” 就不太合适了，所以你现在可
-  以叫它 “朋友输入法”
+  pyim 是 Emacs 环境下的一个中文输入法，最初这个输入法只支持全拼输入，后
+  来根据同学的提议，添加了五笔等输入法的支持，“pyim” 现在可以理解为：
 
   		       (Peng You input method)
 
@@ -110,10 +108,10 @@ Table of Contents
 4 背景
 ══════
 
-  pyim 的代码源自 Emacs-eim。
+  pyim 源于 Emacs-eim。
 
-  Emacs-eim 是 Emacs 环境下的一个中文输入法框架， 支持拼音，五笔，仓颉以
-  及二笔等多种输入法，但遗憾的是，2008 年之后它就停止了开发。
+  Emacs-eim 是 Emacs 环境下的一个中文输入法框架， 支持拼音，五笔，仓颉，
+  二笔等多种输入法，但遗憾的是，2008 年之后它就停止了开发。
 
   虽然外部输入法功能强大，但不能和 Emacs 默契的配合，这一点极大的损害了
   Emacs 那种*行云流水* 的感觉。而本人在使用 Emacs-eim 的过程中发现：
@@ -132,8 +130,8 @@ Table of Contents
 
   1. Fallback: 当外部输入法不能使用时，比如在 console 或者 cygwin 环境下，
      尽最大可能让 Emacs 用户不必为输入中文而烦恼。
-  2. Integration: 尽最大可能减少输入法切换频率，让中文输入不影响 Emacs的
-     体验。
+  2. Integration: 尽最大可能减少输入法切换频率，让中文输入不影响 Emacs
+     的体验。
   3. Exchange: 尽最大可能简化 pyim 使用其他优秀输入法的词库的难度和复杂
      度。
 
@@ -141,7 +139,7 @@ Table of Contents
 6 特点
 ══════
 
-  1. pyim 支持全拼，双拼，五笔和仓颉等，其中对全拼的支持最好。
+  1. pyim 支持全拼，双拼，五笔和仓颉等输入法，其中对全拼的支持最好。
   2. pyim 通过添加词库的方式优化输入法。
   3. pyim 使用文本词库格式，方便处理。
   4. pyim 可以作为 rime 的前端使用。
@@ -216,8 +214,8 @@ Table of Contents
 8.2 添加词库文件
 ────────────────
 
-  pyim 当前的默认的拼音词库是 pyim-basedict, 这个词库的词条量8万左右，是
-  一个 *非常小* 的拼音词库，源于：libpinyin 项目
+  pyim 默认使用 pyim-basedict 词库, 这个词库的词条量8万左右，是一个 *非
+  常小* 的拼音词库，源于：libpinyin 项目
 
   如果 pyim-basedict 不能满足需求，用户可以使用其他方式为 pyim 添加拼音
   词库，具体方式请参考 12.8 小结。
@@ -594,7 +592,7 @@ Table of Contents
   的拼音词库：
 
 
-12.8.1 第－种方式 (Windows 用户推荐使用)
+12.8.1 第一种方式 (Windows 用户推荐使用)
 ╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌╌
 
   使用词库转换工具将其他输入法的词库转化为 pyim 使用的词库：这里只介绍
@@ -737,7 +735,7 @@ Table of Contents
   │ (pyim-isearch-mode 1)
   └────
 
-  注意：这个功能有一些限制，搜索字符串中只能出现 “a-z” 和 “’”，如果有其
+  注意：这个功能有一些限制，搜索字符串中只能出现 “a-z” 和 “'”，如果有其
   他字符（比如 regexp 操作符），则自动关闭拼音搜索功能。
 
   开启这个功能后，一些 isearch 扩展有可能失效，如果遇到这种问题，只能禁
@@ -785,8 +783,8 @@ Table of Contents
 ───────────────────────────────────────────────────────────────────────────────
 
   ┌────
-  │ (defun my-orderless-regexp (orig_func component)
-  │   (let ((result (funcall orig_func component)))
+  │ (defun my-orderless-regexp (orig-func component)
+  │   (let ((result (funcall orig-func component)))
   │     (pyim-cregexp-build result)))
   │ 
   │ (advice-add 'orderless-regexp :around #'my-orderless-regexp)
