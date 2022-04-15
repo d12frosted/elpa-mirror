@@ -4,8 +4,8 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/stock-tracker
-;; Package-Version: 20220414.1601
-;; Package-Commit: 9def006a002ef951be14cd4c2fc1338641ed6e58
+;; Package-Version: 20220415.352
+;; Package-Commit: 73150a5bd8118b372342fc88d4e0655d370eea11
 ;; Version: 0.1.3
 ;; Created: 2019-08-18
 ;; Keywords: convenience, chinese, stock
@@ -241,7 +241,9 @@ It defaults to a comma."
   (dolist (buffer (mapcar #'buffer-name (buffer-list)))
     (when (string-match "*emacs*" buffer)
       (when-let ((process (get-buffer-process buffer)))
-        (kill-process process)
+        ;; set the process as killable without query by default
+        (set-process-query-on-exit-flag process nil)
+        (delete-process process)
         (sit-for 0.5))
       (and (get-buffer buffer)
            (null (get-buffer-process buffer))
@@ -311,35 +313,16 @@ It defaults to a comma."
          'stock-code symbol)
       nil)))
 
-(defun stock-tracker--format-response-async (response tag)
-  "Format stock information from RESPONSE with TAG."
+(defun stock-tracker--format-response (response tag &optional asynchronously)
+  "Format stock information from RESPONSE with TAG, with optional ASYNCHRONOUSLY."
   (let ((jsons response)
         (result "") result-list)
     (catch 'break
-      (when (cl-typep tag 'stock-tracker--chn-symbol)
-        (setq jsons (car jsons)))
+      ;; handle difference in async handling
+      (and asynchronously
+           (cl-typep tag 'stock-tracker--chn-symbol)
+           (setq jsons (car jsons)))
 
-      (dolist (json jsons)
-        (if (cl-typep tag 'stock-tracker--chn-symbol)
-            (setq json (cdr json))
-          ;; for us-stock, there's only one stock data here
-          (setq json jsons))
-
-        (when-let ((info (stock-tracker--format-json json tag)))
-          (push info result-list))
-
-        ;; for us-stock, there's only one stock data here
-        (unless (cl-typep tag 'stock-tracker--chn-symbol)
-          (throw 'break t))))
-    (when result-list
-      (setq result (stock-tracker--list-to-string (reverse result-list) "")))
-    result))
-
-(defun stock-tracker--format-response (response tag)
-  "Format stock information from RESPONSE with TAG."
-  (let ((jsons response)
-        (result "") result-list)
-    (catch 'break
       (dolist (json jsons)
         (if (cl-typep tag 'stock-tracker--chn-symbol)
             (setq json (cdr json))
@@ -467,13 +450,13 @@ It defaults to a comma."
 
            ;; format chn stocks
            (unless (numberp chn-result)
-             (push (stock-tracker--format-response-async chn-result chn-symbol)
+             (push (stock-tracker--format-response chn-result chn-symbol t)
                    all-collected-stocks-info))
 
            ;; format us stocks
            (unless (numberp us-result)
              (dolist (us-stock us-result)
-               (push (stock-tracker--format-response us-stock us-symbol)
+               (push (stock-tracker--format-response us-stock us-symbol t)
                      all-collected-stocks-info)))
 
            ;; populate stocks
