@@ -4,10 +4,10 @@ Source:  https://github.com/millejoh/emacs-ipython-notebook.git
 
 Updating /mnt/store/melpa/working/ein/
 Checking out origin/HEAD
-Checking out e04e1e19c63667e6847ae6341ab7fc7488f5eb8c
+Checking out ca440a37f0430357aa48d7e476dac9256281370e
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/ein/
-  to /tmp/einNoFcZm/ein-20220324.204
+  to /tmp/ein3WTLOY/ein-20220414.1910
   ! lisp/ein-cell.el -> ein-cell.el
   ! lisp/ein-classes.el -> ein-classes.el
   ! lisp/ein-completer.el -> ein-completer.el
@@ -45,48 +45,48 @@ Copying files (->) and directories (=>)
   ! lisp/ein.el -> ein.el
   ! lisp/ob-ein.el -> ob-ein.el
   ! lisp/poly-ein.el -> poly-ein.el
-Created ein-20220324.204.tar containing:
-  ein-20220324.204/
-  ein-20220324.204/ein-cell.el
-  ein-20220324.204/ein-classes.el
-  ein-20220324.204/ein-completer.el
-  ein-20220324.204/ein-contents-api.el
-  ein-20220324.204/ein-core.el
-  ein-20220324.204/ein-dev.el
-  ein-20220324.204/ein-events.el
-  ein-20220324.204/ein-file.el
-  ein-20220324.204/ein-gat.el
-  ein-20220324.204/ein-ipdb.el
-  ein-20220324.204/ein-ipynb-mode.el
-  ein-20220324.204/ein-jupyter.el
-  ein-20220324.204/ein-kernel.el
-  ein-20220324.204/ein-kernelinfo.el
-  ein-20220324.204/ein-kill-ring.el
-  ein-20220324.204/ein-log.el
-  ein-20220324.204/ein-markdown-mode.el
-  ein-20220324.204/ein-node.el
-  ein-20220324.204/ein-notebook.el
-  ein-20220324.204/ein-notebooklist.el
-  ein-20220324.204/ein-notification.el
-  ein-20220324.204/ein-output-area.el
-  ein-20220324.204/ein-pager.el
-  ein-20220324.204/ein-pkg.el
-  ein-20220324.204/ein-process.el
-  ein-20220324.204/ein-python-send.el
-  ein-20220324.204/ein-pytools.el
-  ein-20220324.204/ein-query.el
-  ein-20220324.204/ein-scratchsheet.el
-  ein-20220324.204/ein-shared-output.el
-  ein-20220324.204/ein-traceback.el
-  ein-20220324.204/ein-utils.el
-  ein-20220324.204/ein-websocket.el
-  ein-20220324.204/ein-worksheet.el
-  ein-20220324.204/ein.el
-  ein-20220324.204/ob-ein.el
-  ein-20220324.204/poly-ein.el
-Built ein in 6.324s, finished at 2022-04-14T11:01:15+0000
+Created ein-20220414.1910.tar containing:
+  ein-20220414.1910/
+  ein-20220414.1910/ein-cell.el
+  ein-20220414.1910/ein-classes.el
+  ein-20220414.1910/ein-completer.el
+  ein-20220414.1910/ein-contents-api.el
+  ein-20220414.1910/ein-core.el
+  ein-20220414.1910/ein-dev.el
+  ein-20220414.1910/ein-events.el
+  ein-20220414.1910/ein-file.el
+  ein-20220414.1910/ein-gat.el
+  ein-20220414.1910/ein-ipdb.el
+  ein-20220414.1910/ein-ipynb-mode.el
+  ein-20220414.1910/ein-jupyter.el
+  ein-20220414.1910/ein-kernel.el
+  ein-20220414.1910/ein-kernelinfo.el
+  ein-20220414.1910/ein-kill-ring.el
+  ein-20220414.1910/ein-log.el
+  ein-20220414.1910/ein-markdown-mode.el
+  ein-20220414.1910/ein-node.el
+  ein-20220414.1910/ein-notebook.el
+  ein-20220414.1910/ein-notebooklist.el
+  ein-20220414.1910/ein-notification.el
+  ein-20220414.1910/ein-output-area.el
+  ein-20220414.1910/ein-pager.el
+  ein-20220414.1910/ein-pkg.el
+  ein-20220414.1910/ein-process.el
+  ein-20220414.1910/ein-python-send.el
+  ein-20220414.1910/ein-pytools.el
+  ein-20220414.1910/ein-query.el
+  ein-20220414.1910/ein-scratchsheet.el
+  ein-20220414.1910/ein-shared-output.el
+  ein-20220414.1910/ein-traceback.el
+  ein-20220414.1910/ein-utils.el
+  ein-20220414.1910/ein-websocket.el
+  ein-20220414.1910/ein-worksheet.el
+  ein-20220414.1910/ein.el
+  ein-20220414.1910/ob-ein.el
+  ein-20220414.1910/poly-ein.el
+Built ein in 5.837s, finished at 2022-04-15T03:35:41+0000
  ✓ Success:
-4.0K -rw-r--r-- 1 root root  480 Apr 14 11:01 packages/ein-20220324.204.entry
-820K -rw-r--r-- 1 root root 820K Apr 14 11:01 packages/ein-20220324.204.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 14 11:01 packages/ein-badge.svg
-4.0K -rw-r--r-- 1 root root  493 Apr 14 11:01 packages/ein-readme.txt
+4.0K -rw-r--r-- 1 root root  481 Apr 15 03:35 packages/ein-20220414.1910.entry
+820K -rw-r--r-- 1 root root 820K Apr 15 03:35 packages/ein-20220414.1910.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 15 03:35 packages/ein-badge.svg
+4.0K -rw-r--r-- 1 root root  493 Apr 15 03:35 packages/ein-readme.txt
