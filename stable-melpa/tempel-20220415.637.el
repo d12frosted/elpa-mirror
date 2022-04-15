@@ -6,8 +6,8 @@
 ;; Maintainer: Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2022
 ;; Version: 0.3
-;; Package-Version: 20220413.2112
-;; Package-Commit: d915e56b3c5cee3388a9e60334447a1b2ab3e2d4
+;; Package-Version: 20220415.637
+;; Package-Commit: cb7c4c294adfbcf1cbc3cfe985f5f12685785ec2
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/tempel
 
@@ -632,10 +632,10 @@ If INTERACTIVE is nil the function acts like a capf."
         (when (and tempel-trigger-prefix (not (tempel--prefix-bounds)))
           (insert tempel-trigger-prefix))
         (tempel--interactive #'tempel-complete))
-    (when-let (templates (tempel--templates))
-      (let* ((region (tempel--region))
-             (bounds (or (and (not region) (tempel--prefix-bounds))
-                         (and (not tempel-trigger-prefix) (cons (point) (point))))))
+    (let ((region (tempel--region)))
+      (when-let ((templates (tempel--templates))
+                 (bounds (or (and (not region) (tempel--prefix-bounds))
+                             (and (not tempel-trigger-prefix) (cons (point) (point))))))
         (list (car bounds) (cdr bounds)
               (tempel--completion-table templates)
               :exclusive 'no

@@ -7,8 +7,8 @@
 ;; Created: February 01, 2020
 ;; Modified: August 02, 2020
 ;; Version: 1.0.2
-;; Package-Version: 20220412.639
-;; Package-Commit: ae397c8bfe8d16e54e96a9955273b767fc2347fd
+;; Package-Version: 20220415.842
+;; Package-Commit: 716c311370f3830a36e7aee67f6f3d8293d186a1
 ;; Keywords: tex, emulation, vi, evil, wp
 ;; Homepage: https://github.com/iyefrat/evil-tex
 ;; Package-Requires: ((emacs "26.1") (evil "1.0") (auctex "11.88"))
@@ -118,18 +118,21 @@ The format for the return is (outer-beg outer-end inner-beg inner-end)."
 ARGS passed to `evil-select-paren', within `evil-tex--delim-finder'."
   (evil-tex-max-key
    (cl-loop for (l r)
-            in (list '( "(" ")" )
-                     '( "[" "]" )
-                     '( "\\{" "\\}" )
-                     '( "\\langle" "\\rangle" ))
-            append (cl-loop for (pre-l pre-r)
-                            in (list '( "" "" )
-                                     '( "\\left" "\\right"  )
-                                     '( "\\bigl" "\\bigr"   ) '( "\\big" "\\big"   )
-                                     '( "\\biggl" "\\biggr" ) '( "\\bigg" "\\bigg" )
-                                     '( "\\Bigl" "\\Bigr"   ) '( "\\Big" "\\Big"   )
-                                     '( "\\Biggl" "\\Biggr" ) '( "\\Bigg" "\\Bigg" ))
-                            collect (evil-tex--delim-finder (concat pre-l l) (concat pre-r r) args)))
+            in '(( "(" ")" )
+                 ( "[" "]" )
+                 ( "\\{" "\\}" )
+                 ( "\\langle" "\\rangle" )
+                 ( "\\lvert" "\\rvert" )
+                 ( "\\lVert" "\\rVert" ))
+            nconc
+            (cl-loop for (pre-l pre-r)
+                     in '(( "" "" )
+                          ( "\\left"  "\\right")
+                          ( "\\bigl"  "\\bigr")  ("\\big"  "\\big")
+                          ( "\\biggl" "\\biggr") ("\\bigg" "\\bigg")
+                          ( "\\Bigl"  "\\Bigr")  ("\\Big"  "\\Big")
+                          ( "\\Biggl" "\\Biggr") ("\\Bigg" "\\Bigg"))
+                     collect (evil-tex--delim-finder (concat pre-l l) (concat pre-r r) args)))
    (lambda (arg) (when (consp arg) ; check if selection succeeded
                    arg))
    #'evil-tex--delim-compare))
@@ -483,11 +486,11 @@ Also change e.g \\bigl(foo\bigr) to (foo), but this is one way."
         (goto-char (overlay-start left-over))
         (cl-destructuring-bind (l . r)
             (cond
-             ((looking-at "\\\\\\(?:left\\|big\\|bigg\\|Big\\|Bigg\\)?l?" )
+             ((looking-at "\\\\\\(?:left\\|big\\|bigg\\|Big\\|Bigg\\)" )
               (cons (replace-regexp-in-string
-                     "\\\\\\(?:left\\|big\\|bigg\\|Big\\|Bigg\\)?l?" "" left-str)
+                     "\\\\\\(?:left\\|big\\|bigg\\|Big\\|Bigg\\)" "" left-str)
                     (replace-regexp-in-string
-                     "\\\\\\(?:right\\|big\\|bigg\\|Big\\|Bigg\\)?r?" "" right-str)))
+                     "\\\\\\(?:right\\|big\\|bigg\\|Big\\|Bigg\\)" "" right-str)))
              (t (cons (concat "\\left" left-str)
                       (concat "\\right" right-str))))
           (evil-tex--overlay-replace left-over  l)
@@ -1096,7 +1099,11 @@ explaination."
        ("C"  "\\{" . "\\}")
        ("c"  "\\left\\{" . "\\right\\}")
        ("R"  "\\langle " . "\\rangle")
-       ("r"  "\\left\\langle " . "\\right\\rangle"))
+       ("r"  "\\left\\langle " . "\\right\\rangle")
+       ("v" "\\left\\lvert" . "\\right\\rvert")
+       ("V" "\\lvert" . "\\rvert")
+       ("n" "\\left\\lVert" . "\\right\\rVert") ; (n for norm)
+       ("N" "\\lVert" . "\\rVert"))
      keymap)
     keymap)
   "Keymap for surrounding with environments, usually through `evil-tex-delim-map'.")

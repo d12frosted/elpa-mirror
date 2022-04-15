@@ -5,8 +5,8 @@
 ;; Author: Trevor Edwin Pogue <trevor.pogue@gmail.com>
 ;; Maintainer: Trevor Edwin Pogue <trevor.pogue@gmail.com>
 ;; URL: https://github.com/trevorpogue/topspace
-;; Package-Version: 20220414.429
-;; Package-Commit: bf13e374839643b2b844093f42c736aff0aaadfc
+;; Package-Version: 20220415.845
+;; Package-Commit: 334cf13ab5be7c1ba301a27e5c8e0da0fffda6eb
 ;; Keywords: convenience, scrolling, center, cursor, margin, padding
 ;; Version: 0.2.0
 ;; Package-Requires: ((emacs "25.1"))
@@ -213,7 +213,7 @@ TOTAL-LINES is used in the same way as in `scroll-down'."
     (topspace--draw new-topspace-height)
     (setq total-lines
           (- total-lines (- new-topspace-height old-topspace-height)))
-    (if (display-graphic-p) total-lines (round total-lines))))
+    (round total-lines)))
 
 (defun topspace--filter-args-scroll-down (&optional total-lines)
   "Run before `scroll-down' for scrolling above the top line.
@@ -225,23 +225,7 @@ TOTAL-LINES is used in the same way as in `scroll-down'."
     (setq total-lines (or total-lines (- (topspace--window-height)
                                          next-screen-context-lines)))
     (setq topspace--total-lines-scrolling total-lines)
-    (cond
-     ((and (= (window-start) 1) (> total-lines 0))
-      ;; Prevent "Begining of buffer" error/message when scrolling above
-      ;; top line by passing 0 to `scroll-down' when relevant:
-      (let ((max-height
-             (- (topspace--window-height) (topspace--context-lines)))
-            (old-height (topspace--height)))
-        (topspace--scroll total-lines)
-        ;; But if top space is at its max height, then allow the
-        ;; "Begining of buffer" error/message to occur:
-        (if (= old-height max-height)
-            (list total-lines)
-          (list 0))))
-     (t ;; if no top space present then we don't have to worry about
-      ;; signalling the "Begining of buffer" error/message
-      ;; (so can skip the above conditions for avoiding this error)
-      (list (topspace--scroll total-lines)))))))
+    (list (topspace--scroll total-lines)))))
 
 (defun topspace--filter-args-scroll-up (&optional total-lines)
   "Run before `scroll-up' for scrolling above the top line.

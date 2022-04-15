@@ -4,8 +4,8 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/stock-tracker
-;; Package-Version: 20220415.352
-;; Package-Commit: 73150a5bd8118b372342fc88d4e0655d370eea11
+;; Package-Version: 20220415.538
+;; Package-Commit: 9612f88b2642c66bfdb76cf9cf45d276f56b3cb5
 ;; Version: 0.1.3
 ;; Created: 2019-08-18
 ;; Keywords: convenience, chinese, stock
@@ -61,11 +61,6 @@
   "Track stock price in Emacs."
   :version "0.1"
   :group 'tools)
-
-(defcustom stock-tracker-buffer-name "*stock-tracker*"
-  "Result Buffer name."
-  :type 'string
-  :group 'stock-tracker)
 
 (defcustom stock-tracker-refresh-interval 1
   "Refresh stock every N * 10 SECS."
@@ -144,6 +139,9 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Definition
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+
+(defconst stock-tracker--buffer-name "*stock-tracker*"
+  "Stock-Tracker result Buffer name.")
 
 (defconst stock-tracker--result-header
   "|-\n| symbol | name | price | percent | updown | high | low | volume | open | yestclose |\n|-\n"
@@ -343,7 +341,7 @@ It defaults to a comma."
   "Refresh stocks with STOCKS-INFO."
   (when stocks-info
     (save-excursion
-      (with-current-buffer (get-buffer-create stock-tracker-buffer-name)
+      (with-current-buffer (get-buffer-create stock-tracker--buffer-name)
         (let ((inhibit-read-only t))
           (erase-buffer)
           (stock-tracker-mode)
@@ -520,14 +518,14 @@ It defaults to a comma."
 
 ;;;###autoload
 (defun stock-tracker-start ()
-  "Start stock-tracker, show result in `stock-tracker-buffer-name' buffer."
+  "Start stock-tracker, show result in `stock-tracker--buffer-name' buffer."
   (interactive)
   (when stock-tracker-list-of-stocks
     (stock-tracker--refresh)
     (stock-tracker--cancel-timers)
     (stock-tracker--run-timers)
-    (unless (get-buffer-window stock-tracker-buffer-name)
-      (switch-to-buffer-other-window stock-tracker-buffer-name))))
+    (unless (get-buffer-window stock-tracker--buffer-name)
+      (switch-to-buffer-other-window stock-tracker--buffer-name))))
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Operations
