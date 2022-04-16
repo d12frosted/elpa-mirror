@@ -3,14 +3,19 @@ Fetcher: hg
 Source:  https://hg.osdn.net/view/multi-project/multi-project
 
 Updating /mnt/store/melpa/working/multi-project/
-Checking out c0a37d5ee969ca8a783bf6c4a9084c4efeace86d
+Checking out d51551296425b1febd102a38a46f2d3dc4548559
 
 Command 'env LC_ALL\=C hg purge' exited with non-zero exit-code: 255
 
 pulling from https://hg.osdn.net/view/multi-project/multi-project
 searching for changes
-no changes found
-0 files updated, 0 files merged, 0 files removed, 0 files unresolved
+adding changesets
+adding manifests
+adding file changes
+added 2 changesets with 2 changes to 2 files
+new changesets a62971eddc4e:d51551296425
+(run 'hg update' to get a working copy)
+2 files updated, 0 files merged, 0 files removed, 0 files unresolved
 0 files updated, 0 files merged, 0 files removed, 0 files unresolved
 hg: unknown command 'purge'
 'purge' is provided by the following extension:

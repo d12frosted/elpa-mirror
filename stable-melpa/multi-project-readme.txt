@@ -12,20 +12,19 @@ To use multi-project add the following lines within your .emacs file:
 The multi-project bindings below are for switching to a project, finding
 files within a project, compilation, or grepping a project.
 
-C-xpa - Anchor a project          Remember the current project
-C-xpc - Project compile           Run the compilation command for a project
-C-xpj - Project jump              Displays a list of projects
-                                  multi-project-anchored
-C-xpg - Run grep-find             Runs grep-find at project root
-C-xpl - Last project or anchor    Jumps to the last project or anchor
-C-xpp - Present project           Jumps to the current project root
-C-xpP - Present project new frame Present project in a new frame
-C-xpf - Find project files        Interactively find project files
-C-xpn - Add a new project         Prompts for new project information
-C-xpr - Go to project root        Visits the project root
-C-xps - Project shell             Creates a project shell
-C-xpu - Resets the anchor         Unsets the project anchor
-C-xpv - Visit a project           Visits another project in a separate frame
+C-x p a - Anchor a project          Remember the current project
+C-x p c - Project compile           Run the compilation command for a project
+C-x p j - Project jump              Displays a list of projects
+C-x p g - Run grep-find             Runs grep-find at project root
+C-x p l - Last project or anchor    Jumps to the last project or anchor
+C-x p p - Present project           Jumps to the current project root
+C-x p P - Present project new frame Present project in a new frame
+C-x p f - Find project files        Interactively find project files
+C-x p n - Add a new project         Prompts for new project information
+C-x p r - Go to project root        Visits the project root
+C-x p s - Project shell             Creates a project shell
+C-x p u - Resets the anchor         Unsets the project anchor
+C-x p v - Visit a project           Visits another project in a separate frame
 
 
 From the project selection buffer the following bindings are present:
@@ -46,14 +45,13 @@ x     - Executes actions          Executes the selected operations
 The multi-project-compilation-command variable can be set to a function
 that provides a customized compilation command.  For example,
 
-(defun my-compilation-command (project-list)
-  (let ((project-name (car project-list))
-   (project-dir (nth 1 project-list))
-   (project-subdir (nth 2 project-list)))
+(defun my-compilation-command (project)
+  (let ((project-name (multi-project-name project-list))
+   (project-dir (multi-project-dir project)))
 
     (cond ((string-match "proj1" project-name)
-      (concat "ant -f " project-dir "/" project-subdir "/build.xml"))
+      (concat "ant -f " project-dir "/my-build.xml"))
      (t
-      (concat "make -C " project-dir "/" project-subdir)))))
+      (concat "make -C " project-dir "/src")))))
 
 (setq multi-project-compilation-command 'my-compilation-command)

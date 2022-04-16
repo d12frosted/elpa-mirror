@@ -1,7 +1,6 @@
 Futhark is a small programming language designed to be compiled to efficient
 GPU code.  This Emacs mode provides syntax highlighting, conservative
-automatic indentation, interpreter interaction, and an optional flycheck
-definition.
+automatic indentation, interpreter interaction.
 
 Files with the ".fut" extension are automatically handled by this mode.
 

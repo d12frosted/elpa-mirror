@@ -7,7 +7,7 @@ Checking out origin/HEAD
 Checking out 8c2324c02119500f094c2f92dfaba4c9977ce1ba
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/gitlab/
-  to /tmp/gitlabIe11Bu/gitlab-20180312.1647
+  to /tmp/gitlabfDjlFp/gitlab-20180312.1647
     gitlab-api.el -> gitlab-api.el
     gitlab-browse.el -> gitlab-browse.el
     gitlab-groups.el -> gitlab-groups.el
@@ -16,3 +16,54 @@ Copying files (->) and directories (=>)
     gitlab-milestones.el -> gitlab-milestones.el
     gitlab-mode.el -> gitlab-mode.el
     gitlab-notes.el -> gitlab-notes.el
+    gitlab-projects.el -> gitlab-projects.el
+    gitlab-session.el -> gitlab-session.el
+    gitlab-ui.el -> gitlab-ui.el
+    gitlab-users.el -> gitlab-users.el
+    gitlab-utils.el -> gitlab-utils.el
+    gitlab-version.el -> gitlab-version.el
+    gitlab.el -> gitlab.el
+Created gitlab-20180312.1647.tar containing:
+  gitlab-20180312.1647/
+  gitlab-20180312.1647/gitlab-api.el
+  gitlab-20180312.1647/gitlab-browse.el
+  gitlab-20180312.1647/gitlab-groups.el
+  gitlab-20180312.1647/gitlab-http.el
+  gitlab-20180312.1647/gitlab-issues.el
+  gitlab-20180312.1647/gitlab-milestones.el
+  gitlab-20180312.1647/gitlab-mode.el
+  gitlab-20180312.1647/gitlab-notes.el
+  gitlab-20180312.1647/gitlab-pkg.el
+  gitlab-20180312.1647/gitlab-projects.el
+  gitlab-20180312.1647/gitlab-session.el
+  gitlab-20180312.1647/gitlab-ui.el
+  gitlab-20180312.1647/gitlab-users.el
+  gitlab-20180312.1647/gitlab-utils.el
+  gitlab-20180312.1647/gitlab-version.el
+  gitlab-20180312.1647/gitlab.el
+Built gitlab in 6.440s, finished at 2022-04-16T00:36:12+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  436 Apr 16 00:36 packages/gitlab-20180312.1647.entry
+ 72K -rw-r--r-- 1 root root  70K Apr 16 00:36 packages/gitlab-20180312.1647.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 16 00:36 packages/gitlab-badge.svg
+ 16K -rw-r--r-- 1 root root  15K Apr 16 00:36 packages/gitlab-ci-mode-20191022.2017.el
+4.0K -rw-r--r-- 1 root root  363 Apr 15 20:30 packages/gitlab-ci-mode-20191022.2017.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 15 20:30 packages/gitlab-ci-mode-badge.svg
+8.0K -rw-r--r-- 1 root root 5.0K Apr 15 20:30 packages/gitlab-ci-mode-flycheck-20190323.1829.el
+4.0K -rw-r--r-- 1 root root  455 Apr 15 20:30 packages/gitlab-ci-mode-flycheck-20190323.1829.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 15 20:30 packages/gitlab-ci-mode-flycheck-badge.svg
+4.0K -rw-r--r-- 1 root root  272 Apr 15 20:30 packages/gitlab-ci-mode-flycheck-readme.txt
+4.0K -rw-r--r-- 1 root root  257 Apr 16 00:36 packages/gitlab-ci-mode-flycheck.log
+4.0K -rw-r--r-- 1 root root  431 Apr 15 20:30 packages/gitlab-ci-mode-readme.txt
+4.0K -rw-r--r-- 1 root root  230 Apr 16 00:36 packages/gitlab-ci-mode.log
+8.0K -rw-r--r-- 1 root root 6.8K Apr 15 20:30 packages/gitlab-pipeline-20210601.1339.el
+4.0K -rw-r--r-- 1 root root  411 Apr 15 20:30 packages/gitlab-pipeline-20210601.1339.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 15 20:30 packages/gitlab-pipeline-badge.svg
+4.0K -rw-r--r-- 1 root root  222 Apr 15 20:30 packages/gitlab-pipeline-readme.txt
+4.0K -rw-r--r-- 1 root root  173 Apr 16 00:36 packages/gitlab-pipeline.log
+4.0K -rw-r--r-- 1 root root  225 Apr 16 00:36 packages/gitlab-readme.txt
+8.0K -rw-r--r-- 1 root root 4.7K Apr 15 20:30 packages/gitlab-snip-helm-20200427.2014.el
+4.0K -rw-r--r-- 1 root root  455 Apr 15 20:30 packages/gitlab-snip-helm-20200427.2014.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 15 20:30 packages/gitlab-snip-helm-badge.svg
+4.0K -rw-r--r-- 1 root root   73 Apr 15 20:30 packages/gitlab-snip-helm-readme.txt
+4.0K -rw-r--r-- 1 root root  154 Apr 16 00:36 packages/gitlab-snip-helm.log
