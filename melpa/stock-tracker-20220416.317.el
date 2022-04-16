@@ -4,8 +4,8 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/stock-tracker
-;; Package-Version: 20220415.538
-;; Package-Commit: 9612f88b2642c66bfdb76cf9cf45d276f56b3cb5
+;; Package-Version: 20220416.317
+;; Package-Commit: 17ab571b89470dc04dc5ac41113d983311a5528b
 ;; Version: 0.1.3
 ;; Created: 2019-08-18
 ;; Keywords: convenience, chinese, stock
@@ -90,10 +90,12 @@
 
 (cl-defmethod stock-tracker--api-url ((s stock-tracker--chn-symbol))
   "API to get stock for S from CHN."
+  (ignore s)
   "https://api.money.126.net/data/feed/%s")
 
 (cl-defmethod stock-tracker--api-url ((s stock-tracker--us-symbol))
   "API to get stock for S from US."
+  (ignore s)
   "https://quote.cnbc.com/quote-html-webservice/quote.htm?partnerId=2&requestMethod=quick&exthrs=1&noform=1&fund=1&extendedMask=2&output=json&symbols=%s")
 
 (cl-defgeneric stock-tracker--result-prefix (object)
@@ -101,10 +103,12 @@
 
 (cl-defmethod stock-tracker--result-prefix ((s stock-tracker--chn-symbol))
   "Stock-Tracker result prefix for S from CHN."
+  (ignore s)
   "_ntes_quote_callback(")
 
 (cl-defmethod stock-tracker--result-prefix ((s stock-tracker--us-symbol))
   "Stock-Tracker result prefix for S from US."
+  (ignore s)
   "{\"QuickQuoteResult\":{\"xmlns\":\"http://quote.cnbc.com/services/MultiQuote/2006\",\"QuickQuote\":")
 
 (cl-defgeneric stock-tracker--result-fields (object)
@@ -112,6 +116,7 @@
 
 (cl-defmethod stock-tracker--result-fields ((s stock-tracker--chn-symbol))
   "Stock-Tracker result fields for S from CHN."
+  (ignore s)
   '((symbol . symbol)
     (name . name)
     (price . price)
@@ -125,6 +130,7 @@
 
 (cl-defmethod stock-tracker--result-fields ((s stock-tracker--us-symbol))
   "Stock-Tracker result fields for S from US."
+  (ignore s)
   '((symbol . symbol)
     (name . name)
     (price . last)

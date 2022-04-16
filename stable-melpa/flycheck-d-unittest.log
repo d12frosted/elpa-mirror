@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/flycheck/flycheck-d-unittest.git
 
 Updating /mnt/store/melpa/working/flycheck-d-unittest/
-Checking out origin/HEAD
-Checking out 3e614f23cb4a5566fd7988dbcaaf254af81c7718
-Built flycheck-d-unittest in 4.221s, finished at 2022-04-16T00:29:55+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.1K Apr 16 00:29 packages/flycheck-d-unittest-20160522.417.el
-4.0K -rw-r--r-- 1 root root  452 Apr 16 00:29 packages/flycheck-d-unittest-20160522.417.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 16 00:29 packages/flycheck-d-unittest-badge.svg
-4.0K -rw-r--r-- 1 root root  689 Apr 16 00:29 packages/flycheck-d-unittest-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/flycheck/flycheck-d-unittest.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

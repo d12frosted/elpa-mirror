@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/cuonglm/flycheck-checkbashisms.git
 
 Updating /mnt/store/melpa/working/flycheck-checkbashisms/
-Checking out origin/HEAD
-Checking out 53598158fa8b74d2e7efea6210edb274e1f0273c
-Built flycheck-checkbashisms in 5.668s, finished at 2022-04-16T00:29:40+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.2K Apr 16 00:29 packages/flycheck-checkbashisms-20190403.218.el
-4.0K -rw-r--r-- 1 root root  452 Apr 16 00:29 packages/flycheck-checkbashisms-20190403.218.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 16 00:29 packages/flycheck-checkbashisms-badge.svg
-4.0K -rw-r--r-- 1 root root   52 Apr 16 00:29 packages/flycheck-checkbashisms-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/cuonglm/flycheck-checkbashisms.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

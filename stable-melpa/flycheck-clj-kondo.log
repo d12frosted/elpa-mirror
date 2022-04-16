@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/borkdude/flycheck-clj-kondo.git
 
 Updating /mnt/store/melpa/working/flycheck-clj-kondo/
-Checking out origin/HEAD
-Checking out 35daaccc75b0367844b249a8cb05bf73bcebd52a
-Built flycheck-clj-kondo in 5.582s, finished at 2022-04-16T00:29:42+0000
- ✓ Success:
-8.0K -rw-r--r-- 1 root root 4.6K Apr 16 00:29 packages/flycheck-clj-kondo-20211227.2226.el
-4.0K -rw-r--r-- 1 root root  440 Apr 16 00:29 packages/flycheck-clj-kondo-20211227.2226.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 16 00:29 packages/flycheck-clj-kondo-badge.svg
-4.0K -rw-r--r-- 1 root root  247 Apr 16 00:29 packages/flycheck-clj-kondo-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+fatal: unable to access 'https://github.com/borkdude/flycheck-clj-kondo.git/': Failed to connect to github.com port 443: Connection timed out
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

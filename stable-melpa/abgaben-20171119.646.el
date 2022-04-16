@@ -5,9 +5,11 @@
 ;; Author: Arne Köhn <arne@chark.eu>
 ;; Created: 31 Oct 2017
 ;; Keywords: mail outlines convenience
+;; Package-Commit: 20d14830f07d66e2a04bcad1498a4a6fbf4b4451
 ;; Homepage: http://arne.chark.eu/
 ;; Package-Requires: ((pdf-tools "0.80") (f "0.19.0") (s "1.11.0"))
-;; Package-Version: 1.1.2
+;; Package-Version: 20171119.646
+;; Package-X-Original-Version: 1.1.2
 
 ;; This file is not part of GNU Emacs.
      

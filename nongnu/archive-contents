@@ -627,6 +627,15 @@
 	       ("Sebastian Wiesner" . "lunaryorn@gmail.com")
 	       ("Rüdiger Sonderfeld" . "ruediger@c-plusplus.net")
 	       ("Jonas Bernoulli" . "jonas@bernoul.li")))])
+ (gnu-apl-mode .
+	       [(1 5 1)
+		nil "Emacs mode for GNU APL" tar
+		((:url . "http://www.gnu.org/software/apl/")
+		 (:keywords "languages")
+		 (:maintainer "Elias Mårtenson" . "lokedhs@gmail.com")
+		 (:authors
+		  ("Elias Mårtenson" . "lokedhs@gmail.com"))
+		 (:commit . "deabf59d2375d4662221f8222e28caeb1be96428"))])
  (gnuplot .
 	  [(0 8 0)
 	   ((emacs
@@ -1572,6 +1581,17 @@
 	      (:maintainer "Le Wang")
 	      (:authors
 	       ("Le Wang")))])
+ (xah-fly-keys .
+	       [(17 5 20220415142016)
+		((emacs
+		  (24 1)))
+		"ergonomic modal keybinding minor mode." tar
+		((:url . "http://xahlee.info/emacs/misc/ergoemacs_vi_mode.html")
+		 (:keywords "convenience" "emulations" "vim" "ergoemacs")
+		 (:maintainer "Xah Lee ( http://xahlee.info/ )")
+		 (:authors
+		  ("Xah Lee ( http://xahlee.info/ )"))
+		 (:commit . "1c883548f06f41913ec0a57eda4a5c234784180d"))])
  (xml-rpc .
 	  [(1 6 15)
 	   nil "An elisp implementation of clientside XML-RPC" tar
