@@ -1,0 +1,10 @@
+(consult .
+	 [(20220416 1904)
+	  ((emacs
+	    (27 1)))
+	  "Consulting completing-read" tar
+	  ((:commit . "a924b3b0d943d12c71d23964da7733251f4705b2")
+	   (:authors
+	    ("Daniel Mendler and Consult contributors"))
+	   (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
+	   (:url . "https://github.com/minad/consult"))])

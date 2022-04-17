@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/ch1bo/flycheck-clang-tidy.git
 
 Updating /mnt/store/melpa/working/flycheck-clang-tidy/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/ch1bo/flycheck-clang-tidy.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out f9ae7306bd6ca08b689b36c1e8f6f6b91d61db5f
+Built flycheck-clang-tidy in 5.858s, finished at 2022-04-17T01:11:31+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.6K Apr 17 01:11 packages/flycheck-clang-tidy-20201115.1232.el
+4.0K -rw-r--r-- 1 root root  459 Apr 17 01:11 packages/flycheck-clang-tidy-20201115.1232.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 17 01:11 packages/flycheck-clang-tidy-badge.svg
+4.0K -rw-r--r-- 1 root root   62 Apr 17 01:11 packages/flycheck-clang-tidy-readme.txt

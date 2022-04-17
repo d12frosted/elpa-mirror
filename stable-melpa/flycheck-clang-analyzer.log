@@ -3,10 +3,11 @@ Fetcher: github
 Source:  https://github.com/alexmurray/flycheck-clang-analyzer.git
 
 Updating /mnt/store/melpa/working/flycheck-clang-analyzer/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://github.com/alexmurray/flycheck-clang-analyzer.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 646d9f3a80046ab231a07526778695d5decad92d
+Built flycheck-clang-analyzer in 5.077s, finished at 2022-04-17T01:11:29+0000
+ ✓ Success:
+ 12K -rw-r--r-- 1 root root  12K Apr 17 01:11 packages/flycheck-clang-analyzer-20211214.648.el
+4.0K -rw-r--r-- 1 root root  421 Apr 17 01:11 packages/flycheck-clang-analyzer-20211214.648.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 17 01:11 packages/flycheck-clang-analyzer-badge.svg
+4.0K -rw-r--r-- 1 root root  605 Apr 17 01:11 packages/flycheck-clang-analyzer-readme.txt

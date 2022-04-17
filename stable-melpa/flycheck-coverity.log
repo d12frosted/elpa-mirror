@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/alexmurray/flycheck-coverity.git
 
 Updating /mnt/store/melpa/working/flycheck-coverity/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/alexmurray/flycheck-coverity.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out cb211e3dd50413a5042eb20175be518214591c9d
+Built flycheck-coverity in 5.704s, finished at 2022-04-17T01:11:37+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 5.9K Apr 17 01:11 packages/flycheck-coverity-20170704.59.el
+4.0K -rw-r--r-- 1 root root  444 Apr 17 01:11 packages/flycheck-coverity-20170704.59.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 17 01:11 packages/flycheck-coverity-badge.svg
+4.0K -rw-r--r-- 1 root root  582 Apr 17 01:11 packages/flycheck-coverity-readme.txt

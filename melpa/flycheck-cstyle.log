@@ -3,10 +3,11 @@ Fetcher: github
 Source:  https://github.com/alexmurray/flycheck-cstyle.git
 
 Updating /mnt/store/melpa/working/flycheck-cstyle/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://github.com/alexmurray/flycheck-cstyle.git/': Failed to connect to github.com port 443: Connection timed out
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 207285140a353d08cf1fc450cacab158bc98ba82
+Built flycheck-cstyle in 5.622s, finished at 2022-04-17T01:11:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 2.5K Apr 17 01:11 packages/flycheck-cstyle-20160905.2341.el
+4.0K -rw-r--r-- 1 root root  387 Apr 17 01:11 packages/flycheck-cstyle-20160905.2341.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 17 01:11 packages/flycheck-cstyle-badge.svg
+4.0K -rw-r--r-- 1 root root  538 Apr 17 01:11 packages/flycheck-cstyle-readme.txt

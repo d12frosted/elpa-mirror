@@ -3,11 +3,11 @@ Fetcher: github
 Source:  https://github.com/lbolla/emacs-flycheck-cython.git
 
 Updating /mnt/store/melpa/working/flycheck-cython/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://github.com/lbolla/emacs-flycheck-cython.git/': Failed to connect to github.com port 443: Connection timed out
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out ecc4454d35ab5317ab66a04406f36f0c1dbc0b76
+Built flycheck-cython in 5.600s, finished at 2022-04-17T01:11:42+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root 3.7K Apr 17 01:11 packages/flycheck-cython-20170724.958.el
+4.0K -rw-r--r-- 1 root root  288 Apr 17 01:11 packages/flycheck-cython-20170724.958.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 17 01:11 packages/flycheck-cython-badge.svg
+4.0K -rw-r--r-- 1 root root  184 Apr 17 01:11 packages/flycheck-cython-readme.txt

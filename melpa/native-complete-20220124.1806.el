@@ -5,7 +5,7 @@
 ;; Author: Troy Hinckley <troy.hinckley@gmail.com>
 ;; URL: https://github.com/CeleritasCelery/emacs-native-shell-complete
 ;; Package-Version: 20220124.1806
-;; Package-Commit: 5f94022fc9168971c77f8c12f9efd569c45f4850
+;; Package-Commit: 01d8a2048e13f29dd3aa06281ac8cb466caddb64
 ;; Version: 0.1.0
 ;; Package-Requires: ((emacs "26.1"))
 
