@@ -64,15 +64,16 @@
 		  ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 		 (:maintainer "Stefan Monnier" . "monnier@iro.umontreal.ca"))])
  (aggressive-completion .
-			[(1 6)
+			[(1 7)
 			 ((emacs
 			   (27 1)))
 			 "Automatic minibuffer completion" tar
-			 ((:maintainer "Tassilo Horn" . "tsdh@gnu.org")
+			 ((:keywords "minibuffer" "completion")
+			  (:maintainer "Tassilo Horn" . "tsdh@gnu.org")
 			  (:authors
 			   ("Tassilo Horn" . "tsdh@gnu.org"))
-			  (:keywords "minibuffer" "completion")
-			  (:url . "https://elpa.gnu.org/packages/aggressive-completion.html"))])
+			  (:url . "https://elpa.gnu.org/packages/aggressive-completion.html")
+			  (:commit . "d92bf2428133b6e261780e16b7030afe91d3668e"))])
  (aggressive-indent .
 		    [(1 10 0)
 		     ((emacs
@@ -755,13 +756,14 @@
 	    (nil . "Frank E. Ritter, ritter@cs.cmu.edu"))
 	   (:url . "https://elpa.gnu.org/packages/dismal.html"))])
  (djvu .
-       [(1 1 1)
-	nil "Edit and view Djvu files via djvused" single
-	((:url . "http://elpa.gnu.org/packages/djvu.html")
-	 (:keywords "files" "wp")
+       [(1 1 2)
+	nil "Edit and view Djvu files via djvused" tar
+	((:keywords "files" "wp")
+	 (:maintainer "Roland Winkler" . "winkler@gnu.org")
 	 (:authors
 	  ("Roland Winkler" . "winkler@gnu.org"))
-	 (:maintainer "Roland Winkler" . "winkler@gnu.org"))])
+	 (:url . "https://elpa.gnu.org/packages/djvu.html")
+	 (:commit . "071c8ab168588897475899c46eaa16e70141db8c"))])
  (docbook .
 	  [(0 1)
 	   nil "Info-like viewer for DocBook" single

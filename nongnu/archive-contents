@@ -1387,13 +1387,16 @@
 		     ("John Olsson" . "john@cryon.se"))
 		    (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed .
-	[(1 0 4)
+	[(1 0 5)
 	 ((emacs
 	   (25 1)))
 	 "A major mode for editing subtitles" tar
-	 ((:url . "https://github.com/rndusr/subed")
+	 ((:url . "https://github.com/sachac/subed")
 	  (:keywords "convenience" "files" "hypermedia" "multimedia")
-	  (:commit . "7472d62d1efc2ea785760ec702a1efef11e63e54"))])
+	  (:maintainer "Sacha Chua" . "sacha@sachachua.com")
+	  (:authors
+	   ("Random User"))
+	  (:commit . "7a0c36c808e107b5851ba48ec3825dfa3c1a902e"))])
  (swift-mode .
 	     [(8 4 2)
 	      ((emacs
