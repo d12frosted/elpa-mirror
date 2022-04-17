@@ -1387,13 +1387,13 @@
 		     ("John Olsson" . "john@cryon.se"))
 		    (:commit . "2d5acd143a153e16372d59000e57d76291ab81dd"))])
  (subed .
-	[(1 0 3)
+	[(1 0 4)
 	 ((emacs
 	   (25 1)))
 	 "A major mode for editing subtitles" tar
 	 ((:url . "https://github.com/rndusr/subed")
 	  (:keywords "convenience" "files" "hypermedia" "multimedia")
-	  (:commit . "3b265af572d7e9032d20213264f9fa635cefd8db"))])
+	  (:commit . "7472d62d1efc2ea785760ec702a1efef11e63e54"))])
  (swift-mode .
 	     [(8 4 2)
 	      ((emacs
@@ -1582,7 +1582,7 @@
 	      (:authors
 	       ("Le Wang")))])
  (xah-fly-keys .
-	       [(17 5 20220415142016)
+	       [(17 5 20220416101054)
 		((emacs
 		  (24 1)))
 		"ergonomic modal keybinding minor mode." tar
@@ -1591,7 +1591,7 @@
 		 (:maintainer "Xah Lee ( http://xahlee.info/ )")
 		 (:authors
 		  ("Xah Lee ( http://xahlee.info/ )"))
-		 (:commit . "1c883548f06f41913ec0a57eda4a5c234784180d"))])
+		 (:commit . "cb2b27ed7566b7863ad3e9adf67d75945d4118b0"))])
  (xml-rpc .
 	  [(1 6 15)
 	   nil "An elisp implementation of clientside XML-RPC" tar

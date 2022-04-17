@@ -156,9 +156,25 @@ Manual installation
   │ git clone https://github.com/sachac/subed.git
   └────
 
-  This will create a `subed' directory with the code.  Then you can add
-  the following to your Emacs configuration (typically
-  `~/.config/emacs-init.el', `~/.emacs.d/init.el', or `~/.emacs'; you
+  This will create a `subed' directory with the code.
+
+  If you have the `make' utility, you can regenerate the autoload
+  definitions with
+
+  ┌────
+  │ make autoloads
+  └────
+
+  If you don't have `make' installed, you can generate the autoloads
+  with:
+
+  ┌────
+  │ emacs --quick --batch --eval "(progn (setq generated-autoload-file (expand-file-name \"subed-autoloads.el\" \"subed\") backup-inhibited t) \
+  │ 	(update-directory-autoloads \"./subed\"))"
+  └────
+
+  Then you can add the following to your Emacs configuration (typically
+  `~/.config/emacs/init.el', `~/.emacs.d/init.el', or `~/.emacs'; you
   can create this file if it doesn't exist yet):
 
   ┌────
