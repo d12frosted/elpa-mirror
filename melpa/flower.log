@@ -1,13 +1,23 @@
 Package: flower
 Fetcher: github
-Source:  https://github.com/PositiveTechnologies/flower.git
+Source:  https://github.com/FlowerAutomation/flower.git
 
 Updating /mnt/store/melpa/working/flower/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: could not read Username for 'https://github.com': No such device or address
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 047846409867b2dd0ba4e2047a414b498680cd9c
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/flower/
+  to /tmp/flowerQxJDFW/flower-20220416.1744
+    flower.el -> flower.el
+    project.clj -> project.clj
+Created flower-20220416.1744.tar containing:
+  flower-20220416.1744/
+  flower-20220416.1744/flower-pkg.el
+  flower-20220416.1744/flower.el
+  flower-20220416.1744/project.clj
+Built flower in 7.506s, finished at 2022-04-18T01:41:40+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  384 Apr 18 01:41 packages/flower-20220416.1744.entry
+ 20K -rw-r--r-- 1 root root  20K Apr 18 01:41 packages/flower-20220416.1744.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 18 01:41 packages/flower-badge.svg
+4.0K -rw-r--r-- 1 root root  205 Apr 18 01:41 packages/flower-readme.txt

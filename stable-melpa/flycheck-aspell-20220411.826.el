@@ -6,7 +6,7 @@
 ;; Created: 26 May 2019
 ;; Homepage: https://github.com/leotaku/flycheck-aspell
 ;; Keywords: wp flycheck spell aspell
-;; Package-Commit: 5ec0f9b28b1d86eec192b23bc24d9a33dfe51882
+;; Package-Commit: dcf7e6543e4d94d58375e00e4a10db615ef06941
 ;; Package-Version: 20220411.826
 ;; Package-X-Original-Version: 0.2.0
 ;; Package-Requires: ((flycheck "28.0") (emacs "25.1"))

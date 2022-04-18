@@ -5,7 +5,7 @@
 ;; Author: Adam Patterson <adam@adamrt.com>
 ;; URL: http://github.com/adamrt/sane-term
 ;; Package-Version: 20181130.101
-;; Package-Commit: 46352169bd6d2a86ca9c2052cd05ecd16fc7657b
+;; Package-Commit: 369178c2dd0348250c2ec0019567688376c637f7
 ;; Version: 0.6
 ;; Package-Requires: ((emacs "24.1"))
 

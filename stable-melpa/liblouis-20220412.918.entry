@@ -1,0 +1,11 @@
+(liblouis .
+	  [(20220412 918)
+	   ((emacs
+	     (26 1)))
+	   "Mode for editing liblouis braille translation tables" single
+	   ((:commit . "83b4071b578513bd3936e0aa2304eae09b4820e7")
+	    (:authors
+	     ("Christian Egli" . "christian.egli@sbs.ch"))
+	    (:maintainer "Christian Egli" . "christian.egli@sbs.ch")
+	    (:keywords "languages")
+	    (:url . "https://github.com/liblouis/liblouis-mode"))])
