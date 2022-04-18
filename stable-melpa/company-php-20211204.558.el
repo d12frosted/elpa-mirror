@@ -6,7 +6,7 @@
 ;; Maintainer: jim
 ;; URL: https://github.com/xcwen/ac-php
 ;; Package-Version: 20211204.558
-;; Package-Commit: f44c5c6a23829e53bcb0712adcad406a8e9498ce
+;; Package-Commit: f34e09783b77d1158ea139b7b3d8034bc52b0b9f
 ;; Keywords: completion, convenience, intellisense
 ;; Package-Requires: ((cl-lib "0.5") (ac-php-core "2.0") (company "0.9"))
 ;; Compatibility: GNU Emacs: 24.4, 25.x, 26.x, 27.x
