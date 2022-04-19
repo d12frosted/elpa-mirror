@@ -7,7 +7,7 @@
 ;; Created: 2022
 ;; Version: 0.3
 ;; Package-Version: 20220415.2157
-;; Package-Commit: b07eb1507b5b682a89999088bde59f69914eeef3
+;; Package-Commit: f9e048e05c2c17a59d359a7724be6b5a2f394a0e
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/tempel
 

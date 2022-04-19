@@ -1,0 +1,15 @@
+(elisp-lint .
+	    [(20220419 226)
+	     ((emacs
+	       (24 4))
+	      (dash
+	       (2 15 0))
+	      (package-lint
+	       (0 11)))
+	     "Basic linting for Emacs Lisp" single
+	     ((:commit . "2ecb332ede986829231cabb0df5c64c6f1f6a1b6")
+	      (:authors
+	       ("Nikolaj Schumacher <bugs * nschum de>,"))
+	      (:maintainer "Neil Okamoto" . "neil.okamoto+melpa@gmail.com")
+	      (:keywords "lisp" "maint" "tools")
+	      (:url . "http://github.com/gonewest818/elisp-lint/"))])

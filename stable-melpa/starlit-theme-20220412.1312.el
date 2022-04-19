@@ -5,7 +5,7 @@
 ;; Author: Jonas Jelten <jj@sft.lol>
 ;; Keywords: faces
 ;; Package-Version: 20220412.1312
-;; Package-Commit: ba7f57db3988075394d6ccec97f0dcb35ebb089d
+;; Package-Commit: bc4b501d195b5bf7e4d03395e7d42e9336fa9f93
 ;; URL: https://github.com/SFTtech/starlit-emacs
 ;; Version: 0.1
 
