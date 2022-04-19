@@ -4,8 +4,8 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/stock-tracker
-;; Package-Version: 20220416.1528
-;; Package-Commit: a7880ec74bb33207b274b6c3ef3e932f2f99d9a9
+;; Package-Version: 20220419.648
+;; Package-Commit: e091d96847bce473db797070a181095b123ec1b0
 ;; Version: 0.1.3
 ;; Created: 2019-08-18
 ;; Keywords: convenience, chinese, stock
@@ -352,7 +352,7 @@ It defaults to a comma."
         (let ((inhibit-read-only t))
           (erase-buffer)
           (stock-tracker-mode)
-          (insert (format "%s\n\n" (concat "* Refresh list of stocks at: [" (current-time-string) "]")))
+          (insert (format "%s\n\n" (concat "* Refresh stocks at: [" (current-time-string) "]")))
           (insert (format "%s\n\n" stock-tracker--note-string))
           (insert stock-tracker--result-header)
           (insert stocks-info)

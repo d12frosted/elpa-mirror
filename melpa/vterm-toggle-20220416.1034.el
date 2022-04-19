@@ -3,7 +3,7 @@
 ;; Author: jixiuf  jixiuf@qq.com
 ;; Keywords: vterm terminals
 ;; Package-Version: 20220416.1034
-;; Package-Commit: 2c155593bb65baa1b0be1f66bb071e3a1920c441
+;; Package-Commit: 644e9df9f741c3338c248291799375a1778eb98b
 ;; Version: 0.0.4
 ;; URL: https://github.com/jixiuf/vterm-toggle
 ;; Package-Requires: ((emacs "25.1") (vterm "0.0.1"))
