@@ -1,5 +1,5 @@
 (ox-pandoc .
-	   [(20211224 1240)
+	   [(20220419 750)
 	    ((org
 	      (8 2))
 	     (emacs
@@ -9,7 +9,7 @@
 	     (ht
 	      (2 0)))
 	    "An Org-mode exporter using pandoc" single
-	    ((:commit . "b2e43b936249de2a100afb4262698105c39ce289")
+	    ((:commit . "0a35d0fbfa56bdd9ec5ba5bac2fe002b61c05c52")
 	     (:authors
 	      ("KAWABATA, Taichi" . "kawabata.taichi@gmail.com")
 	      ("FENTON, Alex" . "a-fent@github"))

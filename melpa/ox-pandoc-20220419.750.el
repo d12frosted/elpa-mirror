@@ -10,8 +10,8 @@
 ;; Maintainer: FENTON, Alex <a-fent@github>
 ;; Created: 2014-07-20
 ;; Version: 1.210925
-;; Package-Version: 20211224.1240
-;; Package-Commit: b2e43b936249de2a100afb4262698105c39ce289
+;; Package-Version: 20220419.750
+;; Package-Commit: 0a35d0fbfa56bdd9ec5ba5bac2fe002b61c05c52
 ;; Package-Requires: ((org "8.2") (emacs "24.4") (dash "2.8") (ht "2.0"))
 ;; Keywords: tools
 ;; URL: https://github.com/a-fent/ox-pandoc
@@ -249,6 +249,7 @@ version. If nil, no checks are performed and no warnings generated."
 (org-export-define-derived-backend 'pandoc 'org
   :translate-alist '((entity    . org-pandoc-entity)
 					 (export-block . org-pandoc-export-block)
+					 (export-snippet . org-pandoc-export-snippet)
 					 (latex-environment . org-pandoc-latex-environ)
                      (link      . org-pandoc-link)
                      (paragraph . org-pandoc-paragraph)
@@ -1754,9 +1755,24 @@ contextual information."
   "Transcode a EXPORT-BLOCK element from Org to Pandoc.
 This might be EXPORT_HTML or EXPORT_LATEX, and is simply
 duplicated into the temporary org file that pandoc converts.
-CONTENTS is the contents of the block. INFO is a plist holding
-contextual information."
-  (org-pandoc-identity export-block contents info))
+Special: if the block is BEGIN_EXPORT pandoc, pass the value to
+pandoc. CONTENTS is the contents of the block. INFO is a plist
+holding contextual information."
+  (if  (string= (org-element-property :type export-block) "PANDOC")
+	  (org-element-property :value export-block)
+	(org-pandoc-identity export-block contents info)))
+
+(defun org-pandoc-export-snippet (export-snippet contents info)
+  "Transcode a @@format:snippet@@ from Org to Pandoc.
+If it is an output format, such as latex or html, the snippet is
+duplicated in full for pandoc to handle as Org's own exporters
+would. If the snippet specifies 'pandoc' as the format, the inner
+content of the snippet is passed to pandoc. CONTENTS is the
+contents of the block. INFO is a plist holding contextual
+information."
+  (if (eq (org-export-snippet-backend export-snippet) 'pandoc)
+	  (org-element-property :value export-snippet)
+	(org-pandoc-identity export-snippet contents info)))
 
 (defun org-pandoc-identity (blob contents _info)
   "Transcode BLOB element or object back into Org syntax.
