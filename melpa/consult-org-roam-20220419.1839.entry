@@ -1,0 +1,14 @@
+(consult-org-roam .
+		  [(20220419 1839)
+		   ((emacs
+		     (27 1))
+		    (org-roam
+		     (2 2 0))
+		    (consult
+		     (0 16)))
+		   "Consult integration for org-roam" single
+		   ((:commit . "fd535800a615af4d2af0577e8351cb16561f0e32")
+		    (:authors
+		     ("jgru <https://github.com/jgru>"))
+		    (:maintainer "jgru <https://github.com/jgru>")
+		    (:url . "https://github.com/jgru/consult-org-roam"))])
