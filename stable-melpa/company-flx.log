@@ -3,11 +3,12 @@ Fetcher: github
 Source:  https://github.com/PythonNut/company-flx.git
 
 Updating /mnt/store/melpa/working/company-flx/
-Checking out origin/HEAD
-Checking out 16ca0d2f84e8e768bf2db8c5cfe421230a00bded
-Built company-flx in 5.509s, finished at 2022-04-20T07:58:42+0000
- ✓ Success:
- 12K -rw-r--r-- 1 root root  10K Apr 20 07:58 packages/company-flx-20180103.518.el
-4.0K -rw-r--r-- 1 root root  474 Apr 20 07:58 packages/company-flx-20180103.518.entry
-4.0K -rw-r--r-- 1 root root 1.2K Apr 20 07:58 packages/company-flx-badge.svg
-4.0K -rw-r--r-- 1 root root  385 Apr 20 07:58 packages/company-flx-readme.txt
+
+Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
+
+Fetching origin
+error: RPC failed; curl 35 gnutls_handshake() failed: The TLS connection was non-properly terminated.
+fatal: expected flush after ref listing
+error: Could not fetch origin
+
+Command exited with non-zero exit-code: 1

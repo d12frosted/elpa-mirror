@@ -2,15 +2,15 @@
 
 ;; Copyright (C) 2015 Hinrik Örn Sigurðsson <hinrik.sig@gmail.com>
 ;; Copyright (C) 2020 Johnathon Weare <jrweare@gmail.com>
-;; Copyright (C) 2021 Siavash Askari Nasr
+;; Copyright (C) 2021,2022 Siavash Askari Nasr
 
 ;; Author: Hinrik Örn Sigurðsson <hinrik.sig@gmail.com>
 ;;      Johnathon Weare <jrweare@gmail.com>
 ;;      Siavash Askari Nasr <siavash.askari.nasr@gmail.com>
 ;; original URL: https://github.com/hinrik/flycheck-perl6
 ;; URL: https://github.com/Raku/flycheck-raku
-;; Package-Version: 20220414.1125
-;; Package-Commit: d141782cf1c7936b2bbe027f82ec1c9887c08be3
+;; Package-Version: 20220420.732
+;; Package-Commit: 4da1970a75396aff1957b07f7579c1de6b817e6b
 ;; Keywords: tools, convenience
 ;; Version: 0.7
 ;; Package-Requires: ((emacs "26.3") (flycheck "0.22"))
