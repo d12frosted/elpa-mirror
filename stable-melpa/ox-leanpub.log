@@ -3,10 +3,25 @@ Fetcher: gitlab
 Source:  https://gitlab.com/zzamboni/ox-leanpub.git
 
 Updating /mnt/store/melpa/working/ox-leanpub/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://gitlab.com/zzamboni/ox-leanpub.git/': The requested URL returned error: 524
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out 4adf97dd195f0a777b952b97888b77cdd9479629
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/ox-leanpub/
+  to /tmp/ox-leanpubBYDMKl/ox-leanpub-20201129.2027
+    ox-leanpub-book.el -> ox-leanpub-book.el
+    ox-leanpub-markdown.el -> ox-leanpub-markdown.el
+    ox-leanpub-markua.el -> ox-leanpub-markua.el
+    ox-leanpub.el -> ox-leanpub.el
+Created ox-leanpub-20201129.2027.tar containing:
+  ox-leanpub-20201129.2027/
+  ox-leanpub-20201129.2027/ox-leanpub-book.el
+  ox-leanpub-20201129.2027/ox-leanpub-markdown.el
+  ox-leanpub-20201129.2027/ox-leanpub-markua.el
+  ox-leanpub-20201129.2027/ox-leanpub-pkg.el
+  ox-leanpub-20201129.2027/ox-leanpub.el
+Built ox-leanpub in 5.133s, finished at 2022-04-20T04:52:14+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  500 Apr 20 04:52 packages/ox-leanpub-20201129.2027.entry
+ 80K -rw-r--r-- 1 root root  80K Apr 20 04:52 packages/ox-leanpub-20201129.2027.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 20 04:52 packages/ox-leanpub-badge.svg
+4.0K -rw-r--r-- 1 root root 1.4K Apr 20 04:52 packages/ox-leanpub-readme.txt
