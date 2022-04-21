@@ -3,8 +3,8 @@
 ;; Author: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Maintainer: Jose A Ortega Ruiz
 ;; Keywords: mail
-;; Package-Version: 20220421.346
-;; Package-Commit: 2362a4b8415f8f19be5ad6cf9f3c62c6ff4d70d4
+;; Package-Version: 20220421.717
+;; Package-Commit: 16eb2c100ca144140f07014c32e99487c6a73e18
 ;; License: GPL-3.0-or-later
 ;; Version: 0.7
 ;; Package-Requires: ((emacs "26.1") (consult "0.9") (notmuch "0.31"))
@@ -189,10 +189,15 @@ If given, use INITIAL as the starting point of the query."
 
 (defun consult-notmuch--preview (action candidate)
   "Preview CANDIDATE when ACTION is 'preview."
-  (when (eq action 'preview)
-    (when-let ((thread-id (consult-notmuch--thread-id candidate)))
-      (notmuch-show thread-id nil nil nil
-                    consult-notmuch--buffer-name))))
+  (cond ((eq action 'preview)
+         (when-let ((thread-id (consult-notmuch--thread-id candidate)))
+           (when (get-buffer consult-notmuch--buffer-name)
+             (kill-buffer consult-notmuch--buffer-name))
+           (notmuch-show thread-id nil nil nil
+                         consult-notmuch--buffer-name)))
+        ((eq action 'exit)
+         (when (get-buffer consult-notmuch--buffer-name)
+           (kill-buffer consult-notmuch--buffer-name)))))
 
 
 (defun consult-notmuch--show (candidate)

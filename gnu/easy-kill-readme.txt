@@ -29,6 +29,7 @@ active region, url, email and finally current line (See
 #. ``M-w s``: save sexp at point
 #. ``M-w l``: save list at point (enclosing sexp)
 #. ``M-w d``: save defun at point
+#. ``M-w D``: save current defun name
 #. ``M-w f``: save file at point
 #. ``M-w b``: save ``buffer-file-name`` or ``default-directory``.
    ``-`` changes the kill to the directory name, ``+`` to full name
@@ -40,8 +41,9 @@ The following keys modify the selection:
    ``M-w d @`` will append current function to last kill.
 #. ``C-w``: kill selection and exit
 #. ``+``, ``-`` and ``1..9``: expand/shrink selection
-#. ``0`` shrink the selection to the intitial size i.e. before any
+#. ``0`` shrink the selection to the initial size i.e. before any
    expansion
+#. ``SPC``: cycle through things in ``easy-kill-alist``
 #. ``C-SPC``: turn selection into an active region
 #. ``C-g``: abort
 #. ``?``: help
@@ -82,7 +84,7 @@ Install
 ~~~~~~~
 
 ``easy-kill`` is part of GNU ELPA and is also available on `MELPA
-<http://melpa.milkbox.net/#/easy-kill>`_.
+<https://melpa.org/#/easy-kill>`_.
 
 Extensions
 ~~~~~~~~~~
@@ -95,10 +97,17 @@ convention, or by defining new functions named like
 NEWS
 ~~~~
 
+0.9.5
++++++
+
+#. [BREAKING] Emacs >= 25 required
+
 0.9.4
 +++++
 
 #. New user variable ``easy-kill-unhighlight-key``.
+#. key ``D`` selects current defun name.
+#. Key ``SPC`` selects things in ``easy-kill-alist`` in turn.
 
 0.9.3
 +++++

@@ -803,17 +803,18 @@
 		(:authors
 		 ("Clément Pit-Claudel" . "clement.pitclaudel@live.com")))])
  (easy-kill .
-	    [(0 9 4)
+	    [(0 9 5)
 	     ((emacs
-	       (24))
+	       (25))
 	      (cl-lib
 	       (0 5)))
 	     "kill & mark things easily" tar
 	     ((:url . "https://github.com/leoliu/easy-kill")
+	      (:keywords "killing" "convenience")
 	      (:maintainer "Leo Liu" . "sdl.web@gmail.com")
 	      (:authors
 	       ("Leo Liu" . "sdl.web@gmail.com"))
-	      (:keywords "killing" "convenience"))])
+	      (:commit . "f155d19c528e27f8f6c72f0d75f652edbdcab37f"))])
  (ebdb .
        [(0 8 14)
 	((emacs

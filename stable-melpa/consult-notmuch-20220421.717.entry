@@ -1,5 +1,5 @@
 (consult-notmuch .
-		 [(20220421 346)
+		 [(20220421 717)
 		  ((emacs
 		    (26 1))
 		   (consult
@@ -7,7 +7,7 @@
 		   (notmuch
 		    (0 31)))
 		  "Notmuch search using consult" single
-		  ((:commit . "2362a4b8415f8f19be5ad6cf9f3c62c6ff4d70d4")
+		  ((:commit . "16eb2c100ca144140f07014c32e99487c6a73e18")
 		   (:authors
 		    ("Jose A Ortega Ruiz" . "jao@gnu.org"))
 		   (:maintainer "Jose A Ortega Ruiz")

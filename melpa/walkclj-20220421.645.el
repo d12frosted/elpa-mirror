@@ -4,13 +4,10 @@
 ;; Author: Arne Brasseur
 ;; Maintainer: Arne Brasseur
 ;; Created: Mi Jul 18 09:39:10 2018 (+0200)
-;; Version: 0.1.0
-;; Package-Version: 20201116.735
-;; Package-Commit: 2077475eb3c8d1a170c3a3b0e836420469024f0f
+;; Version: 0.2.0
+;; Package-Version: 20220421.645
+;; Package-Commit: 4b4e9fcef2361bdf88ab3c7f905a76672cfd43e4
 ;; Package-Requires: ((emacs "25") (parseclj "0.1.0") (treepy "0.1.0"))
-;; Last-Updated: Mi Jul 18 10:58:11 2018 (+0200)
-;;           By: Arne Brasseur
-;;     Update #: 2
 ;; URL: https://github.com/plexus/walkclj
 ;; Keywords: languages
 ;;
@@ -55,12 +52,13 @@
 (defvar walkclj-function-names '(ffirst
                                  first
                                  last
+                                 list-p
                                  list?
-                                 map?
                                  meta
                                  name
                                  second
                                  symbol?
+                                 symbol-p?
                                  unwrap-meta))
 
 (defun walkclj--update-predicate-suffix (sym)
@@ -124,9 +122,13 @@ return the inner node if this is the case."
   "Does FORM represent a :list node?"
   (eq (parseclj-ast-node-type form) :list))
 
+(defalias 'walkclj-list? 'walkclj-list-p)
+
 (defun walkclj-symbol-p (form)
   "Does FORM represent a :symbol node?"
   (eq (parseclj-ast-node-type form) :symbol))
+
+(defalias 'walkclj-symbol? 'walkclj-symbol-p)
 
 (defun walkclj-name (form)
   "Return the name of FORM.

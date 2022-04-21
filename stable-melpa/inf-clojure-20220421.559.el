@@ -5,8 +5,8 @@
 ;; Authors: Bozhidar Batsov <bozhidar@batsov.dev>
 ;;       Olin Shivers <shivers@cs.cmu.edu>
 ;; URL: http://github.com/clojure-emacs/inf-clojure
-;; Package-Version: 20220315.1102
-;; Package-Commit: f511dcad0e0684c9609c7526930e88d11da989ab
+;; Package-Version: 20220421.559
+;; Package-Commit: abeab8d6d4cb3bdded5e9083776aab0c06cbdf57
 ;; Keywords: processes, clojure
 ;; Version: 3.2.0-snapshot
 ;; Package-Requires: ((emacs "25.1") (clojure-mode "5.11"))
@@ -777,7 +777,7 @@ process buffer for a list of commands.)"
       (let ((default-directory (or project-dir default-directory))
             (cmdlist (if (consp cmd)
                          (list cmd)
-                       (split-string cmd)))
+                       (split-string-and-unquote cmd)))
             (repl-type (or (unless prefix-arg
                              inf-clojure-custom-repl-type)
                            (car (rassoc cmd inf-clojure-startup-forms))
