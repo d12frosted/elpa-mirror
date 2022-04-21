@@ -3,8 +3,8 @@
 ;; Author: Jose A Ortega Ruiz <jao@gnu.org>
 ;; Maintainer: Jose A Ortega Ruiz
 ;; Keywords: mail
-;; Package-Version: 20220408.1923
-;; Package-Commit: 5e952b540552dea5965929711a716775b9a0dc74
+;; Package-Version: 20220421.346
+;; Package-Commit: 2362a4b8415f8f19be5ad6cf9f3c62c6ff4d70d4
 ;; License: GPL-3.0-or-later
 ;; Version: 0.7
 ;; Package-Requires: ((emacs "26.1") (consult "0.9") (notmuch "0.31"))
@@ -149,7 +149,7 @@ If given, use INITIAL as the starting point of the query."
           ((string-prefix-p "header{" str)
            (setq consult-notmuch--info t))
           ((and str consult-notmuch--info)
-           (when (string-match "\\(.+\\) (\\([^)]+\\)) (\\([^)]+\\))$" str)
+           (when (string-match "\\(.+\\) (\\([^)]+\\)) (\\([^)]*\\))$" str)
              (consult-notmuch--set :Subject (match-string 1 str))
              (consult-notmuch--set :date_relative (match-string 2 str))
              (consult-notmuch--set :tags (split-string (match-string 3 str))))
@@ -173,7 +173,7 @@ If given, use INITIAL as the starting point of the query."
            (auths (string-trim (nth 1 (split-string mid "[];]"))))
            (subject (string-trim (nth 1 (split-string mid "[;]"))))
            (headers (list :Subject subject :From auths))
-           (t0 (string-match "([^)]+)\\s-*$" mid))
+           (t0 (string-match "([^)]*)\\s-*$" mid))
            (tags (split-string (substring mid (1+  t0) -1)))
            (msg (list :id thread-id
                       :match t
@@ -197,7 +197,6 @@ If given, use INITIAL as the starting point of the query."
 
 (defun consult-notmuch--show (candidate)
   "Open resulting CANDIDATE in ‘notmuch-show’ view."
-  (consult-notmuch--close-preview)
   (when-let ((thread-id (consult-notmuch--thread-id candidate)))
     (let* ((notmuch-show-only-matching-messages
             consult-notmuch-show-single-message)
@@ -208,7 +207,6 @@ If given, use INITIAL as the starting point of the query."
 
 (defun consult-notmuch--tree (candidate)
   "Open resulting CANDIDATE in ‘notmuch-tree’."
-  (consult-notmuch--close-preview)
   (when-let ((thread-id (consult-notmuch--thread-id candidate)))
     (notmuch-tree thread-id nil nil)))
 

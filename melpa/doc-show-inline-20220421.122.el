@@ -6,8 +6,8 @@
 ;; Author: Campbell Barton <ideasman42@gmail.com>
 
 ;; URL: https://gitlab.com/ideasman42/emacs-doc-show-inline
-;; Package-Version: 20220419.101
-;; Package-Commit: fabe149f76202f8feb12ce626ef36d5f2edab9a6
+;; Package-Version: 20220421.122
+;; Package-Commit: 11a29ebfd7939691b34b511082173e4b5d1b9c81
 ;; Keywords: convenience
 ;; Version: 0.1
 ;; Package-Requires: ((emacs "26.2"))

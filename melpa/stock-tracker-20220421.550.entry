@@ -1,5 +1,5 @@
 (stock-tracker .
-	       [(20220421 17)
+	       [(20220421 550)
 		((emacs
 		  (27 1))
 		 (dash
@@ -7,7 +7,7 @@
 		 (async
 		  (1 9 5)))
 		"Track stock price" single
-		((:commit . "0ebd4606169c6904839276e17a11636881d79609")
+		((:commit . "0e06e386772504963dd4c4308ccb60ad9836c15d")
 		 (:authors
 		  ("Huming Chen" . "chenhuming@gmail.com"))
 		 (:maintainer "Huming Chen" . "chenhuming@gmail.com")
