@@ -8,7 +8,7 @@
 ;; Keyword: abbreviation customizable shortcut
 ;; Version: 0.0.4
 ;; Package-Version: 20210715.1213
-;; Package-Commit: 7ec546f2fb96b8220a7967f248d0d6df7c55b9c8
+;; Package-Commit: 8557d7d65cd0088e5b08fa95dfe8214e96e18bca
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/jcs-elpa/project-abbrev
 

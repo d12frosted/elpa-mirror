@@ -8,7 +8,7 @@
 ;; Keyword: end eol line
 ;; Version: 0.0.5
 ;; Package-Version: 20210715.1227
-;; Package-Commit: 2a83fd87252a71391d9c17d03ff0e5b1f94ae05d
+;; Package-Commit: c1e426bc9f1f334eac9012f81d7c481bdbdfd59a
 ;; Package-Requires: ((emacs "24.4"))
 ;; URL: https://github.com/jcs-elpa/show-eol
 

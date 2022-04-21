@@ -5,7 +5,7 @@
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/syohex/emacs-quickrun
 ;; Package-Version: 20210904.1553
-;; Package-Commit: 66f44ba79ed098ae07dc7a9ef445cc8c3687a119
+;; Package-Commit: 30e9a1333fe4a83424385df53ddaf7016df3679d
 ;; Version: 2.3.1
 ;; Package-Requires: ((emacs "24.3"))
 

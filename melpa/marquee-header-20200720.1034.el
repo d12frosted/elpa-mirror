@@ -8,7 +8,7 @@
 ;; Keyword: animation header interface library marquee
 ;; Version: 0.0.9
 ;; Package-Version: 20200720.1034
-;; Package-Commit: e624dd8a9075aafade6d53a5e8b4e83db4123110
+;; Package-Commit: 4abfc35e57668e73e0176c218c070d60656a6491
 ;; Package-Requires: ((emacs "25.1"))
 ;; URL: https://github.com/jcs-elpa/marquee-header
 

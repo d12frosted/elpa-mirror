@@ -3,10 +3,11 @@ Fetcher: github
 Source:  https://github.com/s-kostyaev/company-erlang.git
 
 Updating /mnt/store/melpa/working/company-erlang/
-
-Command 'env LC_ALL\=C git remote set-head origin --auto' exited with non-zero exit-code: 128
-
-Fetching origin
-fatal: unable to access 'https://github.com/s-kostyaev/company-erlang.git/': gnutls_handshake() failed: Error in the pull function.
-
-Command exited with non-zero exit-code: 128
+Checking out origin/HEAD
+Checking out bc0524a16f17b66c7397690e4ca0e004f09ea6c5
+Built company-erlang in 9.872s, finished at 2022-04-21T00:40:48+0000
+ ✓ Success:
+8.0K -rw-r--r-- 1 root root 7.4K Apr 21 00:40 packages/company-erlang-20170123.538.el
+4.0K -rw-r--r-- 1 root root  378 Apr 21 00:40 packages/company-erlang-20170123.538.entry
+4.0K -rw-r--r-- 1 root root 1.2K Apr 21 00:40 packages/company-erlang-badge.svg
+4.0K -rw-r--r-- 1 root root  828 Apr 21 00:40 packages/company-erlang-readme.txt

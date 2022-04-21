@@ -8,7 +8,7 @@
 ;; Keyword: file helm preview select selection
 ;; Version: 0.1.5
 ;; Package-Version: 20200927.528
-;; Package-Commit: 0feb38491cd000d7d6fd3595cc3bf572bf3b60f9
+;; Package-Commit: 2affaf37f02386a93673c6156536d5208ee7a4bc
 ;; Package-Requires: ((emacs "25.1") (helm "2.0"))
 ;; URL: https://github.com/jcs-elpa/helm-file-preview
 

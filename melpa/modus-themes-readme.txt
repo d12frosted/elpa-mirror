@@ -83,6 +83,7 @@ missing package or change you would like to see.
     completions
     consult
     corfu
+    corfu-quick
     counsel
     counsel-css
     cov

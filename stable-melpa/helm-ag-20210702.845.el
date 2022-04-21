@@ -5,7 +5,7 @@
 ;; Author: Syohei YOSHIDA <syohex@gmail.com>
 ;; URL: https://github.com/syohex/emacs-helm-ag
 ;; Package-Version: 20210702.845
-;; Package-Commit: b32922f2be31e1130cf88fa5cba304734703f766
+;; Package-Commit: 9820ba1893c8a7e31e756c891f9b4cf0eff1e50b
 ;; Version: 0.64
 ;; Package-Requires: ((emacs "25.1") (helm "2.0"))
 
