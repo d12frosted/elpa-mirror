@@ -3,11 +3,23 @@ Fetcher: git
 Source:  https://git.madhouse-project.org/algernon/brutalist-theme.el.git
 
 Updating /mnt/store/melpa/working/brutalist-theme/
-
-Command 'env LC_ALL\=C git fetch -f --all --tags' exited with non-zero exit-code: 1
-
-Fetching origin
-fatal: unable to access 'https://git.madhouse-project.org/algernon/brutalist-theme.el.git/': The requested URL returned error: 502
-error: Could not fetch origin
-
-Command exited with non-zero exit-code: 1
+Checking out origin/HEAD
+Checking out 72adc339c433a98e944cbe76da4c45b9ba4400f5
+Copying files (->) and directories (=>)
+  from /mnt/store/melpa/working/brutalist-theme/
+  to /tmp/brutalist-themeHWadGf/brutalist-theme-20181023.1222
+    brutalist-build.el -> brutalist-build.el
+    brutalist-dark-theme.el -> brutalist-dark-theme.el
+    brutalist-theme.el -> brutalist-theme.el
+Created brutalist-theme-20181023.1222.tar containing:
+  brutalist-theme-20181023.1222/
+  brutalist-theme-20181023.1222/brutalist-build.el
+  brutalist-theme-20181023.1222/brutalist-dark-theme.el
+  brutalist-theme-20181023.1222/brutalist-theme-pkg.el
+  brutalist-theme-20181023.1222/brutalist-theme.el
+Built brutalist-theme in 9.758s, finished at 2022-04-22T01:45:27+0000
+ ✓ Success:
+4.0K -rw-r--r-- 1 root root  282 Apr 22 01:45 packages/brutalist-theme-20181023.1222.entry
+ 32K -rw-r--r-- 1 root root  30K Apr 22 01:45 packages/brutalist-theme-20181023.1222.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 22 01:45 packages/brutalist-theme-badge.svg
+4.0K -rw-r--r-- 1 root root  114 Apr 22 01:45 packages/brutalist-theme-readme.txt

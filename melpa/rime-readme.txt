@@ -54,13 +54,14 @@ Currently the keybinding with Control(C-), Meta(M-) and Shift(S-) is supported.
 
 Set via ~rime-show-candidate~.
 
-| Value      | description                                                                 |
-|------------+-----------------------------------------------------------------------------|
-| ~nil~        | don't show candidate at all.                                                |
-| ~minibuffer~ | Display in minibuffer.                                                      |
-| ~message~    | Display with ~message~ function, useful when you use minibuffer as mode-line.  |
-| ~popup~      | Use popup.                                                                  |
-| ~posframe~   | Use posfarme, will fallback to popup in TUI                                 |
+| Value        | description                                                                   |
+|--------------+-------------------------------------------------------------------------------|
+| ~nil~        | don't show candidate at all.                                                  |
+| ~minibuffer~ | Display in minibuffer.                                                        |
+| ~message~    | Display with ~message~ function, useful when you use minibuffer as mode-line. |
+| ~popup~      | Use popup.                                                                    |
+| ~posframe~   | Use posfarme, will fallback to popup in TUI                                   |
+| ~sidewindow~ | Use sidewindow.                                                               |
 
 * The lighter
 
