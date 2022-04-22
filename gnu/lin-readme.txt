@@ -15,6 +15,10 @@ yet form part of the latest tagged commit, is explicitly marked as such.
 
 Current development target is 0.4.0-dev.
 
+⁃ Homepage: <https://protesilaos.com/emacs/lin>.
+⁃ Git repository: <https://git.sr.ht/~protesilaos/lin>.
+⁃ Mailing list: <https://lists.sr.ht/~protesilaos/lin>.
+
 Table of Contents
 ─────────────────
 
@@ -122,7 +126,7 @@ Table of Contents
   │ cd manual-packages
   │ 
   │ # Clone this repo, naming it "lin"
-  │ git clone https://gitlab.com/protesilaos/lin.git lin
+  │ git clone https://git.sr.ht/~protesilaos/lin lin
   └────
 
   Finally, in your `init.el' (or equivalent) evaluate this:
@@ -152,6 +156,7 @@ Table of Contents
   │ 	dired-mode-hook
   │ 	elfeed-search-mode-hook
   │ 	git-rebase-mode-hook
+  │ 	grep-mode-hook
   │ 	ibuffer-mode-hook
   │ 	ilist-mode-hook
   │ 	ledger-report-mode-hook
@@ -162,6 +167,7 @@ Table of Contents
   │ 	notmuch-tree-mode-hook
   │ 	occur-mode-hook
   │ 	org-agenda-mode-hook
+  │ 	proced-mode-hook
   │ 	tabulated-list-mode-hook))
   │ 
   │ (lin-global-mode 1)
@@ -177,8 +183,8 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to code or documentation
-        Christian Tietze, Damien Cassou, Federico Stilman, Nicolas De
-        Jaeghere.
+        Christian Tietze, Damien Cassou, Federico Stilman, Kai von
+        Fintel, Nicolas De Jaeghere.
 
 
 6 GNU Free Documentation License

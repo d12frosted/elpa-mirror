@@ -17,6 +17,10 @@ yet form part of the latest tagged commit, is explicitly marked as such.
 
 Current development target is 0.4.0-dev.
 
+⁃ Homepage: <https://protesilaos.com/emacs/logos>.
+⁃ Git repository: <https://git.sr.ht/~protesilaos/logos>.
+⁃ Mailing list: <https://lists.sr.ht/~protesilaos/logos>.
+
 Table of Contents
 ─────────────────
 

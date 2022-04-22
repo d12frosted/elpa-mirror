@@ -16,7 +16,7 @@ yet form part of the latest tagged commit, is explicitly marked as such.
 
 Current development target is 0.3.0-dev.
 
-⁃ Homepage: <https://protesilaos.com/emacs/tmr>
+⁃ Homepage: <https://protesilaos.com/emacs/tmr>.
 ⁃ Git repository: <https://git.sr.ht/~protesilaos/tmr>.
 ⁃ Mailing list: <https://lists.sr.ht/~protesilaos/tmr>.
 

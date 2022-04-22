@@ -17,19 +17,23 @@ yet form part of the latest tagged commit, is explicitly marked as such.
 
 Current development target is 0.4.0-dev.
 
+⁃ Homepage: <https://protesilaos.com/emacs/pulsar>.
+⁃ Git repository: <https://git.sr.ht/~protesilaos/pulsar>.
+⁃ Mailing list: <https://lists.sr.ht/~protesilaos/pulsar>.
+
 Table of Contents
 ─────────────────
 
 1. COPYING
 2. Overview
 3. Installation
-4. GNU ELPA package
-.. 1. Manual installation
-5. Sample configuration
-6. Integration with other packages
-7. Acknowledgements
-8. GNU Free Documentation License
-9. Indices
+.. 1. GNU ELPA package
+.. 2. Manual installation
+4. Sample configuration
+5. Integration with other packages
+6. Acknowledgements
+7. GNU Free Documentation License
+8. Indices
 .. 1. Function index
 .. 2. Variable index
 .. 3. Concept index
@@ -62,7 +66,11 @@ Table of Contents
   when either `pulsar-mode' (buffer-local) or `pulsar-global-mode' is
   enabled.
 
-  [ The minor modes are part of 0.4.0-dev ]
+  There is no need to add all functions that affect the active window to
+  the `pulsar-pulse-functions'.  Instead, set the user option
+  `pulsar-pulse-on-window-change' to a non-nil value.  It will pulse the
+  current line whenever the active window changes (it is part of
+  0.4.0-dev).
 
   The overall duration of the highlight is determined by a combination
   of `pulsar-delay' and `pulsar-iterations'.  The latter determines the
@@ -79,8 +87,6 @@ Table of Contents
   will pulse before fading away.  Whereas the `pulsar-highlight-line'
   command never pulses the line: the highlight stays in place as if
   `pulsar-pulse' is nil.
-
-  [ The `pulsar-highlight-dwim' is part of 0.4.0-dev ]
 
   A do-what-I-mean command is also on offer: `pulsar-highlight-dwim'.
   It highlights the current line line like `pulsar-highlight-line'.  If
@@ -103,8 +109,10 @@ Table of Contents
 ══════════════
 
 
-4 GNU ELPA package
-══════════════════
+
+
+3.1 GNU ELPA package
+────────────────────
 
   The package is available as `pulsar'.  Simply do:
 
@@ -117,7 +125,7 @@ Table of Contents
   And search for it.
 
 
-4.1 Manual installation
+3.2 Manual installation
 ───────────────────────
 
   Assuming your Emacs files are found in `~/.emacs.d/', execute the
@@ -146,7 +154,7 @@ Table of Contents
   Everything is in place to set up the package.
 
 
-5 Sample configuration
+4 Sample configuration
 ══════════════════════
 
   Remember to read the doc string of each of these variables.
@@ -155,30 +163,31 @@ Table of Contents
   │ (require 'pulsar)
   │ 
   │ (setq pulsar-pulse-functions
-  │       '(isearch-repeat-forward
-  │ 	isearch-repeat-backward
-  │ 	recenter-top-bottom
+  │       ;; NOTE 2022-04-09: The commented out functions are from before
+  │       ;; the introduction of `pulsar-pulse-on-window-change'.  Try that
+  │       ;; instead.
+  │       '(recenter-top-bottom
   │ 	move-to-window-line-top-bottom
   │ 	reposition-window
-  │ 	bookmark-jump
-  │ 	other-window
-  │ 	delete-window
-  │ 	delete-other-windows
+  │ 	;; bookmark-jump
+  │ 	;; other-window
+  │ 	;; delete-window
+  │ 	;; delete-other-windows
   │ 	forward-page
   │ 	backward-page
   │ 	scroll-up-command
   │ 	scroll-down-command
-  │ 	windmove-right
-  │ 	windmove-left
-  │ 	windmove-up
-  │ 	windmove-down
-  │ 	windmove-swap-states-right
-  │ 	windmove-swap-states-left
-  │ 	windmove-swap-states-up
-  │ 	windmove-swap-states-down
-  │ 	tab-new
-  │ 	tab-close
-  │ 	tab-next
+  │ 	;; windmove-right
+  │ 	;; windmove-left
+  │ 	;; windmove-up
+  │ 	;; windmove-down
+  │ 	;; windmove-swap-states-right
+  │ 	;; windmove-swap-states-left
+  │ 	;; windmove-swap-states-up
+  │ 	;; windmove-swap-states-down
+  │ 	;; tab-new
+  │ 	;; tab-close
+  │ 	;; tab-next
   │ 	org-next-visible-heading
   │ 	org-previous-visible-heading
   │ 	org-forward-heading-same-level
@@ -189,6 +198,7 @@ Table of Contents
   │ 	outline-previous-visible-heading
   │ 	outline-up-heading))
   │ 
+  │ (setq pulsar-pulse-on-window-change t)
   │ (setq pulsar-pulse t)
   │ (setq pulsar-delay 0.055)
   │ (setq pulsar-iterations 10)
@@ -218,7 +228,7 @@ Table of Contents
   └────
 
 
-6 Integration with other packages
+5 Integration with other packages
 ═════════════════════════════════
 
   Beside `pulsar-pulse-line', Pulsar defines a few functions that can be
@@ -244,7 +254,7 @@ Table of Contents
   └────
 
 
-7 Acknowledgements
+6 Acknowledgements
 ══════════════════
 
   Pulsar is meant to be a collective effort.  Every bit of help matters.
@@ -253,27 +263,27 @@ Table of Contents
         Protesilaos Stavrou.
 
   Contributions to the code or manual
-        Aymeric Agon-Rambosson, Daniel Mendler, JD Smith.
+        Aymeric Agon-Rambosson, Daniel Mendler, Ivan Popovych, JD Smith.
 
   Ideas and user feedback
         Mark Barton, Petter Storvik, Rudolf Adamkovič, Toon Claes, and
         user kb.
 
 
-8 GNU Free Documentation License
+7 GNU Free Documentation License
 ════════════════════════════════
 
 
-9 Indices
+8 Indices
 ═════════
 
-9.1 Function index
+8.1 Function index
 ──────────────────
 
 
-9.2 Variable index
+8.2 Variable index
 ──────────────────
 
 
-9.3 Concept index
+8.3 Concept index
 ─────────────────

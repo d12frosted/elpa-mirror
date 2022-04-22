@@ -4,26 +4,28 @@ Source:  https://github.com/clojure-emacs/parseclj.git
 
 Updating /mnt/store/melpa/working/parseclj/
 Checking out origin/HEAD
-Checking out b04eae67384c1d8181edf318fd62d422a8220724
+Checking out 4d0e780e00f1828b00c43099e6eebc6582998f72
 Copying files (->) and directories (=>)
   from /mnt/store/melpa/working/parseclj/
-  to /tmp/parsecljbOfq6t/parseclj-20220328.558
+  to /tmp/parsecljd6VePE/parseclj-20220422.936
     parseclj-alist.el -> parseclj-alist.el
     parseclj-ast.el -> parseclj-ast.el
     parseclj-lex.el -> parseclj-lex.el
     parseclj-parser.el -> parseclj-parser.el
     parseclj.el -> parseclj.el
-Created parseclj-20220328.558.tar containing:
-  parseclj-20220328.558/
-  parseclj-20220328.558/parseclj-alist.el
-  parseclj-20220328.558/parseclj-ast.el
-  parseclj-20220328.558/parseclj-lex.el
-  parseclj-20220328.558/parseclj-parser.el
-  parseclj-20220328.558/parseclj-pkg.el
-  parseclj-20220328.558/parseclj.el
-Built parseclj in 5.620s, finished at 2022-04-22T07:07:33+0000
+Created parseclj-20220422.936.tar containing:
+  parseclj-20220422.936/
+  parseclj-20220422.936/parseclj-alist.el
+  parseclj-20220422.936/parseclj-ast.el
+  parseclj-20220422.936/parseclj-lex.el
+  parseclj-20220422.936/parseclj-parser.el
+  parseclj-20220422.936/parseclj-pkg.el
+  parseclj-20220422.936/parseclj.el
+Built parseclj in 10.973s, finished at 2022-04-22T11:19:14+0000
  ✓ Success:
 4.0K -rw-r--r-- 1 root root  324 Apr 22 07:07 packages/parseclj-20220328.558.entry
  60K -rw-r--r-- 1 root root  60K Apr 22 07:07 packages/parseclj-20220328.558.tar
-4.0K -rw-r--r-- 1 root root 1.2K Apr 22 07:07 packages/parseclj-badge.svg
-4.0K -rw-r--r-- 1 root root   38 Apr 22 07:07 packages/parseclj-readme.txt
+4.0K -rw-r--r-- 1 root root  324 Apr 22 11:19 packages/parseclj-20220422.936.entry
+ 60K -rw-r--r-- 1 root root  60K Apr 22 11:19 packages/parseclj-20220422.936.tar
+4.0K -rw-r--r-- 1 root root 1.2K Apr 22 11:19 packages/parseclj-badge.svg
+4.0K -rw-r--r-- 1 root root   38 Apr 22 11:19 packages/parseclj-readme.txt

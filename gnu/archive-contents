@@ -1606,7 +1606,7 @@
 	 ("Stefan Monnier" . "monnier@iro.umontreal.ca"))
 	(:url . "http://elpa.gnu.org/packages/lex.html"))])
  (lin .
-      [(0 3 0)
+      [(0 3 1)
        ((emacs
 	 (27 1)))
        "Make `hl-line-mode' more suitable for selection UIs" tar
@@ -1615,7 +1615,7 @@
 	(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	(:authors
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	(:commit . "edc29c2afe98ecd120108b7d3561aff938cc22c3"))])
+	(:commit . "520621e51a6f6882beda4420fa5ccee6682748dd"))])
  (lmc .
       [(1 4)
        ((emacs
@@ -1661,7 +1661,7 @@
 	   (:maintainer "Alexey Veretennikov" . "alexey.veretennikov@gmail.com")
 	   (:url . "https://github.com/fourier/loccur"))])
  (logos .
-	[(0 3 1)
+	[(0 3 2)
 	 ((emacs
 	   (27 1)))
 	 "Simple focus mode and extras" tar
@@ -1670,7 +1670,7 @@
 	  (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	  (:authors
 	   ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	  (:commit . "9e6824b8fa67c6c96e46eeb410cbca2f88193a2d"))])
+	  (:commit . "dd25e36b64320f2ba9400a3929443aa81085e697"))])
  (map .
       [(3 2 1)
        ((emacs
@@ -2269,7 +2269,7 @@
 	       ("Scott Andrew Borton" . "scott@pp.htv.fi"))
 	      (:maintainer "John Darrington" . "john@darrington.wattle.id.au"))])
  (pulsar .
-	 [(0 3 0)
+	 [(0 3 1)
 	  ((emacs
 	    (27 1)))
 	  "Pulse highlight on demand or after select functions" tar
@@ -2278,7 +2278,7 @@
 	   (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	   (:authors
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	   (:commit . "cdb7892a2b7e8e7cc644b8e24e5ab6bf0c51584d"))])
+	   (:commit . "86a7c429c6878287c068106b318889824cad3210"))])
  (pyim .
        [(4 1 1)
 	((emacs
@@ -2949,15 +2949,16 @@
 	  ("Oleh Krehel" . "ohwoeowho@gmail.com"))
 	 (:keywords "convenience"))])
  (tmr .
-      [(0 2 1)
+      [(0 2 2)
        ((emacs
 	 (27 1)))
-       "TMR Must Recur" tar
+       "Set timers using a convenient notation" tar
        ((:url . "https://git.sr.ht/~protesilaos/tmr")
+	(:keywords "convenience" "timer")
 	(:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
 	(:authors
 	 ("Protesilaos Stavrou" . "info@protesilaos.com"))
-	(:commit . "30784cbe2eb036e58e99cd9b9e44909e7db93cdc"))])
+	(:commit . "bf13ea973126ea5a1a8f6d4216959d9da4ade979"))])
  (tramp .
 	[(2 5 2 3)
 	 ((emacs
