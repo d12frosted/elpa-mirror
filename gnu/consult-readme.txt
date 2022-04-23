@@ -253,7 +253,7 @@ Table of Contents
   • `consult-focus-lines': Temporarily hide lines by filtering them
     using the current completion style. Call with `C-u' prefix argument
     in order to show the hidden lines again. If the input begins with
-    the negation operator, i.e., `! SPC', the filter matches the
+    the negation operator, i.e., `!  SPC', the filter matches the
     complement. In contrast to `consult-keep-lines' this function does
     not edit the buffer. If a region is active, the region restricts the
     filtering.
@@ -283,7 +283,7 @@ Table of Contents
     `default-directory' is searched. If `consult-grep' is invoked with
     prefix argument `C-u M-s g', you can specify the directory manually.
   • `consult-find', `consult-locate': Find file by matching the path
-    against a regexp. Like for `consult-grep,' either the project root
+    against a regexp.  Like for `consult-grep,' either the project root
     or the current directory is the root directory for the search. The
     input string is treated similarly to `consult-grep', where the first
     part is passed to find, and the second part is used for Emacs
@@ -300,7 +300,7 @@ Table of Contents
     SPC', `w SPC', `n SPC' to only show errors, warnings and notes
     respectively.
   • `consult-flycheck': Jump to flycheck error, similar to
-    `consult-flymake'.  This command requires the installation of the
+    `consult-flymake'. This command requires the installation of the
     additional `consult-flycheck' package since the main `consult'
     package only depends on Emacs core components.
   • `consult-xref': Integration with xref. This function can be set as
@@ -314,9 +314,9 @@ Table of Contents
     `command-history'. This command is a `completing-read' version of
     `repeat-complex-command' and is also a replacement for the
     `command-history' command from chistory.el.
-  • `consult-history': Insert a string from the current buffer history.
-    You can invoke this command from the minibuffer. In that case
-    `consult-history' uses the history stored in the
+  • `consult-history': Insert a string from the current buffer
+    history. You can invoke this command from the minibuffer. In that
+    case `consult-history' uses the history stored in the
     `minibuffer-history-variable'.
   • `consult-isearch-history': During an Isearch session, this command
     picks a search string from history and continues the search with the
@@ -354,21 +354,21 @@ Table of Contents
   • `consult-apropos': Replacement for `apropos' with completion. As a
     better alternative, you can run `embark-export' from commands like
     `M-x' or `describe-symbol'.
-  • `consult-man': Find Unix man page, via Unix `apropos' or `man -k'.
-    `consult-man' opens the selected man page using the Emacs `man'
+  • `consult-man': Find Unix man page, via Unix `apropos' or `man
+    -k'. `consult-man' opens the selected man page using the Emacs `man'
     command.
   • `consult-file-externally': Select a file and open it externally,
     e.g. using `xdg-open' on Linux.
   • `consult-theme': Select a theme and disable all currently enabled
-    themes. Supports live preview of the theme while scrolling through
+    themes.  Supports live preview of the theme while scrolling through
     the candidates.
   • `consult-preview-at-point' and `consult-preview-at-point-mode':
     Command and minor mode which previews the candidate at point in the
-    `*Completions*' buffer.  This mode is relevant if you use [Mct] or
+    `*Completions*' buffer. This mode is relevant if you use [Mct] or
     the default `*Completions*' UI.
   • `consult-completion-in-region': In case you don't use [Corfu] as
     your in-buffer completion UI, this function can be set as
-    `completion-in-region-function'.  Then your minibuffer completion UI
+    `completion-in-region-function'. Then your minibuffer completion UI
     (e.g., Vertico or Icomplete) will be used for
     `completion-at-point'. Note that Selectrum provides its own function
     similar to `consult-completion-in-region'. If you use Mct, you may
@@ -400,7 +400,7 @@ Table of Contents
     again.
 
 
-[Mct] <https://gitlab.com/protesilaos/mct>
+[Mct] <https://git.sr.ht/~protesilaos/mct>
 
 [Corfu] <https://github.com/minad/corfu>
 
@@ -426,7 +426,7 @@ Table of Contents
 
   Some Consult commands support live previews. For example when you
   scroll through the items of `consult-line', the buffer will scroll to
-  the corresponding position. It is possible to jump back and forth
+  the corresponding position.  It is possible to jump back and forth
   between the minibuffer and the buffer to perform recursive editing
   while the search is ongoing.
 
@@ -455,7 +455,8 @@ Table of Contents
   │  consult-bookmark consult-recent-file consult-xref
   │  consult--source-bookmark consult--source-recent-file
   │  consult--source-project-recent-file
-  │  :preview-key (kbd "M-."))
+  │  ;; :preview-key '(:debounce 0.2 any) ;; Option 1: Delay preview
+  │  :preview-key (kbd "M-."))            ;; Option 2: Manual preview
   └────
 
   In this case one may wonder what the difference is between using an
@@ -463,14 +464,12 @@ Table of Contents
   triggered preview.  The main difference is that the files opened by
   manual preview are closed again after the completion
   session. Furthermore during preview some functionality is disabled to
-  improve the performance, see for example
-  `consult-preview-excluded-hooks'. Files larger than
-  `consult-preview-raw-size' are previewed literally without syntax
-  highlighting and without changing the major mode.
-
-  Delaying the preview is particularly useful for `consult-theme', since
-  the theme preview is a little bit slow. The delay can result in a
-  smoother UI.
+  improve the performance, see for example the customization variables
+  `consult-preview-allowed-hooks' and `consult-preview-variables'. Files
+  larger than `consult-preview-raw-size' are previewed literally without
+  syntax highlighting and without changing the major mode. Delaying the
+  preview is also useful for `consult-theme', since the theme preview is
+  slow. The delay results in a smoother UI experience.
 
   ┌────
   │ ;; Preview on any key press, but delay 0.5s
@@ -495,7 +494,7 @@ Table of Contents
   thin lines and shows group titles. Grouping is useful if the list of
   candidates consists of candidates of multiple types or candidates from
   [multiple sources], like the `consult-buffer' command, which shows
-  both buffers and recently opened files.  Note that you can disable the
+  both buffers and recently opened files. Note that you can disable the
   group titles by setting the `:group' property of the corresponding
   command to nil using the `consult-customize' macro.
 
@@ -532,7 +531,7 @@ Table of Contents
   Consult has support for asynchronous generation of candidate
   lists. This feature is used for search commands like `consult-grep',
   where the list of matches is generated dynamically while the user is
-  typing a regular expression.  The grep process is executed in the
+  typing a regular expression. The grep process is executed in the
   background. When modifying the regular expression, the background
   process is terminated and a new process is started with the modified
   regular expression.
@@ -596,7 +595,7 @@ Table of Contents
   candidates in a single menu for quick access. By default
   `consult-buffer' includes buffers, bookmarks, recent files and
   project-specific buffers and files. It is possible to configure the
-  list of sources via the `consult-buffer-sources' variable.  Arbitrary
+  list of sources via the `consult-buffer-sources' variable. Arbitrary
   custom sources can be defined.
 
   As an example, the bookmark source is defined as follows:
@@ -630,37 +629,28 @@ Table of Contents
   • `:history' Name of history variable to add selected candidate.
   • `:default' Must be t if the first item of the source is the default
     value.
-  • `:action' Action function called with the selected candidate.
+  • `:action' Function called with the selected candidate.
+  • `:new' Function called with new candidate name, only if
+    `:require-match' is nil.
   • `:state' State constructor for the source, must return the state
     function.
   • Other source fields can be added specifically to the use case.
 
   The `:state' and `:action' fields of the sources deserve a longer
-  explanation.  The `:action' function takes a single argument and is
+  explanation. The `:action' function takes a single argument and is
   only called after selection with the selected candidate, if the
-  selection has not been aborted.  This functionality is provided for
-  convenience and easy definition of sources.  The `:state' field is
-  more complicated and general. The `:state' function is a constructor
-  function without arguments, which can perform some setup necessary for
-  the preview. It must return a closure with two arguments: The first
-  argument is the candidate string, the second argument is the restore
-  flag. The state function is called during preview, if a preview key
-  has been pressed, with the selected candidate or nil and the restore
-  argument being nil. Furthermore the state function is always called
-  after selection with the selected candidate or nil. The state function
-  is called with nil for the candidate if for example the selection
-  process has been aborted or if the original preview state should be
-  restored during preview. The restore flag is t for the final call. The
-  final call happens even if preview is disabled. For this reason you
-  can also use the final call to the state function in a similar way as
-  `:action'. You probably only want to specify both `:state' and
-  `:action' if `:state' is purely responsible for preview and `:action'
-  is then responsible for the real action after selection.
+  selection has not been aborted. This functionality is provided for
+  convenience and easy definition of sources. The `:state' field is more
+  general. The `:state' function is a constructor function without
+  arguments, which can perform some setup necessary for the preview. It
+  must return a closure which takes an ACTION and a CANDIDATE
+  argument. See the docstring of `consult--with-preview' for more
+  details about the ACTION argument.
 
-  In order to avoid slowness, `consult-buffer' only preview buffers by
-  default.  Loading recent files, bookmarks or views can result in
-  expensive operations.  However it is possible to configure the
-  bookmark and file sources to also perform preview.
+  By default, `consult-buffer' previews buffers, bookmarks and
+  files. Loading recent files, bookmarks or views can result in
+  expensive operations. However it is possible to configure a manual
+  preview as follows.
 
   ┌────
   │ (consult-customize
@@ -697,39 +687,33 @@ Table of Contents
   │ 			     bookmark-alist)))))
   └────
 
-  Other useful sources allow the creation of terminal and eshell buffers
-  if they do not exist yet.
+  Another useful source lists all Org buffers and lets you create new
+  ones. One can create similar sources for other major modes, e.g., for
+  Eshell.
 
   ┌────
-  │ (defun mode-buffer-exists-p (mode)
-  │   (seq-some (lambda (buf)
-  │ 	      (provided-mode-derived-p
-  │ 	       (buffer-local-value 'major-mode buf)
-  │ 	       mode))
-  │ 	    (buffer-list)))
+  │ (defvar org-source
+  │   (list :name     "Org Buffer"
+  │ 	:category 'buffer
+  │ 	:narrow   ?o
+  │ 	:face     'consult-buffer
+  │ 	:history  'buffer-name-history
+  │ 	:state    #'consult--buffer-state
+  │ 	:new
+  │ 	(lambda (name)
+  │ 	  (with-current-buffer (get-buffer-create name)
+  │ 	    (insert "#+title: " name "\n\n")
+  │ 	    (org-mode)
+  │ 	    (consult--buffer-action (current-buffer))))
+  │ 	:items
+  │ 	(lambda ()
+  │ 	  (mapcar #'buffer-name
+  │ 		  (seq-filter
+  │ 		   (lambda (x)
+  │ 		     (eq (buffer-local-value 'major-mode x) 'org-mode))
+  │ 		   (buffer-list))))))
   │ 
-  │ (defvar eshell-source
-  │   `(:category 'consult-new
-  │     :face     'font-lock-constant-face
-  │     :action   ,(lambda (_) (eshell))
-  │     :items
-  │     ,(lambda ()
-  │        (unless (mode-buffer-exists-p 'eshell-mode)
-  │ 	 '("*eshell* (new)")))))
-  │ 
-  │ (defvar term-source
-  │   `(:category 'consult-new
-  │     :face     'font-lock-constant-face
-  │     :action
-  │     ,(lambda (_)
-  │        (ansi-term (or (getenv "SHELL") "/bin/sh")))
-  │     :items
-  │     ,(lambda ()
-  │        (unless (mode-buffer-exists-p 'term-mode)
-  │ 	 '("*ansi-term* (new)")))))
-  │ 
-  │ (add-to-list 'consult-buffer-sources 'eshell-source 'append)
-  │ (add-to-list 'consult-buffer-sources 'term-source 'append)
+  │ (add-to-list 'consult-buffer-sources 'org-source 'append)
   └────
 
   For more details, see the documentation of `consult-buffer' and of the
@@ -754,12 +738,12 @@ Table of Contents
   execute arbitrary commands on the currently selected candidate via
   `M-x'.
 
-  Furthermore Embark provides the `embark-collect-snapshot' command,
-  which collects candidates and presents them in an Embark collect
-  buffer, where further actions can be applied to them. A related
-  feature is the `embark-export' command, which exports candidate lists
-  to a buffer of a special type. For example in the case of file
-  completion, a Dired buffer is opened.
+  Furthermore Embark provides the `embark-collect' command, which
+  collects candidates and presents them in an Embark collect buffer,
+  where further actions can be applied to them. A related feature is the
+  `embark-export' command, which exports candidate lists to a buffer of
+  a special type. For example in the case of file completion, a Dired
+  buffer is opened.
 
   In the context of Consult, particularly exciting is the possibility to
   export the matching lines from `consult-line', `consult-outline',
@@ -795,9 +779,9 @@ Table of Contents
   can be contributed.
 
   *IMPORTANT:* It is strongly recommended that you enable [lexical
-  binding] in your configuration. Consult uses a functional programming
-  style, relying on lambdas and lexical closures. For this reason many
-  Consult-related snippets require lexical binding.
+  binding] in your configuration. Consult relies on lambdas and lexical
+  closures. For this reason many Consult-related snippets require
+  lexical binding.
 
 
 [ELPA] <http://elpa.gnu.org/packages/consult.html>
@@ -954,10 +938,10 @@ Table of Contents
 ────────────────────
 
   *TIP:* If you have [Marginalia] installed, type `M-x
-   customize-variable RET ^consult' to see all Consult-specific
-   customizable variables with their current values and abbreviated
-   description. Alternatively, type `C-h a ^consult' to get an overview
-   of all Consult variables and functions with their descriptions.
+  customize-variable RET ^consult' to see all Consult-specific
+  customizable variables with their current values and abbreviated
+  description. Alternatively, type `C-h a ^consult' to get an overview
+  of all Consult variables and functions with their descriptions.
 
   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
    Variable                          Description                                           
@@ -990,13 +974,13 @@ Table of Contents
    consult-mode-histories            Mode-specific history variables                       
    consult-narrow-key                Narrowing prefix key during completion                
    consult-preview-key               Keys which triggers preview                           
-   consult-preview-excluded-hooks    List of `find-file' hooks to avoid during preview     
+   consult-preview-allowed-hooks     List of `find-file' hooks to enable during preview    
    consult-preview-max-count         Maximum number of files to keep open during preview   
    consult-preview-max-size          Files larger than this size are not previewed         
    consult-preview-raw-size          Files larger than this size are previewed in raw form 
+   consult-preview-variables         Alist of variables to bind during preview             
    consult-project-buffer-sources    List of virtual project buffer sources                
    consult-project-function          Function which returns current project root           
-   consult-recent-file-filter        Filter for `consult-recent-file'                      
    consult-register-prefix           Prefix string for register keys during completion     
    consult-ripgrep-args              Command line arguments for ripgrep                    
    consult-themes                    List of themes to be presented for selection          
@@ -1046,6 +1030,22 @@ Table of Contents
   │  ;; select the previous or next candidate.
   │  consult-line :prompt "Search: "
   │  :preview-key (list (kbd "<S-down>") (kbd "<S-up>")))
+  └────
+
+  The configuration values are evaluated at runtime, just before the
+  completion session is started. Therefore you can use for example
+  `thing-at-point' to adjust the initial input or the future hitory.
+
+  ┌────
+  │ (consult-customize
+  │  consult-line
+  │  :add-history (seq-some #'thing-at-point '(region symbol)))
+  │ 
+  │ (defalias 'consult-line-thing-at-point 'consult-line)
+  │ 
+  │ (consult-customize
+  │  consult-line-thing-at-point
+  │  :initial (thing-at-point 'symbol))
   └────
 
   Generally it is possible to modify commands for your individual needs
@@ -1100,8 +1100,9 @@ Table of Contents
   • [consult-eglot]: Integration with eglot (lsp client).
   • [consult-flycheck]: Provides the `consult-flycheck' command.
   • [consult-flyspell]: Additional Flyspell integration.
-  • [consult-lsp]: Integration with `lsp-mode' (lsp client).
+  • [consult-lsp]: Integration with lsp-mode (lsp client).
   • [consult-notmuch]: Access the [Notmuch] email system using Consult.
+  • [consult-org-roam]: Integration with org-roam.
   • [consult-spotify]: Access the Spotify API and control your local
     music player.
   • [consult-project-extra]: Additional project.el extras and buffer
@@ -1154,7 +1155,7 @@ Table of Contents
 
 [orderless] <https://github.com/oantolin/orderless>
 
-[mct by Protesilaos Stavrou] <https://gitlab.com/protesilaos/mct>
+[mct by Protesilaos Stavrou] <https://git.sr.ht/~protesilaos/mct>
 
 [selectrum by Radon Rosborough] <https://github.com/raxod502/selectrum>
 
@@ -1176,6 +1177,8 @@ Table of Contents
 [consult-notmuch] <https://codeberg.org/jao/consult-notmuch>
 
 [Notmuch] <https://notmuchmail.org/>
+
+[consult-org-roam] <https://github.com/jgru/consult-org-roam>
 
 [consult-spotify] <https://codeberg.org/jao/espotify>
 
@@ -1243,14 +1246,14 @@ Table of Contents
   │ (require 'consult)
   │ (require 'vertico)
   │ (vertico-mode)
-  │ (setq completion-styles '(substring))
+  │ (setq completion-styles '(substring basic))
   └────
 
   Minimal setup with the default completion system for `emacs -Q':
   ┌────
   │ (package-initialize)
   │ (require 'consult)
-  │ (setq completion-styles '(substring))
+  │ (setq completion-styles '(substring basic))
   └────
 
   Please provide the necessary important information with your bug
@@ -1273,8 +1276,8 @@ Table of Contents
     of the box.
 
   When evaluating Consult-related code snippets you should enable
-  [lexical binding].  Consult often uses a functional programming style,
-  relying on lambdas and lexical closures.
+  [lexical binding].  Consult often relies on lambdas and lexical
+  closures.
 
 
 [lexical binding]
@@ -1357,6 +1360,7 @@ Table of Contents
     [consult-yasnippet])
   • [Marco Pawłowski] ([consult-flyspell], [consult-projectile])
   • [Enrique Kessler Martínez] ([consult-project-extra])
+  • [Jan Gru] ([consult-org-roam])
 
 
 [Counsel] <https://github.com/abo-abo/swiper#counsel>
@@ -1394,7 +1398,7 @@ Table of Contents
 
 [J.D. Smith] <https://github.com/jdtsmith>
 
-[Protesilaos Stavrou] <https://gitlab.com/protesilaos/>
+[Protesilaos Stavrou] <https://protesilaos.com>
 
 [Steve Purcell] <https://github.com/purcell/>
 
@@ -1446,6 +1450,10 @@ Table of Contents
 
 [consult-project-extra]
 <https://github.com/Qkessler/consult-project-extra>
+
+[Jan Gru] <https://github.com/jgru>
+
+[consult-org-roam] <https://github.com/jgru/consult-org-roam>
 
 
 9 Indices

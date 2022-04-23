@@ -213,7 +213,7 @@
 	   ("Durand" . "mmemmew@gmail.com"))
 	  (:url . "https://elpa.gnu.org/packages/blist.html"))])
  (bluetooth .
-	    [(0 3)
+	    [(0 3 1)
 	     ((emacs
 	       (25 1))
 	      (dash
@@ -224,7 +224,8 @@
 	      (:maintainer "Raffael Stocker" . "r.stocker@mnet-mail.de")
 	      (:authors
 	       ("Raffael Stocker" . "r.stocker@mnet-mail.de")
-	       ("Etienne Prud’homme" . "e.e.f.prudhomme@gmail.com")))])
+	       ("Etienne Prud’homme" . "e.e.f.prudhomme@gmail.com"))
+	      (:commit . "84488dfdd2355e512f9e9444a233448221b3d9cc"))])
  (bnf-mode .
 	   [(0 4 5)
 	    ((cl-lib
@@ -476,7 +477,7 @@
 			("Ingo Lohmar" . "i.lohmar@gmail.com"))
 		       (:keywords "abbrev" "convenience" "matching"))])
  (compat .
-	 [(28 1 0 5)
+	 [(28 1 1 0)
 	  ((emacs
 	    (24 3))
 	   (nadvice
@@ -487,17 +488,17 @@
 	   (:maintainer "Compat Development" . "~pkal/compat-devel@lists.sr.ht")
 	   (:authors
 	    ("Philip Kaludercic" . "philipk@posteo.net"))
-	   (:commit . "cbf00556174d324ea81181fbb8b5be06c0ee2daa"))])
+	   (:commit . "401df6defaf5ef470a2dc57664b2d258662a5c3d"))])
  (consult .
-	  [(0 16)
+	  [(0 17)
 	   ((emacs
-	     (26 1)))
+	     (27 1)))
 	   "Consulting completing-read" tar
 	   ((:url . "https://github.com/minad/consult")
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler and Consult contributors"))
-	    (:commit . "800824601b610016066991d6e2dde198d4b0ad8f"))])
+	    (:commit . "f517b70dd8a3be0b8c883633f2a7721448b40f0f"))])
  (context-coloring .
 		   [(8 1 0)
 		    ((emacs
@@ -509,7 +510,7 @@
 		      ("Jackson Ray Hamilton" . "jackson@jacksonrayhamilton.com"))
 		     (:keywords "convenience" "faces" "tools"))])
  (corfu .
-	[(0 21)
+	[(0 22)
 	 ((emacs
 	   (27 1)))
 	 "Completion Overlay Region FUnction" tar
@@ -517,7 +518,7 @@
 	  (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	  (:authors
 	   ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	  (:commit . "ba099c770dd6d410553473604f184adf20d7b359"))])
+	  (:commit . "8591833f7dc76233dbe94b59c4eea9be6b4540f9"))])
  (coterm .
 	 [(1 5)
 	  ((emacs
@@ -592,6 +593,17 @@
 	      ("\"Francis J. Wright\"" . "F.J.Wright@qmul.ac.uk"))
 	     (:url . "https://elpa.gnu.org/packages/csv-mode.html")
 	     (:commit . "5c19624398bfd6b976cc9876db582e3e23611601"))])
+ (cursory .
+	  [(0 1 4)
+	   ((emacs
+	     (27 1)))
+	   "Manage cursor styles using presets" tar
+	   ((:url . "https://git.sr.ht/~protesilaos/cursory")
+	    (:keywords "convenience" "cursor")
+	    (:maintainer "Protesilaos Stavrou" . "info@protesilaos.com")
+	    (:authors
+	     ("Protesilaos Stavrou" . "info@protesilaos.com"))
+	    (:commit . "63c4b42ebe4446484bfb2a81b0b97ff65bcfbb3d"))])
  (cycle-quotes .
 	       [(0 1)
 		nil "Cycle between quote styles" tar
@@ -2280,7 +2292,7 @@
 	    ("Protesilaos Stavrou" . "info@protesilaos.com"))
 	   (:commit . "86a7c429c6878287c068106b318889824cad3210"))])
  (pyim .
-       [(4 1 1)
+       [(4 2 0)
 	((emacs
 	  (25 1))
 	 (async
@@ -2294,7 +2306,7 @@
 	 (:authors
 	  ("Ye Wenbin" . "wenbinye@163.com")
 	  ("Feng Shu" . "tumashu@163.com"))
-	 (:commit . "b3de11c39318c821d1febe4946b63ea1ed7b060b"))])
+	 (:commit . "cd1bfd2bbc10fe0ac47d0ec383cde453f6019e6c"))])
  (pyim-basedict .
 		[(0 5 0)
 		 nil "The default pinyin dict of pyim" tar
@@ -3166,7 +3178,7 @@
 		  ("Wilson Snyder" . "wsnyder@wsnyder.org"))
 		 (:commit . "86f08fb377e2b8f2df0614c48783bdce347f3758"))])
  (vertico .
-	  [(0 22)
+	  [(0 23)
 	   ((emacs
 	     (27 1)))
 	   "VERTical Interactive COmpletion" tar
@@ -3174,7 +3186,7 @@
 	    (:maintainer "Daniel Mendler" . "mail@daniel-mendler.de")
 	    (:authors
 	     ("Daniel Mendler" . "mail@daniel-mendler.de"))
-	    (:commit . "abf488b8bd501354cc36afb8901fa6929f34bbeb"))])
+	    (:commit . "68bb4d67e295bd75b8ef1a6d5ddda26849510fa6"))])
  (vertico-posframe .
 		   [(0 5 4)
 		    ((emacs

@@ -453,7 +453,8 @@ Table of Contents
   category.
 
   ┌────
-  │ ;; Change the default sorting function
+  │ ;; Change the default sorting function.
+  │ ;; See `vertico-sort-function' and `vertico-sort-override-function'.
   │ (setq vertico-multiform-commands
   │       '((describe-symbol (vertico-sort-function . vertico-sort-alpha))))
   │ 
@@ -640,7 +641,7 @@ Table of Contents
     code base.
 
 
-[Mct] <https://gitlab.com/protesilaos/mct>
+[Mct] <https://git.sr.ht/~protesilaos/mct>
 
 [Icomplete-vertical] <https://github.com/oantolin/icomplete-vertical>
 
