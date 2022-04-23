@@ -4,8 +4,8 @@
 
 ;; Author: Huming Chen <chenhuming@gmail.com>
 ;; URL: https://github.com/beacoder/stock-tracker
-;; Package-Version: 20220422.943
-;; Package-Commit: 649812ebd286f1944eaf7b34d45d72ef60a0b0fb
+;; Package-Version: 20220423.512
+;; Package-Commit: 1d1f247af491686fbe13dc8eae68190ee100e706
 ;; Version: 0.1.5
 ;; Created: 2019-08-18
 ;; Keywords: convenience, stock, finance
@@ -47,6 +47,7 @@
 ;; 0.1.5 Add timestamp to skip outdated data
 ;;       Fix empty line generated during adding/removing stocks
 ;;       Restore original position after refreshing stocks
+;;       Disable logging by default
 
 ;;; Code:
 
@@ -82,6 +83,11 @@
 (defcustom stock-tracker-subprocess-kill-delay 12
   "Kill subprocess in N * 10 SECS."
   :type 'integer
+  :group 'stock-tracker)
+
+(defcustom stock-tracker-enable-log nil
+  "Display log messages."
+  :type 'boolean
   :group 'stock-tracker)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -266,6 +272,12 @@ It defaults to a comma."
            (null (get-buffer-process buffer))
            (kill-buffer buffer)))))
 
+(defun stock-tracker--log (message)
+  "Log MESSAGE."
+  (when stock-tracker-enable-log
+    (with-temp-message message
+      (sit-for 1))))
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Core Functions
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -308,8 +320,7 @@ It defaults to a comma."
 
     ;; sanity check
     (unless (and symbol name price percent updown open yestclose high low volume)
-      (with-temp-message "Invalid data received !!!"
-        (sit-for 1))
+      (stock-tracker--log "Invalid data received !!!")
       (throw 'break 0))
 
     ;; formating
@@ -404,8 +415,7 @@ It defaults to a comma."
          (us-symbol (make-stock-tracker--us-symbol))
          (data-retrieve-timestamp (time-to-seconds)))
 
-    (with-temp-message "Fetching stock data async ..."
-      (sit-for 1))
+    (stock-tracker--log "Fetching stock data async ...")
 
     ;; start subprocess
     (async-start
@@ -491,29 +501,27 @@ It defaults to a comma."
 
          (if (< data-retrieve-timestamp stock-tracker--data-timestamp)
 
-             (with-temp-message "Outdated data received !!!"
-               (sit-for 1))
+             (stock-tracker--log "Outdated data received !!!")
 
            ;; update timestamp
            (setq stock-tracker--data-timestamp data-retrieve-timestamp)
 
-           ;; process stock data
-           (with-temp-message "Fetching stock done"
+           (stock-tracker--log "Fetching stock done")
 
-             ;; format chn stocks
-             (unless (numberp chn-result)
-               (push (stock-tracker--format-response chn-result chn-symbol t)
-                     all-collected-stocks-info))
+           ;; format chn stocks
+           (unless (numberp chn-result)
+             (push (stock-tracker--format-response chn-result chn-symbol t)
+                   all-collected-stocks-info))
 
-             ;; format us stocks
-             (unless (numberp us-result)
-               (dolist (us-stock us-result)
-                 (push (stock-tracker--format-response us-stock us-symbol t)
-                       all-collected-stocks-info)))
+           ;; format us stocks
+           (unless (numberp us-result)
+             (dolist (us-stock us-result)
+               (push (stock-tracker--format-response us-stock us-symbol t)
+                     all-collected-stocks-info)))
 
-             ;; populate stocks
-             (when all-collected-stocks-info
-               (stock-tracker--refresh-content (reverse all-collected-stocks-info))))))))))
+           ;; populate stocks
+           (when all-collected-stocks-info
+             (stock-tracker--refresh-content (reverse all-collected-stocks-info)))))))))
 
 (defun stock-tracker--refresh (&optional asynchronously)
   "Refresh list of stocks ASYNCHRONOUSLY or not."

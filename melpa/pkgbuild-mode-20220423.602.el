@@ -5,8 +5,8 @@
 ;; Author: Juergen Hoetzel <juergen@hoetzel.info>
 ;; Maintainer: Juergen Hoetzel <juergen@hoetzel.info>
 ;; URL: https://github.com/juergenhoetzel/pkgbuild-mode
-;; Package-Version: 20220312.1316
-;; Package-Commit: 3cbf38c22d783ac77d5dbc69a38afa04e0aa4803
+;; Package-Version: 20220423.602
+;; Package-Commit: 2fc38d30bd2a6b0333a5492fdc5c2dfbbc455653
 ;; Package-Requires: ((emacs "26.1"))
 ;; Version: 1.0-snapshot
 ;; Keywords: languages
@@ -375,10 +375,10 @@ REPORT-FN is flymake's callback function."
      (unless diagnostics
        (save-excursion
 	 (goto-char (point-min))
-	 (while (re-search-forward "^[[:space:]]*\\\(md\\\|sha\\\)[[:digit:]]+sums\\\(_[^=]+\\\)?=([^()]*)[ \f\t\r\v]*\n?" (point-max) t) ;sum line exists
+	 (while (re-search-forward "^[[:space:]]*\\(md\\|sha\\)[[:digit:]]+sums\\(_[^=]+\\)?=([^()]*)[ \f\t\r\v]*\n?" (point-max) t) ;sum line exists
 	   (delete-region (match-beginning 0) (match-end 0)))
 	 (goto-char (point-max))
-	 (if (re-search-backward "^[[:space:]]*source\\\(_[^=]+\\\)?=([^()]*)" (point-min) t)
+	 (if (re-search-backward "^[[:space:]]*source\\(_[^=]+\\)?=([^()]*)" (point-min) t)
 	     (progn
 	       (goto-char (match-end 0))
 	       (insert "\n"))

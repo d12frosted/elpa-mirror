@@ -2,6 +2,8 @@
 
 ;; Author: stardiviner <numbchild@gmail.com>
 ;; Keywords: inline docs overlay
+;; Package-Version: 20220210.1402
+;; Package-Commit: cda596d9ff4c2aa5035692a97c430f6589eafbb1
 ;; URL: https://repo.or.cz/inline-docs.git
 ;; Created: 20th Jan 2017
 ;; Version: 1.0.1
