@@ -5,8 +5,8 @@
 ;; Author: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>
 ;; Keywords: convenience
-;; Package-Version: 20220423.156
-;; Package-Commit: 9bf01e1c1d554150a7e0ec07f0dc6892295a51dd
+;; Package-Version: 20220423.354
+;; Package-Commit: 29e227f7ec4cdf9fdab8b5723f4db236c81c2eb7
 ;; Version: 0.5
 ;; Homepage: https://github.com/oantolin/embark
 ;; Package-Requires: ((emacs "26.1") (embark "0.12") (consult "0.10"))
@@ -173,8 +173,8 @@ This function is meant to be added to `embark-collect-mode-hook'."
 (defvar wgrep-header/footer-parser)
 (declare-function wgrep-setup "ext:wgrep")
 
-(embark-define-keymap embark-consult-export-grep-map
-  "A keymap for Embark Export grep-mode buffers."
+(embark-define-keymap embark-consult-revert-map
+  "A keymap with a binding for revert-buffer."
   :parent nil
   ("g" revert-buffer))
 
@@ -189,7 +189,7 @@ This function is meant to be added to `embark-collect-mode-hook'."
       ;; Set up keymap before possible wgrep-setup, so that wgrep
       ;; restores our binding too when the user finishes editing.
       (use-local-map (make-composed-keymap
-                      embark-consult-export-grep-map
+                      embark-consult-revert-map
                       (current-local-map)))
       (setq-local wgrep-header/footer-parser #'ignore)
       (when (fboundp 'wgrep-setup) (wgrep-setup)))
@@ -213,6 +213,25 @@ This function is meant to be added to `embark-collect-mode-hook'."
       #'embark-consult-goto-grep)
 (setf (alist-get 'consult-grep embark-exporters-alist)
       #'embark-consult-export-grep)
+
+;;; Support for consult-xref
+
+(declare-function xref--show-xref-buffer "ext:xref")
+
+(defun embark-consult-export-xref (items)
+  "Create an xref buffer listing ITEMS."
+  (let ((xref-items (mapcar (lambda (item)
+                              (get-text-property 0 'consult-xref item))
+                            items)))
+    (set-buffer
+     (xref--show-xref-buffer
+      (lambda () xref-items)
+      `((window . ,(selected-window))
+        (auto-jump . ,xref-auto-jump-to-first-xref)
+        (display-action))))))
+
+(setf (alist-get 'consult-xref embark-exporters-alist)
+      #'embark-consult-export-xref)
 
 ;;; Support for consult-find and consult-locate
 

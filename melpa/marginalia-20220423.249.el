@@ -6,8 +6,8 @@
 ;; Maintainer: Omar Antolín Camarena <omar@matem.unam.mx>, Daniel Mendler <mail@daniel-mendler.de>
 ;; Created: 2020
 ;; Version: 0.13
-;; Package-Version: 20220417.418
-;; Package-Commit: 24b0a17baceea2f0ba4f23c4bcba4463c4fbc43a
+;; Package-Version: 20220423.249
+;; Package-Commit: f97b6f398b6b08576bc919835e1ab4872a8d5de4
 ;; Package-Requires: ((emacs "27.1"))
 ;; Homepage: https://github.com/minad/marginalia
 
@@ -396,7 +396,7 @@ FACE is the name of the face, with which the field should be propertized."
 (defun marginalia--annotator (cat)
   "Return annotation function for category CAT."
   (pcase (car (alist-get cat marginalia-annotator-registry))
-    ('none (lambda (_) nil))
+    ('none #'ignore)
     ('builtin nil)
     (fun fun)))
 
