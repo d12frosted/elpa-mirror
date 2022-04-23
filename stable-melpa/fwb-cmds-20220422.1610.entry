@@ -1,0 +1,13 @@
+(fwb-cmds .
+	  [(20220422 1610)
+	   ((emacs
+	     (25 1))
+	    (compat
+	     (28 1 1 0)))
+	   "misc frame, window and buffer commands" single
+	   ((:commit . "4bd3c23c3dc649ab5412e2bad7eebe3069363190")
+	    (:authors
+	     ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	    (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	    (:keywords "convenience")
+	    (:url . "https://github.com/tarsius/fwb-cmds"))])

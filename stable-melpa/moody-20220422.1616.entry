@@ -1,0 +1,13 @@
+(moody .
+       [(20220422 1616)
+	((emacs
+	  (25 3))
+	 (compat
+	  (28 1 1 0)))
+	"Tabs and ribbons for the mode line" single
+	((:commit . "ac647781d2d66d57c84a64dfd33b463b4a99b257")
+	 (:authors
+	  ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	 (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	 (:keywords "faces")
+	 (:url . "https://github.com/tarsius/moody"))])

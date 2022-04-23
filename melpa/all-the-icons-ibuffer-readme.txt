@@ -2,8 +2,8 @@ Display icons for all buffers in ibuffer.
 
 Install:
 From melpa, `M-x package-install RET all-the-icons-ibuffer RET`.
-(all-the-icons-ibuffer-mode 1)
+(add-hook 'ibuffer-mode-hook #'all-the-icons-ibuffer-mode)
 or
 (use-package all-the-icons-ibuffer
   :ensure t
-  :init (all-the-icons-ibuffer-mode 1))
+  :hook (ibuffer-mode . all-the-icons-ibuffer-mode))

@@ -1,0 +1,13 @@
+(dim-autoload .
+	      [(20220422 1601)
+	       ((emacs
+		 (25 1))
+		(compat
+		 (28 1 1 0)))
+	       "Dim or hide autoload cookie lines" single
+	       ((:commit . "09073e6bfd21f3a7f8fcf1e2e7c49994cdee7d2a")
+		(:authors
+		 ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		(:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		(:keywords "convenience")
+		(:url . "https://github.com/tarsius/dim-autoload"))])

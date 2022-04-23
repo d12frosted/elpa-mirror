@@ -1,0 +1,13 @@
+(paren-face .
+	    [(20220422 1627)
+	     ((emacs
+	       (25 1))
+	      (compat
+	       (28 1 1 0)))
+	     "A face for parentheses in lisp modes" single
+	     ((:commit . "5dc2c2e06152dc51f7395073569f448a8f94d296")
+	      (:authors
+	       ("Jonas Bernoulli" . "jonas@bernoul.li"))
+	      (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	      (:keywords "faces" "lisp")
+	      (:url . "https://github.com/tarsius/paren-face"))])

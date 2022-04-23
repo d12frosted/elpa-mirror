@@ -1,0 +1,13 @@
+(mode-line-debug .
+		 [(20220422 1615)
+		  ((emacs
+		    (25 1))
+		   (compat
+		    (28 1 1 0)))
+		  "Show status of debug-on-error in mode-line" single
+		  ((:commit . "d33e76efac6978c755bb5e0ced061b0063a6dff9")
+		   (:authors
+		    ("Jonas Bernoulli" . "jonas@bernoul.li"))
+		   (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+		   (:keywords "convenience" "lisp")
+		   (:url . "https://github.com/tarsius/mode-line-debug"))])

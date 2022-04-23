@@ -1,0 +1,21 @@
+(orgit-forge .
+	     [(20220422 1625)
+	      ((emacs
+		(25 1))
+	       (compat
+		(28 1 1 0))
+	       (forge
+		(0 3))
+	       (magit
+		(3 3))
+	       (org
+		(9 5))
+	       (orgit
+		(1 8)))
+	      "Org links to Forge issue buffers" single
+	      ((:commit . "72285807707a802ebe7f3c6149de9a78a022b17e")
+	       (:authors
+		("Jonas Bernoulli" . "jonas@bernoul.li"))
+	       (:maintainer "Jonas Bernoulli" . "jonas@bernoul.li")
+	       (:keywords "hypermedia" "vc")
+	       (:url . "https://github.com/magit/orgit-forge"))])
